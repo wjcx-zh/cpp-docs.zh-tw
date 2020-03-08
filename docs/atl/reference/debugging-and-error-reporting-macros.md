@@ -12,11 +12,11 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062043"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855263"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>調試和錯誤報表宏
 
@@ -24,17 +24,17 @@ ms.locfileid: "71062043"
 
 |||
 |-|-|
-|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|將寫入至 [輸出] 視窗，呼叫時`_Module.Term`偵測到的任何介面流失。|
-|[_ATL_DEBUG_QI](#_atl_debug_qi)|將所有對的`QueryInterface`呼叫寫入至 [輸出] 視窗。|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|將寫入至 [輸出] 視窗，呼叫 `_Module.Term` 時所偵測到的任何介面洩漏。|
+|[_ATL_DEBUG_QI](#_atl_debug_qi)|將 `QueryInterface` 的所有呼叫寫入 [輸出] 視窗。|
 |[ATLASSERT](#atlassert)|執行與在 C 執行時間程式庫中找到的[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)宏相同的功能。|
-|[ATLENSURE](#atlensure)|執行參數驗證。 視`AtlThrow`需要呼叫|
+|[ATLENSURE](#atlensure)|執行參數驗證。 視需要呼叫 `AtlThrow`|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|將訊息傳送至傾印裝置，指出未執行指定的函式。|
 |[ATLTRACE](#atltrace)|根據指定的旗標和層級，向輸出裝置報告警告，例如偵錯工具視窗。 包含以提供回溯相容性。|
 |[ATLTRACE2](#atltrace2)|根據指定的旗標和層級，向輸出裝置報告警告，例如偵錯工具視窗。|
 
-##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
+##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
 
-請先定義此宏，再包含任何 ATL 標頭檔`AddRef` ， `Release`以追蹤元件介面的所有和呼叫至輸出視窗。
+在包含任何 ATL 標頭檔之前，請先定義此宏，以追蹤元件介面上的所有 `AddRef` 和 `Release` 呼叫至輸出視窗。
 
 ```
 #define _ATL_DEBUG_INTERFACES
@@ -46,26 +46,26 @@ ms.locfileid: "71062043"
 
 `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`
 
-每個追蹤的第一個部分一律會`ATL: QIThunk`是。 接下來是識別所使用之特定*介面 Thunk*的值。 介面 Thunk 是一個物件，用來維護參考計數並提供此處使用的追蹤功能。 `QueryInterface`除了`IUnknown`介面的要求之外，每次呼叫都會建立新的介面 Thunk （在此案例中，每次都會傳回相同的 Thunk，以符合 COM 的識別規則）。
+每個追蹤的第一個部分一律會 `ATL: QIThunk`。 接下來是識別所使用之特定*介面 Thunk*的值。 介面 Thunk 是一個物件，用來維護參考計數並提供此處使用的追蹤功能。 除了 `IUnknown` 介面的要求之外，每次呼叫 `QueryInterface` 都會建立新的介面 Thunk （在此情況下，會每次都傳回相同的 Thunk，以符合 COM 的識別規則）。
 
-接下來，您`AddRef`會`Release`看到或指出已呼叫的方法。 之後，您會看到一個值，識別其介面參考計數已變更的物件。 追蹤的值是物件的**this**指標。
+接下來，您會看到 `AddRef` 或 `Release`，指出已呼叫的方法。 之後，您會看到一個值，識別其介面參考計數已變更的物件。 追蹤的值是物件的**this**指標。
 
-追蹤的參考計數是在呼叫或`AddRef` `Release`之後，該 Thunk 上的參考計數。 請注意，此參考計數可能不符合物件的參考計數。 每個 Thunk 都會維護自己的參考計數，以協助您完全符合 COM 的參考計數規則。
+追蹤的參考計數是在呼叫 `AddRef` 或 `Release` 之後，Thunk 上的參考計數。 請注意，此參考計數可能不符合物件的參考計數。 每個 Thunk 都會維護自己的參考計數，以協助您完全符合 COM 的參考計數規則。
 
-追蹤的最後一項資訊是物件的名稱，以及受到`AddRef`或`Release`呼叫影響的介面。
+追蹤的最後一項資訊是物件的名稱，以及受到 `AddRef` 或 `Release` 呼叫影響的介面。
 
-當伺服器關閉並`_Module.Term`呼叫時，所偵測到的任何介面流失都會記錄如下：
+當伺服器關閉並呼叫 `_Module.Term` 時，偵測到的任何介面流失都會記錄如下：
 
 `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`
 
 此處提供的資訊會直接對應到先前追蹤語句中提供的資訊，因此您可以在介面 Thunk 的整個存留期內檢查參考計數。 此外，您可以在該介面 Thunk 上取得最大參考計數的指示。
 
 > [!NOTE]
-> _ATL_DEBUG_INTERFACES 可用於零售組建中。
+> _ATL_DEBUG_INTERFACES 可以在零售組建中使用。
 
-##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI
+##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
 
-將所有對的`QueryInterface`呼叫寫入至 [輸出] 視窗。
+將 `QueryInterface` 的所有呼叫寫入 [輸出] 視窗。
 
 ```
 #define _ATL_DEBUG_QI
@@ -73,7 +73,7 @@ ms.locfileid: "71062043"
 
 ### <a name="remarks"></a>備註
 
-如果對的呼叫`QueryInterface`失敗，[輸出] 視窗將會顯示：
+如果 `QueryInterface` 的呼叫失敗，[輸出] 視窗將會顯示：
 
 *介面名稱* - `failed`
 
@@ -112,18 +112,18 @@ ATLENSURE_THROW(booleanExpression, hr);
 *booleanExpression*<br/>
 指定要測試的布林運算式。
 
-*hr*<br/>
+*工時*<br/>
 指定要傳回的錯誤碼。
 
 ### <a name="remarks"></a>備註
 
 這些宏提供了一種機制，可偵測並通知使用者不正確的參數使用方式。
 
-宏會呼叫 ATLASSERT，如果條件失敗則呼叫`AtlThrow`。
+宏會呼叫 ATLASSERT，如果條件失敗，則會呼叫 `AtlThrow`。
 
-在 ATLENSURE 案例中， `AtlThrow`會使用 E_FAIL 來呼叫。
+在 ATLENSURE 案例中，會使用 E_FAIL 來呼叫 `AtlThrow`。
 
-在 ATLENSURE_THROW 案例中， `AtlThrow`會使用指定的 HRESULT 來呼叫。
+在 ATLENSURE_THROW 案例中，會使用指定的 HRESULT 來呼叫 `AtlThrow`。
 
 ATLENSURE 和 ATLASSERT 之間的差異在於，ATLENSURE 會在發行組建和 Debug build 中擲回例外狀況。
 
@@ -178,7 +178,7 @@ ATLTRACE(
 *exp*<br/>
 在要傳送至 [輸出] 視窗的字串和變數，或任何會對這些訊息進行陷阱的應用程式。
 
-*category*<br/>
+*類別*<br/>
 在要報告之事件或方法的類型。 如需分類清單，請參閱備註。
 
 *level*<br/>
@@ -209,14 +209,14 @@ ATLTRACE2(
 *exp*<br/>
 在要傳送至 [輸出] 視窗的字串，或任何會對這些訊息進行陷阱的應用程式。
 
-*category*<br/>
+*類別*<br/>
 在要報告之事件或方法的類型。 如需分類清單，請參閱備註。
 
 *level*<br/>
 在要報告的追蹤層級。 如需詳細資訊，請參閱備註。
 
 *lpszFormat*<br/>
-在用`printf`來建立要傳送到傾印裝置之字串的樣式格式字串。
+在用來建立要傳送到傾印裝置之字串的 `printf`樣式格式字串。
 
 ### <a name="remarks"></a>備註
 
@@ -226,7 +226,7 @@ ATLTRACE2 的簡短形式會將字串寫入偵錯工具的 [輸出] 視窗。 �
 
 ### <a name="atl-trace-flags"></a>ATL 追蹤旗標
 
-|ATL 分類|說明|
+|ATL 分類|描述|
 |------------------|-----------------|
 |`atlTraceGeneral`|所有 ATL 應用程式的報表。 預設值。|
 |`atlTraceCOM`|COM 方法的報告。|
@@ -244,7 +244,7 @@ ATLTRACE2 的簡短形式會將字串寫入偵錯工具的 [輸出] 視窗。 �
 
 ### <a name="mfc-trace-flags"></a>MFC 追蹤旗標
 
-|MFC 類別|說明|
+|MFC 類別|描述|
 |------------------|-----------------|
 |`traceAppMsg`|一般用途的 MFC 訊息。 一律建議使用。|
 |`traceDumpContext`|來自[CDumpCoNtext](../../mfc/reference/cdumpcontext-class.md)的訊息。|
@@ -257,23 +257,23 @@ ATLTRACE2 的簡短形式會將字串寫入偵錯工具的 [輸出] 視窗。 �
 |`traceDatabase`|來自 MFC 資料庫支援的訊息。|
 |`traceInternet`|來自 MFC 網際網路支援的訊息。|
 
-若要宣告自訂追蹤分類，請如下所示宣告`CTraceCategory`類別的全域實例：
+若要宣告自訂追蹤分類，請宣告 `CTraceCategory` 類別的全域實例，如下所示：
 
 [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]
 
-類別目錄名稱（在此範例中為 MY_CATEGORY）是您指定給*category*參數的名稱。 第一個參數是將出現在 ATL/MFC 追蹤工具中的類別目錄名稱。 第二個參數是預設的追蹤層級。 這個參數是選擇性的，而且預設的追蹤層級是0。
+在此範例中，類別名稱 MY_CATEGORY 是您指定給*category*參數的名稱。 第一個參數是將出現在 ATL/MFC 追蹤工具中的類別目錄名稱。 第二個參數是預設的追蹤層級。 這個參數是選擇性的，而且預設的追蹤層級是0。
 
 若要使用使用者定義的類別：
 
 [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]
 
-若要指定您想要篩選追蹤訊息，請將這些宏的定義插入 stdafx.h 中的`#include <atlbase.h>`語句前面。
+若要指定您想要篩選追蹤訊息，請在 `#include <atlbase.h>` 語句之前，將這些宏的定義插入 Stdafx.h 中。
 
 或者，您可以在 [**屬性頁**] 對話方塊的預處理器指示詞中設定篩選。 按一下 [**預處理器**] 索引標籤，然後在 [**預處理器定義**] 編輯方塊中插入全域。
 
 Atlbase.h 包含 ATLTRACE2 宏的預設定義，如果您未在處理 atlbase.h 之前定義這些符號，則會使用這些定義。
 
-在發行組建中，ATLTRACE2 會`(void) 0`編譯為。
+在發行組建中，ATLTRACE2 會編譯成 `(void) 0`。
 
 ATLTRACE2 會在格式化之後，將要傳送到傾印裝置的字串內容限制為不超過1023個字元。
 

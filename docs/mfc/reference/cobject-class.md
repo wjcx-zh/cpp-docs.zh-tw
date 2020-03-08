@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
 ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388315"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855258"
 ---
 # <a name="cobject-class"></a>CObject 類別
 
@@ -43,47 +43,47 @@ class AFX_NOVTABLE CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CObject::CObject](#cobject)|預設建構函式。|
+|[CObject：： CObject](#cobject)|預設建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CObject::AssertValid](#assertvalid)|會驗證此物件的完整性。|
-|[CObject::Dump](#dump)|會產生此物件的診斷傾印。|
-|[CObject::GetRuntimeClass](#getruntimeclass)|傳回`CRuntimeClass`結構，其對應至這個物件的類別。|
-|[CObject::IsKindOf](#iskindof)|測試指定類別的這個物件的關聯性。|
-|[CObject::IsSerializable](#isserializable)|若要查看是否可以序列化此物件的測試。|
-|[CObject::Serialize](#serialize)|載入或儲存的物件，或將封存檔。|
+|[CObject：： AssertValid](#assertvalid)|驗證這個物件的完整性。|
+|[CObject：:D ump](#dump)|產生此物件的診斷傾印。|
+|[CObject：： GetRuntimeClass](#getruntimeclass)|傳回對應至這個物件之類別的 `CRuntimeClass` 結構。|
+|[CObject：： IsKindOf](#iskindof)|測試這個物件與指定類別的關聯性。|
+|[CObject：： IsSerializable](#isserializable)|測試此物件是否可以序列化。|
+|[CObject：：序列化](#serialize)|從封存載入或儲存物件。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CObject::operator delete](#operator_delete)|特殊**刪除**運算子。|
-|[新的 CObject::operator](#operator_new)|特殊**新**運算子。|
+|[CObject：： operator delete](#operator_delete)|特殊的**delete**運算子。|
+|[CObject：： operator new](#operator_new)|特殊的**new**運算子。|
 
 ## <a name="remarks"></a>備註
 
-它可以做為不僅類別庫的根目錄這類`CFile`和`CObList`，但也為您撰寫的類別。 `CObject` 提供基本的服務，包括
+它不只會作為程式庫類別的根目錄，例如 `CFile` 和 `CObList`，也會做為您撰寫的類別。 `CObject` 提供基本服務，包括
 
 - 序列化支援
 
-- 執行階段類別資訊
+- 執行時間類別資訊
 
-- 物件的診斷輸出
+- 物件診斷輸出
 
-- 集合類別與相容性
+- 與集合類別的相容性
 
-請注意，`CObject`不支援多重繼承。 在衍生的類別只能有一個`CObject`基底類別，而且`CObject`必須是階層中最左邊。 它是允許的不過，讓結構和非- `CObject`-右手邊的多重繼承分支中衍生類別。
+請注意，`CObject` 不支援多重繼承。 您的衍生類別只能有一個 `CObject` 基類，而且該 `CObject` 在階層中必須是最左邊的類別。 不過，它可以讓結構和非 `CObject`衍生的類別在右手邊的多重繼承分支中。
 
-您將了解主要的優點，從`CObject`衍生，如果您使用一些選擇性的巨集，在您的類別實作和宣告。
+如果您在類別的執行和宣告中使用一些選擇性宏，您將會發現 `CObject` 衍生的主要優點。
 
-第一層巨集[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)並[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)，允許執行階段存取的類別名稱及在階層中的位置。 如此一來，接著讓有意義的診斷傾印。
+第一層宏[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)和[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)允許執行時間存取類別名稱及其在階層中的位置。 接著，這會允許有意義的診斷傾印。
 
-第二個層級巨集[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)並[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)、 包含的第一個層級巨集的所有功能，而且可以讓物件被 「 序列化 」 與 「 封存 」。
+第二層宏[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)包含第一層宏的所有功能，而且可讓物件「序列化」到「封存」。
 
-如需衍生 Microsoft Foundation classes 和C++一般類別，並使用`CObject`，請參閱[使用 CObject](../../mfc/using-cobject.md)並[序列化](../../mfc/serialization-in-mfc.md)。
+如需有關整體衍生 Microsoft Foundation 類別C++和類別，以及如何使用 `CObject`的詳細資訊，請參閱[使用 CObject](../../mfc/using-cobject.md)和[序列化](../../mfc/serialization-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -93,9 +93,9 @@ class AFX_NOVTABLE CObject
 
 **標頭：** afx.h
 
-##  <a name="assertvalid"></a>  CObject::AssertValid
+##  <a name="assertvalid"></a>CObject：： AssertValid
 
-會驗證此物件的完整性。
+驗證這個物件的完整性。
 
 ```
 virtual void AssertValid() const;
@@ -103,25 +103,25 @@ virtual void AssertValid() const;
 
 ### <a name="remarks"></a>備註
 
-`AssertValid` 執行這個物件的驗證檢查，藉由檢查其內部狀態。 在 偵錯版本的程式庫，`AssertValid`可能會判斷提示，並因此結束程式的訊息會列出行號和檔名，判斷提示失敗的位置。
+`AssertValid` 藉由檢查其內部狀態來執行此物件的有效性檢查。 在程式庫的偵錯工具版本中，`AssertValid` 可能會判斷提示，因此會以一則訊息來終止程式，其中會列出判斷提示失敗的行號和檔案名。
 
-當您撰寫您自己的類別時，您應該覆寫`AssertValid`函式以提供診斷的服務，為自己和您類別的其他使用者。 覆寫`AssertValid`通常會呼叫`AssertValid`其基底類別，再檢查唯一衍生的類別資料成員的函式。
+當您撰寫自己的類別時，您應該覆寫 `AssertValid` 函式，為您自己和類別的其他使用者提供診斷服務。 覆寫的 `AssertValid` 通常會在檢查衍生類別的唯一資料成員之前，呼叫其基類的 `AssertValid` 函數。
 
-因為`AssertValid`已**const**函式，您不得在測試期間變更物件狀態。 衍生的類別`AssertValid`函式不應該擲回例外狀況，但而是應該判斷提示它們是否偵測到無效的物件資料。
+因為 `AssertValid` 是**const**函數，所以不允許您在測試期間變更物件狀態。 您自己的衍生類別 `AssertValid` 函式不應該擲回例外狀況，而是應該判斷提示是否偵測到不正確物件資料。
 
-「 有效 」 的定義取決於物件的類別。 因此，函式應該執行 「 淺層檢查 」。 也就是說，如果物件包含其他物件的指標，它應該檢查以查看是否指標不是 null，但它不應該執行的有效性測試指標所參考的物件。
+"有效性" 的定義取決於物件的類別。 做為規則，函數應該執行「淺層檢查」。 也就是說，如果物件包含其他物件的指標，則應該檢查指標是否不是 null，但不應對指標所參考的物件執行有效性測試。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於所有`CObject`範例。
+如需所有 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]
 
 如需其他範例，請參閱[AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)。
 
-##  <a name="cobject"></a>  CObject::CObject
+##  <a name="cobject"></a>CObject：： CObject
 
-這些函式是標準`CObject`建構函式。
+這些函式是標準 `CObject` 的函數。
 
 ```
 CObject();
@@ -131,25 +131,25 @@ CObject(const CObject& objectSrc);
 ### <a name="parameters"></a>參數
 
 *objectSrc*<br/>
-另一個參考 `CObject`
+另一個 `CObject` 的參考
 
 ### <a name="remarks"></a>備註
 
-您的衍生類別的建構函式會自動呼叫的預設版本。
+預設版本會由衍生類別的「函式」自動呼叫。
 
-如果您的類別是可序列化 （它會合併 IMPLEMENT_SERIAL 巨集），則您必須將類別宣告中的預設建構函式 （不含引數的建構函式）。 如果您不需要預設建構函式，宣告私用或受保護的 「 空白 」 的建構函式。 如需詳細資訊，請參閱 <<c0> [ 使用 CObject](../../mfc/using-cobject.md)。
+如果您的類別是可序列化的（它會併入 IMPLEMENT_SERIAL 宏），則您的類別宣告中必須有預設的處理常式（不含引數的函式）。 如果您不需要預設的處理函式，請宣告私用或受保護的「空白」的函式。 如需詳細資訊，請參閱[使用 CObject](../../mfc/using-cobject.md)。
 
-標準C++預設類別複製建構函式會依成員複本。 私用的存在`CObject`複製建構函式可確保編譯器錯誤訊息，如果您的類別中的複製建構函式所需但無法使用。 因此，如果您的類別需要這項功能，您必須提供複製建構函式。
+標準C++預設類別複製的函式會進行成員複製。 如果需要類別的複製構造函式，但無法使用，則私用 `CObject` 複製程式的存在會保證編譯器錯誤訊息。 因此，如果您的類別需要這項功能，則必須提供複製的函式。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於`CObject`範例。
+如需 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]
 
-##  <a name="dump"></a>  CObject::Dump
+##  <a name="dump"></a>CObject：:D ump
 
-您的物件內容傾印[CDumpContext](../../mfc/reference/cdumpcontext-class.md)物件。
+將物件的內容傾印到[CDumpCoNtext](../../mfc/reference/cdumpcontext-class.md)物件。
 
 ```
 virtual void Dump(CDumpContext& dc) const;
@@ -158,32 +158,32 @@ virtual void Dump(CDumpContext& dc) const;
 ### <a name="parameters"></a>參數
 
 *dc*<br/>
-傾印，通常的診斷傾印內容`afxDump`。
+用於傾印的診斷轉儲內容，通常是 `afxDump`。
 
 ### <a name="remarks"></a>備註
 
-當您撰寫您自己的類別時，您應該覆寫`Dump`函式以提供診斷的服務，為自己和您類別的其他使用者。 覆寫`Dump`通常會呼叫`Dump`其基底類別，再列印唯一衍生的類別資料成員的函式。 `CObject::Dump` 列印類別名稱，如果您的類別使用`IMPLEMENT_DYNAMIC`或 IMPLEMENT_SERIAL 巨集。
+當您撰寫自己的類別時，您應該覆寫 `Dump` 函式，為您自己和類別的其他使用者提供診斷服務。 覆寫的 `Dump` 通常會在列印衍生類別的唯一資料成員之前，先呼叫其基類的 `Dump` 函式。 如果您的類別使用 `IMPLEMENT_DYNAMIC` 或 IMPLEMENT_SERIAL 宏，`CObject::Dump` 會列印類別名稱。
 
 > [!NOTE]
->  您`Dump`函式應該不會列印其輸出的結尾新行字元。
+>  您的 `Dump` 函式不應在其輸出結尾列印分行符號。
 
-`Dump` 呼叫的意義僅在 Microsoft Foundation 類別庫的偵錯版本。 呼叫、 函式宣告和使用的函式實作應該括住 **#ifdef _DEBUG** /  `#endif`條件式編譯的陳述式。
+只有在 MFC 程式庫的 Debug 版本中，`Dump` 呼叫才有意義。 您應該使用條件式編譯的 **#ifdef _DEBUG**/ `#endif` 語句來括住呼叫、函式宣告和函式實作為。
 
-由於`Dump`已**const**函式，您不允許變更物件狀態期間傾印。
+因為 `Dump` 是**const**函數，所以不允許您在傾印期間變更物件狀態。
 
-[CDumpContext 插入 (<<) 運算子](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt)呼叫`Dump`當`CObject`插入指標。
+插入 `CObject` 指標時， [CDumpCoNtext 插入（< <）運算子](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt)會呼叫 `Dump`。
 
-`Dump` 允許的物件只有 「 非循環 」 傾印。 您可以傾印物件的清單，比方說，但如果其中一個物件是清單本身，您將最終堆疊溢位。
+`Dump` 只允許「非迴圈」的物件傾印。 例如，您可以傾印物件清單，但如果其中一個物件是清單本身，您最後就會溢位堆疊。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於所有`CObject`範例。
+如需所有 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]
 
-##  <a name="getruntimeclass"></a>  CObject::GetRuntimeClass
+##  <a name="getruntimeclass"></a>CObject：： GetRuntimeClass
 
-傳回`CRuntimeClass`結構，其對應至這個物件的類別。
+傳回對應至這個物件之類別的 `CRuntimeClass` 結構。
 
 ```
 virtual CRuntimeClass* GetRuntimeClass() const;
@@ -191,35 +191,35 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 
 ### <a name="return-value"></a>傳回值
 
-指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)結構，其對應至這個物件的類別; 從未**NULL**。
+對應至這個物件之類別的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)結構指標。永不**為 Null**。
 
 ### <a name="remarks"></a>備註
 
-有一個`CRuntimeClass`針對每個結構`CObject`-衍生的類別。 結構成員如下所示：
+每個 `CObject`衍生類別都有一個 `CRuntimeClass` 結構。 結構成員如下所示：
 
-- **LPCSTR m_lpszClassName** null 結束的字串，包含 ASCII 的類別名稱。
+- **LPCSTR m_lpszClassName**包含 ASCII 類別名稱的以 null 終止的字串。
 
-- **int m_nObjectSize**物件，以位元組為單位的大小。 如果物件具有資料成員指向已配置的記憶體，記憶體的大小就不會包含。
+- **int m_nObjectSize**物件的大小（以位元組為單位）。 如果物件的資料成員指向已配置的記憶體，則不會包含該記憶體的大小。
 
-- **UINT m_wSchema**結構描述編號 (-1 表示不可序列化的類別)。 請參閱[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)巨集的結構描述編號說明。
+- **UINT m_wSchema**架構編號（不可序列化類別的-1）。 如需架構編號的描述，請參閱[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)宏。
 
-- **CObject\* (依照 pascal 命名法\*m_pfnCreateObject) > （)** 建立您的類別物件的預設建構函式的函式指標 (有效前提類別支援動態建立; 否則會傳回**NULL**).
+- **CObject\* （PASCAL\* m_pfnCreateObject）（）** 預設的函式指標，可建立類別的物件（只有在類別支援動態建立時才有效，否則會傳回**Null**）。
 
-- **CRuntimeClass\* (依照 pascal 命名法\*m_pfn_GetBaseClass) > （)** 如果您的應用程式動態連結至 MFC 的 AFXDLL 版本中，函式的指標，會傳回`CRuntimeClass`基底類別的結構。
+- **CRuntimeClass\* （PASCAL\* m_pfn_GetBaseClass）（）** 如果您的應用程式是以動態方式連結至 MFC 的 AFXDLL 版本，則為函式的指標，該函式會傳回基類的 `CRuntimeClass` 結構。
 
-- **CRuntimeClass\* m_pBaseClass**如果您的應用程式以靜態方式連結至 MFC，指標`CRuntimeClass`基底類別的結構。
+- **CRuntimeClass\* m_pBaseClass**如果您的應用程式以靜態方式連結至 MFC，則為基類之 `CRuntimeClass` 結構的指標。
 
-此函式需要使用[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)， [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)，或[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)類別實作中的巨集。 否則您會收到不正確的結果。
+此函式需要在類別實作用中使用[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)、 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)或[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)宏。 否則，您會得到不正確的結果。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於所有`CObject`範例。
+如需所有 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
-##  <a name="iskindof"></a>  CObject::IsKindOf
+##  <a name="iskindof"></a>CObject：： IsKindOf
 
-測試指定類別的這個物件的關聯性。
+測試這個物件與指定類別的關聯性。
 
 ```
 BOOL IsKindOf(const CRuntimeClass* pClass) const;
@@ -228,27 +228,27 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ### <a name="parameters"></a>參數
 
 *pClass*<br/>
-指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)相關聯的結構您`CObject`-衍生的類別。
+與 `CObject`衍生類別相關聯之[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-物件對應到類別; 如果為非零否則為 0。
+如果物件對應至類別，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-此函式會測試*pClass*檢查 （1） 它是指定類別的物件或 （2） 它是衍生自指定的類別之類別的物件。 此函式僅適用於以宣告的類別[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)， [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)，或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)巨集。
+此函式會測試*pClass* ，以查看（1）它是否為指定類別的物件，或（2）它是否為衍生自指定類別的類別物件。 此函式僅適用于使用[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)、 [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)宏所宣告的類別。
 
-請勿使用此函式廣泛因為它會失去C++多型功能。 改為使用虛擬函式。
+請勿廣泛使用此函式，因為它會C++失去多型功能。 請改用虛擬函式。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於所有`CObject`範例。
+如需所有 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]
 
-##  <a name="isserializable"></a>  CObject::IsSerializable
+##  <a name="isserializable"></a>CObject：： IsSerializable
 
-測試是否此物件適合進行序列化。
+測試這個物件是否符合序列化的資格。
 
 ```
 BOOL IsSerializable() const;
@@ -256,24 +256,24 @@ BOOL IsSerializable() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果這個物件可以序列化;，非零值。否則為 0。
+如果這個物件可以序列化，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-為可序列化的類別，其宣告必須包含[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)巨集，以及實作必須包含[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)巨集。
+若要讓類別成為可序列化的，其宣告必須包含[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)宏，而且該實作為必須包含[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)宏。
 
 > [!NOTE]
->  不會覆寫這個函式。
+>  不要覆寫此函數。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於所有`CObject`範例。
+如需所有 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]
 
-##  <a name="operator_delete"></a>  CObject::operator delete
+##  <a name="operator_delete"></a>CObject：： operator delete
 
-發行版本的程式庫，運算子**刪除**釋放運算子所配置的記憶體**新**。
+針對程式庫的發行版本，運算子**delete**會釋出 operator **new**所配置的記憶體。
 
 ```
 void PASCAL operator delete(void* p);
@@ -290,27 +290,27 @@ void PASCAL operator delete(
 
 ### <a name="remarks"></a>備註
 
-在偵錯版本中，運算子**刪除**參與設計用來偵測記憶體流失的配置監視配置。
+在 Debug 版本中，operator **delete**會參與專為偵測記憶體流失而設計的配置監視配置。
 
-如果您使用的一行程式碼
+如果您使用程式程式碼
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-在您實作的任何之前。CPP 檔案，然後第三個版本的**刪除**將會使用，供之後的報表配置的區塊中儲存的檔名和行號。 您不必擔心提供額外的參數;巨集會自動為您。
+在中的任何實作為之前。然後將使用第三個版本的**delete** ，將檔案名和行號儲存在配置的區塊中，以供日後報告之用。 您不需要擔心提供額外的參數;宏會替您負責。
 
-即使您不使用 DEBUG_NEW 偵錯模式中，您仍然可以取得流失偵測，但沒有來源檔案行號報告上面所述。
+即使您未在 [偵錯工具] 模式中使用 DEBUG_NEW，仍然會取得流失偵測，但不會有上述的來源檔案行號報告。
 
-如果您覆寫運算子**新**並**刪除**，違反此診斷功能。
+如果您覆寫**new**和**delete**運算子，請要略過此診斷功能。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於`CObject`範例。
+如需 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]
 
-##  <a name="operator_new"></a>  新的 CObject::operator
+##  <a name="operator_new"></a>CObject：： operator new
 
-發行版本的程式庫，運算子**新**類似的方式執行最佳的記憶體配置`malloc`。
+針對程式庫的發行版本，operator **new**會以類似 `malloc`的方式執行最佳的記憶體配置。
 
 ```
 void* PASCAL operator new(size_t nSize);
@@ -324,26 +324,26 @@ void* PASCAL operator new(
 
 ### <a name="remarks"></a>備註
 
-在偵錯版本中，運算子**新**參與設計用來偵測記憶體流失的配置監視配置。
+在 Debug 版本中，operator **new**參與了專為偵測記憶體流失而設計的配置監視配置。
 
-如果您使用的一行程式碼
+如果您使用程式程式碼
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-在您實作的任何之前。CPP 檔案，然後第二版**新**將會使用，供之後的報表配置的區塊中儲存的檔名和行號。 您不必擔心提供額外的參數;巨集會自動為您。
+在中的任何實作為之前。然後會使用**新**版本的 .cpp 檔案，並在配置的區塊中儲存檔案名和行號，以供日後報告之用。 您不需要擔心提供額外的參數;宏會替您負責。
 
-即使您不使用 DEBUG_NEW 偵錯模式中，您仍然可以取得流失偵測，但沒有來源檔案行號報告上面所述。
+即使您未在 [偵錯工具] 模式中使用 DEBUG_NEW，仍然會取得流失偵測，但不會有上述的來源檔案行號報告。
 
 > [!NOTE]
->  如果您覆寫這位操作員，您也必須覆寫**刪除**。 不使用標準程式庫`_new_handler`函式。
+>  如果您覆寫這個運算子，您也必須覆寫**delete**。 請勿使用標準程式庫 `_new_handler` 函數。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於`CObject`範例。
+如需 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
-##  <a name="serialize"></a>  CObject::Serialize
+##  <a name="serialize"></a>CObject：：序列化
 
 從封存中讀取或寫入此物件。
 
@@ -354,23 +354,23 @@ virtual void Serialize(CArchive& ar);
 ### <a name="parameters"></a>參數
 
 *ar*<br/>
-A`CArchive`来序列化或從物件。
+要在其中序列化的 `CArchive` 物件。
 
 ### <a name="remarks"></a>備註
 
-您必須覆寫`Serialize`針對每個您想要序列化的類別。 覆寫`Serialize`必須先呼叫`Serialize`函式，其基底類別。
+您必須覆寫您想要序列化之每個類別的 `Serialize`。 覆寫的 `Serialize` 必須先呼叫其基類的 `Serialize` 函式。
 
-您也必須使用[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)巨集，在類別宣告中，而且您必須使用[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)實作中的巨集。
+您也必須在類別宣告中使用[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)宏，而且您必須在執行中使用[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)宏。
 
-使用[CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)或是[CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring)判斷封存是否載入或儲存。
+使用[CArchive：： IsLoading](../../mfc/reference/carchive-class.md#isloading)或[CArchive：： IsStoring](../../mfc/reference/carchive-class.md#isstoring)來判斷封存是否正在載入或儲存。
 
-`Serialize` 會呼叫[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)並[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)。 這些函式相關聯`CArchive`插入運算子 ( **< \<**) 和擷取運算子 ( **>>**)。
+`Serialize` 是由[CArchive：： ReadObject](../../mfc/reference/carchive-class.md#readobject)和[Carchive：： WriteObject](../../mfc/reference/carchive-class.md#writeobject)所呼叫。 這些函式會與 `CArchive` 插入運算子（ **<\<** ）和「抽取運算子」（ **>>** ）相關聯。
 
-如需序列化的範例，請參閱文章[序列化：將物件序列化為](../../mfc/serialization-serializing-an-object.md)。
+如需序列化範例，請參閱[序列化：序列化物件一](../../mfc/serialization-serializing-an-object.md)文。
 
 ### <a name="example"></a>範例
 
-請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`類別，用於所有`CObject`範例。
+如需所有 `CObject` 範例中使用的 `CAge` 類別清單，請參閱[CObList：： CObList](../../mfc/reference/coblist-class.md#coblist) 。
 
 [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]
 

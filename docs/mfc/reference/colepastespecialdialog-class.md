@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503770"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855463"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 類別
 
@@ -49,19 +49,19 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|建構 `COlePasteSpecialDialog` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[COlePasteSpecialDialog::AddFormat](#addformat)|將自訂格式新增至您的應用程式可以貼上的格式清單。|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|將新專案新增至支援的剪貼簿格式清單。|
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|新增 CF_BITMAP、CF_DIB、CF_METAFILEPICT，並選擇性地 CF_LINKSOURCE 至您的應用程式可以貼上的格式清單。|
-|[COlePasteSpecialDialog::CreateItem](#createitem)|使用指定的格式，在容器檔案中建立專案。|
-|[COlePasteSpecialDialog::DoModal](#domodal)|顯示 [OLE 貼上特殊] 對話方塊。|
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|將 CF_BITMAP、CF_DIB、CF_METAFILEPICT，以及選擇性地 CF_LINKSOURCE 新增至您的應用程式可以貼上的格式清單。|
+|[COlePasteSpecialDialog：： CreateItem](#createitem)|使用指定的格式，在容器檔案中建立專案。|
+|[COlePasteSpecialDialog：:D oModal](#domodal)|顯示 [OLE 貼上特殊] 對話方塊。|
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|告訴您是否要將專案繪製為圖示。|
 |[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|取得與這個專案的 iconic 表單相關聯之中繼檔的控制碼。|
 |[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|取得使用者所選擇之可用貼上選項的索引。|
@@ -71,11 +71,11 @@ class COlePasteSpecialDialog : public COleDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[COlePasteSpecialDialog::m_ps](#m_ps)|OLEUIPASTESPECIAL 類型的結構，可控制對話方塊的功能。|
+|[COlePasteSpecialDialog：： m_ps](#m_ps)|OLEUIPASTESPECIAL 類型的結構，可控制對話方塊的功能。|
 
 ## <a name="remarks"></a>備註
 
-當您想要呼叫`COlePasteSpecialDialog`此對話方塊時，請建立類別的物件。 在結構化 物件之後，您可以使用 [AddFormat](#addformat) 和 [AddStandardFormats](#addstandardformats) 成員函式，將剪貼簿格式加入至`COlePasteSpecialDialog`對話方塊。 您也可以使用[m_ps](#m_ps)結構，在對話方塊中初始化控制項的值或狀態。 `m_ps`結構的型別為 OLEUIPASTESPECIAL。
+當您想要呼叫此對話方塊時，請建立類別 `COlePasteSpecialDialog` 的物件。 在結構化 `COlePasteSpecialDialog` 物件之後，您可以使用[AddFormat](#addformat)和[AddStandardFormats](#addstandardformats)成員函式，將剪貼簿格式加入至對話方塊。 您也可以使用[m_ps](#m_ps)結構，在對話方塊中初始化控制項的值或狀態。 `m_ps` 結構的類型是 OLEUIPASTESPECIAL。
 
 如需詳細資訊，請參閱 Windows SDK 中的[OLEUIPASTESPECIAL](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw)結構。
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>參數
 
-*fmt*<br/>
+*bcp.fmt*<br/>
 要加入之資料類型的參考。
 
 *lpszFormat*<br/>
@@ -146,12 +146,12 @@ void AddFormat(
 *bEnableIcon*<br/>
 決定在清單方塊中選擇此格式時，是否啟用 [顯示為圖示] 核取方塊的旗標。
 
-*bLink*<br/>
+*閃光*<br/>
 決定在清單方塊中選擇此格式時，是否啟用 [貼上連結] 選項按鈕的旗標。
 
 ### <a name="remarks"></a>備註
 
-您可以呼叫此函式來新增標準格式，例如 CF_TEXT 或 CF_TIFF，或是您的應用程式已向系統註冊的自訂格式。 如需將資料物件貼入應用程式的詳細資訊，請參閱[資料物件和資料來源一文：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+您可以呼叫此函式來新增標準格式，例如 CF_TEXT 或 CF_TIFF，或是應用程式已向系統註冊的自訂格式。 如需將資料物件貼入應用程式的詳細資訊，請參閱[資料物件和資料來源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)一文。
 
 如需詳細資訊，請參閱[TYMED](/windows/win32/api/objidl/ne-objidl-tymed)列舉類型和在 Windows SDK 中的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)結構。
 
@@ -223,17 +223,17 @@ COlePasteSpecialDialog(
 
 - PSF_CHECKDISPLAYASICON 指定在呼叫對話方塊時，一開始就會檢查顯示為圖示的核取方塊。
 
-- PSF_SHOWHELP 指定對話方塊被呼叫時，將會顯示 [說明] 按鈕。
+- PSF_SHOWHELP 指定在呼叫對話方塊時，將會顯示 [說明] 按鈕。
 
 *pDataObject*<br/>
-指向要貼上的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。 如果此值為 Null，則會`COleDataObject`從剪貼簿取得。
+指向要貼上的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。 如果此值為 Null，則會從剪貼簿取得 `COleDataObject`。
 
 *pParentWnd*<br/>
-指向對話方塊物件所屬的父系或擁有者視窗物件`CWnd`（類型為）。 如果它是 Null，則對話方塊的父視窗會設定為主應用程式視窗。
+指向對話方塊物件所屬的父系或擁有者視窗物件（屬於 `CWnd`類型）。 如果它是 Null，則對話方塊的父視窗會設定為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-此函式只會`COlePasteSpecialDialog`構造物件。 若要顯示對話方塊，請呼叫[DoModal](#domodal)函式。
+此函式只會 `COlePasteSpecialDialog` 物件的結構。 若要顯示對話方塊，請呼叫[DoModal](#domodal)函式。
 
 如需詳細資訊，請參閱 Windows SDK 中的[OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag)列舉型別。
 
@@ -248,7 +248,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="parameters"></a>參數
 
 *pNewItem*<br/>
-`COleClientItem`指向實例。 不可以是 NULL。
+指向 `COleClientItem` 實例。 不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -274,13 +274,13 @@ virtual INT_PTR DoModal();
 
 - 如果使用者取消對話方塊，則 IDCANCEL。
 
-- 如果發生錯誤，則 IDABORT。 如果傳回 IDABORT，請呼叫`COleDialog::GetLastError`成員函式，以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單，請參閱 Windows SDK 中的[OleUIPasteSpecial](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw)函數。
+- 如果發生錯誤，則 IDABORT。 如果傳回 IDABORT，請呼叫 `COleDialog::GetLastError` 成員函式，以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單，請參閱 Windows SDK 中的[OleUIPasteSpecial](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw)函數。
 
 ### <a name="remarks"></a>備註
 
-如果您想要藉由設定[m_ps](#m_ps)結構的成員來初始化各種對話方塊控制項，您應該在呼叫`DoModal`之前執行此動作，但在構造對話方塊物件之後。
+如果您想要藉由設定[m_ps](#m_ps)結構的成員來初始化各種對話方塊控制項，您應該先執行此動作，再呼叫 `DoModal`，但在構造對話方塊物件之後。
 
-如果`DoModal`傳回 IDOK，您可以呼叫其他成員函式，以抓取使用者在對話方塊中輸入的設定或資訊。
+如果 `DoModal` 傳回 IDOK，您可以呼叫其他成員函式，以抓取使用者在對話方塊中輸入的設定或資訊。
 
 ##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect
 
@@ -326,7 +326,7 @@ int GetPasteIndex() const;
 
 ### <a name="return-value"></a>傳回值
 
-使用者選取的`OLEUIPASTEENTRY`結構陣列中的索引。 執行貼上作業時，應該使用對應于所選索引的格式。
+使用者所選取 `OLEUIPASTEENTRY` 結構陣列中的索引。 執行貼上作業時，應該使用對應于所選索引的格式。
 
 ### <a name="remarks"></a>備註
 
@@ -346,7 +346,7 @@ UINT GetSelectionType() const;
 
 ### <a name="remarks"></a>備註
 
-傳回型別值是由`Selection` `COlePasteSpecialDialog`類別中宣告的列舉型別所指定。
+傳回型別值是由 `COlePasteSpecialDialog` 類別中宣告的 `Selection` 列舉型別所指定。
 
 ```
 enum Selection {
@@ -359,15 +359,15 @@ enum Selection {
 
 這些值的簡短 desccriptions 如下：
 
-- `COlePasteSpecialDialog::pasteLink`已核取 [貼上連結] 選項按鈕，而選擇的格式為標準 OLE 格式。
+- `COlePasteSpecialDialog::pasteLink` 已核取 [貼上連結] 選項按鈕，而選擇的格式為標準 OLE 格式。
 
-- `COlePasteSpecialDialog::pasteNormal`已核取 [貼上] 選項按鈕，而選擇的格式為標準 OLE 格式。
+- `COlePasteSpecialDialog::pasteNormal` 已核取 [貼上] 選項按鈕，而選擇的格式為標準 OLE 格式。
 
-- `COlePasteSpecialDialog::pasteOther`選取的格式不是標準的 OLE 格式。
+- `COlePasteSpecialDialog::pasteOther` 選取的格式不是標準的 OLE 格式。
 
-- `COlePasteSpecialDialog::pasteStatic`選擇的格式是中繼檔。
+- `COlePasteSpecialDialog::pasteStatic` 選擇的格式是中繼檔。
 
-##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps
+##  <a name="m_ps"></a>COlePasteSpecialDialog：： m_ps
 
 OLEUIPASTESPECIAL 類型的結構，用來控制 [貼上特殊] 對話方塊的行為。
 

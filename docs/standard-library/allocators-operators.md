@@ -6,15 +6,15 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377881"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875954"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 運算子
 
-這些是定義的通用範本運算子函式&lt;allocators>&gt;。 類別成員運算子函式，請參閱類別文件。
+這些是 &lt;配置器&gt;中定義的全域範本運算子函式。 如需類別成員運算子函式，請參閱類別檔。
 
 |||
 |-|-|

@@ -3,11 +3,11 @@ title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031364"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865626"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -35,7 +35,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 若要檢視組態選項，請選取 [專案] > [屬性] 功能表，或在 [方案總管] 中以滑鼠右鍵按一下專案，然後從操作功能表中選取 [屬性]。 [一般] 設定隨即出現。
 
-![一般組態](media/settings_general.png)
+![一般設定](media/settings_general.png)
 
 預設會建置可執行檔 (.out)。 若要建置靜態或動態程式庫，或使用現有 Makefile，請使用 [組態類型] 設定。
 
@@ -123,7 +123,7 @@ sudo apt install zip
 
 ::: moniker-end
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Set compiler and build properties](../build/working-with-project-properties.md) (設定編譯器及組建屬性)<br/>
 [C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>

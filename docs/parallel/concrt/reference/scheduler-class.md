@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142004"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867120"
 ---
 # <a name="scheduler-class"></a>Scheduler 類別
 
@@ -56,11 +56,11 @@ class Scheduler;
 |[CreateScheduleGroup](#createschedulegroup)|已多載。 在排程器中建立新的排程群組。 採用參數的版本 `_Placement` 會使新建立之排程群組內的工作，在該參數指定的位置上有偏差執行。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|傳回排程器目前的虛擬處理器數目。|
 |[GetPolicy](#getpolicy)|傳回用來建立排程器的原則複本。|
-|[ID](#id)|傳回排程器的唯一識別碼。|
+|[Id](#id)|傳回排程器的唯一識別碼。|
 |[IsAvailableLocation](#isavailablelocation)|判斷排程器上是否有指定的位置。|
 |[參考](#reference)|遞增排程器的參考計數。|
 |[RegisterShutdownEvent](#registershutdownevent)|當排程器關閉並終結其本身時，會導致在 `_Event` 參數中傳遞的 Windows 事件控制碼收到信號。 當事件收到通知時，所有已排定排程器的工作都已完成。 多個關機事件可以透過這個方法來註冊。|
-|[發行](#release)|遞減排程器的參考計數。|
+|[版本](#release)|遞減排程器的參考計數。|
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|將預設排程器原則重設為執行時間預設值。 下次建立預設排程器時，將會使用執行時間預設原則設定。|
 |[ScheduleTask](#scheduletask)|已多載。 排定排程器內的輕量工作。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。|
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|允許使用使用者定義的原則來建立預設排程器。 只有在進程內沒有預設排程器時，才能呼叫這個方法。 設定預設原則之後，它會持續有效，直到下一次有效呼叫 `SetDefaultSchedulerPolicy` 或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法為止。|

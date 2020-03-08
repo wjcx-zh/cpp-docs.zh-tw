@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507440"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876044"
 ---
 # <a name="cbrush-class"></a>CBrush 類別
 
@@ -45,36 +45,36 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CBrush::CBrush](#cbrush)|建構 `CBrush` 物件。|
+|[CBrush：： CBrush](#cbrush)|建構 `CBrush` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|使用[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)結構中指定的樣式、色彩和模式，初始化筆刷。|
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|使用與裝置無關的點陣圖（DIB）所指定的模式，初始化筆刷。|
-|[CBrush::CreateHatchBrush](#createhatchbrush)|使用指定的影線圖樣和色彩，初始化筆刷。|
-|[CBrush::CreatePatternBrush](#createpatternbrush)|使用點陣圖所指定的模式，初始化筆刷。|
-|[CBrush::CreateSolidBrush](#createsolidbrush)|使用指定的純色，初始化筆刷。|
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|建立預設系統色彩的筆刷。|
-|[CBrush::FromHandle](#fromhandle)|當指定 Windows `HBRUSH`物件的`CBrush`控制碼時，傳回物件的指標。|
-|[CBrush::GetLogBrush](#getlogbrush)|取得[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)結構。|
+|[CBrush：： CreateBrushIndirect](#createbrushindirect)|使用[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)結構中指定的樣式、色彩和模式，初始化筆刷。|
+|[CBrush：： CreateDIBPatternBrush](#createdibpatternbrush)|使用與裝置無關的點陣圖（DIB）所指定的模式，初始化筆刷。|
+|[CBrush：： CreateHatchBrush](#createhatchbrush)|使用指定的影線圖樣和色彩，初始化筆刷。|
+|[CBrush：： CreatePatternBrush](#createpatternbrush)|使用點陣圖所指定的模式，初始化筆刷。|
+|[CBrush：： CreateSolidBrush](#createsolidbrush)|使用指定的純色，初始化筆刷。|
+|[CBrush：： CreateSysColorBrush](#createsyscolorbrush)|建立預設系統色彩的筆刷。|
+|[CBrush：： FromHandle](#fromhandle)|當給定 Windows `HBRUSH` 物件的控制碼時，傳回 `CBrush` 物件的指標。|
+|[CBrush：： GetLogBrush](#getlogbrush)|取得[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)結構。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CBrush：： operator HBRUSH](#operator_hbrush)|傳回附加至`CBrush`物件的 Windows 控制碼。|
+|[CBrush：： operator HBRUSH](#operator_hbrush)|傳回附加至 `CBrush` 物件的 Windows 控制碼。|
 
 ## <a name="remarks"></a>備註
 
-若要使用`CBrush`物件，請`CBrush`建立物件，並將它傳遞`CDC`給任何需要筆刷的成員函式。
+若要使用 `CBrush` 物件，請建立 `CBrush` 物件，並將它傳遞至任何需要筆刷的 `CDC` 成員函式。
 
 筆刷可以是實線、影線或圖案。
 
-如需的詳細`CBrush`資訊，請參閱[繪圖物件](../../mfc/graphic-objects.md)。
+如需 `CBrush`的詳細資訊，請參閱[繪圖物件](../../mfc/graphic-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -107,32 +107,32 @@ explicit CBrush(CBitmap* pBitmap);
 *nIndex*<br/>
 指定筆刷的影線類型。 它可以是下列任何一個值：
 
-- 向下 HS_BDIAGONAL （由左至右）45度
+- HS_BDIAGONAL 向下影線（由左至右）45度
 
 - HS_CROSS 水準和垂直交叉線
 
-- HS_DIAGCROSS 45 度的影線
+- 以45度 HS_DIAGCROSS 交叉線
 
-- 在45度 HS_FDIAGONAL 向上影線（由左至右）
+- HS_FDIAGONAL 在45度的向上影線（由左到右）
 
 - HS_HORIZONTAL 水準影線
 
 - HS_VERTICAL 垂直影線
 
 *pBitmap*<br/>
-`CBitmap`指向物件，指定筆刷繪製的點陣圖。
+指向指定筆刷繪製之點陣圖的 `CBitmap` 物件。
 
 ### <a name="remarks"></a>備註
 
-`CBrush`有四個多載的函式。不含引數的函式會`CBrush`建立一個未初始化的物件，必須先加以初始化，才能使用它。
+`CBrush` 有四個多載的函式。不含引數的函式會建立未初始化的 `CBrush` 物件，必須先初始化才能使用。
 
-如果您使用不含引數的函式，則必須使用`CBrush` [CreateSolidBrush](#createsolidbrush)、 [CreateHatchBrush](#createhatchbrush)、 [CreateBrushIndirect](#createbrushindirect)、 [CreatePatternBrush](#createpatternbrush)或[來初始化產生的物件。CreateDIBPatternBrush](#createdibpatternbrush)。 如果您使用其中一個接受引數的函式，則不需要進一步的初始化。 如果遇到錯誤，含有引數的函式可能會擲回例外狀況，而不含引數的函式一律會成功。
+如果您使用不含引數的函式，則必須使用[CreateSolidBrush](#createsolidbrush)、 [CreateHatchBrush](#createhatchbrush)、 [CreateBrushIndirect](#createbrushindirect)、 [CreatePatternBrush](#createpatternbrush)或[CreateDIBPatternBrush](#createdibpatternbrush)來初始化產生的 `CBrush` 物件。 如果您使用其中一個接受引數的函式，則不需要進一步的初始化。 如果遇到錯誤，含有引數的函式可能會擲回例外狀況，而不含引數的函式一律會成功。
 
 具有單一[COLORREF](/windows/win32/gdi/colorref)參數的函式會使用指定的色彩來建立實心筆刷。 色彩會指定 RGB 值，而且可以使用 WINDOWS 中的 RGB 宏來加以建立。H.
 
 具有兩個參數的函式會構造影線筆刷。 *NIndex*參數會指定影線圖樣的索引。 *CrColor*參數會指定色彩。
 
-具有`CBitmap`參數的函式會結構化已建立圖案的筆刷。 參數會識別點陣圖。 此點陣圖假設已使用[CBitmap：： CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)、 [CBitmap：： CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)、 [CBitmap：： LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)或[CBitmap：： CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)來建立。 在填滿模式中使用的點陣圖大小下限為8圖元 x 8 圖元。
+具有 `CBitmap` 參數的處理函式會結構化已建立圖案的筆刷。 參數會識別點陣圖。 此點陣圖假設已使用[CBitmap：： CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)、 [CBitmap：： CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)、 [CBitmap：： LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)或[CBitmap：： CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)來建立。 在填滿模式中使用的點陣圖大小下限為8圖元 x 8 圖元。
 
 ### <a name="example"></a>範例
 
@@ -185,14 +185,14 @@ BOOL CreateDIBPatternBrush(
 識別全域記憶體物件，其中包含已封裝的裝置獨立點陣圖（DIB）。
 
 *nUsage*<br/>
-指定 [BITMAPINFO](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) 資料`bmiColors[]`結構（「已封裝的 DIB」的一部分）的欄位是否包含明確的 RGB 值或索引到目前已實現的邏輯調色板。 參數必須為下列其中一個值：
+指定[BITMAPINFO](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo)資料結構（屬於「已封裝的 DIB」）的 `bmiColors[]` 欄位是否包含明確的 RGB 值或索引到目前已實現的邏輯調色板。 參數必須為下列其中一個值：
 
-- DIB_PAL_COLORS color 資料表是由16位索引的陣列所組成。
+- DIB_PAL_COLORS 色彩表是由16位索引的陣列所組成。
 
 - DIB_RGB_COLORS color 資料表包含文字 RGB 值。
 
 *lpPackedDIB*<br/>
-指向包含`BITMAPINFO`結構的已封裝 DIB，後面緊接著定義點陣圖圖元的位元組陣列。
+指向包含 `BITMAPINFO` 結構的已封裝 DIB，後面緊接著定義點陣圖圖元的位元組陣列。
 
 ### <a name="return-value"></a>傳回值
 
@@ -204,19 +204,19 @@ BOOL CreateDIBPatternBrush(
 
 這兩個版本與您處理 DIB 的方式不同：
 
-- 在第一個版本中，若要取得 DIB 的控制碼，您可以`GlobalAlloc`呼叫 Windows 函式來配置全域記憶體的區塊，然後在記憶體中填入已封裝的 DIB。
+- 在第一個版本中，若要取得 DIB 的控制碼，您可以呼叫 Windows `GlobalAlloc` 函式來配置全域記憶體的區塊，然後使用封裝的 DIB 填滿記憶體。
 
-- 在第二個版本中，不需要呼叫`GlobalAlloc`來配置封裝 DIB 的記憶體。
+- 在第二個版本中，不需要呼叫 `GlobalAlloc` 來配置封裝 DIB 的記憶體。
 
-封裝的 DIB 包含一個`BITMAPINFO`資料結構，緊接在定義點陣圖圖元的位元組陣列之後。 當做填滿模式使用的點陣圖應為8圖元 x 8 圖元。 如果點陣圖較大，Windows 只會使用對應到前8個數據列的位，以及點陣圖左上角的8個圖元資料行，來建立填滿模式。
+封裝的 DIB 包含一個 `BITMAPINFO` 的資料結構，後面緊接著定義點陣圖圖元的位元組陣列。 當做填滿模式使用的點陣圖應為8圖元 x 8 圖元。 如果點陣圖較大，Windows 只會使用對應到前8個數據列的位，以及點陣圖左上角的8個圖元資料行，來建立填滿模式。
 
 當應用程式在單色裝置內容中選取雙色 DIB 模式筆刷時，Windows 會忽略 DIB 中指定的色彩，而改為使用裝置內容目前的文字和背景色彩來顯示圖樣筆刷。 DIB 的對應圖元（在 DIB 色彩表中的位移0）會使用文字色彩來顯示。 對應至第二個色彩的圖元（在色彩資料表中的位移1）會使用背景色彩來顯示。
 
 如需使用下列 Windows 功能的相關資訊，請參閱 Windows SDK：
 
-- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush)（這項功能只是為了與針對3.0 之前的 Windows 版本所撰寫的應用程式相容， `CreateDIBPatternBrushPt`請使用函式）。
+- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) （這項功能只是為了與針對3.0 之前的 Windows 版本所撰寫的應用程式相容，請使用 `CreateDIBPatternBrushPt` 函式）。
 
-- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt)（此函式應用於以 Win32 為基礎的應用程式）。
+- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) （此函式應用於以 Win32 為基礎的應用程式）。
 
 - [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
@@ -239,13 +239,13 @@ BOOL CreateHatchBrush(
 *nIndex*<br/>
 指定筆刷的影線類型。 它可以是下列任何一個值：
 
-- 向下 HS_BDIAGONAL （由左至右）45度
+- HS_BDIAGONAL 向下影線（由左至右）45度
 
 - HS_CROSS 水準和垂直交叉線
 
-- HS_DIAGCROSS 45 度的影線
+- 以45度 HS_DIAGCROSS 交叉線
 
-- 在45度 HS_FDIAGONAL 向上影線（由左至右）
+- HS_FDIAGONAL 在45度的向上影線（由左到右）
 
 - HS_HORIZONTAL 水準影線
 
@@ -320,7 +320,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 
 然後，可以將筆刷選取為任何裝置內容的目前筆刷。
 
-當應用程式使用所建立`CreateSolidBrush`的筆刷完成時，應該選取裝置內容中的筆刷。
+當應用程式使用 `CreateSolidBrush`建立的筆刷完成時，應該選取裝置內容中的筆刷。
 
 ### <a name="example"></a>範例
 
@@ -347,7 +347,7 @@ BOOL CreateSysColorBrush(int nIndex);
 
 然後，可以將筆刷選取為任何裝置內容的目前筆刷。
 
-當應用程式使用所建立`CreateSysColorBrush`的筆刷完成時，應該選取裝置內容中的筆刷。
+當應用程式使用 `CreateSysColorBrush`建立的筆刷完成時，應該選取裝置內容中的筆刷。
 
 ### <a name="example"></a>範例
 
@@ -355,7 +355,7 @@ BOOL CreateSysColorBrush(int nIndex);
 
 ##  <a name="fromhandle"></a>CBrush：： FromHandle
 
-當給定 Windows [HBRUSH](#operator_hbrush)物件`CBrush`的控制碼時，傳回物件的指標。
+當給定 Windows [HBRUSH](#operator_hbrush)物件的控制碼時，傳回 `CBrush` 物件的指標。
 
 ```
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
@@ -368,11 +368,11 @@ Windows GDI 筆刷的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則`CBrush`為物件的指標; 否則為 Null。
+如果成功，則為 `CBrush` 物件的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果物件尚未附加至控制碼，則會建立並附加`CBrush`暫存物件。 `CBrush` 這個暫存`CBrush`物件只有在下一次應用程式在其事件迴圈中有閒置時間時才有效。 此時，會刪除所有的暫存繪圖物件。 換句話說，暫存物件只在處理一個視窗訊息期間有效。
+如果 `CBrush` 物件尚未附加至控制碼，則會建立並附加暫存 `CBrush` 物件。 只有在下次應用程式的事件迴圈中有閒置時間時，這個暫存 `CBrush` 物件才有效。 此時，會刪除所有的暫存繪圖物件。 換句話說，暫存物件只在處理一個視窗訊息期間有效。
 
 如需使用繪圖物件的詳細資訊，請參閱 Windows SDK 中的[繪圖物件](/windows/win32/gdi/graphic-objects)。
 
@@ -382,7 +382,7 @@ Windows GDI 筆刷的控制碼。
 
 ##  <a name="getlogbrush"></a>CBrush：： GetLogBrush
 
-呼叫這個成員函式以取得`LOGBRUSH`結構。
+呼叫這個成員函式，以取得 `LOGBRUSH` 結構。
 
 ```
 int GetLogBrush(LOGBRUSH* pLogBrush);
@@ -403,9 +403,9 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 
 ### <a name="remarks"></a>備註
 
-`LOGBRUSH`結構會定義筆刷的樣式、色彩和圖樣。
+`LOGBRUSH` 結構會定義筆刷的樣式、色彩和圖樣。
 
-例如，呼叫`GetLogBrush`以符合點陣圖的特定色彩或模式。
+例如，呼叫 `GetLogBrush` 以符合點陣圖的特定色彩或模式。
 
 ### <a name="example"></a>範例
 
@@ -413,7 +413,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 
 ##  <a name="operator_hbrush"></a>CBrush：： operator HBRUSH
 
-使用這個運算子取得`CBrush`物件附加的 Windows GDI 控制碼。
+使用這個運算子取得 `CBrush` 物件的附加 Windows GDI 控制碼。
 
 ```
 operator HBRUSH() const;
@@ -421,7 +421,7 @@ operator HBRUSH() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為`CBrush`物件所表示之 Windows GDI 物件的控制碼，否則為 Null。
+如果成功，則為 `CBrush` 物件所表示之 Windows GDI 物件的控制碼;否則為 Null。
 
 ### <a name="remarks"></a>備註
 

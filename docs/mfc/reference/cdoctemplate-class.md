@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163983"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855452"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 類別
 
@@ -69,55 +69,55 @@ class CDocTemplate : public CCmdTarget
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocTemplate::CDocTemplate](#cdoctemplate)|建構 `CDocTemplate` 物件。|
+|[CDocTemplate：： CDocTemplate](#cdoctemplate)|建構 `CDocTemplate` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocTemplate::AddDocument](#adddocument)|將文件加入至範本。|
-|[CDocTemplate::CloseAllDocuments](#closealldocuments)|關閉所有使用此範本相關聯的文件。|
-|[CDocTemplate::CreateNewDocument](#createnewdocument)|建立新的文件。|
-|[CDocTemplate::CreateNewFrame](#createnewframe)|建立新的框架視窗，其中包含文件和檢視。|
-|[CDocTemplate::CreateOleFrame](#createoleframe)|建立已啟用 OLE 的框架視窗。|
-|[CDocTemplate::CreatePreviewFrame](#createpreviewframe)|建立子框架用於豐富的預覽。|
-|[CDocTemplate::GetDocString](#getdocstring)|擷取的文件類型相關聯的字串。|
-|[CDocTemplate::GetFirstDocPosition](#getfirstdocposition)|擷取與此範本關聯的第一個文件的位置。|
-|[CDocTemplate::GetNextDoc](#getnextdoc)|擷取文件和下一個位置。|
-|[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|初始化框架視窗中，並選擇性地使其可見。|
-|[CDocTemplate::LoadTemplate](#loadtemplate)|載入的資源指定`CDocTemplate`或衍生類別。|
-|[CDocTemplate::MatchDocType](#matchdoctype)|決定文件類型和此範本之間的比對的信心程度。|
-|[CDocTemplate::OpenDocumentFile](#opendocumentfile)|開啟 路徑名稱所指定的檔案。|
-|[CDocTemplate::RemoveDocument](#removedocument)|從範本移除文件。|
-|[CDocTemplate::SaveAllModified](#saveallmodified)|儲存所有文件與此範本關聯的已修改。|
-|[CDocTemplate::SetContainerInfo](#setcontainerinfo)|編輯就地 OLE 項目時，請決定適用於 OLE 容器資源。|
-|[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|文件視窗的標題列中顯示的預設標題。|
-|[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|跨處理序的設定預覽處理常式。|
-|[CDocTemplate::SetServerInfo](#setserverinfo)|伺服器文件內嵌或特殊處理時，請決定資源與類別。|
+|[CDocTemplate：： AddDocument](#adddocument)|將檔新增至範本。|
+|[CDocTemplate：： CloseAllDocuments](#closealldocuments)|關閉所有與此範本相關聯的檔。|
+|[CDocTemplate：： CreateNewDocument](#createnewdocument)|建立新檔。|
+|[CDocTemplate：： CreateNewFrame](#createnewframe)|建立包含檔和視圖的新框架視窗。|
+|[CDocTemplate：： CreateOleFrame](#createoleframe)|建立啟用 OLE 的框架視窗。|
+|[CDocTemplate：： CreatePreviewFrame](#createpreviewframe)|建立用於豐富預覽的子框架。|
+|[CDocTemplate：： GetDocString](#getdocstring)|抓取與檔案類型相關聯的字串。|
+|[CDocTemplate：： GetFirstDocPosition](#getfirstdocposition)|抓取與此範本相關聯之第一個檔的位置。|
+|[CDocTemplate：： GetNextDoc](#getnextdoc)|抓取檔和下一個檔的位置。|
+|[CDocTemplate：： InitialUpdateFrame](#initialupdateframe)|初始化框架視窗，並選擇性地使其可見。|
+|[CDocTemplate：： LoadTemplate](#loadtemplate)|載入指定 `CDocTemplate` 或衍生類別的資源。|
+|[CDocTemplate：： MatchDocType](#matchdoctype)|決定檔案類型與這個範本之間的信心程度。|
+|[CDocTemplate：： OpenDocumentFile](#opendocumentfile)|開啟路徑名稱所指定的檔案。|
+|[CDocTemplate：： RemoveDocument](#removedocument)|從範本中移除檔。|
+|[CDocTemplate：： SaveAllModified](#saveallmodified)|儲存與此範本相關聯且已修改的所有檔。|
+|[CDocTemplate：： SetContainerInfo](#setcontainerinfo)|當編輯就地 OLE 專案時，決定 OLE 容器的資源。|
+|[CDocTemplate：： SetDefaultTitle](#setdefaulttitle)|在文件視窗的標題列中顯示預設標題。|
+|[CDocTemplate：： SetPreviewInfo](#setpreviewinfo)|已從進程預覽處理常式中進行。|
+|[CDocTemplate：： SetServerInfo](#setserverinfo)|決定就地內嵌或編輯服務器檔時的資源和類別。|
 
 ## <a name="remarks"></a>備註
 
-您通常會在您的應用程式的實作中建立一或多個文件範本`InitInstance`函式。 文件範本會定義三種類型的類別之間的關聯性：
+您通常會在應用程式的 `InitInstance` 功能的執行中建立一或多個檔範本。 檔範本會定義三種類別類型之間的關聯性：
 
-- 文件類別，衍生自`CDocument`。
+- 您從 `CDocument`衍生的檔類別。
 
-- 檢視類別，會顯示上面所列的文件類別的資料。 您可以衍生此類別`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (您也可以使用`CEditView`直接。)
+- View 類別，它會顯示上列檔類別中所列的資料。 您可以從 `CView`、`CScrollView`、`CFormView`或 `CEditView`衍生這個類別。 （您也可以直接使用 `CEditView`）。
 
-- 框架視窗類別，其中包含檢視。 為單一文件介面 (SDI) 應用程式中，類別衍生此類別從`CFrameWnd`。 針對多個文件介面 (MDI) 應用程式中，類別衍生此類別從`CMDIChildWnd`。 如果您不需要自訂框架視窗的行為，您可以使用`CFrameWnd`或`CMDIChildWnd`直接而不需衍生您自己的類別。
+- 包含視圖的框架視窗類別。 針對單一檔介面（SDI）應用程式，您可以從 `CFrameWnd`衍生這個類別。 針對多重文件介面（MDI）應用程式，您可以從 `CMDIChildWnd`衍生這個類別。 如果您不需要自訂框架視窗的行為，您可以直接使用 `CFrameWnd` 或 `CMDIChildWnd`，而不會衍生您自己的類別。
 
-您的應用程式有一個用於每一種支援的文件的文件範本。 例如，如果您的應用程式支援試算表和文字文件，應用程式會有兩個文件範本物件。 每個文件範本負責建立和管理其類型的所有文件。
+您的應用程式針對其支援的每一種檔案類型，都有一個檔範本。 例如，如果您的應用程式同時支援試算表和文字檔，則應用程式會有兩個檔範本物件。 每個檔範本都會負責建立及管理其類型的所有檔。
 
-文件範本將指標儲存至`CRuntimeClass`文件、 檢視和框架視窗類別的物件。 這些`CRuntimeClass`建構的文件範本時，會指定物件。
+檔範本會儲存檔、視圖和框架視窗類別之 `CRuntimeClass` 物件的指標。 這些 `CRuntimeClass` 物件是在建立檔範本時指定的。
 
-文件範本包含與文件類型 （例如功能表、 圖示或快速鍵對應表資源） 所使用的資源識別碼。 文件範本也有包含其文件類型的其他資訊的字串。 其中包括文件類型 （例如，「 工作表 」） 和檔案的副檔名 (例如，".xls") 的名稱。 （選擇性），它可以包含其他應用程式的使用者介面、 Windows 檔案管理員 中，與物件連結與嵌入 (OLE) 支援所使用的字串。
+檔範本包含與檔案類型搭配使用之資源的識別碼（例如功能表、圖示或快速鍵對應表資源）。 檔範本也有字串，其中包含其檔案類型的其他相關資訊。 這些包括檔案類型的名稱（例如，"工作表"）和副檔名（例如 ".xls"）。 （選擇性）它可以包含應用程式的使用者介面、Windows 檔案管理員，以及物件連結和內嵌（OLE）支援所使用的其他字串。
 
-如果您的應用程式的 OLE 容器和/或伺服器，文件範本也會定義在就地啟用期間所用的功能表的識別碼。 如果您的應用程式是 OLE 伺服器，文件範本會定義為工具列和功能表就地啟用期間所使用的識別碼。 您可以指定這些其他的 OLE 資源藉由呼叫`SetContainerInfo`和`SetServerInfo`。
+如果您的應用程式是 OLE 容器和/或伺服器，檔範本也會定義就地啟用期間所使用之功能表的識別碼。 如果您的應用程式是 OLE 伺服器，則檔範本會定義在就地啟用期間所使用的工具列和功能表的識別碼。 您可以藉由呼叫 `SetContainerInfo` 和 `SetServerInfo`來指定這些額外的 OLE 資源。
 
-因為`CDocTemplate`是抽象類別，您無法直接使用類別。 一般應用程式會使用兩個的其中一個`CDocTemplate`-衍生的 Mfc 程式庫所提供的類別： `CSingleDocTemplate`，它會實作 SDI，和`CMultiDocTemplate`，它會實作 MDI。 使用文件範本，請參閱這些類別，如需詳細資訊。
+因為 `CDocTemplate` 是抽象類別，所以您無法直接使用類別。 一般應用程式會使用 MFC 程式庫所提供的兩個 `CDocTemplate`衍生類別之一： `CSingleDocTemplate`，它會實行 SDI，而 `CMultiDocTemplate`則會執行 MDI。 如需使用檔範本的詳細資訊，請參閱這些類別。
 
-如果您的應用程式需要從 SDI 或 MDI 本質上不同的使用者介面典範，您可以衍生自己的類別，從`CDocTemplate`。
+如果您的應用程式需要的使用者介面範例基本上與 SDI 或 MDI 不同，您可以從 `CDocTemplate`衍生自己的類別。
 
-如需詳細資訊`CDocTemplate`，請參閱 <<c2> [ 文件範本和文件/檢視建立流程](../../mfc/document-templates-and-the-document-view-creation-process.md)。
+如需 `CDocTemplate`的詳細資訊，請參閱[檔範本和檔/視圖建立](../../mfc/document-templates-and-the-document-view-creation-process.md)程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -131,9 +131,9 @@ class CDocTemplate : public CCmdTarget
 
 **標題:** afxwin.h
 
-##  <a name="adddocument"></a>  CDocTemplate::AddDocument
+##  <a name="adddocument"></a>CDocTemplate：： AddDocument
 
-若要加入至範本的文件中使用此函式。
+使用此函式將檔新增至範本。
 
 ```
 virtual void AddDocument(CDocument* pDoc);
@@ -142,13 +142,13 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="parameters"></a>參數
 
 *pDoc*<br/>
-要加入的文件指標。
+要加入之檔的指標。
 
 ### <a name="remarks"></a>備註
 
-在衍生的類別[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)並[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)覆寫這個函式。 如果您衍生您自己的文件樣板類別，從`CDocTemplate`，衍生的類別必須覆寫這個函式。
+衍生類別[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)和[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)會覆寫這個函式。 如果您從 `CDocTemplate`衍生自己的檔範本類別，則您的衍生類別必須覆寫此函數。
 
-##  <a name="cdoctemplate"></a>  CDocTemplate::CDocTemplate
+##  <a name="cdoctemplate"></a>CDocTemplate：： CDocTemplate
 
 建構 `CDocTemplate` 物件。
 
@@ -163,9 +163,9 @@ CDocTemplate (
 ### <a name="parameters"></a>參數
 
 *nIDResource*<br/>
-指定文件類型所使用的資源的識別碼。 這可能包括功能表、 圖示、 快速鍵對應表和字串資源。
+指定與檔案類型搭配使用之資源的識別碼。 這可能包括功能表、圖示、快速鍵對應表和字串資源。
 
-最多七個以 '\n' 字元分隔的子字串所組成的字串資源 （不包含子字串時，需要 '\n' 字元做為預留位置; 不過，不需要尾端的 '\n' 字元;）這些子字串會描述文件類型。 如需子字串的資訊，請參閱[GetDocString](#getdocstring)。 應用程式的資源檔中找到此字串資源。 例如：
+字串資源包含最多七個以 ' \n ' 字元分隔的子字串（如果未包含子字串，則需要 ' \n ' 字元做為預留位置，但不需要尾端 ' \n ' 字元）;這些子字串描述檔案類型。 如需子字串的詳細資訊，請參閱[GetDocString](#getdocstring)。 這個字串資源會在應用程式的資源檔中找到。 例如：
 
 ```RC
 // MYCALC.RC
@@ -175,24 +175,24 @@ BEGIN
 END
 ```
 
-請注意，字串開頭 '\n' 字元;這是因為第一個子字串不能用於 MDI 應用程式，因此就不會包含。 您可以編輯這個字串使用字串編輯器;整個字串會顯示為單一項目在字串編輯器中中,，不為七個不同的項目。
+請注意，字串開頭為 ' \n ' 字元;這是因為第一個子字串不會用於 MDI 應用程式，因此不會包含在內。 您可以使用 [字串編輯器] 來編輯此字串;整個字串在字串編輯器中會顯示為單一專案，而不是七個不同的專案。
 
 *pDocClass*<br/>
-指向`CRuntimeClass`文件類別的物件。 這個類別是`CDocument`-衍生的類別定義以代表您的文件。
+指向 document 類別的 `CRuntimeClass` 物件。 這個類別是您定義的 `CDocument`衍生類別，可代表您的檔。
 
 *pFrameClass*<br/>
-指向`CRuntimeClass`框架視窗類別的物件。 這個類別可以`CFrameWnd`-衍生的類別，或者它可以是`CFrameWnd`本身如果您想要為您的主框架視窗的預設行為。
+指向框架視窗類別的 `CRuntimeClass` 物件。 這個類別可以是 `CFrameWnd`衍生的類別，如果您想要主框架視窗的預設行為，則可以 `CFrameWnd` 本身。
 
 *pViewClass*<br/>
-指向`CRuntimeClass`檢視類別的物件。 這個類別是`CView`-衍生的類別，您會定義顯示您的文件。
+指向 view 類別的 `CRuntimeClass` 物件。 這個類別是您定義用來顯示檔的 `CView`衍生類別。
 
 ### <a name="remarks"></a>備註
 
-使用此成員函式來建構`CDocTemplate`物件。 以動態方式配置`CDocTemplate`物件，並將它傳遞給[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)從`InitInstance`應用程式類別的成員函式。
+使用此成員函式來建立 `CDocTemplate` 物件。 以動態方式配置 `CDocTemplate` 物件，並從應用程式類別的 `InitInstance` 成員函式將它傳遞至[CWinApp：： AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) 。
 
-##  <a name="closealldocuments"></a>  CDocTemplate::CloseAllDocuments
+##  <a name="closealldocuments"></a>CDocTemplate：： CloseAllDocuments
 
-呼叫此成員函式，以關閉所有開啟的文件。
+呼叫這個成員函式以關閉所有開啟的檔。
 
 ```
 virtual void CloseAllDocuments(BOOL bEndSession);
@@ -205,13 +205,13 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 
 ### <a name="remarks"></a>備註
 
-此成員函式通常是作為檔案結束命令的一部分。 此函式的預設實作會呼叫[CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents)成員函式來刪除文件的資料，然後關閉所有檢視的框架視窗附加至文件。
+這個成員函式通常用來做為 File Exit 命令的一部分。 此函式的預設執行會呼叫[CDocument：:D eletecontents](../../mfc/reference/cdocument-class.md#deletecontents)成員函式來刪除檔的資料，然後關閉附加至檔之所有視圖的框架視窗。
 
-如果您想要要求使用者執行特殊清除處理序在關閉文件之前，請覆寫這個函式。 比方說，如果文件代表資料庫中的記錄，您可能想要覆寫這個函式來關閉資料庫。
+如果您想要要求使用者在關閉檔之前執行特殊清除處理，請覆寫此函數。 例如，如果檔代表資料庫中的記錄，您可能會想要覆寫此函數來關閉資料庫。
 
-##  <a name="createnewdocument"></a>  CDocTemplate::CreateNewDocument
+##  <a name="createnewdocument"></a>CDocTemplate：： CreateNewDocument
 
-呼叫此成員函式，來建立新的文件，此文件範本與相關聯的類型。
+呼叫這個成員函式，以建立與此檔範本相關聯之類型的新檔。
 
 ```
 virtual CDocument* CreateNewDocument();
@@ -219,11 +219,11 @@ virtual CDocument* CreateNewDocument();
 
 ### <a name="return-value"></a>傳回值
 
-新建立的文件或如果發生錯誤則為 NULL 指標。
+新建立之檔的指標，如果發生錯誤，則為 Null。
 
-##  <a name="createnewframe"></a>  CDocTemplate::CreateNewFrame
+##  <a name="createnewframe"></a>CDocTemplate：： CreateNewFrame
 
-建立新的框架視窗，其中包含文件和檢視。
+建立包含檔和視圖的新框架視窗。
 
 ```
 virtual CFrameWnd* CreateNewFrame(
@@ -234,24 +234,24 @@ virtual CFrameWnd* CreateNewFrame(
 ### <a name="parameters"></a>參數
 
 *pDoc*<br/>
-新的框架視窗應參考的文件。 可以是 NULL。
+新框架視窗應該參考的檔。 可以是 NULL。
 
 *pOther*<br/>
-隨著新的框架視窗所在的框架視窗。 可以是 NULL。
+新框架視窗要根據的框架視窗。 可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-新建立的框架視窗中或如果發生錯誤則為 NULL 指標。
+新建立之框架視窗的指標，如果發生錯誤，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-`CreateNewFrame` 使用`CRuntimeClass`物件傳遞至建構函式來建立新的框架視窗與檢視和附加的文件。 如果*pDoc*參數為 NULL，framework 輸出追蹤訊息。
+`CreateNewFrame` 使用傳遞至此函式的 `CRuntimeClass` 物件，來建立已附加視圖和檔的新框架視窗。 如果*pDoc*參數為 Null，則架構會輸出追蹤訊息。
 
-*其他*參數用來實作新視窗的命令。 它提供用來建立新的框架視窗的模型上的框架視窗。 新的框架視窗通常會建立不可見的。 呼叫此函式來建立新檔案] 和 [開啟檔案的標準架構實作外部框架視窗。
+*POther*參數是用來執行 Window New 命令。 它會提供框架視窗，以建立新框架視窗的模型。 新的框架視窗通常會建立為不可見。 呼叫此函式可在「檔案新增」和「開啟檔案」的標準架構執行以外建立框架視窗。
 
-##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame
+##  <a name="createoleframe"></a>CDocTemplate：： CreateOleFrame
 
-建立的 OLE 框架視窗。
+建立 OLE 框架視窗。
 
 ```
 CFrameWnd* CreateOleFrame(
@@ -263,25 +263,25 @@ CFrameWnd* CreateOleFrame(
 ### <a name="parameters"></a>參數
 
 *pParentWnd*<br/>
-畫面格的父視窗的指標。
+框架父視窗的指標。
 
 *pDoc*<br/>
-新的 OLE 框架視窗應參考的文件的指標。
+新的 OLE 框架視窗應參考之檔的指標。
 
 *bCreateView*<br/>
-判斷是否要將檢視建立畫面格以及。
+決定是否要與框架一併建立一個視圖。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，框架視窗的指標否則為 NULL。
+如果成功，則為框架視窗的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果*bCreateView*為零，會建立空白的框架。
+如果*bCreateView*為零，則會建立空的框架。
 
-##  <a name="getdocstring"></a>  CDocTemplate::GetDocString
+##  <a name="getdocstring"></a>CDocTemplate：： GetDocString
 
-擷取的文件類型相關聯的字串。
+抓取與檔案類型相關聯的字串。
 
 ```
 virtual BOOL GetDocString(
@@ -292,38 +292,38 @@ virtual BOOL GetDocString(
 ### <a name="parameters"></a>參數
 
 *rString*<br/>
-參考`CString`函式傳回時，將包含字串的物件。
+當函式傳回時，將包含字串之 `CString` 物件的參考。
 
 *index*<br/>
-從描述文件類型的字串擷取子字串的索引。 這個參數的值可以是下列其中一個：
+從描述檔案類型的字串中，所抓取之子字串的索引。 這個參數的值可以是下列其中一個：
 
-- `CDocTemplate::windowTitle` 會出現在應用程式視窗的標題列 (例如，「 Microsoft Excel 」) 的名稱。 呈現只在 SDI 應用程式的文件範本中。
+- 出現在應用程式視窗標題列中 `CDocTemplate::windowTitle` 名稱（例如「Microsoft Excel」）。 只存在於 SDI 應用程式的檔範本中。
 
-- `CDocTemplate::docName` 預設文件名稱 （例如，「 工作表 」） 的根。 這個根目錄中，再加上數字，使用於此類型的新文件的預設名稱每當使用者選擇新的命令，從 [檔案] 功能表 （例如，「 1 」 或 「 Sheet2"）。 如果未指定，則會使用 「 未命名的"為預設值。
+- `CDocTemplate::docName` 預設檔案名稱的根目錄（例如「工作表」）。 當使用者從 [檔案] 功能表選擇新的命令時（例如，"Sheet1" 或 "Sheet2"），這個根和一個數位就會用來做為此類型之新檔的預設名稱。 如果未指定，則會使用「未命名」做為預設值。
 
-- `CDocTemplate::fileNewName` 此文件類型的名稱。 如果應用程式支援多個文件類型，這個字串會顯示在開新檔案的對話方塊中 （例如，「 工作表 」）。 如果未指定，此文件類型為無法存取使用的新檔案的命令。
+- `CDocTemplate::fileNewName` 此檔案類型的名稱。 如果應用程式支援一種以上的檔案類型，這個字串會顯示在 [檔案] [新增] 對話方塊中（例如，"工作表"）。 如果未指定，則會使用 [檔案] [新增] 命令來無法存取檔案類型。
 
-- `CDocTemplate::filterName` 文件類型和萬用字元篩選條件比對此類型的文件的描述。 此字串會顯示在 檔案類型下拉式清單中，開啟舊檔 對話方塊中 （例如，「 工作表 (*.xls)"） 中。 如果未指定，此文件類型為無法使用 [開啟舊檔] 命令。
+- `CDocTemplate::filterName` 檔案類型的描述，以及符合此類型檔的萬用字元篩選準則。 這個字串會顯示在 [開啟檔案] 對話方塊中的 [清單檔案類型] 下拉式清單中（例如，「工作表（* .xls）」）。 如果未指定，則會使用 [檔案開啟] 命令來無法存取檔案類型。
 
-- `CDocTemplate::filterExt` 此類型 (例如，".xls") 的文件的副檔名。 如果未指定，此文件類型為無法使用 [開啟舊檔] 命令。
+- 此類型檔的 `CDocTemplate::filterExt` 延伸模組（例如 ".xls"）。 如果未指定，則會使用 [檔案開啟] 命令來無法存取檔案類型。
 
-- `CDocTemplate::regFileTypeId` 在 Windows 註冊資料庫中儲存的文件類型的識別項。 此字串是僅供內部使用 (例如，"ExcelWorksheet 」)。 如果未指定，文件的類型無法註冊使用 Windows 檔案管理員。
+- 要儲存在 Windows 維護的註冊資料庫中的檔案類型 `CDocTemplate::regFileTypeId` 識別碼。 這個字串僅供內部使用（例如，"ExcelWorksheet"）。 如果未指定，則無法向 Windows 檔案管理員註冊檔案類型。
 
-- `CDocTemplate::regFileTypeName` 在 註冊資料庫中儲存的文件類型的名稱。 此字串可能會顯示在對話方塊中的應用程式以存取系統註冊資料庫 （例如，"Microsoft Excel 工作表 」）。
+- 要儲存在註冊資料庫中的檔案類型 `CDocTemplate::regFileTypeName` 名稱。 這個字串可能會顯示在存取註冊資料庫之應用程式的對話方塊中（例如「Microsoft Excel 工作表」）。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果找不到指定的子字串;否則為 0。
+如果找到指定的子字串，則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可擷取特定的子字串，描述的文件類型。 字串，包含這些子字串會儲存在文件範本，而衍生自應用程式的資源檔中的字串。 架構會呼叫此函式可取得所需的應用程式的使用者介面字串。 如果您已經指定您的應用程式的文件檔案的副檔名，架構也會呼叫此函式時將項目新增至 Windows 註冊資料庫;這可讓從 Windows 檔案管理員中開啟的文件。
+呼叫此函式可抓取描述檔案類型的特定子字串。 包含這些子字串的字串會儲存在檔範本中，並且衍生自應用程式資源檔中的字串。 架構會呼叫這個函式，以取得應用程式使用者介面所需的字串。 如果您已為應用程式的檔指定副檔名，則在將專案新增至 Windows 註冊資料庫時，架構也會呼叫這個函式。這可讓您從 Windows 檔案管理員開啟檔。
 
-呼叫此函式，只有當您衍生您自己的類別，從`CDocTemplate`。
+只有當您從 `CDocTemplate`衍生您自己的類別時，才能呼叫此函式。
 
-##  <a name="getfirstdocposition"></a>  CDocTemplate::GetFirstDocPosition
+##  <a name="getfirstdocposition"></a>CDocTemplate：： GetFirstDocPosition
 
-擷取與此範本關聯的第一個文件的位置。
+抓取與此範本相關聯之第一個檔的位置。
 
 ```
 virtual POSITION GetFirstDocPosition() const = 0;
@@ -331,17 +331,17 @@ virtual POSITION GetFirstDocPosition() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-位置值，可用來逐一查看與此文件範本; 相關聯的文件清單或者，如果清單是空的則為 NULL。
+可以用來逐一查看與此檔範本相關聯之檔案清單的位置值;如果清單是空的，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-使用此函數來取得與此範本關聯的文件清單中第一個文件的位置。 使用位置值當做引數[CDocTemplate::GetNextDoc](#getnextdoc)來逐一查看與範本相關聯的文件清單。
+使用此函式可取得與此範本相關聯的檔案清單中第一份檔的位置。 使用 POSITION 值做為[CDocTemplate：： GetNextDoc](#getnextdoc)的引數，以逐一查看與範本相關聯的檔案清單。
 
-[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)並[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)都會覆寫這個純虛擬函式。 您可以從衍生的任何類別`CDocTemplate`也必須覆寫這個函式。
+[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)和[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)都會覆寫這個純虛擬函式。 您從 `CDocTemplate` 衍生的任何類別也必須覆寫此函數。
 
-##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc
+##  <a name="getnextdoc"></a>CDocTemplate：： GetNextDoc
 
-擷取所識別的清單項目*Rpo*，然後設定*Rpo*位置值的清單中的下一個項目。
+抓取*rpo*所識別的清單元素，然後將*rpo*設定為清單中下一個專案的位置值。
 
 ```
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
@@ -349,24 +349,24 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-在此範本相關聯的文件清單中下一個文件指標。
+與此範本相關聯的檔案清單中，下一個檔的指標。
 
 ### <a name="parameters"></a>參數
 
-*rPos*<br/>
-先前呼叫所傳回的位置值的參考[GetFirstDocPosition](#getfirstdocposition)或`GetNextDoc`。
+*Rpo*<br/>
+先前呼叫[GetFirstDocPosition](#getfirstdocposition)或 `GetNextDoc`所傳回之位置值的參考。
 
 ### <a name="remarks"></a>備註
 
-如果擷取的項目是在清單中，最後一則新值*Rpo*設為 NULL。
+如果所抓取的專案是清單中的最後一個專案，則會將新的*rpo*值設定為 Null。
 
-您可以使用`GetNextDoc`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫[GetFirstDocPosition](#getfirstdocposition)。
+如果您使用[GetFirstDocPosition](#getfirstdocposition)的呼叫來建立初始位置，可以在正向反復專案迴圈中使用 `GetNextDoc`。
 
-您必須確定您位置的值，代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。
+您必須確定您的位置值代表清單中的有效位置。 如果無效，則 MFC 程式庫判斷提示的 Debug 版本。
 
-##  <a name="initialupdateframe"></a>  CDocTemplate::InitialUpdateFrame
+##  <a name="initialupdateframe"></a>CDocTemplate：： InitialUpdateFrame
 
-初始化框架視窗中，並選擇性地使其可見。
+初始化框架視窗，並選擇性地使其可見。
 
 ```
 virtual void InitialUpdateFrame(
@@ -378,23 +378,23 @@ virtual void InitialUpdateFrame(
 ### <a name="parameters"></a>參數
 
 *pFrame*<br/>
-需要初始更新框架視窗。
+需要初始更新的框架視窗。
 
 *pDoc*<br/>
-框架有相關聯的文件。 可以是 NULL。
+與框架相關聯的檔。 可以是 NULL。
 
 *bMakeVisible*<br/>
-表示框架是否應該都變成可見且作用中。
+指出畫面格是否應為可見且作用中。
 
 ### <a name="remarks"></a>備註
 
-呼叫`IntitialUpdateFrame`之後建立新的框架，具有`CreateNewFrame`。 呼叫此函式可讓以接收該框架視窗中檢視其`OnInitialUpdate`呼叫。 此外，如果有先前未使用中的檢視，框架視窗的主要檢視會變成作用;主要的檢視是具有子系識別碼的 AFX_IDW_PANE_FIRST 的檢視。 最後，框架視窗就會顯示如果*bMakeVisible*為非零。 如果*bMakeVisible*為零，目前的焦點和框架視窗的可見狀態將保持不變。
+在建立具有 `CreateNewFrame`的新框架之後，呼叫 `IntitialUpdateFrame`。 呼叫此函式會導致該框架視窗中的 views 接收其 `OnInitialUpdate` 呼叫。 此外，如果先前沒有使用中的視圖，框架視窗的主要視圖會成為作用中;主要視圖是 AFX_IDW_PANE_FIRST 的子系識別碼的視圖。 最後，如果*bMakeVisible*為非零，則會顯示框架視窗。 如果*bMakeVisible*為零，則框架視窗目前的焦點和可見狀態會保持不變。
 
-您不需要呼叫此函式時使用的新檔案] 和 [開啟檔案架構的實作。
+使用架構的「檔案新增」和「開啟檔案」的執行時，不需要呼叫此函式。
 
-##  <a name="loadtemplate"></a>  CDocTemplate::LoadTemplate
+##  <a name="loadtemplate"></a>CDocTemplate：： LoadTemplate
 
-載入的資源指定`CDocTemplate`或衍生類別。
+載入指定 `CDocTemplate` 或衍生類別的資源。
 
 ```
 virtual void LoadTemplate();
@@ -402,11 +402,11 @@ virtual void LoadTemplate();
 
 ### <a name="remarks"></a>備註
 
-若要載入的資源架構會呼叫此成員函式指定`CDocTemplate`或衍生類別。 通常它是在建構期間，除了時呼叫全域正在建構的範本。 在此情況下，呼叫`LoadTemplate`延遲直到[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)呼叫。
+此成員函式會由架構呼叫，以載入指定 `CDocTemplate` 或衍生類別的資源。 通常在結構中會呼叫它，但在全域建立範本時除外。 在這種情況下，`LoadTemplate` 的呼叫會延遲到呼叫[CWinApp：： AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)為止。
 
-##  <a name="matchdoctype"></a>  CDocTemplate::MatchDocType
+##  <a name="matchdoctype"></a>CDocTemplate：： MatchDocType
 
-決定文件類型和此範本之間的比對的信心程度。
+決定檔案類型與這個範本之間的信心程度。
 
 ```
 virtual Confidence MatchDocType(
@@ -417,14 +417,14 @@ virtual Confidence MatchDocType(
 ### <a name="parameters"></a>參數
 
 *lpszPathName*<br/>
-判斷型別之檔案的路徑名稱。
+要判斷其型別之檔案的路徑名稱。
 
 *rpDocMatch*<br/>
-如果指定的檔案指派比對的文件，文件的指標*lpszPathName*已經開啟。
+如果已開啟*lpszPathName*所指定的檔案，則為已指派比對檔之檔的指標。
 
 ### <a name="return-value"></a>傳回值
 
-值，以從**信心**列舉型別，其定義，如下所示：
+**信賴**型列舉中的值，定義如下：
 
 ```
 enum Confidence
@@ -440,19 +440,19 @@ enum Confidence
 
 ### <a name="remarks"></a>備註
 
-使用此函數來決定要用於開啟檔案的文件範本的類型。 如果您的應用程式支援多個檔案類型，例如，您可以使用此函式來決定哪一個可用的文件範本適用於指定的檔案藉由呼叫`MatchDocType`開啟，並選擇根據範本中每個範本傳回的信心值。
+使用此函式來判斷用來開啟檔案的檔範本類型。 例如，如果您的應用程式支援多個檔案類型，您可以使用此函式來判斷哪一個可用的檔範本適用于指定的檔案，方法是依序呼叫每個範本的 `MatchDocType`，並根據傳回的信賴值來選擇範本。
 
-如果指定的檔案*lpszPathName*已經開啟，此函數會傳回`CDocTemplate::yesAlreadyOpen`，並將複製的檔案`CDocument`成為在物件的物件*rpDocMatch*。
+如果*lpszPathName*所指定的檔案已經開啟，此函式會傳回 `CDocTemplate::yesAlreadyOpen` 並將檔案的 `CDocument` 物件複製到物件中的*rpDocMatch*。
 
-如果檔案不是開啟，但是中的擴充功能*lpszPathName*符合所指定的副檔名`CDocTemplate::filterExt`，此函數會傳回`CDocTemplate::yesAttemptNative`並設定*rpDocMatch*為 NULL。 如需詳細資訊`CDocTemplate::filterExt`，請參閱 < [CDocTemplate::GetDocString](#getdocstring)。
+如果檔案未開啟，但*lpszPathName*中的副檔名符合 `CDocTemplate::filterExt`所指定的副檔名，則此函式會傳回 `CDocTemplate::yesAttemptNative`，並將*RPDOCMATCH*設定為 Null。 如需 `CDocTemplate::filterExt`的詳細資訊，請參閱[CDocTemplate：： GetDocString](#getdocstring)。
 
-如果兩種情況下，則為 true，則函式會傳回`CDocTemplate::yesAttemptForeign`。
+如果這兩種情況都不成立，函數會傳回 `CDocTemplate::yesAttemptForeign`。
 
-預設實作不會傳回`CDocTemplate::maybeAttemptForeign`或`CDocTemplate::maybeAttemptNative`。 覆寫這個函式來實作適合您的應用程式，可能使用 從這兩個值的型別符合邏輯**信心**列舉型別。
+預設的執行不會傳回 `CDocTemplate::maybeAttemptForeign` 或 `CDocTemplate::maybeAttemptNative`。 覆寫此函式，以實作用於應用程式的類型比對邏輯，也許是從**信賴**型列舉中使用這兩個值。
 
-##  <a name="opendocumentfile"></a>  CDocTemplate::OpenDocumentFile
+##  <a name="opendocumentfile"></a>CDocTemplate：： OpenDocumentFile
 
-開啟檔案的路徑所指定。
+開啟路徑所指定的檔案。
 
 ```
 virtual CDocument* OpenDocumentFile(LPCTSTR lpszPathName) = 0;
@@ -465,22 +465,22 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="parameters"></a>參數
 
 *lpszPathName*<br/>
-[in]指標，包含要開啟的文件之檔案的路徑。
+在檔案路徑的指標，該檔案包含要開啟的檔。
 
 *bAddToMRU*<br/>
-[in]TRUE 表示在文件是其中一個最新的檔案;FALSE 表示文件不是其中一個最新的檔案。
+在TRUE 表示檔是最新的其中一個檔案;FALSE 表示檔不是其中一個最新的檔案。
 
 ### <a name="return-value"></a>傳回值
 
-其檔案的命名方式的文件的指標*lpszPathName*;如果不成功，則為 NULL。
+檔的指標，其檔案是由*lpszPathName*命名;如果失敗，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-開啟的檔案的路徑由*lpszPathName*。 如果*lpszPathName*為 NULL，就會建立新的檔案，其中包含與此範本關聯類型的文件。
+開啟其路徑是由*lpszPathName*指定的檔案。 如果*lpszPathName*為 Null，則會建立新的檔案，其中包含與此範本相關聯之類型的檔。
 
-##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument
+##  <a name="removedocument"></a>CDocTemplate：： RemoveDocument
 
-移除所指的文件*pDoc*從與此範本關聯的文件的清單。
+從與此範本相關聯的檔案清單中，移除*pDoc*所指向的檔。
 
 ```
 virtual void RemoveDocument(CDocument* pDoc);
@@ -489,15 +489,15 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="parameters"></a>參數
 
 *pDoc*<br/>
-要移除文件的指標。
+要移除之檔的指標。
 
 ### <a name="remarks"></a>備註
 
-在衍生的類別`CMultiDocTemplate`和`CSingleDocTemplate`覆寫這個函式。 如果您衍生您自己的文件樣板類別，從`CDocTemplate`，衍生的類別必須覆寫這個函式。
+衍生的類別 `CMultiDocTemplate` 和 `CSingleDocTemplate` 覆寫此函式。 如果您從 `CDocTemplate`衍生自己的檔範本類別，則您的衍生類別必須覆寫此函數。
 
-##  <a name="saveallmodified"></a>  CDocTemplate::SaveAllModified
+##  <a name="saveallmodified"></a>CDocTemplate：： SaveAllModified
 
-儲存修改過的所有文件。
+儲存所有已修改的檔。
 
 ```
 virtual BOOL SaveAllModified();
@@ -505,11 +505,11 @@ virtual BOOL SaveAllModified();
 
 ### <a name="return-value"></a>傳回值
 
-非零成功; 如果否則為 0。
+如果成功，則為非零;否則為0。
 
-##  <a name="setcontainerinfo"></a>  CDocTemplate::SetContainerInfo
+##  <a name="setcontainerinfo"></a>CDocTemplate：： SetContainerInfo
 
-編輯就地 OLE 項目時，請決定適用於 OLE 容器資源。
+當編輯就地 OLE 專案時，決定 OLE 容器的資源。
 
 ```
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
@@ -518,17 +518,17 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ### <a name="parameters"></a>參數
 
 *nIDOleInPlaceContainer*<br/>
-內嵌的物件啟動時所使用的資源識別碼。
+啟用内嵌物件時所使用的資源識別碼。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可將設定就地啟動 OLE 物件時要使用的資源。 這些資源可能包括功能表與快速鍵對應表。 通常會呼叫此函數[cwinapp:: Initinstance](../../mfc/reference/cwinapp-class.md#initinstance)函式應用程式。
+呼叫此函式可設定就地啟用 OLE 物件時所要使用的資源。 這些資源可能包含功能表和快速鍵對應表。 此函式通常會在應用程式的[CWinApp：： InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)函式中呼叫。
 
-與相關聯的功能表*nIDOleInPlaceContainer*包含分隔符號，讓已啟動的就地項目合併的功能表與容器應用程式的功能表。 如需有關合併伺服器和容器的功能表的詳細資訊，請參閱[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。
+與*nIDOleInPlaceContainer*相關聯的功能表包含分隔符號，可讓啟用的就地專案的功能表與容器應用程式的功能表合併。 如需有關合併伺服器和容器功能表的詳細資訊，請參閱文章[功能表和資源（OLE）](../../mfc/menus-and-resources-ole.md)。
 
-##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle
+##  <a name="setdefaulttitle"></a>CDocTemplate：： SetDefaultTitle
 
-呼叫此函式來載入文件的預設標題，並顯示文件的標題列中。
+呼叫此函式可載入檔的預設標題，並將其顯示在檔的標題列中。
 
 ```
 virtual void SetDefaultTitle(CDocument* pDocument) = 0;
@@ -537,15 +537,15 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="parameters"></a>參數
 
 *pDocument*<br/>
-職稱是設定文件的指標。
+要設定其標題之檔的指標。
 
 ### <a name="remarks"></a>備註
 
-在預設標題上的資訊，請參閱 popis`CDocTemplate::docName`中[CDocTemplate::GetDocString](#getdocstring)。
+如需預設標題的詳細資訊，請參閱[CDocTemplate：： GetDocString](#getdocstring)中的 `CDocTemplate::docName` 描述。
 
-##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo
+##  <a name="setserverinfo"></a>CDocTemplate：： SetServerInfo
 
-伺服器文件內嵌或特殊處理時，請決定資源與類別。
+決定就地內嵌或編輯服務器檔時的資源和類別。
 
 ```
 void SetServerInfo(
@@ -558,26 +558,26 @@ void SetServerInfo(
 ### <a name="parameters"></a>參數
 
 *nIDOleEmbedding*<br/>
-另一個視窗中開啟內嵌的物件時所使用的資源識別碼。
+在個別視窗中開啟内嵌物件時所使用的資源識別碼。
 
 *nIDOleInPlaceServer*<br/>
-就地啟動時，內嵌的物件是所使用的資源識別碼。
+就地啟用内嵌物件時所使用的資源識別碼。
 
 *pOleFrameClass*<br/>
-指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)結構，其中包含建立就地啟用時的框架視窗物件的類別資訊。
+[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)結構的指標，其中包含就地啟用時所建立之框架視窗物件的類別資訊。
 
 *pOleViewClass*<br/>
-指標`CRuntimeClass`結構，其中包含建立就地啟用時的檢視物件的類別資訊。
+`CRuntimeClass` 結構的指標，其中包含就地啟用時所建立之 view 物件的類別資訊。
 
 ### <a name="remarks"></a>備註
 
-呼叫此成員函式，以識別使用者要求內嵌物件的啟動時將伺服器應用程式所使用的資源。 這些資源包括功能表與快速鍵對應表。 通常會呼叫此函數`InitInstance`應用程式。
+呼叫這個成員函式，以識別當使用者要求啟用内嵌物件時，伺服器應用程式將使用的資源。 這些資源是由功能表和快速鍵對應表所組成。 此函式通常會在應用程式的 `InitInstance` 中呼叫。
 
-與相關聯的功能表*nIDOleInPlaceServer*包含允許容器的功能表與 [伺服器] 功能表合併的分隔符號。 如需有關合併伺服器和容器的功能表的詳細資訊，請參閱[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。
+與*nIDOleInPlaceServer*相關聯的功能表包含分隔符號，可讓 [伺服器] 功能表與容器的功能表合併。 如需有關合併伺服器和容器功能表的詳細資訊，請參閱文章[功能表和資源（OLE）](../../mfc/menus-and-resources-ole.md)。
 
-##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame
+##  <a name="createpreviewframe"></a>CDocTemplate：： CreatePreviewFrame
 
-建立子框架用於豐富的預覽。
+建立用於豐富預覽的子框架。
 
 ```
 CFrameWnd* CreatePreviewFrame(
@@ -588,20 +588,20 @@ CFrameWnd* CreatePreviewFrame(
 ### <a name="parameters"></a>參數
 
 *pParentWnd*<br/>
-（通常是由命令介面提供） 的父視窗指標。
+父視窗的指標（通常是由 Shell 所提供）。
 
 *pDoc*<br/>
-文件物件，將會預覽其內容指標。
+檔物件的指標，其內容將會預覽。
 
 ### <a name="return-value"></a>傳回值
 
-有效指標`CFrameWnd`物件，或如果建立失敗，則為 NULL。
+`CFrameWnd` 物件的有效指標，如果建立失敗，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpreviewinfo"></a>  CDocTemplate::SetPreviewInfo
+##  <a name="setpreviewinfo"></a>CDocTemplate：： SetPreviewInfo
 
-設定外的處理序預覽處理常式。
+設定進程外預覽處理常式。
 
 ```
 void SetPreviewInfo(
@@ -613,13 +613,13 @@ void SetPreviewInfo(
 ### <a name="parameters"></a>參數
 
 *nIDPreviewFrame*<br/>
-指定的資源識別碼的預覽畫面。
+指定預覽框架的資源識別碼。
 
 *pPreviewFrameClass*<br/>
-指定的預覽畫面格的執行階段類別資訊結構的指標。
+指定預覽框架的執行時間類別資訊結構的指標。
 
 *pPreviewViewClass*<br/>
-指定 [預覽] 檢視的執行階段類別資訊結構的指標。
+指定預覽視圖的執行時間類別資訊結構的指標。
 
 ### <a name="remarks"></a>備註
 

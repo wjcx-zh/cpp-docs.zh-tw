@@ -45,15 +45,15 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345821"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866423"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
-控制列類別的基底類別[CStatusBar](../../mfc/reference/cstatusbar-class.md)， [CToolBar](../../mfc/reference/ctoolbar-class.md)， [CDialogBar](../../mfc/reference/cdialogbar-class.md)， [CReBar](../../mfc/reference/crebar-class.md)，和[COleResizeBar](../../mfc/reference/coleresizebar-class.md)。
+控制列類別[CStatusBar](../../mfc/reference/cstatusbar-class.md)、 [CToolBar](../../mfc/reference/ctoolbar-class.md)、 [CDialogBar](../../mfc/reference/cdialogbar-class.md)、 [CReBar](../../mfc/reference/crebar-class.md)和[COleResizeBar](../../mfc/reference/coleresizebar-class.md)的基類。
 
 ## <a name="syntax"></a>語法
 
@@ -67,47 +67,47 @@ class CControlBar : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CControlBar::CControlBar](#ccontrolbar)|建構 `CControlBar` 物件。|
+|[CControlBar：： CControlBar](#ccontrolbar)|建構 `CControlBar` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|傳回做為動態的控制列的大小[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。|
-|[CControlBar::CalcFixedLayout](#calcfixedlayout)|傳回做為控制列的大小[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。|
-|[CControlBar::CalcInsideRect](#calcinsiderect)|傳回目前維度的控制列的區域。包括框線。|
-|[CControlBar::DoPaint](#dopaint)|呈現的框線和移駐夾的控制列。|
-|[CControlBar::DrawBorders](#drawborders)|呈現控制列的框線。|
-|[CControlBar::DrawGripper](#drawgripper)|呈現的移駐夾的控制列。|
-|[CControlBar::EnableDocking](#enabledocking)|可讓控制列是停駐或浮動。|
-|[CControlBar::GetBarStyle](#getbarstyle)|擷取控制項的列樣式設定。|
-|[CControlBar::GetBorders](#getborders)|擷取控制列的邊界值。|
-|[CControlBar::GetCount](#getcount)|控制列中傳回非 HWND 項目數目。|
-|[CControlBar::GetDockingFrame](#getdockingframe)|傳回要停駐控制列的框架指標。|
-|[CControlBar::IsFloating](#isfloating)|如果有問題的控制列是浮動的控制列，則傳回非零值。|
-|[CControlBar::OnUpdateCmdUI](#onupdatecmdui)|呼叫命令 UI 處理常式。|
-|[CControlBar::SetBarStyle](#setbarstyle)|修改控制項的列樣式設定。|
-|[CControlBar::SetBorders](#setborders)|設定控制列的邊界值。|
-|[CControlBar::SetInPlaceOwner](#setinplaceowner)|變更一種控制列的就地擁有者。|
+|[CControlBar：： CalcDynamicLayout](#calcdynamiclayout)|傳回動態控制列的大小，做為[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。|
+|[CControlBar：： CalcFixedLayout](#calcfixedlayout)|以[CSize](../../atl-mfc-shared/reference/csize-class.md)物件的形式傳回控制列的大小。|
+|[CControlBar：： CalcInsideRect](#calcinsiderect)|傳回控制欄區域的目前維度。包括框線。|
+|[CControlBar：:D oPaint](#dopaint)|呈現控制列的框線和移駐夾。|
+|[CControlBar：:D rawBorders](#drawborders)|呈現控制列的框線。|
+|[CControlBar：:D rawGripper](#drawgripper)|呈現控制列的移駐夾。|
+|[CControlBar：： EnableDocking](#enabledocking)|允許固定或浮動控制列。|
+|[CControlBar：： GetBarStyle](#getbarstyle)|抓取控制列樣式設定。|
+|[CControlBar：：可以 getborders 擷取](#getborders)|抓取控制列的框線值。|
+|[CControlBar：： GetCount](#getcount)|傳回控制列中的非 HWND 元素數目。|
+|[CControlBar：： GetDockingFrame](#getdockingframe)|傳回控制項列停駐所在之框架的指標。|
+|[CControlBar：： IsFloating](#isfloating)|如果有問題的控制列是浮動控制列，則會傳回非零值。|
+|[CControlBar：： OnUpdateCmdUI](#onupdatecmdui)|呼叫命令 UI 處理常式。|
+|[CControlBar：： SetBarStyle](#setbarstyle)|修改控制列樣式設定。|
+|[CControlBar：： SetBorders](#setborders)|設定控制列的框線值。|
+|[CControlBar：： SetInPlaceOwner](#setinplaceowner)|變更控制列的就地擁有者。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CControlBar::m_bAutoDelete](#m_bautodelete)|如果是非零值，`CControlBar`終結 Windows 控制列時，會刪除物件。|
-|[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|控制列的就地擁有者。|
+|[CControlBar：： m_bAutoDelete](#m_bautodelete)|如果是非零值，則當 Windows 控制列終結時，就會刪除 `CControlBar` 物件。|
+|[CControlBar：： m_pInPlaceOwner](#m_pinplaceowner)|控制列的就地擁有者。|
 
 ## <a name="remarks"></a>備註
 
-一種控制列是通常會對齊框架視窗左邊或右邊的視窗。 它可能包含作為 HWND 型控制項，也就是產生和回應 Windows 訊息的視窗，或是非 HWND 型項目，而且非屬 windows 應用程式程式碼或架構程式碼所管理的子項目。 清單方塊和編輯控制項是作為 HWND 型控制項; 的範例狀態列窗格的點陣圖按鈕等的非 HWND 型控制項範例。
+控制列是一個視窗，通常會對齊框架視窗的左側或右側。 它可能會包含一個 HWND 型控制項的子專案，也就是產生和回應 Windows 訊息的 windows，或是非以 HWND 為基礎的專案（不是 windows，而且是由應用程式代碼或架構程式碼所管理）。 清單方塊和編輯控制項都是以 HWND 為基礎的控制項範例。[狀態列窗格] 和 [點陣圖] 按鈕是非 HWND 控制項的範例。
 
-控制列視窗通常是父框架視窗的子視窗，和通常是用戶端檢視或 MDI 框架視窗的用戶端的同層級。 A`CControlBar`物件用來決定本身的位置的父視窗的用戶端矩形的相關資訊。 接著，它會通知父視窗，並在父視窗的工作區中維持未配置多少空間。
+控制列視窗通常是父框架視窗的子視窗，通常是在框架視窗的用戶端視圖或 MDI 用戶端的同級。 `CControlBar` 物件會使用父視窗的用戶端矩形的相關資訊，來定位其本身。 然後，它會通知父視窗，指出父視窗的工作區中有多少空間維持未配置。
 
-如需有關`CControlBar`，請參閱：
+如需 `CControlBar`的詳細資訊，請參閱：
 
 - [控制列](../../mfc/control-bars.md)
 
-- [技術提示 31:控制列](../../mfc/tn031-control-bars.md)。
+- [技術提示31：控制](../../mfc/tn031-control-bars.md)列。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -121,11 +121,11 @@ class CControlBar : public CWnd
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxext.h
+**標頭：** afxext.h。h
 
-##  <a name="calcdynamiclayout"></a>  CControlBar::CalcDynamicLayout
+##  <a name="calcdynamiclayout"></a>CControlBar：： CalcDynamicLayout
 
-架構會呼叫此成員函式，來計算的動態工具列的維度。
+架構會呼叫這個成員函式來計算動態工具列的維度。
 
 ```
 virtual CSize CalcDynamicLayout(
@@ -136,32 +136,32 @@ virtual CSize CalcDynamicLayout(
 ### <a name="parameters"></a>參數
 
 *nLength*<br/>
-控制列，水平或垂直的取決於要求的維度*dwMode*。
+控制項列的要求維度（水準或垂直），視*dwMode*而定。
 
 *nMode*<br/>
-下列預先定義的旗標用來決定動態控制列的寬度與高度。 使用位元 OR (&#124;) 運算子來結合旗標。
+下列預先定義的旗標是用來決定動態控制列的高度和寬度。 使用位 OR （&#124;）運算子來結合旗標。
 
-|版面配置模式旗標|意義|
+|版面配置模式旗標|代表的意義|
 |-----------------------|-------------------|
-|LM_STRETCH|表示將控制列是否應該自動縮放以畫面格的大小。 如果列不是一種停駐列 （不適用於停駐），設定。 未設定停駐或浮動列時 （適用於停駐）。 如果設定，LM_STRETCH 會忽略*nLength* ，並傳回 LM_HORZ 狀態為基礎的維度。 LM_STRETCH 運作方式類似*bStretch*中所使用的參數[CalcFixedLayout](#calcfixedlayout); 請參閱該成員函式，如需有關之間自動縮放和方向的關聯性。|
-|LM_HORZ|指出軸是水平或垂直方向。 如果軸是水平方向，而且如果是垂直方向，未設定，設定。 LM_HORZ 運作方式類似*bHorz*中所使用的參數[CalcFixedLayout](#calcfixedlayout); 請參閱該成員函式，如需有關之間自動縮放和方向的關聯性。|
-|LM_MRUWIDTH|最近使用的動態寬度。 會忽略*nLength*參數，然後使用記住最近使用的寬度。|
-|LM_HORZDOCK|水平停駐的維度。 會忽略*nLength*參數並傳回具有最大寬度的動態大小。|
-|LM_VERTDOCK|垂直停駐的維度。 會忽略*nLength*參數並傳回具有最大高度動態的大小。|
-|LM_LENGTHY|如果設定*nLength*表示高度 （Y 方向），而不是寬度。|
-|LM_COMMIT|將 LM_MRUWIDTH 浮動的控制列的目前寬度來重設。|
+|LM_STRETCH|指出是否應將控制列延展到框架的大小。 如果橫條不是停駐列（無法用於停駐），則設定為。 當橫條停駐或浮動（可供停駐）時設定。 如果設定，LM_STRETCH 會忽略*nLength* ，並根據 LM_HORZ 狀態傳回維度。 LM_STRETCH 的運作方式類似于[CalcFixedLayout](#calcfixedlayout)中所使用的*bStretch*參數;如需有關延展和方向之間關聯性的詳細資訊，請參閱該成員函式。|
+|LM_HORZ|表示橫條是水準或垂直方向。 如果橫條是水準方向，則設定為，如果它是垂直方向，則不會設定。 LM_HORZ 的運作方式類似于[CalcFixedLayout](#calcfixedlayout)中所使用的*bHorz*參數;如需有關延展和方向之間關聯性的詳細資訊，請參閱該成員函式。|
+|LM_MRUWIDTH|最近使用過的動態寬度。 忽略*nLength*參數，並使用記住的最近使用寬度。|
+|LM_HORZDOCK|水準停駐的維度。 忽略*nLength*參數，並傳回具有最大寬度的動態大小。|
+|LM_VERTDOCK|垂直停駐的維度。 忽略*nLength*參數，並傳回具有最大高度的動態大小。|
+|LM_LENGTHY|如果*nLength*表示高度（Y 方向）而不是寬度，則設定為。|
+|LM_COMMIT|將 LM_MRUWIDTH 重設為浮動控制列的目前寬度。|
 
 ### <a name="return-value"></a>傳回值
 
-控制列的大小，單位為像素的[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+[CSize](../../atl-mfc-shared/reference/csize-class.md)物件的控制列大小（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-覆寫此成員函式，以提供您自己的衍生的類別中的動態配置`CControlBar`。 MFC 類別衍生自`CControlBar`，這類[CToolbar](../../mfc/reference/ctoolbar-class.md)、 覆寫此成員函式，並提供自己的實作。
+覆寫這個成員函式，以便在您從 `CControlBar`衍生的類別中提供您自己的動態配置。 衍生自 `CControlBar`的 MFC 類別（例如[CToolbar](../../mfc/reference/ctoolbar-class.md)）會覆寫這個成員函式，並提供自己的實作為。
 
-##  <a name="calcfixedlayout"></a>  CControlBar::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>CControlBar：： CalcFixedLayout
 
-呼叫此成員函式，來計算的控制列的水平大小。
+呼叫這個成員函式以計算控制項列的水準大小。
 
 ```
 virtual CSize CalcFixedLayout(
@@ -172,31 +172,31 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>參數
 
 *bStretch*<br/>
-指出軸是否應該自動縮放以框架的大小。 *BStretch*列 （不適用於停駐） 的停駐列並不是 0 停駐或浮動時 （適用於停駐） 時，參數為非零值。
+指出是否要將橫條延展到框架的大小。 當橫條不是停駐列（無法用於停駐）時， *bStretch*參數為非零，而當停駐或浮動（可供停駐）時為0。
 
 *bHorz*<br/>
-指出軸是水平或垂直方向。 *BHorz*參數為非零值，如果列是水平方向，而是 0，如果是垂直方向。
+表示橫條是水準或垂直方向。 如果橫條是水準方向， *bHorz*參數是非零，如果是垂直方向，則為0。
 
 ### <a name="return-value"></a>傳回值
 
-控制列的大小，單位為像素的`CSize`物件。
+`CSize` 物件的控制列大小（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-控制列，例如工具列可以延伸至水平或垂直適應按鈕中含控制列。
+工具列之類的控制列可以水準或垂直延展，以容納控制列中包含的按鈕。
 
-如果*bStretch*為 TRUE 時，延伸所提供的方向沿著維度*bHorz*。 換句話說，如果*bHorz*為 FALSE 時，垂直縮放控制列。 如果*bStretch*為 FALSE 時，不支援延展，就會發生。 下表顯示可能的排列方式，以及產生的控制列樣式的*bStretch*並*bHorz*。
+如果*bStretch*為 TRUE，請沿著*bHorz*所提供的方向來延展維度。 換句話說，如果*bHorz*為 FALSE，則控制列會垂直延展。 如果*bStretch*為 FALSE，則不會發生 stretch。 下表顯示*bStretch*和*bHorz*的可能排列和產生的控制列樣式。
 
-|bStretch|bHorz|自動縮放|方向|停駐/未停駐|
+|bStretch|bHorz|因|方向|停駐/不停駐|
 |--------------|-----------|----------------|-----------------|--------------------------|
-|true|true|水平縮放|水平導向|不停駐|
-|true|false|垂直縮放|垂直導向|不停駐|
-|false|true|提供沒有自動縮放|水平導向|停駐|
-|false|false|提供沒有自動縮放|垂直導向|停駐|
+|TRUE|TRUE|水準延展|水準方向|未停駐|
+|TRUE|FALSE|垂直延展|垂直方向|未停駐|
+|FALSE|TRUE|沒有可用的延展|水準方向|Docking|
+|FALSE|FALSE|沒有可用的延展|垂直方向|Docking|
 
-##  <a name="calcinsiderect"></a>  CControlBar::CalcInsideRect
+##  <a name="calcinsiderect"></a>CControlBar：： CalcInsideRect
 
-架構會呼叫此函式來計算工作區的控制列。
+架構會呼叫這個函式來計算控制列的工作區。
 
 ```
 virtual void CalcInsideRect(
@@ -206,19 +206,19 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
-包含目前維度的控制列;包括框線。
+*各種*<br/>
+包含控制項列的目前維度;包括框線。
 
 *bHorz*<br/>
-指出軸是水平或垂直方向。 *BHorz*參數為非零值，如果列是水平方向，而是 0，如果是垂直方向。
+表示橫條是水準或垂直方向。 如果橫條是水準方向， *bHorz*參數是非零，如果是垂直方向，則為0。
 
 ### <a name="remarks"></a>備註
 
-控制列繪製之前，會呼叫此函數。
+在繪製控制列之前，會呼叫這個函式。
 
-覆寫此函式可自訂的框線和控制列的移駐夾列轉譯。
+覆寫這個函式，以自訂控制項列的框線和移駐夾列的呈現。
 
-##  <a name="ccontrolbar"></a>  CControlBar::CControlBar
+##  <a name="ccontrolbar"></a>CControlBar：： CControlBar
 
 建構 `CControlBar` 物件。
 
@@ -226,9 +226,9 @@ virtual void CalcInsideRect(
 CControlBar();
 ```
 
-##  <a name="dopaint"></a>  CControlBar::DoPaint
+##  <a name="dopaint"></a>CControlBar：:D oPaint
 
-由架構呼叫以呈現的框線和控制列的移駐夾列。
+由架構呼叫來呈現控制列的框線和移駐夾列。
 
 ```
 virtual void DoPaint(CDC* pDC);
@@ -237,17 +237,17 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-要用於呈現的框線和控制列的移駐夾的裝置內容指標。
+指向要用來呈現控制列框線和移駐夾的裝置內容。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式以自訂繪製行為的控制列。
+覆寫此函式以自訂控制項列的繪製行為。
 
-另一種自訂方法會覆寫`DrawBorders`和`DrawGripper`函式和加入自訂框線的移駐夾的繪圖程式碼。 根據預設，會呼叫這些方法，因為`DoPaint`方法中，覆寫`DoPaint`不需要。
+另一個自訂方法是覆寫 `DrawBorders` 和 `DrawGripper` 函式，並新增框線和移駐夾的自訂繪圖程式碼。 由於預設 `DoPaint` 方法會呼叫這些方法，因此不需要 `DoPaint` 的覆寫。
 
-##  <a name="drawborders"></a>  CControlBar::DrawBorders
+##  <a name="drawborders"></a>CControlBar：:D rawBorders
 
-由架構呼叫以呈現控制列的框線。
+由架構呼叫來呈現控制列的框線。
 
 ```
 virtual void DrawBorders(
@@ -258,18 +258,18 @@ virtual void DrawBorders(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-要用於轉譯的控制列框線的裝置內容指標。
+指向用來呈現控制列框線的裝置內容。
 
-*rect*<br/>
-A`CRect`物件，包含維度的控制列。
+*各種*<br/>
+包含控制列維度的 `CRect` 物件。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式可自訂的控制項列框線外觀。
+覆寫此函式以自訂控制列框線的外觀。
 
-##  <a name="drawgripper"></a>  CControlBar::DrawGripper
+##  <a name="drawgripper"></a>CControlBar：:D rawGripper
 
-由架構呼叫以呈現的移駐夾的控制列。
+由架構呼叫來呈現控制列的移駐夾。
 
 ```
 virtual void DrawGripper(
@@ -280,18 +280,18 @@ virtual void DrawGripper(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-裝置內容，以用來呈現控制項列移駐夾的點。
+指向用於呈現控制列移駐夾的裝置內容。
 
-*rect*<br/>
-A`CRect`物件，其中包含控制列的移駐夾的維度。
+*各種*<br/>
+`CRect` 物件，其中包含控制列移駐夾的尺寸。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式可自訂的控制項列移駐夾的外觀。
+覆寫此函式以自訂控制列移駐夾的外觀。
 
-##  <a name="enabledocking"></a>  CControlBar::EnableDocking
+##  <a name="enabledocking"></a>CControlBar：： EnableDocking
 
-呼叫此函式，可讓被停駐控制列。
+呼叫此函式可讓控制列固定。
 
 ```
 void EnableDocking(DWORD dwDockStyle);
@@ -300,29 +300,29 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="parameters"></a>參數
 
 *dwDockStyle*<br/>
-如果支援，請指定是否將控制列支援停駐和側邊，可以停駐控制列，其父視窗。 可以是下列其中一個或多個項目：
+指定控制列是否支援停駐以及控制列可以停駐的父視窗側邊（如果支援的話）。 可以是下列一或多個：
 
-- CBRS_ALIGN_TOP 可停駐在工作區頂端。
+- CBRS_ALIGN_TOP 允許停駐在工作區的頂端。
 
-- CBRS_ALIGN_BOTTOM 可讓工作區底部的停駐。
+- CBRS_ALIGN_BOTTOM 允許在工作區的底部停駐。
 
-- CBRS_ALIGN_LEFT 可讓用戶端區域左側停駐。
+- CBRS_ALIGN_LEFT 允許停駐在工作區的左邊。
 
-- CBRS_ALIGN_RIGHT 可讓用戶端區域右側的停駐。
+- CBRS_ALIGN_RIGHT 允許在工作區的右側停駐。
 
-- CBRS_ALIGN_ANY 可讓用戶端區域的任一邊的停駐。
+- CBRS_ALIGN_ANY 允許在工作區的任何一邊停駐。
 
-- CBRS_FLOAT_MULTI 可讓多個控制列，以在單一的迷你框架視窗中浮動顯示。
+- CBRS_FLOAT_MULTI 允許在單一迷你框架視窗中浮動多個控制列。
 
-如果為 0 （亦即表示沒有旗標），將不會停駐控制列。
+如果為0（亦即，表示沒有旗標），控制列將不會停駐。
 
 ### <a name="remarks"></a>備註
 
-指定的側邊必須符合其中一個已啟用在目的地框架視窗中，停駐的側邊或無法至該框架視窗停駐控制列。
+指定的側邊必須符合目的地框架視窗中啟用停駐的其中一個邊，否則控制列無法停駐于該框架視窗。
 
-##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle
+##  <a name="getbarstyle"></a>CControlBar：： GetBarStyle
 
-呼叫此函式可判斷哪些**CBRS_** （控制項的列樣式） 目前設定的控制列。
+呼叫此函式可判斷目前為控制項列設定的**CBRS_** （控制列樣式）設定。
 
 ```
 DWORD GetBarStyle();
@@ -330,15 +330,15 @@ DWORD GetBarStyle();
 
 ### <a name="return-value"></a>傳回值
 
-目前**CBRS_** 控制列 （控制項的列樣式） 設定。 請參閱[CControlBar::SetBarStyle](#setbarstyle)可用樣式的完整清單。
+控制項列的目前**CBRS_** （控制列樣式）設定。 如需可用樣式的完整清單，請參閱[CControlBar：： SetBarStyle](#setbarstyle) 。
 
 ### <a name="remarks"></a>備註
 
-不會處理**WS_** （視窗樣式） 樣式。
+不會處理**WS_** （視窗樣式）樣式。
 
-##  <a name="getborders"></a>  CControlBar::GetBorders
+##  <a name="getborders"></a>CControlBar：：可以 getborders 擷取
 
-傳回目前的控制列的邊界值。
+傳回控制項列的目前框線值。
 
 ```
 CRect GetBorders() const;
@@ -346,11 +346,11 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>傳回值
 
-A`CRect`物件，其中包含控制列物件的每一端的目前寬度 （以像素為單位）。 例如，值*左*成員的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，是左框線的寬度。
+`CRect` 物件，其中包含控制列物件之每一端的目前寬度（以圖元為單位）。 例如，*左側*成員的值（ [CRect](../../atl-mfc-shared/reference/crect-class.md)物件）是左邊框線的寬度。
 
-##  <a name="getcount"></a>  CControlBar::GetCount
+##  <a name="getcount"></a>CControlBar：： GetCount
 
-傳回非 HWND 項目數目上`CControlBar`物件。
+傳回 `CControlBar` 物件上的非 HWND 專案數目。
 
 ```
 int GetCount() const;
@@ -358,15 +358,15 @@ int GetCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-非 HWND 上的項目數`CControlBar`物件。 此函數會傳回 0 代表[CDialogBar](../../mfc/reference/cdialogbar-class.md)物件。
+`CControlBar` 物件上的非 HWND 專案數目。 針對[CDialogBar](../../mfc/reference/cdialogbar-class.md)物件，此函式會傳回0。
 
 ### <a name="remarks"></a>備註
 
-項目類型取決於衍生的物件： 窗格[CStatusBar](../../mfc/reference/cstatusbar-class.md)物件和按鈕和分隔符號以[CToolBar](../../mfc/reference/ctoolbar-class.md)物件。
+專案的類型取決於 [衍生物件： [CStatusBar](../../mfc/reference/cstatusbar-class.md)物件的窗格] 和 [ [CToolBar](../../mfc/reference/ctoolbar-class.md)物件的按鈕和分隔符號]。
 
-##  <a name="getdockingframe"></a>  CControlBar::GetDockingFrame
+##  <a name="getdockingframe"></a>CControlBar：： GetDockingFrame
 
-呼叫此成員函式可取得目前的框架視窗的停駐控制列的指標。
+呼叫這個成員函式可取得控制項列停駐所在之目前框架視窗的指標。
 
 ```
 CFrameWnd* GetDockingFrame() const;
@@ -374,17 +374,17 @@ CFrameWnd* GetDockingFrame() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，框架視窗的指標否則為 NULL。
+如果成功，則為框架視窗的指標;否則為 Null。
 
-如果控制列未停駐在框架視窗 （亦即，如果浮點控制列），此函式會傳回指標至其父代[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)。
+如果控制列未停駐在框架視窗（也就是，如果控制列是浮動的），此函式會傳回其父[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)的指標。
 
 ### <a name="remarks"></a>備註
 
-如需有關可停駐控制列的詳細資訊，請參閱[CControlBar::EnableDocking](#enabledocking)並[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)。
+如需可停駐控制列的詳細資訊，請參閱[CControlBar：： EnableDocking](#enabledocking)和[CFrameWnd：:D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)。
 
-##  <a name="isfloating"></a>  CControlBar::IsFloating
+##  <a name="isfloating"></a>CControlBar：： IsFloating
 
-呼叫此成員函式，以判斷是否浮動或停駐控制列。
+呼叫這個成員函式，以判斷控制列是浮動或停駐的。
 
 ```
 BOOL IsFloating() const;
@@ -392,15 +392,15 @@ BOOL IsFloating() const;
 
 ### <a name="return-value"></a>傳回值
 
-控制列浮點數; 如果為非零否則為 0。
+如果控制列是浮動的，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-若要變更狀態的一種控制列從停駐到浮點數，呼叫[CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar)。
+若要將控制列的狀態從停駐變更為浮動，請呼叫[CFrameWnd：： FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar)。
 
-##  <a name="m_bautodelete"></a>  CControlBar::m_bAutoDelete
+##  <a name="m_bautodelete"></a>CControlBar：： m_bAutoDelete
 
-如果是非零值，`CControlBar`終結 Windows 控制列時，會刪除物件。
+如果是非零值，則當 Windows 控制列終結時，就會刪除 `CControlBar` 物件。
 
 ```
 BOOL m_bAutoDelete;
@@ -408,13 +408,13 @@ BOOL m_bAutoDelete;
 
 ### <a name="remarks"></a>備註
 
-*create_suspended*會 BOOL 類型的公用變數。
+*m_bAutoDelete*是 BOOL 類型的公用變數。
 
-控制列物件通常內嵌於框架視窗物件。 在此情況下， *create_suspended*為 0，因為內嵌的控制列物件終結時終結框架視窗。
+控制列物件通常內嵌于框架視窗物件中。 在此情況下， *m_bAutoDelete*是0，因為在終結框架視窗時，內嵌的控制列物件會終結。
 
-將這個變數設為非零值，如果您配置`CControlBar`物件在堆積和您不打算呼叫**刪除**。
+如果您在堆積上配置 `CControlBar` 物件，而不打算呼叫**delete**，請將此變數設定為非零值。
 
-##  <a name="m_pinplaceowner"></a>  CControlBar::m_pInPlaceOwner
+##  <a name="m_pinplaceowner"></a>CControlBar：： m_pInPlaceOwner
 
 控制列的就地擁有者。
 
@@ -422,9 +422,9 @@ BOOL m_bAutoDelete;
 CWnd* m_pInPlaceOwner;
 ```
 
-##  <a name="onupdatecmdui"></a>  CControlBar::OnUpdateCmdUI
+##  <a name="onupdatecmdui"></a>CControlBar：： OnUpdateCmdUI
 
-以更新工具列或狀態列的狀態，架構會呼叫此成員函式。
+此成員函式是由架構呼叫，以更新工具列或狀態列的狀態。
 
 ```
 virtual void OnUpdateCmdUI(
@@ -435,20 +435,20 @@ virtual void OnUpdateCmdUI(
 ### <a name="parameters"></a>參數
 
 *pTarget*<br/>
-指向主框架視窗的 應用程式。 此指標使用於路由傳送更新訊息。
+指向應用程式的主框架視窗。 此指標用於路由更新訊息。
 
 *bDisableIfNoHndler*<br/>
-旗標，指出是否不有任何更新處理常式的控制項應該自動顯示為已停用。
+旗標，指出沒有更新處理常式的控制項是否應該自動顯示為停用。
 
 ### <a name="remarks"></a>備註
 
-若要更新的個別按鈕或窗格中，使用訊息對應中 ON_UPDATE_COMMAND_UI 巨集，適當地設定更新處理常式。 請參閱[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)如需使用這個巨集的詳細資訊。
+若要更新個別的按鈕或窗格，請使用訊息對應中的 ON_UPDATE_COMMAND_UI 宏，適當地設定更新處理常式。 如需使用此宏的詳細資訊，請參閱[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) 。
 
-`OnUpdateCmdUI` 是由架構呼叫，當應用程式處於閒置狀態。 更新框架視窗必須是子視窗，至少間接地顯示框架視窗。 `OnUpdateCmdUI` 是一種進階可覆寫。
+當應用程式處於閒置狀態時，架構會呼叫 `OnUpdateCmdUI`。 要更新的框架視窗必須是一個子視窗（至少間接）可見的框架視窗。 `OnUpdateCmdUI` 是先進的可覆寫。
 
-##  <a name="setbarstyle"></a>  CControlBar::SetBarStyle
+##  <a name="setbarstyle"></a>CControlBar：： SetBarStyle
 
-呼叫此函式來設定所需**CBRS_** 控制列的樣式。
+呼叫此函式可設定控制項列所需的**CBRS_** 樣式。
 
 ```
 void SetBarStyle(DWORD dwStyle);
@@ -457,41 +457,41 @@ void SetBarStyle(DWORD dwStyle);
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-控制列所需的樣式。 可以是下列其中一個或多個項目：
+控制項列的所需樣式。 可以是下列一或多個：
 
-- CBRS_ALIGN_TOP 可讓被停駐在框架視窗的工作區頂端控制列。
+- CBRS_ALIGN_TOP 允許控制列停駐在框架視窗的工作區頂端。
 
-- CBRS_ALIGN_BOTTOM 可以讓框架視窗的 [用戶端] 區域底部停駐控制列。
+- CBRS_ALIGN_BOTTOM 允許控制列停駐在框架視窗的工作區底部。
 
-- CBRS_ALIGN_LEFT 可讓工作區框架視窗的左側停駐控制列。
+- CBRS_ALIGN_LEFT 允許控制列停駐在框架視窗的工作區左邊。
 
-- CBRS_ALIGN_RIGHT 可讓控制列固定到用戶端區域中，框架視窗的右側。
+- CBRS_ALIGN_RIGHT 允許控制列停駐在框架視窗工作區的右側。
 
-- CBRS_ALIGN_ANY 可讓控制列可停駐於框架視窗的工作區的任何一側。
+- CBRS_ALIGN_ANY 允許控制列停駐在框架視窗的工作區的任何一邊。
 
-- CBRS_BORDER_TOP 會導致在頂端列時，它會是可見的控制項上繪製框線。
+- CBRS_BORDER_TOP 會在控制項列的上邊緣繪製框線（當它可見時）。
 
-- CBRS_BORDER_BOTTOM 會導致要繪製的控制列時要顯示的下邊緣的框線。
+- CBRS_BORDER_BOTTOM 會在控制項列的下邊緣繪製框線，而這是可見的。
 
-- CBRS_BORDER_LEFT 會導致列時，它會是可見的控制項左邊緣上繪製框線。
+- CBRS_BORDER_LEFT 會在控制項列的左邊緣繪製框線，而這是可見的。
 
-- CBRS_BORDER_RIGHT 會導致要繪製的列時，它會是可見的控制項右邊緣的框線。
+- CBRS_BORDER_RIGHT 會在控制項列的右邊緣繪製框線，使其可見。
 
-- CBRS_FLOAT_MULTI 可讓多個控制列，以在單一的迷你框架視窗中浮動顯示。
+- CBRS_FLOAT_MULTI 允許在單一迷你框架視窗中浮動多個控制列。
 
-- CBRS_TOOLTIPS 讓工具提示来顯示的控制列。
+- CBRS_TOOLTIPS 會導致控制項列顯示工具提示。
 
-- CBRS_FLYBY 會導致訊息文字與工具提示同時更新。
+- CBRS_FLYBY 會導致郵件內文與工具提示同時更新。
 
-- CBRS_GRIPPER 導致移駐夾，類似於使用中的寬線`CReBar`物件，要繪製任何`CControlBar`-衍生的類別。
+- CBRS_GRIPPER 會使移駐夾（類似于 `CReBar` 物件中的波段）繪製到任何 `CControlBar`衍生的類別。
 
 ### <a name="remarks"></a>備註
 
-不會影響**WS_** （視窗樣式） 設定。
+不會影響**WS_** （視窗樣式）設定。
 
-##  <a name="setborders"></a>  CControlBar::SetBorders
+##  <a name="setborders"></a>CControlBar：： SetBorders
 
-呼叫此函式可設定的控制列的框線大小。
+呼叫此函式可設定控制列框線的大小。
 
 ```
 void SetBorders(
@@ -506,29 +506,29 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *cxLeft*<br/>
-控制列的左框線的寬度 （以像素為單位）。
+控制列左框線的寬度（以圖元為單位）。
 
 *cyTop*<br/>
-控制列的上框線的高度 （以像素為單位）。
+控制列上框線的高度（以圖元為單位）。
 
 *cxRight*<br/>
-控制列的右框線的寬度 （以像素為單位）。
+控制列右框線的寬度（以圖元為單位）。
 
 *cyBottom*<br/>
-控制列的下框線的高度 （以像素為單位）。
+控制列下框線的高度（以圖元為單位）。
 
 *lpRect*<br/>
-指標[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含每一種框線的控制列物件的目前寬度 （以像素為單位）。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標，其中包含控制列物件之每個框線的目前寬度（以圖元為單位）。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會將 5 個像素為單位，將控制列的頂端和底端框線和左框線和右框線設定為 2 個像素：
+下列程式碼範例會將控制列的上邊界和下框線設定為5圖元，左邊和右框線設為2圖元：
 
 [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]
 
-##  <a name="setinplaceowner"></a>  CControlBar::SetInPlaceOwner
+##  <a name="setinplaceowner"></a>CControlBar：： SetInPlaceOwner
 
-變更一種控制列的就地擁有者。
+變更控制列的就地擁有者。
 
 ```
 void SetInPlaceOwner(CWnd* pWnd);

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458433"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876163"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 運算子
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `thread::id` 物件。
 
-*再*\
+*Right*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `thread::id` 物件。
 
-*再*\
+*Right*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `thread::id` 物件。
 
-*再*\
+*Right*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -111,7 +111,7 @@ bool operator<= (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> operator&lt;
 
 判斷某個 `thread::id` 物件是否小於另一個。
 
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `thread::id` 物件。
 
-*再*\
+*Right*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果*左*在總排序中的*右邊*,**則為 true** ;否則**為 false**。
+如果*左*在總排序中的*右邊*，**則為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `thread::id` 物件。
 
-*再*\
+*Right*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `thread::id` 物件。
 
-*再*\
+*Right*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個物件代表相同的執行執行緒, 或如果沒有物件代表執行的執行緒,**則為 true** ;否則**為 false**。
+如果兩個物件代表相同的執行執行緒，或如果沒有物件代表執行的執行緒，**則為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -206,8 +206,8 @@ basic_ostream<Elem, Tr>& operator<<(
 *Ostr*\
 [basic_ostream](../standard-library/basic-ostream-class.md) 物件。
 
-*號*\
-          `thread::id` 物件。
+*識別碼*\
+`thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 

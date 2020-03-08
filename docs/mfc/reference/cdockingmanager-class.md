@@ -161,11 +161,11 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
 ms.openlocfilehash: 8709b3a4eb3f57a3d2700ad7aaed16df994245c5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506877"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883917"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 類別
 
@@ -183,34 +183,34 @@ class CDockingManager : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CDockingManager::AddDockSite](#adddocksite)|建立停駐窗格, 並將它新增至控制列清單。|
+|[CDockingManager::AddDockSite](#adddocksite)|建立停駐窗格，並將它新增至控制列清單。|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|將 [橫條圖] 的控點加入至隱藏的 MDI 索引標籤式橫條窗格清單。|
 |[CDockingManager::AddMiniFrame](#addminiframe)|將框架加入迷你框架的清單。|
-|[CDockingManager::AddPane](#addpane)|向停駐的管理員窗格。|
-|[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|重新計算並調整框架視窗中所有窗格的版面配置。|
-|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|會將 WM_NCCALCSIZE 訊息傳送至所有窗格和`CPaneFrameWnd`視窗。|
+|[CDockingManager::AddPane](#addpane)|向銜接管理員註冊窗格。|
+|[CDockingManager：： AdjustDockingLayout](#adjustdockinglayout)|重新計算並調整框架視窗中所有窗格的版面配置。|
+|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|導致 WM_NCCALCSIZE 訊息傳送至所有窗格，並 `CPaneFrameWnd` 視窗。|
 |[CDockingManager::AdjustRectToClientArea](#adjustrecttoclientarea)|調整矩形的對齊方式。|
-|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|調整自動隱藏模式中的停駐窗格大小, 讓它取得框架工作區的完整寬度或高度, 並以固定的網站括住。|
+|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|調整自動隱藏模式中的停駐窗格大小，讓它取得框架工作區的完整寬度或高度，並以固定的網站括住。|
 |[CDockingManager::AutoHidePane](#autohidepane)|建立自動隱藏工具列。|
 |[CDockingManager::BringBarsToTop](#bringbarstotop)|將具有指定對齊方式的停駐列帶入頂端。|
 |[CDockingManager::BuildPanesMenu](#buildpanesmenu)|將停駐窗格和工具列的名稱新增至功能表。|
 |[CDockingManager::CalcExpectedDockedRect](#calcexpecteddockedrect)|計算固定視窗的預期矩形。|
-|[CDockingManager::Create](#create)|建立停駐管理員。|
-|[CDockingManager::DeterminePaneAndStatus](#determinepaneandstatus)|決定包含指定點和其銜接狀態的窗格。|
-|[CDockingManager::DisableRestoreDockState](#disablerestoredockstate)|啟用或停用從登錄中載入停駐版面配置的功能。|
-|[CDockingManager::DockPane](#dockpane)|將窗格停駐至另一個窗格或框架視窗。|
-|[CDockingManager::DockPaneLeftOf](#dockpaneleftof)|將窗格停駐於另一個窗格的左邊。|
-|[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|將窗格停駐到主框架、建立固定窗格, 並將它新增至控制列清單。|
-|[CDockingManager::EnableDocking](#enabledocking)|建立停駐窗格, 並讓窗格與主框架銜接。|
-|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|顯示 [其他] 按鈕, 在所有銜接窗格的標題上開啟快顯功能表。|
-|[CDockingManager::EnablePaneContextMenu](#enablepanecontextmenu)|指示程式庫顯示特殊的內容功能表, 其中包含應用程式工具列和停駐窗格的清單, 當使用者按一下滑鼠右鍵, 而且程式庫正在處理 WM_CONTEXTMENU 訊息時。|
+|[CDockingManager：： Create](#create)|建立停駐管理員。|
+|[CDockingManager：:D eterminePaneAndStatus](#determinepaneandstatus)|決定包含指定點和其銜接狀態的窗格。|
+|[CDockingManager：:D isableRestoreDockState](#disablerestoredockstate)|啟用或停用從登錄中載入停駐版面配置的功能。|
+|[CDockingManager：:D ockPane](#dockpane)|將窗格停駐至另一個窗格或框架視窗。|
+|[CDockingManager：:D ockPaneLeftOf](#dockpaneleftof)|將窗格停駐於另一個窗格的左邊。|
+|[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|將窗格停駐到主框架、建立固定窗格，並將它新增至控制列清單。|
+|[CDockingManager：： EnableDocking](#enabledocking)|建立停駐窗格，並讓窗格與主框架銜接。|
+|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|顯示 [其他] 按鈕，在所有銜接窗格的標題上開啟快顯功能表。|
+|[CDockingManager::EnablePaneCoNtextMenu](#enablepanecontextmenu)|當使用者按一下滑鼠右鍵且程式庫正在處理 WM_CONTEXTMENU 訊息時，告訴程式庫顯示一個特殊的內容功能表，其中包含應用程式工具列和停駐窗格的清單。|
 |[CDockingManager::FindDockSite](#finddocksite)|抓取位於指定位置且具有指定對齊的橫條窗格。|
 |[CDockingManager::FindDockSiteByPane](#finddocksitebypane)|傳回具有 [目標列] 窗格識別碼的 [橫條圖] 窗格。|
 |[CDockingManager::FindPaneByID](#findpanebyid)|依據指定的控制項 ID 尋找窗格。|
 |[CDockingManager::FixupVirtualRects](#fixupvirtualrects)|將所有目前的工具列位置認可至虛擬矩形。|
 |[CDockingManager::FrameFromPoint](#framefrompoint)|傳回包含指定點的框架。|
 |[CDockingManager::GetClientAreaBounds](#getclientareabounds)|取得包含工作區範圍的矩形。|
-|[CDockingManager::GetDockingMode](#getdockingmode)|傳回目前的銜接模式。|
+|[CDockingManager：： GetDockingMode](#getdockingmode)|傳回目前的銜接模式。|
 |[CDockingManager::GetDockSiteFrameWnd](#getdocksiteframewnd)|取得父視窗框架的指標。|
 |[CDockingManager::GetEnabledAutoHideAlignment](#getenabledautohidealignment)|傳回窗格的已啟用對齊。|
 |[CDockingManager::GetMiniFrames](#getminiframes)|取得 miniframes 的清單。|
@@ -219,66 +219,66 @@ class CDockingManager : public CObject
 |[CDockingManager::GetSmartDockingManager](#getsmartdockingmanager)|抓取智慧停駐管理員的指標。|
 |[CDockingManager::GetSmartDockingManagerPermanent](#getsmartdockingmanagerpermanent)|抓取智慧停駐管理員的指標。|
 |[CDockingManager::GetSmartDockingParams](#getsmartdockingparams)|傳回停駐管理員的智慧銜接參數。|
-|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|靜態方法, 會傳回用來顯示智慧停駐標記的主題。|
+|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|靜態方法，會傳回用來顯示智慧停駐標記的主題。|
 |[CDockingManager::HideAutoHidePanes](#hideautohidepanes)|隱藏處於自動隱藏模式的窗格。|
-|[CDockingManager::InsertDockSite](#insertdocksite)|建立停駐窗格, 並將它插入控制列清單中。|
+|[CDockingManager::InsertDockSite](#insertdocksite)|建立停駐窗格，並將它插入控制列清單中。|
 |[CDockingManager::InsertPane](#insertpane)|將控制項窗格插入控制列清單中。|
 |[CDockingManager::IsDockSiteMenu](#isdocksitemenu)|指定是否要在所有窗格的標題上顯示快顯功能表。|
 |[CDockingManager::IsInAdjustLayout](#isinadjustlayout)|決定是否要調整所有窗格的版面配置。|
 |[CDockingManager::IsOLEContainerMode](#isolecontainermode)|指定停駐管理員是否為 OLE 容器模式。|
 |[CDockingManager::IsPointNearDockSite](#ispointneardocksite)|判斷指定的點是否接近 dock 網站。|
 |[CDockingManager::IsPrintPreviewValid](#isprintpreviewvalid)|決定預覽列印模式是否已設定。|
-|[CDockingManager::LoadState](#loadstate)|從登錄載入停駐管理員的狀態。|
+|[CDockingManager：： LoadState](#loadstate)|從登錄載入停駐管理員的狀態。|
 |[CDockingManager::LockUpdate](#lockupdate)|鎖定指定的視窗。|
-|[CDockingManager::OnActivateFrame](#onactivateframe)|當框架視窗設為現用或停用時, 由架構呼叫。|
+|[CDockingManager::OnActivateFrame](#onactivateframe)|當框架視窗設為現用或停用時，由架構呼叫。|
 |[CDockingManager::OnClosePopupMenu](#onclosepopupmenu)|架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。|
 |[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|由架構呼叫以移動迷你框架視窗。|
-|[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|在建立具有窗格清單的功能表時, 由架構呼叫。|
-|[CDockingManager::PaneFromPoint](#panefrompoint)|傳回包含指定點的窗格。|
-|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|由架構呼叫來選取或清除核取方塊，針對指定的命令，並重新計算顯示窗格的配置。|
-|[CDockingManager::RecalcLayout](#recalclayout)|重新計算控制項清單中所顯示控制項的內部配置。|
+|[CDockingManager::OnPaneCoNtextMenu](#onpanecontextmenu)|在建立具有窗格清單的功能表時，由架構呼叫。|
+|[CDockingManager：:P aneFromPoint](#panefrompoint)|傳回包含指定點的窗格。|
+|[CDockingManager：:P rocessPaneCoNtextMenuCommand](#processpanecontextmenucommand)|由架構呼叫以選取或清除指定之命令的核取方塊，並重新計算所顯示窗格的版面配置。|
+|[CDockingManager：： RecalcLayout](#recalclayout)|重新計算控制項清單中所顯示控制項的內部配置。|
 |[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|釋放空的窗格容器。|
 |[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|移除指定的隱藏橫條窗格。|
 |[CDockingManager::RemoveMiniFrame](#removeminiframe)|從迷你框架清單中移除指定的框架。|
-|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊窗格，並從停駐的管理員在清單中移除。|
+|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊窗格，並將它從停駐管理員中的清單移除。|
 |[CDockingManager::ReplacePane](#replacepane)|以一個窗格取代另一個。|
 |[CDockingManager::ResortMiniFramesForZOrder](#resortminiframesforzorder)|將小型框架清單中的框架化。|
-|[CDockingManager::SaveState](#savestate)|將停駐管理員的狀態儲存至登錄。|
+|[CDockingManager：： SaveState](#savestate)|將停駐管理員的狀態儲存至登錄。|
 |[CDockingManager::SendMessageToMiniFrames](#sendmessagetominiframes)|將指定的訊息傳送至所有迷你框架。|
-|[CDockingManager::Serialize](#serialize)|將停駐管理員寫入封存。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
+|[CDockingManager：：序列化](#serialize)|將停駐管理員寫入封存。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
 |[CDockingManager::SetAutohideZOrder](#setautohidezorder)|設定控制列和指定窗格的大小、寬度和高度。|
 |[CDockingManager::SetDockingMode](#setdockingmode)|設定銜接模式。|
 |[CDockingManager::SetDockState](#setdockstate)|設定控制列、迷你框架和自動隱藏列的停駐狀態。|
 |[CDockingManager::SetPrintPreviewMode](#setprintpreviewmode)|設定預覽列印中顯示的長條預覽列印模式。|
-|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|設定參數, 以定義智慧銜接的行為。|
+|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|設定參數，以定義智慧銜接的行為。|
 |[CDockingManager::ShowDelayShowMiniFrames](#showdelayshowminiframes)|顯示或隱藏迷你框架的視窗。|
 |[CDockingManager::ShowPanes](#showpanes)|顯示或隱藏 [控制項] 和 [自動隱藏] 橫條圖的窗格。|
-|[CDockingManager::StartSDocking](#startsdocking)|根據智慧停駐管理員的對齊, 啟動指定之視窗的智慧停駐。|
+|[CDockingManager::StartSDocking](#startsdocking)|根據智慧停駐管理員的對齊，啟動指定之視窗的智慧停駐。|
 |[CDockingManager::StopSDocking](#stopsdocking)|停止智慧型銜接。|
 
 ### <a name="data-members"></a>資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|指定停駐管理員是否隱藏 OLE 容器模式中的窗格。|
-|[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|指定全域銜接模式。|
-|[CDockingManager::m_nDockSensitivity](#m_ndocksensitivity)|指定停駐敏感度。|
-|[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|指定停駐窗格停駐在立即銜接模式之前的時間 (以毫秒為單位)。|
-|[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|指定工具列停駐于主框架視窗之前的時間 (以毫秒為單位)。|
+|[CDockingManager：： m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|指定停駐管理員是否隱藏 OLE 容器模式中的窗格。|
+|[CDockingManager：： m_dockModeGlobal](#m_dockmodeglobal)|指定全域銜接模式。|
+|[CDockingManager：： m_nDockSensitivity](#m_ndocksensitivity)|指定停駐敏感度。|
+|[CDockingManager：： m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|指定停駐窗格停駐在立即銜接模式之前的時間（以毫秒為單位）。|
+|[CDockingManager：： m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|指定工具列停駐于主框架視窗之前的時間（以毫秒為單位）。|
 
 ## <a name="remarks"></a>備註
 
 主框架視窗會自動建立並初始化這個類別。
 
-停駐管理員物件會保留停駐版面配置中所有窗格的清單, 以及屬於主框架視窗的所有[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)視窗清單。
+停駐管理員物件會保留停駐版面配置中所有窗格的清單，以及屬於主框架視窗的所有[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)視窗清單。
 
-類別會執行一些您可以用來尋找窗格`CPaneFrameWnd`或視窗的服務。 `CDockingManager` 您通常不會直接呼叫這些服務, 因為它們會包裝在主框架視窗物件中。 如需詳細資訊, 請參閱[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。
+`CDockingManager` 類別會執行一些您可以用來尋找窗格或 `CPaneFrameWnd` 視窗的服務。 您通常不會直接呼叫這些服務，因為它們會包裝在主框架視窗物件中。 如需詳細資訊，請參閱[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。
 
 ## <a name="customization-tips"></a>自訂秘訣
 
-下列秘訣適用`CDockingManager`于物件:
+下列秘訣適用于 `CDockingManager` 物件：
 
-- [CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)支援下列銜接模式:
+- [CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)支援下列銜接模式：
 
   - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
@@ -286,13 +286,13 @@ class CDockingManager : public CObject
 
   - `AFX_DOCK_TYPE::DT_SMART`
 
-  這些銜接模式是由[CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal)所定義, 而且是藉由呼叫[CDockingManager:: SetDockingMode](#setdockingmode)來設定。
+  這些銜接模式是由[CDockingManager：： m_dockModeGlobal](#m_dockmodeglobal)所定義，而且是藉由呼叫[CDockingManager：： SetDockingMode](#setdockingmode)來設定。
 
-- 如果您想要建立非浮動、不可調整大小的窗格, 請呼叫[CDockingManager:: AddPane](#addpane)方法。 這個方法會向停駐管理員註冊窗格, 這會負責處理窗格的版面配置。
+- 如果您想要建立非浮動、不可調整大小的窗格，請呼叫[CDockingManager：： AddPane](#addpane)方法。 這個方法會向停駐管理員註冊窗格，這會負責處理窗格的版面配置。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何在`CDockingManager`類別中使用各種方法來`CDockingManager`設定物件。 此範例示範如何顯示額外的按鈕, 在所有停駐窗格的標題上開啟快顯功能表, 以及如何設定物件的銜接模式。 此程式碼片段是[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)的一部分。
+下列範例示範如何在 `CDockingManager` 類別中使用各種方法來設定 `CDockingManager` 物件。 此範例示範如何顯示額外的按鈕，在所有停駐窗格的標題上開啟快顯功能表，以及如何設定物件的銜接模式。 此程式碼片段是[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -304,11 +304,11 @@ class CDockingManager : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxDockingManager。h
+**標頭：** afxDockingManager。h
 
 ##  <a name="adddocksite"></a>CDockingManager::AddDockSite
 
-建立停駐窗格, 並將它新增至控制列清單。
+建立停駐窗格，並將它新增至控制列清單。
 
 ```
 BOOL AddDockSite(
@@ -326,7 +326,7 @@ BOOL AddDockSite(
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立 dock 窗格, 則為 TRUE;否則為 FALSE。
+如果已成功建立 dock 窗格，則為 TRUE;否則為 FALSE。
 
 ##  <a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar
 
@@ -339,11 +339,11 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[in]指標為橫條窗格
+在橫條窗格的指標
 
 ##  <a name="addpane"></a>CDockingManager::AddPane
 
-向停駐的管理員窗格。
+向銜接管理員註冊窗格。
 
 ```
 BOOL AddPane(
@@ -356,7 +356,7 @@ BOOL AddPane(
 ### <a name="parameters"></a>參數
 
 *pWnd*<br/>
-[in、 out]指定將新增至停駐的管理員窗格。
+[in、out]指定要加入至銜接管理員的窗格。
 
 *bTail*<br/>
 在TRUE 會將窗格新增至停駐管理員的窗格清單結尾;否則為 FALSE。
@@ -369,13 +369,13 @@ BOOL AddPane(
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格已成功向停駐管理員註冊, 則為 TRUE;否則為 FALSE。
+如果窗格已成功向停駐管理員註冊，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法, 即可使用停駐管理員來註冊非浮動、不可調整大小的窗格。 如果您未註冊窗格, 當停駐管理員配置時, 它們將不會正確顯示。
+呼叫這個方法，即可使用停駐管理員來註冊非浮動、不可調整大小的窗格。 如果您未註冊窗格，當停駐管理員配置時，它們將不會正確顯示。
 
-##  <a name="adjustdockinglayout"></a>CDockingManager:: AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>CDockingManager：： AdjustDockingLayout
 
 重新計算並調整框架視窗中所有窗格的版面配置。
 
@@ -405,11 +405,11 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="return-value"></a>傳回值
 
-如果框架不在迷你框架清單中, 而且已成功新增, 則為 TRUE;否則為 FALSE。
+如果框架不在迷你框架清單中，而且已成功新增，則為 TRUE;否則為 FALSE。
 
 ##  <a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames
 
-會將 WM_NCCALCSIZE 訊息傳送至所有窗格和`CPaneFrameWnd`視窗。
+導致 WM_NCCALCSIZE 訊息傳送至所有窗格，並 `CPaneFrameWnd` 視窗。
 
 ```
 virtual void AdjustPaneFrames();
@@ -430,18 +430,18 @@ virtual BOOL AdjustRectToClientArea(
 ### <a name="parameters"></a>參數
 
 *rectResult*<br/>
-在`CRect`物件的參考
+在`CRect` 物件的參考
 
 *dwAlignment*<br/>
-在`CRect`物件的對齊方式
+在`CRect` 物件的對齊
 
 ### <a name="return-value"></a>傳回值
 
-如果已調整`CRect`物件的對齊, 則為 TRUE;否則為 FALSE。
+如果已調整 `CRect` 物件的對齊，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*DwAlignment*參數可以有下列其中一個值:
+*DwAlignment*參數可以有下列其中一個值：
 
 - CBRS_ALIGN_TOP
 
@@ -451,9 +451,9 @@ virtual BOOL AdjustRectToClientArea(
 
 - CBRS_ALIGN_RIGHT
 
-##  <a name="alignautohidepane"></a>  CDockingManager::AlignAutoHidePane
+##  <a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane
 
-調整自動隱藏模式中的停駐窗格大小, 讓它取得框架工作區的完整寬度或高度, 並以固定的網站括住。
+調整自動隱藏模式中的停駐窗格大小，讓它取得框架工作區的完整寬度或高度，並以固定的網站括住。
 
 ```
 void AlignAutoHidePane(
@@ -467,7 +467,7 @@ void AlignAutoHidePane(
 在固定滑動軸窗格。
 
 *bIsVisible*<br/>
-在如果停駐窗格為可見, 則為 TRUE;否則為 FALSE。
+在如果停駐窗格為可見，則為 TRUE;否則為 FALSE。
 
 ##  <a name="autohidepane"></a>CDockingManager::AutoHidePane
 
@@ -489,7 +489,7 @@ CMFCAutoHideToolBar* AutoHidePane(
 
 ### <a name="return-value"></a>傳回值
 
-如果未建立自動隱藏工具列, 則為 Null;否則為新工具列的指標。
+如果未建立自動隱藏工具列，則為 Null;否則為新工具列的指標。
 
 ##  <a name="bringbarstotop"></a>CDockingManager::BringBarsToTop
 
@@ -504,12 +504,12 @@ void BringBarsToTop(
 ### <a name="parameters"></a>參數
 
 *dwAlignment*<br/>
-[in]就可以享受頂端的其他視窗停駐列對齊方式。
+在放在其他視窗頂端的停駐線對齊。
 
 *bExcludeDockedBars*<br/>
-在TRUE 表示排除停駐的橫條, 而不是放在上方;否則為 FALSE。
+在TRUE 表示排除停駐的橫條，而不是放在上方;否則為 FALSE。
 
-##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu
+##  <a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu
 
 將停駐窗格和工具列的名稱新增至功能表。
 
@@ -522,7 +522,7 @@ void BuildPanesMenu(
 ### <a name="parameters"></a>參數
 
 *下拉式功能表*<br/>
-在一個功能表, 可將停駐窗格和工具列的名稱新增至。
+在一個功能表，可將停駐窗格和工具列的名稱新增至。
 
 *bToolbarsOnly*<br/>
 在TRUE 表示只將工具列名稱新增至功能表;否則為 FALSE。
@@ -559,9 +559,9 @@ void CalcExpectedDockedRect(
 
 ### <a name="remarks"></a>備註
 
-如果使用者將視窗拖曳到*ptMouse*所指定的點, 並將它停駐在該處, 這個方法會計算視窗會佔用的矩形。
+如果使用者將視窗拖曳到*ptMouse*所指定的點，並將它停駐在該處，這個方法會計算視窗會佔用的矩形。
 
-##  <a name="create"></a>CDockingManager:: Create
+##  <a name="create"></a>CDockingManager：： Create
 
 建立停駐管理員。
 
@@ -578,7 +578,7 @@ BOOL Create(CFrameWnd* pParentWnd);
 
 TRUE 一律為。
 
-##  <a name="determinepaneandstatus"></a>CDockingManager::D eterminePaneAndStatus
+##  <a name="determinepaneandstatus"></a>CDockingManager：:D eterminePaneAndStatus
 
 決定包含指定點和其銜接狀態的窗格。
 
@@ -598,7 +598,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 在要檢查之窗格的位置。
 
 *nSensitivity*<br/>
-在值, 可增加每個已核取窗格的視窗矩形。 如果指定的點在這個增加的區域中, 則窗格會符合搜尋準則。
+在值，可增加每個已核取窗格的視窗矩形。 如果指定的點在這個增加的區域中，則窗格會符合搜尋準則。
 
 *dwEnabledAlignment*<br/>
 在停駐窗格的對齊方式。
@@ -618,16 +618,16 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 ### <a name="remarks"></a>備註
 
-銜接狀態可以是下列其中一個值:
+銜接狀態可以是下列其中一個值：
 
 |AFX_CS_STATUS 值|意義|
 |---------------------------|-------------|
-|CS_NOTHING|指標不在停駐的網站上。 因此, 請將窗格保持浮動。|
-|CS_DOCK_IMMEDIATELY|指標是在「立即模式」中的停駐網站上 (已啟用 DT_IMMEDIATE 樣式), 因此窗格必須立即固定。|
-|CS_DELAY_DOCK|指標位於停駐在另一個固定窗格, 或是主要框架邊緣的 dock 網站上方。|
-|CS_DELAY_DOCK_TO_TAB|指標位於停駐在索引標籤式視窗中的 dock 網站上方。 當滑鼠停留在另一個停駐窗格的標題上方或索引標籤式窗格的索引標籤區域上方時, 就會發生這種情況。|
+|CS_NOTHING|指標不在停駐的網站上。 因此，請將窗格保持浮動。|
+|CS_DOCK_IMMEDIATELY|指標是在「立即模式」中的停駐網站上（DT_IMMEDIATE 樣式已啟用），因此必須立即固定窗格。|
+|CS_DELAY_DOCK|指標位於停駐在另一個固定窗格，或是主要框架邊緣的 dock 網站上方。|
+|CS_DELAY_DOCK_TO_TAB|指標位於停駐在索引標籤式視窗中的 dock 網站上方。 當滑鼠停留在另一個停駐窗格的標題上方或索引標籤式窗格的索引標籤區域上方時，就會發生這種情況。|
 
-##  <a name="disablerestoredockstate"></a>CDockingManager::D isableRestoreDockState
+##  <a name="disablerestoredockstate"></a>CDockingManager：:D isableRestoreDockState
 
 啟用或停用從登錄中載入停駐版面配置的功能。
 
@@ -642,9 +642,9 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="remarks"></a>備註
 
-當您必須在載入應用程式狀態時保留目前的停駐窗格和工具列配置時, 請呼叫這個方法。
+當您必須在載入應用程式狀態時保留目前的停駐窗格和工具列配置時，請呼叫這個方法。
 
-##  <a name="dockpane"></a>CDockingManager::D ockPane
+##  <a name="dockpane"></a>CDockingManager：:D ockPane
 
 將窗格停駐至另一個窗格或框架視窗。
 
@@ -666,7 +666,7 @@ void DockPane(
 *lpRect*<br/>
 在目的地矩形。
 
-##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf
+##  <a name="dockpaneleftof"></a>CDockingManager：:D ockPaneLeftOf
 
 將窗格停駐於另一個窗格的左邊。
 
@@ -686,11 +686,11 @@ BOOL DockPaneLeftOf(
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功停駐窗格, 則為 TRUE;否則為 FALSE。
+如果已成功停駐窗格，則為 TRUE;否則為 FALSE。
 
-##  <a name="enableautohidepanes"></a>  CDockingManager::EnableAutoHidePanes
+##  <a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes
 
-將窗格停駐到主框架、建立固定窗格, 並將它新增至控制列清單。
+將窗格停駐到主框架、建立固定窗格，並將它新增至控制列清單。
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwStyle);
@@ -703,11 +703,11 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立 dock 窗格, 則為 TRUE;否則為 FALSE。
+如果已成功建立 dock 窗格，則為 TRUE;否則為 FALSE。
 
-##  <a name="enabledocking"></a>CDockingManager:: EnableDocking
+##  <a name="enabledocking"></a>CDockingManager：： EnableDocking
 
-建立停駐窗格, 並讓窗格與主框架銜接。
+建立停駐窗格，並讓窗格與主框架銜接。
 
 ```
 BOOL EnableDocking(DWORD dwStyle);
@@ -720,11 +720,11 @@ BOOL EnableDocking(DWORD dwStyle);
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立 dock 窗格, 則為 TRUE;否則為 FALSE。
+如果已成功建立 dock 窗格，則為 TRUE;否則為 FALSE。
 
 ##  <a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu
 
-顯示 [其他] 按鈕, 在所有銜接窗格的標題上開啟快顯功能表。
+顯示 [其他] 按鈕，在所有銜接窗格的標題上開啟快顯功能表。
 
 ```
 static void EnableDockSiteMenu(BOOL bEnable = TRUE);
@@ -737,21 +737,21 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>備註
 
-[停駐網站] 功能表會顯示下列選項, 以變更窗格的停駐狀態:
+[停駐網站] 功能表會顯示下列選項，以變更窗格的停駐狀態：
 
 - `Floating`-將窗格浮動
 
-- `Docking`-在主要畫面格的頂端停駐窗格的位置上停駐窗格
+- `Docking`-在主要畫面格上停駐窗格所在位置的窗格
 
 - `AutoHide`-將窗格切換為自動隱藏模式
 
 - `Hide`-隱藏窗格
 
-根據預設, 不會顯示此功能表。
+根據預設，不會顯示此功能表。
 
-##  <a name="enablepanecontextmenu"></a>  CDockingManager::EnablePaneContextMenu
+##  <a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneCoNtextMenu
 
-指示程式庫顯示特殊的內容功能表, 其中包含應用程式工具列和停駐窗格的清單, 當使用者按一下滑鼠右鍵, 而且程式庫正在處理 WM_CONTEXTMENU 訊息時。
+當使用者按一下滑鼠右鍵且程式庫正在處理 WM_CONTEXTMENU 訊息時，告訴程式庫顯示一個特殊的內容功能表，其中包含應用程式工具列和停駐窗格的清單。
 
 ```
 void EnablePaneContextMenu(
@@ -764,7 +764,7 @@ void EnablePaneContextMenu(
 ### <a name="parameters"></a>參數
 
 *bEnable*<br/>
-在若為 TRUE, 則程式庫會開啟自動內容功能表的支援;如果為 FALSE, 則程式庫會關閉自動內容功能表的支援。
+在若為 TRUE，則程式庫會開啟自動內容功能表的支援;如果為 FALSE，則程式庫會關閉自動內容功能表的支援。
 
 *uiCustomizeCmd*<br/>
 在功能表中 [**自訂**] 專案的命令識別碼。
@@ -773,7 +773,7 @@ void EnablePaneContextMenu(
 在**自訂**專案的文字。
 
 *bToolbarsOnly*<br/>
-在若為 TRUE, 則功能表只會顯示應用程式工具列的清單;如果為 FALSE, 則程式庫會將應用程式停駐窗格新增至此清單。
+在若為 TRUE，則功能表只會顯示應用程式工具列的清單;如果為 FALSE，則程式庫會將應用程式停駐窗格新增至此清單。
 
 ##  <a name="finddocksite"></a>CDockingManager::FindDockSite
 
@@ -788,10 +788,10 @@ virtual CDockSite* FindDockSite(
 ### <a name="parameters"></a>參數
 
 *dwAlignment*<br/>
-[in]列的對齊方式窗格。
+在橫條圖窗格的對齊方式。
 
 *bOuter*<br/>
-在若為 TRUE, 則抓取控制列清單中標題位置的橫條。 否則, 請在控制列清單中取出結尾位置的橫條。
+在若為 TRUE，則抓取控制列清單中標題位置的橫條。 否則，請在控制列清單中取出結尾位置的橫條。
 
 ### <a name="return-value"></a>傳回值
 
@@ -817,7 +817,7 @@ virtual CBasePane* FindPaneByID(
 
 ### <a name="return-value"></a>傳回值
 
-具有指定控制項識別碼的[CBasePane](../../mfc/reference/cbasepane-class.md)物件, 如果找不到指定的窗格, 則為 Null。
+具有指定控制項識別碼的[CBasePane](../../mfc/reference/cbasepane-class.md)物件，如果找不到指定的窗格，則為 Null。
 
 ### <a name="remarks"></a>備註
 
@@ -836,7 +836,7 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 
 ### <a name="return-value"></a>傳回值
 
-具有目標列窗格識別碼的 [橫條圖] 窗格;如果沒有這類橫條窗格, 則為 Null。
+具有目標列窗格識別碼的 [橫條圖] 窗格;如果沒有這類橫條窗格，則為 Null。
 
 ##  <a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects
 
@@ -848,7 +848,7 @@ virtual void FixupVirtualRects();
 
 ### <a name="remarks"></a>備註
 
-當使用者開始拖曳工具列時, 應用程式會記住其在*虛擬矩形*中的原始位置。 當使用者在其停駐網站間移動工具列時, 工具列可能會移位其他工具列。 其他工具列的原始位置會儲存在對應的虛擬矩形中。
+當使用者開始拖曳工具列時，應用程式會記住其在*虛擬矩形*中的原始位置。 當使用者在其停駐網站間移動工具列時，工具列可能會移位其他工具列。 其他工具列的原始位置會儲存在對應的虛擬矩形中。
 
 ##  <a name="framefrompoint"></a>CDockingManager::FrameFromPoint
 
@@ -864,13 +864,13 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-在指定要檢查的點 (以螢幕座標表示)。
+在指定要檢查的點（以螢幕座標表示）。
 
 *pFrameToExclude*<br/>
 在要排除之框架的指標。
 
 *bFloatMultiOnly*<br/>
-在TRUE 表示排除不是實例的`CMultiPaneFrameWnd`框架;否則為 FALSE。
+在TRUE 表示排除不是 `CMultiPaneFrameWnd`實例的框架;否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
@@ -895,7 +895,7 @@ void GetClientAreaBounds(CRect& rcClient);
 
 包含工作區範圍的矩形。
 
-##  <a name="getdockingmode"></a>CDockingManager:: GetDockingMode
+##  <a name="getdockingmode"></a>CDockingManager：： GetDockingMode
 
 傳回目前的銜接模式。
 
@@ -905,7 +905,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 
 ### <a name="return-value"></a>傳回值
 
-表示目前銜接模式的列舉值。 它可以是下列其中一個值:
+表示目前銜接模式的列舉值。 它可能是下列其中一個值：
 
 - DT_STANDARD
 
@@ -915,7 +915,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 
 ### <a name="remarks"></a>備註
 
-若要設定銜接模式, 請呼叫[CDockingManager:: SetDockingMode](#setdockingmode)。
+若要設定銜接模式，請呼叫[CDockingManager：： SetDockingMode](#setdockingmode)。
 
 ##  <a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd
 
@@ -939,11 +939,11 @@ DWORD GetEnabledAutoHideAlignment() const;
 
 ### <a name="return-value"></a>傳回值
 
-CBRS_ALIGN_ 旗標或 0，如果未啟用自動隱藏窗格的位元組合。 如需詳細資訊, 請參閱[CFrameWnd:: EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)。
+CBRS_ALIGN_ 旗標的位元組合，如果未啟用自動隱藏窗格，則為0。 如需詳細資訊，請參閱[CFrameWnd：： EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)。
 
 ### <a name="remarks"></a>備註
 
-方法會傳回自動隱藏控制條的已啟用對齊。 若要啟用自動隱藏列, 請呼叫[CFrameWndEx:: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes)。
+方法會傳回自動隱藏控制條的已啟用對齊。 若要啟用自動隱藏列，請呼叫[CFrameWndEx：： EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes)。
 
 ##  <a name="getminiframes"></a>CDockingManager::GetMiniFrames
 
@@ -990,16 +990,16 @@ void GetPaneList(
 在TRUE 表示包含處於自動隱藏模式的窗格;否則為 FALSE。
 
 *pRTCFilter*<br/>
-在如果不是 Null, 則傳回的清單只會包含所指定執行時間類別的窗格。
+在如果不是 Null，則傳回的清單只會包含所指定執行時間類別的窗格。
 
 *bIncludeTabs*<br/>
 在TRUE 表示包含定位字元;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果停駐管理員中有任何索引標籤式窗格, 此方法會傳回[CBaseTabbedPane 類別](../../mfc/reference/cbasetabbedpane-class.md)物件的指標, 而且您必須明確地列舉索引標籤。
+如果停駐管理員中有任何索引標籤式窗格，此方法會傳回[CBaseTabbedPane 類別](../../mfc/reference/cbasetabbedpane-class.md)物件的指標，而且您必須明確地列舉索引標籤。
 
-使用*pRTCFilter*來取得特定的窗格類別。 例如, 您可以適當地設定此值來取得工具列。
+使用*pRTCFilter*來取得特定的窗格類別。 例如，您可以適當地設定此值來取得工具列。
 
 ##  <a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager
 
@@ -1035,7 +1035,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 ### <a name="return-value"></a>傳回值
 
-包含目前停駐管理員之智慧停駐參數的類別。 如需詳細資訊, 請參閱[CSmartDockingInfo 類別](../../mfc/reference/csmartdockinginfo-class.md)。
+包含目前停駐管理員之智慧停駐參數的類別。 如需詳細資訊，請參閱[CSmartDockingInfo 類別](../../mfc/reference/csmartdockinginfo-class.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -1057,9 +1057,9 @@ void HideAutoHidePanes(
 *bImmediately*<br/>
 在TRUE 表示立即隱藏窗格;FALSE 表示隱藏具有自動隱藏效果的窗格。
 
-##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite
+##  <a name="insertdocksite"></a>CDockingManager::InsertDockSite
 
-建立停駐窗格, 並將它插入控制列清單中。
+建立停駐窗格，並將它插入控制列清單中。
 
 ```
 BOOL InsertDockSite(
@@ -1081,9 +1081,9 @@ BOOL InsertDockSite(
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立 dock 窗格, 則為 TRUE;否則為 FALSE。
+如果已成功建立 dock 窗格，則為 TRUE;否則為 FALSE。
 
-##  <a name="insertpane"></a>  CDockingManager::InsertPane
+##  <a name="insertpane"></a>CDockingManager::InsertPane
 
 將控制項窗格插入控制列清單中。
 
@@ -1100,18 +1100,18 @@ BOOL InsertPane(
 在控制項窗格的指標。
 
 *pTarget*<br/>
-[in]指向的目標窗格。
+在目標窗格的指標。
 
 *bAfter*<br/>
 在TRUE 表示在目標窗格的位置之後插入窗格;否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果 [控制項] 窗格已成功加入控制列清單中, 則為 TRUE;否則為 FALSE。
+如果 [控制項] 窗格已成功加入控制列清單中，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果控制項窗格已在控制列清單中, 或如果目標窗格不存在於控制列清單中, 則這個方法會傳回 false。
+如果控制項窗格已在控制列清單中，或如果目標窗格不存在於控制列清單中，則這個方法會傳回 false。
 
 ##  <a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu
 
@@ -1123,11 +1123,11 @@ static BOOL IsDockSiteMenu();
 
 ### <a name="return-value"></a>傳回值
 
-如果停駐網站功能表顯示在所有銜接窗格的標題上, 則為 TRUE;否則為 FALSE。
+如果停駐網站功能表顯示在所有銜接窗格的標題上，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-您可以藉由呼叫[CDockingManager:: EnableDockSiteMenu](#enabledocksitemenu)來啟用 [停駐網站] 功能表。
+您可以藉由呼叫[CDockingManager：： EnableDockSiteMenu](#enabledocksitemenu)來啟用 [停駐網站] 功能表。
 
 ##  <a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout
 
@@ -1139,7 +1139,7 @@ BOOL IsInAdjustLayout() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已調整所有窗格的版面配置, 則為 TRUE;否則為 FALSE。
+如果已調整所有窗格的版面配置，則為 TRUE;否則為 FALSE。
 
 ##  <a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode
 
@@ -1151,11 +1151,11 @@ BOOL IsOLEContainerMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果停駐管理員是在 OLE 容器模式中, 則為 TRUE;否則為 FALSE。
+如果停駐管理員是在 OLE 容器模式中，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在 OLE 容器模式中, 所有銜接窗格和應用程式工具列都會隱藏起來。 如果您已將[CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)設定為 TRUE, 則也會在此模式中隱藏窗格。
+在 OLE 容器模式中，所有銜接窗格和應用程式工具列都會隱藏起來。 如果您已將[CDockingManager：： m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)設定為 TRUE，則窗格也會在此模式中隱藏。
 
 ##  <a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite
 
@@ -1170,18 +1170,18 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*此處*<br/>
 在指定的點。
 
 *dwBarAlignment*<br/>
 脫銷指定點接近的邊緣。 可能的值為 CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP 和 CBRS_ALIGN_BOTTOM。
 
 *bOuterEdge*<br/>
-脫銷如果點位於 dock 網站的外部框線附近, 則為 TRUE;否則為 FALSE。
+脫銷如果點位於 dock 網站的外部框線附近，則為 TRUE;否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果點位於 dock 網站附近, 則為 TRUE;否則為 FALSE。
+如果點位於 dock 網站附近，則為 TRUE;否則為 FALSE。
 
 ##  <a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid
 
@@ -1193,9 +1193,9 @@ BOOL IsPrintPreviewValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已設定預覽列印模式, 則為 TRUE;否則為 FALSE。
+如果已設定預覽列印模式，則為 TRUE;否則為 FALSE。
 
-##  <a name="loadstate"></a>  CDockingManager::LoadState
+##  <a name="loadstate"></a>CDockingManager：： LoadState
 
 從登錄載入停駐管理員的狀態。
 
@@ -1215,7 +1215,7 @@ virtual BOOL LoadState(
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功載入停駐管理員狀態, 則為 TRUE;否則為 FALSE。
+如果已成功載入停駐管理員狀態，則為 TRUE;否則為 FALSE。
 
 ##  <a name="lockupdate"></a>CDockingManager::LockUpdate
 
@@ -1227,14 +1227,14 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>參數
 
-*bLock*<br/>
-在如果視窗已鎖定, 則為 TRUE;否則為 FALSE。
+*總匯*<br/>
+在如果視窗已鎖定，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-當視窗已鎖定時, 就無法移動它, 也無法重新繪製。
+當視窗已鎖定時，就無法移動它，也無法重新繪製。
 
-##  <a name="m_bhidedockingbarsincontainermode"></a>  CDockingManager::m_bHideDockingBarsInContainerMode
+##  <a name="m_bhidedockingbarsincontainermode"></a>CDockingManager：： m_bHideDockingBarsInContainerMode
 
 指定停駐管理員是否隱藏 OLE 容器模式中的窗格。
 
@@ -1244,9 +1244,9 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 
 ### <a name="remarks"></a>備註
 
-如果您想要讓所有窗格在應用程式處於 OLE 容器模式時可見, 請將此值設定為 [FALSE]。 根據預設, 此值為 TRUE。
+如果您想要讓所有窗格在應用程式處於 OLE 容器模式時可見，請將此值設定為 [FALSE]。 根據預設，此值為 TRUE。
 
-##  <a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal
+##  <a name="m_dockmodeglobal"></a>CDockingManager：： m_dockModeGlobal
 
 指定全域銜接模式。
 
@@ -1256,9 +1256,9 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 
 ### <a name="remarks"></a>備註
 
-根據預設, 每個停駐窗格都會使用此銜接模式。 如需此欄位可設定之值的詳細資訊, 請參閱[CBasePane:: GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode)。
+根據預設，每個停駐窗格都會使用此銜接模式。 如需此欄位可設定之值的詳細資訊，請參閱[CBasePane：： GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode)。
 
-##  <a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity
+##  <a name="m_ndocksensitivity"></a>CDockingManager：： m_nDockSensitivity
 
 指定停駐敏感度。
 
@@ -1268,11 +1268,11 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 
 ### <a name="remarks"></a>備註
 
-停駐敏感性會定義在架構將其狀態變更為停駐之前, 浮動窗格如何接近停駐窗格、停駐網站或另一個窗格。
+停駐敏感性會定義在架構將其狀態變更為停駐之前，浮動窗格如何接近停駐窗格、停駐網站或另一個窗格。
 
-##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock
+##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager：： m_nTimeOutBeforeDockingBarDock
 
-指定停駐窗格停駐在立即銜接模式之前的時間 (以毫秒為單位)。
+指定停駐窗格停駐在立即銜接模式之前的時間（以毫秒為單位）。
 
 ```
 static UINT m_nTimeOutBeforeDockingBarDock;
@@ -1280,11 +1280,11 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 
 ### <a name="remarks"></a>備註
 
-在停駐窗格之前, 架構會等待指定的時間長度。 這可避免在使用者仍在拖曳時, 不小心停駐窗格到某個位置。
+在停駐窗格之前，架構會等待指定的時間長度。 這可避免在使用者仍在拖曳時，不小心停駐窗格到某個位置。
 
-##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock
+##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager：： m_nTimeOutBeforeToolBarDock
 
-指定工具列停駐于主框架視窗之前的時間 (以毫秒為單位)。
+指定工具列停駐于主框架視窗之前的時間（以毫秒為單位）。
 
 ```
 static UINT m_nTimeOutBeforeToolBarDock;
@@ -1292,11 +1292,11 @@ static UINT m_nTimeOutBeforeToolBarDock;
 
 ### <a name="remarks"></a>備註
 
-在停駐工具列之前, 架構會等待指定的時間長度。 這可防止工具列在使用者仍在拖曳時, 不小心停駐到某個位置。
+在停駐工具列之前，架構會等待指定的時間長度。 這可防止工具列在使用者仍在拖曳時，不小心停駐到某個位置。
 
 ##  <a name="onactivateframe"></a>CDockingManager::OnActivateFrame
 
-當框架視窗設為現用或停用時, 由架構呼叫。
+當框架視窗設為現用或停用時，由架構呼叫。
 
 ```
 virtual void OnActivateFrame(BOOL bActivate);
@@ -1305,7 +1305,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 ### <a name="parameters"></a>參數
 
 *bActivate*<br/>
-在若為 TRUE, 則框架視窗會變為作用中;如果為 FALSE, 則表示框架視窗已停用。
+在若為 TRUE，則框架視窗會變為作用中;如果為 FALSE，則表示框架視窗已停用。
 
 ##  <a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu
 
@@ -1317,7 +1317,7 @@ void OnClosePopupMenu();
 
 ### <a name="remarks"></a>備註
 
-當架構即將關閉目前的主視窗時, 會傳送 WM_DESTROY 訊息。 當物件處理 WM_DESTROY 訊息時, `CMFCPopupMenu`覆寫這個方法, 以處理屬於框架視窗之物件的通知。 `CMFCPopupMenu`
+架構即將關閉目前的主視窗時，會傳送 WM_DESTROY 訊息。 覆寫這個方法，以處理 `CMFCPopupMenu` 物件處理 WM_DESTROY 訊息時，屬於框架視窗 `CMFCPopupMenu` 物件的通知。
 
 ##  <a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame
 
@@ -1334,11 +1334,11 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則為 TRUE;否則為 FALSE。
+如果方法成功，則為 TRUE;否則為 FALSE。
 
 ##  <a name="onpanecontextmenu"></a>CDockingManager::OnPaneCoNtextMenu
 
-在建立具有窗格清單的功能表時, 由架構呼叫。
+在建立具有窗格清單的功能表時，由架構呼叫。
 
 ```
 void OnPaneContextMenu(CPoint point);
@@ -1346,10 +1346,10 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*此處*<br/>
 在指定功能表的位置。
 
-##  <a name="panefrompoint"></a>CDockingManager::P aneFromPoint
+##  <a name="panefrompoint"></a>CDockingManager：:P aneFromPoint
 
 傳回包含指定點的窗格。
 
@@ -1372,38 +1372,38 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
-在指定要檢查的點 (以螢幕座標表示)。
+*此處*<br/>
+在指定要檢查的點（以螢幕座標表示）。
 
 *nSensitivity*<br/>
-在要將每個已檢查窗格的視窗矩形擴大的值。 如果指定的點在此放大的區域中, 則窗格會符合搜尋準則。
+在要將每個已檢查窗格的視窗矩形擴大的值。 如果指定的點在此放大的區域中，則窗格會符合搜尋準則。
 
 *bExactBar*<br/>
 在TRUE 表示忽略*nSensitivity*參數;否則為 FALSE。
 
 *pRTCBarType*<br/>
-在如果不是 Null, 此方法只會搜尋指定類型的窗格。
+在如果不是 Null，此方法只會搜尋指定類型的窗格。
 
 *bCheckVisibility*<br/>
 在TRUE 表示只檢查可見窗格;否則為 FALSE。
 
 *dwAlignment*<br/>
-[out]如果指定點上找到一個窗格，則此參數會包含已最接近指定點窗格。 如需詳細資訊，請參閱＜備註＞一節。
+脫銷如果在指定的點找到窗格，此參數會包含最接近指定點之窗格的側邊。 如需詳細資訊，請參閱＜備註＞一節。
 
 *pBarToIgnore*<br/>
-在如果不是 Null, 此方法會忽略此參數所指定的窗格。
+在如果不是 Null，此方法會忽略此參數所指定的窗格。
 
 ### <a name="return-value"></a>傳回值
 
-包含指定之點的[CBasePane](../../mfc/reference/cbasepane-class.md)衍生物件; 如果找不到任何窗格, 則為 Null。
+包含指定之點的[CBasePane](../../mfc/reference/cbasepane-class.md)衍生物件; 如果找不到任何窗格，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-當函式傳回並找到窗格時, *dwAlignment*會包含指定點的對齊方式。 例如, 如果點最接近窗格頂端, 則*dwAlignment*會設定為 CBRS_ALIGN_TOP。
+當函式傳回並找到窗格時， *dwAlignment*會包含指定點的對齊方式。 例如，如果點最接近窗格頂端，則*dwAlignment*會設定為 CBRS_ALIGN_TOP。
 
-##  <a name="processpanecontextmenucommand"></a>  CDockingManager::ProcessPaneContextMenuCommand
+##  <a name="processpanecontextmenucommand"></a>CDockingManager：:P rocessPaneCoNtextMenuCommand
 
-由架構呼叫來選取或清除核取方塊，針對指定的命令，並重新計算顯示窗格的配置。
+由架構呼叫以選取或清除指定之命令的核取方塊，並重新計算所顯示窗格的版面配置。
 
 ```
 BOOL ProcessPaneContextMenuCommand(
@@ -1422,16 +1422,16 @@ BOOL ProcessPaneContextMenuCommand(
 在命令通知碼。
 
 *pExtra*<br/>
-在Void 的指標, `CCmdUI`如果*nCode*為 CN_UPDATE_COMMAND_UI, 則會轉換至的指標。
+在Void 的指標，如果*nCode* CN_UPDATE_COMMAND_UI，則會轉換到 `CCmdUI` 的指標。
 
 *pHandlerInfo*<br/>
 在Info 結構的指標。 不使用這個參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果*pEXtra*不是 Null 且*nCode*等於 CN_UPDATE_COMMAND_UI, 或如果有具有指定之*nID*的控制列, 則為 TRUE。
+如果*pEXtra*不是 Null，且*nCode*等於 CN_UPDATE_COMMAND_UI，或如果有具有指定之*nID*的控制列，則為 TRUE。
 
-##  <a name="recalclayout"></a>  CDockingManager::RecalcLayout
+##  <a name="recalclayout"></a>CDockingManager：： RecalcLayout
 
 重新計算控制項清單中所顯示控制項的內部配置。
 
@@ -1480,11 +1480,11 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="return-value"></a>傳回值
 
-如果已移除指定的框架, 則為 TRUE;否則為 FALSE。
+如果已移除指定的框架，則為 TRUE;否則為 FALSE。
 
-##  <a name="removepanefromdockmanager"></a>  CDockingManager::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager
 
-取消註冊窗格，並從停駐的管理員在清單中移除。
+取消註冊窗格，並將它從停駐管理員中的清單移除。
 
 ```
 void RemovePaneFromDockManager(
@@ -1501,13 +1501,13 @@ void RemovePaneFromDockManager(
 在要移除之窗格的指標。
 
 *bDestroy*<br/>
-在若為 TRUE, 則會終結已移除的窗格。
+在若為 TRUE，則會終結已移除的窗格。
 
 *bAdjustLayout*<br/>
-在若為 TRUE, 請立即調整銜接配置。
+在若為 TRUE，請立即調整銜接配置。
 
 *bAutoHide*<br/>
-[in]如果為 TRUE，窗格會從自動隱藏列清單中移除。 如果為 FALSE, 則會從一般窗格清單中移除窗格。
+在若為 TRUE，則會從自動隱藏列清單中移除窗格。 如果為 FALSE，則會從一般窗格清單中移除窗格。
 
 *pBarReplacement*<br/>
 在取代已移除窗格之窗格的指標。
@@ -1532,7 +1532,7 @@ BOOL ReplacePane(
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功取代窗格, 則為 TRUE;否則為 FALSE。
+如果已成功取代窗格，則為 TRUE;否則為 FALSE。
 
 ##  <a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder
 
@@ -1542,7 +1542,7 @@ BOOL ReplacePane(
 void ResortMiniFramesForZOrder();
 ```
 
-##  <a name="savestate"></a>CDockingManager:: SaveState
+##  <a name="savestate"></a>CDockingManager：： SaveState
 
 將停駐管理員的狀態儲存至登錄。
 
@@ -1562,13 +1562,13 @@ virtual BOOL SaveState(
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功儲存狀態, 則為 TRUE;否則為 FALSE。
+如果已成功儲存狀態，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-將停駐管理員的狀態儲存至登錄, 包括儲存控制列的狀態、自動隱藏列的狀態, 以及停駐管理員中的迷你框架狀態。
+將停駐管理員的狀態儲存至登錄，包括儲存控制列的狀態、自動隱藏列的狀態，以及停駐管理員中的迷你框架狀態。
 
-##  <a name="sendmessagetominiframes"></a>  CDockingManager::SendMessageToMiniFrames
+##  <a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames
 
 將指定的訊息傳送至所有迷你框架。
 
@@ -1594,7 +1594,7 @@ BOOL SendMessageToMiniFrames(
 
 TRUE 一律為。
 
-##  <a name="serialize"></a>CDockingManager:: 序列化
+##  <a name="serialize"></a>CDockingManager：：序列化
 
 將停駐管理員寫入封存。
 
@@ -1609,9 +1609,9 @@ void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>備註
 
-將停駐管理員寫入封存, 包括決定停駐控制列和滑杆的數目, 以及將控制列、迷你框架、自動隱藏列和 MDI 索引標籤式列寫入封存。
+將停駐管理員寫入封存，包括決定停駐控制列和滑杆的數目，以及將控制列、迷你框架、自動隱藏列和 MDI 索引標籤式列寫入封存。
 
-##  <a name="setautohidezorder"></a>  CDockingManager::SetAutohideZOrder
+##  <a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder
 
 設定控制列和指定窗格的大小、寬度和高度。
 
@@ -1624,7 +1624,7 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 *pAHDockingBar*<br/>
 在可停駐窗格的指標。
 
-##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode
+##  <a name="setdockingmode"></a>CDockingManager::SetDockingMode
 
 設定銜接模式。
 
@@ -1640,21 +1640,21 @@ static void SetDockingMode(
 指定新的銜接模式。 如需詳細資訊，請參閱＜備註＞一節。
 
 *刪除主題*<br/>
-指定要用於智慧停駐標記的主題。 它可以是下列其中一個列舉值:AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+指定要用於智慧停駐標記的主題。 它可以是下列其中一個列舉值： AFX_SDT_DEFAULT、AFX_SDT_VS2005 AFX_SDT_VS2008。
 
 ### <a name="remarks"></a>備註
 
 呼叫此靜態方法以設定停駐模式。
 
-*dockMode*可以是下列其中一個值:
+*dockMode*可以是下列其中一個值：
 
-- DT_STANDARD-標準銜接模式在 Visual Studio .NET 2003 中執行。 拖曳窗格時, 不會拖曳內容。
+- DT_STANDARD 標準銜接模式在 Visual Studio .NET 2003 中執行。 拖曳窗格時，不會拖曳內容。
 
-- DT_IMMEDIATE-在 Microsoft Visio 中執行的立即銜接模式。 窗格是以拖曳內容進行拖放, 但不會顯示任何標記。
+- 在 Microsoft Visio 中執行的 DT_IMMEDIATE 立即銜接模式。 窗格是以拖曳內容進行拖放，但不會顯示任何標記。
 
-- DT_SMART-在 Visual Studio 2005 中執行的智慧型銜接模式。 系統會使用拖曳內容來拖曳窗格, 並顯示顯示窗格可停駐位置的智慧標籤。
+- DT_SMART-在 Visual Studio 2005 中實行的智慧型銜接模式。 系統會使用拖曳內容來拖曳窗格，並顯示顯示窗格可停駐位置的智慧標籤。
 
-##  <a name="setdockstate"></a>  CDockingManager::SetDockState
+##  <a name="setdockstate"></a>CDockingManager::SetDockState
 
 設定控制列、迷你框架和自動隱藏列的停駐狀態。
 
@@ -1675,14 +1675,14 @@ void SetPrintPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果已設定預覽列印模式，則為 TRUEFALSE 否則。
+在如果已設定預覽列印模式，則為 TRUE;否則為 FALSE。
 
 *pState*<br/>
 在預覽狀態的指標。 不使用這個參數。
 
 ##  <a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams
 
-設定參數, 以定義智慧銜接的行為。
+設定參數，以定義智慧銜接的行為。
 
 ```
 static void SetSmartDockingParams(CSmartDockingInfo& params);
@@ -1695,9 +1695,9 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 
 ### <a name="remarks"></a>備註
 
-如果您想要自訂智慧停駐標記的外觀、色彩或形狀, 請呼叫這個方法。
+如果您想要自訂智慧停駐標記的外觀、色彩或形狀，請呼叫這個方法。
 
-若要使用智慧停駐標記的預設尋找, 請將未初始化的[CSmartDockingInfo 類別](../../mfc/reference/csmartdockinginfo-class.md)實例傳遞給*params*。
+若要使用智慧停駐標記的預設尋找，請將未初始化的[CSmartDockingInfo 類別](../../mfc/reference/csmartdockinginfo-class.md)實例傳遞給*params*。
 
 ##  <a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames
 
@@ -1727,11 +1727,11 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 ### <a name="return-value"></a>傳回值
 
-一律為 FALSE。
+永遠為 FALSE。
 
 ##  <a name="startsdocking"></a>CDockingManager::StartSDocking
 
-根據智慧停駐管理員的對齊, 啟動指定之視窗的智慧停駐。
+根據智慧停駐管理員的對齊，啟動指定之視窗的智慧停駐。
 
 ```
 void StartSDocking(CWnd* pDockingWnd);
@@ -1752,7 +1752,7 @@ void StopSDocking();
 
 ##  <a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme
 
-靜態方法, 會傳回用來顯示智慧停駐標記的主題。
+靜態方法，會傳回用來顯示智慧停駐標記的主題。
 
 ```
 static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
@@ -1760,7 +1760,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>傳回值
 
-傳回下列其中一個列舉值:AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+傳回下列其中一個列舉值： AFX_SDT_DEFAULT、AFX_SDT_VS2005 AFX_SDT_VS2008。
 
 ### <a name="remarks"></a>備註
 
@@ -1770,5 +1770,5 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [CFrameWndEx 類別](../../mfc/reference/cframewndex-class.md)<br/>
-[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
 [CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)

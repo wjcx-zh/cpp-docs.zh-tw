@@ -4,11 +4,11 @@ description: 如何在 Visual Studio 中建立、設定、編輯和編譯 Linux 
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416093"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865627"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>建立及設定 Linux CMake 專案
 

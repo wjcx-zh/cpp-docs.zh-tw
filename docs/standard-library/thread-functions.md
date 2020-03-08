@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458506"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876164"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函式
 
@@ -57,7 +57,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="remarks"></a>備註
 
-函式至少會封鎖*Rel_time*所指定時間的呼叫執行緒。 這個函式不會擲回任何例外狀況。
+函式至少會封鎖呼叫的執行緒， *Rel_time*所指定的時間。 這個函式不會擲回任何例外狀況。
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -79,7 +79,7 @@ void sleep_until(const xtime *Abs_time);
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
 交換兩個**thread**物件的狀態。
 
@@ -89,10 +89,10 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左邊的**thread**物件。
 
-*再*\
+*Right*\
 右邊的**thread**物件。
 
 ### <a name="remarks"></a>備註

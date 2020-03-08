@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518422"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865518"
 ---
 # <a name="clistbox-class"></a>CListBox 類別
 
@@ -120,17 +120,17 @@ ms.locfileid: "76518422"
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CListBox：： CListBox](#clistbox)|建構 `CListBox` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|將字串新增至清單方塊。|
 |[CListBox：： CharToItem](#chartoitem)|覆寫以為沒有字串的主控描繪清單方塊提供自訂的 WM_CHAR 處理。|
@@ -342,7 +342,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 指出[COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)結構中所描述的兩個專案的相對位置。 它可以是下列任何一個值：
 
-|{2&gt;值&lt;2}|意義|
+|值|意義|
 |-----------|-------------|
 |-1|專案1會在專案2之前排序。|
 |0|專案1和專案2會排序相同的。|
@@ -375,7 +375,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 指定清單方塊的樣式。 將[清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)的任何組合套用至方塊。
 
-*rect*<br/>
+*各種*<br/>
 指定清單方塊的大小和位置。 可以是 `CRect` 物件或 `RECT` 結構。
 
 *pParentWnd*<br/>
@@ -479,7 +479,7 @@ int Dir(
 *attr*<br/>
 可以是 `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)中所描述之**列舉**值的任何組合，或下列值的任何組合：
 
-|{2&gt;值&lt;2}|意義|
+|值|意義|
 |-----------|-------------|
 |0x0000|檔案可以讀取或寫入。|
 |0x0001|檔案可以讀取，但無法寫入。|
@@ -1537,7 +1537,7 @@ WM_VKEYTOITEM 訊息會在收到 WM_KEYDOWN 訊息時由清單方塊傳送，但
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MFC 範例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303878"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867295"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 類別
 
@@ -33,7 +33,7 @@ DAO 受到 Office 2013 的支援。 DAO 3.6 是最後的版本，被視為已淘
 class CDaoFieldExchange
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-methods"></a>公用方法
 
@@ -108,7 +108,7 @@ DFX 機制執行的某些作業僅適用于其中一個可能的欄位類型。 
 
 `m_nOperation` 的可能值為：
 
-|運算|描述|
+|作業|描述|
 |---------------|-----------------|
 |`AddToParameterList`|建立 SQL 語句的**PARAMETERS**子句。|
 |`AddToSelectList`|建立 SQL 語句的**SELECT**子句。|

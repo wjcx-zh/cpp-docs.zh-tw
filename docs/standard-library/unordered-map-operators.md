@@ -6,13 +6,13 @@ f1_keywords:
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454774"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873954"
 ---
-# <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 運算子
+# <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 運算子
 
 |||||
 |-|-|-|-|
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `unordered_map` 類型的物件。
 
-*再*\
+*right*\
 `unordered_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_maps 不相等, 則為**true** ;如果相等, 則**為 false** 。
+如果 unordered_maps 不相等，則為**true** ;如果相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `unordered_map` 類型的物件。
 
-*再*\
+*right*\
 `unordered_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_maps 相等, 則為**true** ;如果不相等, 則**為 false** 。
+如果 unordered_maps 相等，則為**true** ;如果不相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `unordered_multimap` 類型的物件。
 
-*再*\
+*right*\
 `unordered_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_multimaps 不相等, 則為**true** ;如果相等, 則**為 false** 。
+如果 unordered_multimaps 不相等，則為**true** ;如果相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `unordered_multimap` 類型的物件。
 
-*再*\
+*right*\
 `unordered_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_multimaps 相等, 則為**true** ;如果不相等, 則**為 false** 。
+如果 unordered_multimaps 相等，則為**true** ;如果不相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 

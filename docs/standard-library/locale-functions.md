@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::toupper [C++]
 - std::use_facet [C++]
 ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453560"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856491"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函式
 
@@ -105,7 +105,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的英數字元元素。
 
 *Loc*\
@@ -172,7 +172,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -184,7 +184,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **Alpha**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -237,7 +237,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -249,7 +249,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **cntrl**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -302,7 +302,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -314,7 +314,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：：**數位**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -367,7 +367,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -379,7 +379,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **graph**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -432,7 +432,7 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -444,7 +444,7 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **lower**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -497,7 +497,7 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -509,7 +509,7 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **print**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -561,7 +561,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -573,7 +573,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **punct**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -626,7 +626,7 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -638,7 +638,7 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **space**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -691,7 +691,7 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -703,7 +703,7 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **upper**，`Ch`）。
 
 ### <a name="example"></a>範例
 
@@ -756,7 +756,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要測試的元素。
 
 *Loc*\
@@ -768,7 +768,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [is](../standard-library/ctype-class.md#is)（ **ctype**\< **CharType**>：： **xdigit**，`Ch`）。
 
 十六進位數字會使用以 16 為底數的方式來表示數字，其中是使用數字 0 到 9 再加上不區分大小寫的字母 A 到 F，來表示十進位數字 0 到 15。
 
@@ -823,7 +823,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要轉換為小寫的字元。
 
 *Loc*\
@@ -835,7 +835,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [tolower](../standard-library/ctype-class.md#tolower)( `Ch`)。
 
 ### <a name="example"></a>範例
 
@@ -872,7 +872,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*Ch*\
 要轉換為大寫的字元。
 
 *Loc*\
@@ -884,7 +884,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > （`Loc`）。 [toupper](../standard-library/ctype-class.md#toupper)( `Ch`)。
 
 ### <a name="example"></a>範例
 

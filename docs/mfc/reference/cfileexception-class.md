@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205932"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855268"
 ---
 # <a name="cfileexception-class"></a>CFileException 類別
 
@@ -53,25 +53,25 @@ class CFileException : public CException
 
 |名稱|描述|
 |----------|-----------------|
-|[CFileException::ErrnoToException](#errnotoexception)|傳回造成執行階段錯誤號碼對應的程式碼。|
-|[CFileException::GetErrorMessage](#geterrormessage)|擷取描述例外狀況的訊息。|
+|[CFileException::ErrnoToException](#errnotoexception)|傳回對應于執行時間錯誤號碼的原因程式碼。|
+|[CFileException::GetErrorMessage](#geterrormessage)|抓取描述例外狀況的訊息。|
 |[CFileException::OsErrorToException](#oserrortoexception)|傳回對應至作業系統錯誤碼的原因代碼。|
-|[CFileException::ThrowErrno](#throwerrno)|會擲回執行階段錯誤號碼為基礎的檔案例外狀況。|
-|[CFileException::ThrowOsError](#throwoserror)|作業系統錯誤號碼為基礎的檔案例外狀況會擲回。|
+|[CFileException::ThrowErrno](#throwerrno)|根據執行階段錯誤號碼擲回檔案例外狀況。|
+|[CFileException::ThrowOsError](#throwoserror)|根據作業系統錯誤號碼擲回檔案例外狀況。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CFileException::m_cause](#m_cause)|包含對應的例外狀況原因的可攜式程式碼。|
-|[CFileException::m_lOsError](#m_loserror)|包含相關的作業系統錯誤號碼。|
-|[CFileException::m_strFileName](#m_strfilename)|包含這個例外狀況的檔案名稱。|
+|[CFileException：： m_cause](#m_cause)|包含對應至例外狀況原因的可移植程式碼。|
+|[CFileException：： m_lOsError](#m_loserror)|包含相關的作業系統錯誤號碼。|
+|[CFileException：： m_strFileName](#m_strfilename)|包含這個例外狀況的檔案名。|
 
 ## <a name="remarks"></a>備註
 
-`CFileException`類別包含公用資料成員，保存可移植的原因代碼和操作系統特定錯誤號碼。 類別也會提供靜態成員函式擲回檔案例外狀況和傳回作業系統錯誤和 C 執行階段錯誤的原因代碼。
+`CFileException` 類別包含的公用資料成員會保存可攜的原因程式碼和作業系統特定的錯誤號碼。 類別也提供靜態成員函式，用來擲回檔案例外狀況，以及傳回作業系統錯誤和 C 執行階段錯誤的原因代碼。
 
-`CFileException` 物件的建構與中擲回`CFile`成員函式在衍生類別的成員函式。 您可以存取這些物件的範圍內**攔截**運算式。 針對可攜性，使用只有原因的程式碼來取得例外狀況的原因。 如需例外狀況的詳細資訊，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+`CFileException` 物件會在 `CFile` 成員函式和衍生類別的成員函式中進行結構化和擲回。 您可以在**CATCH**運算式的範圍記憶體取這些物件。 針對可攜性，請只使用原因代碼來取得例外狀況的原因。 如需例外狀況的詳細資訊，請參閱[例外狀況處理（MFC）](../../mfc/exception-handling-in-mfc.md)一文。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -85,9 +85,9 @@ class CFileException : public CException
 
 **標頭：** afx.h
 
-##  <a name="cfileexception"></a>  CFileException::CFileException
+##  <a name="cfileexception"></a>CFileException::CFileException
 
-建構`CFileException`將原因代碼和作業系統的程式碼儲存在物件的物件。
+建立一個 `CFileException` 物件，將原因代碼和作業系統程式碼儲存在物件中。
 
 ```
 CFileException(
@@ -99,24 +99,24 @@ CFileException(
 ### <a name="parameters"></a>參數
 
 *cause*<br/>
-表示例外狀況原因的列舉型別變數。 請參閱[CFileException::m_cause](#m_cause)取得一份可能的值。
+列舉類型變數，指出例外狀況的原因。 如需可能值的清單，請參閱[CFileException：： m_cause](#m_cause) 。
 
 *lOsError*<br/>
-操作系統特定的原因的例外狀況，如果有的話。 *LOsError*參數提供詳細的資訊，比*造成*沒有。
+例外狀況的作業系統特定原因（如果有的話）。 *LOsError*參數提供的資訊會比*造成*的更多。
 
 *lpszArchiveName*<br/>
-包含名稱的字串會指向`CFile`造成例外狀況的物件。
+指向字串，其中包含造成例外狀況之 `CFile` 物件的名稱。
 
 ### <a name="remarks"></a>備註
 
-請勿直接使用這個建構函式，但而不是呼叫全域函式[AfxThrowFileException](exception-processing.md#afxthrowfileexception)。
+請勿直接使用此函式，而是呼叫全域函式[AfxThrowFileException](exception-processing.md#afxthrowfileexception)。
 
 > [!NOTE]
->  變數*lOsError*僅適用於`CFile`和`CStdioFile`物件。 `CMemFile`類別不會處理此錯誤的程式碼。
+>  變數*lOsError*只適用于 `CFile` 和 `CStdioFile` 物件。 `CMemFile` 類別不會處理此錯誤碼。
 
-##  <a name="errnotoexception"></a>  CFileException::ErrnoToException
+##  <a name="errnotoexception"></a>CFileException::ErrnoToException
 
-將給定的執行階段程式庫錯誤值上方以`CFileException`列舉值時發生錯誤。
+將指定的執行時間程式庫錯誤值轉換為 `CFileException` 列舉的錯誤值。
 
 ```
 static int PASCAL ErrnoToException(int nErrno);
@@ -125,23 +125,23 @@ static int PASCAL ErrnoToException(int nErrno);
 ### <a name="parameters"></a>參數
 
 *nErrno*<br/>
-整數錯誤程式碼執行階段 include 檔 ERRNO 中所定義。H.
+執行時間 include 檔 ERRNO 中定義的整數錯誤碼。H.
 
 ### <a name="return-value"></a>傳回值
 
-會對應到給定的執行階段程式庫錯誤值的列舉的值。
+對應至指定執行時間程式庫錯誤值的列舉值。
 
 ### <a name="remarks"></a>備註
 
-請參閱[CFileException::m_cause](#m_cause)取得一份可能列舉值。
+如需可能列舉值的清單，請參閱[CFileException：： m_cause](#m_cause) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCFiles#26](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]
 
-##  <a name="geterrormessage"></a>  CFileException::GetErrorMessage
+##  <a name="geterrormessage"></a>CFileException::GetErrorMessage
 
-擷取描述例外狀況的文字。
+抓取描述例外狀況的文字。
 
 ```
 virtual BOOL GetErrorMessage(
@@ -153,17 +153,17 @@ virtual BOOL GetErrorMessage(
 ### <a name="parameters"></a>參數
 
 *lpszError*<br/>
-[in、 out]收到的錯誤訊息的緩衝區指標。
+[in、out]接收錯誤訊息之緩衝區的指標。
 
 *nMaxError*<br/>
-[in]指定的緩衝區可以保留的字元數目上限。 這包括結束的 null 字元。
+在指定緩衝區可以保存的最大字元數。 這包括終止的 null 字元。
 
-*pnHelpContext*<br/>
-[in、 out]指標設為不帶正負號的整數，會收到說明內容識別碼。 如果`NULL`，會傳回任何識別碼。
+*pnHelpCoNtext*<br/>
+[in、out]接收說明內容識別碼之不帶正負號整數的指標。 如果 `NULL`，則不會傳回任何識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE否則為 FALSE。
+如果方法成功，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -171,11 +171,11 @@ virtual BOOL GetErrorMessage(
 
 ### <a name="example"></a>範例
 
-下列範例會使用`CFileException::GetErrorMessage`。
+下列範例會使用 `CFileException::GetErrorMessage`。
 
 [!code-cpp[NVC_MFCExceptions#22](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]
 
-##  <a name="m_cause"></a>  CFileException::m_cause
+##  <a name="m_cause"></a>CFileException：： m_cause
 
 包含 `CFileException` 列舉類型所定義的值。
 
@@ -185,49 +185,49 @@ int m_cause;
 
 ### <a name="remarks"></a>備註
 
-此資料成員是公用類型的變數**int**。列舉程式及其意義如下：
+此資料成員是**int**類型的公用變數。列舉值和其意義如下：
 
-- `CFileException::none` 0:不發生任何錯誤。
+- `CFileException::none` 0：未發生任何錯誤。
 
-- `CFileException::genericException` 1:發生未指定的錯誤。
+- `CFileException::genericException` 1：發生未指定的錯誤。
 
-- `CFileException::fileNotFound` 2:找不到檔案。
+- `CFileException::fileNotFound` 2：找不到檔案。
 
-- `CFileException::badPath` 3:全部或部分路徑無效。
+- `CFileException::badPath` 3：路徑的全部或部分無效。
 
-- `CFileException::tooManyOpenFiles` 4:已超過允許的開啟檔案數目。
+- `CFileException::tooManyOpenFiles` 4：已超過允許的開啟檔案數目。
 
-- `CFileException::accessDenied` 5:無法存取檔案。
+- `CFileException::accessDenied` 5：無法存取檔案。
 
-- `CFileException::invalidFile` 6:嘗試使用無效的檔案控制代碼。
+- `CFileException::invalidFile` 6：嘗試使用不正確檔案控制代碼。
 
-- `CFileException::removeCurrentDir` 7:無法移除目前工作目錄。
+- `CFileException::removeCurrentDir` 7：無法移除目前的工作目錄。
 
-- `CFileException::directoryFull` 8:沒有更多的目錄項目。
+- `CFileException::directoryFull` 8：沒有其他目錄專案。
 
-- `CFileException::badSeek` 9:嘗試設定檔案指標時發生錯誤。
+- `CFileException::badSeek` 9：嘗試設定檔案指標時發生錯誤。
 
-- `CFileException::hardIO` 10:發生硬體錯誤。
+- `CFileException::hardIO` 10：發生硬體錯誤。
 
-- `CFileException::sharingViolation` 11:共用。未載入 EXE，或共用的區域被鎖定。
+- `CFileException::sharingViolation` 11：共用。未載入 EXE，或共用區域已鎖定。
 
-- `CFileException::lockViolation` 12:嘗試鎖定先前已鎖定的區域。
+- `CFileException::lockViolation` 12：嘗試鎖定已鎖定的區域。
 
-- `CFileException::diskFull` 14:磁碟已滿。
+- `CFileException::diskFull` 14：磁片已滿。
 
-- `CFileException::endOfFile` 15:已達到檔案結尾。
+- `CFileException::endOfFile` 15：已到達檔案結尾。
 
     > [!NOTE]
     >  這些 `CFileException` 原因列舉程式不同於 `CArchiveException` 原因列舉程式。
 
     > [!NOTE]
-    > `CArchiveException::generic` 已被取代。 請改用 `genericException`。 如果**泛型**是用在應用程式和建置以 /clr，產生的語法錯誤不是容易解讀。
+    > `CArchiveException::generic` 已被取代。 請改用 `genericException`。 如果在應用程式中使用**泛型**，並以/clr 建立，則產生的語法錯誤不容易解密。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCFiles#30](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]
 
-##  <a name="m_loserror"></a>  CFileException::m_lOsError
+##  <a name="m_loserror"></a>CFileException：： m_lOsError
 
 包含這個例外狀況的作業系統錯誤碼。
 
@@ -237,19 +237,19 @@ LONG m_lOsError;
 
 ### <a name="remarks"></a>備註
 
-請參閱您作業系統技術手冊，如需錯誤碼的清單。 此資料成員是公用類型的變數的長度。
+如需錯誤碼的清單，請參閱您的作業系統技術手冊。 此資料成員是 LONG 類型的公用變數。
 
-##  <a name="m_strfilename"></a>  CFileException::m_strFileName
+##  <a name="m_strfilename"></a>CFileException：： m_strFileName
 
-包含此例外狀況的檔案名稱。
+包含此例外狀況條件的檔案名。
 
 ```
 CString m_strFileName;
 ```
 
-##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException
+##  <a name="oserrortoexception"></a>CFileException::OsErrorToException
 
-傳回列舉值，對應至給定*lOsError*值。 如果錯誤碼是未知，則此函數會傳回`CFileException::generic`。
+傳回對應至指定之*lOsError*值的枚舉器。 如果錯誤碼不明，則函數會傳回 `CFileException::generic`。
 
 ```
 static int PASCAL OsErrorToException(LONG lOsError);
@@ -258,19 +258,19 @@ static int PASCAL OsErrorToException(LONG lOsError);
 ### <a name="parameters"></a>參數
 
 *lOsError*<br/>
-操作系統特定的錯誤碼。
+作業系統特定的錯誤碼。
 
 ### <a name="return-value"></a>傳回值
 
-會對應到指定的作業系統錯誤值的列舉的值。
+對應至指定作業系統錯誤值的列舉值。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]
 
-##  <a name="throwerrno"></a>  CFileException::ThrowErrno
+##  <a name="throwerrno"></a>CFileException::ThrowErrno
 
-建構`CFileException`物件對應至給定*nErrno*值，則會擲回例外狀況。
+建立對應至給定*nErrno*值的 `CFileException` 物件，然後擲回例外狀況。
 
 ```
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
@@ -279,18 +279,18 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ### <a name="parameters"></a>參數
 
 *nErrno*<br/>
-整數錯誤程式碼執行階段 include 檔 ERRNO 中所定義。H.
+執行時間 include 檔 ERRNO 中定義的整數錯誤碼。H.
 
 *lpszFileName*<br/>
-造成例外狀況，如果有包含的檔案名稱的字串的指標。
+字串的指標，其中包含造成例外狀況之檔案的名稱（如果有的話）。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]
 
-##  <a name="throwoserror"></a>  CFileException::ThrowOsError
+##  <a name="throwoserror"></a>CFileException::ThrowOsError
 
-會擲回`CFileException`對應至給定*lOsError*值。 如果錯誤碼是未知，則函式會擲回的例外狀況編碼為`CFileException::generic`。
+擲回對應至指定*lOsError*值的 `CFileException`。 如果錯誤碼不明，則函式會擲回編碼為 `CFileException::generic`的例外狀況。
 
 ```
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
@@ -299,10 +299,10 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ### <a name="parameters"></a>參數
 
 *lOsError*<br/>
-操作系統特定的錯誤碼。
+作業系統特定的錯誤碼。
 
 *lpszFileName*<br/>
-造成例外狀況，如果有包含的檔案名稱的字串的指標。
+字串的指標，其中包含造成例外狀況之檔案的名稱（如果有的話）。
 
 ### <a name="example"></a>範例
 

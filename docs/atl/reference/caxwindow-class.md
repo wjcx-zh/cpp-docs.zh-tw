@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927863"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864719"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 類別
 
@@ -42,31 +42,31 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|將現有的 ActiveX 控制項附加至`CAxWindow`物件。|
+|[AttachControl](#attachcontrol)|將現有的 ActiveX 控制項附加至 `CAxWindow` 物件。|
 |[CAxWindow](#caxwindow)|建構 `CAxWindow` 物件。|
-|[CreateControl](#createcontrol)|建立 ActiveX 控制項、將它初始化，然後將`CAxWindow`它裝載在視窗中。|
+|[CreateControl](#createcontrol)|建立 ActiveX 控制項、將它初始化，然後將它裝載在 `CAxWindow` 視窗中。|
 |[CreateControlEx](#createcontrolex)|建立 ActiveX 控制項，並從控制項抓取介面指標（或指標）。|
-|[GetWndClassName](#getwndclassname)|靜止抓取`CAxWindow`物件的預先定義類別名稱。|
-|[QueryControl](#querycontrol)|`IUnknown`抓取主控的 ActiveX 控制項的。|
-|[QueryHost](#queryhost)|抓取物件`CAxWindow`的指標。 `IUnknown`|
-|[SetExternalDispatch](#setexternaldispatch)|設定`CAxWindow`物件所使用的外部分派介面。|
-|[SetExternalUIHandler](#setexternaluihandler)|設定`CAxWindow`物件所`IDocHostUIHandler`使用的外部介面。|
+|[GetWndClassName](#getwndclassname)|靜止抓取 `CAxWindow` 物件的預先定義類別名稱。|
+|[QueryControl](#querycontrol)|抓取主控的 ActiveX 控制項的 `IUnknown`。|
+|[QueryHost](#queryhost)|抓取 `CAxWindow` 物件的 `IUnknown` 指標。|
+|[SetExternalDispatch](#setexternaldispatch)|設定 `CAxWindow` 物件所使用的外部分派介面。|
+|[SetExternalUIHandler](#setexternaluihandler)|設定 `CAxWindow` 物件所使用的外部 `IDocHostUIHandler` 介面。|
 
 ### <a name="operators"></a>運算子
 
 |||
 |-|-|
-|[operator =](#operator_eq)|將 HWND 指派給現有`CAxWindow`的物件。|
+|[operator =](#operator_eq)|將 HWND 指派給現有的 `CAxWindow` 物件。|
 
 ## <a name="remarks"></a>備註
 
-這個類別會提供方法來操作裝載 ActiveX 控制項的視窗。 裝載是由 " **AtlAxWin80"** 所提供，它是由`CAxWindow`包裝。
+這個類別會提供方法來操作裝載 ActiveX 控制項的視窗。 裝載是由 " **AtlAxWin80"** 所提供，它是由 `CAxWindow`所包裝。
 
-類別`CAxWindow`會實作為`CAxWindowT`類別的特製化。 此特製化宣告為：
+類別 `CAxWindow` 會實作為 `CAxWindowT` 類別的特製化。 此特製化宣告為：
 
 `typedef CAxWindowT<CWindow> CAxWindow;`
 
-如果您需要變更基類，可以使用`CAxWindowT`並指定新的基類做為樣板引數。
+如果您需要變更基類，可以使用 `CAxWindowT` 並指定新的基類做為樣板引數。
 
 ## <a name="requirements"></a>需求
 
@@ -85,10 +85,10 @@ HRESULT AttachControl(
 ### <a name="parameters"></a>參數
 
 *pControl*<br/>
-在控制項`IUnknown`之的指標。
+在控制項之 `IUnknown` 的指標。
 
 *ppUnkContainer*<br/>
-脫銷`IUnknown` 主機`AxWin` （物件）的指標。
+脫銷主機之 `IUnknown` 的指標（`AxWin` 物件）。
 
 ### <a name="return-value"></a>傳回值
 
@@ -96,11 +96,11 @@ HRESULT AttachControl(
 
 ### <a name="remarks"></a>備註
 
-要附加的控制項物件必須在呼叫`AttachControl`之前正確地初始化。
+在呼叫 `AttachControl`之前，必須正確地初始化所附加的控制項物件。
 
 ##  <a name="caxwindow"></a>CAxWindow::CAxWindow
 
-使用現有的視窗物件控制碼來構造物件。`CAxWindow`
+使用現有的視窗物件控制碼，來構造 `CAxWindow` 物件。
 
 ```
 CAxWindow(HWND hWnd = NULL);
@@ -132,24 +132,24 @@ HRESULT CreateControl(
 *lpszName*<br/>
 要建立控制項之字串的指標。 必須以下列其中一種方式格式化：
 
-- ProgID，例如`"MSCAL.Calendar.7"`
+- ProgID，例如 `"MSCAL.Calendar.7"`
 
-- CLSID，例如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID，例如 `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，例如`"<https://www.microsoft.com>"`
+- URL，例如 `"<https://www.microsoft.com>"`
 
-- 使用中的檔案的參考，例如`"file://\\\Documents\MyDoc.doc"`
+- 活動文檔的參考，例如 `"file://\\\Documents\MyDoc.doc"`
 
-- HTML 片段，例如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML 片段，例如 `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`必須在 HTML 片段之前，使其被指定為 MSHTML 資料流程。 Windows Mobile 平臺僅支援 ProgID 和 CLSID。 Windows Mobile 以外的 Windows CE embedded 平臺，支援 CE IE 支援所有類型，包括 ProgID、CLSID、URL、使用中檔的參考，以及 HTML 片段。
+   > `"MSHTML:"` 必須在 HTML 片段之前，使其被指定為 MSHTML 資料流程。 Windows Mobile 平臺僅支援 ProgID 和 CLSID。 Windows Mobile 以外的 Windows CE embedded 平臺，支援 CE IE 支援所有類型，包括 ProgID、CLSID、URL、使用中檔的參考，以及 HTML 片段。
 
 *pStream*<br/>
-在資料流程的指標，用來初始化控制項的屬性。 可以是 Null。
+在資料流程的指標，用來初始化控制項的屬性。 可以是 NULL。
 
 *ppUnkContainer*<br/>
-脫銷將接收`IUnknown`容器之的指標位址。 可以是 Null。
+脫銷將接收容器 `IUnknown` 之指標的位址。 可以是 NULL。
 
 *dwResID*<br/>
 HTML 資源的資源識別碼。 隨即會使用指定的資源來建立和載入 WebBrowser 控制項。
@@ -170,7 +170,7 @@ HTML 資源的資源識別碼。 隨即會使用指定的資源來建立和載�
 
 ### <a name="example"></a>範例
 
-如需使用`CreateControl`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+如需使用 `CreateControl`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
 
 ##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx
 
@@ -199,33 +199,33 @@ HRESULT CreateControlEx(
 *lpszName*<br/>
 要建立控制項之字串的指標。 必須以下列其中一種方式格式化：
 
-- ProgID，例如`"MSCAL.Calendar.7"`
+- ProgID，例如 `"MSCAL.Calendar.7"`
 
-- CLSID，例如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID，例如 `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，例如`"<https://www.microsoft.com>"`
+- URL，例如 `"<https://www.microsoft.com>"`
 
-- 使用中的檔案的參考，例如`"file://\\\Documents\MyDoc.doc"`
+- 活動文檔的參考，例如 `"file://\\\Documents\MyDoc.doc"`
 
-- HTML 片段，例如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML 片段，例如 `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`必須在 HTML 片段之前，使其被指定為 MSHTML 資料流程。 Windows Mobile 平臺僅支援 ProgID 和 CLSID。 Windows Mobile 以外的 Windows CE embedded 平臺，支援 CE IE 支援所有類型，包括 ProgID、CLSID、URL、使用中檔的參考，以及 HTML 片段。
+   > `"MSHTML:"` 必須在 HTML 片段之前，使其被指定為 MSHTML 資料流程。 Windows Mobile 平臺僅支援 ProgID 和 CLSID。 Windows Mobile 以外的 Windows CE embedded 平臺，支援 CE IE 支援所有類型，包括 ProgID、CLSID、URL、使用中檔的參考，以及 HTML 片段。
 
 *pStream*<br/>
-在資料流程的指標，用來初始化控制項的屬性。 可以是 Null。
+在資料流程的指標，用來初始化控制項的屬性。 可以是 NULL。
 
 *ppUnkContainer*<br/>
-脫銷將接收`IUnknown`容器之的指標位址。 可以是 Null。
+脫銷將接收容器 `IUnknown` 之指標的位址。 可以是 NULL。
 
 *ppUnkControl*<br/>
-脫銷將接收`IUnknown`控制項之的指標位址。 可以是 Null。
+脫銷將接收控制項之 `IUnknown` 的指標位址。 可以是 NULL。
 
 *iidSink*<br/>
-在所包含物件上傳出介面的介面識別碼。 可以是 IID_Null。
+在所包含物件上傳出介面的介面識別碼。 可以 IID_Null。
 
 *punkSink*<br/>
-在接收物件`IUnknown`介面的指標，要連接到*iidSink*所指定之包含物件上的連接點。
+在接收物件之 `IUnknown` 介面的指標，要連接到*iidSink*所指定之包含物件上的連接點。
 
 *dwResID*<br/>
 在HTML 資源的資源識別碼。 隨即會使用指定的資源來建立和載入 WebBrowser 控制項。
@@ -236,13 +236,13 @@ HRESULT CreateControlEx(
 
 ### <a name="remarks"></a>備註
 
-這個方法類似于[CAxWindow：： CreateControl](#createcontrol)，但與該方法不同的`CreateControlEx`是，也可以讓您接收新建立之控制項的介面指標，並設定事件接收以接收控制項所引發的事件。
+這個方法類似于[CAxWindow：： CreateControl](#createcontrol)，但與該方法不同的是，`CreateControlEx` 也可以讓您接收新建立之控制項的介面指標，並設定事件接收以接收控制項所引發的事件。
 
 請參閱[CAxWindow2T：： CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex)以建立、初始化和裝載授權的 ActiveX 控制項。
 
 ### <a name="example"></a>範例
 
-如需使用`CreateControlEx`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+如需使用 `CreateControlEx`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
 
 ##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName
 
@@ -258,7 +258,7 @@ static LPCTSTR GetWndClassName();
 
 ##  <a name="operator_eq"></a>CAxWindow：： operator =
 
-將 HWND 指派給現有`CAxWindow`的物件。
+將 HWND 指派給現有的 `CAxWindow` 物件。
 
 ```
 CAxWindow<TBase>& operator=(HWND hWnd);
@@ -325,11 +325,11 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="remarks"></a>備註
 
-主機的介面可讓您存取由`AxWin`所執行之視窗裝載程式碼的基礎功能。
+主機的介面可讓您存取由 `AxWin`所實作為的視窗裝載程式碼的基礎功能。
 
 ##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch
 
-設定`CAxWindow`物件的外部分派介面。
+設定 `CAxWindow` 物件的外部分派介面。
 
 ```
 HRESULT SetExternalDispatch(IDispatch* pDisp);
@@ -338,7 +338,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="parameters"></a>參數
 
 *pDisp*<br/>
-在`IDispatch`介面的指標。
+在`IDispatch` 介面的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -346,7 +346,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler
 
-設定`CAxWindow`物件的外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)介面。
+設定 `CAxWindow` 物件的外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)介面。
 
 ```
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
@@ -355,7 +355,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ### <a name="parameters"></a>參數
 
 *pUIHandler*<br/>
-在`IDocHostUIHandlerDispatch`介面的指標。
+在`IDocHostUIHandlerDispatch` 介面的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -363,7 +363,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="remarks"></a>備註
 
-查詢主機`IDocHostUIHandlerDispatch`的網站`IDocHostUIHandlerDispatch`以取得介面的控制項會使用外部介面。 WebBrowser 控制項是一個執行此工作的控制項。
+外部 `IDocHostUIHandlerDispatch` 介面是供查詢主機的網站以取得 `IDocHostUIHandlerDispatch` 介面的控制項使用。 WebBrowser 控制項是一個執行此工作的控制項。
 
 ## <a name="see-also"></a>另請參閱
 

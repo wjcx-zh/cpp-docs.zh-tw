@@ -10,11 +10,11 @@ f1_keywords:
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687880"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856389"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedef
 
@@ -44,7 +44,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>備註
 
-此類型是帶正負號整數，描述可儲存與各種資料流定位作業有關之位元組位移的物件。 其表示法至少有 32 值位元。 它不一定大到足以代表資料流內的任意位元組位置。 @No__t_0 的值通常表示有錯誤的位移。
+此類型是帶正負號整數，描述可儲存與各種資料流定位作業有關之位元組位移的物件。 其表示法至少有 32 值位元。 它不一定大到足以代表資料流內的任意位元組位置。 `streamoff(-1)` 的值通常表示有錯誤的位移。
 
 ## <a name="streampos"></a>streampos
 
@@ -127,7 +127,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_ios](../standard-library/basic-ios-class.md)的同義字，專門用於具有預設字元特性之**wchar_t**類型的元素。
+此類型是類別樣板[basic_ios](../standard-library/basic-ios-class.md)的同義字，專門用於具有預設字元特性**wchar_t**類型的元素。
 
 ## <a name="wstreampos"></a>wstreampos
 

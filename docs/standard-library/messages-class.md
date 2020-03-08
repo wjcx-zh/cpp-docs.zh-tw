@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687691"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884017"
 ---
 # <a name="messages-class"></a>messages 類別
 
@@ -44,12 +44,12 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
+*CharType*\
 程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。
 
 這個 facet 基本上會開啟基底類別 messages_base 所定義的訊息目錄，擷取所需的資訊，並關閉目錄。
 
@@ -59,16 +59,16 @@ class messages : public messages_base;
 |-|-|
 |[messages](#messages)|訊息 facet 建構函式。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|用來顯示訊息的字元類型。|
 |[string_type](#string_type)|類型，描述包含 `basic_string` 類型字元的 `CharType` 類型字串。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[close](#close)|關閉訊息目錄。|
 |[do_close](#do_close)|虛擬函式，呼叫以關閉訊息目錄。|
@@ -79,7 +79,7 @@ class messages : public messages_base;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
@@ -93,7 +93,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **CharType** 同義。
+此類型與樣板參數 **CharType** 同義。
 
 ## <a name="close"></a>  messages::close
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval* \
+*_Catval*\
 要關閉的目錄。
 
 ### <a name="remarks"></a>備註
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval* \
+*_Catval*\
 要關閉的目錄。
 
 ### <a name="remarks"></a>備註
 
-Protected 成員函式會關閉訊息目錄 *_Catval*，這必須由先前的[do_open](#do_open)呼叫所開啟。
+Protected 成員函式會關閉訊息目錄 *_Catval*，這必須由先前呼叫[do_open](#do_open)開啟。
 
 *_Catval* 必須是從先前開啟且尚未關閉的目錄取得。
 
@@ -149,25 +149,25 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval* \
+*_Catval*\
 識別值，指定所要搜尋的訊息目錄。
 
-*_ _* @No__t_1
+*_Set*\
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Message* \
+*_Message*\
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault* \
+*_Dfault*\
 失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
-它會在失敗時傳回 *_Dfault*的複本。 否則，會傳回所指定訊息序列的複本。
+它會傳回失敗時的 *_Dfault*複本。 否則，會傳回所指定訊息序列的複本。
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會嘗試從訊息目錄 *_Catval*取得訊息序列。 在此情況下，它可能會使用 *_ _* 、 *_Message*和 *_Dfault* 。
+受保護的成員函式會嘗試從訊息目錄 *_Catval*取得訊息序列。 它可能會利用 *_Set*、 *_Message*和 *_Dfault*來進行這項操作。
 
 ### <a name="example"></a>範例
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname* \
+*_Catname*\
 所要搜尋之目錄的名稱。
 
-*_Loc* \
+*_Loc*\
 要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -219,21 +219,21 @@ string_type get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval* \
+*_Catval*\
 識別值，指定所要搜尋的訊息目錄。
 
-*_ _* @No__t_1
+*_Set*\
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Message* \
+*_Message*\
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault* \
+*_Dfault*\
 失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
-它會在失敗時傳回 *_Dfault*的複本。 否則，會傳回所指定訊息序列的複本。
+它會傳回失敗時的 *_Dfault*複本。 否則，會傳回所指定訊息序列的複本。
 
 ### <a name="remarks"></a>備註
 
@@ -254,15 +254,15 @@ protected: messages(
 
 ### <a name="parameters"></a>參數
 
-*_Refs* \
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
-*_Locname* \
+*_Locname*\
 地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下：
+*_Refs*參數和其重要性的可能值為：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -270,9 +270,9 @@ protected: messages(
 
 - \> 1：未定義這些值。
 
-由於解構函式會受到保護，因此沒有直接的範例。
+無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
+建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基底物件。
 
 ## <a name="open"></a>  messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname* \
+*_Catname*\
 所要搜尋之目錄的名稱。
 
-*_Loc* \
+*_Loc*\
 要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -310,9 +310,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可以儲存訊息序列的複本。
+此類型描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)其物件可以儲存訊息順序的複本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [messages_base 類別](../standard-library/messages-base-class.md)\

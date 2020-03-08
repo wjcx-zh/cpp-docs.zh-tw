@@ -25,13 +25,13 @@ helpviewer_keywords:
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
 ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447036"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874190"
 ---
-# <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 函式
+# <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt; 函式
 
 ||||
 |-|-|-|
@@ -43,7 +43,7 @@ ms.locfileid: "68447036"
 
 ## <a name="is_assignable"></a>  is_assignable
 
-測試是否可以將*From*類型的值指派給類型。
+測試是否可以將*From*類型的值指派*給類型。*
 
 ```cpp
 template <class To, class From>
@@ -52,7 +52,7 @@ struct is_assignable;
 
 ### <a name="parameters"></a>參數
 
-*自*\
+*若要*\
 接收指派的物件類型。
 
 *從*\
@@ -78,7 +78,7 @@ struct is_copy_assignable;
 
 ### <a name="remarks"></a>備註
 
-如果類型*Ty*是具有複製指派運算子的類別, 則類型述詞的實例會保留 true, 否則會保留 false。 相當於 is_assignable\<Ty&, const Ty&>。
+如果類型*Ty*是具有複製指派運算子的類別，則類型述詞的實例會保留 true，否則會保留 false。 相當於 is_assignable\<Ty&, const Ty&>。
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -96,7 +96,7 @@ struct is_copy_constructible;
 
 ### <a name="remarks"></a>備註
 
-如果類型*Ty*是具有複製參數的類別, 則類型述詞的實例為 true, 否則為 false。
+如果類型*Ty*是具有複製參數的類別，則類型述詞的實例為 true，否則為 false。
 
 ### <a name="example"></a>範例
 
@@ -143,12 +143,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果類型*T*是具有預設的構造函式的類別類型, 則類型述詞的實例為 true, 否則為 false。 這相當於述詞 `is_constructible<T>`。 類型*T*必須是完整的類型、 **void**, 或未知系結的陣列。
+如果類型*T*是具有預設的構造函式的類別類型，則類型述詞的實例為 true，否則為 false。 這相當於述詞 `is_constructible<T>`。 類型*T*必須是完整的類型、 **void**，或未知系結的陣列。
 
 ### <a name="example"></a>範例
 
@@ -186,7 +186,7 @@ is_default_constructible<Simple2> == false
 
 ## <a name="is_move_assignable"></a>  is_move_assignable
 
-測試類型是否可以移動指派。
+測試是否可對類型進行移動指派。
 
 ```cpp
 template <class T>
@@ -195,7 +195,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
@@ -204,7 +204,7 @@ struct is_move_assignable;
 
 ## <a name="is_move_constructible"></a>  is_move_constructible
 
-測試類型是否有移動建構函式。
+測試類型是否具有移動建構函式。
 
 ```cpp
 template <class T>
@@ -213,16 +213,16 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T*\
 要評估的類型
 
 ### <a name="remarks"></a>備註
 
-如果可以使用 move 作業來建立類型*T* , 則會評估為 true 的類型述詞。 這個述詞相當於 `is_constructible<T, T&&>`。
+如果可以使用 move 作業來建立類型*T* ，則會評估為 true 的類型述詞。 這個述詞相當於 `is_constructible<T, T&&>`。
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
-測試類型是否有 **nothrow** 移動指派運算子。
+測試類型是否具有 **nothrow** 移動指派運算子。
 
 ```cpp
 template <class Ty>
@@ -236,7 +236,7 @@ struct is_nothrow_move_assignable;
 
 ### <a name="remarks"></a>備註
 
-如果型別*Ty*有 nothrow 的移動指派運算子, 則型別述詞的實例為 true, 否則保留 false。
+如果型別*Ty*有 nothrow 的移動指派運算子，則型別述詞的實例為 true，否則保留 false。
 
 ## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
@@ -273,14 +273,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果類型*T*是具有簡單複製指派運算子的類別, 則類型述詞的實例為 true, 否則為 false。
+如果類型*T*是具有簡單複製指派運算子的類別，則類型述詞的實例為 true，否則為 false。
 
-類別*t*的指派函式若隱含提供, 則為不常用, 類別*t*沒有虛擬函數, 類別*t*沒有虛擬基底, 類別類型的所有非靜態資料成員的類別都有簡單的指派運算子, 以及類別之類型陣列的所有非靜態資料成員的類別, 都具有簡單的指派運算子。
+類別*t*的指派函式如果隱含提供 *，類別 t 不會有任何*虛擬函式、類別*t*沒有虛擬基底、類別類型之所有非靜態資料成員的類別都有簡單的指派運算子，而類別之類型陣列的所有非靜態資料成員的類別都有簡單的指派運算子。
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -298,9 +298,9 @@ struct is_trivially_move_assignable;
 
 ### <a name="remarks"></a>備註
 
-如果類型*Ty*是具有簡單的移動指派運算子的類別, 則類型述詞的實例為 true, 否則為 false。
+如果類型*Ty*是具有簡單的移動指派運算子的類別，則類型述詞的實例為 true，否則為 false。
 
-*Ty*類別的移動指派運算子在下列情況中是很簡單的:
+*Ty*類別的移動指派運算子在下列情況中是很簡單的：
 
 它會隱含地提供
 
@@ -328,9 +328,9 @@ struct is_trivially_move_constructible;
 
 ### <a name="remarks"></a>備註
 
-如果型別*Ty*是具有簡單的移動函式的類別, 則類型述詞的實例為 true, 否則為 false。
+如果型別*Ty*是具有簡單的移動函式的類別，則類型述詞的實例為 true，否則為 false。
 
-如果有下列情況, 類別*Ty*的移動函式就很簡單:
+如果有下列情況，類別*Ty*的移動函式就很簡單：
 
 它是隱含宣告
 

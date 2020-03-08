@@ -109,15 +109,15 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890119"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856484"
 ---
 # <a name="ios_base-class"></a>ios_base 類別
 
-此類別說明未依存於範本參數的輸入和輸出資料流通用的儲存體和成員函式。 （類別樣板[basic_ios](../standard-library/basic-ios-class.md)會描述什麼是通用的，而且相依于範本參數）。
+此類別說明未依存於範本參數的輸入和輸出資料流通用的儲存體和成員函式。 （類別樣板[basic_ios](../standard-library/basic-ios-class.md)描述通用和相依于範本參數）。
 
 Ios_base 類別的物件會儲存格式設定資訊，包括：
 
@@ -133,9 +133,9 @@ Ios_base 類別的物件會儲存格式設定資訊，包括：
 
 - 兩個可延伸的陣列，具有**long**類型和**void**指標的元素。
 
-Ios_base 類別的物件也會將資料流程狀態資訊儲存在型別[`iostate`](#iostate)的物件中，以及回呼堆疊。
+類別的物件 ios_base 也會將資料流程狀態資訊儲存在型別[`iostate`](#iostate)的物件中，以及回呼堆疊。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="constructors"></a>建構函式
 
@@ -143,7 +143,7 @@ Ios_base 類別的物件也會將資料流程狀態資訊儲存在型別[`iostat
 |-|-|
 |[ios_base](#ios_base)|建構 `ios_base` 物件。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -199,19 +199,19 @@ Ios_base 類別的物件也會將資料流程狀態資訊儲存在型別[`iostat
 
 |||
 |-|-|
-|[failure](#failure)|成員類別可做為類別樣板[basic_ios](../standard-library/basic-ios-class.md)[中的](../standard-library/basic-ios-class.md#clear)成員函式所擲回之所有例外狀況的基類（base class）。|
+|[failure](#failure)|成員類別會當做成員函式（在類別樣板中為[clear](../standard-library/basic-ios-class.md#clear) ）所擲回之所有例外狀況的基類（base class）， [basic_ios](../standard-library/basic-ios-class.md)。|
 |[flags](#flags)|設定或傳回目前的旗標設定。|
 |[getloc](#getloc)|傳回儲存的地區設定物件。|
 |[imbue](#imbue)|變更地區設定。|
 |[Init](#init)|在結構化時建立標準 `iostream` 物件。|
 |[iword](#iword)|指派將值儲存為 `iword`。|
-|[precision](#precision)|指定要在浮點數顯示的數字位數。|
+|[有效位數](#precision)|指定要在浮點數顯示的數字位數。|
 |[pword](#pword)|指派將值儲存為 `pword`。|
 |[register_callback](#register_callback)|指定回呼函式。|
 |[setf](#setf)|設定指定的旗標。|
 |[sync_with_stdio](#sync_with_stdio)|確保 `iostream` 和 C 執行時間程式庫作業會依照它們在原始程式碼中出現的順序進行。|
 |[unsetf](#unsetf)|使指定的旗標為關閉。|
-|[width](#width)|設定輸出資料流的長度。|
+|[寬度](#width)|設定輸出資料流的長度。|
 |[xalloc](#xalloc)|指定變數應該是資料流的一部分。|
 
 ### <a name="operators"></a>運算子
@@ -222,7 +222,7 @@ Ios_base 類別的物件也會將資料流程狀態資訊儲存在型別[`iostat
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<ios>
+**標頭：** \<ios >
 
 **命名空間:** std
 
@@ -279,7 +279,7 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="example"></a>範例
 
-如需使用 `event_callback` 的範例，請參閱 [register_call](#register_callback)。
+如需使用 [ 的範例，請參閱 ](#register_callback)register_call`event_callback`。
 
 ## <a name="failure"></a>出
 
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>參數
 
-*fmtfl* \
+*fmtfl*\
 新的 `fmtflags` 設定。
 
 ### <a name="return-value"></a>傳回值
@@ -465,7 +465,7 @@ locale getloc() const;
 
 ### <a name="return-value"></a>傳回值
 
-預存的地區設定物件。
+已儲存的地區設定物件。
 
 ### <a name="example"></a>範例
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>備註
 
-(受保護的) 建構函式不會執行任何動作。 稍後對 `basic_ios::`[init](../standard-library/basic-ios-class.md#init)的呼叫必須先將物件初始化，才能安全地終結。 因此，類別 ios_base 的唯一安全用法是做為類別樣板[basic_ios](../standard-library/basic-ios-class.md)的基類。
+(受保護的) 建構函式不會執行任何動作。 稍後對 `basic_ios::`[init](../standard-library/basic-ios-class.md#init)的呼叫必須先將物件初始化，才能安全地終結。 因此，類別 ios_base 的唯一安全用法，就是類別樣板[basic_ios](../standard-library/basic-ios-class.md)的基類。
 
 ## <a name="iostate"></a>iostate
 
@@ -560,7 +560,7 @@ public:
 
 - `failbit`：記錄從資料流擷取有效欄位時的失敗。
 
-此外，也會 `goodbit` 有用的值，其中未設定任何先前提及的位（`goodbit` 保證為零）。
+此外，也會 `goodbit`有用的值，其中未設定任何先前提及的位（`goodbit` 保證為零）。
 
 ## <a name="iword"></a>iword
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>參數
 
-*idx* \
+*idx*\
 要以 `iword` 形式儲存之值的索引。
 
 ### <a name="remarks"></a>備註
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 `ios_base` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -676,7 +676,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員函式會傳回已儲存的[顯示整數位數](../standard-library/ios-base-class.md)。 第二個成員函式會將 *_Prec*儲存在顯示有效位數中，並傳回其先前儲存的值。
+第一個成員函式會傳回已儲存的[顯示整數位數](../standard-library/ios-base-class.md)。 第二個成員函式會將 *_Prec*儲存在顯示的有效位數中，並傳回其先前儲存的值。
 
 ### <a name="remarks"></a>備註
 
@@ -742,10 +742,10 @@ void register_callback(
 
 ### <a name="parameters"></a>參數
 
-*pfn* \
+*pfn*\
 回呼函式的指標。
 
-*idx* \
+*idx*\
 使用者定義的數字。
 
 ### <a name="remarks"></a>備註
@@ -955,7 +955,7 @@ static bool sync_with_stdio(
 ### <a name="parameters"></a>參數
 
 *_Sync*\
-所有資料流程是否與 `stdio` 同步。
+所有資料流程是否與 `stdio`同步。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1079,8 +1079,8 @@ int main( )
 testing
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\
-[iostream 慣例](../standard-library/iostreams-conventions.md)
+[iostreams 慣例](../standard-library/iostreams-conventions.md)

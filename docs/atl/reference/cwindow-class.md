@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496156"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864722"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 
@@ -177,7 +177,7 @@ class CWindow
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CWindow：： CWindow](#cwindow)|建構函式。|
 
@@ -185,186 +185,186 @@ class CWindow
 
 |名稱|描述|
 |----------|-----------------|
-|[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|排列所有最小化的子視窗。|
-|[CWindow::Attach](#attach)|將視窗附加至`CWindow`物件。|
-|[CWindow::BeginPaint](#beginpaint)|準備視窗以進行繪製。|
-|[CWindow::BringWindowToTop](#bringwindowtotop)|將視窗帶入 Z 順序的頂端。|
-|[CWindow::CenterWindow](#centerwindow)|將視窗與指定的視窗對齊。|
-|[CWindow::ChangeClipboardChain](#changeclipboardchain)|從剪貼簿檢視器的鏈中移除視窗。|
-|[CWindow::CheckDlgButton](#checkdlgbutton)|變更指定按鈕的檢查狀態。|
-|[CWindow::CheckRadioButton](#checkradiobutton)|檢查指定的選項按鈕。|
-|[CWindow::ChildWindowFromPoint](#childwindowfrompoint)|抓取包含指定點的子視窗。|
-|[CWindow::ChildWindowFromPointEx](#childwindowfrompointex)|抓取特定類型的子視窗，其中包含指定的點。|
-|[CWindow::ClientToScreen](#clienttoscreen)|將工作區座標轉換為螢幕座標。|
-|[CWindow::Create](#create)|建立視窗。|
-|[CWindow::CreateCaret](#createcaret)|建立系統插入號的新圖形。|
-|[CWindow::CreateGrayCaret](#creategraycaret)|建立系統插入號的灰色矩形。|
-|[CWindow::CreateSolidCaret](#createsolidcaret)|建立系統插入號的實心矩形。|
-|[CWindow::DeferWindowPos](#deferwindowpos)|針對指定的視窗，更新指定的多視窗位置結構。|
-|[CWindow::DestroyWindow](#destroywindow)|損毀與`CWindow`物件相關聯的視窗。|
-|[CWindow::Detach](#detach)|從`CWindow`物件卸離視窗。|
-|[CWindow::DlgDirList](#dlgdirlist)|填入清單方塊，其中包含符合指定路徑或檔案名的所有檔案名。|
-|[CWindow::DlgDirListComboBox](#dlgdirlistcombobox)|在下拉式方塊中填入符合指定路徑或檔案名的所有檔案名。|
-|[CWindow::DlgDirSelect](#dlgdirselect)|從清單方塊擷取目前的選取範圍。|
-|[CWindow::DlgDirSelectComboBox](#dlgdirselectcombobox)|從下拉式方塊中抓取目前的選取範圍。|
-|[CWindow::DragAcceptFiles](#dragacceptfiles)|註冊視窗是否接受拖曳的檔案。|
-|[CWindow::DrawMenuBar](#drawmenubar)|重新繪製視窗的功能表列。|
-|[CWindow::EnableScrollBar](#enablescrollbar)|啟用或停用捲軸箭號。|
-|[CWindow::EnableWindow](#enablewindow)|啟用或停用輸入。|
-|[CWindow::EndPaint](#endpaint)|標記繪製的結束。|
-|[CWindow::FlashWindow](#flashwindow)|閃爍視窗一次。|
-|[CWindow::GetClientRect](#getclientrect)|抓取工作區的座標。|
-|[CWindow::GetDC](#getdc)|抓取工作區的裝置內容。|
-|[CWindow::GetDCEx](#getdcex)|抓取工作區的裝置內容，並允許裁剪選項。|
-|[CWindow::GetDescendantWindow](#getdescendantwindow)|抓取指定的子系視窗。|
-|[CWindow::GetDlgControl](#getdlgcontrol)|抓取指定之控制項上的介面。|
-|[CWindow::GetDlgCtrlID](#getdlgctrlid)|抓取視窗的識別碼（僅適用于子視窗）。|
-|[CWindow::GetDlgHost](#getdlghost)|抓取 ATL 控制項裝載容器之介面的指標。|
-|[CWindow::GetDlgItem](#getdlgitem)|抓取指定的子視窗。|
-|[CWindow::GetDlgItemInt](#getdlgitemint)|將控制項的文字轉換成整數。|
-|[CWindow::GetDlgItemText](#getdlgitemtext)|抓取控制項的文字。|
-|[CWindow::GetExStyle](#getexstyle)|抓取擴充的視窗樣式。|
-|[CWindow::GetFont](#getfont)|抓取視窗的目前字型。|
-|[CWindow::GetHotKey](#gethotkey)|決定與視窗相關聯的熱鍵。|
-|[CWindow::GetIcon](#geticon)|抓取視窗的大型或小型圖示。|
-|[CWindow::GetLastActivePopup](#getlastactivepopup)|抓取最近使用的快顯視窗。|
-|[CWindow::GetMenu](#getmenu)|抓取視窗的功能表。|
-|[CWindow::GetNextDlgGroupItem](#getnextdlggroupitem)|抓取控制項群組內的上一個或下一個控制項。|
-|[CWindow::GetNextDlgTabItem](#getnextdlgtabitem)|抓取具有 WS_TABSTOP 樣式的上一個或下一個控制項。|
-|[CWindow::GetParent](#getparent)|抓取直接父視窗。|
-|[CWindow::GetScrollInfo](#getscrollinfo)|抓取捲軸的參數。|
-|[CWindow::GetScrollPos](#getscrollpos)|抓取捲動方塊的位置。|
-|[CWindow::GetScrollRange](#getscrollrange)|抓取捲軸範圍。|
-|[CWindow::GetStyle](#getstyle)|抓取視窗樣式。|
-|[CWindow::GetSystemMenu](#getsystemmenu)|建立系統功能表的複本以進行修改。|
-|[CWindow::GetTopLevelParent](#gettoplevelparent)|抓取頂層父系或擁有者視窗。|
-|[CWindow::GetTopLevelWindow](#gettoplevelwindow)|抓取最上層的擁有者視窗。|
-|[CWindow::GetTopWindow](#gettopwindow)|抓取最上層的子視窗。|
-|[CWindow::GetUpdateRect](#getupdaterect)|抓取完全括住更新區域的最小矩形座標。|
-|[CWindow::GetUpdateRgn](#getupdatergn)|抓取更新區域，並將其複製到指定的區域。|
-|[CWindow::GetWindow](#getwindow)|抓取指定的視窗。|
-|[CWindow::GetWindowContextHelpId](#getwindowcontexthelpid)|抓取視窗的說明內容識別碼。|
-|[CWindow::GetWindowDC](#getwindowdc)|抓取整個視窗的裝置內容。|
-|[CWindow::GetWindowLong](#getwindowlong)|在額外的視窗記憶體中，將指定之位移處的32位值抓取。|
-|[CWindow::GetWindowLongPtr](#getwindowlongptr)|抓取指定之視窗的相關資訊，包括在額外的視窗記憶體中指定之位移的值。|
-|[CWindow::GetWindowPlacement](#getwindowplacement)|抓取顯示狀態和位置。|
-|[CWindow::GetWindowProcessID](#getwindowprocessid)|抓取建立視窗之進程的識別碼。|
-|[CWindow::GetWindowRect](#getwindowrect)|抓取視窗的周框維度。|
-|[CWindow::GetWindowRgn](#getwindowrgn)|取得視窗的視窗區域複本。|
-|[CWindow::GetWindowText](#getwindowtext)|擷取視窗的文字。|
-|[CWindow::GetWindowTextLength](#getwindowtextlength)|抓取視窗文字的長度。|
-|[CWindow::GetWindowThreadID](#getwindowthreadid)|抓取建立指定視窗之執行緒的識別碼。|
-|[CWindow::GetWindowWord](#getwindowword)|在額外的視窗記憶體中，于指定的位移處抓取16位值。|
-|[CWindow::GotoDlgCtrl](#gotodlgctrl)|將鍵盤焦點設定為對話方塊中的控制項。|
-|[CWindow::HideCaret](#hidecaret)|隱藏系統插入號。|
-|[CWindow::HiliteMenuItem](#hilitemenuitem)|反白顯示或移除最上層功能表項目中的醒目提示。|
-|[CWindow::Invalidate](#invalidate)|使整個工作區失效。|
-|[CWindow::InvalidateRect](#invalidaterect)|使指定矩形內的工作區失效。|
-|[CWindow::InvalidateRgn](#invalidatergn)|使指定區域內的工作區失效。|
-|[CWindow::IsChild](#ischild)|判斷指定的視窗是否為子視窗。|
-|[CWindow::IsDialogMessage](#isdialogmessage)|判斷訊息是否適用于指定的對話方塊。|
-|[CWindow::IsDlgButtonChecked](#isdlgbuttonchecked)|決定按鈕的檢查狀態。|
-|[CWindow::IsIconic](#isiconic)|判斷視窗是否最小化。|
-|[CWindow::IsParentDialog](#isparentdialog)|決定控制項的父視窗是否為交談視窗。|
-|[CWindow::IsWindow](#iswindow)|判斷指定的視窗控制碼是否識別現有的視窗。|
-|[CWindow::IsWindowEnabled](#iswindowenabled)|判斷視窗是否已啟用輸入。|
-|[CWindow::IsWindowUnicode](#iswindowunicode)|判斷指定的視窗是否為原生 Unicode 視窗。|
-|[CWindow::IsWindowVisible](#iswindowvisible)|決定視窗的可見度狀態。|
+|[CWindow：： ArrangeIconicWindows](#arrangeiconicwindows)|排列所有最小化的子視窗。|
+|[CWindow：： Attach](#attach)|將視窗附加至 `CWindow` 物件。|
+|[CWindow：： BeginPaint](#beginpaint)|準備視窗以進行繪製。|
+|[CWindow：： BringWindowToTop](#bringwindowtotop)|將視窗帶入 Z 順序的頂端。|
+|[CWindow：： CenterWindow](#centerwindow)|將視窗與指定的視窗對齊。|
+|[CWindow：： ChangeClipboardChain](#changeclipboardchain)|從剪貼簿檢視器的鏈中移除視窗。|
+|[CWindow：： CheckDlgButton](#checkdlgbutton)|變更指定按鈕的檢查狀態。|
+|[CWindow：： CheckRadioButton](#checkradiobutton)|檢查指定的選項按鈕。|
+|[CWindow：： ChildWindowFromPoint](#childwindowfrompoint)|抓取包含指定點的子視窗。|
+|[CWindow：： ChildWindowFromPointEx](#childwindowfrompointex)|抓取特定類型的子視窗，其中包含指定的點。|
+|[CWindow：： ClientToScreen](#clienttoscreen)|將工作區座標轉換為螢幕座標。|
+|[CWindow：： Create](#create)|建立視窗。|
+|[CWindow：： CreateCaret](#createcaret)|建立系統插入號的新圖形。|
+|[CWindow：： CreateGrayCaret](#creategraycaret)|建立系統插入號的灰色矩形。|
+|[CWindow：： CreateSolidCaret](#createsolidcaret)|建立系統插入號的實心矩形。|
+|[CWindow：:D eferWindowPos](#deferwindowpos)|針對指定的視窗，更新指定的多視窗位置結構。|
+|[CWindow：:D estroyWindow](#destroywindow)|損毀與 `CWindow` 物件相關聯的視窗。|
+|[CWindow：:D etach](#detach)|從 `CWindow` 物件卸離視窗。|
+|[CWindow：:D lgDirList](#dlgdirlist)|填入清單方塊，其中包含符合指定路徑或檔案名的所有檔案名。|
+|[CWindow：:D lgDirListComboBox](#dlgdirlistcombobox)|在下拉式方塊中填入符合指定路徑或檔案名的所有檔案名。|
+|[CWindow：:D lgDirSelect](#dlgdirselect)|從清單方塊擷取目前的選取範圍。|
+|[CWindow：:D lgDirSelectComboBox](#dlgdirselectcombobox)|從下拉式方塊中抓取目前的選取範圍。|
+|[CWindow：:D ragAcceptFiles](#dragacceptfiles)|註冊視窗是否接受拖曳的檔案。|
+|[CWindow：:D rawMenuBar](#drawmenubar)|重新繪製視窗的功能表列。|
+|[CWindow：： EnableScrollBar](#enablescrollbar)|啟用或停用捲軸箭號。|
+|[CWindow：： EnableWindow](#enablewindow)|啟用或停用輸入。|
+|[CWindow：： EndPaint](#endpaint)|標記繪製的結束。|
+|[CWindow：： FlashWindow](#flashwindow)|閃爍視窗一次。|
+|[CWindow：： GetClientRect](#getclientrect)|抓取工作區的座標。|
+|[CWindow：： GetDC](#getdc)|抓取工作區的裝置內容。|
+|[CWindow：： GetDCEx](#getdcex)|抓取工作區的裝置內容，並允許裁剪選項。|
+|[CWindow：： GetDescendantWindow](#getdescendantwindow)|抓取指定的子系視窗。|
+|[CWindow：： GetDlgControl](#getdlgcontrol)|抓取指定之控制項上的介面。|
+|[CWindow：： GetDlgCtrlID](#getdlgctrlid)|抓取視窗的識別碼（僅適用于子視窗）。|
+|[CWindow：： GetDlgHost](#getdlghost)|抓取 ATL 控制項裝載容器之介面的指標。|
+|[CWindow：： GetDlgItem](#getdlgitem)|抓取指定的子視窗。|
+|[CWindow：： GetDlgItemInt](#getdlgitemint)|將控制項的文字轉換成整數。|
+|[CWindow：： GetDlgItemText](#getdlgitemtext)|抓取控制項的文字。|
+|[CWindow：： GetExStyle](#getexstyle)|抓取擴充的視窗樣式。|
+|[CWindow：： Ivsfontandcolorstorage.getfont](#getfont)|抓取視窗的目前字型。|
+|[CWindow：： GetHotKey](#gethotkey)|決定與視窗相關聯的熱鍵。|
+|[CWindow：： GetIcon](#geticon)|抓取視窗的大型或小型圖示。|
+|[CWindow：： GetLastActivePopup](#getlastactivepopup)|抓取最近使用的快顯視窗。|
+|[CWindow：： GetMenu](#getmenu)|抓取視窗的功能表。|
+|[CWindow：： GetNextDlgGroupItem](#getnextdlggroupitem)|抓取控制項群組內的上一個或下一個控制項。|
+|[CWindow：： GetNextDlgTabItem](#getnextdlgtabitem)|抓取具有 WS_TABSTOP 樣式的上一個或下一個控制項。|
+|[CWindow：： GetParent](#getparent)|抓取直接父視窗。|
+|[CWindow：： GetScrollInfo](#getscrollinfo)|抓取捲軸的參數。|
+|[CWindow：： GetScrollPos](#getscrollpos)|抓取捲動方塊的位置。|
+|[CWindow：： GetScrollRange](#getscrollrange)|抓取捲軸範圍。|
+|[CWindow：： GetStyle](#getstyle)|抓取視窗樣式。|
+|[CWindow：： GetSystemMenu](#getsystemmenu)|建立系統功能表的複本以進行修改。|
+|[CWindow：： GetTopLevelParent](#gettoplevelparent)|抓取頂層父系或擁有者視窗。|
+|[CWindow：： GetTopLevelWindow](#gettoplevelwindow)|抓取最上層的擁有者視窗。|
+|[CWindow：： GetTopWindow](#gettopwindow)|抓取最上層的子視窗。|
+|[CWindow：： GetUpdateRect](#getupdaterect)|抓取完全括住更新區域的最小矩形座標。|
+|[CWindow：： GetUpdateRgn](#getupdatergn)|抓取更新區域，並將其複製到指定的區域。|
+|[CWindow：： GetWindow](#getwindow)|抓取指定的視窗。|
+|[CWindow：： GetWindowCoNtextHelpId](#getwindowcontexthelpid)|抓取視窗的說明內容識別碼。|
+|[CWindow：： GetWindowDC](#getwindowdc)|抓取整個視窗的裝置內容。|
+|[CWindow：： GetWindowLong](#getwindowlong)|在額外的視窗記憶體中，將指定之位移處的32位值抓取。|
+|[CWindow：： GetWindowLongPtr](#getwindowlongptr)|抓取指定之視窗的相關資訊，包括在額外的視窗記憶體中指定之位移的值。|
+|[CWindow：： GetWindowPlacement](#getwindowplacement)|抓取顯示狀態和位置。|
+|[CWindow：： GetWindowProcessID](#getwindowprocessid)|抓取建立視窗之進程的識別碼。|
+|[CWindow：： GetWindowRect](#getwindowrect)|抓取視窗的周框維度。|
+|[CWindow：： GetWindowRgn](#getwindowrgn)|取得視窗的視窗區域複本。|
+|[CWindow：： GetWindowText](#getwindowtext)|擷取視窗的文字。|
+|[CWindow：： GetWindowTextLength](#getwindowtextlength)|抓取視窗文字的長度。|
+|[CWindow：： GetWindowThreadID](#getwindowthreadid)|抓取建立指定視窗之執行緒的識別碼。|
+|[CWindow：： GetWindowWord](#getwindowword)|在額外的視窗記憶體中，于指定的位移處抓取16位值。|
+|[CWindow：： GotoDlgCtrl](#gotodlgctrl)|將鍵盤焦點設定為對話方塊中的控制項。|
+|[CWindow：： HideCaret](#hidecaret)|隱藏系統插入號。|
+|[CWindow：： HiliteMenuItem](#hilitemenuitem)|反白顯示或移除最上層功能表項目中的醒目提示。|
+|[CWindow：：失效](#invalidate)|使整個工作區失效。|
+|[CWindow：： InvalidateRect](#invalidaterect)|使指定矩形內的工作區失效。|
+|[CWindow：： InvalidateRgn](#invalidatergn)|使指定區域內的工作區失效。|
+|[CWindow：： IsChild](#ischild)|判斷指定的視窗是否為子視窗。|
+|[CWindow：： IsDialogMessage](#isdialogmessage)|判斷訊息是否適用于指定的對話方塊。|
+|[CWindow：： IsDlgButtonChecked](#isdlgbuttonchecked)|決定按鈕的檢查狀態。|
+|[CWindow：： IsIconic](#isiconic)|判斷視窗是否最小化。|
+|[CWindow：： IsParentDialog](#isparentdialog)|決定控制項的父視窗是否為交談視窗。|
+|[CWindow：： IsWindow](#iswindow)|判斷指定的視窗控制碼是否識別現有的視窗。|
+|[CWindow：： IsWindowEnabled](#iswindowenabled)|判斷視窗是否已啟用輸入。|
+|[CWindow：： IsWindowUnicode](#iswindowunicode)|判斷指定的視窗是否為原生 Unicode 視窗。|
+|[CWindow：： IsWindowVisible](#iswindowvisible)|決定視窗的可見度狀態。|
 |[CWindow：： IsZoomed](#iszoomed)|判斷視窗是否最大化。|
-|[CWindow::KillTimer](#killtimer)|終結計時器事件。|
-|[CWindow::LockWindowUpdate](#lockwindowupdate)|停用或啟用視窗中的繪圖。|
-|[CWindow::MapWindowPoints](#mapwindowpoints)|將一組點從視窗的座標空間轉換成另一個視窗的座標空間。|
-|[CWindow::MessageBox](#messagebox)|顯示訊息方塊。|
-|[CWindow::ModifyStyle](#modifystyle)|修改視窗樣式。|
-|[CWindow::ModifyStyleEx](#modifystyleex)|修改擴充的視窗樣式。|
-|[CWindow::MoveWindow](#movewindow)|變更視窗的大小和位置。|
-|[CWindow::NextDlgCtrl](#nextdlgctrl)|將鍵盤焦點設定為對話方塊中的下一個控制項。|
-|[CWindow::OpenClipboard](#openclipboard)|開啟剪貼簿。|
-|[CWindow::PostMessage](#postmessage)|將訊息放在與建立視窗的執行緒相關聯的訊息佇列中。 傳回，而不等候執行緒訊息。|
-|[CWindow::PrevDlgCtrl](#prevdlgctrl)|將鍵盤焦點設定為對話方塊中的上一個控制項。|
-|[CWindow::Print](#print)|要求在指定的裝置內容中繪製視窗。|
-|[CWindow::PrintClient](#printclient)|要求在指定的裝置內容中繪製視窗的工作區。|
-|[CWindow::RedrawWindow](#redrawwindow)|更新工作區中的指定矩形或區域。|
-|[CWindow::ReleaseDC](#releasedc)|釋放裝置內容。|
-|[CWindow::ResizeClient](#resizeclient)|調整視窗大小。|
-|[CWindow::ScreenToClient](#screentoclient)|將螢幕座標轉換為工作區座標。|
-|[CWindow::ScrollWindow](#scrollwindow)|滾動指定的工作區。|
-|[CWindow::ScrollWindowEx](#scrollwindowex)|使用其他功能來滾動指定的工作區。|
-|[CWindow::SendDlgItemMessage](#senddlgitemmessage)|將訊息傳送至控制項。|
-|[CWindow::SendMessage](#sendmessage)|將訊息傳送至視窗，而且在視窗程式處理訊息之前不會傳回。|
-|[CWindow::SendMessageToDescendants](#sendmessagetodescendants)|將訊息傳送至指定的子系視窗。|
-|[CWindow::SendNotifyMessage](#sendnotifymessage)|將訊息傳送至視窗。 如果視窗是由呼叫執行緒所建立，則`SendNotifyMessage`在視窗程式處理訊息之前，不會傳回。 否則，它會立即傳回。|
-|[CWindow::SetActiveWindow](#setactivewindow)|啟用視窗。|
-|[CWindow::SetCapture](#setcapture)|將所有後續的滑鼠輸入傳送至視窗。|
-|[CWindow::SetClipboardViewer](#setclipboardviewer)|將視窗加入至剪貼簿檢視器鏈。|
-|[CWindow::SetDlgCtrlID](#setdlgctrlid)|變更視窗的識別碼。|
-|[CWindow::SetDlgItemInt](#setdlgitemint)|將控制項的文字變更為整數值的字串表示。|
-|[CWindow::SetDlgItemText](#setdlgitemtext)|變更控制項的文字。|
-|[CWindow::SetFocus](#setfocus)|將輸入焦點設定為視窗。|
-|[CWindow::SetFont](#setfont)|變更視窗的目前字型。|
-|[CWindow::SetHotKey](#sethotkey)|使快速鍵與視窗產生關聯。|
-|[CWindow::SetIcon](#seticon)|變更視窗的大型或小型圖示。|
-|[CWindow::SetMenu](#setmenu)|變更視窗的目前功能表。|
-|[CWindow::SetParent](#setparent)|變更父視窗。|
-|[CWindow::SetRedraw](#setredraw)|設定或清除重繪旗標。|
-|[CWindow::SetScrollInfo](#setscrollinfo)|設定捲軸的參數。|
-|[CWindow::SetScrollPos](#setscrollpos)|變更捲動方塊的位置。|
-|[CWindow::SetScrollRange](#setscrollrange)|變更捲軸範圍。|
-|[CWindow::SetTimer](#settimer)|建立計時器事件。|
-|[CWindow::SetWindowContextHelpId](#setwindowcontexthelpid)|設定視窗的說明內容識別碼。|
-|[CWindow::SetWindowLong](#setwindowlong)|在額外的視窗記憶體中，將指定之位移處的32位值設定為。|
-|[CWindow::SetWindowLongPtr](#setwindowlongptr)|變更指定之視窗的屬性，也會在額外的視窗記憶體中，于指定的位移設定一個值。|
-|[CWindow::SetWindowPlacement](#setwindowplacement)|設定顯示狀態和位置。|
-|[CWindow::SetWindowPos](#setwindowpos)|設定大小、位置和迭置順序。|
-|[CWindow::SetWindowRgn](#setwindowrgn)|設定視窗的視窗區域。|
-|[CWindow::SetWindowText](#setwindowtext)|變更視窗的文字。|
-|[CWindow::SetWindowWord](#setwindowword)|在額外的視窗記憶體中，將指定之位移處的16位值設定為。|
-|[CWindow::ShowCaret](#showcaret)|顯示系統插入號。|
-|[CWindow::ShowOwnedPopups](#showownedpopups)|顯示或隱藏視窗所擁有的快顯視窗。|
-|[CWindow::ShowScrollBar](#showscrollbar)|顯示或隱藏捲軸。|
-|[CWindow::ShowWindow](#showwindow)|設定視窗的顯示狀態。|
-|[CWindow::ShowWindowAsync](#showwindowasync)|設定不同執行緒所建立之視窗的顯示狀態。|
-|[CWindow::UpdateWindow](#updatewindow)|更新工作區。|
-|[CWindow::ValidateRect](#validaterect)|驗證指定矩形內的工作區。|
-|[CWindow::ValidateRgn](#validatergn)|驗證指定區域內的工作區。|
-|[CWindow::WinHelp](#winhelp)|啟動 Windows 說明。|
+|[CWindow：： KillTimer](#killtimer)|終結計時器事件。|
+|[CWindow：： LockWindowUpdate](#lockwindowupdate)|停用或啟用視窗中的繪圖。|
+|[CWindow：： MapWindowPoints](#mapwindowpoints)|將一組點從視窗的座標空間轉換成另一個視窗的座標空間。|
+|[CWindow：： MessageBox](#messagebox)|顯示訊息方塊。|
+|[CWindow：： ModifyStyle](#modifystyle)|修改視窗樣式。|
+|[CWindow：： ModifyStyleEx](#modifystyleex)|修改擴充的視窗樣式。|
+|[CWindow：： MoveWindow](#movewindow)|變更視窗的大小和位置。|
+|[CWindow：： NextDlgCtrl](#nextdlgctrl)|將鍵盤焦點設定為對話方塊中的下一個控制項。|
+|[CWindow：： OpenClipboard](#openclipboard)|開啟剪貼簿。|
+|[CWindow：:P ostMessage](#postmessage)|將訊息放在與建立視窗的執行緒相關聯的訊息佇列中。 傳回，而不等候執行緒訊息。|
+|[CWindow：:P revDlgCtrl](#prevdlgctrl)|將鍵盤焦點設定為對話方塊中的上一個控制項。|
+|[CWindow：:P rint](#print)|要求在指定的裝置內容中繪製視窗。|
+|[CWindow：:P rintClient](#printclient)|要求在指定的裝置內容中繪製視窗的工作區。|
+|[CWindow：： RedrawWindow](#redrawwindow)|更新工作區中的指定矩形或區域。|
+|[CWindow：： ReleaseDC](#releasedc)|釋放裝置內容。|
+|[CWindow：： ResizeClient](#resizeclient)|調整視窗大小。|
+|[CWindow：： ScreenToClient](#screentoclient)|將螢幕座標轉換為工作區座標。|
+|[CWindow：： ScrollWindow](#scrollwindow)|滾動指定的工作區。|
+|[CWindow：： ScrollWindowEx](#scrollwindowex)|使用其他功能來滾動指定的工作區。|
+|[CWindow：： SendDlgItemMessage](#senddlgitemmessage)|將訊息傳送至控制項。|
+|[CWindow：： SendMessage](#sendmessage)|將訊息傳送至視窗，而且在視窗程式處理訊息之前不會傳回。|
+|[CWindow：： SendMessageToDescendants](#sendmessagetodescendants)|將訊息傳送至指定的子系視窗。|
+|[CWindow：： SendNotifyMessage](#sendnotifymessage)|將訊息傳送至視窗。 如果視窗是由呼叫執行緒所建立，則必須等到視窗程式處理訊息之後，才會傳回 `SendNotifyMessage`。 否則，它會立即傳回。|
+|[CWindow：： SetActiveWindow](#setactivewindow)|啟用視窗。|
+|[CWindow：： SetCapture](#setcapture)|將所有後續的滑鼠輸入傳送至視窗。|
+|[CWindow：： SetClipboardViewer](#setclipboardviewer)|將視窗加入至剪貼簿檢視器鏈。|
+|[CWindow：： SetDlgCtrlID](#setdlgctrlid)|變更視窗的識別碼。|
+|[CWindow：： SetDlgItemInt](#setdlgitemint)|將控制項的文字變更為整數值的字串表示。|
+|[CWindow：： SetDlgItemText](#setdlgitemtext)|變更控制項的文字。|
+|[CWindow：： SetFocus](#setfocus)|將輸入焦點設定為視窗。|
+|[CWindow：： SetFont](#setfont)|變更視窗的目前字型。|
+|[CWindow：： SetHotKey](#sethotkey)|使快速鍵與視窗產生關聯。|
+|[CWindow：： SetIcon](#seticon)|變更視窗的大型或小型圖示。|
+|[CWindow：： SetMenu](#setmenu)|變更視窗的目前功能表。|
+|[CWindow：： SetParent](#setparent)|變更父視窗。|
+|[CWindow：： SetRedraw](#setredraw)|設定或清除重繪旗標。|
+|[CWindow：： SetScrollInfo](#setscrollinfo)|設定捲軸的參數。|
+|[CWindow：： SetScrollPos](#setscrollpos)|變更捲動方塊的位置。|
+|[CWindow：： SetScrollRange](#setscrollrange)|變更捲軸範圍。|
+|[CWindow：： SetTimer](#settimer)|建立計時器事件。|
+|[CWindow：： SetWindowCoNtextHelpId](#setwindowcontexthelpid)|設定視窗的說明內容識別碼。|
+|[CWindow：： SetWindowLong](#setwindowlong)|在額外的視窗記憶體中，將指定之位移處的32位值設定為。|
+|[CWindow：： SetWindowLongPtr](#setwindowlongptr)|變更指定之視窗的屬性，也會在額外的視窗記憶體中，于指定的位移設定一個值。|
+|[CWindow：： SetWindowPlacement](#setwindowplacement)|設定顯示狀態和位置。|
+|[CWindow：： SetWindowPos](#setwindowpos)|設定大小、位置和迭置順序。|
+|[CWindow：： SetWindowRgn](#setwindowrgn)|設定視窗的視窗區域。|
+|[CWindow：： SetWindowText](#setwindowtext)|變更視窗的文字。|
+|[CWindow：： SetWindowWord](#setwindowword)|在額外的視窗記憶體中，將指定之位移處的16位值設定為。|
+|[CWindow：： ShowCaret](#showcaret)|顯示系統插入號。|
+|[CWindow：： ShowOwnedPopups](#showownedpopups)|顯示或隱藏視窗所擁有的快顯視窗。|
+|[CWindow：： ShowScrollBar](#showscrollbar)|顯示或隱藏捲軸。|
+|[CWindow：： ShowWindow](#showwindow)|設定視窗的顯示狀態。|
+|[CWindow：： ShowWindowAsync](#showwindowasync)|設定不同執行緒所建立之視窗的顯示狀態。|
+|[CWindow：： UpdateWindow](#updatewindow)|更新工作區。|
+|[CWindow：： ValidateRect](#validaterect)|驗證指定矩形內的工作區。|
+|[CWindow：： ValidateRgn](#validatergn)|驗證指定區域內的工作區。|
+|[CWindow：： WinHelp](#winhelp)|啟動 Windows 說明。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CWindow：： operator HWND](#operator_hwnd)|`CWindow`將物件轉換為 HWND。|
-|[CWindow：： operator =](#operator_eq)|將 HWND 指派給`CWindow`物件。|
+|[CWindow：： operator HWND](#operator_hwnd)|將 `CWindow` 物件轉換成 HWND。|
+|[CWindow：： operator =](#operator_eq)|將 HWND 指派給 `CWindow` 物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CWindow::m_hWnd](#m_hwnd)|與`CWindow`物件相關聯之視窗的控制碼。|
-|[CWindow::rcDefault](#rcdefault)|包含預設視窗維度。|
+|[CWindow：： m_hWnd](#m_hwnd)|與 `CWindow` 物件相關聯的視窗控制碼。|
+|[CWindow：： rcDefault](#rcdefault)|包含預設視窗維度。|
 
 ## <a name="remarks"></a>備註
 
-`CWindow`提供在 ATL 中操作視窗的基本功能。 許多`CWindow`方法都只會包裝其中一個 WIN32 API 函式。 例如，比較`CWindow::ShowWindow`和`ShowWindow`的原型：
+`CWindow` 提供在 ATL 中操作視窗的基本功能。 許多 `CWindow` 方法只會包裝其中一個 WIN32 API 函式。 例如，比較 `CWindow::ShowWindow` 和 `ShowWindow`的原型：
 
 |CWindow 方法|Win32 函式|
 |--------------------|--------------------|
-|**BOOL ShowWindow( int** `nCmdShow` **);**|**BOOL ShowWindow( HWND** `hWnd` **, int** `nCmdShow` **);**|
+|**BOOL ShowWindow （int** `nCmdShow` **）;**|**BOOL ShowWindow （HWND** `hWnd` **，int** `nCmdShow` **）;**|
 
-`CWindow::ShowWindow`藉由傳遞`CWindow::m_hWnd`作為`ShowWindow`第一個參數來呼叫 Win32 函數。 直接`CWindow`包裝 Win32 函式的`m_hWnd`每個方法都會傳遞成員; `CWindow`因此，大部分的檔都將向您說明 Windows SDK。
+`CWindow::ShowWindow` 藉由傳遞 `CWindow::m_hWnd` 作為第一個參數，來呼叫 Win32 函數 `ShowWindow`。 直接包裝 Win32 函式的每個 `CWindow` 方法都會傳遞 `m_hWnd` 成員;因此，大部分的 `CWindow` 檔都會向您介紹 Windows SDK。
 
 > [!NOTE]
->  並非每個與視窗相關的 Win32 函式`CWindow`都會被包裝， `CWindow`而且並非每個方法都會包裝 Win32 函數。
+>  並非每個與視窗相關的 Win32 函式都會以 `CWindow`包裝，而不是每個 `CWindow` 方法都會包裝 Win32 函數。
 
-`CWindow::m_hWnd`儲存可識別視窗的 HWND。 當您執行下列動作時，會將 HWND 附加至您的物件：
+`CWindow::m_hWnd` 會儲存可識別視窗的 HWND。 當您執行下列動作時，會將 HWND 附加至您的物件：
 
-- 在的函式`CWindow`中指定 HWND。
+- 在 `CWindow`的函式中指定 HWND。
 
 - 呼叫 `CWindow::Attach`。
 
-- 使用`CWindow`的**operator =** 。
+- 使用 `CWindow`的**operator =** 。
 
-- 使用下列其中一個衍生自`CWindow`的類別，建立或子類別化視窗：
+- 使用下列其中一個衍生自 `CWindow`的類別，建立或子類別化視窗：
 
 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)可讓您建立新的視窗，或將現有的視窗子類別化。
 
@@ -392,7 +392,7 @@ UINT ArrangeIconicWindows() throw();
 
 ##  <a name="attach"></a>CWindow：： Attach
 
-將*hWndNew*所識別的視窗附加至`CWindow`物件。
+將*hWndNew*所識別的視窗附加至 `CWindow` 物件。
 
 ```
 void Attach(HWND hWndNew) throw();
@@ -423,7 +423,7 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
-##  <a name="bringwindowtotop"></a>  CWindow::BringWindowToTop
+##  <a name="bringwindowtotop"></a>CWindow：： BringWindowToTop
 
 將視窗帶入 Z 順序的頂端。
 
@@ -562,11 +562,11 @@ HWND Create(
 *hWndParent*<br/>
 在父代或擁有者視窗的控制碼。
 
-*rect*<br/>
-在[_U_RECT](../../atl/reference/u-rect-class.md)類型的變數，指定視窗的位置。 預設值為 Null。 當此參數為 Null 時， `CWindow::rcDefault`會使用的值。
+*各種*<br/>
+在類型的變數， [_U_RECT](../../atl/reference/u-rect-class.md)指定視窗的位置。 預設值為 NULL。 當此參數為 Null 時，會使用 `CWindow::rcDefault` 的值。
 
 *szWindowName*<br/>
-在指定視窗的名稱。 預設值為 Null。
+在指定視窗的名稱。 預設值為 NULL。
 
 *dwStyle*<br/>
 在視窗的樣式。 預設值為0，表示未指定任何樣式。 如需可能值的清單，請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
@@ -575,18 +575,18 @@ HWND Create(
 在擴充的視窗樣式。 預設值為0，表示未指定任何延伸樣式。 如需可能值的清單，請參閱 Windows SDK 中的[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 。
 
 *MenuOrID*<br/>
-在[_U_MENUorID](../../atl/reference/u-menuorid-class.md)類型的變數，指定功能表或視窗識別碼的控制碼。 預設值為 [0U]。
+在類型的變數， [_U_MENUorID](../../atl/reference/u-menuorid-class.md)指定功能表或視窗識別碼的控制碼。 預設值為 [0U]。
 
 *lpCreateParam*<br/>
 包含在[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)結構中的視窗建立資料指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為新建立之視窗的控制碼（由[m_hWnd](#m_hwnd)指定）。 否則為 Null。
+如果成功，則為新建立之視窗的控制碼（由[m_hWnd](#m_hwnd)指定）。 否則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-`CWindow::rcDefault`定義為`__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`。
+`CWindow::rcDefault` 定義為 `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`。
 
 如需詳細資訊，請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
@@ -650,7 +650,7 @@ CWindow(HWND hWnd = NULL) throw();
 將[m_hWnd](#m_hwnd)成員初始化為*hWnd*，預設為 Null。
 
 > [!NOTE]
-> `CWindow::CWindow`不會建立視窗。 類別[CWindowImpl](../../atl/reference/cwindowimpl-class.md)、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)和[CDialogImpl](../../atl/reference/cdialogimpl-class.md) （全都衍生自`CWindow`）提供了一個方法來建立視窗或`CWindow::m_hWnd`對話方塊，然後將其指派給。 您也可以使用[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) Win32 函數。
+> `CWindow::CWindow` 不會建立視窗。 類別[CWindowImpl](../../atl/reference/cwindowimpl-class.md)、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)和[CDialogImpl](../../atl/reference/cdialogimpl-class.md) （全都衍生自 `CWindow`）會提供方法來建立視窗或對話方塊，然後將其指派給 `CWindow::m_hWnd`。 您也可以使用[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) Win32 函數。
 
 ##  <a name="deferwindowpos"></a>CWindow：:D eferWindowPos
 
@@ -673,7 +673,7 @@ HDWP DeferWindowPos(
 
 ##  <a name="destroywindow"></a>CWindow：:D estroyWindow
 
-終結與`CWindow`物件相關聯的視窗，並將[m_hWnd](#m_hwnd)設定為 Null。
+終結與 `CWindow` 物件相關聯的視窗，並將[m_hWnd](#m_hwnd)設定為 Null。
 
 ```
 BOOL DestroyWindow() throw();
@@ -683,7 +683,7 @@ BOOL DestroyWindow() throw();
 
 請參閱 Windows SDK 中的[DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) 。
 
-它不會損毀`CWindow`物件本身。
+它不會損毀 `CWindow` 物件本身。
 
 ### <a name="example"></a>範例
 
@@ -691,7 +691,7 @@ BOOL DestroyWindow() throw();
 
 ##  <a name="detach"></a>CWindow：:D etach
 
-`m_hWnd`  從`CWindow`物件卸離 [m_hWnd](#m_hwnd)，並將設定為 Null。
+卸離 `CWindow` 物件的[m_hWnd](#m_hwnd) ，並將 `m_hWnd` 設定為 Null。
 
 ```
 HWND Detach() throw();
@@ -699,7 +699,7 @@ HWND Detach() throw();
 
 ### <a name="return-value"></a>傳回值
 
-與`CWindow`物件相關聯的 HWND。
+與 `CWindow` 物件相關聯的 HWND。
 
 ### <a name="example"></a>範例
 
@@ -910,7 +910,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="remarks"></a>備註
 
-`GetDescendantWindow`搜尋子視窗的整個樹狀目錄，而不只是直接子系的視窗。
+`GetDescendantWindow` 會搜尋子視窗的整個樹狀目錄，而不只是直接子系的視窗。
 
 ##  <a name="getdlgcontrol"></a>CWindow：： GetDlgControl
 
@@ -936,7 +936,7 @@ HRESULT GetDlgControl(
 
 ### <a name="return-value"></a>傳回值
 
-當成功或任何有效的錯誤 HRESULT 時，傳回 S_OK。 例如，如果找不到*nID*所指定的控制項，此函式會傳回 E_FAIL，如果可以找到控制項，則會傳回 E_NOINTERFACE，但不支援*iid*所指定的介面。
+傳回成功或任何有效錯誤 HRESULT 的 S_OK。 例如，如果找不到*nID*所指定的控制項，此函式會傳回 E_FAIL，而且如果可以找到該控制項，則會傳回 E_NOINTERFACE，但它不支援*iid*所指定的介面。
 
 ### <a name="remarks"></a>備註
 
@@ -978,7 +978,7 @@ HRESULT GetDlgHost(
 
 ### <a name="return-value"></a>傳回值
 
-如果*iid*所指定的視窗是控制項容器，而且可以抓取要求的介面，則會傳回 S_OK。 如果視窗不是控制項容器，或如果無法抓取所要求的介面，則會傳回 E_FAIL。 如果找不到具有指定識別碼的視窗，則傳回值會等於 HRESULT_FROM_WIN32 （ERROR_CONTROL_ID_NOT_FOUND）。
+如果*iid*所指定的視窗是控制項容器，而且可以抓取要求的介面，則會傳回 S_OK。 如果視窗不是控制項容器，或如果無法抓取所要求的介面，則傳回 E_FAIL。 如果找不到具有指定識別碼的視窗，則傳回值等於 HRESULT_FROM_WIN32 （ERROR_CONTROL_ID_NOT_FOUND）。
 
 ### <a name="remarks"></a>備註
 
@@ -1097,7 +1097,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="remarks"></a>備註
 
-`GetIcon`將[WM_GETICON](/windows/win32/winmsg/wm-geticon)訊息傳送至視窗。
+`GetIcon` 會將[WM_GETICON](/windows/win32/winmsg/wm-geticon)訊息傳送至視窗。
 
 ##  <a name="getlastactivepopup"></a>CWindow：： GetLastActivePopup
 
@@ -1308,7 +1308,7 @@ HWND GetWindow(UINT nCmd) const throw();
 
 ### <a name="remarks"></a>備註
 
-請`GetWindow`參閱 Windows SDK 中的。
+請參閱 Windows SDK 中的 `GetWindow`。
 
 ##  <a name="getwindowcontexthelpid"></a>CWindow：： GetWindowCoNtextHelpId
 
@@ -1367,12 +1367,12 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>備註
 
-如果您正在抓取指標或控制碼，則此函式會`CWindow::GetWindowLong`取代方法。
+如果您正在抓取指標或控制碼，則此函式會取代 `CWindow::GetWindowLong` 方法。
 
 > [!NOTE]
 >  指標和控制碼是32位 Windows 上的32位和64位 Windows 上的64位。
 
-若要撰寫與 Windows 32 位和64位版本相容的程式碼，請使用`CWindow::GetWindowLongPtr`。
+若要撰寫與32位和64位版本的 Windows 相容的程式碼，請使用 `CWindow::GetWindowLongPtr`。
 
 ##  <a name="getwindowplacement"></a>CWindow：： GetWindowPlacement
 
@@ -1452,13 +1452,13 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功複製文字，則傳回值為 TRUE;否則，傳回值為 FALSE。
+文字如果成功複製，傳回值會是 TRUE；否則傳回值會是 FALSE。
 
 ### <a name="remarks"></a>備註
 
 請參閱 Windows SDK 中的[GetWindowText](/windows/win32/api/winuser/nf-winuser-getwindowtextw) 。
 
-此方法的第二個版本可讓您將文字儲存在 BSTR 中;第三個版本可讓您將結果儲存在[CString](../../atl-mfc-shared/reference/cstringt-class.md)中， `CSimpleString`因為是`CString`的基類。
+此方法的第二個版本可讓您將文字儲存在 BSTR 中;第三個版本可讓您將結果儲存在[CString](../../atl-mfc-shared/reference/cstringt-class.md)中，因為 `CSimpleString` 是 `CString`的基底類別。
 
 ##  <a name="getwindowtextlength"></a>CWindow：： GetWindowTextLength
 
@@ -1555,7 +1555,7 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 
 請參閱 Windows SDK 中的[InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 。
 
-將`RECT`參數的 Null 傳遞`InvalidateRect`給 Win32 函數。
+將 `RECT` 參數的 Null 傳遞給 `InvalidateRect` Win32 函數。
 
 ### <a name="example"></a>範例
 
@@ -1587,7 +1587,7 @@ void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>備註
 
-指定**void**傳回型別，而`InvalidateRgn` Win32 函數一律會傳回 TRUE。
+指定**void**傳回型別，而 `InvalidateRgn` Win32 函數一律會傳回 TRUE。
 
 ##  <a name="ischild"></a>CWindow：： IsChild
 
@@ -1731,7 +1731,7 @@ BOOL IsZoomed() const throw();
 
 ##  <a name="killtimer"></a>CWindow：： KillTimer
 
-損毀所`CWindow::SetTimer`建立的計時器事件。
+損毀 `CWindow::SetTimer`所建立的計時器事件。
 
 ```
 BOOL KillTimer(UINT nIDEvent) throw();
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*bLock*<br/>
+*總匯*<br/>
 在如果為 TRUE （預設值），則會鎖定視窗。 否則，它將會解除鎖定。
 
 ### <a name="return-value"></a>傳回值
@@ -1760,11 +1760,11 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="remarks"></a>備註
 
-如果*bLock*為 TRUE，則這個方法會將[M_hWnd](#m_hwnd)傳遞給 Win32 函式;否則，它會傳遞 Null。
+如果*bLock*為 TRUE，這個方法會將[M_hWnd](#m_hwnd)傳遞給 Win32 函式;否則，它會傳遞 Null。
 
 ##  <a name="m_hwnd"></a>CWindow：： m_hWnd
 
-包含與`CWindow`物件相關聯之視窗的控制碼。
+包含與 `CWindow` 物件相關聯之視窗的控制碼。
 
 ```
 HWND m_hWnd throw() throw();
@@ -1812,7 +1812,7 @@ int MessageBox(
 
 ##  <a name="modifystyle"></a>CWindow：： ModifyStyle
 
-修改`CWindow`物件的視窗樣式。
+修改 `CWindow` 物件的視窗樣式。
 
 ```
 BOOL ModifyStyle(
@@ -1840,7 +1840,7 @@ BOOL ModifyStyle(
 
 您可以使用位 OR （ &#124; ）運算子來結合要加入或移除的樣式。 如需可用視窗樣式的相關資訊，請參閱 Windows SDKfor 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)函數。
 
-如果*nFlags*為非零`ModifyStyle`值，會`SetWindowPos`呼叫 Win32 函式，並將*nFlags*與下列四個旗標結合，以重新繪製視窗：
+如果*nFlags*為非零值，`ModifyStyle` 會 `SetWindowPos`呼叫 Win32 函數，並將*nFlags*與下列四個旗標結合，以重新繪製視窗：
 
 - SWP_NOSIZE 會保留目前的大小。
 
@@ -1858,7 +1858,7 @@ BOOL ModifyStyle(
 
 ##  <a name="modifystyleex"></a>CWindow：： ModifyStyleEx
 
-修改`CWindow`物件的延伸視窗樣式。
+修改 `CWindow` 物件的擴充視窗樣式。
 
 ```
 BOOL ModifyStyleEx(
@@ -1886,7 +1886,7 @@ BOOL ModifyStyleEx(
 
 您可以使用位 OR （ &#124; ）運算子來結合要加入或移除的樣式。 請參閱 Windows SDKfor 中有關可用擴充樣式的資訊[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函數。
 
-如果*nFlags*為非零`ModifyStyleEx`值，會`SetWindowPos`呼叫 Win32 函式，並將*nFlags*與下列四個旗標結合，以重新繪製視窗：
+如果*nFlags*為非零值，`ModifyStyleEx` 會 `SetWindowPos`呼叫 Win32 函數，並將*nFlags*與下列四個旗標結合，以重新繪製視窗：
 
 - SWP_NOSIZE 會保留目前的大小。
 
@@ -1951,7 +1951,7 @@ BOOL OpenClipboard() throw();
 
 ##  <a name="operator_hwnd"></a>CWindow：： operator HWND
 
-`CWindow`將物件轉換為 HWND。
+將 `CWindow` 物件轉換成 HWND。
 
 ```
 operator HWND() const throw();
@@ -1959,7 +1959,7 @@ operator HWND() const throw();
 
 ##  <a name="operator_eq"></a>CWindow：： operator =
 
-藉由將[m_hWnd](#m_hwnd)成員`CWindow`設定為`hWnd`，將 HWND 指派給物件。
+藉由將[m_hWnd](#m_hwnd)成員設定為 `hWnd`，將 HWND 指派給 `CWindow` 物件。
 
 ```
 CWindow& operator= (HWND hWnd) throw();
@@ -2020,7 +2020,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 - PRF_CLIENT 繪製視窗的工作區。
 
-- PRF_ERASEBKGND 會先清除背景，再繪製視窗。
+- PRF_ERASEBKGND 在繪製視窗之前清除背景。
 
 - PRF_NONCLIENT 繪製視窗的非工作區。
 
@@ -2048,7 +2048,7 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 - PRF_CLIENT 繪製視窗的工作區。
 
-- PRF_ERASEBKGND 會先清除背景，再繪製視窗。
+- PRF_ERASEBKGND 在繪製視窗之前清除背景。
 
 - PRF_NONCLIENT 繪製視窗的非工作區。
 
@@ -2214,7 +2214,7 @@ static LRESULT SendMessage(
 
 ##  <a name="sendmessagetodescendants"></a>CWindow：： SendMessageToDescendants
 
-將指定的訊息傳送至`CWindow`物件的所有直屬子系。
+將指定的訊息傳送至 `CWindow` 物件的所有直屬子系。
 
 ```
 void SendMessageToDescendants(
@@ -2257,7 +2257,7 @@ BOOL SendNotifyMessage(
 
 請參閱 Windows SDK 中的[SendNotifyMessage](/windows/win32/api/winuser/nf-winuser-sendnotifymessagew) 。
 
-如果視窗是由呼叫執行緒所建立，則`SendNotifyMessage`在視窗程式處理訊息之前，不會傳回。 否則，它會立即傳回。
+如果視窗是由呼叫執行緒所建立，則必須等到視窗程式處理訊息之後，才會傳回 `SendNotifyMessage`。 否則，它會立即傳回。
 
 ##  <a name="setactivewindow"></a>CWindow：： SetActiveWindow
 
@@ -2287,7 +2287,7 @@ HWND SetCapture() throw();
 
 請參閱 Windows SDK 中的[SetCapture](/windows/win32/api/winuser/nf-winuser-setcapture) 。
 
-##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer
+##  <a name="setclipboardviewer"></a>CWindow：： SetClipboardViewer
 
 將視窗加入至剪貼簿檢視器鏈。
 
@@ -2373,7 +2373,7 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 在新字型的控制碼。
 
 *bRedraw*<br/>
-在如果為 TRUE （預設值），則會重新繪製視窗。 否則，就不會這麼做。
+在如果為 TRUE （預設值），則會重新繪製視窗。 否則，便非結構描述所擁有。
 
 ##  <a name="sethotkey"></a>CWindow：： SetHotKey
 
@@ -2417,7 +2417,7 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="remarks"></a>備註
 
-`SetIcon`將[WM_SETICON](/windows/win32/winmsg/wm-seticon)訊息傳送至視窗。
+`SetIcon` 會將[WM_SETICON](/windows/win32/winmsg/wm-seticon)訊息傳送至視窗。
 
 ##  <a name="setmenu"></a>CWindow：： SetMenu
 
@@ -2462,7 +2462,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫`SetRedraw`以允許重新繪製變更，或防止重新繪製變更。
+呼叫 `SetRedraw` 以允許重新繪製變更，或防止重新繪製變更。
 
 ### <a name="example"></a>範例
 
@@ -2568,7 +2568,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 請參閱 Windows SDK 中的[SetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-setwindowlongptrw) 。
 
-此函式會`CWindow::SetWindowLong`取代方法。 若要撰寫與 Windows 32 位和64位版本相容的程式碼，請使用`CWindow::SetWindowLongPtr`。
+此函式會取代 `CWindow::SetWindowLong` 方法。 若要撰寫與32位和64位版本的 Windows 相容的程式碼，請使用 `CWindow::SetWindowLongPtr`。
 
 ##  <a name="setwindowplacement"></a>CWindow：： SetWindowPlacement
 

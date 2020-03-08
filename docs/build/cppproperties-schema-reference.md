@@ -4,17 +4,17 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856809"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties json 參考
 
 未使用 CMake 的開啟資料夾專案可以將 IntelliSense 的專案設定設定儲存在*CppProperties 的 json*檔案中。 （CMake projects 使用[CMakeSettings](customize-cmake-settings.md)檔案）。設定是由名稱/值組所組成，並定義 #include 路徑、編譯器參數和其他參數。 如需如何在開啟資料夾專案中加入設定的詳細資訊，請參閱[開啟資料夾專案C++ ](open-folder-projects-cpp.md) 。 下列各節摘要說明各種設定。 如需架構的完整描述，請流覽至*CppProperties_schema. json*，其完整路徑會在*CppProperties*開啟時于程式碼編輯器的頂端提供。
 
-## <a name="configuration-properties"></a>組態屬性
+## <a name="configuration-properties"></a>設定屬性
 
 組態可以有下列任何屬性：
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143122"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865483"
 ---
 # <a name="context-class"></a>Context 類別
 
@@ -54,7 +54,7 @@ class Context;
 |[GetId](#getid)|傳回內容所屬排程器內唯一的內容識別碼。|
 |[GetScheduleGroupId](#getschedulegroupid)|傳回內容目前正在處理之排程群組的識別碼。|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|傳回目前正在執行內容之虛擬處理器的識別碼。|
-|[ID](#id)|針對目前內容所屬的排程器，傳回目前內容中唯一的識別碼。|
+|[Id](#id)|針對目前內容所屬的排程器，傳回目前內容中唯一的識別碼。|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|傳回指示，指出目前內容上以內嵌方式執行的工作集合是否在作用中取消的過程中（或很快就會出現）。|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|判斷內容是否會同步封鎖。 如果內容明確執行導致封鎖的動作，則會將其視為同步封鎖。|
 |[過度訂閱](#oversubscribe)|針對在該排程器中的其中一個虛擬處理器上執行的內容叫用時，會在程式碼區塊的持續時間內，將額外的虛擬處理器插入排程器中。|

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143273"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867119"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 
@@ -40,9 +40,9 @@ class ScheduleGroup;
 
 |名稱|描述|
 |----------|-----------------|
-|[ID](#id)|傳回排程群組的識別碼，這在群組所屬的排程器內是唯一的。|
+|[Id](#id)|傳回排程群組的識別碼，這在群組所屬的排程器內是唯一的。|
 |[參考](#reference)|遞增排程器群組的參考計數。|
-|[發行](#release)|遞減排程器群組的參考計數。|
+|[版本](#release)|遞減排程器群組的參考計數。|
 |[ScheduleTask](#scheduletask)|排定排程群組內的輕量工作。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層

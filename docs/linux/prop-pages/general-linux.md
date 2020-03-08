@@ -3,12 +3,12 @@ title: 一般屬性（Linux C++專案）
 description: 描述您可以在 [一般屬性] 頁面上的 Visual Studio 中設定的 Linux 專案屬性。
 ms.date: 01/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: 6d598e9d52037d709cba87d98ad375455d8c00b0
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: d6a69d9fd3091c885ebd708cbc4598533d2922b4
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031343"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883976"
 ---
 # <a name="general-properties-linux-c"></a>一般屬性（Linux C++）
 
@@ -20,7 +20,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range=">=vs-2017"
 
-屬性 | 描述 | 選擇
+屬性 | 描述 | Choices
 --- | ---| ---
 輸出目錄 | 指定輸出檔案目錄的相對路徑。 它可以包含環境變數。
 中繼目錄 | 指定中繼檔案目錄的相對路徑。 它可以包含環境變數。
@@ -29,7 +29,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 清除時要刪除的副檔名 | 以分號分隔的萬用字元規格，用於中繼目錄中要在清除或重建時刪除的檔案。
 建置記錄檔 | 指定啟用組建記錄時，要寫入的組建記錄檔。
 平台工具組 | 指定用來建立目前設定的工具組。 如果未設定，則會使用預設工具組。
-遠端組建電腦 | 要用於遠端組建、部署和 debug 的目的電腦或裝置。 **Visual Studio 2019 16.1 版**您可以在 [[調試](debugging-linux.md)程式] 頁面上，指定不同的電腦進行調試。
+遠端組建電腦 | 顯示要用於遠端組建、部署和 debug 的目的電腦或裝置。 您可以使用 **工具** > **選項** > **跨平臺** > **連線管理員** 來新增或編輯目的電腦連接。 **Visual Studio 2019 16.1 版**您可以在 [[調試](debugging-linux.md)程式] 頁面上，指定不同的電腦進行調試。
 遠端組建根目錄 | 指定遠端電腦或裝置上的目錄路徑。
 遠端組建專案目錄 | 指定專案在遠端電腦或裝置上的目錄路徑。
 遠端部署目錄 | **Visual Studio 2019 16.1 版**指定要部署專案的遠端電腦或裝置上的目錄路徑。

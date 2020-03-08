@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451660"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876127"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants 命名空間
+# <a name="regex_constants-namespace"></a>regex_constants 命名空間
 
 規則運算式旗標的命名空間。
 
@@ -115,9 +115,9 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<regex>
+**標頭：** \<RegEx >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="error_type"></a>  regex_constants::error_type
 
@@ -291,10 +291,10 @@ enum syntax_option_type
 ## <a name="see-also"></a>另請參閱
 
 [\<regex>](../standard-library/regex.md)\
-[RegEx_error 類別](../standard-library/regex-error-class.md)\
-[\<RegEx > 函式](../standard-library/regex-functions.md)\
-[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[Regex_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函數](../standard-library/regex-functions.md)\
+[Regex_iterator 類別](../standard-library/regex-iterator-class.md)\
 [\<RegEx > 運算子](../standard-library/regex-operators.md)\
-[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
-[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits 類別](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

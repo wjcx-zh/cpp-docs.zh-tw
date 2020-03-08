@@ -6,15 +6,15 @@ f1_keywords:
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246216"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876253"
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 運算子
+# <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt; 運算子
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的物件是否等於右邊的物件。
 
@@ -31,10 +31,10 @@ bool operator==(const error_condition& left,
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 要測試是否相等的物件。
 
-*權限*\
+*right*\
 要測試是否相等的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -45,7 +45,7 @@ bool operator==(const error_condition& left,
 
 此函式會傳回 `left.category() == right.category() && left.value() == right.value()`。
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 測試運算子左邊的物件是否不等於右邊的物件。
 
@@ -58,15 +58,15 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 要測試是否不相等的物件。
 
-*權限*\
+*right*\
 要測試是否不相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果傳入的物件*左*是否不等於傳入的物件*右*; 否則為**false**。
+如果在*左邊*傳遞的物件不等於傳入的物件 *，則***為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -102,21 +102,21 @@ inline bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 要比較的物件。
 
-*權限*\
+*right*\
 要比較的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果傳入的物件*左*少於傳入的物件*右*;否則，請**false**。
+如果在*左邊*傳遞的物件小於*傳入的物件*，則**為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
 這個功能測試錯誤順序。
 
-## <a name="op_ostream"></a> 運算子&lt;&lt;
+## <a name="op_ostream"></a>運算子&lt;&lt;
 
 ```cpp
 template <class charT, class traits> 

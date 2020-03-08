@@ -30,11 +30,11 @@ helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
 ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142022"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882891"
 ---
 # <a name="openmp-directives"></a>OpenMP 指示詞
 
@@ -44,7 +44,7 @@ Visual C++支援下列 OpenMP 指示詞。
 
 針對平行工作共用：
 
-|Directive|描述|
+|指示詞|描述|
 |---------|-----------|
 |[parallel](#parallel)|定義平列區域，這是將由多個執行緒平行執行的程式碼。|
 |[for](#for-openmp)|造成在平列區域內的 `for` 迴圈中完成的工作，分割線上程之間。|
@@ -53,7 +53,7 @@ Visual C++支援下列 OpenMP 指示詞。
 
 針對主要和同步處理：
 
-|Directive|描述|
+|指示詞|描述|
 |---------|-----------|
 |[master](#master)|指定只有主要執行緒才會執行程式的區段。|
 |[critical](#critical)|指定一次只在一個執行緒上執行程式碼。|
@@ -64,7 +64,7 @@ Visual C++支援下列 OpenMP 指示詞。
 
 針對資料環境：
 
-|Directive|描述|
+|指示詞|描述|
 |---------|-----------|
 |[threadprivate](#threadprivate)|指定變數是執行緒的私用。|
 
@@ -540,7 +540,7 @@ test2() iteration 4
 - [if](openmp-clauses.md#if-openmp)
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
-- [default](openmp-clauses.md#default-openmp)
+- [預設值](openmp-clauses.md#default-openmp)
 - [共用](openmp-clauses.md#shared-openmp)
 - [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
@@ -716,7 +716,7 @@ write output
 
 您可以使用在進程啟動時靜態載入的 DLL 中的 `threadprivate`，不過，您無法在任何會透過[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)載入的 dll 中使用 `threadprivate`，例如以/DELAYLOAD 載入的 dll [（延遲載入匯入）](../../../build/reference/delayload-delay-load-import.md)，這也會使用 `LoadLibrary`。
 
-*易損壞*類型的 `threadprivate` 變數不保證會呼叫其析構函式。 例如，
+*易損壞*類型的 `threadprivate` 變數不保證會呼叫其析構函式。 例如：
 
 ```cpp
 struct MyType

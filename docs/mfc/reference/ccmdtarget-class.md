@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816344"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867026"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 
@@ -63,7 +63,7 @@ MFC 程式庫訊息對應架構的基類。
 class CCmdTarget : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
@@ -86,7 +86,7 @@ class CCmdTarget : public CObject
 |[CCmdTarget：： GetDispatchIID](#getdispatchiid)|取得主要分派介面識別碼。|
 |[CCmdTarget：： GetIDispatch](#getidispatch)|傳回與 `CCmdTarget` 物件相關聯之 `IDispatch` 物件的指標。|
 |[CCmdTarget：： GetTypeInfoCount](#gettypeinfocount)|抓取物件提供的類型資訊介面數目。|
-|[CCmdTarget：： GetTypeInfoOfGuid](#gettypeinfoofguid)|抓取對應于指定之 GUID 的類型描述。|
+|[CCmdTarget：： GetTypeInfoOfGuid](#gettypeinfoofguid)|擷取對應到所指定 GUID 的型別描述。|
 |[CCmdTarget：： GetTypeLib](#gettypelib)|取得類型程式庫的指標。|
 |[CCmdTarget：： GetTypeLibCache](#gettypelibcache)|取得類型程式庫快取。|
 |[CCmdTarget：： IsInvokeAllowed](#isinvokeallowed)|啟用自動化方法調用。|
@@ -335,7 +335,7 @@ virtual UINT GetTypeInfoCount();
 
 ##  <a name="gettypeinfoofguid"></a>CCmdTarget：： GetTypeInfoOfGuid
 
-抓取對應于指定之 GUID 的類型描述。
+擷取對應到所指定 GUID 的型別描述。
 
 ```
 HRESULT GetTypeInfoOfGuid(

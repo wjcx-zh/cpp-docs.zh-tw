@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
 ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391305"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855266"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 類別
 
@@ -41,14 +41,14 @@ class CArchiveException : public CException
 
 |名稱|描述|
 |----------|-----------------|
-|[CArchiveException::m_cause](#m_cause)|表示例外狀況的原因。|
-|[CArchiveException::m_strFileName](#m_strfilename)|指定此例外狀況的檔案名稱。|
+|[CArchiveException：： m_cause](#m_cause)|指出例外狀況的原因。|
+|[CArchiveException：： m_strFileName](#m_strfilename)|指定此例外狀況條件的檔案名。|
 
 ## <a name="remarks"></a>備註
 
-`CArchiveException`類別包含公用資料成員，表示造成例外狀況。
+`CArchiveException` 類別包含表示例外狀況原因的公用資料成員。
 
-`CArchiveException` 物件的建構及內擲回[CArchive](../../mfc/reference/carchive-class.md)成員函式。 您可以存取這些物件的範圍內**攔截**運算式。 原因代碼與作業系統無關。 如需例外狀況處理的詳細資訊，請參閱[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+`CArchiveException` 物件是在[CArchive](../../mfc/reference/carchive-class.md)成員函式內進行結構化和擲回。 您可以在**CATCH**運算式的範圍記憶體取這些物件。 原因程式碼與作業系統無關。 如需例外狀況處理的詳細資訊，請參閱[例外狀況處理（MFC）](../../mfc/exception-handling-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -62,9 +62,9 @@ class CArchiveException : public CException
 
 **標頭：** afx.h
 
-##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException
+##  <a name="carchiveexception"></a>CArchiveException::CArchiveException
 
-建構`CArchiveException`物件，儲存的值*導致*物件中。
+建立 `CArchiveException` 物件，並將*原因*的值儲存在物件中。
 
 ```
 CArchiveException(
@@ -75,18 +75,18 @@ CArchiveException(
 ### <a name="parameters"></a>參數
 
 *cause*<br/>
-表示例外狀況原因的列舉型別變數。 如需列舉值的清單，請參閱 < [m_cause](#m_cause)資料成員。
+列舉類型變數，指出例外狀況的原因。 如需列舉值的清單，請參閱[m_cause](#m_cause)資料成員。
 
 *lpszArchiveName*<br/>
-包含名稱的字串會指向`CArchive`造成例外狀況的物件。
+指向字串，其中包含造成例外狀況之 `CArchive` 物件的名稱。
 
 ### <a name="remarks"></a>備註
 
-您可以建立`CArchiveException`在堆積上物件和自己丟或讓全域函式[AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)為您處理它。
+您可以在堆積上建立 `CArchiveException` 物件，並自行擲回，或讓全域函式[AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)為您處理它。
 
-請勿直接; 使用這個建構函式相反地，呼叫全域函式`AfxThrowArchiveException`。
+請勿直接使用此函數;相反地，請呼叫全域函數 `AfxThrowArchiveException`。
 
-##  <a name="m_cause"></a>  CArchiveException::m_cause
+##  <a name="m_cause"></a>CArchiveException：： m_cause
 
 指定例外狀況的原因。
 
@@ -96,33 +96,33 @@ int m_cause;
 
 ### <a name="remarks"></a>備註
 
-此資料成員是公用類型的變數**int**。其值由定義`CArchiveException`列舉型別。 列舉程式及其意義如下：
+此資料成員是**int**類型的公用變數。其值是由 `CArchiveException` 列舉型別所定義。 列舉程式及其意義如下：
 
-- `CArchiveException::none` 不發生任何錯誤。
+- `CArchiveException::none` 未發生任何錯誤。
 
 - `CArchiveException::genericException` 未指定的錯誤。
 
-- `CArchiveException::readOnly` 嘗試寫入至載入開啟的封存。
+- `CArchiveException::readOnly` 嘗試寫入已開啟要載入的封存。
 
-- `CArchiveException::endOfFile` 到達的檔案結尾時讀取物件。
+- 讀取物件時，`CArchiveException::endOfFile` 已到達檔案結尾。
 
-- `CArchiveException::writeOnly` 嘗試讀取儲存開啟的封存。
+- `CArchiveException::writeOnly` 嘗試讀取已開啟儲存的封存。
 
-- `CArchiveException::badIndex` 無效的檔案格式。
+- `CArchiveException::badIndex` 不正確檔案格式。
 
-- `CArchiveException::badClass` 嘗試讀取為物件的類型錯誤的物件。
+- `CArchiveException::badClass` 嘗試將物件讀入錯誤類型的物件中。
 
-- `CArchiveException::badSchema` 嘗試讀取具有不同版本的類別的物件。
+- `CArchiveException::badSchema` 嘗試使用類別的不同版本來讀取物件。
 
     > [!NOTE]
     >  這些 `CArchiveException` 原因列舉程式不同於 `CFileException` 原因列舉程式。
 
     > [!NOTE]
-    > `CArchiveException::generic` 已被取代。 請改用 `genericException`。 如果**泛型**是用在應用程式和建置以 /clr，會有不容易解密的語法錯誤。
+    > `CArchiveException::generic` 已被取代。 請改用 `genericException`。 如果在應用程式中使用**泛型**，並以/clr 建立，則會有不容易解密的語法錯誤。
 
-##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName
+##  <a name="m_strfilename"></a>CArchiveException：： m_strFileName
 
-指定此例外狀況的檔案名稱。
+指定此例外狀況條件的檔案名。
 
 ```
 CString m_strFileName;

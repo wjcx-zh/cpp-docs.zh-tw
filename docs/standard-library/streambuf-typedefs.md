@@ -6,11 +6,11 @@ f1_keywords:
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
 ms.openlocfilehash: 1c9850ad7d7ec9b9c3554e6806f4790ef3613b08
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688930"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866208"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; typedef
 
@@ -40,8 +40,8 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_streambuf](../standard-library/basic-streambuf-class.md)的同義字，專門用於具有預設字元特性之**wchar_t**類型的元素。
+此類型是類別樣板[basic_streambuf](../standard-library/basic-streambuf-class.md)的同義字，專門用於具有預設字元特性**wchar_t**類型的元素。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<streambuf>](../standard-library/streambuf.md)

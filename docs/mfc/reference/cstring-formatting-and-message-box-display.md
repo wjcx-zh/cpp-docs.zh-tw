@@ -5,34 +5,34 @@ helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 ms.openlocfilehash: ad880c5302fd2274c5d46719e912461fd7497f10
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611008"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854047"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 格式和訊息方塊顯示
 
-提供數個函數來格式化和剖析`CString`物件。 您可以使用這些函式，每當您必須操作`CString`物件，但它們會特別有用，會出現在訊息方塊文字的字串進行格式化。
+提供一些函數來格式化和剖析 `CString` 物件。 只要您必須操控 `CString` 物件，就可以使用這些函式，但它們特別適用于格式化將顯示在訊息方塊文字中的字串。
 
-此函式群組也包含通用的常式，以顯示訊息方塊。
+這組函式也包含用於顯示訊息方塊的全域常式。
 
 ### <a name="cstring-functions"></a>CString 函式
 
 |||
 |-|-|
-|[AfxExtractSubString](#afxextractsubstring)|擷取子字串從指定的來源字串分隔為單一字元。|
-|[AfxFormatString1](#afxformatstring1)|替代格式字元"%1"在字串中指定的字串包含在字串資料表中。|
-|[AfxFormatString2](#afxformatstring2)|取代兩個字串格式字元"%1"和"%2"的字串中包含在字串資料表中。|
+|[AfxExtractSubString](#afxextractsubstring)|以指定來源字串中的單一字元來解壓縮子字串。|
+|[AfxFormatString1](#afxformatstring1)|在字串資料表所包含的字串中，以指定的字串取代格式字元 "%1"。|
+|[AfxFormatString2](#afxformatstring2)|在字串資料表所包含的字串中，以兩個格式字元 "%1" 和 "%2" 取代字串。|
 |[AfxMessageBox](#afxmessagebox)|顯示訊息方塊。|
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxwin.h
+  **標頭**afxwin.h。h
 
-##  <a name="afxextractsubstring"></a>  AfxExtractSubString
+##  <a name="afxextractsubstring"></a>AfxExtractSubString
 
-此全域函式可用來從指定的來源字串擷取子字串。
+這個全域函式可以用來從指定的來源字串解壓縮子字串。
 
 ```
 BOOL AFXAPI AfxExtractSubString (
@@ -45,26 +45,26 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="parameters"></a>參數
 
 *rString*<br/>
-若要參考[CString](../../atl-mfc-shared/using-cstring.md)會收到個別的子字串的物件。
+會接收個別子字串之[CString](../../atl-mfc-shared/using-cstring.md)物件的參考。
 
 *lpszFullString*<br/>
-字串，包含要擷取之字串的完整文字。
+字串，包含要從中解壓縮之字串的全文文字。
 
 *iSubString*<br/>
-要擷取的子字串以零起始的索引*lpszFullString*。
+要從*lpszFullString*中解壓縮的子字串之以零為起始的索引。
 
 *chSep*<br/>
-用來分隔的子字串的分隔符號字元。
+用來分隔子字串的分隔符號。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功擷取上提供的索引; 的子字串，則為 TRUE。否則為 FALSE。
+如果函式成功解壓縮所提供索引處的子字串，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此函式可用於從來源字串擷取多個子字串，當已知的單一字元來分隔每一個子字串。 此函式會搜尋從開頭*lpszFullString*參數每次呼叫時。
+當已知的單一字元分隔每個子字串時，此函式適用于從來源字串解壓縮多個子字串。 此函式會在每次呼叫*lpszFullString*參數的開頭進行搜尋。
 
-此函式會傳回 FALSE，如果有任一*lpszFullString*設為 NULL 或到達的結尾，函式*lpszFullString*而不需要尋找*iSubString*+ 1指定的分隔符號字元的項目。 *RString*參數將不會修改從其原始值如果*lpszFullString*已設為 NULL，否則*rString*參數設為空字串，如果無法擷取指定之索引子字串。
+如果其中一個*lpszFullString*設定為 Null，或函式到達*lpszFullString*的結尾，而未尋找指定分隔符號的*iSubString*+ 1，則此函式會傳回 FALSE。 如果*lpszFullString*設定為 Null， *rString*參數將不會從其原始值中修改。否則，如果無法針對指定的索引解壓縮子字串， *rString*參數會設定為空字串。
 
 ### <a name="example"></a>範例
 
@@ -72,11 +72,11 @@ BOOL AFXAPI AfxExtractSubString (
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxwin.h
+  **標頭**afxwin.h。h
 
-##  <a name="afxformatstring1"></a>  AfxFormatString1
+##  <a name="afxformatstring1"></a>AfxFormatString1
 
-替代字串所指向*lpsz1*所識別的範本字串資源中的字元"%1"的任何執行個體*nIDS*。
+將*lpsz1*所指向的字串取代為*nIDS*所識別之範本字串資源中任何字元 "%1" 的實例。
 
 ```
 void  AfxFormatString1(
@@ -98,7 +98,7 @@ void  AfxFormatString1(
 
 ### <a name="remarks"></a>備註
 
-新建構的字串會儲存在*rString*。 例如，如果字串資料表中的字串是 「 檔案 %1 找不到 」，並*lpsz1*等於"C:\MYFILE。TXT"，然後*rString*會包含字串"File C:\MYFILE。TXT 找不到 」。 此函式在為傳送到訊息方塊和其他視窗的字串進行格式化時，便可派上用場。
+新形成的字串會儲存在*rString*中。 例如，如果字串資料表中的字串是「找不到檔案 %1」，而且*lpsz1*等於「C:\MYFILE。TXT "，則*rString*會包含字串" File C:\MYFILE。找不到 TXT」。 此函式在為傳送到訊息方塊和其他視窗的字串進行格式化時，便可派上用場。
 
 如果格式字元「%1」多次出現在字串中，將會進行多個替代作業。
 
@@ -108,11 +108,11 @@ void  AfxFormatString1(
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxwin.h
+  **標頭**afxwin.h。h
 
-##  <a name="afxformatstring2"></a>  AfxFormatString2
+##  <a name="afxformatstring2"></a>AfxFormatString2
 
-替代字串所指向*lpsz1*所指向的字串的任何字元"%1"的執行個體*lpsz2*範本字串資源中的字元"%2"的任何執行個體由識別*nIDS*。
+將*lpsz1*所指向的字串取代為任何字元 "%1" 的實例，並將*lpsz2*所指向的字串用於*nIDS*所識別的範本字串資源中任何字元 "%2" 的實例。
 
 ```
 void AfxFormatString2(
@@ -125,22 +125,22 @@ void AfxFormatString2(
 ### <a name="parameters"></a>參數
 
 *rString*<br/>
-參考`CString`執行替代之後將包含結果的字串。
+在執行替代之後，將包含結果字串之 `CString` 的參考。
 
 *nIDS*<br/>
-會對其執行替代的範本字串的字串資料表 ID。
+將在其上執行替代之範本字串的字串資料表識別碼。
 
 *lpsz1*<br/>
 將取代範本字串中格式字元「%1」的字串。
 
 *lpsz2*<br/>
-範本字串中，將會取代格式的字串字元"%2"。
+字串，將會取代範本字串中的格式字元 "%2"。
 
 ### <a name="remarks"></a>備註
 
-新建構的字串會儲存在*rString*。 例如，如果字串資料表中的字串是 「 檔案 %1 目錄 %2 中找不到 」 *lpsz1*指向 「 MYFILE。TXT"，並*lpsz2*指向 「 C:\MYDIR\"，然後*rString*會包含字串"File MYFILE。TXT C:\MYDIR\ 目錄中找不到 」
+新形成的字串會儲存在*rString*中。 例如，如果字串資料表中的字串是「在目錄 %2 中找不到檔案 %1」， *lpsz1*會指向「myfile.txt。TXT "，而*lpsz2*指向" C:\MYDIR "， *rString*會包含字串" File myfile.txt "。在目錄 C:\MYDIR 中找不到 TXT」
 
-如果格式字元 「 %1"或"%2"出現在字串中一次以上，將會進行多個替代項目。 它們沒有數字的順序。
+如果格式字元 "%1" 或 "%2" 出現在字串中超過一次，則會進行多個替代。 它們不一定要以數位順序排序。
 
 ### <a name="example"></a>範例
 
@@ -148,11 +148,11 @@ void AfxFormatString2(
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxwin.h
+  **標頭**afxwin.h。h
 
-##  <a name="afxmessagebox"></a>  AfxMessageBox
+##  <a name="afxmessagebox"></a>AfxMessageBox
 
-在螢幕上顯示的訊息方塊。
+在畫面上顯示訊息方塊。
 
 ```
 int AfxMessageBox(
@@ -169,44 +169,44 @@ int AFXAPI AfxMessageBox(
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-指向`CString`物件或 null 結束的字串，包含要在訊息方塊中顯示的訊息。
+指向 `CString` 物件或以 null 終止的字串，其中包含要顯示在訊息方塊中的訊息。
 
 *nType*<br/>
-訊息方塊的樣式。 套用的任何[訊息方塊樣式](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)至方塊。
+訊息方塊的樣式。 將任何[訊息方塊樣式](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)套用至方塊。
 
 *nIDHelp*<br/>
-訊息，說明內容識別碼0 表示將會使用應用程式的預設說明內容。
+訊息的說明內容識別碼;0表示將使用應用程式的預設說明內容。
 
 *nIDPrompt*<br/>
-唯一的識別碼，用來參考字串資料表中的字串。
+唯一識別碼，用來參考字串資料表中的字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果不是記憶體不足，無法顯示訊息方塊中，則為零否則，會傳回下列值之一：
+如果沒有足夠的記憶體可顯示訊息方塊，則為零;否則，會傳回下列其中一個值：
 
-- 已選取 IDABORT [中止] 按鈕。
+- IDABORT 已選取 [中止] 按鈕。
 
-- 已選取 IDCANCEL [取消] 按鈕。
+- IDCANCEL 已選取 [取消] 按鈕。
 
-- 已選取 IDIGNORE [忽略] 按鈕。
+- IDIGNORE 已選取 [略過] 按鈕。
 
-- IDNO [否] 按鈕已選取。
+- IDNO 已選取 [否] 按鈕。
 
-- 已選取 IDOK [確定] 按鈕。
+- IDOK 已選取 [確定] 按鈕。
 
-- 已選取 IDRETRY 重試 按鈕。
+- IDRETRY 已選取 [重試] 按鈕。
 
-- 已選取 是 IDYES 按鈕。
+- IDYES 已選取 [是] 按鈕。
 
-如果訊息方塊有 [取消] 按鈕，將會傳回 IDCANCEL 值，如果按下 ESC 鍵，或選取 [取消] 按鈕。 如果訊息方塊沒有 [取消] 按鈕，按下 ESC 鍵任何作用。
+如果訊息方塊具有 [取消] 按鈕，則在按下 ESC 鍵或選取 [取消] 按鈕時，就會傳回 IDCANCEL 值。 如果訊息方塊沒有 [取消] 按鈕，按下 ESC 鍵不會有任何作用。
 
-函式[AfxFormatString1](#afxformatstring1)並[AfxFormatString2](#afxformatstring2)可用於格式化顯示在訊息方塊的文字。
+函式[AfxFormatString1](#afxformatstring1)和[AfxFormatString2](#afxformatstring2)可用於格式化訊息方塊中顯示的文字。
 
 ### <a name="remarks"></a>備註
 
-第一種形式的多載函式顯示的文字字串所指向*lpszText*在訊息方塊，並使用*nIDHelp*來描述說明內容。 說明內容用來跳到相關聯的 [說明] 主題，當使用者按下說明鍵 (通常是 F1)。
+這個多載函式的第一個形式會顯示訊息方塊中*lpszText*所指向的文字字串，並使用*nIDHelp*來描述說明內容。 當使用者按下 [說明] 鍵（通常是 F1）時，會使用 [說明] 內容來跳到相關聯的說明主題。
 
-函式的第二個表單使用字串資源識別碼*nIDPrompt*顯示訊息方塊中的訊息。 相關聯的 說明 頁面找到的值透過*nIDHelp*。 如果預設值*nIDHelp*會使用 (-1)，字串資源 ID *nIDPrompt*，用於 「 說明 」 內容。 如需有關如何定義說明主題的詳細資訊，請參閱 <<c0> [ 技術提示 28](../../mfc/tn028-context-sensitive-help-support.md)。
+函式的第二種形式會使用識別碼為*nIDPrompt*的字串資源，在訊息方塊中顯示訊息。 您可以透過*nIDHelp*的值找到相關聯的說明頁面。 如果使用*nIDHelp*的預設值（-1），則會使用字串資源識別碼*nIDPrompt*，做為說明內容。 如需定義說明內容的詳細資訊，請參閱[技術附注 28](../../mfc/tn028-context-sensitive-help-support.md)。
 
 ### <a name="example"></a>範例
 
@@ -214,5 +214,5 @@ int AFXAPI AfxMessageBox(
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[宏和全域](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)

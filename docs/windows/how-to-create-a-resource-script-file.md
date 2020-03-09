@@ -1,5 +1,5 @@
 ---
-title: 作法：建立資源（C++）
+title: 如何：建立資源（C++）
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.resource
@@ -37,13 +37,13 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444972"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866117"
 ---
-# <a name="how-to-create-resources-c"></a>作法：建立資源（C++）
+# <a name="how-to-create-resources-c"></a>如何：建立資源（C++）
 
 您可以藉由下列方式建立專案的資源：
 
@@ -119,8 +119,8 @@ ms.locfileid: "72444972"
 |---|---|
 | **資源類型** | 指定您想要建立的資源類型。<br/><br/>您可以展開資料指標和對話方塊資源類別，以顯示位於. 中的其他資源。 *\Microsoft Visual Studio \<版本\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*。 如果您需要新增 .rct 檔案，請將它們放在此處，或指定另一個[include 路徑](../windows/how-to-specify-include-directories-for-resources.md)。 樹狀目錄控制項最上層顯示的資源是 Visual Studio 所提供的預設資源。 .Rct 檔案中的資源會出現在適當類別下的第二個層級。 您可以新增的 .rct 檔案數目沒有預設限制。<br/><br/> |
 | **新增** | 根據在 [**資源類型**] 方塊中選取的類型來建立資源，並在適當的編輯器中開啟資源。<br/><br/>例如，如果您建立對話方塊資源，它會在[對話方塊編輯器](../windows/dialog-editor.md)中開啟資源。 |
-| **Import** | 開啟 [匯**入**] 對話方塊，以流覽至您要匯入至目前專案的資源。<br/><br/>您可以匯入點陣圖、圖示、游標、HTML、音效（。WAV）或自訂資源檔。 |
-| **自訂** | 開啟 [**新增自訂資源**] 對話方塊，以建立自訂資源。<br/><br/>也包含**資源類型**屬性，可提供文字方塊讓您輸入自訂資源類型的名稱。 當C++您結束時，視覺效果會自動將名稱設為大寫。 自訂資源只會在[二進位編輯器](../windows/binary-editor.md)中編輯。 |
+| **匯入** | 開啟 [匯**入**] 對話方塊，以流覽至您要匯入至目前專案的資源。<br/><br/>您可以匯入點陣圖、圖示、游標、HTML、音效（。WAV）或自訂資源檔。 |
+| **Custom** | 開啟 [**新增自訂資源**] 對話方塊，以建立自訂資源。<br/><br/>也包含**資源類型**屬性，可提供文字方塊讓您輸入自訂資源類型的名稱。 當C++您結束時，視覺效果會自動將名稱設為大寫。 自訂資源只會在[二進位編輯器](../windows/binary-editor.md)中編輯。 |
 
 當您建立新的資源時， C++視覺效果會為其指派唯一的名稱，例如 `IDD_Dialog1`。 您可以在相關聯的資源編輯器或[屬性視窗](/visualstudio/ide/reference/properties-window)中編輯資源屬性，以自訂此資源識別碼。
 
@@ -139,7 +139,7 @@ ms.locfileid: "72444972"
    > [!NOTE]
    > 如果您的專案中還沒有 .rc 檔案，此步驟會建立一個。 接著，您可以重複此步驟，將特定資源類型加入至新的 .rc 檔。
 
-- 在[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)中，以滑鼠右鍵按一下類別，選取 [**新增** > **新增資源**]，然後選擇要新增至專案的資源類型。
+- 在[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)中，以滑鼠右鍵按一下類別，選取 [**新增**] > **新增資源**，然後選擇要新增至專案的資源類型。
 
 - 使用功能表**專案** > **新增資源**。
 
@@ -190,5 +190,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
-[如何：管理來源](../windows/how-to-copy-resources.md)<br/>
-[如何：在編譯時間包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：管理資源](../windows/how-to-copy-resources.md)<br/>
+[如何：在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>

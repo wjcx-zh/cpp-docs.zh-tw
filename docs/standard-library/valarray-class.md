@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684088"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866244"
 ---
 # <a name="valarray-class"></a>valarray 類別
 
@@ -55,7 +55,7 @@ ms.locfileid: "72684088"
 
 特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 對類別的物件 `Type` 的作業都不會擲回例外狀況。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="constructors"></a>建構函式
 
@@ -63,13 +63,13 @@ ms.locfileid: "72684088"
 |-|-|
 |[valarray](#valarray)|建構具有特定大小或具有特定值之項目的 `valarray`，或建構為另一個 `valarray` 的複本或另一個 `valarray` 的子集。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[value_type](#value_type)|代表儲存在 `valarray` 中之項目類型的類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -84,11 +84,11 @@ ms.locfileid: "72684088"
 |[sum](#sum)|判斷非零長度的 `valarray` 中所有項目的總和。|
 |[swap](#swap)||
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
-|[operator!](#op_not)|可取得 `valarray` 中每個項目邏輯 `NOT` 值的一元運算子。|
+|[operator!](#op_not)|可取得 `NOT` 中每個項目邏輯 `valarray` 值的一元運算子。|
 |[operator%=](#op_mod_eq)|取得陣列項目除以指定的 `valarray` 或除以此項目類型之值的餘數。|
 |[operator&=](#op_and_eq)|取得陣列中項目的位元 `AND` 與指定的 `valarray` 中對應之項目或項目類型的值。|
 |[operator>>=](#op_gt_gt_eq)|依位置的指定數目或依第二個 `valarray` 指定的項目數量，將 `valarray` 運算元的每個項目之位元右移。|
@@ -103,7 +103,7 @@ ms.locfileid: "72684088"
 |[operator&#91;&#93;](#op_at)|傳回項目參考或其指定索引處的值或指定的子集。|
 |[operator^=](#op_xor_eq)|取得陣列的項目互斥邏輯 OR 運算子 (`XOR`) 與指定的 valarray 或此項目型別的值。|
 |[operator&#124;=](#op_or_eq)|取得陣列中項目的位元 `OR` 與指定的 `valarray` 中對應之項目或項目類型的值。|
-|[operator~](#op_dtor)|可取得 `valarray` 中每個項目位元 `NOT` 值的一元運算子。|
+|[operator~](#op_dtor)|可取得 `NOT` 中每個項目位元 `valarray` 值的一元運算子。|
 
 ## <a name="apply"></a>套用
 
@@ -117,10 +117,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>參數
 
-*_Func （類型）* \
+*_Func （類型）*\
 要套用至運算元 valarray 每個項目的函式物件。
 
-*_Func （Const 類型 &）* \
+*_Func （Const 類型 &）*\
 要套用至運算元 valarray 每個項目的 const 函式物件。
 
 ### <a name="return-value"></a>傳回值
@@ -129,7 +129,7 @@ Valarray，其項目為已將 `_Func` 套用至運算元 valarray 的項目。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回[valarray](../standard-library/valarray-class.md)類別的物件， **\<Type >** ，其長度為[大小](#size)，而每一個都是*我*`_Func((*this)[I])` 的元素。
+此成員函式會傳回[valarray](../standard-library/valarray-class.md)類別的物件，**\<類型 >**，其長度為[大小](#size)，而每一個都是*我*`_Func((*this)[I])`的元素。
 
 ### <a name="example"></a>範例
 
@@ -269,7 +269,7 @@ void free();
 
 ### <a name="remarks"></a>備註
 
-這個非標準函式相當於指派空的 valarray。 例如:
+這個非標準函式相當於指派空的 valarray。 例如：
 
 ```cpp
 valarray<T> v;
@@ -292,7 +292,7 @@ Type max() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會藉由套用**運算子 \<** 或**運算子**，在 > 類別 `Type` 的元素之間進行比較，以 `Type` 提供元素的運算子。
+成員函式會藉由套用**運算子\<** 或**運算子**，在 > 類別 `Type`的元素之間進行比較，以 `Type`提供元素的運算子。
 
 ### <a name="example"></a>範例
 
@@ -345,7 +345,7 @@ Type min() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會藉由套用**運算子 \<** 或**運算子**，在 > 類別 `Type` 的元素之間進行比較，以 `Type` 提供元素的運算子。
+成員函式會藉由套用**運算子\<** 或**運算子**，在 > 類別 `Type`的元素之間進行比較，以 `Type`提供元素的運算子。
 
 ### <a name="example"></a>範例
 
@@ -454,7 +454,7 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 Valarray，或是與要相除的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_and_eq"></a>運算子 &amp; =
+## <a name="op_and_eq"></a>運算子&amp;=
 
 取得陣列中項目的位元 **AND** 與指定的 valarray 中對應之項目或項目型別的值。
 
@@ -521,7 +521,7 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 元素類型的 valarray 或值，與要結合的運算元 valarray （以 element 為依據），其邏輯 `AND` 與運算元 valarray 相同。
 
 ### <a name="return-value"></a>傳回值
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="op_gt_gt_eq"></a>運算子 &gt; &gt; =
+## <a name="op_gt_gt_eq"></a>運算子&gt;&gt;=
 
 依指定的位置數目或依第二個 valarray 指定的項目數量，將運算元 valarray 的每個項目之位元右移。
 
@@ -594,7 +594,7 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 指出右移數量的值，或是其項目指出項目右移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt_lt_eq"></a>運算子 &lt; &lt; =
+## <a name="op_lt_lt_eq"></a>運算子&lt;&lt;=
 
 依指定的位置數目或依第二個 valarray 指定的項目數量，將運算元 valarray 的每個項目之位元左移。
 
@@ -665,7 +665,7 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 指出左移數量的值，或是其項目指出項目左移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
@@ -738,7 +738,7 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 Valarray，或是與要相乘的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
@@ -857,7 +857,7 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 Valarray，或是與要相加的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
@@ -977,7 +977,7 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 Valarray，或是與要從中減去的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
@@ -1044,7 +1044,7 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 Valarray，或是與要除的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
@@ -1121,22 +1121,22 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要複製到運算元 valarray 的 valarray。
 
-*val* \
+*val*\
 要指派給運算元 valarray 項目的值。
 
-*_Slicearray* \
+*_Slicearray*\
 要複製到運算元 valarray 的 slice_array。
 
-*_Gslicearray* \
+*_Gslicearray*\
 要複製到運算元 valarray 的 gslice_array。
 
-*_Maskarray* \
+*_Maskarray*\
 要複製到運算元 valarray 的 mask_array。
 
-*_Indarray* \
+*_Indarray*\
 要複製到運算元 valarray 的 indirect_array。
 
 ### <a name="return-value"></a>傳回值
@@ -1237,19 +1237,19 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>參數
 
-*_Off* \
+*_Off*\
 要指派值的項目索引。
 
-*_Slicearray* \
+*_Slicearray*\
 Valarray 的 slice_array，指定要選取或傳回至新 valarray 的子集。
 
-*_Gslicearray* \
+*_Gslicearray*\
 Valarray 的 gslice_array，指定要選取或傳回至新 valarray 的子集。
 
-*_Boolarray* \
+*_Boolarray*\
 Valarray 的 bool_array，指定要選取或傳回至新 valarray 的子集。
 
-*_Indarray* \
+*_Indarray*\
 Valarray 的 indirect_array，指定要選取或傳回至新 valarray 的子集。
 
 ### <a name="return-value"></a>傳回值
@@ -1258,7 +1258,7 @@ Valarray 的 indirect_array，指定要選取或傳回至新 valarray 的子集�
 
 ### <a name="remarks"></a>備註
 
-成員運算子會多載，以提供數種方式，從<strong>\*this</strong>所控制的專案序列中選取專案的順序。 由五個成員運算子構成的第一個群組搭配 [operator=](#op_eq) (和其他指派運算子) 的各種多載，以允許選擇性取代 (切割) 控制序列。 選取的項目必須存在。
+成員運算子會多載，以提供數種方式來選取專案的序列，這些專案是由<strong>\*此</strong>專案的控制項所控制。 由五個成員運算子構成的第一個群組搭配 [operator=](#op_eq) (和其他指派運算子) 的各種多載，以允許選擇性取代 (切割) 控制序列。 選取的項目必須存在。
 
 當使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 編譯之後，如果您嘗試存取的項目超出 valarray 界限，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
@@ -1278,7 +1278,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 Valarray，或是與要透過互斥邏輯 **XOR** 與運算元 valarray 項目合併的相同項目型別值。
 
 ### <a name="return-value"></a>傳回值
@@ -1287,7 +1287,7 @@ Valarray，其元素為運算元 valarray 和*right*的元素取向、獨佔邏�
 
 ### <a name="remarks"></a>備註
 
-互斥邏輯 (或稱為 **XOR**) 具有下列語意：假設項目 *e*1 和 *e*2，如果其中只有一個項目為 true，則 *e*1 **XOR** *e*2 為 **true**；如果這兩個項目均為 false 或 true，則為 **false**。
+獨佔邏輯 or （稱為**XOR**）具有下列的語義：指定專案*e*1 和*e*2，如果其中一個元素為 true，則*e*1 **XOR** *e*2 為**true** ;如果兩個專案都是 false 或兩個元素都是 true，則**為 false** 。
 
 ### <a name="example"></a>範例
 
@@ -1353,7 +1353,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 Valarray，或是與要透過 `OR` 與運算元 valarray 項目合併的相同項目型別值。
 
 ### <a name="return-value"></a>傳回值
@@ -1364,7 +1364,7 @@ Valarray，其元素是由*右*valarray 的運算元之元素的位 `OR`。
 
 位運算只能用來操作**char**和**int**資料類型和 variant 中的位，而不能用於**float**、 **double**、 **longdouble**、 **void**、 **bool**或其他更複雜的資料類型。
 
-位元 `OR` 與邏輯 `OR` 有相同的真值表，但是適用於個別位元層級上的資料型別。 假設位元 *b*1 和 *b*2，如果至少有一個位元為 true，則 *b*1 `OR` *b*2 為 **true**；如果兩個位元均為 false，則為 **false**。
+位元 `OR` 與邏輯 `OR` 有相同的真值表，但是適用於個別位元層級上的資料型別。 假設位*b*1 和*b*2，如果至少有一個位為 true，則*b*1 `OR` *b*2 為**true** ;如果兩個位都是 false，則**為 false** 。
 
 ### <a name="example"></a>範例
 
@@ -1440,7 +1440,7 @@ valarray<Type> operator~() const;
 
 位運算只能用來操作**char**和**int**資料類型和 variant 中的位，而不能用於**float**、 **double**、 **longdouble**、 **void**、 **bool**或其他更複雜的資料類型。
 
-位元 `NOT` 與邏輯 `NOT` 有相同的真值表，但是適用於個別位元層級上的資料型別。 假設位元 *b*，如果 *b* 為 false，則 ~ *b* 為 true，且如果 *b* 為 true，則為 false。 邏輯 **NOT**[operator!](#op_not) 適用於項目層級，會將所有非零的值視為 **true**，且結果為布林值的 valarray。 相反地，位 `NOToperator~` 可能會產生0或1以外的值 valarray，視位運算的結果而定。
+位元 `NOT` 與邏輯 `NOT` 有相同的真值表，但是適用於個別位元層級上的資料型別。 假設位元 *b*，如果 *b* 為 false，則 ~ *b* 為 true，且如果 *b* 為 true，則為 false。 邏輯 **NOT**[operator!](#op_not) 適用於項目層級，會將所有非零的值視為 **true**，且結果為布林值的 valarray。 相反地，位 `NOToperator~`可能會產生0或1以外的值 valarray，視位運算的結果而定。
 
 ### <a name="example"></a>範例
 
@@ -1538,10 +1538,10 @@ void resize(
 
 ### <a name="parameters"></a>參數
 
-*_Newsize* \
+*_Newsize*\
 重新調整大小的 valarray 中的項目數。
 
-*val* \
+*val*\
 要指定給重新調整大小的 valarray 項目的值。
 
 ### <a name="remarks"></a>備註
@@ -1765,7 +1765,7 @@ Type sum() const;
 
 ### <a name="remarks"></a>備註
 
-如果長度大於一，成員函式會藉由在類別 `Type` 的元素配對之間套用 `operator+=`，將值加入至總和，而運算子則需要為 `Type` 類型的元素提供。
+如果長度大於一，成員函式會藉由在類別 `Type`的元素配對之間套用 `operator+=`，將值加入至總和，而運算子則需要為 `Type`類型的元素提供。
 
 ### <a name="example"></a>範例
 
@@ -1811,7 +1811,7 @@ void swap(valarray& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 `valarray`，提供要交換的項目。
 
 ### <a name="remarks"></a>備註
@@ -1863,28 +1863,28 @@ valarray(
 *計數*\
 要放在 valarray 中的項目數目。
 
-*Val* \
+*Val*\
 用來初始化 valarray 中之項目的值。
 
-*Ptr* \
+*Ptr*\
 值指標，這些值要用來初始化 valarray 中之項目。
 
-*Right* \
+*Right*\
 用來初始化新 valarray 的現有 valarray。
 
-*SliceArray* \
+*SliceArray*\
 slice_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*GsliceArray* \
+*GsliceArray*\
 gslice_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*MaskArray* \
+*MaskArray*\
 mask_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*IndArray* \
+*IndArray*\
 indirect_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*IList* \
+*IList*\
 initializer_list，包含欲複製的項目。
 
 ### <a name="remarks"></a>備註
@@ -2008,6 +2008,6 @@ The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

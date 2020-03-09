@@ -3,11 +3,11 @@ title: Trivial、標準配置、POD 與常值類型
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934209"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865769"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial、標準配置、POD 與常值類型
 
@@ -96,7 +96,7 @@ struct Derived : public Base
 };
 ```
 
-在此範例中，因為 `Base` 沒有非靜態的資料成員，所以 `Derived` 具有標準配置：
+在此範例中，因為 `Derived` 沒有非靜態的資料成員，所以 `Base` 具有標準配置：
 
 ```cpp
 struct Base

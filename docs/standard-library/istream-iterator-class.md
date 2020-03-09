@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447748"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869886"
 ---
-# <a name="istreamiterator-class"></a>istream_iterator 類別
+# <a name="istream_iterator-class"></a>istream_iterator 類別
 
-描述輸入迭代器物件。 它會從輸入資料流擷取 `Type` 類別的物件，其中會透過它所儲存的物件 (屬於 `basic_istream`< `CharType`, `Traits` 的 `pointer` 類型) 來存取該資料流。
+描述輸入迭代器物件。 它會從輸入資料流擷取 `Type` 類別的物件，其中會透過它所儲存的物件 (屬於 `pointer``basic_istream`< , `CharType` 的 `Traits` 類型) 來存取該資料流。
 
 ## <a name="syntax"></a>語法
 
@@ -36,16 +36,16 @@ class istream_iterator
 
 ### <a name="parameters"></a>參數
 
-*型*\
+*類型*\
 要輸入資料流擷取的物件類型。
 
 *CharType*\
-類型，表示 `istream_iterator` 的字元類型。 這個引數是選擇性的, 而且預設值為**char**。
+類型，表示 `istream_iterator` 的字元類型。 這個引數是選擇性的，而且預設值為**char**。
 
-*共同*\
+*特性*\
 類型，表示 `istream_iterator` 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`< `CharType`>。
 
-*長途電話*\
+*距離*\
 帶正負號的整數類資料類型，表示 `istream_iterator` 的差異類型。 這個引數是選擇性的，而且預設值是 `ptrdiff_t`。
 
 在建構或遞增具有非 null 儲存指標的 istream_iterator 類別物件之後，物件會嘗試從關聯的輸入資料流擷取和儲存 `Type` 類型物件。 如果擷取失敗，物件是實際上會將儲存的指標取代為 null 指標，因而建立序列結尾指標。
@@ -58,13 +58,13 @@ class istream_iterator
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，提供 `istream_iterator` 的字元類型。|
 |[istream_type](#istream_type)|類型，提供 `istream_iterator` 的資料流類型。|
 |[traits_type](#traits_type)|類型，提供 `istream_iterator` 的字元特性類型。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -74,9 +74,9 @@ class istream_iterator
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<iterator>
+**標頭：** \<iterator >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  istream_iterator::char_type
 
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Chartype`的同義字。
+這個類型與樣板參數 `Chartype`同義。
 
 ### <a name="example"></a>範例
 
@@ -143,7 +143,7 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會使用 Null 指標將輸入資料流指標初始化，並建立資料流結尾迭代器。 第二個函式會使用 *& _Istr*將輸入資料流程指標初始化, 然後嘗試解壓縮並儲存類型`Type`的物件。
+第一個建構函式會使用 Null 指標將輸入資料流指標初始化，並建立資料流結尾迭代器。 第二個函式會使用 *& _Istr*初始化輸入資料流程指標，然後嘗試將類型的物件解壓縮並儲存 `Type`。
 
 資料流結尾迭代器可以用來測試 `istream_iterator` 是否已到達資料流的結尾。
 
@@ -191,11 +191,11 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與 `basic_istream`\< **CharType**, **Traits**> 同義。
+此類型是 `basic_istream`\< **CharType**，**特性**> 的同義字。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `istream_type` 的範例，請參閱 [istream_iterator](#istream_iterator)。
+如需如何宣告及使用 [ 的範例，請參閱 ](#istream_iterator)istream_iterator`istream_type`。
 
 ## <a name="op_star"></a>  istream_iterator::operator*
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>傳回值
 
-類型`Type`的預存物件。
+`Type`類型的預存物件。
 
 ### <a name="example"></a>範例
 
@@ -255,7 +255,7 @@ const Type* operator->() const;
 
 ### <a name="remarks"></a>備註
 
-`i->m`相當於`(*i).m`
+`i->m` 相當於 `(*i).m`
 
 第一個運算子會傳回 `&*this`。
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員運算子會傳回從輸入資料流程解壓縮之類型`Type`的遞增物件參考, 而第二個成員函式會傳回物件的複本。
+第一個成員運算子會傳回類型之遞增物件的參考，`Type` 從輸入資料流程中解壓縮，而第二個成員函式會傳回物件的複本。
 
 ### <a name="example"></a>範例
 
@@ -390,4 +390,4 @@ int main( )
 [iterator 結構](../standard-library/iterator-struct.md)\
 [\<iterator>](../standard-library/iterator.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)

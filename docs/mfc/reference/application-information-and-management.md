@@ -6,11 +6,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: c372f43bc5184349e70f29b6c0ae6a490f2102ed
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821866"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854541"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -584,7 +584,7 @@ HINSTANCE AFXAPI AfxLoadLibraryEx(LPCTSTR lpFileName, HANDLE hFile, DWORD dwFlag
 如果未指定路徑，而且省略副檔名，則為預設的副檔名。已附加 DLL。 不過，檔案名字串可以包含尾端的點字元（.），表示模組名稱沒有副檔名。 未指定路徑時，此函式會使用[桌面應用程式的搜尋順序](/windows/win32/dlls/dynamic-link-library-search-order#search-order-for-desktop-applications)。
 
 *hFile*\
-這個參數會保留供日後使用。 它必須是 Null。
+這個參數保留給未來使用。 它必須是 Null。
 
 *dwFlags*\
 載入模組時要採取的動作。 如果未指定任何旗標，則此函式的行為會與 `AfxLoadLibrary` 函式相同。 此參數的可能值會在[LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)檔中說明。
@@ -869,7 +869,7 @@ BOOL AFXAPI AfxWinInit(
 
   **標頭**afxwin.h。h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宏和全域](mfc-macros-and-globals.md)\
 [CWinApp 類別](cwinapp-class.md)\

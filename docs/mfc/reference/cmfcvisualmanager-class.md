@@ -345,17 +345,17 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504706"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866678"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 類別
 
 提供在全域層級上變更應用程式外觀的支援。 `CMFCVisualManager` 類別會使用一致的樣式，與提供繪製應用程式 GUI 控制項指令的類別搭配使用。 這些其他類別稱為視覺管理員，並且繼承自 `CMFCBaseVisualManager`。
 
-如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
+如需詳細資訊，請參閱位於**VC\\atlmfc\\src\\** Visual Studio 安裝的 mfc 資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -375,187 +375,187 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCVisualManager::AdjustFrames](#adjustframes)||
-|[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
-|[CMFCVisualManager::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|由架構呼叫, 以判斷是否應一律使用醒目提示色彩繪製3D 索引標籤。|
-|[CMFCVisualManager::DestroyInstance](#destroyinstance)||
-|[CMFCVisualManager::DoDrawHeaderSortArrow](#dodrawheadersortarrow)||
-|[CMFCVisualManager::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)||
-|[CMFCVisualManager::DrawPushButtonWinXP](#drawpushbuttonwinxp)||
-|[CMFCVisualManager::DrawTextOnGlass](#drawtextonglass)||
-|[CMFCVisualManager::GetAutoHideButtonTextColor](#getautohidebuttontextcolor)|由架構呼叫, 以取得自動隱藏按鈕的文字色彩。|
-|[CMFCVisualManager::GetButtonExtraBorder](#getbuttonextraborder)|由架構呼叫, 以取得目前的視覺管理員繪製按鈕所需的增加按鈕大小。|
-|[CMFCVisualManager::GetCaptionBarTextColor](#getcaptionbartextcolor)|由架構呼叫以取得標題列的文字色彩。|
-|[CMFCVisualManager::GetDockingTabsBordersSize](#getdockingtabsborderssize)|由架構呼叫, 以抓取停駐索引標籤式列的框線大小。|
-|[CMFCVisualManager::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
-|[CMFCVisualManager::GetInstance](#getinstance)|傳回`CMFCVisualManager`物件的指標。|
-|[CMFCVisualManager::GetMDITabsBordersSize](#getmditabsborderssize)|由架構呼叫以取得 MDITabs 視窗的框線大小。|
-|[CMFCVisualManager::GetMenuItemTextColor](#getmenuitemtextcolor)||
-|[CMFCVisualManager::GetMenuShadowDepth](#getmenushadowdepth)|傳回值, 決定功能表陰影的寬度和高度。|
-|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|由架構呼叫, 以根據目前的視覺效果管理員判斷系統按鈕的大小。 系統按鈕是主要畫面格標題中的按鈕, 會對應到**關閉**、**最小化**、**最大化**和**還原**的命令。|
-|[CMFCVisualManager::GetPopupMenuBorderSize](#getpopupmenubordersize)|由架構呼叫, 以取得快顯功能表的框線大小。|
-|[CMFCVisualManager::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|由架構呼叫以取得屬性清單的背景色彩。|
-|[CMFCVisualManager::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|由架構呼叫以取出屬性清單的文字色彩。|
-|[CMFCVisualManager::GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||
-|[CMFCVisualManager::GetRibbonPopupBorderSize](#getribbonpopupbordersize)||
-|[CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||
-|[CMFCVisualManager::GetRibbonSliderColors](#getribbonslidercolors)||
-|[CMFCVisualManager::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||
-|[CMFCVisualManager::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)||
-|[CMFCVisualManager::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)||
-|[CMFCVisualManager::GetSmartDockingTheme](#getsmartdockingtheme)|傳回用來顯示智慧停駐標記的主題。|
-|[CMFCVisualManager::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||
-|[CMFCVisualManager::GetTabFrameColors](#gettabframecolors)|由架構呼叫, 以在繪製索引標籤框架時, 取得要使用的色彩集。|
-|[CMFCVisualManager::GetTabTextColor](#gettabtextcolor)||
-|[CMFCVisualManager::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|由架構呼叫, 以取得工具列按鈕上文字的目前色彩。 此色彩會根據目前的視覺效果管理員和按鈕狀態而有所不同。|
-|[CMFCVisualManager::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)|由架構呼叫, 以決定在停用的工具列元素上顯示的文字色彩。|
-|[CMFCVisualManager::GetToolbarHighlightColor](#gettoolbarhighlightcolor)||
-|[CMFCVisualManager::GetToolTipInfo](#gettooltipinfo)||
-|[CMFCVisualManager::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|指定自動隱藏按鈕是否重迭。|
-|[CMFCVisualManager::IsDockingTabHasBorder](#isdockingtabhasborder)|指定目前的視覺效果管理員是否在索引標籤式停駐線周圍繪製框線。|
-|[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)|指定停用的影像是否應該浮凸。|
-|[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)|由架構呼叫以判斷工具列或功能表上的非使用中影像是否呈現暗灰色。|
-|[CMFCVisualManager::IsMenuFlatLook](#ismenuflatlook)|指定功能表按鈕是否有壓平合併的外觀。|
-|[CMFCVisualManager::IsOfficeXPStyleMenus](#isofficexpstylemenus)|指定視覺效果管理員是否要執行 Office XP 樣式的功能表。|
-|[CMFCVisualManager::IsOwnerDrawCaption](#isownerdrawcaption)|指定目前的視覺效果管理員是否執行框架視窗的主控描繪標題。|
-|[CMFCVisualManager::IsShadowHighlightedImage](#isshadowhighlightedimage)|指定反白顯示的影像是否有陰影。|
-|[CMFCVisualManager::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|當它繪製自動隱藏按鈕的框線時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawBarGripper](#ondrawbargripper)|由架構在繪製控制項列的移駐夾時呼叫。 使用者必須按一下移駐夾, 才能移動控制列。|
-|[CMFCVisualManager::OnDrawBrowseButton](#ondrawbrowsebutton)|在繪製屬於編輯控制項 ( [CMFCEditBrowseCtrl 類別](../../mfc/reference/cmfceditbrowsectrl-class.md)) 的瀏覽按鈕時由架構呼叫。|
-|[CMFCVisualManager::OnDrawButtonBorder](#ondrawbuttonborder)|在繪製工具列按鈕的框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawButtonSeparator](#ondrawbuttonseparator)||
-|[CMFCVisualManager::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|在繪製標題列框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawCaptionBarButtonBorder](#ondrawcaptionbarbuttonborder)||
-|[CMFCVisualManager::OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||
-|[CMFCVisualManager::OnDrawCaptionButton](#ondrawcaptionbutton)|在繪製標題按鈕時由架構呼叫。|
-|[CMFCVisualManager::OnDrawCheckBox](#ondrawcheckbox)||
-|[CMFCVisualManager::OnDrawCheckBoxEx](#ondrawcheckboxex)||
-|[CMFCVisualManager::OnDrawComboBorder](#ondrawcomboborder)|在繪製下拉式方塊按鈕的框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawComboDropButton](#ondrawcombodropbutton)|在繪製下拉式方塊下拉按鈕時由架構呼叫。|
-|[CMFCVisualManager::OnDrawControlBorder](#ondrawcontrolborder)||
-|[CMFCVisualManager::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)|由架構在繪製預設的功能區影像時呼叫。|
-|[CMFCVisualManager::OnDrawEditBorder](#ondraweditborder)|在[CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)物件周圍繪製框線時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawExpandingBox](#ondrawexpandingbox)||
-|[CMFCVisualManager::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|在繪製浮動工具列的框線時由架構呼叫。 浮動工具列是顯示為迷你框架視窗的工具列。|
-|[CMFCVisualManager::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|在繪製包含標題控制項的框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|在繪製標題控制項排序箭號時由架構呼叫。|
-|[CMFCVisualManager::OnDrawMenuArrowOnCustomizeList](#ondrawmenuarrowoncustomizelist)||
-|[CMFCVisualManager::OnDrawMenuBorder](#ondrawmenuborder)|在繪製功能表框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawMenuCheck](#ondrawmenucheck)||
-|[CMFCVisualManager::OnDrawMenuItemButton](#ondrawmenuitembutton)||
-|[CMFCVisualManager::OnDrawMenuLabel](#ondrawmenulabel)||
-|[CMFCVisualManager::OnDrawMenuResizeBar](#ondrawmenuresizebar)||
-|[CMFCVisualManager::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|在繪製功能表捲軸按鈕時由架構呼叫。|
-|[CMFCVisualManager::OnDrawMenuShadow](#ondrawmenushadow)||
-|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|當它繪製功能表系統按鈕**關閉**、**最小化**、**最大化**和**還原**時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawMiniFrameBorder](#ondrawminiframeborder)||
-|[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|在繪製 Outlook 橫條的分隔器時由架構呼叫。 分隔器是用來分組控制項的水準橫條。|
-|[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|在繪製 Outlook 頁面按鈕的框線時由架構呼叫。 如果 Outlook 工具列窗格所包含的按鈕多於它可以顯示的數目, outlook 頁面按鈕就會出現。|
-|[CMFCVisualManager::OnDrawPaneBorder](#ondrawpaneborder)|由架構在繪製[CPane 類別](../../mfc/reference/cpane-class.md)的框線時呼叫。|
-|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|由架構在繪製的標題`CPane`時呼叫。|
-|[CMFCVisualManager::OnDrawPaneDivider](#ondrawpanedivider)||
-|[CMFCVisualManager::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)||
-|[CMFCVisualManager::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)||
-|[CMFCVisualManager::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||
-|[CMFCVisualManager::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)|當它在功能區上繪製**主要按鈕**時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)|在繪製功能區按鈕的框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|當它在功能區上繪製一組按鈕時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonCaption](#ondrawribboncaption)|當架構在繪製主框架的標題, 但只有在功能區列與框架整合時, 才會呼叫。|
-|[CMFCVisualManager::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)|當它繪製位於功能區列上的標題按鈕時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonCategory](#ondrawribboncategory)|由架構在繪製功能區分類時呼叫。|
-|[CMFCVisualManager::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|在繪製功能區分類的標題時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||
-|[CMFCVisualManager::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|由架構在繪製功能區分類的索引標籤時呼叫。|
-|[CMFCVisualManager::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||
-|[CMFCVisualManager::OnDrawRibbonColorPaletteBox](#ondrawribboncolorpalettebox)||
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext](#ondrawribbondefaultpanebuttoncontext)||
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)|在繪製功能區面板預設按鈕時由架構呼叫。 當使用者縮小功能區面板, 使其太小而無法顯示功能區專案時, 就會出現 [預設] 按鈕。 系統會改為繪製預設按鈕, 並在下拉式功能表中將功能區專案新增為專案。|
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||
-|[CMFCVisualManager::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||
-|[CMFCVisualManager::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||
-|[CMFCVisualManager::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||
-|[CMFCVisualManager::OnDrawRibbonLabel](#ondrawribbonlabel)|由架構在繪製功能區標籤時呼叫。|
-|[CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)|在繪製位於**主要**面板上之功能區按鈕的框線時, 由架構呼叫。 [**主要**面板] 是使用者按一下**主要按鈕**時所顯示的面板。|
-|[CMFCVisualManager::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)|在**主要**面板周圍繪製框架時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||
-|[CMFCVisualManager::OnDrawRibbonPanel](#ondrawribbonpanel)|在繪製功能區面板時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|在繪製功能區面板的標題時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|由架構在繪製[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)物件時呼叫。|
-|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|當它在功能區的**快速存取工具列**上繪製分隔符號時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|當架構在 [最近使用的檔案] 清單周圍繪製畫面格時呼叫。|
-|[CMFCVisualManager::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|由架構在繪製[CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)物件的通道時呼叫。|
-|[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|在繪製`CMFCRibbonSlider`物件的捲動方塊時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|在繪製`CMFCRibbonSlider`物件的縮放按鈕時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|在繪製功能區的狀態列窗格時由架構呼叫。|
-|[CMFCVisualManager::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|當它在一組功能區索引標籤周圍繪製框架時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawScrollButtons](#ondrawscrollbuttons)||
-|[CMFCVisualManager::OnDrawSeparator](#ondrawseparator)|在繪製分隔符號時由架構呼叫。 分隔符號通常用於控制列, 以分隔圖示群組。|
-|[CMFCVisualManager::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||
-|[CMFCVisualManager::OnDrawSpinButtons](#ondrawspinbuttons)|在繪製微調按鈕時由架構呼叫。|
-|[CMFCVisualManager::OnDrawSplitterBorder](#ondrawsplitterborder)|在繪製分割視窗的框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawSplitterBox](#ondrawsplitterbox)|在繪製分割視窗的分隔器拖曳方塊時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|當它繪製狀態列窗格的框線時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|在繪製狀態列進度指標時由架構呼叫。|
-|[CMFCVisualManager::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|在繪製狀態列大小方塊時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawTab](#ondrawtab)|由架構在繪製[CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)物件時呼叫。|
-|[CMFCVisualManager::OnDrawTabCloseButton](#ondrawtabclosebutton)|當它在使用中的索引標籤上繪製 [**關閉**] 按鈕時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawTabContent](#ondrawtabcontent)|由架構在繪製索引標籤內部 (影像、文字) 時呼叫。|
-|[CMFCVisualManager::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|在繪製索引標籤按鈕的框線時由架構呼叫。|
-|[CMFCVisualManager::OnDrawTask](#ondrawtask)|在工作窗格上繪製工作時由架構呼叫。|
-|[CMFCVisualManager::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|當它在工作窗格上的群組區域周圍繪製框線時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|當它在工作窗格上繪製工作組的標題時, 由架構呼叫。|
-|[CMFCVisualManager::OnDrawTasksGroupIcon](#ondrawtasksgroupicon)||
-|[CMFCVisualManager::OnDrawTearOffCaption](#ondrawtearoffcaption)|由架構在繪製卸載線的卸載標題時呼叫。|
-|[CMFCVisualManager::OnDrawToolBoxFrame](#ondrawtoolboxframe)||
-|[CMFCVisualManager::OnEraseMDIClientArea](#onerasemdiclientarea)|當它清除 MDI 工作區時, 由架構呼叫。|
-|[CMFCVisualManager::OnErasePopupWindowButton](#onerasepopupwindowbutton)||
-|[CMFCVisualManager::OnEraseTabsArea](#onerasetabsarea)|當它清除索引標籤視窗中的索引標籤區域時, 由架構呼叫。|
-|[CMFCVisualManager::OnEraseTabsButton](#onerasetabsbutton)|當它清除索引標籤按鈕的圖示和文字時, 由架構呼叫。|
-|[CMFCVisualManager::OnEraseTabsFrame](#onerasetabsframe)|在清除索引標籤框架時由架構呼叫。|
-|[CMFCVisualManager::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|當它填滿自動隱藏按鈕的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillBarBackground](#onfillbarbackground)|當它填滿控制列的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillButtonInterior](#onfillbuttoninterior)|當它填滿工具列按鈕的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillCaptionBarButton](#onfillcaptionbarbutton)||
-|[CMFCVisualManager::OnFillCommandsListBackground](#onfillcommandslistbackground)|由架構在填滿屬於命令清單的工具列按鈕背景時呼叫, 而後者則是自訂對話方塊的一部分。|
-|[CMFCVisualManager::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|當它填滿標題控制項的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillMiniFrameCaption](#onfillminiframecaption)|當它填滿迷你框架視窗的標題時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|當它填滿 Outlook 橫條圖標題的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillOutlookPageButton](#onfilloutlookpagebutton)|當它填滿 Outlook 頁面按鈕的內部時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|當它填滿快顯視窗的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillRibbonButton](#onfillribbonbutton)|當它填滿功能區按鈕的內部時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillRibbonEdit](#onfillribbonedit)|當它填滿功能區編輯控制項的內部時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)|當它填滿位於**主要**面板上的功能區按鈕內部時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillRibbonMenuFrame](#onfillribbonmenuframe)|當它填滿主要功能區面板的功能表框架時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||
-|[CMFCVisualManager::OnFillSplitterBackground](#onfillsplitterbackground)|當它填滿分割視窗的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillTab](#onfilltab)|當它填滿索引標籤的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|當它填滿[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)上[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件的內部時, 由架構呼叫。|
-|[CMFCVisualManager::OnFillTasksPaneBackground](#onfilltaskspanebackground)|當它填滿`CMFCTasksPane`控制項的背景時, 由架構呼叫。|
-|[CMFCVisualManager::OnHighlightMenuItem](#onhighlightmenuitem)|在繪製反白顯示的功能表項目時由架構呼叫。|
-|[CMFCVisualManager::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|由架構在繪製反白顯示且很少使用的功能表項目時呼叫。|
-|[CMFCVisualManager::OnNcPaint](#onncpaint)|由架構在繪製非工作區時呼叫。|
-|[CMFCVisualManager::OnSetWindowRegion](#onsetwindowregion)|由架構在設定包含框架和快顯功能表的區域時呼叫。|
-|[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|架構在變更系統色彩設定時呼叫。|
-|[CMFCVisualManager::RedrawAll](#redrawall)|重繪應用程式中的所有控制列。|
-|[CMFCVisualManager::RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||
-|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|設定預設的視覺管理員。|
-|[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|啟用或停用已停用工具列影像的浮凸模式。|
-|[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|啟用或停用功能表或工具列上非使用中影像的光源效果。|
-|[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|設定旗標, 指出應用程式功能表按鈕是否有壓平合併的外觀。|
-|[CMFCVisualManager::SetMenuShadowDepth](#setmenushadowdepth)|設定功能表陰影的寬度和高度。|
-|[CMFCVisualManager::SetShadowHighlightedImage](#setshadowhighlightedimage)|設定旗標, 指出是否要在呈現反白顯示的影像時顯示陰影。|
+|[CMFCVisualManager：： AdjustFrames](#adjustframes)||
+|[CMFCVisualManager：： AdjustToolbars](#adjusttoolbars)||
+|[CMFCVisualManager：： AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|由架構呼叫，以判斷是否應一律使用醒目提示色彩繪製3D 索引標籤。|
+|[CMFCVisualManager：:D estroyInstance](#destroyinstance)||
+|[CMFCVisualManager：:D oDrawHeaderSortArrow](#dodrawheadersortarrow)||
+|[CMFCVisualManager：:D rawComboDropButtonWinXP](#drawcombodropbuttonwinxp)||
+|[CMFCVisualManager：:D rawPushButtonWinXP](#drawpushbuttonwinxp)||
+|[CMFCVisualManager：:D rawTextOnGlass](#drawtextonglass)||
+|[CMFCVisualManager：： GetAutoHideButtonTextColor](#getautohidebuttontextcolor)|由架構呼叫，以取得自動隱藏按鈕的文字色彩。|
+|[CMFCVisualManager：： GetButtonExtraBorder](#getbuttonextraborder)|由架構呼叫，以取得目前的視覺管理員繪製按鈕所需的增加按鈕大小。|
+|[CMFCVisualManager：： GetCaptionBarTextColor](#getcaptionbartextcolor)|由架構呼叫以取得標題列的文字色彩。|
+|[CMFCVisualManager：： GetDockingTabsBordersSize](#getdockingtabsborderssize)|由架構呼叫，以抓取停駐索引標籤式列的框線大小。|
+|[CMFCVisualManager：： GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
+|[CMFCVisualManager：： GetInstance](#getinstance)|傳回 `CMFCVisualManager` 物件的指標。|
+|[CMFCVisualManager：： GetMDITabsBordersSize](#getmditabsborderssize)|由架構呼叫以取得 MDITabs 視窗的框線大小。|
+|[CMFCVisualManager：： GetMenuItemTextColor](#getmenuitemtextcolor)||
+|[CMFCVisualManager：： GetMenuShadowDepth](#getmenushadowdepth)|傳回值，決定功能表陰影的寬度和高度。|
+|[CMFCVisualManager：： GetNcBtnSize](#getncbtnsize)|由架構呼叫，以根據目前的視覺效果管理員判斷系統按鈕的大小。 系統按鈕是主要畫面格標題中的按鈕，會對應到**關閉**、**最小化**、**最大化**和**還原**的命令。|
+|[CMFCVisualManager：： GetPopupMenuBorderSize](#getpopupmenubordersize)|由架構呼叫，以取得快顯功能表的框線大小。|
+|[CMFCVisualManager：： GetPropertyGridGroupColor](#getpropertygridgroupcolor)|由架構呼叫以取得屬性清單的背景色彩。|
+|[CMFCVisualManager：： GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|由架構呼叫以取出屬性清單的文字色彩。|
+|[CMFCVisualManager：： GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||
+|[CMFCVisualManager：： GetRibbonPopupBorderSize](#getribbonpopupbordersize)||
+|[CMFCVisualManager：： GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||
+|[CMFCVisualManager：： GetRibbonSliderColors](#getribbonslidercolors)||
+|[CMFCVisualManager：： GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||
+|[CMFCVisualManager：： GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)||
+|[CMFCVisualManager：： GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)||
+|[CMFCVisualManager：： GetSmartDockingTheme](#getsmartdockingtheme)|傳回用來顯示智慧停駐標記的主題。|
+|[CMFCVisualManager：： GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||
+|[CMFCVisualManager：： GetTabFrameColors](#gettabframecolors)|由架構呼叫，以在繪製索引標籤框架時，取得要使用的色彩集。|
+|[CMFCVisualManager：： GetTabTextColor](#gettabtextcolor)||
+|[CMFCVisualManager：： GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|由架構呼叫，以取得工具列按鈕上文字的目前色彩。 此色彩會根據目前的視覺效果管理員和按鈕狀態而有所不同。|
+|[CMFCVisualManager：： GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)|由架構呼叫，以決定在停用的工具列元素上顯示的文字色彩。|
+|[CMFCVisualManager：： GetToolbarHighlightColor](#gettoolbarhighlightcolor)||
+|[CMFCVisualManager：： GetToolTipInfo](#gettooltipinfo)||
+|[CMFCVisualManager：： HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|指定自動隱藏按鈕是否重迭。|
+|[CMFCVisualManager：： IsDockingTabHasBorder](#isdockingtabhasborder)|指定目前的視覺效果管理員是否在索引標籤式停駐線周圍繪製框線。|
+|[CMFCVisualManager：： IsEmbossDisabledImage](#isembossdisabledimage)|指定停用的影像是否應該浮凸。|
+|[CMFCVisualManager：： IsFadeInactiveImage](#isfadeinactiveimage)|由架構呼叫以判斷工具列或功能表上的非使用中影像是否呈現暗灰色。|
+|[CMFCVisualManager：： IsMenuFlatLook](#ismenuflatlook)|指定功能表按鈕是否有壓平合併的外觀。|
+|[CMFCVisualManager：： IsOfficeXPStyleMenus](#isofficexpstylemenus)|指定視覺效果管理員是否要執行 Office XP 樣式的功能表。|
+|[CMFCVisualManager：： IsOwnerDrawCaption](#isownerdrawcaption)|指定目前的視覺效果管理員是否執行框架視窗的主控描繪標題。|
+|[CMFCVisualManager：： IsShadowHighlightedImage](#isshadowhighlightedimage)|指定反白顯示的影像是否有陰影。|
+|[CMFCVisualManager：： OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|當它繪製自動隱藏按鈕的框線時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawBarGripper](#ondrawbargripper)|由架構在繪製控制項列的移駐夾時呼叫。 使用者必須按一下移駐夾，才能移動控制列。|
+|[CMFCVisualManager：： OnDrawBrowseButton](#ondrawbrowsebutton)|在繪製屬於編輯控制項（ [CMFCEditBrowseCtrl 類別](../../mfc/reference/cmfceditbrowsectrl-class.md)）的瀏覽按鈕時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawButtonBorder](#ondrawbuttonborder)|在繪製工具列按鈕的框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawButtonSeparator](#ondrawbuttonseparator)||
+|[CMFCVisualManager：： OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|在繪製標題列框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawCaptionBarButtonBorder](#ondrawcaptionbarbuttonborder)||
+|[CMFCVisualManager：： OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||
+|[CMFCVisualManager：： OnDrawCaptionButton](#ondrawcaptionbutton)|在繪製標題按鈕時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawCheckBox](#ondrawcheckbox)||
+|[CMFCVisualManager：： OnDrawCheckBoxEx](#ondrawcheckboxex)||
+|[CMFCVisualManager：： OnDrawComboBorder](#ondrawcomboborder)|在繪製下拉式方塊按鈕的框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawComboDropButton](#ondrawcombodropbutton)|在繪製下拉式方塊下拉按鈕時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawControlBorder](#ondrawcontrolborder)||
+|[CMFCVisualManager：： OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)|由架構在繪製預設的功能區影像時呼叫。|
+|[CMFCVisualManager：： OnDrawEditBorder](#ondraweditborder)|在[CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)物件周圍繪製框線時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawExpandingBox](#ondrawexpandingbox)||
+|[CMFCVisualManager：： OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|在繪製浮動工具列的框線時由架構呼叫。 浮動工具列是顯示為迷你框架視窗的工具列。|
+|[CMFCVisualManager：： OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|在繪製包含標題控制項的框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|在繪製標題控制項排序箭號時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawMenuArrowOnCustomizeList](#ondrawmenuarrowoncustomizelist)||
+|[CMFCVisualManager：： OnDrawMenuBorder](#ondrawmenuborder)|在繪製功能表框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawMenuCheck](#ondrawmenucheck)||
+|[CMFCVisualManager：： OnDrawMenuItemButton](#ondrawmenuitembutton)||
+|[CMFCVisualManager：： OnDrawMenuLabel](#ondrawmenulabel)||
+|[CMFCVisualManager：： OnDrawMenuResizeBar](#ondrawmenuresizebar)||
+|[CMFCVisualManager：： OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|在繪製功能表捲軸按鈕時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawMenuShadow](#ondrawmenushadow)||
+|[CMFCVisualManager：： OnDrawMenuSystemButton](#ondrawmenusystembutton)|當它繪製功能表系統按鈕**關閉**、**最小化**、**最大化**和**還原**時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawMiniFrameBorder](#ondrawminiframeborder)||
+|[CMFCVisualManager：： OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|在繪製 Outlook 橫條的分隔器時由架構呼叫。 分隔器是用來分組控制項的水準橫條。|
+|[CMFCVisualManager：： OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|在繪製 Outlook 頁面按鈕的框線時由架構呼叫。 如果 Outlook 工具列窗格所包含的按鈕多於它可以顯示的數目，outlook 頁面按鈕就會出現。|
+|[CMFCVisualManager：： OnDrawPaneBorder](#ondrawpaneborder)|由架構在繪製[CPane 類別](../../mfc/reference/cpane-class.md)的框線時呼叫。|
+|[CMFCVisualManager：： OnDrawPaneCaption](#ondrawpanecaption)|在繪製 `CPane`的標題時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawPaneDivider](#ondrawpanedivider)||
+|[CMFCVisualManager：： OnDrawPopupWindowBorder](#ondrawpopupwindowborder)||
+|[CMFCVisualManager：： OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)||
+|[CMFCVisualManager：： OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||
+|[CMFCVisualManager：： OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)|當它在功能區上繪製**主要按鈕**時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)|在繪製功能區按鈕的框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|當它在功能區上繪製一組按鈕時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonCaption](#ondrawribboncaption)|當架構在繪製主框架的標題，但只有在功能區列與框架整合時，才會呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)|當它繪製位於功能區列上的標題按鈕時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonCategory](#ondrawribboncategory)|由架構在繪製功能區分類時呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|在繪製功能區分類的標題時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||
+|[CMFCVisualManager：： OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|由架構在繪製功能區分類的索引標籤時呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||
+|[CMFCVisualManager：： OnDrawRibbonColorPaletteBox](#ondrawribboncolorpalettebox)||
+|[CMFCVisualManager：： OnDrawRibbonDefaultPaneButtonCoNtext](#ondrawribbondefaultpanebuttoncontext)||
+|[CMFCVisualManager：： OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)|在繪製功能區面板預設按鈕時由架構呼叫。 當使用者縮小功能區面板，使其太小而無法顯示功能區專案時，就會出現 [預設] 按鈕。 系統會改為繪製預設按鈕，並在下拉式功能表中將功能區專案新增為專案。|
+|[CMFCVisualManager：： OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||
+|[CMFCVisualManager：： OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||
+|[CMFCVisualManager：： OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||
+|[CMFCVisualManager：： OnDrawRibbonKeyTip](#ondrawribbonkeytip)||
+|[CMFCVisualManager：： OnDrawRibbonLabel](#ondrawribbonlabel)|由架構在繪製功能區標籤時呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)|在繪製位於**主要**面板上之功能區按鈕的框線時，由架構呼叫。 [**主要**面板] 是使用者按一下**主要按鈕**時所顯示的面板。|
+|[CMFCVisualManager：： OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)|在**主要**面板周圍繪製框架時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||
+|[CMFCVisualManager：： OnDrawRibbonPanel](#ondrawribbonpanel)|在繪製功能區面板時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|在繪製功能區面板的標題時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|由架構在繪製[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)物件時呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|當它在功能區的**快速存取工具列**上繪製分隔符號時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|當架構在 [最近使用的檔案] 清單周圍繪製畫面格時呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|由架構在繪製[CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)物件的通道時呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|在繪製 `CMFCRibbonSlider` 物件的捲動方塊時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|在繪製 `CMFCRibbonSlider` 物件的縮放按鈕時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|在繪製功能區的狀態列窗格時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|當它在一組功能區索引標籤周圍繪製框架時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawScrollButtons](#ondrawscrollbuttons)||
+|[CMFCVisualManager：： OnDrawSeparator](#ondrawseparator)|在繪製分隔符號時由架構呼叫。 分隔符號通常用於控制列，以分隔圖示群組。|
+|[CMFCVisualManager：： OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||
+|[CMFCVisualManager：： OnDrawSpinButtons](#ondrawspinbuttons)|在繪製微調按鈕時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawSplitterBorder](#ondrawsplitterborder)|在繪製分割視窗的框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawSplitterBox](#ondrawsplitterbox)|在繪製分割視窗的分隔器拖曳方塊時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|當它繪製狀態列窗格的框線時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawStatusBarProgress](#ondrawstatusbarprogress)|在繪製狀態列進度指標時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|在繪製狀態列大小方塊時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawTab](#ondrawtab)|由架構在繪製[CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)物件時呼叫。|
+|[CMFCVisualManager：： OnDrawTabCloseButton](#ondrawtabclosebutton)|當它在使用中的索引標籤上繪製 [**關閉**] 按鈕時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawTabContent](#ondrawtabcontent)|由架構在繪製索引標籤內部（影像、文字）時呼叫。|
+|[CMFCVisualManager：： OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|在繪製索引標籤按鈕的框線時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawTask](#ondrawtask)|在工作窗格上繪製工作時由架構呼叫。|
+|[CMFCVisualManager：： OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|當它在工作窗格上的群組區域周圍繪製框線時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|當它在工作窗格上繪製工作組的標題時，由架構呼叫。|
+|[CMFCVisualManager：： OnDrawTasksGroupIcon](#ondrawtasksgroupicon)||
+|[CMFCVisualManager：： OnDrawTearOffCaption](#ondrawtearoffcaption)|由架構在繪製卸載線的卸載標題時呼叫。|
+|[CMFCVisualManager：： OnDrawToolBoxFrame](#ondrawtoolboxframe)||
+|[CMFCVisualManager：： OnEraseMDIClientArea](#onerasemdiclientarea)|當它清除 MDI 工作區時，由架構呼叫。|
+|[CMFCVisualManager：： OnErasePopupWindowButton](#onerasepopupwindowbutton)||
+|[CMFCVisualManager：： OnEraseTabsArea](#onerasetabsarea)|當它清除索引標籤視窗中的索引標籤區域時，由架構呼叫。|
+|[CMFCVisualManager：： OnEraseTabsButton](#onerasetabsbutton)|當它清除索引標籤按鈕的圖示和文字時，由架構呼叫。|
+|[CMFCVisualManager：： OnEraseTabsFrame](#onerasetabsframe)|在清除索引標籤框架時由架構呼叫。|
+|[CMFCVisualManager：： OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|當它填滿自動隱藏按鈕的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillBarBackground](#onfillbarbackground)|當它填滿控制列的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillButtonInterior](#onfillbuttoninterior)|當它填滿工具列按鈕的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillCaptionBarButton](#onfillcaptionbarbutton)||
+|[CMFCVisualManager：： OnFillCommandsListBackground](#onfillcommandslistbackground)|由架構在填滿屬於命令清單的工具列按鈕背景時呼叫，而後者則是自訂對話方塊的一部分。|
+|[CMFCVisualManager：： OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|當它填滿標題控制項的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillMiniFrameCaption](#onfillminiframecaption)|當它填滿迷你框架視窗的標題時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillOutlookBarCaption](#onfilloutlookbarcaption)|當它填滿 Outlook 橫條圖標題的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillOutlookPageButton](#onfilloutlookpagebutton)|當它填滿 Outlook 頁面按鈕的內部時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillPopupWindowBackground](#onfillpopupwindowbackground)|當它填滿快顯視窗的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillRibbonButton](#onfillribbonbutton)|當它填滿功能區按鈕的內部時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillRibbonEdit](#onfillribbonedit)|當它填滿功能區編輯控制項的內部時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)|當它填滿位於**主要**面板上的功能區按鈕內部時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillRibbonMenuFrame](#onfillribbonmenuframe)|當它填滿主要功能區面板的功能表框架時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||
+|[CMFCVisualManager：： OnFillSplitterBackground](#onfillsplitterbackground)|當它填滿分割視窗的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillTab](#onfilltab)|當它填滿索引標籤的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillTasksGroupInterior](#onfilltasksgroupinterior)|當它填滿[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)上[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件的內部時，由架構呼叫。|
+|[CMFCVisualManager：： OnFillTasksPaneBackground](#onfilltaskspanebackground)|當它填滿 `CMFCTasksPane` 控制項的背景時，由架構呼叫。|
+|[CMFCVisualManager：： OnHighlightMenuItem](#onhighlightmenuitem)|在繪製反白顯示的功能表項目時由架構呼叫。|
+|[CMFCVisualManager：： OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|由架構在繪製反白顯示且很少使用的功能表項目時呼叫。|
+|[CMFCVisualManager：： OnNcPaint](#onncpaint)|由架構在繪製非工作區時呼叫。|
+|[CMFCVisualManager：： OnSetWindowRegion](#onsetwindowregion)|由架構在設定包含框架和快顯功能表的區域時呼叫。|
+|[CMFCVisualManager：： OnUpdateSystemColors](#onupdatesystemcolors)|架構在變更系統色彩設定時呼叫。|
+|[CMFCVisualManager：： RedrawAll](#redrawall)|重繪應用程式中的所有控制列。|
+|[CMFCVisualManager：： RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||
+|[CMFCVisualManager：： SetDefaultManager](#setdefaultmanager)|設定預設的視覺管理員。|
+|[CMFCVisualManager：： SetEmbossDisabledImage](#setembossdisabledimage)|啟用或停用已停用工具列影像的浮凸模式。|
+|[CMFCVisualManager：： SetFadeInactiveImage](#setfadeinactiveimage)|啟用或停用功能表或工具列上非使用中影像的光源效果。|
+|[CMFCVisualManager：： SetMenuFlatLook](#setmenuflatlook)|設定旗標，指出應用程式功能表按鈕是否有壓平合併的外觀。|
+|[CMFCVisualManager：： SetMenuShadowDepth](#setmenushadowdepth)|設定功能表陰影的寬度和高度。|
+|[CMFCVisualManager：： SetShadowHighlightedImage](#setshadowhighlightedimage)|設定旗標，指出是否要在呈現反白顯示的影像時顯示陰影。|
 
 ## <a name="remarks"></a>備註
 
-因為類別會控制應用程式的 GUI, 所以每個應用程式都可以有一個`CMFCVisualManager`的實例, 或一個衍生自`CMFCVisualManager`之類別的實例。 `CMFCVisualManager` 您的應用程式也可以在`CMFCVisualManager`沒有的情況下運作。 使用靜態方法`GetInstance` , 取得目前`CMFCVisualManager`衍生物件的指標。
+因為 `CMFCVisualManager` 類別會控制應用程式的 GUI，所以每個應用程式都可以有一個 `CMFCVisualManager`的實例，或是一個衍生自 `CMFCVisualManager`的類別實例。 您的應用程式也可以在沒有 `CMFCVisualManager`的情況下運作。 使用靜態方法 `GetInstance` 來取得目前 `CMFCVisualManager`衍生物件的指標。
 
-若要變更應用程式的外觀, 您必須使用其他類別, 提供方法來繪製應用程式的所有視覺元素。 這些類別的一些範例包括[CMFCVisualManagerOfficeXP 類別](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)、 [CMFCVisualManagerOffice2003 類別](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)和[CMFCVisualManagerOffice2007 類別](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)。 當您想要變更應用程式的外觀時, 請將其中一個視覺管理員傳遞至方法`SetDefaultManager`。 如需示範應用程式如何模擬 Microsoft Office 2003 外觀的範例, 請參閱[CMFCVisualManagerOffice2003 類別](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)。
+若要變更應用程式的外觀，您必須使用其他類別，提供方法來繪製應用程式的所有視覺元素。 這些類別的一些範例包括[CMFCVisualManagerOfficeXP 類別](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)、 [CMFCVisualManagerOffice2003 類別](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)和[CMFCVisualManagerOffice2007 類別](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)。 當您想要變更應用程式的外觀時，請將其中一個視覺效果管理員傳遞給 `SetDefaultManager`的方法。 如需示範應用程式如何模擬 Microsoft Office 2003 外觀的範例，請參閱[CMFCVisualManagerOffice2003 類別](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)。
 
-所有的繪圖方法都是虛擬的。 這可讓您為應用程式的 GUI 建立自訂視覺化樣式。 如果您想要建立自己的視覺化樣式, 請從其中一個視覺效果管理員類別衍生類別, 並覆寫您想要變更的繪圖方法。
+所有的繪圖方法都是虛擬的。 這可讓您為應用程式的 GUI 建立自訂視覺化樣式。 如果您想要建立自己的視覺化樣式，請從其中一個視覺效果管理員類別衍生類別，並覆寫您想要變更的繪圖方法。
 
 ## <a name="example"></a>範例
 
-這個範例會示範如何具現化標準和`CMFCVisualManager`自訂物件。
+這個範例會示範如何具現化標準和自訂 `CMFCVisualManager` 物件。
 
 ```cpp
 void CMFCSkinsApp::SetSkin (int iIndex)
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>範例
 
-下列範例示範如何取出`CMFCVisualManager`物件的預設值。 此程式碼片段是 [工作[] 窗格範例](../../overview/visual-cpp-samples.md)的一部分。
+下列範例示範如何取出 `CMFCVisualManager` 物件的預設值。 此程式碼片段是 [工作[] 窗格範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -601,9 +601,9 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxvisualmanager。h
+**標頭：** afxvisualmanager。h
 
-##  <a name="adjustframes"></a>CMFCVisualManager:: AdjustFrames
+##  <a name="adjustframes"></a>CMFCVisualManager：： AdjustFrames
 
 ```
 static void __stdcall AdjustFrames();
@@ -611,7 +611,7 @@ static void __stdcall AdjustFrames();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="adjusttoolbars"></a>CMFCVisualManager:: AdjustToolbars
+##  <a name="adjusttoolbars"></a>CMFCVisualManager：： AdjustToolbars
 
 ```
 static void __stdcall AdjustToolbars();
@@ -619,9 +619,9 @@ static void __stdcall AdjustToolbars();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManager:: AlwaysHighlight3DTabs
+##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManager：： AlwaysHighlight3DTabs
 
-架構會呼叫這個方法, 以判斷在應用程式中是否應一律反白顯示3D 索引標籤。
+架構會呼叫這個方法，以判斷在應用程式中是否應一律反白顯示3D 索引標籤。
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
@@ -629,13 +629,13 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="return-value"></a>傳回值
 
-`TRUE`如果應該反白顯示3D 索引標籤。
+`TRUE` 是否應反白顯示3D 索引標籤。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生的視覺效果管理員中的這個函式, 如果應該一律反白顯示3D 索引標籤, 則傳回 TRUE。 這個方法的預設實值會傳回 FALSE。
+覆寫衍生的視覺效果管理員中的這個函式，如果應該一律反白顯示3D 索引標籤，則傳回 TRUE。 這個方法的預設實值會傳回 FALSE。
 
-##  <a name="cmfcvisualmanager"></a>CMFCVisualManager:: CMFCVisualManager
+##  <a name="cmfcvisualmanager"></a>CMFCVisualManager：： CMFCVisualManager
 
 ```
 CMFCVisualManager(BOOL bTemporary = FALSE);
@@ -647,7 +647,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="destroyinstance"></a>CMFCVisualManager::D estroyInstance
+##  <a name="destroyinstance"></a>CMFCVisualManager：:D estroyInstance
 
 ```
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
@@ -655,11 +655,11 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in] *bAutoDestroyOnly*<br/>
+在*bAutoDestroyOnly*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="dodrawheadersortarrow"></a>CMFCVisualManager::D oDrawHeaderSortArrow
+##  <a name="dodrawheadersortarrow"></a>CMFCVisualManager：:D oDrawHeaderSortArrow
 
 ```
 void DoDrawHeaderSortArrow(
@@ -671,14 +671,14 @@ void DoDrawHeaderSortArrow(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 在*bIsUp*<br/>
-[in] *bDlgCtrl*<br/>
+在*bDlgCtrl*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManager::DrawComboBorderWinXP
+##  <a name="drawcomboborderwinxp"></a>CMFCVisualManager：:D rawComboBorderWinXP
 
 ```
 virtual BOOL DrawComboBorderWinXP(CDC*,
@@ -698,7 +698,7 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 
 ### <a name="remarks"></a>備註
 
-##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManager::DrawComboDropButtonWinXP
+##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManager：:D rawComboDropButtonWinXP
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(CDC*,
@@ -718,7 +718,7 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 
 ### <a name="remarks"></a>備註
 
-##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManager::DrawPushButtonWinXP
+##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManager：:D rawPushButtonWinXP
 
 ```
 virtual BOOL DrawPushButtonWinXP(CDC*,
@@ -738,7 +738,7 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 
 ### <a name="remarks"></a>備註
 
-##  <a name="drawtextonglass"></a>CMFCVisualManager::D rawTextOnGlass
+##  <a name="drawtextonglass"></a>CMFCVisualManager：:D rawTextOnGlass
 
 ```
 virtual BOOL DrawTextOnGlass(
@@ -752,18 +752,18 @@ virtual BOOL DrawTextOnGlass(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*strText*<br/>
 在*rect*<br/>
-[in] *dwFlags*<br/>
-[in] *nGlowSize*<br/>
+在*dwFlags*<br/>
+在*nGlowSize*<br/>
 在*clrText*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="enabletoolbarbuttonfill"></a>CMFCVisualManager:: EnableToolbarButtonFill
+##  <a name="enabletoolbarbuttonfill"></a>CMFCVisualManager：： EnableToolbarButtonFill
 
 ```
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
@@ -775,9 +775,9 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getautohidebuttontextcolor"></a>CMFCVisualManager:: GetAutoHideButtonTextColor
+##  <a name="getautohidebuttontextcolor"></a>CMFCVisualManager：： GetAutoHideButtonTextColor
 
-架構會呼叫這個方法, 以取得自動隱藏按鈕的文字色彩。
+架構會呼叫這個方法，以取得自動隱藏按鈕的文字色彩。
 
 ```
 virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
@@ -790,15 +790,15 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 
 ### <a name="return-value"></a>傳回值
 
-[COLORREF](/windows/win32/gdi/colorref)參數, 指定*pButton*的文字色彩。
+[COLORREF](/windows/win32/gdi/colorref)參數，指定*pButton*的文字色彩。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂應用程式中自動隱藏按鈕的文字色彩。 若要這麼做, 請傳回您要讓應用程式用來做為文字色彩的色彩。
+覆寫衍生類別中的這個方法，以自訂應用程式中自動隱藏按鈕的文字色彩。 若要這麼做，請傳回您要讓應用程式用來做為文字色彩的色彩。
 
-##  <a name="getbuttonextraborder"></a>CMFCVisualManager:: GetButtonExtraBorder
+##  <a name="getbuttonextraborder"></a>CMFCVisualManager：： GetButtonExtraBorder
 
-當此架構繪製工具列按鈕時, 會呼叫這個方法。
+當此架構繪製工具列按鈕時，會呼叫這個方法。
 
 ```
 virtual CSize GetButtonExtraBorder() const;
@@ -806,15 +806,15 @@ virtual CSize GetButtonExtraBorder() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CSize](../../atl-mfc-shared/reference/csize-class.md)物件, 其中包含工具列按鈕的額外框線大小。
+[CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含工具列按鈕的額外框線大小。
 
 ### <a name="remarks"></a>備註
 
-某些外觀必須擴充工具列按鈕的框線。 在自訂視覺效果管理員中覆寫這個方法, 以擴充應用程式中工具列按鈕的框線。 這個方法的預設執行會傳回空的大小。
+某些外觀必須擴充工具列按鈕的框線。 在自訂視覺效果管理員中覆寫這個方法，以擴充應用程式中工具列按鈕的框線。 這個方法的預設執行會傳回空的大小。
 
-##  <a name="getcaptionbartextcolor"></a>CMFCVisualManager:: GetCaptionBarTextColor
+##  <a name="getcaptionbartextcolor"></a>CMFCVisualManager：： GetCaptionBarTextColor
 
-架構會呼叫這個方法, 以抓取標題列中的文字色彩。
+架構會呼叫這個方法，以抓取標題列中的文字色彩。
 
 ```
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
@@ -827,13 +827,13 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 
 ### <a name="return-value"></a>傳回值
 
-[COLORREF](/windows/win32/gdi/colorref)參數, 表示*pBar*中文字的色彩。
+[COLORREF](/windows/win32/gdi/colorref)參數，表示*pBar*中文字的色彩。
 
 ### <a name="remarks"></a>備註
 
-在您的衍生類別中覆寫這個方法, 以自訂標題列的文字色彩。 在覆寫的方法中, 傳回所需的色彩。
+在您的衍生類別中覆寫這個方法，以自訂標題列的文字色彩。 在覆寫的方法中，傳回所需的色彩。
 
-##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManager:: GetCaptionButtonExtraBorder
+##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManager：： GetCaptionButtonExtraBorder
 
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
@@ -843,7 +843,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager:: GetDockingPaneCaptionExtraHeight
+##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager：： GetDockingPaneCaptionExtraHeight
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -853,7 +853,7 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManager::GetDockingTabsBordersSize
+##  <a name="getdockingtabsborderssize"></a>CMFCVisualManager：： GetDockingTabsBordersSize
 
 架構會在繪製停駐和索引標籤的窗格時呼叫這個方法。
 
@@ -863,15 +863,15 @@ virtual int GetDockingTabsBordersSize();
 
 ### <a name="return-value"></a>傳回值
 
-整數, 表示停駐和索引標籤之窗格的框線大小。
+整數，表示停駐和索引標籤之窗格的框線大小。
 
 ### <a name="remarks"></a>備註
 
-當使用者將多個窗格停駐在應用程式中的相同位置時, 停駐的窗格就會變成索引標籤。
+當使用者將多個窗格停駐在應用程式中的相同位置時，停駐的窗格就會變成索引標籤。
 
-在自訂視覺效果管理員中覆寫這個方法, 以變更停駐索引標籤式控制列的框線大小。 預設的實作會傳回 -1。
+在自訂視覺效果管理員中覆寫這個方法，以變更停駐索引標籤式控制列的框線大小。 預設的實作會傳回 -1。
 
-##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager:: GetHighlightedMenuItemTextColor
+##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager：： GetHighlightedMenuItemTextColor
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -885,7 +885,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getinstance"></a>CMFCVisualManager:: GetInstance
+##  <a name="getinstance"></a>CMFCVisualManager：： GetInstance
 
 傳回應用程式目前[CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)物件的指標。
 
@@ -895,15 +895,15 @@ static CMFCVisualManager* GetInstance();
 
 ### <a name="return-value"></a>傳回值
 
-          `CMFCVisualManager` 物件的指標。
+`CMFCVisualManager` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
-應用程式只能有一個`CMFCVisualManager`與其相關聯的物件。 這包括衍生自類別的`CMFCVisualManager`任何物件。 這個方法會傳回相關聯`CMFCVisualManager`物件的指標。 如果應用程式沒有相關聯`CMFCVisualManager`的物件, 這個方法會建立一個, 並將其與應用程式建立關聯。
+應用程式只能有一個與其相關聯的 `CMFCVisualManager` 物件。 這包括衍生自 `CMFCVisualManager` 類別的任何物件。 這個方法會傳回相關聯 `CMFCVisualManager` 物件的指標。 如果應用程式沒有相關聯的 `CMFCVisualManager` 物件，這個方法會建立一個，並將其與應用程式建立關聯。
 
-##  <a name="getmditabsborderssize"></a>CMFCVisualManager:: GetMDITabsBordersSize
+##  <a name="getmditabsborderssize"></a>CMFCVisualManager：： GetMDITabsBordersSize
 
-架構會在繪製視窗之前, 呼叫這個方法來判斷 MDITabs 視窗的框線大小。
+架構會在繪製視窗之前，呼叫這個方法來判斷 MDITabs 視窗的框線大小。
 
 ```
 virtual int GetMDITabsBordersSize();
@@ -915,9 +915,9 @@ MDITabs 視窗的框線大小。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個函式, 以自訂 MDITabs 視窗的框線大小。
+覆寫衍生類別中的這個函式，以自訂 MDITabs 視窗的框線大小。
 
-##  <a name="getmenuimagemargin"></a>CMFCVisualManager:: GetMenuImageMargin
+##  <a name="getmenuimagemargin"></a>CMFCVisualManager：： GetMenuImageMargin
 
 ```
 virtual int GetMenuImageMargin() const;
@@ -927,7 +927,7 @@ virtual int GetMenuImageMargin() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getmenuitemtextcolor"></a>CMFCVisualManager:: GetMenuItemTextColor
+##  <a name="getmenuitemtextcolor"></a>CMFCVisualManager：： GetMenuItemTextColor
 
 ```
 virtual COLORREF GetMenuItemTextColor(
@@ -946,7 +946,7 @@ virtual COLORREF GetMenuItemTextColor(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getmenushadowdepth"></a>CMFCVisualManager:: GetMenuShadowDepth
+##  <a name="getmenushadowdepth"></a>CMFCVisualManager：： GetMenuShadowDepth
 
 抓取功能表陰影的寬度和高度。
 
@@ -956,15 +956,15 @@ int GetMenuShadowDepth() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能表陰影的寬度和高度 (以圖元為單位)。
+功能表陰影的寬度和高度（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
 功能表陰影的寬度和高度是相等的。 預設值為7圖元。
 
-##  <a name="getncbtnsize"></a>CMFCVisualManager:: GetNcBtnSize
+##  <a name="getncbtnsize"></a>CMFCVisualManager：： GetNcBtnSize
 
-當它必須抓取系統按鈕的大小時, 由架構呼叫。
+當它必須抓取系統按鈕的大小時，由架構呼叫。
 
 ```
 virtual CSize GetNcBtnSize(BOOL bSmall) const;
@@ -973,7 +973,7 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ### <a name="parameters"></a>參數
 
 *bSmall*<br/>
-在布林值參數, 指出是否`GetNcBtnSize`應取得小型或大型系統按鈕的大小。 如果*bSmall*為 TRUE, `GetNcBtnSize`則傳回小型系統按鈕的大小。 否則, 它會傳回大型系統按鈕的大小。
+在布林值參數，指出 `GetNcBtnSize` 是否應取得小型或大型系統按鈕的大小。 如果*bSmall*為 TRUE，`GetNcBtnSize` 會傳回小型系統按鈕的大小。 否則，它會傳回大型系統按鈕的大小。
 
 ### <a name="return-value"></a>傳回值
 
@@ -981,11 +981,11 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 
 ### <a name="remarks"></a>備註
 
-[系統] 按鈕是框架視窗標題中的按鈕, 會對應到**關閉**、**最小化**、**最大化**和**還原**的命令。 這些按鈕的大小取決於目前的視覺效果管理員。 如果您想要自訂應用程式中的系統按鈕大小, 請覆寫這個方法。
+[系統] 按鈕是框架視窗標題中的按鈕，會對應到**關閉**、**最小化**、**最大化**和**還原**的命令。 這些按鈕的大小取決於目前的視覺效果管理員。 如果您想要自訂應用程式中的系統按鈕大小，請覆寫這個方法。
 
-##  <a name="getpopupmenubordersize"></a>CMFCVisualManager:: GetPopupMenuBorderSize
+##  <a name="getpopupmenubordersize"></a>CMFCVisualManager：： GetPopupMenuBorderSize
 
-此架構會呼叫這個方法, 以取得快顯功能表的框線大小。
+此架構會呼叫這個方法，以取得快顯功能表的框線大小。
 
 ```
 virtual int GetPopupMenuBorderSize() const;
@@ -997,9 +997,9 @@ virtual int GetPopupMenuBorderSize() const;
 
 ### <a name="remarks"></a>備註
 
-覆寫這個方法, 以自訂應用程式中快顯功能表的框線大小。
+覆寫這個方法，以自訂應用程式中快顯功能表的框線大小。
 
-##  <a name="getpopupmenugap"></a>CMFCVisualManager:: GetPopupMenuGap
+##  <a name="getpopupmenugap"></a>CMFCVisualManager：： GetPopupMenuGap
 
 ```
 virtual int GetPopupMenuGap() const;
@@ -1009,9 +1009,9 @@ virtual int GetPopupMenuGap() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManager:: GetPropertyGridGroupColor
+##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManager：： GetPropertyGridGroupColor
 
-架構會呼叫這個方法, 以取得屬性清單的背景色彩。
+架構會呼叫這個方法，以取得屬性清單的背景色彩。
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -1024,13 +1024,13 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="return-value"></a>傳回值
 
-[COLORREF](/windows/win32/gdi/colorref)參數, 表示*pPropList*的背景色彩。
+[COLORREF](/windows/win32/gdi/colorref)參數，表示*pPropList*的背景色彩。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式, 以自訂應用程式中屬性清單的背景色彩。
+覆寫此函式，以自訂應用程式中屬性清單的背景色彩。
 
-##  <a name="getpropertygridgrouptextcolor"></a>CMFCVisualManager:: GetPropertyGridGroupTextColor
+##  <a name="getpropertygridgrouptextcolor"></a>CMFCVisualManager：： GetPropertyGridGroupTextColor
 
 架構會呼叫這個方法來取出屬性清單的文字色彩。
 
@@ -1045,13 +1045,13 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="return-value"></a>傳回值
 
-[COLORREF](/windows/win32/gdi/colorref)參數, 表示屬性清單的文字色彩。
+[COLORREF](/windows/win32/gdi/colorref)參數，表示屬性清單的文字色彩。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式, 以自訂應用程式中屬性清單的文字色彩。
+覆寫此函式，以自訂應用程式中屬性清單的文字色彩。
 
-##  <a name="getribbonhyperlinktextcolor"></a>CMFCVisualManager:: GetRibbonHyperlinkTextColor
+##  <a name="getribbonhyperlinktextcolor"></a>CMFCVisualManager：： GetRibbonHyperlinkTextColor
 
 ```
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
@@ -1059,13 +1059,13 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ### <a name="parameters"></a>參數
 
-[in] *pHyperLink*<br/>
+在*pHyperLink*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getribbonpopupbordersize"></a>CMFCVisualManager:: GetRibbonPopupBorderSize
+##  <a name="getribbonpopupbordersize"></a>CMFCVisualManager：： GetRibbonPopupBorderSize
 
 ```
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
@@ -1073,13 +1073,13 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *CMFCRibbonPanelMenu&#42;*<br/>
+在*CMFCRibbonPanelMenu&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager:: GetRibbonQuickAccessToolBarChevronOffset
+##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager：： GetRibbonQuickAccessToolBarChevronOffset
 
 ```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
@@ -1089,7 +1089,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager:: GetRibbonQuickAccessToolBarRightMargin
+##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager：： GetRibbonQuickAccessToolBarRightMargin
 
 ```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
@@ -1099,7 +1099,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager:: GetRibbonQuickAccessToolBarTextColor
+##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager：： GetRibbonQuickAccessToolBarTextColor
 
 ```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -1113,7 +1113,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getribbonslidercolors"></a>CMFCVisualManager:: GetRibbonSliderColors
+##  <a name="getribbonslidercolors"></a>CMFCVisualManager：： GetRibbonSliderColors
 
 ```
 virtual void GetRibbonSliderColors(
@@ -1127,16 +1127,16 @@ virtual void GetRibbonSliderColors(
 
 ### <a name="parameters"></a>參數
 
-[in] *pSlider*<br/>
+在*pSlider*<br/>
 在*bIsHighlighted*<br/>
 在*bIsPressed*<br/>
 在*bIsDisabled*<br/>
-[in] *clrLine*<br/>
+在*clrLine*<br/>
 在*clrFill*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManager:: GetRibbonStatusBarTextColor
+##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManager：： GetRibbonStatusBarTextColor
 
 ```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -1150,7 +1150,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManager:: GetShowAllMenuItemsHeight
+##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManager：： GetShowAllMenuItemsHeight
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -1160,14 +1160,14 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*sizeDefault*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager:: GetSmartDockingBaseGuideColors
+##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager：： GetSmartDockingBaseGuideColors
 
 ```
 virtual void GetSmartDockingBaseGuideColors(
@@ -1182,7 +1182,7 @@ virtual void GetSmartDockingBaseGuideColors(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager:: GetSmartDockingHighlightToneColor
+##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager：： GetSmartDockingHighlightToneColor
 
 ```
 virtual COLORREF GetSmartDockingHighlightToneColor();
@@ -1192,7 +1192,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getsmartdockingtheme"></a>CMFCVisualManager:: GetSmartDockingTheme
+##  <a name="getsmartdockingtheme"></a>CMFCVisualManager：： GetSmartDockingTheme
 
 傳回用來顯示智慧停駐標記的主題。
 
@@ -1202,11 +1202,11 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 
 ### <a name="return-value"></a>傳回值
 
-傳回下列其中一個列舉值:AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+傳回下列其中一個列舉值： AFX_SDT_DEFAULT、AFX_SDT_VS2005 AFX_SDT_VS2008。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManager:: GetStatusBarPaneTextColor
+##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManager：： GetStatusBarPaneTextColor
 
 ```
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -1217,15 +1217,15 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ### <a name="parameters"></a>參數
 
 在*pStatusBar*<br/>
-[in] *pPane*<br/>
+在*pPane*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabframecolors"></a>CMFCVisualManager:: GetTabFrameColors
+##  <a name="gettabframecolors"></a>CMFCVisualManager：： GetTabFrameColors
 
-當架構必須取得繪製索引標籤視窗的色彩集時, 會呼叫這個函式。
+當架構必須取得繪製索引標籤視窗的色彩集時，會呼叫這個函式。
 
 ```
 virtual void GetTabFrameColors(
@@ -1243,25 +1243,25 @@ virtual void GetTabFrameColors(
 ### <a name="parameters"></a>參數
 
 *pTabWnd*<br/>
-在索引標籤式視窗的指標, 其中框架會繪製索引標籤。
+在索引標籤式視窗的指標，其中框架會繪製索引標籤。
 
 *clrDark*<br/>
-脫銷[COLORREF](/windows/win32/gdi/colorref)參數的參考, 這個方法會儲存索引標籤深色框線的色彩。
+脫銷[COLORREF](/windows/win32/gdi/colorref)參數的參考，這個方法會儲存索引標籤深色框線的色彩。
 
 *clrBlack*<br/>
-脫銷COLORREF 參數的參考, 這個方法會儲存索引標籤視窗框線的色彩。 框線的預設色彩為黑色。
+脫銷COLORREF 參數的參考，這個方法會儲存索引標籤視窗框線的色彩。 框線的預設色彩為黑色。
 
 *clrHighlight*<br/>
-[out]這個方法儲存的色彩反白顯示視窗的狀態索引標籤的位置 COLORREF 參數的參考。
+脫銷COLORREF 參數的參考，這個方法會儲存索引標籤視窗醒目提示狀態的色彩。
 
 *clrFace*<br/>
-脫銷COLORREF 參數的參考, 這個方法會儲存索引標籤視窗臉部的色彩。
+脫銷COLORREF 參數的參考，這個方法會儲存索引標籤視窗臉部的色彩。
 
 *clrDarkShadow*<br/>
-脫銷COLORREF 參數的參考, 這個方法會儲存索引標籤視窗陰影的色彩。
+脫銷COLORREF 參數的參考，這個方法會儲存索引標籤視窗陰影的色彩。
 
 *clrLight*<br/>
-脫銷COLORREF 參數的參考, 其中這個方法會儲存索引標籤視窗之光線邊緣的色彩。
+脫銷COLORREF 參數的參考，其中這個方法會儲存索引標籤視窗之光線邊緣的色彩。
 
 *pbrFace*<br/>
 脫銷筆刷參考的指標。 這個方法會儲存用來在此參數中填滿索引標籤視窗表面的筆刷。
@@ -1271,9 +1271,9 @@ virtual void GetTabFrameColors(
 
 ### <a name="remarks"></a>備註
 
-如果您想要自訂架構在繪製索引標籤視窗時所使用的色彩集, 請覆寫衍生類別中的這個函式。
+如果您想要自訂架構在繪製索引標籤視窗時所使用的色彩集，請覆寫衍生類別中的這個函式。
 
-##  <a name="gettabhorzmargin"></a>CMFCVisualManager:: GetTabHorzMargin
+##  <a name="gettabhorzmargin"></a>CMFCVisualManager：： GetTabHorzMargin
 
 ```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
@@ -1281,13 +1281,13 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 
 ### <a name="parameters"></a>參數
 
-[in] *CMFCBaseTabCtrl&#42;*<br/>
+在*CMFCBaseTabCtrl&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabtextcolor"></a>CMFCVisualManager:: GetTabTextColor
+##  <a name="gettabtextcolor"></a>CMFCVisualManager：： GetTabTextColor
 
 ```
 virtual COLORREF GetTabTextColor(
@@ -1298,15 +1298,15 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>參數
 
-[in] *CMFCBaseTabCtrl&#42;*<br/>
-[in] *int*<br/>
+在*CMFCBaseTabCtrl&#42;*<br/>
+在*int*<br/>
 在*BOOL*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager:: GetTasksPaneGroupCaptionHeight
+##  <a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager：： GetTasksPaneGroupCaptionHeight
 
 ```
 int GetTasksPaneGroupCaptionHeight() const;
@@ -1316,7 +1316,7 @@ int GetTasksPaneGroupCaptionHeight() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager:: GetTasksPaneGroupCaptionHorzOffset
+##  <a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager：： GetTasksPaneGroupCaptionHorzOffset
 
 ```
 int GetTasksPaneGroupCaptionHorzOffset() const;
@@ -1326,7 +1326,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager:: GetTasksPaneGroupCaptionVertOffset
+##  <a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager：： GetTasksPaneGroupCaptionVertOffset
 
 ```
 int GetTasksPaneGroupCaptionVertOffset() const;
@@ -1336,7 +1336,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager:: GetTasksPaneGroupVertOffset
+##  <a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager：： GetTasksPaneGroupVertOffset
 
 ```
 int GetTasksPaneGroupVertOffset() const;
@@ -1346,7 +1346,7 @@ int GetTasksPaneGroupVertOffset() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspanehorzmargin"></a>CMFCVisualManager:: GetTasksPaneHorzMargin
+##  <a name="gettaskspanehorzmargin"></a>CMFCVisualManager：： GetTasksPaneHorzMargin
 
 ```
 int GetTasksPaneHorzMargin() const;
@@ -1356,7 +1356,7 @@ int GetTasksPaneHorzMargin() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager:: GetTasksPaneIconHorzOffset
+##  <a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager：： GetTasksPaneIconHorzOffset
 
 ```
 int GetTasksPaneIconHorzOffset() const;
@@ -1366,7 +1366,7 @@ int GetTasksPaneIconHorzOffset() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager:: GetTasksPaneIconVertOffset
+##  <a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager：： GetTasksPaneIconVertOffset
 
 ```
 int GetTasksPaneIconVertOffset() const;
@@ -1376,7 +1376,7 @@ int GetTasksPaneIconVertOffset() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager:: GetTasksPaneTaskHorzOffset
+##  <a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager：： GetTasksPaneTaskHorzOffset
 
 ```
 int GetTasksPaneTaskHorzOffset() const;
@@ -1386,7 +1386,7 @@ int GetTasksPaneTaskHorzOffset() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettaskspanevertmargin"></a>CMFCVisualManager:: GetTasksPaneVertMargin
+##  <a name="gettaskspanevertmargin"></a>CMFCVisualManager：： GetTasksPaneVertMargin
 
 ```
 int GetTasksPaneVertMargin() const;
@@ -1396,9 +1396,9 @@ int GetTasksPaneVertMargin() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManager:: GetToolbarButtonTextColor
+##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManager：： GetToolbarButtonTextColor
 
-架構會呼叫這個方法, 以判斷工具列按鈕的文字色彩。
+架構會呼叫這個方法，以判斷工具列按鈕的文字色彩。
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -1416,15 +1416,15 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="return-value"></a>傳回值
 
-*PButton*的文字色彩 (當其具有*狀態*所指出的狀態時)。
+*PButton*的文字色彩（當其具有*狀態*所指出的狀態時）。
 
 ### <a name="remarks"></a>備註
 
-[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件的文字色彩取決於按鈕的狀態。 工具列按鈕的可能狀態為`ButtonsIsRegular`、 `ButtonsIsPressed`或`ButtonsIsHighlighted`。
+[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件的文字色彩取決於按鈕的狀態。 工具列按鈕的可能狀態為 [`ButtonsIsRegular`]、[`ButtonsIsPressed`] 或 [`ButtonsIsHighlighted`]。
 
-覆寫此函式, 以自訂應用程式中工具列按鈕的文字色彩。
+覆寫此函式，以自訂應用程式中工具列按鈕的文字色彩。
 
-##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager:: GetToolBarCustomizeButtonMargin
+##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager：： GetToolBarCustomizeButtonMargin
 
 ```
 virtual int GetToolBarCustomizeButtonMargin() const;
@@ -1434,7 +1434,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManager:: GetToolbarDisabledColor
+##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManager：： GetToolbarDisabledColor
 
 ```
 virtual COLORREF GetToolbarDisabledColor() const;
@@ -1444,9 +1444,9 @@ virtual COLORREF GetToolbarDisabledColor() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettoolbardisabledtextcolor"></a>CMFCVisualManager:: GetToolbarDisabledTextColor
+##  <a name="gettoolbardisabledtextcolor"></a>CMFCVisualManager：： GetToolbarDisabledTextColor
 
-架構會呼叫這個函式, 以判斷無法使用工具列按鈕的文字色彩。
+架構會呼叫這個函式，以判斷無法使用工具列按鈕的文字色彩。
 
 ```
 virtual COLORREF GetToolbarDisabledTextColor();
@@ -1458,9 +1458,9 @@ virtual COLORREF GetToolbarDisabledTextColor();
 
 ### <a name="remarks"></a>備註
 
-在自訂視覺效果管理員中覆寫這個方法, 以設定無法使用工具列按鈕的文字色彩。
+在自訂視覺效果管理員中覆寫這個方法，以設定無法使用工具列按鈕的文字色彩。
 
-##  <a name="gettoolbarhighlightcolor"></a>CMFCVisualManager:: GetToolbarHighlightColor
+##  <a name="gettoolbarhighlightcolor"></a>CMFCVisualManager：： GetToolbarHighlightColor
 
 ```
 virtual COLORREF GetToolbarHighlightColor();
@@ -1470,7 +1470,7 @@ virtual COLORREF GetToolbarHighlightColor();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettooltipinfo"></a>CMFCVisualManager:: GetToolTipInfo
+##  <a name="gettooltipinfo"></a>CMFCVisualManager：： GetToolTipInfo
 
 ```
 virtual BOOL GetToolTipInfo(
@@ -1481,15 +1481,15 @@ virtual BOOL GetToolTipInfo(
 ### <a name="parameters"></a>參數
 
 在*params*<br/>
-[in] *nType*<br/>
+在*nType*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hasoverlappedautohidebuttons"></a>CMFCVisualManager:: HasOverlappedAutoHideButtons
+##  <a name="hasoverlappedautohidebuttons"></a>CMFCVisualManager：： HasOverlappedAutoHideButtons
 
-傳回目前的視覺效果管理員中, 自動隱藏按鈕是否重迭。
+傳回目前的視覺效果管理員中，自動隱藏按鈕是否重迭。
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
@@ -1497,9 +1497,9 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果自動隱藏按鈕重迭, 則為 TRUE;如果不是, 則為 FALSE。
+如果自動隱藏按鈕重迭，則為 TRUE;如果不是，則為 FALSE。
 
-##  <a name="isautodestroy"></a>CMFCVisualManager:: IsAutoDestroy
+##  <a name="isautodestroy"></a>CMFCVisualManager：： IsAutoDestroy
 
 ```
 BOOL IsAutoDestroy() const;
@@ -1509,7 +1509,7 @@ BOOL IsAutoDestroy() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager:: IsDefaultWinXPPopupButton
+##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager：： IsDefaultWinXPPopupButton
 
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
@@ -1523,7 +1523,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isdockingtabhasborder"></a>CMFCVisualManager:: IsDockingTabHasBorder
+##  <a name="isdockingtabhasborder"></a>CMFCVisualManager：： IsDockingTabHasBorder
 
 傳回目前的視覺效果管理員是否在停駐和索引標籤的窗格周圍繪製框線。
 
@@ -1533,13 +1533,13 @@ virtual BOOL IsDockingTabHasBorder();
 
 ### <a name="return-value"></a>傳回值
 
-如果視覺效果管理員在停駐和索引標籤的窗格周圍繪製框線, 則為 TRUE;否則為 FALSE。
+如果視覺效果管理員在停駐和索引標籤的窗格周圍繪製框線，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-當多個窗格停駐于相同位置時, 停駐窗格會變成索引標籤。
+當多個窗格停駐于相同位置時，停駐窗格會變成索引標籤。
 
-##  <a name="isembossdisabledimage"></a>CMFCVisualManager:: IsEmbossDisabledImage
+##  <a name="isembossdisabledimage"></a>CMFCVisualManager：： IsEmbossDisabledImage
 
 指定架構是否 embosses 無法使用的影像。
 
@@ -1549,15 +1549,15 @@ BOOL IsEmbossDisabledImage() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果架構 embosses 無法使用的影像, 則為非零;否則為0。
+如果架構 embosses 無法使用的影像，則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-這個方法是由 CMFCToolBarImages: 當它在無法使用的工具列上繪製影像時, 會呼叫[:D raw](../../mfc/reference/cmfctoolbarimages-class.md#draw) 。
+這個方法是由 CMFCToolBarImages：當它在無法使用的工具列上繪製影像時，會呼叫[:D raw](../../mfc/reference/cmfctoolbarimages-class.md#draw) 。
 
-##  <a name="isfadeinactiveimage"></a>CMFCVisualManager:: IsFadeInactiveImage
+##  <a name="isfadeinactiveimage"></a>CMFCVisualManager：： IsFadeInactiveImage
 
-當此架構在工具列或功能表中繪製非作用中的影像時, 會呼叫這個方法。
+當此架構在工具列或功能表中繪製非作用中的影像時，會呼叫這個方法。
 
 ```
 BOOL IsFadeInactiveImage() const;
@@ -1565,13 +1565,13 @@ BOOL IsFadeInactiveImage() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果架構在工具列或功能表上繪製非作用中影像時使用光源效果, 則為非零。否則為0。
+如果架構在工具列或功能表上繪製非作用中影像時使用光源效果，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-您可以藉由呼叫[CMFCVisualManager:: SetFadeInactiveImage](#setfadeinactiveimage)來啟用或停用光源效果。 光源效果是讓無法使用的影像呈現淡出的結果。
+您可以藉由呼叫[CMFCVisualManager：： SetFadeInactiveImage](#setfadeinactiveimage)來啟用或停用光源效果。 光源效果是讓無法使用的影像呈現淡出的結果。
 
-##  <a name="isframemenucheckeditems"></a>CMFCVisualManager:: IsFrameMenuCheckedItems
+##  <a name="isframemenucheckeditems"></a>CMFCVisualManager：： IsFrameMenuCheckedItems
 
 ```
 BOOL IsFrameMenuCheckedItems() const;
@@ -1581,7 +1581,7 @@ BOOL IsFrameMenuCheckedItems() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ishighlightonenotetabs"></a>CMFCVisualManager:: IsHighlightOneNoteTabs
+##  <a name="ishighlightonenotetabs"></a>CMFCVisualManager：： IsHighlightOneNoteTabs
 
 ```
 virtual BOOL IsHighlightOneNoteTabs() const;
@@ -1591,7 +1591,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManager:: IsHighlightWholeMenuItem
+##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManager：： IsHighlightWholeMenuItem
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -1601,7 +1601,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="islayeredribbonkeytip"></a>CMFCVisualManager:: IsLayeredRibbonKeyTip
+##  <a name="islayeredribbonkeytip"></a>CMFCVisualManager：： IsLayeredRibbonKeyTip
 
 ```
 virtual BOOL IsLayeredRibbonKeyTip() const;
@@ -1611,7 +1611,7 @@ virtual BOOL IsLayeredRibbonKeyTip() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismenuflatlook"></a>CMFCVisualManager:: IsMenuFlatLook
+##  <a name="ismenuflatlook"></a>CMFCVisualManager：： IsMenuFlatLook
 
 指出功能表按鈕是否顯示為平面。
 
@@ -1621,13 +1621,13 @@ BOOL IsMenuFlatLook() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能表按鈕呈平面, 則為非零值;否則為0。
+如果功能表按鈕呈平面，則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-根據預設, 功能表按鈕不會顯示為 [平面]。 請使用[CMFCVisualManager:: SetMenuFlatLook](#setmenuflatlook)方法來變更此行為。 當功能表按鈕顯示為 [平面] 時, 不會在使用者按一下時變更外觀。
+根據預設，功能表按鈕不會顯示為 [平面]。 請使用[CMFCVisualManager：： SetMenuFlatLook](#setmenuflatlook)方法來變更此行為。 當功能表按鈕顯示為 [平面] 時，不會在使用者按一下時變更外觀。
 
-##  <a name="isofficexpstylemenus"></a>CMFCVisualManager:: IsOfficeXPStyleMenus
+##  <a name="isofficexpstylemenus"></a>CMFCVisualManager：： IsOfficeXPStyleMenus
 
 指出視覺效果管理員是否會執行 Office XP 樣式的功能表。
 
@@ -1637,13 +1637,13 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果視覺管理員顯示 Office XP 樣式的功能表, 則為非零;否則為0。
+如果視覺管理員顯示 Office XP 樣式的功能表，則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-當[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)必須繪製功能表和陰影時, 會呼叫這個方法。 根據預設, 這個方法會傳回 FALSE。 如果您想要使用類似 Office XP 中快顯功能表的快顯功能表, 請在自訂視覺效果管理員中覆寫此方法, 並傳回 TRUE。
+當[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)必須繪製功能表和陰影時，會呼叫這個方法。 根據預設，這個方法會傳回 FALSE。 如果您想要使用類似 Office XP 中快顯功能表的快顯功能表，請在自訂視覺效果管理員中覆寫此方法，並傳回 TRUE。
 
-##  <a name="isoffsetpressedbutton"></a>CMFCVisualManager:: IsOffsetPressedButton
+##  <a name="isoffsetpressedbutton"></a>CMFCVisualManager：： IsOffsetPressedButton
 
 ```
 virtual BOOL IsOffsetPressedButton() const;
@@ -1653,7 +1653,7 @@ virtual BOOL IsOffsetPressedButton() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isownerdrawcaption"></a>CMFCVisualManager:: IsOwnerDrawCaption
+##  <a name="isownerdrawcaption"></a>CMFCVisualManager：： IsOwnerDrawCaption
 
 指出目前的視覺效果管理員是否執行主控描繪的標題。
 
@@ -1663,9 +1663,9 @@ virtual BOOL IsOwnerDrawCaption();
 
 ### <a name="return-value"></a>傳回值
 
-如果應用程式中的所有框架視窗都有擁有者描繪標題, 則為 TRUE;否則為 FALSE。
+如果應用程式中的所有框架視窗都有擁有者描繪標題，則為 TRUE;否則為 FALSE。
 
-##  <a name="isownerdrawmenucheck"></a>CMFCVisualManager:: IsOwnerDrawMenuCheck
+##  <a name="isownerdrawmenucheck"></a>CMFCVisualManager：： IsOwnerDrawMenuCheck
 
 ```
 virtual BOOL IsOwnerDrawMenuCheck();
@@ -1675,9 +1675,9 @@ virtual BOOL IsOwnerDrawMenuCheck();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isshadowhighlightedimage"></a>CMFCVisualManager:: IsShadowHighlightedImage
+##  <a name="isshadowhighlightedimage"></a>CMFCVisualManager：： IsShadowHighlightedImage
 
-指出呈現反白顯示的影像時, 視覺效果管理員是否顯示陰影。
+指出呈現反白顯示的影像時，視覺效果管理員是否顯示陰影。
 
 ```
 BOOL IsShadowHighlightedImage() const;
@@ -1687,7 +1687,7 @@ BOOL IsShadowHighlightedImage() const;
 
 當視覺管理員在反白顯示的影像下顯示陰影時為非零;否則為0。
 
-##  <a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager:: IsToolbarButtonFillEnabled
+##  <a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager：： IsToolbarButtonFillEnabled
 
 ```
 BOOL IsToolbarButtonFillEnabled() const;
@@ -1697,7 +1697,7 @@ BOOL IsToolbarButtonFillEnabled() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="istoolbarroundshape"></a>CMFCVisualManager:: IsToolbarRoundShape
+##  <a name="istoolbarroundshape"></a>CMFCVisualManager：： IsToolbarRoundShape
 
 ```
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
@@ -1705,13 +1705,13 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 
 ### <a name="parameters"></a>參數
 
-[in] *CMFCToolBar&#42;*<br/>
+在*CMFCToolBar&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="iswindowsthemingsupported"></a>CMFCVisualManager:: IsWindowsThemingSupported
+##  <a name="iswindowsthemingsupported"></a>CMFCVisualManager：： IsWindowsThemingSupported
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -1721,7 +1721,7 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onactivateapp"></a>  CMFCVisualManager::OnActivateApp
+##  <a name="onactivateapp"></a>CMFCVisualManager：： OnActivateApp
 
 ```
 virtual void OnActivateApp(
@@ -1731,12 +1731,12 @@ virtual void OnActivateApp(
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+在*pWnd*<br/>
 在*bActive*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManager::OnDrawAutoHideButtonBorder
+##  <a name="ondrawautohidebuttonborder"></a>CMFCVisualManager：： OnDrawAutoHideButtonBorder
 
 當它繪製自動隱藏按鈕的邊框時，架構會呼叫這個方法。
 
@@ -1754,7 +1754,7 @@ virtual void OnDrawAutoHideButtonBorder(
 在裝置內容的指標。
 
 *rectBounds*<br/>
-[in]大小和自動隱藏按鈕的位置。
+在自動隱藏按鈕的大小和位置。
 
 *rectBorderSize*<br/>
 在包含框線大小的[CRect](../../atl-mfc-shared/reference/crect-class.md)參數。
@@ -1764,11 +1764,11 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="remarks"></a>備註
 
-如果您想要自訂自動隱藏按鈕的框線外觀, 請在衍生類別中覆寫這個方法。 根據預設, 這個方法會以應用程式的預設陰影色彩填滿平面框線。
+如果您想要自訂自動隱藏按鈕的框線外觀，請在衍生類別中覆寫這個方法。 根據預設，這個方法會以應用程式的預設陰影色彩填滿平面框線。
 
-*RectBorderSize*參數不包含框線的座標。 它包含`top`、 `bottom`、 `left`和資料成員中的框線大小。`right` 小於或等於0的值表示自動隱藏按鈕旁邊沒有框線。
+*RectBorderSize*參數不包含框線的座標。 它包含 [`top`]、[`bottom`]、[`left`] 和 [`right`] 資料成員中的框線大小。 小於或等於0的值表示自動隱藏按鈕旁邊沒有框線。
 
-##  <a name="ondrawbargripper"></a>CMFCVisualManager:: OnDrawBarGripper
+##  <a name="ondrawbargripper"></a>CMFCVisualManager：： OnDrawBarGripper
 
 由架構在繪製控制列的移駐夾時呼叫。
 
@@ -1789,18 +1789,18 @@ virtual void OnDrawBarGripper(
 在控制項列的周框。
 
 *bHorz*<br/>
-在布林值參數, 指定控制列是水準或垂直固定。
+在布林值參數，指定控制列是水準或垂直固定。
 
 *pBar*<br/>
 在控制列的指標。 視覺效果管理員會繪製此控制列的移駐夾。
 
 ### <a name="remarks"></a>備註
 
-此方法的預設執行會顯示標準移駐夾。 若要自訂移駐夾的外觀, 請在從`CMFCVisualManager`類別衍生的自訂類別中覆寫這個方法。
+此方法的預設執行會顯示標準移駐夾。 若要自訂移駐夾的外觀，請在從 `CMFCVisualManager` 類別衍生的自訂類別中覆寫這個方法。
 
-##  <a name="ondrawbrowsebutton"></a>CMFCVisualManager:: OnDrawBrowseButton
+##  <a name="ondrawbrowsebutton"></a>CMFCVisualManager：： OnDrawBrowseButton
 
-當此架構繪製編輯控制項的瀏覽按鈕時, 會呼叫這個方法。
+當此架構繪製編輯控制項的瀏覽按鈕時，會呼叫這個方法。
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -1816,7 +1816,7 @@ virtual BOOL OnDrawBrowseButton(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定 [流覽] 按鈕界限的矩形。
 
 *pEdit*<br/>
@@ -1826,7 +1826,7 @@ virtual BOOL OnDrawBrowseButton(
 在指定按鈕狀態的列舉值。
 
 *clrText*<br/>
-脫銷[COLORREF](/windows/win32/gdi/colorref)參數的參考。 這是保留的值, 目前未使用。
+脫銷[COLORREF](/windows/win32/gdi/colorref)參數的參考。 這是保留的值，目前未使用。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1834,11 +1834,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="remarks"></a>備註
 
-如果您想要在[CMFCEditBrowseCtrl 類別](../../mfc/reference/cmfceditbrowsectrl-class.md)的實例中自訂 [流覽] 按鈕的外觀, 請覆寫衍生類別中的這個函式。 按鈕狀態的可能值為`ButtonsIsRegular`、 `ButtonsIsPressed`和`ButtonsIsHighlighted`。
+如果您想要在[CMFCEditBrowseCtrl 類別](../../mfc/reference/cmfceditbrowsectrl-class.md)的實例中自訂 [流覽] 按鈕的外觀，請覆寫衍生類別中的這個函式。 按鈕狀態的可能值為 [`ButtonsIsRegular`]、[`ButtonsIsPressed`] 和 [`ButtonsIsHighlighted`]。
 
-##  <a name="ondrawbuttonborder"></a>CMFCVisualManager:: OnDrawButtonBorder
+##  <a name="ondrawbuttonborder"></a>CMFCVisualManager：： OnDrawButtonBorder
 
-當此架構繪製工具列按鈕的框線時, 會呼叫這個方法。
+當此架構繪製工具列按鈕的框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawButtonBorder(
@@ -1856,19 +1856,19 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 在工具列按鈕的指標。 此架構會繪製此按鈕的框線。
 
-*rect*<br/>
+*各種*<br/>
 在指定工具列按鈕界限的矩形。
 
 *state*<br/>
-在列舉的資料類型, 指定工具列按鈕的目前狀態。
+在列舉的資料類型，指定工具列按鈕的目前狀態。
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會顯示標準的框線。 在衍生的視覺效果管理員中覆寫這個方法, 以自訂工具列按鈕框線的外觀。
+這個方法的預設執行會顯示標準的框線。 在衍生的視覺效果管理員中覆寫這個方法，以自訂工具列按鈕框線的外觀。
 
-工具列按鈕的可能狀態為`ButtonsIsRegular`、 `ButtonsIsPressed`或`ButtonsIsHighlighted`。
+工具列按鈕的可能狀態為 [`ButtonsIsRegular`]、[`ButtonsIsPressed`] 或 [`ButtonsIsHighlighted`]。
 
-##  <a name="ondrawbuttonseparator"></a>CMFCVisualManager:: OnDrawButtonSeparator
+##  <a name="ondrawbuttonseparator"></a>CMFCVisualManager：： OnDrawButtonSeparator
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -1881,15 +1881,15 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 在*rect*<br/>
 在*狀態*<br/>
-[in] *bHorz*<br/>
+在*bHorz*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawcaptionbarborder"></a>CMFCVisualManager:: OnDrawCaptionBarBorder
+##  <a name="ondrawcaptionbarborder"></a>CMFCVisualManager：： OnDrawCaptionBarBorder
 
 架構會在繪製[CMFCCaptionBar 類別](../../mfc/reference/cmfccaptionbar-class.md)物件的邊界時呼叫這個方法。
 
@@ -1908,22 +1908,22 @@ virtual void OnDrawCaptionBarBorder(
 在裝置內容的指標。
 
 *pBar*<br/>
-在`CMFCCaptionBar`物件的指標。 此架構會繪製此標題列。
+在`CMFCCaptionBar` 物件的指標。 此架構會繪製此標題列。
 
-*rect*<br/>
+*各種*<br/>
 在指定標題列界限的矩形。
 
 *clrBarBorder*<br/>
 在框線的色彩。
 
 *bFlatBorder*<br/>
-在布林值參數, 指定框線是否具有平面、2D 外觀。
+在布林值參數，指定框線是否具有平面、2D 外觀。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂標題列框線的外觀。
+覆寫衍生類別中的這個方法，以自訂標題列框線的外觀。
 
-##  <a name="ondrawcaptionbarbuttonborder"></a>  CMFCVisualManager::OnDrawCaptionBarButtonBorder
+##  <a name="ondrawcaptionbarbuttonborder"></a>CMFCVisualManager：： OnDrawCaptionBarButtonBorder
 
 ```
 virtual void OnDrawCaptionBarButtonBorder(
@@ -1939,7 +1939,7 @@ virtual void OnDrawCaptionBarButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pBar*<br/>
 在*rect*<br/>
 在*bIsPressed*<br/>
@@ -1950,7 +1950,7 @@ virtual void OnDrawCaptionBarButtonBorder(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManager::OnDrawCaptionBarInfoArea
+##  <a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManager：： OnDrawCaptionBarInfoArea
 
 ```
 virtual void OnDrawCaptionBarInfoArea(
@@ -1961,13 +1961,13 @@ virtual void OnDrawCaptionBarInfoArea(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pBar*<br/>
 在*rect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawcaptionbutton"></a>CMFCVisualManager:: OnDrawCaptionButton
+##  <a name="ondrawcaptionbutton"></a>CMFCVisualManager：： OnDrawCaptionButton
 
 架構會在繪製[CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)物件時呼叫這個方法。
 
@@ -1988,30 +1988,30 @@ virtual void OnDrawCaptionButton (
 在裝置內容的指標。
 
 *pButton*<br/>
-在`CMFCCaptionButton`物件的指標。 架構會繪製此標題按鈕。
+在`CMFCCaptionButton` 物件的指標。 架構會繪製此標題按鈕。
 
 *bActive*<br/>
-[in]布林值參數，指定是否使用中按鈕。
+在布林值參數，指定按鈕是否作用中。
 
 *bHorz*<br/>
-在布林值參數, 指定標題是否為水準。
+在布林值參數，指定標題是否為水準。
 
 *bMaximized*<br/>
 在指定父窗格是否最大化的布林值參數。
 
 *bDisabled*<br/>
-在布林值參數, 指定是否停用標題按鈕。
+在布林值參數，指定是否停用標題按鈕。
 
 *nImageID*<br/>
-在要用於按鈕之圖示的影像索引。 如果*nImageID*為-1, 則這個方法會使用*pButton*中所記錄的影像索引。
+在要用於按鈕之圖示的影像索引。 如果*nImageID*為-1，則這個方法會使用*pButton*中所記錄的影像索引。
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會顯示`CMenuImages`類別的全域實例中的小按鈕。 這些按鈕會列在的標頭檔`CMenuImages`中。 其中一些範例`CMenuImages::IdClose`包括`CMenuImages::IdArowLeft`、 `CMenuImages::IdArowRight`、 `CMenuImages::IdArowDown`、 、`CMenuImages::IdArowUp`和。`CMenuImages::IdPinHorz`
+這個方法的預設執行會顯示 `CMenuImages` 類別的全域實例中的小按鈕。 這些按鈕會列在 `CMenuImages`的標頭檔中。 其中一些範例包括 `CMenuImages::IdClose`、`CMenuImages::IdArowLeft`、`CMenuImages::IdArowRight`、`CMenuImages::IdArowDown`、`CMenuImages::IdArowUp`和 `CMenuImages::IdPinHorz`。
 
-覆寫衍生類別中的這個方法, 以自訂標題按鈕的外觀。
+覆寫衍生類別中的這個方法，以自訂標題按鈕的外觀。
 
-##  <a name="ondrawcheckbox"></a>CMFCVisualManager:: OnDrawCheckBox
+##  <a name="ondrawcheckbox"></a>CMFCVisualManager：： OnDrawCheckBox
 
 ```
 virtual void OnDrawCheckBox(
@@ -2024,7 +2024,7 @@ virtual void OnDrawCheckBox(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 在*bHighlighted*<br/>
 在*bChecked*<br/>
@@ -2032,7 +2032,7 @@ virtual void OnDrawCheckBox(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawcheckboxex"></a>CMFCVisualManager:: OnDrawCheckBoxEx
+##  <a name="ondrawcheckboxex"></a>CMFCVisualManager：： OnDrawCheckBoxEx
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -2046,18 +2046,18 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
-[in] *nState*<br/>
+在*nState*<br/>
 在*bHighlighted*<br/>
 在*bPressed*<br/>
 在*bEnabled*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManager::OnDrawComboBorder
+##  <a name="ondrawcomboborder"></a>CMFCVisualManager：： OnDrawComboBorder
 
-當架構在[CMFCToolBarComboBoxButton 類別](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)的實例周圍繪製框線時, 會呼叫這個方法。
+當架構在[CMFCToolBarComboBoxButton 類別](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)的實例周圍繪製框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawComboBorder(
@@ -2074,26 +2074,26 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 在下拉式方塊按鈕之裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定下拉式方塊按鈕界限的矩形。
 
 *bDisabled*<br/>
-在布林值參數, 指出下拉式方塊按鈕是否無法使用。
+在布林值參數，指出下拉式方塊按鈕是否無法使用。
 
 *bIsDropped*<br/>
-在布林值參數, 指出下拉式方塊是否已下拉。
+在布林值參數，指出下拉式方塊是否已下拉。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出下拉式方塊按鈕是否反白顯示。
+在布林值參數，指出下拉式方塊按鈕是否反白顯示。
 
 *pButton*<br/>
-在`CMFCToolBarComboBoxButton`物件的指標。 架構會繪製此下拉式方塊按鈕。
+在`CMFCToolBarComboBoxButton` 物件的指標。 架構會繪製此下拉式方塊按鈕。
 
 ### <a name="remarks"></a>備註
 
-在您衍生的視覺效果管理員中覆寫這個方法, 以自訂下拉式方塊框線的外觀。
+在您衍生的視覺效果管理員中覆寫這個方法，以自訂下拉式方塊框線的外觀。
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManager::OnDrawComboDropButton
+##  <a name="ondrawcombodropbutton"></a>CMFCVisualManager：： OnDrawComboDropButton
 
 架構會在繪製[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)的 [拖放] 按鈕時呼叫這個方法。
 
@@ -2112,26 +2112,26 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定下拉按鈕界限的矩形。
 
 *bDisabled*<br/>
-在布林值參數, 指出是否無法使用 [拖放] 按鈕。
+在布林值參數，指出是否無法使用 [拖放] 按鈕。
 
 *bIsDropped*<br/>
-在布林值參數, 指出下拉式方塊是否已下拉。
+在布林值參數，指出下拉式方塊是否已下拉。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示下拉按鈕。
+在布林值參數，指出是否反白顯示下拉按鈕。
 
 *pButton*<br/>
-在`CMFCToolBarComboBoxButton`物件的指標。 此架構會繪製此下拉式方塊按鈕的 [卸載] 按鈕。
+在`CMFCToolBarComboBoxButton` 物件的指標。 此架構會繪製此下拉式方塊按鈕的 [卸載] 按鈕。
 
 ### <a name="remarks"></a>備註
 
-在您衍生的視覺效果管理員中覆寫這個方法, 以自訂下拉式方塊按鈕之下拉按鈕的外觀。
+在您衍生的視覺效果管理員中覆寫這個方法，以自訂下拉式方塊按鈕之下拉按鈕的外觀。
 
-##  <a name="ondrawcontrolborder"></a>  CMFCVisualManager::OnDrawControlBorder
+##  <a name="ondrawcontrolborder"></a>CMFCVisualManager：： OnDrawControlBorder
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -2139,11 +2139,11 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>參數
 
-[in] *pWndCtrl*<br/>
+在*pWndCtrl*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawdefaultribbonimage"></a>CMFCVisualManager:: OnDrawDefaultRibbonImage
+##  <a name="ondrawdefaultribbonimage"></a>CMFCVisualManager：： OnDrawDefaultRibbonImage
 
 架構會在繪製用於功能區按鈕的預設影像時呼叫這個方法。
 
@@ -2165,21 +2165,21 @@ virtual void OnDrawDefaultRibbonImage(
 在指定預設影像界限的矩形。
 
 *bIsDisabled*<br/>
-在布林值參數, 指出功能區按鈕是否無法使用。
+在布林值參數，指出功能區按鈕是否無法使用。
 
 *bIsPressed*<br/>
-在布林值參數, 指出是否按下功能區按鈕。
+在布林值參數，指出是否按下功能區按鈕。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示功能區按鈕。
+在布林值參數，指出是否反白顯示功能區按鈕。
 
 ### <a name="remarks"></a>備註
 
-如果您想要自訂用於功能區按鈕的影像, 請在衍生的視覺效果管理員中覆寫這個方法。
+如果您想要自訂用於功能區按鈕的影像，請在衍生的視覺效果管理員中覆寫這個方法。
 
-##  <a name="ondraweditborder"></a>CMFCVisualManager:: OnDrawEditBorder
+##  <a name="ondraweditborder"></a>CMFCVisualManager：： OnDrawEditBorder
 
-當架構在[CMFCToolBarEditBoxButton 類別](../../mfc/reference/cmfctoolbareditboxbutton-class.md)的實例周圍繪製框線時, 會呼叫這個方法。
+當架構在[CMFCToolBarEditBoxButton 類別](../../mfc/reference/cmfctoolbareditboxbutton-class.md)的實例周圍繪製框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawEditBorder(
@@ -2195,23 +2195,23 @@ virtual void OnDrawEditBorder(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
-在指定`CMFCToolBarEditBoxButton`物件界限的矩形。
+*各種*<br/>
+在指定 `CMFCToolBarEditBoxButton` 物件界限的矩形。
 
 *bDisabled*<br/>
-[in]布林值參數，指出是否無法使用按鈕。
+在布林值參數，指出按鈕是否無法使用。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示按鈕。
+在布林值參數，指出是否反白顯示按鈕。
 
 *pButton*<br/>
-在`CMFCToolBarEditBoxButton`物件的指標。 此架構會繪製此編輯方塊按鈕的框線。
+在`CMFCToolBarEditBoxButton` 物件的指標。 此架構會繪製此編輯方塊按鈕的框線。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自`CMFCToolBarEditBoxButton`定義物件的框線。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCToolBarEditBoxButton` 物件的框線。
 
-##  <a name="ondrawexpandingbox"></a>CMFCVisualManager:: OnDrawExpandingBox
+##  <a name="ondrawexpandingbox"></a>CMFCVisualManager：： OnDrawExpandingBox
 
 ```
 virtual void OnDrawExpandingBox(
@@ -2223,16 +2223,16 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 在*bIsOpened*<br/>
 在*colorBox*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManager::OnDrawFloatingToolbarBorder
+##  <a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManager：： OnDrawFloatingToolbarBorder
 
-當此架構繪製浮動工具列的框線時, 會呼叫這個方法。
+當此架構繪製浮動工具列的框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -2258,15 +2258,15 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="remarks"></a>備註
 
-浮動工具列是顯示為迷你框架視窗的工具列。 通常, 當使用者拖曳工具列, 使其不再停駐時, 就會發生這種情況。
+浮動工具列是顯示為迷你框架視窗的工具列。 通常，當使用者拖曳工具列，使其不再停駐時，就會發生這種情況。
 
-框線的大小是由*rectBorderSize*中的對應參數所指定。 例如, 工具列的上框線寬度是由`rectBorderSize.top`所指定。
+框線的大小是由*rectBorderSize*中的對應參數所指定。 例如，工具列的上框線寬度是由 `rectBorderSize.top`所指定。
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂浮動工具列的框線外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂浮動工具列的框線外觀。
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManager::OnDrawHeaderCtrlBorder
+##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManager：： OnDrawHeaderCtrlBorder
 
-當架構在[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)的實例周圍繪製框線時, 會呼叫這個方法。
+當架構在[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)的實例周圍繪製框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -2280,27 +2280,27 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="parameters"></a>參數
 
 *pCtrl*<br/>
-在`CMFCHeaderCtrl`物件的指標。 架構會繪製此標題控制項的框線。
+在`CMFCHeaderCtrl` 物件的指標。 架構會繪製此標題控制項的框線。
 
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定標題控制項界限的矩形。
 
 *bIsPressed*<br/>
-在布林值參數, 指出是否按下標頭控制項。
+在布林值參數，指出是否按下標頭控制項。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示標題控制項。
+在布林值參數，指出是否反白顯示標題控制項。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂標題控制項的框線。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂標題控制項的框線。
 
-##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManager::OnDrawHeaderCtrlSortArrow
+##  <a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManager：： OnDrawHeaderCtrlSortArrow
 
-當此架構繪製標題控制項的排序箭號時, 會呼叫這個函式。
+當此架構繪製標題控制項的排序箭號時，會呼叫這個函式。
 
 ```
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -2318,17 +2318,17 @@ virtual void OnDrawHeaderCtrlSortArrow(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定排序箭號界限的矩形。
 
 *bIsUp*<br/>
-在布林值, 指定排序箭號的方向。
+在布林值，指定排序箭號的方向。
 
 ### <a name="remarks"></a>備註
 
-如果*bIsUp*為 TRUE, 則視覺效果管理員會繪製向上排序箭號。 如果為 FALSE, 則視覺效果管理員會繪製向下排序箭號。 覆`OnDrawHeaderCtrlSortArrow`寫衍生類別中的, 以自訂排序按鈕的外觀。
+如果*bIsUp*為 TRUE，則視覺效果管理員會繪製向上排序箭號。 如果為 FALSE，則視覺效果管理員會繪製向下排序箭號。 覆寫衍生類別中的 `OnDrawHeaderCtrlSortArrow`，以自訂排序按鈕的外觀。
 
-##  <a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager:: OnDrawMenuArrowOnCustomizeList
+##  <a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager：： OnDrawMenuArrowOnCustomizeList
 
 ```
 virtual void OnDrawMenuArrowOnCustomizeList(
@@ -2339,13 +2339,13 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rectCommand*<br/>
 在*bSelected*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenuborder"></a>CMFCVisualManager:: OnDrawMenuBorder
+##  <a name="ondrawmenuborder"></a>CMFCVisualManager：： OnDrawMenuBorder
 
 架構會在繪製[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)的框線時呼叫這個方法。
 
@@ -2359,19 +2359,19 @@ virtual void OnDrawMenuBorder(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-在`CMFCPopupMenu`物件之裝置內容的指標。
+在`CMFCPopupMenu` 物件之裝置內容的指標。
 
 *pMenu*<br/>
-在`CMFCPopupMenu`物件的指標。 此架構會在此快顯功能表周圍繪製框線。
+在`CMFCPopupMenu` 物件的指標。 此架構會在此快顯功能表周圍繪製框線。
 
-*rect*<br/>
+*各種*<br/>
 在指定快捷方式功能表邊界的矩形。
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會顯示標準功能表框線。 在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能表框線的外觀。
+這個方法的預設執行會顯示標準功能表框線。 在衍生的視覺效果管理員中覆寫這個方法，以自訂功能表框線的外觀。
 
-##  <a name="ondrawmenucheck"></a>  CMFCVisualManager::OnDrawMenuCheck
+##  <a name="ondrawmenucheck"></a>CMFCVisualManager：： OnDrawMenuCheck
 
 ```
 virtual void OnDrawMenuCheck(
@@ -2384,15 +2384,15 @@ virtual void OnDrawMenuCheck(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 在*rect*<br/>
 在*bHighlight*<br/>
-[in] *bIsRadio*<br/>
+在*bIsRadio*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenuitembutton"></a>CMFCVisualManager:: OnDrawMenuItemButton
+##  <a name="ondrawmenuitembutton"></a>CMFCVisualManager：： OnDrawMenuItemButton
 
 ```
 virtual void OnDrawMenuItemButton(
@@ -2405,7 +2405,7 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 在*rectButton*<br/>
 在*bHighlight*<br/>
@@ -2413,7 +2413,7 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenulabel"></a>CMFCVisualManager:: OnDrawMenuLabel
+##  <a name="ondrawmenulabel"></a>CMFCVisualManager：： OnDrawMenuLabel
 
 ```
 virtual COLORREF OnDrawMenuLabel(
@@ -2423,14 +2423,14 @@ virtual COLORREF OnDrawMenuLabel(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenuresizebar"></a>CMFCVisualManager:: OnDrawMenuResizeBar
+##  <a name="ondrawmenuresizebar"></a>CMFCVisualManager：： OnDrawMenuResizeBar
 
 ```
 virtual void OnDrawMenuResizeBar(
@@ -2441,15 +2441,15 @@ virtual void OnDrawMenuResizeBar(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 在*nResizeFlags*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenuscrollbutton"></a>CMFCVisualManager:: OnDrawMenuScrollButton
+##  <a name="ondrawmenuscrollbutton"></a>CMFCVisualManager：： OnDrawMenuScrollButton
 
-當此架構繪製功能表捲軸按鈕時, 會呼叫這個方法。
+當此架構繪製功能表捲軸按鈕時，會呼叫這個方法。
 
 ```
 virtual void OnDrawMenuScrollButton(
@@ -2466,26 +2466,26 @@ virtual void OnDrawMenuScrollButton(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定滾動按鈕界限的矩形。
 
 *bIsScrollDown*<br/>
-在布林值, 指出視覺效果管理員所繪製的按鈕類型。 值為 TRUE 時, 表示視覺效果管理員繪製向下按鈕。
+在布林值，指出視覺效果管理員所繪製的按鈕類型。 值為 TRUE 時，表示視覺效果管理員繪製向下按鈕。
 
 *bIsHighlited*<br/>
-在布林值, 指出是否反白顯示按鈕。
+在布林值，指出是否反白顯示按鈕。
 
 *bIsPressed*<br/>
-在布林值, 指出是否按下按鈕。
+在布林值，指出是否按下按鈕。
 
 *bIsDisabled*<br/>
-在布林值, 指出是否停用按鈕。
+在布林值，指出是否停用按鈕。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能表捲軸按鈕的外觀。 當功能表項目的總高度超過快顯功能表的高度時, 功能表捲軸按鈕會出現在快顯功能表的邊緣上。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂功能表捲軸按鈕的外觀。 當功能表項目的總高度超過快顯功能表的高度時，功能表捲軸按鈕會出現在快顯功能表的邊緣上。
 
-##  <a name="ondrawmenushadow"></a>CMFCVisualManager:: OnDrawMenuShadow
+##  <a name="ondrawmenushadow"></a>CMFCVisualManager：： OnDrawMenuShadow
 
 ```
 virtual void OnDrawMenuShadow(
@@ -2502,21 +2502,21 @@ virtual void OnDrawMenuShadow(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rectClient*<br/>
-[in] *rectExclude*<br/>
+在*rectExclude*<br/>
 在*nDepth*<br/>
 在*iMinBrightness*<br/>
 在*iMaxBrightness*<br/>
-[in] *pBmpSaveBottom*<br/>
-[in] *pBmpSaveRight*<br/>
-[in] *bRTL*<br/>
+在*pBmpSaveBottom*<br/>
+在*pBmpSaveRight*<br/>
+在*bRTL*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenusystembutton"></a>CMFCVisualManager:: OnDrawMenuSystemButton
+##  <a name="ondrawmenusystembutton"></a>CMFCVisualManager：： OnDrawMenuSystemButton
 
-當此架構繪製應用程式的功能表系統按鈕時, 會呼叫這個方法。
+當此架構繪製應用程式的功能表系統按鈕時，會呼叫這個方法。
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -2532,7 +2532,7 @@ virtual void OnDrawMenuSystemButton(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定按鈕界限的矩形。
 
 *uiSystemCommand*<br/>
@@ -2548,9 +2548,9 @@ virtual void OnDrawMenuSystemButton(
 
 功能表系統按鈕是位於標題列上的 [**關閉**]、[**最小化**]、[**最大化**] 和 [**還原**] 按鈕。
 
-這個方法的預設實值會呼叫具有 DFC_CAPTION 類型的[CDC::D rawframecontrol](../../mfc/reference/cdc-class.md#drawframecontrol) 。 在您衍生的視覺化管理員類別中覆寫這個方法, 以自訂系統按鈕的外觀。
+這個方法的預設實值會呼叫具有 DFC_CAPTION 類型的[CDC：:D rawframecontrol](../../mfc/reference/cdc-class.md#drawframecontrol) 。 在您衍生的視覺化管理員類別中覆寫這個方法，以自訂系統按鈕的外觀。
 
-##  <a name="ondrawminiframeborder"></a>CMFCVisualManager:: OnDrawMiniFrameBorder
+##  <a name="ondrawminiframeborder"></a>CMFCVisualManager：： OnDrawMiniFrameBorder
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -2562,16 +2562,16 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *pFrameWnd*<br/>
+在*pDC*<br/>
+在*pFrameWnd*<br/>
 在*rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+在*rectBorderSize*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManager::OnDrawOutlookBarSplitter
+##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManager：： OnDrawOutlookBarSplitter
 
-當此架構繪製 Outlook 橫條的分隔器時, 會呼叫這個方法。
+當此架構繪製 Outlook 橫條的分隔器時，會呼叫這個方法。
 
 ```
 virtual void OnDrawOutlookBarSplitter(
@@ -2589,9 +2589,9 @@ virtual void OnDrawOutlookBarSplitter(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂 Outlook 橫條上的分隔器外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 Outlook 橫條上的分隔器外觀。
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManager::OnDrawOutlookPageButtonBorder
+##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManager：： OnDrawOutlookPageButtonBorder
 
 在繪製 Outlook 頁面按鈕的框線時由架構呼叫。
 
@@ -2612,16 +2612,16 @@ virtual void OnDrawOutlookPageButtonBorder(
 在指定 Outlook 頁面按鈕界限的矩形。
 
 *bIsHighlighted*<br/>
-在布林值, 指定是否反白顯示按鈕。
+在布林值，指定是否反白顯示按鈕。
 
 *bIsPressed*<br/>
-在布林值, 指定是否按下按鈕。
+在布林值，指定是否按下按鈕。
 
 ### <a name="remarks"></a>備註
 
-在自訂視覺效果管理員中覆寫這個方法, 以變更 Outlook 頁面按鈕的外觀。
+在自訂視覺效果管理員中覆寫這個方法，以變更 Outlook 頁面按鈕的外觀。
 
-##  <a name="ondrawpaneborder"></a>  CMFCVisualManager::OnDrawPaneBorder
+##  <a name="ondrawpaneborder"></a>CMFCVisualManager：： OnDrawPaneBorder
 
 架構會在繪製[CPane 類別](../../mfc/reference/cpane-class.md)物件的邊界時呼叫這個方法。
 
@@ -2640,14 +2640,14 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 在窗格的指標。 視覺效果管理員會繪製此窗格的框線。
 
-*rect*<br/>
+*各種*<br/>
 在表示窗格界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會顯示標準的框線。 覆寫衍生類別中的這個方法, 以自訂框線的外觀。
+這個方法的預設執行會顯示標準的框線。 覆寫衍生類別中的這個方法，以自訂框線的外觀。
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManager::OnDrawPaneCaption
+##  <a name="ondrawpanecaption"></a>CMFCVisualManager：： OnDrawPaneCaption
 
 架構會在繪製[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)之實例的標題時呼叫這個方法。
 
@@ -2666,10 +2666,10 @@ virtual COLORREF OnDrawPaneCaption(
 在裝置內容的指標。
 
 *pBar*<br/>
-在`CDockablePane`物件的指標。 架構會繪製此窗格的標題。
+在`CDockablePane` 物件的指標。 架構會繪製此窗格的標題。
 
 *bActive*<br/>
-在布林值參數, 指出控制列是否作用中。
+在布林值參數，指出控制列是否作用中。
 
 *rectCaption*<br/>
 在指定標題界限的矩形。
@@ -2679,13 +2679,13 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="return-value"></a>傳回值
 
-[COLORREF](/windows/win32/gdi/colorref)參數, 表示標題的文字色彩。
+[COLORREF](/windows/win32/gdi/colorref)參數，表示標題的文字色彩。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂窗格標題的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂窗格標題的外觀。
 
-##  <a name="ondrawpanedivider"></a>  CMFCVisualManager::OnDrawPaneDivider
+##  <a name="ondrawpanedivider"></a>CMFCVisualManager：： OnDrawPaneDivider
 
 ```
 virtual void OnDrawPaneDivider(
@@ -2697,14 +2697,14 @@ virtual void OnDrawPaneDivider(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
+在*pDC*<br/>
+在*pSlider*<br/>
 在*rect*<br/>
-[in] *bAutoHideMode*<br/>
+在*bAutoHideMode*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManager::OnDrawPopupWindowBorder
+##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManager：： OnDrawPopupWindowBorder
 
 ```
 virtual void OnDrawPopupWindowBorder(
@@ -2714,12 +2714,12 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager:: OnDrawPopupWindowButtonBorder
+##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager：： OnDrawPopupWindowButtonBorder
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -2730,13 +2730,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rectClient*<br/>
 在*pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManager::OnDrawPopupWindowCaption
+##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManager：： OnDrawPopupWindowCaption
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -2747,17 +2747,17 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pPopupWnd*<br/>
+在*pDC*<br/>
+在*rectCaption*<br/>
+在*pPopupWnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManager::OnDrawRibbonApplicationButton
+##  <a name="ondrawribbonapplicationbutton"></a>CMFCVisualManager：： OnDrawRibbonApplicationButton
 
-當此架構在功能區上繪製**主要按鈕**時, 會呼叫這個方法。
+當此架構在功能區上繪製**主要按鈕**時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonApplicationButton(
@@ -2775,11 +2775,11 @@ virtual void OnDrawRibbonApplicationButton(
 
 ### <a name="remarks"></a>備註
 
-如果您想要自訂**主要按鈕**的外觀, 請在衍生的視覺效果管理員中覆寫這個方法。
+如果您想要自訂**主要按鈕**的外觀，請在衍生的視覺效果管理員中覆寫這個方法。
 
-##  <a name="ondrawribbonbuttonborder"></a>CMFCVisualManager:: OnDrawRibbonButtonBorder
+##  <a name="ondrawribbonbuttonborder"></a>CMFCVisualManager：： OnDrawRibbonButtonBorder
 
-當架構在功能區上繪製按鈕的框線時, 會呼叫這個方法。
+當架構在功能區上繪製按鈕的框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonButtonBorder(
@@ -2797,11 +2797,11 @@ virtual void OnDrawRibbonButtonBorder(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自`CMFCRibbonButton`定義的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCRibbonButton`的外觀。
 
-##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManager:: OnDrawRibbonButtonsGroup
+##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManager：： OnDrawRibbonButtonsGroup
 
-當架構在功能區上繪製一組按鈕時, 會呼叫這個方法。
+當架構在功能區上繪製一組按鈕時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -2827,11 +2827,11 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能區上按鈕群組的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂功能區上按鈕群組的外觀。
 
-##  <a name="ondrawribboncaption"></a>  CMFCVisualManager::OnDrawRibbonCaption
+##  <a name="ondrawribboncaption"></a>CMFCVisualManager：： OnDrawRibbonCaption
 
-當此架構繪製主框架視窗的標題列時, 會呼叫這個方法。 只有當功能區與主框架整合時, 架構才會呼叫這個方法。
+當此架構繪製主框架視窗的標題列時，會呼叫這個方法。 只有當功能區與主框架整合時，架構才會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonCaption(
@@ -2849,7 +2849,7 @@ virtual void OnDrawRibbonCaption(
 *pBar*<br/>
 在功能區列的指標。 視覺效果管理員會繪製此功能區列。
 
-*rect*<br/>
+*各種*<br/>
 在指定功能區列界限的矩形。
 
 *rectText*<br/>
@@ -2857,11 +2857,11 @@ virtual void OnDrawRibbonCaption(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫此函式, 以自訂標題列的外觀。 只有當功能區與主框架視窗整合時, 這個方法才會影響標題列。
+在衍生的視覺效果管理員中覆寫此函式，以自訂標題列的外觀。 只有當功能區與主框架視窗整合時，這個方法才會影響標題列。
 
-##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManager::OnDrawRibbonCaptionButton
+##  <a name="ondrawribboncaptionbutton"></a>CMFCVisualManager：： OnDrawRibbonCaptionButton
 
-當此架構繪製位於功能區列上的標題按鈕時, 會呼叫這個方法。
+當此架構繪製位於功能區列上的標題按鈕時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonCaptionButton(
@@ -2875,13 +2875,13 @@ virtual void OnDrawRibbonCaptionButton(
 裝置內容的指標。
 
 *pButton*<br/>
-`CMFCRibbonCaptionButton`類別的指標。 架構會繪製此標題按鈕。
+`CMFCRibbonCaptionButton` 類別的指標。 架構會繪製此標題按鈕。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能區上標題按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂功能區上標題按鈕的外觀。
 
-##  <a name="ondrawribboncategory"></a>CMFCVisualManager:: OnDrawRibbonCategory
+##  <a name="ondrawribboncategory"></a>CMFCVisualManager：： OnDrawRibbonCategory
 
 架構會在繪製[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)物件時呼叫這個方法。
 
@@ -2898,20 +2898,20 @@ virtual void OnDrawRibbonCategory(
 在裝置內容的指標。
 
 *pCategory*<br/>
-在`CMFCRibbonCategory`物件的指標。 架構會繪製此功能區分類。
+在`CMFCRibbonCategory` 物件的指標。 架構會繪製此功能區分類。
 
 *rectCategory*<br/>
-在矩形, 指定功能區上所有類別目錄面板的界限。
+在矩形，指定功能區上所有類別目錄面板的界限。
 
 ### <a name="remarks"></a>備註
 
-功能區分類是功能表命令的邏輯群組。 如需功能區類別的詳細資訊, 請參閱[CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md)。
+功能區分類是功能表命令的邏輯群組。 如需功能區類別的詳細資訊，請參閱[CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md)。
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能區分類的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂功能區分類的外觀。
 
-##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManager:: OnDrawRibbonCategoryCaption
+##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManager：： OnDrawRibbonCategoryCaption
 
-當此架構繪製功能區分類的標題列時, 會呼叫這個方法。
+當此架構繪製功能區分類的標題列時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnDrawRibbonCategoryCaption(
@@ -2924,18 +2924,18 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 *pDC*<br/>
 在繪圖內容。
 
-*pContextCaption*<br/>
+*pCoNtextCaption*<br/>
 在標題列的指標。 視覺效果管理員會繪製此[CMFCRibbonCoNtextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
-[COLORREF](/windows/win32/gdi/colorref)參數, 表示標題列上文字的色彩。
+[COLORREF](/windows/win32/gdi/colorref)參數，表示標題列上文字的色彩。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂功能區分類的標題列外觀。 如需標題列的詳細資訊, 請參閱[CMFCRibbonCoNtextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)。
+覆寫衍生類別中的這個方法，以自訂功能區分類的標題列外觀。 如需標題列的詳細資訊，請參閱[CMFCRibbonCoNtextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)。
 
-##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManager:: OnDrawRibbonCategoryScroll
+##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManager：： OnDrawRibbonCategoryScroll
 
 ```
 virtual void OnDrawRibbonCategoryScroll(
@@ -2945,14 +2945,14 @@ virtual void OnDrawRibbonCategoryScroll(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *pScroll*<br/>
+在*pDC*<br/>
+在*pScroll*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManager::OnDrawRibbonCategoryTab
+##  <a name="ondrawribboncategorytab"></a>CMFCVisualManager：： OnDrawRibbonCategoryTab
 
-架構在繪製功能區分類的索引標籤時, 會呼叫這個方法。
+架構在繪製功能區分類的索引標籤時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnDrawRibbonCategoryTab(
@@ -2967,10 +2967,10 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 在裝置內容的指標。
 
 *pTab*<br/>
-在`CMFCRibbonTab`類別實例的指標。 架構會繪製此索引標籤。
+在`CMFCRibbonTab` 類別之實例的指標。 架構會繪製此索引標籤。
 
 *bIsActive*<br/>
-[in]布林值參數，指出是否為作用中索引標籤。
+在布林值參數，指出索引標籤是否作用中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2978,9 +2978,9 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能區類別目錄索引標籤的外觀。如需功能區類別的詳細資訊, 請參閱[CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md)。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂功能區類別目錄索引標籤的外觀。如需功能區類別的詳細資訊，請參閱[CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md)。
 
-##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager:: OnDrawRibbonCheckBoxOnList
+##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager：： OnDrawRibbonCheckBoxOnList
 
 ```
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -2993,7 +2993,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pCheckBox*<br/>
 在*rect*<br/>
 在*bIsSelected*<br/>
@@ -3001,7 +3001,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager:: OnDrawRibbonColorPaletteBox
+##  <a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager：： OnDrawRibbonColorPaletteBox
 
 ```
 virtual void OnDrawRibbonColorPaletteBox(
@@ -3019,12 +3019,12 @@ virtual void OnDrawRibbonColorPaletteBox(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pColorButton*<br/>
-[in] *pIcon*<br/>
+在*pIcon*<br/>
 在*色彩*<br/>
 在*rect*<br/>
-[in] *bDrawTopEdge*<br/>
+在*bDrawTopEdge*<br/>
 在*bDrawBottomEdge*<br/>
 在*bIsHighlighted*<br/>
 在*bIsChecked*<br/>
@@ -3032,9 +3032,9 @@ virtual void OnDrawRibbonColorPaletteBox(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButton
+##  <a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManager：： OnDrawRibbonDefaultPaneButton
 
-當此架構繪製功能區窗格的預設按鈕時, 會呼叫這個方法。
+當此架構繪製功能區窗格的預設按鈕時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonDefaultPaneButton(
@@ -3052,11 +3052,11 @@ virtual void OnDrawRibbonDefaultPaneButton(
 
 ### <a name="remarks"></a>備註
 
-當功能區窗格調整為最小大小, 而且沒有區域可顯示面板的內容時, 架構會顯示預設按鈕。 當使用者按一下 [預設] 按鈕時, 架構會顯示一個下拉式功能表, 其中包含面板的內容。
+當功能區窗格調整為最小大小，而且沒有區域可顯示面板的內容時，架構會顯示預設按鈕。 當使用者按一下 [預設] 按鈕時，架構會顯示一個下拉式功能表，其中包含面板的內容。
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂預設按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂預設按鈕的外觀。
 
-##  <a name="ondrawribbondefaultpanebuttoncontext"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext
+##  <a name="ondrawribbondefaultpanebuttoncontext"></a>CMFCVisualManager：： OnDrawRibbonDefaultPaneButtonCoNtext
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonContext(
@@ -3066,12 +3066,12 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator
+##  <a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManager：： OnDrawRibbonDefaultPaneButtonIndicator
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -3084,7 +3084,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 在*rect*<br/>
 在*bIsSelected*<br/>
@@ -3092,7 +3092,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManager:: OnDrawRibbonGalleryBorder
+##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManager：： OnDrawRibbonGalleryBorder
 
 ```
 virtual void OnDrawRibbonGalleryBorder(
@@ -3103,13 +3103,13 @@ virtual void OnDrawRibbonGalleryBorder(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 在*rectBorder*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManager::OnDrawRibbonGalleryButton
+##  <a name="ondrawribbongallerybutton"></a>CMFCVisualManager：： OnDrawRibbonGalleryButton
 
 ```
 virtual void OnDrawRibbonGalleryButton(
@@ -3119,12 +3119,12 @@ virtual void OnDrawRibbonGalleryButton(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManager::OnDrawRibbonKeyTip
+##  <a name="ondrawribbonkeytip"></a>CMFCVisualManager：： OnDrawRibbonKeyTip
 
 ```
 virtual void OnDrawRibbonKeyTip(
@@ -3136,14 +3136,14 @@ virtual void OnDrawRibbonKeyTip(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pElement*<br/>
 在*rect*<br/>
-[in] *str*<br/>
+在*str*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbonlabel"></a>  CMFCVisualManager::OnDrawRibbonLabel
+##  <a name="ondrawribbonlabel"></a>CMFCVisualManager：： OnDrawRibbonLabel
 
 架構會在繪製功能區的標籤時呼叫這個方法。
 
@@ -3162,14 +3162,14 @@ virtual void OnDrawRibbonLabel(
 *pLabel*<br/>
 在[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)物件的指標。 架構會繪製此功能區標籤。
 
-*rect*<br/>
+*各種*<br/>
 在指定功能區面板界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂功能區標籤。
+覆寫衍生類別中的這個方法，以自訂功能區標籤。
 
-##  <a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManager:: OnDrawRibbonMainPanelButtonBorder
+##  <a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManager：： OnDrawRibbonMainPanelButtonBorder
 
 架構會在繪製位於**主要**面板上之[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)的框線時呼叫這個方法。
 
@@ -3185,15 +3185,15 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 在裝置內容的指標。
 
 *pButton*<br/>
-在位於功能區主`CMFCRibbonButton`面板上之的指標。 此架構會繪製此按鈕的框線。
+在位於功能區主面板上之 `CMFCRibbonButton` 的指標。 此架構會繪製此按鈕的框線。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂**主要**面板`CMFCRibbonButton`上的框線外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂**主要**面板上 `CMFCRibbonButton` 框線的外觀。
 
-##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManager::OnDrawRibbonMainPanelFrame
+##  <a name="ondrawribbonmainpanelframe"></a>CMFCVisualManager：： OnDrawRibbonMainPanelFrame
 
-當架構在[CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)周圍繪製框架時, 會呼叫這個方法。
+當架構在[CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)周圍繪製框架時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonMainPanelFrame(
@@ -3208,16 +3208,16 @@ virtual void OnDrawRibbonMainPanelFrame(
 在裝置內容的指標。
 
 *pPanel*<br/>
-在的`CMFCRibbonMainPanel`指標。
+在`CMFCRibbonMainPanel`的指標。
 
-*rect*<br/>
-在指定界限`CMFCRibbonMainPanel`的矩形。
+*各種*<br/>
+在指定 `CMFCRibbonMainPanel`界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂框架`CMFCRibbonMainPanel`的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCRibbonMainPanel`框架的外觀。
 
-##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManager::OnDrawRibbonMenuCheckFrame
+##  <a name="ondrawribbonmenucheckframe"></a>CMFCVisualManager：： OnDrawRibbonMenuCheckFrame
 
 ```
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -3228,13 +3228,13 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pButton*<br/>
 在*rect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawribbonpanel"></a>  CMFCVisualManager::OnDrawRibbonPanel
+##  <a name="ondrawribbonpanel"></a>CMFCVisualManager：： OnDrawRibbonPanel
 
 架構會在繪製[CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)物件時呼叫這個方法。
 
@@ -3252,7 +3252,7 @@ virtual COLORREF OnDrawRibbonPanel(
 在裝置內容的指標。
 
 *pPanel*<br/>
-在`CMFCRibbonPanel`物件的指標。 架構會繪製此功能區面板。
+在`CMFCRibbonPanel` 物件的指標。 架構會繪製此功能區面板。
 
 *rectPanel*<br/>
 在指定面板界限的矩形。
@@ -3266,11 +3266,11 @@ virtual COLORREF OnDrawRibbonPanel(
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂功能區面板的外觀。
+覆寫衍生類別中的這個方法，以自訂功能區面板的外觀。
 
-##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManager::OnDrawRibbonPanelCaption
+##  <a name="ondrawribbonpanelcaption"></a>CMFCVisualManager：： OnDrawRibbonPanelCaption
 
-架構在繪製[CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)的標題時, 會呼叫這個方法。
+架構在繪製[CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)的標題時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonPanelCaption(
@@ -3285,16 +3285,16 @@ virtual void OnDrawRibbonPanelCaption(
 在裝置內容的指標。
 
 *pPanel*<br/>
-在`CMFCRibbonPanel`物件的指標。 此架構會繪製此功能區面板的標題。
+在`CMFCRibbonPanel` 物件的指標。 此架構會繪製此功能區面板的標題。
 
 *rectCaption*<br/>
 在指定功能區面板標題界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂功能區面板的標題外觀。
+覆寫衍生類別中的這個方法，以自訂功能區面板的標題外觀。
 
-##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManager:: OnDrawRibbonProgressBar
+##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManager：： OnDrawRibbonProgressBar
 
 架構會在繪製[CMFCRibbonProgressBar 類別](../../mfc/reference/cmfcribbonprogressbar-class.md)時呼叫這個方法。
 
@@ -3313,24 +3313,24 @@ virtual void OnDrawRibbonProgressBar(
 在裝置內容的指標。
 
 *pProgress*<br/>
-在`CMFCRibbonProgressBar`物件的指標。 架構會繪製此進度列。
+在`CMFCRibbonProgressBar` 物件的指標。 架構會繪製此進度列。
 
 *rectProgress*<br/>
 在指定進度列界限的矩形。
 
 *rectChunk*<br/>
-在矩形, 指定進度列周圍區域的界限。
+在矩形，指定進度列周圍區域的界限。
 
 *bInfiniteMode*<br/>
-在布林值參數, 指出進度列的模式。 值為 TRUE 表示橫條處於無限模式。 預設的執行不會使用此參數。
+在布林值參數，指出進度列的模式。 值為 TRUE 表示橫條處於無限模式。 預設的執行不會使用此參數。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂進度列的外觀。
+覆寫衍生類別中的這個方法，以自訂進度列的外觀。
 
-##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator
+##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManager：： OnDrawRibbonQuickAccessToolBarSeparator
 
-當此架構在功能區的 [**快速存取] 工具列**上繪製分隔符號時, 會呼叫這個方法。
+當此架構在功能區的 [**快速存取] 工具列**上繪製分隔符號時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonQuickAccessToolBarSeparator(
@@ -3347,16 +3347,16 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 在[CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)物件的指標。 架構會繪製此功能區分隔符號。
 
-*rect*<br/>
+*各種*<br/>
 在指定分隔符號界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂**快速存取工具列**上功能區分隔符號的外觀。
+覆寫衍生類別中的這個方法，以自訂**快速存取工具列**上功能區分隔符號的外觀。
 
-##  <a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManager:: OnDrawRibbonRecentFilesFrame
+##  <a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManager：： OnDrawRibbonRecentFilesFrame
 
-當架構在最近的檔案清單周圍繪製框架時, 會呼叫這個方法。
+當架構在最近的檔案清單周圍繪製框架時，會呼叫這個方法。
 
 ```
 virtual void OnDrawRibbonRecentFilesFrame(
@@ -3373,14 +3373,14 @@ virtual void OnDrawRibbonRecentFilesFrame(
 *pPanel*<br/>
 在功能區上**主要**面板的指標。
 
-*rect*<br/>
-在矩形, 指定最近檔案清單的框架界限。
+*各種*<br/>
+在矩形，指定最近檔案清單的框架界限。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂最近檔案清單的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂最近檔案清單的外觀。
 
-##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManager:: OnDrawRibbonSliderChannel
+##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManager：： OnDrawRibbonSliderChannel
 
 架構會在繪製[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)的通道時呼叫這個方法。
 
@@ -3399,14 +3399,14 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 在CMFCRibbonSlider 物件的指標。 架構會繪製此功能區滑杆的通道。
 
-*rect*<br/>
-在矩形, 指定功能區滑杆的通道界限。
+*各種*<br/>
+在矩形，指定功能區滑杆的通道界限。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個方法, 以自訂功能區滑杆的通道外觀。
+覆寫衍生類別中的這個方法，以自訂功能區滑杆的通道外觀。
 
-##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManager::OnDrawRibbonSliderThumb
+##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManager：： OnDrawRibbonSliderThumb
 
 架構會在繪製[CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)物件的捲動方塊時呼叫這個方法。
 
@@ -3426,25 +3426,25 @@ virtual void OnDrawRibbonSliderThumb(
 在裝置內容的指標。
 
 *pSlider*<br/>
-在的指標`CMFCRibbonSlider`。 此架構會繪製此功能區滑杆的捲動方塊。
+在`CMFCRibbonSlider`的指標。 此架構會繪製此功能區滑杆的捲動方塊。
 
-*rect*<br/>
-在矩形, 指定功能區滑杆的捲軸界限。
+*各種*<br/>
+在矩形，指定功能區滑杆的捲軸界限。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示捲動方塊。
+在布林值參數，指出是否反白顯示捲動方塊。
 
 *bIsPressed*<br/>
-在布林值參數, 指出是否按下捲動方塊。
+在布林值參數，指出是否按下捲動方塊。
 
 *bIsDisabled*<br/>
-在布林值參數, 指出捲動方塊是否無法使用。
+在布林值參數，指出捲動方塊是否無法使用。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂的滾動`CMFCRibbonSlider`盒外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCRibbonSlider`的捲動方塊外觀。
 
-##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManager::OnDrawRibbonSliderZoomButton
+##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManager：： OnDrawRibbonSliderZoomButton
 
 架構會在繪製[CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)物件的縮放按鈕時呼叫這個方法。
 
@@ -3465,30 +3465,30 @@ virtual void OnDrawRibbonSliderZoomButton(
 在裝置內容的指標。
 
 *pSlider*<br/>
-在`CMFCRibbonSlider`物件的指標。 架構會繪製此功能區滑杆。
+在`CMFCRibbonSlider` 物件的指標。 架構會繪製此功能區滑杆。
 
-*rect*<br/>
-在矩形, 指定功能區滑杆上縮放按鈕的界限。
+*各種*<br/>
+在矩形，指定功能區滑杆上縮放按鈕的界限。
 
 *bIsZoomOut*<br/>
-在布林值參數, 指出架構所繪製的按鈕。 值為 TRUE 時, 表示向左按鈕加上 "-" 代表縮小。值為 FALSE 時, 表示具有 "+" 以放大的右按鈕。
+在布林值參數，指出架構所繪製的按鈕。 值為 TRUE 時，表示向左按鈕加上 "-" 代表縮小。值為 FALSE 時，表示具有 "+" 以放大的右按鈕。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示按鈕。
+在布林值參數，指出是否反白顯示按鈕。
 
 *bIsPressed*<br/>
-在布林值參數, 指出是否按下按鈕。
+在布林值參數，指出是否按下按鈕。
 
 *bIsDisabled*<br/>
-[in]布林值參數，指出是否無法使用按鈕。
+在布林值參數，指出按鈕是否無法使用。
 
 ### <a name="remarks"></a>備註
 
-根據預設, 功能區滑杆上的縮放按鈕是一個圓形, 中間有一個 + 或-正負號。 若要自訂縮放按鈕的外觀, 請在衍生的視覺效果管理員中覆寫這個方法。
+根據預設，功能區滑杆上的縮放按鈕是一個圓形，中間有一個 + 或-正負號。 若要自訂縮放按鈕的外觀，請在衍生的視覺效果管理員中覆寫這個方法。
 
-##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManager::OnDrawRibbonStatusBarPane
+##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManager：： OnDrawRibbonStatusBarPane
 
-當此架構在狀態列上繪製窗格時, 會呼叫這個方法。
+當此架構在狀態列上繪製窗格時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -3514,11 +3514,11 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂狀態列上的窗格外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂狀態列上的窗格外觀。
 
-##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManager::OnDrawRibbonTabsFrame
+##  <a name="ondrawribbontabsframe"></a>CMFCVisualManager：： OnDrawRibbonTabsFrame
 
-當架構在一組功能區索引標籤周圍繪製框架時, 會呼叫這個方法。
+當架構在一組功能區索引標籤周圍繪製框架時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnDrawRibbonTabsFrame(
@@ -3536,17 +3536,17 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)物件的指標。 架構會繪製此功能區列的框架。
 
 *rectTab*<br/>
-矩形, 指定功能區索引標籤的界限。
+矩形，指定功能區索引標籤的界限。
 
 ### <a name="return-value"></a>傳回值
 
-保留的值。 根據預設, 這個方法會傳回-1。
+保留的值。 根據預設，這個方法會傳回-1。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能區上一組索引標籤周圍的框架。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂功能區上一組索引標籤周圍的框架。
 
-##  <a name="ondrawscrollbuttons"></a>CMFCVisualManager:: OnDrawScrollButtons
+##  <a name="ondrawscrollbuttons"></a>CMFCVisualManager：： OnDrawScrollButtons
 
 ```
 virtual void OnDrawScrollButtons(
@@ -3559,15 +3559,15 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
-[in] *nBorderSize*<br/>
+在*nBorderSize*<br/>
 在*iImage*<br/>
 在*bHilited*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManager::OnDrawSeparator
+##  <a name="ondrawseparator"></a>CMFCVisualManager：： OnDrawSeparator
 
 架構會在繪製分隔符號時呼叫這個方法。
 
@@ -3587,17 +3587,17 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 在包含分隔符號之窗格的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定分隔符號界限的矩形。
 
 *bIsHoriz*<br/>
-在布林值參數, 指出停駐窗格的方向。 值為 TRUE 表示窗格會水準停駐。 值為 FALSE 時, 表示窗格已垂直固定。
+在布林值參數，指出停駐窗格的方向。 值為 TRUE 表示窗格會水準停駐。 值為 FALSE 時，表示窗格已垂直固定。
 
 ### <a name="remarks"></a>備註
 
-分隔符號會在控制列上用來分隔相關圖示的群組。 這個方法的預設實值會顯示標準分隔符號。 在衍生的視覺效果管理員中覆寫這個方法, 以自訂分隔符號的外觀。
+分隔符號會在控制列上用來分隔相關圖示的群組。 這個方法的預設實值會顯示標準分隔符號。 在衍生的視覺效果管理員中覆寫這個方法，以自訂分隔符號的外觀。
 
-##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManager:: OnDrawShowAllMenuItems
+##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManager：： OnDrawShowAllMenuItems
 
 ```
 virtual void OnDrawShowAllMenuItems(
@@ -3608,13 +3608,13 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 在*狀態*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawspinbuttons"></a>CMFCVisualManager:: OnDrawSpinButtons
+##  <a name="ondrawspinbuttons"></a>CMFCVisualManager：： OnDrawSpinButtons
 
 架構會在繪製[CMFCSpinButtonCtrl 類別](../../mfc/reference/cmfcspinbuttonctrl-class.md)的實例時呼叫這個方法。
 
@@ -3636,17 +3636,17 @@ virtual void OnDrawSpinButtons(
 在指定微調控制項界限的矩形。
 
 *nState*<br/>
-在表示微調控制項狀態的旗標。 如需詳細資訊，請參閱＜備註＞一節。
+在表示微調控制項狀態的旗標。 如需詳細資訊，請參閱「備註」一節。
 
 *bOrientation*<br/>
-在布林值參數, 指定微調控制項的方向。 TRUE 值表示微調控制項是水準的。 否則, 它會是垂直的。
+在布林值參數，指定微調控制項的方向。 TRUE 值表示微調控制項是水準的。 否則，它會是垂直的。
 
 *pSpinCtrl*<br/>
 在微調控制項的指標。 架構會繪製這個控制項的按鈕。
 
 ### <a name="remarks"></a>備註
 
-*NState*參數會指出微調控制項的狀態。 參數是下列其中一個值:
+*NState*參數會指出微調控制項的狀態。 參數是下列其中一個值：
 
 - AFX_SPIN_PRESSEDUP
 
@@ -3658,11 +3658,11 @@ virtual void OnDrawSpinButtons(
 
 - AFX_SPIN_DISABLED
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂微調控制項的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂微調控制項的外觀。
 
-##  <a name="ondrawsplitterborder"></a>  CMFCVisualManager::OnDrawSplitterBorder
+##  <a name="ondrawsplitterborder"></a>CMFCVisualManager：： OnDrawSplitterBorder
 
-當架構在[CSplitterWndEx 類別](csplitterwndex-class.md)的實例周圍繪製框線時, 會呼叫這個方法。
+當架構在[CSplitterWndEx 類別](csplitterwndex-class.md)的實例周圍繪製框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawSplitterBorder(
@@ -3679,16 +3679,16 @@ virtual void OnDrawSplitterBorder(
 *pSplitterWnd*<br/>
 在分隔器視窗的指標。 架構會繪製此視窗的框線。
 
-*rect*<br/>
+*各種*<br/>
 在指定分隔器視窗界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂分隔器視窗的框線外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂分隔器視窗的框線外觀。
 
-##  <a name="ondrawsplitterbox"></a>CMFCVisualManager:: OnDrawSplitterBox
+##  <a name="ondrawsplitterbox"></a>CMFCVisualManager：： OnDrawSplitterBox
 
-架構會在針對[CSplitterWndEx 類別](csplitterwndex-class.md)的實例繪製拖曳方塊時呼叫這個方法。 當使用者選取分隔欄並變更子視窗的維度時, 就會出現拖曳方塊。
+架構會在針對[CSplitterWndEx 類別](csplitterwndex-class.md)的實例繪製拖曳方塊時呼叫這個方法。 當使用者選取分隔欄並變更子視窗的維度時，就會出現拖曳方塊。
 
 ```
 virtual void OnDrawSplitterBox(
@@ -3705,14 +3705,14 @@ virtual void OnDrawSplitterBox(
 *pSplitterWnd*<br/>
 在分隔器視窗的指標。 架構會繪製此分隔器視窗的方塊。
 
-*rect*<br/>
+*各種*<br/>
 在指定分隔器視窗界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂分隔器視窗的拖曳方塊外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂分隔器視窗的拖曳方塊外觀。
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManager::OnDrawStatusBarPaneBorder
+##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManager：： OnDrawStatusBarPaneBorder
 
 架構會在繪製[CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)物件的框線時呼叫這個方法。
 
@@ -3731,7 +3731,7 @@ virtual void OnDrawStatusBarPaneBorder(
 在裝置內容的指標。
 
 *pBar*<br/>
-在`CMFCStatusBar`物件的指標。 架構會繪製此狀態列物件。
+在`CMFCStatusBar` 物件的指標。 架構會繪製此狀態列物件。
 
 *rectPane*<br/>
 在指定狀態列界限的矩形。
@@ -3744,11 +3744,11 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂`CMFCStatusBar`物件的框線外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCStatusBar` 物件的框線外觀。
 
-##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManager:: OnDrawStatusBarProgress
+##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManager：： OnDrawStatusBarProgress
 
-當架構在[CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)物件上繪製進度指標時, 會呼叫這個方法。
+當架構在[CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)物件上繪製進度指標時，會呼叫這個方法。
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -3769,7 +3769,7 @@ virtual void OnDrawStatusBarProgress(
 在狀態列之裝置內容的指標。
 
 *pStatusBar*<br/>
-在包含進度列的物件。`CMFCStatusBar`
+在包含進度列的 `CMFCStatusBar` 物件。
 
 *rectProgress*<br/>
 在指定進度列界限的矩形。
@@ -3781,22 +3781,22 @@ virtual void OnDrawStatusBarProgress(
 在進度列的目前進度。
 
 *clrBar*<br/>
-在[COLORREF](/windows/win32/gdi/colorref)參數, 表示進度列的初始色彩。 值為色彩漸層的開始或進度列的完整色彩。
+在[COLORREF](/windows/win32/gdi/colorref)參數，表示進度列的初始色彩。 值為色彩漸層的開始或進度列的完整色彩。
 
 *clrProgressBarDest*<br/>
-在COLORREF 參數, 指出進度列的色彩漸層結尾。 如果*clrProgressBarDest*為-1, 則架構不會將進度列繪製為色彩漸層。 相反地, 它會以*clrBar*所指定的色彩填滿整個進度列。
+在COLORREF 參數，指出進度列的色彩漸層結尾。 如果*clrProgressBarDest*為-1，則架構不會將進度列繪製為色彩漸層。 相反地，它會以*clrBar*所指定的色彩填滿整個進度列。
 
 *clrProgressText*<br/>
-在COLORREF 參數, 表示目前進度之文字表示的文字色彩。 如果*bProgressText*設定為 FALSE, 則會忽略這個參數。
+在COLORREF 參數，表示目前進度之文字表示的文字色彩。 如果*bProgressText*設定為 FALSE，則會忽略這個參數。
 
 *bProgressText*<br/>
-在布林值參數, 指出是否要顯示目前進度的文字表示。
+在布林值參數，指出是否要顯示目前進度的文字表示。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自`CMFCStatusBar`定義物件的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCStatusBar` 物件的外觀。
 
-##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManager:: OnDrawStatusBarSizeBox
+##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManager：： OnDrawStatusBarSizeBox
 
 架構會在繪製[CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)的 [大小] 方塊時呼叫這個方法。
 
@@ -3820,11 +3820,11 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂上`CMFCStatusBar`[大小] 方塊的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCStatusBar`上 [大小] 方塊的外觀。
 
-##  <a name="ondrawtab"></a>  CMFCVisualManager::OnDrawTab
+##  <a name="ondrawtab"></a>CMFCVisualManager：： OnDrawTab
 
-架構在繪製[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件的索引標籤時, 會呼叫這個方法。
+架構在繪製[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件的索引標籤時，會呼叫這個方法。
 
 ```
 virtual void OnDrawTab(
@@ -3847,20 +3847,20 @@ virtual void OnDrawTab(
 在架構所繪製之索引標籤的索引。
 
 *bIsActive*<br/>
-[in]布林值參數，指定是否使用中索引標籤。
+在布林值參數，指定索引標籤是否作用中。
 
 *pTabWnd*<br/>
-在`CMFCBaseTabCtrl`物件的指標。 架構會繪製此索引標籤控制項。
+在`CMFCBaseTabCtrl` 物件的指標。 架構會繪製此索引標籤控制項。
 
 ### <a name="remarks"></a>備註
 
-當`CMFCBaseTabCtrl`物件處理 WM_PAINT 訊息時, 會呼叫這個方法。
+`CMFCBaseTabCtrl` 物件在處理 WM_PAINT 訊息時，會呼叫這個方法。
 
-覆寫衍生類別中的這個方法, 以自訂索引標籤的外觀。
+覆寫衍生類別中的這個方法，以自訂索引標籤的外觀。
 
-##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManager::OnDrawTabCloseButton
+##  <a name="ondrawtabclosebutton"></a>CMFCVisualManager：： OnDrawTabCloseButton
 
-當此架構在使用中的索引標籤上繪製 [**關閉**] 按鈕時, 會呼叫這個方法。
+當此架構在使用中的索引標籤上繪製 [**關閉**] 按鈕時，會呼叫這個方法。
 
 ```
 virtual void OnDrawTabCloseButton(
@@ -3877,28 +3877,28 @@ virtual void OnDrawTabCloseButton(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定 [**關閉**] 按鈕界限的矩形。
 
 *pTabWnd*<br/>
 在索引標籤控制項的指標。 架構會繪製此索引標籤控制項的 [**關閉**] 按鈕。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示 [**關閉**] 按鈕。
+在布林值參數，指出是否反白顯示 [**關閉**] 按鈕。
 
 *bIsPressed*<br/>
-在布林值參數, 指出是否按下 [**關閉**] 按鈕。
+在布林值參數，指出是否按下 [**關閉**] 按鈕。
 
 *bIsDisabled*<br/>
-在布林值參數, 指出是否停用 [**關閉**] 按鈕。
+在布林值參數，指出是否停用 [**關閉**] 按鈕。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂*pTabWnd*的 [使用中] 索引標籤上 [**關閉**] 按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂*pTabWnd*的 [使用中] 索引標籤上 [**關閉**] 按鈕的外觀。
 
-##  <a name="ondrawtabcontent"></a>  CMFCVisualManager::OnDrawTabContent
+##  <a name="ondrawtabcontent"></a>CMFCVisualManager：： OnDrawTabContent
 
-當此架構繪製的內容位於[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)的實例內部時, 會呼叫這個方法。
+當此架構繪製的內容位於[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)的實例內部時，會呼叫這個方法。
 
 ```
 virtual void OnDrawTabContent(
@@ -3922,19 +3922,19 @@ virtual void OnDrawTabContent(
 在索引標籤之以零為基底的索引。架構會繪製此索引標籤的內部。
 
 *bIsActive*<br/>
-[in]布林值參數，指出是否為作用中索引標籤。
+在布林值參數，指出索引標籤是否作用中。
 
 *pTabWnd*<br/>
-在索引標籤式控制項的指標, 其中包含正在繪製的索引標籤。
+在索引標籤式控制項的指標，其中包含正在繪製的索引標籤。
 
 *clrText*<br/>
 在索引標籤內部的文字色彩。
 
 ### <a name="remarks"></a>備註
 
-[索引標籤] 的內部包含索引標籤的文字和圖示。在衍生的視覺效果管理員中覆寫這個方法, 以自訂索引標籤的外觀。
+索引標籤的內部包含索引標籤的文字和圖示。請在衍生的視覺效果管理員中覆寫這個方法，以自訂索引標籤的外觀。
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManager::OnDrawTabsButtonBorder
+##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManager：： OnDrawTabsButtonBorder
 
 架構會在繪製索引標籤按鈕的框線時呼叫這個方法。
 
@@ -3952,23 +3952,23 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定索引標籤按鈕界限的矩形。
 
 *pButton*<br/>
-在[CMFCButton](../../mfc/reference/cmfcbutton-class.md)物件的指標。 架構會繪製這個`CMFCButton`實例的框線。
+在[CMFCButton](../../mfc/reference/cmfcbutton-class.md)物件的指標。 架構會繪製此 `CMFCButton` 實例的框線。
 
 *uiState*<br/>
-在不帶正負號的整數, 指定按鈕的狀態。
+在不帶正負號的整數，指定按鈕的狀態。
 
 *pWndTab*<br/>
-[in]父代索引標籤視窗的指標。
+在父索引標籤視窗的指標。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂索引標籤按鈕框線的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂索引標籤按鈕框線的外觀。
 
-##  <a name="ondrawtask"></a>  CMFCVisualManager::OnDrawTask
+##  <a name="ondrawtask"></a>CMFCVisualManager：： OnDrawTask
 
 架構會在繪製[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)物件時呼叫這個方法。
 
@@ -3993,20 +3993,20 @@ virtual void OnDrawTask(
 在與工作窗格相關聯之影像清單的指標。 每項工作都包含此清單中影像的索引。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指定顯示的工作是否已反白顯示。
+在布林值參數，指定顯示的工作是否已反白顯示。
 
 *bIsSelected*<br/>
-在布林值參數, 指定是否選取顯示的工作。
+在布林值參數，指定是否選取顯示的工作。
 
 ### <a name="remarks"></a>備註
 
-架構會在工作列上同時顯示工作, 同時做為圖示和文字。 *PIcons*參數包含*pTask*所指示之工作的圖示。
+架構會在工作列上同時顯示工作，同時做為圖示和文字。 *PIcons*參數包含*pTask*所指示之工作的圖示。
 
-覆寫衍生類別中的這個方法, 以自訂工作列上工作的外觀。
+覆寫衍生類別中的這個方法，以自訂工作列上工作的外觀。
 
-##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManager:: OnDrawTasksGroupAreaBorder
+##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManager：： OnDrawTasksGroupAreaBorder
 
-當架構在[CMFCTasksPane 類別](../../mfc/reference/cmfctaskspane-class.md)上的群組周圍繪製框線時, 會呼叫這個方法。
+當架構在[CMFCTasksPane 類別](../../mfc/reference/cmfctaskspane-class.md)上的群組周圍繪製框線時，會呼叫這個方法。
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -4021,22 +4021,22 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
-在矩形, 指定工作窗格上的群組區域界限。
+*各種*<br/>
+在矩形，指定工作窗格上的群組區域界限。
 
 *bSpecial*<br/>
-在布林值參數, 指定是否要反白顯示框線。 值為 TRUE 表示框線已反白顯示。
+在布林值參數，指定是否要反白顯示框線。 值為 TRUE 表示框線已反白顯示。
 
 *bNoTitle*<br/>
 在指定群組區域是否有標題的布林值參數。 值為 TRUE 表示群組區域沒有標題。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個函式, 以自訂工作窗格上的群組區域周圍的框線。
+覆寫衍生類別中的這個函式，以自訂工作窗格上的群組區域周圍的框線。
 
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManager::OnDrawTasksGroupCaption
+##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManager：： OnDrawTasksGroupCaption
 
-架構在繪製[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件的標題時, 會呼叫這個方法。
+架構在繪製[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件的標題時，會呼叫這個方法。
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -4053,24 +4053,24 @@ virtual void OnDrawTasksGroupCaption(
 在裝置內容的指標。
 
 *pGroup*<br/>
-在`CMFCTasksPaneTaskGroup`物件的指標。 架構會繪製此群組的標題。
+在`CMFCTasksPaneTaskGroup` 物件的指標。 架構會繪製此群組的標題。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示群組。
+在布林值參數，指出是否反白顯示群組。
 
 *bIsSelected*<br/>
-在布林值參數, 指出目前是否已選取群組。
+在布林值參數，指出目前是否已選取群組。
 
 *bCanCollapse*<br/>
-在布林值參數, 指出是否可以折迭群組。
+在布林值參數，指出是否可以折迭群組。
 
 ### <a name="remarks"></a>備註
 
 工作組會出現在[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)物件上。
 
-覆寫衍生類別中的這個方法, 以自訂的`CMFCTasksPaneTaskGroup`標題。
+在衍生類別中覆寫這個方法，以自訂 `CMFCTasksPaneTaskGroup`的標題。
 
-##  <a name="ondrawtasksgroupicon"></a>CMFCVisualManager:: OnDrawTasksGroupIcon
+##  <a name="ondrawtasksgroupicon"></a>CMFCVisualManager：： OnDrawTasksGroupIcon
 
 ```
 virtual void OnDrawTasksGroupIcon(
@@ -4084,18 +4084,18 @@ virtual void OnDrawTasksGroupIcon(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *pGroup*<br/>
-[in] *nIconHOffset*<br/>
+在*pDC*<br/>
+在*pGroup*<br/>
+在*nIconHOffset*<br/>
 在*bIsHighlighted*<br/>
 在*bIsSelected*<br/>
 在*bCanCollapse*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawtearoffcaption"></a>CMFCVisualManager:: OnDrawTearOffCaption
+##  <a name="ondrawtearoffcaption"></a>CMFCVisualManager：： OnDrawTearOffCaption
 
-架構在繪製[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)的標題時, 會呼叫這個方法。
+架構在繪製[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)的標題時，會呼叫這個方法。
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -4109,19 +4109,19 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定標題界限的矩形。
 
 *bIsActive*<br/>
-在如果標題為使用中, 則為 TRUE;否則為 FALSE。
+在如果標題為使用中，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-當`CMFCPopupMenu`物件處理 WM_PAINT 訊息時, 架構會呼叫這個函式, 而且必須繪製一個清除的標題。
+當 `CMFCPopupMenu` 物件處理 WM_PAINT 訊息，而且必須繪製卸載式標題時，架構會呼叫這個函數。
 
-覆寫衍生類別中的這個方法, 以自訂清除橫條的標題外觀。
+覆寫衍生類別中的這個方法，以自訂清除橫條的標題外觀。
 
-##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManager::OnDrawToolBoxFrame
+##  <a name="ondrawtoolboxframe"></a>CMFCVisualManager：： OnDrawToolBoxFrame
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -4131,12 +4131,12 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onerasemdiclientarea"></a>  CMFCVisualManager::OnEraseMDIClientArea
+##  <a name="onerasemdiclientarea"></a>CMFCVisualManager：： OnEraseMDIClientArea
 
 架構會在清除 MDI 工作區時呼叫這個方法。
 
@@ -4160,9 +4160,9 @@ virtual BOOL OnEraseMDIClientArea(
 
 ### <a name="remarks"></a>備註
 
-當視覺管理員清除 MDI 工作區時, 覆寫這個方法以執行自訂程式碼。
+當視覺管理員清除 MDI 工作區時，覆寫這個方法以執行自訂程式碼。
 
-##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManager:: OnErasePopupWindowButton
+##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManager：： OnErasePopupWindowButton
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -4173,15 +4173,15 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*rectClient*<br/>
 在*pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onerasetabsarea"></a>CMFCVisualManager:: OnEraseTabsArea
+##  <a name="onerasetabsarea"></a>CMFCVisualManager：： OnEraseTabsArea
 
-當此架構清除索引標籤視窗的索引標籤區域時, 會呼叫這個方法。
+當此架構清除索引標籤視窗的索引標籤區域時，會呼叫這個方法。
 
 ```
 virtual void OnEraseTabsArea(
@@ -4195,21 +4195,21 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
-在矩形, 指定索引標籤區域的界限。
+*各種*<br/>
+在矩形，指定索引標籤區域的界限。
 
 *pTabWnd*<br/>
 在索引標籤視窗的指標。 架構會清除指定之索引標籤視窗的索引標籤區域。
 
 ### <a name="remarks"></a>備註
 
-當[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件處理 WM_PAINT 訊息並清除索引標籤區域時, 架構會呼叫這個函式。
+當[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件處理 WM_PAINT 訊息並清除索引標籤區域時，架構會呼叫這個函式。
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂索引標籤的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂索引標籤的外觀。
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManager::OnEraseTabsButton
+##  <a name="onerasetabsbutton"></a>CMFCVisualManager：： OnEraseTabsButton
 
-當此架構清除索引標籤按鈕的文字和圖示時, 會呼叫這個方法。
+當此架構清除索引標籤按鈕的文字和圖示時，會呼叫這個方法。
 
 ```
 virtual void OnEraseTabsButton(
@@ -4224,24 +4224,24 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定索引標籤按鈕界限的矩形。
 
 *pButton*<br/>
-[in]指向的索引標籤按鈕。 此架構會清除此按鈕的文字和圖示。
+在Tab 鍵的指標。 此架構會清除此按鈕的文字和圖示。
 
 *pWndTab*<br/>
 在包含 [索引標籤] 按鈕之索引標籤控制項的指標。
 
 ### <a name="remarks"></a>備註
 
-當[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件處理 WM_ERASEBKGND 訊息時, 架構會清除按鈕的文字和圖示。
+當[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件處理 WM_ERASEBKGND 訊息時，架構會清除按鈕的文字和圖示。
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂索引標籤按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂索引標籤按鈕的外觀。
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManager::OnEraseTabsFrame
+##  <a name="onerasetabsframe"></a>CMFCVisualManager：： OnEraseTabsFrame
 
-當此架構清除[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)上的框架時, 會呼叫這個方法。
+當此架構清除[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)上的框架時，會呼叫這個方法。
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -4255,21 +4255,21 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定索引標籤視窗界限的矩形。
 
 *pTabWnd*<br/>
-在索引標籤視窗的指標。 架構會清除此`CMFCBaseTabCtrl`的框架。
+在索引標籤視窗的指標。 此架構會清除此 `CMFCBaseTabCtrl`的框架。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則為 TRUE;否則為 FALSE。
+如果方法成功，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會以作用中索引標籤的背景色彩填滿*矩形*所表示的區域。當`CMFCBaseTabCtrl`物件處理 WM_PAINT 訊息並清除索引標籤框架時, 就會呼叫它。
+這個方法會以作用中索引標籤的背景色彩填滿*矩形*所表示的區域。當 `CMFCBaseTabCtrl` 物件處理 WM_PAINT 訊息並清除索引標籤框架時，就會呼叫它。
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManager::OnFillAutoHideButtonBackground
+##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManager：： OnFillAutoHideButtonBackground
 
 當它填入自動隱藏按鈕的背景時，架構會呼叫這個方法。
 
@@ -4285,7 +4285,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定自動隱藏按鈕界限的矩形。
 
 *pButton*<br/>
@@ -4293,11 +4293,11 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂自動隱藏按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂自動隱藏按鈕的外觀。
 
-##  <a name="onfillbarbackground"></a>CMFCVisualManager:: OnFillBarBackground
+##  <a name="onfillbarbackground"></a>CMFCVisualManager：： OnFillBarBackground
 
-當此架構填滿[CBasePane](../../mfc/reference/cbasepane-class.md)物件的背景時, 會呼叫這個方法。
+當此架構填滿[CBasePane](../../mfc/reference/cbasepane-class.md)物件的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillBarBackground(
@@ -4314,7 +4314,7 @@ virtual void OnFillBarBackground(
 在控制列之裝置內容的指標。
 
 *pBar*<br/>
-在`CBasePane`物件的指標。 此架構會填滿此窗格的背景。
+在`CBasePane` 物件的指標。 此架構會填滿此窗格的背景。
 
 *rectClient*<br/>
 在指定窗格界限的矩形。
@@ -4327,17 +4327,17 @@ virtual void OnFillBarBackground(
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會使用全域變數`afxGlobalData`中的3d 背景色彩, 填滿橫條的背景。 在衍生的視覺效果管理員中覆寫這個方法, 以自訂窗格的背景。
+這個方法的預設執行會使用全域變數 `afxGlobalData`的3d 背景色彩，填滿橫條的背景。 在衍生的視覺效果管理員中覆寫這個方法，以自訂窗格的背景。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`OnFillBarBackground` `CMFCVisualManager`在類別中使用。 此程式碼片段是[Outlook 示範範例](../../overview/visual-cpp-samples.md)的一部分。
+下列範例示範如何使用 `CMFCVisualManager` 類別中的 `OnFillBarBackground`。 此程式碼片段是[Outlook 示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManager::OnFillButtonInterior
+##  <a name="onfillbuttoninterior"></a>CMFCVisualManager：： OnFillButtonInterior
 
-當此架構填滿工具列按鈕的背景時, 會呼叫這個方法。
+當此架構填滿工具列按鈕的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillButtonInterior(
@@ -4355,7 +4355,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 在指向[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)的指標。 此架構會填滿此按鈕的背景。
 
-*rect*<br/>
+*各種*<br/>
 在指定工具列按鈕界限的矩形。
 
 *state*<br/>
@@ -4363,11 +4363,11 @@ virtual void OnFillButtonInterior(
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會使用預設色彩來填滿背景。 在衍生的視覺效果管理員中覆寫這個方法, 以自訂工具列按鈕的背景。
+這個方法的預設執行會使用預設色彩來填滿背景。 在衍生的視覺效果管理員中覆寫這個方法，以自訂工具列按鈕的背景。
 
-工具列按鈕的可能狀態為`ButtonsIsRegular`、 `ButtonsIsPressed`或`ButtonsIsHighlighted`。
+工具列按鈕的可能狀態為 [`ButtonsIsRegular`]、[`ButtonsIsPressed`] 或 [`ButtonsIsHighlighted`]。
 
-##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManager:: OnFillCaptionBarButton
+##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManager：： OnFillCaptionBarButton
 
 ```
 virtual COLORREF OnFillCaptionBarButton(
@@ -4383,7 +4383,7 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pBar*<br/>
 在*rect*<br/>
 在*bIsPressed*<br/>
@@ -4396,9 +4396,9 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfillcommandslistbackground"></a>CMFCVisualManager:: OnFillCommandsListBackground
+##  <a name="onfillcommandslistbackground"></a>CMFCVisualManager：： OnFillCommandsListBackground
 
-當此架構填滿屬於命令清單的工具列按鈕背景時, 會呼叫這個方法。 此命令清單是自訂對話方塊的一部分。
+當此架構填滿屬於命令清單的工具列按鈕背景時，會呼叫這個方法。 此命令清單是自訂對話方塊的一部分。
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -4412,11 +4412,11 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定按鈕界限的矩形。
 
 *bIsSelected*<br/>
-[in]布林值參數，指出是否已選取按鈕。
+在布林值參數，指出是否已選取按鈕。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4424,11 +4424,11 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="remarks"></a>備註
 
-如需自訂清單的詳細資訊, 請參閱[CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)。 這個方法的預設執行會根據目前選取之面板的色彩配置, 填滿背景。
+如需自訂清單的詳細資訊，請參閱[CMFCToolBarButton：： OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)。 這個方法的預設執行會根據目前選取之面板的色彩配置，填滿背景。
 
-##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManager::OnFillHeaderCtrlBackground
+##  <a name="onfillheaderctrlbackground"></a>CMFCVisualManager：： OnFillHeaderCtrlBackground
 
-當此架構填滿標題控制項的背景時, 會呼叫這個方法。
+當此架構填滿標題控制項的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillHeaderCtrlBackground(
@@ -4445,16 +4445,16 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定標題控制項界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂標題控制項的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂標題控制項的外觀。
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManager::OnFillMiniFrameCaption
+##  <a name="onfillminiframecaption"></a>CMFCVisualManager：： OnFillMiniFrameCaption
 
-當此架構填滿迷你框架視窗的標題列時, 會呼叫這個方法。
+當此架構填滿迷你框架視窗的標題列時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -4476,7 +4476,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 在迷你框架視窗的指標。 此架構會繪製此視窗的標題列。
 
 *bActive*<br/>
-在布林值參數, 指出視窗是否作用中。
+在布林值參數，指出視窗是否作用中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4486,9 +4486,9 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 這個方法的預設執行會使用現用面板的目前標題色彩來填滿標題列。
 
-##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManager:: OnFillOutlookBarCaption
+##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManager：： OnFillOutlookBarCaption
 
-當此架構填滿 Outlook 標題列的背景時, 會呼叫這個方法。
+當此架構填滿 Outlook 標題列的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillOutlookBarCaption(
@@ -4510,11 +4510,11 @@ virtual void OnFillOutlookBarCaption(
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會根據目前的面板, 以陰影的色彩填滿標題列。 在衍生的視覺效果管理員中覆寫這個方法, 以自訂 Outlook 標題列的色彩。
+這個方法的預設執行會根據目前的面板，以陰影的色彩填滿標題列。 在衍生的視覺效果管理員中覆寫這個方法，以自訂 Outlook 標題列的色彩。
 
-##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManager:: OnFillOutlookPageButton
+##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManager：： OnFillOutlookPageButton
 
-當此架構填滿 Outlook 網頁按鈕的內部時, 會呼叫這個方法。
+當此架構填滿 Outlook 網頁按鈕的內部時，會呼叫這個方法。
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -4530,25 +4530,25 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定 Outlook 頁面按鈕界限的矩形。
 
 *bIsHighlighted*<br/>
 在指定是否反白顯示按鈕的布林值參數。
 
 *bIsPressed*<br/>
-在布林值參數, 指定是否按下按鈕。
+在布林值參數，指定是否按下按鈕。
 
 *clrText*<br/>
 脫銷[COLORREF](/windows/win32/gdi/colorref)參數的參考。 這個方法會在這個參數中儲存 outlook page 按鈕的文字色彩。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫此函式, 以自訂 Outlook 頁面按鈕的外觀。
+在衍生的視覺效果管理員中覆寫此函式，以自訂 Outlook 頁面按鈕的外觀。
 
-##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManager::OnFillPopupWindowBackground
+##  <a name="onfillpopupwindowbackground"></a>CMFCVisualManager：： OnFillPopupWindowBackground
 
-當此架構填滿快顯視窗的背景時, 會呼叫這個方法。
+當此架構填滿快顯視窗的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillPopupWindowBackground(
@@ -4561,16 +4561,16 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定快捷方式視窗界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂快顯視窗的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂快顯視窗的外觀。
 
-##  <a name="onfillribbonbutton"></a>CMFCVisualManager:: OnFillRibbonButton
+##  <a name="onfillribbonbutton"></a>CMFCVisualManager：： OnFillRibbonButton
 
-當此架構填滿功能區按鈕的內部時, 會呼叫這個方法。
+當此架構填滿功能區按鈕的內部時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnFillRibbonButton(
@@ -4588,15 +4588,15 @@ virtual COLORREF OnFillRibbonButton(
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區按鈕支援文字, 則為*pButton*所指定功能區按鈕的文字色彩。 如果功能區按鈕的文字無效, 則為-1 的值。
+如果功能區按鈕支援文字，則為*pButton*所指定功能區按鈕的文字色彩。 如果功能區按鈕的文字無效，則為-1 的值。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能區按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂功能區按鈕的外觀。
 
-##  <a name="onfillribbonedit"></a>CMFCVisualManager:: OnFillRibbonEdit
+##  <a name="onfillribbonedit"></a>CMFCVisualManager：： OnFillRibbonEdit
 
-當此架構填滿`CMFCRibbonRichEditCtrl`類別實例的內部時, 會呼叫這個方法。
+當此架構填滿 `CMFCRibbonRichEditCtrl` 類別的實例內部時，會呼叫這個方法。
 
 ```
 virtual void OnFillRibbonEdit(
@@ -4617,19 +4617,19 @@ virtual void OnFillRibbonEdit(
 在裝置內容的指標。
 
 *pEdit*<br/>
-在`CMFCRibbonRichEditCtrl`物件的指標。 此架構會填滿此編輯控制項的內部。
+在`CMFCRibbonRichEditCtrl` 物件的指標。 此架構會填滿此編輯控制項的內部。
 
-*rect*<br/>
+*各種*<br/>
 在指定編輯控制項界限的矩形。
 
 *bIsHighlighted*<br/>
-在布林值參數, 指出是否反白顯示編輯控制項。
+在布林值參數，指出是否反白顯示編輯控制項。
 
 *bIsPaneHighlighted*<br/>
-在布林值參數, 指出父窗格是否已反白顯示。
+在布林值參數，指出父窗格是否已反白顯示。
 
 *bIsDisabled*<br/>
-在布林值參數, 指出編輯控制項是否無法使用。
+在布林值參數，指出編輯控制項是否無法使用。
 
 *clrText*<br/>
 在編輯控制項文字色彩的參考。
@@ -4642,13 +4642,13 @@ virtual void OnFillRibbonEdit(
 
 ### <a name="remarks"></a>備註
 
-PEdit `CMFCRibbonRichEditCtrl`所指定的可以是功能區上下拉式列示方塊按鈕的一部分。
+*PEdit*所指出的 `CMFCRibbonRichEditCtrl` 可以是功能區上下拉式方塊按鈕的一部分。
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自`CMFCRibbonRichEditCtrl`定義的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCRibbonRichEditCtrl`的外觀。
 
-##  <a name="onfillribbonmainpanelbutton"></a>CMFCVisualManager:: OnFillRibbonMainPanelButton
+##  <a name="onfillribbonmainpanelbutton"></a>CMFCVisualManager：： OnFillRibbonMainPanelButton
 
-當此架構填滿**主要**面板上的功能區按鈕內部時, 會呼叫這個方法。
+當此架構填滿**主要**面板上的功能區按鈕內部時，會呼叫這個方法。
 
 ```
 virtual COLORREF OnFillRibbonMainPanelButton(
@@ -4666,15 +4666,15 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區按鈕支援文字, 則為*pButton*所指定功能區按鈕的文字色彩。 如果功能區按鈕的文字無效, 則為-1 的值。
+如果功能區按鈕支援文字，則為*pButton*所指定功能區按鈕的文字色彩。 如果功能區按鈕的文字無效，則為-1 的值。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂**主要**面板上功能區按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂**主要**面板上功能區按鈕的外觀。
 
-##  <a name="onfillribbonmenuframe"></a>CMFCVisualManager:: OnFillRibbonMenuFrame
+##  <a name="onfillribbonmenuframe"></a>CMFCVisualManager：： OnFillRibbonMenuFrame
 
-當此架構填滿功能區面板的功能表框時, 會呼叫這個方法。
+當此架構填滿功能區面板的功能表框時，會呼叫這個方法。
 
 ```
 virtual void OnFillRibbonMenuFrame(
@@ -4691,14 +4691,14 @@ virtual void OnFillRibbonMenuFrame(
 *pPanel*<br/>
 在[CMFCRibbonMainPanel 類別](../../mfc/reference/cmfcribbonmainpanel-class.md)之實例的指標。 此架構會填滿此功能區面板的功能表框。
 
-*rect*<br/>
+*各種*<br/>
 在指定功能表框架界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂功能表列`CMFCRibbonMainPanel`的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCRibbonMainPanel`功能表列的外觀。
 
-##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup
+##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager：： OnFillRibbonQuickAccessToolBarPopup
 
 ```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -4709,15 +4709,15 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+在*pDC*<br/>
 在*pMenuBar*<br/>
 在*rect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfillsplitterbackground"></a>  CMFCVisualManager::OnFillSplitterBackground
+##  <a name="onfillsplitterbackground"></a>CMFCVisualManager：： OnFillSplitterBackground
 
-當此架構填滿分隔器視窗的背景時, 會呼叫這個方法。
+當此架構填滿分隔器視窗的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillSplitterBackground(
@@ -4734,16 +4734,16 @@ virtual void OnFillSplitterBackground(
 *pSplitterWnd*<br/>
 在[CSplitterWndEx 類別](csplitterwndex-class.md)之實例的指標。 此架構會填滿此分隔器視窗的背景。
 
-*rect*<br/>
+*各種*<br/>
 在指定分隔器視窗界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂分隔器視窗的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂分隔器視窗的外觀。
 
-##  <a name="onfilltab"></a>  CMFCVisualManager::OnFillTab
+##  <a name="onfilltab"></a>CMFCVisualManager：： OnFillTab
 
-當此架構填滿索引標籤視窗的背景時, 會呼叫這個方法。
+當此架構填滿索引標籤視窗的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillTab(
@@ -4764,24 +4764,24 @@ virtual void OnFillTab(
 在指定索引標籤視窗界限的矩形。
 
 *pbrFill*<br/>
-在筆刷的指標。 架構會使用這個筆刷填滿索引標籤視窗。
+在筆刷的指標。 此架構會使用此筆刷來填滿索引標籤視窗。
 
 *iTab*<br/>
-在索引標籤以零為基底的索引標籤, 架構會填滿背景。
+在索引標籤以零為基底的索引標籤，架構會填滿背景。
 
 *bIsActive*<br/>
-在如果索引標籤為作用中, 則為 TRUE;否則為 FALSE。
+在如果索引標籤為作用中，則為 TRUE;否則為 FALSE。
 
 *pTabWnd*<br/>
 在父索引標籤控制項的指標。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂索引標籤的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂索引標籤的外觀。
 
-##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManager:: OnFillTasksGroupInterior
+##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManager：： OnFillTasksGroupInterior
 
-當此架構填滿[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件的內部時, 會呼叫這個方法。
+當此架構填滿[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件的內部時，會呼叫這個方法。
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -4795,19 +4795,19 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 在裝置內容的指標。
 
-*rect*<br/>
+*各種*<br/>
 在指定工作組界限的矩形。
 
 *bSpecial*<br/>
-在布林值, 指出內部是否以特殊色彩填滿。
+在布林值，指出內部是否以特殊色彩填滿。
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂工作組的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂工作組的外觀。
 
-##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManager::OnFillTasksPaneBackground
+##  <a name="onfilltaskspanebackground"></a>CMFCVisualManager：： OnFillTasksPaneBackground
 
-當此架構填滿[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控制項的背景時, 會呼叫這個方法。
+當此架構填滿[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控制項的背景時，會呼叫這個方法。
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -4825,9 +4825,9 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自`CMFCTasksPane`定義物件的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂 `CMFCTasksPane` 物件的外觀。
 
-##  <a name="onhighlightmenuitem"></a>CMFCVisualManager:: OnHighlightMenuItem
+##  <a name="onhighlightmenuitem"></a>CMFCVisualManager：： OnHighlightMenuItem
 
 架構會在繪製反白顯示的功能表項目時呼叫這個方法。
 
@@ -4847,7 +4847,7 @@ virtual void OnHighlightMenuItem(
 *pButton*<br/>
 在要顯示的[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)物件指標。 預設的執行不會使用此參數。
 
-*rect*<br/>
+*各種*<br/>
 在指定功能表項目界限的矩形。
 
 *clrText*<br/>
@@ -4857,9 +4857,9 @@ virtual void OnHighlightMenuItem(
 
 這個方法的預設執行不會使用*pButton*或*clrText*參數。 它會以標準背景色彩填滿*rect*所指定的矩形。
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂反白顯示功能表項目的外觀。 使用*clrText*參數來修改反白顯示功能表項目的文字色彩。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂反白顯示功能表項目的外觀。 使用*clrText*參數來修改反白顯示功能表項目的文字色彩。
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManager:: OnHighlightRarelyUsedMenuItems
+##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManager：： OnHighlightRarelyUsedMenuItems
 
 架構會在繪製反白顯示的功能表命令時呼叫這個方法。
 
@@ -4879,9 +4879,9 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂反白顯示功能表命令的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂反白顯示功能表命令的外觀。
 
-##  <a name="onncactivate"></a>CMFCVisualManager:: OnNcActivate
+##  <a name="onncactivate"></a>CMFCVisualManager：： OnNcActivate
 
 ```
 virtual BOOL OnNcActivate(
@@ -4891,14 +4891,14 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+在*pWnd*<br/>
 在*bActive*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onncpaint"></a>  CMFCVisualManager::OnNcPaint
+##  <a name="onncpaint"></a>CMFCVisualManager：： OnNcPaint
 
 架構會在繪製非工作區時呼叫這個方法。
 
@@ -4926,11 +4926,11 @@ virtual BOOL OnNcPaint(
 
 ### <a name="remarks"></a>備註
 
-在衍生的視覺效果管理員中覆寫這個方法, 以自訂視窗框架和標題按鈕的外觀。
+在衍生的視覺效果管理員中覆寫這個方法，以自訂視窗框架和標題按鈕的外觀。
 
-##  <a name="onsetwindowregion"></a>CMFCVisualManager:: OnSetWindowRegion
+##  <a name="onsetwindowregion"></a>CMFCVisualManager：： OnSetWindowRegion
 
-架構在設定包含框架和快顯功能表的區域之後, 會呼叫這個方法。
+架構在設定包含框架和快顯功能表的區域之後，會呼叫這個方法。
 
 ```
 virtual BOOL OnSetWindowRegion(
@@ -4948,15 +4948,15 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則為 TRUE;否則為 FALSE。
+如果方法成功，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-架構會呼叫這個方法, 以通知視覺管理員已針對框架和快顯功能表設定區域。 如需詳細資訊, 請參閱[CWindow:: SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)。
+架構會呼叫這個方法，以通知視覺管理員已針對框架和快顯功能表設定區域。 如需詳細資訊，請參閱[CWindow：： SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)。
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManager::OnUpdateSystemColors
+##  <a name="onupdatesystemcolors"></a>CMFCVisualManager：： OnUpdateSystemColors
 
-當架構變更系統色彩時, 會呼叫這個函式。
+當架構變更系統色彩時，會呼叫這個函式。
 
 ```
 virtual void OnUpdateSystemColors();
@@ -4964,9 +4964,9 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>備註
 
-在處理 WM_SYSCOLORCHANGE 訊息時, 架構會呼叫這個方法。 預設實作不做任何動作。 如果您想要在應用程式中的色彩變更時執行自訂程式碼, 請在衍生的視覺效果管理員中覆寫這個方法。
+在處理 WM_SYSCOLORCHANGE 訊息時，架構會呼叫這個方法。 預設實作不做任何動作。 如果您想要在應用程式中的色彩變更時執行自訂程式碼，請在衍生的視覺效果管理員中覆寫這個方法。
 
-##  <a name="redrawall"></a>CMFCVisualManager:: RedrawAll
+##  <a name="redrawall"></a>CMFCVisualManager：： RedrawAll
 
 立即重繪應用程式中的所有控制列。
 
@@ -4974,7 +4974,7 @@ virtual void OnUpdateSystemColors();
 static void RedrawAll();
 ```
 
-##  <a name="ribboncategorycolortorgb"></a>CMFCVisualManager:: RibbonCategoryColorToRGB
+##  <a name="ribboncategorycolortorgb"></a>CMFCVisualManager：： RibbonCategoryColorToRGB
 
 ```
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
@@ -4988,7 +4988,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setdefaultmanager"></a>CMFCVisualManager:: SetDefaultManager
+##  <a name="setdefaultmanager"></a>CMFCVisualManager：： SetDefaultManager
 
 設定預設的管理員。
 
@@ -5003,11 +5003,11 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 
 ### <a name="remarks"></a>備註
 
-`CMFCVisualManager`使用類別和任何衍生的視覺效果管理員, 自訂應用程式的外觀。 設定預設的 visual manager 之後, 此方法會使用新的視覺管理員重新繪製您的應用程式。 如需如何使用視覺化管理員的詳細資訊, 請參閱視覺[效果管理員](../../mfc/visualization-manager.md)。
+使用 `CMFCVisualManager` 類別和任何衍生的視覺效果管理員，自訂應用程式的外觀。 設定預設的 visual manager 之後，此方法會使用新的視覺管理員重新繪製您的應用程式。 如需如何使用視覺化管理員的詳細資訊，請參閱視覺[效果管理員](../../mfc/visualization-manager.md)。
 
 使用此方法來變更您的應用程式所使用的視覺效果管理員。
 
-##  <a name="setembossdisabledimage"></a>CMFCVisualManager:: SetEmbossDisabledImage
+##  <a name="setembossdisabledimage"></a>CMFCVisualManager：： SetEmbossDisabledImage
 
 啟用或停用已停用工具列影像的浮凸模式。
 
@@ -5018,13 +5018,13 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ### <a name="parameters"></a>參數
 
 *bEmboss*<br/>
-在布林值參數, 指出是否要啟用已停用工具列影像的浮凸模式。
+在布林值參數，指出是否要啟用已停用工具列影像的浮凸模式。
 
 ### <a name="remarks"></a>備註
 
-使用函數[CMFCVisualManager:: IsEmbossDisabledImage](#isembossdisabledimage)來判斷是否已啟用浮凸模式。
+使用函數[CMFCVisualManager：： IsEmbossDisabledImage](#isembossdisabledimage)來判斷是否已啟用浮凸模式。
 
-##  <a name="setfadeinactiveimage"></a>  CMFCVisualManager::SetFadeInactiveImage
+##  <a name="setfadeinactiveimage"></a>CMFCVisualManager：： SetFadeInactiveImage
 
 啟用或停用功能表或工具列上非使用中影像的光源效果。
 
@@ -5035,15 +5035,15 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ### <a name="parameters"></a>參數
 
 *bFade*<br/>
-在布林值參數, 指定是否要啟用光源效果。
+在布林值參數，指定是否要啟用光源效果。
 
 ### <a name="remarks"></a>備註
 
-這項功能控制非現用影像在功能表或工具列上是否顯示為淡出。 請使用[CMFCVisualManager:: IsFadeInactiveImage](#isfadeinactiveimage)方法來判斷是否已啟用這項功能。
+這項功能控制非現用影像在功能表或工具列上是否顯示為淡出。 請使用[CMFCVisualManager：： IsFadeInactiveImage](#isfadeinactiveimage)方法來判斷是否已啟用這項功能。
 
-##  <a name="setmenuflatlook"></a>CMFCVisualManager:: SetMenuFlatLook
+##  <a name="setmenuflatlook"></a>CMFCVisualManager：： SetMenuFlatLook
 
-設定表示功能表按鈕是否顯示為平面的旗標。 否則, 它們會顯示為三維。
+設定表示功能表按鈕是否顯示為平面的旗標。 否則，它們會顯示為三維。
 
 ```
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
@@ -5052,13 +5052,13 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ### <a name="parameters"></a>參數
 
 *bMenuFlatLook*<br/>
-在布林值參數, 指出功能表按鈕是否顯示為平面。
+在布林值參數，指出功能表按鈕是否顯示為平面。
 
 ### <a name="remarks"></a>備註
 
-根據預設, 不會啟用這項功能。
+根據預設，不會啟用這項功能。
 
-##  <a name="setmenushadowdepth"></a>CMFCVisualManager:: SetMenuShadowDepth
+##  <a name="setmenushadowdepth"></a>CMFCVisualManager：： SetMenuShadowDepth
 
 設定功能表陰影的寬度和高度。
 
@@ -5069,15 +5069,15 @@ void SetMenuShadowDepth(int nDepth);
 ### <a name="parameters"></a>參數
 
 *nDepth*<br/>
-在整數, 指定功能表陰影的深度 (以圖元為單位)。
+在整數，指定功能表陰影的深度（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
 功能表陰影的高度和寬度必須相同。 預設值為7圖元。
 
-##  <a name="setshadowhighlightedimage"></a>CMFCVisualManager:: SetShadowHighlightedImage
+##  <a name="setshadowhighlightedimage"></a>CMFCVisualManager：： SetShadowHighlightedImage
 
-設定旗標, 指出[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)是否顯示反白顯示影像的陰影。
+設定旗標，指出[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)是否顯示反白顯示影像的陰影。
 
 ```
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
@@ -5086,7 +5086,7 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ### <a name="parameters"></a>參數
 
 *bShadow*<br/>
-在布林值參數, 指出視覺管理員是否在反白顯示的影像下顯示陰影。
+在布林值參數，指出視覺管理員是否在反白顯示的影像下顯示陰影。
 
 ### <a name="remarks"></a>備註
 
@@ -5096,5 +5096,5 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager::GetInstance](#getinstance)<br/>
+[CMFCVisualManager：： GetInstance](#getinstance)<br/>
 [視覺化管理員](../../mfc/visualization-manager.md)

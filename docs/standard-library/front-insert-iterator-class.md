@@ -11,13 +11,13 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454125"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874035"
 ---
-# <a name="frontinsertiterator-class"></a>front_insert_iterator 類別
+# <a name="front_insert_iterator-class"></a>front_insert_iterator 類別
 
 描述滿足輸出迭代器需求的迭代器配接器。 它在序列前端插入項目 (而不是覆寫)，因此其語意不同於 C++ 序列容器的迭代器所提供的覆寫語意。 `front_insert_iterator` 類別是根據容器的類型樣板化。
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>參數
 
-*箱*\
+*容器*\
 容器的類型，其項目前端要由 `front_insert_iterator` 插入。
 
 ## <a name="remarks"></a>備註
@@ -45,24 +45,24 @@ class front_insert_iterator;
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[container_type](#container_type)|類型，表示要執行前端插入的容器。|
 |[reference](#reference)|類型，提供關聯容器控制之序列中項目的參考。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子, 用來針對前端插入執行\*輸出反覆運算器運算式 =  `i`。 `x`|
+|[operator*](#op_star)|取值運算子，用來執行輸出反覆運算器運算式 \* `i` = `x` 進行前端插入。|
 |[operator++](#op_add_add)|將 `front_insert_iterator` 遞增至可儲存值的下一個位置。|
-|[operator=](#op_eq)|指派運算子, 用來針對前端插入執行\*輸出反覆運算器運算式 =  `i`。 `x`|
+|[operator=](#op_eq)|指派運算子，用來執行輸出反覆運算器運算式 \* `i` = `x` 以進行前端插入。|
 
 ## <a name="requirements"></a>需求
 
 **標頭**：\<iterator>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="container_type"></a>  front_insert_iterator::container_type
 
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>front_insert_iterator:: operator\*
+## <a name="op_star"></a>front_insert_iterator：： operator\*
 
 可對傳回所定址之元素的插入迭代器進行取值。
 
@@ -183,7 +183,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>備註
 
-用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果`Iter`是定址序列中專案的反覆運算器, 則 **\*Iter**  = **值**會以值取代該元素, 而且不會變更序列中的元素總數。
+用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果 `Iter` 是定址序列中專案的反覆運算器，則 **\*Iter** = **值**會以值取代該元素，而且不會變更序列中的元素總數。
 
 ### <a name="example"></a>範例
 
@@ -242,7 +242,7 @@ front_insert_iterator<Container> operator++(int);
 
 ### <a name="return-value"></a>傳回值
 
-`front_insert_iterator`，定址可儲存值的下一個位置。
+`front_insert_iterator`，定址對象為可儲存值的下一個位置。
 
 ### <a name="remarks"></a>備註
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>參數
 
-*初始值*\
+*val*\
 要指派給容器的值。
 
 ### <a name="return-value"></a>傳回值
@@ -304,7 +304,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 第一個成員運算子會評估 `container.push_front( val)`，然後傳回 `*this`。
 
-在第二個成員運算子會評估
+第二個成員運算子會評估
 
 `container->push_front((typename Container::value_type&&) val)`,
 
@@ -391,4 +391,4 @@ The first element in the list L is: 30.
 
 [\<iterator>](../standard-library/iterator.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)

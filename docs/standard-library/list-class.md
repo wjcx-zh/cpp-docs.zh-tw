@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687831"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890841"
 ---
 # <a name="list-class"></a>list 類別
 
@@ -121,8 +121,8 @@ class list
 *類型*\
 要存放在清單中的元素資料類型。
 
-配置*器 \*
-代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 \<*類型* **> 的配置**器。
+配置*器\*
+代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是\<*類型* **> 的配置**器。
 
 ## <a name="remarks"></a>備註
 
@@ -132,7 +132,7 @@ list 成員函式 [merge](#merge)、[reverse](#reverse)、[unique](#unique)、[r
 
 當成員函式必須插入或清除清單的元素時，就會發生清單重新配置。 在所有這種情況下，只有指向受控制序列的清除部份的迭代器或參考會變成無效。
 
-包含C++標準程式庫標準標頭 \<list >，以定義[容器](../standard-library/stl-containers.md)類別範本清單和數個支援範本。
+包含C++標準程式庫標準標頭 \<清單 >，以定義[容器](../standard-library/stl-containers.md)類別範本清單和數個支援範本。
 
 ## <a name="members"></a>Members
 
@@ -142,7 +142,7 @@ list 成員函式 [merge](#merge)、[reverse](#reverse)、[unique](#unique)、[r
 |-|-|
 |[list](#list)|建構特定大小的清單，或具有特定值之元素的清單，或具有特定 `allocator` 的清單，或是做為其他清單的複本。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -159,7 +159,7 @@ list 成員函式 [merge](#merge)、[reverse](#reverse)、[unique](#unique)、[r
 |[size_type](#size_type)|計算清單中元素數目的類型。|
 |[value_type](#value_type)|類型，表示儲存在清單中的資料類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -253,10 +253,10 @@ void assign(
 *計數*\
 插入清單中項目的複本數目。
 
-*Val* \
+*Val*\
 插入清單中之項目的值。
 
-*IList* \
+*IList*\
 initializer_list，包含要插入之項目。
 
 ### <a name="remarks"></a>備註
@@ -432,7 +432,7 @@ const_iterator cbegin() const;
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -458,7 +458,7 @@ const_iterator cend() const;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -757,10 +757,10 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*Where* \
+*Where*\
 目標 [list](../standard-library/list-class.md) 中第一個元素的插入位置。
 
-*val* \
+*val*\
 加入至 `list` 結尾的元素。
 
 ### <a name="remarks"></a>備註
@@ -801,7 +801,7 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val* \
+*val*\
 新增到 [list](../standard-library/list-class.md) 結尾的元素。
 
 ### <a name="remarks"></a>備註
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val* \
+*val*\
 新增到 [list](../standard-library/list-class.md) 開頭的元素。
 
 ### <a name="remarks"></a>備註
@@ -981,7 +981,7 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>參數
 
-*Where* \
+*Where*\
 要從清單中移除之元素項目的位置。
 
 *第一個*\
@@ -1106,7 +1106,7 @@ Allocator get_allocator() const;
 
 ### <a name="remarks"></a>備註
 
-list 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
+list 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
 
 ### <a name="example"></a>範例
 
@@ -1149,10 +1149,10 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>參數
 
-*Where* \
+*Where*\
 目標 list 中第一個元素插入的位置。
 
-*Val* \
+*Val*\
 插入清單中之項目的值。
 
 *計數*\
@@ -1278,16 +1278,16 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>參數
 
-*Al* \
+*Al*\
 搭配這個物件使用的配置器類別。
 
 *計數*\
 建構的清單中元素的數目。
 
-*Val* \
+*Val*\
 list 中元素的值。
 
-*Right* \
+*Right*\
 list，其中有要複製的建構的 list。
 
 *第一個*\
@@ -1296,7 +1296,7 @@ list，其中有要複製的建構的 list。
 *上次*\
 超出要複製之元素範圍的第一個元素的位置。
 
-*IList* \
+*IList*\
 包含要複製之項目的 initializer_list。
 
 ### <a name="remarks"></a>備註
@@ -1307,7 +1307,7 @@ list，其中有要複製的建構的 list。
 
 前兩個函式會指定空的初始清單，第二個則指定要使用的配置器類型（*Al*）。
 
-第三個函式會指定類別 `Type` 之預設值專案的指定數目（*計數*）重複。
+第三個函式會指定類別 `Type`之預設值專案的指定數目（*計數*）重複。
 
 第四個和第五個函式會指定值*Val*的（*Count*）元素重複。
 
@@ -1456,10 +1456,10 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要與目標清單合併的引數清單。
 
-*comp* \
+*comp*\
 比較運算子，用來排序目標清單的元素。
 
 ### <a name="remarks"></a>備註
@@ -1538,12 +1538,12 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要複製到 `list` 中的 [list](../standard-library/list-class.md)。
 
 ### <a name="remarks"></a>備註
 
-清除 `list` 中的任何現有專案之後，運算子會將*右邊*的內容複寫或移至 `list`。
+清除 `list`中的任何現有專案之後，運算子會將*右邊*的內容複寫或移至 `list`。
 
 ### <a name="example"></a>範例
 
@@ -1694,7 +1694,7 @@ void push_back(void push_back(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val* \
+*val*\
 加入至 list 結尾的元素。
 
 ### <a name="remarks"></a>備註
@@ -1749,7 +1749,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val* \
+*val*\
 加入至清單的開頭的元素。
 
 ### <a name="remarks"></a>備註
@@ -1910,7 +1910,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val* \
+*val*\
 值，由項目持有時，會導致項目從清單移除。
 
 ### <a name="remarks"></a>備註
@@ -1968,7 +1968,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>參數
 
-*pred* \
+*pred*\
 一元述詞，如果元素符合此述詞，就會從清單中刪除該元素。
 
 ### <a name="example"></a>範例
@@ -2119,15 +2119,15 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>參數
 
-*_Newsize* \
+*_Newsize*\
 清單的新大小。
 
-*val* \
-如果新大小大於原始大小，便是要新增到清單中之新元素的值。 如果省略此值，則為新元素的類別指定預設值。
+*val*\
+如果新大小大於原始大小，便是要新增到清單中之新元素的值。 如果省略此值，就會為新元素指派類別的預設值。
 
 ### <a name="remarks"></a>備註
 
-如果清單的大小小於所要求的大小， *_Newsize*會將專案加入至清單中，直到達到所要求的大小為止。
+如果清單的大小小於所要求的大小， *_Newsize*會將專案加入至清單中，直到到達要求的大小為止。
 
 如果清單的大小大於所要求的大小，則會刪除最接近清單結尾的元素，直到清單達到 *_Newsize*的大小為止。
 
@@ -2301,14 +2301,14 @@ template <class Traits>
 
 ### <a name="parameters"></a>參數
 
-*comp* \
+*comp*\
 用來排序連續元素的比較運算子。
 
 ### <a name="remarks"></a>備註
 
 第一個成員函數預設會以遞增順序放置元素。
 
-成員範本函式會根據使用者指定的類別 *`Traits` 的比較*作業來排序元素。
+成員範本函式會根據使用者指定的類別 *`Traits`的比較*作業來排序元素。
 
 ### <a name="example"></a>範例
 
@@ -2373,13 +2373,13 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>參數
 
-*Where* \
+*Where*\
 目的地清單中的位置 (要在此位置之前插入)。
 
 *Source*\
 要插入至目的地清單的來源清單。
 
-*Iter* \
+*Iter*\
 要從來源清單插入的項目。
 
 *第一個*\
@@ -2396,7 +2396,7 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 第三對成員函式會將 [`First`，`Last`）指定的範圍，插入目的地清單中的專案之前，*其中*和會從來源清單中移除該範圍的元素。 （如果 `&Source == this`，`[First, Last)` 範圍不能包含在*其中*所指向的元素）。
 
-如果範圍接合插入 `N` 個元素，而且 `&Source != this`，則會將 [iterator](../standard-library/forward-list-class.md#iterator) 類別的物件遞增 `N` 次。
+如果範圍接合插入 `N` 個元素，而且 `&Source != this`，則會將類別為 [iterator](../standard-library/forward-list-class.md#iterator) 的物件遞增 `N` 次。
 
 在所有情況中，迭代器、指標或關於接合的項目的參考都會保持有效，並會傳送至目的地容器。
 
@@ -2487,7 +2487,7 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 提供要交換之元素的清單，或其專案要與*左邊*的清單交換的清單。
 
 *左方*\
@@ -2554,7 +2554,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>參數
 
-*pred* \
+*pred*\
 供二元述詞用來比較連續元素。
 
 ### <a name="remarks"></a>備註
@@ -2563,7 +2563,7 @@ void unique(BinaryPredicate pred);
 
 第一個成員函式會移除比較為等於其前一元素的每個元素。
 
-第二個成員函式會移除符合述詞函式*pred*的每個專案（相較于其前面的元素）。 您可以使用 \<functional > 標頭中所宣告的任何二元函式物件來*pred*引數，也可以建立您自己的函數。
+第二個成員函式會移除符合述詞函式*pred*的每個專案（相較于其前面的元素）。 您可以使用 \<功能 > 標頭中所宣告的任何二元函式物件來*pred*引數，也可以建立您自己的函式。
 
 ### <a name="example"></a>範例
 

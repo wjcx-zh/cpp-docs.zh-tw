@@ -6,15 +6,15 @@ f1_keywords:
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245361"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876020"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列舉
 
-## <a name="float_denorm_style"></a> float_denorm_style
+## <a name="float_denorm_style"></a>float_denorm_style
 
 此列舉會說明實作可選擇用來代表反正規化浮點值的各種方法 (反正規化浮點值是指太小而無法表示為正規化值的值)：
 
@@ -29,17 +29,17 @@ enum float_denorm_style {
 
 此列舉會傳回：
 
-- `denorm_indeterminate` 如果無法判斷反正規化形式是否存在，在轉譯時。
+- `denorm_indeterminate` 是否無法在轉譯時判斷反正規化形式的存在與否。
 
-- `denorm_absent` 如果反正規化的形式不存在。
+- 如果不存在反正規化的表單，`denorm_absent`。
 
-- `denorm_present` 如果反正規化的形式存在。
+- `denorm_present` 是否出現反正規化的表單。
 
 ### <a name="example"></a>範例
 
 如需可存取此列舉之值的範例，請參閱 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)。
 
-## <a name="float_round_style"></a> float_round_style
+## <a name="float_round_style"></a>float_round_style
 
 此列舉會說明實作可選擇用來將浮點值捨入為整數值的各種方法。
 
@@ -56,15 +56,15 @@ enum float_round_style {
 
 此列舉會傳回：
 
-- `round_indeterminate` 如果無法判斷捨入方法。
+- 如果無法判斷進位方法，`round_indeterminate`。
 
-- `round_toward_zero` 如果在輪趨近於零。
+- 如果向零進行舍入 `round_toward_zero`。
 
-- `round_to_nearest` 如果在輪到最接近的整數。
+- 如果四捨五入至最接近的整數，則 `round_to_nearest`。
 
-- `round_toward_infinity` 如果背離零。
+- 如果從零四捨五入，`round_toward_infinity`。
 
-- `round_toward_neg_infinity` 如果在輪負值的整數。
+- 如果舍入為較大的負整數，`round_toward_neg_infinity`。
 
 ### <a name="example"></a>範例
 

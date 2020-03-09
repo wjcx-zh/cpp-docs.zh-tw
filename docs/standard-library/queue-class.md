@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458348"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890842"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -42,25 +42,25 @@ class queue
 
 ### <a name="parameters"></a>參數
 
-*型*\
+*類型*\
 要存放在佇列中的項目資料類型
 
-*箱*\
+*容器*\
 用來實作佇列的基礎容器類型。
 
 ## <a name="remarks"></a>備註
 
-在佇列物件的`Type`第一個樣板參數中, 類別約定的元素與[value_type](#value_type)同義, 而且必須符合第二個範本所約定之基礎容器`Container`類別中的元素類型。實參. `Type`必須是可指派的, 如此才能複製該類型的物件, 並將值指派給該類型的變數。
+在佇列物件的第一個樣板參數中，類別 `Type` 約定的元素與[value_type](#value_type)同義，而且必須符合基礎容器類別中的元素類型 `Container` 由第二個樣板參數約定。 `Type` 必須是可指派的，因此可以複製該類型的物件，並將值指派給該類型的變數。
 
-適用于佇列的基礎容器類別[包括 deque](../standard-library/deque-class.md)和[list](../standard-library/list-class.md), 或任何其他支援`front`、 `back`、 `push_back`和`pop_front`作業的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
+適用于佇列的基礎容器類別包括[deque](../standard-library/deque-class.md)和[list](../standard-library/list-class.md)，或任何其他支援 `front`、`back`、`push_back`和 `pop_front`作業的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
 
-佇列物件只有在類別`Type`的專案可進行等號比較時才可進行等號比較, 而且只有在類別`Type`的元素小於可比較時, 才會小於可比較的。
+佇列物件只有在類別 `Type` 的專案可進行等號比較時才可進行等號比較，而且只有在類別 `Type` 的元素小於可比較時，才會小於可比較。
 
 有三種由 C++ 標準程式庫定義的容器配接器類型：stack、queue 和 priority_queue。 每個類型都會限制某些基礎容器類別的功能，以精確地提供標準資料結構受控制的介面。
 
 - [stack 類別](../standard-library/stack-class.md)支援後進先出 (LIFO) 的資料結構。 就好像盤子的堆疊一樣，這是一種較為貼切好記的類比。 項目 (盤子) 可能會插入、檢查，或只從堆疊頂端移除，這是基底容器尾端的最後一個項目。 限制只存取最上層項目是使用 stack 類別的原因。
 
-- queue 類別支援先進先出 (FIFO) 的資料結構。 就好像人們排隊等候銀行櫃員一樣，這是一種較為貼切好記的類比。 項目 (人) 可能會加入隊伍的尾端，以及從隊伍的前面移除。 隊伍的前端和後端都可能會進行檢查。 限制以這種方式只存取前端和後端項目是使用 queue 類別的原因。
+- queue 類別支援先進先出 (FIFO) 的資料結構。 就好像人們排隊等候銀行櫃員一樣，這是一種較為貼切好記的類比。 項目 (人) 可能會加入隊伍的尾端，以及從隊伍的前面移除。 隊伍的前端和後端都可能會進行檢查。 以這種方式限制只存取前端和後端項目，是使用 queue 類別的原因。
 
 - [priority_queue 類別](../standard-library/priority-queue-class.md)會排序其項目，使最大的項目一律位在頂端位置。 它支援插入項目，以及檢查和移除頂端項目。 就好像依照年齡、身高或某些其他條件來排列一群人一樣，這是一種較為貼切好記的類比。
 
@@ -80,7 +80,7 @@ class queue
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示 `queue` 中的項目數。|
 |[value_type](#value_type)|此類型代表儲存為 `queue` 項目的物件類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -107,7 +107,7 @@ const_reference back() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果將的傳回值`back`指派`reference`給, 則可以修改佇列物件。
+如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果 `back` 的傳回值指派給 `reference`，則可以修改佇列物件。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
@@ -139,7 +139,7 @@ int main( )
 
 ## <a name="container_type"></a>container_type
 
-提供要配接之基底容器的類型。
+提供要調整之基底容器的類型。
 
 ```cpp
 typedef Container container_type;
@@ -147,13 +147,13 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是樣板參數 `Container` 的同義字。 有兩種 C++ 標準程式庫序列容器類別：list 類別和預設 deque 類別，都符合用來當作佇列物件之基底類別的需求。 也可以使用滿足該要求的使用者定義類型。
+這個類型與樣板參數 `Container`同義。 有兩種 C++ 標準程式庫序列容器類別：list 類別和預設 deque 類別，都符合用來當作佇列物件之基底類別的需求。 也可以使用滿足該要求的使用者定義類型。
 
 如需有關 `Container` 的詳細資訊，請參閱 [queue 類別](../standard-library/queue-class.md)主題的＜備註＞一節。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `container_type` 的範例，請參閱 [queue](#queue) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#queue)queue`container_type` 的範例。
 
 ## <a name="empty"></a>空
 
@@ -217,9 +217,9 @@ const_reference front() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果將的傳回值`front`指派`reference`給, 則可以修改佇列物件。
+如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果 `front` 的傳回值指派給 `reference`，則可以修改佇列物件。
 
-此成員`reference`函式會將傳回至受控制序列的第一個元素, 這不能是空的。
+此成員函式會將 `reference` 傳回至受控制序列的第一個元素，這不能是空的。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
@@ -319,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*初始值*\
+*val*\
 加入至佇列後端的項目。
 
 ### <a name="remarks"></a>備註
@@ -370,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right*\
 其中建構佇列為複本的 **const** 容器。
 
 ### <a name="remarks"></a>備註
@@ -480,9 +480,9 @@ typedef typename Container::size_type size_type;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `size_type` 的範例，請參閱 [queue::front](#front) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#front)queue::front`size_type` 的範例。
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 此類型代表儲存為佇列項目的物件類型。
 
@@ -527,4 +527,4 @@ The element at the front of the queue is 69.
 ## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)

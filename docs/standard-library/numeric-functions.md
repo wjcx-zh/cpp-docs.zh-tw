@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627452"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854093"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
 
@@ -75,11 +75,11 @@ Type accumulate(
 
 ### <a name="return-value"></a>傳回值
 
-*Init*和第一個樣板函式之指定範圍中的所有專案的總和，或針對第二個樣板函式，將二元運算*binary_op*的結果（而不是 sum 運算）套用至（* PartialResult， *in_iter*），其中*PartialResult*是作業先前應用程式的結果，而*in_iter*是指向範圍中下一個元素的反覆運算器。
+*Init*和第一個樣板函式之指定範圍中的所有專案的總和，或針對第二個樣板函式，將二元*binary_op*運算套用至（* PartialResult， *in_iter*）的結果，其中*PartialResult*是作業先前應用程式的結果，而*in_iter*是指向範圍中下一個元素的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
-初始值可確保當範圍是空的時，有一個妥善定義的結果，在此情況下會傳回*init* 。 二進位運算不需要是關聯或交換的。 結果會初始化為初始值*init* ，然後*結果* = *binary_op*（*result*， *in_iter*）會反復地透過範圍計算，其中*in_iter*是指向每個的反覆運算器範圍中的後續元素。 範圍必須是有效的，而複雜度則是具有範圍大小的線性。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
+初始值可確保當範圍是空的時，有一個妥善定義的結果，在此情況下會傳回*init* 。 二進位運算不需要是關聯或交換的。 結果會初始化為初始值*init* ，然後*結果* = *binary_op*（*result*， *in_iter*）會透過範圍反復計算，其中*in_iter*是指向範圍中每個後續元素的反覆運算器。 範圍必須是有效的，而複雜度則是具有範圍大小的線性。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
 
 ### <a name="example"></a>範例
 
@@ -242,7 +242,7 @@ ForwardIterator2 adjacent_difference(
 
 針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第一個樣板函式會將後續的 *`adjacent_difference` 值（1，* *a*2- *a*1，a3- *a*2）儲存在目的範圍中。
 
-針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第二個樣板函式會將連續的 `adjacent_difference` 值儲存*為*1、 *a*2 *binary_op* *1、* 3 *binary_op* *a*2、in目的範圍。
+針對輸入範圍中的 1、 *a*2、 *a*3 值序列，第二個樣板函式會在目的範圍中儲存連續 `adjacent_difference` 值1、a 2 *binary_op* *1、* 3 *binary_op* *a*2。
 
 二進位運算*binary_op*不需要是關聯或交換，因為已指定套用的作業順序。
 
@@ -488,13 +488,13 @@ Type inner_product(
 
 ### <a name="parameters"></a>參數
 
-*first1* \
+*first1*\
 輸入迭代器，定址對象是要計算出與第二個範圍之內乘積或一般化內乘積的第一個範圍中的第一個元素。
 
-*last1* \
+*last1*\
 輸入迭代器，定址對象是要計算出與第二個範圍之內乘積或一般化內乘積的第一個範圍中的最後一個元素。
 
-*first2* \
+*first2*\
 輸入迭代器，定址對象是要計算出與第一個範圍之內乘積或一般化內乘積的第二個範圍中的第一個元素。
 
 *init*\
@@ -636,7 +636,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="example"></a>範例
 
-以下範例示範 `iota` 函式的一些使用方式，方法是填滿一個整數 [list](../standard-library/list.md)，然後以 `list` 填滿一個 [vector](../standard-library/vector.md)，以便使用 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 函式。
+以下範例示範 `iota` 函式的一些使用方式，方法是填滿一個整數 [list](../standard-library/list.md)，然後以 [ 填滿一個 ](../standard-library/vector.md)vector`list`，以便使用 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 函式。
 
 ```cpp
 // compile by using: cl /EHsc /nologo /W4 /MTd
@@ -857,7 +857,7 @@ Type reduce(
 
 ### <a name="return-value"></a>傳回值
 
-套用*binary_op*或 `std::plus<>()` 至指定範圍中的所有專案（* PartialResult， *in_iter*）的結果，其中*PartialResult*是先前的作業應用程式的結果 *，而* *in_iter*這是指向範圍中某個元素的反覆運算器。 在未指定*init*的多載中，使用的*init*值相當於 `typename iterator_traits<InputIterator>::value_type{}`。
+套用*binary_op*或 *`std::plus<>()` 至指定*範圍中的所有專案（* PartialResult， *in_iter*）的結果，其中*PartialResult*是先前的作業應用程式的結果，而*in_iter*是指向範圍中某個元素的反覆運算器。 在未指定*init*的多載中，使用的*init*值相當於 `typename iterator_traits<InputIterator>::value_type{}`。
 
 ### <a name="remarks"></a>備註
 
@@ -1041,13 +1041,13 @@ Type transform_reduce(
 *第一個*\
 輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
 
-*first1* \
+*first1*\
 輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op1*來加總或結合。
 
 *上次*\
 輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
 
-*last1* \
+*last1*\
 輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op1*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
 
 *結果*\

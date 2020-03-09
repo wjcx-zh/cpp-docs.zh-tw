@@ -1,5 +1,5 @@
 ---
-title: 作法：管理資源（C++）
+title: 如何：管理資源（C++）
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740657"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890924"
 ---
-# <a name="how-to-manage-resources-c"></a>HOW TO：管理資源（C++）
+# <a name="how-to-manage-resources-c"></a>如何：管理資源（C++）
 
 ## <a name="copy-and-edit-resources"></a>複製和編輯資源
 
@@ -46,7 +46,7 @@ ms.locfileid: "70740657"
 您可以輕鬆地將資源從現有的資源或可執行檔案複製到目前的資源檔。 若要複製資源，您可以同時開啟包含資源的兩個檔案，並將專案從某個檔案拖曳到另一個檔案，或在兩個檔案之間複製並貼上。 這個方法適用于資源腳本（.rc）檔案和資源範本（.rct）檔案，以及做為可執行檔（.exe）。
 
 > [!NOTE]
-> 視覺C++效果包含您可以在自己的應用程式中使用的範例資源檔。 如需詳細資訊， [請參閱美工圖案：一般資源](https://github.com/Microsoft/VCSamples)。
+> 視覺C++效果包含您可以在自己的應用程式中使用的範例資源檔。 如需詳細資訊，請參閱美工圖案[：一般資源](https://github.com/Microsoft/VCSamples)。
 
 您無法在專案（**資源檢視**）中的資源檔和在文件視窗中開啟的獨立 .rc 檔案之間拖放、複製、剪下或貼上。 您可以在舊版產品中執行此動作。 請只在專案外部開啟的 .rc 檔案之間使用拖放方法。
 
@@ -60,7 +60,7 @@ ms.locfileid: "70740657"
 
       1. 選取您想要複製的資源。 例如，在*source1.rc*中，選取 [ **IDD_DIALOG1**]。
 
-      1. 按住**Ctrl**鍵，然後將資源拖曳至第二個 .rc 檔。 例如，將**IDD_DIALOG1**從*Source1.rc*拖曳至*Source2。*
+      1. 按住**Ctrl**鍵，然後將資源拖曳至第二個 .rc 檔。 例如，將**IDD_DIALOG1**從*Source1.rc*拖曳至*Source2*。
 
          > [!TIP]
          > 拖曳資源而不按住**Ctrl**鍵，就會移動資源，而不是複製它。
@@ -80,7 +80,7 @@ ms.locfileid: "70740657"
 
 - 資源的條件是已定義的符號，用來識別使用此特定資源副本時的條件。
 
-資源的語言和條件會顯示在 [**工作區**] 視窗中的資源名稱後面的括弧中。 在這裡，名`IDD_AboutBox`為的`Finnish`資源會使用作為其語言， `XX33`而其條件為：
+資源的語言和條件會顯示在 [**工作區**] 視窗中的資源名稱後面的括弧中。 在這裡，名為 `IDD_AboutBox` 的資源使用 `Finnish` 作為其語言，且其條件為 `XX33`：
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -107,7 +107,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>若要將資源匯入資源腳本檔案
 
-1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)以滑鼠右鍵按一下您要新增資源的資源腳本（.rc）檔案的節點，然後選取 [匯**入**]。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)以滑鼠右鍵按一下您要新增資源的資源腳本（.rc）檔案的節點，然後選取 匯**入**。
 
 1. 找出並選擇點陣圖（.bmp）、圖示（.ico）、游標（中）、html 檔案（.htm）或其他要匯入之檔案的檔案名。
 
@@ -130,4 +130,4 @@ Win32
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
 [如何：建立資源](../windows/how-to-create-a-resource-script-file.md)<br/>
-[如何：在編譯時間包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>

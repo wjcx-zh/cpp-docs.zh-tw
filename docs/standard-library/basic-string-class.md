@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821905"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856493"
 ---
 # <a name="basic_string-class"></a>basic_string 類別
 
@@ -137,7 +137,7 @@ class basic_string;
 ### <a name="parameters"></a>參數
 
 *CharType*\
-若要儲存在字串中之單一字元的資料類型。 C++標準程式庫提供此類別樣板的特製化，其中包含類型為 **char**、[wstring](../standard-library/string-typedefs.md#wstring)、**wchar_t**、[u16string](../standard-library/string-typedefs.md#u16string) for`char16_t`和 [u32string](../standard-library/string-typedefs.md#u32string) 之元素的類型定義[字串](../standard-library/string-typedefs.md#string) `char32_t`。
+若要儲存在字串中之單一字元的資料類型。 C++標準程式庫提供此類別樣板的特製化，其中的類型定義[字串](../standard-library/string-typedefs.md#string)適用于**char**、 [wstring](../standard-library/string-typedefs.md#wstring)、for **wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`和[u32string](../standard-library/string-typedefs.md#u32string) for `char32_t`。
 
 *特性*\
 Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類別 `Traits`所描述。 預設值是 `char_traits`< `CharType`>。
@@ -151,7 +151,7 @@ Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類�
 |-|-|
 |[basic_string](#basic_string)|建構空的或由特定字元初始化的字串，或為其他字串物件的所有或部分複本的字串，或 C 字串。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
@@ -170,9 +170,9 @@ Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類�
 |[traits_type](#traits_type)|儲存在字串中之元素的字元特性的類型。|
 |[value_type](#value_type)|類型，代表儲存在字串中的字元類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[append](#append)|將字元加入至字串的結尾。|
 |[assign](#assign)|將新的字元值指派給字串的內容。|
@@ -180,12 +180,12 @@ Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類�
 |[back](#back)||
 |[begin](#begin)|傳回定址字串中第一個元素的迭代器。|
 |[c_str](#c_str)|將字串的內容轉換為 C 樣式且以 Null 結尾的字串。|
-|[capacity](#capacity)|傳回可儲存在字串中且不增加字串的記憶體配置的最大元素數目。|
+|[容量](#capacity)|傳回可儲存在字串中且不增加字串的記憶體配置的最大元素數目。|
 |[cbegin](#cbegin)|傳回定址字串中的第一個元素的 const 迭代器。|
 |[cend](#cend)|傳回定址字串中最後一個元素的下一個位置的 const 迭代器。|
-|[clear](#clear)|清除字串的所有元素。|
+|[清除](#clear)|清除字串的所有元素。|
 |[compare](#compare)|將某個字串與指定的字串比較，以判斷兩個字串是否相等，或其中一個字串的字數小於另一個字串。|
-|[copy](#copy)|從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。 已取代。 請改用 [basic_string::_Copy_s](#copy_s)。|
+|[copy](#copy)|從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。 已被取代。 請改用 [basic_string::_Copy_s](#copy_s)。|
 |[crbegin](#crbegin)|傳回定址反轉字串中的第一個元素的 const 迭代器。|
 |[crend](#crend)|傳回定址反轉字串中最後一個元素的下一個位置的 const 迭代器。|
 |[_Copy_s](#copy_s)|從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。|
@@ -216,7 +216,7 @@ Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類�
 |[substr](#substr)|從開始於指定位置的字串，複製最多一定字元數量的子字串。|
 |[swap](#swap)|交換兩個字串的內容。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -232,9 +232,9 @@ Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類�
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<string>
+**Header：** \<字串 >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="allocator_type"></a>  basic_string::allocator_type
 
@@ -246,7 +246,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是樣板參數 `Allocator` 的同義字。
+這個類型與樣板參數 `Allocator`同義。
 
 ### <a name="example"></a>範例
 
@@ -1030,7 +1030,7 @@ const_iterator cbegin() const;
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1056,7 +1056,7 @@ const_iterator cend() const;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -1394,7 +1394,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `const_iterator` 的範例，請參閱 [begin](#begin) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#begin)begin`const_iterator` 的範例。
 
 ## <a name="const_pointer"></a>  basic_string::const_pointer
 
@@ -1406,7 +1406,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `allocator_type::const_pointer` 的同義字。
+此類型是 `allocator_type::const_pointer`的同義字。
 
 針對類型 `string`，它相當於 `char*`。
 
@@ -1448,11 +1448,11 @@ typedef typename allocator_type::const_reference const_reference;
 
 類型 `const_reference` 無法用來修改元素的值。
 
-此類型是 `allocator_type::const_reference` 的同義字。 對於字串 `type`，它相當於 const `char&`。
+此類型是 `allocator_type::const_reference`的同義字。 對於字串 `type`，它相當於 const `char&`。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `const_reference` 的範例，請參閱 [at](#at) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#at)at`const_reference` 的範例。
 
 ## <a name="const_reverse_iterator"></a>  basic_string::const_reverse_iterator
 
@@ -1468,7 +1468,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#rbegin)rbegin`const_reverse_iterator` 的範例。
 
 ## <a name="copy"></a>  basic_string::copy
 
@@ -3162,7 +3162,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `iterator` 的範例，請參閱 [begin](#begin) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#begin)begin`iterator` 的範例。
 
 ## <a name="length"></a>  basic_string::length
 
@@ -3314,7 +3314,7 @@ static const size_type npos = -1;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `npos` 的範例，請參閱 [find](#find) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#find)find`npos` 的範例。
 
 ## <a name="op_add_eq"></a>  basic_string::operator+=
 
@@ -3527,7 +3527,7 @@ reference operator[](size_type offset);
 
 非 **const** 字串的字串重新配置或修改可能會使傳回的參考失效。
 
-當使用設為 1 或 2 的 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 編譯時，如果您嘗試存取的元素超出字串界限，則會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+當使用設為 1 或 2 的 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 編譯時，如果您嘗試存取的元素超出字串界限，則會發生執行階段錯誤。 如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -3578,7 +3578,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `allocator_type::pointer` 的同義字。
+此類型是 `allocator_type::pointer`的同義字。
 
 針對類型 `string`，它相當於**char** <strong>\*</strong>。
 
@@ -3760,13 +3760,13 @@ typedef typename allocator_type::reference reference;
 
 類型 `reference` 可用來修改元素的值。
 
-此類型是 `allocator_type::reference` 的同義字。
+此類型是 `allocator_type::reference`的同義字。
 
 針對類型 `string`，它相當於 `chr&`。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `reference` 的範例，請參閱 [at](#at) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#at)at`reference` 的範例。
 
 ## <a name="rend"></a>  basic_string::rend
 
@@ -4357,7 +4357,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](#rbegin)rbegin`reverse_iterator` 的範例。
 
 ## <a name="rfind"></a>  basic_string::rfind
 
@@ -4791,7 +4791,7 @@ typedef Traits traits_type;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `traits_type` 的範例，請參閱 [copy](../standard-library/char-traits-struct.md#copy) 的範例。
+如需如何宣告及使用 [ 的範例，請參閱 ](../standard-library/char-traits-struct.md#copy)copy`traits_type` 的範例。
 
 ## <a name="value_type"></a>  basic_string::value_type
 
@@ -4831,7 +4831,7 @@ The character ch1 is: G.
 The character ch2 is: H.
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<string>](../standard-library/string.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

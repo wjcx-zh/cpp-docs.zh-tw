@@ -7,11 +7,11 @@ helpviewer_keywords:
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
 ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546389"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865771"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -698,6 +698,6 @@ int main(){
 - [移動構造函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)
 - [委派的函式](delegating-constructors.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別和結構](classes-and-structs-cpp.md)

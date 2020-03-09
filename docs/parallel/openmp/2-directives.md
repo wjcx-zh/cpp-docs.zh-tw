@@ -3,38 +3,38 @@ title: 2. 指示詞
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
 ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363709"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882847"
 ---
-# <a name="2-directives"></a>2.指示詞
+# <a name="2-directives"></a>2. 指示詞
 
-指示詞會根據`#pragma`C 中定義的指示詞和C++標準。  編譯器支援 OpenMP C 和C++API 會包含命令列選項，就會啟動，並允許所有 OpenMP 編譯器指示詞的解譯。
+指示詞是以 C 和C++標準中定義的 `#pragma` 指示詞為基礎。  支援 OpenMP C 和C++ API 的編譯器會包含命令列選項，它會啟動並允許解讀所有 OpenMP 編譯器指示詞。
 
 ## <a name="21-directive-format"></a>2.1 指示詞格式
 
-OpenMP 指示詞的語法正式指定文法[附錄 C](c-openmp-c-and-cpp-grammar.md)，和非正式地，如下所示：
+OpenMP 指示詞的語法是由[附錄 C](c-openmp-c-and-cpp-grammar.md)中的文法正式指定，非正式的方式如下：
 
 ```cpp
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-每個指示詞開頭`#pragma omp`，以降低與具有相同名稱的其他 （非 OpenMP 或廠商延伸模組與 OpenMP） pragma 指示詞衝突的可能性。 指示詞的其餘部分都遵循 C 的慣例和C++標準的編譯器指示詞。 特別是，使用空白字元之前和之後`#`，和有時也泛空白字元必須用來分隔指示詞中的文字。 前置處理語彙基元`#pragma omp`限於巨集取代。
+每個指示詞的開頭都是 `#pragma omp`，以降低與其他（非 OpenMP 或供應商延伸至 OpenMP）相同名稱的 pragma 指示詞衝突的可能性。 指示詞的其餘部分會遵循編譯器指示詞之 C C++和標準的慣例。 特別的是，可以在 `#`之前和之後使用空白字元，有時必須使用空白字元來分隔指示詞中的單字。 遵循 `#pragma omp` 的前置處理權杖會受到宏取代。
 
-指示詞會區分大小寫。 指示詞中子句出現的順序並不大。 如有需要受限於每個子句描述中所列的限制，可能會重複上指示詞子句。 如果*變數清單*會出現在子句中，它必須指定只有變數。 只有一個*指示詞名稱*可以指定每個指示詞。  比方說，不允許下列指示詞：
+指示詞會區分大小寫。 子句出現在指示詞中的順序並不重要。 指示詞 on 指示詞可能會視需要重複，受限於每個子句的描述中所列的限制。 如果*變數清單*出現在子句中，它必須僅指定變數。 每個指示詞只可指定一個指示詞*名稱*。  例如，不允許使用下列指示詞：
 
 ```cpp
 /* ERROR - multiple directive names not allowed */
 #pragma omp parallel barrier
 ```
 
-OpenMP 指示詞套用至最多一個後續陳述式，它必須是結構化的區塊。
+OpenMP 指示詞最多隻適用于一個成功的語句，這必須是結構化的區塊。
 
 ## <a name="22-conditional-compilation"></a>2.2 條件式編譯
 
-`_OPENMP`巨集名稱指 OpenMP 相容實作十進位常數*yyyymm*，它會是年份和月份的已核准的規格。 這個巨集不能主旨`#define`或`#undef`前置處理器指示詞。
+`_OPENMP` 宏名稱是由 OpenMP 相容的實作為 decimal 常數*yyyymm*所定義，這會是核准規格的年份和月份。 這個宏不得為 `#define` 或 `#undef` 前置處理指示詞的主體。
 
 ```cpp
 #ifdef _OPENMP
@@ -42,198 +42,198 @@ iam = omp_get_thread_num() + index;
 #endif
 ```
 
-如果廠商定義與 OpenMP 的擴充功能，它們就可以指定其他預先定義的巨集。
+如果廠商定義 OpenMP 的延伸模組，則可以指定其他預先定義的宏。
 
-## <a name="23-parallel-construct"></a>2.3 parallel 建構
+## <a name="23-parallel-construct"></a>2.3 平行結構
 
-下列指示詞定義在平行區域，是由多個執行緒以平行方式執行的程式的區域。 這個指示詞是開始平行執行的基本建構。
+下列指示詞會定義平列區域，這是多個執行緒平行執行之程式的區域。 這個指示詞是啟動平行執行的基礎結構。
 
 ```cpp
 #pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block
 ```
 
-*子句*是下列其中之一：
+*子句*為下列其中一項：
 
-- `if(` *scalar-expression* `)`
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
+- `if(` 純量*運算式*`)`
+- `private(`*變數清單*`)`
+- `firstprivate(`*變數清單*`)`
 - `default(shared | none)`
-- `shared(` *variable-list* `)`
-- `copyin(` *variable-list* `)`
-- `reduction(` *operator* `:`  *variable-list* `)`
-- `num_threads(` *integer-expression* `)`
+- `shared(`*變數清單*`)`
+- `copyin(`*變數清單*`)`
+- `reduction(`*運算子*`:`*變數清單*`)`
+- `num_threads(`*整數運算式*`)`
 
-執行緒取得平行建構，如果其中一個下列的情況下，則為 true 時會建立的執行緒小組：
+當執行緒到達平行結構時，如果下列其中一種情況成立，就會建立執行緒的小組：
 
-- 否`if`出現子句時。
-- `if`運算式會評估為非零值。
+- 沒有 `if` 子句。
+- `if` 運算式會評估為非零值。
 
-此執行緒會成為小組成員，0，執行緒數目的主要執行緒和小組成員，包括主要執行緒中中的所有執行緒以平行方式都執行的區域。 如果值`if`運算式為零，序列化的區域。
+這個執行緒會成為小組的主要執行緒，其執行緒數目為0，而小組中的所有線程（包括主要執行緒）會以平行方式執列區域。 如果 `if` 運算式的值為零，則會序列化區域。
 
-若要判斷要求的執行緒數目，下列規則會被視為順序。 第一個符合其條件的規則將會套用：
+為了判斷所要求的執行緒數目，將依序考慮下列規則。 會套用符合條件的第一個規則：
 
-1. 如果`num_threads`子句已存在，則整數運算式的值是所要求的執行緒數目。
+1. 如果 `num_threads` 子句存在，則整數運算式的值會是所要求的執行緒數目。
 
-1. 如果`omp_set_num_threads`已呼叫程式庫函式，則是最近執行的呼叫中引數的值是所要求的執行緒數目。
+1. 如果已呼叫 `omp_set_num_threads` 程式庫函式，則最近執行之呼叫中的引數值會是所要求的執行緒數目。
 
-1. 如果環境變數`OMP_NUM_THREADS`定義，則此環境變數的值是所要求的執行緒數目。
+1. 如果環境變數 `OMP_NUM_THREADS` 已定義，則此環境變數的值會是所要求的執行緒數目。
 
-1. 如果使用任何上述方法，然後要求的執行緒數目是由實作定義。
+1. 如果未使用上述的任何方法，則要求的執行緒數目為「執行定義」。
 
-如果`num_threads`出現子句時，則它會取代所要求的執行緒數目`omp_set_num_threads`程式庫函式或`OMP_NUM_THREADS`環境變數只會針對它套用到平行區域。 稍後平行區域不會受到它。
+如果 `num_threads` 子句存在，則它會取代 `omp_set_num_threads` 程式庫函式所要求的執行緒數目，或僅針對其套用的平列區域使用 `OMP_NUM_THREADS` 環境變數。 較新的平列區域不受其影響。
 
-執行平行區域的執行緒數目也取決於是否已啟用動態調整執行緒數目。 如果已停用動態調整，要求的執行緒數目會執行平行的區域。 如果動態調整已啟用要求的執行緒數目是可能執行平行區域的執行緒數目上限。
+執行平列區域的執行緒數目也取決於是否已啟用執行緒數目的動態調整。 如果動態調整已停用，則要求的執行緒數目將會執行平列區域。 如果啟用動態調整，則要求的執行緒數目就是可能執行平列區域的執行緒數目上限。
 
-如果在平行區域為止已停用動態調整執行緒數目，而要求的平行區域的執行緒數目大於可以提供執行階段系統的數字，該程式的行為是實作定義。 實作可能，比方說，中斷執行程式，或它可以將平行區域進行序列化。
+如果在停用執行緒數目的動態調整時遇到平列區域，而且針對平列區域要求的執行緒數目大於執行時間系統可以提供的數目，則程式的行為是執行定義。 例如，可能會中斷程式的執行，或者可能會序列化平列區域。
 
-`omp_set_dynamic`程式庫函式和`OMP_DYNAMIC`環境變數可用來啟用和停用動態調整執行緒數目。
+`omp_set_dynamic` 程式庫函式和 `OMP_DYNAMIC` 環境變數可以用來啟用和停用執行緒數目的動態調整。
 
-實體處理器實際上裝載在任何指定時間的執行緒數目是由實作定義。 建立之後，在小組中的執行緒數目維持不變，平行區域的持續期間。 明確的使用者或自動執行階段系統從一個平行區域到另一個，就可以進行變更。
+在任何指定時間實際裝載執行緒的實體處理器數目，都是實作為定義的。 建立之後，小組中的執行緒數目在該平列區域的持續時間內會保持不變。 它可以由使用者明確地變更，或由執行時間系統自動由一個平列區域變更為另一個。
 
-每個執行緒中，執行包含在平行區域的動態範圍內的陳述式，並每個執行緒可以執行的陳述式的路徑不同於其他執行緒。 發生在平行區域的語彙範圍外的指示詞被指被遺棄的指示詞。
+包含在平列區域動態範圍內的語句會由每個執行緒執行，而且每個執行緒都可以執行與其他執行緒不同的語句路徑。 在平列區域的詞法範圍外遇到的指示詞稱為孤立的指示詞。
 
-沒有隱含的障礙，在平行區域的結尾。 只有小組的主要執行緒會繼續執行在平行區域的結尾。
+在平列區域的結尾有隱含的屏障。 只有小組的主要執行緒會在平列區域結束時繼續執行。
 
-如果小組執行平行的區域中的執行緒發生另一個平行建構，它會建立新的小組，它會變成該新的小組的主要。 根據預設，會序列化巢狀平行區域。 如此一來，根據預設，巢狀平行區域是由一個執行緒所組成的小組執行。 可能會使用執行階段程式庫函式來變更預設行為`omp_set_nested`環境變數或`OMP_NESTED`。 不過，在小組執行巢狀平行區域的執行緒數目是由實作定義。
+如果小組中執行平列區域的執行緒遇到另一個平行結構，它會建立新的小組，而且它會成為該新小組的主要複本。 預設會序列化嵌套的平列區域。 因此，依預設，由一個執行緒組成的小組會執行一個嵌套的平列區域。 您可以使用執行時間程式庫函數 `omp_set_nested` 或環境變數 `OMP_NESTED`來變更預設行為。 不過，小組中執行嵌套平列區域的執行緒數目是實作為定義的。
 
-若要限制`parallel`指示詞如下所示：
+`parallel` 指示詞的限制如下：
 
-- 最多一個`if`子句可以出現在指示詞。
+- 最多隻能有一個 `if` 子句出現在指示詞上。
 
-- 它具有未指定任何是否端效果置於 if 運算式或`num_threads`運算式就會發生。
+- 不論 if 運算式或 `num_threads` 運算式內是否有任何副作用，都不會指定。
 
-- A`throw`執行在平行區域必須造成才能繼續在相同的結構化區塊，動態範圍內執行，且必須由相同的執行緒擲回例外狀況攔截到。
+- 在平列區域內執行的 `throw` 必須導致在相同結構化區塊的動態範圍內繼續執行，而且它必須由擲回例外狀況的同一個執行緒捕捉。
 
-- 只有一個`num_threads`子句可以出現在指示詞。 `num_threads`運算式會評估平行區域中，內容之外，並且必須評估為正整數值。
+- 指示詞上只能出現一個 `num_threads` 子句。 `num_threads` 運算式會在平列區域的內容之外進行評估，而且必須評估為正整數值。
 
-- 評估順序`if`和`num_threads`子句並未指定。
+- 未指定 `if` 和 `num_threads` 子句的評估順序。
 
-### <a name="cross-references"></a>交互參照
+### <a name="cross-references"></a>交互參考
 
-- `private``firstprivate`， `default`， `shared`， `copyin`，並`reduction`子句 ([區段 2.7.2](#272-data-sharing-attribute-clauses))
+- `private`、`firstprivate`、`default`、`shared`、`copyin`和 `reduction` 子句（[區段 2.7.2](#272-data-sharing-attribute-clauses)）
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)環境變數
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)程式庫函式
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)環境變數
-- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) function
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)函式
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)環境變數
 - [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)程式庫函式
 
-## <a name="24-work-sharing-constructs"></a>2.4 工作共用建構
+## <a name="24-work-sharing-constructs"></a>2.4 工作共用結構
 
-工作共用建構會將執行相關聯的陳述式，會遇到相同的小組成員之間。 工作共用指示詞不會啟動新的執行緒，並在工作共用建構的項目上沒有任何隱含的障礙。
+工作共用結構會將相關聯語句的執行散發到遇到此專案之小組的成員之間。 工作共用指示詞不會啟動新的執行緒，而且在進入工作共用結構時，不會有隱含的屏障。
 
-將一連串工作共用建構和`barrier`遇到的指示詞必須是相同的小組中的每個執行緒。
+小組中的每個執行緒所遇到的工作共用結構和 `barrier` 指示詞的順序必須相同。
 
-OpenMP 定義下列的工作共用建構，並請依照下列各節會說明這些建構：
+OpenMP 會定義下列工作共用結構，而下列各節將說明這些結構：
 
-- [針對](#241-for-construct)指示詞
-- [區段](#242-sections-construct)指示詞
+- [for](#241-for-construct)指示詞
+- [sections](#242-sections-construct)指示詞
 - [單一](#243-single-construct)指示詞
 
-### <a name="241-for-construct"></a>2.4.1 for 建構
+### <a name="241-for-construct"></a>2.4.1 for 結構
 
-`for`指示詞會識別反覆工作共用建構，指定相關聯的迴圈的反覆項目，則會以平行方式執行。 反覆項目`for`迴圈會分散到存在於小組執行平行建構，它會繫結的執行緒。 語法`for`建構如下所示：
+`for` 指示詞會識別反復的工作共用結構，指定相關聯迴圈的反覆運算將會平行執行。 `for` 迴圈的反復專案會散發到小組中已存在於執行其所系結之平行結構的執行緒。 `for` 結構的語法如下所示：
 
 ```cpp
 #pragma omp for [clause[[,] clause] ... ] new-line for-loop
 ```
 
-子句可以是下列其中一項：
+子句為下列其中一項：
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `lastprivate(` *variable-list* `)`
-- `reduction(` *operator* `:` *variable-list* `)`
+- `private(`*變數清單*`)`
+- `firstprivate(`*變數清單*`)`
+- `lastprivate(`*變數清單*`)`
+- `reduction(`*運算子*`:`*變數清單*`)`
 - `ordered`
-- `schedule(` *kind* [`,` *chunk_size*] `)`
+- `schedule(`*種類*[`,` *chunk_size*] `)`
 - `nowait`
 
-`for`指示詞會置於對應的結構中的限制`for`迴圈。 具體來說，對應`for`迴圈必須有標準的圖形：
+`for` 指示詞會對對應 `for` 迴圈的結構施加限制。 具體而言，對應的 `for` 迴圈必須具有標準圖形：
 
-`for (` *init-expr* `;` *var  logical-op  b* `;` *incr-expr* `)`
+`for (` *init-expr* `;` *var 邏輯 op b* `;`*增量-expr* `)`
 
 *init-expr*<br/>
-下列其中一項：
+下列其中之一：
 
 - *var* = *lb*
-- *integer-type var* = *lb*
+- *整數類型的 var* = *lb*
 
-*incr-expr*<br/>
-下列其中一項：
+*增量-expr*<br/>
+下列其中之一：
 
 - `++` *var*
 - *var* `++`
 - `--` *var*
 - *var* `--`
-- *var* `+=` *incr*
-- *var* `-=` *incr*
-- *var* `=` *var* `+` *incr*
-- *var* `=` *incr* `+` *var*
-- *var* `=` *var* `-` *incr*
+- *var* `+=`*增量*
+- *var* `-=`*增量*
+- *var* `=` *var* `+`*增量*
+- *var* `=`*增量*`+` *var*
+- *var* `=` *var* `-`*增量*
 
 *var*<br/>
-帶正負號的整數變數。 如果此變數會否則共用，它會隱含地變成私用的持續期間`for`。 請勿修改此變數的主體內`for`陳述式。 除非指定變數`lastprivate`，不定迴圈之後其值。
+帶正負號的整數變數。 如果要共用此變數，則會在 `for`期間以隱含方式將它設為私用。 請勿在 `for` 語句的主體中修改此變數。 除非 `lastprivate`指定變數，否則在迴圈之後的值為不定。
 
-*logical-op*<br/>
-下列其中一項：
+*邏輯 op*<br/>
+下列其中之一：
 
 - `<`
 - `<=`
 - `>`
 - `>=`
 
-*lb*， *b*，和*incr*<br>
-迴圈不變的整數運算式。 沒有任何同步處理期間評估這些運算式中，因此任何已評估的副作用產生未定的結果。
+*lb*、 *b*和*增量*<br>
+迴圈不變的整數運算式。 評估這些運算式時，不會進行同步處理，因此任何評估的副作用都會產生不確定的結果。
 
-標準格式可讓要計算項目，以迴圈的迴圈反覆項目數目。 型別中的值進行這項計算*var*之後整數提升。 特別是當值*b* `-` *lb* `+` *incr* ，型別，結果是無法確定無法表示。 此外，如果*邏輯 op*是`<`或`<=`，然後*incr expr*必須造成*var*增加在迴圈的每個反覆項目。   如果*邏輯 op*是`>`或是`>=`，然後*incr expr*必須造成*var*迴圈的每個反覆運算上取得較小。
+標準格式可讓迴圈反覆運算的數目在進入迴圈時計算。 這項計算是以*var*類型的值，在整數提升後進行。 特別是，如果*b*的值 `-` *lb* `+`*增量*無法在該類型中表示，則結果會是不確定的。 此外，如果*邏輯 op* `<` 或 `<=`，則*增量-expr*在迴圈的每個反覆運算上都必須造成*var*增加。   如果 `>` 或 `>=`*邏輯 op* ，則在迴圈的每次反覆運算時，*增量-expr*必須使*var*變得較小。
 
-`schedule`子句會指定如何的反覆項目`for`迴圈會分配給小組的執行緒。 程式的正確性不得相依於哪一個執行緒執行的特定反覆項目。 值*chunk_size*，如果指定，必須是正數值為迴圈而異的整數運算式。 沒有任何同步處理期間評估此運算式中，因此任何已評估的副作用產生未定的結果。 排程*種類*可以是下列值之一：
+`schedule` 子句會指定如何將 `for` 迴圈的反復專案分割成小組的各個執行緒。 程式的正確性不能取決於執行特定反復專案的執行緒。 如有指定， *chunk_size*的值必須是具有正值的迴圈不變整數運算式。 評估此運算式時，不會進行同步處理，因此任何評估的副作用都會產生不確定的結果。 排程*種類*可以是下列其中一個值：
 
-表 2-1:`schedule`子句*種類*值
+資料表2-1： `schedule` 子句*種類*值
 
 |||
 |-|-|
-|靜態|當`schedule(static,` *chunk_size* `)`指定，反覆項目分成區塊的指定大小*chunk_size*。 區塊會以靜態方式指派順序執行緒編號以循環配置資源方式小組中的執行緒。 若未*chunk_size*指定時，反覆運算空間會分割成區塊 （chunk） 的其中一個指派給每個執行緒的區塊大小，大約等於。|
-|動態|當`schedule(dynamic,` *chunk_size* `)`指定反覆項目可分為區塊，每個都包含一連串*chunk_size*反覆項目。 每個區塊會指派給正在等候指派的執行緒。 執行緒執行的反覆項目區塊，然後等到其下一步 的指派，任何區塊會保持指派。 要指派的最後一個區塊可能會有較少的反覆項目。 若未*chunk_size*指定，則會預設為 1。|
-|引導式|當`schedule(guided,` *chunk_size* `)`指定，以減少大小的區塊中的執行緒指派反覆項目。 當執行緒完成其指派的區塊的反覆項目時，它有動態指派另一個區塊，直到沒有任何保留。 針對*chunk_size*為 1，每個區塊的大小是大約未指派除以的執行緒數目的反覆項目數目。 這些大小幾乎以指數方式減少為 1。 針對*chunk_size*具有值*k*大於 1，大小為幾乎以指數方式減少*k*，差異在於最後一個區塊可能會有少於*k*反覆項目。 若未*chunk_size*指定，則會預設為 1。|
-|執行階段|當`schedule(runtime)`指定時，相關的排程會延後執行階段決定。 排程*種類*可以在執行階段選擇的區塊的大小，藉由設定環境變數和`OMP_SCHEDULE`。 如果未設定這個環境變數，產生的排程是由實作定義。 當`schedule(runtime)`指定，則*chunk_size*不得指定。|
+|靜態|指定 `schedule(static,` *chunk_size* `)` 時，反復專案會分割為*chunk_size*所指定大小的區塊。 區塊會以迴圈配置資源方式，以執行緒數目的順序，以靜態方式指派給小組中的執行緒。 當未指定任何*chunk_size*時，反復專案空間會分成大約大小相等的區塊，並將一個區塊指派給每個執行緒。|
+|動態|指定 `schedule(dynamic,` *chunk_size* `)` 時，反復專案會分割成一連串的區塊，每個區塊都包含*chunk_size*的反復專案。 每個區塊都會指派給等待指派的執行緒。 執行緒會執行反復專案的區塊，然後等候其下一個指派，直到沒有任何區塊被指派為止。 要指派的最後一個區塊可能會有較少的反復專案數目。 若未指定*chunk_size* ，預設值為1。|
+|指導|指定 `schedule(guided,` *chunk_size* `)` 時，反復專案會以減少的大小，指派給區塊中的執行緒。 當執行緒完成其指派的反復專案區塊時，它會以動態方式指派另一個區塊，直到沒有剩餘的為止。 對於1的*chunk_size* ，每個區塊的大小大約是未指派的反復專案數除以執行緒數目。 這些大小幾乎會以指數方式減少為1。 若為值為*k*大於1的*chunk_size* ，則大小幾乎會以指數方式減少為*k*，不同之處在于最後一個區塊的反覆運算可能少於*k*個。 若未指定*chunk_size* ，預設值為1。|
+|執行階段|當指定 `schedule(runtime)` 時，有關排程的決策會延遲到執行時間為止。 您可以藉由設定環境變數 `OMP_SCHEDULE`，在執行時間選擇區塊的排程*種類*和大小。 如果未設定此環境變數，則產生的排程為「執行定義」。 當指定 `schedule(runtime)` 時，就不能指定*chunk_size* 。|
 
-沒有明確定義`schedule`子句，則預設`schedule`是由實作定義。
+如果沒有明確定義的 `schedule` 子句，預設 `schedule` 為「執行定義」。
 
-OpenMP 相容的程式不應該依賴正確執行的特定排程。 程式不應該依賴排程*種類*符合精確地提供上述的描述，因為它是可以在相同的排程的實作有變化*種類*跨不同的編譯器。 描述可用來選取的排程，適用於特定的情況。
+OpenMP 相容的程式不應依賴特定排程來執行正確的工作。 程式不應依賴符合上述描述的排程*種類*，因為在不同的編譯器中，可能會有相同排程*種類*的執行變化。 描述可用來選取適用于特定情況的排程。
 
-`ordered`子句必須要有的時機`ordered`指示詞將繫結至`for`建構。
+當 `ordered` 指示詞系結至 `for` 結構時，必須要有 `ordered` 子句。
 
-結尾沒有隱含的障礙`for`建構，除非`nowait`指定子句。
+除非指定了 `nowait` 子句，否則 `for` 結構的結尾會有隱含的屏障。
 
-若要限制`for`指示詞如下所示：
+`for` 指示詞的限制如下：
 
-- `for`迴圈必須是結構化的區塊中，且，此外，其執行必須不結束`break`陳述式。
+- `for` 迴圈必須是結構化區塊，此外，它的執行不得由 `break` 語句終止。
 
-- 值，迴圈的控制運算式`for`相關聯的迴圈`for`指示詞必須是相同的小組中的所有執行緒。
+- 與 `for` 指示詞相關聯之 `for` 迴圈的迴圈控制運算式的值，對於小組中的所有線程都必須相同。
 
-- `for`迴圈反覆項目變數必須具有帶正負號的整數類型。
+- `for` 迴圈反覆運算變數必須有帶正負號的整數類型。
 
-- 只有一個`schedule`子句可能會出現在`for`指示詞。
+- `for` 指示詞上只能出現一個 `schedule` 子句。
 
-- 只有一個`ordered`子句可能會出現在`for`指示詞。
+- `for` 指示詞上只能出現一個 `ordered` 子句。
 
-- 只有一個`nowait`子句可能會出現在`for`指示詞。
+- `for` 指示詞上只能出現一個 `nowait` 子句。
 
-- 如果未指定，或任何側邊效果內的頻率*chunk_size*， *lb*， *b*，或*incr*運算式就會發生。
+- 如果*chunk_size*、 *lb*、 *b*或*增量*運算式中發生任何副作用，就不會指定它。
 
-- 值*chunk_size*運算式必須是相同的小組中的所有執行緒。
+- 小組中所有線程的*chunk_size*運算式的值都必須相同。
 
-#### <a name="cross-references"></a>交互參照
+#### <a name="cross-references"></a>交互參考
 
-- `private``firstprivate`， `lastprivate`，並`reduction`子句 ([區段 2.7.2](#272-data-sharing-attribute-clauses))
+- `private`、`firstprivate`、`lastprivate`和 `reduction` 子句（[區段 2.7.2](#272-data-sharing-attribute-clauses)）
 - [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule)環境變數
-- [排序](#266-ordered-construct)建構
-- [排程](d-using-the-schedule-clause.md)子句
+- 已[排序](#266-ordered-construct)的結構
+- [schedule](d-using-the-schedule-clause.md)子句
 
-### <a name="242-sections-construct"></a>2.4.2 區段建構
+### <a name="242-sections-construct"></a>2.4.2 區段結構
 
-`sections`指示詞會識別 noniterative 的工作共用建構，指定一組要在小組中的執行緒之間分割的建構。 由小組中的執行緒中，每個區段會執行一次。 語法`sections`指示詞時，如下所示：
+`sections` 指示詞會識別 noniterative 的工作共用結構，其指定要在小組中的執行緒之間劃分的一組結構。 每個區段都會由小組中的執行緒執行一次。 `sections` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp sections [clause[[,] clause] ...] new-line
@@ -245,80 +245,80 @@ OpenMP 相容的程式不應該依賴正確執行的特定排程。 程式不應
 }
 ```
 
-子句可以是下列其中一項：
+子句為下列其中一項：
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `lastprivate(` *variable-list* `)`
-- `reduction(` *operator* `:`  *variable-list* `)`
+- `private(`*變數清單*`)`
+- `firstprivate(`*變數清單*`)`
+- `lastprivate(`*變數清單*`)`
+- `reduction(`*運算子*`:`*變數清單*`)`
 - `nowait`
 
-每個區段前面加上`section`指示詞，雖然`section`指示詞是選擇性的第一個區段。 `section`指示詞必須出現的語彙範圍內`sections`指示詞。 結尾沒有隱含的障礙`sections`建構，除非`nowait`指定。
+雖然第一個區段的 `section` 指示詞是選擇性的，但每個區段的前面都會加上 `section` 指示詞。 `section` 指示詞必須出現在 `sections` 指示詞的詞法範圍內。 除非指定 `nowait`，否則 `sections` 結構的結尾會有隱含的屏障。
 
-若要限制`sections`指示詞如下所示：
+`sections` 指示詞的限制如下：
 
-- A`section`指示詞不得出現的語彙範圍外`sections`指示詞。
+- `section` 指示詞不能出現在 `sections` 指示詞的詞法範圍外。
 
-- 只有一個`nowait`子句可能會出現在`sections`指示詞。
+- `sections` 指示詞上只能出現一個 `nowait` 子句。
 
-#### <a name="cross-references"></a>交互參照
+#### <a name="cross-references"></a>交互參考
 
-- `private``firstprivate`， `lastprivate`，並`reduction`子句 ([區段 2.7.2](#272-data-sharing-attribute-clauses))
+- `private`、`firstprivate`、`lastprivate`和 `reduction` 子句（[區段 2.7.2](#272-data-sharing-attribute-clauses)）
 
-### <a name="243-single-construct"></a>2.4.3 single 建構
+### <a name="243-single-construct"></a>2.4.3 單一結構
 
-`single`指示詞會識別指定小組 （不一定是主要執行緒） 中只有一個執行緒執行相關聯的結構化的區塊的建構。 語法`single`指示詞時，如下所示：
+`single` 指示詞會識別結構，指定相關聯的結構化區塊僅由小組中的一個執行緒執行（不一定是主要執行緒）。 `single` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp single [clause[[,] clause] ...] new-linestructured-block
 ```
 
-子句可以是下列其中一項：
+子句為下列其中一項：
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `copyprivate(` *variable-list* `)`
+- `private(`*變數清單*`)`
+- `firstprivate(`*變數清單*`)`
+- `copyprivate(`*變數清單*`)`
 - `nowait`
 
-沒有隱含的障礙之後,`single`建構，除非`nowait`指定子句。
+除非指定了 `nowait` 子句，否則 `single` 結構之後會有隱含的屏障。
 
-若要限制`single`指示詞如下所示：
+`single` 指示詞的限制如下：
 
-- 只有一個`nowait`子句可能會出現在`single`指示詞。
-- `copyprivate`子句不能搭配`nowait`子句。
+- `single` 指示詞上只能出現一個 `nowait` 子句。
+- `copyprivate` 子句不得與 `nowait` 子句一起使用。
 
-#### <a name="cross-references"></a>交互參照
+#### <a name="cross-references"></a>交互參考
 
-- `private``firstprivate`，並`copyprivate`子句 ([一節 2.7.2](#272-data-sharing-attribute-clauses))
+- `private`、`firstprivate`和 `copyprivate` 子句（[區段 2.7.2](#272-data-sharing-attribute-clauses)）
 
-## <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 合併的平行工作共用建構
+## <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 結合的平行工作共用結構
 
-結合的平行工作共用建構是用於指定有只有一個工作共用建構在平行區域的捷徑。 這些指示詞的語意為明確指定相同`parallel`指示詞後面接著單一的工作共用建構。
+結合的平行工作共用結構是用來指定僅有一個工作共用結構之平列區域的快捷方式。 這些指示詞的語義與明確指定 `parallel` 指示詞，後面接著單一工作共用結構相同。
 
-下列各節說明的結合的平行工作共用建構：
+下列各節說明結合的平行工作共用結構：
 
-- [針對平行](#251-parallel-for-construct)指示詞
-- [平行處理區段](#252-parallel-sections-construct)指示詞
+- [parallel for](#251-parallel-for-construct)指示詞
+- [parallel sections](#252-parallel-sections-construct)指示詞
 
-### <a name="251-parallel-for-construct"></a>2.5.1 parallel for 建構
+### <a name="251-parallel-for-construct"></a>2.5.1 parallel for 結構
 
-`parallel for`指示詞是捷徑`parallel`只包含一個單一的區域`for`指示詞。 語法`parallel for`指示詞時，如下所示：
+`parallel for` 指示詞是 `parallel` 區域的快捷方式，其中只包含單一的 `for` 指示詞。 `parallel for` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop
 ```
 
-這個指示詞允許的所有子句`parallel`指示詞和`for`指示詞，除了`nowait`子句中，使用相同的意義和限制。 都與明確指定相同的語意`parallel`指示詞後面緊跟著`for`指示詞。
+這個指示詞允許 `parallel` 指示詞和 `for` 指示詞的所有子句，但 `nowait` 子句除外，其意義和限制相同。 此語義與明確指定緊接在 `for` 指示詞後面的 `parallel` 指示詞相同。
 
-#### <a name="cross-references"></a>交互參照
+#### <a name="cross-references"></a>交互參考
 
-- [平行](#23-parallel-construct)指示詞
-- [針對](#241-for-construct)指示詞
+- [parallel](#23-parallel-construct)指示詞
+- [for](#241-for-construct)指示詞
 - [資料屬性子句](#272-data-sharing-attribute-clauses)
 
-### <a name="252-parallel-sections-construct"></a>2.5.2 平行處理區段建構
+### <a name="252-parallel-sections-construct"></a>2.5.2 平行區段結構
 
-`parallel sections`指示詞來指定提供快顯表單`parallel`都只能有單一的區域`sections`指示詞。 都與明確指定相同的語意`parallel`指示詞後面緊跟著`sections`指示詞。 語法`parallel sections`指示詞時，如下所示：
+`parallel sections` 指示詞會提供快捷方式表單，用來指定只有單一 `sections` 指示詞的 `parallel` 區域。 此語義與明確指定緊接在 `sections` 指示詞後面的 `parallel` 指示詞相同。 `parallel sections` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp parallel sections  [clause[[,] clause] ...] new-line
@@ -330,55 +330,55 @@ OpenMP 相容的程式不應該依賴正確執行的特定排程。 程式不應
 }
 ```
 
-*子句*可以是其中一個接受子句`parallel`並`sections`指示詞，除了`nowait`子句。
+*子句*可以是 `parallel` 和 `sections` 指示詞所接受的其中一個子句，但不包括 `nowait` 子句。
 
-#### <a name="cross-references"></a>交互參照
+#### <a name="cross-references"></a>交互參考
 
-- [平行](#23-parallel-construct)指示詞
-- [區段](#242-sections-construct)指示詞
+- [parallel](#23-parallel-construct)指示詞
+- [sections](#242-sections-construct)指示詞
 
-## <a name="26-master-and-synchronization-directives"></a>2.6 主版和同步處理的指示詞
+## <a name="26-master-and-synchronization-directives"></a>2.6 主要和同步處理指示詞
 
 下列各節說明：
 
-- [主要](#261-master-construct)建構
-- [重要](#262-critical-construct)建構
+- [主要](#261-master-construct)結構
+- [重大](#262-critical-construct)結構
 - [屏障](#263-barrier-directive)指示詞
-- [不可部分完成](#264-atomic-construct)建構
-- [排清](#265-flush-directive)指示詞
-- [排序](#266-ordered-construct)建構
+- 不可部分完成[的結構](#264-atomic-construct)
+- [flush](#265-flush-directive)指示詞
+- 已[排序](#266-ordered-construct)的結構
 
-### <a name="261-master-construct"></a>2.6.1 master 建構
+### <a name="261-master-construct"></a>2.6.1 主要結構
 
-`master`指示詞會識別指定小組的主要執行緒所執行的結構化的區塊的建構。 語法`master`指示詞時，如下所示：
+`master` 指示詞會識別指定由小組的主要執行緒執行之結構化區塊的結構。 `master` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp master new-linestructured-block
 ```
 
-在小組中的其他執行緒不會執行相關聯的結構化的區塊。 沒有任何隱含的障礙，項目，或從 master 建構結束。
+小組中的其他執行緒不會執行相關聯的結構化區塊。 在進入或離開主要結構時，不會有隱含的屏障。
 
-### <a name="262-critical-construct"></a>2.6.2 critical 建構
+### <a name="262-critical-construct"></a>2.6.2 關鍵結構
 
-`critical`指示詞會識別相關聯的結構化區塊執行的限制為單一執行緒，一次的建構。 語法`critical`指示詞時，如下所示：
+`critical` 指示詞會識別一次將相關聯結構區塊的執行限制為單一線程的結構。 `critical` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp critical [(name)]  new-linestructured-block
 ```
 
-選擇性*名稱*可能用來識別重要區域。 用來識別重要區域的識別項具有外部連結，並會在不同的標籤、 標記、 成員和一般識別項使用的命名空間的命名空間。
+選擇性的*名稱*可用來識別重要區域。 用來識別重要區域的識別碼具有外部連結，而且位於與標籤、標記、成員和一般識別碼所使用之命名空間不同的命名空間中。
 
-在關鍵區域的開頭的執行緒等候，直到沒有其他執行緒正在執行 （在程式中） 具有相同名稱的關鍵區域。 所有未命名`critical`指示詞對應至相同的未指定名稱。
+執行緒會在關鍵區域的開頭等待，直到沒有其他執行緒執行具有相同名稱的重要區域（在程式中的任何位置）為止。 所有未命名的 `critical` 指示詞都會對應到相同的未指定名稱。
 
-### <a name="263-barrier-directive"></a>2.6.3 barrier 指示詞
+### <a name="263-barrier-directive"></a>2.6.3 屏障指示詞
 
-`barrier`指示詞會在一個小組中的所有執行緒同步都處理。 遇到時，在小組中的每個執行緒會等候直到所有的其他人已經達到這個點為止。 語法`barrier`指示詞時，如下所示：
+`barrier` 指示詞會同步處理小組中的所有線程。 遇到時，小組中的每個執行緒都會等待，直到所有人都達到此點為止。 `barrier` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp barrier new-line
 ```
 
-在小組中的所有執行緒都遇到屏障之後，在小組中的每個執行緒就會開始之後 barrier 指示詞，以平行方式執行的陳述式。 因為`barrier`指示詞沒有 C 語言陳述式，其語法的一部分，有一些限制，它在程式內的位置上。 如需正式文法的詳細資訊，請參閱[附錄 C](c-openmp-c-and-cpp-grammar.md)。下列範例會說明這些限制。
+在小組中的所有線程都遇到屏障之後，小組中的每個執行緒都會開始以平行方式在關卡指示詞之後執行語句。 由於 `barrier` 指示詞沒有 C 語言語句作為其語法的一部分，因此在程式內的位置會有一些限制。 如需有關正式文法的詳細資訊，請參閱[附錄 C](c-openmp-c-and-cpp-grammar.md)。下列範例說明這些限制。
 
 ```cpp
 /* ERROR - The barrier directive cannot be the immediate
@@ -396,15 +396,15 @@ if (x!=0) {
 }
 ```
 
-### <a name="264-atomic-construct"></a>2.6.4 atomic 建構
+### <a name="264-atomic-construct"></a>2.6.4 不可部分完成的結構
 
-`atomic`指示詞可讓您確保特定記憶體位置會以不可分割的方式，更新，而不是將其公開到可能的多個同時撰寫執行緒。 語法`atomic`指示詞時，如下所示：
+`atomic` 指示詞可確保特定記憶體位置會以自動方式更新，而不會公開給多個同時寫入執行緒的可能性。 `atomic` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp atomic new-lineexpression-stmt
 ```
 
-運算陳述式必須具有下列格式之一：
+運算式語句必須具有下列其中一種形式：
 
 - *x binop* `=` *expr*
 - *x* `++`
@@ -412,21 +412,21 @@ if (x!=0) {
 - *x* `--`
 - `--` *x*
 
-在上述的運算式：
+在上述運算式中：
 
-- *x*是純量類型的左值運算式。
+- *x*是具有純量類型的左值運算式。
 
-- *expr*是純量類型，使用運算式，其並未參考所指定的物件*x*。
+- *expr*是具有純量類型的運算式，而且不會參考*x*所指定的物件。
 
-- *binop*無法多載的運算子，而且是其中一個`+`， `*`， `-`， `/`， `&`， `^`， `|`， `<<`，或`>>`。
+- *binop*不是多載運算子，而且是 `+`、`*`、`-`、`/`、`&`、`^`、`|`、`<<`或 `>>`的其中一個。
 
-雖然它是由實作定義是否實作會取代所有`atomic`使用指示詞`critical`指示詞具有相同的唯一*名稱*，則`atomic`指示詞允許更好的最佳化. 通常是硬體指示可執行不可部分完成的更新具有最少額外負荷。
+雖然它是實作為定義的，但執行會將所有 `atomic` 指示詞取代為具有相同唯一*名稱*`critical` 指示詞，但 `atomic` 指示詞允許更佳的優化。 通常可以使用硬體指示，以最少的額外負荷來執行不可部分完成的更新。
 
-只有負載和所指定的物件存放區*x*是不可部分完成; 評估*expr*並非不可部分完成。 若要避免競爭情形，所有更新的位置，以平行方式應該都受到`atomic`指示詞，除了已知為免費的競爭情形。
+只有*x*所指定之物件的載入和存放是不可部分完成的;*expr*的評估不是不可部分完成的。 為避免競爭情況，所有平行位置的更新都應該使用 `atomic` 指示詞來保護，但已知不會有競爭情況的例外狀況。
 
-若要限制`atomic`指示詞如下所示：
+`atomic` 指示詞的限制如下：
 
-- 在整個程式的儲存體位置 x 不可部分完成的所有參考，都才能有相容的類型。
+- 整個程式中儲存位置 x 的所有不可部分完成參考都必須要有相容的類型。
 
 #### <a name="examples"></a>範例
 
@@ -449,38 +449,38 @@ u.x -= 1.0f;
 
 ### <a name="265-flush-directive"></a>2.6.5 flush 指示詞
 
-`flush`指示詞，是否明確或隱含的請指定"跨執行緒 「 序列點的實作，才能確保小組中的所有執行緒都有某些指定的物件 （如下） 在記憶體中的一致檢視。 這表示先前評估的運算式參考那些物件都已完成，而且還沒開始後續評估。 比方說，編譯器必須從暫存器物件的值還原記憶體中，並且硬體可能需要排清寫入緩衝區記憶體並重新載入記憶體中物件的值。
+`flush` 指示詞（不論是明確或隱含）會指定需要執行的「跨執行緒」序列點，以確保小組中的所有線程都在記憶體中具有特定物件（如下所指定）的一致觀點。 這表示先前參考這些物件之運算式的評估已完成，且後續的評估尚未開始。 例如，編譯器必須從暫存器將物件的值還原至記憶體，而硬體可能需要將寫入緩衝區排清至記憶體，並從記憶體重載物件的值。
 
-語法`flush`指示詞時，如下所示：
+`flush` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp flush [(variable-list)]  new-line
 ```
 
-如果需要同步處理的物件可以所有指定的變數，則這些變數可以指定選擇性*變數清單*。 指標是否存在於*變數清單*，指標本身會排清，不是物件指標參考。
+如果需要同步處理的物件都可以透過變數來指定，則可以在選擇性的*變數清單*中指定這些變數。 如果指標存在於*變數清單*中，指標本身會排清，而不是指標所參考的物件。
 
-A`flush`指示詞，而不需要*變數清單*同步所有共用的物件，但無法存取的物件不具有自動儲存期。 (這是可能會有更多的額外負荷比`flush`具有*變數清單*。)A`flush`指示詞，而不需要*變數清單*隱含的下列指示詞：
+沒有*變數清單*的 `flush` 指示詞會同步處理所有共用物件，但具有自動儲存期的無法存取物件除外。 （這可能會造成額外負荷，而不是具有*變數清單*的 `flush`）。不含*變數清單*的 `flush` 指示詞，會隱含用於下列指示詞：
 
 - `barrier`
-- 在進入和結束 `critical`
-- 在進入和結束 `ordered`
-- 在進入和結束 `parallel`
-- 在結束時，從 `for`
-- 在結束時，從 `sections`
-- 在結束時，從 `single`
-- 在進入和結束 `parallel for`
-- 在進入和結束 `parallel sections`
+- 進入或離開 `critical`
+- 進入或離開 `ordered`
+- 進入或離開 `parallel`
+- 離開時 `for`
+- 離開時 `sections`
+- 離開時 `single`
+- 進入或離開 `parallel for`
+- 進入或離開 `parallel sections`
 
-如果不隱含的指示詞`nowait`出現子句時。 請注意，`flush`指示詞不隱含的下列任一項：
+如果有 `nowait` 子句，則不隱含指示詞。 請注意，`flush` 指示詞不會隱含為下列任何一項：
 
-- 在項目 `for`
-- 在進入或結束 `master`
-- 在項目 `sections`
-- 在項目 `single`
+- 進入 `for`
+- 進入或離開 `master`
+- 進入 `sections`
+- 進入 `single`
 
-存取具有 volatile 限定類型之物件的值參考行為好像`flush`指示詞指定該物件在前一個序列點。 修改 volatile 限定類型之物件的值參考行為好像`flush`指示詞指定該物件在後續的序列點。
+存取具有變動性限定類型之物件值的參考，如同在上一個序列點上指定該物件的 `flush` 指示詞一樣。 使用變動性限定類型來修改物件值的參考，如同在後續序列點上指定該物件的 `flush` 指示詞一樣。
 
-因為`flush`指示詞沒有 C 語言陳述式，其語法的一部分，有一些限制，它在程式內的位置上。 如需正式文法的詳細資訊，請參閱[附錄 C](c-openmp-c-and-cpp-grammar.md)。下列範例會說明這些限制。
+由於 `flush` 指示詞沒有 C 語言語句作為其語法的一部分，因此在程式內的位置會有一些限制。 如需有關正式文法的詳細資訊，請參閱[附錄 C](c-openmp-c-and-cpp-grammar.md)。下列範例說明這些限制。
 
 ```cpp
 /* ERROR - The flush directive cannot be the immediate
@@ -498,67 +498,67 @@ if (x!=0) {
 }
 ```
 
-若要限制`flush`指示詞如下所示：
+`flush` 指示詞的限制如下：
 
-- 中指定的變數`flush`指示詞不能是參考型別。
+- 在 `flush` 指示詞中指定的變數不能有參考型別。
 
-### <a name="266-ordered-construct"></a>2.6.6 ordered 建構
+### <a name="266-ordered-construct"></a>2.6.6 已排序的結構
 
-結構化的區塊下列`ordered`指示詞會循序迴圈執行反覆項目中的順序執行。 語法`ordered`指示詞時，如下所示：
+遵循 `ordered` 指示詞之後的結構化區塊，會依照在連續迴圈中執行反覆運算的循序執行。 `ordered` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp ordered new-linestructured-block
 ```
 
-`ordered`指示詞必須是動態的範圍內`for`或`parallel for`建構。 `for`或`parallel for`的指示詞`ordered`建構繫結必須`ordered`中所述指定子句[區段 2.4.1](#241-for-construct)。 在執行`for`或`parallel for`建構包含`ordered`子句，`ordered`建構會嚴格執行中執行，所以在循序執行迴圈的順序。
+`ordered` 指示詞必須在 `for` 或 `parallel for` 結構的動態範圍內。 `ordered` 結構系結的 `for` 或 `parallel for` 指示詞必須指定 `ordered` 子句，如[2.4.1 一節](#241-for-construct)中所述。 在使用 `ordered` 子句執行 `for` 或 `parallel for` 結構時，`ordered` 的結構會嚴格地以執行迴圈時的循序執行。
 
-若要限制`ordered`指示詞如下所示：
+`ordered` 指示詞的限制如下：
 
-- 迴圈的反覆項目`for`建構必須不會一次以上相同的 ordered 指示詞執行，而且只能執行一個以上的`ordered`指示詞。
+- 具有 `for` 結構之迴圈的反復專案，不能多次執行相同的已排序指示詞，而且它不能執行一個以上的 `ordered` 指令詞。
 
 ## <a name="27-data-environment"></a>2.7 資料環境
 
-此章節提供的指示詞和數個子句，如下所示的平行區域，在執行期間控制資料環境：
+本節提供指示詞和數個子句，以便在平列區域執行期間控制資料環境，如下所示：
 
-- A [threadprivate](#271-threadprivate-directive)指示詞可讓執行緒本機檔案範圍、 命名空間範圍或靜態的區塊範圍變數。
+- 提供[threadprivate](#271-threadprivate-directive)指示詞，讓檔案範圍、命名空間範圍或靜態區塊範圍變數成為執行緒的本機。
 
-- 您可以在要平行或工作共用建構期間控制變數的共用屬性的指示詞指定的子句中所述[一節 2.7.2](#272-data-sharing-attribute-clauses)。
+- [2.7.2 一節](#272-data-sharing-attribute-clauses)中會說明可在指示詞上指定的子句，以控制平行或工作共用結構期間變數的共用屬性。
 
 ### <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 指示詞
 
-`threadprivate`指示詞讓具名的檔案範圍、 命名空間範圍或靜態的區塊範圍變數中指定*變數清單*執行緒私用。 *變數清單*是沒有不完整類型的變數的逗號分隔清單。 語法`threadprivate`指示詞時，如下所示：
+`threadprivate` 指示詞會將名為的檔案範圍、命名空間範圍或靜態區塊範圍變數指定于執行緒的私用*變數清單*中。 *變數清單*是以逗號分隔的變數清單，其中沒有不完整的類型。 `threadprivate` 指示詞的語法如下所示：
 
 ```cpp
 #pragma omp threadprivate(variable-list) new-line
 ```
 
-每一份`threadprivate`變數會初始化一次，在未指定的時間點之前的第一個參考到該複本，計畫和一般方式 （亦即，當主要複本會初始化序列執行的程式中）。 請注意，如果在明確的初始設定式中參考物件的`threadprivate`變數和物件的值一份變數的第一個參考之前遭到修改，則行為是未指定。
+`threadprivate` 變數的每個複本會在第一次參考該複本之前，于程式中未指定的點初始化一次，並以一般方式（也就是，因為主要複本會在程式的序列執行中初始化）。 請注意，如果在 `threadprivate` 變數的明確初始化運算式中參考物件，而且在第一次參考該變數之前修改物件的值，則會未指定行為。
 
-如有任何私用變數，執行緒絕不能參考另一個執行緒的副本`threadprivate`物件。 在序列地區和程式的主要區域中，參考是物件的主要執行緒的複本。
+如同任何私用變數，執行緒不能參考另一個執行緒的 `threadprivate` 物件複本。 在程式的序欄區域和主要區域中，參考會指向物件的主要執行緒複本。
 
-執行第一個平行區域中的資料之後`threadprivate`物件一定會保存只当動態執行緒機制已停用，而如果執行緒數目維持不變，所有的平行區域。
+第一個平列區域執行之後，只有在已停用動態執行緒機制，而且所有平列區域的執行緒數目保持不變時，才會保證 `threadprivate` 物件中的資料會保存。
 
-若要限制`threadprivate`指示詞如下所示：
+`threadprivate` 指示詞的限制如下：
 
-- A`threadprivate`檔案範圍或命名空間範圍變數的指示詞必須出現任何定義或宣告中，外部，而且必須語彙前面清單中的任何變數的所有參考。
+- 檔案範圍或命名空間範圍變數的 `threadprivate` 指示詞必須出現在任何定義或宣告之外，而且必須以詞法的方式在其清單中任何變數的所有參考之前。
 
-- 在每個變數*變數清單*的`threadprivate`在語彙上位於指示詞的檔案或命名空間範圍的變數宣告必須參考指示詞檔案或命名空間的範圍。
+- 位於檔案或命名空間範圍之 `threadprivate` 指示詞的*變數清單*中的每個變數，都必須參考在述詞前面的檔案或命名空間範圍中的變數宣告。
 
-- A`threadprivate`靜態的區塊範圍變數的指示詞必須出現在變數的範圍內，而不是在巢狀範圍。 指示詞語彙必須在所有參考任何變數都之前在其清單中。
+- 靜態區塊範圍變數的 `threadprivate` 指示詞必須出現在變數的範圍中，而不是在嵌套的範圍中。 指示詞必須以詞法方式在其清單中任何變數的所有參考之前。
 
-- 在每個變數*變數清單*的`threadprivate`區塊範圍中的指示詞必須參考相同語彙前面的指示詞的範圍中的變數宣告。 變數宣告都必須使用靜態儲存類別規範。
+- 區塊範圍中 `threadprivate` 指示詞之*變數清單*中的每個變數，都必須參考在述詞前面的相同範圍中的變數宣告。 變數宣告必須使用 static 儲存類別規範。
 
-- 如果變數中指定`threadprivate`指示詞在一個轉譯單位中，您必須指定在`threadprivate`宣告它的每一個轉譯單位的指示詞。
+- 如果變數是在一個轉譯單位的 `threadprivate` 指示詞中指定，則必須在其宣告所在的每個轉譯單位中，于 `threadprivate` 指示詞中指定。
 
-- A`threadprivate`變數不得出現在以外的任何子句`copyin`， `copyprivate`， `schedule`， `num_threads`，或`if`子句。
+- `threadprivate` 變數不能出現在 `copyin`、`copyprivate`、`schedule`、`num_threads`或 `if` 子句以外的任何子句中。
 
-- 位址`threadprivate`變數不是位址是否固定。
+- `threadprivate` 變數的位址不是位址常數。
 
-- A`threadprivate`變數不能是不完整的類型或參考型別。
+- `threadprivate` 變數不能有不完整的類型或參考型別。
 
-- A`threadprivate`非 POD 類別類型的變數必須可存取且明確的複製建構函式，如果它使用明確的初始設定式宣告。
+- 具有非 POD 類別類型的 `threadprivate` 變數必須具有可存取且明確的複製程式，如果它是使用明確的初始化運算式來宣告。
 
-下列範例說明如何修改初始設定式中出現的變數可能會導致未指定的行為，以及如何使用輔助物件和複製建構函式，以避免這個問題。
+下列範例說明如何修改出現在初始化運算式中的變數，可能會導致未指定的行為，以及如何使用輔助物件和複製-函數來避免這個問題。
 
 ```cpp
 int x = 1;
@@ -580,95 +580,95 @@ void f(int n) {
 }
 ```
 
-#### <a name="cross-references"></a>交互參照
+#### <a name="cross-references"></a>交互參考
 
-- [動態的執行緒](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [動態執行緒](3-run-time-library-functions.md#317-omp_set_dynamic-function)
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)環境變數
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 資料共用屬性子句
 
-幾個指示詞會接受可讓使用者控制變數的共用屬性區域的持續時間的子句。 共用屬性子句僅適用於中子句出現的指示詞的語彙範圍的變數。 並非所有的下列子句允許所有指示詞。 適用於特定的指示詞的子句的清單將描述使用指示詞。
+有數個指示詞接受子句，可讓使用者在區域期間控制變數的共用屬性。 共用屬性子句僅適用于出現子句之指示詞的詞法範圍中的變數。 並非所有的指示詞都允許所有的下列子句。 在特定指示詞上有效的子句清單會與指示詞一起說明。
 
-如果是變數，才會顯示平行或遇到工作共用建構，以及變數未共用屬性子句中指定或`threadprivate`指示詞，然後將變數共用。 在平行區域的動態範圍內宣告的靜態變數會在共用中。 堆積配置的記憶體 (比方說，使用`malloc()`c 或C++或`new`中的運算子C++) 共用。 （指標給這個記憶體，不過，可以是私人或共用）。在平行區域的動態範圍內宣告的自動儲存期的變數都是私用。
+當遇到平行或工作共用結構時，如果變數是可見的，而且未在共用屬性子句或 `threadprivate` 指示詞中指定變數，則會共用該變數。 在平列區域的動態範圍內宣告的靜態變數會共用。 共用堆積配置的記憶體（例如，使用 C C++中的 `malloc()`，或中C++的 `new` 運算子）。 （不過，此記憶體的指標可以是私用或共用的）。在平列區域的動態範圍內宣告自動儲存持續時間的變數是私用的。
 
-大部分的子句接受*變數清單*引數是以逗號分隔的清單會顯示的變數。 如果變數參考的資料共用屬性子句具有型別衍生自範本，而且不有任何其他程式中的該變數的參考，行為是未定義。
+大部分的子句都會接受*可變清單*引數，這是可見的變數清單（以逗號分隔）。 如果資料共用屬性子句中參考的變數具有衍生自範本的類型，而且程式中沒有該變數的其他參考，則行為是未定義的。
 
-出現在指示詞子句後面的所有變數都必須都是可見的。 子句可能會重複，如有需要但可能在多個子句中，指定任何變數，不同之處在於變數可以指定在這兩`firstprivate`和`lastprivate`子句。
+出現在指示詞子句中的所有變數都必須是可見的。 子句可以視需要重複，但不能在多個子句中指定變數，不過，變數可以同時在 `firstprivate` 和 `lastprivate` 子句中指定。
 
-下列各節描述的資料共用屬性子句：
+下列各節描述資料共用屬性子句：
 
 - [private](#2721-private)
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
-- [shared](#2724-shared)
-- [default](#2725-default)
+- [共用](#2724-shared)
+- [預設值](#2725-default)
 - [reduction](#2726-reduction)
 - [copyin](#2727-copyin)
 - [copyprivate](#2728-copyprivate)
 
 #### <a name="2721-private"></a>2.7.2.1 private
 
-`private`子句宣告為私用小組的每個執行緒的變數清單中的變數。 語法`private`子句如下所示：
+`private` 子句會將變數清單中的變數宣告為小組中每個執行緒的私用。 `private` 子句的語法如下所示：
 
 ```cpp
 private(variable-list)
 ```
 
-中指定的變數的行為`private`子句如下所示。 具有自動儲存期的新物件配置的建構。 大小和新物件的對齊會取決於變數的類型。 此配置發生一次在小組中，每個執行緒和預設建構函式會叫用類別物件，如有必要，否則的初始值為未定。  原始變數所參考的物件具有不定值的建構的項目、 動態建構的範圍內，不得修改和不定值從建構在結束時。
+在 `private` 子句中指定之變數的行為如下所示。 會為結構配置具有自動儲存期的新物件。 新物件的大小和對齊取決於變數的類型。 這項配置會針對小組中的每個執行緒進行一次，並在必要時叫用 class 物件的預設函式;否則，初始值為不定。  變數所參考的原始物件在進入結構時具有不確定的值，不得在結構的動態範圍內修改，而且在從結構結束時具有不確定的值。
 
-中的指示詞的建構之語彙範圍內，變數會參考新的私用物件配置的執行緒。
+在指示詞結構的詞法範圍中，變數會輔助線程所配置的新私用物件。
 
-若要限制`private`子句如下所示：
+`private` 子句的限制如下：
 
-- 中指定的類別類型的變數`private`子句必須具有可存取且明確的預設建構函式。
+- 具有在 `private` 子句中指定之類別類型的變數，必須具有可存取、明確的預設函式。
 
-- 中指定的變數`private`子句不能有`const`-限定型別，除非它具有類型的類別`mutable`成員。
+- 在 `private` 子句中指定的變數不能有 `const`限定的類型，除非它具有具有 `mutable` 成員的類別類型。
 
-- 中指定的變數`private`子句不能是不完整的類型或參考型別。
+- 在 `private` 子句中指定的變數不能有不完整的類型或參考型別。
 
-- 在出現的變數`reduction`子句`parallel`指示詞中不能指定`private`繫結至平行建構之工作共用指示詞子句。
+- 在系結至平行結構之工作共用指示詞的 `private` 子句中，不能指定出現在 `parallel` 指示詞之 `reduction` 子句中的變數。
 
 #### <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
 
-`firstprivate`子句提供的所提供的功能超集`private`子句。 語法`firstprivate`子句如下所示：
+`firstprivate` 子句會提供 `private` 子句所提供的功能超集合。 `firstprivate` 子句的語法如下所示：
 
 ```cpp
 firstprivate(variable-list)
 ```
 
-中指定的變數*變數清單*有`private`子句的語意，如中所述[區段 2.7.2.1](#2721-private)。 如同它已執行過一次每個執行緒，則建構的執行緒執行前，可發生初始化或建構。 針對`firstprivate`平行建構子句，新的私用物件的初始值是之前遇到執行緒的平行建構存在的原始物件的值。 針對`firstprivate`工作共用建構上的子句，每個執行緒執行的工作共用建構新的私用物件的初始值是存在的同一個執行緒發生的時間點之前的原始物件的值工作共用建構。 此外，如C++物件，每個執行緒的新私用物件是複製建構自原始物件。
+*變數清單*中指定的變數具有 `private` 子句的語義，如[2.7.2.1 一節](#2721-private)中所述。 初始化或結構會像是線上程執行結構之前，在每個執行緒上執行一次。 若為平行結構上的 `firstprivate` 子句，新私用物件的初始值就是原始物件的值，該物件會在遇到該物件的執行緒平行結構之前立即存在。 針對工作共用結構上的 `firstprivate` 子句，執行工作共用結構之每個執行緒的新私用物件的初始值，是原始物件的值，在相同執行緒遇到工作共用結構的時間點之前存在。 此外，對於C++物件，每個執行緒的新私用物件會從原始物件進行複製。
 
-若要限制`firstprivate`子句如下所示：
+`firstprivate` 子句的限制如下：
 
-- 中指定的變數`firstprivate`子句不能是不完整的類型或參考型別。
+- 在 `firstprivate` 子句中指定的變數不能有不完整的類型或參考型別。
 
-- 指定為類別類型的變數`firstprivate`必須可存取且明確的複製建構函式。
+- 具有指定為 `firstprivate` 之類別類型的變數，必須具有可存取、明確的複製參數。
 
-- 在平行區域內的私用，或出現在中的變數`reduction`子句`parallel`指示詞中不能指定`firstprivate`繫結至平行建構之工作共用指示詞子句。
+- 在平列區域內，或出現在 `parallel` 指示詞之 `reduction` 子句中的變數，不能指定于系結至平行結構之工作共用指示詞的 `firstprivate` 子句中。
 
 #### <a name="2723-lastprivate"></a>2.7.2.3 lastprivate
 
-`lastprivate`子句提供的所提供的功能超集`private`子句。 語法`lastprivate`子句如下所示：
+`lastprivate` 子句會提供 `private` 子句所提供的功能超集合。 `lastprivate` 子句的語法如下所示：
 
 ```cpp
 lastprivate(variable-list)
 ```
 
-中指定的變數*變數清單*有`private`子句的語意。 當`lastprivate`識別的工作共用的建構，而每個值在指示詞上出現子句`lastprivate`循序最後一個反覆項目相關聯的迴圈中，或最後一個語彙區段指示詞中，從變數指派給變數的原始物件。 未指派的最後一個反覆項目值的變數`for`或`parallel for`，或由語彙最後一節`sections`或`parallel sections`指示詞後建構, 具有下列不定值。 未指派的子物件也會建構後有不定值。
+*變數清單*中指定的變數具有 `private` 子句的語義。 當 `lastprivate` 子句出現在識別工作共用結構的指示詞上時，每個 `lastprivate` 變數的值會從關聯的迴圈的最後一次反覆運算中，或在詞法上的最後一個區段指示詞中，指派給變數的原始物件。 `for` 或 `parallel for`的最後一個反覆運算或 `sections` 或 `parallel sections` 指示詞的最後一個區段中，未指定值的變數，在結構之後會有不確定的值。 未指派的子工作在結構之後也會有不確定的值。
 
-若要限制`lastprivate`子句如下所示：
+`lastprivate` 子句的限制如下：
 
-- 所有的限制，如`private`套用。
+- 適用于 `private` 的所有限制。
 
-- 指定為類別類型的變數`lastprivate`必須可存取且明確的複製指派運算子。
+- 具有指定為 `lastprivate` 之類別類型的變數，必須具有可存取、明確的複製指派運算子。
 
-- 在平行區域內的私用，或出現在中的變數`reduction`子句`parallel`指示詞中不能指定`lastprivate`繫結至平行建構之工作共用指示詞子句。
+- 在平列區域內，或出現在 `parallel` 指示詞之 `reduction` 子句中的變數，不能指定于系結至平行結構之工作共用指示詞的 `lastprivate` 子句中。
 
 #### <a name="2724-shared"></a>2.7.2.4 shared
 
-這個子句共用中出現的變數*變數清單*小組中的所有執行緒之間。 在小組的所有執行緒都存取的相同儲存體區域`shared`變數。
+這個子句會共用小組中所有線程之間出現在*變數清單*中的變數。 小組內的所有線程都會存取相同的儲存區域來 `shared` 變數。
 
-語法`shared`子句如下所示：
+`shared` 子句的語法如下所示：
 
 ```cpp
 shared(variable-list)
@@ -676,31 +676,31 @@ shared(variable-list)
 
 #### <a name="2725-default"></a>2.7.2.5 default
 
-`default`子句可讓使用者會影響變數的資料共用屬性。 語法`default`子句如下所示：
+`default` 子句可讓使用者影響變數的資料共用屬性。 `default` 子句的語法如下所示：
 
 ```cpp
 default(shared | none)
 ```
 
-指定`default(shared)`相當於明確列出每個中的目前可見變數`shared`子句，除非它是`threadprivate`或`const`-限定。 沒有明確`default`子句，預設行為是相同如果`default(shared)`所指定。
+指定 `default(shared)` 相當於在 `shared` 子句中明確列出每個可見的變數，除非它是 `threadprivate` 或 `const`限定的。 如果沒有明確的 `default` 子句，則預設行為會與指定 `default(shared)` 相同。
 
-指定`default(none)`至少下列其中之一必須是針對至平行建構的語彙範圍中變數的每個參考，則為 true:
+若要指定 `default(none)`，必須在平行結構的詞法範圍中，對變數的每個參考至少要有下列其中一項：
 
-- 變數會明確地列出建構包含參考的資料共用屬性子句中。
+- 變數會明確列出在包含參考之結構的資料共用屬性子句中。
 
-- 在平行建構中宣告的變數。
+- 變數會在平行結構內宣告。
 
-- 變數是`threadprivate`。
+- 變數為 `threadprivate`。
 
-- 變數具有`const`-限定型別。
+- 變數具有 `const`限定的類型。
 
-- 變數是 for 迴圈控制變數`for`迴圈緊接`for`或`parallel for`指示詞，且變數參考會出現在迴圈內。
+- 變數是 `for` 迴圈的迴圈控制變數，這會緊接在 `for` 或 `parallel for` 指示詞之後，而變數參考則會出現在迴圈內。
 
-在指定的變數`firstprivate`， `lastprivate`，或`reduction`括住的指示詞子句會造成封入內容中的變數的隱含參考。 這類隱含的參考也限於上面所列的需求。
+在封閉的指示詞的 `firstprivate`、`lastprivate`或 `reduction` 子句上指定變數，會導致在封入內容中隱含參考變數。 這類隱含參考也受限於上述需求。
 
-只有一個`default`您可以在指定子句`parallel`指示詞。
+`parallel` 指示詞上只能指定一個 `default` 子句。
 
-變數的預設資料共用屬性，可以使用覆寫`private`， `firstprivate`， `lastprivate`， `reduction`，和`shared`子句，如下列範例所示：
+您可以使用 `private`、`firstprivate`、`lastprivate`、`reduction`和 `shared` 子句來覆寫變數的預設資料共用屬性，如下列範例所示：
 
 ```cpp
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\
@@ -709,15 +709,15 @@ default(shared | none)
 
 #### <a name="2726-reduction"></a>2.7.2.6 reduction
 
-這個子句會減少執行上會出現在純量變數*變數清單*，與運算子*op*。 語法`reduction`子句如下所示：
+此子句會針對出現在*變數清單*中的純量變數，使用運算子*op*來減少其執行。 `reduction` 子句的語法如下所示：
 
-`reduction(` *op* `:` *variable-list* `)`
+`reduction(` *op* `:`*變數清單*`)`
 
-減少通常被指定的陳述式，使用下列格式之一：
+對於具有下列其中一種形式的語句，通常會指定縮減：
 
-- *x* `=` *x* *op* *expr*
+- *x* `=` *x* *op* *運算式*
 - *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* （除了減法）
+- *x* `=` *expr* *op* *x* （減法除外）
 - *x* `++`
 - `++` *x*
 - *x* `--`
@@ -726,21 +726,21 @@ default(shared | none)
 其中：
 
 *x*<br/>
-其中一個清單中指定削減變數。
+清單中指定的其中一個縮減變數。
 
-*variable-list*<br/>
-純量削減變數的逗號分隔清單。
+*變數清單*<br/>
+以逗號分隔的純量縮減變數清單。
 
 *expr*<br/>
-未參考的純量類型的運算式*x*。
+具有純量類型且未參考*x*的運算式。
 
 *op*<br/>
-無法多載的運算子，但其中一個`+`， `*`， `-`， `&`， `^`， `|`， `&&`，或`||`。
+不是多載運算子，而是其中一個 `+`、`*`、`-`、`&`、`^`、`|`、`&&`或 `||`。
 
 *binop*<br/>
-無法多載的運算子，但其中一個`+`， `*`， `-`， `&`， `^`，或`|`。
+不是多載運算子，而是其中一個 `+`、`*`、`-`、`&`、`^`或 `|`。
 
-以下是範例`reduction`子句：
+以下是 `reduction` 子句的範例：
 
 ```cpp
 #pragma omp parallel for reduction(+: a, y) reduction(||: am)
@@ -751,19 +751,19 @@ for (i=0; i<n; i++) {
 }
 ```
 
-此範例所示，操作員可能會隱藏函式呼叫。 使用者應該要小心中指定的運算子`reduction`子句與相符的削減作業。
+如範例所示，運算子可能會隱藏在函式呼叫內。 使用者應該小心，在 `reduction` 子句中指定的運算子符合減少作業。
 
-雖然的右運算元`||`運算子在此範例中沒有任何副作用，它們允許的但應該小心使用。 在此情況下，平行執行期間可能發生有保證不會循序執行迴圈期間發生的副作用。 這項差異可能是因為反覆執行的順序為不定。
+雖然在此範例中，`||` 運算子的右運算元沒有副作用，但仍可加以使用，但應該小心使用。 在此情況下，在平行執行期間可能會發生迴圈不會發生的副作用。 這種差異可能是因為反覆運算的執行順序不確定。
 
-運算子用來判斷編譯器所使用，以減少任何私用變數的初始值，以及決定最終處理運算子。 明確指定運算子，可讓要建構的語彙範圍外的縮減陳述式。 任意數目的`reduction`子句可指定指示詞，但變數可能會出現在最多一個`reduction`該指示詞子句。
+運算子是用來判斷編譯器用來減少和判斷結束運算子的任何私用變數的初始值。 明確指定運算子可讓縮減語句超出結構的詞法範圍。 可以在指示詞上指定任意數目的 `reduction` 子句，但變數最多隻能出現在該指示詞的一個 `reduction` 子句中。
 
-每個變數中的私用複本*變數清單*建立時，一個用於每個執行緒，如同`private`子句已使用。 根據運算子初始化私用複本 （請參閱下表）。
+會針對每個執行緒建立一個*變數清單*中每個變數的私用複本，如同已使用 `private` 子句一樣。 私用複本會根據運算子進行初始化（請參閱下表）。
 
-為其區域結尾`reduction`指定子句，原始的物件會更新以反映合併其原始的值，與每個使用指定的運算子的私用複本的最終值的結果。 減少運算子 （除了減）、 所有關聯，而且編譯器可以自由重新關聯，以計算最終的值。 （以形成最後的值會加入減法減少部分結果）。
+在指定 `reduction` 子句的區域結尾處，會更新原始物件，以反映將其原始值與每個私用複本的最終值結合的結果，並使用指定的運算子。 減少運算子全都是關聯的（減法除外），而編譯器可以自由地重新關聯最後值的計算。 （會加入減去縮減的部分結果，以形成最後的值）。
 
-當第一個執行緒到達包含子句，並保持不變，減少計算完成之前，原始物件的值會變成不定。  一般來說，計算會完整建構; 結尾不過，如果`reduction`子句可在其中建構`nowait`是另外套用原始物件的值直到不定已執行的屏障同步處理，以確保所有執行緒都已都完成`reduction`子句。
+當第一個執行緒到達包含的子句時，原始物件的值會變成不定，而且會在縮減計算完成之前維持不變。  一般來說，計算會在結構的結尾完成;不過，如果 `reduction` 子句用於也套用 `nowait` 的結構，則原始物件的值會維持不變，直到執行屏障同步處理以確保所有線程都已完成 `reduction` 子句為止。
 
-下表列出有效的運算子和其標準的初始化值。 實際的初始化值會與削減變數的資料類型一致。
+下表列出有效的運算子和其標準的初始化值。 實際的初始化值會與縮減變數的資料類型一致。
 
 |運算子|初始化|
 |--------------|--------------------|
@@ -776,13 +776,13 @@ for (i=0; i<n; i++) {
 |`&&`|1|
 |`||`|0|
 
-若要限制`reduction`子句如下所示：
+`reduction` 子句的限制如下：
 
-- 中的變數類型`reduction`子句必須適用於削減運算子，不同之處在於永遠不會允許指標型別和參考型別。
+- `reduction` 子句中的變數類型必須對縮減運算子有效，不同之處在于不允許指標類型和參考型別。
 
-- 中指定的變數`reduction`子句不能`const`-限定。
+- 在 `reduction` 子句中指定的變數不得 `const`限定。
 
-- 在平行區域內的私用，或出現在中的變數`reduction`子句`parallel`指示詞中不能指定`reduction`繫結至平行建構之工作共用指示詞子句。
+- 在平列區域內，或出現在 `parallel` 指示詞之 `reduction` 子句中的變數，不能指定于系結至平行結構之工作共用指示詞的 `reduction` 子句中。
 
    ```cpp
    #pragma omp parallel private(y)
@@ -800,7 +800,7 @@ for (i=0; i<n; i++) {
 
 #### <a name="2727-copyin"></a>2.7.2.7 copyin
 
-`copyin`子句提供一個機制來指派相同的值，以`threadprivate`小組執行平行的區域中的每個執行緒的變數。 指定在每個變數`copyin`複製子句，在小組的主要執行緒中變數的值，如同是由指派執行緒私用複本，在平行區域的開頭。 語法`copyin`子句如下所示：
+`copyin` 子句會提供一個機制，為執行平列區域之小組中的每個執行緒，指派相同的值來 `threadprivate` 變數。 針對 `copyin` 子句中指定的每個變數，會將小組主要執行緒中的變數值複製到平列區域開頭的執行緒私用複本，如同指派一樣。 `copyin` 子句的語法如下所示：
 
 ```cpp
 
@@ -809,17 +809,17 @@ variable-list
 )
 ```
 
-若要限制`copyin`子句如下所示：
+`copyin` 子句的限制如下：
 
-- 中指定的變數`copyin`子句必須具有可存取且明確的複製指派運算子。
+- 在 `copyin` 子句中指定的變數必須具有可存取、明確的複製指派運算子。
 
-- 中指定的變數`copyin`子句必須`threadprivate`變數。
+- 在 `copyin` 子句中指定的變數必須是 `threadprivate` 變數。
 
 #### <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 
-`copyprivate`子句提供一個機制來使用私用變數從一小組的成員的值廣播到其他成員。 它是使用共用的變數值時提供這類共用的變數會很困難 （例如，在需要不同的變數，每個層級的遞迴函式） 的替代方案。 `copyprivate`子句只能出現在`single`指示詞。
+`copyprivate` 子句提供一個機制，可使用私用變數，將一個小組成員的值廣播到其他成員。 當提供這類共用變數會很棘手（例如，在需要每個層級上有不同變數的遞迴中）時，就可以使用共用變數來取代值。 `copyprivate` 子句只能出現在 `single` 指示詞上。
 
-語法`copyprivate`子句如下所示：
+`copyprivate` 子句的語法如下所示：
 
 ```cpp
 
@@ -828,46 +828,46 @@ variable-list
 )
 ```
 
-效果`copyprivate`其變數清單中的變數上的子句執行相關聯的結構化區塊之後，就會發生`single`建構，以及之前的任何執行緒在小組中剩下屏障建構結尾。 然後，在小組中每個變數中的所有其他執行緒*變數清單*，該變數會變成 （如同依指派） 已定義的對應值的結構化執行建構的執行緒中的變數區塊。
+在其變數清單中的變數上，`copyprivate` 子句的效果會在執行與 `single` 結構關聯的結構化區塊之後，以及在小組中的任何執行緒離開結構結尾的屏障之前發生。 然後，在小組的所有其他執行緒中，針對*變數清單*中的每個變數，會在執行結構結構化區塊的執行緒中，使用對應變數的值來定義變數（如同指派）。
 
-若要限制`copyprivate`子句如下所示：
+`copyprivate` 子句的限制如下：
 
-- 中指定的變數`copyprivate`子句不得出現在`private`或是`firstprivate`而言，同一個子句`single`指示詞。
+- 在 `copyprivate` 子句中指定的變數不能出現在相同 `single` 指示詞的 `private` 或 `firstprivate` 子句中。
 
-- 如果`single`指示詞搭配`copyprivate`子句發生在平行區域的動態範圍中，所有的變數指定在`copyprivate`子句必須是私用的封入內容中。
+- 如果在平列區域的動態範圍中遇到具有 `copyprivate` 子句的 `single` 指示詞，則在 `copyprivate` 子句中指定的所有變數在封入內容中都必須是私用的。
 
-- 中指定的變數`copyprivate`子句必須具有可存取模稜兩可的複製指派運算子。
+- 在 `copyprivate` 子句中指定的變數必須具有可存取的明確複製指派運算子。
 
-## <a name="28-directive-binding"></a>2.8 指示詞的繫結
+## <a name="28-directive-binding"></a>2.8 指示詞系結
 
-動態繫結的指示詞必須遵守下列規則：
+指示詞的動態繫結必須遵守下列規則：
 
-- `for`， `sections`， `single`， `master`，並`barrier`指示詞將繫結至動態封閉`parallel`時，如果有的話，無論任何的值`if`子句可能會存在於該指示詞。 如果沒有平行區域目前正在執行中，只有主要執行緒所組成的小組所執行指示詞。
+- `for`、`sections`、`single`、`master`和 `barrier` 指示詞會系結至動態封閉 `parallel`（如果有的話），不論該指示詞上可能存在的任何 `if` 子句的值為何。 如果目前未執行任何平列區域，則指示詞是由只由主要執行緒組成的小組來執行。
 
-- `ordered`指示詞將繫結至動態封閉`for`。
+- `ordered` 指示詞會系結至動態封閉 `for`。
 
-- `atomic`指示詞會強制執行獨佔存取權，相對於`atomic`所有執行緒，而不只是目前的小組中的指示詞。
+- `atomic` 指示詞會對所有線程中的 `atomic` 指示詞強制執行獨佔存取權，而不只是針對目前的小組。
 
-- `critical`指示詞會強制執行獨佔存取權，相對於`critical`所有執行緒，而不只是目前的小組中的指示詞。
+- `critical` 指示詞會對所有線程中的 `critical` 指示詞強制執行獨佔存取權，而不只是針對目前的小組。
 
-- 指示詞可以永遠不會繫結至最接近以外的任何指示詞動態封入`parallel`。
+- 指示詞絕不能系結到最接近的動態封入 `parallel`之外的任何指示詞。
 
-## <a name="29-directive-nesting"></a>2.9 指示詞的巢狀結構
+## <a name="29-directive-nesting"></a>2.9 指示詞嵌套
 
-動態巢狀指示詞必須遵守下列規則：
+指示詞的動態嵌套必須遵守下列規則：
 
-- A`parallel`指示詞，以動態方式放到另一個`parallel`邏輯上會建立新的小組，目前的執行緒所組成，除非巢狀平行處理原則已啟用。
+- 在另一個 `parallel` 中動態 `parallel` 指示詞，會以邏輯方式建立新的小組，而這是由目前的執行緒所組成，除非已啟用嵌套平行處理原則。
 
-- `for``sections`，並`single`繫結至相同的指示詞`parallel`nelze vnořit do 彼此並不允許。
+- 系結至相同 `parallel` 的 `for`、`sections`和 `single` 指示詞不允許嵌套在彼此內部。
 
-- `critical` nelze vnořit do 彼此不允許具有相同名稱的指示詞。 請注意，這項限制不足夠以避免產生死結。
+- 具有相同名稱的 `critical` 指示詞不允許嵌套在彼此內部。 請注意，這種限制不足以防止鎖死。
 
-- `for``sections`，並`single`指示詞不允許的動態範圍中`critical`， `ordered`，並`master`如果指示詞繫結至相同的區域`parallel`為區域。
+- 如果指示詞系結至與區域相同的 `ordered`，`critical`、`master` 和 `parallel` 區域的動態範圍中不允許 `for`、`sections`和 `single` 指示詞。
 
-- `barrier` 動態的範圍中不允許使用指示詞`for`， `ordered`， `sections`， `single`， `master`，和`critical`如果指示詞繫結至相同的區域`parallel`為區域。
+- 如果指示詞系結至與區域相同的 `single`，`for`、`ordered`、`sections`、`master`、`critical` 和 `parallel` 區域的動態範圍中不允許 `barrier` 指示詞。
 
-- `master` 動態的範圍中不允許使用指示詞`for`， `sections`，並`single`指示詞如果`master`指示詞將繫結至相同`parallel`為工作共用指示詞。
+- 如果 `master` 指示詞系結至與工作共用指示詞相同的 `parallel`，`for`、`sections`和 `single` 指示詞的動態範圍中不允許 `master` 指示詞。
 
-- `ordered` 指示詞中的動態範圍，不允許`critical`如果指示詞繫結至相同的區域`parallel`為區域。
+- 如果指示詞系結至與區域相同的 `parallel`，`critical` 區域的動態範圍中不允許 `ordered` 指示詞。
 
-- 區域外部的平行執行時，也允許在平行區域內以動態方式執行時所允許的任何指示詞。 動態執行使用者指定的平行區域之外，會執行指示詞，只有主要執行緒所組成的小組。
+- 當在平列區域外部執行時，也允許在平列區域內動態執行時所允許的任何指示詞。 以動態方式在使用者指定的平列區域外執行時，指示詞是由僅由主要執行緒組成的小組執行。

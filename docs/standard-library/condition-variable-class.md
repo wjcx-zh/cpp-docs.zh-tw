@@ -21,15 +21,15 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449452"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872411"
 ---
-# <a name="conditionvariable-class"></a>condition_variable 類別
+# <a name="condition_variable-class"></a>condition_variable 類別
 
-當您具有 `unique_lock<mutex>` 類型的 `mutex` 時，可使用 `condition_variable` 類別來等候事件。 此類型的物件可能比 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 類型的物件效能更好。
+當您具有 `condition_variable` 類型的 `mutex` 時，可使用 `unique_lock<mutex>` 類別來等候事件。 此類型的物件可能比 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 類型的物件效能更好。
 
 ## <a name="syntax"></a>語法
 
@@ -45,7 +45,7 @@ class condition_variable;
 |-|-|
 |[condition_variable](#condition_variable)|建構 `condition_variable` 物件。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -66,7 +66,7 @@ condition_variable();
 
 ### <a name="remarks"></a>備註
 
-如果可用的記憶體不足，建構函式會擲回具有 `not_enough_memory` 錯誤碼的 [system_error](../standard-library/system-error-class.md) 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `resource_unavailable_try_again` 錯誤碼的 `system_error` 物件。
+如果可用的記憶體不足，建構函式會擲回具有 [ 錯誤碼的 ](../standard-library/system-error-class.md)system_error`not_enough_memory` 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `system_error` 錯誤碼的 `resource_unavailable_try_again` 物件。
 
 ## <a name="native_handle"></a>native_handle
 
@@ -156,13 +156,13 @@ bool wait_for(
 
 ### <a name="return-value"></a>傳回值
 
-`cv_status::timeout`如果*Rel_time*已過, 則第一個方法會傳回。 否則，方法會傳回 `cv_status::no_timeout`。
+如果*Rel_time*已經過，第一個方法會傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。
 
 第二個方法會傳回*Pred*的值。
 
 ### <a name="remarks"></a>備註
 
-第一個方法會封鎖, `condition_variable`直到物件被呼叫[notify_one](#notify_one)或[notify_all](#notify_all) , 或直到時間間隔*Rel_time*已過為止。 它也可能會假性喚醒。
+第一個方法會封鎖，直到[notify_one](#notify_one)或[notify_all](#notify_all)的呼叫發出 `condition_variable` 物件的信號，或直到經過*Rel_time*的時間間隔為止。 它也可能會假性喚醒。
 
 而第二種方法會執行下列程式碼。
 
@@ -214,7 +214,7 @@ bool wait_until(
 
 ### <a name="return-value"></a>傳回值
 
-當*Abs_time*結束時`cv_status` , `cv_status::timeout`如果等候終止, 傳回類型的方法會傳回。 否則，方法會傳回 `cv_status::no_timeout`。
+傳回 `cv_status` 類型的方法會在*Abs_time*過期時，傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。
 
 傳回**bool**的方法會傳回*Pred*的值。
 
@@ -236,5 +236,5 @@ return true;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

@@ -1,5 +1,5 @@
 ---
-title: MFC DLL 常見問題集
+title: MFC DLL 的常見問題
 ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
@@ -7,62 +7,62 @@ helpviewer_keywords:
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
 ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220943"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856946"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常見問題集
 
-下列是一些常見問題 (FAQ) 的 Dll。
+以下是一些關於 Dll 的常見問題（FAQ）。
 
 - [MFC DLL 可以建立多個執行緒嗎？](#mfc_multithreaded_1)
 
-- [多執行緒應用程式可以存取不同的執行緒中的 MFC DLL 嗎？](#mfc_multithreaded_2)
+- [多執行緒應用程式可以存取不同執行緒中的 MFC DLL 嗎？](#mfc_multithreaded_2)
 
-- [是否有任何 MFC 類別或函式，不能用於 MFC DLL？](#mfc_prohibited_classes)
+- [MFC DLL 中是否有任何無法使用的 MFC 類別或函數？](#mfc_prohibited_classes)
 
-- [若要改善用戶端應用程式的效能，載入時應該使用何項最佳化技術？](#mfc_optimization)
+- [在載入時，我應該使用哪些優化技術來改善用戶端應用程式的效能？](#mfc_optimization)
 
-- [在 我的標準 MFC DLL，沒有記憶體流失，但我的程式碼看起來沒問題。如何尋找記憶體流失的問題？](#memory_leak)
+- [我的一般 MFC DLL 中有記憶體流失，但我的程式碼看起來沒問題。如何找出記憶體流失的情況？](#memory_leak)
 
-## <a name="mfc_multithreaded_1"></a> MFC DLL 可以建立多個執行緒嗎？
+## <a name="mfc_multithreaded_1"></a>MFC DLL 可以建立多個執行緒嗎？
 
-但是在初始化期間，MFC DLL 可以安全地建立多個執行緒，只要它會使用 Win32 執行緒區域儲存區 (TLS) 這類函式**TlsAlloc**配置執行緒區域儲存區。 不過，如果使用 MFC DLL **__declspec （thread)** 配置執行緒區域儲存區，用戶端應用程式必須以隱含方式連結至 DLL。 如果用戶端應用程式明確地連結至 DLL 時，呼叫**LoadLibrary**將無法成功載入的 DLL。 如需 Dll 中的執行緒本機變數的詳細資訊，請參閱 <<c0> [ 執行緒](../cpp/thread.md)。
+除了在初始化期間，MFC DLL 可以安全地建立多個執行緒，只要它使用 Win32 執行緒區域儲存區（TLS）函數（例如**TlsAlloc** ）來配置執行緒區域儲存區。 不過，如果 MFC DLL 使用 **__declspec （thread）** 來配置執行緒區域儲存區，則用戶端應用程式必須隱含地連結到 DLL。 如果用戶端應用程式明確連結到 DLL，對**LoadLibrary**的呼叫將無法成功載入 dll。 如需 Dll 中線程區域變數的詳細資訊，請參閱[thread](../cpp/thread.md)。
 
-MFC DLL 會在啟動期間建立新的 MFC 執行緒將會停止回應的應用程式載入時。 這包括每當呼叫建立的執行緒`AfxBeginThread`或`CWinThread::CreateThread`內：
+在啟動期間建立新的 MFC 執行緒的 MFC DLL，會在應用程式載入時停止回應。 這包括每次藉由呼叫 `AfxBeginThread` 或 `CWinThread::CreateThread` 內的來建立執行緒：
 
-- `InitInstance`的`CWinApp`-衍生的標準 MFC DLL 中的物件。
+- 一般 MFC DLL 中 `CWinApp`衍生物件的 `InitInstance`。
 
-- 提供`DllMain`或是**RawDllMain** MFC DLL 中的函式。
+- 一般 MFC DLL 中提供的 `DllMain` 或**RawDllMain**函式。
 
-- 提供`DllMain`或是**RawDllMain** MFC 擴充 DLL 中的函式。
+- MFC 擴充 DLL 中提供的 `DllMain` 或**RawDllMain**函式。
 
-## <a name="mfc_multithreaded_2"></a> 多執行緒應用程式可以存取不同的執行緒中的 MFC DLL 嗎？
+## <a name="mfc_multithreaded_2"></a>多執行緒應用程式可以存取不同執行緒中的 MFC DLL 嗎？
 
-多執行緒應用程式可以從不同的執行緒存取的動態連結至 MFC 的標準 MFC Dll 和 MFC 擴充 Dll。 應用程式可以存取從應用程式中建立的多個執行緒以靜態方式連結至 MFC 的標準 MFC Dll。
+多執行緒應用程式可以存取從不同執行緒動態連結至 MFC 和 MFC 延伸 Dll 的標準 MFC Dll。 應用程式可以從應用程式中建立的多個執行緒，存取以靜態方式連結至 MFC 的標準 MFC Dll。
 
-## <a name="mfc_prohibited_classes"></a> 是否有任何 MFC 類別或函式，不能用於 MFC DLL？
+## <a name="mfc_prohibited_classes"></a>MFC DLL 中是否有任何無法使用的 MFC 類別或函數？
 
-延伸模組 Dll 使用`CWinApp`-衍生的類別，用戶端應用程式。 它們不能自己`CWinApp`-衍生的類別。
+擴充 Dll 會使用用戶端應用程式的 `CWinApp`衍生類別。 它們不能有自己的 `CWinApp`衍生類別。
 
-MFC 的標準 Dll 必須`CWinApp`-衍生類別，該應用程式類別的單一物件，MFC 應用程式一樣。 不同於`CWinApp`物件的應用程式，`CWinApp`之 dll 的物件沒有的主要訊息幫浦。
+標準的 MFC Dll 必須具有該應用程式類別的 `CWinApp`衍生類別和單一物件，就像 MFC 應用程式一樣。 不同于應用程式的 `CWinApp` 物件，DLL 的 `CWinApp` 物件沒有主要的訊息提取。
 
-請注意，因為`CWinApp::Run`機制不會套用至 DLL、 應用程式擁有的主要訊息幫浦。 如果 DLL 開啟非強制回應對話方塊，或有自己的主框架視窗，應用程式的主要訊息幫浦就必須呼叫匯出的 DLL，而呼叫的常式`CWinApp::PreTranslateMessage`DLL 的應用程式物件的成員函式。
+請注意，由於 `CWinApp::Run` 機制不適用於 DLL，因此應用程式會擁有主要的訊息提取。 如果 DLL 開啟非強制回應對話方塊，或有自己的主框架視窗，應用程式的主要訊息提取必須呼叫 DLL 所匯出的常式，然後再呼叫 DLL 應用程式物件的 `CWinApp::PreTranslateMessage` 成員函式。
 
-## <a name="mfc_optimization"></a> 何項最佳化技術應該使用以改善用戶端應用程式&#39;載入時效能？
+## <a name="mfc_optimization"></a>載入時，我應該使用哪些優化技術來改善&#39;用戶端應用程式的效能？
 
-如果您的 DLL 是以靜態方式連結至 MFC，將它變更為一般的標準 MFC DLL 動態連結至 MFC 的 MFC DLL 會減少檔案大小。
+如果您的 DLL 是以靜態方式連結至 MFC 的一般 MFC DLL，則將它變更為動態連結至 MFC 的一般 MFC DLL 會減少檔案大小。
 
-如果 DLL 有大量匯出的函式，使用.def 檔匯出的函式 (而不是使用 **__declspec （dllexport)**)，並使用.def 檔[NONAME 屬性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)上每個匯出的函式。 NONAME 屬性會導致只有序數的值而不是儲存在 DLL 的匯出表中，以減少檔案大小的函式名稱。
+如果 DLL 有大量的匯出函式，請使用 .def 檔案來匯出函式（而不是使用 **__declspec （dllexport）** ），並在每個匯出的函式上使用 .Def 檔案[NONAME 屬性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。 NONAME 屬性只會導致序數值，而不會將函數名稱儲存在 DLL 的匯出資料表中，以減少檔案大小。
 
-應用程式載入時，會載入以隱含方式連結至應用程式的 Dll。 若要改善效能，載入時，嘗試將 DLL 分割成不同的 Dll。 將一個 DLL 載入之後，立即呼叫的應用程式所需的所有函式，而且有呼叫會隱含地連結到該 DLL 的應用程式。 將其他函式呼叫的應用程式不需要立即放入另一個 DLL 並讓應用程式明確地連結到該 DLL。 如需詳細資訊，請參閱 <<c0> [ 連結至 DLL 的可執行檔](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。
+當應用程式載入時，會載入隱含連結至應用程式的 Dll。 若要在載入時改善效能，請嘗試將 DLL 分割成不同的 Dll。 將呼叫應用程式在載入至一個 DLL 後立即需要的所有函式放在一起，並讓呼叫應用程式隱含連結至該 DLL。 將呼叫應用程式不需要的其他函式，直接放在另一個 DLL 中，並讓應用程式明確連結到該 DLL。 如需詳細資訊，請參閱將[可執行檔連結至 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。
 
-## <a name="memory_leak"></a> 那里&#39;s 記憶體流失，在我的標準 MFC DLL，但我的程式碼看起來沒問題。 如何尋找記憶體流失的問題？
+## <a name="memory_leak"></a>我&#39;的一般 MFC DLL 中有記憶體流失，但我的程式碼看起來沒問題。 如何找出記憶體流失的情況？
 
-記憶體流失的一個可能的原因是，MFC 會建立訊息處理常式函式內所使用的暫存物件。 在 MFC 應用程式，這些暫存物件會自動清除在`CWinApp::OnIdle()`之間處理訊息所呼叫函式。 不過，在 MFC 動態連結程式庫 (Dll)、`OnIdle()`函式不會自動呼叫。 如此一來，暫存物件不會自動清除。 若要清除暫存物件，該 DLL 必須明確地呼叫`OnIdle(1)`定期。
+記憶體流失的其中一個可能原因是 MFC 建立了在訊息處理函式內部使用的暫存物件。 在 MFC 應用程式中，這些暫存物件會自動在處理訊息之間呼叫的 `CWinApp::OnIdle()` 函數中清除。 不過，在 MFC 動態連結程式庫（Dll）中，不會自動呼叫 `OnIdle()` 函式。 因此，不會自動清除暫存物件。 若要清除暫存物件，DLL 必須定期明確呼叫 `OnIdle(1)`。
 
 ## <a name="see-also"></a>另請參閱
 
-[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

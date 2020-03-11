@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821827"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865726"
 ---
 # <a name="eventsource-class"></a>EventSource 類別
 
@@ -46,17 +46,17 @@ class EventSource;
 *TDelegateInterface*<br/>
 委派的介面，表示事件處理常式。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-| Name                                     | 描述                                            |
+| 名稱                                     | 描述                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource：： EventSource](#eventsource) | 初始化 `EventSource` 類別的新執行個體。 |
+| [EventSource：： EventSource](#eventsource) | 將 `EventSource` 類別的新執行個體初始化。 |
 
 ### <a name="public-methods"></a>公用方法
 
-| Name                                 | 描述                                                                                                                                                      |
+| 名稱                                 | 描述                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource：： Add](#add)             | 將指定的委派介面所表示的事件處理常式附加至目前 `EventSource` 物件的事件處理常式集合。                     |
 | [EventSource：： GetSize](#getsize)     | 抓取與目前 `EventSource` 物件相關聯的事件處理常式數目。                                                                         |
@@ -65,13 +65,13 @@ class EventSource;
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-| Name                                                    | 描述                                                                                                                       |
+| 名稱                                                    | 描述                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource：： addRemoveLock_](#addremovelock)           | 加入、移除或叫用事件處理常式時，同步處理[targets_](#targets)陣列的存取權。                          |
 | [EventSource：： targets_](#targets)                       | 一或多個事件處理常式的陣列。                                                                                           |
 | [EventSource：： targetsPointerLock_](#targetspointerlock) | 即使加入、移除或叫用此 EventSource 的事件處理常式，也會同步處理內部資料成員的存取。 |
 
-## <a name="inheritance-hierarchy"></a>繼承階層架構
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 `EventSource`
 
@@ -97,7 +97,7 @@ HRESULT Add(
 *delegateInterface*<br/>
 委派物件的介面，表示事件處理常式。
 
-*權杖*<br/>
+*token*<br/>
 當此作業完成時，表示事件的控制碼。 使用此 token 做為[Remove （）](#remove)方法的參數，以捨棄事件處理常式。
 
 ### <a name="return-value"></a>傳回值
@@ -114,7 +114,7 @@ Wrappers::SRWLock addRemoveLock_;
 
 ## <a name="eventsource"></a>EventSource：： EventSource
 
-初始化 `EventSource` 類別的新執行個體。
+將 `EventSource` 類別的新執行個體初始化。
 
 ```cpp
 EventSource();
@@ -364,7 +364,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>參數
 
-*權杖*<br/>
+*token*<br/>
 表示事件處理常式的控制碼。 當事件處理常式由[Add （）](#add)方法註冊時，就會傳回這個 token。
 
 ### <a name="return-value"></a>傳回值

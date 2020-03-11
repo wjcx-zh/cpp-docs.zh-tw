@@ -75,11 +75,11 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741350"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884101"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 類別
 
@@ -95,67 +95,67 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleServerItem::COleServerItem](#coleserveritem)|建構 `COleServerItem` 物件。|
+|[COleServerItem：： COleServerItem](#coleserveritem)|建構 `COleServerItem` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|將`COleDataSource`簡報和轉換格式放在物件中。|
-|[COleServerItem::CopyToClipboard](#copytoclipboard)|將專案複製到剪貼簿。|
-|[COleServerItem::DoDragDrop](#dodragdrop)|執行拖放作業。|
-|[COleServerItem::GetClipboardData](#getclipboarddata)|取得要用於資料傳輸（拖放或剪貼簿）的資料來源。|
-|[COleServerItem::GetDocument](#getdocument)|傳回包含專案的伺服器檔。|
-|[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|取得 OLE 專案的 CF_EMBEDSOURCE 資料。|
-|[COleServerItem::GetItemName](#getitemname)|傳回專案的名稱。 僅用於連結專案。|
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|取得 OLE 專案的 CF_LINKSOURCE 資料。|
-|[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|取得 OLE 專案的 CF_OBJECTDESCRIPTOR 資料。|
-|[COleServerItem::IsConnected](#isconnected)|指出專案目前是否附加至作用中的容器。|
-|[COleServerItem::IsLinkedItem](#islinkeditem)|指出專案是否代表連結的 OLE 專案。|
-|[COleServerItem::NotifyChanged](#notifychanged)|使用自動連結更新來更新所有容器。|
-|[COleServerItem::OnDoVerb](#ondoverb)|呼叫以執行動詞。|
-|[COleServerItem::OnDraw](#ondraw)|當容器要求繪製專案時呼叫;需要執行。|
-|[COleServerItem::OnDrawEx](#ondrawex)|針對特製化專案繪製呼叫。|
-|[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|由架構呼叫，以取得要複製到剪貼簿的資料。|
-|[COleServerItem::OnGetExtent](#ongetextent)|由架構呼叫以取得 OLE 專案的大小。|
-|[COleServerItem::OnInitFromData](#oninitfromdata)|由架構呼叫，使用指定的資料傳輸物件的內容來初始化 OLE 專案。|
-|[COleServerItem::OnQueryUpdateItems](#onqueryupdateitems)|呼叫以判斷是否有任何連結的專案需要更新。|
-|[COleServerItem::OnRenderData](#onrenderdata)|將資料當做延遲轉譯的一部分來抓取。|
-|[COleServerItem::OnRenderFileData](#onrenderfiledata)|將`CFile`資料當做延遲轉譯的一部分，抓取至物件中。|
-|[COleServerItem::OnRenderGlobalData](#onrenderglobaldata)|將資料當做延遲轉譯的一部分，捕獲到 HGLOBAL 中。|
-|[COleServerItem::OnSetColorScheme](#onsetcolorscheme)|呼叫以設定專案的色彩配置。|
-|[COleServerItem::OnSetData](#onsetdata)|呼叫以設定專案的資料。|
-|[COleServerItem::OnSetExtent](#onsetextent)|由架構呼叫以設定 OLE 專案的大小。|
-|[COleServerItem::OnUpdate](#onupdate)|當專案所屬的部分檔已變更時呼叫。|
-|[COleServerItem::OnUpdateItems](#onupdateitems)|呼叫以補救伺服器檔中所有專案的呈現快取。|
-|[COleServerItem::SetItemName](#setitemname)|設定專案的名稱。 僅用於連結專案。|
+|[COleServerItem：： AddOtherClipboardData](#addotherclipboarddata)|將簡報和轉換格式放在 `COleDataSource` 物件中。|
+|[COleServerItem：： CopyToClipboard](#copytoclipboard)|將專案複製到剪貼簿。|
+|[COleServerItem：:D oDragDrop](#dodragdrop)|執行拖放作業。|
+|[COleServerItem：： GetClipboardData](#getclipboarddata)|取得要用於資料傳輸（拖放或剪貼簿）的資料來源。|
+|[COleServerItem：： GetDocument](#getdocument)|傳回包含專案的伺服器檔。|
+|[COleServerItem：： GetEmbedSourceData](#getembedsourcedata)|取得 OLE 專案的 CF_EMBEDSOURCE 資料。|
+|[COleServerItem：： GetItemName](#getitemname)|傳回專案的名稱。 僅用於連結專案。|
+|[COleServerItem：： GetLinkSourceData](#getlinksourcedata)|取得 OLE 專案的 CF_LINKSOURCE 資料。|
+|[COleServerItem：： GetObjectDescriptorData](#getobjectdescriptordata)|取得 OLE 專案的 CF_OBJECTDESCRIPTOR 資料。|
+|[COleServerItem：： Connectionmultiplexer.isconnected](#isconnected)|指出專案目前是否附加至作用中的容器。|
+|[COleServerItem：： IsLinkedItem](#islinkeditem)|指出專案是否代表連結的 OLE 專案。|
+|[COleServerItem：： NotifyChanged](#notifychanged)|使用自動連結更新來更新所有容器。|
+|[COleServerItem：： OnDoVerb](#ondoverb)|呼叫以執行動詞。|
+|[COleServerItem：： OnDraw](#ondraw)|當容器要求繪製專案時呼叫;需要執行。|
+|[COleServerItem：： OnDrawEx](#ondrawex)|針對特製化專案繪製呼叫。|
+|[COleServerItem：： OnGetClipboardData](#ongetclipboarddata)|由架構呼叫，以取得要複製到剪貼簿的資料。|
+|[COleServerItem：： OnGetExtent](#ongetextent)|由架構呼叫以取得 OLE 專案的大小。|
+|[COleServerItem：： OnInitFromData](#oninitfromdata)|由架構呼叫，使用指定的資料傳輸物件的內容來初始化 OLE 專案。|
+|[COleServerItem：： OnQueryUpdateItems](#onqueryupdateitems)|呼叫以判斷是否有任何連結的專案需要更新。|
+|[COleServerItem：： OnRenderData](#onrenderdata)|將資料當做延遲轉譯的一部分來抓取。|
+|[COleServerItem：： OnRenderFileData](#onrenderfiledata)|將資料當做延遲轉譯的一部分，抓取 `CFile` 物件中。|
+|[COleServerItem：： OnRenderGlobalData](#onrenderglobaldata)|將資料當做延遲轉譯的一部分，捕獲到 HGLOBAL 中。|
+|[COleServerItem：： OnSetColorScheme](#onsetcolorscheme)|呼叫以設定專案的色彩配置。|
+|[COleServerItem：： OnSetData](#onsetdata)|呼叫以設定專案的資料。|
+|[COleServerItem：： OnSetExtent](#onsetextent)|由架構呼叫以設定 OLE 專案的大小。|
+|[COleServerItem：： OnUpdate](#onupdate)|當專案所屬的部分檔已變更時呼叫。|
+|[COleServerItem：： OnUpdateItems](#onupdateitems)|呼叫以補救伺服器檔中所有專案的呈現快取。|
+|[COleServerItem：： SetItemName](#setitemname)|設定專案的名稱。 僅用於連結專案。|
 
-### <a name="protected-methods"></a>保護方法
+### <a name="protected-methods"></a>受保護的方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleServerItem::GetDataSource](#getdatasource)|取得用來儲存轉換格式的物件。|
-|[COleServerItem::OnHide](#onhide)|由架構呼叫以隱藏 OLE 專案。|
-|[COleServerItem::OnOpen](#onopen)|由架構呼叫，以在它自己的最上層視窗中顯示 OLE 專案。|
-|[COleServerItem::OnShow](#onshow)|當容器要求顯示專案時呼叫。|
+|[COleServerItem：： GetDataSource](#getdatasource)|取得用來儲存轉換格式的物件。|
+|[COleServerItem：： OnHide](#onhide)|由架構呼叫以隱藏 OLE 專案。|
+|[COleServerItem：： OnOpen](#onopen)|由架構呼叫，以在它自己的最上層視窗中顯示 OLE 專案。|
+|[COleServerItem：： OnShow](#onshow)|當容器要求顯示專案時呼叫。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleServerItem::m_sizeExtent](#m_sizeextent)|通知伺服器有多少 OLE 專案可見。|
+|[COleServerItem：： m_sizeExtent](#m_sizeextent)|通知伺服器有多少 OLE 專案可見。|
 
 ## <a name="remarks"></a>備註
 
 連結的專案可以代表部分或所有的伺服器檔。 內嵌專案一律代表整個伺服器檔。
 
-`COleServerItem`類別會定義數個 OLE 系統動態連結程式庫（dll）所呼叫的可覆寫成員函式，通常是為了回應來自容器應用程式的要求。 這些成員函式可讓容器應用程式以各種不同的方式間接管理專案，例如藉由顯示、執行其動詞命令，或以各種格式來抓取其資料。
+`COleServerItem` 類別定義數個 OLE 系統動態連結程式庫（Dll）所呼叫的可覆寫成員函式，通常是為了回應來自容器應用程式的要求。 這些成員函式可讓容器應用程式以各種不同的方式間接管理專案，例如藉由顯示、執行其動詞命令，或以各種格式來抓取其資料。
 
-若要`COleServerItem`使用，請從它衍生一個類別，並執行[OnDraw](#ondraw)並[序列化](../../mfc/reference/cobject-class.md#serialize)成員函式。 `OnDraw`函式會提供專案的中繼檔標記法，讓它能夠在容器應用程式開啟複合檔案時顯示。 的函式會提供專案的原生標記法，允許在伺服器和容器應用程式之間傳送內嵌專案。 `CObject` `Serialize` [OnGetExtent](#ongetextent)會將專案的自然大小提供給容器，讓容器能夠調整專案的大小。
+若要使用 `COleServerItem`，請從它衍生一個類別，並執行[OnDraw](#ondraw)並[序列化](../../mfc/reference/cobject-class.md#serialize)成員函式。 `OnDraw` 函式會提供專案的中繼檔標記法，讓它能夠在容器應用程式開啟複合檔案時顯示。 `CObject` 的 `Serialize` 函式會提供專案的原生標記法，允許在伺服器和容器應用程式之間傳送內嵌專案。 [OnGetExtent](#ongetextent)會將專案的自然大小提供給容器，讓容器能夠調整專案的大小。
 
-如需有關伺服器和相關主題的詳細資訊，請[參閱伺服器：在文章](../../mfc/servers-implementing-a-server.md) [容器中執行伺服器和「建立容器/伺服器應用程式」：先進的](../../mfc/containers-advanced-features.md)功能。
+如需有關伺服器和相關主題的詳細資訊，請參閱[容器： Advanced Features](../../mfc/containers-advanced-features.md)一文中的[伺服器：執行伺服器](../../mfc/servers-implementing-a-server.md)和建立容器/伺服器應用程式一文。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -173,7 +173,7 @@ class COleServerItem : public CDocItem
 
 ##  <a name="addotherclipboarddata"></a>COleServerItem：： AddOtherClipboardData
 
-呼叫此函式可將 OLE 專案的呈現和轉換格式放在指定`COleDataSource`的物件中。
+呼叫此函式可將 OLE 專案的呈現和轉換格式放在指定的 `COleDataSource` 物件中。
 
 ```
 void AddOtherClipboardData(COleDataSource* pDataSource);
@@ -182,7 +182,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ### <a name="parameters"></a>參數
 
 *pDataSource*<br/>
-應放置資料`COleDataSource`之物件的指標。
+應放置資料之 `COleDataSource` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -190,7 +190,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 
 ##  <a name="coleserveritem"></a>COleServerItem：： COleServerItem
 
-會建立`COleServerItem`物件，並將它加入至伺服器檔的檔專案集合。
+建立 `COleServerItem` 物件，並將它加入至伺服器檔的檔專案集合。
 
 ```
 COleServerItem(
@@ -204,9 +204,9 @@ COleServerItem(
 將包含新專案之檔的指標。
 
 *bAutoDelete*<br/>
-旗標，指出當物件的連結已釋放時，是否可以刪除它。 如果`COleServerItem`物件是您必須刪除的檔資料中不可或缺的一部分，請將此設為 FALSE。 如果物件是用來識別檔資料中可由架構刪除之範圍的次要結構，請將此值設定為 TRUE。
+旗標，指出當物件的連結已釋放時，是否可以刪除它。 如果 `COleServerItem` 物件是您必須刪除的檔資料中不可或缺的一部分，請將此設為 FALSE。 如果物件是用來識別檔資料中可由架構刪除之範圍的次要結構，請將此值設定為 TRUE。
 
-##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard
+##  <a name="copytoclipboard"></a>COleServerItem：： CopyToClipboard
 
 呼叫此函式可將 OLE 專案複製到剪貼簿。
 
@@ -221,11 +221,11 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 
 ### <a name="remarks"></a>備註
 
-函式會使用[OnGetClipboardData](#ongetclipboarddata)成員函式，以支援的格式來建立包含 OLE 專案資料的[COleDataSource](../../mfc/reference/coledatasource-class.md)物件。 函式會使用`COleDataSource` [COleDataSource：： SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)函式，將物件放在剪貼簿上。 `COleDataSource`物件包含專案的原生資料，以及其在 CF_METAFILEPICT 格式中的標記法，以及您選擇支援的任何轉換格式的資料。 您必須已執行[序列化](../../mfc/reference/cobject-class.md#serialize)和[OnDraw](#ondraw) ，此成員函式才能運作。
+函式會使用[OnGetClipboardData](#ongetclipboarddata)成員函式，以支援的格式來建立包含 OLE 專案資料的[COleDataSource](../../mfc/reference/coledatasource-class.md)物件。 然後，函式會使用[COleDataSource：： SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)函式，將 `COleDataSource` 物件放在剪貼簿上。 `COleDataSource` 物件包含專案的原生資料，以及其在 CF_METAFILEPICT 格式中的標記法，以及您選擇支援之任何轉換格式的資料。 您必須已執行[序列化](../../mfc/reference/cobject-class.md#serialize)和[OnDraw](#ondraw) ，此成員函式才能運作。
 
-##  <a name="dodragdrop"></a>  COleServerItem::DoDragDrop
+##  <a name="dodragdrop"></a>COleServerItem：:D oDragDrop
 
-`DoDragDrop`呼叫成員函式以執行拖放作業。
+呼叫 `DoDragDrop` 成員函式以執行拖放作業。
 
 ```
 DROPEFFECT DoDragDrop(
@@ -255,7 +255,7 @@ DROPEFFECT DoDragDrop(
 
 ### <a name="return-value"></a>傳回值
 
-來自 DROPEFFECT 列舉的值。 如果已 DROPEFFECT_MOVE，則應該移除原始資料。
+來自 DROPEFFECT 列舉的值。 如果 DROPEFFECT_MOVE，則應該移除原始資料。
 
 ### <a name="remarks"></a>備註
 
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 
 延遲時間是由登錄機碼設定所指定。 您可以藉由呼叫[CWinApp：： WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[CWinApp：： WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint)來變更延遲時間。 如果您未指定延遲時間，則會使用預設值200毫秒。 拖曳延遲時間的儲存方式如下：
 
-- Windows NT 拖曳延遲時間儲存在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay. 中
+- Windows NT 拖曳延遲時間儲存在 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay。
 
 - Windows 3.x 拖曳延遲時間會儲存在 WIN 中。INI 檔案，位於 [Windows}] 區段底下。
 
@@ -271,7 +271,7 @@ DROPEFFECT DoDragDrop(
 
 如需如何將拖曳延遲資訊儲存在登錄或中的詳細資訊。INI 檔，請參閱 Windows SDK 中的[WriteProfileString](/windows/win32/api/winbase/nf-winbase-writeprofilestringw) 。
 
-##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData
+##  <a name="getclipboarddata"></a>COleServerItem：： GetClipboardData
 
 呼叫此函式，以在您呼叫[CopyToClipboard](#copytoclipboard)時，將所有要複製到剪貼簿的資料填入指定的[COleDataSource](../../mfc/reference/coledatasource-class.md)物件（如果您呼叫[DoDragDrop](#dodragdrop)，也會傳送相同的資料）。
 
@@ -286,7 +286,7 @@ void GetClipboardData(
 ### <a name="parameters"></a>參數
 
 *pDataSource*<br/>
-`COleDataSource`物件的指標，會以所有支援的格式接收 OLE 專案的資料。
+將以所有支援的格式接收 OLE 專案資料之 `COleDataSource` 物件的指標。
 
 *bIncludeLink*<br/>
 如果應該將連結資料複製到剪貼簿，則為 TRUE。 如果您的伺服器應用程式不支援連結，則為 FALSE。
@@ -301,7 +301,7 @@ void GetClipboardData(
 
 此函式會呼叫[GetEmbedSourceData](#getembedsourcedata)成員函式來取得 OLE 專案的原生資料，並呼叫[AddOtherClipboardData](#addotherclipboarddata)成員函式以取得呈現格式和任何支援的轉換格式。 如果*bIncludeLink*為 TRUE，函數也會呼叫[GetLinkSourceData](#getlinksourcedata)來取得專案的連結資料。
 
-如果您想要在所`COleDataSource` `CopyToClipboard`提供的格式之前或之後，將格式放在物件中，請覆寫此函數。
+如果您想要在 `CopyToClipboard`所提供的格式之前或之後，將格式放在 `COleDataSource` 物件中，請覆寫此函式。
 
 ##  <a name="getdatasource"></a>COleServerItem：： GetDataSource
 
@@ -313,11 +313,11 @@ COleDataSource* GetDataSource();
 
 ### <a name="return-value"></a>傳回值
 
-用來儲存轉換`COleDataSource`格式之物件的指標。
+用來儲存轉換格式之 `COleDataSource` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
-如果您想要讓伺服器應用程式在資料傳輸作業期間提供各種格式的資料，請使用此函數所`COleDataSource`傳回的物件來註冊這些格式。 例如，如果您想要為剪貼簿或拖放作業提供 OLE 專案的 CF_TEXT 標記法，您會使用此函式所傳回的`COleDataSource`物件來註冊格式，然後將`OnRenderXxxData`成員函式覆寫為提供資料。
+如果您想要讓伺服器應用程式在資料傳輸作業期間提供各種格式的資料，請使用此函數所傳回的 `COleDataSource` 物件來註冊這些格式。 例如，如果您想要為剪貼簿或拖放作業提供 OLE 專案的 CF_TEXT 標記法，您會使用此函式傳回的 `COleDataSource` 物件來註冊格式，然後覆寫 `OnRenderXxxData` 成員函式以提供資料。
 
 ##  <a name="getdocument"></a>COleServerItem：： GetDocument
 
@@ -333,7 +333,7 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="remarks"></a>備註
 
-這可讓您存取當做引數傳遞給此`COleServerItem`函式的伺服器檔。
+這可讓您存取當做引數傳遞至 `COleServerItem` 的程式的伺服器檔。
 
 ##  <a name="getembedsourcedata"></a>COleServerItem：： GetEmbedSourceData
 
@@ -346,11 +346,11 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>參數
 
 *lpStgMedium*<br/>
-[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構的指標，會接收 OLE 專案的 CF_EMBEDSOURCE 資料。
+[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構的指標，將會接收 OLE 專案的 CF_EMBEDSOURCE 資料。
 
 ### <a name="remarks"></a>備註
 
-此格式包含專案的原生資料。 您必須已`Serialize`實作為此函式的成員函式，才能正常運作。
+此格式包含專案的原生資料。 您必須已實作用 `Serialize` 成員函式，此函式才能正常運作。
 
 然後，您可以使用[COleDataSource：： CacheData](../../mfc/reference/coledatasource-class.md#cachedata)，將結果新增至資料來源。 此函式是由[COleServerItem：： OnGetClipboardData](#ongetclipboarddata)自動呼叫。
 
@@ -372,7 +372,7 @@ const CString& GetItemName() const;
 
 您通常只會針對連結的專案呼叫此函式。
 
-##  <a name="getlinksourcedata"></a>  COleServerItem::GetLinkSourceData
+##  <a name="getlinksourcedata"></a>COleServerItem：： GetLinkSourceData
 
 呼叫此函式可取得 OLE 專案的 CF_LINKSOURCE 資料。
 
@@ -383,7 +383,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>參數
 
 *lpStgMedium*<br/>
-[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構的指標，會接收 OLE 專案的 CF_LINKSOURCE 資料。
+[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構的指標，將會接收 OLE 專案的 CF_LINKSOURCE 資料。
 
 ### <a name="return-value"></a>傳回值
 
@@ -411,17 +411,17 @@ void GetObjectDescriptorData(
 ### <a name="parameters"></a>參數
 
 *lpOffset*<br/>
-滑鼠點擊的位移，從 OLE 專案的左上角開始。 可以是 Null。
+滑鼠點擊的位移，從 OLE 專案的左上角開始。 可以是 NULL。
 
 *lpSize*<br/>
-OLE 專案的大小。 可以是 Null。
+OLE 專案的大小。 可以是 NULL。
 
 *lpStgMedium*<br/>
-[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構的指標，會接收 OLE 專案的 CF_OBJECTDESCRIPTOR 資料。
+[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構的指標，將會接收 OLE 專案的 CF_OBJECTDESCRIPTOR 資料。
 
 ### <a name="remarks"></a>備註
 
-資訊會複製到*lpStgMedium*所`STGMEDIUM`指向的結構中。 此格式包含 [貼上特殊] 對話方塊所需的資訊。
+資訊會複製到*lpStgMedium*所指向的 `STGMEDIUM` 結構中。 此格式包含 [貼上特殊] 對話方塊所需的資訊。
 
 如需詳細資訊，請參閱 Windows SDK 中的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 。
 
@@ -441,7 +441,7 @@ BOOL IsConnected() const;
 
 如果一或多個容器有專案的參考，則會將 OLE 專案視為已連接。 如果專案的參考計數大於0，或如果它是內嵌專案，則會連接。
 
-##  <a name="islinkeditem"></a>  COleServerItem::IsLinkedItem
+##  <a name="islinkeditem"></a>COleServerItem：： IsLinkedItem
 
 呼叫此函式，以查看 OLE 專案是否為連結的專案。
 
@@ -457,7 +457,7 @@ BOOL IsLinkedItem() const;
 
 如果專案是有效的，而且不會在檔的內嵌專案清單中傳回，則會連結專案。 連結的專案不一定會連接到容器。
 
-連結和內嵌的專案通常會使用相同的類別。 `IsLinkedItem`可讓您讓連結專案的行為與內嵌專案不同，雖然程式碼很常見。
+連結和內嵌的專案通常會使用相同的類別。 雖然程式碼很常見，`IsLinkedItem` 可讓您讓連結專案的行為與內嵌專案不同。
 
 ##  <a name="m_sizeextent"></a>COleServerItem：： m_sizeExtent
 
@@ -486,7 +486,7 @@ DVASPECT 列舉中的值，指出 OLE 專案的哪些層面已變更。 這個�
 
 - DVASPECT_CONTENT 專案的表示方式，可以在其容器內顯示為内嵌物件。
 
-- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，以便在流覽工具中顯示。
+- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，使其可以在流覽工具中顯示。
 
 - DVASPECT_ICON 專案是以圖示表示。
 
@@ -496,7 +496,7 @@ DVASPECT 列舉中的值，指出 OLE 專案的哪些層面已變更。 這個�
 
 如果容器專案已連結至具有自動連結的檔，則會更新專案以反映變更。 在使用 MFC 程式庫所寫入的容器應用程式中，會在回應中呼叫[COleClientItem：： OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 。
 
-##  <a name="ondoverb"></a>  COleServerItem::OnDoVerb
+##  <a name="ondoverb"></a>COleServerItem：： OnDoVerb
 
 由架構呼叫以執行指定的動詞。
 
@@ -514,20 +514,20 @@ virtual void OnDoVerb(LONG iVerb);
 |0|主動詞命令|OLEIVERB_PRIMARY|
 |1|次要動詞|(無)|
 |- 1|顯示要編輯的專案|OLEIVERB_SHOW|
-|- 2|在個別視窗中編輯專案|OLEIVERB_OPEN|
-|- 3|隱藏專案|OLEIVERB_HIDE|
+|-2|在個別視窗中編輯專案|OLEIVERB_OPEN|
+|-3|隱藏專案|OLEIVERB_HIDE|
 
 -1 值通常是另一個動詞的別名。 如果不支援開啟編輯，-2 的效果會與-1 相同。 如需其他值，請參閱 Windows SDK 中的[IOleObject：:D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 。
 
 ### <a name="remarks"></a>備註
 
-如果容器應用程式是以 MFC 程式庫撰寫，則在呼叫對應`COleClientItem`物件的[COleClientItem：： Activate](../../mfc/reference/coleclientitem-class.md#activate)成員函式時，會呼叫這個函式。 如果指定了主要動詞或 OLEIVERB_SHOW，則預設的實值會呼叫[OnShow](#onshow)成員函式，如果指定了次要動詞或 OLEIVERB_OPEN，則為[OnOpen](#onopen) ，而如果指定 OLEIVERB_HIDE，則為[OnHide](#onhide) 。 如果 iVerb 不是`OnShow`以上所列的其中一個動詞，則預設的實值會呼叫。
+如果容器應用程式是以 MFC 程式庫撰寫，則在呼叫對應 `COleClientItem` 物件的[COleClientItem：： Activate](../../mfc/reference/coleclientitem-class.md#activate)成員函式時，會呼叫這個函式。 如果指定了主要動詞或 OLEIVERB_SHOW，則預設的實值會呼叫[OnShow](#onshow)成員函式，如果指定了次要動詞或 OLEIVERB_OPEN，則為[OnOpen](#onopen) ，而如果指定了 OLEIVERB_HIDE，則會[OnHide](#onhide) 。 如果*iVerb*不是以上所列的其中一個動詞，則預設的實值會呼叫 `OnShow`。
 
 如果您的主要動詞不會顯示專案，請覆寫此函式。 例如，如果專案是錄音，而且其主要動詞為播放，您就不需要顯示伺服器應用程式來播放專案。
 
 如需詳細資訊，請參閱 Windows SDK 中的[IOleObject：:D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 。
 
-##  <a name="ondraw"></a>  COleServerItem::OnDraw
+##  <a name="ondraw"></a>COleServerItem：： OnDraw
 
 由架構呼叫，以將 OLE 專案轉譯為中繼檔。
 
@@ -574,7 +574,7 @@ virtual BOOL OnDrawEx(
 
 - DVASPECT_CONTENT 專案的表示方式，可以在其容器內顯示為内嵌物件。
 
-- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，以便在流覽工具中顯示。
+- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，使其可以在流覽工具中顯示。
 
 - DVASPECT_ICON 專案是以圖示表示。
 
@@ -589,13 +589,13 @@ virtual BOOL OnDrawEx(
 
 ### <a name="remarks"></a>備註
 
-當 DVASPECT 等於 DVASPECT_CONTENT `OnDraw`時，預設的實作為呼叫，否則會失敗。
+當 DVASPECT 等於 DVASPECT_CONTENT 時，預設的實值 `OnDraw` 會呼叫;否則會失敗。
 
-覆寫此函數以提供 DVASPECT_CONTENT 以外層面的呈現資料，例如 DVASPECT_ICON 或 DVASPECT_THUMBNAIL。
+覆寫此函式，以提供 DVASPECT_CONTENT 以外層面的呈現資料，例如 DVASPECT_ICON 或 DVASPECT_THUMBNAIL。
 
-##  <a name="ongetclipboarddata"></a>  COleServerItem::OnGetClipboardData
+##  <a name="ongetclipboarddata"></a>COleServerItem：： OnGetClipboardData
 
-由架構呼叫以取得`COleDataSource`物件，其中包含的所有資料都將會藉由呼叫[CopyToClipboard](#copytoclipboard)成員函式放在剪貼簿上。
+由架構呼叫以取得 `COleDataSource` 物件，其中包含[CopyToClipboard](#copytoclipboard)成員函式所要放在剪貼簿上的所有資料。
 
 ```
 virtual COleDataSource* OnGetClipboardData(
@@ -640,14 +640,14 @@ virtual BOOL OnGetExtent(
 
 - DVASPECT_CONTENT 專案的表示方式，可以在其容器內顯示為内嵌物件。
 
-- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，以便在流覽工具中顯示。
+- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，使其可以在流覽工具中顯示。
 
 - DVASPECT_ICON 專案是以圖示表示。
 
 - DVASPECT_DOCPRINT 專案的表示方式，就如同使用 [檔案] 功能表中的 [列印] 命令來列印一樣。
 
 *rSize*<br/>
-`CSize`物件的參考，將會接收 OLE 專案的大小。
+參考將會接收 OLE 專案大小的 `CSize` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -655,7 +655,7 @@ virtual BOOL OnGetExtent(
 
 ### <a name="remarks"></a>備註
 
-如果容器應用程式是以 MFC 程式庫撰寫，則在呼叫對應`COleClientItem`物件的[GetExtent](../../mfc/reference/coleclientitem-class.md#getextent)成員函式時，會呼叫這個函式。 預設實作不做任何動作。 您必須自行執行。 如果您想要在處理 OLE 專案大小的要求時執行特殊處理，請覆寫這個函式。
+如果容器應用程式是以 MFC 程式庫撰寫，則在呼叫對應 `COleClientItem` 物件的[GetExtent](../../mfc/reference/coleclientitem-class.md#getextent)成員函式時，會呼叫這個函式。 預設實作不做任何動作。 您必須自行執行。 如果您想要在處理 OLE 專案大小的要求時執行特殊處理，請覆寫這個函式。
 
 ##  <a name="onhide"></a>COleServerItem：： OnHide
 
@@ -667,7 +667,7 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>備註
 
-預設的呼叫`COleServerDoc::OnShowDocument( FALSE )`。 函式也會通知容器，OLE 專案已隱藏。 如果您想要在隱藏 OLE 專案時執行特殊處理，請覆寫此函數。
+預設呼叫 `COleServerDoc::OnShowDocument( FALSE )`。 函式也會通知容器，OLE 專案已隱藏。 如果您想要在隱藏 OLE 專案時執行特殊處理，請覆寫此函數。
 
 ##  <a name="oninitfromdata"></a>COleServerItem：： OnInitFromData
 
@@ -753,11 +753,11 @@ virtual BOOL OnRenderData(
 
 ### <a name="remarks"></a>備註
 
-指定的格式是先前`COleDataSource`使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)成員函式來呈現延遲轉譯的物件。 如果所提供的儲存媒體是檔案或記憶體，此函式的預設實作為分別會呼叫[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)。 如果未提供上述任何一種格式，則預設的執行會傳回0，而且不會執行任何操作。
+指定的格式是先前使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)成員函式將延遲轉譯放在 `COleDataSource` 物件中的格式之一。 如果所提供的儲存媒體是檔案或記憶體，此函式的預設實作為分別會呼叫[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)。 如果未提供上述任何一種格式，則預設的執行會傳回0，而且不會執行任何操作。
 
-如果*lpStgMedium* ->  *tymed*為 TYMED_Null，則 STGMEDIUM 應配置並填入*lpFormatEtc-> tymed*所指定的。 如果未 TYMED_Null，就應該使用資料來填入 STGMEDIUM。
+如果 TYMED_Null *lpStgMedium*-> 的*TYMED* ，則 STGMEDIUM 應該配置並填入*lpFormatEtc-> tymed*所指定的。 如果未 TYMED_Null，就應該使用資料來填入 STGMEDIUM。
 
-這是一個先進的可覆寫。 覆寫此函式，以要求的格式和媒體提供您的資料。 根據您的資料而定，您可能會想要改為覆寫此函式的其中一個其他版本。 如果您的資料大小很小且固定，請`OnRenderGlobalData`覆寫。 如果您的資料位於檔案中，或屬於變數大小，請覆`OnRenderFileData`寫。
+這是一個先進的可覆寫。 覆寫此函式，以要求的格式和媒體提供您的資料。 根據您的資料而定，您可能會想要改為覆寫此函式的其中一個其他版本。 如果您的資料大小很小且固定，請覆寫 `OnRenderGlobalData`。 如果您的資料位於檔案中，或屬於變數大小，請覆寫 `OnRenderFileData`。
 
 如需詳細資訊，請參閱 Windows SDK 中的[IDataObject：：](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)、 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)和[TYMED](/windows/win32/api/objidl/ne-objidl-tymed) 。
 
@@ -777,7 +777,7 @@ virtual BOOL OnRenderFileData(
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)結構，指定要求資訊的格式。
 
 *pFile*<br/>
-指向要在其中呈現資料的物件。`CFile`
+指向要在其中呈現資料的 `CFile` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -785,7 +785,7 @@ virtual BOOL OnRenderFileData(
 
 ### <a name="remarks"></a>備註
 
-指定的格式是先前`COleDataSource`使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成員函式來呈現延遲轉譯的物件。 此函式的預設實作用只會傳回 FALSE。
+指定的格式是先前使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成員函式將延遲轉譯放在 `COleDataSource` 物件中的格式之一。 此函式的預設實作用只會傳回 FALSE。
 
 這是一個先進的可覆寫。 覆寫此函式，以要求的格式和媒體提供您的資料。 根據您的資料而定，您可能會想要改為覆寫此函式的其中一個其他版本。 如果您想要處理多個儲存媒體，請覆寫[OnRenderData](#onrenderdata)。 如果您的資料位於檔案中，或屬於變數大小，請覆寫[OnRenderFileData](#onrenderfiledata)。
 
@@ -815,7 +815,7 @@ virtual BOOL OnRenderGlobalData(
 
 ### <a name="remarks"></a>備註
 
-指定的格式是先前`COleDataSource`使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成員函式來呈現延遲轉譯的物件。 此函式的預設實作用只會傳回 FALSE。
+指定的格式是先前使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成員函式將延遲轉譯放在 `COleDataSource` 物件中的格式之一。 此函式的預設實作用只會傳回 FALSE。
 
 如果*phGlobal*為 Null，則應該在*phGlobal*中配置並傳回新的 HGLOBAL。 否則， *phGlobal*所指定的 HGLOBAL 應該填入資料。 放在 HGLOBAL 中的資料量不得超過記憶體區塊的目前大小。 此外，區塊也無法重新配置為較大的大小。
 
@@ -842,7 +842,7 @@ Windows [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette)結構的指
 
 ### <a name="remarks"></a>備註
 
-如果容器應用程式是使用 MFC 程式庫所撰寫，則在呼叫對應`COleClientItem`物件的[IOleObject：： SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme)函式時，會呼叫這個函式。 預設的實值會傳回 FALSE。 如果您想要使用建議的調色板，請覆寫此函數。 不需要伺服器應用程式就可以使用建議的調色板。
+如果容器應用程式是使用 MFC 程式庫所撰寫，則在呼叫對應 `COleClientItem` 物件的[IOleObject：： SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme)函式時，會呼叫這個函式。 預設的實值會傳回 FALSE。 如果您想要使用建議的調色板，請覆寫此函數。 不需要伺服器應用程式就可以使用建議的調色板。
 
 如需詳細資訊，請參閱 Windows SDK 中的[IOleObject：： SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) 。
 
@@ -897,7 +897,7 @@ virtual BOOL OnSetExtent(
 
 - DVASPECT_CONTENT 專案的表示方式，可以在其容器內顯示為内嵌物件。
 
-- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，以便在流覽工具中顯示。
+- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，使其可以在流覽工具中顯示。
 
 - DVASPECT_ICON 專案是以圖示表示。
 
@@ -912,7 +912,7 @@ virtual BOOL OnSetExtent(
 
 ### <a name="remarks"></a>備註
 
-如果容器應用程式是以 MFC 程式庫撰寫，則在呼叫對應`COleClientItem`物件的[SetExtent](../../mfc/reference/coleclientitem-class.md#setextent)成員函式時，會呼叫這個函式。 如果*nDrawAspect*為 DVASPECT_CONTENT，則預設的執行會將[m_sizeExtent](#m_sizeextent)成員設定為指定的大小;否則，它會傳回0。 當您變更專案的大小時，請覆寫此函式以執行特殊處理。
+如果容器應用程式是以 MFC 程式庫撰寫，則在呼叫對應 `COleClientItem` 物件的[SetExtent](../../mfc/reference/coleclientitem-class.md#setextent)成員函式時，會呼叫這個函式。 如果*nDrawAspect*為 DVASPECT_CONTENT，則預設的執行會將[m_sizeExtent](#m_sizeextent)成員設定為指定的大小;否則，它會傳回0。 當您變更專案的大小時，請覆寫此函式以執行特殊處理。
 
 ##  <a name="onshow"></a>COleServerItem：： OnShow
 
@@ -924,7 +924,7 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>備註
 
-當容器應用程式的使用者建立專案或執行需要顯示專案的動詞（例如編輯）時，通常會呼叫這個函式。 預設的執行會嘗試就地啟用。 如果失敗，函式會呼叫`OnOpen`成員函式，將 OLE 專案顯示在另一個視窗中。
+當容器應用程式的使用者建立專案或執行需要顯示專案的動詞（例如編輯）時，通常會呼叫這個函式。 預設的執行會嘗試就地啟用。 如果失敗，函式會呼叫 `OnOpen` 成員函式，在另一個視窗中顯示 OLE 專案。
 
 如果您想要在顯示 OLE 專案時執行特殊處理，請覆寫這個函式。
 
@@ -943,7 +943,7 @@ virtual void OnUpdate(
 ### <a name="parameters"></a>參數
 
 *pSender*<br/>
-修改檔之專案的指標。 可以是 Null。
+修改檔之專案的指標。 可以是 NULL。
 
 *lHint*<br/>
 包含修改的相關資訊。
@@ -956,7 +956,7 @@ virtual void OnUpdate(
 
 - DVASPECT_CONTENT 專案的表示方式，可以在其容器內顯示為内嵌物件。
 
-- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，以便在流覽工具中顯示。
+- DVASPECT_THUMBNAIL 專案會以「縮圖」標記法呈現，使其可以在流覽工具中顯示。
 
 - DVASPECT_ICON 專案是以圖示表示。
 
@@ -976,7 +976,7 @@ virtual void OnUpdateItems();
 
 ### <a name="remarks"></a>備註
 
-預設的執行會呼叫檔中`COleClientItem`所有物件的 [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)。
+預設的執行會針對檔中的所有 `COleClientItem` 物件呼叫[UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) 。
 
 ##  <a name="setitemname"></a>COleServerItem：： SetItemName
 

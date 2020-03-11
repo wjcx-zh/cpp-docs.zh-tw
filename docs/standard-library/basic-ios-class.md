@@ -56,15 +56,15 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688445"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856482"
 ---
 # <a name="basic_ios-class"></a>basic_ios 類別
 
-類別樣板描述相依于樣板參數的輸入資料流程（屬於類別範本[basic_istream](../standard-library/basic-istream-class.md)）和輸出資料流程（屬於類別範本[basic_ostream](../standard-library/basic-ostream-class.md)）通用的儲存體和成員函式。 （類別[ios_base](../standard-library/ios-base-class.md)會描述哪些是通用的，而不是相依于範本參數）。Basic_ios 類別的物件 **\<class Elem，類別特性 >** 有助於控制具有類型 `Elem` 元素的資料流程，其字元特性是由類別 `Traits` 所決定。
+類別範本描述相依于樣板參數的輸入資料流程（屬於類別範本[basic_istream](../standard-library/basic-istream-class.md)）和輸出資料流程（屬於類別範本[basic_ostream](../standard-library/basic-ostream-class.md)）通用的儲存體和成員函式。 （類別[ios_base](../standard-library/ios-base-class.md)描述哪些是通用的，而不是相依于範本參數）。類別的物件**basic_ios\<類別 Elem，類別特性 >** 協助控制具有 `Elem`類型專案的資料流程，其字元特性是由類別 `Traits`所決定。
 
 ## <a name="syntax"></a>語法
 
@@ -76,7 +76,7 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>參數
 
-*Elem* \
+*Elem*\
 類型。
 
 *特性*\
@@ -102,7 +102,7 @@ class basic_ios : public ios_base
 |-|-|
 |[basic_ios](#basic_ios)|建構 `basic_ios` 類別。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
@@ -112,12 +112,12 @@ class basic_ios : public ios_base
 |[pos_type](#pos_type)|`Traits::pos_type` 的同義字。|
 |[traits_type](#traits_type)|`Traits` 樣板參數的同義字。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[bad](#bad)|表示資料流緩衝區的完整性遺失。|
-|[clear](#clear)|清除所有錯誤的旗標。|
+|[清除](#clear)|清除所有錯誤的旗標。|
 |[copyfmt](#copyfmt)|將旗標從某個資料流複製到另一個資料流。|
 |[eof](#eof)|表示是否已到達資料流的結尾。|
 |[exceptions](#exceptions)|表示此資料流會擲回哪些例外狀況。|
@@ -136,7 +136,7 @@ class basic_ios : public ios_base
 |[tie](#tie)|可確保一個資料流在另一個資料流之前先處理。|
 |[widen](#widen)|尋找指定字元的對等 `char_type`。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -146,7 +146,7 @@ class basic_ios : public ios_base
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<ios>
+**標頭：** \<ios >
 
 **命名空間:** std
 
@@ -194,7 +194,7 @@ basic_ios();
 
 ### <a name="parameters"></a>參數
 
-*sb* \
+*sb*\
 要儲存輸入或輸出元素的標準緩衝區。
 
 ### <a name="remarks"></a>備註
@@ -221,14 +221,14 @@ void clear(io_state state);
 ### <a name="parameters"></a>參數
 
 *狀態*\
-選擇性清除所有旗標之後要設定的旗標。 預設值為 `goodbit`。
+選擇性清除所有旗標之後要設定的旗標。 預設為 `goodbit`。
 
-*reraise* \
+*reraise*\
 選擇性指定是否應重新引發例外狀況。 預設值為**false** （不會重新引發例外狀況）。
 
 ### <a name="remarks"></a>備註
 
-旗標為 `goodbit`、`failbit`、`eofbit` 和 `badbit`。 使用 [good](#good)、[bad](#bad)、[eof](#eof) 和 [fail](#fail) 測試這些旗標
+旗標為 `goodbit`、`failbit`、`eofbit`和 `badbit`。 使用 [good](#good)、[bad](#bad)、[eof](#eof) 和 [fail](#fail) 測試這些旗標
 
 成員函式會以下列項目取代預存的資料流狀態資訊：
 
@@ -238,7 +238,7 @@ void clear(io_state state);
 
 ### <a name="example"></a>範例
 
-如需使用 `clear` 的範例，請參閱[rdstate](#rdstate)和[getline](../standard-library/string-functions.md#getline) 。
+如需使用 `clear`的範例，請參閱[rdstate](#rdstate)和[getline](../standard-library/string-functions.md#getline) 。
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
@@ -251,7 +251,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 您要複製其旗標的資料流。
 
 ### <a name="return-value"></a>傳回值
@@ -260,7 +260,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="remarks"></a>備註
 
-成員函式會報告回呼事件**清除 \_event**。 然後，它會從*右*到 **\*this**填滿字元、系結指標和格式資訊。 在改變例外狀況遮罩之前，它會報告回呼事件 `copyfmt_event`。 如果複製完成之後，**state &** [exceptions](#exceptions) 為非零值，此函式會以引數 [rdstate](#rdstate) 有效呼叫 [clear](#clear)。 它會傳回 **\*this**。
+成員函式會報告回呼事件**清除\_事件**。 然後，它會從*右邊*複製到 [填滿] 字元、[系結] 指標和 [格式資訊] **\*** 。 在改變例外狀況遮罩之前，它會報告回呼事件 `copyfmt_event`。 如果複製完成之後，**state &** [exceptions](#exceptions) 為非零值，此函式會以引數 [rdstate](#clear) 有效呼叫 [clear](#rdstate)。 它會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -333,7 +333,7 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>參數
 
-*Newexcept* \
+*Newexcept*\
 您要擲回例外狀況的旗標。
 
 ### <a name="return-value"></a>傳回值
@@ -421,7 +421,7 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>參數
 
-*Char* \
+*Char*\
 您要當做填滿字元的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -473,7 +473,7 @@ bool good() const;
 
 ### <a name="example"></a>範例
 
-如需 `good` 的使用範例，請參閱 [basic_ios:: bad](#bad)。
+如需 [ 的使用範例，請參閱 ](#bad)basic_ios:: bad`good`。
 
 ## <a name="imbue"></a>  basic_ios::imbue
 
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-*Loc* \
+*Loc*\
 地區設定字串。
 
 ### <a name="return-value"></a>傳回值
@@ -528,10 +528,10 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>參數
 
-*_Sb* \
+*_Sb*\
 要儲存輸入或輸出元素的標準緩衝區。
 
-*_Isstd* \
+*_Isstd*\
 指定這是否為標準資料流。
 
 ### <a name="remarks"></a>備註
@@ -542,7 +542,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 - [tie](#tie) 會傳回 null 指標。
 
-- 如果 *_Sb*為非零值， [rdstate](#rdstate)會傳回[goodbit](../standard-library/ios-base-class.md#iostate) ;否則，它會傳回[badbit](../standard-library/ios-base-class.md#iostate)。
+- 如果 *_Sb*非零值， [rdstate](#rdstate)會傳回[goodbit](../standard-library/ios-base-class.md#iostate) ;否則，它會傳回[badbit](../standard-library/ios-base-class.md#iostate)。
 
 - [例外](#exceptions)狀況會傳回 `goodbit`。
 
@@ -576,12 +576,12 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要從中移動值的 `ios_base` 物件。
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會將儲存在*右方*的所有值移至 `*this`，但預存 `stream buffer pointer` 不會變更 *，而是*在 `*this` 中設為 null 指標。 預存 `tie pointer` 會設定為*右邊*的 null 指標。
+受保護的成員函式會將儲存在*右方*的所有值移至 `*this`，但預存 `stream buffer pointer`不會變更 *，而是*在 `*this`中設為 null 指標。 預存 `tie pointer` 會設定為*右邊*的 null 指標。
 
 ## <a name="narrow"></a>  basic_ios::narrow
 
@@ -593,7 +593,7 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>參數
 
-*Char* \
+*Char*\
 要轉換的**字元**。
 
 *Default*\
@@ -601,11 +601,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="return-value"></a>傳回值
 
-給定 `char_type` 的對等**字元**。
+給定 `char_type`的對等**字元**。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回[use_facet](../standard-library/basic-filebuf-class.md#open) \<ctype \<E > > （ [getloc](../standard-library/ios-base-class.md#getloc)（））。`narrow` （`Char`，`Default`）。
+此成員函式會傳回[use_facet](../standard-library/basic-filebuf-class.md#open)\<Ctype\<E > > （ [getloc](../standard-library/ios-base-class.md#getloc)（））。`narrow`（`Char`，`Default`）。
 
 ### <a name="example"></a>範例
 
@@ -706,7 +706,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>備註
 
-只有在 `fail()` 時，運算子才會傳回轉換為**false**的值。 傳回型別只能轉換成**bool**，而不是 `void *` 或其他已知的純量型別。
+只有在 `fail()`時，運算子才會傳回轉換為**false**的值。 傳回型別只能轉換成**bool**，而不是 `void *` 或其他已知的純量型別。
 
 ## <a name="pos_type"></a>  basic_ios::pos_type
 
@@ -728,7 +728,7 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>參數
 
-*_Sb* \
+*_Sb*\
 資料流。
 
 ### <a name="remarks"></a>備註
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>參數
 
-*_State* \
+*_State*\
 要設定的其他旗標。
 
 ### <a name="remarks"></a>備註
@@ -870,12 +870,12 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>參數
 
-*strbuf* \
+*strbuf*\
 要成為讀取緩衝區的資料流緩衝區。
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會將*strbuf*儲存在 `stream buffer pointer` 中。它不會呼叫 `clear`。
+受保護的成員函式會將*strbuf*儲存在 `stream buffer pointer`中。它不會呼叫 `clear`。
 
 ## <a name="tie"></a>  basic_ios::tie
 
@@ -889,7 +889,7 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>參數
 
-*str* \
+*str*\
 資料流。
 
 ### <a name="return-value"></a>傳回值
@@ -936,7 +936,7 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>參數
 
-*Char* \
+*Char*\
 要轉換的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -945,7 +945,7 @@ char_type widen(char Char) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc))。 `widen`( `Char`)。
+此成員函式會傳回[use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> > （ [getloc](../standard-library/ios-base-class.md#getloc)）。 `widen`( `Char`)。
 
 ### <a name="example"></a>範例
 
@@ -977,15 +977,15 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 用來交換值的 `basic_ios` 物件。
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會將儲存在*右方*的所有值與 `*this` （除了儲存的 `stream buffer pointer` 以外）交換。
+受保護的成員函式會將儲存在*右方*的所有值與 `*this` （除了儲存的 `stream buffer pointer`以外）交換。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\
-[iostream 慣例](../standard-library/iostreams-conventions.md)
+[iostreams 慣例](../standard-library/iostreams-conventions.md)

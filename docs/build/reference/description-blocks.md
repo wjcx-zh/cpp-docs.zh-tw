@@ -8,11 +8,11 @@ helpviewer_keywords:
 - blocks, description
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
 ms.openlocfilehash: fb9cf4400c96b588e8704e972dd29ab27f41cae9
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144529"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856922"
 ---
 # <a name="description-blocks"></a>描述區塊
 
@@ -212,6 +212,6 @@ reverse.exe : {\src\omega;e:\repo\backwards}retro.obj
 
 目標 `reverse.exe` 有一個相依的 `retro.obj`。 以大括弧括住的清單會指定兩個目錄。 NMAKE 會先在目前的目錄中搜尋 `retro.obj`。 如果沒有這麼做，NMAKE 會搜尋 `\src\omega` 目錄，然後搜尋 `e:\repo\backwards` 目錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [NMAKE 參考](nmake-reference.md)

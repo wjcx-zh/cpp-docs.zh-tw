@@ -135,15 +135,15 @@ helpviewer_keywords:
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 ms.openlocfilehash: 0c4ea79165f31de32645c2258f699f3a03f24877
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688796"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890724"
 ---
 # <a name="unordered_multiset-class"></a>unordered_multiset 類別
 
-類別樣板描述的物件可控制 `const Key` 類型之元素的變動長度序列。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
+類別樣板描述的物件可控制 `const Key`類型之元素的變動長度序列。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
 
 ## <a name="syntax"></a>語法
 
@@ -159,12 +159,12 @@ class unordered_multiset;
 
 |參數|描述|
 |-|-|
-|*Key*|索引鍵類型。|
-|*散列*|雜湊函式物件類型。|
+|*索引鍵*|索引鍵類型。|
+|*雜湊*|雜湊函式物件類型。|
 |*Pred*|相等比較函式物件類型。|
 |*配置*|配置器類別。|
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 |類型定義|描述|
 |-|-|
@@ -192,8 +192,8 @@ class unordered_multiset;
 |[bucket_size](#bucket_size)|取得 Bucket 大小。|
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
-|[clear](#clear)|移除所有項目。|
-|[count](#count)|尋找符合指定索引鍵的項目數目。|
+|[清除](#clear)|移除所有項目。|
+|[計數](#count)|尋找符合指定索引鍵的項目數目。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
 |[empty](#empty)|測試項目是否不存在。|
@@ -226,11 +226,11 @@ class unordered_multiset;
 
 受控制序列中實際的項目順序取決於雜湊函式、比較函式、插入順序、最大載入因數和 Bucket 目前數目。 一般來說，您無法預測受控制序列中的項目順序。 不過，您永遠可以確保，有對等順序的任何項目子集在受控制序列中為相鄰。
 
-物件會透過 [unordered_multiset::allocator_type](#allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須與 `allocator` 類型的物件具有相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。
+物件會透過 [unordered_multiset::allocator_type](#allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須與 `allocator`類型的物件具有相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<unordered_set>
+**標頭：** \<unordered_set >
 
 **命名空間:** std
 
@@ -350,7 +350,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval* \
+*keyval*\
 要對應的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -491,7 +491,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket* \
+*nbucket*\
 值區數目。
 
 ### <a name="remarks"></a>備註
@@ -553,7 +553,7 @@ const_iterator cbegin() const;
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -579,7 +579,7 @@ const_iterator cend() const;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -601,7 +601,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-成員函式呼叫 [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`。
+成員函式會呼叫[unordered_multiset：： erase](#erase)`(` [unordered_multiset：： begin](#begin)`(),` [unordered_multiset：： end](#end)`())`。
 
 ### <a name="example"></a>範例
 
@@ -759,7 +759,7 @@ typedef Alloc::const_pointer const_pointer;
 
 ### <a name="remarks"></a>備註
 
-此類型所說明的物件可做為受控制序列之項目的常數指標。
+此類型所描述的物件可做為受控制序列之項目的常數指標。
 
 ### <a name="example"></a>範例
 
@@ -851,7 +851,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval* \
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -957,7 +957,7 @@ begin()-end() == -3
 
 ## <a name="emplace"></a>  unordered_multiset::emplace
 
-插入就地建構 (未執行任何複製或移動作業) 的元素。
+插入就地建構 (未執行任何複製或移動作業) 的項目。
 
 ```cpp
 template <class... Args>
@@ -972,11 +972,11 @@ iterator emplace(Args&&... args);
 
 ### <a name="return-value"></a>傳回值
 
-指向新插入之元素的迭代器。
+新插入項目的迭代器。
 
 ### <a name="remarks"></a>備註
 
-此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。
+此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。
 
 在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。
 
@@ -984,7 +984,7 @@ iterator emplace(Args&&... args);
 
 ## <a name="emplace_hint"></a>  unordered_multiset::emplace_hint
 
-將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。
+插入就地建構元素 (沒有執行複製或移動作業)，其中含位置提示。
 
 ```cpp
 template <class... Args>
@@ -998,15 +998,15 @@ iterator emplace_hint(
 |參數|描述|
 |-|-|
 |*引數*|轉送以建構插入 unordered_multiset 之元素的引數。|
-|*where*|一個有關要從哪裡開始搜尋正確插入點的提示。|
+|*where*|有關要從何處開始搜尋正確插入點的提示。|
 
 ### <a name="return-value"></a>傳回值
 
-指向新插入之元素的迭代器。
+新插入項目的迭代器。
 
 ### <a name="remarks"></a>備註
 
-此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。
+此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。
 
 在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。
 
@@ -1092,7 +1092,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket* \
+*nbucket*\
 值區數目。
 
 ### <a name="remarks"></a>備註
@@ -1159,7 +1159,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>參數
 
-*keyval* \
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1232,7 +1232,7 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-*Where* \
+*Where*\
 要移除之項目的位置。
 
 *第一個*\
@@ -1264,7 +1264,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval* \
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1471,10 +1471,10 @@ IList);
 |參數|描述|
 |-|-|
 |*初始值*|要插入至 unordered_multiset 的元素值。|
-|*Where*|要開始搜尋正確的插入點的地方。|
-|*ValTy*|範本參數，指定 unordered_multiset 可用於建立[value_type](../standard-library/map-class.md#value_type)的元素的引數類型，並將*Val*當做引數完美轉送。|
-|*頭*|要複製之第一個元素的位置。|
-|*次*|要複製之最一個元素後方的位置。|
+|*其中*|要開始搜尋正確的插入點的地方。|
+|*ValTy*|範本參數，指定 unordered_multiset 可用來建立[value_type](../standard-library/map-class.md#value_type)之元素的引數類型，並將*Val*當做引數完美轉送。|
+|*第一個*|要複製之第一個元素的位置。|
+|*最後一個*|要複製之最一個元素後方的位置。|
 |*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
 |*IList*|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -1490,9 +1490,9 @@ IList);
 
 在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
 
-容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 set 而言，`unordered_multiset<V>::value_type` 是類型 `const V`。
+容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而針對 set，`unordered_multiset<V>::value_type` 是類型 `const V`。
 
-範圍成員函式（5）會將專案值的序列插入 unordered_multiset 中，而這些專案會對應至 `[First, Last)` 範圍中的反覆運算器所定址的每個元素。因此，不會插入*最後一個*。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `m`。
+範圍成員函式（5）會將專案值的序列插入對應至每個專案的 unordered_multiset，而該專案是由 `[First, Last)`範圍中的反覆運算器所定址;因此，不會插入*最後一個*。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `m`。
 
 初始設定式清單成員函式 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 unordered_multiset。
 
@@ -1510,7 +1510,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](../standard-library/multiset-class.md#begin) 的範例。
+如需如何宣告及使用[迭代器](../standard-library/multiset-class.md#begin)的範例，請參閱 **begin** 的範例。
 
 ## <a name="key_eq"></a>  unordered_multiset::key_eq
 
@@ -1951,7 +1951,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回物件可以控制的最長序列的長度。
+此成員函式會傳回物件可以控制之最長序列的長度。
 
 ### <a name="example"></a>範例
 
@@ -1990,11 +1990,11 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 |參數|描述|
 |-|-|
-|*right*|複製到 `unordered_multiset` 的 [unordered_multiset](../standard-library/unordered-multiset-class.md)。|
+|*right*|複製到 [ 的 ](../standard-library/unordered-multiset-class.md)unordered_multiset`unordered_multiset`。|
 
 ### <a name="remarks"></a>備註
 
-清除 `unordered_multiset` 中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移至 `unordered_multiset`。
+清除 `unordered_multiset`中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移至 `unordered_multiset`。
 
 ### <a name="example"></a>範例
 
@@ -2137,7 +2137,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>參數
 
-*nbuckets* \
+*nbuckets*\
 要求的值區數目。
 
 ### <a name="remarks"></a>備註
@@ -2318,7 +2318,7 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要交換的容器。
 
 ### <a name="remarks"></a>備註
@@ -2439,9 +2439,9 @@ unordered_multiset(
 |*InputIterator*|迭代器類型。|
 |*Al*|要儲存的配置器物件。|
 |*背光*|要儲存的比較函式物件。|
-|*散列*|要儲存的雜湊函式物件。|
+|*雜湊*|要儲存的雜湊函式物件。|
 |*Bucket_count*|Bucket 最小數目。|
-|*右邊*|要複製的容器。|
+|*Right*|要複製的容器。|
 |*IList*|要從中複製的 initializer_list。|
 
 ### <a name="remarks"></a>備註
@@ -2450,7 +2450,7 @@ unordered_multiset(
 
 所有建構函式也會初始化數個儲存值。 若為複製的函式，則會從*右方*取得值。 否則就是：
 
-值區的最小數目是引數*Bucket_count*（如果有的話）。否則，它是此處所述的預設值，做為 `N0` 的執行定義值。
+值區的最小數目是*Bucket_count*的引數（如果有的話）。否則，它是此處所述的預設值，做為 `N0`的執行定義值。
 
 雜湊函式物件是引數*雜湊*（如果有的話）。否則會 `Hash()`。
 
@@ -2512,9 +2512,9 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [<unordered_set>](../standard-library/unordered-set.md)\
 [容器](../cpp/containers-modern-cpp.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688160"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876305"
 ---
 # <a name="ctype-class"></a>ctype 類別
 
@@ -56,7 +56,7 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
+*CharType*\
 用於程式內部字元編碼的類型。
 
 ## <a name="remarks"></a>備註
@@ -65,7 +65,7 @@ class ctype : public ctype_base;
 
 C++標準程式庫會定義此類別範本的兩個明確特製化：
 
-- `ctype<char>`，會分別描述其差異的明確特製化。 如需詳細資訊，請參閱[ctype &lt;char &gt; 類別](../standard-library/ctype-char-class.md)。
+- `ctype<char>`，會分別描述其差異的明確特製化。 如需詳細資訊，請參閱[ctype&lt;char&gt; 類別](../standard-library/ctype-char-class.md)。
 
 - `ctype<wchar_t>`，會將元素視為寬字元。
 
@@ -75,7 +75,7 @@ C++標準程式庫會定義此類別範本的兩個明確特製化：
 
 - 使用運算式 `CharType(byte)`，將**char**類型的值*Byte*轉換為*CharType*類型的值。
 
-所有其他作業都會以與明確特製化 `ctype<char>` 相同的方式，在**char**值上執行。
+所有其他作業都會以與明確特製化 `ctype<char>`相同的方式，在**char**值上執行。
 
 ### <a name="constructors"></a>建構函式
 
@@ -83,15 +83,15 @@ C++標準程式庫會定義此類別範本的兩個明確特製化：
 |-|-|
 |[ctype](#ctype)|`ctype` 類別物件的建構函式，這些物件做為字元的地區設定 facet。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，描述由地區設定使用的字元。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[do_is](#do_is)|虛擬函式，呼叫以測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。|
 |[do_narrow](#do_narrow)|虛擬函式，呼叫以將地區設定所使用之 `CharType` 類型的字元，轉換為原生字元集中**char**類型的對應字元。|
@@ -110,7 +110,7 @@ C++標準程式庫會定義此類別範本的兩個明確特製化：
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
@@ -124,7 +124,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 *CharType* 同義。
+此類型與樣板參數 *CharType* 同義。
 
 ### <a name="example"></a>範例
 
@@ -140,12 +140,12 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs* \
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下：
+*_Refs*參數和其重要性的可能值為：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -153,9 +153,9 @@ explicit ctype(size_t _Refs = 0);
 
 - \> 1：未定義這些值。
 
-由於解構函式會受到保護，因此沒有直接的範例。
+無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其 `locale::facet` 基底物件。
+建構函式會以 `locale::facet`locale::facet[( ](../standard-library/locale-class.md#facet_class)) 初始化其 `_Refs` 基底物件。
 
 ## <a name="do_is"></a>  ctype::do_is
 
@@ -174,10 +174,10 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal* \
+*maskVal*\
 要為其測試字元的遮罩值。
 
-*ch* \
+*ch*\
 要測試其屬性的字元。
 
 *第一個*\
@@ -221,7 +221,7 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>參數
 
-*ch* \
+*ch*\
 地區設定所用並要進行轉換的 `Chartype` 類型字元。
 
 *預設*\
@@ -244,7 +244,7 @@ virtual const CharType* do_narrow(
 
 ### <a name="remarks"></a>備註
 
-第二個受保護的成員範本函式會針對間隔 [0，`I` `default` `I`）中的 `last`，儲存在 `dest` [`I`] 值 `do_narrow` （`first` [ - ]，`first`）。
+第二個受保護的成員範本函式會針對間隔 [0，`I``default``I`）中的 `last`，儲存在 `dest`[`I`] 值 `do_narrow`（`first` [ - ]，`first`）。
 
 ### <a name="example"></a>範例
 
@@ -263,7 +263,7 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal* \
+*maskVal*\
 字元要比對的遮罩值。
 
 *第一個*\
@@ -297,7 +297,7 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>參數
 
-*maskVal* \
+*maskVal*\
 字元不會比對的遮罩值。
 
 *第一個*\
@@ -332,7 +332,7 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>參數
 
-*ch* \
+*ch*\
 要轉換為小寫的字元。
 
 *第一個*\
@@ -347,7 +347,7 @@ virtual const CharType *do_tolower(
 
 ### <a name="remarks"></a>備註
 
-第二個受保護的成員範本函式會以  -  （`first` [`do_tolower`]）取代間隔 [0，`last` `first` `I`）中的每個元素 `first` [`I`] `I`。
+第二個受保護的成員範本函式會以  - （`first`[`do_tolower`]）取代間隔 [0，`last``first` `I`）中的每個元素 `first` [`I`] `I`。
 
 ### <a name="example"></a>範例
 
@@ -367,7 +367,7 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>參數
 
-*ch* \
+*ch*\
 要轉換為大寫的字元。
 
 *第一個*\
@@ -382,7 +382,7 @@ virtual const CharType *do_toupper(
 
 ### <a name="remarks"></a>備註
 
-第二個受保護的成員範本函式會以  -  （`first` [`do_toupper`]）取代間隔 [0，`last` `first` `I`）中的每個元素 `first` [`I`] `I`。
+第二個受保護的成員範本函式會以  - （`first`[`do_toupper`]）取代間隔 [0，`last``first` `I`）中的每個元素 `first` [`I`] `I`。
 
 ### <a name="example"></a>範例
 
@@ -423,7 +423,7 @@ virtual const char *do_widen(
 
 ### <a name="remarks"></a>備註
 
-第二個受保護的成員範本函式會在 `dest`[ `I`] 中儲存 `I` 的值 `do_widen`( `first`[ `I`])，間隔為 [0, `last` - `first`)。
+第二個受保護的成員範本函式會在 `dest`[ `I`] 中儲存 `do_widen` 的值 `first`( `I`[ `I`])，間隔為 [0, `last` - `first`)。
 
 ### <a name="example"></a>範例
 
@@ -444,10 +444,10 @@ const CharType *is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal* \
+*maskVal*\
 要為其測試字元的遮罩值。
 
-*ch* \
+*ch*\
 要測試其屬性的字元。
 
 *第一個*\
@@ -524,7 +524,7 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>參數
 
-*ch* \
+*ch*\
 地區設定所用並要進行轉換的 `Chartype` 類型字元。
 
 *預設*\
@@ -547,7 +547,7 @@ const CharType* narrow(
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會傳回[do_narrow](#do_narrow)（`ch`，`default`）。 第二個成員函式會傳回[do_narrow](#do_narrow) （`first`、`last`、`default`、`dest`）。 只有基本來源字元的 `narrow` 下方保證會有唯一的反向影像 `CharType`。 針對這些基本來源字元，下列非變異值會保留：`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**。
+第一個成員函式會傳回[do_narrow](#do_narrow)（`ch`，`default`）。 第二個成員函式會傳回[do_narrow](#do_narrow) （`first`、`last`、`default`、`dest`）。 只有基本來源字元的 `CharType` 下方保證會有唯一的反向影像 `narrow`。 針對這些基本來源字元，下列非變異值會保留：`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**。
 
 ### <a name="example"></a>範例
 
@@ -588,7 +588,7 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal* \
+*maskVal*\
 字元要比對的遮罩值。
 
 *第一個*\
@@ -644,7 +644,7 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>參數
 
-*maskVal* \
+*maskVal*\
 字元不會比對的遮罩值。
 
 *第一個*\
@@ -699,7 +699,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*ch* \
+*ch*\
 要轉換為小寫的字元。
 
 *第一個*\
@@ -754,7 +754,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*ch* \
+*ch*\
 要轉換為大寫的字元。
 
 *第一個*\
@@ -861,7 +861,7 @@ Hello everyone!
 Hello everyone!
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

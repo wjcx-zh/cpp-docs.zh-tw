@@ -14,15 +14,15 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241668"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866184"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函式
 
-## <a name="apply"></a> 適用於
+## <a name="apply"></a>套用
 
 ```cpp
 template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
@@ -30,9 +30,9 @@ template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t)
 
 ### <a name="remarks"></a>備註
 
-呼叫函式*F*使用 tuple *t*。
+使用元組*t*呼叫函數*F* 。
 
-## <a name="forward"></a> forward_as_tuple
+## <a name="forward"></a>forward_as_tuple
 
 ```cpp
 template <class... TTypes>
@@ -45,9 +45,9 @@ template <class... TTypes>
 
 ### <a name="remarks"></a>備註
 
-建構參考中的引數的 tuple *t*適用於轉送做為函式的引數。
+針對*t*中的引數，將參考的元組，視為函式的引數來進行轉送。
 
-## <a name="get"></a> 取得
+## <a name="get"></a>獲取
 
 從 `tuple` 物件取得項目，依索引或 ( C++14) 依類型。
 
@@ -91,11 +91,11 @@ Tuple 中宣告的類型序列，按宣告順序。
 要取得的元素類型。
 
 *元組*\
-A`std::tuple`包含任意數目的項目。
+包含任意數目之元素的 `std::tuple`。
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回索引處的值的參考*Index*，或型別的*T*在`tuple`物件。
+範本函式會傳回*位於索引索引*或 `tuple` 物件中類型*T*之值的參考。
 
 如果 Tuple 不是包含剛剛好一個類型 T 的元素，呼叫 `get<T>(Tuple)` 就會產生編譯器錯誤。
 
@@ -128,7 +128,7 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_from_tuple"></a> make_from_tuple
+## <a name="make_from_tuple"></a>make_from_tuple
 
 ```cpp
 template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
@@ -138,7 +138,7 @@ template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 
 與 `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})` 相同。
 
-## <a name="make_tuple"></a> make_tuple
+## <a name="make_tuple"></a>make_tuple
 
 從元素值製作 `tuple`。
 
@@ -152,12 +152,12 @@ template <class T1, class T2, ..., class TN>
 *TN*\
 第 N 個函式參數的類型。
 
-*TN*\
+*tN*\
 第 N 個函式參數的值。
 
 ### <a name="remarks"></a>備註
 
-樣板函式會傳回 `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`，其中當對應類型 `Ti` 為 `cv` `reference_wrapper<X>` 時，每個類型 `Vi` 都是 `X&`，否則為 `Ti`。
+此範本函式會傳回 `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`，其中，當對應的類型 `Ti` `cv` `reference_wrapper<X>`時，會 `X&` 每個類型 `Vi`。否則，它會 `Ti`。
 
 `make_tuple` 的其中一個優點是，編譯器會自動決定所儲存物件的類型，不需要明確指定。 當您使用 `make_tuple<int, int>(1, 2)` 時不要使用明確樣板引數 (例如 `make_tuple`)，因為它具有不必要的詳細資訊，並新增可能導致編譯錯誤的複雜右值參考問題。
 
@@ -196,14 +196,14 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="swap"></a> 交換
+## <a name="swap"></a>調換
 
 ```cpp
 template <class... Types>
     void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
 ```
 
-## <a name="tie"></a> 將繫結
+## <a name="tie"></a>等同
 
 從元素參考製作 `tuple`。
 
@@ -262,7 +262,7 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="tuple_cat"></a> tuple_cat
+## <a name="tuple_cat"></a>tuple_cat
 
 ```cpp
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
@@ -270,16 +270,16 @@ template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 
 ### <a name="return-value"></a>傳回值
 
-初始化每個型別項目來建構 tuple 物件。
+透過初始化每個類型專案所構成的元組物件。
 
-## <a name="tuple_element_t"></a> tuple_element_t
+## <a name="tuple_element_t"></a>tuple_element_t
 
 ```cpp
 template <size_t I, class T>
     using tuple_element_t = typename tuple_element<I, T>::type;
 ```
 
-## <a name="tuple_size_v"></a> tuple_size_v
+## <a name="tuple_size_v"></a>tuple_size_v
 
 ```cpp
 template <class T>

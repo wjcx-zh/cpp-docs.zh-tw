@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450350"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937431"
 ---
 # <a name="slice-class"></a>slice 類別
 
@@ -43,9 +43,9 @@ valarray 的一個公用程式類別，用來定義父代 valarray 的一維子�
 |-|-|
 |[slice](#slice)|定義 `valarray` 的子集，其中包含等距且在指定項目開始的一些項目。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|說明|
+|成員函數|描述|
 |-|-|
 |[size](#size)|尋找 `valarray` 之配量中的項目數。|
 |[start](#start)|尋找 `valarray` 之配量的起始索引。|
@@ -53,9 +53,9 @@ valarray 的一個公用程式類別，用來定義父代 valarray 的一維子�
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<valarray>
+**標頭：** \<valarray >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="size"></a>  slice::size
 
@@ -137,17 +137,17 @@ slice(
 ### <a name="parameters"></a>參數
 
 *_StartIndex*\
-子集中第一個項目的 valarray 索引。
+子集中第一個元素的 valarray 索引。
 
 *_Len*\
 子集中的項目數。
 
-*長足*\
+*stride*\
 子集中項目之間的距離。
 
 ### <a name="return-value"></a>傳回值
 
-預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個函式會儲存起始索引的 *_StartIndex* 、 *_Len*作為總長度, 以及 stride 的*stride* 。
+預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個函式會儲存起始索引的 *_StartIndex* 、 *_Len*的總長度，以及 stride 的*stride* 。
 
 ### <a name="remarks"></a>備註
 

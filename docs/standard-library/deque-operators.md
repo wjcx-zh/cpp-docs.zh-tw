@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245652"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883789"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 運算子
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 deque 物件是否不等於右邊的 deque 物件。
 
@@ -35,10 +35,10 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `deque` 類型的物件。
 
-*權限*\
+*right*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -86,10 +86,10 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `deque` 類型的物件。
 
-*權限*\
+*right*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a> 運算子&lt;=
+## <a name="op_lt_eq"></a>運算子&lt;=
 
 測試運算子左邊的 deque 物件是否小於或等於右邊的 deque 物件。
 
@@ -141,10 +141,10 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `deque` 類型的物件。
 
-*權限*\
+*right*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 deque 物件是否等於右邊的 deque 物件。
 
@@ -196,10 +196,10 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `deque` 類型的物件。
 
-*權限*\
+*right*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -254,10 +254,10 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `deque` 類型的物件。
 
-*權限*\
+*right*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a> 運算子&gt;=
+## <a name="op_gt_eq"></a>運算子&gt;=
 
 測試運算子左邊的 deque 物件是否大於或等於右邊的 deque 物件。
 
@@ -310,10 +310,10 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `deque` 類型的物件。
 
-*權限*\
+*right*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值

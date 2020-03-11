@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687626"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876021"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits 類別
 
@@ -95,7 +95,7 @@ template <class Type>
 
 ## <a name="remarks"></a>備註
 
-標頭會定義類型**wchar_t**、 **bool**、 **char**、**帶**正負號的字元、不**帶正負**號的 char、 **short**、不**帶正負**號的 short、 **int**、不**帶正負**號的 int、 **long**、不**帶正負**號的 long、 **float**、 **double**、 **long double**、 **long long**、不**帶正負號的 long long**、 **char16_t**和**char32_t**。 針對這些明確特製化，成員[numeric_limits：： is_specialized](#is_specialized)為**true**，而且所有相關成員都有有意義的值。 這個程式可提供額外的明確特製化。 類別的大部分成員函式會描述或測試**float**的可能實作為。
+標頭定義類型的明確特製化**wchar_t**、 **bool**、 **char**、**帶**正負號的 char、不**帶正負**號的 char、 **short**、不**帶正負**號的 short、 **int**、不**帶正負**號的 int、 **long**、不**帶正負**號的 long、 **float**、 **double**、 **long double**、 **long long**、不**帶正負**號的**char32_t** **char16_t**long 針對這些明確特製化，成員[numeric_limits：： is_specialized](#is_specialized)為**true**，而且所有相關成員都有有意義的值。 這個程式可提供額外的明確特製化。 類別的大部分成員函式會描述或測試**float**的可能實作為。
 
 針對任意特製化，沒有任何成員包含有意義的值。 沒有有意義之值的成員物件會儲存零（或**false**），而不會傳回有意義值的成員函式會傳回 `Type(0)`。
 
@@ -119,7 +119,7 @@ template <class Type>
 |[is_integer](#is_integer)|測試類型是否有整數表示。|
 |[is_modulo](#is_modulo)|測試類型是否有模數表示。|
 |[is_signed](#is_signed)|測試類型是否有正負號表示。|
-|[is_specialized](#is_specialized)|測試類型是否已在類別樣板 `numeric_limits` 中定義明確特製化。|
+|[is_specialized](#is_specialized)|測試類型是否已在類別樣板 `numeric_limits`中定義明確特製化。|
 |[lowest](#lowest)|傳回最大負數的有限值。|
 |[max](#max)|傳回類型的最大有限值。|
 |[max_digits10](#max_digits10)|傳回十進位數字的數目，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。|
@@ -152,7 +152,7 @@ static constexpr Type denorm_min() throw();
 
 **long double**與C++編譯器的**double**相同。
 
-函式會傳回類型的最小值，如果[has_denorm](#has_denorm)不等於 `denorm_present`，就會與[min](#min)相同。
+函式會傳回類型的最小值，如果[has_denorm](#has_denorm)不等於 `denorm_present`，這會與[min](#min)相同。
 
 #### <a name="example"></a>範例
 
@@ -441,7 +441,7 @@ static constexpr bool has_infinity = false;
 
 #### <a name="remarks"></a>備註
 
-如果 [is_iec559](#is_iec559) 為 **true**，成員就會傳回 **true**。
+如果 **is_iec559** 為 [true](#is_iec559)，成員就會傳回 **true**。
 
 #### <a name="example"></a>範例
 
@@ -487,7 +487,7 @@ static constexpr bool has_quiet_NaN = false;
 
 #### <a name="remarks"></a>備註
 
-無訊息 NAN 是代表「不是數字」(not a number) 的編碼，不會在運算式中發出其存在訊號。 如果 [is_iec559](#is_iec559) 為 true，傳回值就會是 **true**。
+無訊息 NAN 是代表「不是數字」(not a number) 的編碼，不會在運算式中發出其存在訊號。 如果 **is_iec559** 為 true，傳回值就會是 [true](#is_iec559)。
 
 #### <a name="example"></a>範例
 
@@ -533,7 +533,7 @@ static constexpr bool has_signaling_NaN = false;
 
 #### <a name="remarks"></a>備註
 
-帶訊號 NAN 是代表「不是數字」的編碼，會在運算式中發出其存在訊號。 如果 [is_iec559](#is_iec559) 為 true，傳回值就會是 **true**。
+帶訊號 NAN 是代表「不是數字」的編碼，會在運算式中發出其存在訊號。 如果 **is_iec559** 為 true，傳回值就會是 [true](#is_iec559)。
 
 #### <a name="example"></a>範例
 
@@ -929,7 +929,7 @@ Whether unsigned char objects have a signed representation: 0
 
 ### <a name="is_specialized"></a>is_specialized
 
-測試類型是否已在類別樣板 `numeric_limits` 中定義明確特製化。
+測試類型是否已在類別樣板 `numeric_limits`中定義明確特製化。
 
 ```cpp
 static constexpr bool is_specialized = false;
@@ -941,7 +941,7 @@ static constexpr bool is_specialized = false;
 
 #### <a name="remarks"></a>備註
 
-指標以外的所有純量類型都具有針對類別樣板 `numeric_limits` 定義的明確特製化。
+指標以外的所有純量類型都具有針對類別樣板 `numeric_limits`定義的明確特製化。
 
 #### <a name="example"></a>範例
 
@@ -1011,7 +1011,7 @@ static constexpr Type max() throw();
 
 #### <a name="remarks"></a>備註
 
-針對**float**類型的**INT**和 FLT_MAX，最大的有限值是 INT_MAX。 如果 [is_bounded](#is_bounded) 為 **true**，傳回值便有意義。
+INT_MAX 類型**INT**和 FLT_MAX 的最大有限值為**float**型別。 如果 [is_bounded](#is_bounded) 為 **true**，傳回值便有意義。
 
 #### <a name="example"></a>範例
 
@@ -1069,7 +1069,7 @@ static constexpr int max_exponent = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式傳回值僅對浮點數類型有意義。 就 **float** 類型而言，`max_exponent` 的值為 FLT_MAX_EXP。
+此成員函式傳回值僅對浮點數類型有意義。 就 `max_exponent`float **類型而言，** 的值為 FLT_MAX_EXP。
 
 #### <a name="example"></a>範例
 
@@ -1115,7 +1115,7 @@ static constexpr int max_exponent10 = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式傳回值僅對浮點數類型有意義。 就 **float** 類型而言，`max_exponent` 的值為 FLT_MAX_10。
+此成員函式傳回值僅對浮點數類型有意義。 就 `max_exponent`float **類型而言，** 的值為 FLT_MAX_10。
 
 #### <a name="example"></a>範例
 
@@ -1161,7 +1161,7 @@ static constexpr Type min() throw();
 
 #### <a name="remarks"></a>備註
 
-針對**float**類型的**INT**和 FLT_MIN，最小正規化值是 INT_MIN。 如果[is_bounded](#is_bounded)為**true** ，或如果[is_signed](#is_signed)為**false**，則傳回值會有意義。
+最小正規化值為類型**INT**的 INT_MIN，而類型為**float**的 FLT_MIN。 如果[is_bounded](#is_bounded)為**true** ，或[is_signed](#is_signed)為**false**，則傳回值會有意義。
 
 #### <a name="example"></a>範例
 
@@ -1211,7 +1211,7 @@ static constexpr int min_exponent = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式僅對浮點數類型有意義。 就 **float** 類型而言，`min_exponent` 的值為 FLT_MIN_EXP。
+此成員函式僅對浮點數類型有意義。 就 `min_exponent`float **類型而言，** 的值為 FLT_MIN_EXP。
 
 #### <a name="example"></a>範例
 
@@ -1257,7 +1257,7 @@ static constexpr int min_exponent10 = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式僅對浮點數類型有意義。 就 **float** 類型而言，`min_exponent10` 的值為 FLT_MIN_10_EXP。
+此成員函式僅對浮點數類型有意義。 就 `min_exponent10`float **類型而言，** 的值為 FLT_MIN_10_EXP。
 
 #### <a name="example"></a>範例
 

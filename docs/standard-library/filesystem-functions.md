@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898715"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875817"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函式
 
@@ -150,11 +150,11 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 函式可能會將中的一個或多個檔案*從*複製或連結至，*以*控制 [選擇 *]，這*會以*不含選擇參數的*多載 `copy_options::none` 來取得。 選擇最*多隻能包含*其中一個：
 
-- `skip_existing`、 `overwrite_existing`或 `update_existing`
+- `skip_existing`、`overwrite_existing` 或 `update_existing`
 
 - `copy_symlinks` 或 `skip_symlinks`
 
-- `directories_only`、 `create_symlinks`或 `create_hard_links`
+- `directories_only`、`create_symlinks` 或 `create_hard_links`
 
 函式會先判斷 *`f` 的 file_status*值 *，並將 `t` 為：*
 
@@ -184,7 +184,7 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - 否則，如果 `is_directory(f)`，則 `copy_file(from, to` / `from.filename(), opts)`。
 
-- 否則，則設為 `copy_file(from, to, opts)`。
+- 否則為 `copy_file(from, to, opts)`。
 
 否則，如果 `is_directory(f) && (opts & copy_options::recursive || !opts)`，則：
 

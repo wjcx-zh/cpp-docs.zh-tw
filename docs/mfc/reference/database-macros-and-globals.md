@@ -14,11 +14,11 @@ helpviewer_keywords:
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
 ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323186"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866645"
 ---
 # <a name="database-macros-and-globals"></a>資料庫巨集和全域
 
@@ -38,12 +38,12 @@ ms.locfileid: "62323186"
 
 |||
 |-|-|
-|[AfxDbInitModule](#afxdbinitmodule)|新增動態連結至 MFC 之標準 MFC DLL 的資料庫支援。|
+|[AfxDbInitModule](#afxdbinitmodule)|針對動態連結至 MFC 的一般 MFC DLL，加入資料庫支援。|
 |[AfxGetHENV](#afxgethenv)|擷取目前正在由 MFC 使用的 ODBC 環境控制代碼。 您可以直接呼叫 ODBC 時使用這個控制代碼。|
 
-## <a name="afxdbinitmodule"></a> AfxDbInitModule
+## <a name="afxdbinitmodule"></a>AfxDbInitModule
 
-MFC 資料庫 （或 DAO） 支援從動態連結至 MFC 之標準 MFC DLL，將呼叫此函式新增在您的標準 MFC DLL 的`CWinApp::InitInstance`函式來初始化 MFC 資料庫 DLL。
+若為 MFC 資料庫（或 DAO）支援來自動態連結至 MFC 的標準 MFC DLL，請在您的一般 MFC DLL 的 `CWinApp::InitInstance` 函式中新增對此函式的呼叫，以初始化 MFC 資料庫 DLL。
 
 ### <a name="syntax"></a>語法
 
@@ -53,15 +53,15 @@ void AFXAPI AfxDbInitModule( );
 
 ### <a name="remarks"></a>備註
 
-請確定這個呼叫發生之前的任何基底類別呼叫或任何加入的程式碼會存取 MFC 資料庫 DLL。 MFC 資料庫 DLL 是一個 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 連結至`CDynLinkLibrary`鏈結，它必須建立`CDynLinkLibrary`每個模組，將會使用它的內容中的物件。 `AfxDbInitModule` 會建立`CDynLinkLibrary`物件在您的標準 MFC DLL 的內容中，讓它取得連結至`CDynLinkLibrary`物件的標準 MFC DLL 的鏈結。
+請確定這個呼叫發生在任何基類呼叫之前，或任何存取 MFC 資料庫 DLL 的已加入程式碼之前。 MFC 資料庫 DLL 是 MFC 延伸 DLL;為了讓 MFC 延伸模組 DLL 可以連接到 `CDynLinkLibrary` 鏈，它必須在每個將使用它的模組內容中，建立一個 `CDynLinkLibrary` 物件。 `AfxDbInitModule` 會在您的一般 MFC DLL 內容中建立 `CDynLinkLibrary` 物件，讓它能夠連接到正則 MFC DLL 的 `CDynLinkLibrary` 物件鏈。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** \<afxdll_.h >
+**標頭：** \<afxdll_ .h >
 
-##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
+##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL
 
-使用這個巨集呼叫可能會傳回任何 ODBC API 函式`SQL_STILL_EXECUTING`。
+使用此宏呼叫可能會傳回 `SQL_STILL_EXECUTING`的任何 ODBC API 函式。
 
 ```
 AFX_ODBC_CALL(SQLFunc)
@@ -70,27 +70,27 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="parameters"></a>參數
 
 *SQLFunc*<br/>
-ODBC API 函式。 如需有關 ODBC API 函式的詳細資訊，請參閱 Windows SDK。
+ODBC API 函式。 如需 ODBC API 函式的詳細資訊，請參閱 Windows SDK。
 
 ### <a name="remarks"></a>備註
 
-`AFX_ODBC_CALL` 重複的函式之前呼叫它不會再傳回`SQL_STILL_EXECUTING`。
+`AFX_ODBC_CALL` 重複呼叫函式，直到不再傳回 `SQL_STILL_EXECUTING`為止。
 
-叫用之前`AFX_ODBC_CALL`，您必須宣告一個變數， `nRetCode`，型別 RETCODE。
+叫用 `AFX_ODBC_CALL`之前，您必須宣告 RETCODE 類型的變數 `nRetCode`。
 
-請注意 MFC ODBC 類別現在使用只同步處理。 若要執行非同步作業，您必須呼叫 ODBC API 函式`SQLSetConnectOption`。 如需詳細資訊，請參閱 「 非同步執行函式 「 Windows SDK 中的主題。
+請注意，MFC ODBC 類別現在只會使用同步處理。 若要執行非同步作業，您必須呼叫 ODBC API 函數 `SQLSetConnectOption`。 如需詳細資訊，請參閱 Windows SDK 中的「非同步執行函式」主題。
 
 ### <a name="example"></a>範例
 
-這個範例會使用`AFX_ODBC_CALL`來呼叫`SQLColumns`ODBC API 函式，傳回的資料行清單中所命名的資料表`strTableName`。 請注意宣告`nRetCode`以及將參數傳遞給函式的資料錄集的資料成員使用。 此範例也說明如何檢查與呼叫的結果`Check`，類別的成員函式`CRecordset`。 變數`prs`是一個指向`CRecordset`宣告其他位置的物件。
+這個範例會使用 `AFX_ODBC_CALL` 來呼叫 `SQLColumns` ODBC API 函式，此函式會傳回資料表中的資料行清單（由 `strTableName`命名）。 請注意 `nRetCode` 的宣告和記錄集資料成員的使用，以將參數傳遞至函式。 此範例也說明如何使用 `Check`（`CRecordset`類別的成員函式）來檢查呼叫的結果。 變數 `prs` 是 `CRecordset` 物件的指標，在其他地方宣告。
 
 [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]
 
 ### <a name="requirements"></a>需求
 
-**標頭：** afxdb.h
+**標頭：** afxdb。h
 
-##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC
+##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC
 
 在 MFC 4.2 變更這個巨集實作。
 
@@ -100,26 +100,26 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>參數
 
-*prs*<br/>
+*pr*<br/>
 `CRecordset` 物件或 `CDatabase` 物件指標。 從 MFC 4.2 開始略過這個參數值。
 
 *SQLFunc*<br/>
-ODBC API 函式。 如需有關 ODBC API 函式的詳細資訊，請參閱 Windows SDK。
+ODBC API 函式。 如需 ODBC API 函式的詳細資訊，請參閱 Windows SDK。
 
 ### <a name="remarks"></a>備註
 
-`AFX_SQL_ASYNC` 只需呼叫巨集[AFX_ODBC_CALL](#afx_odbc_call) ，並忽略*pr*參數。 在 MFC 4.2 之前的版本中，`AFX_SQL_ASYNC` 是用來呼叫可能傳回 `SQL_STILL_EXECUTING` 的 ODBC API 函式。 如果 ODBC API 函式確實傳回 `SQL_STILL_EXECUTING`，則 `AFX_SQL_ASYNC` 會呼叫 `prs->OnWaitForDataSource`。
+`AFX_SQL_ASYNC` 只會呼叫宏[AFX_ODBC_CALL](#afx_odbc_call)並忽略*pr*參數。 在 MFC 4.2 之前的版本中，`AFX_SQL_ASYNC` 是用來呼叫可能傳回 `SQL_STILL_EXECUTING` 的 ODBC API 函式。 如果 ODBC API 函式確實傳回 `SQL_STILL_EXECUTING`，則 `AFX_SQL_ASYNC` 會呼叫 `prs->OnWaitForDataSource`。
 
 > [!NOTE]
->  MFC ODBC 類別現在只會使用同步處理。 若要執行非同步作業，您必須呼叫 ODBC API 函式`SQLSetConnectOption`。 如需詳細資訊，請參閱 「 非同步執行函式 「 Windows SDK 中的主題。
+>  MFC ODBC 類別現在只會使用同步處理。 若要執行非同步作業，您必須呼叫 ODBC API 函數 `SQLSetConnectOption`。 如需詳細資訊，請參閱 Windows SDK 中的「非同步執行函式」主題。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdb.h
+  **標頭**afxdb。h
 
-##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC
+##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC
 
-`AFX_SQL_SYNC`巨集只會呼叫此函式`SQLFunc`。
+`AFX_SQL_SYNC` 宏只會 `SQLFunc`呼叫函數。
 
 ```
 AFX_SQL_SYNC(SQLFunc)
@@ -128,15 +128,15 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="parameters"></a>參數
 
 *SQLFunc*<br/>
-ODBC API 函式。 如需有關這些函式的詳細資訊，請參閱 Windows SDK。
+ODBC API 函式。 如需這些函數的詳細資訊，請參閱 Windows SDK。
 
 ### <a name="remarks"></a>備註
 
-使用這個巨集呼叫 ODBC API 函式，將不會傳回`SQL_STILL_EXECUTING`。
+使用此宏呼叫將不會傳回 `SQL_STILL_EXECUTING`的 ODBC API 函式。
 
-然後再呼叫`AFX_SQL_SYNC`，您必須宣告一個變數， `nRetCode`，型別 RETCODE。 您可以檢查的值`nRetCode`巨集呼叫之後。
+在呼叫 `AFX_SQL_SYNC`之前，您必須宣告 RETCODE 類型的變數 `nRetCode`。 您可以在宏呼叫之後檢查 `nRetCode` 的值。
 
-請注意，實作`AFX_SQL_SYNC`在 MFC 4.2 變更。 檢查伺服器狀態不再是必要的因為`AFX_SQL_SYNC`只要將值指派給`nRetCode`。 比方說，而不是進行呼叫
+請注意，在 MFC 4.2 中，`AFX_SQL_SYNC` 的執行已變更。 因為已不再需要檢查伺服器狀態，所以 `AFX_SQL_SYNC` 只需指派 `nRetCode`的值。 例如，而不是進行呼叫
 
 [!code-cpp[NVC_MFCDatabase#40](../../mfc/codesnippet/cpp/database-macros-and-globals_2.cpp)]
 
@@ -146,11 +146,11 @@ ODBC API 函式。 如需有關這些函式的詳細資訊，請參閱 Windows S
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdb.h
+  **標頭**afxdb。h
 
-##  <a name="afxgethenv"></a>  AfxGetHENV
+##  <a name="afxgethenv"></a>AfxGetHENV
 
-您可以使用傳回的控制代碼中直接的 ODBC 呼叫，但您不能關閉此控制代碼或假設控制代碼仍然有效，並可用之後任何現有`CDatabase`-或`CRecordset`-衍生的物件皆已終結。
+您可以在直接 ODBC 呼叫中使用傳回的控制碼，但是您不能關閉控制碼，或假設控制碼仍然有效，而且在終結任何現有的 `CDatabase`或 `CRecordset`衍生的物件之後可使用。
 
 ```
 HENV AFXAPI AfxGetHENV();
@@ -158,12 +158,12 @@ HENV AFXAPI AfxGetHENV();
 
 ### <a name="return-value"></a>傳回值
 
-目前正在由 MFC 使用的 ODBC 環境控制代碼。 可以是`SQL_HENV_NULL`有無[CDatabase](../../mfc/reference/cdatabase-class.md)物件，且沒有[CRecordset](../../mfc/reference/crecordset-class.md)中使用的物件。
+MFC 目前正在使用之 ODBC 環境的控制碼。 如果沒有[CDatabase](../../mfc/reference/cdatabase-class.md)物件，而且沒有任何[CRecordset](../../mfc/reference/crecordset-class.md)物件正在使用中，就可以 `SQL_HENV_NULL`。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdb.h
+  **標頭**afxdb。h
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+[宏和全域](../../mfc/reference/mfc-macros-and-globals.md)

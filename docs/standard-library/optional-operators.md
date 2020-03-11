@@ -1,5 +1,5 @@
 ---
-title: '&lt;選擇性&gt;運算子'
+title: '&lt;選擇性&gt; 運算子'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268920"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854048"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;選擇性&gt;運算子
+# <a name="ltoptionalgt-operators"></a>&lt;選擇性&gt; 運算子
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 `optional` 物件是否等於右邊的 `optional` 物件。
 
@@ -39,13 +39,13 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*左方*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
-*權限*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 `optional` 物件是否不等於右邊的 `optional` 物件。
 
@@ -59,11 +59,11 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*左方*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
-*權限*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -83,11 +83,11 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*左方*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
-*權限*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -107,11 +107,11 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*左方*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
-*權限*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -135,11 +135,11 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*左方*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
-*權限*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -149,7 +149,7 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 此範本函式會傳回 `right < left`。
 
-## <a name="op_gt_eq"></a> 運算子&gt;=
+## <a name="op_gt_eq"></a>運算子&gt;=
 
 測試運算子左邊的 `optional` 物件是否大於或等於右邊的 `optional` 物件。
 
@@ -163,15 +163,15 @@ template <class T, class U> constexpr bool operator>=(const U&, const optional<T
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*左方*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
-*權限*\
-型別的物件`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左側的 `optional` 大於或等於運算子右側的 `optional`，則為 **true**；否則為 **false**。
+如果運算子左側的 **大於或等於運算子右側的**，則為 `optional`true`optional`；否則為 **false**。
 
 ### <a name="remarks"></a>備註
 

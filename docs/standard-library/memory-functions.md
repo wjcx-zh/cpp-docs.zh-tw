@@ -78,11 +78,11 @@ helpviewer_keywords:
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
 ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687719"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856679"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
@@ -133,10 +133,10 @@ void* align(
 *對齊*\
 嘗試的對齊界限。
 
-*大小*\
+*size*\
 對齊儲存體的大小 (位元組)。
 
-*ptr* \
+*ptr*\
 要使用的可用連續儲存集區的開始位址。 這個參數也是輸出參數，如果對齊成功，則設定為包含新的起始位址。 如果 `align()` 不成功，則不會修改此參數。
 
 *空間*\
@@ -177,7 +177,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 
 ## <a name="allocate_shared"></a>allocate_shared
 
-使用指定的配置器，針對指定的類型，建立已配置和所構造物件的[shared_ptr](shared-ptr-class.md) 。 傳回 `shared_ptr`。
+使用指定的配置器，為指定的類型建立和所設定物件的[shared_ptr](shared-ptr-class.md) 。 傳回 `shared_ptr`。
 
 ```cpp
 template <class T, class Allocator, class... Args>
@@ -188,10 +188,10 @@ shared_ptr<T> allocate_shared(
 
 ### <a name="parameters"></a>參數
 
-配置 \
+配置\
 用來建立物件的配置器。
 
-*args* \
+*args*\
 成為物件的零個或多個引數。
 
 ### <a name="remarks"></a>備註
@@ -321,13 +321,13 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*T* \
+*T*\
 傳回之共用指標所控制的類型。
 
 *其他*\
 引數共用指標所控制的類型。
 
-*sp* \
+*sp*\
 引數共用指標。
 
 ### <a name="remarks"></a>備註
@@ -371,10 +371,10 @@ void declare_no_pointers(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
+*ptr*\
 已不再包含可追蹤指標的第一個位元位址。
 
-*大小*\
+*size*\
 從不包含可追蹤指標的*ptr*開始的區塊大小。
 
 ### <a name="remarks"></a>備註
@@ -392,7 +392,7 @@ void declare_reachable(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
+*ptr*\
 指向可存取、已配置之有效儲存區域的指標。
 
 ### <a name="remarks"></a>備註
@@ -401,7 +401,7 @@ void declare_reachable(
 
 ## <a name="default_delete"></a>default_delete
 
-刪除以**operator new**所配置的物件。 適用于與[unique_ptr](unique-ptr-class.md)搭配使用。
+刪除以**operator new**所配置的物件。 適合與[unique_ptr](unique-ptr-class.md)搭配使用。
 
 ```cpp
 struct default_delete
@@ -417,7 +417,7 @@ struct default_delete
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
+*ptr*\
 要刪除的物件指標。
 
 *其他*\
@@ -425,7 +425,7 @@ struct default_delete
 
 ### <a name="remarks"></a>備註
 
-類別樣板描述的刪除者會刪除以**operator new**配置的純量物件，適合搭配類別樣板 `unique_ptr` 使用。 它也具有明確的特製化 `default_delete<T[]>`。
+類別樣板描述的刪除者會刪除以**operator new**配置的純量物件，適合搭配類別樣板 `unique_ptr`使用。 它也具有明確的特製化 `default_delete<T[]>`。
 
 ## <a name="destroy_at"></a>destroy_at
 
@@ -486,13 +486,13 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*T* \
+*T*\
 傳回之共用指標所控制的類型。
 
 *其他*\
 引數共用指標所控制的類型。
 
-*sp* \
+*sp*\
 引數共用指標。
 
 ### <a name="remarks"></a>備註
@@ -550,10 +550,10 @@ Deleter* get_deleter(
 *刪除者*\
 刪除者的類型。
 
-*T* \
+*T*\
 共用指標所控制的類型。
 
-*sp* \
+*sp*\
 共用指標。
 
 ### <a name="remarks"></a>備註
@@ -676,7 +676,7 @@ could store is given by: resultPair.second = 9.
 
 ## <a name="make_shared"></a>make_shared
 
-建立並傳回[shared_ptr](shared-ptr-class.md) ，其指向使用預設配置器從零或多個引數所建立的已設定物件。 配置並建構指定類別的物件和 `shared_ptr` 來管理共用的物件擁有權，並傳回 `shared_ptr`。
+建立並傳回[shared_ptr](shared-ptr-class.md) ，該物件指向使用預設配置器從零個或多個引數所構成的已設定物件。 配置並建構指定類別的物件和 `shared_ptr` 來管理共用的物件擁有權，並傳回 `shared_ptr`。
 
 ```cpp
 template <class T, class... Args>
@@ -686,7 +686,7 @@ shared_ptr<T> make_shared(
 
 ### <a name="parameters"></a>參數
 
-*args* \
+*args*\
 零或多個建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。
 
 ### <a name="remarks"></a>備註
@@ -791,24 +791,24 @@ template <class T, class... Args>
 
 ### <a name="parameters"></a>參數
 
-*T* \
+*T*\
 `unique_ptr` 指向的物件類型。
 
-*Args* \
+*Args*\
 *Args*所指定之參數的類型。
 
-*args* \
+*args*\
 要傳遞給*T 型別*物件之函式的引數。
 
 *元素*\
 類型*T*的元素陣列。
 
-*大小*\
+*size*\
 在新陣列中要為其配置空間的元素數目。
 
 ### <a name="remarks"></a>備註
 
-第一個多載用於單一物件。 針對陣列叫用第二個多載。 第三個多載可防止您在類型引數中指定陣列大小（make_unique \<T [N] >）;目前的標準不支援此結構。 當您使用 `make_unique` 來建立陣列的 `unique_ptr`，必須將陣列元素個別初始化。 最好的選擇是使用[std：： vector](vector-class.md)，而不是使用這個多載。
+第一個多載用於單一物件。 針對陣列叫用第二個多載。 第三個多載可防止您在類型引數中指定陣列大小（make_unique\<T [N] >）;目前的標準不支援此結構。 當您使用 `make_unique` 來建立陣列的 `unique_ptr`，必須將陣列元素個別初始化。 最好的選擇是使用[std：： vector](vector-class.md)，而不是使用這個多載。
 
 為了例外狀況安全，`make_unique` 實作很謹慎，因此建議您使用 `make_unique`，而不是直接呼叫 `unique_ptr` 建構函式。
 
@@ -822,7 +822,7 @@ template <class T, class... Args>
 
 ## <a name="owner_less"></a>owner_less
 
-允許按擁有權混合比較共用指標和弱式指標。 如果左側參數是在成員函式 `owner_before` 的 right 參數之前排序，則傳回**true** 。
+允許按擁有權混合比較共用指標和弱式指標。 如果左側參數是在成員函式 `owner_before`的 right 參數之前排序，則傳回**true** 。
 
 ```cpp
 template <class T>
@@ -888,7 +888,7 @@ template<> struct owner_less<void>
 *左方*\
 共用指標或弱式指標。
 
-*right* \
+*right*\
 共用指標或弱式指標。
 
 ### <a name="remarks"></a>備註
@@ -911,12 +911,12 @@ shared_ptr<T> reinterpret_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
-@No__t_0 的參考。
+*ptr*\
+`shared_ptr<U>`的參考。
 
 ### <a name="remarks"></a>備註
 
-如果*ptr*是空的，新的 `shared_ptr` 也是空的，否則會與*ptr*共用擁有權。 新的共用指標是評估 `reinterpret_cast<Y*>(ptr.get())` 的結果，其中 `Y` 為 `typename std::shared_ptr<T>::element_type`。 如果 `reinterpret_cast<T*>((U*)nullptr)` 的格式不正確，則此行為未定義。
+如果*ptr*是空的，新的 `shared_ptr` 也是空的，否則會與*ptr*共用擁有權。 新的共用指標是評估 `reinterpret_cast<Y*>(ptr.get())`的結果，其中 `Y` 為 `typename std::shared_ptr<T>::element_type`。 如果 `reinterpret_cast<T*>((U*)nullptr)` 的格式不正確，則此行為未定義。
 
 接受左值參考的樣板函式是 c + + 17 的新功能。 採用右值參考的範本函式是 c + + 20 的新功能。
 
@@ -993,13 +993,13 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*T* \
+*T*\
 傳回之共用指標所控制的類型。
 
 *其他*\
 引數共用指標所控制的類型。
 
-*sp* \
+*sp*\
 引數共用指標。
 
 ### <a name="remarks"></a>備註
@@ -1065,7 +1065,7 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*T* \
+*T*\
 引數指標所控制的類型。
 
 *刪除者*\
@@ -1074,7 +1074,7 @@ void swap(
 *左方*\
 左邊的指標。
 
-*right* \
+*right*\
 右指標。
 
 ### <a name="remarks"></a>備註
@@ -1138,10 +1138,10 @@ void undeclare_no_pointers(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
-先前使用[declare_no_pointers](#declare_no_pointers)標記之記憶體位址的指標。
+*ptr*\
+先前使用[declare_no_pointers](#declare_no_pointers)標示之記憶體位址的指標。
 
-*大小*\
+*size*\
 記憶體範圍中的位元組數目。 這個值必須等於 `declare_no_pointers` 呼叫中所使用的數位。
 
 ### <a name="remarks"></a>備註
@@ -1160,8 +1160,8 @@ T *undeclare_reachable(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
-先前使用[declare_reachable](#declare_reachable)標記之記憶體位址的指標。
+*ptr*\
+先前使用[declare_reachable](#declare_reachable)標示之記憶體位址的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -1385,7 +1385,7 @@ for (; first != last; ++first)
 
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
-預設會從指定的位置開始，建立反覆運算器 `value_type` 的指定數目物件。
+預設會從指定的位置開始，建立反覆運算器 `value_type`的指定數目物件。
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1804,6 +1804,6 @@ template <class T, class Alloc>
 inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<memory>](memory.md)

@@ -51,11 +51,11 @@ helpviewer_keywords:
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
 ms.openlocfilehash: 4508c683ff5d4bece290b7fef2bbd83ae8023eac
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141689"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882889"
 ---
 # <a name="openmp-functions"></a>OpenMP 函式
 
@@ -65,7 +65,7 @@ OpenMP 標準C++的視覺化執行包含下列函數和資料類型。
 
 針對環境執行：
 
-|函數|描述|
+|函式|描述|
 |--------|-----------|
 |[omp_set_num_threads](#omp-set-num-threads)|設定近期平列區域中的執行緒數目，除非是由[num_threads](openmp-clauses.md#num-threads)子句覆寫。|
 |[omp_get_num_threads](#omp-get-num-threads)|傳回平列區域中的執行緒數目。|
@@ -80,7 +80,7 @@ OpenMP 標準C++的視覺化執行包含下列函數和資料類型。
 
 針對鎖定：
 
-|函數|描述|
+|函式|描述|
 |--------|-----------|
 |[omp_init_lock](#omp-init-lock)|初始化簡單鎖定。|
 |[omp_init_nest_lock](#omp-init-nest-lock)|初始化鎖定。|
@@ -100,7 +100,7 @@ OpenMP 標準C++的視覺化執行包含下列函數和資料類型。
 
 針對計時常式：
 
-|函數|描述|
+|函式|描述|
 |--------|-----------|
 |[omp_get_wtime](#omp-get-wtime)|以秒為單位傳回某個時間點經過的值。|
 |[omp_get_wtick](#omp-get-wtick)|傳回處理器時鐘刻度之間的秒數。|

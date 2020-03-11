@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689289"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884002"
 ---
 # <a name="moneypunct-class"></a>moneypunct 類別
 
@@ -66,7 +66,7 @@ class moneypunct;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
+*CharType*\
 用於程式內部字元編碼的類型。
 
 *國際*\
@@ -74,7 +74,7 @@ class moneypunct;
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。
 
 常數靜態物件 intl 會儲存範本參數 *Intl* 的值。
 
@@ -84,16 +84,16 @@ class moneypunct;
 |-|-|
 |[moneypunct](#moneypunct)|`moneypunct` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[string_type](#string_type)|類型，描述包含 `CharType` 類型字元的字串。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[curr_symbol](#curr_symbol)|傳回地區設定特定的項目序列，做為貨幣符號。|
 |[decimal_point](#decimal_point)|傳回地區設定特定的項目序列，做為小數點符號。|
@@ -116,7 +116,7 @@ class moneypunct;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
@@ -130,7 +130,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **CharType** 同義。
+此類型與樣板參數 **CharType** 同義。
 
 ## <a name="curr_symbol"></a>  moneypunct::curr_symbol
 
@@ -277,7 +277,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-請參閱[群組](#grouping)的範例，其中 `grouping` 會呼叫虛擬成員函式。
+請參閱[群組](#grouping)的範例，其中 `grouping`會呼叫虛擬成員函式。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,7 +289,7 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>傳回值
 
-受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 @No__t_0 的四個元素都可以有下列值：
+受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 `pattern::field` 的四個元素都可以有下列值：
 
 - `none` 比對零或多個空格，或不產生任何內容。
 
@@ -301,9 +301,9 @@ virtual pattern do_neg_format() const;
 
 - `value` 以符合或產生貨幣值。
 
-會產生貨幣輸出欄位的元件，而貨幣輸入欄位的元件會依照這些元素出現在 `pattern::field` 中的順序進行比對。 每個值 `sign`、`symbol`、`value`，以及 `none` 或 `space` 都必須只出現一次。 @No__t_0 的值不能先出現。 space 值「不得」第一個或最後一個出現。 如果 `Intl` 為 true，則順序會 `symbol`、`sign`、`none`，然後 `value`。
+會產生貨幣輸出欄位的元件，而貨幣輸入欄位的元件會依照這些元素出現在 `pattern::field`中的順序進行比對。 每個值 `sign`、`symbol`、`value`，以及 `none` 或 `space` 都必須只出現一次。 `none` 的值不能先出現。 space 值「不得」第一個或最後一個出現。 如果 `Intl` 為 true，則順序會 `symbol`、`sign`、`none`，然後 `value`。
 
-`moneypunct`\< **CharType**, **Intl**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
+`moneypunct`\< **CharType**，**國際**> 的範本版本會傳回 `{`**money_base：： symbol**、 **money_base：： sign**、 **money_base：： value**、 **money_base：： none**`}`。
 
 ### <a name="example"></a>範例
 
@@ -337,7 +337,7 @@ virtual pattern do_pos_format() const;
 
 受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為正數金額產生貨幣輸出欄位。 （它也會決定如何比對貨幣輸入欄位的元件）。編碼方式與[do_neg_format](#do_neg_format)相同。
 
-moneypunct\< **CharType**, **Inputlterator**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
+Moneypunct\< **CharType**， **Inputlterator**> 的範本版本會傳回 `{`**money_base：： symbol**、 **money_base：： sign**、 **money_base：： value**、 **money_base：： none**`}`。
 
 ### <a name="example"></a>範例
 
@@ -523,12 +523,12 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs* \
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下：
+*_Refs*參數和其重要性的可能值為：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -536,7 +536,7 @@ explicit moneypunct(size_t _Refs = 0);
 
 - \> 1：未定義這些值。
 
-由於解構函式會受到保護，因此沒有直接的範例。
+無法提供任何直接範例，因為解構函式受到保護。
 
 建構函式會以 [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*) 將其基底物件初始化。
 
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可以儲存標點符號序列的複本。
+此類型描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)其物件可以儲存標點符號序列的複本。
 
 ## <a name="thousands_sep"></a>  moneypunct::thousands_sep
 
@@ -833,7 +833,7 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

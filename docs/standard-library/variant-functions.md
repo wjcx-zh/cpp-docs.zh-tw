@@ -1,5 +1,5 @@
 ---
-title: '&lt;variant&gt;函式'
+title: '&lt;variant&gt; 函數'
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::get
@@ -7,15 +7,15 @@ f1_keywords:
 - variant/std::holds_alternative
 - variant/std::visit
 ms.openlocfilehash: d558eb086e076ba22722080b0c19f3d5733136d2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268380"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865752"
 ---
-# <a name="ltvariantgt-functions"></a>&lt;variant&gt;函式
+# <a name="ltvariantgt-functions"></a>&lt;variant&gt; 函數
 
-## <a name="get"></a> 取得
+## <a name="get"></a>獲取
 
 取得物件的變體。
 
@@ -38,9 +38,9 @@ template <class T, class... Types>
     constexpr const T&& get(const variant<Types...>&&);
 ```
 
-## <a name="get_if"></a> get_if
+## <a name="get_if"></a>get_if
 
-若有的話，請取得物件的變體。
+取得物件的 variant （如果有的話）。
 
 ```cpp
 template <size_t I, class... Types>
@@ -53,23 +53,23 @@ template <class T, class... Types>
     constexpr add_pointer_t<const T> get_if(const variant<Types...>*) noexcept;
 ```
 
-## <a name="holds_alternative"></a> holds_alternative
+## <a name="holds_alternative"></a>holds_alternative
 
-傳回 **，則為 true**有變化。
+如果有 variant 存在，**則傳回 true** 。
 
 ```cpp
 template <class T, class... Types>
     constexpr bool holds_alternative(const variant<Types...>&) noexcept;
 ```
 
-## <a name="swap"></a> 交換
+## <a name="swap"></a>調換
 
 ```cpp
 template <class... Types>
     void swap(variant<Types...>&, variant<Types...>&) noexcept(see below);
 ```
 
-## <a name="variant_npos"></a> variant_npos
+## <a name="variant_npos"></a>variant_npos
 
 ```cpp
 namespace std {
@@ -77,9 +77,9 @@ namespace std {
 }
 ```
 
-## <a name="visit"></a> 請瀏覽
+## <a name="visit"></a>流覽
 
-移至下一步**variant**。
+移至下一個**variant**。
 
 ```cpp
 template <class Visitor, class... Variants>

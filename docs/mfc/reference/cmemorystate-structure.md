@@ -9,15 +9,15 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163750"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855262"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 
-提供便利的方式來偵測記憶體流失的問題在您的程式。
+提供便利的方式來偵測程式中的記憶體流失。
 
 ## <a name="syntax"></a>語法
 
@@ -31,41 +31,41 @@ struct CMemoryState
 
 |名稱|描述|
 |----------|-----------------|
-|[CMemoryState::CMemoryState](#cmemorystate)|控制記憶體檢查點的建構類似類別結構。|
+|[CMemoryState：： CMemoryState](#cmemorystate)|結構控制記憶體檢查點的類似類別結構。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMemoryState::Checkpoint](#checkpoint)|取得目前的記憶體狀態快照 （檢查點）。|
-|[CMemoryState::Difference](#difference)|計算兩個物件的型別之間的差異`CMemoryState`。|
-|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|自上一個檢查點之後，傾印目前配置的所有物件的摘要。|
-|[CMemoryState::DumpStatistics](#dumpstatistics)|列印記憶體配置的統計資料`CMemoryState`物件。|
+|[CMemoryState：： Checkpoint](#checkpoint)|取得目前記憶體狀態的快照集（檢查點）。|
+|[CMemoryState：:D ifference](#difference)|計算 `CMemoryState`類型的兩個物件之間的差異。|
+|[CMemoryState：:D umpAllObjectsSince](#dumpallobjectssince)|從先前的檢查點開始，傾印所有目前已設定物件的摘要。|
+|[CMemoryState：:D umpStatistics](#dumpstatistics)|列印 `CMemoryState` 物件的記憶體配置統計資料。|
 
 ## <a name="remarks"></a>備註
 
-`CMemoryState` 是一種結構，而且沒有基底類別。
+`CMemoryState` 是一個結構，而且沒有基類。
 
-物件的記憶體在堆積上配置但未解除配置時已不再需要時，就會發生 「 記憶體遺漏 」。 這類的記憶體流失最終可能會導致記憶體不足錯誤。 有數種方式來配置及解除配置您的程式中的記憶體：
+當物件的記憶體配置在堆積上，但不再需要取消配置時，就會發生「記憶體流失」。 這類記憶體流失最後可能會導致記憶體不足的錯誤。 有數種方式可以配置和解除配置程式中的記憶體：
 
-- 使用`malloc` /  `free`系列函式，從執行階段程式庫。
+- 從執行時間程式庫使用 `malloc`/ `free` 系列的函式。
 
-- 使用 Windows API 記憶體管理函式`LocalAlloc` /  `LocalFree`並`GlobalAlloc` /  `GlobalFree`。
+- 使用 Windows API 記憶體管理功能，`LocalAlloc`/ `LocalFree` 和 `GlobalAlloc`/ `GlobalFree`。
 
-- 使用C++**新**並**刪除**運算子。
+- C++使用**new**和**delete**運算子。
 
-`CMemoryState`診斷不僅能夠協助偵測記憶體流失時使用的記憶體配置，產生**新**運算子未解除配置使用**刪除**。 記憶體管理函式的其他兩個群組會針對非C++程式，以及混用它們**新**並**刪除**在相同的程式不在建議。 其他巨集，DEBUG_NEW，可用來取代**新**運算子時，您需要的檔案和行號的記憶體配置的追蹤。 每當您通常會使用，會使用 DEBUG_NEW**新**運算子。
+當使用**new**運算子配置的記憶體未使用**delete**解除配置時，`CMemoryState` 診斷只會協助偵測記憶體流失。 另兩個記憶體管理函式群組適用于非C++程式，不建議將它們與相同程式中的**new**和**delete**混用。 當您需要記憶體配置的檔案和行號追蹤時，會提供額外的宏 DEBUG_NEW，以取代**新**的運算子。 每當您通常會使用**NEW**運算子時，就會使用 DEBUG_NEW。
 
-如同其他診斷，`CMemoryState`診斷僅適用於您的程式偵錯版本。 偵錯版本必須定義 _DEBUG 常數。
+如同其他診斷，`CMemoryState` 診斷僅適用于您程式的 debug 版本。 Debug 版本必須定義 _DEBUG 常數。
 
-如果您懷疑您的程式有記憶體流失，您可以使用`Checkpoint`， `Difference`，和`DumpStatistics`函式來探索在程式執行的兩個不同點的記憶體狀態 （配置的物件） 之間的差異。 這項資訊可用於判斷函式會清除其所配置的所有物件。
+如果您懷疑程式發生記憶體流失，您可以使用 `Checkpoint`、`Difference`和 `DumpStatistics` 函式，探索程式執行中兩個不同點的記憶體狀態（已配置的物件）之間的差異。 這項資訊可用於判斷函式是否正在清除它所配置的所有物件。
 
-如果只了解配置和解除配置中的發生不平衡的發生位置未提供足夠的資訊，您可以使用`DumpAllObjectsSince`傾印從上一個呼叫所配置的所有物件的函式`Checkpoint`。 此傾印顯示的順序，配置、 原始程式檔和行位置的物件配置 （如果您使用 DEBUG_NEW 配置），和衍生的物件、 它的位址和它的大小。 `DumpAllObjectsSince` 也會呼叫每個物件的`Dump`函式以提供其目前的狀態資訊。
+如果只知道配置和解除配置的不平衡發生的位置不會提供足夠的資訊，您可以使用 `DumpAllObjectsSince` 函式來傾印自先前呼叫 `Checkpoint`之後所配置的所有物件。 此傾印會顯示配置的順序、原始程式檔和已設定物件的程式程式碼（如果您使用 DEBUG_NEW 進行配置），以及物件的衍生、其位址和大小。 `DumpAllObjectsSince` 也會呼叫每個物件的 `Dump` 函數，以提供其目前狀態的相關資訊。
 
-如需有關如何使用`CMemoryState`和其他診斷，請參閱[偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。
+如需如何使用 `CMemoryState` 和其他診斷的詳細資訊，請參閱[偵錯工具 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。
 
 > [!NOTE]
->  型別之物件的宣告`CMemoryState`及呼叫成員函式應該括住`#if defined(_DEBUG)/#endif`指示詞。 這會導致記憶體診斷，以包含只在偵錯組建的程式。
+>  `CMemoryState` 類型的物件宣告和成員函式的呼叫，應由 `#if defined(_DEBUG)/#endif` 指示詞括住。 這會導致記憶體診斷僅包含在程式的偵錯工具組建中。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -75,9 +75,9 @@ struct CMemoryState
 
 **標頭：** afx.h
 
-##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
+##  <a name="checkpoint"></a>CMemoryState：： Checkpoint
 
-快照摘要的記憶體，並將它儲存在這個`CMemoryState`物件。
+會取得記憶體的快照摘要，並將其儲存在這個 `CMemoryState` 物件中。
 
 ```
 void Checkpoint();
@@ -85,15 +85,15 @@ void Checkpoint();
 
 ### <a name="remarks"></a>備註
 
-`CMemoryState`成員函式[差異](#difference)並[DumpAllObjectsSince](#dumpallobjectssince)使用此快照集資料。
+`CMemoryState` 成員函式[差異](#difference)和[DumpAllObjectsSince](#dumpallobjectssince)會使用此快照集資料。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMemoryState](#cmemorystate)建構函式。
+  請參閱[CMemoryState](#cmemorystate)函式的範例。
 
-##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState
+##  <a name="cmemorystate"></a>CMemoryState：： CMemoryState
 
-建構空`CMemoryState`必須要填入的物件[檢查點](#checkpoint)或是[差異](#difference)成員函式。
+建立必須由[檢查點](#checkpoint)或[差異](#difference)成員函式填入的空 `CMemoryState` 物件。
 
 ```
 CMemoryState();
@@ -103,9 +103,9 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>  Cmemorystate:: Difference
+##  <a name="difference"></a>CMemoryState：:D ifference
 
-比較兩個`CMemoryState`物件，則會儲存到這個差異`CMemoryState`物件。
+比較兩個 `CMemoryState` 物件，然後將差異儲存到這個 `CMemoryState` 物件中。
 
 ```
 BOOL Difference(
@@ -116,26 +116,26 @@ BOOL Difference(
 ### <a name="parameters"></a>參數
 
 *oldState*<br/>
-所定義的初始記憶體狀態`CMemoryState`檢查點。
+`CMemoryState` 檢查點所定義的初始記憶體狀態。
 
 *newState*<br/>
-所定義的新記憶體狀態`CMemoryState`檢查點。
+`CMemoryState` 檢查點所定義的新記憶體狀態。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果兩個記憶體狀態不同;否則為 0。
+如果兩個記憶體狀態不同，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-[檢查點](#checkpoint)必須針對兩個記憶體狀態參數的每個呼叫。
+必須針對兩個記憶體狀態參數呼叫[檢查點](#checkpoint)。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMemoryState](#cmemorystate)建構函式。
+  請參閱[CMemoryState](#cmemorystate)函式的範例。
 
-##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
+##  <a name="dumpallobjectssince"></a>CMemoryState：:D umpAllObjectsSince
 
-呼叫`Dump`類型的所有物件的函式衍生自類別`CObject`所配置 （，仍配置） 自上次[檢查點](#checkpoint)呼叫這個`CMemoryState`物件。
+從這個 `CMemoryState` 物件的最後一個[檢查點](#checkpoint)呼叫之後，呼叫衍生自類別 `CObject` （且仍會配置）之類型的所有物件的 `Dump` 函數。
 
 ```
 void DumpAllObjectsSince() const;
@@ -143,15 +143,15 @@ void DumpAllObjectsSince() const;
 
 ### <a name="remarks"></a>備註
 
-呼叫`DumpAllObjectsSince`與 未初始化`CMemoryState`物件會將傾印出目前在記憶體中的所有物件。
+使用未初始化的 `CMemoryState` 物件來呼叫 `DumpAllObjectsSince`，將會傾印出目前在記憶體中的所有物件。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMemoryState](#cmemorystate)建構函式。
+  請參閱[CMemoryState](#cmemorystate)函式的範例。
 
-##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
+##  <a name="dumpstatistics"></a>CMemoryState：:D umpStatistics
 
-會從精簡的記憶體統計資料報表的列印`CMemoryState`會填入的物件[差異](#difference)成員函式。
+從[差異](#difference)成員函式所填滿的 `CMemoryState` 物件，列印精簡的記憶體統計資料包表。
 
 ```
 void DumpStatistics() const;
@@ -159,13 +159,13 @@ void DumpStatistics() const;
 
 ### <a name="remarks"></a>備註
 
-報表中，在列印[afxDump](diagnostic-services.md#afxdump)裝置，顯示下列：
+在[afxDump](diagnostic-services.md#afxdump)裝置上列印的報表會顯示下列內容：
 
-範例報表會提供資訊的數字 （或量）：
+範例報表會提供的數位（或數量）的資訊：
 
-- 可用的區塊
+- 免費區塊
 
-- 一般的區塊
+- 一般區塊
 
 - CRT 區塊
 
@@ -173,27 +173,27 @@ void DumpStatistics() const;
 
 - 用戶端區塊
 
-- 在任何一個時間 （以位元組為單位） 程式所使用的最大記憶體
+- 程式在任何一次使用的最大記憶體（以位元組為單位）
 
-- 目前 （以位元組為單位） 程式所使用的記憶體總計
+- 程式目前使用的記憶體總計（以位元組為單位）
 
-自由區塊是如果延遲其解除配置的區塊數目`afxMemDF`已設為`delayFreeMemDF`。 如需詳細資訊，請參閱 < [afxMemDF](diagnostic-services.md#afxmemdf)，「 MFC 巨集和全域變數 」 一節。
+「可用區塊」是當 `afxMemDF` 設定為 `delayFreeMemDF`時，其解除配置已延遲的區塊數目。 如需詳細資訊，請參閱 < MFC 宏和 Globals 一節中的[afxMemDF](diagnostic-services.md#afxmemdf)。
 
 ### <a name="example"></a>範例
 
-  下列程式碼應該置於*projname*app.cpp。 定義下列全域變數：
+  下列程式碼應該放在*projname*的 .cpp 中。 定義下列全域變數：
 
 [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]
 
-在 `InitInstance`函式中，加入一行：
+在 `InitInstance` 函式中，新增下列程式程式碼：
 
 [!code-cpp[NVC_MFC_Utilities#41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]
 
-加入的處理常式`ExitInstance`函式，並使用下列程式碼：
+新增 `ExitInstance` 函式的處理常式，並使用下列程式碼：
 
 [!code-cpp[NVC_MFC_Utilities#42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]
 
-您現在可以執行程式，以偵錯模式，以查看輸出`DumpStatistics`函式。
+您現在可以在 [Debug] 模式中執行程式，以查看 `DumpStatistics` 函數的輸出。
 
 ## <a name="see-also"></a>另請參閱
 

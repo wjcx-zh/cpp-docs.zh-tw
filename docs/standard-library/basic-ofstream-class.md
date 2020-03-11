@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452512"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865859"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream 類別
 
-描述一個物件，該物件可控制如何將元素和編碼物件插入具有 `Elem` 類型元素之 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 類別的資料流緩衝區；其中該類型的字元特性是由 `Tr` 類別所決定。
+描述一個物件，該物件可控制如何將元素和編碼物件插入具有 [ 類型元素之 ](../standard-library/basic-filebuf-class.md)basic_filebuf< `Elem``Tr`, `Elem`> 類別的資料流緩衝區；其中該類型的字元特性是由 `Tr` 類別所決定。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +44,7 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ## <a name="remarks"></a>備註
 
-當的**wchar_t**特製化`basic_ofstream`寫入檔案時，如果檔案是在文字模式中開啟，就會寫入 MBCS 序列。 此內部表示法將使用 `wchar_t` 字元的緩衝區。
+當 `basic_ofstream` 的**wchar_t**特製化寫入檔案時，如果檔案是在文字模式中開啟，就會寫入 MBCS 序列。 此內部表示法將使用 `wchar_t` 字元的緩衝區。
 
 此物件會儲存 `basic_filebuf`< `Elem`, `Tr`> 類別的物件。
 
@@ -74,11 +74,11 @@ int main(int argc, char **argv)
 
 |建構函式|描述|
 |-|-|
-|[basic_ofstream](#basic_ofstream)|建立 `basic_ofstream` 類型的物件。|
+|[basic_ofstream](#basic_ofstream)|建立類型為 `basic_ofstream` 的物件。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[close](#close)|關閉檔案。|
 |[is_open](#is_open)|判斷檔案是否為開啟。|
@@ -86,7 +86,7 @@ int main(int argc, char **argv)
 |[rdbuf](#rdbuf)|傳回預存資料流緩衝區的位址。|
 |[swap](#swap)|將這個 `basic_ofstream` 的內容和提供的 `basic_ofstream` 內容交換。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -94,13 +94,13 @@ int main(int argc, char **argv)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<fstream>
+**標頭：** \<a m >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="basic_ofstream"></a>  basic_ofstream::basic_ofstream
 
-建立 `basic_ofstream` 類型的物件。
+建立類型為 `basic_ofstream` 的物件。
 
 ```cpp
 basic_ofstream();
@@ -128,16 +128,16 @@ basic_ofstream(
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
 *_Prot*\
-預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。
+預設檔案開啟保護，相當於 `shflag`_fsopen, _wfsopen[ 中的 ](../c-runtime-library/reference/fsopen-wfsopen.md) 參數。
 
-*再*\
+*right*\
 正在用來初始化此 `basic_ofstream` 物件之 `basic_ofstream` 物件的右值參考。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會藉由呼叫[basic_ostream](../standard-library/basic-ostream-class.md)（`sb`）來初始化基類`sb` ，其中是[basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`類別的預存`Tr`物件，>。 它也會藉由呼叫 `basic_filebuf`< `Elem`, `Tr`> 初始化 `sb`。
+第一個函式會藉由呼叫[basic_ostream](../standard-library/basic-ostream-class.md)（`sb`）來初始化基類，其中 `sb` 是類別[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`，`Tr`> 的儲存物件。 它也會藉由呼叫 `sb``basic_filebuf`< , `Elem`> 初始化 `Tr`。
 
-第二個和第三個建構函式會藉由呼叫 `basic_ostream`( **sb**) 初始化基底類別。 它也會`sb`藉由`basic_filebuf` < 呼叫`Elem`、 >`Tr`和來初始化。 `sb` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)。 如果後面一個函式傳回 null 指標，則此函式會`failbit`呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)（）。
+第二個和第三個建構函式會藉由呼叫 `basic_ostream`( **sb**) 初始化基底類別。 它也會藉由呼叫 `basic_filebuf`< `Elem`、`Tr`> 然後 `sb`來初始化 `sb`。 [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)。 如果後面一個函式傳回 null 指標，則此函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`）。
 
 第四個建構函式是複製函式。 它會以*right*的內容初始化物件，並將其視為右值參考。
 
@@ -173,11 +173,11 @@ void close();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫[rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
+此成員函式會呼叫 [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
 
 ### <a name="example"></a>範例
 
-如需使用 `close` 的範例，請參閱 [basic_filebuf:: close](../standard-library/basic-filebuf-class.md#close)。
+如需使用 [ 的範例，請參閱 ](../standard-library/basic-filebuf-class.md#close)basic_filebuf:: close`close`。
 
 ## <a name="is_open"></a>  basic_ofstream::is_open
 
@@ -250,15 +250,15 @@ void open(
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
 *_Prot*\
-預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。
+預設檔案開啟保護，相當於 `shflag`_fsopen, _wfsopen[ 中的 ](../c-runtime-library/reference/fsopen-wfsopen.md) 參數。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; `ios_base::out`)。 如果該函式傳回 null 指標，則函式會呼叫`failbit`[setstate](../standard-library/basic-ios-class.md#setstate) （）。
+此成員函式會呼叫[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)（_ *Filename*，`_Mode` &#124; `ios_base::out`）。 如果該函式傳回 null 指標，則函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`）。
 
 ### <a name="example"></a>範例
 
-如需使用`open`的範例，請參閱[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
+如需使用 `open`的範例，請參閱[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -270,7 +270,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right*\
 `basic_ofstream` 物件的右值參考。
 
 ### <a name="return-value"></a>傳回值
@@ -295,7 +295,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 ### <a name="example"></a>範例
 
-如需使用 `rdbuf` 的範例，請參閱 [basic_filebuf:: close](../standard-library/basic-filebuf-class.md#close)。
+如需使用 [ 的範例，請參閱 ](../standard-library/basic-filebuf-class.md#close)basic_filebuf:: close`rdbuf`。
 
 ## <a name="swap"></a>  basic_ofstream::swap
 
@@ -307,8 +307,8 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
-對其他 `basic_ofstream` 物件的 `lvalue` 參考。
+*right*\
+對其他 `lvalue` 物件的 `basic_ofstream` 參考。
 
 ### <a name="remarks"></a>備註
 
@@ -319,4 +319,4 @@ void swap(basic_ofstream& right);
 [basic_ostream 類別](../standard-library/basic-ostream-class.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\
-[iostream 慣例](../standard-library/iostreams-conventions.md)
+[iostreams 慣例](../standard-library/iostreams-conventions.md)

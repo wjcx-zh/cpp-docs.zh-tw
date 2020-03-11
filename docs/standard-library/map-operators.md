@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956968"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883953"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 運算子
 
@@ -37,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `map` 類型的物件。
 
-*再*\
+*right*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -102,10 +102,10 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `map` 類型的物件。
 
-*再*\
+*right*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a>操作&lt;=
+## <a name="op_lt_eq"></a>運算子&lt;=
 
 測試運算子左邊的 map 物件是否小於或等於右邊的 map 物件。
 
@@ -167,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `map` 類型的物件。
 
-*再*\
+*right*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -235,10 +235,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `map` 類型的物件。
 
-*再*\
+*right*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -300,10 +300,10 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `map` 類型的物件。
 
-*再*\
+*right*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -364,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `map` 類型的物件。
 
-*再*\
+*right*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a>operator! = (multimap)
+## <a name="op_neq_multimap"></a>operator！ = （multimap）
 
 測試運算子左邊的 multimap 物件是否不等於右邊的 multimap 物件。
 
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `multimap` 類型的物件。
 
-*再*\
+*right*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -497,10 +497,10 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `multimap` 類型的物件。
 
-*再*\
+*right*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -562,10 +562,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `multimap` 類型的物件。
 
-*再*\
+*right*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -630,10 +630,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `multimap` 類型的物件。
 
-*再*\
+*right*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -695,10 +695,10 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `multimap` 類型的物件。
 
-*再*\
+*right*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a>操作&gt;=
+## <a name="op_gt_eq_multimap"></a>運算子&gt;=
 
 測試運算子左邊的 multimap 物件是否大於或等於右邊的 multimap 物件。
 
@@ -760,10 +760,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 `multimap` 類型的物件。
 
-*再*\
+*right*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值

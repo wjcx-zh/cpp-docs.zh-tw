@@ -7,15 +7,15 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243672"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854927"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 函式
 
-## <a name="get_new_handler"></a> get_new_handler
+## <a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -23,9 +23,9 @@ new_handler get_new_handler() noexcept;
 
 ### <a name="remarks"></a>備註
 
-傳回目前`new_handler`。
+傳回目前的 `new_handler`。
 
-## <a name="launder"></a> launder
+## <a name="launder"></a>launder
 
 ```cpp
 template <class T>
@@ -35,17 +35,17 @@ template <class T>
 ### <a name="parameters"></a>參數
 
 *ptr*\
-其中包含物件類型的記憶體中的位元組的位址是類似*T*。
+記憶體中的位元組位址，其中包含類型類似*T*的物件。
 
 ### <a name="return-value"></a>傳回值
 
-型別的值*T\** 指向 X。
+指向 X 的類型*T\** 的值。
 
 ### <a name="remarks"></a>備註
 
-也稱為指標最佳化屏障。
+也稱為指標優化屏障。
 
-當其引數的值可用於常數運算式，請使用當做常數運算式。 連線到透過指向的物件，如果是在另一個物件，具有類似指標的物件所佔用的儲存體的指標值的位元組的儲存體。
+當常數運算式中可能使用其引數的值時，用來做為常數運算式。 如果儲存在另一個物件所佔用的儲存體（具有類似指標的物件）中，可透過指向物件的指標值來連線到一個位元組的儲存體。
 
 ### <a name="example"></a>範例
 
@@ -59,9 +59,9 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a> nothrow
+## <a name="nothrow"></a>nothrow
 
-提供要用來做為引數物件**nothrow**新版**新**並**刪除**。
+提供物件，做為**new**和**delete**之**nothrow**版本的引數。
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -73,11 +73,11 @@ extern const std::nothrow_t nothrow;
 
 ### <a name="example"></a>範例
 
-如需如何使用 `std::nothrow_t` 作為函式參數的範例，請參閱 [operator new](../standard-library/new-operators.md#op_new) 和 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。
+如需如何使用 [ 作為函式參數的範例，請參閱 ](../standard-library/new-operators.md#op_new)operator new[ 和 ](../standard-library/new-operators.md#op_new_arr)operator new&#91;&#93;`std::nothrow_t`。
 
-## <a name="set_new_handler"></a> set_new_handler
+## <a name="set_new_handler"></a>set_new_handler
 
-安裝時要呼叫的使用者函式**new 運算子**中嘗試配置記憶體失敗。
+安裝當**operator new**在嘗試配置記憶體時失敗時所要呼叫的使用者函式。
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -86,7 +86,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="parameters"></a>參數
 
 *Pnew*\
-`new_handler`安裝。
+要安裝的 `new_handler`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -94,7 +94,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>備註
 
-此函式會*Pnew*的靜態[新的處理常式](../standard-library/new-typedefs.md#new_handler)指標，它會維護，然後傳回先前儲存的指標的值。 新的處理常式會由[new 運算子](../standard-library/new-operators.md#op_new)(**size_t**)。
+函式會將*Pnew*儲存在它所維護的靜態[新處理常式](../standard-library/new-typedefs.md#new_handler)指標中，然後傳回先前儲存在指標中的值。 New 處理常式是由[operator new](../standard-library/new-operators.md#op_new)（**size_t**）所使用。
 
 ### <a name="example"></a>範例
 

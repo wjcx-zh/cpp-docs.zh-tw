@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866244"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937417"
 ---
 # <a name="valarray-class"></a>valarray 類別
 
@@ -117,10 +117,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>參數
 
-*_Func （類型）*\
+*_Func （類型）* \
 要套用至運算元 valarray 每個項目的函式物件。
 
-*_Func （Const 類型 &）*\
+*_Func （Const 類型 &）* \
 要套用至運算元 valarray 每個項目的 const 函式物件。
 
 ### <a name="return-value"></a>傳回值
@@ -129,7 +129,7 @@ Valarray，其項目為已將 `_Func` 套用至運算元 valarray 的項目。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回[valarray](../standard-library/valarray-class.md)類別的物件，**\<類型 >**，其長度為[大小](#size)，而每一個都是*我*`_Func((*this)[I])`的元素。
+此成員函式會傳回[valarray](../standard-library/valarray-class.md)類別的物件， **\<類型 >** ，其長度為[大小](#size)，而每一個都是*我*`_Func((*this)[I])`的元素。
 
 ### <a name="example"></a>範例
 

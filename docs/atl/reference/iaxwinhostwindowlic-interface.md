@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
 ms.openlocfilehash: aca3970d13db53ffa04fe9582bbe9b8db78e820d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275986"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864849"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 介面
 
-這個介面會提供管理授權的控制項和其主機物件的方法。
+這個介面提供操作授權控制項及其主機物件的方法。
 
 ## <a name="syntax"></a>語法
 
@@ -32,27 +32,27 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 |||
 |-|-|
-|[CreateControlLic](#createcontrollic)|建立具有授權的控制項，並將它附加到主機的物件。|
-|[CreateControlLicEx](#createcontrollicex)|建立授權的控制項、 將它連結至主機物件，並選擇性地設定的事件處理常式。|
+|[CreateControlLic](#createcontrollic)|建立授權的控制項，並將它附加至主機物件。|
+|[CreateControlLicEx](#createcontrollicex)|建立授權的控制項、將其附加至主機物件，並選擇性地設定事件處理常式。|
 
 ## <a name="remarks"></a>備註
 
-`IAxWinHostWindowLic` 繼承自[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) ，並將支援的授權控制項建立的方法。
+`IAxWinHostWindowLic` 繼承自[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) ，並加入支援授權控制項建立的方法。
 
-請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)的範例會使用此介面的成員。
+如需使用此介面成員的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
 
 ## <a name="requirements"></a>需求
 
-此介面的定義可從 IDL 或C++，如下所示。
+此介面的定義可做為 IDL 或C++，如下所示。
 
 |定義類型|檔案|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
-|C++|ATLIFace.h （也包含在 ATLBase.h）|
+|IDL|ATLIFace .idl|
+|C++|ATLIFace （也包含在 Atlbase.h 中）|
 
-##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic
+##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic
 
-建立具有授權的控制項，它初始化，並將它裝載在視窗中所識別`hWnd`。
+建立授權的控制項、將它初始化，然後將它裝載在 `hWnd`所識別的視窗中。
 
 ```
 STDMETHOD(CreateControlLic)(
@@ -65,21 +65,21 @@ STDMETHOD(CreateControlLic)(
 ### <a name="parameters"></a>參數
 
 *bstrLic*<br/>
-[in]包含控制項的授權金鑰 BSTR。
+在包含控制項之授權金鑰的 BSTR。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)剩餘的參數和傳回值的說明。
+如需其餘參數和傳回值的描述，請參閱[IAxWinHostWindow：： CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) 。
 
-呼叫這個方法就相當於呼叫[IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)
+呼叫這個方法相當於呼叫[IAxWinHostWindowLic：： CreateControlLicEx](#createcontrollicex)
 
 ### <a name="example"></a>範例
 
-請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如需範例，會使用`IAxWinHostWindowLic::CreateControlLic`。
+如需使用 `IAxWinHostWindowLic::CreateControlLic`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
 
-##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx
+##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx
 
-建立授權的 ActiveX 控制項，它初始化，並將它裝載於指定的視窗，類似於[IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。
+建立授權的 ActiveX 控制項、將它初始化，並將它裝載在指定的視窗中，類似于[IAxWinHostWindow：： CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -95,12 +95,12 @@ STDMETHOD(CreateControlLicEx)(
 ### <a name="parameters"></a>參數
 
 *bstrLic*<br/>
-[in]包含控制項的授權金鑰 BSTR。
+在包含控制項之授權金鑰的 BSTR。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex)剩餘的參數和傳回值的說明。
+如需其餘參數和傳回值的描述，請參閱[IAxWinHostWindow：： CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) 。
 
 ### <a name="example"></a>範例
 
-請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如需範例，會使用`IAxWinHostWindowLic::CreateControlLicEx`。
+如需使用 `IAxWinHostWindowLic::CreateControlLicEx`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。

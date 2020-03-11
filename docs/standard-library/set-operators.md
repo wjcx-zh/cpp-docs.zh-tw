@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (set)
 - std::operator== (set)
 ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246393"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875759"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; 運算子
 
-## <a name="op_neq"></a> 運算子 ！ = (set)
+## <a name="op_neq"></a>operator！ = （set）
 
 測試運算子左邊的 set 物件是否不等於右邊的 set 物件。
 
@@ -35,10 +35,10 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `set` 類型的物件。
 
-*權限*\
+*right*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -86,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a> 運算子&lt;（設定）
+## <a name="op_lt"></a>運算子&lt; （set）
 
 測試運算子左邊的 set 物件是否小於右邊的 set 物件。
 
@@ -96,10 +96,10 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `set` 類型的物件。
 
-*權限*\
+*right*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -147,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a> 運算子&lt;= (set)
+## <a name="op_lt_eq"></a>運算子&lt;= （set）
 
 測試運算子左邊的 set 物件是否小於或等於右邊的 set 物件。
 
@@ -157,10 +157,10 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `set` 類型的物件。
 
-*權限*\
+*right*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -216,7 +216,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="op_eq_eq"></a> 運算子 = = (set)
+## <a name="op_eq_eq"></a>operator = = （set）
 
 測試運算子左邊的 set 物件是否等於右邊的 set 物件。
 
@@ -226,10 +226,10 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `set` 類型的物件。
 
-*權限*\
+*right*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -278,7 +278,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> 運算子&gt;（設定）
+## <a name="op_gt"></a>運算子&gt; （set）
 
 測試運算子左邊的 set 物件是否大於右邊的 set 物件。
 
@@ -288,10 +288,10 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `set` 類型的物件。
 
-*權限*\
+*right*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -339,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a> 運算子&gt;= (set)
+## <a name="op_gt_eq"></a>運算子&gt;= （set）
 
 測試運算子左邊的 set 物件是否大於或等於右邊的 set 物件。
 
@@ -349,10 +349,10 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `set` 類型的物件。
 
-*權限*\
+*right*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -408,7 +408,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="op_neq_multiset"></a> 運算子 ！ = (multiset)
+## <a name="op_neq_multiset"></a>operator！ = （多重集）
 
 測試運算子左邊的 multiset 物件是否不等於右邊的 multiset 物件。
 
@@ -418,10 +418,10 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `multiset` 類型的物件。
 
-*權限*\
+*right*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -470,7 +470,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_lt_multiset"></a> 運算子&lt;(multiset)
+## <a name="op_lt_multiset"></a>運算子&lt; （多重集）
 
 測試運算子左邊的 multiset 物件是否小於右邊的 multiset 物件。
 
@@ -480,10 +480,10 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `multiset` 類型的物件。
 
-*權限*\
+*right*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -536,7 +536,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="op_lt_eq_multiset"></a> 運算子&lt;= (multiset)
+## <a name="op_lt_eq_multiset"></a>運算子&lt;= （多重集）
 
 測試運算子左邊的 multiset 物件是否小於或等於右邊的 multiset 物件。
 
@@ -546,10 +546,10 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `multiset` 類型的物件。
 
-*權限*\
+*right*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -611,7 +611,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="op_eq_eq_multiset"></a> 運算子 = = (multiset)
+## <a name="op_eq_eq_multiset"></a>operator = = （多重集）
 
 測試運算子左邊的 multiset 物件是否等於右邊的 multiset 物件。
 
@@ -621,10 +621,10 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `multiset` 類型的物件。
 
-*權限*\
+*right*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -673,7 +673,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_gt_multiset"></a> 運算子&gt;(multiset)
+## <a name="op_gt_multiset"></a>運算子&gt; （多重集）
 
 測試運算子左邊的 multiset 物件是否大於右邊的 multiset 物件。
 
@@ -683,10 +683,10 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `multiset` 類型的物件。
 
-*權限*\
+*right*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -739,7 +739,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="op_gt_eq_multiset"></a> 運算子&gt;= (multiset)
+## <a name="op_gt_eq_multiset"></a>運算子&gt;= （多重集）
 
 測試運算子左邊的 multiset 物件是否大於或等於右邊的 multiset 物件。
 
@@ -749,10 +749,10 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `multiset` 類型的物件。
 
-*權限*\
+*right*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值

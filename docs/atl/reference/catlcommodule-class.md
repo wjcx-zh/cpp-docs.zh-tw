@@ -13,15 +13,15 @@ helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
 ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247187"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863159"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 類別
 
-這個類別會實作 COM 伺服器模組。
+這個類別會實行 COM 伺服器模組。
 
 ## <a name="syntax"></a>語法
 
@@ -36,22 +36,22 @@ class CAtlComModule : public _ATL_COM_MODULE
 |名稱|描述|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|建構函式。|
-|[CAtlComModule::~CAtlComModule](#dtor)|解構函式。|
+|[CAtlComModule：： ~ CAtlComModule](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlComModule::RegisterServer](#registerserver)|呼叫這個方法來更新系統登錄的物件對應中每個物件。|
+|[CAtlComModule::RegisterServer](#registerserver)|呼叫這個方法，以更新物件對應中每個物件的系統登錄。|
 |[CAtlComModule::RegisterTypeLib](#registertypelib)|呼叫這個方法來註冊類型程式庫。|
-|[CAtlComModule::UnregisterServer](#unregisterserver)|呼叫這個方法來取消註冊物件對應中的每個物件。|
-|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|呼叫這個方法來取消註冊類型程式庫。|
+|[CAtlComModule::UnregisterServer](#unregisterserver)|呼叫這個方法，以取消註冊物件對應中的每個物件。|
+|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|呼叫此方法可取消註冊類型程式庫。|
 
 ## <a name="remarks"></a>備註
 
-`CAtlComModule` 會實作 COM 伺服器模組，可讓用戶端存取模組的元件。
+`CAtlComModule` 會執行 COM 伺服器模組，讓用戶端可以存取模組的元件。
 
-這個類別會取代過時[CComModule](../../atl/reference/ccommodule-class.md)用在舊版的 ATL 類別 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。
+這個類別會取代舊版 ATL 中使用的過時[CComModule](../../atl/reference/ccommodule-class.md)類別。 如需詳細資訊，請參閱[ATL 模組類別](../../atl/atl-module-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -61,9 +61,9 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標頭：** atlbase.h。h
 
-##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule
+##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule
 
 建構函式。
 
@@ -75,7 +75,7 @@ CAtlComModule() throw();
 
 初始化模組。
 
-##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule
+##  <a name="dtor"></a>CAtlComModule：： ~ CAtlComModule
 
 解構函式。
 
@@ -85,11 +85,11 @@ CAtlComModule() throw();
 
 ### <a name="remarks"></a>備註
 
-釋放所有的 class factory。
+釋放所有 class factory。
 
-##  <a name="registerserver"></a>  CAtlComModule::RegisterServer
+##  <a name="registerserver"></a>CAtlComModule::RegisterServer
 
-呼叫這個方法來更新系統登錄的物件對應中每個物件。
+呼叫這個方法，以更新物件對應中每個物件的系統登錄。
 
 ```
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
@@ -98,20 +98,20 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="parameters"></a>參數
 
 *bRegTypeLib*<br/>
-如果型別程式庫是要註冊，則為 TRUE。 預設值為 FALSE。
+如果要註冊類型程式庫，則為 TRUE。 預設值為 FALSE。
 
 *pCLSID*<br/>
-要註冊之物件的 clsid 點。 若要註冊 NULL （預設值），在物件對應中的所有物件。
+指向要註冊之物件的 CLSID。 如果為 Null （預設值），則會註冊物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
 呼叫全域函式[AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)。
 
-##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib
+##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
 
 呼叫這個方法來註冊類型程式庫。
 
@@ -123,19 +123,19 @@ HRESULT RegisterTypeLib();
 ### <a name="parameters"></a>參數
 
 *lpszIndex*<br/>
-格式字串"\\\N 」，其中 N 是型別程式庫資源的整數索引。
+格式為 "\\\N" 的字串，其中 N 是 TYPELIB 資源的整數索引。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-將類型程式庫的相關資訊加入至系統登錄中。 如果模組執行個體包含多個型別程式庫，請指定應該使用哪一個型別程式庫中使用這個方法的第一個版本。
+將類型程式庫的相關資訊新增至系統登錄。 如果模組實例包含多個類型程式庫，請使用這個方法的第一個版本來指定應該使用的類型程式庫。
 
-##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer
+##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer
 
-呼叫這個方法來取消註冊物件對應中的每個物件。
+呼叫這個方法，以取消註冊物件對應中的每個物件。
 
 ```
 HRESULT UnregisterServer(
@@ -146,22 +146,22 @@ HRESULT UnregisterServer(
 ### <a name="parameters"></a>參數
 
 *bRegTypeLib*<br/>
-如果型別程式庫是要移除註冊，則為 TRUE。 預設值為 FALSE。
+如果要將類型程式庫取消註冊，則為 TRUE。 預設值為 FALSE。
 
 *pCLSID*<br/>
-要移除註冊物件的 clsid 點。 如果 NULL （預設值），在物件對應中的所有物件就會取消註冊。
+指向要取消註冊之物件的 CLSID。 如果為 Null （預設值），則會取消註冊物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
 呼叫全域函式[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)。
 
-##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib
+##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
 
-呼叫這個方法來取消註冊類型程式庫。
+呼叫此方法可取消註冊類型程式庫。
 
 ```
 HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
@@ -171,17 +171,17 @@ HRESULT UnRegisterTypeLib();
 ### <a name="parameters"></a>參數
 
 *lpszIndex*<br/>
-格式字串"\\\N 」，其中 N 是型別程式庫資源的整數索引。
+格式為 "\\\N" 的字串，其中 N 是 TYPELIB 資源的整數索引。
 
 ### <a name="remarks"></a>備註
 
-從系統登錄中移除類型程式庫的相關資訊。 如果模組執行個體包含多個型別程式庫，請指定應該使用哪一個型別程式庫中使用這個方法的第一個版本。
+從系統登錄移除類型程式庫的相關資訊。 如果模組實例包含多個類型程式庫，請使用這個方法的第一個版本來指定應該使用的類型程式庫。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ## <a name="see-also"></a>另請參閱
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

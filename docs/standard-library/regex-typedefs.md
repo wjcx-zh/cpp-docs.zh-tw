@@ -22,11 +22,11 @@ f1_keywords:
 - regex/std::wssub_match
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
 ms.openlocfilehash: 4321d9ea6fd9ba57074b25e084553fe1f0846213
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689030"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876126"
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;regex&gt; typedefs
 
@@ -49,7 +49,7 @@ typedef match_results<const char*> cmatch;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const char*` 類型反覆運算器之類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
+此類型描述 `const char*`類型反覆運算器的類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
 
 ## <a name="cregex_iterator"></a>  cregex_iterator Typedef
 
@@ -61,7 +61,7 @@ typedef regex_iterator<const char*> cregex_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const char*` 類型反覆運算器之類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
+此類型描述 `const char*`類型反覆運算器的類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
 
 ## <a name="cregex_token_iterator"></a>  cregex_token_iterator Typedef
 
@@ -73,7 +73,7 @@ typedef regex_token_iterator<const char*> cregex_token_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const char*` 類型反覆運算器之類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
+此類型描述 `const char*`類型反覆運算器的類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
 
 ## <a name="csub_match"></a>  csub_match Typedef
 
@@ -85,7 +85,7 @@ typedef sub_match<const char*> csub_match;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const char*` 類型反覆運算器之類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
+此類型描述 `const char*`類型反覆運算器的類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
 
 ## <a name="regex"></a>  regex Typedef
 
@@ -97,7 +97,7 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型為**char**之元素的類別樣板[basic_RegEx 類別](../standard-library/basic-regex-class.md)的特製化。
+此類型描述類別樣板的特製化， [Basic_RegEx 類別](../standard-library/basic-regex-class.md)用於類型為**char**的元素。
 
 > [!NOTE]
 > 高位元字元搭配 `regex` 將會有未預期的結果。 超出 0 到 127 範圍以外的值可能會導致未定義的行為。
@@ -112,7 +112,7 @@ typedef match_results<string::const_iterator> smatch;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `string::const_iterator` 類型反覆運算器之類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
+此類型描述 `string::const_iterator`類型反覆運算器的類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
 
 ## <a name="sregex_iterator"></a>  sregex_iterator Typedef
 
@@ -124,7 +124,7 @@ typedef regex_iterator<string::const_iterator> sregex_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `string::const_iterator` 類型反覆運算器之類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
+此類型描述 `string::const_iterator`類型反覆運算器的類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
 
 ## <a name="sregex_token_iterator"></a>  sregex_token_iterator Typedef
 
@@ -136,7 +136,7 @@ typedef regex_token_iterator<string::const_iterator> sregex_token_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `string::const_iterator` 類型反覆運算器之類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
+此類型描述 `string::const_iterator`類型反覆運算器的類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
 
 ## <a name="ssub_match"></a>  ssub_match Typedef
 
@@ -148,7 +148,7 @@ typedef sub_match<string::const_iterator> ssub_match;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `string::const_iterator` 類型反覆運算器之類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
+此類型描述 `string::const_iterator`類型反覆運算器的類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
 
 ## <a name="wcmatch"></a>  wcmatch Typedef
 
@@ -160,7 +160,7 @@ typedef match_results<const wchar_t *> wcmatch;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const wchar_t*` 類型反覆運算器之類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
+此類型描述 `const wchar_t*`類型反覆運算器的類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
 
 ## <a name="wcregex_iterator"></a>  wcregex_iterator Typedef
 
@@ -172,7 +172,7 @@ typedef regex_iterator<const wchar_t*> wcregex_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const wchar_t*` 類型反覆運算器之類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
+此類型描述 `const wchar_t*`類型反覆運算器的類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
 
 ## <a name="wcregex_token_iterator"></a>  wcregex_token_iterator Typedef
 
@@ -184,7 +184,7 @@ typedef regex_token_iterator<const wchar_t*> wcregex_token_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const wchar_t*` 類型反覆運算器之類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
+此類型描述 `const wchar_t*`類型反覆運算器的類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
 
 ## <a name="wcsub_match"></a>  wcsub_match Typedef
 
@@ -196,7 +196,7 @@ typedef sub_match<const wchar_t*> wcsub_match;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `const wchar_t*` 類型反覆運算器之類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
+此類型描述 `const wchar_t*`類型反覆運算器的類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
 
 ## <a name="wregex"></a>  wregex Typedef
 
@@ -208,7 +208,7 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型**wchar_t**之元素的類別樣板[basic_RegEx 類別](../standard-library/basic-regex-class.md)的特製化。
+此類型描述類別樣板的特製化， [Basic_RegEx 類別](../standard-library/basic-regex-class.md)，適用于**wchar_t**類型的元素。
 
 ## <a name="wsmatch"></a>  wsmatch Typedef
 
@@ -220,7 +220,7 @@ typedef match_results<wstring::const_iterator> wsmatch;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `wstring::const_iterator` 類型反覆運算器之類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
+此類型描述 `wstring::const_iterator`類型反覆運算器的類別樣板[Match_results 類別](../standard-library/match-results-class.md)的特製化。
 
 ## <a name="wsregex_iterator"></a>  wsregex_iterator Typedef
 
@@ -232,7 +232,7 @@ typedef regex_iterator<wstring::const_iterator> wsregex_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `wstring::const_iterator` 類型反覆運算器之類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
+此類型描述 `wstring::const_iterator`類型反覆運算器的類別樣板[Regex_iterator 類別](../standard-library/regex-iterator-class.md)的特製化。
 
 ## <a name="wsregex_token_iterator"></a>  wsregex_token_iterator Typedef
 
@@ -244,7 +244,7 @@ typedef regex_token_iterator<wstring::const_iterator> wsregex_token_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `wstring::const_iterator` 類型反覆運算器之類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
+此類型描述 `wstring::const_iterator`類型反覆運算器的類別樣板[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)的特製化。
 
 ## <a name="wssub_match"></a>  wssub_match Typedef
 
@@ -256,9 +256,9 @@ typedef sub_match<wstring::const_iterator> wssub_match;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `wstring::const_iterator` 類型反覆運算器之類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
+此類型描述 `wstring::const_iterator`類型反覆運算器的類別樣板[Sub_match 類別](../standard-library/sub-match-class.md)的特製化。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<regex>](../standard-library/regex.md)\
 [Regex_constants 類別](../standard-library/regex-constants-class.md)\

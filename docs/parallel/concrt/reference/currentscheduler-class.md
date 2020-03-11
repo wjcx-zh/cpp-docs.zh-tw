@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143070"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867121"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
 
@@ -42,11 +42,11 @@ class CurrentScheduler;
 |----------|-----------------|
 |[建立](#create)|建立新的排程器，其行為是由 `_Policy` 參數所描述，並將其附加至呼叫內容。 新建立的排程器會成為呼叫內容的目前排程器。|
 |[CreateScheduleGroup](#createschedulegroup)|已多載。 在與呼叫內容相關聯的排程器內，建立新的排程群組。 採用參數的版本 `_Placement` 會使新建立之排程群組內的工作，在該參數指定的位置上有偏差執行。|
-|[Detach](#detach)|從呼叫內容卸離目前的排程器，並將先前附加的排程器還原為目前的排程器（如果有的話）。 當這個方法傳回之後，呼叫的內容就會由先前使用 `CurrentScheduler::Create` 或 `Scheduler::Attach` 方法附加至內容的排程器來管理。|
+|[卸離](#detach)|從呼叫內容卸離目前的排程器，並將先前附加的排程器還原為目前的排程器（如果有的話）。 當這個方法傳回之後，呼叫的內容就會由先前使用 `CurrentScheduler::Create` 或 `Scheduler::Attach` 方法附加至內容的排程器來管理。|
 |[Get](#get)|傳回與呼叫內容相關聯之排程器的指標，也稱為目前的排程器。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|傳回與呼叫內容相關聯之排程器的目前虛擬處理器數目。|
 |[GetPolicy](#getpolicy)|傳回用來建立目前排程器的原則複本。|
-|[ID](#id)|傳回目前排程器的唯一識別碼。|
+|[Id](#id)|傳回目前排程器的唯一識別碼。|
 |[IsAvailableLocation](#isavailablelocation)|判斷某一特定位置是否可在目前的排程器中使用。|
 |[RegisterShutdownEvent](#registershutdownevent)|當與目前內容相關聯的排程器關閉並自行終結時，會導致在 `_ShutdownEvent` 參數中傳遞的 Windows 事件控制碼收到信號。 當事件收到通知時，所有已排定排程器的工作都已完成。 多個關機事件可以透過這個方法來註冊。|
 |[ScheduleTask](#scheduletask)|已多載。 在與呼叫內容相關聯的排程器中排定輕量工作。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。|

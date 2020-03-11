@@ -1,5 +1,5 @@
 ---
-title: 連接點巨集
+title: 連接點宏
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
 ms.openlocfilehash: cb8d6f696980ef91d7b43c960dc50289ea8500a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278198"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872483"
 ---
-# <a name="connection-point-macros"></a>連接點巨集
+# <a name="connection-point-macros"></a>連接點宏
 
-這些巨集會定義連接點對應和項目。
+這些宏會定義連接點對應和專案。
 
 |||
 |-|-|
-|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|標示連接點對應項目的開頭。|
-|[CONNECTION_POINT_ENTRY](#connection_point_entry)|輸入對應的連接點。|
-|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017)類似於 CONNECTION_POINT_ENTRY 但接受 iid 的指標。|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|標示連接點對應項目的結尾。|
+|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|標記連接點對應專案的開頭。|
+|[CONNECTION_POINT_ENTRY](#connection_point_entry)|將連接點輸入對應中。|
+|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| （Visual Studio 2017）類似于 CONNECTION_POINT_ENTRY，但會取得 iid 的指標。|
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|標示連接點對應專案的結尾。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭：** atlcom.h。h
 
-##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP
+##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP
 
-標示連接點對應項目的開頭。
+標記連接點對應專案的開頭。
 
 ```
 BEGIN_CONNECTION_POINT_MAP(x)
@@ -40,21 +40,21 @@ BEGIN_CONNECTION_POINT_MAP(x)
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-[in]包含連接點的類別名稱。
+在包含連接點的類別名稱。
 
 ### <a name="remarks"></a>備註
 
-啟動您的連接點對應 BEGIN_CONNECTION_POINT_MAP 巨集、 將項目加入您的連接點使用的每個[CONNECTION_POINT_ENTRY](#connection_point_entry)巨集，並完成地圖[END_CONNECTION_POINT_MAP](#end_connection_point_map)巨集。
+使用 BEGIN_CONNECTION_POINT_MAP 宏來啟動您的連接點對應、使用[CONNECTION_POINT_ENTRY](#connection_point_entry)宏新增每個連接點的專案，然後使用[END_CONNECTION_POINT_MAP](#end_connection_point_map)宏完成對應。
 
-如需 ATL 中的連接點的詳細資訊，請參閱文章[連接點](../../atl/atl-connection-points.md)。
+如需 ATL 中連接點的詳細資訊，請參閱[連接點](../../atl/atl-connection-points.md)一文。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]
 
-##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY 和 CONNECTION_POINT_ENTRY_P
+##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 和 CONNECTION_POINT_ENTRY_P
 
-輸入的連接點的指定介面的連接點對應，使它可以存取。
+將指定介面的連接點輸入連接點對應，以便存取。
 
 ```
 CONNECTION_POINT_ENTRY(iid)
@@ -64,26 +64,26 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>參數
 
 *iid*<br/>
-[in]加入連接點對應介面的 GUID。
+在要加入至連接點對應之介面的 GUID。
 
 *piid*<br/>
-[in]正在 adde 介面的 GUID 的指標。
+在要 adde 之介面 GUID 的指標。
 
 ### <a name="remarks"></a>備註
 
-在對應中的連接點項目由[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)。 包含連接點對應的類別必須繼承自`IConnectionPointContainerImpl`。
+[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)會使用對應中的連接點專案。 包含連接點對應的類別必須繼承自 `IConnectionPointContainerImpl`。
 
-啟動您使用的連接點對應[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)巨集，每個連接點 CONNECTION_POINT_ENTRY 巨集，新增項目，並完成地圖[END_CONNECTION_POINT_MAP](#end_connection_point_map)巨集。
+使用[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)宏來啟動您的連接點對應、使用 CONNECTION_POINT_ENTRY 宏新增每個連接點的專案，然後使用[END_CONNECTION_POINT_MAP](#end_connection_point_map)宏完成對應。
 
-如需 ATL 中的連接點的詳細資訊，請參閱文章[連接點](../../atl/atl-connection-points.md)。
+如需 ATL 中連接點的詳細資訊，請參閱[連接點](../../atl/atl-connection-points.md)一文。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]
 
-##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP
+##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP
 
-標示連接點對應項目的結尾。
+標示連接點對應專案的結尾。
 
 ```
 END_CONNECTION_POINT_MAP()
@@ -91,9 +91,9 @@ END_CONNECTION_POINT_MAP()
 
 ### <a name="remarks"></a>備註
 
-啟動您使用的連接點對應[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)巨集，將項目加入您的連接點使用的每個[CONNECTION_POINT_ENTRY](#connection_point_entry)巨集，並完成 END_ 地圖CONNECTION_POINT_MAP 巨集。
+使用[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)宏來啟動您的連接點對應、使用[CONNECTION_POINT_ENTRY](#connection_point_entry)宏新增每個連接點的專案，然後使用 END_CONNECTION_POINT_MAP 宏完成對應。
 
-如需 ATL 中的連接點的詳細資訊，請參閱文章[連接點](../../atl/atl-connection-points.md)。
+如需 ATL 中連接點的詳細資訊，請參閱[連接點](../../atl/atl-connection-points.md)一文。
 
 ### <a name="example"></a>範例
 

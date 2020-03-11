@@ -34,11 +34,11 @@ helpviewer_keywords:
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
 ms.openlocfilehash: 92bd73fda5891b0bbf7393d1a7fda573d0f00263
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142509"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882890"
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 
@@ -64,7 +64,7 @@ Visual C++支援下列 OpenMP 子句。
 |[firstprivate](#firstprivate)|指定每個執行緒都應該有自己的變數實例，而且應該使用變數的值來初始化該變數，因為它存在於平行結構前面。|
 |[lastprivate](#lastprivate)|指定將封閉內容的變數版本設定為等於任何執行緒執行最後反復專案（for 迴圈結構）或最後一節（#pragma 區段）的私用版本。|
 |[共用](#shared-openmp)|指定應該在所有線程之間共用一個或多個變數。|
-|[default](#default-openmp)|指定平列區域中不限範圍變數的行為。|
+|[預設值](#default-openmp)|指定平列區域中不限範圍變數的行為。|
 |[reduction](#reduction)|指定每個執行緒私用的一個或多個變數，是在平列區域結尾的縮減作業主體。|
 |[copyin](#copyin)|允許執行緒存取主要執行緒的值，以取得[threadprivate](openmp-directives.md#threadprivate)變數。|
 |[copyprivate](#copyprivate)|指定應該在所有線程之間共用一個或多個變數。|

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301505"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884146"
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -408,7 +408,7 @@ template<typename F, typename Tuple = tuple<T...>,
 
 C++ 支援函式指標的方式與 C 語言相同。 不過，較具類型安全的替代方案通常是使用函式物件。
 
-如果宣告的函式會傳回函式指標類型，建議使用**typedef**來宣告函式指標類型的別名。  例如
+如果宣告的函式會傳回函式指標類型，建議使用**typedef**來宣告函式指標類型的別名。  例如：
 
 ```cpp
 typedef int (*fp)(int);
@@ -423,7 +423,7 @@ int (*myFunction(char* s))(int);
 
 上述宣告相當於上面使用 typedef 的宣告。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函式多載](../cpp/function-overloading.md)<br/>
 [具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>

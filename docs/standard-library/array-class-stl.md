@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189414"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883790"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -119,9 +119,9 @@ class array;
 |參數|描述|
 |-|-|
 |`Ty`|元素類型。|
-|`N`|項目的數目。|
+|`N`|元素數。|
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 |類型定義|描述|
 |-|-|
@@ -166,7 +166,7 @@ class array;
 
 ## <a name="remarks"></a>備註
 
-該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如：
+該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如，
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<array>
+**Header：** \<陣列 >
 
 **命名空間:** std
 
@@ -1037,7 +1037,7 @@ constexpr size_type max_size() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 `N`。
+此成員函式會傳回 `N`。
 
 ### <a name="example"></a>範例
 
@@ -1410,7 +1410,7 @@ constexpr size_type size() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 `N`。
+此成員函式會傳回 `N`。
 
 ### <a name="example"></a>範例
 

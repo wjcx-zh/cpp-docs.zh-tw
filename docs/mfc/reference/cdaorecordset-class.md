@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206355"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867296"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 類別
 
@@ -189,135 +189,135 @@ class CDaoRecordset : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoRecordset::CDaoRecordset](#cdaorecordset)|建構 `CDaoRecordset` 物件。|
+|[CDaoRecordset：： CDaoRecordset](#cdaorecordset)|建構 `CDaoRecordset` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoRecordset::AddNew](#addnew)|準備新增記錄。 呼叫[更新](#update)完成加入。|
-|[CDaoRecordset::CanAppend](#canappend)|傳回非零值，如果可以透過在資料錄集加入新資料錄[AddNew](#addnew)成員函式。|
-|[CDaoRecordset::CanBookmark](#canbookmark)|傳回非零值，如果資料錄集支援書籤。|
-|[CDaoRecordset::CancelUpdate](#cancelupdate)|取消任何暫止的更新，因為[編輯](#edit)或是[AddNew](#addnew)作業。|
-|[CDaoRecordset::CanRestart](#canrestart)|傳回非零值 if [Requery](#requery)可以呼叫以重新執行資料錄集的查詢。|
-|[CDaoRecordset::CanScroll](#canscroll)|傳回非零值，如果可以捲動資料列。|
-|[CDaoRecordset::CanTransact](#cantransact)|傳回非零值，如果資料來源支援交易。|
-|[CDaoRecordset::CanUpdate](#canupdate)|傳回非零值，如果可以更新資料錄集 （您可以新增、 更新或刪除記錄）。|
-|[CDaoRecordset::Close](#close)|關閉資料錄集。|
-|[CDaoRecordset::Delete](#delete)|從資料錄集刪除目前的記錄。 在刪除之後，您必須明確地捲動至另一筆記錄。|
-|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|呼叫以交換資料 （雙向） 之間的資料錄集的欄位資料成員和資料來源上對應的記錄。 實作 DAO 資料錄欄位交換 (DFX)。|
-|[CDaoRecordset::Edit](#edit)|準備變更目前的記錄。 呼叫`Update`完成編輯。|
-|[CDaoRecordset::FillCache](#fillcache)|填入所有或部分資料錄集物件，其中包含 ODBC 資料來源的資料的本機快取。|
-|[CDaoRecordset::Find](#find)|首先下, 一步，會找出特定的字串中符合指定的準則和記錄的目前記錄的進行的動態類型資料錄集的上一個或最後一個位置。|
-|[CDaoRecordset::FindFirst](#findfirst)|動態類型或快照集類型資料錄集符合指定的準則和記錄的目前記錄的進行中，找出第一筆記錄。|
-|[CDaoRecordset::FindLast](#findlast)|動態類型或快照集類型資料錄集符合指定的準則和記錄的目前記錄的進行中，找出最後一筆記錄。|
-|[CDaoRecordset::FindNext](#findnext)|動態類型或快照集類型資料錄集符合指定的準則和記錄的目前記錄的進行中，找出下一筆記錄。|
-|[CDaoRecordset::FindPrev](#findprev)|動態類型或快照集類型資料錄集符合指定的準則和記錄的目前記錄的進行中，找出上一筆記錄。|
-|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|傳回資料錄集物件的目前記錄的記錄數目。|
-|[CDaoRecordset::GetBookmark](#getbookmark)|傳回值，這個值表示記錄的書籤。|
-|[CDaoRecordset::GetCacheSize](#getcachesize)|傳回值，這個值，包含要在本機快取從 ODBC 資料來源之資料的動態類型資料錄集中指定的記錄數目。|
-|[CDaoRecordset::GetCacheStart](#getcachestart)|傳回值，這個值，指定要快取資料錄集中的第一筆記錄的書籤。|
-|[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|傳回`CString`最近最包含索引的名稱索引的資料表類型上使用`CDaoRecordset`。|
-|[CDaoRecordset::GetDateCreated](#getdatecreated)|傳回的日期和時間的基底資料表的基礎`CDaoRecordset`建立物件|
-|[CDaoRecordset::GetDateLastUpdated](#getdatelastupdated)|傳回的日期和時間的最新的基底資料表，基礎設計所做的變更`CDaoRecordset`物件。|
-|[CDaoRecordset::GetDefaultDBName](#getdefaultdbname)|傳回預設資料來源的名稱。|
-|[CDaoRecordset::GetDefaultSQL](#getdefaultsql)|呼叫以取得預設的 SQL 字串，來執行。|
-|[CDaoRecordset::GetEditMode](#geteditmode)|傳回值，這個值，指出目前記錄編輯的狀態。|
-|[CDaoRecordset::GetFieldCount](#getfieldcount)|傳回值，這個值表示資料錄集中的欄位數目。|
-|[CDaoRecordset::GetFieldInfo](#getfieldinfo)|傳回資料錄集中的特定類型的欄位的相關資訊。|
-|[CDaoRecordset::GetFieldValue](#getfieldvalue)|傳回資料錄集中的欄位值。|
-|[CDaoRecordset::GetIndexCount](#getindexcount)|擷取基礎資料錄集的資料表中的索引數目。|
-|[CDaoRecordset::GetIndexInfo](#getindexinfo)|傳回各種索引的相關資訊。|
-|[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|用來判斷最最近新增或更新記錄。|
-|[CDaoRecordset::GetLockingMode](#getlockingmode)|傳回值，這個值，表示處於作用中編輯期間的鎖定類型。|
-|[CDaoRecordset::GetName](#getname)|傳回`CString`包含資料錄集的名稱。|
-|[CDaoRecordset::GetParamValue](#getparamvalue)|擷取儲存在基礎 DAOParameter 物件中的指定參數的目前值。|
-|[CDaoRecordset::GetPercentPosition](#getpercentposition)|傳回目前資料錄的資料錄總數的百分比的位置。|
-|[CDaoRecordset::GetRecordCount](#getrecordcount)|傳回資料錄集物件中存取的記錄的數目。|
-|[CDaoRecordset::GetSQL](#getsql)|取得用來選取資料錄集的資料錄的 SQL 字串。|
-|[CDaoRecordset::GetType](#gettype)|呼叫以判斷資料錄集類型： 資料表類型、 動態類型或快照集類型。|
-|[CDaoRecordset::GetValidationRule](#getvalidationrule)|傳回`CString`包含驗證資料，因為它會將輸入欄位的值。|
-|[CDaoRecordset::GetValidationText](#getvalidationtext)|擷取驗證規則未獲滿足時所顯示的文字。|
-|[CDaoRecordset::IsBOF](#isbof)|傳回非零值，如果已位置之前的第一個記錄的資料錄集。 沒有目前資料錄。|
-|[CDaoRecordset::IsDeleted](#isdeleted)|傳回非零值，如果資料錄集位於已刪除的資料錄。|
-|[CDaoRecordset::IsEOF](#iseof)|傳回非零值，如果已位置之後的最後一個記錄的資料錄集。 沒有目前資料錄。|
-|[CDaoRecordset::IsFieldDirty](#isfielddirty)|傳回非零值，如果目前的記錄中指定的欄位已變更。|
-|[CDaoRecordset::IsFieldNull](#isfieldnull)|傳回非零值，如果目前的記錄中指定的欄位為 Null （具有任何值）。|
-|[CDaoRecordset::IsFieldNullable](#isfieldnullable)|傳回非零值，如果目前的記錄中指定的欄位可以設定為 Null （具有任何值）。|
-|[CDaoRecordset::IsOpen](#isopen)|傳回非零值 if[開啟](#open)先前已呼叫。|
-|[CDaoRecordset::Move](#move)|將指定的記錄數的資料錄集，從任一方向中目前的記錄。|
-|[CDaoRecordset::MoveFirst](#movefirst)|您可以將目前資料錄置於資料錄集的第一個記錄。|
-|[CDaoRecordset::MoveLast](#movelast)|您可以將目前資料錄置於資料錄集的最後一筆記錄。|
-|[CDaoRecordset::MoveNext](#movenext)|您可以將目前資料錄置於資料錄集的下一個記錄。|
-|[CDaoRecordset::MovePrev](#moveprev)|您可以將目前資料錄置於資料錄集中的前一筆記錄。|
-|[CDaoRecordset::Open](#open)|從資料表、 動態集或快照集建立新的資料錄集。|
-|[CDaoRecordset::Requery](#requery)|執行一次重新整理選取的資料錄的資料錄集的查詢。|
-|[CDaoRecordset::Seek](#seek)|尋找符合指定之準則的記錄目前的記錄會與目前的索引之索引的資料表類型資料錄集物件中的記錄。|
-|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|設定資料錄集物件的目前記錄中記錄的數目。|
-|[CDaoRecordset::SetBookmark](#setbookmark)|您可以將資料錄集置於包含指定的書籤的記錄。|
-|[CDaoRecordset::SetCacheSize](#setcachesize)|設定值，這個值，包含要在本機快取從 ODBC 資料來源之資料的動態類型資料錄集中指定的記錄數目。|
-|[CDaoRecordset::SetCacheStart](#setcachestart)|設定值，這個值，指定要快取資料錄集中的第一筆記錄的書籤。|
-|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|呼叫以設定索引類型的資料表資料錄集。|
-|[CDaoRecordset::SetFieldDirty](#setfielddirty)|為已變更，請將標記在目前的記錄中指定的欄位。|
-|[CDaoRecordset::SetFieldNull](#setfieldnull)|設定為 Null （具有任何值） 是目前記錄中的指定欄位的值。|
-|[CDaoRecordset::SetFieldValue](#setfieldvalue)|資料錄集中設定欄位的值。|
-|[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|設定欄位的值為 Null 的資料錄集。 （具有任何值）。|
-|[CDaoRecordset::SetLockingMode](#setlockingmode)|設定值，這個值指出鎖定放在編輯期間的效果的類型。|
-|[CDaoRecordset::SetParamValue](#setparamvalue)|設定儲存在基礎 DAOParameter 物件中指定參數的目前值|
-|[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|設定指定的參數的目前值為 Null （具有任何值）。|
-|[CDaoRecordset::SetPercentPosition](#setpercentposition)|設定目前資料錄的位置對應至資料錄集中的記錄總數的百分比表示的位置。|
-|[CDaoRecordset::Update](#update)|完成`AddNew`或`Edit`藉由將新的或修改資料儲存在資料來源上的作業。|
+|[CDaoRecordset：： AddNew](#addnew)|準備加入新記錄。 呼叫[Update](#update)以完成新增。|
+|[CDaoRecordset：： CanAppend](#canappend)|如果可以透過[AddNew](#addnew)成員函式將新記錄加入至記錄集，則傳回非零。|
+|[CDaoRecordset：： CanBookmark](#canbookmark)|如果記錄集支援書簽，則傳回非零。|
+|[CDaoRecordset：： CancelUpdate](#cancelupdate)|取消任何暫止的更新，因為[編輯](#edit)或[AddNew](#addnew)作業。|
+|[CDaoRecordset：： CanRestart](#canrestart)|如果可以呼叫重新[查詢](#requery)以再次執行記錄集的查詢，則傳回非零。|
+|[CDaoRecordset：： CanScroll](#canscroll)|如果您可以流覽記錄，則傳回非零。|
+|[CDaoRecordset：： CanTransact](#cantransact)|如果資料來源支援交易，則傳回非零。|
+|[CDaoRecordset：： CanUpdate](#canupdate)|如果可以更新記錄集，則傳回非零（您可以加入、更新或刪除記錄）。|
+|[CDaoRecordset：： Close](#close)|關閉記錄集。|
+|[CDaoRecordset：:D 刪除](#delete)|從記錄集刪除目前的記錄。 刪除之後，您必須明確地滾動到另一筆記錄。|
+|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|呼叫以在記錄集的欄位資料成員和資料來源上的對應記錄之間交換資料（雙向）。 實行 DAO 記錄欄位交換（DFX）。|
+|[CDaoRecordset：： Edit](#edit)|準備目前記錄的變更。 呼叫 `Update` 以完成編輯。|
+|[CDaoRecordset：： FillCache](#fillcache)|針對包含來自 ODBC 資料來源之資料的記錄集物件，填入全部或一部分的本機快取。|
+|[CDaoRecordset：： Find](#find)|在符合指定準則並使其記錄目前記錄的動態集型別記錄集中，尋找特定字串的第一個、下一個、上一個或最後一個位置。|
+|[CDaoRecordset：： FindFirst](#findfirst)|找出可滿足指定準則並使其記錄目前記錄的動態集類型或快照集類型記錄集中的第一筆記錄。|
+|[CDaoRecordset：： FindLast](#findlast)|找出可滿足指定準則並使其記錄目前記錄的動態集型別或快照集型別記錄中的最後一筆記錄。|
+|[CDaoRecordset：： FindNext](#findnext)|找出可滿足指定準則並使其記錄目前記錄的動態集類型或快照集類型記錄集中的下一筆記錄。|
+|[CDaoRecordset：： FindPrev](#findprev)|尋找符合指定準則並使其記錄目前記錄的動態集類型或快照集類型記錄集中的上一個記錄。|
+|[CDaoRecordset：： GetAbsolutePosition](#getabsoluteposition)|傳回記錄集物件的目前記錄號碼。|
+|[CDaoRecordset：： GetBookmark](#getbookmark)|傳回值，表示記錄上的書簽。|
+|[CDaoRecordset：： GetCacheSize](#getcachesize)|傳回值，指定包含要從 ODBC 資料來源本機快取之資料的動態集類型記錄集內的記錄數目。|
+|[CDaoRecordset：： GetCacheStart](#getcachestart)|傳回值，指定要快取之記錄集中第一筆記錄的書簽。|
+|[CDaoRecordset：： GetCurrentIndex](#getcurrentindex)|傳回 `CString`，其中包含最近在索引資料表類型 `CDaoRecordset`上使用的索引名稱。|
+|[CDaoRecordset：： GetDateCreated](#getdatecreated)|傳回建立 `CDaoRecordset` 物件之基礎資料表的日期和時間|
+|[CDaoRecordset：： GetDateLastUpdated](#getdatelastupdated)|傳回對 `CDaoRecordset` 物件之基表的設計所做的最新變更的日期和時間。|
+|[CDaoRecordset：： GetDefaultDBName](#getdefaultdbname)|傳回預設資料來源的名稱。|
+|[CDaoRecordset：： GetDefaultSQL](#getdefaultsql)|呼叫以取得要執行的預設 SQL 字串。|
+|[CDaoRecordset：： GetEditMode](#geteditmode)|傳回值，指出目前記錄的編輯狀態。|
+|[CDaoRecordset：： GetFieldCount](#getfieldcount)|傳回值，表示記錄集內的欄位數目。|
+|[CDaoRecordset：： Issomapper.getfieldinfo](#getfieldinfo)|傳回有關記錄集中欄位的特定資訊類型。|
+|[CDaoRecordset：： GetFieldValue](#getfieldvalue)|傳回記錄集中的欄位值。|
+|[CDaoRecordset：： GetIndexCount](#getindexcount)|抓取記錄集基礎的資料表中的索引數目。|
+|[CDaoRecordset：： GetIndexInfo](#getindexinfo)|傳回關於索引的各種資訊。|
+|[CDaoRecordset：： GetLastModifiedBookmark](#getlastmodifiedbookmark)|用來判斷最近加入或更新的記錄。|
+|[CDaoRecordset：： GetLockingMode](#getlockingmode)|傳回值，指出在編輯期間作用中的鎖定類型。|
+|[CDaoRecordset：： GetName](#getname)|傳回包含記錄集名稱的 `CString`。|
+|[CDaoRecordset：： GetParamValue](#getparamvalue)|抓取儲存在基礎 DAOParameter 物件中的指定參數目前的值。|
+|[CDaoRecordset：： GetPercentPosition](#getpercentposition)|傳回目前記錄的位置，以記錄總數的百分比表示。|
+|[CDaoRecordset：： GetRecordCount](#getrecordcount)|傳回在記錄集物件中存取的記錄數目。|
+|[CDaoRecordset：： GetSQL](#getsql)|取得用來選取記錄集記錄的 SQL 字串。|
+|[CDaoRecordset：： GetType](#gettype)|呼叫以判斷記錄集的類型：資料表類型、動態集型別或快照型別。|
+|[CDaoRecordset：： GetValidationRule](#getvalidationrule)|傳回 `CString`，其中包含在輸入欄位時驗證資料的值。|
+|[CDaoRecordset：： GetValidationText](#getvalidationtext)|抓取未滿足驗證規則時所顯示的文字。|
+|[CDaoRecordset：： IsBOF](#isbof)|如果記錄集已放在第一筆記錄之前，則傳回非零。 沒有目前的記錄。|
+|[CDaoRecordset：： IsDeleted](#isdeleted)|如果記錄集位於已刪除的記錄上，則傳回非零。|
+|[CDaoRecordset：： IsEOF](#iseof)|如果記錄集已放在最後一筆記錄之後，則傳回非零。 沒有目前的記錄。|
+|[CDaoRecordset：： IsFieldDirty](#isfielddirty)|如果目前記錄中指定的欄位已變更，則傳回非零。|
+|[CDaoRecordset：： IsFieldNull](#isfieldnull)|如果目前記錄中的指定欄位為 Null （沒有值），則傳回非零。|
+|[CDaoRecordset：： IsFieldNullable](#isfieldnullable)|如果目前記錄中的指定欄位可以設定為 Null （沒有值），則傳回非零。|
+|[CDaoRecordset：： IsOpen](#isopen)|如果先前已呼叫[Open](#open) ，則傳回非零。|
+|[CDaoRecordset：： Move](#move)|以任一方向將記錄集置於目前記錄中指定數目的記錄。|
+|[CDaoRecordset：： MoveFirst](#movefirst)|將目前的記錄放置在記錄集的第一筆記錄上。|
+|[CDaoRecordset：： MoveLast](#movelast)|將目前記錄置於記錄集的最後一筆記錄。|
+|[CDaoRecordset：： MoveNext](#movenext)|將目前的記錄放置在記錄集的下一個記錄中。|
+|[CDaoRecordset：： MovePrev](#moveprev)|將目前記錄放置在記錄集的上一個記錄中。|
+|[CDaoRecordset：： Open](#open)|從資料表、動態集或快照建立新的記錄集。|
+|[CDaoRecordset：： Requery](#requery)|再次執行記錄集的查詢，以重新整理選取的記錄。|
+|[CDaoRecordset：： Seek](#seek)|找出索引資料表類型記錄集物件中的記錄，以滿足目前索引的指定準則，並讓該記錄成為目前的記錄。|
+|[CDaoRecordset：： SetAbsolutePosition](#setabsoluteposition)|設定記錄集物件目前記錄的記錄號碼。|
+|[CDaoRecordset：： SetBookmark](#setbookmark)|將記錄集置於包含指定書簽的記錄上。|
+|[CDaoRecordset：： SetCacheSize](#setcachesize)|設定值，指定包含要從 ODBC 資料來源本機快取之資料的動態集類型記錄集內的記錄數目。|
+|[CDaoRecordset：： SetCacheStart](#setcachestart)|設定值，指定要快取之記錄集中第一筆記錄的書簽。|
+|[CDaoRecordset：： SetCurrentIndex](#setcurrentindex)|呼叫以設定資料表類型記錄集的索引。|
+|[CDaoRecordset：： SetFieldDirty](#setfielddirty)|將目前記錄中指定的欄位標記為已變更。|
+|[CDaoRecordset：： SetFieldNull](#setfieldnull)|將目前記錄中指定欄位的值設定為 Null （沒有值）。|
+|[CDaoRecordset：： SetFieldValue](#setfieldvalue)|設定記錄集中的欄位值。|
+|[CDaoRecordset：： SetFieldValueNull](#setfieldvaluenull)|將記錄集內的欄位值設定為 Null。 （沒有值）。|
+|[CDaoRecordset：： SetLockingMode](#setlockingmode)|設定值，指出在編輯期間要使其生效的鎖定類型。|
+|[CDaoRecordset：： SetParamValue](#setparamvalue)|設定儲存在基礎 DAOParameter 物件中的指定參數目前的值。|
+|[CDaoRecordset：： SetParamValueNull](#setparamvaluenull)|將指定之參數的目前值設定為 Null （沒有值）。|
+|[CDaoRecordset：： SetPercentPosition](#setpercentposition)|將目前記錄的位置設定為對應至記錄集內記錄總數百分比的位置。|
+|[CDaoRecordset：： Update](#update)|藉由將新的或編輯過的資料儲存在資料來源上，完成 `AddNew` 或 `Edit` 作業。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|包含旗標，指出是否欄位會自動標示為已變更。|
-|[CDaoRecordset::m_nFields](#m_nfields)|包含資料錄集類別中的欄位資料成員的數目和資料來源的資料錄集選取資料行數目。|
-|[CDaoRecordset::m_nParams](#m_nparams)|包含資料錄集類別中的參數資料成員的數目 — 伴隨資料錄集的查詢所傳遞的參數數目|
-|[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|基礎資料錄集物件 DAO 介面的指標。|
-|[CDaoRecordset::m_pDatabase](#m_pdatabase)|此結果集的來源資料庫。 包含的指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件。|
-|[CDaoRecordset::m_strFilter](#m_strfilter)|包含字串，用來建構 SQL**其中**陳述式。|
-|[CDaoRecordset::m_strSort](#m_strsort)|包含字串，用來建構 SQL **ORDER BY**陳述式。|
+|[CDaoRecordset：： m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|包含旗標，指出欄位是否會自動標示為已變更。|
+|[CDaoRecordset：： m_nFields](#m_nfields)|包含記錄集類別中的欄位資料成員數目，以及記錄集從資料來源選取的資料行數目。|
+|[CDaoRecordset：： m_nParams](#m_nparams)|包含記錄集類別中的參數資料成員數目—與記錄集的查詢一起傳遞的參數數目|
+|[CDaoRecordset：： m_pDAORecordset](#m_pdaorecordset)|記錄集物件基礎之 DAO 介面的指標。|
+|[CDaoRecordset：： m_pDatabase](#m_pdatabase)|此結果集的源資料庫。 包含[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件的指標。|
+|[CDaoRecordset：： m_strFilter](#m_strfilter)|包含用來建立 SQL **WHERE**語句的字串。|
+|[CDaoRecordset：： m_strSort](#m_strsort)|包含用來建立 SQL **ORDER BY**語句的字串。|
 
 ## <a name="remarks"></a>備註
 
-稱為 「 資料錄集，「`CDaoRecordset`物件都在下列三種形式：
+也稱為「記錄集」，`CDaoRecordset` 物件提供下列三種形式：
 
-- 資料表類型的資料錄集代表基底資料表可用來檢查、 新增、 變更或刪除單一資料庫資料表中的記錄。
+- 資料表類型記錄集代表一個基表，您可以用來檢查、加入、變更或刪除單一資料庫資料表中的記錄。
 
-- 動態類型資料錄集是可以有可更新的記錄查詢的結果。 這些資料錄集是一組可用來檢查、 新增、 變更或刪除資料錄從基礎資料庫資料表或資料表的記錄。 動態類型資料錄集可以包含在資料庫中的一個或多個資料表的欄位。
+- 動態集型別記錄集是可更新記錄的查詢結果。 這些記錄集是一組記錄，您可以用來檢查、加入、變更或刪除基礎資料庫資料表或資料表中的記錄。 動態集型別記錄集可以包含資料庫中一個或多個資料表的欄位。
 
-- 快照集類型的資料錄集是靜態的一組可用來尋找資料，或產生報表的記錄複本。 這些資料錄集可以包含在資料庫中的一個或多個資料表的欄位，但無法更新。
+- 快照類型記錄集是一組記錄的靜態副本，您可以用來尋找資料或產生報表。 這些記錄集可以包含資料庫中一個或多個資料表的欄位，但無法更新。
 
-資料錄集的每個表單代表一組固定在開啟資料錄集的記錄。 當您捲動資料表類型的資料錄集或動態類型的資料錄集內的記錄時，它會反映之後開啟資料錄集時，其他使用者或應用程式中的其他資料錄集的記錄所做的變更。 （無法更新快照集類型的資料錄集）。您可以使用`CDaoRecordset`直接或衍生的應用程式特定資料錄集類別，從`CDaoRecordset`。 您可以：
+每一種形式的記錄集都代表在記錄集開啟時固定的一組記錄。 當您滾動到資料表類型記錄集或動態集類型記錄集中的記錄時，它會反映在記錄集開啟之後，由其他使用者或應用程式中的其他記錄集所進行的記錄變更。 （無法更新快照集類型的記錄集）。您可以直接使用 `CDaoRecordset`，或從 `CDaoRecordset`衍生應用程式特定的記錄集類別。 您可以：
 
-- 捲動資料列。
+- 流覽記錄。
 
-- 設定索引，並快速尋找使用資料錄[搜尋](#seek)（只記錄資料表類型集）。
+- 使用[Seek](#seek)來設定索引並快速尋找記錄（僅限資料表類型的記錄集）。
 
-- 尋找字串比較為基礎的記錄:"<"，"\<="，"="、"> = 」，或">"（動態類型和快照集類型的資料錄集）。
+- 尋找以字串比較為基礎的記錄： "<"、"\<="、"="、"> =" 或 ">" （動態集型別和快照型別記錄集）。
 
-- 更新的記錄，並指定鎖定的模式 （除非快照集類型的資料錄集）。
+- 更新記錄，並指定鎖定模式（快照集類型記錄集除外）。
 
-- 篩選資料錄集來限制它選取，從可用資料來源的記錄。
+- 篩選記錄集，以限制從資料來源可用的記錄中選取的記錄。
 
-- 排序資料錄集。
+- 排序記錄集。
 
-- 參數化資料錄集，以自訂其選取項目之後執行階段才知道的資訊。
+- 將記錄集參數化，以自訂在執行時間之前不知道的資訊。
 
-類別`CDaoRecordset`提供類似的類別介面`CRecordset`。 主要差異在於該類別`CDaoRecordset`透過 「 資料存取物件 (DAO) 根據 OLE 會存取資料。 類別`CRecordset`DBMS 存取透過開放式資料庫連接 (ODBC) 和 ODBC 驅動程式，用於該 DBMS。
+類別 `CDaoRecordset` 提供類似類別 `CRecordset`的介面。 主要的差異在於，類別 `CDaoRecordset` 透過以 OLE 為基礎的資料存取物件（DAO）來存取資料。 類別 `CRecordset` 透過開放式資料庫連接（ODBC）和該 DBMS 的 ODBC 驅動程式來存取 DBMS。
 
 > [!NOTE]
-> DAO 資料庫類別是開放式資料庫連接 (ODBC) 為基礎的 MFC 資料庫類別有所區別。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 您仍然可以使用 DAO 類別; 存取 ODBC 資料來源DAO 類別通常提供優異的功能，因為它們是特定 Microsoft Jet 資料庫引擎。
+> DAO 資料庫類別與以開放式資料庫連接（ODBC）為基礎的 MFC 資料庫類別不同。 所有的 DAO 資料庫類別名稱都具有 "CDao" 前置詞。 您仍然可以使用 DAO 類別來存取 ODBC 資料來源。DAO 類別一般提供了絕佳的功能，因為它們是 Microsoft Jet 資料庫引擎特有的。
 
-您可以使用`CDaoRecordset`直接衍生的類別或`CDaoRecordset`。 若要使用的資料錄集類別，在任一情況下，開啟資料庫，並建構資料錄集物件，並傳遞建構函式的指標，您`CDaoDatabase`物件。 您也可以建構`CDaoRecordset`物件，並可讓 MFC 建立暫存`CDaoDatabase`為您的物件。 然後呼叫資料錄集的[開啟](#open)成員函式，指定物件是否為資料表類型的資料錄集、 動態類型的資料錄集或快照集類型的資料錄集。 呼叫`Open`選取資料庫中的資料，並擷取第一筆記錄。
+您可以直接使用 `CDaoRecordset`，或從 `CDaoRecordset`衍生類別。 若要在任一情況下使用記錄集類別，請開啟資料庫並建立記錄集物件，並將指標傳遞至您的 `CDaoDatabase` 物件。 您也可以建立 `CDaoRecordset` 物件，並讓 MFC 為您建立暫存的 `CDaoDatabase` 物件。 然後通話記錄集的[Open](#open)成員函式，指定物件是否為數據表類型記錄集、動態集類型記錄集或快照集類型記錄集。 呼叫 `Open` 會從資料庫中選取資料，並抓取第一筆記錄。
 
-使用物件的成員函式和資料成員來捲動瀏覽記錄，並在其上操作。 可用的作業取決於是否物件是資料表類型的資料錄集、 動態類型的資料錄集或快照集類型的資料錄集，以及它是否可更新或唯讀狀態，這取決於資料庫或開放式資料庫連接 (ODBC) 的功能資料來源。 若要重新整理記錄可能會變更或新增，因為`Open`呼叫，呼叫物件的[Requery](#requery)成員函式。 呼叫物件的`Close`成員函式，並使用它完成時終結物件。
+使用物件的成員函式和資料成員來逐一查看記錄，並對其進行操作。 可用的作業取決於物件是否為數據表類型記錄集、動態集類型記錄集或快照集類型記錄集，以及它是否可更新或唯讀，這取決於資料庫或開放式資料庫連接（ODBC）的功能。資料來源。 若要重新整理自 `Open` 呼叫之後可能已變更或新增的記錄，請呼叫物件的[Requery](#requery)成員函式。 呼叫物件的 `Close` 成員函式，並在完成時終結物件。
 
-`CDaoRecordset` 使用來支援讀取及更新的記錄欄位的 DAO 資料錄欄位交換 (DFX)，透過型別安全C++的成員您`CDaoRecordset`或是`CDaoRecordset`-衍生的類別。 您也可以實作在資料庫中的資料行的動態繫結，而不需使用 DFX 機制使用[GetFieldValue](#getfieldvalue)並[SetFieldValue](#setfieldvalue)。
+`CDaoRecordset` 使用 DAO 記錄欄位交換（DFX），透過 `CDaoRecordset` 或 `CDaoRecordset`衍生類別的型別安全C++成員來支援讀取和更新記錄欄位。 您也可以在資料庫中執行資料行的動態繫結，而不需要使用[GetFieldValue](#getfieldvalue)和[SetFieldValue](#setfieldvalue)的 DFX 機制。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 資料錄集物件 」。
+如需相關資訊，請參閱 DAO 說明中的「記錄集物件」主題。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -327,11 +327,11 @@ class CDaoRecordset : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdao.h
+**標頭：** afxdao。h
 
-##  <a name="addnew"></a>  CDaoRecordset::AddNew
+##  <a name="addnew"></a>CDaoRecordset：： AddNew
 
-呼叫此成員函式，將新記錄新增至類型的資料表或動態類型的資料錄集。
+呼叫這個成員函式，將新記錄加入至資料表類型或動態集類型記錄集。
 
 ```
 virtual void AddNew();
@@ -339,39 +339,39 @@ virtual void AddNew();
 
 ### <a name="remarks"></a>備註
 
-記錄的欄位是一開始是 Null。 (在資料庫術語中，Null 」 有任何值 」 的方式並不是 NULL，在相同C++。)若要完成此作業，您必須呼叫[更新](#update)成員函式。 `Update` 將您的變更儲存至資料來源。
+記錄的欄位一開始是 Null。 （在資料庫術語中，Null 表示「沒有值」，而且與中C++的 null 不同）。若要完成此作業，您必須呼叫[Update](#update)成員函式。 `Update` 會將您的變更儲存至資料來源。
 
 > [!CAUTION]
->  如果您編輯記錄，然後捲動至另一筆記錄，而不需呼叫`Update`，您的變更都會遺失，而不發出警告。
+>  如果您編輯記錄，然後在沒有呼叫 `Update`的情況下滾動到另一筆記錄，您的變更就會遺失而不會發出警告。
 
-如果您將記錄加入動態類型的資料錄集藉由呼叫[AddNew](#addnew)，記錄會顯示在資料錄集並包含的程式就可以看到任何新的基礎資料表`CDaoRecordset`物件。
+如果您藉由呼叫[AddNew](#addnew)，將記錄加入至動態集類型的記錄集，記錄就會顯示在記錄集內，而且會包含在基礎資料表中，而任何新的 `CDaoRecordset` 物件都可以看到它。
 
-新記錄的位置取決於資料錄集的類型：
+新記錄的位置取決於記錄集的類型：
 
-- 動態類型中不保證資料錄集，插入新記錄的位置。 基於效能和並行存取與 Microsoft Jet 3.0 變更此行為。 如果您的目標是要使新加入的記錄目前的記錄，請取得上次修改的資料錄的書籤，並移至該書籤：
+- 在動態類型記錄集內，不保證會插入新記錄。 基於效能和並行的原因，此行為隨著 Microsoft Jet 3.0 而變更。 如果您的目標是要讓新加入的記錄成為目前的記錄，請取得上次修改記錄的書簽，並移至該書簽：
 
 [!code-cpp[NVC_MFCDatabase#1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]
 
-- 在已指定索引的資料表類型記錄集，會傳回它們的排序次序中的適當位置中的記錄。 如果未不指定任何索引，新的記錄會傳回資料錄集的結尾。
+- 在已指定索引的資料表類型記錄集內，記錄會在其適當位置以排序次序傳回。 如果未指定任何索引，就會在記錄集的結尾傳回新的記錄。
 
-目前在使用之前的記錄`AddNew`保持最新狀態。 如果您想要變更為新的記錄和資料錄集支援書籤，呼叫[SetBookmark](#setbookmark)至基礎的 DAO 資料錄集物件的 LastModified 屬性設定所識別的書籤。 這樣做會用於決定加入一筆記錄中的計數器 （自動遞增） 欄位的值。 如需詳細資訊，請參閱 < [GetLastModifiedBookmark](#getlastmodifiedbookmark)。
+在您使用 `AddNew` 之前的記錄會保持為最新。 如果您想要將新記錄設為目前的，而且記錄集支援書簽，請將[SetBookmark](#setbookmark)呼叫至基礎 DAO 記錄集物件的 LastModified 屬性設定所識別的書簽。 這麼做適用于判斷已加入記錄中計數器（自動遞增）欄位的值。 如需詳細資訊，請參閱[GetLastModifiedBookmark](#getlastmodifiedbookmark)。
 
-如果資料庫支援交易，您可以讓您`AddNew`呼叫交易的一部分。 如需有關交易的詳細資訊，請參閱類別[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 請注意，您應該呼叫[CDaoWorkspace::BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans)再呼叫`AddNew`。
+如果資料庫支援交易，您可以讓您的 `AddNew` 呼叫交易的一部分。 如需交易的詳細資訊，請參閱類別[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 請注意，在呼叫 `AddNew`之前，您應該先呼叫[CDaoWorkspace：： BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans) 。
 
-它是不合法呼叫`AddNew`的資料錄集其[開啟](#open)尚未呼叫成員函式。 A`CDaoException`如果您呼叫會擲回`AddNew`無法附加的記錄集。 您可以判斷資料錄集是否可更新，藉由呼叫[CanAppend](#canappend)。
+對於尚未呼叫[Open](#open)成員函式的記錄集，不合法地呼叫 `AddNew`。 如果您針對無法附加的記錄集呼叫 `AddNew`，則會擲回 `CDaoException`。 您可以藉由呼叫[CanAppend](#canappend)來判斷記錄集是否可更新。
 
-Framework 標記變更欄位資料成員，以確保它們會寫入資料來源上的記錄，DAO 資料錄欄位交換 (DFX) 機制。 變更欄位的值，通常欄位已變更會自動設定，讓您很少需要呼叫[SetFieldDirty](#setfielddirty) ，但您有時可能會想要確保的資料行可明確地更新或插入無論值為欄位資料成員。 DFX 機制也會採用善用**虛擬 NULL**。 如需詳細資訊，請參閱 < [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
+架構會標示已變更的欄位資料成員，以確保 DAO 記錄欄位交換（DFX）機制會將它們寫入資料來源上的記錄。 變更欄位的值通常會自動將欄位設定為中途，因此您不常需要自行呼叫[SetFieldDirty](#setfielddirty) ，但有時您可能會想要確保不論欄位資料成員中的值為何，都會明確更新或插入資料行。 DFX 機制也會採用**虛擬 Null**的用法。 如需詳細資訊，請參閱[CDaoFieldExchange：： m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
 
-如果未使用的雙重緩衝機制，然後變更欄位的值不會自動設定欄位已變更。 在此情況下，它必須明確設定的欄位已變更。 中包含旗標[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制這項自動欄位檢查。
+如果未使用雙重緩衝機制，則變更欄位的值時，不會自動將欄位設定為「中途」。 在此情況下，必須明確地將欄位設定為已變更。 包含在[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)中的旗標會控制此自動欄位檢查。
 
 > [!NOTE]
-> 如果記錄都有雙重緩衝 （也就是自動欄位啟用），則呼叫`CancelUpdate`會還原為之前的值的成員變數`AddNew`或`Edit`呼叫。
+> 如果記錄是雙重緩衝（也就是啟用自動欄位檢查），則呼叫 `CancelUpdate` 會將成員變數還原至 `AddNew` 或 `Edit` 被呼叫之前所擁有的值。
 
-如需相關資訊，請參閱 「 AddNew 方法 」、 「 CancelUpdate 方法 」、 「 LastModified 屬性 」 和 DAO [說明] 中的 < EditMode 屬性 > 主題。
+如需相關資訊，請參閱 DAO 說明中的「AddNew 方法」、「CancelUpdate 方法」、「LastModified 屬性」和「EditMode 屬性」主題。
 
-##  <a name="canappend"></a>  CDaoRecordset::CanAppend
+##  <a name="canappend"></a>CDaoRecordset：： CanAppend
 
-呼叫此成員函式，以判斷是否先前開啟的資料錄集可讓您藉由呼叫新增新的資料錄[AddNew](#addnew)成員函式。
+呼叫這個成員函式，以判斷先前開啟的記錄集是否允許您藉由呼叫[AddNew](#addnew)成員函式來加入新的記錄。
 
 ```
 BOOL CanAppend() const;
@@ -379,15 +379,15 @@ BOOL CanAppend() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資料錄集可讓您可新增新記錄; 為非零否則為 0。 `CanAppend` 如果您開啟資料錄集，以唯讀模式時，就會傳回 0。
+如果記錄集允許加入新記錄，則為非零。否則為0。 如果您以唯讀方式開啟記錄集，`CanAppend` 將會傳回0。
 
 ### <a name="remarks"></a>備註
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 附加方法 」。
+如需相關資訊，請參閱 DAO 說明中的「附加方法」主題。
 
-##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark
+##  <a name="canbookmark"></a>CDaoRecordset：： CanBookmark
 
-呼叫此成員函式，以判斷是否先前開啟的資料錄集可以讓您個別標示記錄使用書籤。
+呼叫這個成員函式，以判斷先前開啟的記錄集是否可讓您使用書簽個別標記記錄。
 
 ```
 BOOL CanBookmark();
@@ -395,17 +395,17 @@ BOOL CanBookmark();
 
 ### <a name="return-value"></a>傳回值
 
-如果資料錄集支援書籤，否則為 0，非零值。
+如果記錄集支援書簽，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-如果您使用的完全根據 Microsoft Jet 資料庫引擎資料表的資料錄集，可以使用書籤除外上標示為順向捲動的資料錄集的快照集類型資料錄集。 其他資料庫產品 （外部的 ODBC 資料來源） 可能不支援書籤。
+如果您使用完全以 Microsoft Jet 資料庫引擎資料表為基礎的記錄集，則除了標示為順向滾動記錄集的快照集類型記錄集之外，您還可以使用書簽。 其他資料庫產品（外部 ODBC 資料來源）可能不支援書簽。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < Bookmarkable 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「Bookmarkable 屬性」主題。
 
-##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate
+##  <a name="cancelupdate"></a>CDaoRecordset：： CancelUpdate
 
-`CancelUpdate`成員函式會取消任何暫止的更新，因為[編輯](#edit)或是[AddNew](#addnew)作業。
+由於[編輯](#edit)或[AddNew](#addnew)作業，`CancelUpdate` 成員函式會取消任何暫止的更新。
 
 ```
 virtual void CancelUpdate();
@@ -413,18 +413,18 @@ virtual void CancelUpdate();
 
 ### <a name="remarks"></a>備註
 
-比方說，如果應用程式呼叫`Edit`或是`AddNew`成員函式，而且不具有稱為[更新](#update)，`CancelUpdate`取消之後所做的任何變更`Edit`或`AddNew`呼叫。
+例如，如果應用程式呼叫 `Edit` 或 `AddNew` 成員函式，但尚未呼叫[Update](#update)，`CancelUpdate` 會取消呼叫 `Edit` 或 `AddNew` 之後所做的任何變更。
 
 > [!NOTE]
->  如果記錄都有雙重緩衝 （也就是自動欄位啟用），則呼叫`CancelUpdate`會還原為之前的值的成員變數`AddNew`或`Edit`呼叫。
+>  如果記錄是雙重緩衝（也就是啟用自動欄位檢查），則呼叫 `CancelUpdate` 會將成員變數還原至 `AddNew` 或 `Edit` 被呼叫之前所擁有的值。
 
-如果沒有任何`Edit`或是`AddNew`暫止的作業`CancelUpdate`會導致擲回例外狀況的 MFC。 呼叫[GetEditMode](#geteditmode)成員函式來判斷是否有暫止的作業可取消。
+如果沒有 `Edit` 或 `AddNew` 作業暫止，`CancelUpdate` 會導致 MFC 擲回例外狀況。 呼叫[GetEditMode](#geteditmode)成員函式，以判斷是否有可取消的暫止作業。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < CancelUpdate 方法 >。
+如需相關資訊，請參閱 DAO 說明中的「CancelUpdate 方法」主題。
 
-##  <a name="canrestart"></a>  CDaoRecordset::CanRestart
+##  <a name="canrestart"></a>CDaoRecordset：： CanRestart
 
-呼叫此成員函式，以判斷資料錄集是否允許重新啟動其查詢 （若要重新整理其記錄），藉由呼叫`Requery`成員函式。
+呼叫這個成員函式，以判斷記錄集是否允許藉由呼叫 `Requery` 成員函式重新開機其查詢（以重新整理其記錄）。
 
 ```
 BOOL CanRestart();
@@ -432,19 +432,19 @@ BOOL CanRestart();
 
 ### <a name="return-value"></a>傳回值
 
-非零`Requery`可以呼叫以執行資料錄集的查詢一次，否則為 0。
+如果可以呼叫 `Requery` 以重新執行記錄集的查詢，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-不支援類型的資料表資料錄集`Requery`。
+資料表類型的記錄集不支援 `Requery`。
 
-如果`Requery`是不受支援，呼叫[關閉](#close)然後[開啟](#open)重新整理資料。 您可以呼叫`Requery`來更新資料錄集物件的基礎參數查詢之後已變更的參數值。
+如果不支援 `Requery`，請呼叫[Close](#close) ，然後[開啟](#open)以重新整理資料。 在參數值變更之後，您可以呼叫 `Requery` 來更新記錄集物件的基礎參數查詢。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 可重新啟動屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「可重新開機屬性」主題。
 
-##  <a name="canscroll"></a>  CDaoRecordset::CanScroll
+##  <a name="canscroll"></a>CDaoRecordset：： CanScroll
 
-呼叫此成員函式，以判斷資料錄集是否允許捲動。
+呼叫這個成員函式，以判斷記錄集是否允許滾動。
 
 ```
 BOOL CanScroll() const;
@@ -452,17 +452,17 @@ BOOL CanScroll() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果您可以捲動的記錄，否則為 0，非零值。
+如果您可以流覽記錄，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-如果您呼叫[開放](#open)使用`dbForwardOnly`，只可以向前捲動資料錄集。
+如果您使用 `dbForwardOnly`呼叫[Open](#open) ，記錄集只能向前復原。
 
-如需相關資訊，請參閱 「 定位目前記錄指標使用 DAO"DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「使用 DAO 定位目前的記錄指標」主題。
 
-##  <a name="cantransact"></a>  CDaoRecordset::CanTransact
+##  <a name="cantransact"></a>CDaoRecordset：： CanTransact
 
-呼叫此成員函式，以判斷資料錄集是否允許交易。
+呼叫這個成員函式，以判斷記錄集是否允許交易。
 
 ```
 BOOL CanTransact();
@@ -470,15 +470,15 @@ BOOL CanTransact();
 
 ### <a name="return-value"></a>傳回值
 
-如果基礎資料來源支援交易，否則為 0，非零值。
+如果基礎資料來源支援交易，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 交易屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「交易屬性」主題。
 
-##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate
+##  <a name="canupdate"></a>CDaoRecordset：： CanUpdate
 
-呼叫此成員函式，以判斷是否可以更新資料錄集。
+呼叫這個成員函式，以判斷是否可以更新記錄集。
 
 ```
 BOOL CanUpdate() const;
@@ -486,15 +486,15 @@ BOOL CanUpdate() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果可以更新資料錄集 （新增、 更新和刪除記錄），否則為 0。
+如果記錄集可以更新（加入、更新和刪除記錄），則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-資料錄集可能會處於唯讀模式，如果基礎資料來源是唯讀的或者如果指定`dbReadOnly`for *nOptions*當您呼叫[開啟](#open)資料錄集。
+如果基礎資料來源為唯讀，或當您為記錄集呼叫[Open](#open)時，指定*nOptions* `dbReadOnly`，則記錄集可能是唯讀的。
 
-如需相關資訊，請參閱 「 AddNew 方法 」、 「 編輯方法 」、 「 刪除方法 」、 「 更新方法 」 和 DAO [說明] 中的 「 可更新屬性 」 的主題。
+如需相關資訊，請參閱 DAO 說明中的「AddNew 方法」、「編輯方法」、「刪除方法」、「更新方法」和「可更新屬性」主題。
 
-##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset
+##  <a name="cdaorecordset"></a>CDaoRecordset：： CDaoRecordset
 
 建構 `CDaoRecordset` 物件。
 
@@ -505,20 +505,20 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ### <a name="parameters"></a>參數
 
 *pDatabase*<br/>
-包含的指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件或 NULL 值。 如果不是 NULL，`CDaoDatabase`物件的`Open`不將它連接到資料來源呼叫成員函式，以開啟它進行您在自己的資料錄集嘗試[開啟](#open)呼叫。 如果您傳遞 NULL，`CDaoDatabase`物件已建構，並使用您指定如果您衍生您的資料錄集類別，從資料來源資訊連線`CDaoRecordset`。
+包含[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件的指標或 Null 值。 如果不是 Null，而且尚未呼叫 `CDaoDatabase` 物件的 `Open` 成員函式來將它連接到資料來源，記錄集就會在它自己的[open](#open)呼叫期間，嘗試為您開啟它。 如果您傳遞 Null，則會使用您在從 `CDaoRecordset`衍生記錄集類別時所指定的資料來源資訊，為您建立 `CDaoDatabase` 物件的結構並加以連接。
 
 ### <a name="remarks"></a>備註
 
-您可以使用`CDaoRecordset`直接衍生應用程式特定類別或`CDaoRecordset`。 您可以使用 ClassWizard 衍生您的資料錄集類別。
+您可以直接使用 `CDaoRecordset`，或從 `CDaoRecordset`衍生應用程式特定的類別。 您可以使用 ClassWizard 來衍生您的記錄集類別。
 
 > [!NOTE]
->  如果您衍生`CDaoRecordset`類別，您的衍生類別必須提供它自己的建構函式。 在衍生類別的建構函式，呼叫建構函式`CDaoRecordset::CDaoRecordset`，將適當的參數，以及傳遞給它。
+>  如果您要衍生 `CDaoRecordset` 類別，則您的衍生類別必須提供自己的函式。 在衍生類別的函式中，呼叫 `CDaoRecordset::CDaoRecordset`的函式，並將適當的參數傳遞至該函數。
 
-將 NULL 傳遞至您的資料錄集建構函式有`CDaoDatabase`物件建構，並為您自動連接。 這是不需要建構，並連接您的有用捷徑`CDaoDatabase`才能建構資料錄集物件。 如果`CDaoDatabase`物件尚未開啟，請[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件也會建立供您使用預設工作區。 如需詳細資訊，請參閱 < [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)。
+將 Null 傳遞至您的記錄集函式，以自動為您建立 `CDaoDatabase` 物件並為您連接。 這是很有用的快捷方式，您不需要在建立記錄集之前，先建立和連接 `CDaoDatabase` 物件。 如果未開啟 `CDaoDatabase` 物件，也會為您建立使用預設工作區的[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件。 如需詳細資訊，請參閱[CDaoDatabase：： CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)。
 
-##  <a name="close"></a>  CDaoRecordset::Close
+##  <a name="close"></a>CDaoRecordset：： Close
 
-關閉`CDaoRecordset`物件會將它移除相關聯的資料庫中的開啟資料錄集的集合。
+關閉 `CDaoRecordset` 物件會從關聯資料庫中開啟的記錄集集合中移除它。
 
 ```
 virtual void Close();
@@ -526,17 +526,17 @@ virtual void Close();
 
 ### <a name="remarks"></a>備註
 
-因為`Close`不會終結`CDaoRecordset`物件，您可以藉由呼叫重複使用物件`Open`上相同的資料來源或不同的資料來源。
+因為 `Close` 不會摧毀 `CDaoRecordset` 物件，所以您可以在相同的資料來源或不同的資料來源上呼叫 `Open`，以重複使用物件。
 
-所有暫止[AddNew](#addnew)或是[編輯](#edit)取消陳述式之後，並會回復所有暫止交易。 如果您想要保留暫止的加入或編輯時，呼叫[更新](#update)之前先呼叫`Close`以每個資料錄集。
+所有暫止的[AddNew](#addnew)或[Edit](#edit)語句都會取消，而且所有暫止的交易都會回復。 如果您想要保留暫止的新增或編輯專案，請先呼叫[Update](#update) ，再呼叫每個記錄集的 `Close`。
 
-您可以呼叫`Open`呼叫之後，再次`Close`。 這可讓您重複使用的資料錄集物件。 更好的替代做法是呼叫[Requery](#requery)、 的話。
+呼叫 `Close`之後，您可以再次呼叫 `Open`。 這可讓您重複使用記錄集物件。 更好的替代方式是呼叫重新[查詢](#requery)（如果可能的話）。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 關閉方法 」。
+如需相關資訊，請參閱 DAO 說明中的「關閉方法」主題。
 
-##  <a name="delete"></a>  CDaoRecordset::Delete
+##  <a name="delete"></a>CDaoRecordset：:D 刪除
 
-呼叫此成員函式，若要刪除目前開啟的動態類型或類型的資料表資料錄集物件中的記錄。
+呼叫這個成員函式，以刪除開放式動態集類型或資料表類型記錄集物件中的目前記錄。
 
 ```
 virtual void Delete();
@@ -544,22 +544,22 @@ virtual void Delete();
 
 ### <a name="remarks"></a>備註
 
-成功刪除後，資料錄集的欄位資料成員會設為 Null 值，而且您必須明確呼叫其中一個資料錄集瀏覽成員函式 ([移動](#move)， [Seek](#seek)， [SetBookmark](#setbookmark)等等) 以移出已刪除的資料錄。 當您刪除資料錄從資料錄集時，必須有目前的記錄資料錄集才能呼叫`Delete`; 否則 MFC 會擲回的例外狀況。
+成功刪除之後，記錄集的欄位資料成員會設定為 Null 值，而且您必須明確地呼叫其中一個記錄集導覽成員函式（[移動](#move)、[搜尋](#seek)、 [SetBookmark](#setbookmark)等等），才能移出已刪除的記錄。 當您從記錄集刪除記錄時，記錄集內必須有目前的記錄，才能呼叫 `Delete`;否則，MFC 會擲回例外狀況。
 
-`Delete` 移除目前的記錄，並使其無法存取。 雖然您無法編輯，或使用已刪除的資料錄，其保持最新狀態。 一旦您移到另一筆記錄，不過，您不能刪除的記錄目前一次。
+`Delete` 會移除目前的記錄，使其無法存取。 雖然您無法編輯或使用已刪除的記錄，但它仍然是最新的。 不過，一旦您移至另一筆記錄，就無法再次將刪除的記錄重新設為目前的。
 
 > [!CAUTION]
->  資料錄集必須能夠更新，而且必須有有效的記錄資料錄集中目前當您呼叫`Delete`。 比方說，如果您刪除的記錄，但不是會捲動至新的記錄才能呼叫`Delete`再次`Delete`就會擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)。
+>  記錄集必須是可更新的，而且當您呼叫 `Delete`時，記錄集內必須有有效的記錄。 例如，如果您刪除記錄，但在再次呼叫 `Delete` 之前，未滾動到新的記錄，`Delete` 會擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)。
 
-如果您使用交易，而且您呼叫，您可以取消刪除資料錄[CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback)成員函式。 如果基底資料表是主要資料表中串聯刪除關聯性，刪除目前的記錄可能也會刪除外部索引資料表中的一或多個記錄。 如需詳細資訊，請參閱 DAO 說明定義 「 串聯刪除 」。
+如果您使用交易，而且呼叫[CDaoWorkspace：： Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback)成員函式，則可以取消刪除記錄。 如果基表是串聯刪除關聯性中的主資料表，刪除目前記錄也可能會刪除外部資料表中的一或多個記錄。 如需詳細資訊，請參閱 DAO 說明中的「cascade 刪除」定義。
 
-不同於`AddNew`並`Edit`，呼叫`Delete`後面沒有呼叫`Update`。
+不同于 `AddNew` 和 `Edit`，對 `Delete` 的呼叫後面不會呼叫 `Update`。
 
-如需相關資訊，請參閱 「 AddNew 方法 」、 「 編輯方法 」、 「 刪除方法 」、 「 更新方法 」 和 DAO [說明] 中的 「 可更新屬性 」 的主題。
+如需相關資訊，請參閱 DAO 說明中的「AddNew 方法」、「編輯方法」、「刪除方法」、「更新方法」和「可更新屬性」主題。
 
-##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange
+##  <a name="dofieldexchange"></a>CDaoRecordset：:D oFieldExchange
 
-架構會呼叫此成員函式，來自動交換您的資料錄集物件的欄位資料成員與對應的資料行的資料來源上目前的記錄之間的資料。
+架構會呼叫這個成員函式，在記錄集物件的欄位資料成員和資料來源上目前記錄的對應資料行之間，自動交換資料。
 
 ```
 virtual void DoFieldExchange(CDaoFieldExchange* pFX);
@@ -568,21 +568,21 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-包含一個指向`CDaoFieldExchange`物件。 架構將已經有設定此物件來指定欄位交換作業的內容。
+包含 `CDaoFieldExchange` 物件的指標。 架構已經設定此物件來指定欄位交換作業的內容。
 
 ### <a name="remarks"></a>備註
 
-它也會將繫結參數資料成員，如果有的話，資料錄集的選取範圍的 SQL 陳述式字串中參數預留位置。 交換欄位資料，呼叫 DAO 資料錄欄位交換 (DFX)，可以雙向運作： 從資料錄集物件的欄位資料成員的資料來源上的資料錄的欄位和資料來源的資料錄集物件上的記錄。 如果您要動態繫結資料行，您不需要實作`DoFieldExchange`。
+它也會將您的參數資料成員（如果有的話）系結至記錄集選取之 SQL 語句字串中的參數預留位置。 欄位資料的交換（稱為 DAO 記錄欄位交換（DFX））可以雙向運作：從記錄集物件的欄位資料成員，到資料來源上記錄的欄位，以及從資料來源的記錄到記錄集物件。 如果您要動態地系結資料行，則不需要執行 `DoFieldExchange`。
 
-唯一的動作，您通常必須採取來實作`DoFieldExchange`對於您衍生的資料錄集類別是建立具有 ClassWizard 類別，並指定欄位資料成員的名稱和資料型別。 您也可能會加入程式碼 ClassWizard 將寫入至指定的參數資料成員。 如果所有欄位都是動態繫結，此函式將會在非使用中，除非您指定的參數資料成員。
+執行衍生記錄集類別的 `DoFieldExchange` 時，您通常必須採取的動作是使用 ClassWizard 建立類別，並指定欄位資料成員的名稱和資料類型。 您也可以將程式碼新增至 ClassWizard 寫入的內容，以指定參數資料成員。 如果要動態系結所有欄位，除非您指定參數資料成員，否則此函式將會變成非作用中。
 
-當您宣告 ClassWizard 您衍生的資料錄集類別時，精靈會將覆寫`DoFieldExchange`，類似下列的範例：
+當您使用 ClassWizard 宣告您的衍生記錄集類別時，嚮導會為您撰寫 `DoFieldExchange` 的覆寫，如下列範例所示：
 
 [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]
 
-##  <a name="edit"></a>  CDaoRecordset::Edit
+##  <a name="edit"></a>CDaoRecordset：： Edit
 
-呼叫此成員函式，以允許變更目前的記錄。
+呼叫這個成員函式，以允許對目前記錄進行變更。
 
 ```
 virtual void Edit();
@@ -590,41 +590,41 @@ virtual void Edit();
 
 ### <a name="remarks"></a>備註
 
-一旦您呼叫`Edit`成員函式，將目前記錄的欄位所做的變更會複製到複製緩衝區。 您對記錄所需的變更之後，請呼叫`Update`以儲存變更。 `Edit` 將儲存的資料錄集的資料成員的值。 如果您呼叫`Edit`，進行變更，然後呼叫`Edit`同樣地，將記錄的值還原為之前，先`Edit`呼叫。
+一旦您呼叫 `Edit` 成員函式，對目前記錄的欄位所做的變更會複製到複製緩衝區。 在您對記錄進行所需的變更之後，請呼叫 `Update` 來儲存您的變更。 `Edit` 儲存記錄集的資料成員值。 如果您呼叫 `Edit`、進行變更，然後再次呼叫 `Edit`，則記錄的值會還原為第一次 `Edit` 呼叫之前的內容。
 
 > [!CAUTION]
->  如果您編輯記錄，然後再執行 移至另一筆記錄，但是未先呼叫任何作業`Update`，您的變更都會遺失，而不發出警告。 此外，如果您關閉資料錄集或父資料庫，則會捨棄您已編輯的記錄而不發出警告。
+>  如果您編輯記錄，然後執行任何移至另一筆記錄而不先呼叫 `Update`的作業，您的變更就會遺失而不發出警告。 此外，如果您關閉記錄集或父資料庫，就會捨棄已編輯的記錄而不發出警告。
 
-在某些情況下，您可能想要更新的資料行，以便為 Null （包含任何資料）。 若要這樣做，請呼叫`SetFieldNull`搭配參數標記的欄位為 Null; true 這也會導致要更新的資料行。 如果您想要的欄位寫入至資料來源，即使它的值尚未變更，請呼叫`SetFieldDirty`搭配 TRUE 參數。 就算欄位具有 Null 值。
+在某些情況下，您可能想要將資料行設為 Null （不包含任何資料）來更新它。 若要這麼做，請使用 TRUE 的參數呼叫 `SetFieldNull`，將欄位標記為 Null;這也會導致更新資料行。 如果您想要將欄位寫入資料來源，即使其值尚未變更，請使用參數 TRUE 呼叫 `SetFieldDirty`。 即使欄位具有 Null 值，也可以這麼做。
 
-Framework 標記變更欄位資料成員，以確保它們會寫入資料來源上的記錄，DAO 資料錄欄位交換 (DFX) 機制。 變更欄位的值，通常欄位已變更會自動設定，讓您很少需要呼叫[SetFieldDirty](#setfielddirty) ，但您有時可能會想要確保的資料行可明確地更新或插入無論值為欄位資料成員。 DFX 機制也會採用善用**虛擬 NULL**。 如需詳細資訊，請參閱 < [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
+架構會標示已變更的欄位資料成員，以確保 DAO 記錄欄位交換（DFX）機制會將它們寫入資料來源上的記錄。 變更欄位的值通常會自動將欄位設定為中途，因此您不常需要自行呼叫[SetFieldDirty](#setfielddirty) ，但有時您可能會想要確保不論欄位資料成員中的值為何，都會明確更新或插入資料行。 DFX 機制也會採用**虛擬 Null**的用法。 如需詳細資訊，請參閱[CDaoFieldExchange：： m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
 
-如果未使用的雙重緩衝機制，然後變更欄位的值不會自動設定欄位已變更。 在此情況下，它必須明確設定的欄位已變更。 中包含旗標[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制這項自動欄位檢查。
+如果未使用雙重緩衝機制，則變更欄位的值時，不會自動將欄位設定為「中途」。 在此情況下，必須明確地將欄位設定為已變更。 包含在[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)中的旗標會控制此自動欄位檢查。
 
-當在多使用者環境中要以保守模式鎖定資料錄集物件時，記錄就會保持鎖定的時間`Edit`更新已完成之前，都會使用。 樂觀地鎖定資料錄集，如果記錄已鎖定之前它會更新資料庫中,，相較於前編輯的記錄。 如果資料錄已變更，因為您呼叫`Edit`，則`Update`作業將會失敗，MFC 會擲回例外狀況。 您可以變更的鎖定模式`SetLockingMode`。
+當記錄集物件在多使用者環境中被搭配保守模式鎖定時，記錄會保持鎖定，直到使用 `Edit` 為止，直到更新完成為止。 如果記錄集是樂觀地鎖定的，則記錄會被鎖定，並在資料庫中更新之前，與預先編輯的記錄做比較。 如果記錄在您呼叫 `Edit`之後已變更，則 `Update` 作業會失敗，而且 MFC 會擲回例外狀況。 您可以使用 `SetLockingMode`變更鎖定模式。
 
 > [!NOTE]
->  外部資料庫格式，例如 ODBC 和可安裝的 ISAM 一律使用開放式鎖定。
+>  開放式鎖定一律用於外部資料庫格式，例如 ODBC 和可安裝的 ISAM。
 
-目前的記錄會保留目前呼叫之後`Edit`。 若要呼叫`Edit`，必須有目前的記錄。 如果沒有目前的記錄或資料錄集未參考開啟的資料表類型或動態類型資料錄集物件，就會發生例外狀況。 呼叫`Edit`會導致`CDaoException`在下列情況下擲回：
+呼叫 `Edit`之後，目前的記錄仍維持最新。 若要呼叫 `Edit`，必須要有目前的記錄。 如果沒有目前的記錄或記錄集未參考開放式資料表類型或動態集類型的記錄集物件，就會發生例外狀況。 呼叫 `Edit` 會導致在下列情況下擲回 `CDaoException`：
 
-- 沒有目前資料錄。
+- 沒有目前的記錄。
 
-- 資料錄集的資料庫處於唯讀狀態。
+- 資料庫或記錄集是唯讀的。
 
-- 記錄中的任何欄位不是可更新。
+- 記錄中沒有任何欄位是可更新的。
 
-- 資料庫或資料錄集是由另一位使用者所開啟的獨佔使用。
+- 資料庫或記錄集已開啟供其他使用者獨佔使用。
 
-- 另一位使用者已鎖定包含您的記錄的頁面。
+- 另一個使用者已鎖定包含您記錄的頁面。
 
-如果資料來源支援交易，您可以進行`Edit`呼叫交易的一部分。 請注意，您應該呼叫`CDaoWorkspace::BeginTrans`再呼叫`Edit`及開啟資料錄集之後。 也請注意，呼叫`CDaoWorkspace::CommitTrans`不是呼叫取代`Update`完成`Edit`作業。 如需有關交易的詳細資訊，請參閱類別`CDaoWorkspace`。
+如果資料來源支援交易，您可以讓 `Edit` 呼叫交易的一部分。 請注意，在呼叫 `Edit` 之前和記錄集開啟之後，您應該呼叫 `CDaoWorkspace::BeginTrans`。 另請注意，呼叫 `CDaoWorkspace::CommitTrans` 並不是呼叫 `Update` 來完成 `Edit` 作業的替代方案。 如需交易的詳細資訊，請參閱類別 `CDaoWorkspace`。
 
-如需相關資訊，請參閱 「 AddNew 方法 」、 「 編輯方法 」、 「 刪除方法 」、 「 更新方法 」 和 DAO [說明] 中的 「 可更新屬性 」 的主題。
+如需相關資訊，請參閱 DAO 說明中的「AddNew 方法」、「編輯方法」、「刪除方法」、「更新方法」和「可更新屬性」主題。
 
-##  <a name="fillcache"></a>  CDaoRecordset::FillCache
+##  <a name="fillcache"></a>CDaoRecordset：： FillCache
 
-呼叫此成員函式，以快取的指定從資料錄集的記錄筆數。
+呼叫這個成員函式可從記錄集快取指定的記錄數目。
 
 ```
 void FillCache(
@@ -635,28 +635,28 @@ void FillCache(
 ### <a name="parameters"></a>參數
 
 *pSize*<br/>
-指定要快取中填滿資料列數目。 如果您省略此參數，值會取決於基礎的 DAO 物件的 CacheSize 屬性設定。
+指定要填入快取的資料列數目。 如果您省略這個參數，此值是由基礎 DAO 物件的 CacheSize 屬性設定所決定。
 
 *pBookmark*<br/>
-A [COleVariant](../../mfc/reference/colevariant-class.md)指定書籤。 快取填滿從這個書籤所指定的記錄。 如果您省略此參數，快取會填入從基礎的 DAO 物件 CacheStart 屬性所指定的記錄。
+指定書簽的[COleVariant](../../mfc/reference/colevariant-class.md) 。 快取會從這個書簽所指出的記錄開始填入。 如果您省略這個參數，就會從基礎 DAO 物件的 CacheStart 屬性所指示的記錄開始填入快取。
 
 ### <a name="remarks"></a>備註
 
-快取改善擷取，或提取，遠端伺服器上的資料的應用程式的效能。 快取中保存最近假設，資料可能需要再次執行應用程式時從伺服器擷取資料的本機記憶體是空間。 當要求資料時，Microsoft Jet 資料庫引擎快取中的資料會先檢查而不是擷取自伺服器，需要更多時間。 使用非 ODBC 資料來源上的快取的資料沒有任何作用，因為資料不會儲存在快取。
+快取可改善從遠端伺服器抓取或提取資料之應用程式的效能。 快取是本機記憶體中的空間，其中保存最近從伺服器提取的資料，假設在應用程式執行時可能會再次要求資料。 當要求資料時，Microsoft Jet 資料庫引擎會先檢查快取中的資料，而不是從伺服器提取它，這會花費更多時間。 在非 ODBC 資料來源上使用資料快取不會有任何作用，因為資料不會儲存在快取中。
 
-而不是等待快取填滿記錄時加以擷取，您可以明確地填入快取隨時藉由呼叫`FillCache`成員函式。 這是更快的方法，以填滿快取，因為`FillCache`提取多個資料錄一次而不是一個一次。 例如，顯示每個藥記錄的時，您可以有您的應用程式呼叫`FillCache`擷取記錄的下一步 的藥。
+您可以藉由呼叫 `FillCache` 成員函式，隨時明確填滿快取，而不是在提取記錄時等候快取填滿。 這是填滿快取的更快速方式，因為 `FillCache` 一次會提取數筆記錄，而不是一次一個。 例如，當顯示記錄的每個 screenful 時，您可以讓應用程式呼叫 `FillCache` 來提取下一筆記錄 screenful。
 
-使用資料錄集物件存取任何 ODBC 資料庫可以有本機快取。 若要建立快取，從遠端資料來源中，開啟資料錄集物件，然後呼叫`SetCacheSize`和`SetCacheStart`資料錄集的成員函式。 如果*lSize*並*lBookmark*建立一個範圍超出所指定的範圍中的部分或全部`SetCacheSize`和`SetCacheStart`，這個範圍之外的資料錄集的部分會被忽略，不是載入快取。 如果`FillCache`要求比的多個記錄會保留在遠端資料來源，擷取剩餘的記錄，並擲回任何例外狀況。
+任何以記錄集物件存取的 ODBC 資料庫都可以有本機快取。 若要建立快取，請從遠端資料源開啟記錄集物件，然後呼叫 `SetCacheSize`，並 `SetCacheStart` 記錄集的成員函式。 如果*lSize*和*lBookmark*建立的範圍部分或完全超出 `SetCacheSize` 和 `SetCacheStart`所指定的範圍，則會忽略此範圍外的記錄集部分，而且不會載入快取中。 如果 `FillCache` 要求的記錄數超過遠端資料源中保留的數目，則只會提取剩餘的記錄，而且不會擲回任何例外狀況。
 
-從快取中擷取的記錄不會反映所做的變更同時對來源資料的其他使用者。
+從快取提取的記錄不會反映其他使用者同時對來源資料所做的變更。
 
-`FillCache` 會擷取尚未快取的記錄。 若要強制更新所有快取的資料，請呼叫`SetCacheSize`具有成員函式*lSize*參數等於 0，呼叫`SetCacheSize`再*lSize*參數等於快取大小您一開始要求，然後再呼叫`FillCache`。
+`FillCache` 只提取尚未快取的記錄。 若要強制更新所有快取的資料，請呼叫 `SetCacheSize` 成員函式，並將*lSize*參數設為0，並再次呼叫 `SetCacheSize`，並將*lSize*參數設定為等於您原先要求的快取大小，然後再呼叫 `FillCache`。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < FillCache 方法 >。
+如需相關資訊，請參閱 DAO 說明中的「FillCache 方法」主題。
 
-##  <a name="find"></a>  CDaoRecordset::Find
+##  <a name="find"></a>CDaoRecordset：： Find
 
-呼叫此成員函式，來尋找特定的字串中使用比較運算子的動態或快照集類型資料錄集。
+呼叫這個成員函式，以使用比較運算子來尋找動態集或快照集類型記錄集中的特定字串。
 
 ```
 virtual BOOL Find(
@@ -667,39 +667,39 @@ virtual BOOL Find(
 ### <a name="parameters"></a>參數
 
 *lFindType*<br/>
-值，指出所需的尋找作業的類型。 可能值為：
+值，指出所需的尋找作業類型。 可能的值包括：
 
-- AFX_DAO_NEXT 尋找比對字串的下一個位置。
+- AFX_DAO_NEXT 尋找相符字串的下一個位置。
 
-- AFX_DAO_PREV 尋找上一個位置的比對的字串。
+- AFX_DAO_PREV 尋找相符字串的先前位置。
 
-- AFX_DAO_FIRST 尋找比對字串的第一個位置。
+- AFX_DAO_FIRST 尋找相符字串的第一個位置。
 
-- AFX_DAO_LAST 尋找比對字串的最後一個位置。
+- AFX_DAO_LAST 尋找相符字串的最後一個位置。
 
 *lpszFilter*<br/>
-字串運算式 (例如**其中**子句中的 SQL 陳述式，而不需要這個字**其中**) 用來找出資料錄。 例如: 
+用來尋找記錄的字串運算式（例如 SQL 語句中的**WHERE**子句，**其中**不含單字）。 例如：
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
 ### <a name="return-value"></a>傳回值
 
-如果相符記錄找不到，則為 0，非零值。
+如果找到相符的記錄，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-您可以找到第一個下, 一步 上, 一個或最後一個執行個體的字串。 `Find` 是虛擬的函式，因此您可以覆寫它，並新增您自己的實作。 `FindFirst`， `FindLast`， `FindNext`，以及`FindPrev`成員函式會呼叫`Find`成員函式，因此您可以使用`Find`來控制所有尋找作業的行為。
+您可以尋找字串的第一個、下一個、上一個或最後一個實例。 `Find` 是虛擬函式，因此您可以覆寫它，並加入您自己的實作為。 `FindFirst`、`FindLast`、`FindNext`和 `FindPrev` 成員函式會呼叫 `Find` 成員函式，因此您可以使用 `Find` 來控制所有尋找作業的行為。
 
-若要尋找一筆記錄中的資料表類型的資料錄集，請呼叫[搜尋](#seek)成員函式。
+若要找出資料表類型記錄集中的記錄，請呼叫[Seek](#seek)成員函式。
 
 > [!TIP]
->  較小的一組記錄，更有效率`Find`會。 一般而言，以及特別是使用 ODBC 資料，最好是建立新的查詢來擷取您要的記錄。
+>  您擁有的一組記錄越小，`Find` 的效率就愈高。 一般來說，特別是使用 ODBC 資料時，最好是建立只抓取所需記錄的新查詢。
 
-如需相關資訊，請參閱 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「FindFirst，FindLast，FindNext，FindPrevious 方法」主題。
 
-##  <a name="findfirst"></a>  CDaoRecordset::FindFirst
+##  <a name="findfirst"></a>CDaoRecordset：： FindFirst
 
-呼叫此成員函式，以尋找符合指定的條件的第一筆記錄。
+呼叫這個成員函式，以尋找符合指定條件的第一筆記錄。
 
 ```
 BOOL FindFirst(LPCTSTR lpszFilter);
@@ -708,52 +708,52 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>參數
 
 *lpszFilter*<br/>
-字串運算式 (例如**其中**子句中的 SQL 陳述式，而不需要這個字**其中**) 用來找出資料錄。
+用來尋找記錄的字串運算式（例如 SQL 語句中的**WHERE**子句，**其中**不含單字）。
 
 ### <a name="return-value"></a>傳回值
 
-如果相符記錄找不到，則為 0，非零值。
+如果找到相符的記錄，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-`FindFirst`成員函式開始從資料錄集的開頭搜尋，並搜尋至資料錄集的結尾。
+`FindFirst` 成員函式會從記錄集的開頭開始搜尋，並搜尋到記錄集的結尾。
 
-如果您想要包含所有您的搜尋 （不只是那些符合特定條件） 中的記錄所使用的是其中一個的移動作業來移動記錄記錄。 若要尋找一筆記錄中的資料表類型的資料錄集，請呼叫`Seek`成員函式。
+如果您想要在搜尋中包含所有記錄（而不只是符合特定條件的記錄），請使用其中一項移動作業，從記錄移至記錄。 若要找出資料表類型記錄集中的記錄，請呼叫 `Seek` 成員函式。
 
-如果沒有找到符合準則的記錄，則目前的記錄指標是未定，和`FindFirst`會傳回零。 如果資料錄集包含多筆記錄符合的準則`FindFirst`找出第一次出現，`FindNext`找出下一個項目，依此類推。
+如果找不到符合準則的記錄，則無法確定目前的記錄指標，`FindFirst` 會傳回零。 如果記錄集包含一個以上符合準則的記錄，`FindFirst` 會找出第一個出現的專案，`FindNext` 找出下一個專案，依此類推。
 
 > [!CAUTION]
->  如果您編輯目前的記錄，請務必以儲存變更，藉由呼叫`Update`再移至另一筆記錄的成員函式。 如果您移至另一筆記錄而不需要更新，您的變更將會遺失，而不發出警告。
+>  如果您編輯目前的記錄，請務必先呼叫 `Update` 成員函式來儲存變更，然後再移至另一筆記錄。 如果您移至另一筆記錄而不更新，則會遺失您的變更，而不會出現警告。
 
-`Find`成員函式搜尋的位置和下表中指定的方向：
+`Find` 成員函式會從位置和下表所指定的方向進行搜尋：
 
-|尋找作業|開始|搜尋方向|
+|尋找作業|Begin|搜尋方向|
 |---------------------|-----------|----------------------|
-|`FindFirst`|資料錄集的開頭|資料錄集的結尾|
-|`FindLast`|資料錄集的結尾|資料錄集的開頭|
-|`FindNext`|目前的記錄|資料錄集的結尾|
-|`FindPrevious`|目前的記錄|資料錄集的開頭|
+|`FindFirst`|記錄集的開頭|記錄集結尾|
+|`FindLast`|記錄集結尾|記錄集的開頭|
+|`FindNext`|目前記錄|記錄集結尾|
+|`FindPrevious`|目前記錄|記錄集的開頭|
 
 > [!NOTE]
->  當您呼叫`FindLast`，Microsoft Jet 資料庫引擎完全填入資料錄集再開始搜尋 中，如果這不已完成。 第一次搜尋時間可能會比後續的搜尋。
+>  當您呼叫 `FindLast`時，Microsoft Jet 資料庫引擎會在開始搜尋之前，完全填入您的記錄集（如果尚未這麼做）。 第一次搜尋可能會比後續搜尋花費更長的時間。
 
-使用其中一種尋找作業不是呼叫相同`MoveFirst`或`MoveNext`，不過，這只會讓第一個或下一個記錄目前未指定條件。 您可以依照與移動作業尋找作業。
+不過，使用其中一個「尋找」作業和呼叫 `MoveFirst` 或 `MoveNext`不同，只是讓第一個或下一個記錄成為目前的，而不指定條件。 您可以遵循「尋找」作業來執行「移動」操作。
 
-使用 尋找作業時，請記住下列：
+使用尋找作業時，請記住下列事項：
 
-- 如果`Find`傳回非零值，未定義目前的記錄。 在此情況下，您必須將目前記錄指標回到有效的記錄。
+- 如果 `Find` 傳回非零值，則不會定義目前的記錄。 在此情況下，您必須將目前的記錄指標放回有效的記錄。
 
-- 您無法使用順向捲動快照集類型的資料錄集的尋找作業。
+- 您不能將尋找作業與順向滾動快照集類型記錄集搭配使用。
 
-- 您應該使用美國日期格式 （月-日-年） 當您搜尋欄位包含日期，即使您不想要使用 Microsoft Jet 資料庫引擎; 美國版本否則，比對記錄找不到。
+- 當您搜尋包含日期的欄位時，您應該使用美國日期格式（月-日），即使您不使用 Microsoft Jet database engine 的美國版本也一樣。否則，可能找不到相符的記錄。
 
-- 使用 ODBC 資料庫和大型的動態集時，您可能會發現，使用 尋找作業變慢時，尤其是使用大型的資料錄集。 您可以使用 SQL 查詢，以改善效能與自訂**ORDERBY**或**何處**子句，參數的查詢，或`CDaoQuerydef`擷取特定的索引的記錄的物件。
+- 使用 ODBC 資料庫和大型的動態集時，您可能會發現使用「尋找」作業的速度很慢，特別是在使用大型記錄集時。 您可以使用 SQL 查詢搭配自訂**ORDERBY**或**WHERE**子句、參數查詢，或可抓取特定索引記錄的 `CDaoQuerydef` 物件，來改善效能。
 
-如需相關資訊，請參閱 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「FindFirst，FindLast，FindNext，FindPrevious 方法」主題。
 
-##  <a name="findlast"></a>  CDaoRecordset::FindLast
+##  <a name="findlast"></a>CDaoRecordset：： FindLast
 
-呼叫此成員函式，以尋找符合指定的條件的最後一筆記錄。
+呼叫這個成員函式，以尋找符合指定之條件的最後一筆記錄。
 
 ```
 BOOL FindLast(LPCTSTR lpszFilter);
@@ -762,40 +762,40 @@ BOOL FindLast(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>參數
 
 *lpszFilter*<br/>
-字串運算式 (例如**其中**子句中的 SQL 陳述式，而不需要這個字**其中**) 用來找出資料錄。
+用來尋找記錄的字串運算式（例如 SQL 語句中的**WHERE**子句，**其中**不含單字）。
 
 ### <a name="return-value"></a>傳回值
 
-如果相符記錄找不到，則為 0，非零值。
+如果找到相符的記錄，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-`FindLast`成員函式開始搜尋資料錄集的結尾與資料錄集的開頭來向後搜尋。
+`FindLast` 成員函式會在記錄集的結尾開始搜尋，並向後搜尋記錄集的開頭。
 
-如果您想要包含所有您的搜尋 （不只是那些符合特定條件） 中的記錄所使用的是其中一個的移動作業來移動記錄記錄。 若要尋找一筆記錄中的資料表類型的資料錄集，請呼叫`Seek`成員函式。
+如果您想要在搜尋中包含所有記錄（而不只是符合特定條件的記錄），請使用其中一項移動作業，從記錄移至記錄。 若要找出資料表類型記錄集中的記錄，請呼叫 `Seek` 成員函式。
 
-如果沒有找到符合準則的記錄，則目前的記錄指標是未定，和`FindLast`會傳回零。 如果資料錄集包含多筆記錄符合的準則`FindFirst`找出第一次出現，`FindNext`找出之後第一次出現，並依此類推的下一個相符項目。
+如果找不到符合準則的記錄，則無法確定目前的記錄指標，`FindLast` 會傳回零。 如果記錄集包含一個以上符合準則的記錄，`FindFirst` 會找出第一個出現的專案，`FindNext` 找出第一次出現之後的下一個專案，依此類推。
 
 > [!CAUTION]
->  如果您編輯目前的記錄，請確定您儲存所做的變更藉由呼叫`Update`再移至另一筆記錄的成員函式。 如果您移至另一筆記錄而不需要更新，您的變更將會遺失，而不發出警告。
+>  如果您編輯目前的記錄，請務必先呼叫 `Update` 成員函式來儲存變更，然後再移至另一筆記錄。 如果您移至另一筆記錄而不更新，則會遺失您的變更，而不會出現警告。
 
-使用其中一種尋找作業不是呼叫相同`MoveFirst`或`MoveNext`，不過，這只會讓第一個或下一個記錄目前未指定條件。 您可以依照與移動作業尋找作業。
+不過，使用其中一個「尋找」作業和呼叫 `MoveFirst` 或 `MoveNext`不同，只是讓第一個或下一個記錄成為目前的，而不指定條件。 您可以遵循「尋找」作業來執行「移動」操作。
 
-使用 尋找作業時，請記住下列：
+使用尋找作業時，請記住下列事項：
 
-- 如果`Find`傳回非零值，未定義目前的記錄。 在此情況下，您必須將目前記錄指標回到有效的記錄。
+- 如果 `Find` 傳回非零值，則不會定義目前的記錄。 在此情況下，您必須將目前的記錄指標放回有效的記錄。
 
-- 您無法使用順向捲動快照集類型的資料錄集的尋找作業。
+- 您不能將尋找作業與順向滾動快照集類型記錄集搭配使用。
 
-- 您應該使用美國日期格式 （月-日-年） 當您搜尋欄位包含日期，即使您不想要使用 Microsoft Jet 資料庫引擎; 美國版本否則，比對記錄找不到。
+- 當您搜尋包含日期的欄位時，您應該使用美國日期格式（月-日），即使您不使用 Microsoft Jet database engine 的美國版本也一樣。否則，可能找不到相符的記錄。
 
-- 使用 ODBC 資料庫和大型的動態集時，您可能會發現，使用 尋找作業變慢時，尤其是使用大型的資料錄集。 您可以使用 SQL 查詢，以改善效能與自訂**ORDERBY**或**何處**子句，參數的查詢，或`CDaoQuerydef`擷取特定的索引的記錄的物件。
+- 使用 ODBC 資料庫和大型的動態集時，您可能會發現使用「尋找」作業的速度很慢，特別是在使用大型記錄集時。 您可以使用 SQL 查詢搭配自訂**ORDERBY**或**WHERE**子句、參數查詢，或可抓取特定索引記錄的 `CDaoQuerydef` 物件，來改善效能。
 
-如需相關資訊，請參閱 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「FindFirst，FindLast，FindNext，FindPrevious 方法」主題。
 
-##  <a name="findnext"></a>  CDaoRecordset::FindNext
+##  <a name="findnext"></a>CDaoRecordset：： FindNext
 
-呼叫此成員函式，以尋找符合指定的條件的下一筆記錄。
+呼叫這個成員函式，以尋找符合指定條件的下一筆記錄。
 
 ```
 BOOL FindNext(LPCTSTR lpszFilter);
@@ -804,40 +804,40 @@ BOOL FindNext(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>參數
 
 *lpszFilter*<br/>
-字串運算式 (例如**其中**子句中的 SQL 陳述式，而不需要這個字**其中**) 用來找出資料錄。
+用來尋找記錄的字串運算式（例如 SQL 語句中的**WHERE**子句，**其中**不含單字）。
 
 ### <a name="return-value"></a>傳回值
 
-如果相符記錄找不到，則為 0，非零值。
+如果找到相符的記錄，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-`FindNext`成員函式開始在目前的記錄搜尋，並搜尋至資料錄集的結尾。
+`FindNext` 成員函式會從目前的記錄開始搜尋，並在記錄集的結尾進行搜尋。
 
-如果您想要包含所有您的搜尋 （不只是那些符合特定條件） 中的記錄所使用的是其中一個的移動作業來移動記錄記錄。 若要尋找一筆記錄中的資料表類型的資料錄集，請呼叫`Seek`成員函式。
+如果您想要在搜尋中包含所有記錄（而不只是符合特定條件的記錄），請使用其中一項移動作業，從記錄移至記錄。 若要找出資料表類型記錄集中的記錄，請呼叫 `Seek` 成員函式。
 
-如果沒有找到符合準則的記錄，則目前的記錄指標是未定，和`FindNext`會傳回零。 如果資料錄集包含多筆記錄符合的準則`FindFirst`找出第一次出現，`FindNext`找出下一個項目，依此類推。
+如果找不到符合準則的記錄，則無法確定目前的記錄指標，`FindNext` 會傳回零。 如果記錄集包含一個以上符合準則的記錄，`FindFirst` 會找出第一個出現的專案，`FindNext` 找出下一個專案，依此類推。
 
 > [!CAUTION]
->  如果您編輯目前的記錄，請確定您儲存所做的變更藉由呼叫`Update`再移至另一筆記錄的成員函式。 如果您移至另一筆記錄而不需要更新，您的變更將會遺失，而不發出警告。
+>  如果您編輯目前的記錄，請務必先呼叫 `Update` 成員函式來儲存變更，然後再移至另一筆記錄。 如果您移至另一筆記錄而不更新，則會遺失您的變更，而不會出現警告。
 
-使用其中一種尋找作業不是呼叫相同`MoveFirst`或`MoveNext`，不過，這只會讓第一個或下一個記錄目前未指定條件。 您可以依照與移動作業尋找作業。
+不過，使用其中一個「尋找」作業和呼叫 `MoveFirst` 或 `MoveNext`不同，只是讓第一個或下一個記錄成為目前的，而不指定條件。 您可以遵循「尋找」作業來執行「移動」操作。
 
-使用 尋找作業時，請記住下列：
+使用尋找作業時，請記住下列事項：
 
-- 如果`Find`傳回非零值，未定義目前的記錄。 在此情況下，您必須將目前記錄指標回到有效的記錄。
+- 如果 `Find` 傳回非零值，則不會定義目前的記錄。 在此情況下，您必須將目前的記錄指標放回有效的記錄。
 
-- 您無法使用順向捲動快照集類型的資料錄集的尋找作業。
+- 您不能將尋找作業與順向滾動快照集類型記錄集搭配使用。
 
-- 您應該使用美國日期格式 （月-日-年） 當您搜尋欄位包含日期，即使您不想要使用 Microsoft Jet 資料庫引擎; 美國版本否則，比對記錄找不到。
+- 當您搜尋包含日期的欄位時，您應該使用美國日期格式（月-日），即使您不使用 Microsoft Jet database engine 的美國版本也一樣。否則，可能找不到相符的記錄。
 
-- 使用 ODBC 資料庫和大型的動態集時，您可能會發現，使用 尋找作業變慢時，尤其是使用大型的資料錄集。 您可以使用 SQL 查詢，以改善效能與自訂**ORDERBY**或**何處**子句，參數的查詢，或`CDaoQuerydef`擷取特定的索引的記錄的物件。
+- 使用 ODBC 資料庫和大型的動態集時，您可能會發現使用「尋找」作業的速度很慢，特別是在使用大型記錄集時。 您可以使用 SQL 查詢搭配自訂**ORDERBY**或**WHERE**子句、參數查詢，或可抓取特定索引記錄的 `CDaoQuerydef` 物件，來改善效能。
 
-如需相關資訊，請參閱 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「FindFirst，FindLast，FindNext，FindPrevious 方法」主題。
 
-##  <a name="findprev"></a>  CDaoRecordset::FindPrev
+##  <a name="findprev"></a>CDaoRecordset：： FindPrev
 
-呼叫此成員函式，以尋找符合指定的條件的上一筆記錄。
+呼叫這個成員函式，以尋找符合指定條件的上一個記錄。
 
 ```
 BOOL FindPrev(LPCTSTR lpszFilter);
@@ -846,40 +846,40 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>參數
 
 *lpszFilter*<br/>
-字串運算式 (例如**其中**子句中的 SQL 陳述式，而不需要這個字**其中**) 用來找出資料錄。
+用來尋找記錄的字串運算式（例如 SQL 語句中的**WHERE**子句，**其中**不含單字）。
 
 ### <a name="return-value"></a>傳回值
 
-如果相符記錄找不到，則為 0，非零值。
+如果找到相符的記錄，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-`FindPrev`成員函式開始在目前的記錄搜尋，並會向後搜尋，向起始處的資料錄集。
+`FindPrev` 成員函式會從目前的記錄開始搜尋，並向後搜尋記錄集的開頭。
 
-如果您想要包含所有您的搜尋 （不只是那些符合特定條件） 中的記錄所使用的是其中一個的移動作業來移動記錄記錄。 若要尋找一筆記錄中的資料表類型的資料錄集，請呼叫`Seek`成員函式。
+如果您想要在搜尋中包含所有記錄（而不只是符合特定條件的記錄），請使用其中一項移動作業，從記錄移至記錄。 若要找出資料表類型記錄集中的記錄，請呼叫 `Seek` 成員函式。
 
-如果沒有找到符合準則的記錄，則目前的記錄指標是未定，和`FindPrev`會傳回零。 如果資料錄集包含多筆記錄符合的準則`FindFirst`找出第一次出現，`FindNext`找出下一個項目，依此類推。
+如果找不到符合準則的記錄，則無法確定目前的記錄指標，`FindPrev` 會傳回零。 如果記錄集包含一個以上符合準則的記錄，`FindFirst` 會找出第一個出現的專案，`FindNext` 找出下一個專案，依此類推。
 
 > [!CAUTION]
->  如果您編輯目前的記錄，請確定您儲存所做的變更藉由呼叫`Update`再移至另一筆記錄的成員函式。 如果您移至另一筆記錄而不需要更新，您的變更將會遺失，而不發出警告。
+>  如果您編輯目前的記錄，請務必先呼叫 `Update` 成員函式來儲存變更，然後再移至另一筆記錄。 如果您移至另一筆記錄而不更新，則會遺失您的變更，而不會出現警告。
 
-使用其中一種尋找作業不是呼叫相同`MoveFirst`或`MoveNext`，不過，這只會讓第一個或下一個記錄目前未指定條件。 您可以依照與移動作業尋找作業。
+不過，使用其中一個「尋找」作業和呼叫 `MoveFirst` 或 `MoveNext`不同，只是讓第一個或下一個記錄成為目前的，而不指定條件。 您可以遵循「尋找」作業來執行「移動」操作。
 
-使用 尋找作業時，請記住下列：
+使用尋找作業時，請記住下列事項：
 
-- 如果`Find`傳回非零值，未定義目前的記錄。 在此情況下，您必須將目前記錄指標回到有效的記錄。
+- 如果 `Find` 傳回非零值，則不會定義目前的記錄。 在此情況下，您必須將目前的記錄指標放回有效的記錄。
 
-- 您無法使用順向捲動快照集類型的資料錄集的尋找作業。
+- 您不能將尋找作業與順向滾動快照集類型記錄集搭配使用。
 
-- 您應該使用美國日期格式 （月-日-年） 當您搜尋欄位包含日期，即使您不想要使用 Microsoft Jet 資料庫引擎; 美國版本否則，比對記錄找不到。
+- 當您搜尋包含日期的欄位時，您應該使用美國日期格式（月-日），即使您不使用 Microsoft Jet database engine 的美國版本也一樣。否則，可能找不到相符的記錄。
 
-- 使用 ODBC 資料庫和大型的動態集時，您可能會發現，使用 尋找作業變慢時，尤其是使用大型的資料錄集。 您可以使用 SQL 查詢，以改善效能與自訂**ORDERBY**或**何處**子句，參數的查詢，或`CDaoQuerydef`擷取特定的索引的記錄的物件。
+- 使用 ODBC 資料庫和大型的動態集時，您可能會發現使用「尋找」作業的速度很慢，特別是在使用大型記錄集時。 您可以使用 SQL 查詢搭配自訂**ORDERBY**或**WHERE**子句、參數查詢，或可抓取特定索引記錄的 `CDaoQuerydef` 物件，來改善效能。
 
-如需相關資訊，請參閱 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「FindFirst，FindLast，FindNext，FindPrevious 方法」主題。
 
-##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition
+##  <a name="getabsoluteposition"></a>CDaoRecordset：： GetAbsolutePosition
 
-傳回資料錄集物件的目前記錄的記錄數目。
+傳回記錄集物件的目前記錄號碼。
 
 ```
 long GetAbsolutePosition();
@@ -887,25 +887,25 @@ long GetAbsolutePosition();
 
 ### <a name="return-value"></a>傳回值
 
-從 0 到資料錄集中的記錄數目的整數。 對應至目前資料錄的資料錄集中的序數位置。
+從0到記錄集內記錄數目的整數。 對應至記錄集中目前記錄的序數位置。
 
 ### <a name="remarks"></a>備註
 
-AbsolutePosition 屬性值之基礎的 DAO 物件的以零為起始的;設定為 0，指的是資料錄集的第一個記錄。 您可以藉由呼叫來判斷資料錄集填入資料錄數目[GetRecordCount](#getrecordcount)。 呼叫`GetRecordCount`可能需要一些時間，因為它必須存取所有的記錄，來判斷計數。
+基礎 DAO 物件的 AbsolutePosition 屬性值是以零為基底;設定為0時，是指記錄集內的第一筆記錄。 您可以藉由呼叫[GetRecordCount](#getrecordcount)，判斷記錄集中的已填入記錄數目。 呼叫 `GetRecordCount` 可能需要一些時間，因為它必須存取所有記錄以判斷計數。
 
-如果沒有目前資料錄，做為資料錄集，沒有記錄時-會傳回 1。 如果目前的記錄遭到刪除，未定義 AbsolutePosition 屬性值，和 MFC 在正在參考它，會擲回例外狀況。 動態類型資料錄集，對於新的記錄會加入至序列的結尾。
-
-> [!NOTE]
->  這個屬性不是要做為 surrogate 資料錄數目。 書籤是仍保留並傳回至指定位置的建議的方式，含括所有類型的資料錄集物件位置的目前記錄的唯一方式。 特別的是，指定記錄的位置變更時也會刪除在它前面的記錄。 另外還有指定的記錄會有相同的絕對位置，如果因為除非它使用 SQL 陳述式建立，否則不保證資料錄集內的個別記錄的順序重新重新建立資料錄集不保證**ORDERBY**子句。
+如果沒有目前的記錄，就像記錄集內沒有任何記錄時一樣，會傳回-1。 如果目前的記錄已刪除，則不會定義 AbsolutePosition 屬性值，而且 MFC 會在參考時擲回例外狀況。 若為動態集類型的記錄集，新記錄會新增至序列的結尾。
 
 > [!NOTE]
->  此成員函式僅適用於動態類型和快照集類型的資料錄集無效。
+>  這個屬性不適合當做代理記錄號碼使用。 書簽仍然是保留並返回指定位置的建議方式，而且是將目前記錄放置在所有記錄集物件類型上的唯一方法。 特別是，指定記錄的位置在刪除之前的記錄會變更。 如果重新建立記錄集，也不保證指定的記錄會有相同的絕對位置，因為記錄集內個別記錄的順序並不保證，除非使用**ORDERBY**子句以 SQL 語句建立。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < AbsolutePosition 屬性 >。
+> [!NOTE]
+>  這個成員函式僅適用于動態集型別和快照型別記錄集。
 
-##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark
+如需相關資訊，請參閱 DAO 說明中的「AbsolutePosition 屬性」主題。
 
-呼叫此成員函式，以取得特定的記錄中的書籤值。
+##  <a name="getbookmark"></a>CDaoRecordset：： GetBookmark
+
+呼叫這個成員函式，以取得特定記錄中的書簽值。
 
 ```
 COleVariant GetBookmark();
@@ -913,22 +913,22 @@ COleVariant GetBookmark();
 
 ### <a name="return-value"></a>傳回值
 
-傳回值，表示目前的記錄上的書籤。
+傳回值，表示目前記錄上的書簽。
 
 ### <a name="remarks"></a>備註
 
-當建立或開啟資料錄集物件時，其記錄的每個已經有唯一的書籤如果支援它們。 呼叫`CanBookmark`來判斷資料錄集是否支援書籤。
+建立或開啟記錄集物件時，它的每個記錄都已有唯一的書簽（如果支援的話）。 呼叫 `CanBookmark` 來判斷記錄集是否支援書簽。
 
-您可以將目前資料錄的書籤儲存書籤值，指派`COleVariant`物件。 若要快速移至不同的記錄之後隨時返回至該記錄，呼叫`SetBookmark`具有參數的值相對應`COleVariant`物件。
+您可以藉由將書簽的值指派給 `COleVariant` 物件，來儲存目前記錄的書簽。 若要在移至不同的記錄之後隨時快速返回該記錄，請呼叫 `SetBookmark`，並將參數對應至該 `COleVariant` 物件的值。
 
 > [!NOTE]
->  呼叫[Requery](#requery)變更 DAO 書籤。
+>  呼叫重新[查詢](#requery)會變更 DAO 書簽。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 書籤屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「書簽屬性」主題。
 
-##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize
+##  <a name="getcachesize"></a>CDaoRecordset：： GetCacheSize
 
-呼叫此成員函式，若要取得的快取的記錄數目。
+呼叫這個成員函式以取得快取的記錄數目。
 
 ```
 long GetCacheSize();
@@ -936,19 +936,19 @@ long GetCacheSize();
 
 ### <a name="return-value"></a>傳回值
 
-值，包含要在本機快取從 ODBC 資料來源之資料的動態類型資料錄集中指定的記錄數目。
+值，指定包含要從 ODBC 資料來源本機快取之資料的動態集類型記錄集內的記錄數目。
 
 ### <a name="remarks"></a>備註
 
-資料快取可改善從遠端伺服器透過動態類型資料錄集物件中擷取資料的應用程式的效能。 快取中保存最近從伺服器擷取的資料將會要求一次執行應用程式時的資料的本機記憶體是空格。 當要求資料時，Microsoft Jet 資料庫引擎的快取要求的資料會先檢查而不是擷取自伺服器，需要更多時間。 不是來自 ODBC 資料來源的資料不會儲存在快取中。
+資料快取可改善應用程式的效能，這會透過動態集類型的記錄集物件，從遠端伺服器抓取資料。 快取是本機記憶體中的一個空間，其中保存最近從伺服器中取出的資料，因為在應用程式執行時，將會再次要求資料。 當要求資料時，Microsoft Jet 資料庫引擎會先檢查快取中是否有要求的資料，而不是從伺服器抓取它，這會花費更多時間。 不是來自 ODBC 資料來源的資料不會儲存在快取中。
 
-任何 ODBC 資料來源，例如附加的資料表，可以有本機快取。
+任何 ODBC 資料來源（例如附加資料表）都可以有本機快取。
 
-如需相關資訊，請參閱 DAO 說明主題 「 CacheSize CacheStart 屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「CacheSize，CacheStart 屬性」主題。
 
-##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart
+##  <a name="getcachestart"></a>CDaoRecordset：： GetCacheStart
 
-呼叫此成員函式，來取得第一筆資料錄集快取中的書籤值。
+呼叫這個成員函式，以取得要快取之記錄集中第一筆記錄的書簽值。
 
 ```
 COleVariant GetCacheStart();
@@ -956,20 +956,20 @@ COleVariant GetCacheStart();
 
 ### <a name="return-value"></a>傳回值
 
-A`COleVariant`快取資料錄集中指定的第一筆記錄的書籤。
+`COleVariant`，指定要快取之記錄集中第一筆記錄的書簽。
 
 ### <a name="remarks"></a>備註
 
-Microsoft Jet 資料庫引擎快取中，從要求的快取範圍內的記錄，並從伺服器要求快取範圍外的記錄。
+Microsoft Jet 資料庫引擎會向快取中的快取範圍要求記錄，並向伺服器要求快取範圍以外的記錄。
 
 > [!NOTE]
->  從快取中擷取的記錄不會反映所做的變更同時對來源資料的其他使用者。
+>  從快取中取出的記錄不會反映其他使用者同時對來源資料所做的變更。
 
-如需相關資訊，請參閱 DAO 說明主題 「 CacheSize CacheStart 屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「CacheSize，CacheStart 屬性」主題。
 
-##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex
+##  <a name="getcurrentindex"></a>CDaoRecordset：： GetCurrentIndex
 
-呼叫此成員函式，以判斷目前正在使用中索引的資料表類型索引`CDaoRecordset`物件。
+呼叫這個成員函式，以判斷目前在索引資料表類型 `CDaoRecordset` 物件中使用的索引。
 
 ```
 CString GetCurrentIndex();
@@ -977,19 +977,19 @@ CString GetCurrentIndex();
 
 ### <a name="return-value"></a>傳回值
 
-A`CString`包含目前與資料表類型的資料錄集的使用中索引的名稱。 如果您已不設定任何索引，則傳回空字串。
+`CString`，其中包含目前與資料表類型記錄集搭配使用之索引的名稱。 如果未設定任何索引，則會傳回空字串。
 
 ### <a name="remarks"></a>備註
 
-這個索引是資料表類型的資料錄集，排序記錄的基礎，而且會由[搜尋](#seek)成員函式來找出記錄。
+此索引是在資料表類型記錄集中排序記錄的基礎，而且會由[Seek](#seek)成員函式用來尋找記錄。
 
-A`CDaoRecordset`物件可以有一個以上的索引，但可以一次使用一個索引 (雖然[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)物件可能有多個索引定義)。
+`CDaoRecordset` 物件可以有一個以上的索引，但一次只能使用一個索引（雖然[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)物件可能會在其上定義多個索引）。
 
-如需相關資訊，請參閱主題 「 索引物件 」，並定義 DAO [說明] 中的 「 目前索引 」。
+如需相關資訊，請參閱 DAO 說明中的「索引物件」和「目前索引」的定義主題。
 
-##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated
+##  <a name="getdatecreated"></a>CDaoRecordset：： GetDateCreated
 
-呼叫此成員函式，來擷取基底資料表的建立的時間與日期。
+呼叫這個成員函式，以取得建立基表的日期和時間。
 
 ```
 COleDateTime GetDateCreated();
@@ -997,17 +997,17 @@ COleDateTime GetDateCreated();
 
 ### <a name="return-value"></a>傳回值
 
-A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件，其中包含基底資料表的建立的時間與日期。
+包含建立基表之日期和時間的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-日期和時間設定被衍生自基底資料表建立所在的電腦。
+日期和時間設定是從建立基表的電腦衍生而來。
 
-如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「DateCreated，LastUpdated 屬性」主題。
 
-##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated
+##  <a name="getdatelastupdated"></a>CDaoRecordset：： GetDateLastUpdated
 
-呼叫此成員函式可擷取的日期和上次更新結構描述的時間。
+呼叫這個成員函式，以取得上次更新架構的日期和時間。
 
 ```
 COleDateTime GetDateLastUpdated();
@@ -1015,17 +1015,17 @@ COleDateTime GetDateLastUpdated();
 
 ### <a name="return-value"></a>傳回值
 
-A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件，其中包含上次更新基底資料表結構 （結構描述） 的時間與日期。
+包含上次更新基表結構（架構）之日期和時間的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-日期和時間設定被衍生自上次更新基底資料表結構 （結構描述） 的電腦。
+日期和時間設定是從上次更新基表結構（架構）的電腦衍生而來。
 
-如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「DateCreated，LastUpdated 屬性」主題。
 
-##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName
+##  <a name="getdefaultdbname"></a>CDaoRecordset：： GetDefaultDBName
 
-呼叫此成員函式，來判斷這個資料錄集之資料庫的名稱。
+呼叫這個成員函式，以判斷此記錄集的資料庫名稱。
 
 ```
 virtual CString GetDefaultDBName();
@@ -1033,19 +1033,19 @@ virtual CString GetDefaultDBName();
 
 ### <a name="return-value"></a>傳回值
 
-A `CString` ，其中包含這個資料錄集衍生之資料庫的名稱與路徑。
+`CString`，其中包含衍生此記錄集之資料庫的路徑和名稱。
 
 ### <a name="remarks"></a>備註
 
-如果資料錄集建立時的指標沒有[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)，則此路徑是由資料錄集開啟預設的資料庫。 根據預設，此函數會傳回空字串。 當 ClassWizard 衍生新資料錄集從`CDaoRecordset`，它會為您建立此函式。
+如果建立的記錄集沒有[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)的指標，則記錄集會使用這個路徑來開啟預設資料庫。 根據預設，此函數會傳回空字串。 當 ClassWizard 從 `CDaoRecordset`衍生新的記錄集時，它會為您建立此函數。
 
-下列範例說明如何使用雙反斜線 (\\\\) 在字串中，會視需要能夠正確獲得解譯的字串。
+下列範例說明如何在字串中使用雙反斜線（\\\\），這是要正確解讀字串所需的。
 
 [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]
 
-##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL
+##  <a name="getdefaultsql"></a>CDaoRecordset：： GetDefaultSQL
 
-架構會呼叫此成員函式，以取得資料錄集所依據的預設 SQL 陳述式。
+架構會呼叫這個成員函式，以取得記錄集所依據的預設 SQL 語句。
 
 ```
 virtual CString GetDefaultSQL();
@@ -1053,19 +1053,19 @@ virtual CString GetDefaultSQL();
 
 ### <a name="return-value"></a>傳回值
 
-A `CString` ，其中包含預設的 SQL 陳述式。
+包含預設 SQL 語句的 `CString`。
 
 ### <a name="remarks"></a>備註
 
-這可能是資料表名稱或 SQL**選取**陳述式。
+這可能是資料表名稱或 SQL **SELECT**語句。
 
-您藉由宣告 ClassWizard，您的資料錄集類別，間接定義預設的 SQL 陳述式及 ClassWizard 會為您執行這項工作。
+您可以使用 ClassWizard 宣告您的記錄集類別，間接定義預設的 SQL 語句，而 ClassWizard 會為您執行這項工作。
 
-如果您傳遞 null 的 SQL 字串，以[開啟](#open)，則此函式會呼叫來判斷您的資料錄集的資料表名稱或 SQL。
+如果您傳遞 null SQL 字串來[開啟](#open)，則會呼叫這個函式來判斷記錄集的資料表名稱或 SQL。
 
-##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode
+##  <a name="geteditmode"></a>CDaoRecordset：： GetEditMode
 
-呼叫此成員函式來判斷狀態的編輯，也就是下列值之一：
+呼叫這個成員函式來判斷編輯的狀態，這是下列其中一個值：
 
 ```
 short GetEditMode();
@@ -1073,21 +1073,21 @@ short GetEditMode();
 
 ### <a name="return-value"></a>傳回值
 
-傳回值，這個值，指出目前記錄編輯的狀態。
+傳回值，指出目前記錄的編輯狀態。
 
 ### <a name="remarks"></a>備註
 
 |值|描述|
 |-----------|-----------------|
-|`dbEditNone`|沒有編輯的作業正在進行中。|
-|`dbEditInProgress`|`Edit` 已呼叫。|
-|`dbEditAdd`|`AddNew` 已呼叫。|
+|`dbEditNone`|沒有編輯作業正在進行中。|
+|`dbEditInProgress`|`Edit` 已被呼叫。|
+|`dbEditAdd`|`AddNew` 已被呼叫。|
 
-如需相關資訊，請參閱 DAO [說明] 中的 < EditMode 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「EditMode 屬性」主題。
 
-##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount
+##  <a name="getfieldcount"></a>CDaoRecordset：： GetFieldCount
 
-呼叫此成員函式可擷取的資料錄集中定義的欄位 （資料行） 的數字。
+呼叫這個成員函式可抓取記錄集內定義的欄位（資料行）數目。
 
 ```
 short GetFieldCount();
@@ -1095,15 +1095,15 @@ short GetFieldCount();
 
 ### <a name="return-value"></a>傳回值
 
-資料錄集中的欄位數目。
+記錄集中的欄位數目。
 
 ### <a name="remarks"></a>備註
 
-如需相關資訊，請參閱 DAO [說明] 中的 < 計數屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「計數屬性」主題。
 
-##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo
+##  <a name="getfieldinfo"></a>CDaoRecordset：： Issomapper.getfieldinfo
 
-呼叫此成員函式，以取得資料錄集中的欄位相關資訊。
+呼叫這個成員函式，以取得有關記錄集中之欄位的資訊。
 
 ```
 void GetFieldInfo(
@@ -1120,34 +1120,34 @@ void GetFieldInfo(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-預先定義的欄位，依索引查閱的資料錄集的欄位集合中以零為起始的索引。
+記錄集的 Fields 集合中預先定義欄位之以零為起始的索引，用於依索引查閱。
 
 *fieldinfo*<br/>
-參考[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。
+[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構的參考。
 
 *dwInfoOptions*<br/>
-指定要擷取的資料錄集的相關資訊的選項。 以及它們會導致此函數傳回此處會列出可用的選項。 為了達到最佳效能，擷取只有您所需要資訊層的級：
+指定要取得之記錄集相關資訊的選項。 這裡列出可用的選項，以及它們導致函式傳回的內容。 為了達到最佳效能，請只取出您需要的資訊層級：
 
-- `AFX_DAO_PRIMARY_INFO` （預設值）名稱、 類型、 大小屬性
+- `AFX_DAO_PRIMARY_INFO` （預設值）名稱、類型、大小、屬性
 
-- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上：序數位置，所需，允許的長度為零，定序順序、 外部索引的名稱、 來源欄位、 來源資料表
+- `AFX_DAO_SECONDARY_INFO` 的主要資訊，加上：序數位置、必要、允許零長度、排序次序、外部名稱、來源欄位、來源資料表
 
-- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上：預設值，驗證規則驗證文字
+- `AFX_DAO_ALL_INFO` 主要和次要資訊，加上：預設值、驗證規則、驗證文字
 
 *lpszName*<br/>
 欄位的名稱。
 
 ### <a name="remarks"></a>備註
 
-一個版本的函式可讓您依索引查閱欄位。 另一個版本可讓您依名稱查閱欄位。
+函數的其中一個版本可讓您依索引查閱欄位。 另一個版本可讓您依名稱查閱欄位。
 
-如需傳回資訊的說明，請參閱 < [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 此結構具有上述描述中的資訊的項目所對應的成員*dwInfoOptions*。 當您要求一層級的資訊時，您會取得任何先前的層的資訊。
+如需所傳回信息的描述，請參閱[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 此結構的成員會對應至*dwInfoOptions*的描述中所列的資訊專案。 當您要求某一層級的資訊時，您也會取得任何先前層級的資訊。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 屬性屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「屬性屬性」主題。
 
-##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue
+##  <a name="getfieldvalue"></a>CDaoRecordset：： GetFieldValue
 
-呼叫此成員函式，來擷取資料錄集中的資料。
+呼叫這個成員函式以抓取記錄集中的資料。
 
 ```
 virtual void GetFieldValue(
@@ -1165,34 +1165,34 @@ virtual COleVariant GetFieldValue(int nIndex);
 ### <a name="parameters"></a>參數
 
 *lpszName*<br/>
-包含的欄位名稱的字串指標。
+包含欄位名稱之字串的指標。
 
 *varValue*<br/>
-參考`COleVariant`將儲存欄位值的物件。
+`COleVariant` 物件的參考，將會儲存欄位的值。
 
 *nIndex*<br/>
-在資料錄集的欄位集合中，依索引查閱欄位的以零為起始的索引。
+記錄集的 Fields 集合中欄位之以零為起始的索引，用於依索引查閱。
 
 ### <a name="return-value"></a>傳回值
 
-兩個版本`GetFieldValue`的傳回值傳回[COleVariant](../../mfc/reference/colevariant-class.md)物件，其中包含欄位的值。
+傳回值的兩個 `GetFieldValue` 版本會傳回[COleVariant](../../mfc/reference/colevariant-class.md)物件，其中包含欄位的值。
 
 ### <a name="remarks"></a>備註
 
-您可以查閱欄位，依名稱或序數位置。
+您可以依名稱或序數位置查閱欄位。
 
 > [!NOTE]
->  它會呼叫其中一個採用此成員函式的版本更有效率`COleVariant`物件參考做為參數，而不是呼叫傳回的版本`COleVariant`物件。 此函式的第二個版本會保留回溯相容性。
+>  呼叫這個成員函式的其中一個版本時，會採用 `COleVariant` 物件參考做為參數，而不是呼叫傳回 `COleVariant` 物件的版本，這樣會更有效率。 針對回溯相容性，會保留此函式的後置版本。
 
-使用`GetFieldValue`並[SetFieldValue](#setfieldvalue)以動態方式在執行的階段而非以靜態方式使用的繫結資料行繫結欄位[DoFieldExchange](#dofieldexchange)機制。
+使用 `GetFieldValue` 和[SetFieldValue](#setfieldvalue) ，在執行時間以動態方式系結欄位，而不是使用[DoFieldExchange](#dofieldexchange)機制來靜態繫結資料行。
 
-`GetFieldValue` 和`DoFieldExchange`機制可以結合以提升效能。 例如，使用`GetFieldValue`擷取值，您需要只在需要時，這個值，並指派該呼叫在介面中的 [詳細資訊] 按鈕。
+`GetFieldValue` 和 `DoFieldExchange` 機制可以結合在一起，以改善效能。 例如，您可以使用 `GetFieldValue` 來取出只需要隨選的值，並將該呼叫指派給介面中的 [詳細資訊] 按鈕。
 
-如需相關資訊，請參閱 「 欄位物件 」 和 DAO [說明] 中的 < 值屬性 > 主題。
+如需相關資訊，請參閱 DAO 說明中的「欄位物件」和「值屬性」主題。
 
-##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount
+##  <a name="getindexcount"></a>CDaoRecordset：： GetIndexCount
 
-呼叫此成員函式，來判斷用於資料表類型的資料錄集的索引數目。
+呼叫這個成員函式，以判斷資料表類型記錄集上可用的索引數目。
 
 ```
 short GetIndexCount();
@@ -1200,17 +1200,17 @@ short GetIndexCount();
 
 ### <a name="return-value"></a>傳回值
 
-資料表類型的資料錄集的索引數目。
+資料表類型記錄集中的索引數目。
 
 ### <a name="remarks"></a>備註
 
-`GetIndexCount` 可用於循環使用資料錄集中的所有索引。 基於這個目的，使用`GetIndexCount`配合[GetIndexInfo](#getindexinfo)。 如果您呼叫此成員函式在動態類型或快照集類型的資料錄集時，MFC 會擲回例外狀況。
+`GetIndexCount` 適用于迴圈查看記錄集中的所有索引。 基於此目的，請使用 `GetIndexCount` 搭配[GetIndexInfo](#getindexinfo)。 如果您在動態集型別或快照集型別記錄上呼叫這個成員函式，MFC 會擲回例外狀況。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 屬性屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「屬性屬性」主題。
 
-##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo
+##  <a name="getindexinfo"></a>CDaoRecordset：： GetIndexInfo
 
-呼叫此成員函式，以取得各種索引定義基礎資料錄集的基底資料表中的相關資訊。
+呼叫這個成員函式，以取得有關記錄集基礎資料表中所定義之索引的各種資訊類型。
 
 ```
 void GetIndexInfo(
@@ -1227,34 +1227,34 @@ void GetIndexInfo(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-依數值位置查閱資料表的索引集合中以零為起始的索引。
+資料表的索引集合中以零為起始的索引，用於依數位位置查閱。
 
 *indexinfo*<br/>
-參考[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。
+[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構的參考。
 
 *dwInfoOptions*<br/>
-指定要擷取索引的相關資訊的選項。 以及它們會導致此函數傳回此處會列出可用的選項。 為了達到最佳效能，擷取只有您所需要資訊層的級：
+指定要抓取之索引相關資訊的選項。 這裡列出可用的選項，以及它們導致函式傳回的內容。 為了達到最佳效能，請只取出您需要的資訊層級：
 
-- `AFX_DAO_PRIMARY_INFO` （預設值）名稱欄位資訊欄位
+- `AFX_DAO_PRIMARY_INFO` （預設）名稱、欄位資訊、欄位
 
-- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上：主要資料庫，唯一的叢集，忽略 Null，有需要，外部索引
+- `AFX_DAO_SECONDARY_INFO` 主要資訊，加上： Primary、Unique、叢集、IgnoreNulls、Required、Foreign
 
-- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上：相異計數
+- `AFX_DAO_ALL_INFO` 主要和次要資訊，加上：相異計數
 
 *lpszName*<br/>
-依名稱查閱的索引物件的名稱指標。
+索引物件名稱的指標，用於依名稱查閱。
 
 ### <a name="remarks"></a>備註
 
-一個版本的函式可讓您查詢的集合中位置的索引。 另一個版本可讓您依名稱查閱的索引。
+函式的其中一個版本可讓您依其在集合中的位置來查閱索引。 另一個版本可讓您依名稱查閱索引。
 
-如需傳回資訊的說明，請參閱 < [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。 此結構具有上述描述中的資訊的項目所對應的成員*dwInfoOptions*。 當您要求一層級的資訊時，您會取得任何先前的層的資訊。
+如需所傳回信息的描述，請參閱[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。 此結構的成員會對應至*dwInfoOptions*的描述中所列的資訊專案。 當您要求某一層級的資訊時，您也會取得任何先前層級的資訊。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 屬性屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「屬性屬性」主題。
 
-##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark
+##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset：： GetLastModifiedBookmark
 
-呼叫此成員函式，以擷取最最近新增或更新資料錄的書籤。
+呼叫這個成員函式，以抓取最近新增或更新記錄的書簽。
 
 ```
 COleVariant GetLastModifiedBookmark();
@@ -1262,19 +1262,19 @@ COleVariant GetLastModifiedBookmark();
 
 ### <a name="return-value"></a>傳回值
 
-A`COleVariant`包含書籤，表示最近新增或變更記錄。
+包含書簽的 `COleVariant`，指出最近新增或變更的記錄。
 
 ### <a name="remarks"></a>備註
 
-當建立或開啟資料錄集物件時，其記錄的每個已經有唯一的書籤如果支援它們。 呼叫[GetBookmark](#getbookmark)來判斷資料錄集是否支援書籤。 如果資料錄集不支援書籤，`CDaoException`就會擲回。
+建立或開啟記錄集物件時，它的每個記錄都已有唯一的書簽（如果支援的話）。 呼叫[GetBookmark](#getbookmark)來判斷記錄集是否支援書簽。 如果記錄集不支援書簽，則會擲回 `CDaoException`。
 
-當您新增一筆記錄時，它會出現在資料錄集，結尾，並不是目前的記錄。 若要讓新的記錄目前，呼叫`GetLastModifiedBookmark`，然後呼叫`SetBookmark`回到新加入的記錄。
+當您新增記錄時，它會出現在記錄集的結尾，而不是目前的記錄。 若要將新記錄設為目前，請呼叫 `GetLastModifiedBookmark`，然後呼叫 `SetBookmark` 以返回新加入的記錄。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < LastModified 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「LastModified 屬性」主題。
 
-##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode
+##  <a name="getlockingmode"></a>CDaoRecordset：： GetLockingMode
 
-呼叫此成員函式，來決定的作用中鎖定資料錄集類型。
+呼叫這個成員函式，以判斷記錄集的作用中鎖定類型。
 
 ```
 BOOL GetLockingMode();
@@ -1282,21 +1282,21 @@ BOOL GetLockingMode();
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果鎖定的型別是封閉式，否則為 0，代表開放式記錄鎖定。
+如果鎖定的類型是封閉式，則為非零，如果是開放式記錄鎖定則為0。
 
 ### <a name="remarks"></a>備註
 
-當您呼叫封閉式鎖定時作用中，包含您要編輯的資料錄的資料頁面鎖定[編輯](#edit)成員函式。 當您呼叫的頁面已解除鎖定[更新](#update)或是[關閉](#close)成員函式或任何移動或尋找作業。
+當封閉式鎖定生效時，只要呼叫[Edit](#edit)成員函式，就會鎖定包含所編輯記錄的資料頁面。 當您呼叫[Update](#update)或[Close](#close)成員函式或任何移動或尋找作業時，此頁面就會解除鎖定。
 
-包含記錄的資料頁時開放式鎖定處於作用中，已鎖定，只有當記錄更新時，才`Update`成員函式。
+當開放式鎖定生效時，只有在使用 `Update` 成員函式更新記錄時，才會鎖定包含記錄的資料頁面。
 
-當使用 ODBC 資料來源，總是開放式鎖定的模式。
+使用 ODBC 資料來源時，鎖定模式一律是開放式的。
 
-如需相關資訊，請參閱 「 LockEdits 屬性 」 和 「 鎖定行為中多位使用者應用程式 」 在 DAO 說明主題。
+如需相關資訊，請參閱 DAO 說明中的「LockEdits 屬性」和「多使用者應用程式的鎖定行為」主題。
 
-##  <a name="getname"></a>  CDaoRecordset::GetName
+##  <a name="getname"></a>CDaoRecordset：： GetName
 
-呼叫此成員函式，來擷取資料錄集的名稱。
+呼叫這個成員函式以抓取記錄集的名稱。
 
 ```
 CString GetName();
@@ -1304,17 +1304,17 @@ CString GetName();
 
 ### <a name="return-value"></a>傳回值
 
-A`CString`包含資料錄集的名稱。
+包含記錄集名稱的 `CString`。
 
 ### <a name="remarks"></a>備註
 
-資料錄集的名稱必須以字母開頭，而且可以包含最多 40 個字元。 它可以包含數字和底線字元，但不能包含標點符號或空格。
+記錄集的名稱必須以字母開頭，且最多可包含40個字元。 它可以包含數位和底線字元，但不能包含標點符號或空格。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 名稱屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「名稱屬性」主題。
 
-##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue
+##  <a name="getparamvalue"></a>CDaoRecordset：： GetParamValue
 
-呼叫此成員函式，以擷取儲存在基礎 DAOParameter 物件中的指定參數的目前值。
+呼叫這個成員函式，以抓取基礎 DAOParameter 物件中所儲存之指定參數的目前值。
 
 ```
 virtual COleVariant GetParamValue(int nIndex);
@@ -1324,24 +1324,24 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-數值參數的位置基礎 DAOParameter 物件中。
+基礎 DAOParameter 物件中參數的數位位置。
 
 *lpszName*<br/>
 您想要其值的參數名稱。
 
 ### <a name="return-value"></a>傳回值
 
-類別的物件[COleVariant](../../mfc/reference/colevariant-class.md) ，其中包含參數的值。
+[COleVariant](../../mfc/reference/colevariant-class.md)類別的物件，其中包含參數的值。
 
 ### <a name="remarks"></a>備註
 
-依名稱或依其數值位置集合中，您可以存取的參數。
+您可以依名稱或其在集合中的數位位置來存取參數。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 參數物件 」。
+如需相關資訊，請參閱 DAO 說明中的「參數物件」主題。
 
-##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition
+##  <a name="getpercentposition"></a>CDaoRecordset：： GetPercentPosition
 
-使用動態類型或快照集類型的資料錄集，如果您呼叫時`GetPercentPosition`之前完全填入資料錄集，是相對於存取藉由呼叫所示的記錄數目的移動量[GetRecordCount](#getrecordcount).
+使用動態集型別或快照集型別記錄集時，如果您在完全填入記錄集之前呼叫 `GetPercentPosition`，則移動量會相對於透過呼叫[GetRecordCount](#getrecordcount)所指出的存取記錄數目。
 
 ```
 float GetPercentPosition();
@@ -1349,19 +1349,19 @@ float GetPercentPosition();
 
 ### <a name="return-value"></a>傳回值
 
-指出某個百分比的資料錄集中記錄為基礎之資料錄集物件中目前資料錄的概略位置 0 與 100 之間的數字。
+介於0和100之間的數位，表示記錄集物件中目前記錄的大約位置，以記錄集內的記錄百分比為基礎。
 
 ### <a name="remarks"></a>備註
 
-您可以將移到最後一個記錄呼叫[MoveLast](#movelast)以完整母體擴展的所有資料錄集，但這可能需要很長的時間。
+您可以藉由呼叫[MoveLast](#movelast)來完成所有記錄集的填入，以移至最後一筆記錄，但這可能需要相當長的時間。
 
-您可以呼叫`GetPercentPosition`上的資料錄集物件的所有三種類型，包括無索引的資料表。 不過，您不能呼叫`GetPercentPosition`順向捲動快照集，或從外部資料庫的傳遞查詢開啟資料錄集。 如果沒有目前的記錄，或已刪除他目前的記錄，`CDaoException`就會擲回。
+您可以在所有三種類型的記錄集物件上呼叫 `GetPercentPosition`，包括沒有索引的資料表。 不過，您無法在順向滾動快照集上，或在從對外部資料庫的傳遞查詢中開啟的記錄集上，呼叫 `GetPercentPosition`。 如果沒有目前的記錄，或他目前的記錄已刪除，則會擲回 `CDaoException`。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < PercentPosition 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「PercentPosition 屬性」主題。
 
-##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount
+##  <a name="getrecordcount"></a>CDaoRecordset：： GetRecordCount
 
-呼叫此成員函式，以找出已存取的資料錄集的多少筆記錄。
+呼叫這個成員函式可找出已存取記錄集中的多少筆記錄。
 
 ```
 long GetRecordCount();
@@ -1369,27 +1369,27 @@ long GetRecordCount();
 
 ### <a name="return-value"></a>傳回值
 
-傳回資料錄集物件中存取的記錄的數目。
+傳回在記錄集物件中存取的記錄數目。
 
 ### <a name="remarks"></a>備註
 
-`GetRecordCount` 不會指出多少筆記錄會包含在動態類型或快照集類型的資料錄集，直到已存取的所有記錄。 此成員函式呼叫可能需要大量的時間才能完成。
+`GetRecordCount` 不會指出有多少記錄包含在動態集類型或快照集類型的記錄集中，直到所有記錄都已存取為止。 這個成員函數呼叫可能需要相當長的時間才能完成。
 
-一旦已存取最後一筆記錄，傳回的值會指出未刪除資料錄集中的記錄總數。 若要強制執行最後一筆記錄，若要存取，請呼叫`MoveLast`或`FindLast`資料錄集的成員函式。 您也可以使用 SQL 計數，以判斷您的查詢將傳回的資料錄的近似數目。
+一旦存取最後一筆記錄，傳回值就會指出記錄集中未刪除之記錄的總數。 若要強制存取最後一筆記錄，請通話記錄集的 `MoveLast` 或 `FindLast` 成員函式。 您也可以使用 SQL 計數來判斷查詢將傳回的大約記錄數目。
 
-當您的應用程式刪除記錄檔中的動態類型資料錄集，傳回值的`GetRecordCount`會減少。 不過，其他使用者所刪除的記錄不會反映由`GetRecordCount`直到目前的記錄位於已刪除的資料錄。 如果您執行影響的記錄計數的交易，並接著回復交易，`GetRecordCount`將不會反映實際的剩餘記錄數目。
+當您的應用程式刪除動態集型別記錄集中的記錄時，`GetRecordCount` 的傳回值會減少。 不過，除非目前的記錄位於已刪除的記錄，否則 `GetRecordCount` 不會反映其他使用者刪除的記錄。 如果您執行的交易會影響記錄計數，然後再回復交易，`GetRecordCount` 將不會反映剩餘記錄的實際數目。
 
-值`GetRecordCount`的基礎資料表中的變更不會影響從快照集類型的資料錄集。
+快照集類型記錄集中 `GetRecordCount` 的值不會受到基礎資料表中的變更所影響。
 
-值`GetRecordCount`資料表類型的資料錄集反映出資料表中記錄的近似數目韟 敳迼立即新增和刪除資料表記錄時。
+資料表類型記錄集的 `GetRecordCount` 值會反映資料表中的大約記錄數目，並會在加入和刪除資料表記錄時立即受到影響。
 
-沒有記錄的資料錄集傳回值為 0。 使用附加的資料表或 ODBC 資料庫時`GetRecordCount`一律會傳回-1。 呼叫`Requery`成員函式資料錄集的值重設`GetRecordCount`就如同查詢已重新執行。
+沒有記錄的記錄集會傳回0值。 使用附加的資料表或 ODBC 資料庫時，`GetRecordCount` 一律會傳回-1。 在記錄集上呼叫 `Requery` 成員函式會重設 `GetRecordCount` 的值，就如同重新執行查詢一樣。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < RecordCount 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「RecordCount 屬性」主題。
 
-##  <a name="getsql"></a>  CDaoRecordset::GetSQL
+##  <a name="getsql"></a>CDaoRecordset：： GetSQL
 
-呼叫此成員函式，以取得用來開啟網頁時，請選取資料錄集的資料錄的 SQL 陳述式。
+呼叫這個成員函式，以取得在開啟記錄集的記錄時，用來選取它的 SQL 語句。
 
 ```
 CString GetSQL() const;
@@ -1397,22 +1397,22 @@ CString GetSQL() const;
 
 ### <a name="return-value"></a>傳回值
 
-A `CString` ，其中包含 SQL 陳述式。
+包含 SQL 語句的 `CString`。
 
 ### <a name="remarks"></a>備註
 
-這通常會是 SQL**選取**陳述式。
+這通常會是 SQL **SELECT**語句。
 
-所傳回的字串`GetSQL`通常不同於您可能已傳遞至資料錄集的任何字串*lpszSQL*參數來[開啟](#open)成員函式。 這是因為資料錄集建構完整的 SQL 陳述式，根據您傳遞給`Open`ClassWizard，使用指定的內容，您可能必須指定在[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)資料成員。
+`GetSQL` 所傳回的字串，通常與您在*lpszSQL*參數中傳遞給[Open](#open)成員函式的任何字串不相同。 這是因為記錄集會根據您傳遞給 `Open`的內容、您使用 ClassWizard 所指定的內容，以及您在[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)資料成員中指定的內容，來建立完整的 SQL 語句。
 
 > [!NOTE]
->  只有在呼叫之後呼叫此成員函式`Open`。
+>  只有在呼叫 `Open`之後，才呼叫這個成員函式。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < SQL 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「SQL 屬性」主題。
 
-##  <a name="gettype"></a>  CDaoRecordset::GetType
+##  <a name="gettype"></a>CDaoRecordset：： GetType
 
-開啟資料錄集來判斷資料錄集物件的型別之後呼叫此成員函式。
+在開啟記錄集之後呼叫這個成員函式，以判斷記錄集物件的類型。
 
 ```
 short GetType();
@@ -1420,21 +1420,21 @@ short GetType();
 
 ### <a name="return-value"></a>傳回值
 
-其中一個下列的值，表示資料錄集類型：
+下列其中一個值，表示記錄集的類型：
 
-- `dbOpenTable` 資料表類型的資料錄集
+- `dbOpenTable` 資料表類型記錄集
 
-- `dbOpenDynaset` 動態類型資料錄集
+- `dbOpenDynaset` 的動態集類型記錄集
 
-- `dbOpenSnapshot` 快照集類型的資料錄集
+- `dbOpenSnapshot` 快照類型記錄集
 
 ### <a name="remarks"></a>備註
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 型別屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「類型屬性」主題。
 
-##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule
+##  <a name="getvalidationrule"></a>CDaoRecordset：： GetValidationRule
 
-呼叫此成員函式，以判斷用來驗證資料的規則。
+呼叫這個成員函式，以判斷用來驗證資料的規則。
 
 ```
 CString GetValidationRule();
@@ -1442,19 +1442,19 @@ CString GetValidationRule();
 
 ### <a name="return-value"></a>傳回值
 
-A`CString`包含驗證記錄中的資料，因為它已變更或加入至資料表值物件。
+`CString` 物件，其中包含值，可在記錄變更或加入至資料表時，驗證其中的資料。
 
 ### <a name="remarks"></a>備註
 
-此規則是以文字為基礎，而且會套用每個基礎資料表變更的時間。 如果資料是不合法的 MFC 會擲回例外狀況。 驗證文字物件的屬性基礎欄位，如果指定的文字或文字的基礎欄位物件的 ValidationRule 屬性所指定的運算式傳回的錯誤訊息。 您可以呼叫[GetValidationText](#getvalidationtext)取得錯誤訊息的文字。
+此規則是以文字為基礎，而且會在每次基礎資料表變更時套用。 如果資料不合法，則 MFC 會擲回例外狀況。 傳回的錯誤訊息是基礎欄位物件的 [內容] 屬性的文字（如果有指定），或是基礎欄位物件的 [ValidationRule] 屬性所指定之運算式的文字。 您可以呼叫[GetValidationText](#getvalidationtext)來取得錯誤訊息的文字。
 
-例如，需要月份天數的記錄中的欄位可能有的驗證規則例如 「 天 BETWEEN 1 到 31。 」
+例如，記錄中需要月份日期的欄位可能會有一項驗證規則，例如「在1到31之間的日期」。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < ValidationRule 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「ValidationRule 屬性」主題。
 
-##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText
+##  <a name="getvalidationtext"></a>CDaoRecordset：： GetValidationText
 
-呼叫此成員函式，以擷取基礎的欄位物件的驗證屬性的文字。
+呼叫這個成員函式可抓取基礎欄位物件的 [內容] 屬性的文字。
 
 ```
 CString GetValidationText();
@@ -1462,15 +1462,15 @@ CString GetValidationText();
 
 ### <a name="return-value"></a>傳回值
 
-A`CString`物件，其中包含的訊息時所顯示的欄位值不符合驗證規則之基礎的欄位物件的文字。
+`CString` 物件，其中包含欄位的值不符合基礎欄位物件的驗證規則時所顯示的訊息文字。
 
 ### <a name="remarks"></a>備註
 
-如需相關資訊，請參閱 DAO [說明] 中的 < 驗證文字屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「有效性屬性」主題。
 
-##  <a name="isbof"></a>  CDaoRecordset::IsBOF
+##  <a name="isbof"></a>CDaoRecordset：： IsBOF
 
-記錄捲動記錄，以了解您是否已經看之前的資料錄集的第一個記錄之前，請呼叫此成員函式。
+請先呼叫這個成員函式，然後再從記錄中進行滾動，以瞭解您是否已經在記錄集的第一筆記錄之前。
 
 ```
 BOOL IsBOF() const;
@@ -1478,49 +1478,49 @@ BOOL IsBOF() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資料錄集不包含任何記錄，或您已向後捲動第一筆記錄中; 之前，非零值。否則為 0。
+如果記錄集不包含任何記錄，或如果您在第一筆記錄之前向前滾動，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-您也可以呼叫`IsBOF`連同`IsEOF`來判斷資料錄集是否包含任何記錄，或為空白。 立即呼叫後`Open`，如果資料錄集不包含任何記錄，`IsBOF`傳回非零值。 當您開啟具有至少一個記錄的資料錄集時，第一筆記錄是目前的記錄和`IsBOF`會傳回 0。
+您也可以呼叫 `IsBOF` 以及 `IsEOF`，以判斷記錄集是否包含任何記錄或是否為空白。 在您呼叫 `Open`之後，如果記錄集沒有包含任何記錄，`IsBOF` 會傳回非零值。 當您開啟至少有一筆記錄的記錄集時，第一筆記錄是目前的記錄，`IsBOF` 傳回0。
 
-如果第一筆記錄是目前的記錄，而且您呼叫`MovePrev`，`IsBOF`後續將會傳回非零值。 如果`IsBOF`傳回非零值，而且您呼叫`MovePrev`，會擲回例外狀況。 如果`IsBOF`傳回非零值，目前的記錄為未定義，並需要目前記錄的任何動作將會導致例外狀況。
+如果第一筆記錄是目前的記錄，而您呼叫 `MovePrev`，`IsBOF` 後續會傳回非零值。 如果 `IsBOF` 傳回非零值，而您呼叫 `MovePrev`，則會擲回例外狀況。 如果 `IsBOF` 傳回非零值，則表示目前的記錄未定義，而且任何需要目前記錄的動作都會導致例外狀況。
 
-上的特定方法的效果`IsBOF`和`IsEOF`設定：
+特定方法對 `IsBOF` 和 `IsEOF` 設定的影響：
 
-- 呼叫`Open*`內部讓第一筆記錄中的資料錄集的目前記錄藉由呼叫`MoveFirst`。 因此，呼叫`Open`上的記錄會導致空集合`IsBOF`和`IsEOF`傳回非零值。 (請參閱下表中的失敗行為`MoveFirst`或`MoveLast`呼叫。)
+- 在內部呼叫 `Open*` 會藉由呼叫 `MoveFirst`，使記錄集中的第一筆記錄成為目前的記錄。 因此，在空的記錄集上呼叫 `Open` 會導致 `IsBOF` 和 `IsEOF` 傳回非零值。 （請參閱下表以瞭解失敗的 `MoveFirst` 或 `MoveLast` 呼叫的行為）。
 
-- 所有成功找出一筆記錄的移動作業會造成同時`IsBOF`和`IsEOF`傳回 0。
+- 成功找到記錄的所有移動作業都會導致 `IsBOF` 和 `IsEOF` 都傳回0。
 
-- `AddNew`呼叫後面`Update`成功插入新記錄的呼叫會導致`IsBOF`傳回 0，但僅限`IsEOF`已經為非零值。 狀態`IsEOF`一律會保持不變。 Microsoft Jet 資料庫引擎所定義，空的資料錄集的目前記錄指標是檔案的結尾，因此目前的記錄之後插入任何新的記錄。
+- `AddNew` 呼叫，後面接著可成功插入新記錄的 `Update` 呼叫，會導致 `IsBOF` 傳回0，但只有在 `IsEOF` 已為非零值時。 `IsEOF` 的狀態一定會保持不變。 如 Microsoft Jet 資料庫引擎所定義，空的記錄集目前的記錄指標位於檔案的結尾，因此任何新的記錄都會插入到目前的記錄之後。
 
-- 任何`Delete`呼叫，即使它在移除資料錄集，唯一的剩餘記錄不會變更的值`IsBOF`或`IsEOF`。
+- 任何 `Delete` 呼叫，即使它只會從記錄集移除剩餘的記錄，也不會變更 `IsBOF` 或 `IsEOF`的值。
 
-下表顯示移動所允許的作業使用不同的組合`IsBOF` /  `IsEOF`。
+下表顯示 `IsBOF`/ `IsEOF`的不同組合所允許的移動作業。
 
-||MoveFirst、 MoveLast|MovePrev,<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
+||MoveFirst、MoveLast|MovePrev<br /><br /> 移動 < 0|移動0|MoveNext<br /><br /> 移動 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
-|兩者都是非零值|例外|例外|例外|例外|
-|這兩個 0|Allowed|Allowed|Allowed|Allowed|
+|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|允許|例外狀況|例外狀況|允許|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 非零|允許|允許|例外狀況|例外狀況|
+|兩者皆非零|例外狀況|例外狀況|例外狀況|例外狀況|
+|兩者都是0|允許|允許|允許|允許|
 
-允許的移動作業，並不表示作業已成功將尋找一筆記錄。 此外，它只會指出允許嘗試執行指定的移動作業，且不會產生例外狀況。 值`IsBOF`和`IsEOF`成員函式可能會因為嘗試的移動而變更。
+允許移動作業並不表示作業會成功找出記錄。 它只會指出嘗試執行指定的移動作業，而不會產生例外狀況。 `IsBOF` 和 `IsEOF` 成員函式的值可能會因嘗試移動而變更。
 
-的值，不到一筆記錄的移動作業的效果`IsBOF`和`IsEOF`下表所示設定。
+下表顯示在 `IsBOF` 和 `IsEOF` 設定的值上找不到記錄的移動作業效果。
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`、 `MoveLast`|非零值|非零值|
+|`MoveFirst`, `MoveLast`|零下|零下|
 |`Move` 0|沒有變更|沒有變更|
-|`MovePrev`, `Move` < 0|非零值|沒有變更|
-|`MoveNext`, `Move` > 0|沒有變更|非零值|
+|`MovePrev`，`Move` < 0|零下|沒有變更|
+|`MoveNext`，`Move` > 0|沒有變更|零下|
 
-如需相關資訊，請參閱本主題 「 BOF、 EOF 屬性 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的 "BOF，EOF Properties" 主題。
 
-##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted
+##  <a name="isdeleted"></a>CDaoRecordset：： IsDeleted
 
-呼叫此成員函式，以判斷是否已刪除目前的記錄。
+呼叫這個成員函式，以判斷目前的記錄是否已刪除。
 
 ```
 BOOL IsDeleted() const;
@@ -1528,22 +1528,22 @@ BOOL IsDeleted() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資料錄集位於已刪除的資料錄; 上，非零值。否則為 0。
+如果記錄集位於已刪除的記錄上，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-如果您捲動至記錄和`IsDeleted`，則傳回 TRUE （非零），然後才能執行任何其他資料錄集的作業，您必須捲動至另一筆記錄。
+如果您流覽至記錄，而 `IsDeleted` 傳回 TRUE （非零），則您必須先滾動到另一筆記錄，才能執行任何其他記錄集作業。
 
 > [!NOTE]
->  您不需要檢查已刪除的狀態的快照集或資料表類型的資料錄集中的記錄。 無法刪除記錄，從快照集，因為沒有不需要呼叫`IsDeleted`。 針對資料表類型的資料錄集，已刪除的記錄實際上會從資料錄集移除。 一旦記錄已刪除，是由另一位使用者，或在另一個資料錄集，您無法往回捲動至該記錄。 因此，就不需要呼叫`IsDeleted`。
+>  您不需要檢查快照集或資料表類型記錄集中記錄的已刪除狀態。 因為無法從快照集刪除記錄，所以不需要呼叫 `IsDeleted`。 對於資料表類型的記錄集，已刪除的記錄實際上會從記錄集中移除。 一旦刪除了一筆記錄（不論是由您、另一個使用者或另一個記錄集），您就無法回復至該記錄。 因此，不需要呼叫 `IsDeleted`。
 
-當您刪除資料錄從動態集時，它會移除從資料錄集，而您無法往回捲動至該記錄。 不過，如果中的記錄動態集會刪除由其他使用者或另一個相同的資料表為基礎的資料錄集中`IsDeleted`會傳回 TRUE，當您稍後再捲動到該記錄。
+當您從動態集刪除記錄時，它會從記錄集中移除，而且您無法回復至該記錄。 不過，如果動態集內的記錄是由另一位使用者或另一個記錄集的相同資料表刪除，則當您稍後滾動至該記錄時，`IsDeleted` 會傳回 TRUE。
 
-如需相關資訊，請參閱 「 刪除方法 」、 「 LastModified 屬性 」 和 DAO [說明] 中的 < EditMode 屬性 > 主題。
+如需相關資訊，請參閱 DAO 說明中的「刪除方法」、「LastModified 屬性」和「EditMode 屬性」主題。
 
-##  <a name="iseof"></a>  CDaoRecordset::IsEOF
+##  <a name="iseof"></a>CDaoRecordset：： IsEOF
 
-若要了解是否有超出資料錄集的最後一筆記錄的記錄從資料錄捲動時，請呼叫此成員函式。
+當您從記錄中滾動記錄來呼叫這個成員函式，以瞭解您是否已超過記錄集的最後一筆記錄。
 
 ```
 BOOL IsEOF() const;
@@ -1551,49 +1551,49 @@ BOOL IsEOF() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果資料錄集不包含任何記錄，或如果您已經超過最後一筆記錄中;否則為 0。
+如果記錄集不包含任何記錄，或如果您已滾動到最後一筆記錄之外，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-您也可以呼叫`IsEOF`來判斷資料錄集是否包含任何記錄，或為空白。 立即呼叫後`Open`，如果資料錄集不包含任何記錄，`IsEOF`傳回非零值。 當您開啟具有至少一個記錄的資料錄集時，第一筆記錄是目前的記錄和`IsEOF`會傳回 0。
+您也可以呼叫 `IsEOF` 來判斷記錄集是否包含任何記錄或是否為空白。 在您呼叫 `Open`之後，如果記錄集沒有包含任何記錄，`IsEOF` 會傳回非零值。 當您開啟至少有一筆記錄的記錄集時，第一筆記錄是目前的記錄，`IsEOF` 傳回0。
 
-如果最後一筆記錄是目前的記錄，當您呼叫`MoveNext`，`IsEOF`後續將會傳回非零值。 如果`IsEOF`傳回非零值，而且您呼叫`MoveNext`，會擲回例外狀況。 如果`IsEOF`傳回非零值，目前的記錄為未定義，並需要目前記錄的任何動作將會導致例外狀況。
+當您呼叫 `MoveNext`時，如果最後一筆記錄是目前的記錄，`IsEOF` 後續會傳回非零值。 如果 `IsEOF` 傳回非零值，而您呼叫 `MoveNext`，則會擲回例外狀況。 如果 `IsEOF` 傳回非零值，則表示目前的記錄未定義，而且任何需要目前記錄的動作都會導致例外狀況。
 
-上的特定方法的效果`IsBOF`和`IsEOF`設定：
+特定方法對 `IsBOF` 和 `IsEOF` 設定的影響：
 
-- 呼叫`Open`內部讓第一筆記錄中的資料錄集的目前記錄藉由呼叫`MoveFirst`。 因此，呼叫`Open`上的記錄會導致空集合`IsBOF`和`IsEOF`傳回非零值。 (請參閱下表中的失敗行為`MoveFirst`呼叫。)
+- 在內部呼叫 `Open` 會藉由呼叫 `MoveFirst`，使記錄集中的第一筆記錄成為目前的記錄。 因此，在空的記錄集上呼叫 `Open` 會導致 `IsBOF` 和 `IsEOF` 傳回非零值。 （請參閱下表以瞭解失敗 `MoveFirst` 呼叫的行為）。
 
-- 所有成功找出一筆記錄的移動作業會造成同時`IsBOF`和`IsEOF`傳回 0。
+- 成功找到記錄的所有移動作業都會導致 `IsBOF` 和 `IsEOF` 都傳回0。
 
-- `AddNew`呼叫後面`Update`成功插入新記錄的呼叫會導致`IsBOF`傳回 0，但僅限`IsEOF`已經為非零值。 狀態`IsEOF`一律會保持不變。 Microsoft Jet 資料庫引擎所定義，空的資料錄集的目前記錄指標是檔案的結尾，因此目前的記錄之後插入任何新的記錄。
+- `AddNew` 呼叫，後面接著可成功插入新記錄的 `Update` 呼叫，會導致 `IsBOF` 傳回0，但只有在 `IsEOF` 已為非零值時。 `IsEOF` 的狀態一定會保持不變。 如 Microsoft Jet 資料庫引擎所定義，空的記錄集目前的記錄指標位於檔案的結尾，因此任何新的記錄都會插入到目前的記錄之後。
 
-- 任何`Delete`呼叫，即使它在移除資料錄集，唯一的剩餘記錄不會變更的值`IsBOF`或`IsEOF`。
+- 任何 `Delete` 呼叫，即使它只會從記錄集移除剩餘的記錄，也不會變更 `IsBOF` 或 `IsEOF`的值。
 
-下表顯示移動所允許的作業使用不同的組合`IsBOF` /  `IsEOF`。
+下表顯示 `IsBOF`/ `IsEOF`的不同組合所允許的移動作業。
 
-||MoveFirst、 MoveLast|MovePrev,<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
+||MoveFirst、MoveLast|MovePrev<br /><br /> 移動 < 0|移動0|MoveNext<br /><br /> 移動 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
-|兩者都是非零值|例外|例外|例外|例外|
-|這兩個 0|Allowed|Allowed|Allowed|Allowed|
+|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|允許|例外狀況|例外狀況|允許|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 非零|允許|允許|例外狀況|例外狀況|
+|兩者皆非零|例外狀況|例外狀況|例外狀況|例外狀況|
+|兩者都是0|允許|允許|允許|允許|
 
-允許的移動作業，並不表示作業已成功將尋找一筆記錄。 此外，它只會指出允許嘗試執行指定的移動作業，且不會產生例外狀況。 值`IsBOF`和`IsEOF`成員函式可能會因為嘗試的移動而變更。
+允許移動作業並不表示作業會成功找出記錄。 它只會指出嘗試執行指定的移動作業，而不會產生例外狀況。 `IsBOF` 和 `IsEOF` 成員函式的值可能會因嘗試移動而變更。
 
-的值，不到一筆記錄的移動作業的效果`IsBOF`和`IsEOF`下表所示設定。
+下表顯示在 `IsBOF` 和 `IsEOF` 設定的值上找不到記錄的移動作業效果。
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`、 `MoveLast`|非零值|非零值|
+|`MoveFirst`, `MoveLast`|零下|零下|
 |`Move` 0|沒有變更|沒有變更|
-|`MovePrev`, `Move` < 0|非零值|沒有變更|
-|`MoveNext`, `Move` > 0|沒有變更|非零值|
+|`MovePrev`，`Move` < 0|零下|沒有變更|
+|`MoveNext`，`Move` > 0|沒有變更|零下|
 
-如需相關資訊，請參閱本主題 「 BOF、 EOF 屬性 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的 "BOF，EOF Properties" 主題。
 
-##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty
+##  <a name="isfielddirty"></a>CDaoRecordset：： IsFieldDirty
 
-呼叫此成員函式來判斷指定的欄位資料成員的動態集是否已標示為 「 中途 」 （變更）。
+呼叫這個成員函式，以判斷動態集的指定欄位資料成員是否已標示為「已變更」（已變更）。
 
 ```
 BOOL IsFieldDirty(void* pv);
@@ -1602,21 +1602,21 @@ BOOL IsFieldDirty(void* pv);
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-您想要檢查，則為 NULL 來決定的任何欄位是否已變更其狀態的欄位資料成員的指標。
+您想要檢查其狀態之欄位資料成員的指標，或為 Null 以判斷是否有任何欄位已變更。
 
 ### <a name="return-value"></a>傳回值
 
-如果指定的欄位資料成員會標示為中途; 非零值否則為 0。
+如果指定的欄位資料成員標示為中途，則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-所有已變更的欄位資料成員中的資料會傳輸至記錄在資料來源上呼叫更新目前的記錄時`Update`成員函式`CDaoRecordset`(呼叫`Edit`或`AddNew`)。 具備此知識，您可以採取進一步的步驟，例如取消旗標來標示資料行，因此將不會寫入至資料來源的欄位資料成員。
+當目前的記錄是透過呼叫 `CDaoRecordset` 的 `Update` 成員函式（在呼叫 `Edit` 或 `AddNew`之後）進行更新時，所有中途欄位資料成員中的資料都會傳送至資料來源上的記錄。 透過這種知識，您可以採取進一步的步驟，例如 unflagging 欄位資料成員，以標記資料行，使其不會寫入至資料來源。
 
-`IsFieldDirty` 透過實作`DoFieldExchange`。
+`IsFieldDirty` 是透過 `DoFieldExchange`來執行。
 
-##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull
+##  <a name="isfieldnull"></a>CDaoRecordset：： IsFieldNull
 
-呼叫此成員函式，以判斷資料錄集的指定的欄位資料成員是否已標示為 Null。
+呼叫這個成員函式，以判斷是否已將記錄集的指定欄位資料成員標示為 Null。
 
 ```
 BOOL IsFieldNull(void* pv);
@@ -1625,27 +1625,27 @@ BOOL IsFieldNull(void* pv);
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-欄位資料成員的狀態，您想要檢查，則為 NULL 來判斷是否任何欄位都是 Null 指標。
+您想要檢查其狀態之欄位資料成員的指標，或為 Null 以判斷是否有任何欄位為 Null。
 
 ### <a name="return-value"></a>傳回值
 
-將指定的欄位資料成員會標示為 Null; 如果為非零否則為 0。
+如果指定的欄位資料成員標示為 Null，則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-(在資料庫術語中，Null 」 有任何值 」 的方式並不是 NULL，在相同C++。)如果欄位資料成員被標示為 Null，則會將它解譯為任何值是目前資料錄的資料行。
+（在資料庫術語中，Null 表示「沒有值」，而且與中C++的 null 不同）。如果欄位資料成員標示為 Null，它會被視為目前記錄中沒有任何值的資料行。
 
 > [!NOTE]
->  在某些情況下，使用`IsFieldNull`可會沒有效率，如下列程式碼範例所示：
+>  在某些情況下，使用 `IsFieldNull` 可能會沒有效率，如下列程式碼範例所示：
 
 [!code-cpp[NVC_MFCDatabase#5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]
 
 > [!NOTE]
->  如果您使用動態記錄繫結，而不需要衍生自`CDaoRecordset`，請務必使用 VT_NULL，如範例所示。
+>  如果您使用動態記錄系結，而不是衍生自 `CDaoRecordset`，請務必使用 VT_Null，如範例中所示。
 
-##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable
+##  <a name="isfieldnullable"></a>CDaoRecordset：： IsFieldNullable
 
-呼叫以判斷指定的欄位資料成員是 「 可為 null 」 （可以是設定為 Null 值; 此成員函式C++ NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」)。
+呼叫這個成員函式，以判斷指定的欄位資料成員是否為 "nullable" （可以設定為 Null 值;C++ Null 與 null 不同，在資料庫術語中，表示「沒有值」）。
 
 ```
 BOOL IsFieldNullable(void* pv);
@@ -1654,19 +1654,19 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-欄位資料成員的狀態，您想要檢查，則為 NULL 來判斷是否任何欄位都是 Null 指標。
+您想要檢查其狀態之欄位資料成員的指標，或為 Null 以判斷是否有任何欄位為 Null。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果指定的欄位資料成員可以設為 Null;否則為 0。
+如果指定的欄位資料成員可以設為 Null，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-不能是 Null 的欄位必須有值。 新增或更新，如果您嘗試將這類欄位設定為 Null，新增或更新記錄時，會拒絕的資料來源和`Update`將會擲回例外狀況。 當您呼叫時，就會發生例外狀況`Update`，當您呼叫時，不`SetFieldNull`。
+不可以是 Null 的欄位必須有值。 如果您嘗試在加入或更新記錄時，將這類欄位設定為 Null，則資料來源會拒絕新增或更新，而且 `Update` 將會擲回例外狀況。 當您呼叫 `Update`，而不是呼叫 `SetFieldNull`時，就會發生例外狀況。
 
-##  <a name="isopen"></a>  CDaoRecordset::IsOpen
+##  <a name="isopen"></a>CDaoRecordset：： IsOpen
 
-呼叫此成員函式，以判斷是否開啟資料錄集。
+呼叫這個成員函式，以判斷記錄集是否已開啟。
 
 ```
 BOOL IsOpen() const;
@@ -1674,101 +1674,101 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零的資料錄集物件的`Open`或`Requery`先前已呼叫成員函式，但尚未關閉資料錄集; 否則為 0。
+如果先前已通話記錄集物件的 `Open` 或 `Requery` 成員函式，而且尚未關閉記錄集，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields
+##  <a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset：： m_bCheckCacheForDirtyFields
 
-包含旗標，指出是否快取的欄位會自動標示為已變更 （變更） 和 Null。
-
-### <a name="remarks"></a>備註
-
-旗標預設為 TRUE。 此資料成員中的設定會控制整個的雙重緩衝機制。 如果您設定旗標設為 TRUE 時，您可以關閉使用 DFX 機制的欄位為基礎的快取。 如果您將旗標設定為 FALSE 時，您必須呼叫`SetFieldDirty`和`SetFieldNull`自己。
-
-設定此資料成員，然後再呼叫`Open`。 這項機制主要是針對使用規定。 效能可能會變慢因為雙重緩衝的欄位進行變更時。
-
-##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields
-
-包含資料錄集類別中的欄位資料成員的數目和資料來源的資料錄集選取資料行數目。
+包含旗標，指出快取的欄位是否會自動標示為已變更（已變更）和 Null。
 
 ### <a name="remarks"></a>備註
 
-資料錄集類別的建構函式必須初始化`m_nFields`靜態繫結的欄位數目正確。 當您使用它來宣告您的資料錄集類別，ClassWizard 會寫入此為您的初始化。 您也可以撰寫它以手動方式。
+旗標預設為 TRUE。 此資料成員中的設定會控制整個雙重緩衝機制。 如果您將旗標設定為 TRUE，就可以使用 DFX 機制，逐一關閉每個欄位的快取。 如果您將旗標設定為 FALSE，您必須呼叫 `SetFieldDirty` 並自行 `SetFieldNull`。
 
-架構會使用此數字，來管理的欄位資料成員與對應的資料行的資料來源上目前的記錄之間的互動。
+請先設定這個資料成員，再呼叫 `Open`。 這項機制主要是為了方便使用。 效能可能會變慢，因為在進行變更時，會將欄位的雙重緩衝處理。
+
+##  <a name="m_nfields"></a>CDaoRecordset：： m_nFields
+
+包含記錄集類別中的欄位資料成員數目，以及記錄集從資料來源選取的資料行數目。
+
+### <a name="remarks"></a>備註
+
+記錄集類別的函式必須使用正確的靜態系結欄位數目來初始化 `m_nFields`。 當您使用它來宣告記錄集類別時，ClassWizard 會為您寫入此初始化。 您也可以手動撰寫它。
+
+架構會使用這個數位來管理欄位資料成員與資料來源上目前記錄之對應資料行之間的互動。
 
 > [!NOTE]
->  此號碼必須對應至註冊中的輸出資料行的數目`DoFieldExchange`之後呼叫`SetFieldType`搭配參數`CDaoFieldExchange::outputColumn`。
+>  這個數位必須對應至使用參數 `CDaoFieldExchange::outputColumn`呼叫 `SetFieldType` 之後，在 `DoFieldExchange` 中註冊的輸出資料行數目。
 
-您可以繫結資料行，以動態方式由種`CDaoRecordset::GetFieldValue`和`CDaoRecordset::SetFieldValue`。 如果您這樣做，您不需要增加在計數`m_nFields`以反映呼叫 DFX 函式數目您`DoFieldExchange`成員函式。
+您可以透過 `CDaoRecordset::GetFieldValue` 和 `CDaoRecordset::SetFieldValue`，以動態方式系結資料行。 如果您這樣做，就不需要遞增 `m_nFields` 中的計數來反映 `DoFieldExchange` 成員函式中的 DFX 函式呼叫數目。
 
-##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams
+##  <a name="m_nparams"></a>CDaoRecordset：： m_nParams
 
-包含資料錄集類別中的參數資料成員的數目 — 伴隨資料錄集的查詢所傳遞的參數數目。
+包含記錄集類別中的參數資料成員數目，也就是與記錄集的查詢一起傳遞的參數數目。
 
 ### <a name="remarks"></a>備註
 
-如果您的資料錄集類別有任何參數的資料成員，必須初始化該類別的建構函式*m_nParams*與正確的數字。 值*m_nParams*預設值為 0。 如果您加入的參數資料成員 — 您必須手動完成此動作，您必須以手動新增初始化類別建構函式，以反映參數的數目 (必須是至少一樣大的數目 ' 中的預留位置您*m_strFilter*或是*m_strSort*字串)。
+如果您的記錄集類別具有任何參數資料成員，則類別的函式必須使用正確的數位來初始化*m_nParams* 。 *M_nParams*的值預設為0。 如果您加入參數資料成員（必須手動執行），您也必須手動在類別的函式中加入初始化，以反映參數的數目（至少必須與*m_strFilter*或*m_strSort*字串中 ' ' 預留位置的數目一樣大）。
 
-它會將參數化資料錄集的查詢時，架構會使用此數字。
+架構在參數化記錄集的查詢時，會使用這個數位。
 
 > [!NOTE]
->  此號碼必須對應至 「 參數 」 中註冊的數目`DoFieldExchange`之後呼叫`SetFieldType`搭配參數`CFieldExchange::param`。
+>  這個數位必須對應至使用參數 `CFieldExchange::param`呼叫 `SetFieldType` 之後，在 `DoFieldExchange` 中註冊的 "params" 數目。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 參數物件 」。
+如需相關資訊，請參閱 DAO 說明中的「參數物件」主題。
 
-##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset
+##  <a name="m_pdaorecordset"></a>CDaoRecordset：： m_pDAORecordset
 
-包含的 DAO 資料錄集物件基礎的 OLE 介面的指標`CDaoRecordset`物件。
-
-### <a name="remarks"></a>備註
-
-如果您需要直接存取的 DAO 介面，請使用這個指標。
-
-如需相關資訊，請參閱 DAO [說明] 中的 「 資料錄集物件 」。
-
-##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase
-
-包含一個指向`CDaoDatabase`透過此資料錄集連接到資料來源的物件。
+包含 `CDaoRecordset` 物件基礎之 DAO 記錄集物件的 OLE 介面指標。
 
 ### <a name="remarks"></a>備註
 
-此變數是兩種方式設定。 一般而言，您將指標傳遞至已開啟`CDaoDatabase`物件建構資料錄集物件時。 如果您傳遞 NULL，反而`CDaoRecordset`建立`CDaoDatabase`為您的物件並開啟它。 在任一情況下，`CDaoRecordset`會儲存在此變數的指標。
+如果您需要直接存取 DAO 介面，請使用此指標。
 
-通常您會直接不必使用儲存在指標`m_pDatabase`。 如果您要撰寫您自己的擴充功能`CDaoRecordset`，不過，您可能需要使用指標。 例如，您可能需要將指標如果您擲回自己`CDaoException`(s)。
+如需相關資訊，請參閱 DAO 說明中的「記錄集物件」主題。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 資料庫物件 」。
+##  <a name="m_pdatabase"></a>CDaoRecordset：： m_pDatabase
 
-##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter
-
-包含字串，用來建構**其中**SQL 陳述式子句。
+包含將記錄集連接到資料來源之 `CDaoDatabase` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
-它不包含保留的字**其中**來篩選資料錄集。 找不到適用於資料表類型的資料錄集的這個資料成員使用。 善用`m_strFilter`開啟資料錄集，使用時，沒有任何作用`CDaoQueryDef`指標。
+這個變數是以兩種方式設定。 一般而言，當您在建立記錄集物件時，會將指標傳遞至已經開啟的 `CDaoDatabase` 物件。 如果您改為傳遞 Null，`CDaoRecordset` 會為您建立 `CDaoDatabase` 物件，並開啟它。 不論是哪一種情況，`CDaoRecordset` 都會將指標儲存在此變數中。
 
-使用美國日期格式 （月-日-年） 當您篩選欄位包含日期，即使您不想要使用 Microsoft Jet 資料庫引擎; 美國版本否則，如預期般，可能未篩選的資料。
+一般來說，您不需要直接使用儲存在 `m_pDatabase`中的指標。 不過，如果您將自己的延伸模組寫入 `CDaoRecordset`，您可能需要使用指標。 例如，如果您擲回自己的 `CDaoException`，就可能需要指標。
 
-如需相關資訊，請參閱 DAO [說明] 中的 「 篩選條件屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「資料庫物件」主題。
 
-##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort
+##  <a name="m_strfilter"></a>CDaoRecordset：： m_strFilter
 
-包含字串，包含**ORDERBY** SQL 陳述式，而不需要的保留字子句**ORDERBY**。
+包含用來建立 SQL 語句之**WHERE**子句的字串。
 
 ### <a name="remarks"></a>備註
 
-您可以在動態集和快照集類型的資料錄集物件上進行排序。
+它不包含用來篩選記錄**集的保留**字。 使用此資料成員不適用於資料表類型的記錄集。 使用 `CDaoQueryDef` 指標開啟記錄集時，`m_strFilter` 不會有任何作用。
 
-您無法排序資料表類型的資料錄集物件。 若要判斷類型的資料表資料錄集的排序次序，請呼叫[SetCurrentIndex](#setcurrentindex)。
+當您篩選包含日期的欄位時，即使您未使用 Microsoft Jet database engine 的美國版本，也請使用美國日期格式（月-日）。否則，可能無法如預期般篩選資料。
 
-善用*m_strSort*開啟資料錄集，使用時，沒有任何作用`CDaoQueryDef`指標。
+如需相關資訊，請參閱 DAO 說明中的「篩選屬性」主題。
 
-如需相關資訊，請參閱 DAO [說明] 中的 [排序屬性]。
+##  <a name="m_strsort"></a>CDaoRecordset：： m_strSort
 
-##  <a name="move"></a>  CDaoRecordset::Move
+包含包含 SQL 語句之**orderby**子句的字串，但不含保留字**orderby**。
 
-呼叫此成員函式，來定位資料錄集*lRows*記錄從目前的記錄。
+### <a name="remarks"></a>備註
+
+您可以針對動態集型別和快照集類型的 recordset 物件進行排序。
+
+您無法排序資料表類型記錄集物件。 若要判斷資料表類型記錄集的排序次序，請呼叫[SetCurrentIndex](#setcurrentindex)。
+
+使用 `CDaoQueryDef` 指標開啟記錄集時， *m_strSort*不會有任何作用。
+
+如需相關資訊，請參閱 DAO 說明中的「排序屬性」主題。
+
+##  <a name="move"></a>CDaoRecordset：： Move
+
+呼叫這個成員函式，從目前的記錄中定位記錄集的*lRows*記錄。
 
 ```
 virtual void Move(long lRows);
@@ -1777,30 +1777,30 @@ virtual void Move(long lRows);
 ### <a name="parameters"></a>參數
 
 *lRows*<br/>
-若要前進或後退的記錄數目。 正值繼續向前進行，資料錄集的尾端。 負數值後，移到開頭。
+要向前或向後移動的記錄數目。 正值會往前移動到記錄集的結尾。 負數值會向後移動，朝一開始。
 
 ### <a name="remarks"></a>備註
 
-您可以在向前或向後移動。 `Move( 1 )` 相當於`MoveNext`，並`Move( -1 )`相當於`MovePrev`。
+您可以向前或向後移動。 `Move( 1 )` 相當於 `MoveNext`，而 `Move( -1 )` 相當於 `MovePrev`。
 
 > [!CAUTION]
->  呼叫任一`Move`函式擲回例外狀況，如果資料錄集不有任何記錄。 一般情況下，呼叫`IsBOF`和`IsEOF`移動作業，以判斷資料錄集是否有任何記錄之前。 在您呼叫後`Open`或是`Requery`，呼叫`IsBOF`或`IsEOF`。
+>  如果記錄集沒有任何記錄，呼叫任何 `Move` 函數都會擲回例外狀況。 一般來說，請同時呼叫 `IsBOF` 和 `IsEOF` 再進行移動作業，以判斷記錄集是否有任何記錄。 在您呼叫 `Open` 或 `Requery`之後，請呼叫 `IsBOF` 或 `IsEOF`。
 
 > [!NOTE]
->  如果您有捲動過去的開頭或結尾的資料錄集 (`IsBOF`或是`IsEOF`傳回非零值)，呼叫`Move`就會擲回`CDaoException`。
+>  如果您已滾動記錄集的開頭或結尾（`IsBOF` 或 `IsEOF` 傳回非零值），則 `Move` 的呼叫會擲回 `CDaoException`。
 
 > [!NOTE]
->  如果您呼叫任何`Move`函式時的目前記錄正在更新或新增，更新會遺失，而不發出警告。
+>  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-當您呼叫`Move`順向捲動快照集， *lRows*參數必須是正整數且不允許的書籤，因此您可以繼續只。
+當您在順向滾動快照集上呼叫 `Move` 時， *lRows*參數必須是正整數且不允許書簽，因此您只能向前移動。
 
-若要讓 first、 last 下, 一步，或上一個記錄資料錄集中目前的記錄，呼叫`MoveFirst`， `MoveLast`， `MoveNext`，或`MovePrev`成員函式。
+若要將記錄集內的第一個、最後一個、下一個或上一個記錄設為目前的記錄，請呼叫 `MoveFirst`、`MoveLast`、`MoveNext`或 `MovePrev` 成員函式。
 
-如需相關資訊，請參閱 < 移動方法 > 的主題和 「 MoveFirst、 MoveLast、 MoveNext、 MovePrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「Move 方法」和「MoveFirst、MoveLast、MoveNext、MovePrevious 方法」主題。
 
-##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst
+##  <a name="movefirst"></a>CDaoRecordset：： MoveFirst
 
-呼叫此成員函式 （如果有的話），讓第一筆資料錄集目前的記錄。
+呼叫這個成員函式，使記錄集內的第一筆記錄（如果有的話）成為目前的記錄。
 
 ```
 void MoveFirst();
@@ -1808,29 +1808,29 @@ void MoveFirst();
 
 ### <a name="remarks"></a>備註
 
-您沒有呼叫`MoveFirst`立即開啟資料錄集之後。 此時，第一筆記錄 （如果有的話） 會自動是目前的記錄。
+開啟記錄集之後，您不需要立即呼叫 `MoveFirst`。 此時，第一筆記錄（如果有的話）會自動成為目前的記錄。
 
 > [!CAUTION]
->  呼叫任一`Move`函式擲回例外狀況，如果資料錄集不有任何記錄。 一般情況下，呼叫`IsBOF`和`IsEOF`移動作業，以判斷資料錄集是否有任何記錄之前。 在您呼叫後`Open`或是`Requery`，呼叫`IsBOF`或`IsEOF`。
+>  如果記錄集沒有任何記錄，呼叫任何 `Move` 函數都會擲回例外狀況。 一般來說，請同時呼叫 `IsBOF` 和 `IsEOF` 再進行移動作業，以判斷記錄集是否有任何記錄。 在您呼叫 `Open` 或 `Requery`之後，請呼叫 `IsBOF` 或 `IsEOF`。
 
 > [!NOTE]
->  如果您呼叫任何`Move`函式時的目前記錄正在更新或新增，更新會遺失，而不發出警告。
+>  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-使用`Move`將記錄間移動而不將條件套用的函式。 您可以使用尋找作業，找出記錄中的動態類型或符合特定條件的快照集類型的資料錄集物件。 若要尋找一筆記錄中的資料表類型的資料錄集物件，呼叫`Seek`。
+使用 `Move` 函式，在不套用條件的情況下，從記錄移至記錄。 使用尋找作業來尋找符合特定條件的動態集型別或快照型別記錄集物件中的記錄。 若要找出資料表類型記錄集物件中的記錄，請呼叫 `Seek`。
 
-如果資料錄集是指資料表類型的資料錄集，移動會依照資料表的目前索引。 您可以使用基本的 DAO 物件的索引屬性，來設定目前的索引。 如果您未設定目前的索引，傳回記錄的順序會是未定義。
+如果記錄集參考資料表類型記錄集，則移動會遵循資料表的目前索引。 您可以使用基礎 DAO 物件的 Index 屬性來設定目前的索引。 如果您未設定目前的索引，則傳回記錄的順序會是未定義的。
 
-如果您呼叫`MoveLast`資料錄集物件，根據 SQL 查詢或 querydef，查詢會強制完成，並會完全擴展的資料錄集物件。
+如果您在以 SQL 查詢或 querydef 為基礎的記錄集物件上呼叫 `MoveLast`，則會強制執行查詢，並完整填入記錄集物件。
 
-您不能呼叫`MoveFirst`或`MovePrev`使用順向捲動快照集的成員函式。
+您無法使用順向滾動快照集來呼叫 `MoveFirst` 或 `MovePrev` 成員函式。
 
-若要移動的目前位置的記錄將資料錄集物件中特定數目記錄向前或向後移動，請呼叫`Move`。
+若要將記錄集物件中目前記錄的位置，向前或向後移動特定數目的記錄，請呼叫 `Move`。
 
-如需相關資訊，請參閱 < 移動方法 > 的主題和 「 MoveFirst、 MoveLast、 MoveNext、 MovePrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「Move 方法」和「MoveFirst、MoveLast、MoveNext、MovePrevious 方法」主題。
 
-##  <a name="movelast"></a>  CDaoRecordset::MoveLast
+##  <a name="movelast"></a>CDaoRecordset：： MoveLast
 
-呼叫此成員函式進行最後一筆記錄 （如果有的話） 中的資料錄集目前的記錄。
+呼叫這個成員函式，將記錄集內的最後一筆記錄（如果有的話）設為目前的記錄。
 
 ```
 void MoveLast();
@@ -1839,24 +1839,24 @@ void MoveLast();
 ### <a name="remarks"></a>備註
 
 > [!CAUTION]
->  呼叫任一`Move`函式擲回例外狀況，如果資料錄集不有任何記錄。 一般情況下，呼叫`IsBOF`和`IsEOF`移動作業，以判斷資料錄集是否有任何記錄之前。 在您呼叫後`Open`或是`Requery`，呼叫`IsBOF`或`IsEOF`。
+>  如果記錄集沒有任何記錄，呼叫任何 `Move` 函數都會擲回例外狀況。 一般來說，請同時呼叫 `IsBOF` 和 `IsEOF` 再進行移動作業，以判斷記錄集是否有任何記錄。 在您呼叫 `Open` 或 `Requery`之後，請呼叫 `IsBOF` 或 `IsEOF`。
 
 > [!NOTE]
->  如果您呼叫任何`Move`函式時的目前記錄正在更新或新增，更新會遺失，而不發出警告。
+>  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-使用`Move`將記錄間移動而不將條件套用的函式。 您可以使用尋找作業，找出記錄中的動態類型或符合特定條件的快照集類型的資料錄集物件。 若要尋找一筆記錄中的資料表類型的資料錄集物件，呼叫`Seek`。
+使用 `Move` 函式，在不套用條件的情況下，從記錄移至記錄。 使用尋找作業來尋找符合特定條件的動態集型別或快照型別記錄集物件中的記錄。 若要找出資料表類型記錄集物件中的記錄，請呼叫 `Seek`。
 
-如果資料錄集是指資料表類型的資料錄集，移動會依照資料表的目前索引。 您可以使用基本的 DAO 物件的索引屬性，來設定目前的索引。 如果您未設定目前的索引，傳回記錄的順序會是未定義。
+如果記錄集參考資料表類型記錄集，則移動會遵循資料表的目前索引。 您可以使用基礎 DAO 物件的 Index 屬性來設定目前的索引。 如果您未設定目前的索引，則傳回記錄的順序會是未定義的。
 
-如果您呼叫`MoveLast`資料錄集物件，根據 SQL 查詢或 querydef，查詢會強制完成，並會完全擴展的資料錄集物件。
+如果您在以 SQL 查詢或 querydef 為基礎的記錄集物件上呼叫 `MoveLast`，則會強制執行查詢，並完整填入記錄集物件。
 
-若要移動的目前位置的記錄將資料錄集物件中特定數目記錄向前或向後移動，請呼叫`Move`。
+若要將記錄集物件中目前記錄的位置，向前或向後移動特定數目的記錄，請呼叫 `Move`。
 
-如需相關資訊，請參閱 < 移動方法 > 的主題和 「 MoveFirst、 MoveLast、 MoveNext、 MovePrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「Move 方法」和「MoveFirst、MoveLast、MoveNext、MovePrevious 方法」主題。
 
-##  <a name="movenext"></a>  CDaoRecordset::MoveNext
+##  <a name="movenext"></a>CDaoRecordset：： MoveNext
 
-呼叫此成員函式，要在資料錄集的目前記錄中的下一筆記錄。
+呼叫這個成員函式，使記錄集中的下一筆記錄成為目前的記錄。
 
 ```
 void MoveNext();
@@ -1864,25 +1864,25 @@ void MoveNext();
 
 ### <a name="remarks"></a>備註
 
-建議您呼叫`IsBOF`您嘗試將移至前一筆記錄之前。 呼叫`MovePrev`將會擲回`CDaoException`如果`IsBOF`傳回非零值，指出您有已捲動前第一筆記錄，或沒有記錄，已選取資料錄集。
+建議您在嘗試移至上一筆記錄之前，先呼叫 `IsBOF`。 如果 `IsBOF` 傳回非零值（表示您已經在第一筆記錄之前滾動，或記錄集未選取任何記錄），呼叫 `MovePrev` 將會擲回 `CDaoException`。
 
 > [!CAUTION]
->  呼叫任一`Move`函式擲回例外狀況，如果資料錄集不有任何記錄。 一般情況下，呼叫`IsBOF`和`IsEOF`移動作業，以判斷資料錄集是否有任何記錄之前。 在您呼叫後`Open`或是`Requery`，呼叫`IsBOF`或`IsEOF`。
+>  如果記錄集沒有任何記錄，呼叫任何 `Move` 函數都會擲回例外狀況。 一般來說，請同時呼叫 `IsBOF` 和 `IsEOF` 再進行移動作業，以判斷記錄集是否有任何記錄。 在您呼叫 `Open` 或 `Requery`之後，請呼叫 `IsBOF` 或 `IsEOF`。
 
 > [!NOTE]
->  如果您呼叫任何`Move`函式時的目前記錄正在更新或新增，更新會遺失，而不發出警告。
+>  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-使用`Move`將記錄間移動而不將條件套用的函式。 您可以使用尋找作業，找出記錄中的動態類型或符合特定條件的快照集類型的資料錄集物件。 若要尋找一筆記錄中的資料表類型的資料錄集物件，呼叫`Seek`。
+使用 `Move` 函式，在不套用條件的情況下，從記錄移至記錄。 使用尋找作業來尋找符合特定條件的動態集型別或快照型別記錄集物件中的記錄。 若要找出資料表類型記錄集物件中的記錄，請呼叫 `Seek`。
 
-如果資料錄集是指資料表類型的資料錄集，移動會依照資料表的目前索引。 您可以使用基本的 DAO 物件的索引屬性，來設定目前的索引。 如果您未設定目前的索引，傳回記錄的順序會是未定義。
+如果記錄集參考資料表類型記錄集，則移動會遵循資料表的目前索引。 您可以使用基礎 DAO 物件的 Index 屬性來設定目前的索引。 如果您未設定目前的索引，則傳回記錄的順序會是未定義的。
 
-若要移動的目前位置的記錄將資料錄集物件中特定數目記錄向前或向後移動，請呼叫`Move`。
+若要將記錄集物件中目前記錄的位置，向前或向後移動特定數目的記錄，請呼叫 `Move`。
 
-如需相關資訊，請參閱 < 移動方法 > 的主題和 「 MoveFirst、 MoveLast、 MoveNext、 MovePrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「Move 方法」和「MoveFirst、MoveLast、MoveNext、MovePrevious 方法」主題。
 
-##  <a name="moveprev"></a>  CDaoRecordset::MovePrev
+##  <a name="moveprev"></a>CDaoRecordset：： MovePrev
 
-呼叫此成員函式，要在資料錄集的目前記錄中的上一筆記錄。
+呼叫這個成員函式，將記錄集內的上一個記錄設為目前的記錄。
 
 ```
 void MovePrev();
@@ -1890,27 +1890,27 @@ void MovePrev();
 
 ### <a name="remarks"></a>備註
 
-建議您呼叫`IsBOF`您嘗試將移至前一筆記錄之前。 呼叫`MovePrev`將會擲回`CDaoException`如果`IsBOF`傳回非零值，指出您有已捲動前第一筆記錄，或沒有記錄，已選取資料錄集。
+建議您在嘗試移至上一筆記錄之前，先呼叫 `IsBOF`。 如果 `IsBOF` 傳回非零值（表示您已經在第一筆記錄之前滾動，或記錄集未選取任何記錄），呼叫 `MovePrev` 將會擲回 `CDaoException`。
 
 > [!CAUTION]
->  呼叫任一`Move`函式擲回例外狀況，如果資料錄集不有任何記錄。 一般情況下，呼叫`IsBOF`和`IsEOF`移動作業，以判斷資料錄集是否有任何記錄之前。 在您呼叫後`Open`或是`Requery`，呼叫`IsBOF`或`IsEOF`。
+>  如果記錄集沒有任何記錄，呼叫任何 `Move` 函數都會擲回例外狀況。 一般來說，請同時呼叫 `IsBOF` 和 `IsEOF` 再進行移動作業，以判斷記錄集是否有任何記錄。 在您呼叫 `Open` 或 `Requery`之後，請呼叫 `IsBOF` 或 `IsEOF`。
 
 > [!NOTE]
->  如果您呼叫任何`Move`函式時的目前記錄正在更新或新增，更新會遺失，而不發出警告。
+>  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-使用`Move`將記錄間移動而不將條件套用的函式。 您可以使用尋找作業，找出記錄中的動態類型或符合特定條件的快照集類型的資料錄集物件。 若要尋找一筆記錄中的資料表類型的資料錄集物件，呼叫`Seek`。
+使用 `Move` 函式，在不套用條件的情況下，從記錄移至記錄。 使用尋找作業來尋找符合特定條件的動態集型別或快照型別記錄集物件中的記錄。 若要找出資料表類型記錄集物件中的記錄，請呼叫 `Seek`。
 
-如果資料錄集是指資料表類型的資料錄集，移動會依照資料表的目前索引。 您可以使用基本的 DAO 物件的索引屬性，來設定目前的索引。 如果您未設定目前的索引，傳回記錄的順序會是未定義。
+如果記錄集參考資料表類型記錄集，則移動會遵循資料表的目前索引。 您可以使用基礎 DAO 物件的 Index 屬性來設定目前的索引。 如果您未設定目前的索引，則傳回記錄的順序會是未定義的。
 
-您不能呼叫`MoveFirst`或`MovePrev`使用順向捲動快照集的成員函式。
+您無法使用順向滾動快照集來呼叫 `MoveFirst` 或 `MovePrev` 成員函式。
 
-若要移動的目前位置的記錄將資料錄集物件中特定數目記錄向前或向後移動，請呼叫`Move`。
+若要將記錄集物件中目前記錄的位置，向前或向後移動特定數目的記錄，請呼叫 `Move`。
 
-如需相關資訊，請參閱 < 移動方法 > 的主題和 「 MoveFirst、 MoveLast、 MoveNext、 MovePrevious 方法 」 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的「Move 方法」和「MoveFirst、MoveLast、MoveNext、MovePrevious 方法」主題。
 
-##  <a name="open"></a>  CDaoRecordset::Open
+##  <a name="open"></a>CDaoRecordset：： Open
 
-您必須呼叫此成員函式，來擷取資料錄集的記錄。
+您必須呼叫這個成員函式，才能取出記錄集的記錄。
 
 ```
 virtual void Open(
@@ -1934,106 +1934,106 @@ virtual void Open(
 *nOpenType*<br/>
 下列其中一個值：
 
-- `dbOpenDynaset` 使用雙向捲動的動態類型資料錄集。 這是預設值。
+- `dbOpenDynaset` 具有雙向滾動的動態類型記錄集。 這是預設值。
 
-- `dbOpenTable` 使用雙向捲動資料表型別資料錄集。
+- `dbOpenTable` 具有雙向滾動的資料表類型記錄集。
 
-- `dbOpenSnapshot` 使用雙向捲動的快照集類型資料錄集。
+- `dbOpenSnapshot` 具有雙向滾動的快照類型記錄集。
 
 *lpszSQL*<br/>
-字串指標，包含下列其中之一：
+包含下列其中一項的字串指標：
 
-- NULL 指標。
+- Null 指標。
 
-- 一或多個 tabledefs 和/或 querydefs （以逗號分隔） 的名稱。
+- 一或多個 tabledefs 和/或 querydefs 的名稱（以逗號分隔）。
 
-- SQL**選取 **陳述式 (選擇性地使用 SQL**位置**或是**ORDERBY**子句)。
+- SQL **SELECT**語句（選擇性地使用 sql **WHERE**或**ORDERBY**子句）。
 
 - 傳遞查詢。
 
 *nOptions*<br/>
-一或多個下列選項。 預設值為 0。 可能的值如下：
+下面列出一或多個選項。 預設值為 0。 可能的值如下：
 
-- `dbAppendOnly` 您可以僅附加新資料錄 (動態類型 recordset)。 此選項實際上是表示可能只會附加記錄。 MFC ODBC 資料庫類別具有僅附加選項，可允許擷取和附加的記錄。
+- `dbAppendOnly` 您只能附加新記錄（僅限動態集類型的記錄集）。 此選項表示實際上可能只會附加記錄。 MFC ODBC 資料庫類別具有 [僅限附加] 選項，可讓您抓取和附加記錄。
 
-- `dbForwardOnly` 資料錄集是一個順向捲動的快照集。
+- `dbForwardOnly` 記錄集是順向的滾動快照。
 
-- `dbSeeChanges` 如果另一位使用者正在變更您正在編輯的資料，請產生例外狀況。
+- 如果另一位使用者正在變更您正在編輯的資料，`dbSeeChanges` 會產生例外狀況。
 
-- `dbDenyWrite` 其他使用者無法修改或新增記錄。
+- `dbDenyWrite` 其他使用者無法修改或加入記錄。
 
-- `dbDenyRead` 其他使用者無法檢視記錄 (資料表類型 recordset)。
+- `dbDenyRead` 其他使用者無法查看記錄（僅限資料表類型記錄集）。
 
-- `dbReadOnly` 您只能檢視記錄。其他使用者可以進行修改。
+- `dbReadOnly` 您只能查看記錄;其他使用者可以修改它們。
 
-- `dbInconsistent` （僅動態類型記錄集） 允許不一致的更新。
+- 允許 `dbInconsistent` 不一致的更新（僅限動態集類型的記錄集）。
 
-- `dbConsistent` 只有一致更新允許 (動態類型 recordset)。
+- 僅允許 `dbConsistent` 一致的更新（僅限動態集類型的記錄集）。
 
 > [!NOTE]
->  常數`dbConsistent`和`dbInconsistent`互斥。 您可以使用其中一個或另一個，但不可同時指定的執行個體中`Open`。
+>  `dbConsistent` 和 `dbInconsistent` 的常數是互斥的。 您可以在指定的 `Open`實例中使用其中一種，但不能同時使用。
 
 *pTableDef*<br/>
-指標[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)物件。 這個版本是僅適用於資料表類型的資料錄集。 時使用此選項時，`CDaoDatabase`指標，用來建構`CDaoRecordset`不會使用; 相反地，使用 tabledef 所在的資料庫。
+[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)物件的指標。 此版本僅適用于資料表類型的記錄集。 使用此選項時，不會使用用來建立 `CDaoRecordset` 的 `CDaoDatabase` 指標;而是使用 tabledef 所在的資料庫。
 
 *pQueryDef*<br/>
-指標[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)物件。 此版本僅適用於動態類型和快照集類型的資料錄集無效。 時使用此選項時，`CDaoDatabase`指標，用來建構`CDaoRecordset`不會使用; 相反地，使用 querydef 所在的資料庫。
+[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)物件的指標。 此版本僅適用于動態集型別和快照集類型的記錄集。 使用此選項時，不會使用用來建立 `CDaoRecordset` 的 `CDaoDatabase` 指標;而是使用 querydef 所在的資料庫。
 
 ### <a name="remarks"></a>備註
 
-然後再呼叫`Open`，您必須建構資料錄集物件。 有幾個方式可做到這點：
+在呼叫 `Open`之前，您必須先建立記錄集物件。 有幾個方式可做到這點：
 
-- 當您建構資料錄集物件時，傳遞的指標`CDaoDatabase`已經開啟的物件。
+- 當您建立記錄集物件時，請將指標傳遞至已經開啟的 `CDaoDatabase` 物件。
 
-- 當您建構資料錄集物件時，傳遞的指標`CDaoDatabase`未開啟的物件。 資料錄集開啟`CDaoDatabase`物件，但將不會關閉它，recordset 物件關閉時。
+- 當您建立記錄集物件時，請將指標傳遞至未開啟的 `CDaoDatabase` 物件。 記錄集會開啟 `CDaoDatabase` 物件，但當記錄集物件關閉時，不會將它關閉。
 
-- 當您建構資料錄集物件時，會傳遞為 NULL 指標。 資料錄集物件呼叫`GetDefaultDBName`取得 Microsoft Access 的名稱。若要開啟 MDB 檔案。 接著會開啟資料錄集`CDaoDatabase`物件和它開啟，只要已開啟的資料錄集的保留。 當您呼叫`Close`在資料錄集，`CDaoDatabase`物件也會關閉。
+- 當您建立記錄集物件時，傳遞 Null 指標。 記錄集物件會呼叫 `GetDefaultDBName` 來取得 Microsoft Access 的名稱。要開啟的 MDB 檔案。 然後，記錄集就會開啟 `CDaoDatabase` 物件，只要記錄集已開啟，它就會保持開啟狀態。 當您通話記錄集上的 `Close` 時，`CDaoDatabase` 物件也會關閉。
 
     > [!NOTE]
-    >  資料錄集開啟時`CDaoDatabase`物件，則會以非獨佔存取的資料來源。
+    >  當記錄集開啟 `CDaoDatabase` 物件時，它會開啟具有非獨佔存取權的資料來源。
 
-新版`Open`使用*lpszSQL*參數，開啟資料錄集後，您就可以擷取數種方式之一中的記錄。 第一個選項是將 DFX 函式在您`DoFieldExchange`。 第二個選項是使用動態繫結，藉由呼叫`GetFieldValue`成員函式。 個別或組合，可以實作這些選項。 如果將它們合併，您必須將 SQL 陳述式中自行呼叫`Open`。
+對於使用*lpszSQL*參數的 `Open` 版本，一旦記錄集開啟，您就可以使用數種方式的其中一種來捕獲記錄。 第一個選項是在您的 `DoFieldExchange`中擁有 DFX 函數。 第二個選項是藉由呼叫 `GetFieldValue` 成員函式來使用動態繫結。 這些選項可以單獨執行或結合。 如果兩者結合在一起，您就必須在 `Open`的呼叫上自行傳入 SQL 語句。
 
-當您使用第二版`Open`您在中傳遞`CDaoTableDef`物件，產生的資料行可供您將透過繫結`DoFieldExchange`和 DFX 機制和/或透過動態繫結`GetFieldValue`。
-
-> [!NOTE]
->  您只能呼叫`Open`使用`CDaoTableDef`資料表類型的資料錄集物件。
-
-當您使用的第三個新版`Open`您在中傳遞`CDaoQueryDef`物件，將會執行查詢，，和產生的資料行可供您將透過繫結`DoFieldExchange`和 DFX 機制和/或透過動態繫結`GetFieldValue`。
+當您使用 `Open` 在其中傳入 `CDaoTableDef` 物件的第二個版本時，產生的資料行將可供您透過 `DoFieldExchange` 和 DFX 機制進行系結，以及（或）透過 `GetFieldValue`動態系結。
 
 > [!NOTE]
->  您只能呼叫`Open`使用`CDaoQueryDef`動態類型和快照集類型的資料錄集物件。
+>  您只能使用資料表類型記錄集的 `CDaoTableDef` 物件來呼叫 `Open`。
 
-第一個版本的`Open`使用`lpszSQL`參數，記錄會根據選取下表所示的準則。
+當您使用 `Open` 傳入 `CDaoQueryDef` 物件的第三個版本時，將會執行該查詢，而產生的資料行則可供您透過 `DoFieldExchange` 和 DFX 機制進行系結，以及/或透過 `GetFieldValue`動態系結。
 
-|`lpszSQL` 參數的值|取決於選取的記錄|範例|
+> [!NOTE]
+>  您只能使用動態集型別和快照型別記錄集的 `CDaoQueryDef` 物件來呼叫 `Open`。
+
+對於使用 `lpszSQL` 參數的第一個 `Open` 版本，會根據下表所示的準則來選取記錄。
+
+|`lpszSQL` 參數的值|選取的記錄取決於|範例|
 |--------------------------------------|----------------------------------------|-------------|
-|NULL|所傳回的字串`GetDefaultSQL`。||
-|一或多個 tabledefs 及/或 querydef 名稱的逗號分隔清單。|在中的所有資料行表示`DoFieldExchange`。|`"Customer"`|
-|**選取 **資料行清單**FROM**資料表清單|從指定的 tabledef(s) 和/或 querydef(s) 所指定資料行。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
+|NULL|`GetDefaultSQL`傳回的字串。||
+|一或多個 tabledefs 和/或 querydef 名稱的逗號分隔清單。|`DoFieldExchange`中表示的所有資料行。|`"Customer"`|
+|從資料表清單**中** **選取**資料行清單|指定之 tabledef 和/或 querydef （s）中的指定資料行。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
-一般程序是傳遞 NULL 給`Open`; 在此情況下，`Open`呼叫`GetDefaultSQL`，可覆寫的成員函式，建立時，會產生 ClassWizard `CDaoRecordset`-衍生的類別。 此值可讓您指定在 ClassWizard tabledef(s) 和/或 querydef 名稱。 您可以改為指定中的其他資訊*lpszSQL*參數。
+平常的程式是將 Null 傳遞給 `Open`。在這種情況下，`Open` 會呼叫 `GetDefaultSQL`，這是在建立 `CDaoRecordset`衍生的類別時，ClassWizard 會產生的可覆寫成員函式。 這個值會提供您在 ClassWizard 中指定的 tabledef （s）和/或 querydef 名稱。 您可以改為在*lpszSQL*參數中指定其他資訊。
 
-傳遞任何方法，`Open`建構查詢的最終 SQL 字串 (字串可能有 SQL**何處**並**ORDERBY**子句附加至*lpszSQL*字串您傳遞），然後執行查詢。 您可以檢查建構的字串，藉由呼叫`GetSQL`之後呼叫`Open`。
+無論您傳遞哪一個，`Open` 都會針對查詢建立最終的 SQL 字串（字串可能會在您傳遞的*lpszSQL*字串後面加**上 Sql WHERE**和**ORDERBY**子句），然後執行查詢。 呼叫 `Open`之後，您可以藉由呼叫 `GetSQL` 來檢查結構化的字串。
 
-您的資料錄集類別的欄位資料成員會繫結至選取的資料的資料行。 如果未傳回任何記錄，第一筆記錄會變成目前的記錄。
+記錄集類別的欄位資料成員會系結至選取的資料行。 如果傳回任何記錄，第一筆記錄就會成為目前的記錄。
 
-如果您想要設定的資料錄集，例如篩選或排序選項的設定`m_strSort`或是`m_strFilter`建構的資料錄集物件之後，但在呼叫之前`Open`。 如果您想要重新整理資料錄集之後的記錄資料錄集已經開啟，請呼叫`Requery`。
+如果您想要設定記錄集的選項，例如篩選或排序，請在建立記錄集物件之後，但是在呼叫 `Open`之前，設定 `m_strSort` 或 `m_strFilter`。 如果您想要在記錄集已開啟之後重新整理記錄集中的記錄，請呼叫 `Requery`。
 
-如果您呼叫`Open`上的動態類型或快照集類型的資料錄集，或如果資料來源指的是 SQL 陳述式或 tabledef，表示附加的資料表，您無法使用`dbOpenTable`類型引數; 如果您這樣做，MFC 會擲回例外狀況。 若要判斷 tabledef 物件是否表示附加的資料表，建立[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)物件並呼叫其[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成員函式。
+如果您在動態集類型或快照集類型的記錄集上呼叫 `Open`，或如果資料來源參考的是 SQL 語句或代表附加資料表的 tabledef，您就無法使用類型引數的 `dbOpenTable`。如果您這樣做，MFC 會擲回例外狀況。 若要判斷 tabledef 物件是否代表附加的資料表，請建立[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)物件，並呼叫其[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成員函式。
 
-使用`dbSeeChanges`旗標，如果您想要編輯或刪除相同的記錄時，由另一位使用者或您的電腦上的另一個程式所做的變更的設陷。 例如，如果兩位使用者開始編輯同一筆記錄，第一個使用者來呼叫`Update`成員函式會成功。 當`Update`第二個使用者，會呼叫`CDaoException`就會擲回。 同樣地，如果第二個使用者嘗試呼叫`Delete`若要刪除記錄，而且已經變更第一個使用者`CDaoException`，就會發生。
+如果您想要在編輯或刪除相同的記錄時，將其他使用者或電腦上的其他程式所做的變更補漏設為，請使用 `dbSeeChanges` 旗標。 例如，如果兩個使用者開始編輯相同的記錄，則呼叫 `Update` 成員函式的第一個使用者就會成功。 當第二個使用者呼叫 `Update` 時，就會擲回 `CDaoException`。 同樣地，如果第二個使用者嘗試呼叫 `Delete` 來刪除記錄，而且第一個使用者已經變更，就會發生 `CDaoException`。
 
-一般而言，如果使用者取得這個`CDaoException`同時更新，您的程式碼應該重新整理欄位的內容，並擷取新修改的值。 正在刪除，就會發生例外狀況，如果您的程式碼無法顯示新的記錄資料，使用者和訊息，指出資料最近已變更。 此時，您的程式碼可以要求確認，使用者仍然想要刪除的記錄。
+一般而言，如果使用者在更新時取得此 `CDaoException`，則您的程式碼應該會重新整理欄位的內容，並抓取新修改的值。 如果例外狀況發生在刪除的過程中，您的程式碼可能會向使用者顯示新的記錄資料，以及指出資料最近已變更的訊息。 此時，您的程式碼可以要求確認使用者仍然想要刪除該記錄。
 
 > [!TIP]
->  使用順向捲動選項 (`dbForwardOnly`) 來改善效能，當您的應用程式的資料錄集的單一行程中，開啟 ODBC 資料來源。
+>  當您的應用程式透過從 ODBC 資料來源開啟的記錄集進行單一傳遞時，請使用順向滾動選項（`dbForwardOnly`）來改善效能。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < OpenRecordset 方法 >。
+如需相關資訊，請參閱 DAO 說明中的「Openrecordset) 方法」主題。
 
-##  <a name="requery"></a>  CDaoRecordset::Requery
+##  <a name="requery"></a>CDaoRecordset：： Requery
 
-呼叫此成員函式可重建 （重新整理） 資料錄集。
+呼叫這個成員函式以重建（重新整理）記錄集。
 
 ```
 virtual void Requery();
@@ -2041,29 +2041,29 @@ virtual void Requery();
 
 ### <a name="remarks"></a>備註
 
-如果未傳回任何記錄，第一筆記錄會變成目前的記錄。
+如果傳回任何記錄，第一筆記錄就會成為目前的記錄。
 
-為了讓資料錄集，以反映新增和刪除，您或其他使用者對資料來源，您必須重建資料錄集，藉由呼叫`Requery`。 如果資料錄集是動態集，它會自動反映您或其他使用者對其現有的記錄 （但不是新增項目） 的更新。 如果資料錄集是快照集，您必須呼叫`Requery`以反映其他使用者，以及新增和刪除的編輯。
+為了讓記錄集反映您或其他使用者對資料來源所做的新增和刪除，您必須藉由呼叫 `Requery`來重建記錄集。 如果記錄集是動態集，它會自動反映您或其他使用者對其現有記錄（但不是新增專案）所做的更新。 如果記錄集是快照，您必須呼叫 `Requery` 以反映其他使用者的編輯，以及新增和刪除。
 
-動態集或快照集，請呼叫`Requery`任何您想要重建資料錄集使用參數值的時間。 設定藉由設定新的篩選或排序[m_strFilter](#m_strfilter)並[m_strSort](#m_strsort)再呼叫`Requery`。 設定新的參數指派新值給參數的資料成員，然後再呼叫`Requery`。
+針對動態集或快照，每當您想要使用參數值重建記錄集時，都可以呼叫 `Requery`。 設定新的篩選或排序，方法是在呼叫 `Requery`之前，設定[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort) 。 呼叫 `Requery`之前，請先將新值指派給參數資料成員，以設定新的參數。
 
-如果嘗試重建資料錄集失敗，就會關閉資料錄集。 在呼叫之前`Requery`，您可以藉由呼叫是否可以重新查詢資料錄集來判斷[CanRestart](#canrestart)成員函式。 `CanRestart` 不保證`Requery`會成功。
+如果重建記錄集的嘗試失敗，就會關閉記錄集。 在您呼叫 `Requery`之前，您可以藉由呼叫[CanRestart](#canrestart)成員函式來判斷是否可以重新查詢記錄集。 `CanRestart` 不保證 `Requery` 會成功。
 
 > [!CAUTION]
->  呼叫`Requery`之後才呼叫`Open`。
+>  只有在您呼叫 `Open`之後，才 `Requery` 呼叫。
 
 > [!NOTE]
->  呼叫[Requery](#requery)變更 DAO 書籤。
+>  呼叫重新[查詢](#requery)會變更 DAO 書簽。
 
-您不能呼叫`Requery`上的動態類型或如果呼叫的快照集類型資料錄集`CanRestart`會傳回 0，也不可以使用該類型的資料表資料錄集。
+如果呼叫 `CanRestart` 傳回0，而且您不能在資料表類型記錄集上使用它，您就無法在動態集類型或快照集類型的記錄集上呼叫 `Requery`。
 
-如果兩個`IsBOF`並`IsEOF`傳回非零值之後您呼叫, `Requery`，查詢未傳回任何記錄和資料錄集，則會包含任何資料。
+如果 `IsBOF` 和 `IsEOF` 在呼叫 `Requery`之後傳回非零值，則查詢不會傳回任何記錄，而且記錄集不會包含任何資料。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < Requery 方法 >。
+如需相關資訊，請參閱 DAO 說明中的「重新查詢方法」主題。
 
-##  <a name="seek"></a>  CDaoRecordset::Seek
+##  <a name="seek"></a>CDaoRecordset：： Seek
 
-呼叫此成員函式，以找出資料錄中索引的資料表類型的資料錄集物件符合指定的準則，目前編製索引，並將該記錄目前的記錄。
+呼叫這個成員函式，以在索引資料表類型記錄集物件中尋找符合目前索引之指定準則的記錄，並將它記錄為目前的記錄。
 
 ```
 BOOL Seek(
@@ -2081,53 +2081,53 @@ BOOL Seek(
 ### <a name="parameters"></a>參數
 
 *lpszComparison*<br/>
-下列字串運算式的其中一個:"<"，"\<="，"="、"> = 」，或">"。
+下列其中一個字串運算式： "<"、"\<="、"="、"> =" 或 ">"。
 
 *pKey1*<br/>
-指標[COleVariant](../../mfc/reference/colevariant-class.md)其值會對應到索引中的第一個欄位。 必要項。
+[COleVariant](../../mfc/reference/colevariant-class.md)的指標，其值對應至索引中的第一個欄位。 必要。
 
 *pKey2*<br/>
-指標`COleVariant`其值會對應到索引中的第二個欄位，如果有的話。 預設值是 NULL。
+`COleVariant` 的指標，其值對應至索引中的第二個欄位（如果有的話）。 預設值為 Null。
 
 *pKey3*<br/>
-指標`COleVariant`其值會對應到索引中的第三個欄位，如果有的話。 預設值是 NULL。
+`COleVariant` 的指標，其值對應至索引中的第三個欄位（如果有的話）。 預設值為 Null。
 
 *pKeyArray*<br/>
-Variant 的陣列指標。 陣列大小會對應至索引中的欄位數目。
+Variant 陣列的指標。 陣列大小會對應至索引中的欄位數目。
 
 *nKeys*<br/>
-陣列，也就是在索引中的欄位數目的大小相對應的整數。
+對應于陣列大小的整數，也就是索引中的欄位數目。
 
 > [!NOTE]
->  請勿在索引鍵中指定萬用字元。 萬用字元會導致`Seek`傳回沒有相符的記錄。
+>  請勿在索引鍵中指定萬用字元。 萬用字元會導致 `Seek` 不傳回相符的記錄。
 
 ### <a name="return-value"></a>傳回值
 
-如果相符記錄找不到，則為 0，非零值。
+如果找到相符的記錄，則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-使用第二個 （陣列） 版本的`Seek`来處理的四個欄位的索引或以上。
+使用 `Seek` 的第二個（陣列）版本來處理四個或更多欄位的索引。
 
-`Seek` 啟用高效能的索引搜尋作業類型的資料表資料錄集。 您必須設定目前的索引，藉由呼叫`SetCurrentIndex`再呼叫`Seek`。 如果索引識別的非唯一的索引鍵欄位或欄位，`Seek`找出符合準則的第一筆記錄。 如果您未設定索引，則會擲回例外狀況。
+`Seek` 在資料表類型的記錄集上啟用高效能索引搜尋。 您必須先呼叫 `SetCurrentIndex` 來設定目前的索引，才能呼叫 `Seek`。 如果索引識別不唯一的索引鍵欄位或欄位，`Seek` 會尋找符合準則的第一筆記錄。 如果您未設定索引，則會擲回例外狀況。
 
-請注意，如果您不想要建立的 UNICODE 資料錄集，則`COleVariant`物件必須明確宣告為 ANSI。 做法是使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **，** *vtSrc* **)** 形式的建構函式*vtSrc*設定為`VT_BSTRT`(ANSI) 或使用`COleVariant`函式[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **，** *vtSrc* **)** 使用*vtSrc*設`VT_BSTRT`。
+請注意，如果您未建立 UNICODE 記錄集，`COleVariant` 物件必須明確宣告為 ANSI。 這可以藉由使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **（** *lpszSrc* **，** *vtSrc* **）** 形式的函式，並將*vtSrc*設定為 `VT_BSTRT` （ANSI），或使用 `COleVariant` 函數[SetString](../../mfc/reference/colevariant-class.md#setstring) **（** *lpszSrc* **，** *vtSrc* **）** ，並將*vtSrc*設定為 `VT_BSTRT`來完成這項作業。
 
-當您呼叫`Seek`，您傳送一個或多個索引鍵的值和比較運算子 ("<"，"\<="，"="、"> = 」，或">")。 `Seek` 搜尋指定的索引鍵欄位，並找出符合所指定之準則的第一筆記錄*lpszComparison*並*pKey1*。 找到後，`Seek`傳回非零值，並讓該記錄目前。 如果`Seek`找不到相符項目，`Seek`傳回零，和目前的記錄為未定義。 當直接使用 DAO，則您必須明確檢查 NoMatch 屬性。
+當您呼叫 `Seek`時，您會傳遞一或多個索引鍵值和比較運算子（"<"、"\<="、"="、"> =" 或 ">"）。 `Seek` 會搜尋指定的索引鍵欄位，並尋找符合*lpszComparison*和*pKey1*所指定準則的第一筆記錄。 找到之後，`Seek` 會傳回非零值，並使該記錄成為目前的。 如果 `Seek` 找不到相符的結果，`Seek` 會傳回零，而且目前的記錄未定義。 直接使用 DAO 時，您必須明確檢查 NoMatch 屬性。
 
-如果`lpszComparison`是"="、"> = 」，或">"，`Seek`開始索引。 如果*lpszComparison*是"<"或"< ="，`Seek`開始索引結尾，並會在向後搜尋，除非結尾有重複的索引項目。 在此情況下，`Seek`開始重複的索引項目結尾的索引之間的任意項目。
+如果 `lpszComparison` 是 "="、"> =" 或 ">"，`Seek` 會從索引的開頭開始。 如果*lpszComparison*是 "<" 或 "< ="，`Seek` 會從索引的結尾開始，並向後搜尋，除非結尾有重複的索引項目。 在此情況下，`Seek` 會從索引結尾處的重複索引項目中的任意專案開始。
 
-那里不需要是目前的記錄，當您使用`Seek`。
+當您使用 `Seek`時，不一定要有目前的記錄。
 
-若要尋找一筆記錄中的動態類型或符合特定條件的快照集類型記錄集，使用 尋找作業。 若要包含的所有記錄，不只是那些符合特定條件，可以使用 移動作業來移動記錄間。
+若要在符合特定條件的動態類型或快照集類型記錄集中尋找記錄，請使用尋找作業。 若要包含所有記錄，而不只是符合特定條件的記錄，請使用移動作業從記錄移至記錄。
 
-您不能呼叫`Seek`上任何附加的資料表類型，因為必須開啟附加的資料表，為動態類型或快照集類型的資料錄集。 不過，如果您呼叫`CDaoDatabase::Open`若要直接開啟可安裝的 ISAM 資料庫，您可以呼叫`Seek`資料表在該資料庫中，但效能可能會變慢。
+您無法在任何型別的附加資料表上呼叫 `Seek`，因為附加資料表必須以動態集型別或快照集型別記錄檔的形式開啟。 不過，如果您呼叫 `CDaoDatabase::Open` 直接開啟可安裝的 ISAM 資料庫，您可以在該資料庫中的資料表上呼叫 `Seek`，但效能可能會變慢。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < 搜尋方法 >。
+如需相關資訊，請參閱 DAO 說明中的「搜尋方法」主題。
 
-##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition
+##  <a name="setabsoluteposition"></a>CDaoRecordset：： SetAbsolutePosition
 
-設定資料錄集物件的目前資料錄的相對記錄數目。
+設定記錄集物件目前記錄的相對記錄號碼。
 
 ```
 void SetAbsolutePosition(long lPosition);
@@ -2136,27 +2136,27 @@ void SetAbsolutePosition(long lPosition);
 ### <a name="parameters"></a>參數
 
 *lPosition*<br/>
-對應至目前資料錄的資料錄集中的序數位置。
+對應至記錄集中目前記錄的序數位置。
 
 ### <a name="remarks"></a>備註
 
-呼叫`SetAbsolutePosition`可讓您根據其序數位置中的動態類型或快照集類型的資料錄集的特定記錄的目前記錄指標的位置。 您也可以藉由呼叫來判斷目前的記錄編號[GetAbsolutePosition](#getabsoluteposition)。
+呼叫 `SetAbsolutePosition` 可讓您根據其在動態集型別或快照集型別記錄集中的序數位置，將目前的記錄指標放到特定記錄。 您也可以藉由呼叫[GetAbsolutePosition](#getabsoluteposition)來判斷目前的記錄數目。
 
 > [!NOTE]
->  此成員函式僅適用於動態類型和快照集類型的資料錄集無效。
+>  這個成員函式僅適用于動態集型別和快照型別記錄集。
 
-AbsolutePosition 屬性值之基礎的 DAO 物件的以零為起始的;設定為 0，指的是資料錄集的第一個記錄。 將值設定為大於已填入資料錄會造成擲回例外狀況的 MFC 的數目。 您可以藉由呼叫來判斷資料錄集填入資料錄數目`GetRecordCount`成員函式。
+基礎 DAO 物件的 AbsolutePosition 屬性值是以零為基底;設定為0時，是指記錄集內的第一筆記錄。 設定大於填入記錄數目的值，會導致 MFC 擲回例外狀況。 您可以藉由呼叫 `GetRecordCount` 成員函式，判斷記錄集中的已填入記錄數目。
 
-如果目前的記錄遭到刪除，未定義 AbsolutePosition 屬性值，和 MFC 在正在參考它，會擲回例外狀況。 新的記錄會新增至序列的結尾。
+如果目前的記錄已刪除，則不會定義 AbsolutePosition 屬性值，而且 MFC 會在參考時擲回例外狀況。 新的記錄會新增至序列的結尾。
 
 > [!NOTE]
->  這個屬性不是要做為 surrogate 資料錄數目。 書籤是仍保留並傳回至指定位置的建議的方式，含括所有類型的支援書籤的資料錄集物件位置的目前記錄的唯一方式。 特別的是，指定記錄的位置變更時也會刪除在它前面的記錄。 另外還有指定的記錄會有相同的絕對位置，如果因為除非它使用 SQL 陳述式建立，否則不保證資料錄集內的個別記錄的順序重新重新建立資料錄集不保證**ORDERBY**子句。
+>  這個屬性不適合當做代理記錄號碼使用。 書簽仍然是保留並返回指定位置的建議方式，而且是將目前記錄放置在支援書簽的所有記錄集物件類型上的唯一方法。 特別是，指定記錄的位置在刪除之前的記錄會變更。 如果重新建立記錄集，也不保證指定的記錄會有相同的絕對位置，因為記錄集內個別記錄的順序並不保證，除非使用**ORDERBY**子句以 SQL 語句建立。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < AbsolutePosition 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「AbsolutePosition 屬性」主題。
 
-##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark
+##  <a name="setbookmark"></a>CDaoRecordset：： SetBookmark
 
-呼叫此成員函式，來定位資料錄集記錄，其中包含指定的書籤。
+呼叫這個成員函式，將記錄集放在包含指定書簽的記錄上。
 
 ```
 void SetBookmark(COleVariant varBookmark);
@@ -2165,22 +2165,22 @@ void SetBookmark(COleVariant varBookmark);
 ### <a name="parameters"></a>參數
 
 *varBookmark*<br/>
-A [COleVariant](../../mfc/reference/colevariant-class.md)物件，其中包含書籤值的特定記錄。
+包含特定記錄之書簽值的[COleVariant](../../mfc/reference/colevariant-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-當建立或開啟資料錄集物件時，其記錄的每個已經有唯一的書籤。 您可以呼叫來擷取目前資料錄的書籤`GetBookmark`並儲存的值`COleVariant`物件。 您可以於稍後返回該記錄呼叫`SetBookmark`使用已儲存的書籤值。
+建立或開啟記錄集物件時，它的每個記錄都已經有唯一的書簽。 您可以藉由呼叫 `GetBookmark` 並將值儲存至 `COleVariant` 物件，來抓取目前記錄的書簽。 您稍後可以使用已儲存的書簽值來呼叫 `SetBookmark`，以返回該記錄。
 
 > [!NOTE]
->  呼叫[Requery](#requery)變更 DAO 書籤。
+>  呼叫重新[查詢](#requery)會變更 DAO 書簽。
 
-請注意，如果您不想要建立的 UNICODE 資料錄集，則`COleVariant`物件必須明確宣告為 ANSI。 做法是使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **，** *vtSrc* **)** 形式的建構函式*vtSrc*設定為`VT_BSTRT`(ANSI) 或使用`COleVariant`函式[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **，** *vtSrc* **)** 使用*vtSrc*設`VT_BSTRT`。
+請注意，如果您不是建立 UNICODE 記錄集，則 `COleVariant` 物件必須明確宣告為 ANSI。 這可以藉由使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **（** *lpszSrc* **，** *vtSrc* **）** 形式的函式，並將*vtSrc*設定為 `VT_BSTRT` （ANSI），或使用 `COleVariant` 函數[SetString](../../mfc/reference/colevariant-class.md#setstring) **（** *lpszSrc* **，** *vtSrc* **）** ，並將*vtSrc*設定為 `VT_BSTRT`來完成這項作業。
 
-如需相關資訊，請參閱主題 「 書籤屬性 」 和 Bookmarkable 屬性 「 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的 < 書簽屬性和 Bookmarkable 屬性主題。
 
-##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize
+##  <a name="setcachesize"></a>CDaoRecordset：： SetCacheSize
 
-呼叫此成員函式，來設定快取的記錄數目。
+呼叫這個成員函式，以設定要快取的記錄數目。
 
 ```
 void SetCacheSize(long lSize);
@@ -2189,19 +2189,19 @@ void SetCacheSize(long lSize);
 ### <a name="parameters"></a>參數
 
 *lSize*<br/>
-指定記錄的數目。 典型值為 100。 若設定為 0 會關閉快取。 設定必須介於 5 到 1200年的記錄。 快取可能會使用相當多的記憶體。
+指定記錄的數目。 一般的值為100。 設定為0會關閉快取。 設定必須介於5到1200筆記錄之間。 快取可能會使用大量的記憶體。
 
 ### <a name="remarks"></a>備註
 
-快取中保存最近從伺服器擷取的資料將會要求一次執行應用程式時的資料的本機記憶體是空格。 資料快取可改善從遠端伺服器透過動態類型資料錄集物件中擷取資料的應用程式的效能。 當要求資料時，Microsoft Jet 資料庫引擎的快取要求的資料會先檢查而不是擷取自伺服器，需要更多時間。 不是來自 ODBC 資料來源的資料不會儲存在快取中。
+快取是本機記憶體中的一個空間，其中保存最近從伺服器中取出的資料，因為在應用程式執行時，將會再次要求資料。 資料快取可改善應用程式的效能，這會透過動態集類型的記錄集物件，從遠端伺服器抓取資料。 當要求資料時，Microsoft Jet 資料庫引擎會先檢查快取中是否有要求的資料，而不是從伺服器抓取它，這會花費更多時間。 不是來自 ODBC 資料來源的資料不會儲存在快取中。
 
-任何 ODBC 資料來源，例如附加的資料表，可以有本機快取。 若要建立快取，請開啟資料錄集物件從遠端資料來源，呼叫`SetCacheSize`並`SetCacheStart`成員函式，然後再呼叫`FillCache`成員函式或使用其中一種移動作業的逐步執行記錄。 *LSize*參數`SetCacheSize`成員函式可以根據您的應用程式可以一次使用的記錄數目。 例如，如果您使用資料錄集的資料來源要顯示在畫面上，您可以傳遞`SetCacheSize` *lSize*為 20，一次顯示 20 筆記錄的參數。
+任何 ODBC 資料來源（例如附加資料表）都可以有本機快取。 若要建立快取，請從遠端資料源開啟記錄集物件，呼叫 `SetCacheSize` 並 `SetCacheStart` 成員函式，然後呼叫 `FillCache` 成員函式，或使用其中一個移動作業逐步執行記錄。 `SetCacheSize` 成員函式的*lSize*參數可以根據您的應用程式一次可處理的記錄數目。 例如，如果您使用記錄集作為要在螢幕上顯示的資料來源，您可以將 `SetCacheSize` *lSize*參數傳遞為20，一次顯示20筆記錄。
 
-如需相關資訊，請參閱 DAO 說明主題 「 CacheSize CacheStart 屬性 」。
+如需相關資訊，請參閱 DAO 說明中的「CacheSize，CacheStart 屬性」主題。
 
-##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart
+##  <a name="setcachestart"></a>CDaoRecordset：： SetCacheStart
 
-呼叫此成員函式，來指定快取資料錄集中的第一筆記錄的書籤。
+呼叫這個成員函式，以指定要快取之記錄集中第一筆記錄的書簽。
 
 ```
 void SetCacheStart(COleVariant varBookmark);
@@ -2210,25 +2210,25 @@ void SetCacheStart(COleVariant varBookmark);
 ### <a name="parameters"></a>參數
 
 *varBookmark*<br/>
-A [COleVariant](../../mfc/reference/colevariant-class.md)快取資料錄集中指定的第一筆記錄的書籤。
+[COleVariant](../../mfc/reference/colevariant-class.md) ，指定要快取之記錄集中第一筆記錄的書簽。
 
 ### <a name="remarks"></a>備註
 
-您可以使用書籤值的任何記錄*varBookmark*參數`SetCacheStart`成員函式。 請的記錄您想要與目前的記錄開始快取中，建立使用該記錄的書籤[SetBookmark](#setbookmark)，並將書籤值傳遞的參數為`SetCacheStart`成員函式。
+您可以將任何記錄的書簽值用於 `SetCacheStart` 成員函式的*varBookmark*參數。 請使用目前的記錄來建立記錄，並以[SetBookmark](#setbookmark)為該記錄建立書簽，並傳遞書簽值做為 `SetCacheStart` 成員函式的參數。
 
-Microsoft Jet 資料庫引擎快取中，從要求的快取範圍內的記錄，並從伺服器要求快取範圍外的記錄。
+Microsoft Jet 資料庫引擎會向快取中的快取範圍要求記錄，並向伺服器要求快取範圍以外的記錄。
 
-從快取中擷取的記錄不會反映所做的變更同時對來源資料的其他使用者。
+從快取中取出的記錄不會反映其他使用者同時對來源資料所做的變更。
 
-若要強制更新所有快取的資料，請傳遞*lSize*的參數`SetCacheSize`為 0 時，呼叫`SetCacheSize`再次快取的大小與您原先要求，，然後呼叫`FillCache`成員函式。
+若要強制更新所有快取的資料，請將 `SetCacheSize` 的*lSize*參數傳遞為0，再以原先要求的快取大小再次呼叫 `SetCacheSize`，然後再呼叫 `FillCache` 成員函式。
 
-請注意，如果您不想要建立的 UNICODE 資料錄集，則`COleVariant`物件必須明確宣告為 ANSI。 做法是使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **，** *vtSrc* **)** 形式的建構函式*vtSrc*設定為`VT_BSTRT`(ANSI) 或使用`COleVariant`函式[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **，** *vtSrc* **)** 使用*vtSrc*設`VT_BSTRT`。
+請注意，如果您不是建立 UNICODE 記錄集，則 `COleVariant` 物件必須明確宣告為 ANSI。 這可以藉由使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **（** *lpszSrc* **，** *vtSrc* **）** 形式的函式，並將*vtSrc*設定為 `VT_BSTRT` （ANSI），或使用 `COleVariant` 函數[SetString](../../mfc/reference/colevariant-class.md#setstring) **（** *lpszSrc* **，** *vtSrc* **）** ，並將*vtSrc*設定為 `VT_BSTRT`來完成這項作業。
 
-如需相關資訊，請參閱 CacheSize，CacheStart 屬性 「 DAO [說明] 中。
+如需相關資訊，請參閱 DAO 說明中的 < CacheStart 屬性 CacheSize 主題。
 
-##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex
+##  <a name="setcurrentindex"></a>CDaoRecordset：： SetCurrentIndex
 
-呼叫此成員函式，來設定索引類型的資料表資料錄集。
+呼叫這個成員函式可設定資料表類型記錄集的索引。
 
 ```
 void SetCurrentIndex(LPCTSTR lpszIndex);
@@ -2237,21 +2237,21 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 ### <a name="parameters"></a>參數
 
 *lpszIndex*<br/>
-指標，包含要設定之索引的名稱。
+包含要設定之索引名稱的指標。
 
 ### <a name="remarks"></a>備註
 
-基底資料表中的記錄不會儲存在任何特定順序。 設定索引變更的記錄從資料庫中，傳回的順序，但它不會影響的記錄會儲存的順序。 必須已定義指定的索引。 如果您嘗試使用不存在，index 物件，或當您呼叫時未設定索引[搜尋](#seek)，MFC 會擲回的例外狀況。
+基表中的記錄不會以任何特定順序儲存。 設定索引會變更從資料庫傳回的記錄順序，但不會影響記錄的儲存順序。 指定的索引必須已經定義。 如果您嘗試使用不存在的索引物件，或當您呼叫[Seek](#seek)時未設定索引，MFC 會擲回例外狀況。
 
-您可以藉由呼叫建立新的索引，資料表[CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex)及附加至基礎 tabledef 索引集合的新索引，藉由呼叫[CDaoTableDef::Append](../../mfc/reference/cdaotabledef-class.md#append)，及然後重新開啟資料錄集。
+您可以藉由呼叫[CDaoTableDef：： CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex)並將新索引附加至基礎 Tabledef 的索引集合，藉由呼叫[CDaoTableDef：： Append](../../mfc/reference/cdaotabledef-class.md#append)，然後重新開啟記錄集，來建立資料表的新索引。
 
-傳回資料表類型的資料錄集的記錄只依所定義的基礎 tabledef 索引中。 若要排序其他順序的記錄，您可以開啟動態類型或使用 SQL 的快照集類型記錄集**ORDERBY**子句會儲存在[CDaoRecordset::m_strSort](#m_strsort)。
+從資料表類型記錄集傳回的記錄只能由針對基礎 tabledef 定義的索引進行排序。 若要以其他順序排序記錄，您可以使用儲存在[CDaoRecordset：： m_strSort](#m_strsort)中的 SQL **ORDERBY**子句來開啟動態集類型或快照集類型的記錄集。
 
-如需相關資訊，請參閱主題 「 索引物件 」，並定義 DAO [說明] 中的 「 目前索引 」。
+如需相關資訊，請參閱 DAO 說明中的「索引物件」和「目前索引」的定義主題。
 
-##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty
+##  <a name="setfielddirty"></a>CDaoRecordset：： SetFieldDirty
 
-呼叫此成員函式，加上旗標為已變更或為未變更資料錄集的欄位資料成員。
+呼叫這個成員函式，以將記錄集的欄位資料成員標示為已變更或保持不變。
 
 ```
 void SetFieldDirty(
@@ -2262,39 +2262,39 @@ void SetFieldDirty(
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C++ NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
+包含記錄集內欄位資料成員的位址，或為 Null。 如果是 Null，則記錄集中的所有欄位資料成員都會加上旗標。 （C++ Null 與資料庫術語中的 null 不同，這表示「沒有任何值」）。
 
 *bDirty*<br/>
-如果欄位資料成員會標示為 「 中途 」 （變更），則為 TRUE。 如果欄位資料成員會標示為 「 清除 」 （未變更），則否則為 FALSE。
+如果欄位資料成員要標示為「已變更」，則為 TRUE。 如果欄位資料成員要標示為「清除」（未變更），則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-標示為不變的欄位，可確保不會更新欄位。
+將欄位標記為未變更可確保欄位不會更新。
 
-Framework 標記變更欄位資料成員，以確保它們會寫入資料來源上的記錄，DAO 資料錄欄位交換 (DFX) 機制。 變更欄位的值，通常欄位已變更會自動設定，讓您很少需要呼叫`SetFieldDirty`，但您有時可能會想要確保的資料行可明確地更新或插入不論何種值位於欄位資料成員。 DFX 機制也會採用 PSEUDONULL 使用。 如需詳細資訊，請參閱 < [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
+架構會標示已變更的欄位資料成員，以確保 DAO 記錄欄位交換（DFX）機制會將它們寫入資料來源上的記錄。 變更欄位的值通常會自動將欄位設定為中途，因此您不常需要自行呼叫 `SetFieldDirty`，但有時您可能會想要確保不論欄位資料成員中的值為何，都會明確更新或插入資料行。 DFX 機制也會採用 PSEUDONull 的使用。 如需詳細資訊，請參閱[CDaoFieldExchange：： m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
 
-如果未使用的雙重緩衝機制，然後變更欄位的值不會自動設定欄位已變更。 在此情況下，它必須明確地將欄位設定為已變更。 中包含旗標[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制這項自動欄位檢查。
+如果未使用雙重緩衝機制，則變更欄位的值時，不會自動將欄位設定為「中途」。 在此情況下，必須將欄位明確設定為已變更。 包含在[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)中的旗標會控制此自動欄位檢查。
 
 > [!NOTE]
->  呼叫此成員函式，只有在您呼叫之後，才[編輯](#edit)或是[AddNew](#addnew)。
+>  只有在您呼叫了[Edit](#edit)或[AddNew](#addnew)之後，才會呼叫此成員函式。
 
-使用 NULL 函數的第一個引數會將函數套用至所有`outputColumn`欄位，不**param**中的欄位`CDaoFieldExchange`。 比方說，在呼叫
+針對函式的第一個引數使用 Null，會將函式套用至所有 `outputColumn` 欄位，而不是 `CDaoFieldExchange`中的**param**欄位。 例如，呼叫
 
 [!code-cpp[NVC_MFCDatabase#6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]
 
-只會設定`outputColumn`欄位設為 NULL;**param**欄位不會受到影響。
+只會將 `outputColumn` 欄位設定為 Null;**param**欄位不會受到影響。
 
-作**param**，您必須提供個別的實際位址**param**您想要能夠著手進行，例如：
+若要使用**參數**，您必須提供您想要處理之個別**參數**的實際位址，例如：
 
 [!code-cpp[NVC_MFCDatabase#7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]
 
-這表示您無法設定所有**param**欄位為 NULL，因為您可以使用`outputColumn`欄位。
+這表示您無法將所有**param**欄位設定為 Null，就像您可以 `outputColumn` 欄位一樣。
 
-`SetFieldDirty` 透過實作`DoFieldExchange`。
+`SetFieldDirty` 是透過 `DoFieldExchange`來執行。
 
-##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull
+##  <a name="setfieldnull"></a>CDaoRecordset：： SetFieldNull
 
-呼叫此成員函式，加上旗標的資料錄集為 Null （特別具有任何值），或為非 Null 的欄位資料成員。
+呼叫這個成員函式，將記錄集的欄位資料成員標示為 Null （明確沒有值）或為非 Null。
 
 ```
 void SetFieldNull(
@@ -2305,35 +2305,35 @@ void SetFieldNull(
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C++ NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
+包含記錄集內欄位資料成員的位址，或為 Null。 如果是 Null，則記錄集中的所有欄位資料成員都會加上旗標。 （C++ Null 與資料庫術語中的 null 不同，這表示「沒有任何值」）。
 
 *bNull*<br/>
-如果欄位資料成員標示為不具有任何值 (Null) 為非零。 否則為 0，表示欄位資料成員會標示為非 Null。
+如果欄位資料成員要標示為沒有值，則為非零（Null）。 如果欄位資料成員要標記為非 Null，則為0。
 
 ### <a name="remarks"></a>備註
 
-`SetFieldNull` 使用於繫結中的欄位`DoFieldExchange`機制。
+`SetFieldNull` 用於 `DoFieldExchange` 機制中系結的欄位。
 
-當您將新記錄加入資料錄集時，所有的欄位資料成員一開始會設為 Null 值，並標示為 「 中途 」 （變更）。 當您從資料來源擷取一筆記錄時，其資料行可能已經值或是 Null。 如果不是適用於將欄位設為 Null， [CDaoException](../../mfc/reference/cdaoexception-class.md)就會擲回。
+當您將新記錄加入至記錄集時，所有欄位資料成員一開始都會設定為 Null 值，並標示為「已變更」。 當您從資料來源抓取記錄時，其資料行可能已經有值或為 Null。 如果不適合將欄位設為 Null，則會擲回[CDaoException](../../mfc/reference/cdaoexception-class.md) 。
 
-如果您使用雙重緩衝機制，比方說，如果您特別想要將目前資料錄的欄位指定為沒有值，呼叫`SetFieldNull`具有*bNull*設成 TRUE 來將它標示為 Null。 如果欄位先前標記為 Null，而且您現在想要指定其值，只要設定其新值。 您沒有移除 Null 旗標與`SetFieldNull`。 若要判斷欄位是否可為 Null，請呼叫[IsFieldNullable](#isfieldnullable)。
+如果您使用雙重緩衝機制，例如，如果您特別想要將目前記錄的欄位指定為不具有值，請呼叫 `SetFieldNull` 並將*bNull*設定為 TRUE，以將其標示為 Null。 如果欄位先前標記為 Null，而您現在想要為其指定值，只要設定其新值即可。 您不需要移除具有 `SetFieldNull`的 Null 旗標。 若要判斷欄位是否允許為 Null，請呼叫[IsFieldNullable](#isfieldnullable)。
 
-如果您不使用雙重緩衝的機制，然後變更欄位的值不會自動設定欄位為已變更且不得為 Null。 已變更且不得為 Null，您必須特別設定的欄位。 中包含旗標[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制這項自動欄位檢查。
+如果您不是使用雙重緩衝機制，則變更欄位的值不會自動將欄位設定為 [已變更] 和 [非 Null]。 您必須明確地將欄位設定為 [已變更] 和 [非 Null]。 包含在[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)中的旗標會控制此自動欄位檢查。
 
-DFX 機制會採用 PSEUDONULL 使用。 如需詳細資訊，請參閱 < [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
+DFX 機制會採用 PSEUDONull 的使用。 如需詳細資訊，請參閱[CDaoFieldExchange：： m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。
 
 > [!NOTE]
->  呼叫此成員函式，只有在您呼叫之後，才[編輯](#edit)或是[AddNew](#addnew)。
+>  只有在您呼叫了[Edit](#edit)或[AddNew](#addnew)之後，才會呼叫此成員函式。
 
-使用 NULL 函數的第一個引數套用函式的只有`outputColumn`欄位，不**param**中的欄位`CDaoFieldExchange`。 比方說，在呼叫
+針對函式的第一個引數使用 Null，只會將函式套用至 `outputColumn` 欄位，而不會套用 `CDaoFieldExchange`中的**參數**欄位。 例如，呼叫
 
 [!code-cpp[NVC_MFCDatabase#8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]
 
-只會設定`outputColumn`欄位設為 NULL;**param**欄位不會受到影響。
+只會將 `outputColumn` 欄位設定為 Null;**param**欄位不會受到影響。
 
-##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue
+##  <a name="setfieldvalue"></a>CDaoRecordset：： SetFieldValue
 
-呼叫此成員函式，來設定欄位的值，依序數位置，或藉由變更字串的值。
+呼叫這個成員函式可依序數位置或變更字串的值，來設定欄位的值。
 
 ```
 virtual void SetFieldValue(
@@ -2356,28 +2356,28 @@ void SetFieldValue(
 ### <a name="parameters"></a>參數
 
 *lpszName*<br/>
-包含的欄位名稱的字串指標。
+包含欄位名稱之字串的指標。
 
 *varValue*<br/>
-參考[COleVariant](../../mfc/reference/colevariant-class.md)物件，其中包含欄位內容的值。
+包含欄位內容值之[COleVariant](../../mfc/reference/colevariant-class.md)物件的參考。
 
 *nIndex*<br/>
-整數，表示欄位 （以零為起始） 的資料錄集的欄位集合中的序數位置。
+整數，表示欄位在記錄集的 Fields 集合中的序數位置（以零為基底）。
 
 *lpszValue*<br/>
-包含欄位的內容值的字串指標。
+包含欄位內容值之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-使用`SetFieldValue`並[GetFieldValue](#getfieldvalue)以動態方式在執行的階段而非以靜態方式使用的繫結資料行繫結欄位[DoFieldExchange](#dofieldexchange)機制。
+使用 `SetFieldValue` 和[GetFieldValue](#getfieldvalue) ，在執行時間以動態方式系結欄位，而不是使用[DoFieldExchange](#dofieldexchange)機制來靜態繫結資料行。
 
-請注意，是否您不會建立 UNICODE 資料錄集，您必須使用一種`SetFieldValue`不包含`COleVariant`參數，或`COleVariant`物件必須明確宣告為 ANSI。 做法是使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **，** *vtSrc* **)** 形式的建構函式*vtSrc*設定為`VT_BSTRT`(ANSI) 或使用`COleVariant`函式[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **，** *vtSrc* **)** 使用*vtSrc*設`VT_BSTRT`。
+請注意，如果您不是建立 UNICODE 記錄集，則必須使用不包含 `COleVariant` 參數的 `SetFieldValue` 形式，否則 `COleVariant` 物件必須明確宣告為 ANSI。 這可以藉由使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **（** *lpszSrc* **，** *vtSrc* **）** 形式的函式，並將*vtSrc*設定為 `VT_BSTRT` （ANSI），或使用 `COleVariant` 函數[SetString](../../mfc/reference/colevariant-class.md#setstring) **（** *lpszSrc* **，** *vtSrc* **）** ，並將*vtSrc*設定為 `VT_BSTRT`來完成這項作業。
 
-如需相關資訊，請參閱 「 欄位物件 」 和 DAO [說明] 中的 < 值屬性 > 主題。
+如需相關資訊，請參閱 DAO 說明中的「欄位物件」和「值屬性」主題。
 
-##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull
+##  <a name="setfieldvaluenull"></a>CDaoRecordset：： SetFieldValueNull
 
-呼叫此成員函式，若要將欄位設定為 Null 值。
+呼叫這個成員函式，將欄位設定為 Null 值。
 
 ```
 void SetFieldValueNull(int nIndex);
@@ -2387,20 +2387,20 @@ void SetFieldValueNull(LPCTSTR lpszName);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-在資料錄集中的以零為起始的索引查閱欄位的索引。
+記錄集內欄位的索引，用於以零為基底的索引進行查閱。
 
 *lpszName*<br/>
-依名稱查閱中的資料錄集的欄位名稱。
+記錄集中的功能變數名稱，用於依名稱查閱。
 
 ### <a name="remarks"></a>備註
 
-C++NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」。
+C++Null 與 Null 不同，在資料庫術語中，表示「沒有任何值」。
 
-如需相關資訊，請參閱 「 欄位物件 」 和 DAO [說明] 中的 < 值屬性 > 主題。
+如需相關資訊，請參閱 DAO 說明中的「欄位物件」和「值屬性」主題。
 
-##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode
+##  <a name="setlockingmode"></a>CDaoRecordset：： SetLockingMode
 
-呼叫此成員函式設定的鎖定資料錄集類型。
+呼叫這個成員函式可設定記錄集的鎖定類型。
 
 ```
 void SetLockingMode(BOOL bPessimistic);
@@ -2413,19 +2413,19 @@ void SetLockingMode(BOOL bPessimistic);
 
 ### <a name="remarks"></a>備註
 
-當您呼叫封閉式鎖定時作用中，包含您要編輯的資料錄的 2k 頁面鎖定`Edit`成員函式。 當您呼叫的頁面已解除鎖定`Update`或`Close`成員函式或任何移動或尋找作業。
+當封閉式鎖定生效時，當您呼叫 `Edit` 成員函式時，就會鎖定包含所編輯記錄的2K 頁面。 當您呼叫 `Update` 或 `Close` 成員函式或任何移動或尋找作業時，此頁面就會解除鎖定。
 
-包含記錄的 2k 頁面時開放式鎖定處於作用中，已鎖定，只有當記錄更新時，才`Update`成員函式。
+當開放式鎖定生效時，只有在使用 `Update` 成員函式更新記錄時，才會鎖定包含記錄的2K 頁面。
 
-如果鎖定頁面時，沒有其他使用者可以編輯相同的頁面上的記錄。 如果您呼叫`SetLockingMode`並傳遞非零值，並已經有另一位使用者的 [鎖定] 頁面上，當您呼叫時，會擲回例外狀況`Edit`。 其他使用者可以讀取鎖定的頁面資料。
+如果頁面已鎖定，則其他使用者都無法在相同頁面上編輯記錄。 如果您呼叫 `SetLockingMode` 並傳遞非零值，而另一個使用者已經鎖定頁面，則當您呼叫 `Edit`時，就會擲回例外狀況（exception）。 其他使用者可以從鎖定的頁面讀取資料。
 
-如果您呼叫`SetLockingMode`零的值和更新版本呼叫`Update`另一位使用者鎖定頁面時，發生例外狀況。 若要查看變更對您的記錄，另一位使用者 （並放棄變更），呼叫`SetBookmark`與目前資料錄的書籤值的成員函式。
+如果您使用零值呼叫 `SetLockingMode`，並在稍後由另一位使用者鎖定頁面時呼叫 `Update`，則會發生例外狀況。 若要查看另一位使用者對記錄所做的變更（並捨棄您的變更），請使用目前記錄的書簽值來呼叫 `SetBookmark` 成員函式。
 
-當使用 ODBC 資料來源，總是開放式鎖定的模式。
+使用 ODBC 資料來源時，鎖定模式一律是開放式的。
 
-##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue
+##  <a name="setparamvalue"></a>CDaoRecordset：： SetParamValue
 
-呼叫此成員函式資料錄集中設定參數的值，在執行階段。
+呼叫這個成員函式，在執行時間設定記錄集中的參數值。
 
 ```
 virtual void SetParamValue(
@@ -2440,23 +2440,23 @@ virtual void SetParamValue(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-參數的 recordset 的參數集合中的數值位置。
+參數在 querydef 參數集合中的數位位置。
 
 *var*<br/>
-要設定; 的值請參閱 < 備註 >。
+要設定的值;請參閱備註。
 
 *lpszName*<br/>
 您想要設定其值的參數名稱。
 
 ### <a name="remarks"></a>備註
 
-參數必須有已建立為資料錄集的 SQL 字串的一部分。 依名稱或在集合中的索引位置，您可以存取的參數。
+參數必須已經建立為記錄集的 SQL 字串的一部分。 您可以依名稱或其在集合中的索引位置來存取參數。
 
-指定要設定為值`COleVariant`物件。 如需有關設定所需的值並輸入您`COleVariant`物件，請參閱類別[COleVariant](../../mfc/reference/colevariant-class.md)。 請注意，如果您不想要建立的 UNICODE 資料錄集，則`COleVariant`物件必須明確宣告為 ANSI。 做法是使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **，** *vtSrc* **)** 形式的建構函式*vtSrc*設定為`VT_BSTRT`(ANSI) 或使用`COleVariant`函式[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **，** *vtSrc* **)** 使用*vtSrc*設`VT_BSTRT`。
+指定要設定為 `COleVariant` 物件的值。 如需有關在 `COleVariant` 物件中設定所需值和類型的詳細資訊，請參閱類別[COleVariant](../../mfc/reference/colevariant-class.md)。 請注意，如果您不是建立 UNICODE 記錄集，則 `COleVariant` 物件必須明確宣告為 ANSI。 這可以藉由使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **（** *lpszSrc* **，** *vtSrc* **）** 形式的函式，並將*vtSrc*設定為 `VT_BSTRT` （ANSI），或使用 `COleVariant` 函數[SetString](../../mfc/reference/colevariant-class.md#setstring) **（** *lpszSrc* **，** *vtSrc* **）** ，並將*vtSrc*設定為 `VT_BSTRT`來完成這項作業。
 
-##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull
+##  <a name="setparamvaluenull"></a>CDaoRecordset：： SetParamValueNull
 
-呼叫此成員函式可將參數設定為 Null 值。
+呼叫這個成員函式，將參數設定為 Null 值。
 
 ```
 void SetParamValueNull(int nIndex);
@@ -2466,18 +2466,18 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-在資料錄集中的以零為起始的索引查閱欄位的索引。
+記錄集內欄位的索引，用於以零為基底的索引進行查閱。
 
 *lpszName*<br/>
-依名稱查閱中的資料錄集的欄位名稱。
+記錄集中的功能變數名稱，用於依名稱查閱。
 
 ### <a name="remarks"></a>備註
 
-C++NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」。
+C++Null 與 Null 不同，在資料庫術語中，表示「沒有任何值」。
 
-##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition
+##  <a name="setpercentposition"></a>CDaoRecordset：： SetPercentPosition
 
-呼叫此成員函式設定值，以變更某個百分比的資料錄集中記錄為基礎之資料錄集物件中目前資料錄的概略位置。
+呼叫這個成員函式來設定值，以根據記錄集中記錄的百分比，變更記錄集物件中目前記錄的近似位置。
 
 ```
 void SetPercentPosition(float fPosition);
@@ -2490,18 +2490,18 @@ void SetPercentPosition(float fPosition);
 
 ### <a name="remarks"></a>備註
 
-當使用動態類型或快照集類型的資料錄集，先將資料填入資料錄集移到最後一個記錄才能呼叫`SetPercentPosition`。 如果您呼叫`SetPercentPosition`之前完全填入資料錄集，是相對於存取的值所指定的記錄數目的移動量[GetRecordCount](#getrecordcount)。 您可以將移到最後一個記錄呼叫`MoveLast`。
+當使用動態集類型或快照集類型記錄集時，請先移至最後一筆記錄來填入記錄集，然後再呼叫 `SetPercentPosition`。 如果您在完全填入記錄集之前呼叫 `SetPercentPosition`，則移動量會相對於所存取的記錄數目（如[GetRecordCount](#getrecordcount)的值所指示）。 您可以藉由呼叫 `MoveLast`，移至最後一筆記錄。
 
-一旦您呼叫`SetPercentPosition`，變成目前使用中的資料錄對應至該值的約略位置。
+一旦您呼叫 `SetPercentPosition`，相對於該值之大約位置的記錄就會變成「最新」。
 
 > [!NOTE]
->  呼叫`SetPercentPosition`移動中資料錄集的特定記錄目前的記錄不建議使用。 呼叫[SetBookmark](#setbookmark)成員函式。
+>  不建議呼叫 `SetPercentPosition` 將目前的記錄移至記錄集內的特定記錄。 請改為呼叫[SetBookmark](#setbookmark)成員函式。
 
-如需相關資訊，請參閱 DAO [說明] 中的 < PercentPosition 屬性 >。
+如需相關資訊，請參閱 DAO 說明中的「PercentPosition 屬性」主題。
 
-##  <a name="update"></a>  CDaoRecordset::Update
+##  <a name="update"></a>CDaoRecordset：： Update
 
-呼叫此成員函式之後呼叫`AddNew`或`Edit`成員函式。
+呼叫 `AddNew` 或 `Edit` 成員函式之後，呼叫這個成員函式。
 
 ```
 virtual void Update();
@@ -2509,21 +2509,21 @@ virtual void Update();
 
 ### <a name="remarks"></a>備註
 
-這個呼叫才可完成`AddNew`或`Edit`作業。
+這是完成 `AddNew` 或 `Edit` 作業所需的呼叫。
 
-兩者`AddNew`和`Edit`準備加入或編輯過的資料位於編輯緩衝區，以便儲存到資料來源。 `Update` 儲存資料。 只有這些欄位標記，或偵測到變更會更新。
+`AddNew` 和 `Edit` 準備一個編輯緩衝區，在其中放置加入或編輯的資料以儲存至資料來源。 `Update` 儲存資料。 只有標示或偵測到已變更的欄位才會更新。
 
-如果資料來源支援交易，您可以製作`Update`呼叫 (和其相對應`AddNew`或`Edit`呼叫) 交易的一部分。
+如果資料來源支援交易，您可以在交易中進行 `Update` 呼叫（及其對應的 `AddNew` 或 `Edit` 呼叫）。
 
 > [!CAUTION]
-> 如果您呼叫`Update`但未先呼叫`AddNew`或是`Edit`，`Update`就會擲回`CDaoException`。 如果您呼叫`AddNew`或是`Edit`，您必須呼叫`Update`再呼叫[MoveNext](#movenext)或關閉資料錄集或資料來源連接。 否則，您的變更都會遺失而不另行通知的。
+> 如果您在未先呼叫 `AddNew` 或 `Edit`的情況下呼叫 `Update`，`Update` 會擲回 `CDaoException`。 如果您呼叫 `AddNew` 或 `Edit`，您必須先呼叫 `Update`，然後才呼叫[MoveNext](#movenext)或關閉記錄集或資料來源連接。 否則，在沒有通知的情況下，您的變更就會遺失。
 
-當在多使用者環境中要以保守模式鎖定資料錄集物件時，記錄就會保持鎖定的時間`Edit`更新已完成之前，都會使用。 樂觀地鎖定資料錄集，如果記錄已鎖定之前它會更新資料庫中,，相較於前編輯的記錄。 如果資料錄已變更，因為您呼叫`Edit`，則`Update`作業將會失敗，MFC 會擲回例外狀況。 您可以變更的鎖定模式`SetLockingMode`。
+當記錄集物件在多使用者環境中被搭配保守模式鎖定時，記錄會保持鎖定，直到使用 `Edit` 為止，直到更新完成為止。 如果記錄集是樂觀地鎖定的，則記錄會被鎖定，並在資料庫中更新之前，與預先編輯的記錄做比較。 如果記錄在您呼叫 `Edit`之後已變更，則 `Update` 作業會失敗，而且 MFC 會擲回例外狀況。 您可以使用 `SetLockingMode`變更鎖定模式。
 
 > [!NOTE]
-> 外部資料庫格式，例如 ODBC 和可安裝的 ISAM 一律使用開放式鎖定。
+> 開放式鎖定一律用於外部資料庫格式，例如 ODBC 和可安裝的 ISAM。
 
-如需相關資訊，請參閱 「 AddNew 方法 」、 「 CancelUpdate 方法 」、 「 刪除方法 」、 「 LastModified 屬性 」、 「 更新方法 」 和 DAO [說明] 中的 < EditMode 屬性 > 主題。
+如需相關資訊，請參閱 DAO 說明中的「AddNew 方法」、「CancelUpdate 方法」、「刪除方法」、「LastModified 屬性」、「更新方法」和「EditMode 屬性」主題。
 
 ## <a name="see-also"></a>另請參閱
 

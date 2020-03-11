@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241654"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866185"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 運算子
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 比較兩個 `tuple` 物件是否不相等。
 
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> 運算子&lt;=
+## <a name="op_lt_eq"></a>運算子&lt;=
 
 比較 `tuple` 物件為小於或等於。
 
@@ -166,7 +166,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="remarks"></a>備註
 
-函式會傳回 `!(tpl2 < tpl1)`。
+此函式會傳回 `!(tpl2 < tpl1)`。
 
 ### <a name="example"></a>範例
 
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 比較兩個 `tuple` 物件是否相等。
 
@@ -296,7 +296,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="remarks"></a>備註
 
-函式會傳回 `tpl2 < tpl1`。
+此函式會傳回 `tpl2 < tpl1`。
 
 ### <a name="example"></a>範例
 
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> 運算子&gt;=
+## <a name="op_gt_eq"></a>運算子&gt;=
 
 比較 `tuple` 物件為大於或等於。
 
@@ -361,7 +361,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="remarks"></a>備註
 
-函式會傳回 `!(tpl1 < tpl2)`。
+此函式會傳回 `!(tpl1 < tpl2)`。
 
 ### <a name="example"></a>範例
 

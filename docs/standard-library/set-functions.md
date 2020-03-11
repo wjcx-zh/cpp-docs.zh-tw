@@ -6,15 +6,15 @@ f1_keywords:
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 ms.openlocfilehash: a3a63fb86caa3485b1ee14538c3eb1f1ff72923e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246405"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875758"
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt; 函式
 
-## <a name="swap"></a> swap (map)
+## <a name="swap"></a>swap （map）
 
 交換兩個集合的項目。
 
@@ -25,25 +25,25 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>參數
 
-*權限*\
-提供要交換之元素的集合或利用 set 來交換項目的 set*左*。
+*right*\
+提供要交換之元素的集合，或其專案要與*左方*的集合交換的集合。
 
-*左邊*\
-利用 set 來交換項目的 set*右*。
+*左方*\
+要與集合*許可權*的元素交換的集合。
 
 ### <a name="remarks"></a>備註
 
-範本函式是在容器類別 set 來執行成員函式特製化的演算法`left.`[交換](../standard-library/set-class.md#swap)(`right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 在演算法類別中，一般的樣板函式版本
+範本函式是在容器類別集上特製化的演算法，用來執行成員函式 `left.`[swap](../standard-library/set-class.md#swap)（`right`）。 這是編譯器所執行的函式範本部分排序執行個體。 當因範本函式多載而導致範本與函式呼叫的比對不是唯一的時，編譯器就會選取最特製化的範本函式版本。 在演算法類別中，一般的樣板函式版本
 
-`template` \< **classT**> **void swap**( **T&** , **T&** )
+`template` \< **classT**> **void swap**（ **t &** ， **t &** ）
 
 會依指派運作而作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。
 
 ### <a name="example"></a>範例
 
-如需使用 `swap` 樣板版本的範例，請參閱成員函式 [set::swap](../standard-library/set-class.md#swap) 的程式碼範例。
+如需使用 [ 樣板版本的範例，請參閱成員函式 ](../standard-library/set-class.md#swap)set::swap`swap` 的程式碼範例。
 
-## <a name="swap_multiset"></a> swap (multiset)
+## <a name="swap_multiset"></a>交換（多重集）
 
 交換兩個 multiset 的項目。
 
@@ -54,20 +54,20 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>參數
 
-*權限*\
-提供要交換的項目或其項目要與 multiset 交換的 multiset*左*。
+*right*\
+提供要交換之專案的多重集，或其專案要與所*遺留*的多因素交換的多重集。
 
-*左邊*\
-其項目要與 multiset 交換的 multiset*右*。
+*左方*\
+其專案要與多重集*許可權*的元件交換的多重集。
 
 ### <a name="remarks"></a>備註
 
-範本函式是在執行成員函式的容器類別 multiset 上特製化的演算法`left.`[交換](../standard-library/multiset-class.md#swap)(`right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 在演算法類別中，一般的樣板函式版本
+範本函式是在容器類別多重集上特製化的演算法，用來執行成員函式 `left.`[swap](../standard-library/multiset-class.md#swap)（`right`）。 這是編譯器所執行的函式範本部分排序執行個體。 當因範本函式多載而導致範本與函式呼叫的比對不是唯一的時，編譯器就會選取最特製化的範本函式版本。 在演算法類別中，一般的樣板函式版本
 
-`template` \< **classT**> **void swap**( **T&** , **T&** )
+`template` \< **classT**> **void swap**（ **t &** ， **t &** ）
 
 會依指派運作而作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。
 
 ### <a name="example"></a>範例
 
-如需使用 `swap` 樣板版本的範例，請參閱成員函式 [multiset::swap](../standard-library/multiset-class.md#swap) 的程式碼範例。
+如需使用 [ 樣板版本的範例，請參閱成員函式 ](../standard-library/multiset-class.md#swap)multiset::swap`swap` 的程式碼範例。

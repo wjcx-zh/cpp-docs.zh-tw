@@ -6,13 +6,13 @@ f1_keywords:
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 ms.openlocfilehash: 071fc3b73cd3378b110d6d412bb7575e35a77478
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447333"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876331"
 ---
-# <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator&gt; 運算子
+# <a name="ltscoped_allocatorgt-operators"></a>&lt;scoped_allocator&gt; 運算子
 
 |||
 |-|-|
@@ -31,10 +31,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `scoped_allocator_adaptor` 物件。
 
-*再*\
+*right*\
 右 `scoped_allocator_adaptor` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -54,10 +54,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左 `scoped_allocator_adaptor` 物件。
 
-*再*\
+*right*\
 右 `scoped_allocator_adaptor` 物件。
 
 ### <a name="return-value"></a>傳回值

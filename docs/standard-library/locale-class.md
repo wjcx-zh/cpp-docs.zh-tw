@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898833"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856481"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -48,7 +48,7 @@ static locale::id id;
 
 您可以定義這些 facet 的開放集合。 您也可以建構地區設定物件來指定任意數目的 facet。
 
-這些 facet 的預先定義群組代表在「標準 C 程式庫」中傳統上由 `setlocale` 函式管理的[地區設定分類](#category)。
+這些 facet 的預先定義群組代表在「標準 C 程式庫」中傳統上由 [ 函式管理的](#category)地區設定分類`setlocale`。
 
 Category `collate` （LC_COLLATE）包含 facet：
 
@@ -144,11 +144,11 @@ cout.imbue(loc);
 |-|-|
 |[locale](#locale)|建立地區設定、地區設定複本，或 facet 或分類已被其他地區設定的 facet 或分類取代的地區設定複本。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
-|[category](#category)|整數類型，提供位元遮罩值以表示標準 facet 系列。|
+|[類別](#category)|整數類型，提供位元遮罩值以表示標準 facet 系列。|
 
 ### <a name="member-functions"></a>成員函數
 
@@ -161,10 +161,10 @@ cout.imbue(loc);
 
 |||
 |-|-|
-|[classic](#classic)|此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。|
+|[傳統](#classic)|此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。|
 |[global](#global)|重設程式的預設地區設定。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -182,7 +182,7 @@ cout.imbue(loc);
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
@@ -641,7 +641,7 @@ bool operator()(
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回：
+成員函式會傳回下列值：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [字碼頁](../c-runtime-library/code-pages.md)\

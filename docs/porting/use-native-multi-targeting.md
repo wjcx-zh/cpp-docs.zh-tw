@@ -6,11 +6,11 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
 ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627152"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875867"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>在 Visual Studio 中使用原生多目標來建置舊專案
 
@@ -67,7 +67,7 @@ Visual Studio 2008 有自己適用於 C++ 的專屬建置系統，稱為 **VCBui
 
 安裝這些產品之後，[屬性頁] 對話方塊的 [平台工具組] 屬性下拉式清單會自動更新，以顯示可用的工具組。 您現在可以使用最新版的 Visual Studio 來建置適用於這些舊版工具組的專案，而不需要轉換或升級這些專案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [從舊版的 Visual 升級專案C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

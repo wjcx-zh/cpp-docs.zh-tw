@@ -12,11 +12,11 @@ helpviewer_keywords:
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
 ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821378"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856822"
 ---
 # <a name="link-an-executable-to-a-dll"></a>將可執行檔連結至 DLL
 
@@ -143,6 +143,6 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 - [動態連結程式庫搜尋順序](/windows/win32/Dlls/dynamic-link-library-search-order)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451582"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876128"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函式
 
@@ -27,9 +27,9 @@ ms.locfileid: "68451582"
 |[regex_match](#regex_match)|測試規則運算式是否符合整個目標字串。|
 |[regex_replace](#regex_replace)|取代符合的規則運算式。|
 |[regex_search](#regex_search)|搜尋規則運算式相符項目。|
-|[swap](#swap)|交換兩`basic_regex`個`match_results`或物件。|
+|[swap](#swap)|交換兩個 `basic_regex` 或 `match_results` 物件。|
 
-## <a name="regex_match"></a>  regex_match
+## <a name="regex_match"></a>RegEx_match
 
 測試規則運算式是否符合整個目標字串。
 
@@ -85,13 +85,13 @@ bool regex_match(
 ### <a name="parameters"></a>參數
 
 *BidIt*\
-子相符項目的迭代器類型。 `string::const_iterator`在一般情況下`wstring::const_iterator` `const wchar_t*`, 這其中一個、或。`const char*`
+子相符項目的迭代器類型。 在一般情況下，這其中一個 `string::const_iterator`、`wstring::const_iterator`、`const char*` 或 `const wchar_t*`。
 
-*配置*\
+配置\
 符合結果配置器類別。
 
 *Elem*\
-要符合之項目的類型。 `string`在一般情況下`wstring` `wchar_t*`, 這是、或。`char*`
+要比對的項目類型。 在一般情況下，這是 `string`、`wstring`、`char*` 或 `wchar_t*`。
 
 *RXtraits*\
 項目的 Traits 類別。
@@ -105,30 +105,30 @@ bool regex_match(
 *IOalloc*\
 字串配置器類別。
 
-*旗幟*\
+*flags*\
 比對的旗標。
 
-*頭*\
+*第一個*\
 要比對的序列開頭。
 
-*次*\
+*上次*\
 要比對的序列結尾。
 
-*使*\
-比對結果。 對應至 Elem 類型: [](../standard-library/regex-typedefs.md#smatch)適用于`string`的 smatch、 `wstring`適用于的`char*` [wsmatch (](../standard-library/regex-typedefs.md#wsmatch) 、 [cmatch](../standard-library/regex-typedefs.md#cmatch)或[wcmatch](../standard-library/regex-typedefs.md#wcmatch) `wchar_t*`。
+*符合*\
+比對結果。 對應至 Elem 類型：適用于 `string`的[smatch](../standard-library/regex-typedefs.md#smatch) 、適用于 `wstring`的[wsmatch (](../standard-library/regex-typedefs.md#wsmatch) 、適用于 `wchar_t*`的 `char*` 或[wcmatch](../standard-library/regex-typedefs.md#wcmatch)的[cmatch](../standard-library/regex-typedefs.md#cmatch) 。
 
-*指標*\
-要比對之序列開頭的指標。 如果*ptr*為`char*`, 請使用`cmatch`和`regex`。 如果*ptr* , `wchar_t*`則會`wcmatch`使用`wregex`和。
+*ptr*\
+要比對之序列開頭的指標。 如果*ptr*為 `char*`，則使用 `cmatch` 和 `regex`。 如果 `wchar_t*` *ptr* ，則使用 `wcmatch` 和 `wregex`。
 
 *重新*\
-要比對的規則運算式。 針對`regex` `wregex`和, 請輸入,或針對`wstring`和。`wchar_t*` `string` `char*`
+要比對的規則運算式。 輸入 `regex` `string` 和 `char*`，或 `wstring` 和 `wchar_t*`的 `wregex`。
 
 *str*\
 要比對的字串。 對應至*Elem*的類型。
 
 ### <a name="remarks"></a>備註
 
-只有當整個運算元序列*str*完全符合正則運算式引數時, 每個範本函數才會傳回 true。 使用[RegEx_search](../standard-library/regex-functions.md#regex_search)來比對目標序列內的子字串`regex_iterator` , 並尋找多個相符專案。 使用 `match_results` 物件的函式會設定其成員，以反映比對是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。
+只有當整個運算元序列*str*完全符合正則*運算式引數時，每*個範本函數才會傳回 true。 使用[RegEx_search](../standard-library/regex-functions.md#regex_search)來比對目標序列內的子字串，並 `regex_iterator` 尋找多個相符專案。 使用 `match_results` 物件的函式會設定其成員，以反映比對是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。
 
 使用 `match_results` 物件的函式會設定其成員，以反映比對是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。
 
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>  regex_replace
+## <a name="regex_replace"></a>RegEx_replace
 
 取代符合的規則運算式。
 
@@ -229,22 +229,22 @@ basic_string<Elem> regex_replace(
 *RXtraits*\
 項目的 Traits 類別。
 
-*配置*\
+配置\
 規則運算式配置器類別。
 
 *Elem*\
-要符合之項目的類型。
+要比對的項目類型。
 
-*旗幟*\
+*flags*\
 比對的旗標。
 
-*頭*\
+*第一個*\
 要比對的序列開頭。
 
 *bcp.fmt*\
 取代項目的格式。
 
-*次*\
+*上次*\
 要比對的序列結尾。
 
 *out*\
@@ -258,9 +258,9 @@ basic_string<Elem> regex_replace(
 
 ### <a name="remarks"></a>備註
 
-第一個函式會建立[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)物件`iter(first, last, re, flags)` , 並使用它將其輸入`[first, last)`範圍分割成一系列`T0 M0 T1 M1...TN-1 MN-1 TN`的個子序列`Mn` , 其中是反覆運算器偵測到的第 n 個相符項。 如果找不到相符項，`T0` 是整個輸入範圍且 `N` 為零。 如果 `(flags & format_first_only) != 0`，就只會使用第一個相符項、`T1` 是緊接在相符項之後的所有輸入文字，而 `N` 為 1。 針對範圍`i` `(flags & format_no_copy) == 0` `Ti` 中的每個, 如果它將範圍中的文字複製到反覆運算器輸出。 `[0, N)`然後呼叫 `m.format(out, fmt, flags)`，其中 `m` 是子序列 `Mi` 的 `iter` 迭代器物件所傳回的 `match_results` 物件。 最後, 如果`(flags & format_no_copy) == 0`將範圍`TN`中的文字複製到反覆運算器, 則為。函數會傳回*out*。
+第一個函式會 `iter(first, last, re, flags)` [Regex_iterator 類別](../standard-library/regex-iterator-class.md)物件，並使用它將其輸入範圍分割 `[first, last)` 成一系列的個子序列 `T0 M0 T1 M1...TN-1 MN-1 TN`，其中 `Mn` 是反覆運算器偵測到的第 n 個相符項。 如果找不到相符項，`T0` 是整個輸入範圍且 `N` 為零。 如果 `(flags & format_first_only) != 0`，就只會使用第一個相符項、`T1` 是緊接在相符項之後的所有輸入文字，而 `N` 為 1。 針對範圍 `[0, N)`中的每個 `i`，如果 `(flags & format_no_copy) == 0`，會將 `Ti` 範圍中的文字複製到*反覆運算器*。然後，它會呼叫 `m.format(out, fmt, flags)`，其中 `m` 是反覆運算器物件針對子序列 `Mi`所傳回的 `match_results` 物件 `iter`。 最後，如果 `(flags & format_no_copy) == 0` 它會將範圍 `TN` 中的文字複製到反覆運算器*輸出*。函數會傳回*out*。
 
-第二個函式會建構 `basic_string<charT>` 類型的區域變數 `result`，並呼叫 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`。 它會傳回 `result`。
+第二個函式會建構 `result` 類型的區域變數 `basic_string<charT>`，並呼叫 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`。 它會傳回 `result`。
 
 ### <a name="example"></a>範例
 
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>  regex_search
+## <a name="regex_search"></a>RegEx_search
 
 搜尋規則運算式相符項目。
 
@@ -356,11 +356,11 @@ bool regex_search(
 *BidIt*\
 子相符項目的迭代器類型。
 
-*配置*\
+配置\
 符合結果配置器類別。
 
 *Elem*\
-要符合之項目的類型。
+要比對的項目類型。
 
 *RXtraits*\
 項目的 Traits 類別。
@@ -374,19 +374,19 @@ bool regex_search(
 *IOalloc*\
 字串配置器類別。
 
-*旗幟*\
+*flags*\
 比對的旗標。
 
-*頭*\
+*第一個*\
 要比對的序列開頭。
 
-*次*\
+*上次*\
 要比對的序列結尾。
 
-*使*\
+*符合*\
 比對結果。
 
-*指標*\
+*ptr*\
 要比對之序列開頭的指標。
 
 *重新*\
@@ -397,7 +397,7 @@ bool regex_search(
 
 ### <a name="remarks"></a>備註
 
-只有在搜尋其正則運算式引數的運算元順序成功時 , 每個範本函式才會傳回 true。 使用 `match_results` 物件的函式會設定其成員，以反映搜尋是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。
+只有在搜尋其正則*運算式引數*的運算元順序成功時，每個範本函式才會傳回 true。 使用 `match_results` 物件的函式會設定其成員，以反映搜尋是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。
 
 ### <a name="example"></a>範例
 
@@ -455,9 +455,9 @@ search(string, "abc") == true
   matched: "abc"
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
-交換兩`basic_regex`個`match_results`或物件。
+交換兩個 `basic_regex` 或 `match_results` 物件。
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -474,7 +474,7 @@ void swap(
 ### <a name="parameters"></a>參數
 
 *Elem*\
-要符合之項目的類型。
+要比對的項目類型。
 
 *RXtraits*\
 項目的 Traits 類別。
@@ -521,10 +521,10 @@ string == aaa
 ## <a name="see-also"></a>另請參閱
 
 [\<regex>](../standard-library/regex.md)\
-[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
-[RegEx_error 類別](../standard-library/regex-error-class.md)\
-[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[Regex_constants 類別](../standard-library/regex-constants-class.md)\
+[Regex_error 類別](../standard-library/regex-error-class.md)\
+[Regex_iterator 類別](../standard-library/regex-iterator-class.md)\
 [\<RegEx > 運算子](../standard-library/regex-operators.md)\
-[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
-[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits 類別](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

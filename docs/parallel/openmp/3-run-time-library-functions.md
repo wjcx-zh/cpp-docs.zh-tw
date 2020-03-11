@@ -3,11 +3,11 @@ title: 3. 執行階段程式庫函式
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
 ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142962"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882849"
 ---
 # <a name="3-run-time-library-functions"></a>3. 執行時間程式庫函式
 
@@ -42,7 +42,7 @@ ms.locfileid: "77142962"
 
 ### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads 函式
 
-`omp_set_num_threads` 函式會設定預設的執行緒數目，以用於未指定 `num_threads` 子句的之後平列區域。 格式如下：
+`omp_set_num_threads` 函式會設定預設的執行緒數目，以用於未指定 `num_threads` 子句的之後平列區域。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -66,7 +66,7 @@ void omp_set_num_threads(int num_threads);
 
 ### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads 函式
 
-`omp_get_num_threads` 函式會傳回目前在小組中的執行緒數目，其會執行其呼叫所在的平列區域。 格式如下：
+`omp_get_num_threads` 函式會傳回目前在小組中的執行緒數目，其會執行其呼叫所在的平列區域。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -87,7 +87,7 @@ int omp_get_num_threads(void);
 
 ### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads 函式
 
-`omp_get_max_threads` 函式會傳回一個整數，保證在程式碼中，如果沒有 `num_threads` 子句的平列區域被看到，就會將它的大小至少與用來組成小組的執行緒數目相同。 格式如下：
+`omp_get_max_threads` 函式會傳回一個整數，保證在程式碼中，如果沒有 `num_threads` 子句的平列區域被看到，就會將它的大小至少與用來組成小組的執行緒數目相同。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -113,7 +113,7 @@ int omp_get_max_threads(void);
 
 `omp_get_thread_num` 函式會傳回執行函式之執行緒的執行緒號碼（在其小組內）。 執行緒數目介於0和 `omp_get_num_threads()`-1 之間（含）。 小組的主要執行緒是執行緒0。
 
-格式如下：
+其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -128,7 +128,7 @@ int omp_get_thread_num(void);
 
 ### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs 函式
 
-`omp_get_num_procs` 函式會傳回呼叫函式時可供程式使用的處理器數目。 格式如下：
+`omp_get_num_procs` 函式會傳回呼叫函式時可供程式使用的處理器數目。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -137,7 +137,7 @@ int omp_get_num_procs(void);
 
 ### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel 函式
 
-如果在平行執行的平列區域的動態範圍內呼叫，則 `omp_in_parallel` 函式會傳回非零值;否則，它會傳回0。 格式如下：
+如果在平行執行的平列區域的動態範圍內呼叫，則 `omp_in_parallel` 函式會傳回非零值;否則，它會傳回0。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -148,7 +148,7 @@ int omp_in_parallel(void);
 
 ### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic 函式
 
-`omp_set_dynamic` 函式會啟用或停用可執行平列區域之執行緒數目的動態調整。 格式如下：
+`omp_set_dynamic` 函式會啟用或停用可執行平列區域之執行緒數目的動態調整。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -179,7 +179,7 @@ void omp_set_dynamic(int dynamic_threads);
 
 ### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic 函式
 
-如果已啟用執行緒的動態調整，`omp_get_dynamic` 函數會傳回非零值，否則會傳回0。 格式如下：
+如果已啟用執行緒的動態調整，`omp_get_dynamic` 函數會傳回非零值，否則會傳回0。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -194,7 +194,7 @@ int omp_get_dynamic(void);
 
 ### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested 函式
 
-`omp_set_nested` 函數會啟用或停用嵌套的平行處理原則。 格式如下：
+`omp_set_nested` 函數會啟用或停用嵌套的平行處理原則。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -216,7 +216,7 @@ void omp_set_nested(int nested);
 
 ### <a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested 函式
 
-如果已啟用嵌套平行處理原則，`omp_get_nested` 函式會傳回非零值，如果已停用，則會傳回0。 如需有關嵌套平行處理原則的詳細資訊，請參閱[omp_set_nested](#319-omp_set_nested-function)。 格式如下：
+如果已啟用嵌套平行處理原則，`omp_get_nested` 函式會傳回非零值，如果已停用，則會傳回0。 如需有關嵌套平行處理原則的詳細資訊，請參閱[omp_set_nested](#319-omp_set_nested-function)。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -249,7 +249,7 @@ OpenMP 鎖定函式會以永遠讀取及更新鎖定變數最新值的方式來�
 
 ### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock 和 omp_init_nest_lock 函式
 
-這些函式提供初始化鎖定的唯一方法。 每個函式都會初始化與參數*鎖定*相關聯的鎖定，以便在即將進行的呼叫中使用。 格式如下：
+這些函式提供初始化鎖定的唯一方法。 每個函式都會初始化與參數*鎖定*相關聯的鎖定，以便在即將進行的呼叫中使用。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -261,7 +261,7 @@ void omp_init_nest_lock(omp_nest_lock_t *lock);
 
 ### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函數
 
-這些函式可確保指向鎖定變數*鎖定*的會未初始化。 格式如下：
+這些函式可確保指向鎖定變數*鎖定*的會未初始化。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -273,7 +273,7 @@ void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 
 ### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock 和 omp_set_nest_lock 函數
 
-所有這些函式都會封鎖執行函式的執行緒，直到指定的鎖定可用為止，然後再設定鎖定。 如果已解除鎖定，就可以使用簡單的鎖定。 如果 nestable 鎖定已解除鎖定，或其已由執行函式的執行緒所擁有，則可以使用。 格式如下：
+所有這些函式都會封鎖執行函式的執行緒，直到指定的鎖定可用為止，然後再設定鎖定。 如果已解除鎖定，就可以使用簡單的鎖定。 如果 nestable 鎖定已解除鎖定，或其已由執行函式的執行緒所擁有，則可以使用。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -287,7 +287,7 @@ void omp_set_nest_lock(omp_nest_lock_t *lock);
 
 ### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函數
 
-這些函式提供釋放鎖定擁有權的方法。 格式如下：
+這些函式提供釋放鎖定擁有權的方法。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -303,7 +303,7 @@ void omp_unset_nest_lock(omp_nest_lock_t *lock);
 
 ### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock 和 omp_test_nest_lock 函數
 
-這些函式會嘗試設定鎖定，但不會封鎖執行緒的執行。 格式如下：
+這些函式會嘗試設定鎖定，但不會封鎖執行緒的執行。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -326,7 +326,7 @@ int omp_test_nest_lock(omp_nest_lock_t *lock);
 
 ### <a name="331-omp_get_wtime-function"></a>3.3.1 omp_get_wtime 函式
 
-`omp_get_wtime` 函式會傳回雙精確度浮點數，此值等於經過一段時間後的時鐘時間（以秒為單位）。  實際的「過去時間」是任意的，但保證不會在應用程式執行期間變更。 格式如下：
+`omp_get_wtime` 函式會傳回雙精確度浮點數，此值等於經過一段時間後的時鐘時間（以秒為單位）。  實際的「過去時間」是任意的，但保證不會在應用程式執行期間變更。 其格式如下所示：
 
 ```cpp
 #include <omp.h>
@@ -348,7 +348,7 @@ printf_s("Work took %f sec. time.\n", end-start);
 
 ### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick 函式
 
-`omp_get_wtick` 函式會傳回雙精確度浮點數，此值等於連續時鐘刻度之間的秒數。 格式如下：
+`omp_get_wtick` 函式會傳回雙精確度浮點數，此值等於連續時鐘刻度之間的秒數。 其格式如下所示：
 
 ```cpp
 #include <omp.h>

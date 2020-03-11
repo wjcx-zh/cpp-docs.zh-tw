@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (list)
 - std::operator== (list)
 ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246455"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874417"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 運算子
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 測試運算子左邊的清單物件是否不等於右邊的清單物件。
 
@@ -37,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `list` 類型的物件。
 
-*權限*\
+*right*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -88,10 +88,10 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `list` 類型的物件。
 
-*權限*\
+*right*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> 運算子&lt;=
+## <a name="op_lt_eq"></a>運算子&lt;=
 
 測試運算子左邊的清單物件是否小於或等於右邊的清單物件。
 
@@ -143,10 +143,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `list` 類型的物件。
 
-*權限*\
+*right*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的清單物件是否等於右邊的清單物件。
 
@@ -198,10 +198,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `list` 類型的物件。
 
-*權限*\
+*right*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -249,10 +249,10 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `list` 類型的物件。
 
-*權限*\
+*right*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> 運算子&gt;=
+## <a name="op_gt_eq"></a>運算子&gt;=
 
 測試運算子左邊的清單物件是否大於或等於右邊的清單物件。
 
@@ -304,10 +304,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `list` 類型的物件。
 
-*權限*\
+*right*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值

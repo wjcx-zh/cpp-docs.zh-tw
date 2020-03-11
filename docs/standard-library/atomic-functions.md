@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459603"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867075"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函式
 
@@ -104,8 +104,8 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-不可部分完成之物件的指標, 它會儲存類型`Ty`的值。
+*Atom*\
+不可部分完成之*物件的*指標，它會儲存 `Ty`類型的值。
 
 *Exp*\
 指向 `Ty` 類型值的指標。
@@ -115,7 +115,7 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="return-value"></a>傳回值
 
-如果值相等,**則為 true** , 否則為**false**。
+如果值相等，**則為 true** ，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -145,8 +145,8 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `Ty` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `Ty` 物件的指標。
 
 *Exp*\
 指向 `Ty` 類型值的指標。
@@ -158,15 +158,15 @@ inline bool atomic_compare_exchange_strong_explicit(
 第一個 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數。
 
 *Order2*\
-第二個 `memory_order` 引數。 *Order2*的值不能是`memory_order_release`或`memory_order_acq_rel`, 也不能比*Order1*的值更強。
+第二個 `memory_order` 引數。 *Order2*的值無法 `memory_order_release` 或 `memory_order_acq_rel`，它不能比*Order1*的值更強。
 
 ### <a name="return-value"></a>傳回值
 
-如果值相等,**則為 true** , 否則為**false**。
+如果值相等，**則為 true** ，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-不可部分完成的*比較和交換*作業會將*Atom*所指向物件中儲存的值, 與*Exp*所指向的值進行比較。如果值相等, `read-modify-write`則會使用作業並套用*Order1*所指定的記憶體順序條件約束, 以*值*取代*atom*所指向之物件中所儲存的值。 如果值不相等, 作業會將*Exp*所指向的值取代為*Atom*所指向之物件中所儲存的值, 並套用*Order2*所指定的記憶體順序條件約束。
+不可部分完成的*比較和交換*作業會將*Atom*所指向物件中儲存的值，與*Exp*所指向的值進行比較。如果值相等，則會使用 `read-modify-write` 作業並套用*Order1*所指定的記憶體順序條件約束，將*atom*所指向之物件中所儲存的值取代為*值*。 如果值不相等，作業會將*Exp*所指向的值取代為*Atom*所指向之物件中所儲存的值，並套用*Order2*所指定的記憶體順序條件約束。
 
 ## <a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
 
@@ -188,8 +188,8 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `Ty` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `Ty` 物件的指標。
 
 *Exp*\
 指向 `Ty` 類型值的指標。
@@ -199,11 +199,11 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="return-value"></a>傳回值
 
-如果值相等,**則為 true** , 否則為**false**。
+如果值相等，**則為 true** ，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-這個方法會執行具有隱含 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數的*弱式不可部分完成比較和交換作業*。 如需詳細資訊，請參閱 [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)。
+這個方法會執行具有隱含memory_order`memory_order_seq_cst` 引數的[弱式不可部分完成比較和交換作業](../standard-library/atomic-enums.md#memory_order_enum)。 如需詳細資訊，請參閱 [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)。
 
 ## <a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit
 
@@ -229,8 +229,8 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `Ty` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `Ty` 物件的指標。
 
 *Exp*\
 指向 `Ty` 類型值的指標。
@@ -242,15 +242,15 @@ inline bool atomic_compare_exchange_weak_explicit(
 第一個 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數。
 
 *Order2*\
-第二個 `memory_order` 引數。 *Order2*的值不可以是`memory_order_release`或`memory_order_acq_rel`, 也不能比*Order1*的值更強。
+第二個 `memory_order` 引數。 *Order2*的值不能 `memory_order_release` 或 `memory_order_acq_rel`，也不能比*Order1*的值更強。
 
 ### <a name="return-value"></a>傳回值
 
-如果值相等,**則為 true** , 否則為**false**。
+如果值相等，**則為 true** ，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-不可部分完成的*比較和交換*作業的強式和弱式類別, 保證如果預期和目前的值不相等, 則不會儲存新的值。 強式類別保證如果預期和目前的值相等, 它會儲存新的值。 弱式類別有時可能會傳回**false** , 而不會儲存新的值, 即使目前和預期的值相等也一樣。 換句話說, 函式會傳回**false**, 但稍後檢查預期的值可能會顯示不會變更, 因此應該比較為相等。
+不可部分完成的*比較和交換*作業的強式和弱式類別，保證如果預期和目前的值不相等，則不會儲存新的值。 強式類別保證如果預期和目前的值相等，它會儲存新的值。 弱式類別有時可能會傳回**false** ，而不會儲存新的值，即使目前和預期的值相等也一樣。 換句話說，函式會傳回**false**，但稍後檢查預期的值可能會顯示不會變更，因此應該比較為相等。
 
 ## <a name="atomic_exchange"></a> atomic_exchange
 
@@ -266,8 +266,8 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `Ty` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `Ty` 物件的指標。
 
 *Value*\
 型別 `Ty` 的值。
@@ -278,7 +278,7 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="remarks"></a>備註
 
-`atomic_exchange` 函式會使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 來執行`read-modify-write`作業, 以交換 *Atom* 中儲存的值與*值*。
+`atomic_exchange` 函式會使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)來執行 `read-modify-write` 作業，以交換*Atom*中儲存的值與*值*。
 
 ## <a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
 
@@ -300,13 +300,13 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `Ty` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `Ty` 物件的指標。
 
 *Value*\
 型別 `Ty` 的值。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
@@ -315,7 +315,7 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="remarks"></a>備註
 
-`read-modify-write`函式會執行作業, 以在依順序指定的記憶體條件約束內, 交換以 Atom 儲存的值。 `atomic_exchange_explicit`
+`atomic_exchange_explicit` 函式會執行 `read-modify-write` 作業，以在依*順序*指定的記憶體條件約束*內，交換以* *Atom*儲存的值。
 
 ## <a name="atomic_fetch_add"></a> atomic_fetch_add
 
@@ -330,8 +330,8 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型指標之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型指標之 `T` 物件的指標。
 
 *Value*\
 型別 `ptrdiff_t` 的值。
@@ -342,9 +342,9 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_add` 函式會使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束來執行`read-modify-write`作業, 以將*值*以原子方式加入至 *Atom* 中的預存值。
+`atomic_fetch_add` 函式會執行 `read-modify-write` 作業，使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束，以自動方式將*值*新增至*Atom*中的預存值。
 
-當不可部分完成的`atomic_address`類型為時, `ptrdiff_t` *Value*具有類型, 而作業會將儲存`char *`的指標視為。
+當不可部分完成的類型是 `atomic_address`時，*值*的類型 `ptrdiff_t`，而作業會將儲存的指標視為 `char *`。
 
 也會針對整數類型多載這項作業︰
 
@@ -374,8 +374,8 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型指標之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型指標之 `T` 物件的指標。
 
 *Value*\
 型別 `ptrdiff_t` 的值。
@@ -386,7 +386,7 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_add_explicit` 函式會在`Order`所指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束內執行`read-modify-write`作業, 以將*值*以原子方式加入至 *Atom* 中的預存值。
+`atomic_fetch_add_explicit` 函式會執行 `read-modify-write` 作業，以在 `Order`所指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內，以原子方式將*值*新增至*Atom*中的預存值。
 
 atomic 類型是 `atomic_address` 時，`Value` 會具有類型 `ptrdiff_t`，而且作業會將儲存的指標視為 `char *`。
 
@@ -406,7 +406,7 @@ integral atomic_fetch_add_explicit(
 
 ## <a name="atomic_fetch_and"></a> atomic_fetch_and
 
-對某個值和儲存於 `atomic` 物件的現有值執行位元 `and`。
+對某個值和儲存於 `and` 物件的現有值執行位元 `atomic`。
 
 ```cpp
 template <class T>
@@ -417,8 +417,8 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `T` 物件的指標。
 
 *Value*\
 型別 `T` 的值。
@@ -429,11 +429,11 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_and`函式會使用`memory_order_seq_cst`[ memory_order](../standard-library/atomic-enums.md#memory_order_enum) 來執行`read-modify-write`作業, 以將 *atom* 的預存值取代為位`and`的*值*, 並將目前的值以 *atom* 儲存 條件約束。
+`atomic_fetch_and` 函式會執行 `read-modify-write` 作業，將*Atom*的儲存值取代為*值*的位 `and`，以及使用 `memory_order_seq_cst`[Memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束儲存在*Atom*中的目前值。
 
 ## <a name="atomic_fetch_and_explicit"></a> atomic_fetch_and_explicit
 
-對某個值和儲存於 `atomic` 物件的現有值執行位元 `and`。
+對某個值和儲存於 `and` 物件的現有值執行位元 `atomic`。
 
 ```cpp
 template <class T>
@@ -451,13 +451,13 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `T` 物件的指標。
 
 *Value*\
 型別 `T` 的值。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
@@ -466,11 +466,11 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="remarks"></a>備註
 
-`read-modify-write` `and`函式會執行作業, 以在指定的記憶體條件約束內, 將 atom 的儲存值取代為位的值, 以及儲存在 Atom 中的目前值`atomic_fetch_and_explicit`依*順序*。
+`atomic_fetch_and_explicit` 函式會執行 `read-modify-write` 作業，以在*順序*指定的記憶體條件約束內，將*atom*的儲存值取代為*值*的位 `and`，以及儲存在*Atom*中的目前值。
 
 ## <a name="atomic_fetch_or"></a> atomic_fetch_or
 
-對某個值和儲存於 `atomic` 物件的現有值執行位元 `or`。
+對某個值和儲存於 `or` 物件的現有值執行位元 `atomic`。
 
 ```cpp
 template <class T>
@@ -481,8 +481,8 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `T` 物件的指標。
 
 *Value*\
 型別 `T` 的值。
@@ -493,11 +493,11 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_or` 函式會使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 來執行`read-modify-write`作業, 以將 *atom* 的預存值取代為`or`位的*值*, 並將目前的值以 *atom* 儲存 .
+`atomic_fetch_or` 函式會執行 `read-modify-write` 作業，將*Atom*的儲存值取代為*值*的位 `or`，以及使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)儲存在*atom*中的目前值。
 
 ## <a name="atomic_fetch_or_explicit"></a> atomic_fetch_or_explicit
 
-對某個值和儲存於 `atomic` 物件的現有值執行位元 `or`。
+對某個值和儲存於 `or` 物件的現有值執行位元 `atomic`。
 
 ```cpp
 template <class T>
@@ -515,13 +515,13 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `T` 物件的指標。
 
 *Value*\
 型別 `T` 的值。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
@@ -530,7 +530,7 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_or_explicit` 函式會執行`read-modify-write`作業, 以在 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束中, 將 *atom* 的預存值取代為位`or`*值*, 並將目前值儲存在 *atom* 中依*順序*指定。
+`atomic_fetch_or_explicit` 函式會執行 `read-modify-write` 作業，以依*順序*指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束，將*Atom*的儲存值取代為*值*的位 `or`，以及儲存在*Atom*中的目前值。
 
 ## <a name="atomic_fetch_sub"></a> atomic_fetch_sub
 
@@ -550,8 +550,8 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型指標之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型指標之 `T` 物件的指標。
 
 *Value*\
 型別 `ptrdiff_t` 的值。
@@ -562,9 +562,9 @@ T* atomic_fetch_sub(
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_sub` 函式會執行`read-modify-write`作業, 使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束, 以自動方式減去 *Atom* 中儲存值的*值*。
+`atomic_fetch_sub` 函式會執行 `read-modify-write` 作業，使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束，以自動方式減去*Atom*中儲存值的*值*。
 
-當不可部分完成的`atomic_address`類型為時, `ptrdiff_t` *Value*具有類型, 而作業會將儲存`char *`的指標視為。
+當不可部分完成的類型是 `atomic_address`時，*值*的類型 `ptrdiff_t`，而作業會將儲存的指標視為 `char *`。
 
 也會針對整數類型多載這項作業︰
 
@@ -592,8 +592,8 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型指標之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型指標之 `T` 物件的指標。
 
 *Value*\
 型別 `ptrdiff_t` 的值。
@@ -604,9 +604,9 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_sub_explicit`函式會執行`read-modify-write`作業 ,以在`Order`所指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內,以不可部分完成的方式將*值*減去*Atom*中的預存值。
+`atomic_fetch_sub_explicit` 函式會執行 `read-modify-write` 作業，以在 `Order`指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內，以自動方式減去*Atom*中儲存值的*值*。
 
-當不可部分完成的`atomic_address`類型為時, `ptrdiff_t` *Value*具有類型, 而作業會將儲存`char *`的指標視為。
+當不可部分完成的類型是 `atomic_address`時，*值*的類型 `ptrdiff_t`，而作業會將儲存的指標視為 `char *`。
 
 也會針對整數類型多載這項作業︰
 
@@ -624,7 +624,7 @@ integral atomic_fetch_sub_explicit(
 
 ## <a name="atomic_fetch_xor"></a> atomic_fetch_xor
 
-對某個值和儲存於 `atomic` 物件的現有值執行位元 `exclusive or`。
+對某個值和儲存於 `exclusive or` 物件的現有值執行位元 `atomic`。
 
 ```cpp
 template <class T>
@@ -636,8 +636,8 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `T` 物件的指標。
 
 *Value*\
 型別 `T` 的值。
@@ -648,11 +648,11 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_xor` 函式會使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 來執行`read-modify-write`作業, 以將 *atom* 的預存值取代為位`exclusive or`的*值*, 並將目前的值以 *atom* 儲存。
+`atomic_fetch_xor` 函式會執行 `read-modify-write` 作業，將*Atom*的儲存值取代為*值*的位 `exclusive or`，以及使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)儲存在*atom*中的目前值。
 
 ## <a name="atomic_fetch_xor_explicit"></a> atomic_fetch_xor_explicit
 
-對某個值和儲存於 `atomic` 物件的現有值執行位元 `exclusive or`。
+對某個值和儲存於 `exclusive or` 物件的現有值執行位元 `atomic`。
 
 ```cpp
 template <class T>
@@ -670,13 +670,13 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `T` 物件的指標。
 
 *Value*\
 型別 `T` 的值。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
@@ -685,11 +685,11 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="remarks"></a>備註
 
-`atomic_fetch_xor_explicit`函式會執行`read-modify-write`作業, 以在 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束中, 將 *atom* 的預存值取代為位`exclusive or`*值*, 並將目前值儲存在 *atom* 中依*順序*指定。
+`atomic_fetch_xor_explicit` 函式會執行 `read-modify-write` 作業，以依*順序*指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束，將*Atom*的儲存值取代為*值*的位 `exclusive or`，以及儲存在*Atom*中的目前值。
 
 ## <a name="atomic_flag_clear"></a> atomic_flag_clear
 
-在`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)中, 將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**false**。
+在 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)中，將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**false**。
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -698,12 +698,12 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*標識*\
+*旗*標\
 `atomic_flag` 物件的指標。
 
 ## <a name="atomic_flag_clear_explicit"></a> atomic_flag_clear_explicit
 
-在指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內, 將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**false**。
+在指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內，將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**false**。
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -712,15 +712,15 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>參數
 
-*標識*\
+*旗*標\
 `atomic_flag` 物件的指標。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="atomic_flag_test_and_set"></a> atomic_flag_test_and_set
 
-在[memory_order](../standard-library/atomic-enums.md#memory_order_enum)的`memory_order_seq_cst`條件約束內, 將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**true**。
+在 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)的條件約束內，將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**true**。
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
@@ -729,7 +729,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*標識*\
+*旗*標\
 `atomic_flag` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -738,7 +738,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ## <a name="atomic_flag_test_and_set_explicit"></a> atomic_flag_test_and_set_explicit
 
-在指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內, 將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**true**。
+在指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內，將[atomic_flag](../standard-library/atomic-flag-structure.md)物件中的**bool**旗標設定為**true**。
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -747,10 +747,10 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>參數
 
-*標識*\
+*旗*標\
 `atomic_flag` 物件的指標。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
@@ -770,8 +770,8 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `Ty` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `Ty` 物件的指標。
 
 *Value*\
 型別 `Ty` 的值。
@@ -793,12 +793,12 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
-儲存 `T` 類型值之 `atomic` 物件的指標。
+*Atom*\
+儲存 `atomic` 類型值之 `T` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果原子上的不可部分完成作業是無鎖定, 則為**true** ;否則**為 false**。
+如果原子上的不可部分完成作業是無*鎖定，則*為**true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -817,7 +817,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
+*Atom*\
 包含 `atomic` 類型值之 `Ty` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -830,7 +830,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ## <a name="atomic_load_explicit"></a> atomic_load_explicit
 
-在指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)內，擷取 `atomic` 物件中的預存值。
+在指定的 `atomic`memory_order[內，擷取 ](../standard-library/atomic-enums.md#memory_order_enum) 物件中的預存值。
 
 ```cpp
 template <class Ty>
@@ -841,10 +841,10 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>參數
 
-*淩*\
+*Atom*\
 包含 `atomic` 類型值之 `Ty` 物件的指標。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 請不要使用 `memory_order_release` 或 `memory_order_acq_rel`。
 
 ### <a name="return-value"></a>傳回值
@@ -861,7 +861,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*即可*\
+*訂單*\
 決定範圍類型的記憶體順序條件約束。
 
 ### <a name="remarks"></a>備註
@@ -890,7 +890,7 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*淩*\
+*Atom*\
 不可部分完成的物件指標，該物件包含 `Ty` 類型的值。
 
 *Value*\
@@ -898,7 +898,7 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>備註
 
-`atomic_store`在[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束內`memory_order_seq_cst`, 將*值*儲存在*Atom*所指向的物件中。
+`atomic_store` 會在 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束中，將*值*儲存在*Atom*所指向的物件中。
 
 ## <a name="atomic_store_explicit"></a> atomic_store_explicit
 
@@ -920,18 +920,18 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>參數
 
-*淩*\
+*Atom*\
 包含 `atomic` 類型值之 `Ty` 物件的指標。
 
 *Value*\
 型別 `Ty` 的值。
 
-*即可*\
+*訂單*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 請不要使用 `memory_order_consume`、`memory_order_acquire` 或 `memory_order_acq_rel`。
 
 ### <a name="remarks"></a>備註
 
-`atomic_store`在依*順序*指定的`memory_order`中, 將*值*儲存在*Atom*所指向的物件中。
+`atomic_store` 會在由*Order*指定的 `memory_order` 內，將*值*儲存在*Atom*所指向的物件中。
 
 ## <a name="atomic_thread_fence"></a> atomic_thread_fence
 
@@ -943,7 +943,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*即可*\
+*訂單*\
 決定範圍類型的記憶體順序條件約束。
 
 ### <a name="remarks"></a>備註

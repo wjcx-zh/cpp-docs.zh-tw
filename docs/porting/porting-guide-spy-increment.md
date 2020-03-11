@@ -3,11 +3,11 @@ title: 移植指南：Spy++
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627223"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890937"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 
@@ -53,7 +53,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 
 **Link.OutputFile** 是組建輸出 (例如 EXE、DLL)，通常是從 `$(TargetDir)$(TargetName)$(TargetExt)` 建構，並提供路徑、檔名和副檔名。 這是將專案從舊版 Visual C++ 建置工具 (vcbuild.exe) 移轉至新版建置工具 (MSBuild.exe) 時常見的錯誤。 由於在 Visual Studio 2010 中已變更建置工具，因此當您將 2010 版以前的專案移轉至 2010 (含) 以後版本時，可能會發生這個問題。 基本問題在於專案移轉精靈不會更新 **Link.OutputFile** 值，因為它不一定能夠根據其他專案設定來判斷該值。 因此，您通常必須手動設定。 如需詳細資料，請參閱 Visual C++ 部落格上的這篇[文章](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)。
 
-在此情況下，針對 Spy++ 專案，將所轉換專案中的 **Link.OutputFile** 屬性設為 .\Debug\Spyxx.exe 和 .\Release\Spyxx.exe (視組態而定)。 最好是在 [所有組態] 中，以 `$(TargetDir)$(TargetName)$(TargetExt)` 取代這些硬式編碼值。 如果這個方法沒有作用，您可以在此進行自訂，或在設定這些值的 [一般] 區段中變更屬性 (這些屬性包括 [輸出目錄]、[目標名稱] 和 [目標副檔名])。 請記住，如果您要檢視的屬性使用巨集，則可以在下拉式清單中選擇 [編輯] 來開啟對話方塊，以顯示替代巨集後的最終字串。 您可以選擇 [巨集] 按鈕，來檢視所有可用的巨集與其目前的值。
+在此情況下，針對 Spy++ 專案，將所轉換專案中的 **Link.OutputFile** 屬性設為 .\Debug\Spyxx.exe 和 .\Release\Spyxx.exe (視組態而定)。 最好是在 [所有組態]`$(TargetDir)$(TargetName)$(TargetExt)`**中，以** 取代這些硬式編碼值。 如果這個方法沒有作用，您可以在此進行自訂，或在設定這些值的 [一般] 區段中變更屬性 (這些屬性包括 [輸出目錄]、[目標名稱] 和 [目標副檔名])。 請記住，如果您要檢視的屬性使用巨集，則可以在下拉式清單中選擇 [編輯] 來開啟對話方塊，以顯示替代巨集後的最終字串。 您可以選擇 [巨集] 按鈕，來檢視所有可用的巨集與其目前的值。
 
 ##  <a name="updating_winver"></a> 步驟 4： 更新目標 Windows 版本
 
@@ -130,7 +130,7 @@ mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No suc
 #include <iomanip>
 ```
 
-由於這項變更，使用已不再使用的 `ostrstream` 時會發生問題。 請適當地取代成 ostringstream。 我們嘗試新增 `ostrstream` 的 **typedef**，以避免過度修改程式碼，這至少是個起點。
+由於這項變更，使用已不再使用的 `ostrstream` 時會發生問題。 請適當地取代成 ostringstream。 我們嘗試新增 **的**typedef`ostrstream`，以避免過度修改程式碼，這至少是個起點。
 
 ```cpp
 typedef std::basic_ostringstream<TCHAR> ostrstream;
@@ -138,7 +138,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
 
 目前使用 MBCS (多位元組字元集) 來建置專案，因此 **char** 是適當的字元資料類型。 不過，為了更輕鬆地將程式碼更新為 UTF-16 Unicode，我們將此更新為 `TCHAR`，以根據專案設定中的 [字元集] 屬性設定為 MBCS 或 Unicode，解析成 **char** 或 **wchar_t**。
 
-還需要更新其他一些程式碼片段。  我們以 `ios_base` 取代基底類別 `ios`，並以 basic_ostream\<T> 取代 ostream。 我們加入兩個額外的 typedef，並編譯這個區段。
+還需要更新其他一些程式碼片段。  我們以 `ios` 取代基底類別 `ios_base`，並以 basic_ostream\<T> 取代 ostream。 我們加入兩個額外的 typedef，並編譯這個區段。
 
 ```cpp
 typedef std::basic_ostream<TCHAR> ostream;
@@ -153,7 +153,7 @@ typedef ios_base ios;
 error C2039: 'freeze': is not a member of 'std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char>>'
 ```
 
-下一個問題是 `basic_stringbuf` 沒有 `freeze` 方法。 舊版 `ostream` 使用 `freeze` 方法來避免記憶體流失。 我們現在使用新版 `ostringstream`，因此不需要它。 我們可以刪除 `freeze` 的呼叫。
+下一個問題是 `basic_stringbuf` 沒有 `freeze` 方法。 舊版 `freeze` 使用 `ostream` 方法來避免記憶體流失。 我們現在使用新版 `ostringstream`，因此不需要它。 我們可以刪除 `freeze` 的呼叫。
 
 ```cpp
 //rdbuf()->freeze(0);
@@ -518,7 +518,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 現在讓我們實際將舊版多位元組字元集 (MBCS) 程式碼更新為 Unicode。 由於這是與 Windows 桌面平台緊密繫結的 Windows 應用程式，因此我們會將其移植到 Windows 所使用的 UTF-16 Unicode。 如果您想要撰寫跨平台程式碼，或將 Windows 應用程式移植到其他平台，您可能需要考慮移植到其他作業系統廣泛使用的 UTF-8。
 
-移植到 UTF-16 Unicode 時，我們必須決定是否仍然需要編譯為 MBCS 的選項。  如果想要具有支援 MBCS 的選項，我們應該使用 TCHAR 巨集作為字元類型，其會根據在編譯期間定義的是 \_MBCS 或 \_UNICODE，來解析為 **char** 或 **wchar_t**。 若是切換為 TCHAR 和 TCHAR 版的各式 API，而不是 **wchar_t** 及其相關 API，表示您只要定義 \_MBCS 巨集 (而不是 \_UNICODE)，就能返回程式碼的 MBCS 版本。 除了 TCHAR 之外，還存在廣泛使用之 typedef、巨集和函式的各種 TCHAR 版本。 例如，以 LPCTSTR 取代 LPCSTR 等。 在專案屬性對話方塊中，於 [組態屬性] 的 [一般] 區段中，將 [字元集] 屬性從 [使用 MBCS 字元集] 變更為 [使用 Unicode 字元集]。 這個設定會影響在編譯期間預先定義的巨集。 同時會影響 UNICODE 巨集和 \_UNICODE 巨集。 這個專案屬性對兩者的影響會一致。 Windows 標頭使用 UNICODE，而 Visual C++ 標頭 (例如 MFC) 使用 \_UNICODE，但是只要定義了其中一個，就也會定義另一個。
+移植到 UTF-16 Unicode 時，我們必須決定是否仍然需要編譯為 MBCS 的選項。  如果想要具有支援 MBCS 的選項，我們應該使用 TCHAR 巨集作為字元類型，其會根據在編譯期間定義的是 **MBCS 或** UNICODE，來解析為 **char** 或 \_wchar_t\_。 若是切換為 TCHAR 和 TCHAR 版的各式 API，而不是 **wchar_t** 及其相關 API，表示您只要定義 \_MBCS 巨集 (而不是 \_UNICODE)，就能返回程式碼的 MBCS 版本。 除了 TCHAR 之外，還存在廣泛使用之 typedef、巨集和函式的各種 TCHAR 版本。 例如，以 LPCTSTR 取代 LPCSTR 等。 在專案屬性對話方塊中，於 [組態屬性] 的 [一般] 區段中，將 [字元集] 屬性從 [使用 MBCS 字元集] 變更為 [使用 Unicode 字元集]。 這個設定會影響在編譯期間預先定義的巨集。 同時會影響 UNICODE 巨集和 \_UNICODE 巨集。 這個專案屬性對兩者的影響會一致。 Windows 標頭使用 UNICODE，而 Visual C++ 標頭 (例如 MFC) 使用 \_UNICODE，但是只要定義了其中一個，就也會定義另一個。
 
 目前有使用 TCHAR 從 MBCS 移植到 UTF-16 Unicode 的良好[指南](/previous-versions/cc194801(v=msdn.10))。 我們將選擇這個方法。 首先，我們將 [字元集] 屬性變更為 [使用 Unicode 字元集] 並重建專案。
 
@@ -610,7 +610,7 @@ strFace.ReleaseBuffer();
 #endif
 ```
 
-當然，我們應該使用更安全的版本 `wcscpy_s`，而不是 `wcscpy`。 下一節將解決這個問題。
+當然，我們應該使用更安全的版本 `wcscpy`，而不是 `wcscpy_s`。 下一節將解決這個問題。
 
 檢查工作時，我們應該將 [字元集] 重設為 [使用多位元組字元集]，並確保程式碼仍會使用 MBCS 和 Unicode 編譯。 不用說，在進行這些變更之後，重新編譯後的應用程式上所執行的完整測試應該成功。
 
@@ -667,11 +667,11 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 }
 ```
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 將 Spy++ 從原始 Visual C++ 6.0 程式碼移植到最新編譯器需要約 20 小時的程式碼撰寫時間，整個過程需要約一週。 我們已透過八個版本的產品直接從 Visual Studio 6.0 升級至 Visual Studio 2015。 這現在是在大型和小型專案上進行所有升級的建議方法。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [上一個案例研究：COM Spy](../porting/porting-guide-com-spy.md)

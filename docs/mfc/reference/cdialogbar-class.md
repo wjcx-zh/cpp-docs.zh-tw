@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400717"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883615"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 類別
 
@@ -33,24 +33,24 @@ class CDialogBar : public CControlBar
 
 |名稱|描述|
 |----------|-----------------|
-|[CDialogBar::CDialogBar](#cdialogbar)|建構 `CDialogBar` 物件。|
+|[CDialogBar：： CDialogBar](#cdialogbar)|建構 `CDialogBar` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDialogBar::Create](#create)|建立 Windows 對話方塊列，並將它附加至`CDialogBar`物件。|
+|[CDialogBar：： Create](#create)|建立 Windows 對話方塊列，並將它附加至 `CDialogBar` 物件。|
 
 ## <a name="remarks"></a>備註
 
-對話方塊列，其中包含使用者可以使用 tab 鍵之間的標準 Windows 控制項，類似於對話方塊。 另一個的相似度就是您建立來代表對話方塊列的對話方塊範本。
+對話方塊列類似于對話方塊，其中包含使用者可以在之間定位的標準 Windows 控制項。 另一個相似之處在于，您會建立對話方塊範本來代表對話方塊列。
 
-建立和使用對話方塊列是類似於建立和使用`CFormView`物件。 首先，使用[對話方塊編輯器](../../windows/dialog-editor.md)定義樣式 WS_CHILD 的對話方塊範本和任何其他樣式。 範本不能有 WS_VISIBLE 的樣式。 在您的應用程式程式碼中呼叫建構函式來建構`CDialogBar`物件，然後呼叫`Create`建立對話方塊列視窗，並將其附加至`CDialogBar`物件。
+建立和使用對話方塊列類似于建立和使用 `CFormView` 物件。 首先，使用[對話方塊編輯器](../../windows/dialog-editor.md)來定義具有樣式 WS_CHILD 的對話方塊範本，而不是其他樣式。 範本不能有 WS_VISIBLE 的樣式。 在您的應用程式程式碼中，呼叫函式來建立 `CDialogBar` 物件，然後呼叫 `Create` 以建立對話方塊視窗，並將它附加至 `CDialogBar` 物件。
 
-如需詳細資訊`CDialogBar`，請參閱文章[對話方塊列](../../mfc/dialog-bars.md)並[技術提示 31](../../mfc/tn031-control-bars.md)，控制列。
+如需 `CDialogBar`的詳細資訊，請參閱文章[對話方塊](../../mfc/dialog-bars.md)和[技術提示 31](../../mfc/tn031-control-bars.md)，控制列。
 
 > [!NOTE]
->  在目前的版本中，`CDialogBar`物件不能在裝載 Windows Form 控制項。 如需有關 Windows Form 控制項，在視覺效果C++，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+>  在目前的版本中，`CDialogBar` 物件無法裝載 Windows Forms 控制項。 如需有關在 Visual C++中 Windows Forms 控制項的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -66,9 +66,9 @@ class CDialogBar : public CControlBar
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxext.h
+**標頭：** afxext.h。h
 
-##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar
+##  <a name="cdialogbar"></a>CDialogBar：： CDialogBar
 
 建構 `CDialogBar` 物件。
 
@@ -76,9 +76,9 @@ class CDialogBar : public CControlBar
 CDialogBar();
 ```
 
-##  <a name="create"></a>  CDialogBar::Create
+##  <a name="create"></a>CDialogBar：： Create
 
-載入對話方塊資源範本，由指定`lpszTemplateName`或是`nIDTemplate`、 建立對話方塊列視窗、 設定其樣式中，並將其與相關聯`CDialogBar`物件。
+載入 `lpszTemplateName` 或 `nIDTemplate`所指定的對話方塊資源範本、建立對話方塊視窗、設定其樣式，並將其與 `CDialogBar` 物件產生關聯。
 
 ```
 virtual BOOL Create(
@@ -97,19 +97,19 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *pParentWnd*<br/>
-父代指標`CWnd`物件。
+父 `CWnd` 物件的指標。
 
 *lpszTemplateName*<br/>
-名稱的指標`CDialogBar`物件的對話方塊中的資源範本。
+`CDialogBar` 物件之對話方塊資源範本名稱的指標。
 
 *nStyle*<br/>
-工具列的樣式。 支援的其他工具列樣式如下：
+工具列樣式。 支援的其他工具列樣式包括：
 
-- CBRS_TOP 控制列是在框架視窗的頂端。
+- CBRS_TOP 控制列位於框架視窗的頂端。
 
-- CBRS_BOTTOM 控制列是在框架視窗的底部。
+- CBRS_BOTTOM 控制列位於框架視窗的底部。
 
-- 父代調整大小時，不會重新定位 CBRS_NOALIGN 控制列。
+- 當父代調整大小時，不會重新置放 CBRS_NOALIGN 控制列。
 
 - CBRS_TOOLTIPS 控制列會顯示工具提示。
 
@@ -117,17 +117,17 @@ virtual BOOL Create(
 
 - 已修正 CBRS_SIZE_FIXED 控制列。
 
-- 浮動 CBRS_FLOATING 控制列。
+- CBRS_FLOATING 控制條是浮動的。
 
 - CBRS_FLYBY 狀態列會顯示按鈕的相關資訊。
 
-- CBRS_HIDE_INPLACE 控制列不會顯示給使用者。
+- 不會對使用者顯示 CBRS_HIDE_INPLACE 控制列。
 
 *nID*<br/>
-對話方塊列控制項識別碼。
+對話方塊列的控制項 ID。
 
 *nIDTemplate*<br/>
-資源識別碼`CDialogBar`物件的對話方塊範本。
+`CDialogBar` 物件之對話方塊範本的資源識別碼。
 
 ### <a name="return-value"></a>傳回值
 
@@ -135,7 +135,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-如果您指定的 CBRS_TOP 或 CBRS_BOTTOM 對齊樣式，對話方塊列的寬度是框架視窗的高度是所指定的資源*nIDTemplate*。 如果您指定的 CBRS_LEFT 或 CBRS_RIGHT 對齊樣式，對話方塊列的高度是框架視窗的寬度就是所指定的資源*nIDTemplate*。
+如果您指定 CBRS_TOP 或 CBRS_BOTTOM 對齊樣式，則對話方塊列的寬度會是框架視窗的寬度，而其高度則是*nIDTemplate*所指定的資源。 如果您指定 CBRS_LEFT 或 CBRS_RIGHT 對齊樣式，則對話方塊列的高度會是框架視窗的高度，而其寬度則是*nIDTemplate*所指定的資源。
 
 ### <a name="example"></a>範例
 
@@ -144,7 +144,7 @@ virtual BOOL Create(
 ## <a name="see-also"></a>另請參閱
 
 [MFC 範例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CFormView 類別](../../mfc/reference/cformview-class.md)<br/>
-[CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)

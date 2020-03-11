@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685496"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876187"
 ---
 # <a name="time_get-class"></a>time_get 類別
 
@@ -59,15 +59,15 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
+*CharType*\
 用於程式內部字元編碼的類型。
 
-*InputIterator* \
+*InputIterator*\
 從中讀取時間值的迭代器。
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。
 
 ### <a name="constructors"></a>建構函式
 
@@ -75,16 +75,16 @@ class time_get : public time_base;
 |-|-|
 |[time_get](#time_get)|`time_get` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[iter_type](#iter_type)|描述輸入迭代器的類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[date_order](#date_order)|傳回 facet 使用的日期順序。|
 |[do_date_order](#do_date_order)|受保護的虛擬成員函式，呼叫以傳回 facet 所使用的日期順序。|
@@ -103,7 +103,7 @@ class time_get : public time_base;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
@@ -117,7 +117,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **CharType** 同義。
+此類型與樣板參數 **CharType** 同義。
 
 ## <a name="date_order"></a>  time_get::date_order
 
@@ -223,19 +223,19 @@ iter_type first,
 *上次*\
 輸入迭代器，表示序列的結尾。
 
-*iosbase* \
+*iosbase*\
 資料流物件。
 
 *狀態*\
 Iosbase 中適當的位元遮罩元素設定為表示錯誤的欄位。
 
-*ptm* \
+*ptm*\
 要儲存時間之時間結構的指標。
 
-*bcp.fmt* \
+*bcp.fmt*\
 轉換規範字元。
 
-*mod* \
+*mod*\
 選擇性修飾詞字元。
 
 ### <a name="return-value"></a>傳回值
@@ -244,7 +244,7 @@ Iosbase 中適當的位元遮罩元素設定為表示錯誤的欄位。
 
 ### <a name="remarks"></a>備註
 
-虛擬成員函式會轉換和略過範圍 [`first`，`last`）中的一個或多個輸入專案，以決定儲存在 `*pt` 的一個或多個成員中的值。 轉換失敗會在 `state` 中設定 `ios_base::failbit`，並*先*傳回。 否則，函式會傳回指定第一個未轉換項目的迭代器。
+虛擬成員函式會轉換和略過範圍 [`first`，`last`）中的一個或多個輸入專案，以決定儲存在 `*pt`的一個或多個成員中的值。 轉換失敗會在 `state` 中設定 `ios_base::failbit`，並*先*傳回。 否則，函式會傳回指定第一個未轉換項目的迭代器。
 
 轉換規範包括：
 
@@ -294,11 +294,11 @@ Iosbase 中適當的位元遮罩元素設定為表示錯誤的欄位。
 
 `'Y'` -- 行為與 [time_get::get_year](#get_year) 相同。
 
-其他任何轉換規範會在 `state` 中設定 `ios_base::failbit` 並傳回。 在這個實作中，所有修飾詞都沒有作用。
+其他任何轉換規範會在 `ios_base::failbit` 中設定 `state` 並傳回。 在這個實作中，所有修飾詞都沒有作用。
 
 ## <a name="do_get_date"></a>  time_get::do_get_date
 
-受保護的虛擬成員函式，呼叫以將字串剖析為由 `strftime` 的 *x* 規範所產生的日期。
+受保護的虛擬成員函式，呼叫以將字串剖析為由 *的*x`strftime` 規範所產生的日期。
 
 ```cpp
 virtual iter_type do_get_date(iter_type first,
@@ -316,13 +316,13 @@ virtual iter_type do_get_date(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+*iosbase*\
+格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -331,7 +331,7 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的日期輸入欄位為止。 如果成功，它會將此欄位轉換成其對等的值，如元件**tm：： tm \_mon**、 **tm：： tm \_day**和**tm：： tm \_year**，並分別將結果儲存在 `ptm->tm_mon`、`ptm->tm_day` 和 `ptm->tm_year` 中。 它會傳回迭代器，此迭代器指定日期輸入欄位後的第一個元素。 否則，函式會將 `iosbase::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效日期輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
+虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的日期輸入欄位為止。 如果成功，它會將此欄位轉換成其對等的值，如 components **tm：： tm\_週一**、 **tm：： tm\_day**和**tm：： tm\_year**，並分別將結果儲存在 `ptm->tm_mon`、`ptm->tm_day`和 `ptm->tm_year`中。 它會傳回迭代器，此迭代器指定日期輸入欄位後的第一個元素。 否則，函式會將 `iosbase::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效日期輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
 
 日期輸入欄位的格式取決於地區設定。 對於預設地區設定，日期輸入欄位的格式為 MMM DD，YYYY，其中︰
 
@@ -367,13 +367,13 @@ virtual iter_type do_get_monthname(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-未使用。
+*iosbase*\
+未使用的。
 
 *狀態*\
 輸出餐參數，會根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向月份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -382,7 +382,7 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的月份輸入欄位為止。 如果成功，它會將此欄位轉換成其對等的值，如元件**tm：： tm \_mon**，並將結果儲存在 `ptm->tm_mon` 中。 它會傳回迭代器，此迭代器指定月份輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效月份輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
+虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的月份輸入欄位為止。 如果成功，它會將此欄位轉換成其對等的值，如同元件**tm：： tm\_的月份**，並將結果儲存在 `ptm->tm_mon`中。 它會傳回迭代器，此迭代器指定月份輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效月份輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
 
 月份輸入欄位是一個序列，符合一組最長的地區設定特定順序，例如 1 月、一月、2 月、二月，依此類推。 轉換值是自一月起的月份數。
 
@@ -392,7 +392,7 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ## <a name="do_get_time"></a>  time_get::do_get_time
 
-受保護的虛擬成員函式，呼叫以將字串剖析為由 `strftime` 的 *X* 規範所產生的日期。
+受保護的虛擬成員函式，呼叫以將字串剖析為由 *的*X`strftime` 規範所產生的日期。
 
 ```cpp
 virtual iter_type do_get_time(iter_type first,
@@ -410,13 +410,13 @@ virtual iter_type do_get_time(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-未使用。
+*iosbase*\
+未使用的。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -425,7 +425,7 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的時間輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值，如同元件 `tm::tm_hour`、`tm::tm_min` 和 `tm::tm_sec`，並分別將結果儲存在 `ptm->tm_hour`、`ptm->tm_min` 和 `ptm->tm_sec` 中。 它會傳回迭代器，此迭代器指定時間輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效時間輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
+虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的時間輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值，如同元件 `tm::tm_hour`、`tm::tm_min`和 `tm::tm_sec`，並分別將結果儲存在 `ptm->tm_hour`、`ptm->tm_min`和 `ptm->tm_sec`中。 它會傳回迭代器，此迭代器指定時間輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效時間輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
 
 在此實作中，時間輸入欄位的格式為 HH:MM:SS，其中︰
 
@@ -461,13 +461,13 @@ virtual iter_type do_get_weekday(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+*iosbase*\
+格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向工作日資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -476,7 +476,7 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-虛擬受保護的成員函式會嘗試比對序列 [`first`，`last`）中*第一次*開頭的順序元素，直到它辨識出完整、非空白的工作日輸入欄位為止。 如果成功，它會將此欄位轉換成其對等的值，如元件**tm：： tm \_wday**，並將結果儲存在 `ptm->tm_wday` 中。 它會傳回迭代器，此迭代器指定工作日輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效工作日輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
+虛擬受保護的成員函式會嘗試比對序列 [`first`，`last`）中*第一次*開頭的順序元素，直到它辨識出完整、非空白的工作日輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值，如同元件**tm：： tm\_wday**，並將結果儲存在 `ptm->tm_wday`中。 它會傳回迭代器，此迭代器指定工作日輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效工作日輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
 
 工作日輸入欄位是一個序列，符合一組最長的地區設定特定順序，例如日、星期日、一、星期一，依此類推。 轉換值是自星期日起的天數。
 
@@ -504,13 +504,13 @@ virtual iter_type do_get_year(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+*iosbase*\
+格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向年份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -519,7 +519,7 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-虛擬受保護的成員函式會嘗試比對序列 [`first`，`last`）中*第一次*開頭的順序元素，直到它辨識出完整、非空白的年份輸入欄位為止。 如果成功，它會將此欄位轉換成其對等的值，如元件**tm：： tm \_year**，並將結果儲存在 `ptm->tm_year` 中。 它會傳回迭代器，此迭代器指定年份輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效年份輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
+虛擬受保護的成員函式會嘗試比對序列 [`first`，`last`）中*第一次*開頭的順序元素，直到它辨識出完整、非空白的年份輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值，做為元件**tm：： tm\_年份**，並將結果儲存在 `ptm->tm_year`中。 它會傳回迭代器，此迭代器指定年份輸入欄位後的第一個元素。 否則，函式會將 `ios_base::failbit` 的*狀態*設定為。 它會傳回迭代器，此迭代器指定有效年份輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會將 `ios_base::eofbit` 的*狀態*設定為。
 
 年份輸入欄位是一連串十進位數字，其對應數值必須在範圍 [1900, 2036) 內。 儲存的值是這個值減去 1900。 在此實作中，範圍內的值 [69, 136) 代表年份範圍 [1969, 2036)。 範圍內的值也允許 [0, 69)，但表示的年份範圍可能是 [1900, 1969) 或 [2000, 2069)，取決於特定轉譯環境。
 
@@ -559,30 +559,30 @@ iter_type get(
 *上次*\
 輸入迭代器，表示要轉換之序列的結束。
 
-*iosbase* \
+*iosbase*\
 資料流。
 
 *狀態*\
 已針對此資料流狀態設定適當位元遮罩項目，藉此指出錯誤。
 
-*ptm* \
+*ptm*\
 要儲存時間之時間結構的指標。
 
-*bcp.fmt* \
+*bcp.fmt*\
 轉換規範字元。
 
-*mod* \
+*mod*\
 選擇性修飾詞字元。
 
-*fmt_first* \
+*fmt_first*\
 格式指示詞開始位置的點。
 
-*fmt_last* \
+*fmt_last*\
 格式指示詞結尾的點。
 
 ### <a name="return-value"></a>傳回值
 
-傳回反覆運算器，指向用來指派時間結構 `*ptm` 的資料之後的第一個字元。
+傳回反覆運算器，指向用來指派時間結構 `*ptm`的資料之後的第一個字元。
 
 ### <a name="remarks"></a>備註
 
@@ -590,7 +590,7 @@ iter_type get(
 
 第二個成員函式呼叫 `do_get`，且由 `[fmt_first, fmt_last)` 分隔的格式控制。 它會將格式視為欄位序列，其中每個欄位決定 `[first, last)` 分隔的零或多個輸入項目轉換。 它會傳回迭代器，指定第一個未轉換的項目。 有三種欄位：
 
-每美分（%）在格式中，後面接著 EOQ #] 集合中的選擇性修飾詞*mod* ，後面接著轉換規範*bcp.fmt*，會*先*以 `do_get(first, last, iosbase, state, ptm, fmt, mod)` 傳回的值取代。 轉換失敗會將 `ios_base::failbit` 的*狀態*設定為，並傳回。
+每美分（%）在格式中，後面接著 EOQ #] 集合中的選擇性修飾詞*mod* ，後面接著轉換規範*bcp.fmt*，會*先*以 `do_get(first, last, iosbase, state, ptm, fmt, mod)`傳回的值取代。 轉換失敗會將 `ios_base::failbit` 的*狀態*設定為，並傳回。
 
 此格式中空白項目會略過零個或多個空白項目。
 
@@ -598,7 +598,7 @@ iter_type get(
 
 ## <a name="get_date"></a>  time_get::get_date
 
-將字串剖析為 `strftime` 的 *x* 規範所產生的日期。
+將字串剖析為 *的*x`strftime` 規範所產生的日期。
 
 ```cpp
 iter_type get_date(iter_type first,
@@ -616,13 +616,13 @@ iter_type get_date(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+*iosbase*\
+格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -710,13 +710,13 @@ iter_type get_monthname(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-未使用。
+*iosbase*\
+未使用的。
 
 *狀態*\
 輸出餐參數，會根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向月份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -784,7 +784,7 @@ tm_isdst: 0
 
 ## <a name="get_time"></a>  time_get::get_time
 
-將字串剖析為 `strftime` 的 *X* 規範所產生的日期。
+將字串剖析為 *的*X`strftime` 規範所產生的日期。
 
 ```cpp
 iter_type get_time(iter_type first,
@@ -802,13 +802,13 @@ iter_type get_time(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-未使用。
+*iosbase*\
+未使用的。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -883,13 +883,13 @@ iter_type get_weekday(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+*iosbase*\
+格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向工作日資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -960,13 +960,13 @@ iter_type get_year(iter_type first,
 *上次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase* \
-格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+*iosbase*\
+格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。
 
 *狀態*\
-根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm* \
+*ptm*\
 指向年份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1040,7 +1040,7 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*refs* \
+*refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
@@ -1053,11 +1053,11 @@ explicit time_get(size_t refs = 0);
 
 - \> 1：未定義這些值。
 
-由於解構函式會受到保護，因此沒有直接的範例。
+無法提供任何直接範例，因為解構函式受到保護。
 
 此函式會使用**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`refs`）初始化其基底物件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [time_base 類別](../standard-library/time-base-class.md)\

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518461"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856486"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
 
@@ -63,7 +63,7 @@ T7 get_money(Money& amount, bool use_intl);
 
 操作工具會傳回一個物件，從資料流程 `str`進行解壓縮時，其行為就像是 `formatted input function` 呼叫成員函式 `get` 用於與 `str`相關聯的地區設定 facet `money_get`，並使用*use_intl*來表示國際格式。 如果成功，呼叫就會將已解壓縮的貨幣值儲存在*數量*中。 接著，操作工具會傳回 `str`。
 
-`Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `str` 相同之 `basic_string` 的具現化。
+`Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `basic_string` 相同之 `str` 的具現化。
 
 ## <a name="iomanip_get_time"></a>  get_time
 
@@ -84,7 +84,7 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回一個物件，從資料流 `str` 中擷取此物件時，其行為會像`formatted input function`一樣，此函式會呼叫與 `str` 關聯之地區設定 facet `time_get` 的成員函式 `get`，其中會使用 `tptr` 來指出時間結構，以及使用 `fmt` 來指出以 Null 結束之格式字串的開頭。 如果成功，該呼叫就會在時間結構中，儲存與所擷取之任何時間欄位關聯的值。 接著，操作工具會傳回 `str`。
+操作工具會傳回一個物件，從資料流 `str` 中擷取此物件時，其行為會像`formatted input function`一樣，此函式會呼叫與 `get` 關聯之地區設定 facet `time_get` 的成員函式 `str`，其中會使用 `tptr` 來指出時間結構，以及使用 `fmt` 來指出以 Null 結束之格式字串的開頭。 如果成功，該呼叫就會在時間結構中，儲存與所擷取之任何時間欄位關聯的值。 接著，操作工具會傳回 `str`。
 
 ## <a name="iomanip_put_money"></a>  put_money
 
@@ -109,9 +109,9 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像已格式化的輸出函式一樣，此函式會呼叫與 `str` 關聯之地區設定 facet `money_put` 的成員函式 `put`。 如果成功，呼叫會插入 `amount` 適當的格式，使用*use_intl*指出國際格式並 `str.fill()`，做為填滿元素。 接著，操作工具會傳回 `str`。
+操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像已格式化的輸出函式一樣，此函式會呼叫與 `put` 關聯之地區設定 facet `money_put` 的成員函式 `str`。 如果成功，呼叫會插入 `amount` 適當的格式，使用*use_intl*指出國際格式並 `str.fill()`，做為填滿元素。 接著，操作工具會傳回 `str`。
 
-`Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `str` 相同之 `basic_string` 的具現化。
+`Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `basic_string` 相同之 `str` 的具現化。
 
 ## <a name="iomanip_put_time"></a>  put_time
 
@@ -132,7 +132,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `str` 關聯之地區設定 facet `time_put` 的成員函式 `put`。 輸出函式會使用*time_ptr*來指出時間結構，並*time_format*以指示以 null 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。
+操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `put` 關聯之地區設定 facet `time_put` 的成員函式 `str`。 輸出函式會使用*time_ptr*來指出時間結構，並*time_format*以指示以 null 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。
 
 ## <a name="quoted"></a>  quoted
 
@@ -320,7 +320,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 ### <a name="example"></a>範例
 
-如需使用 `resetiosflags` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。
+如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`resetiosflags`。
 
 ## <a name="setbase"></a>  setbase
 
@@ -349,7 +349,7 @@ T3 setbase(int base);
 
 ### <a name="example"></a>範例
 
-如需使用 `setbase` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。
+如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setbase`。
 
 ## <a name="setfill"></a>  setfill
 
@@ -371,7 +371,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="example"></a>範例
 
-如需使用 `setfill` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。
+如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setfill`。
 
 ## <a name="setiosflags"></a>  setiosflags
 
@@ -392,7 +392,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 ### <a name="example"></a>範例
 
-如需使用 `setiosflags` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。
+如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setiosflags`。
 
 ## <a name="setprecision"></a>  setprecision
 
@@ -413,7 +413,7 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="example"></a>範例
 
-如需使用 `setprecision` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。
+如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setprecision`。
 
 ## <a name="setw"></a>  setw
 
@@ -651,6 +651,6 @@ l4 = 4096
 l5 = 65536
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<iomanip>](../standard-library/iomanip.md)

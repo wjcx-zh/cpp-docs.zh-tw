@@ -8,15 +8,15 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502029"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855682"
 ---
 # <a name="ole-initialization"></a>OLE 初始化
 
-應用程式必須先初始化 OLE 系統 DLL 並驗證 DLL 版本是否正確，才可以使用 OLE 系統服務。 `AfxOleInit`函式會初始化 OLE 系統 dll。
+應用程式必須先初始化 OLE 系統 DLL 並驗證 DLL 版本是否正確，才可以使用 OLE 系統服務。 `AfxOleInit` 函式會初始化 OLE 系統 Dll。
 
 ### <a name="ole-initialization"></a>OLE 初始化
 
@@ -43,7 +43,7 @@ void AfxEnableControlContainer( );
 
 **標頭：** afxdisp.h
 
-##  <a name="afxoleinit"></a>  AfxOleInit
+##  <a name="afxoleinit"></a>AfxOleInit
 
 初始化應用程式的 OLE 支援。
 
@@ -67,7 +67,7 @@ BOOL AFXAPI AfxOleInit();
 >  如果從 MFC DLL 呼叫**AfxOleInit** ，呼叫將會失敗。 發生失敗的原因是函式假設，如果是從 DLL 呼叫，則 OLE 系統先前是由呼叫應用程式初始化。
 
 > [!NOTE]
->  MFC 應用程式必須初始化為單一執行緒單元（STA）。 如果您在覆`InitInstance`寫中呼叫 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex), 請指定 COINIT_APARTMENTTHREADED (而不是 COINIT_MULTITHREADED)。
+>  MFC 應用程式必須初始化為單一執行緒單元（STA）。 如果您在 `InitInstance` 覆寫中呼叫[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) ，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。
 
 ### <a name="requirements"></a>需求
 

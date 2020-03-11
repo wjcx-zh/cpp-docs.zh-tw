@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127159"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855910"
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 
@@ -63,7 +63,7 @@ class accelerator;
 
 |名稱|描述|
 |----------|-----------------|
-|[快速鍵對應函數](#ctor)|初始化 `accelerator` 類別的新執行個體。|
+|[快速鍵對應函數](#ctor)|將 `accelerator` 類別的新執行個體初始化。|
 |[~ 加速器的函式](#ctor)|終結 `accelerator` 物件。|
 
 ### <a name="public-methods"></a>公用方法

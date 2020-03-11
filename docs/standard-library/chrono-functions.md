@@ -6,15 +6,15 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244911"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865191"
 ---
 # <a name="ltchronogt-functions"></a>&lt;chrono&gt; 函式
 
-## <a name="duration_cast"></a> duration_cast
+## <a name="duration_cast"></a>duration_cast
 
 將 `duration` 物件轉換為指定的類型。
 
@@ -32,13 +32,13 @@ constexpr ToDuration round(const duration<Rep, Period>& d);
 
 ### <a name="return-value"></a>傳回值
 
-`To` 類型的 `duration` 物件，代表時間間隔 `Dur`，如果必須符合目標類型則會截斷。
+`duration` 類型的 `To` 物件，代表時間間隔 `Dur`，如果必須符合目標類型則會截斷。
 
 ### <a name="remarks"></a>備註
 
 如果 `To` 是 `duration` 的具現化，此函式不會參與多載解析。
 
-## <a name="time_point_cast"></a> time_point_cast
+## <a name="time_point_cast"></a>time_point_cast
 
 將 [time_point](../standard-library/time-point-class.md) 物件轉換為指定的類型。
 
@@ -59,7 +59,7 @@ round(const time_point<Clock, Duration>& tp);
 
 ### <a name="return-value"></a>傳回值
 
-具有 `To` 類型之持續時間的 `time_point` 物件。
+具有 `time_point` 類型之持續時間的 `To` 物件。
 
 ### <a name="remarks"></a>備註
 

@@ -6,15 +6,15 @@ f1_keywords:
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243424"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890722"
 ---
-# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; 運算子
+# <a name="ltunordered_setgt-operators"></a>&lt;unordered_set&gt; 運算子
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 [unordered_set](../standard-library/unordered-set-class.md) 物件是否不等於右邊的 unordered_set 物件。
 
@@ -24,15 +24,15 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `unordered_set` 類型的物件。
 
-*權限*\
+*right*\
 `unordered_set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果 unordered_set 不相等。**false**兩者是否相等。
+如果 unordered_sets 不相等，則為**true** ;如果相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -82,7 +82,7 @@ int main()
 
 `c2 != c3: true`
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 [unordered_set](../standard-library/unordered-set-class.md) 物件是否等於右邊的 unordered_set 物件。
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `unordered_set` 類型的物件。
 
-*權限*\
+*right*\
 `unordered_set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果 unordered_set 相等;**false**如果不相等。
+如果 unordered_sets 相等，則為**true** ;如果不相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -148,7 +148,7 @@ c1 == c3: true
 c2 == c3: false
 ```
 
-## <a name="op_neq_unordered_multiset"></a> 運算子 ！ =
+## <a name="op_neq_unordered_multiset"></a>operator！ =
 
 測試運算子左邊的 [unordered_multiset](../standard-library/unordered-multiset-class.md) 物件是否不等於右邊的 unordered_multiset 物件。
 
@@ -158,15 +158,15 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `unordered_multiset` 類型的物件。
 
-*權限*\
+*right*\
 `unordered_multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果 unordered_multiset 不相等。**false**兩者是否相等。
+如果 unordered_multisets 不相等，則為**true** ;如果相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -217,7 +217,7 @@ c1 != c3: false
 c2 != c3: true
 ```
 
-## <a name="op_eq_eq_unordered_multiset"></a> 運算子 = =
+## <a name="op_eq_eq_unordered_multiset"></a>operator = =
 
 測試運算子左邊的 [unordered_multiset](../standard-library/unordered-multiset-class.md) 物件是否等於右邊的 unordered_multiset 物件。
 
@@ -227,15 +227,15 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `unordered_multiset` 類型的物件。
 
-*權限*\
+*right*\
 `unordered_multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果 unordered_multiset 相等;**false**如果不相等。
+如果 unordered_multisets 相等，則為**true** ;如果不相等，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 

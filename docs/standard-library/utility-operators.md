@@ -17,18 +17,18 @@ helpviewer_keywords:
 - std::operator&lt;= (utility)
 - std::operator== (utility)
 ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246297"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854855"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 運算子
 
 > [!NOTE]
-> 使用運算子`Type&`底下`namespace rel_ops`。
+> 使用 `Type&` 的運算子包含在 `namespace rel_ops`之下。
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 測試成對運算子左側的物件是否不等於右側的物件。
 
@@ -42,10 +42,10 @@ template <class T, class U>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `pair` 類型的物件。
 
-*權限*\
+*right*\
 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -103,7 +103,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 測試成對運算子左側的物件是否等於右側的物件。
 
@@ -114,19 +114,19 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `pair` 類型的物件。
 
-*權限*\
+*right*\
 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 pair 相等，則為 **true**；如果 `pair` 不相等，則為 **false**。
+如果 pair 相等，則為 **true**；如果 **不相等，則為**false`pair`。
 
 ### <a name="remarks"></a>備註
 
-如果配對的每個項目都相等，則其中一對等於另一對。 函式會傳回 `left`。 **first** == `right`. **first** && `left`. **second** == `right`. **second**。 如果其中一對的第一個或第二個項目不等於另一對的對應項目，則這兩對不相等。
+如果配對的每個項目都相等，則其中一對等於另一對。 此函式會傳回 `left`。 **first** == `right`. **first** && `left`. **second** == `right`. **second**。 如果其中一對的第一個或第二個項目不等於另一對的對應項目，則這兩對不相等。
 
 ### <a name="example"></a>範例
 
@@ -177,19 +177,19 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 運算子左側 `pair` 類型的物件。
 
-*權限*\
+*right*\
 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左側的 `pair` 必定小於運算子右側的 `pair`，則為 **true**；否則為 **false**。
+如果運算子左側的 **必定小於運算子右側的**，則為 `pair`true`pair`；否則為 **false**。
 
 ### <a name="remarks"></a>備註
 
-`left` `pair`物件，即所謂必小於`right``pair`物件如果*左*小於且不等於*右*。
+如果*left*小於且不等於*right*，則 `left` `pair` 物件會被視為完全小於 `right` 的 `pair` 物件。
 
 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。
 
@@ -240,7 +240,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a> 運算子&lt;=
+## <a name="op_lt_eq"></a>運算子&lt;=
 
 測試成對運算子左側的物件是否小於或等於右側的物件。
 
@@ -254,15 +254,15 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 運算子左側 `pair` 類型的物件。
 
-*權限*\
+*right*\
 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左側的 `pair` 小於或等於運算子右側的 `pair`，則為 **true**；否則為 **false**。
+如果運算子左側的 **小於或等於運算子右側的**，則為 `pair`true`pair`；否則為 **false**。
 
 ### <a name="remarks"></a>備註
 
@@ -339,19 +339,19 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 運算子左側 `pair` 類型的物件。
 
-*權限*\
+*right*\
 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 `pair` 必定大於運算子右邊的 `pair`，則為 **true**；否則為 **false**。
+如果運算子左邊的 **必定大於運算子右邊的**，則為 `pair`true`pair`；否則為 **false**。
 
 ### <a name="remarks"></a>備註
 
-`left` `pair`即所謂必大於`right``pair`物件如果*左*大於且不等於*右*。
+如果*left*大於且不等於*right*，則 `left` `pair` 物件會被視為絕對大於 `right` 的 `pair` 物件。
 
 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。
 
@@ -412,7 +412,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a> 運算子&gt;=
+## <a name="op_gt_eq"></a>運算子&gt;=
 
 測試成寺運算子左側的物件是否大於或等於右側的物件。
 
@@ -426,15 +426,15 @@ template <class T, class U>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 運算子左側 `pair` 類型的物件。
 
-*權限*\
+*right*\
 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左側的 `pair` 大於或等於運算子右側的 `pair`，則為 **true**；否則為 **false**。
+如果運算子左側的 **大於或等於運算子右側的**，則為 `pair`true`pair`；否則為 **false**。
 
 ### <a name="remarks"></a>備註
 

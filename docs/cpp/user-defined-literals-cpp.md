@@ -1,17 +1,18 @@
 ---
 title: 使用者定義常值（C++）
-ms.date: 12/10/2019
+description: 說明標準C++中使用者定義常值的用途和使用方式。
+ms.date: 02/10/2020
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a6636be414fa4dc199ce10fca1b33f092492575f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301297"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090558"
 ---
 # <a name="user-defined-literals"></a>使用者定義常值
 
-中C++有五個主要的常值類別：整數、字元、浮點、字串、布林值和指標。  從 C++ 11 開始，您可以根據這些分類來定義專屬常值，以提供常見慣用語的語法捷徑，並提升類型安全。 例如，假設您有一個 Distance 類別。 您可以針對公里定義一個常值，以及針對英哩定義另一個常值，並鼓勵使用者只要撰寫下列項目來明確指定度量單位：auto d = 42.0_km 或 auto d = 42.0_mi。 使用者定義常值沒有任何效能優勢或缺點；它們主要是為了方便起見，或針對編譯時間類型推斷。 標準程式庫具有 std： string 的使用者定義常值、std：： complex，以及 \<chrono > 標頭中的時間和持續時間運算單位：
+中C++有六個主要的常值類別：整數、字元、浮點、字串、布林值和指標。 從C++ 11 開始，您可以根據這些類別定義您自己的常值，以提供一般慣用語的語法快捷方式並增加型別安全。 例如，假設您有一個 `Distance` 類別。 您可以定義公里的常值和另一個代表英里的文字，並藉由撰寫下列內容來鼓勵使用者明確瞭解測量單位： `auto d = 42.0_km` 或 `auto d = 42.0_mi`。 使用者定義的常值沒有任何效能優勢或缺點;它們主要是為了方便或編譯時間類型推斷。 標準程式庫具有 `std::string`、`std::complex`的使用者定義常值，以及 \<chrono > 標頭中時間和持續時間作業的單位：
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
@@ -40,74 +41,85 @@ ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-先前範例中的運算子名稱都是您所提供名稱的預留位置；不過，需要前置底線。 （只允許標準程式庫定義不含底線的常值）。傳回型別可讓您自訂轉換或常值所執行的其他作業。 而且，所有這些運算子都可以定義為 `constexpr`。
+先前範例中的運算子名稱都是您所提供名稱的預留位置；不過，需要前置底線。 （只允許標準程式庫定義不含底線的常值）。傳回類型是您自訂轉換或常值所執行之其他作業的位置。 而且，所有這些運算子都可以定義為 `constexpr`。
 
 ## <a name="cooked-literals"></a>處理後的常值
 
-在原始程式碼中，任何常值 (不論是否由使用者定義) 基本上是一連串的英數字元 (例如 `101` 或 `54.7`，或者 `"hello"` 或 `true`)。 編譯器會將序列解讀為整數、浮點數、const char\* 字串等等。 使用者定義的常值，它會接受指派給常值的任何型別做為輸入，非正式稱為*處理後常*值。 所有上面的運算子 (`_r` 和 `_t` 除外) 都是處理後的常值。 例如，常值 `42.0_km` 會繫結至簽章與 _b 類似的 _km 運算子，常值 `42_km` 則繫結至簽章與 _a 類似的運算子。
+在原始程式碼中，不論使用者定義的任何常值，基本上都是一連串的英數位元，例如 `101`或 `54.7`，或是 `"hello"` 或 `true`。 編譯器會將序列解讀為整數、浮點數、const char\* 字串等等。 使用者定義的常值，它會接受指派給常值的任何型別做為輸入，非正式稱為*處理後常*值。 所有上面的運算子 (`_r` 和 `_t` 除外) 都是處理後的常值。 例如，常值 `42.0_km` 會繫結至簽章與 _b 類似的 _km 運算子，常值 `42_km` 則繫結至簽章與 _a 類似的運算子。
 
-下列範例示範使用者定義常值如何鼓勵呼叫端明確指定其輸入。 若要建構 `Distance`，使用者必須使用適當的使用者定義常值來明確指定公里或英哩。 當然，使用其他方式也可以達到相同的結果，但使用者定義常值與替代方式相較之下較為簡單。
+下列範例示範使用者定義常值如何鼓勵呼叫端明確指定其輸入。 若要建構 `Distance`，使用者必須使用適當的使用者定義常值來明確指定公里或英哩。 您可以用其他方式達到相同的結果，但使用者定義的常值比替代方案的詳細資訊還少。
 
 ```cpp
+// UDL_Distance.cpp
+
+#include <iostream>
+#include <string>
+
 struct Distance
 {
 private:
     explicit Distance(long double val) : kilometers(val)
     {}
 
-    friend Distance operator"" _km(long double  val);
+    friend Distance operator"" _km(long double val);
     friend Distance operator"" _mi(long double val);
+
     long double kilometers{ 0 };
 public:
+    const static long double km_per_mile;
     long double get_kilometers() { return kilometers; }
-    Distance operator+(Distance& other)
+
+    Distance operator+(Distance other)
     {
         return Distance(get_kilometers() + other.get_kilometers());
     }
 };
 
-Distance operator"" _km(long double  val)
+const long double Distance::km_per_mile = 1.609344L;
+
+Distance operator"" _km(long double val)
 {
     return Distance(val);
 }
 
 Distance operator"" _mi(long double val)
 {
-    return Distance(val * 1.6);
+    return Distance(val * Distance::km_per_mile);
 }
-int main(int argc, char* argv[])
+
+int main()
 {
     // Must have a decimal point to bind to the operator we defined!
     Distance d{ 402.0_km }; // construct using kilometers
-    cout << "Kilometers in d: " << d.get_kilometers() << endl; // 402
+    std::cout << "Kilometers in d: " << d.get_kilometers() << std::endl; // 402
 
     Distance d2{ 402.0_mi }; // construct using miles
-    cout << "Kilometers in d2: " << d2.get_kilometers() << endl;  //643.2
+    std::cout << "Kilometers in d2: " << d2.get_kilometers() << std::endl;  //646.956
 
     // add distances constructed with different units
     Distance d3 = 36.0_mi + 42.0_km;
-    cout << "d3 value = " << d3.get_kilometers() << endl; // 99.6
+    std::cout << "d3 value = " << d3.get_kilometers() << std::endl; // 99.9364
 
     // Distance d4(90.0); // error constructor not accessible
 
-    string s;
-    getline(cin, s);
+    std::string s;
+    std::getline(std::cin, s);
     return 0;
 }
 ```
 
-請注意，常值數字必須使用小數點，否則數字會解譯為整數，而類型會與運算子不相容。 另請注意，針對浮點輸入，類型必須是**long double**，而對於整數類型，其**長度**必須很長。
+常值數位必須使用十進位。 否則，此數位會被視為整數，而類型也不會與運算子相容。 對於浮點輸入，類型必須是**long double**，而對於整數類型，其**長度**必須很長。
 
 ## <a name="raw-literals"></a>原始常值
 
-在原始使用者定義常值中，您定義的運算子會接受一連串 char 值的常值，而且由您決定是否將該序列解譯為數字或字串或是其他類型。 在此頁面上先前顯示的運算子清單中，`_r` 和 `_t` 可以用來定義原始常值：
+在未經處理的使用者定義常值中，您定義的運算子會接受常值做為 char 值的序列。 您必須以數位或字串或其他類型來解讀該序列。 在此頁面上先前顯示的運算子清單中，`_r` 和 `_t` 可以用來定義原始常值：
 
 ```cpp
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-您可以使用原始常值，來提供與編譯器所執行輸入序列不同之輸入序列的自訂解譯。 例如，您可以定義將序列 `4.75987` 轉換為自訂 Decimal 類型的常值，而不是 IEEE 754 浮點類型。 原始常值 (例如處理後的常值) 也可以用來執行輸入序列的編譯時期驗證。
+您可以使用原始常值來提供輸入序列的自訂轉譯，這與編譯器的一般行為不同。 例如，您可以定義將序列 `4.75987` 轉換為自訂 Decimal 類型的常值，而不是 IEEE 754 浮點類型。 原始常值（例如處理後常值）也可以用於輸入序列的編譯階段驗證。
 
 ### <a name="example-limitations-of-raw-literals"></a>範例：原始常值的限制
 

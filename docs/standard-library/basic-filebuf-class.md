@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: HT
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856485"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79129588"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf 類別
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果檔案指標不是 null 指標，**則為 true** 。
+如果檔案指標不是 null，**則為 true** 。
 
 ### <a name="example"></a>範例
 
@@ -413,7 +413,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 ### <a name="return-value"></a>傳回值
 
-如果檔案指標為 Null 指標，則函式會傳回 Null 指標。 否則，它會傳回 **this**。
+如果緩衝區已開啟，或如果檔案指標為 null 指標，則函式會傳回 null 指標。 否則，它會傳回 **this**。
 
 ### <a name="remarks"></a>備註
 

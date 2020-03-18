@@ -25,7 +25,6 @@ f1_keywords:
 - _fputwchar
 - fputwchar
 - _fputtchar
-- fputchar
 - _fputchar
 helpviewer_keywords:
 - fputchar function
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956940"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442955"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar、_fputwchar
 
@@ -60,18 +59,18 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待寫入字元。
 
 ## <a name="return-value"></a>傳回值
 
 所有這些函式都會傳回寫入的字元。 若為 **_fputchar**， **EOF**的傳回值表示錯誤。 若為 **_fputwchar**， **WEOF**的傳回值表示錯誤。 如果 c 是**Null**，則這些函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回**EOF** （或**WEOF**），並將**errno**設定為**EINVAL**。
 
-如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-這兩個函式都會將單一字元*c*寫入**stdout** ，並視情況將指標往前移。 **_fputchar**相當於`fputc( stdout )`。 它也相當於**putchar**，但只實作為函式，而不是函式和宏。 不同于**fputc**和**putchar**，這些函數與 ANSI 標準不相容。
+這兩個函式都會將單一字元*c*寫入**stdout** ，並視情況將指標往前移。 **_fputchar**相當於 `fputc( stdout )`。 它也相當於**putchar**，但只實作為函式，而不是函式和宏。 不同于**fputc**和**putchar**，這些函數與 ANSI 標準不相容。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -81,12 +80,12 @@ wint_t _fputwchar(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台相關聯的標準資料流程控制碼（**stdin**、 **stdout**和**stderr**）必須先重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺（UWP）應用程式中不支援主控台。 與主控台相關聯的標準資料流程控制碼（**stdin**、 **stdout**和**stderr**）必須先重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

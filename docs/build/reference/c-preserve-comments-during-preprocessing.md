@@ -3,7 +3,6 @@ title: /C (前置處理時保留註解)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.KeepComments
-- /c
 - VC.Project.VCCLWCECompilerTool.KeepComments
 helpviewer_keywords:
 - comments, not stripping during preprocessing
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f80ebf45dd396a3f92d9b755c56522d4731bb2d0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988364"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440270"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (前置處理時保留註解)
 
@@ -60,9 +59,9 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>＞。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>

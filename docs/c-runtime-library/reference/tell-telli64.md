@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946263"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443683"
 ---
 # <a name="_tell-_telli64"></a>_tell、_telli64
 
@@ -70,15 +69,15 @@ __int64 _telli64(
 
 ## <a name="remarks"></a>備註
 
-**_Tell**函數會取得與*handle*引數相關聯的檔案指標（如果有的話）的目前位置。 位置是以從檔案開頭的位元組數目來表示。 若為 **_telli64**函式，此值會以64位整數表示。
+**_Tell**函式會取得與*handle*引數相關聯的檔案指標（如果有的話）的目前位置。 位置是以從檔案開頭的位元組數目來表示。 若為 **_telli64**函式，此值會以64位整數表示。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
-|**_tell**、 **_telli64**|\<io.h>|
+|**_tell**， **_telli64**|\<io.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -120,7 +119,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Current file position is: 20

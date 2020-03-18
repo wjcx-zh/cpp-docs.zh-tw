@@ -1,19 +1,16 @@
 ---
-title: 對齊方式
+title: Alignment
 description: 新式C++中如何指定資料對齊方式。
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301661"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443663"
 ---
-# <a name="alignment"></a>對齊方式
+# <a name="alignment"></a>Alignment
 
 C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會將類別和結構成員對齊其大小值：在1個位元組的界限上 `bool` 和 `char`、在2個位元組的界限上 `short`、`int`、`long`和4位元組界限上的 `float`，以及8位元組界限上 `long long`、`double`和 `long double`。 
 
@@ -126,6 +123,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料結構對齊](https://en.wikipedia.org/wiki/Data_structure_alignment)

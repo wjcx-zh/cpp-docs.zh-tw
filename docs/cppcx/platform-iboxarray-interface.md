@@ -3,17 +3,17 @@ title: Platform::IBoxArray 介面
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Value
+- VCCORLIB/Platform::IBoxArray
+- VCCORLIB/Platform::IBoxArray::Value
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392072"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444166"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 介面
 
@@ -33,7 +33,7 @@ interface class IBoxArray
 
 ### <a name="remarks"></a>備註
 
-`IBoxArray` 是C++/CX 名稱`Windows::Foundation::IReferenceArray`。
+`IBoxArray` 是 `Windows::Foundation::IReferenceArray`C++的/cx 名稱。
 
 ### <a name="members"></a>成員
 
@@ -41,9 +41,9 @@ interface class IBoxArray
 
 |方法|描述|
 |------------|-----------------|
-|[值](#value)|傳回之前儲存在這個 `IBoxArray` 執行個體中的 Unboxed 陣列。|
+|[ReplTest1](#value)|傳回之前儲存在這個 `IBoxArray` 執行個體中的 Unboxed 陣列。|
 
-## <a name="value"></a> Iboxarray:: Value 屬性
+## <a name="value"></a>IBoxArray：： Value 屬性
 
 傳回一開始儲存在這個物件中的值。
 
@@ -64,7 +64,7 @@ boxed 值的類型。
 
 ### <a name="remarks"></a>備註
 
-如需範例，請參閱[Boxing](../cppcx/boxing-c-cx.md)。
+如需範例，請參閱[裝箱](../cppcx/boxing-c-cx.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,19 +1,17 @@
 ---
 title: 資料流 I/O
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746249"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444615"
 ---
 # <a name="stream-io"></a>資料流 I/O
 
@@ -21,7 +19,7 @@ ms.locfileid: "57746249"
 
 ## <a name="stream-io-routines"></a>資料流 I/O 常式
 
-|常式傳回的值|使用|
+|常式|使用|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md)( [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除資料流的錯誤指標|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|關閉資料流|

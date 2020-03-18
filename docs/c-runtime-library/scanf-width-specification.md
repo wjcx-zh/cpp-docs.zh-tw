@@ -1,28 +1,15 @@
 ---
 title: scanf 寬度規格
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811115"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444714"
 ---
 # <a name="scanf-width-specification"></a>scanf 寬度規格
 
@@ -106,7 +93,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 無論基於任何原因，當 `scanf` 函式停止讀取輸入欄位時，下一個輸入欄位會視為以未讀取的第一個字元開始。 衝突的字元（如果有的話）會視為未讀取。 這是下一個輸入欄位的第一個字元，或輸入資料流程後續讀取作業中的第一個字元。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

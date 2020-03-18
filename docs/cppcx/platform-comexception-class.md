@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500539"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444302"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 類別
 
@@ -34,7 +34,7 @@ COMException 也有下列型別的成員。
 
 **建構函式**
 
-|成員|描述|
+|member|描述|
 |------------|-----------------|
 |[COMException](#ctor)|初始化 COMException 類別的新執行個體。|
 
@@ -46,10 +46,10 @@ COMException 類別會從 [Platform::Object Class](../cppcx/platform-object-clas
 
 COMException 類別具有下列屬性。
 
-|成員|描述|
+|member|描述|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|對應於例外狀況的 HRESULT。|
-|[Exception::Message](#message)|說明例外狀況的訊息。|
+|[Exception：： HResult](#hresult)|對應於例外狀況的 HRESULT。|
+|[Exception：： Message](#message)|說明例外狀況的訊息。|
 
 ## <a name="derived-exceptions"></a>衍生的例外狀況
 
@@ -61,7 +61,7 @@ COMException 類別具有下列屬性。
 |AccessDeniedException|E_ACCESSDENIED|在存取資源或功能遭拒時擲回。|
 |ChangedStateException|E_CHANGED_STATE|在父集合變更後呼叫集合 Iterator 或集合檢視的方法時擲回，藉以讓該方法的結果失效。|
 |ClassNotRegisteredException|REGDB_E_CLASSNOTREG|在 COM 類別未登錄時擲回。|
-|DisconnectedException|RPC_E_DISCONNECTED|在物件與用戶端的連接中斷時擲回。|
+|DisconnectedException|RPC_E_DISCONNECTED|在物件與用戶端的連接中線時擲回。|
 |FailureException|E_FAIL|在作業失敗時擲回。|
 |InvalidArgumentException|E_INVALIDARG|當其中一個提供給方法的引數無效時擲回。|
 |InvalidCastException|E_NOINTERFACE|在類型無法轉換成另一種類型時擲回。|
@@ -73,15 +73,15 @@ COMException 類別具有下列屬性。
 
 ### <a name="requirements"></a>需求
 
-**最低支援用戶端:** Windows 8
+**最低支援用戶端：** Windows 8
 
-**最低支援伺服器:** Windows Server 2012
+**最低支援伺服器：** Windows Server 2012
 
-**命名空間：** 平台
+**命名空間：** Platform
 
 **中繼資料：** platform.winmd
 
-## <a name="ctor"></a>COMException:: COMException 函式
+## <a name="ctor"></a>COMException：： COMException 函式
 
 初始化 COMException 類別的新執行個體。
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 由例外狀況表示的錯誤 HRESULT。
 
-## <a name="hresult"></a>COMException:: HResult 屬性
+## <a name="hresult"></a>COMException：： HResult 屬性
 
 對應於例外狀況的 HRESULT。
 
@@ -113,9 +113,9 @@ public:
 
 ### <a name="remarks"></a>備註
 
-如需如何解讀 HRESULT 值的詳細資訊, 請參閱[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
+如需如何解讀 HRESULT 值的詳細資訊，請參閱[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
-## <a name="message"></a>COMException:: Message 屬性
+## <a name="message"></a>COMException：： Message 屬性
 
 說明例外狀況的訊息。
 

@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941731"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443018"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe、_wexecvpe
 
@@ -90,11 +89,11 @@ intptr_t _wexecvpe(
 
 這些函式中的每一個都會載入和執行新處理序，並傳遞命令列引數的指標陣列和環境設定的指標陣列。 這些函式會使用**PATH**環境變數來尋找要執行的檔案。
 
-**_Execvpe**函數會驗證它們的參數。 如果*cmdname*為 null 指標，或*argv*為 null 指標、指向空陣列的指標，或包含空字串做為第一個引數之陣列的指標，則這些函式會叫用不正確參數處理常式，如中[所述。參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。 未啟動任何處理序。
+**_Execvpe**函式會驗證其參數。 如果*cmdname*為 null 指標，或是*argv*為 null 指標、指向空陣列的指標，或包含空字串做為第一個引數之陣列的指標，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回-1。 未啟動任何處理序。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|選擇性標頭|
+|函式|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> 或 \<wchar.h>|\<errno.h>|

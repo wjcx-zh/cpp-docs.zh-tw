@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943416"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443046"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -61,11 +57,11 @@ double _cabs(
 
 ## <a name="remarks"></a>備註
 
-**_Cabs**函式會計算複數的絕對值，此數值必須是[_complex](../../c-runtime-library/standard-types.md)類型的結構。 結構*z*是由實陣列件*x*和虛陣列件*y*所組成。 呼叫 **_cabs**時，會產生相當於運算式`sqrt( z.x * z.x + z.y * z.y )`的值。
+**_Cabs**函式會計算複數的絕對值，此數值必須是[_complex](../../c-runtime-library/standard-types.md)類型的結構。 結構*z*是由實陣列件*x*和虛陣列件*y*所組成。 **_Cabs**的呼叫會產生相當於運算式 `sqrt( z.x * z.x + z.y * z.y )`的值。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 

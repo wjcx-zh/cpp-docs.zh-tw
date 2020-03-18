@@ -1,61 +1,59 @@
 ---
-title: 使用 CArchive &lt; &lt;並&gt;&gt;運算子
+title: 使用 CArchive &lt;&lt; 和 &gt;&gt; 運算子
 ms.date: 11/04/2016
-f1_keywords:
-- CArchive
 helpviewer_keywords:
 - objects [MFC], loading from previously stored values
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 9b4192e79b68388e45eb9837e056bbd881de2933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e175f35f2218341c69571c818711596180df4a6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411496"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442183"
 ---
-# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;並&gt;&gt;運算子
+# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt;&lt; 和 &gt;&gt; 運算子
 
-`CArchive` 提供 <\<和 >> 運算子用於寫入和讀取簡單資料型別，以及`CObject`s 與檔案。
+`CArchive` 提供 <\< 和 > > 運算子，以寫入和讀取簡單的資料類型，以及與檔案之間的 `CObject`。
 
-#### <a name="to-store-an-object-in-a-file-via-an-archive"></a>若要透過封存檔案中儲存物件
+#### <a name="to-store-an-object-in-a-file-via-an-archive"></a>透過封存將物件儲存在檔案中
 
-1. 下列範例示範如何透過封存檔案中儲存物件：
+1. 下列範例示範如何透過封存將物件儲存在檔案中：
 
    [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
-#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>若要載入的物件，從先前儲存在檔案中的值
+#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>若要從先前儲存在檔案中的值載入物件
 
-1. 下列範例顯示如何將物件從先前儲存在檔案中的值：
+1. 下列範例顯示如何從先前儲存在檔案中的值載入物件：
 
    [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
-通常，您儲存並載入資料，透過在封存檔案來回`Serialize`函式的`CObject`-衍生的類別，您必須已宣告 DECLARE_SERIALIZE 巨集。 參考`CArchive`物件會傳遞給您`Serialize`函式。 您呼叫`IsLoading`函式`CArchive`物件來判定是否`Serialize`已呼叫函數，以從檔案載入資料，或將資料儲存到檔案。
+通常，您會透過 `CObject`衍生類別之 `Serialize` 函式中的封存，在檔案中儲存和載入資料，而您必須使用 DECLARE_SERIALIZE 宏來宣告此功能。 `CArchive` 物件的參考會傳遞至您的 `Serialize` 函數。 您可以呼叫 `CArchive` 物件的 `IsLoading` 函式，以判斷是否已呼叫 `Serialize` 函數從檔案載入資料，或將資料儲存至檔案。
 
-`Serialize`函式的可序列化`CObject`-衍生的類別通常具有下列格式：
+可序列化 `CObject`衍生類別的 `Serialize` 函式通常具有下列格式：
 
 [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]
 
-上述程式碼範本正是其中 AppWizard 建立的相同`Serialize`函式的文件 (類別衍生自`CDocument`)。 此程式碼範本可協助您撰寫的程式碼更輕鬆地檢視，因為儲存的程式碼並載入程式碼應該一律是平行的如下列範例所示：
+上述程式碼範本與在檔的 `Serialize` 函式（衍生自 `CDocument`的類別）中建立的工作，完全相同。 這個程式碼範本可協助您撰寫更容易審查的程式碼，因為儲存程式碼和載入的程式碼應該一律平行，如下列範例所示：
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-程式庫會定義 **< \<** 並 **>>** 運算子`CArchive`做為第一個運算元的下列資料類型和類別做為第二個運算元的類型:
+程式庫會將 `CArchive` 的 **<\<** 和 **>>** 運算子定義為第一個運算元，並將下列資料類型和類別類型當做第二個運算元：
 
 ||||
 |-|-|-|
 |`CObject*`|**大小**和 `CSize`|**float**|
-|**WORD**|`CString`|**點**和 `CPoint`|
+|**WORD**|`CString`|**POINT**和 `CPoint`|
 |`DWORD`|**BYTE**|`RECT` 和 `CRect`|
 |**Double**|**LONG**|`CTime` 和 `CTimeSpan`|
 |`Int`|**COleCurrency**|`COleVariant`|
 |`COleDateTime`|`COleDateTimeSpan`||
 
 > [!NOTE]
->  儲存及載入`CObject`s 透過封存需要額外的考量。 如需詳細資訊，請參閱 <<c0> [ 中儲存及載入 CObjects，透過封存](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
+>  透過封存儲存和載入 `CObject`，需要額外的考慮。 如需詳細資訊，請參閱透過封存[儲存和載入 CObjects](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
 
-**CArchive <\<** 並 **>>** 運算子一律會傳回參考`CArchive`物件，也就是第一個運算元。 這可讓您鏈結運算子，如下所示：
+**CArchive <\<** 和 **>>** 運算子一律會傳回 `CArchive` 物件的參考，也就是第一個運算元。 這可讓您連鎖運算子，如下所示：
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

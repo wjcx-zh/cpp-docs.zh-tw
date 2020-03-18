@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419025"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441635"
 ---
 # <a name="hash_map-class"></a>hash_map 類別
 
@@ -124,7 +124,7 @@ class hash_map
 包含兩個函式物件的類型：一個 compare 類別可以將兩個項目值做為排序索引鍵加以比較，以決定其相對順序；一個雜湊函式，為項目的一元述詞對應索引鍵值，對應到 `size_t` 類型之不帶正負號的整數。 這個引數是選擇性的，而且 hash_compare <`Key`，較少的 <`Key`> > 是預設值。
 
 配置*器\*
-代表預存配置器物件的類型，封裝有關 hash_map 之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 allocator<pair <const `Key`, `Type`>>。
+代表預存配置器物件的類型，封裝有關 hash_map 之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是配置器\<組 < const `Key`，`Type`> >。
 
 ## <a name="remarks"></a>備註
 
@@ -213,7 +213,7 @@ hash_map 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 |[upper_bound](#upper_bound)|傳回迭代器，其會指向 `hash_map` 中索引鍵值大於特定索引鍵值的第一個項目。|
 |[value_comp](#value_comp)|擷取 `hash_map` 中用於排序項目值之比較物件的複本。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|

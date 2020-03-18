@@ -23,7 +23,6 @@ topic_type:
 f1_keywords:
 - _spawnvpe
 - wspawnvpe
-- spawnvpe
 - _wspawnvpe
 helpviewer_keywords:
 - _wspawnvpe function
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 65a3eaa9fb88ccd1d674f1ebf1bccea01f684b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ea71f5d7a9cd640e3d314eb48846bca995dca5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957838"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442702"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe、_wspawnvpe
 
@@ -81,7 +80,7 @@ intptr_t _wspawnvpe(
 
 ## <a name="return-value"></a>傳回值
 
-同步 **_spawnvpe**或 **_wspawnvpe** （針對*模式*指定的 **_P_WAIT** ）的傳回值是新進程的結束狀態。 非同步 **_spawnvpe**或 **_wspawnvpe** （針對*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值：
+同步 **_spawnvpe**或 **_wspawnvpe** （ **_P_WAIT**為*模式*指定）的傳回值是新進程的結束狀態。 非同步 **_spawnvpe**或 **_wspawnvpe** （為*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值：
 
 |||
 |-|-|
@@ -101,12 +100,12 @@ intptr_t _wspawnvpe(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_spawnvpe**|\<stdio.h> 或 \<process.h>|
 |**_wspawnvpe**|\<stdio.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

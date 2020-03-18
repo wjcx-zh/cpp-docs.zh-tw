@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418675"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442690"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -708,7 +708,7 @@ CImageList* CreateDragImage(
 
 ### <a name="remarks"></a>備註
 
-`CImageList` 物件是永久的，您必須在完成時將它刪除。 例如，
+`CImageList` 物件是永久的，您必須在完成時將它刪除。 例如：
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>範例
 
 下列程式碼範例示範 `GetGroupInfoByIndex` 方法。 在這個程式碼範例的先前章節中，我們建立了清單視圖控制項，它會在報表檢視中顯示兩個標題為 "ClientID" 和 "年級" 的資料行。 下列程式碼範例會抓取索引為0的群組相關資訊（如果有這類群組存在的話）。
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1457,6 +1458,7 @@ BOOL GetGroupRect(
 ### <a name="example"></a>範例
 
 下列程式碼範例會定義用來存取目前清單視圖控制項的變數 `m_listCtrl`。 下一個範例中會使用此變數。
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 如果第一個專案應該在第二個專案前面，則比較函式必須傳回負值，如果第一個專案應該在第二個專案後面，則為正值; 如果兩個專案相等，則為零。
 
 *LParam1*參數是與第一個比較的專案相關聯的32位值，而*lParam2*參數是與第二個專案相關聯的值。 這些值是在專案的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的*lParam*成員中，于插入清單時所指定的值。 *LParamSort*參數與*dwData*值相同。
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 此訊息類似[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)，但傳遞至比較函數的資訊類型除外。 在[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)中， *lParam1*和*lParam2*是要比較之專案的值。 在[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)中， *lParam1*是要比較之第一個專案的目前索引，而*lParam2*是第二個專案的目前索引。 您可以傳送[LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)訊息來取得專案的詳細資訊。
 
 如果第一個專案應該在第二個專案前面，則比較函式必須傳回負值，如果第一個專案應該在第二個專案後面，則為正值; 如果兩個專案相等，則為零。

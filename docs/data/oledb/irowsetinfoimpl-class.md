@@ -9,7 +9,6 @@ f1_keywords:
 - IRowsetInfoImpl.GetProperties
 - ATL::IRowsetInfoImpl::GetProperties
 - IRowsetInfoImpl::GetProperties
-- GetProperties
 - ATL::IRowsetInfoImpl::GetReferencedRowset
 - GetReferencedRowset
 - ATL.IRowsetInfoImpl.GetReferencedRowset
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7389ba689fb1f371b5fbf73045dcdc78cd465d88
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390720"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446191"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
 
-提供實作[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))介面。
+提供[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))介面的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -49,14 +48,14 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IRowsetInfoImpl`。
+衍生自 `IRowsetInfoImpl`的類別。
 
 *PropClass*<br/>
-使用者可定義屬性類別，預設值為*T*。
+使用者可定義的屬性類別，預設為*T*。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** altdb.h
+**標頭：** altdb。h
 
 ## <a name="members"></a>成員
 
@@ -64,17 +63,17 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|傳回資料列集所支援的所有屬性的目前的設定。|
-|[GetReferencedRowset](#getreferencedrowset)|要套用書籤的資料列集傳回的介面指標。|
-|[GetSpecification](#getspecification)|建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。|
+|[GetProperties](#getproperties)|傳回資料列集 (Rowset) 支援之所有屬性的目前設定。|
+|[GetReferencedRowset](#getreferencedrowset)|將介面指標傳回至要套用書簽的資料列集。|
+|[GetSpecification](#getspecification)|傳回建立此資料列集之物件 (命令或工作階段) 上的介面指標。|
 
 ## <a name="remarks"></a>備註
 
-在 資料列集上必要的介面。 這個類別會實作所使用的資料列集屬性[屬性集對應](../../data/oledb/begin-propset-map.md)命令類別中定義。 雖然所出現的資料列集類別，使用命令類別的屬性集，資料列集提供它自己的複本，執行階段內容中的命令或工作階段的物件建立時。
+資料列集上的強制介面。 這個類別會使用在命令類別中定義的[屬性集對應](../../data/oledb/begin-propset-map.md)來實作為資料列集屬性。 雖然資料列集類別似乎是使用命令類別的屬性集，但當資料列集是由命令或會話物件所建立時，它會隨附其本身的執行時間屬性複本。
 
-## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
+## <a name="getproperties"></a>IRowsetInfoImpl：： GetProperties
 
-傳回屬性的目前設定`DBPROPSET_ROWSET`群組。
+傳回 `DBPROPSET_ROWSET` 群組中屬性的目前設定。
 
 ### <a name="syntax"></a>語法
 
@@ -87,11 +86,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetInfo：： GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) 。
 
-## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
+## <a name="getreferencedrowset"></a>IRowsetInfoImpl：： GetReferencedRowset
 
-要套用書籤的資料列集傳回的介面指標。
+將介面指標傳回至要套用書簽的資料列集。
 
 ### <a name="syntax"></a>語法
 
@@ -103,11 +102,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85))中*OLE DB 程式設計人員參考*。 *IOrdinal*參數必須是書籤資料行。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetInfo：： GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) 。 *IOrdinal*參數必須是書簽資料行。
 
-## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
+## <a name="getspecification"></a>IRowsetInfoImpl：： GetSpecification
 
-建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。
+傳回建立此資料列集之物件 (命令或工作階段) 上的介面指標。
 
 ### <a name="syntax"></a>語法
 
@@ -118,13 +117,13 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetInfo：： GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) 。
 
 ### <a name="remarks"></a>備註
 
-使用這個方法搭配[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)來擷取從資料來源物件的屬性。
+使用此方法搭配[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) ，從資料來源物件中抓取屬性。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

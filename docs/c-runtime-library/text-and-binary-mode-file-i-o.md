@@ -1,8 +1,6 @@
 ---
 title: 文字和二進位模式檔案 I/O
 ms.date: 04/11/2018
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 75d302e625747d6e02e1d904c21542530d70d02f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738577"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444636"
 ---
 # <a name="text-and-binary-mode-file-io"></a>文字和二進位模式檔案 I/O
 
@@ -28,11 +26,11 @@ ms.locfileid: "57738577"
 
 - 維持目前的預設設定，並只在開啟選取的檔案時才指定替代模式。
 
-- 使用函式 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 來變更新開啟之檔案的預設模式。 使用 [_get_fmode](../c-runtime-library/reference/get-fmode.md) 來尋找目前的預設模式。 初始預設設定是文字模式 (**_O_TEXT**)。
+- 使用函式 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 來變更新開啟之檔案的預設模式。 使用 [_get_fmode](../c-runtime-library/reference/get-fmode.md) 來尋找目前的預設模式。 初始預設設定是文字模式 ( **_O_TEXT**)。
 
 - 透過在您的程式中設定全域變數 [_fmode](../c-runtime-library/fmode.md) 來變更預設轉譯模式。 函式 **_set_fmode** 可設定此變數的值，但您也可以直接設定此變數的值。
 
-當您呼叫 file-open 函式 (例如 [_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)[_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 或 [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)) 時，可以透過為函式 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 指定適當的引數來覆寫 **_fmode** 的目前預設設定。 **stdin**、**stdout** 和 **stderr** 資料流預設一律會在文字模式中開啟，但您也可以在開啟這些檔案時覆寫此預設值。 在檔案開啟後，使用 [_setmode](../c-runtime-library/reference/setmode.md) 利用檔案描述項來變更轉譯模式。
+當您呼叫 file-open 函式 (例如 [_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)[_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 或 [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)) 時，可以透過為函式 **_set_fmode** 指定適當的引數來覆寫 [_fmode](../c-runtime-library/reference/set-fmode.md) 的目前預設設定。 **stdin**、**stdout** 和 **stderr** 資料流預設一律會在文字模式中開啟，但您也可以在開啟這些檔案時覆寫此預設值。 在檔案開啟後，使用 [_setmode](../c-runtime-library/reference/setmode.md) 利用檔案描述項來變更轉譯模式。
 
 ## <a name="see-also"></a>另請參閱
 

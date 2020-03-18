@@ -21,15 +21,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -43,12 +37,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952194"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442831"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp、_mbsnbicmp_l
 
@@ -85,13 +79,13 @@ int _mbsnbicmp(
 |0|*string1*子字串與*string2*子字串相同。|
 |> 0|大於*string2*子字串的*string1*子字串。|
 
-發生錯誤時， **_mbsnbicmp**會傳回 **_NLSCMPERROR**，其定義于 String. h 和 g. h 中。
+發生錯誤時， **_mbsnbicmp**會傳回 **_NLSCMPERROR**，其定義在字串 .h 和 g. 中。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbicmp**函數會對最多一個*string1*和*string2*的第一個*計數*位元組執行序數比較。 比較是藉由將每個字元轉換成小寫來執行;[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)是區分大小寫的 **_mbsnbicmp**版本。 如果在比較*count*個字元之前，在任一字串中達到終止的 null 字元，則會結束比較。 如果字串在比較*計數*字元之前的任一字串中到達結束的 null 字元時相等，則較短的字串會較小。
+**_Mbsnbicmp**函數最多可執行*string1*和*string2*的第一個*計數*位元組的序數比較。 比較是藉由將每個字元轉換成小寫來執行;[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)是 **_mbsnbicmp**的區分大小寫版本。 如果在比較*count*個字元之前，在任一字串中達到終止的 null 字元，則會結束比較。 如果字串在比較*計數*字元之前的任一字串中到達結束的 null 字元時相等，則較短的字串會較小。
 
-**_mbsnbicmp**類似于[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)，不同之處在于它會將字串與*計數*位元組（而非字元）進行比較。
+**_mbsnbicmp**類似[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)，不同之處在于它會將字串與*計數*位元組（而非字元）進行比較。
 
 包含 ASCII 資料表中介於 'Z' 和 'a' 之間字元 ('['、'\\'、']'、'^'、'_' 和 '\`') 的兩個字串，會根據其大小寫以不同的方式進行比較。 例如，如果比較為小寫（"ABCDE" > "abcd ^"），則兩個字串 "ABCDE" 和 "ABCD ^" 會比較一種方式，如果是大寫，則會另一種方式（"ABCDE" < "ABCD ^"）。
 
@@ -108,7 +102,7 @@ int _mbsnbicmp(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 

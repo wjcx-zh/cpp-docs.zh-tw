@@ -1,20 +1,18 @@
 ---
 title: 搜尋和排序
 ms.date: 11/04/2016
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - sorting data
 - data [CRT], searching
 - searching [C++], CRT search functions
 - searching [C++]
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
-ms.openlocfilehash: a58526f65be4951b57804c08359c349e78d622fc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 92fe4c43f076a7cb0df5bc94521cfc8fb77b5da6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741766"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444678"
 ---
 # <a name="searching-and-sorting"></a>搜尋和排序
 
@@ -22,7 +20,7 @@ ms.locfileid: "57741766"
 
 ## <a name="searching-and-sorting-functions"></a>搜尋和排序函式
 
-|功能|搜尋或排序|
+|函式|搜尋或排序|
 |--------------|--------------------|
 |[bsearch](../c-runtime-library/reference/bsearch.md)|二進位搜尋|
 |[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|更安全的 **bsearch** 版本|

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855452"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420607"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 類別
 
@@ -165,7 +165,7 @@ CDocTemplate (
 *nIDResource*<br/>
 指定與檔案類型搭配使用之資源的識別碼。 這可能包括功能表、圖示、快速鍵對應表和字串資源。
 
-字串資源包含最多七個以 ' \n ' 字元分隔的子字串（如果未包含子字串，則需要 ' \n ' 字元做為預留位置，但不需要尾端 ' \n ' 字元）;這些子字串描述檔案類型。 如需子字串的詳細資訊，請參閱[GetDocString](#getdocstring)。 這個字串資源會在應用程式的資源檔中找到。 例如：
+字串資源包含最多七個以 ' \n ' 字元分隔的子字串（如果未包含子字串，則需要 ' \n ' 字元做為預留位置，但不需要尾端 ' \n ' 字元）;這些子字串描述檔案類型。 如需子字串的詳細資訊，請參閱[GetDocString](#getdocstring)。 這個字串資源會在應用程式的資源檔中找到。 例如，
 
 ```RC
 // MYCALC.RC

@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnl
 - wspawnl
 - _wspawnl
 - _spawnl
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: b39e76b010fd0d3b9ae3dc8d0104c69ce97ac87e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3ee169aac300aab6aabeeb05138d63cdbcabb580
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947817"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442772"
 ---
 # <a name="_spawnl-_wspawnl"></a>_spawnl、_wspawnl
 
@@ -77,12 +76,12 @@ intptr_t _wspawnl(
 *cmdname*<br/>
 待執行檔案的路徑。
 
-*arg0*， *arg1*，...*argn*<br/>
+*arg0*， *arg1*，... *...argn*<br/>
 引數指標的清單。 *Arg0*引數通常是指向*cmdname*的指標。 引數*arg1*到 *...argn*是形成新引數清單之字元字串的指標。 在 *...argn*之後，必須有**Null**指標來標記引數清單的結尾。
 
 ## <a name="return-value"></a>傳回值
 
-同步 **_spawnl**或 **_wspawnl** （針對*模式*指定的 **_P_WAIT** ）的傳回值是新進程的結束狀態。 非同步 **_spawnl**或 **_wspawnl** （針對*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
+同步 **_spawnl**或 **_wspawnl** （ **_P_WAIT**為*模式*指定）的傳回值是新進程的結束狀態。 非同步 **_spawnl**或 **_wspawnl** （為*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
 
 |||
 |-|-|
@@ -92,7 +91,7 @@ intptr_t _wspawnl(
 | **ENOEXEC** | 指定的檔案無法執行或可執行檔格式無效。 |
 | **ENOMEM** | 可用記憶體不足，無法執行新處理序。 |
 
-如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 這些函式會驗證它們的參數。 如果*cmdname*或*arg0*是空字串或 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL**，並傳回-1。 未繁衍任何新處理序。
 
@@ -102,7 +101,7 @@ intptr_t _wspawnl(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_spawnl**|\<process.h>|
 |**_wspawnl**|\<stdio.h> 或 \<wchar.h>|

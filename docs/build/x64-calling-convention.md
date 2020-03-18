@@ -4,11 +4,11 @@ description: 預設 x64 ABI 呼叫慣例的詳細資料。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
 ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856881"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417163"
 ---
 # <a name="x64-calling-convention"></a>x64 呼叫慣例
 
@@ -20,7 +20,7 @@ X64 應用程式二進位介面（ABI）預設會使用四個註冊的快速呼�
 
 若為原型函式，所有引數都會先轉換成預期的被呼叫端類型，然後才傳遞。 呼叫端負責將參數的空間配置給被呼叫端，而且必須一律配置足夠的空間來儲存四個暫存器參數，即使被呼叫端不接受這許多參數也一樣。 此慣例可簡化沒有原型 C 語言函式和 vararg C/C++函數的支援。 對於 vararg 或沒有原型函數，任何浮點值都必須在對應的一般用途暫存器中重複。 在呼叫之前，在陰影存放區之後，必須將前四個以外的任何參數儲存在堆疊上。 Vararg 函數詳細資料可以在[Varargs](#varargs)中找到。 [沒有原型](#unprototyped-functions)函式中會詳細說明沒有原型函數資訊。
 
-## <a name="alignment"></a>Alignment
+## <a name="alignment"></a>對齊方式
 
 大部分的結構會對齊其自然對齊方式。 主要的例外狀況是堆疊指標和 `malloc` 或 `alloca` 記憶體，其會對齊16個位元組，以協助效能。 超過16個位元組的對齊必須手動完成，但由於 XMM 作業的一般對齊大小是16個位元組，所以這個值應該適用于大部分的程式碼。 如需結構配置和對齊的詳細資訊，請參閱[類型和儲存體](../build/x64-software-conventions.md#types-and-storage)。 如需堆疊版面配置的詳細資訊，請參閱[x64 stack 使用](../build/stack-usage.md)方式。
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
 ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863160"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417492"
 ---
 # <a name="registry-and-typelib-global-functions"></a>登錄和 TypeLib 全域函式
 
@@ -415,7 +415,7 @@ HRESULT RegistryDataExchange(
 列舉值，指出函數應執行的作業。 如需允許的值，請參閱「備註」一節中的表格。
 
 *pItem*<br/>
-要在登錄中讀取或寫入之資料的指標。 資料也可以代表要從登錄中刪除的索引鍵。 預設值是 NULL。
+要在登錄中讀取或寫入之資料的指標。 資料也可以代表要從登錄中刪除的索引鍵。 預設值為 NULL。
 
 ### <a name="return-value"></a>傳回值
 

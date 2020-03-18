@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866930"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418682"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 
@@ -319,7 +319,7 @@ DWORD GetRange(
 
 ### <a name="return-value"></a>傳回值
 
-DWORD 值，其中包含表示已設定之範圍的旗標。 If
+DWORD 值，其中包含表示已設定之範圍的旗標。 如果
 
 `return value & GDTR_MAX` == 0
 

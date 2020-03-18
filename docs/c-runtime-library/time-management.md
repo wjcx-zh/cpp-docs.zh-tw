@@ -1,20 +1,18 @@
 ---
 title: 時間管理
 ms.date: 11/04/2016
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - dates, run-time library members
 - time, time management
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 24859a0b35274881b03b960807904ed38b19e354
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446781"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444584"
 ---
 # <a name="time-management"></a>時間管理
 
@@ -24,14 +22,14 @@ ms.locfileid: "65446781"
 
 ### <a name="time-routines"></a>時間常式
 
-|功能|使用|
+|函式|使用|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|將時間從 **struct tm** 型別轉換為字元字串。 這些具有 **_s** 尾碼的函式版本比較安全。|
 |[時鐘](../c-runtime-library/reference/clock.md)|傳回處理序的耗用時鐘時間。|
 |[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[_ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|將時間從 **time_t**、 **__time32_t** 或 **__time64_t** 型別轉換為字元字串。 這些具有 **_s** 尾碼的函式版本比較安全。|
 |[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|計算兩個時間之間的差異。|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|將目前的系統時間儲存至 **struct _timeb** 型別或 **struct __timeb64** 型別。這些具有 **_s** 尾碼的函式版本比較安全。|
-|[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|在開啟的檔案上設定修改時間|
+|[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|對開啟的檔案上設定修改時間|
 |[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|將時間從 **time_t** 型別轉換成 **struct tm**，或從 **__time64_t** 型別轉換成 **struct tm**。這些具有 **_s** 尾碼的函式版本比較安全。|
 |[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|將時間從 **time_t** 型別轉換成 **struct tm**，或從 **__time64_t** 型別轉換成具有本機修正的 **struct tm**。 這些具有 **_s** 尾碼的函式版本比較安全。|
 |[_mkgmtime、_mkgmtime32、_mkgmtime64](../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)|將時間轉換為格林威治標準時間的月曆值。|
@@ -47,7 +45,7 @@ ms.locfileid: "65446781"
 > 在所有的 Microsoft C/C++ 版本 (Microsoft C/C++ 7.0 版除外) 與所有的 Visual C++ 版本中，時間函式會傳回自 1970 年 1 月 1 日午夜起算所經過的秒數作為目前的時間。 在 Microsoft C/C++ 7.0 版中，**time** 將目前時間傳回為 1899 年 12 月 31 日午夜算起所經過的秒數。
 
 > [!NOTE]
-> 在 Visual Studio 2005 之前的 Visual C++ 與 Microsoft C/C++ 版本中，**time_t** 是 **long** **int** (32 位元)，因此自 2038 年 1 月 19 日 3:14:07 UTC 之後就無法使用。 **time_t** 現在預設等同於 **__time64_t**，但定義 **_USE_32BIT_TIME_T** 會將 **time_t** 變更為 **__time32_t**，並強制許多時間函式呼叫接受 32 位元 **time_t** 的版本。 如需詳細資訊，請參閱[標準類型](../c-runtime-library/standard-types.md)與個別時間函式文件中的註解。
+> C++在 Visual 和 Microsoft C/C++ Visual Studio 2005 之前的版本中， **time_t**是**長** **整數**（32位），因此無法用於過去3:14:07 年1月 2038 19 日（UTC）的日期。 **time_t** 現在預設等同於 **__time64_t**，但定義 **_USE_32BIT_TIME_T** 會將 **time_t** 變更為 **__time32_t**，並強制許多時間函式呼叫接受 32 位元 **time_t** 的版本。 如需詳細資訊，請參閱[標準類型](../c-runtime-library/standard-types.md)與個別時間函式文件中的註解。
 
 ## <a name="see-also"></a>另請參閱
 

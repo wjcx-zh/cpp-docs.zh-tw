@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856646"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421349"
 ---
 # <a name="dispatch-maps"></a>分派對應
 
@@ -144,7 +144,7 @@ DISP_FUNCTION(
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*VtsParams*引數是以空格分隔的清單，其中的值是來自 `VTS_*` 常數。 以空格分隔的其中一個或多個值（不是逗號）會指定函式的參數清單。 例如，
+*VtsParams*引數是以空格分隔的清單，其中的值是來自 `VTS_*` 常數。 以空格分隔的其中一個或多個值（不是逗號）會指定函式的參數清單。 例如：
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 

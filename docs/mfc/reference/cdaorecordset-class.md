@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867296"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418787"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 類別
 
@@ -678,7 +678,7 @@ virtual BOOL Find(
 - AFX_DAO_LAST 尋找相符字串的最後一個位置。
 
 *lpszFilter*<br/>
-用來尋找記錄的字串運算式（例如 SQL 語句中的**WHERE**子句，**其中**不含單字）。 例如：
+用來尋找記錄的字串運算式（例如 SQL 語句中的**WHERE**子句，**其中**不含單字）。 例如，
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
@@ -727,7 +727,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 
 `Find` 成員函式會從位置和下表所指定的方向進行搜尋：
 
-|尋找作業|Begin|搜尋方向|
+|尋找作業|開始|搜尋方向|
 |---------------------|-----------|----------------------|
 |`FindFirst`|記錄集的開頭|記錄集結尾|
 |`FindLast`|記錄集結尾|記錄集的開頭|

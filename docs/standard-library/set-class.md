@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: f1718b1cd362e54f63388b46025804ccc0396851
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865122"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419564"
 ---
 # <a name="set-class"></a>set 類別
 
@@ -169,7 +169,7 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |[value_compare](#value_compare)|類型，提供可比較兩個項目之函式物件，以判斷項目在集合中的相對順序。|
 |[value_type](#value_type)|此類型描述在做為值的產能上，做為集合的項目儲存的物件。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 |||
 |-|-|
@@ -199,7 +199,7 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |[upper_bound](#upper_bound)|傳回迭代器，指向集合中索引鍵大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|擷取集合中用於排序項目值的比較物件之複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |||
 |-|-|

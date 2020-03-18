@@ -195,11 +195,11 @@ helpviewer_keywords:
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
 ms.openlocfilehash: 0c5f5aaacf96eef52b36421534b02f9d2a5fff6c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854049"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421447"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式
 
@@ -235,7 +235,7 @@ ms.locfileid: "78854049"
 
 下表列出選項按鈕和核取方塊的特定樣式。 所有其他按鈕類型都會忽略這些樣式。 您可以選擇性地選擇下列一或多個動作。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |BS_LEFTTEXT|結合選項按鈕或核取方塊樣式時，文字會出現在選項按鈕或核取方塊的左邊。|
 |BS_RIGHTBUTTON|結合選項按鈕或核取方塊樣式時，文字會出現在選項按鈕或核取方塊的左邊。 此樣式等同于 BS_LEFTTEXT 樣式。|
@@ -245,7 +245,7 @@ ms.locfileid: "78854049"
 
 下表列出水準和垂直文字對齊選項。 您可以選擇性地選擇下列其中一項。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |BS_LEFT|靠左對齊按鈕矩形中的文字。 不過，如果按鈕是沒有 BS_RIGHTBUTTON 樣式的核取方塊或選項按鈕，則文字會靠左對齊核取方塊或選項按鈕的右邊。|
 |BS_RIGHT|靠右對齊按鈕矩形中的文字。 不過，如果按鈕是沒有 BS_RIGHTBUTTON 樣式的核取方塊或選項按鈕，則文字會靠右對齊核取方塊或選項按鈕的右邊。|
@@ -258,7 +258,7 @@ ms.locfileid: "78854049"
 
 下表列出的選項會指出按鈕中顯示的內容。 只顯示文字的按鈕類型會忽略這些樣式。 您可以選擇性地選擇下列其中一項。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |BS_BITMAP|指定按鈕顯示點陣圖。|
 |BS_ICON|指定按鈕顯示圖示。|
@@ -268,7 +268,7 @@ ms.locfileid: "78854049"
 
 下表列出可用於任何按鈕類型的其他選項。 您可以選擇性地選擇下列一或多個動作。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |BS_FLAT|指定按鈕為二維，而且不以預設陰影繪製，以建立3d 影像。|
 |BS_MULTILINE|如果文字字串太長而無法放入按鈕矩形中的單行，請將按鈕文字包裝成多行。|
@@ -278,7 +278,7 @@ ms.locfileid: "78854049"
 
 MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方塊樣式的詳細資訊，請參閱[下拉式方塊樣式（Windows）](/windows/win32/Controls/combo-box-styles)。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |CBS_AUTOHSCROLL|當使用者在行尾輸入字元時，自動將編輯控制項中的文字向右滾動。 如果未設定此樣式，則只會允許符合矩形界限的文字。|
 |CBS_DISABLENOSCROLL|當清單方塊未包含足夠的專案可供滾動時，清單方塊會顯示已停用的垂直捲動條。 若沒有這個樣式，在清單方塊中未包含足夠的項目時，捲軸會隱藏。|
@@ -298,7 +298,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 編輯樣式適用于[CEdit 類別](../../mfc/reference/cedit-class.md)物件。 在[CEdit：： Create](../../mfc/reference/cedit-class.md#create)的*dwStyle*參數中指定樣式的組合。 如需有關在 Windows 中編輯控制項樣式的詳細資訊，請參閱[編輯控制項樣式（Windows）](/windows/win32/Controls/edit-control-styles)。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |ES_AUTOHSCROLL|當使用者在行尾輸入字元時，自動將文字向右滾動10個字元。 當使用者按下 ENTER 鍵時，控制項會將所有文字都回復至位置0。|
 |ES_AUTOVSCROLL|當使用者在最後一行按下 ENTER 鍵時，自動將文字向上滾動一頁。|
@@ -319,7 +319,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 框架視窗樣式適用于[CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)物件。 在[CFrameWnd：： Create](../../mfc/reference/cframewnd-class.md#create)的*dwStyle*參數中指定樣式的組合。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |FWS_ADDTOTITLE|指定要附加至框架視窗標題結尾的資訊。 例如，「Microsoft Draw-在 Document1 中繪製」。 您可以指定在應用程式精靈的 [檔範本字串] 索引標籤中顯示的字串。 如果您需要關閉此選項，請覆寫 `CWnd::PreCreateWindow` 成員函式。|
 |FWS_PREFIXTITLE|在框架視窗標題中，顯示應用程式名稱之前的檔案名稱。 例如，「檔-WordPad」。 您可以指定在應用程式精靈的 [檔範本字串] 索引標籤中顯示的字串。 如果您需要關閉此選項，請覆寫 `CWnd::PreCreateWindow` 成員函式。|
@@ -329,7 +329,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 清單方塊樣式適用于[CListBox 類別](../../mfc/reference/clistbox-class.md)物件。 在[CListBox：： Create](../../mfc/reference/clistbox-class.md#create)的*dwStyle*參數中指定樣式的組合。 如需 Windows 中清單方塊樣式的詳細資訊，請參閱[清單方塊樣式（Windows）](/windows/win32/Controls/list-box-styles)。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |LBS_DISABLENOSCROLL|當清單方塊未包含足夠的專案可供滾動時，清單方塊會顯示已停用的垂直捲動條。 若沒有這個樣式，在清單方塊中未包含足夠的項目時，捲軸會隱藏。|
 |LBS_EXTENDEDSEL|使用者可以使用 SHIFT 鍵和滑鼠或特殊按鍵組合來選取多個專案。|
@@ -356,7 +356,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 ### <a name="message-box-types"></a>訊息方塊類型
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |MB_ABORTRETRYIGNORE|訊息方塊包含三個按鈕： [中止]、[重試] 和 [忽略]。|
 |MB_OK|訊息方塊包含一個按鈕： [確定]。|
@@ -367,7 +367,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 ### <a name="message-box-modality"></a>訊息方塊的形式
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |MB_APPLMODAL|使用者必須先回應訊息框，才能繼續進行目前視窗中的工作。 不過，使用者可以移至其他應用程式的視窗，並在這些視窗中工作。 如果未指定 MB_SYSTEMMODAL 或 MB_TASKMODAL，則預設值為 MB_APPLMODAL。|
 |MB_SYSTEMMODAL|所有應用程式都會暫止，直到使用者回應訊息框為止。 系統強制回應訊息框是用來通知使用者嚴重的錯誤，這可能會造成需要立即注意的錯誤，而且應該謹慎使用。|
@@ -375,7 +375,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 ### <a name="message-box-icons"></a>訊息方塊圖示
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |MB_ICONEXCLAMATION|訊息方塊中會出現驚嘆號圖示。|
 |MB_ICONINFORMATION|訊息方塊中會顯示由圓形中的 "I" 所組成的圖示。|
@@ -384,7 +384,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 ### <a name="message-box-default-buttons"></a>訊息方塊預設按鈕
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |MB_DEFBUTTON1|第一個按鈕是預設值。 請注意，除非指定 MB_DEFBUTTON2 或 MB_DEFBUTTON3，否則第一個按鈕一律是預設值。|
 |MB_DEFBUTTON2|第二個按鈕是預設值。|
@@ -394,7 +394,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 捲軸樣式適用于[CScrollBar 類別](../../mfc/reference/cscrollbar-class.md)物件。 在[CScrollBar：： Create](../../mfc/reference/cscrollbar-class.md#create)的*dwStyle*參數中指定樣式的組合。 如需 Windows 中捲軸控制項樣式的詳細資訊，請參閱[捲軸控制項樣式（Windows）](/windows/win32/Controls/scroll-bar-control-styles)。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |SBS_BOTTOMALIGN|與 SBS_HORZ 樣式搭配使用。 捲軸的下邊緣會對齊 `Create` 成員函式中所指定之矩形的下邊緣。 捲軸具有系統捲軸的預設高度。|
 |SBS_HORZ|指定水準捲軸。 如果未指定 SBS_BOTTOMALIGN 或 SBS_TOPALIGN 樣式，捲軸就會有 `Create` 成員函式中指定的高度、寬度和位置。|
@@ -411,7 +411,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 靜態樣式適用于[CStatic 類別](../../mfc/reference/cstatic-class.md)物件。 在[CStatic：： Create](../../mfc/reference/cstatic-class.md#create)的*dwStyle*參數中指定樣式的組合。 如需有關 Windows 中靜態控制項樣式的詳細資訊，請參閱[靜態控制項樣式（Windows）](/windows/win32/Controls/static-control-styles)。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |SS_BITMAP|指定要在靜態控制項中顯示的點陣圖。 指定的文字是資源檔中其他位置所定義點陣圖（而非檔案名）的名稱。 樣式會忽略 nWidth 和 nHeight 參數;控制項會自動調整其本身的大小，以容納點陣圖。|
 |SS_BLACKFRAME|指定具有與視窗框架相同色彩繪製之框架的方塊。 預設為黑色。|
@@ -445,7 +445,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 視窗樣式適用于[CWnd 類別](../../mfc/reference/cwnd-class.md)物件。 在[CWnd：： Create](../../mfc/reference/cwnd-class.md#create)或[Cwnd：： CreateEx](../../mfc/reference/cwnd-class.md#createex)的*dwStyle*參數中指定樣式的組合。 如需 Windows 視窗樣式的詳細資訊，請參閱[視窗樣式（Windows）](/windows/win32/winmsg/window-styles)。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |WS_BORDER|建立具有框線的視窗。|
 |WS_CAPTION|建立具有標題列的視窗（隱含 WS_BORDER 樣式）。 不能與 WS_DLGFRAME 樣式一起使用。|
@@ -479,7 +479,7 @@ MFC 中提供下列下拉式方塊樣式。 如需 Windows 中下拉式列示方
 
 延伸視窗樣式適用于[CWnd 類別](../../mfc/reference/cwnd-class.md)物件。 在[CWnd：： CreateEx](../../mfc/reference/cwnd-class.md#createex)的*dwExStyle*參數中指定樣式的組合。 如需 Windows 延伸視窗樣式的詳細資訊，請參閱[擴充視窗樣式（Windows）](/windows/win32/winmsg/extended-window-styles)。
 
-|Style|描述|
+|樣式|描述|
 |-----------|-----------------|
 |WS_EX_ACCEPTFILES|指定使用此樣式所建立的視窗接受拖放檔案。|
 |WS_EX_APPWINDOW|當視窗可見時，將最上層視窗強制到工作列上。|

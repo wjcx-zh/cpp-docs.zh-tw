@@ -18,11 +18,11 @@ helpviewer_keywords:
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
 ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866169"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417919"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 類別
 
@@ -75,7 +75,7 @@ class CComAutoThreadModule : public CComModule
 
 當您想要在多個單元中建立物件時，請從 `CComAutoThreadModule` 衍生您的模組。 您也必須在物件的類別定義中包含[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)宏，以將[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)指定為 Class Factory。
 
-根據預設，ATL COM 程式（Visual Studio .NET 中的 ATL 專案 Wizard）會從 `CComModule`衍生您的模組。 若要使用 `CComAutoThreadModule`，請修改類別定義。 例如：
+根據預設，ATL COM 程式（Visual Studio .NET 中的 ATL 專案 Wizard）會從 `CComModule`衍生您的模組。 若要使用 `CComAutoThreadModule`，請修改類別定義。 例如，
 
 [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]
 

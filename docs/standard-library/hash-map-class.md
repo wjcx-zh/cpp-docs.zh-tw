@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856713"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419025"
 ---
 # <a name="hash_map-class"></a>hash_map 類別
 
@@ -213,7 +213,7 @@ hash_map 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 |[upper_bound](#upper_bound)|傳回迭代器，其會指向 `hash_map` 中索引鍵值大於特定索引鍵值的第一個項目。|
 |[value_comp](#value_comp)|擷取 `hash_map` 中用於排序項目值之比較物件的複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

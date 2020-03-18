@@ -19,11 +19,11 @@ helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
 ms.openlocfilehash: 1e1674bad1164e640939d430a860beac7a6e4208
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855662"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417884"
 ---
 # <a name="com_interface_entry-macros"></a>COM_INTERFACE_ENTRY 宏
 
@@ -328,7 +328,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-請注意，COM 對應中的第一個專案必須是包含 COM 對應之物件上的介面。 因此，您無法使用 COM_INTERFACE_ENTRY_CHAIN 來啟動您的 COM 對應專案，這會導致在物件的 COM 對應中出現**COM_INTERFACE_ENTRY_CHAIN （** `COtherObject` **）** 的位置時，搜尋不同物件的 com 對應。 如果您想要先搜尋另一個物件的 COM 對應，請將 `IUnknown` 的介面專案新增至您的 COM 對應，然後再連結另一個物件的 COM 對應。 例如：
+請注意，COM 對應中的第一個專案必須是包含 COM 對應之物件上的介面。 因此，您無法使用 COM_INTERFACE_ENTRY_CHAIN 來啟動您的 COM 對應專案，這會導致在物件的 COM 對應中出現**COM_INTERFACE_ENTRY_CHAIN （** `COtherObject` **）** 的位置時，搜尋不同物件的 com 對應。 如果您想要先搜尋另一個物件的 COM 對應，請將 `IUnknown` 的介面專案新增至您的 COM 對應，然後再連結另一個物件的 COM 對應。 例如，
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

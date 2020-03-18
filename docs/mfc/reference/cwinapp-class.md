@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855460"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420999"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -270,8 +270,8 @@ class CWinApp : public CWinThread
 |[CWinApp：： RestartInstance](#restartinstance)|處理重新開機管理員起始的應用程式重新開機。|
 |[CWinApp：： RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|判斷重新開機管理員是否會在重新開機應用程式時，還原自動儲存的檔案。|
 |[CWinApp：： Run](#run)|執行預設訊息迴圈。 覆寫以自訂訊息迴圈。|
-|[CWinApp：： RunAutomated](#runautomated)|測試應用程式在 **/Automation**選項中的命令列。 已過時。 請改為在呼叫[ParseCommandLine](#parsecommandline)之後，使用[CCommandLineInfo：： m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)中的值。|
-|[CWinApp：： RunEmbedded](#runembedded)|測試應用程式在 **/Embedding**選項中的命令列。 已過時。 請改為在呼叫[ParseCommandLine](#parsecommandline)之後，使用[CCommandLineInfo：： m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)中的值。|
+|[CWinApp：： RunAutomated](#runautomated)|測試應用程式在 **/Automation**選項中的命令列。 已經過時： 請改為在呼叫[ParseCommandLine](#parsecommandline)之後，使用[CCommandLineInfo：： m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)中的值。|
+|[CWinApp：： RunEmbedded](#runembedded)|測試應用程式在 **/Embedding**選項中的命令列。 已經過時： 請改為在呼叫[ParseCommandLine](#parsecommandline)之後，使用[CCommandLineInfo：： m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)中的值。|
 |[CWinApp：： SaveAllModified](#saveallmodified)|提示使用者儲存所有修改過的檔。|
 |[CWinApp：： SelectPrinter](#selectprinter)|選取使用者先前透過 [列印] 對話方塊所表示的印表機。|
 |[CWinApp：： SetHelpMode](#sethelpmode)|設定及初始化應用程式所使用的說明類型。|
@@ -1437,7 +1437,7 @@ LPCTSTR m_pszAppName;
 由全域函數[AfxGetAppName](application-information-and-management.md#afxgetappname)傳回。 `m_pszAppName` 是**const char** <strong>\*</strong>類型的公用變數。
 
 > [!NOTE]
-> 如果您將值指派給 `m_pszAppName`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如：
+> 如果您將值指派給 `m_pszAppName`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如，
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 不同于[m_pszAppName](#m_pszappname)，此名稱不能包含空白。 `m_pszExeName` 是**const char** <strong>\*</strong>類型的公用變數。
 
 > [!NOTE]
-> 如果您將值指派給 `m_pszExeName`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如：
+> 如果您將值指派給 `m_pszExeName`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如，
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 根據預設，架構會將 `m_pszHelpFilePath` 初始化為具有 "的應用程式名稱。未附加的「.HLP」。 若要變更說明檔的名稱，請將 `m_pszHelpFilePath` 設定為指向包含所需說明檔完整名稱的字串。 執行此動作的方便位置是在應用程式的[InitInstance](#initinstance)函數中。 `m_pszHelpFilePath` 是**const char** <strong>\*</strong>類型的公用變數。
 
 > [!NOTE]
-> 如果您將值指派給 `m_pszHelpFilePath`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如：
+> 如果您將值指派給 `m_pszHelpFilePath`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如，
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` 是**const char** <strong>\*</strong>類型的公用變數。
 
 > [!NOTE]
-> 如果您將值指派給 `m_pszProfileName`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如：
+> 如果您將值指派給 `m_pszProfileName`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如，
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
@@ -1510,7 +1510,7 @@ LPCTSTR m_pszRegistryKey;
 
 - 值會儲存在登錄機碼中。 應用程式佈建檔設定的名稱會附加至下列登錄機碼： HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/。
 
-如果您將值指派給 `m_pszRegistryKey`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如：
+如果您將值指派給 `m_pszRegistryKey`，它就必須在堆積上動態配置。 `CWinApp` 的析構函式會使用這個指標呼叫**free**（）。 您想要使用 `_tcsdup`（）執行時間程式庫函式來進行配置。 此外，在指派新值之前，請先釋放與目前指標相關聯的記憶體。 例如，
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 

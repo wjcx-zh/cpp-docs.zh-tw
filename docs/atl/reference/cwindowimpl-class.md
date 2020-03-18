@@ -19,11 +19,11 @@ helpviewer_keywords:
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
 ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862958"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417765"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 類別
 
@@ -86,7 +86,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 您可以使用 `CWindowImpl` 來建立視窗，或將現有的視窗子類別化。 `CWindowImpl` 視窗程式會使用訊息對應，將訊息導向至適當的處理常式。
 
-`CWindowImpl::Create` 會根據[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)所管理的視窗類別資訊來建立視窗。 `CWindowImpl` 包含[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)宏，這表示 `CWndClassInfo` 會註冊新的視窗類別。 如果您想要將現有的視窗類別設為超級類別，請從 `CWindowImpl` 衍生您的類別，並包含[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 在這種情況下，`CWndClassInfo` 會依據現有的類別註冊視窗類別，但是會使用 `CWindowImpl::WindowProc`。 例如：
+`CWindowImpl::Create` 會根據[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)所管理的視窗類別資訊來建立視窗。 `CWindowImpl` 包含[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)宏，這表示 `CWndClassInfo` 會註冊新的視窗類別。 如果您想要將現有的視窗類別設為超級類別，請從 `CWindowImpl` 衍生您的類別，並包含[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 在這種情況下，`CWndClassInfo` 會依據現有的類別註冊視窗類別，但是會使用 `CWindowImpl::WindowProc`。 例如，
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
@@ -104,7 +104,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 `CWindowImpl` 衍生自 `CWindowImplBaseT`，而此衍生自 `CWindowImplRoot`，而此衍生自 `TBase` 和[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
-|如需下列項目的詳細資訊|請參閱|
+|如需詳細資訊|請參閱|
 |--------------------------------|---------|
 |建立控制項|[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)|
 |在 ATL 中使用視窗|[ATL 視窗類別](../../atl/atl-window-classes.md)|
@@ -150,7 +150,7 @@ HWND Create(
 在指定視窗位置的[矩形](/previous-versions/dd162897\(v=vs.85\))結構。 `RECT` 可以透過指標或傳址方式來傳遞。
 
 *szWindowName*<br/>
-在指定視窗的名稱。 預設值是 NULL。
+在指定視窗的名稱。 預設值為 NULL。
 
 *dwStyle*<br/>
 在視窗的樣式。 這個值會與視窗的特性類別所提供的樣式結合。 預設值可讓特性類別完全控制樣式。 如需可能值的清單，請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。

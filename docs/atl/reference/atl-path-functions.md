@@ -42,11 +42,11 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
 ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865017"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418185"
 ---
 # <a name="atl-path-functions"></a>ATL 路徑函式
 
@@ -66,7 +66,7 @@ ATL 提供與 atlpath.h 類別來以[CPathT](cpatht-class.md)的形式操作路�
 |`CPathA`|使用 `CStringA`的特製化[CPathT](cpatht-class.md) 。|
 |`CPathW`|使用 `CStringW`的特製化[CPathT](cpatht-class.md) 。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 |||
 |-|-|

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855783"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418290"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定義與使用類別和結構 (C++/CLI)
 
@@ -226,8 +226,8 @@ in Public_Class
 
 |規範|效果|
 |---------------|------------|
-|公開|成員可在元件內部和外部存取。  如需詳細資訊，請參閱[public](../cpp/public-cpp.md) 。|
-|私用|成員無法存取，不在元件內部或外部。  如需詳細資訊，請參閱[私](../cpp/private-cpp.md)用。|
+|public|成員可在元件內部和外部存取。  如需詳細資訊，請參閱[public](../cpp/public-cpp.md) 。|
+|private|成員無法存取，不在元件內部或外部。  如需詳細資訊，請參閱[私](../cpp/private-cpp.md)用。|
 |受保護的 - protected|成員可在元件內部和外部存取，但僅限於衍生的類型。  如需詳細資訊，請參閱[protected](../cpp/protected-cpp.md) 。|
 |內部|成員在元件內是公用的，但在元件外部是私用的。  `internal` 是即時線上關鍵字。  如需詳細資訊，請參閱[即時線上關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
 |公開保護或受保護的公用|成員在元件內是公用的，但在元件外部受到保護。|
@@ -497,7 +497,7 @@ in static constructor
 
 呼叫預設的索引子時，`this` 指標的這些不同的語義可能會導致非預期的行為。 下一個範例顯示在 ref 型別和實值型別中存取預設索引子的正確方式。
 
-如需相關資訊，請參閱
+如需詳細資訊，請參閱
 
 - [物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 

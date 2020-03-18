@@ -3,24 +3,22 @@ title: CCustomCommand (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
 - cmyprovidercommand
-- myproviderrs.h
 - ccustomcommand
-- customrs.h
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 - CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-ms.openlocfilehash: b10d7bccae6fa9b86d072b8e13791f23516b2c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61bd60b63490303c65729843c3c0351a570a8056
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230715"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444147"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-`CCustomCommand`類別是提供者命令物件的實作。 它提供的實作`IAccessor`， `ICommandText`，和`ICommandProperties`介面。 `IAccessor`介面是一個資料列集相同。 命令物件會使用存取子，指定的參數繫結。 資料列集物件會使用它們來指定輸出資料行的繫結。 `ICommandText`介面是實用的方式，指定的命令文字。 這個範例會使用`ICommandText`稍後介面，它會新增自訂程式碼時，它也會覆寫`ICommand::Execute`方法。 `ICommandProperties`介面會處理所有的命令和資料列集物件的屬性。
+`CCustomCommand` 類別是提供者命令物件的執行。 它提供了 `IAccessor`、`ICommandText`和 `ICommandProperties` 介面的執行。 `IAccessor` 介面與資料列集中的介面相同。 命令物件會使用存取子來指定參數的系結。 資料列集物件會使用它們來指定輸出資料行的系結。 `ICommandText` 介面是一種以原文方式指定命令的實用方法。 這個範例會在稍後新增自訂程式碼時使用 `ICommandText` 介面;它也會覆寫 `ICommand::Execute` 方法。 `ICommandProperties` 介面會處理命令和資料列集物件的所有屬性。
 
 ```cpp
 // CCustomCommand
@@ -35,11 +33,11 @@ class ATL_NO_VTABLE CCustomCommand :
    public IColumnsInfoImpl<CCustomCommand>
 ```
 
-`IAccessor`介面管理用於命令和資料列集的所有繫結。 取用者可以呼叫`IAccessor::CreateAccessor`陣列的`DBBINDING`結構。 每個`DBBINDING`結構包含的資料行繫結應該如何處理 （例如型別和長度） 的相關資訊。 提供者會接收此結構，並接著會判斷應該傳送資料的方式，以及是否需要任何轉換。 `IAccessor`介面處理命令中的任何參數時，會在命令物件。
+`IAccessor` 介面會管理命令和資料列集中所使用的所有系結。 取用者會使用 `DBBINDING` 結構的陣列來呼叫 `IAccessor::CreateAccessor`。 每個 `DBBINDING` 結構都會包含如何處理資料行系結的相關資訊（例如類型和長度）。 提供者會接收結構，然後決定要如何傳送資料，以及是否需要進行任何轉換。 命令物件中會使用 `IAccessor` 介面來處理命令中的任何參數。
 
-命令物件也會提供實作`IColumnsInfo`。 OLE DB 需要`IColumnsInfo`介面。 介面可讓取用者來擷取命令的參數的相關資訊。 資料列集物件會使用`IColumnsInfo`介面，以傳回給提供者的輸出資料行的相關資訊。
+Command 物件也提供 `IColumnsInfo`的執行。 OLE DB 需要 `IColumnsInfo` 介面。 介面可讓取用者從命令取得參數的相關資訊。 資料列集物件會使用 `IColumnsInfo` 介面，將輸出資料行的相關資訊傳回給提供者。
 
-提供者也包含名為介面`IObjectWithSite`。 `IObjectWithSite`介面已實作的 ATL 2.0，以及可讓實作者將本身相關的資訊傳遞給它的子系。 命令物件會使用`IObjectWithSite`資訊向任何產生的建立者是誰的相關資料列集物件。
+提供者也包含稱為 `IObjectWithSite`的介面。 `IObjectWithSite` 介面是在 ATL 2.0 中實作為，可讓實施者將本身的相關資訊傳遞給其子系。 命令物件會使用 `IObjectWithSite` 資訊，告訴任何產生的資料列集物件建立者。
 
 ## <a name="see-also"></a>另請參閱
 

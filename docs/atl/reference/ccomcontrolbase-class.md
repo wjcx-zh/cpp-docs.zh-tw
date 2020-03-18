@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 ms.openlocfilehash: 36afd716009848ccd2e2f0ab966f66f573acdfd8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862909"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417891"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 類別
 
@@ -321,7 +321,7 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 ### <a name="parameters"></a>參數
 
 *prcPosRec*<br/>
-已保留。
+保留。
 
 *hwndParent*<br/>
 包含控制項之視窗的控制碼。
@@ -1303,13 +1303,13 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 ### <a name="parameters"></a>參數
 
 *nMsg*<br/>
-已保留。
+保留。
 
 *wParam*<br/>
-已保留。
+保留。
 
 *lParam*<br/>
-已保留。
+保留。
 
 *bHandled*<br/>
 指出是否已成功處理視窗訊息的旗標。 預設值為 FALSE。
@@ -1332,13 +1332,13 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 ### <a name="parameters"></a>參數
 
 *nMsg*<br/>
-已保留。
+保留。
 
 *wParam*<br/>
-已保留。
+保留。
 
 *lParam*<br/>
-已保留。
+保留。
 
 *bHandled*<br/>
 指出是否已成功處理視窗訊息的旗標。 預設值為 FALSE。
@@ -1361,16 +1361,16 @@ LRESULT OnPaint(UINT /* nMsg */,
 ### <a name="parameters"></a>參數
 
 *nMsg*<br/>
-已保留。
+保留。
 
 *wParam*<br/>
 現有的 HDC。
 
 *lParam*<br/>
-已保留。
+保留。
 
 *lResult*<br/>
-已保留。
+保留。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1394,13 +1394,13 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 ### <a name="parameters"></a>參數
 
 *nMsg*<br/>
-已保留。
+保留。
 
 *wParam*<br/>
-已保留。
+保留。
 
 *lParam*<br/>
-已保留。
+保留。
 
 *bHandled*<br/>
 指出是否已成功處理視窗訊息的旗標。 預設值為 FALSE。
@@ -1425,10 +1425,10 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-已保留。
+保留。
 
 *hRet*<br/>
-已保留。
+保留。
 
 ### <a name="return-value"></a>傳回值
 

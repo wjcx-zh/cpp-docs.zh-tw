@@ -345,11 +345,11 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866678"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420215"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 類別
 
@@ -3636,7 +3636,7 @@ virtual void OnDrawSpinButtons(
 在指定微調控制項界限的矩形。
 
 *nState*<br/>
-在表示微調控制項狀態的旗標。 如需詳細資訊，請參閱「備註」一節。
+在表示微調控制項狀態的旗標。 如需詳細資訊，請參閱＜備註＞一節。
 
 *bOrientation*<br/>
 在布林值參數，指定微調控制項的方向。 TRUE 值表示微調控制項是水準的。 否則，它會是垂直的。

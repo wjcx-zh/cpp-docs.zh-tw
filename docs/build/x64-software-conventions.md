@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865596"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417191"
 ---
 # <a name="x64-software-conventions"></a>x64 軟體慣例
 
@@ -193,7 +193,7 @@ X64 架構提供16個一般用途的暫存器（這裡稱為整數暫存器）�
 
 ||||
 |-|-|-|
-|註冊|狀態|使用|
+|註冊|狀態|用法|
 |RAX|Volatile|傳回值暫存器|
 |RCX|Volatile|第一個整數引數|
 |RDX|Volatile|第二個整數引數|

@@ -1,8 +1,6 @@
 ---
-title: Windows Sockets:使用類別 CAsyncSocket
+title: Windows Sockets：使用類別 CAsyncSocket
 ms.date: 11/04/2016
-f1_keywords:
-- CAsyncSocket
 helpviewer_keywords:
 - CAsyncSocket class [MFC], programming model
 - Windows Sockets [MFC], asynchronous
@@ -11,34 +9,34 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3977308776c4ec6fed844038c4453ad03d065f98
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399560"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445949"
 ---
-# <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets:使用類別 CAsyncSocket
+# <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets：使用類別 CAsyncSocket
 
-這篇文章說明如何使用類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 請注意，這個類別會封裝 Windows Sockets API，在極低的層級。 `CAsyncSocket` 是以供程式設計人員知道詳細的網路通訊，但是想要的網路事件的通知回呼的便利性。 根據這項假設，本文提供基本的指令。 您可能應該考慮使用`CAsyncSocket`如果您想要處理的 MFC 應用程式中的多個網路通訊協定的 Windows 通訊端的簡易，但不是想要犧牲彈性。 您也可能會認為您可以直接自行比您無法使用類別的較通用的替代模型的程式設計更多通訊來取得較好的效率`CSocket`。
+本文說明如何使用 [類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)]。 請注意，這個類別會以非常低的層級封裝 Windows 通訊端 API。 `CAsyncSocket` 是供熟悉網路通訊的程式設計人員使用，但想要回呼以取得網路事件通知的便利性。 根據這項假設，本文只提供基本的指示。 如果您想要讓 Windows 通訊端能夠輕鬆處理 MFC 應用程式中的多個網路通訊協定，但不想犧牲彈性，您應該考慮使用 `CAsyncSocket`。 您可能也覺得，您可以透過更直接的方式設計通訊，而不是使用類別 `CSocket`的一般替代模型，以獲得更好的效率。
 
-`CAsyncSocket` 記載於*MFC 參考 》*。 視覺化C++也提供 Windows Sockets 規格，位於 Windows SDK。 詳細資料會保留給您。 視覺化C++未提供的範例應用程式`CAsyncSocket`。
+`CAsyncSocket` 記載于*MFC 參考*中。 視覺C++效果也會提供位於 Windows SDK 中的 Windows 通訊端規格。 詳細資料會留給您。 視覺C++效果不會提供 `CAsyncSocket`的範例應用程式。
 
-如果您不是高了解網路通訊，而且想要一個簡單的解決方案，使用類別[CSocket](../mfc/reference/csocket-class.md)使用`CArchive`物件。 請參閱[Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)如需詳細資訊。
+如果您不太熟悉網路通訊，而且想要簡單的解決方案，請使用 [類別[CSocket](../mfc/reference/csocket-class.md) ] 搭配 `CArchive` 物件。 如需詳細資訊，請參閱[Windows 通訊端：使用具有封存的通訊端](../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-本文涵蓋：
+本文將說明：
 
-- 建立和使用`CAsyncSocket`物件。
+- 建立和使用 `CAsyncSocket` 物件。
 
-- [您的責任與 CAsyncSocket](#_core_your_responsibilities_with_casyncsocket)。
+- [您對 CAsyncSocket 的責任](#_core_your_responsibilities_with_casyncsocket)。
 
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> 建立和使用 CAsyncSocket 物件
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a>建立和使用 CAsyncSocket 物件
 
 #### <a name="to-use-casyncsocket"></a>若要使用 CAsyncSocket
 
-1. 建構[CAsyncSocket](../mfc/reference/casyncsocket-class.md)物件，並使用物件來建立基礎**通訊端**處理。
+1. 建立[CAsyncSocket](../mfc/reference/casyncsocket-class.md)物件，並使用物件來建立基礎**通訊端**控制碼。
 
-   建立通訊端會遵循兩階段建構的 MFC 模式。
+   建立通訊端時，會遵循兩階段結構的 MFC 模式。
 
    例如：
 
@@ -48,66 +46,66 @@ ms.locfileid: "62399560"
 
    [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-   上述的第一個建構函式會建立`CAsyncSocket`堆疊上的物件。 第二個建構函式建立`CAsyncSocket`在堆積上。 第一個[建立](../mfc/reference/casyncsocket-class.md#create)上述的呼叫會使用預設參數建立資料流通訊端。 第二個`Create`呼叫建立資料包通訊端與指定的連接埠和位址。 (您可以使用`Create`使用任一建構方法的版本。)
+   上述第一個函式會在堆疊上建立 `CAsyncSocket` 物件。 第二個函式會在堆積上建立 `CAsyncSocket`。 上述第一個[Create](../mfc/reference/casyncsocket-class.md#create)呼叫會使用預設參數來建立資料流程通訊端。 第二個 `Create` 呼叫會使用指定的埠和位址來建立資料包通訊端。 （您可以使用任一種「結構」方法來 `Create` 版本）。
 
-   參數以`Create`是：
+   要 `Create` 的參數包括：
 
-   - 「 連接埠 」: 短整數。
+   - 「埠」：短整數。
 
-         For a server socket, you must specify a port. For a client socket, you typically accept the default value for this parameter, which lets Windows Sockets select a port.
+      若為伺服器通訊端，您必須指定埠。 針對用戶端通訊端，您通常會接受此參數的預設值，這可讓 Windows Socket 選取埠。
 
-   - 通訊端類型：**SOCK_STREAM** （預設值） 或**SOCK_DGRAM**。
+   - 通訊端類型： **SOCK_STREAM** （預設值）或**SOCK_DGRAM**。
 
-   - 通訊端 「 地址，「 例如 」 ftp.microsoft.com"或"128.56.22.8 」。
+   - 通訊端「位址」，例如 "ftp.microsoft.com" 或 "128.56.22.8"。
 
-         This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
+      這是您網路上的網際網路通訊協定（IP）位址。 您可能一律會依賴此參數的預設值。
 
-   詞彙 「 連接埠 」 和 「 通訊端位址 」 會在說明[Windows Sockets:連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)。
+   「埠」和「通訊端位址」等詞彙會在[Windows socket：埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)中說明。
 
-1. 如果用戶端通訊端，通訊端物件連接到伺服器通訊端，使用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)。
+1. 如果通訊端是用戶端，請使用[CAsyncSocket：： connect](../mfc/reference/casyncsocket-class.md#connect)，將通訊端物件連接到伺服器通訊端。
 
      -或-
 
-   如果通訊端是伺服器，設定以開始接聽通訊端 (使用[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) 從用戶端的連線嘗試。 收到連線要求，請接受它與[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。
+   如果通訊端是伺服器，請設定通訊端以開始接聽來自用戶端的連接嘗試（使用[CAsyncSocket：：接聽](../mfc/reference/casyncsocket-class.md#listen)）。 收到連線要求時，請使用[CAsyncSocket：： accept](../mfc/reference/casyncsocket-class.md#accept)接受它。
 
-   接受連接之後, 您可以執行像是驗證密碼這類工作。
+   接受連線之後，您可以執行這類工作來驗證密碼。
 
     > [!NOTE]
-    >  `Accept`成員函式會參考新的空白`CSocket`做為其參數的物件。 您必須先建構這個物件，然後再呼叫`Accept`。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫`Create`這個新的通訊端物件。 如需範例，請參閱文章[Windows Sockets:作業順序](../mfc/windows-sockets-sequence-of-operations.md)。
+    >  `Accept` 成員函式會採用新的空白 `CSocket` 物件的參考做為其參數。 在呼叫 `Accept`之前，您必須先建立此物件。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫這個新通訊端物件的 `Create`。 如需範例，請參閱[Windows socket：作業序列一](../mfc/windows-sockets-sequence-of-operations.md)文。
 
-1. 藉由呼叫完成與其他通訊端通訊`CAsyncSocket`封裝 Windows Sockets API 函式物件的成員函式。
+1. 藉由呼叫封裝 Windows 通訊端 API 函式的 `CAsyncSocket` 物件的成員函式，執行與其他通訊端的通訊。
 
-   請參閱 Windows Sockets 規格和類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)中*MFC 參考 》*。
+   請參閱*MFC 參考*中的 Windows 通訊端規格和類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md) 。
 
-1. 終結`CAsyncSocket`物件。
+1. 終結 `CAsyncSocket` 物件。
 
-   如果您是在堆疊上建立通訊端物件，包含函式超出範圍時，就是會呼叫其解構函式。 如果您在堆積上建立通訊端物件，使用**新**運算子，您必須負責使用**刪除**運算子來終結物件。
+   如果您在堆疊上建立了通訊端物件，當包含的函式超出範圍時，就會呼叫其析構函數。 如果您使用**new**運算子在堆積上建立通訊端物件，您必須負責使用**delete**運算子來終結物件。
 
-   解構函式呼叫物件的[關閉](../mfc/reference/casyncsocket-class.md#close)成員函式，然後再終結物件。
+   在終結物件之前，此析構函數會呼叫物件的[Close](../mfc/reference/casyncsocket-class.md#close)成員函式。
 
-如需範例程式碼中這個序列的 (如實際`CSocket`物件)，請參閱[Windows 通訊端：作業順序](../mfc/windows-sockets-sequence-of-operations.md)。
+如需程式碼中此順序的範例（實際適用于 `CSocket` 物件），請參閱[Windows socket：作業順序](../mfc/windows-sockets-sequence-of-operations.md)。
 
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a> 您的責任與 CAsyncSocket
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a>您的 CAsyncSocket 責任
 
-當您建立類別的物件[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，該物件會封裝 Windows**通訊端**處理，並提供該控制代碼上的作業。 當您使用`CAsyncSocket`，您必須處理所有直接使用 API，可能會面臨的問題。 例如: 
+當您建立[CAsyncSocket](../mfc/reference/casyncsocket-class.md)類別的物件時，物件會封裝 Windows**通訊端**控制碼，並在該控制碼上提供作業。 當您使用 `CAsyncSocket`時，如果您直接使用 API，就必須處理您可能面臨的所有問題。 例如：
 
-- "中止安裝 」 的案例。
+- 「封鎖」案例。
 
-- 傳送及接收的機器之間的位元組順序差異。
+- 傳送和接收電腦之間的位元組順序差異。
 
-- Unicode 及多位元組字元集之間轉換設定 (MBCS) 字串。
+- 在 Unicode 和多位元組字元集（MBCS）字串之間轉換。
 
-如需這些詞彙與其他資訊的定義，請參閱[Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md)， [Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)， [Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)。
+如需這些詞彙和其他資訊的定義，請參閱[Windows 通訊端：封鎖](../mfc/windows-sockets-blocking.md)、 [windows 通訊端：位元組順序](../mfc/windows-sockets-byte-ordering.md)、 [Windows 通訊端：轉換字串](../mfc/windows-sockets-converting-strings.md)。
 
-儘管有這些問題中，類別`CAsycnSocket`可能正確的選擇，如果您的應用程式需要所有的彈性和控制您可以取得。 如果沒有，您應該考慮使用類別`CSocket`改。 `CSocket` 會隱藏許多詳細資料，從您： 提取 Windows 訊息期間封鎖呼叫，並可讓您存取權的 it `CArchive`，其可管理位元組順序的差異和為您的字串轉換。
+雖然有這些問題，如果您的應用程式需要所有的彈性和控制能力，類別 `CAsycnSocket` 可能是正確的選擇。 如果不是，您應該考慮改為使用類別 `CSocket`。 `CSocket` 會隱藏許多詳細資料：在封鎖呼叫期間，它會提取 Windows 訊息，並可讓您存取 `CArchive`，這會為您管理位元組順序差異和字串轉換。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱
 
-- [Windows Socket：背景](../mfc/windows-sockets-background.md)
+- [Windows Sockets：背景](../mfc/windows-sockets-background.md)
 
-- [Windows Socket：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Socket：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 

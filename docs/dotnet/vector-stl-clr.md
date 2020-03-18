@@ -4,12 +4,6 @@ ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - cliext::vector
-- cliext::operator!=
-- cliext::operator<
-- cliext::operator<=
-- cliext::operator==
-- cliext::operator>
-- cliext::operator>=
 - cliext::vector::assign
 - cliext::vector::at
 - cliext::vector::back
@@ -97,18 +91,18 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 34997476085ece7f7a55f72340b57516874aa483
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 5b16319c17b5f5681f6417d8732931da1974b66b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926131"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445545"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
-此樣板類別所描述的物件可控制具有隨機存取的變動長度專案序列。 您可以使用容器`vector`來管理一連串的專案，做為連續的儲存區塊。 區塊會實作為陣列，以隨選成長。
+此樣板類別所描述的物件可控制具有隨機存取的變動長度專案序列。 您可以使用容器 `vector`，將一系列的專案當做連續的儲存體區塊來管理。 區塊會實作為陣列，以隨選成長。
 
-在下面的描述中`GValue` ，與*值*相同，除非後者是 ref 類型，在此情況下為`Value^`。
+在下面的描述中，`GValue` 與*值*相同，除非後者是 ref 類型，在此情況下會 `Value^`。
 
 ## <a name="syntax"></a>語法
 
@@ -128,18 +122,18 @@ template<typename Value>
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*ReplTest1*<br/>
 受控制序列中項目的類型。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<cliext/vector >
+**標頭：** \<cliext/向量 >
 
 **命名空間：** cliext
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|說明|
+|類型定義|描述|
 |---------------------|-----------------|
 |[vector::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|
 |[vector::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
@@ -153,7 +147,7 @@ template<typename Value>
 |[vector::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[vector::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|
 |[vector::size_type (STL/CLR)](#size_type)|兩個項目之間帶正負號距離的類型。|
-|[vector::value_type (STL/CLR)](#value_type)|元素的類型。|
+|[vector::value_type (STL/CLR)](#value_type)|元素類型。|
 
 |成員函式|描述|
 |---------------------|-----------------|
@@ -161,7 +155,7 @@ template<typename Value>
 |[vector::at (STL/CLR)](#at)|存取指定位置的項目。|
 |[vector::back (STL/CLR)](#back)|存取最後一個項目。|
 |[vector::begin (STL/CLR)](#begin)|指定受控制序列的開頭。|
-|[vector::capacity (STL/CLR)](#capacity)|報告容器的已配置儲存體大小。|
+|[vector::capacity (STL/CLR)](#capacity)|報告容器配置儲存區的大小。|
 |[vector::clear (STL/CLR)](#clear)|移除所有項目。|
 |[vector::empty (STL/CLR)](#empty)|測試項目是否不存在。|
 |[vector::end (STL/CLR)](#end)|指定受控制序列的結尾。|
@@ -173,7 +167,7 @@ template<typename Value>
 |[vector::rbegin (STL/CLR)](#rbegin)|指定反向受控制序列的開頭。|
 |[vector::rend (STL/CLR)](#rend)|指定反向受控制序列的結尾。|
 |[vector::reserve (STL/CLR)](#reserve)|確保容器的成長容量下限。|
-|[vector::resize (STL/CLR)](#resize)|變更元素的數目。|
+|[vector::resize (STL/CLR)](#resize)|變更項目的數目。|
 |[vector::size (STL/CLR)](#size)|計算元素的數目。|
 |[vector::swap (STL/CLR)](#swap)|交換兩個容器的內容。|
 |[vector::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
@@ -184,16 +178,16 @@ template<typename Value>
 |[vector::back_item (STL/CLR)](#back_item)|存取最後一個項目。|
 |[vector::front_item (STL/CLR)](#front_item)|存取第一個項目。|
 
-|運算子|說明|
+|運算子|描述|
 |--------------|-----------------|
 |[vector::operator= (STL/CLR)](#op_as)|取代受控制的序列。|
 |[vector::operator (STL/CLR)](#op)|存取指定位置的項目。|
-|[operator!= (vector) (STL/CLR)](#op_neq)|判斷物件是否不等於另一個`vector`物件。 `vector`|
-|[operator< (vector) (STL/CLR)](#op_lt)|判斷物件是否小於另一個`vector`物件。 `vector`|
-|[operator<= (vector) (STL/CLR)](#op_lteq)|判斷物件是否小於或等於另一個`vector`物件。 `vector`|
-|[operator== (vector) (STL/CLR)](#op_eq)|判斷物件是否等於另一個`vector`物件。 `vector`|
-|[operator> (vector) (STL/CLR)](#op_gt)|判斷物件是否大於另一個`vector`物件。 `vector`|
-|[operator>= (vector) (STL/CLR)](#op_gteq)|判斷物件是否大於或等於另一個`vector`物件。 `vector`|
+|[operator!= (vector) (STL/CLR)](#op_neq)|判斷 `vector` 物件是否不等於另一個 `vector` 物件。|
+|[operator< (vector) (STL/CLR)](#op_lt)|判斷 `vector` 物件是否小於另一個 `vector` 物件。|
+|[operator<= (vector) (STL/CLR)](#op_lteq)|判斷 `vector` 物件是否小於或等於另一個 `vector` 物件。|
+|[operator== (vector) (STL/CLR)](#op_eq)|判斷 `vector` 物件是否等於另一個 `vector` 物件。|
+|[operator> (vector) (STL/CLR)](#op_gt)|判斷 `vector` 物件是否大於另一個 `vector` 物件。|
+|[operator>= (vector) (STL/CLR)](#op_gteq)|判斷 `vector` 物件是否大於或等於另一個 `vector` 物件。|
 
 ## <a name="interfaces"></a>介面
 
@@ -211,11 +205,11 @@ template<typename Value>
 
 物件會透過儲存的*值*專案陣列，配置並釋放它所控制之序列的儲存體，以隨選成長。 成長髮生的原因是，附加新元素的成本是分攤常數時間。 換句話說，當受控制序列的長度變大時，在結尾加入元素的成本並不會增加。 因此，向量是樣板類別[堆疊（STL/CLR）](../dotnet/stack-stl-clr.md)之基礎容器的理想候選。
 
-支援隨機存取反覆運算器，這表示您可以直接參考元素的數值位置，從零針對第一個（front）元素計算到`size() - 1`最後一個（back）元素。 `vector` 這也表示，向量是樣板類別[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)之基礎容器的理想候選。
+`vector` 支援隨機存取反覆運算器，這表示您可以直接參考元素的數值位置，從零開始計算第一個（front）元素，以 `size() - 1` 最後一個（後）專案。 這也表示，向量是樣板類別[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)之基礎容器的理想候選。
 
 向量反覆運算器會儲存其相關聯向量物件的控制碼，以及它所指定之元素的偏差。 您只能將反覆運算器與相關聯的容器物件搭配使用。 Vector 元素的偏差與其位置相同。
 
-插入或清除專案可以變更儲存在指定位置的專案值，因此反覆運算器指定的值也可以變更。 （容器可能必須在插入之前或下複製元素，以建立一個洞，或在清除之後填滿一個洞）。不過，只要向量反覆運算器的偏差在範圍內`[0, size()]`，它就會保持有效。 此外，有效的反覆運算器仍然是 dereferencable--您可以使用它來存取或更改其指定的元素值，只要其偏差不等於即可`size()`。
+插入或清除專案可以變更儲存在指定位置的專案值，因此反覆運算器指定的值也可以變更。 （容器可能必須在插入之前或下複製元素，以建立一個洞，或在清除之後填滿一個洞）。不過，只要向量反覆運算器的偏差在 `[0, size()]`範圍內，它就會保持有效。 此外，有效的反覆運算器仍然是 dereferencable--您可以使用它來存取或更改其指定的元素值，只要其偏差不等於 `size()`。
 
 清除或移除元素會呼叫其預存值的析構函式。 終結容器會清除所有元素。 因此，其元素類型為 ref 類別的容器，可確保沒有任何元素 outlive 容器。 不過要注意的是，控制碼容器並不會摧毀其元素。
 
@@ -242,7 +236,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *first*<br/>
 要插入的範圍開頭。
 
-*次*<br/>
+*last*<br/>
 要插入的範圍結尾。
 
 *right*<br/>
@@ -255,7 +249,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 
 第一個成員函式會將受控制的序列取代為值*val*的*count*元素的重複。 您可以使用它來填滿具有相同值的所有專案容器。
 
-如果`InIt`是整數類型，第二個成員函式的行為會`assign((size_type)first, (value_type)last)`與相同。 否則，它會將受控制序列取代為序列`first`[ `last`，）。 您可以使用它讓受控制的序列成為另一個序列的複本。
+如果 `InIt` 是整數類型，第二個成員函式的行為會與 `assign((size_type)first, (value_type)last)`相同。 否則，它會將受控制序列取代為序列 [`first`，`last`）。 您可以使用它讓受控制的序列成為另一個序列的複本。
 
 第三個成員函式會將受控制序列取代為列舉值*右邊*所指定的序列。 您可以使用它，讓受控制的序列成為列舉值所描述之序列的複本。
 
@@ -314,7 +308,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>參數
 
-*採購*<br/>
+*pos*<br/>
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -468,7 +462,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回隨機存取反覆運算器，指定受控制序列的第一個元素，或在空序列結尾以外的專案。 您可以使用它來取得指定`current`受控制序列開頭的反覆運算器，但如果受控制序列的長度變更，其狀態可能會變更。
+此成員函式會傳回隨機存取反覆運算器，指定受控制序列的第一個元素，或在空序列結尾以外的專案。 您要用它來取得的 Iterator 可指定受控制序列之 `current` 開頭，但是，如果受控制序列的長度變更，它的狀態也可以變更。
 
 ### <a name="example"></a>範例
 
@@ -513,7 +507,7 @@ x y c
 
 ## <a name="capacity"></a>vector：：容量（STL/CLR）
 
-報告容器的已配置儲存體大小。
+報告容器配置儲存區的大小。
 
 ### <a name="syntax"></a>語法
 
@@ -523,7 +517,7 @@ size_type capacity();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回目前配置用來保存受控制序列的儲存體，此值至少會與[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md) `()`一樣大。 您可以使用它來判斷容器在必須為受控制序列重新配置儲存體之前，可以成長多少。
+此成員函式會傳回目前配置用來保存受控制序列的儲存區，此值至少會與[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md)`()`。 您可以使用它來判斷容器在必須為受控制序列重新配置儲存體之前，可以成長多少。
 
 ### <a name="example"></a>範例
 
@@ -573,7 +567,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會有效地呼叫[vector：： erase （stl/clr）](../dotnet/vector-erase-stl-clr.md) `(` [vector：： begin （stl/clr）](../dotnet/vector-begin-stl-clr.md) `(),` [vector：： end （stl/clr）](../dotnet/vector-end-stl-clr.md) `())`。 您可以使用它來確保受控制的序列是空的。
+成員函式會有效地呼叫[vector：： erase （stl/clr）](../dotnet/vector-erase-stl-clr.md) ，`(` vector：： begin （stl/clr [）](../dotnet/vector-begin-stl-clr.md)`(),` [VECTOR：： end （stl/clr）](../dotnet/vector-end-stl-clr.md)`())`。 您可以使用它來確保受控制的序列是空的。
 
 ### <a name="example"></a>範例
 
@@ -630,7 +624,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型`T2`的物件，可做為受控制序列的常數隨機存取反覆運算器。
+此類型描述未指定類型 `T2` 的物件，可做為受控制序列的常數隨機存取反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -715,7 +709,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型`T4`的物件，可做為受控制序列的常數反向反覆運算器。
+此類型描述未指定類型 `T4` 的物件，可做為受控制序列的常數反向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -811,7 +805,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md) `() == 0`。 您可以使用它來測試向量是否為空的。
+成員函式會對空的受控制序列傳回 true。 它相當於[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md)`() == 0`。 您可以使用它來測試向量是否為空的。
 
 ### <a name="example"></a>範例
 
@@ -862,7 +856,7 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回指向受控制序列結尾之外的隨機存取反覆運算器。 您可以使用它來取得指定`current`受控制序列結尾的反覆運算器，但如果受控制序列的長度變更，其狀態可能會變更。
+此成員函式會傳回指向受控制序列結尾之外的隨機存取反覆運算器。 您會用它來取得指定受控制序列之 `current` 結尾的 Iterator，但是如果受控制序列的長度變更，它的狀態也會變更。
 
 ### <a name="example"></a>範例
 
@@ -922,7 +916,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 要清除之範圍的開頭。
 
-*次*<br/>
+*last*<br/>
 要清除的範圍結尾。
 
 *where*<br/>
@@ -934,7 +928,7 @@ iterator erase(iterator first, iterator last);
 
 第二個成員函式會移除 [`first`, `last`) 範圍中受控制序列中的元素。 您可以使用它來移除零個或多個連續元素。
 
-這兩個成員函式會傳回反覆運算器，指定移除的任何專案之後剩餘的第一個專案，如果沒有這類元素，則會傳回[vector：： end （STL/CLR）](../dotnet/vector-end-stl-clr.md) `()` 。
+這兩個成員函式會傳回反覆運算器，指定移除的任何專案以外的第一個元素，或如果沒有這類元素，則`()` [vector：： end （STL/CLR）](../dotnet/vector-end-stl-clr.md) 。
 
 清除元素時，元素複本的數目是抹除結尾和序列最接近端之間的元素數目的線性。 （清除序列任一結尾的一個或多個專案時，不會複製任何專案）。
 
@@ -1277,7 +1271,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型`GValue`的物件，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。
+此類型描述類型為 `GValue` 的物件，描述要與這個樣板容器類別的泛型介面搭配使用的預存專案值。
 
 ### <a name="example"></a>範例
 
@@ -1344,7 +1338,7 @@ void insert(iterator where,
 *first*<br/>
 要插入的範圍開頭。
 
-*次*<br/>
+*last*<br/>
 要插入的範圍結尾。
 
 *right*<br/>
@@ -1364,11 +1358,11 @@ void insert(iterator where,
 
 第二個成員函式會插入 value *val*的*count*元素的重複專案。 您可以使用它來插入零個或多個連續元素，這些都是相同值的所有複本。
 
-如果 `InIt` 是整數類型，第三個成員函式的行為即與 `insert(where, (size_type)first, (value_type)last)` 相同。 否則，它會插入序列 [`first`， `last`）。 您可以使用它來插入從另一個序列複製的零個或多個連續元素。
+如果 `InIt` 是整數類型，第三個成員函式的行為即與 `insert(where, (size_type)first, (value_type)last)` 相同。 否則，它會插入序列 [`first`，`last`）。 您可以使用它來插入從另一個序列複製的零個或多個連續元素。
 
 第四個成員函式會插入*右邊*指定的序列。 您可以使用它來插入列舉值所描述的序列。
 
-當插入單一專案時，元素複本的數目是插入點和序列最接近端之間的元素數目的線性。 （在序列的任一端插入一或多個專案時，不會複製任何元素）。如果`InIt`是輸入反覆運算器，則第三個成員函式會針對序列中的每個元素，有效地執行單一插入。 否則，在插入`N`專案時，元素複本的數目會是`N`線性，加上插入點和序列最接近端之間的元素數目。
+當插入單一專案時，元素複本的數目是插入點和序列最接近端之間的元素數目的線性。 （在序列的任一端插入一或多個專案時，不會複製任何元素）。如果 `InIt` 是輸入反覆運算器，則第三個成員函式會針對序列中的每個元素，有效地執行單一插入。 否則，在插入 `N` 專案時，元素複本的數目會是線性，`N` 加上插入點和序列最接近端之間的元素數目。
 
 ### <a name="example"></a>範例
 
@@ -1442,7 +1436,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型`T1`的物件，可作為受控制序列的隨機存取反覆運算器。
+此類型描述未指定類型 `T1` 的物件，可做為受控制序列的隨機存取反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1479,7 +1473,7 @@ a b c
 x b c
 ```
 
-## <a name="op_as"></a> vector::operator= (STL/CLR)
+## <a name="op_as"></a>vector：： operator = （STL/CLR）
 
 取代受控制的序列。
 
@@ -1496,7 +1490,7 @@ vector<Value>% operator=(vector<Value>% right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後`*this`傳回。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將*許可權*複製到物件，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -1532,7 +1526,7 @@ a b c
 a b c
 ```
 
-## <a name="op"></a> vector::operator(STL/CLR)
+## <a name="op"></a>vector：： operator （STL/CLR）
 
 存取指定位置的項目。
 
@@ -1544,7 +1538,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>參數
 
-*採購*<br/>
+*pos*<br/>
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -1643,7 +1637,7 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會將具有值`val`的元素插入受控制序列的結尾。 您可以使用它將另一個元素附加至向量。
+成員函式會在受控制序列的結尾插入具有值 `val` 的元素。 您可以使用它將另一個元素附加至向量。
 
 ### <a name="example"></a>範例
 
@@ -1671,7 +1665,7 @@ int main()
 a b c
 ```
 
-## <a name="rbegin"></a> vector::rbegin (STL/CLR)
+## <a name="rbegin"></a>vector：： rbegin （STL/CLR）
 
 指定反向受控制序列的開頭。
 
@@ -1683,7 +1677,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回反向反覆運算器，指定受控制序列的最後一個元素，或只在空白序列開頭以外的專案。 因此，它會指定`beginning`反向序列的。 您可以使用它來取得反覆運算器，指定`current`以相反順序顯示之受控制序列的開頭，但如果受控制序列的長度變更，其狀態可能會變更。
+此成員函式會傳回反向反覆運算器，指定受控制序列的最後一個元素，或只在空白序列開頭以外的專案。 因此，它會指定反向序列的 `beginning`。 您會用它來取得指定以反向順序顯示之受控制序列 `current` 開頭的 Iterator，但是如果受控制序列的長度變更，它的狀態也會變更。
 
 ### <a name="example"></a>範例
 
@@ -1793,7 +1787,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回指向受控制序列開頭以外的反向反覆運算器。 因此，它會指定`end`反向序列的。 您可以使用它來取得反覆運算器，指定`current`以相反順序顯示之受控制序列的結尾，但如果受控制序列的長度變更，其狀態可能會變更。
+此成員函式會傳回指向受控制序列開頭以外的反向反覆運算器。 因此，它會指定反向序列的 `end`。 您要用它來取得的 Iterator 可指定以相反順序顯示的受控制序列之 `current` 結尾，但是，如果受控制序列的長度變更，它的狀態也可以變更。
 
 ### <a name="example"></a>範例
 
@@ -1854,7 +1848,7 @@ void reserve(size_type count);
 
 ### <a name="remarks"></a>備註
 
-成員函式可確保`capacity()`因而需要至少傳回*計數*。 您可以使用它來確保容器不需要重新配置受控制序列的儲存體，直到其成長到指定的大小為止。
+成員函式可確保 `capacity()` 因而需要至少會傳回*計數*。 您可以使用它來確保容器不需要重新配置受控制序列的儲存體，直到其成長到指定的大小為止。
 
 ### <a name="example"></a>範例
 
@@ -1894,7 +1888,7 @@ capacity() = 9, ok = True
 
 ## <a name="resize"></a>vector：： resize （STL/CLR）
 
-變更元素的數目。
+變更項目的數目。
 
 ### <a name="syntax"></a>語法
 
@@ -1913,7 +1907,7 @@ void resize(size_type new_size, value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式可確保[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md) `()`因而需要會傳回*new_size*。 如果它必須讓受控制的序列變長，第一個成員函式會`value_type()`附加具有值的元素，而第二個成員函式會附加具有值*val*的元素。 為了讓受控制的序列更短，這兩個成員函式會有效地清除最後一個元素[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md) `() -` `new_size`時間。 您可以使用它來確保受控制的序列具有大小*new_size*，方法是修剪或填補目前受控制的序列。
+成員函式可確保[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md)`()` 因而需要會傳回*new_size*。 如果它必須讓受控制的序列變長，第一個成員函式會附加具有值 `value_type()`的元素，而第二個成員函式會附加具有值*val*的元素。 為了讓受控制的序列更短，這兩個成員函式會有效地清除最後一個元素[vector：： size （STL/CLR）](../dotnet/vector-size-stl-clr.md)`() -` `new_size` 時間。 您可以使用它來確保受控制的序列具有大小*new_size*，方法是修剪或填補目前受控制的序列。
 
 ### <a name="example"></a>範例
 
@@ -2013,7 +2007,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[vector：： empty （STL/CLR）](../dotnet/vector-empty-stl-clr.md) `()`。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[vector：： empty （STL/CLR）](../dotnet/vector-empty-stl-clr.md)`()`。
 
 ### <a name="example"></a>範例
 
@@ -2116,7 +2110,7 @@ void swap(vector<Value>% right);
 
 ### <a name="remarks"></a>備註
 
-成員函式會在和*right*之間`*this`交換受控制的序列。 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
+成員函式會在 `*this` 和*右方*之間交換受控制的序列。 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
 
 ### <a name="example"></a>範例
 
@@ -2214,7 +2208,7 @@ a b c
 
 ## <a name="value_type"></a>vector：： value_type （STL/CLR）
 
-元素的類型。
+元素類型。
 
 ### <a name="syntax"></a>語法
 
@@ -2282,7 +2276,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 *first*<br/>
 要插入的範圍開頭。
 
-*次*<br/>
+*last*<br/>
 要插入的範圍結尾。
 
 *right*<br/>
@@ -2303,19 +2297,19 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `vector(vector<Value>% right);`
 
-使用序列 [`right.begin()`， `right.end()`）初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是向量物件*許可權*所控制之序列的複本。
+使用序列 [`right.begin()`，`right.end()`），初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是向量物件*許可權*所控制之序列的複本。
 
 此構造函式：
 
 `vector(vector<Value>^ right);`
 
-使用序列 [`right->begin()`， `right->end()`）初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由向量物件所控制的序列複本，其控制碼為*right*。
+使用序列 [`right->begin()`，`right->end()`），初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由向量物件所控制的序列複本，其控制碼為*right*。
 
 此構造函式：
 
 `explicit vector(size_type count);`
 
-使用具有值`value_type()`的*count*元素，初始化受控制的序列。 您可以使用它來填滿具有預設值之專案的容器。
+使用值 `value_type()`，初始化具有*count*個元素的受控制序列。 您可以使用它來填滿具有預設值之專案的容器。
 
 此構造函式：
 
@@ -2329,7 +2323,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `vector(InIt first, InIt last);`
 
-使用序列 [`first`， `last`）初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本。
+使用序列 [`first`，`last`），初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本。
 
 此構造函式：
 
@@ -2424,7 +2418,7 @@ template<typename Value>
 
 ### <a name="remarks"></a>備註
 
-運算子函`!(left == right)`式會傳回。 當兩個向量是以元素進行比較時，您可以使用它來測試*左側*是否與*右邊*的順序相同。
+Operator 函數會傳回 `!(left == right)`。 當兩個向量是以元素進行比較時，您可以使用它來測試*左側*是否與*右邊*的順序相同。
 
 ### <a name="example"></a>範例
 
@@ -2471,7 +2465,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>operator&lt; （vector）（STL/CLR）
+## <a name="op_lt"></a>運算子&lt; （vector）（STL/CLR）
 
 小於比較的向量。
 
@@ -2493,7 +2487,7 @@ template<typename Value>
 
 ### <a name="remarks"></a>備註
 
-如果的最低位置`i` `!(right[i] < left[i])`也為 true `left[i] < right[i]`，則運算子函數會傳回 true。 否則，它`left->size() < right->size()`會傳回*您用它來測試當兩*個向量是以元素進行比較時，*左側*是否已排序。
+如果 `i` 的最低位置 `!(right[i] < left[i])` 也是 `left[i] < right[i]`，則運算子函數會傳回 true。 否則，它會傳回 `left->size() < right->size()` 您用它來測試當兩個向量是以元素進行比較時，是否要*從* *右*排序。
 
 ### <a name="example"></a>範例
 
@@ -2540,7 +2534,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>operator&lt;= （vector）（STL/CLR）
+## <a name="op_lteq"></a>運算子&lt;= （vector）（STL/CLR）
 
 向量小於或等於比較。
 
@@ -2562,7 +2556,7 @@ template<typename Value>
 
 ### <a name="remarks"></a>備註
 
-運算子函`!(right < left)`式會傳回。 當兩個向量是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
+Operator 函數會傳回 `!(right < left)`。 當兩個向量是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
 
 ### <a name="example"></a>範例
 
@@ -2631,7 +2625,7 @@ template<typename Value>
 
 ### <a name="remarks"></a>備註
 
-只有當*left*和*right*所控制的序列具有相同的長度，且`i` `left[i] ==` `right[i]`每個位置都有相同的時，運算子函數才會傳回 true。 當兩個向量是以元素進行比較時，您可以使用它來測試是否將*left*與*right*排序。
+只有當*left*和*right*控制的序列具有相同的長度，且每個位置 `i``left[i] ==` `right[i]`時，運算子函數才會傳回 true。 當兩個向量是以元素進行比較時，您可以使用它來測試是否將*left*與*right*排序。
 
 ### <a name="example"></a>範例
 
@@ -2678,7 +2672,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>operator&gt; （vector）（STL/CLR）
+## <a name="op_gt"></a>運算子&gt; （vector）（STL/CLR）
 
 向量大於比較。
 
@@ -2700,7 +2694,7 @@ template<typename Value>
 
 ### <a name="remarks"></a>備註
 
-運算子函`right` `<` 式`left`會傳回。 當兩個向量是以元素進行比較時，您可以使用它來*測試是否向* *右*排序。
+Operator 函數會傳回 `right` `<` `left`。 當兩個向量是以元素進行比較時，您可以使用它來*測試是否向* *右*排序。
 
 ### <a name="example"></a>範例
 
@@ -2747,7 +2741,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>operator&gt;= （vector）（STL/CLR）
+## <a name="op_gteq"></a>運算子&gt;= （vector）（STL/CLR）
 
 向量大於或等於比較。
 
@@ -2769,7 +2763,7 @@ template<typename Value>
 
 ### <a name="remarks"></a>備註
 
-運算子函`!(left < right)`式會傳回。 *當兩*個向量是以元素進行比較時，您可以使用它來測試*左側*是否未排序。
+Operator 函數會傳回 `!(left < right)`。 *當兩*個向量是以元素進行比較時，您可以使用它來測試*左側*是否未排序。
 
 ### <a name="example"></a>範例
 

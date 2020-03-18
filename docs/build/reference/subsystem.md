@@ -2,18 +2,18 @@
 title: /SUBSYSTEM
 ms.date: 11/04/2016
 f1_keywords:
-- /subsystem
+- /subsystem_editbin
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 708bfcce3e6d6616116bcc08441f374b46914c82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450724"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438857"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -32,9 +32,9 @@ ms.locfileid: "66450724"
 您可以指定下列任何子系統：
 
 **BOOT_APPLICATION**<br/>
-在 Windows 開機環境中執行的應用程式。 如需有關開機應用程式的詳細資訊，請參閱 <<c0> [ 關於 BCD WMI 提供者](/previous-versions/windows/desktop/bcd/about-bcd)。
+在 Windows 開機環境中執行的應用程式。 如需有關開機應用程式的詳細資訊，請參閱[關於 BCD WMI 提供者](/previous-versions/windows/desktop/bcd/about-bcd)。
 
-**主控台**<br/>
+**控制**<br/>
 Windows 字元模式應用程式。 作業系統會提供主控台的主控台應用程式。
 
 **EFI_APPLICATION**<br/>
@@ -43,18 +43,18 @@ Windows 字元模式應用程式。 作業系統會提供主控台的主控台�
 **EFI_RUNTIME_DRIVER**<br/>
 可延伸韌體介面 (EFI) 影像
 
-EFI 子系統選項說明可延伸韌體介面環境中執行的可執行映像。 這種環境通常提供硬體，並在載入作業系統之前執行。 EFI 影像類型之間的主要差異是載入影像的記憶體位置，和呼叫影像時傳回時所採取的動作。 控制權傳回時會卸載 EFI_APPLICATION 影像。 只有當控制項傳回錯誤碼時，EFI_BOOT_SERVICE_DRIVER 或 EFI_RUNTIME_DRIVER 才會卸載。 從 ROM 執行 EFI_ROM 影像。 如需詳細資訊，請參閱規格上[統一 EFI 論壇](https://www.uefi.org/)網站。
+EFI 子系統選項說明可延伸韌體介面環境中執行的可執行映像。 這種環境通常提供硬體，並在載入作業系統之前執行。 EFI 影像類型之間的主要差異是載入影像的記憶體位置，和呼叫影像時傳回時所採取的動作。 控制權傳回時會卸載 EFI_APPLICATION 影像。 只有當控制項傳回錯誤碼時，EFI_BOOT_SERVICE_DRIVER 或 EFI_RUNTIME_DRIVER 才會卸載。 從 ROM 執行 EFI_ROM 影像。 如需詳細資訊，請參閱[統一 EFI 論壇](https://www.uefi.org/)網站上的規格。
 
-**NATIVE**<br/>
+**自有**<br/>
 在沒有子系統環境中執行的程式碼 — 例如，核心模式裝置驅動程式和原生系統處理序。 這個選項通常保留給 Windows 系統功能。
 
 **POSIX**<br/>
 在 Windows 中 POSIX 子系統中執行的應用程式。
 
-**WINDOWS**<br/>
-在 Windows 圖形化環境中執行的應用程式。 這包括桌面應用程式和通用 Windows 平台 (UWP) 應用程式。
+**時段**<br/>
+在 Windows 圖形化環境中執行的應用程式。 這包括桌面應用程式和通用 Windows 平臺（UWP）應用程式。
 
-**WINDOWSCE**<br/>
+**MICROSOFT.WINDOWSCE.FORMS**<br/>
 WINDOWSCE 子系統指出應用程式應在有 Windows CE 核心版本的裝置上執行。 核心版本包含 PocketPC、Windows Mobile、Windows Phone 7、Windows CE V1.0-6.0R3 和 Windows Embedded Compact 7。
 
 選擇性 `major` 和 `minor` 值指定了指定子系統的最小必要版本：
@@ -65,9 +65,9 @@ WINDOWSCE 子系統指出應用程式應在有 Windows CE 核心版本的裝置�
 
 - 值 `major` 和 `minor` 必須是從 0 到 65535。
 
-子系統的選擇會影響程式的預設開始位址。 如需詳細資訊，請參閱 < [/ENTRY （進入點符號）](entry-entry-point-symbol.md)，連結器 /ENTRY:*函式*選項。
+子系統的選擇會影響程式的預設開始位址。 如需詳細資訊，請參閱[/ENTRY （進入點符號）](entry-entry-point-symbol.md)，連結器/ENTRY：*函數*選項。
 
-如需詳細資訊，包括每個子系統，主要和次要版本號碼的最小值和預設值[/SUBSYSTEM](subsystem-specify-subsystem.md)連結器選項。
+如需詳細資訊，包括每個子系統的主要和次要版本號碼的最低和預設值，請參閱[/SUBSYSTEM](subsystem-specify-subsystem.md)連結器選項。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -4,16 +4,12 @@ ms.date: 10/09/2018
 f1_keywords:
 - _abnormal_termination_cpp
 - _exception_code_cpp
-- EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
 - _except
-- EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
 - _exception_info_cpp
-- EXCEPTION_EXECUTE_HANDLER
-- _abnormal_termination
 helpviewer_keywords:
 - __try keyword [C++]
 - EXCEPTION_CONTINUE_EXECUTION macro
@@ -26,16 +22,16 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 7d3a92aa8c6d1f77a1795eabde0ae1e575bb5770
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245167"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444124"
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 **Try-except**語句是 C 和C++語言的 Microsoft 擴充功能，可支援結構化例外狀況處理。
 
@@ -67,7 +63,7 @@ ms.locfileid: "74245167"
 
 1. 如果在執行保護區段期間未發生任何例外狀況，則會在 **__except**子句後面的語句繼續執行。
 
-1. 如果在執行保護的區段時或在保護區段所呼叫的任何常式中發生例外狀況，則會評估 **__except** *運算式*（稱為*篩選*運算式），而值會決定如何處理例外狀況。 可能的值有三個：
+1. 如果在執行保護的區段時或在保護區段所呼叫的任何常式中發生例外狀況，則會評估 **__except** *運算式*（稱為*篩選*運算式），而值會決定如何處理例外狀況。 有三個可能的值：
 
    - EXCEPTION_CONTINUE_EXECUTION （-1）例外狀況已關閉。 在例外狀況發生的位置繼續執行。
 
@@ -95,7 +91,7 @@ ms.locfileid: "74245167"
 
 `GetExceptionCode` 會傳回例外狀況的程式碼（32位整數）。
 
-內建函式 `GetExceptionInformation` 會傳回結構的指標，其中包含例外狀況的其他相關資訊。 透過這個指標就可以存取發生硬體例外狀況當時的電腦狀態。 結構如下：
+內建函式 `GetExceptionInformation` 會傳回結構的指標，其中包含例外狀況的其他相關資訊。 透過這個指標就可以存取發生硬體例外狀況當時的電腦狀態。 其結構如下所示：
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -187,5 +183,5 @@ world
 ## <a name="see-also"></a>另請參閱
 
 [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

@@ -1,8 +1,6 @@
 ---
 title: 設定 CStatusBarCtrl 物件的模式
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - simple mode and status bar controls
 - IsSimple method, using
@@ -11,23 +9,23 @@ helpviewer_keywords:
 - non-simple mode and status bar controls
 - CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
-ms.openlocfilehash: a6d1a0edb356f9737aa287809dd8bca4146c1854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b499533196447898ce62ea9dc86c1674fc0302
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307714"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446414"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>設定 CStatusBarCtrl 物件的模式
 
-有兩種模式`CStatusBarCtrl`物件： 簡單和非簡單。 在大部分的情況下，您的狀態列會有一或多個組件，以及文字和可能的圖示或圖示。 這稱為非簡單模式。 如需有關此模式的詳細資訊，請參閱[初始化 CStatusBarCtrl 物件的組件](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。
+`CStatusBarCtrl` 物件有兩種模式： simple 和簡單。 在大部分的情況下，您的狀態列控制項將會有一或多個元件，以及文字，可能是圖示或圖示。 這稱為簡單模式。 如需此模式的詳細資訊，請參閱[初始化 CStatusBarCtrl 物件的元件](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。
 
-不過，有情況下，您只需要顯示單行文字。 在此情況下，簡單的模式是滿足您的需求。 若要變更的模式`CStatusBarCtrl`物件為 simple 時，呼叫[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成員函式。 狀態列控制項是在簡單模式下，一旦設定文字，藉由呼叫`SetText`成員函式，傳遞做為值的 255 *nPane*參數。
+不過，在某些情況下，您只需要顯示一行文字。 在此情況下，簡單模式就足以滿足您的需求。 若要將 `CStatusBarCtrl` 物件的模式變更為 simple，請呼叫[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成員函式。 當狀態列控制項處於簡單模式後，請呼叫 `SetText` 成員函式來設定文字，傳遞255做為*nPane*參數的值。
 
-您可以使用[IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)函式來判斷哪一種模式`CStatusBarCtrl`物件。
+您可以使用[IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)函數來判斷 `CStatusBarCtrl` 物件所在的模式。
 
 > [!NOTE]
->  如果狀態列物件正在從簡單變更為 simple 時，或反之亦然，視窗立即重繪，且如果適用的話，請自動還原任何已定義的組件。
+>  如果狀態列物件從簡單變更為 simple，或反之亦然，則會立即重新繪製視窗，如果適用的話，會自動還原任何已定義的元件。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -3,13 +3,15 @@ layout: HubPage
 title: Visual C++ 文件
 description: 了解如何使用 C++ 來開發平台和裝置的應用程式、服務和工具。
 ms.topic: hub-page
-ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: f8d9b683e8030cbbafa9b3da57b4f7fd738ed3ac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793792"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446113"
 ---
+<!-- markdownlint-disable MD033 -->
+
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">

@@ -1,23 +1,21 @@
 ---
 title: 可覆寫的 CWinApp 成員函式
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - overriding [MFC], overridable functions in CWinApp
 - application class [MFC]
 - CWinApp class [MFC], overridables
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
-ms.openlocfilehash: 35db009f86a0cb984f70a349a3ecdd93bfefb0f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ba243bd755e25db5f2cb03d08013f082fbc918
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297075"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447259"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>可覆寫的 CWinApp 成員函式
 
-[CWinApp](../mfc/reference/cwinapp-class.md)提供數個金鑰可覆寫成員函式 (`CWinApp`類別中的這些成員會覆寫[CWinThread](../mfc/reference/cwinthread-class.md)，從中`CWinApp`衍生):
+[CWinApp](../mfc/reference/cwinapp-class.md)提供數個關鍵可覆寫成員函式（`CWinApp` 會從 `CWinApp` 衍生的類別[CWinThread](../mfc/reference/cwinthread-class.md)覆寫這些成員）：
 
 - [InitInstance](../mfc/initinstance-member-function.md)
 

@@ -18,7 +18,6 @@ f1_keywords:
 - ATL.CDataSource.GetProperties
 - CDataSource.GetProperties
 - ATL::CDataSource::GetProperties
-- GetProperties
 - ATL::CDataSource::GetProperty
 - ATL.CDataSource.GetProperty
 - CDataSource.GetProperty
@@ -57,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 3cb522d1f6ed256f8e042bc2f978e8bc5100888c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311940"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445306"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 
@@ -84,11 +83,11 @@ class CDataSource
 
 |||
 |-|-|
-|[關閉](#close)|關閉連線。|
+|[關閉](#close)|關閉連接。|
 |[GetInitializationString](#getinitializationstring)|擷取目前開啟之資料來源的初始化字串。|
 |[GetProperties](#getproperties)|取得目前針對所連線之資料來源設定的屬性值。|
 |[GetProperty](#getproperty)|取得目前針對所連線資料來源設定的單一屬性值。|
-|[開啟](#open)|使用`CLSID` `CEnumerator` 、 `ProgID`或呼叫者所提供的標記，建立與提供者（資料來源）的連接。|
+|[開啟](#open)|使用 `CLSID`、`ProgID`或呼叫者所提供的 `CEnumerator` 標記，建立與提供者（資料來源）的連接。|
 |[OpenFromFileName](#openfromfilename)|從以使用者提供的檔名指定的檔案，開啟資料來源。|
 |[OpenFromInitializationString](#openfrominitializationstring)|開啟以初始化字串指定的資料來源。|
 |[OpenWithPromptFileName](#openwithpromptfilename)|允許使用者選取先前建立的資料連結檔案，以開啟對應的資料來源。|
@@ -96,13 +95,13 @@ class CDataSource
 
 ## <a name="remarks"></a>備註
 
-可為單一連線建立一個或多個資料庫工作階段。 這些工作階段是以 `CSession` 表示。 您必須先呼叫[CDataSource：： open](../../data/oledb/cdatasource-open.md)來開啟連接，然後再使用`CSession::Open`建立會話。
+可為單一連線建立一個或多個資料庫工作階段。 這些工作階段是以 `CSession` 表示。 您必須先呼叫[CDataSource：： open](../../data/oledb/cdatasource-open.md)來開啟連接，才能使用 `CSession::Open`建立會話。
 
-如需如何使用`CDataSource`的範例，請參閱[CatDB](../../overview/visual-cpp-samples.md)範例。
+如需如何使用 `CDataSource`的範例，請參閱[CatDB](../../overview/visual-cpp-samples.md)範例。
 
 ## <a name="close"></a>CDataSource：： Close
 
-藉由釋放`m_spInit`指標來關閉連接。
+藉由釋放 `m_spInit` 指標來關閉連接。
 
 ### <a name="syntax"></a>語法
 
@@ -183,7 +182,7 @@ HRESULT GetProperty(const GUID& guid,
 在要傳回之屬性的屬性識別碼。
 
 *pVariant*<br/>
-脫銷Variant 的指標，其中`GetProperty`會傳回屬性的值。
+脫銷Variant 的指標，其中 `GetProperty` 會傳回屬性的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -195,7 +194,7 @@ HRESULT GetProperty(const GUID& guid,
 
 ## <a name="open"></a>CDataSource：： Open
 
-使用`CLSID`、 `ProgID`或`CEnumerator`名字，開啟與資料來源的連接，或使用定位器對話方塊來提示使用者。
+使用 `CLSID`、`ProgID`或 `CEnumerator` 的名字，開啟與資料來源的連接，或使用 [定位器] 對話方塊來提示使用者。
 
 ### <a name="syntax"></a>語法
 
@@ -241,9 +240,9 @@ HRESULT Open(LPCSTR szProgID,
 #### <a name="parameters"></a>參數
 
 *clsid*<br/>
-在`CLSID`資料提供者的。
+在資料提供者的 `CLSID`。
 
-*pPropSet*<br/>
+*傳入 ppropset*<br/>
 在[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構陣列的指標，其中包含要設定的屬性和值。 請參閱 Windows SDK 中 OLE DB 程式設計*人員參考*中的[屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))。
 
 *nPropertySets*<br/>
@@ -265,7 +264,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] 程式識別碼。
 
 *enumerator*<br/>
-在當呼叫端未指定`CLSID`時，用來取得用來開啟連接之標記的 [CEnumerator](../../data/oledb/cenumerator-class.md) 物件。
+在當呼叫端未指定 `CLSID`時，用來取得開啟連接之標記的[CEnumerator](../../data/oledb/cenumerator-class.md)物件。
 
 *hWnd*<br/>
 [in] 做為對話方塊之父視窗的控制代碼。 使用使用*hWnd*參數的函數多載會自動叫用服務元件;如需詳細資訊，請參閱備註。
@@ -285,7 +284,7 @@ HRESULT Open(LPCSTR szProgID,
 
 ### <a name="example"></a>範例
 
-下列程式碼示範如何使用 OLE DB 範本開啟 Jet 4.0 資料來源。 您可以將 Jet 資料來源當做 OLE DB 資料來源。 不過，您對的`Open`呼叫需要兩個屬性集：一個用於 DBPROPSET_DBINIT，另一個用於 DBPROPSET_JETOLEDB_DBINIT，以便您可以設定 DBPROP_JETOLEDB_DATABASEPASSWORD。
+下列程式碼示範如何使用 OLE DB 範本開啟 Jet 4.0 資料來源。 您可以將 Jet 資料來源當做 OLE DB 資料來源。 不過，您對 `Open` 的呼叫需要兩個屬性集：一個用於 DBPROPSET_DBINIT，另一個用於 DBPROPSET_JETOLEDB_DBINIT，讓您可以設定 DBPROP_JETOLEDB_DATABASEPASSWORD。
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
@@ -331,7 +330,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 在初始化字串。
 
 *fPromptForInfo*<br/>
-在如果這個引數設定為**true**，則`OpenFromInitializationString`會將 DBPROP_INIT_PROMPT 屬性設定為 DBPROMPT_COMPLETEREQUIRED，這會指定只有在需要更多資訊時，才會提示使用者。 這適用于初始化字串指定需要密碼的資料庫，但該字串不包含密碼的情況。 嘗試連接到資料庫時，系統會提示使用者輸入密碼（或任何其他遺失的資訊）。
+在如果這個引數設定為**true**，則 `OpenFromInitializationString` 會將 DBPROP_INIT_PROMPT 屬性設定為 DBPROMPT_COMPLETEREQUIRED，這會指定只有在需要更多資訊時才會提示使用者。 這適用于初始化字串指定需要密碼的資料庫，但該字串不包含密碼的情況。 嘗試連接到資料庫時，系統會提示使用者輸入密碼（或任何其他遺失的資訊）。
 
 預設值為**false**，指定不會提示使用者（將 DBPROP_INIT_PROMPT 設定為 DBPROMPT_NOPROMPT）。
 
@@ -393,12 +392,12 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 #### <a name="parameters"></a>參數
 
 *clsid*<br/>
-在`CLSID`資料提供者的。
+在資料提供者的 `CLSID`。
 
 *szProgID*<br/>
 [in] 資料提供者的程式識別碼。
 
-*pPropset*<br/>
+*傳入 ppropset*<br/>
 在[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構陣列的指標，其中包含要設定的屬性和值。 請參閱 Windows SDK 中 OLE DB 程式設計*人員參考*中的[屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))。 如果資料來源物件已初始化，屬性必須屬於資料來源屬性群組。 如果在*傳入 ppropset*中指定了相同的屬性一次以上，則使用的值是提供者特定的。 如果*ulPropSets*為零，則會忽略這個參數。
 
 *ulPropSets*<br/>

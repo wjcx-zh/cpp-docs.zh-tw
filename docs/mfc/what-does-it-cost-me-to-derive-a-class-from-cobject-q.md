@@ -1,21 +1,19 @@
 ---
 title: 從 CObject 衍生類別的成本多高？
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - CObject class [MFC], overhead of derived classes [MFC]
 ms.assetid: 9b92c98b-b3dd-48a7-9d24-c3b8554edf90
-ms.openlocfilehash: de760a2fd2908595314dc09cf5a317da3581e3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f83bf9ee522487761aaa865a8315a174a47302d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186045"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446050"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>從 CObject 衍生類別的成本多高？
 
-衍生自類別的額外負荷[CObject](../mfc/reference/cobject-class.md)非常少。 您的衍生的類別繼承只有四個虛擬函式和一個[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)物件。
+衍生自[CObject](../mfc/reference/cobject-class.md)類別的額外負荷很小。 您的衍生類別只會繼承四個虛擬函數和一個[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)物件。
 
 ## <a name="see-also"></a>另請參閱
 

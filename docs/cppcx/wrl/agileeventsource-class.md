@@ -4,15 +4,14 @@ ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
-- event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821736"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441263"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 類別
 
@@ -42,7 +41,7 @@ class AgileEventSource :
 
 Windows 執行階段中的大部分元件都是 agile 元件。 如需詳細資訊，請參閱[執行緒和C++封送處理（/cx）](../../cppcx/threading-and-marshaling-c-cx.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層架構
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 `EventSource`
 
@@ -54,11 +53,11 @@ Windows 執行階段中的大部分元件都是 agile 元件。 如需詳細資�
 
 **命名空間：** Microsoft::WRL
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[AgileEventSource：： Add 方法](#add)|將指定的委派介面所表示的 agile 事件處理常式附加至目前**AgileEventSource**物件的事件處理常式集合。|
 
@@ -80,13 +79,13 @@ HRESULT Add(
 *delegateInterface*<br/>
 委派物件的介面，表示事件處理常式。
 
-*權杖*<br/>
+*token*<br/>
 當此作業完成時，表示事件的控制碼。 使用此 token 做為 `Remove()` 方法的參數，以捨棄事件處理常式。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft::WRL 命名空間](microsoft-wrl-namespace.md)

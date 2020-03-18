@@ -1,35 +1,33 @@
 ---
 title: CWinApp 和 MFC 應用程式精靈
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application wizards [MFC], and CWinApp
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a46842d7b4d6a588da585d63e2ad56982bb0ff8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241573"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447036"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp 和 MFC 應用程式精靈
 
-當它建立基本架構的應用程式時，MFC 應用程式精靈會宣告應用程式類別衍生自[CWinApp](../mfc/reference/cwinapp-class.md)。 MFC 應用程式精靈也會產生實作檔包含下列項目：
+當它建立基本架構應用程式時，MFC 應用程式 Wizard 會宣告一個衍生自[CWinApp](../mfc/reference/cwinapp-class.md)的應用程式類別。 MFC 應用程式 Wizard 也會產生包含下列專案的執行檔：
 
 - 應用程式類別的訊息對應。
 
-- 空的類別建構函式。
+- 空的類別的函式。
 
-- 變數宣告和物件的類別。
+- 宣告類別的一個和唯一一個物件的變數。
 
-- 標準實作您`InitInstance`成員函式。
+- `InitInstance` 成員函式的標準實作為。
 
-應用程式類別會放在專案的標頭和主要的原始程式檔。 類別和建立檔案的名稱會根據您在 MFC 應用程式精靈中提供的專案名稱。 若要檢視這些類別的程式碼的最簡單方式是透過[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)。
+應用程式類別會放在專案標頭和主要來源檔案中。 根據您在 MFC 應用程式精靈中提供的專案名稱，建立類別和檔案的名稱。 若要查看這些類別的程式碼，最簡單的方式是透過[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)。
 
-訊息對應提供與標準實作適合許多用途，但您可以視需要修改它們。 這些實作最有趣的是`InitInstance`成員函式。 一般而言，您將加入程式碼的架構實作`InitInstance`。
+提供的標準執行和訊息對應可供許多用途，但您可以視需要加以修改。 這些實作為最有趣的就是 `InitInstance` 成員函式。 一般來說，您會將程式碼新增至 `InitInstance`的框架執行。
 
 ## <a name="see-also"></a>另請參閱
 

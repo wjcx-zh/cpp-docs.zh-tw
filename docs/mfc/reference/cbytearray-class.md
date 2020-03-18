@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 f1_keywords:
 - CByteArray
 - AFXCOLL/CByteArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CByteArray::CByteArray
+- AFXCOLL/CByteArray::Add
+- AFXCOLL/CByteArray::Append
+- AFXCOLL/CByteArray::Copy
+- AFXCOLL/CByteArray::ElementAt
+- AFXCOLL/CByteArray::FreeExtra
+- AFXCOLL/CByteArray::GetAt
+- AFXCOLL/CByteArray::GetCount
+- AFXCOLL/CByteArray::GetData
+- AFXCOLL/CByteArray::GetSize
+- AFXCOLL/CByteArray::GetUpperBound
+- AFXCOLL/CByteArray::InsertAt
+- AFXCOLL/CByteArray::IsEmpty
+- AFXCOLL/CByteArray::RemoveAll
+- AFXCOLL/CByteArray::RemoveAt
+- AFXCOLL/CByteArray::SetAt
+- AFXCOLL/CByteArray::SetAtGrow
+- AFXCOLL/CByteArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CByteArray [MFC], CByteArray
+- CByteArray [MFC], Add
+- CByteArray [MFC], Append
+- CByteArray [MFC], Copy
+- CByteArray [MFC], ElementAt
+- CByteArray [MFC], FreeExtra
+- CByteArray [MFC], GetAt
+- CByteArray [MFC], GetCount
+- CByteArray [MFC], GetData
+- CByteArray [MFC], GetSize
+- CByteArray [MFC], GetUpperBound
+- CByteArray [MFC], InsertAt
+- CByteArray [MFC], IsEmpty
+- CByteArray [MFC], RemoveAll
+- CByteArray [MFC], RemoveAt
+- CByteArray [MFC], SetAt
+- CByteArray [MFC], SetAtGrow
+- CByteArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
-ms.openlocfilehash: b1c48e087052308dfb6b27275c5b4997ed9cca7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2453e7c040b9101f9c3a3b018e274b16e76ebea7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279121"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446358"
 ---
 # <a name="cbytearray-class"></a>CByteArray 類別
 
@@ -61,7 +61,7 @@ class CByteArray : public CObject
 
 ## <a name="members"></a>成員
 
-成員函式`CByteArray`類別的成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代為位元組。
+`CByteArray` 的成員函式類似于[CObArray](../../mfc/reference/cobarray-class.md)類別的成員函式。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 只要您看到 `CObject` 指標做為函式參數或傳回值，請以位元組取代。
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -73,46 +73,46 @@ class CByteArray : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|建構空陣列。|
+|[CByteArray：： CByteArray](../../mfc/reference/cobarray-class.md#cobarray)|建構空陣列。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|將項目加入至陣列結尾；必要時讓陣列增長。|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|將其他陣列附加至該陣列；必要時讓陣列成長。|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|傳回的位元組陣列中的臨時參考。|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|釋放超過目前上限的所有未使用記憶體。|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|傳回給定索引的值。|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|取得此陣列中項目的數目。|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是 NULL。|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|取得此陣列中項目的數目。|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|傳回最大的有效索引。|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|判定陣列是否是空的。|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|從此陣列移除所有項目。|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引處的項目。|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|設定給定索引的值；不容許陣列成長。|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|設定給定索引的值；必要時讓陣列成長。|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|設定此陣列中要包含的項目數目。|
+|[CByteArray：： Add](../../mfc/reference/cobarray-class.md#add)|將項目加入至陣列結尾；必要時讓陣列增長。|
+|[CByteArray：： Append](../../mfc/reference/cobarray-class.md#append)|將其他陣列附加至該陣列；必要時讓陣列成長。|
+|[CByteArray：： Copy](../../mfc/reference/cobarray-class.md#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|
+|[CByteArray：： Parameters.alternatefilters.elementat](../../mfc/reference/cobarray-class.md#elementat)|傳回陣列中位元組的暫時參考。|
+|[CByteArray：： FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|釋放超過目前上限的所有未使用記憶體。|
+|[CByteArray：： GetAt](../../mfc/reference/cobarray-class.md#getat)|傳回給定索引的值。|
+|[CByteArray：： GetCount](../../mfc/reference/cobarray-class.md#getcount)|取得此陣列中項目的數目。|
+|[CByteArray：：操作](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是 NULL。|
+|[CByteArray：： GetSize](../../mfc/reference/cobarray-class.md#getsize)|取得此陣列中項目的數目。|
+|[CByteArray：： System.array.getupperbound](../../mfc/reference/cobarray-class.md#getupperbound)|傳回最大的有效索引。|
+|[CByteArray：： InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|
+|[CByteArray：： IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|判定陣列是否是空的。|
+|[CByteArray：： RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|從此陣列移除所有項目。|
+|[CByteArray：： RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引處的項目。|
+|[CByteArray：： SetAt](../../mfc/reference/cobarray-class.md#setat)|設定給定索引的值；不容許陣列成長。|
+|[CByteArray：： SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|設定給定索引的值；必要時讓陣列成長。|
+|[CByteArray：： SetSize](../../mfc/reference/cobarray-class.md#setsize)|設定此陣列中要包含的項目數目。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|
+|[CByteArray：： operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|
 
 ## <a name="remarks"></a>備註
 
-`CByteArray` 納入 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果位元組陣列儲存封存，不論是使用多載的插入 ( **<<**) 運算子或`Serialize`成員函式，每個項目是，進而，序列化。
+`CByteArray` 包含 IMPLEMENT_SERIAL 宏，以支援其元素的序列化和傾印。 如果將位元組陣列儲存到封存中（不論是使用多載插入（ **<<** ）運算子或 `Serialize` 成員函式），則每個元素都會依次序列化。
 
 > [!NOTE]
 >  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。
 
-如果您需要偵錯輸出陣列中的個別項目，您必須設定的深度`CDumpContext`為 1 或更高的物件。
+如果您需要陣列中個別元素的 debug 輸出，您必須將 `CDumpContext` 物件的深度設定為1或更大。
 
-如需有關使用`CByteArray`，請參閱文章[集合](../../mfc/collections.md)。
+如需使用 `CByteArray`的詳細資訊，請參閱文章[集合](../../mfc/collections.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -122,7 +122,7 @@ class CByteArray : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxcoll.h
+**標頭：** afxcoll.h。h
 
 ## <a name="see-also"></a>另請參閱
 

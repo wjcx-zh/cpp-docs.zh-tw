@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 48ffe6f124b91ee8ad60452f26d895bc2698779b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421356"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447313"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的對話方塊資料交換函式
 
@@ -476,7 +476,8 @@ void AFXAPI DDX_FieldScroll(
 
   **標頭**afxdao。h
 
-  ## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+
 `DDX_FieldSlider` 函式會同步處理記錄視圖中滑杆控制項的捲動方塊位置，以及與記錄視圖相關聯之記錄集的**int**欄位資料成員（或您選擇要將其對應至的任何整數變數）。
 
 ### <a name="syntax"></a>語法

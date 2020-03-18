@@ -1,8 +1,6 @@
 ---
 title: 使用 VERIFY 取代 ASSERT
 ms.date: 05/06/2019
-f1_keywords:
-- assert
 helpviewer_keywords:
 - ASSERT statements
 - debugging [MFC], ASSERT statements
@@ -11,22 +9,22 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: 83ea24904c75d41f7c9c9b383f8b7cf8c39e328f
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: bfc0847677ae232fef67ab6200c626472f042bdb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217665"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438617"
 ---
 # <a name="using-verify-instead-of-assert"></a>使用 VERIFY 取代 ASSERT
 
-假設當您執行偵錯版本的 MFC 應用程式時，沒有任何問題。 不過，相同的應用程式的發行版本損毀，會傳回不正確的結果，及/或表現出某些其他異常行為。
+假設當您執行 MFC 應用程式的 debug 版本時，沒有任何問題。 不過，相同應用程式的發行版本會損毀、傳回不正確的結果，以及（或）展示一些其他異常行為。
 
-當您將重要的程式碼中的判斷提示陳述式，來確認正確執行，可能被造成這個問題。 ASSERT 陳述式標記為註解 MFC 程式的發行組建中，因為程式碼就不會執行在發行組建。
+當您將重要的程式碼放在 ASSERT 語句中，以確認它是否正確執行時，可能會造成此問題。 由於在 MFC 程式的發行組建中，ASSERT 語句會加上批註，因此程式碼不會在發行組建中執行。
 
-如果您使用判斷提示來確認函式呼叫成功，請考慮使用[確認](../mfc/reference/diagnostic-services.md#verify)改。 VERIFY 巨集評估自己的引數，在這兩個偵錯和發行組建的應用程式。
+如果您要使用判斷提示來確認函式呼叫是否成功，請考慮改為使用 [[驗證](../mfc/reference/diagnostic-services.md#verify)]。 VERIFY 宏會在應用程式的 [debug] 和 [release] 組建中，評估它自己的引數。
 
-另一個慣用的技術是將函式的傳回值指派給暫存變數，並接著測試判斷提示陳述式中的 變數。
+另一個慣用的方法是將函數的傳回值指派給暫存變數，然後在 ASSERT 語句中測試變數。
 
 檢查下列程式碼片段：
 
@@ -40,15 +38,15 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-在 偵錯版本的 MFC 應用程式完全執行此程式碼。 如果呼叫`calloc( )`失敗，會顯示診斷訊息，其中包含的檔案和行號。 不過，在 MFC 應用程式的零售組建中：
+這段程式碼會在 MFC 應用程式的 debug 版本中順利執行。 如果 `calloc( )` 的呼叫失敗，就會出現包含檔案和行號的診斷訊息。 不過，在 MFC 應用程式的零售組建中：
 
-- 若要在呼叫`calloc( )`絕不會發生，離開`buf`未初始化，或
+- `calloc( )` 的呼叫永遠不會發生，讓 `buf` 未初始化，或
 
-- `strcpy_s( )` 複製 「`Hello, World`」 到隨機的一種記憶體，可能會使應用程式或導致系統停止回應，或
+- `strcpy_s( )` 會將「`Hello, World`」複製到隨機記憶體中，可能會使應用程式損毀或造成系統停止回應，或
 
 - `free()` 嘗試釋放從未配置的記憶體。
 
-若要正確使用判斷提示，此程式碼範例應該變更為下列：
+若要正確使用 ASSERT，程式碼範例應變更為下列內容：
 
 ```
 enum {
@@ -61,7 +59,7 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-或者，您可以改為使用驗證：
+或者，您可以改為使用 [驗證]：
 
 ```
 enum {

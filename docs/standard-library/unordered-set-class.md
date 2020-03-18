@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890723"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422518"
 ---
 # <a name="unordered_set-class"></a>unordered_set 類別
 
@@ -192,7 +192,7 @@ class unordered_set;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|元素類型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 |||
 |-|-|
@@ -224,7 +224,7 @@ class unordered_set;
 |[swap](#swap)|交換兩個容器的內容。|
 |[unordered_set](#unordered_set)|建構容器物件。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |||
 |-|-|

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455235"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446194"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 類別
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 類別
 
 產生分段常數分佈，其中有不同寬度間隔，且每個間隔中有統一可能性。
 
@@ -81,7 +81,7 @@ public:
 ### <a name="parameters"></a>參數
 
 *RealType*\
-浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+浮點結果類型，預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="example"></a>範例
 
@@ -214,9 +214,9 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<random>
+**標頭：** \<隨機 >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution
 
@@ -280,6 +280,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
 預設建構函式會設定儲存的參數，因此會有可能性密度為 1 的一個間隔 (0 到 1)。
 
 迭代器範圍建構函式
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 建構分佈物件，而分佈物件具有序列 [`firstI`, `lastI`) 上來自迭代器的間隔，以及從 `firstW` 開始的相符加權序列。
 
 初始設定式清單建構函式
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -296,18 +298,20 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-以從函式*weightfunc*產生的初始化運算式清單*間隔*和權數的間隔, 來構造散發物件。
+以從函式*weightfunc*產生的初始化運算式清單*間隔*和權數的間隔，來構造散發物件。
 
 建構函式定義為
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-以一致的方式, 建立*計數*間隔分佈于 [ `xmin,xmax`] 的散發物件, 根據函數*weightfunc*指派每個間隔權數, 而*weightfunc*必須接受一個參數並傳回值, 這兩個都可以轉換`double`成。 **前置條件：** `xmin < xmax`
+會以統一的方式，建立*計數*間隔分佈在 [`xmin,xmax`] 上的散發物件，並根據函數*weightfunc*指派每個間隔權數，而*weightfunc*必須接受一個參數並具有傳回值，這兩者都可以轉換成 `double`。 **前置條件：** `xmin < xmax`
 
 建構函式定義為
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```

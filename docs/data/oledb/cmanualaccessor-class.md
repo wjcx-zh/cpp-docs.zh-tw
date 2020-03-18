@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::CManualAccessor::AddBindEntry
 - ATL.CManualAccessor.AddBindEntry
 - CManualAccessor::AddBindEntry
-- AddBindEntry
 - CManualAccessor.AddBindEntry
 - CManualAccessor::AddParameterEntry
 - ATL.CManualAccessor.AddParameterEntry
@@ -16,7 +15,6 @@ f1_keywords:
 - AddParameterEntry
 - ATL::CManualAccessor::AddParameterEntry
 - ATL::CManualAccessor::CreateAccessor
-- CreateAccessor
 - ATL.CManualAccessor.CreateAccessor
 - CManualAccessor.CreateAccessor
 - CManualAccessor::CreateAccessor
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231060"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447375"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 類別
 
-代表設計供進階使用存取子類型。
+表示專為先進使用而設計的存取子類型。
 
 ## <a name="syntax"></a>語法
 
@@ -59,18 +57,18 @@ class CManualAccessor : public CAccessorBase
 
 |||
 |-|-|
-|[AddBindEntry](#addbindentry)|將輸出資料行的繫結項目。|
-|[AddParameterEntry](#addparameterentry)|將參數存取子中參數項目。|
-|[CreateAccessor](#createaccessor)|資料行繫結結構配置記憶體，並初始化資料行的資料成員。|
-|[CreateParameterAccessor](#createparameteraccessor)|參數繫結結構配置記憶體，初始化參數的資料成員。|
+|[AddBindEntry](#addbindentry)|將繫結項目加入至輸出資料行。|
+|[AddParameterEntry](#addparameterentry)|將參數專案加入至參數存取子。|
+|[CreateAccessor](#createaccessor)|配置資料行系結結構的記憶體，並初始化資料行資料成員。|
+|[CreateParameterAccessor](#createparameteraccessor)|配置參數系結結構的記憶體，並初始化參數資料成員。|
 
 ## <a name="remarks"></a>備註
 
-使用`CManualAccessor`，您可以指定參數和輸出資料行繫結的執行階段函式呼叫。
+使用 `CManualAccessor`，您可以透過執行時間函式呼叫來指定參數和輸出資料行系結。
 
-## <a name="addbindentry"></a> Cmanualaccessor:: Addbindentry
+## <a name="addbindentry"></a>CManualAccessor：： AddBindEntry
 
-將輸出資料行的繫結項目。
+將繫結項目加入至輸出資料行。
 
 ### <a name="syntax"></a>語法
 
@@ -84,33 +82,33 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
-[in]資料行編號。
+在資料行編號。
 
 *wType*<br/>
-[in]資料型別。
+在資料類型。
 
 *nColumnSize*<br/>
-[in]資料行大小 （位元組）。
+在資料行大小（以位元組為單位）。
 
 *pData*<br/>
-[in]儲存在緩衝區資料行的資料指標。
+在緩衝區中儲存之資料行資料的指標。
 
 *pLength*<br/>
-[in]如有必要的欄位長度指標。
+在欄位長度的指標（如有需要）。
 
 *pStatus*<br/>
-[in]如有需要繫結至資料行狀態中，變數的指標。
+在要系結至資料行狀態之變數的指標（如有需要）。
 
 ### <a name="remarks"></a>備註
 
-若要使用此函式，您必須先呼叫[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 您無法新增更多的項目中指定的資料行數目比`CreateAccessor`。
+若要使用此函數，您必須先呼叫[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 您無法新增超過 `CreateAccessor`中指定之資料行數目的專案。
 
-## <a name="addparameterentry"></a> Cmanualaccessor:: Addparameterentry
+## <a name="addparameterentry"></a>CManualAccessor：： AddParameterEntry
 
-將參數項目加入至參數項目結構。
+將參數專案加入至參數專案結構。
 
 ### <a name="syntax"></a>語法
 
@@ -125,36 +123,36 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
-[in]參數編號。
+在參數編號。
 
 *wType*<br/>
-[in]資料型別。
+在資料類型。
 
 *nColumnSize*<br/>
-[in]資料行大小 （位元組）。
+在資料行大小（以位元組為單位）。
 
 *pData*<br/>
-[in]儲存在緩衝區資料行的資料指標。
+在緩衝區中儲存之資料行資料的指標。
 
 *pLength*<br/>
-[in]如有必要的欄位長度指標。
+在欄位長度的指標（如有需要）。
 
 *pStatus*<br/>
-[in]如有需要繫結至資料行狀態中，變數的指標。
+在要系結至資料行狀態之變數的指標（如有需要）。
 
 *eParamIO*<br/>
-[in]指定與繫結相關聯的參數是否為輸入、 輸入/輸出或輸出參數。
+在指定與系結相關聯的參數是否為輸入、輸入/輸出或輸出參數。
 
 ### <a name="remarks"></a>備註
 
-若要使用此函式，您必須先呼叫[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
+若要使用此函數，您必須先呼叫[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
 
-## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
+## <a name="createaccessor"></a>CManualAccessor：： CreateAccessor
 
-資料行繫結結構配置記憶體，並初始化資料行的資料成員。
+配置資料行系結結構的記憶體，並初始化資料行資料成員。
 
 ### <a name="syntax"></a>語法
 
@@ -167,25 +165,25 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>參數
 
 *nBindEntries*<br/>
-[in]資料行數目。 此數目應符合的呼叫次數[cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md)函式。
+在資料行數目。 這個數位應符合[CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)函式的呼叫次數。
 
 *pBuffer*<br/>
-[in]儲存的輸出資料行緩衝區的指標。
+在儲存輸出資料行之緩衝區的指標。
 
 *nBufferSize*<br/>
-[in]以位元組為單位的緩衝區大小。
+在緩衝區的大小（以位元組為單位）。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式，然後再呼叫`CManualAccessor::AddBindEntry`函式。
+呼叫 `CManualAccessor::AddBindEntry` 函式之前，請先呼叫此函式。
 
-## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
+## <a name="createparameteraccessor"></a>CManualAccessor：： CreateParameterAccessor
 
-參數繫結結構配置記憶體，初始化參數的資料成員。
+配置參數系結結構的記憶體，並初始化參數資料成員。
 
 ### <a name="syntax"></a>語法
 
@@ -198,26 +196,26 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 #### <a name="parameters"></a>參數
 
 *nBindEntries*<br/>
-[in]資料行數目。
+在資料行數目。
 
 *pBuffer*<br/>
-[in]儲存的輸入資料行緩衝區的指標。
+在儲存輸入資料行之緩衝區的指標。
 
 *nBufferSize*<br/>
-[in]以位元組為單位的緩衝區大小。
+在緩衝區的大小（以位元組為單位）。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-您必須呼叫此函式，然後再呼叫[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)。
+呼叫[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，您必須先呼叫此函式。
 
 ## <a name="see-also"></a>另請參閱
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>

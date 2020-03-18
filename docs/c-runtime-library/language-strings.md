@@ -1,21 +1,19 @@
 ---
-title: 語言字串
+title: Language Strings
 ms.date: 11/04/2016
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500066"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438245"
 ---
-# <a name="language-strings"></a>語言字串
+# <a name="language-strings"></a>Language Strings
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 與 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函式可以在不使用 Unicode 字碼頁的作業系統上，使用由 Windows NLS API 所支援的語言。 如需依作業系統版本分類的支援語言清單，請參閱[附錄 A：產品行為](https://msdn.microsoft.com/library/cc233982.aspx) (在 [MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考) 中。 語言字串可以是支援語言清單的「語言」  和「語言標記」  欄中的任何值。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/win32/intl/nls--name-based-apis-sample)。
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 與 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函式可以在不使用 Unicode 字碼頁的作業系統上，使用由 Windows NLS API 所支援的語言。 如需依作業系統版本分類的支援語言清單，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](https://msdn.microsoft.com/library/cc233982.aspx) \(英文\)。 語言字串可以是支援語言清單的「語言」和「語言標記」欄中的任何值。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/win32/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-language-strings"></a>其他支援的語言字串
 
@@ -23,21 +21,21 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 
 |語言字串|對等的地區設定名稱|
 |---------------------|----------------------------|
-|american|en-US|
-|american english|en-US|
-|american-english|en-US|
-|australian|en-AU|
-|belgian|nl-BE|
-|canadian|en-CA|
+|美國|zh-TW|
+|american english|zh-TW|
+|american-english|zh-TW|
+|澳洲|en-AU|
+|比利時|nl-BE|
+|加拿大|en-CA|
 |chh|zh-HK|
 |chi|zh-SG|
-|chinese|zh|
+|中文|zh|
 |chinese-hongkong|zh-HK|
 |chinese-simplified|zh-CN|
 |chinese-singapore|zh-SG|
 |chinese-traditional|zh-TW|
 |dutch-belgian|nl-BE|
-|english-american|en-US|
+|english-american|zh-TW|
 |english-aus|en-AU|
 |english-belize|en-BZ|
 |english-can|en-CA|
@@ -48,8 +46,8 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |english-south africa|en-ZA|
 |english-trinidad y tobago|en-TT|
 |english-uk|en-GB|
-|english-us|en-US|
-|english-usa|en-US|
+|english-us|zh-TW|
+|english-usa|zh-TW|
 |french-belgian|fr-BE|
 |french-canadian|fr-CA|
 |french-luxembourg|fr-LU|
@@ -60,7 +58,7 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |german-swiss|de-CH|
 |irish-english|en-IE|
 |italian-swiss|it-CH|
-|norwegian|否|
+|挪威文|否|
 |norwegian-bokmal|nb-NO|
 |norwegian-nynorsk|nn-NO|
 |portuguese-brazilian|pt-BR|
@@ -84,10 +82,10 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |spanish-uruguay|es-UY|
 |spanish-venezuela|es-VE|
 |swedish-finland|sv-FI|
-|swiss|de-CH|
+|瑞士|de-CH|
 |uk|en-GB|
-|us|en-US|
-|usa|en-US|
+|us|zh-TW|
+|usa|zh-TW|
 
 ## <a name="see-also"></a>另請參閱
 

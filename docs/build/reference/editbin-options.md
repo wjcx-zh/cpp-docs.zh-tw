@@ -2,17 +2,15 @@
 title: EDITBIN 選項
 description: Microsoft EDITBIN 公用程式命令列選項的參考指南。
 ms.date: 02/09/2020
-f1_keywords:
-- editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9fd4170e5ee020780963d83936f1a9fd08d2be11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257698"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439968"
 ---
 # <a name="editbin-options"></a>EDITBIN 選項
 
@@ -29,8 +27,8 @@ EDITBIN 有下列選項：
 |[/APPCONTAINER](appcontainer.md)|指定應用程式是否必須在 AppContainer 中執行（例如 UWP 應用程式）。|
 |[/BIND](bind.md)|在指定的物件中設定進入點位址，以加速載入時間。|
 |[/DYNAMICBASE](dynamicbase.md)|指定 DLL 或可執行檔映像是否可以使用位址空間配置隨機載入 (ASLR) 功能，於載入時隨機重定基底。|
-|[/ERRORREPORT](errorreport-editbin-exe.md)| 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
-|[/HEAP](heap.md)|設定可執行檔映像的堆積大小 (位元組)。|
+|[/ERRORREPORT](errorreport-editbin-exe.md)| 已被取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
+|[/HEAP](heap.md)|設定可執行映射的堆積大小（以位元組為單位）。|
 |[/HIGHENTROPYVA](highentropyva.md)|指定 DLL 或可執行映像是否支援高熵 (64 位元) 位址空間配置隨機載入 (ASLR)。|
 |[/INTEGRITYCHECK](integritycheck.md)|指定是否在載入時間檢查數位簽章。|
 |[/LARGEADDRESSAWARE](largeaddressaware.md)|指定物件是否支援大於 2 GB 的位址。|
@@ -39,7 +37,7 @@ EDITBIN 有下列選項：
 |[/REBASE](rebase.md)|設定指定之物件的基底位址。|
 |[/RELEASE](release.md)|在標頭中設定總和檢查碼。|
 |[/SECTION](section-editbin.md)|覆寫區段的屬性。|
-|[/STACK](stack.md)|設定可執行檔映像的堆疊大小 (位元組)。|
+|[/STACK](stack.md)|設定可執行檔映射的堆疊大小（以位元組為單位）。|
 |[/SUBSYSTEM](subsystem.md)|指定執行環境。|
 |[/SWAPRUN](swaprun.md)|指定可執行映射複製到分頁檔，然後從該處執行。|
 |[/TSAWARE](tsaware.md)|指定應用程式是設計成在多使用者環境中執行。|

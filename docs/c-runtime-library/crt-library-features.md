@@ -1,8 +1,6 @@
 ---
 title: CRT 程式庫功能
 ms.date: 08/20/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767687"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438543"
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 
@@ -39,8 +37,8 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 
 |程式庫|相關聯的 DLL|特性|選項|前置處理器指示詞|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libucrt.lib|無|以靜態方式將 UCRT 連結到您的程式碼。|**/MT**|_MT|
-|libucrtd.lib|無|用於靜態連結的偵錯版 UCRT。 不可轉散發。|**/MTd**|_DEBUG、_MT|
+|libucrt.lib|None|以靜態方式將 UCRT 連結到您的程式碼。|**/MT**|_MT|
+|libucrtd.lib|None|用於靜態連結的偵錯版 UCRT。 不可轉散發。|**/MTd**|_DEBUG、_MT|
 |ucrt.lib|ucrtbase.dll|UCRT 的 DLL 匯入程式庫。|**/MD**|_MT、_DLL|
 |ucrtd.lib|ucrtbased.dll|偵錯版 UCRT 的 DLL 匯入程式庫。 不可轉散發。|**/MDd**|_DEBUG、_MT、_DLL|
 
@@ -50,8 +48,8 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 
 |程式庫|相關聯的 DLL|特性|選項|前置處理器指示詞|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libvcruntime.lib|無|以靜態方式連結到您的程式碼。|**/MT**|_MT|
-|libvcruntimed.lib|無|用於靜態連結的偵錯版本。 不可轉散發。|**/MTd**|_MT、_DEBUG|
+|libvcruntime.lib|None|以靜態方式連結到您的程式碼。|**/MT**|_MT|
+|libvcruntimed.lib|None|用於靜態連結的偵錯版本。 不可轉散發。|**/MTd**|_MT、_DEBUG|
 |vcruntime.lib|vcruntime\<版本>.dll|vcruntime 的 DLL 匯入程式庫。|**/MD**|_MT、_DLL|
 |vcruntimed.lib|vcruntime\<版本>d.dll|偵錯 vcruntime 的 DLL 匯入程式庫。 不可轉散發。|**/MDd**|_DEBUG、_MT、_DLL|
 
@@ -79,11 +77,11 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 
 因為藉由連結到靜態 CRT 所建置的 DLL，會具備自己的 CRT 狀態，因此除非您已確實了解此結果並有此需要，否則不建議在 DLL 中以靜態方式連結到 CRT。 例如，如果您在載入連結到其自身靜態 CRT 之 DLL 的可執行檔中呼叫 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) ，轉譯器將攔截不到 DLL 中的程式碼所產生的任何硬體例外狀況，而只會攔截到主要可執行檔中的程式碼所產生的硬體例外狀況。
 
-如果您使用 **/clr** 編譯器參數，您的程式碼將會連結到靜態程式庫 msvcurt.lib。 靜態程式庫會提供 Managed 程式碼與原生 CRT 之間的 Proxy。 請勿將靜態連結的 CRT ( **/MT** 或 **/MTd** 選項) 與 **/clr**並用。 請改用動態連結程式庫 (**/MD** 或 **/MDd**)。 純粹受控 CRT 程式庫在 Visual Studio 2015 中已被取代，而在 Visual Studio 2017 中已不受支援。
+如果您使用 **/clr** 編譯器參數，您的程式碼將會連結到靜態程式庫 msvcurt.lib。 靜態程式庫會提供 Managed 程式碼與原生 CRT 之間的 Proxy。 請勿將靜態連結的 CRT ( **/MT** 或 **/MTd** 選項) 與 **/clr**並用。 請改用動態連結程式庫 ( **/MD** 或 **/MDd**)。 純粹受控 CRT 程式庫在 Visual Studio 2015 中已被取代，而在 Visual Studio 2017 中已不受支援。
 
 如需使用 CRT 與 **/clr** 的詳細資訊，請參閱[混合 (機器與受控) 組件](../dotnet/mixed-native-and-managed-assemblies.md)。
 
-若要建置應用程式的偵錯版本，必須定義 [_DEBUG](../c-runtime-library/debug.md) 旗標，且應用程式必須連結到這些程式庫的任一偵錯版本。 如需如何使用程式庫檔案之偵錯版本的詳細資訊，請參閱 [CRT 偵錯技術](/visualstudio/debugger/crt-debugging-techniques)。
+若要建置應用程式的偵錯版本，必須定義 [_DEBUG](../c-runtime-library/debug.md) 旗標，且應用程式必須連結到任一程式庫的偵錯版本。 如需如何使用程式庫檔案之偵錯版本的詳細資訊，請參閱 [CRT 偵錯技術](/visualstudio/debugger/crt-debugging-techniques)。
 
 本版 CRT 不完全符合 C99 標準。 具體而言，\<tgmath.h> 標頭和 CX_LIMITED_RANGE/FP_CONTRACT pragma 巨集並不受支援。 像是標準 IO 函式的參數規範意義等特定項目，預設會使用舊版解譯。 您可以使用 /Zc 編譯器一致性選項並指定連結器選項，來控制程式庫一致性的某些層面。
 
@@ -112,7 +110,7 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 
 如果處理序中的所有映像都使用 CRT 的相同動態載入版本，則也可能避開部分這類問題。 若要確保所有元件都使用 CRT 的相同 DLL 版本，請使用 **/MD** 選項來建置，並使用相同的編譯器工具組和屬性設定。
 
-即便使用相同版本的 CRT，當程式會跨 DLL 界限傳遞某些 CRT 資源時 (例如檔案控制代碼、地區設定和環境變數)，還是需要留意。 如需涉及問題及解決方法的相關資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
+即便使用相同版本的 CRT，當程式會跨 DLL 界限傳遞某些 CRT 資源時 (例如檔案控制代碼、地區設定和環境變數)，還是需要留意。 如需涉及問題及解決方法的相關資訊，請參閱 [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
 ## <a name="see-also"></a>另請參閱
 

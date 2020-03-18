@@ -1,36 +1,34 @@
 ---
 title: 使用 CStatusBarCtrl 建立 CStatusBarCtrl 物件
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - status bar controls [MFC], creating
 - CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
-ms.openlocfilehash: 3242986d66de7d423b8ab744a691ca1904328de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12d5664b9fc59c4569ec2ee7db4ae883911f7bcd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411704"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442390"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>使用 CStatusBarCtrl 建立 CStatusBarCtrl 物件
 
-以下是範例的典型用法[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):
+以下是一般使用[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)的範例：
 
-### <a name="to-use-a-status-bar-control-with-parts"></a>若要使用組件中的狀態列控制項
+### <a name="to-use-a-status-bar-control-with-parts"></a>若要搭配使用狀態列控制項與元件
 
 1. 建構 `CStatusBarCtrl` 物件。
 
-1. 呼叫[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)如果您想要設定狀態列控制項的最小高度的繪圖區域。
+1. 如果您想要設定狀態列控制項的繪製區域的最小高度，請呼叫[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight) 。
 
-1. 呼叫[SetBkColor](../mfc/reference/cstatusbarctrl-class.md#setbkcolor)設定狀態列控制項的背景色彩。
+1. 呼叫[SetBkColor](../mfc/reference/cstatusbarctrl-class.md#setbkcolor)來設定狀態列控制項的背景色彩。
 
-1. 呼叫[SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts)設在狀態列控制項，而每個部分的右邊緣的座標中的部分數目。
+1. 呼叫[SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts)來設定狀態列控制項中的元件數目，以及每個元件右邊緣的座標。
 
-1. 呼叫[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)狀態列控制項的指定部分設定的文字。 已變更，使其在控制項接著接收 WM_PAINT 訊息時，顯示新的文字的控制項部分失效的訊息。
+1. 呼叫[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)以設定狀態列控制項的指定部分中的文字。 此訊息會使控制項中已變更的部分失效，使其在控制項下一次收到 WM_PAINT 訊息時顯示新的文字。
 
-在某些情況下，[狀態] 列只需要顯示一條線的文字。 在此情況下，呼叫以[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)。 這會將狀態列控制項放 「 簡單 」 模式中，會顯示 單行文字。
+在某些情況下，狀態列只需要顯示一行文字。 在此情況下，請呼叫[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)。 這會將狀態列控制項放入「簡單」模式，以顯示單行文字。
 
 ## <a name="see-also"></a>另請參閱
 

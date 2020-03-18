@@ -20,7 +20,7 @@ f1_keywords:
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
-- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::InitD2D
 - AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 66cfb66e091d487ea9d3f563b7b6bbb9ca1ea928
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420586"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447332"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA 結構
 
@@ -100,7 +100,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA：： GetTextHeight](#gettextheight)|擷取目前字型的文字字元高度。|
 |[AFX_GLOBAL_DATA：： GetWICFactory](#getwicfactory)|傳回儲存在全域資料中的 `IWICImagingFactory` 介面指標。 介面若未初始化，就會建立介面並設定預設參數。|
 |[AFX_GLOBAL_DATA：： GetWriteFactory](#getwritefactory)|傳回儲存在全域資料中的 `IDWriteFactory` 介面指標。 介面若未初始化，就會建立介面並設定預設參數。|
-|[AFX_GLOBAL_DATA：： IsD2DInitialized](#isd2dinitialized)|初始化 `D2D`、 `DirectWrite`和 `WIC` Factory。 初始化主視窗之前先呼叫這個方法。|
+|[AFX_GLOBAL_DATA：： InitD2D](#initd2d)|初始化 `D2D`、 `DirectWrite`和 `WIC` Factory。 初始化主視窗之前先呼叫這個方法。|
 |[AFX_GLOBAL_DATA：： Is32BitIcons](#is32biticons)|指出是否支援預先定義的 32 位元圖示。|
 |[AFX_GLOBAL_DATA：： IsD2DInitialized](#isd2dinitialized)|判斷是否已初始化 `D2D` 。|
 |[AFX_GLOBAL_DATA：： IsDwmCompositionEnabled](#isdwmcompositionenabled)|提供呼叫 Windows [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) 方法的簡單方式。|
@@ -220,7 +220,7 @@ BOOL DrawParentBackground(
 在裝置內容的指標。
 
 *lpRect*<br/>
-在矩形的指標，範圍為要繪製的區域。 預設值為 NULL。
+在矩形的指標，範圍為要繪製的區域。 預設值是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -327,7 +327,7 @@ BOOL ExcludeTag(
 脫銷當這個方法傳回時， *strTag*參數會包含在*lpszTag*參數所命名的開頭和結尾 XML 標記之間的文字。 任何開頭或尾端空白字元都會從結果中修剪。
 
 *bIsCharsList*<br/>
-在TRUE 會將*strTag*參數中的逸出字元符號轉換成實際的逸出字元;FALSE 表示不執行轉換。預設值為 FALSE。 如需詳細資訊，請參閱備註。
+在TRUE 會將*strTag*參數中的逸出字元符號轉換成實際的逸出字元;FALSE 表示不執行轉換。預設值為 FALSE。 如需詳細資訊，請參閱＜備註＞。
 
 ### <a name="return-value"></a>傳回值
 
@@ -364,7 +364,7 @@ COLORREF GetColor(int nColor);
 
 ### <a name="return-value"></a>傳回值
 
-指定之使用者介面項目的 RGB 色彩值。 如需詳細資訊，請參閱備註。
+指定之使用者介面項目的 RGB 色彩值。 如需詳細資訊，請參閱＜備註＞。
 
 ### <a name="remarks"></a>備註
 
@@ -535,6 +535,7 @@ BOOL IsDwmCompositionEnabled();
 ## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA：： IsHighContrastMode
 
 指出目前是否以高對比顯示圖像。
+
 ```
 BOOL IsHighContrastMode() const;
 ```

@@ -1,8 +1,6 @@
 ---
 title: 引出程式庫成員
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - LIB [C++], extracting library members
 - EXTRACT library manager option
@@ -11,22 +9,22 @@ helpviewer_keywords:
 - extracting library members
 - /EXTRACT library manager option
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
-ms.openlocfilehash: 6c577300f747d6f546b7caa3c66bddd6a516e16b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874866627099eb5aeb318273db26a976e99bac7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271316"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439876"
 ---
 # <a name="extracting-a-library-member"></a>引出程式庫成員
 
-您可以使用程式庫來建立物件 (.obj) 檔案，其中包含一份現有的程式庫的成員。 若要擷取的成員複本，請使用下列語法：
+您可以使用 LIB 建立包含現有文件庫成員複本的物件（.obj）檔案。 若要解壓縮成員的複本，請使用下列語法：
 
 ```
 LIB library /EXTRACT:member /OUT:objectfile
 ```
 
-此命令會建立稱為的.obj 檔案*objectfile* ，其中包含一份`member`的*程式庫*。 `member`名稱會區分大小寫。 您可以擷取單一命令中的只能有一個成員。 /OUT 選項是必要項沒有預設輸出名稱。 如果檔名*objectfile*已經存在於指定的目錄 (或目前的目錄，如果不指定的任何目錄，但*objectfile*)，擷取*objectfile*會取代現有的檔案。
+此命令會建立名為*objectfile*的 .obj 檔案，其中包含連結*庫*的 `member` 複本。 `member` 名稱會區分大小寫。 您只能在單一命令中解壓縮一個成員。 需要/OUT 選項;沒有預設的輸出名稱。 如果指定的目錄中已存在名為*objectfile*的檔案（或目前的目錄中，如果未使用*objectfile*指定任何目錄），則解壓縮的*objectfile*會取代現有的檔案。
 
 ## <a name="see-also"></a>另請參閱
 

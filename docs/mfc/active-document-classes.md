@@ -1,31 +1,29 @@
 ---
 title: 主動式文件類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.document
 helpviewer_keywords:
 - Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
-ms.openlocfilehash: c4087d8e223e08842d5b402bdf063a908d1e22bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c74b1287243c18bf8d7f26325e726b09463700f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394984"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445818"
 ---
 # <a name="active-document-classes"></a>主動式文件類別
 
-在整個用戶端視窗中，在 Web 瀏覽器，例如 Internet Explorer 5.5，或在使用中的容器，例如 Microsoft Office Binder 支援主動式文件中，可以顯示作用中的文件。
+活動文檔可以顯示在網頁瀏覽器的整個用戶端視窗中，例如 Internet Explorer 5.5，或是在支援使用中檔的作用中容器中（例如 Microsoft Office 系結器）。
 
 [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
-會對應主動式文件介面中，初始化並啟動主動式文件物件。
+對應活動文檔介面，並初始化和啟動活動文檔物件。
 
 [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
-實作專為使用中文件伺服器的的 OLE 伺服器的動詞命令。
+會特別針對活動文檔伺服器來執行 OLE 伺服器動詞。
 
 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
 實作主動式文件內含項目。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

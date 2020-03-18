@@ -6,7 +6,6 @@ f1_keywords:
 - ATL::CDynamicAccessor
 - CDynamicAccessor
 - ATL::CDynamicAccessor::AddBindEntry
-- AddBindEntry
 - CDynamicAccessor.AddBindEntry
 - CDynamicAccessor::AddBindEntry
 - ATL.CDynamicAccessor.AddBindEntry
@@ -42,8 +41,6 @@ f1_keywords:
 - ATL::CDynamicAccessor::GetColumnFlags
 - ATL.CDynamicAccessor.GetColumnFlags
 - CDynamicAccessor::GetColumnFlags
-- GetColumnFlags
-- GetColumnInfo
 - ATL.CDynamicAccessor.GetColumnInfo
 - ATL::CDynamicAccessor::GetColumnInfo
 - CDynamicAccessor.GetColumnInfo
@@ -127,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08e36606ae5d8dc34b9e25dd7d8dbc6d606520da
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209283"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447388"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 類別
 
@@ -154,38 +151,38 @@ class CDynamicAccessor : public CAccessorBase
 
 |||
 |-|-|
-|[AddBindEntry](#addbindentry)|當覆寫預設存取子，則您可以將輸出資料行的繫結項目。|
-|[CDynamicAccessor](#cdynamicaccessor)|具現化並初始化`CDynamicAccessor`物件。|
-|[關閉](#close)|所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))類別中的介面指標。|
-|[GetBlobHandling](#getblobhandling)|擷取 BLOB 處理目前的資料列的值。|
-|[GetBlobSizeLimit](#getblobsizelimit)|擷取最大 BLOB 大小 （位元組）。|
-|[GetBookmark](#getbookmark)|擷取目前的資料列的書籤。|
-|[GetColumnCount](#getcolumncount)|擷取資料列集中的資料行的數目。|
-|[GetColumnFlags](#getcolumnflags)|擷取的資料行的特性。|
-|[GetColumnInfo](#getcolumninfo)|擷取資料行中繼資料。|
-|[GetColumnName](#getcolumnname)|擷取指定的資料行的名稱。|
-|[GetColumnType](#getcolumntype)|擷取指定之資料行的資料類型。|
-|[GetLength](#getlength)|擷取以位元組為單位的資料行的最大可能長度。|
-|[GetOrdinal](#getordinal)|擷取給定資料行名稱的資料行索引。|
-|[GetStatus](#getstatus)|擷取指定之資料行的狀態。|
-|[GetValue](#getvalue)|從緩衝區中擷取資料。|
-|[SetBlobHandling](#setblobhandling)|設定 BLOB 處理目前的資料列的值。|
-|[SetBlobSizeLimit](#setblobsizelimit)|設定 BLOB 大小上限 （位元組）。|
-|[SetLength](#setlength)|設定資料行的長度，以位元組為單位。|
-|[SetStatus](#setstatus)|設定指定的資料行的狀態。|
-|[SetValue](#setvalue)|儲存至緩衝區的資料。|
+|[AddBindEntry](#addbindentry)|覆寫預設存取子時，將系結專案加入至輸出資料行。|
+|[CDynamicAccessor](#cdynamicaccessor)|具現化並初始化 `CDynamicAccessor` 物件。|
+|[關閉](#close)|將所有資料行解除系結、釋放已配置的記憶體，並釋放類別中的[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))介面指標。|
+|[GetBlobHandling](#getblobhandling)|抓取目前資料列的 BLOB 處理值。|
+|[GetBlobSizeLimit](#getblobsizelimit)|抓取 BLOB 大小上限（以位元組為單位）。|
+|[GetBookmark](#getbookmark)|抓取目前資料列的書簽。|
+|[GetColumnCount](#getcolumncount)|抓取資料列集中的資料行數目。|
+|[GetColumnFlags](#getcolumnflags)|抓取資料行特性。|
+|[GetColumnInfo](#getcolumninfo)|抓取資料行中繼資料。|
+|[GetColumnName](#getcolumnname)|抓取指定資料行的名稱。|
+|[GetColumnType](#getcolumntype)|抓取指定資料行的資料類型。|
+|[GetLength](#getlength)|抓取資料行的最大可能長度（以位元組為單位）。|
+|[GetOrdinal](#getordinal)|根據指定的資料行名稱，抓取資料行索引。|
+|[GetStatus](#getstatus)|抓取指定資料行的狀態。|
+|[GetValue](#getvalue)|抓取緩衝區中的資料。|
+|[SetBlobHandling](#setblobhandling)|設定目前資料列的 BLOB 處理值。|
+|[SetBlobSizeLimit](#setblobsizelimit)|設定 BLOB 大小上限（以位元組為單位）。|
+|[SetLength](#setlength)|設定資料行的長度（以位元組為單位）。|
+|[SetStatus](#setstatus)|設定指定資料行的狀態。|
+|[SetValue](#setvalue)|將資料儲存至緩衝區。|
 
 ## <a name="remarks"></a>備註
 
-使用`CDynamicAccessor`方法來取得資料行資訊，例如資料行名稱、 資料行計數、 資料類型等等。 然後，您會使用此資料行資訊在執行階段動態建立存取子。
+您可以使用 `CDynamicAccessor` 方法來取得資料行資訊，例如資料行名稱、資料行計數、資料類型等等。 接著，您可以使用此資料行資訊，在執行時間動態建立存取子。
 
-資料行資訊會儲存在緩衝區中，建立和管理由這個類別。 取得從緩衝區使用的資料[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)。
+資料行資訊儲存在此類別所建立及管理的緩衝區中。 使用[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)從緩衝區取得資料。
 
-討論和使用動態存取子類別的範例，請參閱[使用動態存取子](../../data/oledb/using-dynamic-accessors.md)。
+如需使用動態存取子類別的討論和範例，請參閱[使用動態存取](../../data/oledb/using-dynamic-accessors.md)子。
 
-## <a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
+## <a name="addbindentry"></a>CDynamicAccessor：： AddBindEntry
 
-將輸出資料行的繫結項目。
+將繫結項目加入至輸出資料行。
 
 ### <a name="syntax"></a>語法
 
@@ -196,19 +193,19 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>參數
 
 *info*<br/>
-[in]A`DBCOLUMNINFO`結構，其中包含資料行資訊。 請參閱中的"DBCOLUMNINFO 結構 」 [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+在包含資料行資訊的 `DBCOLUMNINFO` 結構。 請參閱 OLE DB 程式設計*人員參考*的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中的「DBCOLUMNINFO 結構」。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-使用這個方法時覆寫以建立預設存取子`CDynamicAccessor`(請參閱 < [How Do I 擷取資料嗎？](../../data/oledb/fetching-data.md))。
+覆寫以 `CDynamicAccessor` 建立的預設存取子時，請使用此方法（請參閱[如何提取資料？](../../data/oledb/fetching-data.md)）。
 
-## <a name="cdynamicaccessor"></a> CDynamicAccessor::CDynamicAccessor
+## <a name="cdynamicaccessor"></a>CDynamicAccessor：： CDynamicAccessor
 
-具現化並初始化`CDynamicAccessor`物件。
+具現化並初始化 `CDynamicAccessor` 物件。
 
 ### <a name="syntax"></a>語法
 
@@ -220,20 +217,20 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 #### <a name="parameters"></a>參數
 
 *eBlobHandling*<br/>
-指定要處理的二進位大型物件 (BLOB) 資料的方式。 預設值是 DBBLOBHANDLING_DEFAULT。 請參閱[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) cdynamicaccessor:: SETBLOBHANDLING 值的描述。
+指定如何處理二進位大型物件（BLOB）資料。 預設值為 DBBLOBHANDLING_DEFAULT。 如需 DBBLOBHANDLINGENUM 值的說明，請參閱[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 。
 
 *nBlobSize*<br/>
-最大 BLOB 的大小 (以位元組為單位)；此值的資料行資料被視為 BLOB。 預設值為 8000。 請參閱[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)如需詳細資訊。
+最大 BLOB 的大小 (以位元組為單位)；此值的資料行資料被視為 BLOB。 預設值為8000。 如需詳細資訊，請參閱[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 。
 
 ### <a name="remarks"></a>備註
 
-如果您使用建構函式來初始化`CDynamicAccessor`物件時，您可以指定如何 Blob 會繫結。 Blob 可以包含二進位資料，例如圖形、 聲音，或已編譯程式碼。 預設行為是以 Blob 的形式將資料行超過 8,000 個位元組，並嘗試進行繫結`ISequentialStream`物件。 不過，您可以指定 BLOB 的大小不同的值。
+如果您使用此函式來初始化 `CDynamicAccessor` 物件，您可以指定它要如何系結 Blob。 Blob 可以包含二進位資料，例如圖形、聲音或已編譯的程式碼。 預設行為是將資料行的8000位元組視為 Blob，並嘗試將它們系結至 `ISequentialStream` 物件。 不過，您可以指定不同的值做為 BLOB 大小。
 
-您也可以指定如何`CDynamicAccessor`處理可視為 BLOB 資料的資料行資料： 它可以處理 BLOB 資料，以預設方式，可以略過 （不是繫結） 提供者配置的記憶體中 BLOB 資料，也可以繫結 BLOB 資料。
+您也可以指定 `CDynamicAccessor` 如何處理限定為 BLOB 資料的資料行資料：它可以用預設方式處理 BLOB 資料。它可以略過（不系結） BLOB 資料;或者，它可以將 BLOB 資料系結到提供者配置的記憶體中。
 
-## <a name="close"></a> CDynamicAccessor::Close
+## <a name="close"></a>CDynamicAccessor：： Close
 
-所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))類別中的介面指標。
+將所有資料行解除系結、釋放已配置的記憶體，並釋放類別中的[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))介面指標。
 
 ### <a name="syntax"></a>語法
 
@@ -241,9 +238,9 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 void Close() throw();
 ```
 
-## <a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
+## <a name="getblobhandling"></a>CDynamicAccessor：： GetBlobHandling
 
-擷取 BLOB 處理目前的資料列的值。
+抓取目前資料列的 BLOB 處理值。
 
 ### <a name="syntax"></a>語法
 
@@ -253,11 +250,11 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 ### <a name="remarks"></a>備註
 
-傳回處理值的 BLOB *eBlobHandling*所設定的[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。
+傳回[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)所設定的 BLOB 處理值*eBlobHandling* 。
 
-## <a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
+## <a name="getblobsizelimit"></a>CDynamicAccessor：： GetBlobSizeLimit
 
-擷取最大 BLOB 大小 （位元組）。
+抓取 BLOB 大小上限（以位元組為單位）。
 
 ### <a name="syntax"></a>語法
 
@@ -267,11 +264,11 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 ### <a name="remarks"></a>備註
 
-傳回處理值的 BLOB *nBlobSize*所設定的[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)。
+傳回[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)所設定的 BLOB 處理值*nBlobSize* 。
 
-## <a name="getbookmark"></a> CDynamicAccessor::GetBookmark
+## <a name="getbookmark"></a>CDynamicAccessor：： GetBookmark
 
-擷取目前的資料列的書籤。
+抓取目前資料列的書簽。
 
 ### <a name="syntax"></a>語法
 
@@ -282,19 +279,19 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 #### <a name="parameters"></a>參數
 
 *pBookmark*<br/>
-[out]指標[CBookmark](../../data/oledb/cbookmark-class.md)物件。
+脫銷[CBookmark](../../data/oledb/cbookmark-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-您需要設定`DBPROP_IRowsetLocate`為 VARIANT_TRUE 以便擷取書籤。
+您必須將 `DBPROP_IRowsetLocate` 設定為 VARIANT_TRUE，才能取得書簽。
 
-## <a name="getcolumncount"></a> CDynamicAccessor::GetColumnCount
+## <a name="getcolumncount"></a>CDynamicAccessor：： GetColumnCount
 
-擷取資料行的數目。
+抓取資料行的數目。
 
 ### <a name="syntax"></a>語法
 
@@ -304,11 +301,11 @@ DBORDINAL GetColumnCount() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-擷取的資料行數目。
+抓取的資料行數目。
 
-## <a name="getcolumnflags"></a> CDynamicAccessor::GetColumnFlags
+## <a name="getcolumnflags"></a>CDynamicAccessor：： GetColumnFlags
 
-擷取的資料行的特性。
+抓取資料行特性。
 
 ### <a name="syntax"></a>語法
 
@@ -320,20 +317,20 @@ bool GetColumnFlags(DBORDINAL nColumn,
 #### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 *pFlags*<br/>
-[out]指標，描述資料行特性的位元遮罩。 在中看到 「 < DBCOLUMNFLAGS 列舉類型 」 [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+脫銷描述資料行特性的位元遮罩指標。 請參閱 OLE DB 程式設計*人員參考*的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中的「DBCOLUMNFLAGS 列舉型別」。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果成功擷取的資料行的特性。 否則會傳回 **false**。
+如果成功抓取資料行特性，則傳回**true** 。 否則會傳回 **false**。
 
 ### <a name="remarks"></a>備註
 
-其中一個位移的資料行編號。 零的資料行是特殊案例;如果有的話，它就會是書籤。
+資料行編號是從1開始位移。 資料行零是特殊案例;這是書簽（如果有的話）。
 
-## <a name="getcolumninfo"></a> CDynamicAccessor::GetColumnInfo
+## <a name="getcolumninfo"></a>CDynamicAccessor：： GetColumnInfo
 
 傳回大部分消費者所需的資料行中繼資料。
 
@@ -349,28 +346,28 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 #### <a name="parameters"></a>參數
 
 *pRowset*<br/>
-[in]指標[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))介面。
+在[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))介面的指標。
 
 *pColumns*<br/>
-[out]要在其中傳回的資料行數目資料列集; 中的記憶體指標如果有的話，這個數目包含書籤資料行。
+脫銷要在其中傳回資料列集之資料行數目的記憶體指標;這個數位包含書簽資料行（如果有的話）。
 
 *ppColumnInfo*<br/>
-[out]要在其中傳回的陣列的記憶體指標`DBCOLUMNINFO`結構。 請參閱中的"DBCOLUMNINFO 結構 」 [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+脫銷要在其中傳回 `DBCOLUMNINFO` 結構陣列的記憶體指標。 請參閱 OLE DB 程式設計*人員參考*的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中的「DBCOLUMNINFO 結構」。
 
 *ppStringsBuffer*<br/>
-[out]要在其中傳回的所有字串值的儲存體的指標記憶體的指標 (使用中的名稱*columnid*或是*pwszName*) 單一配置區塊內。
+脫銷記憶體的指標，用來傳回單一配置區塊內所有字串值（ *columnid*或 for *pwszName*內所使用的名稱）之儲存體的指標。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*如需資料類型資訊`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。
+如需 `DBORDINAL`、`DBCOLUMNINFO`和 `OLECHAR`資料類型的相關資訊，請參閱 OLE DB 程式設計*人員參考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
-## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
+## <a name="getcolumnname"></a>CDynamicAccessor：： GetColumnName
 
-擷取指定的資料行的名稱。
+抓取指定資料行的名稱。
 
 ### <a name="syntax"></a>語法
 
@@ -381,15 +378,15 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 #### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 ### <a name="return-value"></a>傳回值
 
-指定資料行的名稱。
+指定之資料行的名稱。
 
-## <a name="getcolumntype"></a> CDynamicAccessor::GetColumnType
+## <a name="getcolumntype"></a>CDynamicAccessor：： GetColumnType
 
-擷取指定之資料行的資料類型。
+抓取指定資料行的資料類型。
 
 ### <a name="syntax"></a>語法
 
@@ -401,18 +398,18 @@ bool GetColumnType(DBORDINAL nColumn,
 #### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 *pType*<br/>
-[out]指定的資料行的資料型別指標。
+脫銷指定資料行之資料類型的指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回**真**成功或**false**失敗。
+如果成功，則傳回**true** ，否則會傳回**false** 。
 
-## <a name="getlength"></a> CDynamicAccessor::GetLength
+## <a name="getlength"></a>CDynamicAccessor：： GetLength
 
-擷取指定的資料行的長度。
+抓取指定資料行的長度。
 
 ### <a name="syntax"></a>語法
 
@@ -430,23 +427,23 @@ bool GetLength(const WCHAR* pColumnName,
 #### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 *pColumnName*<br/>
 [in] 指向包含資料行名稱之字元字串的指標。
 
 *pLength*<br/>
-[out]包含資料行，以位元組為單位的長度的整數指標。
+脫銷整數的指標，其中包含資料行的長度（以位元組為單位）。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果找到指定的資料行。 否則，此函數會傳回**false**。
+如果找到指定的資料行，則傳回**true** 。 否則，此函數會傳回**false**。
 
 ### <a name="remarks"></a>備註
 
-第一個覆寫會採用資料行數目，和第二個和第三個覆寫資料行名稱格式採用的 ANSI 或 Unicode，分別。
+第一個覆寫會採用資料行編號，而第二個和第三個覆寫會分別採用 ANSI 或 Unicode 格式的資料行名稱。
 
-## <a name="getordinal"></a> CDynamicAccessor::GetOrdinal
+## <a name="getordinal"></a>CDynamicAccessor：： GetOrdinal
 
 擷取指定資料行名稱的資料行數目。
 
@@ -470,11 +467,11 @@ bool GetOrdinal(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果找到具有指定名稱的資料行。 否則，此函數會傳回**false**。
+如果找到具有指定名稱的資料行，則傳回**true** 。 否則，此函數會傳回**false**。
 
-## <a name="getstatus"></a> CDynamicAccessor::GetStatus
+## <a name="getstatus"></a>CDynamicAccessor：： GetStatus
 
-擷取指定的資料行的狀態。
+抓取指定資料行的狀態。
 
 ### <a name="syntax"></a>語法
 
@@ -492,21 +489,21 @@ bool GetStatus(const WCHAR* pColumnName,
 #### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 *pColumnName*<br/>
 [in] 指向包含資料行名稱之字元字串的指標。
 
 *pStatus*<br/>
-[out]包含的資料行狀態變數的指標。 請參閱[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+脫銷包含資料行狀態之變數的指標。 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) 。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果找到指定的資料行。 否則，此函數會傳回**false**。
+如果找到指定的資料行，則傳回**true** 。 否則，此函數會傳回**false**。
 
-## <a name="getvalue"></a> CDynamicAccessor::GetValue
+## <a name="getvalue"></a>CDynamicAccessor：： GetValue
 
-擷取指定之資料行的資料。
+抓取指定資料行的資料。
 
 ### <a name="syntax"></a>語法
 
@@ -530,32 +527,32 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 #### <a name="parameters"></a>參數
 
 *ctype*<br/>
-[in]處理字串型別以外之任何資料類型的樣板參數 (`CHAR*`， `WCHAR*`)，而這需要特殊處理。 `GetValue` 會使用根據您所指定以下的適當資料類型。
+在樣板化參數，它會處理任何資料類型，但不包括字串類型（`CHAR*`、`WCHAR*`），而這需要特殊處理。 `GetValue` 會根據您在此處指定的內容，使用適當的資料類型。
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 *pColumnName*<br/>
-[in]資料行名稱。
+在資料行名稱。
 
 *pData*<br/>
-[out]指定的資料行的內容指標。
+脫銷指定資料行內容的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果您想要將字串資料傳遞，使用的樣板版本`GetValue`。 樣板版本，這個方法會傳回`void*`，指向包含指定的資料行資料的緩衝區的一部分。 如果找不到資料行，則傳回 NULL。
+如果您想要傳遞字串資料，請使用 `GetValue`的樣板版本。 這個方法的樣板版本會傳回 `void*`，這會指向包含指定資料行資料之緩衝區的一部分。 如果找不到資料行，則傳回 Null。
 
-對於所有其他資料類型，是比較容易使用的樣板化版本`GetValue`。 樣板化的版本會傳回**真**成功或**false**失敗。
+對於其他所有資料類型而言，使用樣板化版本的 `GetValue`比較簡單。 樣板化版本會在成功時傳回**true** ，否則會傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-傳回包含字串和樣板化版本，包含其他資料類型的資料行的資料行使用的樣板版本。
+使用樣板版本來傳回包含字串的資料行，以及包含其他資料類型之資料行的樣板化版本。
 
-在偵錯模式中，如果您會收到的判斷提示的大小*pData*是它所指向的資料行的大小不相等。
+在 [偵錯工具] 模式中，如果*pData*的大小與它指向的資料行大小不相等，您就會得到判斷提示。
 
-## <a name="setblobhandling"></a> CDynamicAccessor::SetBlobHandling
+## <a name="setblobhandling"></a>CDynamicAccessor：： SetBlobHandling
 
-設定 BLOB 處理目前的資料列的值。
+設定目前資料列的 BLOB 處理值。
 
 ### <a name="syntax"></a>語法
 
@@ -566,23 +563,23 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 #### <a name="parameters"></a>參數
 
 *eBlobHandling*<br/>
-指定 BLOB 資料的處理方式。 它可以接受下列值：
+指定 BLOB 資料的處理方式。 它可以採用下列值：
 
-- DBBLOBHANDLING_DEFAULT:處理資料行資料的大小多於*nBlobSize* (由所設定`SetBlobSizeLimit`) 做為 BLOB 資料，並擷取它透過`ISequentialStream`或`IStream`物件。 此選項會嘗試繫結每個資料行，內含資料的大小多於*nBlobSize*或列示為 DBTYPE_IUNKNOWN，做為 BLOB 資料。
+- DBBLOBHANDLING_DEFAULT：將大於*nBlobSize* （由 `SetBlobSizeLimit`設定）的資料行資料處理為 BLOB 資料，並透過 `ISequentialStream` 或 `IStream` 物件加以取出。 此選項會嘗試系結包含大於*nBlobSize*之資料的每個資料行，或將其列為 DBTYPE_IUNKNOWN 做為 BLOB 資料。
 
-- DBBLOBHANDLING_NOSTREAMS:處理資料行資料的大小多於*nBlobSize* (所設定的`SetBlobSizeLimit`) 做為 BLOB 資料，並擷取它透過提供者配置、 取用者所擁有的記憶體中的參考。 這個選項適用於有一個以上的 BLOB 資料行的資料表，而且提供者支援只有一個`ISequentialStream`每個存取子的物件。
+- DBBLOBHANDLING_NOSTREAMS：處理大於*nBlobSize* （由 `SetBlobSizeLimit`設定）的資料行資料做為 BLOB 資料，並在提供者配置的取用者所擁有的記憶體中透過參考加以取出。 此選項適用于具有多個 BLOB 資料行的資料表，而且提供者只支援每個存取子的一個 `ISequentialStream` 物件。
 
-- DBBLOBHANDLING_SKIP:略過 （不會繫結） 限定為包含 Blob 的資料行 （存取子不會繫結或擷取資料行值，但它仍然會擷取資料行的狀態和長度）。
+- DBBLOBHANDLING_SKIP：略過（不系結）限定為包含 Blob 的資料行（存取子不會系結或抓取資料行值，但仍然會抓取資料行的狀態和長度）。
 
 ### <a name="remarks"></a>備註
 
 您應該先呼叫 `SetBlobHandling`，然後再呼叫 `Open`。
 
-建構函式方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)設定 BLOB 處理 DBBLOBHANDLING_DEFAULT 的值。
+此方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)會將 BLOB 處理值設定為 DBBLOBHANDLING_DEFAULT。
 
-## <a name="setblobsizelimit"></a> CDynamicAccessor::SetBlobSizeLimit
+## <a name="setblobsizelimit"></a>CDynamicAccessor：： SetBlobSizeLimit
 
-設定 BLOB 大小上限 （位元組）。
+設定 BLOB 大小上限（以位元組為單位）。
 
 ### <a name="syntax"></a>語法
 
@@ -593,17 +590,17 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 #### <a name="parameters"></a>參數
 
 *nBlobSize*<br/>
-指定的 BLOB 大小限制。
+指定 BLOB 大小限制。
 
 ### <a name="remarks"></a>備註
 
-設定最大 BLOB 大小 （位元組）;資料行資料的大小比這個值會被視為 BLOB。 某些提供者 （例如 2 GB) 的資料行提供極大的大小。 而不是嘗試配置記憶體的資料行這種大小，您通常會嘗試為 Blob 的這些資料行繫結。 這麼一來，您不需要配置所有記憶體時，但您仍然可以讀取的恐懼，截斷的所有資料。 不過，有某些情況的下，您可能想要強制`CDynamicAccessor`繫結其原生資料類型的大型的資料行。 若要這樣做，請呼叫`SetBlobSizeLimit`再呼叫`Open`。
+設定 BLOB 大小上限（以位元組為單位）;大於此值的資料行資料會被視為 BLOB。 有些提供者會為數據行提供極大的大小（例如 2 GB）。 您通常會嘗試將這些資料行系結為 Blob，而不是嘗試為此大小的資料行配置記憶體。 如此一來，您就不需要配置所有的記憶體，但是您仍然可以讀取所有資料，而不需要擔心截斷的情況。 不過，在某些情況下，您可能會想要強制 `CDynamicAccessor` 系結其原生資料類型中的大型資料行。 若要這麼做，請先呼叫 `SetBlobSizeLimit`，然後再呼叫 `Open`。
 
-建構函式方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)設定 BLOB 大小上限為 8,000 個位元組的預設值。
+「函式方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)會將 BLOB 大小上限設定為預設值8000個位元組。
 
-## <a name="setlength"></a> CDynamicAccessor::SetLength
+## <a name="setlength"></a>CDynamicAccessor：： SetLength
 
-設定指定的資料行的長度。
+設定指定之資料行的長度。
 
 ### <a name="syntax"></a>語法
 
@@ -621,21 +618,21 @@ bool SetLength(const WCHAR* pColumnName,
 #### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 *nLength*<br/>
-[in]以位元組為單位的資料行的長度。
+在資料行的長度（以位元組為單位）。
 
 *pColumnName*<br/>
 [in] 指向包含資料行名稱之字元字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果已成功設定指定的資料行的長度。 否則，此函數會傳回**false**。
+如果已成功設定指定的資料行長度，則傳回**true** 。 否則，此函數會傳回**false**。
 
-## <a name="setstatus"></a> CDynamicAccessor::SetStatus
+## <a name="setstatus"></a>CDynamicAccessor：： SetStatus
 
-設定指定的資料行的狀態。
+設定指定之資料行的狀態。
 
 ### <a name="syntax"></a>語法
 
@@ -653,21 +650,21 @@ bool SetStatus(const WCHAR* pColumnName,
 #### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 *status*<br/>
-[in]資料行狀態。 請參閱[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+在資料行狀態。 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) 。
 
 *pColumnName*<br/>
 [in] 指向包含資料行名稱之字元字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果已成功設定指定的資料行狀態。 否則，此函數會傳回**false**。
+如果已成功設定指定的資料行狀態，則傳回**true** 。 否則，此函數會傳回**false**。
 
-## <a name="setvalue"></a> CDynamicAccessor::SetValue
+## <a name="setvalue"></a>CDynamicAccessor：： SetValue
 
-儲存至指定的資料行的資料。
+將資料儲存至指定的資料行。
 
 ### <a name="syntax"></a>語法
 
@@ -691,26 +688,26 @@ bool SetValue(
 #### <a name="parameters"></a>參數
 
 *ctype*<br/>
-[in]處理字串型別以外之任何資料類型的樣板參數 (`CHAR*`， `WCHAR*`)，而這需要特殊處理。 `GetValue` 會使用根據您所指定以下的適當資料類型。
+在樣板化參數，它會處理任何資料類型，但不包括字串類型（`CHAR*`、`WCHAR*`），而這需要特殊處理。 `GetValue` 會根據您在此處指定的內容，使用適當的資料類型。
 
 *pColumnName*<br/>
 [in] 指向包含資料行名稱之字元字串的指標。
 
 *data*<br/>
-[in]包含資料的記憶體指標。
+在包含資料之記憶體的指標。
 
 *nColumn*<br/>
-[in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
+[in] 資料行編號。 資料行編號的開頭為1。 值為0表示書簽資料行（如果有的話）。
 
 ### <a name="return-value"></a>傳回值
 
-如果您想要設定字串資料，使用的樣板版本`GetValue`。 樣板版本，這個方法會傳回`void*`，指向包含指定的資料行資料的緩衝區的一部分。 如果找不到資料行，則傳回 NULL。
+如果您想要設定字串資料，請使用樣板版本的 `GetValue`。 這個方法的樣板版本會傳回 `void*`，這會指向包含指定資料行資料之緩衝區的一部分。 如果找不到資料行，則傳回 Null。
 
-對於所有其他資料類型，是比較容易使用的樣板化版本`GetValue`。 樣板化的版本會傳回**真**成功或**false**失敗。
+對於其他所有資料類型而言，使用樣板化版本的 `GetValue`比較簡單。 樣板化版本會在成功時傳回**true** ，否則會傳回**false** 。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

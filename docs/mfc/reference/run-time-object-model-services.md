@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421342"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446454"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 
@@ -340,11 +340,11 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *nFlags*<br/>
 包含下列一個或多個旗標：
 
-   - `afxRegInsertable` 可讓控制項出現在 OLE 物件的 [插入物件] 對話方塊中。
-   - `afxRegApartmentThreading` 將登錄中的執行緒模型設定為 ThreadingModel = 公寓。
-   - `afxRegFreeThreading` 將登錄中的執行緒模型設定為 ThreadingModel = Free。
+- `afxRegInsertable` 可讓控制項出現在 OLE 物件的 [插入物件] 對話方塊中。
+- `afxRegApartmentThreading` 將登錄中的執行緒模型設定為 ThreadingModel = 公寓。
+- `afxRegFreeThreading` 將登錄中的執行緒模型設定為 ThreadingModel = Free。
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+您可以將這兩個旗標 `afxRegApartmentThreading` 和 `afxRegFreeThreading` 結合，以設定 ThreadingModel = 兩者。 如需執行緒模型註冊的詳細資訊，請參閱 Windows SDK 中的[InprocServer32](/windows/win32/com/inprocserver32) 。
 
 *l*、 *w1*、 *w2*、 *b1*、 *b2*、 *B3*、 *b4*、 *b5*、 *b6*、 *b7*、類別 CLSID 的*b8*元件。
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421398"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446206"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 
@@ -109,6 +109,7 @@ _AFX_SECURE_NO_WARNINGS
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -635,7 +636,8 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - 檔案 IMAGEHLP.DLL。DLL 必須位於您的路徑上。 如果您沒有此 DLL，函式會顯示錯誤訊息。 如需 IMAGEHLP.DLL 所提供之函數集的詳細資訊，請參閱[Image Help Library](/windows/win32/Debug/image-help-library) 。
 
 - 堆疊上具有框架的模組必須包含偵錯工具資訊。 如果它們不包含調試資訊，函數仍然會產生堆疊追蹤，但是追蹤將會較不詳細。
-  ### <a name="requirements"></a>需求
+
+### <a name="requirements"></a>需求
 
 **標頭：** afx.h
 

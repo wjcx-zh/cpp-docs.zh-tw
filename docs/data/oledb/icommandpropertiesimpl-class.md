@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408949"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447046"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 類別
 
-提供實作[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))介面。
+提供[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))介面的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +39,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 您的類別，衍生自
 
 *PropClass*<br/>
-您屬性的類別。
+您的屬性類別。
 
 ## <a name="requirements"></a>需求
 
@@ -53,16 +51,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|目前要求的資料列集的資料列集屬性群組中傳回屬性的清單。|
+|[GetProperties](#getproperties)|傳回資料列集屬性群組中，目前要求之資料列集的屬性清單。|
 |[SetProperties](#setproperties)|設定資料列集屬性群組中的屬性。|
 
 ## <a name="remarks"></a>備註
 
-這是命令的必要參數。 所定義的靜態函式提供實作[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)巨集。
+這在命令上是必要的。 執行是由[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)宏所定義的靜態函式所提供。
 
-## <a name="getproperties"></a> Icommandpropertiesimpl:: Getproperties
+## <a name="getproperties"></a>ICommandPropertiesImpl：： GetProperties
 
-傳回使用命令的屬性對應的所有要求的屬性集。
+使用命令的屬性對應傳回所有要求的屬性集。
 
 ### <a name="syntax"></a>語法
 
@@ -75,13 +73,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommandproperties:: Getproperties](/previous-versions/windows/desktop/ms723119(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ICommandProperties：： GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 。
 
 ### <a name="remarks"></a>備註
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-## <a name="setproperties"></a> Icommandpropertiesimpl:: Setproperties
+## <a name="setproperties"></a>ICommandPropertiesImpl：： SetProperties
 
 設定命令物件的屬性。
 
@@ -94,9 +92,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommandproperties:: Setproperties](/previous-versions/windows/desktop/ms711497(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ICommandProperties：： SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

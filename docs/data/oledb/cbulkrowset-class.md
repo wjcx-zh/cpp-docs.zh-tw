@@ -8,7 +8,6 @@ f1_keywords:
 - CBulkRowset
 - ATL.CBulkRowset<TAccessor>
 - CBulkRowset::AddRefRows
-- AddRefRows
 - CBulkRowset.AddRefRows
 - ATL.CBulkRowset<TAccessor>.AddRefRows
 - ATL::CBulkRowset::AddRefRows
@@ -22,7 +21,6 @@ f1_keywords:
 - ATL.CBulkRowset.CBulkRowset
 - ATL::CBulkRowset<TAccessor>::CBulkRowset
 - CBulkRowset<TAccessor>::CBulkRowset
-- CBulkRowset
 - ATL.CBulkRowset.MoveFirst
 - CBulkRowset<TAccessor>.MoveFirst
 - ATL.CBulkRowset<TAccessor>.MoveFirst
@@ -39,7 +37,6 @@ f1_keywords:
 - ATL::CBulkRowset::MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveLast
 - CBulkRowset<TAccessor>::MoveLast
-- MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveNext
 - ATL::CBulkRowset::MoveNext
 - CBulkRowset::MoveNext
@@ -49,7 +46,6 @@ f1_keywords:
 - CBulkRowset<TAccessor>.MoveNext
 - CBulkRowset<TAccessor>::MoveNext
 - CBulkRowset::MovePrev
-- MovePrev
 - CBulkRowset<TAccessor>::MovePrev
 - ATL::CBulkRowset<TAccessor>::MovePrev
 - CBulkRowset<TAccessor>.MovePrev
@@ -59,20 +55,17 @@ f1_keywords:
 - ATL.CBulkRowset<TAccessor>.MovePrev
 - CBulkRowset<TAccessor>::MoveToBookmark
 - CBulkRowset.MoveToBookmark
-- MoveToBookmark
 - ATL.CBulkRowset.MoveToBookmark
 - CBulkRowset::MoveToBookmark
 - ATL::CBulkRowset<TAccessor>::MoveToBookmark
 - ATL::CBulkRowset::MoveToBookmark
 - CBulkRowset.MoveToRatio
 - ATL::CBulkRowset::MoveToRatio
-- MoveToRatio
 - CBulkRowset::MoveToRatio
 - ATL.CBulkRowset<TAccessor>.MoveToRatio
 - ATL::CBulkRowset<TAccessor>::MoveToRatio
 - ATL.CBulkRowset.MoveToRatio
 - CBulkRowset<TAccessor>::MoveToRatio
-- ReleaseRows
 - ATL.CBulkRowset<TAccessor>.ReleaseRows
 - ATL::CBulkRowset<TAccessor>::ReleaseRows
 - ATL.CBulkRowset.ReleaseRows
@@ -102,16 +95,16 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176465"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446060"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 類別
 
-擷取和操作處理大量資料擷取的單一呼叫的多個資料列控制代碼的資料列。
+藉由使用單一呼叫來抓取多個資料列控制碼，以提取和運算元據列來大量處理資料。
 
 ## <a name="syntax"></a>語法
 
@@ -137,24 +130,24 @@ class CBulkRowset : public CRowset<TAccessor>
 |-|-|
 |[AddRefRows](#addrefrows)|遞增參考計數。|
 |[CBulkRowset](#cbulkrowset)|建構函式。|
-|[MoveFirst](#movefirst)|擷取資料，執行新的大量擷取如有必要的第一列。|
+|[MoveFirst](#movefirst)|會抓取第一個資料列，視需要執行新的大量提取。|
 |[MoveLast](#movelast)|移至最後一個資料列。|
-|[MoveNext](#movenext)|擷取下的一個資料列。|
-|[MovePrev](#moveprev)|移至前一個資料列。|
-|[MoveToBookmark](#movetobookmark)|擷取書籤所標記的資料列或資料列中指定的位移，從該書籤。|
-|[MoveToRatio](#movetoratio)|擷取資料列從資料列集中的小數位置開始。|
-|[ReleaseRows](#releaserows)|設定目前資料列 (`m_nCurrentRow`) 到 0，然後發行所有資料列。|
-|[SetRows](#setrows)|設定一次呼叫所要擷取的資料列控制代碼數目。|
+|[MoveNext](#movenext)|抓取下一個資料列。|
+|[MovePrev](#moveprev)|移至上一個資料列。|
+|[MoveToBookmark](#movetobookmark)|提取以書簽標記的資料列，或從該書簽指定之位移的資料列。|
+|[MoveToRatio](#movetoratio)|從資料列集中的小數位置開始提取資料列。|
+|[ReleaseRows](#releaserows)|將目前的資料列（`m_nCurrentRow`）設定為零，並釋放所有資料列。|
+|[SetRows](#setrows)|設定要由一個呼叫抓取的資料列控制碼數目。|
 
 ## <a name="example"></a>範例
 
-下列範例示範使用`CBulkRowset`類別。
+下列範例示範如何使用 `CBulkRowset` 類別。
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a> CBulkRowset::AddRefRows
+## <a name="addrefrows"></a>CBulkRowset：： AddRefRows
 
-呼叫[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619(v=vs.85))遞增目前從大量資料列集擷取的所有資料列的參考計數。
+呼叫[IRowset：： AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) ，以遞增目前從 bulk 資料列集取得之所有資料列的參考計數。
 
 ### <a name="syntax"></a>語法
 
@@ -164,9 +157,9 @@ HRESULT AddRefRows() throw();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
+## <a name="cbulkrowset"></a>CBulkRowset：： CBulkRowset
 
 建立新的 `CBulkRowset` 物件並且將預設資料列計數設定為 10。
 
@@ -176,9 +169,9 @@ HRESULT AddRefRows() throw();
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a> CBulkRowset::MoveFirst
+## <a name="movefirst"></a>CBulkRowset：： MoveFirst
 
-擷取第一個資料列。
+抓取第一個資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -188,9 +181,9 @@ HRESULT MoveFirst() throw();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="movelast"></a> CBulkRowset::MoveLast
+## <a name="movelast"></a>CBulkRowset：： MoveLast
 
 移至最後一個資料列。
 
@@ -202,11 +195,11 @@ HRESULT MoveLast() throw();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="movenext"></a> CBulkRowset::MoveNext
+## <a name="movenext"></a>CBulkRowset：： MoveNext
 
-擷取下的一個資料列。
+抓取下一個資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -216,11 +209,11 @@ HRESULT MoveNext() throw();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。 當已到達資料列集結尾時，會傳回 DB_S_ENDOFROWSET。
+標準 HRESULT。 當已到達資料列集的結尾時，會傳回 DB_S_ENDOFROWSET。
 
-## <a name="moveprev"></a> CBulkRowset::MovePrev
+## <a name="moveprev"></a>CBulkRowset：： MovePrev
 
-移至前一個資料列。
+移至上一個資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -230,11 +223,11 @@ HRESULT MovePrev() throw();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
+## <a name="movetobookmark"></a>CBulkRowset：： MoveToBookmark
 
-擷取標示書籤或指定之位移的資料列的資料列 (*lSkip*) 從該書籤。
+提取書簽所標記的資料列，或從該書簽指定之位移（*lSkip*）的資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -245,19 +238,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>參數
 
-*bookmark*<br/>
+*書簽*<br/>
 [in] 標記您要從中擷取資料之位置的書籤。
 
 *lSkip*<br/>
-[in] 從書籤到目標資料列的資料列計數。 如果*lSkip*為零，將擷取的第一個資料列是已標記書籤的資料列。 如果*lSkip*為 1，將擷取的第一個資料列是資料列已標記書籤的資料列之後。 如果*lSkip*為-1，將擷取的第一個資料列是已標記書籤的資料列之前的資料列。
+[in] 從書籤到目標資料列的資料列計數。 如果*lSkip*為零，則第一個提取的資料列會是已加上書簽的資料列。 如果*lSkip*是1，則第一個提取的資料列就是已加上書簽的資料列之後的資料列。 如果*lSkip*為-1，則第一個提取的資料列是已加上書簽的資料列之前的資料列。
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[irowset:: Getdata](/previous-versions/windows/desktop/ms716988(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowset：：執行](/previous-versions/windows/desktop/ms716988(v=vs.85))程式。
 
-## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
+## <a name="movetoratio"></a>CBulkRowset：： MoveToRatio
 
-擷取資料列從資料列集中的小數位置開始。
+從資料列集中的小數位置開始提取資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -269,26 +262,26 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 #### <a name="parameters"></a>參數
 
 *nNumerator*<br/>
-[in]用來判斷要從中擷取資料的小數位置分子。
+在用來判斷從中提取資料之小數位置的分子。
 
 *nDenominator*<br/>
-[in]用來判斷要從中擷取資料的小數位置分母。
+在用來決定從中提取資料之小數位置的分母。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-`MoveToRatio` 提取資料列大約是根據下列公式：
+`MoveToRatio` 會根據下列公式，大致地提取資料列：
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中`RowsetSize`是以資料列的資料列集的大小。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 < [irowsetscroll::](/previous-versions/windows/desktop/ms709602(v=vs.85))中*OLE DB 程式設計人員參考*。
+其中 `RowsetSize` 是資料列集的大小（以資料列數來測量）。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 。
 
-## <a name="releaserows"></a> CBulkRowset::ReleaseRows
+## <a name="releaserows"></a>CBulkRowset：： ReleaseRows
 
-呼叫[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))遞減目前從大量資料列集擷取的所有資料列的參考計數。
+呼叫[IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) ，以遞減目前從 bulk 資料列集取得之所有資料列的參考計數。
 
 ### <a name="syntax"></a>語法
 
@@ -298,9 +291,9 @@ HRESULT ReleaseRows() throw();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="setrows"></a> CBulkRowset::SetRows
+## <a name="setrows"></a>CBulkRowset：： SetRows
 
 設定每個呼叫所擷取的資料列控制代碼數。
 
@@ -321,5 +314,5 @@ void SetRows(DBROWCOUNT nRows) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

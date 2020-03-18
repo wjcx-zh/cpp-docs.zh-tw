@@ -2,17 +2,17 @@
 title: sequenced_policy 類別
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269190"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444924"
 ---
-# <a name="sequencedpolicy-class"></a>sequenced_policy 類別
+# <a name="sequenced_policy-class"></a>sequenced_policy 類別
 
-釐清平行演算法多載，並要求可能不可以平行執行的平行演算法，以用做為唯一的類型。
+用來做為唯一的類型來區分平行演算法多載，並要求平行演算法的執行可能不會平行處理。
 
 ## <a name="syntax"></a>語法
 
@@ -22,4 +22,4 @@ class execution::sequenced_policy;
 
 ## <a name="remarks"></a>備註
 
-使用平行演算法的執行期間`execution::sequenced_policy`原則，如果未攔截到例外狀況，透過結束時項目存取函式的引動過程`terminate()`都應該呼叫。
+在使用 `execution::sequenced_policy` 原則執行平行演算法期間，如果專案存取函式的調用透過未攔截的例外狀況結束，則應該呼叫 `terminate()`。

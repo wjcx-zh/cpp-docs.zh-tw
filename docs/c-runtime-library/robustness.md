@@ -1,25 +1,23 @@
 ---
-title: 加強性
+title: 健全性
 ms.date: 11/04/2016
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: 108b4c9dde08adf1a3c54c810f68be69bf150472
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5e13152b2c31511cce4df9976d6c800960c099a5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739606"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444883"
 ---
-# <a name="robustness"></a>加強性
+# <a name="robustness"></a>健全性
 
 使用下列 C 執行階段程式庫函式加強您的程式。
 
 ## <a name="run-time-robustness-functions"></a>執行階段加強性函式
 
-|函數|使用|
+|函式|使用|
 |--------------|---------|
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|若 **new** 運算子無法配置記憶體，則將控制項傳送至您的錯誤處理機制。|
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|以 C++ 類型化例外狀況處理 Win32 例外狀況 (C 結構化例外狀況)。|

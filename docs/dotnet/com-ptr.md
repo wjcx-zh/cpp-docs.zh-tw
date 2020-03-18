@@ -3,20 +3,20 @@ title: com::ptr
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-- ptr
+- msclr/com/com::ptr
 helpviewer_keywords:
 - com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-ms.openlocfilehash: 74e168fe916b930e499a82ca3fcf5c7d0d669719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 993511142b72bd769fe8582b2650e5d020bd6ce2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209200"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446262"
 ---
 # <a name="comptr"></a>com::ptr
 
-可當做 CLR 類別成員使用之 COM 物件的包裝函式。 包裝函式也會自動執行 COM 物件，呼叫其解構函式時，釋出已擁有的參考，在物件上的存留期管理。 類似於[CComPtr 類別](../atl/reference/ccomptr-class.md)。
+可當做 CLR 類別成員使用之 COM 物件的包裝函式。 包裝函式也會自動執行 COM 物件的存留期管理，並在呼叫其析構器時釋放物件上擁有的參考。 類似于[CComPtr 類別](../atl/reference/ccomptr-class.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ ms.locfileid: "62209200"
 
 ## <a name="remarks"></a>備註
 
-[com:: ptr 類別](../dotnet/com-ptr-class.md)定義於\<msclr\com\ptr.h > 檔案。
+[com：:p Tr 類別](../dotnet/com-ptr-class.md)是在 \<msclr\com\ptr.h > 檔中定義。
 
 ## <a name="see-also"></a>另請參閱
 

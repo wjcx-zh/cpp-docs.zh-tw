@@ -1,31 +1,29 @@
 ---
 title: DUMPBIN 命令列
 ms.date: 11/04/2016
-f1_keywords:
-- dumpbin
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-ms.openlocfilehash: 1f94b26ca3bdc2778c2f9ed41103b456f5194fe3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f663a74fd57f52aa559270d61df4a130cf7e86f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271940"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440066"
 ---
 # <a name="dumpbin-command-line"></a>DUMPBIN 命令列
 
-若要執行 DUMPBIN，使用下列語法：
+若要執行 DUMPBIN，請使用下列語法：
 
 ```
 DUMPBIN [options] files...
 ```
 
-指定一或多個二進位檔案，以及任何所需選項來控制的資訊。 DUMPBIN 至標準輸出，顯示的資訊。 您可以將它重新導向至檔案，或是使用 /OUT 選項指定輸出檔案名稱。
+指定一或多個二進位檔案，以及控制資訊所需的任何選項。 DUMPBIN 會將資訊顯示為標準輸出。 您可以將它重新導向至檔案，或使用/OUT 選項來指定輸出的檔案名。
 
-DUMPBIN 當您在檔案上執行 DUMPBIN 不指定選項時，會顯示沒有指定 /SUMMARY 輸出。
+當您在檔案上執行 DUMPBIN 但未指定選項時，DUMPBIN 會顯示/SUMMARY 輸出。
 
-當您輸入命令`dumpbin`而無需任何其他命令列的輸入，DUMPBIN 顯示摘要說明其選項的使用方式陳述式。
+當您在沒有任何其他命令列輸入的情況下輸入命令 `dumpbin`，DUMPBIN 會顯示使用方式語句來摘要說明其選項。
 
 ## <a name="see-also"></a>另請參閱
 

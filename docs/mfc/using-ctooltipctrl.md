@@ -1,24 +1,22 @@
 ---
 title: Using CToolTipCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolTipCtrl
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 06f296fc21a6ad4480755289d30b5ff4ac27ca8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a750a9927f5cf36cb0232b3ce1bac1720f7020f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411615"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442197"
 ---
 # <a name="using-ctooltipctrl"></a>Using CToolTipCtrl
 
-[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)類別封裝的工具提示控制項，小型的快顯視窗會顯示一行文字，描述應用程式中工具用途的功能。 工具提示大部分時間都在隱藏狀態，只有在使用者將游標放置在工具上並停留約二分之一秒時才會顯現。 工具提示會出現在游標周圍，在使用者按一下滑鼠按鈕或將游標移開工具時就會消失。
+[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)類別會封裝工具提示控制項的功能，這是一個小型快顯視窗，會在應用程式中顯示一條描述工具用途的文字。 工具提示大部分時間都在隱藏狀態，只有在使用者將游標放置在工具上並停留約二分之一秒時才會顯現。 工具提示會出現在游標周圍，在使用者按一下滑鼠按鈕或將游標移開工具時就會消失。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
 - [建立工具提示的方法](../mfc/methods-of-creating-tool-tips.md)
 

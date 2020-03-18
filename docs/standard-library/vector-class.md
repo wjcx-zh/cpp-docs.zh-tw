@@ -88,11 +88,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890845"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422392"
 ---
 # <a name="vector-class"></a>vector 類別
 
@@ -148,7 +148,7 @@ class vector
 |[size_type](#size_type)|計算向量中項目數的類型。|
 |[value_type](#value_type)|代表儲存在向量中之資料類型的類型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 |||
 |-|-|
@@ -182,7 +182,7 @@ class vector
 |[size](#size)|傳回向量中的項目數。|
 |[swap](#swap)|交換兩個向量的項目。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |||
 |-|-|

@@ -2,19 +2,17 @@
 title: 相容性
 description: 說明 Microsoft 通用 C 執行時間程式庫（UCRT）與標準 C 程式庫（POSIX、Safe CRT 和 Store 應用程式）的相容性。
 ms.date: 12/06/2019
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988723"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443493"
 ---
 # <a name="compatibility"></a>相容性
 
@@ -30,10 +28,10 @@ C++ 標準在全域命名空間中，會保留以底線開頭的名稱供實作�
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[UWP 應用程式、Windows 執行階段及 C 執行階段](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|描述 UCRT 常式與通用 Windows 應用程式或 Microsoft Store 應用程式不相容的時機。|
-|[ANSI C 合規性](../c-runtime-library/ansi-c-compliance.md)|說明 UCRT 中符合規範的命名。|
+|[ANSI C 合規性](../c-runtime-library/ansi-c-compliance.md)|說明 UCRT 中符合標準的命名。|
 |[UNIX](../c-runtime-library/unix.md)|提供移植程式至 UNIX 的指導方針。|
 |[Windows 平台 (CRT)](../c-runtime-library/windows-platforms-crt.md)|列出此 CRT 支援的作業系統。|
 |[回溯相容性](../c-runtime-library/backward-compatibility.md)|描述如何將舊的 CRT 名稱對應到新的 CRT 名稱。|

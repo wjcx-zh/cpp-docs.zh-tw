@@ -1,19 +1,17 @@
 ---
 title: OLE 相關類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
-ms.openlocfilehash: 7d58072d133b9348558804b848ecfda4497931e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfcc07b3fbd0c5badce8e397f4d52bc7d8d3028c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378293"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447600"
 ---
 # <a name="ole-related-classes"></a>OLE 相關類別
 
@@ -33,4 +31,4 @@ ms.locfileid: "62378293"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

@@ -2,7 +2,6 @@
 title: OLE DB 消費者樣板的巨集和全域函式
 ms.date: 02/11/2019
 f1_keywords:
-- vc.templates.ole
 - ATL.AtlTraceErrorRecords
 - ATL::AtlTraceErrorRecords
 - AtlTraceErrorRecords
@@ -100,12 +99,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 854172de41ba6298d598801439d459b423c1ab37
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 83d38dda61d973b2d176ee7164011d665ee04655
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "70311881"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446847"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 消費者樣板的巨集和全域函式
 
@@ -179,7 +178,7 @@ OLE DB 取用者範本包含下列宏和全域函式：
 |-|-|
 |[BEGIN_PARAM_MAP](#begin_param_map)|標記使用者記錄類別中參數對應專案的開頭。|
 |[END_PARAM_MAP](#end_param_map)|標記參數對應專案的結尾。|
-|[SET_PARAM_TYPE](#set_param_type)|指定遵循 SET_PARAM_TYPE 宏做為輸入、輸出或輸入/輸出的 COLUMN_ENTRY 宏。|
+|[SET_PARAM_TYPE](#set_param_type)|指定 SET_PARAM_TYPE 宏後面 COLUMN_ENTRY 宏做為輸入、輸出或輸入/輸出。|
 
 ### <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 
@@ -198,7 +197,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>備註
 
-如果*hErr*不是 S_OK， `AtlTraceErrorRecords`會將 OLE DB 錯誤記錄資訊傾印到傾印裝置（[輸出] 視窗或檔案的 [**調試**] 索引標籤）。 從提供者取得的錯誤記錄資訊，包括每個錯誤記錄專案的資料列編號、來源、描述、說明檔、內容和 GUID。 `AtlTraceErrorRecords`只在 debug 組建中傾印這項資訊。 在發行組建中，它是已優化的空白 stub。如需詳細資訊，請參閱[CDBErrorInfo 類別](../../data/oledb/cdberrorinfo-class.md)。
+如果未 S_OK *hErr* ，`AtlTraceErrorRecords` 會將 OLE DB 錯誤記錄資訊傾印到傾印裝置（[輸出] 視窗或檔案的 [ **Debug** ] 索引標籤）。 從提供者取得的錯誤記錄資訊，包括每個錯誤記錄專案的資料列編號、來源、描述、說明檔、內容和 GUID。 `AtlTraceErrorRecords` 只在 debug 組建中傾印這項資訊。 在發行組建中，它是已優化的空白 stub。如需詳細資訊，請參閱[CDBErrorInfo 類別](../../data/oledb/cdberrorinfo-class.md)。
 
 ### <a name="begin_accessor"></a>BEGIN_ACCESSOR
 
@@ -220,7 +219,7 @@ BEGIN_ACCESSOR(num, bAuto)
 
 #### <a name="remarks"></a>備註
 
-如果是在資料列集上有多個存取子，您必須指定 BEGIN_ACCESSOR_MAP，並針對每個個別存取子使用 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是使用 END_ACCESSOR 宏完成的。 BEGIN_ACCESSOR_MAP 宏是使用 END_ACCESSOR_MAP 宏完成的。
+在資料列集上有多個存取子的情況下，您必須指定 BEGIN_ACCESSOR_MAP，並針對每個個別存取子使用 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是以 END_ACCESSOR 宏完成。 BEGIN_ACCESSOR_MAP 宏是以 END_ACCESSOR_MAP 宏完成。
 
 #### <a name="example"></a>範例
 
@@ -246,7 +245,7 @@ BEGIN_ACCESSOR_MAP(x, num)
 
 #### <a name="remarks"></a>備註
 
-如果是在資料列集上有多個存取子，您必須在一開始指定 BEGIN_ACCESSOR_MAP，並針對每個個別存取子使用 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是使用 END_ACCESSOR 宏完成的。 存取子對應是使用 END_ACCESSOR_MAP 宏完成。
+如果是在資料列集上有多個存取子，您必須在一開始指定 BEGIN_ACCESSOR_MAP，並針對每個個別存取子使用 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是以 END_ACCESSOR 宏完成。 存取子對應是以 END_ACCESSOR_MAP 宏完成。
 
 如果使用者資料錄中只有一個存取子，請使用巨集 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)。
 
@@ -307,7 +306,7 @@ END_ACCESSOR()
 
 #### <a name="remarks"></a>備註
 
-針對資料列集上的多個存取子，您必須指定 BEGIN_ACCESSOR_MAP，並針對每個個別存取子使用 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是使用 END_ACCESSOR 宏完成的。 BEGIN_ACCESSOR_MAP 宏是使用 END_ACCESSOR_MAP 宏完成的。
+針對資料列集上的多個存取子，您必須指定 BEGIN_ACCESSOR_MAP，並使用每個個別存取子的 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是以 END_ACCESSOR 宏完成。 BEGIN_ACCESSOR_MAP 宏是以 END_ACCESSOR_MAP 宏完成。
 
 #### <a name="example"></a>範例
 
@@ -325,13 +324,13 @@ END_ACCESSOR_MAP()
 
 #### <a name="remarks"></a>備註
 
-針對資料列集上的多個存取子，您必須指定 BEGIN_ACCESSOR_MAP，並針對每個個別存取子使用 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是使用 END_ACCESSOR 宏完成的。 BEGIN_ACCESSOR_MAP 宏是使用 END_ACCESSOR_MAP 宏完成的。
+針對資料列集上的多個存取子，您必須指定 BEGIN_ACCESSOR_MAP，並使用每個個別存取子的 BEGIN_ACCESSOR 宏。 BEGIN_ACCESSOR 宏是以 END_ACCESSOR 宏完成。 BEGIN_ACCESSOR_MAP 宏是以 END_ACCESSOR_MAP 宏完成。
 
 #### <a name="example"></a>範例
 
 請參閱[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。
 
-### <a name="begin_column_map"></a> BEGIN_COLUMN_MAP
+### <a name="begin_column_map"></a>BEGIN_COLUMN_MAP
 
 標記資料行對應項目的開頭。
 
@@ -350,7 +349,7 @@ BEGIN_COLUMN_MAP(x)
 
 如果資料列集上只有單一存取子，就會使用此巨集。 如果資料列集上有多個存取子，請使用 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。
 
-BEGIN_COLUMN_MAP 宏是使用 END_COLUMN_MAP 宏完成的。 當使用者資料錄中只需要一個存取子時，就會使用此巨集。
+BEGIN_COLUMN_MAP 宏是以 END_COLUMN_MAP 宏完成。 當使用者資料錄中只需要一個存取子時，就會使用此巨集。
 
 資料行會對應至您想要繫結之資料列集中的欄位。
 
@@ -376,10 +375,10 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 [in] 資料行編號。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -404,10 +403,10 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 [in] 資料行編號。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -441,10 +440,10 @@ BLOB_ENTRY_LENGTH_STATUS(
 [in] 資料行編號。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -475,10 +474,10 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 [in] 資料行編號。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -490,7 +489,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 
 請參閱[如何取得 BLOB？](../../data/oledb/retrieving-a-blob.md)。
 
-### <a name="blob_name"></a> BLOB_NAME
+### <a name="blob_name"></a>BLOB_NAME
 
 與 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 搭配使用，以系結二進位大型物件（[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))）。 類似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，不同之處在于這個宏會接受資料行名稱，而不是資料行編號。
 
@@ -503,13 +502,13 @@ BLOB_NAME(pszName, IID, flags, data )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -531,13 +530,13 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -558,13 +557,13 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -588,13 +587,13 @@ BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *IID*<br/>
-在用來抓取 BLOB 的`IDD_ISequentialStream`介面 GUID （例如）。
+在用來抓取 BLOB 的介面 GUID （例如 `IDD_ISequentialStream`）。
 
 *flags*<br/>
-在OLE 結構化儲存體模型所定義的儲存模式旗標（ `STGM_READ`例如）。
+在OLE 結構化儲存體模型所定義的儲存模式旗標（例如 `STGM_READ`）。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -689,7 +688,7 @@ COLUMN_ENTRY(nOrdinal, data)
 
 #### <a name="remarks"></a>備註
 
-COLUMN_ENTRY 宏用於下列位置：
+COLUMN_ENTRY 宏會用於下列位置：
 
 - 在[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之間。
 
@@ -699,7 +698,7 @@ COLUMN_ENTRY 宏用於下列位置：
 
 #### <a name="example"></a>範例
 
-請參閱宏主題[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)中的範例。
+請參閱宏主題中的範例， [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。
 
 ### <a name="column_entry_ex"></a>COLUMN_ENTRY_EX
 
@@ -725,10 +724,10 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 在資料大小（以位元組為單位）。
 
 *nPrecision*<br/>
-在取得資料和*wType* `DBTYPE_NUMERIC`時所要使用的最大有效位數。 否則，會忽略這個參數。
+在`DBTYPE_NUMERIC`取得資料和*wType*時，所要使用的最大有效位數。 否則，會忽略這個參數。
 
 *nScale*<br/>
-在取得資料和*wType*時要使用的尺規是`DBTYPE_NUMERIC`或`DBTYPE_DECIMAL`。
+在要在取得資料和*wType*時使用的縮放比例 `DBTYPE_NUMERIC` 或 `DBTYPE_DECIMAL`。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -741,7 +740,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 
 #### <a name="remarks"></a>備註
 
-COLUMN_ENTRY_EX 宏用於下列位置：
+COLUMN_ENTRY_EX 宏會用於下列位置：
 
 - 在[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之間。
 
@@ -1064,7 +1063,7 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 
 這個宏是[COLUMN_ENTRY](../../data/oledb/column-entry.md)宏的特製化變體，可提供指定資料大小和類型的方法。
 
-### <a name="column_name"></a> COLUMN_NAME
+### <a name="column_name"></a>COLUMN_NAME
 
 代表資料列集的系結至資料列集中的特定資料行。 類似于[COLUMN_ENTRY](../../data/oledb/column-entry.md)，不同之處在于這個宏會採用資料行名稱，而不是資料行編號。
 
@@ -1077,7 +1076,7 @@ COLUMN_NAME(pszName, data)
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -1092,7 +1091,7 @@ COLUMN_NAME_ * 宏會在與[COLUMN_ENTRY](../../data/oledb/column-entry.md)相�
 
 - 在[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之間。
 
-### <a name="column_name_ex"></a> COLUMN_NAME_EX
+### <a name="column_name_ex"></a>COLUMN_NAME_EX
 
 代表資料列集的系結至資料列集中的特定資料行。 類似于[COLUMN_NAME](../../data/oledb/column-name.md)，不同之處在于此宏也會採用資料類型、大小、有效位數、小數位數、資料行長度和資料行狀態。
 
@@ -1105,7 +1104,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *wType*<br/>
 在資料類型。
@@ -1114,10 +1113,10 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 在資料大小（以位元組為單位）。
 
 *nPrecision*<br/>
-在取得資料和*wType* `DBTYPE_NUMERIC`時所要使用的最大有效位數。 否則，會忽略這個參數。
+在`DBTYPE_NUMERIC`取得資料和*wType*時，所要使用的最大有效位數。 否則，會忽略這個參數。
 
 *nScale*<br/>
-在取得資料和*wType*時要使用的尺規是`DBTYPE_NUMERIC`或`DBTYPE_DECIMAL`。
+在要在取得資料和*wType*時使用的縮放比例 `DBTYPE_NUMERIC` 或 `DBTYPE_DECIMAL`。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -1130,9 +1129,9 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
-### <a name="column_name_length"></a> COLUMN_NAME_LENGTH
+### <a name="column_name_length"></a>COLUMN_NAME_LENGTH
 
 代表資料列集的系結至資料列集中的特定資料行。 類似于[COLUMN_NAME](../../data/oledb/column-name.md)，不同之處在于此宏也會採用資料行長度。
 
@@ -1145,7 +1144,7 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -1155,7 +1154,7 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_length_status"></a>COLUMN_NAME_LENGTH_STATUS
 
@@ -1170,7 +1169,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -1183,9 +1182,9 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
-### <a name="column_name_ps"></a> COLUMN_NAME_PS
+### <a name="column_name_ps"></a>COLUMN_NAME_PS
 
 代表資料列集的系結至資料列集中的特定資料行。 類似于[COLUMN_NAME](../../data/oledb/column-name.md)，不同之處在于此宏也會採用精確度和小數位數。
 
@@ -1198,7 +1197,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *nPrecision*<br/>
 [in] 要繫結之資料行的最大精確度。
@@ -1211,7 +1210,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_ps_length"></a>COLUMN_NAME_PS_LENGTH
 
@@ -1226,7 +1225,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *nPrecision*<br/>
 [in] 要繫結之資料行的最大精確度。
@@ -1242,7 +1241,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_ps_length_status"></a>COLUMN_NAME_PS_LENGTH_STATUS
 
@@ -1257,7 +1256,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *nPrecision*<br/>
 [in] 要繫結之資料行的最大精確度。
@@ -1276,7 +1275,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_ps_status"></a>COLUMN_NAME_PS_STATUS
 
@@ -1291,7 +1290,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *nPrecision*<br/>
 [in] 要繫結之資料行的最大精確度。
@@ -1307,7 +1306,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_status"></a>COLUMN_NAME_STATUS
 
@@ -1322,7 +1321,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
@@ -1332,7 +1331,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_type"></a>COLUMN_NAME_TYPE
 
@@ -1347,7 +1346,7 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *wType*<br/>
 在資料類型。
@@ -1357,7 +1356,7 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_type_ps"></a>COLUMN_NAME_TYPE_PS
 
@@ -1372,25 +1371,25 @@ COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *wType*<br/>
 在資料類型。
 
 *nPrecision*<br/>
-在取得資料和*wType* `DBTYPE_NUMERIC`時所要使用的最大有效位數。 否則，會忽略這個參數。
+在`DBTYPE_NUMERIC`取得資料和*wType*時，所要使用的最大有效位數。 否則，會忽略這個參數。
 
 *nScale*<br/>
-在取得資料和*wType*時要使用的尺規是`DBTYPE_NUMERIC`或`DBTYPE_DECIMAL`。
+在要在取得資料和*wType*時使用的縮放比例 `DBTYPE_NUMERIC` 或 `DBTYPE_DECIMAL`。
 
 *data*<br/>
 [in] 使用者記錄中相對應的資料成員。
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
-### <a name="column_name_type_size"></a> COLUMN_NAME_TYPE_SIZE
+### <a name="column_name_type_size"></a>COLUMN_NAME_TYPE_SIZE
 
 代表資料列集的系結至資料列集中的特定資料行。 類似于[COLUMN_NAME](../../data/oledb/column-name.md)，不同之處在于此宏也會採用資料類型和大小。
 
@@ -1403,7 +1402,7 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *wType*<br/>
 在資料類型。
@@ -1416,7 +1415,7 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="column_name_type_status"></a>COLUMN_NAME_TYPE_STATUS
 
@@ -1431,7 +1430,7 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 #### <a name="parameters"></a>參數
 
 *pszName*<br/>
-在資料行名稱的指標。 名稱必須是 Unicode 字串。 您可以在名稱前面加上 ' L ' 來完成這項工作，例如： `L"MyColumn"`。
+在資料行名稱的指標。 名稱必須是 Unicode 字串。 若要完成這項操作，您可以在名稱前面加上 ' L '，例如： `L"MyColumn"`。
 
 *wType*<br/>
 在資料類型。
@@ -1444,7 +1443,7 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 
 #### <a name="remarks"></a>備註
 
-如需使用 COLUMN_NAME_ * 宏的相關資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
+如需 COLUMN_NAME_ * 宏使用位置的詳細資訊，請參閱[COLUMN_NAME](../../data/oledb/column-name.md) 。
 
 ### <a name="end_column_map"></a>END_COLUMN_MAP
 
@@ -1458,7 +1457,7 @@ END_COLUMN_MAP()
 
 #### <a name="remarks"></a>備註
 
-它會與資料列集上的單一存取子搭配使用。 BEGIN_COLUMN_MAP 宏是使用 END_COLUMN_MAP 宏完成的。
+它會與資料列集上的單一存取子搭配使用。 BEGIN_COLUMN_MAP 宏是以 END_COLUMN_MAP 宏完成。
 
 #### <a name="example"></a>範例
 
@@ -1489,7 +1488,7 @@ DEFINE_COMMAND(x, szCommand)
 
 如果您未在[CCommand：： Open](../../data/oledb/ccommand-open.md)方法中指定命令文字，則會使用您指定的命令字串做為預設值。
 
-如果您將應用程式建立為 ANSI，此宏會接受 ANSI 字串，如果您將應用程式建立為 Unicode 字串，則會接受 Unicode 字串。 建議您使用[DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) ，而不是使用 DEFINE_COMMAND，因為前者會接受 Unicode 字串，而不論 ANSI 或 Unicode 應用程式類型為何。
+如果您將應用程式建立為 ANSI，此宏會接受 ANSI 字串，如果您將應用程式建立為 Unicode 字串，則會接受 Unicode 字串。 建議您使用[DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md)而不是 DEFINE_COMMAND，因為前者會接受 Unicode 字串，而不論 ANSI 或 Unicode 應用程式類型為何。
 
 #### <a name="example"></a>範例
 
@@ -1517,13 +1516,13 @@ DEFINE_COMMAND_EX(x, wszCommand)
 
 如果您未在[CCommand：： Open](../../data/oledb/ccommand-open.md)方法中指定命令文字，則會使用您指定的命令字串做為預設值。
 
-無論應用程式類型為何，這個宏都會接受 Unicode 字串。 此宏優於[DEFINE_COMMAND](../../data/oledb/define-command.md) ，因為它支援 UNICODE 和 ANSI 應用程式。
+無論應用程式類型為何，這個宏都會接受 Unicode 字串。 這個宏優先于[DEFINE_COMMAND](../../data/oledb/define-command.md) ，因為它支援 UNICODE 和 ANSI 應用程式。
 
 #### <a name="example"></a>範例
 
 請參閱[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。
 
-### <a name="begin_param_map"></a> BEGIN_PARAM_MAP
+### <a name="begin_param_map"></a>BEGIN_PARAM_MAP
 
 標記參數對應項目的開頭。
 
@@ -1546,7 +1545,7 @@ BEGIN_PARAM_MAP(x)
 
 請參閱[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)宏的範例。
 
-### <a name="end_param_map"></a> END_PARAM_MAP
+### <a name="end_param_map"></a>END_PARAM_MAP
 
 標記參數對應專案的結尾。
 
@@ -1562,7 +1561,7 @@ END_PARAM_MAP()
 
 ### <a name="set_param_type"></a>SET_PARAM_TYPE
 
-指定遵循 SET_PARAM_TYPE 宏輸入、輸出或輸入/輸出的 COLUMN_ENTRY 宏。
+指定遵循 SET_PARAM_TYPE 宏輸入、輸出或輸入/輸出 COLUMN_ENTRY 宏。
 
 #### <a name="syntax"></a>語法
 
@@ -1577,15 +1576,15 @@ SET_PARAM_TYPE(type)
 
 #### <a name="remarks"></a>備註
 
-提供者只支援基礎資料來源支援的參數輸入/輸出類型。 類型是一或多個`DBPARAMIO`值的組合（請參閱 OLE DB 程式設計*人員參考*中的[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))）：
+提供者只支援基礎資料來源支援的參數輸入/輸出類型。 類型是一或多個 `DBPARAMIO` 值的組合（請參閱 OLE DB 程式設計*人員參考*中的[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))）：
 
-- `DBPARAMIO_NOTPARAM`存取子沒有任何參數。 一般來說，您會`eParamIO`在資料列存取子中將設定為此值，以提醒使用者參數被忽略。
+- `DBPARAMIO_NOTPARAM` 存取子沒有任何參數。 一般來說，您會在資料列存取子中將 `eParamIO` 設定為此值，以提醒使用者參數被忽略。
 
-- `DBPARAMIO_INPUT`輸入參數。
+- `DBPARAMIO_INPUT` 輸入參數。
 
-- `DBPARAMIO_OUTPUT`輸出參數。
+- `DBPARAMIO_OUTPUT` 輸出參數。
 
-- `DBPARAMIO_INPUT | DBPARAMIO_OUTPUT`參數同時為輸入和輸出參數。
+- `DBPARAMIO_INPUT | DBPARAMIO_OUTPUT` 參數同時為輸入和輸出參數。
 
 #### <a name="example"></a>範例
 

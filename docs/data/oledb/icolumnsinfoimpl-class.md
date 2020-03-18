@@ -7,7 +7,6 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
-- GetColumnInfo
 - ATL::IColumnsInfoImpl::GetColumnInfo
 - ATL.IColumnsInfoImpl.GetColumnInfo
 - ATL::IColumnsInfoImpl<T>::GetColumnInfo
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb7714762de8ccf810a8fdd04ee33ae24e9d431
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409144"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447059"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 類別
 
-提供實作[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))介面。
+提供[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))介面的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -50,7 +49,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IColumnsInfoImpl`。
+衍生自 `IColumnsInfoImpl`的類別。
 
 ## <a name="requirements"></a>需求
 
@@ -63,13 +62,13 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 |||
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|傳回大部分消費者所需的資料行中繼資料。|
-|[MapColumnIDs](#mapcolumnids)|在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。|
+|[MapColumnIDs](#mapcolumnids)|傳回資料列集中指定之資料行 ID 所識別資料行的序數陣列。|
 
 ## <a name="remarks"></a>備註
 
-在 資料列集和命令上必要的介面。 若要修改您的提供者的行為`IColumnsInfo`實作中，您需要修改提供者資料行對應。
+資料列集和命令的強制介面。 若要修改提供者 `IColumnsInfo` 執行的行為，您需要修改提供者資料行對應。
 
-## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+## <a name="getcolumninfo"></a>IColumnsInfoImpl：： GetColumnInfo
 
 傳回大部分消費者所需的資料行中繼資料。
 
@@ -83,11 +82,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
-## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+## <a name="mapcolumnids"></a>IColumnsInfoImpl：： MapColumnIDs
 
-在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。
+傳回資料列集中指定之資料行 ID 所識別資料行的序數陣列。
 
 ### <a name="syntax"></a>語法
 
@@ -99,9 +98,9 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IColumnsInfo：： MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,29 +1,27 @@
 ---
 title: EDITBIN 命令列
 ms.date: 11/04/2016
-f1_keywords:
-- editbin
 helpviewer_keywords:
 - EDITBIN program, command line
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
-ms.openlocfilehash: 4065cf2175b69e6aa87b70f7e00c4170f5b0d924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ec18bd9fa23ed178f07749ef5becf7e06da7e36
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272555"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439962"
 ---
 # <a name="editbin-command-line"></a>EDITBIN 命令列
 
-若要執行 EDITBIN，使用下列語法：
+若要執行 EDITBIN，請使用下列語法：
 
 ```
 EDITBIN [options] files...
 ```
 
-指定物件或要變更的映像的一或多個檔案和一或多個變更檔案的選項。
+指定要變更之物件或影像的一或多個檔案，以及一個或多個變更檔案的選項。
 
-當您輸入命令`editbin`而無需任何其他命令列的輸入，EDITBIN 顯示摘要說明其選項的使用方式陳述式。
+當您在沒有任何其他命令列輸入的情況下輸入命令 `editbin`，EDITBIN 會顯示使用方式語句來摘要說明其選項。
 
 ## <a name="see-also"></a>另請參閱
 

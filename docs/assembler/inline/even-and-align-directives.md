@@ -1,9 +1,6 @@
 ---
 title: EVEN 和 ALIGN 指示詞
 ms.date: 08/30/2018
-f1_keywords:
-- align
-- EVEN
 helpviewer_keywords:
 - EVEN directive
 - directives, MASM
@@ -11,20 +8,20 @@ helpviewer_keywords:
 - NOP (no operation instruction)
 - ALIGN directive
 ms.assetid: 7357ab2d-4a5c-43ca-accb-a5f21cdfcde5
-ms.openlocfilehash: 522d5689d680d0fc334743d2802abe21570dd6f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63fa73988b9b9433a988035789a923ac73936214
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167315"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441587"
 ---
 # <a name="even-and-align-directives"></a>EVEN 和 ALIGN 指示詞
 
 **Microsoft 專屬**
 
-雖然內嵌組合語言不支援大多數的 MASM 指示詞，但它確實支援`EVEN`並**對齊**。 這些指示詞放**NOP** （不執行作業） 所需的對齊標籤為特定界限的組譯碼中的指示。 這可讓某些處理器的指令擷取作業更有效率。
+雖然內嵌組合語言不支援大多數的 MASM 指示詞，但它確實支援 `EVEN` 和**ALIGN**。 這些指示詞會視需要將**NOP** （無作業）指令放在元件程式碼中，以將標籤對齊特定界限。 這可讓某些處理器的指令擷取作業更有效率。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

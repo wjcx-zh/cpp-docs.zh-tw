@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416063"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445790"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 類別
 
@@ -59,16 +59,15 @@ BackInsertIterator 類別實作 [back_insert_iterator Class](../standard-library
 
 **標頭：** collection.h
 
-<a name="namespace-platformcollections"></a>**命名空間：** Platform::Collections
----
+**命名空間：** Platform::Collections
+
 ## <a name="ctor"></a>BackInsertIterator：： BackInsertIterator 函式
 
-初始化 `BackInsertIterator` 類別的新執行個體。
+將 `BackInsertIterator` 類別的新執行個體初始化。
 
 ## <a name="syntax"></a>語法
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
@@ -126,7 +125,6 @@ BackInsertIterator& operator*();
 ## <a name="syntax"></a>語法
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);

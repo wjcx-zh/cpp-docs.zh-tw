@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: e029752ebaae5debb33d8e4a3920c5572f4d923b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a20f76cf1657db2082fefadc03276b399235cbc9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302142"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446781"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -105,7 +105,7 @@ Visual Studio （MSVC）中C++ Microsoft 編譯器的標準一致性是進行中
 |&nbsp;&nbsp;[P1008R1 禁止使用使用者宣告建構函式來彙總](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf) \(英文\)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 不可見的 ADL 與函式範本](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0409R2 與 lambda-capture \[=，此\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0409R2 允許 lambda-capture \[=，此\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0428R2 針對泛型 Lambda 的熟悉範本語法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf) \(英文\)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0624R2 Default 預設可建構與無狀態 lambdas](https://wg21.link/P0624R2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0780R2 允許 lambda init-capture 中的封裝展開](https://wg21.link/P0780R2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
@@ -120,7 +120,7 @@ Visual Studio （MSVC）中C++ Microsoft 編譯器的標準一致性是進行中
 |[使用列舉](https://wg21.link/P1099R5)&nbsp;&nbsp;P1099R5|VS 2019 16.4 <sup> [20](#note_20)</sup>|
 |[當您實際使用 \<時，&nbsp;&nbsp;P1186R3 =>](https://wg21.link/P1186R3)|VS 2019 16.4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1630R1 太空船需要向上調整](https://wg21.link/P1630R1)|VS 2019 16.4 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0641R2 與預設複本建構函式的常數不符](https://wg21.link/P0641R2)|Partial|
+|&nbsp;&nbsp;[P0641R2 與預設複本建構函式的常數不符](https://wg21.link/P0641R2)|部分|
 |&nbsp;&nbsp;[P0306R4 新增 \_\_VA_OPT\_\_ 以進行逗號省略和逗號刪除](https://wg21.link/P0306R4) \(英文\)|否|
 |&nbsp;&nbsp;[P0315R4 允許為評估之上下文中的 lambdas](https://wg21.link/P0315R4)|否|
 |&nbsp;&nbsp;[P0479R5 \[\[likely\]\] 與 \[\[unlikely\]\] 屬性](https://wg21.link/P0479R5)|否|
@@ -167,7 +167,7 @@ Visual Studio （MSVC）中C++ Microsoft 編譯器的標準一致性是進行中
 |&nbsp;&nbsp;[P0020R6 atomic\<float>、atomic\<double>、atomic\<long double>](https://wg21.link/p0020r6)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0463R1 位元組順序](https://wg21.link/p0463r1) \(英文\)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0482R6 char8_t： utf-8 字元和字串的類型](https://wg21.link/P0482R6)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] 針對 STL，第 1 部分](https://wg21.link/p0600r1)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] 適用於 STL 第一部分](https://wg21.link/p0600r1)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0653R2 to_address()](https://wg21.link/p0653r2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0754R2 \<version>](https://wg21.link/p0754r2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0771R1 noexcept 適用於 std::function 的移動建構函式](https://wg21.link/P0771R1)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
@@ -180,7 +180,7 @@ Visual Studio （MSVC）中C++ Microsoft 編譯器的標準一致性是進行中
 |&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|否|
 |&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 osyncstream 操作工具](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|否|
 |&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|否|
-|&nbsp;&nbsp;[P0202R3 適用於 \<algorithm> 與 exchange() 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|否|
+|&nbsp;&nbsp;[P0202R3 \<algorithm> 和 exchange() 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|否|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|否|
 |&nbsp;&nbsp;[P0340R3 SFINAE 友善 underlying_type](https://wg21.link/P0340R3)|否|
 |&nbsp;&nbsp;[P0355R7 \<chrono> 行事曆和時區](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|否|
@@ -189,14 +189,14 @@ Visual Studio （MSVC）中C++ Microsoft 編譯器的標準一致性是進行中
 |&nbsp;&nbsp;[P0415R1 \<complex> 的 constexpr (再次)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|否|
 |&nbsp;&nbsp;[P0439R0 列舉類別 memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|否|
 |&nbsp;&nbsp;[P0475R1 分段建構的保證複製省略](https://wg21.link/P0475R1)|否|
-|&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|否|
+|&nbsp;&nbsp;[P0476R2 \<位 > bit_cast](https://wg21.link/P0476R2)|否|
 |&nbsp;&nbsp;[P0528R3 具有填補位元的不可部分完成 Compare-And-Exchange](https://wg21.link/P0528R3)|否|
-|&nbsp;&nbsp;[P0556R3 <bit> ispow2()、ceil2()、floor2()、log2p1()](https://wg21.link/P0556R3)|否|
+|&nbsp;&nbsp;[P0556R3 \<位 > ispow2 （）、ceil2 （）、floor2 （）、log2p1 （）](https://wg21.link/P0556R3)|否|
 |&nbsp;&nbsp;[P0591R4 Uses-Allocator 建構的公用程式函式](https://wg21.link/P0591R4)|否|
 |&nbsp;&nbsp;[P0608R3 改進變數的轉換建構函式/指派](https://wg21.link/P0608R3)|否|
 |&nbsp;&nbsp;[P0619R4 移除 C++20 中的 C++17 過時功能](https://wg21.link/P0619R4)|否|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|否|
-|&nbsp;&nbsp;[P0655R1 瀏覽<R>()](https://wg21.link/P0655R1)|否|
+|&nbsp;&nbsp;[P0655R1 流覽\<R > （）](https://wg21.link/P0655R1)|否|
 |&nbsp;&nbsp;[P0674R1 適用於陣列的 make_shared()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>、atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|否|
 |&nbsp;&nbsp;[P0738R2 istream_iterator 清除](https://wg21.link/P0738R2)|否|
@@ -350,19 +350,19 @@ __VS 2019 16.2__表示 Visual Studio 2019 版本16.2 中支援的功能。
 __VS 2019 16.3__表示 Visual Studio 2019 版本16.3 中支援的功能。
 __VS 2019 16.4__表示 Visual Studio 2019 版本16.4 中支援的功能。
 
-### <a name="notes"></a>注意事項
+### <a name="notes"></a>注意
 
 <a name="note_A"></a>__A__ 在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 模式中，動態例外狀況規格保持未實作，而 `throw()` 仍被視為 `__declspec(nothrow)` 的同義字。 在 C++17 中，P0003R5 移除了大部分的動態例外狀況規格，並保留一個殘留項目：`throw()` 將會被淘汰，而且必須作為 `noexcept` 的同義字。 在[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)模式中，MSVC 現在會藉由提供 `throw()` 與 `noexcept`相同的行為（也就是透過終止強制執行），來符合標準。
 
-編譯器選項 [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) 會要求 `__declspec(nothrow)` 的舊行為。 很可能會在 C++20 中移除 `throw()`。 為了協助移轉程式碼以回應標準及我們實作中的這些變更，已在 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 和 [/permissive-](../build/reference/permissive-standards-conformance.md) 下新增例外狀況規格問題的編譯器警告。
+編譯器選項 [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) 會要求 `__declspec(nothrow)` 的舊行為。 可能會在 c + + 20 中移除 `throw()`。 為了協助移轉程式碼以回應標準及我們實作中的這些變更，已在 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 和 [/permissive-](../build/reference/permissive-standards-conformance.md) 下新增例外狀況規格問題的編譯器警告。
 
 <a name="note_B"></a>__B__ 在 Visual Studio 2017 15.7 版的 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下支援。 如需詳細資訊，請參閱[MSVC 的兩階段名稱查閱支援](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)。
 
-<a name="note_C"></a>__C__ 編譯器的 C99 前置處理器規則支援在 Visual Studio 2017 中仍未完善。 我們會檢修預處理器，並開始使用[/experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數，在 Visual Studio 2017 版本15.8 中傳送這些變更。
+<a name="note_C"></a>__C__編譯器在 Visual Studio 2017 中的 C99 預處理器規則支援不完整。 我們會檢修預處理器，並開始使用[/experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數，在 Visual Studio 2017 版本15.8 中傳送這些變更。
 
 <a name="note_D"></a>__D__ 於 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告，[C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
-<a name="note_E"></a>__E__這是全新的執行，與舊版的 `std::experimental` 版本不相容，因為它是由符號支援、錯誤修正和標準所需行為的變更所需。 目前，包括 \<filesystem>可提供新的 `std::experimental::filesystem` 和之前的 \<，而包括 `std::filesystem`experimental/filesystem> 只會提供舊的實驗性實作。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
+<a name="note_E"></a>__E__這是全新的執行，與舊版的 `std::experimental` 版本不相容，因為它是由符號支援、錯誤修正和標準所需行為的變更所需。 目前，包括 \<filesystem>可提供新的 `std::filesystem` 和之前的 `std::experimental::filesystem`，而包括 \<experimental/filesystem> 只會提供舊的實驗性實作。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
 
 <a name="note_G"></a>__G__ 由編譯器內建支援。
 
@@ -397,13 +397,13 @@ __VS 2019 16.4__表示 Visual Studio 2019 版本16.4 中支援的功能。
 - 目標硬體上沒有明顯的平行處理原則效能改進;只複製或置換沒有分支之元素的所有演算法，通常會受到記憶體頻寬限制：
   - `copy`, `copy_n`, `fill`, `fill_n`, `move`, `reverse`, `reverse_copy`, `rotate`, `rotate_copy`, `shift_left`, `shift_right`, `swap_ranges`
 - 使用者平行處理原則的需求存在混淆。仍可能在上述類別目錄中：
-  - `generate`、 `generate_n`
+  - `generate`, `generate_n`
 - 有效的平行處理可能不可行：
-  - `partial_sort`、 `partial_sort_copy`
+  - `partial_sort`, `partial_sort_copy`
 - 尚未評估；平行處理也許會在未來版本中實作，而且可能有幫助：
   - `copy_if`、`includes`、`inplace_merge`、`lexicographical_compare`、`max_element`、`merge`、`min_element`、`minmax_element`、`nth_element`、`partition_copy`、`remove_copy`、`remove_copy_if`、`replace_copy`、`replace_copy_if`、`set_symmetric_difference`、`set_union`、`stable_partition`、`unique`、`unique_copy`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)\
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)\

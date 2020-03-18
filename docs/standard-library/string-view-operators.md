@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419417"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446762"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 運算子
 
@@ -116,6 +116,7 @@ bool operator==(
 ## <a name="op_lt"></a> 運算子&lt;
 
 測試運算子左邊的物件是否小於該物件右邊的 sidestring_view
+
 ```cpp
 template <class CharType, class Traits>
 bool operator<(

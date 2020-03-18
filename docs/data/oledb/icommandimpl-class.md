@@ -21,7 +21,6 @@ f1_keywords:
 - ICommandImpl.GetDBSession
 - ATL.ICommandImpl.ICommandImpl
 - ATL::ICommandImpl::ICommandImpl
-- ICommandImpl
 - ICommandImpl::ICommandImpl
 - ICommandImpl.ICommandImpl
 - ICommandImpl::m_bCancel
@@ -52,16 +51,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408962"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447057"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
 
-提供實作[ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85))介面。
+提供[ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85))介面的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -73,10 +72,10 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`ICommandImpl`。
+衍生自 `ICommandImpl`的類別。
 
 *CommandBase*<br/>
-命令介面。 預設為 `ICommand`。
+命令介面。 預設值為 `ICommand`。
 
 ## <a name="requirements"></a>需求
 
@@ -88,28 +87,28 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 |||
 |-|-|
-|[取消](#cancel)|取消目前執行的命令。|
-|[CancelExecution](#cancelexecution)|取消目前執行的命令。|
+|[取消](#cancel)|取消目前的命令執行。|
+|[CancelExecution](#cancelexecution)|取消目前的命令執行。|
 |[CreateRowset](#createrowset)|建立資料列集物件。|
-|[Execute](#execute)|執行命令。|
-|[GetDBSession](#getdbsession)|傳回建立命令的工作階段的介面指標。|
+|[執行](#execute)|執行命令。|
+|[GetDBSession](#getdbsession)|傳回建立命令之會話的介面指標。|
 |[ICommandImpl](#icommandimpl)|建構函式。|
 
 ### <a name="data-members"></a>資料成員
 
 |||
 |-|-|
-|[m_bCancel](#bcancel)|指出命令是否已取消。|
-|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|指出命令是否要取消執行時。|
-|[m_bIsExecuting](#bisexecuting)|表示命令目前是否正在執行。|
+|[m_bCancel](#bcancel)|指出是否要取消命令。|
+|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|指出執行時是否要取消命令。|
+|[m_bIsExecuting](#bisexecuting)|指出命令目前是否正在執行。|
 
 ## <a name="remarks"></a>備註
 
-Command 物件上的強制介面。
+命令物件上的強制介面。
 
-## <a name="cancel"></a> Icommandimpl:: Cancel
+## <a name="cancel"></a>ICommandImpl：： Cancel
 
-取消目前執行的命令。
+取消目前的命令執行。
 
 ### <a name="syntax"></a>語法
 
@@ -119,11 +118,11 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ICommand：： Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 。
 
-## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
+## <a name="cancelexecution"></a>ICommandImpl：： CancelExecution
 
-取消目前執行的命令。
+取消目前的命令執行。
 
 ### <a name="syntax"></a>語法
 
@@ -131,9 +130,9 @@ STDMETHOD(Cancel)();
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a> ICommandImpl::CreateRowset
+## <a name="createrowset"></a>ICommandImpl：： CreateRowset
 
-由呼叫[Execute](../../data/oledb/icommandimpl-execute.md)建立單一資料列集。
+由[Execute](../../data/oledb/icommandimpl-execute.md)呼叫以建立單一資料列集。
 
 ### <a name="syntax"></a>語法
 
@@ -150,37 +149,37 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>參數
 
 *RowsetClass*<br/>
-代表使用者的資料列集類別的樣板類別成員。 通常是由精靈產生。
+範本類別成員，代表使用者的資料列集類別。 通常由 wizard 產生。
 
 *pUnkOuter*<br/>
-[in]指標，控制`IUnknown`介面資料列集建立為彙總的一部分，否則為 null。
+在如果將資料列集建立為匯總的一部分，則為控制 `IUnknown` 介面的指標;否則，它會是 null。
 
 *riid*<br/>
-[in]對應至*riid*在`ICommand::Execute`。
+在對應至 `ICommand::Execute`中的*riid* 。
 
 *pParams*<br/>
-[輸入/輸出]對應至*pParams*在`ICommand::Execute`。
+[in/out]對應至 `ICommand::Execute`中的*pParams* 。
 
 *pcRowsAffected*<br/>
-對應至*pcRowsAffected*在`ICommand::Execute`。
+對應至 `ICommand::Execute`中的*pcRowsAffected* 。
 
 *ppRowset*<br/>
-[輸入/輸出]對應至*Pprowset&lt*在`ICommand::Execute`。
+[in/out]對應至 `ICommand::Execute`中的*ppRowset* 。
 
 *pRowsetObj*<br/>
-[out]資料列集物件的指標。 通常不會使用此參數，但如果您必須在資料列集上執行更多工作，再將它傳遞至 COM 物件可以使用它。 存留期*pRowsetObj*繫結*Pprowset&lt*。
+脫銷資料列集物件的指標。 通常不會使用這個參數，但如果您必須在資料列集上執行更多工做，然後才將它傳遞至 COM 物件，則可以使用此參數。 *PRowsetObj*的存留期是由*ppRowset*所系結。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。 請參閱`ICommand::Execute`如需一般值的清單。
+標準的 HRESULT 值。 如需一般值的清單，請參閱 `ICommand::Execute`。
 
 ### <a name="remarks"></a>備註
 
-若要建立多個資料列集，或提供您自己的建立不同的資料列集的條件，將不同的呼叫置於`CreateRowset`內在`Execute`。
+若要建立一個以上的資料列集，或提供您自己的條件來建立不同的資料列集，請從 `Execute`內，將不同的呼叫放在 `CreateRowset`。
 
-請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85))在*OLE DB 程式設計人員參考。*
+請參閱 OLE DB 程式設計*人員參考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
-## <a name="execute"></a> Icommandimpl:: Execute
+## <a name="execute"></a>ICommandImpl：： Execute
 
 執行命令。
 
@@ -196,17 +195,17 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
 ### <a name="remarks"></a>備註
 
-要求的連出介面將會取得從這個函式建立的資料列集物件介面。
+所要求的輸出介面將是從這個函式所建立的資料列集物件取得的介面。
 
-`Execute` 呼叫[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 若要建立多個資料列集，或提供您自己的條件，來建立不同的資料列集的預設實作會覆寫。
+`Execute` 會呼叫[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 覆寫預設的實作為建立多個資料列集，或提供您自己的條件來建立不同的資料列集。
 
-## <a name="getdbsession"></a> Icommandimpl:: Getdbsession
+## <a name="getdbsession"></a>ICommandImpl：： GetDBSession
 
-傳回建立命令的工作階段的介面指標。
+傳回建立命令之會話的介面指標。
 
 ### <a name="syntax"></a>語法
 
@@ -217,13 +216,13 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>參數
 
-請參閱[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ICommand：： GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 。
 
 ### <a name="remarks"></a>備註
 
-適用於從工作階段中擷取屬性。
+適用于從會話抓取屬性。
 
-## <a name="icommandimpl"></a> Icommandimpl:: Icommandimpl
+## <a name="icommandimpl"></a>ICommandImpl：： ICommandImpl
 
 建構函式。
 
@@ -233,9 +232,9 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a> ICommandImpl::m_bCancel
+## <a name="bcancel"></a>ICommandImpl：： m_bCancel
 
-指出是否可以取消命令為止。
+指出是否已取消命令。
 
 ### <a name="syntax"></a>語法
 
@@ -245,11 +244,11 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>備註
 
-您可以擷取中的這個變數`Execute`命令類別和適當的取消方法。
+您可以在命令類別的 `Execute` 方法中取出此變數，並視需要取消。
 
-## <a name="bcancelwhenexecuting"></a> Icommandimpl:: M_bcancelwhenexecuting
+## <a name="bcancelwhenexecuting"></a>ICommandImpl：： m_bCancelWhenExecuting
 
-指出執行時，是否可以取消命令。
+指出執行時是否可以取消命令。
 
 ### <a name="syntax"></a>語法
 
@@ -259,11 +258,11 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>備註
 
-預設值為 **，則為 true** （可取消）。
+預設值為**true** （可以取消）。
 
-## <a name="bisexecuting"></a> Icommandimpl:: M_bisexecuting
+## <a name="bisexecuting"></a>ICommandImpl：： m_bIsExecuting
 
-表示命令目前是否正在執行。
+指出命令目前是否正在執行。
 
 ### <a name="syntax"></a>語法
 
@@ -273,9 +272,9 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>備註
 
-`Execute`命令類別的方法可以將這個變數設 **，則為 true**。
+命令類別的 `Execute` 方法可以將此變數設定為**true**。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

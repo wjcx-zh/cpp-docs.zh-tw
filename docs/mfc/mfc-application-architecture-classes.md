@@ -1,43 +1,41 @@
 ---
 title: MFC 應用程式架構類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - MFC, classes
 - MFC, application development
 - classes [MFC], MFC
 - application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
-ms.openlocfilehash: 47feeb056d02b81bb88ccf3c5fd49bc983583ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e09447623b32e9b10063af5bc91ac9589f45e44
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239301"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447729"
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC 應用程式架構類別
 
 這個分類中的類別參與架構應用程式的架構。 它們提供常用的功能給大部分的應用程式。 您填入架構以新增應用程式特定的功能。 一般來說，您會藉由從架構類別衍生新類別，然後加入新的成員或覆寫現有的成員函式來進行。
 
-[應用程式精靈](../mfc/reference/mfc-application-wizard.md)產生數種類型的應用程式，全部都以不同方式使用應用程式架構。 SDI (單一文件介面) 和 MDI (多重文件介面) 應用程式會充分利用呼叫文件/檢視架構的部分架構。 其他類型的應用程式 (例如，對話方塊架構的應用程式)、表單架構應用程式和 DLL，僅使用部分的文件/檢視架構功能。
+[應用程式的嚮導](../mfc/reference/mfc-application-wizard.md)會產生數種類型的應用程式，而它們全都以不同的方式使用應用程式架構。 SDI (單一文件介面) 和 MDI (多重文件介面) 應用程式會充分利用呼叫文件/檢視架構的部分架構。 其他類型的應用程式 (例如，對話方塊架構的應用程式)、表單架構應用程式和 DLL，僅使用部分的文件/檢視架構功能。
 
 文件/檢視應用程式包含一組或多組文件、檢視和框架視窗。 文件範本物件會與每個文件/檢視/架構集的類別關聯。
 
 雖然您不必在 MFC 應用程式中使用文件/檢視架構，不過還是有一些優點值得如此做。 MFC OLE 容器和伺服器支援是以文件/檢視架構為基礎，如同對於列印和預覽列印的支援。
 
-所有的 MFC 應用程式具有至少兩個物件︰ 應用程式物件衍生自[CWinApp](../mfc/reference/cwinapp-class.md)，以及某種形式的主視窗物件 （通常間接） 衍生自[CWnd](../mfc/reference/cwnd-class.md)。 (大多數情況下，主視窗衍生自[CFrameWnd](../mfc/reference/cframewnd-class.md)， [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)，或[CDialog](../mfc/reference/cdialog-class.md)，其中都衍生自`CWnd`。)
+所有 MFC 應用程式都有至少兩個物件：衍生自[CWinApp](../mfc/reference/cwinapp-class.md)的應用程式物件，以及某種類型的主視窗物件（通常間接），衍生自[CWnd](../mfc/reference/cwnd-class.md)。 （最常見的情況是，主視窗衍生自[CFrameWnd](../mfc/reference/cframewnd-class.md)、 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)或[CDialog](../mfc/reference/cdialog-class.md)，這些都是衍生自 `CWnd`）。
 
 使用文件/檢視架構的應用程式包含其他物件。 主體物件如下：
 
-- 應用程式物件衍生自類別[CWinApp](../mfc/reference/cwinapp-class.md)，如先前所述。
+- 如先前所述，從類別[CWinApp](../mfc/reference/cwinapp-class.md)衍生的應用程式物件。
 
-- 一或多個文件類別物件衍生自類別[CDocument](../mfc/reference/cdocument-class.md)。 文件類別物件負責內部表示檢視中所操作的資料。 它們可能與資料檔案關聯。
+- 衍生自類別[CDocument](../mfc/reference/cdocument-class.md)的一或多個檔類別物件。 文件類別物件負責內部表示檢視中所操作的資料。 它們可能與資料檔案關聯。
 
-- 一或多個檢視物件衍生自類別[CView](../mfc/reference/cview-class.md)。 每個檢視是附加到文件並與框架視窗關聯的視窗。 檢視顯示和操作文件類別物件中所包含的資料。
+- 衍生自類別[CView](../mfc/reference/cview-class.md)的一個或多個 view 物件。 每個檢視是附加到文件並與框架視窗關聯的視窗。 檢視顯示和操作文件類別物件中所包含的資料。
 
-文件/檢視應用程式也包含框架視窗 (衍生自[CFrameWnd](../mfc/reference/cframewnd-class.md)) 和文件範本 (衍生自[CDocTemplate](../mfc/reference/cdoctemplate-class.md))。
+檔/視圖應用程式也包含框架視窗（衍生自[CFrameWnd](../mfc/reference/cframewnd-class.md)）和檔範本（衍生自[CDocTemplate](../mfc/reference/cdoctemplate-class.md)）。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

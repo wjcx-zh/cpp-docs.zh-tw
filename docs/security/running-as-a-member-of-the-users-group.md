@@ -1,9 +1,6 @@
 ---
 title: 以使用者群組的成員身分執行
 ms.date: 11/04/2016
-f1_keywords:
-- PRJ0050
-- VCD0047
 helpviewer_keywords:
 - Users Group [C++]
 - security [C++], Users Group
@@ -12,12 +9,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411288"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445438"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>以使用者群組的成員身分執行
 
@@ -29,7 +26,7 @@ ms.locfileid: "62411288"
 
 ## <a name="non-administrator-user-groups"></a>非系統管理員使用者群組
 
-程式開發人員常用的 Windows 使用者帳戶必須加入至「使用者群組」或「Power Users 群組」。 程式開發人員也可以加入至「偵錯群組」。 成為「使用者群組」成員，可讓您執行例行工作，其中包括了執行程式和瀏覽網際網路網站，而不會使電腦暴露在不必要的風險中。 做為「Power Users 群組」成員，您還可以執行諸如應用程式安裝、印表機安裝和大多數「控制台」作業工作。 如果需要執行管理工作 (例如升級作業系統或設定系統參數)，您必須登入系統管理員帳戶，才能執行管理工作。 或者，Windows **runas**命令可以用來啟動系統管理權限的特定應用程式。
+程式開發人員常用的 Windows 使用者帳戶必須加入至「使用者群組」或「Power Users 群組」。 程式開發人員也可以加入至「偵錯群組」。 成為「使用者群組」成員，可讓您執行例行工作，其中包括了執行程式和瀏覽網際網路網站，而不會使電腦暴露在不必要的風險中。 做為「Power Users 群組」成員，您還可以執行諸如應用程式安裝、印表機安裝和大多數「控制台」作業工作。 如果需要執行管理工作 (例如升級作業系統或設定系統參數)，您必須登入系統管理員帳戶，才能執行管理工作。 或者，Windows **runas**命令可以用來啟動具有系統管理存取權的特定應用程式。
 
 ## <a name="exposing-customers-to-security-risks"></a>使客戶遭受安全性風險
 

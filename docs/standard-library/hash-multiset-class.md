@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
 ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865123"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421678"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset 類別
 
@@ -202,7 +202,7 @@ hash_multiset 類別提供的迭代器是雙向的迭代器，不過類別成員
 |[upper_bound](#upper_bound)|傳回迭代器，指向 `hash_multiset` 中索引鍵等於或大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|擷取一份用以進行雜湊及排序 `hash_multiset` 中項目索引鍵值的雜湊特性物件複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

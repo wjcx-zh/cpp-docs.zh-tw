@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _lsearch
-- lsearch
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954080"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438152"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -65,7 +64,7 @@ void *_lsearch(
 *number*<br/>
 項目數。
 
-*width*<br/>
+*寬度*<br/>
 每個陣列元素的寬度。
 
 *compare*<br/>
@@ -79,13 +78,13 @@ void *_lsearch(
 
 **_Lsearch**函式會在*數位*元素陣列中執行值索引*鍵*的線性搜尋，每個*寬度*為位元組。 不同于**bsearch**， **_lsearch**不需要排序陣列。 如果找不到索引*鍵*， **_lsearch**會將它新增至陣列結尾，並遞增*數位*。
 
-*Compare*引數是使用者所提供之常式的指標，可比較兩個陣列元素，並傳回指定其關聯性的值。 **_lsearch**會在搜尋期間呼叫*比較*常式一或多次，並在每次呼叫時將指標傳遞至兩個陣列元素。 「*比較*」必須比較元素，並傳回非零（表示元素不同）或0（表示專案完全相同）。
+*Compare*引數是使用者所提供之常式的指標，可比較兩個陣列元素，並傳回指定其關聯性的值。 **_lsearch**在搜尋期間呼叫*比較*常式一或多次，並在每次呼叫時將指標傳遞至兩個陣列元素。 「*比較*」必須比較元素，並傳回非零（表示元素不同）或0（表示專案完全相同）。
 
-這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*Width*小於零，則會叫用不正確參數處理常式，如參數中所述[驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。
+這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*Width*小於零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_lsearch**|\<search.h>|
 

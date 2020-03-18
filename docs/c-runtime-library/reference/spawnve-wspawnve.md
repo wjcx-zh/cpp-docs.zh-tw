@@ -24,7 +24,6 @@ f1_keywords:
 - wspawnve
 - _spawnve
 - _wspawnve
-- spawnve
 helpviewer_keywords:
 - _spawnve function
 - spawnve function
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 37ff1358e8639d49992b8cfafb76b2ddac079889
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 37f8b6737fbd2b36c1482790a34dc386936b704b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947541"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442709"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve、_wspawnve
 
@@ -81,7 +80,7 @@ intptr_t _wspawnve(
 
 ## <a name="return-value"></a>傳回值
 
-同步 **_spawnve**或 **_wspawnve** （針對*模式*指定的 **_P_WAIT** ）的傳回值是新進程的結束狀態。 非同步 **_spawnve**或 **_wspawnve** （針對*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
+同步 **_spawnve**或 **_wspawnve** （ **_P_WAIT**為*模式*指定）的傳回值是新進程的結束狀態。 非同步 **_spawnve**或 **_wspawnve** （為*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
 
 |||
 |-|-|
@@ -91,7 +90,7 @@ intptr_t _wspawnve(
 | **ENOEXEC** | 指定的檔案無法執行或可執行檔格式無效。 |
 | **ENOMEM** | 可用記憶體不足，無法執行新處理序。 |
 
-如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -101,7 +100,7 @@ intptr_t _wspawnve(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_spawnve**|\<stdio.h> 或 \<process.h>|
 |**_wspawnve**|\<stdio.h> 或 \<wchar.h>|

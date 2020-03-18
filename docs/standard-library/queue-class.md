@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890842"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419655"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -80,7 +80,7 @@ class queue
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示 `queue` 中的項目數。|
 |[value_type](#value_type)|此類型代表儲存為 `queue` 項目的物件類型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 |||
 |-|-|

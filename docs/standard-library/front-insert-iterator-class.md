@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874035"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419081"
 ---
 # <a name="front_insert_iterator-class"></a>front_insert_iterator 類別
 
@@ -50,7 +50,7 @@ class front_insert_iterator;
 |[container_type](#container_type)|類型，表示要執行前端插入的容器。|
 |[reference](#reference)|類型，提供關聯容器控制之序列中項目的參考。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

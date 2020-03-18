@@ -1,9 +1,6 @@
 ---
 title: MSBuild 命令和屬性的一般宏
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988323"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440177"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild 命令和屬性的一般宏
 
@@ -165,7 +162,7 @@ ms.locfileid: "74988323"
 |**$(SafeParentName)**|有效名稱格式的直接父代名稱。 例如，表單是 .resx 檔案的父代。 這個屬性並沒有對等項目。|
 |**$(SafeRootNamespace)**|專案精靈會加入程式碼的命名空間名稱。 這個命名空間名稱只會包含有效 C++ 識別項允許的字元。 這個屬性並沒有對等項目。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio 專案- C++ ](../creating-and-managing-visual-cpp-projects.md)\
 [Visual C++移植和升級指南](../../porting/visual-cpp-porting-and-upgrading-guide.md)\

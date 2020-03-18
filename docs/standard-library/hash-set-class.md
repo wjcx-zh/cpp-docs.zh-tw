@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: becf038678f4abbe285e719e4d1cc1f3f12de982
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865121"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421650"
 ---
 # <a name="hash_set-class"></a>hash_set 類別
 
@@ -204,7 +204,7 @@ hash_set 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 |[upper_bound](#upper_bound)|傳回迭代器，指向 `hash_set` 中索引鍵等於或大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|擷取一份用以進行雜湊及排序 `hash_set` 中項目索引鍵值的雜湊特性物件複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

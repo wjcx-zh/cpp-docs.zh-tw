@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945913"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443756"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -80,8 +79,8 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
-要推送的字元。
+*c*<br/>
+要推入的字元。
 
 ## <a name="return-value"></a>傳回值
 
@@ -89,7 +88,7 @@ wint_t _ungetwch_nolock(
 
 ## <a name="remarks"></a>備註
 
-這些函式會將字元*c*推送回到主控台，使*c*成為 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**）所讀取的下一個字元。 如果 **_ungetch**和 **_ungetwch**在下一次讀取之前被呼叫多次，就會失敗。 *C*引數不可以是**EOF** （或**WEOF**）。
+這些函式會將字元*c*推送回到主控台，使*c*成為 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**）所讀取的下一個字元。 如果在下一次讀取之前呼叫多次， **_ungetch**和 **_ungetwch**會失敗。 *C*引數不可以是**EOF** （或**WEOF**）。
 
 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
@@ -102,12 +101,12 @@ wint_t _ungetwch_nolock(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
-|**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
-|**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
+|**_ungetch**， **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

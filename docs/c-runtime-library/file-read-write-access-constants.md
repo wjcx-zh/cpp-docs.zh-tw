@@ -1,8 +1,6 @@
 ---
 title: 檔案讀取-寫入存取常數
 ms.date: 11/04/2016
-f1_keywords:
-- c.constants.file
 helpviewer_keywords:
 - read/write access constants
 - write access constants
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 96d146b2e2f0ed82cbdc52b11d92c049da50e2cb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746067"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438388"
 ---
 # <a name="file-readwrite-access-constants"></a>檔案讀取/寫入存取常數
 
@@ -31,7 +29,7 @@ ms.locfileid: "57746067"
 
 存取類型如下表所述：
 
-|存取類型|說明|
+|存取類型|描述|
 |----------|----------------|
 |**"r"**|開啟以讀取。 如果檔案不存在或找不到，開啟檔案的呼叫就會失敗。|
 |**"w"**|開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。|
@@ -46,7 +44,7 @@ ms.locfileid: "57746067"
 
 [_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
-f[reopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)<br/>
+[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)<br/>
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>
 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

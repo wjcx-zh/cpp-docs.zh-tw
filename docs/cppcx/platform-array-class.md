@@ -3,18 +3,17 @@ title: Platform::Array 類別
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Array Constructors
-- VCCORLIB/Namespace not found::Platform::Array::Value
+- VCCORLIB/Platform::Array
+- VCCORLIB/Platform::Array::Value
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221834"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445794"
 ---
 # <a name="platformarray-class"></a>Platform::Array 類別
 
@@ -31,41 +30,41 @@ private ref class Array<TArg, 1> :
 
 ### <a name="members"></a>成員
 
-Platform:: array 會繼承其所有方法從[platform:: writeonlyarray 類別](../cppcx/platform-writeonlyarray-class.md)，並會實作`Value`屬性[platform:: iboxarray 介面](../cppcx/platform-iboxarray-interface.md)。
+Platform：： Array 會從[platform：： WriteOnlyArray 類別](../cppcx/platform-writeonlyarray-class.md)繼承其所有方法，並[執行 Platform：： IBoxArray 介面](../cppcx/platform-iboxarray-interface.md)的 `Value` 屬性。
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[Array 建構函式](#ctor)|初始化的一維陣列可修改的類別範本參數所指定的型別*T*。|
+|[Array 建構函式](#ctor)|初始化由類別樣板參數*T*指定的一維、可修改的類型陣列。|
 
 ### <a name="methods"></a>方法
 
-請參閱[platform:: writeonlyarray 類別](../cppcx/platform-writeonlyarray-class.md)。
+請參閱[Platform：： WriteOnlyArray 類別](../cppcx/platform-writeonlyarray-class.md)。
 
 ### <a name="properties"></a>屬性
 
 |||
 |-|-|
-|[Array::Value](#value)|擷取目前陣列的控制代碼。|
+|[Array：： Value](#value)|擷取目前陣列的控制代碼。|
 
 ### <a name="remarks"></a>備註
 
 Array 類別已密封，無法被繼承。
 
-Windows 執行階段類型系統不支援不規則陣列的概念，因此您不能傳遞 Ivector<platform < platform:: array\<T >> 做為傳回的值或方法參數。 若要跨 ABI 傳遞不規則陣列或一組序列中的某個序列，請使用 `IVector<IVector<T>^>`。
+Windows 執行階段類型系統不支援不規則陣列的概念，因此您無法將 IVector < Platform：： Array\<T > > 做為傳回值或方法參數。 若要跨 ABI 傳遞不規則陣列或一組序列中的某個序列，請使用 `IVector<IVector<T>^>`。
 
-如需何時及如何使用 platform:: array 的詳細資訊，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
+如需有關何時及如何使用 Platform：： Array 的詳細資訊，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
-此類別定義於編譯器會自動納入的 vccorlib.h 標頭中。 因為它不是 platform.winmd 中所定義的公用型別，它會顯示在 IntelliSense，但不是在物件瀏覽器。
+此類別定義於編譯器會自動納入的 vccorlib.h 標頭中。 它會顯示在 IntelliSense 中，但不會出現在物件瀏覽器中，因為它不是在 platform 中定義的公用類型。
 
 ### <a name="requirements"></a>需求
 
 編譯器選項： **/ZW**
 
-## <a name="ctor"></a>  Array 建構函式
+## <a name="ctor"></a>陣列構造函式
 
-初始化的一維陣列可修改的類別範本參數所指定的型別*T*。
+初始化由類別樣板參數*T*指定的一維、可修改的類型陣列。
 
 ## <a name="syntax"></a>語法
 
@@ -87,9 +86,9 @@ Array(T* data, unsigned int size);
 
 ### <a name="remarks"></a>備註
 
-如需如何建立 platform:: array 的執行個體的詳細資訊，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
+如需如何建立 Platform：： Array 實例的詳細資訊，請參閱[array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
-## <a name="get"></a>  Array:: get 方法
+## <a name="get"></a>Array：： get 方法
 
 在指定的索引位置擷取對陣列元素的參考。
 
@@ -102,13 +101,13 @@ T& get(unsigned int index)  const;
 #### <a name="parameters"></a>參數
 
 *index*<br/>
-識別陣列中元素的以零起始索引。 最小的索引為 0，最大索引為所指定的值`size`中的參數[Array 建構函式](#ctor)。
+識別陣列中元素的以零起始索引。 最小的索引是0，而最大的索引是[陣列](#ctor)參數化中 `size` 參數所指定的值。
 
 ### <a name="return-value"></a>傳回值
 
 `index` 參數所指定的陣列元素。
 
-## <a name="value"></a>  Array:: value 屬性
+## <a name="value"></a>Array：： Value 屬性
 
 擷取目前陣列的控制代碼。
 

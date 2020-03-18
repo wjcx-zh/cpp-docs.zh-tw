@@ -1,8 +1,6 @@
 ---
 title: 偵錯支援類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.debug
 helpviewer_keywords:
 - debugging memory leaks, MFC
 - memory allocation, debugging dynamic
@@ -12,23 +10,23 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-ms.openlocfilehash: 90a21b260185bb2202eed66b8e4144eb7183c157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 570a1e87eadcce18feacf20f9c25562662eb17c9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241272"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446991"
 ---
 # <a name="debugging-support-classes"></a>偵錯支援類別
 
-MFC 提供下列的類別，來協助您偵錯動態記憶體配置問題。
+MFC 提供下列類別，可協助您偵測動態記憶體配置的問題。
 
-[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
-提供的診斷傾印目的地。
+[CDumpCoNtext](../mfc/reference/cdumpcontext-class.md)<br/>
+提供診斷傾印的目的地。
 
 [CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
-提供記憶體使用量的快照集的結構。 也可用來比較舊版和更新版本的記憶體快照。
+提供記憶體使用快照的結構。 也可用來比較舊版和更新版本的記憶體快照集。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

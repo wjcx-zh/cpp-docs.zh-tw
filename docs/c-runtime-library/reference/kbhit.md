@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953521"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438098"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -56,15 +55,15 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>傳回值
 
-如果按鍵已按下， **_kbhit**會傳回非零值。 否則它會傳回 0。
+如果已按下按鍵， **_kbhit**會傳回非零值。 否則，它會傳回 0。
 
 ## <a name="remarks"></a>備註
 
-**_Kbhit**函數會檢查主控台是否有最近的擊鍵。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 程式接著可以呼叫 **_getch**或 **_getche**來取得按鍵。
+**_Kbhit**函式會檢查主控台中是否有最新的按鍵。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 程式接著可以呼叫 **_getch**或 **_getche**來取得按鍵。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 

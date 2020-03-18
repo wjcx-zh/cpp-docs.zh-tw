@@ -21,19 +21,18 @@ topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949759"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443718"
 ---
 # <a name="_putw"></a>_putw
 
@@ -64,11 +63,11 @@ int _putw(
 
 ## <a name="remarks"></a>備註
 
-**_Putw**函數會將**int**類型的二進位值寫入資料流程的目前位置 *。* **_putw**不會影響資料流程中的專案對齊，也不會採用任何特殊對齊方式。 **_putw**主要是為了與先前的程式庫相容。 **_Putw**可能會發生可攜性問題，因為**int**的大小和**int**中的位元組順序在不同的系統之間有所不同。
+**_Putw**函式會將**int**類型的二進位值寫入資料流程的目前位置 *。* **_putw**不會影響資料流程中的專案對齊，也不會採用任何特殊對齊方式。 **_putw**主要是為了與先前的程式庫相容。 **_Putw**可能會發生可攜性問題，因為**int**的大小和**int**中的位元組順序在不同的系統之間有所不同。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
@@ -110,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Wrote ten words

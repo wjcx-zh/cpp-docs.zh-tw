@@ -3,12 +3,12 @@ title: CppProperties json 參考
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417366"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442550"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties json 參考
 
@@ -28,7 +28,7 @@ ms.locfileid: "79417366"
 |`forcedInclude`|要自動包含在每個編譯單位中的標頭 (MSVC 會對應至 /FI，clang 會對應至 -include)|
 |`undefines`|要使其成為未定義的巨集清單 (MSVC 會對應至 /U)|
 |`intelliSenseMode`|要使用的 IntelliSense 引擎。 您可以為 MSVC、gcc 或 Clang 指定其中一個預先定義的架構特定變體。|
-|`environments`|使用者定義的變數集，其行為類似于命令提示字元中的環境變數，並使用 $ {env.<VARIABLE>} 來存取 向宏.|
+|`environments`|使用者定義的變數集，其行為類似于命令提示字元中的環境變數，並使用 $ {env.\<變數 >} 宏來存取。|
 
 ### <a name="intellisensemode-values"></a>intelliSenseMode 值
 

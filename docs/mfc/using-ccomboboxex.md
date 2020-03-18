@@ -1,28 +1,26 @@
 ---
 title: 使用 CComboBoxEx
 ms.date: 11/04/2016
-f1_keywords:
-- CComboBoxEx
 helpviewer_keywords:
 - combo boxes [MFC], extended
 - extended combo boxes [MFC], about extended combo boxes
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: e119b41bbca42a1cbc0dbb5e721947c5bd7f1bc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9f3ca623ca729837da56c5b8a8be92b29a5c913
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394464"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447095"
 ---
 # <a name="using-ccomboboxex"></a>使用 CComboBoxEx
 
-擴充的下拉式方塊控制項是標準下拉式方塊控制項的提供項目影像的原生支援的延伸模組。 這些映像可用來表示下拉式方塊，例如目前的選取或未選取的項目中的個別項目的狀態。 若要讓項目影像更容易存取，控制會提供映像清單支援。
+擴充的下拉式方塊控制項是標準下拉式方塊控制項的延伸模組，可提供專案影像的原生支援。 這些影像可以用來指出下拉式方塊中個別專案的狀態，例如目前選取和取消選取的專案。 為了讓專案影像容易存取，控制項提供影像清單支援。
 
-使用此控制項來提供下拉式方塊的功能，而不必以手動方式繪製項目的圖形。
+您可以使用這個控制項來提供下拉式方塊的功能，而不必手動繪製專案圖形。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
 - [建立擴充的下拉式方塊控制項](../mfc/creating-an-extended-combo-box-control.md)
 

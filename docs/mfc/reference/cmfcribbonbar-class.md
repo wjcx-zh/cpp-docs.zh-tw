@@ -189,11 +189,11 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883690"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420257"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 類別
 
@@ -280,14 +280,14 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar：： LoadFromResource](#loadfromresource)|已多載。 從應用程式資源載入功能區列。|
 |[CMFCRibbonBar：： OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar：： OnEditCoNtextMenu](#oneditcontextmenu)||
-|[CMFCRibbonBar：： OnRTLChanged](#onrtlchanged)|(覆寫 `CPane::OnRTLChanged`。)|
+|[CMFCRibbonBar：： OnRTLChanged](#onrtlchanged)|(覆寫 `CPane::OnRTLChanged`)。|
 |[CMFCRibbonBar：： OnSetAccData](#onsetaccdata)|（覆寫[CBasePane：： OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata)。）|
 |[CMFCRibbonBar：： OnShowRibbonCoNtextMenu](#onshowribboncontextmenu)||
 |[CMFCRibbonBar：： OnShowRibbonQATMenu](#onshowribbonqatmenu)||
 |[CMFCRibbonBar：： OnSysKeyDown](#onsyskeydown)||
 |[CMFCRibbonBar：： OnSysKeyUp](#onsyskeyup)||
 |[CMFCRibbonBar：:P opTooltip](#poptooltip)||
-|[CMFCRibbonBar：:P reTranslateMessage](#pretranslatemessage)|(覆寫 `CBasePane::PreTranslateMessage`。)|
+|[CMFCRibbonBar：:P reTranslateMessage](#pretranslatemessage)|(覆寫 `CBasePane::PreTranslateMessage`)。|
 |[CMFCRibbonBar：： RecalcLayout](#recalclayout)|（覆寫[CPane：： RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout)。）|
 |[CMFCRibbonBar：： RemoveAllCategories](#removeallcategories)|從功能區列中移除所有功能區分類。|
 |[CMFCRibbonBar：： RemoveAllFromTabs](#removeallfromtabs)|從索引標籤區域中移除所有功能區項目。|
@@ -1312,7 +1312,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 在TRUE 表示搜尋作用中的類別目錄;FALSE 表示不搜尋作用中的類別。
 
 *bCheckPanelCaption*<br/>
-在TRUE 表示測試功能區面板的標題，其中的點位於其中;FALSE 不會測試功能區面板的標題及其所在的點。 如需詳細資訊，請參閱「備註」一節。
+在TRUE 表示測試功能區面板的標題，其中的點位於其中;FALSE 不會測試功能區面板的標題及其所在的點。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="return-value"></a>傳回值
 

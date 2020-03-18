@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301492"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445319"
 ---
 # <a name="built-in-types-c"></a>內建類型（C++）
 
@@ -66,7 +69,7 @@ ms.locfileid: "75301492"
 
 ### <a name="built-in-type-size-restrictions"></a>內建類型大小限制
 
-|分類|類型|內容|
+|類別|類型|內容|
 |--------------|----------|--------------|
 |整數|**char**|類型**char**是一種整數類型，通常包含基本執行字元集的成員—根據預設，這是 Microsoft C++中的 ASCII。<br /><br /> 編譯器C++會將**char**、**帶正負**號的 char 和不**帶正負號 char**類型的變數視為具有不同的類型。 除非使用/J 編譯選項，否則**char**類型的變數會升級為**int** ，如同預設的類型**帶正負**號的 char。 在這種情況下，它們會被視為不帶正負號的**char**類型，並在沒有簽署延伸的情況下升級為**int**|
 ||**bool**|類型**bool**是整數類資料類型，可以是下列兩個值的其中一個： **true**或**false**。 它的大小並未指定。|
@@ -80,7 +83,7 @@ ms.locfileid: "75301492"
 ||**double**|**Double**類型是大於或等於**float**類型，但短于或等於**long double**類型大小的浮點類型。<br /><br /> Microsoft 專有： **long double**和**double**的表示方式完全相同。 不過， **long double**和**double**是不同的類型。|
 ||**long double**|**Long double**類型是大於或等於**double**類型的浮點類型。|
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 下表列出 Microsoft C++內建類型所需的儲存空間數量。 特別要注意的是，即使在64位作業系統上， **long**也是4個位元組。
 
@@ -99,6 +102,6 @@ ms.locfileid: "75301492"
 
 如需類型轉換的詳細資訊，請參閱 [標準轉換](standard-conversions.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料類型範圍](data-type-ranges.md)

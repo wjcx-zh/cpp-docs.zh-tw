@@ -1,19 +1,17 @@
 ---
 title: 檔案和資料庫類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.file
 helpviewer_keywords:
 - database classes [MFC], MFC
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 96c45cad5da0bf16edfa71cb7e357ae4d66e318d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405829"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442396"
 ---
 # <a name="file-and-database-classes"></a>檔案和資料庫類別
 
@@ -21,7 +19,7 @@ ms.locfileid: "62405829"
 
 下列類別的分類支援資料永續性。
 
-- [檔案 I/O 類別](../mfc/file-i-o-classes.md)
+- [檔案 i/o 類別](../mfc/file-i-o-classes.md)
 
 - [OLE DB 類別](../mfc/ole-db-classes.md)
 
@@ -31,4 +29,4 @@ ms.locfileid: "62405829"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

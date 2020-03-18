@@ -11,7 +11,6 @@ f1_keywords:
 - CStreamRowset.CStreamRowset
 - ATL.CStreamRowset.CStreamRowset
 - ATL::CStreamRowset::CStreamRowset
-- CStreamRowset
 - CStreamRowset<TAccessor>::CStreamRowset
 - ATL::CStreamRowset<TAccessor>::CStreamRowset
 - CStreamRowset<TAccessor>.Close
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: b566ddab89d2198e3f6b24eb9a20c60747749d1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368665"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441083"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 類別
 
-用於`CCommand`或`CTable`宣告。
+用於 `CCommand` 或 `CTable` 宣告中。
 
 ## <a name="syntax"></a>語法
 
@@ -60,12 +59,12 @@ class CStreamRowset
 
 |||
 |-|-|
-|[CStreamRowset](#cstreamrowset)|建構函式。 具現化並初始化`CStreamRowset`物件。|
-|[關閉](#close)|版本[ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))類別中的介面指標。|
+|[CStreamRowset](#cstreamrowset)|建構函式。 具現化並初始化 `CStreamRowset` 物件。|
+|[關閉](#close)|釋放類別中的[ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))介面指標。|
 
 ## <a name="remarks"></a>備註
 
-使用`CStreamRowset`在您`CCommand`或`CTable`宣告，例如：
+在您的 `CCommand` 或 `CTable` 宣告中使用 `CStreamRowset`，例如：
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
@@ -73,18 +72,18 @@ class CStreamRowset
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` 會傳回`ISequentialStream`指標，它會儲存在`m_spStream`。 然後，您使用`Read`方法來擷取 XML 格式 （Unicode 字串） 資料。 例如: 
+`ICommand::Execute` 會傳回 `ISequentialStream` 指標，它會儲存在 `m_spStream`中。 然後，您可以使用 `Read` 方法，以 XML 格式抓取（Unicode 字串）資料。 例如：
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
-SQL Server 2000 執行 XML 格式化中，並會傳回所有的資料行和資料列集，以單一的 XML 字串的所有資料列。
+SQL Server 2000 會執行 XML 格式設定，並將資料列集的所有資料行和所有資料列當做一個 XML 字串傳回。
 
 > [!NOTE]
->  這項功能只能搭配 SQL Server 2000。
+>  這項功能僅適用于 SQL Server 2000。
 
-## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+## <a name="cstreamrowset"></a>CStreamRowset：： CStreamRowset
 
-具現化並初始化`CStreamRowset`物件。
+具現化並初始化 `CStreamRowset` 物件。
 
 ### <a name="syntax"></a>語法
 
@@ -92,9 +91,9 @@ SQL Server 2000 執行 XML 格式化中，並會傳回所有的資料行和資�
 CStreamRowset();
 ```
 
-## <a name="close"></a> CStreamRowset::Close
+## <a name="close"></a>CStreamRowset：： Close
 
-版本[ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))類別中的介面指標。
+釋放類別中的[ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))介面指標。
 
 ### <a name="syntax"></a>語法
 
@@ -104,5 +103,5 @@ void Close();
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

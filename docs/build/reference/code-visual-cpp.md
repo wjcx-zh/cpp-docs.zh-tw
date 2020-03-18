@@ -1,21 +1,20 @@
 ---
-title: '&lt;程式碼 > (C++文件註解)'
+title: '&lt;程式碼 >C++ （檔批註）'
 ms.date: 11/04/2016
 f1_keywords:
-- code
 - <code>
 helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bacd95f9c93a439e5bab7a556ac2724a042411b8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272404"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440163"
 ---
-# <a name="ltcodegt"></a>&lt;程式碼&gt;
+# <a name="ltcodegt"></a>&lt;code&gt;
 
 \<code> 標記可讓您將一或多行指定為程式碼。
 
@@ -27,7 +26,7 @@ ms.locfileid: "62272404"
 
 #### <a name="parameters"></a>參數
 
-*內容*<br/>
+*content*<br/>
 您要標記為程式碼的文字。
 
 ## <a name="remarks"></a>備註
@@ -38,7 +37,7 @@ ms.locfileid: "62272404"
 
 ## <a name="example"></a>範例
 
-如需如何使用 \<code> 標記的範例，請參閱 [\<example>>](example-visual-cpp.md) 主題。
+如需如何使用 [code> 標記的範例，請參閱 \<](example-visual-cpp.md)example>>\< 主題。
 
 ## <a name="see-also"></a>另請參閱
 

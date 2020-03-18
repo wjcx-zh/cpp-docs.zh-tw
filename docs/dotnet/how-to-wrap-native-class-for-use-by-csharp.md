@@ -6,14 +6,14 @@ helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988129"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446309"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>作法：包裝原生類別以便讓 C# 使用
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包裝原生類別以供 C\# 使用
 
 這個範例示範如何包裝原生C++類別，使其可供以C#或其他 .net 語言撰寫的程式碼使用。
 
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

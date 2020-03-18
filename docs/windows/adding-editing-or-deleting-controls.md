@@ -1,8 +1,7 @@
 ---
-title: 如何：新增、編輯或刪除控制項（C++）
+title: 如何：加入、編輯或刪除控制項（C++）
 ms.date: 02/15/2019
 f1_keywords:
-- vc.editors.dialog.dialog
 - vc.controls.activex
 - vc.editors.dialog.insertActiveXControls
 helpviewer_keywords:
@@ -43,14 +42,14 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b940e94faf710de8ae5bc604b47dc35a1bc290a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a42a64f93d334c0b5c63b0eca1567e6964d0a3ae
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491174"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447214"
 ---
-# <a name="how-to-add-edit-or-delete-controls-c"></a>如何：新增、編輯或刪除控制項（C++）
+# <a name="how-to-add-edit-or-delete-controls-c"></a>如何：加入、編輯或刪除控制項（C++）
 
 使用**對話方塊編輯器**，您可以加入、調整大小、編輯和刪除對話方塊中的控制項。 您也可以編輯控制項的屬性（例如其識別碼），或在執行時間時是否顯示。
 
@@ -99,7 +98,7 @@ ms.locfileid: "69491174"
 
 ### <a name="to-add-a-custom-control"></a>若要加入自訂控制項
 
-您可以將自訂控制項加入至對話方塊。 選取 [**工具箱**] 中的 [**自訂控制項**] 圖示，並將它拖曳至您的對話方塊。 若要加入`Syslink`控制項，請加入自訂控制項，然後將控制項的 [**類別**] `Syslink`屬性變更為。 此動作會讓屬性重新整理並顯示`Syslink`控制項屬性。 如需 MFC 包裝函式類別的詳細資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
+您可以將自訂控制項加入至對話方塊。 選取 [**工具箱**] 中的 [**自訂控制項**] 圖示，並將它拖曳至您的對話方塊。 若要加入 `Syslink` 控制項，請加入自訂控制項，然後將控制項的 [**類別**] 屬性變更為 [`Syslink`]。 此動作會導致屬性重新整理，並顯示 `Syslink` 控制項屬性。 如需 MFC 包裝函式類別的詳細資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
 
 ## <a name="edit-controls"></a>編輯控制項
 
@@ -113,13 +112,13 @@ ms.locfileid: "69491174"
 1. 在 [屬性視窗](/visualstudio/ide/reference/properties-window)中，變更控制項的屬性。
 
    > [!NOTE]
-   > 當您將按鈕、選項按鈕或核取方塊控制項的**Bitmap**屬性設定為等於 True 時，會為您的控制項**實**BS_BITMAP 樣式。 如需詳細資訊，請參閱[按鈕樣式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 如需將點陣圖與控制項建立關聯的範例，請參閱[CButton：： SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 當您在**對話方塊編輯器**中時，點陣圖不會出現在控制項中。
+   > 當您將按鈕、選項按鈕或核取方塊控制項的**Bitmap**屬性設定為 [True] 時，就會為您的控制項**實**作為樣式 BS_BITMAP。 如需詳細資訊，請參閱[按鈕樣式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 如需將點陣圖與控制項建立關聯的範例，請參閱[CButton：： SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 當您在**對話方塊編輯器**中時，點陣圖不會出現在控制項中。
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>復原控制項屬性的變更
 
 1. 請確定控制項的焦點在**對話方塊編輯器**中。
 
-1. 移至功能表 [**編輯** > ] [**復原**]。 如果焦點不在控制項上，將無法使用 [**復原**] 命令。
+1. 移至功能表 **編輯** > **復原**。 如果焦點不在控制項上，將無法使用 [**復原**] 命令。
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>定義對話方塊控制項的成員變數 (非按鈕)
 
@@ -143,7 +142,7 @@ ms.locfileid: "69491174"
 
 ## <a name="delete-controls"></a>刪除控制項
 
-在對話方塊中，選取控制項，然後按下**Delete**鍵，或移至功能表 [**編輯** > ] [**刪除**]。
+在對話方塊中，選取控制項，然後按下**Delete**鍵，或移至功能表 **編輯** > **刪除**。
 
 ## <a name="other-issues"></a>其他問題
 
@@ -170,19 +169,19 @@ ms.locfileid: "69491174"
 ||||
 |-|-|-|
 |滑桿控制項|樹狀目錄控制項|日期時間選擇器|
-|微調控制項|索引標籤控制項|月曆|
+|微調控制項|索引標籤控制項|Month Calendar|
 |進度控制項|動畫控制項|IP 位址控制|
 |快速鍵|Rich Edit 控制項|擴充的下拉式方塊|
 |清單控制項|Rich Edit 2.0 控制項|自訂控制項|
 
-若要在對話方塊上使用通用控制項，您必須先呼叫 [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) 或在建立對話方塊之前`AFXInitCommonControls`。
+若要在對話方塊上使用通用控制項，您必須先呼叫[InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)或 `AFXInitCommonControls`，然後再建立對話方塊。
 
-若要使用 RichEdit 控制項，您必須`LoadLibrary`呼叫。 如需詳細資訊，請參閱 Windows SDK 中的[Rich Edit 控制項](/windows/win32/Controls/about-rich-edit-controls)和[rich Edit 控制項的總覽](../mfc/overview-of-the-rich-edit-control.md)。
+若要使用 RichEdit 控制項，您必須呼叫 `LoadLibrary`。 如需詳細資訊，請參閱 Windows SDK 中的[Rich Edit 控制項](/windows/win32/Controls/about-rich-edit-controls)和[rich Edit 控制項的總覽](../mfc/overview-of-the-rich-edit-control.md)。
 
 > [!NOTE]
 > 若要將 RichEdit 控制項與 MFC 搭配使用，您必須先呼叫[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)來載入 RichEdit 2.0 控制項（riched20.dll。DLL），或呼叫[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)來載入舊版的 RichEdit 1.0 控制項（RICHED32。DLL）。
 >
-> 您可以使用目前的[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)類別搭配舊版的 RichEdit 1.0 控制項，但`CRichEditCtrl`只是為了支援 RichEdit 2.0 控制項而設計的。 由於 RichEdit 1.0 和 RichEdit 2.0 很類似，因此大部分的方法都能正常執行。 不過，1.0 和2.0 控制項之間有一些差異，因此某些方法可能無法正常執行或完全無法正常執行。
+> 您可以使用目前的[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)類別搭配舊版的 RichEdit 1.0 控制項，但是 `CRichEditCtrl` 只是為了支援 RichEdit 2.0 控制項而設計的。 由於 RichEdit 1.0 和 RichEdit 2.0 很類似，因此大部分的方法都能正常執行。 不過，1.0 和2.0 控制項之間有一些差異，因此某些方法可能無法正常執行或完全無法正常執行。
 
 ### <a name="activex-controls"></a>ActiveX 控制項
 
@@ -215,9 +214,9 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>編輯 ActiveX 控制項的屬性
 
-獨立廠商所提供的 ActiveX 控制項可能會有自己的屬性和特性。 這些屬性會顯示在 [**屬性**] 視窗中。 ActiveX 控制項的寫入器所建立的任何屬性頁都會顯示在 [**屬性頁**] 對話方塊中。 （若要查看特定 ActiveX 控制項的**屬性頁**，請選取 [[屬性視窗](/visualstudio/ide/reference/properties-window)中的 [**屬性頁**] 按鈕）。
+獨立廠商所提供的 ActiveX 控制項可能會有自己的屬性和特性。 這些屬性會顯示在 [**屬性**] 視窗中。 ActiveX 控制項的寫入器所建立的任何屬性頁都會顯示在 [**屬性頁**] 對話方塊中。 （若要查看特定 ActiveX 控制項的**屬性頁**，請選取 [屬性視窗](/visualstudio/ide/reference/properties-window)中的 [**屬性頁**] 按鈕）。
 
-- 選取  **ActiveX**控制項，並移至功能表 **檢視** > **屬性頁** 來檢視屬性。 視需要在屬性頁中進行變更。
+- 選取 [ **ActiveX**控制項]，然後移至功能表**視圖** > **屬性頁**來查看屬性。 視需要在屬性頁中進行變更。
 
    在 ActiveX 控制項的屬性頁中，會顯示各種索引標籤，視 ActiveX 控制項中的屬性工作表而定。
 
@@ -232,7 +231,7 @@ Win32
 
 [管理對話方塊控制項](controls-in-dialog-boxes.md)<br/>
 [如何：版面配置控制項](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[如何：定義控制項存取與值](defining-mnemonics-access-keys.md)
+[如何：定義控制項存取和值](defining-mnemonics-access-keys.md)
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

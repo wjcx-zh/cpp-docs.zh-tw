@@ -6,22 +6,21 @@ f1_keywords:
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
 - IDBCreateCommandImpl.CreateCommand
-- CreateCommand
 - IDBCreateCommandImpl::CreateCommand
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408910"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446127"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 類別
 
-提供實作[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))介面。
+提供[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))介面的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +33,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-工作階段物件衍生自`IDBCreateCommandImpl`。
+衍生自 `IDBCreateCommandImpl`的會話物件。
 
 *CommandClass*<br/>
 您的命令類別。
@@ -53,9 +52,9 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 ## <a name="remarks"></a>備註
 
-若要取得新的命令的工作階段物件上選擇性的介面。
+會話物件上的選擇性介面，可取得新的命令。
 
-## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+## <a name="createcommand"></a>IDBCreateCommandImpl：： CreateCommand
 
 建立新的命令，並傳回要求的介面。
 
@@ -69,15 +68,15 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IDBCreateCommand：： CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 。
 
-某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBCreateCommand::CreateCommand`:
+某些參數會對應至 OLE DB 程式設計*人員的*不同名稱參考參數，如 `IDBCreateCommand::CreateCommand`所述：
 
-|OLE DB 範本參數|*OLE DB 程式設計人員參考*參數|
+|OLE DB 範本參數|*OLE DB 程式設計人員的參考*參數|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,8 +1,6 @@
 ---
 title: LINK 輸入檔
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,35 +12,35 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291505"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439337"
 ---
 # <a name="link-input-files"></a>LINK 輸入檔
 
-您可以提供連結器和檔案，其中包含物件、 匯入和標準程式庫、 資源、 模組定義，以及輸入的命令。 連結不使用副檔名來進行的檔案內容的相關假設。 相反地，連結會檢查每個輸入的檔案，以判斷它是何種檔案。
+您可以使用包含物件、匯入和標準程式庫、資源、模組定義和命令輸入的檔案來提供連結器。 連結不會使用副檔名來對檔案內容進行假設。 相反地，LINK 會檢查每個輸入檔，以判斷它是哪種檔案。
 
-在命令列出現的順序會處理命令列上的物件檔案。 命令列的順序，會搜尋程式庫，與下列注意事項：當從程式庫目的檔中將會搜尋該程式庫中第一次，然後從命令列的下列程式庫，無法解析的符號，並[/DEFAULTLIB （指定預設程式庫）](defaultlib-specify-default-library.md)指示詞，然後在命令列開頭的任何程式庫。
+命令列上的物件檔會依照它們在命令列上出現的順序進行處理。 程式庫也會以命令列順序搜尋，但有下列警告：從程式庫中帶入物件檔案時，無法解析的符號會先在該程式庫中搜尋，然後從命令列和[/DEFAULTLIB （指定預設程式庫）](defaultlib-specify-default-library.md)指示詞，再到命令列開頭的任何程式庫。
 
 > [!NOTE]
->  連結不再接受以分號 （或任何其他字元），為回應檔和順序檔案中的註解的開頭。 分號僅被視為在模組定義檔 (.def) 的註解的開頭。
+>  連結不再接受分號（或任何其他字元）做為回應檔案和順序檔案中的批註開頭。 只有在模組定義檔案（.def）中的批註開始時，才會辨識分號。
 
 連結會使用下列類型的輸入檔：
 
 - [.obj 檔案](dot-obj-files-as-linker-input.md)
 
-- [.netmodule 檔](netmodule-files-as-linker-input.md)
+- [.netmodule 檔案](netmodule-files-as-linker-input.md)
 
 - [.lib 檔案](dot-lib-files-as-linker-input.md)
 
 - [.exp 檔案](dot-exp-files-as-linker-input.md)
 
-- [.def 檔](dot-def-files-as-linker-input.md)
+- [.def 檔案](dot-def-files-as-linker-input.md)
 
-- [.pdb files](dot-pdb-files-as-linker-input.md)
+- [.pdb 檔案](dot-pdb-files-as-linker-input.md)
 
 - [.res 檔案](dot-res-files-as-linker-input.md)
 

@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856952"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438636"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (停用兩階段名稱查閱)
 
@@ -51,7 +50,7 @@ Visual Studio 2017 15.3 版和更新版本：在[/permissive-](permissive-standa
 
 這個行為的另一個效果是多載解析。 發生非標準行為的原因，是因為在具現化的網站上展開標記資料流程的方式。 在具現化時，可能會顯示在範本宣告中看不到的符號。 這表示它們可以參與多載解析。 您可以根據在範本定義上看不到的程式碼，找到範本變更行為，這與標準相反。
 
-例如，請參考這個程式碼：
+例如，請思考下列程式碼：
 
 ```cpp
 // zctwophase.cpp
@@ -199,6 +198,6 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 1. 修改 [**其他選項**] 屬性以包含 **/zc： twoPhase** ，然後選擇 **[確定]** 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [/Zc (一致性)](zc-conformance.md)

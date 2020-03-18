@@ -11,7 +11,6 @@ f1_keywords:
 - CBookmark::CBookmark
 - ATL.CBookmark.CBookmark
 - CBookmark.CBookmark
-- CBookmark
 - ATL::CBookmark<0>::CBookmark<0>
 - ATL.CBookmark<0>.CBookmark<0>
 - CBookmark<0>::CBookmark<0>
@@ -67,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209386"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447250"
 ---
 # <a name="cbookmark-class"></a>CBookmark 類別
 
-保留的書籤值在其緩衝區中。
+將書簽值保存在其緩衝區中。
 
 ## <a name="syntax"></a>語法
 
@@ -91,7 +90,7 @@ class CBookmark< 0 > : public CBookmarkBase
 ### <a name="parameters"></a>參數
 
 *nSize*<br/>
-以位元組為單位的書籤緩衝區的大小。 當*nSize*為零，在執行階段會以動態方式建立書籤緩衝區。
+書簽緩衝區的大小（以位元組為單位）。 當*nSize*為零時，會在執行時間動態建立書簽緩衝區。
 
 ## <a name="requirements"></a>需求
 
@@ -103,22 +102,22 @@ class CBookmark< 0 > : public CBookmarkBase
 
 |||
 |-|-|
-|[CBookmark](#cbookmark)|建構函式|
-|[GetBuffer](#getbuffer)|擷取到緩衝區的指標。|
-|[GetSize](#getsize)|擷取以位元組為單位的緩衝區大小。|
-|[SetBookmark](#setbookmark)|設定書籤值。|
+|[CBookmark](#cbookmark)|函數|
+|[GetBuffer](#getbuffer)|抓取緩衝區的指標。|
+|[GetSize](#getsize)|抓取緩衝區的大小（以位元組為單位）。|
+|[SetBookmark](#setbookmark)|設定書簽值。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
-|[operator =](#operator)|會指派一個`CBookmark`到另一個類別。|
+|[operator =](#operator)|將一個 `CBookmark` 類別指派給另一個。|
 
 ## <a name="remarks"></a>備註
 
-`CBookmark<0>` 是的樣板特製化`CBookmark`; 在執行階段以動態方式建立它的緩衝區。
+`CBookmark<0>` 是 `CBookmark`的範本特製化;其緩衝區會在執行時間以動態方式建立。
 
-## <a name="cbookmark"></a> Cbookmark:: Cbookmark
+## <a name="cbookmark"></a>CBookmark：： CBookmark
 
 建構函式。
 
@@ -136,14 +135,14 @@ CBookmark(DBLENGTH nSize);
 
 ### <a name="remarks"></a>備註
 
-第一個函式會設定為 NULL，而且設為 0 的緩衝區大小的緩衝區。 第二個函式會將緩衝區大小設定為*nSize*，將緩衝區的位元組陣列*nSize*位元組。
+第一個函式會將緩衝區設定為 NULL，將緩衝區大小設定為 0。 第二個函式會將緩衝區大小設為*nSize*，並將緩衝區設定為*nSize*位元組的位元組陣列。
 
 > [!NOTE]
->  此函式僅供以`CBookmark<0>`。
+>  此函式僅適用于 `CBookmark<0>`。
 
-## <a name="getbuffer"></a> Cbookmark:: Getbuffer
+## <a name="getbuffer"></a>CBookmark：： GetBuffer
 
-擷取書籤緩衝區的指標。
+抓取書簽緩衝區的指標。
 
 ### <a name="syntax"></a>語法
 
@@ -153,9 +152,9 @@ virtual BYTE* GetBuffer() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-書籤緩衝區的指標。
+書簽緩衝區的指標。
 
-## <a name="getsize"></a> Cbookmark:: Getsize
+## <a name="getsize"></a>CBookmark：： GetSize
 
 擷取書籤緩衝區的大小。
 
@@ -169,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 以位元組為單位的緩衝區大小。
 
-## <a name="setbookmark"></a> CBookmark::SetBookmark
+## <a name="setbookmark"></a>CBookmark：： SetBookmark
 
-將所參考的書籤值複製*pBuffer*要`CBookmark`緩衝區，並將緩衝區大小設定為*nSize*。
+將*pBuffer*所參考的書簽值複製到 `CBookmark` 緩衝區，並將緩衝區大小設定為*nSize*。
 
 ### <a name="syntax"></a>語法
 
@@ -182,20 +181,20 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 #### <a name="parameters"></a>參數
 
 *nSize*<br/>
-[in]書籤緩衝區的大小。
+在書簽緩衝區的大小。
 
 *pBuffer*<br/>
-[in]包含書籤值的位元組陣列指標。
+在包含書簽值的位元組陣列指標。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-此函式僅供以`CBookmark<0>`。
+此函式僅適用于 `CBookmark<0>`。
 
-## <a name="operator"></a> Cbookmark:: Operator =
+## <a name="operator"></a>CBookmark：： operator =
 
 指派 `CBookmark` 物件給另一個。
 
@@ -207,9 +206,9 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>備註
 
-此運算子只有在需要`CBookmark<0>`。
+只有在 `CBookmark<0>`中才需要這個運算子。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -2,7 +2,7 @@
 title: Math 常數
 ms.date: 11/04/2016
 f1_keywords:
-- c.constants
+- c.constants.math
 helpviewer_keywords:
 - M_PI constant
 - M_PI_2 constant
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 156e4df4bcd4be457f2d14e7e5f5531d93d642be
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744161"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438259"
 ---
 # <a name="math-constants"></a>Math 常數
 
@@ -45,7 +45,7 @@ ms.locfileid: "57744161"
 
 下列符號是針對其所表示之運算式的值進行定義：
 
-|符號|運算式|值|
+|符號|運算是|值|
 |------------|----------------|-----------|
 |M_E|e|2.71828182845904523536|
 |M_LOG2E|log2(e)|1.44269504088896340736|

@@ -1,20 +1,18 @@
 ---
 title: 錯誤處理 (CRT)
 ms.date: 11/04/2016
-f1_keywords:
-- c.errors
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d38aaf76a4901b12290782957db90049d815d278
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551212"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443316"
 ---
 # <a name="error-handling-crt"></a>錯誤處理 (CRT)
 
@@ -22,7 +20,7 @@ ms.locfileid: "50551212"
 
 ## <a name="error-handling-routines"></a>錯誤處理常式
 
-|常式傳回的值|使用|
+|常式|使用|
 |-------------|---------|
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 巨集|測試程式設計邏輯錯誤。適用於發行和偵錯版本的執行階段程式庫。|
 |[_ASSERT、_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集|類似於**判斷提示**，但僅適用於偵錯版本的執行階段程式庫。|

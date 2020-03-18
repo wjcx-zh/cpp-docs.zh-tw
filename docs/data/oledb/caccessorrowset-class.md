@@ -9,15 +9,12 @@ f1_keywords:
 - CAccessorRowset::Bind
 - CAccessorRowset::CAccessorRowset
 - CAccessorRowset.CAccessorRowset
-- CAccessorRowset
 - ATL.CAccessorRowset.CAccessorRowset
 - ATL::CAccessorRowset::CAccessorRowset
 - CAccessorRowset.Close
 - CAccessorRowset::Close
 - CAccessorRowset::FreeRecordMemory
 - CAccessorRowset.FreeRecordMemory
-- FreeRecordMemory
-- GetColumnInfo
 - CAccessorRowset.GetColumnInfo
 - CAccessorRowset::GetColumnInfo
 helpviewer_keywords:
@@ -30,16 +27,16 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283798"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447282"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 
-封裝資料列集和其相關聯的存取子，單一類別中。
+在單一類別中封裝資料列集及其相關聯的存取子。
 
 ## <a name="syntax"></a>語法
 
@@ -67,19 +64,19 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 |||
 |-|-|
-|[Bind](#bind)|建立繫結 (使用的時機`bBind`指定為**false**中[ccommand:: Open](../../data/oledb/ccommand-open.md))。|
+|[Bind](#bind)|建立系結（在[CCommand：： Open](../../data/oledb/ccommand-open.md)中將 `bBind` 指定為**false**時使用）。|
 |[CAccessorRowset](#caccessorrowset)|建構函式。|
 |[關閉](#close)|關閉資料列集和任何存取子。|
-|[FreeRecordMemory](#freerecordmemory)|釋出任何需要先釋放目前記錄中的資料行。|
-|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|
+|[FreeRecordMemory](#freerecordmemory)|釋放目前記錄中需要釋放的任何資料行。|
+|[GetColumnInfo](#getcolumninfo)|執行[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|
 
 ## <a name="remarks"></a>備註
 
-類別`TAccessor`管理存取子。 類別*TRowset*管理資料列集。
+類別 `TAccessor` 管理存取子。 [類別*TRowset* ] 會管理資料列集。
 
-## <a name="bind"></a> CAccessorRowset::Bind
+## <a name="bind"></a>CAccessorRowset：： Bind
 
-建立繫結，如果您指定`bBind`作為**假**中[ccommand:: Open](../../data/oledb/ccommand-open.md)。
+如果您在[CCommand：： Open](../../data/oledb/ccommand-open.md)中指定 `bBind` 為**false** ，則建立系結。
 
 ### <a name="syntax"></a>語法
 
@@ -89,9 +86,9 @@ HRESULT Bind();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+## <a name="caccessorrowset"></a>CAccessorRowset：： CAccessorRowset
 
 初始化 `CAccessorRowset` 物件。
 
@@ -101,9 +98,9 @@ HRESULT Bind();
 CAccessorRowset();
 ```
 
-## <a name="close"></a> CAccessorRowset::Close
+## <a name="close"></a>CAccessorRowset：： Close
 
-釋放使用中的任何存取子和資料列集。
+釋放任何使用中的存取子和資料列集。
 
 ### <a name="syntax"></a>語法
 
@@ -115,9 +112,9 @@ void Close();
 
 釋放任何相關聯的記憶體。
 
-## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+## <a name="freerecordmemory"></a>CAccessorRowset：： FreeRecordMemory
 
-釋出任何需要先釋放目前記錄中的資料行。
+釋放目前記錄中需要釋放的任何資料行。
 
 ### <a name="syntax"></a>語法
 
@@ -125,9 +122,9 @@ void Close();
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+## <a name="getcolumninfo"></a>CAccessorRowset：： GetColumnInfo
 
-從開啟的資料列集取得資料行資訊。
+從已開啟的資料列集取得資料行資訊。
 
 ### <a name="syntax"></a>語法
 
@@ -142,19 +139,19 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-使用者必須釋放字串緩衝區與傳回的資料行資訊。 使用此方法的第二個版本，當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要覆寫繫結。
+使用者必須釋放傳回的資料行資訊和字串緩衝區。 當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)且需要覆寫系結時，請使用此方法的第二個版本。
 
-如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

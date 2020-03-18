@@ -1,18 +1,16 @@
 ---
 title: 目錄控制
 ms.date: 11/04/2016
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - controls [C++], directory
 - directory control routines
 ms.assetid: a72dcf6f-f366-4d20-8850-0e19cc53ca18
-ms.openlocfilehash: 327647ee2eee7e149ec0e9ebfc71883a8a3643d5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 640ce8a8665936b604c6e8e6270e358a200c880a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748576"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438552"
 ---
 # <a name="directory-control"></a>目錄控制
 
@@ -20,7 +18,7 @@ ms.locfileid: "57748576"
 
 ## <a name="directory-control-routines"></a>目錄控制常式
 
-|常式傳回的值|使用|
+|常式|使用|
 |-------------|---------|
 |[_chdir、_wchdir](../c-runtime-library/reference/chdir-wchdir.md)|變更目前工作目錄|
 |[_chdrive](../c-runtime-library/reference/chdrive.md)|變更目前的磁碟機|

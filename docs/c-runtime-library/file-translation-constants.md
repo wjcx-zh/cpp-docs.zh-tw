@@ -1,8 +1,6 @@
 ---
 title: 檔案轉譯常數
 ms.date: 11/04/2016
-f1_keywords:
-- c.constants.file
 helpviewer_keywords:
 - translation constants
 - file translation [C++], constants
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 363d95e744ccdb45cf06b8303ae4b60c9ecd58c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375912"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443269"
 ---
 # <a name="file-translation-constants"></a>檔案轉譯常數
 
@@ -43,12 +41,12 @@ ms.locfileid: "68375912"
 
    以二進位 (未轉譯) 模式開啟。 會隱藏上述轉譯。
 
-如果 *mode* 中未指定 **t** 或 **b**，則轉譯模式由預設模式變數 [_fmode](../c-runtime-library/fmode.md) 所定義。 如需使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md)。
+如果 **mode** 中未指定 **t** 或 *b*，則轉譯模式由預設模式變數 [_fmode](../c-runtime-library/fmode.md) 所定義。 如需使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
-f[reopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)<br/>
+[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)<br/>
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

@@ -3,11 +3,7 @@ title: vector&lt;bool&gt; 類別
 ms.date: 11/04/2016
 f1_keywords:
 - vector<bool>
-- vector/std::vector::const_pointer
-- vector/std::vector::const_reference
-- vector/std::vector::pointer
 - vector/std::vector::flip
-- vector/std::vector::swap
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -15,16 +11,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4043b46bf2f93b362de029577fe9ac3c11dbcaa2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452261"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443932"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
 
-類別是 **bool** 類型專案之 [vector](../standard-library/vector-class.md) 的部分特製化。`vector<bool>` 它具有特殊化所使用之基礎類型的配置器，它會藉由儲存每位一個**bool**值，來提供空間優化。
+`vector<bool>` 類別是**bool**類型專案之[vector](../standard-library/vector-class.md)的部分特製化。 它具有特殊化所使用之基礎類型的配置器，它會藉由儲存每位一個**bool**值，來提供空間優化。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +31,7 @@ class vector<bool, Allocator>
 
 ## <a name="remarks"></a>備註
 
-這個類別範本特製化的行為就像 vector，除了在本文中說明的差異之外。
+這個類別樣板特製化的行為就像 vector，除了在本文中說明的差異之外。
 
 處理**bool**類型的作業會對應到容器儲存體中的值。 `allocator_traits::construct` 不用來建構這些值。
 
@@ -47,9 +43,9 @@ class vector<bool, Allocator>
 |[const_reference](#const_reference)|**Bool**的 typedef。 在初始化之後，就無法觀察原始值的更新。|
 |[pointer](#pointer)|`iterator` 的 typedef，可做為指標指向 `vector<bool>` 的布林值項目。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[flip](#flip)|會反轉 `vector<bool>` 中的所有位元。|
 |[swap](#swap)|交換兩個 `vector<bool>` 的項目。|
@@ -68,7 +64,7 @@ class vector<bool, Allocator>
 
 **標頭**：\<vector>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="const_pointer"></a>  vector\<bool>::const_pointer
 
@@ -142,7 +138,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |參數|描述|
 |-|-|
-|*採購*|`vector<bool>` 項目的位置。|
+|*Pos*|`vector<bool>` 項目的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -152,11 +148,11 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>備註
 
-如果您使用 _ITERATOR_DEBUG_LEVEL 集進行編譯，如果您嘗試存取向量界限以外的元素，就會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如果您使用 _ITERATOR_DEBUG_LEVEL 設定進行編譯，如果您嘗試存取向量界限以外的元素，就會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
-這個程式碼範例會示範 `vector<bool>::operator[]` 的正確用法和兩個常見的程式碼錯誤 (已標記為註解)。這些會造成錯誤，因為 `vector<bool>::reference` 所傳回 `vector<bool>::operator[]` 物件的位址無法採用。
+這個程式碼範例會示範 `vector<bool>::operator[]` 的正確用法，以及兩個常見的編碼錯誤（已標記為批註）。這些錯誤會造成錯誤，因為無法取得 `vector<bool>::operator[]` 傳回之 `vector<bool>::reference` 物件的位址。
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -257,7 +253,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-提供從`vector<bool>::reference`到**bool**的隱含轉換。
+提供從 `vector<bool>::reference` 到**bool**的隱含轉換。
 
 ```cpp
 operator bool() const;
@@ -282,10 +278,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*Right*\
 值會指派給位元的項目參考。
 
-*初始值*\
+*Val*\
 要指派給位元的布林值。
 
 #### <a name="example"></a>範例
@@ -361,7 +357,7 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="swap"></a>  vector\<bool>::swap
 
-靜態成員函式，透過使用 Proxy 類別 [vector\<bool>::reference](#reference_class)，交換布林值向量 (`vector<bool>`) 的兩個項目。
+靜態成員函式，透過使用 Proxy 類別 `vector<bool>`vector[bool>::reference\<，交換布林值向量 (](#reference_class)) 的兩個項目。
 
 ```cpp
 static void swap(
@@ -371,10 +367,10 @@ static void swap(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 要與*右*元素交換的元素。
 
-*再*\
+*Right*\
 要與*左*元素交換的元素。
 
 ### <a name="remarks"></a>備註
@@ -384,4 +380,4 @@ static void swap(
 ## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)

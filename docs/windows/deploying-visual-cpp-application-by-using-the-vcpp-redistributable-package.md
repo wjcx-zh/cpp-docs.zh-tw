@@ -4,18 +4,18 @@ ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: a235fa12138fd00a0f6d722cad7776980ad3d292
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 1e09debc53e5b1b3e1eeaa6a63924b04fd2b7ca5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877290"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443886"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>逐步解說：使用 Visual C++ 可轉散發套件來部署 Visual C++ 應用程式
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>逐步解說：使用 Visual C++ 可轉散發套件部署 Visual C++ 應用程式
 
 本文將逐步描述如何使用 Visual C++ 可轉散發套件來部署 Visual C++ 應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您必須具有下列元件才能完成本逐步解說：
 
@@ -25,7 +25,7 @@ ms.locfileid: "64877290"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>使用 Visual C++ 可轉散發套件部署應用程式
 
-1.  藉由遵循[逐步解說：使用安裝專案部署 Visual C++ 應用程式](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步驟來建立及建置 MFC 應用程式：。
+1.  遵循[逐步解說：使用安裝專案部署 Visual C++ 應用程式](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步驟，建立及建置 MFC 應用程式。
 
 1. 建立檔案並將它命名為 setup.bat，然後將下列命令新增至該檔案。 將 `MyMFCApplication` 變更為您專案的名稱。
 
@@ -54,7 +54,7 @@ ms.locfileid: "64877290"
 
       - 您的 MFC 應用程式 (.exe 檔案)。
 
-      - vcredist_x86.exe。 此檔案位於 \Program Files (x86)\Microsoft Visual Studio \<version>\SDK\Bootstrapper\Packages\. 您也可以從 [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555) 下載此檔案。
+      - vcredist_x86.exe。 在 Visual Studio 2015 中，此檔案位於% VCINSTALLDIR% 可轉散發套件 *\\1033\\* 。 在 Visual Studio 2017 和 Visual Studio 2019 中，此檔案位於 *% VCToolsRedistDir%* 。 您也可以[從 Microsoft 下載最新支援的](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)可轉散發檔案。
 
       - 您在前面步驟中建立的 setup.bat 檔案。
 
@@ -83,7 +83,7 @@ ms.locfileid: "64877290"
       自我解壓縮安裝檔會安裝您在步驟 2 中指定之資料夾中的 MFC 應用程式。 由於自我解壓縮安裝檔中隨附 Visual C++ 可轉散發套件安裝程式，因此應用程式會成功執行。
 
       > [!IMPORTANT]
-      > 為了判斷所安裝的執行階段版本，安裝程式會檢查登錄機碼 \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<version>\VC\Runtimes\\<platform>。 如果目前安裝的版本比安裝程式嘗試安裝的版本還要新，則安裝程式會傳回成功而不安裝較舊版本，並在 [控制台] 的已安裝程式頁面上保留另一個項目。
+      > 為了判斷安裝的執行階段版本，安裝程式會檢查登錄機碼 \\HKLM\\SOFTWARE\\Microsoft\\VisualStudio\\_版本_\\VC\\執行時間\\_platform_\\版本。 如果目前安裝的版本比安裝程式嘗試安裝的版本還要新，則安裝程式會傳回成功而不安裝較舊版本，並在 [控制台] 的已安裝程式頁面上保留另一個項目。
 
 ## <a name="see-also"></a>另請參閱
 

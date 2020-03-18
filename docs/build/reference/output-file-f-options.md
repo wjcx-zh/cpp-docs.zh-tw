@@ -1,29 +1,27 @@
 ---
-title: 輸出檔 (-F) 選項
+title: 輸出檔（-F）選項
 ms.date: 11/04/2016
-f1_keywords:
-- /f
 helpviewer_keywords:
 - output files
 - output files, compiler options [C++]
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-ms.openlocfilehash: 38db548bb71f8dc3e21cb1d544ba70d4fdebb6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a9aea2080ecadbc398186251e4cff34a0d240c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320106"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439083"
 ---
 # <a name="output-file-f-options"></a>輸出檔 (/F) 選項
 
-輸出檔選項建立，或重新命名輸出檔案。 它們會影響所有的 C 或C++原始程式檔 CL 環境變數、 命令列上，或在任何命令檔中指定。
+輸出檔案選項會建立或重新命名輸出檔案。 它們會影響在 CL C++環境變數、命令列或任何命令檔中指定的所有 C 或原始程式檔。
 
 - [/FA、/Fa (清單檔)](fa-fa-listing-file.md)
 
 - [指定路徑名稱](specifying-the-pathname.md)
 
-- [/Fd （名稱 PDB 檔案）](fd-program-database-file-name.md)
+- [/Fd （命名 PDB 檔案）](fd-program-database-file-name.md)
 
 - [/Fe (命名 EXE 檔案)](fe-name-exe-file.md)
 
@@ -31,11 +29,11 @@ ms.locfileid: "62320106"
 
 - [/Fm (命名對應檔)](fm-name-mapfile.md)
 
-- [/Fo （目的檔名稱）](fo-object-file-name.md)
+- [/Fo （名稱物件檔案）](fo-object-file-name.md)
 
-- [/Fp （命名.pch 檔案）](fp-name-dot-pch-file.md)
+- [/Fp （命名 .pch 檔案）](fp-name-dot-pch-file.md)
 
-- [/FR、 /Fr （建立.sbr 檔案）](fr-fr-create-dot-sbr-file.md)
+- [/FR、/Fr （建立 .sbr 檔案）](fr-fr-create-dot-sbr-file.md)
 
 - [/FU (命名強制的 #using 檔案)](fu-name-forced-hash-using-file.md)
 

@@ -1,21 +1,19 @@
 ---
-title: 位元 AND 運算子： &amp;
+title: 位 AND 運算子： &amp;
 ms.date: 11/04/2016
-f1_keywords:
-- bitand
 helpviewer_keywords:
 - AND operator
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-ms.openlocfilehash: b7d0d73802a5af7ab71e980d73eaff5c5b3c4bb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba17c9a633b7b18cad2881dfef90fde7c2074319
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387704"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446146"
 ---
-# <a name="bitwise-and-operator-amp"></a>位元 AND 運算子： &amp;
+# <a name="bitwise-and-operator-amp"></a>位 AND 運算子： &amp;
 
 ## <a name="syntax"></a>語法
 
@@ -27,13 +25,13 @@ expression & expression
 
 運算式可以是其他 and 運算式或 (受限於如下所述的限制) 相等的運算式、關聯運算式，加法運算式、乘法運算式、成員運算式的指標、cast 運算式、一元運算式、後置運算式或主要運算式。
 
-位元的 AND 運算子 (**&**) 比較的第二個運算元的對應位元的第一個運算元的每個位元。 如果兩個位元皆為 1，則對應的結果位元會設為 1。 否則，對應結果位元會設為 0。
+位 AND 運算子（ **&** ）會比較第一個運算元的每個位與第二個運算元的對應位。 如果這兩個位元都是 1，則對應的結果位元會設為 1。 否則，對應的結果位元會設為 0。
 
-位元 AND 運算子的兩個運算元都必須為整數類型。 中涵蓋的一般算術轉換[標準轉換](standard-conversions.md)，適用於這些運算元。
+位元 AND 運算子的兩個運算元都必須為整數類型。 [標準轉換](standard-conversions.md)中所涵蓋的一般算術轉換適用于運算元。
 
-## <a name="operator-keyword-for-"></a>運算子關鍵字 （& s)
+## <a name="operator-keyword-for-"></a>& 的 Operator 關鍵字
 
-**Bitand**運算子是相等的文字**&**。 有兩種方式來存取**bitand**在程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。
+**Bitand**運算子是 **&** 的文字對等用法。 有兩種方式可存取您程式中的**bitand**運算子：包含標頭檔 `iso646.h`，或使用[/za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能）編譯器選項進行編譯。
 
 ## <a name="example"></a>範例
 

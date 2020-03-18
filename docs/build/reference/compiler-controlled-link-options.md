@@ -1,8 +1,6 @@
 ---
-title: Compiler-Controlled LINK Options
+title: 編譯器控制的 LINK 選項
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - LINK tool [C++], compiler-controlled options
 - linker [C++], CL compiler control
@@ -10,37 +8,37 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f631d0ebbbd9e60fe5d54aac6fb158461d3f4d38
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342862"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440104"
 ---
-# <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
+# <a name="compiler-controlled-link-options"></a>編譯器控制的 LINK 選項
 
-CL 編譯器會自動呼叫連結，除非您指定 /c 選項。 CL 提供某些控制連結器，透過命令列選項和引數。 下表摘要說明 CL 影響連結的功能。
+除非您指定/c 選項，否則 CL 編譯器會自動呼叫連結。 CL 透過命令列選項和引數，提供連結器的一些控制權。 下表摘要說明 CL 中會影響連結的功能。
 
-|CL 規格|CL 動作會影響連結|
+|CL 規格|影響連結的 CL 動作|
 |----------------------|---------------------------------|
-|.C、.cxx、.cpp 或.def 以外的任何檔案名稱副檔名|傳遞做為輸入至連結的檔案名稱|
-|*filename*.def|將傳遞 /DEF:*filename*.def|
-|/F*number*|傳遞 /STACK:*數目*|
-|/Fd*filename*|將傳遞 /PDB:*檔名*|
-|/Fe*filename*|將傳遞 /out:*檔名*|
-|/Fm*filename*|傳遞 /MAP:*檔名*|
-|/Gy|建立函式 (Comdat);可讓函式層級連結|
-|/LD|將傳遞 /DLL|
-|/LDd|將傳遞 /DLL|
-|/link|將命令列的其餘部分傳遞至連結|
-|/MD 或 /MT|將預設程式庫名稱放入.obj 檔案|
-|/Mdd 或 /MTd|.Obj 檔案中將預設程式庫名稱。 定義符號 **_DEBUG**|
-|/nologo|將傳遞 /NOLOGO|
-|/Zd|傳遞 /DEBUG|
-|/Zi 或/z7|傳遞 /DEBUG|
-|/Zl|省略預設程式庫名稱，從.obj 檔案|
+|除了 .c、.cxx、.cpp 或 .def 以外的任何副檔名|傳遞檔案名做為連結的輸入|
+|*檔案名*.def|傳遞/DEF：*filename*.def|
+|/F*數位*|傳遞/STACK：*number*|
+|/Fd*檔案名*|傳遞/PDB：*filename*|
+|/Fe*filename*|傳遞/OUT：*filename*|
+|/Fm*filename*|傳遞/MAP：*filename*|
+|/Gy|建立封裝函式（Comdat）;啟用函式層級連結|
+|/LD|傳遞/DLL|
+|/LDd|傳遞/DLL|
+|/link|將其餘的命令列傳遞至連結|
+|/MD 或/MT|將預設程式庫名稱放在 .obj 檔案中|
+|/MDd 或/MTd|將預設程式庫名稱放在 .obj 檔案中。 定義符號 **_DEBUG**|
+|/nologo|傳遞/NOLOGO|
+|/Zd|傳遞/DEBUG|
+|/Zi 或/Z7|傳遞/DEBUG|
+|/Zl|從 .obj 檔案省略預設程式庫名稱|
 
-如需詳細資訊，請參閱 < [MSVC 編譯器選項](compiler-options.md)。
+如需詳細資訊，請參閱[MSVC 編譯器選項](compiler-options.md)。
 
 ## <a name="see-also"></a>另請參閱
 

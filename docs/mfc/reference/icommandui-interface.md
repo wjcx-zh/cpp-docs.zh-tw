@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421293"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445702"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 介面
 
@@ -60,6 +60,7 @@ interface class ICommandUI
 ## <a name="check"></a>ICommandUI：： Check
 
 將此命令的使用者介面專案設定為適當的檢查狀態。
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ property UICheckState Check;
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 告訴命令路由機制繼續將目前的訊息路由傳送到處理程式鏈。
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ void ContinueRouting();
 ## <a name="enabled"></a>ICommandUI：： Enabled
 
 啟用或停用此命令的使用者介面專案。
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ property bool Enabled;
 ## <a name="id"></a>ICommandUI：： ID
 
 取得 ICommandUI 物件所代表的使用者介面物件識別碼。
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ property unsigned int ID;
 ## <a name="index"></a>ICommandUI：： Index
 
 取得 ICommandUI 物件所表示之使用者介面物件的索引。
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ property unsigned int Index;
 ## <a name="radio"></a>ICommandUI：：收音機
 
 將此命令的使用者介面專案設定為適當的檢查狀態。
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ property bool Radio;
 ## <a name="text"></a>ICommandUI：： Text
 
 設定此命令之使用者介面專案的文字。
+
 ```
 property String^ Text;
 ```

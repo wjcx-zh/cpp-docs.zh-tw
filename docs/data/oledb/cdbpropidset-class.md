@@ -11,7 +11,6 @@ f1_keywords:
 - ATL.CDBPropIDSet.AddPropertyID
 - ATL::CDBPropIDSet::AddPropertyID
 - ATL::CDBPropIDSet::CDBPropIDSet
-- CDBPropIDSet
 - CDBPropIDSet.CDBPropIDSet
 - CDBPropIDSet::CDBPropIDSet
 - ATL.CDBPropIDSet.CDBPropIDSet
@@ -21,7 +20,6 @@ f1_keywords:
 - CDBPropIDSet::operator=
 - CDBPropIDSet.SetGUID
 - ATL::CDBPropIDSet::SetGUID
-- SetGUID
 - ATL.CDBPropIDSet.SetGUID
 - CDBPropIDSet::SetGUID
 helpviewer_keywords:
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209317"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447460"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
 
-繼承自`DBPROPIDSET`結構，並新增初始化索引鍵欄位的建構函式，以及[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)存取方法。
+繼承自 `DBPROPIDSET` 結構，並加入初始化索引鍵欄位以及[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)存取方法的函式。
 
 ## <a name="syntax"></a>語法
 
@@ -60,21 +58,21 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 |||
 |-|-|
-|[AddPropertyID](#addpropertyid)|將屬性加入至屬性 ID 集。|
+|[AddPropertyID](#addpropertyid)|將屬性加入至設定的屬性識別碼。|
 |[CDBPropIDSet](#cdbpropidset)|建構函式。|
-|[SetGUID](#setguid)|設定的屬性 ID 集的 GUID。|
+|[SetGUID](#setguid)|設定屬性 ID 集的 GUID。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
-|[operator =](#op_equal)|指派的一個屬性 ID 集的內容到另一個。|
+|[operator =](#op_equal)|將一個屬性識別碼設定的內容指派給另一個。|
 
 ## <a name="remarks"></a>備註
 
-OLE DB 取用者使用`DBPROPIDSET`結構，以傳遞的取用者想要取得屬性資訊的屬性識別碼的陣列。 識別在單一的屬性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構屬於一個屬性集。
+OLE DB 取用者會使用 `DBPROPIDSET` 結構來傳遞屬性識別碼的陣列，供取用者想要取得屬性資訊。 單一[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構中識別的屬性屬於一個屬性集。
 
-## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+## <a name="addpropertyid"></a>CDBPropIDSet：： AddPropertyID
 
 將屬性 ID 加入至屬性 ID 集。
 
@@ -89,9 +87,9 @@ bool AddPropertyID(DBPROPID propid) throw();
 *propid*<br/>
 [in] 要加入至屬性 ID 集的屬性 ID。
 
-## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
+## <a name="cdbpropidset"></a>CDBPropIDSet：： CDBPropIDSet
 
-建構函式。 初始化`rgProperties`， `cProperties`，以及 （選擇性）`guidPropertySet`的欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構。
+建構函式。 初始化[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構的 `rgProperties`、`cProperties`和（選擇性） `guidPropertySet` 欄位。
 
 ### <a name="syntax"></a>語法
 
@@ -106,14 +104,14 @@ CDBPropIDSet();
 #### <a name="parameters"></a>參數
 
 *guid*<br/>
-[in]GUID; 用來初始化`guidPropertySet`欄位。
+在用來初始化 `guidPropertySet` 欄位的 GUID。
 
 *propidset*<br/>
 [in] 複製建構的另一個 `CDBPropIDSet` 物件。
 
-## <a name="setguid"></a> CDBPropIDSet::SetGUID
+## <a name="setguid"></a>CDBPropIDSet：： SetGUID
 
-設定 [GUID] 欄位中`DBPROPIDSET`結構。
+設定 `DBPROPIDSET` 結構中的 GUID 欄位。
 
 ### <a name="syntax"></a>語法
 
@@ -124,13 +122,13 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>參數
 
 *guid*<br/>
-[in]GUID; 用來設定`guidPropertySet`欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構。
+在用來設定[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構之 `guidPropertySet` 欄位的 GUID。
 
 ### <a name="remarks"></a>備註
 
-可以設定此欄位[建構函式](../../data/oledb/cdbpropidset-cdbpropidset.md)以及。 如果您為這個類別使用預設建構函式，則呼叫此函式。
+此欄位也可以由「[函數](../../data/oledb/cdbpropidset-cdbpropidset.md)」設定。 如果您為這個類別使用預設建構函式，則呼叫此函式。
 
-## <a name="op_equal"></a> Cdbpropidset:: Operator =
+## <a name="op_equal"></a>CDBPropIDSet：： operator =
 
 將一個屬性 ID 集的內容指派至另一個 ID 屬性集。
 
@@ -142,5 +140,5 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,19 +1,16 @@
 ---
 title: new 和 delete 運算子
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246440"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445453"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
@@ -23,7 +20,7 @@ C++支援使用[new](new-operator-cpp.md)和[delete](delete-operator-cpp.md)運�
 
 如需組成 C 執行時間程式庫和C++標準程式庫的程式庫檔案清單，請參閱 CRT 連結[庫功能](../c-runtime-library/crt-library-features.md)。
 
-##  <a id="new_operator"></a> New 運算子
+##  <a id="new_operator"> </a> New 運算子
 
 當程式中遇到下列這類語句時，它會轉譯為**函式 operator new**的呼叫：
 
@@ -39,10 +36,10 @@ char *pch = new char[BUFFER_SIZE];
 
 ### <a name="scope-for-operator-new-functions"></a>Operator new 函式的範圍
 
-|運算子|範圍|
+|運算子|影響範圍|
 |--------------|-----------|
-|**：： operator new**|Global|
-|*類別名稱* **：： operator new**|執行個體|
+|**：： operator new**|全域|
+|*類別名稱* **：： operator new**|類別|
 
 **Operator new**的第一個引數必須是 `size_t` 類型（在 \<> stddef.h 中定義的類型），而且傳回類型一律為**void** <strong>\*</strong>。
 
@@ -124,7 +121,7 @@ int main() {
 
 還有另一種方式可以處理失敗的記憶體配置要求。 撰寫自訂的修復常式來處理這類失敗，然後藉由呼叫[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)執行時間函式來註冊您的函數。
 
-##  <a id="delete_operator"></a> Delete 運算子
+##  <a id="delete_operator"> </a> Delete 運算子
 
 使用**new**運算子動態配置的記憶體可以使用**delete**運算子釋放。 Delete 運算子會呼叫**operator delete 函**式，將記憶體釋放回可用的集區。 使用**delete**運算子也會導致呼叫類別的析構函式（如果有的話）。
 

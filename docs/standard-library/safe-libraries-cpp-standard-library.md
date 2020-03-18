@@ -1,23 +1,21 @@
 ---
-title: 安全程式庫:C++ 標準程式庫
+title: 安全程式庫：C++ 標準程式庫
 ms.date: 11/04/2016
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e352489ca12b5815aab5517defc72571abe177fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454553"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446092"
 ---
-# <a name="safe-libraries-c-standard-library"></a>安全程式庫:C++ 標準程式庫
+# <a name="safe-libraries-c-standard-library"></a>安全程式庫：C++ 標準程式庫
 
-Microsoft C++隨附的程式庫有幾項增強功能, 包括C++標準程式庫, 讓它們更安全。
+Microsoft C++隨附的程式庫有幾項增強功能，包括C++標準程式庫，讓它們更安全。
 
 C++ 標準程式庫中有幾個方法已知可能不安全，因為這些方法可能導致緩衝區溢位或其他程式碼缺失。 建議您不要使用這些方法，目前已建立更安全的新方法來取代這些方法。 這些新方法的結尾全部都是 `_s`。
 
@@ -40,7 +38,7 @@ C++ 標準程式庫中有幾個方法已知可能不安全，因為這些方法�
 
 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)
 
-[Checked Iterators](../standard-library/checked-iterators.md)
+[已檢查的迭代器](../standard-library/checked-iterators.md)
 
 [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 

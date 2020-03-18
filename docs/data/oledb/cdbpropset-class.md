@@ -21,7 +21,6 @@ f1_keywords:
 - ATL.CDBPropSet.SetGUID
 - CDBPropSet.SetGUID
 - ATL::CDBPropSet::SetGUID
-- SetGUID
 - CDBPropSet::SetGUID
 helpviewer_keywords:
 - CDBPropSet class
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325022"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447449"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 
-繼承自`DBPROPSET`結構，並新增初始化索引鍵欄位的建構函式以及`AddProperty`存取方法。
+繼承自 `DBPROPSET` 結構，並加入初始化索引鍵欄位及 `AddProperty` 存取方法的函式。
 
 ## <a name="syntax"></a>語法
 
@@ -62,19 +61,19 @@ class CDBPropSet : public tagDBPROPSET
 |-|-|
 |[AddProperty](#addproperty)|將屬性加入至屬性集。|
 |[CDBPropSet](#cdbpropset)|建構函式。|
-|[SetGUID](#setguid)|設定組`guidPropertySet`欄位`DBPROPSET`結構。|
+|[SetGUID](#setguid)|設定 `DBPROPSET` 結構的 `guidPropertySet` 欄位。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
-|[operator =](#op_equal)|指派設定到另一個屬性的內容。|
+|[operator =](#op_equal)|將一個屬性集的內容指派給另一個。|
 
 ## <a name="remarks"></a>備註
 
-OLE DB 提供者和取用者使用`DBPROPSET`結構，以傳遞的陣列`DBPROP`結構。 每個`DBPROP`結構代表可設定的單一屬性。
+OLE DB 提供者和取用者會使用 `DBPROPSET` 結構來傳遞 `DBPROP` 結構的陣列。 每個 `DBPROP` 結構都代表可設定的單一屬性。
 
-## <a name="addproperty"></a> CDBPropSet::AddProperty
+## <a name="addproperty"></a>CDBPropSet：： AddProperty
 
 將屬性加入至屬性集。
 
@@ -98,36 +97,36 @@ bool AddProperty(DWORD dwPropertyID,
 #### <a name="parameters"></a>參數
 
 *dwPropertyID*<br/>
-[in]要加入之屬性識別碼。 用來初始化`dwPropertyID`的`DBPROP`結構加入至屬性集。
+在要加入之屬性的識別碼。 用來初始化已加入至屬性集之 `DBPROP` 結構的 `dwPropertyID`。
 
 *var*<br/>
-[in]用來初始化的屬性值的 variant`DBPROP`結構加入至屬性集。
+在用來初始化已加入屬性集之 `DBPROP` 結構之屬性值的變數。
 
 *szValue*<br/>
-[in]用來初始化的屬性值的字串`DBPROP`結構加入至屬性集。
+在用來初始化已加入屬性集之 `DBPROP` 結構之屬性值的字串。
 
-*bValue*<br/>
-[in]A`BYTE`或 布林值，用來初始化的屬性值`DBPROP`結構加入至屬性集。
+*其中 bvalue system.boolean.true*<br/>
+在`BYTE` 或布林值，用來初始化加入至屬性集之 `DBPROP` 結構的屬性值。
 
-*nValue*<br/>
-[in]用來初始化的屬性值的整數值`DBPROP`結構加入至屬性集。
+*N 值*<br/>
+在整數值，用來初始化加入至屬性集之 `DBPROP` 結構的屬性值。
 
 *fltValue*<br/>
-[in]用來初始化的屬性值的浮點值`DBPROP`結構加入至屬性集。
+在浮點值，用來初始化加入至屬性集之 `DBPROP` 結構的屬性值。
 
 *dblValue*<br/>
-[in]用來初始化的屬性值的雙精確度浮點值`DBPROP`結構加入至屬性集。
+在雙精確度浮點數，用來初始化加入至屬性集之 `DBPROP` 結構的屬性值。
 
 *cyValue*<br/>
-[in]CY 貨幣值，用來初始化的屬性值`DBPROP`結構加入至屬性集。
+在CY 貨幣值，用來初始化加入至屬性集之 `DBPROP` 結構的屬性值。
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果已成功加入屬性。 否則，請**false**。
+如果成功加入屬性，**則為 true** 。 否則為 **false**。
 
-## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
+## <a name="cdbpropset"></a>CDBPropSet：： CDBPropSet
 
-建構函式。 初始化`rgProperties`， `cProperties`，並`guidPropertySet`的欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構。
+建構函式。 初始化[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構的 `rgProperties`、`cProperties`和 `guidPropertySet` 欄位。
 
 ### <a name="syntax"></a>語法
 
@@ -142,14 +141,14 @@ CDBPropSet();
 #### <a name="parameters"></a>參數
 
 *guid*<br/>
-[in]GUID; 用來初始化`guidPropertySet`欄位。
+在用來初始化 `guidPropertySet` 欄位的 GUID。
 
 *propset*<br/>
 [in] 複製建構的另一個 `CDBPropSet` 物件。
 
-## <a name="setguid"></a> CDBPropSet::SetGUID
+## <a name="setguid"></a>CDBPropSet：： SetGUID
 
-設定組`guidPropertySet`欄位中`DBPROPSET`結構。
+設定 `DBPROPSET` 結構中的 `guidPropertySet` 欄位。
 
 ### <a name="syntax"></a>語法
 
@@ -160,13 +159,13 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>參數
 
 *guid*<br/>
-[in]GUID; 用來設定`guidPropertySet`欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構。
+在用來設定[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構之 `guidPropertySet` 欄位的 GUID。
 
 ### <a name="remarks"></a>備註
 
-可以設定此欄位[建構函式](../../data/oledb/cdbpropset-cdbpropset.md)以及。
+此欄位也可以由「[函數](../../data/oledb/cdbpropset-cdbpropset.md)」設定。
 
-## <a name="op_equal"></a> CDBPropSet::operator =
+## <a name="op_equal"></a>CDBPropSet：： operator =
 
 將一個屬性集的內容指派給另一個屬性集。
 
@@ -178,7 +177,7 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)<br/>
 [DBPROPSET 結構](/previous-versions/windows/desktop/ms714367(v=vs.85))

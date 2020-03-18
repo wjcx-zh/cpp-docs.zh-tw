@@ -15,7 +15,6 @@ f1_keywords:
 - IRowsetChangeImpl.InsertRow
 - ATL::IRowsetChangeImpl::InsertRow
 - IRowsetChangeImpl::InsertRow
-- SetData
 - IRowsetChangeImpl::SetData
 - ATL.IRowsetChangeImpl.SetData
 - IRowsetChangeImpl.SetData
@@ -32,16 +31,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390759"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446323"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 類別
 
-OLE DB 樣板實作[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 規格中的介面。
+OLE DB 規格中[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))介面的 OLE DB 範本執行。
 
 ## <a name="syntax"></a>語法
 
@@ -58,19 +57,19 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-類別衍生自`IRowsetChangeImpl`。
+衍生自 `IRowsetChangeImpl`的類別。
 
-*儲存體*<br/>
-使用者記錄中。
+*Storage*<br/>
+使用者記錄。
 
-*BaseInterface*<br/>
-基底類別的介面，例如`IRowsetChange`。
+*Typeinterface*<br/>
+介面的基底類別，例如 `IRowsetChange`。
 
 *RowClass*<br/>
-資料列控制代碼儲存體單位。
+資料列控制碼的儲存單位。
 
 *MapClass*<br/>
-提供者所持有的所有資料列控制代碼儲存體單位。
+提供者所持有之所有資料列控制碼的儲存單位。
 
 ## <a name="requirements"></a>需求
 
@@ -78,38 +77,38 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 ## <a name="members"></a>成員
 
-### <a name="interface-methods-used-with-irowsetchange"></a>（搭配 IRowsetChange） 的介面方法
+### <a name="interface-methods-used-with-irowsetchange"></a>介面方法（與 IRowsetChange 搭配使用）
 
 |||
 |-|-|
 |[DeleteRows](#deleterows)|從資料列集刪除資料列。|
-|[InsertRow](#insertrow)|資料列插入資料列集。|
+|[InsertRow](#insertrow)|將資料列插入資料列集。|
 |[SetData](#setdata)|設定一或多個資料行中的資料值。|
 
-### <a name="implementation-method-callback"></a>實作方法 （回呼）
+### <a name="implementation-method-callback"></a>執行方法（回呼）
 
 |||
 |-|-|
-|[FlushData](#flushdata)|將資料認可到其存放區提供者覆寫。|
+|[FlushData](#flushdata)|由提供者覆寫，以將資料認可至其存放區。|
 
 ## <a name="remarks"></a>備註
 
-這個介面會負責立即寫入至資料存放區作業。 「 立即 」 表示，當使用者 （使用取用者的人員） 會進行任何變更，這些變更會立即傳輸至資料存放區 （且無法復原）。
+此介面負責對資料存放區進行立即寫入作業。 「立即」表示當使用者（使用取用者的人）進行任何變更時，這些變更會立即傳送到資料存放區（而且無法復原）。
 
-`IRowsetChangeImpl` 實作 OLE DB`IRowsetChange`介面，讓更新的現有資料列，刪除資料列，並插入新資料列中的資料行的值。
+`IRowsetChangeImpl` 會執行 OLE DB `IRowsetChange` 介面，這可讓您更新現有資料列中的資料行值、刪除資料列，以及插入新的資料列。
 
-OLE DB 樣板實作支援所有基底的方法 (`SetData`， `InsertRow`，和`DeleteRows`)。
+OLE DB 範本的實作為支援所有基底方法（`SetData`、`InsertRow`和 `DeleteRows`）。
 
 > [!IMPORTANT]
->  強烈建議您先閱讀下列文件，然後再嘗試實作您的提供者：
+>  強烈建議您先閱讀下列檔，然後再嘗試執行提供者：
 
 - [建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)
 
-- 第 6 章*OLE DB 程式設計人員參考*
+- OLE DB 程式設計*人員參考*的第6章
 
-- 另請參閱如何`RUpdateRowset`類別用於[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例。
+- 另請參閱[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例中使用 `RUpdateRowset` 類別的方式。
 
-## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+## <a name="deleterows"></a>IRowsetChangeImpl：:D eleteRows
 
 從資料列集刪除資料列。
 
@@ -124,11 +123,11 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetchange:: Deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetChange：:D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 。
 
-## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+## <a name="insertrow"></a>IRowsetChangeImpl：： InsertRow
 
-建立並初始化新的資料列中資料列集。
+建立並初始化資料列集中的新資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -141,9 +140,9 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetChange：： InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) 。
 
-## <a name="setdata"></a> IRowsetChangeImpl::SetData
+## <a name="setdata"></a>IRowsetChangeImpl：： SetData
 
 設定一或多個資料行中的資料值。
 
@@ -157,11 +156,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetChange：： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 。
 
-## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+## <a name="flushdata"></a>IRowsetChangeImpl：： FlushData
 
-將資料認可到其存放區提供者覆寫。
+由提供者覆寫，以將資料認可至其存放區。
 
 ### <a name="syntax"></a>語法
 
@@ -173,16 +172,16 @@ HRESULT FlushData(HROW hRowToFlush,
 #### <a name="parameters"></a>參數
 
 *hRowToFlush*<br/>
-[in]資料的資料列的控制代碼。 此資料列的型別從決定*RowClass*樣板引數`IRowsetImpl`類別 (`CSimpleRow`預設情況下)。
+在資料列的控制碼。 這個資料列的型別是從 `IRowsetImpl` 類別的*RowClass*樣板引數（預設為`CSimpleRow`）來決定。
 
 *hAccessorToFlush*<br/>
-[in]存取子，其中包含繫結資訊以及型別資訊中的控制代碼及其`PROVIDER_MAP`(請參閱 < [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md))。
+在存取子的控制碼，其中包含其 `PROVIDER_MAP` 中的系結資訊和類型資訊（請參閱[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)）。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

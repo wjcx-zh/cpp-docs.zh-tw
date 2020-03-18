@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883790"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422056"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -166,7 +166,7 @@ class array;
 
 ## <a name="remarks"></a>備註
 
-該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如，
+該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如：
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };

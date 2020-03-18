@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: 描述標準C++程式庫的 filesystem 標頭中的類別、函式和類型。
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725678"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441705"
 ---
 # &lt;filesystem&gt;
 
@@ -86,7 +81,7 @@ using namespace std::experimental::filesystem::v1;
 
 - 父路徑為 `c:/abc/xyz`。
 
-- 檔案名為 `def.ext`。
+- 檔案名稱為 `def.ext`。
 
 - 此詞幹 `def`。
 
@@ -98,7 +93,7 @@ using namespace std::experimental::filesystem::v1;
 
 如需詳細資訊和程式碼範例，請參閱[檔C++系統導覽（）](../standard-library/file-system-navigation.md)。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="classes"></a>類別
 
@@ -117,24 +112,24 @@ using namespace std::experimental::filesystem::v1;
 |-|-|
 |[space_info 結構](../standard-library/space-info-structure.md)|保留磁碟區的相關資訊。|
 
-## <a name="functions"></a>功能
+## <a name="functions"></a>Functions
 
 [\<filesystem> 函數](../standard-library/filesystem-functions.md)
 
-## <a name="operators"></a>運算子
+## <a name="operators"></a>操作員
 
 [\<filesystem> 運算子](../standard-library/filesystem-operators.md)
 
-## <a name="enumerations"></a>列舉型別
+## <a name="enumerations"></a>列舉
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file)，並在已存在目的地檔案時決定行為。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file) ，並在已存在目的地檔案時決定行為。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| 列舉 `permissions` 函數的選項。 |
 |[perms](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

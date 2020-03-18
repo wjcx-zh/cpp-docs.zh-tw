@@ -1,5 +1,5 @@
 ---
-title: /fp （指定浮點數行為）
+title: /fp (指定浮點數行為)
 ms.date: 11/09/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
@@ -11,83 +11,83 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 25b228c16f534ca227d50bfdf632fdacb5703cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402b59c4aee34a413a08235aab2327ca64e7db39
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292350"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439677"
 ---
-# <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮點數行為）
+# <a name="fp-specify-floating-point-behavior"></a>/fp (指定浮點數行為)
 
-指定編譯器如何處理浮點運算式、 最佳化，以及例外狀況。 **/Fp**選項會指定產生的程式碼是否允許捨入模式、 例外狀況遮罩和 subnormal 行為的浮點環境變更和浮點狀態檢查是傳回目前已經過正確結果。 它所控制編譯器是否會產生程式碼，會保留原始檔作業與排序運算式，並符合標準的 NaN 傳播，或如果它改為會產生更有效率的程式碼，可能會重新排列或合併作業並使用簡化標準不允許的代數轉換。
+指定編譯器如何對待浮點運算式、優化和例外狀況。 **/Fp**選項會指定產生的程式碼是否允許浮點環境變更為進位模式、例外狀況遮罩和偏低行為，以及浮點狀態檢查是否傳回目前的精確結果。 它會控制編譯器是否會產生程式碼來維護來源作業和運算式順序，並符合標準的 NaN 傳播，或如果它改為產生更有效率的程式碼，以重新排序或合併作業並使用簡化標準不允許的代數轉換。
 
 ## <a name="syntax"></a>語法
 
-> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
+> **/fp：** [**精確** | **strict** | **快速** | （[ **-** ]]**除外**）
 
 ### <a name="arguments"></a>引數
 
-#### <a name="precise"></a>精確
+#### <a name="precise"></a>地
 
-根據預設，編譯器會使用`/fp:precise`行為。
+根據預設，編譯器會使用 `/fp:precise` 行為。
 
-在下`/fp:precise`編譯器會保留排序和捨入浮點程式碼的屬性，當它產生並最佳化物件的目標機器的程式碼的來源運算式。 運算式評估期間，編譯器會四捨五入到四個特定時間點的來源的程式碼有效位數： 在指派，在類型轉換，，和浮點引數傳遞至函式呼叫時的浮點值時就會傳回從函式呼叫。 中繼計算可能會執行在機器有效位數。 類型轉換可以用來明確地將中繼計算。
+在 `/fp:precise`，編譯器會在產生並優化目的電腦的物件程式碼時，保留浮點程式碼的來源運算式順序和舍入屬性。 編譯器會在運算式評估期間的四個特定點四捨五入至原始程式碼精確度：在 typecasts 時，將浮點引數傳遞至函式呼叫，以及從函式呼叫傳回浮點值時。 中繼計算可能會以電腦的精確度來執行。 Typecasts 可以用來明確地迴圈中繼計算。
 
-編譯器不會執行代數轉換浮點數的運算式，例如重新關聯或發佈，除非轉換保證會產生位元的相同結果。
-根據 IEEE 754 規格處理涉及特殊值 （NaN、 + infinity、-infinity，-0.0） 的運算式。 例如，`x != x`評估為 **，則為 true**如果 x 為 NaN。 浮點*縮寫*，也就是機器指令，結合浮點運算，可能會產生下`/fp:precise`。
+編譯器不會在浮點運算式（例如重新關聯或散發）上執行代數轉換，除非保證轉換會產生位相同的結果。
+牽涉到特殊值（NaN、+ 無限大、-無限大、-0.0）的運算式會根據 IEEE-754 規格進行處理。 例如，如果 x 是 NaN，`x != x` 會評估為**true** 。 浮點*縮寫*（也就是結合浮點運算的機器指令）可能會在 `/fp:precise`下產生。
 
-編譯器會產生要執行的程式碼[預設的浮點環境](#the-default-floating-point-environment)和假設的浮點環境無法存取或在執行階段修改。 也就是說，它會假設，程式碼未取消遮罩浮點例外狀況、 讀取或寫入浮點狀態暫存器，或變更捨入模式。
+編譯器會產生要在[預設浮點環境](#the-default-floating-point-environment)中執行的程式碼，並假設在執行時間不會存取或修改浮點環境。 也就是說，它會假設程式碼不會取消遮罩浮點例外狀況、讀取或寫入浮點狀態暫存器，或變更舍入模式。
 
-如果您的浮點程式碼無關的作業和浮點陳述式中的運算式 (例如，如果您不在乎是否`a * b + a * c`的計算方式為`(b + c) * a`或`2 * a`做為`a + a`)，請考慮[/fp: fast](#fast)選項，可以產生更快、 更有效率的程式碼。 如果您的程式碼同時相依於運算和運算式，並存取或改變 （例如，若要變更捨入模式，或設陷浮點例外狀況） 的浮點環境，使用[/fp: strict](#strict)。
+如果您的浮點程式碼不會相依于浮點語句中的作業和運算式順序（例如，如果您不在意 `a * b + a * c` 是否計算為 `(b + c) * a` 或 `2 * a` `a + a`），請考慮採用[/fp： fast](#fast)選項，這可以產生更快、更有效率的程式碼。 如果您的程式碼都取決於作業和運算式的順序，並存取或改變浮點環境（例如，若要變更舍入模式或捕捉浮點例外狀況），請使用[/fp： strict](#strict)。
 
 #### <a name="strict"></a>strict
 
-`/fp:strict` 具有類似的行為`/fp:precise`，也就是編譯器會保留來源和捨入浮點程式碼的屬性，當它產生並最佳化物件的目標電腦的程式碼並處理特殊的值時，會遵守標準。 此外，程式可能會安全地存取或修改在執行階段的浮點環境。
+`/fp:strict` 具有類似 `/fp:precise`的行為，也就是編譯器會在產生並優化目的電腦的物件程式碼時，保留浮點程式碼的來源順序和舍入屬性，並在處理特殊值時觀察標準。 此外，程式可以在執行時間安全地存取或修改浮點環境。
 
-在下`/fp:strict`，編譯器會產生程式碼，讓程式可以安全地取消遮罩浮點例外狀況、 讀取或寫入浮點狀態暫存器，或變更捨入模式。 它會捨入為四個特定時間點的來源的程式碼有效位數運算式的評估期間： 在指派，在類型轉換，，和浮點引數傳遞至函式呼叫時的浮點值時就會傳回從函式呼叫。 中繼計算可能會執行在機器有效位數。 類型轉換可以用來明確地將中繼計算。 編譯器不會執行代數轉換浮點數的運算式，例如重新關聯或發佈，除非轉換保證會產生位元的相同結果。 根據 IEEE 754 規格處理涉及特殊值 （NaN、 + infinity、-infinity，-0.0） 的運算式。 例如，`x != x`評估為 **，則為 true**如果 x 為 NaN。 下不會產生浮點數的縮寫`/fp:strict`。
+在 [`/fp:strict`] 底下，編譯器會產生程式碼，讓程式可以安全地取消遮罩浮點例外狀況、讀取或寫入浮點狀態暫存器，或變更舍入模式。 在運算式評估期間，它會四捨五入為四個特定點的原始程式碼精確度：在 typecasts 時、將浮點引數傳遞至函式呼叫，以及從函式呼叫傳回浮點值時。 中繼計算可能會以電腦的精確度來執行。 Typecasts 可以用來明確地迴圈中繼計算。 編譯器不會在浮點運算式（例如重新關聯或散發）上執行代數轉換，除非保證轉換會產生位相同的結果。 牽涉到特殊值（NaN、+ 無限大、-無限大、-0.0）的運算式會根據 IEEE-754 規格進行處理。 例如，如果 x 是 NaN，`x != x` 會評估為**true** 。 `/fp:strict`下不會產生浮點縮寫。
 
-`/fp:strict` 計算成本高於`/fp:precise`因為編譯器必須插入以攔截例外狀況，並允許程式的存取或修改在執行階段的浮點環境的其他指示。 如果您的程式碼不會使用這項功能，但需要來源的程式碼順序和捨入，或依賴特殊值，使用`/fp:precise`。 否則，請考慮使用`/fp:fast`，，可能會產生更快更小的程式碼。
+`/fp:strict` 的計算成本高於 `/fp:precise`，因為編譯器必須插入額外的指示來攔截例外狀況，並允許程式在執行時間存取或修改浮點環境。 如果您的程式碼未使用這項功能，但需要原始程式碼排序和舍入，或依賴特殊值，請使用 `/fp:precise`。 否則，請考慮使用 `/fp:fast`，這可以產生更快速且更小的程式碼。
 
 #### <a name="fast"></a>快速
 
-`/fp:fast`選項可讓編譯器重新排列、 合併或簡化以最佳化浮點程式碼的速度和空間的浮點運算。 編譯器可能會省略捨入在指派陳述式、 類型轉換或函式呼叫。 它可能重新排列運算或執行代數轉換，例如，使用關聯和分散的法規，即使這類轉換會導致明顯不同的捨入行為。 此增強的最佳化，因為某些浮點運算的結果可能與不同所產生的其他`/fp`選項。 特殊值 （NaN、 + infinity、-infinity，-0.0） 不會傳播，或根據 IEEE 754 標準嚴格的行為。 浮點數的縮寫，可能會產生下`/fp:fast`。 編譯器仍受限於基礎架構底下`/fp:fast`，和其他最佳化可透過善用[/arch](arch-minimum-cpu-architecture.md)選項。
+[`/fp:fast`] 選項可讓編譯器重新排列、結合或簡化浮點作業，以優化浮點程式碼的速度和空間。 編譯器可能會在指派語句、typecasts 或函式呼叫中省略進位。 它可能會重新排序作業或執行代數轉換（例如，使用關聯和分配法），即使這類轉換會導致明顯不同的舍入行為。 由於這項增強的優化，某些浮點運算的結果可能會與其他 `/fp` 選項所產生的不同。 特殊值（NaN、+ 無限大、-無限大、-0.0）可能不會根據 IEEE-754 標準傳播或嚴格行為。 在 `/fp:fast`下可能會產生浮點縮寫。 編譯器仍然受 `/fp:fast`下的基礎結構所限制，而且可以透過使用[/arch](arch-minimum-cpu-architecture.md)選項來提供其他優化功能。
 
-在下`/fp:fast`，編譯器會產生要在預設的浮點環境中執行的程式碼，並假設不存取的浮點環境，或在執行階段修改。 也就是說，它會假設，程式碼未取消遮罩浮點例外狀況、 讀取或寫入浮點狀態暫存器，或變更捨入模式。
+在 `/fp:fast`之下，編譯器會產生要在預設浮點環境中執行的程式碼，並假設在執行時間不會存取或修改浮點環境。 也就是說，它會假設程式碼不會取消遮罩浮點例外狀況、讀取或寫入浮點狀態暫存器，或變更舍入模式。
 
-`/fp:fast` 適用於程式，不需要嚴格的原始碼排序和捨入浮點運算式，並不依賴標準的規則，以便處理特殊的值，例如 NaN。 如果您的浮點程式碼需要保留順序和捨入的原始程式碼，或依賴的特殊值，使用標準行為[/fp： 精確](#precise)。 如果您的程式碼可以存取或修改的浮點環境，若要變更捨入模式，取消遮罩浮點例外狀況，或檢查浮點狀態，請使用[/fp: strict](#strict)。
+`/fp:fast` 適用于不需要嚴格的原始程式碼排序和舍入浮點運算式的程式，而且不依賴標準規則來處理 NaN 之類的特殊值。 如果您的浮點程式碼需要保留原始程式碼順序和舍入，或依賴特殊值的標準行為，請使用[/fp：精確](#precise)。 如果您的程式碼存取或修改浮點環境以變更進位模式、取消遮罩浮點例外狀況，或檢查浮點狀態，請使用[/fp： strict](#strict)。
 
-#### <a name="except"></a>except
+#### <a name="except"></a>但是
 
-`/fp:except`選項會產生可確保在處發生，確切的時間點，會引發任何取消遮罩浮點例外狀況，而且會引發任何其他的浮點例外狀況的程式碼。 根據預設，`/fp:strict`選項可讓`/fp:except`，和`/fp:precise`則否。 `/fp:except`選項不相容於`/fp:fast`。 此選項可以明確停用我們的`/fp:except-`。
+`/fp:except` 選項會產生程式碼，以確保任何取消遮罩的浮點例外狀況會在其發生的確切位置引發，而且不會引發任何額外的浮點例外狀況。 根據預設，`/fp:strict` 選項會啟用 `/fp:except`，而 `/fp:precise` 則不會。 `/fp:except` 選項與 `/fp:fast`不相容。 我們的 `/fp:except-`可以明確停用此選項。
 
-請注意，`/fp:except`不會啟用任何浮點例外狀況本身，但其實需要啟用浮點例外狀況的程式。 請參閱[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)如需如何啟用浮點例外狀況的資訊。
+請注意，`/fp:except` 不會自行啟用任何浮點例外狀況，但程式必須啟用浮點例外狀況。 如需如何啟用浮點例外狀況的詳細資訊，請參閱[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 。
 
 ## <a name="remarks"></a>備註
 
-多個`/fp`相同的編譯器命令列中，您可以指定選項。 只有其中一個`/fp:strict`， `/fp:fast`，和`/fp:precise`選項可以實際上是一次。 如果以上其中一個選項指定命令列上，更新版本的選項會優先，編譯器會產生警告。 `/fp:strict`並`/fp:except`選項不相容於`/clr`。
+可以在相同的編譯器命令列中指定多個 `/fp` 選項。 `/fp:strict`、`/fp:fast`和 `/fp:precise` 選項中，一次只能有一個作用。 如果在命令列上指定了一個以上的選項，則較新的選項會優先，而編譯器會產生警告。 `/fp:strict` 和 `/fp:except` 選項與 `/clr`不相容。
 
-[/Za](za-ze-disable-language-extensions.md) （ANSI 相容性） 選項不相容`/fp`。
+[/Za](za-ze-disable-language-extensions.md) （ANSI 相容性）選項與 `/fp`不相容。
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>使用編譯器指示詞控制浮點數行為
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>使用編譯器指示詞來控制浮點行為
 
-編譯器會提供三個的 pragma 指示詞，來覆寫在命令列上指定的浮點行為： [float_control](../../preprocessor/float-control.md)， [fenv_access](../../preprocessor/fenv-access.md)，和[fp_contract](../../preprocessor/fp-contract.md). 您可以使用這些指示詞，來控制函式層級，不會在函式內的浮點數行為。 請注意，這些指示詞並不會直接的對應`/fp`選項。 下表顯示如何`/fp`互相對應的選項和 pragma 指示詞。 如需詳細資訊，請參閱個別的選項和 pragma 指示詞的文件。
+編譯器提供三個 pragma 指示詞來覆寫在命令列上指定的浮點行為： [float_control](../../preprocessor/float-control.md)、 [fenv_access](../../preprocessor/fenv-access.md)和[fp_contract](../../preprocessor/fp-contract.md)。 您可以使用這些指示詞，在函式層級控制浮點行為，而不是在函數中。 請注意，這些指示詞不會直接對應至 `/fp` 選項。 下表顯示 `/fp` 選項和 pragma 指示詞彼此對應的方式。 如需詳細資訊，請參閱個別選項和 pragma 指示詞的檔。
 
-||float_control(precise)|float_control(except)|fenv_access|fp_contract|
+||float_control （精確）|float_control （除外）|fenv_access|fp_contract|
 |-|-|-|-|-|
-|`/fp:fast`|關閉|關閉|關閉|於|
-|`/fp:precise`|於|關閉|關閉|於|
-|`/fp:strict`|於|於|於|關閉|
+|`/fp:fast`|關|關|關|on|
+|`/fp:precise`|on|關|關|on|
+|`/fp:strict`|on|on|on|關|
 
-### <a name="the-default-floating-point-environment"></a>預設浮點環境
+### <a name="the-default-floating-point-environment"></a>預設的浮點環境
 
-初始化處理程序時，*預設的浮點環境*設定。 這種環境會遮罩所有浮點例外狀況、 將捨入模式設定為四捨五入到最接近 (`FE_TONEAREST`)，會保留 subnormal （異常） 值，用於有效數字 （尾數） 的預設有效位數**float**， **雙**，並**長雙精度**值，然後支援，將無限大控制項設定為預設的仿射模式。
+初始化進程時，會設定*預設的浮點環境*。 這個環境會遮罩所有浮點例外狀況、將進位模式設定為四捨五入到最接近的（`FE_TONEAREST`）、保留偏低（denormal）值、針對**float**、 **double**和**long double**值使用預設的有效位數有效位數（尾數），並在支援的情況下，將無限大控制項設定為預設的仿射模式。
 
 ### <a name="floating-point-environment-access-and-modification"></a>浮點環境存取和修改
 
-Microsoft VisualC++執行階段會提供數個函數來存取和修改的浮點環境。 其中包括[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)， [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)，並[_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)及其變體。 若要確認正確的程式行為，當您的程式碼可以存取或修改的浮點環境`fenv_access`必須啟用，請依`/fp:strict`選項，或藉由使用`fenv_access`pragma，這些函式，才能發生效用。 當`fenv_access`是未啟用，存取或修改的浮點環境可能會導致非預期的程式行為： 程式碼可能不會接受要求的變更，到浮點環境，可能不會報告的浮點狀態暫存器預期或目前的結果;和非預期的浮點例外狀況可能會發生，或可能不會發生預期的浮點例外狀況。
+Microsoft Visual C++ runtime 提供幾個函式來存取和修改浮點環境。 其中包括[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)、 [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)和[_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)及其變體。 若要在您的程式碼存取或修改浮點環境時確保正確的程式列為，必須透過 `/fp:strict` 選項或使用 `fenv_access` pragma 來啟用 `fenv_access`，這些函式才會有任何作用。 當 `fenv_access` 未啟用時，存取或修改浮點環境可能會導致非預期的程式列為：代碼可能不會接受對浮點環境所做的變更;浮點狀態暫存器可能不會報告預期或目前的結果;可能會發生非預期的浮點例外狀況，或可能不會發生浮點例外狀況。
 
-當您的程式碼可以存取或修改的浮點環境時，您必須非常小心結合程式碼時，`fenv_access`使用程式碼，並沒有啟用`fenv_access`啟用。 在程式碼中其中`fenv_access`未啟用，則編譯器會假設平台預設值的浮點環境處於作用中，而且無法存取或修改浮點狀態。 我們建議您儲存，並在本機的浮點環境還原為其預設狀態，控制權會轉移到沒有函式之前`fenv_access`啟用。 此範例示範如何`float_control`pragma 可設定及還原：
+當您的程式碼存取或修改浮點環境時，您必須謹慎地結合程式碼，其中使用未啟用 `fenv_access` 的程式碼來啟用 `fenv_access`。 在未啟用 `fenv_access` 的程式碼中，編譯器會假設平臺預設浮點環境已生效，而且不會存取或修改浮點狀態。 我們建議您在控制轉移至未啟用 `fenv_access` 的函式之前，先將本機浮點環境儲存並還原為其預設狀態。 這個範例會示範如何設定和還原 `float_control` pragma：
 
 ```cpp
 #pragma float_control(strict, on, push)
@@ -95,9 +95,9 @@ Microsoft VisualC++執行階段會提供數個函數來存取和修改的浮點�
 #pragma float_control(pop)
 ```
 
-### <a name="floating-point-rounding-modes"></a>浮點捨入模式
+### <a name="floating-point-rounding-modes"></a>浮點進位模式
 
-在這兩`/fp:precise`和`/fp:fast`編譯器會產生要在預設的浮點環境中執行的程式碼，並假設不存取的環境，或在執行階段修改。 也就是說，它會假設，程式碼未取消遮罩浮點例外狀況、 讀取或寫入浮點狀態暫存器，或變更捨入模式。  不過，有些程式需要改變的浮點環境。 比方說，此範例會計算誤差界限的浮點數的乘法改變浮點四捨五入模式：
+在 `/fp:precise` 和 `/fp:fast` 之下，編譯器會產生要在預設浮點環境中執行的程式碼，並假設環境不會在執行時間存取或修改。 也就是說，它會假設程式碼不會取消遮罩浮點例外狀況、讀取或寫入浮點狀態暫存器，或變更舍入模式。  不過，某些程式需要改變浮點環境。 例如，此範例會藉由改變浮點舍入模式來計算浮點乘法的誤差界限：
 
 ```cpp
 // fp_error_bounds.cpp
@@ -145,25 +145,25 @@ int main(void)
 }
 ```
 
-因為編譯器會假設預設的浮點環境下的`/fp:fast`並`/fp:precise`沒有忽略呼叫`_controlfp_s`。 例如，當編譯使用這兩個`/O2`和`/fp:precise`適用於 x86 架構，不會計算範圍，以及範例程式會輸出：
+因為編譯器會假設 `/fp:fast` 下的預設浮點環境，`/fp:precise` 可以自由忽略 `_controlfp_s`的呼叫。 例如，當使用 x86 架構的 `/O2` 和 `/fp:precise` 進行編譯時，不會計算界限，而且範例程式會輸出：
 
 ```Output
 cLower = -inf
 cUpper = -inf
 ```
 
-同時與編譯時`/O2`和`/fp:strict`適用於 x86 架構中，範例程式會輸出：
+當以 x86 架構的 `/O2` 和 `/fp:strict` 進行編譯時，範例程式會輸出：
 
 ```Output
 cLower = -inf
 cUpper = -3.40282e+38
 ```
 
-### <a name="floating-point-special-values"></a>浮點數的特殊值
+### <a name="floating-point-special-values"></a>浮點特殊值
 
-底下`/fp:precise`和`/fp:strict`，牽涉到特殊值 （NaN、 + infinity、-infinity，-0.0） 的運算式的行為會根據 IEEE 754 規格。 在下`/fp:fast`，這些特殊值的行為可能與 IEEE-754 不一致。
+在 [`/fp:precise`] 和 [`/fp:strict`] 下，牽涉到特殊值（NaN、+ 無限大、-無限大、-0.0）的運算式會根據 IEEE-754 規格來運作。 在 `/fp:fast`之下，這些特殊值的行為可能會與 IEEE-754 不一致。
 
-這個範例會示範不同的行為的特殊值`/fp:precise`，`/fp:strict`和`/fp:fast`:
+這個範例會示範 `/fp:precise`、`/fp:strict` 和 `/fp:fast`之下特殊值的不同行為：
 
 ```cpp
 // fp_special_values.cpp
@@ -194,7 +194,7 @@ int main()
 }
 ```
 
-編譯時`/O2``/fp:precise`或是`/O2``/fp:strict`適用於 x86 架構，輸出會與 IEEE-754 規格一致：
+使用 `/O2` `/fp:precise` 或 `/O2` x86 架構的 `/fp:strict` 進行編譯時，輸出會與 IEEE-754 規格一致：
 
 ```Output
 INFINITY == INFINITY : 1
@@ -204,7 +204,7 @@ NAN - NAN            : -nan(ind)
 std::signbit(-0.0/-INFINITY): 1
 ```
 
-編譯時`/O2``/fp:fast`適用於 x86 架構，輸出不是與 IEEE-754 一致：
+使用 x86 架構的 `/O2` `/fp:fast` 進行編譯時，輸出與 IEEE-754 不一致：
 
 ```Output
 INFINITY == INFINITY : 1
@@ -214,9 +214,9 @@ NAN - NAN            : 0.000000
 std::signbit(-0.0/-INFINITY): 0
 ```
 
-### <a name="floating-point-algebraic-transformations"></a>浮點數的代數轉換
+### <a name="floating-point-algebraic-transformations"></a>浮點代數轉換
 
-底下`/fp:precise`和`/fp:strict`，編譯器不會執行數學轉換，除非轉換保證會產生位元的相同結果。 編譯器可能會執行這類轉換下的`/fp:fast`。 例如，運算式`a * b + a * c`範例函式中`algebraic_transformation`可能會編譯成`a * (b + c)`下`/fp:fast`。 這類轉換不執行底下`/fp:precise`或`/fp:strict`，而且編譯器產生`a * b + a * c`。
+在 `/fp:precise` 和 `/fp:strict`下，除非保證轉換會產生位相同的結果，否則編譯器不會執行數學轉換。 編譯器可能會在 `/fp:fast`下執行這類轉換。 例如，範例函式中的運算式 `a * b + a * c` `algebraic_transformation` 可以編譯到 `/fp:fast`下的 `a * (b + c)` 中。 這類轉換不會在 `/fp:precise` 或 `/fp:strict`之下執行，而編譯器會產生 `a * b + a * c`。
 
 ```cpp
 float algebraic_transformation (float a, float b, float c)
@@ -225,9 +225,9 @@ float algebraic_transformation (float a, float b, float c)
 }
 ```
 
-### <a name="floating-point-explicit-casting-points"></a>浮點數的明確轉換的點
+### <a name="floating-point-explicit-casting-points"></a>浮點明確轉換點
 
-底下`/fp:precise`和`/fp:strict`，運算式評估期間，編譯器會四捨五入到四個特定時間點的來源的程式碼有效位數： 在指派，在類型轉換的浮點引數傳遞至函式呼叫時，以及當浮點數從函式呼叫會傳回值。 類型轉換可以用來明確地將中繼計算。 在下`/fp:fast`，編譯器不會產生明確的轉型，在這些點，以確保來源的程式碼的有效位數。 這個範例會示範在不同的行為`/fp`選項：
+在 [`/fp:precise`] 和 [`/fp:strict`] 下，編譯器會在運算式評估期間的四個特定點四捨五入至原始程式碼精確度：在 typecasts 時，將浮點引數傳遞至函式呼叫，以及從函式呼叫傳回浮點值時。 Typecasts 可以用來明確地迴圈中繼計算。 在 `/fp:fast`之下，編譯器不會在這些點產生明確的轉換，以保證原始程式碼的精確度。 這個範例會示範不同 `/fp` 選項下的行為：
 
 ```cpp
 float casting(float a, float b)
@@ -236,7 +236,7 @@ float casting(float a, float b)
 }
 ```
 
-藉由編譯時`/O2``/fp:precise`或`/O2` `/fp:strict`，您可以看到明確類型轉換 （cast） 會插入在這兩個 typecast 和函式傳回點，在產生的程式碼，適用於 x64 架構：
+當您使用 `/O2` `/fp:precise` 或 `/O2` `/fp:strict`來編譯時，您會看到明確類型轉換會同時插入轉換和在 x64 架構產生的程式碼中的函式傳回點：
 
 ```asm
         addss    xmm0, xmm1
@@ -246,7 +246,7 @@ float casting(float a, float b)
         ret      0
 ```
 
-底下`/O2``/fp:fast`產生的程式碼已經過簡化，因為所有的型別轉換最佳化改變了：
+在 `/O2` `/fp:fast` 會簡化產生的程式碼，因為所有類型轉換都已優化：
 
 ```asm
         addss    xmm0, xmm1
@@ -256,17 +256,18 @@ float casting(float a, float b)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資訊，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **C /C++** > **產生程式碼**屬性頁。
+1. 在 [ **C/C++**  > 程式**代碼產生**] 屬性頁中選取 [設定**屬性**] > 。
 
-1. 修改**浮點模型**屬性。
+1. 修改 [**浮點模型**] 屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>＞。
 
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
+ 

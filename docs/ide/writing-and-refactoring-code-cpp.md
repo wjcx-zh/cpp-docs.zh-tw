@@ -4,12 +4,12 @@ description: 使用 Visual Studio 中的 C++ 程式碼編輯器來格式化、�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274781"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438160"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中編輯及重構 C++ 程式碼
 
@@ -21,11 +21,11 @@ IntelliSense 是一種強大的程式碼完成工具，可在您鍵入時為您�
 
 ![C&#43;&#43; 成員下拉式清單](../ide/media/cpp-statement-completion.png)
 
-自動省略某些符號可縮小結果範圍。 例如，從類別外部存取類別物件的成員時，您預設無法查看私用成員或受保護的成員 (如果您不在子類別的內容中)。 您可以使用底部的按鈕來調整篩選。
+自動省略某些符號可縮小結果範圍。 例如，從類別外部存取類別物件的成員時，您將無法看到預設的私用成員，或受保護的成員（如果您不在子類別的內容中）。 您可以使用底部的按鈕來調整篩選。
 
-從下拉式清單中選擇符號之後，您可以使用 **Tab** 鍵、**Enter** 鍵，或其中一個認可字元 (預設為：{}[]().,:;+-*/%&|^!=?@#\) 予以自動完成。 若要新增或移除此清單中的字元，請在 [快速啟動]  (Ctrl + Q) 中搜尋 "IntelliSense"，然後選擇 [文字編輯器] > [C/C++] > [進階]  選項。 [成員清單認可字元]  選項可讓您以所需的變更自訂清單。
+從下拉式清單中選擇符號之後，您可以使用**Tab**、 **Enter**或其中一個其他認可字元來自動完成（預設為： `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \`）。 若要新增或移除此清單中的字元，請在 [快速啟動] (Ctrl + Q) 中搜尋 "IntelliSense"，然後選擇 [文字編輯器] > [C/C++] > [進階] 選項。 [成員清單認可字元] 選項可讓您以所需的變更自訂清單。
 
-[成員清單篩選模式]  選項可控制您所看到的 IntelliSense 自動完成建議種類。 根據預設，此屬性會設定為 [模糊]  。 在模糊搜尋中，如果您有一個稱為 *MyAwesomeClass* 的符號，您可以鍵入 "MAC"，並在您的自動完成建議中尋找該類別。 模糊演算法會設定臨界值下限，符號必須符合該臨界值才會顯示在清單中。 **智慧型**篩選會顯示內含子字串符合鍵入內容的所有符號。 **前置詞**篩選則會搜尋以您所鍵入內容為開頭的字串。
+[成員清單篩選模式] 選項可控制您所看到的 IntelliSense 自動完成建議種類。 根據預設，此屬性會設定為 [模糊]。 在模糊搜尋中，如果您有一個稱為 *MyAwesomeClass* 的符號，您可以鍵入 "MAC"，並在您的自動完成建議中尋找該類別。 模糊演算法會設定臨界值下限，符號必須符合該臨界值才會顯示在清單中。 **智慧型**篩選會顯示內含子字串符合鍵入內容的所有符號。 **前置詞**篩選則會搜尋以您所鍵入內容為開頭的字串。
 
 如需 C++ IntelliSense 的詳細資訊，請參閱 [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense) 和[設定 C++ IntelliSense 專案](/visualstudio/ide/visual-cpp-intellisense-configuration)。
 
@@ -35,11 +35,11 @@ IntelliCode 是 AI 輔助的 IntelliSense。 它會將最有可能的候選項�
 
 當撰寫 C++ 時，IntelliCode 將會在使用 C++ 標準程式庫之類的熱門程式庫時提供協助。 您的程式碼內容用來先提供最有用建議。 在下列範例中，`size` 成員函式通常會與 `sort` 函式一起使用，因此它會顯示在結果清單的頂端。
 
-![C&#43;&#43; IntelliCode](../ide/media/intellicode-cpp.png "C++ IntelliCode")
+![C&#43; &#43; IntelliCode](../ide/media/intellicode-cpp.png "C++IntelliCode")
 
 ::: moniker range="vs-2019"
 
-在 Visual Studio 2019 中，IntelliCode 是以 **C++ 桌面開發**工作負載的選擇性元件形式提供。 若要確定 IntelliCode 可供 C++ 使用，請移至 [工具]   > [選項]   > [IntelliCode]   > [一般]  ，並將 [C++ 基底模型]  設定為 [已啟用]  。
+在 Visual Studio 2019 中，IntelliCode 是以 **C++ 桌面開發**工作負載的選擇性元件形式提供。 若要確定 IntelliCode 可供 C++ 使用，請移至 [工具] > [選項] > [IntelliCode] > [一般]，並將 [C++ 基底模型] 設定為 [已啟用]。
 
 ::: moniker-end
 
@@ -51,17 +51,17 @@ IntelliCode 是 AI 輔助的 IntelliSense。 它會將最有可能的候選項�
 
 ## <a name="predictive-intellisense-experimental"></a>預測性 IntelliSense (實驗性)
 
-[預測性 IntelliSense]  是一項實驗性功能，可使用內容感知來限制 IntelliSense 下拉式清單中顯示的結果數目。 此演算法會套用類型比對，以便只顯示符合預期類型的結果。 在最簡單的情況下，如果您鍵入 `int x =` 並叫用 IntelliSense 下拉式清單，則只會看到整數或傳回整數的函式。 這項功能預設為關閉，因為它仍在開發中。 它最適合搭配全域符號；還不支援成員函式。 您可以開啟這項功能，方法是在 [快速啟動]  中鍵入「預測」，或移至 [工具]   > [選項]   > [文字編輯器]   > [C/C++]   > [實驗性]   > [啟用預測性 IntelliSense]  。
+[預測性 IntelliSense] 是一項實驗性功能，可使用內容感知來限制 IntelliSense 下拉式清單中顯示的結果數目。 此演算法會套用類型比對，以便只顯示符合預期類型的結果。 在最簡單的情況下，如果您鍵入 `int x =` 並叫用 IntelliSense 下拉式清單，則只會看到整數或傳回整數的函式。 這項功能預設為關閉，因為它仍在開發中。 它最適合搭配全域符號；還不支援成員函式。 您可以開啟這項功能，方法是在 [快速啟動] 中鍵入「預測」，或移至 [工具] > [選項] > [文字編輯器] > [C/C++] > [實驗性] > [啟用預測性 IntelliSense]。
 
-若要覆寫 [預測性 IntelliSense]  並顯示較長的清單，請按下 **Ctrl + J**。如果 [預測性 IntelliSense]  為開啟，則叫用 **Ctrl + J** 會移除預測性篩選。 再次按下 **Ctrl + J** 則會從相關的成員清單結果中移除存取範圍篩選。 IntelliSense 下拉式清單底下 ([+]) 按鈕的功能與 **Ctrl + J** 相同。將滑鼠游標移至按鈕上方，即可查看顯示內容的相關工具提示資訊。
+若要覆寫**預測性 IntelliSense**並顯示較長的清單，請按**Ctrl + J**。如果已開啟**預測性 IntelliSense** ，叫用**Ctrl + J**會移除預測性篩選。 再次按下 **Ctrl + J** 則會從相關的成員清單結果中移除存取範圍篩選。 [IntelliSense] 下拉式清單下的（[+]）按鈕會與**Ctrl + J**執行相同的工作。將滑鼠停留在按鈕上，以查看所顯示內容的工具提示資訊。
 
-![C&#43;&#43; 預測性 IntelliSense](../ide/media/predictive-intellisense-cpp.png "預測性 IntelliSense")
+![C&#43; &#43;預測性 IntelliSense](../ide/media/predictive-intellisense-cpp.png "預測性 IntelliSense")
 
 上述螢幕擷取畫面顯示下拉式清單底下的數個按鈕。 這些可讓 IntelliSense 篩選取得不同類型的結果：
 
 - 變數和常數
-- 函式
-- 型別
+- Functions
+- 類型
 - 巨集
 - 列舉
 - 命名空間
@@ -72,59 +72,59 @@ IntelliCode 是 AI 輔助的 IntelliSense。 它會將最有可能的候選項�
 
 當插入號位於範本定義中時，隨即會出現**範本列**，它可讓您提供 IntelliSense 的範例範本引數。 
 
-![顯示現有具現化的 C&#43;&#43; 範本 IntelliSense](../ide/media/template-intellisense-cpp-1.png "顯示現有具現化的範本 IntelliSense")
+![C&#43; &#43;範本 IntelliSense 顯示現有的具現化](../ide/media/template-intellisense-cpp-1.png "範本 IntelliSense 顯示現有的具現化")
 
-按一下 **<T>** 圖示來展開/摺疊**範本列**。 按一下鉛筆圖示，或按兩下**範本列**來開啟 [編輯]  視窗。 
+按一下 [ **\<t >** ] 圖示，以展開/折迭**範本**列。 按一下鉛筆圖示，或按兩下**範本列**來開啟 [編輯] 視窗。 
 
-![C&#43;&#43; 範本 IntelliSense](../ide/media/template-intellisense-cpp-3.png "範本 IntelliSense")
+![C&#43; &#43;範本 IntelliSense](../ide/media/template-intellisense-cpp-3.png "範本 IntelliSense")
 
 您在視窗中所進行的編輯內容會直接套用到原始程式碼，讓您能夠即時查看影響。 
 
-範本列可以根據程式碼中的具現化自動填入候選項目。 按一下 [新增所有現有具現化]  ，以查看用來在整個程式碼基底中具現化範本的所有具體引數清單。
+範本列可以根據程式碼中的具現化自動填入候選項目。 按一下 [新增所有現有具現化]，以查看用來在整個程式碼基底中具現化範本的所有具體引數清單。
 
-![C&#43;&#43; 範本 IntelliSense 結果清單](../ide/media/template-intellisense-cpp-2.png "範本 IntelliSense 結果清單")
+![C&#43; &#43;範本 IntelliSense 結果清單](../ide/media/template-intellisense-cpp-2.png "範本 IntelliSense 結果清單")
 
 編輯器底部的視窗會顯示發現每個具現化的位置，以及其引數。
 
-![C&#43;&#43; 範本 IntelliSense 具現化對應](../ide/media/template-intellisense-cpp-4.png "範本 IntelliSense 具現化對應")
+![C&#43; &#43;範本 IntelliSense 具現化對應](../ide/media/template-intellisense-cpp-4.png "範本 IntelliSense 具現化對應")
 
 **範本列**資訊被視為使用者專屬資訊。 它會儲存在 .vs 資料夾中，而不會認可至原始檔控制。
 
 ##  <a name="error-squiggles-and-quick-fixes"></a>錯誤波浪線與快速檢修
 
-如果編輯器偵測到您的程式碼出現問題，它會在問題底下新增有顏色的波浪線。 紅色波浪線表示無法編譯的程式碼。 綠色波浪線表示可能仍然有潛在嚴重問題的其他問題類型。 您可以開啟 [錯誤清單]  視窗來取得問題的相關資訊。
+如果編輯器偵測到您的程式碼出現問題，它會在問題底下新增有顏色的波浪線。 紅色波浪線表示無法編譯的程式碼。 綠色波浪線表示可能仍然有潛在嚴重問題的其他問題類型。 您可以開啟 [錯誤清單] 視窗來取得問題的相關資訊。
 
-針對某些類型的錯誤以及一般程式碼撰寫模式，編輯器會以燈泡的形式提供 [快速檢修]  功能，只要您將滑鼠指標停留在波浪線上方就會出現燈泡。 請按一下向下箭號來查看建議。 
+針對某些類型的錯誤以及一般程式碼撰寫模式，編輯器會以燈泡的形式提供 [快速檢修] 功能，只要您將滑鼠指標停留在波浪線上方就會出現燈泡。 請按一下向下箭號來查看建議。 
 
 在下列範例中，已宣告 `vector` 但找不到任何定義，因此編輯器會包含必要的標頭檔：
 
-![C&#43;&#43; 快速檢修](../ide/media/quick-fix-for-header-cpp.png "C++ 快速檢修")
+![C&#43; &#43;快速修正](../ide/media/quick-fix-for-header-cpp.png "C++快速修正")
 
 編輯器也會提供快速檢修以獲取一些重構機會。 例如，如果您在標頭檔中宣告類別，Visual Studio 將會在個別的 .cpp 檔案中為其建立定義。 
 
-![C&#43;&#43; 快速檢修](../ide/media/quick-fix.png "C++ 快速檢修")
+![C&#43; &#43;快速修正](../ide/media/quick-fix.png "C++快速修正")
 
-## <a name="change-tracking"></a>Change tracking
+## <a name="change-tracking"></a>變更追蹤
 
 每當您變更檔案時，左側會顯示一條黃色列，表示已進行未儲存的變更。 當您儲存檔案時，該列會變成綠色。 只要在編輯器中開啟文件，就會呈現綠色列和黃色列。 它們代表您上次開啟文件以來所進行的變更。
 
-![C&#43;&#43; 變更追蹤](../ide/media/change-tracking-cpp.png "變更追蹤")
+![C&#43; &#43;變更追蹤](../ide/media/change-tracking-cpp.png "變更追蹤")
 
 ## <a name="move-code"></a>移動程式碼
 
-您可以選取程式碼行並按住 Alt 鍵，然後按 [向上鍵/向下鍵]  ，將這些程式碼行向上及向下移動。
+您可以選取程式碼行並按住 Alt 鍵，然後按 [向上鍵/向下鍵]，將這些程式碼行向上及向下移動。
 
 ##  <a name="insert-snippets"></a>插入程式碼片段
 
-程式碼片段是預先定義的原始碼片段。 以滑鼠右鍵按一下單點或選取的文字，可插入程式碼片段或以程式碼片段圍繞選取的文字。 下圖顯示以 for 迴圈圍繞所選陳述式的三個步驟。 最終影像中的黃色反白顯示就是您使用 tab 鍵存取的可編輯欄位。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。
+程式碼片段是預先定義的原始碼片段。 以滑鼠右鍵按一下單點或選取的文字，可插入程式碼片段或以程式碼片段圍繞選取的文字。 下圖顯示以 for 迴圈圍繞所選陳述式的三個步驟。 最終影像中的黃色反白顯示就是您使用 tab 鍵存取的可編輯欄位。 如需詳細資訊，請參閱 [Code Snippets](/visualstudio/ide/code-snippets)。
 
-![C&#43;&#43; 插入程式碼片段下拉式清單](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![C&#43; &#43;插入程式碼片段&#45;下拉式](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
-##  <a name="add-class"></a>加入類別
+##  <a name="add-class"></a>新增類別
 
-從 [專案]  功能表或從 [方案總管]  的操作功能表新增類別：
+從 [專案] 功能表或從 [方案總管] 的操作功能表新增類別：
 
-![C&#43;&#43; 中的 [新增類別]](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
+![在 C 中新增類別&#43;&#43;](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
 
 您也可以使用 [類別精靈] 來修改或檢查現有的類別。
 
@@ -134,7 +134,7 @@ IntelliCode 是 AI 輔助的 IntelliSense。 它會將最有可能的候選項�
 
 ##  <a name="refactoring"></a>重構
 
-重構可以從 [快速動作] 操作功能表下取得，或是按一下編輯器中的[燈泡](/visualstudio/ide/perform-quick-actions-with-light-bulbs)。  在 [編輯] > [重構]  功能表中也可以找到部分項目。  這些功能包括：
+重構可以從 [快速動作] 操作功能表下取得，或是按一下編輯器中的[燈泡](/visualstudio/ide/perform-quick-actions-with-light-bulbs)。  在 [編輯] > [重構] 功能表中也可以找到部分項目。  這些功能包括：
 
 * [重新命名](refactoring/rename.md)
 * [擷取函式](refactoring/extract-function.md)
@@ -159,32 +159,32 @@ Visual Studio 2017 和更新版本隨附 [ClangFormat](https://clang.llvm.org/do
 
 這些檔案可透過原始檔控制輕鬆共用，因此您可以在整個開發小組中施行程式碼撰寫慣例。
 
-![&#43;&#43; Clang 格式](../ide/media/clang-format-cpp.png "Clang 格式")
+![C&#43; &#43; Clang 格式](../ide/media/clang-format-cpp.png "Clang 格式")
 
-Visual Studio 2017 和更新版本也支援以類似方式運作的 [EditorConfig](https://editorconfig.org/)。 不過，ClangFormat 具有的樣式選項比 EditorConfig 更多，包括 C++ 的特定規則。 使用 **EditorConfig** 時，您可以建立 **.editorconfig** 檔案，並將它們放在程式碼基底的不同資料夾中，用來指定這些資料夾及其子資料夾的程式碼樣式。 **.editorconfig** 檔案會取代父資料夾中的任何其他 **.editorconfig** 檔案，並覆寫任何透過 [工具]   > [選項]  設定的格式設定。 您可以針對定位點與空格、縮排大小及其他項目設定一些規則。 如需詳細資訊，請參閱[使用 EditorConfig 建立可攜式自訂編輯器設定](/visualstudio/ide/create-portable-custom-editor-options)。
+Visual Studio 2017 和更新版本也支援以類似方式運作的 [EditorConfig](https://editorconfig.org/)。 不過，ClangFormat 具有的樣式選項比 EditorConfig 更多，包括 C++ 的特定規則。 使用 **EditorConfig** 時，您可以建立 **.editorconfig** 檔案，並將它們放在程式碼基底的不同資料夾中，用來指定這些資料夾及其子資料夾的程式碼樣式。 **.editorconfig** 檔案會取代父資料夾中的任何其他 **.editorconfig** 檔案，並覆寫任何透過 [工具] > [選項] 設定的格式設定。 您可以針對定位點與空格、縮排大小及其他項目設定一些規則。 如需詳細資訊，請參閱[使用 EditorConfig 建立可攜式自訂編輯器設定](/visualstudio/ide/create-portable-custom-editor-options)。
 
 ## <a name="other-formatting-options"></a>其他格式化選項
 
-[快速啟動]  搜尋方塊提供尋找設定或工具的最快方式。 它位於主功能表上。 只要開始鍵入，自動完成清單就會篩選結果。
+[快速啟動] 搜尋方塊提供尋找設定或工具的最快方式。 它位於主功能表上。 只要開始鍵入，自動完成清單就會篩選結果。
 
 ![Visual Studio 快速啟動](../ide/media/vs2015_cpp_quick_launch.png "快速啟動")
 
-若要設定格式化選項，例如縮排、以大括弧完成和顏色標示，請在 [快速啟動]  視窗中鍵入 "C++ Formatting"。
+若要設定格式化選項，例如縮排、以大括弧完成和顏色標示，請在 [快速啟動] 視窗中鍵入 "C++ Formatting"。
 
 ![C++ 格式化選項](media/cpp-formatting-options.png)
 
-其他格式化選項位於主功能表的 [編輯]   > [進階]  下方。
+其他格式化選項位於主功能表的 [編輯] > [進階] 下方。
 
 ![C++ 進階編輯選項](media/edit-advanced-cpp.png)
 
-啟用及設定 C++- 特定編輯功能的選項位於 [工具]   > [選項]   > [文字編輯器]   > [C/C++]  下方。 選擇您想要設定的選項之後，您可以在對話方塊成為焦點時按下 **F1** 來取得更多說明。 針對一般程式碼格式化選項，請在 [快速啟動]  中鍵入 `Editor C++`。
+啟用及設定 C++- 特定編輯功能的選項位於 [工具] > [選項] > [文字編輯器] > [C/C++] 下方。 選擇您想要設定的選項之後，您可以在對話方塊成為焦點時按下 **F1** 來取得更多說明。 針對一般程式碼格式化選項，請在 [快速啟動]`Editor C++`**中鍵入**。
 
-![Visual Studio [工具] > [選項]](../ide/media/tools-options.png "編輯器選項")
+![Visual Studio Tools > 選項](../ide/media/tools-options.png "編輯器選項")
 
-您可以在[文字編輯器 C++ 實驗](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)對話方塊中找到不一定包含在 Visual Studio 未來版本中的實驗性功能。 在 Visual Studio 2017 和更新版本中，您可以啟用這個對話方塊中的 [預測性 IntelliSense]  。
+您可以在[文字編輯器 C++ 實驗](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)對話方塊中找到不一定包含在 Visual Studio 未來版本中的實驗性功能。 在 Visual Studio 2017 和更新版本中，您可以啟用這個對話方塊中的 [預測性 IntelliSense]。
 
 ## <a name="see-also"></a>另請參閱
 
-[閱讀及了解 C++ 程式碼](read-and-understand-code-cpp.md)</br>
+[閱讀並了解 C++ 程式碼](read-and-understand-code-cpp.md)</br>
 [在 Visual Studio 中巡覽 C++ 程式碼基底](navigate-code-cpp.md)</br>
 [使用 Live Share for C++ 進行共同作業](live-share-cpp.md)

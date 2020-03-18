@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855394"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422287"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>如何：使用 parallel_invoke 撰寫平行排序常式
 
@@ -89,7 +89,7 @@ parallel time: 1248
 
 > **cl/EHsc parallel-bitonic-sort.cpp .cpp**
 
-## <a name="robust-programming"></a>穩固程式設計
+## <a name="robust-programming"></a>最佳化程式設計
 
 這個範例會使用 `parallel_invoke` 演算法，而不是[concurrency：： task_group](reference/task-group-class.md)類別，因為每個工作組的存留期都不會超出函式。 我們建議您在可能的情況下使用 `parallel_invoke`，因為它的執行額外負荷比 `task group` 物件少，因此可讓您撰寫更好的執行程式碼。
 

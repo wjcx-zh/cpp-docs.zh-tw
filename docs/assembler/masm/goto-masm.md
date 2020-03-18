@@ -1,17 +1,15 @@
 ---
 title: GOTO (MASM)
 ms.date: 12/16/2019
-f1_keywords:
-- goto
 helpviewer_keywords:
 - GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-ms.openlocfilehash: f198658f9a4b85e0b5ec9b7a0c122241e57286f6
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 18f286d8634202b57dea788aa6984755a5afb197
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317275"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440803"
 ---
 # <a name="goto"></a>GOTO
 
@@ -25,7 +23,7 @@ ms.locfileid: "75317275"
 
 只有在[宏](macro.md)、 [FOR](for-masm.md)、 [FORC](forc.md)、 [REPEAT](repeat.md)和[WHILE](while-masm.md)區塊中才允許**GOTO** 。 *Macrolabel*目標必須是行上的唯一指示詞，且前面必須加上前置冒號。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 指示詞[參考](directives-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

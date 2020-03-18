@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421454"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447445"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
 
@@ -522,17 +522,17 @@ virtual BOOL DoScroll(
 *nScrollCode*<br/>
 表示使用者的滾動要求的捲軸程式碼。 這個參數是由兩個部分組成：低序位位元組，可決定水準發生的滾動類型，而高序位位元組則會決定垂直發生的滾動類型：
 
-    - SB_BOTTOM 向下滾動。
+- SB_BOTTOM 向下滾動。
 
-    - SB_LINEDOWN 向下滾動一行。
+- SB_LINEDOWN 向下滾動一行。
 
-    - SB_LINEUP 向上滾動一行。
+- SB_LINEUP 向上滾動一行。
 
-    - SB_PAGEDOWN 向下滾動一頁。
+- SB_PAGEDOWN 向下滾動一頁。
 
-    - SB_PAGEUP 向上滾動一頁。
+- SB_PAGEUP 向上滾動一頁。
 
-    - SB_TOP 滾動到頁首。
+- SB_TOP 滾動到頁首。
 
 *bDoScroll*<br/>
 判斷是否發生指定的滾動動作。 如果*bDoScroll*為 TRUE （亦即，如果子視窗存在，而且分割視窗具有捲軸範圍），則會進行指定的滾動動作。如果*bDoScroll*為 FALSE （亦即，如果沒有子視窗存在，或分割視圖沒有捲軸範圍），則不會進行滾動。
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 下列一或多個 windows 樣式旗標（如果成功）：
 
-    - 如果分割器目前管理共用水準捲軸，WS_HSCROLL。
+- 如果分割器目前管理共用水準捲軸，WS_HSCROLL。
 
-    - 如果分割器目前管理共用的垂直捲動條，則 WS_VSCROLL。
+- 如果分割器目前管理共用的垂直捲動條，則 WS_VSCROLL。
 
 如果為零，則分隔器視窗目前不會管理任何共用的捲軸。
 
@@ -810,13 +810,13 @@ virtual void OnDrawSplitter(
 *nType*<br/>
 `enum ESplitType`的值，它可以是下列其中一項：
 
-    - `splitBox` [分隔器] 拖曳框。
+- `splitBox` [分隔器] 拖曳框。
 
-    - `splitBar` 出現在兩個分割視窗之間的橫條。
+- `splitBar` 出現在兩個分割視窗之間的橫條。
 
-    - `splitIntersection` 分割視窗的交集。 在 Windows 95/98 上執行時，將不會呼叫此元素。
+- `splitIntersection` 分割視窗的交集。 在 Windows 95/98 上執行時，將不會呼叫此元素。
 
-    - `splitBorder` 分割視窗框線。
+- `splitBorder` 分割視窗框線。
 
 *各種*<br/>
 [CRect](../../atl-mfc-shared/reference/crect-class.md)物件的參考，指定分割視窗的大小和形狀。

@@ -5,7 +5,6 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
-- IsSameRow
 - IRowsetIdentityImpl.IsSameRow
 - ATL.IRowsetIdentityImpl.IsSameRow
 - IRowsetIdentityImpl::IsSameRow
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 51f8d7e832476619ccec277c9d73791041d146a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8c976fcb23bf41d88d88be3887db4dde52379d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390830"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446313"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 類別
 
-實作 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))介面，可讓資料列識別測試。
+執行 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))介面，以啟用資料列識別的測試。
 
 ## <a name="syntax"></a>語法
 
@@ -36,10 +35,10 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-類別衍生自`IRowsetIdentityImpl`。
+衍生自 `IRowsetIdentityImpl`的類別。
 
 *RowClass*<br/>
-儲存體單位`HROW`。
+`HROW`的儲存體單位。
 
 ## <a name="requirements"></a>需求
 
@@ -51,11 +50,11 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 
 |||
 |-|-|
-|[IsSameRow](#issamerow)|比較兩個資料列控點，以查看它們是否參考相同的資料列。|
+|[IsSameRow](#issamerow)|比較兩個數據列控制碼，以查看它們是否參考相同的資料列。|
 
-## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+## <a name="issamerow"></a>IRowsetIdentityImpl：： IsSameRow
 
-比較兩個資料列控點，以查看它們是否參考相同的資料列。
+比較兩個數據列控制碼，以查看它們是否參考相同的資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -66,13 +65,13 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
 
 ### <a name="remarks"></a>備註
 
-若要比較資料列控制代碼，這個方法會轉換`HROW`控制代碼對應到`RowClass`成員和呼叫`memcmp`指標。
+為了比較資料列控制碼，這個方法會將 `HROW` 控制碼轉換成 `RowClass` 成員，並在指標上呼叫 `memcmp`。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

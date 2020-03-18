@@ -1,5 +1,5 @@
 ---
-title: 資料物件和資料來源：操作
+title: 資料物件和資料來源：管理
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,82 +12,82 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adbe2a77fb0069e9874ab20a51b3ab08aabbe1f6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241545"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446997"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>資料物件和資料來源：操作
+# <a name="data-objects-and-data-sources-manipulation"></a>資料物件和資料來源：管理
 
-建立資料物件或資料來源之後，您可以執行上的資料，例如插入和移除資料，列舉資料所在的格式，以及其他常見作業的數量。 這篇文章描述完成最常見的作業所需的方法。 主題包括：
+建立資料物件或資料來源之後，您可以對資料執行一些常見的作業，例如插入和移除資料、列舉資料所在的格式等等。 本文說明完成最常見作業所需的技巧。 主題包括：
 
-- [將資料插入至資料來源](#_core_inserting_data_into_a_data_source)
+- [將資料插入資料來源](#_core_inserting_data_into_a_data_source)
 
 - [判斷資料物件中可用的格式](#_core_determining_the_formats_available_in_a_data_object)
 
-- [從資料物件擷取資料](#_core_retrieving_data_from_a_data_object)
+- [從資料物件中抓取資料](#_core_retrieving_data_from_a_data_object)
 
-##  <a name="_core_inserting_data_into_a_data_source"></a> 將資料插入至資料來源
+##  <a name="_core_inserting_data_into_a_data_source"></a>將資料插入資料來源
 
-資料插入到資料來源的方式取決於資料是否立即提供或依需求，以及以何種媒體會提供。 可能值如下所示。
+將資料插入資料來源的方式，取決於資料是立即提供，還是視需要提供，以及在哪種媒體中提供。 可能的原因如下。
 
-### <a name="supplying-data-immediately-immediate-rendering"></a>立即提供資料 （立即轉譯）
+### <a name="supplying-data-immediately-immediate-rendering"></a>立即提供資料（立即轉譯）
 
-- 呼叫`COleDataSource::CacheGlobalData`重複為您提供資料的每個剪貼簿格式。 將剪貼簿格式，才能使用，包含資料的記憶體的控制代碼，並選擇性地**FORMATETC**結構描述的資料。
-
-     -或-
-
-- 如果您想要直接使用**STGMEDIUM**結構，呼叫`COleDataSource::CacheData`而不是`COleDataSource::CacheGlobalData`在上述的選項。
-
-### <a name="supplying-data-on-demand-delayed-rendering"></a>提供隨選 （延遲轉譯） 的資料
-
-這是進階的主題。
-
-- 呼叫`COleDataSource::DelayRenderData`重複為您提供資料的每個剪貼簿格式。 傳遞所要使用剪貼簿格式，並選擇性地**FORMATETC**結構描述的資料。 當要求資料時，架構會在呼叫`COleDataSource::OnRenderData`，您必須覆寫。
+- 針對您提供資料的每個剪貼簿格式，重複呼叫 `COleDataSource::CacheGlobalData`。 傳遞要使用的剪貼簿格式，這是包含資料之記憶體的控制碼，也可以選擇描述資料的**FORMATETC**結構。
 
      -或-
 
-- 如果您使用`CFile`物件來提供資料，呼叫`COleDataSource::DelayRenderFileData`而不是`COleDataSource::DelayRenderData`中前一個選項。 當要求資料時，架構會在呼叫`COleDataSource::OnRenderFileData`，您必須覆寫。
+- 如果您想要直接使用**STGMEDIUM**結構，您可以呼叫 `COleDataSource::CacheData`，而不是上述選項中的 `COleDataSource::CacheGlobalData`。
 
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> 判斷資料物件中可用的格式
+### <a name="supplying-data-on-demand-delayed-rendering"></a>視需要提供資料（延遲轉譯）
 
-應用程式可讓使用者貼上資料之前，它需要知道它可以處理的剪貼簿上是否有格式。 若要這樣做，您的應用程式應該執行下列作業：
+這是一個先進的主題。
 
-1. 建立`COleDataObject`物件和**FORMATETC**結構。
+- 針對您提供資料的每個剪貼簿格式，重複呼叫 `COleDataSource::DelayRenderData`。 傳遞要使用的剪貼簿格式，並選擇性地傳遞描述資料的**FORMATETC**結構。 當要求資料時，架構會呼叫 `COleDataSource::OnRenderData`，您必須覆寫此參數。
 
-1. 呼叫資料物件的`AttachClipboard`剪貼簿上的資料相關聯的資料物件的成員函式。
+     -或-
 
-1. 執行下列任一步驟：
+- 如果您使用 `CFile` 物件來提供資料，請呼叫 `COleDataSource::DelayRenderFileData`，而不是上一個選項中的 `COleDataSource::DelayRenderData`。 當要求資料時，架構會呼叫 `COleDataSource::OnRenderFileData`，您必須覆寫此參數。
 
-   - 呼叫資料物件的`IsDataAvailable`成員函式，如果有只有一個或兩個格式化您的需要。 這會節省您時間在剪貼簿上的資料，支援更多的格式，與您的應用程式的情況下。
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>判斷資料物件中可用的格式
 
-         -or-
+在應用程式允許使用者將資料貼到其中之前，它必須知道剪貼簿上是否有可處理的格式。 若要這樣做，您的應用程式應該執行下列動作：
 
-   - 呼叫資料物件的`BeginEnumFormats`成員函式來開始列舉剪貼簿上可用的格式。 然後呼叫`GetNextFormat`直到剪貼簿傳回應用程式所支援的格式，或有沒有更多的格式。
+1. 建立 `COleDataObject` 物件和**FORMATETC**結構。
 
-如果您使用**ON_UPDATE_COMMAND_UI**，您現在可以啟用貼上和，可能的話，[編輯] 功能表上的選擇性貼上項目。 若要這樣做，請呼叫`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 如需有關哪些容器應用程式應該使用功能表項目進行，請參閱 <<c0> [ 功能表和資源：容器新增](../mfc/menus-and-resources-container-additions.md)。
+1. 呼叫資料物件的 `AttachClipboard` 成員函式，將資料物件與剪貼簿上的資料產生關聯。
 
-##  <a name="_core_retrieving_data_from_a_data_object"></a> 從資料物件擷取資料
+1. 執行下列其中一個動作：
 
-一旦您決定的資料格式，都是從資料物件擷取資料。 若要這樣做，使用者會決定要放置資料和應用程式會呼叫適當的函式。 資料將可在其中一個下列的媒體：
+   - 如果您只需要一或兩個格式，請呼叫資料物件的 `IsDataAvailable` 成員函式。 當剪貼簿上的資料支援的格式比您的應用程式大時，這會節省您的時間。
 
-|Medium|若要呼叫的函式|
+     \-或-
+
+   - 呼叫資料物件的 `BeginEnumFormats` 成員函式，以開始列舉剪貼簿上可用的格式。 然後呼叫 `GetNextFormat` 直到剪貼簿傳回您的應用程式支援的格式，或沒有其他格式。
+
+如果您使用**ON_UPDATE_COMMAND_UI**，您現在可以啟用 [編輯] 功能表上的 [貼上] 和 [可能貼上的特殊專案]。 若要這麼做，請呼叫 `CMenu::EnableMenuItem` 或 `CCmdUI::Enable`。 如需容器應用程式應該如何使用功能表項目以及何時執行的詳細資訊，請參閱[功能表和資源：容器新增](../mfc/menus-and-resources-container-additions.md)。
+
+##  <a name="_core_retrieving_data_from_a_data_object"></a>從資料物件中抓取資料
+
+一旦決定了資料格式之後，剩下的就是從資料物件取得資料。 若要這麼做，使用者會決定要將資料放在何處，而應用程式會呼叫適當的函式。 資料將會在下列其中一種媒體中提供：
+
+|中|要呼叫的函式|
 |------------|----------------------|
-|全域記憶體 (`HGLOBAL`)|`COleDataObject::GetGlobalData`|
-|檔案 (`CFile`)|`COleDataObject::GetFileData`|
-|**STGMEDIUM**結構 (`IStorage`)|`COleDataObject::GetData`|
+|全域記憶體（`HGLOBAL`）|`COleDataObject::GetGlobalData`|
+|檔案（`CFile`）|`COleDataObject::GetFileData`|
+|**STGMEDIUM**結構（`IStorage`）|`COleDataObject::GetData`|
 
-通常，媒體將會指定連同其剪貼簿格式。 例如， **CF_EMBEDDEDSTRUCT**物件一律會處於`IStorage`需要的中型**STGMEDIUM**結構。 因此，您會使用`GetData`因為它是唯一可以接受這些函式**STGMEDIUM**結構。
+通常，媒體會連同其剪貼簿格式一起指定。 例如， **CF_EMBEDDEDSTRUCT**物件一定會在需要**STGMEDIUM**結構的 `IStorage` 媒體中。 因此，您會使用 `GetData`，因為它是其中一個可接受**STGMEDIUM**結構的函式。
 
-案例的剪貼簿格式會處於`IStream`或`HGLOBAL`架構可以提供中型`CFile`參考資料的指標。 應用程式接著可以使用讀取的檔案來取得中大部分的資料相同的方式，因為它可能會從檔案匯入資料。 基本上，這是用戶端介面，以`OnRenderData`和`OnRenderFileData`資料來源中的常式。
+若為剪貼簿格式在 `IStream` 或 `HGLOBAL` medium 中的情況，架構可以提供參考資料的 `CFile` 指標。 然後，應用程式可以使用「檔案讀取」來取得資料，就像從檔案匯入資料的方式一樣。 基本上，這是資料來源中 `OnRenderData` 和 `OnRenderFileData` 常式的用戶端介面。
 
-使用者可以現在將資料插入文件就像任何其他資料格式相同。
+使用者現在可以將資料插入檔中，就像任何其他具有相同格式的資料一樣。
 
-### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [將拖放](../mfc/drag-and-drop-ole.md)
+- [拖放](../mfc/drag-and-drop-ole.md)
 
 - [剪貼簿](../mfc/clipboard.md)
 

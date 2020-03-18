@@ -1,38 +1,36 @@
 ---
 title: 框架視窗類別 (架構)
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.frame
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-ms.openlocfilehash: affa217f481cc6d9e125d526f1b97be9120e0990
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3ae432c1adc881a5c67d6a6c292dc1f6a583ab3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392839"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441261"
 ---
 # <a name="frame-window-classes-architecture"></a>框架視窗類別 (架構)
 
-在文件/檢視架構中，框架視窗會是包含 [檢視] 視窗的視窗。 它們也支援讓控制列附加到它們。
+在檔/視圖架構中，框架視窗是包含 [view] 視窗的視窗。 它們也支援連接控制列。
 
-在多個文件介面 (MDI) 應用程式主視窗衍生自`CMDIFrameWnd`。 它間接包含文件的框架，也就是`CMDIChildWnd`物件。 `CMDIChildWnd`物件，依序包含文件的檢視。
+在多重文件介面（MDI）應用程式中，主視窗衍生自 `CMDIFrameWnd`。 它間接包含檔的框架，也就是 `CMDIChildWnd` 物件。 `CMDIChildWnd` 物件又會包含檔的 views。
 
-在單一文件介面 (SDI) 應用程式，主要視窗中，衍生自`CFrameWnd`，包含目前的文件的檢視。
+在單一檔介面（SDI）應用程式中，從 `CFrameWnd`衍生的主視窗包含目前檔的視圖。
 
 [CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-SDI 應用程式的主框架視窗的基底類別。 也其他框架視窗類別的基底類別。
+SDI 應用程式主框架視窗的基類。 也是所有其他框架視窗類別的基類。
 
 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
-MDI 應用程式的主框架視窗的基底類別。
+MDI 應用程式主框架視窗的基類。
 
 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
-MDI 應用程式的文件框架視窗的基底類別。
+MDI 應用程式檔框架視窗的基類。
 
 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
-當就地編輯伺服器文件時，則您可以提供檢視框架視窗。
+當伺服器檔正在進行編輯時，提供視圖的框架視窗。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

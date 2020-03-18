@@ -1,25 +1,23 @@
 ---
 title: 視窗、對話方塊和控制項類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
-ms.openlocfilehash: 3fc7d800cee7e3bf64f64028b2499935eb42a044
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e761c063e6c6e27943f9816d88b4d78718d3d18
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167617"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446292"
 ---
 # <a name="window-dialog-and-control-classes"></a>視窗、對話方塊和控制項類別
 
-類別`CWnd`和其衍生的類別會封裝`HWND`，Windows 視窗的控制代碼。 `CWnd` 可以用於本身，或做為基底衍生新類別。 類別庫所提供的衍生的類別代表不同種類的 windows。
+類別 `CWnd` 及其衍生類別會封裝 `HWND`，這是 Windows 視窗的控制碼。 `CWnd` 可以單獨使用，或做為衍生新類別的基底。 類別庫所提供的衍生類別代表各種類型的視窗。
 
 [CWnd](../mfc/reference/cwnd-class.md)<br/>
-適用於所有 windows 基底類別。 您可以使用其中一個衍生自的類別`CWnd`或直接從它衍生您自己的類別。
+所有視窗的基類。 您可以使用衍生自 `CWnd` 的其中一個類別，或直接從它衍生您自己的類別。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

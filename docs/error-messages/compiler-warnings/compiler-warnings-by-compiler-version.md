@@ -4,20 +4,20 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 7e0a2d9a342446acbb62ea64031e84e03855e026
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: bf42981396abf8e91077da5c1cc1f180891d2a63
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630814"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446560"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>編譯器版本的編譯器警告
 
-編譯器可以隱藏在您使用[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項指定的版本之後引進的警告。 當您引進新的工具組版本, 而且想要暫時隱藏新的警告時, 此選項適用于管理您的組建程式。 此選項只會隱藏警告, 而不是新的錯誤訊息。 不要永久隱藏所有新的警告! 建議您一律在最高的一般警告層級進行`/W4`編譯, 並在`/Wv`實際情況下移除組建中的選項。
+編譯器可以隱藏在您使用[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項指定的版本之後引進的警告。 當您引進新的工具組版本，而且想要暫時隱藏新的警告時，此選項適用于管理您的組建程式。 此選項只會隱藏警告，而不是新的錯誤訊息。 不要永久隱藏所有新的警告！ 我們建議您一律以最高的一般警告層級進行編譯，`/W4`，並在實際情況下移除組建中的 `/Wv` 選項。
 
-這些版本的編譯器引進了新的警告:
+這些版本的編譯器引進了新的警告：
 
-| 產品 | 編譯器版本號碼 |
+| Products | 編譯器版本號碼 |
 |-|-|
 | Visual Studio 2002 | 13.00.9466 |
 | Visual Studio 2003 | 13.10.3077 |
@@ -39,15 +39,15 @@ ms.locfileid: "69630814"
 | Visual Studio 2017 15.9 版 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
 
-您只能指定主要數位、主要和次要數位, 或是`/Wv`選項的主要、次要和組建編號。 編譯器會報告所有符合以指定數位開頭之版本的警告, 並隱藏版本大於指定數位的所有警告。 例如, `/Wv:17`報告在 Visual Studio 2012 的任何版本中或之前引進的警告, 並隱藏任何編譯器從 Visual Studio 2013 (版本 18) 或更新版本所引入的警告。 若要隱藏 Visual Studio 2015 update 2 和更新版本中引進的警告, `/Wv:19.00.23506`您可以使用。 在`/Wv:19.11` Visual Studio 2017 15.5 版之前, 使用來報告任何版本 Visual Studio 中引進的警告, 但隱藏 Visual Studio 2017 15.5 和更新版本中引入的警告。
+您只能指定 [主要]、[主要] 和 [次要] 數位，或是 [`/Wv`] 選項的 [主要]、[次要] 和 [組建編號]。 編譯器會報告所有符合以指定數位開頭之版本的警告，並隱藏版本大於指定數位的所有警告。 例如，`/Wv:17` 報告 Visual Studio 2012 的任何版本中或之前所引進的警告，並隱藏任何編譯器從 Visual Studio 2013 （版本18）或更新版本所引入的警告。 若要隱藏 Visual Studio 2015 update 2 和更新版本中引進的警告，您可以使用 `/Wv:19.00.23506`。 在 Visual Studio 2017 15.5 版之前，請使用 `/Wv:19.11` 來報告任何 Visual Studio 版本中引進的警告，但隱藏 Visual Studio 2017 15.5 版和更新版本中引進的警告。
 
-下列各節列出您可以使用C++ `/Wv`編譯器選項隱藏的每個視覺效果版本所引進的警告。 `/Wv`選項無法隱藏未列出的警告, 這會早指定版本的編譯器。
+下列各節列出您可以使用 `/Wv` 編譯器選項隱藏的C++每個視覺效果版本所引進的警告。 `/Wv` 選項無法隱藏未列出的警告，這會早指定版本的編譯器。
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW 中引進的警告 (編譯器版本 19.20.27004.0)
+## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW 中引進的警告（編譯器版本19.20.27004.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.15`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.15`來隱藏。
 
 |||
 |-|-|
@@ -57,9 +57,9 @@ ms.locfileid: "69630814"
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 15.8 版 (編譯器版本 19.15.26726.0) 中引進的警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 15.8 版（編譯器版本19.15.26726.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.14`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.14`來隱藏。
 
 |||
 |-|-|
@@ -83,26 +83,26 @@ ms.locfileid: "69630814"
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 15.7 版 (編譯器版本 19.14.26428.0) 中引進的警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 15.7 版（編譯器版本19.14.26428.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.13`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.13`來隱藏。
 
 |||
 |-|-|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 15.6 版 (編譯器版本 19.13.26128.0) 中引進的警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 15.6 版（編譯器版本19.13.26128.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.12`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.12`來隱藏。
 
 |||
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 15.5 版 (編譯器版本 19.12.25830.0) 中引進的警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 15.5 版（編譯器版本19.12.25830.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.11`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.11`來隱藏。
 
 |||
 |-|-|
@@ -114,9 +114,9 @@ ms.locfileid: "69630814"
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 15.3 版 (編譯器版本 19.11.25506.0) 中引進的警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 15.3 版（編譯器版本19.11.25506.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.10`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.10`來隱藏。
 
 |||
 |-|-|
@@ -136,9 +136,9 @@ ms.locfileid: "69630814"
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
 | C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM 中引進的警告 (編譯器版本 19.10.25017.0)
+## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM 中引進的警告（編譯器版本19.10.25017.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.00`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00`來隱藏。
 
 |||
 |-|-|
@@ -149,9 +149,9 @@ ms.locfileid: "69630814"
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 Update 3 中引進的警告 (編譯器版本 19.00.24215.1)
+## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 Update 3 中引進的警告（編譯器版本19.00.24215.1）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.00.23918`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00.23918`來隱藏。
 
 |||
 |-|-|
@@ -160,9 +160,9 @@ ms.locfileid: "69630814"
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
 | C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 Update 2 中引進的警告 (編譯器版本 19.00.23918.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 Update 2 中引進的警告（編譯器版本19.00.23918.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.00.23506`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00.23506`來隱藏。
 
 |||
 |-|-|
@@ -171,9 +171,9 @@ ms.locfileid: "69630814"
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 Update 1 中引進的警告 (編譯器版本 19.00.23506.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 Update 1 中引進的警告（編譯器版本19.00.23506.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:19.00.23026`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00.23026`來隱藏。
 
 |||
 |-|-|
@@ -182,9 +182,9 @@ ms.locfileid: "69630814"
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
 | C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM 中引進的警告 (編譯器版本 19.00.23026.0)
+## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM 中引進的警告（編譯器版本19.00.23026.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:18`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:18`來隱藏。
 
 |||
 |-|-|
@@ -241,9 +241,9 @@ ms.locfileid: "69630814"
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 中引進的警告 (編譯器版本 18.00.21005.1)
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 中引進的警告（編譯器版本18.00.21005.1）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:17`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:17`來隱藏。
 
 |||
 |-|-|
@@ -270,9 +270,9 @@ ms.locfileid: "69630814"
 | C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
 | C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 中引進的警告 (編譯器版本 17.00.51106.1)
+## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 中引進的警告（編譯器版本17.00.51106.1）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:16`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:16`來隱藏。
 
 |||
 |-|-|
@@ -305,7 +305,7 @@ ms.locfileid: "69630814"
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|' name ' 的 volatile 存取權受限於/volatile: < iso | ms > 設定;考慮使用 __iso_volatile_load/store 內建函式 |
+| C4746| `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -313,9 +313,9 @@ ms.locfileid: "69630814"
 | C4988 | `'type': variable declared outside class/function scope` |
 | C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010 中引進的警告 (編譯器版本 16.00.40219.01)
+## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010 中引進的警告（編譯器版本16.00.40219.01）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:15`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:15`來隱藏。
 
 |||
 |-|-|
@@ -329,9 +329,9 @@ ms.locfileid: "69630814"
 | C4986 | `'declaration': exception specification does not match previous declaration` |
 | C4987 | `nonstandard extension used: 'throw (...)'` |
 
-## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 中引進的警告 (編譯器版本 15.00.21022.08)
+## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 中引進的警告（編譯器版本15.00.21022.08）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:14`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:14`來隱藏。
 
 |||
 |-|-|
@@ -344,9 +344,9 @@ ms.locfileid: "69630814"
 | C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
 | C4985 | `'declaration': attributes not present on previous declaration.` |
 
-## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005 中引進的警告 (編譯器版本 14.00.50727.762)
+## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005 中引進的警告（編譯器版本14.00.50727.762）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:13`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:13`來隱藏。
 
 |||
 |-|-|
@@ -487,9 +487,9 @@ ms.locfileid: "69630814"
 | C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
 | C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
-## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003 中引進的警告 (編譯器版本 13.10.3077)
+## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003 中引進的警告（編譯器版本13.10.3077）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:13.00.9466`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:13.00.9466`來隱藏。
 
 |||
 |-|-|
@@ -523,9 +523,9 @@ ms.locfileid: "69630814"
 | C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
 | C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
-## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002 中引進的警告 (編譯器版本 13.00.9466)
+## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002 中引進的警告（編譯器版本13.00.9466）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項`/Wv:12`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:12`來隱藏。
 
 |||
 |-|-|
@@ -674,7 +674,7 @@ ms.locfileid: "69630814"
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++編譯器和組建工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[C/C++編譯器和組建工具的錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [編譯器警告 C4000-至 c5999](compiler-warnings-c4000-c5999.md) \
 [/Wv 編譯器選項](../../build/reference/compiler-option-warning-level.md) \
 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \

@@ -1,27 +1,25 @@
 ---
 title: LIB 輸出檔案
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: d7a6352665f12307bfa54025a32f9f7b84311dac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aeb46b0249ddf4155277866f7d8537bbfa98244
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269696"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439380"
 ---
 # <a name="lib-output-files"></a>LIB 輸出檔案
 
-下表所示，程式庫所產生的輸出檔會取決於所在正，模式。
+LIB 所產生的輸出檔取決於其使用的模式，如下表所示。
 
-|模式|Output|
+|[模式]|輸出|
 |----------|------------|
-|預設值 （建立或修改程式庫）|COFF 程式庫 (.lib)|
-|擷取的成員具有 /EXTRACT|目的檔 (.obj)|
-|建立匯出檔案，並匯入 /DEF 程式庫|匯入程式庫 (.lib) 和匯出 (.exp) 檔案|
+|預設值（建立或修改程式庫）|COFF 程式庫（.lib）|
+|使用/EXTRACT 解壓縮成員|物件（.obj）檔案|
+|使用/DEF 建立匯出檔案和匯入程式庫|匯入程式庫（.lib）和匯出檔案（.exp）|
 
 ## <a name="see-also"></a>另請參閱
 

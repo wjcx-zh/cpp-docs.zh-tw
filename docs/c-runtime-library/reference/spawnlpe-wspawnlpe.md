@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnlpe
 - _wspawnlpe
 - _spawnlpe
 - wspawnlpe
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: fe82d52418683d414ffbdd0f4fb0efd9bfd709cb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4fd7275969120b35253bbc12098f8dc8f69a1fed
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947654"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442507"
 ---
 # <a name="_spawnlpe-_wspawnlpe"></a>_spawnlpe、_wspawnlpe
 
@@ -79,7 +78,7 @@ intptr_t _wspawnlpe(
 *cmdname*<br/>
 待執行檔案的路徑。
 
-*arg0*， *arg1*，...*argn*<br/>
+*arg0*， *arg1*，... *...argn*<br/>
 引數指標的清單。 *Arg0*引數通常是指向*cmdname*的指標。 引數*arg1*到 *...argn*是形成新引數清單之字元字串的指標。 在 *...argn*之後，必須有**Null**指標來標記引數清單的結尾。
 
 *envp*<br/>
@@ -87,7 +86,7 @@ intptr_t _wspawnlpe(
 
 ## <a name="return-value"></a>傳回值
 
-同步 **_spawnlpe**或 **_wspawnlpe** （針對*模式*指定的 **_P_WAIT** ）的傳回值是新進程的結束狀態。 非同步 **_spawnlpe**或 **_wspawnlpe** （針對*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別使用非零的引數來呼叫**結束常式，** 您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，則確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
+同步 **_spawnlpe**或 **_wspawnlpe** （ **_P_WAIT**為*模式*指定）的傳回值是新進程的結束狀態。 非同步 **_spawnlpe**或 **_wspawnlpe** （為*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別使用非零的引數來呼叫**結束常式，** 您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，則確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
 
 |||
 |-|-|
@@ -107,7 +106,7 @@ intptr_t _wspawnlpe(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_spawnlpe**|\<process.h>|
 |**_wspawnlpe**|\<stdio.h> 或 \<wchar.h>|

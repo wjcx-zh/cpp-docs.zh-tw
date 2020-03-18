@@ -3,22 +3,21 @@ title: MFC 桌面應用程式
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
-- mfc
 helpviewer_keywords:
 - libraries, MFC
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607531"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447704"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面應用程式
 
-Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程式開發介面的物件導向包裝函式。 雖然這個程式庫可以用來建立非常簡單的桌面應用程式，但還是在您需要開發包含多個控制項的較複雜使用者介面時最有用。 您可以使用 MFC 來建立 Office 樣式使用者介面的應用程式。 如需 Windows 平臺本身的相關檔, 請參閱[windows 檔](/windows/index)。 如需在中C++建立 Windows 應用程式的詳細資訊, 請參閱[使用 WIN32 API 建立桌面 windows 應用](/windows/win32/index)程式。
+Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程式開發介面的物件導向包裝函式。 雖然這個程式庫可以用來建立非常簡單的桌面應用程式，但還是在您需要開發包含多個控制項的較複雜使用者介面時最有用。 您可以使用 MFC 來建立 Office 樣式使用者介面的應用程式。 如需 Windows 平臺本身的相關檔，請參閱[windows 檔](/windows/index)。 如需在中C++建立 Windows 應用程式的詳細資訊，請參閱[使用 WIN32 API 建立桌面 windows 應用](/windows/win32/index)程式。
 
 《MFC 參考》涵蓋構成 MFC 程式庫的類別、全域函式、全域變數和巨集。
 
@@ -31,7 +30,7 @@ Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程�
 > [!IMPORTANT]
 >  MFC 類別及其成員無法在 Windows 執行階段環境中執行的應用程式中使用。
 >
->  多位元組字元編碼的 (MBCS) MFC 程式庫 (DLL) 不再隨附於 Visual Studio，但是可以當做 Visual Studio 附加元件。 如需詳細資訊, 請參閱[MFC MBCS DLL 附加](mfc-mbcs-dll-add-on.md)元件。
+>  多位元組字元編碼的 (MBCS) MFC 程式庫 (DLL) 不再隨附於 Visual Studio，但是可以當做 Visual Studio 附加元件。 如需詳細資訊，請參閱[MFC MBCS DLL 附加](mfc-mbcs-dll-add-on.md)元件。
 
 ## <a name="in-this-section"></a>本節內容
 

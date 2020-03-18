@@ -12,7 +12,6 @@ f1_keywords:
 - CSimpleRow.AddRefRow
 - CSimpleRow.Compare
 - CSimpleRow::Compare
-- CSimpleRow
 - ATL::CSimpleRow::CSimpleRow
 - CSimpleRow.CSimpleRow
 - ATL.CSimpleRow.CSimpleRow
@@ -35,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390928"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441143"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 類別
 
-提供的預設實作，用於資料列控制代碼，用於[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)類別。
+針對[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)類別中使用的資料列控制碼，提供預設的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -62,8 +61,8 @@ class CSimpleRow
 
 |||
 |-|-|
-|[AddRefRow](#addrefrow)|將現有的資料列控制代碼的參考計數。|
-|[Compare](#compare)|比較兩個資料列，以查看它們是否參考相同的資料列執行個體。|
+|[AddRefRow](#addrefrow)|將參考次數 (Reference Count) 加入至現有的資料列控制代碼。|
+|[比較](#compare)|比較兩個數據列，以查看它們是否參考相同的資料列實例。|
 |[CSimpleRow](#csimplerow)|建構函式。|
 |[ReleaseRow](#releaserow)|釋放資料列。|
 
@@ -71,16 +70,16 @@ class CSimpleRow
 
 |||
 |-|-|
-|[m_dwRef](#dwref)|現有的資料列控制代碼的參考計數。|
-|[m_iRowset](#irowset)|表示資料指標的資料列集的索引。|
+|[m_dwRef](#dwref)|現有資料列控制碼的參考計數。|
+|[m_iRowset](#irowset)|代表資料指標之資料列集的索引。|
 
 ## <a name="remarks"></a>備註
 
-資料列控制代碼在邏輯上的結果資料列的唯一標籤。 `IRowsetImpl` 建立新`CSimpleRow`的要求中的每個資料列[irowsetimpl:: Getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)。 `CSimpleRow` 可以也將取代為您自己的資料列控制代碼的實作的預設樣板引數後，即`IRowsetImpl`。 取代這個類別的唯一需求是將提供的建構函式接受單一參數的類型取代類別**長**。
+資料列控制碼在邏輯上是結果資料列的唯一標記。 `IRowsetImpl` 會針對[IRowsetImpl：： GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中要求的每個資料列建立新的 `CSimpleRow`。 `CSimpleRow` 也可以取代為您自己的資料列控制碼的執行，因為它是 `IRowsetImpl`的預設樣板引數。 取代此類別的唯一需求是讓取代類別提供接受**LONG**類型之單一參數的函式。
 
-## <a name="addrefrow"></a> CSimpleRow::AddRefRow
+## <a name="addrefrow"></a>CSimpleRow：： AddRefRow
 
-將現有的資料列控制代碼的參考計數以執行緒安全的方式。
+以執行緒安全的方式，將參考計數加入至現有的資料列控制碼。
 
 ### <a name="syntax"></a>語法
 
@@ -88,9 +87,9 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> CSimpleRow::Compare
+## <a name="compare"></a>CSimpleRow：： Compare
 
-比較兩個資料列，以查看它們是否參考相同的資料列執行個體。
+比較兩個數據列，以查看它們是否參考相同的資料列實例。
 
 ### <a name="syntax"></a>語法
 
@@ -105,9 +104,9 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>傳回值
 
-HRESULT 值，通常是 s_ok 時，指出兩個資料列有相同的資料列執行個體，或不同 S_FALSE，指出兩個資料列。 請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程式設計人員參考*如需其他可能的傳回值。
+HRESULT 值通常 S_OK，表示兩個數據列都是相同的資料列實例，或是 S_FALSE，表示兩個數據列不同。 如需其他可能的傳回值，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
 
-## <a name="csimplerow"></a> Csimplerow:: Csimplerow
+## <a name="csimplerow"></a>CSimpleRow：： CSimpleRow
 
 建構函式。
 
@@ -120,15 +119,15 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 #### <a name="parameters"></a>參數
 
 *iRowsetCur*<br/>
-[in]編製索引的目前資料列集。
+在目前資料列集的索引。
 
 ### <a name="remarks"></a>備註
 
-設定組[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)要*iRowsetCur*。
+將[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)設定為*iRowsetCur*。
 
-## <a name="releaserow"></a> CSimpleRow::ReleaseRow
+## <a name="releaserow"></a>CSimpleRow：： ReleaseRow
 
-釋放資料列以執行緒安全的方式。
+以執行緒安全的方式釋放資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -136,9 +135,9 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> CSimpleRow::m_dwRef
+## <a name="dwref"></a>CSimpleRow：： m_dwRef
 
-現有的資料列控制代碼的參考計數。
+現有資料列控制碼的參考計數。
 
 ### <a name="syntax"></a>語法
 
@@ -146,9 +145,9 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> CSimpleRow::m_iRowset
+## <a name="irowset"></a>CSimpleRow：： m_iRowset
 
-表示資料指標的資料列集的索引。
+代表資料指標之資料列集的索引。
 
 ### <a name="syntax"></a>語法
 
@@ -158,6 +157,6 @@ KeyType m_iRowset;
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetImpl 類別](../../data/oledb/irowsetimpl-class.md)

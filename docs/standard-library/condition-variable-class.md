@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872411"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421881"
 ---
 # <a name="condition_variable-class"></a>condition_variable 類別
 
@@ -45,7 +45,7 @@ class condition_variable;
 |-|-|
 |[condition_variable](#condition_variable)|建構 `condition_variable` 物件。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 |||
 |-|-|

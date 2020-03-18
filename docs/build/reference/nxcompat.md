@@ -2,18 +2,18 @@
 title: /NXCOMPAT
 ms.date: 11/04/2016
 f1_keywords:
-- /NXCOMPAT
+- /NXCOMPAT_editbin
 helpviewer_keywords:
 - -NXCOMPAT editbin option
 - NXCOMPAT editbin option
 - /NXCOMPAT editbin option
 ms.assetid: 30e6b9bb-1189-4e27-b7c3-587e239437b7
-ms.openlocfilehash: a5e18795c7d90f3517a1a780161f1811f7aba07d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828c959ca027406f2698837ce0008c71f628b3b2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320431"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439216"
 ---
 # <a name="nxcompat"></a>/NXCOMPAT
 
@@ -23,7 +23,7 @@ ms.locfileid: "62320431"
 
 ## <a name="remarks"></a>備註
 
-表示可執行檔已經過測試，可與 Windows 資料執行防止功能相容。
+表示已測試可執行檔，以與 Windows 資料執行防止功能相容。
 
 如需詳細資訊，請參閱 [/NXCOMPAT (與資料執行防止相容)](nxcompat-compatible-with-data-execution-prevention.md)。
 

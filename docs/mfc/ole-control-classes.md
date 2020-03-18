@@ -1,8 +1,6 @@
 ---
 title: OLE 控制項類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - custom controls [MFC], classes
@@ -12,16 +10,16 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 86470c3e3e66d6aee2ce532570cea096641d2c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c28520d592c4bd49ab6cb40edbb2f5ddf59846
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186084"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447642"
 ---
 # <a name="ole-control-classes"></a>OLE 控制項類別
 
-這些是您在撰寫 OLE 控制項時使用的主要類別。 `COleControlModule` OLE 控制項模組中的類別就像[CWinApp](../mfc/reference/cwinapp-class.md)應用程式中的類別。 每個模組會實作一個或多個 OLE 控制項；這些控制項是由 `COleControl` 物件表示。 這些控制項會使用 `CConnectionPoint` 物件與其容器通訊。
+這些是您在撰寫 OLE 控制項時使用的主要類別。 OLE 控制項模組中的 `COleControlModule` 類別，就像應用程式中的[CWinApp](../mfc/reference/cwinapp-class.md)類別。 每個模組會實作一個或多個 OLE 控制項；這些控制項是由 `COleControl` 物件表示。 這些控制項會使用 `CConnectionPoint` 物件與其容器通訊。
 
 `CPictureHolder` 和 `CFontHolder` 類別會封裝圖片和字型的 COM 介面，而 `COlePropertyPage` 和 `CPropExchange` 類別可協助您為您的控制項實作屬性頁和屬性持續性。
 
@@ -44,7 +42,7 @@ ms.locfileid: "62186084"
 在類似對話方塊的圖形介面中顯示 OLE 控制項的屬性。
 
 [CPropExchange](../mfc/reference/cpropexchange-class.md)<br/>
-支援 OLE 控制項的屬性持續性實作。 類似於[CDataExchange](../mfc/reference/cdataexchange-class.md)對話方塊。
+支援 OLE 控制項的屬性持續性實作。 類似于對話方塊的[CDataExchange](../mfc/reference/cdataexchange-class.md) 。
 
 [CMonikerFile](../mfc/reference/cmonikerfile-class.md)<br/>
 取得 Moniker 或者可以製作成 Moniker 的字串表示，並且與以 Moniker 為名的串流進行同步繫結。
@@ -66,4 +64,4 @@ ms.locfileid: "62186084"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

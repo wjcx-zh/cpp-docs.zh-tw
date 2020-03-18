@@ -1,20 +1,18 @@
 ---
 title: OLE 通用對話方塊類別
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - dialog classes [MFC], OLE
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: d34c141fc9a2b53eab6a4c0b0ce1799ff5243d84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b44a7b203c17f09f872cfedbb05798affb57f0f9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186387"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447669"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE 通用對話方塊類別
 
@@ -52,4 +50,4 @@ ms.locfileid: "62186387"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別總覽](../mfc/class-library-overview.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420817"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445674"
 ---
 # <a name="iview-interface"></a>IView 介面
 
@@ -54,6 +54,7 @@ Header: afxwinforms.h (定義於組件 atlmfc\lib\mfcmifc80.dll)
 ## <a name="onactivateview"></a>IView：： OnActivateView
 
 當 view 已啟動或停用時，由 MFC 呼叫。
+
 ```
 void OnActivateView(bool activate);
 ```
@@ -66,6 +67,7 @@ void OnActivateView(bool activate);
 ## <a name="oninitialupdate"></a>IView：： OnInitialUpdate
 
 在第一次將視圖附加至檔，但在一開始顯示視圖之前，由架構呼叫。
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>IView：： OnUpdate
 
 在修改視圖的檔之後，由 MFC 呼叫。
+
 ```
 void OnUpdate();
 ```

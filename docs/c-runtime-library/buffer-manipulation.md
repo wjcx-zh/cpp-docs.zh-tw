@@ -1,18 +1,16 @@
 ---
 title: 緩衝區操作
 ms.date: 04/04/2018
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: e8a449cbfa6a52ccc2346e2215ce187c09d677e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590498"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443596"
 ---
 # <a name="buffer-manipulation"></a>緩衝區操作
 
@@ -20,7 +18,7 @@ ms.locfileid: "50590498"
 
 ## <a name="buffer-manipulation-routines"></a>緩衝區操作常式
 
-|常式傳回的值|使用|
+|常式|使用|
 |-------------|---------|
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|從一個緩衝區複製字元到另一個緩衝區，直到已複製指定的字元或指定的字元數為止|
 |[memchr、wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|傳回緩衝區中在指定字元數內第一個出現之指定字元的指標|

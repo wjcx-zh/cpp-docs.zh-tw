@@ -1,29 +1,26 @@
 ---
-title: CTreeCtrl 和CTreeView
+title: CTreeCtrl 和 CTreeView 比較
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
-- CTreeView
 helpviewer_keywords:
 - tree view controls
 - CTreeCtrl class [MFC], vs. CTreeView class [MFC]
 - CTreeView class [MFC], vs. CTreeCtrl class [MFC]
 - tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
-ms.openlocfilehash: 29349e169e5ad8475001235d9b355da52156d683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c78dfa9920c913fdbedb009c5a6f275a3e3e273
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241929"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445225"
 ---
-# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl 和CTreeView
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl 和 CTreeView 比較
 
-MFC 提供封裝樹狀目錄控制項的兩個類別：[CTreeCtrl](../mfc/reference/ctreectrl-class.md)並[CTreeView](../mfc/reference/ctreeview-class.md)。 每個類別是在不同的情況下很有用。
+MFC 提供兩個封裝樹狀目錄控制項的類別： [CTreeCtrl](../mfc/reference/ctreectrl-class.md)和[CTreeView](../mfc/reference/ctreeview-class.md)。 在不同的情況下，每個類別都很有用。
 
-使用`CTreeCtrl`時需要純文字的子視窗控制項; 比方說，在對話方塊中。 特別是要使用`CTreeCtrl`如果在視窗中，如同一般的對話方塊中會有其他子控制項。
+當您需要一般的子視窗控制項時，請使用 `CTreeCtrl`。例如，在對話方塊中。 如果視窗中會有其他子控制項，則您特別想要使用 `CTreeCtrl`，如同在一般的對話方塊中。
 
-使用`CTreeView`當您想要做為文件/檢視架構中的 [檢視] 視窗的樹狀目錄控制項，以及樹狀目錄控制項。 A`CTreeView`會佔用整個工作區的框架視窗或分隔器視窗。 它會自動調整大小時調整它的父視窗，而且它可以處理來自功能表、 快速鍵和工具列的命令訊息。 由於樹狀目錄控制項包含顯示樹狀結構所需的資料，對應的文件物件不必是複雜的作業，您甚至可以使用[CDocument](../mfc/reference/cdocument-class.md)做為文件範本中的文件類型。
+當您想要讓樹狀目錄控制項在檔/視圖架構和樹狀目錄控制項中做為「視圖視窗」的作用時，請使用 `CTreeView`。 `CTreeView` 將會佔用框架視窗或分隔器視窗的整個工作區。 當調整其父視窗的大小時，它會自動調整大小，而且可以從功能表、快速鍵和工具列處理命令訊息。 由於樹狀目錄控制項包含顯示樹狀結構所需的資料，因此對應的檔物件不一定要複雜，因為您甚至可以使用[CDocument](../mfc/reference/cdocument-class.md)做為檔範本中的檔案類型。
 
 ## <a name="see-also"></a>另請參閱
 

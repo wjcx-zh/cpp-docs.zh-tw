@@ -1,8 +1,6 @@
 ---
 title: 地區設定名稱、語言和國家/地區字串
 ms.date: 12/10/2018
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - country/region strings
 - localization, locale
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 512eb589d964da9ef8e87f4193362c739b39b4b0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d9baf3622064a7f035d0eb2b096916ae81a3bd50
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500053"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443120"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT 地區設定名稱、語言和國家/地區字串
 
@@ -41,7 +39,7 @@ ms.locfileid: "69500053"
 藉由使用 `setlocale` 分類，可以為 `_wsetlocale` 和 `LC_ALL` 函式同時指定所有地區設定分類。 藉由使用具有此格式的地區設定引數，您可以將分類全設定為相同的地區設定，或是為每個分類個別設定：
 
 > *LC-ALL-specifier* :: *locale*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\| \[**LC_COLLATE=** _locale_]\[ **;LC_CTYPE=** _locale_]\[ **;LC_MONETARY=** _locale_]\[ **;LC_NUMERIC=** _locale_]\[ **;LC_TIME=** _locale_]
+&nbsp;&nbsp;&nbsp;&nbsp;\| \[**LC_COLLATE =** _地區_設定]\[ **;LC_CTYPE =** _地區_設定]\[ **;LC_MONETARY =** _地區_設定]\[ **;LC_NUMERIC =** _地區_設定]\[ **;LC_TIME =** _地區_設定]
 
 您可以指定多個分類類型，並以分號隔開。 未指定的分類類型會使用目前的地區設定。 例如，這個程式碼片段會將所有分類的目前地區設定設為 `de-DE`，然後將分類 `LC_MONETARY` 設為 `en-GB` ，並將 `LC_TIME` 設為 `es-ES`：
 

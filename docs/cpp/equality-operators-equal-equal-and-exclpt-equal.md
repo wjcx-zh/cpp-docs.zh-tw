@@ -2,7 +2,6 @@
 title: 等號比較運算子：== 和 !=
 ms.date: 11/04/2016
 f1_keywords:
-- not_eq
 - '!='
 - ==
 helpviewer_keywords:
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392163"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444407"
 ---
 # <a name="equality-operators--and-"></a>等號比較運算子：== 和 !=
 
@@ -34,13 +33,13 @@ expression != expression
 
 二進位相等運算子會比較其運算元，以進行嚴格的相等或不等比較。
 
-相等運算子等於 (`==`) 和不等於 (`!=`) 的優先順序低於關係運算子，但是它們的行為類似。 這些運算子的結果型別**bool**。
+相等運算子等於 (`==`) 和不等於 (`!=`) 的優先順序低於關係運算子，但是它們的行為類似。 這些運算子的結果類型為**bool**。
 
-等於運算子 (`==`) 會傳回 **，則為 true** (1) 如果兩個運算元具有相同的值; 否則它會傳回**false** (0)。 不等於運算子 (`!=`) 會傳回 **，則為 true**運算元沒有相同的值; 否則它會傳回**false**。
+如果兩個運算元具有相同的值，則等於運算子（`==`）會傳回**true** （1）;否則，它會傳回**false** （0）。 如果運算元的值不相同，則不等於運算子（`!=`）會傳回**true** ;否則，它會傳回**false**。
 
 ## <a name="operator-keyword-for-"></a>!= 的運算子關鍵字
 
-`not_eq` 運算子是 `!=` 的文字對等用法。 有兩種方式來存取`not_eq`在程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。
+`not_eq` 運算子是 `!=` 的文字對等用法。 有兩種方式可存取您程式中的 `not_eq` 運算子：包含標頭檔 `iso646.h`，或使用[/za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能）編譯器選項進行編譯。
 
 ## <a name="example"></a>範例
 
@@ -60,7 +59,7 @@ int main() {
 }
 ```
 
-相等運算子可以比較相同類型成員的指標。 這類相較之下，執行成員指標轉換。 成員指標也可以與判斷值為 0 的常數運算式進行比較。
+相等運算子可以比較相同類型成員的指標。 在這種比較中，會執行指標對成員的轉換。 成員指標也可以與判斷值為 0 的常數運算式進行比較。
 
 ## <a name="see-also"></a>另請參閱
 

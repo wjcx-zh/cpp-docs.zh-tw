@@ -1,8 +1,6 @@
 ---
 title: 低層級 I/O
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O [CRT], low-level
 - I/O [CRT], functions
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740149"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443097"
 ---
 # <a name="low-level-io"></a>低層級 I/O
 
@@ -23,7 +21,7 @@ ms.locfileid: "57740149"
 
 低層級常數可以使用下列預先定義的檔案描述項，來存取於程式啟動時開啟的標準資料流。
 
-|資料流|檔案描述項|
+|STREAM|檔案描述項|
 |------------|---------------------|
 |**stdin**|0|
 |**stdout**|1|
@@ -33,7 +31,7 @@ ms.locfileid: "57740149"
 
 ## <a name="low-level-io-functions"></a>低層級 I/O 函式
 
-|功能|使用|
+|函式|使用|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|關閉檔案|
 |[_commit](../c-runtime-library/reference/commit.md)|將檔案排清到磁碟|
@@ -44,9 +42,9 @@ ms.locfileid: "57740149"
 |[_lseek、_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|將檔案指標重新置放到指定位置|
 |[_open、_wopen](../c-runtime-library/reference/open-wopen.md)|開啟檔案|
 |[_read](../c-runtime-library/reference/read.md)|從檔案讀取資料|
-|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)、 [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|針對檔案共用開啟檔案|
+|[_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md) 以及 [_sopen_s、_wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|針對檔案共用開啟檔案|
 |[_tell、_telli64](../c-runtime-library/reference/tell-telli64.md)|取得目前檔案指標位置|
-|[_umask](../c-runtime-library/reference/umask.md)、 [_umask_s](../c-runtime-library/reference/umask-s.md)|設定檔案權限遮罩|
+|[_umask](../c-runtime-library/reference/umask.md)、[_umask_s](../c-runtime-library/reference/umask-s.md)|設定檔案權限遮罩|
 |[_write](../c-runtime-library/reference/write.md)|將資料寫入檔案|
 
 **_dup** 和 **_dup2** 通常是用來建立預先定義的檔案描述項與不同檔案的關聯。

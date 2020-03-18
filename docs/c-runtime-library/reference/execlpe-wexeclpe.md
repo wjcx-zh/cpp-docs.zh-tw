@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _wexeclpe
-- execlpe
 - wexeclpe
 - _execlpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0783e07c945de7d65a11247efc6346c5e315c900
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941902"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443022"
 ---
 # <a name="_execlpe-_wexeclpe"></a>_execlpe、_wexeclpe
 
@@ -69,7 +68,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 待執行檔案的路徑。
 
-*arg0*，...*argn*<br/>
+*arg0*，... *...argn*<br/>
 參數指標的清單。
 
 *envp*<br/>
@@ -89,17 +88,17 @@ intptr_t _wexeclpe(
 |**ENOEXEC**|指定的檔案無法執行或可執行檔格式無效。|
 |**ENOMEM**|沒有足夠的記憶體可用來執行新處理序；可用的記憶體已損毀；或存在無效的區塊，表示未正確配置呼叫的處理序。|
 
-如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
 所有這些函式都會載入和執行新處理序，並將每個命令列引數作為個別參數傳遞，也會將指標的陣列傳遞至環境設定。 這些函式會使用**PATH**環境變數來尋找要執行的檔案。
 
-**_Execlpe**函數會驗證它們的參數。 如果*cmdname*或*arg0*是 null 指標或空字串，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。 未啟動任何新的處理序。
+**_Execlpe**函式會驗證其參數。 如果*cmdname*或*arg0*是 null 指標或空字串，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回-1。 未啟動任何新的處理序。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|選擇性標頭|
+|函式|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_execlpe**|\<process.h>|\<errno.h>|
 |**_wexeclpe**|\<process.h> 或 \<wchar.h>|\<errno.h>|

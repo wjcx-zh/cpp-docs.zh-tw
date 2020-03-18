@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141800"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445115"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在中C++為 UWP 應用程式建立異步操作
 
@@ -31,7 +31,7 @@ ms.locfileid: "77141800"
 
 - `create_async` 函式的行為取決於所收到工作函式的傳回類型。 傳回工作 ( `task<T>` 或 `task<void>`) 的工作函式會在呼叫 `create_async`的內容中同步執行。 傳回 `T` 或 `void` 的工作函式則會在任意內容中執行。
 
-- 您可以使用 [concurrency::task::then](reference/task-class.md#then) 方法建立逐一執行的工作鏈結。 在 UWP 應用程式中，工作接續的預設內容取決於此工作的結構。 如果工作是藉由傳遞非同步動作至工作建構函式所建立，或是藉由傳遞傳回非同步動作的 Lambda 運算式所建立，則該工作的所有預設接續內容都會是目前的內容。 如果工作不是從非同步動作建構，則工作的接續內容會預設為使用任意內容。 您可以使用 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 類別覆寫預設內容。
+- 您可以使用 [concurrency::task::then](reference/task-class.md#then) 方法建立逐一執行的工作鏈結。 在 UWP 應用程式中，工作接續的預設內容取決於此工作的結構。 如果工作是藉由傳遞非同步動作至工作建構函式所建立，或是藉由傳遞傳回非同步動作的 Lambda 運算式所建立，則該工作的所有預設接續內容都會是目前的內容。 如果工作不是從非同步動作所建立，則預設會使用任意內容做為工作的接續。 您可以使用 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 類別覆寫預設內容。
 
 ## <a name="in-this-document"></a>本文件內容
 
@@ -90,7 +90,7 @@ Windows 執行階段是一種程式設計介面，您可以用來建立僅在特
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a> 範例: 建立 C ++ Windows 執行階段元件並從 C# 使用它
+## <a name="example-component"></a>範例：建立C++ Windows 執行階段元件，並從 C\# 使用它
 
 請考慮使用 XAML 的應用程式C# ，以及定義 UI 和C++ Windows 執行階段元件來執行計算密集型作業。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明這四個 Windows 執行階段非同步工作介面之間的差異，請建立**空白方案**，並將其命名為 `Primes`，以 Visual Studio 開始。 然後在方案中新增 [Windows 執行階段元件] 專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 `public` 方法都會定義四個非同步介面的其中一個。 傳回值的方法會傳回[Windows：： Foundation：： collection：： IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_)物件。 報告進度的方法會產生 `double` 值，用以定義整體工作已完成的百分比。
 
@@ -188,7 +188,7 @@ Windows 執行階段會使用 COM 執行緒模型。 在這個模型中，物件
 
 ![Windows 執行階段 CommonWords 應用程式](../../parallel/concrt/media/concrt_windows_common_words.png "Windows 執行階段 CommonWords 應用程式")
 
-在這個範例中可以支援取消，因為支援 `task` 的 `create_async` 物件使用隱含取消語彙基元。 如果您的工作需要以合作方式回應取消，請定義您的工作函式使其接受 `cancellation_token` 物件。 如需在 PPL 中取消的詳細資訊，請參閱 [Cancellation in the PPL](cancellation-in-the-ppl.md)。
+在此範例中，可以支援取消，因為支援 `create_async` 的 `task` 物件會使用隱含解除標記。 如果您的工作需要以合作方式回應取消，請定義您的工作函式使其接受 `cancellation_token` 物件。 如需在 PPL 中取消的詳細資訊，請參閱 [Cancellation in the PPL](cancellation-in-the-ppl.md)。
 
 ## <a name="see-also"></a>另請參閱
 

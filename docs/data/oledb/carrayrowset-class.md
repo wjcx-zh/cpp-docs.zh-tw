@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,16 +42,16 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176157"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441720"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 類別
 
-使用陣列語法的資料列集的存取項目。
+使用陣列語法存取資料列集的元素。
 
 ## <a name="syntax"></a>語法
 
@@ -66,7 +65,7 @@ class CArrayRowset :
 ### <a name="parameters"></a>參數
 
 *TAccessor*<br/>
-您想要使用的資料列集的存取子類別的型別。
+您想要讓資料列集使用之存取子類別的類型。
 
 ## <a name="requirements"></a>需求
 
@@ -79,13 +78,13 @@ class CArrayRowset :
 |||
 |-|-|
 |[CArrayRowset](#carrayrowset)|建構函式。|
-|[快照集](#snapshot)|讀入記憶體中的整個資料列集。|
+|[快照式](#snapshot)|將整個資料列集讀取到記憶體中。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
-|[Operator&#91;&#93;](#operator)|存取資料列集的項目。|
+|[操作&#91;&#93;](#operator)|存取資料列集的元素。|
 
 ### <a name="data-members"></a>資料成員
 
@@ -93,9 +92,9 @@ class CArrayRowset :
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|已讀取的資料列數目。|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowset"></a>CArrayRowset：： CArrayRowset
 
-建立新的 `CArrayRowset` 物件。
+建立新 `CArrayRowset` 物件。
 
 ### <a name="syntax"></a>語法
 
@@ -105,10 +104,10 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>參數
 
-*nMax*<br/>
+*N 上限*<br/>
 [in] 資料列集的最大資料列數。
 
-## <a name="snapshot"></a> CArrayRowset::Snapshot
+## <a name="snapshot"></a>CArrayRowset：： Snapshot
 
 將整個資料列集讀取至記憶體，建立其影像或快照。
 
@@ -118,7 +117,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="operator"></a>CArrayRowset：： operator
 
 提供在資料列集中存取資料列，類似陣列的語法。
 
@@ -142,11 +141,11 @@ TAccessor & operator[](int nrow);
 
 ### <a name="remarks"></a>備註
 
-如果*nRow*超出資料列集中的資料列數目，會擲回例外狀況。
+如果*nRow*超過資料列集中的資料列數目，則會擲回例外狀況。
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="nrowsread"></a>CArrayRowset：： m_nRowsRead
 
-包含資料列集已讀取的資料列的數目。
+包含已讀取之資料列集中的資料列數目。
 
 ### <a name="syntax"></a>語法
 
@@ -156,6 +155,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset 類別](../../data/oledb/crowset-class.md)

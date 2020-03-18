@@ -2,7 +2,7 @@
 title: /Zl (省略預設程式庫名稱)
 ms.date: 11/04/2016
 f1_keywords:
-- /zi
+- /zl
 - VC.Project.VCCLCompilerTool.OmitDefaultLibName
 helpviewer_keywords:
 - -Zl compiler option [C++]
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: 1bcb90dbf071253dc0561845e3bd713dc42d5aef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: c72377314abf755469075c7a4b431f4b8a64ee7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988562"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438630"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (省略預設程式庫名稱)
 
@@ -66,9 +66,9 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>.
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>＞。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

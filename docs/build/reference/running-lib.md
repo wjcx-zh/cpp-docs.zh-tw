@@ -4,7 +4,6 @@ description: 描述您可以搭配 lib 使用的命令列選項。
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
-- Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
 helpviewer_keywords:
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 871b92809f38b4dcbf84de802b1ac9940ea6f1e9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257555"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438946"
 ---
 # <a name="running-lib"></a>執行 LIB
 
@@ -60,7 +59,7 @@ File*命令*檔是文字檔。 @ 符號（ **\@** ）和檔案名之間不允許
 
 下列選項適用于所有的 LIB 模式：
 
-> **/ERRORREPORT** \[**無** &#124; **提示** &#124;佇列&#124; **傳送**]
+> **/ERRORREPORT** \[**無** &#124; **提示** &#124; **QUEUE**佇列&#124; **傳送**]
 
 /ERRORREPORT 選項已被取代。 從 Windows Vista 開始，錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。
 

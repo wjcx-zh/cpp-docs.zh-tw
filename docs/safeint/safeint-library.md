@@ -2,18 +2,16 @@
 title: SafeInt 程式庫
 ms.custom: index-page
 ms.date: 03/19/2019
-f1_keywords:
-- SafeInt
 helpviewer_keywords:
 - libraries, SafeInt
 - SafeInt library
 ms.assetid: 5321e875-67c5-49d7-9650-85a876552d14
-ms.openlocfilehash: 67aafdb978d5574c5031ea6911b464555094ad5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 39f50fc9076b033ecb20a585ec139ec240145252
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515583"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443939"
 ---
 # <a name="safeint-library"></a>SafeInt 程式庫
 
@@ -21,7 +19,7 @@ ms.locfileid: "65515583"
 
 ## <a name="in-this-section"></a>本節內容
 
-|區段|說明|
+|區段|描述|
 |-------------|-----------------|
 |[SafeInt 類別](../safeint/safeint-class.md)|這個類別可防止整數溢位。|
 |[SafeInt 函式](../safeint/safeint-functions.md)|不需建立 **SafeInt** 物件就能使用的函式。|
@@ -29,6 +27,6 @@ ms.locfileid: "65515583"
 
 ## <a name="related-sections"></a>相關章節
 
-|區段|說明|
+|區段|描述|
 |-------------|-----------------|
 |[C++ 語言參考](../cpp/cpp-language-reference.md)|適用於 C++ 語言的參考和概念性內容。|

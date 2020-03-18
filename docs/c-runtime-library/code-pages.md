@@ -1,8 +1,6 @@
 ---
 title: 字碼頁
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 13b31b7d7750158caf498d92db67fd3e61856c5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738564"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443496"
 ---
 # <a name="code-pages"></a>字碼頁
 
@@ -35,7 +33,7 @@ Microsoft 執行階段程式庫使用下列類型的字碼頁：
 
    也會將地區設定設定為系統預設 ANSI 字碼頁。
 
-- 地區設定字碼頁。 多個執行階段常式的行為取決於包含地區設定字碼頁的目前地區設定 (如需詳細資訊，請參閱[地區設定相關常式](../c-runtime-library/locale.md))。Microsoft 執行階段程式庫中的所有地區設定相關常式預設都會使用對應至 "C" 地區設定的字碼頁。 在執行階段，您可以變更或查詢與 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 呼叫搭配使用的地區設定字碼頁。
+- 地區設定字碼頁。 多個執行階段常式的行為取決於包含地區設定字碼頁的目前地區設定 （如需詳細資訊，請參閱[與地區設定相關的常式](../c-runtime-library/locale.md)）。根據預設，Microsoft 執行時間程式庫中所有與地區設定相關的常式都會使用對應于 "C" 地區設定的字碼頁。 在執行階段，您可以變更或查詢與 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 呼叫搭配使用的地區設定字碼頁。
 
 - 多位元組字碼頁。 執行階段程式庫中大部分多位元組字元常式的行為取決於目前多位元組字碼頁設定。 這些常式預設會使用系統預設 ANSI 字碼頁。 在執行階段，您可以分別使用 [_getmbcp](../c-runtime-library/reference/getmbcp.md) 和 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 來查詢和變更多位元組字碼頁。
 

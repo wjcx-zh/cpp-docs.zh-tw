@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873958"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419830"
 ---
 # <a name="multiset-class"></a>multiset 類別
 
@@ -199,7 +199,7 @@ multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 |[upper_bound](#upper_bound)|傳回迭代器，指向 `multiset` 中索引鍵大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|擷取 `multiset` 中用於排序項目值的比較物件之複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

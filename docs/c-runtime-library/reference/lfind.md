@@ -20,7 +20,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- lfind
 - _lfind
 helpviewer_keywords:
 - linear searching
@@ -30,12 +29,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953391"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442915"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -64,7 +63,7 @@ void *_lfind(
 *number*<br/>
 陣列元素數目。
 
-*width*<br/>
+*寬度*<br/>
 陣列元素的寬度。
 
 *compare*<br/>
@@ -76,13 +75,13 @@ void *_lfind(
 
 ## <a name="remarks"></a>備註
 
-**_Lfind**函式會在*數位*元素陣列中執行值索引*鍵*的線性搜尋，每個*寬度*為位元組。 不同于**bsearch**， **_lfind**不需要排序陣列。 *基底*引數是要搜尋之陣列基底的指標。 *Compare*引數是使用者所提供之常式的指標，可比較兩個陣列元素，然後傳回一個指定其關聯性的值。 **_lfind**會在搜尋期間呼叫*比較*常式一或多次，並在每次呼叫時將指標傳遞至兩個陣列元素。 *比較*常式必須比較元素，然後傳回非零（表示專案不同）或0（表示元素完全相同）。
+**_Lfind**函式會在*數位*元素陣列中執行值索引*鍵*的線性搜尋，每個*寬度*為位元組。 不同于**bsearch**， **_lfind**不需要排序陣列。 *基底*引數是要搜尋之陣列基底的指標。 *Compare*引數是使用者所提供之常式的指標，可比較兩個陣列元素，然後傳回一個指定其關聯性的值。 **_lfind**在搜尋期間呼叫*比較*常式一或多次，並在每次呼叫時將指標傳遞至兩個陣列元素。 *比較*常式必須比較元素，然後傳回非零（表示專案不同）或0（表示元素完全相同）。
 
-這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*Width*小於零，則會叫用不正確參數處理常式，如參數中所述[驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。
+這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*Width*小於零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 

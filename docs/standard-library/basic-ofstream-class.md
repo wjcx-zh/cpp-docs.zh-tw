@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865859"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416904"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream 類別
 
@@ -86,7 +86,7 @@ int main(int argc, char **argv)
 |[rdbuf](#rdbuf)|傳回預存資料流緩衝區的位址。|
 |[swap](#swap)|將這個 `basic_ofstream` 的內容和提供的 `basic_ofstream` 內容交換。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

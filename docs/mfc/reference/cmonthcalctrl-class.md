@@ -91,11 +91,11 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: 963aecfed4f6eb67a0ab227df06fce98c0778f7f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866386"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420201"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 
@@ -451,9 +451,9 @@ BOOL 值的指標。 如果值不是零，則控制項的設定不符合 [控制
 |值|一周中的日|
 |-----------|---------------------|
 |0|星期一|
-|1|Tuesday|
+|1|星期二|
 |2|星期三|
-|3|Thursday|
+|3|星期四|
 |4|星期五|
 |5|星期六|
 |6|星期日|

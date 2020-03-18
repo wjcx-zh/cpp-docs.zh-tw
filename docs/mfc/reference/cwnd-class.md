@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855461"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420985"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -2078,7 +2078,7 @@ BOOL CreateControl(
 指出*pPersist*中的資料是否應解讀為 IStorage 或 IStream 資料。 如果*pPersist*中的資料是儲存體，則*BSTORAGE*應為 TRUE。 如果*pPersist*中的資料是資料流程， *BSTORAGE*應該是 FALSE。 預設值為 FALSE。
 
 *bstrLicKey*<br/>
-選擇性的授權金鑰資料。 只有在建立需要執行時間授權金鑰的控制項時，才需要此資料。 如果控制項支援授權，您必須提供授權金鑰，才能成功建立控制項。 預設值是 NULL。
+選擇性的授權金鑰資料。 只有在建立需要執行時間授權金鑰的控制項時，才需要此資料。 如果控制項支援授權，您必須提供授權金鑰，才能成功建立控制項。 預設值為 NULL。
 
 *clsid*<br/>
 控制項的唯一類別 ID。

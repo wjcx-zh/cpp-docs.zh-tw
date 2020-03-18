@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855465"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420971"
 ---
 # <a name="event-maps"></a>事件對應
 
@@ -126,7 +126,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="remarks"></a>備註
 
-*VtsParams*參數是 `VTS_` 常數中以空格分隔的值清單。 以空格分隔的其中一個或多個值（不是逗號）會指定函式的參數清單。 例如：
+*VtsParams*參數是 `VTS_` 常數中以空格分隔的值清單。 以空格分隔的其中一個或多個值（不是逗號）會指定函式的參數清單。 例如，
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -199,7 +199,7 @@ EVENT_CUSTOM_ID(
 
 ### <a name="remarks"></a>備註
 
-*VtsParams*引數是以空格分隔的清單，其中的值是來自 `VTS_` 常數。 以空格分隔的其中一個或多個值（而不是逗號）會指定函式的參數清單。 例如：
+*VtsParams*引數是以空格分隔的清單，其中的值是來自 `VTS_` 常數。 以空格分隔的其中一個或多個值（而不是逗號）會指定函式的參數清單。 例如，
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 

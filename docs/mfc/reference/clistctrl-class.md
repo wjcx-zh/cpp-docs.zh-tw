@@ -265,11 +265,11 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855469"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418675"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -708,7 +708,7 @@ CImageList* CreateDragImage(
 
 ### <a name="remarks"></a>備註
 
-`CImageList` 物件是永久的，您必須在完成時將它刪除。 例如：
+`CImageList` 物件是永久的，您必須在完成時將它刪除。 例如，
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);

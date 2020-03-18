@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864944"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417905"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 類別
 
@@ -168,7 +168,7 @@ HWND Create(
 控制項父視窗的控制碼。
 
 *rcPos*<br/>
-已保留。
+保留。
 
 *dwInitParam*<br/>
 要在控制項建立期間傳遞至控制項的資料。 當做*dwInitParam*傳遞的資料會顯示為[WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog)訊息的 LPARAM 參數，在建立時，將會傳送至複合控制項。

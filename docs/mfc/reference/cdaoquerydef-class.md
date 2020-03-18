@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883885"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418794"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 類別
 
@@ -137,7 +137,7 @@ Querydef 是一個資料存取物件，其中包含描述查詢的 SQL 語句及
 > [!NOTE]
 >  DAO 資料庫類別與以開放式資料庫連接（ODBC）為基礎的 MFC 資料庫類別不同。 所有的 DAO 資料庫類別名稱都具有 "CDao" 前置詞。 您仍然可以使用 DAO 類別來存取 ODBC 資料來源。 一般而言，以 DAO 為基礎的 MFC 類別比以 ODBC 為基礎的 MFC 類別更有能力;以 DAO 為基礎的類別可以透過自己的資料庫引擎來存取資料，包括透過 ODBC 驅動程式。 以 DAO 為基礎的類別也支援資料定義語言（DDL）作業，例如透過類別加入資料表，而不需要直接呼叫 DAO。
 
-## <a name="usage"></a>使用量
+## <a name="usage"></a>使用方式
 
 使用 querydef 物件來處理現有已儲存的查詢，或建立新儲存的查詢或暫存查詢：
 

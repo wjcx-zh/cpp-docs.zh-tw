@@ -3,11 +3,11 @@ title: Concurrency 命名空間運算子 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883719"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419235"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 

@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875817"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421818"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函式
 
@@ -184,7 +184,7 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - 否則，如果 `is_directory(f)`，則 `copy_file(from, to` / `from.filename(), opts)`。
 
-- 否則為 `copy_file(from, to, opts)`。
+- 否則，則設為 `copy_file(from, to, opts)`。
 
 否則，如果 `is_directory(f) && (opts & copy_options::recursive || !opts)`，則：
 

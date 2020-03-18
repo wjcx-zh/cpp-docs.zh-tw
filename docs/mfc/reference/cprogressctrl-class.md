@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 9d63a1113e521eb73c99c47b335eb7ab00ccd753
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866320"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421531"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 
@@ -297,11 +297,11 @@ int GetState() const;
 
 目前進度列控制項的狀態，也就是下列其中一個值：
 
-|值|State|
+|值|狀態|
 |-----------|-----------|
 |PBST_NORMAL|進行中|
 |PBST_ERROR|錯誤|
-|PBST_PAUSED|已暫停|
+|PBST_PAUSED|暫停|
 
 ### <a name="remarks"></a>備註
 

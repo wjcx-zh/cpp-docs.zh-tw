@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865485"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416932"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -2883,7 +2883,7 @@ ms.locfileid: "78865485"
     };
     ```
 
-   若要在您的程式碼中尋找先前版本嘗試優化的位置，請使用該版本的編譯器搭配 `/W3` 編譯器選項，並開啟警告 C4370。 例如：
+   若要在您的程式碼中尋找先前版本嘗試優化的位置，請使用該版本的編譯器搭配 `/W3` 編譯器選項，並開啟警告 C4370。 例如，
 
     ```cpp
     #pragma warning(default:4370)
@@ -3268,7 +3268,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 僅限 Visual Studio 2010：IntelliSense 不適用於 C++/CLI 程式碼或屬性；[尋找所有參考] 不適用於本機變數；程式碼模型不會從匯入的組件擷取類型名稱，也不會將類型解析成完整名稱。
 
-### <a name="libraries"></a>程式庫
+### <a name="libraries"></a>媒體櫃
 
 - SafeInt 類別包含在 Visual C++ 中，而且不再需要個個別下載。 只有在您開發的類別名稱也稱為 "SafeInt" 時，此中斷性變更對您才有影響。
 

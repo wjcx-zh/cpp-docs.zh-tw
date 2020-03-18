@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876200"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416764"
 ---
 # <a name="complex-class"></a>complex 類別
 
@@ -56,14 +56,14 @@ class complex
 |-|-|
 |[value_type](#value_type)|類型，表示用來代表複數之實數和虛數部分的資料類型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 |||
 |-|-|
 |[imag](#imag)|擷取複數的虛數部分。|
 |[real](#real)|擷取複數的實數部分。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |||
 |-|-|

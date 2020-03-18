@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883861"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418759"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 類別
 
@@ -325,7 +325,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |`dbInteger`|2|int|
 |`dbLong`|4|long|
 |`dbCurrency`|8|貨幣（ [COleCurrency](../../mfc/reference/colecurrency-class.md)）|
-|`dbSingle`|4|FLOAT|
+|`dbSingle`|4|float|
 |`dbDouble`|8|double|
 |`dbDate`|8|日期/時間（ [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)）|
 |`dbText`|1 - 255|文字（ [CString](../../atl-mfc-shared/reference/cstringt-class.md)）|
@@ -860,7 +860,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 下表顯示可能的資料庫類型及其對應的資料庫規範和路徑：
 
-|資料庫類型|規範|Path|
+|資料庫類型|規範|路徑|
 |-------------------|---------------|----------|
 |使用 Jet 資料庫引擎的資料庫|"[`database`];"|"`drive`：\\\ *路徑*\\\ *filename*.MDB|
 |dBASE III|"dBASE III;"|"`drive`：\\\ *路徑*"|
@@ -876,7 +876,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 匯入|"HTML Import;"|"`drive`：\\\ *路徑*\ *檔案名*"|
 |HTML 匯出|"HTML Export;"|"`drive`：\\\ *路徑*"|
 |Text|"Text;"|「磁片磁碟機：\\\path」|
-|ODBC|ODBCDATABASE = `database`;UID = *user*;PWD = *password*;DSN = [*值];* LOGINTIMEOUT =*秒;* "（這可能不是所有伺服器的完整連接字串，只是其中一個範例。 參數之間不需要有空格）。|None|
+|ODBC|ODBCDATABASE = `database`;UID = *user*;PWD = *password*;DSN = [*值];* LOGINTIMEOUT =*秒;* "（這可能不是所有伺服器的完整連接字串，只是其中一個範例。 參數之間不需要有空格）。|無|
 |Exchange|固定匯率<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [設定檔 =*設定檔*;]<br /><br /> [PWD = *password*;]<br /><br /> [DATABASE = `database`;] "|「*磁片磁碟機*：\\\ *路徑*\\\ *檔案名*.MDB|
 
 > [!NOTE]

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857049"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417429"
 ---
 # <a name="irelogger-class"></a>IRelogger 類別
 
@@ -62,7 +62,7 @@ public:
 
 [~ IRelogger](#irelogger-destructor)
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
 [OnBeginRelogging](#on-begin-relogging)\
 [OnBeginReloggingPass](#on-begin-relogging-pass)\

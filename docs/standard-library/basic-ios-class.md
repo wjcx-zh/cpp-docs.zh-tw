@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856482"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416988"
 ---
 # <a name="basic_ios-class"></a>basic_ios 類別
 
@@ -136,7 +136,7 @@ class basic_ios : public ios_base
 |[tie](#tie)|可確保一個資料流在另一個資料流之前先處理。|
 |[widen](#widen)|尋找指定字元的對等 `char_type`。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

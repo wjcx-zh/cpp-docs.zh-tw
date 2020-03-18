@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854093"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419781"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
 
@@ -242,7 +242,7 @@ ForwardIterator2 adjacent_difference(
 
 針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第一個樣板函式會將後續的 *`adjacent_difference` 值（1，* *a*2- *a*1，a3- *a*2）儲存在目的範圍中。
 
-針對輸入範圍中的 1、 *a*2、 *a*3 值序列，第二個樣板函式會在目的範圍中儲存連續 `adjacent_difference` 值1、a 2 *binary_op* *1、* 3 *binary_op* *a*2。
+針對輸入範圍中的 1、 *a*2、 *a*3 值序列，第二個樣板函式會在目的範圍中儲存連續 `adjacent_difference` 值1、a 2 *binary_op* *1、* 3 *binary_op* *a*2。 *a* *a* *a*
 
 二進位運算*binary_op*不需要是關聯或交換，因為已指定套用的作業順序。
 

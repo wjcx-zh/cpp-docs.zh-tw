@@ -21,11 +21,11 @@ helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
 ms.openlocfilehash: 8fa4e7a035ded2e1a20dd278a5d54d40252e1958
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862599"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417926"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 
@@ -135,7 +135,7 @@ HRESULT FinalConstruct();
 
 ### <a name="example"></a>範例
 
-通常會在衍生自 `CComObjectRootEx` 的類別中覆寫這個方法，以建立任何匯總物件。 例如：
+通常會在衍生自 `CComObjectRootEx` 的類別中覆寫這個方法，以建立任何匯總物件。 例如，
 
 [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]
 

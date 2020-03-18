@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862510"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417471"
 ---
 # <a name="service-map-macros"></a>服務對應宏
 
@@ -131,7 +131,7 @@ STDMETHOD(QueryService)(
 |S_OK|已成功建立或抓取服務。|
 |E_INVALIDARG|一或多個引數無效。|
 |E_OUTOFMEMORY|記憶體不足，無法建立服務。|
-|E_UNEXPECTED|發生未知的錯誤。|
+|E_UNEXPECTED|發生不明錯誤。|
 |E_NOINTERFACE|要求的介面不是此服務的一部分，或服務不明。|
 
 ### <a name="remarks"></a>備註

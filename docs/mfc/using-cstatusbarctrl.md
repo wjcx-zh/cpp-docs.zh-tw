@@ -1,24 +1,22 @@
 ---
 title: 使用 CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: b02b37cee930c0fa2522583c5c331bb4e0563ef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee691d013d578f4c16fa9eadabd05f8710f32d8e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411691"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442329"
 ---
 # <a name="using-cstatusbarctrl"></a>使用 CStatusBarCtrl
 
-您可以使用狀態列控制項 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 來建立反映各種應用程式的狀態資訊的控制項視窗。 狀態視窗可以分割為多個部分，以顯示多種類型的資訊。
+您可以使用狀態列控制項（[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)）來建立控制項視窗，以反映應用程式的各種狀態資訊。 狀態視窗可以分割為多個部分，以顯示多種類型的資訊。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
 - [建立狀態列的方法](../mfc/methods-of-creating-a-status-bar.md)
 

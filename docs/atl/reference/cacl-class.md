@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
 ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864901"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418143"
 ---
 # <a name="cacl-class"></a>CAcl 類別
 
@@ -90,7 +90,7 @@ class CAcl
 
 - 自
 
-- 系統
+- System
 
 任意 ACL 是由物件的擁有者，或授與物件 WRITE_DAC 存取權的任何人所控制。 它會指定特定使用者和群組對物件的存取權。 例如，檔案的擁有者可以使用任意的 ACL 來控制哪些使用者和群組可以和無法存取該檔案。
 

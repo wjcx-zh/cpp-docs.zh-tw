@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884146"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418444"
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -202,7 +202,7 @@ void DoSomething(const std::string& input){...}
 void DoSomething(const std::string&& input){...}
 ```
 
-只要關鍵字**void**是引數宣告清單的第一個和唯一成員，在參數宣告清單中以單一關鍵字**void**宣告的函式就不會採用任何引數。 在清單中其他位置的**void**類型引數會產生錯誤。 例如：
+只要關鍵字**void**是引數宣告清單的第一個和唯一成員，在參數宣告清單中以單一關鍵字**void**宣告的函式就不會採用任何引數。 在清單中其他位置的**void**類型引數會產生錯誤。 例如，
 
 ```cpp
 

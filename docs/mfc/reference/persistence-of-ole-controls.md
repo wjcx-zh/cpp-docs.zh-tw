@@ -6,11 +6,11 @@ helpviewer_keywords:
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855716"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421272"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控制項的持續性
 
@@ -646,7 +646,7 @@ OLE 控制項的字型屬性，將包含已轉換的 VBX 字型相關屬性。
 
 此函式只能由設計為 VBX 控制項直接取代的 OLE 控制項使用。 當 Visual Basic 開發環境將包含 VBX 控制項的表單轉換成使用對應的取代 OLE 控制項時，它會呼叫控制項的 `IDataObject::SetData` 函式，並傳入包含 VBX 控制項屬性資料的屬性集。 這項作業會接著叫用控制項的 `DoPropExchange` 函數。 `DoPropExchange` 可以呼叫 `PX_VBXFontConvert`，將 VBX 控制項的字型相關屬性（例如，"FontName"、"FontSize" 等）轉換成 OLE 控制項字型屬性的對應元件。
 
-只有在實際從 VBX 表單應用程式轉換控制項時，才應該呼叫 `PX_VBXFontConvert`。 例如：
+只有在實際從 VBX 表單應用程式轉換控制項時，才應該呼叫 `PX_VBXFontConvert`。 例如，
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]

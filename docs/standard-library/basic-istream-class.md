@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874796"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416918"
 ---
 # <a name="basic_istream-class"></a>basic_istream 類別
 
@@ -156,7 +156,7 @@ setstate(state);
 |[tellg](#tellg)|回報在資料流中目前的讀取位置。|
 |[unget](#unget)|將最近讀取的字元放回資料流。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|

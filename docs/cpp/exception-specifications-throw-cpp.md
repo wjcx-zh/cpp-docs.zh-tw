@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 4c7cc6027a3af4c300b88389cb29e3ccf091514e
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245874"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509404"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外狀況規格（throw，noexcept）C++（）
 
@@ -24,11 +24,13 @@ ms.locfileid: "74245874"
 ```cpp
 void MyFunction(int i) throw();
 ```
+
 通知編譯器，函式不會擲回任何例外狀況。 不過，在 **/std： c + + 14**模式中，如果函式擲回例外狀況，這可能會導致未定義的行為。 因此，我們建議使用[noexcept](../cpp/noexcept-cpp.md)運算子，而不是上述各項：
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
+
 下表摘要說明「Microsoft C++的例外狀況規格」的執行方式：
 
 |例外狀況規格|意義|

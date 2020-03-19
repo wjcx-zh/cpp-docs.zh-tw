@@ -3,12 +3,12 @@ title: 事件 (C++/CX)
 description: 如何使用C++/cx 在 Windows 執行階段中建立及使用事件處理常式。
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972191"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509364"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
@@ -28,7 +28,7 @@ Windows 執行階段中的許多元件會公開事件。 例如，當感應器�
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>使用
+### <a name="usage"></a>使用方式
 
 下列範例示範訂閱類別如何使用 `+=` 運算子訂閱事件，以及如何提供事件處理常式，以便在事件引發時叫用。 請注意，提供的函式符合在 `EventTest` 命名空間中發行者端定義之委派的簽章。
 
@@ -59,7 +59,7 @@ Windows 執行階段中的許多元件會公開事件。 例如，當感應器�
 
 事件來源叫用事件接收器上之事件處理常式的順序並不一定，每個呼叫可能都不一樣。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
 [委派](../cppcx/delegates-c-cx.md)<br/>

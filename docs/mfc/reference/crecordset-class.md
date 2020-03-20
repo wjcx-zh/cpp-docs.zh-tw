@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626195"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421013"
 ---
 # <a name="crecordset-class"></a>CRecordset 類別
 
@@ -151,13 +151,13 @@ class CRecordset : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名字|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CRecordset：： CRecordset](#crecordset)|建構 `CRecordset` 物件。 您的衍生類別必須提供可呼叫此函式的函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名字|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CRecordset：： AddNew](#addnew)|準備加入新記錄。 呼叫 `Update` 以完成新增。|
 |[CRecordset：： CanAppend](#canappend)|如果可以透過 `AddNew` 成員函式，將新記錄加入至記錄集，則傳回非零。|
@@ -217,7 +217,7 @@ class CRecordset : public CObject
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名字|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CRecordset：： m_hstmt](#m_hstmt)|包含記錄集的 ODBC 語句控制碼。 輸入 `HSTMT`。|
 |[CRecordset：： m_nFields](#m_nfields)|包含記錄集中的欄位資料成員數目。 輸入 `UINT`。|
@@ -226,12 +226,12 @@ class CRecordset : public CObject
 |[CRecordset：： m_strFilter](#m_strfilter)|包含指定結構化查詢語言 (SQL) （SQL） `WHERE` 子句的 `CString`。 用來做為篩選準則，只選取符合特定準則的記錄。|
 |[CRecordset：： m_strSort](#m_strsort)|包含指定 SQL `ORDER BY` 子句的 `CString`。 用來控制記錄的排序方式。|
 
-## <a name="remarks"></a> 備註
+## <a name="remarks"></a><a name="remarks"></a> 備註
 
 稱為「記錄集」，`CRecordset` 物件通常用於兩種形式：動態集和快照。 動態集會與其他使用者所做的資料更新保持同步。 快照集是資料的靜態視圖。 每個表單都代表一組在記錄集開啟時固定的記錄，但當您滾動到動態集中的記錄時，它會反映後續對記錄所做的變更，由其他使用者或應用程式中的其他記錄集所進行。
 
 > [!NOTE]
->  如果您使用的是資料存取物件（DAO）類別，而不是開放式資料庫連接（ODBC）類別，請改用 [類別[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) ]。 如需詳細資訊，請參閱 [總覽：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
+>  如果您使用的是資料存取物件（DAO）類別，而不是開放式資料庫連接（ODBC）類別，請改用 [類別[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) ]。 如需詳細資訊，請參閱文章[總覽：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
 
 若要使用任一種記錄集，您通常會從 `CRecordset`衍生應用程式特定的記錄集類別。 記錄集從資料來源選取記錄，然後您可以：
 
@@ -249,7 +249,7 @@ class CRecordset : public CObject
 
 在衍生的 `CRecordset` 類別中，記錄欄位交換（RFX）或大量記錄欄位交換（Bulk RFX）是用來支援記錄欄位的讀取和更新。
 
-如需有關記錄集和記錄欄位交換的詳細資訊，請參閱 [總覽中的文章：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)、[記錄集（ODBC）](../../data/odbc/recordset-odbc.md)、[記錄集：提取大量（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[記錄欄位交換（RFX）](../../data/odbc/record-field-exchange-rfx.md)中的記錄。 如需專注于動態程式和快照集，請參閱「[動態集](../../data/odbc/dynaset.md)」和「[快照](../../data/odbc/snapshot.md)」文章。
+如需有關記錄集和記錄欄位交換的詳細資訊，請參閱[下列文章：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)、[記錄集（odbc）](../../data/odbc/recordset-odbc.md)、[記錄集：以 Bulk （ODBC）提取記錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)，以及[記錄欄位交換（RFX）](../../data/odbc/record-field-exchange-rfx.md)。 如需專注于動態程式和快照集，請參閱「[動態集](../../data/odbc/dynaset.md)」和「[快照](../../data/odbc/snapshot.md)」文章。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -261,7 +261,7 @@ class CRecordset : public CObject
 
 **標頭：** afxdb。h
 
-##  <a name="addnew"></a>CRecordset：： AddNew
+##  <a name="crecordsetaddnew"></a><a name="addnew"></a>CRecordset：： AddNew
 
 準備將新記錄加入至資料表。
 
@@ -274,7 +274,7 @@ virtual void AddNew();
 您必須呼叫[Requery](#requery)成員函式，才能看到新加入的記錄。 記錄的欄位一開始是 Null。 （在資料庫術語中，Null 表示「沒有值」，而且與中C++的 null 不同）。若要完成此作業，您必須呼叫[Update](#update)成員函式。 `Update` 會將您的變更儲存至資料來源。
 
 > [!NOTE]
->  如果您已執行大量資料列提取，就無法呼叫 `AddNew`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您已執行大量資料列提取，就無法呼叫 `AddNew`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 `AddNew` 使用記錄集的欄位資料成員來準備新的空白記錄。 在您呼叫 `AddNew`之後，請在記錄集的欄位資料成員中設定您想要的值。 （您不需要針對此用途呼叫[Edit](#edit)成員函式，請只針對現有的記錄使用 `Edit`）。當您後續呼叫 `Update`時，欄位資料成員中已變更的值會儲存在資料來源上。
 
@@ -288,13 +288,13 @@ virtual void AddNew();
 
 對於尚未呼叫 `Open` 成員函式的記錄集，則不合法地呼叫 `AddNew`。 如果您為無法附加至的記錄集呼叫 `AddNew`，則會擲回 `CDBException`。 您可以藉由呼叫[CanAppend](#canappend)來判斷記錄集是否可更新。
 
-如需詳細資訊，請參閱下列文章：[資料錄集：記錄集更新記錄（ODBC）](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)、[記錄集的方式：加入、更新和刪除記錄（ODBC）](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)和[交易（odbc）](../../data/odbc/transaction-odbc.md)。
+如需詳細資訊，請參閱下列文章：[記錄集：記錄集更新記錄（odbc）](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)、[記錄集：加入、更新和刪除記錄（Odbc）](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)和[交易（odbc）](../../data/odbc/transaction-odbc.md)。
 
 ### <a name="example"></a>範例
 
-請參閱 [交易的文章：在記錄集（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)中執行交易。
+請參閱[交易：在記錄集中執行交易（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)一文。
 
-##  <a name="canappend"></a>CRecordset：： CanAppend
+##  <a name="crecordsetcanappend"></a><a name="canappend"></a>CRecordset：： CanAppend
 
 判斷先前開啟的記錄集是否可讓您加入新的記錄。
 
@@ -306,7 +306,7 @@ BOOL CanAppend() const;
 
 如果記錄集允許加入新記錄，則為非零。否則為0。 如果您以唯讀方式開啟記錄集，`CanAppend` 將會傳回0。
 
-##  <a name="canbookmark"></a>CRecordset：： CanBookmark
+##  <a name="crecordsetcanbookmark"></a><a name="canbookmark"></a>CRecordset：： CanBookmark
 
 判斷記錄集是否允許您使用書簽來標示記錄。
 
@@ -325,9 +325,9 @@ BOOL CanBookmark() const;
 > [!NOTE]
 >  順向記錄集不支援書簽。
 
-如需書簽和記錄集導覽的詳細資訊，請參閱 [記錄集的文章：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) 和 [記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)。
+如需書簽和記錄集導覽的詳細資訊，請參閱[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[記錄集：滾動（odbc）](../../data/odbc/recordset-scrolling-odbc.md)一文。
 
-##  <a name="cancel"></a>CRecordset：： Cancel
+##  <a name="crecordsetcancel"></a><a name="cancel"></a>CRecordset：： Cancel
 
 要求資料來源取消進行中的非同步作業，或來自第二個執行緒的進程。
 
@@ -339,7 +339,7 @@ void Cancel();
 
 請注意，MFC ODBC 類別不再使用非同步處理;若要執行非同步作業，您必須直接呼叫 ODBC API 函數 `SQLSetConnectOption`。 如需詳細資訊，請參閱《 *ODBC SDK 程式設計人員指南》* 中的「非同步執行函式」主題。
 
-##  <a name="cancelupdate"></a>CRecordset：： CancelUpdate
+##  <a name="crecordsetcancelupdate"></a><a name="cancelupdate"></a>CRecordset：： CancelUpdate
 
 在呼叫[Update](#update)之前，取消任何暫止的更新，由[編輯](#edit)或[AddNew](#addnew)作業所造成。
 
@@ -350,13 +350,13 @@ void CancelUpdate();
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  此成員函式不適用於使用大量資料列提取的記錄集，因為這類記錄集無法呼叫 `Edit`、`AddNew`或 `Update`。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  此成員函式不適用於使用大量資料列提取的記錄集，因為這類記錄集無法呼叫 `Edit`、`AddNew`或 `Update`。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 如果已啟用自動中途欄位檢查，`CancelUpdate` 會將成員變數還原為 `Edit` 或 `AddNew` 被呼叫之前所擁有的值;否則，任何值變更都會保留。 根據預設，當記錄集開啟時，自動欄位檢查會啟用。 若要停用此功能，您必須在[Open](#open)成員函式的*dwOptions*參數中指定 `CRecordset::noDirtyFieldCheck`。
 
-如需有關更新資料的詳細資訊，請參閱 [記錄集的文章：新增、更新和刪除記錄（ODBC）](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。
+如需有關更新資料的詳細資訊，請參閱[記錄集：加入、更新和刪除記錄（ODBC）](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)一文。
 
-##  <a name="canrestart"></a>CRecordset：： CanRestart
+##  <a name="crecordsetcanrestart"></a><a name="canrestart"></a>CRecordset：： CanRestart
 
 藉由呼叫 `Requery` 成員函式，判斷記錄集是否允許重新開機其查詢（以重新整理其記錄）。
 
@@ -368,7 +368,7 @@ BOOL CanRestart() const;
 
 如果允許重新查詢，則為非零值;否則為0。
 
-##  <a name="canscroll"></a>CRecordset：： CanScroll
+##  <a name="crecordsetcanscroll"></a><a name="canscroll"></a>CRecordset：： CanScroll
 
 判斷記錄集是否允許滾動。
 
@@ -382,9 +382,9 @@ BOOL CanScroll() const;
 
 ### <a name="remarks"></a>備註
 
-如需有關滾動的詳細資訊，請參閱 [記錄集的文章：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)。
+如需有關滾動的詳細資訊，請參閱[記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)一文。
 
-##  <a name="cantransact"></a>CRecordset：： CanTransact
+##  <a name="crecordsetcantransact"></a><a name="cantransact"></a>CRecordset：： CanTransact
 
 判斷記錄集是否允許交易。
 
@@ -400,7 +400,7 @@ BOOL CanTransact() const;
 
 如需詳細資訊，請參閱[交易（ODBC）](../../data/odbc/transaction-odbc.md)一文。
 
-##  <a name="canupdate"></a>CRecordset：： CanUpdate
+##  <a name="crecordsetcanupdate"></a><a name="canupdate"></a>CRecordset：： CanUpdate
 
 判斷是否可以更新記錄集。
 
@@ -416,7 +416,7 @@ BOOL CanUpdate() const;
 
 如果基礎資料來源為唯讀，或當您開啟記錄集時，如果您在*dwOptions*參數中指定 `CRecordset::readOnly`，則記錄集可能是唯讀的。
 
-##  <a name="checkrowseterror"></a>CRecordset：： CheckRowsetError
+##  <a name="crecordsetcheckrowseterror"></a><a name="checkrowseterror"></a>CRecordset：： CheckRowsetError
 
 呼叫以處理在記錄提取期間產生的錯誤。
 
@@ -444,9 +444,9 @@ ODBC API 函式傳回碼。 如需詳細資料，請參閱＜備註＞。
 |SQL_INVALID_HANDLE|函數失敗，因為環境控制碼無效、連接控制碼或語句控制碼不正確。 這表示程式設計錯誤。 `SQLError`不提供任何其他資訊。|
 |SQL_STILL_EXECUTING|以非同步方式啟動的函式仍在執行中。 請注意，根據預設，MFC 永遠不會將此值傳遞給 `CheckRowsetError`。MFC 會繼續呼叫 `SQLExtendedFetch`，直到不再傳回 SQL_STILL_EXECUTING。|
 
-如需 `SQLError`的詳細資訊，請參閱 Windows SDK。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需 `SQLError`的詳細資訊，請參閱 Windows SDK。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-##  <a name="close"></a>CRecordset：： Close
+##  <a name="crecordsetclose"></a><a name="close"></a>CRecordset：： Close
 
 關閉記錄集。
 
@@ -464,7 +464,7 @@ ODBC HSTMT 和為記錄集配置的所有記憶體都會解除配置。 通常�
 
 [!code-cpp[NVC_MFCDatabase#17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]
 
-##  <a name="crecordset"></a>CRecordset：： CRecordset
+##  <a name="crecordsetcrecordset"></a><a name="crecordset"></a>CRecordset：： CRecordset
 
 建構 `CRecordset` 物件。
 
@@ -488,9 +488,9 @@ CRecordset(CDatabase* pDatabase = NULL);
 
 ### <a name="example"></a>範例
 
-如需詳細資訊，請參閱 [記錄集的文章：宣告資料表的類別（ODBC）](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)。
+如需詳細資訊，請參閱[記錄集：宣告資料表的類別（ODBC）一](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)文。
 
-##  <a name="delete"></a>CRecordset：:D 刪除
+##  <a name="crecordsetdelete"></a><a name="delete"></a>CRecordset：:D 刪除
 
 刪除目前的記錄。
 
@@ -503,7 +503,7 @@ virtual void Delete();
 成功刪除之後，記錄集的欄位資料成員會設定為 Null 值，而且您必須明確地呼叫其中一個 `Move` 函數，才能移出已刪除的記錄。 當您移出已刪除的記錄之後，就無法返回它。 如果資料來源支援交易，您可以讓 `Delete` 呼叫交易的一部分。 如需詳細資訊，請參閱[交易（ODBC）](../../data/odbc/transaction-odbc.md)一文。
 
 > [!NOTE]
->  如果您已執行大量資料列提取，就無法呼叫 `Delete`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您已執行大量資料列提取，就無法呼叫 `Delete`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 > [!CAUTION]
 >  記錄集必須是可更新的，而且當您呼叫 `Delete`時，記錄集中必須有有效的記錄。否則，就會發生錯誤。 例如，如果您刪除記錄，但在再次呼叫 `Delete` 之前，未滾動到新的記錄，`Delete` 會擲回[CDBException](../../mfc/reference/cdbexception-class.md)。
@@ -516,7 +516,7 @@ virtual void Delete();
 
 [!code-cpp[NVC_MFCDatabase#18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]
 
-##  <a name="dobulkfieldexchange"></a>CRecordset：:D oBulkFieldExchange
+##  <a name="crecordsetdobulkfieldexchange"></a><a name="dobulkfieldexchange"></a>CRecordset：:D oBulkFieldExchange
 
 呼叫以將資料來源中的大量資料列交換到記錄集。 執行大量記錄欄位交換（Bulk RFX）。
 
@@ -542,9 +542,9 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 
 請注意，ClassWizard 不支援大量記錄欄位交換;因此，您必須撰寫對 Bulk RFX 函數的呼叫，以手動覆寫 `DoBulkFieldExchange`。 如需這些函數的詳細資訊，請參閱[記錄欄位交換](../../mfc/reference/record-field-exchange-functions.md)函式主題。
 
-如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 如需相關資訊，請參閱[記錄欄位交換（RFX）](../../data/odbc/record-field-exchange-rfx.md)一文。
+如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。 如需相關資訊，請參閱[記錄欄位交換（RFX）](../../data/odbc/record-field-exchange-rfx.md)一文。
 
-##  <a name="dofieldexchange"></a>CRecordset：:D oFieldExchange
+##  <a name="crecordsetdofieldexchange"></a><a name="dofieldexchange"></a>CRecordset：:D oFieldExchange
 
 呼叫以在記錄集的欄位資料成員和資料來源上的對應記錄之間交換資料（雙向）。 實行記錄欄位交換（RFX）。
 
@@ -568,7 +568,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
 
 欄位資料的交換（稱為記錄欄位交換（RFX））可以雙向運作：從記錄集物件的欄位資料成員，到資料來源上記錄的欄位，以及從資料來源的記錄到記錄集物件。
 
-執行衍生記錄集類別的 `DoFieldExchange` 時，您通常必須採取的動作是使用 ClassWizard 建立類別，並指定欄位資料成員的名稱和資料類型。 您也可以將程式碼新增至 ClassWizard 寫入的內容，以指定參數資料成員，或處理您動態繫結的任何資料行。 如需詳細資訊，請參閱 [記錄集的文章：動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+執行衍生記錄集類別的 `DoFieldExchange` 時，您通常必須採取的動作是使用 ClassWizard 建立類別，並指定欄位資料成員的名稱和資料類型。 您也可以將程式碼新增至 ClassWizard 寫入的內容，以指定參數資料成員，或處理您動態繫結的任何資料行。 如需詳細資訊，請參閱[記錄集：動態地系結資料行（ODBC）](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)一文。
 
 當您使用 ClassWizard 宣告您的衍生記錄集類別時，嚮導會為您撰寫 `DoFieldExchange` 的覆寫，如下列範例所示：
 
@@ -576,9 +576,9 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
 
 如需 RFX 函數的詳細資訊，請參閱主題[記錄欄位交換](../../mfc/reference/record-field-exchange-functions.md)函式。
 
-如需有關 `DoFieldExchange`的進一步範例和詳細資料，請參閱 [記錄欄位交換的文章：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 如需 RFX 的一般資訊，請參閱[記錄欄位交換](../../data/odbc/record-field-exchange-rfx.md)一文。
+如需有關 `DoFieldExchange`的進一步範例和詳細資料，請參閱[記錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)一文。 如需 RFX 的一般資訊，請參閱[記錄欄位交換](../../data/odbc/record-field-exchange-rfx.md)一文。
 
-##  <a name="edit"></a>CRecordset：： Edit
+##  <a name="crecordsetedit"></a><a name="edit"></a>CRecordset：： Edit
 
 允許對目前記錄進行變更。
 
@@ -591,7 +591,7 @@ virtual void Edit();
 呼叫 `Edit`之後，您可以直接重設欄位資料成員的值，藉以變更它們。 當您後續呼叫[Update](#update)成員函式以儲存資料來源的變更時，作業就會完成。
 
 > [!NOTE]
->  如果您已執行大量資料列提取，就無法呼叫 `Edit`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您已執行大量資料列提取，就無法呼叫 `Edit`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 `Edit` 儲存記錄集的資料成員值。 如果您呼叫 `Edit`、進行變更，然後再次呼叫 `Edit`，則記錄的值會還原為第一次 `Edit` 呼叫之前的內容。
 
@@ -603,13 +603,13 @@ virtual void Edit();
 
 如果您在呼叫 `Update`之前，先滾動到新的記錄，則會還原目前記錄的先前值。 如果您為無法更新的記錄集呼叫 `Edit`，或是沒有目前的記錄，就會擲回 `CDBException`。
 
-如需詳細資訊，請參閱[交易（ODBC）](../../data/odbc/transaction-odbc.md)和 [記錄集的文章：鎖定記錄（ODBC）](../../data/odbc/recordset-locking-records-odbc.md)。
+如需詳細資訊，請參閱[交易（odbc）](../../data/odbc/transaction-odbc.md)和[記錄集：鎖定記錄（odbc）](../../data/odbc/recordset-locking-records-odbc.md)文章。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDatabase#20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]
 
-##  <a name="flushresultset"></a>CRecordset：： FlushResultSet
+##  <a name="crecordsetflushresultset"></a><a name="flushresultset"></a>CRecordset：： FlushResultSet
 
 如果有多個結果集，則會抓取預先定義之查詢（預存程式）的下一個結果集。
 
@@ -639,7 +639,7 @@ BOOL FlushResultSet();
 
 [!code-cpp[NVC_MFCDatabase#22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]
 
-##  <a name="getbookmark"></a>CRecordset：： GetBookmark
+##  <a name="crecordsetgetbookmark"></a><a name="getbookmark"></a>CRecordset：： GetBookmark
 
 取得目前記錄的書簽值。
 
@@ -664,9 +664,9 @@ void GetBookmark(CDBVariant& varBookmark);
 > [!NOTE]
 >  在特定記錄集作業之後，書簽可能不再有效。 例如，如果您呼叫後面接著 `Requery`的 `GetBookmark`，可能就無法使用 `SetBookmark`來返回記錄。 呼叫[CDatabase：： GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) ，以檢查您是否可以安全地呼叫 `SetBookmark`。
 
-如需書簽和記錄集導覽的詳細資訊，請參閱 [記錄集的文章：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) 和 [記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)。
+如需書簽和記錄集導覽的詳細資訊，請參閱[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[記錄集：滾動（odbc）](../../data/odbc/recordset-scrolling-odbc.md)一文。
 
-##  <a name="getdefaultconnect"></a>CRecordset：： GetDefaultConnect
+##  <a name="crecordsetgetdefaultconnect"></a><a name="getdefaultconnect"></a>CRecordset：： GetDefaultConnect
 
 呼叫以取得預設連接字串。
 
@@ -682,7 +682,7 @@ virtual CString GetDefaultConnect();
 
 架構會呼叫這個成員函式，以取得記錄集所依據之資料來源的預設連接字串。 ClassWizard 會藉由識別您在 ClassWizard 中使用的相同資料來源來為您實作為此函式，以取得資料表和資料行的相關資訊。 在開發您的應用程式時，您可能會發現依賴此預設連接會很方便。 但預設連接可能不適合您應用程式的使用者。 如果是這種情況，您應該重新實現此函式，並捨棄 ClassWizard 的版本。 如需連接字串的詳細資訊，請參閱[資料來源（ODBC）](../../data/odbc/data-source-odbc.md)一文。
 
-##  <a name="getdefaultsql"></a>CRecordset：： GetDefaultSQL
+##  <a name="crecordsetgetdefaultsql"></a><a name="getdefaultsql"></a>CRecordset：： GetDefaultSQL
 
 呼叫以取得要執行的預設 SQL 字串。
 
@@ -702,12 +702,12 @@ virtual CString GetDefaultSQL();
 
 如果您需要 SQL 語句字串供自己使用，請呼叫 `GetSQL`，這會傳回用來選取記錄集記錄的 SQL 語句（當它開啟時）。 您可以在 `GetDefaultSQL`的類別覆寫中編輯預設的 SQL 字串。 例如，您可以使用**call**語句來指定對預先定義查詢的呼叫。 （請注意，如果您編輯 `GetDefaultSQL`，則也需要修改 `m_nFields` 以符合資料來源中的資料行數目）。
 
-如需詳細資訊，請參閱 [記錄集的文章：宣告資料表的類別（ODBC）](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)。
+如需詳細資訊，請參閱[記錄集：宣告資料表的類別（ODBC）一](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)文。
 
 > [!CAUTION]
 >  如果架構無法識別資料表名稱、提供多個資料表名稱，或無法解讀**CALL**語句，則資料表名稱會是空的。 請注意，使用**CALL**語句時，您不能在大括弧和**CALL**關鍵字之間插入空白字元，也不應該在大括弧之前或**select**語句中的**select**關鍵字之前插入空白字元。
 
-##  <a name="getfieldvalue"></a>CRecordset：： GetFieldValue
+##  <a name="crecordsetgetfieldvalue"></a><a name="getfieldvalue"></a>CRecordset：： GetFieldValue
 
 抓取目前記錄中的欄位資料。
 
@@ -783,9 +783,9 @@ void GetFieldValue(
 > [!NOTE]
 >  不同于 DAO 類別 `CDaoRecordset`，`CRecordset` 沒有 `SetFieldValue` 的成員函式。 如果您直接從 `CRecordset`建立物件，它實際上是唯讀的。
 
-如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-##  <a name="getodbcfieldcount"></a>CRecordset：： GetODBCFieldCount
+##  <a name="crecordsetgetodbcfieldcount"></a><a name="getodbcfieldcount"></a>CRecordset：： GetODBCFieldCount
 
 抓取記錄集物件中的欄位總數。
 
@@ -799,9 +799,9 @@ short GetODBCFieldCount() const;
 
 ### <a name="remarks"></a>備註
 
-如需建立記錄集的詳細資訊，請參閱 [記錄集的文章：建立和關閉記錄集（ODBC）](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
+如需建立記錄集的詳細資訊，請參閱[記錄集：建立和關閉記錄集（ODBC）](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)一文。
 
-##  <a name="getodbcfieldinfo"></a>CRecordset：： GetODBCFieldInfo
+##  <a name="crecordsetgetodbcfieldinfo"></a><a name="getodbcfieldinfo"></a>CRecordset：： GetODBCFieldInfo
 
 取得有關記錄集中之欄位的資訊。
 
@@ -832,9 +832,9 @@ void GetODBCFieldInfo(
 
 如需傳回之資訊的相關說明，請參閱[CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md)結構。
 
-如需建立記錄集的詳細資訊，請參閱 [記錄集的文章：建立和關閉記錄集（ODBC）](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
+如需建立記錄集的詳細資訊，請參閱[記錄集：建立和關閉記錄集（ODBC）](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)一文。
 
-##  <a name="getrecordcount"></a>CRecordset：： GetRecordCount
+##  <a name="crecordsetgetrecordcount"></a><a name="getrecordcount"></a>CRecordset：： GetRecordCount
 
 決定記錄集的大小。
 
@@ -851,7 +851,7 @@ long GetRecordCount() const;
 > [!CAUTION]
 >  記錄計數會保留為「上限標準」，但當使用者在記錄中移動時，就會看到最高編號的記錄。 只有在使用者移至最後一筆記錄之後，才知道記錄總數。 基於效能的考慮，當您呼叫 `MoveLast`時，不會更新計數。 若要自行計算記錄，請重複呼叫 `MoveNext`，直到 `IsEOF` 傳回非零值為止。 透過 `CRecordset:AddNew` 和 `Update` 新增記錄會增加計數;透過 `CRecordset::Delete` 刪除記錄會減少計數。
 
-##  <a name="getrowsetsize"></a>CRecordset：： GetRowsetSize
+##  <a name="crecordsetgetrowsetsize"></a><a name="getrowsetsize"></a>CRecordset：： GetRowsetSize
 
 針對您想要在指定的提取期間取得的資料列數目，取得目前的設定。
 
@@ -869,9 +869,9 @@ DWORD GetRowsetSize() const;
 
 若要執行大量資料列提取，您必須在[Open](#open)成員函式的*dwOptions*參數中指定 `CRecordset::useMultiRowFetch` 選項。 若要變更資料列集大小的設定，請呼叫[SetRowsetSize](#setrowsetsize)。
 
-如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-##  <a name="getrowsfetched"></a>CRecordset：： GetRowsFetched
+##  <a name="crecordsetgetrowsfetched"></a><a name="getrowsfetched"></a>CRecordset：： GetRowsFetched
 
 判斷提取之後實際取出的記錄數目。
 
@@ -889,13 +889,13 @@ DWORD GetRowsFetched() const;
 
 若要執行大量資料列提取，您必須在[Open](#open)成員函式的*dwOptions*參數中指定 `CRecordset::useMultiRowFetch` 選項。 若要指定資料列集大小，請呼叫[SetRowsetSize](#setrowsetsize)。
 
-如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDatabase#24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]
 
-##  <a name="getrowstatus"></a>CRecordset：： GetRowStatus
+##  <a name="crecordsetgetrowstatus"></a><a name="getrowstatus"></a>CRecordset：： GetRowStatus
 
 取得目前資料列集中的資料列狀態。
 
@@ -920,14 +920,14 @@ WORD GetRowStatus(WORD wRow) const;
 |------------------|-----------------|
 |SQL_ROW_SUCCESS|資料列未變更。|
 |SQL_ROW_UPDATED|資料列已更新。|
-|SQL_ROW_DELETED|已刪除資料列。|
+|SQL_ROW_DELETED|資料列已經刪除。|
 |SQL_ROW_ADDED|已新增資料列。|
 |SQL_ROW_ERROR|因為發生錯誤，所以資料列 unretrievable。|
 |SQL_ROW_NOROW|沒有對應至*wRow*的資料列。|
 
 如需詳細資訊，請參閱 Windows SDK 中的 ODBC API 函數 `SQLExtendedFetch`。
 
-##  <a name="getstatus"></a>CRecordset：： GetStatus
+##  <a name="crecordsetgetstatus"></a><a name="getstatus"></a>CRecordset：： GetStatus
 
 判斷記錄集中目前記錄的索引，以及是否已看到最後一筆記錄。
 
@@ -938,7 +938,8 @@ void GetStatus(CRecordsetStatus& rStatus) const;
 ### <a name="parameters"></a>參數
 
 *rStatus*<br/>
-對 `CRecordsetStatus` 物件的參考。 如需詳細資訊，請參閱＜備註＞一節。
+
+          `CRecordsetStatus` 物件的參考。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="remarks"></a>備註
 
@@ -960,7 +961,7 @@ struct CRecordsetStatus
 
 - 如果已決定記錄集中的記錄總數，則 `m_bRecordCountFinal` 非零值。 一般來說，這必須從記錄集的開頭開始並呼叫 `MoveNext`，直到 `IsEOF` 傳回非零值為止。 如果這個成員為零，`GetRecordCount`傳回的記錄計數（如果不是-1），就只會是記錄的「上限標準」計數。
 
-##  <a name="getsql"></a>CRecordset：： GetSQL
+##  <a name="crecordsetgetsql"></a><a name="getsql"></a>CRecordset：： GetSQL
 
 呼叫這個成員函式，以取得在開啟記錄集的記錄時，用來選取它的 SQL 語句。
 
@@ -976,12 +977,12 @@ const CString& GetSQL() const;
 
 這通常會是 SQL **SELECT**語句。 `GetSQL` 所傳回的字串是唯讀的。
 
-`GetSQL` 所傳回的字串通常與您在*lpszSQL*參數中傳遞至記錄集的任何字串不同，`Open` 成員函式。 這是因為記錄集會根據您傳遞給 `Open`的內容、您使用 ClassWizard 所指定的內容、您在 `m_strFilter` 和 `m_strSort` 資料成員中指定的內容，以及您所指定的任何參數，來建立完整的 SQL 語句。 如需記錄集如何構造此 SQL 語句的詳細資訊，請參閱 [記錄集的文章：記錄集如何選取記錄（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+`GetSQL` 所傳回的字串通常與您在*lpszSQL*參數中傳遞至記錄集的任何字串不同，`Open` 成員函式。 這是因為記錄集會根據您傳遞給 `Open`的內容、您使用 ClassWizard 所指定的內容、您在 `m_strFilter` 和 `m_strSort` 資料成員中指定的內容，以及您所指定的任何參數，來建立完整的 SQL 語句。 如需記錄集如何構造此 SQL 語句的詳細資訊，請參閱[記錄集：記錄集如何選取記錄（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)一文。
 
 > [!NOTE]
 >  只有在呼叫[Open](#open)之後，才呼叫這個成員函式。
 
-##  <a name="gettablename"></a>CRecordset：： GetTableName
+##  <a name="crecordsetgettablename"></a><a name="gettablename"></a>CRecordset：： GetTableName
 
 取得記錄集查詢所依據的 SQL 資料表名稱。
 
@@ -1000,7 +1001,7 @@ const CString& GetTableName() const;
 > [!NOTE]
 >  只有在呼叫[Open](#open)之後，才呼叫這個成員函式。
 
-##  <a name="isbof"></a>CRecordset：： IsBOF
+##  <a name="crecordsetisbof"></a><a name="isbof"></a>CRecordset：： IsBOF
 
 如果記錄集已放在第一筆記錄之前，則傳回非零。 沒有目前的記錄。
 
@@ -1024,7 +1025,7 @@ BOOL IsBOF() const;
 
 [!code-cpp[NVC_MFCDatabase#25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]
 
-##  <a name="isdeleted"></a>CRecordset：： IsDeleted
+##  <a name="crecordsetisdeleted"></a><a name="isdeleted"></a>CRecordset：： IsDeleted
 
 判斷目前的記錄是否已刪除。
 
@@ -1045,9 +1046,9 @@ BOOL IsDeleted() const;
 如需 `CRecordset::skipDeletedRecords` 和驅動程式封裝的詳細資訊，請參閱[Open](#open)成員函式。
 
 > [!NOTE]
->  如果您已執行大量資料列提取，則不應呼叫 `IsDeleted`。 相反地，請呼叫[GetRowStatus](#getrowstatus)成員函式。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您已執行大量資料列提取，則不應呼叫 `IsDeleted`。 相反地，請呼叫[GetRowStatus](#getrowstatus)成員函式。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-##  <a name="iseof"></a>CRecordset：： IsEOF
+##  <a name="crecordsetiseof"></a><a name="iseof"></a>CRecordset：： IsEOF
 
 如果記錄集已放在最後一筆記錄之後，則傳回非零。 沒有目前的記錄。
 
@@ -1069,7 +1070,7 @@ BOOL IsEOF() const;
 
 請參閱[IsBOF](#isbof)的範例。
 
-##  <a name="isfielddirty"></a>CRecordset：： IsFieldDirty
+##  <a name="crecordsetisfielddirty"></a><a name="isfielddirty"></a>CRecordset：： IsFieldDirty
 
 判斷指定的欄位資料成員在呼叫[編輯](#edit)或[AddNew](#addnew)之後是否已變更。
 
@@ -1091,15 +1092,15 @@ BOOL IsFieldDirty(void* pv);
 當目前的記錄由 `CRecordset` 的[Update](#update)成員函式（在呼叫 `Edit` 或 `AddNew`之後）進行更新時，所有中途欄位資料成員中的資料都會傳送至資料來源上的記錄。
 
 > [!NOTE]
->  此成員函式不適用於使用大量資料列提取的記錄集。 如果您已執行大量資料列提取，則 `IsFieldDirty` 一律會傳回 FALSE，且會導致失敗的判斷提示。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  此成員函式不適用於使用大量資料列提取的記錄集。 如果您已執行大量資料列提取，則 `IsFieldDirty` 一律會傳回 FALSE，且會導致失敗的判斷提示。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 呼叫 `IsFieldDirty` 將會重設先前呼叫[SetFieldDirty](#setfielddirty)的效果，因為欄位的中途狀態會重新評估。 在 `AddNew` 案例中，如果目前的域值與虛擬 null 值不同，則欄位狀態會設定為 [已變更]。 在 `Edit` 案例中，如果域值與快取的值不同，則欄位狀態會設定為 [已變更]。
 
 `IsFieldDirty` 是透過[DoFieldExchange](#dofieldexchange)來執行。
 
-如需有關中途旗標的詳細資訊，請參閱 [記錄集的文章：記錄集如何選取記錄（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+如需有關中途旗標的詳細資訊，請參閱[記錄集：記錄集如何選取記錄（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)一文。
 
-##  <a name="isfieldnull"></a>CRecordset：： IsFieldNull
+##  <a name="crecordsetisfieldnull"></a><a name="isfieldnull"></a>CRecordset：： IsFieldNull
 
 如果目前記錄中的指定欄位為 Null （沒有值），則傳回非零。
 
@@ -1121,11 +1122,11 @@ BOOL IsFieldNull(void* pv);
 呼叫這個成員函式，以判斷是否已將記錄集的指定欄位資料成員標示為 Null。 （在資料庫術語中，Null 表示「沒有值」，而且與中C++的 null 不同）。如果欄位資料成員標示為 Null，它會被視為目前記錄中沒有任何值的資料行。
 
 > [!NOTE]
->  此成員函式不適用於使用大量資料列提取的記錄集。 如果您已執行大量資料列提取，則 `IsFieldNull` 一律會傳回 FALSE，且會導致失敗的判斷提示。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  此成員函式不適用於使用大量資料列提取的記錄集。 如果您已執行大量資料列提取，則 `IsFieldNull` 一律會傳回 FALSE，且會導致失敗的判斷提示。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 `IsFieldNull` 是透過[DoFieldExchange](#dofieldexchange)來執行。
 
-##  <a name="isfieldnullable"></a>CRecordset：： IsFieldNullable
+##  <a name="crecordsetisfieldnullable"></a><a name="isfieldnullable"></a>CRecordset：： IsFieldNullable
 
 如果目前記錄中的指定欄位可以設定為 Null （沒有值），則傳回非零。
 
@@ -1143,7 +1144,7 @@ BOOL IsFieldNullable(void* pv);
 呼叫這個成員函式，以判斷指定的欄位資料成員是否為 "nullable" （可以設定為 Null 值;C++ Null 與 null 不同，在資料庫術語中，表示「沒有值」）。
 
 > [!NOTE]
->  如果您已執行大量資料列提取，就無法呼叫 `IsFieldNullable`。 相反地，請呼叫[GetODBCFieldInfo](#getodbcfieldinfo)成員函式，以判斷欄位是否可設定為 Null 值。 請注意，不論您是否已執行大量資料列提取，一律可以呼叫 `GetODBCFieldInfo`。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您已執行大量資料列提取，就無法呼叫 `IsFieldNullable`。 相反地，請呼叫[GetODBCFieldInfo](#getodbcfieldinfo)成員函式，以判斷欄位是否可設定為 Null 值。 請注意，不論您是否已執行大量資料列提取，一律可以呼叫 `GetODBCFieldInfo`。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 不可以是 Null 的欄位必須有值。 如果您嘗試在加入或更新記錄時，將這類欄位設定為 Null，則資料來源會拒絕新增或更新，而且[update](#update)將會擲回例外狀況。 當您呼叫 `Update`，而不是呼叫[SetFieldNull](#setfieldnull)時，就會發生例外狀況。
 
@@ -1161,7 +1162,7 @@ BOOL IsFieldNullable(void* pv);
 
 `IsFieldNullable` 是透過[DoFieldExchange](#dofieldexchange)來執行。
 
-##  <a name="isopen"></a>CRecordset：： IsOpen
+##  <a name="crecordsetisopen"></a><a name="isopen"></a>CRecordset：： IsOpen
 
 判斷記錄集是否已開啟。
 
@@ -1173,7 +1174,7 @@ BOOL IsOpen() const;
 
 如果先前已通話記錄集物件的[Open](#open)或[Requery](#requery)成員函式，而且尚未關閉記錄集，則為非零。否則為0。
 
-##  <a name="m_hstmt"></a>CRecordset：： m_hstmt
+##  <a name="crecordsetm_hstmt"></a><a name="m_hstmt"></a>CRecordset：： m_hstmt
 
 包含與記錄集相關聯之 ODBC 語句資料結構（屬於 HSTMT 類型）的控制碼。
 
@@ -1186,7 +1187,7 @@ ODBC 資料來源的每個查詢都會與 HSTMT 相關聯。
 
 通常您不需要直接存取 HSTMT，但您可能需要它來直接執行 SQL 語句。 `CDatabase` 類別的 `ExecuteSQL` 成員函式提供使用 `m_hstmt`的範例。
 
-##  <a name="m_nfields"></a>CRecordset：： m_nFields
+##  <a name="crecordsetm_nfields"></a><a name="m_nfields"></a>CRecordset：： m_nFields
 
 包含記錄集類別中的欄位資料成員數目;也就是記錄集從資料來源選取的資料行數目。
 
@@ -1199,15 +1200,15 @@ ODBC 資料來源的每個查詢都會與 HSTMT 相關聯。
 > [!CAUTION]
 >  這個數位必須對應至 `DoFieldExchange` 中註冊的「輸出資料行」數目，或使用參數 `CFieldExchange::outputColumn`呼叫[SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)之後 `DoBulkFieldExchange`。
 
-您可以動態地系結資料行，如 < 記錄集：動態地系結資料行。」 如果您這樣做，您必須增加 `m_nFields` 中的計數，以反映您的 `DoFieldExchange` 中的 RFX 或 Bulk RFX 函式呼叫數目，或動態繫結資料行的 `DoBulkFieldExchange` 成員函式。
+您可以動態地系結資料行，如「記錄集：動態地系結資料行」一文所述。 如果您這樣做，您必須增加 `m_nFields` 中的計數，以反映您的 `DoFieldExchange` 中的 RFX 或 Bulk RFX 函式呼叫數目，或動態繫結資料行的 `DoBulkFieldExchange` 成員函式。
 
-如需詳細資訊，請參閱 [記錄集的文章：動態地系結資料行（ODBC）](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) 和 [記錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需詳細資訊，請參閱[記錄集：動態地系結資料行（odbc）](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)和[記錄集：大量提取記錄（odbc）中](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)的文章。
 
 ### <a name="example"></a>範例
 
-請參閱 [記錄欄位交換文章：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
+請參閱[記錄欄位交換：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)一文。
 
-##  <a name="m_nparams"></a>CRecordset：： m_nParams
+##  <a name="crecordsetm_nparams"></a><a name="m_nparams"></a>CRecordset：： m_nParams
 
 包含記錄集類別中的參數資料成員數目;也就是，與記錄集的查詢一起傳遞的參數數目。
 
@@ -1222,9 +1223,9 @@ ODBC 資料來源的每個查詢都會與 HSTMT 相關聯。
 
 ### <a name="example"></a>範例
 
-  請參閱 [記錄集的文章：參數化記錄集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) 和 [記錄欄位交換：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
+  請參閱文章[記錄集：參數化記錄集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)和[記錄欄位交換：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
 
-##  <a name="m_pdatabase"></a>CRecordset：： m_pDatabase
+##  <a name="crecordsetm_pdatabase"></a><a name="m_pdatabase"></a>CRecordset：： m_pDatabase
 
 包含將記錄集連接到資料來源之 `CDatabase` 物件的指標。
 
@@ -1234,7 +1235,7 @@ ODBC 資料來源的每個查詢都會與 HSTMT 相關聯。
 
 一般來說，您不需要直接使用儲存在 `m_pDatabase`中的指標。 不過，如果您將自己的延伸模組寫入 `CRecordset`，您可能需要使用指標。 例如，如果您擲回自己的 `CDBException`，您可能需要指標。 或者，如果您需要使用相同的 `CDatabase` 物件（例如執行交易、設定超時或呼叫 `CDatabase` 類別的 `ExecuteSQL` 成員函式）來執行某些作業，則您可能會需要它，以直接執行 SQL 語句。
 
-##  <a name="m_strfilter"></a>CRecordset：： m_strFilter
+##  <a name="crecordsetm_strfilter"></a><a name="m_strfilter"></a>CRecordset：： m_strFilter
 
 在您建立記錄集物件之後，但是在呼叫其 `Open` 成員函式之後，請使用此資料成員來儲存包含 SQL **WHERE**子句的 `CString`。
 
@@ -1246,15 +1247,15 @@ ODBC 資料來源的每個查詢都會與 HSTMT 相關聯。
 
 請注意，您不會在字串中包含**WHERE**關鍵字。 架構會提供它。
 
-您也可以參數化篩選字串，方法是在其中放置 ' ' 預留位置，在類別中為每個預留位置宣告參數資料成員，並在執行時間將參數傳遞至記錄集。 這可讓您在執行時間建立篩選準則。 如需詳細資訊，請參閱 [記錄集的文章：將資料錄集參數化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+您也可以參數化篩選字串，方法是在其中放置 ' ' 預留位置，在類別中為每個預留位置宣告參數資料成員，並在執行時間將參數傳遞至記錄集。 這可讓您在執行時間建立篩選準則。 如需詳細資訊，請參閱[記錄集：參數化記錄集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)一文。
 
-如需 SQL **WHERE**子句的詳細資訊，請參閱[sql](../../data/odbc/sql.md)文章。 如需有關選取和篩選記錄的詳細資訊，請參閱 [記錄集的文章：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+如需 SQL **WHERE**子句的詳細資訊，請參閱[sql](../../data/odbc/sql.md)文章。 如需選取和篩選記錄的詳細資訊，請參閱[記錄集：篩選記錄（ODBC）](../../data/odbc/recordset-filtering-records-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]
 
-##  <a name="m_strsort"></a>CRecordset：： m_strSort
+##  <a name="crecordsetm_strsort"></a><a name="m_strsort"></a>CRecordset：： m_strSort
 
 在您建立記錄集物件之後，但是在呼叫其 `Open` 成員函式之後，請使用此資料成員來儲存包含 SQL **ORDER by**子句的 `CString`。
 
@@ -1268,13 +1269,13 @@ ODBC 資料來源的每個查詢都會與 HSTMT 相關聯。
 
 請注意，您不會在字串中包含**ORDER BY**關鍵字。 架構會提供它。
 
-如需 SQL 子句的詳細資訊，請參閱[sql](../../data/odbc/sql.md)文章。 如需排序記錄的詳細資訊，請參閱 [記錄集的文章：排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。
+如需 SQL 子句的詳細資訊，請參閱[sql](../../data/odbc/sql.md)文章。 如需排序記錄的詳細資訊，請參閱[記錄集：排序記錄（ODBC）](../../data/odbc/recordset-sorting-records-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDatabase#31](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]
 
-##  <a name="move"></a>CRecordset：： Move
+##  <a name="crecordsetmove"></a><a name="move"></a>CRecordset：： Move
 
 將記錄集內的目前記錄指標往前或往後移動。
 
@@ -1327,13 +1328,13 @@ virtual void Move(
 > [!NOTE]
 >  如果您在目前的記錄正在更新或新增時呼叫 `Move`，則更新會遺失而不發出警告。
 
-如需有關記錄集導覽的詳細資訊，請參閱 [記錄集的文章：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md) 和 [記錄集：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 如需相關資訊，請參閱 Windows SDK 中的 ODBC API 函數 `SQLExtendedFetch`。
+如需記錄集導覽的詳細資訊，請參閱[記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)和[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。 如需相關資訊，請參閱 Windows SDK 中的 ODBC API 函數 `SQLExtendedFetch`。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDatabase#28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]
 
-##  <a name="movefirst"></a>CRecordset：： MoveFirst
+##  <a name="crecordsetmovefirst"></a><a name="movefirst"></a>CRecordset：： MoveFirst
 
 使第一個資料列集中的第一筆記錄成為目前的記錄。
 
@@ -1359,13 +1360,13 @@ void MoveFirst();
 > [!NOTE]
 >  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-如需有關記錄集導覽的詳細資訊，請參閱 [記錄集的文章：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md) 和 [記錄集：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需記錄集導覽的詳細資訊，請參閱[記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)和[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
   請參閱[IsBOF](#isbof)的範例。
 
-##  <a name="movelast"></a>CRecordset：： MoveLast
+##  <a name="crecordsetmovelast"></a><a name="movelast"></a>CRecordset：： MoveLast
 
 使最後一個完整資料列集中的第一筆記錄成為目前的記錄。
 
@@ -1389,13 +1390,13 @@ void MoveLast();
 > [!NOTE]
 >  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-如需有關記錄集導覽的詳細資訊，請參閱 [記錄集的文章：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md) 和 [記錄集：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需記錄集導覽的詳細資訊，請參閱[記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)和[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
   請參閱[IsBOF](#isbof)的範例。
 
-##  <a name="movenext"></a>CRecordset：： MoveNext
+##  <a name="crecordsetmovenext"></a><a name="movenext"></a>CRecordset：： MoveNext
 
 使下一個資料列集中的第一筆記錄成為目前的記錄。
 
@@ -1419,13 +1420,13 @@ void MoveNext();
 > [!NOTE]
 >  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-如需有關記錄集導覽的詳細資訊，請參閱 [記錄集的文章：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md) 和 [記錄集：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需記錄集導覽的詳細資訊，請參閱[記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)和[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
   請參閱[IsBOF](#isbof)的範例。
 
-##  <a name="moveprev"></a>CRecordset：： MovePrev
+##  <a name="crecordsetmoveprev"></a><a name="moveprev"></a>CRecordset：： MovePrev
 
 使前一個資料列集中的第一筆記錄成為目前的記錄。
 
@@ -1452,13 +1453,13 @@ void MovePrev();
 > [!NOTE]
 >  如果您在目前的記錄正在更新或新增時呼叫任何 `Move` 函式，更新就會遺失而不發出警告。
 
-如需有關記錄集導覽的詳細資訊，請參閱 [記錄集的文章：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md) 和 [記錄集：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需記錄集導覽的詳細資訊，請參閱[記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)和[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
   請參閱[IsBOF](#isbof)的範例。
 
-##  <a name="onsetoptions"></a>CRecordset：： OnSetOptions
+##  <a name="crecordsetonsetoptions"></a><a name="onsetoptions"></a>CRecordset：： OnSetOptions
 
 呼叫以針對指定的 ODBC 語句設定選項（用於選取）。
 
@@ -1479,7 +1480,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 如需資料指標的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)一文。
 
-##  <a name="onsetupdateoptions"></a>CRecordset：： OnSetUpdateOptions
+##  <a name="crecordsetonsetupdateoptions"></a><a name="onsetupdateoptions"></a>CRecordset：： OnSetUpdateOptions
 
 呼叫以針對指定的 ODBC 語句設定選項（用於 update）。
 
@@ -1500,7 +1501,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
 
 如需資料指標的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)一文。
 
-##  <a name="open"></a>CRecordset：： Open
+##  <a name="crecordsetopen"></a><a name="open"></a>CRecordset：： Open
 
 藉由抓取資料表或執行記錄集所代表的查詢，來開啟記錄集。
 
@@ -1542,7 +1543,7 @@ virtual BOOL Open(
 
 - 指定預先定義之查詢名稱的**CALL**語句（預存程式）。 請注意，您不會在大括弧和**CALL**關鍵字之間插入空格。
 
-如需此字串的詳細資訊，請參閱 <<c0>備註一節底下的資料表和 ClassWizard 的角色討論。
+如需此字串的詳細資訊，[請參閱](#remarks) 備註一節底下的資料表和 ClassWizard 的角色討論。
 
 > [!NOTE]
 >  結果集中的資料行順序必須符合[DoFieldExchange](#dofieldexchange)或[DoBulkFieldExchange](#dobulkfieldexchange)函數覆寫中 rfx 或 Bulk RFX 函式呼叫的順序。
@@ -1558,11 +1559,11 @@ virtual BOOL Open(
 
 - `CRecordset::optimizeBulkAdd` 使用備妥的 SQL 語句，一次將多筆記錄優化。 只有在您未使用 ODBC API 函數 `SQLSetPos` 來更新記錄集時，才適用。 第一個更新會判斷哪些欄位已標示為已變更。 此選項與 `CRecordset::useMultiRowFetch`互斥。
 
-- `CRecordset::useMultiRowFetch` 執行大量資料列提取，以允許在單一提取作業中抓取多個資料列。 這是為了提升效能而設計的先進功能;不過，ClassWizard 不支援大量記錄欄位交換。 此選項與 `CRecordset::optimizeBulkAdd`互斥。 請注意，如果您指定 `CRecordset::useMultiRowFetch`，則會自動開啟選項 `CRecordset::noDirtyFieldCheck` （將無法使用雙重緩衝）;在順向記錄集上，選項 `CRecordset::useExtendedFetch` 會自動開啟。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+- `CRecordset::useMultiRowFetch` 執行大量資料列提取，以允許在單一提取作業中抓取多個資料列。 這是為了提升效能而設計的先進功能;不過，ClassWizard 不支援大量記錄欄位交換。 此選項與 `CRecordset::optimizeBulkAdd`互斥。 請注意，如果您指定 `CRecordset::useMultiRowFetch`，則會自動開啟選項 `CRecordset::noDirtyFieldCheck` （將無法使用雙重緩衝）;在順向記錄集上，選項 `CRecordset::useExtendedFetch` 會自動開啟。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 - `CRecordset::skipDeletedRecords` 在流覽記錄集時略過所有已刪除的記錄。 這會使某些相對提取的效能變慢。 這個選項在順向記錄集上無效。 如果您呼叫[Move](#move)並將*nRows*參數設定為0，並設定 `CRecordset::skipDeletedRecords` 選項，`Move` 將會判斷提示。 請注意，`CRecordset::skipDeletedRecords` 類似于*驅動程式封裝*，這表示已刪除的資料列會從記錄集中移除。 不過，如果您的驅動程式套件記錄，則只會略過您刪除的記錄;當記錄集開啟時，它不會略過其他使用者所刪除的記錄。 `CRecordset::skipDeletedRecords` 會略過其他使用者刪除的資料列。
 
-- `CRecordset::useBookmarks` 可能會在記錄集上使用書簽（如果支援的話）。 書簽會使資料抓取變慢，但可改善資料流覽的效能。 在順向記錄集上無效。 如需詳細資訊，請參閱 [記錄集的文章：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+- `CRecordset::useBookmarks` 可能會在記錄集上使用書簽（如果支援的話）。 書簽會使資料抓取變慢，但可改善資料流覽的效能。 在順向記錄集上無效。 如需詳細資訊，請參閱[記錄集：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。
 
 - `CRecordset::noDirtyFieldCheck` 關閉自動的中途欄位檢查（雙重緩衝）。 這將可改善效能;不過，您必須藉由呼叫 `SetFieldDirty` 並 `SetFieldNull` 成員函式，手動將欄位標示為中途。請注意，在類別 `CRecordset` 中的雙重緩衝類似于類別 `CDaoRecordset`中的雙重緩衝。 不過，在 `CRecordset`中，您無法在個別欄位上啟用雙重緩衝;您可以針對所有欄位啟用它，或將它停用於所有欄位。 請注意，如果您指定選項 `CRecordset::useMultiRowFetch`，則 `CRecordset::noDirtyFieldCheck` 會自動開啟;不過，`SetFieldDirty` 和 `SetFieldNull` 無法用於執行大量資料列提取的記錄集。
 
@@ -1570,7 +1571,7 @@ virtual BOOL Open(
 
 - `CRecordset::useExtendedFetch` 執行 `SQLExtendedFetch`，而不是 `SQLFetch`。 這是專為在順向記錄集上執行大量資料列提取所設計。 如果您在順向記錄集上指定選項 `CRecordset::useMultiRowFetch`，則 `CRecordset::useExtendedFetch` 會自動開啟。
 
-- `CRecordset::userAllocMultiRowBuffers` 使用者會配置資料的儲存緩衝區。 如果您想要配置自己的儲存體，請將此選項與 `CRecordset::useMultiRowFetch` 搭配使用。否則，架構會自動設定所需的儲存體。 如需詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 請注意，指定 `CRecordset::userAllocMultiRowBuffers` 而不指定 `CRecordset::useMultiRowFetch` 會導致失敗的判斷提示。
+- `CRecordset::userAllocMultiRowBuffers` 使用者會配置資料的儲存緩衝區。 如果您想要配置自己的儲存體，請將此選項與 `CRecordset::useMultiRowFetch` 搭配使用。否則，架構會自動設定所需的儲存體。 如需詳細資訊，請參閱[記錄集：大量提取記錄（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。 請注意，指定 `CRecordset::userAllocMultiRowBuffers` 而不指定 `CRecordset::useMultiRowFetch` 會導致失敗的判斷提示。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1592,20 +1593,20 @@ virtual BOOL Open(
 |NULL|`GetDefaultSQL`傳回的字串。||
 |SQL 資料表名稱|資料表清單中的所有資料行 `DoFieldExchange` 或 `DoBulkFieldExchange`。|`"Customer"`|
 |預先定義的查詢（預存程式）名稱|查詢定義為傳回的資料行。|`"{call OverDueAccts}"`|
-|從資料表清單**中** **選取**資料行清單|指定之資料表中的指定資料行。|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|
+|從資料表清單**中****選取**資料行清單|指定之資料表中的指定資料行。|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|
 
 > [!CAUTION]
 >  請注意，您不會在 SQL 字串中插入額外的空白字元。 例如，如果您在大括弧和**CALL**關鍵字之間插入空白字元，MFC 會將 SQL 字串錯誤解譯為數據表名稱，並將它併入**SELECT**語句中，這會導致擲回例外狀況。 同樣地，如果您的預先定義查詢使用輸出參數，請勿在大括弧和 ' ' 符號之間插入空白字元。 最後，您不能在**CALL**語句或**select**語句中的**select**關鍵字之前，插入大括弧之前的空白字元。
 
 平常的程式是將 Null 傳遞給 `Open`。在此情況下，`Open` 會呼叫[GetDefaultSQL](#getdefaultsql)。 如果您使用衍生的 `CRecordset` 類別，`GetDefaultSQL` 會提供您在 ClassWizard 中指定的資料表名稱。 您可以改為在 `lpszSQL` 參數中指定其他資訊。
 
-無論您傳遞哪一種方式，`Open` 會為查詢建立最終的 SQL 字串（字串可能會將 SQL **WHERE**和**ORDER BY**子句附加至您所傳遞的 `lpszSQL` 字串），然後執行查詢。 呼叫 `Open`之後，您可以藉由呼叫[GetSQL](#getsql)來檢查結構化的字串。 如需有關記錄集如何建立 SQL 語句並選取記錄的詳細資訊，請參閱 [記錄集一文：記錄集如何選取記錄（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+無論您傳遞哪一種方式，`Open` 會為查詢建立最終的 SQL 字串（字串可能會將 SQL **WHERE**和**ORDER BY**子句附加至您所傳遞的 `lpszSQL` 字串），然後執行查詢。 呼叫 `Open`之後，您可以藉由呼叫[GetSQL](#getsql)來檢查結構化的字串。 如需有關記錄集如何建立 SQL 語句和選取記錄的詳細資訊，請參閱[記錄集：記錄集如何選取記錄（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)一文。
 
 記錄集類別的欄位資料成員會系結至選取的資料行。 如果傳回任何記錄，第一筆記錄就會成為目前的記錄。
 
 如果您想要設定記錄集的選項，例如篩選或排序，請在建立記錄集物件之後，但是在呼叫 `Open`之前，指定這些選項。 如果您想要在記錄集已開啟之後重新整理記錄集中的記錄，請呼叫[Requery](#requery)。
 
-如需詳細資訊，包括其他範例，請參閱[記錄集（ODBC）](../../data/odbc/recordset-odbc.md)、[記錄集：記錄集如何選取記錄（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)，以及 [記錄集：建立和關閉記錄集（ODBC）](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
+如需詳細資訊，包括其他範例，請參閱文章[記錄集（odbc）](../../data/odbc/recordset-odbc.md)、[記錄集：記錄集如何選取記錄（Odbc）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)和[記錄集：建立和關閉記錄集（odbc）](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
 
 ### <a name="example"></a>範例
 
@@ -1613,7 +1614,7 @@ virtual BOOL Open(
 
 [!code-cpp[NVC_MFCDatabase#16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]
 
-##  <a name="refreshrowset"></a>CRecordset：： RefreshRowset
+##  <a name="crecordsetrefreshrowset"></a><a name="refreshrowset"></a>CRecordset：： RefreshRowset
 
 更新目前資料列集內的資料列和狀態。
 
@@ -1645,9 +1646,9 @@ void RefreshRowset(
 |SQL_LOCK_EXCLUSIVE|驅動程式或資料來源會以獨佔方式鎖定資料列。 並非所有的資料來源都支援這種類型的鎖定。|
 |SQL_LOCK_UNLOCK|驅動程式或資料來源會解除鎖定資料列。 並非所有的資料來源都支援這種類型的鎖定。|
 
-如需 `SQLSetPos`的詳細資訊，請參閱 Windows SDK。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需 `SQLSetPos`的詳細資訊，請參閱 Windows SDK。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-##  <a name="requery"></a>CRecordset：： Requery
+##  <a name="crecordsetrequery"></a><a name="requery"></a>CRecordset：： Requery
 
 重建（重新整理）記錄集。
 
@@ -1678,7 +1679,7 @@ virtual BOOL Requery();
 
 [!code-cpp[NVC_MFCDatabase#29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]
 
-##  <a name="setabsoluteposition"></a>CRecordset：： SetAbsolutePosition
+##  <a name="crecordsetsetabsoluteposition"></a><a name="setabsoluteposition"></a>CRecordset：： SetAbsolutePosition
 
 將記錄集置於對應于指定記錄號碼的記錄上。
 
@@ -1705,9 +1706,9 @@ void SetAbsolutePosition(long nRows);
 > [!NOTE]
 >  絕對位置不適合當做代理記錄號碼使用。 書簽仍然是保留並返回指定位置的建議方式，因為在刪除先前的記錄時，記錄的位置會變更。 此外，如果重新建立記錄集，您無法保證指定的記錄將會有相同的絕對位置，因為記錄集內個別記錄的順序不保證，除非是使用**ORDER BY**子句以 SQL 語句建立的。
 
-如需記錄集導覽和書簽的詳細資訊，請參閱 [記錄集的文章：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md) 和 [記錄集：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+如需記錄集導覽和書簽的詳細資訊，請參閱[記錄集：滾動（odbc）](../../data/odbc/recordset-scrolling-odbc.md)和[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。
 
-##  <a name="setbookmark"></a>CRecordset：： SetBookmark
+##  <a name="crecordsetsetbookmark"></a><a name="setbookmark"></a>CRecordset：： SetBookmark
 
 將記錄集置於包含指定書簽的記錄上。
 
@@ -1732,9 +1733,9 @@ void SetBookmark(const CDBVariant& varBookmark);
 > [!NOTE]
 >  在特定記錄集作業之後，您應該先檢查書簽的持續性，再呼叫 `SetBookmark`。 例如，如果您使用 `GetBookmark` 來抓取書簽，然後再呼叫 `Requery`，則書簽可能不再有效。 呼叫[CDatabase：： GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) ，以檢查您是否可以安全地呼叫 `SetBookmark`。
 
-如需書簽和記錄集導覽的詳細資訊，請參閱 [記錄集的文章：書簽和絕對位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) 和 [記錄集：滾動（ODBC）](../../data/odbc/recordset-scrolling-odbc.md)。
+如需書簽和記錄集導覽的詳細資訊，請參閱[記錄集：書簽和絕對位置（odbc）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[記錄集：滾動（odbc）](../../data/odbc/recordset-scrolling-odbc.md)一文。
 
-##  <a name="setfielddirty"></a>CRecordset：： SetFieldDirty
+##  <a name="crecordsetsetfielddirty"></a><a name="setfielddirty"></a>CRecordset：： SetFieldDirty
 
 將記錄集的欄位資料成員標示為已變更或保持不變。
 
@@ -1755,7 +1756,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 將欄位標記為未變更可確保欄位不會更新，並導致較少的 SQL 流量。
 
 > [!NOTE]
->  此成員函式不適用於使用大量資料列提取的記錄集。 如果您已執行大量資料列提取，則 `SetFieldDirty` 會產生失敗的判斷提示。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  此成員函式不適用於使用大量資料列提取的記錄集。 如果您已執行大量資料列提取，則 `SetFieldDirty` 會產生失敗的判斷提示。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 架構會標示已變更的欄位資料成員，以確保它們會由記錄欄位交換（RFX）機制寫入資料來源上的記錄。 變更欄位的值通常會自動將欄位設定為中途，因此您不常需要自行呼叫 `SetFieldDirty`，但有時您可能會想要確保不論欄位資料成員中的值為何，都會明確更新或插入資料行。
 
@@ -1774,7 +1775,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 
 這表示您無法將所有 `param` 欄位都設定為 Null，就像您可以使用 `outputColumn` 欄位一樣。
 
-##  <a name="setfieldnull"></a>CRecordset：： SetFieldNull
+##  <a name="crecordsetsetfieldnull"></a><a name="setfieldnull"></a>CRecordset：： SetFieldNull
 
 將記錄集的欄位資料成員標記為 Null （明確沒有值）或為非 Null。
 
@@ -1795,7 +1796,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 當您將新記錄加入至記錄集時，所有欄位資料成員一開始都會設定為 Null 值，並標示為「已變更」。 當您從資料來源抓取記錄時，其資料行可能已經有值或為 Null。
 
 > [!NOTE]
->  請勿在使用大量資料列提取的記錄集上呼叫這個成員函式。 如果您已執行大量資料列提取，呼叫 `SetFieldNull` 會導致失敗的判斷提示。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  請勿在使用大量資料列提取的記錄集上呼叫這個成員函式。 如果您已執行大量資料列提取，呼叫 `SetFieldNull` 會導致失敗的判斷提示。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 如果您特別想要將目前記錄的欄位指定為不具有值，請呼叫 `SetFieldNull` 並將*bNull*設定為 TRUE，以將其標示為 Null。 如果欄位先前標記為 Null，而您現在想要為其指定值，只要設定其新值即可。 您不需要移除具有 `SetFieldNull`的 Null 旗標。 若要判斷欄位是否允許為 Null，請呼叫 `IsFieldNullable`。
 
@@ -1819,7 +1820,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 
 `SetFieldNull` 是透過[DoFieldExchange](#dofieldexchange)來執行。
 
-##  <a name="setlockingmode"></a>CRecordset：： SetLockingMode
+##  <a name="crecordsetsetlockingmode"></a><a name="setlockingmode"></a>CRecordset：： SetLockingMode
 
 將鎖定模式設定為「開放式」鎖定（預設值）或「封閉式」鎖定。 決定如何鎖定記錄以進行更新。
 
@@ -1840,7 +1841,7 @@ void SetLockingMode(UINT nMode);
 
 如果您需要指定記錄集用來進行更新的兩個記錄鎖定策略中，請呼叫這個成員函式。 根據預設，會 `optimistic`記錄集的鎖定模式。 您可以將其變更為更謹慎的 `pessimistic` 鎖定策略。 在您建立並開啟記錄集物件之後，但是在呼叫 `Edit`之前，請呼叫 `SetLockingMode`。
 
-##  <a name="setparamnull"></a>CRecordset：： SetParamNull
+##  <a name="crecordsetsetparamnull"></a><a name="setparamnull"></a>CRecordset：： SetParamNull
 
 將參數旗標為 Null （特別沒有值）或為非 Null。
 
@@ -1864,7 +1865,7 @@ void SetParamNull(
 
 `SetParamNull` 通常與預先定義的查詢（預存程式）搭配使用。
 
-##  <a name="setrowsetcursorposition"></a>CRecordset：： SetRowsetCursorPosition
+##  <a name="crecordsetsetrowsetcursorposition"></a><a name="setrowsetcursorposition"></a>CRecordset：： SetRowsetCursorPosition
 
 將資料指標移至目前資料列集內的資料列。
 
@@ -1894,9 +1895,9 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 |SQL_LOCK_EXCLUSIVE|驅動程式或資料來源會以獨佔方式鎖定資料列。 並非所有的資料來源都支援這種類型的鎖定。|
 |SQL_LOCK_UNLOCK|驅動程式或資料來源會解除鎖定資料列。 並非所有的資料來源都支援這種類型的鎖定。|
 
-如需 `SQLSetPos`的詳細資訊，請參閱 Windows SDK。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需 `SQLSetPos`的詳細資訊，請參閱 Windows SDK。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-##  <a name="setrowsetsize"></a>CRecordset：： SetRowsetSize
+##  <a name="crecordsetsetrowsetsize"></a><a name="setrowsetsize"></a>CRecordset：： SetRowsetSize
 
 指定提取期間您想要取得的記錄數目。
 
@@ -1923,9 +1924,9 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 
 若要取得資料列集大小的目前設定，請呼叫[GetRowsetSize](#getrowsetsize)。
 
-如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-##  <a name="update"></a>CRecordset：： Update
+##  <a name="crecordsetupdate"></a><a name="update"></a>CRecordset：： Update
 
 藉由將新的或編輯過的資料儲存在資料來源上，完成 `AddNew` 或 `Edit` 作業。
 
@@ -1942,7 +1943,7 @@ virtual BOOL Update();
 呼叫[AddNew](#addnew)或[Edit](#edit)成員函式之後，呼叫這個成員函式。 這是完成 `AddNew` 或 `Edit` 作業所需的呼叫。
 
 > [!NOTE]
->  如果您已執行大量資料列提取，就無法呼叫 `Update`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列提取的詳細資訊，請參閱 [記錄集的文章：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您已執行大量資料列提取，就無法呼叫 `Update`。 這會導致失敗的判斷提示。 雖然類別 `CRecordset` 不會提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
 `AddNew` 和 `Edit` 準備一個編輯緩衝區，在其中放置加入或編輯的資料以儲存至資料來源。 `Update` 儲存資料。 只有標示或偵測到已變更的欄位才會更新。
 
@@ -1951,11 +1952,11 @@ virtual BOOL Update();
 > [!CAUTION]
 >  如果您在未先呼叫 `AddNew` 或 `Edit`的情況下呼叫 `Update`，`Update` 會擲回 `CDBException`。 如果您呼叫 `AddNew` 或 `Edit`，則在呼叫 `Move` 作業之前，或在關閉記錄集或資料來源連接之前，您必須先呼叫 `Update`。 否則，在沒有通知的情況下，您的變更就會遺失。
 
-如需處理 `Update` 失敗的詳細資訊，請參閱 [記錄集的文章：記錄集如何更新記錄（ODBC）](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+如需有關處理 `Update` 失敗的詳細資訊，請參閱[記錄集：記錄集更新記錄的方式（ODBC）](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)一文。
 
 ### <a name="example"></a>範例
 
-請參閱 [交易的文章：在記錄集（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)中執行交易。
+請參閱[交易：在記錄集中執行交易（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)一文。
 
 ## <a name="see-also"></a>另請參閱
 

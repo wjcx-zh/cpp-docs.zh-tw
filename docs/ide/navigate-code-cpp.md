@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中巡覽 C++ 程式碼
 description: 在 Visual Studio 中使用各種工具來巡覽您的 C++ 程式碼基底。
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446701"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079084"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>在 Visual Studio 中巡覽 C++ 程式碼
 
@@ -31,7 +31,7 @@ Visual Studio 提供一套工具，可讓您快速且有效率地巡覽程式碼
 
 ## <a name="go-to"></a>移至
 
-[移至] 係指一組瀏覽功能，每個功能都會根據您指定的篩選條件，提供特定種類的結果。 
+[移至] 係指一組瀏覽功能，每個功能都會根據您指定的篩選條件，提供特定種類的結果。
 
 您可以使用 **Ctrl+,** 開啟 [移至]。 此動作會在您正在編輯的文件上建立搜尋方塊。
 
@@ -82,7 +82,7 @@ Visual Studio 提供一套工具，可讓您快速且有效率地巡覽程式碼
 
 ![C&#43; &#43;尋找](../ide/media/find-cpp.png "Find")
 
-[在檔案中尋找] 是 [尋找] 的更強大版本，它會在 [尋找結果] 視窗中顯示結果。 您可以搜尋外部程式碼相依性、依檔案類型篩選等。 
+[在檔案中尋找] 是 [尋找] 的更強大版本，它會在 [尋找結果] 視窗中顯示結果。 您可以搜尋外部程式碼相依性、依檔案類型篩選等。
 
 ![C&#43; &#43;檔案中尋找](../ide/media/find-in-files-cpp.png "檔案中尋找")
 

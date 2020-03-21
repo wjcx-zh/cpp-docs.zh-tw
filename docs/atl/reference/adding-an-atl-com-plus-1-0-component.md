@@ -2,15 +2,14 @@
 title: 加入 ATL COM+ 1.0 元件
 ms.date: 05/09/2019
 ms.assetid: c6c95e64-9ee4-4a6e-8804-5930202ce1b9
-ms.openlocfilehash: 6b8ffd71dd7e743bcbb7ff6ccac333dfd235156f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 843563e324e5e01af3c38896f268efc06c9a6222
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706948"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075315"
 ---
 # <a name="adding-an-atl-com-10-component"></a>加入 ATL COM+ 1.0 元件
-
 
 ::: moniker range="vs-2019"
 
@@ -36,5 +35,3 @@ Visual Studio 2019 及更新版本中未提供 ATL COM+ 1.0 元件精靈。
 [新增方法](../../ide/adding-a-method-visual-cpp.md)
 
 ::: moniker-end
-
-

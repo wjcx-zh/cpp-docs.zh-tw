@@ -10,16 +10,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707850"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075909"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>資料錄集：取得 SUM 和其他彙總結果 (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
 本主題適用於 MFC ODBC 類別。
@@ -36,7 +36,7 @@ ms.locfileid: "65707850"
 
 - **COUNT**：計算任何資料類型的資料行中的資料錄數目。
 
-您可以使用這些 SQL 函式，取得資料來源中資料錄的統計相關資訊，而不是從資料來源擷取資料錄。 建立的資料錄集通常由包含一個值的單一資料錄 (如果所有資料行都是彙總值) 所組成  (如果您使用 **GROUP BY** 子句，可能會有多個資料錄)。這個值是 SQL 函式所計算或擷取的結果。
+您可以使用這些 SQL 函式，取得資料來源中資料錄的統計相關資訊，而不是從資料來源擷取資料錄。 建立的資料錄集通常由包含一個值的單一資料錄 (如果所有資料行都是彙總值) 所組成 （如果您使用**GROUP by**子句，可能會有一個以上的記錄）。這個值是由 SQL 函數執行的計算或提取結果。
 
 > [!TIP]
 >  若要將 SQL **GROUP BY** 子句 (而且可能是 **HAVING** 子句) 加入到您的 SQL 陳述式中，請將其附加至 `m_strFilter` 的結尾。 例如：
@@ -56,7 +56,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 
 - **MAX** 和 **MIN** 會傳回與所計算之資料行相同的資料類型。
 
-     例如，[加入類別] 精靈會建立 `long` `m_lSales` 來容納 Sales 資料行，但您需要將此取代為 `double m_dblSumSales` 資料成員，才能容納彙總結果。 請參閱下列範例。
+     例如，[**加入類別**] wizard 會建立 `long` `m_lSales` 以配合 Sales 資料行，但您必須將此取代為 `double m_dblSumSales` 的資料成員，以容納匯總結果。 請參閱下列範例。
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>若要取得資料錄集的彙總結果
 
@@ -68,7 +68,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Long(pFX, "Sales", m_lSales);
     ```
 
-     取代為：
+     成為：
 
     ```
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
@@ -85,7 +85,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-收件者:
+變更為：
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9ef95f4a2ebbc1bdf52e5631389f65391ce7cf8f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 6338de99bf9c3e19e6e15ffbe0bcf5caab066ed8
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707958"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079841"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>資料錄集：宣告預先定義查詢的類別 (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
 本主題適用於 MFC ODBC 類別。
@@ -25,7 +25,7 @@ ms.locfileid: "65707958"
 本主題說明如何針對預先定義的查詢 (有時稱為預存程序，例如，在 Microsoft SQL Server 中)，建立資料錄集類別。
 
 > [!NOTE]
->  本主題適用於衍生自 `CRecordset` 的物件，且尚未在其中實作大量資料列擷取。 如果實作大量資料列擷取，程序會非常類似。 若要了解實作與不實作大量資料列擷取的資料錄集之間差異，請參閱[資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果實作大量資料列擷取，程序會非常類似。 若要瞭解會執行大量資料列提取的記錄集之間的差異，以及不會執行的記錄集，請參閱[記錄集：提取大量資料（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 某些資料庫管理系統 (DBMS) 可讓您建立預先定義的查詢，並從您的應用程式呼叫它，例如函式。 查詢有名稱，可能會接受參數，而且可能會傳回資料錄。 本主題中的程序描述如何呼叫可傳回資料錄 (而且可能會接受參數) 的預先定義查詢。
 
@@ -44,7 +44,7 @@ ms.locfileid: "65707958"
 
    例如，如果查詢所傳回的三個資料行中，每個都來自兩個額外的資料表，請將 (適當資料類型的) 六個欄位資料成員新增至類別。
 
-1. 在類別的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成員函式中，手動新增 [RFX](../../data/odbc/record-field-exchange-rfx.md) 函式呼叫，其中一個會對應到每個新增的欄位資料成員的資料類型。
+1. 在類別的 [DoFieldExchange](../../data/odbc/record-field-exchange-rfx.md) 成員函式中，手動新增 [RFX](../../mfc/reference/crecordset-class.md#dofieldexchange) 函式呼叫，其中一個會對應到每個新增的欄位資料成員的資料類型。
 
     ```cpp
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:
@@ -66,7 +66,7 @@ ms.locfileid: "65707958"
 
 1. 如果查詢接受參數，請為每個參數新增一個參數資料成員、為每個參數新增一個 RFX 函式呼叫，並為每個參數新增一個初始化。
 
-1. 您必須針對每個已新增的參數遞增 `m_nParams`，如同您為此程序的步驟 4 中新增的欄位遞增 `m_nFields` 一樣。 如需詳細資訊，請參閱[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+1. 您必須針對每個已新增的參數遞增 `m_nParams`，如同您為此程序的步驟 4 中新增的欄位遞增 `m_nFields` 一樣。 如需詳細資訊，請參閱[記錄集：參數化記錄集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 1. 使用下列格式，手動撰寫 SQL 陳述式字串：
 

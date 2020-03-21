@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 24b4698ebc8dd4f61dfd88ad14e64d4f70b2ef35
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707026"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075288"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 元件精靈
 
@@ -29,13 +29,13 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 從 Visual Studio 2008 開始，此精靈所產生的註冊指令碼將會在 **HKEY_CURRENT_USER** 而非 **HKEY_LOCAL_MACHINE** 下方註冊它的 COM 元件。 若要修改此行為，請設定 ATL 精靈的 [為所有使用者註冊元件] 選項。
 
-## <a name="names"></a>名稱
+## <a name="names"></a>Names
 
-指定要新增至專案的物件、介面和類別名稱。 除了**簡短名稱**，所有其他方塊均可單獨編輯。 如果您變更**簡短名稱**的文字，該變更即會反映於此頁面的所有其他方塊名稱中。 如果您在 [COM] 區段中變更 **Coclass** 名稱，則變更會反映於 [型別] 和 [ProgID] 方塊中，但**介面**名稱不會變更。 此命名行為旨在讓您開發控制項時，能夠輕鬆地識別所有名稱。
+指定要加入至專案的物件、介面和類別名稱。 除了**簡短名稱**，所有其他方塊均可單獨編輯。 如果您變更**簡短名稱**的文字，該變更即會反映於此頁面的所有其他方塊名稱中。 如果您在 [COM] 區段中變更 **Coclass** 名稱，則變更會反映於 [型別] 和 [ProgID] 方塊中，但**介面**名稱不會變更。 此命名行為旨在讓您開發控制項時，能夠輕鬆地識別所有名稱。
 
 - **簡短名稱**
 
-   設定物件的縮寫名稱。 您提供的名稱可決定 `Class` 和 `Coclass` 名稱、**.cpp 檔案**和 **.h 檔案**名稱、**介面**名稱、**型別**名稱，以及 **ProgID** (但前提是您並未個別變更這些欄位)。
+   設定物件的縮寫名稱。 您提供的名稱可決定 `Class` 和 `Coclass` 名稱、 **.cpp 檔案**和 **.h 檔案**名稱、**介面**名稱、**型別**名稱，以及 **ProgID** (但前提是您並未個別變更這些欄位)。
 
 - **.h 檔案**
 
@@ -47,7 +47,7 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
    設定要建立的類別名稱。 此名稱會以您在**簡短名稱**中提供的名稱為基礎，前面加上 'C'，此為類別名稱的一般前置詞。
 
-- **.cpp 檔**
+- **.cpp 檔案**
 
    設定新物件類別的實作檔名稱。 根據預設，此名稱會以您在 [簡短名稱] 中提供的名稱為基礎。 按一下省略符號按鈕，將檔案名稱儲存至您選擇的位置。 在您按一下精靈中的 [完成] 之前，檔案不會儲存至選取的位置。
 
@@ -74,18 +74,18 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 > [!NOTE]
 >  如果您使用屬性建立專案，或者，如果您在此精靈頁面中指出 COM+ 1.0 元件會使用屬性，您就無法變更此選項，因為 ATL 未包含 `coclass` 屬性。
 
-- **Type**
+- **型別**
 
    設定將出現在登錄中的物件描述
 
-- **Interface**
+- **介面**
 
    設定您為物件建立的介面。 此介面包含您的自訂方法。
 
 - **ProgID**
 
    設定容器可使用的名稱，而不是物件的 CLSID。
-   
+
 ::: moniker-end
 
 ## <a name="see-also"></a>另請參閱

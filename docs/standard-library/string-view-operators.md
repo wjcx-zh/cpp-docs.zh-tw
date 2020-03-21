@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446762"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076397"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 運算子
 
-使用這些運算子來比較兩個 string_view 物件，或 string_view 以及提供隱含轉換的其他字串物件（例如[std：： string](basic-string-class.md)或**char\*** ）。 
+使用這些運算子來比較兩個 string_view 物件，或 string_view 以及提供隱含轉換的其他字串物件（例如[std：： string](basic-string-class.md)或**char\*** ）。
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ ms.locfileid: "79446762"
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|[運算子 "" sv](#op_sv)|
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試運算子左邊的物件是否不等於右邊的物件。
 
@@ -69,11 +69,11 @@ bool operator!=(
 
 ### <a name="remarks"></a>備註
 
-從*convertible_string_type*到另一端的 string_view 必須有隱含轉換。 
+從*convertible_string_type*到另一端的 string_view 必須有隱含轉換。
 
 比較是以字元序列的成對字典比較為基礎。 如果它們有相同數目的元素，且元素全都相等，則兩個物件相等。 反之則為不相等。
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的物件是否等於右邊的物件。
 
@@ -108,12 +108,11 @@ bool operator==(
 
 ### <a name="remarks"></a>備註
 
-從*convertible_string_type*到另一端的 string_view 必須有隱含轉換。 
+從*convertible_string_type*到另一端的 string_view 必須有隱含轉換。
 
 比較是以字元序列的成對字典比較為基礎。 如果它們有相同數目的元素，且元素全都相等，則兩個物件相等。
 
-
-## <a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 運算子&lt;
 
 測試運算子左邊的物件是否小於該物件右邊的 sidestring_view
 
@@ -148,7 +147,7 @@ bool operator<(
 
 ### <a name="remarks"></a>備註
 
-從*convertible_string_type*到另一端的 string_view 必須有隱含轉換。 
+從*convertible_string_type*到另一端的 string_view 必須有隱含轉換。
 
 比較是以字元序列的成對字典比較為基礎。 遇到第一組不相等的字元時，會傳回該比較的結果。 如果找不到不相等的字元，但有一個序列較短，則較短的順序會小於較長的序列。 換句話說，「貓」小於「貓」。
 
@@ -174,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>運算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>運算子&lt;=
 
 測試運算子左邊的物件是否小於或等於右邊的物件。
 
@@ -211,7 +210,7 @@ bool operator<=(
 
 請參閱[運算子&lt;](#op_lt)。
 
-## <a name="op_lt_lt"></a>運算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>運算子&lt;&lt;
 
 將 string_view 寫入輸出資料流程。
 
@@ -237,7 +236,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 使用此運算子將 string_view 的內容插入輸出資料流程中，例如使用[std：： cout](iostream.md#cout)。
 
-## <a name="op_gt"></a> 運算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 運算子&gt;
 
 測試運算子左邊的物件是否大於右邊的物件。
 
@@ -274,7 +273,7 @@ bool operator>(
 
 請參閱[運算子&lt;](#op_lt)。
 
-## <a name="op_gt_eq"></a>運算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>運算子&gt;=
 
 測試運算子左邊的物件是否大於或等於右邊的物件。
 
@@ -311,9 +310,9 @@ bool operator>=(
 
 請參閱[運算子&lt;](#op_lt)。
 
-## <a name="op_sv"></a>運算子 "" sv （string_view 常值）
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>運算子 "" sv （string_view 常值）
 
-從字串常值中，建立 string_view。 需要命名空間 `std::literals::string_view_literals`。 
+從字串常值中，建立 string_view。 需要命名空間 `std::literals::string_view_literals`。
 
 ### <a name="example"></a>範例
 

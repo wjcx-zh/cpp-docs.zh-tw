@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e95250b5ef307eafdb334050fbace945355e0521
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707969"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079867"
 ---
 # <a name="recordset-architecture-odbc"></a>資料錄集：架構 (ODBC)
 
@@ -35,10 +35,10 @@ ms.locfileid: "65707969"
 > [!NOTE]
 >  本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果已實作大量資料列擷取，則架構會類似。 若要了解差異，請參閱[資料錄集：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-##  <a name="_core_a_sample_class"></a> 範例類別
+##  <a name="sample-class"></a><a name="_core_a_sample_class"></a> 範例類別
 
-> [!NOTE] 
-> Visual Studio 2019 和更新版本中未提供「MFC ODBC 消費者」精靈。 您仍然可以手動建立消費者。
+> [!NOTE]
+> Visual Studio 2019 和更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
 當您從 [新增類別] 精靈使用 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)來宣告衍生自 `CRecordset` 的資料錄集類別時，產生的類別會具有以下範例類別中所示的一般架構：
 
@@ -56,7 +56,7 @@ public:
 
 在此類別的開頭，精靈會撰寫一組[欄位資料成員](#_core_field_data_members)。 當您建立類別時，必須指定一或多個欄位資料成員。 如果此類別與範例類別 (含有資料成員 `m_strIDParam`) 一樣已參數化，您就必須手動新增[參數資料成員](#_core_parameter_data_members)。 精靈並不支援將參數新增至類別。
 
-##  <a name="_core_field_data_members"></a> 欄位資料成員
+##  <a name="field-data-members"></a><a name="_core_field_data_members"></a> 欄位資料成員
 
 您資料錄集類別的最重要成員就是欄位資料成員。 針對您從資料來源選取的每個資料行，此類別會包含該資料行之適當資料類型的資料成員。 例如，本主題開頭顯示的[範例類別](#_core_a_sample_class)便有兩個欄位資料成員 (兩者的類型皆為 `CString`)，稱為 `m_strCourseID` 和 `m_strCourseTitle`。
 
@@ -64,7 +64,7 @@ public:
 
 當使用者捲動至新記錄時，架構會使用欄位資料成員來代表目前的記錄。 架構會重新整理欄位資料成員，取代先前記錄的值。 欄位資料成員也會用來更新目前的記錄，以及新增新的記錄。 作為更新記錄程序的一部分，您需將值直接指派給適當的欄位資料成員，來指定更新值。
 
-##  <a name="_core_parameter_data_members"></a> 參數資料成員
+##  <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a> 參數資料成員
 
 如果類別已參數化，它就會有一或多個參數資料成員。 參數化類別可讓您的資料錄集查詢以在執行階段取得或計算出的資訊為基礎。
 
@@ -88,7 +88,7 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 > [!NOTE]
 >  參數的順序很重要。 如需有關參數的這項資訊及其他資訊，請參閱[資料錄集：將資料錄集參數化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
-##  <a name="_core_using_m_nfields_and_m_nparams"></a> 使用 m_nFields 和 m_nParams
+##  <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a> 使用 m_nFields 和 m_nParams
 
 當精靈為您的類別撰寫建構函式時，它也會將 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) 資料成員初始化，以指定類別中[欄位資料成員](#_core_field_data_members)的數目。 如果您將任何[參數](#_core_parameter_data_members)新增至您的類別，則也必須為 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) 資料成員新增初始化，以指定參數資料成員的數目。 架構會使用這些值來與資料成員搭配運作。
 

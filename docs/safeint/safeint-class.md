@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515553"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076825"
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 
 擴充基本整數型別，有助於防止整數溢位，並讓您比較不同的整數型別。
 
-> [!NOTE] 
+> [!NOTE]
 > 此程式庫的最新版本位於 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)。
 
 ## <a name="syntax"></a>語法
@@ -33,13 +33,13 @@ class SafeInt;
 
 ### <a name="parameters"></a>參數
 
-| 範本  |  說明 |
+| [範本]  |  描述 |
 |--------|------------|
 | T         |  `SafeInt` 所取代的整數或布林值參數型別。 |
 | E         |  定義錯誤處理原則的列舉資料型別。 |
 | U         |  適用於第二個運算元的整數或布林值參數型別。 |
 
-| 參數  |  說明 |
+| 參數  |  描述 |
 |---------|-----------------|
 | *rhs*      |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
 | *i*        |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
@@ -49,7 +49,7 @@ class SafeInt;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-| 名稱                          |  說明 |
+| 名稱                          |  描述 |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  預設建構函式。 |
 
@@ -170,7 +170,7 @@ class SafeInt;
 
 此類別也可讓您比較兩個不同型別的整數，但前提是它們均為 `SafeInt` 物件。 一般而言，當您執行比較時，必須先將數字轉換為相同型別。 將一個數字轉換為其他型別，通常需要進行檢查，以確定並未遺失資料。
 
-本主題中的運算子表格會列出 `SafeInt` 類別所支援的數學和比較運算子。 大多數的數學運算子都會傳回型別 `T` 的 `SafeInt` 物件。
+本主題中的運算子表格會列出 `SafeInt` 類別所支援的數學和比較運算子。 大多數的數學運算子都會傳回型別 `SafeInt` 的 `T` 物件。
 
 `SafeInt` 和整數型別間的比較作業可以任一方向執行。 例如，`SafeInt<int>(x) < y` 和 `y> SafeInt<int>(x)` 均有效且將傳回相同結果。
 
@@ -214,7 +214,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 `E` 是 `SafeInt` 所使用的錯誤處理機制。 SafeInt 程式庫提供了兩種錯誤處理機制。 預設原則為 `SafeIntErrorPolicy_SafeIntException`，其會在發生錯誤時擲回 [SafeIntException 類別](../safeint/safeintexception-class.md)例外狀況。 另一個原則是 `SafeIntErrorPolicy_InvalidParameter`，其會在發生錯誤時停止程式。
 
-自訂錯誤原則的方法有兩種。 第一個選項是當您建立 `SafeInt` 時設定參數 `E`。 當您只想針對一個 `SafeInt` 變更錯誤處理原則時，請使用此選項。 另一個選項是先定義 _SAFEINT_DEFAULT_ERROR_POLICY 作為您自訂的錯誤處理類別，然後再納入 `SafeInt` 程式庫。 當您想要針對程式碼中 `SafeInt` 類別的所有執行個體變更預設的錯誤處理原則時，請選擇此選項。
+自訂錯誤原則的方法有兩種。 第一個選項是當您建立 `E` 時設定參數 `SafeInt`。 當您只想針對一個 `SafeInt` 變更錯誤處理原則時，請使用此選項。 另一個選項是先定義 _SAFEINT_DEFAULT_ERROR_POLICY 作為您自訂的錯誤處理類別，然後再納入 `SafeInt` 程式庫。 當您想要針對程式碼中 `SafeInt` 類別的所有執行個體變更預設的錯誤處理原則時，請選擇此選項。
 
 > [!NOTE]
 > 處理來自 SafeInt 程式庫之錯誤的自訂類別，不應將控制權傳回給呼叫錯誤處理常式的程式碼。 呼叫錯誤處理常式之後，就無法信任 `SafeInt` 作業的結果。
@@ -229,7 +229,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **命名空間：** msl:: utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
 
 建構 `SafeInt` 物件。
 
@@ -272,6 +272,6 @@ U 儲存於 `SafeInt` 的資料型別。 這可以是布林值、字元或整數
 
 建構函式的輸入參數 *i* 或 *u* 必須是布林值、字元或整數型別。 如果它是另一個型別的參數，則 `SafeInt` 類別會呼叫 [static_assert](../cpp/static-assert.md) 來指出無效的輸入參數。
 
-使用範本型別 `U` 的建構函式會將輸入參數自動轉換為 `T` 所指定的型別。 `SafeInt` 類別會轉換資料且不會遺失任何資料。 如果無法在不遺失資料的情況下將資料轉換為型別 `T`，它就會向錯誤處理常式報告 `E`。
+使用範本型別 `U` 的建構函式會將輸入參數自動轉換為 `T` 所指定的型別。 `SafeInt` 類別會轉換資料且不會遺失任何資料。 如果無法在不遺失資料的情況下將資料轉換為型別 `E`，它就會向錯誤處理常式報告 `T`。
 
-如果您從布林值參數建立 `SafeInt`，則必須立即將值初始化。 您無法使用程式碼 `SafeInt<bool> sb;` 來建構 `SafeInt`。 這將產生編譯錯誤。
+如果您從布林值參數建立 `SafeInt`，則必須立即將值初始化。 您無法使用程式碼 `SafeInt` 來建構 `SafeInt<bool> sb;`。 這將產生編譯錯誤。

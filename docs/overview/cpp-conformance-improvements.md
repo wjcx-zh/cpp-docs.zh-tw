@@ -3,12 +3,12 @@ title: C++ 一致性改善
 ms.date: 03/16/2020
 description: Visual Studio 的 Microsoft C++ 正在向完全符合 C++20 語言標準邁進。
 ms.technology: cpp-language
-ms.openlocfilehash: 31c64ca8ce6b13af89a2e19bccd1de1bfb99543a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d76a6dc4c5ad9cbf83befccfdd470ce755d0603c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446794"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077432"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 一致性改善
 
@@ -16,7 +16,7 @@ Microsoft C++ 在每個版本中都進行一致性改善和 Bug 修正。 本文
 
 ::: moniker range="vs-2019"
 
-## <a name="improvements_160"></a>Visual Studio 2019 RTW 中的一致性改進（版本16.0）
+## <a name="conformance-improvements-in-visual-studio-2019-rtw-version-160"></a><a name="improvements_160"></a>Visual Studio 2019 RTW 中的一致性改進（版本16.0）
 
 Visual Studio 2019 RTW 包含下列的一致性改進、bug 修正，以及 Microsoft C++編譯器（MSVC）中的行為變更
 
@@ -50,7 +50,7 @@ B b = { 1 }; // ill-formed in C++20, previously well-formed
 
 ### <a name="partial-support-for-operator-"></a>部分支援 `operator <=>`
 
-[P0515R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0515r3.pdf) C++20 引入 `<=>` 三向比較運算子，也稱為「太空船運算子」。 `/std:c++latest` 模式中的 Visual Studio 2019 透過引發目前不允許的語法錯誤，引入運算子部分支援。 例如，在 Visual Studio 2017 中，下列程式碼在編譯時不會引發錯誤，但在 Visual Studio 2019 的 `/std:c++latest` 下會引發多個錯誤：
+[P0515R3](https://wg21.link/p0515r3) C++20 引入 `<=>` 三向比較運算子，也稱為「太空船運算子」。 `/std:c++latest` 模式中的 Visual Studio 2019 透過引發目前不允許的語法錯誤，引入運算子部分支援。 例如，在 Visual Studio 2017 中，下列程式碼在編譯時不會引發錯誤，但在 Visual Studio 2019 的 `/std:c++latest` 下會引發多個錯誤：
 
 ```cpp
 struct S
@@ -134,7 +134,7 @@ int main()
 
 ### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory` 失敗碼
 
-已從 C++20 無條件實作 [P1164](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf)。 這會變更 `std::create_directory`，檢查目標在發生故障時是否即為目錄。 以前，所有 ERROR_ALREADY_EXISTS 類型錯誤都會轉換成成功但未建立目錄的程式碼。
+已從 C++20 無條件實作 [P1164](https://wg21.link/p1164r1)。 這會變更 `std::create_directory`，檢查目標在發生故障時是否即為目錄。 以前，所有 ERROR_ALREADY_EXISTS 類型錯誤都會轉換成成功但未建立目錄的程式碼。
 
 ### `operator<<(std::ostream, nullptr_t)`
 
@@ -146,25 +146,25 @@ int main()
 
 ### <a name="atomic-initialization"></a>不可部分完成的初始化
 
-[P0883 "Fixing atomic initialization"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) (P0883「修正不可部分完成的初始化」) 將 `std::atomic` 變更為初始化包含 T 的值，而不是將它初始化的預設值。 使用 Clang/LLVM 與 Microsoft 標準程式庫時即啟用此修正。 Microsoft C++編譯器目前已停用此功能，作為**constexpr**處理中 bug 的因應措施。
+[P0883 "Fixing atomic initialization"](https://wg21.link/p0883r1) (P0883「修正不可部分完成的初始化」) 將 `std::atomic` 變更為初始化包含 T 的值，而不是將它初始化的預設值。 使用 Clang/LLVM 與 Microsoft 標準程式庫時即啟用此修正。 Microsoft C++編譯器目前已停用此功能，作為**constexpr**處理中 bug 的因應措施。
 
 ### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` 和 `remove_cvref_t`
 
-已從 `remove_cvref`P0550`remove_cvref_t` 實作 [ 和 ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) 類型特性。 它們會移除類型中的參考性質和 CV 限定性，但不衰減指標的函式和陣列 (不同於 `std::decay` 和 `std::decay_t`)。
+已從 `remove_cvref`P0550`remove_cvref_t` 實作 [ 和 ](https://wg21.link/p0550r2) 類型特性。 它們會移除類型中的參考性質和 CV 限定性，但不衰減指標的函式和陣列 (不同於 `std::decay` 和 `std::decay_t`)。
 
 ### <a name="feature-test-macros"></a>功能測試巨集
 
-[P0941R2 - 功能測試巨集](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0941r2.html)已完成，並支援 `__has_cpp_attribute`。 所有標準模式都支援功能測試巨集。
+[P0941R2 - 功能測試巨集](https://wg21.link/p0941r2)已完成，並支援 `__has_cpp_attribute`。 所有標準模式都支援功能測試巨集。
 
 ### <a name="prohibit-aggregates-with-user-declared-constructors"></a>禁止使用使用者宣告的建構函式彙總
 
-[C++20 P1008R1 - 禁止使用使用者宣告的建構函式彙總](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf)已完成。
+[C++20 P1008R1 - 禁止使用使用者宣告的建構函式彙總](https://wg21.link/p1008r1)已完成。
 
-## <a name="improvements_161"></a>16.1 中的一致性改善
+## <a name="conformance-improvements-in-161"></a><a name="improvements_161"></a>16.1 中的一致性改善
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)。 C++20 新增用來表示 UTF-8 字碼單位的新字元類型。 C++20 的 `u8` 字串常值具有類型 `const char8_t[N]` 而非 `const char[N]`，這是舊例。 [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm) \(英文\) 已針對 C 標準建議類似的變更。 `char8_t`P1423r0[ 提供 ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html) \(英文\) 回溯相容性的補救建議。 在 Visual Studio 2019 16.1 版中，當您指定 `char8_t`/Zc:char8_t**編譯器選項時，Microsoft C++ 編譯器會新增** 支援。 未來還會支援 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)，其可透過 **/Zc:char8_t-** 還原成 C++17 行為。 驅動 IntelliSense 的 EDG 編譯器尚不支援它，所以您會看到假性的僅限 IntelliSense 錯誤，不會影響實際的編譯。
+[P0482r6](https://wg21.link/p0482r6)。 C++20 新增用來表示 UTF-8 字碼單位的新字元類型。 C++20 的 `u8` 字串常值具有類型 `const char8_t[N]` 而非 `const char[N]`，這是舊例。 [N2231](https://wg14.link/n2231) \(英文\) 已針對 C 標準建議類似的變更。 `char8_t`P1423r0[ 提供 ](https://wg21.link/p1423r0) \(英文\) 回溯相容性的補救建議。 在 Visual Studio 2019 16.1 版中，當您指定 `char8_t`/Zc:char8_t**編譯器選項時，Microsoft C++ 編譯器會新增** 支援。 未來還會支援 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)，其可透過 **/Zc:char8_t-** 還原成 C++17 行為。 驅動 IntelliSense 的 EDG 編譯器尚不支援它，所以您會看到假性的僅限 IntelliSense 錯誤，不會影響實際的編譯。
 
 #### <a name="example"></a>範例
 
@@ -175,7 +175,7 @@ const char8_t* s = u8"Hello"; // C++20
 
 ### <a name="stdtype_identity-metafunction-and-stdidentity-function-object"></a>std::type_identity metafunction 和 std::identity 函式物件
 
-[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf). 已移除淘汰的 `std::identity` 類別範本副檔名，並已經以 C++20 `std::type_identity` metafunction 和 `std::identity` 函式物件取代。 兩者都僅能在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 下使用。
+[P0887R1 type_identity](https://wg21.link/p0887r1). 已移除淘汰的 `std::identity` 類別範本副檔名，並已經以 C++20 `std::type_identity` metafunction 和 `std::identity` 函式物件取代。 兩者都僅能在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 下使用。
 
 下列範例會在 Visual Studio 2017 中產生 `std::identity` 的淘汰警告 C4996 (定義於 \<type_traits>)：
 
@@ -226,11 +226,11 @@ void f() {
 
 ### <a name="argument-dependent-lookup-for-function-calls"></a>函式呼叫的引數相依查閱
 
-[P0846R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0846r0.html) (C++20) 為具有明確範本引數的函式呼叫運算式，增強透過依引數相關查閱來尋找函式範本的功能。 需要 **/std:c++latest**。
+[P0846R0](https://wg21.link/p0846r0) (C++20) 為具有明確範本引數的函式呼叫運算式，增強透過依引數相關查閱來尋找函式範本的功能。 需要 **/std:c++latest**。
 
 ### <a name="designated-initialization"></a>指定的初始化
 
-[P0329R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf) (C++20) 指定的初始化使用 `Type t { .member = expr }` 語法，在彙總初始化中選取特定成員。 需要 **/std:c++latest**。
+[P0329R4](https://wg21.link/p0329r4) (C++20) 指定的初始化使用 `Type t { .member = expr }` 語法，在彙總初始化中選取特定成員。 需要 **/std:c++latest**。
 
 ### <a name="new-and-updated-standard-library-functions-c20"></a>更新的新標準程式庫函式 (C++20)
 
@@ -239,12 +239,11 @@ void f() {
 - `remove()` 和 `remove_if()` 的 `unique()`、`list` 與 `forward_list` 現在會傳回 `size_type`。
 - `shift_left()` 和 `shift_right()` 已新增至 \<演算法>。
 
-
-## <a name="improvements_162"></a>16.2 中的一致性改善
+## <a name="conformance-improvements-in-162"></a><a name="improvements_162"></a>16.2 中的一致性改善
 
 ### <a name="noexcept-constexpr-functions"></a>noexcept constexpr 函式
 
-在常數運算式中使用 Constexpr 函數時，預設不再將其視為**noexcept** 。 這項行為變更來自[CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351)的解決方式，並已在[/permissive-](../build/reference/permissive-standards-conformance.md)中啟用。 下列範例會在 Visual Studio 2019 16.1 版和更早版本中進行編譯，但會在 Visual Studio 2019 版本16.2 中產生 C2338：
+在常數運算式中使用 Constexpr 函數時，預設不再將其視為**noexcept** 。 這項行為變更來自[CWG 1351](https://wg21.link/cwg1351)的解決方式，並已在[/permissive-](../build/reference/permissive-standards-conformance.md)中啟用。 下列範例會在 Visual Studio 2019 16.1 版和更早版本中進行編譯，但會在 Visual Studio 2019 版本16.2 中產生 C2338：
 
 ```cpp
 constexpr int f() { return 0; }
@@ -378,19 +377,19 @@ bool neq(const S& lhs, const S& rhs) {
 ### <a name="standard-library-improvements"></a>標準程式庫改良功能
 
 - 以固定/科學精確度 \<charconv > `to_chars()`。 （目前已針對16.4 規劃一般精確度）。
-- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)：不可部分完成的\<float >、不可部分完成\<雙重 >、不可部分完成\<long double >
-- [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)： endian
-- [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)： char8_t 的程式庫支援
-- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)： [\[nodiscard]] （適用于 STL，第1部分）
-- [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)： to_address （）
-- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf)： \<版本 >
-- [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf)： std：： function 的 move 函數的 noexcept
+- [P0020R6](https://wg21.link/p0020r6)：不可部分完成的\<float >、不可部分完成\<雙重 >、不可部分完成\<long double >
+- [P0463R1](https://wg21.link/p0463r1)： endian
+- [P0482R6](https://wg21.link/p0482r6)： char8_t 的程式庫支援
+- [P0600R1](https://wg21.link/p0600r1)： [\[nodiscard]] （適用于 STL，第1部分）
+- [P0653R2](https://wg21.link/p0653r2)： to_address （）
+- [P0754R2](https://wg21.link/p0754r2)： \<版本 >
+- [P0771R1](https://wg21.link/p0771r1)： std：： function 的 move 函數的 noexcept
 
-## <a name="improvements_163"></a>Visual Studio 2019 16.3 版中的一致性改善
+## <a name="conformance-improvements-in-visual-studio-2019-version-163"></a><a name="improvements_163"></a>Visual Studio 2019 16.3 版中的一致性改善
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>已移除 char * 的資料流程提取運算子
 
-連結至字元的資料流程提取運算子已移除，並由一系列字元的抽取運算子取代（每個[P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)）。 WG21 會將已移除的多載視為不安全。 在[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)模式中，下列範例現在*會產生 C2679：二元 ' > > '：找不到接受 ' char\*' 類型之右運算元的運算子（或是沒有可接受的轉換）* ：
+連結至字元的資料流程提取運算子已移除，並由一系列字元的抽取運算子取代（每個[P0487R1](https://wg21.link/p0487r1)）。 WG21 會將已移除的多載視為不安全。 在[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)模式中，下列範例現在*會產生 C2679：二元 ' > > '：找不到接受 ' char\*' 類型之右運算元的運算子（或是沒有可接受的轉換）* ：
 
 ```cpp
    char x[42];
@@ -459,7 +458,7 @@ extern "C" void f(int, int, int, BOOL){}
 
 已移除 \<stdexcpt 的非標準標頭 > 和 \<typeinfo. h >。 包含它們的程式碼應改為分別包含標準標頭 \<exception > 和 \<typeinfo >。
 
-## <a name="improvements_164"></a>Visual Studio 2019 16.4 版中的一致性改善
+## <a name="conformance-improvements-in-visual-studio-2019-version-164"></a><a name="improvements_164"></a>Visual Studio 2019 16.4 版中的一致性改善
 
 ### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>針對/permissive-中的合格識別碼，更有效地強制執行兩階段名稱查閱
 
@@ -497,7 +496,7 @@ namespace N {
 
 ### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>整數常數運算式隱含轉換成 null 指標
 
-MSVC 編譯器現在會在一致性模式（/permissive-）中實行[CWG 問題 903](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#903) 。 此規則不允許將整數常數運算式隱含轉換（整數常值 ' 0 ' 除外）為 null 指標常數。 下列範例會在一致性模式下產生 C2440：
+MSVC 編譯器現在會在一致性模式（/permissive-）中實行[CWG 問題 903](https://wg21.link/cwg903) 。 此規則不允許將整數常數運算式隱含轉換（整數常值 ' 0 ' 除外）為 null 指標常數。 下列範例會在一致性模式下產生 C2440：
 
 ```cpp
 int* f(bool* p) {
@@ -601,7 +600,7 @@ static_assert(my_is_fundamental<S>::value, "fail");
 
 ### <a name="changes-to-compiler-provided-comparison-operators"></a>編譯器提供之比較運算子的變更
 
-當啟用[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)的選項時，MSVC 編譯器現在會針對每個[P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html)的比較運算子執行下列變更：
+當啟用[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)的選項時，MSVC 編譯器現在會針對每個[P1630R1](https://wg21.link/p1630r1)的比較運算子執行下列變更：
 
 編譯器不會再使用 `operator==` 重寫運算式，如果它們牽涉到不是**布林**值的傳回型別。 下列程式碼現在會產生*錯誤 C2088： '！ = '：結構不合法*：
 
@@ -698,7 +697,7 @@ bool lt(const U& lhs, const U& rhs) {
 }
 ```
 
-## <a name="improvements_165"></a>Visual Studio 2019 16.5 版中的一致性改善
+## <a name="conformance-improvements-in-visual-studio-2019-version-165"></a><a name="improvements_165"></a>Visual Studio 2019 16.5 版中的一致性改善
 
 ### <a name="explicit-specialization-declaration-without-an-initializer-is-not-a-definition"></a>沒有初始化運算式的明確特製化宣告不是定義
 
@@ -887,7 +886,7 @@ struct U {
 U u{ 0 };
 ```
 
-## <a name="update_160"></a>Visual Studio 2019 中的 Bug 修正和行為變更
+## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a><a name="update_160"></a>Visual Studio 2019 中的 Bug 修正和行為變更
 
 ### <a name="reinterpret_cast-in-a-constexpr-function"></a>Constexpr 函式中的 Reinterpret_cast
 
@@ -1162,7 +1161,7 @@ int main()
 
 - 容器已修正為根據 `propagate_on_container_copy_assignment`、`propagate_on_container_move_assignment` 和 `propagate_on_container_swap`，甚至針對配置器宣告的 `is_always_equal` 來一律複製/移動/分頁配置器。
 
-- 已新增容器合併的多載，並依 [P0083 "Splicing Maps And Sets"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf) (P0083：接合對應和集合) 擷取接受右值容器的成員函式
+- 已新增容器合併的多載，並依 [P0083 "Splicing Maps And Sets"](https://wg21.link/p0083r3) (P0083：接合對應和集合) 擷取接受右值容器的成員函式
 
 ### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read`r\\n => \\n 的 \\ 處理
 
@@ -1180,7 +1179,7 @@ int main()
 
 已修正 `add_const_t` 和相關函式本該是非推算內容的次要類型特性 Bug。 換言之，`add_const_t` 應該是 `typename add_const<T>::type` 的別名，而非 `const T` 的別名。
 
-## <a name="update_162"></a>16.2 中的 Bug 修正和行為變更
+## <a name="bug-fixes-and-behavior-changes-in-162"></a><a name="update_162"></a>16.2 中的 Bug 修正和行為變更
 
 ### <a name="const-comparators-for-associative-containers"></a>關聯容器的 Const 比較子
 
@@ -1234,7 +1233,7 @@ struct Comparer  {
 
 ::: moniker range="vs-2017"
 
-## <a name="improvements_150"></a>Visual Studio 2017 RTW 中的一致性改進（版本15.0）
+## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a>Visual Studio 2017 RTW 中的一致性改進（版本15.0）
 
 針對匯總的一般化**constexpr**和非靜態資料成員初始化（NSDMI）支援，現在已針對 c C++ + + 14 標準中新增的功能完成了 Visual Studio 2017 中的 Microsoft 編譯器。 不過，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 如需顯示編譯器目前狀態的資料表，請參閱[Microsoft C++語言一致性表格](../visual-cpp-language-conformance.md)。
 
@@ -1244,25 +1243,25 @@ struct Comparer  {
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C + + 14：匯總的 NSDMI
 
-彙總是陣列或類別，但沒有使用者提供的建構函式、私人或受保護的非靜態資料成員、基底類別和虛擬函式。 從 C++14 開始，彙總可能會包含成員初始設定式。 如需詳細資訊，請參閱 [Member initializers and aggregates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html) (成員初始設定式和彙總)。
+彙總是陣列或類別，但沒有使用者提供的建構函式、私人或受保護的非靜態資料成員、基底類別和虛擬函式。 從 C++14 開始，彙總可能會包含成員初始設定式。 如需詳細資訊，請參閱 [Member initializers and aggregates](https://wg21.link/n3605) (成員初始設定式和彙總)。
 
 ### <a name="c14-extended-constexpr"></a>C + + 14：延伸的**constexpr**
 
-宣告為**constexpr**的運算式現在允許包含特定種類的宣告、if 和 switch 語句、loop 語句，以及存留期開始于 constexpr 運算式評估內的物件變化。 此外，已不再需要**constexpr**非靜態成員函式必須隱含**const**。 如需詳細資訊，請參閱 [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html) (放寬 constexpr 函式的條件約束)。
+宣告為**constexpr**的運算式現在允許包含特定種類的宣告、if 和 switch 語句、loop 語句，以及存留期開始于 constexpr 運算式評估內的物件變化。 此外，已不再需要**constexpr**非靜態成員函式必須隱含**const**。 如需詳細資訊，請參閱 [Relaxing constraints on constexpr functions](https://wg21.link/n3652) (放寬 constexpr 函式的條件約束)。
 
 ### <a name="c17-terse-static_assert"></a>C + + 17：簡易 `static_assert`
 
-`static_assert` 的訊息參數是選擇性的。 如需詳細資訊，請參閱 [Extending static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf) (擴充 static_assert v2)。
+`static_assert` 的訊息參數是選擇性的。 如需詳細資訊，請參閱 [Extending static_assert, v2](https://wg21.link/n3928) (擴充 static_assert v2)。
 
 ### <a name="c17-fallthrough-attribute"></a>C++17：`[[fallthrough]]` 屬性
 
-在 **/std:c++17** 模式中，`[[fallthrough]]` 屬性可以用於 switch 陳述式的內容，作為對意圖發生失敗行為之編譯器的提示。 此屬性可避免編譯器發出警告。 如需詳細資訊，請參閱 [\[\[fallthrough\]\] 屬性的用語](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r0.pdf) \(英文\)。
+在 **/std:c++17** 模式中，`[[fallthrough]]` 屬性可以用於 switch 陳述式的內容，作為對意圖發生失敗行為之編譯器的提示。 此屬性可避免編譯器發出警告。 如需詳細資訊，請參閱 [\[\[fallthrough\]\] 屬性的用語](https://wg21.link/p0188r0) \(英文\)。
 
 ### <a name="generalized-range-based-for-loops"></a>通用的範圍架構 for 迴圈
 
-範圍式 for 迴圈不再需要 `begin()` 和 `end()` 傳回相同類型的物件。 此變更可讓 `end()` 傳回 [range-v3](https://github.com/ericniebler/range-v3) 中範圍所使用的 sentinel，以及已完成但尚未發行的「範圍技術規格」。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (一般化範圍架構的 For 迴圈)。
+範圍式 for 迴圈不再需要 `begin()` 和 `end()` 傳回相同類型的物件。 此變更可讓 `end()` 傳回 [range-v3](https://github.com/ericniebler/range-v3) 中範圍所使用的 sentinel，以及已完成但尚未發行的「範圍技術規格」。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](https://wg21.link/p0184r0) (一般化範圍架構的 For 迴圈)。
 
-## <a name="improvements_153"></a>15.3 中的一致性改善
+## <a name="conformance-improvements-in-153"></a><a name="improvements_153"></a>15.3 中的一致性改善
 
 ### <a name="constexpr-lambdas"></a>constexpr lambdas
 
@@ -1286,25 +1285,25 @@ Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱
 
 ### <a name="structured-bindings"></a>結構化繫結
 
-現在可以在單一宣告中以值元件的個別名稱儲存值，前提是該值必須為陣列、`std::tuple` 或 `std::pair`，或具有公用非靜態資料成員。 如需詳細資訊，請參閱[結構化繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)與[從函式傳回多重值](../cpp/functions-cpp.md#multi_val)。
+現在可以在單一宣告中以值元件的個別名稱儲存值，前提是該值必須為陣列、`std::tuple` 或 `std::pair`，或具有公用非靜態資料成員。 如需詳細資訊，請參閱[結構化繫結](https://wg21.link/p0144r0)與[從函式傳回多重值](../cpp/functions-cpp.md#multi_val)。
 
 ### <a name="construction-rules-for-enum-class-values"></a>**列舉類別**值的結構規則
 
-當列舉的定義未導入列舉程式，且來源使用 list-initialization 語法時，從範圍列舉的基礎類型到列舉本身之間現在已有隱含/非縮小的轉換。 如需詳細資訊，請參閱[列舉類別值的建構規則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)與 [Enumerations](../cpp/enumerations-cpp.md#no_enumerators)。
+當列舉的定義未導入列舉程式，且來源使用 list-initialization 語法時，從範圍列舉的基礎類型到列舉本身之間現在已有隱含/非縮小的轉換。 如需詳細資訊，請參閱[列舉類別值的建構規則](https://wg21.link/p0138r2)與 [Enumerations](../cpp/enumerations-cpp.md#no_enumerators)。
 
 ### <a name="capturing-this-by-value"></a>以值擷取 `*this`
 
-Lambda 運算式中的 `*this` 物件現已可以值擷取。 此變更可用在平行及非同步作業中叫用 Lambda 的案例，特別是在較新的電腦架構上。 如需詳細資訊，請參閱 [Lambda 透過值將 \*this 擷取為 \[=,\*this\]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html) \(英文\)。
+Lambda 運算式中的 `*this` 物件現已可以值擷取。 此變更可用在平行及非同步作業中叫用 Lambda 的案例，特別是在較新的電腦架構上。 如需詳細資訊，請參閱 [Lambda 透過值將 \*this 擷取為 \[=,\*this\]](https://wg21.link/p0018r3) \(英文\)。
 
 ### <a name="removing-operator-for-bool"></a>移除**bool**的 `operator++`
 
-已不再支援**bool**類型的 `operator++`。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
+已不再支援**bool**類型的 `operator++`。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](https://wg21.link/p0002r1) \(英文\)。
 
 ### <a name="removing-deprecated-register-keyword"></a>移除已淘汰的**register**關鍵字
 
-先前已淘汰（並由編譯器忽略）的**register**關鍵字，現在已從語言中移除。 如需詳細資訊，請參閱[移除 register 關鍵字的已取代用途](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) \(英文\)。
+先前已淘汰（並由編譯器忽略）的**register**關鍵字，現在已從語言中移除。 如需詳細資訊，請參閱[移除 register 關鍵字的已取代用途](https://wg21.link/p0001r1) \(英文\)。
 
-## <a name="improvements_155"></a>15.5 中的一致性改善
+## <a name="conformance-improvements-in-155"></a><a name="improvements_155"></a>15.5 中的一致性改善
 
 以 \[14] 標記的功能可無條件地使用，即使在 **/std:c++14** 模式中也一樣。
 
@@ -1314,47 +1313,47 @@ Lambda 運算式中的 `*this` 物件現已可以值擷取。 此變更可用在
 
 ### <a name="removing-dynamic-exception-specifications"></a>移除動態例外狀況規格
 
-[P0003R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html) 動態例外狀況規格在 C++11 中已淘汰。 此功能已從 C++17 中移除，但已被取代的 `throw()` 規格仍會嚴格保留作為 `noexcept(true)` 的別名。 如需詳細資訊，請參閱[動態例外狀況規格移除和 noexcept](#noexcept_removal)。
+[P0003R5](https://wg21.link/p0003r5) 動態例外狀況規格在 C++11 中已淘汰。 此功能已從 C++17 中移除，但已被取代的 `throw()` 規格仍會嚴格保留作為 `noexcept(true)` 的別名。 如需詳細資訊，請參閱[動態例外狀況規格移除和 noexcept](#noexcept_removal)。
 
 ### `not_fn()`
 
-[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` 取代 `not1` 和 `not2`。
+[P0005R4](https://wg21.link/p0005r4) `not_fn` 取代 `not1` 和 `not2`。
 
 ### <a name="rewording-enable_shared_from_this"></a>重寫 `enable_shared_from_this`
 
-[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` 已在 c + + 11 中新增。 此 C++17 標準會更新規格，以更妥善處理某些極端的案例。 [14]
+[P0033R1](https://wg21.link/p0033r1) `enable_shared_from_this` 已在 c + + 11 中新增。 此 C++17 標準會更新規格，以更妥善處理某些極端的案例。 [14]
 
 ### <a name="splicing-maps-and-sets"></a>接合地圖與集合
 
-[P0083R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf) 此功能讓您可從關聯容器 (即 `map`、`set`、`unordered_map`、`unordered_set`) 擷取節點，然後進行修改，再插回相同容器或使用相同節點類型的不同容器中。 (常見的使用案例是從 `std::map` 擷取節點，再變更金鑰，然後重新插入。)
+[P0083R3](https://wg21.link/p0083r3) 此功能讓您可從關聯容器 (即 `map`、`set`、`unordered_map`、`unordered_set`) 擷取節點，然後進行修改，再插回相同容器或使用相同節點類型的不同容器中。 (常見的使用案例是從 `std::map` 擷取節點，再變更金鑰，然後重新插入。)
 
 ### <a name="deprecating-vestigial-library-parts"></a>淘汰不必要的程式庫組件
 
-[P0174R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html) C++ 標準程式庫有幾項功能多年來逐漸被較新的功能所取代，或是發現不實用或有問題。 這些功能在 C++17 中已正式被取代。
+[P0174R2](https://wg21.link/p0174r2) C++ 標準程式庫有幾項功能多年來逐漸被較新的功能所取代，或是發現不實用或有問題。 這些功能在 C++17 中已正式被取代。
 
 ### <a name="removing-allocator-support-in-stdfunction"></a>移除 `std::function` 中的配置器支援
 
-[P0302R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html) 在 C++17 之前，類別範本 `std::function` 具有數個使用配置器引數的建構函式。 不過，在此內容中使用配置器會有問題，而且語意不清。 已移除有問題的建構函式。
+[P0302R1](https://wg21.link/p0302r1) 在 C++17 之前，類別範本 `std::function` 具有數個使用配置器引數的建構函式。 不過，在此內容中使用配置器會有問題，而且語意不清。 已移除有問題的建構函式。
 
 ### <a name="fixes-for-not_fn"></a>`not_fn()` 的修正
 
-[P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)`std::not_fn` 的新寫法支援在用於包裝函式引動過程時傳播值類別。
+[P0358R1](https://wg21.link/p0358r1)`std::not_fn` 的新寫法支援在用於包裝函式引動過程時傳播值類別。
 
 ### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`, `shared_ptr<T[N]>`
 
-[P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) 將程式庫基本概念中的 `shared_ptr` 變更合併到 C++17。 [14]
+[P0414R2](https://wg21.link/p0414r2) 將程式庫基本概念中的 `shared_ptr` 變更合併到 C++17。 [14]
 
 ### <a name="fixing-shared_ptr-for-arrays"></a>修正陣列的 `shared_ptr`
 
-[P0497R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html) 修正陣列的 shared_ptr 支援。 [14]
+[P0497R0](https://wg21.link/p0497r0) 修正陣列的 shared_ptr 支援。 [14]
 
 ### <a name="clarifying-insert_return_type"></a>釐清 `insert_return_type`
 
-[P0508R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html) 具有唯一金鑰的關聯容器和具有唯一金鑰的未排序容器包含傳回巢狀型別 `insert` 的成員函式 `insert_return_type`。 該傳回型別現在已定義為在容器的 Iterator 和 NodeType 上參數化的類型特製化。
+[P0508R0](https://wg21.link/p0508r0) 具有唯一金鑰的關聯容器和具有唯一金鑰的未排序容器包含傳回巢狀型別 `insert` 的成員函式 `insert_return_type`。 該傳回型別現在已定義為在容器的 Iterator 和 NodeType 上參數化的類型特製化。
 
 ### <a name="inline-variables-for-the-standard-library"></a>標準程式庫的內嵌變數
 
-[P0607R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)
+[P0607R0](https://wg21.link/p0607r0)
 
 ### <a name="annex-d-features-deprecated"></a>附錄 D 已淘汰的功能
 
@@ -1368,21 +1367,21 @@ C++ 標準的附錄 D 包含已淘汰的所有功能，包括 `shared_ptr::uniqu
 
 標準程式庫已更新，以回應 c + + 17 編譯器變更，包括在類型系統中新增**noexcept** ，以及移除動態例外狀況規格。
 
-## <a name="improvements_156"></a>15.6 中的一致性改善
+## <a name="conformance-improvements-in-156"></a><a name="improvements_156"></a>15.6 中的一致性改善
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17 程式庫基本概念 V1
 
-[P0220R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) 將 C++17 的程式庫基本技術規格合併至標準。 涵蓋對 \<experimental/tuple>、\<experimental/optional>、\<experimental/functional>、\<experimental/any>、\<experimental/string_view>、\<experimental/memory>、\<experimental/memory_resource> 及 \<experimental/algorithm> 的更新。
+[P0220R1](https://wg21.link/p0220r1) 將 C++17 的程式庫基本技術規格合併至標準。 涵蓋對 \<experimental/tuple>、\<experimental/optional>、\<experimental/functional>、\<experimental/any>、\<experimental/string_view>、\<experimental/memory>、\<experimental/memory_resource> 及 \<experimental/algorithm> 的更新。
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C + + 17：改善標準程式庫的類別樣板引數推斷
 
-[P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html) 將 `adopt_lock_t` 移至參數清單前，使 `scoped_lock` 能夠一致使用 `scoped_lock`。 允許 `std::variant` 建構函式在更多案例中參與多載解析，以啟用複製指派。
+[P0739R0](https://wg21.link/p0739r0) 將 `adopt_lock_t` 移至參數清單前，使 `scoped_lock` 能夠一致使用 `scoped_lock`。 允許 `std::variant` 建構函式在更多案例中參與多載解析，以啟用複製指派。
 
-## <a name="improvements_157"></a>15.7 中的一致性改善
+## <a name="conformance-improvements-in-157"></a><a name="improvements_157"></a>15.7 中的一致性改善
 
 ### <a name="c17-rewording-inheriting-constructors"></a>C + + 17：改寫繼承的函式
 
-[P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) \(英文\) 指定了為建構函式命名的 **using** 宣告，現在會對衍生的類別顯示相應的基底類別建構函式，而不宣告額外的衍生類別建構函式。 此重寫是來自 C++14 的變更。 在 Visual Studio 2017 15.7 版及更新版本中，於 **/std:c++17** 模式中，在 C++14 有效以及使用繼承建構函式的程式碼，可能會失效或有不同的語意。
+[P0136R1](https://wg21.link/p0136r1) \(英文\) 指定了為建構函式命名的 **using** 宣告，現在會對衍生的類別顯示相應的基底類別建構函式，而不宣告額外的衍生類別建構函式。 此重寫是來自 C++14 的變更。 在 Visual Studio 2017 15.7 版及更新版本中，於 **/std:c++17** 模式中，在 C++14 有效以及使用繼承建構函式的程式碼，可能會失效或有不同的語意。
 
 下列範例顯示 C++14 行為：
 
@@ -1426,7 +1425,7 @@ B b(42L); // now calls B(int)
 
 ### <a name="c17-extended-aggregate-initialization"></a>C + + 17：擴充的匯總初始化
 
-[P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
+[P0017R1](https://wg21.link/p0017r1)
 
 如果基類的函式不是公用的，但衍生類別可存取，則在 Visual Studio 2017 版本15.7 中的 **/std： c + + 17**模式下，您就無法再使用空的大括弧來初始化衍生類型的物件。
 下列範例顯示 C++14 一致性行為：
@@ -1466,7 +1465,7 @@ Derived d2 {}; // error C2248: 'Base::Base': cannot access
 
 ### <a name="c17-declaring-non-type-template-parameters-with-auto"></a>C + + 17：使用 auto 宣告非類型範本參數
 
-[P0127R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)
+[P0127R2](https://wg21.link/p0127r2)
 
 在 **/std:c + + 17** 模式中，編譯器現在可以推斷以 **auto** 宣告之非類型樣本引數的類型：
 
@@ -1508,41 +1507,41 @@ void sample(A<0> *p)
 
 ### <a name="c17-elementary-string-conversions-partial"></a>C + + 17：基底字元串轉換（部分）
 
-[P0067R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html) 介於整數與字串之間，以及浮點數與字串之間的低階、無關地區設定的函式轉換。
+[P0067R5](https://wg21.link/p0067r5) 介於整數與字串之間，以及浮點數與字串之間的低階、無關地區設定的函式轉換。
 
 ### <a name="c20-avoiding-unnecessary-decay-partial"></a>C + + 20：避免不必要的衰減（部分）
 
-[P0777R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf) 為 "decay'' 的概念與單純移除常式或參考限定詞之間的差異新增區別。  新增類型特徵 `remove_reference_t` 來取代部分內容中的 `decay_t`。 Visual Studio 2019 中已實作 `remove_cvref_t` 的支援。
+[P0777R1](https://wg21.link/p0777r1) 為 "decay'' 的概念與單純移除常式或參考限定詞之間的差異新增區別。  新增類型特徵 `remove_reference_t` 來取代部分內容中的 `decay_t`。 Visual Studio 2019 中已實作 `remove_cvref_t` 的支援。
 
 ### <a name="c17-parallel-algorithms"></a>C + + 17：平行演算法
 
-[P0024R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html) 平行處理原則 TS 已併入標準，但有些微修改。
+[P0024R2](https://wg21.link/p0024r2) 平行處理原則 TS 已併入標準，但有些微修改。
 
 ### <a name="c17-hypotx-y-z"></a>C++17：`hypot(x, y, z)`
 
-[P0030R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf) 新增三個新多載到 `std::hypot`，針對 **float**、**double** 及 **long double** 類型，每個都有三種輸入參數。
+[P0030R1](https://wg21.link/p0030r1) 新增三個新多載到 `std::hypot`，針對 **float**、**double** 及 **long double** 類型，每個都有三種輸入參數。
 
 ### <a name="c17-filesystem"></a>C++17：\<filesystem>
 
-[P0218R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html) 為標準採用檔案系統 TS，其中包括些許用詞修改。
+[P0218R1](https://wg21.link/p0218r1) 為標準採用檔案系統 TS，其中包括些許用詞修改。
 
 ### <a name="c17-mathematical-special-functions"></a>C + + 17：數學特殊函數
 
-[P0226R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) 為 \<cmath> 標頭將先前技術規格的數學特殊函式納入標準。
+[P0226R1](https://wg21.link/p0220r1) 為 \<cmath> 標頭將先前技術規格的數學特殊函式納入標準。
 
 ### <a name="c17-deduction-guides-for-the-standard-library"></a>C + + 17：標準程式庫的推斷指南
 
-[P0433R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html) 更新 STL 以利用 C++17 對 [P0091R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html) 的採用，這為類別範本引數推斷新增了支援。
+[P0433R2](https://wg21.link/p0433r2) 更新 STL 以利用 C++17 對 [P0091R3](https://wg21.link/p0091r3) 的採用，這為類別範本引數推斷新增了支援。
 
 ### <a name="c17-repairing-elementary-string-conversions"></a>C + + 17：修復基底字元串轉換
 
-[P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) 將新的基礎字串轉換函式從 P0067R5 移至新標頭 \<charconv>，並進行了其他改善，包括將錯誤處理函式改為使用 `std::errc` 而非 `std::error_code`。
+[P0682R1](https://wg21.link/p0682r1) 將新的基礎字串轉換函式從 P0067R5 移至新標頭 \<charconv>，並進行了其他改善，包括將錯誤處理函式改為使用 `std::errc` 而非 `std::error_code`。
 
 ### <a name="c17-constexpr-for-char_traits-partial"></a>C + + 17： `char_traits` 的**constexpr** （部分）
 
-[P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) \(英文\) 對 `std::traits_type` 成員函式 `length`、`compare` 及 `find` 進行變更，讓常數運算式中可使用 `std::string_view`。 (在 Visual Studio 2017 15.6 版中，僅支援 Clang/LLVM。 在 15.7 版 Preview 2 中，也幾乎完全支援 CIXX。)
+[P0426R1](https://wg21.link/p0426r1) \(英文\) 對 `std::traits_type` 成員函式 `length`、`compare` 及 `find` 進行變更，讓常數運算式中可使用 `std::string_view`。 (在 Visual Studio 2017 15.6 版中，僅支援 Clang/LLVM。 在 15.7 版 Preview 2 中，也幾乎完全支援 CIXX。)
 
-## <a name="improvements_159"></a>15.9 中的一致性改善
+## <a name="conformance-improvements-in-159"></a><a name="improvements_159"></a>15.9 中的一致性改善
 
 ### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>運算子的從左到右評估順序 `->*`、`[]`、`>>` 與 `<<`
 
@@ -1583,7 +1582,7 @@ int main()
 };
 ```
 
-## <a name="update_150"></a> Visual Studio 2017 RTW (15.0 版) 中的 Bug 修正
+## <a name="bug-fixes-in-visual-studio-2017-rtw-version-150"></a><a name="update_150"></a> Visual Studio 2017 RTW (15.0 版) 中的 Bug 修正
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -1899,7 +1898,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a>15.3 中的 Bug 修正
+## <a name="bug-fixes-in-153"></a><a name="update_153"></a>15.3 中的 Bug 修正
 
 ### <a name="calls-to-deleted-member-templates"></a>對已刪除之成員範本的呼叫
 
@@ -2093,7 +2092,7 @@ constexpr auto off2 = offsetof(A, two);
 
 此程式碼的語式錯誤，且可能在執行階段造成當機。 若要修正錯誤，請變更程式碼以不再叫用未定義的行為。 它是不可移植且 C++ 標準不允許的程式碼。
 
-### <a name="declspec"></a> 針對 `__declspec` 屬性的新警告
+### <a name="new-warning-on-__declspec-attributes"></a><a name="declspec"></a> 針對 `__declspec` 屬性的新警告
 
 在 Visual Studio 2017 15.3 版中，如果 `__declspec(...)` 套用於 `extern "C"` 連結規格前，編譯器就不再略過該屬性。 編輯器之前會忽略該屬性，這可能隱含執行階段。 當 **/Wall** 和 **/WX** 選項設定時，下列程式碼會產生「警告 C4768: 連結規格前的 __declspec 屬性已略過」：
 
@@ -2271,7 +2270,7 @@ struct A
 
 此警告預設為關閉，且只影響以 **/Wall** 編譯的程式碼。
 
-## <a name="update_155"></a>15.5 中的錯誤修正和其他行為變更
+## <a name="bug-fixes-and-other-behavior-changes-in-155"></a><a name="update_155"></a>15.5 中的錯誤修正和其他行為變更
 
 ### <a name="partial-ordering-change"></a>部分排序變更
 
@@ -2358,7 +2357,7 @@ warning C4843: 'void (__cdecl &)(void)': An exception handler of reference to ar
 catch (int (*)[1]) {}
 ```
 
-### <a name="tr1"></a>`std::tr1` 命名空間已被取代
+### <a name="stdtr1-namespace-is-deprecated"></a><a name="tr1"></a>`std::tr1` 命名空間已被取代
 
 非標準 `std::tr1` 命名空間在 C++14 和 C++17 模式中現在皆標記為已淘汰。 在 Visual Studio 2017 15.5 版中，下列程式碼會引發 C4996：
 
@@ -2394,7 +2393,7 @@ int main() {
 }
 ```
 
-### <a name="annex_d"></a> 附錄 D 中的標準程式庫功能標記為已淘汰
+### <a name="standard-library-features-in-annex-d-are-marked-as-deprecated"></a><a name="annex_d"></a> 附錄 D 中的標準程式庫功能標記為已淘汰
 
 當 **/std:c++17** 模式編譯器參數設定時，附錄 D 中幾乎所有標準程式庫功能都會標記為已淘汰。
 
@@ -2515,7 +2514,7 @@ Visual Studio 2017 15.3 或舊版隨附的一些 Windows SDK 標頭 (例如：10
    #pragma warning (pop)
    ```
 
-### <a name="extern_linkage"></a>Extern constexpr 連結
+### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a>Extern constexpr 連結
 
 在舊版的 Visual Studio 中，編譯器一律會提供**constexpr**變數內部連結，即使變數已標記為**extern**也一樣。 在 Visual Studio 2017 15.5 版中，新的編譯器參數 ( **/Zc:externConstexpr**) 讓行為可正確且符合標準。 此行為最後終究會成為預設值。
 
@@ -2573,7 +2572,7 @@ struct D : public B { virtual ~D(); };
 static_assert(std::is_convertible<D *, B *>::value, "fail");
 ```
 
-### <a name="noexcept_removal"></a>動態例外狀況規格移除和**noexcept**
+### <a name="dynamic-exception-specification-removal-and-noexcept"></a><a name="noexcept_removal"></a>動態例外狀況規格移除和**noexcept**
 
 在 c + + 17 中，`throw()` 是**noexcept**的別名，`throw(<type list>)` 和 `throw(...)` 會移除，而某些類型可能包含**noexcept**。 此變更會導致符合 C++14 或更早版本之程式碼的來源相容性。 在一般情況下，您可以使用 **/zc： noexceptTypes-** switch 來還原為 c + + 14 版的**noexcept** 。 它可讓您更新原始程式碼以符合 C++17，而不需要同時重寫所有 `throw()` 程式碼。
 
@@ -2730,11 +2729,11 @@ int main()
 }
 ```
 
-## <a name="update_157"></a>15.7 中的錯誤修正和其他行為變更
+## <a name="bug-fixes-and-other-behavior-changes-in-157"></a><a name="update_157"></a>15.7 中的錯誤修正和其他行為變更
 
 ### <a name="c17-default-argument-in-the-primary-class-template"></a>C + + 17：主要類別範本中的預設引數
 
-此行為變更是[類別範本的範本引述推算 - P0091R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html) \(英文\) 的先決條件。
+此行為變更是[類別範本的範本引述推算 - P0091R3](https://wg21.link/p0091r3) \(英文\) 的先決條件。
 
 在此之前，編譯器會忽略主要類別範本中的預設引數：
 
@@ -2762,7 +2761,7 @@ void S<T>::f(int) {} // Default argument is used
 
 ### <a name="dependent-name-resolution"></a>相依名稱解析
 
-此行為變更是[類別範本的範本引述推算 - P0091R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html) \(英文\) 的先決條件。
+此行為變更是[類別範本的範本引述推算 - P0091R3](https://wg21.link/p0091r3) \(英文\) 的先決條件。
 
 在下列範例中，Visual Studio 15.6 及舊版中的編譯器，在主要類別範本中會將 `D::type` 解析為 `B<T>::type`。
 
@@ -2866,11 +2865,11 @@ int main() {
 }
 ```
 
-## <a name="update_158"></a>15.8 中的 Bug 修正和行為變更
+## <a name="bug-fixes-and-behavior-changes-in-158"></a><a name="update_158"></a>15.8 中的 Bug 修正和行為變更
 
 Visual Studio 2017 版本 15.8 中的編譯器變更，全都落在修正 Bug 與行為變更的這一類別中，如下所示：
 
-###<a name="typename-on-unqualified-identifiers"></a>非限定識別碼上的**typename**
+### <a name="typename-on-unqualified-identifiers"></a>非限定識別碼上的**typename**
 
 在[/permissive-](../build/reference/permissive-standards-conformance.md)模式中，編譯器不再接受別名範本定義中不合格識別碼的偽**typename**關鍵字。 下列程式碼現在會產生 C7511「T': 'typename' 關鍵字後面必須接著限定名稱」：
 
@@ -3073,7 +3072,7 @@ struct X : Base<T>
 };
 ```
 
-## <a name="update_159"></a>15.9 中的 Bug 修正和行為變更
+## <a name="bug-fixes-and-behavior-changes-in-159"></a><a name="update_159"></a>15.9 中的 Bug 修正和行為變更
 
 ### <a name="identifiers-in-member-alias-templates"></a>成員別名範本中的識別碼
 

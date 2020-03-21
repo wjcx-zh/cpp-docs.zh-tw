@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: 054a834b7d97ca7df01ab510fde21de22f2acf3d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 2524a8ade318bd29ebcd4e4273089598798302db
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318419"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078906"
 ---
 # <a name="struct"></a>STRUCT
 
@@ -24,9 +24,9 @@ ms.locfileid: "75318419"
 
 ## <a name="remarks"></a>備註
 
-開頭和結尾語句中的*name*引數必須相同。 
+開頭和結尾語句中的*name*引數必須相同。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 指示詞[參考](directives-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

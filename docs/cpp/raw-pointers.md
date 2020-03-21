@@ -4,12 +4,12 @@ description: 如何在中使用原始指標C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250657"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077138"
 ---
 # <a name="raw-pointers-c"></a>原始指標（C++）
 
@@ -45,7 +45,7 @@ ms.locfileid: "74250657"
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 某些算數運算可以在非 const 指標上執行，使其指向新的記憶體位置。 您可以使用 **++** 、 **+=** 、 **-=** 和 **--** 運算子來遞增和遞減指標。 這項技術可用於陣列中，特別適用于不具類型的資料緩衝區。 **Void\*** 以**char** （1位元組）的大小遞增。 具類型的指標會依其所指向之類型的大小遞增。
 
-下列範例會示範如何使用指標算術來存取 Windows 點陣圖中的個別圖元。 請注意**new**和**delete**和取值運算子的用法。 
+下列範例會示範如何使用指標算術來存取 Windows 點陣圖中的個別圖元。 請注意**new**和**delete**和取值運算子的用法。
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>void * 指標
 
-**Void**的指標只會指向原始記憶體位置。 有時候，必須使用**void\*** 指標，例如，在程式碼和 C C++函式之間傳遞時。 
+**Void**的指標只會指向原始記憶體位置。 有時候，必須使用**void\*** 指標，例如，在程式碼和 C C++函式之間傳遞時。
 
 當具類型的指標轉換成 void 指標時，記憶體位置的內容不會變更，但類型資訊會遺失，因此您無法執行遞增或遞減作業。 記憶體位置可以轉型，例如，從 MyClass * 到 void *，再轉換成 MyClass *。 這類作業原本就很容易發生錯誤，而且需要非常小心地避免錯誤。 除非C++絕對必要，新式不鼓勵使用 void 指標。
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>函式的指標
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>函式的指標
 
 在 C 樣式程式設計中，函式指標主要是用來將函式傳遞給其他函數。 在此案例中，呼叫端可以自訂函式的行為，而不需要修改函式。 在現代C++的中， [lambda 運算式](lambda-expressions-in-cpp.md)提供的功能具有更高的型別安全和其他優點。
 

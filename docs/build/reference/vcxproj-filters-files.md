@@ -1,18 +1,18 @@
 ---
-title: .vcxproj 篩選檔案
+title: .Vcxproj 篩選檔案
 ms.date: 09/25/2019
 description: 使用 Visual Studio C++專案中的篩選檔案，為中的檔案定義自訂邏輯資料夾方案總管
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686856"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078270"
 ---
-# <a name="vcxprojfilters-files"></a>.vcxproj 篩選檔案
+# <a name="vcxprojfilters-files"></a>.Vcxproj 篩選檔案
 
 *篩選器*檔案（\*.vcxproj）是 MSBuild 格式的 XML 檔案，位於根專案資料夾中。 它會指定哪些檔案類型會進入**方案總管**中的哪一個邏輯資料夾。 在下圖中， *.cpp*檔案位於 [**來源**檔案] 節點底下。 *.h*檔案位於 [**標頭檔**] 節點底下， *.ico*和 *.rc*檔案則位於 [**資源檔**] 底下。 這個位置是由篩選檔案所控制。
 
@@ -26,7 +26,7 @@ Visual Studio 會自動建立此檔案。 針對桌面應用程式，預先定�
 
 下列範例會顯示先前範例顯示的篩選檔案。 它有一個平面階層;換句話說，沒有任何嵌套的邏輯資料夾。 `UniqueIdentifier` 為選擇性節點。 它可讓 Visual Studio automation 介面尋找篩選準則。 `Extensions` 也是選擇性的。 將新檔案新增至專案時，會將它新增至具有相符副檔名的最上層篩選。 若要將檔案加入至特定篩選，請以滑鼠右鍵按一下篩選器，然後選擇 [**加入新專案**]。
 
-第一次啟動專案時，會建立包含 `ClInclude` 節點的 `ItemGroup`。 如果您要產生自己的 .vcxproj 檔案，請確定所有專案專案在篩選檔案中也有一個專案。 `ClInclude` 節點中的值會根據副檔名來覆寫預設篩選。 當您使用 Visual Studio 將新專案加入至專案時，IDE 會在篩選檔案中加入個別的檔案專案。 如果您變更檔案的副檔名，則不會自動重新指派篩選。 
+第一次啟動專案時，會建立包含 `ClInclude` 節點的 `ItemGroup`。 如果您要產生自己的 .vcxproj 檔案，請確定所有專案專案在篩選檔案中也有一個專案。 `ClInclude` 節點中的值會根據副檔名來覆寫預設篩選。 當您使用 Visual Studio 將新專案加入至專案時，IDE 會在篩選檔案中加入個別的檔案專案。 如果您變更檔案的副檔名，則不會自動重新指派篩選。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ Visual Studio 會自動建立此檔案。 針對桌面應用程式，預先定�
     </Filter>
   </ItemGroup>
 ```
-

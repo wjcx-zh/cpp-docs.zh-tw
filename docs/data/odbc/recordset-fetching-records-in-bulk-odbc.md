@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：擷取大量 (ODBC) 資料錄
+title: 資料錄集：擷取大量資料錄 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,61 +14,61 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9597da7ab4c405f90a145182d63945cef48c53
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397844"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079816"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>資料錄集：擷取大量 (ODBC) 資料錄
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>資料錄集：擷取大量資料錄 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
-類別`CRecordset`提供支援大量資料列擷取，這表示，多筆記錄可以是一次擷取單一的擷取，而不是擷取一筆資料錄一次從資料來源。 您可以實作只在衍生的大量資料列擷取`CRecordset`類別。 將資料來源的資料傳送到資料錄集物件的程序稱為大量資料錄欄位交換 (Bulk RFX)。 請注意，如果您未使用中的大量資料列擷取`CRecordset`-衍生的類別中，資料透過資料錄欄位交換 (RFX) 傳送。 如需詳細資訊，請參閱 <<c0> [ 資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+類別 `CRecordset` 支援大量資料列提取，這表示在單一提取期間可以一次抓取多筆記錄，而不是一次從資料來源中取出一筆記錄。 您只能在衍生的 `CRecordset` 類別中，執行大量資料列提取。 將資料從資料來源傳送到記錄集物件的程式稱為大量記錄欄位交換（Bulk RFX）。 請注意，如果您未在 `CRecordset`衍生的類別中使用大量資料列提取，則會透過記錄欄位交換（RFX）來傳送資料。 如需詳細資訊，請參閱[記錄欄位交換（RFX）](../../data/odbc/record-field-exchange-rfx.md)。
 
-本主題說明：
+本主題將說明：
 
-- [CRecordset 如何支援大量資料列擷取](#_core_how_crecordset_supports_bulk_row_fetching)。
+- [CRecordset 如何支援大量資料列提取](#_core_how_crecordset_supports_bulk_row_fetching)。
 
-- [當使用一些特殊考量大量資料列擷取](#_core_special_considerations)。
+- [使用大量資料列提取時的一些特殊考慮](#_core_special_considerations)。
 
-- [如何實作大量資料錄欄位交換](#_core_how_to_implement_bulk_record_field_exchange)。
+- [如何執行大量記錄欄位交換](#_core_how_to_implement_bulk_record_field_exchange)。
 
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> CRecordset 如何支援大量資料列擷取
+##  <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>CRecordset 如何支援大量資料列提取
 
-然後再開啟您的資料錄集物件，您可以定義具有的資料列集大小`SetRowsetSize`成員函式。 資料列集大小會指定單一擷取期間應該擷取記錄數目。 實作大量資料列擷取時，預設的資料列集大小為 25。 如果未實作大量資料列擷取，資料列集大小會保持固定在 1。
+開啟記錄集物件之前，您可以使用 `SetRowsetSize` 成員函式來定義資料列集大小。 資料列集大小會指定在單一提取期間應抓取多少記錄。 當執行大量資料列提取時，預設資料列集大小為25。 如果未執行大量資料列提取，資料列集大小會保持固定的1。
 
-在初始化資料列集大小之後，呼叫[開啟](../../mfc/reference/crecordset-class.md#open)成員函式。 您必須在這裡指定`CRecordset::useMultiRowFetch`的選項*dwOptions*參數來實作大量資料列擷取。 您可以另外設定`CRecordset::userAllocMultiRowBuffers`選項。 大量資料錄欄位交換機制會使用陣列來儲存多個提取時擷取的資料列。 這些儲存體緩衝區可由架構自動配置，或以手動方式配置。 指定`CRecordset::userAllocMultiRowBuffers`選項表示您將進行配置。
+在初始化資料列集大小時，請呼叫[Open](../../mfc/reference/crecordset-class.md#open)成員函式。 在這裡，您必須指定*dwOptions*參數的 `CRecordset::useMultiRowFetch` 選項，以執行大量資料列提取。 此外，您還可以設定 `CRecordset::userAllocMultiRowBuffers` 選項。 大量記錄欄位交換器制會使用陣列來儲存提取期間所抓取的多個資料列。 這些儲存體緩衝區可以由架構自動設定，您也可以手動加以配置。 指定 `CRecordset::userAllocMultiRowBuffers` 選項表示您將進行配置。
 
-下表列出所提供的成員函式`CRecordset`以支援大量資料列擷取。
+下表列出 `CRecordset` 提供的成員函式，以支援大量資料列提取。
 
-|成員函式|描述|
+|成員函數|描述|
 |---------------------|-----------------|
-|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|虛擬函式處理期間擷取發生的任何錯誤。|
-|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|實作大量資料錄欄位交換。 會自動呼叫傳輸多個資料列從資料來源的資料錄集物件。|
-|[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|擷取資料列集大小的目前設定。|
-|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|會告知實際上在指定的提取之後擷取多少資料列。 在大部分情況下，這是資料列集大小，除非不完整的資料列集擷取。|
-|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|傳回特定資料列內資料列集的提取狀態。|
-|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|重新整理的資料和資料列集內的特定資料列的狀態。|
-|[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|將游標移至 資料列集內的特定資料列。|
-|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|虛擬函式變更資料列集大小設定為指定的值。|
+|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|處理提取期間所發生之任何錯誤的虛擬函式。|
+|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|執行大量記錄欄位交換。 自動呼叫以將資料來源中的多個資料列傳輸到記錄集物件。|
+|[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|抓取資料列集大小的目前設定。|
+|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|告訴在給定的提取之後，實際取出了多少資料列。 在大部分情況下，這是資料列集大小，除非提取了不完整的資料列集。|
+|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|傳回資料列集內特定資料列的提取狀態。|
+|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|重新整理資料列集內特定資料列的資料和狀態。|
+|[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|將資料指標移至資料列集內的特定資料列。|
+|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|虛擬函式，會將資料列集大小的設定變更為指定的值。|
 
-##  <a name="_core_special_considerations"></a> 特殊的考量
+##  <a name="special-considerations"></a><a name="_core_special_considerations"></a>特殊考慮
 
-雖然大量資料列擷取為增進效能，某些功能會以不同的方式運作。 您決定實作大量資料列擷取之前，請考慮下列各項：
+雖然大量資料列提取是效能提升，但某些功能的運作方式不同。 在您決定要執行大量資料列提取之前，請考慮下列事項：
 
-- 架構會自動呼叫`DoBulkFieldExchange`將從資料來源的資料傳送到資料錄集物件的成員函式。 不過，資料無法從傳輸資料錄集回資料來源。 呼叫`AddNew`， `Edit`， `Delete`，或`Update`成員函式會導致失敗的判斷提示。 雖然`CRecordset`目前不提供一個機制來更新資料的大量資料列，您可以撰寫自己的函式使用 ODBC API 函式`SQLSetPos`。 如需詳細資訊`SQLSetPos`，請參閱 < *ODBC SDK 程式設計人員參考*MSDN 文件中。
+- 架構會自動呼叫 `DoBulkFieldExchange` 成員函式，將資料從資料來源傳送到記錄集物件。 不過，資料不會從記錄集傳送回資料來源。 呼叫 `AddNew`、`Edit`、`Delete`或 `Update` 成員函式會導致失敗的判斷提示。 雖然 `CRecordset` 目前並未提供更新大量資料列的機制，但是您可以使用 ODBC API 函式 `SQLSetPos`來撰寫自己的函式。 如需 `SQLSetPos`的詳細資訊，請參閱 MSDN 檔中的*ODBC SDK 程式設計人員參考*。
 
-- 成員函式`IsDeleted`， `IsFieldDirty`， `IsFieldNull`， `IsFieldNullable`， `SetFieldDirty`，和`SetFieldNull`不能用在實作大量資料列擷取的資料錄集。 不過，您可以呼叫`GetRowStatus`代替`IsDeleted`，並`GetODBCFieldInfo`取代`IsFieldNullable`。
+- 成員函式 `IsDeleted`、`IsFieldDirty`、`IsFieldNull`、`IsFieldNullable`、`SetFieldDirty`和 `SetFieldNull` 不能用在執行大量資料列提取的記錄集上。 不過，您可以呼叫 `GetRowStatus` 取代 `IsDeleted`，並 `GetODBCFieldInfo` 來取代 `IsFieldNullable`。
 
-- `Move`作業重新置放的資料列集的資料錄集。 例如，假設您開啟已使用 10 的初始資料列集大小的 100 筆記錄的資料錄集。 `Open` 擷取位於資料列 1 資料列 1 到 10，且目前的記錄。 呼叫`MoveNext`提取下一個資料列集，不下一個資料列。 此資料列集是由資料列 11 到 20，且目前的記錄放在資料列 11 所組成。 請注意，`MoveNext`和`Move( 1 )`所實作的大量資料列擷取時，並不相等。 `Move( 1 )` 擷取開頭的 1 個資料列的目前資料錄的資料列集。 在此範例中，呼叫`Move( 1 )`之後呼叫`Open`提取資料列集包含的資料列 2 到第 11 與目前位於資料列 2 的記錄。 如需詳細資訊，請參閱 <<c0> [ 移動](../../mfc/reference/crecordset-class.md#move)成員函式。
+- `Move` 作業會依資料列集重新置放您的記錄集。 例如，假設您開啟的記錄集具有100記錄，其初始資料列集大小為10。 `Open` 會提取資料列1到10，而目前的記錄位於資料列1。 `MoveNext` 的呼叫會提取下一個資料列集，而不是下一個資料列。 此資料列集是由資料列11到20組成，而目前的記錄位於資料列11。 請注意，執行大量資料列提取時，`MoveNext` 和 `Move( 1 )` 並不相等。 `Move( 1 )` 提取從目前記錄開始1個數據列的資料列集。 在此範例中，呼叫後呼叫 `Move( 1 )` `Open` 提取由資料列2到11組成的資料列集，而目前的記錄位於資料列2。 如需詳細資訊，請參閱[Move](../../mfc/reference/crecordset-class.md#move)成員函式。
 
-- 不同於資料錄欄位交換，精靈不支援大量資料錄欄位交換。 這表示您必須以手動方式宣告欄位資料成員，並以手動方式覆寫`DoBulkFieldExchange`藉由撰寫 Bulk RFX 函式的呼叫。 如需詳細資訊，請參閱 <<c0> [ 記錄欄位交換函式](../../mfc/reference/record-field-exchange-functions.md)中*類別庫參考*。
+- 不同于記錄欄位交換，此嚮導不支援大量記錄欄位交換。 這表示您必須手動宣告欄位資料成員，並藉由撰寫對大量 RFX 函數的呼叫來手動覆寫 `DoBulkFieldExchange`。 如需詳細資訊，請參閱*類別庫參考*中的[記錄欄位交換函數](../../mfc/reference/record-field-exchange-functions.md)。
 
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> 如何實作大量資料錄欄位交換
+##  <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>如何執行大量記錄欄位交換
 
-大量資料錄欄位交換會傳輸自資料來源的資料列集的資料，資料錄集物件。 大量 RFX 函式會使用陣列來儲存此資料，以及陣列來儲存資料列集中的每個資料項目的長度。 在類別定義中，您必須定義欄位資料成員，為存取的資料陣列的指標。 此外，您必須定義一組指標來存取陣列的長度。 任何參數的資料成員不應該宣告為指標;宣告參數資料成員時使用大量資料錄欄位交換等同於使用資料錄欄位交換時宣告它們。 下列程式碼顯示一個簡單的範例：
+大量記錄欄位交換會將資料列集從資料來源傳送到記錄集物件。 Bulk RFX 函式會使用陣列來儲存這項資料，以及用來儲存資料列集內每個資料項目長度的陣列。 在您的類別定義中，您必須將欄位資料成員定義為可存取資料陣列的指標。 此外，您必須定義一組指標來存取長度的陣列。 任何參數資料成員都不應該宣告為指標;當使用大量記錄欄位交換時，宣告參數資料成員與使用記錄欄位交換時，會有相同的聲明。 下列程式碼顯示一個簡單的範例：
 
 ```cpp
 class MultiRowSet : public CRecordset
@@ -93,7 +93,7 @@ public:
 }
 ```
 
-您可以手動配置這些存放區的緩衝區，或由架構來進行配置。 若要自行配置的緩衝區，您必須指定`CRecordset::userAllocMultiRowBuffers`的選項*dwOptions*中的參數`Open`成員函式。 請務必設定陣列的大小至少等於資料列集大小。 如果您想要讓架構來進行配置，您應該初始化為 NULL 指標。 這通常是在資料錄集物件的建構函式：
+您可以手動設定這些儲存體緩衝區，或讓架構進行配置。 若要自行配置緩衝區，您必須在 `Open` 成員函式中指定*dwOptions*參數的 `CRecordset::userAllocMultiRowBuffers` 選項。 請務必將陣列的大小設定為至少等於資料列集大小。 如果您想要讓架構進行配置，您應該將指標初始化為 Null。 這通常是在記錄集物件的函式中完成：
 
 ```cpp
 MultiRowSet::MultiRowSet( CDatabase* pDB )
@@ -114,7 +114,7 @@ MultiRowSet::MultiRowSet( CDatabase* pDB )
 }
 ```
 
-最後，您必須覆寫`DoBulkFieldExchange`成員函式。 欄位資料成員呼叫 Bulk RFX 函式針對任何參數的資料成員呼叫 RFX 函式。 如果您藉由傳遞的 SQL 陳述式或預存程序來開啟資料錄集`Open`，在您進行 Bulk RFX 呼叫的順序，必須對應於資料錄集中的資料行; 同樣地，RFX 的順序呼叫的參數必須對應此順序中的 SQL 陳述式或預存程序的參數。
+最後，您必須覆寫 `DoBulkFieldExchange` 成員函式。 針對欄位資料成員，呼叫 Bulk RFX 函數;針對任何參數資料成員，呼叫 RFX 函數。 如果您藉由將 SQL 語句或預存程式傳遞至 `Open`來開啟記錄集，則您進行大量 RFX 呼叫的順序必須對應至記錄集內的資料行順序;同樣地，對於參數的 RFX 呼叫順序，必須對應至 SQL 語句或預存程式中的參數順序。
 
 ```cpp
 void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
@@ -135,13 +135,12 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 ```
 
 > [!NOTE]
->  您必須呼叫`Close`成員函式之前您衍生`CRecordset`類別超出範圍。 這可確保會釋出架構配置的任何記憶體。 它是良好的程式設計做法一律明確地呼叫`Close`，而不論您是否有實作大量資料列擷取。
+>  您必須先呼叫 `Close` 成員函式，您的衍生 `CRecordset` 類別才會超出範圍。 這可確保會釋放架構所配置的任何記憶體。 無論您是否已執行大量資料列提取，都一定要明確地呼叫 `Close`，這是很好的程式設計作法。
 
-如需有關資料錄欄位交換 (RFX) 的詳細資訊，請參閱[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 如需使用參數的詳細資訊，請參閱[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)和[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+如需記錄欄位交換（RFX）的詳細資訊，請參閱[記錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 如需使用參數的詳細資訊，請參閱[CFieldExchange：： SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)和[記錄集：參數化記錄集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
-[CRecordset::m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)
-
+[CRecordset：： m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
+[CRecordset：： m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)

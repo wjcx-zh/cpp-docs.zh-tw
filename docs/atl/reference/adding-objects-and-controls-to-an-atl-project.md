@@ -11,16 +11,16 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706852"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075298"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項加入至 ATL 專案
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 及更新版本中未提供 ATL COM+ 1.0 元件精靈、ATL OLE DB 消費者精靈和 ATL Active Server Page 元件精靈。
 
 您可以使用其中一個 ATL 程式碼精靈，來將物件或控制項加入至 ATL 或 MFC 型專案。 針對您加入的每個 COM 物件或控制項，精靈會產生 .cpp 和 .h 檔案以及 .rgs 檔案來提供指令碼型登錄支援。 Visual Studio 中提供下列 ATL 程式碼精靈：
@@ -40,7 +40,7 @@ ms.locfileid: "65706852"
 
    [[加入類別](../../ide/add-class-dialog-box.md)] 對話方塊隨即出現。
 
-1. 透過在 [類別] 窗格中選取的 **ATL** 資料夾，從 [範本] 窗格中選取要插入的物件。 按一下 [開啟]。 適用於所選取物件的程式碼精靈隨即出現。
+1. 透過在 [類別] 窗格中選取的 **ATL** 資料夾，從 [範本] 窗格中選取要插入的物件。 按一下 **[開啟]** 。 適用於所選取物件的程式碼精靈隨即出現。
 
    > [!NOTE]
    > 如果您想要將 ATL 物件加入至 MFC 專案，您必須將 ATL 支援加入至現有的專案。 您可以依照[將 ATL 支援加入至 MFC 專案](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)中的指示來執行此動作。

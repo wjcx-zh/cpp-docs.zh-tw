@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 9b2d1f3bf1a229a0590553369e37bc07f35ada33
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 381fa347a4ca2872ef0697d76a1e788c97e8a014
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627134"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075433"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說：建立標準C++程式（C++）
 
@@ -34,9 +34,9 @@ ms.locfileid: "73627134"
 
 ### <a name="to-create-a-c-project-in-visual-studio-2019"></a>若要在C++ Visual Studio 2019 中建立專案
 
-1. 從主功能表，選擇 [檔案] > [新增] > [專案]，以開啟 [建立新專案] 對話方塊。
+1. 從主功能表中 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**建立新的專案**] 對話方塊。
 
-1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。 
+1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。
 
 1. 從專案類型的篩選清單中，選擇 [主控台應用程式]，然後選擇 [下一步]。 在下一個頁面中，輸入專案的名稱，並視需要指定專案位置。
 
@@ -54,7 +54,7 @@ ms.locfileid: "73627134"
 
 1. 輸入專案的名稱。 根據預設，包含專案的方案與專案具有相同的名稱，但您可以輸入不同的名稱。 您也可以輸入不同的專案位置。
 
-1. 按一下 [確定] 建立專案。
+1. 按一下 [確定] 以建立專案。
 
 ::: moniker-end
 
@@ -70,13 +70,13 @@ ms.locfileid: "73627134"
 
 1. 輸入專案的名稱。 根據預設，包含專案的方案與專案具有相同的名稱，但您可以輸入不同的名稱。 您也可以輸入不同的專案位置。
 
-1. 按一下 [確定] 建立專案。
+1. 按一下 [確定] 以建立專案。
 
-1. 完成 [ **Win32 應用程式]** 。 
+1. 完成 [ **Win32 應用程式]** 。
 
-1. 按 **[下一步]** ，然後確定已選取 [**主控台應用程式**]，並取消選取 [先行**編譯頭**檔] 
+1. 按 **[下一步]** ，然後確定已選取 [**主控台應用程式**]，並取消選取 [先行**編譯頭**檔]
 
-1. 按一下 [ **完成**]。
+1. 按一下 [完成]。
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ ms.locfileid: "73627134"
 
 1. 儲存檔案。
 
-1. 在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
+1. 在 [建置] 功能表上，按一下 [建置方案]。
 
    [**輸出**] 視窗會顯示編譯進度的相關資訊，例如組建記錄檔的位置，以及指出組建狀態的訊息。
 
@@ -109,7 +109,7 @@ ms.locfileid: "73627134"
 **上一步：** [Visual C++中的主控台應用程式](../windows/console-applications-in-visual-cpp.md)<br/>
 **下一步：** [逐步解說： C++在命令列上編譯原生程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

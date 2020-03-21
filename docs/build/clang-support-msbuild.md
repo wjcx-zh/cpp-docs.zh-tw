@@ -4,12 +4,12 @@ ms.date: 08/30/2019
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 819f96bf2fd949f80ae72ca878ba7eb9cb1bffcc
-ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
+ms.openlocfilehash: 5bd90141cdc7646dce206e6b02a605b73d78de95
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75914348"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078812"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio 專案中的 Clang/LLVM 支援
 
@@ -25,7 +25,7 @@ Visual Studio 2019 中提供 CMake 和 MSBuild 專案的 Clang 支援。
 
 ## <a name="install"></a>安裝
 
-如需 Visual Studio 中的最佳 IDE 支援，我們建議使用適用于 Windows 的最新 Clang 編譯器工具。 如果您還沒有這些專案，您可以開啟 Visual Studio 安裝程式，然後在 [**桌面開發C++**  ] 下選擇 [ **C++** 使用選用元件的 Clang 工具] 來安裝它們。 如果您想要在電腦上使用現有的 Clang 安裝，請選擇 **C++ Clang-cl for 適用于 v142 build tools。** 選擇性元件。 Microsoft C++標準程式庫目前至少需要 Clang 8.0.0;配套的 Clang 版本將會自動更新，以在標準程式庫的 Microsoft 實施中隨時更新。 
+如需 Visual Studio 中的最佳 IDE 支援，我們建議使用適用于 Windows 的最新 Clang 編譯器工具。 如果您還沒有這些專案，您可以開啟 Visual Studio 安裝程式，然後在 [**桌面開發C++**  ] 下選擇 [ **C++** 使用選用元件的 Clang 工具] 來安裝它們。 如果您想要在電腦上使用現有的 Clang 安裝，請選擇 **C++ Clang-cl for 適用于 v142 build tools。** 選擇性元件。 Microsoft C++標準程式庫目前至少需要 Clang 8.0.0;配套的 Clang 版本將會自動更新，以在標準程式庫的 Microsoft 實施中隨時更新。
 
 ![Clang 元件安裝](media/clang-install-vs2019.png)
 
@@ -45,8 +45,8 @@ Visual Studio 2019 中提供 CMake 和 MSBuild 專案的 Clang 支援。
 
 若要將 Visual Studio Linux 專案設定為使用 Clang：
 
-1. 以滑鼠右鍵按一下**方案總管**中的專案節點，然後選擇 [**屬性**]。 
-1. 一般來說，您應該先選擇對話方塊頂端的 [**所有**設定]。 
+1. 以滑鼠右鍵按一下**方案總管**中的專案節點，然後選擇 [**屬性**]。
+1. 一般來說，您應該先選擇對話方塊頂端的 [**所有**設定]。
 1. 在 **[一般**>**平臺工具**組] 底下，如果您是使用適用于 Linux 的 Windows 子系統，請選擇 [ **WSL_Clang_1_0** ]，如果您使用遠端電腦或 VM，請選擇 [ **Remote_Clang_1_0** ]。
 1. 按 [確定]。
 
@@ -54,7 +54,7 @@ Visual Studio 2019 中提供 CMake 和 MSBuild 專案的 Clang 支援。
 
 在 Linux 上，Visual Studio 預設會使用它在 PATH 環境屬性中遇到的第一個 Clang 位置。 如果您使用的是自訂 Clang 安裝，則必須變更 `LLVMInstallDir` 屬性的值，否則請以 **專案** > **屬性** >  **VC + + 目錄** > 設定 **屬性** > **可執行檔目錄**來取代路徑。 如需詳細資訊，請參閱[設定自訂 LLVM 位置](#custom_llvm_location)。
 
-## <a name="custom_llvm_location"></a>設定自訂 LLVM 位置
+## <a name="set-a-custom-llvm-location"></a><a name="custom_llvm_location"></a>設定自訂 LLVM 位置
 
 您可以藉由建立 *.props*檔案，並將該檔案新增至任何專案的根資料夾，為一個或多個專案設定 LLVM 的自訂路徑。 您可以將它新增至 [根方案] 資料夾，以將它套用至方案中的所有專案。 檔案看起來應該像這樣（但要替代您的實際路徑）：
 

@@ -1,17 +1,17 @@
 ---
-title: 物件存留期和資源管理（RAII）
+title: 物件存留期及資源管理 (RAII)
 description: 請遵循最新的 RAII 原則C++ ，以避免資源流失。
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303372"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078024"
 ---
-# <a name="object-lifetime-and-resource-management-raii"></a>物件存留期和資源管理（RAII）
+# <a name="object-lifetime-and-resource-management-raii"></a>物件存留期及資源管理 (RAII)
 
 不同于 managed 語言C++ ，並不會自動進行*垃圾收集*。 這是內部進程，會在程式執行時釋放堆積記憶體和其他資源。 C++程式會負責將所有取得的資源傳回作業系統。 無法釋放未使用的資源稱為「流失 *」。* 在進程結束之前，其他程式無法使用流失的資源。 記憶體流失特別是 C 樣式程式設計中錯誤的常見原因。
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 在下列範例中，`w` 擁有記憶體資源，因此在其析構函式中必須有程式碼來刪除記憶體。
- 
+
 ```cpp
 class widget
 {

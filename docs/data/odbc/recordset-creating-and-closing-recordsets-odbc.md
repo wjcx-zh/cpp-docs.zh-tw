@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e7aa4c0fc2a0acfe7b8df2f50f99bf44eb1ef456
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707988"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075913"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>資料錄集：建立和關閉資料錄集 (ODBC)
 
-> [!NOTE] 
-> Visual Studio 2019 和更新版本中未提供「MFC ODBC 消費者」精靈。 您仍然可以手動建立消費者。
+> [!NOTE]
+> Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
 本主題適用於 MFC ODBC 類別。
 
@@ -33,7 +33,7 @@ ms.locfileid: "65707988"
 
 - [何時及如何關閉資料錄集物件](#_core_closing_a_recordset)。
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> 在執行階段建立資料錄集
+##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> 在執行階段建立資料錄集
 
 您通常需先撰寫應用程式特定資料錄集類別，才能在程式中建立資料錄集物件。 如需有關此初步步驟的詳細資訊，請參閱[新增 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-在您呼叫 `Open` 之後，請使用成員函式和物件的資料成員來與記錄搭配運作。 在某些情況下，您可能會想要重新查詢或重新整理資料錄集，以包含已在資料來源上發生的變更。 如需詳細資訊，請參閱[資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
+在您呼叫 `Open` 之後，請使用成員函式和物件的資料成員來與記錄搭配運作。 在某些情況下，您可能會想要重新查詢或重新整理資料錄集，以包含已在資料來源上發生的變更。 如需詳細資訊，請參閱[記錄集：重新查詢記錄集（ODBC）](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
 
 > [!TIP]
->  您在開發期間使用的連接字串可能與最終使用者所需的連接字串不同。 如需了解有關針對這方面將應用程式一般化的想法，請參閱[資料來源：管理連線 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)。
+>  您在開發期間使用的連接字串可能與最終使用者所需的連接字串不同。 如需有關在此方面一般化應用程式的構想，請參閱[資料來源：管理連接（ODBC）](../../data/odbc/data-source-managing-connections-odbc.md)。
 
-##  <a name="_core_setting_recordset_options"></a> 設定資料錄集選項
+##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> 設定資料錄集選項
 
 在您建構資料錄集物件之後但在呼叫 `Open` 以選取記錄之前，您可能會想要設定一些選項來控制資料錄集的行為。 針對所有資料錄集，您可以：
 
@@ -96,7 +96,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  若要影響記錄選取範圍，您必須在呼叫 `Open` 成員函式之前先設定這些選項。
 
-##  <a name="_core_closing_a_recordset"></a> 關閉資料錄集
+##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> 關閉資料錄集
 
 使用完資料錄集時，您必須處置它並將其記憶體解除配置。
 

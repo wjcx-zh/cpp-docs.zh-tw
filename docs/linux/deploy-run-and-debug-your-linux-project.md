@@ -3,12 +3,12 @@ title: 在 Visual Studio 中部署及執行您的 C++ Linux 專案以及針對�
 description: 描述如何在 Visual Studio 中，從 Linux C++ 專案中在遠端目標上進行程式碼編譯、執行和偵錯。
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441664"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077830"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 
@@ -35,7 +35,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 ## <a name="debug-your-linux-project"></a>對 Linux 專案進行偵錯
 
 1. 在 [偵錯] 屬性頁面中選取偵錯模式。
-   
+
    ::: moniker range="vs-2019"
 
    GDB 用來偵錯在 Linux 上執行的應用程式。 在遠端系統 (而不是 WSL) 上進行偵錯時，GDB 可以透過兩種不同的模式執行，而您可以從專案 [偵錯] 屬性頁的 [偵錯模式] 選項中進行選取：
@@ -51,7 +51,6 @@ Visual Studio 2017 及更新版本支援 Linux。
    ![GDB 選項](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - 在 **gdbserver** 模式中，GDB 會在本機執行，以連線到在遠端系統上的 gdbserver。  請注意，這是 Linux 主控台視窗唯一支援的模式。
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> 針對建置與偵錯指定不同的電腦
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> 針對建置與偵錯指定不同的電腦
 
 在 Visual Studio 2019 16.1 版中，您可以將您的遠端組建電腦與遠端偵錯電腦分開，以便用於 MSBuild 型 Linux 專案和以遠端 Linux 電腦為目標的 CMake 專案。 例如，以 IoT 案例為目標時，您現在可以在 x64 上交叉編譯並部署到 ARM 裝置。
 

@@ -3,16 +3,16 @@ title: Alignment
 description: 新式C++中如何指定資料對齊方式。
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443663"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076119"
 ---
 # <a name="alignment"></a>Alignment
 
-C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會將類別和結構成員對齊其大小值：在1個位元組的界限上 `bool` 和 `char`、在2個位元組的界限上 `short`、`int`、`long`和4位元組界限上的 `float`，以及8位元組界限上 `long long`、`double`和 `long double`。 
+C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會將類別和結構成員對齊其大小值：在1個位元組的界限上 `bool` 和 `char`、在2個位元組的界限上 `short`、`int`、`long`和4位元組界限上的 `float`，以及8位元組界限上 `long long`、`double`和 `long double`。
 
 在大部分的情況下，您永遠不需要擔心對齊，因為預設的對齊方式已經是最佳的。 不過，在某些情況下，您可以藉由指定資料結構的自訂對齊，來達到顯著的效能改進或節省記憶體。 在 Visual Studio 2015 之前，您可以使用 Microsoft 專有關鍵詞 `__alignof` 和 `declspec(alignas)` 指定大於預設值的對齊方式。 從 Visual Studio 2015 開始，您應該使用 c + + 11 標準關鍵字**alignof**和**alignas** ，以取得最大的程式碼可攜性。 新關鍵字的行為與 Microsoft 專屬的擴充功能相同。 這些延伸模組的檔也適用于新的關鍵字。 如需詳細資訊，請參閱[__Alignof 運算子](../cpp/alignof-operator.md)和[align](../cpp/align-cpp.md)。 C++標準不會指定在界限小於目標平臺的編譯器預設值時，進行對齊的封裝行為，因此您仍然需要在該情況下使用 Microsoft #pragma[套件](../preprocessor/pack.md)。
 

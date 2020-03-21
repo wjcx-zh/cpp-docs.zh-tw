@@ -3,12 +3,12 @@ title: 類別、結構和等位的括弧初始化
 description: 對任何C++類別、結構或等位使用括弧初始化
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
-ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
+ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75652620"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075886"
 ---
 # <a name="brace-initialization"></a>大括弧初始化
 
@@ -167,8 +167,7 @@ string s{ 'a', 'b', 'c' };
 regex rgx{ 'x', 'y', 'z' };
 ```
 
-
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別和結構](../cpp/classes-and-structs-cpp.md)<br/>
 [建構函式](../cpp/constructors-cpp.md)

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: a3765da94560eb84a1d441a6b25c42822fc857bb
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 38979a058cd6a8b029961708b4197daea2826d85
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509467"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077176"
 ---
 # <a name="hstring-class"></a>HString 類別
 
@@ -65,7 +65,7 @@ Windows 執行階段透過[HSTRING](/windows/win32/WinRT/hstring)控制碼提供
 
 名稱                                | 描述
 ----------------------------------- | -----------------------------------------------------
-[HString：： HString](#hstring)        | 初始化 `HString` 類別的新執行個體。
+[HString：： HString](#hstring)        | 將 `HString` 類別的新執行個體初始化。
 [HString：： ~ HString](#tilde-hstring) | 終結 `HString` 類別的目前實例。
 
 ### <a name="public-methods"></a>公用方法
@@ -102,7 +102,7 @@ Windows 執行階段透過[HSTRING](/windows/win32/WinRT/hstring)控制碼提供
 
 **命名空間：** Microsoft：： WRL：：包裝函式
 
-## <a name="tilde-hstring"></a>HString：： ~ HString
+## <a name="hstringhstring"></a><a name="tilde-hstring"></a>HString：： ~ HString
 
 終結 `HString` 類別的目前實例。
 
@@ -110,7 +110,7 @@ Windows 執行階段透過[HSTRING](/windows/win32/WinRT/hstring)控制碼提供
 ~HString() throw()
 ```
 
-## <a name="attach"></a>HString：： Attach
+## <a name="hstringattach"></a><a name="attach"></a>HString：： Attach
 
 將指定的 `HString` 物件與目前的 `HString` 物件產生關聯。
 
@@ -125,7 +125,7 @@ void Attach(
 *hstr*<br/>
 現有的 `HString` 物件。
 
-## <a name="copyto"></a>HString：： CopyTo
+## <a name="hstringcopyto"></a><a name="copyto"></a>HString：： CopyTo
 
 將目前的 `HString` 物件複製到 HSTRING 物件。
 
@@ -144,7 +144,7 @@ HRESULT CopyTo(
 
 這個方法會呼叫[WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring)函數。
 
-## <a name="detach"></a>HString：:D etach
+## <a name="hstringdetach"></a><a name="detach"></a>HString：:D etach
 
 解除指定的 `HString` 物件與其基礎值的對應。
 
@@ -156,7 +156,7 @@ HSTRING Detach() throw()
 
 卸離作業開始之前的基礎 `HString` 值。
 
-## <a name="get"></a>HString：： Get
+## <a name="hstringget"></a><a name="get"></a>HString：： Get
 
 抓取基礎 HSTRING 控制碼的值。
 
@@ -168,7 +168,7 @@ HSTRING Get() const throw()
 
 基礎 HSTRING 控制碼的值。
 
-## <a name="getaddressof"></a>HString：： GetAddressOf
+## <a name="hstringgetaddressof"></a><a name="getaddressof"></a>HString：： GetAddressOf
 
 抓取基礎 HSTRING 控制碼的指標。
 
@@ -184,7 +184,7 @@ HSTRING* GetAddressOf() throw()
 
 在這項作業之後，會終結基礎 HSTRING 控制碼的字串值。
 
-## <a name="getrawbuffer"></a>HString：： GetRawBuffer
+## <a name="hstringgetrawbuffer"></a><a name="getrawbuffer"></a>HString：： GetRawBuffer
 
 抓取基礎字串資料的指標。
 
@@ -200,10 +200,9 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 
 基礎字串資料的**常數**指標。
 
+## <a name="hstringhstring"></a><a name="hstring"></a>HString：： HString
 
-## <a name="hstring"></a>HString：： HString
-
-初始化 `HString` 類別的新執行個體。
+將 `HString` 類別的新執行個體初始化。
 
 ```cpp
 HString() throw();
@@ -224,7 +223,7 @@ HSTRING 控制碼。
 
 第二個函式會將新的 `HString` 物件初始化為現有*其他*參數的值，然後再終結*另*一個參數。
 
-## <a name="isvalid"></a>HString：： IsValid
+## <a name="hstringisvalid"></a><a name="isvalid"></a>HString：： IsValid
 
 指出目前的 `HString` 物件是否為空白。
 
@@ -236,7 +235,7 @@ bool IsValid() const throw()
 
 如果目前 `HString` 物件不是空的，則為**true** ;否則**為 false**。
 
-## <a name="makereference"></a>HString：： MakeReference
+## <a name="hstringmakereference"></a><a name="makereference"></a>HString：： MakeReference
 
 從指定的字串參數建立 `HStringReference` 物件。
 
@@ -266,7 +265,7 @@ template<unsigned int sizeDest>
 
 `HStringReference` 物件，其值與指定的*str*參數相同。
 
-## <a name="operator-assign"></a>HString：： operator = 運算子
+## <a name="hstringoperator-operator"></a><a name="operator-assign"></a>HString：： operator = 運算子
 
 將另一個 `HString` 物件的值移至目前的 `HString` 物件。
 
@@ -283,7 +282,7 @@ HString& operator=(HString&& other) throw()
 
 現有*其他*物件的值會複製到目前的 `HString` 物件，然後再終結*另*一個物件。
 
-## <a name="operator-equality"></a>HString：： operator = = 運算子
+## <a name="hstringoperator-operator"></a><a name="operator-equality"></a>HString：： operator = = 運算子
 
 指出兩個參數是否相等。
 
@@ -321,7 +320,7 @@ inline bool operator==(
 
 如果*lhs*和*rhs*參數相等，則為**true** ;否則**為 false**。
 
-## <a name="operator-inequality"></a>HString：： operator！ = 運算子
+## <a name="hstringoperator-operator"></a><a name="operator-inequality"></a>HString：： operator！ = 運算子
 
 指出兩個參數是否不相等。
 
@@ -354,7 +353,7 @@ inline bool operator!=( const HString& lhs,
 
 如果*lhs*和*rhs*參數不相等，則為**true** ;否則**為 false**。
 
-## <a name="operator-less-than"></a>HString：： operator&lt; 運算子
+## <a name="hstringoperatorlt-operator"></a><a name="operator-less-than"></a>HString：： operator&lt; 運算子
 
 指出第一個參數是否小於第二個參數。
 
@@ -376,7 +375,7 @@ inline bool operator<(
 
 如果*lhs*參數小於*rhs*參數，則為**true** ;否則**為 false**。
 
-## <a name="release"></a>HString：： Release
+## <a name="hstringrelease"></a><a name="release"></a>HString：： Release
 
 刪除基礎字串值，並將目前的 `HString` 物件初始化為空值。
 
@@ -384,7 +383,7 @@ inline bool operator<(
 void Release() throw()
 ```
 
-## <a name="set"></a>HString：： Set
+## <a name="hstringset"></a><a name="set"></a>HString：： Set
 
 將目前 `HString` 物件的值設定為指定的寬字元字串或 `HString` 參數。
 

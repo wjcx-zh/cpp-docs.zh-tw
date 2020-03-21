@@ -1,38 +1,38 @@
 ---
-title: 值的類別：Lvalues 和 Rvalues (C++)
+title: 值類別：左值和右值（C++）
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 23625ddf44d16a4dc408b87f27b9cdfba7a9cbd4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222014"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077241"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Lvalues 和 Rvalues (C++)
 
-每個C++運算式都有類型，而且屬於*值類別*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。
+每C++個運算式都有類型，而且屬於*值分類*。 值類別目錄是編譯器在運算式評估期間建立、複製和移動暫存物件時必須遵循之規則的基礎。
 
-C + + 17 標準會定義運算式值的類別，如下所示：
+C + + 17 標準定義了運算式值分類，如下所示：
 
-- A *glvalue*是的運算式的評估會決定物件、 位元欄位或函式的身分識別。
-- A *prvalue*是其評估初始化物件或位元欄位，或計算運算子的運算元的值，因為在它出現內容所指定的運算式。
-- *Xvalue*是代表物件或位元欄位 （通常是因為它是接近其存留期結束時），可以重複使用其資源的 glvalue。 範例：某些種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如其傳回型別是右值參考的函式呼叫或轉型為右值參考類型。
-- *左值*是不是 xvalue glvalue。
-- *Rvalue* prvalue 或 xvalue。
+- *Glvalue*是一種運算式，其評估會決定物件、位欄位或函數的識別。
+- *X prvalue*是一種運算式，其評估會初始化物件或位欄位，或計算運算子的運算元值，如其出現所在內容所指定。
+- *Xvalue*是一種 glvalue，代表可以重複使用其資源的物件或位欄位（通常是因為它在其存留期的結尾附近）。 範例：牽涉到右值參考（8.3.2）的特定類型運算式會產生 xvalues，例如呼叫的函式，其傳回類型是 rvalue 參考，或轉換成右值參考型別。
+- *左*值是不是 xvalue 的 glvalue。
+- *右*值是 x prvalue 或 xvalue。
 
-下圖說明兩個類別之間的關聯性：
+下圖說明類別之間的關聯性：
 
-![C++運算式值類別](media/value_categories.png " C++運算式值類別")
+![C++運算式值分類](media/value_categories.png "C++運算式值分類")
 
-左值會有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括**const**變數，陣列項目，函式會傳回左值參考、 位元欄位、 等位和類別成員的呼叫。
+左值具有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括**const**變數、陣列元素、傳回左值參考的函式呼叫、位欄位、等位和類別成員。
 
-Prvalue 運算式有沒有可供您的程式存取的位址。 Prvalue 運算式的範例包括常值、 函式呼叫會傳回非參考類型，並只能由編譯器建立運算式評估期間，但可存取的暫存物件。
+X prvalue 運算式沒有可供您的程式存取的位址。 X prvalue 運算式的範例包括常值、傳回非參考型別的函式呼叫，以及在運算式 evalution 期間建立的暫存物件，但只能由編譯器存取。
 
-Xvalue 運算式有一個位址，無法再存取您的程式，但可以用來初始化右值參考，可讓您存取運算式。 範例包括傳回右值參考，以及陣列註標、 成員和指標成員運算式之陣列或物件是右值參考的函式呼叫。
+Xvalue 運算式具有您的程式無法再存取的位址，但可用來初始化右值參考，以提供運算式的存取權。 範例包括傳回右值參考的函式呼叫，以及陣列或物件為 rvalue 參考之成員運算式的陣列注標、成員和指標。
 
 ## <a name="example"></a>範例
 
@@ -56,7 +56,7 @@ int main()
 
     // Correct usage: the conditional operator returns an lvalue.
     ((i < 3) ? i : j) = 7;
-    
+
     // Incorrect usage: the constant ci is a non-modifiable lvalue (C3892).
     const int ci = 7;
     ci = 9; // C3892
@@ -66,7 +66,7 @@ int main()
 > [!NOTE]
 > 本主題中的範例將說明運算子未多載時的正確和不正確用法。 藉由多載運算子，您就可以讓像是 `j * 4` 這樣的運算式變成左值。
 
-條款*左值*並*右值*通常會在您參考的物件參考時所使用。 如需參考的詳細資訊，請參閱[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)並[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+當您參考物件參考時，通常會使用「*左*值」和「*右*值」等詞彙。 如需參考的詳細資訊，請參閱左值參考宣告子[： &](../cpp/lvalue-reference-declarator-amp.md)和右值參考宣告子[： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

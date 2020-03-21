@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965249"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079984"
 ---
 # <a name="pack-pragma"></a>pack pragma
 
@@ -35,7 +35,7 @@ ms.locfileid: "73965249"
 選擇性將目前的封裝對齊值推送到內部編譯器堆疊上，並將目前的封裝對齊值設定為*n*。 如果未指定*n* ，則會推送目前的封裝對齊值。
 
 **pop**\
-選擇性從內部編譯器堆疊頂端移除記錄。 如果未使用**pop**指定*n* ，則與堆疊頂端產生的記錄相關聯的封裝值就是新的封裝對齊值。 例如 `#pragma pack(pop, 16)`，如果指定*n* ，則*n*會變成新的封裝對齊值。 如果您使用*識別碼*（例如 `#pragma pack(pop, r1)`）來結束，則堆疊上的所有記錄都會推出，直到找到具有*識別碼*的記錄為止。 該記錄會隨即推出，而與堆疊頂端產生的記錄相關聯的封裝值即為新的封裝對齊值。 如果您使用在堆疊上的任何記錄中找不到的*識別碼*來快顯，則會忽略**pop** 。 
+選擇性從內部編譯器堆疊頂端移除記錄。 如果未使用**pop**指定*n* ，則與堆疊頂端產生的記錄相關聯的封裝值就是新的封裝對齊值。 例如 `#pragma pack(pop, 16)`，如果指定*n* ，則*n*會變成新的封裝對齊值。 如果您使用*識別碼*（例如 `#pragma pack(pop, r1)`）來結束，則堆疊上的所有記錄都會推出，直到找到具有*識別碼*的記錄為止。 該記錄會隨即推出，而與堆疊頂端產生的記錄相關聯的封裝值即為新的封裝對齊值。 如果您使用在堆疊上的任何記錄中找不到的*識別碼*來快顯，則會忽略**pop** 。
 
 語句 `#pragma pack (pop, r1, 2)` 相當於後面接著 `#pragma pack(2)`的 `#pragma pack (pop, r1)`。
 
@@ -120,6 +120,6 @@ int main() {
 #pragma pack(show)   // C4810
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

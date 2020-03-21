@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416932"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076857"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -36,9 +36,9 @@ ms.locfileid: "79416932"
 
 - [並行執行階段的重大變更](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Visual Studio 2015 一致性變更
+## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Visual Studio 2015 一致性變更
 
-###  <a name="BK_CRT"></a> C 執行階段程式庫 (CRT)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> C 執行階段程式庫 (CRT)
 
 #### <a name="general-changes"></a>一般變更
 
@@ -78,7 +78,7 @@ ms.locfileid: "79416932"
 
 - **浮點的一致性**
 
-   針對特殊案例的輸入，例如 NaN 和無限大，為了與 IEEE-754 和 C11 附錄 F 規格更加一致，此數學程式庫已有許多變更。 例如，在舊版的程式庫中通常將無訊息的 NaN 輸入視為錯誤，如今已不再視為錯誤。 請參閱 [IEEE 754 標準](https://standards.ieee.org/standard/754-2008.html) 和 [C11 標準](http://www.iso-9899.info/wiki/The_Standard)的附錄 F。
+   針對特殊案例的輸入，例如 NaN 和無限大，為了與 IEEE-754 和 C11 附錄 F 規格更加一致，此數學程式庫已有許多變更。 例如，在舊版的程式庫中通常將無訊息的 NaN 輸入視為錯誤，如今已不再視為錯誤。 請參閱 [IEEE 754 標準](https://standards.ieee.org/standard/754-2008.html) 和 [C11 標準](https://www.iso.org/standard/57853.html)的附錄 F。
 
    這些變更不會造成編譯時期錯誤，但根據此標準，可能會導致程式的行為不同且更加正確。
 
@@ -106,7 +106,7 @@ ms.locfileid: "79416932"
 
    編譯 C++ 程式碼時，現在 [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 會在編譯時間驗證傳遞給它的引數不屬於參考類型。 此 C++ 標準禁止參考類型引數。
 
-#### <a name="stdio_and_conio"></a>\<stdio.h > 和 \<conio.h>. h >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio.h > 和 \<conio.h>. h >
 
 - **printf 與 scanf 系列的函式現在會在函式中定義。**
 
@@ -303,7 +303,7 @@ ms.locfileid: "79416932"
 
    現在 CLOCKS_PER_SEC 巨集會展開成類型 `clock_t` 的整數，如同 C 語言所要求。
 
-####  <a name="BK_STL"></a>C++ 標準程式庫
+####  <a name="c-standard-library"></a><a name="BK_STL"></a>C++ 標準程式庫
 
 為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤 （_MSC_VER 是包含編譯器主要版本的宏，例如，Visual Studio 2013 的1800）。這種檢查無法偵測 DLL 混合，且無法偵測牽涉到 Visual Studio 2008 或更早版本的混合。
 
@@ -385,7 +385,7 @@ ms.locfileid: "79416932"
 
    已移除非標準的 `launch::any` 和 `launch::sync` 原則。 針對 `launch::any`，請改為使用 `launch:async | launch:deferred`。 如需 `launch::sync`，請使用 `launch::deferred`。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch)。
 
-####  <a name="BK_MFC"></a> MFC 與 ATL
+####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a> MFC 與 ATL
 
 - **Microsoft Foundation Classes (MFC)**
 
@@ -393,7 +393,7 @@ ms.locfileid: "79416932"
 
    Visual C++ 可轉散發套件仍然包含這個程式庫。
 
-####  <a name="BK_ConcRT"></a> 並行執行階段
+####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a> 並行執行階段
 
 - **Windows.h 中的 Yield 巨集與 concurrency::Context::Yield 發生衝突**
 
@@ -421,7 +421,7 @@ ms.locfileid: "79416932"
 
 - [Update 3 的合規性改進](#VS_Update3)
 
-###  <a name="VS_RTM"></a> Visual Studio 2015 的一致性改善
+###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Visual Studio 2015 的一致性改善
 
 - /Zc:forScope- 選項
 
@@ -658,11 +658,11 @@ ms.locfileid: "79416932"
     enum class my_type : size_t {};
     ```
 
-   然後，變更 **placement new** 和 **delete** 的定義，以使用此類型取代 `size_t` 成為第二個引數。 您也需要更新對 placement new 的呼叫，以傳遞新的類型 (例如，使用 `static_cast<my_type>` 從整數值加以轉換)，並且更新 **new** 和 **delete** 的定義，用來轉換回整數類型。 您不需要為此使用 **enum**；具有 `size_t` 成員的類別類型也適用。
+   然後，變更 **placement new** 和 **delete** 的定義，以使用此類型取代 `size_t` 成為第二個引數。 您也需要更新對 placement new 的呼叫，以傳遞新的類型（例如，藉由使用 `static_cast<my_type>` 從整數值轉換），並更新**new**和**delete**的定義，以轉換回整數類型。 您不需要對此使用**列舉**;具有 `size_t` 成員的類別類型也可以使用。
 
    另一個解決方案是，您或許可以完全排除 **placement new**。 如果您的程式碼使用 **placement new** 實作記憶體集區，其中 placement 引數是配置或刪除的物件大小，則調整大小解除配置功能或許會很適合取代您自己的自訂記憶體集區程式碼，而且您可以不使用 placement 函式，只使用您自己的雙引數 **delete** 運算子，用來取代此 placement 函式。
 
-   如果您不想立即更新您的程式碼，則可以使用編譯器選項 `/Zc:sizedDealloc-` 來還原舊版的行為。 如果您使用這個選項，則雙引數 delete 函式將不存在，也不會與您的 **placement delete** 運算子發生衝突。
+   如果您不想立即更新您的程式碼，則可以使用編譯器選項 `/Zc:sizedDealloc-` 來還原舊版的行為。 如果您使用此選項，則雙引數 delete 函式不存在，也不會與您的**placement delete**運算子發生衝突。
 
 - **等位資料成員**
 
@@ -1697,7 +1697,7 @@ ms.locfileid: "79416932"
     C c;
     ```
 
-###  <a name="VS_Update1"></a> Update 1 的合規性改進
+###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Update 1 的合規性改進
 
 - **私用的虛擬基底類別與間接繼承**
 
@@ -2201,7 +2201,7 @@ ms.locfileid: "79416932"
     }
     ```
 
-###  <a name="VS_Update2"></a> Update 2 的合規性改進
+###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Update 2 的合規性改進
 
 - **運算式 SFINAE 的部分支援也可能會發出其他警告與錯誤**
 
@@ -2463,7 +2463,7 @@ ms.locfileid: "79416932"
 
    可能需要先將運算子定義從標頭檔移出，再將其移入對應的原始程式檔，才能修正以此方式撰寫的程式碼。
 
-###  <a name="VS_Update3"></a> Update 3 的合規性改進
+###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Update 3 的合規性改進
 
 - **std::is_convertable 現在已可偵測自我指派** (標準程式庫)
 
@@ -2854,7 +2854,7 @@ ms.locfileid: "79416932"
 
    Visual Studio 2012 中 `E1` 運算式的 `E1::b`，會解析為全域範圍中的 `::E1`。 Visual Studio 2013 中 `E1` 運算式的 `E1::b`，會解析為 `typedef E2` 中的 `main()` 定義，且具有 `::E2` 類型。
 
-- 物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它具有 **virtual** 函式，但沒有具有 **virtual** 函式的基底類別，則編譯器物件模型會在資料成員配置之後插入指向 **virtual** 函式表的指標。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以在 Visual Studio 2013 中已將其移除。 例如，請思考下列程式碼：
+- 物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它有**虛擬**函式，但它沒有具有**虛擬**函式的基類，則編譯器的物件模型會在資料成員配置之後，將指標插入**虛擬**函式資料表。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以在 Visual Studio 2013 中已將其移除。 例如，請思考下列程式碼：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ ms.locfileid: "79416932"
     };
     ```
 
-   若要在您的程式碼中尋找先前版本嘗試優化的位置，請使用該版本的編譯器搭配 `/W3` 編譯器選項，並開啟警告 C4370。 例如，
+   若要在您的程式碼中尋找先前版本嘗試優化的位置，請使用該版本的編譯器搭配 `/W3` 編譯器選項，並開啟警告 C4370。 例如：
 
     ```cpp
     #pragma warning(default:4370)
@@ -2932,7 +2932,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 在呼叫 `#include <algorithm>` 或 `std::min()` 時，您必須使用 `std::max()`。
 
-- 若您現有的程式碼使用舊版的模擬範圍列舉 (包裝在命名空間中傳統不限範圍的列舉)，必須加以變更。 例如，如果您原本參考 `std::future_status::future_status` 類型，則現在必須改為 `std::future_status`。 不過，大部分的程式碼不會受影響，例如 `std::future_status::ready` 仍會編譯。
+- 如果您現有的程式碼使用舊版的模擬範圍列舉（包裝在命名空間中的傳統不受限列舉），您就必須加以變更。 例如，如果您原本參考 `std::future_status::future_status` 類型，則現在必須改為 `std::future_status`。 不過，大部分的程式碼不會受影響，例如 `std::future_status::ready` 仍會編譯。
 
 - `explicit operator bool()` 會比運算子 unspecified-bool-type() 更為嚴格。 `explicit operator bool()` 允許明確轉換為 bool (例如，假設有一個 `shared_ptr<X> sp`，則 `static_cast<bool>(sp)` 和 `bool b(sp)` 都有效)，以及可轉換為 bool 之可進行布林值測試的「內容轉換」(例如 `if (sp)`、`!sp`、`sp &&`)。 不過，`explicit operator bool()` 會禁止隱含轉換成 bool，因此您不能使用 `bool b = sp;`，且假設傳回類型為 bool，則您不能使用 `return sp`。
 
@@ -3058,7 +3058,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="crt"></a>CRT
 
-- new 與 malloc() 中使用的 C 執行階段 (CRT) 堆積已不再是私用。 CRT 現在會使用處理序堆積。 這表示堆積不會在 DLL 卸載之後終結，因此靜態連結到 CRT 的 DLL 必須在卸載之前先清除 DLL 程式碼所配置的記憶體。
+- new 與 malloc() 中使用的 C 執行階段 (CRT) 堆積已不再是私用。 CRT 現在會使用處理序堆積。 這表示在卸載 DLL 時，不會終結堆積，因此以靜態方式連結到 CRT 的 Dll 必須確保 DLL 程式碼所配置的記憶體在卸載之前就已清除。
 
 - `iscsymf()` 函式使用負數值進行判斷提示。
 
@@ -3268,7 +3268,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 僅限 Visual Studio 2010：IntelliSense 不適用於 C++/CLI 程式碼或屬性；[尋找所有參考] 不適用於本機變數；程式碼模型不會從匯入的組件擷取類型名稱，也不會將類型解析成完整名稱。
 
-### <a name="libraries"></a>媒體櫃
+### <a name="libraries"></a>程式庫
 
 - SafeInt 類別包含在 Visual C++ 中，而且不再需要個個別下載。 只有在您開發的類別名稱也稱為 "SafeInt" 時，此中斷性變更對您才有影響。
 

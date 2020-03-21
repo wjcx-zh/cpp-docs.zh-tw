@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189011"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075210"
 ---
 # <a name="hint-files"></a>提示檔案
 
@@ -39,7 +39,7 @@ C++ 瀏覽資料庫剖析器為模糊剖析器，可在短時間內剖析大量�
 > - 在 Visual Studio 2017 15.6 版之前的版本中：刪除方案中的 .sdf 檔案和（或） VC 檔案，以進行所有變更。
 > - 在 Visual Studio 2017 15.6 版和更新版本中：新增提示檔案之後，請關閉並重新開啟方案。
 
-## <a name="scenario"></a>案例
+## <a name="scenario"></a>狀況
 
 ```cpp
 #define NOEXCEPT noexcept
@@ -150,13 +150,13 @@ void Function() NOEXCEPT
 
 |語法|意義|
 |------------|-------------|
-|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|定義新提示或重新定義現有提示的前置處理器指示詞。 在指示詞後面，前置處理器會將原始程式碼中出現的每個 *hint-name* 取代成 *replacement-string*。<br /><br /> 第二個語法形式會定義類似函式的提示。 如果原始程式碼中出現類似函式的提示，前置處理器會先將 *replacement-string* 中出現的每個 *parameter* 取代成原始程式碼中的對應引數，再將 *hint-name* 取代成 *replacement-string*。|
+|`#define`*提示-名稱* *取代字串*<br /><br /> `#define`*提示-名稱*`(`*參數*，...`)`*取代字串*|定義新提示或重新定義現有提示的前置處理器指示詞。 在指示詞後面，前置處理器會將原始程式碼中出現的每個 *hint-name* 取代成 *replacement-string*。<br /><br /> 第二個語法形式會定義類似函式的提示。 如果原始程式碼中出現類似函式的提示，前置處理器會先將 *replacement-string* 中出現的每個 *parameter* 取代成原始程式碼中的對應引數，再將 *hint-name* 取代成 *replacement-string*。|
 |`@<`|提示檔案特定的 *replacement-string*，表示一組對應項目的開頭。|
 |`@=`|提示檔案特定的 *replacement-string*，表示中間對應項目。 一個對應可以有多個對應項目。|
 |`@>`|提示檔案特定的 *replacement-string*，表示一組對應項目的結尾。|
-|`#undef` *hint-name*|刪除現有提示的前置處理器指示詞。 提示的名稱是由 *hint-name* 識別項提供。|
-|`//` *comment*|單行註解。|
-|`/*` *註解* `*/`|多行註解。|
+|`#undef`*提示-名稱*|刪除現有提示的前置處理器指示詞。 提示的名稱是由 *hint-name* 識別項提供。|
+|`//`*批註*|單行註解。|
+|`/*`*批註*`*/`|多行註解。|
 
 ## <a name="example"></a>範例
 
@@ -248,4 +248,3 @@ void Function() NOEXCEPT
 [#define 指示詞 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef 指示詞 (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [SAL 註釋](../../c-runtime-library/sal-annotations.md)<br>
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: afc366728e62029ffbd3993e2fdd740e3aaf3369
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439893"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075089"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (回報編譯器內部錯誤)
 
@@ -29,7 +29,6 @@ ms.locfileid: "79439893"
 編譯器無法處理原始程式碼檔案時，會產生內部編譯器錯誤（ICE）。 當 ICE 發生時，編譯器不會產生輸出檔，或任何可用來修正程式碼的實用診斷。
 
 Windows 錯誤報告的服務設定會覆寫 **/errorReport**引數。 如果 Windows 錯誤報告啟用報告功能，編譯器會自動將內部錯誤的報告傳送給 Microsoft。 如果 Windows 錯誤報告停用，則不會傳送任何報表。
-
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 

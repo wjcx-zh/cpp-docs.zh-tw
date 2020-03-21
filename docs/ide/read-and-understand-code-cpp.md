@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中閱讀及了解 C++ 程式碼
 description: 使用 Visual Studio 中的 C++ 程式碼編輯器來格式化及了解程式碼。
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416121"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079037"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>在 Visual Studio 中閱讀及了解 C++ 程式碼
 
@@ -61,7 +61,7 @@ Visual Studio 會以顏色標示語法元素來區別符號類型，例如語言
 
 ![C 中的快速資訊&#43;&#43;](../ide/media/quick-info-vs2019.png "快速諮詢")
 
-[快速諮詢] 工具提示含有 [線上搜尋] 連結。 請移至 [工具] > [選項] > [文字編輯器] > [C++] > [檢視] 來指定搜尋提供者。 
+[快速諮詢] 工具提示含有 [線上搜尋] 連結。 請移至 [工具] > [選項] > [文字編輯器] > [C++] > [檢視] 來指定搜尋提供者。
 
 如果程式碼中出現錯誤，您可以將滑鼠指標移至其上方，[快速諮詢] 即會顯示錯誤訊息。 您也可以在 [錯誤清單] 視窗中找到錯誤訊息。
 

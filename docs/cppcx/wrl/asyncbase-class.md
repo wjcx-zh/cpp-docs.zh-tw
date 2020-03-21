@@ -53,12 +53,12 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 367d0b0cd3197623b27ee1a50e804cca797aedf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09819c9e8dd924581ce8cd67233d273f7e8d62ca
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398819"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079902"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 類別
 
@@ -82,13 +82,13 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 ### <a name="parameters"></a>參數
 
 *TComplete*<br/>
-在非同步作業完成時，會呼叫事件處理常式。
+非同步作業完成時呼叫的事件處理常式。
 
 *TProgress*<br/>
-在執行中的非同步作業報告目前進度的作業時，會呼叫事件處理常式。
+當執行中的非同步作業報告作業的目前進度時，所呼叫的事件處理常式。
 
 *resultType*<br/>
-其中一個[AsyncResultType](asyncresulttype-enumeration.md)列舉值。 根據預設， `SingleResult`。
+其中一個[AsyncResultType](asyncresulttype-enumeration.md)列舉值。 預設值為 `SingleResult`。
 
 ## <a name="members"></a>成員
 
@@ -96,41 +96,40 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 名稱                               | 描述
 ---------------------------------- | -------------------------------------------------
-[AsyncBase::AsyncBase](#asyncbase) | 初始化 `AsyncBase` 類別的執行個體。
+[AsyncBase：： AsyncBase](#asyncbase) | 初始化 `AsyncBase` 類別的執行個體。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                         | 描述
 -------------------------------------------- | -------------------------------------------------------------------------------------
-[AsyncBase::Cancel](#cancel)                 | 取消非同步作業。
-[AsyncBase::Close](#close)                   | 關閉的非同步作業。
-[AsyncBase::FireCompletion](#firecompletion) | 叫用完成事件處理常式，或重設內部進行委派。
-[AsyncBase::FireProgress](#fireprogress)     | 叫用目前的進度事件處理常式。
-[AsyncBase::get_ErrorCode](#get-errorcode)   | 擷取目前的非同步作業的錯誤碼。
-[AsyncBase::get_Id](#get-id)                 | 擷取非同步作業的控制代碼。
-[AsyncBase::get_Status](#get-status)         | 擷取值，指出非同步作業的狀態。
-[AsyncBase::GetOnComplete](#getoncomplete)   | 將目前的 「 完成 」 事件處理常式的位址複製到指定的變數中。
-[AsyncBase::GetOnProgress](#getonprogress)   | 將目前的進度事件處理常式的位址複製到指定的變數中。
-[AsyncBase::put_Id](#put-id)                 | 設定非同步作業的控制代碼。
-[AsyncBase::PutOnComplete](#putoncomplete)   | 指定的值設定完成事件處理常式的位址。
-[AsyncBase::PutOnProgress](#putonprogress)   | 指定的值設定進度事件處理常式的位址。
+[AsyncBase：： Cancel](#cancel)                 | 取消非同步作業。
+[AsyncBase：： Close](#close)                   | 關閉非同步作業。
+[AsyncBase：： FireCompletion](#firecompletion) | 叫用完成事件處理常式，或重設內部進度委派。
+[AsyncBase：： FireProgress](#fireprogress)     | 叫用目前的進度事件處理常式。
+[AsyncBase：： get_ErrorCode](#get-errorcode)   | 抓取目前非同步作業的錯誤碼。
+[AsyncBase：： get_Id](#get-id)                 | 抓取非同步作業的控制碼。
+[AsyncBase：： get_Status](#get-status)         | 抓取值，指出非同步作業的狀態。
+[AsyncBase：： GetOnComplete](#getoncomplete)   | 將目前完成事件處理常式的位址複製到指定的變數。
+[AsyncBase：： GetOnProgress](#getonprogress)   | 將目前進度事件處理常式的位址複製到指定的變數。
+[AsyncBase：:p ut_Id](#put-id)                 | 設定非同步作業的控制碼。
+[AsyncBase：:P utOnComplete](#putoncomplete)   | 將完成事件處理常式的位址設定為指定的值。
+[AsyncBase：:P utOnProgress](#putonprogress)   | 將進度事件處理常式的位址設定為指定的值。
 
-
-### <a name="protected-methods"></a>保護方法
+### <a name="protected-methods"></a>受保護的方法
 
 名稱                                                                         | 描述
 ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[AsyncBase::CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | 測試是否可以修改委派屬性，在目前的非同步狀態。
-[AsyncBase::CheckValidStateForResultsCall](#checkvalidstateforresultscall)   | 測試是否可以收集在目前的非同步狀態中的非同步作業的結果。
-[AsyncBase::ContinueAsyncOperation](#continueasyncoperation)                 | 判斷是否應該繼續處理非同步作業，或應該停止。
-[AsyncBase::CurrentStatus](#currentstatus)                                   | 擷取目前的非同步作業的狀態。
-[AsyncBase::ErrorCode](#errorcode)                                           | 擷取目前的非同步作業的錯誤碼。
-[AsyncBase::OnCancel](#oncancel)                                             | 當在衍生類別中覆寫時，取消非同步作業。
-[AsyncBase::OnClose](#onclose)                                               | 當在衍生類別中覆寫時，會關閉的非同步作業。
-[AsyncBase::OnStart](#onstart)                                               | 當在衍生類別中覆寫時，會啟動非同步作業。
-[AsyncBase::Start](#start)                                                   | 啟動非同步作業。
-[AsyncBase::TryTransitionToCompleted](#trytransitiontocompleted)             | 表示目前的非同步作業是否已完成。
-[AsyncBase::TryTransitionToError](#trytransitiontoerror)                     | 指出指定的錯誤程式碼是否可以修改的內部錯誤狀態。
+[AsyncBase：： CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | 測試委派屬性是否可以在目前的非同步狀態中修改。
+[AsyncBase：： CheckValidStateForResultsCall](#checkvalidstateforresultscall)   | 測試是否可以在目前的非同步狀態中收集非同步作業的結果。
+[AsyncBase：： ContinueAsyncOperation](#continueasyncoperation)                 | 判斷非同步作業是否應該繼續處理，或應停止。
+[AsyncBase：： CurrentStatus](#currentstatus)                                   | 抓取目前非同步作業的狀態。
+[AsyncBase：： ErrorCode](#errorcode)                                           | 抓取目前非同步作業的錯誤碼。
+[AsyncBase：： OnCancel](#oncancel)                                             | 在衍生類別中覆寫時，取消非同步作業。
+[AsyncBase：： OnClose](#onclose)                                               | 在衍生類別中覆寫時，關閉非同步作業。
+[AsyncBase：： OnStart](#onstart)                                               | 在衍生類別中覆寫時，啟動非同步作業。
+[AsyncBase：： Start](#start)                                                   | 啟動非同步作業。
+[AsyncBase：： TryTransitionToCompleted](#trytransitiontocompleted)             | 指出目前的非同步作業是否已完成。
+[AsyncBase：： TryTransitionToError](#trytransitiontoerror)                     | 指出指定的錯誤碼是否可以修改內部錯誤狀態。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -140,11 +139,11 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** async.h
+**標頭：** async。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="asyncbase"></a>AsyncBase::AsyncBase
+## <a name="asyncbaseasyncbase"></a><a name="asyncbase"></a>AsyncBase：： AsyncBase
 
 初始化 `AsyncBase` 類別的執行個體。
 
@@ -152,7 +151,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 AsyncBase();
 ```
 
-## <a name="cancel"></a>AsyncBase::Cancel
+## <a name="asyncbasecancel"></a><a name="cancel"></a>AsyncBase：： Cancel
 
 取消非同步作業。
 
@@ -168,11 +167,11 @@ STDMETHOD(
 
 ### <a name="remarks"></a>備註
 
-`Cancel()` 預設實作`IAsyncInfo::Cancel`，並不執行任何實際工作。 若要實際取消非同步作業，請覆寫`OnCancel()`純虛擬方法。
+`Cancel()` 是 `IAsyncInfo::Cancel`的預設實值，而且沒有實際的工作。 若要實際取消非同步作業，請覆寫 `OnCancel()` 純虛擬方法。
 
-## <a name="checkvalidstatefordelegatecall"></a>AsyncBase::CheckValidStateForDelegateCall
+## <a name="asyncbasecheckvalidstatefordelegatecall"></a><a name="checkvalidstatefordelegatecall"></a>AsyncBase：： CheckValidStateForDelegateCall
 
-測試是否可以修改委派屬性，在目前的非同步狀態。
+測試委派屬性是否可以在目前的非同步狀態中修改。
 
 ```cpp
 inline HRESULT CheckValidStateForDelegateCall();
@@ -180,11 +179,11 @@ inline HRESULT CheckValidStateForDelegateCall();
 
 ### <a name="return-value"></a>傳回值
 
-如果可以修改委派屬性，為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+S_OK 是否可以修改委派屬性;否則，E_ILLEGAL_METHOD_CALL。
 
-## <a name="checkvalidstateforresultscall"></a>AsyncBase::CheckValidStateForResultsCall
+## <a name="asyncbasecheckvalidstateforresultscall"></a><a name="checkvalidstateforresultscall"></a>AsyncBase：： CheckValidStateForResultsCall
 
-測試是否可以收集在目前的非同步狀態中的非同步作業的結果。
+測試是否可以在目前的非同步狀態中收集非同步作業的結果。
 
 ```cpp
 inline HRESULT CheckValidStateForResultsCall();
@@ -192,11 +191,11 @@ inline HRESULT CheckValidStateForResultsCall();
 
 ### <a name="return-value"></a>傳回值
 
-如果可以收集結果;，為 S_OK否則，E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。
+S_OK 是否可以收集結果;否則，E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。
 
-## <a name="close"></a>AsyncBase::Close
+## <a name="asyncbaseclose"></a><a name="close"></a>AsyncBase：： Close
 
-關閉的非同步作業。
+關閉非同步作業。
 
 ```cpp
 STDMETHOD(
@@ -206,15 +205,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>傳回值
 
-S_OK，如果作業會關閉或已關閉否則，E_ILLEGAL_STATE_CHANGE。
+S_OK，如果作業關閉或已關閉，則為，否則，E_ILLEGAL_STATE_CHANGE。
 
 ### <a name="remarks"></a>備註
 
-`Close()` 預設實作`IAsyncInfo::Close`，並不執行任何實際工作。 若要實際關閉非同步作業，請覆寫`OnClose()`純虛擬方法。
+`Close()` 是 `IAsyncInfo::Close`的預設實值，而且沒有實際的工作。 若要實際關閉非同步作業，請覆寫 `OnClose()` 純虛擬方法。
 
-## <a name="continueasyncoperation"></a>AsyncBase::ContinueAsyncOperation
+## <a name="asyncbasecontinueasyncoperation"></a><a name="continueasyncoperation"></a>AsyncBase：： ContinueAsyncOperation
 
-判斷是否應該繼續處理非同步作業，或應該停止。
+判斷非同步作業是否應該繼續處理，或應停止。
 
 ```cpp
 inline bool ContinueAsyncOperation();
@@ -222,11 +221,11 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>傳回值
 
-**真**非同步作業的目前狀態是否*啟動*，這表示作業應該繼續。 否則，請**false**，這表示作業應該停止。
+如果非同步作業的目前狀態是 [*已啟動*]，則**為 true** ，表示作業應該繼續進行。 否則為**false**，表示應該停止作業。
 
-## <a name="currentstatus"></a>AsyncBase::CurrentStatus
+## <a name="asyncbasecurrentstatus"></a><a name="currentstatus"></a>AsyncBase：： CurrentStatus
 
-擷取目前的非同步作業的狀態。
+抓取目前非同步作業的狀態。
 
 ```cpp
 inline void CurrentStatus(
@@ -237,15 +236,15 @@ inline void CurrentStatus(
 ### <a name="parameters"></a>參數
 
 *status*<br/>
-這項作業儲存的目前狀態的位置。
+此作業儲存目前狀態的位置。
 
 ### <a name="remarks"></a>備註
 
-這項作業是安全執行緒。
+這是安全線程。
 
-## <a name="errorcode"></a>AsyncBase::ErrorCode
+## <a name="asyncbaseerrorcode"></a><a name="errorcode"></a>AsyncBase：： ErrorCode
 
-擷取目前的非同步作業的錯誤碼。
+抓取目前非同步作業的錯誤碼。
 
 ```cpp
 inline void ErrorCode(
@@ -256,15 +255,15 @@ inline void ErrorCode(
 ### <a name="parameters"></a>參數
 
 *error*<br/>
-這項作業儲存目前的錯誤程式碼的位置。
+此作業用來儲存目前錯誤碼的位置。
 
 ### <a name="remarks"></a>備註
 
-這項作業是安全執行緒。
+這是安全線程。
 
-## <a name="firecompletion"></a>AsyncBase::FireCompletion
+## <a name="asyncbasefirecompletion"></a><a name="firecompletion"></a>AsyncBase：： FireCompletion
 
-叫用完成事件處理常式，或重設內部進行委派。
+叫用完成事件處理常式，或重設內部進度委派。
 
 ```cpp
 void FireCompletion(
@@ -276,9 +275,9 @@ virtual void FireCompletion();
 
 ### <a name="remarks"></a>備註
 
-第一版`FireCompletion()`重設內部進行委派變數。 如果非同步作業已完成，則第二個版本會叫用完成事件處理常式。
+第一個版本的 `FireCompletion()` 重設內部進度委派變數。 如果非同步作業已完成，則第二個版本會叫用完成事件處理常式。
 
-## <a name="fireprogress"></a>AsyncBase::FireProgress
+## <a name="asyncbasefireprogress"></a><a name="fireprogress"></a>AsyncBase：： FireProgress
 
 叫用目前的進度事件處理常式。
 
@@ -297,9 +296,9 @@ void FireProgress(
 
 `ProgressTraits` 衍生自[ArgTraitsHelper 結構](argtraitshelper-structure.md)。
 
-## <a name="get-errorcode"></a>AsyncBase::get_ErrorCode
+## <a name="asyncbaseget_errorcode"></a><a name="get-errorcode"></a>AsyncBase：： get_ErrorCode
 
-擷取目前的非同步作業的錯誤碼。
+抓取目前非同步作業的錯誤碼。
 
 ```cpp
 STDMETHOD(
@@ -309,16 +308,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*errorCode*<br/>
-儲存目前的錯誤程式碼位置。
+*錯誤碼*<br/>
+儲存目前錯誤碼的位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，如果目前的非同步作業已關閉的 E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，如果目前的非同步作業已關閉，E_ILLEGAL_METHOD_CALL。
 
-## <a name="get-id"></a>AsyncBase::get_Id
+## <a name="asyncbaseget_id"></a><a name="get-id"></a>AsyncBase：： get_Id
 
-擷取非同步作業的控制代碼。
+抓取非同步作業的控制碼。
 
 ```cpp
 STDMETHOD(
@@ -329,19 +328,19 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-控制代碼之儲存位置。
+要儲存控制碼的位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，E_ILLEGAL_METHOD_CALL。
 
 ### <a name="remarks"></a>備註
 
 這個方法會實作 `IAsyncInfo::get_Id`。
 
-## <a name="get-status"></a>AsyncBase::get_Status
+## <a name="asyncbaseget_status"></a><a name="get-status"></a>AsyncBase：： get_Status
 
-擷取值，指出非同步作業的狀態。
+抓取值，指出非同步作業的狀態。
 
 ```cpp
 STDMETHOD(
@@ -352,19 +351,19 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *status*<br/>
-儲存狀態的位置。 如需詳細資訊，請參閱`Windows::Foundation::AsyncStatus`列舉型別。
+要儲存狀態的位置。 如需詳細資訊，請參閱 `Windows::Foundation::AsyncStatus` 列舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，E_ILLEGAL_METHOD_CALL。
 
 ### <a name="remarks"></a>備註
 
 這個方法會實作 `IAsyncInfo::get_Status`。
 
-## <a name="getoncomplete"></a>AsyncBase::GetOnComplete
+## <a name="asyncbasegetoncomplete"></a><a name="getoncomplete"></a>AsyncBase：： GetOnComplete
 
-將目前的 「 完成 」 事件處理常式的位址複製到指定的變數中。
+將目前完成事件處理常式的位址複製到指定的變數。
 
 ```cpp
 STDMETHOD(
@@ -375,15 +374,15 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *completeHandler*<br/>
-目前的 「 完成 」 事件處理常式的位址儲存位置。
+儲存目前完成事件處理常式之位址的位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，E_ILLEGAL_METHOD_CALL。
 
-## <a name="getonprogress"></a>AsyncBase::GetOnProgress
+## <a name="asyncbasegetonprogress"></a><a name="getonprogress"></a>AsyncBase：： GetOnProgress
 
-將目前的進度事件處理常式的位址複製到指定的變數中。
+將目前進度事件處理常式的位址複製到指定的變數。
 
 ```cpp
 STDMETHOD(
@@ -394,15 +393,15 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *progressHandler*<br/>
-目前的進度事件處理常式的位址儲存位置。
+儲存目前進度事件處理常式之位址的位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，E_ILLEGAL_METHOD_CALL。
 
-## <a name="oncancel"></a>AsyncBase::OnCancel
+## <a name="asyncbaseoncancel"></a><a name="oncancel"></a>AsyncBase：： OnCancel
 
-當在衍生類別中覆寫時，取消非同步作業。
+在衍生類別中覆寫時，取消非同步作業。
 
 ```cpp
 virtual void OnCancel(
@@ -410,9 +409,9 @@ virtual void OnCancel(
 ) = 0;
 ```
 
-## <a name="onclose"></a>AsyncBase::OnClose
+## <a name="asyncbaseonclose"></a><a name="onclose"></a>AsyncBase：： OnClose
 
-當在衍生類別中覆寫時，會關閉的非同步作業。
+在衍生類別中覆寫時，關閉非同步作業。
 
 ```cpp
 virtual void OnClose(
@@ -420,9 +419,9 @@ virtual void OnClose(
 ) = 0;
 ```
 
-## <a name="onstart"></a>AsyncBase::OnStart
+## <a name="asyncbaseonstart"></a><a name="onstart"></a>AsyncBase：： OnStart
 
-當在衍生類別中覆寫時，會啟動非同步作業。
+在衍生類別中覆寫時，啟動非同步作業。
 
 ```cpp
 virtual HRESULT OnStart(
@@ -430,9 +429,9 @@ virtual HRESULT OnStart(
 ) = 0;
 ```
 
-## <a name="put-id"></a>AsyncBase::put_Id
+## <a name="asyncbaseput_id"></a><a name="put-id"></a>AsyncBase：:p ut_Id
 
-設定非同步作業的控制代碼。
+設定非同步作業的控制碼。
 
 ```cpp
 STDMETHOD(
@@ -443,15 +442,15 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-非零的控制代碼。
+非零的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則 E_INVALIDARG 或 E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，E_INVALIDARG 或 E_ILLEGAL_METHOD_CALL。
 
-## <a name="putoncomplete"></a>AsyncBase::PutOnComplete
+## <a name="asyncbaseputoncomplete"></a><a name="putoncomplete"></a>AsyncBase：:P utOnComplete
 
-指定的值設定完成事件處理常式的位址。
+將完成事件處理常式的位址設定為指定的值。
 
 ```cpp
 STDMETHOD(
@@ -462,15 +461,15 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *completeHandler*<br/>
-設定完成事件處理常式的位址。
+完成事件處理常式設定的位址。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，E_ILLEGAL_METHOD_CALL。
 
-## <a name="putonprogress"></a>AsyncBase::PutOnProgress
+## <a name="asyncbaseputonprogress"></a><a name="putonprogress"></a>AsyncBase：:P utOnProgress
 
-指定的值設定進度事件處理常式的位址。
+將進度事件處理常式的位址設定為指定的值。
 
 ```cpp
 STDMETHOD(
@@ -481,13 +480,13 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *progressHandler*<br/>
-設定進度事件處理常式的位址。
+進度事件處理常式所設定的位址。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+如果成功，則 S_OK;否則，E_ILLEGAL_METHOD_CALL。
 
-## <a name="start"></a>AsyncBase::Start
+## <a name="asyncbasestart"></a><a name="start"></a>AsyncBase：： Start
 
 啟動非同步作業。
 
@@ -499,15 +498,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>傳回值
 
-S_OK 如果作業啟動或已啟動;否則，E_ILLEGAL_STATE_CHANGE。
+S_OK，如果作業開始或已啟動，則為，否則，E_ILLEGAL_STATE_CHANGE。
 
 ### <a name="remarks"></a>備註
 
-`Start()` 是受保護的方法，不是外部可見因為非同步作業 「 經常性開始 」，然後傳回給呼叫端。
+`Start()` 是受保護的方法，不是外部可見的，因為非同步作業會在傳回呼叫端之前「暖開機」。
 
-## <a name="trytransitiontocompleted"></a>AsyncBase::TryTransitionToCompleted
+## <a name="asyncbasetrytransitiontocompleted"></a><a name="trytransitiontocompleted"></a>AsyncBase：： TryTransitionToCompleted
 
-表示目前的非同步作業是否已完成。
+指出目前的非同步作業是否已完成。
 
 ```cpp
 bool TryTransitionToCompleted(
@@ -517,11 +516,11 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果非同步作業完成為止，否則**false**。
+如果非同步作業已完成，則為**true** ;否則**為 false**。
 
-## <a name="trytransitiontoerror"></a>AsyncBase::TryTransitionToError
+## <a name="asyncbasetrytransitiontoerror"></a><a name="trytransitiontoerror"></a>AsyncBase：： TryTransitionToError
 
-指出指定的錯誤程式碼是否可以修改的內部錯誤狀態。
+指出指定的錯誤碼是否可以修改內部錯誤狀態。
 
 ```cpp
 bool TryTransitionToError(
@@ -532,12 +531,12 @@ bool TryTransitionToError(
 ### <a name="parameters"></a>參數
 
 *error*<br/>
-錯誤的 HRESULT。
+錯誤 HRESULT。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果內部錯誤狀態已變更，否則**false**。
+如果內部錯誤狀態已變更，則**為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
-這項作業會在錯誤狀態已設為 S_OK 時，才修改錯誤狀態。 如果錯誤的狀態已取消、 已完成，或關閉的錯誤，這項作業會有任何作用。
+只有當錯誤狀態已設定為 [S_OK] 時，此作業才會修改錯誤狀態。 如果錯誤狀態為 [錯誤]、[已取消]、[已完成] 或 [已關閉]，則此作業沒有作用。

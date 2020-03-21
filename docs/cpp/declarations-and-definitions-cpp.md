@@ -2,12 +2,12 @@
 title: 宣告和定義（C++）
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301544"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077210"
 ---
 # <a name="declarations-and-definitions-c"></a>宣告和定義（C++）
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-在第5行上，會宣告 `main` 函式。 在第7行上，會宣告並*初始化*名為 `pi` 的**const**變數。 在第8行上，會使用函式 `f`所產生的值來宣告和初始化整數 `i`。 因為第3行的*向前*宣告，所以編譯器可以看到名稱 `f`。 
+在第5行上，會宣告 `main` 函式。 在第7行上，會宣告並*初始化*名為 `pi` 的**const**變數。 在第8行上，會使用函式 `f`所產生的值來宣告和初始化整數 `i`。 因為第3行的*向前*宣告，所以編譯器可以看到名稱 `f`。
 
-在第9行中，已宣告名為 `obj` 類型為 `C` 的變數。 不過，此宣告會引發錯誤，因為 `C` 在程式中稍後才會宣告，而且不會向前宣告。 若要修正錯誤，您可以在 `main` 之前移動 `C` 的整個*定義*，或為它新增正向宣告。 這種行為與其他語言（例如C#）不同，其中的函式和類別可以在來源檔案中的宣告點之前使用。 
+在第9行中，已宣告名為 `obj` 類型為 `C` 的變數。 不過，此宣告會引發錯誤，因為 `C` 在程式中稍後才會宣告，而且不會向前宣告。 若要修正錯誤，您可以在 `main` 之前移動 `C` 的整個*定義*，或為它新增正向宣告。 這種行為與其他語言（例如C#）不同，其中的函式和類別可以在來源檔案中的宣告點之前使用。
 
 在第10行中，會宣告名為 `str` 類型為 `std::string` 的變數。 `std::string` 的名稱是可見的，因為它是在 `string`[標頭檔](header-files-cpp.md)中引進，而該檔案會合並到第1行的原始程式檔中。 `std` 是宣告 `string` 類別的命名空間。
 
@@ -96,7 +96,7 @@ char *strchr( const char *Str, const char Target );
 
 ## <a name="in-this-section"></a>本節內容
 
-[儲存類別](storage-classes-cpp.md)<br/>
+[儲存體類別](storage-classes-cpp.md)<br/>
 [const](const-cpp.md)<br/>
 [constexpr](constexpr-cpp.md)<br/>
 [extern](extern-cpp.md)<br/>
@@ -107,6 +107,6 @@ char *strchr( const char *Str, const char Target );
 [decltype](decltype-cpp.md)<br/>
 [中的屬性C++](attributes.md)<br/>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [基本概念](../cpp/basic-concepts-cpp.md)<br/>

@@ -5,34 +5,33 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97224380a591f4fa3fe23d25a898c112702f5a5c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630760"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078307"
 ---
 # <a name="project-files"></a>專案檔
 
-Visual Studio C++中的專案檔是以 XML 為基礎的檔案, 副檔名為 .vcxproj, 並包含建立C++專案所需的資訊。 請注意, 專案檔會匯入具有 ". .props" 或 ".targets" 副檔名的各種專案檔案。 這些檔案包含額外的組建資訊, 而且可能會參考其他 ". .props" 或 ".targets" 檔案。 檔案路徑中的巨集 (例如 `$(VCTargetsPath)`) 相依於您的 Visual Studio 安裝。 如需這些宏和 ".props" 和 ".targets" 檔案的詳細資訊, 請參閱[VC + + 目錄屬性頁](vcpp-directories-property-page.md)、[在C++ Visual Studio 中設定編譯器和組建屬性](../working-with-project-properties.md)和[建立命令和屬性的一般宏](common-macros-for-build-commands-and-properties.md)。
+Visual Studio C++中的專案檔是以 XML 為基礎的檔案，副檔名為 .vcxproj，並包含建立C++專案所需的資訊。 請注意，專案檔會匯入具有 ". .props" 或 ".targets" 副檔名的各種專案檔案。 這些檔案包含額外的組建資訊，而且可能會參考其他 ". .props" 或 ".targets" 檔案。 檔案路徑中的巨集 (例如 `$(VCTargetsPath)`) 相依於您的 Visual Studio 安裝。 如需這些宏和 ".props" 和 ".targets" 檔案的詳細資訊，請參閱[VC + + 目錄屬性頁](vcpp-directories-property-page.md)、[在C++ Visual Studio 中設定編譯器和組建屬性](../working-with-project-properties.md)和[建立命令和屬性的一般宏](common-macros-for-build-commands-and-properties.md)。
 
 ## <a name="example"></a>範例
 
 ::: moniker range=">=vs-2019"
 
-在 [**新增專案**] 對話方塊中選擇 [ **Windows 桌面 Wizard]** , 即可產生下列 .vcxproj 檔案。 若要處理專案檔，請在命令列使用 msbuild.exe 工具，或在 IDE 中使用**建置**命令。 (此範例無法處理，因為未提供必要的原始檔和標頭檔。)如需專案檔中的 XML 項目的詳細資訊，請參閱[專案檔案結構描述參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
+在 [**新增專案**] 對話方塊中選擇 [ **Windows 桌面 Wizard]** ，即可產生下列 .vcxproj 檔案。 若要處理專案檔，請在命令列使用 msbuild.exe 工具，或在 IDE 中使用**建置**命令。 （無法處理此範例，因為未提供必要的來源和標頭檔。）如需專案檔中 XML 元素的詳細資訊，請參閱[專案檔案架構參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-下列範例 .vcxproj 檔案的產生方式，是在 [新專案] 對話方塊中指定 [Win32 主控台應用程式]。 若要處理專案檔，請在命令列使用 msbuild.exe 工具，或在 IDE 中使用**建置**命令。 (此範例無法處理，因為未提供必要的原始檔和標頭檔。)如需專案檔中的 XML 項目的詳細資訊，請參閱[專案檔案結構描述參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
+下列範例 .vcxproj 檔案的產生方式，是在 [新專案] 對話方塊中指定 [Win32 主控台應用程式]。 若要處理專案檔，請在命令列使用 msbuild.exe 工具，或在 IDE 中使用**建置**命令。 （無法處理此範例，因為未提供必要的來源和標頭檔。）如需專案檔中 XML 元素的詳細資訊，請參閱[專案檔案架構參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
 
 ::: moniker-end
 
-
 >[!NOTE]
-> 針對 Visual Studio 2017 和更早版本中的`pch.h`專案, `pch.cpp`請`stdafx.cpp`將變更為`stdafx.h` , 並將變更為。
+> 針對 Visual Studio 2017 和更早版本中的專案，將 `pch.h` 變更為 `stdafx.h`，並 `pch.cpp` 至 `stdafx.cpp`。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

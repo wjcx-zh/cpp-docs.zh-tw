@@ -2,12 +2,12 @@
 title: 以範圍為基礎的 for 陳述式 (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af9811fd707d4dbc28158dba3b6b3fbfcc43e4fe
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244131"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077188"
 ---
 # <a name="range-based-for-statement-c"></a>以範圍為基礎的 for 陳述式 (C++)
 
@@ -22,11 +22,11 @@ for ( for-range-declaration : expression )
 
 ## <a name="remarks"></a>備註
 
-使用範圍架構**for**陳述式來建構必須透過 「 範圍 」，這定義為任何項目，您可以逐一執行的迴圈 — 比方說， `std::vector`，或任何其他C++標準程式庫 」 序列其範圍由定義`begin()`和`end()`。 名稱中所宣告`for-range-declaration`部分是在本機**如**陳述式，且無法重新宣告中`expression`或`statement`。 請注意，[自動](../cpp/auto-cpp.md)關鍵字會偏好`for-range-declaration`陳述式部分。
+使用以範圍為基礎**的 for**語句來建造必須透過「範圍」執行的迴圈，這定義為您可以逐一查看的任何專案（例如 `std::vector`），或是由 `begin()` 和C++ `end()`所定義的任何其他標準程式庫序列。 在 `for-range-declaration` 部分中所宣告的名稱在**for**語句中為 local，而且無法在 `expression` 或 `statement`中重新宣告。 請注意， [auto](../cpp/auto-cpp.md)關鍵字在語句的 `for-range-declaration` 部分中是慣用的。
 
-**Visual Studio 2017： 的新功能**範圍式 for 迴圈不再需要 begin() 和 end() 傳回相同類型的物件。 這可讓 end() 傳回 sentinel 物件，例如 Ranges-V3 提案中所定義範圍使用的物件。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (一般化範圍架構的 For 迴圈) 和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3) (GitHub 上的 range-v3 程式庫)。
+**Visual Studio 2017 中的新功能：** 以範圍為基礎的 for 迴圈不再需要 begin （）和 end （）傳回相同類型的物件。 這可讓 end() 傳回 sentinel 物件，例如 Ranges-V3 提案中所定義範圍使用的物件。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](https://wg21.link/p0184r0) (一般化範圍架構的 For 迴圈) 和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3) (GitHub 上的 range-v3 程式庫)。
 
-此程式碼示範如何使用範圍型**針對**迴圈來逐一查看陣列和向量：
+這段程式碼示範如何使用範圍架構**的 for**迴圈來逐一查看陣列和向量：
 
 ```cpp
 // range-based-for.cpp
@@ -96,9 +96,9 @@ end of integer array test
 end of vector test
 ```
 
-以範圍為基礎**for**迴圈終止時其中一種在`statement`執行：[中斷](../cpp/break-statement-cpp.md)，[傳回](../cpp/return-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)要加上標籤外部範圍為基礎的陳述式**針對**迴圈。 A[繼續](../cpp/continue-statement-cpp.md)陳述式中以範圍為基礎**如**迴圈終止只有目前的反覆項目。
+以範圍為基礎**的 for**迴圈會在 `statement` 中的其中一個執行時終止：在範圍架構**的 for**迴圈外，會[中斷](../cpp/break-statement-cpp.md)、[傳回或移](../cpp/goto-statement-cpp.md)至已[加上卷](../cpp/return-statement-cpp.md)標的語句。 以範圍**為基礎的 for**迴圈中的[continue](../cpp/continue-statement-cpp.md)語句只會終止目前的反復專案。
 
-請記住這些事項的相關範圍型**針對**:
+請記住下列關於範圍型**的**事實：
 
 - 自動辨識陣列。
 

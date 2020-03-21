@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927699"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076136"
 ---
 # <a name="midl-property-pages"></a>MIDL 屬性頁
 
@@ -62,15 +62,15 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 ### <a name="preprocessor-definitions"></a>前置處理器定義
 
-指定一或多個定義, 包括 MIDL 宏([/d](/windows/win32/midl/-d))\[macros\]。
+指定一或多個定義，包括 MIDL 宏（[/d](/windows/win32/midl/-d)）\[宏\]）。
 
 ### <a name="additional-include-directories"></a>其他 Include 目錄
 
-指定一或多個要新增至 include 路徑的目錄 ([/i](/windows/win32/midl/-i)\[路徑\])。
+指定一或多個要新增至 include 路徑的目錄（[/i](/windows/win32/midl/-i)\[路徑\]）。
 
 ### <a name="additional-metadata-directories"></a>其他中繼資料目錄
 
-指定包含 Windows Foundation WinMD 檔案（[/metadata_dir](/windows/win32/midl/-metadata-dir) \[路徑\]）的目錄。
+指定包含 Windows. Foundation WinMD 檔案（[/metadata_dir](/windows/win32/midl/-metadata-dir) \[路徑\]）的目錄。
 
 ### <a name="enable-windows-runtime"></a>啟用 Windows 執行階段
 
@@ -84,11 +84,11 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 強制與 mktyplib.exe 2.03 版（[/mktyplib203](/windows/win32/midl/-mktyplib203)）相容。
 
-### <a name="warning-level"></a>警告層級
+### <a name="warning-level"></a>警告等級
 
 選取 MIDL 程式碼錯誤（[/w](/windows/win32/midl/-w)）的嚴謹度。
 
-**做**
+**Choices**
 
 - **1**
 - **1**
@@ -96,7 +96,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 - **3**
 - **4**
 
-### <a name="treat-warnings-as-errors"></a>警告視為錯誤
+### <a name="treat-warnings-as-errors"></a>將警告視為錯誤
 
 讓 MIDL 將所有警告視為錯誤（[/wx](/windows/win32/midl/-wx)）。
 
@@ -108,7 +108,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 指定將用來編譯所產生程式碼的 C 編譯器的預設字元類型。 （[/char](/windows/win32/midl/-char)已簽署 | 未簽署 | ascii7）。
 
-**做**
+**Choices**
 
 - **已簽署**簽署
 - 不帶**正負**號
@@ -118,7 +118,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 指定要設為目標的環境（[/env](/windows/win32/midl/-env) arm32 | win32 | ia64 | x64）。
 
-**做**
+**Choices**
 
 - **未設定**-Win32
 - **Microsoft Windows 32 位**-Win32
@@ -139,7 +139,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 允許在 IDL 檔案中選取的 ACF 屬性（[/app_config](/windows/win32/midl/-app-config)）。
 
-### <a name="locale-id"></a>地區設定識別碼
+### <a name="locale-id"></a>地區識別碼
 
 指定輸入檔的 LCID、檔案名和目錄路徑（[/Lcid](/windows/win32/midl/-lcid) DECIMAL）。
 
@@ -185,7 +185,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 僅產生用戶端 stub 檔案（[/client](/windows/win32/midl/-client) [stub | none]）。
 
-**做**
+**Choices**
 
 - **存根**-stub
 - **無**-無
@@ -194,7 +194,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 僅產生伺服器 stub 檔案（[/server](/windows/win32/midl/-server) [stub | none]）。
 
-**做**
+**Choices**
 
 - **存根**-stub
 - **無**-無
@@ -211,7 +211,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 指定類型程式庫檔案格式（[/oldtlb |/newtlb]）。
 
-**做**
+**Choices**
 
 - **NewFormat** -新格式
 - **OldFormat** -舊格式
@@ -230,7 +230,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 選取錯誤檢查選項（[/error 全部 | 無]）。
 
-**做**
+**Choices**
 
 - **EnableCustom** -全部
 - **全部**-全部
@@ -254,7 +254,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 ### <a name="check-stub-data"></a>檢查存根資料
 
-發出伺服器端 stub 資料有效性的額外檢查（[/error](/windows/win32/midl/-error) stub_data）。
+發出伺服器端存根資料有效性的額外檢查（[/error](/windows/win32/midl/-error) stub_data）。
 
 ### <a name="prepend-with-abi-namespace"></a>前面加上 ' ABI ' 命名空間
 
@@ -262,13 +262,13 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 ### <a name="validate-parameters"></a>驗證參數
 
-產生其他資訊來驗證參數（[/robust](/windows/win32/midl/-robust)  |  [/no_robust](/windows/win32/midl/-no-robust)）。
+產生其他資訊來驗證參數（[/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)）。
 
 ### <a name="struct-member-alignment"></a>結構成員對齊
 
 指定目標系統中結構的封裝層級（/ZpN）。
 
-**做**
+**Choices**
 
 - **未設定**-未設定
 - **1 個位元組**-Zp1
@@ -283,6 +283,3 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 ### <a name="minimum-target-system"></a>最小目標系統
 
 設定最小目標系統（[/Target](/windows/win32/midl/-target) STRING）。
-
-
-

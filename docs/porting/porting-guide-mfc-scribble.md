@@ -2,12 +2,12 @@
 title: 移植指南：MFC Scribble
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627218"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076972"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 
@@ -23,7 +23,7 @@ MFC Scribble 是已知隨附於許多不同 Visual C++ 版本的範例。 它是
 
 接下來，備份整個方案和其所有內容。
 
-最後，在最新版本的 Visual Studio 中開啟方案，並允許嚮導轉換專案。 
+最後，在最新版本的 Visual Studio 中開啟方案，並允許嚮導轉換專案。
 
 請注意，您也可以在命令列執行 devenv 並使用 `/Upgrade` 選項，而不使用精靈來升級專案。 請參閱 [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe)。 這對自動化大量專案的升級程序會很有幫助。
 
@@ -85,7 +85,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 Scribble 是小型且簡單的 Windows 桌面應用程式，並不難轉換。 許多小型、簡單的應用程式也同樣容易轉換至新版。  至於較複雜的應用程式 (具有更多行程式碼、可能不及最新工程標準的舊版程式碼、多個專案和程式庫、自訂建置步驟)，或複雜的指令碼式自動化組建，則需要更多時間進行升級。 請繼續進行[下一個範例](../porting/porting-guide-com-spy.md)：一個稱為 COM Spy 的 ATL/COM 應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一個範例：COM Spy](../porting/porting-guide-com-spy.md)

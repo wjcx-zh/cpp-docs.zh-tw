@@ -1,43 +1,43 @@
 ---
-title: 逐步解說：編譯C++命令列上的 /CX 程式
+title: 逐步解說：在命令列上編譯 C++/CX 程式
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: cbf5a48de3c029e36fc6daabe2b3f0db55dc173c
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.openlocfilehash: 83369fc7b458463ea1f44a347bbcd0ca4eb32224
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877170"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078199"
 ---
-# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：編譯C++命令列上的 /CX 程式
-
-> [!NOTE] 
-> 新的 UWP 應用程式和元件，我們建議您使用[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，standard C + + 17 語言推演，適用於 Windows 執行階段 Api。 C++/ 在 Windows 10 SDK 版本 1803年之後推出 WinRT。 C++/ WinRT 完全在標頭檔中實作，而且是為您提供第一級存取新式 Windows api。
-
-MicrosoftC++編譯器 (MSVC) 支援C++元件擴充功能 (C++/CX)，其具有其他類型及運算子，以 Windows 執行階段程式設計模型為目標。 您可以使用C++/CX 來建置通用 Windows 平台 (UWP) 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 的教學課程C++/CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)。</c0>
-
-在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術可用於建置和測試沒有任何 UI 元素的小模組。）
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CX 程式
 
 > [!NOTE]
-> 您還可以使用 Visual Studio IDE，來編譯 C++/CX 程式。 因為這個 IDE 包括設計、 偵錯、 模擬，以及部署支援，但無法使用命令列上，我們建議您使用 IDE 建置通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立 UWP 應用程式中的C++ ](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。</c0>
+> 針對新的 UWP 應用程式和元件，我們建議您使用[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，這是適用于 Windows 執行階段 api 的 standard c + + 17 語言投影。 C++從1803版開始，Windows 10 SDK 中提供了/WinRT。 C++/WinRT 完全實作為標頭檔，其設計目的是為您提供現代化 Windows API 的第一級存取權。
 
-## <a name="prerequisites"></a>必要條件
+Microsoft C++編譯器（MSVC）支援C++元件擴充功能（C++/cx），其具有以 Windows 執行階段程式設計模型為目標的其他類型和運算子。 您可以使用C++/cx 來建立適用于通用 WINDOWS 平臺（UWP）和 Windows 桌面的應用程式。 如需詳細資訊，請參閱[/cx C++的導覽](https://msdn.microsoft.com/magazine/dn166929.aspx)和[執行時間平臺的元件延伸](../extensions/component-extensions-for-runtime-platforms.md)模組。
 
-了解基本概念C++語言。
+在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術適用于建立和測試沒有 UI 元素的小型模組）。
+
+> [!NOTE]
+> 您還可以使用 Visual Studio IDE，來編譯 C++/CX 程式。 由於 IDE 包含命令列上無法使用的設計、偵測、模擬和部署支援，因此建議您使用 IDE 來建立通用 Windows 平臺（UWP）應用程式。 如需詳細資訊，請參閱[在中C++建立 UWP 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
+
+## <a name="prerequisites"></a>Prerequisites
+
+您瞭解此C++語言的基本概念。
 
 ## <a name="compiling-a-ccx-program"></a>編譯 C++/CX 程式
 
-若要啟用編譯 C + /CX 中，您必須使用[/ZW](reference/zw-windows-runtime-compilation.md)編譯器選項。 MSVC 編譯器產生的.exe 檔，以目標為 Windows 執行階段，並連結至必要的程式庫。
+若要啟用C++/cx 的編譯，您必須使用[/ZW](reference/zw-windows-runtime-compilation.md)編譯器選項。 MSVC 編譯器會產生以 Windows 執行階段為目標的 .exe 檔案，並連結至所需的程式庫。
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>在命令列上編譯 C++/CX 應用程式
 
-1. 開啟**開發人員命令提示字元**視窗。 (在**開始**視窗中，開啟**應用程式**。 開啟**Visual Studio Tools**資料夾下您版本的 Visual Studio 中，然後選擇**開發人員命令提示字元**捷徑。)如需如何開啟 [開發人員命令提示字元] 視窗的詳細資訊，請參閱[使用 MSVC 工具組，從命令列](building-on-the-command-line.md)。
+1. 開啟**開發人員命令提示字元**視窗。 （在 [**開始**] 視窗中，開啟 [**應用程式**]。 開啟您的 Visual Studio 版本底下的 [ **Visual Studio Tools** ] 資料夾，然後選擇**開發人員命令提示字元**快捷方式）。如需如何開啟開發人員命令提示字元視窗的詳細資訊，請參閱[從命令列使用 MSVC 工具](building-on-the-command-line.md)組。
 
-   若要成功編譯程式碼，需要系統管理員認證，具體取決於電腦的作業系統及組態。 若要以系統管理員身分執行命令提示字元視窗，開啟捷徑功能表**開發人員命令提示字元**，然後選擇**系統管理員身分執行**。
+   若要成功編譯程式碼，需要系統管理員認證，具體取決於電腦的作業系統及組態。 若要以系統管理員身分執行 [命令提示字元] 視窗，請開啟**開發人員命令提示字元**的快捷方式功能表，然後選擇 [**以系統管理員身分執行**]。
 
 1. 在命令提示字元中，輸入**notepad basiccx.cpp**。
 
-   選擇**是**當系統提示您建立的檔案。
+   當系統提示您建立檔案時，請選擇 [**是]** 。
 
 1. 在 [記事本] 中，輸入下列行：
 
@@ -50,13 +50,13 @@ MicrosoftC++編譯器 (MSVC) 支援C++元件擴充功能 (C++/CX)，其具有其
     }
     ```
 
-1. 在功能表列上選擇 **檔案** > **儲存**。
+1. 在功能表列上 **，選擇** 檔案 > **儲存**。
 
-   您已建立C++使用 Windows 執行階段的原始程式檔[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)命名空間。
+   您已建立一個C++使用 Windows 執行階段[Platform namespace](../cppcx/platform-namespace-c-cx.md)命名空間的原始程式檔。
 
-1. 在命令提示字元中，輸入**cl /EHsc /ZW basiccx.cpp /link /subsystem: console**。 cl.exe 編譯器會將原始程式碼編譯為 .obj 檔案，然後執行連結器，以產生名為 basiccx.exe 的可執行程式  ( [/EHsc](reference/eh-exception-handling-model.md)編譯器選項會指定C++例外狀況處理模型，而[/link>](reference/link-pass-options-to-linker.md)旗標會指定主控台應用程式。)
+1. 在命令提示字元中，輸入**cl/EHSC/ZW basiccx.cpp. .cpp/LINK/SUBSYSTEM： CONSOLE**。 cl.exe 編譯器會將原始程式碼編譯為 .obj 檔案，然後執行連結器，以產生名為 basiccx.exe 的可執行程式 （ [/Ehsc](reference/eh-exception-handling-model.md)編譯器選項會指定C++例外狀況處理模型，而[/link](reference/link-pass-options-to-linker.md)旗標會指定主控台應用程式）。
 
-1. 若要執行 basiccx.exe 程式，在命令提示字元中，輸入**basiccx**。
+1. 若要執行 basiccx.cpp 程式，請在命令提示字元中輸入**basiccx.cpp**。
 
    程式會顯示下列文字並結束：
 

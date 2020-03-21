@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 3d8be0cc33e0435bc5a18191303dbbc91277de0b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503802"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075457"
 ---
 # <a name="windows-desktop-wizard"></a>Windows 傳統式精靈
 
-Windows Desktop 精靈 會取代 Win32 應用程式精靈 在 Visual Studio 2017 和更新版本。 此精靈可讓您建立的四種類型的任何C++（列於下表中的標題） 的專案。 在每個案例中，您都可以為開啟的專案類型指定適合的其他選項。 
+Windows 桌面 Wizard 取代了 Visual Studio 2017 和更新版本中的 Win32 應用程式精靈。 此嚮導可讓您建立四種類型的C++專案（列于下表的標題中）。 在每個案例中，您都可以為開啟的專案類型指定適合的其他選項。
 
    ![Windows 傳統式精靈](media/windows-desktop-wizard.png)
 
@@ -26,12 +26,12 @@ Windows Desktop 精靈 會取代 Win32 應用程式精靈 在 Visual Studio 2017
 |支援類型|主控台應用程式|可執行檔 (Windows) 應用程式|動態連結程式庫|靜態程式庫|
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
 |**空專案**|是|是|是|否|
-|**匯出符號**|否|否|[是]|否|
+|**匯出符號**|否|否|是|否|
 |**先行編譯標頭**|否|否|否|是|
 |**ATL 支援**|是|否|否|否|
 |**MFC 支援**|是|否|否|是|
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 
 這個精靈頁面說明目前適用於您建立之 Win32 應用程式的專案設定。 根據預設，設定下列選項：
 
@@ -51,30 +51,30 @@ Windows Desktop 精靈 會取代 Win32 應用程式精靈 在 Visual Studio 2017
 
 |選項|描述|
 |------------|-----------------|
-|**主控台應用程式**|建立主控台應用程式 (Console Application)。 視覺效果C++[執行階段程式庫](../c-runtime-library/c-run-time-library-reference.md)也提供輸出，並從主控台視窗，使用標準 I/O 函式，這類輸入`printf_s()`並`scanf_s()`。 主控台應用程式有沒有圖形化使用者介面。 它會編譯為.exe 檔案，並可當做獨立的應用程式，從命令列來執行。<br /><br /> 您可以新增 MFC 與 ATL 支援新增至主控台應用程式。|
-|**Windows 應用程式**|建立 Win32 程式。 Win32 程式是以 C 撰寫的可執行檔應用程式 (EXE) 或C++，來建立圖形化使用者介面中使用 Win32 API 的呼叫。<br /><br /> 您無法新增 MFC 或 ATL 支援加入至 Windows 應用程式。|
-|**動態連結程式庫**|建立 Win32 動態連結程式庫 (DLL)。 Win32 DLL 是以 C 撰寫的二進位檔案，或C++，會使用呼叫 Win32 API，而不是 MFC 類別，做為共用程式庫的多個應用程式可以同時使用的函式。<br /><br /> 您無法使用此精靈，來建立 DLL 應用程式中加入 MFC 或 ATL 的支援，但您可以建立 MFC DLL 藉由選擇**新增 > 專案 > MFC DLL**。|
-|**靜態程式庫**|建立靜態程式庫。 靜態程式庫是包含物件和其功能與資料，用來建置可執行檔時，連結到您的程式檔案。 本主題說明如何建立初學者檔案和[專案屬性](../build/reference/property-pages-visual-cpp.md)靜態程式庫。 靜態程式庫檔案提供下列優點：<br /><br />-如果您正在使用的應用程式呼叫 Win32 API，而不是 MFC 類別非常有用 Win32 靜態程式庫。<br />-連結的程序是相同，無論您的 Windows 應用程式的其餘部分以 C 撰寫或在C++。<br />-您可以在以 MFC 為基礎的程式或非 MFC 程式連結的靜態程式庫。|
+|**主控台應用程式**|建立主控台應用程式 (Console Application)。 Visual C++ [執行時間程式庫](../c-runtime-library/c-run-time-library-reference.md)也會從具有標準 i/o 功能的主控台視窗（例如 `printf_s()` 和 `scanf_s()`）提供輸出和輸入。 主控台應用程式沒有圖形化使用者介面。 它會編譯成 .exe 檔案，並可從命令列以獨立應用程式的形式執行。<br /><br /> 您可以將 MFC 和 ATL 支援加入至主控台應用程式。|
+|**Windows 應用程式**|建立 Win32 程式。 Win32 程式是以 C 或C++撰寫的可執行應用程式（EXE），使用 WIN32 API 的呼叫來建立圖形化使用者介面。<br /><br /> 您無法將 MFC 或 ATL 支援新增至 Windows 應用程式。|
+|**動態連結程式庫**|建立 Win32 動態連結程式庫（DLL）。 Win32 DLL 是以 C 或C++撰寫的二進位檔案，它會使用 WIN32 API 的呼叫，而不是 MFC 類別，並作為可供多個應用程式同時使用的函式共用程式庫。<br /><br /> 您無法將 MFC 或 ATL 支援新增至使用此 wizard 所建立的 DLL 應用程式，但您可以選擇 新增  **> 專案 > MFC dll** 來建立 mfc dll。|
+|**靜態程式庫**|建立靜態程式庫。 靜態程式庫是一個檔案，其中包含在建立可執行檔時連結至程式的物件及其功能和資料。 本主題說明如何建立靜態程式庫的起始檔案和[專案屬性](../build/reference/property-pages-visual-cpp.md)。 靜態程式庫檔案提供下列優點：<br /><br />-如果您正在處理的應用程式會呼叫 WIN32 API，而不是 MFC 類別，Win32 靜態程式庫就很有用。<br />-不論 Windows 應用程式的其餘部分是以 C 或撰寫而成，連結進程都相同C++。<br />-您可以將靜態程式庫連結至以 MFC 為基礎的程式或非 MFC 程式。|
 
 ## <a name="additional-options"></a>其他選項
 
-定義支援和應用程式，根據其類型的選項。
+定義應用程式的支援和選項，視其類型而定。
 
 |選項|描述|
 |------------|-----------------|
-|**空專案**|指定的專案檔案空白。 如果您有一組的原始程式檔 （例如.cpp 檔案、 標頭檔、 圖示、 工具列、 對話方塊和等等），而且想要建立視覺效果中的專案C++開發環境中，您必須先建立空白的專案，然後將檔案新增至專案。<br /><br /> 此選項不適用於靜態程式庫專案。|
-|**匯出符號**|指定 DLL 專案匯出的符號。|
-|**先行編譯標頭**|指定靜態程式庫專案會使用預先編譯的標頭。|
-|**安全性開發生命週期 (SDL) 檢查**|如需有關 SDL 的詳細資訊，請參閱[Microsoft 安全性開發生命週期 (SDL) 流程指引](../build/reference/sdl-enable-additional-security-checks.md)|
+|**空專案**|指定專案檔案為空白。 如果您有一組原始程式碼檔案（例如 .cpp 檔案、標頭檔、圖示、工具列、對話方塊等等），而且想要在視覺化C++開發環境中建立專案，您必須先建立空白專案，然後將檔案加入至專案。<br /><br /> 靜態程式庫專案無法使用此選項。|
+|**匯出符號**|指定 DLL 專案匯出符號。|
+|**先行編譯標頭**|指定靜態程式庫專案使用預先編譯的標頭。|
+|**安全性開發週期（SDL）檢查**|如需 SDL 的詳細資訊，請參閱[Microsoft 安全性開發週期 (SDL) （SDL）流程指引](../build/reference/sdl-enable-additional-security-checks.md)|
 
-## <a name="add-common-headers-for"></a>新增通用標頭：
+## <a name="add-common-headers-for"></a>新增的通用標頭：
 
-新增視覺效果中所提供的程式庫的其中一個支援C++。
+為 Visual C++中提供的其中一個程式庫加入支援。
 
 |選項|描述|
 |------------|-----------------|
-|**ATL**|會建置類別 Active Template Library (ATL) 的專案支援。 Win32 主控台應用程式只。<br /><br /> **請注意**這個選項不會指出加入 ATL 物件使用 ATL 程式碼精靈的支援。 您可以加入 ATL 物件到 ATL 專案或 ATL 與 MFC 專案支援。|
-|**MFC**|會建置 Microsoft Foundation Class (MFC) 程式庫的專案支援。 適用於 Win32 主控台應用程式和靜態程式庫。|
+|**ATL**|建置於 Active Template Library （ATL）中類別的專案支援。 僅適用于 Win32 主控台應用程式。<br /><br /> **注意**此選項不表示支援使用 ATL 程式碼嚮導來新增 ATL 物件。 您只能將 ATL 物件新增至 atl 專案或具有 ATL 支援的 MFC 專案。|
+|**MFC**|建置於 Microsoft Foundation Class （MFC）程式庫的專案支援中。 僅適用于 Win32 主控台應用程式和靜態程式庫。|
 
 ## <a name="remarks"></a>備註
 
@@ -83,7 +83,7 @@ Windows Desktop 精靈 會取代 Win32 應用程式精靈 在 Visual Studio 2017
 > [!NOTE]
 > 您不能加入 ATL 類別，而 MFC 類別只能加入支援 MFC 的那些 Windows 桌面應用程式類型 (請見上表)。
 
-您可以在 **方案總管**中檢視精靈為專案建立的檔案。 更多精靈為您的專案所建立之檔案的相關資訊，請參閱專案所產生的檔案， `ReadMe.txt`。 如需有關檔案類型[適用於 Visual Studio 建立的檔案類型C++專案](../build/reference/file-types-created-for-visual-cpp-projects.md)。
+您可以在 **方案總管**中檢視精靈為專案建立的檔案。 如需 wizard 為您的專案建立之檔案的詳細資訊，請參閱專案產生的檔案 `ReadMe.txt`。 如需檔案類型的詳細資訊，請閱讀[為 Visual Studio C++專案所建立的檔案類型](../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
 

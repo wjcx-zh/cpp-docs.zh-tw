@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 308fa1a2309ddfda1a02fe6a687360185c1e7c6e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3ed2eceb60c2efa78181faea58a256b0e35d489f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245846"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076606"
 ---
-# <a name="errorcategory-class"></a>error_category 類別
+# <a name="error_category-class"></a>error_category 類別
 
-表示物件的抽象、通用基底，以描述錯誤碼的分類。
+代表物件的抽象、通用基底，以描述錯誤碼的分類。
 
 ## <a name="syntax"></a>語法
 
@@ -49,7 +49,7 @@ error_category(const error_category&) = delete
 |-|-|
 |[value_type](#value_type)|此類型表示預存的錯誤碼值。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -60,7 +60,7 @@ error_category(const error_category&) = delete
 |[name](#name)|傳回分類的名稱。|
 |[system_category](#system)||
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
@@ -69,7 +69,7 @@ error_category(const error_category&) = delete
 |[operator!=](#op_neq)|測試 `error_category` 物件是否不相等。|
 |[operator<](#op_lt)|測試 [error_category](../standard-library/error-category-class.md) 物件是否小於傳入以進行比較的 `error_category` 物件。|
 
-## <a name="default_error_condition"></a> default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
 儲存錯誤狀況物件的錯誤碼值。
 
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="remarks"></a>備註
 
-### <a name="equivalent"></a> 對等項目
+### <a name="equivalent"></a><a name="equivalent"></a>價額
 
 傳回的值可指定錯誤物件是否相等。
 
@@ -108,12 +108,12 @@ virtual bool equivalent(const error_code& _Code,
 *_Cond*\
 要比較的 [error_condition](../standard-library/error-condition-class.md) 物件。
 
-*（_c)* \
+*_Code*\
 要比較的 [error_code](../standard-library/error-code-class.md) 物件。
 
 #### <a name="return-value"></a>傳回值
 
-**真**如果分類和值相等，否則**false**。
+如果分類和值相等，則為**true** ;否則**為 false**。
 
 #### <a name="remarks"></a>備註
 
@@ -121,13 +121,13 @@ virtual bool equivalent(const error_code& _Code,
 
 第二個成員函式會傳回 `*this == _Code.category() && _Code.value() == _Errval`。
 
-### <a name="generic"></a> generic_category
+### <a name="generic_category"></a><a name="generic"></a>generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a> 訊息
+### <a name="message"></a><a name="message"></a>消息
 
 傳回指定錯誤碼的名稱。
 
@@ -142,11 +142,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="return-value"></a>傳回值
 
-傳回的錯誤程式碼的描述性名稱*val*分類。
+傳回分類之錯誤碼*val*的描述性名稱。
 
 #### <a name="remarks"></a>備註
 
-### <a name="name"></a> 名稱
+### <a name="name"></a><a name="name"></a>檔案名
 
 傳回分類的名稱。
 
@@ -158,14 +158,13 @@ virtual const char *name() const = 0;
 
 傳回分類的名稱 (其為以 Null 結束的位元組字串)。
 
-### <a name="op_as"></a> 運算子 =
+### <a name="operator"></a><a name="op_as"></a>operator =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-
-### <a name="op_eq_eq"></a> 運算子 = =
+### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試 `error_category` 物件是否相等。
 
@@ -175,7 +174,7 @@ bool operator==(const error_category& right) const;
 
 #### <a name="parameters"></a>參數
 
-*權限*\
+*right*\
 要測試是否相等的物件。
 
 #### <a name="return-value"></a>傳回值
@@ -186,7 +185,7 @@ bool operator==(const error_category& right) const;
 
 此成員運算子會傳回 `this == &right`。
 
-### <a name="op_neq"></a> 運算子 ！ =
+### <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試 `error_category` 物件是否不相等。
 
@@ -196,18 +195,18 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="parameters"></a>參數
 
-*權限*\
+*right*\
 要測試是否不相等的物件。
 
 #### <a name="return-value"></a>傳回值
 
-**true**如果`error_category`物件是否不等於`error_category`傳入物件*右*; 否則為**false**。
+如果 `error_category` 物件不等於*直接*傳入的 `error_category` 物件，**則為 true** ;否則**為 false**。
 
 #### <a name="remarks"></a>備註
 
 此成員運算子會傳回 `(!*this == right)`。
 
-### <a name="op_lt"></a> 運算子&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> 運算子&lt;
 
 測試 [error_category](../standard-library/error-category-class.md) 物件是否小於傳入以進行比較的 `error_category` 物件。
 
@@ -217,24 +216,24 @@ bool operator<(const error_category& right) const;
 
 #### <a name="parameters"></a>參數
 
-*權限*\
+*right*\
 要比較的 `error_category` 物件。
 
 #### <a name="return-value"></a>傳回值
 
-如果 `error_category` 小於傳入以進行比較的 `error_category` 物件，即為 **true**；否則為 **false**。
+如果 **小於傳入以進行比較的** 物件，即為 `error_category`true`error_category`；否則為 **false**。
 
 #### <a name="remarks"></a>備註
 
 此成員運算子會傳回 `this < &right`。
 
-### <a name="system"></a> system_category
+### <a name="system_category"></a><a name="system"></a>system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a> value_type
+### <a name="value_type"></a><a name="value_type"></a>value_type
 
 此類型表示預存的錯誤碼值。
 
@@ -244,4 +243,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>備註
 
-此類型定義是同義**int**。
+此類型定義是**int**的同義字。

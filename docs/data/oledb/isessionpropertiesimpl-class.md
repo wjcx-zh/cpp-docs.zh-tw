@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444033"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077719"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 類別
 
@@ -28,7 +28,7 @@ ms.locfileid: "79444033"
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 
@@ -57,7 +57,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 會話上的強制介面。 這個類別會藉由呼叫[屬性集對應](../../data/oledb/begin-propset-map.md)所定義的靜態函式，來實作用會話屬性。 您應該在會話類別中指定屬性集對應。
 
-## <a name="getproperties"></a>ISessionPropertiesImpl：： GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl：： GetProperties
 
 傳回目前在會話上設定的 `DBPROPSET_SESSION` 屬性群組中的屬性清單。
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 請參閱 OLE DB 程式設計*人員參考*中的[ISessionProperties：： GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) 。
 
-## <a name="setproperties"></a>ISessionPropertiesImpl：： SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl：： SetProperties
 
 設定 `DBPROPSET_SESSION` 屬性群組中的屬性。
 

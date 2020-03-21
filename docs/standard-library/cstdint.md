@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <cstdint>
 ms.assetid: 87afafb2-c630-4383-a2fc-a6b47c639e21
-ms.openlocfilehash: 9f4839ed6166e328feac4ae89fcce0637abce993
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 142ea2b341dad307dea98d1406803a1e7eca5e78
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447482"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076634"
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 
@@ -21,10 +21,10 @@ ms.locfileid: "68447482"
 #include <cstdint>
 ```
 
-## <a name="types"></a>型別
+## <a name="types"></a>類型
 
 ```cpp
-namespace std { 
+namespace std {
     using int8_t = signed integer type; // optional
     using int16_t = signed integer type; // optional
     using int32_t = signed integer type; // optional
@@ -71,5 +71,5 @@ SIZE_MAX
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)

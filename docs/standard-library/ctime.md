@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-ms.openlocfilehash: f4bdb8fa30c44a6eaa83f53624c5bd43bd235261
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2b3f31ba48ca831b2d2d8cd460b60549c4debe83
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449380"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076629"
 ---
 # <a name="ltctimegt"></a>&lt;ctime&gt;
 
@@ -41,15 +41,15 @@ namespace std {
     using time_t = see below ;
 }
 ```
-    
+
 ## <a name="structures"></a>結構
-    
+
 ```cpp
 struct timespec;
 struct tm;
 ```
-    
-## <a name="functions"></a>函式
+
+## <a name="functions"></a>Functions
 
 ```cpp
 clock_t clock();
@@ -66,6 +66,6 @@ size_t strftime(char* s, size_t maxsize, const char* format, const struct tm* ti
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

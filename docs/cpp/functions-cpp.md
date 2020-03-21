@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418444"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076151"
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -202,7 +202,7 @@ void DoSomething(const std::string& input){...}
 void DoSomething(const std::string&& input){...}
 ```
 
-只要關鍵字**void**是引數宣告清單的第一個和唯一成員，在參數宣告清單中以單一關鍵字**void**宣告的函式就不會採用任何引數。 在清單中其他位置的**void**類型引數會產生錯誤。 例如，
+只要關鍵字**void**是引數宣告清單的第一個和唯一成員，在參數宣告清單中以單一關鍵字**void**宣告的函式就不會採用任何引數。 在清單中其他位置的**void**類型引數會產生錯誤。 例如：
 
 ```cpp
 
@@ -261,7 +261,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 在 C++ 中，區域變數可能宣告為靜態。 變數只會顯示在函式主體內，但函式的所有執行個體都有變數的單一複本。 區域靜態物件會在 `atexit` 指定的終止時被終結。 如果因為程式的控制流程略過其宣告而未建構靜態物件，就不會嘗試終結該物件。
 
-##  <a name="type_deduction"></a>傳回類型中的類型推斷（c + + 14）
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>傳回類型中的類型推斷（c + + 14）
 
 在 c + + 14 中，您可以使用**auto**來指示編譯器從函式主體推斷傳回類型，而不需要提供尾端傳回類型。 請注意， **auto**一律會會推算為逐值。 使用 `auto&&` 指示編譯器推斷參考。
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 請注意， **auto**不會保留其所會推算之類型的常數性質。 如果轉送函式的傳回值需要保留其引數的常數性質或 ref 特性，您可以使用**decltype （auto）** 關鍵字，它會使用**decltype**型別推斷規則，並保留所有型別資訊。 **decltype （auto）** 可用來做為左側的一般傳回值，或當做尾端的傳回值。
 
-下列範例（以[N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)的程式碼為基礎）顯示**decltype （auto）** ，用來在範本具現化之前，能夠完美地轉送不知道的傳回型別中的函式引數。
+下列範例（以[N3493](https://wg21.link/n3493)的程式碼為基礎）顯示**decltype （auto）** ，用來在範本具現化之前，能夠完美地轉送不知道的傳回型別中的函式引數。
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>從函式傳回多個值
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>從函式傳回多個值
 
 有各種方式可從函式傳回一個以上的值：
 

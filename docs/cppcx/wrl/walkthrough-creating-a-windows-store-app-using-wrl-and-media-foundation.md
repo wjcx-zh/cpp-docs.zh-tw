@@ -3,12 +3,12 @@ title: 逐步解說：使用 WRL 和媒體基礎建立 UWP 應用程式
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: ac2c16fb94646af7445d41010253967be126636a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c6fd2613c34fdecdf9128ed6a5d22d563961939
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498309"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079881"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說：使用 WRL 和媒體基礎建立 UWP 應用程式
 
@@ -27,9 +27,9 @@ ms.locfileid: "69498309"
 > [!NOTE]
 > 雖然這個程式碼範例很長，它會示範建立有用的媒體基礎轉換所需的最小值。 您可以將之做為您自訂轉換的起點。 這個範例是從[媒體延伸模組範例](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)進行調整，其使用媒體延伸模組將效果套用至影片、解碼影片，以及建立會產生媒體資料流程的配置處理常式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-- 在 Visual Studio 2017 和更新版本中，UWP 支援是選擇性元件。 若要安裝它，請從 Windows 開始 功能表開啟 Visual Studio 安裝程式，然後尋找您的 Visual Studio 版本。 選擇 [**修改**]，然後確定已核取 [**通用 Windows 平臺開發**] 磚。 在 [**選用元件**檢查 **C++適用于 uwp 的工具（v141）** ] 的 [Visual Studio 2017] 或 **C++ [** 適用于 Visual Studio 2019 的 uwp （適用于 v142）工具]。 然後檢查您要使用的 Windows SDK 版本。 
+- 在 Visual Studio 2017 和更新版本中，UWP 支援是選擇性元件。 若要安裝它，請從 Windows 開始 功能表開啟 Visual Studio 安裝程式，然後尋找您的 Visual Studio 版本。 選擇 [**修改**]，然後確定已核取 [**通用 Windows 平臺開發**] 磚。 在 [**選用元件**檢查 **C++適用于 uwp 的工具（v141）** ] 的 [Visual Studio 2017] 或 **C++ [** 適用于 Visual Studio 2019 的 uwp （適用于 v142）工具]。 然後檢查您要使用的 Windows SDK 版本。
 
 - 體驗[Windows 執行階段](/uwp/api/)。
 
@@ -41,11 +41,11 @@ ms.locfileid: "69498309"
 
 - 若要建立自訂的媒體基礎元件，請使用 Microsoft 介面定義語言 (MIDL) 定義檔案以定義介面，實作該介面，然後使其可從其他元件啟動。
 
-- 和屬性，而`NTDDI_WIN8`[version](/windows/win32/Midl/version) 屬性值則是使用 WRL 之媒體基礎元件的 MIDL 定義的重要部分。`namespace` `runtimeclass`
+- `namespace` 和 `runtimeclass` 屬性，而 `NTDDI_WIN8`[版本](/windows/win32/Midl/version)屬性值則是使用 WRL 之媒體基礎元件的 MIDL 定義的重要部分。
 
 - [Microsoft：： WRL：： RuntimeClass](runtimeclass-class.md)是自訂媒體基礎元件的基類。 提供做為樣板引數的[Microsoft：： WRL：： RuntimeClassType：： WinRtClassicComMix](runtimeclasstype-enumeration.md)列舉值會標記類別，以當做 Windows 執行階段類別和傳統 COM 執行時間類別使用。
 
-- [InspectableClass](inspectableclass-macro.md)宏會執行基本的 COM 功能，例如參考計數和`QueryInterface`方法，並設定執行時間類別名稱和信任層級。
+- [InspectableClass](inspectableclass-macro.md)宏會執行基本的 COM 功能，例如參考計數和 `QueryInterface` 方法，並設定執行時間類別名稱和信任層級。
 
 - 使用 Microsoft：： WRL：：[Module 類別](module-class.md)來執行 DLL 進入點函式，例如[DllGetActivationFactory](/windows/win32/winrt/functions)、 [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)和[DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject)。
 
@@ -65,21 +65,21 @@ ms.locfileid: "69498309"
 
    [!code-cpp[wrl-media-capture#1](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]
 
-1. 使用下列程式碼取代的內容`pch.h`：
+1. 使用下列程式碼來取代 `pch.h`的內容：
 
    [!code-cpp[wrl-media-capture#2](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]
 
-1. 將新的標頭檔新增至專案，並將`BufferLock.h`其命名為，然後以下列程式碼取代內容：
+1. 將新的標頭檔新增至專案，並將其命名為 `BufferLock.h`，然後以下列程式碼取代內容：
 
    [!code-cpp[wrl-media-capture#3](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-1. `GrayscaleTransform.h`在此範例中不會使用。 您可以選擇將之從專案移除。
+1. 在此範例中，不會使用 `GrayscaleTransform.h`。 您可以選擇將之從專案移除。
 
-1. 使用下列程式碼取代的內容`GrayscaleTransform.cpp`：
+1. 使用下列程式碼來取代 `GrayscaleTransform.cpp`的內容：
 
    [!code-cpp[wrl-media-capture#4](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]
 
-1. 將新的模組定義檔案加入至專案，並將其`GrayscaleTransform.def`命名為，然後新增下列程式碼：
+1. 將新的模組定義檔案加入至專案，並將其命名為 `GrayscaleTransform.def`，然後新增下列程式碼：
 
    ```
    EXPORTS
@@ -88,35 +88,35 @@ ms.locfileid: "69498309"
        DllGetClassObject                   PRIVATE
    ```
 
-1. 使用下列程式碼取代的內容`dllmain.cpp`：
+1. 使用下列程式碼來取代 `dllmain.cpp`的內容：
 
    [!code-cpp[wrl-media-capture#6](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]
 
 1. 在專案的 [**屬性頁**] 對話方塊中，設定下列**連結器**屬性。
 
-   1. 在 [**輸入**] 下，針對**模組定義**檔案`GrayScaleTransform.def`指定。
+   1. 在 [**輸入**] 下，針對**模組定義**檔案指定 `GrayScaleTransform.def`。
 
-   1. 此外，在 [輸入`runtimeobject.lib`] `mfuuid.lib`底下， `mfplat.lib`將、和新增至 [其他相依性 **]** 屬性。
+   1. 此外，在 [**輸入**] 下，將 `runtimeobject.lib`、`mfuuid.lib`和 `mfplat.lib` 新增至 [其他相依性 **]** 屬性。
 
    1. 在  **Windows 中繼資料** 下，將 **產生 Windows 中繼資料** 設定為**是（/WINMD）**
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要從C#應用程式使用 WRL 自訂媒體基礎元件
 
-1. 將新的 **C#空白應用程式（通用 Windows）** `MediaCapture`專案新增至方案。 為專案命名，例如*MediaCapture*。
+1. 將新的 **C#空白應用程式（通用 Windows）** 專案新增至 `MediaCapture` 解決方案。 為專案命名，例如*MediaCapture*。
 
-1. 在**MediaCapture**專案中，加入`GrayscaleTransform`專案的參考。 若要瞭解作法， [請參閱如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。
+1. 在**MediaCapture**專案中，加入 `GrayscaleTransform` 專案的參考。 若要瞭解方法，請參閱[如何：使用參考管理員加入或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。
 
-1. 在`Package.appxmanifest`的 [**功能**] 索引標籤上，選取 [**麥克風**和**網路**攝影機]。 這兩種功能是從網路攝影機擷取相片的必要項。
+1. 在 `Package.appxmanifest`的 [**功能**] 索引標籤上，選取 [**麥克風**和**網路**攝影機]。 這兩種功能是從網路攝影機擷取相片的必要項。
 
-1. 在`MainPage.xaml`中，將下列程式碼新增至根[方格](/uwp/api/Windows.UI.Xaml.Controls.Grid)元素：
+1. 在 `MainPage.xaml`中，將下列程式碼新增至根[方格](/uwp/api/Windows.UI.Xaml.Controls.Grid)元素：
 
    [!code-xml[wrl-media-capture#7](../codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
-1. 使用下列程式碼取代的內容`MainPage.xaml.cs`：
+1. 使用下列程式碼來取代 `MainPage.xaml.cs`的內容：
 
    [!code-cs[wrl-media-capture#8](../codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]
 
-下圖顯示`MediaCapture app`。
+下圖顯示 `MediaCapture app`。
 
 ![MediaCapture 應用程式正在捕獲相片](../media/wrl_media_capture.png "WRL_Media_Capture")
 

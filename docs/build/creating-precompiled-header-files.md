@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417373"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078590"
 ---
 # <a name="precompiled-header-files"></a>先行編譯標頭檔
 
-當您在 Visual Studio 中建立新專案時，會將名為*pch*的先行*編譯標頭檔*新增至專案。 （在 Visual Studio 2017 和更早版本中，檔案稱為*stdafx.h*）。檔案的目的是加速組建程式。 所有穩定的標頭檔（例如，如 `<vector>`的標準程式庫標頭）都應該包含在此處。 只有在已修改先行編譯標頭檔或其中包含的任何檔案時，才會進行編譯。 如果您只在專案原始程式碼中進行變更，則組建會略過先行編譯標頭檔的編譯。 
+當您在 Visual Studio 中建立新專案時，會將名為*pch*的先行*編譯標頭檔*新增至專案。 （在 Visual Studio 2017 和更早版本中，檔案稱為*stdafx.h*）。檔案的目的是加速組建程式。 所有穩定的標頭檔（例如，如 `<vector>`的標準程式庫標頭）都應該包含在此處。 只有在已修改先行編譯標頭檔或其中包含的任何檔案時，才會進行編譯。 如果您只在專案原始程式碼中進行變更，則組建會略過先行編譯標頭檔的編譯。
 
-先行編譯標頭的編譯器選項為[/y](reference/y-precompiled-headers.md)。 在專案屬性頁中，選項位於 [設定**屬性] > [C/C++ > 先行編譯頭**檔]。 您可以選擇不使用先行編譯的標頭，而且可以指定標頭檔名稱以及輸出檔案的名稱和路徑。 
+先行編譯標頭的編譯器選項為[/y](reference/y-precompiled-headers.md)。 在專案屬性頁中，選項位於 [設定**屬性] > [C/C++ > 先行編譯頭**檔]。 您可以選擇不使用先行編譯的標頭，而且可以指定標頭檔名稱以及輸出檔案的名稱和路徑。
 
 ## <a name="custom-precompiled-code"></a>自訂先行編譯的程式碼
 

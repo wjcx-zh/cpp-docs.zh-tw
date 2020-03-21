@@ -6,17 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fcad9c1b5ec20a7a10afc40884ece8ae8abec184
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452335"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076671"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-包含 C 標準程式庫標\<頭信號 .h > 並將相關名稱新增`std`至命名空間。 包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
-
+包含 C 標準程式庫標頭 \<的 >，並將相關聯的名稱新增至 `std` 命名空間。 包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +43,7 @@ namespace std {
 #define SIGTERM
 ```
 
-## <a name="functions"></a>函式
+## <a name="functions"></a>Functions
 
 ```cpp
 signal-handler* signal(int sig, signal-handler* func);
@@ -53,6 +52,6 @@ int raise(int sig);
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

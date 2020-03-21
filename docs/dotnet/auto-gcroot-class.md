@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-ms.openlocfilehash: 81d4174943543db708090ad654a911980ecf026d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fce0a127a4debfb8001c1e97924fbffa40d52d62
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388926"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078985"
 ---
-# <a name="autogcroot-class"></a>auto_gcroot 類別
+# <a name="auto_gcroot-class"></a>auto_gcroot 類別
 
-自動資源管理 (例如[auto_ptr 類別](../standard-library/auto-ptr-class.md)) 可用來將原生類型中嵌入虛擬控制代碼。
+自動資源管理（例如[Auto_ptr 類別](../standard-library/auto-ptr-class.md)），可以用來將虛擬控制碼內嵌至原生類型。
 
 ## <a name="syntax"></a>語法
 
@@ -37,48 +37,47 @@ class auto_gcroot;
 ### <a name="parameters"></a>參數
 
 *_element_type*<br/>
-要內嵌的 managed 的類型。
+要內嵌的 managed 類型。
 
 ## <a name="members"></a>成員
- 
-### <a name="public-constructors"></a>公用建構函式 
- 
-|名稱|描述| 
-|---------|-----------| 
-|[auto_gcroot::auto_gcroot](#auto-gcroot)|`auto_gcroot`建構函式。| 
-|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot`解構函式。
-| 
 
-### <a name="public-methods"></a>公用方法 
+### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述| 
-|---------|-----------| 
-|[auto_gcroot::attach](#attach)|附加`auto_gcroot`物件。| 
-|[auto_gcroot::get](#get)|取得包含的物件。| 
-|[auto_gcroot::release](#release)|釋放物件從`auto_gcroot`管理。|
-|[auto_gcroot::reset](#reset)|終結目前擁有的物件，並選擇性地採取 新物件的擁有權。|
-|[auto_gcroot::swap](#swap)|交換物件與另一個`auto_gcroot`。| 
-
- 
-### <a name="public-operators"></a>公用運算子
- 
-|名稱|描述| 
+|名稱|描述|
 |---------|-----------|
-|[auto_gcroot::operator-&gt;](#operator-arrow)|成員存取運算子。|  
+|[auto_gcroot::auto_gcroot](#auto-gcroot)|`auto_gcroot` 的構造函式。|
+|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot` 的析構函式。
+|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|---------|-----------|
+|[auto_gcroot::attach](#attach)|將 `auto_gcroot` 附加至物件。|
+|[auto_gcroot::get](#get)|取得包含的物件。|
+|[auto_gcroot::release](#release)|從 `auto_gcroot` 管理釋放物件。|
+|[auto_gcroot::reset](#reset)|終結目前擁有的物件，並選擇性地擁有新的物件。|
+|[auto_gcroot::swap](#swap)|與另一個 `auto_gcroot`交換物件。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|---------|-----------|
+|[auto_gcroot：： operator-&gt;](#operator-arrow)|成員存取運算子。|  
 |[auto_gcroot::operator=](#operator-assign)|指派運算子。|
-|[auto_gcroot::operator&nbsp;auto_gcroot](#operator-auto-gcroot)|之間的類型轉換運算子`auto_gcroot`和相容的類型。| 
-|[auto_gcroot::operator&nbsp;bool](#operator-bool)|使用運算子`auto_gcroot`條件運算式中。|  
-|[auto_gcroot::operator!](#operator-logical-not)|使用運算子`auto_gcroot`條件運算式中。| 
+|[auto_gcroot：： operator&nbsp;auto_gcroot](#operator-auto-gcroot)|`auto_gcroot` 與相容類型之間的類型轉換運算子。|
+|[auto_gcroot：： operator&nbsp;bool](#operator-bool)|在條件運算式中使用 `auto_gcroot` 的運算子。|  
+|[auto_gcroot::operator!](#operator-logical-not)|在條件運算式中使用 `auto_gcroot` 的運算子。|
 
 ## <a name="requirements"></a>需求
 
-**標頭檔** \<msclr\auto_gcroot.h >
+**標頭檔**\<msclr \ auto_gcroot. h >
 
 **命名空間**msclr
 
-## <a name="auto-gcroot"></a>auto_gcroot::auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot：： auto_gcroot
 
-`auto_gcroot`建構函式。
+`auto_gcroot` 的構造函式。
 
 ```cpp
 auto_gcroot(
@@ -96,14 +95,14 @@ auto_gcroot(
 ### <a name="parameters"></a>參數
 
 *_ptr*<br/>
-要自己的物件。
+要擁有的物件。
 
 *_right*<br/>
 現有的 `auto_gcroot`。
 
 ### <a name="remarks"></a>備註
 
-在建構時`auto_gcroot`從現有`auto_gcroot`，將現有`auto_gcroot`釋放其物件，然後再傳輸到新物件的擁有權`auto_gcroot`。
+從現有 `auto_gcroot`建立 `auto_gcroot` 時，現有的 `auto_gcroot` 會先釋放其物件，然後再將物件的擁有權傳送至新的 `auto_gcroot`。
 
 ### <a name="example"></a>範例
 
@@ -192,10 +191,9 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="tilde-auto-gcroot"></a>auto_gcroot::~auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot：： ~ auto_gcroot
 
-`auto_gcroot`解構函式。
-
+`auto_gcroot` 的析構函式。
 
 ```cpp
 ~auto_gcroot();
@@ -203,7 +201,7 @@ done
 
 ### <a name="remarks"></a>備註
 
-解構函式也 destructs 擁有的物件。
+此析構函式也會 destructs 所擁有的物件。
 
 ### <a name="example"></a>範例
 
@@ -240,9 +238,9 @@ ClassA destructor
 done
 ```
 
-## <a name="attach"></a>auto_gcroot::attach
+## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot：： attach
 
-附加`auto_gcroot`物件。
+將 `auto_gcroot` 附加至物件。
 
 ```cpp
 auto_gcroot<_element_type> & attach(
@@ -260,7 +258,7 @@ auto_gcroot<_element_type> & attach(
 ### <a name="parameters"></a>參數
 
 *_right*<br/>
-要附加的物件或`auto_gcroot`包含要附加的物件。
+要附加的物件，或包含要附加之物件的 `auto_gcroot`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -268,7 +266,7 @@ auto_gcroot<_element_type> & attach(
 
 ### <a name="remarks"></a>備註
 
-如果`_right`已`auto_gcroot`，它會釋放其物件的擁有權之前物件附加至目前`auto_gcroot`。
+如果 `_right` 是 `auto_gcroot`，它會在物件附加到目前的 `auto_gcroot`之前釋放其物件的擁有權。
 
 ### <a name="example"></a>範例
 
@@ -335,7 +333,7 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="get"></a>auto_gcroot::get
+## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot：： get
 
 取得包含的物件。
 
@@ -395,9 +393,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="release"></a>auto_gcroot::release
+## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot：： release
 
-釋放物件從`auto_gcroot`管理。
+從 `auto_gcroot` 管理釋放物件。
 
 ```cpp
 _element_type release();
@@ -405,7 +403,7 @@ _element_type release();
 
 ### <a name="return-value"></a>傳回值
 
-發行的物件。
+已釋放的物件。
 
 ### <a name="example"></a>範例
 
@@ -458,9 +456,9 @@ Hello from first A!
 done
 ```
 
-## <a name="reset"></a>auto_gcroot::reset
+## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot：： reset
 
-終結目前擁有的物件，並選擇性地採取 新物件的擁有權。
+終結目前擁有的物件，並選擇性地擁有新的物件。
 
 ```cpp
 void reset(
@@ -471,7 +469,7 @@ void reset(
 ### <a name="parameters"></a>參數
 
 *_new_ptr*<br/>
-（選擇性）新的物件。
+選擇性新的物件。
 
 ### <a name="example"></a>範例
 
@@ -523,9 +521,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="swap"></a>auto_gcroot::swap
+## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot：： swap
 
-交換物件與另一個`auto_gcroot`。
+與另一個 `auto_gcroot`交換物件。
 
 ```cpp
 void swap(
@@ -536,7 +534,7 @@ void swap(
 ### <a name="parameters"></a>參數
 
 *_right*<br/>
-`auto_gcroot`和其交換物件。
+用來交換物件的 `auto_gcroot`。
 
 ### <a name="example"></a>範例
 
@@ -565,7 +563,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="operator-arrow"></a>auto_gcroot::operator-&gt;
+## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot：： operator-&gt;
 
 成員存取運算子。
 
@@ -575,7 +573,7 @@ _element_type operator->() const;
 
 ### <a name="return-value"></a>傳回值
 
-所包裝的物件`auto_gcroot`。
+`auto_gcroot`所包裝的物件。
 
 ### <a name="example"></a>範例
 
@@ -614,7 +612,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="operator-assign"></a>auto_gcroot::operator=
+## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot：： operator =
 
 指派運算子。
 
@@ -634,11 +632,11 @@ auto_gcroot<_element_type> & operator=(
 ### <a name="parameters"></a>參數
 
 *_right*<br/>
-物件或`auto_gcroot`指派給目前`auto_gcroot`。
+要指派給目前 `auto_gcroot`的物件或 `auto_gcroot`。
 
 ### <a name="return-value"></a>傳回值
 
-目前`auto_gcroot`，現在擁有`_right`。
+目前的 `auto_gcroot`，現在擁有 `_right`。
 
 ### <a name="example"></a>範例
 
@@ -706,9 +704,9 @@ done
 in ClassA destructor: third
 ```
 
-## <a name="operator-auto-gcroot"></a>auto_gcroot::operator auto_gcroot
+## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot：： operator auto_gcroot
 
-之間的類型轉換運算子`auto_gcroot`和相容的類型。
+`auto_gcroot` 與相容類型之間的類型轉換運算子。
 
 ```cpp
 template<typename _other_type>
@@ -717,7 +715,7 @@ operator auto_gcroot<_other_type>();
 
 ### <a name="return-value"></a>傳回值
 
-目前`auto_gcroot`轉型為`auto_gcroot<_other_type>`。
+目前的 `auto_gcroot` 轉換成 `auto_gcroot<_other_type>`。
 
 ### <a name="example"></a>範例
 
@@ -761,9 +759,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="operator-bool"></a>auto_gcroot::operator bool
+## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot：： operator bool
 
-使用運算子`auto_gcroot`條件運算式中。
+在條件運算式中使用 `auto_gcroot` 的運算子。
 
 ```cpp
 operator bool() const;
@@ -771,11 +769,11 @@ operator bool() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 已包裝的物件是否有效。`false`否則。
+`true`，如果包裝的物件有效，則為，否則 `false`。
 
 ### <a name="remarks"></a>備註
 
-這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全`bool`因為它無法轉換成整數類資料類型。
+這個運算子會實際轉換成 `_detail_class::_safe_bool`，這比 `bool` 更安全，因為它無法轉換成整數類資料類型。
 
 ### <a name="example"></a>範例
 
@@ -806,9 +804,9 @@ now s is valid
 now s is invalid
 ```
 
-## <a name="operator-logical-not"></a>auto_gcroot::operator!
+## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot：： operator！
 
-使用運算子`auto_gcroot`條件運算式中。
+在條件運算式中使用 `auto_gcroot` 的運算子。
 
 ```cpp
 bool operator!() const;
@@ -816,7 +814,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已包裝的物件是無效的;`false`否則。
+如果包裝的物件無效，則 `true`;否則 `false`。
 
 ### <a name="example"></a>範例
 

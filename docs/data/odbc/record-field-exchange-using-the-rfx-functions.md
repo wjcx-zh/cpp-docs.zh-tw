@@ -1,5 +1,5 @@
 ---
-title: 資料錄欄位交換：使用 RFX 函式
+title: 資料錄欄位交換：RFX 函式的使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC [C++], data types
@@ -10,43 +10,43 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a54dbc10e80e19f744bb58c23639a4376156d2e7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395679"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077086"
 ---
-# <a name="record-field-exchange-using-the-rfx-functions"></a>資料錄欄位交換：使用 RFX 函式
+# <a name="record-field-exchange-using-the-rfx-functions"></a>資料錄欄位交換：RFX 函式的使用
 
-本主題說明如何使用 RFX 函式會呼叫主體所組成您`DoFieldExchange`覆寫。
+本主題說明如何使用組成 `DoFieldExchange` 覆寫主體的 RFX 函式呼叫。
 
 > [!NOTE]
->  本主題適用於衍生自類別[CRecordset](../../mfc/reference/crecordset-class.md)的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，被實作大量資料錄欄位交換 (Bulk RFX)。 大量 RFX 很類似 RFX。 若要了解這些差異，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用于衍生自[CRecordset](../../mfc/reference/crecordset-class.md)的類別，其中尚未執行大量資料列提取。 如果您使用大量資料列擷取，就會實作大量記錄欄位交換 (大量 RFX)。 大量 RFX 與 RFX 類似。 若要瞭解差異，請參閱[記錄集：大量提取記錄（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-RFX 全域函式會交換資料錄集中的資料來源和欄位資料成員上的資料行之間的資料。 您撰寫 RFX 函式會呼叫您的資料錄集中[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)成員函式。 本主題簡要說明的函式，並顯示哪些 RFX 函式可供使用的資料類型。 [技術提示 43](../../mfc/tn043-rfx-routines.md)說明如何撰寫您自己的 RFX 函式的其他資料類型。
+RFX 全域函式會在記錄集的資料來源和欄位資料成員上的資料行之間交換資料。 您在記錄集的[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)成員函式中撰寫 RFX 函式呼叫。 本主題會簡短地描述函式，並顯示可使用 RFX 函數的資料類型。 [技術提示 43](../../mfc/tn043-rfx-routines.md)說明如何為其他資料類型撰寫您自己的 RFX 函數。
 
-##  <a name="_core_rfx_function_syntax"></a> RFX 函式語法
+##  <a name="rfx-function-syntax"></a><a name="_core_rfx_function_syntax"></a>RFX 函數語法
 
-每個 RFX 函式接受三個參數 （和某些會接受選擇性的第四個或第五個參數）：
+每個 RFX 函數都接受三個參數（而有些則採用選擇性的第四個或第五個參數）：
 
-- 指標[CFieldExchange](../../mfc/reference/cfieldexchange-class.md)物件。 您只會傳遞`pFX`指標傳遞給`DoFieldExchange`。
+- [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)物件的指標。 您只要將傳遞給 `DoFieldExchange`的 `pFX` 指標傳遞出去即可。
 
-- 因為它的資料行名稱會出現在資料來源。
+- 資料行出現在資料來源上的名稱。
 
-- 對應的欄位資料成員或參數的資料錄集類別中的資料成員的名稱。
+- 記錄集類別中對應的欄位資料成員或參數資料成員的名稱。
 
-- （選擇性）在某些函式、 字串或陣列所傳輸的最大長度。 此預設值為 255 個位元組，但您可能想要變更它。 大小上限為基礎的大小上限`CString`物件 — **INT_MAX** (2,147,483,647) 個位元組，但您可能會遇到驅動程式的限制。
+- 選擇性在某些函式中，要傳送之字串或陣列的最大長度。 這預設為255個位元組，但您可能會想要加以變更。 大小上限是以 `CString` 物件的大小上限為基礎， **INT_MAX** （2147483647）個位元組，但您可能會在該大小之前遇到驅動程式限制。
 
-- （選擇性）在 `RFX_Text`函式，您有時會使用第五個參數來指定資料行的資料類型。
+- 選擇性在 `RFX_Text` 函數中，您有時會使用第五個參數來指定資料行的資料類型。
 
-如需詳細資訊，請參閱 RFX 函式之下[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需範例時，您可能會進行特殊使用的參數，請參閱[資料錄集：取得 Sum 和其他彙總的結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)。
+如需詳細資訊，請參閱*類別庫參考*中[宏和全域](../../mfc/reference/mfc-macros-and-globals.md)的 RFX 函式。 如需您可能會特別使用參數的範例，請參閱[記錄集：取得總和和其他匯總結果（ODBC）](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)。
 
-##  <a name="_core_rfx_data_types"></a> RFX 資料類型
+##  <a name="rfx-data-types"></a><a name="_core_rfx_data_types"></a>RFX 資料類型
 
-類別庫提供 RFX 函式之間的資料來源和資料錄集傳輸許多不同的資料型別。 下列清單摘要說明 RFX 函式的資料型別。 在您必須在其中撰寫您自己的 RFX 函式呼叫的情況下，選取來自這些函式的資料型別。
+類別庫會提供 RFX 函式，以便在資料來源與您的記錄集之間傳輸許多不同的資料類型。 下列清單摘要說明依資料類型的 RFX 函數。 在您必須撰寫自己的 RFX 函式呼叫的情況下，請從這些函數中依資料類型選取。
 
-|功能|資料類型|
+|函式|資料類型|
 |--------------|---------------|
 |`RFX_Bool`|**BOOL**|
 |`RFX_Byte`|**BYTE**|
@@ -59,8 +59,7 @@ RFX 全域函式會交換資料錄集中的資料來源和欄位資料成員上�
 |`RFX_Text`|`CString`|
 |`RFX_Date`|`CTime`|
 
-
-如需詳細資訊，請參閱下方 RFX 函式文件[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需C++資料類型對應至 SQL 資料類型，請參閱表格 ANSI SQL 資料類型對應到C++中的資料類型[SQL:SQL 和C++資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
+如需詳細資訊，請參閱*類別庫參考*中[宏和全域](../../mfc/reference/mfc-macros-and-globals.md)底下的 RFX 函數檔。 如需有關資料C++類型如何對應至 sql 資料類型的詳細資訊，請參閱對應至C++ Sql 中的資料類型的 ANSI sql 資料類型資料表[： SQL 和C++資料類型（ODBC）](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

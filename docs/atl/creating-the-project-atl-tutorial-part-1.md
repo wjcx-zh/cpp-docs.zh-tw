@@ -3,12 +3,12 @@ title: 建立專案 (ATL 教學課程，第 1 部分)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: b4c18d83feb6c61b603bb1880960193cf9150f9b
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509389"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075337"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
@@ -45,7 +45,7 @@ ms.locfileid: "79509389"
 
     原始程式碼的位置通常會預設為 \Users\\\<username > \source\repos，而且會自動建立新的資料夾。
 
-1. 在 Visual Studio 2019 中，接受預設值，然後按一下 **[確定]** 。 
+1. 在 Visual Studio 2019 中，接受預設值，然後按一下 **[確定]** 。
    在 Visual Studio 2017 中，按一下 **[確定]** 以開啟 [ **ATL 專案**嚮導]。 按一下 [**應用程式設定**] 以查看可用的選項。 因為此專案會建立控制項，且控制項必須是同進程伺服器，所以請將**應用程式類型**保留為 DLL。 按一下 [確定]。
 
 Visual Studio 會產生數個檔案來建立專案。 您可以藉由展開 `Polygon` 物件，在**方案總管**中查看這些檔案。 檔案如下所示。

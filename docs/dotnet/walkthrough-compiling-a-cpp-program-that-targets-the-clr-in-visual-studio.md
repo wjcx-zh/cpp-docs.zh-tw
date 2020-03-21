@@ -1,6 +1,6 @@
 ---
-title: 編譯C++CLR 為目標的 /CLI 程式
-description: 使用 MicrosoftC++來建立程式和程式庫，可以連接的原生C++程式碼及.NET 程式。
+title: 編譯以C++CLR 為目標的/cli 程式
+description: 使用 Microsoft C++建立可連線C++機器碼和 .net 程式的程式和程式庫。
 ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,45 +8,45 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 36c41856dfcdb5c5f50ba59205b4c73c5fde5963
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221802"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080023"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯C++Visual Studio 中 Clr 的 /CLI 程式
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：在C++Visual Studio 中編譯以 CLR 為目標的/cli 程式
 
-使用C++您可以建立 CLI/C++使用.NET 類別，以及原生的程式C++類型。 C++/ CLI 適用於在主控台應用程式和 Dll 包裝原生C++程式碼，並使它成為可從.NET 程式存取。 若要建立.NET 為基礎的 Windows 使用者介面，請使用C#或 Visual Basic。 
+藉由C++使用/cli，您C++可以建立使用 .net 類別和原生C++類型的程式。 C++/CLI 適用于主控台應用程式和 Dll 中，可包裝C++機器碼並讓它可從 .net 程式存取。 若要建立以 .NET 為基礎的 Windows 使用者介面C# ，請使用或 Visual Basic。
 
-此程序中，您可以輸入自己C++程式，或使用其中一個範例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
+針對此程式，您可以輸入自己C++的程式，或使用其中一個範例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 對 C++ 語言基本知識的了解。
-- 在 Visual Studio 2017 和更新版本， C++/CLI 支援是選擇性元件。 若要安裝，請開啟**Visual Studio 安裝程式**從 Windows [開始] 功能表。 請確定**使用的桌面開發C++** 勾選 圖格，然後在**選擇性**元件 區段中，也檢查 **C++CLI 支援**。
+- 在 Visual Studio 2017 和更新版本C++中，/cli 支援是選擇性的元件。 若要安裝它，請從 Windows [開始] 功能表開啟 [ **Visual Studio 安裝程式**]。 請確定已核取 [**使用C++磚進行桌面開發**]，並且在 [**選用**元件] 區段中，同時檢查 **C++/cli 支援**。
 
 ## <a name="create-a-new-project"></a>建立新專案
 
-下列步驟，視您所使用的 Visual Studio 版本而有所不同。 請確定版本中的選取器的右上方的此頁面已正確設定。
+下列步驟會依您使用的 Visual Studio 版本而略有不同。 請確認本頁面左上角的版本選取器已正確設定。
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>若要建立C++在 Visual Studio 2019 /CLI 專案
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>若要在C++Visual Studio 2019 中建立/cli 專案
 
-1. 中**方案總管**，以滑鼠右鍵按一下以開啟頂端**建立新的專案**對話方塊。
+1. 在**方案總管**中，以滑鼠右鍵按一下頂端，以開啟 [**建立新的專案**] 對話方塊。
 
-1. 在對話方塊頂端，輸入**CLR**在搜尋 方塊，然後選擇**CLR 空專案**從結果清單中。 
+1. 在對話方塊的頂端，于搜尋方塊中輸入**clr** ，然後從結果清單中選擇 [ **clr 空專案**]。
 
-1. 選擇**建立**按鈕，以建立專案。
+1. 選擇 [建立] 按鈕以建立專案。
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>若要建立C++Visual Studio 2017 中的 /CLI 專案
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>若要在C++Visual Studio 2017 中建立/cli 專案
 
-1. 建立新的專案。 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。
+1. 建立新專案。 在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。
 
 1. 從 Visual C++ 專案類型，按一下 [CLR]，然後按一下 [CLR 空專案]。
 
@@ -58,9 +58,9 @@ ms.locfileid: "65221802"
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>若要建立C++在 Visual Studio 2015 的 /CLI 專案
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>若要在C++Visual Studio 2015 中建立/cli 專案
 
-1. 建立新的專案。 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。
+1. 建立新專案。 在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。
 
 1. 從 Visual C++ 專案類型，按一下 [CLR]，然後按一下 [CLR 空專案]。
 
@@ -70,7 +70,7 @@ ms.locfileid: "65221802"
 
 ::: moniker-end
 
-## <a name="add-a-source-file"></a>加入原始程式檔
+## <a name="add-a-source-file"></a>新增原始檔
 
 1. 如果未顯示 [方案總管]，請按一下 [檢視] 功能表上的 [方案總管]。
 
@@ -84,15 +84,15 @@ ms.locfileid: "65221802"
 
 1. 按一下 Visual Studio 中新建立的索引標籤，然後鍵入有效的 Visual C++ 程式，或複製並貼上其中一個範例程式。
 
-   例如，您可以使用[如何：撰寫文字檔 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) 範例程式 (位於《程式設計指南》的**檔案處理和 I/O** 節點中)。
+   例如，您可以使用[如何：寫入文字檔 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) 範例程式 (位於《程式設計指南》的**檔案處理和 I/O**節點中)。
 
    如果您使用範例程式，注意您會在建立 .NET 物件時使用 `gcnew` 關鍵字而不是 `new`，而且 `gcnew` 會傳回控制代碼 (`^`) 而不是指標 (`*`)：
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   如需詳細資訊C++/CLI 語法，請參閱[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)。
+   如需C++/cli 語法的詳細資訊，請參閱[執行時間平臺的元件擴充](../extensions/component-extensions-for-runtime-platforms.md)功能。
 
-1. 在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
+1. 在 [建置] 功能表上，按一下 [建置方案]。
 
    [輸出] 視窗會顯示編譯進度的相關資訊，例如組建記錄檔的位置，以及指出組建狀態的訊息。
 

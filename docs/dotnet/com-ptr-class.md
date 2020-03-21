@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3223543dfa6c1b5b45fef2780cd11b558eab84
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209226"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078970"
 ---
 # <a name="comptr-class"></a>com::ptr 類別
 
-可當做 CLR 類別成員使用之 COM 物件的包裝函式。  包裝函式也會將 COM 物件的存留期管理自動化，在呼叫其解構函式時，釋出物件上所有已擁有的參考。 類似於[CComPtr 類別](../atl/reference/ccomptr-class.md)。
+可當做 CLR 類別成員使用之 COM 物件的包裝函式。  包裝函式也會將 COM 物件的存留期管理自動化，在呼叫其解構函式時，釋出物件上所有已擁有的參考。 類似于[CComPtr 類別](../atl/reference/ccomptr-class.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -43,9 +43,9 @@ COM 介面。
 
 `com::ptr` 也可以當做本機函式變數使用，以簡化各種 COM 工作並且將存留期管理自動化。
 
-A`com::ptr`無法直接做為函式參數使用; 請使用[追蹤參考運算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)或是[物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)改。
+`com::ptr` 不能直接當做函式參數使用;請改用[追蹤參考運算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)或[物件運算子的控制碼（^）](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) 。
 
-A`com::ptr`無法從函式直接傳回; 請改用控制代碼。
+無法直接從函式傳回 `com::ptr`。請改用控制碼。
 
 ## <a name="example"></a>範例
 
@@ -167,42 +167,40 @@ int main() {
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述| 
-|---------|-----------| 
-|[ptr::ptr](#ptr)|建構`com::ptr`包裝 COM 物件。| 
-|[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`。| 
+|名稱|描述|
+|---------|-----------|
+|[ptr::ptr](#ptr)|建立包裝 COM 物件的 `com::ptr`。|
+|[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
-|---------|-----------| 
-|[ptr::Attach](#attach)|附加至 COM 物件`com::ptr`。| 
-|[ptr::CreateInstance](#createInstance)|建立 COM 物件內的執行個體`com::ptr`。| 
-|[ptr::Detach](#detach)|放棄的 COM 物件，將指標傳回物件的擁有權。| 
-|[ptr::GetInterface](#getInterface)|建立 COM 物件內的執行個體`com::ptr`。| 
-|[ptr::QueryInterface](#queryInterface)|查詢擁有的 COM 物件的介面，並將結果附加至另一個`com::ptr`。| 
-|[ptr::Release](#release)|釋放 COM 物件上擁有的所有參考。|
+|---------|-----------|
+|[ptr::Attach](#attach)|將 COM 物件附加至 `com::ptr`。|
+|[ptr::CreateInstance](#createInstance)|在 `com::ptr`中建立 COM 物件的實例。|
+|[ptr::Detach](#detach)|提供 COM 物件的擁有權，並傳回物件的指標。|
+|[ptr::GetInterface](#getInterface)|在 `com::ptr`中建立 COM 物件的實例。|
+|[ptr::QueryInterface](#queryInterface)|查詢介面擁有的 COM 物件，並將結果附加至另一個 `com::ptr`。|
+|[ptr::Release](#release)|釋放 COM 物件上所有擁有的參考。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
-|---------|-----------| 
-|[ptr::operator-&gt;](#operator-arrow)|成員存取運算子，用來在自有的 COM 物件上呼叫方法。| 
-|[ptr::operator=](#operator-assign)|附加至 COM 物件`com::ptr`。| 
-|[ptr::operator&nbsp;bool](#operator-bool)|使用運算子`com::ptr`條件運算式中。| 
-|[ptr::operator!](#operator-logical-not)|若要判斷是否擁有的 COM 物件無效的運算子。| 
+|---------|-----------|
+|[ptr：： operator-&gt;](#operator-arrow)|成員存取運算子，用來呼叫所擁有 COM 物件上的方法。|
+|[ptr::operator=](#operator-assign)|將 COM 物件附加至 `com::ptr`。|
+|[ptr：： operator&nbsp;bool](#operator-bool)|在條件運算式中使用 `com::ptr` 的運算子。|
+|[ptr::operator!](#operator-logical-not)|用來判斷擁有的 COM 物件是否不正確運算子。|
 
 ## <a name="requirements"></a>需求
 
-**標頭檔** \<msclr\com\ptr.h >
+**標頭檔**\<msclr\com\ptr.h >
 
-**命名空間**msclr::com
+**命名空間**msclr：： com
 
- 
+## <a name="ptrptr"></a><a name="ptr"></a>ptr：:p tr
 
-## <a name="ptr"></a>ptr::ptr
-
-傳回擁有的 COM 物件的指標。
+傳回所擁有 COM 物件的指標。
 
 ```cpp
 ptr();
@@ -218,15 +216,15 @@ COM 的介面指標。
 
 ### <a name="remarks"></a>備註
 
-無引數的建構函式指派`nullptr`基礎物件控制代碼。 未來呼叫`com::ptr`會驗證內部的物件，並以無訊息模式失敗，直到建立或附加物件。
+無引數的函式會將 `nullptr` 指派給基礎物件控制碼。 未來對 `com::ptr` 的呼叫將會驗證內建物件，並以無訊息模式失敗，直到建立或附加物件為止。
 
-單一引數的建構函式會將 COM 物件的參考，但不會釋放呼叫者的參考，因此，呼叫端必須呼叫`Release`真正讓控制項在 COM 物件上。 當`com::ptr`的解構函式會呼叫它將會自動釋出其參考 COM 物件上的。
+單一引數的函式會加入 COM 物件的參考，但不會釋放呼叫端的參考，因此呼叫端必須在 COM 物件上呼叫 `Release`，才能真正授與控制權。 呼叫 `com::ptr`的析構函式時，它會自動釋放其對 COM 物件的參考。
 
-傳遞`NULL`這個建構函式相當於呼叫無引數版本。
+將 `NULL` 傳遞至此函式與呼叫無引數版本相同。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 它會示範兩個版本的建構函式的使用方式。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 它會示範兩個版本的函式的使用方式。
 
 ```cpp
 // comptr_ptr.cpp
@@ -287,7 +285,7 @@ int main() {
 }
 ```
 
-## <a name="tilde-ptr"></a>ptr::~ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr：： ~ ptr
 
 Destructs `com::ptr`。
 
@@ -297,11 +295,11 @@ Destructs `com::ptr`。
 
 ### <a name="remarks"></a>備註
 
-在終結時`com::ptr`釋放它擁有與其 COM 物件的所有參考。 假設不有任何其他 COM 物件所持有的參考，將刪除的 COM 物件，並釋放其記憶體。
+在損毀時，`com::ptr` 會釋放它所擁有的所有參考到其 COM 物件。 假設沒有任何其他參考保存至 COM 物件，則會刪除 COM 物件，並釋放其記憶體。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  在 `main`函式，這兩個`XmlDocument`在超出範圍時，就會呼叫物件的解構函式`try`區塊中，導致基礎`com::ptr`解構函式所呼叫，釋出所有已擁有的參考，以與 COM物件。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  在 `main` 函式中，兩個 `XmlDocument` 物件的析構函式會在離開 `try` 區塊的範圍時呼叫，因而導致呼叫基礎 `com::ptr` 的析構函數，釋放 COM 物件的所有擁有參考。
 
 ```cpp
 // comptr_dtor.cpp
@@ -362,9 +360,9 @@ int main() {
 }
 ```
 
-## <a name="attach"></a>ptr::Attach
+## <a name="ptrattach"></a><a name="attach"></a>ptr：： Attach
 
-附加至 COM 物件`com::ptr`。
+將 COM 物件附加至 `com::ptr`。
 
 ```cpp
 void Attach(
@@ -379,17 +377,17 @@ void Attach(
 
 ### <a name="exceptions"></a>例外狀況
 
-如果`com::ptr`已經擁有的 COM 物件的參考`Attach`就會擲回<xref:System.InvalidOperationException>。
+如果 `com::ptr` 已擁有 COM 物件的參考，則 `Attach` 會擲回 <xref:System.InvalidOperationException>。
 
 ### <a name="remarks"></a>備註
 
-呼叫`Attach`參考 COM 物件，但不會釋放呼叫者的參考。
+對 `Attach` 的呼叫會參考 COM 物件，但不會釋放呼叫者的參考。
 
-傳遞`NULL`至`Attach`不導致正在採取任何動作。
+將 `NULL` 傳遞至 `Attach` 會導致不採取任何動作。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `ReplaceDocument`成員函式會先呼叫`Release`任何先前擁有物件，然後呼叫`Attach`附加新的文件物件。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `ReplaceDocument` 成員函式會先在任何先前擁有的物件上呼叫 `Release`，然後再呼叫 `Attach` 以附加新的檔物件。
 
 ```cpp
 // comptr_attach.cpp
@@ -463,9 +461,9 @@ int main() {
 }
 ```
 
-## <a name="createInstance"></a>ptr::CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr：： CreateInstance
 
-建立 COM 物件內的執行個體`com::ptr`。
+在 `com::ptr`中建立 COM 物件的實例。
 
 ```cpp
 void CreateInstance(
@@ -512,27 +510,27 @@ void CreateInstance(
 `ProgID` 字串。
 
 *pouter*<br/>
-(Controlling IUnknown) 的彙總物件的 IUnknown 介面指標。 如果`pouter`未指定，`NULL`用。
+匯總物件的 IUnknown 介面的指標（控制 IUnknown）。 如果未指定 `pouter`，就會使用 `NULL`。
 
-*cls_context*<br/>
-管理新建立的物件的程式碼將在其中執行的內容。 值取自`CLSCTX`列舉型別。 如果`cls_context`未指定，CLSCTX_ALL 所使用的值。
+*cls_coNtext*<br/>
+用來管理新建立之物件的程式碼會在其中執行的內容。 值取自 `CLSCTX` 列舉。 如果未指定 `cls_context`，就會使用 CLSCTX_ALL 值。
 
 *rclsid*<br/>
-`CLSID` 相關聯的資料和將用來建立物件的程式碼。
+`CLSID` 與將用來建立物件的資料和程式碼相關聯。
 
 ### <a name="exceptions"></a>例外狀況
 
-如果`com::ptr`已經擁有的 COM 物件的參考`CreateInstance`就會擲回<xref:System.InvalidOperationException>。
+如果 `com::ptr` 已擁有 COM 物件的參考，則 `CreateInstance` 會擲回 <xref:System.InvalidOperationException>。
 
-此函式會呼叫`CoCreateInstance`並用<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>要轉換的任何錯誤`HRESULT`至適當的例外狀況。
+此函式會呼叫 `CoCreateInstance` 並使用 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> 將任何錯誤 `HRESULT` 轉換為適當的例外狀況。
 
 ### <a name="remarks"></a>備註
 
-`CreateInstance` 使用`CoCreateInstance`建立指定的物件，識別從 ProgID 或 CLSID 的新執行個體。 `com::ptr`參考新建立的物件，並會自動釋放所有已擁有在解構時的參考。
+`CreateInstance` 使用 `CoCreateInstance` 來建立指定物件的新實例（從 ProgID 或 CLSID 識別）。 `com::ptr` 會參考新建立的物件，而且會在銷毀時自動釋放所有擁有的參考。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 類別建構函式使用兩種不同形式的`CreateInstance`ProgID 或 CLSID 加上 CLSCTX 建立文件物件。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 類別的函式會使用兩種不同形式的 `CreateInstance`，從 ProgID 或 CLSID 加上 CLSCTX 來建立檔物件。
 
 ```cpp
 // comptr_createinstance.cpp
@@ -581,9 +579,9 @@ int main() {
 }
 ```
 
-## <a name="detach"></a>ptr::Detach
+## <a name="ptrdetach"></a><a name="detach"></a>ptr：:D etach
 
-放棄的 COM 物件，將指標傳回物件的擁有權。
+提供 COM 物件的擁有權，並傳回物件的指標。
 
 ```cpp
 _interface_type * Detach();
@@ -593,19 +591,19 @@ _interface_type * Detach();
 
 COM 物件的指標。
 
-如果物件不擁有者，則會傳回 NULL。
+如果未擁有任何物件，則會傳回 Null。
 
 ### <a name="exceptions"></a>例外狀況
 
-就內部而言，`QueryInterface`會在自有的 COM 物件和任何錯誤時呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+就內部而言，會在所擁有的 COM 物件上呼叫 `QueryInterface`，而 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>會將任何錯誤 `HRESULT` 轉換成例外狀況。
 
 ### <a name="remarks"></a>備註
 
-`Detach` 第一次將參考加入 COM 物件，代表呼叫者，並釋放所擁有的所有參考`com::ptr`。  最後，呼叫端必須釋放終結它傳回的物件。
+`Detach` 會先代表呼叫者加入 COM 物件的參考，然後釋放 `com::ptr`所擁有的所有參考。  呼叫端最後必須釋放傳回的物件來摧毀它。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `DetachDocument`成員函式呼叫`Detach`来放棄之 COM 物件的擁有權，並將指標傳回給呼叫者。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `DetachDocument` 成員函式會呼叫 `Detach` 以授與 COM 物件的擁有權，並將指標傳回給呼叫者。
 
 ```cpp
 // comptr_detach.cpp
@@ -686,9 +684,9 @@ int main() {
 }
 ```
 
-## <a name="getInterface"></a>ptr::GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr：： GetInterface
 
-傳回擁有的 COM 物件的指標。
+傳回所擁有 COM 物件的指標。
 
 ```cpp
 _interface_type * GetInterface();
@@ -696,19 +694,19 @@ _interface_type * GetInterface();
 
 ### <a name="return-value"></a>傳回值
 
-擁有的 COM 物件的指標。
+所擁有 COM 物件的指標。
 
 ### <a name="exceptions"></a>例外狀況
 
-就內部而言，`QueryInterface`會在自有的 COM 物件和任何錯誤時呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+就內部而言，會在所擁有的 COM 物件上呼叫 `QueryInterface`，而 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>會將任何錯誤 `HRESULT` 轉換成例外狀況。
 
 ### <a name="remarks"></a>備註
 
-`com::ptr`上代表呼叫新增 COM 物件的參考，並也會保持其本身的參考，COM 物件上。 呼叫端必須發行最終版本上傳回的物件的參考，或將永遠不會被終結。
+`com::ptr` 會代表呼叫端加入 COM 物件的參考，也會在 COM 物件上保留自己的參考。 呼叫端最後必須釋放傳回之物件上的參考，否則永遠不會終結。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `GetDocument`成員函式使用`GetInterface`指標傳回至 COM 物件。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `GetDocument` 成員函式會使用 `GetInterface` 傳回 COM 物件的指標。
 
 ```cpp
 // comptr_getinterface.cpp
@@ -828,9 +826,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="queryInterface"></a>ptr::QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr：： QueryInterface
 
-查詢擁有的 COM 物件的介面，並將結果附加至另一個`com::ptr`。
+查詢介面擁有的 COM 物件，並將結果附加至另一個 `com::ptr`。
 
 ```cpp
 template<class _other_type>
@@ -842,19 +840,19 @@ void QueryInterface(
 ### <a name="parameters"></a>參數
 
 *other*<br/>
-`com::ptr` ，會取得介面。
+將取得介面的 `com::ptr`。
 
 ### <a name="exceptions"></a>例外狀況
 
-就內部而言，`QueryInterface`會在自有的 COM 物件和任何錯誤時呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+就內部而言，會在所擁有的 COM 物件上呼叫 `QueryInterface`，而 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>會將任何錯誤 `HRESULT` 轉換成例外狀況。
 
 ### <a name="remarks"></a>備註
 
-您可以使用這個方法來建立目前包裝函式所擁有的 COM 物件的不同介面的 COM 包裝函式。 這個方法會呼叫`QueryInterface`透過自有的 COM 物件，來要求特定的 COM 介面的指標物件，並將傳回的介面指標附加至傳入的`com::ptr`。
+您可以使用這個方法，針對目前包裝函式所擁有之 COM 物件的不同介面，建立 COM 包裝函式。 這個方法會透過所擁有的 COM 物件呼叫 `QueryInterface`，以要求 COM 物件的特定介面指標，並將傳回的介面指標附加至傳入的 `com::ptr`。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `WriteTopLevelNode`成員函式會使用`QueryInterface`來填滿本機`com::ptr`具有`IXMLDOMNode`然後將傳遞`com::ptr`（藉由追蹤參考） 寫入至主控台的節點名稱] 和 [文字屬性的私用成員函式。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `WriteTopLevelNode` 成員函式會使用 `QueryInterface`，以 `IXMLDOMNode` 填滿本機 `com::ptr`，然後將 `com::ptr` （藉由追蹤參考）傳遞至將節點的名稱和文字屬性寫入主控台的私用成員函式。
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -959,9 +957,9 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="release"></a>ptr::Release
+## <a name="ptrrelease"></a><a name="release"></a>ptr：： Release
 
-釋放 COM 物件上擁有的所有參考。
+釋放 COM 物件上所有擁有的參考。
 
 ```cpp
 void Release();
@@ -969,11 +967,11 @@ void Release();
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式釋放 COM 物件上的所有已擁有的參考和 COM 物件，若要設定的內部控制代碼`nullptr`。  如果沒有其他 COM 物件上的參考，也會在終結。
+呼叫這個函式會釋放 COM 物件上所有擁有的參考，並將內部控制碼設定為要 `nullptr`的 COM 物件。  如果 COM 物件上沒有任何其他參考存在，則會終結它。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument`成員函式使用`Release`附加新的文件前釋放任何先前的文件物件。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument` 成員函式在附加新檔之前，會使用 `Release` 釋放任何先前的檔物件。
 
 ```cpp
 // comptr_release.cpp
@@ -1047,9 +1045,9 @@ int main() {
 }
 ```
 
-## <a name="operator-arrow"></a>ptr::operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr：： operator-&gt;
 
-成員存取運算子，用來在自有的 COM 物件上呼叫方法。
+成員存取運算子，用來呼叫所擁有 COM 物件上的方法。
 
 ```cpp
 _detail::smart_com_ptr<_interface_type> operator->();
@@ -1057,19 +1055,19 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 ### <a name="return-value"></a>傳回值
 
-A `smart_com_ptr` COM 物件。
+COM 物件的 `smart_com_ptr`。
 
 ### <a name="exceptions"></a>例外狀況
 
-就內部而言，`QueryInterface`會在自有的 COM 物件和任何錯誤時呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+就內部而言，會在所擁有的 COM 物件上呼叫 `QueryInterface`，而 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>會將任何錯誤 `HRESULT` 轉換成例外狀況。
 
 ### <a name="remarks"></a>備註
 
-此運算子可讓您呼叫的自有的 COM 物件的方法。 它會傳回暫存`smart_com_ptr`，會自動處理其本身`AddRef`和`Release`。
+這個運算子可讓您呼叫所擁有 COM 物件的方法。 它會傳回暫時的 `smart_com_ptr`，它會自動處理自己的 `AddRef` 和 `Release`。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `WriteDocument`函式會使用`operator->`呼叫`get_firstChild`文件物件的成員。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `WriteDocument` 函式會使用 `operator->` 來呼叫 document 物件的 `get_firstChild` 成員。
 
 ```cpp
 // comptr_op_member.cpp
@@ -1189,9 +1187,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="operator-assign"></a>ptr::operator=
+## <a name="ptroperator"></a><a name="operator-assign"></a>ptr：： operator =
 
-附加至 COM 物件`com::ptr`。
+將 COM 物件附加至 `com::ptr`。
 
 ```cpp
 ptr<_interface_type> % operator=(
@@ -1206,21 +1204,21 @@ ptr<_interface_type> % operator=(
 
 ### <a name="return-value"></a>傳回值
 
-追蹤參考上的`com::ptr`。
+`com::ptr`上的追蹤參考。
 
 ### <a name="exceptions"></a>例外狀況
 
-如果`com::ptr`已經擁有的 COM 物件的參考`operator=`就會擲回<xref:System.InvalidOperationException>。
+如果 `com::ptr` 已擁有 COM 物件的參考，則 `operator=` 會擲回 <xref:System.InvalidOperationException>。
 
 ### <a name="remarks"></a>備註
 
-若要將 COM 物件指派`com::ptr`參考 COM 物件，但不會釋放呼叫者的參考。
+將 COM 物件指派給 `com::ptr` 會參考 COM 物件，但不會釋放呼叫者的參考。
 
-此運算子具有相同的效果`Attach`。
+這個運算子與 `Attach`的效果相同。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument`成員函式會先呼叫`Release`任何先前擁有物件，然後使用`operator=`附加新的文件物件。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument` 成員函式會先呼叫任何先前擁有之物件上的 `Release`，然後使用 `operator=` 附加新的檔物件。
 
 ```cpp
 // comptr_op_assign.cpp
@@ -1294,9 +1292,9 @@ int main() {
 }
 ```
 
-## <a name="operator-bool"></a> ptr::operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr：： operator bool
 
-使用運算子`com::ptr`條件運算式中。
+在條件運算式中使用 `com::ptr` 的運算子。
 
 ```cpp
 operator bool();
@@ -1304,17 +1302,17 @@ operator bool();
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果擁有的 COM 物件無效，則`false`否則。
+`true`，如果擁有的 COM 物件有效，則為，否則 `false`。
 
 ### <a name="remarks"></a>備註
 
-擁有的 COM 物件時如果不是有效`nullptr`。
+如果所擁有的 COM 物件不 `nullptr`，就會生效。
 
-此運算子將轉換成`_detail_class::_safe_bool`這是比安全`bool`因為它無法轉換成整數類資料類型。
+這個運算子會將轉換成比 `bool` 更安全的 `_detail_class::_safe_bool`，因為它無法轉換成整數類資料類型。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `CreateInstance`成員函式使用`operator bool`之後建立新的文件物件，以判斷它是否有效以及它是否會寫入主控台。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `CreateInstance` 成員函式會在建立新檔物件之後使用 `operator bool`，以判斷它是否有效，並寫入主控台（如果是的話）。
 
 ```cpp
 // comptr_op_bool.cpp
@@ -1365,9 +1363,9 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="operator-logical-not"></a>ptr::operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr：： operator！
 
-若要判斷是否擁有的 COM 物件無效的運算子。
+用來判斷擁有的 COM 物件是否不正確運算子。
 
 ```cpp
 bool operator!();
@@ -1375,15 +1373,15 @@ bool operator!();
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果擁有的 COM 物件無效;`false`否則。
+`true`，如果擁有的 COM 物件無效，則為，否則 `false`。
 
 ### <a name="remarks"></a>備註
 
-擁有的 COM 物件時如果不是有效`nullptr`。
+如果所擁有的 COM 物件不 `nullptr`，就會生效。
 
 ### <a name="example"></a>範例
 
-這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `CreateInstance`成員函式使用`operator!`以判斷文件物件被人擁有，且只會建立新的執行個體，如果物件是無效。
+這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `CreateInstance` 成員函式會使用 `operator!` 來判斷檔物件是否已擁有，而且只有在物件無效時，才會建立新的實例。
 
 ```cpp
 // comptr_op_not.cpp

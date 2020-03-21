@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1037
 ms.assetid: 79103bca-ccfb-42e7-aef9-9b90c15b162f
-ms.openlocfilehash: 1c061ede5a2818678bd6181f7cc7325d0d5200d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 782ccec01faad34ba79553626db06cf87ba0740c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243838"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075030"
 ---
 # <a name="fatal-error-c1037"></a>嚴重錯誤 C1037
 
@@ -21,11 +21,10 @@ ms.locfileid: "62243838"
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
 
-1. 無效的檔名。
+1. 檔案名稱無效。
 
 1. 記憶體不足，無法開啟檔案。
 
-1. 另一個處理序正在使用檔案。
+1. 其他程序正在使用此檔案。
 
 1. 唯讀檔具有相同的名稱。
-

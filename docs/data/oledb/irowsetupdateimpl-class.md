@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: dba962c761fac0408a3c68a46ec6447aa7832522
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fdd6072f831d7bfb77673169c2ef8062cc7107a6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444079"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077854"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 類別
 
@@ -145,7 +145,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 
 - 另請參閱[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例中如何使用 `RUpdateRowset` 類別
 
-## <a name="setdata"></a>IRowsetUpdateImpl：： SetData
+## <a name="irowsetupdateimplsetdata"></a><a name="setdata"></a>IRowsetUpdateImpl：： SetData
 
 設定一或多個資料行中的資料值。
 
@@ -165,7 +165,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 這個方法會覆寫[IRowsetChangeImpl：： SetData](../../data/oledb/irowsetchangeimpl-setdata.md)方法，但包含原始資料的快取，以允許作業的立即或延遲處理。
 
-## <a name="getoriginaldata"></a>IRowsetUpdateImpl：： GetOriginalData
+## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a>IRowsetUpdateImpl：： GetOriginalData
 
 取得最近傳送到或從資料來源取得的資料，並忽略暫止的變更。
 
@@ -181,7 +181,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IRowsetUpdate：： GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) 。
 
-## <a name="getpendingrows"></a>IRowsetUpdateImpl：： GetPendingRows
+## <a name="irowsetupdateimplgetpendingrows"></a><a name="getpendingrows"></a>IRowsetUpdateImpl：： GetPendingRows
 
 傳回具有暫止變更的資料列清單。
 
@@ -206,7 +206,7 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 
 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetUpdate：： GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 。
 
-## <a name="getrowstatus"></a>IRowsetUpdateImpl：： GetRowStatus
+## <a name="irowsetupdateimplgetrowstatus"></a><a name="getrowstatus"></a>IRowsetUpdateImpl：： GetRowStatus
 
 傳回指定之資料列的狀態。
 
@@ -226,7 +226,7 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 
 如需其他參數，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetUpdate：： GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)) 。
 
-## <a name="undo"></a>IRowsetUpdateImpl：： Undo
+## <a name="irowsetupdateimplundo"></a><a name="undo"></a>IRowsetUpdateImpl：： Undo
 
 復原自上次提取或更新之後，對資料列所做的任何變更。
 
@@ -254,7 +254,7 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 
 如需其他參數，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) 。
 
-## <a name="update"></a>IRowsetUpdateImpl：： Update
+## <a name="irowsetupdateimplupdate"></a><a name="update"></a>IRowsetUpdateImpl：： Update
 
 在上次提取或更新之後，傳送對資料列所做的任何變更。
 
@@ -280,7 +280,7 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 
 變更是藉由呼叫[IRowsetChangeImpl：： FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)來傳輸。 取用者必須呼叫[CRowset：： Update](../../data/oledb/crowset-update.md) ，變更才會生效。 將*prgRowstatus*設定為適當的值，如 OLE DB 程式設計*人員參考*中的資料[列狀態](/previous-versions/windows/desktop/ms722752(v=vs.85))中所述。
 
-## <a name="isupdateallowed"></a>IRowsetUpdateImpl：： IsUpdateAllowed
+## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a>IRowsetUpdateImpl：： IsUpdateAllowed
 
 覆寫此方法以檢查更新之前的安全性、完整性等等。
 
@@ -307,7 +307,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 如果您判斷應該允許更新，則會傳回 S_OK;否則會傳回 E_FAIL。 如果您允許更新，您也需要將[IRowsetUpdateImpl：： update](../../data/oledb/irowsetupdateimpl-update.md)中的 `DBROWSTATUS` 設定為適當的資料[列狀態](/previous-versions/windows/desktop/ms722752(v=vs.85))。
 
-## <a name="mapcacheddata"></a>IRowsetUpdateImpl：： m_mapCachedData
+## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a>IRowsetUpdateImpl：： m_mapCachedData
 
 包含延後作業之原始資料的對應。
 
@@ -315,7 +315,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 ```cpp
 CAtlMap<
-   HROW hRow, 
+   HROW hRow,
    Storage* pData
 >
 m_mapCachedData;

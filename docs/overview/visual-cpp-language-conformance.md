@@ -1,16 +1,17 @@
 ---
 title: Microsoft C++ 語言一致性表
-ms.date: 10/31/2019
+description: 依 Visual Studio 版本C++的 Microsoft 一致性更新表。
+ms.date: 03/17/2020
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: a20f76cf1657db2082fefadc03276b399235cbc9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a5ffb5b3ab4bc80cb200b41752b19d1c958ece6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446781"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079364"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -23,312 +24,343 @@ Visual Studio （MSVC）中C++ Microsoft 編譯器的標準一致性是進行中
 
 ## <a name="compiler-features"></a>編譯器功能
 
-| | |
-|----|---|
-|__C++03/11 核心語言功能__|__支援__|
-|&nbsp;&nbsp;其他所有項目|VS 2015 <sup>[A](#note_A)</sup>|
-|&nbsp;&nbsp;兩階段名稱查詢|VS 2017 15.7 <sup>[B](#note_B)</sup>|
-|&nbsp;&nbsp;[N2634 運算式 SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
-|&nbsp;&nbsp;[N1653 C99 前置處理器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|部分 <sup>[C](#note_C)</sup>|
-|__C++14 核心語言功能__|__支援__|
-|&nbsp;&nbsp;[N3323 調整內容轉換的描述](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
-|&nbsp;&nbsp;[N3472 二進位常值](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3638 auto 和 decltype(auto) 傳回型別](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
-|&nbsp;&nbsp;[N3648 init 擷取](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3648.html)|VS 2015|
-|&nbsp;&nbsp;[N3649 泛型 Lambda](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3649.html)|VS 2015|
-|&nbsp;&nbsp;[N3760 \[\[已過時\]\]屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3760.html) \(英文\)|VS 2015|
-|&nbsp;&nbsp;[N3778 依大小調整的解除配置](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3778.html)|VS 2015|
-|&nbsp;&nbsp;[N3781 數字分隔符號](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3781.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3651 變數範本](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf)|VS 2015.2|
-|&nbsp;&nbsp;[N3652 擴充的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017 15.0|
-|&nbsp;&nbsp;[N3653 針對彙總的預設成員初始設定式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html) \(英文\)|VS 2017 15.0|
-|__C++17 核心語言功能__|__支援__|
-|&nbsp;&nbsp;[N4086 移除三併詞](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N3922 使用 braced-init-list 的 auto 新規則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4051 範本 template 參數中的 typename](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4266 命名空間和列舉程式的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4267 u8 字元常值](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4230 巢狀命名空間定義](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4230.html)|VS 2015.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N3928 Terse static_assert](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)|VS 2017 15.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0184R0 通用的範圍架構 for 迴圈](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0188R1 \[\[fallthrough\]\] 屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r1.pdf) \(英文\)|VS 2017 15.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0001R1 移除 register 關鍵字](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0002R1 移除 bool 的 operator++](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0018R3 依據值擷取 *this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0028R4 使用不重複的屬性命名空間](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0028r4.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0061R1 \_\_has_include](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0138R2 整數的固定列舉直接清單初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0170R1 constexpr Lambda](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0170r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0189R1 \[\[nodiscard\]\] 屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0189r1.pdf) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0212R1 \[\[maybe_unused\]\] 屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0217R3 結構化的繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0292R2 constexpr if 陳述式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0292r2.html)|VS 2017 15.3 <sup>[D](#note_D)</sup>|
-|&nbsp;&nbsp;[P0305R1 使用初始設定式的選取範圍陳述式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0245R1 Hexfloat 常值](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4268 允許多個非類型範本引數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4295 摺疊運算式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0012R1 新增 noexcept 型別系統](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0035R4 過度對齊的動態記憶體配置](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0035r4.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0386R2 內嵌變數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0522R0 範本 template 參數與相容引數的比對](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0036R0 移除部分空白一元摺疊](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4261 修正限定性條件轉換](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0017R1 擴充的彙總初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0091R3 類別範本的範本引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br/>&nbsp;&nbsp;[P0512R0 類別樣板引數推斷問題](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0127R2 使用 auto 宣告非類型範本參數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0135R1 保證的複製省略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6|
-|&nbsp;&nbsp;[P0136R1 改寫繼承建構函式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0137R1 std::launder](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0137r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0145R3 調整運算式評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 函式引數的評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0195R2 using-declaration 的套件延伸模組](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0283R2 略過無法辨認的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|__C++17 核心語言功能 (缺失報表)__|__支援__|
-|&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0961R1 放寬結構化繫結的自訂點尋找規則](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html) \(英文\)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0969R0 允許可存取成員進行結構化繫結](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0588R1 簡化隱含的 Lambda 擷取](http://wg21.link/p0588r1)|VS 2019 16.4 <sup> [17](#note_17)</sup>|
-|&nbsp;&nbsp;[P1771R1 \[\[nodiscard\]\]](https://wg21.link/p1771r1)|VS 2019 16.4 <sup> [17](#note_17)</sup>|
-|&nbsp;&nbsp;[P1825R0 合併的 P0527R1 和 P1155R3 的用語，更隱含的移動](https://wg21.link/p1825r0)|VS 2019 16.4 <sup> [17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0929R2 檢查抽象類別型別](https://wg21.link/P0929R2)|否|
-|&nbsp;&nbsp;[P0962R2 放寬 range-for 迴圈的自訂點尋找規則](https://wg21.link/p0962r1)|否|
-|&nbsp;&nbsp;[P0859R0 CWG 1581：已定義 constexpr 成員](https://wg21.link/p0859r0)函式的時機|否|
-|&nbsp;&nbsp;[P1009R2 陣列大小在 new-expressions 中減少](https://wg21.link/P1009R2)|否|
-|&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|否|
-|__C++20 核心語言功能__|__支援__|
-|&nbsp;&nbsp;[P0704R1 修正針對成員的常數左值 ref 限定指標](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html) \(英文\)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P1041R4 讓 char16_t/char32_t 字串常值成為 UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P1330R0 變更 constexpr 內的作用中聯集成員](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0972R0 noexcept For \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 三向 (太空船) 比較運算子 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0941R2 功能測試巨集](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P1008R1 禁止使用使用者宣告建構函式來彙總](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf) \(英文\)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0846R0 不可見的 ADL 與函式範本](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0409R2 允許 lambda-capture \[=，此\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0428R2 針對泛型 Lambda 的熟悉範本語法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf) \(英文\)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0624R2 Default 預設可建構與無狀態 lambdas](https://wg21.link/P0624R2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0780R2 允許 lambda init-capture 中的封裝展開](https://wg21.link/P0780R2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0806R2 以隱含方式透過下列項目將此項目的擷取設為過時\[=\]](https://wg21.link/P0806R2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1120R0 <=> 與其他比較運算子的一致性改良](https://wg21.link/P1120R0)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1185R2 \<=\> != ==](https://wg21.link/P1185R2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0734R0 概念](https://wg21.link/P0734R0) \(英文\)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0857R0 修正限制式中的功能差距](https://wg21.link/P0857R0)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1084R2 今天的 return-type-requirements 不足](https://wg21.link/P1084R2)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0892R2 條件式明確](https://wg21.link/P0892R2)|VS 2019 16.4 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1091R3 延伸結構化繫結讓它看起來比較像是變數宣告](https://wg21.link/P1091R3)|VS 2019 16.4 <sup> [20](#note_20)</sup>|
-|[使用列舉](https://wg21.link/P1099R5)&nbsp;&nbsp;P1099R5|VS 2019 16.4 <sup> [20](#note_20)</sup>|
-|[當您實際使用 \<時，&nbsp;&nbsp;P1186R3 =>](https://wg21.link/P1186R3)|VS 2019 16.4 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1630R1 太空船需要向上調整](https://wg21.link/P1630R1)|VS 2019 16.4 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0641R2 與預設複本建構函式的常數不符](https://wg21.link/P0641R2)|部分|
-|&nbsp;&nbsp;[P0306R4 新增 \_\_VA_OPT\_\_ 以進行逗號省略和逗號刪除](https://wg21.link/P0306R4) \(英文\)|否|
-|&nbsp;&nbsp;[P0315R4 允許為評估之上下文中的 lambdas](https://wg21.link/P0315R4)|否|
-|&nbsp;&nbsp;[P0479R5 \[\[likely\]\] 與 \[\[unlikely\]\] 屬性](https://wg21.link/P0479R5)|否|
-|&nbsp;&nbsp;[P0542R5 合約](https://wg21.link/P0542R5)|否|
-|&nbsp;&nbsp;[P0614R1 具有初始設定式的範圍型 for-loops](https://wg21.link/P0614R1)|否|
-|&nbsp;&nbsp;[P0634R3 已使用型別名稱完成！](https://wg21.link/P0634R3)|否|
-|&nbsp;&nbsp;[P0683R1 針對位元欄位的預設成員初始設定式](https://wg21.link/P0683R1) \(英文\)|否|
-|&nbsp;&nbsp;[P0692R1 特殊化上的寬鬆存取檢查](https://wg21.link/P0692R1)|否|
-|&nbsp;&nbsp;[P0722R3 可變大小類別的有效率大小調整刪除](https://wg21.link/P0722R3)|否|
-|&nbsp;&nbsp;[P0732R2 非型別範本參數中的類別型別](https://wg21.link/P0732R2)|否|
-|&nbsp;&nbsp;[P0840R2 \[\[no_unique_address\]\] 屬性](https://wg21.link/P0840R2)|否|
-|&nbsp;&nbsp;[P0912R5 協同程式](https://wg21.link/P0912R5)|否|
-|&nbsp;&nbsp;[P0960R3 允許從以括弧括住的值初始化彙總](https://wg21.link/P0960R3)|否|
-|&nbsp;&nbsp;[P1002R1 constexpr 函式中的 try-catch 區塊](https://wg21.link/P1002R1)|否|
-|&nbsp;&nbsp;[P1064R0 允許常數運算式中的虛擬函式呼叫](https://wg21.link/P1064R0)|否|
-|&nbsp;&nbsp;[P1073R3 即時運算函式](https://wg21.link/P1073R3)|否|
-|&nbsp;&nbsp;[P1094R2 巢狀內嵌命名空間](https://wg21.link/P1094R2)|否|
-|&nbsp;&nbsp;[P1103R3 模組](https://wg21.link/P1103R3)|否|
-|&nbsp;&nbsp;[P1139R2 與 ISO 10646 有關的位址選字問題](https://wg21.link/P1139R2)|否|
-|&nbsp;&nbsp;[P1141R2 受限宣告的另一個方法](https://wg21.link/P1141R2)|否|
-|&nbsp;&nbsp;[P1236R1 帶正負號的整數是兩個互補數](https://wg21.link/P1236R1)|否|
-|&nbsp;&nbsp;[P1289R1 合約條件中的存取控制](https://wg21.link/P1289R1)|否|
-|&nbsp;&nbsp;[P1323R2 合約後續條件與傳回類型減少](https://wg21.link/P1323R2)|否|
-|&nbsp;&nbsp;[P1327R1 允許常數運算式中的 dynamic_cast、多形 typeid](https://wg21.link/P1327R1)|否|
-|&nbsp;&nbsp;[P1353R0 缺少功能測試巨集](https://wg21.link/P1353R0)|否|
-|&nbsp;&nbsp;[P1381R1 結構化繫結的參考擷取](https://wg21.link/P1381R1)|否|
+|  |  |
+|--|--|
+| __C++03/11 核心語言功能__ | __支援__ |
+| &nbsp;&nbsp;其他所有項目 | VS 2015 <sup>[A](#note_A)</sup> |
+| &nbsp;&nbsp;兩階段名稱查詢 | VS 2017 15.7 <sup>[B](#note_B)</sup> |
+| &nbsp;&nbsp;[N2634 運算式 SFINAE](https://wg21.link/N2634) | VS 2017 15.7 |
+| &nbsp;&nbsp;[N1653 C99 前置處理器](https://wg21.link/N1653) | 部分 <sup>[C](#note_C)</sup> |
+| __C++14 核心語言功能__ | __支援__ |
+| &nbsp;&nbsp;[N3323 調整內容轉換的描述](https://wg21.link/N3323) | VS 2013 |
+| &nbsp;&nbsp;[N3472 二進位常值](https://wg21.link/N3472) | VS 2015 |
+| &nbsp;&nbsp;[N3638 auto 和 decltype(auto) 傳回型別](https://wg21.link/n3638) | VS 2015 |
+| &nbsp;&nbsp;[N3648 init 擷取](https://wg21.link/n3648) | VS 2015 |
+| &nbsp;&nbsp;[N3649 泛型 Lambda](https://wg21.link/n3649) | VS 2015 |
+| &nbsp;&nbsp;[N3760 \[\[已過時\]\]屬性](https://wg21.link/n3760) \(英文\) | VS 2015 |
+| &nbsp;&nbsp;[N3778 依大小調整的解除配置](https://wg21.link/n3778) | VS 2015 |
+| &nbsp;&nbsp;[N3781 數字分隔符號](https://wg21.link/n3781) | VS 2015 |
+| &nbsp;&nbsp;[N3651 變數範本](https://wg21.link/n3651) | VS 2015.2 |
+| &nbsp;&nbsp;[N3652 擴充的 constexpr](https://wg21.link/n3652) | VS 2017 15.0 |
+| &nbsp;&nbsp;[N3653 針對彙總的預設成員初始設定式](https://wg21.link/n3653) \(英文\) | VS 2017 15.0 |
+| __C++17 核心語言功能__ | __支援__ |
+| &nbsp;&nbsp;[N4086 移除三併詞](https://wg21.link/n4086) | VS 2010 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N3922 使用 braced-init-list 的 auto 新規則](https://wg21.link/n3922) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4051 範本 template 參數中的 typename](https://wg21.link/n4051) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4266 命名空間和列舉程式的屬性](https://wg21.link/n4266) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4267 u8 字元常值](https://wg21.link/n4267) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4230 巢狀命名空間定義](https://wg21.link/n4230) | VS 2015.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[N3928 Terse static_assert](https://wg21.link/n3928) | VS 2017 15.0 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0184R0 通用的範圍架構 for 迴圈](https://wg21.link/p0184r0) | VS 2017 15.0 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0188R1 \[\[fallthrough\]\] 屬性](https://wg21.link/p0188r1) \(英文\) | VS 2017 15.0 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0001R1 移除 register 關鍵字](https://wg21.link/p0001r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0002R1 移除 bool 的 operator++](https://wg21.link/p0002r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0018R3 依據值擷取 *this](https://wg21.link/p0018r3) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0028R4 使用不重複的屬性命名空間](https://wg21.link/p0028r4) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0061R1 \_\_has_include](https://wg21.link/p0061r1) | VS 2017 15.3 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0138R2 整數的固定列舉直接清單初始化](https://wg21.link/p0138r2) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0170R1 constexpr Lambda](https://wg21.link/p0170r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0189R1 \[\[nodiscard\]\] 屬性](https://wg21.link/p0189r1) \(英文\) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0212R1 \[\[maybe_unused\]\] 屬性](https://wg21.link/p0212r1) \(英文\) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0217R3 結構化的繫結](https://wg21.link/p0217r3) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0292R2 constexpr if 陳述式](https://wg21.link/p0292r2) | VS 2017 15.3 <sup>[D](#note_D)</sup> |
+| &nbsp;&nbsp;[P0305R1 使用初始設定式的選取範圍陳述式](https://wg21.link/p0305r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0245R1 Hexfloat 常值](https://wg21.link/p0245r1) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[N4268 允許多個非類型範本引數](https://wg21.link/n4268) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[N4295 摺疊運算式](https://wg21.link/n4295) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](https://wg21.link/p0003r5) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0012R1 新增 noexcept 型別系統](https://wg21.link/p0012r1) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0035R4 過度對齊的動態記憶體配置](https://wg21.link/p0035r4) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0386R2 內嵌變數](https://wg21.link/p0386r2) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0522R0 範本 template 參數與相容引數的比對](https://wg21.link/p0522r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0036R0 移除部分空白一元摺疊](https://wg21.link/p0036r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[N4261 修正限定性條件轉換](https://wg21.link/n4261) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0017R1 擴充的彙總初始化](https://wg21.link/p0017r1) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0091R3 類別範本的範本引數推斷](https://wg21.link/p0091r3)<br/>&nbsp;&nbsp;[P0512R0 類別樣板引數推斷問題](https://wg21.link/p0512r0) \(英文\) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0127R2 使用 auto 宣告非類型範本參數](https://wg21.link/p0127r2) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0135R1 保證的複製省略](https://wg21.link/p0135r1) | VS 2017 15.6 |
+| &nbsp;&nbsp;[P0136R1 改寫繼承建構函式](https://wg21.link/p0136r1) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0137R1 std::launder](https://wg21.link/p0137r1) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0145R3 調整運算式評估順序](https://wg21.link/p0145r3)<br/>&nbsp;&nbsp;[P0400R0 函式引數的評估順序](https://wg21.link/p0400r0) \(英文\) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0195R2 using-declaration 的套件延伸模組](https://wg21.link/p0195r2) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0283R2 略過無法辨認的屬性](https://wg21.link/p0283r2) | VS 2015 <sup>[14](#note_14)</sup> |
+| __C++17 核心語言功能 (缺失報表)__ | __支援__ |
+| &nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](https://wg21.link/p0702r1) \(英文\) | VS 2017 15.7 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0961R1 放寬結構化繫結的自訂點尋找規則](https://wg21.link/p0961r1) \(英文\) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0969R0 允許可存取成員進行結構化繫結](https://wg21.link/p0969r0) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0588R1 簡化隱含的 Lambda 擷取](https://wg21.link/p0588r1) | VS 2019 16.4 <sup> [17](#note_17)</sup> |
+| &nbsp;&nbsp;[P1771R1 \[\[nodiscard\]\]](https://wg21.link/p1771r1) | VS 2019 16.4 <sup> [17](#note_17)</sup> |
+| &nbsp;&nbsp;[P1825R0 合併的 P0527R1 和 P1155R3 的用語，更隱含的移動](https://wg21.link/p1825r0) | VS 2019 16.4 <sup> [17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0929R2 檢查抽象類別型別](https://wg21.link/P0929R2) | 否 |
+| &nbsp;&nbsp;[P0962R2 放寬 range-for 迴圈的自訂點尋找規則](https://wg21.link/p0962r1) | 否 |
+| &nbsp;&nbsp;[P0859R0 CWG 1581：已定義 constexpr 成員](https://wg21.link/p0859r0)函式的時機 | 否 |
+| &nbsp;&nbsp;[P1009R2 陣列大小在 new-expressions 中減少](https://wg21.link/P1009R2) | 否 |
+| &nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2) | 否 |
+| __C++20 核心語言功能__ | __支援__ |
+| &nbsp;&nbsp;[P0704R1 修正針對成員的常數左值 ref 限定指標](https://wg21.link/p0704r1) \(英文\) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P1041R4 讓 char16_t/char32_t 字串常值成為 UTF-16/32](https://wg21.link/P1041R4) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P1330R0 變更 constexpr 內的作用中聯集成員](https://wg21.link/P1330R0) | VS 2017 15.0 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0972R0 noexcept For \<chrono> zero(), min(), max()](https://wg21.link/P0972R0) | VS 2017 15.7 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0515R3 三向 (太空船) 比較運算子 <=>](https://wg21.link/P0515R3) | VS 2019 16.0 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0941R2 功能測試巨集](https://wg21.link/P0941R2) | VS 2019 16.0 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P1008R1 禁止使用使用者宣告建構函式來彙總](https://wg21.link/P1008R1) | VS 2019 16.0 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0329R4 指定的初始化](https://wg21.link/p0329r4) \(英文\) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0846R0 不可見的 ADL 與函式範本](https://wg21.link/P0846R0) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0409R2 允許 lambda-capture \[=，此\]](https://wg21.link/p0409r2) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0428R2 針對泛型 Lambda 的熟悉範本語法](https://wg21.link/p0428r2) \(英文\) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0624R2 Default 預設可建構與無狀態 lambdas](https://wg21.link/P0624R2) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0780R2 允許 lambda init-capture 中的封裝展開](https://wg21.link/P0780R2) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0806R2 以隱含方式透過下列項目將此項目的擷取設為過時\[=\]](https://wg21.link/P0806R2) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1120R0 <=> 與其他比較運算子的一致性改良](https://wg21.link/P1120R0) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1185R2 \<=\> != ==](https://wg21.link/P1185R2) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0734R0 概念](https://wg21.link/P0734R0) \(英文\) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0857R0 修正限制式中的功能差距](https://wg21.link/P0857R0) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1084R2 今天的 return-type-requirements 不足](https://wg21.link/P1084R2) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0892R2 條件式明確](https://wg21.link/P0892R2) | VS 2019 16.4 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1091R3 延伸結構化繫結讓它看起來比較像是變數宣告](https://wg21.link/P1091R3) | VS 2019 16.4 <sup> [20](#note_20)</sup> |
+| [使用列舉](https://wg21.link/P1099R5)&nbsp;&nbsp;P1099R5 | VS 2019 16.4 <sup> [20](#note_20)</sup> |
+| [當您實際使用 \<時，&nbsp;&nbsp;P1186R3 =>](https://wg21.link/P1186R3) | VS 2019 16.4 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1630R1 太空船需要向上調整](https://wg21.link/P1630R1) | VS 2019 16.4 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0306R4 新增 \_\_VA_OPT\_\_ 以進行逗號省略和逗號刪除](https://wg21.link/P0306R4) \(英文\) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0614R1 具有初始設定式的範圍型 for-loops](https://wg21.link/P0614R1) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0683R1 針對位元欄位的預設成員初始設定式](https://wg21.link/P0683R1) \(英文\) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1002R1 constexpr 函式中的 try-catch 區塊](https://wg21.link/P1002R1) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1161R3 取代在注標運算式中使用逗號運算子](https://wg21.link/P1161R3) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1301R4 \[\[nodiscard （"message"）\]\]](https://wg21.link/P1301R4) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| 辨識[標頭單位匯入 &nbsp;&nbsp;P1703R1 需要完整](https://wg21.link/P1703R1)的前置處理 | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1946R0 允許以傳值方式預設比較](https://wg21.link/P1946R0) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0641R2 與預設複本建構函式的常數不符](https://wg21.link/P0641R2) | 部分 |
+| &nbsp;&nbsp;[P0912R5 協同程式](https://wg21.link/P0912R5) | 部分 |
+| &nbsp;&nbsp;[P1103R3 模組](https://wg21.link/P1103R3) | 部分 |
+| &nbsp;&nbsp;[P0315R4 允許為評估之上下文中的 lambdas](https://wg21.link/P0315R4) | 否 |
+| &nbsp;&nbsp;[P0388R4 允許轉換為界限不明的陣列](https://wg21.link/P0388R4) | 否 |
+| &nbsp;&nbsp;[P0479R5 \[\[likely\]\] 與 \[\[unlikely\]\] 屬性](https://wg21.link/P0479R5) | 否 |
+| &nbsp;&nbsp;[P0634R3 已使用型別名稱完成！](https://wg21.link/P0634R3) | 否 |
+| &nbsp;&nbsp;[P0692R1 特殊化上的寬鬆存取檢查](https://wg21.link/P0692R1) | 否 |
+| &nbsp;&nbsp;[P0722R3 可變大小類別的有效率大小調整刪除](https://wg21.link/P0722R3) | 否 |
+| &nbsp;&nbsp;[P0732R2 非型別範本參數中的類別型別](https://wg21.link/P0732R2) | 否 |
+| &nbsp;&nbsp;[P0735R1 memory_order_consume 與發行順序的互動](https://wg21.link/P0735R1) | 否 |
+| &nbsp;&nbsp;[P0784R7 更多 constexpr 容器](https://wg21.link/P0784R7) | 否 |
+| &nbsp;&nbsp;[P0840R2 \[\[no_unique_address\]\] 屬性](https://wg21.link/P0840R2) | 否 |
+| &nbsp;&nbsp;[P0848R3 有條件地簡單的特殊成員](https://wg21.link/P0848R3)函式 | 否 |
+| &nbsp;&nbsp;[P0960R3 允許從以括弧括住的值初始化彙總](https://wg21.link/P0960R3) | 否 |
+| &nbsp;&nbsp;[P1064R0 允許常數運算式中的虛擬函式呼叫](https://wg21.link/P1064R0) | 否 |
+| &nbsp;&nbsp;[P1073R3 即時運算函式](https://wg21.link/P1073R3) | 否 |
+| &nbsp;&nbsp;[P1094R2 巢狀內嵌命名空間](https://wg21.link/P1094R2) | 否 |
+| &nbsp;&nbsp;[P1139R2 與 ISO 10646 有關的位址選字問題](https://wg21.link/P1139R2) | 否 |
+| &nbsp;&nbsp;[P1141R2 受限宣告的另一個方法](https://wg21.link/P1141R2) | 否 |
+| &nbsp;&nbsp;[P1143R2 constinit](https://wg21.link/P1143R2) | 否 |
+| &nbsp;&nbsp;[P1152R4 淘汰 volatile](https://wg21.link/P1152R4) | 否 |
+| &nbsp;&nbsp;[P1236R1 帶正負號的整數是兩個互補數](https://wg21.link/P1236R1) | 否 |
+| &nbsp;&nbsp;[P1327R1 允許常數運算式中的 dynamic_cast、多形 typeid](https://wg21.link/P1327R1) | 否 |
+| &nbsp;&nbsp;[P1331R2 允許在 constexpr 內容中進行簡單的預設初始化](https://wg21.link/P1331R2) | 否 |
+| &nbsp;&nbsp;[P1353R0 缺少功能測試巨集](https://wg21.link/P1353R0) | 否 |
+| &nbsp;&nbsp;[P1381R1 結構化繫結的參考擷取](https://wg21.link/P1381R1) | 否 |
+| &nbsp;&nbsp;以傳回[類型需求的非統一語義為 P1452R2](https://wg21.link/P1452R2) | 否 |
+| [使用受限的 ttp 搭配受限制的範本來](https://wg21.link/P1616R1)&nbsp;&nbsp;P1616R1 | 否 |
+| &nbsp;&nbsp;[P1668R1 允許 constexpr 函式中的未計算內嵌元件](https://wg21.link/P1668R1) | 否 |
+| &nbsp;&nbsp;[P1766R1 緩和次要模組 maladies](https://wg21.link/P1766R1) | 否 |
+| &nbsp;&nbsp;[P1811R0 為重新 exportation 的穩定性放寬重複定義限制](https://wg21.link/P1811R0) | 否 |
+| [別名範本的 &nbsp;&nbsp;P1814R0 CTAD](https://wg21.link/P1814R0) | 否 |
+| [匯總的 &nbsp;&nbsp;P1816R0 CTAD](https://wg21.link/P1816R0) | 否 |
+| &nbsp;&nbsp;[P1874R1 模組中非本機變數的動態初始化順序](https://wg21.link/P1874R1) | 否 |
+| &nbsp;&nbsp;[使用非類型範本參數 P1907R1 不一致的](https://wg21.link/P1907R1)情況 | 否 |
+| &nbsp;&nbsp;在[11 月2019（貝爾法斯特）會議上 P1971R0 NB 留言的核心變更](https://wg21.link/P1971R0) | 否 |
+| [在形成函式的指標時，&nbsp;&nbsp;P1972R0 US105 檢查非樣板的條件約束的滿意度](https://wg21.link/P1972R0) | 否 |
+| &nbsp;&nbsp;[P1975R0 修正加上括弧的匯總初始化的用語](https://wg21.link/P1975R0) | 否 |
+| &nbsp;&nbsp;[P1979R0 解析至 US086](https://wg21.link/P1979R0) | 否 |
+| &nbsp;&nbsp;[P1980R0 CA096：非相依的宣告符合的要求-子句](https://wg21.link/P1980R0) | 否 |
 
 ## <a name="standard-library-features"></a>標準程式庫功能
 
-| | |
-|---|---|
-|__C++20 標準程式庫功能__|__支援__|
-|&nbsp;&nbsp;[P0809R0 比較未排序的容器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0858R0 Constexpr 迭代器需求](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0777R1 避免不必要的 Decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P1164R1 讓 create_directory （）直覺](https://wg21.link/P1164R1)化|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0318R1 unwrap_reference、unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0457R2 basic_string/basic_string_view 的 starts_with()/ends_with()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0458R2 具順序與不具順序關聯容器的 contains()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() 傳回 size_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0769R2 shift_left()、shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0020R6 atomic\<float>、atomic\<double>、atomic\<long double>](https://wg21.link/p0020r6)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0463R1 位元組順序](https://wg21.link/p0463r1) \(英文\)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0482R6 char8_t： utf-8 字元和字串的類型](https://wg21.link/P0482R6)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] 適用於 STL 第一部分](https://wg21.link/p0600r1)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0653R2 to_address()](https://wg21.link/p0653r2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0754R2 \<version>](https://wg21.link/p0754r2)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0771R1 noexcept 適用於 std::function 的移動建構函式](https://wg21.link/P0771R1)|VS 2019 16.2 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0487R1 修正運算子>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0616R0 在 \<numeric> 中使用 move()](https://wg21.link/p0616r0)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0898R3 標準程式庫概念](https://wg21.link/P0898R3)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0919R3 未具順序之限制式的異質查閱](https://wg21.link/P0919R3)|VS 2019 16.3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1754R1 重新命名概念以 standard_case](https://wg21.link/P1754R1)|VS 2019 16.4 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|否|
-|&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 osyncstream 操作工具](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|否|
-|&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|否|
-|&nbsp;&nbsp;[P0202R3 \<algorithm> 和 exchange() 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|否|
-|&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|否|
-|&nbsp;&nbsp;[P0340R3 SFINAE 友善 underlying_type](https://wg21.link/P0340R3)|否|
-|&nbsp;&nbsp;[P0355R7 \<chrono> 行事曆和時區](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|否|
-|&nbsp;&nbsp;[P0356R5 bind_front()](https://wg21.link/P0356R5)|否|
-|&nbsp;&nbsp;[P0357R3 支援 reference_wrapper 中的不完整型別](https://wg21.link/P0357R3)|否|
-|&nbsp;&nbsp;[P0415R1 \<complex> 的 constexpr (再次)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|否|
-|&nbsp;&nbsp;[P0439R0 列舉類別 memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|否|
-|&nbsp;&nbsp;[P0475R1 分段建構的保證複製省略](https://wg21.link/P0475R1)|否|
-|&nbsp;&nbsp;[P0476R2 \<位 > bit_cast](https://wg21.link/P0476R2)|否|
-|&nbsp;&nbsp;[P0528R3 具有填補位元的不可部分完成 Compare-And-Exchange](https://wg21.link/P0528R3)|否|
-|&nbsp;&nbsp;[P0556R3 \<位 > ispow2 （）、ceil2 （）、floor2 （）、log2p1 （）](https://wg21.link/P0556R3)|否|
-|&nbsp;&nbsp;[P0591R4 Uses-Allocator 建構的公用程式函式](https://wg21.link/P0591R4)|否|
-|&nbsp;&nbsp;[P0608R3 改進變數的轉換建構函式/指派](https://wg21.link/P0608R3)|否|
-|&nbsp;&nbsp;[P0619R4 移除 C++20 中的 C++17 過時功能](https://wg21.link/P0619R4)|否|
-|&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|否|
-|&nbsp;&nbsp;[P0655R1 流覽\<R > （）](https://wg21.link/P0655R1)|否|
-|&nbsp;&nbsp;[P0674R1 適用於陣列的 make_shared()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html) \(英文\)|否|
-|&nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>、atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|否|
-|&nbsp;&nbsp;[P0738R2 istream_iterator 清除](https://wg21.link/P0738R2)|否|
-|&nbsp;&nbsp;[P0767R1 淘汰 is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|否|
-|&nbsp;&nbsp;[P0768R1 太空船比較運算子 \<=> 的程式庫支援](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|否|
-|&nbsp;&nbsp;[P0811R3 midpoint()、lerp()](https://wg21.link/P0811R3)|否|
-|&nbsp;&nbsp;[P0879R0 constexpr 適用於交換函式](https://wg21.link/P0879R0)|否|
-|&nbsp;&nbsp;[P0896R4 \<範圍\>](https://wg21.link/P0896R4)|否|
-|&nbsp;&nbsp;[P0912R5 協同程式的程式庫支援](https://wg21.link/P0912R5)|否|
-|&nbsp;&nbsp;[P0920R2 預先計算雜湊值查閱](https://wg21.link/P0920R2)|否|
-|&nbsp;&nbsp;[P0935R0 杜絕不必要的明確預設建構函式](https://wg21.link/P0935R0)|否|
-|&nbsp;&nbsp;[P0966R1 string::reserve() 不應該壓縮](https://wg21.link/P0966R1)|否|
-|&nbsp;&nbsp;[P1001R2 execution::unseq](https://wg21.link/P1001R2)|否|
-|&nbsp;&nbsp;[P1006R1 constexpr 適用於 pointer_traits<T*>::pointer_to()](https://wg21.link/P1006R1)|否|
-|&nbsp;&nbsp;[P1007R3 assume_aligned()](https://wg21.link/P1007R3)|否|
-|&nbsp;&nbsp;[P1020R1 使用預設初始化的智慧型指標建立](https://wg21.link/P1020R1)|否|
-|&nbsp;&nbsp;[P1023R0 constexpr 適用於 std::array 比較](https://wg21.link/P1023R0)|否|
-|&nbsp;&nbsp;[P1032R1 其他 constexpr](https://wg21.link/P1032R1)|否|
-|&nbsp;&nbsp;[P1165R1 basic_string 之 operator+() 中一致的傳播具狀態配置工具 ](https://wg21.link/P1165R1)|否|
-|&nbsp;&nbsp;[P1209R0 erase_if()、erase()](https://wg21.link/P1209R0)|否|
-|&nbsp;&nbsp;[P1227R2 帶正負號的 std::ssize()、不帶正負號的 span::size()](https://wg21.link/P1227R2)|否|
-|&nbsp;&nbsp;[P1285R0 改良型別特徵的完整性需求](https://wg21.link/P1285R0)|否|
-|&nbsp;&nbsp;[P1357R1 is_bounded_array、is_unbounded_array](https://wg21.link/P1357R1)|否|
-|__C++17 標準程式庫功能__|__支援__|
-|&nbsp;&nbsp;[LWG 2221 nullptr 的格式化輸出運算子](https://cplusplus.github.io/LWG/issue2221)|VS 2019 16.1|
-|&nbsp;&nbsp;[N3911 void_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3911.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4089 unique_ptr\<T[]> 中的安全轉換](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4089.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4169 invoke()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4169.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4190 移除 auto_ptr、random_shuffle() 以及舊的 \<functional> 項目](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4190.htm)|VS 2015 <sup>[rem](#note_rem)</sup>|
-|&nbsp;&nbsp;[N4258 清除 noexcept](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4258.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4259 uncaught_exceptions()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4259.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4277 完整可複製的 reference_wrapper](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4277.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4279 map/unordered_map 的 insert_or_assign()/try_emplace()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4279.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4280 size()、empty()、data()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4280.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4366 精確地限制 unique_ptr 指派](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4366.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4387 改善 pair 和 tuple](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4387.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4389 bool_constant](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4389.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4508 shared_mutex (Untimed)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4508.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4510 vector/list/forward_list 中的不完整類型支援](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4510.html)|VS 2013 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4562 程式庫基本概念︰\<algorithm> sample()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#alg.random.sample)|VS 2017 15.0|
-|&nbsp;&nbsp;[N4562 程式庫基本概念︰\<any>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#any)|VS 2017 15.0|
-|&nbsp;&nbsp;[N4562 程式庫基本概念︰\<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br/>&nbsp;&nbsp;[P0337R0 刪除 polymorphic_allocator 指派](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|VS 2017 15.6|
-|&nbsp;&nbsp;[N4562 程式庫基本概念︰\<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017 15.0|
-|&nbsp;&nbsp;[N4562 程式庫基本概念︰\<string_view>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#string.view)|VS 2017 15.0|
-|&nbsp;&nbsp;[N4562 程式庫基本概念︰\<tuple> apply()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#tuple)|VS 2017 15.0|
-|&nbsp;&nbsp;[N4562 程式庫基本概念︰Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 修正搜尋程式傳回型別](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0004R1 移除已取代的 Iostreams 別名](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0004r1.html)|VS 2015.2 <sup>[rem](#note_rem)</sup>|
-|&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br/>&nbsp;&nbsp;[P0358R1 not_fn() 的修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0006R0 類型特性的變數範本 (is_same_v 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0006r0.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0007R1 as_const()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0007r1.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0013R1 邏輯運算子類型特性 (conjunction 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0013r1.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0024R2 平行演算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br/>&nbsp;&nbsp;[P0336R1 重新命名平行執行原則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br/>&nbsp;&nbsp;[P0394R4 針對例外狀況，平行演算法應使用 terminate()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br/>&nbsp;&nbsp;[P0452R1 統一 \<numeric> 平行演算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html) \(英文\)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0025R1 clamp()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0025r1.html)|VS 2015.3|
-|&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0031R0 \<array> (再次說明) 和 \<iterator> 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0032R3 variant/any/optional 的同質性介面](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0032r3.pdf)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0033R1 改寫 enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0040R3 擴充記憶體管理工具](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0063R3 C11 標準程式庫](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html)|VS 2015 <sup>[C11](#note_C11)、[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0067R5 基礎字串轉換](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|VS 2019 16.4 <sup> [charconv](#note_charconv)</sup>|
-|&nbsp;&nbsp;[P0074R0 owner_less\<>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0074r0.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0077R2 is_callable、is_nothrow_callable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0077r2.html)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0083R3 接合對應和集合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br/>&nbsp;&nbsp;[P0508R0 釐清 insert_return_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0084R2 Emplace 傳回型別](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0088R3 \<variant>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0088r3.html)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0092R1 \<chrono> floor()、ceil()、round()、abs()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0092r1.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0152R1 atomic::is_always_lock_free](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0152r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0154R1 hardware_destructive_interference_size 等等](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0154r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0156R0 Variadic lock_guard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r0.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0156R2 將 Variadic lock\_guard 重新命名為 scoped\_lock](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0156r2.html) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0163R0 shared_ptr::weak_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0163r0.html)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0174R2 取代不必要的程式庫組件](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0185R1 is_swappable、is_nothrow_swappable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0185r1.html)|VS 2015.3|
-|&nbsp;&nbsp;[P0209R2 make_from_tuple()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0209r2.pdf)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br/>&nbsp;&nbsp;[P0219R1 適用於 Filesystem 的相對路徑](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br/>&nbsp;&nbsp;[P0317R1 針對檔案系統的目錄項目快取](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html) \(英文\)<br/>&nbsp;&nbsp;[P0392R0 支援 Filesystem 路徑的 string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br/>&nbsp;&nbsp;[P0430R2 支援非 POSIX 檔案系統](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf) \(英文\)<br/>&nbsp;&nbsp;[P0492R2 解決檔案系統的 NB 註解](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html) \(英文\)|VS 2017 15.7 <sup>[E](#note_E)</sup>|
-|&nbsp;&nbsp;[P0220R1 程式庫基本概念 V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6|
-|&nbsp;&nbsp;[P0226R1 數學特殊函式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0254R2 整合 string_view 和 std::string](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0254r2.pdf)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[G](#note_G)</sup>|
-|&nbsp;&nbsp;[P0272R1 非常數 basic_string::data()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0272r1.html)|VS 2015.3|
-|&nbsp;&nbsp;[P0295R0 gcd()、lcm()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0295r0.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0298R3 std::byte](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0298r3.pdf) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)、&nbsp;[位元組](#note_byte)</sup>|
-|&nbsp;&nbsp;[P0302R1 移除 std::function 中的配置器支援](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0307R2 再次說明如何使用 Optional >=](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0307r2.pdf)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0393R3 如何使用 Variant >=](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0393r3.html)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0403R1 適用於 \<string_view> ("meow"sv 等) 的 UDL](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0403r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>、shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br/>&nbsp;&nbsp;[P0497R0 修正陣列的 shared_ptr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0418R2 不可部分完成的 compare_exchange memory_order 需求](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0418r2.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0426R1 char_traits 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0433R2 將針對類別樣板的樣板推斷整合至標準程式庫](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html) \(英文\)<br/>&nbsp;&nbsp;[P0739R0 改善針對標準程式庫的類別樣板引數推斷整合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html) \(英文\)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0435R1 檢修 common_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0435r1.pdf)<br/>&nbsp;&nbsp;[P0548R1 調校 common\_type 和 duration](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0548r1.pdf) \(英文\)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0504R0 重新認識 in_place_t/in_place_type_t\<T>/in_place_index_t\<I>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0504r0.html)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0505R0 \<chrono> (再次說明) 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0505r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0510R0 拒絕空白變異、陣列、參考和不完整類型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0510r0.html)|VS 2017 15.0|
-|&nbsp;&nbsp;[P0513R0 停用 hash](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0513r0.pdf)<br/>&nbsp;&nbsp;[P0599R1 noexcept 雜湊](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0599r1.pdf) \(英文\)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0516R0 將 shared_future 複製標記為 noexcept](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0516r0.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0517R0 從 future_errc 建構 future_error](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0517r0.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0521R0 取代 shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0558R1 解決不可部分完成\<T> 具名基底類別不一致](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0558r1.pdf)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0595R2 std::is_constant_evaluated()](https://wg21.link/P0595R2)|否|
-|&nbsp;&nbsp;[P0602R4 在可變/選用中傳播複製/移動 Triviality](https://wg21.link/P0602R4)|VS 2017 15.3<sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0604R0 將 is\_callable/result\_of 變更為 invoke\_result、is\_invocable、is\_nothrow\_invocable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0604r0.html) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0607R0 適用於標準程式庫的內嵌變數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html) \(英文\)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0618R0 取代 \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html) \(英文\)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0682R1 修復基礎字串轉換修復基礎字串轉換](https://wg21.link/P0682R1)|VS 2015 15.7 <sup>[17](#note_17)</sup>|
-|__C++14 標準程式庫功能__|__支援__|
-|&nbsp;&nbsp;[N3462 適合 SFINAE 的 result_of](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
-|&nbsp;&nbsp;[N3302 \<complex> 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
-|&nbsp;&nbsp;[N3469 \<chrono> 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
-|&nbsp;&nbsp;[N3470 \<array> 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3470.html)|VS 2015|
-|&nbsp;&nbsp;[N3471 \<initializer_list>、\<tuple>、\<utility> 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3471.html)|VS 2015|
-|&nbsp;&nbsp;[N3545 integral_constant::operator()()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3545.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3642 適用於 \<chrono>、\<string> 的 UDL (1729ms、"meow"s 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3642.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3644 Null 正向迭代器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3644.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3654 quoted()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3654.html)|VS 2015|
-|&nbsp;&nbsp;[N3657 異質關聯查閱](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3657.htm)|VS 2015|
-|&nbsp;&nbsp;[N3658 integer_sequence](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html)|VS 2015|
-|&nbsp;&nbsp;[N3659 shared_mutex (Timed)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3659.html)|VS 2015|
-|&nbsp;&nbsp;[N3668 exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3668.html)|VS 2015|
-|&nbsp;&nbsp;[N3669 修正未含 const 的 constexpr 成員函式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3669.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3670 get\<T>()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3670.html)|VS 2015|
-|&nbsp;&nbsp;[N3671 雙重範圍 equal()、is_permutation()、mismatch()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3671.html)|VS 2015|
-|&nbsp;&nbsp;[N3778 依大小調整的解除配置](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3778.html)|VS 2015|
-|&nbsp;&nbsp;[N3779 適用於 \<complex> 的 UDL (3.14i 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3779.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3789 \<functional> 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3789.htm)|VS 2015|
-|&nbsp;&nbsp;[N3887 tuple_element_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3887.pdf)|VS 2015|
-|&nbsp;&nbsp;[N3891 重新命名 shared_mutex (Timed) 為 shared_timed_mutex](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3891.htm)|VS 2015|
-|&nbsp;&nbsp;[N3346 容器元素的最低需求](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3346.pdf)|VS 2013|
-|&nbsp;&nbsp;[N3421 透明運算子函式 (less\<> 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3421.htm)|VS 2013|
-|&nbsp;&nbsp;[N3655 適用於 \<type_traits> 的別名範本 (decay_t 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3655.pdf)|VS 2013|
-|&nbsp;&nbsp;[N3656 make_unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3656.htm)|VS 2013|
+|  |  |
+|--|--|
+| __C++20 標準程式庫功能__ | __支援__ |
+| &nbsp;&nbsp;[P0809R0 比較未排序的容器](https://wg21.link/p0809r0) | VS 2010 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0858R0 Constexpr 迭代器需求](https://wg21.link/p0858r0) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0777R1 避免不必要的 Decay](https://wg21.link/p0777r1) | VS 2017 15.7 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P1164R1 讓 create_directory （）直覺](https://wg21.link/P1164R1)化 | VS 2019 16.0 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0550R2 remove_cvref](https://wg21.link/p0550r2) | VS 2019 16.0 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0318R1 unwrap_reference、unwrap_ref_decay](https://wg21.link/p0318r1) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0457R2 basic_string/basic_string_view 的 starts_with()/ends_with()](https://wg21.link/p0457r2) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0458R2 具順序與不具順序關聯容器的 contains()](https://wg21.link/p0458r2) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() 傳回 size_type](https://wg21.link/p0646r1) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0769R2 shift_left()、shift_right()](https://wg21.link/p0769r2) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0887R1 type_identity](https://wg21.link/p0887r1) | VS 2019 16.1 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0020R6 atomic\<float>、atomic\<double>、atomic\<long double>](https://wg21.link/p0020r6) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0463R1 位元組順序](https://wg21.link/p0463r1) \(英文\) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0482R6 char8_t： utf-8 字元和字串的類型](https://wg21.link/P0482R6) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] 適用於 STL 第一部分](https://wg21.link/p0600r1) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0653R2 to_address()](https://wg21.link/p0653r2) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0754R2 \<version>](https://wg21.link/p0754r2) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0771R1 noexcept 適用於 std::function 的移動建構函式](https://wg21.link/P0771R1) | VS 2019 16.2 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0487R1 修正運算子>>(basic_istream&, CharT*)](https://wg21.link/P0487R1) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0616R0 在 \<numeric> 中使用 move()](https://wg21.link/p0616r0) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0898R3 標準程式庫概念](https://wg21.link/P0898R3) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0919R3 未具順序之限制式的異質查閱](https://wg21.link/P0919R3) | VS 2019 16.3 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1754R1 重新命名概念以 standard_case](https://wg21.link/P1754R1) | VS 2019 16.4 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[使用更新從 LFTS P0325R4 to_array](https://wg21.link/P0325R4) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0340R3 SFINAE 友善 underlying_type](https://wg21.link/P0340R3) | VS 2019 16.5 <sup> [14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0356R5 bind_front()](https://wg21.link/P0356R5) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0439R0 列舉類別 memory_order](https://wg21.link/p0439r0) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0553R4 \<位 > 旋轉和計算功能](https://wg21.link/P0553R4) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0556R3 \<位 > ispow2 （）、ceil2 （）、floor2 （）、log2p1 （）](https://wg21.link/P0556R3) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0595R2 is_constant_evaluated （）](https://wg21.link/P0595R2) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0631R8 \<數位 > 數學常數](https://wg21.link/P0631R8) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0738R2 istream_iterator 清除](https://wg21.link/P0738R2) | VS 2019 16.5 <sup> [14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0767R1 淘汰 is_pod](https://wg21.link/P0767R1) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0966R1 string::reserve() 不應該壓縮](https://wg21.link/P0966R1) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1209R0 erase_if()、erase()](https://wg21.link/P1209R0) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1227R2 帶正負號的 std::ssize()、不帶正負號的 span::size()](https://wg21.link/P1227R2) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| [適用于 Ceil2 的 &nbsp;&nbsp;P1355R2 窄合約（）](https://wg21.link/P1355R2) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1357R1 is_bounded_array、is_unbounded_array](https://wg21.link/P1357R1) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1612R1 會將 endian 重新置放至 \<位 >](https://wg21.link/P1612R1) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1651R0 bind_front （）不應該](https://wg21.link/P1651R0)解除包裝 reference_wrapper | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1690R1 針對未排序的容器縮小異類查閱](https://wg21.link/P1690R1) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P1902R1 遺失功能-測試宏 2017-2019](https://wg21.link/P1902R1) | VS 2019 16.5 <sup> [14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8) | 否 |
+| &nbsp;&nbsp;[P0053R7 \<syncstream>](https://wg21.link/p0053r7)<br/>&nbsp;&nbsp;[P0753R2 osyncstream 操作工具](https://wg21.link/p0753r2) | 否 |
+| &nbsp;&nbsp;[P0122R7 \<span>](https://wg21.link/p0122r7) | 否 |
+| &nbsp;&nbsp;[P0202R3 \<algorithm> 和 exchange() 的 constexpr](https://wg21.link/p0202r3) | 否 |
+| &nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6) | 否 |
+| &nbsp;&nbsp;[P0355R7 \<chrono> 行事曆和時區](https://wg21.link/p0355r7) | 否 |
+| &nbsp;&nbsp;[P0357R3 支援 reference_wrapper 中的不完整型別](https://wg21.link/P0357R3) | 否 |
+| &nbsp;&nbsp;[P0415R1 \<complex> 的 constexpr (再次)](https://wg21.link/p0415r1) | 否 |
+| &nbsp;&nbsp;[P0475R1 分段建構的保證複製省略](https://wg21.link/P0475R1) | 否 |
+| &nbsp;&nbsp;[P0476R2 \<位 > bit_cast](https://wg21.link/P0476R2) | 否 |
+| &nbsp;&nbsp;[P0528R3 具有填補位元的不可部分完成 Compare-And-Exchange](https://wg21.link/P0528R3) | 否 |
+| &nbsp;&nbsp;[P0591R4 Uses-Allocator 建構的公用程式函式](https://wg21.link/P0591R4) | 否 |
+| &nbsp;&nbsp;[P0608R3 改進變數的轉換建構函式/指派](https://wg21.link/P0608R3) | 否 |
+| &nbsp;&nbsp;[P0619R4 移除 C++20 中的 C++17 過時功能](https://wg21.link/P0619R4) | 否 |
+| &nbsp;&nbsp;[P0653R2 to_address()](https://wg21.link/p0653r2) | 否 |
+| &nbsp;&nbsp;[P0655R1 流覽\<R > （）](https://wg21.link/P0655R1) | 否 |
+| &nbsp;&nbsp;[P0674R1 適用於陣列的 make_shared()](https://wg21.link/p0674r1) \(英文\) | 否 |
+| &nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>、atomic\<weak_ptr\<T>>](https://wg21.link/p0718r2) | 否 |
+| &nbsp;&nbsp;[P0768R1 太空船比較運算子 \<=> 的程式庫支援](https://wg21.link/p0768r1) | 否 |
+| &nbsp;&nbsp;[P0811R3 midpoint()、lerp()](https://wg21.link/P0811R3) | 否 |
+| &nbsp;&nbsp;[P0879R0 constexpr 適用於交換函式](https://wg21.link/P0879R0) | 否 |
+| &nbsp;&nbsp;[P0896R4 \<範圍\>](https://wg21.link/P0896R4) | 否 |
+| &nbsp;&nbsp;[P0912R5 協同程式的程式庫支援](https://wg21.link/P0912R5) | 否 |
+| &nbsp;&nbsp;[P0920R2 預先計算雜湊值查閱](https://wg21.link/P0920R2) | 否 |
+| &nbsp;&nbsp;[P0935R0 杜絕不必要的明確預設建構函式](https://wg21.link/P0935R0) | 否 |
+| &nbsp;&nbsp;[P1001R2 execution::unseq](https://wg21.link/P1001R2) | 否 |
+| &nbsp;&nbsp;[P1006R1 constexpr 適用於 pointer_traits<T*>::pointer_to()](https://wg21.link/P1006R1) | 否 |
+| &nbsp;&nbsp;[P1007R3 assume_aligned()](https://wg21.link/P1007R3) | 否 |
+| &nbsp;&nbsp;[P1020R1 使用預設初始化的智慧型指標建立](https://wg21.link/P1020R1) | 否 |
+| &nbsp;&nbsp;[P1023R0 constexpr 適用於 std::array 比較](https://wg21.link/P1023R0) | 否 |
+| &nbsp;&nbsp;[P1032R1 其他 constexpr](https://wg21.link/P1032R1) | 否 |
+| &nbsp;&nbsp;[P1165R1 basic_string 之 operator+() 中一致的傳播具狀態配置工具 ](https://wg21.link/P1165R1) | 否 |
+| &nbsp;&nbsp;[P1285R0 改良型別特徵的完整性需求](https://wg21.link/P1285R0) | 否 |
+| __C++17 標準程式庫功能__ | __支援__ |
+| &nbsp;&nbsp;[LWG 2221 nullptr 的格式化輸出運算子](https://cplusplus.github.io/LWG/issue2221) | VS 2019 16.1 |
+| &nbsp;&nbsp;[N3911 void_t](https://wg21.link/n3911) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4089 unique_ptr\<T[]> 中的安全轉換](https://wg21.link/n4089) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4169 invoke()](https://wg21.link/n4169) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4190 移除 auto_ptr、random_shuffle() 以及舊的 \<functional> 項目](https://wg21.link/n4190) | VS 2015 <sup>[rem](#note_rem)</sup> |
+| &nbsp;&nbsp;[N4258 清除 noexcept](https://wg21.link/n4258) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4259 uncaught_exceptions()](https://wg21.link/n4259) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4277 完整可複製的 reference_wrapper](https://wg21.link/n4277) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4279 map/unordered_map 的 insert_or_assign()/try_emplace()](https://wg21.link/n4279) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4280 size()、empty()、data()](https://wg21.link/n4280) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4366 精確地限制 unique_ptr 指派](https://wg21.link/n4366) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4387 改善 pair 和 tuple](https://wg21.link/n4387) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4389 bool_constant](https://wg21.link/n4389) | VS 2015 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4508 shared_mutex (Untimed)](https://wg21.link/n4508) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4510 vector/list/forward_list 中的不完整類型支援](https://wg21.link/n4510) | VS 2013 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[N4562 程式庫基本概念︰\<algorithm> sample()](https://wg21.link/n4562#alg.random.sample) | VS 2017 15.0 |
+| &nbsp;&nbsp;[N4562 程式庫基本概念︰\<any>](https://wg21.link/n4562#any) | VS 2017 15.0 |
+| &nbsp;&nbsp;[N4562 程式庫基本概念︰\<memory_resource>](https://wg21.link/n4562#memory.resource.synop)<br/>&nbsp;&nbsp;[P0337R0 刪除 polymorphic_allocator 指派](https://wg21.link/p0337r0) | VS 2017 15.6 |
+| &nbsp;&nbsp;[N4562 程式庫基本概念︰\<optional>](https://wg21.link/n4562#optional) | VS 2017 15.0 |
+| &nbsp;&nbsp;[N4562 程式庫基本概念︰\<string_view>](https://wg21.link/n4562#string.view) | VS 2017 15.0 |
+| &nbsp;&nbsp;[N4562 程式庫基本概念︰\<tuple> apply()](https://wg21.link/n4562#tuple) | VS 2017 15.0 |
+| &nbsp;&nbsp;[N4562 程式庫基本概念︰Boyer-Moore search()](https://wg21.link/n4562#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 修正搜尋程式傳回型別](https://wg21.link/p0253r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](https://wg21.link/p0003r5) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0004R1 移除已取代的 Iostreams 別名](https://wg21.link/p0004r1) | VS 2015.2 <sup>[rem](#note_rem)</sup> |
+| &nbsp;&nbsp;[P0005R4 not_fn()](https://wg21.link/p0005r4)<br/>&nbsp;&nbsp;[P0358R1 not_fn() 的修正](https://wg21.link/p0358r1) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0006R0 類型特性的變數範本 (is_same_v 等等)](https://wg21.link/p0006r0) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0007R1 as_const()](https://wg21.link/p0007r1) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0013R1 邏輯運算子類型特性 (conjunction 等等)](https://wg21.link/p0013r1) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0024R2 平行演算法](https://wg21.link/p0024r2)<br/>&nbsp;&nbsp;[P0336R1 重新命名平行執行原則](https://wg21.link/p0336r1)<br/>&nbsp;&nbsp;[P0394R4 針對例外狀況，平行演算法應使用 terminate()](https://wg21.link/p0394r4)<br/>&nbsp;&nbsp;[P0452R1 統一 \<numeric> 平行演算法](https://wg21.link/p0452r1) \(英文\) | VS 2017 15.7 |
+| &nbsp;&nbsp;[P0025R1 clamp()](https://wg21.link/p0025r1) | VS 2015.3 |
+| &nbsp;&nbsp;[P0030R1 hypot(x, y, z)](https://wg21.link/p0030r1) | VS 2017 15.7 |
+| &nbsp;&nbsp;[P0031R0 \<array> (再次說明) 和 \<iterator> 的 constexpr](https://wg21.link/p0031r0) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0032R3 variant/any/optional 的同質性介面](https://wg21.link/p0032r3) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0033R1 改寫 enable_shared_from_this](https://wg21.link/p0033r1) | VS 2017 15.5 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0040R3 擴充記憶體管理工具](https://wg21.link/p0040r3) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0063R3 C11 標準程式庫](https://wg21.link/p0063r3) | VS 2015 <sup>[C11](#note_C11)、[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0067R5 基礎字串轉換](https://wg21.link/p0067r5) | VS 2019 16.4 <sup> [charconv](#note_charconv)</sup> |
+| &nbsp;&nbsp;[P0074R0 owner_less\<>](https://wg21.link/p0074r0) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0077R2 is_callable、is_nothrow_callable](https://wg21.link/p0077r2) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0083R3 接合對應和集合](https://wg21.link/p0083r3)<br/>&nbsp;&nbsp;[P0508R0 釐清 insert_return_type](https://wg21.link/p0508r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0084R2 Emplace 傳回型別](https://wg21.link/p0084r2) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0088R3 \<variant>](https://wg21.link/p0088r3) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0092R1 \<chrono> floor()、ceil()、round()、abs()](https://wg21.link/p0092r1) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0152R1 atomic::is_always_lock_free](https://wg21.link/p0152r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0154R1 hardware_destructive_interference_size 等等](https://wg21.link/p0154r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0156R0 Variadic lock_guard](https://wg21.link/p0156r0) | VS 2015.2 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0156R2 將 Variadic lock\_guard 重新命名為 scoped\_lock](https://wg21.link/p0156r2) \(英文\) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0163R0 shared_ptr::weak_type](https://wg21.link/p0163r0) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0174R2 取代不必要的程式庫組件](https://wg21.link/p0174r2) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0185R1 is_swappable、is_nothrow_swappable](https://wg21.link/p0185r1) | VS 2015.3 |
+| &nbsp;&nbsp;[P0209R2 make_from_tuple()](https://wg21.link/p0209r2) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0218R1 \<filesystem>](https://wg21.link/p0218r1)<br/>&nbsp;&nbsp;[P0219R1 適用於 Filesystem 的相對路徑](https://wg21.link/p0219r1)<br/>&nbsp;&nbsp;[P0317R1 針對檔案系統的目錄項目快取](https://wg21.link/p0317r1) \(英文\)<br/>&nbsp;&nbsp;[P0392R0 支援 Filesystem 路徑的 string_view](https://wg21.link/p0392r0)<br/>&nbsp;&nbsp;[P0430R2 支援非 POSIX 檔案系統](https://wg21.link/p0430r2) \(英文\)<br/>&nbsp;&nbsp;[P0492R2 解決檔案系統的 NB 註解](https://wg21.link/p0492r2) \(英文\) | VS 2017 15.7 <sup>[E](#note_E)</sup> |
+| &nbsp;&nbsp;[P0220R1 程式庫基本概念 V1](https://wg21.link/p0220r1) | VS 2017 15.6 |
+| &nbsp;&nbsp;[P0226R1 數學特殊函式](https://wg21.link/p0226r1) | VS 2017 15.7 |
+| &nbsp;&nbsp;[P0254R2 整合 string_view 和 std::string](https://wg21.link/p0254r2) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0258R2 has_unique_object_representations](https://wg21.link/p0258r2) | VS 2017 15.3 <sup>[G](#note_G)</sup> |
+| &nbsp;&nbsp;[P0272R1 非常數 basic_string::data()](https://wg21.link/p0272r1) | VS 2015.3 |
+| &nbsp;&nbsp;[P0295R0 gcd()、lcm()](https://wg21.link/p0295r0) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0298R3 std::byte](https://wg21.link/p0298r3) \(英文\) | VS 2017 15.3 <sup>[17](#note_17)、&nbsp;[位元組](#note_byte)</sup> |
+| &nbsp;&nbsp;[P0302R1 移除 std::function 中的配置器支援](https://wg21.link/p0302r1) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0307R2 再次說明如何使用 Optional >=](https://wg21.link/p0307r2) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0393R3 如何使用 Variant >=](https://wg21.link/p0393r3) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0403R1 適用於 \<string_view> ("meow"sv 等) 的 UDL](https://wg21.link/p0403r1) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>、shared_ptr\<T[N]>](https://wg21.link/p0414r2)<br/>&nbsp;&nbsp;[P0497R0 修正陣列的 shared_ptr](https://wg21.link/p0497r0) | VS 2017 15.5 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0418R2 不可部分完成的 compare_exchange memory_order 需求](https://wg21.link/p0418r2) | VS 2017 15.3 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0426R1 char_traits 的 constexpr](https://wg21.link/p0426r1) | VS 2017 15.7 |
+| &nbsp;&nbsp;[P0433R2 將針對類別樣板的樣板推斷整合至標準程式庫](https://wg21.link/p0433r2) \(英文\)<br/>&nbsp;&nbsp;[P0739R0 改善針對標準程式庫的類別樣板引數推斷整合](https://wg21.link/p0739r0) \(英文\) | VS 2017 15.7 |
+| &nbsp;&nbsp;[P0435R1 檢修 common_type](https://wg21.link/p0435r1)<br/>&nbsp;&nbsp;[P0548R1 調校 common\_type 和 duration](https://wg21.link/p0548r1) \(英文\) | VS 2017 15.3 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0504R0 重新認識 in_place_t/in_place_type_t\<T>/in_place_index_t\<I>](https://wg21.link/p0504r0) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0505R0 \<chrono> (再次說明) 的 constexpr](https://wg21.link/p0505r0) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0510R0 拒絕空白變異、陣列、參考和不完整類型](https://wg21.link/p0510r0) | VS 2017 15.0 |
+| &nbsp;&nbsp;[P0513R0 停用 hash](https://wg21.link/p0513r0)<br/>&nbsp;&nbsp;[P0599R1 noexcept 雜湊](https://wg21.link/p0599r1) \(英文\) | VS 2017 15.3 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0516R0 將 shared_future 複製標記為 noexcept](https://wg21.link/p0516r0) | VS 2017 15.3 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0517R0 從 future_errc 建構 future_error](https://wg21.link/p0517r0) | VS 2017 15.3 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0521R0 取代 shared_ptr::unique()](https://wg21.link/p0521r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0558R1 解決不可部分完成\<T> 具名基底類別不一致](https://wg21.link/p0558r1) | VS 2017 15.3 <sup>[14](#note_14)</sup> |
+| &nbsp;&nbsp;[P0595R2 std::is_constant_evaluated()](https://wg21.link/P0595R2) | VS 2019 16.5 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0602R4 在可變/選用中傳播複製/移動 Triviality](https://wg21.link/P0602R4) | VS 2017 15.3<sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0604R0 將 is\_callable/result\_of 變更為 invoke\_result、is\_invocable、is\_nothrow\_invocable](https://wg21.link/p0604r0) \(英文\) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0607R0 適用於標準程式庫的內嵌變數](https://wg21.link/p0607r0) \(英文\) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0618R0 取代 \<codecvt>](https://wg21.link/p0618r0) \(英文\) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[P0682R1 修復基礎字串轉換修復基礎字串轉換](https://wg21.link/P0682R1) | VS 2015 15.7 <sup>[17](#note_17)</sup> |
+| __C++14 標準程式庫功能__ | __支援__ |
+| &nbsp;&nbsp;[N3462 適合 SFINAE 的 result_of](https://wg21.link/n3462) | VS 2015.2 |
+| &nbsp;&nbsp;[N3302 \<complex> 的 constexpr](https://wg21.link/n3302) | VS 2015 |
+| &nbsp;&nbsp;[N3469 \<chrono> 的 constexpr](https://wg21.link/n3469) | VS 2015 |
+| &nbsp;&nbsp;[N3470 \<array> 的 constexpr](https://wg21.link/n3470) | VS 2015 |
+| &nbsp;&nbsp;[N3471 \<initializer_list>、\<tuple>、\<utility> 的 constexpr](https://wg21.link/n3471) | VS 2015 |
+| &nbsp;&nbsp;[N3545 integral_constant::operator()()](https://wg21.link/n3545) | VS 2015 |
+| &nbsp;&nbsp;[N3642 適用於 \<chrono>、\<string> 的 UDL (1729ms、"meow"s 等等)](https://wg21.link/n3642) | VS 2015 |
+| &nbsp;&nbsp;[N3644 Null 正向迭代器](https://wg21.link/n3644) | VS 2015 |
+| &nbsp;&nbsp;[N3654 quoted()](https://wg21.link/n3654) | VS 2015 |
+| &nbsp;&nbsp;[N3657 異質關聯查閱](https://wg21.link/n3657) | VS 2015 |
+| &nbsp;&nbsp;[N3658 integer_sequence](https://wg21.link/n3658) | VS 2015 |
+| &nbsp;&nbsp;[N3659 shared_mutex (Timed)](https://wg21.link/n3659) | VS 2015 |
+| &nbsp;&nbsp;[N3668 exchange()](https://wg21.link/n3668) | VS 2015 |
+| &nbsp;&nbsp;[N3669 修正未含 const 的 constexpr 成員函式](https://wg21.link/n3669) | VS 2015 |
+| &nbsp;&nbsp;[N3670 get\<T>()](https://wg21.link/n3670) | VS 2015 |
+| &nbsp;&nbsp;[N3671 雙重範圍 equal()、is_permutation()、mismatch()](https://wg21.link/n3671) | VS 2015 |
+| &nbsp;&nbsp;[N3778 依大小調整的解除配置](https://wg21.link/n3778) | VS 2015 |
+| &nbsp;&nbsp;[N3779 適用於 \<complex> 的 UDL (3.14i 等等)](https://wg21.link/n3779) | VS 2015 |
+| &nbsp;&nbsp;[N3789 \<functional> 的 constexpr](https://wg21.link/n3789) | VS 2015 |
+| &nbsp;&nbsp;[N3887 tuple_element_t](https://wg21.link/n3887) | VS 2015 |
+| &nbsp;&nbsp;[N3891 重新命名 shared_mutex (Timed) 為 shared_timed_mutex](https://wg21.link/n3891) | VS 2015 |
+| &nbsp;&nbsp;[N3346 容器元素的最低需求](https://wg21.link/n3346) | VS 2013 |
+| &nbsp;&nbsp;[N3421 透明運算子函式 (less\<> 等等)](https://wg21.link/n3421) | VS 2013 |
+| &nbsp;&nbsp;[N3655 適用於 \<type_traits> 的別名範本 (decay_t 等等)](https://wg21.link/n3655) | VS 2013 |
+| &nbsp;&nbsp;[N3656 make_unique()](https://wg21.link/n3656) | VS 2013 |
 
 列出的一組論文會指出標準功能，以及一或多個已核准的改進或擴充。 這些功能皆會一起實作。
 
@@ -349,6 +381,7 @@ __VS 2019 16.1__表示 Visual Studio 2019 版本16.1 中支援的功能。
 __VS 2019 16.2__表示 Visual Studio 2019 版本16.2 中支援的功能。
 __VS 2019 16.3__表示 Visual Studio 2019 版本16.3 中支援的功能。
 __VS 2019 16.4__表示 Visual Studio 2019 版本16.4 中支援的功能。
+__VS 2019 16.5__表示 Visual Studio 2019 版本16.5 中支援的功能。
 
 ### <a name="notes"></a>注意
 

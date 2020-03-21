@@ -2,20 +2,20 @@
 title: 逐步解說：矩陣乘法
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518487"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075713"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
 
 此逐步解說示範如何使用C++ AMP 來加速矩陣乘法的執行。 呈現兩種演算法，其中一個不會並排顯示，另一種則是平鋪。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
-在開始之前：
+開始之前：
 
 - 閱讀[ C++ AMP 總覽](../../parallel/amp/cpp-amp-overview.md)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "76518487"
 
 - 請確定您至少執行 Windows 7 或 Windows Server 2008 R2。
 
-### <a name="to-create-the-project"></a>建立專案
+### <a name="to-create-the-project"></a>若要建立專案
 
 建立新專案的指示會根據您已安裝的 Visual Studio 版本而有所不同。 請確定您在左上角將版本選取器設定為正確的版本。
 
@@ -33,7 +33,7 @@ ms.locfileid: "76518487"
 
 1. 在功能表列上 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**建立新的專案**] 對話方塊。
 
-1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。 
+1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。
 
 1. 從篩選過的專案類型清單中，選擇 [**空白專案**]，然後選擇 **[下一步]** 。 在下一個頁面的 [**名稱**] 方塊中，輸入*MatrixMultiply*以指定專案的名稱，並視需要指定專案位置。
 
@@ -320,7 +320,7 @@ A 和 B 的產品現在可以撰寫和計算，如下所示：
 
 1. 按**空格鍵**以結束應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [逐步解說：偵錯 C++ AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419382"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077731"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -17,9 +17,9 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker-end
 
-本主題描述如何設定 C++ Linux 專案，如[在 Visual Studio 中建立新的 C++ Linux 專案](create-a-new-linux-project.md)所述。 針對 CMake Linux 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。 
+本主題描述如何設定 C++ Linux 專案，如[在 Visual Studio 中建立新的 C++ Linux 專案](create-a-new-linux-project.md)所述。 針對 CMake Linux 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
 
-您可以設定 Linux 專案，以實體 Linux 機器、虛擬機器，或[適用於 Linux 的 Windows 子系統](/windows/wsl/about) (WSL) 為目標。 
+您可以設定 Linux 專案，以實體 Linux 機器、虛擬機器，或[適用於 Linux 的 Windows 子系統](/windows/wsl/about) (WSL) 為目標。
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ![建置事件](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> 適用於遠端系統標頭的 IntelliSense
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> 適用於遠端系統標頭的 IntelliSense
 
 當您在 [連線管理員] 中新增連線時，Visual Studio 會自動偵測遠端系統上編譯器的 Include 目錄。 Visual Studio 接著會壓縮這些檔案，並將其複製到本機 Windows 電腦上的目錄中。 之後，每當您在 Visual Studio 或 CMake 專案中使用該連線時，這些目錄中的標頭就會用來提供 IntelliSense。
 

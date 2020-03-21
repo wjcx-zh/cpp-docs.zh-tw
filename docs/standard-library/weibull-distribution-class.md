@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688517"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075534"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution 類別
 
@@ -70,7 +70,7 @@ class weibull_distribution
 
 ### <a name="parameters"></a>參數
 
-*RealType* \
+*RealType*\
 浮點結果類型，預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
@@ -84,7 +84,7 @@ class weibull_distribution
 
 屬性函式 `a()` 和 `b()` 會針對儲存的分佈參數 *a* 和 *b* 分別傳回各自的值。
 
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。
+屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。
 
@@ -94,7 +94,7 @@ class weibull_distribution
 
 如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需 Weibull 分配的詳細資訊，請參閱 Wolfram MathWorld 文章 [Weibull 分配 (英文)](http://mathworld.wolfram.com/WeibullDistribution.html)。
+如需 Weibull 分配的詳細資訊，請參閱 Wolfram MathWorld 文章 [Weibull 分配 (英文)](https://mathworld.wolfram.com/WeibullDistribution.html)。
 
 ## <a name="example"></a>範例
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 第一次執行：
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<random>
+**標頭：** \<隨機 >
 
 **命名空間:** std
 
-## <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -225,10 +225,10 @@ explicit weibull_distribution(const param_type& parm);
 *\*
 `a` 分佈參數。
 
-*b* \
+*b*\
 `b` 分佈參數。
 
-*parm* \
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -237,9 +237,9 @@ explicit weibull_distribution(const param_type& parm);
 
 第一個建構函式建構的物件，其預存的 `a` 值具有 *a* 值，而其預存的 `b` 值具有 *b* 值。
 
-第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
+第二個建構函式會建構其中儲存的參數是初始化自 *parm* 的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
 
 儲存分佈的參數。
 
@@ -260,10 +260,10 @@ struct param_type {
 *\*
 `a` 分佈參數。
 
-*b* \
+*b*\
 `b` 分佈參數。
 
-*right* \
+*right*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -272,6 +272,6 @@ struct param_type {
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<random>](../standard-library/random.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 9e8a671a7fe67150e1b867c62231173429f7b6ed
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415935"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078534"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>如何：在命令列上啟用64位、x64 託管的 MSVC 工具組
 
@@ -25,7 +25,7 @@ Visual Studio 包含 C++編譯器、連結器和其他工具，可用來建立�
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>使用 64 位元架構的開發人員命令提示字元捷徑
 
-若要在 Windows 10 上存取這些命令提示字元，請在 [開始] 功能表上開啟您的 Visual Studio 版本的資料夾 (例如 **Visual Studio 2019**)，然後選擇其中一個 x64 原生或跨平台工具開發人員命令提示字元。 
+若要在 Windows 10 上存取這些命令提示字元，請在 [開始] 功能表上開啟您的 Visual Studio 版本的資料夾 (例如 **Visual Studio 2019**)，然後選擇其中一個 x64 原生或跨平台工具開發人員命令提示字元。
 
 ![x64 Native Tools 命令提示字元](media/x64-native-tools-command-prompt.png "[開始] 功能表中的 x64 原生工具")
 

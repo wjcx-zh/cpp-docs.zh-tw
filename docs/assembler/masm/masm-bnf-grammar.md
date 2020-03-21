@@ -4,12 +4,12 @@ description: 適用于 x64 之 MASM 的 BNF 描述。
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322803"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075469"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Microsoft 巨集群組合器 BNF 文法
 
@@ -63,10 +63,10 @@ BNF 文法允許遞迴定義。 例如，文法會使用 qualifiedType 做為 qu
 &nbsp;&nbsp;&nbsp;&nbsp;*segmentRegister* ： *assumeSegVal*
 
 *assumeSegVal*\
-&nbsp;&nbsp;&nbsp;&nbsp;*frameExpr* | 不會**發生** **任何**錯誤
+&nbsp;&nbsp;&nbsp;&nbsp;*frameExpr* | 不會**發生** **任何**錯誤 | 
 
 *assumeVal*\
-&nbsp;&nbsp;&nbsp;&nbsp;*qualifiedType* | 不會**發生** **任何**錯誤
+&nbsp;&nbsp;&nbsp;&nbsp;*qualifiedType* | 不會**發生** **任何**錯誤 | 
 
 *bcdConst*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *sign* ⟧ *decNumber*
@@ -218,7 +218,7 @@ BNF 文法允許遞迴定義。 例如，文法會使用 qualifiedType 做為 qu
 &nbsp;&nbsp;&nbsp;&nbsp;*generalDir* | *segmentDef*
 
 *directiveList*\
-&nbsp;&nbsp; *&nbsp;&nbsp;指示*詞 | *directiveList*指示詞
+&nbsp;&nbsp; *&nbsp;&nbsp;指示*詞 | *directiveList* *directive*指示詞
 
 *距離*\
 &nbsp;&nbsp;&nbsp;&nbsp;*nearfar* | **NEAR16** | **NEAR32** | **FAR16** | **FAR32**
@@ -676,7 +676,7 @@ BNF 文法允許遞迴定義。 例如，文法會使用 qualifiedType 做為 qu
 &nbsp;&nbsp;&nbsp;&nbsp;*識別碼*;; \
 
 *nearfar*\
-&nbsp;&nbsp;&nbsp;&nbsp;**近** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**近** | **FAR**
 
 *nestedStruct*\
 &nbsp;&nbsp;&nbsp;&nbsp;*structHdr* ⟦ *id* ⟧;; \
@@ -942,7 +942,7 @@ BNF 文法允許遞迴定義。 例如，文法會使用 qualifiedType 做為 qu
 
 *specialChars*\
  : | . |⟦ |⟧ |( | )|< |> |{ | }\
-&nbsp;&nbsp;&nbsp;&nbsp;|+ |- |/ |* |& |% | !\
+&nbsp;&nbsp;&nbsp;&nbsp;|+ |- |/ |* |&AMP; |% | !\
 &nbsp;&nbsp;&nbsp;&nbsp;|' |\ |= | ; |, |"\
 &nbsp;&nbsp;&nbsp;&nbsp;| *whiteSpaceCharacter*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *endOfLine*
@@ -1071,4 +1071,3 @@ BNF 文法允許遞迴定義。 例如，文法會使用 qualifiedType 做為 qu
 
 *xmmRegister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 |XMM1 |XMM2 |XMM3 |XMM4 |XMM5 |XMM6 |XMM7 |XMM8 |XMM9 |XMM10 |XMM11 |XMM12 |XMM13 |XMM14 |XMM15\
-

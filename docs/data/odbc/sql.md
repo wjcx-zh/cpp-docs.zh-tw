@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 5e31105e682e8acecbdc0da461614fc46e4ae227
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707822"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079765"
 ---
 # <a name="sql"></a>SQL
 
@@ -23,7 +23,7 @@ SQL (結構化查詢語言) 使一種與關聯式資料庫進行通訊的方式�
 
 SQL 陳述式會以 **CREATE** 或 **SELECT**之類的關鍵字指令動詞作為開頭。 SQL 是一種功能非常強大的語言；一個陳述式即可影響整個資料表。
 
-SQL 有許多版本，每個版本都是以特定的 DBMS 作為開發概念。 MFC 資料庫類別會辨識一組與 X/Open 和 SQL 存取群組通用應用程式環境 (CAE) SQL 草擬規格 (1991) 對應的 SQL 陳述式。 如需有關這些陳述式語法的資訊，請參閱 MSDN Library CD 上 *ODBC SDK* ＜程式設計人員參考＞中的＜附錄 C＞。
+SQL 有許多版本，每個版本都是以特定的 DBMS 作為開發概念。 MFC 資料庫類別會辨識一組與 X/Open 和 SQL 存取群組通用應用程式環境 (CAE) SQL 草擬規格 (1991) 對應的 SQL 陳述式。 如需這些語句語法的相關資訊，請參閱 MSDN Library CD 上*ODBC SDK*程式設計*人員參考*中的附錄 C。
 
 本主題將說明：
 
@@ -33,14 +33,14 @@ SQL 有許多版本，每個版本都是以特定的 DBMS 作為開發概念。 
 
 - [資料庫類別如何使用 SQL](#_core_how_the_database_classes_use_sql)。
 
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> 開放式資料庫連接 (ODBC)
+##  <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a> 開放式資料庫連接 (ODBC)
 
 這些資料庫類別是以 ODBC 實作的，它會在呼叫層級介面使用 SQL，而不是在程式碼中內嵌 SQL 命令。 ODBC 會使用 SQL 透過 ODBC 驅動程式與[資料來源](../../data/odbc/data-source-odbc.md)進行通訊。 這些驅動程式會解譯 SQL 並視需要轉譯它，以搭配特定資料格式 (例如 Microsoft Access) 使用。 如需有關 ODBC 如何使用 SQL 的詳細資訊，請參閱 MSDN Library CD 上的 [ODBC](../../data/odbc/odbc-basics.md) 和 ODBC ＜程式設計人員參考＞。
 
-##  <a name="_core_the_database_classes"></a> 資料庫類別
+##  <a name="database-classes"></a><a name="_core_the_database_classes"></a> 資料庫類別
 
-> [!NOTE] 
-> Visual Studio 2019 和更新版本中未提供「MFC ODBC 消費者」精靈。 您仍然可以手動建立消費者。
+> [!NOTE]
+> Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
 資料庫類別的設計目的是要讓您操作和更新現有[資料來源](../../data/odbc/data-source-odbc.md)中的資料。 [MFC 應用程式精靈](../../mfc/reference/database-support-mfc-application-wizard.md)、[MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (透過 [新增類別] 來存取) 及資料庫類別會為您建構大部分 SQL 陳述式。
 
@@ -64,13 +64,13 @@ SQL 有許多版本，每個版本都是以特定的 DBMS 作為開發概念。 
 
 如果類別無法辨識 `CRecordset::Open` 中使用者提供的陳述式，系統就會將其解譯為資料表名稱。
 
-如需架構如何建構 SQL 陳述式的說明，請參閱[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) 和 [SQL：自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+如需架構如何構造 SQL 語句的說明，請參閱[記錄集：記錄集選取記錄（odbc）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)和[SQL：自訂記錄集的 SQL 語句（odbc）](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
-SQL 資料庫使用的資料類型與 C 和 C++ 中使用的資料類型類似。 如需了解這些相似性的討論，請參閱 [SQL：SQL 和 C++ 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
+SQL 資料庫使用的資料類型與 C 和 C++ 中使用的資料類型類似。 如需這些相似之處的討論，請參閱[sql C++ ： Sql 和資料類型（ODBC）](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
 
-您可以在 MSDN Library CD 上 *ODBC SDK*＜程式設計人員參考＞中，找到 SQL 的相關詳細資訊，包括支援的 SQL 陳述式清單、資料類型、SQL 核心文法，以及建議的 SQL 相關出版品讀物清單。
+您可以在 MSDN Library CD 上的*ODBC SDK*程式設計*人員參考*中找到有關 sql 的詳細資訊，包括支援的 sql 語句清單、資料類型、sql core 文法，以及建議的 sql 發行集閱讀清單。
 
-##  <a name="_core_how_the_database_classes_use_sql"></a> 資料庫類別如何使用 SQL
+##  <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a> 資料庫類別如何使用 SQL
 
 您從資料庫類別衍生的資料錄集會使用 ODBC 來與資料來源進行通訊，而 ODBC 則會藉由傳送 SQL 陳述式，從資料來源擷取記錄。 本主題說明資料庫類別與 SQL 之間的關聯性。
 
@@ -80,7 +80,7 @@ SQL 資料庫使用的資料類型與 C 和 C++ 中使用的資料類型類似�
 
 下列主題提供有關資料庫類別如何使用 SQL 的詳細資訊：
 
-- [SQL：自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL：自訂記錄集的 SQL 語句（ODBC）](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 - [SQL：SQL 和 C++ 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 

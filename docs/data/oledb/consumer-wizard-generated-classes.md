@@ -4,15 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0d3bd03fb352f2466f0ae48ec0ca99cf66fbb416
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707757"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079712"
 ---
 # <a name="consumer-wizard-generated-classes"></a>消費者精靈產生的類別
-
 
 ::: moniker range="vs-2019"
 
@@ -28,7 +27,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 - 如果您選取屬性化消費者，使用者記錄類別的名稱將以 "_*ClassName*Accessor" 格式表示，且將會插入。 也就是說，您將只能在文字編輯器中檢視命令類別；您只能以插入程式碼的方式檢視使用者記錄類別。 如需檢視插入程式碼的相關資訊，請參閱 [插入程式碼偵錯](/visualstudio/debugger/how-to-debug-injected-code)。
 
-下列範例使用在 `Northwind` 資料庫的 `Products` 資料表上建立的命令類別，來示範命令類別和使用者記錄類別的精靈產生的消費者程式碼。
+下列範例使用在 `Products` 資料庫的 `Northwind` 資料表上建立的命令類別，來示範命令類別和使用者記錄類別的精靈產生的消費者程式碼。
 
 ## <a name="templated-user-record-classes"></a>樣板化的使用者記錄類別
 
@@ -89,7 +88,7 @@ public:
 
 ### <a name="rowset-properties"></a>資料列集屬性
 
-接下來，精靈會設定資料列集屬性。 如果您在 [ATL OLE DB 消費者精靈] 中選取了 [變更] 、[插入] 或 [刪除]  ，在這裡會設定適當的屬性 (一律會設定 DBPROP_IRowsetChange，然後分別為 DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT 和/或 DBPROPVAL_UP_DELETE 的其中一或多個)。
+接下來，精靈會設定資料列集屬性。 如果您在 [ATL OLE DB 消費者精靈] 中選取了 [變更]、[插入]或 [刪除] ，在這裡會設定適當的屬性 (一律會設定 DBPROP_IRowsetChange，然後分別為 DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT 和/或 DBPROPVAL_UP_DELETE 的其中一或多個)。
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)

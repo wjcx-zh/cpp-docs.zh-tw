@@ -6,15 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707008"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076217"
 ---
 # <a name="options-atl-property-page-wizard"></a>選項, ATL 屬性頁精靈
-
 
 ::: moniker range="vs-2019"
 
@@ -32,7 +31,7 @@ Visual Studio 2019 及更新版本中未提供 ATL 屬性頁精靈。
 
    如需詳細資訊，請參閱[指定專案的執行緒模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)。
 
-   |選項|說明|
+   |選項|描述|
    |------------|-----------------|
    |**Single**|屬性頁只會在主要 COM 執行緒中執行。|
    |**Apartment**|屬性頁可以在任何單一 Apartment 執行緒中建立。 預設值。|
@@ -41,10 +40,10 @@ Visual Studio 2019 及更新版本中未提供 ATL 屬性頁精靈。
 
    增加對您要建立之屬性頁的彙總支援。 如需詳細資訊，請參閱 [Aggregation](../../atl/aggregation.md)。
 
-   |選項|說明|
+   |選項|描述|
    |------------|-----------------|
    |**是**|建立可以彙總的屬性頁。|
-   |**No**|建立無法彙總的屬性頁。|
+   |**否**|建立無法彙總的屬性頁。|
    |**Only**|建立僅能透過彙總具現化的屬性頁。|
 
 ::: moniker-end

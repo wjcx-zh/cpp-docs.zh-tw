@@ -2,12 +2,12 @@
 title: 在 Android 和 iOS 上建置 OpenGL ES 應用程式
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177672"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079662"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>在 Android 和 iOS 上建置 OpenGL ES 應用程式
 
@@ -109,7 +109,7 @@ ms.locfileid: "78177672"
 
    產生的 Android Native Activity 應用程式和程式庫專案C++會將共用程式碼放在動態連結程式庫中。 其中包含「粘連」程式碼，可與 Android 平臺互動。 大部分的應用程式程式碼都位於程式庫中。 資訊清單、資源和組建指示位於封裝專案中。 共用程式碼會從 NativeActivity 專案中的 main.cpp 呼叫。 如需如何對 Android Native Activity 進行程式設計的詳細資訊，請參閱 Android 開發人員 NDK 的 [概念](https://developer.android.com/ndk/guides/concepts.html) 頁面。
 
-   Visual Studio 使用 Android NDK 建立 Android Native Activity 專案。 它會使用 Clang 作為平臺工具組。 Visual Studio 會將專案的屬性對應至目標平臺上的編譯、連結和偵錯工具命令。 如需詳細資料，請開啟 MyOpenGLESApp.Android.NativeActivity 專案的 [屬性頁] 對話方塊。 如需有關命令列參數的詳細資訊，請參閱 [Clang Compiler 使用者手冊](http://clang.llvm.org/docs/UsersManual.html)。
+   Visual Studio 使用 Android NDK 建立 Android Native Activity 專案。 它會使用 Clang 作為平臺工具組。 Visual Studio 會將專案的屬性對應至目標平臺上的編譯、連結和偵錯工具命令。 如需詳細資料，請開啟 MyOpenGLESApp.Android.NativeActivity 專案的 [屬性頁] 對話方塊。 如需有關命令列參數的詳細資訊，請參閱 [Clang Compiler 使用者手冊](https://clang.llvm.org/docs/UsersManual.html)。
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>在 iOS 裝置上建置並執行 iOS 應用程式
 

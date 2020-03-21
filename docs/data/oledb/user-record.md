@@ -8,16 +8,16 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525257"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079009"
 ---
 # <a name="user-record"></a>使用者資料錄
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 及更新版本中未提供 ATL OLE DB 提供者精靈。
 
 使用者記錄會提供代表資料列集之資料行資料的程式碼和資料結構。 使用者記錄是在編譯時期或執行階段建立的。 當您使用 **ATL OLE DB 提供者精靈**建立提供者時，精靈會建立預設使用者記錄，看起來如下所示 (假設您指定 *MyProvider* 的提供者名稱 [簡短名稱])：
@@ -43,7 +43,7 @@ OLE DB 提供者範本會處理與用戶端互動的所有 OLE DB 特性。 若�
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 這相當於：

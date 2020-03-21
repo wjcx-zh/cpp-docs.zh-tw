@@ -5,16 +5,16 @@ ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301583"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079929"
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 
-本參考說明在C++ Microsoft C++編譯器中執行的程式設計語言。 組織是根據 Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO C++國際標準（ISO/IEC FDIS 14882）上[*標注C++的參考手冊*](http://www.stroustrup.com/arm.html)。 已包含 Microsoft 專有 C++ 語言功能實作。
+本參考說明在C++ Microsoft C++編譯器中執行的程式設計語言。 組織是根據 Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO C++國際標準（ISO/IEC FDIS 14882）上*標注C++的參考手冊*。 已包含 Microsoft 專有 C++ 語言功能實作。
 
 如需現代化C++程式設計實務的總覽，請參閱[歡迎C++回到](welcome-back-to-cpp-modern-cpp.md)。
 
@@ -24,7 +24,7 @@ ms.locfileid: "75301583"
 
 - [C++ 運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
 [語彙慣例](../cpp/lexical-conventions.md)<br/>
 C ++ 程式的基本語彙元素：語彙基元、註解、運算子、關鍵字、標點符號、常值。 另外還有檔案轉譯、運算子優先順序/關聯性。
@@ -82,7 +82,7 @@ C++ 例外狀況處理、結構化例外狀況處理 (SEH)、用於撰寫例外�
 Microsoft C++ 專有的修飾詞。 記憶體定址、呼叫慣例、 **naked**函數、擴充的儲存類別屬性（ **__declspec**） **__w64**。
 
 [內嵌組合語言](../assembler/inline/inline-assembler.md)<br/>
-在 __asm 區塊中C++使用元件語言和。
+在 __asm 區塊中C++使用 **__asm**元件語言和。
 
 [編譯器 COM 支援](../cpp/compiler-com-support.md)<br/>
 Microsoft 專有類別和全域函式的參考，可用來支援 COM 類型。
@@ -110,6 +110,6 @@ Microsoft C++編譯器非標準行為的相關資訊。
 [Visual C++ 程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
 各種 Microsoft C++程式庫參考起始頁的連結清單。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

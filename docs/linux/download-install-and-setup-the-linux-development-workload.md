@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966203"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077632"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
@@ -20,11 +20,11 @@ Visual Studio 2017 及更新版本支援 Linux 專案。
 
 ::: moniker range=">=vs-2017"
 
-您可以使用 Windows 上的 Visual Studio IDE 來建立、編輯和偵測C++在遠端 Linux 系統、虛擬機器或[適用于 Linux 的 Windows 子系統](/windows/wsl/about)上執行的專案。 
+您可以使用 Windows 上的 Visual Studio IDE 來建立、編輯和偵測C++在遠端 Linux 系統、虛擬機器或[適用于 Linux 的 Windows 子系統](/windows/wsl/about)上執行的專案。
 
-您可以在使用 CMake 的現有程式碼基底上工作，而不需要將它轉換成 Visual Studio 專案。 如果程式碼基底為跨平台，您可以從 Visual Studio 內將 Windows 和 Linux 鎖定為目標。 例如，您可以使用 Visual Studio 在 Windows 上編輯、建立及偵錯工具代碼，然後快速地為 Linux 的專案重新置放，以在 Linux 環境中建立和偵錯工具。 Linux 標頭檔會自動複製到您的本機電腦，其中 Visual Studio 會使用它們來提供完整的 IntelliSense 支援（語句完成、移至定義等等）。 
- 
-針對上述任何一種情況，**使用 C++ 進行 Linux 開發**工作負載是必要項目。 
+您可以在使用 CMake 的現有程式碼基底上工作，而不需要將它轉換成 Visual Studio 專案。 如果程式碼基底為跨平台，您可以從 Visual Studio 內將 Windows 和 Linux 鎖定為目標。 例如，您可以使用 Visual Studio 在 Windows 上編輯、建立及偵錯工具代碼，然後快速地為 Linux 的專案重新置放，以在 Linux 環境中建立和偵錯工具。 Linux 標頭檔會自動複製到您的本機電腦，其中 Visual Studio 會使用它們來提供完整的 IntelliSense 支援（語句完成、移至定義等等）。
+
+針對上述任何一種情況，**使用 C++ 進行 Linux 開發**工作負載是必要項目。
 
 ::: moniker-end
 
@@ -162,7 +162,7 @@ Visual Studio 2017 及更新版本有提供 Linux C++ 開發的支援。
 
 ## <a name="next-steps"></a>後續步驟
 
-您現在已準備好建立或開啟 Linux 專案，並將它設定為在目標系統上執行。 如需詳細資訊，請參閱:
+您現在已準備好建立或開啟 Linux 專案，並將它設定為在目標系統上執行。 如需詳細資訊，請參閱
 
 - [建立新的 Linux 專案](create-a-new-linux-project.md)
 - [設定 Linux CMake 專案](cmake-linux-project.md)

@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927683"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079491"
 ---
 # <a name="manifest-tool-property-pages"></a>資訊清單工具屬性頁
 
-使用這些頁面來指定[mt.exe](/windows/win32/sbscs/mt-exe)的一般選項。 這些頁面會在 [**專案** > **屬性** > 設定] [**屬性** > ] [**資訊清單工具**] 下找到。
+使用這些頁面來指定[mt.exe](/windows/win32/sbscs/mt-exe)的一般選項。 這些頁面會在 **專案** > **屬性** 下找到， > 設定**屬性** > **資訊清單工具**。
 
 ## <a name="general-property-page"></a>一般屬性頁
 
@@ -49,9 +49,9 @@ ms.locfileid: "70927683"
 
 使用 /identity 選項指定識別字串，其中包含 [\<assemblyIdentity> 項目](/visualstudio/deployment/assemblyidentity-element-clickonce-application)的屬性。 識別字串開頭為 `name` 屬性的值，後面接著 *attribute* = *value* 組。 識別字串中的屬性是以逗號分隔。
 
-這是範例身分識別字串：`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+這是範例識別字串： `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>輸入和輸出屬性頁     
+## <a name="input-and-output-property-page"></a>輸入和輸出屬性頁
 
 ###  <a name="additional-manifest-files"></a>其他資訊清單檔案
 
@@ -97,15 +97,15 @@ ms.locfileid: "70927683"
 
 指定是否為 DPI 感知應用程式。 根據預設，對於 MFC 專案此設定為 [是]，其他則為 [否]，因為只有 MFC 專案有內建的 DPI 感知。 如果您新增程式碼來處理不同 DPI 設定，可以將設定覆寫為 [是]。 如果您將非 DPI 感知的應用程式設定為 DPI 感知，您的應用程式可能顯得模糊或變小。
 
-**做**
+**Choices**
 
-- **無**
+- **None**
 - **高 DPI 感知**
 - **每個監視器高 DPI 感知**
 
 ## <a name="isolated-com-property-page"></a>隔離的 COM 屬性頁
 
-如需有關隔離的 COM 的詳細資訊，請 參閱[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和如[何：建立隔離的應用程式以使用](../how-to-build-isolated-applications-to-consume-com-components.md)COM 元件。
+如需隔離 COM 的詳細資訊，請參閱[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和[如何：建立隔離的應用程式以使用 COM 元件](../how-to-build-isolated-applications-to-consume-com-components.md)。
 
 ###  <a name="type-library-file"></a>類型程式庫檔案
 
@@ -136,7 +136,6 @@ ms.locfileid: "70927683"
 ###  <a name="additional-options"></a>其他選項
 
 其他選項
-
 
 ## <a name="see-also"></a>另請參閱
 

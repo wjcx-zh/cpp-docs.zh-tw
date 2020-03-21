@@ -6,19 +6,19 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 8388cd5c8c53a4595dc9b44430077421ee8680bf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707796"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079791"
 ---
 # <a name="selecting-and-manipulating-records"></a>選取和操作資料錄
 
-> [!NOTE] 
-> Visual Studio 2019 和更新版本中未提供「MFC ODBC 消費者」精靈。 您仍然可以手動建立消費者。
+> [!NOTE]
+> Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
-通常當您使用 SQL **SELECT** 陳述式從資料來源選取記錄時，會取得結果集，這是來自某個資料表或查詢的一組記錄。 使用資料庫類別時，您會使用資料錄集物件來選取和存取結果集。 這是您從 [CRecordset](../../mfc/reference/crecordset-class.md) 類別衍生之應用程式特定類別的物件。 當您定義資料錄集類別時，會指定要與其關聯的資料來源、要使用的資料表，以及該資料表的資料行。 「MFC 應用程式精靈」或 [新增類別] (如[新增 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)中所述) 會建立一個具有特定資料來源連線的類別。 精靈會撰寫 `CRecordset` 類別的 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) 成員函式來傳回資料表名稱。
+通常當您使用 SQL **SELECT** 陳述式從資料來源選取記錄時，會取得結果集，這是來自某個資料表或查詢的一組記錄。 使用資料庫類別時，您會使用資料錄集物件來選取和存取結果集。 這是您從 [CRecordset](../../mfc/reference/crecordset-class.md) 類別衍生之應用程式特定類別的物件。 當您定義資料錄集類別時，會指定要與其關聯的資料來源、要使用的資料表，以及該資料表的資料行。 「MFC 應用程式精靈」或 [新增類別] (如[新增 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)中所述) 會建立一個具有特定資料來源連線的類別。 精靈會撰寫 [ 類別的 ](../../mfc/reference/crecordset-class.md#getdefaultsql)GetDefaultSQL`CRecordset` 成員函式來傳回資料表名稱。
 
 藉由在執行階段使用 [CRecordset](../../mfc/reference/crecordset-class.md) 物件，您可以：
 

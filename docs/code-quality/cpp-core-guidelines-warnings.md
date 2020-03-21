@@ -3,12 +3,12 @@ title: C++核心指導方針警告
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
-ms.openlocfilehash: f499374c84973be09e2f02e6d2f2e6d9a6548363
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 544c737470a6578e65e82bb3c8cf1824ec93895f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418827"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079971"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>使用 C++ Core Guidelines 檢查工具
 
@@ -16,7 +16,7 @@ C++核心指導方針是一組可攜的指導方針、規則，以及有關專�
 
 ## <a name="the-c-core-guidelines-project"></a>C++核心指導方針專案
 
-C++核心指導方針是由 Bjarne Stroustrup 和其他人所建立，是安全且C++有效率地使用新式的指南。 這些指導方針強調靜態型別安全和資源安全性。 它們會找出用來消除或減少語言中最容易出錯之部分的方法，並建議如何讓您的程式碼更簡單，並以可靠的方式提供更佳的效能。 這些指導方針是由標準C++基礎所維護。 若要深入瞭解，請參閱[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的檔集、 [ C++核心指導方針](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)和存取C++核心指導方針檔專案檔。
+C++核心指導方針是由 Bjarne Stroustrup 和其他人所建立，是安全且C++有效率地使用新式的指南。 這些指導方針強調靜態型別安全和資源安全性。 它們會找出用來消除或減少語言中最容易出錯之部分的方法，並建議如何讓您的程式碼更簡單，並以可靠的方式提供更佳的效能。 這些指導方針是由標準C++基礎所維護。 若要深入瞭解，請參閱[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的檔集、 [ C++核心指導方針](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)和存取C++核心指導方針檔專案檔。
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>啟用程式C++代碼分析中的核心檢查方針
 
@@ -151,7 +151,7 @@ Microsoft C++編譯器對於 GSL 抑制屬性的支援有限。 它可以用來�
 
 您可以使用命令列選項，藉由指定 `/analyze-`，暫時停用檔案的所有程式碼分析。 這會產生警告， *D9025 以 '/analyze-' 覆寫 '/analyze '* ，這會提醒您稍後重新啟用程式碼分析。
 
-## <a name="corecheck_per_file"></a>在特定C++專案檔上啟用核心指導方針檢查程式
+## <a name="enabling-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>在特定C++專案檔上啟用核心指導方針檢查程式
 
 有時候，進行焦點程式碼分析，並仍然利用 Visual Studio IDE，可能會很有用。 以下是一個範例案例，可用於大型專案以節省組建時間，並可讓您更輕鬆地篩選結果。
 
@@ -219,9 +219,9 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 
 ## <a name="use-the-guideline-support-library"></a>使用指導方針支援程式庫
 
-指導方針支援程式庫的設計可協助您遵循核心指導方針。 GSL 包含的定義可讓您以更安全的替代專案來取代容易出錯的結構。 例如，您可以使用 `span<T>` 類型來取代一組 `T*, length` 的參數。 GSL 可在[http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)取得。 此程式庫是開放原始碼，因此您可以查看來源、進行批註或參與。 您可以在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)找到此專案。
+指導方針支援程式庫的設計可協助您遵循核心指導方針。 GSL 包含的定義可讓您以更安全的替代專案來取代容易出錯的結構。 例如，您可以使用 `span<T>` 類型來取代一組 `T*, length` 的參數。 GSL 可在[https://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)取得。 此程式庫是開放原始碼，因此您可以查看來源、進行批註或參與。 您可以在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)找到此專案。
 
-## <a name="vs2015_corecheck"></a>使用 Visual Studio C++ 2015 專案中的核心檢查指導方針
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>使用 Visual Studio C++ 2015 專案中的核心檢查指導方針
 
 如果您使用 Visual Studio 2015，則C++預設不會安裝核心檢查程式碼分析規則集。 您必須先執行一些額外的步驟，才能啟用C++ Visual Studio 2015 中的核心檢查程式碼分析工具。 Microsoft 使用 Nuget 套件提供 Visual Studio 2015 專案的支援。 此套件的名稱為 CppCoreCheck，並可在[http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck)取得。 此套件要求您至少安裝了 Visual Studio 2015 Update 1。
 

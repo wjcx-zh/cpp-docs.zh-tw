@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2ae1be31233e55aa34d6f3046d90fb2127348c0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153435"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080049"
 ---
 # <a name="lock-class"></a>lock 類別
 
-這個類別會自動採用同步存取的物件處理從數個執行緒的鎖定。  在建構時它會取得鎖定時終結該版本和鎖定。
+這個類別會自動取得鎖定，以便從數個執行緒同步處理物件的存取。  當建立時，它會取得鎖定，並在終結時釋放鎖定。
 
 ## <a name="syntax"></a>語法
 
@@ -33,9 +33,9 @@ ref class lock;
 
 ## <a name="remarks"></a>備註
 
-`lock` 只適用於 CLR 物件，且僅用於 CLR 程式碼中。
+`lock` 僅適用于 CLR 物件，而且只能在 CLR 程式碼中使用。
 
-就內部而言，此鎖定類別會使用<xref:System.Threading.Monitor>來同步存取。 如需詳細資訊，請參閱參考文件。
+就內部而言，lock 類別會使用 <xref:System.Threading.Monitor> 來同步存取。 如需詳細資訊，請參閱參考的文章。
 
 ## <a name="members"></a>成員
 
@@ -43,37 +43,35 @@ ref class lock;
 
 |名稱|描述|
 |---------|-----------|
-|[lock::lock](#lock)|建構`lock`物件，或者等候一段指定的時間，或者完全不要，取得鎖定。|
-|[lock::~lock](#tilde-lock)|Destructs`lock`物件。|
+|[lock::lock](#lock)|在指定的時間內（或完全不是），建立 `lock` 物件，並選擇性地等候永久取得鎖定。|
+|[lock::~lock](#tilde-lock)|Destructs `lock` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |---------|-----------|
-|[lock::acquire](#acquire)|取得物件，或者等候一段指定的時間，或者完全不要，取得鎖定的鎖定。|
-|[lock::is_locked](#is-locked)|指出是否要保留的鎖定。|
+|[lock::acquire](#acquire)|取得物件的鎖定，並選擇性地等候在指定的時間內永遠取得鎖定，或完全不使用。|
+|[lock::is_locked](#is-locked)|指出是否持有鎖定。|
 |[lock::release](#release)|釋放鎖定。|
-|[lock::try_acquire](#try-acquire)|取得等待指定的時間量，且傳回的物件上的鎖定`bool`回報成功的併購而非擲回例外狀況。|
+|[lock::try_acquire](#try-acquire)|取得物件的鎖定，等待指定的時間量，並傳回 `bool` 以回報是否成功，而不是擲回例外狀況。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |---------|-----------|
-|[lock::operator&nbsp;bool](#operator-bool)|使用運算子`lock`條件運算式中。|
+|[lock：： operator&nbsp;bool](#operator-bool)|在條件運算式中使用 `lock` 的運算子。|
 |[lock::operator==](#operator-equality)|等號比較運算子。|
 |[lock::operator!=](#operator-inequality)|不等比較運算子。|
 
 ## <a name="requirements"></a>需求
 
-**標頭檔** \<msclr\lock.h >
+**標頭檔**\<msclr\lock.h >
 
 **命名空間**msclr
 
+## <a name="locklock"></a><a name="lock"></a>lock：： lock
 
-
-## <a name="lock"></a>lock::lock
-
-建構`lock`物件，或者等候一段指定的時間，或者完全不要，取得鎖定。
+在指定的時間內（或完全不是），建立 `lock` 物件，並選擇性地等候永久取得鎖定。
 
 ```cpp
 template<class T> lock(
@@ -99,25 +97,25 @@ template<class T> lock(
 要鎖定的物件。
 
 *_timeout*<br/>
-逾時值以毫秒為單位，或為<xref:System.TimeSpan>。
+超時值（以毫秒為單位）或 <xref:System.TimeSpan>。
 
 ### <a name="exceptions"></a>例外狀況
 
-會擲回<xref:System.ApplicationException>如果取得鎖定並不會發生逾時之前。
+如果未在超時前發生鎖定，則會擲回 <xref:System.ApplicationException>。
 
 ### <a name="remarks"></a>備註
 
-前三個表單的建構函式會嘗試取得的鎖定上`_object`指定的逾時期限內 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。
+第三種形式的函式會嘗試在指定的超時時間內取得 `_object` 的鎖定（如果未指定，則會 <xref:System.Threading.Timeout.Infinite>）。
 
-第四個建構函式的形式不上取得鎖定`_object`。 `lock_later` 隸屬[lock_when 列舉](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或是[lock::try_acquire](../dotnet/lock-try-acquire.md)在此情況下取得的鎖定。
+第四種形式的函式不會在 `_object`上取得鎖定。 `lock_later` 是[lock_when 列舉](../dotnet/lock-when-enum.md)的成員。 在此情況下，請使用[lock：：取得](../dotnet/lock-acquire.md)或[lock：： try_acquire](../dotnet/lock-try-acquire.md)來取得鎖定。
 
-呼叫解構函式時，會自動釋放鎖定。
+呼叫析構函式時，將會自動釋放鎖定。
 
-`_object` 不能是<xref:System.Threading.ReaderWriterLock>。  如果是，編譯器會產生錯誤。
+無法 <xref:System.Threading.ReaderWriterLock>`_object`。  如果是，就會產生編譯器錯誤。
 
 ### <a name="example"></a>範例
 
-此範例會使用類別的單一執行個體跨數個執行緒。 類別本身會使用鎖定，並確定其內部資料的存取為一致的每個執行緒。 主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看任何背景工作執行緒是否仍存在。 主要的應用程式接著會等候所有背景工作執行緒完成其工作之前結束。
+這個範例會在多個執行緒中使用類別的單一實例。 類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_lock.cpp
@@ -205,9 +203,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="tilde-lock"></a>lock::~lock
+## <a name="locklock"></a><a name="tilde-lock"></a>lock：： ~ lock
 
-Destructs`lock`物件。
+Destructs `lock` 物件。
 
 ```cpp
 ~lock();
@@ -215,11 +213,11 @@ Destructs`lock`物件。
 
 ### <a name="remarks"></a>備註
 
-解構函式呼叫[lock::release](../dotnet/lock-release.md)。
+此析構函式會呼叫[lock：： release](../dotnet/lock-release.md)。
 
 ### <a name="example"></a>範例
 
-此範例會使用類別的單一執行個體跨數個執行緒。  類別本身會使用鎖定，並確定其內部資料的存取為一致的每個執行緒。  主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看任何背景工作執行緒是否仍存在。 主要的應用程式接著會等候所有背景工作執行緒完成其工作之前結束。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。  主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -307,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="acquire"></a>lock::acquire
+## <a name="lockacquire"></a><a name="acquire"></a>lock：：取得
 
-取得物件，或者等候一段指定的時間，或者完全不要，取得鎖定的鎖定。
+取得物件的鎖定，並選擇性地等候在指定的時間內永遠取得鎖定，或完全不使用。
 
 ```cpp
 void acquire();
@@ -324,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>參數
 
 *_timeout*<br/>
-逾時值以毫秒為單位，或為<xref:System.TimeSpan>。
+Timeout 值（以毫秒為單位）或 <xref:System.TimeSpan>。
 
 ### <a name="exceptions"></a>例外狀況
 
-會擲回<xref:System.ApplicationException>如果取得鎖定並不會發生逾時之前。
+如果未在超時前發生鎖定，則會擲回 <xref:System.ApplicationException>。
 
 ### <a name="remarks"></a>備註
 
-如果未提供的逾時值的預設逾時是<xref:System.Threading.Timeout.Infinite>。
+如果未提供 timeout 值，預設的 timeout 會是 <xref:System.Threading.Timeout.Infinite>。
 
-如果已取得鎖定，此函式沒有任何作用。
+如果已取得鎖定，則此函式不會執行任何工作。
 
 ### <a name="example"></a>範例
 
-此範例會使用類別的單一執行個體跨數個執行緒。  類別本身會使用鎖定，並確定其內部資料的存取為一致的每個執行緒。 主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看任何背景工作執行緒是否仍存在。 主要的應用程式接著會等候所有背景工作執行緒完成其工作之前結束。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -426,9 +424,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="is-locked"></a>lock::is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>lock：： is_locked
 
-指出是否要保留的鎖定。
+指出是否持有鎖定。
 
 ```cpp
 bool is_locked();
@@ -436,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果鎖定維持，`false`否則。
+如果保留鎖定，`true`，否則 `false`。
 
 ### <a name="example"></a>範例
 
-此範例會使用類別的單一執行個體跨數個執行緒。  類別本身會使用鎖定，並確定其內部資料的存取為一致的每個執行緒。  主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看是否仍存在的任何背景工作執行緒，並等候直到所有的背景工作執行緒結束已完成其工作。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。  主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何背景工作執行緒仍然存在，並等候結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -529,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-bool"></a>lock::operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>lock：： operator bool
 
-使用運算子`lock`條件運算式中。
+在條件運算式中使用 `lock` 的運算子。
 
 ```cpp
 operator bool();
@@ -539,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果鎖定維持，`false`否則。
+如果保留鎖定，`true`，否則 `false`。
 
 ### <a name="remarks"></a>備註
 
-這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全`bool`因為它無法轉換成整數類資料類型。
+這個運算子會實際轉換成 `_detail_class::_safe_bool`，這比 `bool` 更安全，因為它無法轉換成整數類資料類型。
 
 ### <a name="example"></a>範例
 
-此範例會使用類別的單一執行個體跨數個執行緒。  類別本身會使用鎖定，並確定其內部資料的存取為一致的每個執行緒。 主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看任何背景工作執行緒是否仍存在。 主要的應用程式會等候所有背景工作執行緒完成其工作之前結束。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 主要應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -636,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="release"></a>lock::release
+## <a name="lockrelease"></a><a name="release"></a>lock：： release
 
 釋放鎖定。
 
@@ -646,13 +644,13 @@ void release();
 
 ### <a name="remarks"></a>備註
 
-如果要不保留任何鎖定，`release`不執行任何動作。
+如果未保留任何鎖定，`release` 不會執行任何操作。
 
-您不需要明確呼叫此函式。 當`lock`物件超出範圍，其解構函式呼叫`release`。
+您不需要明確呼叫此函式。 當 `lock` 物件超出範圍時，其析構函式會呼叫 `release`。
 
 ### <a name="example"></a>範例
 
-此範例會使用類別的單一執行個體跨數個執行緒。 類別本身會使用鎖定，並確定其內部資料的存取為一致的每個執行緒。 主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看任何背景工作執行緒是否仍存在。 主要的應用程式接著會等候所有背景工作執行緒完成其工作之前結束。
+這個範例會在多個執行緒中使用類別的單一實例。 類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_release.cpp
@@ -740,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="try-acquire"></a>lock::try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>lock：： try_acquire
 
-取得等待指定的時間量，且傳回的物件上的鎖定`bool`回報成功的併購而非擲回例外狀況。
+取得物件的鎖定，等待指定的時間量，並傳回 `bool` 以回報是否成功，而不是擲回例外狀況。
 
 ```cpp
 bool try_acquire(
@@ -756,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>參數
 
 *_timeout*<br/>
-逾時值以毫秒為單位，或為<xref:System.TimeSpan>。
+Timeout 值（以毫秒為單位）或 <xref:System.TimeSpan>。
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已取得鎖定，`false`否則。
+`true` 如果已取得鎖定，則為，否則 `false`。
 
 ### <a name="remarks"></a>備註
 
-如果已取得鎖定，此函式沒有任何作用。
+如果已取得鎖定，則此函式不會執行任何工作。
 
 ### <a name="example"></a>範例
 
-此範例會使用類別的單一執行個體跨數個執行緒。 類別本身會使用鎖定，並確定其內部資料的存取為一致的每個執行緒。 主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看任何背景工作執行緒是否仍存在。 主要的應用程式接著會等候所有背景工作執行緒完成其工作之前結束。
+這個範例會在多個執行緒中使用類別的單一實例。 類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -856,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-equality"></a>lock::operator==
+## <a name="lockoperator"></a><a name="operator-equality"></a>lock：： operator = =
 
 等號比較運算子。
 
@@ -869,11 +867,11 @@ template<class T> bool operator==(
 ### <a name="parameters"></a>參數
 
 *t*<br/>
-要比較相等的物件。
+要比較是否相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回`true`如果`t`等同於鎖定的物件，`false`否則。
+如果 `t` 與鎖定的物件相同 `false`，則傳回 `true`，否則傳回。
 
 ### <a name="example"></a>範例
 
@@ -899,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="operator-inequality"></a>lock::operator!=
+## <a name="lockoperator"></a><a name="operator-inequality"></a>lock：： operator！ =
 
 不等比較運算子。
 
@@ -912,11 +910,11 @@ template<class T> bool operator!=(
 ### <a name="parameters"></a>參數
 
 *t*<br/>
-要比較不相等的物件。
+要比較是否不相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回`true`如果`t`鎖定的物件，與不同`false`否則。
+如果 `t` 與鎖定的物件不同，則會傳回 `true`，否則會傳回 `false`。
 
 ### <a name="example"></a>範例
 

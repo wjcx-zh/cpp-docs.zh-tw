@@ -4,20 +4,18 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400633"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079246"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 C++ 工具和功能
 
-
 ::: moniker range=">=vs-2019"
 
-
-Visual Studio 2019 中提供下列 C++ 功能。 除非另外註明，否則所有功能都適用於所有版本：Visual Studio Community、Visual Studio Professional 和 Visual Studio Enterprise。 有些功能需要特定的工作負載或選擇性元件，您可以使用 Visual Studio 安裝程式來安裝它們。
+Visual Studio 2019 中提供下列 C++ 功能。 除非另有指示，否則所有版本都可使用所有的功能： Visual Studio Community、Visual Studio Professional 和 Visual Studio Enterprise。 有些功能需要特定的工作負載或選擇性元件，您可以使用 Visual Studio 安裝程式來安裝它們。
 
 ## <a name="platforms"></a>平台
 
@@ -35,7 +33,7 @@ Visual Studio 2019 中提供下列 C++ 功能。 除非另外註明，否則所�
 - Clang/LLVM
   - 在 Windows 上，Clang/LLVM 7.0，目標設為 x86 或 x64 (僅限 CMake 支援)。 其他 Clang 版本可能會運作，但未正式支援。
   - 在 Linux 上，散發版本支援的任何 Clang/LLVM 安裝。
- 
+
 ## <a name="c-workloads"></a>C++ 工作負載
 
 Visual Studio 包含下列工作負載以進行 C++ 開發。 您可以安裝這些項目的任何一個或全部，以及其他工作負載，例如 .NET 桌面開發、Python 開發、Azure 開發、Visual Studio 延伸模組開發和其他項目。
@@ -119,7 +117,7 @@ Visual Studio 包含下列工作負載以進行 C++ 開發。 您可以安裝這
 - Unreal Engine 安裝程式
 - Unreal 引擎的 Android IDE 支援
 
-### <a name="mobile-development-with-c"></a>使用 C++ 的行動裝置程式開發
+### <a name="mobile-development-with-c"></a>使用 C++ 進行行動裝置開發
 
 包含：
 - C++ 核心功能
@@ -135,7 +133,6 @@ Visual Studio 包含下列工作負載以進行 C++ 開發。 您可以安裝這
 - Android NDK (R16B) (32 位元)
 - C++ iOS 開發工具
 - IncrediBuild - 組建加速
-
 
 ## <a name="individual-components"></a>個別元件
 
@@ -198,11 +195,11 @@ Windows 桌面：
 - 空白應用程式
 - DirectX 11 和 XAML 應用程式
 - DirectX 11 應用程式
-- DirectX 12 應用程式 
-- 單元測試應用程式 
-- DLL 
-- Windows 執行階段元件 
-- 靜態程式庫 
+- DirectX 12 應用程式
+- 單元測試應用程式
+- DLL
+- Windows Runtime 元件
+- 靜態程式庫
 - Windows 應用程式封裝專案
 
 Linux：
@@ -237,7 +234,7 @@ Linux：
 - Managed 偵錯
 - GPU 使用量
 - 記憶體使用量
-- Remote Debugging
+- 遠端偵錯
 - SQL 偵錯
 - 靜態程式碼分析
 
@@ -248,7 +245,7 @@ Linux：
 - HTML 設計工具/編輯器
 - XML 編輯器
 - 原始程式碼編輯器
-- 生產力功能：重構、EDG IntelliSense 引擎、C++ 程式碼格式化
+- 生產力功能：重構、EDG IntelliSense 引擎、 C++程式碼格式
 - Windows Form 設計工具
 - 資料設計工具
 - 原生資源編輯器 (.rc 檔)
@@ -265,7 +262,7 @@ Linux：
 - 資料設計工具
 - 資料物件
 - Web 服務
-- 伺服器總管
+- Server Explorer
 
 ## <a name="automation-and-extensibility"></a>Automation 與擴充性
 
@@ -307,7 +304,7 @@ Linux：
 
 ||||||
 |-|-|-|-|-|
-|Platform|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio 企業版|
+|平台|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |Windows 桌面||X|X|X|
 |通用 Windows 平台 ((電話、平板電腦、電腦、Xbox、IoT 和 HoloLens))|X||X|X|
 |Linux|X|X|
@@ -318,7 +315,7 @@ Linux：
 
 ## <a name="compilers"></a>編譯器
 
-|編譯器|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|編譯器|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |MSVC 32 位元 x86 編譯器|X|X|X|X|
 |X86_arm 跨平台編譯器|X||X|X|
@@ -327,7 +324,7 @@ Linux：
 
 ## <a name="libraries-and-headers"></a>程式庫和標頭
 
-|程式庫或標頭|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|程式庫或標頭|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Windows 標頭及程式庫和 CRT 程式庫|(X)|X|X|X|
 |C++ 標準程式庫|X|X|X|X|
@@ -339,13 +336,13 @@ Linux：
 
 ## <a name="project-templates"></a>專案範本
 
-|範本|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|[範本]|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |UWP、Windows 8.1、Windows Phone 8.0 的 XAML 範本|X||X|X|
 |Direct3D 應用程式|X||X|X|
 |DLL (通用 Windows)|X||X|X|
 |靜態程式庫 (通用 Windows)|X||X|X|
-|Windows 執行階段元件|X||X|X|
+|Windows Runtime 元件|X||X|X|
 |單元測試應用程式 (通用 Windows)|X||X|X|
 |ATL 專案|||X|X|
 |類別庫 (CLR)||X|X|X|
@@ -363,7 +360,7 @@ Linux：
 
 ## <a name="tools"></a>工具
 
-|工具|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|工具|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Incremental 連結器 (Link.exe)|X|X|X|X|
 |Program Maintenance Utility (Nmake.exe)||X|X|X|
@@ -385,7 +382,7 @@ Linux：
 
 ## <a name="debugging-features"></a>偵錯功能
 
-|偵錯功能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|偵錯功能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |機器碼偵錯|X|X|X|X|
 |natvis (原生類型視覺效果)|X|X|X|X|
@@ -393,20 +390,20 @@ Linux：
 |Managed 偵錯||X|X|X|
 |GPU 使用量|X||X|X|
 |記憶體使用量|X||X|X|
-|Remote Debugging|X|X|X|X|
+|遠端偵錯|X|X|X|X|
 |SQL 偵錯|||X|X|
-|靜態程式碼分析|有限|有限|X|X|
+|靜態程式碼分析|限制|限制|X|X|
 
 ## <a name="designers-and-editors"></a>設計工具和編輯器
 
-|設計工具或編輯器|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|設計工具或編輯器|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |XAML 設計工具|X||X|X|
 |CSS 樣式設計工具/編輯器|X|X|X|X|
 |HTML 設計工具/編輯器|X|X|X|X|
 |XML 編輯器|X|X|X|X|
 |原始程式碼編輯器|X|X|X|X|
-|生產力功能：重構、IntelliSense、C++ 程式碼格式化|X|X|X|X|
+|產能功能：重構、IntelliSense、C++ 程式碼格式化|X|X|X|X|
 |Windows Form 設計工具||X|X|X|
 |資料設計工具|||X|X|
 |原生資源編輯器 (.rc 檔)|||X|X|
@@ -416,16 +413,16 @@ Linux：
 
 ## <a name="data-features"></a>資料功能
 
-|資料功能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|資料功能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |資料設計工具|||X|X|
 |資料物件|||X|X|
 |Web 服務|||X|X|
-|伺服器總管|||X|X|
+|Server Explorer|||X|X|
 
 ## <a name="build-and-project-systems"></a>建置和專案系統
 
-|建置或專案功能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|建置或專案功能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |命令列組建 (msbuild.exe)|X|X|X|X|
 |原生多目標||X|X|X|
@@ -436,7 +433,7 @@ Linux：
 
 ## <a name="automation-and-extensibility"></a>Automation 與擴充性
 
-|Automation 與擴充性|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|Automation 與擴充性|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |----------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |擴充性物件模型|||X|X|
 |程式碼模型|||X|X|
@@ -449,7 +446,7 @@ Linux：
 
 ||||||
 |-|-|-|-|-|
-|工具|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio 企業版|
+|工具|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |單元測試 (原生架構)|X|X|X|X|
 |單元測試 (Managed 架構)||X|X|X|
 |程式碼涵蓋範圍||||X|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095922"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078833"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：透過功能表命令顯示對話方塊
 
@@ -29,9 +29,9 @@ ms.locfileid: "71095922"
 
 這些程式會使用下列名稱和值：
 
-|項目|名稱或值|
+|Item|名稱或值|
 |----------|-------------------|
-|應用程式|DisplayDialog|
+|Application|DisplayDialog|
 |功能表命令|[查看] 功能表上的 [測試] 命令;命令識別碼 = ID_VIEW_TEST|
 |對話方塊|測試對話方塊;Class = CTestDialog;標頭檔 = TestDialog. h;變數 = testdlg，ptestdlg|
 |命令處理常式|OnViewTest|
@@ -44,7 +44,7 @@ ms.locfileid: "71095922"
 
 1. 為對話方塊新增類別。 如需詳細資訊，請參閱[新增類別](../ide/adding-a-class-visual-cpp.md)。
 
-1. 在 **類別檢視**中，選取檔類別（CDisplayDialogDoc）。 在 [屬性] 視窗中，按一下 [事件] 按鈕。 按兩下功能表命令的識別碼（ID_VIEW_TEST）。 接下來，按一下向下箭號，然後選取 **\<[新增 > OnViewTest**]。
+1. 在 **類別檢視**中，選取檔類別（CDisplayDialogDoc）。 在 [屬性] 視窗中，按一下 [事件] 按鈕。 按兩下功能表命令的識別碼（ID_VIEW_TEST）。 接下來，按一下向下箭號，然後選取 [ **\<新增 > OnViewTest**]。
 
    如果您已將功能表命令加入至 MDI 應用程式的大型主機，請改為選取應用程式類別（CDisplayDialogApp）。
 
@@ -54,11 +54,11 @@ ms.locfileid: "71095922"
    #include "TestDialog.h"
    ```
 
-1. 將下列程式碼新增`OnViewTest`至以執行函式：
+1. 將下列程式碼新增至 `OnViewTest` 以執行函式：
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal(); 
+   testdlg.DoModal();
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>若要顯示非強制回應對話方塊
@@ -99,7 +99,7 @@ ms.locfileid: "71095922"
    delete m_pTestDlg;
    ```
 
-   - 將下列程式碼新增`OnViewTest`至以執行函式：
+   - 將下列程式碼新增至 `OnViewTest` 以執行函式：
 
    ```cpp
    if (NULL == m_pTestDlg)

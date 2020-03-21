@@ -3,18 +3,18 @@ title: 通用 Windows 應用程式 (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: overview
-ms.openlocfilehash: 11a32504dfdd380f621c380994f4f53073547a57
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: cd90f76cf2ee9b4ca9cb2ceea970cd24b0bf24cf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274696"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079918"
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 應用程式 (C++)
 
 通用 Windows 平臺（UWP）是適用于 Windows 的現代化程式設計介面。 您可以使用 UWP 撰寫應用程式或元件一次，並將它部署在任何 Windows 10 裝置上。 您可以在中C++撰寫元件，並以任何其他 UWP 相容語言撰寫的應用程式可以使用它。
 
-大部分 UWP 檔位於 Windows 內容樹狀結構的[通用 Windows 平臺檔](/windows/uwp/)。 您可以在這裡找到開始教學課程及參考檔。 
+大部分 UWP 檔位於 Windows 內容樹狀結構的[通用 Windows 平臺檔](/windows/uwp/)。 您可以在這裡找到開始教學課程及參考檔。
 
 針對新的 UWP 應用程式和元件，我們建議您使用[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，這是一種新的 standard c + + 17 語言投影，適用于 Windows 執行階段 api。 C++從1803版開始，Windows 10 SDK 中提供了/WinRT。 C++/WinRT 完全實作為標頭檔，其設計目的是為您提供現代化 Windows API 的第一級存取權。 與C++/cx 執行不同。 C++/WinRT 不會使用非標準語法或 Microsoft 語言延伸模組，而且它會充分利用C++編譯器來建立高度優化的輸出。 如需詳細資訊，請參閱[ C++/WinRT 簡介](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)。
 

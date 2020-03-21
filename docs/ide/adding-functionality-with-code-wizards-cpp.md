@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: cb77b2ce74f962df0a4c7472b037cb7a73effc2d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907481"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077702"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈新增功能 (C++)
 
@@ -27,7 +27,6 @@ ms.locfileid: "70907481"
 - 來自 ActiveX 控制項的 MFC 類別
 - 來自 Type Lib 的 MFC 類別。
 
-
 > [!NOTE]
 >  您可以新增訊息處理常式，並將訊息對應至它們，並使用[Mfc 類別 Wizard](../mfc/reference/mfc-class-wizard.md)覆寫 mfc 虛擬函式。
 
@@ -43,7 +42,7 @@ ms.locfileid: "70907481"
 
    - **函式**
 
-   - **變數**
+   - **新增變數**
 
    - **連接點** (僅限 ATL 類別)
 
@@ -58,7 +57,7 @@ ms.locfileid: "70907481"
 - 從 [[類別檢視] 視窗](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下適當的節點，然後從捷徑功能表按一下 [新增]，即可讓您將函式、變數、類別、屬性、方法、事件、介面、連接點或其他程式碼新增至專案。
 
    > [!NOTE]
-   > Visual Studio 不提供將介面新增至專案的精靈。 您可以藉由使用 [ATL 簡單物件精靈](../atl/reference/atl-simple-object-wizard.md)來新增簡單物件，將介面新增至 ATL 專案或[將 ATL 支援新增至 MFC 專案](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。 或者，開啟專案的 .idl 檔案，然後鍵入下列程式碼建立介面：
+   > Visual Studio 不提供將介面新增至專案的精靈。 您可以藉由使用 [ATL 簡單物件精靈](../mfc/reference/adding-atl-support-to-your-mfc-project.md)來新增簡單物件，將介面新增至 ATL 專案或[將 ATL 支援新增至 MFC 專案](../atl/reference/atl-simple-object-wizard.md)。 或者，開啟專案的 .idl 檔案，然後鍵入下列程式碼建立介面：
 
     ```IDL
     interface IMyInterface {
@@ -67,10 +66,10 @@ ms.locfileid: "70907481"
 
    如需詳細資訊，請參閱[實作介面](../ide/implementing-an-interface-visual-cpp.md)和[將物件和控制項新增至 ATL 專案](../atl/reference/adding-objects-and-controls-to-an-atl-project.md)。
 
-   |存取程式碼精靈來源|說明|
+   |存取程式碼精靈來源|描述|
    |-----------------------------|-----------------|
-   |加入新項目|「新增項目」程式碼精靈會將原始程式檔新增至您的專案。 如有必要，請建立其他目錄，以包含專案建置引擎預期找到的檔案。 可從新增項目圖示使用的程式碼精靈包括：<br /><br />- 新增 C++ 來源檔案 (.cpp、.h、.idl、.rc、.srf、.def、.rgs)。<br />- 新增網頁程式開發檔案 (.html、.asp、.css、.xml)。<br />- 新增公用程式和資源檔 (.bmp、.cur、.ico、.rct、.sql、.txt)。<br /><br />這些程式碼精靈通常不會要求您提供任何資訊，而是將檔案新增至您的開發樹狀結構。 您可以重新命名屬性視窗中的檔案。|
-   |底下提供說明，包括方案總管|可從 [方案總管] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增] 選項，請在開發樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [方案總管] 使用的程式碼精靈包括：<br /><br />- 新增類別 (開啟 [新增類別] 對話方塊，其中包含新的程式碼精靈)。<br />- 新增資源 (新增、匯入或自訂)。<br />- 新增 Web 參考。|
+   |新增項目|「新增項目」程式碼精靈會將原始程式檔新增至您的專案。 如有必要，請建立其他目錄，以包含專案建置引擎預期找到的檔案。 可從新增項目圖示使用的程式碼精靈包括：<br /><br />- 新增 C++ 來源檔案 (.cpp、.h、.idl、.rc、.srf、.def、.rgs)。<br />- 新增網頁程式開發檔案 (.html、.asp、.css、.xml)。<br />- 新增公用程式和資源檔 (.bmp、.cur、.ico、.rct、.sql、.txt)。<br /><br />這些程式碼精靈通常不會要求您提供任何資訊，而是將檔案新增至您的開發樹狀結構。 您可以重新命名屬性視窗中的檔案。|
+   |方案總管|可從 [方案總管] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增] 選項，請在開發樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [方案總管] 使用的程式碼精靈包括：<br /><br />- 新增類別 (開啟 [新增類別] 對話方塊，其中包含新的程式碼精靈)。<br />- 新增資源 (新增、匯入或自訂)。<br />- 新增 Web 參考。|
    |類別檢視|可從 [類別檢視] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增] 選項，請在類別樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [類別檢視] 使用的程式碼精靈包括：<br /><br />- [新增成員函式](../ide/adding-a-member-function-visual-cpp.md)。<br />- [新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)。<br />- [新增類別](../ide/adding-a-class-visual-cpp.md)。<br />- [實作介面](../ide/implement-interface-wizard.md) (僅限來自控制項類別)<br />- [新增連接點](../ide/implement-connection-point-wizard.md) (僅限 ATL 類別)<br />- [新增方法](../ide/add-method-wizard.md) (僅限來自介面)<br />- [加入屬性](../ide/names-add-property-wizard.md) (僅限來自介面)<br />- [新增事件](../ide/add-event-wizard.md) (僅限來自控制項類別)<br /><br />選取 [新增類別] 會開啟 [新增類別] 對話方塊，讓您存取所有新的「新增類別」程式碼精靈。|
 
 ## <a name="see-also"></a>另請參閱

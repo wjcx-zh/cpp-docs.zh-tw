@@ -28,18 +28,18 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: d3b1d6d1579c9f9bf5eca4f8a3f6733f27584674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c2c3dccb93f8e2475cdf2c7494bf4af11b65aa2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399235"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079937"
 ---
-# <a name="comptrt-relational-operators"></a>_com_ptr_t 關係運算子
+# <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t 關係運算子
 
 **Microsoft 專屬**
 
-比較智慧型指標物件與另一個智慧型指標、 一般介面指標，或為 NULL。
+將智慧型指標物件與另一個智慧型指標、一般介面指標或 NULL 進行比較。
 
 ## <a name="syntax"></a>語法
 
@@ -47,7 +47,7 @@ ms.locfileid: "62399235"
 template<typename _OtherIID>
 bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
+template<typename _OtherIID>
 bool operator==( _com_ptr_t<_OtherIID>& p );
 
 template<typename _InterfaceType>
@@ -114,9 +114,9 @@ bool operator>=( _InterfaceType* p );
 
 ## <a name="remarks"></a>備註
 
-比較的智慧型指標物件到另一個智慧型指標、 一般介面指標，或為 NULL。 除了 NULL 指標的測試，這些運算子會先查詢兩個指標`IUnknown`，並比較結果。
+將智慧型指標物件與另一個智慧型指標、一般介面指標或 NULL 進行比較。 除了 Null 指標測試以外，這些運算子會先查詢 `IUnknown`的指標，並比較結果。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -3,20 +3,20 @@ title: 連結器屬性頁
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fd0befd7b8ed4e7a4209c3c80602be2f2a99422f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927709"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079603"
 ---
 # <a name="linker-property-pages"></a>連結器屬性頁
 
-下列屬性可在 [**專案** > **屬性** > 設定] [**屬性** > **連結器**] 下找到。 如需連結器的詳細資訊，請參閱 CL 叫用[連結器](cl-invokes-the-linker.md)和[連結器選項](linker-options.md)。
+下列屬性位於 **專案** > **屬性** 下 > 設定 **屬性** > **連結器**。 如需連結器的詳細資訊，請參閱 CL 叫用[連結器](cl-invokes-the-linker.md)和[連結器選項](linker-options.md)。
 
 ## <a name="general-property-page"></a>一般屬性頁
 
-### <a name="output-file"></a>輸出檔案
+### <a name="output-file"></a>輸出檔
 
 [/Out](out-output-file-name.md)選項會覆寫連結器所建立之程式的預設名稱和位置。
 
@@ -24,17 +24,17 @@ ms.locfileid: "70927709"
 
 列印連結器進度訊息
 
-**做**
+**Choices**
 
 - **未設定**-沒有詳細資訊。
-- **顯示所有進度訊息**-顯示所有進度訊息。 
+- **顯示所有進度訊息**-顯示所有進度訊息。
 - **針對搜尋**的程式庫-顯示進度訊息，只指出搜尋的程式庫。
 - **關於優化連結期間的 COMDAT 折**迭-顯示優化連結期間 COMDAT 折迭的相關資訊。
 - **關於優化連結期間移除的資料**-顯示優化連結期間所移除之函式和資料的相關資訊。
 - **關於與 SEH 不相容的模組**-顯示與安全例外狀況處理不相容之模組的相關資訊。
 - **關於與 managed 程式碼相關的連結器活動**-顯示與 managed 程式碼相關之連結器活動的資訊。
 
-### <a name="version"></a>Version
+### <a name="version"></a>版本
 
 [/VERSION](version-version-information.md)選項會指示連結器將版本號碼放在 .exe 或 .dll 檔案的標頭中。 使用 DUMPBIN/HEADERS 查看選擇性標頭值的 [映射版本] 欄位，以查看 **/VERSION**的效果。
 
@@ -44,7 +44,7 @@ ms.locfileid: "70927709"
 
 ### <a name="suppress-startup-banner"></a>隱藏啟動橫幅
 
-[/Nologo](nologo-suppress-startup-banner-linker.md)選項可防止顯示著作權訊息和版本號碼。 
+[/Nologo](nologo-suppress-startup-banner-linker.md)選項可防止顯示著作權訊息和版本號碼。
 
 ### <a name="ignore-import-library"></a>忽略匯入程式庫
 
@@ -96,17 +96,17 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 [/Force](force-force-file-output.md)選項會指示連結器建立 .exe 檔或 DLL，即使符號已被參考但未定義，或已進行乘法定義亦然。 它可能會建立不正確 .exe 檔案。
 
-**做**
+**Choices**
 
 - **已啟用**-不含引數的/force 會隱含多個和未解析。
 - **僅限定義的符號**-使用/FORCE： MULTIPLE 來建立輸出檔案，即使連結找到一個以上的符號定義。
-- **僅限未定義的符號**-使用/FORCE：無法解析來建立輸出檔，不論連結是否找到未定義的符號。 /FORCE: 如果無法解析進入點符號, 則會忽略無法解析的。
+- **僅限未定義的符號**-使用/FORCE：無法解析來建立輸出檔，不論連結是否找到未定義的符號。 /FORCE：如果無法解析進入點符號，則會忽略無法解析的。
 
 ### <a name="create-hot-patchable-image"></a>建立熱可修補映射
 
 準備映射以進行熱修補。
 
-**做**
+**Choices**
 
 - [**已啟用**]-準備映射以進行熱修補。
 - **僅限 X86 映射**-準備適用于熱修補的 x86 映射。
@@ -125,7 +125,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 ### <a name="ignore-all-default-libraries"></a>忽略所有預設程式庫
 
-[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)選項會指示連結器在解析外部參考時，從其搜尋的程式庫清單中移除一或多個預設程式庫。 
+[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)選項會指示連結器在解析外部參考時，從其搜尋的程式庫清單中移除一或多個預設程式庫。
 
 ### <a name="ignore-specific-default-libraries"></a>忽略特定的預設程式庫
 
@@ -133,7 +133,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 ### <a name="module-definition-file"></a>模組定義檔
 
-[/DEF](def-specify-module-definition-file.md)選項會將模組定義檔（.def）傳遞至連結器。 只能指定一個 .def 檔來連結。 
+[/DEF](def-specify-module-definition-file.md)選項會將模組定義檔（.def）傳遞至連結器。 只能指定一個 .def 檔來連結。
 
 ### <a name="add-module-to-assembly"></a>將模組新增至元件
 
@@ -149,7 +149,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 ### <a name="delay-loaded-dlls"></a>延遲載入的 Dll
 
-[/DELAYLOAD](delayload-delay-load-import.md)選項會導致 dll 的延遲載入。 Dll 名稱會指定要延遲載入的 DLL。 
+[/DELAYLOAD](delayload-delay-load-import.md)選項會導致 dll 的延遲載入。 Dll 名稱會指定要延遲載入的 DLL。
 
 ### <a name="assembly-link-resource"></a>元件連結資源
 
@@ -181,7 +181,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 指定以使用者帳戶控制執行時，應用程式所要求的執行層級。  （/MANIFESTUAC： level = [value]）
 
-**做**
+**Choices**
 
 - **asInvoker** -UAC 執行層級：作為啟動端。
 - **highestAvailable** -UAC 執行層級：最高可用。
@@ -197,12 +197,12 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 此選項可讓您建立 .exe 檔或 DLL 的偵錯工具資訊。
 
-**做**
+**Choices**
 
 - **否**-不產生任何調試資訊。
 - **產生偵錯工具資訊**-建立適用于散發至 Microsoft 符號伺服器的完整程式資料庫（PDB）。
-- **產生針對更快速連結而優化的 Debug 資訊**-產生適用于編輯-連結-Debug 迴圈的程式資料庫（PDB）。 
-- **產生針對共用和發行優化的調試**程式-產生適用于「編輯-連結-自設計」迴圈的程式資料庫（PDB）。 
+- **產生針對更快速連結而優化的 Debug 資訊**-產生適用于編輯-連結-Debug 迴圈的程式資料庫（PDB）。
+- **產生針對共用和發行優化的調試**程式-產生適用于「編輯-連結-自設計」迴圈的程式資料庫（PDB）。
 
 ### <a name="generate-program-database-file"></a>產生程式資料庫檔案
 
@@ -234,7 +234,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 [/SUBSYSTEM](subsystem-specify-subsystem.md)選項會告訴作業系統如何執行 .exe 檔。 子系統的選擇會影響連結器會選擇的進入點符號（或進入點函式）。
 
-**做**
+**Choices**
 
 - **未設定**-未設定子系統。
 - **主控台**-Win32 字元模式應用程式。 主控台應用程式是由作業系統提供主控台。 如果已定義 main 或 wmain，則主控台為預設值。
@@ -270,7 +270,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)選項會告訴連結器，應用程式可以處理大於 2 gb 的位址。 根據預設，如果未在連結器行上指定/LARGEADDRESSAWARE，則會啟用/LARGEADDRESSAWARE： NO。
 
-### <a name="terminal-server"></a>終端伺服器
+### <a name="terminal-server"></a>終端機伺服器
 
 [/TSAWARE](tsaware-create-terminal-server-aware-application.md)選項會在程式映射的選擇性標頭的 [IMAGE_OPTIONAL_HEADER DllCharacteristics] 欄位中設定旗標。 設定此旗標時，終端機伺服器將不會對應用程式進行某些變更。
 
@@ -282,11 +282,11 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)選項會告訴作業系統先將連結器輸出複製到交換檔，然後從該處執行映射。 此選項是 Windows NT 4.0 （和更新版本）的功能。 如果指定**NET** ，作業系統會先將二進位映射從網路複製到交換檔，然後從該處載入。 此選項適用于透過網路執行應用程式。
 
-### <a name="driver"></a>驅動器
+### <a name="driver"></a>驅動程式
 
 使用[/DRIVER](driver-windows-nt-kernel-mode-driver.md)連結器選項來建立 Windows NT 核心模式驅動程式。
 
-**做**
+**Choices**
 
 - **未設定**-預設驅動程式設定。
 - **驅動**程式驅動程式
@@ -313,9 +313,9 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 ### <a name="link-time-code-generation"></a>連結時間程式碼產生
 
-指定連結時產生程式碼。 （[/LTCG](ltcg-link-time-code-generation.md)）
+指定連結時產生程式碼。 （[/Ltcg](ltcg-link-time-code-generation.md)）
 
-**做**
+**Choices**
 
 - **預設**值-預設 LTCG 設定。
 - **使用快速連結時間程式碼產生**-搭配[/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)使用連結時間代碼產生。
@@ -328,7 +328,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 ### <a name="midl-commands"></a>MIDL 命令
 
-指定 MIDL 命令列選項。 （[/MIDL](midl-specify-midl-command-line-options.md) :@responsefile）
+指定 MIDL 命令列選項。 （[/MIDL](midl-specify-midl-command-line-options.md):@responsefile）
 
 ### <a name="ignore-embedded-idl"></a>忽略內嵌的 IDL
 
@@ -352,7 +352,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 啟用或停用 Windows 中繼資料的產生。
 
-**做**
+**Choices**
 
 - **是**-啟用產生 Windows 中繼資料檔案。
 - **否**-停用產生 Windows 中繼資料檔案。
@@ -381,7 +381,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 ### <a name="no-entry-point"></a>無進入點
 
-建立僅含資源的 DLL 時，需要[/NOENTRY](noentry-no-entry-point.md)選項。使用此選項可防止連結將參考`_main`連結到 DLL。
+建立僅含資源的 DLL 時，需要[/NOENTRY](noentry-no-entry-point.md)選項。使用此選項可防止連結將 `_main` 的參考連結到 DLL。
 
 ### <a name="set-checksum"></a>設定總和檢查碼
 
@@ -389,19 +389,19 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 ### <a name="base-address"></a>基底位址
 
-設定程式的基底位址。 （[/Base](base-base-address.md)： {address\[，size] |@filename，key}）
+設定程式的基底位址。 （[/Base](base-base-address.md)： {address\[，size] | @filename，key}）
 
 ### <a name="randomized-base-address"></a>隨機基底位址
 
-隨機基底位址。 （[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) \[： NO]）
+隨機基底位址。 （[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[： no]）
 
 ### <a name="fixed-base-address"></a>固定基底位址
 
-建立僅可在其慣用基底位址載入的程式。 （[/FIXED](fixed-fixed-base-address.md) \[： NO]）
+建立僅可在其慣用基底位址載入的程式。 （[/FIXED](fixed-fixed-base-address.md)\[： no]）
 
 ### <a name="data-execution-prevention-dep"></a>資料執行防止（DEP）
 
-將可執行檔標記為已測試，以與 Windows 資料執行防止功能相容。 （[/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md) \[： NO]）
+將可執行檔標記為已測試，以與 Windows 資料執行防止功能相容。 （[/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[： no]）
 
 ### <a name="turn-off-assembly-generation"></a>關閉元件產生
 
@@ -427,7 +427,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 [/MACHINE](machine-specify-target-platform.md)選項會指定程式的目標平臺。
 
-**做**
+**Choices**
 
 - **未設定**
 - **MachineARM**
@@ -451,7 +451,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 明確指定 CLR 程式進入點的執行緒屬性。
 
-**做**
+**Choices**
 
 - **MTA 執行緒屬性**-將 MTAThreadAttribute 屬性套用至程式的進入點。
 - **STA 執行緒屬性**-將 STAThreadAttribute 屬性套用至程式的進入點。
@@ -461,7 +461,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 設定 CLR 映像的類型 (IJW、純或安全)。
 
-**做**
+**Choices**
 
 - **強制 IJW 映射**
 - **強制純 IL 映射**
@@ -484,11 +484,11 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 [/CLRUNMANAGEDCODECHECK](clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)指定連結器是否會將 SuppressUnmanagedCodeSecurityAttribute 套用至連結器產生的 PInvoke 呼叫，從 managed 程式碼到原生 dll。
 
-### <a name="error-reporting"></a>錯誤報表
+### <a name="error-reporting"></a>錯誤報告
 
 讓您直接提供內部編譯器錯誤 (ICE) 資訊給 Visual C++ 團隊。
 
-**做**
+**Choices**
 
 - **PromptImmediately** -立即提示。
 - 下一個登入佇列的**佇列**，用於下一個登入。
@@ -503,7 +503,7 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 [/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)（預設為開啟）會保留透過 P/Invoke 機制呼叫之函式的最後一個錯誤碼，這可讓您從使用/clr 編譯的程式碼中，呼叫 dll 中的原生函式
 
-**做**
+**Choices**
 
 - [**已啟用**]-啟用 CLRSupportLastError。
 - **Disabled** -停用 CLRSupportLastError。

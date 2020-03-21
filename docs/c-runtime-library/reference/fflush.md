@@ -26,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940938"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077344"
 ---
 # <a name="fflush"></a>fflush
 
@@ -55,7 +55,7 @@ int fflush(
 如果已成功排清緩衝區， **fflush**會傳回0。 如果指定的資料流沒有任何緩衝區或僅開啟為唯讀，也會傳回值 0。 **EOF**的傳回值表示發生錯誤。
 
 > [!NOTE]
-> 如果**fflush**傳回**EOF**，資料可能會因為寫入失敗而遺失。 設定重大錯誤處理常式時，最安全的方式是使用**setvbuf**函數來關閉緩衝，或使用低層級 i/o 常式（例如 **_open**、 **_close**和 **_write** ），而不是資料流程 i/o 函式。
+> 如果**fflush**傳回**EOF**，資料可能會因為寫入失敗而遺失。 設定重大錯誤處理常式時，最安全的方式是使用**setvbuf**函數來關閉緩衝，或使用低層級 i/o 常式（例如 **_open**、 **_close**和 **_write** ，而不是資料流程 i/o 函式）。
 
 ## <a name="remarks"></a>備註
 
@@ -63,7 +63,7 @@ int fflush(
 
 如果*stream*為**Null**，則行為會與每個開啟的資料流程上的**fflush**呼叫相同。 所有在寫入模式中開啟的資料流，以及所有在更新模式中開啟且最後作業是寫入的資料流，都會排清。 呼叫對其他資料流不起作用。
 
-緩衝區通常是由作業系統維護，這會決定資料自動寫入磁碟的最佳時機︰當緩衝區已滿、當資料流已關閉，或當程式正常結束但不關閉資料流。 執行階段程式庫的認可到磁碟功能可讓您確保將重大資料直接寫入至磁碟，而不是作業系統緩衝區。 不需要重新撰寫現有程式，即可連結程式的物件檔案與 COMMODE.OBJ 來啟用這項功能。 在產生的可執行檔中，對 **_flushall**的呼叫會將所有緩衝區的內容寫入磁片。 只有 **_flushall**和**FFLUSH**會受到 commode.obj 的影響。
+緩衝區通常是由作業系統維護，這會決定資料自動寫入磁碟的最佳時機︰當緩衝區已滿、當資料流已關閉，或當程式正常結束但不關閉資料流。 執行階段程式庫的認可到磁碟功能可讓您確保將重大資料直接寫入至磁碟，而不是作業系統緩衝區。 不需要重新撰寫現有程式，即可連結程式的物件檔案與 COMMODE.OBJ 來啟用這項功能。 在產生的可執行檔中，呼叫 **_flushall**將所有緩衝區的內容寫入磁片。 只有 **_flushall**和**FFLUSH**會受到 commode.obj 的影響。
 
 如需控制認可到磁碟功能的資訊，請參閱[資料流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](fopen-wfopen.md) 和 [_fdopen](fdopen-wfdopen.md)。
 
@@ -71,11 +71,11 @@ int fflush(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -103,10 +103,10 @@ int main(void)
 
         // Write data to a file immediately instead of buffering.
         fflush(my_file);
-    
+
         if (my_number == 5)
         {
-            // Without using fflush, no data was written to the file 
+            // Without using fflush, no data was written to the file
             // prior to the crash, so the data is lost.
             *crash_the_program = 5;
         }

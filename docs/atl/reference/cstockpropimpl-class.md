@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 29b4337679f05d780d3d6cd5de6bf6f889a6ea30
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bc349137661d7026e48688f8ef510958de270280
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496334"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075212"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 類別
 
@@ -82,12 +82,12 @@ ms.locfileid: "69496334"
 
 ```
 template <
-    class T, 
+    class T,
     class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl :
     public IDispatchImpl<InterfaceName, piid, plibid, wMajor, wMinor, tihclass>
@@ -96,16 +96,16 @@ class ATL_NO_VTABLE CStockPropImpl :
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-執行控制項並衍生自`CStockPropImpl`的類別。
+執行控制項並衍生自 `CStockPropImpl`的類別。
 
-*InterfaceName*<br/>
+*介面名稱*<br/>
 公開庫存屬性的雙重介面。
 
 *piid*<br/>
-之`InterfaceName`IID 的指標。
+`InterfaceName`之 IID 的指標。
 
 *plibid*<br/>
-包含之`InterfaceName`定義的類型程式庫之 LIBID 的指標。
+包含 `InterfaceName`定義之類型程式庫之 LIBID 的指標。
 
 *wMajor*<br/>
 類型程式庫的主要版本。 預設值為 1。
@@ -122,79 +122,79 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 |||
 |-|-|
-|[get_Appearance](#get_appearance)|呼叫這個方法以取得控制項所使用的繪製樣式, 例如平面或3D。|
-|[get_AutoSize](#get_autosize)|呼叫這個方法以取得旗標的狀態, 指出控制項是否不能是任何其他大小。|
+|[get_Appearance](#get_appearance)|呼叫這個方法以取得控制項所使用的繪製樣式，例如平面或3D。|
+|[get_AutoSize](#get_autosize)|呼叫這個方法以取得旗標的狀態，指出控制項是否不能是任何其他大小。|
 |[get_BackColor](#get_backcolor)|呼叫這個方法以取得控制項的背景色彩。|
-|[get_BackStyle](#get_backstyle)|呼叫這個方法以取得控制項的背景樣式, 也就是透明或不透明。|
+|[get_BackStyle](#get_backstyle)|呼叫這個方法以取得控制項的背景樣式，也就是透明或不透明。|
 |[get_BorderColor](#get_bordercolor)|呼叫這個方法以取得控制項的框線色彩。|
 |[get_BorderStyle](#get_borderstyle)|呼叫這個方法以取得控制項的框線樣式。|
-|[get_BorderVisible](#get_bordervisible)|呼叫這個方法以取得旗標的狀態, 指出是否可以看見控制項的框線。|
-|[get_BorderWidth](#get_borderwidth)|呼叫這個方法以取得控制項框線的寬度 (以圖元為單位)。|
-|[get_Caption](#get_caption)|呼叫這個方法, 以取得物件標題中指定的文字。|
-|[get_DrawMode](#get_drawmode)|呼叫這個方法以取得控制項的繪製模式, 例如, XOR 畫筆或色彩反色。|
-|[get_DrawStyle](#get_drawstyle)|呼叫這個方法來取得控制項的繪製樣式, 例如, 實線、虛線或點線。|
-|[get_DrawWidth](#get_drawwidth)|呼叫這個方法, 以取得控制項的繪圖方法所使用的繪製寬度 (以圖元為單位)。|
-|[get_Enabled](#get_enabled)|呼叫這個方法以取得旗標的狀態, 指出控制項是否已啟用。|
-|[get_FillColor](#get_fillcolor)|呼叫這個方法, 以取得控制項的填滿色彩。|
-|[get_FillStyle](#get_fillstyle)|呼叫這個方法以取得控制項的填滿樣式, 例如, 純色、透明或交叉影線。|
-|[get_Font](#get_font)|呼叫這個方法, 以取得控制項字型屬性的指標。|
+|[get_BorderVisible](#get_bordervisible)|呼叫這個方法以取得旗標的狀態，指出是否可以看見控制項的框線。|
+|[get_BorderWidth](#get_borderwidth)|呼叫這個方法以取得控制項框線的寬度（以圖元為單位）。|
+|[get_Caption](#get_caption)|呼叫這個方法，以取得物件標題中指定的文字。|
+|[get_DrawMode](#get_drawmode)|呼叫這個方法以取得控制項的繪製模式，例如，XOR 畫筆或色彩反色。|
+|[get_DrawStyle](#get_drawstyle)|呼叫這個方法來取得控制項的繪製樣式，例如，實線、虛線或點線。|
+|[get_DrawWidth](#get_drawwidth)|呼叫這個方法，以取得控制項的繪圖方法所使用的繪製寬度（以圖元為單位）。|
+|[get_Enabled](#get_enabled)|呼叫這個方法以取得旗標的狀態，指出控制項是否已啟用。|
+|[get_FillColor](#get_fillcolor)|呼叫這個方法，以取得控制項的填滿色彩。|
+|[get_FillStyle](#get_fillstyle)|呼叫這個方法以取得控制項的填滿樣式，例如，純色、透明或交叉影線。|
+|[get_Font](#get_font)|呼叫這個方法，以取得控制項字型屬性的指標。|
 |[get_ForeColor](#get_forecolor)|呼叫這個方法以取得控制項的前景色彩。|
-|[get_HWND](#get_hwnd)|呼叫這個方法, 以取得與控制項相關聯的視窗控制碼。|
-|[get_MouseIcon](#get_mouseicon)|呼叫這個方法, 即可取得當滑鼠停留在控制項上時要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性。|
-|[get_MousePointer](#get_mousepointer)|呼叫這個方法, 以取得當滑鼠停留在控制項上時所顯示的滑鼠指標類型, 例如箭號、交叉或沙漏。|
-|[get_Picture](#get_picture)|呼叫這個方法, 以取得要顯示的圖形 (圖示、點陣圖或中繼檔) 之圖片屬性的指標。|
-|[get_ReadyState](#get_readystate)|呼叫這個方法以取得控制項的就緒狀態, 例如載入或載入。|
-|[get_TabStop](#get_tabstop)|呼叫這個方法, 以取得表示控制項是否為定位停駐點的旗標。|
-|[get_Text](#get_text)|呼叫這個方法, 以取得控制項所顯示的文字。|
-|[getvalid](#get_valid)|呼叫這個方法以取得旗標的狀態, 指出控制項是否有效。|
-|[get_Window](#get_window)|呼叫這個方法, 以取得與控制項相關聯的視窗控制碼。 與[CStockPropImpl:: get_HWND](#get_hwnd)相同。|
-|[put_Appearance](#put_appearance)|呼叫這個方法來設定控制項所使用的繪製樣式, 例如, 平面或3D。|
-|[put_AutoSize](#put_autosize)|呼叫這個方法來設定旗標的值, 以指出控制項是否不能是任何其他大小。|
+|[get_HWND](#get_hwnd)|呼叫這個方法，以取得與控制項相關聯的視窗控制碼。|
+|[get_MouseIcon](#get_mouseicon)|呼叫這個方法，即可取得當滑鼠停留在控制項上時要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性。|
+|[get_MousePointer](#get_mousepointer)|呼叫這個方法，以取得當滑鼠停留在控制項上時所顯示的滑鼠指標類型，例如箭號、交叉或沙漏。|
+|[get_Picture](#get_picture)|呼叫這個方法，以取得要顯示的圖形（圖示、點陣圖或中繼檔）之圖片屬性的指標。|
+|[get_ReadyState](#get_readystate)|呼叫這個方法以取得控制項的就緒狀態，例如載入或載入。|
+|[get_TabStop](#get_tabstop)|呼叫這個方法，以取得表示控制項是否為定位停駐點的旗標。|
+|[get_Text](#get_text)|呼叫這個方法，以取得控制項所顯示的文字。|
+|[getvalid](#get_valid)|呼叫這個方法以取得旗標的狀態，指出控制項是否有效。|
+|[get_Window](#get_window)|呼叫這個方法，以取得與控制項相關聯的視窗控制碼。 等同于[CStockPropImpl：： get_HWND](#get_hwnd)。|
+|[put_Appearance](#put_appearance)|呼叫這個方法來設定控制項所使用的繪製樣式，例如，平面或3D。|
+|[put_AutoSize](#put_autosize)|呼叫這個方法來設定旗標的值，以指出控制項是否不能是任何其他大小。|
 |[put_BackColor](#put_backcolor)|呼叫這個方法來設定控制項的背景色彩。|
 |[put_BackStyle](#put_backstyle)|呼叫這個方法來設定控制項的背景樣式。|
 |[put_BorderColor](#put_bordercolor)|呼叫這個方法來設定控制項的框線色彩。|
 |[put_BorderStyle](#put_borderstyle)|呼叫這個方法來設定控制項的框線樣式。|
-|[put_BorderVisible](#put_bordervisible)|呼叫這個方法來設定旗標的值, 以指出控制項的框線是否為可見。|
+|[put_BorderVisible](#put_bordervisible)|呼叫這個方法來設定旗標的值，以指出控制項的框線是否為可見。|
 |[put_BorderWidth](#put_borderwidth)|呼叫這個方法來設定控制項框線的寬度。|
 |[put_Caption](#put_caption)|呼叫這個方法來設定要與控制項一起顯示的文字。|
-|[put_DrawMode](#put_drawmode)|呼叫這個方法來設定控制項的繪製模式, 例如, XOR 畫筆或反色。|
-|[put_DrawStyle](#put_drawstyle)|呼叫這個方法來設定控制項的繪製樣式, 例如, 實線、虛線或點線。|
-|[put_DrawWidth](#put_drawwidth)|呼叫這個方法, 以設定控制項的繪製方法所使用的寬度 (以圖元為單位)。|
-|[put_Enabled](#put_enabled)|呼叫這個方法來設定旗標, 以指出控制項是否已啟用。|
+|[put_DrawMode](#put_drawmode)|呼叫這個方法來設定控制項的繪製模式，例如，XOR 畫筆或反色。|
+|[put_DrawStyle](#put_drawstyle)|呼叫這個方法來設定控制項的繪製樣式，例如，實線、虛線或點線。|
+|[put_DrawWidth](#put_drawwidth)|呼叫這個方法，以設定控制項的繪製方法所使用的寬度（以圖元為單位）。|
+|[put_Enabled](#put_enabled)|呼叫這個方法來設定旗標，以指出控制項是否已啟用。|
 |[put_FillColor](#put_fillcolor)|呼叫這個方法來設定控制項的填滿色彩。|
-|[put_FillStyle](#put_fillstyle)|呼叫這個方法來設定控制項的填滿樣式, 例如, 純色、透明或交叉影線。|
+|[put_FillStyle](#put_fillstyle)|呼叫這個方法來設定控制項的填滿樣式，例如，純色、透明或交叉影線。|
 |[put_Font](#put_font)|呼叫這個方法來設定控制項的字型屬性。|
 |[put_ForeColor](#put_forecolor)|呼叫這個方法來設定控制項的前景色彩。|
 |[put_HWND](#put_hwnd)|這個方法會傳回 E_FAIL。|
-|[put_MouseIcon](#put_mouseicon)|呼叫這個方法, 即可設定當滑鼠停留在控制項上時要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性。|
-|[put_MousePointer](#put_mousepointer)|呼叫這個方法, 以設定當滑鼠停留在控制項上時所顯示的滑鼠指標類型, 例如箭號、交叉或沙漏。|
-|[put_Picture](#put_picture)|呼叫這個方法, 以設定要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性。|
-|[put_ReadyState](#put_readystate)|呼叫這個方法以設定控制項的就緒狀態, 例如載入或載入。|
-|[put_TabStop](#put_tabstop)|呼叫這個方法來設定旗標的值, 以指出控制項是否為定位停駐點。|
-|[put_Text](#put_text)|呼叫這個方法, 以設定與控制項一起顯示的文字。|
-|[putvalid](#put_valid)|呼叫這個方法來設定旗標, 以指出控制項是否有效。|
-|[put_Window](#put_window)|這個方法會呼叫[CStockPropImpl::P ut_hwnd](#put_hwnd), 它會傳回 E_FAIL。|
-|[putref_Font](#putref_font)|呼叫這個方法, 以參考計數設定控制項的字型屬性。|
-|[putref_MouseIcon](#putref_mouseicon)|呼叫這個方法, 以設定當滑鼠停留在控制項上時要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性 (包含參考計數)。|
-|[putref_Picture](#putref_picture)|呼叫這個方法, 即可設定要顯示之圖形 (圖示、點陣圖或中繼檔) 的圖片屬性和參考計數。|
+|[put_MouseIcon](#put_mouseicon)|呼叫這個方法，即可設定當滑鼠停留在控制項上時要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性。|
+|[put_MousePointer](#put_mousepointer)|呼叫這個方法，以設定當滑鼠停留在控制項上時所顯示的滑鼠指標類型，例如箭號、交叉或沙漏。|
+|[put_Picture](#put_picture)|呼叫這個方法，以設定要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性。|
+|[put_ReadyState](#put_readystate)|呼叫這個方法以設定控制項的就緒狀態，例如載入或載入。|
+|[put_TabStop](#put_tabstop)|呼叫這個方法來設定旗標的值，以指出控制項是否為定位停駐點。|
+|[put_Text](#put_text)|呼叫這個方法，以設定與控制項一起顯示的文字。|
+|[putvalid](#put_valid)|呼叫這個方法來設定旗標，以指出控制項是否有效。|
+|[put_Window](#put_window)|這個方法會呼叫[CStockPropImpl：:p ut_HWND](#put_hwnd)，它會傳回 E_FAIL。|
+|[putref_Font](#putref_font)|呼叫這個方法，以參考計數設定控制項的字型屬性。|
+|[putref_MouseIcon](#putref_mouseicon)|呼叫這個方法，以設定當滑鼠停留在控制項上時要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性（包含參考計數）。|
+|[putref_Picture](#putref_picture)|呼叫這個方法，即可設定要顯示之圖形（圖示、點陣圖或中繼檔）的圖片屬性和參考計數。|
 
 ## <a name="remarks"></a>備註
 
-`CStockPropImpl`為每個內建屬性提供**put**和**get**方法。 這些方法會提供必要的程式碼, 以設定或取得與每個屬性相關聯的資料成員, 並在任何屬性變更時通知和與容器進行同步處理。
+`CStockPropImpl` 為每個內建屬性提供**put**和**get**方法。 這些方法會提供必要的程式碼，以設定或取得與每個屬性相關聯的資料成員，並在任何屬性變更時通知和與容器進行同步處理。
 
-Visual Studio 透過其流覽程式提供庫存屬性的支援。 如需將內建屬性加入至控制項的詳細資訊, 請參閱[ATL 教學](../../atl/active-template-library-atl-tutorial.md)課程。
+Visual Studio 透過其流覽程式提供庫存屬性的支援。 如需將內建屬性加入至控制項的詳細資訊，請參閱[ATL 教學](../../atl/active-template-library-atl-tutorial.md)課程。
 
-為了回溯相容性`CStockPropImpl` , 也`get_Window`會`put_Window`公開只呼叫`get_HWND`和`put_HWND`的方法。 的預設執行`put_HWND`會傳回 E_FAIL, 因為 HWND 應該是唯讀屬性。
+為了回溯相容性，`CStockPropImpl` 也會公開 `get_Window` 和 `put_Window` 只會分別呼叫 `get_HWND` 和 `put_HWND`的方法。 `put_HWND` 的預設實值會傳回 E_FAIL，因為 HWND 應該是唯讀屬性。
 
-下列屬性也有**putref**的執行方式:
+下列屬性也有**putref**的執行方式：
 
 - 字型
 
 - MouseIcon
 
-- 圖片
+- Picture
 
-相同的三個內建屬性需要其對應的資料成員屬於`CComPtr`類型, 或其他可透過指派運算子來提供正確介面參考計數的類別。
+相同的三個內建屬性需要其對應的資料成員屬於類型 `CComPtr` 或一些其他類別，透過指派運算子來提供正確的介面參考計數。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -206,11 +206,11 @@ Visual Studio 透過其流覽程式提供庫存屬性的支援。 如需將內�
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlctl。h
+**標頭：** atlctl。h
 
-##  <a name="get_appearance"></a>  CStockPropImpl::get_Appearance
+##  <a name="cstockpropimplget_appearance"></a><a name="get_appearance"></a>CStockPropImpl：： get_Appearance
 
-呼叫這個方法以取得控制項所使用的繪製樣式, 例如平面或3D。
+呼叫這個方法以取得控制項所使用的繪製樣式，例如平面或3D。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
@@ -223,11 +223,11 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_autosize"></a>CStockPropImpl::get_AutoSize
+##  <a name="cstockpropimplget_autosize"></a><a name="get_autosize"></a>CStockPropImpl：： get_AutoSize
 
-呼叫這個方法以取得旗標的狀態, 指出控制項是否不能是任何其他大小。
+呼叫這個方法以取得旗標的狀態，指出控制項是否不能是任何其他大小。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
@@ -240,9 +240,9 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_backcolor"></a>CStockPropImpl::get_BackColor
+##  <a name="cstockpropimplget_backcolor"></a><a name="get_backcolor"></a>CStockPropImpl：： get_BackColor
 
 呼叫這個方法以取得控制項的背景色彩。
 
@@ -257,11 +257,11 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_backstyle"></a>CStockPropImpl::get_BackStyle
+##  <a name="cstockpropimplget_backstyle"></a><a name="get_backstyle"></a>CStockPropImpl：： get_BackStyle
 
-呼叫這個方法以取得控制項的背景樣式, 也就是透明或不透明。
+呼叫這個方法以取得控制項的背景樣式，也就是透明或不透明。
 
 ```
 HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
@@ -274,9 +274,9 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_bordercolor"></a>CStockPropImpl::get_BorderColor
+##  <a name="cstockpropimplget_bordercolor"></a><a name="get_bordercolor"></a>CStockPropImpl：： get_BorderColor
 
 呼叫這個方法以取得控制項的框線色彩。
 
@@ -291,9 +291,9 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_borderstyle"></a>CStockPropImpl::get_BorderStyle
+##  <a name="cstockpropimplget_borderstyle"></a><a name="get_borderstyle"></a>CStockPropImpl：： get_BorderStyle
 
 呼叫這個方法以取得控制項的框線樣式。
 
@@ -308,11 +308,11 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_bordervisible"></a>CStockPropImpl::get_BorderVisible
+##  <a name="cstockpropimplget_bordervisible"></a><a name="get_bordervisible"></a>CStockPropImpl：： get_BorderVisible
 
-呼叫這個方法以取得旗標的狀態, 指出是否可以看見控制項的框線。
+呼叫這個方法以取得旗標的狀態，指出是否可以看見控制項的框線。
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
@@ -325,9 +325,9 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_borderwidth"></a>CStockPropImpl::get_BorderWidth
+##  <a name="cstockpropimplget_borderwidth"></a><a name="get_borderwidth"></a>CStockPropImpl：： get_BorderWidth
 
 呼叫這個方法以取得控制項框線的寬度。
 
@@ -342,11 +342,11 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_caption"></a>CStockPropImpl::get_Caption
+##  <a name="cstockpropimplget_caption"></a><a name="get_caption"></a>CStockPropImpl：： get_Caption
 
-呼叫這個方法, 以取得物件標題中指定的文字。
+呼叫這個方法，以取得物件標題中指定的文字。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
@@ -359,11 +359,11 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_drawmode"></a>  CStockPropImpl::get_DrawMode
+##  <a name="cstockpropimplget_drawmode"></a><a name="get_drawmode"></a>CStockPropImpl：： get_DrawMode
 
-呼叫這個方法以取得控制項的繪製模式, 例如, XOR 畫筆或色彩反色。
+呼叫這個方法以取得控制項的繪製模式，例如，XOR 畫筆或色彩反色。
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
@@ -376,11 +376,11 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_drawstyle"></a>CStockPropImpl::get_DrawStyle
+##  <a name="cstockpropimplget_drawstyle"></a><a name="get_drawstyle"></a>CStockPropImpl：： get_DrawStyle
 
-呼叫這個方法來取得控制項的繪製樣式, 例如, 實線、虛線或點線。
+呼叫這個方法來取得控制項的繪製樣式，例如，實線、虛線或點線。
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
@@ -393,11 +393,11 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_drawwidth"></a>  CStockPropImpl::get_DrawWidth
+##  <a name="cstockpropimplget_drawwidth"></a><a name="get_drawwidth"></a>CStockPropImpl：： get_DrawWidth
 
-呼叫這個方法, 以取得控制項的繪圖方法所使用的繪製寬度 (以圖元為單位)。
+呼叫這個方法，以取得控制項的繪圖方法所使用的繪製寬度（以圖元為單位）。
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
@@ -406,15 +406,15 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 ### <a name="parameters"></a>參數
 
 *pnDrawWidth*<br/>
-接收控制項寬度值的變數 (以圖元為單位)。
+接收控制項寬度值的變數（以圖元為單位）。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_enabled"></a>CStockPropImpl::get_Enabled
+##  <a name="cstockpropimplget_enabled"></a><a name="get_enabled"></a>CStockPropImpl：： get_Enabled
 
-呼叫這個方法以取得旗標的狀態, 指出控制項是否已啟用。
+呼叫這個方法以取得旗標的狀態，指出控制項是否已啟用。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
@@ -427,11 +427,11 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_fillcolor"></a>  CStockPropImpl::get_FillColor
+##  <a name="cstockpropimplget_fillcolor"></a><a name="get_fillcolor"></a>CStockPropImpl：： get_FillColor
 
-呼叫這個方法, 以取得控制項的填滿色彩。
+呼叫這個方法，以取得控制項的填滿色彩。
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
@@ -444,11 +444,11 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_fillstyle"></a>  CStockPropImpl::get_FillStyle
+##  <a name="cstockpropimplget_fillstyle"></a><a name="get_fillstyle"></a>CStockPropImpl：： get_FillStyle
 
-呼叫這個方法以取得控制項的填滿樣式, 例如, 純色、透明或 crosshatched。
+呼叫這個方法以取得控制項的填滿樣式，例如，純色、透明或 crosshatched。
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
@@ -461,11 +461,11 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_font"></a>  CStockPropImpl::get_Font
+##  <a name="cstockpropimplget_font"></a><a name="get_font"></a>CStockPropImpl：： get_Font
 
-呼叫這個方法, 以取得控制項字型屬性的指標。
+呼叫這個方法，以取得控制項字型屬性的指標。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
@@ -478,9 +478,9 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_forecolor"></a>  CStockPropImpl::get_ForeColor
+##  <a name="cstockpropimplget_forecolor"></a><a name="get_forecolor"></a>CStockPropImpl：： get_ForeColor
 
 呼叫這個方法以取得控制項的前景色彩。
 
@@ -495,11 +495,11 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_hwnd"></a>CStockPropImpl::get_HWND
+##  <a name="cstockpropimplget_hwnd"></a><a name="get_hwnd"></a>CStockPropImpl：： get_HWND
 
-呼叫這個方法, 以取得與控制項相關聯的視窗控制碼。
+呼叫這個方法，以取得與控制項相關聯的視窗控制碼。
 
 ```
 HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
@@ -512,11 +512,11 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_mouseicon"></a>CStockPropImpl::get_MouseIcon
+##  <a name="cstockpropimplget_mouseicon"></a><a name="get_mouseicon"></a>CStockPropImpl：： get_MouseIcon
 
-呼叫這個方法, 即可取得當滑鼠停留在控制項上時要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性。
+呼叫這個方法，即可取得當滑鼠停留在控制項上時要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性。
 
 ```
 HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
@@ -529,11 +529,11 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_mousepointer"></a>CStockPropImpl::get_MousePointer
+##  <a name="cstockpropimplget_mousepointer"></a><a name="get_mousepointer"></a>CStockPropImpl：： get_MousePointer
 
-呼叫這個方法, 以取得當滑鼠停留在控制項上時所顯示的滑鼠指標類型, 例如箭號、交叉或沙漏。
+呼叫這個方法，以取得當滑鼠停留在控制項上時所顯示的滑鼠指標類型，例如箭號、交叉或沙漏。
 
 ```
 HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
@@ -546,11 +546,11 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_picture"></a>CStockPropImpl::get_Picture
+##  <a name="cstockpropimplget_picture"></a><a name="get_picture"></a>CStockPropImpl：： get_Picture
 
-呼叫這個方法, 以取得要顯示的圖形 (圖示、點陣圖或中繼檔) 之圖片屬性的指標。
+呼叫這個方法，以取得要顯示的圖形（圖示、點陣圖或中繼檔）之圖片屬性的指標。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
@@ -559,15 +559,15 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>參數
 
 *ppPicture*<br/>
-此變數會接收圖片屬性的指標。 如需詳細資訊, 請參閱[IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) 。
+此變數會接收圖片屬性的指標。 如需詳細資訊，請參閱[IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) 。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_readystate"></a>  CStockPropImpl::get_ReadyState
+##  <a name="cstockpropimplget_readystate"></a><a name="get_readystate"></a>CStockPropImpl：： get_ReadyState
 
-呼叫這個方法以取得控制項的就緒狀態, 例如載入或載入。
+呼叫這個方法以取得控制項的就緒狀態，例如載入或載入。
 
 ```
 HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
@@ -580,11 +580,11 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_tabstop"></a>CStockPropImpl::get_TabStop
+##  <a name="cstockpropimplget_tabstop"></a><a name="get_tabstop"></a>CStockPropImpl：： get_TabStop
 
-呼叫這個方法以取得旗標的狀態, 指出控制項是否為定位停駐點。
+呼叫這個方法以取得旗標的狀態，指出控制項是否為定位停駐點。
 
 ```
 HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
@@ -597,11 +597,11 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_text"></a>CStockPropImpl::get_Text
+##  <a name="cstockpropimplget_text"></a><a name="get_text"></a>CStockPropImpl：： get_Text
 
-呼叫這個方法, 以取得控制項所顯示的文字。
+呼叫這個方法，以取得控制項所顯示的文字。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
@@ -614,11 +614,11 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_valid"></a>  CStockPropImpl::getvalid
+##  <a name="cstockpropimplgetvalid"></a><a name="get_valid"></a>CStockPropImpl::getvalid
 
-呼叫這個方法以取得旗標的狀態, 指出控制項是否有效。
+呼叫這個方法以取得旗標的狀態，指出控制項是否有效。
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
@@ -631,11 +631,11 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="get_window"></a>CStockPropImpl::get_Window
+##  <a name="cstockpropimplget_window"></a><a name="get_window"></a>CStockPropImpl：： get_Window
 
-呼叫這個方法, 以取得與控制項相關聯的視窗控制碼。 與[CStockPropImpl:: get_HWND](#get_hwnd)相同。
+呼叫這個方法，以取得與控制項相關聯的視窗控制碼。 等同于[CStockPropImpl：： get_HWND](#get_hwnd)。
 
 ```
 HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
@@ -648,11 +648,11 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_appearance"></a>CStockPropImpl::p ut_Appearance
+##  <a name="cstockpropimplput_appearance"></a><a name="put_appearance"></a>CStockPropImpl：:p ut_Appearance
 
-呼叫這個方法來設定控制項所使用的繪製樣式, 例如, 平面或3D。
+呼叫這個方法來設定控制項所使用的繪製樣式，例如，平面或3D。
 
 ```
 HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
@@ -665,11 +665,11 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_autosize"></a>CStockPropImpl::p ut_AutoSize
+##  <a name="cstockpropimplput_autosize"></a><a name="put_autosize"></a>CStockPropImpl：:p ut_AutoSize
 
-呼叫這個方法來設定旗標的值, 以指出控制項是否不能是任何其他大小。
+呼叫這個方法來設定旗標的值，以指出控制項是否不能是任何其他大小。
 
 ```
 HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
@@ -678,13 +678,13 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 ### <a name="parameters"></a>參數
 
 *bAutoSize*<br/>
-如果控制項不能是任何其他大小, 則為 TRUE。
+如果控制項不能是任何其他大小，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_backcolor"></a>CStockPropImpl::p ut_BackColor
+##  <a name="cstockpropimplput_backcolor"></a><a name="put_backcolor"></a>CStockPropImpl：:p ut_BackColor
 
 呼叫這個方法來設定控制項的背景色彩。
 
@@ -699,9 +699,9 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_backstyle"></a>CStockPropImpl::p ut_BackStyle
+##  <a name="cstockpropimplput_backstyle"></a><a name="put_backstyle"></a>CStockPropImpl：:p ut_BackStyle
 
 呼叫這個方法來設定控制項的背景樣式。
 
@@ -716,9 +716,9 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_bordercolor"></a>CStockPropImpl::p ut_BorderColor
+##  <a name="cstockpropimplput_bordercolor"></a><a name="put_bordercolor"></a>CStockPropImpl：:p ut_BorderColor
 
 呼叫這個方法來設定控制項的框線色彩。
 
@@ -729,13 +729,13 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 ### <a name="parameters"></a>參數
 
 *clrBorderColor*<br/>
-新的框線色彩。 OLE_COLOR 資料類型在內部是以32位長整數表示。
+新的框線色彩。 OLE_COLOR 資料型別在內部是以32位長整數表示。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_borderstyle"></a>CStockPropImpl::p ut_BorderStyle
+##  <a name="cstockpropimplput_borderstyle"></a><a name="put_borderstyle"></a>CStockPropImpl：:p ut_BorderStyle
 
 呼叫這個方法來設定控制項的框線樣式。
 
@@ -750,11 +750,11 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_bordervisible"></a>CStockPropImpl::p ut_BorderVisible
+##  <a name="cstockpropimplput_bordervisible"></a><a name="put_bordervisible"></a>CStockPropImpl：:p ut_BorderVisible
 
-呼叫這個方法來設定旗標的值, 以指出控制項的框線是否為可見。
+呼叫這個方法來設定旗標的值，以指出控制項的框線是否為可見。
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
@@ -763,13 +763,13 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 ### <a name="parameters"></a>參數
 
 *bBorderVisible*<br/>
-如果框線是可見的, 則為 TRUE。
+如果框線是可見的，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_borderwidth"></a>CStockPropImpl::p ut_BorderWidth
+##  <a name="cstockpropimplput_borderwidth"></a><a name="put_borderwidth"></a>CStockPropImpl：:p ut_BorderWidth
 
 呼叫這個方法來設定控制項框線的寬度。
 
@@ -784,9 +784,9 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_caption"></a>CStockPropImpl::p ut_Caption
+##  <a name="cstockpropimplput_caption"></a><a name="put_caption"></a>CStockPropImpl：:p ut_Caption
 
 呼叫這個方法來設定要與控制項一起顯示的文字。
 
@@ -801,11 +801,11 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_drawmode"></a>CStockPropImpl::p ut_DrawMode
+##  <a name="cstockpropimplput_drawmode"></a><a name="put_drawmode"></a>CStockPropImpl：:p ut_DrawMode
 
-呼叫這個方法來設定控制項的繪製模式, 例如, XOR 畫筆或反色。
+呼叫這個方法來設定控制項的繪製模式，例如，XOR 畫筆或反色。
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
@@ -818,11 +818,11 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_drawstyle"></a>CStockPropImpl::p ut_DrawStyle
+##  <a name="cstockpropimplput_drawstyle"></a><a name="put_drawstyle"></a>CStockPropImpl：:p ut_DrawStyle
 
-呼叫這個方法來設定控制項的繪製樣式, 例如, 實線、虛線或點線。
+呼叫這個方法來設定控制項的繪製樣式，例如，實線、虛線或點線。
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
@@ -835,11 +835,11 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_drawwidth"></a>CStockPropImpl::p ut_DrawWidth
+##  <a name="cstockpropimplput_drawwidth"></a><a name="put_drawwidth"></a>CStockPropImpl：:p ut_DrawWidth
 
-呼叫這個方法, 以設定控制項的繪製方法所使用的寬度 (以圖元為單位)。
+呼叫這個方法，以設定控制項的繪製方法所使用的寬度（以圖元為單位）。
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
@@ -852,11 +852,11 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_enabled"></a>CStockPropImpl::p ut_Enabled
+##  <a name="cstockpropimplput_enabled"></a><a name="put_enabled"></a>CStockPropImpl：:p ut_Enabled
 
-呼叫這個方法來設定旗標的值, 以指出控制項是否已啟用。
+呼叫這個方法來設定旗標的值，以指出控制項是否已啟用。
 
 ```
 HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
@@ -865,13 +865,13 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 ### <a name="parameters"></a>參數
 
 *bEnabled*<br/>
-如果已啟用控制項, 則為 TRUE。
+如果已啟用控制項，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_fillcolor"></a>CStockPropImpl::p ut_FillColor
+##  <a name="cstockpropimplput_fillcolor"></a><a name="put_fillcolor"></a>CStockPropImpl：:p ut_FillColor
 
 呼叫這個方法來設定控制項的填滿色彩。
 
@@ -886,11 +886,11 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_fillstyle"></a>CStockPropImpl::p ut_FillStyle
+##  <a name="cstockpropimplput_fillstyle"></a><a name="put_fillstyle"></a>CStockPropImpl：:p ut_FillStyle
 
-呼叫這個方法來設定控制項的填滿樣式, 例如, 純色、透明或交叉影線。
+呼叫這個方法來設定控制項的填滿樣式，例如，純色、透明或交叉影線。
 
 ```
 HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
@@ -903,9 +903,9 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_font"></a>CStockPropImpl::p ut_Font
+##  <a name="cstockpropimplput_font"></a><a name="put_font"></a>CStockPropImpl：:p ut_Font
 
 呼叫這個方法來設定控制項的字型屬性。
 
@@ -920,9 +920,9 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_forecolor"></a>CStockPropImpl::p ut_ForeColor
+##  <a name="cstockpropimplput_forecolor"></a><a name="put_forecolor"></a>CStockPropImpl：:p ut_ForeColor
 
 呼叫這個方法來設定控制項的前景色彩。
 
@@ -937,9 +937,9 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_hwnd"></a>CStockPropImpl::p ut_HWND
+##  <a name="cstockpropimplput_hwnd"></a><a name="put_hwnd"></a>CStockPropImpl：:p ut_HWND
 
 這個方法會傳回 E_FAIL。
 
@@ -950,7 +950,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-保留的。
+已保留。
 
 ### <a name="return-value"></a>傳回值
 
@@ -960,9 +960,9 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 視窗控制碼是唯讀的值。
 
-##  <a name="put_mouseicon"></a>CStockPropImpl::p ut_MouseIcon
+##  <a name="cstockpropimplput_mouseicon"></a><a name="put_mouseicon"></a>CStockPropImpl：:p ut_MouseIcon
 
-呼叫這個方法, 即可設定當滑鼠停留在控制項上時要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性。
+呼叫這個方法，即可設定當滑鼠停留在控制項上時要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性。
 
 ```
 HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
@@ -975,11 +975,11 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_mousepointer"></a>CStockPropImpl::p ut_MousePointer
+##  <a name="cstockpropimplput_mousepointer"></a><a name="put_mousepointer"></a>CStockPropImpl：:p ut_MousePointer
 
-呼叫這個方法, 以設定當滑鼠停留在控制項上時所顯示的滑鼠指標類型, 例如箭號、交叉或沙漏。
+呼叫這個方法，以設定當滑鼠停留在控制項上時所顯示的滑鼠指標類型，例如箭號、交叉或沙漏。
 
 ```
 HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
@@ -992,11 +992,11 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_picture"></a>CStockPropImpl::p ut_Picture
+##  <a name="cstockpropimplput_picture"></a><a name="put_picture"></a>CStockPropImpl：:p ut_Picture
 
-呼叫這個方法, 以設定要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性。
+呼叫這個方法，以設定要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性。
 
 ```
 HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
@@ -1005,15 +1005,15 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>參數
 
 *pPicture*<br/>
-圖片屬性的指標。 如需詳細資訊, 請參閱[IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) 。
+圖片屬性的指標。 如需詳細資訊，請參閱[IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) 。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_readystate"></a>CStockPropImpl::p ut_ReadyState
+##  <a name="cstockpropimplput_readystate"></a><a name="put_readystate"></a>CStockPropImpl：:p ut_ReadyState
 
-呼叫這個方法以設定控制項的就緒狀態, 例如載入或載入。
+呼叫這個方法以設定控制項的就緒狀態，例如載入或載入。
 
 ```
 HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
@@ -1026,11 +1026,11 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_tabstop"></a>CStockPropImpl::p ut_TabStop
+##  <a name="cstockpropimplput_tabstop"></a><a name="put_tabstop"></a>CStockPropImpl：:p ut_TabStop
 
-呼叫這個方法來設定旗標, 以指出控制項是否為定位停駐點。
+呼叫這個方法來設定旗標，以指出控制項是否為定位停駐點。
 
 ```
 HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
@@ -1043,11 +1043,11 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_text"></a>CStockPropImpl::p ut_Text
+##  <a name="cstockpropimplput_text"></a><a name="put_text"></a>CStockPropImpl：:p ut_Text
 
-呼叫這個方法, 以設定與控制項一起顯示的文字。
+呼叫這個方法，以設定與控制項一起顯示的文字。
 
 ```
 HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
@@ -1060,11 +1060,11 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_valid"></a>CStockPropImpl::p utvalid
+##  <a name="cstockpropimplputvalid"></a><a name="put_valid"></a>CStockPropImpl：:p utvalid
 
-呼叫這個方法來設定旗標, 以指出控制項是否有效。
+呼叫這個方法來設定旗標，以指出控制項是否有效。
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
@@ -1073,15 +1073,15 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 ### <a name="parameters"></a>參數
 
 *bValid*<br/>
-如果控制項有效, 則為 TRUE。
+如果控制項有效，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="put_window"></a>CStockPropImpl::p ut_Window
+##  <a name="cstockpropimplput_window"></a><a name="put_window"></a>CStockPropImpl：:p ut_Window
 
-這個方法會呼叫[CStockPropImpl::P ut_hwnd](#put_hwnd), 它會傳回 E_FAIL。
+這個方法會呼叫[CStockPropImpl：:p ut_HWND](#put_hwnd)，它會傳回 E_FAIL。
 
 ```
 HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
@@ -1100,9 +1100,9 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 視窗控制碼是唯讀的值。
 
-##  <a name="putref_font"></a>CStockPropImpl::p utref_Font
+##  <a name="cstockpropimplputref_font"></a><a name="putref_font"></a>CStockPropImpl：:p utref_Font
 
-呼叫這個方法, 以參考計數設定控制項的字型屬性。
+呼叫這個方法，以參考計數設定控制項的字型屬性。
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
@@ -1115,15 +1115,15 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-與[CStockPropImpl::P ut_font](#put_font)相同, 但具有參考計數。
+與[CStockPropImpl：:p ut_Font](#put_font)相同，但具有參考計數。
 
-##  <a name="putref_mouseicon"></a>CStockPropImpl::p utref_MouseIcon
+##  <a name="cstockpropimplputref_mouseicon"></a><a name="putref_mouseicon"></a>CStockPropImpl：:p utref_MouseIcon
 
-呼叫這個方法, 以設定當滑鼠停留在控制項上時要顯示的圖形 (圖示、點陣圖或中繼檔) 的圖片屬性 (包含參考計數)。
+呼叫這個方法，以設定當滑鼠停留在控制項上時要顯示的圖形（圖示、點陣圖或中繼檔）的圖片屬性（包含參考計數）。
 
 ```
 HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
@@ -1136,15 +1136,15 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-與[CStockPropImpl::P ut_mouseicon](#put_mouseicon)相同, 但具有參考計數。
+與[CStockPropImpl：:p ut_MouseIcon](#put_mouseicon)相同，但具有參考計數。
 
-##  <a name="putref_picture"></a>CStockPropImpl::p utref_Picture
+##  <a name="cstockpropimplputref_picture"></a><a name="putref_picture"></a>CStockPropImpl：:p utref_Picture
 
-呼叫這個方法, 即可設定要顯示之圖形 (圖示、點陣圖或中繼檔) 的圖片屬性和參考計數。
+呼叫這個方法，即可設定要顯示之圖形（圖示、點陣圖或中繼檔）的圖片屬性和參考計數。
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
@@ -1153,15 +1153,15 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>參數
 
 *pPicture*<br/>
-圖片屬性的指標。 如需詳細資訊, 請參閱[IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) 。
+圖片屬性的指標。 如需詳細資訊，請參閱[IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) 。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-與[CStockPropImpl::P ut_picture](#put_picture)相同, 但具有參考計數。
+與[CStockPropImpl：:p ut_Picture](#put_picture)相同，但具有參考計數。
 
 ## <a name="see-also"></a>另請參閱
 

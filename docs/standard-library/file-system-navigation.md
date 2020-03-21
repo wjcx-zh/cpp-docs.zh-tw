@@ -2,16 +2,16 @@
 title: 檔案系統巡覽
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518500"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076534"
 ---
 # <a name="file-system-navigation"></a>檔案系統巡覽
 
-\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 一律會在 Windows 上傳回**false** 。
+\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 一律會在 Windows 上傳回**false** 。
 
 ## <a name="overview"></a>概觀
 
@@ -41,7 +41,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-若要串連兩個路徑，可以使用多載的 `/` 及 `/=` 運算子。這兩個運算子類似於 `std::string` 及 `std::wstring` 上的 `+` 和 `+=` 運算子。 若您未提供分隔符號， `path` 物件將會適時提供。
+若要串連兩個路徑，可以使用多載的 `/` 及 `/=` 運算子。這兩個運算子類似於 `+` 及 `+=` 上的 `std::string` 和 `std::wstring` 運算子。 如果您沒有的話，`path` 物件可以方便地提供分隔符號。
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!

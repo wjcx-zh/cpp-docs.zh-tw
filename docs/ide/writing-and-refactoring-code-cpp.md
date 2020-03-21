@@ -4,12 +4,12 @@ description: 使用 Visual Studio 中的 C++ 程式碼編輯器來格式化、�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438160"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077852"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中編輯及重構 C++ 程式碼
 
@@ -70,15 +70,15 @@ IntelliCode 是 AI 輔助的 IntelliSense。 它會將最有可能的候選項�
 
 ## <a name="template-intellisense"></a>範本 IntelliSense
 
-當插入號位於範本定義中時，隨即會出現**範本列**，它可讓您提供 IntelliSense 的範例範本引數。 
+當插入號位於範本定義中時，隨即會出現**範本列**，它可讓您提供 IntelliSense 的範例範本引數。
 
 ![C&#43; &#43;範本 IntelliSense 顯示現有的具現化](../ide/media/template-intellisense-cpp-1.png "範本 IntelliSense 顯示現有的具現化")
 
-按一下 [ **\<t >** ] 圖示，以展開/折迭**範本**列。 按一下鉛筆圖示，或按兩下**範本列**來開啟 [編輯] 視窗。 
+按一下 [ **\<t >** ] 圖示，以展開/折迭**範本**列。 按一下鉛筆圖示，或按兩下**範本列**來開啟 [編輯] 視窗。
 
 ![C&#43; &#43;範本 IntelliSense](../ide/media/template-intellisense-cpp-3.png "範本 IntelliSense")
 
-您在視窗中所進行的編輯內容會直接套用到原始程式碼，讓您能夠即時查看影響。 
+您在視窗中所進行的編輯內容會直接套用到原始程式碼，讓您能夠即時查看影響。
 
 範本列可以根據程式碼中的具現化自動填入候選項目。 按一下 [新增所有現有具現化]，以查看用來在整個程式碼基底中具現化範本的所有具體引數清單。
 
@@ -94,13 +94,13 @@ IntelliCode 是 AI 輔助的 IntelliSense。 它會將最有可能的候選項�
 
 如果編輯器偵測到您的程式碼出現問題，它會在問題底下新增有顏色的波浪線。 紅色波浪線表示無法編譯的程式碼。 綠色波浪線表示可能仍然有潛在嚴重問題的其他問題類型。 您可以開啟 [錯誤清單] 視窗來取得問題的相關資訊。
 
-針對某些類型的錯誤以及一般程式碼撰寫模式，編輯器會以燈泡的形式提供 [快速檢修] 功能，只要您將滑鼠指標停留在波浪線上方就會出現燈泡。 請按一下向下箭號來查看建議。 
+針對某些類型的錯誤以及一般程式碼撰寫模式，編輯器會以燈泡的形式提供 [快速檢修] 功能，只要您將滑鼠指標停留在波浪線上方就會出現燈泡。 請按一下向下箭號來查看建議。
 
 在下列範例中，已宣告 `vector` 但找不到任何定義，因此編輯器會包含必要的標頭檔：
 
 ![C&#43; &#43;快速修正](../ide/media/quick-fix-for-header-cpp.png "C++快速修正")
 
-編輯器也會提供快速檢修以獲取一些重構機會。 例如，如果您在標頭檔中宣告類別，Visual Studio 將會在個別的 .cpp 檔案中為其建立定義。 
+編輯器也會提供快速檢修以獲取一些重構機會。 例如，如果您在標頭檔中宣告類別，Visual Studio 將會在個別的 .cpp 檔案中為其建立定義。
 
 ![C&#43; &#43;快速修正](../ide/media/quick-fix.png "C++快速修正")
 

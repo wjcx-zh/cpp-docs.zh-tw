@@ -5,18 +5,18 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 25fffd018c45200571f99dc87ab8ffe29bb6667f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142046"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079998"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式架構應用程式
 
 本主題說明如何建立以代理程式為基礎的基本應用程式。 在此逐步解說中，您可以建立代理程式，以非同步方式從文字檔讀取資料。 應用程式會使用 Adler-32 總和檢查碼演算法來計算該檔案內容的總和檢查碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您必須瞭解下列主題，才能完成此逐步解說：
 
@@ -28,7 +28,7 @@ ms.locfileid: "77142046"
 
 - [同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a> 章節
+## <a name="sections"></a><a name="top"></a> 章節
 
 本逐步解說示範如何執行下列工作：
 
@@ -38,7 +38,7 @@ ms.locfileid: "77142046"
 
 - [在應用程式中使用 file_reader 類別](#useagentclass)
 
-## <a name="createapplication"></a>建立主控台應用程式
+## <a name="creating-the-console-application"></a><a name="createapplication"></a>建立主控台應用程式
 
 本節說明如何建立C++主控台應用程式，以參考程式將使用的標頭檔。 初始步驟會根據您使用的 Visual Studio 版本而有所不同。 請確定已在此頁面的左上方正確設定版本選取器。
 
@@ -48,7 +48,7 @@ ms.locfileid: "77142046"
 
 1. 從主功能表中 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**建立新的專案**] 對話方塊。
 
-1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。 
+1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。
 
 1. 從專案類型的篩選清單中，選擇 [主控台應用程式]，然後選擇 [下一步]。 在下一個頁面中，輸入 `BasicAgent` 做為專案的名稱，並視需要指定專案位置。
 
@@ -80,7 +80,7 @@ ms.locfileid: "77142046"
 
 [[靠上](#top)]
 
-## <a name="createagentclass"></a>建立 file_reader 類別
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>建立 file_reader 類別
 
 本節說明如何建立 `file_reader` 類別。 執行時間會排程每個代理程式，以在其本身的內容中執行工作。 因此，您可以建立可同步執行工作的代理程式，但會以非同步方式與其他元件互動。 `file_reader` 類別會從指定的輸入檔讀取資料，並將資料從該檔案傳送到指定的目標群組件。
 
@@ -128,7 +128,7 @@ ms.locfileid: "77142046"
 
 [[靠上](#top)]
 
-## <a name="useagentclass"></a>在應用程式中使用 file_reader 類別
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>在應用程式中使用 file_reader 類別
 
 本節說明如何使用 `file_reader` 類別來讀取文字檔的內容。 它也會示範如何建立可接收此檔案資料並計算其 Adler-32 總和檢查碼的[concurrency：： call](../../parallel/concrt/reference/call-class.md)物件。
 
@@ -184,7 +184,7 @@ jumps
 over the lazy dog
 ```
 
-## <a name="sample-output"></a>取樣輸出
+## <a name="sample-output"></a>範例輸出
 
 搭配範例輸入使用時，此程式會產生下列輸出：
 

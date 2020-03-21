@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaf95312b73b5165d64de7f9ded95db29d8909d0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707797"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075810"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>資料錄集：參數化資料錄集 (ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "65707797"
 
 - [如何在執行階段將參數資訊傳遞至資料錄集物件](#_core_passing_parameter_values_at_run_time)。
 
-##  <a name="_core_parameterized_recordsets"></a> 參數化的資料錄集
+##  <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> 參數化的資料錄集
 
 參數化的資料錄集可讓您在執行階段傳遞參數資訊。 這能提供兩個重要的效果：
 
@@ -40,7 +40,7 @@ ms.locfileid: "65707797"
 
 當您呼叫 `Open` 來執行查詢時，資料錄集會使用參數資訊來完成其 **SQL SELECT** 陳述式。 您可以參數化任何資料錄集。
 
-##  <a name="_core_when_to_use_parameters"></a> 使用參數的時機
+##  <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> 使用參數的時機
 
 參數的典型用途包括：
 
@@ -84,17 +84,17 @@ ms.locfileid: "65707797"
 
 如需篩選的詳細資訊，請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
 
-##  <a name="_core_parameterizing_your_recordset_class"></a> 參數化您的資料錄集類別
+##  <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> 參數化您的資料錄集類別
 
 > [!NOTE]
-> 本節適用於衍生自 `CRecordset` 的物件，其中尚未實作大量資料列擷取。 如果您正在使用大量資料列擷取，其實作參數的程序也相當類似。 如需詳細資訊，請參閱[資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本節適用於衍生自 `CRecordset` 的物件，其中尚未實作大量資料列擷取。 如果您正在使用大量資料列擷取，其實作參數的程序也相當類似。 如需詳細資訊，請參閱[資料錄集：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 在您建立資料錄集類別之前，請先判斷所需的參數、其資料類型，以及資料錄集使用它們的方式。
 
 #### <a name="to-parameterize-a-recordset-class"></a>參數化資料錄集類別
 
-> [!NOTE] 
-> Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立此功能。
+> [!NOTE]
+> Visual Studio 2019 和更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立此功能。
 
 1. 從 [新增類別] 執行 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)來建立該類別。
 
@@ -138,7 +138,7 @@ ms.locfileid: "65707797"
 > [!TIP]
 > 最可能搭配使用的字串，是您針對類別的 [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) 資料成員所指定的字串 (若有的話)，但某些 ODBC 驅動程式可能會允許其他 SQL 子句中的參數。
 
-##  <a name="_core_passing_parameter_values_at_run_time"></a> 在執行階段傳遞參數值
+##  <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> 在執行階段傳遞參數值
 
 您必須在呼叫 `Open` (針對新的資料錄集物件) 或 `Requery` (針對現有資料錄集物件) 之前指定參數值。
 

@@ -10,27 +10,27 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f322d16bbbe91d229fb8efdfb5f2d35cb0a686ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498433"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079229"
 ---
 # <a name="c-project-templates"></a>C++ 專案範本
 
-Visual Studio 專案範本會針對您想要建立的專案類型, 產生原始程式碼檔、編譯器選項、 `#include`功能表、工具列、圖示、參考和語句。 Visual Studio 包含數種類型C++的專案範本, 並為其中的多個提供程式, 讓您可以在建立專案時自訂它們。 在您建立專案之後，您就可以立即對其進行建置，並執行應用程式；在您開發應用程式時，間歇地進行建置是一個很好的做法。
+Visual Studio 專案範本會產生原始程式碼檔、編譯器選項、功能表、工具列、圖示、參考，以及適用于您想要建立之專案類型的 `#include` 語句。 Visual Studio 包含數種類型C++的專案範本，並為其中的多個提供程式，讓您可以在建立專案時自訂它們。 在您建立專案之後，您就可以立即對其進行建置，並執行應用程式；在您開發應用程式時，間歇地進行建置是一個很好的做法。
 
 > [!NOTE]
 > 您可以使用 C++ 專案範本，來建立 C 語言專案。 在所產生的專案中，尋找副檔名為 .cpp 的檔案，並將其變更為 .c。 然後，在專案 (不適用於方案) 的 [專案屬性] 頁面上，展開 [組態屬性]、[C/C++] ，然後選取 [進階]。 將 [編譯為] 設定變更為 [編譯為 C 程式碼 (/TC)]。
 
 ## <a name="project-templates"></a>專案範本
 
-Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工作負載。 如果您已安裝使用C++工作負載的桌面開發, Visual Studio 有C++這些專案範本。
+Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工作負載。 如果您已安裝使用C++工作負載的桌面開發，Visual Studio 有C++這些專案範本。
 
 ### <a name="windows-desktop"></a>Windows 桌面
 
-|專案範本|說明|
+|專案範本|描述|
 |----------------------|-----------------------------|
 |[Windows 主控台應用程式](../../windows/creating-a-console-application.md)|用於建立 Windows 主控台應用程式的專案。|
 |[Windows 傳統型應用程式](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|用於建立 Windows 傳統型 (Win32) 應用程式的專案。|
@@ -43,18 +43,18 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 |專案範本|描述|
 |----------------------|-----------------------------|
 |空專案|用於建立應用程式、程式庫或 DLL 的空白專案。 您必須新增任何所需的程式碼或資源。|
-|[Makefile 專案](creating-a-makefile-project.md)|在 Visual Studio 專案中包裝 Windows makefile 的專案。 (若要以 Visual Studio 開啟 makefile, 請使用 [[開啟資料夾](../open-folder-projects-cpp.md)]。|
+|[Makefile 專案](creating-a-makefile-project.md)|在 Visual Studio 專案中包裝 Windows makefile 的專案。 （若要以 Visual Studio 開啟 makefile，請使用 [[開啟資料夾](../open-folder-projects-cpp.md)]。|
 |共用的項目專案|用來在多個專案之間共用程式碼檔案或資源檔的專案。 此專案類型不會產生可執行檔。|
 
 ### <a name="atl"></a>ATL
 
-|專案範本|說明|
+|專案範本|描述|
 |----------------------|-----------------------------|
 |[ATL 專案](../../atl/reference/creating-an-atl-project.md)|使用 Active Template Library 的專案。|
 
 ### <a name="test"></a>測試
 
-|專案範本|說明|
+|專案範本|描述|
 |----------------------|-----------------------------|
 |[原生單元測試專案](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|包含原生 C++ 單元測試的專案。|
 
@@ -83,11 +83,9 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 |單元測試應用程式|用於為通用 Windows 平台 (UWP) 應用程式建立單元測試應用程式的專案。|
 |DLL|可供通用 Windows 平台應用程式或執行階段元件使用之原生動態連結程式庫 (DLL) 的專案。|
 |靜態程式庫|可供通用 Windows 平台應用程式或執行階段元件使用之原生靜態連結程式庫 (LIB) 的專案。|
-|Windows 執行階段元件|不論撰寫應用程式的程式設計語言為何，可供通用 Windows 平台應用程式使用之 Windows 執行階段元件的專案。|
+|Windows Runtime 元件|不論撰寫應用程式的程式設計語言為何，可供通用 Windows 平台應用程式使用之 Windows 執行階段元件的專案。|
 |Windows 應用程式封裝專案|建立可讓傳統型應用程式透過 Microsoft Store 側載或散發之 UWP 套件的專案。|
 
 ## <a name="todo-comments"></a>TODO 註解
 
 專案範本產生的許多檔案都包含 TODO 註解，以協助您識別您可以提供自己原始程式碼的位置。 如需如何新增程式碼的詳細資訊，請參閱[使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)和[使用資源檔](../../windows/working-with-resource-files.md)。
-
-

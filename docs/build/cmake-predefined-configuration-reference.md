@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 296977a08a869b1da2ed8ca292fc39e0df6324b4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509428"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078758"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 預先組建組態
 
@@ -34,7 +34,6 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - MinGW 發行
 
 當您選擇設定時，它會新增至專案根資料夾中的*CMakeSettings。* 您接著便可以使用它來建置您的專案。 如需設定屬性的詳細資訊，請參閱[CMakeSettings 參考](cmakesettings-reference.md)。
-
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 預先定義組建組態：
 
@@ -381,7 +380,6 @@ You can use these optional settings for more control:
 - Clang
 
 當您選擇一個組態時，它便會新增至專案根資料夾的 CMakeSettings.json 檔案內。 您接著便可以使用它來建置您的專案。
-
 
 ```json
 {

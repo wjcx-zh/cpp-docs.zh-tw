@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 296e7848b1d756fe0aba6156be2501db45bb092b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60324ae914c9490144a715e06323ee6d184ce201
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230551"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079728"
 ---
-# <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
+# <a name="ccustomsource-customdsh"></a>CCustomSource （CustomDS .h）
 
-提供者類別會使用多重繼承。 下列程式碼顯示資料來源物件的繼承鏈結：
+提供者類別會使用多重繼承。 下列程式碼顯示資料來源物件的繼承鏈：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -35,18 +35,18 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-所有 COM 元件會都衍生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx` 提供所有實作`IUnknown`介面。 它可以處理任何執行緒模型。 `CComCoClass` 處理所需的任何錯誤支援。 如果您想要更豐富的錯誤資訊傳送給用戶端，您可以使用一些錯誤 Api 中`CComCoClass`。
+所有 COM 元件都衍生自 `CComObjectRootEx` 和 `CComCoClass`。 `CComObjectRootEx` 提供 `IUnknown` 介面的所有執行。 它可以處理任何執行緒模型。 `CComCoClass` 會處理所需的任何錯誤支援。 如果您想要將更豐富的錯誤資訊傳送給用戶端，您可以在 `CComCoClass`中使用一些錯誤 Api。
 
-資料來源物件也會繼承來自數個 'Impl' 類別。 每個類別會提供介面的實作。 資料來源物件實作`IPersist`， `IDBProperties`， `IDBInitialize`，和`IDBCreateSession`介面。 每個介面會實作所需 OLE db 資料來源物件。 您可以選擇支援或不支援繼承或不繼承自其中一個 'Impl' 類別的特定功能。 如果您想要支援`IDBDataSourceAdmin`介面，繼承自`IDBDataSourceAdminImpl`類別，以取得所需的功能。
+資料來源物件也會繼承自數個 ' Impl ' 類別。 每個類別都會提供介面的執行。 資料來源物件會執行 `IPersist`、`IDBProperties`、`IDBInitialize`和 `IDBCreateSession` 介面。 OLE DB 需要每個介面，才能執行資料來源物件。 您可以藉由繼承或不繼承自這些 ' Impl ' 類別的其中一個，來選擇支援或不支援特定功能。 如果您想要支援 `IDBDataSourceAdmin` 介面，則會繼承自 `IDBDataSourceAdminImpl` 類別，以取得所需的功能。
 
 ## <a name="com-map"></a>COM 對應
 
-每當用戶端呼叫`QueryInterface`對於資料來源上的介面，它會經歷下列 COM 對應：
+每當用戶端針對資料來源上的介面呼叫 `QueryInterface` 時，就會經歷下列 COM 對應：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CCustomSource
-class ATL_NO_VTABLE CCustomSource : 
+class ATL_NO_VTABLE CCustomSource :
    public CComObjectRootEx<CComSingleThreadModel>,
    public CComCoClass<CCustomSource, &CLSID_Custom>,
    public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
@@ -56,13 +56,13 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-所有 COM 元件會都衍生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx` 提供所有實作`IUnknown`介面。 它可以處理任何執行緒模型。 `CComCoClass` 處理所需的任何錯誤支援。 如果您想要更豐富的錯誤資訊傳送給用戶端，您可以使用一些錯誤 Api 中`CComCoClass`。
+所有 COM 元件都衍生自 `CComObjectRootEx` 和 `CComCoClass`。 `CComObjectRootEx` 提供 `IUnknown` 介面的所有執行。 它可以處理任何執行緒模型。 `CComCoClass` 會處理所需的任何錯誤支援。 如果您想要將更豐富的錯誤資訊傳送給用戶端，您可以在 `CComCoClass`中使用一些錯誤 Api。
 
-資料來源物件也會繼承來自數個 'Impl' 類別。 每個類別會提供介面的實作。 資料來源物件實作`IPersist`， `IDBProperties`， `IDBInitialize`，和`IDBCreateSession`介面。 每個介面會實作所需 OLE db 資料來源物件。 您可以選擇支援或不支援繼承或不繼承自其中一個 'Impl' 類別的特定功能。 如果您想要支援`IDBDataSourceAdmin`介面，繼承自`IDBDataSourceAdminImpl`類別，以取得所需的功能。
+資料來源物件也會繼承自數個 ' Impl ' 類別。 每個類別都會提供介面的執行。 資料來源物件會執行 `IPersist`、`IDBProperties`、`IDBInitialize`和 `IDBCreateSession` 介面。 OLE DB 需要每個介面，才能執行資料來源物件。 您可以藉由繼承或不繼承自這些 ' Impl ' 類別的其中一個，來選擇支援或不支援特定功能。 如果您想要支援 `IDBDataSourceAdmin` 介面，則會繼承自 `IDBDataSourceAdminImpl` 類別，以取得所需的功能。
 
 ## <a name="com-map"></a>COM 對應
 
-每當用戶端呼叫`QueryInterface`對於資料來源上的介面，它會經歷下列 COM 對應：
+每當用戶端針對資料來源上的介面呼叫 `QueryInterface` 時，就會經歷下列 COM 對應：
 
 ```cpp
 BEGIN_COM_MAP(CCustomSource)
@@ -74,11 +74,11 @@ BEGIN_COM_MAP(CCustomSource)
 END_COM_MAP()
 ```
 
-COM_INTERFACE_ENTRY 巨集是從 ATL，並表達的實作`QueryInterface`在`CComObjectRootEx`傳回適當的介面。
+COM_INTERFACE_ENTRY 宏來自 ATL，並告訴 `QueryInterface` 在 `CComObjectRootEx` 中的執行，以傳回適當的介面。
 
 ## <a name="property-map"></a>屬性對應
 
-屬性對應指定的提供者所指派的所有屬性：
+屬性對應會指定提供者指派的所有屬性：
 
 ```cpp
 BEGIN_PROPSET_MAP(CCustomSource)
@@ -148,9 +148,9 @@ BEGIN_PROPSET_MAP(CCustomSource)
 END_PROPSET_MAP()
 ```
 
-OLE DB 中的屬性分組。 資料來源物件具有兩個群組的屬性： 一個用於 DBPROPSET_DATASOURCEINFO 設定，另一個用於 DBPROPSET_DBINIT 設定。 DBPROPSET_DATASOURCEINFO 集對應至提供者和其資料來源相關的屬性。 DBPROPSET_DBINIT 集對應至在初始化時使用的屬性。 OLE DB 提供者範本處理這些 PROPERTY_SET 巨集的集合。 巨集來建立包含的屬性陣列的區塊。 每當用戶端呼叫`IDBProperties`介面，提供者使用的屬性對應。
+OLE DB 中的屬性會分組。 資料來源物件有兩個屬性群組：一個用於 DBPROPSET_DATASOURCEINFO 集，另一個用於 DBPROPSET_DBINIT 集。 DBPROPSET_DATASOURCEINFO 集合會對應至提供者及其資料來源的屬性。 DBPROPSET_DBINIT 集會對應到在初始化時使用的屬性。 OLE DB 提供者範本會使用 PROPERTY_SET 宏來處理這些集合。 宏會建立包含屬性陣列的區塊。 每當用戶端呼叫 `IDBProperties` 介面時，提供者會使用屬性對應。
 
-您不需要實作規格中的每個屬性。 不過，您必須支援所需的屬性;如需詳細資訊層級 0 一致性規格，請參閱。 如果您不想要支援的屬性，您可以從對應移除它。 如果您想要支援的屬性，將它加入至地圖使用 PROPERTY_INFO_ENTRY 巨集。 巨集對應於`UPROPINFO`結構，如下列程式碼所示：
+您不需要執行規格中的每個屬性。 不過，您必須支援所需的屬性;如需詳細資訊，請參閱層級0一致性規格。 如果您不想要支援屬性，可以將它從對應中移除。 如果您想要支援屬性，請使用 PROPERTY_INFO_ENTRY 宏將其加入至對應。 宏會對應至 `UPROPINFO` 結構，如下列程式碼所示：
 
 ```cpp
 struct UPROPINFO
@@ -168,17 +168,17 @@ struct UPROPINFO
 };
 ```
 
-在結構中的每個項目表示處理屬性的資訊。 它包含`DBPROPID`判斷 GUID 和 ID 的屬性。 它也會包含項目，以判斷型別和屬性的值。
+結構中的每個元素都代表處理屬性的資訊。 它包含 `DBPROPID` 來判斷屬性的 GUID 和識別碼。 它也包含專案，以判斷屬性的類型和值。
 
-如果您想要變更預設屬性的值 （請注意，取用者可以隨時變更可寫入屬性的值），您可以使用 PROPERTY_INFO_ENTRY_VALUE 或 PROPERTY_INFO_ENTRY_EX 巨集。 這些巨集可讓您指定的對應屬性的值。 PROPERTY_INFO_ENTRY_VALUE 巨集是縮寫標記法，可讓您變更的值。 PROPERTY_INFO_ENTRY_VALUE 巨集呼叫 PROPERTY_INFO_ENTRY_EX 巨集。 這個巨集可讓您新增或變更中屬性的所有`UPROPINFO`結構。
+如果您想要變更屬性的預設值（請注意，取用者隨時可以變更可寫入屬性的值），您可以使用 PROPERTY_INFO_ENTRY_VALUE 或 PROPERTY_INFO_ENTRY_EX 宏。 這些宏可讓您指定對應屬性的值。 PROPERTY_INFO_ENTRY_VALUE 宏是一個簡短的標記法，可讓您變更此值。 PROPERTY_INFO_ENTRY_VALUE 宏會呼叫 PROPERTY_INFO_ENTRY_EX 宏。 這個宏可讓您加入或變更 `UPROPINFO` 結構中的所有屬性。
 
-如果您想要定義您自己的屬性集，您可以加入一個藉由其他的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 組合。 定義的屬性集 GUID，然後定義您自己的屬性。 如果您有提供者特有的屬性，請將它們加入新的屬性，而不是使用現有設定。 這可避免更新版本的 OLE DB 中的問題。
+如果您想要定義自己的屬性集，可以藉由建立額外的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 組合來加入一個。 定義屬性集的 GUID，然後定義您自己的屬性。 如果您有提供者專屬的屬性，請將它們新增至新的屬性集，而不是使用現有的。 這可避免較新版本 OLE DB 中的問題。
 
 ## <a name="user-defined-property-sets"></a>使用者定義的屬性集
 
-視覺化C++支援使用者定義的屬性集。 您不需要覆寫`GetProperties`或`GetPropertyInfo`。 相反地，範本會偵測到任何使用者定義的屬性集，並將它新增至適當的物件。
+Visual C++支援使用者定義的屬性集。 您不需要覆寫 `GetProperties` 或 `GetPropertyInfo`。 相反地，範本會偵測任何使用者定義的屬性集，並將它新增至適當的物件。
 
-如果您有必須可在初始化階段的使用者定義的屬性集 (亦即，取用者呼叫之前`IDBInitialize::Initialize`)，您可以指定此使用 UPROPSET_USERINIT 旗標以及 BEGIN_PROPERTY_SET_EX 巨集。 此工作 （如 OLE DB 規格需要） 的資料來源物件必須是屬性集。 例如：
+如果您的使用者定義屬性集必須在初始化時使用（也就是在取用者呼叫 `IDBInitialize::Initialize`之前），您可以使用 UPROPSET_USERINIT 旗標以及 BEGIN_PROPERTY_SET_EX 宏來指定此屬性。 屬性集必須在資料來源物件中，才能讓此作業正常執行（如 OLE DB 規格所需）。 例如：
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)

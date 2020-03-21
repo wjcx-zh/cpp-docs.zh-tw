@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 39708e8cfff7f61c3a3f763f87e1a3da36f0d4b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857680"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077248"
 ---
 # <a name="allocator"></a>allocator
 
 **Microsoft 專屬**
 
-配置器宣告規範可以套用至自訂記憶體配置函式，以透過 Windows 事件追蹤（ETW）顯示配置。
+配置**allocator**器宣告規範可以套用至自訂記憶體配置函式，以透過 Windows 事件追蹤（ETW）顯示配置。
 
 ## <a name="syntax"></a>語法
 
 ```
-   __declspec(allocator) 
+   __declspec(allocator)
 ```
 
 ## <a name="remarks"></a>備註
@@ -35,4 +35,4 @@ __declspec(allocator) void* myMalloc(size_t size)
 
 如需詳細資訊，請參閱[測量 Visual Studio 中的記憶體使用量](/visualstudio/profiling/memory-usage)和[自訂的原生 ETW 堆積事件](/visualstudio/profiling/custom-native-etw-heap-events)。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**

@@ -3,16 +3,16 @@ title: 加入屬性頁 (ATL 教學課程，第 6 部分)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 2c487d1446f5d1050868f2066359e9639f474ba3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524690"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078775"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>加入屬性頁 (ATL 教學課程，第 6 部分)
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 及更新版本中未提供 ATL OLE DB 提供者精靈。
 
 屬性頁會實作為個別的 COM 物件，以便在需要時能夠共用它們。 在此步驟中，您將執行下列工作來將屬性頁加入至控制項：
@@ -45,7 +45,7 @@ ms.locfileid: "65524690"
 
 隨即建立下列三個檔案：
 
-|檔案|說明|
+|檔案|描述|
 |----------|-----------------|
 |PolyProp.h|包含 C++ 類別 `CPolyProp`，其會實作屬性頁。|
 |PolyProp.cpp|包括 PolyProp.h 檔案。|
@@ -71,13 +71,13 @@ ms.locfileid: "65524690"
 
 1. 在 [資源檢視] 中，展開 `Dialog` 節點，然後按兩下 `IDD_POLYPROP`。 請注意，除了告訴您在此處插入您的控制項的標籤外，出現的對話方塊會是空的。
 
-1. 選取該標籤，然後透過更改 [屬性] 視窗中的**標題**文字，來變更它以標明 `Sides:`。
+1. 選取該標籤，然後透過更改 [屬性]`Sides:` **視窗中的**標題**文字，來變更它以標明** 。
 
 1. 調整標籤方塊的大小，以使其符合文字的大小。
 
 1. 將**編輯控制項**從**工具箱**拖曳到標籤右邊。
 
-1. 最後，使用 [屬性] 視窗來將編輯控制項的**識別碼**變更為 `IDC_SIDES`。
+1. 最後，使用 [屬性] 視窗來將編輯控制項的`IDC_SIDES`識別碼**變更為** 。
 
 這樣即可完成建立屬性頁資源的流程。
 
@@ -85,7 +85,7 @@ ms.locfileid: "65524690"
 
 既然您已建立屬性頁資源，您現在需要撰寫實作程式碼。
 
-首先，在按下 [套用] 按鈕時，啟用 `CPolyProp` 類別以在物件中設定邊數。
+首先，在按下 [套用]`CPolyProp`**按鈕時，啟用** 類別以在物件中設定邊數。
 
 ### <a name="to-modify-the-apply-function-to-set-the-number-of-sides"></a>修改 Apply 函式以設定邊數
 
@@ -93,7 +93,7 @@ ms.locfileid: "65524690"
 
     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_1.h)]
 
-屬性頁一次可附加一個以上的用戶端，因此，`Apply` 函式會進行迴圈循環，並使用擷取自編輯方塊的值來呼叫每個用戶端上的 `put_Sides`。 您正在使用 [CComQIPtr](../atl/reference/ccomqiptr-class.md) 類別，其會在每個物件上執行 `QueryInterface`，以從 `IUnknown` 介面 (儲存於 `m_ppUnk` 陣列) 中取得`IPolyCtl` 介面。
+屬性頁一次可附加一個以上的用戶端，因此，`Apply` 函式會進行迴圈循環，並使用擷取自編輯方塊的值來呼叫每個用戶端上的 `put_Sides`。 您正在使用 [CComQIPtr](../atl/reference/ccomqiptr-class.md) 類別，其會在每個物件上執行 `QueryInterface`，以從 `IPolyCtl` 介面 (儲存於 `IUnknown` 陣列) 中取得`m_ppUnk` 介面。
 
 程式碼現在會檢查 `Sides` 屬性實際運作的設定。 如果失敗，程式碼就會顯示一個訊息方塊，其中顯示來自 `IErrorInfo` 介面的錯誤詳細資料。 通常，容器會要求 `ISupportErrorInfo` 介面的物件，並先呼叫 `InterfaceSupportsErrorInfo` 來判斷該物件是否支援設定錯誤資訊。 您可以略過此工作。
 
@@ -109,7 +109,7 @@ ms.locfileid: "65524690"
 
 1. 在事件清單中展開 `IDC_SIDES` 節點。
 
-1. 選取 `EN_CHANGE`，然後從右側的下拉式功能表中，按一下 [\<新增> OnEnChangeSides]。 `OnEnChangeSides` 處理常式宣告將加入至 Polyprop.h，並將處理常式實作加入至 Polyprop.cpp。
+1. 選取 `EN_CHANGE`，然後從右側的下拉式功能表中，按一下 [**新增> OnEnChangeSides]\<** 。 `OnEnChangeSides` 處理常式宣告將加入至 Polyprop.h，並將處理常式實作加入至 Polyprop.cpp。
 
 接下來，您將修改此處理常式。
 
@@ -119,7 +119,7 @@ ms.locfileid: "65524690"
 
     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]
 
-針對 `IDC_SIDES` 控制項使用 `EN_CHANGE` 通知傳送 `WM_COMMAND` 訊息時，將會呼叫 `OnEnChangeSides`。 `OnEnChangeSides` 接著會呼叫 `SetDirty` 並傳遞 TRUE，以指出屬性頁現在已進行記錄變更且應啟用 [套用] 按鈕。
+針對 `OnEnChangeSides` 控制項使用 `WM_COMMAND` 通知傳送 `EN_CHANGE` 訊息時，將會呼叫 `IDC_SIDES`。 `OnEnChangeSides` 接著會呼叫 `SetDirty` 並傳遞 TRUE，以指出屬性頁現在已進行記錄變更且應啟用 [套用] 按鈕。
 
 ## <a name="adding-the-property-page-to-the-control"></a>將屬性頁加入至控制項
 

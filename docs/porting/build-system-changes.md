@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626605"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076934"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild 與 MSBuild 的比較：在 Visual Studio 2010 中組建系統變更
 
@@ -63,7 +63,7 @@ Property=<value>;$(MyProperty)
 
 ## <a name="vc-directories-settings"></a>VC + + 目錄設定
 
-Visual C++ 目錄設定會在 [VC++ 目錄屬性頁](../ide/vcpp-directories-property-page.md)上指定。 在 Visual Studio 2008 和更早版本中，目錄設定會套用每個使用者，而排除的目錄清單則指定于*sysincl .dat*檔案中。 
+Visual C++ 目錄設定會在 [VC++ 目錄屬性頁](../ide/vcpp-directories-property-page.md)上指定。 在 Visual Studio 2008 和更早版本中，目錄設定會套用每個使用者，而排除的目錄清單則指定于*sysincl .dat*檔案中。
 
 若您在命令列執行 [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe)，就無法變更 VC++ 目錄設定。 即使您開啟 [工具] 功能表，按一下 [匯入和匯出設定]，然後選取 [重設所有設定] 選項，也同樣無法變更設定。
 
@@ -71,8 +71,8 @@ Visual C++ 目錄設定會在 [VC++ 目錄屬性頁](../ide/vcpp-directories-pro
 
 1. 開啟 [**工具**] 功能表，然後按一下 [匯**入和匯出設定**]
 2. 選取 [匯**入選取的環境設定**]
-3. 遵循 wizard 中的指示。
+3. 遵循精靈中的指示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MSBuild on the Command Line - C++](../build/msbuild-visual-cpp.md) (命令列上的 MSBuild)

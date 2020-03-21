@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 103a1ce5568c6137994056e574ce8eec04511d8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182908"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079749"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-精靈會建立具有一個資料列的資料; 的類別在此情況下，它會呼叫`CCustomWindowsFile`。 下列程式碼會針對`CCustomWindowsFile`產生的精靈，並使用列出目錄中的所有檔案`WIN32_FIND_DATA`結構。 `CCustomWindowsFile` 繼承自`WIN32_FIND_DATA`結構：
+Wizard 會建立一個具有一個資料列的類別;在此情況下，它會被稱為 `CCustomWindowsFile`。 下列 `CCustomWindowsFile` 的程式碼會產生 wizard，並使用 `WIN32_FIND_DATA` 結構列出目錄中的所有檔案。 `CCustomWindowsFile` 繼承自 `WIN32_FIND_DATA` 結構：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
@@ -38,9 +38,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` 會呼叫[使用者記錄類別](../../data/oledb/user-record.md)因為它也描述提供者的資料列集中的資料行的對應。 提供者資料行對應會包含每個欄位中使用 PROVIDER_COLUMN_ENTRY 巨集的資料列集的一個項目。 巨集指定資料行名稱、 序數和位移結構項目。 在上述程式碼中的提供者的資料行項目包含的位移`WIN32_FIND_DATA`結構。 當取用者呼叫`IRowset::GetData`，資料會傳輸一個連續的緩衝區中。 與其讓您執行指標算術，地圖可讓您指定的資料成員。
+`CCustomWindowsFile` 稱為[使用者記錄類別](../../data/oledb/user-record.md)，因為它也有一個對應，描述提供者資料列集中的資料行。 提供者資料行對應會針對資料列集中的每個欄位，使用 PROVIDER_COLUMN_ENTRY 宏來包含一個專案。 宏會針對結構專案指定資料行名稱、序數和位移。 上述程式碼中的提供者資料行專案包含 `WIN32_FIND_DATA` 結構中的位移。 當取用者呼叫 `IRowset::GetData`時，資料會在一個連續的緩衝區中傳輸。 對應可讓您指定資料成員，而不是讓您執行指標算術。
 
-`CCustomRowset`類別也包含`Execute`方法。 `Execute` 是什麼實際讀取中的資料來源的原生。 下列程式碼會顯示精靈產生`Execute`方法。 此函數會使用 Win32`FindFirstFile`並`FindNextFile`Api 來擷取目錄中檔案的相關資訊，並將它們放在執行個體中的`CCustomWindowsFile`類別。
+`CCustomRowset` 類別也包含 `Execute` 方法。 `Execute` 實際上是從原生來源讀取中的資料。 下列程式碼顯示 wizard 產生的 `Execute` 方法。 函式會使用 Win32 `FindFirstFile` 和 `FindNextFile` Api 來抓取目錄中的檔案相關資訊，並將它們放在 `CCustomWindowsFile` 類別的實例中。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -73,9 +73,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-要搜尋的目錄會顯示`m_strCommandText`; 這包含所代表的文字`ICommandText`命令物件中的介面。 如果未不指定任何目錄，它會使用目前的目錄。
+要搜尋的目錄會顯示 `m_strCommandText`;這包含命令物件中 `ICommandText` 介面所表示的文字。 如果未指定目錄，則會使用目前的目錄。
 
-方法會建立一個項目，每個檔案 （對應至一個資料列），並將它放入`m_rgRowData`資料成員。 `CRowsetImpl`類別會定義`m_rgRowData`資料成員。 此陣列中的資料會顯示整個資料表，並使用到所有的範本。
+方法會為每個檔案建立一個專案（對應到一個資料列），並將它放在 `m_rgRowData` 的資料成員中。 `CRowsetImpl` 類別會定義 `m_rgRowData` 資料成員。 此陣列中的資料會顯示在整個資料表中，並在整個範本中使用。
 
 ## <a name="see-also"></a>另請參閱
 

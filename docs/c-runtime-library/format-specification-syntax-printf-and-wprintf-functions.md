@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417170"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078053"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
-各種 `printf` 與 `wprintf` 函式皆會採用格式字串和選擇性引數，然後產生格式化的輸出字元序列。 格式字串包含零或多個「指示詞」，這是輸出的常值字元或是編碼的「轉換規格」，其會說明如何將輸出的引數格式化。 本文說明格式字串中用來為轉換規格進行編碼的語法。 如需這些函式的清單，請參閱[資料流 I/O](../c-runtime-library/stream-i-o.md)。 
+各種 `printf` 與 `wprintf` 函式皆會採用格式字串和選擇性引數，然後產生格式化的輸出字元序列。 格式字串包含零或多個「指示詞」，這是輸出的常值字元或是編碼的「轉換規格」，其會說明如何將輸出的引數格式化。 本文說明格式字串中用來為轉換規格進行編碼的語法。 如需這些函式的清單，請參閱[資料流 I/O](../c-runtime-library/stream-i-o.md)。
 
 轉換規格包含選擇性及必要欄位，形式如下︰
 
@@ -39,7 +39,7 @@ ms.locfileid: "79417170"
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列的函式已宣告為**內嵌**，並已移至 `<stdio.h>` 和 `<conio.h>` 標頭。 如果您要遷移較舊的程式碼，您可能會看到與這些函式的連接有*LNK2019* 。 如需詳細資訊，請參閱[視覺效果C++變更歷程記錄 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 ## <a name="type-conversion-specifier"></a>類型轉換規範

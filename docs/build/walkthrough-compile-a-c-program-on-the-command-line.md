@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051524"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078246"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C 程式
 
@@ -63,9 +63,8 @@ Visual Studio 版 Visual Studio 的組建工具只會安裝命令列工具組、
 如果您已在 Windows 10 C++上安裝 Microsoft Visual Build Tools 2015，請開啟 [**開始**] 功能表，然後向下滾動並開啟 [  **C++ Visual Build tools** ] 資料夾。 選擇 **[ C++ Visual 2015 x86 Native Tools 命令提示字元**] 以開啟 [命令提示字元] 視窗。
 
 如果您執行的是不同版本的 Windows，請在 開始 功能表或 起始頁 中，尋找包含開發人員命令提示字元快捷方式的 Visual Studio 工具 資料夾。 您也可以使用 Windows 搜尋函式來搜尋「開發人員命令提示字元」，並選擇哪一個符合您安裝的 Visual Studio 版本。 使用快捷方式來開啟 [命令提示字元] 視窗。
-   
-::: moniker-end
 
+::: moniker-end
 
 接下來，確認已正確C++設定 Visual developer 命令提示字元。 在 [命令提示字元] 視窗中，輸入 `cl` 並確認輸出看起來像這樣：
 
@@ -183,7 +182,7 @@ C 和語言C++類似，但並不相同。 Microsoft C/C++編譯器（MSVC）會�
 
 MSVC 與 ISO C99 標準相容，但不符合嚴格規範。 在大部分情況下，可移植的 C 程式碼會如預期般編譯並執行。 視覺C++效果不支援 ISO C11 中的大部分變更。 某些程式庫函式和 POSIX 函數名稱已被 MSVC 取代。 支援函數，但慣用的名稱已變更。 如需詳細資訊，請參閱 CRT 和[編譯器警告（層級3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)[中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [逐步解說：建立標準 C++ 程式 (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [C 語言參考](../c-language/c-language-reference.md)<br/>

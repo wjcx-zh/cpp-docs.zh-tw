@@ -2,12 +2,12 @@
 title: 靜態程式庫 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302936"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077970"
 ---
 # <a name="static-libraries-ccx"></a>靜態程式庫 (C++/CX)
 
@@ -15,16 +15,15 @@ ms.locfileid: "74302936"
 
 ## <a name="creating-static-libraries"></a>建立靜態程式庫
 
-
 建立新專案的指示會根據您已安裝的 Visual Studio 版本而有所不同。 請確定您在左上角將版本選取器設定為正確的版本。
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>在 Visual Studio 2019 中建立 UWP 靜態程式庫
 
-1. 在功能表列上，選擇 [檔案] > [新增] > [專案]，以開啟 [建立新專案] 對話方塊。
+1. 在功能表列上 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**建立新的專案**] 對話方塊。
 
-1. 在對話方塊頂端，將 [**語言**] 設定為**C++** ，將 [**平臺**] 設定為 [ **Windows**]，並將 [**專案類型**] 設定為 [ **UWP**]。 
+1. 在對話方塊頂端，將 [**語言**] 設定為**C++** ，將 [**平臺**] 設定為 [ **Windows**]，並將 [**專案類型**] 設定為 [ **UWP**]。
 
 1. 從篩選過的專案類型清單中，選擇 [**靜態程式庫（通用C++Windows-/cx）** ]，然後選擇 **[下一步]** 。 在下一個頁面中，提供專案的名稱，並視需要指定專案位置。
 

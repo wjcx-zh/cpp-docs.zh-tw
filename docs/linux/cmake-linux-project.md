@@ -3,12 +3,12 @@ title: 在 Visual Studio 中建立及設定 Linux CMake 專案
 description: 如何在 Visual Studio 中建立、設定、編輯和編譯 Linux CMake 專案
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: a0b98e1d0e9ca5e68f5fd12c458fe29b9835b65c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446861"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077669"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>建立及設定 Linux CMake 專案
 
@@ -37,14 +37,14 @@ Visual Studio 不會修改 CMakeLists.txt 檔案，因此可讓其他正在使�
 
 ## <a name="before-you-begin"></a>開始之前
 
-首先，請確認您已安裝 [使用 C++ 進行 Linux 開發] 工作負載，其中包括 CMake 元件。 請參閱[在 Visual Studio 中安裝 C++ Linux 工作負載](download-install-and-setup-the-linux-development-workload.md)。 
+首先，請確認您已安裝 [使用 C++ 進行 Linux 開發] 工作負載，其中包括 CMake 元件。 請參閱[在 Visual Studio 中安裝 C++ Linux 工作負載](download-install-and-setup-the-linux-development-workload.md)。
 
-在 Linux 系統上，確定已安裝下列項目： 
+在 Linux 系統上，確定已安裝下列項目：
 
 - gcc
 - gdb
 - rsync
-- zip 
+- zip
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ add_executable(hello-cmake hello.cpp)
 
 ::: moniker range="vs-2019"
 
-若要以適用於 Linux 的 Windows 子系統為目標，按一下主要工具列的組態下拉式清單中的 [管理組態]。 接著，按下 [加入組態] 按鈕並選擇 **WSL-Debug** 或 **WSL-Release** (如果使用 GCC)，或 Clang 變體 (如果使用 Clang/LLVM 工具組)。 
+若要以適用於 Linux 的 Windows 子系統為目標，按一下主要工具列的組態下拉式清單中的 [管理組態]。 接著，按下 [加入組態] 按鈕並選擇 **WSL-Debug** 或 **WSL-Release** (如果使用 GCC)，或 Clang 變體 (如果使用 Clang/LLVM 工具組)。
 
 **Visual Studio 2019 16.1 版**：以 WSL 為目標時，不需要複製來源或標頭，因為 Linux 上的編譯器可以直接存取原始程式檔所在的 Windows 檔案系統 (在 Windows 1903 版和更新版本中，Windows 應用程式同樣可以直接存取 Linux 標頭檔，但 Visual Studio 還不會使用此功能)。
 
@@ -102,13 +102,13 @@ add_executable(hello-cmake hello.cpp)
 
 如果指定遠端 Linux 目標，您的來源會複製到遠端系統。
 
-選取目標之後，CMake 會自動在 Linux 系統上執行，以便為您的專案產生 CMake 快取。 
+選取目標之後，CMake 會自動在 Linux 系統上執行，以便為您的專案產生 CMake 快取。
 
 ![在 Linux 上產生 CMake 快取](media/cmake-linux-1.png "在 Linux 上產生 CMake 快取")
 
 為了提供遠端 Linux 系統標頭的 IntelliSense 支援，Visual Studio 會自動從 Linux 電腦，將其複製到本機 Windows 電腦上的目錄。 如需詳細資訊，請參閱[適用於遠端標頭的 IntelliSense](configure-a-linux-project.md#remote_intellisense)。
 
-## <a name="debug_cmake_project"></a> 為 CMake 專案偵錯
+## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> 為 CMake 專案偵錯
 
 若要在所指定偵錯目標系統上對您的程式碼進行偵錯，請設定中斷點、在專案設定旁的工具列功能表中選取 CMake 目標作為啟動項目，然後選擇工具列上的 [&#x23f5; 開始] 或按 F5。
 
@@ -125,13 +125,13 @@ add_executable(hello-cmake hello.cpp)
 
 若要指定其他引數，請新增在 `args` JSON 陣列中。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案) 及 [Configure CMake debugging sessions](../build/configure-cmake-debugging-sessions.md) (設定 CMake 偵錯工作階段)。
 
-## <a name="configure_cmake_linux"></a> 設定適用於 Linux 的 CMake 設定
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a> 設定適用於 Linux 的 CMake 設定
 
-CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMake 設定](../build/customize-cmake-settings.md)中所列出的屬性，加上控制遠端 Linux 電腦上建置設定的額外屬性。 
+CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMake 設定](../build/customize-cmake-settings.md)中所列出的屬性，加上控制遠端 Linux 電腦上建置設定的額外屬性。
 
 ::: moniker range="vs-2019"
 
-若要在 Visual Studio 2019 變更預設 CMake 設定，請從主要工具列開啟 [組態] 下拉式清單，然後選擇 [管理組態]。 
+若要在 Visual Studio 2019 變更預設 CMake 設定，請從主要工具列開啟 [組態] 下拉式清單，然後選擇 [管理組態]。
 
 ![CMake 管理設定](../build/media/vs2019-cmake-manage-configurations.png "CMake 組態下拉式清單")
 
@@ -207,7 +207,6 @@ Visual Studio 2019 16.1 版和更新版本中的預設 Linux 偵錯組態如下�
 
 如需有關這些設定的詳細資訊，請參閱 [CMakeSettings.json 參考](../build/cmakesettings-reference.md)。
 
-
 ## <a name="optional-settings"></a>選擇性設定
 
 您可以使用下列選擇性設定來取得更多控制：
@@ -221,8 +220,6 @@ Visual Studio 2019 16.1 版和更新版本中的預設 Linux 偵錯組態如下�
 ```
 
 這些選項可讓您在建置前和建置後，以及在 CMake 產生前於 Linux 系統上執行命令。 其值可以是遠端系統上任何有效的命令。 輸出會經由管道輸送回 Visual Studio。
-
-
 
 ## <a name="see-also"></a>另請參閱
 

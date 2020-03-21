@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624470"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078686"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio 專案 - C++
 
@@ -23,7 +23,7 @@ ms.locfileid: "73624470"
 
 ::: moniker range="vs-2019"
 
-您可以藉由選擇 [檔案] > [新增] > [專案]，並將 [語言] 設為 C++，來建立 C++ 專案。 在結果清單中您會看到專案範本清單，而您可以藉由設定 [平台] 或 [專案類型] 並在搜尋方塊中輸入關鍵字，來篩選該清單。 
+您可以藉由選擇 [檔案] > [新增] > [專案]，並將 [語言] 設為 C++，來建立 C++ 專案。 在結果清單中您會看到專案範本清單，而您可以藉由設定 [平台] 或 [專案類型] 並在搜尋方塊中輸入關鍵字，來篩選該清單。
 
    ![Visual Studio 2019 專案範本](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 [新增專案] 對話方塊")
 
@@ -41,7 +41,7 @@ ms.locfileid: "73624470"
 
 專案建立後，將會顯示在 [方案總管](/visualstudio/ide/solutions-and-projects-in-visual-studio) 視窗中：
 
-   ![底下提供說明，包括方案總管](media/mathlibrary-solution-explorer-153.png)
+   ![方案總管](media/mathlibrary-solution-explorer-153.png)
 
 當您建立新的專案時，也會建立方案檔 (.sln)。 您可以在 [方案總管] 中以滑鼠右鍵按一下其他專案，將該專案新增至方案。 方案檔可在您有多個相關的專案時用來協調組建相依性，但其功能大概就是如此。 所有編譯器選項都會在專案層級設定。
 
@@ -51,7 +51,7 @@ ms.locfileid: "73624470"
 
 ## <a name="add-third-party-libraries"></a>新增第三方程式庫
 
-若要新增第三方程式庫，請使用 [vcpkg](vcpkg.md) 套件管理員。 執行 Visual Studio 整合步驟，以設定您從任何 Visual Studio 專案參考該程式庫時的路徑。 
+若要新增第三方程式庫，請使用 [vcpkg](vcpkg.md) 套件管理員。 執行 Visual Studio 整合步驟，以設定您從任何 Visual Studio 專案參考該程式庫時的路徑。
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>設定編譯器選項和其他組建屬性
 
@@ -61,20 +61,20 @@ ms.locfileid: "73624470"
 
 若要編譯和執行新的專案，請按 **F5**，或按一下主要工具列上具有綠色箭頭的*偵錯下拉式清單*。 您可以在*組態下拉式清單*中選擇是否要執行*偵錯*或*發行*組建 (或其他自訂組態)。
 
-新的專案編譯無誤。 當您新增自己的程式碼時，有時可能會導入錯誤或觸發警告。 錯誤會使組建無法完成；警告則否。 當您建置專案時，所有錯誤和警告會都出現在 [輸出] 視窗和錯誤清單中。 
+新的專案編譯無誤。 當您新增自己的程式碼時，有時可能會導入錯誤或觸發警告。 錯誤會使組建無法完成；警告則否。 當您建置專案時，所有錯誤和警告會都出現在 [輸出] 視窗和錯誤清單中。
 
    ![輸出視窗和錯誤清單](../overview/media/vs2017-output-error-list.png)
 
 在錯誤清單中，您可以對醒目標示的錯誤按 **F1**，以移至其文件主題。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
 [在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)<br/>
 如何使用屬性頁和屬性工作表來指定專案設定。
 
 [在建置階段參考程式庫和元件](adding-references-in-visual-cpp-projects.md)<br/>
 如何在專案中包含程式庫、Dll、COM 和 .NET 元件。
- 
+
 [組織專案輸出檔案](how-to-organize-project-output-files-for-builds.md)<br/>
 如何自訂在建置流程中建立的可執行檔所在的位置。
 
@@ -84,7 +84,7 @@ ms.locfileid: "73624470"
 [從現有程式碼建立專案](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 如何從來源檔案的鬆散式集合建立新的 Visual Studio 專案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [專案和建置系統](projects-and-build-systems-cpp.md)<br>
 [Microsoft C++移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

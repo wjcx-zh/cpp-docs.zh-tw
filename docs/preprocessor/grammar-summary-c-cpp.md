@@ -6,18 +6,18 @@ helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 99e7e8218a80e28d67767392cadfb5c4918a3bfe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302181"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076865"
 ---
 # <a name="preprocessor-grammar-summary-cc"></a>前置處理器文法摘要 (C/C++)
 
 本文說明 C 和C++預處理器的正式文法。 其中涵蓋前置處理指示詞和運算子的語法。 如需詳細資訊，請參閱[預處理器](../preprocessor/preprocessor.md)和 Pragma 指示詞[，以及 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
-## <a name="definitions"></a>文法摘要的定義
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>文法摘要的定義
 
 終端是語法定義的端點。 沒有其他解決方式。 終端包括一組保留字和使用者定義的識別項。
 
@@ -29,7 +29,7 @@ ms.locfileid: "75302181"
 
 **{** *expression*<sub>opt</sub> **}**
 
-## <a name="conventions"></a>檔慣例
+## <a name="document-conventions"></a><a name="conventions"></a>檔慣例
 
 許多慣例會針對語法的不同元件使用不同的字型屬性。 符號和字型如下：
 
@@ -52,7 +52,7 @@ ms.locfileid: "75302181"
 
 在程式碼語法區塊中，逗號（`,`）、句點（`.`）、分號（`;`）、冒號（`:`）、括弧（`( )`）、雙引號（`"`）和單引號（`'`）都是常值。
 
-## <a name="grammar"></a>預處理器文法
+## <a name="preprocessor-grammar"></a><a name="grammar"></a>預處理器文法
 
 *控制行*： \
 &nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別碼* *token-字串*<sub>opt</sub>\
@@ -66,7 +66,7 @@ ms.locfileid: "75302181"
 
 *常數運算式*： \
 **已定義**&nbsp;&nbsp;&nbsp;&nbsp;（*識別碼* **）** \
-&nbsp;&nbsp;&nbsp;&nbsp;**已定義** *識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp;**定義**的*識別碼*\
 &nbsp;&nbsp;&nbsp;&nbsp;任何其他常數運算式
 
 *條件*式： \
@@ -98,7 +98,7 @@ ms.locfileid: "75302181"
 
 *數位-序列*： \
 &nbsp;&nbsp;&nbsp;&nbsp;*位數*\
-&nbsp;&nbsp;&nbsp;&nbsp;*位數-序號*
+&nbsp;&nbsp;&nbsp;&nbsp;*位數-序號* *digit*
 
 *數位*：其中一個 \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
@@ -124,7 +124,6 @@ ms.locfileid: "75302181"
 
 > [!NOTE]
 > 下列非終端項會在 *C++語言參考*的 [[詞彙慣例](../cpp/lexical-conventions.md)] 區段中展開：*常數*、*常數運算式*、*識別碼*、*關鍵字*、*運算子*和*標點符號*。
-
 
 ## <a name="see-also"></a>另請參閱
 

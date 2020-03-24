@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [C++], decorated
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
-ms.openlocfilehash: d1557f53a07a544ff4f9e5a63f905e6854fb74ce
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cc00c971eac2a089ccec5bd9eab594bdf4e8348e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857174"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173513"
 ---
 # <a name="name-decoration"></a>名稱裝飾
 
@@ -21,18 +21,18 @@ ms.locfileid: "64857174"
 
 下表顯示各種呼叫慣例的連結器名稱。
 
-|呼叫慣例|`extern "C"` 或`.c`檔案|`.cpp``.cxx`或 `/TP`|
+|呼叫慣例|`extern "C"` 或 `.c` 檔案|`.cpp`、`.cxx` 或 `/TP`|
 |------------------------|---------------------------|------------------------|
 |C 命名慣例 (`__cdecl`)|`_test`|`?test@@ZAXXZ`|
-|快速呼叫命名慣例 (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
-|標準呼叫命名慣例 (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
-|向量呼叫命名慣例 (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
+|快速呼叫命名慣例（`__fastcall`）|`@test@0`|`?test@@YIXXZ`|
+|標準呼叫命名慣例（`__stdcall`）|`_test@0`|`?test@@YGXXZ`|
+|向量呼叫命名慣例（`__vectorcall`）|`test@@0`|`?test@@YQXXZ`|
 
-使用`extern "C"`呼叫 C 函式，從C++。 `extern "C"` 會強制使用 C 命名慣例的非類別C++函式。 注意編譯器參數 **/Tc**或是 **/Tp**，這會告訴編譯器忽略副檔名，並將檔案編譯為 C 或C++，分別。 這些選項可能會導致未預期的連結器名稱。
+使用 `extern "C"` 從C++呼叫 C 函式。 `extern "C"` 強制使用非類別C++函式的 C 命名慣例。 請注意編譯器參數 **/tc**或 **/tp**，這會告訴編譯器忽略副檔名，並分別將檔案編譯為 C 或C++。 這些選項可能會導致您不預期的連結器名稱。
 
-參數不相符的函式原型也可能導致這個錯誤。 名稱裝飾會將函式的參數納入最終的裝飾函式名稱。 不符合那些在函式宣告的參數類型來呼叫函式也可能造成 LNK2001。
+參數不相符的函式原型也可能導致這個錯誤。 名稱裝飾會將函式的參數納入最終的裝飾函式名稱。 呼叫具有不符合函式宣告中參數類型的函式時，可能也會造成 LNK2001。
 
-目前沒有任何標準的C++命名編譯器廠商或不同的編譯器版本之間。 連結其他編譯器所編譯的物件檔案可能不會產生相同的命名配置，並可能會導致無法解析的外部符號。
+在編譯器廠商之間，或C++甚至是不同版本的編譯器之間，目前沒有任何標準可進行命名。 連結由其他編譯器所編譯的物件檔可能不會產生相同的命名配置，而可能導致無法解析的外部。
 
 ## <a name="see-also"></a>另請參閱
 

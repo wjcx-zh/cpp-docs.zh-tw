@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515693"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172148"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
 「內部指標」會宣告指向參考型別內部的指標，而不是指向物件本身。 內部指標可以指向參考控制代碼、實值類型、Boxed 類型控制代碼、Managed 類型的成員，或是指向 Managed 陣列的元素。
 
@@ -74,7 +74,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 如需內部指標的詳細資訊，請參閱
 
-- [如何：宣告及使用內部指標和受控陣列 (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [如何：宣告及使用內部指標和 Managed 陣列 (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
 - [如何：使用 interior_ptr 關鍵字宣告實值型別 (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 

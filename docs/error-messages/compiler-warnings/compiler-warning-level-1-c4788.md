@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4788
 ms.assetid: 47d75bda-f833-4bdd-93a0-a134df0cd303
-ms.openlocfilehash: 03ce38aaa910a410025c5cccdf39646d34104779
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 76a33b24446debffb2c00bf1b0497cfc86022ce0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052381"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175132"
 ---
 # <a name="compiler-warning-level-1-c4788"></a>編譯器警告 (層級 1) C4788
 
@@ -21,7 +21,7 @@ ms.locfileid: "74052381"
 
 產生的 funclet 名稱可能太長，編譯器會將它截斷並產生 C4788。
 
-若要解決這個警告，請縮短原始函數名稱。 如果函式是C++樣板函式或方法，請對名稱的一部分使用 typedef。 例如:
+若要解決這個警告，請縮短原始函數名稱。 如果函式是C++樣板函式或方法，請對名稱的一部分使用 typedef。 例如：
 
 ```cpp
 C1<x, y, z<T>>::C2<a,b,c>::f

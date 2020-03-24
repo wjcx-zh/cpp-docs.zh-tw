@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2162
 ms.assetid: 4ac713b7-3067-436c-83fd-4180438c4f2c
-ms.openlocfilehash: 1348f8ac3eb8885a0d0401dc98a2c44979528966
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a9c30c483296d704737c58ad149687d0df85ddb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191040"
 ---
 # <a name="resource-compiler-error-rc2162"></a>資源編譯器錯誤 RC2162
 
-必須是巨集型式參數
+預期的宏型式參數
 
-語彙基元，下列字串化運算子 (**#**) 不是型式參數名稱。
+字串化運算子（ **#** ）後面的 token 不是型式參數名稱。

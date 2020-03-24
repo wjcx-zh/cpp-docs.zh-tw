@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
-ms.openlocfilehash: d07e995be0ecd99974356a7516e7c4deee677637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd300a09c29668c496d93109d1bc862947e948c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187553"
 ---
-# <a name="varianttsetstring"></a>_variant_t::SetString
+# <a name="_variant_tsetstring"></a>_variant_t::SetString
 
 **Microsoft 專屬**
 
@@ -27,14 +27,14 @@ void SetString(const char* pSrc);
 
 #### <a name="parameters"></a>參數
 
-*pSrc*<br/>
+*.Psrc*<br/>
 字元字串的指標。
 
 ## <a name="remarks"></a>備註
 
 將 ANSI 字串轉換為 Unicode `BSTR` 字串，並將它指派給這個 `_variant_t` 物件。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

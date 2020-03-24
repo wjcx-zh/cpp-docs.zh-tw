@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1512
 ms.assetid: 0a626ff3-63db-4797-abe4-31545ce2c2c1
-ms.openlocfilehash: 46a6a144e5820e243cf4bdeecf13f2b851b4bf75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3fed3d0de6a96f49df8bd8fdeed1c0148b1fe24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197648"
 ---
 # <a name="bscmake-error-bk1512"></a>BSCMAKE 錯誤 BK1512
 
-檔案名稱： 已超過容量
+檔案名：超出容量
 
-BSCMAKE 無法建置瀏覽資訊檔，因為定義、 參考、 模組或其他資訊的數目超過限制。
+BSCMAKE 無法建立流覽資訊檔，因為定義、參考、模組或其他資訊的數目超過限制。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正
 
-1. 排除使用/e m、 /Es 或 /Ei 某些資訊。
+1. 使用/Em、/Es 或/Ei. 排除部分資訊
 
-1. 省略 /Iu 選項。
+1. 省略/Iu 選項。

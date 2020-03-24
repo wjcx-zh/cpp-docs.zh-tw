@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172564"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref 類別和 ref 結構 (C++/CLI 和 C++/CX)
 
@@ -63,7 +63,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 當參考類型繼承自另一個參考類型時，必須以 [override](override-cpp-component-extensions.md) 明確覆寫，或以 [new (vtable 中的新位置)](new-new-slot-in-vtable-cpp-component-extensions.md) 隱藏基底類別中的虛擬函式。 必須將衍生的類別函式明確標示為 **virtual**。
 
-若要在編譯時間偵測某個類型為 **ref 類別**或 **ref 結構**，或是**實值類別**或**實值結構**，請使用 `__is_ref_class (type)`、`__is_value_class (type)` 或 `__is_simple_value_class (type)`。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
+若要在編譯時間偵測某個類型為 **ref 類別**或 **ref 結構**，或是**實值類別**或**實值結構**，請使用 `__is_ref_class (type)`、`__is_value_class (type)` 或 `__is_simple_value_class (type)`。 如需詳細資訊，請參閱[型別特性的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
 如需類別和結構的詳細資訊，請參閱
 
@@ -73,7 +73,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [類別、結構和等位](../cpp/classes-and-structs-cpp.md)
 
-- [「如何：定義與使用類別和結構 (C++/CLI)」中的解構函式和完成項](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [如何：定義和使用類別和結構（C++/cli）中的析構函數和完成項](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [使用者定義的運算子 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 

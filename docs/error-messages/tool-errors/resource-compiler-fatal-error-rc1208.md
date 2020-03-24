@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1208
 ms.assetid: 7dacc4ec-3ebd-49b3-ba4c-1a2982bac720
-ms.openlocfilehash: 5562505ff56dcbd2a8588aa161826da83c26d0ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2663f586934d7877a827d3a6f6357d3b52071c24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172850"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>資源編譯器嚴重錯誤 RC1208
 
-輸入的檔案具有。RES 延伸模組
+輸入檔的副檔名為。RES 延伸模組
 
-。RES 延伸模組用於資源編譯器的輸出。 。RC 的擴充功能應該用於資源編譯器指令碼。
+該.RES 延伸模組會用於資源編譯器輸出。 該.RC 延伸模組應用於資源編譯器腳本。

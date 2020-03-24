@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6203
 ms.assetid: bd7fdd1c-83e4-4d6a-901e-10a0308bf5be
-ms.openlocfilehash: 4433a024d461ee1bc43aa5fa82344190377243b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371a6c673826c6ce71d7a0eb3b9e08d9488f53f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193689"
 ---
 # <a name="math-error-m6203"></a>運算錯誤 M6203
 
-'function': _OVERFLOW 錯誤
+' function '： _OVERFLOW 錯誤
 
-指定的函式的結果就是太大，無法呈現。
+給定的函式結果太大而無法表示。
 
-這個錯誤呼叫`_matherr`函式名稱、 其引數，與錯誤類型的函式。 您可以重新撰寫`_matherr`函式來自訂特定執行階段浮點數學錯誤的處理。
+此錯誤會使用函式名稱、其引數和錯誤類型來呼叫 `_matherr` 函式。 您可以重寫 `_matherr` 函式，以自訂特定執行時間浮點運算錯誤的處理。

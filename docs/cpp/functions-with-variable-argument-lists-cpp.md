@@ -1,5 +1,5 @@
 ---
-title: 具有變數引數清單的函式 (C++)
+title: 具有變數引數清單的C++函式（）
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arguments [C++], variable number of
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f456f31dec631f7d9340563a93dfafeea49a72b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153849"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178440"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>具有變數引數清單的函式 (C++)
+# <a name="functions-with-variable-argument-lists--c"></a>具有變數引數清單的C++函式（）
 
-最後一個成員是省略符號 (...) 的函式宣告可以接受可變數目的引數。 在這些情況下，C++ 只會針對明確宣告的引數提供類型檢查。 需要撰寫連引數數目和類型都可以不同的一般函式時，您可以使用變數引數清單。 系列的函式是使用變數引數清單的函式的範例。`printf`*引數宣告清單*
+最後一個成員是省略符號 (...) 的函式宣告可以接受可變數目的引數。 在這些情況下，C++ 只會針對明確宣告的引數提供類型檢查。 需要撰寫連引數數目和類型都可以不同的一般函式時，您可以使用變數引數清單。 函數系列是使用可變引數清單的函式範例。`printf`*引數-宣告清單*
 
 ## <a name="functions-with-variable-arguments"></a>具有變數引數的函式
 
-若要宣告之後存取引數，請使用標準 include 檔案中包含的巨集\<stdarg.h >，如下所述。
+若要在宣告之後存取引數，請使用標準 include 檔中包含的宏 \<stdarg.h> >，如下所述。
 
 **Microsoft 專屬**
 
 如果省略符號是最後一個引數，且省略符號在逗號之後，則 Microsoft C++ 允許將省略符號指定為引數。 因此，`int Func( int i, ... );` 宣告是合法的，`int Func( int i ... );` 則不合法。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 宣告接受可變引數數目的函式至少需要一個預留位置引數 (即使不使用該引數)。 如果未提供這個預留位置引數，就無法存取其餘引數。
 
-當型別引數**char**傳遞做為變數引數，它們會轉換為類型**int**。同樣地，當類型的引數**浮點數**傳遞做為變數引數，它們會轉換為類型**double**。 其他類型的引數受限於一般整數和浮點數提升。 請參閱[標準轉換](standard-conversions.md)如需詳細資訊。
+將**char**類型的引數當做變數引數傳遞時，它們會轉換成**int**類型。同樣地，當**float**類型的引數當做變數引數傳遞時，它們會轉換成**double**類型。 其他類型的引數受限於一般整數和浮點數提升。 如需詳細資訊，請參閱[標準轉換](standard-conversions.md)。
 
-需要變數清單的函式是使用引數清單中的省略符號 (...) 宣告。 使用的類型和所述的巨集\<stdarg.h > include 檔案可存取引數傳遞的變數清單。 如需有關這些巨集的詳細資訊，請參閱 < [va_arg、 va_copy、 va_end、 va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 (位於 C 執行階段程式庫文件中)。
+需要變數清單的函式是使用引數清單中的省略符號 (...) 宣告。 使用 \<stdarg.h> 中所述的類型和宏 > 包含檔案，以存取由變數清單傳遞的引數。 如需這些宏的詳細資訊，請參閱[va_arg、va_copy、va_end、va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 (位於 C 執行階段程式庫文件中)。
 
-下列範例示範巨集與類型搭配運作的方式 (宣告於\<stdarg.h >):
+下列範例顯示宏如何與類型一起使用（在 \<stdarg.h> 中宣告 >）：
 
 ```cpp
 // variable_argument_lists.cpp

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
-ms.openlocfilehash: 006f87691c6e0839115e2c02ab0d922aa95eaa93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 961aa0caf31d49917f6df67305bc01d465884b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327973"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165895"
 ---
 # <a name="compiler-error-c3733"></a>編譯器錯誤 C3733
 
-'event': 不適當的語法指定 COM 事件;您是否忘記 '__interface'？
+' event '：指定 COM 事件的語法不正確;您忘了 ' __interface ' 嗎？
 
-錯誤的語法用於 COM 事件。 若要修正這個錯誤，變更的事件類型或修正語法以符合 COM 事件規則。
+COM 事件使用了錯誤的語法。 若要修正此錯誤，請變更事件種類或更正語法，以符合 COM 事件規則。
 
-下列範例會產生 C3733:
+下列範例會產生 C3733：
 
 ```
 #define _ATL_ATTRIBUTES 1

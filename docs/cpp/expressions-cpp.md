@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184012"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179935"
 ---
 # <a name="expressions-c"></a>運算式 (C++)
 
@@ -22,7 +22,7 @@ ms.locfileid: "62184012"
 
 - 產生「副作用」 (副作用是評估運算式之外的任何動作，例如修改物件的值)。
 
-在 C++ 中，運算子可以多載，而且其意義可以是使用者所定義。 然而，其優先順序和接受的運算元數目不能修改。 本節將描述語言所提供、未多載的運算子語法和語意。 除了[運算式的型別](../cpp/types-of-expressions.md)並[運算式的語意](../cpp/semantics-of-expressions.md)，涵蓋下列主題：
+在 C++ 中，運算子可以多載，而且其意義可以是使用者所定義。 然而，其優先順序和接受的運算元數目不能修改。 本節將描述語言所提供、未多載的運算子語法和語意。 除了運算式的[類型之外](../cpp/types-of-expressions.md) [，還](../cpp/semantics-of-expressions.md)涵蓋下列主題：
 
 - [主要運算式](../cpp/primary-expressions.md)
 
@@ -40,15 +40,15 @@ ms.locfileid: "62184012"
 
 - [轉型運算子](../cpp/casting-operators.md)
 
-- [執行階段類型資訊](../cpp/run-time-type-information.md)
+- [執行時間類型資訊](../cpp/run-time-type-information.md)
 
 其他各節中有關運算子的主題：
 
 - [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-- [多載的運算子](../cpp/operator-overloading.md)
+- [多載運算子](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) （C++/cli）
 
     > [!NOTE]
     >  內建類型的運算子無法多載，其行為已預先定義。

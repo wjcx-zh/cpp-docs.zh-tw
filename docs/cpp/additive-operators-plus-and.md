@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739132ce1889b7e73b7ae19f5072a1dfec9c066d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181664"
 ---
 # <a name="additive-operators--and--"></a>加法類運算子：+ 和 -
 
@@ -32,39 +32,39 @@ expression - expression
 
 加法類運算子為：
 
-- 加法 (**+**)
+- 加法（ **+** ）
 
-- 減法 (**-**)
+- 減法（ **-** ）
 
 這些二進位運算子具有由左至右的順序關聯性。
 
-加法類運算子接受算術或指標類型運算元。 相加的結果 (**+**) 運算子是運算元的總和。 減法運算的結果 (**-**) 運算子是運算元之間的差異。 如果一個或兩個運算元為指標，它們必須是物件的指標，而不是函式的指標。 如果兩個運算元都是指標，除非兩個運算元都是同一個陣列中的物件指標，否則結果並沒有意義。
+加法類運算子接受算術或指標類型運算元。 加法（ **+** ）運算子的結果是運算元的總和。 減法（ **-** ）運算子的結果是運算元之間的差異。 如果一個或兩個運算元為指標，它們必須是物件的指標，而不是函式的指標。 如果兩個運算元都是指標，除非兩個運算元都是同一個陣列中的物件指標，否則結果並沒有意義。
 
-加法類運算子接受的運算元*算術*，*整數*，並*純量*型別。 其定義如下表所列。
+加法*類運算子*接受*算術*、*整數*和純量類型的運算元。 其定義如下表所列。
 
 ### <a name="types-used-with-additive-operators"></a>搭配加法類運算子使用的類型
 
 |類型|意義|
 |----------|-------------|
 |*arithmetic*|整數和浮點類型統稱為「算術」類型。|
-|*integral*|各種大小 (long、short) 的 char 和 int 及列舉是「整數」類型。|
-|*scalar*|純量運算元是算術或指標類型的運算元。|
+|*積分*|各種大小 (long、short) 的 char 和 int 及列舉是「整數」類型。|
+|*標量*|純量運算元是算術或指標類型的運算元。|
 
 這些運算子的有效組合包括：
 
-*arithmetic* + *arithmetic*
+*算術* + *算術*
 
-*scalar* + *integral*
+純*量 + * *整數*
 
-*integral* + *scalar*
+*整數* + *純*量
 
-*arithmetic* - *arithmetic*
+*算術* - *算術*
 
-*scalar* - *scalar*
+純量*scalar* * - 純*量
 
 請注意，加法和減法並非對等的運算。
 
-在這兩個運算元都是算術類型，如果涵蓋的轉換[標準轉換](standard-conversions.md)適用於運算元，結果是已轉換的型別。
+如果兩個運算元都是算術類型，則[標準轉換](standard-conversions.md)中涵蓋的轉換會套用至運算元，而結果會是轉換後的類型。
 
 ## <a name="example"></a>範例
 
@@ -109,9 +109,9 @@ for( int i = 0; i < 10; ++i )
 
 ## <a name="pointer-subtraction"></a>指標減法
 
-如果兩個運算元都是指標，則減法運算的結果為兩個運算元之間的差數 (以陣列元素為單位)。 減法運算式會產生帶正負號的整數結果型別的`ptrdiff_t`(在標準 include 檔中定義\<stddef.h >)。
+如果兩個運算元都是指標，則減法運算的結果為兩個運算元之間的差數 (以陣列元素為單位)。 減法運算式會產生類型 `ptrdiff_t` 的帶正負號整數結果（定義于標準 include 檔中，\<stddef.h >）。
 
-兩個運算元中的第二個運算元可以是整數類資料類型。 減法運算的結果與原始指標的類型相同。 減法運算的值是指標 (*n* - *我*) 個陣列項目，其中*n*項目所指向的原始指標和*我*是第二個運算元的整數值。
+兩個運算元中的第二個運算元可以是整數類資料類型。 減法運算的結果與原始指標的類型相同。 減法的值是（*n* - *i*）第一個陣列元素的指標，其中*n*是原始指標所指向的元素，而*i*是第二個運算元的整數值。
 
 ## <a name="see-also"></a>另請參閱
 

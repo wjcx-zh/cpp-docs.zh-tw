@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-ms.openlocfilehash: 78ec291b555838b1af63287e3d24fdb809afd7c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d200253d304500e10f5fceeade1c8228acde874d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198883"
 ---
 # <a name="compiler-warning-level-3-c4306"></a>編譯器警告 (層級 3) C4306
 
-> '*識別碼*': 從轉換'*type1*'to'*type2*' 更大的
+> '*identifier*'：從 '*type1*' 轉換為較大的 '*type2*'
 
-識別項是型別轉換為較大的指標。 新的型別未填入高的位元會是零填滿。
+識別碼是轉換成較大指標的類型。 新類型未填入的高位將會填滿零。
 
-這個警告可能表示非預期的轉換。 產生的指標可能無效。
+此警告可能表示不想要的轉換。 產生的指標可能無效。

@@ -6,26 +6,26 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d70a1901c457d9fbdbe8712d84999e256a54d0c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209758"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供者內參考屬性
 
-尋找您想要的屬性的屬性群組和屬性識別碼。 如需詳細資訊，請參閱 < [OLE DB 屬性](/previous-versions/windows/desktop/ms722734(v=vs.85))中**OLE DB 程式設計人員參考**。
+尋找您想要之屬性的屬性群組和屬性 ID。 如需詳細資訊，請參閱 OLE DB 程式設計**人員參考**中的[OLE DB 屬性](/previous-versions/windows/desktop/ms722734(v=vs.85))。
 
-下列範例假設您嘗試從資料列集取得的屬性。 使用工作階段或命令的程式碼很類似，但使用不同的介面。
+下列範例假設您正嘗試從資料列集取得屬性。 使用會話或命令的程式碼很類似，但使用不同的介面。
 
-建立[CDBPropSet](../../data/oledb/cdbpropset-class.md)物件做為建構函式的參數使用的屬性群組。 例如: 
+使用屬性群組做為函式的參數，以建立[CDBPropSet](../../data/oledb/cdbpropset-class.md)物件。 例如：
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-呼叫[AddProperty](../../data/oledb/cdbpropset-addproperty.md)，將它傳遞的屬性識別碼和要指派給屬性的值。 值的類型取決於您使用的屬性。
+呼叫[AddProperty](../../data/oledb/cdbpropset-addproperty.md)，將屬性識別碼和要指派給屬性的值傳遞給它。 值的類型取決於您所使用的屬性。
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -35,7 +35,7 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);
 ```
 
-使用`IRowset`介面呼叫`GetProperties`。 傳遞做為參數設定的屬性。 以下是最後的程式碼：
+使用 `IRowset` 介面來呼叫 `GetProperties`。 傳遞屬性集做為參數。 以下是最後的程式碼：
 
 ```cpp
 CAgentRowset<CCustomCommand>* pRowset = (CAgentRowset<CCustomCommand>*) pThis;

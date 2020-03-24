@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166850"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169054"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>使用內嵌組譯碼撰寫函式
 
@@ -42,7 +42,7 @@ _TEXT   ENDS
         END
 ```
 
-由於函式是針對另一個組合語言所撰寫，因此需要另一個原始程式檔以及組譯碼和連結步驟。 C 和 C++ 函式引數通常會在堆疊上傳遞，因此這個版本的 `power2` 函式會依據它們在堆疊上的位置存取其引數  (請注意，**模型**指示詞，可在 MASM 和一些其他組譯工具也可讓您依名稱存取堆疊引數和本機堆疊變數。)
+由於函式是針對另一個組合語言所撰寫，因此需要另一個原始程式檔以及組譯碼和連結步驟。 C 和 C++ 函式引數通常會在堆疊上傳遞，因此這個版本的 `power2` 函式會依據它們在堆疊上的位置存取其引數 （請注意， **MODEL**指示詞（可在 MASM 和其他組合器中使用）也可讓您依名稱存取堆疊引數和本機堆疊變數）。
 
 ## <a name="example"></a>範例
 
@@ -76,9 +76,9 @@ int power2( int num, int power )
 
 `power2` 函式的內嵌版本會依名稱參考其引數，並且與程式的其他部分出現在相同的原始程式檔。 這個版本需要的組譯碼指令也比較少。
 
-由於 `power2` 的內嵌版本不會執行 C `return` 陳述式，如果您是在警告層級 2 (含) 更高層級進行編譯，它就會產生無害的警告。 函式確實會傳回值，不過，編譯器在沒有 `return` 陳述式時無法分辨這種情形。 您可以使用[#pragma 警告](../../preprocessor/warning.md)停用這個警告產生。
+由於 `power2` 的內嵌版本不會執行 C `return` 陳述式，如果您是在警告層級 2 (含) 更高層級進行編譯，它就會產生無害的警告。 函式確實會傳回值，不過，編譯器在沒有 `return` 陳述式時無法分辨這種情形。 您可以使用[#pragma 警告](../../preprocessor/warning.md)來停用此警告的產生。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - C++ Support Library
 - Visual C++ Support Library
 ms.assetid: fe6246eb-9ac7-478d-a272-dc9b09b14788
-ms.openlocfilehash: 88b7112962e003d825bac85112224130b5827b9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6fb61eb871df91dd7fe308c7f9ab103f8a7a915
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208849"
 ---
 # <a name="c-support-library"></a>C++ 支援程式庫
 
-C++支援的程式庫提供類別，可支援在 managed 的程式設計C++。
+C++支援程式庫提供的類別可支援中C++的 managed 程式設計。
 
 ## <a name="in-this-section"></a>本節內容
 

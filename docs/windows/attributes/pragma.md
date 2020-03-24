@@ -1,21 +1,21 @@
 ---
-title: pragma (C++ COM 屬性)
+title: pragma （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 56b1aa4bf445095b86a1ea6792bfc78f45266e9a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514272"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166480"
 ---
 # <a name="pragma"></a>pragma
 
-將指定的字串發出到產生的 .idl 檔案中, 而不使用引號。
+將指定的字串發出到產生的 .idl 檔案中，而不使用引號。
 
 ## <a name="syntax"></a>語法
 
@@ -56,8 +56,8 @@ __interface A
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

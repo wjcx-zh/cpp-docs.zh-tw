@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1067
 ms.assetid: 6b23677d-428d-47c6-9207-8b85f7718e03
-ms.openlocfilehash: dfcb0b91aaa89297c88ba94da1c3b977d18befc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a60acde1ba6de76ac4c54059a9ea2e6aa8cd577
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374335"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182535"
 ---
 # <a name="resource-compiler-fatal-error-rc1067"></a>資源編譯器嚴重錯誤 RC1067
 
-編譯器限制： 識別項造成內部緩衝區溢位
+編譯器限制：識別碼溢出內部緩衝區
 
-內部編譯器已超過限制。
+已超過內部編譯器限制。

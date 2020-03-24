@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - FileHandleTraits structure
 ms.assetid: e1107c42-2cd6-4253-9c16-8ecb35f05cd9
-ms.openlocfilehash: 09b8eb1a45efee4f8d0aaf4dc27774de91ffcff4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c20bad1b67719a9fcfb8ea9fa1dfede1feb42ddf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398429"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213989"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits 結構
 
-定義的檔案控制代碼的特性。
+定義檔案控制代碼的特性。
 
 ## <a name="syntax"></a>語法
 
@@ -34,9 +34,9 @@ struct FileHandleTraits : HANDLETraits;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標頭：** corewrappers。h
 
-**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空間：** Microsoft：： WRL：：包裝函式：： HandleTraits
 
 ## <a name="see-also"></a>另請參閱
 

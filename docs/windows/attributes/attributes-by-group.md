@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: bab7013f2c5fd48ef1a22b990499d79c9c217ca9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21dcbabcd5317896cf55cfba79f551db521f5137
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217309"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167468"
 ---
 # <a name="attributes-by-group"></a>依群組分類的屬性
 
@@ -19,12 +19,12 @@ C++屬性會組織成下列功能群組。
 
 |屬性|描述|
 |---------------|-----------------|
-|[COM 屬性](com-attributes.md)|插入程式碼，以支援 COM 開發和.NET Framework 通用語言執行階段開發的多個區域。|
-|[IDL 屬性](idl-attributes.md)|啟用從原始程式碼檔而不使用精靈和沒有結構的知識和該檔案的語法的.idl 檔案的修改。|
-|[OLE DB 消費者屬性](ole-db-consumer-attributes.md)|插入程式碼，根據[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-reference.md)— 若要建立的工作 OLE DB 取用者會執行工作，例如開啟資料表，執行命令，以及存取資料。|
-|[編譯器屬性](compiler-attributes.md)|由 Microsoft 所提供C++編譯器。|
+|[COM 屬性](com-attributes.md)|插入程式碼，以支援 COM 開發的多個區域，並 .NET Framework common language runtime 開發。|
+|[IDL 屬性](idl-attributes.md)|不使用 wizard 也不知道該檔案的結構和語法，就可以從原始程式碼檔中修改 .idl 檔案。|
+|[OLE DB 消費者屬性](ole-db-consumer-attributes.md)|插入程式碼（以[OLE DB 取用者範本](../../data/oledb/ole-db-consumer-templates-reference.md)為基礎），以建立可執行工作的 OLE DB 取用者，例如開啟資料表、執行命令和存取資料。|
+|[編譯器屬性](compiler-attributes.md)|由 Microsoft C++編譯器提供。|
 
-如需有關如何定義您的.NET Framework 應用程式的自訂屬性的資訊，請參閱[User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
+如需如何為您的 .NET Framework 應用程式定義自訂屬性的詳細資訊，請參閱[使用者定義屬性](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

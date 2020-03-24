@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2517
 ms.assetid: d79348d5-e271-4aad-b973-8264515f8e90
-ms.openlocfilehash: 63523670fe1292d23327112f627e7d1a9dafeca6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66b7657869c70b6f6175e7f3cccc1dfb4d2614f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202642"
 ---
 # <a name="compiler-error-c2517"></a>編譯器錯誤 C2517
 
-'identifier': 權限的 ':: ' 未定義
+' identifier '： '：： ' 的右邊未定義
 
-範圍解析運算子右邊的識別項 (`::`) 必須是類別、 結構或等位在左側的已定義的成員。 若不為任何類別、 結構或等位，必須宣告在右邊的識別項具有全域領域。
+範圍解析運算子（`::`）右邊的識別碼必須是左邊的類別、結構或等位的已定義成員。 如果沒有命名類別、結構或等位，則右邊的識別碼必須以全域範圍宣告。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: 1d11ee3ea472f935120c59f0faefee905361ee97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195274d7bcef0ff4d82383a8ec828ca9267573b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267390"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178934"
 ---
 # <a name="run-time-type-information"></a>執行階段類型資訊
 
@@ -34,7 +34,7 @@ ms.locfileid: "62267390"
 
 - [Type_info](../cpp/type-info-class.md)類別。
 
-   用來保存所傳回的型別資訊**typeid**運算子。
+   用來保存**typeid**運算子傳回的類型資訊。
 
 ## <a name="see-also"></a>另請參閱
 

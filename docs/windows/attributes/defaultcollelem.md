@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 048d2933b8c024e74511e6cb49ae5c3240f3e710
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167117"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -29,7 +29,7 @@ ms.locfileid: "69501659"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示使用**defaultcollelem**屬性的介面方法:
+下列程式碼顯示使用**defaultcollelem**屬性的介面方法：
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -52,8 +52,8 @@ __interface IMyForm
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

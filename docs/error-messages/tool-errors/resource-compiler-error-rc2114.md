@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2114
 ms.assetid: abdfdc46-6601-451f-8e81-81e92bcd2208
-ms.openlocfilehash: 0939319b363a36e534d6910a72c07d6f432c2112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b748d6224b56cbfe893348cf156f9922b50f3046
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191453"
 ---
 # <a name="resource-compiler-error-rc2114"></a>資源編譯器錯誤 RC2114
 
-預期的控制項類別名稱
+需要的控制項類別名稱
 
-`class`欄位中的控制陳述式**對話方塊**陳述式必須是下列類型之一：按鈕、 下拉式方塊、 編輯、 LISTBOX、 捲軸、 靜態，或使用者定義。 請確定類別的拼法正確。
+**DIALOG**語句中 CONTROL 語句的 `class` 欄位必須是下列其中一種類型：按鈕、COMBOBOX、編輯、LISTBOX、捲軸、靜態或使用者定義。 請確定類別的拼寫正確。

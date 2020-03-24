@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209699"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>結構描述資料列集類別和 Typedef 類別
 
@@ -598,7 +598,7 @@ ms.locfileid: "79444142"
 |[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="assertion"></a>CAssertions、CAssertionInfo
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>CAssertions、CAssertionInfo
 
 呼叫 typedef 類別 `CAssertions`，以 `CAssertionInfo`執行其參數類別。
 
@@ -619,7 +619,7 @@ ms.locfileid: "79444142"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="catalog"></a>CCatalogs、CCatalogInfo
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>CCatalogs、CCatalogInfo
 
 呼叫 typedef 類別 `CCatalogs`，以 `CCatalogInfo`執行其參數類別。
 
@@ -636,7 +636,7 @@ ms.locfileid: "79444142"
 |m_szName|CATALOG_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="characterset"></a>CCharacterSets、CCharacterSetInfo
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>CCharacterSets、CCharacterSetInfo
 
 呼叫 typedef 類別 `CCharacterSets`，以 `CCharacterSetInfo`執行其參數類別。
 
@@ -659,7 +659,7 @@ ms.locfileid: "79444142"
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="checkconstraint"></a>CCheckConstraints、CCheckConstraintInfo
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>CCheckConstraints、CCheckConstraintInfo
 
 呼叫 typedef 類別 `CCheckConstraints`，以 `CCheckConstraintInfo`執行其參數類別。
 
@@ -679,7 +679,7 @@ ms.locfileid: "79444142"
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="collation"></a>CCollations、CCollationInfo
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>CCollations、CCollationInfo
 
 呼叫 typedef 類別 `CCollations`，以 `CCollationInfo`執行其參數類別。
 
@@ -701,7 +701,7 @@ ms.locfileid: "79444142"
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="columndomainusage"></a>CColumnDomainUsage、CColumnDomainUsageInfo
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>CColumnDomainUsage、CColumnDomainUsageInfo
 
 呼叫 typedef 類別 `CColumnDomainUsage`，以 `CColumnDomainUsageInfo`執行其參數類別。
 
@@ -725,7 +725,7 @@ ms.locfileid: "79444142"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="columnprivilege"></a>CColumnPrivileges、CColumnPrivilegeInfo
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>CColumnPrivileges、CColumnPrivilegeInfo
 
 呼叫 typedef 類別 `CColumnPrivileges`，以 `CColumnPrivilegeInfo`執行其參數類別。
 
@@ -750,7 +750,7 @@ ms.locfileid: "79444142"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="columns"></a>CColumns、CColumnsInfo
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>CColumns、CColumnsInfo
 
 呼叫 typedef 類別 `CColumns`，以 `CColumnsInfo`執行其參數類別。
 
@@ -793,7 +793,7 @@ ms.locfileid: "79444142"
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="constraintcolumnusage"></a>CConstraintColumnUsage、CConstraintColumnUsageInfo
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>CConstraintColumnUsage、CConstraintColumnUsageInfo
 
 呼叫 typedef 類別 `CConstraintColumnUsage`，以 `CConstraintColumnUsageInfo`執行其參數類別。
 
@@ -817,7 +817,7 @@ ms.locfileid: "79444142"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="constrainttableusage"></a>CConstraintTableUsage、CConstraintTableUsageInfo
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>CConstraintTableUsage、CConstraintTableUsageInfo
 
 呼叫 typedef 類別 `CConstraintTableUsage`，以 `CConstraintTableUsageInfo`執行其參數類別。
 
@@ -838,7 +838,7 @@ ms.locfileid: "79444142"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="foreignkeys"></a>CForeignKeys、CForeignKeysInfo
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>CForeignKeys、CForeignKeysInfo
 
 呼叫 typedef 類別 `CForeignKeys`，以 `CForeignKeysInfo`執行其參數類別。
 
@@ -868,7 +868,7 @@ ms.locfileid: "79444142"
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="index"></a>CIndexes、CIndexInfo
+## <a name="cindexes-cindexinfo"></a><a name="index"></a>CIndexes、CIndexInfo
 
 呼叫 typedef 類別 `CIndexes`，以 `CIndexInfo`執行其參數類別。
 
@@ -907,7 +907,7 @@ ms.locfileid: "79444142"
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a>CKeyColumns、CKeyColumnInfo
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>CKeyColumns、CKeyColumnInfo
 
 呼叫 typedef 類別 `CKeyColumns`，以 `CKeyColumnInfo`執行其參數類別。
 
@@ -932,7 +932,7 @@ ms.locfileid: "79444142"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="primarykey"></a>CPrimaryKeys、CPrimaryKeyInfo
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>CPrimaryKeys、CPrimaryKeyInfo
 
 呼叫 typedef 類別 `CPrimaryKeys`，以 `CPrimaryKeyInfo`執行其參數類別。
 
@@ -954,7 +954,7 @@ ms.locfileid: "79444142"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|序列|
 
-## <a name="procedurecolumn"></a>CProcedureColumns、CProcedureColumnInfo
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>CProcedureColumns、CProcedureColumnInfo
 
 呼叫 typedef 類別 `CProcedureColumns`，以 `CProcedureColumnInfo`執行其參數類別。
 
@@ -985,7 +985,7 @@ ms.locfileid: "79444142"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="procedureparam"></a>CProcedureParameters、Cprocedureparaminfo
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>CProcedureParameters、Cprocedureparaminfo
 
 呼叫 typedef 類別 `CProcedureParameters`，以 `CProcedureParamInfo`執行其參數類別。
 
@@ -1015,7 +1015,7 @@ ms.locfileid: "79444142"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="procedure"></a>CProcedures、CProcedureInfo
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>CProcedures、CProcedureInfo
 
 呼叫 typedef 類別 `CProcedures`，以 `CProcedureInfo`執行其參數類別。
 
@@ -1036,7 +1036,7 @@ ms.locfileid: "79444142"
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|DESCRIPTION|
 
-## <a name="provider"></a>CProviderTypes、CProviderInfo
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>CProviderTypes、CProviderInfo
 
 呼叫 typedef 類別 `CProviderTypes`，以 `CProviderInfo`執行其參數類別。
 
@@ -1071,7 +1071,7 @@ ms.locfileid: "79444142"
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="referentialconstraint"></a>CReferentialConstraints、CReferentialConstraintInfo
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints、CReferentialConstraintInfo
 
 呼叫 typedef 類別 `CReferentialConstraints`，以 `CReferentialConstraintInfo`執行其參數類別。
 
@@ -1096,7 +1096,7 @@ ms.locfileid: "79444142"
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="schemata"></a>CSchemata、CSchemataInfo
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>CSchemata、CSchemataInfo
 
 呼叫 typedef 類別 `CSchemata`，以 `CSchemataInfo`執行其參數類別。
 
@@ -1117,7 +1117,7 @@ ms.locfileid: "79444142"
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="sqllanguage"></a>CSQLLanguages、CSQLLanguageInfo
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>CSQLLanguages、CSQLLanguageInfo
 
 呼叫 typedef 類別 `CSQLLanguages`，以 `CSQLLanguageInfo`執行其參數類別。
 
@@ -1139,7 +1139,7 @@ ms.locfileid: "79444142"
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="statistic"></a>CStatistics、CStatisticInfo
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>CStatistics、CStatisticInfo
 
 呼叫 typedef 類別 `CStatistics`，以 `CStatisticInfo`執行其參數類別。
 
@@ -1158,7 +1158,7 @@ ms.locfileid: "79444142"
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="tableconstraint"></a>CTableConstraints、CTableConstraintInfo
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>CTableConstraints、CTableConstraintInfo
 
 呼叫 typedef 類別 `CTableConstraints`，以 `CTableConstraintInfo`執行其參數類別。
 
@@ -1183,7 +1183,7 @@ ms.locfileid: "79444142"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="tableprivilege"></a>CTablePrivileges、CTablePrivilegeInfo
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>CTablePrivileges、CTablePrivilegeInfo
 
 呼叫 typedef 類別 `CTablePrivileges`，以 `CTablePrivilegeInfo`執行其參數類別。
 
@@ -1205,7 +1205,7 @@ ms.locfileid: "79444142"
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="table"></a>CTables、CTableInfo
+## <a name="ctables-ctableinfo"></a><a name="table"></a>CTables、CTableInfo
 
 呼叫 typedef 類別 `CTables`，以 `CTableInfo`執行其參數類別。
 
@@ -1226,7 +1226,7 @@ ms.locfileid: "79444142"
 |m_guidTable|TABLE_GUID|
 |m_szDescription|DESCRIPTION|
 
-## <a name="translation"></a>CTranslations、CTranslationInfo
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>CTranslations、CTranslationInfo
 
 呼叫 typedef 類別 `CTranslations`，以 `CTranslationInfo`執行其參數類別。
 
@@ -1250,7 +1250,7 @@ ms.locfileid: "79444142"
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="usageprivilege"></a>CUsagePrivileges、CUsagePrivilegeInfo
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>CUsagePrivileges、CUsagePrivilegeInfo
 
 呼叫 typedef 類別 `CUsagePrivileges`，以 `CUsagePrivilegeInfo`執行其參數類別。
 
@@ -1273,7 +1273,7 @@ ms.locfileid: "79444142"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="viewcolumn"></a>CViewColumnUsage、CViewColumnInfo
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>CViewColumnUsage、CViewColumnInfo
 
 呼叫 typedef 類別 `CViewColumnUsage`，以 `CViewColumnInfo`執行其參數類別。
 
@@ -1297,7 +1297,7 @@ ms.locfileid: "79444142"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="view"></a>CViews、CViewInfo
+## <a name="cviews-cviewinfo"></a><a name="view"></a>CViews、CViewInfo
 
 呼叫 typedef 類別 `CViews`，以 `CViewInfo`執行其參數類別。
 
@@ -1319,7 +1319,7 @@ ms.locfileid: "79444142"
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="viewtable"></a>CViewTableUsage、CViewTableInfo
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>CViewTableUsage、CViewTableInfo
 
 呼叫 typedef 類別 `CViewTableUsage`，以 `CViewTableInfo`執行其參數類別。
 

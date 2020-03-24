@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 4c7cc6027a3af4c300b88389cb29e3ccf091514e
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 6f8f9466b867603738919c6210055d02d3c579ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180039"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外狀況規格（throw，noexcept）C++（）
 
@@ -54,7 +54,7 @@ C 函式不允許明確例外狀況規格。 假設 C 函數不會在 **/ehsc**�
 
 下表摘要說明函式C++是否可能會在各種編譯器例外狀況處理選項下擲回：
 
-|函數|/EHsc|/EHs|/EHa|/EHac|
+|函式|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
 |沒有例外狀況規格的 C++ 函式|是|是|是|是|
 |C++具有 `noexcept`、`noexcept(true)`或 `throw()` 例外狀況規格的函式|否|否|是|是|

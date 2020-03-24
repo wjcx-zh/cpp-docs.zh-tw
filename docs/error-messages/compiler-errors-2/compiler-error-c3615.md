@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1a5b6edbc87e14de267cf962dc2b1a71dd6be12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200534"
 ---
 # <a name="compiler-error-c3615"></a>編譯器錯誤 C3615
 
-> constexpr 函式 '*函式*' 無法產生常數運算式
+> constexpr 函數 '*function*' 無法產生常數運算式
 
-此函式*函式*不會評估為`constexpr`在編譯時期。 要`constexpr`，函式只能呼叫其他`constexpr`函式。
+無法在編譯時期將函數*函數*評估為 `constexpr`。 若要 `constexpr`，函數只能呼叫其他 `constexpr` 函數。
 
 ## <a name="example"></a>範例
 
-Visual Studio 2017 會正確地引發錯誤時的條件式評估作業的左運算元不是有效`constexpr`內容。 在 Visual Studio 2015，但無法在 Visual Studio 2017 中，會編譯下列程式碼。
+當條件式評估作業的左運算元在 `constexpr` 內容中無效時，Visual Studio 2017 會正確地引發錯誤。 下列程式碼會在 Visual Studio 2015 中進行編譯，但不會在 Visual Studio 2017 中進行編譯。
 
 ```cpp
 // C3615.cpp
@@ -39,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-若要修正此問題，請宣告`array::size()`當作`constexpr`或移除`constexpr`限定詞的`f`。
+若要修正此問題，請將 `array::size()` 函式宣告為 `constexpr`，或從 `f`移除 `constexpr` 辨識符號。

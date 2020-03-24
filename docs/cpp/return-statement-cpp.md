@@ -7,12 +7,12 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: 47bf9c50a2da039b0ffa074796a768290b732bb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8ea796ab40a2090ed9853377f7c9415914bc0e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178978"
 ---
 # <a name="return-statement-c"></a>return 陳述式 (C++)
 
@@ -26,15 +26,15 @@ return [expression];
 
 ## <a name="remarks"></a>備註
 
-`expression` 子句 (如果有的話) 會轉換成函式宣告中指定的類型，就像執行初始化一般。 將運算式的類型轉換**傳回**函式類型可以建立暫存物件。 如需有關如何及何時建立暫存物件的詳細資訊，請參閱 <<c0> [ 暫存物件](../cpp/temporary-objects.md)。
+`expression` 子句 (如果有的話) 會轉換成函式宣告中指定的類型，就像執行初始化一般。 從運算式的類型轉換成函數的傳回**類型，** 可以建立暫存物件。 如需如何和何時建立而暫存物件的詳細資訊，請參閱[暫存物件](../cpp/temporary-objects.md)。
 
-`expression` 子句的值會傳回至進行呼叫的函式。 如果省略運算式，則函式的傳回值會是未定義。 建構函式和解構函式和類型的函式**void**，不能指定的運算式**傳回**陳述式。 所有其他類型的函式必須指定的運算式**傳回**陳述式。
+`expression` 子句的值會傳回至進行呼叫的函式。 如果省略運算式，則函式的傳回值會是未定義。 函式和析構函式，以及**void**類型的函數無法在**return**語句中指定運算式。 所有其他類型的函式都必須在**return**語句中指定運算式。
 
-當控制流程離開封入函式定義的區塊時，結果會相同，就像如果**傳回**執行未使用運算式的陳述式。 這對於宣告為傳回值的函式是無效的。
+當控制流程結束封閉函式定義的區塊時，其結果會與未執行任何運算式的**return**語句相同。 這對於宣告為傳回值的函式是無效的。
 
-函式可以有任意數目的**傳回**陳述式。
+函數可以有任意數目的**return**語句。
 
-下列範例會使用與運算式**傳回**陳述式，以取得最大的兩個整數。
+下列範例會使用運算式搭配**return**語句，以取得兩個整數的最大值。
 
 ## <a name="example"></a>範例
 

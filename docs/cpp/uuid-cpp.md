@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-ms.openlocfilehash: c121ad99dfbe0021a263f324ccdb9a95441bba33
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 09e40d38382bea0f902fda03d15d24e0cf1a627d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187800"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 
@@ -35,11 +35,11 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
 ```
 
-這個屬性可以在重新宣告中套用。 這可讓系統標頭提供介面的定義（例如`IUnknown`），並在其他標頭（ \<例如 > comdef.h）中重新宣告以提供 GUID。
+這個屬性可以在重新宣告中套用。 這可讓系統標頭提供介面的定義（例如 `IUnknown`）以及其他標頭中的重新宣告（例如 \<comdef.h >），以提供 GUID。
 
 關鍵字[__uuidof](../cpp/uuidof-operator.md)可以套用來抓取附加至使用者自訂類型的常數 GUID。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

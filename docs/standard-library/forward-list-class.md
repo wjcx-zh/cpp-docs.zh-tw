@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 55c870263fdf6bd96cf8a137308adb329866c9e5
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419102"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150663"
 ---
 # <a name="forward_list-class"></a>forward_list 類別
 
@@ -104,7 +104,7 @@ class forward_list
 要儲存在 forward_list 中的項目資料類型。
 
 配置*器\*
-預存配置器物件，可封裝有關 forward_list 之記憶體配置和解除配置的詳細資料。 這個參數是選擇性的。 預設值為配置器 <`Type`>。
+預存配置器物件，可封裝有關 forward_list 之記憶體配置和解除配置的詳細資料。 這是選擇性參數。 預設值為配置器 <`Type`>。
 
 ## <a name="remarks"></a>備註
 
@@ -140,7 +140,7 @@ class forward_list
 |[size_type](#size_type)|此類型代表兩個項目間不帶正負號的間距。|
 |[value_type](#value_type)|此類型代表儲存在轉送清單中的項目類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -172,13 +172,13 @@ class forward_list
 |[swap](#swap)|交換兩個轉送清單的項目。|
 |[unique](#unique)|移除通過指定測試的相鄰項目。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
 |[operator=](#op_eq)|以另一個轉送清單複本取代轉送清單的項目。|
 
-## <a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
 此類型代表轉送清單物件的配置器類別。
 
@@ -190,7 +190,7 @@ typedef Allocator allocator_type;
 
 `allocator_type` 與範本參數 Allocator 同義。
 
-## <a name="assign"></a>值賦
+## <a name="assign"></a><a name="assign"></a>值賦
 
 從轉送清單中清除項目，並將一組新的項目複製到目標轉送清單。
 
@@ -221,7 +221,7 @@ void assign(InputIterator First, InputIterator Last);
 要指派給每個元素的值。
 
 *類型*\
-值的類型。
+值的型別。
 
 *IList*\
 要複製的 initializer_list。
@@ -234,7 +234,7 @@ void assign(InputIterator First, InputIterator Last);
 
 第三個成員函式會將 initializer_list 的元素複製到 forward_list。
 
-## <a name="before_begin"></a>before_begin
+## <a name="before_begin"></a><a name="before_begin"></a>before_begin
 
 傳回迭代器，其定址轉送清單中第一個項目之前的位置。
 
@@ -249,7 +249,7 @@ iterator before_begin();
 
 ### <a name="remarks"></a>備註
 
-## <a name="begin"></a>起點
+## <a name="begin"></a><a name="begin"></a>起點
 
 傳回迭代器，其定址轉送清單中的第一個項目。
 
@@ -264,7 +264,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cbefore_begin"></a>cbefore_begin
+## <a name="cbefore_begin"></a><a name="cbefore_begin"></a>cbefore_begin
 
 傳回常數迭代器，其定址轉送清單中第一個項目之前的位置。
 
@@ -278,7 +278,7 @@ const_iterator cbefore_begin() const;
 
 ### <a name="remarks"></a>備註
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
 傳回**常數**反覆運算器，定址範圍中的第一個元素。
 
@@ -303,7 +303,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
 傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
 
@@ -331,7 +331,7 @@ auto i2 = Container.cend();
 
 `cend` 所傳回的值不應該取值。
 
-## <a name="clear"></a>明確
+## <a name="clear"></a><a name="clear"></a>明確
 
 清除轉送清單的所有項目。
 
@@ -343,7 +343,7 @@ void clear();
 
 此成員函式會呼叫 `erase_after(before_begin(), end()).`。
 
-## <a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
 
 此類型提供轉送清單的常數迭代器。
 
@@ -355,7 +355,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` 描述的物件可作為受控制序列的常數正向迭代器。 在此將其描述為與實作定義的類型同義。
 
-## <a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
 一種類型，提供轉送清單中**const**元素的指標。
 
@@ -366,7 +366,7 @@ typedef typename Allocator::const_pointer
 
 ### <a name="remarks"></a>備註
 
-## <a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
 此類型提供轉送清單中項目的常數參考。
 
@@ -376,7 +376,7 @@ typedef typename Allocator::const_reference const_reference;
 
 ### <a name="remarks"></a>備註
 
-## <a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 帶正負號的整數類型，可用來代表迭代器所指向的項目間之範圍中的轉送清單項目數。
 
@@ -388,7 +388,7 @@ typedef typename Allocator::difference_type difference_type;
 
 `difference_type` 描述的物件可代表受控制序列中任兩個元素位址之間的差距。
 
-## <a name="emplace_after"></a>emplace_after
+## <a name="emplace_after"></a><a name="emplace_after"></a>emplace_after
 
 在指定位置之後移動建構新項目。
 
@@ -413,7 +413,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 此成員函式會在受控制*序列中所指向的元素*後面，插入具有「函數引數」 *val*的元素。 否則，其行為與 [forward_list::insert_after](#insert_after) 相同。
 
-## <a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
 
 將就地建構的項目加入清單的開頭。
 
@@ -433,7 +433,7 @@ template <class Type>
 
 如果擲回例外狀況，容器會保持不變，並重新擲回例外狀況。
 
-## <a name="empty"></a>空
+## <a name="empty"></a><a name="empty"></a>空
 
 測試轉送清單是否空白。
 
@@ -445,7 +445,7 @@ bool empty() const;
 
 如果轉送清單是空的，則為**true** ;否則**為 false**。
 
-## <a name="end"></a>成品
+## <a name="end"></a><a name="end"></a>成品
 
 傳回迭代器，其定址轉送清單中最後一個項目之後的位置。
 
@@ -458,7 +458,7 @@ iterator end();
 
 指向序列結尾之外的正向迭代器。
 
-## <a name="erase_after"></a>erase_after
+## <a name="erase_after"></a><a name="erase_after"></a>erase_after
 
 從轉送清單中移除指定位置之後的項目。
 
@@ -492,7 +492,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 成員函式永遠不會擲回例外狀況。
 
-## <a name="forward_list"></a>forward_list
+## <a name="forward_list"></a><a name="forward_list"></a>forward_list
 
 建構類型 `forward_list` 的物件。
 
@@ -538,7 +538,7 @@ list，其中有要複製的建構的 list。
 
 ### <a name="remarks"></a>備註
 
-所有建構函式都會儲存[配置器](../standard-library/allocator-class.md)，並初始化受控制的序列。 配置器物件是引數*Al*（如果有的話）。 若是複製建構函式，則為 ` right.get_allocator()`。 否則，會是 `Allocator()`。
+所有建構函式都會儲存[配置器](../standard-library/allocator-class.md)，並初始化受控制的序列。 配置器物件是引數*Al*（如果有的話）。 若是複製建構函式，則為 `right.get_allocator()`。 否則，會是 `Allocator()`。
 
 前兩個建構函式指定空的初始受控制序列。
 
@@ -552,7 +552,7 @@ list，其中有要複製的建構的 list。
 
 最後一個建構函式會使用 `initializer_list<Type>` 類別的物件，來指定初始的受控制序列。
 
-## <a name="front"></a>前端
+## <a name="front"></a><a name="front"></a>前端
 
 傳回轉送清單中第一個項目的參考。
 
@@ -565,7 +565,7 @@ const_reference front() const;
 
 受控制序列的第一個元素的參考，且不得為空值。
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 傳回用來建構轉送清單的配置器物件複本。
 
@@ -577,7 +577,7 @@ allocator_type get_allocator() const;
 
 取得預存的[配置器](../standard-library/allocator-class.md)物件。
 
-## <a name="insert_after"></a>insert_after
+## <a name="insert_after"></a><a name="insert_after"></a>insert_after
 
 將項目加入轉送清單中的指定位置之後。
 
@@ -632,7 +632,7 @@ template <class InputIterator>
 
 如果在插入一或多個元素時擲回例外狀況，容器就會保持不變，並重新擲回例外狀況。
 
-## <a name="iterator"></a>定位
+## <a name="iterator"></a><a name="iterator"></a>定位
 
 提供轉送清單之迭代器的類型。
 
@@ -644,7 +644,7 @@ typedef implementation-defined iterator;
 
 `iterator` 說明可作為受控制序列之正向迭代器的物件。 在此將其描述為與實作定義的類型同義。
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 傳回轉送清單的最大長度。
 
@@ -658,7 +658,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>備註
 
-## <a name="merge"></a>merge
+## <a name="merge"></a><a name="merge"></a>merge
 
 在線性時間中，將兩個已排序的序列結合成單一已排序的序列。 從引數清單中移除元素，並將它們插入這個 `forward_list`。 兩份清單應該先依照相同的比較函式物件進行排序，再呼叫 `merge`。 結合後的清單將會依據上述比較函式物件來進行排序。
 
@@ -686,7 +686,7 @@ template <class Predicate>
 
 僅有當 `comp` 擲回例外狀況時，才會發生例外狀況。 在此情況下，受控制的序列會處於未指定的順序，並重新擲回例外狀況。
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 以另一個轉送清單複本取代轉送清單的項目。
 
@@ -712,7 +712,7 @@ forward_list& operator=(forward_list&& right);
 
 第三個成員運算子與第一個相同，但其具有[右值](../cpp/rvalue-reference-declarator-amp-amp.md)參考。
 
-## <a name="pointer"></a>滑鼠
+## <a name="pointer"></a><a name="pointer"></a>滑鼠
 
 此類型提供轉送清單中的項目指標。
 
@@ -720,7 +720,7 @@ forward_list& operator=(forward_list&& right);
 typedef typename Allocator::pointer pointer;
 ```
 
-## <a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a>pop_front
 
 刪除轉送清單開頭的項目。
 
@@ -734,7 +734,7 @@ void pop_front();
 
 成員函式永遠不會擲回例外狀況。
 
-## <a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a>push_front
 
 將項目加入轉送清單的開頭。
 
@@ -752,7 +752,7 @@ void push_front(Type&& val);
 
 如果擲回例外狀況，容器會保持不變，並重新擲回例外狀況。
 
-## <a name="reference"></a>證明
+## <a name="reference"></a><a name="reference"></a>證明
 
 此類型提供轉送清單中的項目參考。
 
@@ -760,7 +760,7 @@ void push_front(Type&& val);
 typedef typename Allocator::reference reference;
 ```
 
-## <a name="remove"></a>取消
+## <a name="remove"></a><a name="remove"></a>取消
 
 清除轉送清單中符合指定值的項目。
 
@@ -779,7 +779,7 @@ void remove(const Type& val);
 
 成員函式永遠不會擲回例外狀況。
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 從轉送清單中清除符合指定述詞的項目。
 
@@ -795,11 +795,11 @@ template <class Predicate>
 
 ### <a name="remarks"></a>備註
 
-成員函式會從受控制序列中移除迭代器 `P` 指定的所有元素，對其來說 ` pred(*P)` 為 true。
+成員函式會從受控制序列中移除迭代器 `P` 指定的所有元素，對其來說 `pred(*P)` 為 true。
 
 只有在*pred*擲回例外狀況時，才會發生例外狀況。 在此情況下，受控制的序列會處於未指定的狀態，並重新擲回例外狀況。
 
-## <a name="resize"></a>調整
+## <a name="resize"></a><a name="resize"></a>調整
 
 指定轉送清單的新大小。
 
@@ -820,7 +820,7 @@ void resize(size_type _Newsize, const Type& val);
 
 成員函式可確保清單因而需要中的元素數目 *_Newsize*。 如果它必須讓受控制的序列變長，第一個成員函式會附加具有值 `Type()`的元素，而第二個成員函式會附加具有值*val*的元素。 若要讓受控制序列更短，這兩個成員函式都會有效呼叫 `erase_after(begin() + _Newsize - 1, end())`。
 
-## <a name="reverse"></a>反向
+## <a name="reverse"></a><a name="reverse"></a>反向
 
 反轉項目在轉送清單中出現的順序。
 
@@ -828,7 +828,7 @@ void resize(size_type _Newsize, const Type& val);
 void reverse();
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 此類型代表兩個項目間不帶正負號的間距。
 
@@ -840,7 +840,7 @@ typedef typename Allocator::size_type size_type;
 
 此不帶正負號的整數類型所描述的物件可代表任何受控制序列的長度。
 
-## <a name="sort"></a>方式
+## <a name="sort"></a><a name="sort"></a>方式
 
 以遞增順序或述詞指定的順序排列項目。
 
@@ -863,7 +863,7 @@ void sort(Predicate pred);
 
 只有在*pred*擲回例外狀況時，才會發生例外狀況。 在此情況下，受控制的序列會處於未指定的順序，並重新擲回例外狀況。
 
-## <a name="splice_after"></a>splice_after
+## <a name="splice_after"></a><a name="splice_after"></a>splice_after
 
 從來源 forward_list 中移除元素，並將它們插入至目的地 forward_list。
 
@@ -992,7 +992,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)
 ```
 
-## <a name="swap"></a>調換
+## <a name="swap"></a><a name="swap"></a>調換
 
 交換兩個轉送清單的項目。
 
@@ -1009,7 +1009,7 @@ void swap(forward_list& right);
 
 成員函式會在 `*this` 和*右方*之間交換受控制的序列。 如果 `get_allocator() ==  right.get_allocator()`，它會在固定時間執行上述作業、不擲回例外狀況，亦不會導致任何參考、指標或迭代器 (其指定這兩個受控制序列中的元素) 失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。
 
-## <a name="unique"></a>唯一
+## <a name="unique"></a><a name="unique"></a>唯一
 
 排除所有項目，除了每組連續相等元素的第一個元素以外。
 
@@ -1030,11 +1030,11 @@ void unique(BinaryPredicate comp);
 
 如果任何元素與其前一個元素相等，第一個成員函式會從受控制序列中將其移除。 如果迭代器 `Pi` 和`Pj` 有指定 `i` 和 `j` 位置的元素，則第二個成員函式會移除 `i + 1 == j &&  comp(*Pi, *Pj)` 的每個元素。
 
-如果受控制序列的長度 `N` (> 0)，則 ` comp(*Pi, *Pj)` 述詞會受到 `N - 1` 次評估。
+如果受控制序列的長度 `N` (> 0)，則 `comp(*Pi, *Pj)` 述詞會受到 `N - 1` 次評估。
 
 僅有當 `comp` 擲回例外狀況時，才會發生例外狀況。 在此情況下，受控制的序列會處於未指定的狀態，並重新擲回例外狀況。
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 此類型代表儲存在轉送清單中的項目類型。
 

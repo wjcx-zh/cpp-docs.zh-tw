@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7fd523dc9184ae613cf8a52969a497b6b4761cf6
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421636"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150816"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
 
@@ -42,7 +42,7 @@ ms.locfileid: "79421636"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>  get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a>  get_money
 
 使用所需的格式從資料流中擷取貨幣值，並在參數中傳回該值。
 
@@ -65,7 +65,7 @@ T7 get_money(Money& amount, bool use_intl);
 
 `Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `basic_string` 相同之 `str` 的具現化。
 
-## <a name="iomanip_get_time"></a>  get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a>  get_time
 
 使用所需的格式從資料流中擷取時間值。 在參數中以時間結構的形式傳回值。
 
@@ -86,7 +86,7 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 
 操作工具會傳回一個物件，從資料流 `str` 中擷取此物件時，其行為會像`formatted input function`一樣，此函式會呼叫與 `get` 關聯之地區設定 facet `time_get` 的成員函式 `str`，其中會使用 `tptr` 來指出時間結構，以及使用 `fmt` 來指出以 Null 結束之格式字串的開頭。 如果成功，該呼叫就會在時間結構中，儲存與所擷取之任何時間欄位關聯的值。 接著，操作工具會傳回 `str`。
 
-## <a name="iomanip_put_money"></a>  put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a>  put_money
 
 使用所需的格式將金額插入到資料流中。
 
@@ -113,7 +113,7 @@ T8 put_money(const Money& amount, bool use_intl);
 
 `Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `basic_string` 相同之 `str` 的具現化。
 
-## <a name="iomanip_put_time"></a>  put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a>  put_time
 
 使用指定的格式將來自時間結構的時間值寫入到資料流中。
 
@@ -134,7 +134,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `put` 關聯之地區設定 facet `time_put` 的成員函式 `str`。 輸出函式會使用*time_ptr*來指出時間結構，並*time_format*以指示以 null 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。
 
-## <a name="quoted"></a>  quoted
+## <a name="quoted"></a><a name="quoted"></a>  quoted
 
 **(C++14 的新功能)** iostream 操作工具，可允許使用 >> 和 << 運算子，將字串便利地往返傳入和傳出資料流。
 
@@ -301,7 +301,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a>  resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a>  resetiosflags
 
 清除指定的旗標。
 
@@ -322,7 +322,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`resetiosflags`。
 
-## <a name="setbase"></a>  setbase
+## <a name="setbase"></a><a name="setbase"></a>  setbase
 
 設定整數的基底。
 
@@ -337,7 +337,7 @@ T3 setbase(int base);
 
 ### <a name="return-value"></a>傳回值
 
-操作工具會傳回一個物件，從解壓縮或插入資料流程 `str`時，會呼叫 `str.setf(mask, `[ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回 `str`。 在這裡，`mask` 的判斷方式如下：
+操作工具會傳回一個物件，從解壓縮或插入資料流程 `str`時，會呼叫 `str.setf(mask,` [ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回 `str`。 在這裡，`mask` 的判斷方式如下：
 
 - 如果*base*為8，則 `mask` 為[10 月](../standard-library/ios-functions.md#oct)`ios_base::`。
 
@@ -351,7 +351,7 @@ T3 setbase(int base);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setbase`。
 
-## <a name="setfill"></a>  setfill
+## <a name="setfill"></a><a name="setfill"></a>  setfill
 
 設定將用來填滿靠右對齊顯示中的空格字元。
 
@@ -373,7 +373,7 @@ T4 setfill(Elem Ch);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setfill`。
 
-## <a name="setiosflags"></a>  setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a>  setiosflags
 
 設定指定的旗標。
 
@@ -394,7 +394,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setiosflags`。
 
-## <a name="setprecision"></a>  setprecision
+## <a name="setprecision"></a><a name="setprecision"></a>  setprecision
 
 設定浮點值的有效位數。
 
@@ -415,7 +415,7 @@ T5 setprecision(streamsize Prec);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/iomanip-functions.md#setw)setw`setprecision`。
 
-## <a name="setw"></a>  setw
+## <a name="setw"></a><a name="setw"></a>  setw
 
 指定資料流中下一個元素的顯示欄位寬度。
 

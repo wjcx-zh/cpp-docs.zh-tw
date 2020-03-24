@@ -56,16 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421608"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150625"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函式
 
-## <a name="boolalpha"></a>boolAlpha
+## <a name="boolalpha"></a><a name="boolalpha"></a>boolAlpha
 
 指定讓 [bool](../cpp/bool-cpp.md) 類型的變數在資料流中顯示為 **true** 或 **false**。
 
@@ -117,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>十進位
+## <a name="dec"></a><a name="dec"></a>十進位
 
 指定整數變數會以基底 10 標記法顯示。
 
@@ -170,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
 
 設定 `ios_base` 物件的旗標會使用浮點值的預設顯示格式。
 
@@ -187,7 +187,7 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 操作工具會有效地呼叫 `iosbase.`[ios_base：： unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`，然後傳回*iosbase*。
 
-## <a name="fixed"></a>固定匯率
+## <a name="fixed"></a><a name="fixed"></a>固定匯率
 
 指定浮點數會以固定十進位標記法顯示。
 
@@ -235,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>進制
+## <a name="hex"></a><a name="hex"></a>進制
 
 指定整數變數應使用以 16 為底數的標記法來顯示。
 
@@ -262,13 +262,13 @@ ios_base& hex(ios_base& str);
 
 如需如何使用 `hex`的範例，請參閱[dec](../standard-library/ios-functions.md#dec) 。
 
-## <a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a>io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +276,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a>內部
+## <a name="internal"></a><a name="internal"></a>內部
 
 使數字的正負號靠左對齊，數字靠右對齊。
 
@@ -297,7 +297,7 @@ ios_base& internal(ios_base& str);
 
 [showpos](../standard-library/ios-functions.md#showpos) 會導致針對正數顯示正負號。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：： internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base：： adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回*str*。
+操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：： internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base：： adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -322,19 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a>左面
+## <a name="left"></a><a name="left"></a>左面
 
 使與輸出寬度不同寬的文字出現在具有左邊界的資料流排清中。
 
@@ -377,19 +377,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a>noboolAlpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolAlpha
 
 指定讓 [bool](../cpp/bool-cpp.md) 類型的變數在資料流中顯示為 0 或 1。
 
@@ -418,7 +418,7 @@ ios_base& noboolalpha(ios_base& str);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`。
 
-## <a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
 
 關閉指出據以顯示數字之標記基底的功能。
 
@@ -445,7 +445,7 @@ ios_base& noshowbase(ios_base& str);
 
 如需如何使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#showbase)showbase`noshowbase`。
 
-## <a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
 
 顯示小數部分為零之浮點數的整數部分。
 
@@ -492,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
 
 使正數不明確標示正負號。
 
@@ -519,7 +519,7 @@ ios_base& noshowpos(ios_base& str);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#showpos)showpos`noshowpos`。
 
-## <a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>noskipws
 
 使輸入資料流讀取空格。
 
@@ -561,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
 
 使輸出在緩衝區已滿時進行緩衝並繼續處理。
 
@@ -584,7 +584,7 @@ ios_base& nounitbuf(ios_base& str);
 
 操作工具會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`，然後傳回*str*。
 
-## <a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase
 
 指定以小寫顯示十六進位數字和科學標記法中的指數。
 
@@ -609,7 +609,7 @@ ios_base& nouppercase(ios_base& str);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`。
 
-## <a name="oct"></a>月
+## <a name="oct"></a><a name="oct"></a>月
 
 指定以基底 8 標記法顯示整數變數。
 
@@ -636,7 +636,7 @@ ios_base& oct(ios_base& str);
 
 如需如何使用 `oct`的範例，請參閱[dec](../standard-library/ios-functions.md#dec) 。
 
-## <a name="right"></a>再
+## <a name="right"></a><a name="right"></a>再
 
 使與輸出寬度不同寬的文字出現在具有右邊界的資料流排清中。
 
@@ -693,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>記
+## <a name="scientific"></a><a name="scientific"></a>記
 
 讓浮點數以科學標記法顯示。
 
@@ -738,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a>showbase
 
 指出據以顯示數字的標記基底。
 
@@ -792,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>showpoint
 
 顯示浮點數的整數部分和小數點右側的數字，即使小數部分為零亦然。
 
@@ -819,7 +819,7 @@ ios_base& showpoint(ios_base& str);
 
 如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`。
 
-## <a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a>showpos
 
 使正數明確標示正負號。
 
@@ -864,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>skipws
 
 使輸入資料流不讀取空格。
 
@@ -916,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
 
 使輸出在緩衝區不為空時進行處理。
 
@@ -941,7 +941,7 @@ ios_base& unitbuf(ios_base& str);
 
 操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：： unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回*str*。
 
-## <a name="uppercase"></a>  uppercase
+## <a name="uppercase"></a><a name="uppercase"></a>  uppercase
 
 指定以大寫顯示十六進位數字和科學標記法中的指數。
 

@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076857"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150754"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -3040,7 +3040,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="standard-library"></a>標準程式庫
 
-- 下列為 C++98/03 與 C++11 標準之間的中斷性變更︰在 Visual Studio 2012 中的 Visual C++ 內使用明確範本引數來呼叫 `make_pair()` (即 `make_pair<int, int>(x, y)`) 通常無法編譯。 解決方案是只呼叫 `make_pair() `，而不要指定明確範本引數 (例如 `make_pair(x, y)`)。 提供明確的範本引數會導致函式失效。 若您需要精確控制產生的類型，請改為使用 `pair` 而非 `make_pair`，如同 `pair<short, short>(int1, int2)`。
+- 下列為 C++98/03 與 C++11 標準之間的中斷性變更︰在 Visual Studio 2012 中的 Visual C++ 內使用明確範本引數來呼叫 `make_pair()` (即 `make_pair<int, int>(x, y)`) 通常無法編譯。 解決方法是一律呼叫沒有明確樣板引數的 `make_pair()`，如同 `make_pair(x, y)`。 提供明確的範本引數會導致函式失效。 若您需要精確控制產生的類型，請改為使用 `pair` 而非 `make_pair`，如同 `pair<short, short>(int1, int2)`。
 
 - C + + 98/03 和 c + + 11 標準之間的另一種中斷性變更：當可以隱含轉換成 B，B 會隱含轉換成 C，但 A 無法隱含轉換成 C，c + + 98/03 和 Visual Studio 2010 允許 `pair<A, X>` 轉換（隱含或明確）為 `pair<C, X>`。 （另一種類型 X，在這裡不感興趣，而且不是對配對中第一種類型特有的）。Visual Studio C++ 2012 中的編譯器會偵測到 A 無法隱含轉換成 C，並從多載解析中移除配對轉換。 這項變更對許多狀況而言有益。 例如，多載 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，以及使用 `func()` 呼叫 `pair<const char *, const char *>` 時，便會使用這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 `make_pair(static_cast<B>(a), x)` 傳遞給需要 `pair<C, X>` 的函式。
 

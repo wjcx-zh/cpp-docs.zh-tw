@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889997"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150612"
 ---
 # <a name="num_get-class"></a>num_get 類別
 
@@ -34,15 +34,15 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
+*CharType*\
 程式內用於編碼地區設定字元的類型。
 
-*InputIterator* \
+*InputIterator*\
 數值 get 函式從中讀取其輸入的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。
 
 ### <a name="constructors"></a>建構函式
 
@@ -50,27 +50,27 @@ class num_get : public locale::facet;
 |-|-|
 |[num_get](#num_get)|用來從序列擷取數值之 `num_get` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[iter_type](#iter_type)|描述輸入迭代器的類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[do_get](#do_get)|虛擬函式，呼叫以從字元序列擷取數值或布林值。|
 |[get](#get)|從字元序列擷取數值或布林值。|
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
-## <a name="char_type"></a>  num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>  num_get::char_type
 
 類型，用來描述由地區設定使用的字元。
 
@@ -80,9 +80,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **CharType** 同義。
+此類型與樣板參數 **CharType** 同義。
 
-## <a name="do_get"></a>  num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>  num_get::do_get
 
 虛擬函式，呼叫以從字元序列擷取數值或布林值。
 
@@ -173,13 +173,13 @@ virtual iter_type do_get(
 *上次*\
 要從中讀取數字的字元範圍結尾。
 
-*iosbase* \
+*iosbase*\
 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
 *狀態*\
 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
-*val* \
+*val*\
 已讀取的值。
 
 ### <a name="return-value"></a>傳回值
@@ -199,7 +199,7 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-比對序列中*第一次*開始的順序元素 `[first, last)`，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long**），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式會以*val*儲存任何內容，並在 `state`中設定 `ios_base::failbit`。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `state` 中設定 `ios_base::eofbit`。
+比對序列中*第一次*開始的順序元素 `[first, last)`，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long**），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式會以*val*儲存任何內容，並在 `state`中設定 `ios_base::failbit`。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `ios_base::eofbit` 中設定 `state`。
 
 整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 （每個這類**char**元素都假設為對應至類型的對等專案，`Elem` 是簡單、一對一的對應）。對等掃描轉換規格的判斷方式如下：
 
@@ -211,11 +211,11 @@ virtual iter_type do_get(
 
 否則，轉換規格會是 `ld`。
 
-整數輸入欄位的格式會進一步由「呼叫[use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base：： getloc](../standard-library/ios-base-class.md#getloc)`())`傳回的[地區設定 facet](../standard-library/locale-class.md#facet_class)`fac`。 尤其是：
+整數輸入欄位的格式會由呼叫[use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base：： getloc](../standard-library/ios-base-class.md#getloc)`())`所傳回的地區設定`fac` [facet](../standard-library/locale-class.md#facet_class)進一步決定。 具體來說：
 
-`fac.`[numpunct：：群組](../standard-library/numpunct-class.md#grouping)`()` 決定小數點左邊的數位如何分組
+`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` 會決定任何小數點左邊數字分組的方式
 
-`fac.`[numpunct：： thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` 決定分隔小數點左邊數位群組的序列。
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` 會決定任何小數點左邊分隔數字群組的序列。
 
 如果沒有任何 `fac.thousands_sep()` 執行個體出現在數字輸入欄位中，就不會施加任何千分號條件約束。 否則，將會強制執行 `fac.grouping()` 所施加的任何千分號條件約束，並在進行掃描轉換之前將分隔符號移除。
 
@@ -230,7 +230,7 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換成不**帶正負號 long**類型的值，並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `ld` 取代 `lu` 轉換規格。 如果成功，它會將數值輸入欄位轉換成不**帶正負號 long**類型的值，並將該值儲存在*val*中。
 
 第五個虛擬的受保護成員函式：
 
@@ -243,7 +243,7 @@ virtual iter_type do_get(
     long long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `lld` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換成**long long**類型的值，並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `ld` 取代 `lld` 轉換規格。 如果成功，它會將數值輸入欄位轉換成**long long**類型的值，並將該值儲存在*val*中。
 
 第六個虛擬的受保護成員函式：
 
@@ -256,7 +256,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `llu` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換為不**帶正負號 long long**類型的值，並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `ld` 取代 `llu` 轉換規格。 如果成功，它會將數值輸入欄位轉換為不**帶正負號 long long**類型的值，並將該值儲存在*val*中。
 
 第七個虛擬的受保護成員函式：
 
@@ -329,7 +329,7 @@ virtual iter_type do_get(
 
 請參閱 [get](#get) 的範例，其中會由 `do_get` 呼叫此虛擬成員函式。
 
-## <a name="get"></a>  num_get::get
+## <a name="num_getget"></a><a name="get"></a>  num_get::get
 
 從字元序列擷取數值或布林值。
 
@@ -420,13 +420,13 @@ iter_type get(
 *上次*\
 要從中讀取數字的字元範圍結尾。
 
-*iosbase* \
+*iosbase*\
 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
 *狀態*\
 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
-*val* \
+*val*\
 已讀取的值。
 
 ### <a name="return-value"></a>傳回值
@@ -441,7 +441,7 @@ iter_type get(
 
 整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 每個這類**char**元素都假設為對應至類型的對等元素，`CharType` 由一個簡單的一對一對應所組成。 對等的掃描轉換規格是以下列方式決定：
 
-- 如果 `iosbase.`[旗標](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，則會 `lo`轉換規格。
+- 如果 `iosbase.`[旗標](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，則會 `lo`轉換規格。
 
 - 如果 `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex)，則轉換規格為 `lx`。
 
@@ -449,11 +449,11 @@ iter_type get(
 
 - 否則，轉換規格會是 `ld`。
 
-整數輸入欄位的格式會進一步由「呼叫[use_facet](../standard-library/locale-functions.md#use_facet)所傳回的[地區設定 facet](../standard-library/locale-class.md#facet_class) `fac``<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`。 尤其是：
+整數輸入欄位的格式會進一步由[use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`的呼叫所傳回的[地區設定 facet](../standard-library/locale-class.md#facet_class) `fac`。 具體來說：
 
 - `fac.`[群組](../standard-library/numpunct-class.md#grouping)決定如何將數位群組在任何小數點的左邊。
 
-- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep)決定分隔小數點左邊數位群組的序列。
+- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep)決定用來分隔小數點左邊數位群組的序列。
 
 如果沒有任何 `fac.thousands_sep` 執行個體出現在數字輸入欄位中，就不會施加任何千分號條件約束。 否則，會強制執行 `fac.grouping` 加諸的任何群組條件約束，並在進行掃描轉換之前移除分隔符號。
 
@@ -467,7 +467,7 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換成不**帶正負號 long**類型的值，並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `ld` 取代 `lu` 轉換規格。 如果成功，它會將數值輸入欄位轉換成不**帶正負號 long**類型的值，並將該值儲存在*val*中。
 
 第三個虛擬的受保護成員函式：
 
@@ -479,7 +479,7 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```
 
-行為與第一個相同，不同的是，它會嘗試比對出完整、非空白的浮點數輸入欄位。 `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point)會決定用來分隔整數位數與小數位數的順序。 對等掃描轉換指定名稱是 `lf`。
+行為與第一個相同，不同的是，它會嘗試比對出完整、非空白的浮點數輸入欄位。 `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point)決定用來分隔整數位數與小數位數的順序。 對等掃描轉換指定名稱是 `lf`。
 
 第四個虛擬的受保護成員函式：
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>  num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>  num_get::iter_type
 
 描述輸入迭代器的類型。
 
@@ -563,7 +563,7 @@ typedef InputIterator iter_type;
 
 這個類型與樣板參數 `InputIterator`同義。
 
-## <a name="num_get"></a>  num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>  num_get::num_get
 
 用來從序列擷取數值之 `num_get` 類型物件的建構函式。
 
@@ -573,7 +573,7 @@ explicit num_get(size_t refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*refs* \
+*refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
@@ -586,11 +586,11 @@ explicit num_get(size_t refs = 0);
 
 - \> 1：未定義這些值。
 
-由於解構函式會受到保護，因此沒有直接的範例。
+無法提供任何直接範例，因為解構函式受到保護。
 
 此函式會使用 `locale::`[facet](../standard-library/locale-class.md#facet_class)`(refs)`初始化其基底物件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [facet 類別](../standard-library/locale-class.md#facet_class)\

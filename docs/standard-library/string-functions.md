@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 459e46f6aa144c591173a159c282658b120b1af3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150599"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函式
 
@@ -44,7 +44,7 @@ ms.locfileid: "79419487"
 |[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
 |[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a>  getline
+## <a name="getline"></a><a name="getline"></a>  getline
 
 從輸入資料流一行一行地擷取字串。
 
@@ -156,7 +156,7 @@ int main()
 }
 ```
 
-## <a name="stod"></a>  stod
+## <a name="stod"></a><a name="stod"></a>  stod
 
 將字元序列轉換成**雙精度浮點數**。
 
@@ -184,9 +184,9 @@ double stod(
 
 ### <a name="remarks"></a>備註
 
-函式會將*str*中的專案序列轉換為**double**類型的值 `val`，如同藉由呼叫 `strtod( str.c_str(), _Eptr)`，其中 `_Eptr` 是函數內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
+函式會將*str*中的專案序列轉換為**double**類型的值 `val`，如同藉由呼叫 `strtod( str.c_str(), _Eptr)`，其中 `_Eptr` 是函數內部的物件。 如果 `str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
 
-## <a name="stof"></a>  stof
+## <a name="stof"></a><a name="stof"></a>  stof
 
 將字元序列轉換為 float。
 
@@ -213,9 +213,9 @@ float stof(
 
 ### <a name="remarks"></a>備註
 
-函式會將*str*中的專案序列轉換成**float**類型的值 `val`，如同藉由呼叫 `strtof( str.c_str(), _Eptr)`，其中 `_Eptr` 是函數內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
+函式會將*str*中的專案序列轉換成**float**類型的值 `val`，如同藉由呼叫 `strtof( str.c_str(), _Eptr)`，其中 `_Eptr` 是函數內部的物件。 如果 `str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
 
-## <a name="stoi"></a>  stoi
+## <a name="stoi"></a><a name="stoi"></a>  stoi
 
 將字元序列轉換為整數。
 
@@ -251,7 +251,7 @@ int stoi(
 
 如果 `str.c_str() == *_Eptr`，`stoi` 會擲回 `invalid_argument`類型的物件。 如果這類呼叫會設定 `errno`，或傳回的值無法表示為**int**類型的物件，則會擲回 `out_of_range`類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr - str.c_str()` 儲存在 `*idx`中。
 
-## <a name="stol"></a>  stol
+## <a name="stol"></a><a name="stol"></a>  stol
 
 將字元序列轉換成**long**。
 
@@ -281,9 +281,9 @@ long stol(
 
 ### <a name="remarks"></a>備註
 
-函式會將*str*中的專案序列轉換成**long**類型的值 `val`，如同藉由呼叫 `strtol( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
+函式會將*str*中的專案序列轉換成**long**類型的值 `val`，如同藉由呼叫 `strtol( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 `str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
 
-## <a name="stold"></a>  stold
+## <a name="stold"></a><a name="stold"></a>  stold
 
 將字元序列轉換成**長雙精度浮點數**。
 
@@ -310,9 +310,9 @@ double stold(
 
 ### <a name="remarks"></a>備註
 
-函式會將*str*中的元素序列轉換成**long double**類型的值 `val`，如同藉由呼叫 `strtold( str.c_str(), _Eptr)`，其中 `_Eptr` 是函數內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
+函式會將*str*中的元素序列轉換成**long double**類型的值 `val`，如同藉由呼叫 `strtold( str.c_str(), _Eptr)`，其中 `_Eptr` 是函數內部的物件。 如果 `str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
 
-## <a name="stoll"></a>  stoll
+## <a name="stoll"></a><a name="stoll"></a>  stoll
 
 將字元序列轉換成**長長**的。
 
@@ -342,9 +342,9 @@ long long stoll(
 
 ### <a name="remarks"></a>備註
 
-函式會將*str*中的專案序列轉換成**long long**類型的值 `val`，如同藉由呼叫 `strtoll( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
+函式會將*str*中的專案序列轉換成**long long**類型的值 `val`，如同藉由呼叫 `strtoll( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 `str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
 
-## <a name="stoul"></a>  stoul
+## <a name="stoul"></a><a name="stoul"></a>  stoul
 
 將字元序列轉換成不帶正負號的 long。
 
@@ -374,9 +374,9 @@ unsigned long stoul(
 
 ### <a name="remarks"></a>備註
 
-函式會將*str*中的專案序列轉換成不**帶正負號 long**類型的值 `val`，如同藉由呼叫 `strtoul( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
+函式會將*str*中的專案序列轉換成不**帶正負號 long**類型的值 `val`，如同藉由呼叫 `strtoul( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 `str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
 
-## <a name="stoull"></a>  stoull
+## <a name="stoull"></a><a name="stoull"></a>  stoull
 
 將字元序列轉換成不**帶正負**號的長整數。
 
@@ -406,9 +406,9 @@ unsigned long long stoull(
 
 ### <a name="remarks"></a>備註
 
-函式會將*str*中的專案序列轉換成不**帶正負號 long**類型的值 `val`，如同藉由呼叫 `strtoull( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
+函式會將*str*中的專案序列轉換成不**帶正負號 long**類型的值 `val`，如同藉由呼叫 `strtoull( str.c_str(), _Eptr, idx)`，其中 `_Eptr` 是函數內部的物件。 如果 `str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存在 `*idx` 中，並傳回 `val`。
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a> swap
 
 交換兩個字串的字元陣列。
 
@@ -464,7 +464,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a>  to_string
+## <a name="to_string"></a><a name="to_string"></a>  to_string
 
 將值轉換成 `string`。
 
@@ -512,7 +512,7 @@ string to_string(long double Val);
 
 此函式會傳回 `string(Buf)`。
 
-## <a name="to_wstring"></a>  to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>  to_wstring
 
 將值轉換成寬字串。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: e9222f16ef6356c2d89401690bda7e6d27f8aba6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150949"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的資料存取
 
@@ -37,7 +37,7 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 [使用 C 和 C++ 連線到 SQL Database](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 從 C 或 C++ 應用程式連線到 Azure SQL Database
 
-[Microsoft Azure Storage Client Library for C++](https://github.com/Azure/azure-storage-cpp) \(英文\)<br/>
+[適用於 C++ 的 Microsoft Azure 儲存體用戶端程式庫](https://github.com/Azure/azure-storage-cpp) \(英文\)<br/>
 [Azure 儲存體](/azure/storage/storage-introduction)是新式應用程式的雲端儲存解決方案，這些應用程式依賴持久性、可用性和延展性來符合客戶的需求。 使用 C++ 的 Azure 儲存體用戶端程式庫，從 C++ 連線到 Azure 儲存體。
 
 [ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
@@ -49,11 +49,11 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 [Microsoft Azure C 和 C++ 開發人員中心](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure 可讓您使用最愛的工具，以更具有彈性、延展性及可靠的方式，輕鬆建置 C++ 應用程式。
 
-[如何使用 C++ 的 Blob 儲存體](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) \(部分機器翻譯\)<br/>
-Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/Blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
+[如何使用 C++ 的 Blob 儲存體](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
 
-[ODBC 程式設計人員參考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) \(部分機器翻譯\)<br/>
-ODBC 介面是專為搭配 C 程式設計語言使用所設計。 ODBC 介面可跨越三個領域使用：SQL 陳述式、ODBC 函式呼叫和 C 程式設計。
+[ODBC 程式設計人員參考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+ODBC 介面是專為搭配 C 程式設計語言使用所設計。 ODBC 介面可用於下列三方面︰SQL 陳述式、ODBC 函式呼叫和 C 程式設計。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d614e00657de82b014af94df161775790ae417d3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416918"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150771"
 ---
 # <a name="basic_istream-class"></a>basic_istream 類別
 
@@ -156,7 +156,7 @@ setstate(state);
 |[tellg](#tellg)|回報在資料流中目前的讀取位置。|
 |[unget](#unget)|將最近讀取的字元放回資料流。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -169,7 +169,7 @@ setstate(state);
 
 **命名空間:** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>  basic_istream::basic_istream
 
 建構類型 `basic_istream` 的物件。
 
@@ -202,7 +202,7 @@ basic_istream(basic_istream&& right);
 
 若要深入了解輸入資料流，請參閱 [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) 的範例。
 
-## <a name="gcount"></a>  basic_istream::gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>  basic_istream::gcount
 
 傳回最後一個未經格式化的輸入期間，讀取的字元數。
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="get"></a>  basic_istream::get
+## <a name="basic_istreamget"></a><a name="get"></a>  basic_istream::get
 
 從輸入資料流讀取一或多個字元。
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="getline"></a>  basic_istream::getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>  basic_istream::getline
 
 從輸入資料流取得一行。
 
@@ -397,7 +397,7 @@ int main( )
 121
 ```
 
-## <a name="ignore"></a>  basic_istream::ignore
+## <a name="basic_istreamignore"></a><a name="ignore"></a>  basic_istream::ignore
 
 導致從目前的讀取位置略過一些項目。
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>基本\_istream：： operator > >
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>基本\_istream：： operator > >
 
 呼叫輸入資料流上的函式，或從輸入資料流讀取經格式化的資料。
 
@@ -574,7 +574,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  basic_istream::operator=
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>  basic_istream::operator=
 
 將位於運算子右側的 `basic_istream` 指派給此物件。 這是一個移動指派，涉及不會留下複本的 `rvalue` 參考。
 
@@ -595,7 +595,7 @@ basic_istream& operator=(basic_istream&& right);
 
 成員運算子會呼叫 `swap(right)`。
 
-## <a name="peek"></a>  basic_istream::peek
+## <a name="basic_istreampeek"></a><a name="peek"></a>  basic_istream::peek
 
 傳回要讀取的下一個字元。
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="putback"></a>  basic_istream::putback
+## <a name="basic_istreamputback"></a><a name="putback"></a>  basic_istream::putback
 
 將指定的字元放入資料流。
 
@@ -686,7 +686,7 @@ int main( )
 qwq
 ```
 
-## <a name="read"></a>  basic_istream::read
+## <a name="basic_istreamread"></a><a name="read"></a>  basic_istream::read
 
 從資料流讀取指定的字元數，並將其儲存在陣列中。
 
@@ -747,7 +747,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="readsome"></a>  basic_istream::readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>  basic_istream::readsome
 
 讀取指定數目的字元值。
 
@@ -806,7 +806,7 @@ int main( )
 }
 ```
 
-## <a name="seekg"></a>  basic_istream::seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>  basic_istream::seekg
 
 移動資料流中的讀取位置。
 
@@ -838,7 +838,7 @@ basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 > [!NOTE]
 > 請勿對文字檔案使用第二個成員函式，因為標準 C++ 不支援在文字檔案中執行相對搜尋。
 
-如果[`fail`](../standard-library/basic-ios-class.md#fail)為 false，則第一個成員函式會針對某些`pubseekpos`暫存物件`(pos)`，呼叫 `newpos = `[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pos_type`](../standard-library/basic-streambuf-class.md#pubseekpos) `newpos`。 如果 `fail` 為 false，則第二個函式會呼叫 `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`。 不論是哪一種情況，如果 `(off_type)newpos == (off_type)(-1)` （定位作業失敗），函式都會呼叫 `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。 這兩個函數都會傳回 __* this__。
+如果[`fail`](../standard-library/basic-ios-class.md#fail)為 false，則第一個成員函式會針對某些`pubseekpos`暫存物件`(pos)`，呼叫 `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pos_type`](../standard-library/basic-streambuf-class.md#pubseekpos) `newpos`。 如果 `fail` 為 false，則第二個函式會呼叫 `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`。 不論是哪一種情況，如果 `(off_type)newpos == (off_type)(-1)` （定位作業失敗），函式都會呼叫 `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。 這兩個函數都會傳回 __* this__。
 
 如果[`fail`](../standard-library/basic-ios-class.md#fail)為 true，則成員函式不會執行任何動作。
 
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>  basic_istream::sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>  basic_istream::sentry
 
 此巢狀類別描述一個物件，該物件的宣告會建構格式化和未格式化的輸入函式。
 
@@ -883,11 +883,11 @@ class sentry {
 
 - 如果 `_Istr.tie` 不是 null 指標，則會呼叫 `_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush) 。
 
-- 如果 `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags)` & `[`skipws`](../standard-library/ios-functions.md#skipws)為非零值，則有效地呼叫[`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`。
+- 如果 `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags) `&` [`skipws`](../standard-library/ios-functions.md#skipws)為非零值，則有效地呼叫[`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`。
 
 如果在任何這類準備之後，`_Istr.good` 為 false，則此函式會 `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`呼叫。 在任何情況下，此函式會將 `_Istr.good` 所傳回的值儲存在 `status`中。 稍後對 `operator bool` 的呼叫會傳遞此儲存值。
 
-## <a name="swap"></a>  basic_istream::swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>  basic_istream::swap
 
 交換兩個 `basic_istream` 物件的內容。
 
@@ -904,7 +904,7 @@ void swap(basic_istream& right);
 
 成員函式會呼叫[`basic_ios::swap`](../standard-library/basic-ios-class.md#swap)`(right)`。 它也會以*右邊*的提取計數來交換提取計數。
 
-## <a name="sync"></a>  basic_istream::sync
+## <a name="basic_istreamsync"></a><a name="sync"></a>  basic_istream::sync
 
 同步處理資料流程的相關輸入裝置與資料流程的緩衝區。
 
@@ -916,7 +916,7 @@ int sync();
 
 如果[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)是 null 指標，此函式會傳回-1。 否則，它會呼叫 `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync)。 如果該呼叫傳回-1，則函式會呼叫[`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` 並傳回-1。 否則，此函式會傳回零。
 
-## <a name="tellg"></a>  basic_istream::tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>  basic_istream::tellg
 
 回報在資料流中目前的讀取位置。
 
@@ -958,7 +958,7 @@ int main()
 }
 ```
 
-## <a name="unget"></a>  basic_istream::unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>  basic_istream::unget
 
 將最近讀取的字元放回資料流。
 

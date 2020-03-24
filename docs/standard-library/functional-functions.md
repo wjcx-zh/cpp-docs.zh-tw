@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150676"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函式
 
@@ -51,7 +51,7 @@ ms.locfileid: "79421797"
 |-|-|
 |[not1](#not1)|[not2](#not2)|
 
-## <a name="bind"></a>bind
+## <a name="bind"></a><a name="bind"></a>bind
 
 將引數繫結至可呼叫物件。
 
@@ -81,7 +81,7 @@ template <class RTy, class FT, class T1, class T2, ..., class TN>
 
 `FT, T1, T2, ..., TN` 的類型必須是可建構，而且 `INVOKE(fn, t1, ..., tN)` 必須是 `w1, w2, ..., wN`的某些值的有效運算式。
 
-第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 `g(u1, u2, ..., uM)` 的效果會 `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`，其中 `cv` 是 `g` 的 cv 限定詞，而系結引數的值和類型 `v1, v2, ..., vN` 會依照下列指定來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。
+第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 `g(u1, u2, ..., uM)` 的效果會 `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`，其中 `cv` 是 `g` 的 cv 限定詞，而系結引數的值和類型 `v1, v2, ..., vN` 會依照下列指定來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。
 
 第二個範本函式會傳回含 `g` 巢狀類型的轉送呼叫包裝函式 `result_type`，該類型與 `RTy` 同義。 `g(u1, u2, ..., uM)` 的效果為 `INVOKE(f, v1, v2, ..., vN, RTy)`，其中 `cv` 是 `g` 的 cv 限定詞，而繫結引數 `v1, v2, ..., vN` 的值和類型則依下列指定方式來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單和指定的傳回類型，來製作可呼叫物件。
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st
 
 協助程式範本函式，可建立介面卡，以將二元函式物件轉換成一元函式物件。 它會將 binary 函數的第一個引數系結至指定的值。 在 c + + 11 中已被取代，在 c + + 17 中移除
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
 
 協助程式範本函式，可建立介面卡，以將二元函式物件轉換成一元函式物件。 它會將二元函式的第二個引數系結至指定的值。 在 c + + 11 中已被取代，在 c + + 17 中移除
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 在其引數上執行位 AND 運算（binary `operator&`）的預先定義函式物件。
 
@@ -381,7 +381,7 @@ struct bit_and<void>
 
 對於基本資料類型，`bit_and` 仿函數僅限於整數類型，或會實作二元 `operator&` 的使用者定義類型。
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 在其引數上執行位補數（NOT）運算（一元 `operator~`）的預先定義函式物件。 已在 c + + 14 中新增。
 
@@ -417,7 +417,7 @@ struct bit_not<void>
 
 對於基本資料類型，`bit_not` 仿函數僅限於整數類型，或會實作二元 `operator~` 的使用者定義類型。
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 在其引數上執行位 OR 運算（`operator|`）的預先定義函式物件。
 
@@ -458,7 +458,7 @@ struct bit_or<void>
 
 對於基本資料類型，`bit_or` 函式僅限於整數類型，或會實作 `operator|` 的使用者定義類型。
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 預先定義的函式物件，它會在其引數上執行位 XOR 運算（binary `operator^`）。
 
@@ -499,7 +499,7 @@ struct bit_xor<void>
 
 對於基本資料類型，`bit_xor` 仿函數僅限於整數類型，或會實作二元 `operator^` 的使用者定義類型。
 
-## <a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a>cref
 
 從引數建構常數`reference_wrapper`。
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>啟動
+## <a name="invoke"></a><a name="invoke"></a>啟動
 
 使用指定的引數叫用任何可呼叫的物件。 已在 c + + 17 中新增。
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 產生簡單呼叫包裝函式。
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。 在 c + + 11 中已被取代為[mem_fn](#mem_fn) [和系結，並在](#bind)c + + 17 中移除
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 Helper 範本函式，用以在使用參考引數初始化時建構成員函式的物件配接器。 在 c + + 11 中已被取代，在 c + + 17 中移除
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a>not1
 
 傳回一元述詞的補數。 已針對 c + + 17 中的[not_fn](#not_fn)取代。
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a>not2
 
 傳回二元述詞的補數。 已針對 c + + 17 中的[not_fn](#not_fn)取代。
 
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 `not_fn` 函式範本會接受可呼叫的物件，並傳回可呼叫的物件。 當傳回的可呼叫物件稍後以一些引數叫用時，它會將它們傳遞至原始的可呼叫物件，並以邏輯方式否定結果。 它會保留已包裝之可呼叫物件的 const 限定性和實值類別行為。 `not_fn` 是 c + + 17 的新功能，並取代了已淘汰的 `std::not1`、`std::not2`、`std::unary_negate`和 `std::binary_negate`。
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 Helper 範本函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。 在 c + + 11 中已被取代，在 c + + 17 中移除
 
@@ -1210,7 +1210,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>ref
+## <a name="ref"></a><a name="ref"></a>ref
 
 從引數建構 `reference_wrapper` 。
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>調換
+## <a name="swap"></a><a name="swap"></a>調換
 
 交換兩個 `function` 物件。
 

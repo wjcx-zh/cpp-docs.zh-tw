@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 92fd4f6ae4193e86edb114cc366e6d40e4208ca8
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ab10ac1a4d0c327ff4d0ae54620f3fde752e020b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439674"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150806"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (呼叫慣例)
 
@@ -112,4 +112,3 @@ ms.locfileid: "79439674"
 
 - [MSVC 編譯器選項](compiler-options.md)
 - [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)
- 

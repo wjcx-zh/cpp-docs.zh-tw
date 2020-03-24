@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077731"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150962"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -17,7 +17,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker-end
 
-本主題描述如何設定 C++ Linux 專案，如[在 Visual Studio 中建立新的 C++ Linux 專案](create-a-new-linux-project.md)所述。 針對 CMake Linux 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
+本主題描述如何設定 C++ Linux 專案，如[在 Visual Studio 中建立新的 C++ Linux 專案](create-a-new-linux-project.md)所述。 如需 CMake Linux 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
 
 您可以設定 Linux 專案，以實體 Linux 機器、虛擬機器，或[適用於 Linux 的 Windows 子系統](/windows/wsl/about) (WSL) 為目標。
 

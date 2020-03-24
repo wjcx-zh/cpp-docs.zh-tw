@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9b4492f10e2871792d8e1870fcfea37775dc7bde
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422105"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150845"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf 類別
 
@@ -233,7 +233,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 **命名空間:** std
 
-## <a name="basic_filebuf"></a> basic_filebuf::basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a> basic_filebuf::basic_filebuf
 
 建構類型 `basic_filebuf` 的物件。
 
@@ -249,7 +249,7 @@ basic_filebuf(basic_filebuf&& right);
 
 第二個函式會使用*right*的內容初始化物件，並將其視為右值參考。
 
-## <a name="char_type"></a> basic_filebuf::char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a> basic_filebuf::char_type
 
 將類型名稱與 `Char_T` 樣板參數產生關聯。
 
@@ -257,7 +257,7 @@ basic_filebuf(basic_filebuf&& right);
 typedef Char_T char_type;
 ```
 
-## <a name="close"></a> basic_filebuf::close
+## <a name="basic_filebufclose"></a><a name="close"></a> basic_filebuf::close
 
 關閉檔案。
 
@@ -324,7 +324,7 @@ s
 1
 ```
 
-## <a name="int_type"></a> basic_filebuf::int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a> basic_filebuf::int_type
 
 讓此類型在 `basic_filebuf` 範圍內，等同于 `Tr` 範圍中相同名稱的類型。
 
@@ -332,7 +332,7 @@ s
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="is_open"></a> basic_filebuf::is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a> basic_filebuf::is_open
 
 指出檔案是否為開啟。
 
@@ -368,7 +368,7 @@ false
 true
 ```
 
-## <a name="off_type"></a> basic_filebuf::off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a> basic_filebuf::off_type
 
 讓此類型在 `basic_filebuf` 範圍內，等同于 `Tr` 範圍中相同名稱的類型。
 
@@ -376,7 +376,7 @@ true
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="open"></a> basic_filebuf::open
+## <a name="basic_filebufopen"></a><a name="open"></a> basic_filebuf::open
 
 開啟檔案。
 
@@ -417,7 +417,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 ### <a name="remarks"></a>備註
 
-成員函式會藉由呼叫[`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`，開啟名稱為*filename*的檔案。 `strmode` 由 `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode)` | `[`binary`](../standard-library/ios-base-class.md#openmode)`)`：
+成員函式會藉由呼叫[`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`，開啟名稱為*filename*的檔案。 `strmode` 由 `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode)`)`：
 
 - `ios_base::in` 會變成 `"r"` （開啟現有的檔案以供讀取）。
 
@@ -441,7 +441,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 如需使用 `open`的範例，請參閱[`basic_filebuf::close`](#close) 。
 
-## <a name="op_eq"></a> basic_filebuf::operator=
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a> basic_filebuf::operator=
 
 指派此資料流緩衝區物件的內容。 這是一個移動指派，涉及不會留下複本的右值。
 
@@ -462,7 +462,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 成員運算子會使用*right*的內容來取代物件的內容，並將其視為右值參考。 如需詳細資訊，請參閱右值參考宣告子[： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="overflow"></a> basic_filebuf::overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a> basic_filebuf::overflow
 
 將新字元插入已滿的緩衝區時呼叫。
 
@@ -489,7 +489,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 - 它可以在輸出緩衝區中轉換任何暫止的輸出，接著 `ch`，方法是使用 [檔案轉換] facet `fac` 視需要呼叫 `fac.out`。 每個產生的專案 `ch` 類型*char*都會寫入至檔案指標所指定的相關聯資料流程，`fp` 如同後續呼叫 `fputc(ch, fp)`的形式。 如果任何轉換或寫入失敗，則函式會失敗。
 
-## <a name="pbackfail"></a> basic_filebuf::pbackfail
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a> basic_filebuf::pbackfail
 
 嘗試將元素放回輸入資料流，然後將其設成目前元素 (透過下一個指標所指向)。
 
@@ -516,7 +516,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - 如果函式可以將專案推送回輸入資料流程，它可以執行這項操作，例如藉由呼叫**char**類型專案的 `ungetc`。
 
-## <a name="pos_type"></a> basic_filebuf::pos_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a> basic_filebuf::pos_type
 
 讓此類型在 `basic_filebuf` 範圍內，等同于 `Tr` 範圍中相同名稱的類型。
 
@@ -524,7 +524,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="seekoff"></a> basic_filebuf::seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a> basic_filebuf::seekoff
 
 嘗試改變受控制資料流的目前位置。
 
@@ -558,7 +558,7 @@ virtual pos_type seekoff(
 
 如果檔案指標 `fp` 為 null 指標，則函式會失敗。 否則，它會嘗試藉由呼叫 `fseek(fp, _Off, _Way)`來改變數據流位置。 如果該函式成功，且產生的位置 `fposn` 可以藉由呼叫 `fgetpos(fp, &fposn)`來判斷，則函式會成功。 如果函式成功，它會傳回類型的值，`pos_type` 包含 `fposn`。 否則會傳回無效的資料流位置。
 
-## <a name="seekpos"></a> basic_filebuf::seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a> basic_filebuf::seekpos
 
 嘗試改變受控制資料流的目前位置。
 
@@ -588,7 +588,7 @@ virtual pos_type seekpos(
 
 針對寬資料流，如果在開啟資料流之後或最後一次呼叫 `streampos` 之後進行過任何插入，則函式會呼叫 [overflow](#overflow)。 它也會插入還原初始轉換狀態所需的任何順序，方法是使用 [檔案轉換] facet `fac` 視需要呼叫 `fac.unshift`。 每個產生的專案 `byte` 類型**char**都會寫入至檔案指標所指定的相關聯資料流程，`fp` 如同後續呼叫 `fputc(byte, fp)`的形式。 如果 `fac.unshift` 或任何寫入的呼叫失敗，函數不會成功。
 
-## <a name="setbuf"></a> basic_filebuf::setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a> basic_filebuf::setbuf
 
 執行每個衍生資料流緩衝區的特定作業。
 
@@ -614,7 +614,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 `setbuf` 會呼叫 `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))`，以提供從 *_Buffer*開始的 `count` 元素陣列，做為資料流程的緩衝區。 如果該函式傳回非零值，則函式會傳回 Null 指標。 否則，它會傳回 **this** 以發出成功訊號。
 
-## <a name="swap"></a> basic_filebuf::swap
+## <a name="basic_filebufswap"></a><a name="swap"></a> basic_filebuf::swap
 
 將這個 `basic_filebuf` 的內容和提供的 `basic_filebuf` 內容交換。
 
@@ -627,7 +627,7 @@ void swap(basic_filebuf& right);
 *right*\
 另一個 `basic_filebuf`的左值參考。
 
-## <a name="sync"></a> basic_filebuf::sync
+## <a name="basic_filebufsync"></a><a name="sync"></a> basic_filebuf::sync
 
 嘗試與任何相關聯外部資料流同步處理受控制資料流。
 
@@ -639,7 +639,7 @@ virtual int sync();
 
 如果檔案指標 `fp` 為 null 指標，則會傳回零。 否則，只有在[溢](#overflow)位和 `fflush(fp)` 的呼叫成功將任何暫止的輸出排清到資料流程時，才會傳回零。
 
-## <a name="traits_type"></a> basic_filebuf::traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a> basic_filebuf::traits_type
 
 將類型名稱與 `Tr` 樣板參數產生關聯。
 
@@ -647,7 +647,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="underflow"></a> basic_filebuf::underflow
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a> basic_filebuf::underflow
 
 從輸入資料流擷取目前元素。
 

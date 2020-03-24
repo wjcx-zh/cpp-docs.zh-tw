@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: b11455c1de13321bce52fbc3be906014b2844aee
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2fda4d9f003e84247527d964685e631532d4c366
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210141"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
 
@@ -101,7 +101,7 @@ OLE DB 範本提供者宏會提供下列類別的功能：
 
 **Header:** atldb.h
 
-### <a name="begin_property_set"></a>BEGIN_PROPERTY_SET
+### <a name="begin_property_set"></a><a name="begin_property_set"></a>BEGIN_PROPERTY_SET
 
 標記屬性集對應中所設定之屬性的開頭。
 
@@ -120,7 +120,7 @@ BEGIN_PROPERTY_SET(guid)
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-### <a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
+### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
 
 標記屬性集對應中所設定之屬性的開頭。
 
@@ -142,7 +142,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-### <a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
+### <a name="begin_propset_map"></a><a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
 
 標記屬性集對應專案的開頭。
 
@@ -169,7 +169,7 @@ BEGIN_PROPSET_MAP(Class)
 
 [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]
 
-### <a name="chain_property_set"></a>CHAIN_PROPERTY_SET
+### <a name="chain_property_set"></a><a name="chain_property_set"></a>CHAIN_PROPERTY_SET
 
 這個宏會將屬性群組連結在一起。
 
@@ -191,7 +191,7 @@ CHAIN_PROPERTY_SET(ChainClass)
 > [!CAUTION]
 >  請謹慎使用此宏。 不當使用可能會導致取用者無法通過 OLE DB 的一致性測試。
 
-### <a name="end_property_set"></a>END_PROPERTY_SET
+### <a name="end_property_set"></a><a name="end_property_set"></a>END_PROPERTY_SET
 
 標示屬性集的結尾。
 
@@ -210,7 +210,7 @@ END_PROPERTY_SET(guid)
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-### <a name="end_propset_map"></a>END_PROPSET_MAP
+### <a name="end_propset_map"></a><a name="end_propset_map"></a>END_PROPSET_MAP
 
 標記屬性集對應項的結尾。
 
@@ -224,7 +224,7 @@ END_PROPSET_MAP()
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-### <a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
+### <a name="property_info_entry"></a><a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
 
 表示屬性集中的特定屬性。
 
@@ -247,7 +247,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-### <a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
+### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
 
 表示屬性集中的特定屬性。
 
@@ -282,7 +282,7 @@ DBPROPOPTIONS_REQUIRED 或 DBPROPOPTIONS_SETIFCHEAP。 通常提供者不需要�
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-### <a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
+### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
 
 表示屬性集中的特定屬性。
 
@@ -308,7 +308,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-### <a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
+### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
 
 標記提供者資料行對應專案的開頭。
 
@@ -329,7 +329,7 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 
 [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]
 
-### <a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
+### <a name="end_provider_column_map"></a><a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
 
 標記提供者資料行對應專案的結尾。
 
@@ -343,7 +343,7 @@ END_PROVIDER_COLUMN_MAP()
 
 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
 
-### <a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
+### <a name="provider_column_entry"></a><a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
 
 表示提供者所支援的特定資料行。
 
@@ -364,7 +364,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *成員*<br/>
 在中的成員變數，`dataClass` 對應到資料行。
 
-### <a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
+### <a name="provider_column_entry_fixed"></a><a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 
 表示提供者所支援的特定資料行。
 
@@ -396,7 +396,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 
 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
 
-### <a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
+### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
 
 表示提供者所支援的特定資料行。
 
@@ -436,7 +436,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 
 可讓您指定資料行的大小、資料類型、有效位數、小數位數和架構資料列集 GUID。
 
-### <a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
+### <a name="provider_column_entry_length"></a><a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 
 表示提供者所支援的特定資料行。
 
@@ -468,7 +468,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 
 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
 
-### <a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
+### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
 
 表示提供者所支援的特定資料行。
 
@@ -497,7 +497,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 
 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
 
-### <a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
 表示提供者所支援的特定資料行。
 
@@ -528,7 +528,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 
 類似于[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) ，但也可讓您指定資料行的資料類型和大小。
 
-### <a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
+### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 
 表示提供者所支援的特定資料行。
 
@@ -553,7 +553,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 
 當資料行資料是以 null 結束的 Unicode 字元字串（ [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85))）時，請使用此宏。
 
-### <a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
+### <a name="begin_schema_map"></a><a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
 
 表示架構對應的開始。
 
@@ -572,7 +572,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 
 如需架構資料列集的詳細資訊，請參閱 Windows SDK 中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
-### <a name="end_schema_map"></a>END_SCHEMA_MAP
+### <a name="end_schema_map"></a><a name="end_schema_map"></a>END_SCHEMA_MAP
 
 表示架構對應的結尾。
 
@@ -586,7 +586,7 @@ END_SCHEMA_MAP()
 
 如需詳細資訊，請參閱[IDBSchemaRowsetImpl 類別](../../data/oledb/idbschemarowsetimpl-class.md)。
 
-### <a name="schema_entry"></a>SCHEMA_ENTRY
+### <a name="schema_entry"></a><a name="schema_entry"></a>SCHEMA_ENTRY
 
 將 GUID 與類別產生關聯。
 

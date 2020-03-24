@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366884"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193650"
 ---
 # <a name="nmake-fatal-error-u1078"></a>NMAKE 嚴重錯誤 U1078
 
-在 'expression' 的常數溢位
+' expression ' 的常數溢位
 
-指定的運算式中包含超過，範圍從-2,147,483,648 到 2,147,483,647 的常數。 常數會出現在下列情況的其中一個：
+給定運算式包含的常數超過範圍-2147483648 到2147483647。 常數出現在下列其中一種情況：
 
-- 前置處理器指示詞指定的運算式
+- 使用前置處理指示詞指定的運算式
 
-- 指定虛線的錯誤層級 (**-**) 命令修飾詞
+- 以破折號（ **-** ）命令修飾詞指定的錯誤層級

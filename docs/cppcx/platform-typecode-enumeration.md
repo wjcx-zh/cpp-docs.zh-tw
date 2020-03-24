@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: ac3e0fda473cf50c8adc10e603d9b6c3beee05be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183038"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214258"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode 列舉
 
@@ -30,10 +30,10 @@ enum class TypeCode {};
 |---------------|-----------------|
 |Boolean|Platform::Boolean 類型。|
 |Char16|default::char16 類型。|
-|DateTime|DateTime 型別。|
+|Datetime|DateTime 型別。|
 |Decimal|數字類型。|
 |Double|default::float64 類型。|
-|Empty|Void|
+|空白|Void|
 |Int16|default::int16 類型。|
 |Int32|default::int32 類型。|
 |Int64|default::int64 類型。|

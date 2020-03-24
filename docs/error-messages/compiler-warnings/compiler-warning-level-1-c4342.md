@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-ms.openlocfilehash: 439c4976f25688fd9220c3f58ceb933266b5f15c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ac00d3d57f8cf7d6c85f3106dbe9b8c3cb9adf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187505"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162916"
 ---
 # <a name="compiler-warning-level-1-c4342"></a>編譯器警告 (層級 1) C4342
 
-行為變更: '*函式*' 呼叫，但在舊版中呼叫成員運算子
+行為變更：呼叫了 '*function*'，但在先前的版本中呼叫了成員運算子
 
-在 視覺效果的版本C++Visual Studio 2002 之前, 已呼叫的成員，但在變更此行為與編譯器現在會找出最符合項目命名空間範圍中。
+在 Visual Studio 2002 之前C++的 Visual 版本中，已呼叫成員，但此行為已變更，而且編譯器現在會在命名空間範圍中尋找最符合的值。
 
-如果找不到成員運算子，編譯器之前不會考慮任何命名空間範圍運算子。 如果沒有更好的相符項目，在命名空間範圍，目前的編譯器正確呼叫它，而舊版編譯器不會考慮。
+如果找到成員運算子，編譯器先前不會考慮任何命名空間範圍運算子。 如果命名空間範圍較相符，則目前的編譯器會正確地呼叫它，而先前的編譯器不會將它視為。
 
-在您成功地移植程式碼，以最新版本之後，應該停用此警告。  編譯器可能會產生誤判，產生這個警告的程式碼沒有任何行為變更。
+當您成功地將程式碼移植到目前的版本之後，應該停用此警告。  編譯器可能會產生誤報，針對沒有行為變更的程式碼產生此警告。
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 
-下列範例會產生 C4342:
+下列範例會產生 C4342：
 
 ```cpp
 // C4342.cpp

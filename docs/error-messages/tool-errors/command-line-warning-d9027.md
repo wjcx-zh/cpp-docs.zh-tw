@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - D9027
 ms.assetid: 2a29edc5-5649-48f2-9058-2057c747284c
-ms.openlocfilehash: f89e7416efe7a0069ee2dae8df921933bbe76bcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46ed5750bd1f315f20658ace9b83fac532fbbabb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196673"
 ---
 # <a name="command-line-warning-d9027"></a>命令列警告 D9027
 
-原始程式檔 '\<檔案名稱 >' 已忽略
+已忽略原始檔 '\<檔案名 > '
 
-CL.exe 略過輸入的來源檔案。
+CL 已忽略輸入來源檔案。
 
-這個警告可能因 /Fo 選項和 /c 選項的命令列上的輸出檔案名稱之間的空格。 例如: 
+此警告可能是由/Fo 選項與命令列上具有/c 選項的輸出檔案名之間的一個空格所造成。 例如：
 
 ```
 cl /c /Fo output.obj input.c
 ```
 
-因為 /Fo 之間的空間和`output.obj`，CL.exe 採用`output.obj`做為輸入檔案的名稱。 若要修正此問題，請將空格移除：
+因為在/Fo 和 `output.obj`之間有一個空格，所以 CL 會採用 `output.obj` 做為輸入檔的名稱。 若要修正此問題，請移除下列空間：
 
 ```
 cl /c /Fooutput.obj input.c

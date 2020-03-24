@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4405
+title: 編譯器警告 (層級 1) C4405
 ms.date: 11/04/2016
 f1_keywords:
 - C4405
 helpviewer_keywords:
 - C4405
 ms.assetid: 155c64d6-58ae-4455-b61f-ccd711c5da96
-ms.openlocfilehash: 182f9ff061fd2a8ebe5ea0046545412fca5f646a
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 7ec06e80ac8f61802258a62594029b15a55ebe42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965579"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162565"
 ---
-# <a name="compiler-warning-level-1-c4405"></a>編譯器警告（層級1） C4405
+# <a name="compiler-warning-level-1-c4405"></a>編譯器警告 (層級 1) C4405
 
 ' identifier '：識別碼是保留字
 

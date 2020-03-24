@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2834
 ms.assetid: 28f9f6eb-ab2a-4e64-aaaa-9d14f955de41
-ms.openlocfilehash: fb4a0e6f3f6ec227b978ae0b7d3864b2134de986
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6a7bc0591fd51c808c303e94eeaaffd6111ffcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406817"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201895"
 ---
 # <a name="compiler-error-c2834"></a>編譯器錯誤 C2834
 
-'operator operator' 必須全域限定
+' operator operator ' 必須是全域限定的
 
-`new`和`delete`運算子會繫結至類別所在的位置。 範圍解析不能選取的版本`new`或`delete`自其他類別。 若要實作的多種形式`new`或`delete`運算子，使用額外的型式參數建立運算子版本。
+`new` 和 `delete` 運算子會系結至其所在的類別。 範圍解析不能用來從不同的類別中選取 `new` 或 `delete` 的版本。 若要執行多個形式的 `new` 或 `delete` 運算子，請使用額外的型式參數建立運算子的版本。

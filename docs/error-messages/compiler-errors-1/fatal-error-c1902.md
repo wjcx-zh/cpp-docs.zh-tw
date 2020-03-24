@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1902
 ms.assetid: 2dc066cc-fcb1-4725-8bcb-9f44dd0905b7
-ms.openlocfilehash: c425430a6d08ae8a97c4dcd0f5764f44dee43e5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10a411dfc942498a98959d9a23cb42dfb93cf2ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165862"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202822"
 ---
 # <a name="fatal-error-c1902"></a>嚴重錯誤 C1902
 
 程式資料庫管理員不相符;請檢查您的安裝
 
-程式資料庫檔 (.pdb) 建立使用較新版的 mspdb*XXX*.dll 與您的系統上找到的編譯器。 此錯誤通常表示 mspdbsrv.exe 或 mspdbcore.dll，或其遺漏，或有不同的版本與 mspdb*XXX*.dll。 ( *XXX* mspdb 中的預留位置*XXX*.dll 檔案名稱變更，每個產品版本。 例如，在 Visual Studio 2015 中，檔案名稱是 mspdb140.dll）。
+程式資料庫檔案（.pdb）是使用較新版本的 mspdb .dll*XXX*所建立，而不是編譯器在系統上找到的檔案。 此錯誤通常表示 mspdbsrv.exe 或 mspdbcore.dll 遺失，或具有與 mspdb .dll*XXX*不同的版本。 （Mspdb .dll*xxx*.DLL 檔案名中的*xxx*預留位置會隨著每個產品版本而變更。 例如，在 Visual Studio 2015 中，檔案名為 mspdb140）。
 
-確保相符版本的 mspdbsrv.exe、 mspdbcore.dll 和 mspdb*XXX*.dll 安裝在您的系統上。 請確定版本不相符，尚未複製到目錄，其中包含您的目標平台編譯器和連結工具。 例如，您可能已複製檔案讓您可以叫用的編譯器或連結的工具，從命令提示字元，如果沒有設定**路徑**環境變數據此。
+請確定您的系統上已安裝 mspdbsrv.exe、mspdbcore.dll 和 mspdb .dll*XXX*的對應版本。 請確定未將不相符的版本複製到包含目標平臺之編譯器和連結工具的目錄。 例如，您可能已複製檔案，因此您可以從命令提示字元叫用編譯器或連結工具，而不需要據此設定**PATH**環境變數。

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0028
 - CXX0028
 ms.assetid: 172eb81f-c0b0-43b1-b418-766f35f1a561
-ms.openlocfilehash: 33440c0b594bfd710156ab4a77afd59575f7b6fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed79867b2793fbaf7fe6edec35c82a224a2582c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397077"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195639"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>運算式評估工具錯誤 CXX0028
 
-無法結構/等位的項目
+not 結構/等位元素
 
-指定表單 '了' 或 'pStruct-成員 >' 的運算式，但\<成員 > 不是結構的項目。
+已指定 ' Struct. Member ' 或 ' pStruct > Member ' 格式的運算式，但 \<成員 > 不是結構的元素。
 
-運算式不可能正確加上括號。
+運算式可能未正確地加上括弧。
 
-此錯誤是與 can0028 相同。
+此錯誤與 CAN0028 相同。

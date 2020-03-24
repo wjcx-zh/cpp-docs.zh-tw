@@ -1,21 +1,21 @@
 ---
-title: appobject (C++ COM 屬性)
+title: appobject （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168508"
 ---
 # <a name="appobject"></a>appobject
 
-將 coclass 識別為與完整 .exe 應用程式相關聯的應用程式物件, 並指出 coclass 的函式和屬性在此[類型程式庫](../../mfc/automation-clients-using-type-libraries.md)中可全域使用。
+將 coclass 識別為與完整 .exe 應用程式相關聯的應用程式物件，並指出 coclass 的函式和屬性在此[類型程式庫](../../mfc/automation-clients-using-type-libraries.md)中可全域使用。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ ms.locfileid: "69490939"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示一個簡單的類別定義, 前面加上包含**appobject**的屬性區塊:
+下列程式碼顯示一個簡單的類別定義，前面加上包含**appobject**的屬性區塊：
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -55,7 +55,7 @@ class A : public ICustom {
 |**適用於**|**class**、 **struct**|
 |**可重複**|否|
 |**必要屬性**|`coclass`|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

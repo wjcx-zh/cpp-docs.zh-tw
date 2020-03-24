@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210804"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 類別
 
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 這在命令上是必要的。 執行是由[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)宏所定義的靜態函式所提供。
 
-## <a name="getproperties"></a>ICommandPropertiesImpl：： GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl：： GetProperties
 
 使用命令的屬性對應傳回所有要求的屬性集。
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-## <a name="setproperties"></a>ICommandPropertiesImpl：： SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl：： SetProperties
 
 設定命令物件的屬性。
 

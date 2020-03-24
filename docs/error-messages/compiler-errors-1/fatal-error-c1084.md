@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 649686857000b2bee469f0e3ec551d49717c1d7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204070"
 ---
 # <a name="fatal-error-c1084"></a>嚴重錯誤 C1084
 
@@ -27,7 +27,7 @@ ms.locfileid: "69501124"
 
 - 請確定命令列語法遵守[編譯器命令列語法](../../build/reference/compiler-command-line-syntax.md)底下所述的規則。
 
-- 請確定已正確設定環境變數**TMP**和**TEMP** , 以及適當的許可權, 以便存取這些環境變數所參考的目錄。 此外, 請確定**TMP**和**TEMP**環境變數所參考的磁片磁碟機包含足夠的可用空間量。
+- 請確定已正確設定環境變數**TMP**和**TEMP** ，以及適當的許可權，以便存取這些環境變數所參考的目錄。 此外，請確定**TMP**和**TEMP**環境變數所參考的磁片磁碟機包含足夠的可用空間量。
 
 - 如果訊息指出「錯誤的檔案號碼」，則指定的檔案可能已在前景關閉，而在背景編譯。
 

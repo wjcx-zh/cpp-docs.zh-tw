@@ -1,21 +1,21 @@
 ---
-title: vararg (C++ COM 屬性)
+title: vararg （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4761f65e0862a8de07330305b292b5b3501cac68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166012"
 ---
 # <a name="vararg"></a>vararg
 
-指定函式接受可變數目的引數。
+指定函式使用引數的變數數字。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514893"
 
 ## <a name="example"></a>範例
 
-下列程式碼將示範如何使用**vararg**:
+下列程式碼將示範如何使用**vararg**：
 
 ```cpp
 // cpp_attr_ref_vararg.cpp
@@ -54,7 +54,7 @@ __interface X : public IUnknown
 |**適用於**|介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

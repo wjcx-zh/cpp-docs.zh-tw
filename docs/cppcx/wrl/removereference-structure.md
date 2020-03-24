@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 342980ac9a7cae8a98ffd0f367c666487e34e5de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7753c1ad41f12fa8c14d2f10c9e2f91e043a5846
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231306"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213599"
 ---
 # <a name="removereference-structure"></a>RemoveReference 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,11 +34,11 @@ struct RemoveReference<T&&>;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-類別中。
+類別。
 
 ## <a name="remarks"></a>備註
 
-移除參考或右值參考特性，從指定的類別範本參數。
+從指定的類別樣板參數中，去除參考或右值參考特性。
 
 ## <a name="members"></a>成員
 
@@ -54,9 +54,9 @@ struct RemoveReference<T&&>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** internal.h
+**標頭：** 內部。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

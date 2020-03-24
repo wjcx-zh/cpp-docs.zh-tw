@@ -10,14 +10,14 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244152"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187787"
 ---
-# <a name="uuidof-operator"></a>__uuidof 運算子
+# <a name="__uuidof-operator"></a>__uuidof 運算子
 
 **Microsoft 專屬**
 
@@ -31,20 +31,20 @@ __uuidof (expression)
 
 ## <a name="remarks"></a>備註
 
-*運算式*可能型別名稱、 指標、 參考或該型別的陣列，這些類型或這些類型的變數上的特製化樣板。 只要編譯器可以用它來尋找附加的 GUID，則引數有效。
+*運算式*可以是類型名稱、指標、參考或該類型的陣列、在這些類型上特製化的樣板，或這些類型的變數。 只要編譯器可以用它來尋找附加的 GUID，則引數有效。
 
-此內建函式的特殊案例是當任一**0**或做為引數提供了 NULL。 在此情況下， **__uuidof**會傳回零組成的 GUID。
+這個內建函式的特殊案例是當**0**或 Null 做為引數提供時。 在此情況下， **__uuidof**會傳回由零組成的 GUID。
 
 使用這個關鍵字擷取附加至下列項目的 GUID：
 
-- 物件的[uuid](../cpp/uuid-cpp.md)擴充的屬性。
+- 由[uuid](../cpp/uuid-cpp.md)擴充屬性所產生的物件。
 
-- 使用建立程式庫區塊[模組](../windows/attributes/module-cpp.md)屬性。
+- 使用[module](../windows/attributes/module-cpp.md)屬性建立的程式庫區塊。
 
 > [!NOTE]
-> 在偵錯組建中， **__uuidof**一律會初始化物件以動態方式 （在執行階段）。 在發行組建，而 **__uuidof**可以靜態 （在編譯時期） 初始化物件。
+> 在 debug 組建中， **__uuidof**一律會動態初始化物件（在執行時間）。 在發行組建中， **__uuidof**可以靜態方式（在編譯時期）初始化物件。
 
-為了與舊版中，相容性 **_uuidof**同義 **__uuidof**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
+為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_uuidof**是 **__uuidof**的同義字。
 
 ## <a name="example"></a>範例
 
@@ -73,13 +73,13 @@ int main() {
 
 ## <a name="comments"></a>註解
 
-在範圍中不再是程式庫名稱的情況下，您可以使用`__LIBID_`而非 **__uuidof**。 例如：
+如果程式庫名稱不再在範圍內，您可以使用 `__LIBID_`，而不是 **__uuidof**。 例如：
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

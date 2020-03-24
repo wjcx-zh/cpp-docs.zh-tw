@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214184"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 類別
 
@@ -61,7 +61,7 @@ Windows 執行階段中的大部分元件都是 agile 元件。 如需詳細資�
 |----------|-----------------|
 |[AgileEventSource：： Add 方法](#add)|將指定的委派介面所表示的 agile 事件處理常式附加至目前**AgileEventSource**物件的事件處理常式集合。|
 
-## <a name="add"></a>AgileEventSource：： Add 方法
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource：： Add 方法
 
 將指定的委派介面所表示的事件處理常式附加至目前[EventSource](eventsource-class.md)物件的事件處理常式集合。
 

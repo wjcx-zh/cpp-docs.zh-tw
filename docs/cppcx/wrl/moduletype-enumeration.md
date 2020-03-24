@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 3c7486cbc761975dd133f229f23dcf0b70e7e3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403226"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213716"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 列舉
 
@@ -30,17 +30,17 @@ enum ModuleType;
 
 |名稱|描述|
 |----------|-----------------|
-|`InProc`|同處理序伺服器。|
-|`OutOfProc`|跨處理序伺服器。|
-|`DisableCaching`|停用在模組上的快取機制。|
-|`InProcDisableCaching`|組合`InProc`和`DisableCaching`。|
-|`OutOfProcDisableCaching`|組合`OutOfProc`和`DisableCaching`。|
+|`InProc`|同進程伺服器。|
+|`OutOfProc`|跨進程伺服器。|
+|`DisableCaching`|停用模組上的快取機制。|
+|`InProcDisableCaching`|`InProc` 和 `DisableCaching`的組合。|
+|`OutOfProcDisableCaching`|`OutOfProc` 和 `DisableCaching`的組合。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標頭：** module. h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

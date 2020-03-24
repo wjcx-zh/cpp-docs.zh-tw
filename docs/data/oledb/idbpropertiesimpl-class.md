@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77f70c8b0bc602da6840bec38565c4441644c6d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f873ec4f4eca434d0eb76df86c0891f1a99c2e2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443716"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210700"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 類別
 
@@ -62,7 +62,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 [IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85))是資料來源物件的強制介面，以及枚舉器的選擇性介面。 不過，如果列舉值公開[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))，它必須公開 `IDBProperties`。 `IDBPropertiesImpl` 使用[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)所定義的靜態函式來執行 `IDBProperties`。
 
-## <a name="getproperties"></a>IDBPropertiesImpl：： GetProperties
+## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a>IDBPropertiesImpl：： GetProperties
 
 傳回目前在資料來源物件上設定的資料來源、資料來源資訊和初始化屬性群組中的屬性值，或目前設定于之初始化屬性群組中的屬性值。列舉值.
 
@@ -92,7 +92,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 如果初始化提供者，這個方法會傳回目前在資料來源物件上設定之 DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT 屬性群組中的屬性值。 如果未初始化提供者，它只會傳回 DBPROPSET_DBINIT 的群組屬性。
 
-## <a name="getpropertyinfo"></a>IDBPropertiesImpl：： GetPropertyInfo
+## <a name="idbpropertiesimplgetpropertyinfo"></a><a name="getpropertyinfo"></a>IDBPropertiesImpl：： GetPropertyInfo
 
 傳回資料來源所支援的屬性資訊。
 
@@ -121,7 +121,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 會使用[IDBInitializeImpl：： m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)來執行此功能。
 
-## <a name="setproperties"></a>IDBPropertiesImpl：： SetProperties
+## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a>IDBPropertiesImpl：： SetProperties
 
 針對枚舉器，設定資料來源和初始化屬性群組、資料來源物件或初始化屬性群組的屬性。
 

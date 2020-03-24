@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447069"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210857"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 類別
 
@@ -92,7 +92,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 
 這在資料列集和命令上是必要的。 OLE DB 需要提供者來執行 HACCESSOR，這是[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))結構陣列的標記。 `IAccessorImpl` 提供的 HACCESSORs 是 `BindType` 結構的位址。 根據預設，`BindType` 會定義為 `IAccessorImpl`的範本定義中的 `ATLBINDINGS`。 `BindType` 提供一個機制，供 `IAccessorImpl` 用來追蹤其 `DBBINDING` 陣列中的元素數目，以及參考計數和存取子旗標。
 
-## <a name="iaccessorimpl"></a>IAccessorImpl：： IAccessorImpl
+## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a>IAccessorImpl：： IAccessorImpl
 
 建構函式。
 
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a>IAccessorImpl：： AddRefAccessor
+## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a>IAccessorImpl：： AddRefAccessor
 
 將參考次數 (Reference Count) 加入至現有的存取子 (Accessor)。
 
@@ -117,7 +117,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IAccessor：： AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) 。
 
-## <a name="createaccessor"></a>IAccessorImpl：： CreateAccessor
+## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a>IAccessorImpl：： CreateAccessor
 
 透過一組繫結建立存取子。
 
@@ -136,7 +136,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IAccessor：： CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) 。
 
-## <a name="getbindings"></a>IAccessorImpl：： GetBindings
+## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a>IAccessorImpl：： GetBindings
 
 在存取子中，傳回取用者的基本資料行系結。
 
@@ -153,7 +153,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IAccessor：： GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) 。
 
-## <a name="releaseaccessor"></a>IAccessorImpl：： ReleaseAccessor
+## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a>IAccessorImpl：： ReleaseAccessor
 
 釋放存取子。
 

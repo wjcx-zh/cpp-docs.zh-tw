@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210687"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 類別
 
-提供實作[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))介面。
+提供[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))介面的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +36,7 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IConvertTypeImpl`。
+衍生自 `IConvertTypeImpl`的類別。
 
 ## <a name="requirements"></a>需求
 
@@ -48,15 +48,15 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|命令或上一個資料列集，請提供可用性資訊的類型轉換。|
+|[CanConvert](#canconvert)|提供命令或資料列集上類型轉換可用性的資訊。|
 
 ## <a name="remarks"></a>備註
 
-這個介面是命令、 資料列集和索引資料列集時的必要參數。 `IConvertTypeImpl` 委派給 OLE DB 所提供的轉換物件，以實作介面。
+這個介面在命令、資料列集和索引資料列集上是必要的。 `IConvertTypeImpl` 藉由委派給 OLE DB 所提供的轉換物件來執行介面。
 
-## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl：： CanConvert
 
-命令或上一個資料列集，請提供可用性資訊的類型轉換。
+提供命令或資料列集上類型轉換可用性的資訊。
 
 ### <a name="syntax"></a>語法
 
@@ -68,13 +68,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IConvertType：： CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 。
 
 ### <a name="remarks"></a>備註
 
-使用中的 OLE DB 資料轉換`MSADC.DLL`。
+在 `MSADC.DLL`中使用 OLE DB 的資料轉換。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

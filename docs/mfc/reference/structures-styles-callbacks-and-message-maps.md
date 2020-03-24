@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: e1fa072c5395c9171e0abdd4f3dab3251cd27229
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9f3d5c6d23084f91196c091d9d0d41304d37ce2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611678"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215107"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>結構、樣式、回呼和訊息對應
 
@@ -37,5 +37,5 @@ ms.locfileid: "65611678"
 [類別庫概觀](../../mfc/class-library-overview.md)<br/>
 依據分類列出 MFC 程式庫中的類別。
 
-[MFC 範例](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例](../../overview/visual-cpp-samples.md#mfc-samples)<br/>
 提供示範如何使用 MFC 之範例的連結。

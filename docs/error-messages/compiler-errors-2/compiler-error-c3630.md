@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3630
 ms.assetid: 865626a9-98cc-465d-acde-44d4574c019a
-ms.openlocfilehash: 041555e8fb9f6e9c15289f1fabe1048add3eb4ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 224652c1d26ec30c530b033f470237135633e607
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200521"
 ---
 # <a name="compiler-error-c3630"></a>編譯器錯誤 C3630
 
-錯誤處理的語彙基元 'token' 時
+處理權杖 ' token ' 時發生錯誤
 
-無法處理在原始程式碼中的權杖。
+無法處理原始程式碼中的 token。

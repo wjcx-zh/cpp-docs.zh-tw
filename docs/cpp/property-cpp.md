@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301483"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179298"
 ---
 # <a name="property-c"></a>property (C++)
 
@@ -30,9 +30,9 @@ ms.locfileid: "62301483"
 
 ## <a name="remarks"></a>備註
 
-當編譯器看到成員選取運算子右側以此屬性宣告的資料成員 ("**。**「 或 」**->**")，它會將轉換作業`get`或`put`函式，根據這類運算式為左值或右值。 在更複雜的內容，例如"`+=`"，重寫藉由同時執行`get`和`put`。
+當編譯器在成員選取運算子（" **.** " 或 " **->** "）右邊看到以這個屬性宣告的資料成員時，它會根據這類運算式是左值或右值，將作業轉換成 `get` 或 `put` 函數。 在更複雜的內容中（例如 "`+=`"），會同時執行 `get` 和 `put`來進行重寫。
 
-在類別或結構定義中也可以使用這個屬性宣告空陣列。 例如: 
+在類別或結構定義中也可以使用這個屬性宣告空陣列。 例如：
 
 ```cpp
 __declspec(property(get=GetX, put=PutX)) int x[];
@@ -40,7 +40,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
 
 上述陳述式表示可以同時使用 `x[]` 和一個或多個陣列索引。 在這種情況下，`i=p->x[a][b]` 會轉換為 `i=p->GetX(a, b)`，而 `p->x[a][b] = i` 則會轉換為 `p->PutX(a, b, i);`
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="example"></a>範例
 

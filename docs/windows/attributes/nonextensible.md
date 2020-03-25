@@ -1,21 +1,21 @@
 ---
-title: nonextensible (C++ COM 屬性)
+title: nonextensible （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514405"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214653"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-`IDispatch`指定執行只包含介面描述中所列的屬性和方法, 而且無法在執行時間以其他成員擴充。
+指定 `IDispatch` 的實作為僅包含介面描述中所列的屬性和方法，而且在執行時間不能與其他成員一起擴充。
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +31,7 @@ ms.locfileid: "69514405"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示**nonextensible**屬性的一種用法:
+下列程式碼顯示**nonextensible**屬性的一種用法：
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,8 +56,8 @@ __interface IFireTabCtrl
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|`dual`and `oleautomation`、or`dispinterface`|
-|**無效屬性**|無|
+|**必要屬性**|`dual` 和 `oleautomation`，或 `dispinterface`|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

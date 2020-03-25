@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
-ms.openlocfilehash: e55202274c5ec3982f784ad6cdf074a5a99e922f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d30dad6f8ad146ff467eb4eaf32b21dd6950d25f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345340"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194638"
 ---
 # <a name="linker-tools-error-lnk2022"></a>連結器工具錯誤 LNK2022
 
-> 中繼資料作業失敗 (*HRESULT*): *error_message*
+> 中繼資料作業失敗（*HRESULT*）： *error_message*
 
-連結器偵測到合併中繼資料時的錯誤。 中繼資料必須先解決錯誤連結成功。
+連結器在合併中繼資料時偵測到錯誤。 必須解析中繼資料錯誤，才能成功連結。
 
-若要診斷此問題的一個方式是執行**ildasm-語彙基元**上尋找有哪些類型的物件檔案的語彙基元列`error_message`，並尋找差異。  中繼資料，具有相同名稱的兩種不同類型不正確，即使只是 LayoutType 屬性不同。
+診斷此問題的其中一種方法是在物件檔案上執行**ildasm** token，以尋找哪些類型具有 `error_message`中列出的權杖，並尋找差異。  在中繼資料中，兩個具有相同名稱的不同類型是不正確，即使 LayoutType 屬性不同也一樣。
 
-其中一個原因 LNK2022 是時 （例如結構） 的型別存在於多個編譯單位名稱相同，但含有衝突的定義，以及當您使用編譯[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。  在此情況下，請確定該類型具有相同的定義，在所有編譯中。  類型名稱會列在`error_message`。
+LNK2022 的其中一個原因是當類型（例如結構）存在於具有相同名稱的多個 compilands 中，但具有衝突的定義，以及當您使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)進行編譯時。  在此情況下，請確定類型在所有 compilands 中都有相同的定義。  類型名稱列在 `error_message`中。
 
-連結器會尋找在不同位置的中繼資料檔案於指定給編譯器時，另一個可能的原因如 LNK2022 (與[#using](../../preprocessor/hash-using-directive-cpp.md) )。 確保中繼資料檔 (.dll 或 .netmodule) 所在位置是與傳遞給連結器時相同，也與傳遞給編譯器時相同。
+另一個可能的 LNK2022 原因是當連結器在指定給編譯器的不同位置（使用[#using](../../preprocessor/hash-using-directive-cpp.md) ）找到中繼資料檔案。 確保中繼資料檔 (.dll 或 .netmodule) 所在位置是與傳遞給連結器時相同，也與傳遞給編譯器時相同。
 
-建置 ATL 應用程式，使用巨集時`_ATL_MIXED`需要在所有編譯中，如果它用在至少一個。
+在建立 ATL 應用程式時，所有 compilands 都需要使用宏 `_ATL_MIXED` （如果至少在一個中使用的話）。
 
 ## <a name="example"></a>範例
 
@@ -39,7 +39,7 @@ public ref class Test {};
 
 ## <a name="example"></a>範例
 
-此範例示範您無法連結兩個來源的程式碼檔案包含類型的相同名稱但不同的定義。
+這個範例顯示您無法連結兩個原始程式碼檔，其中包含名稱相同但定義不同的類型。
 
 下列範例會產生 LNK2022。
 

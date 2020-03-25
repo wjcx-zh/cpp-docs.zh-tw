@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: daaba919acaa35615af56831f9458831c3d35427
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398520"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214028"
 ---
 # <a name="enableif-structure"></a>EnableIf 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,11 +34,11 @@ struct EnableIf<true, T>;
 類型。
 
 *b*<br/>
-Boolean 運算式。
+布林運算式。
 
 ## <a name="remarks"></a>備註
 
-如果第一個範本參數評估為第二個範本參數所指定之型別的資料成員會定義 **，則為 true**。
+定義第二個樣板參數所指定之類型的資料成員（如果第一個樣板參數評估為**true**）。
 
 ## <a name="members"></a>成員
 
@@ -46,7 +46,7 @@ Boolean 運算式。
 
 |名稱|描述|
 |----------|-----------------|
-|`type`|如果範本參數*b*評估為 **，則為 true**，部分特製化定義資料成員`type`必須是類型`T`。|
+|`type`|如果範本參數*b*評估為**true**，部分特製化會將資料成員 `type` 定義為 `T`類型。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -54,9 +54,9 @@ Boolean 運算式。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** internal.h
+**標頭：** 內部。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

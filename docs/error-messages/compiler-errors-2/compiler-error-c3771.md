@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-ms.openlocfilehash: 6b15d867bbaf66f511cbda200d692f5db4371ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c29ad6007d33c43ae1e4758ae05caa9109053e3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165726"
 ---
 # <a name="compiler-error-c3771"></a>編譯器錯誤 C3771
 
@@ -19,7 +19,7 @@ ms.locfileid: "62400158"
 
 在目前命名空間內找不到指定範本 *識別碼* 的類別樣板宣告。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 - 確認目前命名空間中有定義樣板識別項的類別樣板宣告，或樣板識別項是完整名稱。
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1105
 ms.assetid: 80ce18e7-44ee-4844-bede-321fe0844d56
-ms.openlocfilehash: cbdcce7767e3314d5210335e11b789ff7bea3b4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 395c1e66e160d6ee6ea6621ce1fa894a0ba29428
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374231"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182431"
 ---
 # <a name="resource-compiler-fatal-error-rc1105"></a>資源編譯器嚴重錯誤 RC1105
 
-無效的參數，選項： 太多 /d 參數
+不正確參數，選項：/d 參數太多
 
-太多符號使用定義的符號定義 (/d) 選項。 定義一些符號，在您的來源和重新編譯。
+使用 [定義符號（/d）] 選項定義了太多符號。 在您的來源中定義一些符號，然後重新編譯。

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 2d65fb047e758f449ed76c954bb4ac0c3623f6dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209290"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212106"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor 類別
 
@@ -27,25 +27,25 @@ class CColumnAccessor : public CAccessorBase
 
 ## <a name="remarks"></a>備註
 
-插入的程式碼，在每個資料行繫結為不同的存取子。 您應該要知道此類別會在插入程式碼 （例如，您可能會遇到它進行偵錯時），但您通常一律不要直接使用它或它的方法。
+在插入的程式碼中，每個資料行都會系結為個別的存取子。 請注意，插入的程式碼中會使用這個類別（例如，當您在進行偵錯工具時可能會遇到這種情況），但您通常不需要直接使用它或其方法。
 
-`CColumnAccessor` 會實作下列的虛設常式方法，其中每一個對應到其他存取子類別方法的功能：
+`CColumnAccessor` 會實作為下列 stub 方法，其中每一個都對應至其他存取子類別方法的功能：
 
-- `CColumnAccessor` 建構函式具現化並初始化`CColumnAccessor`物件。
+- `CColumnAccessor` 的函式;具現化並初始化 `CColumnAccessor` 物件。
 
-- `CreateAccessor` 資料行繫結結構配置記憶體，並初始化資料行的資料成員。
+- `CreateAccessor` 會為數據行系結結構配置記憶體，並初始化資料行資料成員。
 
-- `BindColumns` 將資料行的繫結至存取子。
+- `BindColumns` 將資料行系結至存取子。
 
-- `SetParameterBuffer` 配置參數緩衝區。
+- `SetParameterBuffer` 配置參數的緩衝區。
 
-- `AddParameter` 將參數項目加入至參數項目結構。
+- `AddParameter` 會將參數專案新增至參數專案結構。
 
 - `HasOutputColumns` 判斷存取子是否有輸出資料行
 
 - `HasParameters` 判斷存取子是否有參數。
 
-- `BindParameters` 將建立的參數繫結至資料行。
+- `BindParameters` 會將建立的參數系結至資料行。
 
 ## <a name="requirements"></a>需求
 
@@ -53,5 +53,5 @@ class CColumnAccessor : public CAccessorBase
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

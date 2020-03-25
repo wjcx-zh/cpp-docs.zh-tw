@@ -2,14 +2,14 @@
 title: 轉譯單位和連結（C++）
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e4e86dc15280bc7aa079f552014975b7ddc68e51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188320"
 ---
-# <a name="translation-units-and-linkage"></a>轉譯單位和連結
+# <a name="translation-units-and-linkage"></a>編譯單位和連結
 
 在C++程式中，*符號*（例如變數或函式名稱）可以在其範圍內宣告任意次數，但只能定義一次。 此規則是「一個定義規則」（ODR）。 宣告*會在程式中引進（* 或重新引進）名稱。 *定義*會引進名稱。 如果名稱代表變數，定義會明確地將其初始化。 *函式定義*包含簽章加上函數主體。 類別定義包含類別名稱，後面接著列出所有類別成員的區塊。 （成員函式的主體可以選擇性地分別在另一個檔案中定義）。
 
@@ -60,6 +60,6 @@ extern const int value = 42;
 
 如需詳細資訊，請參閱[extern](extern-cpp.md) 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [基本概念](../cpp/basic-concepts-cpp.md)

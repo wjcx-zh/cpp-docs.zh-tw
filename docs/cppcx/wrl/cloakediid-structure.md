@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398715"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214106"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 結構
 
-若要指出`RuntimeClass`，`Implements`和`ChainInterfaces`範本指定的介面不是在 IID 清單中存取。
+指出在 IID 清單中無法存取指定介面的 `RuntimeClass`、`Implements` 和 `ChainInterfaces` 範本。
 
 ## <a name="syntax"></a>語法
 
@@ -28,11 +28,11 @@ struct CloakedIid : T;
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-介面隱藏的 （「 隱匿 」）。
+隱藏的介面（已遮蓋）。
 
 ## <a name="remarks"></a>備註
 
-以下是如何的範例**CloakedIid**使用： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。
+以下是使用**CloakedIid**的範例： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -42,9 +42,9 @@ struct CloakedIid : T;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

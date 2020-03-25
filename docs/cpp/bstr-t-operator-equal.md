@@ -7,14 +7,14 @@ helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 97f0100d8a34253f3a1375d34b887d3d31a77f43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b7f499dd84a67020232aab84966647378daadad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350867"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181066"
 ---
-# <a name="bstrtoperator-"></a>_bstr_t::operator =
+# <a name="_bstr_toperator-"></a>_bstr_t::operator =
 
 **Microsoft 專屬**
 
@@ -43,11 +43,11 @@ Unicode 字串，將被指派給現有的 `_bstr_t` 物件。
 *var*<br/>
 `_variant_t` 物件，將被指派給現有的 `_bstr_t` 物件。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="example"></a>範例
 
-請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)如需使用的範例**運算子 =**。
+如需使用**operator =** 的範例，請參閱[_Bstr_t：： Assign](../cpp/bstr-t-assign.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

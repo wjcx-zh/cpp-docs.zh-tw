@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 8c659f23d6828616c4a48522b61330336e994cbb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0fb85a3f5642bc5fffcad29892ca15bb13a1ce0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514646"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166910"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -40,7 +40,7 @@ ms.locfileid: "69514646"
 |**適用於**|介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

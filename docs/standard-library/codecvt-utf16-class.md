@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689830"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215276"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -24,10 +24,10 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>參數
 
-*Elem* \
+*Elem*\
 寬字元項目類型。
 
-*Maxcode* \
+*Maxcode*\
 地區設定 Facet 的最大字元數。
 
 *模式*\
@@ -35,7 +35,7 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="remarks"></a>備註
 
-這個類別樣板會轉換編碼為 UCS-2 或 UCS-4 的寬字元，以及編碼為 UTF-16LE 的位元組資料流程，如果模式 & little_endian，則為，否則為 UTF-UTF-16BE。
+這個類別樣板會在編碼為 UCS-2 或 UCS-4 的寬字元與編碼為 UTF-16LE 的位元組資料流程之間轉換，如果模式 & little_endian，則為，否則為 UTF-16BE。
 
 位元組資料流應寫入二進位檔案中；如果寫入文字檔案中，則可能會損毀。
 
@@ -43,4 +43,4 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 標頭： \<codecvt >
 
-命名空間： std
+命名空間: std

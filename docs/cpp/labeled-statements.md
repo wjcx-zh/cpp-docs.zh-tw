@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368743"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179688"
 ---
 # <a name="labeled-statements"></a>標記陳述式
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**Goto 陳述式**
+**Goto 語句**
 
-外觀*識別碼*原始程式中的標籤會宣告一個標籤。 只有[goto](../cpp/goto-statement-cpp.md)陳述式可以將控制權轉移到*識別項*標籤。 下列程式碼片段說明如何使用**goto**陳述式並*識別項*標籤：
+來來源程式中*識別碼*標籤的外觀會宣告標籤。 只有[goto](../cpp/goto-statement-cpp.md)語句可以將控制項傳輸至*識別碼*標籤。 下列程式碼片段說明如何使用**goto**語句和*識別碼*標籤：
 
 標籤不會單獨顯示，而是必須附加至陳述式。 如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**Case 陳述式**
+**Case 語句**
 
-之後，會出現的標籤**案例**關鍵字也不能出現外部**切換**陳述式。 (這項限制也適用於**預設**關鍵字。)下列程式碼片段顯示的正確用法**案例**標籤：
+出現在**case**關鍵字之後的標籤不能同時出現在**switch**語句之外。 （此限制也適用于**default**關鍵字）。下列程式碼片段顯示**case**標籤的正確用法：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>case 陳述式中的標籤
 
-之後，會出現的標籤**案例**關鍵字也不能出現外部**切換**陳述式。 (這項限制也適用於**預設**關鍵字。)下列程式碼片段顯示的正確用法**案例**標籤：
+出現在**case**關鍵字之後的標籤不能同時出現在**switch**語句之外。 （此限制也適用于**default**關鍵字）。下列程式碼片段顯示**case**標籤的正確用法：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>goto 陳述式中的標籤
 
-外觀*識別碼*原始程式中的標籤會宣告一個標籤。 只有[goto](../cpp/goto-statement-cpp.md)陳述式可以將控制權轉移到*識別項*標籤。 下列程式碼片段說明如何使用**goto**陳述式並*識別項*標籤：
+來來源程式中*識別碼*標籤的外觀會宣告標籤。 只有[goto](../cpp/goto-statement-cpp.md)語句可以將控制項傳輸至*識別碼*標籤。 下列程式碼片段說明如何使用**goto**語句和*識別碼*標籤：
 
 標籤不會單獨顯示，而是必須附加至陳述式。 如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。
 

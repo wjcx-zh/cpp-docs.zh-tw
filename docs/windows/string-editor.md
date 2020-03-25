@@ -1,5 +1,5 @@
 ---
-title: 字串編輯器 (C++)
+title: 字串編輯器（C++）
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.string.F1
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514724"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214405"
 ---
-# <a name="string-editor-c"></a>字串編輯器 (C++)
+# <a name="string-editor-c"></a>字串編輯器（C++）
 
 字串資料表是一種 Windows 資源，包含了識別碼、值與應用程式所有字串標題的清單。 例如，狀態列提示位於字串資料表中。
 
@@ -50,55 +50,55 @@ ms.locfileid: "69514724"
 > [!NOTE]
 > Windows 不允許建立空的字串資料表。 若建立的字串資料表中不含任何項目，將會在您儲存資源檔案時自動予以刪除。
 
-## <a name="how-to"></a>如何
+## <a name="how-to"></a>作法
 
-**字串編輯器**可讓您:
+**字串編輯器**可讓您：
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>尋找字串資料表中的字串資源
 
-1. 按兩下 [string] 資料表中的圖示, 即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
+1. 按兩下 [string] 資料表中的圖示，即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
-1. 移至功能表 [**編輯** > ] [**尋找和取代**], 然後選擇 [**尋找**]。
+1. 移至功能表 **編輯** > **尋找並取代**，然後選擇 **尋找**。
 
-1. 在 [**尋找目標**] 方塊中, 從下拉式清單中選取先前的搜尋字串, 或輸入您想要尋找之字串的標題文字或資源識別碼。
+1. 在 [**尋找目標**] 方塊中，從下拉式清單中選取先前的搜尋字串，或輸入您想要尋找之字串的標題文字或資源識別碼。
 
-1. 選取任何 [**尋找**] 選項, 然後選取 [**尋找下一個]** 。
+1. 選取任何 [**尋找**] 選項，然後選取 [**尋找下一個]** 。
 
 > [!TIP]
-> 若要在搜尋檔時使用[正則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio), 請使用 [**編輯**] 功能表中的 [檔案**中尋找**] 命令。
+> 若要在搜尋檔時使用[正則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)，請使用 [**編輯**] 功能表中的 [檔案**中尋找**] 命令。
 >
-> 輸入正則運算式以符合模式, 或選取 [**尋找目標**] 方塊右邊的按鈕, 以顯示一般搜尋運算式的清單。 當您從這個清單中選取運算式時, 它會取代為 [**尋找目標**] 方塊中的搜尋文字。
+> 輸入正則運算式以符合模式，或選取 [**尋找目標**] 方塊右邊的按鈕，以顯示一般搜尋運算式的清單。 當您從這個清單中選取運算式時，它會取代為 [**尋找目標**] 方塊中的搜尋文字。
 >
-> 如果您使用正則運算式, 請務必**使用:[正**則運算式] 核取方塊已選取。
+> 如果您使用正則運算式，請確定已選取 [**使用：正則運算式**] 核取方塊。
 
 ### <a name="to-add-or-delete-a-string-resource"></a>若要新增或刪除字串資源
 
-您可以使用 [**字串編輯器**], 快速地將專案插入或刪除到字串資料表中。 新的字串會放在資料表的結尾, 並提供下一個可用的識別碼。 您可以視需要編輯[屬性視窗](/visualstudio/ide/reference/properties-window)中的 [**識別碼**]、[**值**] 或 [**標題**] 屬性。
+您可以使用 [**字串編輯器**]，快速地將專案插入或刪除到字串資料表中。 新的字串會放在資料表的結尾，並提供下一個可用的識別碼。 您可以視需要編輯[屬性視窗](/visualstudio/ide/reference/properties-window)中的 [**識別碼**]、[**值**] 或 [**標題**] 屬性。
 
-[**字串編輯器**] 會確保您不會使用已在使用中的識別碼。 如果您選取已在使用中的識別碼,**字串編輯器**將會通知您, 然後指派一般唯一識別碼 (例如`IDS_STRING58113`)。
+[**字串編輯器**] 會確保您不會使用已在使用中的識別碼。 如果您選取已在使用中的識別碼，**字串編輯器**將會通知您，然後指派一般唯一識別碼，例如 `IDS_STRING58113`。
 
 #### <a name="to-add-a-string-table-entry"></a>若要加入字串資料表專案
 
-1. 按兩下 [string] 資料表中的圖示, 即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
+1. 按兩下 [string] 資料表中的圖示，即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
-1. 以滑鼠右鍵按一下字串資料表, 然後選擇 [**新字串**]。
+1. 以滑鼠右鍵按一下字串資料表，然後選擇 [**新字串**]。
 
-1. 在 [**字串編輯器**] 中, 從 [**識別碼**] 下拉式清單中選取**識別碼**, 或直接在 [就地] 中輸入*識別碼*。
+1. 在 [**字串編輯器**] 中，從 [**識別碼**] 下拉式清單中選取**識別碼**，或直接在 [就地] 中輸入*識別碼*。
 
 1. 視需要編輯此**值**。
 
 1. 輸入**標題**的專案。
 
    > [!NOTE]
-   > Windows 字串資料表中不允許 Null 字串。 如果您在字串資料表中建立具有 null 字串的專案, 您會收到一則訊息, 要求您**輸入此資料表專案的字串**。
+   > Windows 字串資料表中不允許 Null 字串。 如果您在字串資料表中建立具有 null 字串的專案，您會收到一則訊息，要求您**輸入此資料表專案的字串**。
 
 #### <a name="to-delete-a-string-table-entry"></a>若要刪除字串資料表專案
 
-選取您想要刪除的專案, 然後執行下列其中一項動作:
+選取您想要刪除的專案，然後執行下列其中一項動作：
 
-- 移至功能表 [**編輯** > ] [**刪除**]。
+- 移至功能表 **編輯** > **刪除**。
 
-- 以滑鼠右鍵按一下要刪除的字串, 然後選擇 [**刪除**]。
+- 以滑鼠右鍵按一下要刪除的字串，然後選擇 [**刪除**]。
 
 - 按下**Delete**鍵。
 
@@ -106,14 +106,14 @@ ms.locfileid: "69514724"
 
 1. [開啟兩個 .rc 檔中的字串資料表](../windows/how-to-create-a-resource-script-file.md)。
 
-1. 以滑鼠右鍵按一下要移動的字串, 然後選擇 [**剪**下]。
+1. 以滑鼠右鍵按一下要移動的字串，然後選擇 [**剪**下]。
 
 1. 將游標放在 [目標**字串編輯器**] 視窗中。
 
-1. 在您要移動字串的 *.rc*檔中, 按一下滑鼠右鍵並選擇 [**貼**上]。
+1. 在您要移動字串的 *.rc*檔中，按一下滑鼠右鍵並選擇 [**貼**上]。
 
 > [!NOTE]
-> 如果移動字串的**識別碼**或**值**與目的地檔案中現有的**識別碼**或**值**衝突, 則該**識別碼**或移動字串的**值**都會變更。
+> 如果移動字串的**識別碼**或**值**與目的地檔案中現有的**識別碼**或**值**衝突，則該**識別碼**或移動字串的**值**都會變更。
 
 ### <a name="to-change-the-properties-of-a-string-resource"></a>變更字串資源的屬性
 
@@ -124,11 +124,11 @@ ms.locfileid: "69514724"
 
 #### <a name="to-change-a-string-or-its-identifier"></a>若要變更字串或其識別碼
 
-1. 按兩下 [string] 資料表中的圖示, 即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
+1. 按兩下 [string] 資料表中的圖示，即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
-1. 選取您想要編輯的字串, 然後按兩下 [**識別碼**]、[**值**] 或 [**標題**] 資料行, 您就可以:
+1. 選取您想要編輯的字串，然後按兩下 [**識別碼**]、[**值**] 或 [**標題**] 資料行，您就可以：
 
-   - 從 [**識別碼**] 下拉式清單中選取**識別碼**, 或直接在 [就地] 中輸入*識別碼*。
+   - 從 [**識別碼**] 下拉式清單中選取**識別碼**，或直接在 [就地] 中輸入*識別碼*。
 
    - 在 [**值**] 資料行中輸入不同的數位。
 
@@ -136,30 +136,30 @@ ms.locfileid: "69514724"
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>變更多個字串資源的 caption 屬性
 
-1. 按兩下 [string] 資料表中的圖示, 即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
+1. 按兩下 [string] 資料表中的圖示，即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
-1. 選取您想要變更的字串, 方法是按住**Ctrl**鍵並選取每一個。
+1. 選取您想要變更的字串，方法是按住**Ctrl**鍵並選取每一個。
 
-1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)中, 為您要變更的屬性輸入新的值。
+1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)中，為您要變更的屬性輸入新的值。
 
 1. 按 **Enter** 鍵。
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>將格式或特殊字元加入至字串資源
 
-1. 按兩下 [string] 資料表中的圖示, 即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
+1. 按兩下 [string] 資料表中的圖示，即可開啟[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取您要修改的字串。
 
-1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)中, 將下面列出的任何標準逸出序列新增至 [**標題**] 方塊中的文字, 然後按**enter**鍵。
+1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)中，將下面列出的任何標準逸出序列新增至 [**標題**] 方塊中的文字，然後按**enter**鍵。
 
    |若要取得此 。|輸入此 。|
    |-----------------|---------------|
-   | 換行 | \\位 |
+   | 新行 | \\n |
    | 歸位字元 | \\r |
-   | 索引標籤 | \\而已 |
+   | 索引標籤 | \\t |
    | 反斜線 (\\) | \\\\ |
-   | ASCII 字元 | \\ddd (八進位標記法) |
-   | 警示 (鐘) | \\為 |
+   | ASCII 字元 | \\ddd （八進位標記法） |
+   | 警示（鐘） | \\a |
 
    > [!NOTE]
    > **字串編輯器**不支援完整的轉義 ASCI 字元集。 您只能使用上述所列的版本。

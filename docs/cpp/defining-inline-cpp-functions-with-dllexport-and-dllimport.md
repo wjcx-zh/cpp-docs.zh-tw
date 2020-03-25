@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], inline functions
 - dllexport attribute [C++], inline functions
 ms.assetid: 3b48678b-e7b8-4eda-bb46-b5d34dcf7817
-ms.openlocfilehash: 88fbb497aab4d794d3ef84a902a72c4e044e51de
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 9620706e6ac477246ce323a7fc3624291bb1dd6b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857563"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180195"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>使用 dllexport 和 dllimport 定義內嵌 C++ 函式
 
@@ -26,8 +26,8 @@ ms.locfileid: "74857563"
 
 提供匯入的內嵌函式時務必特別小心。 例如，如果您更新 DLL，請不要假設用戶端將會使用變更後的 DLL 版本。 若要確保載入正確的 DLL 版本，請一併重建 DLL 的用戶端。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [dllexport、dllimport](../cpp/dllexport-dllimport.md)

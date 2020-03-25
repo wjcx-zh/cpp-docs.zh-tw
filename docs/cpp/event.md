@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0d6d3570662cba36a606002263559246e22da57
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154421"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180052"
 ---
-# <a name="event"></a>__event
+# <a name="__event"></a>__event
 
 宣告事件。
 
@@ -29,26 +29,26 @@ __event member-declarator;
 
 ## <a name="remarks"></a>備註
 
-關鍵字 **__event**可以套用至方法宣告、 介面宣告或資料成員宣告。 不過，您無法使用 **__event**關鍵字限定巢狀類別的成員。
+關鍵字 **__event**可以套用至方法宣告、介面聲明或資料成員宣告。 不過，您無法使用 **__event**關鍵字來限定嵌套類別的成員。
 
 根據您的事件來源和接收器是原生 C++，COM 或 Managed (.NET Framework)，您可以將下列建構當做事件使用：
 
-|原生 C++|COM|Managed (.NET Framework)|
+|Native C++|COM|Managed (.NET Framework)|
 |------------------|---------|--------------------------------|
-|方法|—|方法|
-|—|interface|—|
+|方法|—|method|
+|—|介面|—|
 |—|—|資料成員|
 
-使用[__hook](../cpp/hook.md)在事件接收器事件方法相關聯的處理常式方法中。 請注意，在您建立的事件之後 **__event**時呼叫該事件時，所有後續攔截到該事件的事件處理常式會呼叫的關鍵字。
+在事件接收器中使用[__hook](../cpp/hook.md) ，將處理常式方法與事件方法產生關聯。 請注意，在您使用 **__event**關鍵字建立事件之後，呼叫該事件之後的所有事件處理常式都會被呼叫。
 
-**__Event**方法宣告不能有定義; 定義會隱含產生，因此可以呼叫事件的方法，如同它是任何一般方法。
+**__Event**的方法宣告不能有定義;定義會以隱含方式產生，因此可以呼叫事件方法，就像是任何一般方法一樣。
 
 > [!NOTE]
 >  樣板類別或結構不能包含事件。
 
 ## <a name="native-events"></a>原生事件
 
-原生事件是方法。 傳回的型別通常是 HRESULT 或**void**，但可以是任何整數類型，包括**enum**。 當事件使用整數傳回型別時，會在事件處理常式傳回非零值時定義錯誤條件，在此情況下，所引發的事件會呼叫其他委派。
+原生事件是方法。 傳回類型通常是 HRESULT 或**void**，但可以是任何整數類型，包括**列舉**。 當事件使用整數傳回型別時，會在事件處理常式傳回非零值時定義錯誤條件，在此情況下，所引發的事件會呼叫其他委派。
 
 ```cpp
 // Examples of native C++ events:
@@ -56,28 +56,28 @@ __event void OnDblClick();
 __event HRESULT OnClick(int* b, char* s);
 ```
 
-請參閱[原生中的事件處理C++](../cpp/event-handling-in-native-cpp.md)範例程式碼。
+如需範例程式碼，請參閱[原生C++中的事件處理](../cpp/event-handling-in-native-cpp.md)。
 
 ## <a name="com-events"></a>COM 事件
 
-COM 事件是介面。 在 事件來源介面方法的參數應該是*中*參數 （但這不會嚴格強制執行），因為*出*參數不是多點傳送時很有用。 如果您使用，就會發出層級 1 警告*出*參數。
+COM 事件是介面。 事件來源介面中方法的參數應該是*在參數中*（但不會嚴格強制執行），因為在多播時， *out*參數並不有用。 如果您使用*out*參數，則會發出層級1警告。
 
-傳回的型別通常是 HRESULT 或**void**，但可以是任何整數類型，包括**enum**。 當事件使用整數傳回類型且事件處理常式傳回非零值時，會是錯誤條件，在此情況下，所引發的事件會中止呼叫其他委派。 請注意，編譯器會自動將標示為事件來源介面[來源](../windows/attributes/source-cpp.md)所產生的 IDL 中。
+傳回類型通常是 HRESULT 或**void**，但可以是任何整數類資料類型，包括**列舉**。 當事件使用整數傳回類型且事件處理常式傳回非零值時，會是錯誤條件，在此情況下，所引發的事件會中止呼叫其他委派。 請注意，編譯器會自動將事件來源介面標示為產生的 IDL 中的[來源](../windows/attributes/source-cpp.md)。
 
-[__Interface](../cpp/interface.md)關鍵字之後至少須 **__event** COM 事件來源。
+在 COM 事件來源的 **__event**之後，一律需要[__interface](../cpp/interface.md)關鍵字。
 
 ```cpp
 // Example of a COM event:
 __event __interface IEvent1;
 ```
 
-請參閱[COM 中的事件處理](../cpp/event-handling-in-com.md)範例程式碼。
+如需範例程式碼，請參閱[COM 中的事件處理](../cpp/event-handling-in-com.md)。
 
 ## <a name="managed-events"></a>Managed 事件
 
-如需新語法中編碼事件的詳細資訊，請參閱[事件](../extensions/event-cpp-component-extensions.md)。
+如需在新語法中編碼事件的詳細資訊，請參閱[事件](../extensions/event-cpp-component-extensions.md)。
 
-Managed 事件是資料成員或方法。 委派的傳回型別事件搭配使用時，必須遵守[Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components)。 事件處理常式的傳回類型必須符合委派的傳回類型。 如需有關委派的詳細資訊，請參閱 <<c0> [ 委派和事件](../dotnet/delegates-and-events.md)。 如果 Managed 事件是資料成員，其類型必須是委派的指標。
+Managed 事件是資料成員或方法。 搭配事件使用時，委派的傳回型別必須與[Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components)相容。 事件處理常式的傳回類型必須符合委派的傳回類型。 如需委派的詳細資訊，請參閱[委派和事件](../dotnet/delegates-and-events.md)。 如果 Managed 事件是資料成員，其類型必須是委派的指標。
 
 在 .NET Framework 中，您可以將資料成員視同方法本身 (也就是，其對應委派的 `Invoke` 方法)。 您必須預先定義用來宣告 Managed 事件資料成員的委派類型。 相反地，Managed 事件方法會隱含定義對應的 Managed 委派 (如果尚未定義的話)。 例如，您可以將事件的值 (例如 `OnClick`) 宣告為事件，如下所示：
 

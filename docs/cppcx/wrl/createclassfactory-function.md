@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214054"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函式
 
@@ -33,16 +33,16 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ### <a name="parameters"></a>參數
 
 *flags*<br/>
-一或多個組合[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
+一或多個[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值的組合。
 
 *entry*<br/>
-指標[CreatorMap](creatormap-structure.md) ，其中包含參數的初始設定和註冊資訊*riid*。
+[CreatorMap](creatormap-structure.md)的指標，其中包含參數*riid*的初始化和註冊資訊。
 
 *riid*<br/>
-參考介面識別碼。
+介面識別碼的參考。
 
 *ppFactory*<br/>
-如果這項作業成功完成，class factory 的指標。
+如果此作業成功完成，則為 Class Factory 的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -50,13 +50,13 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ## <a name="remarks"></a>備註
 
-如果，就會發出判斷提示錯誤範本參數*Factory*不是衍生自介面`IClassFactory`。
+如果範本參數*Factory*不是衍生自介面 `IClassFactory`，就會發出判斷提示錯誤。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標頭：** module. h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

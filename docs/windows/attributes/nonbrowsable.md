@@ -1,17 +1,17 @@
 ---
-title: nonbrowsable (C++ COM 屬性)
+title: nonbrowsable （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f0aae070c1c97695180797b228178b210493b7bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514380"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166558"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421314"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214925"
 ---
 # <a name="c-attributes-for-com-and-net"></a>適用於 COM 和 .NET 的 C++ 屬性
 
@@ -78,7 +78,7 @@ class CMyReceiver
 
 此外，視覺C++連結器會將所有 IDL 相關的屬性資訊輸出至單一 MIDL 檔案。 將無法從單一專案產生兩個類型程式庫。
 
-## <a name="contexts"></a>屬性內容
+## <a name="attribute-contexts"></a><a name="contexts"></a>屬性內容
 
 C++屬性可以使用四個基本欄位來描述：可以套用至的目標（**適用**于），如果它們可重複或不是（可**重複**）、需要的其他屬性（**必要的屬性**）存在，以及與其他屬性不相容（不正確**屬性**）。 這些欄位會列在每個屬性參考主題的隨附資料表中。 以下說明每一個欄位。
 
@@ -92,7 +92,7 @@ C++屬性可以使用四個基本欄位來描述：可以套用至的目標（**
 
 此欄位說明屬性是否可以重複套用至相同的目標。 大部分的屬性都不是可重複的。
 
-### <a name="required-attributes"></a>需要的屬性
+### <a name="required-attributes"></a>必要的屬性
 
 這個欄位會列出必須存在的其他屬性（也就是套用到相同的目標），指定的屬性才能正常運作。 屬性對於此欄位有任何專案是很罕見的。
 

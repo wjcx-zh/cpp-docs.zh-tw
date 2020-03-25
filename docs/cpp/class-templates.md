@@ -6,16 +6,16 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180910"
 ---
 # <a name="class-templates"></a>類別樣板
 
-本主題說明特定的規則C++類別的範本。
+本主題描述C++類別範本特有的規則。
 
 ## <a name="member-functions-of-class-templates"></a>類別樣板的成員函式
 
@@ -75,9 +75,9 @@ int main()
 }
 ```
 
-## <a name="nested-class-templates"></a>巢狀的類別樣板
+## <a name="nested-class-templates"></a>嵌套類別樣板
 
-樣板可以在類別或類別樣板內定義，在這種情況下，這些樣板稱為成員樣板。 本身是類別的成員樣板稱為巢狀類別樣板。 成員樣板函式中會討論[成員函式樣板](../cpp/member-function-templates.md)。
+樣板可以在類別或類別樣板內定義，在這種情況下，這些樣板稱為成員樣板。 本身是類別的成員樣板稱為巢狀類別樣板。 [成員](../cpp/member-function-templates.md)函式樣板中會討論屬於函式的成員範本。
 
 巢狀類別樣板會在外部類別的範圍內宣告為類別樣板。 這些樣板可以在封入類別的內部或外部定義。
 
@@ -193,7 +193,7 @@ X<T>::Y<U>::~Y()
 
 區域類別不可以有成員樣板。
 
-## <a name="template-friends"></a>樣板 friend
+## <a name="template-friends"></a>朋友的範本
 
 類別樣板可以有[朋友](friend-cpp.md)。 類別或類別樣板、函式或函式樣板可以是樣板類別的 friend。 friend 也可以是類別樣板或函式樣板的特製化，但不是部分特製化。
 
@@ -411,9 +411,9 @@ A
 a
 ```
 
-## <a name="reuse-of-template-parameters"></a>重複使用的範本參數
+## <a name="reuse-of-template-parameters"></a>重複使用範本參數
 
-可重複使用範本參數的樣板參數清單中。 例如，下列程式碼是可行的：
+範本參數可以在樣板參數清單中重複使用。 例如，下列程式碼是可行的：
 
 ```cpp
 // template_specifications2.cpp

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-ms.openlocfilehash: 45661653b4b8f1a4f94ece1c53aa86f4a431700b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbe8bebf91a174e07c7c5cce8e9caf1cf3432edf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180026"
 ---
 # <a name="explicit-instantiation"></a>明確初始化
 
 您可以使用明確具現化，建立樣板化類別或函式的具現化，而在程式碼中實際使用它。 由於當您建立使用樣板散發的程式庫 (.lib) 檔案時，這樣做很有用的，未具現化的樣板定義不會進入目的檔 (.obj)。
 
-此程式碼明確具現化`MyStack`for **int**變數和六個項目：
+此程式碼明確具現化**int**變數和六個專案的 `MyStack`：
 
 ```cpp
 template class MyStack<int, 6>;
@@ -31,9 +31,9 @@ template class MyStack<int, 6>;
 template MyStack<int, 6>::MyStack( void );
 ```
 
-您可以明確具現化函式樣板中的範例所示，重新宣告，使用特定的型別引數[函式樣板具現化](../cpp/function-template-instantiation.md)。
+您可以使用特定的型別引數來重新宣告函式樣板，以明確地具現化函數樣板，如函數樣板具現[化](../cpp/function-template-instantiation.md)中的範例所示。
 
-您可以使用**extern**關鍵字防止成員自動具現化。 例如: 
+您可以使用**extern**關鍵字來防止成員的自動具現化。 例如：
 
 ```cpp
 extern template class MyStack<int, 6>;
@@ -45,10 +45,10 @@ extern template class MyStack<int, 6>;
 extern template MyStack<int, 6>::MyStack( void );
 ```
 
-您可以使用**extern**關鍵字來防止編譯器產生相同的具現化程式碼在多個物件模組。 如果函式被呼叫，您必須在至少一個連結模組中使用指定的明確樣板參數，來具現化樣板函式，否則當程式建立時會發生連結器錯誤。
+您可以使用**extern**關鍵字，讓編譯器不會在一個以上的物件模組中產生相同的具現化程式碼。 如果函式被呼叫，您必須在至少一個連結模組中使用指定的明確樣板參數，來具現化樣板函式，否則當程式建立時會發生連結器錯誤。
 
 > [!NOTE]
->  **Extern**特製化中的關鍵字只適用於類別主體之外定義的成員函式。 類別宣告內定義的函式被視為內嵌函式，永遠會具現化。
+>  特製化中的**extern**關鍵字僅適用于在類別主體之外定義的成員函式。 類別宣告內定義的函式被視為內嵌函式，永遠會具現化。
 
 ## <a name="see-also"></a>另請參閱
 

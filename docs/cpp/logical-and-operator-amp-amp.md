@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179428"
 ---
 # <a name="logical-and-operator-ampamp"></a>邏輯 AND 運算子： &amp;&amp;
 
@@ -25,7 +25,7 @@ expression && expression
 
 ## <a name="remarks"></a>備註
 
-邏輯 AND 運算子 (**&&**) 傳回布林值 TRUE，如果這兩個運算元都是 TRUE，否則傳回 FALSE。 運算元會隱含轉換成類型**bool**之前評估和結果為類型**bool**。 邏輯 AND 具有由左至右的順序關聯性。
+如果兩個運算元都是 TRUE，則邏輯 AND 運算子（ **&&** ）會傳回布林值 true，否則會傳回 FALSE。 在評估之前，運算元會隱含地轉換為**bool**類型，而結果會是**bool**類型。 邏輯 AND 具有由左至右的順序關聯性。
 
 邏輯 AND 運算子的運算元不需要屬於相同類型，不過必須屬於整數類資料類型或指標類型。 運算元通常是關聯或相等運算式。
 
@@ -41,9 +41,9 @@ char *pch = 0;
 
 如果 `pch` 是 null (0)，則永遠不會評估運算式的右邊。 因此，您無法透過 null 指標來進行指派。
 
-## <a name="operator-keyword-for-"></a>運算子關鍵字 （& s) （& s)
+## <a name="operator-keyword-for-"></a>& 的 Operator 關鍵字 &
 
-**並**運算子是相等的文字**&&**。 有兩種方式來存取**並**在程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。
+**And**運算子是 **&&** 的文字對等用法。 有兩種方式可存取您程式中的**and**運算子：包含標頭檔 `iso646.h`，或使用[/za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能）編譯器選項進行編譯。
 
 ## <a name="example"></a>範例
 

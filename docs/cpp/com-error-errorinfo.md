@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorInfo method [C++]
 ms.assetid: 071b446c-4395-4fb8-bd3d-300a8b25f5cd
-ms.openlocfilehash: 59ada8a7e098e57cca5641a439365851bbae2485
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedb9ccadc63166c43d980333d93a195254700d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155068"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180702"
 ---
-# <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
+# <a name="_com_errorerrorinfo"></a>_com_error::ErrorInfo
 
 **Microsoft 專屬**
 
-擷取`IErrorInfo`物件傳遞至建構函式。
+抓取傳遞至此函式的 `IErrorInfo` 物件。
 
 ## <a name="syntax"></a>語法
 
@@ -31,9 +31,9 @@ IErrorInfo * ErrorInfo( ) const throw( );
 
 ## <a name="remarks"></a>備註
 
-擷取封裝`IErrorInfo`中的項目`_com_error`物件，或如果沒有則為 NULL`IErrorInfo`項目記錄。 呼叫端必須呼叫`Release`上傳回的物件完成時使用它。
+抓取 `_com_error` 物件中封裝的 `IErrorInfo` 專案，如果沒有記錄 `IErrorInfo` 專案，則為 Null。 呼叫端完成使用時，必須在傳回的物件上呼叫 `Release`。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

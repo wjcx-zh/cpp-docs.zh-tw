@@ -1,19 +1,19 @@
 ---
-title: HOW TO：定義移動建構函式和移動指派運算子 (C++)
+title: 如何：定義移動函數和移動指派運算子（C++）
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345020"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179363"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動建構函式和移動指派運算子 (C++)
 
-本主題說明如何撰寫*移動建構函式*和移動指派運算子C++類別。 移動建構函式可讓要移至左值，而不複製右值物件所擁有的資源。 如需有關移動語意的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+本主題說明如何撰寫C++類別的*移動*函式和移動指派運算子。 移動的函式可讓右值物件所擁有的資源移至左值，而不需要複製。 如需移動語義的詳細資訊，請參閱右值參考宣告子[： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 這個主題是以下列管理記憶體緩衝區的 C++ 類別 `MemoryBlock` 為基礎。
 
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>範例
 
-下列範例示範移動語意如何改善應用程式的效能。 此範例會在向量物件中加入兩個元素，然後在兩個現有元素之間插入新的元素。 `vector`類別會使用移動語意，以有效率地執行插入作業，藉由移動而非複製向量的元素。
+下列範例示範移動語意如何改善應用程式的效能。 此範例會在向量物件中加入兩個元素，然後在兩個現有元素之間插入新的元素。 `vector` 類別使用 move 語義，藉由移動向量的元素而不是複製，來有效率地執行插入作業。
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -264,7 +264,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-Visual Studio 2010 之前, 此範例會產生下列輸出：
+在 Visual Studio 2010 之前，此範例會產生下列輸出：
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -289,7 +289,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
 
 這個使用移動語意的範例版本比不使用移動語意的版本更有效率，因為前者執行較少的複製、記憶體配置和記憶體解除配置作業。
 
-## <a name="robust-programming"></a>穩固程式設計
+## <a name="robust-programming"></a>最佳化程式設計
 
 為避免資源流失，請一律釋放移動指派運算子中的資源 (例如記憶體、檔案控制代碼和通訊端)。
 
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-[Std:: move](../standard-library/utility-functions.md#move)函式會保留的右值屬性*其他*參數。
+[Std：： move](../standard-library/utility-functions.md#move)函數會保留*另*一個參數的右值屬性。
 
 ## <a name="see-also"></a>另請參閱
 
 [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[std：： move](../standard-library/utility-functions.md#move)

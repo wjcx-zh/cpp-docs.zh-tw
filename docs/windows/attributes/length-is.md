@@ -1,17 +1,17 @@
 ---
-title: length_is (C++ COM 屬性)
+title: length_is （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514538"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214782"
 ---
 # <a name="length_is"></a>length_is
 
@@ -34,7 +34,7 @@ ms.locfileid: "69514538"
 
 ## <a name="example"></a>範例
 
-如需如何指定陣列區段的範例, 請參閱[first_is](first-is.md) 。
+如需如何指定陣列區段的範例，請參閱[first_is](first-is.md) 。
 
 ## <a name="requirements"></a>需求
 
@@ -42,7 +42,7 @@ ms.locfileid: "69514538"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
+|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
 |**無效屬性**|None|

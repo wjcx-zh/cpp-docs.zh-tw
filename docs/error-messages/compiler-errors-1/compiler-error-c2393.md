@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3c124f1a4daea0f2517a93c6b354b8233aa5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205981"
 ---
 # <a name="compiler-error-c2393"></a>編譯器錯誤 C2393
 
-> '*符號*': per-appdomain 符號不可配置在區段'*區段*'
+> '*symbol*'：無法在區段 '*segment*' 中配置每個 appdomain 的符號
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+**/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
-使用[appdomain](../../cpp/appdomain.md)變數表示您使用編譯 **/clr: pure**或 **/clr: safe**，而且安全或純粹的映像不能包含資料區段。
+使用[appdomain](../../cpp/appdomain.md)變數表示您是使用 **/clr： pure**或 **/clr： safe**進行編譯，而安全或純影像則不能包含資料區段。
 
-請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。
+如需詳細資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md) 。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2393。 若要修正此問題，不會建立資料區段。
+下列範例會產生 C2393。 若要修正此問題，請勿建立資料區段。
 
 ```cpp
 // C2393.cpp

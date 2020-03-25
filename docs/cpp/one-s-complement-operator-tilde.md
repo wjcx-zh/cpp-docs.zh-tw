@@ -1,5 +1,5 @@
 ---
-title: '一個&#39;s 補數運算子: ~'
+title: 一&#39;補數運算子： ~
 ms.date: 11/04/2016
 f1_keywords:
 - "~"
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 777f253925caf38647863bdaa93fde8d5a03e3f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245015"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177712"
 ---
-# <a name="one39s-complement-operator-"></a>一個&#39;s 補數運算子: ~
+# <a name="one39s-complement-operator-"></a>一&#39;補數運算子： ~
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +31,7 @@ ms.locfileid: "62245015"
 
 ## <a name="operator-keyword-for-"></a>~ 的運算子關鍵字
 
-**Compl**運算子是相等的文字`~`。 有兩種方式來存取**compl**在程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md)。
+**Compl**運算子是 `~`的文字對等用法。 有兩種方式可存取您程式中的**compl**運算子：包含標頭檔 `iso646.h`，或使用[/za](../build/reference/za-ze-disable-language-extensions.md)進行編譯。
 
 ## <a name="example"></a>範例
 
@@ -52,7 +52,7 @@ int main () {
 
 在這個範例中，指派至 `y` 的新值是不帶正負號的值 0xFFFF 或 0x0000 的 1 補數。
 
-整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。 請參閱[標準轉換](standard-conversions.md)如需如何執行提升的詳細資訊。
+整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。 如需如何完成升級的詳細資訊，請參閱[標準轉換](standard-conversions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

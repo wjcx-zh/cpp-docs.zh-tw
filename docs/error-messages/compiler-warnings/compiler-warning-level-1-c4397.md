@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4397
+title: 編譯器警告 (層級 1) C4397
 ms.date: 11/04/2016
 f1_keywords:
 - C4397
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: fc13f83f79f8c8103184b4322a77866a78d149be
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: e9fb7527124d1838c1f900144f1fea943616f384
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73964920"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162669"
 ---
-# <a name="compiler-warning-level-1-c4397"></a>編譯器警告（層級1） C4397
+# <a name="compiler-warning-level-1-c4397"></a>編譯器警告 (層級 1) C4397
 
 已忽略 System.runtime.interopservices.defaultcharsetattribute
 

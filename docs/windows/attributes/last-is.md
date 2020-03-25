@@ -1,17 +1,17 @@
 ---
-title: last_is (C++ COM 屬性)
+title: last_is （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514514"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214808"
 ---
 # <a name="last_is"></a>last_is
 
@@ -34,7 +34,7 @@ ms.locfileid: "69514514"
 
 ## <a name="example"></a>範例
 
-如需如何指定陣列區段的範例, 請參閱[first_is](first-is.md) 。
+如需如何指定陣列區段的範例，請參閱[first_is](first-is.md) 。
 
 ## <a name="requirements"></a>需求
 
@@ -42,10 +42,10 @@ ms.locfileid: "69514514"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
+|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

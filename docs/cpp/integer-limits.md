@@ -7,22 +7,22 @@ helpviewer_keywords:
 - limits.h header file
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
-ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75cd05e73aba2d2e82e8077e0a289d8b0fae7ec4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178220"
 ---
 # <a name="integer-limits"></a>整數限制
 
 **Microsoft 專屬**
 
-下表列出整數類型的限制。 標準標頭檔中也會定義這些限制\<limits.h >。
+下表列出整數類型的限制。 這些限制也會在標準標頭檔中定義 \<限制 .h >。
 
 ## <a name="limits-on-integer-constants"></a>整數常數的限制
 
-|常數|意義|值|
+|持續性|意義|值|
 |--------------|-------------|-----------|
 |CHAR_BIT|不是位元欄位之最小變數中的位元數目。|8|
 |SCHAR_MIN|變數類型為 **signed char** 的最小值。|-128|
@@ -40,13 +40,13 @@ ms.locfileid: "62183370"
 |LONG_MIN|變數類型為 **long** 的最小值。|-2147483648|
 |LONG_MAX|變數類型為 **long** 的最大值。|2147483647|
 |ULONG_MAX|類型為 **unsigned long** 之變數的最大值。|4294967295 (0xffffffff)|
-|LLONG_MIN|最小值型別的變數**long long**|-9223372036854775808|
-|LLONG_MAX|最大值類型的變數**long long**|9223372036854775807|
-|ULLONG_MAX|最大值類型的變數**unsigned long long**|18446744073709551615 (0xffffffffffffffff)|
+|LLONG_MIN|**Long long**類型之變數的最小值|-9223372036854775808|
+|LLONG_MAX|**Long long**類型之變數的最大值|9223372036854775807|
+|ULLONG_MAX|不**帶正負號 long long**類型之變數的最大值|18446744073709551615 (0xffffffffffffffff)|
 
 如果值超過最大的整數表示，Microsoft 編譯器會產生錯誤。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

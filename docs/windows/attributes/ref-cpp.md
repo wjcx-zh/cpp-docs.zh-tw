@@ -1,17 +1,17 @@
 ---
-title: ref (C++ COM 屬性)
+title: ref （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514122"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214587"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514122"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示如何使用**ref**屬性:
+下列程式碼顯示如何使用**ref**屬性：
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -49,10 +49,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**適用於**|**typedef**, 介面參數, 介面方法|
+|**適用於**|**typedef**，介面參數，介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

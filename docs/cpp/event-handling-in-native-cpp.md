@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cc9265cd3f9f400e2880405019e4d2c9a934f10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222185"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180078"
 ---
 # <a name="event-handling-in-native-c"></a>原生 C++ 中的事件處理
 
-以原生C++事件處理中，您設定使用事件來源和事件接收器[event_source](../windows/attributes/event-source.md)並[event_receiver](../windows/attributes/event-receiver.md)分別屬性，指定`type` =`native`. 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。
+在原C++生事件處理中，您會分別使用[event_source](../windows/attributes/event-source.md)和[event_receiver](../windows/attributes/event-receiver.md)屬性來設定事件來源和事件接收器，以指定 `type`=`native`。 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。
 
 ## <a name="declaring-events"></a>宣告事件
 
-在 事件來源類別中，使用[__event](../cpp/event.md)關鍵字來宣告為事件的方法在方法宣告。 請務必宣告方法，但不要定義方法；這樣會產生編譯器錯誤，因為編譯器會在將方法變成事件時隱含定義該方法。 原生事件可以是包含零個或多個參數的方法。 傳回型別可為 void 或任何整數類型。
+在事件來源類別中，請在方法宣告上使用[__event](../cpp/event.md)關鍵字，將方法宣告為事件。 請務必宣告方法，但不要定義方法；這樣會產生編譯器錯誤，因為編譯器會在將方法變成事件時隱含定義該方法。 原生事件可以是包含零個或多個參數的方法。 傳回型別可為 void 或任何整數類型。
 
 ## <a name="defining-event-handlers"></a>定義事件處理常式
 
@@ -25,7 +25,7 @@ ms.locfileid: "65222185"
 
 ## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式
 
-此外如在事件接收器類別中，您可以使用內建函式[__hook](../cpp/hook.md)事件處理常式相關聯的事件並[__unhook](../cpp/unhook.md)來取消事件與事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。
+此外，在事件接收器類別中，您可以使用內建函式[__hook](../cpp/hook.md)來建立事件與事件處理常式之間的關聯，以及從事件處理常式[__unhook](../cpp/unhook.md)至中斷關聯事件。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。
 
 ## <a name="firing-events"></a>引發事件
 
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 MyHandler2 was called with value 123.

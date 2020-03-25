@@ -1,17 +1,17 @@
 ---
-title: defaultvalue (C++ COM 屬性)
+title: defaultvalue （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490925"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214836"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -34,7 +34,7 @@ ms.locfileid: "69490925"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示使用**defaultvalue**屬性的介面方法:
+下列程式碼顯示使用**defaultvalue**屬性的介面方法：
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -62,8 +62,8 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**適用於**|介面參數|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

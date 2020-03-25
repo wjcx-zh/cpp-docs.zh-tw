@@ -1,21 +1,21 @@
 ---
-title: local (C++ COM 屬性)
+title: local （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514410"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214743"
 ---
 # <a name="local-c"></a>local (C++)
 
-在介面標頭中使用時, 可讓您使用 MIDL 編譯器做為標頭產生器。 在個別函式中使用時, 會指定不會產生任何存根的本機程式。
+在介面標頭中使用時，可讓您使用 MIDL 編譯器做為標頭產生器。 在個別函式中使用時，會指定不會產生任何存根的本機程式。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514410"
 
 ## <a name="example"></a>範例
 
-如需如何使用**本機**的範例, 請參閱[call_as](call-as.md) 。
+如需如何使用**本機**的範例，請參閱[call_as](call-as.md) 。
 
 ## <a name="requirements"></a>需求
 
@@ -37,9 +37,9 @@ ms.locfileid: "69514410"
 
 |||
 |-|-|
-|**適用於**|**介面**, 介面方法|
+|**適用於**|**介面**，介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
+|**必要屬性**|None|
 |**無效屬性**|`dispinterface`|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

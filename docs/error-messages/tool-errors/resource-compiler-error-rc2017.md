@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC2017
 ms.assetid: 5fcc0135-cd60-4b1d-a7dd-8a4f2312697b
-ms.openlocfilehash: ce8791e2463ca31fde64500b8b957ecdf5bf6d93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee685c44a702acda94f6e6c8aa04f4a63bc6024e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346609"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191895"
 ---
 # <a name="resource-compiler-error-rc2017"></a>資源編譯器錯誤 RC2017
 
-不合法的逸出序列
+不合法的轉義順序
 
-逸出序列會出現其中一個不預期。
+出現一個非預期的逸出序列。
 
-逸出序列，反斜線 ( **\\** ) 後面接著數字或字母 — 只能出現在字元或字串常數。
+Escape 序列（反斜線（ **\\** ）後面接著數位或字母）可能只會出現在字元或字串常數中。

@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4383
+title: 編譯器警告 (層級 1) C4383
 ms.date: 11/04/2016
 f1_keywords:
 - C4383
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 9681408841173bad4aca3305e727ddde6cd98f14
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 1c4a7ca806430c73c8e8396e596782253cc06f09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966165"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162734"
 ---
-# <a name="compiler-warning-level-1-c4383"></a>編譯器警告（層級1） C4383
+# <a name="compiler-warning-level-1-c4383"></a>編譯器警告 (層級 1) C4383
 
 ' instance_dereference_operator '：當使用者定義的 ' operator ' 運算子存在時，對控制碼取值的意義可能會變更;將運算子撰寫為靜態函式，以明確瞭解運算元
 

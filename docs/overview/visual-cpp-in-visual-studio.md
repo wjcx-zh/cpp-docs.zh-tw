@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1e567f2264fe40e6b386bf8d1758ed866d8f3f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416095"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215068"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -26,7 +26,7 @@ Visual Studio 2015、2017 與 2019 可並存安裝。 您可以使用 Visual Stu
 ## <a name="whats-new-and-conformance-history"></a>新功能與合規性歷程記錄
 
 [Visual Studio 中 C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-了解 Visual Studio 中的新功能。
+瞭解 Visual Studio 的新功能。
 
 [Visual Studio 2003 到 2015 中 C++ 的新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 了解從 2003 到 2015，每版 Visual Studio 中 C++ 的新功能。
@@ -65,7 +65,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [了解 Visual C++](../build/vscpp-step-1-create.md)<br/>
 開始學習 C++。
 
-[Visual C++ 範例](visual-cpp-samples.md)<br/>
+[Visual Studio C++範例](visual-cpp-samples.md)<br/>
 有關範例的資訊。
 
 ## <a name="c-development-tools"></a>C++ 開發工具

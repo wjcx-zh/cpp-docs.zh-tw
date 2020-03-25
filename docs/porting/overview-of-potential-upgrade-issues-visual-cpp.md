@@ -2,12 +2,12 @@
 title: 潛在升級問題概觀 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef088f4881dfbd9967f90a009e4a8e397a70b134
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627244"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214977"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
@@ -80,7 +80,7 @@ C++ 沒有穩定的應用程式二進位介面 (ABI)。 但 Visual Studio 會為
 
 - 呼叫位置上的引數類型實際符合函式的現有多載嗎？ 確認函式簽章以及呼叫此函式之程式碼中任何 typedef 的基礎類型都是您預期的類型。
 
-若要疑難排解無法解析的符號錯誤，您可以嘗試使用 dumpbin.exe 來檢查二進位檔中定義的符號。 請嘗試下列的命令列，檢視程式庫中定義的符號：
+若要疑難排解無法解析的符號錯誤，您可以嘗試使用 dumpbin.exe 來檢查二進位檔案中定義的符號。 請嘗試下列的命令列，檢視程式庫中定義的符號：
 
 ```cmd
 dumpbin.exe /LINKERMEMBER somelibrary.lib
@@ -101,7 +101,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 |||
 |-|-|
 |如果您是使用︰|您需要使用這些程式庫：|
-|libcmt.lib|libcmt.lib、libucrt.lib、libvcruntime.lib|
+|LIBCMT.lib|libcmt.lib、libucrt.lib、libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib、libucrtd.lib、libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib、ucrt.lib、vcruntime.lib|
 |msvcrtd.lib|msvcrtd.lib、ucrtd.lib、vcruntimed.lib|
@@ -182,9 +182,9 @@ MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC �
 
 標準化 Unicode 之前，許多程式都是使用多位元組字元集 (MBCS) 代表 ASCII 字元集中未包含的字元。 在舊的 MFC 專案中，MBCS 是預設設定，在您升級這類程式時，將會看到建議改為使用 Unicode 的警告。 如果您決定轉換成 Unicode 不符合開發成本，則可以選擇停用或忽略警告。 若要在解決方案中的所有專案停用此項目，請開啟 [檢視] > [屬性管理員]，並選取您要停用此警告的所有專案，然後以滑鼠右鍵按一下選取的項目，再選擇 [屬性]。 在 [屬性頁] 對話方塊中，選取 [組態屬性] > [C/C++] > [進階]。 在 [停用特定警告] 屬性中，開啟下拉式箭頭並選擇 [編輯]。 在文字方塊中輸入 4996 （請勿包含 ' C ' 前置詞）。選擇 **[確定]** 以儲存屬性，然後選擇 **[確定]** 以儲存變更。
 
-如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 如需 MBCS 與 Unicode 的一般資訊，請參閱[視覺效果 C++ 和[國際化](../c-runtime-library/internationalization.md)中的文字和字串](../text/text-and-strings-in-visual-cpp.md)。
+如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 如需 MBCS 與 Unicode 的一般資訊，請參閱[視覺效果C++和國際化中的文字和字串](../text/text-and-strings-in-visual-cpp.md)。 [Internationalization](../c-runtime-library/internationalization.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [從舊版的 Visual 升級專案C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

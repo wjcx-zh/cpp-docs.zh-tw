@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f8f08bcea1a44199d15da82b3ddbd37b676b347
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178791"
 ---
 # <a name="single-inheritance"></a>單一繼承
 
 在「單一繼承」(一種常見的繼承形式) 中，任何類別都只能有一個基底類別。 請考慮下圖中說明的關係。
 
-![基本的單一&#45;繼承圖形](../cpp/media/vc38xj1.gif "基本的單一&#45;繼承圖形") <br/>
+![基本單一&#45;繼承圖形](../cpp/media/vc38xj1.gif "基本單一&#45;繼承圖形") <br/>
 簡單的單一繼承圖形
 
 請注意圖中從一般到特定的進展。 在大部分類別階層架構設計中，另一種常見的屬性是衍生類別，其與基底類別具有一種「種類」(kind of) 的關聯性。 在圖中，`Book` 是一種 `PrintedDocument`，而 `PaperbackBook` 是一種 `book`。
@@ -44,11 +44,11 @@ class PaperbackBook : public Book {};
 
 每個類別的衍生基底類別都是在宣告衍生類別之前宣告。 它並不足以提供基底類別的向前參考宣告，且必須是完整的宣告。
 
-在上述範例中，存取規範**公開**用。 Public、 protected 和 private 繼承的意義說明[成員存取控制。](../cpp/member-access-control-cpp.md)
+在上述範例中，會使用**公用**存取規範。 公開、受保護和私用繼承的意義在[成員存取控制](../cpp/member-access-control-cpp.md)中有所描述。
 
 類別可做為許多特定類別的基底類別，如下圖所示。
 
-![Directed 非循環圖](../cpp/media/vc38xj2.gif "Directed 非循環圖") <br/>
+![導向非循環圖表](../cpp/media/vc38xj2.gif "有向非循環圖") <br/>
 導向非循環圖的範例
 
 上圖中 (稱為「導向非循環圖」或 "DAG") 的某些類別是多個衍生類別的基底類別。 不過，反向並不成立：其中只有一個指定衍生類別的直接基底類別。 此圖中描述了一個「單一繼承」結構。
@@ -56,7 +56,7 @@ class PaperbackBook : public Book {};
 > [!NOTE]
 > 導向非循環圖不是唯一的單一繼承。 它們也可用來描述多重繼承圖形。
 
-在繼承中，衍生類別包含基底類別的成員以及您加入的新成員。 因此，除非在衍生類別中重新定義這些成員，否則衍生類別可能會參考基底類別的成員。 當這些成員在衍生類別中重新定義時，可以使用範圍解析運算子 (`::`) 來參考直接或間接基底類別的成員。 請考量以下範例：
+在繼承中，衍生類別包含基底類別的成員以及您加入的新成員。 因此，除非在衍生類別中重新定義這些成員，否則衍生類別可能會參考基底類別的成員。 當這些成員在衍生類別中重新定義時，可以使用範圍解析運算子 (`::`) 來參考直接或間接基底類別的成員。 請思考此範例：
 
 ```cpp
 // deriv_SingleInheritance2.cpp
@@ -154,4 +154,4 @@ int main() {
 由於 `Document` 類別有一個 `PrintNameOf` 函式，它可以列印圖書館中每本書的名稱，不過，它可能會忽略文件的某些特定類型資訊 (`Book` 的頁面計數、`HelpFile` 的位元組數，等等)。
 
 > [!NOTE]
->  強制基底類別實作如 `PrintNameOf` 等函式通常不是最好的設計。 [虛擬函式](../cpp/virtual-functions.md)提供其他設計選擇。
+>  強制基底類別實作如 `PrintNameOf` 等函式通常不是最好的設計。 [虛擬](../cpp/virtual-functions.md)函式提供其他設計替代方案。

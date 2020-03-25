@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - D8036
 ms.assetid: 420a8daf-1873-49cd-95ea-a603d77b9410
-ms.openlocfilehash: b5c8fce07b9149189ee875e2b0bcfed42ab3d1a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 209d0ea3f9fa3fd2e311506d3e03162c639f4a6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196868"
 ---
 # <a name="command-line-error-d8036"></a>命令列錯誤 D8036
 
-'/option' 不允許使用多個原始程式檔
+'/option ' 不允許使用多個原始檔
 
-這些編譯器選項不能與多個原始程式檔：
+這些編譯器選項不能與多個來源檔案搭配使用：
 
-- 名稱的組件的檔案清單 (/ Fa)
+- 命名元件檔案清單（/Fa）
 
-- 重新命名物件檔案 (/ Fo)
+- 重新命名物件檔案（/Fo）
 
-- 建立來源未含區域變數的瀏覽器資訊 (/ Fr)
+- 建立不含本機變數的來源瀏覽器資訊（/Fr）
 
-- 建立來源瀏覽器資訊，包括區域變數 (/ FR)
+- 建立包含本機變數的來源瀏覽器資訊（/FR）

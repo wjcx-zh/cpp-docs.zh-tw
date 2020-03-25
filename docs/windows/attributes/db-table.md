@@ -1,19 +1,19 @@
 ---
-title: db_table (C++ COM 屬性)
+title: db_table （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148116"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167247"
 ---
-# <a name="dbtable"></a>db_table
+# <a name="db_table"></a>db_table
 
 開啟 OLE DB 資料表。
 
@@ -23,29 +23,29 @@ ms.locfileid: "62148116"
 [ db_table(db_table, name, source_name, hresult) ]
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *db_table*<br/>
-字串，指定資料庫資料表 （例如 「 產品 」） 的名稱。
+字串，指定資料庫資料表的名稱（例如 "Products"）。
 
 *name*<br/>
-（選擇性）您用來處理與資料表的控制代碼的名稱。 如果您想要傳回一個以上的資料列的結果，您必須指定此參數。 **db_table**會產生具有指定的變數*名稱*，可用來周遊資料列集或執行多個動作查詢。
+選擇性您用來處理資料表的控制碼名稱。 如果您想要傳回一個以上的結果資料列，就必須指定這個參數。 **db_table**會產生具有指定之*名稱*的變數，可用來流覽資料列集或執行多個動作查詢。
 
 *source_name*<br/>
-（選擇性）`CSession`變數或具有類別的執行個體`db_source`屬性套用至它在其上執行命令。 請參閱 [db_source](db-source.md)。
+選擇性`db_source` 屬性（attribute）的 `CSession` 變數或實例，其會套用至命令執行所在的類別。 請參閱 [db_source](db-source.md)。
 
 *hresult*<br/>
-（選擇性）識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
+選擇性識別將接收此資料庫命令之 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
 
 ## <a name="remarks"></a>備註
 
-**db_table**會建立[CTable](../../data/oledb/ctable-class.md) OLE DB 消費者用來開啟資料表的物件。 您可以使用這個屬性只能在類別層級;您無法使用它內嵌。 使用 `db_column`繫結至變數; 的資料表資料行使用`db_param`來分隔 （設定的參數類型，因此上） 的參數。
+**db_table**會建立[CTable](../../data/oledb/ctable-class.md)物件，供 OLE DB 取用者用來開啟資料表。 您只能在類別層級使用此屬性;您無法以內嵌方式使用它。 使用 `db_column` 將資料表資料行系結至變數;請使用 `db_param` 來分隔參數的（設定參數類型等等）。
 
-當取用者的屬性提供者會將此屬性套用至類別時，編譯器會重新命名的類別\_ *YourClassName*存取子，其中*YourClassName*是您所指定的名稱類別，而編譯器也會建立一個叫做類別*YourClassName*，其衍生自\_ *YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。
+當取用者屬性提供者將此屬性套用至類別時，編譯器會將類別重新命名為 \_*YourClassName*存取子，其中*YourClassName*是您提供給類別的名稱，而編譯器也會建立名為*YourClassName*的類別，其衍生自 \_*YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。
 
 ## <a name="example"></a>範例
 
-下列範例會開啟 [產品] 資料表，以供`CProducts`。
+下列範例會開啟 Products 資料表，供 `CProducts`使用。
 
 ```cpp
 // db_table.cpp
@@ -60,7 +60,7 @@ class CProducts {
 };
 ```
 
-如需在應用程式中使用這個屬性的範例，請參閱範例[AtlAgent](https://github.com/Microsoft/VCSamples)並[MultiRead](https://github.com/Microsoft/VCSamples)。
+如需應用程式中使用此屬性的範例，請參閱[MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)。
 
 ## <a name="requirements"></a>需求
 
@@ -68,7 +68,7 @@ class CProducts {
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**class**、 **struct**|
 |**可重複**|否|
 |**必要屬性**|None|
 |**無效屬性**|None|

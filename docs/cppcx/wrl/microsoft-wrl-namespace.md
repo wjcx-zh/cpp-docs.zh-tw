@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392020"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213768"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空間
 
-Windows 執行階段所組成的基本類型會定義C++樣板程式庫。
+定義組成 Windows 執行階段C++範本庫的基本類型。
 
 ## <a name="syntax"></a>語法
 
@@ -61,20 +61,20 @@ namespace Microsoft::WRL;
 |名稱|描述|
 |----------|-----------------|
 |[ChainInterfaces 結構](chaininterfaces-structure.md)|指定可以套用至一組介面 ID 的驗證和初始化函式。|
-|[CloakedIid 結構](cloakediid-structure.md)|若要指出`RuntimeClass`，`Implements`和`ChainInterfaces`範本指定的介面不是在 IID 清單中存取。|
-|[Implements 結構](implements-structure.md)|Implements`QueryInterface`和`GetIid`指定介面。|
+|[CloakedIid 結構](cloakediid-structure.md)|指出在 IID 清單中無法存取指定介面的 `RuntimeClass`、`Implements` 和 `ChainInterfaces` 範本。|
+|[Implements 結構](implements-structure.md)|針對指定的介面，執行 `QueryInterface` 和 `GetIid`。|
 |[MixIn 結構](mixin-structure.md)|確保執行階段類別衍生自 Windows 執行階段介面 (若有的話)，然後才是傳統 COM 介面。|
-|[RuntimeClassFlags 結構](runtimeclassflags-structure.md)|包含的執行個體的型別[RuntimeClass](runtimeclass-class.md)。|
+|[RuntimeClassFlags 結構](runtimeclassflags-structure.md)|包含[RuntimeClass](runtimeclass-class.md)實例的類型。|
 
 ### <a name="enumerations"></a>列舉
 
 |名稱|描述|
 |----------|-----------------|
-|[AsyncResultType 列舉](asyncresulttype-enumeration.md)|指定所傳回的結果的型別`GetResults()`方法。|
+|[AsyncResultType 列舉](asyncresulttype-enumeration.md)|指定 `GetResults()` 方法所傳回的結果類型。|
 |[ModuleType 列舉](moduletype-enumeration.md)|指定模組是否應支援同處理序伺服程式或跨處理序伺服程式。|
-|[RuntimeClassType 列舉](runtimeclasstype-enumeration.md)|指定的型別[RuntimeClass](runtimeclass-class.md)支援的執行個體。|
+|[RuntimeClassType 列舉](runtimeclasstype-enumeration.md)|指定支援的[RuntimeClass](runtimeclass-class.md)實例類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |名稱|描述|
 |----------|-----------------|
@@ -86,9 +86,9 @@ namespace Microsoft::WRL;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** async.h、 client.h、 corewrappers.h、 event.h、 ftm.h、 implements.h、 internal.h、 module.h
+**標頭：** async .h、corewrappers、ftm、event .h、、implements、internal、module. h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

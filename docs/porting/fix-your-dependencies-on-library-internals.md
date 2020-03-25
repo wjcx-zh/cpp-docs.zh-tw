@@ -5,12 +5,12 @@ helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b101234c582d8730b1a8fb62e8182df68554b18c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214990"
 ---
 # <a name="fix-your-dependencies-on-c-library-internals"></a>修正程式庫內部C++專案的相依性
 
@@ -24,9 +24,9 @@ Microsoft 已在許多 Visual Studio 版本中，發佈標準程式庫、大部�
 
 您有幾個方法可以移除此相依性。
 
-- 如果您打算使用和 `basic_string` 相同的雜湊程式碼機制，將 `const char *` 序列放入未排序的容器，您可以使用採用 `std::string_view` 的 `std::hash` 範本多載執行此動作，它會以可攜帶的方式傳回雜湊程式碼。 字串程式庫程式碼未來可能會、也可能不會依賴使用 FNV-1a 雜湊，因此這是避免對特定雜湊演算法產生相依性的最佳方式。
+- 如果您打算使用和 `const char *` 相同的雜湊程式碼機制，將 `basic_string` 序列放入未排序的容器，您可以使用採用 `std::hash` 的 `std::string_view` 範本多載執行此動作，它會以可攜帶的方式傳回雜湊程式碼。 字串程式庫程式碼未來可能會、也可能不會依賴使用 FNV-1a 雜湊，因此這是避免對特定雜湊演算法產生相依性的最佳方式。
 
-- 如果您打算在任意記憶體上產生 FNV-1a 雜湊，我們已在 GitHub 上提供該程式碼：位在 [MIT 授權](https://github.com/Microsoft/VCSamples/blob/master/license.txt)下，獨立標頭檔 [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) 的 [VCSamples]( https://github.com/Microsoft/vcsamples) 儲存機制中。 這裡也收錄複本，方便您參考。 您可以將此程式碼複製到標頭檔，將標頭新增至任何受影響的程式碼，然後用 `fnv1a_hash_bytes` 尋找和取代 `_Hash_seq`。 您會得到和 `_Hash_seq` 的內部實作相同的行為。
+- 如果您打算在任意記憶體上產生 FNV-1a 雜湊，我們已在 GitHub 上提供該程式碼：位在 [MIT 授權]( https://github.com/Microsoft/vcsamples)下，獨立標頭檔 [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) 的 [VCSamples](https://github.com/Microsoft/VCSamples/blob/master/license.txt) 儲存機制中。 這裡也收錄複本，方便您參考。 您可以將此程式碼複製到標頭檔，將標頭新增至任何受影響的程式碼，然後用 `_Hash_seq` 尋找和取代 `fnv1a_hash_bytes`。 您會得到和 `_Hash_seq` 的內部實作相同的行為。
 
 ```cpp
 /*
@@ -74,7 +74,7 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [從舊版的 Visual 升級專案C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

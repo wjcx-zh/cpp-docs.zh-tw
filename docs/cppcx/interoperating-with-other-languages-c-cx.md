@@ -2,12 +2,12 @@
 title: 與其他語言間的互通性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-ms.openlocfilehash: bfd4509a55b969aa6a120a8d2c75cddc87d715e2
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6ce36e188fb1d3f338aae219a1cc6a87a7e11617
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740489"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214301"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>與其他語言間的互通性 (C++/CX)
 

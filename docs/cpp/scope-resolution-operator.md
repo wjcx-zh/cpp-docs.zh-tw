@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267363"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178882"
 ---
 # <a name="scope-resolution-operator-"></a>範圍解析運算子：::
 
-範圍解析運算子 **::** 用來識別及區分不同範圍內的識別項。 如需有關範圍的詳細資訊，請參閱 <<c0> [ 範圍](../cpp/scope-visual-cpp.md)。
+範圍解析運算子 **：：** 可用來識別及區分不同範圍中使用的識別碼。 如需範圍的詳細資訊，請參閱[範圍](../cpp/scope-visual-cpp.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>搭配限定範圍的列舉
 
-範圍的解析運算子也可搭配限定範圍列舉的值[列舉型別宣告](../cpp/enumerations-cpp.md)，如下列範例所示：
+範圍解析運算子也會與範圍列舉[列舉](../cpp/enumerations-cpp.md)宣告的值搭配使用，如下列範例所示：
 
 ```cpp
 enum class EnumA{

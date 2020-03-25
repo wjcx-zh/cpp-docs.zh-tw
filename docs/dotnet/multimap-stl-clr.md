@@ -97,26 +97,26 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-ms.openlocfilehash: 9cc7dd32f222e68abb45fe8c518d9f378453b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5175aba55a61cb54bbb5b941bb9b78f06a1b4b25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208507"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
-此範本類別描述控制不同長度序列的項目可雙向存取的物件。 使用容器`multimap`來管理一系列的項目為 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。 項目所組成的索引鍵，排序順序，以及對應的值，其中會好好體驗吧。
+此樣板類別所描述的物件可控制具有雙向存取之元素的變動長度序列。 您可以使用容器 `multimap` 來管理一連串的專案，做為節點的（幾乎）平衡的已排序樹狀結構，每個專案都儲存一個專案。 元素是由索引鍵所組成，用於排序序列，而對應的值則是用於的方向。
 
-在下面的描述`GValue`相同：
+在下面的描述中，`GValue` 與相同：
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
 其中：
 
-`GKey` 等同於*金鑰*後者是 ref 型別，除非在此情況下是 `Key^`
+`GKey` 與索引*鍵*相同，除非後者是 ref 類型，在此情況下，它是 `Key^`
 
-`GMapped` 等同於*對應*後者是 ref 型別，除非在此情況下是 `Mapped^`
+`GMapped` 與*對應*相同，除非後者是 ref 類型，在這種情況下，它是 `Mapped^`
 
 ## <a name="syntax"></a>語法
 
@@ -137,15 +137,15 @@ template<typename Key,
 
 ### <a name="parameters"></a>參數
 
-*Key*<br/>
-受控制序列中項目的索引鍵的元件型別。
+*索引鍵*<br/>
+受控制序列中項目的主要元件型別。
 
-*對應*<br/>
-受控制序列中項目的其他元件的型別。
+*映射*<br/>
+受控制序列中元素的其他元件類型。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<cliext/對應 >
+**標頭：** \<cliext/map >
 
 **命名空間：** cliext
 
@@ -156,26 +156,26 @@ template<typename Key,
 |[multimap::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|
 |[multimap::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
 |[multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|
-|[multimap::difference_type (STL/CLR)](#difference_type)|（可能是帶正負號） 的距離兩個項目之間的型別。|
-|[multimap::generic_container (STL/CLR)](#generic_container)|容器的泛型介面型別。|
-|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|泛型介面，該容器的迭代器類型。|
-|[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型介面的反向迭代器類型。|
-|[multimap::generic_value (STL/CLR)](#generic_value)|容器的泛型介面的項目型別。|
+|[multimap::difference_type (STL/CLR)](#difference_type)|兩個元素之間的（可能已簽署）距離的類型。|
+|[multimap::generic_container (STL/CLR)](#generic_container)|容器的泛型介面類別型。|
+|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|容器之泛型介面的反覆運算器類型。|
+|[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型介面之反向反覆運算器的類型。|
+|[multimap::generic_value (STL/CLR)](#generic_value)|容器之泛型介面的元素類型。|
 |[multimap::iterator (STL/CLR)](#iterator)|受控制序列之迭代器的類型。|
-|[multimap::key_compare (STL/CLR)](#key_compare)|兩個索引鍵排序委派。|
+|[multimap::key_compare (STL/CLR)](#key_compare)|兩個索引鍵的排序委派。|
 |[multimap::key_type (STL/CLR)](#key_type)|排序索引鍵的類型。|
-|[multimap::mapped_type (STL/CLR)](#mapped_type)|每個索引鍵相關聯的對應值的型別。|
+|[multimap::mapped_type (STL/CLR)](#mapped_type)|與每個索引鍵相關聯之對應值的類型。|
 |[multimap::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|
-|[multimap::size_type (STL/CLR)](#size_type)|（非負數） 之間的距離兩個項目型別。|
-|[multimap::value_compare (STL/CLR)](#value_compare)|兩個元素值排序委派。|
-|[multimap::value_type (STL/CLR)](#value_type)|元素的類型。|
+|[multimap::size_type (STL/CLR)](#size_type)|兩個元素之間的（非負）距離類型。|
+|[multimap::value_compare (STL/CLR)](#value_compare)|兩個元素值的排序委派。|
+|[multimap::value_type (STL/CLR)](#value_type)|元素類型。|
 
 |成員函式|描述|
 |---------------------|-----------------|
 |[multimap::begin (STL/CLR)](#begin)|指定受控制序列的開頭。|
 |[multimap::clear (STL/CLR)](#clear)|移除所有項目。|
-|[multimap::count (STL/CLR)](#count)|會計算符合指定索引鍵的項目。|
+|[multimap::count (STL/CLR)](#count)|計算符合指定索引鍵的元素。|
 |[multimap::empty (STL/CLR)](#empty)|測試項目是否不存在。|
 |[multimap::end (STL/CLR)](#end)|指定受控制序列的結尾。|
 |[multimap::equal_range (STL/CLR)](#equal_range)|尋找符合指定之索引鍵的範圍。|
@@ -183,69 +183,69 @@ template<typename Key,
 |[multimap::find (STL/CLR)](#find)|尋找符合指定之索引鍵的元素。|
 |[multimap::insert (STL/CLR)](#insert)|加入項目。|
 |[multimap::key_comp (STL/CLR)](#key_comp)|複製兩個索引鍵的排序委派。|
-|[multimap::lower_bound (STL/CLR)](#lower_bound)|尋找符合指定的索引鍵的範圍開頭。|
-|[multimap::make_value (STL/CLR)](#make_value)|建構值物件。|
+|[multimap::lower_bound (STL/CLR)](#lower_bound)|尋找符合指定之索引鍵的範圍開頭。|
+|[multimap::make_value (STL/CLR)](#make_value)|構造值物件。|
 |[multimap::multimap (STL/CLR)](#multimap)|建構容器物件。|
 |[multimap::rbegin (STL/CLR)](#rbegin)|指定反向受控制序列的開頭。|
 |[multimap::rend (STL/CLR)](#rend)|指定反向受控制序列的結尾。|
 |[multimap::size (STL/CLR)](#size)|計算元素的數目。|
 |[multimap::swap (STL/CLR)](#swap)|交換兩個容器的內容。|
-|[multimap::to_array (STL/CLR)](#to_array)|將受控制的序列複製到新的陣列。|
-|[multimap::upper_bound (STL/CLR)](#upper_bound)|尋找符合指定的索引鍵的範圍結尾。|
-|[multimap::value_comp (STL/CLR)](#value_comp)|複製兩個項目值的順序委派。|
+|[multimap::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
+|[multimap::upper_bound (STL/CLR)](#upper_bound)|尋找符合指定之索引鍵的結束範圍。|
+|[multimap::value_comp (STL/CLR)](#value_comp)|複製兩個元素值的順序委派。|
 
 |運算子|描述|
 |--------------|-----------------|
 |[multimap::operator= (STL/CLR)](#op_as)|取代受控制的序列。|
-|[operator!= (multimap) (STL/CLR)](#op_neq)|決定是否`multimap`物件是否不等於另一個`multimap`物件。|
-|[operator< (multimap) (STL/CLR)](#op_lt)|決定是否`multimap`物件是否小於另一個`multimap`物件。|
-|[operator<= (multimap) (STL/CLR)](#op_lteq)|決定是否`multimap`物件是否小於或等於另一個`multimap`物件。|
-|[operator== (multimap) (STL/CLR)](#op_eq)|決定是否`multimap`物件是否等於另一個`multimap`物件。|
-|[operator> (multimap) (STL/CLR)](#op_gt)|決定是否`multimap`物件是否大於另一個`multimap`物件。|
-|[operator>= (multimap) (STL/CLR)](#op_gteq)|決定是否`multimap`物件是否大於或等於另一個`multimap`物件。|
+|[operator!= (multimap) (STL/CLR)](#op_neq)|判斷 `multimap` 物件是否不等於另一個 `multimap` 物件。|
+|[operator< (multimap) (STL/CLR)](#op_lt)|判斷 `multimap` 物件是否小於另一個 `multimap` 物件。|
+|[operator<= (multimap) (STL/CLR)](#op_lteq)|判斷 `multimap` 物件是否小於或等於另一個 `multimap` 物件。|
+|[operator== (multimap) (STL/CLR)](#op_eq)|判斷 `multimap` 物件是否等於另一個 `multimap` 物件。|
+|[operator> (multimap) (STL/CLR)](#op_gt)|判斷 `multimap` 物件是否大於另一個 `multimap` 物件。|
+|[operator>= (multimap) (STL/CLR)](#op_gteq)|判斷 `multimap` 物件是否大於或等於另一個 `multimap` 物件。|
 
 ## <a name="interfaces"></a>介面
 
 |介面|描述|
 |---------------|-----------------|
-|<xref:System.ICloneable>|重複的物件。|
-|<xref:System.Collections.IEnumerable>|透過項目進行排序。|
-|<xref:System.Collections.ICollection>|維護項目群組。|
-|<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的項目進行排序。|
-|<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|
-|ITree\<金鑰下，值 >|維護泛型容器。|
+|<xref:System.ICloneable>|複製物件。|
+|<xref:System.Collections.IEnumerable>|透過元素進行序列。|
+|<xref:System.Collections.ICollection>|維護元素群組。|
+|<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的專案進行序列。|
+|<xref:System.Collections.Generic.ICollection%601>|維護具類型的元素群組。|
+|ITree\<金鑰，值 >|維護一般容器。|
 
 ## <a name="remarks"></a>備註
 
-物件，配置並釋放它做為個別的節點所控制之序列的儲存體。 它會將元素插入 （幾乎） 平衡樹狀目錄中，它會保留已排序的變更不會將一個節點的內容複製到另一個節點之間的連結。 這表示您可以插入和移除自由而不會干擾其餘元素的項目。
+物件會為其所控制的序列配置並釋出儲存體，以作為個別節點。 它會將專案插入（幾乎）平衡的樹狀結構中，藉由改變節點間的連結來保持排序，而不是將某個節點的內容複寫到另一個節點。 這表示您可以自由地插入和移除專案，而不會干擾其餘元素。
 
-物件會排列它所控制藉由呼叫預存的委派物件的型別序列[multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)。 當您建構 multimap; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是比較`operator<(key_type, key_type)`。 您可以存取這個預存的物件藉由呼叫成員函式[multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`。
+物件會藉由呼叫[multimap：： key_compare （STL/CLR）](../dotnet/multimap-key-compare-stl-clr.md)類型的預存委派物件，排序它所控制的序列。 當您建立 multimap 時，可以指定預存的委派物件。如果您沒有指定委派物件，預設值就是比較 `operator<(key_type, key_type)`。 您可以藉由呼叫成員函式[multimap：： key_comp （STL/CLR）](../dotnet/multimap-key-comp-stl-clr.md)`()`來存取這個儲存的物件。
 
-這類委派物件必須強制執行嚴格弱式排序索引鍵的型別[multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)。 這表示任何兩個索引鍵`X`和`Y`:
+這類委派物件必須對[multimap：： key_type （STL/CLR）](../dotnet/multimap-key-type-stl-clr.md)類型的索引鍵強制執行嚴格弱式排序。 這表示 `X` 和 `Y`兩個金鑰：
 
-`key_comp()(X, Y)` 傳回的結果相同的布林值，在每次呼叫。
+`key_comp()(X, Y)` 會在每次呼叫時傳回相同的布林值結果。
 
-如果`key_comp()(X, Y)`為 true，然後`key_comp()(Y, X)`必須為偽。
+如果 `key_comp()(X, Y)` 為 true，則 `key_comp()(Y, X)` 必須為 false。
 
-如果`key_comp()(X, Y)`為 true，然後`X`稱為排序之前`Y`。
+如果 `key_comp()(X, Y)` 為 true，則 `X` 會在 `Y`之前被視為已排序。
 
-如果`!key_comp()(X, Y) && !key_comp()(Y, X)`為 true，然後`X`和`Y`被視為具有對等順序。
+如果 `!key_comp()(X, Y) && !key_comp()(Y, X)` 為 true，則 `X` 和 `Y` 會被視為具有對等的順序。
 
-對於任何項目`X`前面`Y`在受控制的序列，`key_comp()(Y, X)`為 false。 （預設委派物件的索引鍵永遠不會減少值中。）不同於樣板類別[地圖 (STL/CLR)](../dotnet/map-stl-clr.md)，樣板類別的物件`multimap`不需要的所有元素的索引鍵是唯一。 （兩個或多個金鑰可包含對等順序）。
+針對在受控制序列中 `Y` 之前的任何元素 `X`，`key_comp()(Y, X)` 為 false。 （對於預設委派物件，索引鍵永遠不會減少值）。不同于樣板類別[對應（STL/CLR）](../dotnet/map-stl-clr.md)，樣板類別的物件 `multimap` 不需要所有元素的索引鍵都是唯一的。 （兩個或多個索引鍵可以具有對等的順序）。
 
-每個項目包含一個個別的索引鍵和對應的值。 序列的表示方式允許查閱、 插入和移除任意項目以數字的對數的項目數目成正比的作業順序 （也就是對數時間）。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
+每個元素都包含個別的索引鍵和對應的值。 序列的表示方式，允許查閱、插入和移除具有數個作業的任意專案，並與序列中專案數的對數成正比（對數時間）。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
 
-Multimap 支援雙向迭代器，這表示您可以逐步執行至相鄰的項目指定的 iterator 可指定受控制序列中的項目。 特殊的前端節點會對應至所傳回的迭代器[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`。 如果有的話，您可以遞增到最後一個項目，在受控制序列中，此迭代器。 您可以遞增 multimap 的迭代器，連線到前端節點，並接著它會比較等於`end()`。 您無法取值 （dereference） 所傳回的迭代器，但`end()`。
+Multimap 支援雙向反覆運算器，這表示您可以逐步執行連續的專案，方法是指定以受控制序列中的元素。 特殊的前端節點會對應至[multimap：： end （STL/CLR）](../dotnet/multimap-end-stl-clr.md)`()`所傳回的反覆運算器。 您可以遞減這個反覆運算器，使其到達受控制序列中的最後一個元素（如果有的話）。 您可以遞增 multimap 反覆運算器來到達前端節點，然後再比較是否等於 `end()`。 但是，您無法對 `end()`所傳回的反覆運算器進行取值。
 
-請注意，您不能指向 multimap 的項目，直接指定其數值位置-所需的隨機存取迭代器。
+請注意，您無法直接參考 multimap 元素的數位位置（需要隨機存取反覆運算器）。
 
-Multimap 的迭代器會儲存其相關聯的 multimap 節點，它接著會儲存其相關聯的容器的控制代碼的控制代碼。 您可以使用迭代器，只能搭配其相關聯的容器物件。 Multimap 的迭代器會保持有效的只要其相關聯的 multimap 節點是與一些 multimap 相關聯。 此外，有效的迭代器取值--您可以使用它來存取或修改的項目值，它會指定-只要不等於`end()`。
+Multimap 反覆運算器會將控制碼儲存至其相關聯的 multimap 節點，然後再將控制碼儲存至其相關聯的容器。 您只能將反覆運算器與相關聯的容器物件搭配使用。 Multimap iterator 會保持有效，只要其相關聯的 multimap 節點與某個 multimap 相關聯。 此外，有效的反覆運算器也是 dereferencable--您可以使用它來存取或更改所指定的元素值，只要它不等於 `end()`。
 
-清除或移除一個項目呼叫解構函式，其預存值。 終結容器清除所有項目。 因此，的容器，其項目類型是 ref 類別可確保任何項目必須有存在的容器。 不過請注意，容器的控制代碼，並會*不*終結其項目。
+清除或移除元素會呼叫其預存值的析構函式。 終結容器會清除所有元素。 因此，其元素類型為 ref 類別的容器，可確保沒有任何元素 outlive 容器。 不過要注意的是，控制碼容器並*不*會摧毀其元素。
 
 ## <a name="members"></a>成員
 
-## <a name="begin"></a> multimap::begin (STL/CLR)
+## <a name="multimapbegin-stlclr"></a><a name="begin"></a>multimap：： begin （STL/CLR）
 
 指定受控制序列的開頭。
 
@@ -257,7 +257,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回指定之受控制的序列，或只是超出空序列結尾的第一個元素的雙向迭代器。 您用它來取得 iterator，指定`current`如果受控制序列的長度變更，可以變更受控制的序列，但其狀態的開頭。
+此成員函式會傳回雙向反覆運算器，指定受控制序列的第一個元素，或在空序列結尾以外的專案。 您要用它來取得的 Iterator 可指定受控制序列之 `current` 開頭，但是，如果受控制序列的長度變更，它的狀態也可以變更。
 
 ### <a name="example"></a>範例
 
@@ -296,7 +296,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="clear"></a> multimap:: clear (STL/CLR)
+## <a name="multimapclear-stlclr"></a><a name="clear"></a>multimap：： clear （STL/CLR）
 
 移除所有項目。
 
@@ -308,7 +308,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會有效地呼叫[multimap:: erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`())`. 您可以使用它來確保受控制的序列是空白。
+此成員函式會有效地呼叫[multimap：： erase （stl/clr）](../dotnet/multimap-erase-stl-clr.md) ，`(` [multimap：： begin](../dotnet/multimap-begin-stl-clr.md) （stl/clr）`(),` [MULTIMAP：： end （stl/clr）](../dotnet/multimap-end-stl-clr.md)`())`。 您可以使用它來確保受控制的序列是空的。
 
 ### <a name="example"></a>範例
 
@@ -354,7 +354,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multimap::const_iterator (STL/CLR)
+## <a name="multimapconst_iterator-stlclr"></a><a name="const_iterator"></a>multimap：： const_iterator （STL/CLR）
 
 用於受控制序列的常數迭代器類型。
 
@@ -366,7 +366,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定型別的物件`T2`，可做為受控制序列的常數雙向迭代器。
+此類型描述未指定類型 `T2` 的物件，可做為受控制序列的常數雙向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -396,7 +396,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> multimap::const_reference (STL/CLR)
+## <a name="multimapconst_reference-stlclr"></a><a name="const_reference"></a>multimap：： const_reference （STL/CLR）
 
 項目的常數參考類型。
 
@@ -408,7 +408,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述項目的常數參考。
+此類型描述專案的常數參考。
 
 ### <a name="example"></a>範例
 
@@ -441,7 +441,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> multimap::const_reverse_iterator (STL/CLR)
+## <a name="multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>multimap：： const_reverse_iterator （STL/CLR）
 
 用於受控制序列的常數反向迭代器類型。
 
@@ -453,7 +453,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定型別的物件`T4`，可做為受控制序列的常數反向迭代器。
+此類型描述未指定類型 `T4` 的物件，可做為受控制序列的常數反向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -483,7 +483,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> multimap::count (STL/CLR)
+## <a name="multimapcount-stlclr"></a><a name="count"></a>multimap：： count （STL/CLR）
 
 尋找符合指定索引鍵的項目數目。
 
@@ -500,7 +500,7 @@ size_type count(key_type key);
 
 ### <a name="remarks"></a>備註
 
-此成員函式具有相同的順序，與受控制序列中傳回的項目數*金鑰*。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目數目。
+此成員函式會傳回受控制序列中具有對等順序與索引*鍵*的元素數目。 您會用它來判斷目前在受控制序列中，符合指定之索引鍵的項目數目。
 
 ### <a name="example"></a>範例
 
@@ -536,9 +536,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multimap:: difference_type (STL/CLR)
+## <a name="multimapdifference_type-stlclr"></a><a name="difference_type"></a>multimap：:d ifference_type （STL/CLR）
 
-兩個項目之間帶正負號距離的類型。
+兩個元素之間帶正負號距離的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -548,7 +548,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述可能是負數的項目計數。
+此類型描述可能為負的元素計數。
 
 ### <a name="example"></a>範例
 
@@ -591,7 +591,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> multimap:: empty (STL/CLR)
+## <a name="multimapempty-stlclr"></a><a name="empty"></a>multimap：： empty （STL/CLR）
 
 測試項目是否不存在。
 
@@ -603,7 +603,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[multimap:: size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否是空的 multimap。
+成員函式會對空的受控制序列傳回 true。 它相當於[multimap：： size （STL/CLR）](../dotnet/multimap-size-stl-clr.md)`() == 0`。 您可以使用它來測試 multimap 是否是空的。
 
 ### <a name="example"></a>範例
 
@@ -643,7 +643,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multimap::end (STL/CLR)
+## <a name="multimapend-stlclr"></a><a name="end"></a>multimap：： end （STL/CLR）
 
 指定受控制序列的結尾。
 
@@ -655,7 +655,7 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回雙向迭代器指向超過受控制序列的結尾。 您用它來取得 iterator，指定受控制序列中，結尾其狀態不變更如果受控制序列的長度變更。
+此成員函式會傳回指向受控制序列結尾之外的雙向反覆運算器。 您可以使用它來取得反覆運算器，以指定受控制序列的結尾;如果受控制序列的長度變更，其狀態不會變更。
 
 ### <a name="example"></a>範例
 
@@ -696,7 +696,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> multimap::equal_range (STL/CLR)
+## <a name="multimapequal_range-stlclr"></a><a name="equal_range"></a>multimap：： equal_range （STL/CLR）
 
 尋找符合指定之索引鍵的範圍。
 
@@ -713,7 +713,7 @@ pair_iter_iter equal_range(key_type _Keyval);
 
 ### <a name="remarks"></a>備註
 
-此方法會傳回一組 iterator `-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目範圍。
+方法會傳回一對反覆運算器，`-` [multimap：： lower_bound （stl/clr）](../dotnet/multimap-lower-bound-stl-clr.md)`(_Keyval),` [multimap：： upper_bound （stl/clr）](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`。 您可以使用它來判斷目前在受控制序列中符合指定索引鍵的元素範圍。
 
 ### <a name="example"></a>範例
 
@@ -757,7 +757,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> multimap:: erase (STL/CLR)
+## <a name="multimaperase-stlclr"></a><a name="erase"></a>multimap：： erase （STL/CLR）
 
 移除位於指定位置的項目。
 
@@ -772,26 +772,26 @@ bool erase(key_type key)
 #### <a name="parameters"></a>參數
 
 *first*<br/>
-若要清除的範圍的開頭。
+要清除之範圍的開頭。
 
 *key*<br/>
-若要清除的機碼值。
+要清除的機碼值。
 
 *last*<br/>
-若要清除的範圍的結尾。
+要清除的範圍結尾。
 
 *where*<br/>
-若要清除的項目。
+要清除的元素。
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會移除所指向之受控制序列的項目*何處*，並傳回指定移除的項目之外剩餘的第一個元素的迭代器或[multimap:: end (STL /CLR)](../dotnet/multimap-end-stl-clr.md) `()`如果沒有這類項目。 您可以使用它來移除單一項目。
+第一個成員函式會移除所指向之受控制序列的*專案，並*傳回反覆運算器，指定移除的元素之後剩餘的第一個專案，如果沒有這類元素，則會傳回[multimap：： end （STL/CLR）](../dotnet/multimap-end-stl-clr.md)`()`。 您可以使用它來移除單一元素。
 
-第二個成員函式範圍中移除受控制序列的項目 [`first`， `last`)，並傳回指定任何移除的項目之外剩餘的第一個元素的迭代器或`end()`如果沒有這類項目存在... 您可以使用它來移除零或多個連續的項目。
+第二個成員函式會移除範圍 [`first`，`last`）中受控制序列的專案，並傳回反覆運算器，指定移除任何元素之後剩餘的第一個元素，或如果沒有這類元素，則 `end()`。 您可以使用它來移除零個或多個連續元素。
 
-第三個成員函式中移除索引鍵具有對等排序受控制任何的序列項目來*金鑰*，並傳回已移除的元素數目計數。 您可以使用它來移除，並計算所有符合指定之索引鍵的項目。
+第三個成員函式會移除受控制序列中的任何專案，其索引鍵對索引鍵具有對等的*順序，並*傳回已移除的元素數計數。 您可以使用它來移除和計算符合指定索引鍵的所有元素。
 
-每個項目清除會花在受控制序列中的項目數目對數值成比例的時間。
+每個專案抹除的時間會與受控制序列中專案數的對數成正比。
 
 ### <a name="example"></a>範例
 
@@ -850,7 +850,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> multimap::find (STL/CLR)
+## <a name="multimapfind-stlclr"></a><a name="find"></a>multimap：： find （STL/CLR）
 
 尋找符合指定之索引鍵的元素。
 
@@ -867,7 +867,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>備註
 
-如果受控制序列中的至少一個項目具有與對等順序*金鑰*，此成員函式會傳回迭代器指定其中一個項目; 否則會傳回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. 您可以使用它來尋找符合指定的索引鍵之受控制序列中目前的元素。
+如果受控制序列中至少有一個專案具有對*等的順序，則*成員函式會傳回指定其中一個元素的反覆運算器;否則，它會傳回[multimap：： end （STL/CLR）](../dotnet/multimap-end-stl-clr.md)`()`。 您可以使用它來找出目前在受控制序列中且符合指定索引鍵的元素。
 
 ### <a name="example"></a>範例
 
@@ -909,9 +909,9 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="generic_container"></a> multimap::generic_container (STL/CLR)
+## <a name="multimapgeneric_container-stlclr"></a><a name="generic_container"></a>multimap：： generic_container （STL/CLR）
 
-容器的泛型介面型別。
+容器的泛型介面類別型。
 
 ### <a name="syntax"></a>語法
 
@@ -923,7 +923,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>備註
 
-此類型描述此範本的容器類別的泛型介面。
+此類型描述此範本容器類別的泛型介面。
 
 ### <a name="example"></a>範例
 
@@ -973,9 +973,9 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="generic_iterator"></a> multimap::generic_iterator (STL/CLR)
+## <a name="multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>multimap：： generic_iterator （STL/CLR）
 
-迭代器，用於容器的泛型介面型別。
+用於容器之泛型介面的反覆運算器類型。
 
 ### <a name="syntax"></a>語法
 
@@ -987,7 +987,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>備註
 
-此類型描述可以搭配此範本的容器類別的泛型介面的泛型迭代器。
+此類型描述的泛型反覆運算器可與此樣板容器類別的泛型介面搭配使用。
 
 ### <a name="example"></a>範例
 
@@ -1030,9 +1030,9 @@ int main()
 [a 1]
 ```
 
-## <a name="generic_reverse_iterator"></a> multimap::generic_reverse_iterator (STL/CLR)
+## <a name="multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>multimap：： generic_reverse_iterator （STL/CLR）
 
-反向迭代器，用於容器的泛型介面型別。
+要與容器的泛型介面搭配使用的反向反覆運算器類型。
 
 ### <a name="syntax"></a>語法
 
@@ -1044,7 +1044,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>備註
 
-此類型描述的一般反向迭代器可以搭配此範本的容器類別的泛型介面。
+此類型描述的泛型反向反覆運算器可與此樣板容器類別的泛型介面搭配使用。
 
 ### <a name="example"></a>範例
 
@@ -1086,9 +1086,9 @@ int main()
 [c 3]
 ```
 
-## <a name="generic_value"></a> multimap::generic_value (STL/CLR)
+## <a name="multimapgeneric_value-stlclr"></a><a name="generic_value"></a>multimap：： generic_value （STL/CLR）
 
-使用容器的泛型介面的項目型別。
+要與容器的泛型介面搭配使用之元素的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -1098,7 +1098,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型所描述型別的物件`GValue`，描述與此範本的容器類別的泛型介面使用的預存的項目值。
+此類型描述類型為 `GValue` 的物件，描述要與這個樣板容器類別的泛型介面搭配使用的預存專案值。
 
 ### <a name="example"></a>範例
 
@@ -1140,7 +1140,7 @@ int main()
 [a 1]
 ```
 
-## <a name="insert"></a> multimap::insert (STL/CLR)
+## <a name="multimapinsert-stlclr"></a><a name="insert"></a>multimap：： insert （STL/CLR）
 
 加入項目。
 
@@ -1157,33 +1157,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 #### <a name="parameters"></a>參數
 
 *first*<br/>
-若要插入的範圍的開頭。
+要插入的範圍開頭。
 
 *last*<br/>
-若要插入的範圍的結尾。
+要插入的範圍結尾。
 
 *right*<br/>
-若要插入的列舉型別。
+要插入的列舉。
 
 *val*<br/>
-要插入的關鍵值。
+要插入的機碼值。
 
 *where*<br/>
-若要插入 （只提示） 的容器中的位置。
+在容器中要插入的位置（僅提示）。
 
 ### <a name="remarks"></a>備註
 
-每個成員函式會插入為其餘運算元所指定的順序。
+每個成員函式都會插入由其餘運算元所指定的序列。
 
-第一個成員函式插入值的項目*val*，並傳回迭代器，指定新插入的項目。 您可以使用它來插入單一項目。
+第一個成員函式會插入具有值*val*的元素，並傳回反覆運算器，指定新插入的專案。 您可以使用它來插入單一元素。
 
-第二個成員函式會插入具有值的項目*val*，並使用*其中*做為提示 （若要改善效能），並傳回迭代器，指定新插入的項目。 您可以使用它來插入單一項目可能是您知道的項目旁。
+第二個成員函式會插入具有值*val*的元素，並使用*where*做為提示（以改善效能），並傳回反覆運算器，指定新插入的專案。 您可以使用它來插入單一專案，這可能會與您知道的元素相鄰。
 
-第三個成員函式會插入序列 [`first`， `last`)。 您可以使用它來插入另一個序列中複製的零或多個項目。
+第三個成員函式會插入序列 [`first`，`last`）。 您可以使用它來插入從另一個序列複製的零個或多個元素。
 
-第四個成員函式會插入所指定的順序*右*。 您可以使用它來插入列舉值所描述的順序。
+第四個成員函式會插入*右邊*指定的序列。 您可以使用它來插入列舉值所描述的序列。
 
-每個項目插入受控制序列中需要的項目數目對數值成比例的時間。 插入可能會發生在平攤常數時間，不過，提供指定的項目旁的插入點的提示。
+每個專案插入所花的時間，會與受控制序列中專案數的對數成正比。 不過，若指定的提示會指定插入點旁邊的元素，則插入可能會在分攤的常數時間內發生。
 
 ### <a name="example"></a>範例
 
@@ -1258,7 +1258,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> multimap:: iterator (STL/CLR)
+## <a name="multimapiterator-stlclr"></a><a name="iterator"></a>multimap：： iterator （STL/CLR）
 
 受控制序列之迭代器的類型。
 
@@ -1270,7 +1270,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定型別的物件`T1`，可做為受控制序列的雙向迭代器。
+此類型描述未指定類型 `T1` 的物件，可做為受控制序列的雙向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1300,7 +1300,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> multimap::key_comp (STL/CLR)
+## <a name="multimapkey_comp-stlclr"></a><a name="key_comp"></a>multimap：： key_comp （STL/CLR）
 
 複製兩個索引鍵的排序委派。
 
@@ -1312,7 +1312,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個索引鍵。
+此成員函式會傳回用來排序受控制序列的排序委派。 您會用它來比較兩個索引鍵。
 
 ### <a name="example"></a>範例
 
@@ -1359,9 +1359,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> multimap::key_compare (STL/CLR)
+## <a name="multimapkey_compare-stlclr"></a><a name="key_compare"></a>multimap：： key_compare （STL/CLR）
 
-兩個索引鍵排序委派。
+兩個索引鍵的排序委派。
 
 ### <a name="syntax"></a>語法
 
@@ -1372,7 +1372,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>備註
 
-此類型為委派，來決定其索引鍵的引數的順序的同義字。
+此類型是委派的同義字，可決定其索引鍵引數的順序。
 
 ### <a name="example"></a>範例
 
@@ -1419,7 +1419,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multimap::key_type (STL/CLR)
+## <a name="multimapkey_type-stlclr"></a><a name="key_type"></a>multimap：： key_type （STL/CLR）
 
 排序索引鍵的類型。
 
@@ -1431,7 +1431,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-類型是範本參數的同義字*金鑰*。
+此類型是樣板參數索引*鍵*的同義字。
 
 ### <a name="example"></a>範例
 
@@ -1464,9 +1464,9 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> multimap:: lower_bound (STL/CLR)
+## <a name="multimaplower_bound-stlclr"></a><a name="lower_bound"></a>multimap：： lower_bound （STL/CLR）
 
-尋找符合指定的索引鍵的範圍開頭。
+尋找符合指定之索引鍵的範圍開頭。
 
 ### <a name="syntax"></a>語法
 
@@ -1481,7 +1481,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-判斷第一個項目成員函式`X`相等排序受控制序列中*金鑰*。 如果沒有這類元素存在，它會傳回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 否則會傳回迭代器指定`X`。 您可以使用它來在受控制序列中符合指定之索引鍵中目前找出的項目序列的開頭。
+成員函式會判斷在受控制序列中 `X` 的第一個元素，其順序與索引*鍵*相等。 如果沒有這類元素存在，則會傳回[multimap：： end （STL/CLR）](../dotnet/multimap-end-stl-clr.md)`()`;否則，它會傳回指定 `X`的反覆運算器。 您可以使用它來尋找目前在受控制序列中符合指定索引鍵之專案序列的開頭。
 
 ### <a name="example"></a>範例
 
@@ -1523,9 +1523,9 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="make_value"></a> multimap::make_value (STL/CLR)
+## <a name="multimapmake_value-stlclr"></a><a name="make_value"></a>multimap：： make_value （STL/CLR）
 
-建構值物件。
+構造值物件。
 
 ### <a name="syntax"></a>語法
 
@@ -1536,14 +1536,14 @@ static value_type make_value(key_type key, mapped_type mapped);
 #### <a name="parameters"></a>參數
 
 *key*<br/>
-若要使用的金鑰值。
+要使用的索引鍵值。
 
-*mapped*<br/>
-要搜尋的對應的值。
+*映射*<br/>
+要搜尋的對應值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回`value_type`其索引鍵的物件*金鑰*和其對應的值是*對應*。 您可以使用它來撰寫適用於數個其他成員函式物件。
+成員函式會傳回 `value_type` 物件，其索引鍵是*key* ，而其對應的值是*對應*的。 您可以使用它來撰寫適合搭配數個其他成員函式使用的物件。
 
 ### <a name="example"></a>範例
 
@@ -1572,7 +1572,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> multimap::mapped_type (STL/CLR)
+## <a name="multimapmapped_type-stlclr"></a><a name="mapped_type"></a>multimap：： mapped_type （STL/CLR）
 
 與每個索引鍵關聯的對應值類型。
 
@@ -1584,7 +1584,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>備註
 
-類型是範本參數的同義字*對應*。
+此類型是*對應*之樣板參數的同義字。
 
 ### <a name="example"></a>範例
 
@@ -1617,7 +1617,7 @@ int main()
 1 2 3
 ```
 
-## <a name="multimap"></a> multimap::multimap (STL/CLR)
+## <a name="multimapmultimap-stlclr"></a><a name="multimap"></a>multimap：： multimap （STL/CLR）
 
 建構容器物件。
 
@@ -1641,66 +1641,66 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 #### <a name="parameters"></a>參數
 
 *first*<br/>
-若要插入的範圍的開頭。
+要插入的範圍開頭。
 
 *last*<br/>
-若要插入的範圍的結尾。
+要插入的範圍結尾。
 
 *pred*<br/>
-排序受控制序列的述詞。
+受控制序列的順序述詞。
 
 *right*<br/>
 要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
 
-建構函式：
+此構造函式：
 
 `multimap();`
 
-排序的述詞的預設值，初始化受控制的序列的任何項目， `key_compare()`。 您可以使用它來指定空的初始受控制的序列，以預設的排序的述詞。
+使用 `key_compare()`的預設排序述詞，初始化不含任何專案的受控制序列。 您可以使用它來指定空的初始受控制序列，並使用預設的順序述詞。
 
-建構函式：
+此構造函式：
 
 `explicit multimap(key_compare^ pred);`
 
-初始化受控制的序列沒有項目時，使用 排序的述詞*pred*。 您可以使用它來指定空的初始受控制的序列，指定排序的述詞。
+使用順序述詞*pred*，初始化不含任何專案的受控制序列。 您可以使用它來指定空的初始受控制序列，並指定順序述詞。
 
-建構函式：
+此構造函式：
 
 `multimap(multimap<Key, Mapped>% right);`
 
-初始化受控制的序列具有序列 [`right.begin()`， `right.end()`)，排序的述詞的預設值。 您使用它來指定 multimap 物件所控制之序列的複本初始受控制的序列*右*，排序的述詞的預設值。
+使用順序 [`right.begin()`，`right.end()`），以預設的排序述詞，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 multimap 物件*許可權*所控制之序列的複本，並具有預設排序述詞。
 
-建構函式：
+此構造函式：
 
 `multimap(multimap<Key, Mapped>^ right);`
 
-初始化受控制的序列具有序列 [`right->begin()`， `right->end()`)，排序的述詞的預設值。 您使用它來指定 multimap 物件所控制之序列的複本初始受控制的序列*右*，排序的述詞的預設值。
+使用順序 [`right->begin()`，`right->end()`），以預設的排序述詞，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 multimap 物件*許可權*所控制之序列的複本，並具有預設排序述詞。
 
-建構函式：
+此構造函式：
 
 `template<typename InIter> multimap(InIter first, InIter last);`
 
-初始化受控制的序列具有序列 [`first`， `last`)，排序的述詞的預設值。 您可以使用它來建立受控制的序列的設定，一份另一個的順序，排序的述詞的預設值。
+使用順序 [`first`，`last`），以預設的排序述詞，初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本，並使用預設的順序述詞。
 
-建構函式：
+此構造函式：
 
 `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`
 
-初始化受控制的序列具有序列 [`first`， `last`)，以排序的述詞*pred*。 您可以使用它來建立一份具有指定排序的述詞的另一個序列的受控制的序列。
+使用順序述詞*pred*，以序列 [`first`，`last`）初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本，並指定順序述詞。
 
-建構函式：
+此構造函式：
 
 `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-初始化受控制的序列的列舉值所指定的順序*右*，排序的述詞的預設值。 您可以使用它來進行受控制的序列的列舉值，描述排序的述詞的預設值的另一個序列的複本。
+使用預設排序述詞，以枚舉器*右邊*指定的順序，初始化受控制的序列。 您可以使用它，讓受控制的序列成為枚舉器所描述之另一個序列的複本，並使用預設的排序述詞。
 
-建構函式：
+此構造函式：
 
 `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-初始化受控制的序列的列舉值所指定的順序*右*，以排序的述詞*pred*。 您可以使用它來進行受控制的序列的列舉值，指定排序的述詞所描述的另一個序列的複本。
+使用排序述詞*pred*，以列舉值*右邊*所指定的順序，初始化受控制的序列。 您可以使用它，透過指定的排序述詞，讓受控制的序列成為枚舉器所描述之另一個序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -1790,7 +1790,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_as"></a> multimap::operator= (STL/CLR)
+## <a name="multimapoperator-stlclr"></a><a name="op_as"></a>multimap：： operator = （STL/CLR）
 
 取代受控制的序列。
 
@@ -1807,7 +1807,7 @@ multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子複製*右*物件，然後傳回`*this`。 您使用它來取代受控制的序列中的受控制序列的複本*右*。
+成員運算子會將*許可權*複製到物件，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -1845,7 +1845,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rbegin"></a> multimap::rbegin (STL/CLR)
+## <a name="multimaprbegin-stlclr"></a><a name="rbegin"></a>multimap：： rbegin （STL/CLR）
 
 指定反向受控制序列的開頭。
 
@@ -1857,7 +1857,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回指定之受控制的序列，或只是超出空序列開頭的最後一個元素的反向迭代器。 因此，它會指定`beginning`反向序列。 您用它來取得 iterator，指定`current`如果受控制序列的長度變更，可以變更以反向順序顯示之受控制的序列，但其狀態的開頭。
+此成員函式會傳回反向反覆運算器，指定受控制序列的最後一個元素，或只在空白序列開頭以外的專案。 因此，它會指定反向序列的 `beginning`。 您會用它來取得指定以反向順序顯示之受控制序列 `current` 開頭的 Iterator，但是如果受控制序列的長度變更，它的狀態也會變更。
 
 ### <a name="example"></a>範例
 
@@ -1896,7 +1896,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> multimap::reference (STL/CLR)
+## <a name="multimapreference-stlclr"></a><a name="reference"></a>multimap：： reference （STL/CLR）
 
 項目的參考類型。
 
@@ -1908,7 +1908,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述項目的參考。
+此類型描述專案的參考。
 
 ### <a name="example"></a>範例
 
@@ -1941,7 +1941,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rend"></a> multimap:: rend (STL/CLR)
+## <a name="multimaprend-stlclr"></a><a name="rend"></a>multimap：： rend （STL/CLR）
 
 指定反向受控制序列的結尾。
 
@@ -1953,7 +1953,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>備註
 
-此成員函式傳回的反向迭代器指向之外開頭之受控制序列。 因此，它會指定`end`反向序列。 您用它來取得 iterator，指定`current`如果受控制序列的長度變更，可以變更結尾以反向順序顯示之受控制的序列，但其狀態。
+此成員函式會傳回指向受控制序列開頭以外的反向反覆運算器。 因此，它會指定反向序列的 `end`。 您要用它來取得的 Iterator 可指定以相反順序顯示的受控制序列之 `current` 結尾，但是，如果受控制序列的長度變更，它的狀態也可以變更。
 
 ### <a name="example"></a>範例
 
@@ -1994,7 +1994,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> multimap::reverse_iterator (STL/CLR)
+## <a name="multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>multimap：： reverse_iterator （STL/CLR）
 
 受控制序列的反向迭代器類型。
 
@@ -2036,7 +2036,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> multimap:: size (STL/CLR)
+## <a name="multimapsize-stlclr"></a><a name="size"></a>multimap：： size （STL/CLR）
 
 計算元素的數目。
 
@@ -2048,7 +2048,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列的項目數。 如果您在意順序是否有非零值的大小，請參閱[multimap:: empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[multimap：： empty （STL/CLR）](../dotnet/multimap-empty-stl-clr.md)`()`。
 
 ### <a name="example"></a>範例
 
@@ -2088,9 +2088,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multimap::size_type (STL/CLR)
+## <a name="multimapsize_type-stlclr"></a><a name="size_type"></a>multimap：： size_type （STL/CLR）
 
-兩個項目之間帶正負號距離的類型。
+兩個元素之間帶正負號距離的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -2100,7 +2100,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述的非負數的項目計數。
+此類型描述非負的元素計數。
 
 ### <a name="example"></a>範例
 
@@ -2136,7 +2136,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multimap::swap (STL/CLR)
+## <a name="multimapswap-stlclr"></a><a name="swap"></a>multimap：： swap （STL/CLR）
 
 交換兩個容器的內容。
 
@@ -2153,7 +2153,7 @@ void swap(multimap<Key, Mapped>% right);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會交換之間受控制的序列`this`並*右*。 它會以常數時間，就會擲回任何例外狀況。 您可以使用它作為兩個容器的內容交換的快速方法。
+成員函式會在 `this` 和*右方*之間交換受控制的序列。 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
 
 ### <a name="example"></a>範例
 
@@ -2204,9 +2204,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="to_array"></a> multimap::to_array (STL/CLR)
+## <a name="multimapto_array-stlclr"></a><a name="to_array"></a>multimap：： to_array （STL/CLR）
 
-將受控制的序列複製到新的陣列。
+將受控制序列複製到新的陣列。
 
 ### <a name="syntax"></a>語法
 
@@ -2216,7 +2216,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回包含之受控制的序列的陣列。 您可以使用它來取得陣列形式中受控制序列的複本。
+此成員函式會傳回陣列，其中包含受控制的序列。 您可以用它來取得陣列表單中受控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -2254,9 +2254,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> multimap::upper_bound (STL/CLR)
+## <a name="multimapupper_bound-stlclr"></a><a name="upper_bound"></a>multimap：： upper_bound （STL/CLR）
 
-尋找符合指定的索引鍵的範圍結尾。
+尋找符合指定之索引鍵的結束範圍。
 
 ### <a name="syntax"></a>語法
 
@@ -2271,7 +2271,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-此成員函式決定最後一個項目`X`相等排序受控制序列中*金鑰*。 如果沒有這類元素存在，或如果`X`是最後一個項目，在受控制的序列，它會傳回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 否則會傳回迭代器，指定超過的第一個元素`X`. 您可以使用它來在受控制序列中符合指定之索引鍵中目前找出的項目序列的結尾。
+成員函式會判斷在受控制序列中 `X` 的最後一個專案，其順序與索引*鍵*相等。 如果沒有這類元素存在，或 `X` 是受控制序列中的最後一個元素，則會傳回[multimap：： end （STL/CLR）](../dotnet/multimap-end-stl-clr.md)`()`;否則，它會傳回反覆運算器，指定 `X`之外的第一個元素。 您可以使用它來找出目前在受控制序列中符合指定索引鍵之專案序列的結尾。
 
 ### <a name="example"></a>範例
 
@@ -2313,9 +2313,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> multimap::value_comp (STL/CLR)
+## <a name="multimapvalue_comp-stlclr"></a><a name="value_comp"></a>multimap：： value_comp （STL/CLR）
 
-複製兩個項目值的順序委派。
+複製兩個元素值的順序委派。
 
 ### <a name="syntax"></a>語法
 
@@ -2325,7 +2325,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個項目值。
+此成員函式會傳回用來排序受控制序列的排序委派。 您可以使用它來比較兩個元素的值。
 
 ### <a name="example"></a>範例
 
@@ -2360,9 +2360,9 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_compare"></a> multimap::value_compare (STL/CLR)
+## <a name="multimapvalue_compare-stlclr"></a><a name="value_compare"></a>multimap：： value_compare （STL/CLR）
 
-兩個元素值排序委派。
+兩個元素值的排序委派。
 
 ### <a name="syntax"></a>語法
 
@@ -2373,7 +2373,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>備註
 
-此類型為委派，來決定其值引數的順序的同義字。
+此類型是委派的同義字，可決定其值引數的順序。
 
 ### <a name="example"></a>範例
 
@@ -2408,9 +2408,9 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> multimap::value_type (STL/CLR)
+## <a name="multimapvalue_type-stlclr"></a><a name="value_type"></a>multimap：： value_type （STL/CLR）
 
-元素的類型。
+元素類型。
 
 ### <a name="syntax"></a>語法
 
@@ -2420,7 +2420,7 @@ typedef generic_value value_type;
 
 ### <a name="remarks"></a>備註
 
-這個類型與 `generic_value`同義。
+此類型是 `generic_value`的同義字。
 
 ### <a name="example"></a>範例
 
@@ -2452,9 +2452,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_neq"></a> operator!= (multimap) (STL/CLR)
+## <a name="operator-multimap-stlclr"></a><a name="op_neq"></a>operator！ = （multimap）（STL/CLR）
 
-列出不相等比較。
+清單不等於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -2475,7 +2475,7 @@ template<typename Key,
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`!(left == right)`。 您會使用它來測試是否*左*未經過排序相同*右*當兩個 multimap 都是由項目相比較的項目。
+Operator 函數會傳回 `!(left == right)`。 當兩個 multimap 是以元素進行比較時，您可以使用它來測試是否將*left*與*right*排序。
 
 ### <a name="example"></a>範例
 
@@ -2523,7 +2523,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operator&lt; (multimap) (STL/CLR)
+## <a name="operatorlt-multimap-stlclr"></a><a name="op_lt"></a>operator&lt; （multimap）（STL/CLR）
 
 清單小於比較。
 
@@ -2546,7 +2546,7 @@ template<typename Key,
 
 ### <a name="remarks"></a>備註
 
-運算子函式傳回則為 true，最低的位置`i`為其`!(right[i] < left[i])`也雖說， `left[i] < right[i]`。 否則，它會傳回`left->size() < right->size()`使用它來測試是否*左*排序之前*右*當兩個 multimap 都是由項目相比較的項目。
+如果 `i` 的最低位置 `!(right[i] < left[i])` 也是 `left[i] < right[i]`，則運算子函數會傳回 true。 否則，它會傳回 `left->size() < right->size()` 您用它來測試當兩個 multimap 是以元素進行比較時 *，是否要*在*右邊*排序。
 
 ### <a name="example"></a>範例
 
@@ -2594,9 +2594,9 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (multimap) (STL/CLR)
+## <a name="operatorlt-multimap-stlclr"></a><a name="op_lteq"></a>operator&lt;= （multimap）（STL/CLR）
 
-清單小於或等於比較。
+列出小於或等於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -2617,7 +2617,7 @@ template<typename Key,
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`!(right < left)`。 您會使用它來測試是否*左*未經過排序之後*右*當兩個 multimap 都是由項目相比較的項目。
+Operator 函數會傳回 `!(right < left)`。 當兩個 multimap 是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
 
 ### <a name="example"></a>範例
 
@@ -2665,7 +2665,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operator== (multimap) (STL/CLR)
+## <a name="operator-multimap-stlclr"></a><a name="op_eq"></a>operator = = （multimap）（STL/CLR）
 
 列出相等比較。
 
@@ -2688,7 +2688,7 @@ template<typename Key,
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 true 所控制的序列時，才*左*並*右*具有相同的長度和每個位置`i`， `left[i] ==` `right[i]`。 您會使用它來測試是否*左*排序相同*右*當兩個 multimap 都是由項目相比較的項目。
+只有當*left*和*right*控制的序列具有相同的長度，且每個位置 `i``left[i] ==` `right[i]`時，運算子函數才會傳回 true。 您可以使用它來測試當兩個 multimap 是以元素進行比較時，是否將*left*與*right*排序。
 
 ### <a name="example"></a>範例
 
@@ -2736,9 +2736,9 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (multimap) (STL/CLR)
+## <a name="operatorgt-multimap-stlclr"></a><a name="op_gt"></a>operator&gt; （multimap）（STL/CLR）
 
-大於比較的清單。
+清單大於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -2759,7 +2759,7 @@ template<typename Key,
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`right` `<` `left`。 您會使用它來測試是否*左*經過排序之後*右*當兩個 multimap 都是由項目相比較的項目。
+Operator 函數會傳回 `right` `<` `left`。 您可以使用它來測試當兩個 multimap 是以元素進行比較時，是否要*向* *右*排序。
 
 ### <a name="example"></a>範例
 
@@ -2807,9 +2807,9 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (multimap) (STL/CLR)
+## <a name="operatorgt-multimap-stlclr"></a><a name="op_gteq"></a>operator&gt;= （multimap）（STL/CLR）
 
-清單大於或等於比較。
+列出大於或等於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -2830,7 +2830,7 @@ template<typename Key,
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`!(left` `<` `right)`。 您會使用它來測試是否*左*未經過排序再*右*當兩個 multimap 都是由項目相比較的項目。
+Operator 函數會傳回 `!(left` `<` `right)`。 *當兩*個 multimap 是以元素進行比較時，您可以使用它來測試*左側*是否未排序。
 
 ### <a name="example"></a>範例
 

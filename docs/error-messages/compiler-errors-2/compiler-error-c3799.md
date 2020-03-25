@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3799
 ms.assetid: 336a2811-9370-4e6e-b03b-325bda470805
-ms.openlocfilehash: 19ff414bde9bb24fca62fd10cfef6d18109199e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 980683ebc2e086e4c16180f04466af9dbdd49d02
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400119"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165648"
 ---
 # <a name="compiler-error-c3799"></a>編譯器錯誤 C3799
 
-索引的屬性不能有空參數清單
+已編制索引的屬性不能有空白的參數清單
 
-索引的屬性宣告不正確。 如需詳細資訊，請參閱[如何：使用中的屬性C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
+索引屬性宣告不正確。 如需詳細資訊，請參閱[如何：在/cli C++中使用屬性](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3799，並示範如何修正此問題。
+下列範例會產生 C3799，並顯示如何修正此問題。
 
 ```cpp
 // C3799.cpp

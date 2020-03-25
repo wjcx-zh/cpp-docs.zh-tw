@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afa81369b2cf329baae02bc1309587015946409
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375050"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205149"
 ---
 # <a name="compiler-error-c2482"></a>編譯器錯誤 C2482
 
->'*識別碼*': 'thread' 允許的資料不受管理/WinRT 程式碼中的動態初始設定
+>'*identifier*'： Managed/WinRT 程式碼中不允許 ' thread ' 資料的動態初始化
 
 ## <a name="remarks"></a>備註
 
-在 managed 或 WinRT 程式碼的變數宣告可透過[__declspec （thread)](../../cpp/thread.md)儲存類別修飾詞的屬性或[thread_local](../../cpp/storage-classes-cpp.md#thread_local)儲存類別規範 nelze s položkami 運算式需要在執行階段的評估。 靜態運算式，才能初始化`__declspec(thread)`或`thread_local`在這些執行階段環境中的資料。
+在 managed 或 WinRT 程式碼中，使用[__declspec （執行緒）](../../cpp/thread.md)儲存類別修飾詞屬性或[thread_local](../../cpp/storage-classes-cpp.md#thread_local)儲存類別規範所宣告的變數，無法使用需要在執行時間進行評估的運算式進行初始化。 在這些執行時間環境中初始化 `__declspec(thread)` 或 `thread_local` 資料時，必須要有靜態運算式。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2482 中受管理 (**/clr**) 和 WinRT (**/ZW**) 程式碼：
+下列範例會產生 managed （ **/clr**）和 WinRT （ **/ZW**）程式碼中的 C2482：
 
 ```cpp
 // C2482.cpp
@@ -36,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-若要修正此問題，請使用常數，來初始化執行緒區域儲存區**constexpr**，或靜態的運算式。 個別執行任何執行緒特定的初始化。
+若要修正此問題，請使用常數、 **constexpr**或靜態運算式來初始化執行緒區域儲存區。 分別執行任何執行緒特定的初始化。

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: efaaacc46f63ac1a702ab2110d35fe80727ead1d
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b13007211857d84e4f3b33c80ed6b5beaf6f0bcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178233"
 ---
 # <a name="inline-functions-c"></a>內嵌函式 (C++)
 
@@ -154,7 +154,7 @@ private:
 
 遞迴函式可以內嵌替代為[inline_depth](../preprocessor/inline-depth.md) pragma 所指定的深度，最多可達16個呼叫。 該深度之後，遞迴函式呼叫視為函式執行個體的呼叫。  由內嵌啟發學習法所檢查之遞迴函式的深度不能超過 16。 [Inline_recursion](../preprocessor/inline-recursion.md) pragma 會控制目前在展開下之函式的內嵌展開。 如需相關資訊，請參閱[內嵌函式展開](../build/reference/ob-inline-function-expansion.md)（/Ob）編譯器選項。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 如需使用**內嵌**規範的詳細資訊，請參閱：
 
@@ -207,7 +207,7 @@ int main()
 
 - 舊堆疊框架還原
 
-- Return
+- 傳回
 
 ## <a name="inline-functions-vs-macros"></a>內嵌函式與宏的比較
 
@@ -265,7 +265,7 @@ Sample Input: a
 Sample Output: A
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [noinline](../cpp/noinline.md)<br/>
 [auto_inline](../preprocessor/auto-inline.md)

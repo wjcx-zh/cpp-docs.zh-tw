@@ -1,17 +1,17 @@
 ---
-title: defaultvtable (C++ COM 屬性)
+title: defaultvtable （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a15b3552e6b67fb0347a14c48414741edf31ac93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168262"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -34,7 +34,7 @@ ms.locfileid: "69501652"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示使用**defaultvtable**指定預設介面之類別上的屬性:
+下列程式碼顯示使用**defaultvtable**指定預設介面之類別上的屬性：
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -71,7 +71,7 @@ class CMyC3 : public IMyI3 {};
 |**適用於**|**class**、 **struct**|
 |**可重複**|否|
 |**必要屬性**|**coclass**|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

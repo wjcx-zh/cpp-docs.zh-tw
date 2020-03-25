@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-ms.openlocfilehash: 4d8c8467b7aeb9c21bf5f4ee19c60e6e60880688
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d130fffa9fad9ae327d03eaa01d84742094cc67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398390"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213963"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase 函式
 
-擷取[ModuleBase](modulebase-class.md)指標，這是用來遞增和遞減參考計數[RuntimeClass](runtimeclass-class.md)物件。
+抓取[ModuleBase](modulebase-class.md)指標，允許遞增和遞減[RuntimeClass](runtimeclass-class.md)物件的參考計數。
 
 ## <a name="syntax"></a>語法
 
@@ -28,15 +28,15 @@ inline Details::ModuleBase* GetModuleBase() throw()
 
 ## <a name="remarks"></a>備註
 
-此函式在內部用來遞增和遞減物件的參考計數。
+此函式會在內部用來遞增和遞減物件參考計數。
 
-您可以使用此函式，來控制參考計數，藉由呼叫[modulebase:: Incrementobjectcount](modulebase-class.md#incrementobjectcount)並[modulebase:: Decrementobjectcount](modulebase-class.md#decrementobjectcount)。
+您可以使用此函數來控制參考計數，方法是呼叫[ModuleBase：： IncrementObjectCount](modulebase-class.md#incrementobjectcount)和[ModuleBase：:D ecrementobjectcount](modulebase-class.md#decrementobjectcount)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

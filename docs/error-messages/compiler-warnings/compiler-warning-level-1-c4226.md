@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4226
 ms.assetid: 69d6bbde-1300-4e48-8a9c-3648c80ab441
-ms.openlocfilehash: 7792674049c200652f4fe1b63c43a8f5fdf9ff6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0d9008ba9610f9678533969f8bd9019b82241d9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207802"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175918"
 ---
 # <a name="compiler-warning-level-1-c4226"></a>編譯器警告 (層級 1) C4226
 
-> 使用非標準擴充: '*關鍵字*' 為過時的關鍵字
+> 使用非標準的擴充： '*關鍵字*' 是過時的關鍵字
 
-目前的版本，視覺效果的C++不會使用此關鍵字。
+目前的 Visual C++版本不會使用此關鍵字。
 
-這個警告會自動升級為錯誤。
+此警告會自動升級為錯誤。

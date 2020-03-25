@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-ms.openlocfilehash: dc81df89609f59834c8a3271dd64f3b99b281f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1758fffb72e183e8a186d115b2b3f3b30c32e047
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395075"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193872"
 ---
 # <a name="linker-tools-warning-lnk4206"></a>連結器工具警告 LNK4206
 
-> 找不到; 的先行編譯的類型資訊'*filename*' 未連結或覆寫; 如同沒有偵錯資訊般連結物件
+> 找不到先行編譯類型資訊;未連結或覆寫 '*filename*';連結化物件，如同沒有任何調試資訊
 
-*檔名*使用編譯的目的檔[/Yc](../../build/reference/yc-create-precompiled-header-file.md)、 未指定在 [連結] 命令，或已被覆寫。
+連結命令中未指定使用[/yc](../../build/reference/yc-create-precompiled-header-file.md)編譯的*filename*物件檔案，或已覆寫該檔案。
 
-這個警告的常見案例是.obj 檔以 /Yc 編譯時在程式庫，而沒有從您的程式碼.obj 檔的符號參考。  在此情況下，連結器會使用 （或甚至看到）.obj 檔案。  在此情況下，您應該重新編譯程式碼，並使用[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)使用編譯的物件[/Yu](../../build/reference/yu-use-precompiled-header-file.md)。
+這項警告的常見案例是，使用/Yc 編譯的 .obj 是在程式庫中，而您的程式碼中沒有任何來自該 .obj 的符號參考。  在此情況下，連結器不會使用（或甚至是查看） .obj 檔案。  在這種情況下，您應該重新編譯程式碼，並針對使用[/yu](../../build/reference/yu-use-precompiled-header-file.md)所編譯的物件使用[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) 。

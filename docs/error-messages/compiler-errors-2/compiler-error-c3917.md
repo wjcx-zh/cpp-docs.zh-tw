@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3917
 ms.assetid: a24cd0c9-262f-46e5-9488-1c01f945933d
-ms.openlocfilehash: 9cb6d594124d995d766df280da2584665ab6d7a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d527f8447306ff74606a0aa733014d45f985dc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406427"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165466"
 ---
 # <a name="compiler-error-c3917"></a>編譯器錯誤 C3917
 
-'*屬性*': 過時的建構宣告樣式
+'*property*'：已過時的結構聲明樣式
 
-屬性或事件定義中使用從 Visual Studio 2005 之前版本的語法。
+屬性或事件定義在 Visual Studio 2005 之前，已使用版本的語法。
 
 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md)。
 

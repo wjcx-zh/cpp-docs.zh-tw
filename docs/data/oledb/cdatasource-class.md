@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445306"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212006"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 
@@ -99,7 +99,7 @@ class CDataSource
 
 如需如何使用 `CDataSource`的範例，請參閱[CatDB](../../overview/visual-cpp-samples.md)範例。
 
-## <a name="close"></a>CDataSource：： Close
+## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource：： Close
 
 藉由釋放 `m_spInit` 指標來關閉連接。
 
@@ -109,7 +109,7 @@ class CDataSource
 void Close() throw();
 ```
 
-## <a name="getinitializationstring"></a>CDataSource：： GetInitializationString
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource：： GetInitializationString
 
 抓取目前開啟之資料來源的初始化字串。
 
@@ -136,7 +136,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 產生的初始化字串可以用來稍後重新開啟此資料來源連接。
 
-## <a name="getproperties"></a>CDataSource：： GetProperties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>CDataSource：： GetProperties
 
 傳回針對連接的資料來源物件所要求的屬性資訊。
 
@@ -161,7 +161,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 若要取得單一屬性，請使用[GetProperty](../../data/oledb/cdatasource-getproperty.md)。
 
-## <a name="getproperty"></a>CDataSource：： GetProperty
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource：： GetProperty
 
 針對連接的資料來源物件，傳回指定之屬性的值。
 
@@ -192,7 +192,7 @@ HRESULT GetProperty(const GUID& guid,
 
 若要取得多個屬性，請使用[GetProperties](../../data/oledb/cdatasource-getproperties.md)。
 
-## <a name="open"></a>CDataSource：： Open
+## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource：： Open
 
 使用 `CLSID`、`ProgID`或 `CEnumerator` 的名字，開啟與資料來源的連接，或使用 [定位器] 對話方塊來提示使用者。
 
@@ -288,7 +288,7 @@ HRESULT Open(LPCSTR szProgID,
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="openfromfilename"></a>CDataSource：： OpenFromFileName
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource：： OpenFromFileName
 
 從以使用者提供的檔名指定的檔案，開啟資料來源。
 
@@ -313,7 +313,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱 OLE DB 程式設計[人員指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 參考。
 
-## <a name="openfrominitializationstring"></a>CDataSource：： OpenFromInitializationString
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource：： OpenFromInitializationString
 
 開啟由使用者提供的初始化字串所指定的資料來源。
 
@@ -342,7 +342,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 
 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。
 
-## <a name="openwithpromptfilename"></a>CDataSource：： OpenWithPromptFileName
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource：： OpenWithPromptFileName
 
 此方法會以對話方塊提示使用者，然後使用使用者所指定的檔案開啟資料來源。
 
@@ -373,7 +373,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱 OLE DB 程式設計[人員指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 參考。
 
-## <a name="openwithservicecomponents"></a>CDataSource：： OpenWithServiceComponents
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource：： OpenWithServiceComponents
 
 使用 oledb32.dll 中的服務元件來開啟資料來源物件。
 

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8ea949653c7e62f39ab9d1b181c419cf51fe3cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283787"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209829"
 ---
 # <a name="provider-support-for-bookmarks"></a>提供者書籤支援
 
-本主題的範例會將`IRowsetLocate`介面`CCustomRowset`類別。 在幾乎所有的情況下，首先將介面加入至現有的 COM 物件。 然後您可以測試它，藉由新增更多呼叫從取用者範本。 此範例會示範如何：
+本主題中的範例會將 `IRowsetLocate` 介面新增至 `CCustomRowset` 類別。 在大部分的情況下，您一開始會先將介面新增至現有的 COM 物件。 然後，您可以從取用者範本新增更多呼叫來進行測試。 此範例示範如何：
 
-- 將介面新增至提供者。
+- 將介面加入至提供者。
 
 - 以動態方式判斷要傳回給取用者的資料行。
 
-- 加入書籤的支援。
+- 新增書簽支援。
 
-`IRowsetLocate` 介面繼承自 `IRowset` 介面。 若要新增`IRowsetLocate`介面、 繼承`CCustomRowset`從[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)。
+`IRowsetLocate` 介面繼承自 `IRowset` 介面。 若要新增 `IRowsetLocate` 介面，請從[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)繼承 `CCustomRowset`。
 
-新增`IRowsetLocate`介面是有點不同於大部分介面。 若要 Vtable 隊伍，OLE DB 提供者樣板有樣板參數來處理衍生的介面。 下列程式碼會顯示新的繼承清單：
+新增 `IRowsetLocate` 介面與大部分的介面有點不同。 為了讓 Vtable 行，OLE DB 提供者範本具有樣板參數，可處理衍生的介面。 下列程式碼會顯示新的繼承清單：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -40,9 +40,9 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-第四個、 第五個和第六個都會加入參數。 此範例會使用預設值為第四個和第五個參數但指定`IRowsetLocateImpl`做為第六個參數。 `IRowsetLocateImpl` 會採用兩個範本參數的 OLE DB 範本類別： 這些連結`IRowsetLocate`介面`CCustomRowset`類別。 若要加入更多介面，您可以略過此步驟，並移到下一步。 只有`IRowsetLocate`和`IRowsetScroll`介面都必須以這種方式處理。
+第四、第五和第六個參數都會加入。 這個範例會使用第四個和第五個參數的預設值，但指定 `IRowsetLocateImpl` 做為第六個參數。 `IRowsetLocateImpl` 是採用兩個樣板參數的 OLE DB 範本類別：這些會將 `IRowsetLocate` 介面連結至 `CCustomRowset` 類別。 若要新增大部分的介面，您可以略過此步驟並移至下一個。 只有 `IRowsetLocate` 和 `IRowsetScroll` 介面需要以這種方式處理。
 
-然後，您需要告訴`CCustomRowset`來呼叫`QueryInterface`如`IRowsetLocate`介面。 新增行`COM_INTERFACE_ENTRY(IRowsetLocate)`的對應。 介面對應`CCustomRowset`應該會出現下列程式碼所示：
+接著，您必須告訴 `CCustomRowset` 為 `IRowsetLocate` 介面呼叫 `QueryInterface`。 將行 `COM_INTERFACE_ENTRY(IRowsetLocate)` 新增至地圖。 `CCustomRowset` 的介面對應應該會如下列程式碼所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -56,11 +56,11 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-您也必須連結至對應`CRowsetImpl`類別。 新增連結 COM_INTERFACE_ENTRY_CHAIN 巨集中`CRowsetImpl`對應。 此外，建立稱為 typedef`RowsetBaseClass`構成的繼承資訊。 此 typedef 是任意的您可以忽略。
+您也必須將對應連結到 `CRowsetImpl` 類別。 加入 COM_INTERFACE_ENTRY_CHAIN 宏以在 `CRowsetImpl` 對應中連結。 此外，建立稱為 `RowsetBaseClass` 的 typedef，其中包含繼承資訊。 此 typedef 是任意的，而且可以忽略。
 
-最後，處理`IColumnsInfo::GetColumnsInfo`呼叫。 您通常會使用 PROVIDER_COLUMN_ENTRY 巨集，若要這樣做。 不過，取用者可能會想要使用書籤。 您必須是能夠變更提供者會傳回根據取用者是否要求書籤的資料行。
+最後，處理 `IColumnsInfo::GetColumnsInfo` 呼叫。 您通常會使用 PROVIDER_COLUMN_ENTRY 宏來執行這項操作。 不過，取用者可能會想要使用書簽。 您必須能夠根據取用者是否要求書簽，來變更提供者所傳回的資料行。
 
-若要處理`IColumnsInfo::GetColumnsInfo`呼叫時，刪除在 PROVIDER_COLUMN 對應`CTextData`類別。 PROVIDER_COLUMN_MAP 巨集定義的函式`GetColumnInfo`。 定義您自己`GetColumnInfo`函式。 函式宣告應該如下所示：
+若要處理 `IColumnsInfo::GetColumnsInfo` 呼叫，請刪除 `CTextData` 類別中的 PROVIDER_COLUMN 對應。 PROVIDER_COLUMN_MAP 宏會定義函式 `GetColumnInfo`。 定義您自己的 `GetColumnInfo` 函數。 函式宣告看起來應該像這樣：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-然後，實作`GetColumnInfo`函式中*自訂*RS.cpp 檔案，如下所示：
+然後，在*自訂*RS .cpp 檔案中執行 `GetColumnInfo` 函式，如下所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,11 +148,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo` 若要查看屬性是否呼叫會先檢查`DBPROP_IRowsetLocate`設定。 OLE DB 會有選擇性的資料列集物件介面的每個屬性。 如果取用者想要使用其中一種選擇性介面，它會將屬性設定為 true。 提供者可以檢查這個屬性，並採取以它為基礎的特殊動作。
+`GetColumnInfo` 先檢查是否已設定稱為 `DBPROP_IRowsetLocate` 的屬性。 OLE DB 具有資料列集物件之每個選擇性介面的屬性。 如果取用者想要使用其中一個選擇性介面，它會將屬性設定為 true。 然後，提供者可以檢查此屬性，並根據它採取特殊動作。
 
-在您的實作中，您可以取得的屬性使用命令物件的指標。 `pThis`指標代表的資料列集或命令的類別。 因為您在這裡使用範本，您必須將這中作為**void**指標或程式碼不會進行編譯。
+在您的執行中，您會使用命令物件的指標來取得屬性。 `pThis` 指標代表資料列集或命令類別。 因為您在這裡使用範本，所以您必須將此傳入做為**void**指標，否則程式碼不會編譯。
 
-指定靜態的陣列，用以保存的資料行資訊。 如果取用者不想書籤資料行，而浪費在陣列中的項目。 您可以動態地配置此陣列，但您必須確定它正確地終結。 此範例中定義，並使用巨集 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 来插入陣列中的資訊。 您可以加入巨集來*自訂*RS。H 檔案，如下列程式碼所示：
+指定用來保存資料行資訊的靜態陣列。 如果取用者不想要書簽資料行，就會浪費陣列中的專案。 您可以動態配置此陣列，但您必須確定它已正確地摧毀。 這個範例會定義和使用宏 ADD_COLUMN_ENTRY，並 ADD_COLUMN_ENTRY_EX 將資訊插入陣列中。 您可以將宏新增至*自訂*RS。H 檔案，如下列程式碼所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -183,7 +183,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;
 ```
 
-若要在消費者中測試程式碼，您需要進行一些變更以`OnRun`處理常式。 此函式的第一個變更是，您會加入程式碼，以將屬性加入至屬性集。 程式碼集`DBPROP_IRowsetLocate`屬性設為 true，因此告訴提供者的書籤資料行。 `OnRun`處理常式程式碼應該會出現，如下所示：
+若要測試取用者中的程式碼，您需要對 `OnRun` 處理常式進行一些變更。 函式的第一次變更是您加入程式碼，以將屬性新增至屬性集。 程式碼會將 `DBPROP_IRowsetLocate` 屬性設定為 true，藉此告知您想要書簽資料行的提供者。 `OnRun` 的處理常式程式碼應如下所示：
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -235,9 +235,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-**雖然**迴圈包含程式碼來呼叫`Compare`方法中的`IRowsetLocate`介面。 因為您要比較完全相同的書籤，應該一律傳遞您所擁有的程式碼。 此外，儲存在暫存變數一個書籤，以便您可以使用它之後**雖然**迴圈來呼叫完成`MoveToBookmark`消費者範本中的函式。 `MoveToBookmark`函式會呼叫`GetRowsAt`方法中的`IRowsetLocate`。
+**While**迴圈包含用來在 `IRowsetLocate` 介面中呼叫 `Compare` 方法的程式碼。 您所擁有的程式碼應該一律通過，因為您比較的是完全相同的書簽。 此外，在暫存變數中儲存一個書簽，以便在**while**迴圈完成以呼叫取用者範本中的 `MoveToBookmark` 函式之後使用它。 `MoveToBookmark` 函數會在 `IRowsetLocate`中呼叫 `GetRowsAt` 方法。
 
-您也需要更新取用者的使用者資料錄。 若要處理的書籤和 COLUMN_MAP 中的項目類別中新增項目：
+您也需要更新取用者中的使用者記錄。 在類別中新增專案，以處理書簽和 COLUMN_MAP 中的專案：
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -262,7 +262,7 @@ END_ACCESSOR_MAP()
 };
 ```
 
-當您已更新程式碼時，您應該能夠建置並執行的提供者`IRowsetLocate`介面。
+當您更新程式碼時，您應該能夠使用 `IRowsetLocate` 介面來建立和執行提供者。
 
 ## <a name="see-also"></a>另請參閱
 

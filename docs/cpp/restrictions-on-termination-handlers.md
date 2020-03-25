@@ -6,12 +6,12 @@ helpviewer_keywords:
 - restrictions, termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 8b1cb481-303f-4e79-b409-57a002a9fa9e
-ms.openlocfilehash: 6c39407270037756c55dc42aed80e1d04616c9ee
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: befe181a41ed418a4a824b131e741a9f02f90e38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246374"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179064"
 ---
 # <a name="restrictions-on-termination-handlers"></a>終止處理常式的限制
 
@@ -24,4 +24,4 @@ ms.locfileid: "74246374"
 ## <a name="see-also"></a>另請參閱
 
 [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

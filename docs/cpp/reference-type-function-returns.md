@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403434"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188294"
 ---
 # <a name="reference-type-function-returns"></a>參考類型函式傳回
 
@@ -23,9 +23,9 @@ ms.locfileid: "62403434"
 
 - 傳回函式時，referred-to 物件不會超出範圍。
 
-它可能會更有效率傳遞大型物件一樣*要*所參考的函式，這也可能是更有效率的方式傳回大型物件*從*函式的參考。 使用參考傳回通訊協定就不需要在傳回之前將物件複製到暫存位置。
+就像是以傳址方式將大型物件傳遞*至*函式一樣有效率，*從*函式依參考傳回大型物件也會更有效率。 使用參考傳回通訊協定就不需要在傳回之前將物件複製到暫存位置。
 
-當函式必須評估為左值時，參考傳回型別可能也會很有用。 大部分的多載運算子都屬於此類，特別是指派運算子。 多載運算子所述[多載運算子](../cpp/operator-overloading.md)。
+當函式必須評估為左值時，參考傳回型別可能也會很有用。 大部分的多載運算子都屬於此類，特別是指派運算子。 多載的運算子涵蓋在多載的[運算子](../cpp/operator-overloading.md)中。
 
 ## <a name="example"></a>範例
 
@@ -73,7 +73,7 @@ cout << "x = " << ThePoint.x() << "\n"
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 x = 7
@@ -86,7 +86,7 @@ y = 9
 
 除了下列情況下之外，參考類型的宣告必須包含初始設定式：
 
-- 明確**extern**宣告
+- 明確**外部**宣告
 
 - 類別成員的宣告
 
@@ -108,7 +108,7 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-編譯器會發出警告，以在此情況下： `warning C4172: returning address of local variable or temporary`。 在簡單程式中，如果呼叫端在覆寫記憶體位置之前存取參考，則可能偶爾不會發生存取違規。 這純粹只是幸運。 請留意警告。
+在此情況下，編譯器會發出警告： `warning C4172: returning address of local variable or temporary`。 在簡單程式中，如果呼叫端在覆寫記憶體位置之前存取參考，則可能偶爾不會發生存取違規。 這純粹只是幸運。 請留意警告。
 
 ## <a name="see-also"></a>另請參閱
 

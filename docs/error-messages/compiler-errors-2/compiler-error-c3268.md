@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201457"
 ---
 # <a name="compiler-error-c3268"></a>編譯器錯誤 C3268
 
-> '*函式*': 泛型函式或泛型類別的成員函式不能有變數參數清單
+> '*function*'：泛型類別的泛型函數或成員函式不能有變數參數清單
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+**/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
-請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)如需詳細資訊。
+如需詳細資訊，請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

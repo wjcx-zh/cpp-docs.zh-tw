@@ -57,12 +57,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 08f90ef6be7a5eeb560add9c60a6578057fbb310
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447520"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208360"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -150,7 +150,7 @@ template<typename Value,
 
 ## <a name="members"></a>成員
 
-## <a name="assign"></a>queue：： assign （STL/CLR）
+## <a name="queueassign-stlclr"></a><a name="assign"></a>queue：： assign （STL/CLR）
 
 取代所有項目。
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a>queue：： back （STL/CLR）
+## <a name="queueback-stlclr"></a><a name="back"></a>queue：： back （STL/CLR）
 
 存取最後一個項目。
 
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a>queue：： back_item （STL/CLR）
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a>queue：： back_item （STL/CLR）
 
 存取最後一個項目。
 
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="const_reference"></a>queue：： const_reference （STL/CLR）
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>queue：： const_reference （STL/CLR）
 
 項目的常數參考類型。
 
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a>queue：： container_type （STL/CLR）
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>queue：： container_type （STL/CLR）
 
 基礎容器的類型。
 
@@ -394,7 +394,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a>queue：:d ifference_type （STL/CLR）
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>queue：:d ifference_type （STL/CLR）
 
 兩個元素之間帶正負號距離的類型。
 
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a>queue：： empty （STL/CLR）
+## <a name="queueempty-stlclr"></a><a name="empty"></a>queue：： empty （STL/CLR）
 
 測試項目是否不存在。
 
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a>queue：： front （STL/CLR）
+## <a name="queuefront-stlclr"></a><a name="front"></a>queue：： front （STL/CLR）
 
 存取第一個項目。
 
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a>queue：： front_item （STL/CLR）
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>queue：： front_item （STL/CLR）
 
 存取第一個項目。
 
@@ -610,7 +610,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a>queue：： generic_container （STL/CLR）
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>queue：： generic_container （STL/CLR）
 
 容器介面卡的泛型介面類別型。
 
@@ -673,7 +673,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a>queue：： generic_value （STL/CLR）
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>queue：： generic_value （STL/CLR）
 
 要與容器的泛型介面搭配使用之元素的類型。
 
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="get_container"></a>queue：： get_container （STL/CLR）
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a>queue：： get_container （STL/CLR）
 
 存取基礎容器。
 
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>queue：： operator = （STL/CLR）
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a>queue：： operator = （STL/CLR）
 
 取代受控制的序列。
 
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a>queue：:p op （STL/CLR）
+## <a name="queuepop-stlclr"></a><a name="pop"></a>queue：:p op （STL/CLR）
 
 移除最後一個元素。
 
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="push"></a>queue：:p ush （STL/CLR）
+## <a name="queuepush-stlclr"></a><a name="push"></a>queue：:p ush （STL/CLR）
 
 加入新的最後一個元素。
 
@@ -915,7 +915,7 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a>queue：： queue （STL/CLR）
+## <a name="queuequeue-stlclr"></a><a name="queue"></a>queue：： queue （STL/CLR）
 
 建立容器介面卡物件。
 
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="reference"></a>queue：： reference （STL/CLR）
+## <a name="queuereference-stlclr"></a><a name="reference"></a>queue：： reference （STL/CLR）
 
 項目的參考類型。
 
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a>queue：： size （STL/CLR）
+## <a name="queuesize-stlclr"></a><a name="size"></a>queue：： size （STL/CLR）
 
 計算元素的數目。
 
@@ -1111,7 +1111,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a>queue：： size_type （STL/CLR）
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>queue：： size_type （STL/CLR）
 
 兩個元素之間帶正負號距離的類型。
 
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="to_array"></a>queue：： to_array （STL/CLR）
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a>queue：： to_array （STL/CLR）
 
 將受控制序列複製到新的陣列。
 
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a>queue：： value_type （STL/CLR）
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>queue：： value_type （STL/CLR）
 
 元素類型。
 
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a>operator！ = （queue）（STL/CLR）
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>operator！ = （queue）（STL/CLR）
 
 佇列不等於比較。
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>運算子&lt; （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>運算子&lt; （queue）（STL/CLR）
 
 佇列小於比較。
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>運算子&lt;= （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>運算子&lt;= （queue）（STL/CLR）
 
 佇列小於或等於比較。
 
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>operator = = （queue）（STL/CLR）
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>operator = = （queue）（STL/CLR）
 
 佇列相等比較。
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>運算子&gt; （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>運算子&gt; （queue）（STL/CLR）
 
 佇列大於比較。
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>運算子&gt;= （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>運算子&gt;= （queue）（STL/CLR）
 
 佇列大於或等於比較。
 

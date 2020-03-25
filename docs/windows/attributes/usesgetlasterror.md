@@ -1,21 +1,21 @@
 ---
-title: usesgetlasterror (C++ COM 屬性)
+title: usesgetlasterror （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513889"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166129"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-告訴呼叫者, 如果呼叫該函式時發生錯誤, 則呼叫端可以呼叫`GetLastError`來抓取錯誤碼。
+告訴呼叫者，如果在呼叫該函式時發生錯誤，則呼叫端可以呼叫 `GetLastError` 來取得錯誤碼。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ ms.locfileid: "69513889"
 
 ## <a name="example"></a>範例
 
-如需如何使用**usesgetlasterror**的範例, 請參閱[idl_module](idl-module.md)範例。
+如需如何使用**usesgetlasterror**的範例，請參閱[idl_module](idl-module.md)範例。
 
 ## <a name="requirements"></a>需求
 

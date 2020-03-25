@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 72d1f5a5720466bf7abf08aaad4acdbab05c408f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167156"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -39,8 +39,8 @@ ms.locfileid: "69490983"
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

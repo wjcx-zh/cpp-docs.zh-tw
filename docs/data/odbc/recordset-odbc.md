@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b043b08e13611b87bbffbe9dfb3255d5520e3359
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 011191b99170b8a8338b5ca1a440a32404c4d793
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707828"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212819"
 ---
 # <a name="recordset-odbc"></a>資料錄集 (ODBC)
 
@@ -37,7 +37,7 @@ ms.locfileid: "65707828"
 > [!NOTE]
 >  有些 ODBC 驅動程式支援資料庫的檢視。 這種意義上的檢視是最初使用 SQL `CREATE VIEW` 陳述式建立的查詢。
 
-##  <a name="_core_recordset_capabilities"></a> 資料錄集功能
+##  <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> 資料錄集功能
 
 所有資料錄集物件都共用下列功能：
 
@@ -51,24 +51,24 @@ ms.locfileid: "65707828"
 
 - 您可以將資料錄集[參數化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)，以限定在執行階段的資料錄集選取範圍。
 
-##  <a name="_core_snapshots_and_dynasets"></a> 快照集和動態集
+##  <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> 快照集和動態集
 
 資料錄集有兩種主要類型：[快照集](../../data/odbc/snapshot.md)和[動態集](../../data/odbc/dynaset.md)。 兩者都受到 `CRecordset` 類別支援。 每種類型都會共用所有資料錄集的通用特性，但每種類型也都會透過自己的特殊方法來擴充通用功能。 快照集提供資料的靜態檢視，而且可用於報表，以及您希望資料檢視存在於特定時間的其他情況。 當您希望在資料錄集中看到其他使用者所做的更新，而不必重新查詢或重新整理資料錄集時，動態集將會很有用。 快照集和動態集可以是可更新的或唯讀的。 若要反映其他使用者新增或刪除的資料錄，請呼叫 [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)。
 
 `CRecordset` 也允許其他兩種類型的資料錄集：動態資料錄集和順向資料錄集。 動態資料錄集類似於動態集；不過，動態資料錄集會反映新增或刪除的任何資料錄，而不需呼叫 `CRecordset::Requery`。 因此，動態資料錄集通常會在 DBMS 上耗費大量的處理時間，而且許多 ODBC 驅動程式並不提供支援。 相反地，順向資料錄集會針對不需要更新或向後捲動的資料錄集，提供最有效率的資料存取方法。 例如，您可以使用順向資料錄集，將資料從一個資料來源移轉到另一個資料來源，而且您只需要以順向移動資料即可。 若要使用順向資料錄集，您必須執行下列兩個動作：
 
-- 傳遞選項 `CRecordset::forwardOnly` 作為 [Open](../../mfc/reference/crecordset-class.md#open) 成員函式的 *nOpenType* 參數。
+- 傳遞選項 `CRecordset::forwardOnly` 作為 *Open* 成員函式的 [nOpenType](../../mfc/reference/crecordset-class.md#open) 參數。
 
-- 在 `Open` 的 *dwOptions* 參數中指定 `CRecordset::readOnly`。
+- 在 `CRecordset::readOnly` 的 *dwOptions* 參數中指定 `Open`。
 
     > [!NOTE]
     >  如需有關動態集支援之 ODBC 驅動程式需求的資訊，請參閱 [ODBC](../../data/odbc/odbc-basics.md)。 如需此版本 Visual C++ 隨附之 ODBC 驅動程式的清單，以及取得其他驅動程式的相關資訊，請參閱 [ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
 
-##  <a name="_core_your_recordsets"></a> 您的資料錄集
+##  <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> 您的資料錄集
 
-針對每個您想要存取的不同資料表、檢視或預存程序，您通常要定義一個衍生自 `CRecordset` 的類別  (例外狀況是資料庫聯結，其中一個資料錄集代表來自兩個或多個資料表的資料行)。當您衍生資料錄集類別時，會啟用資料錄欄位交換 (RFX) 機制或大量資料錄欄位交換 (大量 RFX) 機制，這類似於對話方塊資料交換 (DDX) 機制。 RFX 和大量 RFX 會將從資料來源傳輸資料到資料錄集的程序簡化；此外，RFX 還會從資料錄集傳輸資料到資料來源。 如需詳細資訊，請參閱[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md) 和[資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+針對每個您想要存取的不同資料表、檢視或預存程序，您通常要定義一個衍生自 `CRecordset` 的類別 （例外狀況是資料庫聯結，其中一個記錄集代表兩個或多個資料表中的資料行）。當您衍生記錄集類別時，您會啟用記錄欄位交換（RFX）機制或大量記錄欄位交換（Bulk RFX）機制，其類似于對話方塊資料交換（DDX）機制。 RFX 和大量 RFX 會將從資料來源傳輸資料到資料錄集的程序簡化；此外，RFX 還會從資料錄集傳輸資料到資料來源。 如需詳細資訊，請參閱[記錄欄位交換（RFX）](../../data/odbc/record-field-exchange-rfx.md)和[記錄集：大量提取記錄（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-資料錄集物件可讓您存取所有選取的資料錄。 您可以使用 `CRecordset` 成員函式 (例如 `MoveNext` 和 `MovePrev`) 捲動多個選取的資料錄，。 同時，一個資料錄集物件只代表其中一個選取的資料錄，也就是目前的資料錄。 您可以宣告對應到資料表資料行，或資料庫查詢所產生之資料錄資料行的資料錄集類別成員變數，藉此檢查目前資料錄的欄位。 如需有關資料錄集資料成員的資訊，請參閱[資料錄集：架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
+資料錄集物件可讓您存取所有選取的資料錄。 您可以使用 `CRecordset` 成員函式 (例如 `MoveNext` 和 `MovePrev`) 捲動多個選取的資料錄，。 同時，一個資料錄集物件只代表其中一個選取的資料錄，也就是目前的資料錄。 您可以宣告對應到資料表資料行，或資料庫查詢所產生之資料錄資料行的資料錄集類別成員變數，藉此檢查目前資料錄的欄位。 如需記錄集資料成員的詳細資訊，請參閱[記錄集：架構（ODBC）](../../data/odbc/recordset-architecture-odbc.md)。
 
 下列主題將說明使用資料錄集物件的詳細資料。 這些主題會以功能分類和自然瀏覽順序列出，以允許循序讀取。
 

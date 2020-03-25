@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0007
 ms.assetid: d923948b-acc9-498f-bf3b-f14e41bed61a
-ms.openlocfilehash: 83cb02f4d9d5232eda45b3bdbb591dd819fa12d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96d1b5655fc2c3f78efc04e1dc11c45f7b4ccee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359588"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192974"
 ---
 # <a name="project-build-error-prj0007"></a>專案建置錯誤 PRJ0007
 
-無法建立輸出目錄 'directory'。
+無法建立輸出目錄 ' directory '。
 
-視覺化C++無法建立輸出目錄。 可能的原因包括：
+視覺C++效果無法建立輸出目錄。 可能的原因包括：
 
-- 在其中顯示已建立的輸出目錄的目錄是唯讀的。
+- 要在其中建立輸出目錄的目錄是唯讀的。
 
-- 電腦已用完磁碟空間。
+- 電腦已用盡磁碟空間。
 
-- 您指定的目錄路徑無效。
+- 您指定了不正確目錄路徑。
 
-- 使用者權限並不足以建立目錄。
+- 使用者權限不足以建立目錄。

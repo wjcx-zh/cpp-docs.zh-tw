@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2308
 ms.assetid: d1eaf101-077d-4c43-97ac-410efd5b6fc9
-ms.openlocfilehash: f5744509f89337d2fe22af785b9af6a48446997c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d586a04fd132f412dd6fb3750982cdf4c6a82a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206262"
 ---
 # <a name="compiler-error-c2308"></a>編譯器錯誤 C2308
 
-將不相符的字串串連
+串連不相符的字串
 
-串連指定這兩個寬和非寬字元字串。 您無法將寬字元字串，而非寬字元字串的串連。
+已針對串連指定寬和非寬字元字串。 您無法串連寬字元字串和非寬字元字串。

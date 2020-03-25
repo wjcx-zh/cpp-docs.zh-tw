@@ -7,14 +7,14 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-ms.openlocfilehash: 4b4b7a21d12cc645c486dd93d555510c1e716563
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 870e3580ed23ce994d832f7c59b951680d725e41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180494"
 ---
-# <a name="comptrtattach"></a>_com_ptr_t::Attach
+# <a name="_com_ptr_tattach"></a>_com_ptr_t::Attach
 
 **Microsoft 專屬**
 
@@ -33,15 +33,15 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
 原始的介面指標。
 
 *fAddRef*<br/>
-如果它是 TRUE，則`AddRef`呼叫。 如果是 FALSE 時，`_com_ptr_t`物件會取得擁有權的一般介面指標，而不需呼叫`AddRef`。
+如果為 TRUE，則會呼叫 `AddRef`。 如果為 FALSE，`_com_ptr_t` 物件會取得原始介面指標的擁有權，而不會呼叫 `AddRef`。
 
 ## <a name="remarks"></a>備註
 
-- **附加 (** *pInterface* **)** `AddRef`就不會呼叫。 介面的擁有權會傳遞至這個 `_com_ptr_t` 物件。 `Release` 呼叫以遞減先前封裝之指標的參考計數。
+- 不會呼叫**Attach （** *pInterface* **）** `AddRef`。 介面的擁有權會傳遞至這個 `_com_ptr_t` 物件。 呼叫 `Release` 以遞減先前封裝之指標的參考計數。
 
-- **附加 (** *pInterface* **，** *fAddRef* **)** 如果*fAddRef*為 TRUE， `AddRef`呼叫以遞增封裝的介面指標的參考計數。 如果*fAddRef*為 FALSE，這`_com_ptr_t`物件會取得擁有權的一般介面指標，而不需呼叫`AddRef`。 `Release` 呼叫以遞減先前封裝之指標的參考計數。
+- **Attach （**  *pInterface* **，**  *fAddRef*  **）** 如果*fAddRef*為 TRUE，則會呼叫 `AddRef` 來遞增封裝之介面指標的參考計數。 如果*fAddRef*為 FALSE，這個 `_com_ptr_t` 物件會取得原始介面指標的擁有權，而不會呼叫 `AddRef`。 呼叫 `Release` 以遞減先前封裝之指標的參考計數。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

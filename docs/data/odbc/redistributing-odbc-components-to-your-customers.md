@@ -9,22 +9,22 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-ms.openlocfilehash: 1a6ec6f5fdd3c32080d357ca58d31ccea271b7a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d4d3948add665c54be3d3b0596a7a6fc0e414f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330072"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212728"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>轉散發 ODBC 元件給您的客戶
 
-如果您將 ODBC 管理員程式的功能併入您的應用程式時，您必須也散發給您的使用者執行這些程式的檔案。 這些 ODBC 檔案位於 \OS\System 的目錄中的視覺效果C++CD-ROM。 Redistrb.wri 檔案和相同的目錄中的授權合約包含一份您可以重新發佈的 ODBC 檔案。
+如果您將 ODBC 系統管理員程式的功能併入您的應用程式，則也必須將執行這些程式的檔案散發給使用者。 這些 ODBC 檔案位於視覺C++ Cd-rom 的 \OS\System 目錄中。 Redistrb. wri 檔案和相同目錄中的授權合約包含您可以重新發佈的 ODBC 檔案清單。
 
-任何想要寄送的 ODBC 驅動程式，請參閱文件。 您必須判斷哪些 Dll 和其他檔案發行。 您也應該閱讀[轉散發 ODBC 元件給您的客戶](../../data/odbc/redistributing-odbc-components-to-your-customers.md)，其中說明如何轉散發 ODBC 元件。
+請參閱您打算寄送的任何 ODBC 驅動程式的檔。 您必須決定要寄送哪些 Dll 和其他檔案。 您也應該閱讀將[Odbc 元件轉散發給您的客戶](../../data/odbc/redistributing-odbc-components-to-your-customers.md)，其中說明如何重新發佈 odbc 元件。
 
-此外，您需要在大部分情況下包含一個其他檔案。 Odbccr32.dll 是 ODBC 資料指標程式庫。 這個程式庫提供層級 1 的驅動程式的向前及向後捲動功能。 它也提供支援快照集的功能。 如需有關 ODBC 資料指標程式庫的詳細資訊，請參閱[ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+此外，在大部分的情況下，您都必須包含另一個檔案。 Odbccr32 是 ODBC 資料指標程式庫。 此程式庫可為層級1驅動程式提供向前和向後滾動的功能。 它也提供支援快照集的功能。 如需 ODBC 資料指標程式庫的詳細資訊，請參閱[odbc： odbc 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
-下列主題提供使用 ODBC 資料庫類別的詳細資訊：
+下列主題提供有關搭配使用 ODBC 與資料庫類別的詳細資訊：
 
 - [ODBC：ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)
 

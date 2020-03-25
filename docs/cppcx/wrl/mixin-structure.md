@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213690"
 ---
 # <a name="mixin-structure"></a>MixIn 結構
 
@@ -31,18 +31,18 @@ struct MixIn;
 
 ### <a name="parameters"></a>參數
 
-*衍生*<br/>
-型別衍生自[實作](implements-structure.md)結構。
+*源于*<br/>
+衍生自[Implements](implements-structure.md)結構的類型。
 
 *MixInType*<br/>
 基底類型。
 
 *hasImplements*<br/>
-**真**如果*MixInType*是衍生自目前實作的基底類型;**false**否則。
+如果*MixInType*衍生自目前的實作為基底型別，則**為 true** ;否則**為 false** 。
 
 ## <a name="remarks"></a>備註
 
-如果類別衍生自 Windows 執行階段和兩種類別的 COM 介面，類別宣告清單都必須先列出的任何 Windows 執行階段介面，則任何傳統的 COM 介面。 **MixIn**可確保以正確的順序，指定介面。
+如果類別衍生自 Windows 執行階段和類別 COM 介面，則類別宣告清單必須先列出任何 Windows 執行階段介面，然後是任何傳統的 COM 介面。 **MixIn**可確保以正確的順序指定介面。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -50,9 +50,9 @@ struct MixIn;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

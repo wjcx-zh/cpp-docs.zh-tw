@@ -1,21 +1,21 @@
 ---
-title: odl (C++ COM 屬性)
+title: odl （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2627be876f0c46bb7d72c2c6b825cf76e24b1eb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214730"
 ---
 # <a name="odl"></a>odl
 
-將介面識別為物件描述語言 (ODL) 介面。 MIDL 編譯器不需要**odl**屬性。它僅能與較舊的 odl 檔案相容。
+將介面識別為物件描述語言（ODL）介面。 MIDL 編譯器不需要**odl**屬性。它僅能與較舊的 odl 檔案相容。
 
 ## <a name="syntax"></a>語法
 
@@ -57,8 +57,8 @@ public:
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

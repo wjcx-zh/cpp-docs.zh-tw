@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 784179af68ff55ba70c61255c88688105ecb1738
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208092"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164985"
 ---
 # <a name="compiler-warning-c4950"></a>編譯器警告 C4950
 
 'type_or_member' : 標記為過時
 
-成員或類型已標記為過時<xref:System.ObsoleteAttribute>屬性。
+成員或類型已使用 <xref:System.ObsoleteAttribute> 屬性標示為已淘汰。
 
-C4950 一律發出為錯誤。 您可以藉由關閉此警告[警告](../../preprocessor/warning.md)pragma 指示詞或[/wd](../../build/reference/compiler-option-warning-level.md)編譯器選項。
+C4950 一律發出為錯誤。 您可以使用[warning](../../preprocessor/warning.md) pragma 指示詞或[/wd](../../build/reference/compiler-option-warning-level.md)編譯器選項來關閉此警告。
 
 ## <a name="example"></a>範例
 

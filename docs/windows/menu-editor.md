@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214444"
 ---
 # <a name="menu-editor-c"></a>功能表編輯器（C++）
 
@@ -53,7 +53,7 @@ ms.locfileid: "72444981"
 > [!TIP]
 > 使用**功能表編輯器**時，在許多情況下，您可以用滑鼠右鍵按一下來顯示常用命令的快顯功能表。 可用的命令取決於指標所指項目。
 
-## <a name="how-to"></a>如何
+## <a name="how-to"></a>作法
 
 **功能表編輯器**可讓您：
 
@@ -168,7 +168,7 @@ ms.locfileid: "72444981"
 
    針對快顯功能表中的任何其他功能表命令重複此程式，並務必儲存功能表資源。
 
-- 例如，若要將快顯功能表連接至您的應用程式，請新增 WM_CONTEXTMENU 的訊息處理常式，然後將下列程式碼新增至訊息處理常式：
+- 例如，若要將快顯功能表連接至您的應用程式，請為 WM_CONTEXTMENU 新增訊息處理常式，然後將下列程式碼新增至訊息處理常式：
 
     ```cpp
     CMenu menu;
@@ -194,10 +194,10 @@ ms.locfileid: "72444981"
 
 Win32
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
 [功能表命令](../windows/menu-command-properties.md)<br/>
 [使用者介面物件和命令識別碼](../mfc/user-interface-objects-and-command-ids.md)<br/>
-[Menus](../mfc/menus-mfc.md)<br/>
-[Menus](/windows/win32/menurc/menus)
+[功能表](../mfc/menus-mfc.md)<br/>
+[功能表](/windows/win32/menurc/menus)

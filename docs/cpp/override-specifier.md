@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 71505f8b9b4dc2800e80a78a64f0ca6984af1349
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188476"
 ---
 # <a name="override-specifier"></a>override 規範
 
-您可以使用**覆寫**關鍵字指定成員覆寫基底類別中的虛擬函式的函式。
+您可以使用**override**關鍵字來指定覆寫基類中虛擬函式的成員函式。
 
 ## <a name="syntax"></a>語法
 
@@ -23,11 +23,11 @@ function-declaration override;
 
 ## <a name="remarks"></a>備註
 
-**覆寫**具備內容相關性，具有特殊意義時，才使用成員函式宣告之後; 否則它不是保留的關鍵字。
+覆**寫**會區分內容，而且只有在成員函式宣告之後使用時才具有特殊意義;否則，它不是保留的關鍵字。
 
 ## <a name="example"></a>範例
 
-使用**覆寫**來協助防止意外的繼承行為，在您的程式碼。 下列範例將示範在不用**覆寫**，衍生的類別成員函式行為可能會非預期。 編譯器不會對這個程式碼發出任何錯誤。
+使用覆**寫**有助於防止程式碼中發生意外的繼承行為。 下列範例示範不使用覆**寫**的 where，衍生類別的成員函式行為可能不是預期的。 編譯器不會對這個程式碼發出任何錯誤。
 
 ```cpp
 class BaseClass
@@ -51,7 +51,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-當您使用**覆寫**，編譯器會產生錯誤，而不是以無訊息方式建立新的成員函式。
+當您使用**override**時，編譯器會產生錯誤，而不是以無訊息方式建立新的成員函式。
 
 ```cpp
 class BaseClass
@@ -78,7 +78,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-若要指定無法覆寫函式和類別無法被繼承，請使用[最終](../cpp/final-specifier.md)關鍵字。
+若要指定無法覆寫函數，而且無法繼承類別，請使用[final](../cpp/final-specifier.md)關鍵字。
 
 ## <a name="see-also"></a>另請參閱
 

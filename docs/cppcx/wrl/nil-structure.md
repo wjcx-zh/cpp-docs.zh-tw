@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::Nil
 ms.assetid: ea6dddc1-2bd0-44eb-804e-477572215712
-ms.openlocfilehash: 143b5133589198341cb68378778631e6a78af006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6f71c120e62a11881cf071879ed8a151a9b46b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213665"
 ---
 # <a name="nil-structure"></a>Nil 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -24,7 +24,7 @@ struct Nil;
 
 ## <a name="remarks"></a>備註
 
-用來指出未指定，選用的範本參數。
+用來表示未指定的選擇性範本參數。
 
 **Nil**是空的結構。
 
@@ -34,9 +34,9 @@ struct Nil;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

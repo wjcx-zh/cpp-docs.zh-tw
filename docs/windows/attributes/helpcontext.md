@@ -1,21 +1,21 @@
 ---
-title: helpcoNtext (C++ COM 屬性)
+title: helpcoNtext （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 292db21e8092284a92b09ef3f889bb0475d0d886
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167000"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-指定內容識別碼, 讓使用者可在說明檔中查看此元素的相關資訊。
+指定內容識別碼，讓使用者可在說明檔中查看此**元素的相關**資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ ms.locfileid: "69490917"
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-說明主題的內容識別碼。 請[參閱 HTML 說明:如需內容識別碼的詳細資訊](../../mfc/html-help-context-sensitive-help-for-your-programs.md) , 請查看您程式的即時線上說明。
+說明主題的內容識別碼。 如需內容識別碼的詳細資訊，請參閱[HTML 說明：程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -34,7 +34,7 @@ ms.locfileid: "69490917"
 
 ## <a name="example"></a>範例
 
-如需如何使用**helpcoNtext**的範例, 請參閱[defaultvalue](defaultvalue.md)的範例。
+如需如何使用**helpcoNtext**的範例，請參閱[defaultvalue](defaultvalue.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -44,8 +44,8 @@ ms.locfileid: "69490917"
 |-|-|
 |**適用於**|**介面**、 **typedef**、**類別**、方法、屬性|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

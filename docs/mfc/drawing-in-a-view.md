@@ -11,38 +11,38 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227c4614bad42706893301c69882c3f40af12e2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408015"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214340"
 ---
 # <a name="drawing-in-a-view"></a>在檢視中繪圖
 
-在您的應用程式中的幾乎所有繪圖中的檢視，就會發生`OnDraw`成員函式，您必須在您的檢視類別中覆寫。 (例外狀況是繪製、 討論中的滑鼠[解譯使用者輸入透過檢視](../mfc/interpreting-user-input-through-a-view.md)。)您`OnDraw`覆寫：
+幾乎應用程式中的所有繪圖都會出現在視圖的 `OnDraw` 成員函式中，您必須在 view 類別中覆寫這個函式。 （這是滑鼠繪製的例外狀況，如[透過視圖來解讀使用者輸入](../mfc/interpreting-user-input-through-a-view.md)中所討論）。您的 `OnDraw` 覆寫：
 
-1. 藉由呼叫成員函式，您所提供的文件中取得資料。
+1. 藉由呼叫您提供的檔成員函式來取得資料。
 
-1. 藉由呼叫成員函式的架構會傳遞到裝置內容物件中顯示的資料`OnDraw`。
+1. 藉由呼叫架構傳遞給 `OnDraw`之裝置內容物件的成員函式，來顯示資料。
 
-當文件的資料變更以某種方式時，必須重新繪製檢視，以反映所做的變更。 一般而言，這會發生於使用者進行變更，以透過文件的檢視。 在此情況下，檢視會呼叫文件[UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)通知所有檢視自行更新相同的文件的成員函式。 `UpdateAllViews` 呼叫每個檢視[OnUpdate](../mfc/reference/cview-class.md#onupdate)成員函式。 預設實作`OnUpdate`失效檢視的整個工作區。 您可以覆寫它要使其失效的只有這些區域的工作區對應至文件已修改的部分。
+當檔的資料以某種方式變更時，必須重新繪製此視圖以反映變更。 通常當使用者透過檔的視圖進行變更時，就會發生這種情況。 在此情況下，view 會呼叫檔的[UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)成員函式，以通知相同檔上的所有視圖，以自行更新。 `UpdateAllViews` 會呼叫每個 view 的[OnUpdate](../mfc/reference/cview-class.md#onupdate)成員函式。 預設的 `OnUpdate` 執行會使視圖的整個工作區失效。 您可以覆寫它，使工作區中對應至已修改檔部分的區域失效。
 
-`UpdateAllViews`類別成員函式`CDocument`並`OnUpdate`類別成員函式`CView`可讓您傳遞的描述文件的哪些組件已修改的資訊。 這項 「 提示 」 機制可讓您限制檢視必須重新繪製的區域。 `OnUpdate` 採用兩個 「 提示 」 引數。 第一個*lHint*，型別的**LPARAM**，可讓您傳遞您要在第二個，任何資料*pHint*，型別的`CObject`*，可讓您將指標傳遞給任何衍生的物件從`CObject`。
+類別的 `UpdateAllViews` 成員函式 `CDocument` 和類別 `CView` 的 `OnUpdate` 成員函式，可讓您傳遞描述檔中哪些部分已修改的資訊。 這個「提示」機制可讓您限制視圖必須重繪的區域。 `OnUpdate` 接受兩個「提示」引數。 第一個（ *lHint*）類型為**LPARAM**，可讓您傳遞任何您喜歡的資料，而第二個*pHint*（類型 `CObject`*）可讓您將指標傳遞給衍生自 `CObject`的任何物件。
 
-無效的檢視時，Windows 會傳送它**WM_PAINT**訊息。 檢視的[OnPaint](../mfc/reference/cwnd-class.md#onpaint)處理常式函式會回應訊息藉由建立類別的裝置內容物件[CPaintDC](../mfc/reference/cpaintdc-class.md) ，並呼叫您的檢視`OnDraw`成員函式。 您通常不必撰寫覆寫`OnPaint`處理常式函式。
+當 view 變成無效時，Windows 會將**WM_PAINT**訊息傳送給它。 View 的[OnPaint](../mfc/reference/cwnd-class.md#onpaint)處理常式函式會藉由建立[CPaintDC](../mfc/reference/cpaintdc-class.md)類別的裝置內容物件來回應訊息，並呼叫您的 view `OnDraw` 成員函式。 您通常不需要撰寫覆寫的 `OnPaint` 處理常式函式。
 
-A[裝置內容](../mfc/device-contexts.md)是 Windows 資料結構，其中包含的顯示器或印表機等裝置的繪製屬性的相關資訊。 所有的繪製呼叫都會經過裝置內容物件。 在畫面上，繪製`OnDraw`傳遞`CPaintDC`物件。 繪製在印表機上，它會傳遞[CDC](../mfc/reference/cdc-class.md)對目前印表機設定的物件。
+[裝置內容](../mfc/device-contexts.md)是一種 Windows 資料結構，其中包含裝置繪製屬性的相關資訊，例如顯示或印表機。 所有繪圖呼叫都是透過裝置內容物件進行。 若要在螢幕上繪製，`OnDraw` 會傳遞 `CPaintDC` 物件。 在印表機上繪製時，會將針對目前印表機所設定的[CDC](../mfc/reference/cdc-class.md)物件傳遞給它。
 
-您的程式碼檢視中繪製的第一次擷取文件的指標，則會透過裝置內容的繪製呼叫。 以下簡單的`OnDraw`範例說明此程序：
+您在此視圖中繪製的程式碼會先取得檔的指標，然後透過裝置內容進行繪圖呼叫。 下列簡單的 `OnDraw` 範例說明程式：
 
 [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/cpp/drawing-in-a-view_1.cpp)]
 
-在此範例中，您會定義`GetData`做為衍生的文件類別的成員。
+在此範例中，您會將 `GetData` 函式定義為衍生檔類別的成員。
 
-這個範例會列印任何字串，它會從 文件中，在檢視置中取得。 如果`OnDraw`呼叫是針對螢幕繪圖`CDC`傳入的物件*pDC*會`CPaintDC`的建構函式已呼叫`BeginPaint`。 繪圖函式的呼叫都會經過的裝置內容指標。 裝置內容和繪製呼叫的相關資訊，請參閱類別[CDC](../mfc/reference/cdc-class.md)中*MFC 參考 》* 並[使用視窗物件](../mfc/working-with-window-objects.md)。
+此範例會列印從檔中取得的任何字串，並以視圖為中心。 如果 `OnDraw` 呼叫是用於螢幕繪製，則在*pDC*中傳遞的 `CDC` 物件就是已經呼叫了 `BeginPaint`的 `CPaintDC`。 繪製函式的呼叫是透過裝置內容指標來進行。 如需裝置內容和繪製呼叫的詳細資訊，請參閱*MFC 參考*中的類別[CDC](../mfc/reference/cdc-class.md)和[使用視窗物件](../mfc/working-with-window-objects.md)。
 
-如需如何撰寫的範例`OnDraw`，請參閱 < [MFC 範例](../overview/visual-cpp-samples.md)。
+如需如何撰寫 `OnDraw`的更多範例，請參閱[MFC 範例](../overview/visual-cpp-samples.md#mfc-samples)。
 
 ## <a name="see-also"></a>另請參閱
 

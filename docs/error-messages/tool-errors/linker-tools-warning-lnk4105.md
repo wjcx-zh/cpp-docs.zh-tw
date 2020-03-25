@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4105
 ms.assetid: 6c7bebf4-4ea6-4533-a6ed-e563d43abbd7
-ms.openlocfilehash: 880c8519a530f492d0c322575a1386af8a7d0187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 655a6dfde77984cd0c941ec0d8abb0c4d099c80f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310925"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183289"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>連結器工具警告 LNK4105
 
-使用選項 'option'; 指定任何引數忽略選項
+未使用選項 ' option ' 指定引數;忽略選項
 
-只會發生這個警告時[/LIBPATH](../../build/reference/libpath-additional-libpath.md)選項設定。 如果未指定目錄則使用此選項時，連結器會忽略此選項，並會產生這則警告訊息。
+只有在設定[/LIBPATH](../../build/reference/libpath-additional-libpath.md)選項時，才會發生此警告。 如果未使用此選項指定目錄，則連結器會忽略選項，並產生此警告訊息。
 
-如果您不需要覆寫現有的環境的文件庫設定，請從連結器命令列移除 /LIBPATH 選項。 如果您想要用於程式庫中的其他搜尋路徑，指定下列 /LIBPATH 選項的替代路徑。
+如果您不需要覆寫現有的環境程式庫設定，請從連結器命令列中移除/LIBPATH 選項。 如果您想要使用程式庫的替代搜尋路徑，請在/LIBPATH 選項之後指定替代路徑。
 
 ## <a name="example"></a>範例
 
@@ -27,4 +27,4 @@ ms.locfileid: "62310925"
 link /libpath:c:\filepath\lib bar.obj
 ```
 
-會指示連結器所需的程式庫中搜尋`c:\filepath\lib`之前在預設位置中搜尋。
+會指示連結器在搜尋預設位置之前，先在 `c:\filepath\lib` 中搜尋所需的程式庫。

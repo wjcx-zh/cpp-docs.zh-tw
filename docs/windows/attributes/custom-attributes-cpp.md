@@ -5,18 +5,18 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: fbb1c629f23c5d70a78d62db2a3634cbfc489967
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7053917ebb3cebfe298e9d89f28e357dc7fdbd83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214899"
 ---
 # <a name="custom-attributes-c"></a>自訂屬性 (C++)
 
-自訂屬性是強類型的技術，可讓使用者擴充中繼資料。 本主題將說明如何使用屬性： 指定參數和目標。
+自訂屬性是強型別的技術，可讓使用者擴充中繼資料。 本主題說明如何使用屬性：指定參數和目標。
 
-如需定義新的自訂屬性，請參閱，
+如需定義新自訂屬性的詳細資訊，請參閱。
 
 - [使用者定義屬性](../../extensions/user-defined-attributes-cpp-component-extensions.md)
 

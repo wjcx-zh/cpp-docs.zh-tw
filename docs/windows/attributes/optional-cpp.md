@@ -1,17 +1,17 @@
 ---
-title: 選擇性 (C++ COM 屬性)
+title: 選擇性（C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514353"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214648"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514353"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示可能使用**選擇性**的方式:
+下列程式碼顯示可能使用**選擇性**的方式：
 
 ```cpp
 // cpp_attr_ref_optional.cpp

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304133"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214259"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 巨集
 
-擴展內部快取，其中包含可以建立指定類別的執行個體的處理站。
+填入內部快取，其中包含可建立指定類別之實例的 factory。
 
 ## <a name="syntax"></a>語法
 
@@ -43,24 +43,24 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>參數
 
-*className*<br/>
-要建立之類別的名稱。
+*名*<br/>
+要建立的類別名稱。
 
-*factory*<br/>
-將會建立指定類別的執行個體的 factory。
+*工廠*<br/>
+將建立指定類別之實例的 Factory。
 
 *serverName*<br/>
-指定模組中的處理站的子集的名稱。
+指定模組中工廠子集的名稱。
 
 ## <a name="remarks"></a>備註
 
-請勿使用這些巨集與傳統 COM 除非您使用`#undef`指示詞，以確保`__WRL_WINRT_STRICT__`會移除巨集定義。
+除非您使用 `#undef` 指示詞來確保移除 `__WRL_WINRT_STRICT__` 巨集定義，否則請不要將這些宏與傳統 COM 搭配使用。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標頭：** module. h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

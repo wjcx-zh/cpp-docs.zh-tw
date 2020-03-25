@@ -1,17 +1,17 @@
 ---
-title: idl_module (C++ COM 屬性)
+title: idl_module （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514669"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168040"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -55,17 +55,17 @@ function declaration
 
 ## <a name="remarks"></a>備註
 
-**Idl_module** C++屬性可讓您指定 .dll 檔案中的進入點, 這可讓您從 .dll 檔案匯入。
+**Idl_module** C++屬性可讓您指定 .dll 檔案中的進入點，這可讓您從 .dll 檔案匯入。
 
 **Idl_module**屬性具有類似[模組](/windows/win32/Midl/module)MIDL 屬性的功能。
 
-您可以藉由將 DLL 進入點放在 .idl 檔案的程式庫區塊中, 從您可以從 .dll 檔案匯出的 COM 物件匯出任何專案。
+您可以藉由將 DLL 進入點放在 .idl 檔案的程式庫區塊中，從您可以從 .dll 檔案匯出的 COM 物件匯出任何專案。
 
-您必須透過兩個步驟來使用**idl_module** 。 首先, 您必須定義名稱/DLL 配對。 然後, 當您使用**idl_module**指定進入點時, 請指定名稱和任何其他屬性。
+您必須使用**idl_module**兩個步驟。 首先，您必須定義名稱/DLL 配對。 然後，當您使用**idl_module**指定進入點時，請指定名稱和任何其他屬性。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示如何使用**idl_module**屬性:
+下列程式碼顯示如何使用**idl_module**屬性：
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp
@@ -84,8 +84,8 @@ void FuncName(int i);
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

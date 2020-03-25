@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-ms.openlocfilehash: 0e5b45042c9959b87ad5db97ab755e49de469149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bca49479d97ee371f6728f90a9aa96da0387f54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386040"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213833"
 ---
 # <a name="invokemodeoptions-structure"></a>InvokeModeOptions 結構
 
-指定要委派佇列中的所有事件的都引發還是停止引發之後會引發錯誤。 允許的值會指定在`InvokeMode`列舉。
+指定是否要在委派佇列中引發所有事件，或在發生錯誤後停止引發。 可在 `InvokeMode` 列舉中指定允許的值。
 
 ## <a name="syntax"></a>語法
 
@@ -35,11 +35,11 @@ struct InvokeModeOptions
 
 ## <a name="requirements"></a>需求
 
-**標頭：** event.h
+**Header：** 事件。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 
 [Microsoft::WRL 命名空間](microsoft-wrl-namespace.md)<br/>
-[Microsoft::WRL::AgileEventSource 類別](agileeventsource-class.md)
+[Microsoft：： WRL：： AgileEventSource 類別](agileeventsource-class.md)

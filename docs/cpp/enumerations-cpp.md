@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180182"
 ---
 # <a name="enumerations-c"></a>列舉 (C++)
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 請注意，程式行 `hand = account_num;` 仍然會導致因為不限範圍的列舉而發生的錯誤，如上所示。 使用明確轉換時，允許這個行為。 不過，使用限定範圍列舉時，不再允許在沒有明確轉型的情況下，於下一個陳述式 `account_num = Suit::Hearts;` 中嘗試轉換。
 
-## <a name="no_enumerators"></a>沒有枚舉器的列舉
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>沒有枚舉器的列舉
 
 **Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：藉由定義具有明確基礎類型的列舉（一般或範圍），而不使用任何列舉值，您實際上可以導入不會隱含轉換為任何其他類型的新整數類型。 藉由使用這個類型，而不是其內建的基礎類型，您可以消除因不小心隱含轉換而造成的微妙錯誤的可能性。
 

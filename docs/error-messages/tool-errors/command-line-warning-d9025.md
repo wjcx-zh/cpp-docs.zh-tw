@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4afd4d4dc07ffaae6038c025ee371278ebbebea6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214090"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196712"
 ---
 # <a name="command-line-warning-d9025"></a>命令列警告 D9025
 
-覆寫 '1' 與 'option2'
+以 ' option2 ' 覆寫 ' option1 '
 
-*Option1*選項已指定，但再覆寫*option2*。 *Option2*選項使用。
+已指定*option1*選項，但之後已由*option2*覆寫。 已使用*option2*選項。
 
-如果兩個選項指定了相衝突或不相容的指示詞，則會使用指定或隱含的最遠到右邊的選項，在命令列上的指示詞。
+如果兩個選項指定了矛盾或不相容的指示詞，則會使用命令列上最右邊的選項中指定或隱含的指示詞。
 
-如果您從開發環境中，編譯時，收到這個警告，並不確定的選項衝突來自何處，請考慮下列各項：
+如果您在從開發環境編譯時收到此警告，而且不確定衝突的選項來自何處，請考慮下列事項：
 
-- 在程式碼或專案的專案設定中，則可以指定選項。 如果您查看編譯器[命令列屬性頁](../../build/reference/command-line-property-pages.md)如果您看到中的選項衝突**所有選項**欄位則選項會設定在專案的屬性頁面中，否則選項在原始程式碼中設定。
+- 您可以在程式碼或專案的專案設定中指定選項。 如果您查看編譯器的[命令列屬性頁](../../build/reference/command-line-property-pages.md)，而且在 [**所有選項**] 欄位中看到衝突的選項，則會在專案的屬性頁中設定選項，否則會在原始程式碼中設定選項。
 
-   如果選項設定在專案屬性頁中，尋找編譯器前置處理器 屬性頁面上 （在 方案總管 中選取專案節點）。  如果您看不見的選項那里設定，請檢查並確定每個來源的程式碼檔案 （在 方案總管 中) 的前置處理器 屬性頁面設定它未在該處加入。
+   如果是在專案的屬性頁中設定選項，請查看編譯器的 [預處理器] 屬性頁（已在方案總管中選取專案節點）。  如果您看不到 [設定] 選項，請檢查每個原始程式碼檔的 [預處理器] 屬性頁設定（方案總管），以確定它並未新增至該處。
 
-   如果在程式碼中設定的選項可以設定在程式碼或 windows 標頭。  您可能會嘗試建立前置處理過的檔案 ([/P](../../build/reference/p-preprocess-to-a-file.md))，並搜尋符號。
+   如果您在程式碼中設定選項，可以在程式碼或 windows 標頭中設定。  您可能會嘗試建立前置處理過的檔案（[/p](../../build/reference/p-preprocess-to-a-file.md)），然後搜尋該檔案中的符號。

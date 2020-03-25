@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-ms.openlocfilehash: 8d592eb97f70bfc26c075317c57ec4d5c78e3956
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3a9594a77a9ada971213eaea74a9842bd96a54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301587"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179337"
 ---
 # <a name="mutable-data-members-c"></a>可變動的資料成員 (C++)
 
-這個關鍵字只能套用至非靜態和非常數類別的資料成員。 如果資料成員宣告**可變**，則將值指派給這個資料成員，從**const**成員函式。
+這個關鍵字只能套用至非靜態和非常數類別的資料成員。 如果資料成員宣告為可**變動，則**從**const**成員函式將值指派給這個資料成員是合法的。
 
 ## <a name="syntax"></a>語法
 
@@ -25,7 +25,7 @@ mutable member-variable-declaration;
 
 ## <a name="remarks"></a>備註
 
-例如，下列程式碼會編譯無誤因為`m_accessCount`被宣告為**可變動**，，因此可以藉由修改`GetFlag`即使`GetFlag`為 const 成員函式。
+例如，下列程式碼會編譯而不會發生錯誤，因為 `m_accessCount` 已經宣告**為可變動，因此**即使 `GetFlag` 是 const 成員函式，也可以透過 `GetFlag` 修改。
 
 ```cpp
 // mutable.cpp

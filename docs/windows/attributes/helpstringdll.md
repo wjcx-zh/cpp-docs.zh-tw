@@ -1,21 +1,21 @@
 ---
-title: helpstringdll (C++ COM 屬性)
+title: helpstringdll （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501472"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168118"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-指定要用來執行檔字串查閱 (當地語系化) 之 DLL 的名稱。
+指定要用來執行檔字串查閱（當地語系化）之 DLL 的名稱。
 
 ## <a name="syntax"></a>語法
 
@@ -53,10 +53,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**適用於**|**類別**,**介面**, 介面方法|
+|**適用於**|**類別**，**介面**，介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1103
 ms.assetid: c8e9bc54-6a71-471c-899e-6f98122ee3c4
-ms.openlocfilehash: 1dc70044113e06b4a19e1bbe1a054c944761214b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 668b354750171daefe0713d32f84f835134f93c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195379"
 ---
 # <a name="linker-tools-error-lnk1103"></a>連結器工具錯誤 LNK1103
 
-偵錯資訊損毀;重新編譯模組
+調試資訊已損毀;重新編譯模組
 
-由於編譯終止建立有效的物件檔案之前，可能被造成這個錯誤。
+造成此錯誤的原因可能是編譯在建立有效的物件檔案之前終止。
 
-重新編譯指定的物件檔案。 如果需要重新編譯無法修正問題，請注意錯誤的情況下，嘗試找出問題，並建立可重現的測試案例。 請參考的技術支援說明檔或其中一個您手冊中的 [技術支援] 區段。
+重新編譯指定的物件檔案。 如果重新編譯無法更正問題，請注意錯誤的狀況，嘗試找出問題所在，並建立可重現的測試案例。 然後參閱技術支援說明檔，或其中一個手冊中的技術支援一節。

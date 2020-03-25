@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-ms.openlocfilehash: ec2d6bf6bac46cca8bdc2e3b8fe7cc6b7799d78a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 056db975fecef4e101dbbba7e2084236489498c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165914"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202861"
 ---
 # <a name="fatal-error-c1853"></a>嚴重錯誤 C1853
 
-> '*檔名*' 先行編譯標頭檔是從舊版的編譯器，或先行編譯標頭是C++而且您正在使用它從 C （反之亦然）
+> '*filename*' 先行編譯標頭檔來自舊版編譯器，或先行編譯的標頭是C++ ，而且您正從 C 使用它（反之亦然）
 
 可能的原因：
 
-- 先行編譯標頭已與先前的編譯器版本進行編譯。 請嘗試重新編譯的標頭，使用目前的編譯器。
+- 先行編譯標頭檔是以先前的編譯器版本編譯。 請嘗試使用目前的編譯器重新編譯標頭。
 
-- 先行編譯標頭是C++，而且您會使用它從 c 與 C 搭配使用的標頭所指定的其中一個[/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項，或將來源檔案的後置詞變更為"c"。 如需詳細資訊，請參閱 <<c0> [ 先行編譯的程式碼的兩個選擇](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code)。
+- 先行編譯的標C++頭為，而且您正從 c 使用它。請嘗試重新編譯標頭以搭配 c 使用，方法是指定其中一個[/tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項，或將原始程式檔的尾碼變更為 "C"。 如需詳細資訊，請參閱先行[編譯器代碼的兩個選擇](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code)。

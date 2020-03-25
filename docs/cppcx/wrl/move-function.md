@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398169"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213703"
 ---
 # <a name="move-function"></a>Move 函式
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -33,23 +33,23 @@ inline typename RemoveReference<T>::Type&& Move(
 引數型別。
 
 *arg*<br/>
-若要移動的引數。
+要移動的引數。
 
 ## <a name="return-value"></a>傳回值
 
-參數*arg*之後參考或右值參考的特性，如果有的話，已移除。
+參考或右值參考特性（如果有的話）之後的參數*arg*已移除。
 
 ## <a name="remarks"></a>備註
 
-將指定的引數從一個位置移到另一個。
+將指定的引數從一個位置移動到另一個位置。
 
-如需詳細資訊，請參閱 <<c0>  **移動語意**一節[右值參考宣告子： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)。
+如需詳細資訊，請參閱右值參考宣告子的**移動語義**一節[： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** internal.h
+**標頭：** 內部。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

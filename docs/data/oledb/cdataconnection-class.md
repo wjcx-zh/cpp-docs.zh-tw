@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: e966ce8d0f8b277c0edde2b0b9b345a11c6a964c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 385445081f84f65ff7030466a238a5a96abd63be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212055"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 類別
 
@@ -115,7 +115,7 @@ class CDataConnection
 > [!NOTE]
 >  如果您要建立需要處理多個會話的資料庫應用程式，您將需要使用[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。
 
-## <a name="cdataconnection"></a>CDataConnection：： CDataConnection
+## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a>CDataConnection：： CDataConnection
 
 具現化並初始化 `CDataConnection` 物件。
 
@@ -137,7 +137,7 @@ CDataConnection(const CDataConnection &ds);
 
 第二個覆寫會建立新的 `CDataConnection` 物件，其設定相當於您指定的資料連線物件。
 
-## <a name="copy"></a>CDataConnection：： Copy
+## <a name="cdataconnectioncopy"></a><a name="copy"></a>CDataConnection：： Copy
 
 建立現有資料連線的複本。
 
@@ -152,7 +152,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *ds*<br/>
 在要複製之現有資料連線的參考。
 
-## <a name="open"></a>CDataConnection：： Open
+## <a name="cdataconnectionopen"></a><a name="open"></a>CDataConnection：： Open
 
 使用初始化字串開啟與資料來源的連接。
 
@@ -171,7 +171,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 標準 HRESULT。
 
-## <a name="opennewsession"></a>CDataConnection：： OpenNewSession
+## <a name="cdataconnectionopennewsession"></a><a name="opennewsession"></a>CDataConnection：： OpenNewSession
 
 使用目前連線物件的資料來源來開啟新的會話。
 
@@ -194,7 +194,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 標準 HRESULT。
 
-## <a name="op_bool"></a>CDataConnection：： operator BOOL
+## <a name="cdataconnectionoperator-bool"></a><a name="op_bool"></a>CDataConnection：： operator BOOL
 
 判斷目前的會話是否已開啟。
 
@@ -208,7 +208,7 @@ operator BOOL() throw();
 
 傳回**BOOL** （MFC typedef）值。 **TRUE**表示目前的會話已開啟;**FALSE**表示目前的會話已關閉。
 
-## <a name="op_bool_ole"></a>CDataConnection：： operator bool （OLE DB）
+## <a name="cdataconnectionoperator-bool-ole-db"></a><a name="op_bool_ole"></a>CDataConnection：： operator bool （OLE DB）
 
 判斷目前的會話是否已開啟。
 
@@ -222,7 +222,7 @@ operator bool() throw();
 
 傳回**bool** （C++資料類型）值。 **true**表示目前的會話已開啟;**false**表示目前的會話已關閉。
 
-## <a name="op_cdata_amp"></a>CDataConnection：： operator CDataSource&amp;
+## <a name="cdataconnectionoperator-cdatasourceamp"></a><a name="op_cdata_amp"></a>CDataConnection：： operator CDataSource&amp;
 
 傳回包含 `CDataSource` 物件的參考。
 
@@ -244,7 +244,7 @@ operator const CDataSource&() throw();
 
 [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)]
 
-## <a name="op_cdata_star"></a>CDataConnection：： operator CDataSource *
+## <a name="cdataconnectionoperator-cdatasource"></a><a name="op_cdata_star"></a>CDataConnection：： operator CDataSource *
 
 將指標傳回至包含的 `CDataSource` 物件。
 
@@ -260,7 +260,7 @@ operator const CDataSource*() throw();
 
 如需使用範例，請參閱[Operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) 。
 
-## <a name="op_csession_amp"></a>CDataConnection：： operator CSession&amp;
+## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a>CDataConnection：： operator CSession&amp;
 
 傳回包含 `CSession` 物件的參考。
 
@@ -282,7 +282,7 @@ operator const CSession&();
 
 [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]
 
-## <a name="op_csession_star"></a>CDataConnection：： operator CSession *
+## <a name="cdataconnectionoperator-csession"></a><a name="op_csession_star"></a>CDataConnection：： operator CSession *
 
 將指標傳回至包含的 `CSession` 物件。
 

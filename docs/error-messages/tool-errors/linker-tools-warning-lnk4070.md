@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
-ms.openlocfilehash: e7139b21f053ea8633356c7194cd719a6a4aef35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391a477625b51fd37eacc5d455801ce90d2abbc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410261"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194001"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>連結器工具警告 LNK4070
 
-/Out: filename 中的指示詞。EXP 與輸出檔名 'filename';忽略指示詞
+/OUT：中的 filename 指示詞。EXP 與輸出檔案名 ' filename ' 不同;忽略指示詞
 
-`filename`中指定[名稱](../../build/reference/name-c-cpp.md)或[程式庫](../../build/reference/library.md).exp 檔案建立時的陳述式與輸出`filename`，已預設或指定了[/Out](../../build/reference/out-output-file-name.md)選項。
+建立 .exp 檔案時，[名稱](../../build/reference/name-c-cpp.md)或連結[庫](../../build/reference/library.md)語句中所指定的 `filename`，會與預設假設或使用[/out](../../build/reference/out-output-file-name.md)選項指定的輸出 `filename` 不同。
 
-如果您變更輸出檔案在開發環境中和未更新專案的.def 檔的名稱，您會看到這個警告。 手動更新.def 檔案，以解決這個警告。
+如果您在開發環境中變更輸出檔案的名稱，而且未更新專案的 .def 檔案，就會看到這個警告。 手動更新 .def 檔案以解決此警告。
 
-使用產生的 DLL 的用戶端程式可能會遇到的問題。
+使用產生的 DLL 的用戶端程式可能會發生問題。

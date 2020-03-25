@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: f9ca61c9d734ccdd6b8d8374ed3a7c4128ee3d5e
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f37ce13e27f9b141eab928b88102813a5b6d65f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857368"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177881"
 ---
 # <a name="noreturn"></a>noreturn
 
@@ -43,9 +43,9 @@ int main() {
 }
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [__declspec](../cpp/declspec.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

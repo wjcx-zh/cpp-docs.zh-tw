@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 2fbe461bfc812c5ac9b9a09aa3ed31c0a2a638e1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: db12af1aecc094e6c04ab37b5a70a0acd97e39e9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210414"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 類別
 
@@ -161,7 +161,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))是基底資料列集介面。
 
-## <a name="addrefrows"></a>IRowsetImpl：： AddRefRows
+## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a>IRowsetImpl：： AddRefRows
 
 將參考次數 (Reference Count) 加入至現有的資料列控制代碼。
 
@@ -178,7 +178,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IRowset：： AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) 。
 
-## <a name="createrow"></a>IRowsetImpl：： CreateRow
+## <a name="irowsetimplcreaterow"></a><a name="createrow"></a>IRowsetImpl：： CreateRow
 
 由[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)呼叫的 helper 方法，用來配置新的 `HROW`。
 
@@ -205,7 +205,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 
 如果資料列存在，這個方法會呼叫[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)並傳回。 否則，它會配置 RowClass 範本變數的新實例，並將它新增至[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)。
 
-## <a name="getdata"></a>IRowsetImpl：：操作
+## <a name="irowsetimplgetdata"></a><a name="getdata"></a>IRowsetImpl：：操作
 
 從資料列集的資料列複本擷取資料。
 
@@ -231,7 +231,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 也會使用 OLE DB 的資料轉換 DLL 來處理資料轉換。
 
-## <a name="getdbstatus"></a>IRowsetImpl：： GetDBStatus
+## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a>IRowsetImpl：： GetDBStatus
 
 傳回指定欄位的 DBSTATUS 狀態旗標。
 
@@ -254,7 +254,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 資料行的[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))旗標。
 
-## <a name="getnextrows"></a>IRowsetImpl：： GetNextRows
+## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a>IRowsetImpl：： GetNextRows
 
 循序擷取資料列，並且會記住上一個位置。
 
@@ -272,7 +272,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IRowset：： GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) 。
 
-## <a name="irowsetimpl"></a>IRowsetImpl：： IRowsetImpl
+## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a>IRowsetImpl：： IRowsetImpl
 
 建構函式。
 
@@ -286,7 +286,7 @@ IRowsetImpl();
 
 您通常不需要直接呼叫這個方法。
 
-## <a name="refrows"></a>IRowsetImpl：： RefRows
+## <a name="irowsetimplrefrows"></a><a name="refrows"></a>IRowsetImpl：： RefRows
 
 由[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)和[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)呼叫，以遞增或釋放現有資料列控制碼的參考計數。
 
@@ -308,7 +308,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 標準的 HRESULT 值。
 
-## <a name="releaserows"></a>IRowsetImpl：： ReleaseRows
+## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a>IRowsetImpl：： ReleaseRows
 
 釋放資料列。
 
@@ -326,7 +326,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) 。
 
-## <a name="restartposition"></a>IRowsetImpl：： RestartPosition
+## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a>IRowsetImpl：： RestartPosition
 
 將下一個提取位置重新置放到其初始位置;也就是，第一次建立資料列集的位置。
 
@@ -344,7 +344,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 在呼叫 `GetNextRow` 之前，不會定義資料列集位置。 您可以藉由呼叫 `RestartPosition` 然後向前提取或向後移動，在 rowet 中向後移動。
 
-## <a name="setdbstatus"></a>IRowsetImpl：： SetDBStatus
+## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a>IRowsetImpl：： SetDBStatus
 
 設定指定欄位的 DBSTATUS 狀態旗標。
 
@@ -375,7 +375,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 
 提供者會覆寫這個函式，以提供 DBSTATUS_S_ISNull 和 DBSTATUS_S_DEFAULT 的特殊處理。
 
-## <a name="bcanfetchback"></a>IRowsetImpl：： m_bCanFetchBack
+## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a>IRowsetImpl：： m_bCanFetchBack
 
 指出提供者是否支援反向提取。
 
@@ -389,7 +389,7 @@ unsigned m_bCanFetchBack:1;
 
 連結至 `DBPROPSET_ROWSET` 群組中的 `DBPROP_CANFETCHBACKWARDS` 屬性。 提供者必須支援 `DBPROP_CANFETCHBACKWARDS`，才能讓 `m_bCanFetchBackwards` 為**true**。
 
-## <a name="bcanscrollback"></a>IRowsetImpl：： m_bCanScrollBack
+## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a>IRowsetImpl：： m_bCanScrollBack
 
 指出提供者是否可以將其游標向後滾動。
 
@@ -403,7 +403,7 @@ unsigned  m_bCanScrollBack:1;
 
 連結至 `DBPROPSET_ROWSET` 群組中的 `DBPROP_CANSCROLLBACKWARDS` 屬性。 提供者必須支援 `DBPROP_CANSCROLLBACKWARDS`，才能讓 `m_bCanFetchBackwards` 為**true**。
 
-## <a name="breset"></a>IRowsetImpl：： m_bReset
+## <a name="irowsetimplm_breset"></a><a name="breset"></a>IRowsetImpl：： m_bReset
 
 位旗標，用來判斷資料指標位置是否定義在資料列集上。
 
@@ -417,7 +417,7 @@ unsigned m_bReset:1;
 
 如果取用者以負數 `lOffset` 或*cRows*呼叫[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) ，而 `m_bReset` 為 true，`GetNextRows` 會移到資料列集的結尾。 如果 `m_bReset` 為 false，取用者會收到錯誤碼，符合 OLE DB 規格。 第一次建立資料列集時，以及取用者呼叫[IRowsetImpl：： RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)時，`m_bReset` 旗標會設定為**true** 。 當您呼叫 `GetNextRows`時，它會設定為**false** 。
 
-## <a name="irowset"></a>IRowsetImpl：： m_iRowset
+## <a name="irowsetimplm_irowset"></a><a name="irowset"></a>IRowsetImpl：： m_iRowset
 
 資料列集的索引，代表資料指標。
 
@@ -427,7 +427,7 @@ unsigned m_bReset:1;
 DBROWOFFSET m_iRowset;
 ```
 
-## <a name="rgrowhandles"></a>IRowsetImpl：： m_rgRowHandles
+## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a>IRowsetImpl：： m_rgRowHandles
 
 目前提供者所包含的資料列控制碼對應，以回應 `GetNextRows`。
 

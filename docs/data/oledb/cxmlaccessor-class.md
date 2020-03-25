@@ -20,16 +20,16 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25fb3635f70ee9a0e38ddcdbcf373fe6b1b84c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211038"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 類別
 
-可讓您存取資料來源做為字串資料，就不會知道的資料存放區的結構描述 （基礎結構）。
+當您不知道資料存放區的架構（基礎結構）時，可讓您以字串資料的形式存取資料來源。
 
 ## <a name="syntax"></a>語法
 
@@ -47,24 +47,24 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 |||
 |-|-|
-|[GetXMLColumnData](#getxmlcolumndata)|擷取的資料行資訊。|
-|[GetXMLRowData](#getxmlrowdata)|資料列所擷取資料表的整個的內容。|
+|[GetXMLColumnData](#getxmlcolumndata)|抓取資料行資訊。|
+|[GetXMLRowData](#getxmlrowdata)|依資料列抓取資料表的整個內容。|
 
 ## <a name="remarks"></a>備註
 
-不過，`CXMLAccessor`不同於`CDynamicStringAccessorW`，因為它會將轉換從資料存放區做為 XML 格式 （標記） 的資料存取的所有資料。 這是特別適用於 XML 感知的 Web 網頁的輸出。 XML 標記名稱將會儘可能密集地符合資料存放區的資料行名稱。
+不過，`CXMLAccessor` 不同于 `CDynamicStringAccessorW`，它會將從資料存放區存取的所有資料轉換為 XML 格式（已標記）的資料。 這特別適用于輸出至 XML 感知的網頁。 XML 標記名稱會盡可能符合資料存放區的資料行名稱。
 
-使用`CDynamicAccessor`方法來取得資料行資訊。 您可以使用此資料行資訊在執行階段動態建立存取子。
+使用 `CDynamicAccessor` 方法來取得資料行資訊。 您可以使用此資料行資訊，在執行時間動態建立存取子。
 
-資料行資訊會儲存在緩衝區中由這個類別建立和管理。 取得資料行資訊使用[GetXMLColumnData](#getxmlcolumndata) ，或取得資料行資料所使用的資料列[GetXMLRowData](#getxmlrowdata)。
+資料行資訊會儲存在此類別所建立和管理的緩衝區中。 使用[GetXMLColumnData](#getxmlcolumndata)取得資料行資訊，或使用[GetXMLRowData](#getxmlrowdata)依資料列取得資料行資料。
 
 ## <a name="example"></a>範例
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
+## <a name="cxmlaccessorgetxmlcolumndata"></a><a name="getxmlcolumndata"></a>CXMLAccessor：： GetXMLColumnData
 
-依資料行中擷取為 XML 格式的字串資料，資料表的資料行型別資訊。
+依資料行，將資料表的資料行類型資訊當做 XML 格式的字串資料來抓取。
 
 ### <a name="syntax"></a>語法
 
@@ -75,15 +75,15 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 #### <a name="parameters"></a>參數
 
 *strOutput*<br/>
-[out]包含要擷取的資料行型別資訊的字串緩衝區的參考。 字串格式化與資料存放區的資料行名稱相符的 XML 標記名稱。
+脫銷字串緩衝區的參考，其中包含要抓取的資料行類型資訊。 字串會使用符合資料存放區之資料行名稱的 XML 標記名稱進行格式化。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-下面顯示如何在 XML 中格式化的資料行型別資訊。 `type` 指定資料行的資料類型。 請注意，資料類型基礎 OLE DB 資料類型，不是其中一個所存取的資料庫。
+以下顯示如何在 XML 中格式化資料行類型資訊。 `type` 指定資料行的資料類型。 請注意，資料類型是以 OLE DB 資料類型為基礎，而不是要存取的資料庫。
 
 `<columninfo>`
 
@@ -91,9 +91,9 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
+## <a name="cxmlaccessorgetxmlrowdata"></a><a name="getxmlrowdata"></a>CXMLAccessor：： GetXMLRowData
 
-擷取為 XML 格式的字串資料的資料表的整個內容，依資料列。
+依資料列，將資料表的整個內容當做 XML 格式的字串資料來抓取。
 
 ### <a name="syntax"></a>語法
 
@@ -105,18 +105,18 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 #### <a name="parameters"></a>參數
 
 *strOutput*<br/>
-[out]包含要擷取的資料表資料之緩衝區的參考。 資料會格式化為字串資料的資料存放區的資料行名稱相符的 XML 標記名稱。
+脫銷包含要抓取的資料表資料之緩衝區的參考。 資料會格式化為字串資料，其 XML 標記名稱符合資料存放區的資料行名稱。
 
 *bAppend*<br/>
-[in]布林值，指定是否要將字串附加至輸出資料的結尾。
+在布林值，指定是否要在輸出資料的結尾附加字串。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-下面顯示如何在 XML 中格式化資料列資料。 `DATA` 以下呈現的資料列資料。 使用 move 方法移至所需的資料列。
+以下顯示如何在 XML 中格式化資料列資料。 以下 `DATA` 代表資料列資料。 使用 move 方法移至所需的資料列。
 
 `<row>`
 
@@ -126,7 +126,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>

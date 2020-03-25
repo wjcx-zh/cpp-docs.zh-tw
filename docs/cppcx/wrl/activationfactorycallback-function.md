@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214210"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 函式
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -30,26 +30,26 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ### <a name="parameters"></a>參數
 
 *activationId*<br/>
-控制代碼指定的執行階段類別名稱的字串。
+指定執行時間類別名稱之字串的控制碼。
 
 *ppFactory*<br/>
-這項作業完成時，都會對應至參數啟動處理站*activationId*。
+當此作業完成時，就是對應至參數*activationId*的啟動處理站。
 
 ## <a name="return-value"></a>傳回值
 
-若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 可能的失敗的 Hresult 為 CLASS_E_CLASSNOTAVAILABLE 和 E_INVALIDARG。
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 可能的失敗 Hresult CLASS_E_CLASSNOTAVAILABLE 和 E_INVALIDARG。
 
 ## <a name="remarks"></a>備註
 
-取得啟用 factory 做為指定的啟用識別碼。
+取得指定之啟用識別碼的啟用 factory。
 
-Windows 執行階段會呼叫此回呼函式，來要求執行階段類別名稱指定的物件。
+Windows 執行階段會呼叫這個回呼函式，以要求其執行時間類別名稱所指定的物件。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標頭：** module. h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

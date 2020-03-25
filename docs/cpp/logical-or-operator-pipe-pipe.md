@@ -1,5 +1,5 @@
 ---
-title: '邏輯 OR 運算子: | |'
+title: 邏輯 OR 運算子：||
 ms.date: 06/14/2018
 f1_keywords:
 - '||'
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b2bc024dd7223ac7adacc72924f5ee289bab37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368678"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178076"
 ---
-# <a name="logical-or-operator-"></a>邏輯 OR 運算子: | |
+# <a name="logical-or-operator-"></a>邏輯 OR 運算子：||
 
 ## <a name="syntax"></a>語法
 
-> *logical-or-expression* **||** *logical-and-expression*
+> *邏輯 or 運算式* **||** *的邏輯 and 運算式*
 
 ## <a name="remarks"></a>備註
 
-使用邏輯 OR 運算子 ( **||** ) 會傳回布林值 TRUE，如果任一個或兩個運算元為 TRUE，否則傳回 FALSE。 運算元會隱含轉換成類型**bool**之前評估和結果為類型**bool**。 邏輯 OR 具有由左至右的順序關聯性。
+如果任一個或兩個運算元都是 TRUE，則邏輯 OR 運算子（ **||** ）會傳回布林值 true，否則會傳回 FALSE。 在評估之前，運算元會隱含地轉換為**bool**類型，而結果會是**bool**類型。 邏輯 OR 具有由左至右的順序關聯性。
 
 邏輯 OR 運算子的運算元不需要屬於相同類型，不過必須屬於整數類資料類型或指標類型。 運算元通常是關聯或相等運算式。
 
@@ -38,9 +38,9 @@ printf( "%d" , (x == w || x == y || x == z) );
 
 在上述範例中，如果 `x` 等於 `w`、`y` 或 `z`，則 `printf` 函式的第二個引數判斷值為 true，並且印出值 1。 否則，它的判斷值為 false，並且印出值 0。 只要其中一項條件的判斷值為 true，求值就會停止。
 
-## <a name="operator-keyword-for-124124"></a>運算子關鍵字&#124;&#124;
+## <a name="operator-keyword-for-124124"></a>的 Operator 關鍵字&#124;&#124;
 
-**或是**運算子是相等的文字 **||** 。 有兩種方式來存取 **或**在程式中的運算子： 包含標頭檔\<iso646.h> >，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。
+**Or**運算子是 **||** 的文字對等用法。 有兩種方式可存取您程式中的**or**運算子：包含標頭檔 \<iso646 >，或使用[/za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能）編譯器選項進行編譯。
 
 ## <a name="example"></a>範例
 

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447250"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212234"
 ---
 # <a name="cbookmark-class"></a>CBookmark 類別
 
@@ -117,7 +117,7 @@ class CBookmark< 0 > : public CBookmarkBase
 
 `CBookmark<0>` 是 `CBookmark`的範本特製化;其緩衝區會在執行時間以動態方式建立。
 
-## <a name="cbookmark"></a>CBookmark：： CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark：： CBookmark
 
 建構函式。
 
@@ -140,7 +140,7 @@ CBookmark(DBLENGTH nSize);
 > [!NOTE]
 >  此函式僅適用于 `CBookmark<0>`。
 
-## <a name="getbuffer"></a>CBookmark：： GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark：： GetBuffer
 
 抓取書簽緩衝區的指標。
 
@@ -154,7 +154,7 @@ virtual BYTE* GetBuffer() const throw();
 
 書簽緩衝區的指標。
 
-## <a name="getsize"></a>CBookmark：： GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark：： GetSize
 
 擷取書籤緩衝區的大小。
 
@@ -168,7 +168,7 @@ virtual DBLENGTH GetSize() const throw();
 
 以位元組為單位的緩衝區大小。
 
-## <a name="setbookmark"></a>CBookmark：： SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark：： SetBookmark
 
 將*pBuffer*所參考的書簽值複製到 `CBookmark` 緩衝區，並將緩衝區大小設定為*nSize*。
 
@@ -194,7 +194,7 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 此函式僅適用于 `CBookmark<0>`。
 
-## <a name="operator"></a>CBookmark：： operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark：： operator =
 
 指派 `CBookmark` 物件給另一個。
 

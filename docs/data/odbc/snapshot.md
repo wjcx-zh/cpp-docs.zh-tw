@@ -1,5 +1,5 @@
 ---
-title: 快照集
+title: 快照式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC cursor library [ODBC], snapshots
@@ -11,38 +11,38 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62b5952f3052a3248175ce7892b1cf4615f1dd17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212689"
 ---
-# <a name="snapshot"></a>快照集
+# <a name="snapshot"></a>快照式
 
-快照集是存在於的建立快照集時，會反映資料的靜態檢視表的資料錄集。 當您開啟快照集，並移至 所有記錄時，它所包含的一組記錄，且其值不會變更之前呼叫重建快照集`Requery`。
+快照集是一種記錄檔，反映資料在建立快照集時所存在的靜態觀點。 當您開啟快照集並移至所有記錄時，它所包含的一組記錄和其值不會變更，直到您藉由呼叫 `Requery`重建快照為止。
 
 > [!NOTE]
->  本主題適用於 MFC ODBC 類別。 如果您使用 MFC DAO 類別，而不 MFC ODBC 類別，請參閱[cdaorecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open)快照集類型的資料錄集的描述。
+>  本主題適用於 MFC ODBC 類別。 如果您使用 MFC DAO 類別，而不是 MFC ODBC 類別，請參閱[CDaoRecordset：： Open](../../mfc/reference/cdaorecordset-class.md#open) ，以取得快照集類型記錄集的描述。
 
-您可以建立可更新或唯讀快照集與資料庫類別。 不同於動態集，可更新的快照集不會反映記錄值的其他使用者所做的變更，但它未反映更新和刪除由您的程式。 資料錄集加入快照集不會成為可見到快照集之前呼叫`Requery`。
+您可以使用資料庫類別來建立可更新或唯讀的快照集。 不同于動態集，可更新的快照不會反映其他使用者對記錄值所做的變更，但會反映程式所做的更新和刪除。 加入至快照集的記錄在您呼叫 `Requery`之前，不會顯示在快照中。
 
 > [!TIP]
->  快照集是 ODBC 靜態資料指標。 靜態資料指標無法實際取得資料列直到您捲動至該記錄。 若要確保立即擷取所有的記錄，您可以捲動至您的資料錄集的結尾，然後捲動至您想要查看第一筆記錄。 不過請注意，，向下捲動到結尾需要額外的負荷，而且可能降低效能。
+>  快照集是 ODBC 靜態資料指標。 靜態資料指標實際上不會取得資料列，直到您滾動到該記錄為止。 若要確保立即抓取所有記錄，您可以滾動到記錄集的結尾，然後流覽至您想要查看的第一筆記錄。 不過要注意的是，滾動到結尾需要額外的負荷，而且可能會降低效能。
 
-當您需要保持固定，您在作業期間，當您會產生一份報表，或執行計算的資料時，快照集是最有價值。 即便如此，資料來源可以開始分枝成大幅從快照集，因此您可能想要不時重建它。
+當您需要資料在作業期間維持固定的狀態時，快照集最有價值，如同您在產生報表或執行計算時一樣。 就算如此，資料來源也可能會從您的快照集中分離，因此您可能會想要在一段時間後重建。
 
-快照集支援根據 ODBC 資料指標程式庫，可提供靜態資料指標以及位於任何層級 1 驅動程式的更新 （需要可更新性）。 在記憶體中的這項支援，必須載入資料指標程式庫 DLL。 當您建構`CDatabase`物件並呼叫其`OpenEx`成員函式，您必須指定`CDatabase::useCursorLib`選項*dwOptions*參數。 如果您呼叫`Open`預設會載入成員函式，資料指標程式庫。 如果您使用動態集，而不快照集，您不想造成要載入的資料指標程式庫。
+快照集支援是以 ODBC 資料指標程式庫為基礎，它會針對任何層級1驅動程式提供靜態資料指標和位置更新（可更新的需求）。 資料指標程式庫 DLL 必須載入記憶體中，才能進行這項支援。 當您建立 `CDatabase` 物件並呼叫其 `OpenEx` 成員函式時，您必須指定*dwOptions*參數的 `CDatabase::useCursorLib` 選項。 如果您呼叫 `Open` 成員函式，則預設會載入資料指標程式庫。 如果您使用的是動態集，而不是快照，則不會想要載入資料指標程式庫。
 
-快照集是已載入 ODBC 資料指標程式庫時，才提供使用`CDatabase`建構的物件，或您使用的 ODBC 驅動程式支援靜態資料指標。
-
-> [!NOTE]
->  對於某些 ODBC 驅動程式中，快照集 （靜態資料指標） 可能不是可更新。 請檢查您的驅動程式文件，以支援資料指標類型和所支援的並行類型。 若要保證可更新的快照集，請確定您將載入資料指標程式庫到記憶體中，當您建立`CDatabase`物件。 如需詳細資訊，請參閱[ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+只有在建立 `CDatabase` 物件或您所使用的 ODBC 驅動程式支援靜態資料指標時，才可以使用快照集。
 
 > [!NOTE]
->  如果您想要使用快照集和動態集，您必須根據兩個不同`CDatabase`物件 （兩個不同的連接）。
+>  對於某些 ODBC 驅動程式，快照集（靜態資料指標）可能無法更新。 請查看您的驅動程式檔，以瞭解支援的資料指標類型以及它們支援的並行類型。 若要保證可更新的快照集，請務必在建立 `CDatabase` 物件時，將資料指標程式庫載入記憶體中。 如需詳細資訊，請參閱[odbc： odbc 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
-使用所有的資料錄集屬性的快照集共用的相關資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。 如需有關 ODBC 和快照集，包括 ODBC 資料指標程式庫，請參閱[ODBC](../../data/odbc/odbc-basics.md)。
+> [!NOTE]
+>  如果您想要同時使用快照集和動態連結程式庫，您必須將它們以兩個不同的 `CDatabase` 物件（兩個不同的連接）做為基礎。
+
+如需屬性快照集與所有記錄集共用的詳細資訊，請參閱[記錄集（ODBC）](../../data/odbc/recordset-odbc.md)。 如需 ODBC 和快照集的詳細資訊，包括 ODBC 資料指標程式庫，請參閱[odbc](../../data/odbc/odbc-basics.md)。
 
 ## <a name="see-also"></a>另請參閱
 

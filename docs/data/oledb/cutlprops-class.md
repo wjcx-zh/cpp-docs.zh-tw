@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211103"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 
@@ -76,7 +76,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 如需屬性集對應中所用宏的詳細資訊，請參閱[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)和[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。
 
-## <a name="getpropvalue"></a>CUtlProps：： GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps：： GetPropValue
 
 從屬性集取得屬性。
 
@@ -103,7 +103,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` 失敗時，S_OK 成功。
 
-## <a name="isvalidvalue"></a>CUtlProps：： IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps：： IsValidValue
 
 在設定屬性之前用來驗證值。
 
@@ -130,7 +130,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 如果您想要在要用來設定屬性的值上執行任何驗證常式，您應該覆寫此函式。 例如，您可以針對密碼資料表驗證 DBPROP_AUTH_PASSWORD，以判斷有效的值。
 
-## <a name="oninterfacerequested"></a>CUtlProps：： OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps：： OnInterfaceRequested
 
 當取用者在其中一個物件建立介面上呼叫方法時，處理選擇性介面的要求。
 
@@ -165,7 +165,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 如果您想要處理其他介面，請覆寫資料來源、會話、命令或資料列集類別中的這個函式，以處理函式。 您的覆寫應經過一般設定/取得屬性介面，以確保設定屬性也會設定任何連結的屬性（請參閱[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)）。
 
-## <a name="onpropertychanged"></a>CUtlProps：： OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps：： OnPropertyChanged
 
 在設定屬性以處理連結的屬性後呼叫。
 
@@ -198,7 +198,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a>CUtlProps：： SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps：： SetPropValue
 
 設定屬性集內的屬性。
 

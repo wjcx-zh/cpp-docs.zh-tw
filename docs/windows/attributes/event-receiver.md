@@ -1,5 +1,5 @@
 ---
-title: event_receiver (C++ COM 屬性)
+title: event_receiver （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9653a0b5c756857d92914496b9c5c6f8aee56ebb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409628"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167078"
 ---
-# <a name="eventreceiver"></a>event_receiver
+# <a name="event_receiver"></a>event_receiver
 
 建立事件接收器 (接收)。
 
@@ -35,7 +35,7 @@ ms.locfileid: "62409628"
 *type*<br/>
 下列其中一個值的列舉：
 
-- `native` 適用於 unmanaged C /C++程式碼 （原生類別的預設值）。
+- 適用于非受控 CC++ /code 的 `native` （原生類別的預設值）。
 
 - COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰
 
@@ -46,19 +46,19 @@ ms.locfileid: "62409628"
     ```
 
 *layout_dependent*<br/>
-指定*event_receiver*只有當`type` = **com**。 *layout_dependent*是布林值：
+只有在 `type`=**com**時，才指定*layout_dependent* 。 *layout_dependent*是布林值：
 
-- **true**表示委派的簽章的事件接收者必須完全符合的所要攔截在事件來源中。 接收器事件處理常式的名稱必須符合相關的事件來源介面中指定的名稱。 您必須使用`coclass`時*layout_dependent*是**true**。 會指定稍微更有效率 **，則為 true**。
+- **true**表示事件接收器中的委派簽章必須與其在事件來源中連結的簽章完全相符。 事件接收器處理常式名稱必須符合相關事件來源介面中指定的名稱。 當*layout_dependent*為**true**時，您必須使用 `coclass`。 指定**true**會稍微提高效率。
 
-- **false** （預設值） 表示，呼叫慣例和儲存體類別 (虛擬、 靜態等等) 不需要符合事件方法和處理常式，也不執行處理常式的名稱必須符合事件來源介面的方法名稱。
+- **false** （預設值）表示呼叫慣例和儲存類別（虛擬、靜態和其他）不需要符合事件方法和處理常式;也不需要與事件來源介面方法名稱相符的處理常式名稱。
 
 ## <a name="remarks"></a>備註
 
-**Event_receiver** C++屬性指定的類別或結構會套用它將是事件接收器，使用視覺效果C++統一的事件模型。
+**Event_receiver** C++屬性會使用視覺化C++的統一事件模型，指定要套用它的類別或結構將是事件接收器。
 
-**event_receiver**搭配[event_source](event-source.md)屬性並[__hook](../../cpp/hook.md)並[__unhook](../../cpp/unhook.md)關鍵字。 使用`event_source`建立事件來源。 使用 **__hook**事件接收器的方法產生關聯的事件來源的事件 （「 攔截 」） 事件接收者方法內。 使用 **__unhook**中斷與它們的關聯。
+**event_receiver**搭配[event_source](event-source.md)屬性和[__hook](../../cpp/hook.md)和[__unhook](../../cpp/unhook.md)關鍵字一起使用。 使用 `event_source` 來建立事件來源。 在事件接收器的方法中使用 **__hook** ，將事件接收器方法與事件來源的事件產生關聯（「攔截」）。 使用 **__unhook**將它們中斷關聯。
 
-*event_receiver*只會指定用於 COM 事件接收器 (`type`=**com**)。 預設值*event_receiver*是**false**。
+僅針對 COM 事件接收器（`type`=**com**）指定*layout_dependent* 。 *Layout_dependent*的預設值為**false**。
 
 > [!NOTE]
 > 樣板類別或結構不能包含事件。
@@ -69,9 +69,9 @@ ms.locfileid: "62409628"
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**class**、 **struct**|
 |**可重複**|否|
-|**必要屬性**|`coclass` 當*event_receiver*=**，則為 true**|
+|**必要屬性**|*layout_dependent*=**true**時 `coclass`|
 |**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857316"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178845"
 ---
 # <a name="semantics-of-expressions"></a>運算式的語意
 
 運算式會根據其運算子的優先順序和群組進行評估。 （在[詞法慣例](../cpp/lexical-conventions.md)中，[運算子優先順序和關聯](../cpp/cpp-built-in-operators-precedence-and-associativity.md)性會顯示C++運算子強加于運算式的關聯性）。
 
-## <a name="order-of-evaluation"></a>評估的順序
+## <a name="order-of-evaluation"></a>評估順序
 
-請考量以下範例：
+請思考此範例：
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -70,7 +70,7 @@ int main()
 |預期的類型|允許的類型|
 |-------------------|-------------------|
 |*type*|`const`*類型*<br /> `volatile`*類型*<br /> *類型*&<br /> `const`*類型*&<br /> `volatile`*類型*&<br /> `volatile const`*類型*<br /> `volatile const`*類型*&|
-|*類型*\*|*類型*\*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
+|*類型*\*|*類型*\*<br /> `const`*類型*\*<br /> `volatile`*類型*\*<br /> `volatile const`*類型*\*|
 |`const`*類型*|*type*<br /> `const`*類型*<br />`const`*類型*&|
 |`volatile`*類型*|*type*<br /> `volatile`*類型*<br /> `volatile`*類型*&|
 
@@ -78,7 +78,7 @@ int main()
 
 ## <a name="ambiguous-expressions"></a>模稜兩可的運算式
 
-某些運算式的意義模稜兩可。 若物件的值在同一個運算式中修改過一次以上，最容易出現這些運算式。 這些運算式依賴特定評估順序，而語言並未定義評估順序。 參考下列範例：
+某些運算式的意義模稜兩可。 若物件的值在同一個運算式中修改過一次以上，最容易出現這些運算式。 這些運算式依賴特定評估順序，而語言並未定義評估順序。 請考慮下列範例：
 
 ```
 int i = 7;
@@ -116,6 +116,6 @@ C++ 語言定義目前未指定序列點。 針對包含 C 運算子及未包含
 
 - return 陳述式中的運算式。 會完整評估運算式，且其所有副作用會在控制回到呼叫函式之前完成。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [運算式](../cpp/expressions-cpp.md)

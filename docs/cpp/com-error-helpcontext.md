@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - HelpContext method [C++]
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
-ms.openlocfilehash: a421a7fd7fa0817c74dac66946e28928b2ad82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3c79bb069ef504680e83359d6ec90c803f16d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155081"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180585"
 ---
-# <a name="comerrorhelpcontext"></a>_com_error::HelpContext
+# <a name="_com_errorhelpcontext"></a>_com_error::HelpContext
 
 **Microsoft 專屬**
 
-呼叫`IErrorInfo::GetHelpContext`函式。
+呼叫 `IErrorInfo::GetHelpContext` 函式。
 
 ## <a name="syntax"></a>語法
 
@@ -27,13 +27,13 @@ DWORD HelpContext( ) const throw( );
 
 ## <a name="return-value"></a>傳回值
 
-傳回的結果`IErrorInfo::GetHelpContext`for`IErrorInfo`物件記錄`_com_error`物件。 如果沒有`IErrorInfo`會記錄物件，它會傳回零。
+傳回 `_com_error` 物件中所記錄之 `IErrorInfo` 物件的 `IErrorInfo::GetHelpContext` 結果。 如果未記錄任何 `IErrorInfo` 物件，則會傳回零。
 
 ## <a name="remarks"></a>備註
 
-呼叫時的任何失敗`IErrorInfo::GetHelpContext`方法會被忽略。
+呼叫 `IErrorInfo::GetHelpContext` 方法時的任何失敗都會被忽略。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -6,44 +6,44 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8e4416eafd47f584de4ab1c83aa7303cab0440a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410235"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194131"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>連結器工具警告 LNK4049
 
-> 符號 '*符號*'中所定義的'*filename.obj*' 匯入
+> 已匯入在 '*filename .obj*' 中定義的符號 '*symbol*'
 
-[__declspec （dllimport)](../../cpp/dllexport-dllimport.md)所指定*符號*即使在目的檔中已定義符號*filename.obj*相同的映像中。 移除`__declspec(dllimport)`修飾詞，以解決這個警告。
+已為*符號*指定[__declspec （dllimport）](../../cpp/dllexport-dllimport.md) ，即使符號是在相同影像中的物件檔*filename .obj*中定義也一樣。 請移除 `__declspec(dllimport)` 修飾詞，以解決這個警告。
 
 ## <a name="remarks"></a>備註
 
-當您在某個物件檔中定義符號，並使用參考連結器便會產生這個警告`__declspec(dllimport)`宣告修飾詞，在另一個。
+當您在一個目的檔中定義符號，並使用另一個物件檔案中的 `__declspec(dllimport)` 宣告修飾詞來參考它時，連結器就會產生此警告。
 
-警告 LNK4049 是更一般的版本[連結器工具警告 LNK4217](linker-tools-warning-lnk4217.md)。 連結器會產生警告 LNK4049 時它無法判斷哪一個函式或物件參考檔案匯入的符號。
+警告 LNK4049 是[連結器工具警告 LNK4217](linker-tools-warning-lnk4217.md)的較通用版本。 當連結器無法判斷參考匯入符號的函式或物件檔案時，會產生警告 LNK4049。
 
-常見的案例而不是 LNK4217 產生 LNK4049 的位置如下：
+產生 LNK4049 而不是 LNK4217 的常見情況如下：
 
-- 使用時[/incremental](../../build/reference/incremental-link-incrementally.md)選項。
+- 使用[/INCREMENTAL](../../build/reference/incremental-link-incrementally.md)選項時。
 
-- 使用時[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)選項。
+- 使用[/ltcg](../../build/reference/ltcg-link-time-code-generation.md)選項時。
 
-若要解決 LNK4049，請嘗試下列程序的其中一個：
+若要解決 LNK4049，請嘗試下列其中一個程式：
 
-- 移除`__declspec(dllimport)`觸發 LNK4049 符號的向前宣告修飾詞。 您可以使用搜尋二進位映像中的符號**DUMPBIN**公用程式。 **DUMPBIN /SYMBOLS**參數可顯示 COFF 符號表中的映像。 如需詳細資訊**DUMPBIN**公用程式，請參閱[DUMPBIN 參考](../../build/reference/dumpbin-reference.md)。
+- 從觸發 LNK4049 之符號的向前宣告中移除 `__declspec(dllimport)` 修飾詞。 您可以使用**DUMPBIN**公用程式，在二進位影像中搜尋符號。 **DUMPBIN/SYMBOLS**參數會顯示影像的 COFF 符號表。 如需**DUMPBIN**公用程式的詳細資訊，請參閱[DUMPBIN 參考](../../build/reference/dumpbin-reference.md)。
 
-- 暫時停用累加連結和整個程式最佳化。 重新編譯，則應用程式會產生警告 LNK4217，其中包含參考匯入的符號函式的名稱。 移除`__declspec(dllimport)`宣告修飾詞，從匯入的符號和重新啟用累加連結或所需的整個程式最佳化。
+- 暫時停用增量連結和整個程式優化。 重新編譯時，應用程式會產生警告 LNK4217，其中包含參考已匯入符號之函式的名稱。 從匯入的符號中移除 `__declspec(dllimport)` 的宣告修飾詞，並視需要重新啟用累加連結或整個程式優化。
 
-雖然最終產生的程式碼會正確運作，以呼叫匯入的函式所產生的程式碼是效率比直接呼叫函式。 當您使用編譯時，不會出現這個警告[/clr](../../build/reference/clr-common-language-runtime-compilation.md)選項。
+雖然最後產生的程式碼會正確運作，但是為了呼叫匯入的函式所產生的程式碼，比直接呼叫函式的效率更低。 當您使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)選項進行編譯時，不會出現這個警告。
 
-如需詳細資訊匯入和匯出資料宣告，請參閱 < [dllexport、 dllimport](../../cpp/dllexport-dllimport.md)。
+如需匯入和匯出資料宣告的詳細資訊，請參閱[dllexport、dllimport](../../cpp/dllexport-dllimport.md)。
 
 ## <a name="example"></a>範例
 
-連結下列兩個模組，將會產生 LNK4049。 第一個模組會產生包含單一的匯出函式的物件檔案。
+連結下列兩個模組將會產生 LNK4049。 第一個模組會產生一個包含單一匯出函數的物件檔案。
 
 ```cpp
 // LNK4049a.cpp
@@ -55,7 +55,7 @@ __declspec(dllexport) int func()
 }
 ```
 
-第二個模組會產生包含匯出的第一個模組，以及呼叫此函式內的函式的向前宣告的物件檔案`main`函式。 連結的第一個模組使用此模組會產生 LNK4049。 移除`__declspec(dllimport)`修飾詞宣告，以解決這個警告。
+第二個模組會產生一個物件檔案，其中包含第一個模組中所匯出函式的向前宣告，以及在 `main` 函式內呼叫此函式。 將此模組與第一個模組連結，將會產生 LNK4049。 請從宣告中移除 `__declspec(dllimport)` 修飾詞，以解決警告。
 
 ```cpp
 // LNK4049b.cpp

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0038
 - CAN0038
 ms.assetid: 3327dc4e-1726-4924-a519-6ffd766a389c
-ms.openlocfilehash: aa471ef538846e48e40032f976754eda93137981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06105064db9f696784aaaef2d41d978935eac896
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396999"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185109"
 ---
 # <a name="expression-evaluator-error-cxx0038"></a>運算式評估工具錯誤 CXX0038
 
-函式引數的計數和/或類型不符
+函數引數計數和/或類型不符
 
-所指定的函式呼叫與函式原型不相符。
+指定的函式呼叫與函數的原型不相符。
 
-重新輸入正確的引數數目的呼叫。 類型轉換來比對的原型，視每個引數。
+請以正確的引數數目重新輸入呼叫。 必要時，類型會轉換每個引數以符合原型。
 
-此錯誤是與 can0038 相同。
+此錯誤與 CAN0038 相同。

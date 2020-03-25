@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2721
 ms.assetid: 7a97823c-3ce1-4112-8253-fc1448685235
-ms.openlocfilehash: bf33ebdc3f34efb22809cbc5e62070226df2fd5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6edda08807c752c9257bf09033538d57ac276ed7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300764"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202122"
 ---
 # <a name="compiler-error-c2721"></a>編譯器錯誤 C2721
 
-'specifier': 不合法的運算子關鍵字和類型之間的儲存類別規範
+' 規範 '：運算子關鍵字和類型之間的儲存類別規範不合法
 
-使用者定義型別轉換套用到所有的儲存體類別，因此您無法指定儲存類別中的型別轉換。
+使用者定義型別轉換會套用至所有儲存類別，因此您無法在類型轉換中指定儲存類別。

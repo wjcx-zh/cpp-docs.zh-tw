@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4222
 ms.assetid: b7bb1794-41fb-4c83-b9b0-59c0d786a7da
-ms.openlocfilehash: 52a4fee532eb9997dcf013f95246b27fdffc4c20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f74379861ad04142fd78a8e307af165072c9cadd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183029"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>連結器工具警告 LNK4222
 
-匯出的符號 'symbol' 不可指派序數
+匯出的符號 ' symbol ' 不應指派序數
 
-不應該依序數匯出下列符號：
+下列符號不應由序數匯出：
 
 - `DllCanUnloadNow`
 
@@ -33,7 +33,7 @@ ms.locfileid: "62160402"
 
 - `DllUnregisterServer`
 
-這些函式一定會位於依名稱、 使用`GetProcAddress`。 連結器警告這種匯出是因為它可能會導致較大的影像。 如果您序數匯出的範圍很大，而相對較少的匯出，則會發生此問題。 例如，套用至物件的
+這些函式一律以名稱定位，使用 `GetProcAddress`。 連結器會警告這種匯出，是因為它可能會產生較大的影像。 如果您的序數匯出範圍較少量的匯出，就會發生這種情況。 例如，
 
 ```
 EXPORTS
@@ -41,7 +41,7 @@ EXPORTS
    MyOtherAPI      @100
 ```
 
-將會需要 100 個位置其中 98 匯出位址資料表中 (2-99) 只填滿。 相反地，
+在匯出位址資料表中，將會需要100個位置，其中包含98個（2-99）。 另一方面
 
 ```
 EXPORTS
@@ -49,4 +49,4 @@ EXPORTS
    MyOtherAPI      @100
 ```
 
-將需要兩個位置。 (請注意，您也可以匯出與[/匯出](../../build/reference/export-exports-a-function.md)連結器選項。)
+將需要兩個位置。 （請注意，您也可以使用[/export](../../build/reference/export-exports-a-function.md)連結器選項來匯出）。

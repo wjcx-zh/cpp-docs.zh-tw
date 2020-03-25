@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0053
 - CXX0053
 ms.assetid: fe74ed9e-9241-4df1-881f-104348e296c6
-ms.openlocfilehash: 4ba55e7e8f684ed0b0332be4a8f3ae9d52e9150d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba42e0279cd7c73b575e842cada4fbf569051d19
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299566"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184784"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>運算式評估工具錯誤 CXX0053
 
-找到符號符合繫結中斷點時
+系結中斷點時，nonfunction 符號相符
 
-做為中斷點的符號不是函式。 為中斷點指定的資料成員會造成這個錯誤。
+當做中斷點使用的符號不是函數。 將資料成員指定為中斷點可能會造成此錯誤。
 
-此錯誤是與 can0053 相同。
+此錯誤與 CAN0053 相同。

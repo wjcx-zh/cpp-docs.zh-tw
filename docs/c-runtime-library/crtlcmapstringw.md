@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 8d9458529e5772f31e3ae5463d3a6ff5a7b726e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f239d95c0dfd50f765b6f23d7874f01dce085054
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170991"
 ---
 # <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
@@ -79,6 +79,6 @@ int __crtLCMapStringW(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |__crtLCMapStringW|awint.h|

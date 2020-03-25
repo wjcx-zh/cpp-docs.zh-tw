@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4657
 ms.assetid: eb750050-cea6-4ead-b80c-d5dcd4971cfc
-ms.openlocfilehash: 92415d1d17c3342dbb721aa850f37f4dfabd1406
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cc049d99339a6f19ca86cd5c7a10f062a1451a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375687"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199495"
 ---
 # <a name="compiler-warning-level-1-c4657"></a>編譯器警告 (層級 1) C4657
 
@@ -25,10 +25,10 @@ ms.locfileid: "62375687"
 
 1. 請將資料類型改回錯誤之前的狀態。
 
-1. 從 [偵錯]  功能表選擇 [套用程式碼變更] 。
+1. 從 [偵錯] 功能表選擇 [套用程式碼變更]。
 
 ### <a name="to-remove-this-error-without-changing-your-source-code"></a>移除這個錯誤，而不變更您的原始程式碼
 
-1. 從 [偵錯]  功能表選擇 [停止偵錯] 。
+1. 從 [偵錯] 功能表選擇 [停止偵錯]。
 
-1. 從 [建置]  功能表選擇 [建置] 。
+1. 從 [建置] 功能表選擇 [建置]。

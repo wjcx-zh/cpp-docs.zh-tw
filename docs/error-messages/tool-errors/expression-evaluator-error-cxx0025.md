@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0025
 - CXX0025
 ms.assetid: 3e2fb541-63b3-46ac-9f93-3dadb253bcf6
-ms.openlocfilehash: 695a6e909717fe38dd8db6f4981db0d756fbb390
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b230c10d22abef9bdb8d1fe7030552e52ca3451
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359822"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195769"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>運算式評估工具錯誤 CXX0025
 
-操作人員必須在結構/等位
+運算子需要結構/等位
 
-會使用運算式的運算子`struct`或**union**型別已套用至運算式不是`struct`或**union**。
+採用 `struct` 或聯**集**類型運算式的運算子，已套用至不是 **`struct` 或等**位的運算式。
 
-元件的類別、 結構或等位變數必須完整限定的名稱。 元件無法輸入不含完整的規格。
+Class、structure 或 union 變數的元件必須具有完整名稱。 無法在沒有完整規格的情況下輸入元件。
 
-此錯誤是與 can0025 相同。
+此錯誤與 CAN0025 相同。

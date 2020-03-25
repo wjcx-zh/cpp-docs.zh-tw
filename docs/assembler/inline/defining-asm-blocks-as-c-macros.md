@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46f0a23fcfd949843e3548354f52970b10b6d63b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167022"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169483"
 ---
-# <a name="defining-asm-blocks-as-c-macros"></a>將 __asm 區塊定義為 C 巨集
+# <a name="defining-__asm-blocks-as-c-macros"></a>將 __asm 區塊定義為 C 巨集
 
 **Microsoft 專屬**
 
@@ -47,13 +47,13 @@ __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al
 
 大括號也非常重要。 如果您省略它們，編譯器會因為 C 或 C++ 陳述式位於巨集引動過程右邊的同一行而混淆。 少了右邊的大括號，編譯器無法分辨出組譯程式碼從何處停止，因此，它會將 `__asm` 區塊後的 C 或 C++ 陳述式視為組譯碼指令。
 
-組件樣式分號為開頭的註解 (**;**) 繼續到該行結尾。 因為編譯器會忽略註釋後方的所有項目，一直到邏輯程式敘述行的結尾，所以會在巨集中產生問題。 同樣的情形也會出現在單行 C 或 C++ 註解 ( `// comment`)。 若要避免這個錯誤，請在定義為巨集的 `/* comment */` 區塊中使用舊式的 C 註解 (`__asm`)。
+以分號（ **;** ）開頭的元件樣式批註會繼續到行尾。 因為編譯器會忽略註釋後方的所有項目，一直到邏輯程式敘述行的結尾，所以會在巨集中產生問題。 同樣的情形也會出現在單行 C 或 C++ 註解 ( `// comment`)。 若要避免這個錯誤，請在定義為巨集的 `/* comment */` 區塊中使用舊式的 C 註解 (`__asm`)。
 
 以 C 巨集形式撰寫的 `__asm` 區塊可以接受引數。 不過，和一般的 C 巨集不同的是，`__asm` 巨集無法傳回值。 因此您無法在 C 或 C++ 運算式中使用此類的巨集。
 
-請務必小心，不要隨意叫用此類巨集。 例如，在使用 `__fastcall` 慣例宣告的函式中叫用組合語言巨集可能會導致未預期的結果。 (請參閱[使用和保留暫存器中內嵌組譯碼](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。)
+請務必小心，不要隨意叫用此類巨集。 例如，在使用 `__fastcall` 慣例宣告的函式中叫用組合語言巨集可能會導致未預期的結果。 （請參閱[在內嵌元件中使用和保留](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)暫存器）。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

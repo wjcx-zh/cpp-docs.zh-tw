@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0051
 - CXX0051
 ms.assetid: 031cd2ed-d9bb-4aa5-9858-71581bcca49c
-ms.openlocfilehash: 12d7d9ccb1fee096115e8c82c825eb8df336f63b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bacaddb39f1a380053e74c8a7e9fd952dac8ea5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160623"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184823"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>運算式評估工具錯誤 CXX0051
 
-指定中斷點的多個多載的符號
+在中斷點中指定了一個以上的多載符號
 
-運算式評估工具無法判斷其中一個多個多載的符號來做為中斷點。
+運算式評估工具無法判斷要使用一個以上多載符號做為中斷點。
 
-此錯誤是與 can0051 相同。
+此錯誤與 CAN0051 相同。

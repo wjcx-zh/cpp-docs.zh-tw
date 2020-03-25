@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4906
+title: 編譯器警告 (層級 1) C4906
 ms.date: 11/04/2016
 f1_keywords:
 - C4906
 helpviewer_keywords:
 - C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-ms.openlocfilehash: 8ef1798cee93e0896000dd0187222cf675011af9
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 88671dea6b0d96f33ad6a84611b0ded9746c699f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74050142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174801"
 ---
-# <a name="compiler-warning-level-1-c4906"></a>編譯器警告（層級1） C4906
+# <a name="compiler-warning-level-1-c4906"></a>編譯器警告 (層級 1) C4906
 
 字串常值轉換成 'LPWSTR'
 

@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927728"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169704"
 ---
 # <a name="c-debugging-property-pages"></a>C++調試屬性頁
 
-這些屬性頁位於 [**專案** > **屬性** > ] [設定] [**屬性** > ] [設定]**下。** 在下拉式控制項中選擇偵錯工具類型。 如需調試C++程式碼的詳細資訊[，請參閱教學課程：瞭解如何使用C++ Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp)和[調試](/visualstudio/debugger/debugging-native-code)程式碼來進行程式碼的偵錯工具。
+這些屬性頁位於 **專案** > **屬性** **下 > ** 設定 屬性 > **調試**。 在下拉式控制項中選擇偵錯工具類型。 如需調試C++程式碼的詳細資訊，請參閱[教學課程C++ ：瞭解如何使用 Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp)和[調試](/visualstudio/debugger/debugging-native-code)程式碼來偵錯工具代碼。
 
 ## <a name="local-windows-debugger-property-page"></a>本機 Windows 偵錯工具屬性頁
 
@@ -68,7 +68,7 @@ ms.locfileid: "70927728"
 
 指定要使用的偵錯工具類型。 當設定為 [自動] 時，會根據 exe 檔案的內容來選取偵錯工具類型。
 
-**做**
+**Choices**
 
 - **僅限原生**-僅限原生
 - 僅**限 managed** -僅限受控
@@ -89,7 +89,7 @@ ms.locfileid: "70927728"
 
 設定 GPU 偵錯工具中斷的頻率。
 
-**做**
+**Choices**
 
 - 每次扭曲一次就**中斷一次**
 - 針對每個執行緒（例如 cpu 行為 **）中斷**每個執行緒（例如 cpu 行為）
@@ -130,7 +130,7 @@ ms.locfileid: "70927728"
 
 指定連線類型。
 
-**做**
+**Choices**
 
 - **遠端使用 windows 驗證**-遠端使用[windows 驗證](/windows-server/security/windows-authentication/windows-authentication-overview)。
 - **不具驗證的遠端**-不含驗證的遠端。
@@ -139,7 +139,7 @@ ms.locfileid: "70927728"
 
 指定要使用的偵錯工具類型。 當設定為 [自動] 時，會根據 exe 檔案的內容來選取偵錯工具類型。
 
-**做**
+**Choices**
 
 - **僅限原生**-僅限原生
 - 僅**限 managed** -僅限受控
@@ -160,7 +160,7 @@ ms.locfileid: "70927728"
 
 設定 GPU 偵錯工具中斷的頻率。
 
-**做**
+**Choices**
 
 - 每次扭曲一次就**中斷一次**
 - 針對每個執行緒（例如 cpu 行為 **）中斷**每個執行緒（例如 cpu 行為）
@@ -177,7 +177,7 @@ ms.locfileid: "70927728"
 
 在遠端電腦上進行偵錯工具時，如果您想要將專案輸出的內容（PDB 檔案除外）複製到遠端電腦，請在這裡指定路徑。
 
-### <a name="additional-files-to-deploy"></a>要部署的其他檔案
+### <a name="additional-files-to-deploy"></a>其他要部署的檔案
 
 在遠端電腦上進行偵錯工具時，在此處指定的檔案和目錄（除了專案輸出之外）會複製到部署目錄（如果有指定的話）。
 
@@ -199,7 +199,7 @@ ms.locfileid: "70927728"
 
 指定要使用的偵錯工具類型。 當設定為 [自動] 時，會根據 exe 檔案的內容來選取偵錯工具類型。
 
-**做**
+**Choices**
 
 - **僅限原生**-僅限原生
 - 僅**限 managed** -僅限受控
@@ -217,7 +217,7 @@ ms.locfileid: "70927728"
 
 指定要使用的偵錯工具類型。 當設定為 [自動] 時，會根據 exe 檔案的內容來選取偵錯工具類型。
 
-**做**
+**Choices**
 
 - **僅限原生**-僅限原生
 - 僅**限 managed** -僅限受控

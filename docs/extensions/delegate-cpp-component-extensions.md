@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516483"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172434"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI 和 C++/CX)
 
@@ -25,7 +25,7 @@ Windows 執行階段和 Common Language Runtime 均支援委派。
 
 ### <a name="remarks"></a>備註
 
-**delegate** 是內容相關性關鍵字。 如需詳細資訊，請參閱[內容相關性關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
+**delegate** 是內容相關性關鍵字。 如需詳細資訊，請參閱[即時線上關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
 
 若要在編譯時間偵測某個型別是否為委派，請使用 `__is_delegate()` 型別特性。 如需詳細資訊，請參閱[型別特性的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 

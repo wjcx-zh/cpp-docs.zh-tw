@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4076
 ms.assetid: c424d43b-abb3-4df4-be66-8907b859a555
-ms.openlocfilehash: 05a05c63b9b63aafc52854aa9dcdcccbdc6f8d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f5c5f6bd33fd0e43ccf3c7b55ab54a3cc25ba68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182302"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183432"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>連結器工具警告 LNK4076
 
-無效的累加狀態檔 'filename';非累加連結
+增量狀態檔案 ' filename ' 無效;非增量連結
 
-連結是以累加的狀態 (.ilk) 檔案無法寫入。 任一`filename`損毀，或它不是累加連結的資料庫。 移除檔案並重新連結。
+連結無法寫入增量狀態（. .ilk）檔案。 可能是 `filename` 已損毀，或它不是增量連結資料庫。 移除檔案並重新連結。

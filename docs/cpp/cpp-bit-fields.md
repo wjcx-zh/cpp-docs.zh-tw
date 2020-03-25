@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: bba57d495553e9622fcece9d036fc4f6eff3fa04
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301596"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170601"
 ---
 # <a name="c-bit-fields"></a>C++ 位元欄位
 
@@ -19,7 +19,7 @@ ms.locfileid: "75301596"
 
 ## <a name="syntax"></a>語法
 
-宣告子 **：** *常數運算式*
+*declarator*宣告子 **：** *常數運算式*
 
 ## <a name="remarks"></a>備註
 
@@ -48,7 +48,7 @@ Date 物件的記憶體配置
 
 請注意，`nYear` 的長度為8位，且會使宣告類型的字邊界溢位（不**帶正負**號的**簡短**）。 因此，它會在新的不**帶正負**號**簡短**的開頭開始。 不需要所有位元欄位都調整至基礎類型的一個物件中；新的單位儲存根據宣告所要求的位元數目進行配置。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 宣告為位元欄位的資料之順序是由低至高位元，如上面的圖所示。
 
@@ -85,6 +85,6 @@ struct Date {
 
 - 初始化具有位欄位的非**const**參考。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別和結構](../cpp/classes-and-structs-cpp.md)

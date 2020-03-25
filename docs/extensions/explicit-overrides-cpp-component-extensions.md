@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821634"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172369"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>明確覆寫 (C++/CLI 和 C++/CX)
 
@@ -33,7 +33,7 @@ overriding-function-declarator = function { overriding-function-definition }
 *type*<br/>
 包含要覆寫之函式的基底型別。
 
-*函式*<br/>
+*函數*<br/>
 要覆寫之一或多個函式名稱的逗號分隔清單。
 
 *overriding-function-definition*<br/>
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

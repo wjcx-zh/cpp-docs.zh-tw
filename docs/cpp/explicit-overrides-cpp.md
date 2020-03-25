@@ -8,22 +8,22 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184250"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189022"
 ---
 # <a name="explicit-overrides-c"></a>明確覆寫 (C++)
 
 **Microsoft 專屬**
 
-如果要將相同的虛擬函式宣告中兩個或以上[介面](../cpp/interface.md)如果類別衍生自這些介面，您可以明確覆寫每個虛擬函式。
+如果在兩個或多個[介面](../cpp/interface.md)中宣告相同的虛擬函式，而且如果類別衍生自這些介面，您可以明確覆寫每個虛擬函式。
 
-如需在 managed 程式碼中使用明確覆寫C++/CLI，請參閱[明確覆寫](../extensions/explicit-overrides-cpp-component-extensions.md)。
+如需使用C++/cli 在 managed 程式碼中明確覆寫的詳細資訊，請參閱[明確覆寫](../extensions/explicit-overrides-cpp-component-extensions.md)。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="example"></a>範例
 

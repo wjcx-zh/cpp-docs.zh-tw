@@ -7,14 +7,14 @@ helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-ms.openlocfilehash: b3575226199c15c4a9796fb439f65efb5a539225
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fff116ef04967a1887eaa075d92d3ea0283d5427
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403278"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187527"
 ---
-# <a name="varianttvariantt"></a>_variant_t::_variant_t
+# <a name="_variant_t_variant_t"></a>_variant_t::_variant_t
 
 **Microsoft 專屬**
 
@@ -134,19 +134,19 @@ _variant_t(
 要複製到新的 `VARIANT` 物件中的 `_variant_t` 物件。
 
 *pVarSrc*<br/>
-指標`VARIANT`複製到新的物件`_variant_t`物件。
+要複製到新 `_variant_t` 物件之 `VARIANT` 物件的指標。
 
 *var_t_Src*<br/>
 要複製到新的 `_variant_t` 物件中的 `_variant_t` 物件。
 
 *fCopy*<br/>
-如果**假**，提供`VARIANT`物件附加至新`_variant_t`物件，而不製作新複本所`VariantCopy`。
+如果**為 false**，則提供的 `VARIANT` 物件會附加至新的 `_variant_t` 物件，而不會 `VariantCopy`建立新的複本。
 
-*ISrc sSrc*<br/>
+*ISrc、sSrc*<br/>
 要複製到新的 `_variant_t` 物件中的整數值。
 
 *vtSrc*<br/>
-`VARTYPE`新`_variant_t`物件。
+新 `_variant_t` 物件的 `VARTYPE`。
 
 *fltSrc, dblSrc*<br/>
 要複製到新的 `_variant_t` 物件中的數值。
@@ -157,17 +157,17 @@ _variant_t(
 *bstrSrc*<br/>
 要複製到新的 `_bstr_t` 物件中的 `_variant_t` 物件。
 
-*strSrc wstrSrc*<br/>
+*strSrc, wstrSrc*<br/>
 要複製到新的 `_variant_t` 物件中的字串。
 
 *bSrc*<br/>
-A **bool**複製到新的值`_variant_t`物件。
+要複製到新的 `_variant_t` 物件中的**bool**值。
 
 *pIUknownSrc*<br/>
-VT_UNKNOWN 的物件，以封裝到新的 COM 介面指標`_variant_t`物件。
+要封裝到新 `_variant_t` 物件之 VT_UNKNOWN 物件的 COM 介面指標。
 
 *pDispSrc*<br/>
-VT_DISPATCH 的物件，以封裝到新的 COM 介面指標`_variant_t`物件。
+要封裝到新 `_variant_t` 物件之 VT_DISPATCH 物件的 COM 介面指標。
 
 *decSrc*<br/>
 要複製到新的 `DECIMAL` 物件中的 `_variant_t` 值。
@@ -176,65 +176,65 @@ VT_DISPATCH 的物件，以封裝到新的 COM 介面指標`_variant_t`物件。
 要複製到新的 `BYTE` 物件中的 `_variant_t` 值。
 
 *cSrc*<br/>
-A **char**複製到新的值`_variant_t`物件。
+要複製到新的 `_variant_t` 物件中的**char**值。
 
 *usSrc*<br/>
-A **unsigned short**複製到新的值`_variant_t`物件。
+要複製到新的 `_variant_t` 物件中的不**帶正負**號的短值。
 
 *ulSrc*<br/>
-A **unsigned long**複製到新的值`_variant_t`物件。
+要複製到新的 `_variant_t` 物件中的不**帶正負**號的 long 值。
 
 *iSrc*<br/>
-**Int**複製到新的值`_variant_t`物件。
+要複製到新的 `_variant_t` 物件中的**int**值。
 
 *uiSrc*<br/>
-**不帶正負號的 int**複製到新的值`_variant_t`物件。
+要複製到新的 `_variant_t` 物件中的不**帶正負號整數**值。
 
 *i8Src*<br/>
-**__Int64**複製到新的值`_variant_t`物件。
+要複製到新 `_variant_t` 物件中的 **__int64**值。
 
 *ui8Src*<br/>
-**Unsigned 的 __int64**複製到新的值`_variant_t`物件。
+要複製到新 `_variant_t` 物件中的不**帶正負號 __int64**值。
 
 ## <a name="remarks"></a>備註
 
-- **_variant_t （)** 建構空`_variant_t`物件， `VT_EMPTY`。
+- **_variant_t （）** 建立空的 `_variant_t` 物件，`VT_EMPTY`。
 
-- **_variant_t (VARIANT &***varSrc***)** 建構`_variant_t`物件從一份`VARIANT`物件。     variant 類型會保留。
+- **_variant_t （variant &** *varSrc* **）** 從 `VARIANT` 物件的複本中，建立 `_variant_t` 物件。 variant 類型會保留。
 
-- **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** 建構`_variant_t`物件從一份`VARIANT`物件。     variant 類型會保留。
+- **_variant_t （variant** <strong>\*</strong> *pVarSrc* **）** 從 `VARIANT` 物件的複本中，建立 `_variant_t` 物件。 variant 類型會保留。
 
-- **_variant_t (_variant_t &***var_t_Src***)** 建構`_variant_t`物件從另一個`_variant_t`物件。     variant 類型會保留。
+- **_variant_t （_variant_t &** *var_t_Src* **）** 從另一個 `_variant_t` 物件中，建立 `_variant_t` 物件。 variant 類型會保留。
 
-- **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)** 建構`_variant_t`從現有的物件`VARIANT`物件。       如果*fCopy*是**false**，則**VARIANT**物件時，會附加至新的物件上，而不製作複本。
+- **_variant_t （variant &** *varSrc* **，bool**`fCopy` **）** 從現有的 `VARIANT` 物件中，建立 `_variant_t` 物件。 如果*fCopy*為**False**，則**VARIANT**物件會附加至新的物件，而不會建立複本。
 
-- **_variant_t (short***sSrc* **，VARTYPE**`vtSrc`**= VT_I2)** 建構`_variant_t`型別的物件 VT_I2 或 VT_BOOL 從**簡短**整數值。       任何其他`VARTYPE`E_INVALIDARG 錯誤所導致。
+- **_variant_t （short***sSrc* **，VARTYPE**`vtSrc` **= VT_I2）** 從**short**整數值中，VT_I2 或 VT_BOOL 類型的 `_variant_t` 物件。 任何其他 `VARTYPE` 都會導致 E_INVALIDARG 錯誤。
 
-- **_variant_t (long** `lSrc` **，VARTYPE**`vtSrc`**= VT_I4)** 建構`_variant_t`物件類型為 VT_I4、 VT_BOOL 或從 VT_ERROR**長**整數值。       任何其他`VARTYPE`E_INVALIDARG 錯誤所導致。
+- **_variant_t （long**`lSrc` **，VARTYPE**`vtSrc` **= VT_I4）** 從**長**整數值中，建立 VT_I4、VT_BOOL 或 VT_ERROR 類型的 `_variant_t` 物件。 任何其他 `VARTYPE` 都會導致 E_INVALIDARG 錯誤。
 
-- **_variant_t (float**`fltSrc`**)** 建構`_variant_t`物件的型別 VT_R4 來自**float**數值。    
+- **_variant_t （float**`fltSrc` **）** 從**float**數值，建立 VT_R4 類型的 `_variant_t` 物件。
 
-- **_variant_t (double** `dblSrc` **，VARTYPE**`vtSrc`**= VT_R8)** 建構`_variant_t`物件的型別 VT_R8 或從 VT_DATE **雙精度浮點數**數值。       任何其他`VARTYPE`E_INVALIDARG 錯誤所導致。
+- **_variant_t （double**`dblSrc` **，VARTYPE**`vtSrc` **= VT_R8）** 從**double**數值中，VT_R8 或 VT_DATE 類型的 `_variant_t` 物件。 任何其他 `VARTYPE` 都會導致 E_INVALIDARG 錯誤。
 
-- **_variant_t (CY &**`cySrc`**)** 建構`_variant_t`物件的類型從 VT_CY`CY`物件。    
+- **_variant_t （CY &** `cySrc` **）** 從 `CY` 物件中，建立 VT_CY 類型的 `_variant_t` 物件。
 
-- **_variant_t (_bstr_t &**`bstrSrc`**)** 建構`_variant_t`物件的類型從 VT_BSTR`_bstr_t`物件。     會配置新的 `BSTR`。
+- **_variant_t （_bstr_t &** `bstrSrc` **）** 從 `_bstr_t` 物件中，建立 VT_BSTR 類型的 `_variant_t` 物件。 會配置新的 `BSTR`。
 
-- **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** 建構`_variant_t`從 Unicode 字串 VT_BSTR 類型的物件。   會配置新的 `BSTR`。
+- **_variant_t （wchar_t** <strong>\*</strong> *wstrSrc*  **）** 從 Unicode 字串中，建立 VT_BSTR 類型的 `_variant_t` 物件。 會配置新的 `BSTR`。
 
-- **_variant_t (char**<strong>\*</strong>`strSrc`**)** 建構`_variant_t`VT_BSTR 類型從字串的物件。     會配置新的 `BSTR`。
+- **_variant_t （char** <strong>\*</strong>`strSrc` **）** 從字串中，建立 VT_BSTR 類型的 `_variant_t` 物件。 會配置新的 `BSTR`。
 
-- **_variant_t (bool**`bSrc`**)** 建構`_variant_t`物件的類型從 VT_BOOL **bool**值。    
+- **_variant_t （bool**`bSrc` **）** 從**BOOL**值，建立 VT_BOOL 類型的 `_variant_t` 物件。
 
-- **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **，bool**`fAddRef`**= true)** 建構`_variant_t`類型的物件VT_UNKNOWN 從 COM 介面指標。       如果`fAddRef`已 **，則為 true**，然後`AddRef`來比對呼叫提供的介面指標上呼叫`Release`，會發生時`_variant_t`物件被終結。 它可以決定是否要呼叫`Release`上提供的介面指標。 如果`fAddRef`是**假**，這個建構函式接受提供的介面指標的擁有權; 請勿呼叫`Release`上提供的介面指標。
+- **_variant_t （IUnknown** <strong>\*</strong>`pIUknownSrc` **，bool**`fAddRef` **= true）** 從 COM 介面指標，建立 VT_UNKNOWN 類型的 `_variant_t` 物件。 如果 `fAddRef` 為**true**，則會在提供的介面指標上呼叫 `AddRef`，以符合 `_variant_t` 物件終結時將發生的 `Release` 呼叫。 您可以視需要在提供的介面指標上呼叫 `Release`。 如果 `fAddRef` 為**false**，則此函式會取得所提供介面指標的擁有權;請不要在提供的介面指標上呼叫 `Release`。
 
-- **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **，bool**`fAddRef`**= true)** 建構`_variant_t`物件輸入 VT_DISPATCH 從 COM 介面指標。       如果`fAddRef`已 **，則為 true**，然後`AddRef`來比對呼叫提供的介面指標上呼叫`Release`，會發生時`_variant_t`物件被終結。 它可以決定是否要呼叫`Release`上提供的介面指標。 如果`fAddRef`是**假**，這個建構函式接受提供的介面指標的擁有權; 請勿呼叫`Release`上提供的介面指標。
+- **_variant_t （IDispatch** <strong>\*</strong>`pDispSrc` **，bool**`fAddRef` **= true）** 從 COM 介面指標，建立 VT_DISPATCH 類型的 `_variant_t` 物件。 如果 `fAddRef` 為**true**，則會在提供的介面指標上呼叫 `AddRef`，以符合 `_variant_t` 物件終結時將發生的 `Release` 呼叫。 您可以視需要在提供的介面指標上呼叫 `Release`。 如果 `fAddRef` 為**false**，則此函式會取得所提供介面指標的擁有權;請不要在提供的介面指標上呼叫 `Release`。
 
-- **_variant_t (十進位 &**`decSrc`**)** 建構`_variant_t`物件的類型從 VT_DECIMAL`DECIMAL`值。    
+- **_variant_t （十進位 &** `decSrc` **）** 從 `DECIMAL` 值，建立 VT_DECIMAL 類型的 `_variant_t` 物件。
 
-- **_variant_t (BYTE**`bSrc`**)** 建構`_variant_t`型別的物件`VT_UI1`從`BYTE`值。    
+- **_variant_t （BYTE**`bSrc` **）** 從 `BYTE` 值，建立 `VT_UI1` 類型的 `_variant_t` 物件。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

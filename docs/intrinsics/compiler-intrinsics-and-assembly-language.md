@@ -2,12 +2,12 @@
 title: 編譯器內建和組件語言
 ms.date: 09/02/2019
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 1beeb0dedb153e4cd2b0a26bfc94ef7d0f9201c2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 36feb6971a8f5e4affd4f71b6afc1d508b2802f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217937"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171680"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>編譯器內建與組件語言
 
@@ -15,7 +15,7 @@ ms.locfileid: "70217937"
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[編譯器內建函式](../intrinsics/compiler-intrinsics.md)|描述可以在 x86、ARM 和 x64 架構的 Microsoft C 和 C++ 中使用的內建函式。|
 |[內嵌組譯工具](../assembler/inline/inline-assembler.md)|說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言。|

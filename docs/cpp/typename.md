@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166252"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160680"
 ---
 # <a name="typename"></a>typename
 
-在樣板定義中提供提示給編譯器未知的識別項是型別。 在範本參數清單中，用來指定的型別參數上。
+在範本定義中，會向編譯器提供提示，指出未知的識別碼是一種類型。 在範本參數清單中，是用來指定類型參數。
 
 ## <a name="syntax"></a>語法
 
@@ -25,9 +25,9 @@ typename identifier;
 
 ## <a name="remarks"></a>備註
 
-如果範本定義中的名稱是限定的名稱，取決於樣板引數，則必須使用這個關鍵字它是選擇性的如果限定的名稱無關。 如需詳細資訊，請參閱 <<c0> [ 樣板和名稱解析](../cpp/templates-and-name-resolution.md)。
+如果範本定義中的名稱是相依于樣板引數的限定名稱，則必須使用此關鍵字;如果限定名稱不相依，這就是選擇性的。 如需詳細資訊，請參閱[範本和名稱解析](../cpp/templates-and-name-resolution.md)。
 
-**typename**可由樣板宣告或定義中的任何類型。 除非是做為範本基底類別的樣板引數，否則不允許出現在基底類別清單中。
+範本宣告或定義中任何位置的任何類型都可以使用**typename** 。 除非是做為範本基底類別的樣板引數，否則不允許出現在基底類別清單中。
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-**Typename**關鍵字也用於取代**類別**在樣板參數清單。 例如，下列陳述式是語意上相等的：
+**Typename**關鍵字也可以用來取代範本參數清單中的**類別**。 例如，下列語句在語義上是相等的：
 
 ```cpp
 template<class T1, class T2>...

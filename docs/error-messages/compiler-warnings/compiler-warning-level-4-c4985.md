@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 75feda6fb2c88b663aa6ade0efdfffc7def1568f
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 82adb80310fb43c848c253f9bf5e436c8c379f35
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810730"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198091"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>編譯器警告 (層級 4) C4985
 
@@ -27,6 +27,6 @@ SAL 提供一組註釋，可讓您用來描述某個函式如何使用其參數�
 
 1. 對方法的定義及其所有宣告使用相同的 SAL 註釋。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [SAL 註釋](../../c-runtime-library/sal-annotations.md)

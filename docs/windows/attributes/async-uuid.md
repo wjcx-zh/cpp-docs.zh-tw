@@ -1,21 +1,21 @@
 ---
-title: async_uuid (C++ COM 屬性)
+title: async_uuid （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501869"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168456"
 ---
 # <a name="async_uuid"></a>async_uuid
 
-指定 UUID, 以指示 MIDL 編譯器定義 COM 介面的同步和非同步版本。
+指定 UUID，以指示 MIDL 編譯器定義 COM 介面的同步和非同步版本。
 
 ## <a name="syntax"></a>語法
 
@@ -54,7 +54,7 @@ __interface ICustom {
 |-|-|
 |**適用於**|`interface`|
 |**可重複**|否|
-|**必要屬性**|無|
+|**必要屬性**|None|
 |**無效屬性**|**雙重**、分配**介面**|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

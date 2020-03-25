@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2364a22d52c5bc418e4499a4a639c8e06559063a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171446"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
@@ -47,10 +47,10 @@ int* __p__fmode(
 
 `__p__fmode` 函式僅供內部使用，不應該從使用者程式碼呼叫。
 
-檔案轉譯模式會指定 [_open](../c-runtime-library/reference/open-wopen.md) 和 [_pipe](../c-runtime-library/reference/pipe.md) I/O 作業的 `binary` 或 `text` 轉譯。 如需詳細資訊，請參閱 [_fmode](../c-runtime-library/fmode.md)。
+檔案轉譯模式會指定 `binary`_open`text` 和 [_pipe](../c-runtime-library/reference/open-wopen.md) I/O 作業的 [ 或 ](../c-runtime-library/reference/pipe.md) 轉譯。 如需詳細資訊，請參閱 [_fmode](../c-runtime-library/fmode.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |__p\__fmode|stdlib.h|

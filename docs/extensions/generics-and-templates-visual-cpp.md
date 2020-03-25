@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-ms.openlocfilehash: 74cfd791e8400b788d38f272eed3d421ca4230e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 567286ee24e9df968b2d352489fe12f2735854eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516353"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172343"
 ---
 # <a name="generics-and-templates-ccli"></a>泛型與範本 (C++/CLI)
 
@@ -47,7 +47,7 @@ ms.locfileid: "65516353"
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 下列範例顯示同時使用範本與泛型的簡單範例。 在此範例中，範本類別會將其參數傳遞給泛型型別。 反向操作則不行。
 

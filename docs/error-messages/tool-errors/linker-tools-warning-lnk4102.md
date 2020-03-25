@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4102
 ms.assetid: bfd1b17e-05c7-4bc2-80d6-2888b1a425b2
-ms.openlocfilehash: 0f9c8649988dd3056e98730ac4b02022a8c9dd51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda1fdb03a7629894f846bb20ed84df519239327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183302"
 ---
 # <a name="linker-tools-warning-lnk4102"></a>連結器工具警告 LNK4102
 
-刪除解構函式 'name;' 的匯出映像可能無法正確執行
+匯出刪除的析構函式 ' name ';映射可能無法正確執行
 
-程式已嘗試匯出刪除解構函式。 產生的刪除可能會發生跨 DLL 界限，使得處理程序可以釋放它沒有自己的記憶體。 確定指定的符號不在.def 檔案中，所列，而且符號未列為的引數 **/ 匯入**或是 **/匯出**連結器命令列中的選項。
+程式已嘗試匯出刪除的析構函式。 產生的刪除作業可能會跨 DLL 界限進行，讓進程可以釋放不屬於它的記憶體。 請確定指定的符號未列在 .def 檔中，而且該符號並未在連結器命令列中列為 **/IMPORT**或 **/export**選項的引數。
 
-如果您重建 C 執行階段程式庫，您可以忽略此訊息。
+如果您要重建 C 執行時間程式庫，可以忽略此訊息。

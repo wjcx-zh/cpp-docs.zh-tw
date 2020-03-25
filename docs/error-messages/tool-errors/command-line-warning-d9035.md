@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - D9035
 ms.assetid: 6254f933-e37a-45ba-b860-1a870d1bc8e8
-ms.openlocfilehash: 9c0a159dcf193b4ad016069bafd86c557e9e1281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 778830892bca1cbf3520599eb6e918e56bdf17ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213766"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196634"
 ---
 # <a name="command-line-warning-d9035"></a>命令列警告 D9035
 
-> 選項 '*選項*' 已被取代，將在未來版本中移除
+> 選項 '*option*' 已被取代，將在未來的版本中移除
 
 ## <a name="remarks"></a>備註
 
-您指定將在編譯器的未來版本中移除的編譯器選項。 如果沒有建議的替代 *選項* ，這個警告後面警告[D9036](../../error-messages/tool-errors/command-line-warning-d9036.md)。
+您指定了編譯器選項，將在未來的編譯器版本中移除。 如果有建議的*選項*取代，此警告後面會接著警告[D9036](../../error-messages/tool-errors/command-line-warning-d9036.md)。
 
-指定的選項仍可運作，但您應該更新您的組建組態現在。 如此一來，您的專案是更容易升級編譯器時繼續建置。
+指定的選項仍然可以運作，但您應該立即更新組建設定。 因此，當您升級編譯器時，您的專案較可能會繼續建立。
 
 ## <a name="see-also"></a>另請參閱
 
-[已取代及移除的編譯器選項](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
+[已取代和已移除的編譯器選項](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
 [命令列警告 D9036](command-line-warning-d9036.md)

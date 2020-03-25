@@ -6,16 +6,16 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 46ae5e0f3d545f0e3e004f612314ab416b270fd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400473"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168820"
 ---
 # <a name="release-builds"></a>發行的組建
 
-發行組建會使用最佳化。 當您使用建立發行組建的最佳化時，則編譯器不會產生符號偵錯資訊。 呼叫的符號偵錯資訊的詳細資訊，以及追蹤和判斷提示不產生程式碼的事實不存在，表示可執行檔的大小會減少，並因此會更快。
+發行組建使用優化。 當您使用優化來建立發行組建時，編譯器不會產生符號的調試資訊。 缺少符號偵錯工具資訊，以及程式碼不會針對追蹤和判斷提示呼叫產生的事實，表示可執行檔的大小降低，因此速度會更快。
 
 ## <a name="in-this-section"></a>本節內容
 

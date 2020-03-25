@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: f68bd2e500ebe16c43ef6c3d7a5aede26421b27d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187501"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-**虛擬**關鍵字會宣告虛擬函式或虛擬基底類別。
+**Virtual**關鍵字會宣告虛擬函式或虛擬基類。
 
 ## <a name="syntax"></a>語法
 
@@ -30,23 +30,23 @@ virtual [access-specifier] base-class-name
 
 #### <a name="parameters"></a>參數
 
-*type-specifiers*<br/>
+*類型規範*<br/>
 指定虛擬成員函式的傳回型別。
 
-*member-function-declarator*<br/>
+*成員函式-宣告子*<br/>
 宣告成員函式。
 
-*access-specifier*<br/>
-基底類別，定義存取層級**公用**，**保護**或是**私人**。 可以出現在前後**虛擬**關鍵字。
+*存取規範*<br/>
+定義基類、**公用**、**受保護**或**私**用的存取層級。 可出現在**虛擬**關鍵字之前或之後。
 
-*base-class-name*<br/>
+*基本類別-名稱*<br/>
 識別先前宣告的類別類型。
 
 ## <a name="remarks"></a>備註
 
-請參閱[虛擬函式](../cpp/virtual-functions.md)如需詳細資訊。
+如需詳細資訊，請參閱[虛擬](../cpp/virtual-functions.md)函式。
 
-另請參閱下列關鍵字：[類別](../cpp/class-cpp.md)，[私人](../cpp/private-cpp.md)，[公用](../cpp/public-cpp.md)，以及[保護](../cpp/protected-cpp.md)。
+另請參閱下列關鍵字： [class](../cpp/class-cpp.md)、 [private](../cpp/private-cpp.md)、 [public](../cpp/public-cpp.md)和[protected](../cpp/protected-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

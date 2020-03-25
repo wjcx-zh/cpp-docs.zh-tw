@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516383"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172356"
 ---
 # <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
 
@@ -37,21 +37,21 @@ class-body
 
 上述語法中會使用下列詞彙：
 
-*屬性*<br/>
+*attributes*<br/>
 (選擇性) 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
 
 *class-key*<br/>
 **class** 或 **typename**
 
-*type-parameter-identifier(s)*，指定型別參數名稱的識別碼 (以逗號區隔) 清單。
+*type-parameter-identifier(s)* ，指定型別參數名稱的識別碼 (以逗號區隔) 清單。
 
 *constraint-clauses*<br/>
 指定型別參數條件約束的 **where** 子句 (不以逗號區隔) 清單。 採用以下格式：
 
-> **where** *type-parameter-identifier* **:** *constraint-list*  **...**
+> **其中，** *類型參數識別碼* **：** *條件約束清單*  **...**
 
 *constraint-list*<br/>
-*class-or-interface*[`,` *...*]
+*類別或介面*[`,` *...* ]
 
 *accessibility-modifiers*<br/>
 泛型類別的存取範圍修飾詞。 Windows 執行階段唯一允許的修飾詞為 **private**。 Common Language Runtime 允許的修飾詞為 **private** 和 **public**。
@@ -159,7 +159,7 @@ ref class MyClass : IInterface<ItemType> {};
 
 ## <a name="example"></a>範例
 
-在以下範例中，會使用適當的型別引數 (**int**、**double** 和 **string**) 來建立泛型類別 MyClass\<ItemType > 的三個不同執行個體。
+在以下範例中，會使用適當的型別引數 (\<int **、** double**和**string **) 來建立泛型類別 MyClass**ItemType > 的三個不同執行個體。
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -284,7 +284,7 @@ Test1
 
 ## <a name="example"></a>範例
 
-以下範例會在泛型類別 `MyClass<ItemType>` 內部，宣告非泛型方法 `ProtectData`。 此方法會以開放式建構型別方式，在其簽章中使用類別型別參數 `ItemType`。
+以下範例會在泛型類別 `ProtectData` 內部，宣告非泛型方法 `MyClass<ItemType>`。 此方法會以開放式建構型別方式，在其簽章中使用類別型別參數 `ItemType`。
 
 ```cpp
 // generics_non_generic_methods1.cpp

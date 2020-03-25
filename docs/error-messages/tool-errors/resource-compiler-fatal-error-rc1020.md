@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1020
 ms.assetid: 3e073ebf-9136-4bf8-ac6a-3c642ed64594
-ms.openlocfilehash: ac4a9d521728b22966f6d8824479d13cc7394601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff4cc5564f59d0adf74ae86149130dd5d017a9ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297333"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182678"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>資源編譯器嚴重錯誤 RC1020
 
-未預期的 ' #endif'
+非預期的 ' #endif '
 
-`#endif`指示詞出現但沒有相符`#if`， **#ifdef**，或 **#ifndef**指示詞。
+出現 `#endif` 指示詞，但沒有相符的 `#if`、 **#ifdef**或 **#ifndef**指示詞。
 
-請確定沒有相符`#endif`針對每個`#if`， **#ifdef**，並 **#ifndef**陳述式。
+請確定每個 `#if`、 **#ifdef**和 **#ifndef**語句都有相符的 `#endif`。

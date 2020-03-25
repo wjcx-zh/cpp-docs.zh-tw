@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 （層級 3） C4839
+title: 編譯器警告（層級3） C4839
 ms.date: 09/13/2018
 f1_keywords:
 - C4839
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 09b6e5b8dc984b35df7de96f5cf8610f2b0f16af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198571"
 ---
-# <a name="compiler-warning-level-3-c4839"></a>編譯器警告 （層級 3） C4839
+# <a name="compiler-warning-level-3-c4839"></a>編譯器警告（層級3） C4839
 
-> 類別的非標準用法*型別*' 做為引數的 variadic 函式
+> 以非標準方式使用類別 '*type*' 做為 variadic 函數的引數
 
-類別或結構，例如傳遞給 variadic 函式`printf`必須可透過極簡方式複製。 傳遞這類物件時，編譯器只會進行位元複製，而且不會呼叫建構函式或解構函式。
+傳遞至 variadic 函數（例如 `printf`）的類別或結構必須是完整可複製。 傳遞這類物件時，編譯器只會進行位元複製，而且不會呼叫建構函式或解構函式。
 
-這項警告是在 Visual Studio 2017 中的開始提供。
+從 Visual Studio 2017 開始提供此警告。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4839:
+下列範例會產生 C4839：
 
 ```cpp
 // C4839.cpp
@@ -51,7 +51,7 @@ int main()
     printf("%i\n", i.load());
 ```
 
-針對字串使用建置和管理`CStringW`，提供`operator LPCWSTR()`應該用來轉換`CStringW`格式字串所預期的 C 指標的物件。
+針對使用 `CStringW`建立和管理的字串，提供的 `operator LPCWSTR()` 應該用來將 `CStringW` 物件轉換成格式字串所預期的 C 指標。
 
 ```cpp
     CStringW str1;

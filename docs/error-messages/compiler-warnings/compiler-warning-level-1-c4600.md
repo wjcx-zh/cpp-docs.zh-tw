@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4600
+title: 編譯器警告 (層級 1) C4600
 ms.date: 11/04/2016
 f1_keywords:
 - C4600
 helpviewer_keywords:
 - C4600
 ms.assetid: f023a2a1-7fc4-463f-a434-dc93fcd3f4e9
-ms.openlocfilehash: 6eae37d006b5fcd6bd1c5e2993f1752c0534ee45
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 15ad64ad29f6f01253a2329fb04897c299cedff9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966220"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186071"
 ---
-# <a name="compiler-warning-level-1-c4600"></a>編譯器警告（層級1） C4600
+# <a name="compiler-warning-level-1-c4600"></a>編譯器警告 (層級 1) C4600
 
 \#pragma ' 宏名稱 '：必須是有效的非空白字串
 

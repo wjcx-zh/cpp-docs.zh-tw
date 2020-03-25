@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2865
 ms.assetid: 973eb6a0-c99a-4d25-b3e5-fe0539794d77
-ms.openlocfilehash: 38b7dd86a57c3cd89811c6489e51fb4271fd7b79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd4374c1a577c4c39c5dec107ed5025d7cdc79c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201692"
 ---
 # <a name="compiler-error-c2865"></a>編譯器錯誤 C2865
 
-'function': handle_or_pointer 的非法比較
+' function '： handle_or_pointer 的不合法比較
 
-您可以比較參考[類別和結構](../../extensions/classes-and-structs-cpp-component-extensions.md)管理只會針對相等的參考類型，以查看它們是否參考相同的物件 （= =） 或不同的物件或 (！ =)。
+您可以比較[類別和結構](../../extensions/classes-and-structs-cpp-component-extensions.md)或受管理的參考型別的參考，只是為了相等，以查看它們是否參考相同的物件（= =）或不同的物件（！ =）。
 
-您無法比較它們的順序，因為.NET 執行階段可能會移動受管理的物件，也可以隨時變更測試的結果。
+您無法比較它們以進行排序，因為 .NET 執行時間可能會隨時移動受管理的物件，並變更測試的結果。

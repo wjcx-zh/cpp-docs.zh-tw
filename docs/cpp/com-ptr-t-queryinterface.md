@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 42953c92e4cf31b5ccd02dd51811fc1fdeedbcaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399274"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170667"
 ---
-# <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
+# <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
 **Microsoft 專屬**
 
-呼叫**QueryInterface**成員函式`IUnknown`上封裝的介面指標。
+在封裝的介面指標上呼叫 `IUnknown` 的**QueryInterface**成員函式。
 
 ## <a name="syntax"></a>語法
 
@@ -36,16 +36,16 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 #### <a name="parameters"></a>參數
 
 *iid*<br/>
-`IID` 介面指標。
+介面指標的 `IID`。
 
 *p*<br/>
 原始介面指標。
 
 ## <a name="remarks"></a>備註
 
-呼叫`IUnknown::QueryInterface`具有指定之封裝的介面指標`IID`，並傳回產生的原始介面指標，在*p*。 此常式會傳回指出成功或失敗的 HRESULT。
+使用指定的 `IID` 在封裝的介面指標上呼叫 `IUnknown::QueryInterface`，並在*p*中傳回產生的原始介面指標。 此常式會傳回 HRESULT 以表示成功或失敗。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

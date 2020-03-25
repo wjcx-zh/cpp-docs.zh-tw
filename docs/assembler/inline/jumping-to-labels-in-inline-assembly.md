@@ -9,12 +9,12 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169327"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>跳至內嵌組譯碼中的標籤
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-因為**結束**是名稱的 C 程式庫函式，此程式碼可能會造成跳至**結束**函式，而不是想要的位置。
+由於**exit**是 C 程式庫函式的名稱，因此這個程式碼可能會導致跳至**exit**函式，而不是所需的位置。
 
 如同在 MASM 程式中，貨幣符號 (`$`) 會做為目前位置計數器。 它是目前所組合之指示的標籤。 在 `__asm` 區塊中，其主要用途是提供長的條件式跳躍點：
 
@@ -79,7 +79,7 @@ exit:
 farlabel:
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

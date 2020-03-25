@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1264
 ms.assetid: 23b1aad7-d382-42c1-bae8-db68575c57a8
-ms.openlocfilehash: ca17b6946b9e988507af2786825223e042356d0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00041e677ac7b69df9981551ee3b6cc18f9eb33d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183757"
 ---
 # <a name="linker-tools-error-lnk1264"></a>連結器工具錯誤 LNK1264
 
-/Ltcg: pginstrument 指定，但不需要; 的程式碼產生檢測失敗
+/LTCG：指定了 PGINSTRUMENT，但不需要產生程式碼;檢測失敗
 
-**/Ltcg: pginstrument**已指定但找不到檔案進行編譯任何.obj [/GL](../../build/reference/gl-whole-program-optimization.md)。 位置和連線失敗，無法使用檢測。 必須有至少一個命令列上使用編譯的.obj 檔案 **/GL** ，以便進行檢測。
+**/Ltcg：** 已指定 PGINSTRUMENT，但找不到使用[/gl](../../build/reference/gl-whole-program-optimization.md)編譯的 .obj 檔案。 檢測無法進行，且連結失敗。 命令列上必須至少有一個 .obj 檔案使用 **/gl**編譯，才能進行檢測。
 
-只有在 64 位元編譯器中使用特性指引最佳化 (PGO)。
+特性指引優化（PGO）僅適用于64位編譯器。

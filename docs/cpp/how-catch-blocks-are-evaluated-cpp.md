@@ -8,16 +8,16 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-ms.openlocfilehash: 027dc87923a588ea891dbf6dd835e2baba75a1cb
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 11804c48631659b84006abb824837efea3902416
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245848"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188633"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>評估 Catch 區塊的方式 (C++)
 
-C++ 可讓您擲回任何類型的例外狀況，不過，一般建議擲回衍生自 std::exception 的類型。 Catch C++處理常式可能會攔截例外狀況，這會指定與所擲回例外狀況相同的類型，或由可攔截任何例外狀況類型的處理常式捕捉。
+C++ 可讓您擲回任何類型的例外狀況，不過，一般建議擲回衍生自 std::exception 的類型。 Catch C++處理常式可能會攔截例外**catch**狀況，這會指定與所擲回例外狀況相同的類型，或由可攔截任何例外狀況類型的處理常式捕捉。
 
 如果擲回的例外狀況類型是類別，而該類別同時擁有一個或多個基底類別，則可以使用接受例外狀況類型的基底類別，以及接受例外狀況類型之基底參考的處理常式攔截例外狀況。 請注意，如果是以參考攔截例外狀況，它會繫結程序至實際擲回的例外狀況物件，否則它會是複本 (就如同函式的引數)。
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: 97059066adadc3a7897cbd2c4c747e2a673e7201
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170575"
 ---
 # <a name="c-constant-expressions"></a>C++ 常數運算式
 
-A*常數*值是指不會變更。 C++ 提供兩個關鍵字，以讓您表示不要修改物件的意圖，以及施行該意圖。
+*常*數值是一個不會變更的值。 C++ 提供兩個關鍵字，以讓您表示不要修改物件的意圖，以及施行該意圖。
 
 C++ 需要常數運算式 (也就是評估為常數的運算式) 才能宣告下列各項：
 
@@ -44,7 +44,7 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-明確轉換成整數類資料類型是合法的常數運算式;所有其他類型和衍生型別是除了時做為運算元不合法**sizeof**運算子。
+在常數運算式中明確轉換成整數類資料類型是合法的;除了當做**sizeof**運算子的運算元使用之外，所有其他類型和衍生類型都是不合法的。
 
 逗號運算子和指派運算子不能在常數運算式中使用。
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
-ms.openlocfilehash: affaefd8af4802836733587af62977171ba01410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ba42f19e3474cc4a3199771f761b021221f430e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154957"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190010"
 ---
-# <a name="comptrtdetach"></a>_com_ptr_t::Detach
+# <a name="_com_ptr_tdetach"></a>_com_ptr_t::Detach
 
 **Microsoft 專屬**
 
@@ -27,9 +27,9 @@ Interface* Detach( ) throw( );
 
 ## <a name="remarks"></a>備註
 
-擷取和傳回封裝的介面指標，並接著清除封裝的指標儲存體，為 NULL。 這麼做會從封裝中移除介面指標。 它可以決定是否要呼叫`Release`上傳回的介面指標。
+擷取和傳回封裝的介面指標，然後將封裝的指標儲存區清除為 NULL。 這麼做會從封裝中移除介面指標。 您可以視需要在傳回的介面指標上呼叫 `Release`。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

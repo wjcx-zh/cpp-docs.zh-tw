@@ -1,5 +1,5 @@
 ---
-title: thread
+title: 執行緒
 ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 30972b5668d3eab9ec2118f3d90d7ced1e087275
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301284"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160693"
 ---
-# <a name="thread"></a>thread
+# <a name="thread"></a>執行緒
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 **執行緒**擴充儲存類別修飾詞是用來宣告執行緒區域變數。 如需 c + + 11 和更新版本中的可移植對等用法，請使用可移植程式碼的[thread_local](../cpp/storage-classes-cpp.md#thread_local)儲存類別規範。 在 Windows **thread_local**上使用 **__declspec （thread）** 來執行。
 
 ## <a name="syntax"></a>語法
 
-**__declspec （執行緒）** 宣告子
+**__declspec （執行緒）** *declarator*宣告子
 
 ## <a name="remarks"></a>備註
 
@@ -85,7 +85,7 @@ __declspec( thread ) int tls_i = 1;
 
 **END Microsoft 特定的**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [__declspec](../cpp/declspec.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>

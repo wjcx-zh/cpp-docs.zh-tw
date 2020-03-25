@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940000"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171290"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -69,10 +69,10 @@ long double acos( long double x );   // C++ only
 
 根據預設，如果*x*小於-1 或大於1，則**acos**會傳回不定的。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± ∞|INVALID|_DOMAIN|
-|± QNAN，IND|none|_DOMAIN|
+|±∞|INVALID|_DOMAIN|
+|± QNAN，IND|無|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>備註
@@ -81,7 +81,7 @@ long double acos( long double x );   // C++ only
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|選擇性標頭|
+|常式|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168703"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -68,9 +68,9 @@ long double tan( long double x );  // C++ only
 
 **Tan**函式會傳回*x*的正切函數。 如果*x*大於或等於263，或小於或等於-263，則會在結果中失去重要性。
 
-|Input|SEH 例外狀況|**Matherr**異常|
+|輸入|SEH 例外狀況|**Matherr**異常|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|none|_DOMAIN|
+|± QNAN，IND|無|_DOMAIN|
 |± INF|**無效**|_DOMAIN|
 
 ## <a name="remarks"></a>備註
@@ -79,11 +79,11 @@ long double tan( long double x );  // C++ only
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
+|常式|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
 |**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

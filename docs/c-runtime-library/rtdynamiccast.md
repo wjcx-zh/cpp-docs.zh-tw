@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957332"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170068"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -66,14 +66,14 @@ PVOID __RTDynamicCast (
 
 ## <a name="exceptions"></a>例外狀況
 
-如果 `dynamic_cast<>` 的輸入是參考且轉換失敗，則為 `bad_cast()`。
+如果 `bad_cast()` 的輸入是參考且轉換失敗，則為 `dynamic_cast<>`。
 
 ## <a name="remarks"></a>備註
 
-將 `inptr` 轉換為 `TargetType` 類型的物件。 如果 `TargetType` 是指標，則 `inptr` 類型必須是指標；或如果 `TargetType` 是參考，則為左值 (l-value)。 `TargetType` 必須是先前定義的類別類型的指標或參考，或是為 void 的指標。
+將 `inptr` 轉換為 `TargetType` 類型的物件。 如果 `inptr` 是指標，則 `TargetType` 類型必須是指標；或如果 `TargetType` 是參考，則為左值 (l-value)。 `TargetType` 必須是先前定義的類別類型的指標或參考，或是為 void 的指標。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |__RTDynamicCast|rtti.h|

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330527"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160823"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
 **Microsoft 專屬**
 
@@ -29,11 +29,11 @@ __super::member_function();
 
 多載解析階段會考量所有可存取的基底類別方法，並且提供最佳相符結果的函式即為將會呼叫的函式。
 
-**__super**只可出現在成員函式的主體。
+**__super**只能出現在成員函式的主體內。
 
-**__super**不能與 using 宣告。 請參閱[using 宣告](../cpp/using-declaration.md)如需詳細資訊。
+**__super**不能與 using 宣告搭配使用。 如需詳細資訊，請參閱[using](../cpp/using-declaration.md)宣告。
 
-引進[屬性](../windows/attributes/attributes-alphabetical-reference.md)插入程式碼，您的程式碼可能包含您可能不知道，但該名稱包含您想要呼叫的方法的一個或多個基底的類別。
+隨著引入了插入程式碼的[屬性](../windows/attributes/attributes-alphabetical-reference.md)，您的程式碼可能會包含一個或多個基類，而您可能不知道這些類別的名稱，但其中包含您想要呼叫的方法。
 
 ## <a name="example"></a>範例
 
@@ -58,7 +58,7 @@ struct D : B1, B2 {
 };
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

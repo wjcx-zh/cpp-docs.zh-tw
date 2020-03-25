@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9476c0c446463c04084f46ed17a8ada7fb01fd7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330462"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188125"
 ---
-# <a name="tilestatic-keyword"></a>tile_static 關鍵字
+# <a name="tile_static-keyword"></a>tile_static 關鍵字
 
-**Tile_static**關鍵字用來宣告的變數，可供執行緒磚中的所有執行緒。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需使用磚塊的詳細資訊，請參閱[使用的圖格](../parallel/amp/using-tiles.md)。
+**Tile_static**關鍵字是用來宣告可供執行緒磚中的所有線程存取的變數。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需使用磚的詳細資訊，請參閱[使用磚](../parallel/amp/using-tiles.md)。
 
-**Tile_static**關鍵字有下列限制：
+**Tile_static**關鍵字具有下列限制：
 
 - 只能用於具有 `restrict(amp)` 修飾詞之函式中的變數。
 
 - 不可用於屬於指標或參考類型的變數。
 
-- A **tile_static**變數不能有初始設定式。 不會自動叫用預設建構函式和解構函式。
+- **Tile_static**變數不能有初始化運算式。 不會自動叫用預設建構函式和解構函式。
 
-- 未初始化的值**tile_static**未定義變數。
+- 未初始化的**tile_static**變數的值未定義。
 
-- 如果**tile_static**變數宣告中已進行 root 破解的非磚狀呼叫的呼叫歷程圖`parallel_for_each`會產生警告且未定義變數的行為。
+- 如果**tile_static**變數宣告于呼叫圖形中，而該圖表是以 `parallel_for_each`的非磚式呼叫為基礎，則會產生警告，而且不會定義變數的行為。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何**tile_static**變數可用來跨 tile 中的數個執行緒累積資料。
+下列範例顯示如何使用**tile_static**變數，在磚中的多個執行緒之間累積資料。
 
 ```cpp
 // Sample data:
@@ -148,5 +148,5 @@ for (int i = 0; i < 4; i++) {
 
 [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)<br/>
 [C++ AMP 概觀](../parallel/amp/cpp-amp-overview.md)<br/>
-[parallel_for_each 函式 (C++ P)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
+[parallel_for_each 函式C++ （AMP）](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
 [逐步解說：矩陣乘法](../parallel/amp/walkthrough-matrix-multiplication.md)

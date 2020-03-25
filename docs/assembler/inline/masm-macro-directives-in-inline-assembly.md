@@ -7,20 +7,20 @@ helpviewer_keywords:
 - macros, directives
 - MASM (Microsoft Macro Assembler), inline assembly macro directives
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
-ms.openlocfilehash: 7e1bed782d28a5bf7c934c3f57f50aae70038578
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38b73346fc52f6b5efe478f8eb960ad049fae924
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169275"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>內嵌組譯碼中的 MASM 巨集指示詞
 
 **Microsoft 專屬**
 
-內嵌組合語言不是一種巨集組合語言。 您無法使用 MASM 巨集指示詞 (**巨集**， `REPT`， **IRC**， `IRP`，以及`ENDM`) 或巨集運算子 (**<>**，**!**， **&**， `%`，和`.TYPE`)。 不過，`__asm` 區塊可以使用 C 前置處理器指示詞。 請參閱[使用 C 或C++在 __asm 區塊中](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)如需詳細資訊。
+內嵌組合語言不是一種巨集組合語言。 您無法使用 MASM 宏指示詞（**宏**、`REPT`、 **IRC**、`IRP`和 `ENDM`）或宏運算子（ **<>** 、 **！** 、 **&** 、`%`和 `.TYPE`）。 不過，`__asm` 區塊可以使用 C 前置處理器指示詞。 如需詳細資訊，請參閱[在 __Asm 區塊中使用 C 或C++ ](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) 。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

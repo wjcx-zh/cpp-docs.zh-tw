@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1065
 ms.assetid: bc890f20-ff46-4073-ab3b-4a5db879f9bd
-ms.openlocfilehash: 5f905c084bbc2cc5c5a5c5172306208212eb6def
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 093ac48afadc7945bbce8c85d8deb0bd60ede611
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182808"
 ---
 # <a name="nmake-fatal-error-u1065"></a>NMAKE 嚴重錯誤 U1065
 
-無效的選項 'option'
+選項 ' option ' 無效
 
-無法對 NMAKE 有效選項。
+此選項對 NMAKE 無效。

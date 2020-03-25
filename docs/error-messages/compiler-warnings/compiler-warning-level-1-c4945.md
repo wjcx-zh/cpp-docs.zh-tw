@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4945
+title: 編譯器警告 (層級 1) C4945
 ms.date: 11/04/2016
 f1_keywords:
 - C4945
 helpviewer_keywords:
 - C4945
 ms.assetid: 6d2079ea-dc59-4611-bc68-9a22c06f7587
-ms.openlocfilehash: 6a20effcebe1a36fa1356fffefa3a23a0056a0f0
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 15a78877dbe70a7f95674092984546219e6a1c78
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052251"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199121"
 ---
-# <a name="compiler-warning-level-1-c4945"></a>編譯器警告（層級1） C4945
+# <a name="compiler-warning-level-1-c4945"></a>編譯器警告 (層級 1) C4945
 
 ' symbol '：無法從 ' assembly2 ' 匯入符號：因為 ' symbol ' 已從另一個元件 ' assembly1 ' 匯入
 

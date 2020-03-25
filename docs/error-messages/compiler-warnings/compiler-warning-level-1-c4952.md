@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4952
 ms.assetid: 593324f0-5cfe-42fb-b221-2f71308765dd
-ms.openlocfilehash: c2e9b88125655d9ea0abe3e65500b149289ba83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560705edeb0bbdd6be760736a8d4a19d914133d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393281"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174566"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>編譯器警告 (層級 1) C4952
 
-> '*函式*': 在程式資料庫中找到的任何設定檔資料'*pgd_file*'
+> '*function*'：在程式資料庫 '*pgd_file*' 中找不到分析資料
 
 使用 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)時，編譯器偵測到輸入模組在 `/LTCG:PGINSTRUMENT` 之後經過重新編譯，且出現新的函式 ()。
 

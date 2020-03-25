@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4638
 ms.assetid: 2c07923a-e103-4e40-bd11-fdfed428a5ec
-ms.openlocfilehash: 1bdd7541e16f5c02756678ae78a777094b5fe588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3662116359f906ef6f0a004fada8efd6771d0a0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174124"
 ---
 # <a name="compiler-warning-level-3-c4638"></a>編譯器警告 (層級 3) C4638
 
-> XML 文件註解目標： 未知的符號參考 '*符號*'
+> XML 檔批註目標：參考未知的符號 '*symbol*'
 
 ## <a name="remarks"></a>備註
 

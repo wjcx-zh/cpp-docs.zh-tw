@@ -5,31 +5,31 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: 8ed6489a27d4c0e117f7f18281ff188f40936e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183575"
 ---
 # <a name="linker-tools-error-lnk1318"></a>連結器工具錯誤 LNK1318
 
-> 未預期的 PDB 錯誤;*會導致*'*詳細資料*'
+> 未預期的 PDB 錯誤;*原因*[*詳細資料*]
 
-連結器遇到未預期的錯誤時開啟、 讀取或寫入 PDB 檔案。
+連結器在開啟、讀取或寫入 PDB 檔案時，發生未預期的錯誤。
 
-此錯誤訊息會產生 PDB 檔案中常見的問題。 *會導致*並*詳細資料*發生失敗時，代表提供的資訊給連結器。 這可能不是非常實用，為處理 PDB 檔案有不同且更具參考性的錯誤訊息時的常見錯誤。
+針對 PDB 檔案中的罕見問題，會產生這個錯誤訊息。 *原因*和*詳細資料*代表失敗發生時，連結器可用的資訊。 這可能不太實用，因為處理 PDB 檔案時的常見錯誤會有個別、更具資訊性的錯誤訊息。
 
-錯誤的來源不常見，因為沒有泛型的建議可用來解決此問題：
+由於錯誤的來源並不常見，因此只有一般的建議可用來解決此問題：
 
-- 在您的組建目錄中執行的清除作業，然後執行完整建置您的方案。
+- 在您的組建目錄中執行乾淨的作業，然後執行解決方案的完整組建。
 
-- 重新啟動電腦，或檢查偏離或無回應的 mspdbsrv.exe 程序並 TaskManager 中刪除它們。
+- 重新開機您的電腦，或檢查 mspdbsrv.exe 是否有偏離或停止回應的處理常式，並在 TaskManager 中將其終止。
 
-- 關閉您的專案目錄中的防毒檢查。
+- 關閉專案目錄中的防毒程式檢查。
 
-- 使用[/Zf](../../build/reference/zf.md)編譯器選項，如果使用[/MP](../../build/reference/mp-build-with-multiple-processes.md) MSBuild 或另一個平行建置程序。
+- 如果使用[/mp](../../build/reference/mp-build-with-multiple-processes.md)搭配 MSBuild 或另一個平行組建進程，請使用[/Zf](../../build/reference/zf.md)編譯器選項。
 
-- 嘗試建置使用 64 位元裝載工具組。
+- 嘗試使用64位裝載工具組來建立。
 
-- 將序列化連結來減少平行連結問題，如有需要。 可能造成此錯誤，如果 mspdbsrv.exe 由一個執行個體的連結，啟動和關機之後完成連結的另一個執行個體，才能使用它。 此修正的缺點是您專案的組建可能需要很長的時間才能完成。
+- 如有需要，序列化連結以減輕平行連結問題。 這個錯誤可能是因為某個連結實例啟動 mspdbsrv.exe，而在另一個連結實例使用它來完成之前關閉。 此修正的缺點是，您的專案組建可能需要更長的時間才能完成。

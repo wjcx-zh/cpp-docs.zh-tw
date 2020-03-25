@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inline assembly [C++], about inline assembly
 - inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-ms.openlocfilehash: ecf1598ec90a8600e1fa9aae565724c254dc11e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e634f78eca753487cf122ac95df55828bb64625
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169652"
 ---
 # <a name="advantages-of-inline-assembly"></a>內嵌組譯碼的優點
 
@@ -31,7 +31,7 @@ ms.locfileid: "62167396"
 
 內嵌組譯碼是具有特殊用途的工具。 如果您打算將應用程式移植到不同的電腦上，可能會想要將電腦專屬的程式碼放在不同的模組中。 由於內嵌組譯碼並未支援全部的 Microsoft Macro Assembler (MASM) 巨集和資料指示詞，因此針對這類模組使用 MASM 可能會更方便。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

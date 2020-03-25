@@ -6,12 +6,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515993"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171888"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>使用者定義屬性  (C++/CLI 和 C++/CX)
 
@@ -31,7 +31,7 @@ C++/ CLI 和 C++/CX 可讓您建立能擴充介面、類別或結構、方法、
 
 您可以透過定義類型並將 <xref:System.Attribute> 作為類型的基底類別，以及選擇性套用 <xref:System.AttributeUsageAttribute> 屬性，以定義自訂屬性。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱
 
 - [屬性目標](attribute-targets-cpp-component-extensions.md)
 

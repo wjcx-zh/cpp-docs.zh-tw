@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4526
+title: 編譯器警告 (層級 1) C4526
 ms.date: 11/04/2016
 f1_keywords:
 - C4526
 helpviewer_keywords:
 - C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-ms.openlocfilehash: 60ac01d6a118f37a22b39ab41fa60252866f3360
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: d4d772f3e505979a6ea5c3e7923fefa621601370
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186500"
 ---
-# <a name="compiler-warning-level-1-c4526"></a>編譯器警告（層級1） C4526
+# <a name="compiler-warning-level-1-c4526"></a>編譯器警告 (層級 1) C4526
 
 ' function '：靜態成員函式無法覆寫虛擬函式 ' virtual function'override 已忽略，虛擬函式將會隱藏
 

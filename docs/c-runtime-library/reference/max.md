@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170185"
 ---
 # <a name="__max"></a>__max
 
@@ -56,7 +56,7 @@ ms.locfileid: "70952742"
 
 **__Max**宏比較兩個值，並傳回較大的值。 引數可以是帶正負號或不帶正負號的任何數值資料類型。 引數和傳回值必須屬於相同的資料類型。
 
-傳回的引數會透過宏進行兩次評估。 如果引數是在評估時改變其值的運算式（例如`*p++`），這可能會導致非預期的結果。
+傳回的引數會透過宏進行兩次評估。 如果引數是在評估時改變其值的運算式，例如 `*p++`，這可能會導致非預期的結果。
 
 ## <a name="requirements"></a>需求
 

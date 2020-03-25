@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4395
+title: 編譯器警告 (層級 1) C4395
 ms.date: 11/04/2016
 f1_keywords:
 - C4395
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 82c7ef9c20b62c0e082a7851bac0ec1e44a8f4c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73964877"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186851"
 ---
-# <a name="compiler-warning-level-1-c4395"></a>編譯器警告（層級1） C4395
+# <a name="compiler-warning-level-1-c4395"></a>編譯器警告 (層級 1) C4395
 
 ' function '：成員函式將會在 initonly 資料成員 ' member ' 的複本上叫用
 

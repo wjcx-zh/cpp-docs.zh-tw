@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274675"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172461"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>適用於 .NET 與 UWP 的元件擴充功能
 
@@ -37,21 +37,21 @@ C++/CX 擴充功能為 C++/CLI 的子集。 雖然在大部分情況下擴充功
 
 下表列出在 C++ 語言擴充功能中的關鍵字。
 
-|關鍵字|視內容而有所區別|用途|參考資料|
+|關鍵字|視內容而有所區別|目的|參考|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|否|宣告類型。|[類別和結構](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|否|宣告值類型。|[類別和結構](classes-and-structs-cpp-component-extensions.md)|
 |**介面類別**<br /><br /> **interface struct**|否|宣告介面。|[介面類別](interface-class-cpp-component-extensions.md)|
 |**enum 類別**<br /><br /> **enum struct**|否|宣告列舉。|[enum 類別](enum-class-cpp-component-extensions.md)|
-|**屬性**|是|宣告屬性。|[屬性](property-cpp-component-extensions.md)|
+|**property**|是|宣告屬性。|[property](property-cpp-component-extensions.md)|
 |**delegate**|是|宣告委派。|[委派  (C++/CLI 和 C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|是|宣告事件。|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>覆寫規範
 
-您可以使用下列關鍵字限定衍生的覆寫行為。 雖然 **new** 關鍵字不是 C++ 的擴充功能，但將它列在這裡是因為可在其他內容中使用它。 某些規範對於原生程式設計也有效。 如需詳細資訊，請參閱[如何：在原生編譯中宣告覆寫指定名稱 (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
+您可以使用下列關鍵字限定衍生的覆寫行為。 雖然 **new** 關鍵字不是 C++ 的擴充功能，但將它列在這裡是因為可在其他內容中使用它。 某些規範對於原生程式設計也有效。 如需詳細資訊，請參閱[如何：在原生編譯中宣告C++覆寫規範（/cli）](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
 
-|關鍵字|視內容而有所區別|用途|參考資料|
+|關鍵字|視內容而有所區別|目的|參考|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|是|表示函式或類別為抽象。|[abstract](abstract-cpp-component-extensions.md)|
 |**new**|否|表示函式不是基底類別版本的覆寫。|[new (vtable 中的新位置)](new-new-slot-in-vtable-cpp-component-extensions.md)|
@@ -62,7 +62,7 @@ C++/CX 擴充功能為 C++/CLI 的子集。 雖然在大部分情況下擴充功
 
 下列關鍵字已加入以支援泛型類型。 如需詳細資訊，請參閱[泛型](generics-cpp-component-extensions.md)。
 
-|關鍵字|視內容而有所區別|用途|
+|關鍵字|視內容而有所區別|目的|
 |-------------|-----------------------|-------------|
 |**generic**|否|宣告泛型類型。|
 |**where**|是|指定套用至泛型類型參數的條件約束。|
@@ -71,21 +71,21 @@ C++/CX 擴充功能為 C++/CLI 的子集。 雖然在大部分情況下擴充功
 
 下列關鍵字已加入至 C++ 擴充功能。
 
-|關鍵字|視內容而有所區別|用途|參考資料|
+|關鍵字|視內容而有所區別|目的|參考|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|是|表示預設例外狀況處理行為。|[例外狀況處理](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|否|列舉集合的項目。|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|否|在記憶體回收堆積上配置類型。 不使用 **new** 和 **delete**，改用此關鍵字。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|是|配置 Windows 執行階段型別。 不使用 **new** 和 **delete**，改用此關鍵字。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|是|表示成員只能在宣告或靜態建構函式中初始化。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**名稱**|是|建立常值變數。|[名稱](literal-cpp-component-extensions.md)|
+|**literal**|是|建立常值變數。|[literal](literal-cpp-component-extensions.md)|
 |**nullptr**|否|指出控制代碼或指標未指向物件。|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>範本建構
 
 下列語言建構會實作為範本，而不是關鍵字。 如果您指定 `/ZW` 編譯器選項，則它們會在 `lang` 命名空間中定義。 如果您指定 `/clr` 編譯器選項，則它們會在 `cli` 命名空間中定義。
 
-|關鍵字|用途|參考資料|
+|關鍵字|目的|參考|
 |-------------|-------------|---------------|
 |**array**|宣告陣列。|[陣列](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(只有 CLR) 指向參考類型中的資料。|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ C++/CX 擴充功能為 C++/CLI 的子集。 雖然在大部分情況下擴充功
 
 下列類型宣告子會指示執行階段自動管理配置物件的存留期和刪除。
 
-|運算子|用途|參考資料|
+|運算子|目的|參考|
 |--------------|-------------|---------------|
 |`^`|宣告物件的控制代碼；也就是，一個指向 Windows 執行階段或 CLR 物件的指標，不再使用它時即會自動刪除。|[物件控制代碼運算子 (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|宣告追蹤參考；也就是，Windows 執行階段或 CLR 物件的參考，不再使用它時即會自動刪除。|[追蹤參考運算子](tracking-reference-operator-cpp-component-extensions.md)|
@@ -111,7 +111,7 @@ C++/CX 擴充功能為 C++/CLI 的子集。 雖然在大部分情況下擴充功
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows 執行階段和 CLR) 可將關鍵字當作識別碼使用。|
 |[變數引數清單 (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows 執行階段和 CLR) 讓函式能夠接受可變數目的引數。|
 |[C++ 原生類型的 .NET Framework 對等項 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|列出用來取代 C++ 整數類型的 CLR 類型。|
-|[appdomain](../cpp/appdomain.md) **__declspec** 修飾詞|**__declspec** 修飾詞，要求每個 appdomain 都有靜態和全域變數。|
+|[appdomain](../cpp/appdomain.md) **__declspec**修飾詞|**__declspec** 修飾詞，要求每個 appdomain 都有靜態和全域變數。|
 |[使用 /clr 進行 C-Style 轉換 (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|描述 C-style 轉換的解譯方式。|
 |[__clrcall](../cpp/clrcall.md) 呼叫慣例|表示 CLR 相容的呼叫慣例。|
 |`__cplusplus_cli`|[預先定義的巨集](../preprocessor/predefined-macros.md)|
@@ -122,7 +122,7 @@ C++/CX 擴充功能為 C++/CLI 的子集。 雖然在大部分情況下擴充功
 |[Boxing](boxing-cpp-component-extensions.md)|示範 boxed 處理值類型的條件。|
 |[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)|討論如何在編譯時偵測類型的特性。|
 |[managed、unmanaged](../preprocessor/managed-unmanaged.md) pragmas|示範 Managed 和 Unmanaged 函式如何共存於相同的模組。|
-|[process](../cpp/process.md) **__declspec** 修飾詞|**__declspec** 修飾詞，要求每個 process 都有靜態和全域變數。|
+|[進程](../cpp/process.md) **__declspec**修飾詞|**__declspec** 修飾詞，要求每個 process 都有靜態和全域變數。|
 |[反映 (C++/CLI)](../dotnet/reflection-cpp-cli.md)|示範執行階段類型資訊的 CLR 版本。|
 |[String](string-cpp-component-extensions.md)|討論字串常值到 <xref:System.String> 的編譯器轉換。|
 |[類型轉送 (C++/CLI)](type-forwarding-cpp-cli.md)|在傳送組件中讓類型移動到另一個組件，讓用戶端程式碼不需要重新編譯。|

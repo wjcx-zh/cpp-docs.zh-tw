@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866137"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169886"
 ---
 # <a name="create-a-c-makefile-project"></a>建立 C++ Makefile 專案
 
@@ -19,10 +19,10 @@ ms.locfileid: "68866137"
 
 如果您有現有的 Makefile 專案，則當您希望在 Visual Studio IDE 中撰寫和/或對其進行偵錯時，可以選擇這些選項：
 
-- 在 Visual Studio 中建立 Makefile 專案，以使用現有 Makefile 來設定讓 Visual Studio 用於 IntelliSense 的 .vcxproj 檔案。 (您將無法使用原生 MSBuild 專案取得所有 IDE 功能。)請參閱下方的[建立 Makefile 專案](#create_a_makefile_project)。
-- 使用 [從現有程式碼檔建立新專案精靈]，從您的原始程式碼建立原生 MSBuild 專案。 在此之後，將不再使用原始的 Makefile。 如需詳細資訊，請參閱[如何：從現有的程式碼建立 C++ 專案](../how-to-create-a-cpp-project-from-existing-code.md)。
-- **Visual Studio 2017 及更新版本**：使用**開啟資料夾**功能編輯和建置未變更的 Makefile 專案，無須任何 MSBuild 系統。 如需詳細資訊，請參閱 [Open Folder projects for C++](../open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
-- **Visual Studio 2019 及更新版本**：建立適用於 Linux 的 UNIX Makefile 專案。
+- 在 Visual Studio 中建立 Makefile 專案，以使用現有 Makefile 來設定讓 Visual Studio 用於 IntelliSense 的 .vcxproj 檔案。 （您將不會擁有以原生 MSBuild 專案取得的所有 IDE 功能）。請參閱下方的[建立 makefile 專案](#create_a_makefile_project)。
+- 使用 [從現有程式碼檔建立新專案精靈]，從您的原始程式碼建立原生 MSBuild 專案。 在此之後，將不再使用原始的 Makefile。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../how-to-create-a-cpp-project-from-existing-code.md)。
+- **Visual Studio 2017 和更新版本**：使用 [**開啟資料夾**] 功能，在不介入 MSBuild 系統的情況下，直接編輯和建立 makefile 專案。 如需詳細資訊，請參閱 [Open Folder projects for C++](../open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
+- **Visual Studio 2019 和更新版本**：建立適用于 LINUX 的 UNIX makefile 專案。
 
 ## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> 使用 Makefile 專案範本建立 Makefile 專案
 
@@ -40,7 +40,7 @@ ms.locfileid: "68866137"
 
 1. 從 Visual Studio 主功能表中，選擇 [檔案] > [新增] > [專案]，然後在 [搜尋] 方塊中輸入 "makefile"。 或者，在 [新增專案] 對話方塊中，展開 [Visual C++] > [一般] (Visual Studio 2015) 或 [其他] (Visual Studio 2017)，然後根據您是以 Windows 或 Linux 為目標，來選擇兩個選項中的其中一個。
 
-1. **僅限 Windows**：在 [偵錯組態設定] 頁面中，提供偵錯和零售組建的命令、輸出、清除和重建資訊。 如果您想要指定不同的發行組態設定，請按 [下一步]。
+1. **僅限 Windows**：在 [**偵錯工具設定**] 頁面中，提供 debug 和 retail 組建的命令、輸出、清除和重建資訊。 如果您想要指定不同的發行組態設定，請按 [下一步]。
 
 1. 按一下 [完成] 以關閉對話方塊，並在 [方案總管] 中開啟新建立的專案。
 
@@ -64,19 +64,19 @@ ms.locfileid: "68866137"
 
 建立 Makefile 專案之後，即可在專案屬性頁的 [Nmake] 頁面檢視和編輯下列每個選項。
 
-- **建置命令列：** 指定當使用者從 [建置] 功能表選取 [建置] 時要執行的命令列。 顯示在專案屬性頁中 [Nmake] 頁面的 [建置命令列] 欄位。
+- **Build 命令列：** 指定當使用者從 [組建] 功能表選取 [組建] 時要執行的命令列。 顯示在專案屬性頁中 [Nmake] 頁面的 [建置命令列] 欄位。
 
-- **輸出：** 指定將包含命令列輸出之檔案的名稱。 根據預設，這個選項是根據專案名稱。 顯示在專案屬性頁中 [Nmake] 頁面的 [輸出] 欄位。
+- **輸出：** 指定將包含命令列輸出的檔案名。 根據預設，這個選項是根據專案名稱。 顯示在專案屬性頁中 [Nmake] 頁面的 [輸出] 欄位。
 
-- **清除命令列：** 指定當使用者從 [建置] 功能表選取 [清除] 時要執行的命令列。 顯示在專案屬性頁中 [Nmake] 頁面的 [清除命令列] 欄位。
+- **清除命令：** 指定當使用者從 [組建] 功能表選取 [清除] 時要執行的命令列。 顯示在專案屬性頁中 [Nmake] 頁面的 [清除命令列] 欄位。
 
-- **重建命令列：** 指定當使用者從 [建置] 功能表選取 [重建] 時要執行的命令列。 顯示在專案屬性頁中 [Nmake] 頁面的 [全部重建命令列] 欄位。
+- **Rebuild 命令列：** 指定當使用者從 [組建] 功能表選取 [重建] 時要執行的命令列。 顯示在專案屬性頁中 [Nmake] 頁面的 [全部重建命令列] 欄位。
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>作法：啟用 Makefile 專案的 IntelliSense
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>如何：在 Makefile 專案中啟用 IntelliSense
 
 不正確地設定某些專案設定或編譯器選項時，Makefile 專案中的 IntelliSense 會無法運作。 請遵循下列步驟來設定 Makefile 專案，讓 IntelliSense 可以正常運作：
 
-1. 開啟 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟 [屬性頁] 對話方塊。 如需詳細資訊，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 展開 [組態屬性] 節點。
 
@@ -86,7 +86,7 @@ ms.locfileid: "68866137"
 
    - 設定 [包含搜尋路徑] 屬性，指定編譯器會搜尋的目錄清單，以便解析傳遞至 makefile 專案中之前置處理器指示詞的檔案參考。 如需詳細資訊，請參閱 [/I (其他 Include 目錄)](i-additional-include-directories.md)。
 
-    - 對於使用 CL.EXE 從命令視窗建置的專案，設定 **INCLUDE** 環境變數，指定編譯器會搜尋的目錄清單，以便解析傳遞至 makefile 專案中之前置處理器指示詞的檔案參考。
+   - 對於使用 CL.EXE 從命令視窗建置的專案，設定 **INCLUDE** 環境變數，指定編譯器會搜尋的目錄清單，以便解析傳遞至 makefile 專案中之前置處理器指示詞的檔案參考。
 
    - 設定 [強制包含] 屬性，以指定在建置 makefile 專案時，要處理的標頭檔。 如需詳細資訊，請參閱 [/FI (指定強制的 Include 檔)](fi-name-forced-include-file.md)。
 
@@ -106,6 +106,6 @@ ms.locfileid: "68866137"
 
 [使用 IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE 參考](nmake-reference.md)<br>
-[如何：從現有程式碼建立 C++ 專案](../how-to-create-a-cpp-project-from-existing-code.md)
+[如何：從現有程式C++代碼建立專案](../how-to-create-a-cpp-project-from-existing-code.md)
 [Makefile 中的特殊字元](special-characters-in-a-makefile.md)<br/>
 [Makefile 內容](contents-of-a-makefile.md)<br/>

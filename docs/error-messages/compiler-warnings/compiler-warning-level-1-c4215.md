@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4215
+title: 編譯器警告 (層級 1) C4215
 ms.date: 11/04/2016
 f1_keywords:
 - C4215
 helpviewer_keywords:
 - C4215
 ms.assetid: f2aab64d-1bab-4f75-95ee-89e1263047b1
-ms.openlocfilehash: 91be04f927c63ccbb0668bbe70cbd7c5813f8dfc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b62f382759c7e4c9dc888cf75d4df07a063df571
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627352"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199858"
 ---
-# <a name="compiler-warning-level-1-c4215"></a>編譯器警告（層級1） C4215
+# <a name="compiler-warning-level-1-c4215"></a>編譯器警告 (層級 1) C4215
 
 使用非標準的擴充： long float
 

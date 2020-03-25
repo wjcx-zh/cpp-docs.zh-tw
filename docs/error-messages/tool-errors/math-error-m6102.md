@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6102
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
-ms.openlocfilehash: 73c4b48819937ed4b49c80969c18701c8820956e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 146ca1f51b15ee87475bc2007d63259d70450f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173760"
 ---
 # <a name="math-error-m6102"></a>運算錯誤 M6102
 
-異常
+denormal
 
-作業會產生非常小的浮點數，這是因為無效的精確度遺失。 異常的浮點例外狀況通常會遮罩，造成設陷及運算。
+作業產生非常小的浮點數，這是不正確重要性遺失。 Denormal 的浮點例外狀況通常會進行遮罩，使其被攔截和操作。
 
-程式結束，結束代碼為 130。
+程式終止，結束代碼為130。

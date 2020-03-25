@@ -9,12 +9,12 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169821"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>格式化自訂建置步驟或建置事件的輸出
 
@@ -30,7 +30,7 @@ ms.locfileid: "62195364"
 
 輸出的格式應該是：
 
-> {<em>filename</em>**(**<em>line#</em> \[**,** <em>column#</em>]**)** &#124; *toolname*} **:** \[ <em>any text</em> ] {**error** &#124; **warning**} <em>code+number</em>**:**<em>localizable string</em> \[ <em>any text</em> ]
+> {<em>filename</em> **（** <em>行 #</em> \[ **，** <em>column #</em>] **）** &#124; *工具*項 **}：** \[<em>任何文字</em>] {**錯誤** &#124; **警告**}<em>代碼 + 數位</em> **：** 可<em>當地語系化的字串</em>\[<em>任何文字</em>]
 
 其中：
 
@@ -40,11 +40,11 @@ ms.locfileid: "62195364"
 
 - **粗體**表示常值。
 
-例如: 
+例如，
 
 > C:\\*sourcefile.cpp*(134) : 錯誤 C2143: 語法錯誤 : 在 '}' 之前遺漏 ';'
 >
-> LINK : 嚴重錯誤 LNK1104: 無法開啟檔案 '*'somelib.lib*'
+> LINK : 嚴重錯誤 LNK1104: 無法開啟檔案 ' *'somelib.lib*'
 
 ## <a name="see-also"></a>另請參閱
 

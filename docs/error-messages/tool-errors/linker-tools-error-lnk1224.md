@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1224
 ms.assetid: e190b5d0-ce0c-4f65-8cc0-753f1cc9758a
-ms.openlocfilehash: 7e2c8da7443a9251d8111f643a785f5d75149cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b84a2390baad5ac307fa025e3fffafa0f093fb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183874"
 ---
 # <a name="linker-tools-error-lnk1224"></a>連結器工具錯誤 LNK1224
 
-無效的映像的基底位址
+不正確映射基底位址
 
-您指定無效的基底映像位址。 基底位址必須是 64KB 對齊 （最後四個十六進位數字必須是零），基底映像必須納入 32 位元帶正負號或不帶正負號值。
+您指定了不正確映射基底位址。 基底位址必須對齊64KB （最後四個十六進位數位必須為零），而且映射基底必須符合32位帶正負號或不帶正負號的值。

@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: ab97238cf13accf3db593b5c4a81550297a53d6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403330"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187696"
 ---
-# <a name="variantt-extractors"></a>_variant_t 擷取器
+# <a name="_variant_t-extractors"></a>_variant_t 擷取器
 
 **Microsoft 專屬**
 
-資料擷取封裝`VARIANT`物件。
+從封裝的 `VARIANT` 物件中解壓縮資料。
 
 ## <a name="syntax"></a>語法
 
@@ -87,31 +87,31 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>備註
 
-從封裝擷取未經處理資料`VARIANT`。 如果`VARIANT`已經是不是適當的類型，`VariantChangeType`用來嘗試轉換，而且在失敗時產生的錯誤：
+從封裝的 `VARIANT`中解壓縮原始資料。 如果 `VARIANT` 還不是正確的類型，`VariantChangeType` 會用來嘗試轉換，並在失敗時產生錯誤：
 
-- **運算子 short （)** 擷取**簡短**整數值。
+- **operator short （）** 將**短**整數值解壓縮。
 
-- **運算子 long （)** 擷取**長**整數值。
+- **運算子 long （）** 解壓縮**長**整數值。
 
-- **運算子 float （)** 擷取**float**數值。
+- **運算子 float （）** 抽取**浮點**數值。
 
-- **運算子 double （)** 擷取**double**整數值。
+- **運算子 double （）** 將**雙**整數值解壓縮。
 
-- **operator CY( )** Extracts a `CY` object.
+- **運算子 CY （）** 解壓縮 `CY` 物件。
 
-- **運算子 bool （)** 擷取**bool**值。
+- **operator bool （）** 解壓縮**bool**值。
 
-- **運算子 DECIMAL （）** 擷取`DECIMAL`值。
+- **運算子 DECIMAL （）** 解壓縮 `DECIMAL` 值。
 
-- **運算子 BYTE （）** 擷取`BYTE`值。
+- **OPERATOR BYTE （）** 解壓縮 `BYTE` 值。
 
-- **運算子 _bstr_t （)** 擷取的字串，會封裝在`_bstr_t`物件。
+- **運算子 _bstr_t （）** 解壓縮字串，其封裝在 `_bstr_t` 物件中。
 
-- **運算子 IDispatch\*（)** 從封裝擷取分配介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。
+- **運算子 IDispatch\*（）** 從封裝的 `VARIANT`中，解壓縮一個分配介面指標。 系統會在產生的指標上呼叫 `AddRef`，因此您可以由您呼叫 `Release` 來釋放它。
 
-- **運算子 IUnknown\*（)** 從封裝擷取 COM 介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。
+- **運算子 IUnknown\*（）** 從封裝的 `VARIANT`中，解壓縮 COM 介面指標。 系統會在產生的指標上呼叫 `AddRef`，因此您可以由您呼叫 `Release` 來釋放它。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

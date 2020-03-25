@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1071
 ms.assetid: 328a0c1f-a867-410e-943d-7b6b75a975ab
-ms.openlocfilehash: d9bf335e05993df774bac0684a68197650973bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f696915aafec25d49ba0aea555e447ab899e8988
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182704"
 ---
 # <a name="nmake-fatal-error-u1071"></a>NMAKE 嚴重錯誤 U1071
 
-目標 'targetname' 的相依性樹狀結構中循環
+目標 ' targetname ' 的相依性樹狀結構中的迴圈
 
-指定之目標的相依性樹狀結構中，有循環相依性。 指定的目標是其中一個從屬參照的指定之目標的相依性。 循環的相依性無效。
+指定目標的相依性樹狀結構中存在迴圈相依性。 給定的目標與指定目標的其中一個相依性相關。 迴圈相依性無效。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166941"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169367"
 ---
 # <a name="inline-assembler"></a>內嵌組合語言
 
@@ -24,7 +24,7 @@ ms.locfileid: "62166941"
 > [!NOTE]
 >  包含內嵌組譯工具的程式無法完全移植到其他硬體平台。 如果您為可攜性設計，請避免使用內嵌組譯工具。
 
-內嵌組譯碼不支援 ARM 和 x64 處理器。  下列主題說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言：
+ARM 和 x64 處理器上不支援內嵌組解碼。  下列主題說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言：
 
 - [內嵌組合語言概觀](../../assembler/inline/inline-assembler-overview.md)
 
@@ -48,7 +48,7 @@ ms.locfileid: "62166941"
 
 - [最佳化內嵌組譯碼](../../assembler/inline/optimizing-inline-assembly.md)
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

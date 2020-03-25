@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中使用 Live Share for C++ 進行共同作業
 description: 在 Visual Studio 中使用 Live Share for C++ 可即時對程式碼進行共同作業並予以共用。
 ms.date: 05/24/2019
-ms.openlocfilehash: e6e983c6acb56dffd12756d8bbaccef32dd57f38
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e8202cefb7f7d762e2736edcd5fa3c6127b4affa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171914"
 ---
 # <a name="collaborate-using-live-share-for-c"></a>使用適用於 C++ 的 Live Share 共同作業
 

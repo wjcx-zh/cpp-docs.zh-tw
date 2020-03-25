@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級3） C4414
+title: 編譯器警告 (層級 3) C4414
 ms.date: 11/04/2016
 f1_keywords:
 - C4414
 helpviewer_keywords:
 - C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
-ms.openlocfilehash: 43570cd43ca6e9d4f892dc577f615e9fa980e561
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 4625f6bdb4aa6fe86ca881a8e36e5673e55ccb87
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051574"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185590"
 ---
-# <a name="compiler-warning-level-3-c4414"></a>編譯器警告（層級3） C4414
+# <a name="compiler-warning-level-3-c4414"></a>編譯器警告 (層級 3) C4414
 
 ' function '：將函式轉換為 near 的短跳躍
 

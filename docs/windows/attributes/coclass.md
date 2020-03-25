@@ -1,21 +1,21 @@
 ---
-title: coclass (C++ COM 屬性)
+title: coclass （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.coclass
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: e1f99a2780ab4f451533a3e797e473f60680c6ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76540e90fef2e840b91bb07f570a7b8c0987eb10
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168327"
 ---
 # <a name="coclass"></a>coclass
 
-建立 COM 物件，可實作 COM 介面。
+建立可執行 COM 介面的 COM 物件。
 
 ## <a name="syntax"></a>語法
 
@@ -25,55 +25,55 @@ ms.locfileid: "62148285"
 
 ## <a name="remarks"></a>備註
 
-**Coclass** C++屬性會置於所產生的.idl 檔案中的 coclass 建構。
+**Coclass** C++屬性會將 coclass 結構放在產生的 .idl 檔案中。
 
-在定義的 coclass 時，您也可以指定[uuid](uuid-cpp-attributes.md)，[版本](version-cpp.md)，[執行緒](threading-cpp.md)， [vi_progid](vi-progid.md)，和[progid](progid.md)屬性。 如果未指定其中任何一個，它將會產生。
+定義 coclass 時，您也可以指定[uuid](uuid-cpp-attributes.md)、 [version](version-cpp.md)、[執行緒](threading-cpp.md)、 [vi_progid](vi-progid.md)和[progid](progid.md)屬性。 如果沒有指定任何一個，則會產生它。
 
-如果兩個標頭檔包含具有類別**coclass**屬性，而不指定 GUID，編譯器會使用相同的 GUID，這兩個類別，並會導致 MIDL 錯誤。  因此，您應該使用`uuid`屬性使用時**coclass**。
+如果兩個標頭檔包含具有**coclass**屬性的類別，但未指定 GUID，則編譯器會針對這兩個類別使用相同的 guid，這會導致 MIDL 錯誤。  因此，當您使用**coclass**時，應該使用 `uuid` 屬性。
 
 **ATL 專案**
 
-當這個屬性在 ATL 專案中，前面的類別或結構的定義時它：
+當這個屬性在 ATL 專案中的類別或結構定義之前，它會：
 
-- 插入程式碼或資料，以支援自動註冊的物件。
+- 插入程式碼或資料，以支持對象的自動註冊。
 
-- 插入程式碼或資料，以支援 COM class factory 物件。
+- 插入程式碼或資料，以支持對象的 COM Class Factory。
 
-- 插入程式碼或資料，以實作`IUnknown`並讓物件可建立 COM 物件。
+- 插入要執行 `IUnknown` 的程式碼或資料，並將物件設為可供 COM 建立的物件。
 
-具體而言，下列的基底類別會加入至目標物件：
+具體而言，下列基類會新增至目標物件：
 
-- [CComCoClass 類別](../../atl/reference/ccomcoclass-class.md)提供之物件的預設類別處理站和彙總模型。
+- [CComCoClass 類別](../../atl/reference/ccomcoclass-class.md)提供物件的預設 Class Factory 和匯總模型。
 
-- [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)具有根據指定的執行緒模型類別樣板[執行緒](threading-cpp.md)屬性。 如果`threading`屬性未指定，預設的執行緒模型為 apartment。
+- [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)具有以[執行緒](threading-cpp.md)屬性所指定的執行緒模型類別為基礎的範本。 如果未指定 `threading` 屬性，預設的執行緒模型為 [公寓]。
 
-- [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)如果加入[noncreatable](noncreatable.md)屬性未指定目標物件。
+- 如果未指定目標物件的[noncreatable](noncreatable.md)屬性，則會加入[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) 。
 
-最後，任何未定義使用內嵌的 IDL 的雙重介面會取代具有對應[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)類別。 如果在內嵌 IDL 中定義的雙重介面，則不會修改基底清單中的特定介面。
+最後，未使用內嵌 IDL 定義的任何雙重介面都會取代為對應的[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)類別。 如果在內嵌 IDL 中定義雙重介面，則不會修改基底清單中的特定介面。
 
-**Coclass**屬性也可讓下列函式提供透過插入程式碼，或是這種案例`GetObjectCLSID`，做為基底類別中的靜態方法`CComCoClass`:
+**Coclass**屬性也會透過插入的程式碼提供下列函式，或在 `GetObjectCLSID`的情況下，做為基類中的靜態方法 `CComCoClass`：
 
-- `UpdateRegistry` 註冊目標類別的 class 的 factory。
+- `UpdateRegistry` 註冊目標類別的 class factory。
 
-- `GetObjectCLSID`相關的註冊，也可用來取得目標類別的 CLSID。
+- `GetObjectCLSID`（與註冊相關）也可以用來取得目標類別的 CLSID。
 
-- `GetObjectFriendlyName` 根據預設會傳回的格式字串"\<*目標類別名稱*> `Object`"。 如果此函式已存在於，它不會加入。 新增此函式至目標類別，以傳回較容易使用的名稱，比自動產生。
+- `GetObjectFriendlyName` 預設會傳回「\<*目標類別名稱*> `Object`」格式的字串。 如果此函式已存在，則不會新增。 將此函式新增至目標類別，以傳回比自動產生的易記名稱。
 
-- `GetProgID`相關的註冊，會傳回與指定的字串[progid](progid.md)屬性。
+- `GetProgID`（與註冊相關）會傳回以[progid](progid.md)屬性指定的字串。
 
-- `GetVersionIndependentProgID` 具有相同的功能`GetProgID`，但它會傳回與指定的字串[vi_progid](vi-progid.md)。
+- `GetVersionIndependentProgID` 具有與 `GetProgID`相同的功能，但它會傳回以[vi_progid](vi-progid.md)指定的字串。
 
-下列變更，與相關的 COM 對應，會對目標類別：
+下列與 COM 對應相關的變更會對目標類別進行：
 
-- COM 對應的目標類別衍生自的所有介面的項目與所指定的所有項目加入[COM 介面進入點](../../mfc/com-interface-entry-points.md)屬性，或所需的那些[彙總](aggregates.md)屬性。
+- 針對目標類別衍生自的所有介面，以及[Com 介面進入點](../../mfc/com-interface-entry-points.md)屬性所指定的所有專案，或是[匯總](aggregates.md)屬性所需的所有專案，都會加入 com 對應。
 
-- [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)巨集插入到 COM 對應。
+- [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)宏會插入 COM 對應中。
 
-產生類別的.idl 檔案中 coclass 的名稱必須與類別相同的名稱。  如範例中，並參考下列範例中，若要存取在 coclass 的類別識別碼`CMyClass`，在用戶端透過 MIDL 產生的標頭檔，使用`CLSID_CMyClass`。
+在該類別的 .idl 檔案中產生的 coclass 名稱，會與類別具有相同的名稱。  例如，和參考下列範例，若要存取 coclass `CMyClass`的類別 ID，請在用戶端透過 MIDL 產生的標頭檔中，使用 `CLSID_CMyClass`。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**coclass**屬性：
+下列程式碼顯示如何使用**coclass**屬性：
 
 ```cpp
 // cpp_attr_ref_coclass1.cpp
@@ -91,7 +91,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};
 ```
 
-下列範例示範如何覆寫函式所插入的程式碼中所顯示的預設實作**coclass**屬性。 如需檢視插入程式碼的詳細資訊，請參閱 [/Fx](../../build/reference/fx-merge-injected-code.md) 。 任何基底類別或您使用類別的介面會出現在 插入程式碼。 此外，如果類別包含預設會在插入程式碼並明確指定該類別作為基底您 coclass，屬性提供者會使用您的程式碼中指定的格式。
+下列範例示範如何覆寫在**coclass**屬性插入的程式碼中出現的函式的預設執行。 如需檢視插入程式碼的詳細資訊，請參閱 [/Fx](../../build/reference/fx-merge-injected-code.md) 。 您用於類別的任何基類或介面都會出現在插入的程式碼中。 此外，如果插入的程式碼中預設包含類別，而且您明確地將該類別指定為 coclass 的基底，則屬性提供者將會使用您程式碼中指定的表單。
 
 ```cpp
 // cpp_attr_ref_coclass2.cpp
@@ -131,7 +131,7 @@ public:
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**class**、 **struct**|
 |**可重複**|否|
 |**必要屬性**|None|
 |**無效屬性**|None|

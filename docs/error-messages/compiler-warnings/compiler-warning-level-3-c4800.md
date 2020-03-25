@@ -1,41 +1,41 @@
 ---
-title: 編譯器警告 （層級 4） C4800
+title: 編譯器警告（層級4） C4800
 ms.date: 03/14/2019
 f1_keywords:
 - C4800
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 46418063625e16385497740a4f7e3d837e923156
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401549"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198584"
 ---
-# <a name="compiler-warning-level-4-c4800"></a>編譯器警告 （層級 4） C4800
+# <a name="compiler-warning-level-4-c4800"></a>編譯器警告（層級4） C4800
 
 ::: moniker range=">= vs-2019"
-2019 和更新版本的 visual Studio:
-> 隱含的轉換，從 '*型別*' 為 bool。 可能導致資訊遺失
+Visual Studio 2019 和更新版本：
+> 從 '*type*' 隱含轉換為 bool。 可能遺失資訊
 ::: moniker-end
 
-C4800 是層級 3 警告，在 Visual Studio 2015 和更早版本：
-> '*型別*': 值強制設 bool 'true' 或 'false' （效能警告）
+C4800 是 Visual Studio 2015 和更早版本中的層級3警告：
+> '*type*'：強制將值設為 bool ' true ' 或 ' false ' （效能警告）
 
-值，會隱含地轉換成類型時，會產生這個警告`bool`。 一般而言，會產生此訊息指派`int`變數，以`bool`變數位置`int`變數只包含值 **，則為 true**和**false**，而且可能會宣告類型為`bool`。 如果您不能重新撰寫運算式，以使用型別`bool`，然後您可以新增 「`!=0`」 運算式，可讓運算式型別`bool`。 將運算式轉換成輸入`bool`不會停用警告，這是設計所致。
+當值隱含地轉換成類型 `bool`時，就會產生這個警告。 通常，這則訊息的原因是將 `int` 變數指派給 `int` 變數只包含**true**和**false**值的 `bool` 變數，而且可以重新宣告為類型 `bool`。 如果您無法重寫運算式以使用類型 `bool`，則可以在運算式中加入 "`!=0`"，以提供運算式類型 `bool`。 將運算式轉換成類型 `bool` 不會停用警告，這是設計的。
 
 ::: moniker range=">= vs-2017"
-Visual Studio 2017 中，不會發出這個警告。
+Visual Studio 2017 不會發出此警告。
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
-從 Visual Studio 2019 的預設為關閉此警告。 使用 __/w__*n*__4800__若要啟用當做層級的 C4800 *n*警告，或[/wall](../../build/reference/compiler-option-warning-level.md)啟用所有警告，預設為關閉的。 如需詳細資訊，請參閱 <<c0> [ 編譯器警告，是 Off By Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
+從 Visual Studio 2019 開始，預設會關閉此警告。 使用 __/w__*n*__4800__ ，讓 C4800 成為層級*n*警告，或[/Wall](../../build/reference/compiler-option-warning-level.md)來啟用所有預設為關閉的警告。 如需詳細資訊，請參閱[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 ::: moniker-end
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4800，並示範如何修正此問題：
+下列範例會產生 C4800，並顯示如何修正此問題：
 
 ```cpp
 // C4800.cpp

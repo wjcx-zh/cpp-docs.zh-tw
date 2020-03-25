@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4951
 ms.assetid: 669d8bb7-5efa-4ba9-99db-4e65addbf054
-ms.openlocfilehash: 73e048aeaa044c35e09539b07d51398829a0fdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d94347df17bac01334cfd85c2bd9f6c8a98b5fc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174592"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>編譯器警告 (層級 1) C4951
 
-> '*函式*' 已經編輯，因為已收集的分析資料，未使用的函式設定檔資料
+> '*function*' 已編輯，因為已收集分析資料，未使用函數設定檔資料
 
 已將輸入模組中的函式編輯為 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)，因此現在您的設定檔資料無效。 輸入模組在 **/LTCG:PGINSTRUMENT** 之後已重新編譯，且相較於 */LTCG:PGINSTRUMENT*作業當時模組中的控制流程，輸入模組的函式 ( **function** ) 的控制流程不同。
 

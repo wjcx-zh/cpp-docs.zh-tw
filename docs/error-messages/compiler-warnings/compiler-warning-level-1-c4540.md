@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4540
+title: 編譯器警告 (層級 1) C4540
 ms.date: 11/04/2016
 f1_keywords:
 - C4540
 helpviewer_keywords:
 - C4540
 ms.assetid: 8085e748-5f4d-43c2-b06d-eaf794edbf72
-ms.openlocfilehash: 8e514f4f3cf0cc3ee95ff709eda307b143ab3b1c
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 859ff75bbd4b3fe248d9658495e64c0c039fbb40
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965692"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186409"
 ---
-# <a name="compiler-warning-level-1-c4540"></a>編譯器警告（層級1） C4540
+# <a name="compiler-warning-level-1-c4540"></a>編譯器警告 (層級 1) C4540
 
 dynamic_cast 用來轉換成無法存取或不明確的基底;執行時間測試將會失敗（' type1 ' 至 ' type2 '）
 

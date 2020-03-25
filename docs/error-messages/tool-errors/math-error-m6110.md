@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - M6110
 ms.assetid: aac9ae37-6a6d-46e9-85d4-dfe03f1c3e11
-ms.openlocfilehash: d56326c0daa326ef832eb81024850d6ef06f5649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7302ce1d8b715dfcceb638958fef4c6db8af375e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173708"
 ---
 # <a name="math-error-m6110"></a>運算錯誤 M6110
 
@@ -19,6 +19,6 @@ ms.locfileid: "62393255"
 
 浮點運算式造成浮點堆疊溢位。
 
-堆疊溢位浮點例外狀況會限制上限是七個層級，除了通常受到 8087/287/387 副處理器的八個層級。
+除了8087/287/387 副處理器所支援的八個層級以外，堆疊溢位的浮點例外狀況會被攔截到七個層級的限制。
 
-程式結束，結束代碼為 138。
+程式終止，結束代碼為138。

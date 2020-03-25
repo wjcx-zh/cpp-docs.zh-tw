@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-ms.openlocfilehash: 6f1bcecf3aaed2bf2b7ebbe511f11cdb5ec1ca5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 201dcaa6a90584d1f9535df11d5722a37bdceb89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209399"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187280"
 ---
 # <a name="writing-an-exception-handler"></a>撰寫例外狀況處理常式
 
@@ -20,9 +20,9 @@ ms.locfileid: "62209399"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [請嘗試-try-except 陳述式](../cpp/try-except-statement.md)
+- [Try-except 語句](../cpp/try-except-statement.md)
 
-- [撰寫例外狀況篩選條件](../cpp/writing-an-exception-filter.md)
+- [撰寫例外狀況篩選準則](../cpp/writing-an-exception-filter.md)
 
 - [引發軟體例外狀況](../cpp/raising-software-exceptions.md)
 

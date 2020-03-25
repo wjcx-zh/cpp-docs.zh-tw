@@ -1,5 +1,5 @@
 ---
-title: 成員指標運算子:。* 和 -&gt;*
+title: 成員指標運算子：. * 和-&gt;*
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 60dad0e3134662957ee21396d330af795e80918e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188333"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子:。* 和 -&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子：. * 和-&gt;*
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ expression ->* expression
 
 ## <a name="remarks"></a>備註
 
-成員指標運算子。 * 和->\*，傳回指定運算式的左邊的物件的特定類別成員的值。  右邊則必須指定類別的成員。  以下範例會示範如何使用這些運算子：
+成員指標運算子：. * 和->\*會針對運算式左邊指定的物件，傳回特定類別成員的值。  右邊則必須指定類別的成員。  以下範例會示範如何使用這些運算子：
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 m_func1
@@ -82,11 +82,11 @@ m_func1
 
 二元運算子 .* 會將其第一個運算元 (該運算元必須是類別類型的物件) 與其第二個運算元 (該運算元必須是成員指標類型) 結合。
 
-二元運算子-> * 結合其第一個運算元必須是類別類型物件的指標使用其第二個運算元，必須是成員指標類型。
+二元運算子 > * 會將其第一個運算元（必須是類別類型物件的指標）與其第二個運算元（必須是成員指標類型）結合。
 
 在包含 .* 運算子的運算式中，第一個運算元必須是第二個運算元中所指定成員指標本身所屬且可存取的類別類型，或是該類別所明確衍生且可存取的類型。
 
-在運算式中包含-> * 運算子的第一個運算元的類型的 「 類別類型的指標 」 類型中必須指定第二個運算元，或必須是類型的明確衍生自該類別。
+在包含-> * 運算子的運算式中，第一個運算元必須是第二個運算元中所指定類型的「類別類型指標」類型，或者必須是明確衍生自該類別的類型。
 
 ## <a name="example"></a>範例
 
@@ -128,7 +128,7 @@ int main() {
 }
 ```
 
-結果。 * 或->\*成員指標運算子是物件或成員指標宣告中指定之類型的函式。 因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。 如果第二個運算元是左值，則這個結果會是左值。
+. * 或->\* 成員指標運算子的結果是成員的指標宣告中所指定類型的物件或函式。 因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。 如果第二個運算元是左值，則這個結果會是左值。
 
 > [!NOTE]
 >  如果其中一個成員指標運算子的結果是函式，則結果只能做為函式呼叫運算子的運算元使用。

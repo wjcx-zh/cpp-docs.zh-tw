@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 8adfd59eab0960ab14b2becb8d9864c77196c909
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246555"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188672"
 ---
 # <a name="hardware-exceptions"></a>硬體例外狀況
 
@@ -43,4 +43,4 @@ Windows 會將不同的處理器硬體錯誤對應到本節中的例外狀況代
 ## <a name="see-also"></a>另請參閱
 
 [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CXX0021
 - CAN0021
 ms.assetid: d6c0c35a-16c2-42c0-a7d2-e910350a47f0
-ms.openlocfilehash: 373829e7200a556b3f832b1da127b4e33aa75749
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a800deb6bacbcae8666a3abad08b87d4f027790f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359874"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195835"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>運算式評估工具錯誤 CXX0021
 
-結構或等位做為純量
+當做純量使用的 struct 或 union
 
-在運算式中，使用結構或等位，但沒有任何項目指定。
+運算式中使用了結構或等位，但未指定任何元素。
 
-處理時的結構或等位變數，可能本身不含欄位限定詞會出現的變數名稱。 如果運算式中使用的結構或等位，就必須加以限定使用所需的特定項目。
+當操作結構或等位變數時，變數的名稱本身可能會出現，而不會有欄位辨識符號。 如果運算式中使用了結構或等位，它必須以所需的特定元素來限定。
 
-指定要在運算式中使用其值的項目。
+指定要在運算式中使用其值的元素。
 
-此錯誤是與 can0021 相同。
+此錯誤與 CAN0021 相同。

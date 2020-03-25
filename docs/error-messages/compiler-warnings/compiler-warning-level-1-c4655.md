@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4655
 ms.assetid: 540f2c7a-e4a1-49af-84b4-03eeea1bbf41
-ms.openlocfilehash: aff78dbed217a6d9c5bc2a315ef12a33fe6caf0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4c409c2d69099853a872142e05ef0fcda5a7655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374660"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199527"
 ---
 # <a name="compiler-warning-level-1-c4655"></a>編譯器警告 (層級 1) C4655
 
-> '*符號*': 變數的類型自上次建置之後, 才新增或其他處有不同的定義
+> '*symbol*'：自上次組建之後，變數類型是新的，或在其他地方有不同的定義
 
 ## <a name="remarks"></a>備註
 
@@ -27,10 +27,10 @@ ms.locfileid: "62374660"
 
 1. 請將資料類型改回錯誤之前的狀態。
 
-2. 從 [偵錯]  功能表選擇 [套用程式碼變更] 。
+2. 從 [偵錯] 功能表選擇 [套用程式碼變更]。
 
 ### <a name="to-remove-this-warning-without-changing-your-source-code"></a>移除這個警告，而不變更您的程式碼
 
-1. 從 [偵錯]  功能表選擇 [停止偵錯] 。
+1. 從 [偵錯] 功能表選擇 [停止偵錯]。
 
-2. 從 [建置]  功能表選擇 [建置] 。
+2. 從 [建置] 功能表選擇 [建置]。

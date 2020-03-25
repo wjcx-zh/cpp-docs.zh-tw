@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: fbb2bd68f589630608e341b944b4201c12d67211
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516173"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172642"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>屬性參數類型  (C++/CLI 和 C++/CX)
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516173"
 
 - **wchar_t**
 
-- `char*` 或 `wchar_t*` 或 `System::String*`
+- `char*`、`wchar_t*` 或 `System::String*`
 
 - `System::Type ^`
 
@@ -67,7 +67,7 @@ ref struct MyStruct {
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 當指定屬性時，所有未命名的 (位置) 引數都必須放在任何具名引數前面。
 
@@ -101,7 +101,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 屬性參數可以是前述類型的一維陣列。
 

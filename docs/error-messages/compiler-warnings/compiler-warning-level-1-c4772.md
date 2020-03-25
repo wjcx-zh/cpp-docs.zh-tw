@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175126"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>編譯器警告 (層級 1) C4772
 
-> \#匯入參考型別從遺漏的類型程式庫;'*遺漏類型*' 做為預留位置
+> \#匯入參考了遺漏類型程式庫中的類型;'*遺漏-類型*' 當做預留位置使用
 
-使用所參考的型別程式庫[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞。 不過，類型程式庫包含未參考與另一個型別程式庫的參考`#import`。 編譯器找不到此其他的.tlb 檔案。
+已使用[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞參考類型程式庫。 不過，類型程式庫包含另一個未使用 `#import`參考的類型程式庫參考。 編譯器找不到這個其他 .tlb 檔案。
 
-請注意，編譯器會不到類型程式庫中不同的目錄是否您使用[/I （其他 Include 目錄）](../../build/reference/i-additional-include-directories.md)編譯器選項以指定這些目錄。 如果您想要編譯器尋找不同的目錄中的類型程式庫，請將這些目錄加入 PATH 環境變數。
+請注意，如果您使用[/i （其他 Include 目錄）](../../build/reference/i-additional-include-directories.md)編譯器選項來指定這些目錄，編譯器將不會在不同的目錄中找到類型程式庫。 如果您想要編譯器在不同的目錄中尋找類型程式庫，請將這些目錄加入 PATH 環境變數中。
 
-依預設會發出這個警告視為錯誤。 無法隱藏 C4772 /W0 使用。
+根據預設，此警告會發出為錯誤。 無法使用/W0. 隱藏 C4772
 
 ## <a name="example"></a>範例
 
-這是重現 C4772 的第一個類型程式庫。
+這是重現 C4772 所需的第一個類型程式庫。
 
 ```IDL
 // c4772a.idl
@@ -40,7 +40,7 @@ library C4772aLib
 };
 ```
 
-這是重現 C4772 的第二個類型程式庫。
+這是重現 C4772 所需的第二種類型程式庫。
 
 ```IDL
 // c4772b.idl
@@ -58,7 +58,7 @@ library C4772bLib
 };
 ```
 
-下列範例會產生 C4772:
+下列範例會產生 C4772：
 
 ```cpp
 // C4772.cpp

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0057
 - CXX0057
 ms.assetid: b1a86998-c642-4061-9f37-9c493f3852cc
-ms.openlocfilehash: c73fbd47f3f1d186e3d8f17ecf9a8ea37bfcf09d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1ddf466432f8cc0a896fcea325a309f95ceee98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299617"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184641"
 ---
 # <a name="expression-evaluator-error-cxx0057"></a>運算式評估工具錯誤 CXX0057
 
-沒有程式碼行號
+行號沒有程式碼
 
-沒有程式碼產生指定的行號。 它不能為中斷點。
+未針對指定的行號產生任何程式碼。 它不能當做中斷點使用。
 
-此錯誤是與 can0057 相同。
+此錯誤與 CAN0057 相同。

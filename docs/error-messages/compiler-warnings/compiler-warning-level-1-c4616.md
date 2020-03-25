@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4616
+title: 編譯器警告 (層級 1) C4616
 ms.date: 11/04/2016
 f1_keywords:
 - C4616
 helpviewer_keywords:
 - C4616
 ms.assetid: 71e15265-c5bc-42ce-a6a9-4879892472b1
-ms.openlocfilehash: 3c13eb28981779e2d089575660d8968c54e4e75f
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: fd36d0cdbcaaeca4f84ce85aa80f3bb1fba616a0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051470"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185902"
 ---
-# <a name="compiler-warning-level-1-c4616"></a>編譯器警告（層級1） C4616
+# <a name="compiler-warning-level-1-c4616"></a>編譯器警告 (層級 1) C4616
 
 \#pragma warning：警告編號 ' number ' 不是有效的編譯器警告
 

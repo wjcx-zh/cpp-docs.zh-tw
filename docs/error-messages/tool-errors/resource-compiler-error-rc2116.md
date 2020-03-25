@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2116
 ms.assetid: d9203ddf-798d-490b-be41-0dd3f7d53653
-ms.openlocfilehash: 38f500b203c0ec47743ccd76c8453ce6c9286918
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fae25b7232425128c51625ca09319cc84064f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219869"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191414"
 ---
 # <a name="resource-compiler-error-rc2116"></a>資源編譯器錯誤 RC2116
 
-識別碼必須是數字
+需要 ID 的數位
 
-預期的數字`id`欄位中的控制陳述式**對話方塊**陳述式。 請確定您有許多或`#define`陳述式的控制項 id。
+在**DIALOG**語句中，控制項語句的 `id` 欄位應為數字。 請確定您有控制項識別碼的數位或 `#define` 語句。

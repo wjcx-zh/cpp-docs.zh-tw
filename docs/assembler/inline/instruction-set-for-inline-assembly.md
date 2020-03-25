@@ -8,20 +8,20 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: 97794261c0dc77ca41d543aa34a1fc2111c83619
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: e6d2dea1af43b52a7704af58855842075087a221
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445919"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169353"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>內嵌組譯碼的指令集
 
 **Microsoft 專屬**
 
-MicrosoftC++編譯器支援所有作業碼 Pentium 4 和 AMD Athlon。 您可以使用建立目標處理器支援的其他指示[_emit 虛擬指令](../../assembler/inline/emit-pseudoinstruction.md)。
+Microsoft C++編譯器透過 Pentium 4 和 AMD 速龍支援所有的 opcode。 您可以使用[_Emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)來建立目標處理器所支援的其他指示。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

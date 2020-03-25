@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516143"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172616"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>屬性目標 (C++/CLI 和 C++/CX)
 
@@ -193,7 +193,7 @@ ms.locfileid: "65516143"
     };
     ```
 
-通常，屬性會直接放在所套用的語言項目之前。 然而，在某些情況下，屬性的位置資訊不足，無法判斷屬性的預期目標。 請考量以下範例：
+通常，屬性會直接放在所套用的語言項目之前。 然而，在某些情況下，屬性的位置資訊不足，無法判斷屬性的預期目標。 請思考此範例：
 
 ```cpp
 [Attr] int MyFn(double x)...
@@ -250,7 +250,7 @@ ms.locfileid: "65516143"
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 這個範例將示範如何指定多個目標。
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - RW1025
 ms.assetid: 561a02af-e7e0-442a-8ad3-a00b2ca1b62e
-ms.openlocfilehash: 8ecfc11f5cc991294d966a4b6c75d8da6669d5b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b6697dff0a445cc342f30d08bd79822b02df7b8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172720"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>資源編譯器嚴重錯誤 RW1025
 
-堆積記憶體不足
+遠超出堆積記憶體
 
-檢查有可能佔用太多空間的常駐記憶體的軟體。 若要了解您有多少記憶體使用 CHKDSK 程式。
+檢查可能佔用太多空間的記憶體常駐軟體。 使用 CHKDSK 程式來找出您有多少記憶體。
 
-如果您要建立大型的資源檔，請將資源指令碼分成兩個檔案。 建立兩個.res 檔案之後, 使用 MS-DOS 命令列將它們聯結在一起：
+如果您要建立大型資源檔，請將資源腳本分割成兩個檔案。 建立兩個 .res 檔案之後，請使用 MS-DOS 命令列將它們聯結在一起：
 
 ```
 copy first.res /b + second.res /b full.res

@@ -1,28 +1,28 @@
 ---
-title: 作法：使用 interior_ptr 關鍵字宣告實值型別 (C++/CLI)
+title: 如何：使用 interior_ptr 關鍵字宣告實值類型 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515753"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172278"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>作法：使用 interior_ptr 關鍵字宣告實值型別 (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>如何：使用 interior_ptr 關鍵字宣告實值類型 (C++/CLI)
 
 **interior_ptr** 可與實值型別搭配使用。
 
 > [!IMPORTANT]
-> `/clr` 編譯器選項支援此語言功能，`/ZW` 編譯器選項則不支援。
+> `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 下列 C++/CLI 範例會示範如何使用 **interior_ptr** 搭配實值型別。
 
@@ -67,7 +67,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 在實值型別中，**this** 指標會判斷值為 interior_ptr。
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 下列範例將示範如何使用具有靜態成員的傳址運算子。
 

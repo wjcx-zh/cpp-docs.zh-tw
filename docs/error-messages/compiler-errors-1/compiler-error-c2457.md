@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347099"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205240"
 ---
 # <a name="compiler-error-c2457"></a>編譯器錯誤 C2457
 
-> '*巨集*': 預先定義的巨集不能出現在函式主體之外
+> '*宏*'：預先定義的宏不能出現在函式主體之外
 
-您嘗試使用預先定義的巨集，例如[ &#95;&#95;函式&#95;&#95;](../../preprocessor/predefined-macros.md)，在全域空間中。
+您嘗試在全域空間中使用預先定義的宏，例如[ &#95; &#95;FUNCTION&#95;](../../preprocessor/predefined-macros.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2457，並也會示範正確使用方式：
+下列範例會產生 C2457，而且也會顯示正確的使用方式：
 
 ```cpp
 // C2457.cpp

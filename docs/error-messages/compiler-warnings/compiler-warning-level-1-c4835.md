@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4835
+title: 編譯器警告 (層級 1) C4835
 ms.date: 11/04/2016
 f1_keywords:
 - C4835
 helpviewer_keywords:
 - C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-ms.openlocfilehash: e59c8a7c9cdd9b892155a7d8ee8c8259324c2045
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: f86fcaea8a742c19ce175a453c06669178ed2145
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174852"
 ---
-# <a name="compiler-warning-level-1-c4835"></a>編譯器警告（層級1） C4835
+# <a name="compiler-warning-level-1-c4835"></a>編譯器警告 (層級 1) C4835
 
 ' variable '：在主機元件中第一次執行 managed 程式碼之前，將不會執行已匯出資料的初始化運算式
 

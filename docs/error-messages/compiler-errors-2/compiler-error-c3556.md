@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 7b87f8c57b0d871a577793936ea3cb7dbab7e58d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344544"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200573"
 ---
 # <a name="compiler-error-c3556"></a>編譯器錯誤 C3556
 
-> '*運算式*': 'decltype' 的引數不正確
+> '*expression*'： ' decltype ' 的引數不正確
 
 編譯器無法減少 `decltype(`*expression*`)` 類型規範之引數的運算式類型。
 
 ## <a name="example"></a>範例
 
-在下列程式碼範例中，編譯器無法減少 `myFunction` 引數的類型，因為 `myFunction` 多載。 若要修正此問題，您可以使用`static_cast`若要建立一個指向特定的執行個體的多載函式中指定`decltype`運算式。
+在下列程式碼範例中，編譯器無法減少 `myFunction` 引數的類型，因為 `myFunction` 多載。 若要修正這個問題，您可以使用 `static_cast` 建立特定多載函數指標的實例，以在 `decltype` 運算式中指定。
 
 ```cpp
 // C3556.cpp

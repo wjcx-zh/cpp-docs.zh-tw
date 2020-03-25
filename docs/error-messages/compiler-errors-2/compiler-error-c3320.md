@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3320
 ms.assetid: 2ef72d9a-1f1d-4b2e-b244-9fd3f3e70cb6
-ms.openlocfilehash: 622e7366dda4cd6693d9b6128855fa0966e07952
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0289d49ebbb0e30153beb6b0b2bc758bff5ef118
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222475"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201301"
 ---
 # <a name="compiler-error-c3320"></a>編譯器錯誤 C3320
 
 'type': 類型不可擁有與模組 'name' 屬性相同的名稱
 
-匯出的使用者定義型別 (UDT)，可能是結構、 類別、 列舉或等位，不能有相同的名稱，將參數傳遞至[模組](../../windows/module-cpp.md)屬性的名稱屬性。
+匯出的使用者定義型別（UDT）可以是結構、類別、列舉或等位，其名稱不能與傳遞給[module](../../windows/module-cpp.md)屬性之 name 屬性的參數同名。
 
 ## <a name="example"></a>範例
 

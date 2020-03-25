@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1314
 ms.assetid: 0b5cd599-61ea-4ac7-8f25-c6d3a8b14655
-ms.openlocfilehash: 6ff30ba92614983783395024ba2ee82a8f8b8b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe13bd65eb66ed553d93b30a85fa9bcecfda856f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183601"
 ---
 # <a name="linker-tools-error-lnk1314"></a>連結器工具錯誤 LNK1314
 
-損毀或無效 COFF 符號表 （未定義的靜態或標籤符號）
+COFF 符號表已損毀或無效（未定義的靜態或標籤符號）
 
-編譯器產生的內容 > 一節中指定的物件似乎已損毀。
+指定物件中的區段之編譯器產生的內容似乎已損毀。
 
 此錯誤可能表示編譯器失敗。

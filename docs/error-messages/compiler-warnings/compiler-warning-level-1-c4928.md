@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4928
+title: 編譯器警告 (層級 1) C4928
 ms.date: 11/04/2016
 f1_keywords:
 - C4928
 helpviewer_keywords:
 - C4928
 ms.assetid: 77235d7f-9360-45cb-8348-d148c605c4a3
-ms.openlocfilehash: cb05dfc42ae5bcd6f7a30f4ee249eb866ac4179a
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 54abb1072d8911fb7287b786f5a4254a710af815
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74050177"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199325"
 ---
-# <a name="compiler-warning-level-1-c4928"></a>編譯器警告（層級1） C4928
+# <a name="compiler-warning-level-1-c4928"></a>編譯器警告 (層級 1) C4928
 
 不合法的 copy-initialization; 已經隱含套用一個以上的使用者定義的轉換
 

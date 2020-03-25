@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - CXX0069
 ms.assetid: cf334b23-1e17-4d37-acc5-18597ee84164
-ms.openlocfilehash: 4a37e7ef5a260f696f3c3f0cb95fd8557ce8dfbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07e6dea2090c09223719d0dbeeadc9497e7ab042
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184264"
 ---
 # <a name="expression-evaluator-error-cxx0069"></a>運算式評估工具錯誤 CXX0069
 
-變數必須有堆疊框架
+變數需要堆疊框架
 
-運算式評估工具無法評估變數，因為它不會發生堆疊框架中。 原因可能是由變數宣告為內嵌函式的一部分。
+運算式評估工具無法評估變數，因為它不會發生在堆疊框架中。 這可能是因為宣告為內嵌函式一部分的變數所造成。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399209"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189763"
 ---
 # <a name="comma-operator-"></a>逗號運算子：,
 
@@ -29,9 +29,9 @@ expression , expression
 
 逗號可以在某些內容中做為分隔符號使用，例如，函式引數清單。 請勿混淆做為分隔符號使用的逗號，與做為運算子使用的逗號，這兩種用法完全不同。
 
-以 `e1, e2` 運算式為例。 型別和運算式的值是類型和值*e2*; 評估的結果*e1*會被捨棄。 如果右運算元是左值，則結果會是左值。
+以 `e1, e2` 運算式為例。 運算式的類型和值是*e2*的類型和值。會捨棄評估*e1*的結果。 如果右運算元是左值，則結果會是左值。
 
-逗號通常做為分隔符號使用 (例如，在函式的實際引數中或彙總初始設定式中)，而逗號運算子及其運算元必須以括號括住。 例如: 
+逗號通常做為分隔符號使用 (例如，在函式的實際引數中或彙總初始設定式中)，而逗號運算子及其運算元必須以括號括住。 例如：
 
 ```cpp
 func_one( x, y + 2, z );

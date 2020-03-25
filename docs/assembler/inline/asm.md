@@ -9,14 +9,14 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169627"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Microsoft 專屬**
 
@@ -27,13 +27,13 @@ ms.locfileid: "65445898"
 
 ## <a name="grammar"></a>文法
 
-*asm 區塊*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
+*asm-封鎖*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *assembly-指示* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *assembly-指令清單* **}** **;** <sub>opt</sub>
 
-*組件指示清單*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+*元件-指令清單*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-指示* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-指令* **;** *元件指令清單* **;** <sub>opt</sub>
 
 ## <a name="remarks"></a>備註
 
@@ -41,17 +41,17 @@ ms.locfileid: "65445898"
 
 由於 `__asm` 關鍵字是陳述式分隔符號，您可以在同一行上放置組譯碼指令。
 
-在 Visual Studio 2005 中的指示之前
+在 Visual Studio 2005 之前，指示
 
 ```cpp
 __asm int 3
 ```
 
-不會造成編譯時產生的原生程式碼 **/clr**; 編譯器會轉譯為 CLR 中斷指令的指示。
+以 **/clr**編譯時，不會產生原生程式碼;編譯器會將指令轉譯為 CLR 中斷指令。
 
-`__asm int 3` 現在會產生函式的機器碼。 如果您想要產生程式碼中的中斷點，如果您想要編譯為 MSIL，該函數使用的函式[__debugbreak](../../intrinsics/debugbreak.md)。
+`__asm int 3` 現在會產生函式的機器碼。 如果您想要讓函式在您的程式碼中造成中斷點，而且如果您想要將該函式編譯成 MSIL，請使用[__debugbreak](../../intrinsics/debugbreak.md)。
 
-為了與舊版中，相容性 **_asm**同義 **__asm**除非編譯器選項[/Za\(停用語言擴充功能)](../../build/reference/za-ze-disable-language-extensions.md)指定。
+為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../../build/reference/za-ze-disable-language-extensions.md) ，否則 **_asm**是 **__asm**的同義字。
 
 ## <a name="example"></a>範例
 
@@ -83,7 +83,7 @@ __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
 
 與 C 和 C++ 中的大括號不同，將 `__asm` 區塊括住的大括號不會影響變數範圍。 您也可以使用巢狀 `__asm` 區塊；巢狀並不會影響變數範圍。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

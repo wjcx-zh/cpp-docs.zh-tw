@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
-ms.openlocfilehash: ad216c7b7a09b8dd5d2ca2b86bc3a386fa18a552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 706cf6c90dc187b6c343edc82cebb93bb8660452
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161026"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194846"
 ---
 # <a name="linker-tools-error-lnk1561"></a>連結器工具錯誤 LNK1561
 
 必須定義進入點
 
-找不到連結器*進入點*，初始的函式呼叫中可執行檔。 根據預設，連結器會尋找`main`或`wmain`主控台應用程式中，函式`WinMain`或`wWinMain`是 Windows 應用程式中，函式或`DllMain`隸屬於需要初始化的 dll。 您可以使用來指定另一個函式[/ENTRY](../../build/reference/entry-entry-point-symbol.md)連結器選項。
+連結器找不到*進入點*，也就是要在可執行檔中呼叫的初始函式。 根據預設，連結器會尋找主控台應用程式的 `main` 或 `wmain` 函式、Windows 應用程式的 `WinMain` 或 `wWinMain` 功能，或 `DllMain` 需要初始化的 DLL。 您可以使用[/ENTRY](../../build/reference/entry-entry-point-symbol.md)連結器選項來指定另一個函數。
 
-此錯誤有幾個原因：
-- 您可能不包含在要連結的檔案清單中定義的進入點的檔案。 請確認包含進入點函式的檔案會連結到您的應用程式。
-- 您定義使用錯誤的函式簽章; 進入點比方說，您可能有拼字錯誤或用於大小寫的函式名稱，或未正確指定傳回型別或參數類型。
-- 您可能不會指定[/DLL](../../build/reference/dll-build-a-dll.md)選項建置 DLL 時。
-- 您指定可能的進入點函式名稱不正確地使用時[/ENTRY](../../build/reference/entry-entry-point-symbol.md)連結器選項。
-- 如果您使用[LIB](../../build/reference/lib-reference.md)工具來建立 DLL，您指定一個.def 檔案。 如果是的話，請從組建中移除.def 檔。
+此錯誤可能有幾個原因：
+- 您可能未在要連結的檔案清單中，包含定義您的進入點的檔案。 確認包含進入點函式的檔案已連結至您的應用程式。
+- 您可能已使用錯誤的函數簽章定義進入點;例如，您可能拼錯或使用了函數名稱的錯誤大小寫，或指定的傳回類型或參數類型不正確。
+- 建立 DLL 時，您可能未指定[/DLL](../../build/reference/dll-build-a-dll.md)選項。
+- 當您使用[/ENTRY](../../build/reference/entry-entry-point-symbol.md)連結器選項時，可能指定進入點函式的名稱不正確。
+- 如果您使用[LIB](../../build/reference/lib-reference.md)工具來建立 DLL，您可能已指定 .def 檔案。 若是如此，請從組建中移除 .def 檔案。
 
-建置應用程式，當連結器會尋找進入點函式來呼叫，以啟動您的程式碼。 這是應用程式載入和執行階段初始化之後呼叫的函式。 您必須提供進入點函式應用程式，或您的應用程式無法執行。 進入點是選用的 dll。 根據預設，連結器會尋找進入點函式的其中幾個特定名稱和簽章，例如`int main(int, char**)`。 您可以指定另一個函式名稱的項目點使用 /ENTRY 連結器選項。
+建立應用程式時，連結器會尋找呼叫的進入點函式來啟動程式碼。 這是在應用程式載入並初始化執行時間之後所呼叫的函式。 您必須為應用程式提供進入點函式，否則您的應用程式將無法執行。 針對 DLL，進入點是選擇性的。 根據預設，連結器會尋找具有數個特定名稱和簽章之一的進入點函式，例如 `int main(int, char**)`。 您可以使用/ENTRY 連結器選項，指定另一個函式名稱做為進入點。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 LNK1561:
+下列範例會產生 LNK1561：
 
 ```cpp
 // LNK1561.cpp

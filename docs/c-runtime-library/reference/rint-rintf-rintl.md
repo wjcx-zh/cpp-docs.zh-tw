@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170887"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -63,10 +63,10 @@ long double rint( long double x );  // C++ only
 
 **Rint**函式會傳回浮點值，表示最接近*x*的整數。 中間值會根據浮點舍入模式的目前設定進行舍入，與**nearbyint**函數相同。 與**nearbyint**函式不同的是，如果結果與引數的值不同， **rint**函數可能會引發**FE_INEXACT**浮點例外狀況。 不會傳回錯誤。
 
-|Input|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|±∞、QNAN、IND|none|none|
-|非正規數|EXCEPTION_FLT_UNDERFLOW|none|
+|±∞、QNAN、IND|無|無|
+|非正規數|EXCEPTION_FLT_UNDERFLOW|無|
 
 ## <a name="remarks"></a>備註
 
@@ -78,7 +78,7 @@ long double rint( long double x );  // C++ only
 |--------------|--------------|------------------|
 |**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

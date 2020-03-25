@@ -61,12 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1bfb4308dc76e3393eceddf8dedd6d11e73adc17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516213"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172526"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>型別特性的編譯器支援 (C++/CLI 和 C++/CX)
 
@@ -82,7 +82,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
 
 (在下列清單中，程式碼範例都只以 C++/CLI 撰寫。 但除非另有說明，否則 C++/CX 中也支援對應的型別特性。 「平台型別」一詞是指 Windows 執行階段型別或 Common Language Runtime 型別。)
 
-- `__has_assign(` *type* `)`
+- `__has_assign(`*類型*`)`
 
    如果平台或原生型別具有複製指派運算子，即會傳回 **true**。
 
@@ -96,7 +96,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_copy(` *type* `)`
+- `__has_copy(`*類型*`)`
 
    如果平台或原生類型具有複製建構函式，即會傳回 **true**。
 
@@ -110,9 +110,9 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_finalizer(` *type* `)`
+- `__has_finalizer(`*類型*`)`
 
-   (C++/CX 中不支援。)如果 CLR 型別具有完成項，即會傳回 **true**。 如需詳細資訊，請參閱 [HOW TO：定義和使用類別和結構 (C++/CLI) 中的「解構函式和完成項」](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+   （在/Cx。中C++不支援）如果 CLR 類型具有完成項，則傳回**true** 。 如需詳細資訊，請參閱[如何：定義和使用類別和結構C++（/cli）中的析構函數和完成項](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_nothrow_assign(` *type* `)`
+- `__has_nothrow_assign(`*類型*`)`
 
    如果複製指派運算子具有空的例外狀況規格，即會傳回 **true**。
 
@@ -143,7 +143,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_nothrow_constructor(` *type* `)`
+- `__has_nothrow_constructor(`*類型*`)`
 
    如果預設建構函式具有空的例外狀況規格，即會傳回 **true**。
 
@@ -159,7 +159,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_nothrow_copy(` *type* `)`
+- `__has_nothrow_copy(`*類型*`)`
 
    如果複製建構函式具有空的例外狀況規格，即會傳回 **true**。
 
@@ -175,7 +175,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_trivial_assign(` *type* `)`
+- `__has_trivial_assign(`*類型*`)`
 
    如果型別具有編譯器產生的一般指派運算子，即會傳回 **true**。
 
@@ -189,7 +189,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_trivial_constructor(` *type* `)`
+- `__has_trivial_constructor(`*類型*`)`
 
    如果型別具有編譯器產生的一般建構函式，即會傳回 **true**。
 
@@ -203,7 +203,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_trivial_copy(` *type* `)`
+- `__has_trivial_copy(`*類型*`)`
 
    如果型別具有編譯器產生的複製建構函式，即會傳回 **true**。
 
@@ -217,7 +217,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_trivial_destructor(` *type* `)`
+- `__has_trivial_destructor(`*類型*`)`
 
    如果型別具有編譯器產生的一般解構函式，即會傳回 **true**。
 
@@ -232,7 +232,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_user_destructor(` *type* `)`
+- `__has_user_destructor(`*類型*`)`
 
    如果平台或原生型別具有使用者宣告的解構函式，即會傳回 **true**。
 
@@ -249,7 +249,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__has_virtual_destructor(` *type* `)`
+- `__has_virtual_destructor(`*類型*`)`
 
    如果型別具有虛擬解構函式，即會傳回 **true**。
 
@@ -268,7 +268,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_abstract(` *type* `)`
+- `__is_abstract(`*類型*`)`
 
    如果型別是抽象型別，即會傳回 **true**。 如需原生抽象型別的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)。
 
@@ -291,7 +291,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
 
    如果第一個型別為第二個型別的基底類別，或者這兩個型別相同，即會傳回 **true**。
 
-   `__is_base_of` 也適用於平台類型。 例如，如果第一個型別為[介面類別](interface-class-cpp-component-extensions.md)，且第二個型別會實作該介面，即會傳回 **true**。
+   `__is_base_of` 也適用於平台類型。 例如，如果第一個型別為**介面類別**，且第二個型別會實作該介面，即會傳回 [true](interface-class-cpp-component-extensions.md)。
 
     ```cpp
     // is_base_of.cpp
@@ -308,7 +308,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_class(` *type* `)`
+- `__is_class(`*類型*`)`
 
    如果型別是原生類別或結構，即會傳回 **true**。
 
@@ -322,7 +322,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_convertible_to(` `from` `,`  `to` `)`
+- `__is_convertible_to(` `from` `,``to` `)`
 
    如果第一個型別可轉換成第二個型別，即會傳回 **true**。
 
@@ -340,9 +340,9 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_delegate(` *type* `)`
+- `__is_delegate(`*類型*`)`
 
-   如果 `type` 是委派，即會傳回 **true**。 如需詳細資訊，請參閱 [delegate (C++/CLI 和 C++/CX)](delegate-cpp-component-extensions.md)。
+   如果 **是委派，即會傳回**true`type`。 如需詳細資訊，請參閱 [delegate (C++/CLI 和 C++/CX)](delegate-cpp-component-extensions.md)。
 
     ```cpp
     delegate void MyDel();
@@ -351,7 +351,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_empty(` *type* `)`
+- `__is_empty(`*類型*`)`
 
    如果型別沒有執行個體資料成員，即會傳回 **true**。
 
@@ -367,7 +367,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_enum(` *type* `)`
+- `__is_enum(`*類型*`)`
 
    如果型別是原生列舉，即會傳回 **true**。
 
@@ -389,7 +389,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_interface_class(` *type* `)`
+- `__is_interface_class(`*類型*`)`
 
    如果傳遞了平台介面，即會傳回 **true**。 如需詳細資訊，請參閱[介面類別](interface-class-cpp-component-extensions.md)。
 
@@ -403,7 +403,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_pod(` *type* `)`
+- `__is_pod(`*類型*`)`
 
    如果型別是類別或等位，且不具建構函式、私人或受保護的非靜態成員、不具基底類別且沒有虛擬函式，即會傳回 **true**。 如需 POD 的詳細資訊，請參閱 C++ 標準的 8.5.1/1、9/4 和 3.9/10 小節。
 
@@ -419,7 +419,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_polymorphic(` *type* `)`
+- `__is_polymorphic(`*類型*`)`
 
    如果原生型別具有虛擬函式，即會傳回 **true**。
 
@@ -435,7 +435,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_ref_array(` *type* `)`
+- `__is_ref_array(`*類型*`)`
 
    如果傳遞了平台陣列，即會傳回 **true**。 如需詳細資訊，請參閱[陣列](arrays-cpp-component-extensions.md)。
 
@@ -447,7 +447,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_ref_class(` *type* `)`
+- `__is_ref_class(`*類型*`)`
 
    如果傳遞了參考類別，即會傳回 **true**。 如需使用者定義的參考型別的詳細資訊，請參閱[類別和結構](classes-and-structs-cpp-component-extensions.md)。
 
@@ -460,7 +460,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_sealed(` *type* `)`
+- `__is_sealed(`*類型*`)`
 
    如果傳遞了標示為密封的平台或原生型別，即會傳回 **true**。 如需詳細資訊，請參閱 [sealed](sealed-cpp-component-extensions.md)。
 
@@ -471,7 +471,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_simple_value_class(` *type* `)`
+- `__is_simple_value_class(`*類型*`)`
 
    如果傳遞了實值型別，且其中不含對記憶體回收堆積的參考，即會傳回 **true**。 如需使用者定義的實值型別的詳細資訊，請參閱[類別和結構](classes-and-structs-cpp-component-extensions.md)。
 
@@ -489,7 +489,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_union(` *type* `)`
+- `__is_union(`*類型*`)`
 
    如果型別是等位，即會傳回 **true**。
 
@@ -506,7 +506,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
     }
     ```
 
-- `__is_value_class(` *type* `)`
+- `__is_value_class(`*類型*`)`
 
    如果傳遞了實值型別，即會傳回 **true**。 如需使用者定義的實值型別的詳細資訊，請參閱[類別和結構](classes-and-structs-cpp-component-extensions.md)。
 
@@ -532,7 +532,7 @@ Microsoft C++ 編譯器支援適用於 C++/CLI 和 C++/CX 擴充功能的「型�
 
 ### <a name="remarks"></a>備註
 
-(沒有此功能的平台特定備註。)
+(沒有這項功能的平台特定備註。)
 
 ### <a name="requirements"></a>需求
 

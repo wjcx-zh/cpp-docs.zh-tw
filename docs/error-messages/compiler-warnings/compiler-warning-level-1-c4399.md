@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a556fbffad41d04b3eb0ea1acfd5e8739ddd5b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408338"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186799"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>編譯器警告 (層級 1) C4399
 
-> '*符號*': __declspec （dllimport） 以 /clr 編譯時不應該標示處理序專屬符號： pure
+> '*symbol*'：以/clr： pure 編譯時，不應該以 __declspec （dllimport）標示每個進程符號
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
+**/Clr： pure**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
-原生映像或 CLR 建構與原生映像中的資料不匯入到純映像。 若要解決這個警告，以編譯 **/clr** (不 **/clr: pure**) 或刪除`__declspec(dllimport)`。
+原生映射或具有原生和 CLR 結構之影像的資料，無法匯入到純影像中。 若要解決這個警告，請使用 **/clr** （不是 **/clr： pure**）進行編譯，或刪除 `__declspec(dllimport)`。
 
 ## <a name="example"></a>範例
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311831"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172382"
 ---
 # <a name="event--ccli-and-ccx"></a>event  (C++/CLI 與 C++/CX)
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-下列程式碼範例示範用於產生簡單事件之 `raise` 方法的邏輯：若事件有一或多個訂閱者，以隱含或明確方式呼叫 `raise` 方法會呼叫委派。 如果委派的傳回型別不是 **void**，而且如果有零個事件訂閱者，`raise` 方法會傳回委派類型的預設值。 如果沒有任何事件訂閱者，呼叫 `raise` 方法只會傳回，而且不會引發任何例外狀況。 如果委派傳回型別不是 **void**，則會傳回委派類型。
+下列程式碼範例示範用來產生 trivial 事件的 `raise` 方法的邏輯：如果事件都有一個或多個訂閱者，則呼叫 `raise` 方法會隱含或明確地呼叫委派。 如果委派的傳回型別不是 **void**，而且如果有零個事件訂閱者，`raise` 方法會傳回委派類型的預設值。 如果沒有任何事件訂閱者，呼叫 `raise` 方法只會傳回，而且不會引發任何例外狀況。 如果委派傳回型別不是 **void**，則會傳回委派類型。
 
 ```cpp
 // trivial_events.cpp

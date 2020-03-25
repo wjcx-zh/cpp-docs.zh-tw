@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170251"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -67,9 +67,9 @@ long double cos( long double x );  // C++ only
 
 *X*的余弦函數。 如果*x*大於或等於263，或小於或等於-263，則會在結果中失去重要性。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|none|**_DOMAIN**|
+|± QNAN，IND|無|**_DOMAIN**|
 |± INF|**無效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
@@ -78,11 +78,11 @@ long double cos( long double x );  // C++ only
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
+|常式|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
 |**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

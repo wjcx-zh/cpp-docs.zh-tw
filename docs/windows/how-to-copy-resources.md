@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421195"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215208"
 ---
 # <a name="how-to-manage-resources-c"></a>如何：管理資源（C++）
 
@@ -46,7 +46,7 @@ ms.locfileid: "79421195"
 您可以輕鬆地將資源從現有的資源或可執行檔案複製到目前的資源檔。 若要複製資源，您可以同時開啟包含資源的兩個檔案，並將專案從某個檔案拖曳到另一個檔案，或在兩個檔案之間複製並貼上。 這個方法適用于資源腳本（.rc）檔案和資源範本（.rct）檔案，以及做為可執行檔（.exe）。
 
 > [!NOTE]
-> 視覺C++效果包含您可以在自己的應用程式中使用的範例資源檔。 如需詳細資訊，請參閱美工圖案[：一般資源](https://github.com/Microsoft/VCSamples)。
+> 視覺C++效果包含您可以在自己的應用程式中使用的範例資源檔。 如需詳細資訊，請參閱美工圖案[：一般資源](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general)。
 
 您無法在專案（**資源檢視**）中的資源檔和在文件視窗中開啟的獨立 .rc 檔案之間拖放、複製、剪下或貼上。 您可以在舊版產品中執行此動作。 請只在專案外部開啟的 .rc 檔案之間使用拖放方法。
 
@@ -130,4 +130,4 @@ Win32
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
 [如何：建立資源](../windows/how-to-create-a-resource-script-file.md)<br/>
-[如何：在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)

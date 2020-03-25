@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetAddress method [C++]
 ms.assetid: 09bc9180-867e-4ee5-b22a-8339dc663142
-ms.openlocfilehash: 4d51539d2afbb2fbcc860b6c4d821df119aca418
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca78bd1b607ba4a86bbc824887a7ec767cd5476e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393892"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181248"
 ---
-# <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
+# <a name="_bstr_tgetaddress"></a>_bstr_t::GetAddress
 
 **Microsoft 專屬**
 
@@ -31,13 +31,13 @@ BSTR* GetAddress( );
 
 ## <a name="remarks"></a>備註
 
-**GetAddress**會影響所有`_bstr_t`物件共用`BSTR`。 多個`_bstr_t`態度`BSTR`透過複製建構函式使用並**運算子 =**。
+**GetAddress**會影響共用 `BSTR`的所有 `_bstr_t` 物件。 有一個以上的 `_bstr_t` 可以透過使用複製的函式和**operator =** 來共用 `BSTR`。
 
 ## <a name="example"></a>範例
 
-請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)範例使用**GetAddress**。
+如需使用**GetAddress**的範例，請參閱[_Bstr_t：： Assign](../cpp/bstr-t-assign.md) 。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

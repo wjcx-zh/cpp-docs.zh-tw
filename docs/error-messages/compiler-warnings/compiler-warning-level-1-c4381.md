@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4381
 ms.assetid: f67a6db3-b334-4b2e-8182-b30c7a3c7c32
-ms.openlocfilehash: 31c7e4519e0eb1e0b6c66b6082edc7407522554a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a736a164527d53e69daf25686043922145a7e01
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162799"
 ---
 # <a name="compiler-warning-level-1-c4381"></a>編譯器警告 (層級 1) C4381
 
-'function1': 非公用方法 'function2' 將不會實作介面方法
+' function1 '：介面方法不會由非公用方法 ' function2 ' 執行
 
-類別必須實作介面中的所有函式。 類別可以符合此條件，如果其中一個基底類別實作的函式。 不過，此函式必須實作為公用函式。
+類別必須實作用介面中的所有函式。 如果類別的其中一個基類會執行此函式，則可以滿足此條件。 不過，函數必須實作為公用函式。

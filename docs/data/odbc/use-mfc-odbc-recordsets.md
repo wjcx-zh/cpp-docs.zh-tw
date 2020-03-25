@@ -5,76 +5,76 @@ helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-ms.openlocfilehash: 9d6a2b49f518fd9eaacf589e893bc240d1409a4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42316b5411637e16480abbde196dc15fc6c256c3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329773"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212535"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>使用 MFC ODBC 資料錄集
 
-這些主題說明如何使用透過 MFC 的 ODBC 資料錄集。
+這些主題說明如何透過 MFC 使用 ODBC 記錄集。
 
 ## <a name="in-this-section"></a>本節內容
 
-### <a name="general-recordset-tasks"></a>資料錄集的一般工作
+### <a name="general-recordset-tasks"></a>一般記錄集工作
 
-- [選擇 ODBC 資料錄集類型](../../data/odbc/recordset-odbc.md)
+- [選擇 ODBC 記錄集類型](../../data/odbc/recordset-odbc.md)
 
-- [重新查詢資料錄集](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [重新查詢記錄集](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
-- [宣告資料表的資料錄集類別](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [宣告資料表的記錄集類別](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [宣告預先定義的查詢資料錄集的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [為預先定義的查詢宣告記錄集類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-### <a name="recordset-design-and-implementation"></a>資料錄集的設計和實作
+### <a name="recordset-design-and-implementation"></a>記錄集設計與執行
 
-- [深入了解資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+- [瞭解記錄欄位交換（RFX）](../../data/odbc/record-field-exchange-rfx.md)
 
-- [資料庫與資料錄集物件之間交換資料](../../data/odbc/record-field-exchange-using-rfx.md)
+- [在資料庫與記錄集物件之間交換資料](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [自訂精靈所產生的資料錄集程式碼](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
+- [自訂由嚮導產生的記錄集程式碼](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
 
-- [使用資料錄欄位交換 (RFX) 函式](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [使用記錄欄位交換（RFX）函數](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-### <a name="recordset-performance-and-convenience"></a>資料錄集的效能並提供方便性
+### <a name="recordset-performance-and-convenience"></a>記錄集效能和便利性
 
-- [加入使用資料錄集的大量資料錄](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+- [使用記錄集大量加入記錄](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
 
-- [篩選資料錄集中的記錄](../../data/odbc/recordset-filtering-records-odbc.md)
+- [篩選記錄集中的記錄](../../data/odbc/recordset-filtering-records-odbc.md)
 
-### <a name="recordset-operations"></a>資料錄集作業
+### <a name="recordset-operations"></a>記錄集作業
 
-- [加入使用資料錄集的大量資料錄](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+- [使用記錄集大量加入記錄](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
 
-- [重新查詢資料錄集](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [重新查詢記錄集](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
-- [篩選資料錄集中的記錄](../../data/odbc/recordset-filtering-records-odbc.md)
+- [篩選記錄集中的記錄](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [資料錄集中的排序資料錄](../../data/odbc/recordset-sorting-records-odbc.md)
+- [排序記錄集中的記錄](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [參數化資料錄集](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [參數化記錄集](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-- [在執行階段時，將參數值傳遞至資料錄集](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [在執行時間將參數值傳遞至記錄集](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-- [執行與資料錄集的聯結](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [執行與記錄集的聯結](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [鎖定資料錄集中的記錄](../../data/odbc/recordset-locking-records-odbc.md)
+- [鎖定記錄集中的記錄](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [使用大型資料集中的資料錄的項目](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [使用記錄集中的大型資料項目](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [取得 Sum 和其他彙總結果集中的資料錄](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [取得記錄集中的總和和其他匯總結果](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
-### <a name="recordset-selection-and-sql"></a>資料錄集選取項目和 SQL
+### <a name="recordset-selection-and-sql"></a>記錄集選取和 SQL
 
-- [從 ODBC 資料來源選取資料錄](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [從 ODBC 資料來源選取記錄](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [自訂資料錄集的 SQL 字串](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [自訂記錄集的 SQL 字串](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-### <a name="dynamic-binding-of-recordsets"></a>動態繫結的資料錄集
+### <a name="dynamic-binding-of-recordsets"></a>記錄集的動態繫結
 
-- [動態繫結資料行中的資料錄集在執行階段](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [在執行時間動態地將資料行系結到記錄集](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
 ## <a name="see-also"></a>另請參閱
 

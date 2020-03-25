@@ -5,15 +5,15 @@ f1_keywords:
 - LNK1248
 helpviewer_keywords:
 - LNK1248
-ms.openlocfilehash: ec042251ef7cf6da5035d3d713927a46c87e3ac5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee399a50be129c8d471bd044ff338fb0950dce9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160636"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183770"
 ---
 # <a name="linker-tools-error-lnk1248"></a>連結器工具錯誤 LNK1248
 
-> 影像大小 ('*大小*') 超過允許的大小上限 (80000000)
+> 影像大小（「*大小*」）超過允許的大小上限（80000000）
 
-連結器取決於輸出檔的大小會超過最大可能的 32 位元程式映像的大小。 若要讓您的程式到多個 Dll。
+連結器判定輸出檔案的大小會超過32位程式映射的最大可能大小。 您可能想要將您的程式設為多個 Dll。

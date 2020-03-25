@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214886"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -46,10 +46,10 @@ ms.locfileid: "69491004"
 
 |||
 |-|-|
-|**適用於**|非 COM**介面**,**類別**,**列舉** `idl_module` s, 方法, 介面成員, 介面參數, **typedef**s, 聯**集**s,**結構**s|
+|**適用於**|非 COM**介面**，**類別**，**列舉**s，`idl_module` 方法，介面成員，介面參數， **typedef**s，聯**集**s，**結構**s|
 |**可重複**|是|
-|**必要屬性**|**coclass**(在類別上使用時)|
-|**無效屬性**|無|
+|**必要屬性**|**coclass** （在類別上使用時）|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

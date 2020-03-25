@@ -1,21 +1,21 @@
 ---
-title: library_block (C++ COM 屬性)
+title: library_block （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409248"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214769"
 ---
-# <a name="libraryblock"></a>library_block
+# <a name="library_block"></a>library_block
 
-會建構的 IDL 程式庫區塊內。
+將結構放在 IDL 程式庫區塊內。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409248"
 
 ## <a name="remarks"></a>備註
 
-當您將內部的程式庫區塊的建構時，您會確定，它會傳遞至類型程式庫，而不論是否為參考。 根據預設，唯一的建構會修改所[coclass](coclass.md)， [dispinterface](dispinterface.md)，並[idl_module](idl-module.md)屬性會放在程式庫區塊。
+當您將結構放在程式庫區塊內時，您可以確保它會傳遞至類型程式庫，不論是否被參考。 根據預設，只有由[coclass](coclass.md)、分配[介面](dispinterface.md)和[idl_module](idl-module.md)屬性所修改的結構才會放在程式庫區塊中。
 
 ## <a name="example"></a>範例
 
-下列程式碼，在自訂介面放置的程式庫區塊內。
+在下列程式碼中，會將自訂介面放在程式庫區塊內。
 
 ```cpp
 // cpp_attr_ref_library_block.cpp

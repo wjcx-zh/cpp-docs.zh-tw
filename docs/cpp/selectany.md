@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: a6bf4076dfecbd29035716285f52c0a9faf81067
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38346e41c1e943e9bfda70668a163c630a0b9599
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267293"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178869"
 ---
 # <a name="selectany"></a>selectany
 
@@ -28,20 +28,20 @@ __declspec( selectany ) declarator
 
 ## <a name="remarks"></a>備註
 
-在連結時，如果看見多個定義的 COMDAT，則連結器會挑選一個定義並捨棄其餘定義。 如果連結器選項[/opt: ref](../build/reference/opt-optimizations.md) （最佳化） 已選取，則 COMDAT 刪除作業會移除所有未參考的資料的項目連結器輸出中。
+在連結時，如果看見多個定義的 COMDAT，則連結器會挑選一個定義並捨棄其餘定義。 如果選取了連結器選項[/opt： REF](../build/reference/opt-optimizations.md) （優化），則會發生 COMDAT 刪除，以移除連結器輸出中所有未參考的資料項目。
 
 宣告中的建構函式以及由全域函式或靜態方法進行的指派不會建立參考，也不會阻止 /OPT:REF 刪除作業。 來自這類程式碼的副作用不應取決於不存在其他資料參考時。
 
-對於動態初始化的全域物件， **selectany**將會捨棄未參考的物件的初始化程式碼，以及。
+對於動態初始化的全域物件， **selectany**也會捨棄未參考物件的初始化程式碼。
 
-全域資料項目通常只能在 EXE 或 DLL 專案中初始化一次。 **selectany**可用在初始化時相同的標頭會顯示一個以上的原始程式檔中，標頭所定義的全域資料。 **selectany**有兩個 C 和C++編譯器。
+全域資料項目通常只能在 EXE 或 DLL 專案中初始化一次。 當同一個標頭出現在多個原始程式檔時，可以使用**selectany**來初始化標頭所定義的全域資料。 **selectany**同時適用于 C 和C++編譯器。
 
 > [!NOTE]
->  **selectany**只能套用至外部可見的全域資料項目的實際初始化。
+>  **selectany**只能套用至外部可見的全域資料項目實際初始化。
 
 ## <a name="example"></a>範例
 
-此程式碼示範如何使用**selectany**屬性：
+此程式碼說明如何使用**selectany**屬性：
 
 ```cpp
 //Correct - x1 is initialized and externally visible
@@ -75,7 +75,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>範例
 
-此程式碼示範如何使用**selectany**屬性來確保資料的 COMDAT 摺疊時也使用[/opt: icf](../build/reference/opt-optimizations.md)連結器選項。 請注意，資料必須標示**selectany**並放置在**const** （唯讀） 區段。 您必須明確指定唯讀區段。
+這段程式碼示範如何使用**selectany**屬性，在您同時使用[/opt： ICF](../build/reference/opt-optimizations.md)連結器選項時，確保資料 COMDAT 折迭。 請注意，資料必須以**selectany**標記，並放在**const** （readonly）區段中。 您必須明確指定唯讀區段。
 
 ```cpp
 // selectany2.cpp
@@ -88,7 +88,7 @@ int main() {
 }
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

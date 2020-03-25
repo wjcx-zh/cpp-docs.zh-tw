@@ -1,17 +1,17 @@
 ---
-title: max_is (C++ COM 屬性)
+title: max_is （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514422"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166753"
 ---
 # <a name="max_is"></a>max_is
 
@@ -38,7 +38,7 @@ ms.locfileid: "69514422"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
+|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
 |**無效屬性**|**size_is**|
@@ -47,7 +47,7 @@ ms.locfileid: "69514422"
 
 ## <a name="example"></a>範例
 
-如需如何指定陣列區段的範例, 請參閱[first_is](first-is.md) 。
+如需如何指定陣列區段的範例，請參閱[first_is](first-is.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

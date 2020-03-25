@@ -1,17 +1,17 @@
 ---
-title: uidefault (C++ COM 屬性)
+title: uidefault （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513906"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214457"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -29,7 +29,7 @@ ms.locfileid: "69513906"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示**uidefault**的範例:
+下列程式碼顯示**uidefault**的範例：
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -56,8 +56,8 @@ __interface ICustom{
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

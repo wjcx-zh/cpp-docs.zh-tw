@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d64f0af994f88d0f4ecd3a5921de4a16b8bdaaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183564"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178279"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>遞增和遞減運算子多載 (C++)
 
@@ -22,10 +22,10 @@ ms.locfileid: "62183564"
 
 - 前置遞減和後置遞減
 
-當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。 若要區別這兩個，觀察到下列規則：運算子的前置格式宣告為任何其他一元 （unary） 運算子; 完全相同的方式後置格式可接受類型的其他引數**int**。
+當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。 為了區分兩者，會觀察到下列規則：運算子的前置格式宣告方式與任何其他一元運算子完全相同;後置形式會接受**int**類型的額外引數。
 
 > [!NOTE]
->  當指定遞增或遞減運算子的後置格式的多載的運算子，額外的引數必須是類型**int**; 指定任何其他型別會產生錯誤。
+>  為遞增或遞減運算子的後置形式指定多載運算子時，其他引數必須為**int**類型。指定任何其他類型會產生錯誤。
 
 下列範例顯示如何為 `Point` 類別定義前置和後置遞增及遞減運算子：
 
@@ -97,7 +97,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement
 ```
 
-類型引數**int**表示後置格式的遞增或遞減運算子通常不會用來將引數傳遞。 它通常包含值 0。 不過，可以依如下的方式使用：
+**Int**類型的引數，代表遞增或遞減運算子的後置形式，通常不會用來傳遞引數。 它通常包含值 0。 不過，可以依如下的方式使用：
 
 ```cpp
 // increment_and_decrement2.cpp
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-除了明確的引動過程之外，沒有其他語法會使用遞增或遞減運算子來傳遞這些值，如上述程式碼所示。 若要實作這項功能較簡單的方式是多載加法/指派運算子 (**+=**)。
+除了明確的引動過程之外，沒有其他語法會使用遞增或遞減運算子來傳遞這些值，如上述程式碼所示。 執行此功能的更簡單方法是多載加法/指派運算子（ **+=** ）。
 
 ## <a name="see-also"></a>另請參閱
 

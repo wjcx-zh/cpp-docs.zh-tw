@@ -1,17 +1,17 @@
 ---
-title: transmit_as (C++ COM 屬性)
+title: transmit_as （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214483"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -34,7 +34,7 @@ ms.locfileid: "69513921"
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**transmit_as**屬性:
+下列程式碼示範如何使用**transmit_as**屬性：
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -72,8 +72,8 @@ struct _TREE_NODE_TYPE * right;
 |-|-|
 |**適用於**|**typedef**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

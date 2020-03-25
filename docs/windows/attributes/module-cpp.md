@@ -1,17 +1,17 @@
 ---
-title: module (C++ COM 屬性)
+title: module （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.module
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: daa0ae4aea5ff2a1a3312efcf3c39f43b541abf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514920"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166688"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -26,15 +26,15 @@ ms.locfileid: "69514920"
 ### <a name="parameters"></a>參數
 
 *type*<br/>
-選擇性可以是下列其中一項:
+選擇性可以是下列其中一項：
 
-- `dll`加入可讓產生的 DLL 當做同進程 COM 伺服器運作的函式和類別。 這是預設值。
+- `dll` 新增可讓產生的 DLL 當做同進程 COM 伺服器運作的函式和類別。 這是預設值。
 
-- `exe`新增函式和類別, 讓產生的可執行檔當做進程外 COM 伺服器來運作。
+- `exe` 加入的函式和類別，可讓產生的可執行檔當做進程外 COM 伺服器來運作。
 
-- `service`新增函式和類別, 讓產生的可執行檔當做 NT 服務運作。
+- `service` 加入的函式和類別，可讓產生的可執行檔當做 NT 服務運作。
 
-- `unspecified`停用與模組屬性相關的 ATL 程式碼插入: 插入 ATL 模組類別、全域實例 _AtlModule 和進入點函式。 因為專案中有其他屬性，所以請不要停止插入 ATL 程式碼。
+- `unspecified` 停用與模組屬性相關的 ATL 程式碼插入：插入 ATL 模組類別、全域實例 _AtlModule 和進入點函式。 因為專案中有其他屬性，所以請不要停止插入 ATL 程式碼。
 
 *name*<br/>
 選擇性程式庫區塊的名稱。
@@ -43,7 +43,7 @@ ms.locfileid: "69514920"
 選擇性您想要指派給程式庫區塊的版本號碼。 預設值為 1.0。
 
 *uuid*<br/>
-程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要取得程式庫區塊的*uuid* , 您可以使用識別碼 **__uuidof (** *libraryname* **)** 來執行此動作。
+程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要取得程式庫區塊的*uuid* ，您可以使用識別碼 **__uuidof （** *libraryname* **）** 來執行此動作。
 
 *lcid*<br/>
 當地語系化參數。 如需詳細資訊，請參閱 [lcid](/windows/win32/Midl/lcid) 。
@@ -58,13 +58,13 @@ ms.locfileid: "69514920"
 選擇性設定要用來執行檔字串查詢的 .DLL 檔案名。 如需詳細資訊，請參閱 [helpstringdll](/windows/win32/Midl/helpstringdll) 。
 
 *helpfile*<br/>
-選擇性類型程式庫的說明檔名稱。
+選擇性類型連結**庫的說明**檔名稱。
 
 *helpcontext*<br/>
 選擇性此類型程式庫的說明**識別碼**。
 
 *helpstringcontext*<br/>
-選擇性如需詳細資訊, 請參閱[helpstringcoNtext](helpstringcontext.md) 。
+選擇性如需詳細資訊，請參閱[helpstringcoNtext](helpstringcontext.md) 。
 
 *hidden*<br/>
 選擇性防止顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 如需詳細資訊，請參閱 [hidden](/windows/win32/Midl/hidden) MIDL 屬性。
@@ -93,7 +93,7 @@ ms.locfileid: "69514920"
 
 一個 .idl 檔案中只允許一個程式庫區塊。 將會合併原始程式碼中的多個模組項目，並實作最新的參數值。
 
-如果在使用 ATL 的專案內使用此屬性，則屬性的行為會變更。 除了上述行為之外, 屬性也會插入正確類型的全域物件 (稱為`_AtlModule`) 以及其他支援程式碼。 如果屬性是獨立的，則會插入從正確模組類型衍生的類別。 如果將屬性套用至類別，則會新增正確模組類型的基底類別。 正確的型別取決於*型*別參數的值:
+如果在使用 ATL 的專案內使用此屬性，則屬性的行為會變更。 除了上述行為之外，屬性也會插入正確類型的全域物件（稱為 `_AtlModule`）以及其他支援程式碼。 如果屬性是獨立的，則會插入從正確模組類型衍生的類別。 如果將屬性套用至類別，則會新增正確模組類型的基底類別。 正確的型別取決於*型*別參數的值：
 
 - `type` = **dll**
 
@@ -154,8 +154,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

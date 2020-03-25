@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515763"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182028"
 ---
 # <a name="generic-delegates-ccli"></a>泛型委派 (C++/CLI)
 
@@ -29,14 +29,14 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>參數
 
-*屬性*<br/>
+*attributes*<br/>
 (選擇性) 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
 
 *type-parameter-identifier(s)*<br/>
 以逗號分隔的型別參數識別項清單。
 
 *type-parameter-constraints-clauses*<br/>
-採用[泛型類型參數的條件約束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的格式
+採用[泛型型別參數的條件約束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的格式
 
 *accessibility-modifiers*<br/>
 (選擇性) 存取範圍修飾詞 (例如 **public** 和 **private**)。

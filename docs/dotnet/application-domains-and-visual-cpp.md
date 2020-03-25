@@ -8,18 +8,18 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16c02bb58681ecb241d3552f57e0b05f2d6711b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208794"
 ---
-# <a name="application-domains-and-visual-c"></a>應用程式定義域和視覺效果C++
+# <a name="application-domains-and-visual-c"></a>應用程式定義域和 Visual C++
 
-如果您有`__clrcall`虛擬函式，每個應用程式定義域 (appdomain)，將會 vtable。 如果您在一個 appdomain 中建立物件，您可以只呼叫該 appdomain 內的虛擬函式。 在混合模式 (**/clr**) 如果您的型別沒有，您會有同處理序 vtable`__clrcall`虛擬函式。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+如果您有 `__clrcall` 虛擬函式，則 vtable 將會是每個應用程式域（appdomain）。 如果您在一個 appdomain 中建立物件，您只能從該 appdomain 內呼叫虛擬函式。 在混合模式（ **/clr**）中，如果您的類型沒有 `__clrcall` 的虛擬函式，您就會有每個進程的 vtable。 **/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱
 
 - [appdomain](../cpp/appdomain.md)
 

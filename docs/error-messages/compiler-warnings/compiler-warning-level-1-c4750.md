@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 35b57cf88bf9f9a170a05af890632316b7030838
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175164"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>編譯器警告 (層級 1) C4750
 
@@ -19,7 +19,7 @@ ms.locfileid: "74052406"
 
 'identifier' 函式會強制 [_alloca](../../c-runtime-library/reference/alloca.md) 函式在迴圈中內嵌展開，而可能在執行迴圈時造成堆疊溢位。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 1. 確定未使用 [__forceinline](../../cpp/inline-functions-cpp.md) 規範修改 'identifier' 函式。
 
@@ -55,6 +55,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_alloca](../../c-runtime-library/reference/alloca.md)

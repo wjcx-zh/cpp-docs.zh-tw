@@ -10,55 +10,55 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4e80816a131c997e9f5bfaa34f025394b05a358
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397792"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212858"
 ---
 # <a name="recordset-locking-records-odbc"></a>資料錄集：鎖定資料錄 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
-本主題說明：
+本主題將說明：
 
-- [何種記錄鎖定可用](#_core_record.2d.locking_modes)。
+- [可用的記錄鎖定類型](#_core_record.2d.locking_modes)。
 
-- [如何鎖定資料錄集中的記錄，在更新期間](#_core_locking_records_in_your_recordset)。
+- [如何在更新期間鎖定您的記錄集內的記錄](#_core_locking_records_in_your_recordset)。
 
-當您使用資料錄集更新資料來源上的記錄時，您的應用程式可以鎖定記錄，因此沒有其他使用者可以同時更新記錄。 兩個使用者同時更新一筆記錄的狀態為未定義，除非系統可以保證兩位使用者無法同時更新一筆記錄。
+當您使用記錄集來更新資料來源上的記錄時，您的應用程式可以鎖定記錄，讓其他使用者都無法同時更新記錄。 兩個使用者同時更新的記錄狀態是未定義的，除非系統可以保證兩個使用者無法同時更新記錄。
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您已實作大量資料列擷取，部分資訊不適用。 例如，您不能呼叫`Edit`和`Update`成員函式。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果您已執行大量資料列提取，部分資訊將不適用。 例如，您無法呼叫 `Edit` 和 `Update` 成員函式。 如需大量資料列提取的詳細資訊，請參閱[記錄集：大量提取記錄（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-##  <a name="_core_record.2d.locking_modes"></a> 記錄鎖定模式
+##  <a name="record-locking-modes"></a><a name="_core_record.2d.locking_modes"></a>記錄鎖定模式
 
-資料庫類別提供兩個[記錄鎖定模式](../../mfc/reference/crecordset-class.md#setlockingmode):
+資料庫類別提供兩種[記錄鎖定模式](../../mfc/reference/crecordset-class.md#setlockingmode)：
 
-- 開放式鎖定 （預設值）
+- 開放式鎖定（預設值）
 
 - 封閉式鎖定
 
-更新記錄，就會發生下列三個步驟：
+更新記錄會以三個步驟執行：
 
-1. 您開始作業，藉由呼叫[編輯](../../mfc/reference/crecordset-class.md#edit)成員函式。
+1. 您可以藉由呼叫[Edit](../../mfc/reference/crecordset-class.md#edit)成員函式來開始作業。
 
-1. 您變更目前的資料錄的適當欄位。
+1. 您可以變更目前記錄的適當欄位。
 
-1. 結束作業，並正常地認可更新，藉由呼叫[更新](../../mfc/reference/crecordset-class.md#update)成員函式。
+1. 您會藉由呼叫[update](../../mfc/reference/crecordset-class.md#update)成員函式來結束作業（通常會認可更新）。
 
-開放式鎖定鎖定只在資料來源上的資料錄`Update`呼叫。 如果您使用開放式鎖定在多使用者環境中，應用程式應該處理`Update`失敗狀況。 封閉式鎖定鎖定的記錄，只要您呼叫`Edit`並不會釋放它直到您呼叫`Update`(透過指出失敗`CDBException`機制，不是由值為 FALSE 所傳回`Update`)。 封閉式鎖定有潛在的效能降低，其他使用者的影響，因為並行存取相同的記錄可能要等到您的應用程式完成`Update`程序。
+開放式鎖定只會在 `Update` 呼叫期間鎖定資料來源上的記錄。 如果您在多使用者環境中使用開放式鎖定，應用程式應該會處理 `Update` 失敗狀況。 封閉式鎖定會在您呼叫 `Edit` 時立即鎖定記錄，而且在您呼叫 `Update` 之前，不會釋放它（失敗是透過 `CDBException` 機制指出，而不是由 `Update`傳回的 FALSE 值）。 封閉式鎖定會對其他使用者造成潛在的效能負面影響，因為對相同記錄的平行存取可能必須等到應用程式的 `Update` 進程完成。
 
-##  <a name="_core_locking_records_in_your_recordset"></a> 鎖定資料錄集中的記錄
+##  <a name="locking-records-in-your-recordset"></a><a name="_core_locking_records_in_your_recordset"></a>鎖定記錄集中的記錄
 
-如果您想要變更資料錄集物件的[鎖定模式](#_core_record.2d.locking_modes)預設值，您必須變更模式才能呼叫`Edit`。
+如果您想要從預設值變更記錄集物件的[鎖定模式](#_core_record.2d.locking_modes)，您必須在呼叫 `Edit`之前變更模式。
 
-#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>若要變更目前的鎖定模式，以您的資料錄集
+#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>變更記錄集的目前鎖定模式
 
-1. 呼叫[SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode)成員函式，指定`CRecordset::pessimistic`或`CRecordset::optimistic`。
+1. 呼叫[SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode)成員函式，並指定 `CRecordset::pessimistic` 或 `CRecordset::optimistic`。
 
-新的鎖定模式會持續有效，直到您再次變更或關閉資料錄集。
+新的鎖定模式會持續有效，直到您再次變更或關閉記錄集為止。
 
 > [!NOTE]
 >  相對較少的 ODBC 驅動程式目前支援封閉式鎖定。

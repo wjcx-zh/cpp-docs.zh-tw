@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398236"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213885"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -26,9 +26,9 @@ struct ImplementsBase;
 
 ## <a name="remarks"></a>備註
 
-用來驗證範本中的參數型別[Implements 結構](implements-structure.md)。
+用來驗證[Implements 結構](implements-structure.md)中的範本參數類型。
 
-**ImplementsBase**結構是空的設計。
+**ImplementsBase**結構的設計是空的。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -36,9 +36,9 @@ struct ImplementsBase;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

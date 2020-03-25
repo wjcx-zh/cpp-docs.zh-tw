@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857277"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178534"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -27,7 +27,7 @@ ms.locfileid: "74857277"
 
 下列清單會顯示這個呼叫慣例的實作。
 
-|項目|實作|
+|元素|實作|
 |-------------|--------------------|
 |引數傳遞順序|由右至左。|
 |引數傳遞慣例|以傳值方式，除非傳遞指標或參考類型。|
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+此
 
 ```cpp
 void CMyClass::mymethod() { return; }
@@ -74,7 +74,7 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

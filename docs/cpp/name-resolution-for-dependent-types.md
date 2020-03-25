@@ -2,16 +2,16 @@
 title: 相依類型的名稱解析
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161148"
 ---
 # <a name="name-resolution-for-dependent-types"></a>相依類型的名稱解析
 
-使用**typename**在告訴編譯器將指定的限定的名稱識別類型的樣板定義中的限定名稱。 如需詳細資訊，請參閱 < [typename](../cpp/typename.md)。
+在範本定義中使用**typename**做為限定名稱，以告知編譯器指定的限定名稱會識別類型。 如需詳細資訊，請參閱[typename](../cpp/typename.md)。
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-相依名稱的名稱查閱會檢查從樣板定義內容的名稱，這個內容會在下列範例中，尋找`myFunction(char)`— 和範本具現化的內容。在下列範例中，樣板具現化在 main;因此，`MyNamespace::myFunction`是可見的具現化的點，並且可挑選為較佳的相符項目。 如果 `MyNamespace::myFunction` 已重新命名，則會改為呼叫 `myFunction(char)`。
+相依名稱的名稱查閱會檢查範本定義內容中的名稱，在下列範例中，此內容會尋找 `myFunction(char)`，以及範本具現化的內容。在下列範例中，範本會在 main 中具現化;因此，可以從具現化的點看到 `MyNamespace::myFunction`，並將其挑選為較佳的相符項。 如果 `MyNamespace::myFunction` 已重新命名，則會改為呼叫 `myFunction(char)`。
 
 所有名稱都會做為相依名稱解析。 儘管如此，如果可能發生任何衝突，仍建議您使用完整限定名稱。
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Int MyNamespace::myFunction
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>樣板去除混淆
 
-Visual Studio 2012 會強制執行 C + + 98/03/11 標準規則，以便使用 「 範本 」 關鍵字的去除混淆。 在下列範例中，Visual Studio 2010 會接受不合格的行和相符的程式碼行。  Visual Studio 2012 接受只有相符的程式碼行。
+Visual Studio 2012 強制使用 c + + 98/03/11 標準規則來去除 "template" 關鍵字的混淆。 在下列範例中，Visual Studio 2010 會接受不合格的行和符合的行。  Visual Studio 2012 只接受符合規範的行。
 
 ```cpp
 #include <iostream>

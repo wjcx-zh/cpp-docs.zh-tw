@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-ms.openlocfilehash: b0dfb547904d409399ad1a0d7824f9d4fdeb5f15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9a3ea9e33adc8a26f34324a8660c835f08b3007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232127"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213677"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== 運算子 (Microsoft::WRL)
 
-等號比較運算子[ComPtr](comptr-class.md)並[ComPtrRef](comptrref-class.md)物件。
+[ComPtr](comptr-class.md)和[ComPtrRef](comptrref-class.md)物件的等號比較運算子。
 
 ## <a name="syntax"></a>語法
 
@@ -63,13 +63,13 @@ WRL_NOTHROW bool operator==(
 
 ## <a name="return-value"></a>傳回值
 
-**真**如果物件相等，否則**false**。
+如果物件相等，則為**true** ;否則**為 false**。
 
 ## <a name="requirements"></a>需求
 
 **標頭：** client.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

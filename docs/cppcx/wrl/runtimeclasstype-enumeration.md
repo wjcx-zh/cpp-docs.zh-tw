@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213573"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 列舉
 
-指定的型別[RuntimeClass](runtimeclass-class.md)支援的執行個體。
+指定支援的[RuntimeClass](runtimeclass-class.md)實例類型。
 
 ## <a name="syntax"></a>語法
 
@@ -30,18 +30,18 @@ enum RuntimeClassType;
 
 |名稱|描述|
 |----------|-----------------|
-|`ClassicCom`|傳統的 COM 執行階段類別。|
+|`ClassicCom`|傳統 COM 執行時間類別。|
 |`Delegate`|相當於 `ClassicCom`。|
-|`InhibitFtmBase`|停用`FtmBase`支援，同時`__WRL_CONFIGURATION_LEGACY__`未定義。|
+|`InhibitFtmBase`|未定義 `__WRL_CONFIGURATION_LEGACY__` 時，停用 `FtmBase` 支援。|
 |`InhibitWeakReference`|停用弱式參考支援。|
 |`WinRt`|Windows 執行階段類別。|
 |`WinRtClassicComMix`|結合 `WinRt` 和 `ClassicCom`。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

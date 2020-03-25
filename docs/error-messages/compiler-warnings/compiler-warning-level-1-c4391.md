@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4391
+title: 編譯器警告 (層級 1) C4391
 ms.date: 11/04/2016
 f1_keywords:
 - C4391
 helpviewer_keywords:
 - C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-ms.openlocfilehash: 60b68906697f76d56ff6c0e13f1b4ec105ef1c25
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 6dc5e2c7a40a276e225d030bc0340fb0bfe25bb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966120"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162721"
 ---
-# <a name="compiler-warning-level-1-c4391"></a>編譯器警告（層級1） C4391
+# <a name="compiler-warning-level-1-c4391"></a>編譯器警告 (層級 1) C4391
 
 ' signature '：內建函式的傳回類型不正確，應為 ' type '
 

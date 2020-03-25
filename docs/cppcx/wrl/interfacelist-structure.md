@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 745348e81888b5a87c57fbb99d397fcd423c3ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213859"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -28,10 +28,10 @@ struct InterfaceList;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-介面名稱;[遞迴] 清單中的第一個介面。
+介面名稱;遞迴清單中的第一個介面。
 
 *U*<br/>
-介面名稱;在 [遞迴] 清單中其餘的介面。
+介面名稱;遞迴清單中的其餘介面。
 
 ## <a name="remarks"></a>備註
 
@@ -43,8 +43,8 @@ struct InterfaceList;
 
 |名稱|描述|
 |----------|-----------------|
-|`FirstT`|範本參數同義*T*。|
-|`RestT`|範本參數同義*U*。|
+|`FirstT`|樣板參數*T*的同義字。|
+|`RestT`|樣板參數*U*的同義字。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -52,9 +52,9 @@ struct InterfaceList;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

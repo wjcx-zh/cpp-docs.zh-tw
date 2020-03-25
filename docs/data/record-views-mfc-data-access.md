@@ -8,18 +8,18 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31dbd92219f263c625050524279b97ef38ba9ba1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209127"
 ---
 # <a name="record-views--mfc-data-access"></a>記錄檢視 (MFC 資料存取)
 
-本節僅適用於 MFC ODBC 類別。 OLE DB 資料錄檢視的相關資訊，請參閱[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)並[使用 OLE DB 資料錄檢視](../data/oledb/using-ole-db-record-views.md)。
+本節僅適用于 MFC ODBC 類別。 如需 OLE DB 記錄 視圖的詳細資訊，請參閱[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)和[使用 OLE DB 記錄 views](../data/oledb/using-ole-db-record-views.md)。
 
-若要支援以 form 為基礎的資料存取應用程式，類別庫會提供類別[CRecordView](../mfc/reference/crecordview-class.md)。 資料錄檢視是表單檢視物件，其控制項直接對應到欄位資料成員[資料錄集](../data/odbc/recordset-odbc.md)物件 （並間接對應的資料行中的查詢結果或資料來源上的資料表）。 如同其基底類別[CFormView](../mfc/reference/cformview-class.md)，`CRecordView`以對話方塊範本資源為基礎。
+為了支援表單架構的資料存取應用程式，類別庫提供類別[CRecordView](../mfc/reference/crecordview-class.md)。 [記錄] 視圖是表單檢視物件，其控制項直接對應至[記錄集](../data/odbc/recordset-odbc.md)物件的欄位資料成員（並間接對應至資料來源上查詢結果或資料表中的對應資料行）。 如同其基類[CFormView](../mfc/reference/cformview-class.md)，`CRecordView` 是以對話方塊範本資源為基礎。
 
 ## <a name="form-uses"></a>表單用途
 
@@ -37,15 +37,15 @@ ms.locfileid: "62161364"
 
 主題包括：
 
-- [資料錄檢視類別的功能](../data/features-of-record-view-classes-mfc-data-access.md)
+- [記錄視圖類別的功能](../data/features-of-record-view-classes-mfc-data-access.md)
 
-- [資料錄檢視的資料交換](../data/data-exchange-for-record-views-mfc-data-access.md)
+- [記錄視圖的資料交換](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [您的角色中使用資料錄檢視](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [您在使用記錄視圖時的角色](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [設計和建立資料錄檢視](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [設計和建立記錄視圖](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
-- [使用資料錄檢視](../data/using-a-record-view-mfc-data-access.md)
+- [使用記錄視圖](../data/using-a-record-view-mfc-data-access.md)
 
 ## <a name="see-also"></a>另請參閱
 

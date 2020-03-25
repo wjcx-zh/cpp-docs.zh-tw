@@ -2,12 +2,12 @@
 title: 原始程式碼組織 (C++ 範本)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 76898d04e5f9f0576898eb40945b7718c650d71a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611386"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178726"
 ---
 # <a name="source-code-organization-c-templates"></a>原始程式碼組織 (C++ 範本)
 

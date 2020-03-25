@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetBSTR method [C++]
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
-ms.openlocfilehash: cea3404e0732cb0e16b3fa9199ce95e3dfcc23f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da438c65256d9a7e5bf5b02e108fee1385171d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181209"
 ---
-# <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
+# <a name="_bstr_tgetbstr"></a>_bstr_t::GetBSTR
 
 **Microsoft 專屬**
 
@@ -31,13 +31,13 @@ BSTR& GetBSTR( );
 
 ## <a name="remarks"></a>備註
 
-**GetBSTR**會影響所有`_bstr_t`物件共用`BSTR`。 多個`_bstr_t`態度`BSTR`透過複製建構函式使用並**運算子 =**。
+**GetBSTR**會影響共用 `BSTR`的所有 `_bstr_t` 物件。 有一個以上的 `_bstr_t` 可以透過使用複製的函式和**operator =** 來共用 `BSTR`。
 
 ## <a name="example"></a>範例
 
-請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)的使用範例**GetBSTR**。
+如需使用**GetBSTR**的範例，請參閱[_Bstr_t：： Assign](../cpp/bstr-t-assign.md) 。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

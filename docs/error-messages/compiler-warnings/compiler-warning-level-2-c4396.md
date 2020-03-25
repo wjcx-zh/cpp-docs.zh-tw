@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: e874e00d44eef29240cca55541837facfcf64495
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052034"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161811"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>編譯器警告 (層級 2) C4396
 
@@ -19,7 +19,7 @@ ms.locfileid: "74052034"
 
 函式樣板的特製化不能指定任何 [內嵌](../../cpp/inline-functions-cpp.md) 規範。 編譯器會發出警告 C4396 並忽略內嵌規範。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 - 請從 Friend 函式宣告移除 `inline`、 `__inline`或 `__forceinline` 規範。
 

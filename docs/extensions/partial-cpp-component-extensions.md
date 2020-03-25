@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ad8faa08a2c85e777cbc8721e5842e708b9e6cb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "70311899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181846"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial  (C++/CLI 和 C++/CX)
 
@@ -53,19 +53,19 @@ class-key identifier {
 
 部分類別支援以下案例：您在一個檔案中修改一部分的類別定義，而自動產生程式碼的軟體 (例如 XAML 設計工具) 在另一個檔案中修改同一類別的程式碼。 您可以使用部分類別防止自動程式碼產生器覆寫您的程式碼。 在 Visual Studio 專案中，會對產生的檔案自動套用 **partial** 修飾詞。
 
-內容: 有兩個例外狀況，如果省略 **partial** 關鍵字，部分類別定義即可包含完整類別定義所能包含的任何項目。 不過，您無法指定類別存取範圍 (例如 `public partial class X { ... };`) 或 **declspec**。
+內容：有兩個例外狀況，部分類別定義可以包含完整類別定義在省略**部分**關鍵字時可能包含的任何內容。 不過，您無法指定類別存取範圍 (例如 `public partial class X { ... };`) 或 **declspec**。
 
 *identifier* 的部分類別定義中所使用的存取規範，不會影響 *identifier* 的後續部分或完整類別定義中的預設存取範圍。 此外也允許靜態資料成員的內嵌定義。
 
-宣告：*identifier* 類別的部分定義只會引入名稱 *identifier*，但是 *identifier* 無法以需要類別定義的方式使用。 *identifier* 這個名稱無法用來取得 *identifier* 大小的資訊，也無法在編譯器遇到 *identifier* 的完整定義之前使用 *identifier* 的基底或成員。
+宣告：類別*識別碼*的部分定義只會引進名稱*識別碼*，但無法以需要類別定義的方式使用*識別碼*。 *identifier* 這個名稱無法用來取得 *identifier* 大小的資訊，也無法在編譯器遇到 *identifier* 的完整定義之前使用 *identifier* 的基底或成員。
 
-數目和順序：*identifier* 可以有零個或多個部分類別定義。 *identifier* 的所有部分類別定義都必須在語彙上位於一個 *identifier* 完整定義前面 (如果有完整定義的話。否則，除非是在向前宣告的情況下，不然就無法使用該類別)，但是不需要在 *identifier* 的向前宣告之前。 所有的類別識別碼都必須相符。
+數位和排序：*識別碼*可以有零個或多個部分類別定義。 *identifier* 的所有部分類別定義都必須在語彙上位於一個 *identifier* 完整定義前面 (如果有完整定義的話。否則，除非是在向前宣告的情況下，不然就無法使用該類別)，但是不需要在 *identifier* 的向前宣告之前。 所有的類別識別碼都必須相符。
 
-完整定義：在進行類別 *identifier* 的完整定義時，行為就如同 *identifier* 的定義已宣告所有基底類別、成員等 (宣告順序取決於在部分類別中遇到及定義這些項目的順序)。
+完整定義：在類別*識別碼*的完整定義時，其行為會如同*識別碼*的定義已宣告所有基類、成員等，而且是以它們在部分類別中遇到和定義的順序來宣告。
 
-範本：部分類別不可做為樣板。
+範本：部分類別不可以是範本。
 
-泛型：如果完整定義可以是泛型，部分類別也可以是泛型。 但每個部分和完整類別都必須有完全相同的泛型參數，包括型式參數名稱。
+泛型：如果完整定義可能是泛型，部分類別可以是泛型。 但每個部分和完整類別都必須有完全相同的泛型參數，包括型式參數名稱。
 
 如需如何使用 **partial** 關鍵字的詳細資訊，請參閱[部分類別 (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)。
 

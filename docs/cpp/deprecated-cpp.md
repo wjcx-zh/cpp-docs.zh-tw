@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189477"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
-本主題是關於 Microsoft 專有 declspec 宣告已被取代。 如需 C + + 14`[[deprecated]]`屬性，以及與 Microsoft 專有 declspec 或 pragma，該屬性的使用時機的指引請參閱[C++標準屬性](attributes.md)。
+本主題是關於 Microsoft 特定的已淘汰 declspec 宣告。 如需 c + + 14 `[[deprecated]]` 屬性的詳細資訊，以及使用該屬性的時機與 Microsoft 特定 declspec 或 pragma 的相關指引，請參閱[ C++標準屬性](attributes.md)。
 
-例外狀況，如下所示**過時**宣告可提供相同的功能[已被取代](../preprocessor/deprecated-c-cpp.md)pragma:
+有了下面所述的例外狀況，已被**取代**的宣告會提供與已[淘汰](../preprocessor/deprecated-c-cpp.md)pragma 相同的功能：
 
-- **已被取代**宣告可讓您指定特定形式的函式多載，為已被取代，而 pragma 形式套用至所有的多載形式的函式名稱。
+- 已**取代**的宣告可讓您將特定形式的函式多載指定為已被取代，而 pragma 格式則適用于函式名稱的所有多載形式。
 
-- **已被取代**宣告可讓您指定將在編譯時期顯示的訊息。 訊息的文字可以來自巨集。
+- 已**取代**的宣告可讓您指定將在編譯時期顯示的訊息。 訊息的文字可以來自巨集。
 
-- 巨集，才可以標示為使用已被取代**已被取代**pragma。
+- 宏只能標記為已被**取代**的 pragma。
 
-如果編譯器遇到使用已被取代的識別項或標準[ `[[deprecated]]` ](attributes.md)屬性[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告就會擲回。
+如果編譯器遇到使用已被取代的識別碼或標準[`[[deprecated]]`](attributes.md)屬性，則會擲回[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告。
 
 ## <a name="example"></a>範例
 

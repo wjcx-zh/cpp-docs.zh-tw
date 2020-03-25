@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C++]
 ms.assetid: f3e10a59-39f6-4bcd-827e-3e99f8f89497
-ms.openlocfilehash: 24cc4dd3cd7e0c893664339e7ad83383839b0b11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd45430543ead7258096be8f3d8cef0141f27b4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244472"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179188"
 ---
 # <a name="public-c"></a>public (C++)
 
@@ -25,22 +25,22 @@ public base-class
 
 ## <a name="remarks"></a>備註
 
-加一份類別成員清單前面時**公開**關鍵字會指定這些成員可以存取從任何函式。 這種做法適用於在下一個存取指定名稱或類別結尾之前宣告的所有成員。
+在類別成員清單前面時， **public**關鍵字會指定可以從任何函式存取這些成員。 這種做法適用於在下一個存取指定名稱或類別結尾之前宣告的所有成員。
 
-當基底類別，在名稱前面**公用**關鍵字會指定基底類別的 public 和 protected 成員是公用和受保護的成員，分別為衍生類別。
+在基類的名稱前面時， **public**關鍵字會指定基類的 public 和 protected 成員分別為衍生類別的 public 和 protected 成員。
 
 類別中成員的預設存取方式是 private。 結構或等位中成員的預設存取方式是 public。
 
 對於類別而言，基底類別的預設存取方式為 private，對於結構而言則為 public。 等位不可以具有基底類別。
 
-如需詳細資訊，請參閱 <<c0> [ 私人](../cpp/private-cpp.md)，[保護](../cpp/protected-cpp.md)， [friend](../cpp/friend-cpp.md)，和中的成員存取表[控制對類別成員存取](member-access-control-cpp.md).
+如需詳細資訊，請參閱[私](../cpp/private-cpp.md)用、[受保護](../cpp/protected-cpp.md)、 [Friend](../cpp/friend-cpp.md)和[控制對類別成員的存取](member-access-control-cpp.md)中的成員存取表格。
 
 ## <a name="clr-specific"></a>/clr 專屬資訊
 
-在 CLR 類型中，C++存取指定名稱關鍵字 (**公用**，**私用**，和**保護**) 可能會影響型別和方法在組件方面的可見性。 如需詳細資訊，請參閱 <<c0> [ 成員存取控制](member-access-control-cpp.md)。
+在 CLR 類型中， C++存取規範關鍵字（**公用**、**私**用和**受保護**）可能會影響元件的類型和方法可見度。 如需詳細資訊，請參閱[成員存取控制](member-access-control-cpp.md)。
 
 > [!NOTE]
->  使用檔案編譯[/LN](../build/reference/ln-create-msil-module.md)不會受到這個行為。 在這種情況下，所有 Managed 類別 (public 或 private) 都會是可見。
+>  以[/LN](../build/reference/ln-create-msil-module.md)編譯的檔案不會受到此行為的影響。 在這種情況下，所有 Managed 類別 (public 或 private) 都會是可見。
 
 ## <a name="end-clr-specific"></a>/clr 專屬資訊結束
 

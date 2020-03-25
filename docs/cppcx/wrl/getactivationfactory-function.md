@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398416"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213976"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 函式
 
-擷取的範本參數所指定之類型的啟用 factory。
+抓取範本參數所指定之類型的啟用 factory。
 
 ## <a name="syntax"></a>語法
 
@@ -33,23 +33,23 @@ inline HRESULT GetActivationFactory(
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-樣板參數，指定啟用 factory 的類型。
+範本參數，指定啟用處理站的類型。
 
 *activatableClassId*<br/>
-啟用處理站可以產生的類別名稱。
+啟用 factory 可以產生的類別名稱。
 
-*factory*<br/>
-這項作業完成時，參考型別的啟動處理站*T*。
+*工廠*<br/>
+當此作業完成時，為型*別 T*之啟動 factory 的參考。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，發生錯誤的 HRESULT，表示此作業失敗的原因。
+如果成功，則 S_OK;否則，就會出現錯誤 HRESULT，指出此作業失敗的原因。
 
 ## <a name="requirements"></a>需求
 
 **標頭：** client.h
 
-**命名空間：** Windows::Foundation
+**命名空間：** Windows：： Foundation
 
 ## <a name="see-also"></a>另請參閱
 

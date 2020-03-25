@@ -4,16 +4,16 @@ ms.date: 10/19/2017
 f1_keywords:
 - __func__
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e94caffe120c325478d8b4f24c1915a516d69f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154291"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179818"
 ---
-# <a name="func"></a>__func__
+# <a name="__func__"></a>__func__
 
-**(C + + 11)** 預先定義的識別碼&#95; &#95;f&#95; &#95;已隱含定義為包含封入函式的非限定和未裝飾名稱的字串。 &#95;&#95;func&#95; &#95;託管的C++標準並不是 Microsoft 擴充功能。
+**（C + + 11）** 預先定義的&#95; &#95;識別碼&#95; &#95; func 會以隱含方式定義為字串，其中包含封入函式的不合格和未名稱。 &#95;&#95;func&#95; &#95;是由C++標準強制的，而且不是 Microsoft 擴充功能。
 
 ## <a name="syntax"></a>語法
 
@@ -23,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>傳回值
 
-傳回以 null 結束 const char 陣列的字元，包含函式名稱。
+傳回包含函式名稱之以 null 結束的 const char 字元陣列。
 
 ## <a name="example"></a>範例
 

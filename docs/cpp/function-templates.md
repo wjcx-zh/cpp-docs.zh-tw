@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894367"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179740"
 ---
 # <a name="function-templates"></a>函式樣板
 
@@ -28,9 +28,9 @@ int main() {
 }
 ```
 
-此程式碼會定義一系列交換引數值的函式。 從這個範本中，您可以產生函式，將會交換**int**並**長**類型以及使用者定義型別。 如果已正確定義類別的複製建構函式和指派運算子，則 `MySwap` 甚至會交換類別。
+此程式碼會定義一系列交換引數值的函式。 您可以從此範本產生函式，以交換**int**和**long**類型，以及使用者定義的類型。 如果已正確定義類別的複製建構函式和指派運算子，則 `MySwap` 甚至會交換類別。
 
-此外，函式樣板會讓您交換類型的物件不同，因為編譯器知道的型別  並*b*在編譯時期的參數。
+此外，函數樣板會防止您交換不同類型的物件，因為編譯器會在編譯時期知道*a*和*b*參數的類型。
 
 雖然使用 void 指標可讓這個函式由非樣板化的函式執行，但樣板版本仍是 typesafe。 請考慮下列呼叫：
 
@@ -55,7 +55,7 @@ int main(int j) {
 }
 ```
 
-明確指定樣板引數時，一般會完成隱含轉換，以便將函式引數轉換為對應函式樣板參數的類型。 在上述範例中，編譯器會將轉換`j`鍵入**char**。
+明確指定樣板引數時，一般會完成隱含轉換，以便將函式引數轉換為對應函式樣板參數的類型。 在上述範例中，編譯器會將 `j` 轉換成**char**類型。
 
 ## <a name="see-also"></a>另請參閱
 

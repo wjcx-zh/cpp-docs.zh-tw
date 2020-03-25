@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447375"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211844"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 類別
 
@@ -66,7 +66,7 @@ class CManualAccessor : public CAccessorBase
 
 使用 `CManualAccessor`，您可以透過執行時間函式呼叫來指定參數和輸出資料行系結。
 
-## <a name="addbindentry"></a>CManualAccessor：： AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor：： AddBindEntry
 
 將繫結項目加入至輸出資料行。
 
@@ -106,7 +106,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 若要使用此函數，您必須先呼叫[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 您無法新增超過 `CreateAccessor`中指定之資料行數目的專案。
 
-## <a name="addparameterentry"></a>CManualAccessor：： AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor：： AddParameterEntry
 
 將參數專案加入至參數專案結構。
 
@@ -150,7 +150,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 若要使用此函數，您必須先呼叫[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
 
-## <a name="createaccessor"></a>CManualAccessor：： CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor：： CreateAccessor
 
 配置資料行系結結構的記憶體，並初始化資料行資料成員。
 
@@ -181,7 +181,7 @@ HRESULT CreateAccessor(int nBindEntries,
 
 呼叫 `CManualAccessor::AddBindEntry` 函式之前，請先呼叫此函式。
 
-## <a name="createparameteraccessor"></a>CManualAccessor：： CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor：： CreateParameterAccessor
 
 配置參數系結結構的記憶體，並初始化參數資料成員。
 

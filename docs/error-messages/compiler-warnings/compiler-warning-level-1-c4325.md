@@ -6,48 +6,48 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408533"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163020"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>編譯器警告 (層級 1) C4325
 
-> 忽略標準區段 '*一節*' 略過
+> 已忽略標準區段 '*section*' 的屬性
 
 ## <a name="remarks"></a>備註
 
-您可能不會變更標準區段的屬性。 例如：
+您不能變更標準區段的屬性。 例如：
 
 ```cpp
 #pragma section(".sdata", long)
 ```
 
-這會覆寫`.sdata`它會使用標準區段**簡短**資料型別有**長**資料型別。
+這會覆寫使用**long**資料類型之**short**資料類型的 `.sdata` standard 區段。
 
-您無法變更其屬性包含，標準的區段
+您可能不會變更其屬性的標準區段包括、
 
-- .data
+- 。資料
 
 - .sdata
 
-- .bss
+- . bss
 
 - .sbss
 
 - .text
 
-- .const
+- const
 
 - .sconst
 
-- .rdata
+- . .rdata
 
 - .srdata
 
-稍後可能會加入其他區段。
+稍後可能會新增其他區段。
 
 ## <a name="see-also"></a>另請參閱
 

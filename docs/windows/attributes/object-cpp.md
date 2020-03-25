@@ -1,21 +1,21 @@
 ---
-title: 物件 (C++ COM 屬性)
+title: object （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4545d899c13a1eabf8ea5fb6fe3918fb5f05b626
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407532"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214651"
 ---
 # <a name="object-c"></a>object (C++)
 
-識別自訂的介面。
+識別自訂介面。
 
 ## <a name="syntax"></a>語法
 
@@ -25,13 +25,13 @@ ms.locfileid: "62407532"
 
 ## <a name="remarks"></a>備註
 
-上述介面定義，當**物件**C++屬性會將介面放在.idl 檔中，做為自訂的介面。
+在介面定義前面時，**物件** C++屬性會使介面放在 .idl 檔案中，做為自訂介面。
 
-任何標示為物件的介面必須繼承自`IUnknown`。 此條件成立，如果任何基底介面繼承自`IUnknown`。 如果沒有基底介面繼承自`IUnknown`，編譯器會以標記的介面**物件**衍生自`IUnknown`。
+任何以物件標記的介面都必須繼承自 `IUnknown`。 如果有任何基底介面繼承自 `IUnknown`，就會滿足這種情況。 如果沒有基底介面繼承自 `IUnknown`，編譯器會導致以**物件**標記的介面衍生自 `IUnknown`。
 
 ## <a name="example"></a>範例
 
-請參閱[nonbrowsable](nonbrowsable.md)如需如何使用的範例**物件**。
+如需如何使用**物件**的範例，請參閱[nonbrowsable](nonbrowsable.md) 。
 
 ## <a name="requirements"></a>需求
 

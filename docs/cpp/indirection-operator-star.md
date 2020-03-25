@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: a35d8cb28baaee37ad64a61cbcb9d4c76a5aad06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183579"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178273"
 ---
 # <a name="indirection-operator-"></a>間接取值運算子：*
 
@@ -24,11 +24,11 @@ ms.locfileid: "62183579"
 
 ## <a name="remarks"></a>備註
 
-一元間接運算子 (<strong>\*</strong>) 會取值指標; 也就是說，它將指標值轉換為左值。 間接運算子的運算元必須是類型指標。 間接運算式的結果是類型，指標類型即衍生自此。 使用<strong>\*</strong>運算子，在此內容中的是不同運算子為二元運算子，後者是乘法。
+一元間接運算子（<strong>\*</strong>）會取值指標;也就是說，它會將指標值轉換為左值。 間接運算子的運算元必須是類型指標。 間接運算式的結果是類型，指標類型即衍生自此。 在此內容中使用<strong>\*</strong>運算子，其意義與二元運算子不同，也就是乘法。
 
 如果運算元指向某個函式，則結果為函式指示項。 如果運算元指向某個儲存位置，則結果為指定儲存位置的左值。
 
-間接運算子可以累計用於將指標取值成為指標。 例如: 
+間接運算子可以累計用於將指標取值成為指標。 例如：
 
 ```cpp
 // expre_Indirection_Operator.cpp

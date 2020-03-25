@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212119"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 類別
 
@@ -145,7 +145,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a>CBulkRowset：： AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset：： AddRefRows
 
 呼叫[IRowset：： AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) ，以遞增目前從 bulk 資料列集取得之所有資料列的參考計數。
 
@@ -159,7 +159,7 @@ HRESULT AddRefRows() throw();
 
 標準 HRESULT。
 
-## <a name="cbulkrowset"></a>CBulkRowset：： CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset：： CBulkRowset
 
 建立新的 `CBulkRowset` 物件並且將預設資料列計數設定為 10。
 
@@ -169,7 +169,7 @@ HRESULT AddRefRows() throw();
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a>CBulkRowset：： MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset：： MoveFirst
 
 抓取第一個資料列。
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 標準 HRESULT。
 
-## <a name="movelast"></a>CBulkRowset：： MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset：： MoveLast
 
 移至最後一個資料列。
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 標準 HRESULT。
 
-## <a name="movenext"></a>CBulkRowset：： MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset：： MoveNext
 
 抓取下一個資料列。
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 標準 HRESULT。 當已到達資料列集的結尾時，會傳回 DB_S_ENDOFROWSET。
 
-## <a name="moveprev"></a>CBulkRowset：： MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset：： MovePrev
 
 移至上一個資料列。
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 標準 HRESULT。
 
-## <a name="movetobookmark"></a>CBulkRowset：： MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset：： MoveToBookmark
 
 提取書簽所標記的資料列，或從該書簽指定之位移（*lSkip*）的資料列。
 
@@ -248,7 +248,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IRowset：：執行](/previous-versions/windows/desktop/ms716988(v=vs.85))程式。
 
-## <a name="movetoratio"></a>CBulkRowset：： MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset：： MoveToRatio
 
 從資料列集中的小數位置開始提取資料列。
 
@@ -279,7 +279,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 其中 `RowsetSize` 是資料列集的大小（以資料列數來測量）。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 。
 
-## <a name="releaserows"></a>CBulkRowset：： ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset：： ReleaseRows
 
 呼叫[IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) ，以遞減目前從 bulk 資料列集取得之所有資料列的參考計數。
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 標準 HRESULT。
 
-## <a name="setrows"></a>CBulkRowset：： SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset：： SetRows
 
 設定每個呼叫所擷取的資料列控制代碼數。
 

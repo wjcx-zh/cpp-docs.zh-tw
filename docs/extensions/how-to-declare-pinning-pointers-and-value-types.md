@@ -1,19 +1,19 @@
 ---
-title: 作法：宣告固定指標和實值型別
+title: 如何：宣告固定的指標和實值類型
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - value types, declaring
 - pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-ms.openlocfilehash: 901980c76aac5dd364f2fa2fae0e007f5d25f3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 88ef7e82161703a272a571392fd66e6055371c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515733"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181963"
 ---
-# <a name="how-to-declare-pinning-pointers-and-value-types"></a>作法：宣告固定指標和實值型別
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>如何：宣告固定的指標和實值類型
 
 實值類型可以隱含成為 Boxed。 然後您就可以宣告指向實值型別物件本身的 Pin 指標，並對 Boxed 實值型別使用 **pin_ptr**。
 

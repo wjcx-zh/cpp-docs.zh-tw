@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514884"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165986"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "69514884"
 ### <a name="parameters"></a>參數
 
 *version*<br/>
-的版本號碼`coclass`。 如果未指定，1.0 將會放在 .idl 檔案中。
+`coclass` 的版本號碼。 如果未指定，1.0 將會放在 .idl 檔案中。
 
 ## <a name="remarks"></a>備註
 
@@ -46,7 +46,7 @@ ms.locfileid: "69514884"
 |**適用於**|**class**、 **struct**|
 |**可重複**|否|
 |**必要屬性**|**coclass**|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

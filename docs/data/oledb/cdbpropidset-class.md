@@ -31,12 +31,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212007"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
 
@@ -72,7 +72,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 OLE DB 取用者會使用 `DBPROPIDSET` 結構來傳遞屬性識別碼的陣列，供取用者想要取得屬性資訊。 單一[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構中識別的屬性屬於一個屬性集。
 
-## <a name="addpropertyid"></a>CDBPropIDSet：： AddPropertyID
+## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a>CDBPropIDSet：： AddPropertyID
 
 將屬性 ID 加入至屬性 ID 集。
 
@@ -87,7 +87,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 *propid*<br/>
 [in] 要加入至屬性 ID 集的屬性 ID。
 
-## <a name="cdbpropidset"></a>CDBPropIDSet：： CDBPropIDSet
+## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a>CDBPropIDSet：： CDBPropIDSet
 
 建構函式。 初始化[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))結構的 `rgProperties`、`cProperties`和（選擇性） `guidPropertySet` 欄位。
 
@@ -109,7 +109,7 @@ CDBPropIDSet();
 *propidset*<br/>
 [in] 複製建構的另一個 `CDBPropIDSet` 物件。
 
-## <a name="setguid"></a>CDBPropIDSet：： SetGUID
+## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a>CDBPropIDSet：： SetGUID
 
 設定 `DBPROPIDSET` 結構中的 GUID 欄位。
 
@@ -128,7 +128,7 @@ void SetGUID(const GUID& guid) throw();
 
 此欄位也可以由「[函數](../../data/oledb/cdbpropidset-cdbpropidset.md)」設定。 如果您為這個類別使用預設建構函式，則呼叫此函式。
 
-## <a name="op_equal"></a>CDBPropIDSet：： operator =
+## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a>CDBPropIDSet：： operator =
 
 將一個屬性 ID 集的內容指派至另一個 ID 屬性集。
 

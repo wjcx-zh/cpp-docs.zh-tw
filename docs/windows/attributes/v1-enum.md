@@ -1,17 +1,17 @@
 ---
-title: v1_enum (C++ COM 屬性)
+title: v1_enum （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1a189f6f1c5ef9d4ae77df9f1eda3f3671ddaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513865"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166103"
 ---
 # <a name="v1_enum"></a>v1_enum
 
@@ -29,7 +29,7 @@ ms.locfileid: "69513865"
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**v1_enum**:
+下列程式碼示範如何使用**v1_enum**：
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -51,7 +51,7 @@ enum eList {
 |**適用於**|列舉類型|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

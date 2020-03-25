@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3813
 ms.assetid: ffdbc489-71bf-4cd6-988c-f824c9ab3ceb
-ms.openlocfilehash: 302b21d709424cda50abd0247f7b82048511cd73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c16ce501e25040a7ac7672a9ea131b4fe89570f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384305"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165609"
 ---
 # <a name="compiler-error-c3813"></a>編譯器錯誤 C3813
 
 屬性宣告只可以出現於 managed 或 WinRT 類型的定義中
 
-A[屬性](../../dotnet/how-to-use-properties-in-cpp-cli.md)只能宣告在 managed 或 Windows 執行階段型別。 原生類型不支援 `property` 關鍵字。
+[屬性](../../dotnet/how-to-use-properties-in-cpp-cli.md)只能在 managed 或 Windows 執行階段類型中宣告。 原生類型不支援 `property` 關鍵字。
 
 ## <a name="example"></a>範例
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514177"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166428"
 ---
 # <a name="propputref"></a>propputref
 
@@ -40,7 +40,7 @@ ms.locfileid: "69514177"
 |**適用於**|方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|`propget`、 `propput`|
+|**無效屬性**|`propget`, `propput`|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

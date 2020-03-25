@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398754"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214119"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 列舉
 
-表示非同步作業方式嘗試轉換為終止狀態的完成或錯誤的用戶端要求已取消狀態行為。
+指出非同步作業如何嘗試轉換成已完成或錯誤的終止狀態，其行為應該與用戶端要求的已取消狀態有關。
 
 ## <a name="syntax"></a>語法
 
@@ -32,14 +32,14 @@ enum CancelTransitionPolicy;
 
 |名稱|描述|
 |----------|-----------------|
-|`RemainCanceled`|如果非同步作業目前正在用戶端要求已取消狀態，這表示它會保留於已取消的狀態，而不是轉換為已完成的終端機或錯誤狀態。|
-|`TransitionFromCanceled`|如果非同步作業目前正在用戶端要求已取消狀態，這表示應該轉換與已取消的狀態，以終止狀態的完成狀態或錯誤，會利用這個旗標的呼叫所決定。|
+|`RemainCanceled`|如果非同步作業目前是以用戶端要求的已取消狀態，這表示它會維持在已取消狀態，而不是轉換成終端機已完成或錯誤狀態。|
+|`TransitionFromCanceled`|如果非同步作業目前處於用戶端要求的已取消狀態，這表示狀態應從該已取消狀態轉換為已完成的終止狀態，或由使用此旗標的呼叫所判斷的錯誤。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** async.h
+**標頭：** async。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

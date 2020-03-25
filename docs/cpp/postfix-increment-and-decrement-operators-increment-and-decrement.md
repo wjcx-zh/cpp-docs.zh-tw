@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392137"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177673"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
 
@@ -32,23 +32,23 @@ postfix-expression --
 
 ## <a name="remarks"></a>備註
 
-C++ 提供前置和後置遞增及遞減運算子，本節只說明後置遞增和遞減運算子。 (如需詳細資訊，請參閱 <<c0> [ 前置遞增和遞減運算子](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)。)兩者之間的差異是在後置標記法中，會出現在運算子*後置運算式*，而在前置標記法中，運算子會出現之前*運算式。* 下列範例顯示後置遞增運算子：
+C++ 提供前置和後置遞增及遞減運算子，本節只說明後置遞增和遞減運算子。 （如需詳細資訊，請參閱[前置遞增和遞減運算子](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)）。兩者的差異在於，在後置標記法中，運算子會出現在後置*運算式*之後，而在前置標記法中，運算子會出現在*expression 之前。* 下列範例顯示後置遞增運算子：
 
 ```cpp
 i++;
 ```
 
-套用後置遞增運算子的效果 (**++**) 是運算元的值會增加一個單位的適當的型別。 同樣地，套用後置遞減運算子的效果 (**--**) 是運算元的值會減少一個單位的適當的型別。
+套用後置遞增運算子（ **++** ）的效果，是運算元的值會增加一個單位的適當類型。 同樣地，套用後置遞減運算子（ **--** ）的效果，是運算元的值會減少一個單位的適當類型。
 
-請務必請注意，後置遞增或遞減運算式會評估運算式的值為*之前*個別運算子的應用程式。 遞增或遞減運算，就會發生*之後*則會評估運算元。 此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。
+請務必注意，後置遞增或遞減運算式會評估為運算式的值，然後*再進行*個別運算子的應用。 遞增或遞減運算會在運算元評估*之後*發生。 此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。
 
 使用後置運算子當做函式的引數時，引數的值在傳遞至函式之前不保證會遞增或遞減。  如需詳細資訊，請參閱 C++ 標準中的 1.9.17 一節。
 
-將後置遞增運算子套用至類型的物件陣列的指標**長**實際上是新增四個指標的內部表示法。 這個行為會導致先前參考的指標*n*個元素的陣列，請參閱 (*n*+ 1) 個項目。
+將後置遞增運算子套用至**long**類型物件陣列的指標時，實際上會在指標的內部標記法中加四個。 這個行為會導致指標（先前參考陣列的第*n*個元素）參考（*n*+ 1）個元素。
 
-後置遞增和後置遞減運算子的運算元必須是可修改 (不**const**) 左值的算術或指標類型。 結果的型別是相同*後置運算式*，但已不再是左值。
+後置遞增和後置遞減運算子的運算元必須是算術或指標類型的可修改（不是**const**）左值。 結果的型別與後置*運算式*的類型相同，但不再是左值。
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):運算元的後置遞增或遞減運算子可能不是類型**bool**。
+**Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：後置遞增或遞減運算子的運算元不可以是**bool**類型。
 
 下列程式碼示範後置遞增運算子：
 

@@ -1,20 +1,20 @@
 ---
-title: 編譯器警告 （層級 1） C4034
+title: 編譯器警告（層級1） C4034
 ms.date: 11/04/2016
 f1_keywords:
 - C4034
 helpviewer_keywords:
 - C4034
 ms.assetid: 1d2f598d-bdfc-4a95-9617-424b591ed3e8
-ms.openlocfilehash: d3f5ae40316ea0e21868dabb72142c937b03707e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91fd3ece376a3bc1c121a9422e0f73eb1c6f23fb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390525"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164310"
 ---
-# <a name="compiler-warning-level-1-c4034"></a>編譯器警告 （層級 1） C4034
+# <a name="compiler-warning-level-1-c4034"></a>編譯器警告（層級1） C4034
 
-sizeof 傳回 0
+sizeof 傳回0
 
-`sizeof`運算子會套用至運算元的大小為零 (空的結構、 等位、 類別或列舉的類型，或類型`void`)。
+`sizeof` 運算子會套用至大小為零的運算元（空結構、聯集、類別或列舉類型，或類型 `void`）。

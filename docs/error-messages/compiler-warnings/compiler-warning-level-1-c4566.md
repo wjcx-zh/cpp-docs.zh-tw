@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4566
+title: 編譯器警告 (層級 1) C4566
 ms.date: 11/04/2016
 f1_keywords:
 - C4566
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c6a62b399aa32ec6caf2e5a9ee6d4c5836601ba4
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 87d610980ffe9d9e5087ddaec0ecb91d813a4d60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965964"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162254"
 ---
-# <a name="compiler-warning-level-1-c4566"></a>編譯器警告（層級1） C4566
+# <a name="compiler-warning-level-1-c4566"></a>編譯器警告 (層級 1) C4566
 
 以通用字元名稱 ' char ' 表示的字元，無法在目前的字碼頁中表示（頁面）
 

@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: 854f998e31cfec577fb6ff0fb3d82dc1499f88bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f437f87861293cb6048ed6acb05428c466b3f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303831"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214197"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory 類別
 
-表示 apartment 友善啟用 factory 可實作[FtmBase](ftmbase-class.md)。
+代表可執行[FtmBase](ftmbase-class.md)的單元便利啟動 factory。
 
 ## <a name="syntax"></a>語法
 
@@ -36,9 +36,9 @@ class AgileActivationFactory :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標頭：** module. h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

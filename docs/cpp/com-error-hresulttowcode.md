@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - HRESULTToWCode method [C++]
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
-ms.openlocfilehash: d89503e822d92bf6a1fcb2b6bb658d532af32c5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35a497c273f15c9755d3607e7907a3a48dad8dc8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155042"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180559"
 ---
-# <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
+# <a name="_com_errorhresulttowcode"></a>_com_error::HRESULTToWCode
 
 **Microsoft 專屬**
 
-對應到 16 位元的 32 位元 HRESULT `wCode`。
+將 32-bit HRESULT 對應至16位 `wCode`。
 
 ## <a name="syntax"></a>語法
 
@@ -29,18 +29,18 @@ static WORD HRESULTToWCode(
 
 #### <a name="parameters"></a>參數
 
-*hr*<br/>
-對應到 16 位元的 32 位元 HRESULT `wCode`。
+*工時*<br/>
+要對應至16位 `wCode`的32位 HRESULT。
 
 ## <a name="return-value"></a>傳回值
 
-16 位元`wCode`從 32 位元 HRESULT 對應。
+從32位 HRESULT 對應的16位 `wCode`。
 
 ## <a name="remarks"></a>備註
 
-請參閱[_com_error:: wcode](../cpp/com-error-wcode.md)如需詳細資訊。
+如需詳細資訊，請參閱[_com_error：： WCode](../cpp/com-error-wcode.md) 。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

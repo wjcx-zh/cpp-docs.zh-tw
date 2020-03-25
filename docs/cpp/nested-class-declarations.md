@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301548"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161158"
 ---
 # <a name="nested-class-declarations"></a>巢狀類別宣告
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` 並`BufferedIO::BufferedOutput`內宣告`BufferedIO`。 這些類別名稱在類別 `BufferedIO` 的範圍外不會顯示。 不過，類型為 `BufferedIO` 的物件不包含任何類型為 `BufferedInput` 或 `BufferedOutput` 的物件。
+`BufferedIO::BufferedInput` 和 `BufferedIO::BufferedOutput` 會在 `BufferedIO`內宣告。 這些類別名稱在類別 `BufferedIO` 的範圍外不會顯示。 不過，類型為 `BufferedIO` 的物件不包含任何類型為 `BufferedInput` 或 `BufferedOutput` 的物件。
 
 巢狀類別只能直接使用封入類別中的名稱、類型名稱、靜態成員的名稱及列舉程式。 若要使用其他類別成員的名稱，您必須使用指標、參考或物件名稱。
 
@@ -63,7 +63,7 @@ int main()
 > [!NOTE]
 >  巢狀類別只能宣告類別範圍中的類型。 它們不會導致建立巢狀類別中所包含的物件。 上述範例宣告兩個巢狀類別，但不會宣告這些類別類型的任何物件。
 
-巢狀類別宣告範圍可視性的例外是同時宣告類型名稱和向前宣告。  在這種情況下，向前宣告所宣告的類別名稱會在封入類別以外顯示，且其範圍定義為最小的封入非類別範圍。  例如: 
+巢狀類別宣告範圍可視性的例外是同時宣告類型名稱和向前宣告。  在這種情況下，向前宣告所宣告的類別名稱會在封入類別以外顯示，且其範圍定義為最小的封入非類別範圍。  例如：
 
 ```cpp
 // nested_class_declarations_2.cpp
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-在上述範例中，*限定類型名稱*語法用來宣告的函式名稱。 該宣告：
+在上述範例中，會使用限定型別*名稱*語法來宣告函數名稱。 該宣告：
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-表示「`read` 函式是 `BufferedInput` 類別的成員，而該類別在 `BufferedIO` 類別的範圍中」。 因為這個宣告會使用*限定類型名稱*語法中，可能會建構下列形式：
+表示「`read` 函式是 `BufferedInput` 類別的成員，而該類別在 `BufferedIO` 類別的範圍中」。 因為此宣告使用了*限定型別名稱*語法，所以可能會有下列形式的結構：
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-上述宣告等於前一個位置，但它會使用**typedef**名稱來取代類別名稱。
+上述宣告相當於前一個宣告，但它會使用**typedef**名稱來取代類別名稱。
 
 ## <a name="friend-functions-in-nested-classes"></a>巢狀類別中的 friend 函式
 

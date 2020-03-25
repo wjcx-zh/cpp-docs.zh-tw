@@ -2,19 +2,19 @@
 title: B. 執行階段程式庫函式的虛設常式
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215055"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. 執行階段程式庫函式的虛設常式
 
-本節提供定義於 OpenMP C 執行階段程式庫函式的虛設常式和C++API。 虛設常式，以啟用不支援 OpenMP C 的平台的可攜性和C++API。 在這些平台，您必須與包含這些虛設常式函式的程式庫，連結 OpenMP 程式。 虛設常式的函式會假設 OpenMP 程式中的指示詞會被忽略。 因此，它們會模擬序列的語意。
+本節提供 OpenMP C 和C++ API 中所定義之執行時間程式庫函式的存根。 系統會提供存根，讓不支援 OpenMP C 和C++ API 的平臺可攜性。 在這些平臺上，OpenMP 程式必須與包含這些 stub 函式的程式庫連結。 存根函式會假設 OpenMP 程式中的指示詞會被忽略。 因此，它們會模擬序列語義。
 
 > [!NOTE]
-> 鎖定函式中出現的鎖定變數必須以獨佔方式透過這些函式來存取。 它不應該初始化或修改使用者程式中。 使用者應該提出任何假設 OpenMP C 所使用的機制和C++實作來實作鎖定為基礎的虛設常式函式所使用的配置。
+> 出現在鎖定函式中的鎖定變數必須透過這些函數獨佔存取。 它不應該在使用者程式中初始化或修改。 使用者應該不會假設 OpenMP C 和C++實作為所使用的機制，根據存根函式所使用的配置來執行鎖定。
 
 ## <a name="code"></a>程式碼
 

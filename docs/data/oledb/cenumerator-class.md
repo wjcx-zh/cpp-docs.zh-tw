@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230836"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211792"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 
-使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面，以傳回描述所有的資料來源和列舉值的資料列集。
+會使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面，以傳回描述所有資料來源和枚舉器的資料列集。
 
 ## <a name="syntax"></a>語法
 
@@ -50,15 +50,15 @@ class CEnumerator :
 
 |||
 |-|-|
-|[Find](#find)|可用的提供者 （資料來源） 搜尋尋找具有指定名稱的其中一個。|
-|[GetMoniker](#getmoniker)|擷取`IMoniker`目前記錄的介面。|
-|[開啟](#open)|開啟 列舉值。|
+|[尋找](#find)|搜尋可用的提供者（資料來源），尋找具有指定名稱的提供者。|
+|[GetMoniker](#getmoniker)|抓取目前記錄的 `IMoniker` 介面。|
+|[開啟](#open)|開啟列舉值。|
 
 ## <a name="remarks"></a>備註
 
-您可以擷取`ISourcesRowset`間接從這個類別的資料。
+您可以從這個類別間接取得 `ISourcesRowset` 資料。
 
-## <a name="find"></a> Cenumerator:: Find
+## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator：： Find
 
 在可用提供者中尋找指定的名稱。
 
@@ -75,15 +75,15 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果找不到名稱。 否則，請**false**。
+如果找到名稱，**則為 true** 。 否則為 **false**。
 
 ### <a name="remarks"></a>備註
 
-此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面。
+這個名稱會對應至[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面的 `SOURCES_NAME` 成員。
 
-## <a name="getmoniker"></a> Cenumerator:: Getmoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator：： GetMoniker
 
-剖析顯示名稱，以擷取元件可以轉換成 moniker 的字串。
+剖析顯示名稱，以解壓縮可轉換成名字標記之字串的元件。
 
 ### <a name="syntax"></a>語法
 
@@ -97,18 +97,18 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>參數
 
 *ppMoniker*<br/>
-[out]Moniker 所剖析的顯示名稱 ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 之目前資料列。
+脫銷從目前資料列的顯示名稱（[CEnumeratorAccessor：： m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)）剖析的標記。
 
 *lpszDisplayName*<br/>
-[in]要剖析的顯示名稱。
+在要剖析的顯示名稱。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="open"></a> Cenumerator:: Open
+## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator：： Open
 
-會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))。
+系結列舉值的標記（如果有指定），然後藉由呼叫[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85))來抓取列舉值的資料列集。
 
 ### <a name="syntax"></a>語法
 
@@ -123,20 +123,20 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 #### <a name="parameters"></a>參數
 
 *pMoniker*<br/>
-[in]Moniker 的列舉值的指標。
+在列舉值之標記的指標。
 
 *pClsid*<br/>
-[in]指標`CLSID`列舉程式。
+在列舉值之 `CLSID` 的指標。
 
 *enumerator*<br/>
-[in]列舉值的參考。
+在列舉值的參考。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ## <a name="see-also"></a>另請參閱
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

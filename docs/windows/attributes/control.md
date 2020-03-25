@@ -1,19 +1,19 @@
 ---
-title: control (C++ COM 屬性)
+title: control （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9cdcca6fac2a92bf28f0f655489e61dcb08213e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501782"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214938"
 ---
-# <a name="control"></a>控制項
+# <a name="control"></a>控制
 
 指定使用者定義型別為控制項。
 
@@ -52,7 +52,7 @@ class CTest : public ICustom {};
 |-|-|
 |**適用於**|**class**、 **struct**|
 |**可重複**|否|
-|**必要屬性**|無|
+|**必要屬性**|None|
 |**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

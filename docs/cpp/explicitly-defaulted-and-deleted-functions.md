@@ -2,12 +2,12 @@
 title: 明確的預設和被刪除的函式
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43588aac1d246c83f5281456625eeb0ff36b94d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179974"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明確的預設和被刪除的函式
 
@@ -15,7 +15,7 @@ ms.locfileid: "62184322"
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>明確預設和已刪除的函式的優點
 
-在 C++ 中，如果類型未自動宣告，編譯器會自動產生預設建構函式、複製建構函式、複製指派運算子和解構函式。 這些函式稱為*特殊成員函式*，以及它們可讓使用者定義的簡單型別，在C++像在 c 中的結構相同的行為也就是說，您可以建立、 複製和終結它們，而不需要任何額外的編碼工作。 C++11 語言引進移動語意，在編譯器可以自動產生的特殊成員函式清單中，加入移動建構函式和移動指派運算子。
+在 C++ 中，如果類型未自動宣告，編譯器會自動產生預設建構函式、複製建構函式、複製指派運算子和解構函式。 這些函數稱為*特殊成員*函式，而它們在C++ C 中的行為就像結構一樣，讓使用者定義的簡單類型。也就是說，您可以建立、複製和終結它們，而不需要撰寫任何額外的程式碼。 C++11 語言引進移動語意，在編譯器可以自動產生的特殊成員函式清單中，加入移動建構函式和移動指派運算子。
 
 這對簡單類型而言十分方便，但是複雜類型通常會自行定義一個或多個特殊成員函式，而且這可以防止自動產生其他特殊成員函式。 實際上：
 
@@ -43,7 +43,7 @@ ms.locfileid: "62184322"
 >
 > 在這兩種情況下，Visual Studio 會繼續自動隱含產生必要函式，且不會發出警告。
 
-這些規則的結果也可能滲入物件階層架構中。 比方說，如果因為任何原因的基底類別無法有預設建構函式可從衍生類別呼叫 — 亦即**公用**或**保護**不接受任何參數的建構函式 — 然後類別衍生自無法自動產生它自己的預設建構函式。
+這些規則的結果也可能滲入物件階層架構中。 例如，如果基類無法從衍生類別呼叫預設的函式（也就是不採用任何參數的**公用**或**受保護**的函式），則衍生自它的類別無法自動產生自己的預設函式。
 
 這些規則會讓應該簡單的實作、使用者定義類型和一般 C++ 慣用語更加複雜；例如，私下宣告複製建構函式和複製指派運算子，但未進行定義，以將使用者定義類型設定為不可複製。
 
@@ -132,7 +132,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-請注意，在上述範例中，呼叫`call_with_true_double_only`利用**浮點數**引數會導致編譯器錯誤，但呼叫`call_with_true_double_only`利用**int**引數不會; 在**int**的情況下，將會從升級的引數**int**要**double**並成功呼叫**double**版本的函式，即使這可能不是目的為何。 若要確定使用 non-double 引數呼叫這個函式會造成編譯器錯誤，您可以宣告被刪除的函式的範本版本。
+請注意，在上述範例中，使用**float**引數呼叫 `call_with_true_double_only` 會造成編譯器錯誤，但使用**int**引數呼叫 `call_with_true_double_only` 則不會;在**int**案例中，引數會從**int**升級為**double** ，並成功呼叫函式的**雙精度浮點數**，即使這可能不是預期的情況也一樣。 若要確定使用 non-double 引數呼叫這個函式會造成編譯器錯誤，您可以宣告被刪除的函式的範本版本。
 
 ```cpp
 template < typename T >

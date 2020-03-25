@@ -1,5 +1,5 @@
 ---
-title: MFC:使用具有文件和檢視資料庫類別
+title: MFC：使用具有文件和檢視的資料庫類別
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,62 +14,62 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2b073b20b9518667b43c30e7ee3199a84a3ad38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213378"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC:使用具有文件和檢視資料庫類別
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC：使用具有文件和檢視的資料庫類別
 
-使用或不使用文件/檢視架構，您可以使用 MFC 資料庫類別。 本主題著重在使用文件和檢視。 它會說明：
+您可以使用 MFC 資料庫類別搭配或不搭配檔/視圖架構。 本主題強調如何使用檔和視圖。 其中說明：
 
-- [如何撰寫以 form 為基礎的應用程式](#_core_writing_a_form.2d.based_application)使用`CRecordView`為您的文件上的主要檢視的物件。
+- 如何使用 `CRecordView` 物件[來撰寫表單架構應用程式](#_core_writing_a_form.2d.based_application)，做為檔的主要視圖。
 
-- [如何使用您的文件和檢視表中的資料錄集物件](#_core_using_recordsets_in_documents_and_views)。
+- [如何在您的檔和視圖中使用記錄集物件](#_core_using_recordsets_in_documents_and_views)。
 
-- [其他考量](#_core_other_factors)。
+- [其他考慮](#_core_other_factors)。
 
-替代項目，請參閱[MFC:使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)。
+如需替代方法，請參閱[MFC：使用沒有檔和視圖的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)。
 
-##  <a name="_core_writing_a_form.2d.based_application"></a> 撰寫以 Form 為基礎的應用程式
+##  <a name="writing-a-form-based-application"></a><a name="_core_writing_a_form.2d.based_application"></a>撰寫以表單為基礎的應用程式
 
-許多資料存取應用程式是以表單為基礎。 使用者介面是包含的控制項的使用者會檢查、 輸入，或編輯資料的表單。 若要讓基礎的應用程式表單，使用類別`CRecordView`。 當您執行 MFC 應用程式精靈，並選取**ODBC**上的用戶端型別**資料庫支援**頁面上，專案會使用`CRecordView`檢視類別。
+許多資料存取應用程式都是以表單為基礎。 使用者介面是包含控制項的表單，使用者可在其中檢查、輸入或編輯資料。 若要讓您的應用程式表單為基礎，請使用類別 `CRecordView`。 當您執行 MFC 應用程式精靈，並在 [**資料庫支援**] 頁面上選取 [ **ODBC**用戶端類型] 時，專案會使用 view 類別的 `CRecordView`。
 
-在表單架構應用程式中，每個資料錄檢視物件儲存的指標`CRecordset`物件。 架構的資料錄欄位交換 (RFX) 機制之間交換資料的資料錄集和資料來源。 對話方塊資料交換 (DDX) 機制交換資料之間的資料錄集物件的欄位資料成員和表單上的控制項。 `CRecordView` 也提供預設命令處理常式函式在表單上巡覽記錄記錄。
+在以表單為基礎的應用程式中，每個記錄 view 物件都會儲存 `CRecordset` 物件的指標。 架構的記錄欄位交換（RFX）機制會在記錄集和資料來源之間交換資料。 對話資料交換（DDX）機制會在記錄集物件的欄位資料成員與表單上的控制項之間交換資料。 `CRecordView` 也會提供預設的命令處理常式函式，以便從記錄導覽至表單上的記錄。
 
-若要使用應用程式精靈建立的以 form 為基礎的應用程式，請參閱[建立表單架構的 MFC 應用程式](../mfc/reference/creating-a-forms-based-mfc-application.md)並[MFC 應用程式精靈、 資料庫支援](../mfc/reference/database-support-mfc-application-wizard.md)。
+若要使用應用程式精靈來建立表單架構應用程式，請參閱[建立以表單為基礎的 mfc](../mfc/reference/creating-a-forms-based-mfc-application.md)應用程式和[資料庫支援（MFC 應用程式精靈）](../mfc/reference/database-support-mfc-application-wizard.md)。
 
-表單的完整討論，請參閱 <<c0> [ 資料錄檢視](../data/record-views-mfc-data-access.md)。
+如需表單的完整討論，請參閱[記錄 Views](../data/record-views-mfc-data-access.md)。
 
-##  <a name="_core_using_recordsets_in_documents_and_views"></a> 使用文件和檢視表中的資料錄集
+##  <a name="using-recordsets-in-documents-and-views"></a><a name="_core_using_recordsets_in_documents_and_views"></a>在檔和視圖中使用記錄集
 
-許多簡單的表單架構應用程式不需要文件。 如果您的應用程式是更複雜，您可能想要使用做為 proxy 的文件資料庫，儲存`CDatabase`連接到資料來源的物件。 表單架構應用程式通常會儲存在檢視中的資料錄集物件的指標。 其他種類的資料庫應用程式儲存資料錄集和`CDatabase`文件中的物件。 以下是一些可能的資料庫應用程式中使用文件：
+許多簡單的表單架構應用程式都不需要檔。 如果您的應用程式更複雜，您可能會想要使用檔作為資料庫的 proxy，並儲存連接至資料來源的 `CDatabase` 物件。 以表單為基礎的應用程式通常會在視圖中儲存記錄集物件的指標。 其他類型的資料庫應用程式會儲存記錄集，並 `CDatabase` 檔中的物件。 以下是在資料庫應用程式中使用檔的一些可能性：
 
-- 如果您要存取的資料錄集的本機環境中，建立`CRecordset`視需要在本機物件中的文件或檢視中，成員函式。
+- 如果您要存取本機內容中的記錄集，請視需要在檔或視圖的成員函式中，于本機建立 `CRecordset` 物件。
 
-   宣告為區域變數函式中的資料錄集物件。 將 NULL 傳遞給建構函式，這會導致建立及開啟暫存 framework`CDatabase`為您的物件。 或者，將傳遞的指標`CDatabase`物件。 使用資料錄集內的函式，並讓它函式結束時自動終結。
+   將記錄集物件宣告為函式中的區域變數。 將 Null 傳遞至函式，這會導致架構為您建立並開啟暫存 `CDatabase` 物件。 或者，將指標傳遞給 `CDatabase` 物件。 使用函式中的記錄集，並讓它在函式結束時自動終結。
 
-   當您將 NULL 傳遞至資料錄集的建構函式時，架構會使用傳回的資料錄集的資訊`GetDefaultConnect`成員函式來建立`CDatabase`物件，並將它開啟。 這些精靈實作`GetDefaultConnect`您。
+   當您將 Null 傳遞給記錄集的函式時，架構會使用記錄集之 `GetDefaultConnect` 成員函式所傳回的資訊來建立 `CDatabase` 物件並加以開啟。 這些嚮導會為您執行 `GetDefaultConnect`。
 
-- 如果您要存取的資料錄集文件的存留期間，內嵌一個或多個`CRecordset`文件中的物件。
+- 如果您在檔的存留期間存取記錄集，請在檔中內嵌一或多個 `CRecordset` 物件。
 
-   當您初始化文件或視需要請建構資料錄集物件。 您可以撰寫資料錄集傳回的指標，如果已經存在或建構並開啟資料錄集，如果它尚不存在的函式。 關閉、 刪除和重新建立資料錄集，如有需要或呼叫其`Requery`成員函式來重新整理記錄。
+   當您初始化檔時，或視需要建立記錄集物件。 您可以撰寫函式，以傳回記錄集的指標（如果它已經存在），或如果記錄集尚未存在，則會加以結構和開啟。 視需要關閉、刪除和重新建立記錄集，或呼叫其 `Requery` 成員函式以重新整理記錄。
 
-- 如果您要存取的資料來源的文件的存留期間，內嵌`CDatabase`物件，或儲存的指標`CDatabase`裡面的物件。
+- 如果您要在檔的存留期間存取資料來源，請內嵌 `CDatabase` 物件，或在其中儲存 `CDatabase` 物件的指標。
 
-   `CDatabase`物件會管理您的資料來源的連接。 文件在建構期間，會自動建構物件，並呼叫其`Open`成員函式時初始化文件。 當您建構文件成員函式中的資料錄集物件時，您將指標傳遞至文件的`CDatabase`物件。 這會將每個資料錄集關聯其資料來源。 文件關閉時，通常是損毀的資料庫物件。 資料錄集物件通常會在它們結束函式的範圍時終結。
+   `CDatabase` 物件會管理與資料來源的連接。 在檔結構化期間，會自動建立物件，而當您初始化檔時，會呼叫其 `Open` 成員函式。 當您在檔成員函式中建立記錄集物件時，會將指標傳遞至檔的 `CDatabase` 物件。 這會使每個記錄集與其資料來源產生關聯。 當檔關閉時，通常會終結資料庫物件。 記錄集物件通常會在離開函式的範圍時終結。
 
-##  <a name="_core_other_factors"></a> 其他因素
+##  <a name="other-factors"></a><a name="_core_other_factors"></a>其他因素
 
-表單架構應用程式通常並沒有任何使用架構的文件序列化機制，因此您可能想要移除、 停用，或取代**的新**並**開啟**命令**檔案**功能表。 請參閱文章[序列化：序列化與資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)。
+以表單為基礎的應用程式通常不會針對架構的**檔**序列化機制使用，因此您可能會想要移除、停用或取代 [檔案] 功能表上的 [**新增**] 和 [**開啟**] 命令。 請參閱[序列化：序列化和資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)一文。
 
-您也可能會想要使用的架構可支援許多使用者介面可能性。 例如，您可以使用多個`CRecordView`物件在分隔器視窗中，開啟多個資料錄集不同多個文件介面 (MDI) 子視窗，等。
+您可能也會想要利用架構可支援的許多使用者介面可能性。 例如，您可以在分隔器視窗中使用多個 `CRecordView` 物件、在不同的多重文件介面（MDI）子視窗中開啟多個記錄集等等。
 
-您可能想要實作列印中的檢視，無論是使用實作表單`CRecordView`或其他項目。 類別衍生自`CFormView`，`CRecordView`確實支援列印，但您可以覆寫`OnPrint`成員函式，允許進行列印。 如需詳細資訊，請參閱類別[CFormView](../mfc/reference/cformview-class.md)。
+您可能會想要在您的觀點中執行任何動作的列印，不論是使用 `CRecordView` 或其他東西來執行的表單。 作為衍生自 `CFormView`的類別，`CRecordView` 不支援列印，但是您可以覆寫 `OnPrint` 成員函式以允許列印。 如需詳細資訊，請參閱類別[CFormView](../mfc/reference/cformview-class.md)。
 
-您可能不想要完全使用文件和檢視。 在此情況下，請參閱[MFC:使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)。
+您可能不想要使用檔和視圖。 在此情況下，請參閱[MFC：使用沒有檔和視圖的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)。
 
 ## <a name="see-also"></a>另請參閱
 

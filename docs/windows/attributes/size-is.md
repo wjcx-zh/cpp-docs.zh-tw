@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ COM 屬性)
+title: size_is （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166246"
 ---
 # <a name="size_is"></a>size_is
 
-指定配置給大小指標的記憶體大小、大小指標的大小指標, 以及單一或多維陣列。
+指定配置給大小指標的記憶體大小、大小指標的大小指標，以及單一或多維陣列。
 
 ## <a name="syntax"></a>語法
 
@@ -30,11 +30,11 @@ ms.locfileid: "69514035"
 
 ## <a name="remarks"></a>備註
 
-**Size_is** C++屬性的功能與[size_is](/windows/win32/Midl/size-is) MIDL 屬性相同。
+**Size_is** C++屬性具有與[size_is](/windows/win32/Midl/size-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-如需如何指定陣列區段的範例, 請參閱[first_is](first-is.md)的範例。
+如需如何指定陣列區段的範例，請參閱[first_is](first-is.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -42,7 +42,7 @@ ms.locfileid: "69514035"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
+|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
 |**無效屬性**|`max_is`|

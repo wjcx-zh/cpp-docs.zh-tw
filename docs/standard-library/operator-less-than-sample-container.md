@@ -14,12 +14,12 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: fc2a14d882b5ccfbfdaae543c76ca673f9018a59
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687330"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215263"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;範例容器&gt;)
 
@@ -41,7 +41,7 @@ bool operator<(
 
 傳回 `lexicographical_compare(left.begin, left.end, right.begin, right.end)`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<sample container>](../standard-library/sample-container.md)\
 [開始](../standard-library/container-class-begin.md)\

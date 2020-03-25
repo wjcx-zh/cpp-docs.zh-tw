@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-ms.openlocfilehash: 14ae5117194748748ceecf97ac83fc8813bba2d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28d9e586a766a131e7ab6280859845810c1d9814
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223095"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213794"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 函式
 
-初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同的模組中定義的元件。
+初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同模組中定義的元件。
 
 ## <a name="syntax"></a>語法
 
@@ -47,61 +47,61 @@ HRESULT MakeAndInitialize(
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-使用者指定的類別繼承自`WRL::RuntimeClass`。
+繼承自 `WRL::RuntimeClass`的使用者指定類別。
 
 *TArg1*<br/>
-傳遞至指定的執行階段類別的引數 1 的型別。
+傳遞至指定執行時間類別之引數1的類型。
 
 *TArg2*<br/>
-傳遞至指定的執行階段類別的引數 2 的型別。
+傳遞至指定執行時間類別的引數2類型。
 
 *TArg3*<br/>
-傳遞至指定的執行階段類別的引數 3 的型別。
+傳遞至指定執行時間類別之引數3的類型。
 
 *TArg4*<br/>
-傳遞至指定的執行階段類別的引數 4 類型。
+傳遞至指定執行時間類別之引數4的類型。
 
 *TArg5*<br/>
-引數 5 傳遞至指定的執行階段類別的型別。
+傳遞至指定執行時間類別之引數5的類型。
 
 *TArg6*<br/>
-傳遞至指定的執行階段類別的引數 6 的型別。
+傳遞至指定執行時間類別的引數6類型。
 
 *TArg7*<br/>
-引數 7 傳遞至指定的執行階段類別的型別。
+傳遞至指定執行時間類別之引數7的類型。
 
 *TArg8*<br/>
-引數 8 傳遞至指定的執行階段類別的型別。
+傳遞至指定執行時間類別之引數8的類型。
 
 *TArg9*<br/>
-引數 9 的傳遞至指定的執行階段類別的型別。
+傳遞至指定執行時間類別之引數9的類型。
 
 *arg1*<br/>
-傳遞至指定的執行階段類別的引數 1。
+傳遞至指定執行時間類別的引數1。
 
 *arg2*<br/>
-傳遞至指定的執行階段類別的引數 2。
+傳遞至指定執行時間類別的引數2。
 
 *arg3*<br/>
-傳遞至指定的執行階段類別的引數 3。
+傳遞至指定執行時間類別的引數3。
 
 *arg4*<br/>
-傳遞至指定的執行階段類別的引數 4。
+傳遞至指定執行時間類別的引數4。
 
 *arg5*<br/>
-傳遞至指定的執行階段類別的引數 5。
+傳遞至指定執行時間類別的引數5。
 
 *arg6*<br/>
-傳遞至指定的執行階段類別的引數 6。
+傳遞至指定執行時間類別的引數6。
 
 *arg7*<br/>
-傳遞至指定的執行階段類別的引數 7。
+傳遞至指定執行時間類別的引數7。
 
 *arg8*<br/>
-傳遞至指定的執行階段類別的引數 8。
+傳遞至指定執行時間類別的引數8。
 
 *arg9*<br/>
-傳遞至指定的執行階段類別的引數 9。
+傳遞至指定執行時間類別的引數9。
 
 ## <a name="return-value"></a>傳回值
 
@@ -109,13 +109,13 @@ HRESULT 值。
 
 ## <a name="remarks"></a>備註
 
-請參閱[如何：直接 WRL 元件具現化](how-to-instantiate-wrl-components-directly.md)若要了解此函式之間的差異並[Microsoft::WRL::Make](make-function.md)，及範例。
+如需範例，請參閱[如何：直接具現化 WRL 元件](how-to-instantiate-wrl-components-directly.md)，以瞭解此函式和[MICROSOFT：： WRL：： Make](make-function.md)的差異。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標頭：** implements。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

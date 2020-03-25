@@ -1,21 +1,21 @@
 ---
-title: db_accessor (C++ COM 屬性)
+title: db_accessor （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_accessor
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e9725dad39974b828d87bd8b4cdeac623f4e12f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148246"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214860"
 ---
-# <a name="dbaccessor"></a>db_accessor
+# <a name="db_accessor"></a>db_accessor
 
-群組`db_column`參與屬性`IAccessor`為基礎的繫結。
+`db_column` 參與 `IAccessor`型系結的屬性群組。
 
 ## <a name="syntax"></a>語法
 
@@ -26,24 +26,24 @@ ms.locfileid: "62148246"
 #### <a name="parameters"></a>參數
 
 *num*<br/>
-指定存取子數目 （以零為起始的整數索引）。 您必須指定存取子以遞增的數字順序，使用整數，或定義值。
+指定存取子編號（以零為基底的整數索引）。 您必須使用整數或定義的值，以遞增的順序來指定存取子數位。
 
 *auto*<br/>
-布林值，指定是否自動擷取 (TRUE) 或未擷取 (FALSE) 的存取子。
+布林值，指定是否自動抓取存取子（TRUE）或不抓取（FALSE）。
 
 ## <a name="remarks"></a>備註
 
-**db_accessor**定義為基礎的 OLE DB 存取子後續`db_column`和`db_param`相同類別或函式內的屬性。 **db_accessor**是可用的成員層級，使用群組`db_column`參與 OLE DB 屬性`IAccessor`-基礎繫結。 搭配使用時使用它`db_table`或`db_command`屬性。 呼叫這個屬性就類似於呼叫[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)並[END_ACCESSOR](../../data/oledb/end-accessor.md)巨集。
+**db_accessor**會針對相同類別或函式中的後續 `db_column` 和 `db_param` 屬性，定義基礎 OLE DB 存取子。 **db_accessor**可在成員層級使用，而且可用來將參與 OLE DB `IAccessor`型系結的 `db_column` 屬性分組。 它會與 `db_table` 或 `db_command` 屬性一起使用。 呼叫這個屬性類似于呼叫[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)並[END_ACCESSOR](../../data/oledb/end-accessor.md)宏。
 
-**db_accessor**會產生一個資料列集，並將它繫結至對應的存取子對應。 如果您不能呼叫**db_accessor**存取子 0 將會自動產生，且所有資料行繫結將會對應到這個存取子區塊。
+**db_accessor**會產生資料列集，並將它系結至對應的存取子對應。 如果您未呼叫**db_accessor**，將會自動產生存取子0，而且所有資料行系結都會對應至此存取子區塊。
 
-**db_accessor**群組資料庫資料行繫結到一或多個存取子。 如需情況下，您需要使用多重存取子的討論，請參閱 <<c0> [ 使用的資料列集上的多個存取子](../../data/oledb/using-multiple-accessors-on-a-rowset.md)。 另請參閱中的 「 使用者記錄支援的多個存取子 」[使用者記錄](../../data/oledb/user-records.md)。
+**db_accessor**將資料庫資料行系結分組到一個或多個存取子。 如需您需要使用多個存取子之案例的討論，請參閱在資料列[集上使用多個存取子](../../data/oledb/using-multiple-accessors-on-a-rowset.md)。 另請參閱[使用者記錄](../../data/oledb/user-records.md)中的「多個存取子的使用者記錄支援」。
 
-當取用者的屬性提供者會將此屬性套用至類別時，編譯器會重新命名的類別\_ *YourClassName*存取子，其中*YourClassName*是您所指定的名稱類別，而編譯器也會建立一個叫做類別*YourClassName*，其衍生自\_ *YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。
+當取用者屬性提供者將此屬性套用至類別時，編譯器會將類別重新命名為 \_*YourClassName*存取子，其中*YourClassName*是您提供給類別的名稱，而編譯器也會建立名為*YourClassName*的類別，其衍生自 \_*YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。
 
 ## <a name="example"></a>範例
 
-下列範例會使用**db_accessor** Orders 資料表中從 Northwind 資料庫的兩個存取子的群組資料行。 存取子 0，自動存取子，並不是存取子為 1。
+下列範例會使用**db_accessor** ，將 [Orders] 資料表中的資料行，從 Northwind 資料庫分組成兩個存取子。 存取子0是自動存取子，而且存取子1不是。
 
 ```cpp
 // cpp_attr_ref_db_accessor.cpp

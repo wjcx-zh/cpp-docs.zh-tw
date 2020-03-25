@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196756"
 ---
 # <a name="command-line-warning-d9024"></a>命令列警告 D9024
 
-無法辨識的來源檔案類型 'filename'、 物件檔案假設
+無法辨識的來源檔案類型 ' filename '，物件檔已被假設
 
-無法辨識指定的檔案的副檔名。 檔案已假設為目的檔，並傳遞給連結器。
+無法辨識指定檔案的副檔名。 檔案已假設為物件檔案，並已傳遞至連結器。
 
-會辨識下列延伸模組：
+可辨識下列延伸模組：
 
-- .c （C 原始程式檔）
+- .c （C 原始檔）
 
-- .cxx (C++原始程式檔)
+- . .cxx （C++原始檔）
 
-- .cpp (C++原始程式檔)
+- .cpp （C++原始檔）
 
-- .obj （目的檔）
+- .obj （物件檔案）
 
 - .lib （程式庫檔案）
 
 - .def （模組定義檔）
 
-- .exp （連結器會匯出連結 /LIB 所建立的檔案）
+- exp （連結/LIB 所建立的連結器匯出檔案）

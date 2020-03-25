@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aa3b936b9f06153170dac013f9dcd03485c8bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395894"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213222"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>深入了解 MFC ODBC 類別
 
-下列主題將進一步說明的概念和本主題所介紹的技術：
+下列主題將進一步說明本主題中所介紹的概念和技術：
 
 - [MFC 應用程式精靈、資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)
 
@@ -37,19 +37,19 @@ ms.locfileid: "62395894"
 
 - [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)
 
-- [資料錄檢視](../../data/record-views-mfc-data-access.md)
+- [記錄視圖](../../data/record-views-mfc-data-access.md)
 
-- [序列化：序列化與資料庫輸入/輸出](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [序列化：序列化和資料庫輸入/輸出比較](../../mfc/serialization-serialization-vs-database-input-output.md)
 
-- [快照集](../../data/odbc/snapshot.md)
+- [快照式](../../data/odbc/snapshot.md)
 
 - [SQL](../../data/odbc/sql.md)
 
 - [異動 (ODBC)](../../data/odbc/transaction-odbc.md)
 
-開始您讀取的好地方是使用[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。
+開始閱讀的好地方是使用[記錄集（ODBC）](../../data/odbc/recordset-odbc.md)。
 
-在  *MFC 參考 》*，請參閱[CDatabase](../../mfc/reference/cdatabase-class.md)， [CRecordset](../../mfc/reference/crecordset-class.md)， [CRecordView](../../mfc/reference/crecordview-class.md)， [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)，並[CDBException](../../mfc/reference/cdbexception-class.md)。
+在*MFC 參考*中，請[參閱 CDatabase](../../mfc/reference/cdatabase-class.md)、 [CRecordset](../../mfc/reference/crecordset-class.md)、 [CRecordView](../../mfc/reference/crecordview-class.md)、 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)和[CDBException](../../mfc/reference/cdbexception-class.md)。
 
 ## <a name="see-also"></a>另請參閱
 

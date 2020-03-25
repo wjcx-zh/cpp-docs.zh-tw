@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222087"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178206"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
 **Microsoft 專屬**
 
-MicrosoftC++介面可定義，如下所示：
+Microsoft C++介面可以定義如下：
 
 - 能夠繼承自零個或多個基底介面。
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>備註
 
-C++ [類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)可能會實作這些規則，但 **__interface**強制執行它們。
+C++ [類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)可以使用這些規則來實作為，但 **__interface**強制執行。
 
 例如，以下是介面定義範例：
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-如需 managed 介面的資訊，請參閱[介面類別](../extensions/interface-class-cpp-component-extensions.md)。
+如需 managed 介面的詳細資訊，請參閱[介面類別](../extensions/interface-class-cpp-component-extensions.md)。
 
 請注意，您不需要明確表明 `CommitX` 和 `get_X` 函式是純虛擬函式。 第一個函式的同等宣告如下：
 
@@ -58,7 +58,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface**意味著[novtable](../cpp/novtable.md) **__declspec**修飾詞。
+**__interface**意指[novtable](../cpp/novtable.md) **__declspec**修飾詞。
 
 ## <a name="example"></a>範例
 
@@ -142,7 +142,7 @@ p->int_data = 100
 bstr_data = Testing
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

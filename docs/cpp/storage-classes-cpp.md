@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447327"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178533"
 ---
 # <a name="storage-classes"></a>儲存體類別
 
@@ -30,7 +30,7 @@ ms.locfileid: "79447327"
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>靜止
+## <a name="static"></a><a name="static"></a>靜止
 
 **Static**關鍵字可以用來宣告全域範圍、命名空間範圍和類別範圍的變數和函式。 靜態變數也可以在區域範圍內進行宣告。
 
@@ -155,11 +155,11 @@ var == value
 
 從 C++11 開始，保證靜態區域變數初始化為執行緒安全。 這項功能有時稱為*魔術靜態*。 不過，在多執行緒應用程式中，必須同步處理所有後續指派。 使用[/zc： threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)旗標可停用安全線程靜態初始化功能，以避免依賴 CRT。
 
-## <a name="extern"></a>extern
+## <a name="extern"></a><a name="extern"></a>extern
 
 宣告為**extern**的物件和變數會宣告在另一個轉譯單位或封閉範圍中定義為具有外部連結的物件。 如需詳細資訊，請參閱[extern](extern-cpp.md)和[轉譯單位和連結](program-and-linkage-cpp.md)。
 
-## <a name="thread_local"></a>thread_local （c + + 11）
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local （c + + 11）
 
 使用**thread_local**指定名稱宣告的變數，只能在建立它的執行緒上存取。 變數會在建立執行緒時建立，並在終結執行緒時終結。 每個執行緒都有它自己的變數複本。 在 Windows 上， **thread_local**的功能等同于 Microsoft 專有的[__declspec （thread）](../cpp/thread.md)屬性。
 
@@ -194,7 +194,7 @@ void DoSomething()
 
 在 Windows 上， **thread_local**的功能等同于[__declspec （thread）](../cpp/thread.md) ，不同之處在于 **__declspec （thread）** 可以套用至類型定義，而且在 C 程式碼中有效。 盡可能使用**thread_local** ，因為它是C++標準的一部分，因此更具可攜性。
 
-##  <a name="register"></a>參加
+##  <a name="register"></a><a name="register"></a>參加
 
 **Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **register**關鍵字不再是支援的儲存類別。 關鍵字仍然保留在標準中，供日後使用。
 

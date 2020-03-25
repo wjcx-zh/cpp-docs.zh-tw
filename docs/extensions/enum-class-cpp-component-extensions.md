@@ -3,12 +3,12 @@ title: 列舉類別  (C++/CLI 和 C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516593"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182132"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>列舉類別  (C++/CLI 和 C++/CX)
 
@@ -48,7 +48,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 *列舉程式清單*<br/>
 列舉程式名稱的逗號分隔清單。
 
-每個列舉程式都是常數運算式，不是透過編譯器隱含定義，就是透過標記法 *列舉程式*`=`*常數運算式*。 如以隱含方式定義，第一個列舉程式的值預設為零。 後續每個以隱含方式定義的列舉程式值，都是前一個列舉程式的值 + 1。
+每個列舉程式都是常數運算式，不是透過編譯器隱含定義，就是藉由標記法 *列舉程式*`=`*常數運算式*。 如以隱含方式定義，第一個列舉程式的值預設為零。 後續每個以隱含方式定義的列舉程式值，都是前一個列舉程式的值 + 1。
 
 *var*<br/>
 (選用) 列舉類型的變數名稱。

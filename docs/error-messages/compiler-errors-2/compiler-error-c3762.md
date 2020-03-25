@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3762
 ms.assetid: b79b6506-2cea-44a0-855a-5fdcb9fd7ad9
-ms.openlocfilehash: 108d0ae2e864ee569d8a1138d057bbc7d310229f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af6894b72fe66bff9dca1a8dd6b67f4e3751705f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391942"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165843"
 ---
 # <a name="compiler-error-c3762"></a>編譯器錯誤 C3762
 
-無法處理屬性 'attribute'
+無法處理屬性 ' attribute '
 
-使用者定義的屬性繼承自`System.Security.Permissions.SecurityAttribute`用來定義安全性屬性。 這類屬性不能在相同的組件中定義的位置。
+繼承自 `System.Security.Permissions.SecurityAttribute` 的使用者自訂屬性會用來定義安全性屬性。 這類屬性不能在其定義所在的相同元件中使用。

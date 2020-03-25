@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3173
 ms.assetid: edf79e10-e8cf-4f76-8d33-ab9d05e974e9
-ms.openlocfilehash: aeec64f8e724b92262d322b83de07ccfe57ac2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b9b1b74bb8b4484026873f5c6052b5624c4f69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176464"
 ---
 # <a name="compiler-error-c3173"></a>編譯器錯誤 C3173
 
-在 idl 合併中版本不符
+idl 合併中的版本不相符
 
-當物件檔案包含與先前版本的編譯器所產生的內嵌的 idl 時，就會發生此錯誤。 編譯器會將編碼以確保相同的編譯器用來產生.obj 檔中內嵌 idl 內容也是用來合併內嵌的 idl 的相同編譯器版本號碼。
+當物件檔案包含使用舊版編譯器所產生的內嵌 idl 時，就會發生這個錯誤。 編譯器會編碼版本號碼，以確保用來產生 .obj 檔案中內嵌之 idl 內容的相同編譯器也是用來合併內嵌 idl 的相同編譯器。
 
-更新您的視覺效果C++安裝，讓所有的工具是來自 最新發行版本。
+更新您的C++視覺效果安裝，讓所有工具都來自最新發行的版本。

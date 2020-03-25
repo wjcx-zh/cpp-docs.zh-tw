@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 96b7e83a854765fb872b87d062928311731cfd26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43453d3162de697fa1cfcf0581953c91bbe3934f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398559"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214041"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -31,13 +31,13 @@ struct DerefHelper<T*>;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-樣板參數。
+範本參數。
 
 ## <a name="remarks"></a>備註
 
-代表已取值的指標，要`T*`樣板參數。
+表示 `T*` 樣板參數的已取值指標。
 
-**DerefHelper**這類運算式中使用： `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。
+**DerefHelper**用於運算式，例如： `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。
 
 ## <a name="members"></a>成員
 
@@ -45,7 +45,7 @@ struct DerefHelper<T*>;
 
 |名稱|描述|
 |----------|-----------------|
-|`DerefType`|已取值的範本參數的識別項`T*`。|
+|`DerefType`|`T*`的已取值範本參數的識別碼。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -53,9 +53,9 @@ struct DerefHelper<T*>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** async.h
+**標頭：** async。h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

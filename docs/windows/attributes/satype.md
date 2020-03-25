@@ -1,21 +1,21 @@
 ---
-title: satype (C++ COM 屬性)
+title: satype （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407298"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166272"
 ---
 # <a name="satype"></a>satype
 
-指定的資料型別`SAFEARRAY`結構。
+指定 `SAFEARRAY` 結構的資料類型。
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ ms.locfileid: "62407298"
 ### <a name="parameters"></a>參數
 
 *data_type*<br/>
-資料型別`SAFEARRAY`做為參數傳遞至介面方法的資料結構。
+當做參數傳遞至介面方法之 `SAFEARRAY` 資料結構的資料類型。
 
 ## <a name="requirements"></a>需求
 
@@ -41,10 +41,10 @@ ms.locfileid: "62407298"
 
 ## <a name="remarks"></a>備註
 
-**Satype** C++屬性指定的資料型別`SAFEARRAY`。
+**Satype** C++屬性會指定 `SAFEARRAY`的資料類型。
 
 > [!NOTE]
-> 從卸除的間接取值層級`SAFEARRAY`從它在.cpp 檔案中的宣告方式產生的.idl 檔案中的指標。
+> 從產生的 .idl 檔案中的 `SAFEARRAY` 指標卸載一層間接取值，從該檔案在 .cpp 檔案中的宣告方式。
 
 ## <a name="example"></a>範例
 

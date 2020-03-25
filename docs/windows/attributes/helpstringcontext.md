@@ -1,17 +1,17 @@
 ---
-title: helpstringcoNtext (C++ COM 屬性)
+title: helpstringcoNtext （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501496"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168145"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -25,8 +25,8 @@ ms.locfileid: "69501496"
 
 ### <a name="parameters"></a>參數
 
-*contextID*<br/>
-說明檔中的32位說明內容識別碼 。
+*coNtextID*<br/>
+說明檔**中的 32**位說明內容識別碼。
 
 ## <a name="remarks"></a>備註
 
@@ -54,10 +54,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**適用於**|**類別**,**介面**, 介面方法|
+|**適用於**|**類別**，**介面**，介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -67,4 +67,4 @@ __interface IMyI
 [介面屬性](interface-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
-[module](module-cpp.md)
+[name](module-cpp.md)

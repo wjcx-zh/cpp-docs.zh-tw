@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級3） C4265
+title: 編譯器警告 (層級 3) C4265
 ms.date: 11/04/2016
 f1_keywords:
 - C4265
 helpviewer_keywords:
 - C4265
 ms.assetid: 20547159-6f30-4cc4-83aa-927884c8bb4c
-ms.openlocfilehash: 8ad07e2a920ed251467c9ffd1d0fb1765557aa7e
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: cfcbd9d9268785b87e45a833b332c276eec01522
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161538"
 ---
-# <a name="compiler-warning-level-3-c4265"></a>編譯器警告（層級3） C4265
+# <a name="compiler-warning-level-3-c4265"></a>編譯器警告 (層級 3) C4265
 
 ' class '：類別有虛擬函式，但析構函數不是虛擬的
 

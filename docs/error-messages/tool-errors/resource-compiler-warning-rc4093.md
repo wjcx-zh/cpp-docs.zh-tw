@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC4093
 ms.assetid: 3c61b4a4-b418-465b-a4fd-cb1ff0adb8dd
-ms.openlocfilehash: 23bf436e6e8338f89bc576564181c84715028332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29d24f1e380f5c531e170e5dc23cf5c77eefb874
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346206"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182288"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>資源編譯器警告 RC4093
 
-在非使用中的程式碼中的字元常數中的未逸出新行
+非使用中程式碼的字元常數中未轉義的分行符號
 
-常數運算式`#if`， `#elif`， **#ifdef**，或 **#ifndef**被評估為零，使程式碼的前置處理器指示詞會遵循非使用中。 在非使用中的程式碼中，新行字元會出現在一組單引號或雙引號的引號內。
+`#if`、`#elif`、 **#ifdef**或 **#ifndef**預處理器指示詞的常數運算式評估為零，使程式碼遵循非作用中。 在該非使用中的程式碼內，分行符號會出現在一組單引號或雙引號內。
 
-直到下一個雙引號視為要在字元常數中的所有文字。
+所有文字，直到下一個雙引號被視為字元常數內。

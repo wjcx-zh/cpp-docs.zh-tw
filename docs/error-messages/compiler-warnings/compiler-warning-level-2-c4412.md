@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402433"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161785"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>編譯器警告 (層級 2) C4412
 
-> '*函式*': 函式簽章含有類型'*型別*';C++物件都是 unsafe 純程式碼之間傳遞並混合或原生。
+> '*function*'：函數簽名碼包含類型 '*type*';C++物件在純程式碼與混合或原生之間傳遞不安全。
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。 如果您有必須是單純的程式碼，我們建議您移植到C#。
+**/Clr： pure**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。 如果您的程式碼必須是純虛擬，建議您將它移植到C#。
 
-編譯器偵測到可能不安全的情況下，可能會導致執行階段錯誤： 正在進行呼叫，從 **/clr: pure**編譯模組已匯入透過 dllimport 和函式簽章的函式包含不安全的類型. 類型為不安全的如果它包含一個成員函式，或為不安全的型別或不安全類型的間接取值的資料成員。
+編譯器偵測到可能導致執行階段錯誤的潛在不安全情況：從 **/clr： pure**編譯模組對透過 dllimport 匯入的函式進行呼叫，而且函數簽章包含不安全的類型。 如果類型包含成員函式，或具有不安全類型的資料成員或不安全類型的間接取值，則該類型不安全。
 
-這是因為不同的預設呼叫慣例純粹的和原生程式碼之間的不安全 （或混合原生和 managed）。 當匯入 (透過`dllimport`) 函式匯入 **/clr: pure**編譯時，請確保匯出函式 （尤其是謹慎的編譯相同的簽章中的每個型別宣告差異隱含的呼叫慣例）。
+這是不安全的，因為純粹和機器碼（或混合原生和 managed）之間的預設呼叫慣例有差異。 將函式匯入（透過 `dllimport`）函式至 **/clr： pure**編譯模組時，請確定簽章中每個類型的宣告與匯出函式的編譯模組中的宣告相同（特別小心，隱含呼叫慣例的差異）。
 
-虛擬成員函式是特別容易產生非預期的結果。  不過，即使非虛擬函式應該測試以確保您取得正確的結果。 如果您不確定您會收到正確的結果，您可以忽略此警告。
+虛擬成員函式特別容易提供非預期的結果。  不過，即使是非虛擬函式，也應該進行測試，以確保您得到正確的結果。 如果您確定得到正確的結果，可以忽略此警告。
 
-C4412 預設為關閉。 請參閱[編譯器警告為關閉的預設](../../preprocessor/compiler-warnings-that-are-off-by-default.md)並[dllexport、 dllimport](../../cpp/dllexport-dllimport.md)如需詳細資訊。
+C4412 預設為關閉。 如需詳細資訊，請參閱[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)和[dllexport、dllimport](../../cpp/dllexport-dllimport.md) 。
 
-若要解決這個警告，移除型別中的所有函式。
+若要解決這個警告，請移除類型中的所有函式。
 
 ## <a name="example"></a>範例
 
@@ -61,7 +61,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例會宣告兩種類型的標頭檔。 `Unsafe`類型是不安全，因為它有成員函式。
+下列範例是宣告兩種類型的標頭檔。 `Unsafe` 類型是不安全的，因為它有成員函式。
 
 ```cpp
 // C4412.h
@@ -81,7 +81,7 @@ struct Safe {
 
 ## <a name="example"></a>範例
 
-此範例會匯出函式使用的標頭檔中定義的類型。
+這個範例會使用標頭檔中所定義的類型來匯出函式。
 
 ```cpp
 // C4412_2.cpp
@@ -98,7 +98,7 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>範例
 
-預設呼叫慣例 **/clr: pure**編譯為不同於原生編譯。  包含在內，C4412.h 時`Test`預設為`__clrcall`。 如果您編譯並執行此程式 (請勿使用 **/c**)，程式將會擲回例外狀況。
+**/Clr： pure**編譯中的預設呼叫慣例與原生編譯不同。  當包含 C4412 時，`Test` 預設為 `__clrcall`。 如果您編譯並執行此程式（不使用 **/c**），程式將會擲回例外狀況。
 
 下列範例會產生 C4412。
 

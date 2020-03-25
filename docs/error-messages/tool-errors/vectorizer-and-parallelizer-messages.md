@@ -8,18 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857457"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182197"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>向量化工具與平行化工具訊息
 
-您可以使用 MicrosoftC++編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)並[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)輸出的原因代碼和活動相關的告知性訊息。 本文說明原因代碼和訊息。
+您C++可以使用 Microsoft 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) ，將自動平行處理[和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)設定為輸出原因代碼和其活動的相關資訊訊息。 本文說明原因代碼和訊息。
 
-## <a name="BKMK_InformationalMessages"></a> 告知性訊息
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>參考用訊息
 
 視您指定的報告等級而定，每個迴圈皆會出現下列其中一則告知性訊息。
 
@@ -33,15 +33,15 @@ ms.locfileid: "64857457"
 |5012|`Loop not parallelized due to reason '*description*'.`|
 |5021|`Unable to associate loop with pragma.`|
 
-下列各節會列出可能的原因代碼的平行化工具和向量化工具。
+下列各節將列出平行化工具和向量化工具的可能原因代碼。
 
-## <a name="BKMK_ReasonCode50x"></a> 5xx 原因代碼
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>5xx 原因代碼
 
-5*xx*原因代碼適用於平行化工具和向量化工具。
+5*xx*原因代碼同時適用于平行化工具和向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|500|包含許多例子的泛型訊息 — 比方說，迴圈包含多個出口，或者是迴圈的標題結尾不是依遞增的歸納變數。|
+|500|涵蓋數個案例（例如，迴圈包含多個結束）的一般訊息，或迴圈標頭不會藉由遞增的方式來結束。|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
 |502|`Induction variable is stepped in some manner other than a simple +1.`|
 |503|`Loop includes exception-handling or switch statements.`|
@@ -198,9 +198,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="BKMK_ReasonCode100x"></a> 10xx 原因代碼
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>10xx 原因代碼
 
-10*xx*原因代碼適用於平行化工具。
+10*xx*原因代碼適用于平行化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
@@ -407,9 +407,9 @@ void code_1010()
 }
 ```
 
-## <a name="BKMK_ReasonCode110x"></a> 11xx 原因代碼
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>11xx 原因代碼
 
-11*xx*原因代碼適用於向量化工具。
+11*xx*原因代碼適用于向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
@@ -555,9 +555,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode120x"></a> 12xx 原因代碼
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>12xx 原因代碼
 
-12*xx*原因代碼適用於向量化工具。
+12*xx*原因代碼適用于向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
@@ -630,9 +630,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode130x"></a> 13xx 原因代碼
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>13xx 原因代碼
 
-13*xx*原因代碼適用於向量化工具。
+13*xx*原因代碼適用于向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
@@ -762,9 +762,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="BKMK_ReasonCode140x"></a> 14xx 原因代碼
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>14xx 原因代碼
 
-14*xx*原因代碼發生時指定一些選項，與向量化不相容。
+當指定了與向量化不相容的某些選項時，就會發生 14*xx*原因代碼。
 
 |原因碼|說明|
 |-----------------|-----------------|
@@ -834,9 +834,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode150x"></a> 15xx 原因代碼
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>15xx 原因代碼
 
-15*xx*原因代碼適用於別名。 記憶體的位置可以由兩個不同的名稱呼叫時，會發生存取別名的情形。
+15*xx*原因代碼適用于別名。 記憶體的位置可以由兩個不同的名稱呼叫時，會發生存取別名的情形。
 
 |原因碼|說明|
 |-----------------|-----------------|
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>另請參閱
 
-[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)
-[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[自動向量化工具在 Visual Studio 2012 – 概觀](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma loop()](../../preprocessor/loop.md) \
-[/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md) \
+[C/C++編譯器和組建工具的錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)
+自動平行處理[和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Visual Studio 2012 中自動向量化工具–總覽](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma 迴圈（）](../../preprocessor/loop.md) \
+[/Q 選項（低層級作業）](../../build/reference/q-options-low-level-operations.md) \
 [/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (自動向量化工具報告層級)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

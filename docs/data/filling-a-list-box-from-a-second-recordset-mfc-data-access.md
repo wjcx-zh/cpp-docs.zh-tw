@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397922"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213404"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>以第二個記錄集填入清單方塊 (MFC 資料存取)
 
@@ -28,13 +28,13 @@ ms.locfileid: "62397922"
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>從第二個資料錄集填入下拉式方塊或清單方塊
 
-1. 建立資料錄集物件 ([CRecordset](../mfc/reference/crecordset-class.md)。
+1. 建立記錄集物件（[CRecordset](../mfc/reference/crecordset-class.md)。
 
-1. 取得指標[CComboBox](../mfc/reference/ccombobox-class.md)下拉式方塊控制項的物件。
+1. 取得下拉式方塊控制項的[CComboBox](../mfc/reference/ccombobox-class.md)物件指標。
 
 1. 清空下拉式方塊的所有先前內容。
 
-1. 移動的資料錄集中的所有記錄呼叫[ccombobox:: Addstring](../mfc/reference/ccombobox-class.md#addstring)針對每個您想要新增至下拉式方塊的目前資料錄的字串。
+1. 在記錄集中的所有記錄上移動，針對您要新增至下拉式方塊的目前記錄中的每個字串，呼叫[CComboBox：： AddString](../mfc/reference/ccombobox-class.md#addstring) 。
 
 1. 初始化下拉式方塊中的選取項目。
 

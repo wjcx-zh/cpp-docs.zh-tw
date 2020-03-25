@@ -1,19 +1,19 @@
 ---
-title: support_error_info (C++ COM 屬性)
+title: support_error_info （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: c05b6735c5c29e44f3cc190a150a5efe02025519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166142"
 ---
-# <a name="supporterrorinfo"></a>support_error_info
+# <a name="support_error_info"></a>support_error_info
 
 實作傳回詳細錯誤的支援。
 
@@ -26,17 +26,17 @@ ms.locfileid: "62407285"
 ### <a name="parameters"></a>參數
 
 *error_interface*<br/>
-介面實作的識別項`IErrorInfo`。
+執行 `IErrorInfo`之介面的識別碼。
 
 ## <a name="remarks"></a>備註
 
-**support_error_info** C++ 屬性支援將目標物件所遇到的詳細內容錯誤傳回給用戶端。 支援錯誤的方法物件`IErrorInfo`，物件必須實作介面。 如需詳細資訊，請參閱 [支援 IDispatch 和 IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)。
+**support_error_info** C++ 屬性支援將目標物件所遇到的詳細內容錯誤傳回給用戶端。 針對支援錯誤的物件，物件必須執行 `IErrorInfo` 介面的方法。 如需詳細資訊，請參閱 [支援 IDispatch 和 IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)。
 
-此屬性會將 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) 類別當成基底類別新增至目標物件。 這會導致的預設實作`ISupportErrorInfo`，可以在單一介面產生物件錯誤時使用。
+此屬性會將 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) 類別當成基底類別新增至目標物件。 這會導致 `ISupportErrorInfo` 的預設執行，而且可以在單一介面產生物件錯誤時使用。
 
 ## <a name="example"></a>範例
 
-下列程式碼加入預設的支援`ISupportErrorInfo`介面`CMyClass`物件。
+下列程式碼會將 `ISupportErrorInfo` 介面的預設支援新增至 `CMyClass` 物件。
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -64,7 +64,7 @@ class CMyClass
 
 |||
 |-|-|
-|**適用於**|**Class - 類別**|
+|**適用於**|**class**|
 |**可重複**|是|
 |**必要屬性**|None|
 |**無效屬性**|None|

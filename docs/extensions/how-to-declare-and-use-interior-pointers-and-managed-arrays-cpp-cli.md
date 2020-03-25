@@ -1,24 +1,24 @@
 ---
-title: 作法：宣告及使用內部指標和受控陣列 (C++/CLI)
+title: 如何：宣告及使用內部指標和 Managed 陣列 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-ms.openlocfilehash: 0f7ec6551b09b2125fdb21736a851dae0dadbd4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 88308e0ba79a8272b2fc323b9219a29e234b25ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516333"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181976"
 ---
-# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>作法：宣告及使用內部指標和受控陣列 (C++/CLI)
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：宣告及使用內部指標和 Managed 陣列 (C++/CLI)
 
 下列 C++/CLI 範例將示範如何宣告及使用指向陣列的內部指標。
 
 > [!IMPORTANT]
-> `/clr` 編譯器選項支援此語言功能，`/ZW` 編譯器選項則不支援。
+> `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。
 
 ## <a name="example"></a>範例
 

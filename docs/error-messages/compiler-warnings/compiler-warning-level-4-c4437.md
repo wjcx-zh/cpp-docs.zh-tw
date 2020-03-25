@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 6cd50d5c4d79b82c135ab4e84ec390dee9e906ef
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185330"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>編譯器警告 (層級 4) C4437
 
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ca3469128cf3d412138d5d39a1587cbc20150699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398624"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214067"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函式
 
@@ -31,16 +31,16 @@ template<typename Factory>
 ### <a name="parameters"></a>參數
 
 *flags*<br/>
-一或多個組合[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
+一或多個[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值的組合。
 
 *entry*<br/>
-指標[CreatorMap](creatormap-structure.md) ，其中包含參數的初始設定和註冊資訊*riid*。
+[CreatorMap](creatormap-structure.md)的指標，其中包含參數*riid*的初始化和註冊資訊。
 
 *riid*<br/>
-參考介面識別碼。
+介面識別碼的參考。
 
 *ppFactory*<br/>
-如果這項作業成功完成啟動處理站的指標。
+如果此作業成功完成，則為啟用處理站的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -48,13 +48,13 @@ template<typename Factory>
 
 ## <a name="remarks"></a>備註
 
-如果，就會發出判斷提示錯誤範本參數*Factory*不是衍生自介面`IActivationFactory`。
+如果範本參數*Factory*不是衍生自介面 `IActivationFactory`，就會發出判斷提示錯誤。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標頭：** module. h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

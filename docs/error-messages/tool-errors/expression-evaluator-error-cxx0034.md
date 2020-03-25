@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0034
 - CXX0034
 ms.assetid: afcee5f1-beff-489f-aea6-04f55e76364f
-ms.openlocfilehash: 34cb7de7382f43d41ab8f92343b4ae57eee2ed67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d764ce8b243c7004f95650f93e7a44a36962cef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397064"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195483"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>運算式評估工具錯誤 CXX0034
 
-**運算子與不相容的類型**
+**類型與運算子不相容**
 
-指定的運算元類型不合法的作業。
+指定的運算元類型對作業而言是不合法的。
 
-比方說，指標不能乘以任何值。
+例如，指標不能乘以任何值。
 
-您可能需要輸入運算子與相容的型別將運算元轉型。
+您可能需要輸入將運算元轉換成與運算子相容的類型。

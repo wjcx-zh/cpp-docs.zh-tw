@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 3609e3f0541cfd8a8af8559d8d49e6a77c00d91c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a100ece1a0c67be01b31f38bdca17e78c2e1b6f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403382"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179103"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 限制規範可以套用到函式和 Lambda 宣告。 它會在函式中的程式碼上強制執行限制，以及在使用 C++ Accelerated Massive Parallelism (C++ AMP) 的應用程式中函式的行為上強制執行限制。
 
 > [!NOTE]
->  如需**限制**屬於關鍵字 **__declspec**儲存類別屬性，請參閱[限制](../cpp/restrict.md)。
+>  如需屬於 **__declspec**儲存類別屬性之一部分之**restrict**關鍵字的詳細資訊，請參閱[restrict](../cpp/restrict.md)。
 
-**限制**子句的格式如下：
+**Restrict**子句採用下列形式：
 
 |子句|描述|
 |------------|-----------------|
@@ -31,7 +31,7 @@ ms.locfileid: "62403382"
 
 ## <a name="remarks"></a>備註
 
-**限制**關鍵字是內容關鍵字。 限制規範、`cpu` 和 `amp` 不是保留字。 規範的清單無法擴充。 函式沒有**限制**子句是函式具有相同`restrict(cpu)`子句。
+**Restrict**關鍵字是內容關鍵字。 限制規範、`cpu` 和 `amp` 不是保留字。 規範的清單無法擴充。 沒有**限制**子句的函式與具有 `restrict(cpu)` 子句的函數相同。
 
 內含 `restrict(amp)` 子句的函式具有下列限制：
 
@@ -39,7 +39,7 @@ ms.locfileid: "62403382"
 
 - 函式必須為可內嵌。
 
-- 函式只可以宣告**int**，**不帶正負號的 int**， **float**，並**double**變數和類別和結構，其中只包含這些型別。 **bool**也允許，但它必須是 4 位元組對齊若複合類型中使用它。
+- 函數只能宣告**int**、不**帶正負**號的 int、 **float**和**double**變數，以及僅包含這些類型的類別和結構。 也允許**bool** ，但如果您在複合類型中使用，它必須是4位元組對齊。
 
 - Lambda 函式無法透過參考方式擷取，也無法擷取指標。
 
@@ -49,7 +49,7 @@ ms.locfileid: "62403382"
 
    - 遞迴。
 
-   - 以宣告的變數[volatile](../cpp/volatile-cpp.md)關鍵字。
+   - 以[volatile](../cpp/volatile-cpp.md)關鍵字宣告的變數。
 
    - 虛擬函式。
 
@@ -61,17 +61,17 @@ ms.locfileid: "62403382"
 
    - 指標的指標。
 
-   - **goto**陳述式。
+   - **goto**語句。
 
    - 標記陳述式。
 
-   - **請嘗試**，**攔截**，或**擲回**陳述式。
+   - **try**、 **catch**或**throw**語句。
 
    - 全域變數。
 
-   - 靜態變數。 使用[tile_static 關鍵字](../cpp/tile-static-keyword.md)改。
+   - 靜態變數。 請改用[Tile_static 關鍵字](../cpp/tile-static-keyword.md)。
 
-   - **dynamic_cast**轉換 （cast)。
+   - **dynamic_cast**轉換。
 
    - **Typeid**運算子。
 
@@ -79,11 +79,11 @@ ms.locfileid: "62403382"
 
    - Varargs。
 
-如需函式限制的討論，請參閱 <<c0> [ 限制 (amp) 限制](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)。
+如需函數限制的討論，請參閱[限制（amp）限制](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用`restrict(amp)`子句。
+下列範例顯示如何使用 `restrict(amp)`子句。
 
 ```cpp
 void functionAmp() restrict(amp) {}

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2020
 ms.assetid: 486f98ed-6574-4d82-89e3-74b5a61ed419
-ms.openlocfilehash: 6cbcc2a7017a221c113086a0ea20a63a1992fbac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01b13aa160c39d71b793d30c6392a35c6a24e118
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303745"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208191"
 ---
 # <a name="compiler-error-c2020"></a>編譯器錯誤 C2020
 
-'member': 'class' 成員重複定義
+' member '： ' 類別 ' 成員重新定義
 
-已重新定義繼承自基底類別或結構的成員。 無法重新定義繼承的成員，除非宣告為`virtual`基底類別中。
+繼承自基類或結構的成員會重新定義。 除非在基類中宣告為 `virtual`，否則無法重新定義繼承的成員。

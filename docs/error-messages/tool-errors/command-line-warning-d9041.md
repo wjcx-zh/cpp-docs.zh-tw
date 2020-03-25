@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c685a1ca3195ad4ab52bab8b5d32b1a51534b24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213779"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196571"
 ---
 # <a name="command-line-warning-d9041"></a>命令列警告 D9041
 
-無效的值 'value' 的 '/option';假設 'value';加入 '/analyze' 命令列選項時指定這項警告
+'/option ' 的值 ' value ' 無效;假設「值」;指定此警告時，將 '/analyze ' 新增至命令列選項
 
-程式碼分析警告數字相加 **/wd**， **/we**， **/wo**，或 **/wl**命令列選項，但沒有同時指定 **/analyze**命令列選項。 若要解決這個錯誤，請新增 **/analyze**命令列選項，或移除無效的警告編號，從適當 **/w**命令列選項。
+程式碼分析警告編號已新增至 **/wd**、 **/we**、 **/wo**或 **/wl**命令列選項，但未同時指定 **/analyze**命令列選項。 若要補救此錯誤，請新增 **/analyze**命令列選項，或從適當的 **/w**命令列選項中移除不正確警告編號。
 
 ## <a name="example"></a>範例
 
-下列的命令列範例會產生警告 D9041:
+下列命令列範例會產生警告 D9041：
 
 ```
 cl /EHsc /LD /wd6001 filename.cpp
 ```
 
-若要修正此警告，新增 **/analyze**命令列選項。 如果 **/analyze**不是支援您版本的編譯器，移除無效的警告編號，從 **/wd**選項。
+若要修正此警告，請新增 **/analyze**命令列選項。 如果您的編譯器版本不支援 **/analyze** ，請從 **/wd**選項移除不正確警告編號。
 
 ## <a name="see-also"></a>另請參閱
 

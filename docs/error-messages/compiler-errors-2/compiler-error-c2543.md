@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2543
 ms.assetid: 6e4d2d03-ef34-4514-92fe-763543a71fa8
-ms.openlocfilehash: f4a36aa14884f1d666a4093c577d9479b8931569
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 993a715a4c63f6a743719ff351107d59239d33cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202549"
 ---
 # <a name="compiler-error-c2543"></a>編譯器錯誤 C2543
 
-必須是 ']' 運算子 '[]'
+運算子 ' [] ' 必須是 '] '
 
-Subscripting 運算子遺漏左括號。
+注標運算子遺漏左括弧。
 
-此錯誤可能因巨集展開。
+這個錯誤可能是宏展開所造成。

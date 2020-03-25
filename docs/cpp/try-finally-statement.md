@@ -20,16 +20,16 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 045d2bf5617c81bcc4d7a202f36b112d5f0142a6
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: a463b807d39addfdaa64b829720266bf0502fa7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246295"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188073"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 下列語法描述**try-catch**語句：
 
@@ -95,6 +95,6 @@ Control 會透過簡單的連續執行（流經）來達到 **__try**的語句�
 ## <a name="see-also"></a>另請參閱
 
 [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [終止-處理常式語法](/windows/win32/Debug/termination-handler-syntax)

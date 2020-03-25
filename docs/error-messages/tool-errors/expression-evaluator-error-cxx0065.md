@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CAN0065
 - CXX0065
 ms.assetid: aac68f87-0b90-4c19-afa6-1c587625a5fd
-ms.openlocfilehash: 7b62e42da2a74d910e2dc56ce2dfcb5cb38f2bfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4120deec3c8e7ce14e381f782904cf83a588e43
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184420"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>運算式評估工具錯誤 CXX0065
 
-變數必須有堆疊框架
+變數需要堆疊框架
 
-運算式包含變數存在於目前的範圍內，但尚未尚未建立。
+運算式包含的變數存在於目前的範圍內，但尚未建立。
 
-當您已逐步函式，但尚未設定的函式之堆疊框架的初構，或如果您已逐步函式的結束代碼，就會發生此錯誤。
+當您逐步執行函式的初構，但尚未設定函式的堆疊框架，或如果您已逐步執行函式的結束代碼時，就會發生這個錯誤。
 
-之前已設定的堆疊框架評估運算式之前，請逐步初構程式碼。
+逐步執行初構程式碼，直到在評估運算式之前設定堆疊框架為止。
 
-此錯誤是與 can0065 相同。
+此錯誤與 CAN0065 相同。

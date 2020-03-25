@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398117"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213547"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 函式
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -29,28 +29,28 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>參數
 
-*module*<br/>
-A[模組](module-class.md)。
+*name*<br/>
+[模組](module-class.md)。
 
 *serverName*<br/>
-名稱參數所指定的模組中的 class factory 的子集*模組*。
+參數*模組*所指定的模組中，class factory 子集的名稱。
 
 *forceTerminate*<br/>
-**true**終止類別處理站，不論它們是作用中;**false**未終止的 class factory，如果任何 factory 已啟用。
+**true**表示終止 class factory，不論它們是否為作用中;**false**表示如果有任何處理站在使用中，則不會終止 class factory。
 
 ## <a name="return-value"></a>傳回值
 
-**真**終止，否則所有的 class factory 一樣**false**。
+如果所有 class factory 都已終止，則為**true** ;否則**為 false**。
 
 ## <a name="remarks"></a>備註
 
-關閉指定的模組中的 class factory。
+關閉指定模組中的 class factory。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標頭：** module. h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間：** Microsoft：： WRL：:D etails
 
 ## <a name="see-also"></a>另請參閱
 

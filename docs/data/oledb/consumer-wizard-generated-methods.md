@@ -4,18 +4,18 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707719"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211506"
 ---
 # <a name="consumer-wizard-generated-methods"></a>消費者精靈產生的方法
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍能手動新增功能。
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。
 
 ::: moniker-end
 
@@ -27,7 +27,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 - `CloseAll` 會關閉所有開啟的資料列集，並釋出所有的命令執行。
 
-- `OpenAll` 會呼叫 `OpenRowset` 來開啟消費者的一或多個資料列集。
+- `OpenRowset` 會呼叫 `OpenAll` 來開啟消費者的一或多個資料列集。
 
 - `GetRowsetProperties` 會擷取設定屬性可以使用之資料列集屬性集的指標。
 
@@ -80,7 +80,7 @@ int main(int argc, char* argv[])
 
 如果您定義 `HasBookmark` 方法，`OpenAll` 程式碼會設定 `DBPROP_IRowsetLocate` 屬性；請確定您只有在提供者支援該屬性時，才執行此操作。
 
-## <a name="openrowset"></a>OpenRowset
+## <a name="openrowset"></a>[OpenRowset]
 
 ```cpp
 // OLE DB Template version:

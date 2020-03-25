@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-ms.openlocfilehash: d8e13bcc03a02fd9dbc739566a92025a7b97d598
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30680f5b26f3be5e7f9b48d18e82fca42ed65493
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359705"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192935"
 ---
 # <a name="project-build-error-prj0002"></a>專案建置錯誤 PRJ0002
 
-> 從傳回的錯誤結果 '*命令列*'。
+> 從 '*命令列*' 傳回的錯誤結果。
 
-命令，*命令列*，其中的格式，從使用者輸入中**屬性頁**對話方塊中，傳回錯誤碼，但沒有資訊會出現在**輸出**視窗.
+從 [**屬性頁**] 對話方塊中的使用者輸入所形成的命令*行*，會傳回錯誤碼，但**輸出**視窗中不會顯示任何資訊。
 
-此錯誤的解決方法取決於哪一項工具會產生錯誤。 MIDL，您會了解可能的問題出在哪裡，如果 /o （重新導向的輸出） 定義。
+此錯誤的解決方式取決於產生錯誤的工具。 針對 MIDL，如果已定義/o （重新導向輸出），您將會瞭解發生錯誤的原因。
 
-批次檔，例如自訂建置步驟或建置事件，不是失敗狀況的相關資訊也可能造成此錯誤的原因。
+無法取得失敗狀況相關資訊的批次檔（例如自訂群組建步驟或組建事件）也可能是此錯誤的原因。

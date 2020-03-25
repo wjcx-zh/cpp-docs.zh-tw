@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - U1001
 ms.assetid: 5d7da559-6cbd-44d6-848c-aaf54cae0d1a
-ms.openlocfilehash: bfe2edf9c57eda073826a8c161ae0c358f3a6232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb39d9080fdceb1ab26c32e9aedc654323581eb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378449"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173448"
 ---
 # <a name="nmake-fatal-error-u1001"></a>NMAKE 嚴重錯誤 U1001
 
-語法錯誤： 不合法的字元 'character' 在巨集
+語法錯誤：宏中有不合法的字元 ' character '
 
-指定的字元會出現在巨集中，但不是字母、 數字或底線。
+指定的字元會出現在宏中，但不是字母、數位或底線。
 
-此錯誤可能被因遺漏冒號巨集展開中：
+這個錯誤可能是宏展開中遺漏冒號所造成：
 
 ```
 syntax error : illegal character '=' in macro

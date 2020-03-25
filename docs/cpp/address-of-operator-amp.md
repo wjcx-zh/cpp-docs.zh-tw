@@ -1,5 +1,5 @@
 ---
-title: 傳址運算子： &amp;
+title: Address 運算子： &amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385020"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181599"
 ---
-# <a name="address-of-operator-amp"></a>傳址運算子： &amp;
+# <a name="address-of-operator-amp"></a>Address 運算子： &amp;
 
 ## <a name="syntax"></a>語法
 
@@ -25,13 +25,13 @@ ms.locfileid: "62385020"
 
 ## <a name="remarks"></a>備註
 
-一元傳址運算子 (**&**) 會採用其運算元的位址。 傳址運算子的運算元可以是函式指示項或左值，指定不是位元欄位的物件。
+一元傳址運算子（ **&** ）會採用其運算元的位址。 傳址運算子的運算元可以是函式指示項或左值，指定不是位欄位的物件。
 
 傳址運算子僅適用於基本、結構、類別或等位型別是在檔案範圍層級宣告的變數，或是註標的陣列參考。 在這些運算式中，未包含傳址運算子的常數運算式可以在傳址運算式中進行加法或減法運算。
 
-套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元為類型**char**，運算式的結果屬於類型指標**char**。 傳址運算子套用至**const**或是**volatile**物件，會評估為`const type *`或`volatile type *`，其中**類型**是原始的型別物件。
+套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元的類型為**char**，則運算式的結果會是**char**的類型指標。 套用至**const**或**volatile**物件的位址-運算子會評估為 `const type *` 或 `volatile type *`，其中**type**是原始物件的類型。
 
-當傳址運算子套用到限定名稱時，結果會取決於是否*限定名稱*指定靜態成員。 如果是，則結果為成員宣告中所指定類型的指標。 如果在成員不是靜態的結果是成員的指標*名稱*所表示的類別*限定類別名稱*。 (請參閱[主要運算式](../cpp/primary-expressions.md)如需詳細資訊*限定類別名稱*。)下列程式碼片段將示範成員是否為靜態的結果差異：
+將 address 運算子套用至限定名稱時，其結果取決於*限定名稱*是否指定靜態成員。 如果是，則結果為成員宣告中所指定類型的指標。 如果成員不是靜態的，則結果會是以*限定類別名稱*指示之類別成員*名稱*的指標。 （如需*限定類別名稱*的詳細資訊，請參閱[主要運算式](../cpp/primary-expressions.md)）。下列程式碼片段顯示結果的不同之處，視成員是否為靜態而定：
 
 ```cpp
 // expre_Address_Of_Operator.cpp
@@ -51,9 +51,9 @@ int main() {
 
 在這個範例中，因為 `&PTM::fValue` 是靜態成員，所以運算式 `float *` 會產生 `float PTM::*` 類型而不是 `fValue` 類型。
 
-只有在清楚知道所參考的函式版本時，才會採用多載函式的位址。 請參閱[函式多載](function-overloading.md)濆爧髍孮特定位址的相關資訊的多載函式。
+只有在清楚知道所參考的函式版本時，才會採用多載函式的位址。 如需如何取得特定多載函式之位址的詳細資訊，請參閱[函數](function-overloading.md)多載。
 
-將傳址運算子套用至參考類型所產生的結果，與將運算子套用至參考繫結所在的物件產生的結果相同。 例如: 
+將傳址運算子套用至參考類型所產生的結果，與將運算子套用至參考繫結所在的物件產生的結果相同。 例如：
 
 ## <a name="example"></a>範例
 
@@ -72,7 +72,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 &d equals &rd
@@ -99,7 +99,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 25

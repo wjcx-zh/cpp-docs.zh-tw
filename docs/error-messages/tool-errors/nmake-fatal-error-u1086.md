@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - U1086
 ms.assetid: 6d3cd68a-ead6-4a6d-a205-01324785de7e
-ms.openlocfilehash: 2b0768697821b732a918403fedb463bdb127c54b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 166e5b49f765bef4145fe966577dfbaac228ca39
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399911"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193351"
 ---
 # <a name="nmake-fatal-error-u1086"></a>NMAKE 嚴重錯誤 U1086
 
 **推斷規則不能有相依性**
 
-冒號 (**:**) 中的推斷規則後面必須接著其中一種：
+推斷規則中的冒號（ **：** ）後面必須接著下列其中一項：
 
-- 新行字元
+- 新行字元 (Newline Character)
 
-- 以分號 (**;**)，它後面可以接著命令
+- 分號（ **;** ），後面可以接著命令
 
-- 數字符號 (**#**)，這可以後面加上註解
+- 數位記號（ **#** ），後面可以加上批註

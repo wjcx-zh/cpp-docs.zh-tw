@@ -2,16 +2,16 @@
 title: C++/CLI 工作
 ms.date: 11/04/2016
 ms.assetid: 5851b113-91f9-4062-9427-c0669f333636
-ms.openlocfilehash: a3cd7ef99511c3ad2dc6e14d0d5374a86ab3a85f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb11d774557a72c167639e2e809c115bd66374cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208847"
 ---
 # <a name="ccli-tasks"></a>C++/CLI 工作
 
-在本節中的文章，文件會示範如何使用各種功能的C++/CLI。
+本檔的這一節中的文章說明如何使用/Cli 的C++各種功能
 
 ## <a name="in-this-section"></a>本節內容
 

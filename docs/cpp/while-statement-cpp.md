@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 669618e9807109be18117968b1f5b6f49ec15e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325412"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187319"
 ---
 # <a name="while-statement-c"></a>while 陳述式 (C++)
 
-執行*陳述式*之前重複*運算式*評估為零。
+重複執行*語句*，直到*expression*評估為零為止。
 
 ## <a name="syntax"></a>語法
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>備註
 
-測試*運算式*迴圈; 每次執行之前將因此**雖然**迴圈會執行零次以上。 *運算式*必須是整數類資料類型、 指標類型，或類別類型，可明確轉換為整數或指標類型。
+*運算式*的測試會在每次執行迴圈之前進行;因此， **while**迴圈會執行零次或多次。 *運算式*必須是整數類資料類型、指標類型，或是明確轉換成整數或指標類型的類別類型。
 
-A**雖然**迴圈也可能終止時[中斷](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[傳回](../cpp/return-statement-cpp.md)陳述式內執行主體。 使用[繼續](../cpp/continue-statement-cpp.md)終止目前的反覆項目，而不結束**雖然**迴圈。 **繼續**會將控制項傳遞到下一個反覆運算**雖然**迴圈。
+**While**迴圈也可以在語句主體中執行[break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)或[return](../cpp/return-statement-cpp.md)時終止。 使用 [[繼續](../cpp/continue-statement-cpp.md)] 終止目前的反復專案，而不結束**while**迴圈。 **continue**會將控制權傳遞至**while**迴圈的下一個反復專案。
 
-下列程式碼會使用**雖然**迴圈修剪尾端底線從字串：
+下列程式碼會使用**while**迴圈來修剪字串尾端的底線：
 
 ```cpp
 // while_statement.cpp

@@ -1,21 +1,21 @@
 ---
-title: range (C++ COM 屬性)
+title: range （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214613"
 ---
 # <a name="range-c"></a>range (C++)
 
-針對在執行時間設定其值的引數或欄位, 指定允許的值範圍。
+針對在執行時間設定其值的引數或欄位，指定允許的值範圍。
 
 ## <a name="syntax"></a>語法
 
@@ -57,10 +57,10 @@ __interface ICustom {
 
 |||
 |-|-|
-|**適用於**|介面方法, 介面參數|
+|**適用於**|介面方法，介面參數|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

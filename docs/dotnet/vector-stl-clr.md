@@ -91,12 +91,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 5b16319c17b5f5681f6417d8732931da1974b66b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bbd4d7b6e7e7668100b2694fdcf3b785d7681ca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445545"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208269"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -215,7 +215,7 @@ template<typename Value>
 
 ## <a name="members"></a>成員
 
-## <a name="assign"></a>vector：： assign （STL/CLR）
+## <a name="vectorassign-stlclr"></a><a name="assign"></a>vector：： assign （STL/CLR）
 
 取代所有項目。
 
@@ -296,7 +296,7 @@ a b
 a b c
 ```
 
-## <a name="at"></a>vector：： at （STL/CLR）
+## <a name="vectorat-stlclr"></a><a name="at"></a>vector：： at （STL/CLR）
 
 存取指定位置的項目。
 
@@ -348,7 +348,7 @@ a b c
 a x c
 ```
 
-## <a name="back"></a>vector：： back （STL/CLR）
+## <a name="vectorback-stlclr"></a><a name="back"></a>vector：： back （STL/CLR）
 
 存取最後一個項目。
 
@@ -399,7 +399,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a>vector：： back_item （STL/CLR）
+## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>vector：： back_item （STL/CLR）
 
 存取最後一個項目。
 
@@ -450,7 +450,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a>vector：： begin （STL/CLR）
+## <a name="vectorbegin-stlclr"></a><a name="begin"></a>vector：： begin （STL/CLR）
 
 指定受控制序列的開頭。
 
@@ -505,7 +505,7 @@ a b c
 x y c
 ```
 
-## <a name="capacity"></a>vector：：容量（STL/CLR）
+## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>vector：：容量（STL/CLR）
 
 報告容器配置儲存區的大小。
 
@@ -555,7 +555,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="clear"></a>vector：： clear （STL/CLR）
+## <a name="vectorclear-stlclr"></a><a name="clear"></a>vector：： clear （STL/CLR）
 
 移除所有項目。
 
@@ -612,7 +612,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a>vector：： const_iterator （STL/CLR）
+## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>vector：： const_iterator （STL/CLR）
 
 用於受控制序列的常數迭代器類型。
 
@@ -653,7 +653,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a>vector：： const_reference （STL/CLR）
+## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>vector：： const_reference （STL/CLR）
 
 項目的常數參考類型。
 
@@ -697,7 +697,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a>vector：： const_reverse_iterator （STL/CLR）
+## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>vector：： const_reverse_iterator （STL/CLR）
 
 受控制序列的常數反向反覆運算器類型。
 
@@ -739,7 +739,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a>vector：:d ifference_type （STL/CLR）
+## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>vector：:d ifference_type （STL/CLR）
 
 兩個元素之間帶正負號距離的類型。
 
@@ -793,7 +793,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a>vector：： empty （STL/CLR）
+## <a name="vectorempty-stlclr"></a><a name="empty"></a>vector：： empty （STL/CLR）
 
 測試項目是否不存在。
 
@@ -844,7 +844,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a>vector：： end （STL/CLR）
+## <a name="vectorend-stlclr"></a><a name="end"></a>vector：： end （STL/CLR）
 
 指定受控制序列的結尾。
 
@@ -900,7 +900,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a>vector：： erase （STL/CLR）
+## <a name="vectorerase-stlclr"></a><a name="erase"></a>vector：： erase （STL/CLR）
 
 移除位於指定位置的項目。
 
@@ -979,7 +979,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a>vector：： front （STL/CLR）
+## <a name="vectorfront-stlclr"></a><a name="front"></a>vector：： front （STL/CLR）
 
 存取第一個項目。
 
@@ -1030,7 +1030,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a>vector：： front_item （STL/CLR）
+## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>vector：： front_item （STL/CLR）
 存取第一個項目。
 
 ### <a name="syntax"></a>語法
@@ -1080,7 +1080,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a>vector：： generic_container （STL/CLR）
+## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>vector：： generic_container （STL/CLR）
 容器的泛型介面類別型。
 
 ### <a name="syntax"></a>語法
@@ -1145,7 +1145,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a>vector：： generic_iterator （STL/CLR）
+## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>vector：： generic_iterator （STL/CLR）
 
 用於容器之泛型介面的反覆運算器類型。
 
@@ -1203,7 +1203,7 @@ a b c
 a a c
 ```
 
-## <a name="generic_reverse_iterator"></a>vector：： generic_reverse_iterator （STL/CLR）
+## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>vector：： generic_reverse_iterator （STL/CLR）
 要與容器的泛型介面搭配使用的反向反覆運算器類型。
 
 ### <a name="syntax"></a>語法
@@ -1259,7 +1259,7 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a>vector：： generic_value （STL/CLR）
+## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>vector：： generic_value （STL/CLR）
 
 要與容器的泛型介面搭配使用之元素的類型。
 
@@ -1315,7 +1315,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a>vector：： insert （STL/CLR）
+## <a name="vectorinsert-stlclr"></a><a name="insert"></a>vector：： insert （STL/CLR）
 
 在指定的位置加入專案。
 
@@ -1424,7 +1424,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a>vector：： iterator （STL/CLR）
+## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>vector：： iterator （STL/CLR）
 
 受控制序列之迭代器的類型。
 
@@ -1473,7 +1473,7 @@ a b c
 x b c
 ```
 
-## <a name="op_as"></a>vector：： operator = （STL/CLR）
+## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>vector：： operator = （STL/CLR）
 
 取代受控制的序列。
 
@@ -1526,7 +1526,7 @@ a b c
 a b c
 ```
 
-## <a name="op"></a>vector：： operator （STL/CLR）
+## <a name="vectoroperatorstlclr"></a><a name="op"></a>vector：： operator （STL/CLR）
 
 存取指定位置的項目。
 
@@ -1578,7 +1578,7 @@ a b c
 a x c
 ```
 
-## <a name="pop_back"></a>vector：:p op_back （STL/CLR）
+## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>vector：:p op_back （STL/CLR）
 
 移除最後一個元素。
 
@@ -1625,7 +1625,7 @@ a b c
 a b
 ```
 
-## <a name="push_back"></a>vector：:p ush_back （STL/CLR）
+## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>vector：:p ush_back （STL/CLR）
 
 加入新的最後一個元素。
 
@@ -1665,7 +1665,7 @@ int main()
 a b c
 ```
 
-## <a name="rbegin"></a>vector：： rbegin （STL/CLR）
+## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>vector：： rbegin （STL/CLR）
 
 指定反向受控制序列的開頭。
 
@@ -1720,7 +1720,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a>vector：： reference （STL/CLR）
+## <a name="vectorreference-stlclr"></a><a name="reference"></a>vector：： reference （STL/CLR）
 
 項目的參考類型。
 
@@ -1775,7 +1775,7 @@ a b c
 A B C
 ```
 
-## <a name="rend"></a>vector：： rend （STL/CLR）
+## <a name="vectorrend-stlclr"></a><a name="rend"></a>vector：： rend （STL/CLR）
 
 指定反向受控制序列的結尾。
 
@@ -1831,7 +1831,7 @@ a b c
 y x c
 ```
 
-## <a name="reserve"></a>vector：： reserve （STL/CLR）
+## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>vector：： reserve （STL/CLR）
 
 確保容器的成長容量下限。
 
@@ -1886,7 +1886,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="resize"></a>vector：： resize （STL/CLR）
+## <a name="vectorresize-stlclr"></a><a name="resize"></a>vector：： resize （STL/CLR）
 
 變更項目的數目。
 
@@ -1946,7 +1946,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a>vector：： reverse_iterator （STL/CLR）
+## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>vector：： reverse_iterator （STL/CLR）
 
 受控制序列的反向迭代器類型。
 
@@ -1995,7 +1995,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a>vector：： size （STL/CLR）
+## <a name="vectorsize-stlclr"></a><a name="size"></a>vector：： size （STL/CLR）
 
 計算元素的數目。
 
@@ -2048,7 +2048,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a>vector：： size_type （STL/CLR）
+## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>vector：： size_type （STL/CLR）
 
 兩個項目之間帶正負號距離的類型。
 
@@ -2093,7 +2093,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a>vector：： swap （STL/CLR）
+## <a name="vectorswap-stlclr"></a><a name="swap"></a>vector：： swap （STL/CLR）
 
 交換兩個容器的內容。
 
@@ -2157,7 +2157,7 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a>vector：： to_array （STL/CLR）
+## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>vector：： to_array （STL/CLR）
 
 將受控制序列複製到新的陣列。
 
@@ -2206,7 +2206,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a>vector：： value_type （STL/CLR）
+## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>vector：： value_type （STL/CLR）
 
 元素類型。
 
@@ -2251,7 +2251,7 @@ int main()
 a b c
 ```
 
-## <a name="vector"></a>vector：： vector （STL/CLR）
+## <a name="vectorvector-stlclr"></a><a name="vector"></a>vector：： vector （STL/CLR）
 
 建構容器物件。
 
@@ -2396,7 +2396,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="op_neq"></a>operator！ = （vector）（STL/CLR）
+## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>operator！ = （vector）（STL/CLR）
 
 向量不等於比較。
 
@@ -2465,7 +2465,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>運算子&lt; （vector）（STL/CLR）
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>運算子&lt; （vector）（STL/CLR）
 
 小於比較的向量。
 
@@ -2534,7 +2534,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>運算子&lt;= （vector）（STL/CLR）
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>運算子&lt;= （vector）（STL/CLR）
 
 向量小於或等於比較。
 
@@ -2603,7 +2603,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>operator = = （vector）（STL/CLR）
+## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>operator = = （vector）（STL/CLR）
 
 向量相等比較。
 
@@ -2672,7 +2672,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>運算子&gt; （vector）（STL/CLR）
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>運算子&gt; （vector）（STL/CLR）
 
 向量大於比較。
 
@@ -2741,7 +2741,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>運算子&gt;= （vector）（STL/CLR）
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>運算子&gt;= （vector）（STL/CLR）
 
 向量大於或等於比較。
 

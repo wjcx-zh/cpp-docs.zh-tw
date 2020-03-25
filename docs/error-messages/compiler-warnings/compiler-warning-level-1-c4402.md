@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4402
 ms.assetid: 2aaecfae-1e79-4787-87e8-0973f7ec0efe
-ms.openlocfilehash: 8d76c108213776d8502ce9152433df22cf6925c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b55568c42f2389f880357ab1ba72b68e6b40ee6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162604"
 ---
 # <a name="compiler-warning-level-1-c4402"></a>編譯器警告 (層級 1) C4402
 
 必須使用 PTR 運算子
 
-類型用在沒有參照或內嵌組譯碼中的型別轉型時 PTR 運算子的運算元。
+當參考或轉換成內嵌組解碼程式碼中的類型時，不含 PTR 運算子的運算元會使用類型。
 
 編譯器會假設 PTR 運算子。

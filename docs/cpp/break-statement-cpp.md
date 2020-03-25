@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 3dda0b19fffaaf725ab363a0c4fe70d2ca54e3f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267711"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190478"
 ---
 # <a name="break-statement-c"></a>break 陳述式 (C++)
 
-**中斷**陳述式會結束執行的最接近的封閉式迴圈或條件出現的陳述式。 控制會傳遞至陳述式結尾之後的陳述式 (如果有的話)。
+**Break**語句會結束執行最近的封閉迴圈或其出現的條件陳述式。 控制會傳遞至陳述式結尾之後的陳述式 (如果有的話)。
 
 ## <a name="syntax"></a>語法
 
@@ -25,17 +25,17 @@ break;
 
 ## <a name="remarks"></a>備註
 
-**中斷**陳述式搭配條件式[切換](../cpp/switch-statement-cpp.md)陳述式與[請勿](../cpp/do-while-statement-cpp.md)，[如](../cpp/for-statement-cpp.md)，和[時](../cpp/while-statement-cpp.md)迴圈陳述式。
+**Break**語句搭配條件式[switch](../cpp/switch-statement-cpp.md)語句和[do](../cpp/do-while-statement-cpp.md)、 [for](../cpp/for-statement-cpp.md)和[while](../cpp/while-statement-cpp.md)迴圈語句使用。
 
-在 **切換**陳述式**中斷**陳述式會執行下一個陳述式外部程式**切換**陳述式。 不含**中斷**陳述式中，每個陳述式，從相符**案例**結尾標籤**切換**陳述式，包括**預設**子句，會執行。
+在**switch**語句中， **break**語句會導致程式在**switch**語句外執行下一個語句。 若沒有**break**語句，則會執行符合的**case**標籤到**switch**語句結尾的每個語句（包括**default**子句）。
 
-在迴圈中，**中斷**陳述式會結束執行的最接近的封閉式**不要**，**如**，或**雖然**陳述式。 控制會傳遞到已結束之陳述式的下一個陳述式 (如果有的話)。
+在迴圈中， **break**語句會結束執行最接近的封閉式**do**、 **for**或**while**語句。 控制會傳遞到已結束之陳述式的下一個陳述式 (如果有的話)。
 
-在巢狀陳述式中，**中斷**陳述式只會結束**進行**，**如**，**切換**，或**時**立即將它關閉的陳述式。 您可以使用**會傳回**或是**goto**陳述式將控制項從更深的巢狀結構。
+在 nested 語句中， **break**語句只會結束立即將它括住的**do**、 **for**、 **switch**或**while**語句。 您可以使用**return**或**goto**語句，從更深層的嵌套結構中轉移控制權。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**中斷**中的陳述式**如**迴圈。
+下列程式碼顯示如何在**for**迴圈中使用**break**語句。
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-下列程式碼示範如何使用**中斷**中**雖然**迴圈並**執行**迴圈。
+下列程式碼顯示如何在**while**迴圈和**do**迴圈中使用**break** 。
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-下列程式碼示範如何使用**中斷**switch 陳述式中。 您必須使用**中斷**在所有情況下，如果您要個別; 處理每個案例中，如果您不使用**中斷**，執行程式碼便會略過下一個案例。
+下列程式碼顯示如何在 switch 語句中使用**break** 。 如果您想要個別處理每個案例，則必須在每個案例中使用**break** ;如果您未使用**break**，則程式碼執行會落在下一個案例中。
 
 ```cpp
 #include <iostream>

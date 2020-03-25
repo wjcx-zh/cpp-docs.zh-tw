@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210765"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
 
@@ -91,7 +91,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 資料來源物件上的強制介面和枚舉器上的選擇性介面。
 
-## <a name="idbinitializeimpl"></a>IDBInitializeImpl：： IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl：： IDBInitializeImpl
 
 建構函式。
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 初始化所有資料成員。
 
-## <a name="initialize"></a>IDBInitializeImpl：： Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl：： Initialize
 
 您可以透過準備資料來源物件的屬性支援來初始化該物件。
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 請參閱 OLE DB 程式設計*人員參考*中的[IDBInitialize：： Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 。
 
-## <a name="uninitialize"></a>IDBInitializeImpl：：解除初始化
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl：：解除初始化
 
 藉由釋放內部資源（例如屬性支援），將資料來源物件置於未初始化的狀態。
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 請參閱 OLE DB 程式設計*人員參考*中的[IDBInitialize：：解除初始化](/previous-versions/windows/desktop/ms719648(v=vs.85))。
 
-## <a name="dwstatus"></a>IDBInitializeImpl：： m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl：： m_dwStatus
 
 資料來源旗標。
 
@@ -161,7 +161,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|設定資料來源物件是否需要持續性（也就是，如果有變更的話）。|
 |`DSF_INITIALIZED`|設定資料來源是否已初始化。|
 
-## <a name="pcutlpropinfo"></a>IDBInitializeImpl：： m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl：： m_pCUtlPropInfo
 
 DB 屬性資訊的執行物件指標。
 

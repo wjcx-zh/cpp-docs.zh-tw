@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361862"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211298"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 類別
 
-泛型類別，可讓您指定的結構描述資料列限制。
+泛型類別，可讓您指定架構資料列集的限制。
 
 ## <a name="syntax"></a>語法
 
@@ -35,17 +35,17 @@ class CRestrictions :
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-用來存取子類別。
+用於存取子的類別。
 
 *nRestrictions*<br/>
-結構描述資料列的限制資料行數目。
+架構資料列集的限制資料行數目。
 
 *pguid*<br/>
-結構描述的 GUID 指標。
+架構之 GUID 的指標。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atldbsch.h
+**標頭：** atldbsch.h。h
 
 ## <a name="members"></a>成員
 
@@ -53,11 +53,11 @@ class CRestrictions :
 
 |||
 |-|-|
-|[開啟](#open)|傳回結果集，根據使用者提供的限制。|
+|[開啟](#open)|根據使用者提供的限制傳回結果集。|
 
-## <a name="open"></a> CRestrictions::Open
+## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions：： Open
 
-傳回結果集，根據使用者提供的限制。
+根據使用者提供的限制傳回結果集。
 
 ### <a name="syntax"></a>語法
 
@@ -75,27 +75,27 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*session*<br/>
-[in]指定用來連接到資料來源的現有工作階段物件。
+*本次*<br/>
+在指定用來連接到資料來源的現有會話物件。
 
 *lpszParam*<br/>
-[in]在 結構描述資料列上指定的限制。
+在指定架構資料列集的限制。
 
 *bBind*<br/>
-[in]指定是否要自動繫結資料行對應。 預設值是 **，則為 true**，因而導致自動繫結的資料行對應。 設定*bBind*要**false**可防止自動繫結的資料行對應，讓您以手動方式可以繫結。 （手動繫結是 OLAP 使用者特別感興趣的）。
+在指定是否要自動系結資料行對應。 預設值為**true**，這會自動系結資料行對應。 將*bBind*設定為**false**可防止自動系結資料行對應，讓您可以手動系結。 （對 OLAP 使用者而言，手動系結特別重要）。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-您可以指定最多七個限制的結構描述資料列集。
+您最多可以在架構資料列集上指定七個限制。
 
-請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))如每個結構描述資料列集上定義的限制相關資訊。
+如需每個架構資料列集上定義之限制的相關資訊，請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4272
+title: 編譯器警告 (層級 1) C4272
 ms.date: 11/04/2016
 f1_keywords:
 - C4272
 helpviewer_keywords:
 - C4272
 ms.assetid: 0d6c1de4-2eef-42c4-b861-c221f8b495ef
-ms.openlocfilehash: 13c56c2261cd069e7edec63921c198e2bee56c95
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 747b9e60ad2b8b0036c6eac50d44c2d70277384f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626690"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163119"
 ---
-# <a name="compiler-warning-level-1-c4272"></a>編譯器警告（層級1） C4272
+# <a name="compiler-warning-level-1-c4272"></a>編譯器警告 (層級 1) C4272
 
 ' function '：標記為 __declspec （dllimport）;匯入函數時，必須指定原生呼叫慣例。
 

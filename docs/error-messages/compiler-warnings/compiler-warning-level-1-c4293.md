@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4293
+title: 編譯器警告 (層級 1) C4293
 ms.date: 11/04/2016
 f1_keywords:
 - C4293
 helpviewer_keywords:
 - C4293
 ms.assetid: babecd96-eb51-41a5-9835-462c7a46dbad
-ms.openlocfilehash: ee03d4a15b03ba48a3e9a04d6387d8482973adac
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 6f224996904c583001496e04c020de97bc932738
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626627"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175684"
 ---
-# <a name="compiler-warning-level-1-c4293"></a>編譯器警告（層級1） C4293
+# <a name="compiler-warning-level-1-c4293"></a>編譯器警告 (層級 1) C4293
 
 ' operator '：移位元數目為負值或太大，未定義的行為
 

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1305
 ms.assetid: 1629c850-e2db-4678-83d8-9bfc85323bc5
-ms.openlocfilehash: 988842a0d5e8002ffd1478a2e10a8c88ee971911
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad00eb3d95e9f09d4f84daefb7e2a87fd1a3abf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397493"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203355"
 ---
 # <a name="fatal-error-c1305"></a>嚴重錯誤 C1305
 
-分析資料庫 'pgd_file' 適用於不同的架構
+分析資料庫 ' pgd_file ' 適用于不同的架構
 
-針對其他平台已傳遞至 /ltcg: pginstrument 作業所產生的.pgd 檔[/ltcg: pgoptimize](../../build/reference/ltcg-link-time-code-generation.md) 。 [特性指引最佳化](../../build/profile-guided-optimizations.md)適用於 x86 和 x64 平台。 不過，以一個平台的 /ltcg: pginstrument 作業產生的.pgd 檔無效，無法做為輸入至 /ltcg: pgoptimize，適用於不同平台。
+從另一個平臺的/LTCG： PGINSTRUMENT 作業產生的 .pgd 檔案已傳遞至[/ltcg： PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) 。 特性[指引優化](../../build/profile-guided-optimizations.md)適用于 x86 和 x64 平臺。 不過，使用一個平臺的/LTCG： PGINSTRUMENT 作業所產生的 .pgd 檔案，對於不同平臺的/LTCG： PGOPTIMIZE 輸入無效。
 
-若要解決這個錯誤，只傳遞使用 /ltcg: pginstrument 至 /ltcg: pgoptimize 相同的平台上建立的.pgd 檔。
+若要解決這個錯誤，請只將以/LTCG： PGINSTRUMENT 建立的 .pgd 檔案，傳遞至同一個平臺上的/LTCG： PGOPTIMIZE。

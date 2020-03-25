@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3851
 ms.assetid: da30c21c-33aa-4439-8fb3-2f5021ea4985
-ms.openlocfilehash: 52c4f3a393ffaf2b61a65c8e2e0dcc8efac08288
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97d9ef1eeeffa0e5a63d2c8ae2428a3fad0ff238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380938"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165574"
 ---
 # <a name="compiler-error-c3851"></a>編譯器錯誤 C3851
 
-> '*char*': 通用字元名稱不能指定基礎字元集中的字元
+> '*char*'：通用字元名稱不能指定基底字元集中的字元
 
 ## <a name="remarks"></a>備註
 
-在編譯為 C++ 的程式碼中，您無法在字串或字元常值之外使用代表基礎來源字元集的通用字元名稱。 如需詳細資訊，請參閱 [Character Sets](../../cpp/character-sets.md)。 在編譯為 C 程式碼，您無法使用通用字元名稱的字元範圍 0x20 到 0x7f 除外 0x24 （' $'） 中 0x40 ('\@')，或 0x60 ('\`')。
+在編譯為 C++ 的程式碼中，您無法在字串或字元常值之外使用代表基礎來源字元集的通用字元名稱。 如需詳細資訊，請參閱 [Character Sets](../../cpp/character-sets.md)。 在編譯為 C 的程式碼中，除了0x24 （' $ '）、0x40 （'\@'）或0x60 （'\`'）之外，您不能在包含 0x20-0x7f （含）範圍的字元中使用通用字元名稱。
 
 ## <a name="example"></a>範例
 

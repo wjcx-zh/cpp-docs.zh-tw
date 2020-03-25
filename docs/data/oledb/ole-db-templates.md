@@ -1,19 +1,19 @@
 ---
-title: OLE DB 樣板
+title: OLE DB 範本
 ms.date: 05/09/2019
 f1_keywords:
 - vc.templates.ole
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 6e98cef9317e92651d86ef9fec5ac451d6f2d428
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525332"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209868"
 ---
-# <a name="ole-db-templates"></a>OLE DB 樣板
+# <a name="ole-db-templates"></a>OLE DB 範本
 
 OLE DB 範本讓 OLE DB 資料存取更容易。 Visual C++ 提供範本類別來實作許多常用的 OLE DB 介面。 您可以使用 Visual C++ 消費者範本來撰寫 OLE DB 用戶端 (消費者) 應用程式，以及使用提供者範本來撰寫伺服器 (提供者) 應用程式。
 

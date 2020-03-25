@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209842"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>覆寫動態存取子
 
-當您使用動態存取子這類`CDynamicAccessor`，此命令`Open`方法會建立存取子，會自動根據開啟的資料列集的資料行資訊。 您可以覆寫動態存取子，來控制確切方式的資料行繫結。
+當您使用動態存取子（例如 `CDynamicAccessor`）時，命令 `Open` 方法會根據已開啟資料列集的資料行資訊，自動為您建立存取子。 您可以覆寫動態存取子，以精確控制資料行的系結方式。
 
-若要覆寫動態存取子，請傳遞**假**做為最後一個參數`CCommand::Open`方法。 這可防止`Open`自動建立存取子。 您可以接著呼叫`GetColumnInfo`並呼叫`AddBindEntry`您想要繫結每個資料行。 下列程式碼顯示如何執行此動作：
+若要覆寫動態存取子，請傳遞**false**做為 `CCommand::Open` 方法的最後一個參數。 這會防止 `Open` 自動建立存取子。 接著，您可以呼叫 `GetColumnInfo`，並針對您想要系結的每個資料行呼叫 `AddBindEntry`。 下列程式碼顯示如何執行此動作：
 
 ```cpp
 USES_CONVERSION;

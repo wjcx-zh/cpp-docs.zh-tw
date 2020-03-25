@@ -9,16 +9,16 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76279b24002460b51bc2f67d4395ff271752d964
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376454"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215172"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
 
-MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些`#include`中的陳述式`StdAfx.h`檔案：
+MFC 專案一律包含數個支援 windows 的標頭檔。 這些會透過 `StdAfx.h` 檔案中的 `#include` 語句來新增：
 
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
@@ -28,7 +28,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-標頭檔包含 MFC 通用值的符號 ID 值。 當您使用 MFC 專案中，將只適用這些符號。 `AFX_`首碼後面是標準的符號名稱前置詞。
+標頭檔包含 MFC 通用值的符號識別碼值。 只有當您在 MFC 專案中工作時，才可以使用這些符號。 `AFX_` 前置詞後面接著標準符號名稱首碼。
 
 |||
 |-|-|
@@ -85,7 +85,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDP_ASK_TO_SAVE|AFX_IDP_ASK_TO_UPDATE|
 |AFX_IDP_BAD_VERB|AFX_IDP_COMMAND_FAILURE|
 |AFX_IDP_DAO_BADBINDINFO|AFX_IDP_DAO_COLUMNUNAVAILABLE|
-|AFX_IDP_DAO_DFX_BIND|AFX_IDP_DAO_ENGINE_ INITIALIZATION|
+|AFX_IDP_DAO_DFX_BIND|AFX_IDP_DAO_ENGINE_ 初始化|
 |AFX_IDP_DAO_OBJECT_NOT_OPEN|AFX_IDP_DAO_ROWTOOSHORT|
 |AFX_IDP_DLL_BAD_VERSION|AFX_IDP_DLL_LOAD_FAILED|
 |AFX_IDP_E_BADFILEMODE|AFX_IDP_E_BADFILENAME|
@@ -99,7 +99,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDP_E_ILLEGALFUNCTIONCALL|AFX_IDP_E_ INVALIDCLIPBOARDFORMAT|
 |AFX_IDP_E_INVALIDFILEFORMAT|AFX_IDP_E_INVALIDPATTERNSTRING|
 |AFX_IDP_E_INVALIDPICTURE|AFX_IDP_E_ INVALIDPROPERTYARRAYINDEX|
-|AFX_IDP_E_INVALIDPROPERTYVALUE|AFX_IDP_E_INVALIDUSEOFNULL|
+|AFX_IDP_E_INVALIDPROPERTYVALUE|AFX_IDP_E_INVALIDUSEOFNull|
 |AFX_IDP_E_ NEEDPROPERTYARRAYINDEX|AFX_IDP_E_OUTOFMEMORY|
 |AFX_IDP_E_OUTOFSTACKSPACE|AFX_IDP_E_OVERFLOW|
 |AFX_IDP_E_PATHFILEACCESSERROR|AFX_IDP_E_PATHNOTTFOUND|
@@ -142,7 +142,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDP_SERVER_BUSY|AFX_IDP_SET_NOT_SUPPORTED|
 |AFX_IDP_STATIC_OBJECT|AFX_IDP_UNREG_DONE|
 |AFX_IDP_UNREG_FAILURE|AFX_IDR_PREVIEW_ACCEL|
-|AFX_IDS_ACTIVATE_VERB|AFX_IDS_ALL_FILES|
+|AFX_IDS_ACTI加值稅E_VERB|AFX_IDS_ALL_FILES|
 |AFX_IDS_ALLFILTER|AFX_IDS_APP_TITLE|
 |AFX_IDS_APP_TITLE_EMBEDDING|AFX_IDS_AUTO|
 |AFX_IDS_AUTOSAVE_RECOVERED|AFX_IDS_AUTOSAVE_RECOVERY_ASK_1|
@@ -152,7 +152,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|
-|AFX_IDS_CHECKLISTBOX_MIXED|取消核取 AFX_IDS_CHECKLISTBOX_|
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ 取消核取|
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|
@@ -180,7 +180,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDS_INVALID_DATETIMESPAN|AFX_IDS_ITALIC|
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|
-|AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI-FONT|
+|AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI-字型|
 |AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ 例外狀況|
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|
@@ -213,7 +213,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 
 ## <a name="mfc-database-programming"></a>MFC 資料庫程式設計
 
-此資料表中的符號只會在已經加入資料庫的支援時，出現在 MFC 專案中。 它們支援 MFC 連接到 SQL server 和資料庫程式設計。
+新增資料庫支援時，此資料表中的符號只會出現在 MFC 專案中。 它們支援 SQL server 與資料庫程式設計的 MFC 連接。
 
 |||
 |-|-|
@@ -221,7 +221,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDP_SQL_BOOKMARKS_ NOT_SUPPORTED|AFX_IDP_SQL_CONNECT_FAIL|
 |AFX_IDP_SQL_DATA_TRUNCATED|AFX_IDP_SQL_DYNAMIC_CURSOR_ NOT_SUPPORTED|
 |AFX_IDP_SQL_DYNASET_ NOT_SUPPORTED|AFX_IDP_SQL_EMPTY_COLUMN_LIST|
-|AFX_IDP_SQL_FIELD_NOT_FOUND|AFX_IDP_SQL_FILED_SCHEMA_ MISMATCH|
+|AFX_IDP_SQL_FIELD_NOT_FOUND|AFX_IDP_SQL_FILED_SCHEMA_ 不符|
 |AFX_IDP_SQL_ILLEGAL_MODE|AFX_IDP_SQL_INCORRECT_ODBC|
 |AFX_IDP_SQL_LOCK_MODE_ NOT_SUPPORTED|AFX_IDP_SQL_MULTIPLE_ ROWS_AFFECTED|
 |AFX_IDP_SQL_NO_CURRENT_RECORD|AFX_IDP_SQL_NO_DATA_FOUND|
@@ -234,9 +234,9 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 
 ## <a name="mfc-windows-programming"></a>MFC Windows 程式設計
 
-這些符號也是 MFC 支援檔案的一部分，但是它們可以支援標準的 Windows 應用程式函數和動作。 這些符號用於功能表。
+這些符號也是 MFC 支援檔案的一部分，但它們支援標準 Windows 應用程式函式和動作。 這些符號會與功能表搭配使用。
 
-當您正在使用中的功能表**功能表編輯器**，這些符號會出現在**屬性**常見的功能表命令相關聯的視窗。 比方說，如果您的應用程式**檔案**功能表，其中**結束**命令，命令將會是相關聯的符號 ID_APP_EXIT 中[屬性 視窗](/visualstudio/ide/reference/properties-window)。
+當您使用**功能表編輯器**中的功能表時，這些符號會出現在與一般功能表命令相關聯的 [**屬性**] 視窗中。 比方說，如果您的應用程式具有 [結束]**命令的**[檔案 **] 功能表，** 則該命令會與[屬性視窗](/visualstudio/ide/reference/properties-window)中的符號 ID_APP_EXIT 相關聯。
 
 ||||
 |-|-|-|
@@ -258,7 +258,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|
 |ID_FILE_SEND_MAIL|ID_FILE_UPDATE|ID_FORMAT_FONT|
 |ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|
-|ID_HELP+USING|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
+|ID_HELP + 使用|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
 |ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|

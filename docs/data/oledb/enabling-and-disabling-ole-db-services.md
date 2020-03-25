@@ -5,18 +5,18 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3016126d09b39ec74f4acb758a2176be05052648
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175338"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210960"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>啟用和停用 OLE DB 服務
 
-OLE DB 服務元件管理員比較屬性來判斷個別的服務元件是否可以用來滿足取用者要求的擴充的功能提供者支援取用者指定的屬性。 比方說，如果應用程式要求可捲動資料指標，提供者只支援順向資料指標服務 Component Manager 會使用用戶端資料指標引擎服務元件來提供可捲動的功能。 如果應用程式依賴預設提供者的資料列集上支援的擴充功能和應用程式未明確設定要求的功能，功能可能不會出現在資料列集傳回用戶端上的屬性資料指標引擎。 若要具互通性，應用程式應該一律設定屬性，以明確地要求 擴充的功能在需要時。
+OLE DB 服務元件管理員會將取用者所指定的屬性，與提供者所支援的屬性進行比較，以判斷是否可以使用個別的服務元件來滿足取用者要求的擴充功能。 例如，如果應用程式要求可滾動的資料指標，而提供者只支援順向資料指標，則服務元件管理員會使用用戶端資料指標引擎服務元件來提供可滾動的功能。 如果應用程式依賴提供者資料列集上預設支援的擴充功能，而應用程式未明確設定屬性來要求該功能，則此功能可能不會出現在用戶端所傳回的資料列集上資料指標引擎。 若要互通，應用程式應該一律設定屬性，以便在需要時明確要求擴充功能。
 
-在某些情況下，可能必須停用個別的 OLE DB 服務，適合搭配現有的應用程式，讓提供者的特性的相關假設。 OLE DB 服務提供停用個別的服務或所有服務，不論是根據連接的連接，或使用單一提供者的所有應用程式的功能。
+在某些情況下，可能需要停用個別的 OLE DB 服務，才能與對提供者特性的假設相關的現有應用程式順利運作。 OLE DB 服務可讓您停用個別服務或所有服務，不論是以連線為基礎，或使用單一提供者的所有應用程式。
 
 ## <a name="see-also"></a>另請參閱
 

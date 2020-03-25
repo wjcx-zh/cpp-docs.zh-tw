@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: db246cda79c778f37c5afbfda4a68c191c474e12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301622"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190491"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -50,7 +50,7 @@ if (condexpr1) statement1;
 
 **Bool**類型會參與整數提升。 **Bool**類型的 r 值可以轉換成**int**類型的 r 值，而 FALSE 會變成零，而 TRUE 則變成一個。 作為相異類型， **bool**會參與多載解析。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [內建類型](../cpp/fundamental-types-cpp.md)

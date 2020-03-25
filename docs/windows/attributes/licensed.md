@@ -1,21 +1,21 @@
 ---
-title: 授權 (C++ COM 屬性)
+title: 授權（C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514461"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214756"
 ---
 # <a name="licensed"></a>licensed
 
-表示它所套用的 COM 物件已獲得授權, 而且必須使用`IClassFactory2`來具現化。
+表示它所套用的 COM 物件已獲得授權，而且必須使用 `IClassFactory2`來具現化。
 
 ## <a name="syntax"></a>語法
 

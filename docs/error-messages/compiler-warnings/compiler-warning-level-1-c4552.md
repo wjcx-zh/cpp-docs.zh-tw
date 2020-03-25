@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4552
+title: 編譯器警告 (層級 1) C4552
 ms.date: 11/04/2016
 f1_keywords:
 - C4552
 helpviewer_keywords:
 - C4552
 ms.assetid: ebbbb5ee-1c19-45bd-b386-41a19630fc76
-ms.openlocfilehash: b9f7fcd5a1949082aad75407f230db2e32dddd67
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 8435abc60a7ba93800858b22cfd4c5e1778f8587
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186110"
 ---
-# <a name="compiler-warning-level-1-c4552"></a>編譯器警告（層級1） C4552
+# <a name="compiler-warning-level-1-c4552"></a>編譯器警告 (層級 1) C4552
 
 ' operator '：運算子沒有作用;具有副作用的預期運算子
 

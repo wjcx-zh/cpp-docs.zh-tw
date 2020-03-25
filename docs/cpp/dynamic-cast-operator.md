@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 0073aaa886bba33a0ec6c07fb89d6eee032765c8
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972225"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189490"
 ---
 # <a name="dynamic_cast-operator"></a>dynamic_cast 運算子
 
@@ -26,7 +26,7 @@ dynamic_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>備註
 
-`type-id` 必須是指標，或參考先前定義的類別類型或「void 的指標」。 如果 `type-id` 是指標，則 `expression` 類型必須是指標；或如果 `type-id` 是參考，則為左值 (l-value)。
+`type-id` 必須是指標，或參考先前定義的類別類型或「void 的指標」。 如果 `expression` 是指標，則 `type-id` 類型必須是指標；或如果 `type-id` 是參考，則為左值 (l-value)。
 
 如需靜態和動態轉型轉換之間的差異，以及何時適合使用各項的說明，請參閱[static_cast](../cpp/static-cast-operator.md) 。
 
@@ -291,7 +291,7 @@ in GlobalTest
 Can't cast to C
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [轉型運算子](../cpp/casting-operators.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

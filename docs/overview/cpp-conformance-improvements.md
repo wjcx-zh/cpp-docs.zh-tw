@@ -3,12 +3,12 @@ title: C++ 一致性改善
 ms.date: 03/16/2020
 description: Visual Studio 的 Microsoft C++ 正在向完全符合 C++20 語言標準邁進。
 ms.technology: cpp-language
-ms.openlocfilehash: d76a6dc4c5ad9cbf83befccfdd470ce755d0603c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 716b3d6bfd75444d1c701b7301b31f8b56eab3ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077432"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167754"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 一致性改善
 
@@ -164,7 +164,7 @@ int main()
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6)。 C++20 新增用來表示 UTF-8 字碼單位的新字元類型。 C++20 的 `u8` 字串常值具有類型 `const char8_t[N]` 而非 `const char[N]`，這是舊例。 [N2231](https://wg14.link/n2231) \(英文\) 已針對 C 標準建議類似的變更。 `char8_t`P1423r0[ 提供 ](https://wg21.link/p1423r0) \(英文\) 回溯相容性的補救建議。 在 Visual Studio 2019 16.1 版中，當您指定 `char8_t`/Zc:char8_t**編譯器選項時，Microsoft C++ 編譯器會新增** 支援。 未來還會支援 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)，其可透過 **/Zc:char8_t-** 還原成 C++17 行為。 驅動 IntelliSense 的 EDG 編譯器尚不支援它，所以您會看到假性的僅限 IntelliSense 錯誤，不會影響實際的編譯。
+[P0482r6](https://wg21.link/p0482r6)。 C++20 新增用來表示 UTF-8 字碼單位的新字元類型。 C++20 的 `u8` 字串常值具有類型 `const char8_t[N]` 而非 `const char[N]`，這是舊例。 [N2231](https://wg14.link/n2231) \(英文\) 已針對 C 標準建議類似的變更。 `char8_t` 回溯相容性補救的建議會在[P1423r3](https://wg21.link/p1423r3)中提供。 在 Visual Studio 2019 16.1 版中，當您指定 `char8_t`/Zc:char8_t**編譯器選項時，Microsoft C++ 編譯器會新增** 支援。 未來還會支援 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)，其可透過 **/Zc:char8_t-** 還原成 C++17 行為。 驅動 IntelliSense 的 EDG 編譯器尚不支援它，所以您會看到假性的僅限 IntelliSense 錯誤，不會影響實際的編譯。
 
 #### <a name="example"></a>範例
 

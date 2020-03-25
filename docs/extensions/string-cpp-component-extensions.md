@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171940"
 ---
 # <a name="string--ccli-and-ccx"></a>字串  (C++/CLI 和 C++/CX)
 
@@ -19,7 +19,7 @@ Windows 執行階段和 Common Language Runtime 會將字串表示為配置的�
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-Windows 執行階段架構要求 `String` 資料類型位於 `Platform` 命名空間。 為了方便起見，Visual C++ 也在 `default` 命名空間中提供了 `string` 資料類型，這是 `Platform::String` 的同義字。
+Windows 執行階段架構要求 `String` 資料類型位於 `Platform` 命名空間。 為了方便起見，Visual C++ 也在 `string` 命名空間中提供了 `Platform::String` 資料類型，這是 `default` 的同義字。
 
 ### <a name="syntax"></a>語法
 

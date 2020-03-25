@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2307
 ms.assetid: ce6c8033-a673-4679-9883-bedec36ae385
-ms.openlocfilehash: 5be197e61e48e47db70e8f23c7ef5b9ade22b1ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9d5addc18dd548e584a1cceed8b880cb62ed40d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303590"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206275"
 ---
 # <a name="compiler-error-c2307"></a>編譯器錯誤 C2307
 
-pragma 'pragma' 必須是函式之外，如果啟用累加編譯
+如果已啟用累加編譯，pragma ' pragma ' 必須在函式之外
 
-您必須將`data_seg`函式，如果您使用累加編譯之間的 pragma。
+如果您要使用累加編譯，就必須在函式之間放置 `data_seg` pragma。

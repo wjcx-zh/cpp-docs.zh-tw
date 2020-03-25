@@ -10,66 +10,66 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-ms.openlocfilehash: 21c47546d14d9a121bdd0698fe96eb133dbc44a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed7098600126005978c8b017e7db378fca4c1a68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213235"
 ---
 # <a name="dynaset"></a>動態集
 
-本主題描述動態集，並討論其[可用性](#_core_availability_of_dynasets)。
+本主題描述動態集並討論其[可用性](#_core_availability_of_dynasets)。
 
 > [!NOTE]
->  本主題適用於 MFC ODBC 類別，包括[CRecordset](../../mfc/reference/crecordset-class.md)。 在 DAO 類別中的動態集的相關資訊，請參閱[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。 在 DAO 中，您可以開啟動態類型資料錄集。
+>  本主題適用于 MFC ODBC 類別，包括[CRecordset](../../mfc/reference/crecordset-class.md)。 如需 DAO 類別中之動態程式的相關資訊，請參閱[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。 您可以使用 DAO 開啟動態集型別記錄集。
 
-動態集是使用動態屬性的資料錄集。 在其生命週期中，動態資料模式 （通常稱為 「 動態 」） 中的資料錄集物件會保持與資料來源同步處理方式如下。 在多使用者環境中，其他使用者可能會編輯或刪除的記錄在動態集，或將記錄新增至您的動態呈現的資料表。 您的應用程式新增或刪除資料錄集的記錄會反映在動態集。 其他使用者加入至資料表的記錄將不會反映在動態集直到您重建動態集呼叫其`Requery`成員函式。 當其他使用者刪除記錄時，MFC 程式碼會略過您的資料錄集的刪除作業中。 捲動到受影響的記錄時，其他使用者的編輯變更現有的記錄會反映在動態集。
+動態集是具有動態屬性的記錄集。 在其存留期間，動態集模式（通常稱為「動態集」）中的 recordset 物件會以下列方式與資料來源保持同步。 在多使用者環境中，其他使用者可能會編輯或刪除您的動態集內的記錄，或將記錄新增至您的動態集所代表的資料表。 應用程式在記錄集中加入或刪除的記錄會反映在您的動態集中。 其他使用者加入至資料表的記錄將不會反映在您的動態集內，直到您藉由呼叫其 `Requery` 成員函式重建動態集為止。 當其他使用者刪除記錄時，MFC 程式碼會略過記錄集內的刪除。 當您流覽至受影響的記錄時，其他使用者編輯現有記錄的變更就會反映在您的動態集中。
 
-同樣地，編輯您對動態集的記錄會反映在使用中的動態集的其他使用者。 直到它們重新查詢其動態集，您將新增的記錄不會反映在其他使用者的動態集。 您所刪除的記錄會標示為 「 已刪除 」 中其他使用者的資料錄集。 如果您有多個連線至相同的資料庫 (多個`CDatabase`物件)，這些連線相關聯的資料錄集具有相同的狀態，為其他使用者的資料錄集。
+同樣地，您對動態集內的記錄所做的編輯，會反映在其他使用者所使用的動態集內。 您新增的記錄在重新查詢其動態集之前，不會反映在其他使用者的動態集中。 您刪除的記錄會在其他使用者的記錄集中標示為「已刪除」。 如果您有多個連接到相同的資料庫（多個 `CDatabase` 物件），則與這些連接相關聯的記錄集與其他使用者的記錄集具有相同的狀態。
 
-當資料必須是動態的做為 （舉例來說） 的航班訂位系統，動態集是最有價值。
-
-> [!NOTE]
-> 若要使用動態集，您必須有 ODBC 驅動程式支援動態集的資料來源，以及不得載入 ODBC 資料指標程式庫。 如需詳細資訊，請參閱 <<c0> [ 的動態集可用性](#_core_availability_of_dynasets)。
-
-若要指定資料錄集是動態集，請傳遞`CRecordset::dynaset`的第一個參數為`Open`資料錄集物件的成員函式。
+當資料必須是動態的（例如，在航空公司保留系統中）時，動態集最有價值。
 
 > [!NOTE]
-> 可更新的動態集的 ODBC 驅動程式必須支援任一定位的 update 陳述式或`::SQLSetPos`ODBC API 函式。 如果兩者都有支援，MFC 會使用`::SQLSetPos`為了提高效率。
+> 若要使用動態集，您必須擁有支援動態集之資料來源的 ODBC 驅動程式，而且必須不載入 ODBC 資料指標程式庫。 如需詳細資訊，請參閱[動態集的可用性](#_core_availability_of_dynasets)。
 
-##  <a name="_core_availability_of_dynasets"></a> 動態集的可用性
-
-MFC 資料庫類別支援動態集，如果符合下列需求：
-
-- ODBC 資料指標程式庫 DLL 不能在使用此資料來源。
-
-   如果使用資料指標程式庫時，它會遮罩基礎 ODBC 驅動程式所需的動態集支援的某些功能。 如果您想要使用動態集 （和 ODBC 驅動程式有動態集，所需的功能，如本節的其餘部分中所述），您可能會導致不是用來載入資料指標程式庫，當您建立的 MFC`CDatabase`物件。 如需詳細資訊，請參閱 < [ODBC](../../data/odbc/odbc-basics.md)並[OpenEx](../../mfc/reference/cdatabase-class.md#openex)或是[開啟](../../mfc/reference/cdatabase-class.md#open)類別成員函式`CDatabase`。
-
-   在 ODBC 術語中，動態集和快照集被指資料指標。 資料指標是一種機制，用於追蹤的資料錄集中的位置。
-
-- 您的資料來源的 ODBC 驅動程式必須支援索引鍵集驅動資料指標。
-
-   索引鍵集驅動資料指標會管理從資料表的資料，藉由取得及儲存一組索引鍵。 索引鍵用來在使用者捲動至特定的記錄時，從資料表取得目前的資料。 若要判斷您的驅動程式是否提供這項支援，請呼叫`::SQLGetInfo`使用 ODBC API 函式*SQL_SCROLL_OPTIONS*參數。
-
-   如果您嘗試開啟不含索引鍵集支援動態集，您會取得`CDBException`，傳回碼值 AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED。
-
-- 您的資料來源的 ODBC 驅動程式必須支援擴充的擷取。
-
-   擴充的擷取是向右捲動，以及您的 SQL 查詢結果的資料錄上轉送的能力。 若要判斷您的驅動程式是否支援這項功能，請呼叫`::SQLGetFunctions`使用 ODBC API 函式*SQL_API_SQLEXTENDEDFETCH*參數。
-
-如果您要更新的動態集 （或快照集，就此而言），您的 ODBC 驅動程式必須也支援`::SQLSetPos`ODBC API 函式或定位的更新。 `::SQLSetPos`函式可讓 MFC，以便更新資料來源，而不需要傳送的 SQL 陳述式。 如果這項支援功能，MFC 會使用它而非進行使用 SQL 更新。 若要判斷您的驅動程式是否支援`::SQLSetPos`，呼叫`::SQLGetInfo`具有*SQL_POS_OPERATIONS*參數。
-
-定位的更新使用 SQL 語法 (的表單**WHERE CURRENT OF** \<current >) 來識別特定的資料列，在資料來源的資料表中。 若要判斷您的驅動程式是否支援定位的更新，請呼叫`::SQLGetInfo`具有*SQL_POSITIONED_STATEMENTS*參數。
-
-一般而言，MFC 動態集 （但不是順向資料錄集） 需要 ODBC 驅動程式與層級 2 API 一致性。 如果您的資料來源的驅動程式符合層級 1 API 集，您仍然可以使用可更新和唯讀快照集和順向資料錄集，但不是動態集。 不過，如果擴充擷取支援的動態集和索引鍵集驅動資料指標，可以支援層級 1 的驅動程式。 如需有關 ODBC 一致性層級的詳細資訊，請參閱 < [ODBC](../../data/odbc/odbc-basics.md)。
+若要指定記錄集為動態集，請將 `CRecordset::dynaset` 當做第一個參數傳遞至記錄集物件的 `Open` 成員函式。
 
 > [!NOTE]
-> 如果您想要使用快照集和動態集，您必須根據兩個不同`CDatabase`物件 （兩個不同的連接）。
+> 對於可更新的動態集，您的 ODBC 驅動程式必須支援定點更新語句或 `::SQLSetPos` ODBC API 函式。 如果兩者都受到支援，MFC 會使用 `::SQLSetPos` 以提高效率。
 
-與快照集，使用 ODBC 資料指標程式庫中繼存放區維護，不同的是動態集擷取記錄直接從資料來源只要捲動到它。 這會保留原本選取由資料來源同步處理的動態集的記錄。
+##  <a name="availability-of-dynasets"></a><a name="_core_availability_of_dynasets"></a>動態集的可用性
 
-如需包含於視覺效果的此版本的 ODBC 驅動程式的清單C++並取得其他驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
+如果符合下列需求，MFC 資料庫類別就支援動態集：
+
+- ODBC 資料指標程式庫 DLL 不得用於此資料來源。
+
+   如果使用資料指標程式庫，它會針對動態集支援所需的基礎 ODBC 驅動程式，遮罩其一些功能。 如果您想要使用動態集（而且您的 ODBC 驅動程式具有動態集所需的功能，如本節其餘部分所述），您可以在建立 `CDatabase` 物件時，讓 MFC 不載入資料指標程式庫。 如需詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)和 class `CDatabase`的[microsoft.office.interop.visio.documents.open](../../mfc/reference/cdatabase-class.md#openex)或[Open](../../mfc/reference/cdatabase-class.md#open)成員函式。
+
+   在 ODBC 術語中，動態集和快照稱為「資料指標」。 資料指標是一種機制，用來追蹤其在記錄集中的位置。
+
+- 適用于資料來源的 ODBC 驅動程式必須支援索引鍵集驅動資料指標。
+
+   索引鍵集驅動資料指標會藉由取得並儲存一組索引鍵，來管理資料表中的資料。 當使用者滾動至特定記錄時，會使用這些金鑰來取得資料表中的目前資料。 若要判斷您的驅動程式是否提供這種支援，請使用*SQL_SCROLL_OPTIONS*參數來呼叫 `::SQLGetInfo` ODBC API 函式。
+
+   如果您嘗試開啟沒有索引鍵集支援的動態集，您會取得 `CDBException`，其中包含傳回碼值 AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED。
+
+- 適用于資料來源的 ODBC 驅動程式必須支援延伸提取。
+
+   延伸提取是一種能夠回溯的功能，並可在 SQL 查詢的結果記錄上向前復原。 若要判斷您的驅動程式是否支援此功能，請使用*SQL_API_SQLEXTENDEDFETCH*參數呼叫 `::SQLGetFunctions` ODBC API 函式。
+
+如果您想要可更新的動態集（或快照集），您的 ODBC 驅動程式也必須支援 `::SQLSetPos` ODBC API 函式或定點更新。 `::SQLSetPos` 函數可讓 MFC 更新資料來源，而不需要傳送 SQL 語句。 如果這項支援可供使用，MFC 會在喜好設定中使用它，以使用 SQL 來進行更新。 若要判斷您的驅動程式是否支援 `::SQLSetPos`，請使用*SQL_POS_OPERATIONS*參數呼叫 `::SQLGetInfo`。
+
+定點更新使用 SQL 語法（其為**目前的**\<cursorname > 的格式），以識別資料來源上資料表中的特定資料列。 若要判斷您的驅動程式是否支援定點更新，請使用*SQL_POSITIONED_STATEMENTS*參數來呼叫 `::SQLGetInfo`。
+
+一般來說，MFC 動態集（但不是順向記錄集）需要具有層級 2 API 一致性的 ODBC 驅動程式。 如果資料來源的驅動程式符合層級 1 API 集，您仍然可以同時使用可更新和唯讀的快照集和順向記錄集，而不是動態集。 不過，如果支援擴充提取和索引鍵集驅動資料指標，層級1驅動程式可以支援動態集。 如需 ODBC 一致性層級的詳細資訊，請參閱[odbc](../../data/odbc/odbc-basics.md)。
+
+> [!NOTE]
+> 如果您想要同時使用快照集和動態連結程式庫，您必須將它們以兩個不同的 `CDatabase` 物件（兩個不同的連接）做為基礎。
+
+不同于快照集（使用 ODBC 資料指標程式庫所維護的中繼儲存體），在您滾動到資料來源後，動態程式會直接從該資料來源提取記錄。 這會讓動態集所選取的記錄與資料來源同步處理。
+
+如需此版本 Visual C++ 隨附之 ODBC 驅動程式的清單，以及取得其他驅動程式的相關資訊，請參閱 [ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
 
 ## <a name="see-also"></a>另請參閱
 

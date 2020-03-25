@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
-ms.openlocfilehash: d3f99fa85a777ae8361ed6f7cb82fe97ddd8d667
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a2a9ec803fba1be0012fcb58bf3b42e78f9071
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398793"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214158"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 列舉
 
-指定所傳回的結果的型別`GetResults()`方法。
+指定 `GetResults()` 方法所傳回的結果類型。
 
 ## <a name="syntax"></a>語法
 
@@ -30,14 +30,14 @@ enum AsyncResultType;
 
 |名稱|描述|
 |----------|-----------------|
-|`MultipleResults`|多個結果，以漸進方式之間會顯示一組`Start`狀態，以及之前`Close()`呼叫。|
-|`SingleResult`|單一的結果之後, 會呈現`Complete`就會發生事件。|
+|`MultipleResults`|一組多個結果，會在 `Start` 狀態和呼叫 `Close()` 之前逐漸呈現。|
+|`SingleResult`|單一結果，會在 `Complete` 事件發生後出現。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** async.h
+**標頭：** async。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
 

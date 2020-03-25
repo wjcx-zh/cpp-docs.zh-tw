@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207242"
 ---
 # <a name="compiler-error-c2144"></a>編譯器錯誤 C2144
 
-> 語法錯誤: '*型別*'必須在'*語彙基元*'
+> 語法錯誤： '*type*' 之前應加上 '*token*'
 
-編譯器預期*語彙基元*找到*型別*改。
+編譯器必須要有*token* ，並改為找到*類型*。
 
-此錯誤可能被因遺漏右大括號、 右括號或分號。
+這個錯誤可能是因為遺漏右大括弧、右括弧或分號所造成。
 
-當您嘗試從包含空白字元的 CLR 關鍵字建立巨集時，也會發生 C2144。
+嘗試從包含空白字元的 CLR 關鍵字建立宏時，也可能會發生 C2144。
 
-如果您嘗試進行類型轉送，您也可以參閱 C2144。 請參閱[型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)如需詳細資訊。
+如果您嘗試執行類型轉送，也可能會看到 C2144。 如需詳細資訊，請參閱[類型轉送（C++/cli）](../../extensions/type-forwarding-cpp-cli.md) 。
 
 ## <a name="examples"></a>範例
 
-下列範例會產生 C2144，並示範如何修正此問題：
+下列範例會產生 C2144，並顯示可修正此問題的方法：
 
 ```cpp
 // C2144.cpp
@@ -40,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-下列範例會產生 C2144，並示範如何修正此問題：
+下列範例會產生 C2144，並顯示可修正此問題的方法：
 
 ```cpp
 // C2144_2.cpp

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2169
 ms.assetid: 832c19ad-a2e2-4f50-b493-26b791877600
-ms.openlocfilehash: 6669a85899922554b264e05c4b83f7b18cfa3157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1906f8c8e795f6aa05987152ca4901deae62bb46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396843"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190907"
 ---
 # <a name="resource-compiler-error-rc2169"></a>資源編譯器錯誤 RC2169
 
-資源檔的名稱不是 2.03 格式
+資源檔檔案名不是2.03 格式
 
-指定的資源 2.03 版使用的格式。 資源檔必須轉換或重新建立 3.00 或更新版本使用的格式。
+指定的資源所使用的格式早于2.03 版。 資源檔必須使用3.00 版或更新版本的格式進行轉換或重新建立。

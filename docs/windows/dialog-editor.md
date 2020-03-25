@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215250"
 ---
 # <a name="dialog-editor-c"></a>對話方塊編輯器（C++）
 
 **對話方塊編輯器**可讓您建立或編輯對話方塊資源。
 
-- 若要開啟編輯器，請在 **資源檢視** 視窗中按兩下對話方塊的 .rc 檔，或移至功能表**視圖** > **其他 Windows** > **資源檢視**。
+- 若要開啟編輯器，請在 **資源檢視** 視窗中按兩下對話方塊的 .rc 檔，或移至功能表**視圖** > 其他的**Windows** > **資源檢視**。
 
 建立新對話方塊或對話方塊範本的第一個步驟，就是加入控制項。 在**對話方塊編輯器**中，您可以排列控制項，使其符合特定的大小、形狀或對齊方式，或者您可以在對話方塊中移動它們以進行工作。 刪除控制項也很容易。
 
@@ -58,22 +58,22 @@ ms.locfileid: "72445021"
 |圖示|意義|圖示|意義|
 |----------|-------------|----------|-------------|
 |![測試對話方塊按鈕](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|文字方塊|![跨按鈕的空間](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|橫向|
-|![靠左對齊按鈕](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|對齊主控項的左緣|![空格鍵向下按鈕](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|下移|
+|![靠左對齊按鈕](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|對齊主控項的左緣|![空格鍵向下按鈕](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|向下|
 |![[對齊許可權] 按鈕](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|對齊主控項的右緣|![設成相同的寬度按鈕](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|設定成相同寬度|
 |![對齊頂端按鈕](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|對齊主控項的上緣|![設成相同的高度按鈕](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|設定成相同高度|
 |![底端對齊按鈕](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|靠下對齊|![[設成相同大小] 按鈕](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|設定成相同大小|
-|![垂直置中按鈕](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|垂直|![切換格線按鈕](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|切換格線|
+|![垂直置中按鈕](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![切換格線按鈕](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|切換格線|
 |![水準置中按鈕](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|水平|![切換輔助線按鈕](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|切換輔助線|
 
-- 若要顯示或隱藏**對話方塊編輯器**工具列，請移至功能表**視圖** > **工具列** >  **對話方塊編輯器**。
+- 若要顯示或隱藏**對話方塊編輯器**工具列，請移至功能表**視圖** > **工具列** > **對話方塊編輯器**。
 
-當您在C++專案中開啟**對話方塊編輯器**時，**對話方塊編輯器**工具列會自動出現在方案的頂端，不過，如果您明確關閉工具列，就必須在下一次開啟**對話方塊編輯器時叫用它。** . 您可以從可用的工具列和視窗清單中選取它，以切換其顯示。
+當C++您在專案中開啟**對話方塊編輯器**時，**對話方塊編輯器**工具列會自動出現在方案的頂端，不過，如果您明確關閉工具列，就必須在下一次開啟**對話方塊編輯器**時叫用它。 您可以從可用的工具列和視窗清單中選取它，以切換其顯示。
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>在對話方塊控制項和程式碼之間切換
 
 在 MFC 應用程式中，您可以按兩下對話方塊控制項，跳至其處理常式程式碼，或快速建立 stub 處理常式函式。
 
-選取控制項之後，請選取 [[屬性視窗](/visualstudio/ide/reference/properties-window)中的 [**事件**] 按鈕或 [**訊息**] 按鈕，以查看所選項目可用的完整 Windows 訊息和事件清單。 從清單中選擇，以建立或編輯處理常式函數。
+選取控制項之後，請選取 [屬性視窗](/visualstudio/ide/reference/properties-window)中的 [**事件**] 按鈕或 [**訊息**] 按鈕，以查看所選項目可用的完整 Windows 訊息和事件清單。 從清單中選擇，以建立或編輯處理常式函數。
 
 - 若要從**對話方塊編輯器**跳至程式碼，請按兩下對話方塊中的控制項，跳至其最近實作用的訊息處理函式的宣告。
 
@@ -92,14 +92,14 @@ ms.locfileid: "72445021"
 
 以下是**對話方塊編輯器**命令的預設快速鍵。  
 
-|命令|按鍵|描述|
+|Command|索引鍵|描述|
 |-------------|----------|-----------------|
-|Format.AlignBottoms|**Ctrl** + **Shift** + **向下鍵**|將所選控制項的下邊緣與主要控制項對齊。|
+|Format.AlignBottoms|**Ctrl** + **Shift** + **向下**鍵|將所選控制項的下邊緣與主要控制項對齊。|
 |Format.AlignCenters|**Shift** + **F9**|將所選控制項的垂直中心與主要控制項對齊。|
 |Format.AlignLefts|**Ctrl** + **Shift** + **向左鍵**|將所選控制項的左邊緣對齊主要控制項。|
 |Format.AlignMiddles|**F9**|將所選控制項的水準中心與主要控制項對齊。|
 |Format.AlignRights|**Ctrl** + **Shift** + **向右箭**號|將所選控制項的右邊緣對齊主要控制項。|
-|Format.AlignTops|**Ctrl** + **Shift** + **向上鍵**|將所選控制項的上邊緣對齊主要控制項。|
+|Format.AlignTops|**Ctrl** + **Shift** + **向上**鍵|將所選控制項的上邊緣對齊主要控制項。|
 |Format.ButtonBottom|**Ctrl** + **B**|將選取的按鈕沿著對話方塊的底部放置。|
 |Format.ButtonRight|**Ctrl** + **R**|將選取的按鈕放在對話方塊的右上角。|
 |Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|在對話方塊中將控制項水準置中。|
@@ -116,7 +116,7 @@ ms.locfileid: "72445021"
 
    如需詳細資訊，請參閱[識別及自訂鍵盤快速鍵](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
 
-- 若要變更您的設定，請移至 [功能表**工具**]  >  [匯**入和匯出設定**]。
+- 若要變更您的設定，請移至功能表**工具** > 匯**入和匯出設定**。
 
    對話方塊中可用的選項，以及您看到的功能表命令的名稱和位置，可能會與 [說明] 中所描述**的不同，視您**的使用中設定或版本而定。  如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
@@ -124,7 +124,7 @@ ms.locfileid: "72445021"
 
 Win32
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
 [如何：建立對話方塊](../windows/creating-a-new-dialog-box.md)<br/>

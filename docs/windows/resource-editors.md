@@ -21,16 +21,16 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445001"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167884"
 ---
 # <a name="resource-editors-c"></a>資源編輯器（C++）
 
-資源編輯器是建立或修改包含在 Visual Studio 專案中之資源的特殊環境。 Visual Studio 資源編輯器會共用技術和介面，協助您快速輕鬆地建立及修改應用程式資源。 資源編輯器可讓您在適當的編輯器中查看和編輯資源，以及預覽資源。
+資源編輯器是建立或修改包含在 Visual Studio 專案中之資源的特殊環境。 Visual Studio 資源編輯器會共用技術和介面，協助您快速輕鬆地建立及修改應用程式資源。 資源編輯器可讓您在適當的編輯器中檢視和編輯資源以及預覽資源。
 
 當您建立或開啟資源時，適當的編輯器會自動開啟。
 
@@ -42,7 +42,7 @@ ms.locfileid: "72445001"
 |[快速鍵編輯器](../windows/accelerator-editor.md)|Visual Studio C++專案中的快速鍵對應表。|
 |[二進位編輯器](binary-editor.md)|Visual C++、Visual Basic 或 Visual C# 專案的二進位資料資訊和自訂資源。|
 |[對話方塊編輯器](../windows/dialog-editor.md)|Visual Studio C++專案中的對話方塊。|
-|[Image Editor](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic 或 Visual C# 專案的點陣圖、圖示、游標和其他影像檔。|
+|[影像編輯器](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic 或 Visual C# 專案的點陣圖、圖示、游標和其他影像檔。|
 |[功能表編輯器](../windows/menu-editor.md)|Visual Studio C++專案中的功能表資源。|
 |[功能區編輯器](../mfc/ribbon-designer-mfc.md)|MFC 專案中的功能區資源。|
 |[字串編輯器](../windows/string-editor.md)|Visual Studio C++專案中的字串資料表。|
@@ -113,9 +113,9 @@ ms.locfileid: "72445001"
 
 ### <a name="to-preview-resources"></a>預覽資源
 
-1. 在[資源檢視](how-to-create-a-resource-script-file.md#create-resources)或文件視窗中，選取您的資源，例如**IDD_ABOUTBOX**。
+1. 在[資源檢視](how-to-create-a-resource-script-file.md#create-resources)或文件視窗中，選取您的資源，例如， **IDD_ABOUTBOX**。
 
-1. 在 [屬性視窗](/visualstudio/ide/reference/properties-window)中，選取 **屬性頁**] 按鈕。
+1. 在 [屬性視窗](/visualstudio/ide/reference/properties-window)中，選取 **屬性頁** 按鈕。
 
    > [!TIP]
    > 使用快捷方式，移至功能表**視圖** > **屬性頁**。
@@ -124,9 +124,9 @@ ms.locfileid: "72445001"
 
 ## <a name="requirements"></a>需求
 
-無
+None
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用資源檔](../windows/working-with-resource-files.md)<br/>
 [資源檔](../windows/resource-files-visual-studio.md)<br/>

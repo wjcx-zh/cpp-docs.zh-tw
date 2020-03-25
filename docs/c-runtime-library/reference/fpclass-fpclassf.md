@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857836"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170211"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -65,7 +65,7 @@ int _fpclassf(
 
 **_Fpclass**和 **_fpclassf**函式會傳回整數值，指出引數*x*的浮點分類。 分類可能會有 \<float.h> 中所定義的下列其中一個值。
 
-|{2&gt;值&lt;2}|描述|
+|值|描述|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|訊號 NaN|
 |**_FPCLASS_QNAN**|無訊息 NaN|
@@ -84,13 +84,13 @@ int _fpclassf(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_fpclass**， **_fpclassf**|\<float.h>|
 
 如需相容性和一致性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

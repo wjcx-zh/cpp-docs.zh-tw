@@ -7,18 +7,18 @@ helpviewer_keywords:
 - byte defining (inline assembly)
 - _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-ms.openlocfilehash: f2a7c9c4dab97bc1aba3147b5d75f6abbdac951f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8be250aadf20dc4a7dee6a0b565ece21840339d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167162"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169470"
 ---
-# <a name="emit-pseudoinstruction"></a>_emit 虛擬指令
+# <a name="_emit-pseudoinstruction"></a>_emit 虛擬指令
 
 **Microsoft 專屬**
 
-**_Emit**虛擬指令會定義一個位元組的目前位置的目前文字區段中。 **_Emit**虛擬指令類似[DB](../../assembler/masm/db.md) MASM 指示詞。
+**_Emit** pseudoinstruction 會在目前的文字區段中，定義目前位置的一個位元組。 **_Emit** PSEUDOINSTRUCTION 與 MASM 的[DB](../../assembler/masm/db.md)指示詞類似。
 
 下列片段將位元組 0x4A、0x43 和 0x4B 放入程式碼：
 
@@ -33,9 +33,9 @@ __asm {
 ```
 
 > [!CAUTION]
-> 如果 `_emit` 會產生修改暫存器的指令，而您以最佳化編譯應用程式，則編譯器無法判斷哪些暫存器會受到影響。 例如，如果`_emit`產生的指令，修改**rax**暫存器，編譯器不知道所**rax**已變更。 在內嵌組合語言程式碼執行之後，編譯器可能會對暫存器中的值做出不正確的假設。 因此，應用程式在執行時可能會表現出無法預期的行為。
+> 如果 `_emit` 會產生修改暫存器的指令，而您以最佳化編譯應用程式，則編譯器無法判斷哪些暫存器會受到影響。 例如，如果 `_emit` 產生修改**rax**暫存器的指令，則編譯器不會知道**rax**已經變更。 在內嵌組合語言程式碼執行之後，編譯器可能會對暫存器中的值做出不正確的假設。 因此，應用程式在執行時可能會表現出無法預期的行為。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

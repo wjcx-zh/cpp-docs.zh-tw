@@ -2,12 +2,12 @@
 title: 變更簽章
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
-ms.translationtype: HT
+ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281944"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171901"
 ---
 # <a name="change-signature"></a>變更簽章
 
@@ -17,7 +17,7 @@ ms.locfileid: "52281944"
 
 **原因：** 您可以自行手動變更這些參數，然後尋找對該函式的所有呼叫並逐一變更這些呼叫，但這樣可能會造成錯誤。  這個重構工具將可自動執行此工作。
 
-**做法：**
+**方式：**
 
 1. 將文字或滑鼠游標放在要修改的方法名稱或它的其中一個使用方式內：
 
@@ -38,7 +38,7 @@ ms.locfileid: "52281944"
    | 按鈕 | 描述
    | ------ | ---
    | **向上/向下**    | 將選取的參數在清單中向上和向下移動
-   | **[新增]**        | 新增參數至清單
+   | **加入**        | 新增參數至清單
    | **移除**     | 將選取的參數從清單中移除
    | **修改**     | 修改選取的參數，包括變更其類型、名稱與是否為選擇性，以及其將插入的值
    | **還原**     | 將選取的參數還原成其原始狀態
@@ -53,9 +53,9 @@ ms.locfileid: "52281944"
 
    您可以在此進行下列設定：
 
-   | 進入 | 描述
+   | 項目 | 描述
    | ----- | ---
-   | **Type**               | 參數的類型 (int、double、float 等)
+   | **型別**               | 參數的類型 (int、double、float 等)
    | **名稱**               | 參數的名稱
    | **選擇性參數** | 選擇性地指定參數
    | **插入的值**     | 插入未指定參數之任何函式呼叫的值 (只適用於 [新增])

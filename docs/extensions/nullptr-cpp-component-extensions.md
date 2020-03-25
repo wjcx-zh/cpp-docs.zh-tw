@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515633"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172110"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI 和 C++/CX)
 
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範，當您使用 `/clr` 進行編譯時，可將 **nullptr** 指派給原生指標。
+下列程式碼範例示範，當您使用 **進行編譯時，可將**nullptr`/clr` 指派給原生指標。
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -221,7 +221,7 @@ int main() {
 
 ## <a name="requirements"></a>需求
 
-編譯器選項：(不需要；所有程式碼產生選項都支援，包括 `/ZW` 和 `/clr`)
+編譯器選項：（並非必要; 由所有程式碼產生選項支援，包括 `/ZW` 和 `/clr`）
 
 ## <a name="see-also"></a>另請參閱
 

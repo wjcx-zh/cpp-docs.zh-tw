@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6205
 ms.assetid: fd28e7c9-a463-4a9c-a863-cc9e75315550
-ms.openlocfilehash: cdcaa714836f77d6238cc790457a5422cc825889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb9c646329a4db224b853bea91e69576bee04be6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173630"
 ---
 # <a name="math-error-m6205"></a>運算錯誤 M6205
 
-'function': _TLOSS 錯誤
+' function '： _TLOSS 錯誤
 
-發生精確度 （有效位數） 完全遺失。
+總損失（有效位數）已發生。
 
-此錯誤可能因提供非常大量的運算元 sin、 cos、 或 tan，因為運算元必須減少至 0 和 2 之間的數字 * pi。
+這項錯誤的原因可能是因為運算元必須縮減為介於0和 2 * pi 之間的數位，所以會提供非常大的數位做為 sin、cos 或 tan 的運算元。

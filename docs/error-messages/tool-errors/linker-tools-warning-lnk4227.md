@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: fb657719c69445ce23d36ccf04ac4a14db0955e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b75cff4f03370951245bde1b485d538ffdb4007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352737"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182938"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>連結器工具警告 LNK4227
 
-> 中繼資料作業警告 (*HRESULT*): *warning_message*
+> 中繼資料作業警告（*HRESULT*）： *warning_message*
 
-合併時，連結器偵測到中繼資料的差異：
+連結器在合併時偵測到中繼資料差異：
 
-- 一或多個參考的組件目前正在建置的組件。
+- 一或多個參考的元件，其中包含目前正在建立的元件。
 
-- 一或多個原始程式碼檔編譯中。
+- 編譯中的一或多個原始程式碼檔。
 
-比方說，LNK4227 可能造成您有兩個全域函式，具有相同名稱但以不同的方式宣告的參數資訊 （也就是宣告不是在所有編譯中都一致）。 使用 ildasm.exe /TEXT /METADATA *object_file*上每個.obj 檔案，若要查看類型有何不同。
+例如，如果您有兩個具有相同名稱的全域函式，但以不同的方式宣告參數資訊（也就是所有 compilands 中的宣告都不一致），可能會導致 LNK4227。 針對每個 .obj 檔案使用/TEXT/METADATA *object_file* ，以查看這些類型的差異。
 
-LNK4227 也會報告由另一個工具產生的問題。 搜尋警告訊息，如需詳細資訊。
+LNK4227 也可用來報告源自另一個工具的問題。 如需詳細資訊，請搜尋警告訊息。
 
-若要解決這個警告，必須修正中繼資料問題。
+必須修正中繼資料問題，才能解決警告。
 
 ## <a name="example"></a>範例
 
-參考的組件簽署不同組件參考時，會產生 LNK4227。
+當參考的元件以不同于參考它的元件簽章時，就會產生 LNK4227。
 
-下列範例會產生 LNK4227:
+下列範例會產生 LNK4227：
 
 ```cpp
 // LNK4227.cpp
@@ -45,7 +45,7 @@ using namespace System::Reflection;
 int main() {}
 ```
 
-然後，
+然後
 
 ```cpp
 // LNK4227b.cpp
@@ -64,9 +64,9 @@ ref class MyClass
 
 ## <a name="example"></a>範例
 
-格式錯誤的版本號碼傳遞至組件屬性時，也可能會產生 LNK4227。  ' *' 表示法是非負數特有`AssemblyVersionAttribute`。  若要解決這個警告，使用只有中的數字的版本屬性以外的其他`AssemblyVersionAttribute`。
+當格式錯誤的版本號碼傳遞至元件屬性時，也可能會產生 LNK4227。  ' * ' 標記法是 `AssemblyVersionAttribute`特有的。  若要解決這個警告，請只在 `AssemblyVersionAttribute`以外的版本屬性中使用數位。
 
-下列範例會產生 LNK4227:
+下列範例會產生 LNK4227：
 
 ```cpp
 // LNK4227e.cpp

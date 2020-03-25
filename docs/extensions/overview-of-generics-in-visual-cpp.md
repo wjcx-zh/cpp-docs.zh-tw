@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515663"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172070"
 ---
 # <a name="overview-of-generics-in-ccli"></a>C++/CLI 中的泛型概觀
 
@@ -35,7 +35,7 @@ C++ 支援範本，而且範本和泛型都支援使用參數化類型建立具�
 
 執行個體和靜態類別成員函式、委派及全域函式也可以是泛型。 若函式的參數是未知的類型，或者函式本身必須與泛型類型一起使用，則可能需要泛型函式。 在多數情況下，`System::Object` 以往可能用來作為未知物件型別的參數，現在則可改用泛型型別參數，以允許更多型別安全的程式碼。 若嘗試傳入非函式所設計使用的類型，則該類型會在編譯時期標記為錯誤。 使用 `System::Object` 作為函式參數，就不會偵測到意外傳遞不適合函式處理之物件的情形，而且您必須將未知的物件型別轉換為函式主體中的特定型別，並將 InvalidCastException 的可能性納入考量。 使用泛型時，嘗試將物件傳遞至函式的程式碼會引起類型衝突，因此就能保證函式主體具有正確的類型。
 
-相同的優點適用於泛型上建立的集合類別。 以往集合類別都會使用 `System::Object` 來將元素儲存於集合中。 若插入非集合所設計使用之類型的物件，這種情形不會在編譯時期標記，而且甚至不會在插入物件時標記。 通常會在集合中存取物件時，將該物件轉型成其他類型。 只有在轉型失敗時，才會偵測到非預期的類型。 泛型會在編譯時期透過偵測是否有插入類型不符合 (或隱含轉換成) 泛型集合之類型參數的任何程式碼，來解決這個問題。
+相同的優點適用於泛型上建立的集合類別。 以往集合類別都會使用 `System::Object` 來將元素儲存於集合中。 若插入非集合所設計使用之類型的物件，這種情形不會在編譯時期標記，而且甚至不會在插入物件時標記。 通常會在集合中存取物件時，將該物件轉型成其他類型。 只有在轉型失敗時，才會偵測到非預期的類型。 泛型會在編譯時期藉由偵測是否有插入類型不符合 (或隱含轉換成) 泛型集合之類型參數的任何程式碼，來解決這個問題。
 
 如需語法的說明，請參閱[泛型函式 (C++/CLI)](generic-functions-cpp-cli.md)。
 

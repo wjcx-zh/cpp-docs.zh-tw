@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4197
 ms.assetid: 8a976fd7-a74b-4c83-ab66-a9e7d7073c4a
-ms.openlocfilehash: 0abad1b98ff4782f077312752603ec17fd611c12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92702864a00455e4b70f00dfc9988bfb754e2e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183276"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>連結器工具警告 LNK4197
 
-> 匯出 '*exportname*' 指定了多次; 使用第一個規格
+> 已多次指定匯出 '*exportname*';使用第一個規格
 
-在多個指定的匯出和不同的方式。 連結器會使用第一個規格，並忽略其餘部分。
+匯出是以多種和不同的方式指定。 連結器會使用第一個規格，並忽略其餘的。
 
-如果您重建 C 執行階段程式庫，您可以忽略此訊息。
+如果您要重建 C 執行時間程式庫，可以忽略此訊息。
 
-如果匯出指定完全相同的方式很多次，則連結器不會發出警告。
+如果以相同方式多次指定匯出，連結器將不會發出警告。
 
-例如，在.def 檔的下列內容會導致此警告：
+例如，下列 .def 檔案的內容會導致此警告：
 
 ```
 EXPORTS
@@ -33,6 +33,6 @@ EXPORTS
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
 
-1. 指定相同的匯出都在命令列上 (透過匯出:) 和.def 檔案中。
+1. 在命令列上指定相同的匯出（透過匯出：）和 .def 檔案中的和。
 
-2. 相同的匯出會列出兩次.def 檔案中有不同的屬性。
+2. 相同的匯出會在 .def 檔案中以不同的屬性列出兩次。

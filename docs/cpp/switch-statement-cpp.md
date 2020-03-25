@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 6b09c0eac939f7ca6a12b68ce5deb3fb83ad27c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160810"
 ---
 # <a name="switch-statement-c"></a>switch 陳述式 (C++)
 
@@ -31,21 +31,21 @@ ms.locfileid: "65221932"
 
 ## <a name="remarks"></a>備註
 
-*運算式*必須是整數型別或模稜兩可的轉換成整數類資料類型是類別類型。 中所述執行整數提升[標準轉換](standard-conversions.md)。
+*運算式*必須是整數類資料類型，或屬於明確轉換成整數類資料類型的類別類型。 整數提升的執行方式如[標準轉換](standard-conversions.md)中所述。
 
-**切換**陳述式主體所組成的一系列**案例**標籤和選擇性**預設**標籤。 在任何兩個常數運算式**案例**陳述式可以評估為相同的值。 **預設**標籤只能出現一次。 標記陳述式不是語法需求，但**切換**陳述式是無意義，而不需要它們。   default 陳述式不需要出現在結尾，可以出現在 switch 陳述式主體中的任何位置。 case 或 default 標籤只能出現在 switch 陳述式內。
+**Switch**語句主體是由一系列的**案例**標籤和選擇性的**預設**標籤所組成。 **Case**語句中不能有兩個常數運算式評估為相同的值。 **預設**標籤只能出現一次。 標記的語句不是語法需求，但**switch**語句沒有任何意義。   default 陳述式不需要出現在結尾，可以出現在 switch 陳述式主體中的任何位置。 case 或 default 標籤只能出現在 switch 陳述式內。
 
-*常數運算式*每個**案例**標籤會轉換成的型別*運算式*相較於和*運算式*的相等。 控制權會傳遞給陳述式的**案例** *常數運算式* 的值相符 *運算式*。 產生的行為如下表所示。
+每個**case**標籤中的*常數運算式*會轉換成*運算式*的類型，並與*expression*比較是否相等。 控制權會傳遞給其**case** *常數運算式*符合*expression*值的語句。 產生的行為如下表所示。
 
 ### <a name="switch-statement-behavior"></a>switch 陳述式行為
 
 |條件|動作|
 |---------------|------------|
 |轉換的值與升級之控制運算式的值相符。|控制權會轉移至標籤後面的陳述式。|
-|沒有常數符合中的常數**案例**標籤;**預設**標籤已存在。|控制權會轉移到**預設**標籤。|
-|沒有常數符合中的常數**案例**標籤;**預設**標籤不存在。|控制權會轉移到之後的陳述式**切換**陳述式。|
+|沒有任何常數符合**case**標籤中的常數;有**預設**標籤。|控制項會傳送至**預設**標籤。|
+|沒有任何常數符合**case**標籤中的常數;**預設**標籤不存在。|Control 會在**switch**語句之後傳送至語句。|
 
-如果找到相符運算式，控制項不會受到後續**案例**或是**預設**標籤。 [中斷](../cpp/break-statement-cpp.md)陳述式用來停止執行，並將控制權移轉給之後的陳述式**切換**陳述式。 不含**中斷**陳述式中，每個陳述式，從相符**案例**結尾標籤**切換**，包括**預設**，是執行。 例如: 
+如果找到相符的運算式，後續的**案例**或**預設**標籤就不會阻礙控制項。 [Break](../cpp/break-statement-cpp.md)語句是用來停止執行，並將控制權轉移到**switch**語句之後的語句。 若沒有**break**語句，則會執行符合的**case**標籤到**switch**結尾的每個語句（包括**預設值**）。 例如：
 
 ```cpp
 // switch_statement1.cpp
@@ -76,9 +76,9 @@ int main() {
 }
 ```
 
-在上述範例中，如果 `capa` 是大寫 `c`，則遞增 `A`。 **中斷**之後的陳述式`capa++`結束執行**切換**陳述式主體並將控制權傳遞至**雖然**迴圈。 不含**中斷**陳述式中，執行會 「 繼續 」 下一個標記的陳述式，以便`lettera`和`nota`也會遞增。 類似的目的由**中斷**陳述式`case 'a'`。 如果`c`是小寫`a`，`lettera`就會遞增並**中斷**陳述式會終止**切換**陳述式主體。 如果`c`不是`a`或是`A`，則**預設**陳述式。
+在上述範例中，如果 `capa` 是大寫 `c`，則遞增 `A`。 `capa++` 之後的**break**語句會終止**switch**語句主體的執行，並將控制權傳遞給**while**迴圈。 若沒有**break**語句，執行會「流經」到下一個加上標籤的語句，因此 `lettera` 和 `nota` 也會遞增。 `case 'a'`的**break**語句會提供類似的目的。 如果 `c` 是小寫 `a`，`lettera` 會遞增，而**break**語句會終止**switch**語句主體。 如果 `c` 不是 `a` 或 `A`，則會執行**default**語句。
 
-**Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性會指定在 C + + 17 標準。 它可以用於**切換**陳述式做為提示給編譯器 （或任何人讀取程式碼） 是該行為。 MicrosoftC++編譯器目前不會在警告上 fallthrough 行為，因此這個屬性不會影響編譯器行為。 請注意，屬性會套用至空的陳述式內加上標籤的陳述式;換句話說，分號是必要的。
+**Visual Studio 2017 和更新版本：** （適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)） `[[fallthrough]]` 屬性是以 c + + 17 標準指定。 它可以在**switch**語句中用來做為編譯器的提示（或讀取程式碼的任何人），以供預期的行為。 Microsoft C++編譯器目前不會對 fallthrough 行為發出警告，因此這個屬性不會影響編譯器行為。 請注意，屬性會套用至加上標籤之語句內的空白語句;換句話說，這是必要的分號。
 
 ```cpp
 int main()
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Switch 陳述式可能會導入，並初始化的變數，其範圍僅限於在 switch 陳述式區塊：
+**Visual Studio 2017 15.3 版和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： switch 語句可能會引進並初始化範圍限制為 switch 語句區塊的變數：
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +119,7 @@ int main()
     };
 ```
 
-內部區塊**切換**陳述式可以包含有初始化的定義，只要它們是連線到 — 也就是不可能執行的所有路徑程式略過。 使用這些宣告引入的名稱有區域範圍。 例如：
+**Switch**語句的內部區塊可以包含有初始化的定義，只要它們可連線，也就是說，所有可能的執行路徑都不會略過。 使用這些宣告引入的名稱有區域範圍。 例如：
 
 ```cpp
 // switch_statement2.cpp
@@ -154,15 +154,15 @@ int main(int argc, char *argv[])
 }
 ```
 
-A**切換**陳述式可以巢狀。 在此情況下，**案例**或是**預設**標籤相關聯的最接近**切換**含括它們的陳述式。
+**Switch**語句可以嵌套。 在這種情況下，**大小寫**或**預設**標籤會與包圍它們的最接近的**switch**語句產生關聯。
 
 **Microsoft 專屬**
 
-Microsoft C 不會限制中的 case 值的數目**切換**陳述式。 此數目會受到可用記憶體的限制。 ANSI C 要求在至少 257 個 case 標籤中允許**切換**陳述式。
+Microsoft C 不會限制**switch**語句中 case 值的數目。 此數目會受到可用記憶體的限制。 ANSI C 需要**switch**語句中至少要有257的 case 標籤。
 
-Microsoft C 預設會啟用 Microsoft 擴充功能。 使用[/Za](../build/reference/za-ze-disable-language-extensions.md)編譯器選項來停用這些擴充功能。
+Microsoft C 預設會啟用 Microsoft 擴充功能。 使用[/za](../build/reference/za-ze-disable-language-extensions.md)編譯器選項可停用這些擴充功能。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

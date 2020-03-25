@@ -1,23 +1,23 @@
 ---
-title: 作法：使用 const 關鍵字宣告內部指標 (C++/CLI)
+title: 如何：使用 const 關鍵字宣告內部指標 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: 62daa255749747e3c4b9b24e29d38c0cb6f50d0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 9515abb6fed2ffd2c818fc14eae321bfcc856ce5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515773"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172305"
 ---
-# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>作法：使用 const 關鍵字宣告內部指標 (C++/CLI)
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：使用 const 關鍵字宣告內部指標 (C++/CLI)
 
 下列範例示範如何在內部指標的宣告中使用 **const**。
 
 > [!IMPORTANT]
-> `/clr` 編譯器選項支援此語言功能，`/ZW` 編譯器選項則不支援。
+> `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。
 
 ## <a name="example"></a>範例
 

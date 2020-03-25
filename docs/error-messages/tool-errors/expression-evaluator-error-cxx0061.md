@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0061
 - CAN0061
 ms.assetid: fa84dcca-87ef-4546-9dce-636ed39e0713
-ms.openlocfilehash: f7a04e477723547498b1a9d08b00b0074c5d4bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c114ec785789bb34d37537322b4c67fe139299f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299448"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184550"
 ---
 # <a name="expression-evaluator-error-cxx0061"></a>運算式評估工具錯誤 CXX0061
 
-函式的巢狀深度超過
+超過函數的嵌套深度
 
-運算式包含巢狀深度超過限制的函式。 修改運算式，以減少巢狀結構深度。
+運算式包含的函數嵌套深度大於限制。 修改運算式以減少嵌套深度。
 
-此錯誤是與 can0061 相同。
+此錯誤與 CAN0061 相同。

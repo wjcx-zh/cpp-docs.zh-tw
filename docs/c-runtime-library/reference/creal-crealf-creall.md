@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942591"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171212"
 ---
 # <a name="creal-crealf-creall"></a>creal、crealf、creall
 
@@ -68,15 +68,15 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫接受 **_Fcomplex**或 **_Lcomplex**值之**creal**的多載，並傳回**浮點數**或**長雙精度**值。 在 C 程式中， **creal**一律會接受 **_Dcomplex**值並傳回**雙精度浮點數**。
+因為C++允許多載，所以您可以呼叫採用 **_Fcomplex**或 **_Lcomplex**值之**creal**的多載，並傳回**float**或**long double**值。 在 C 程式中， **creal**一律會採用 **_Dcomplex**值，並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|C 標頭|C++ 標頭|
+|常式|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**creal**、 **crealf**、 **creall**|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**類型分別是不完整的原生 C99 類型**float _Complex**、 **double _Complex**和**long 雙重 _Complex**的 Microsoft 特定對等專案。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**類型分別是 Microsoft 特定的對等專案，而不是原生 C99 類型的**浮點數 _Complex**、 **double _Complex**和**long double _Complex**。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

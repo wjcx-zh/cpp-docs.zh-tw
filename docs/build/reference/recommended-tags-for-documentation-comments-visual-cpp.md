@@ -1,17 +1,17 @@
 ---
-title: 建議的文件註解標記 (C++文件註解)
+title: 建議使用的檔註解標記C++ （檔批註）
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e0937b79012f65ba136e18ac81f014be23688f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168859"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>建議使用的文件註解標籤
 
-MSVC 編譯器將會處理您的程式碼中的文件註解，並建立.xdc 檔案以供每個編譯模組中，而且 xdcmake.exe 會處理至.xml 檔案的.xdc 檔案。 處理 .xml 檔以建立文件是必須在您網站實作的細部工作。
+MSVC 編譯器會處理您程式碼中的檔批註，並為每個編譯模組建立一個 .xdc 檔案，而 xdcmake 會將 .xdc 檔案處理成 .xml 檔案。 處理 .xml 檔以建立文件是必須在您網站實作的細部工作。
 
 標記是在類型和類型成員這類建構上處理。
 
@@ -33,7 +33,7 @@ MSVC 編譯器將會處理您的程式碼中的文件註解，並建立.xdc 檔�
 
 1. 編譯器會驗證語法。
 
-目前的版本中，在 MSVC 編譯器不支援`<paramref>`，其他 Visual Studio 編譯器所支援的標記。 Visual C++ 可能在未來的版本支援 `<paramref>`。
+在目前的版本中，MSVC 編譯器不支援 `<paramref>`，也就是其他 Visual Studio 編譯器所支援的標記。 Visual C++ 可能在未來的版本支援 `<paramref>`。
 
 ## <a name="see-also"></a>另請參閱
 

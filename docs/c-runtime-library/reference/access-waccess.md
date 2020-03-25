@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170380"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -68,7 +68,7 @@ int _waccess(
 
 ## <a name="return-value"></a>傳回值
 
-如果檔案有指定模式，每個函式都會傳回 0。 如果命名的檔案不存在或沒有指定的模式，則函式會傳回-1;在此情況下`errno` ，會依照下表所示設定。
+如果檔案有指定模式，每個函式都會傳回 0。 如果命名的檔案不存在或沒有指定的模式，則函式會傳回-1;在此情況下，`errno` 會依照下表所示進行設定。
 
 |||
 |-|-|
@@ -76,7 +76,7 @@ int _waccess(
 `ENOENT`|找不到檔案名稱或路徑。
 `EINVAL`|無效的參數。
 
-如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -87,7 +87,7 @@ int _waccess(
 |00|只存在|
 |02|唯寫|
 |04|唯讀|
-|06|讀取和寫入|
+|06|讀取及寫入|
 
 此函式只檢查檔案和目錄是否為唯讀，不檢查檔案系統安全性設定。 該項作業需要存取權杖。 如需檔案系統安全性的詳細資訊，請參閱 [Access Tokens](/windows/win32/SecAuthZ/access-tokens) (存取權杖)。 ATL 類別的存在就是提供這項功能，請參閱 [CAccessToken 類別](../../atl/reference/caccesstoken-class.md)。
 
@@ -103,7 +103,7 @@ int _waccess(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|選擇性標頭|
+|常式|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> 或 \<io.h>|\<errno.h>|

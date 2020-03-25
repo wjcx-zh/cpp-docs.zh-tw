@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4549
+title: 編譯器警告 (層級 1) C4549
 ms.date: 11/04/2016
 f1_keywords:
 - C4549
 helpviewer_keywords:
 - C4549
 ms.assetid: 81a07676-625b-4f58-9b0c-3ee22830b04a
-ms.openlocfilehash: 728c3040f383632f2b4990c2f1d44e500a040138
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: da252efa624b65ca87dd60fe1cdb9b0c5e33ccbb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966386"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186201"
 ---
-# <a name="compiler-warning-level-1-c4549"></a>編譯器警告（層級1） C4549
+# <a name="compiler-warning-level-1-c4549"></a>編譯器警告 (層級 1) C4549
 
 ' operator '：逗號之前的運算子不會有任何作用;您想要 ' operator ' 嗎？
 

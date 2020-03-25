@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1064
 ms.assetid: 7141e66e-cde6-4173-84df-a391f3ebcdd1
-ms.openlocfilehash: 71213391032989e5faf8889761b29194928125a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfc42c458c1932287f17f367d09c4b23c2c201a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182821"
 ---
 # <a name="nmake-fatal-error-u1064"></a>NMAKE 嚴重錯誤 U1064
 
-找不到 MAKEFILE，且沒有指定目標
+找不到 MAKEFILE，且未指定任何目標
 
-NMAKE 命令列中未指定以 makefile 或目標，且目前的目錄未包含名為 MAKEFILE 的檔案。
+NMAKE 命令列未指定 makefile 或目標，而且目前目錄未包含名為 MAKEFILE 的檔案。
 
-NMAKE 需要 makefile 框線或命令列目標 （或兩者都有）。 若要可讓 NMAKE makefile 使用，指定 [/F] 選項，或是將目前的目錄中名為 MAKEFILE 檔案。 NMAKE 可以使用推斷規則，如果未提供的 makefile，以建立命令列的目標。
+NMAKE 需要 makefile 或命令列目標（或兩者皆是）。 若要讓一個 makefile 可供 NMAKE 使用，請指定/F 選項，或將名為 MAKEFILE 的檔案放在目前的目錄中。 如果未提供 makefile，則 NMAKE 可以使用推斷規則來建立命令列目標。

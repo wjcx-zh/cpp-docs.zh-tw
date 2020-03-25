@@ -9,18 +9,18 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: 319c4fde808932e86021ee59b051261c43ca2edd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166200"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160459"
 ---
-# <a name="varianttchangetype"></a>_variant_t::ChangeType
+# <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
 **Microsoft 專屬**
 
-變更的型別`_variant_t`指定的物件`VARTYPE`。
+將 `_variant_t` 物件的類型變更為指定的 `VARTYPE`。
 
 ## <a name="syntax"></a>語法
 
@@ -34,16 +34,16 @@ void ChangeType(
 #### <a name="parameters"></a>參數
 
 *vartype*<br/>
-`VARTYPE`這個`_variant_t`物件。
+這個 `_variant_t` 物件的 `VARTYPE`。
 
-*pSrc*<br/>
-要轉換之 `_variant_t` 物件的指標。 如果這個值是 NULL，就會就地進行轉換。
+*.Psrc*<br/>
+要轉換之 `_variant_t` 物件的指標。 如果此值為 Null，則會就地完成轉換。
 
 ## <a name="remarks"></a>備註
 
-此成員函式會轉換`_variant_t`到指定的物件`VARTYPE`。 如果*pSrc*是 NULL 時，轉換已就地完成，否則這`_variant_t`物件會從複製*pSrc* ，然後再轉換。
+此成員函式會將 `_variant_t` 物件轉換成指定的 `VARTYPE`。 如果 *.psrc*為 Null，則會就地完成轉換，否則會從 *.psrc*複製此 `_variant_t` 物件，然後再進行轉換。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4927
+title: 編譯器警告 (層級 1) C4927
 ms.date: 11/04/2016
 f1_keywords:
 - C4927
 helpviewer_keywords:
 - C4927
 ms.assetid: 7009e740-a2ef-4130-96ba-482e092f717a
-ms.openlocfilehash: 8e56d185f6f87bc6e381ccec9ed8bd50ba3e2245
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 7f529435b3d95a64e53985d0fba96917d541e5fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052289"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174605"
 ---
-# <a name="compiler-warning-level-1-c4927"></a>編譯器警告（層級1） C4927
+# <a name="compiler-warning-level-1-c4927"></a>編譯器警告 (層級 1) C4927
 
 不合法的轉換;已隱含套用一個以上的使用者定義轉換
 

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516493"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172031"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 可需告只和 Common Language Runtime 搭配使用的「Pin 指標」。
 
@@ -89,7 +89,7 @@ Pin 指標不可做為下列項目使用：
 
 如需內部指標的詳細資訊，請參閱 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)。
 
-如需 Pin 指標的詳細資訊，請參閱[如何：固定指標和陣列](how-to-pin-pointers-and-arrays.md)和[如何：宣告 Pin 指標和實值型別](how-to-declare-pinning-pointers-and-value-types.md)。
+如需釘選指標的詳細資訊，請參閱[如何：釘選指標和陣列](how-to-pin-pointers-and-arrays.md)和[如何：宣告固定指標和實數值型別](how-to-declare-pinning-pointers-and-value-types.md)。
 
 ### <a name="requirements"></a>需求
 

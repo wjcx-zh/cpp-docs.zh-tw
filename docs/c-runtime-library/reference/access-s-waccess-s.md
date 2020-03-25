@@ -33,16 +33,16 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939910"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171316"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
-決定檔案的讀取/寫入權限。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [_access、_waccess](access-waccess.md) 版本。
+決定檔案的讀取/寫入權限。 這是如 [CRT 中的安全性功能](access-waccess.md)中所述之增強安全性的 [_access、_waccess](../../c-runtime-library/security-features-in-the-crt.md) 版本。
 
 ## <a name="syntax"></a>語法
 
@@ -88,9 +88,9 @@ errno_t _waccess_s(
 |04|讀取權限。|
 |06|讀取和寫入權限。|
 
-讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案已由另一個進程鎖定，即使 **_access_s**傳回0，它也可能無法存取。
+讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案已由另一個進程鎖定，即使 **_access_s**傳回0，也可能無法存取。
 
-**_waccess_s**是 **_access_s**的寬字元版本，其中 **_waccess_s**的*path*引數是寬字元字串。 否則， **_waccess_s**和 **_access_s**的行為會相同。
+**_waccess_s**是寬字元版本的 **_access_s**，其中 **_waccess_s**的*path*引數是寬字元字串。 否則， **_waccess_s**和 **_access_s**的行為完全相同。
 
 這些函式會驗證它們的參數。 如果*path*為 Null，或*模式*未指定有效的模式，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
 
@@ -102,7 +102,7 @@ errno_t _waccess_s(
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|選擇性標頭|
+|常式|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h> 或 \<io.h>|\<errno.h>|

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 89609de3fc5584a960480bff83566f5e38c8be1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477528"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171394"
 ---
 # <a name="path-field-limits"></a>路徑欄位限制
 
@@ -39,7 +39,7 @@ ms.locfileid: "50477528"
 
 這些常數會定義路徑及路徑中個別欄位的最大長度。
 
-|常數|意義|
+|持續性|意義|
 |--------------|-------------|
 |`_MAX_DIR`|目錄元件的最大長度|
 |`_MAX_DRIVE`|磁碟機元件的最大長度|

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-ms.openlocfilehash: 3c071ae8ac8c212b5bf3cd3eba8b082d790f7d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 681a1d723d7a50e04fa2bf57706d61fa995f9789
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161065"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183562"
 ---
 # <a name="linker-tools-error-lnk1332"></a>連結器工具錯誤 LNK1332
 
-偵測到\<計數 > Windows 執行階段類型已匯入一個模組，並定義於另一個模組
+偵測到\<計數 > 在一個模組中匯入並定義于另一個模組中的 Windows 執行階段類型
 
-當它產生目前的目標時，連結器偵測到 <`count`> Windows 執行階段類型，其中每一個是匯入一個模組，並定義於另一個模組。
+當它產生目前的目標時，會偵測到連結器 <`count`> Windows 執行階段類型，而每個模組都會匯入一個模組中，同時定義于另一個模組中。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 - 根據錯誤訊息的建議，修正組建的每個 LNK2039 錯誤。
 

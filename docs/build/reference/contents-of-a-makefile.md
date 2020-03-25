@@ -5,12 +5,12 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294092"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169912"
 ---
 # <a name="contents-of-a-makefile"></a>Makefile 內容
 
@@ -26,13 +26,13 @@ Makefile 包含：
 
 - [點指示詞](dot-directives.md)
 
-- [前置處理器指示詞](makefile-preprocessing.md)
+- [前置處理指示詞](makefile-preprocessing.md)
 
 ## <a name="remarks"></a>備註
 
-您可以使用 makefile 中的其他功能[萬用字元](wildcards-and-nmake.md)，[長檔名](long-filenames-in-a-makefile.md)，[註解](comments-in-a-makefile.md)，以及[特殊字元](special-characters-in-a-makefile.md)。
+您可以在 makefile 中使用的其他功能包括[萬用字元](wildcards-and-nmake.md)、[長檔名](long-filenames-in-a-makefile.md)、[批註](comments-in-a-makefile.md)和[特殊字元](special-characters-in-a-makefile.md)。
 
-如需範例，請參閱[Makefile 範例](sample-makefile.md)。
+如需範例，請參閱[範例 Makefile](sample-makefile.md)。
 
 ## <a name="see-also"></a>另請參閱
 

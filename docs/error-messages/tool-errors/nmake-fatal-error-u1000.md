@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1000
 ms.assetid: 49b9bd9e-f1bc-4b55-a171-c748e40b195e
-ms.openlocfilehash: 2b101041e2d57b8b47528bb49c9c76c28a2670e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ffbccb0b759147a0cd6dadb321231d357fcb8c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393164"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173474"
 ---
 # <a name="nmake-fatal-error-u1000"></a>NMAKE 嚴重錯誤 U1000
 
-> 語法錯誤: ')' 巨集引動過程中遺失
+> 語法錯誤：宏調用中遺漏 '） '
 
-左括號 **(**，沒有相符的右括號中，已出現 **)**，巨集引動過程中。 正確的格式是 **$(**<em>名稱</em>**)**;**$** <em>n</em>允許一個字元的名稱。
+在宏調用中，左**括弧（** ）出現時，沒有對應的右括弧， **）** 。 正確的格式為 **$ （** <em>name</em> **）** ;單一字元名稱允許 **$** <em>n</em> 。

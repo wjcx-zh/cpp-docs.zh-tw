@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944082"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170354"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -64,12 +64,12 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Acosh**函數會傳回*x*的反雙曲余弦（arc 雙曲余弦）。 這些函式在網域*x* ≥1中是有效的。 如果*x*小於1， `errno`會設為`EDOM` ，且結果為無訊息 NaN。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
+**Acosh**函數會傳回*x*的反雙曲余弦（arc 雙曲余弦）。 這些函式在網域*x* ≥1中是有效的。 如果*x*小於1，`errno` 會設定為 `EDOM` 且結果為無訊息 NaN。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
 
-|Input|SEH 例外狀況|`_matherr` 例外狀況|
+|輸入|SEH 例外狀況|`_matherr` 例外狀況|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|none|none|
-|*x* < 1|none|none|
+|± QNAN、IND、INF|無|無|
+|*x* < 1|無|無|
 
 ## <a name="remarks"></a>備註
 
@@ -81,7 +81,7 @@ long double acosh( long double x );  // C++ only
 |--------------|--------------|------------------|
 |**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,19 +1,19 @@
 ---
-title: 編譯器警告（層級1） C4548
+title: 編譯器警告 (層級 1) C4548
 ms.date: 11/04/2016
 f1_keywords:
 - C4548
 helpviewer_keywords:
 - C4548
 ms.assetid: 2cee817e-e463-4d90-bbd2-de120d48c101
-ms.openlocfilehash: 09d2d2d1b67b203ebbc6b62b5b19f4b063e312c3
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 3770810ae4b2e8550fa79db27b58c581414316b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186227"
 ---
-# <a name="compiler-warning-level-1-c4548"></a>編譯器警告（層級1） C4548
+# <a name="compiler-warning-level-1-c4548"></a>編譯器警告 (層級 1) C4548
 
 逗號之前的運算式無效; 必須是具有副作用的運算式
 

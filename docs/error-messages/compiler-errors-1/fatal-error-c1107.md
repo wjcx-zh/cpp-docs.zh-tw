@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1107
 ms.assetid: 541a4d9f-10bc-4dd8-b68e-15e548f3dc0a
-ms.openlocfilehash: 135e8da1b49eb1d86f6186e8683ced2f5152a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e8df232b4d3f3b18eb7c37bcc418ca030a93aef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203784"
 ---
 # <a name="fatal-error-c1107"></a>嚴重錯誤 C1107
 
-找不到組件 'file': 請指定組件搜尋路徑，請使用 /AI 或設定 LIBPATH 環境變數
+找不到元件 ' file '：請使用/AI 或設定 LIBPATH 環境變數來指定元件搜尋路徑
 
-中繼資料檔案已傳遞給[#using](../../preprocessor/hash-using-directive-cpp.md)編譯器找不到的指示詞。
+中繼資料檔案已傳遞給編譯器無法找到的[#using](../../preprocessor/hash-using-directive-cpp.md)指示詞。
 
-LIBPATH，如本主題中所述`#using`，而[/AI](../../build/reference/ai-specify-metadata-directories.md)編譯器選項可讓您指定在其中，編譯器會尋找參考的中繼資料檔案的目錄。
+LIBPATH （如 `#using`的主題中所述），而[/AI](../../build/reference/ai-specify-metadata-directories.md)編譯器選項可讓您指定編譯器會在其中尋找參考中繼資料檔案的目錄。

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154512"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189542"
 ---
 # <a name="default-arguments"></a>預設引數
 
-在許多情況下，函式的引數不常使用，因此使用預設值即已足夠。 為解決此問題，預設引數機能只能用於指定在特定呼叫中具有意義之函式的這些引數。 為了說明這個概念，請考慮中的範例[函式多載](../cpp/function-overloading.md)。
+在許多情況下，函式的引數不常使用，因此使用預設值即已足夠。 為解決此問題，預設引數機能只能用於指定在特定呼叫中具有意義之函式的這些引數。 為了說明這個概念，請考慮函式多[載中所呈現的範例](../cpp/function-overloading.md)。
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-實作`print`函式已稍微變更成反映類型只有一個這類函式存在的事實**double**:
+`print` 函式的執行會稍微變更，以反映只有一個這類函式存在於**double**類型的事實：
 
 ```cpp
 // default_arguments.cpp
@@ -106,7 +106,7 @@ print( d, 0 ); // Override default argument to achieve other
 
 - 您可以利用之後的宣告加入其他預設引數。
 
-- 可以對函式指標提供預設引數。 例如: 
+- 可以對函式指標提供預設引數。 例如：
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

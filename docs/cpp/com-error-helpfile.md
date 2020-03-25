@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - HelpFile method [C++]
 ms.assetid: d2d3a0a1-6b62-4d52-a818-3cfae545a4af
-ms.openlocfilehash: 826ac53f001355127f16b7ad2a7583a0f8800de7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 775adfa7d5dd5aca098edcd793c2164d65fe7efa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155029"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190218"
 ---
-# <a name="comerrorhelpfile"></a>_com_error::HelpFile
+# <a name="_com_errorhelpfile"></a>_com_error::HelpFile
 
 **Microsoft 專屬**
 
-呼叫`IErrorInfo::GetHelpFile`函式。
+呼叫 `IErrorInfo::GetHelpFile` 函式。
 
 ## <a name="syntax"></a>語法
 
@@ -27,13 +27,13 @@ _bstr_t HelpFile() const;
 
 ## <a name="return-value"></a>傳回值
 
-傳回的結果`IErrorInfo::GetHelpFile`for`IErrorInfo`物件記錄`_com_error`物件。 產生的 BSTR 會封裝在 `_bstr_t` 物件內。 如果沒有`IErrorInfo`是記錄，它會傳回空`_bstr_t`。
+傳回 `_com_error` 物件中所記錄之 `IErrorInfo` 物件的 `IErrorInfo::GetHelpFile` 結果。 產生的 BSTR 會封裝在 `_bstr_t` 物件內。 如果未記錄任何 `IErrorInfo`，則會傳回空的 `_bstr_t`。
 
 ## <a name="remarks"></a>備註
 
-呼叫時的任何失敗`IErrorInfo::GetHelpFile`方法會被忽略。
+呼叫 `IErrorInfo::GetHelpFile` 方法時的任何失敗都會被忽略。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

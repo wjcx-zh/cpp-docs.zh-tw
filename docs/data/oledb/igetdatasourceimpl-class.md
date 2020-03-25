@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210609"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 類別
 
-提供實作[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))物件。
+提供[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))物件的執行。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IGetDataSourceImpl`。
+衍生自 `IGetDataSourceImpl`的類別。
 
 ## <a name="requirements"></a>需求
 
@@ -47,15 +47,15 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 |||
 |-|-|
-|[GetDataSource](#getdatasource)|在 建立工作階段資料來源物件上傳回的介面指標。|
+|[GetDataSource](#getdatasource)|傳回建立會話之資料來源物件上的介面指標。|
 
 ## <a name="remarks"></a>備註
 
-這是必要的介面上的工作階段取得的資料來源物件的介面指標時。
+這是會話上的強制介面，可取得資料來源物件的介面指標。
 
-## <a name="getdatasource"></a> Igetdatasourceimpl:: Getdatasource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>IGetDataSourceImpl：： GetDataSource
 
-在 建立工作階段資料來源物件上傳回的介面指標。
+傳回建立會話之資料來源物件上的介面指標。
 
 ### <a name="syntax"></a>語法
 
@@ -66,13 +66,13 @@ STDMETHOD(GetDataSource)(REFIID riid,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[IGetDataSource：： GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) 。
 
 ### <a name="remarks"></a>備註
 
-如果您需要存取資料來源物件中的屬性很有用。
+如果您需要存取資料來源物件中的屬性，這會很有用。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

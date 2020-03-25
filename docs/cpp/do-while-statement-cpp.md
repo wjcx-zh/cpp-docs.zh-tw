@@ -9,16 +9,16 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: d930c1884975288ff11f4d4e5cf2728e717e17d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189269"
 ---
 # <a name="do-while-statement-c"></a>do-while 陳述式 (C++)
 
-執行*陳述式*重複直到指定的終止條件 (*運算式*) 評估為零。
+重複執行*語句*，直到指定的終止條件（*運算式*）評估為零為止。
 
 ## <a name="syntax"></a>語法
 
@@ -30,7 +30,7 @@ while ( expression ) ;
 
 ## <a name="remarks"></a>備註
 
-終止條件的測試會在迴圈中; 每次執行之後因此，**請勿-雖然**迴圈會執行一次以上，取決於終止運算式的值。 在陳述式主體中執行 [break](../cpp/break-statement-cpp.md)、[goto](../cpp/goto-statement-cpp.md) 或 [return](../cpp/return-statement-cpp.md) 陳述式時，**do-while** 陳述式也可能會終止。
+終止條件的測試是在每次執行迴圈之後進行，因此， **do while**迴圈會執行一次或多次，視終止運算式的值而定。 在陳述式主體中執行 **break**、[goto](../cpp/break-statement-cpp.md) 或 [return](../cpp/goto-statement-cpp.md) 陳述式時，[do-while](../cpp/return-statement-cpp.md) 陳述式也可能會終止。
 
 *expression* 必須有算術或指標類型。 執行程序如下所示：
 
@@ -40,7 +40,7 @@ while ( expression ) ;
 
 ## <a name="example"></a>範例
 
-下列範例會示範**請勿-雖然**陳述式：
+下列範例示範**do while**語句：
 
 ```cpp
 // do_while_statement.cpp

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1188
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
-ms.openlocfilehash: 69ac20522aebb7391319c0de210e06b305f3fd0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b18a93c7434ee3d66f42829f373bd916a65369bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226474"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195171"
 ---
 # <a name="linker-tools-error-lnk1188"></a>連結器工具錯誤 LNK1188
 
-BADFIXUPSECTION:: 無效的修復目標 'symbol';可能為零長度區段
+BADFIXUPSECTION：：不正確修復目標 ' symbol ';可能的零長度區段
 
-VxD 連結期間的重新放置目標沒有一節。 使用 LINK386 （較舊版本），（MASM 群組指示詞所產生） 的 OMF 群組記錄可能已用來結合區段的另一個非零長度的零長度區段。 COFF 格式不支援在 GROUP 指示詞和長度為零的區段。 當連結會自動將此類型的 OMF 物件轉換成 COFF 時，可能會發生此錯誤。
+在 VxD 連結期間，重新配置的目標沒有區段。 使用 LINK386 （較舊版本）時，可能會使用 OMF 群組記錄（由 MASM GROUP 指示詞產生），將零長度區段與另一個非零長度區段結合。 COFF 格式不支援 GROUP 指示詞和零長度區段。 當連結自動將這種類型的 OMF 物件轉換成 COFF 時，可能會發生此錯誤。

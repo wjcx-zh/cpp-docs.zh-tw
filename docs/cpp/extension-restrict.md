@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb340554bc20516175400c4d14a5d0dba934a313
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183748"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188957"
 ---
-# <a name="restrict"></a>__restrict
+# <a name="__restrict"></a>__restrict
 
-像是 **__declspec ([限制](../cpp/restrict.md))** 修飾詞 **__restrict**關鍵字會指出符號不是目前範圍中的別名。 **__Restrict**關鍵字與`__declspec ( restrict )`修飾詞，以下列方式：
+如同 **__declspec （[限制](../cpp/restrict.md)）** 修飾詞， **__restrict**關鍵字指出符號在目前範圍中沒有別名。 **__Restrict**關鍵字與 `__declspec ( restrict )` 修飾詞有下列不同之處：
 
-- **__Restrict**關鍵字是只有在變數上有效和`__declspec ( restrict )`只適用於在函式宣告和定義。
+- **__Restrict**關鍵字只在變數上有效，而 `__declspec ( restrict )` 只對函式宣告和定義有效。
 
-- **__restrict**大致**限制**於 C99 規格中，但 **__restrict**可用在C++或 C 程式。
+- **__restrict**類似于 C99 規格的**限制**，但 **__restrict**可以在或 C 程式中C++使用。
 
-- 當 **__restrict**是使用，編譯器將不會傳播變數的無別名屬性。 亦即，如果您指派 **__restrict**變數設為非 **__restrict**變數，編譯器還是會允許非 __restrict 變數具有別名。 這是不同的行為**限制**C99 規格中的關鍵字。
+- 使用 **__restrict**時，編譯器不會傳播變數的「無別名」屬性。 也就是說，如果您將 **__restrict**變數指派給非 **__restrict**變數，編譯器仍然會允許非 __restrict 變數的別名。 這與 C99 規格中的**restrict**關鍵字行為不同。
 
 一般而言，如果您要影響整個函式的行為，使用 `__declspec ( restrict )` 的效果會比使用關鍵字更好。
 
-為了與舊版中，相容性 **_restrict**同義 **__restrict**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
+為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_restrict**是 **__restrict**的同義字。
 
-在 Visual Studio 2015 和更新版本， **__restrict**用於C++參考。
+在 Visual Studio 2015 和更新版本中， **__restrict**可以在C++參考上使用。
 
 > [!NOTE]
->  也有一個變數上使用時[volatile](../cpp/volatile-cpp.md)關鍵字**volatile**會優先使用。
+>  在也具有[volatile](../cpp/volatile-cpp.md)關鍵字的變數上使用時， **volatile**的優先順序會較高。
 
 ## <a name="example"></a>範例
 

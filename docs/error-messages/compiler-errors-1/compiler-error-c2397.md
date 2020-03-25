@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 f1_keywords:
 - C2397
 ms.assetid: b418cf5a-d50d-4a6c-98a7-994ae35046d1
-ms.openlocfilehash: 61f23269e0b6ed65a485f11e49e492d2248b8a42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02a8bb09e0b22619bd61e6c4675057263a62a9d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206011"
 ---
 # <a name="compiler-error-c2397"></a>編譯器錯誤 C2397
 
-從 'type_1' 轉換成 'type_2' 必須是縮小轉換
+從 ' type_1 ' 轉換為 ' type_2 ' 需要縮小轉換
 
-使用統一初始設定時，找不到隱含的縮小轉換。
+使用統一初始化時找到隱含的縮小轉換。
 
-C 語言允許隱含的縮小轉換在指派和初始化，並C++符合如下所示，即使未預期的縮小是許多程式碼錯誤的原因。 若要讓程式碼更安全，C++標準要求的診斷訊息，初始化清單中的縮小轉換發生時。 在視覺效果C++，使用一致的初始化語法支援從 Visual Studio 2015 時，診斷是編譯器錯誤 C2397。 編譯器會產生[編譯器警告 （層級 1） C4838](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md)時使用 [清單] 或 [Visual Studio 2013] 所支援的彙總初始化語法。
+C 語言允許在指派和初始化中進行隱含縮小轉換， C++並遵循，即使非預期的縮小是造成許多程式碼錯誤的原因也一樣。 為了讓程式碼更安全C++ ，當初始化清單中發生縮小轉換時，標準需要診斷訊息。 在 Visual C++中，使用從 Visual Studio 2015 開始支援的統一初始化語法時，診斷是編譯器錯誤 C2397。 當使用 Visual Studio 2013 所支援的清單或匯總初始化語法時，編譯器會產生[編譯器警告（層級1） C4838](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md) 。
 
-當您知道已轉換值的可能範圍可放入目標時，縮小轉換可以是沒問題。 在此情況下，您知道多個與編譯器。 若要刻意縮小轉換，讓您自己的意願明確使用靜態轉型。 否則，此錯誤訊息幾乎都表示程式碼中有 bug。 您可以藉由確定您初始化的物件具有夠大，無法處理輸入的類型來修正此問題。
+當您知道可能的轉換值範圍可以放在目標中時，縮小轉換可能會很好。 在這種情況下，您所知的不僅僅是編譯器。 如果您刻意進行縮小轉換，請使用靜態轉換，讓您的意圖明確。 否則，此錯誤訊息幾乎一律會指出您的程式碼中有錯誤。 您可以藉由確定您初始化的物件具有夠大的類型來處理輸入，藉以修正此問題。
 
-下列範例會產生 C2397，並示範修正此問題的一種方法：
+下列範例會產生 C2397，並顯示解決此問題的一種方法：
 
 ```
 // C2397.cpp -- C++ narrowing conversion diagnostics

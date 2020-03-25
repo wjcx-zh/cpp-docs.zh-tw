@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0024
 ms.assetid: 8bde6368-6c1b-4e04-bc5e-3c6d0b8fa1d7
-ms.openlocfilehash: 645b898bdffcc6d7b397c25eb3c41cea25cb361f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcfdcce54618acca0e22daa54e95083cf3ee9d50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384098"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192610"
 ---
 # <a name="project-build-error-prj0024"></a>專案建置錯誤 PRJ0024
 
-> Unicode 路徑 '*路徑*' 無法轉譯為使用者 ANSI 字碼頁。
+> Unicode 路徑 '*path*' 無法轉譯成使用者的 ANSI 字碼頁。
 
-*路徑*是原始的 Unicode 版本的路徑字串。 在情況下會發生此錯誤無法直接轉譯成 ANSI 目前的系統字碼頁的 Unicode 路徑所在。
+*path*是路徑字串的原始 Unicode 版本。 如果有 Unicode 路徑無法直接轉譯為目前系統字碼頁的 ANSI，就會發生這個錯誤。
 
-如果您正在開發的專案使用字碼頁不在您的電腦上的系統上，可能會發生此錯誤。
+如果您使用的專案是使用不在電腦上的字碼頁所開發的，則可能會發生這個錯誤。
 
-此錯誤的解決方法是更新的路徑來使用 ANSI 文字，或在電腦上安裝的字碼頁，並將它設定為系統預設值。
+此錯誤的解決方式是更新路徑以使用 ANSI 文字，或在您的電腦上安裝字碼頁，並將其設定為系統預設值。

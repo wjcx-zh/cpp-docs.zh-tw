@@ -1,23 +1,23 @@
 ---
-title: 編譯器警告 （層級 1） C4165
+title: 編譯器警告（層級1） C4165
 ms.date: 11/04/2016
 f1_keywords:
 - C4165
 helpviewer_keywords:
 - C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-ms.openlocfilehash: 4d6377730e262efafb38f5e714989e9075a77a04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb036f7672a074e859d3e19083e256bd80c93578
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391734"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176091"
 ---
-# <a name="compiler-warning-level-1-c4165"></a>編譯器警告 （層級 1） C4165
+# <a name="compiler-warning-level-1-c4165"></a>編譯器警告（層級1） C4165
 
-'HRESULT' 轉換為 'bool';確定這是您想要？
+' HRESULT ' 正在轉換成 ' bool ';您確定這是您想要的嗎？
 
-使用中的 HRESULT 時[如果](../../cpp/if-else-statement-cpp.md)陳述式，HRESULT 會轉換成[bool](../../cpp/bool-cpp.md)除非您明確地測試 HRESULT 為變數。 此警告預設為關閉。
+在[if](../../cpp/if-else-statement-cpp.md)語句中使用 hresult 時，除非您明確地將變數測試為 hresult，否則會將 hresult 轉換為[bool](../../cpp/bool-cpp.md) 。 此警告預設為關閉。
 
 ## <a name="example"></a>範例
 

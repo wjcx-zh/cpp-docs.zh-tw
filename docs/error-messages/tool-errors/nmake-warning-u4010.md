@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4010
 ms.assetid: 99d8eb9a-ae31-40d1-b8c5-8c66732127d3
-ms.openlocfilehash: aa4d2355b18a3c6cc6fc3151c7662fbbbaa665d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f68da1893eec6325ccccfd0e2e2dd0e612f28eb9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193130"
 ---
 # <a name="nmake-warning-u4010"></a>NMAKE 警告 U4010
 
-'target': 建置失敗;/K 指定，繼續...
+' target '：組建失敗;已指定/k，正在繼續 。
 
-指定之目標的命令區塊中的命令傳回非零結束代碼。 [/K] 選項會告訴 NMAKE 繼續處理組建的不相關的部分，並發出結束代碼為 1，當 NMAKE 工作階段完成時。
+在命令區塊中，指定目標的命令傳回非零的結束代碼。 /K 選項會告知 NMAKE 繼續處理組建的不相關部分，並在 NMAKE 會話完成時發出結束代碼1。
 
-如果指定的目標，本身，另一個目標相依，NMAKE 就會發出警告[U4011](../../error-messages/tool-errors/nmake-warning-u4011.md)後這項警告。
+如果指定的目標為，本身就是另一個目標的相依性，則 NMAKE 會在此警告之後發出警告[U4011](../../error-messages/tool-errors/nmake-warning-u4011.md) 。

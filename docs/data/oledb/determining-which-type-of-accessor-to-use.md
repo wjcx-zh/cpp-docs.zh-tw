@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: d729e2cf5b08ae227d0cc2e4d5ab7f8ac865cdc4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 31efa36bcd61caa154cd3e4c147ad5ed8728b04c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079648"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210986"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
 
@@ -28,7 +28,7 @@ ms.locfileid: "80079648"
 |`CDynamicAccessor`|自動。|否。|如果您不知道資料列集中的資料類型，則很有用。|
 |`CDynamicParameterAccessor`|自動，但可以[覆寫](../../data/oledb/overriding-a-dynamic-accessor.md)。|是，如果提供者支援 `ICommandWithParameters`。 參數會自動繫結。|比 `CDynamicAccessor` 慢，但適用於呼叫一般預存程序。|
 |`CDynamicStringAccessor[A,W]`|自動。|否。|擷取從資料存放區中存取的資料，作為字串資料。|
-|`CManualAccessor`|使用 `AddBindEntry` 手動。|使用 `AddParameterEntry` 手動。|快速；參數和資料行僅繫結一次。 您可以決定要使用之資料的類型 （如需範例，請參閱[DBVIEWER](https://github.com/Microsoft/VCSamples)範例）。需要比 `CDynamicAccessor` 或 `CAccessor`更多的程式碼。 它比較像直接呼叫 OLE DB。|
+|`CManualAccessor`|使用 `AddBindEntry` 手動。|使用 `AddParameterEntry` 手動。|快速；參數和資料行僅繫結一次。 您可以決定要使用之資料的類型 （如需範例，請參閱[DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)範例）。需要比 `CDynamicAccessor` 或 `CAccessor`更多的程式碼。 它比較像直接呼叫 OLE DB。|
 |`CXMLAccessor`|自動。|否。|擷取從資料存放區中存取的資料，作為字串資料，然後將其格式化為 XML 標記的資料。|
 
 ## <a name="see-also"></a>另請參閱

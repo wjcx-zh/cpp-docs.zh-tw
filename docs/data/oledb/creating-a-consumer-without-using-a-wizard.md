@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211454"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
 
@@ -17,7 +17,7 @@ ms.locfileid: "70311897"
 
 若要在不使用 **ATL OLE DB 消費者精靈**的情況下新增 OLE DB 消費者支援：
 
-- 在您的*pch .h*檔案中，附加下列`#include`語句：
+- 在您的*pch .h*檔案中，附加下列 `#include` 語句：
 
     ```cpp
     #include <atlbase.h>
@@ -56,7 +56,7 @@ ms.locfileid: "70311897"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- 選擇性地使用 `CDBPropSet::AddProperty` 設定資料列集屬性，並將其當作參數，傳遞到 `rs.Open`。 如需如何完成此操作的範例，請參閱[消費者精靈產生的方法](../../data/oledb/consumer-wizard-generated-methods.md)中的 `GetRowsetProperties`。
+- 選擇性地使用 `CDBPropSet::AddProperty` 設定資料列集屬性，並將其當作參數，傳遞到 `rs.Open`。 如需如何完成此操作的範例，請參閱`GetRowsetProperties`消費者精靈產生的方法[中的 ](../../data/oledb/consumer-wizard-generated-methods.md)。
 
 - 您現在可以使用資料列集擷取/操作資料。
 
@@ -68,7 +68,7 @@ ms.locfileid: "70311897"
     ds.Close();
     ```
 
-   如果您要使用命令，您可能想要在 `Close` 之後呼叫 `ReleaseCommand`。 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的程式碼範例會示範如何呼叫 `Close` 和 `ReleaseCommand`。
+   如果您要使用命令，您可能想要在 `ReleaseCommand` 之後呼叫 `Close`。 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的程式碼範例會示範如何呼叫 `Close` 和 `ReleaseCommand`。
 
 - 呼叫 `CoUnInitialize` 以解除初始化 COM。 這是在主要程式碼中呼叫的。
 

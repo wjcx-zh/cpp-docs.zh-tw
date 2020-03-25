@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88811e8070fdfe398bc12734221dee772515d8bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184465"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190531"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>函式上的引數相依名稱 (Koenig) 查閱
 
-編譯器可以使用與引數相關的名稱查閱來尋找不合格的函式呼叫的定義。 與引數相關的名稱查閱也稱為 Koenig 查閱。 函式呼叫中每個引數的類型都是在命名空間、類別、結構、等位或範本階層內定義。 當您指定不合格[後置](../cpp/postfix-expressions.md)函式呼叫，編譯器會搜尋每個引數型別相關聯的階層中的函式定義。
+編譯器可以使用與引數相關的名稱查閱來尋找不合格的函式呼叫的定義。 與引數相關的名稱查閱也稱為 Koenig 查閱。 函式呼叫中每個引數的類型都是在命名空間、類別、結構、等位或範本階層內定義。 當您指定[不合格的](../cpp/postfix-expressions.md)後置函式呼叫時，編譯器會在與每個引數類型相關聯的階層中搜尋函式定義。
 
 ## <a name="example"></a>範例
 

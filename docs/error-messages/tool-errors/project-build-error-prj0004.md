@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-ms.openlocfilehash: ad11e5b81ec31e1ac8a47a0a0ffa31a443f1a107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fccc0d5095373d44b823334402f3188dd1777e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192909"
 ---
 # <a name="project-build-error-prj0004"></a>專案建置錯誤 PRJ0004
 
-> 無法產生命令列 '*工具*' 工具。
+> 無法產生 '*工具*' 工具的命令列。
 
-在這種方式進行的呼叫語法指定了一個或多個內容*工具*不合法：
+指定了一或多個屬性，這種方式可讓對*工具*的呼叫語法不合法：
 
-- 您可能已指定格式錯誤或未知的巨集。
+- 您可能指定了格式不正確或未知的宏。
 
-- 您的電腦可能位於可用磁碟空間不足。
+- 您的電腦的可用磁碟空間可能不足。
 
-您可能想要檢閱此工具的設定來看看[命令列屬性頁](../../build/reference/command-line-property-pages.md)。
+您可能想要查看 [[命令列] 屬性頁](../../build/reference/command-line-property-pages.md)來檢查工具的設定。

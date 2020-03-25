@@ -89,12 +89,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: fd23b26b910a8cc8767b4f456cc3bde9f9a40199
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a5e98a9fe32c71e87f80c2cfc2e733a5d0fe5c94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208334"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
@@ -224,7 +224,7 @@ template<typename Key>
 
 ## <a name="members"></a>成員
 
-## <a name="begin"></a>set：： begin （STL/CLR）
+## <a name="setbegin-stlclr"></a><a name="begin"></a>set：： begin （STL/CLR）
 
 指定受控制序列的開頭。
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a>set：： clear （STL/CLR）
+## <a name="setclear-stlclr"></a><a name="clear"></a>set：： clear （STL/CLR）
 
 移除所有項目。
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a>set：： const_iterator （STL/CLR）
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>set：： const_iterator （STL/CLR）
 
 用於受控制序列的常數迭代器類型。
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a>set：： const_reference （STL/CLR）
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>set：： const_reference （STL/CLR）
 
 項目的常數參考類型。
 
@@ -417,7 +417,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a>set：： const_reverse_iterator （STL/CLR）
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>set：： const_reverse_iterator （STL/CLR）
 
 受控制序列的常數反向反覆運算器類型。
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a>set：： count （STL/CLR）
+## <a name="setcount-stlclr"></a><a name="count"></a>set：： count （STL/CLR）
 
 尋找符合指定索引鍵的項目數目。
 
@@ -512,7 +512,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a>set：:d ifference_type （STL/CLR）
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>set：:d ifference_type （STL/CLR）
 
 兩個元素之間帶正負號距離的類型。
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a>set：： empty （STL/CLR）
+## <a name="setempty-stlclr"></a><a name="empty"></a>set：： empty （STL/CLR）
 
 測試項目是否不存在。
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a>set：： end （STL/CLR）
+## <a name="setend-stlclr"></a><a name="end"></a>set：： end （STL/CLR）
 
 指定受控制序列的結尾。
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a>set：： equal_range （STL/CLR）
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>set：： equal_range （STL/CLR）
 
 尋找符合指定之索引鍵的範圍。
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a>set：： erase （STL/CLR）
+## <a name="seterase-stlclr"></a><a name="erase"></a>set：： erase （STL/CLR）
 
 移除位於指定位置的項目。
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a>set：： find （STL/CLR）
+## <a name="setfind-stlclr"></a><a name="find"></a>set：： find （STL/CLR）
 
 尋找符合指定之索引鍵的元素。
 
@@ -868,7 +868,7 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a>set：： generic_container （STL/CLR）
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>set：： generic_container （STL/CLR）
 
 容器的泛型介面類別型。
 
@@ -932,7 +932,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a>set：： generic_iterator （STL/CLR）
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>set：： generic_iterator （STL/CLR）
 
 用於容器之泛型介面的反覆運算器類型。
 
@@ -988,7 +988,7 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a>set：： generic_reverse_iterator （STL/CLR）
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>set：： generic_reverse_iterator （STL/CLR）
 
 要與容器的泛型介面搭配使用的反向反覆運算器類型。
 
@@ -1044,7 +1044,7 @@ a b c
 c
 ```
 
-## <a name="generic_value"></a>set：： generic_value （STL/CLR）
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>set：： generic_value （STL/CLR）
 
 要與容器的泛型介面搭配使用之元素的類型。
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a>set：： insert （STL/CLR）
+## <a name="setinsert-stlclr"></a><a name="insert"></a>set：： insert （STL/CLR）
 
 加入項目。
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="iterator"></a>set：： iterator （STL/CLR）
+## <a name="setiterator-stlclr"></a><a name="iterator"></a>set：： iterator （STL/CLR）
 
 受控制序列之迭代器的類型。
 
@@ -1256,7 +1256,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a>set：： key_comp （STL/CLR）
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>set：： key_comp （STL/CLR）
 
 複製兩個索引鍵的排序委派。
 
@@ -1315,7 +1315,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a>set：： key_compare （STL/CLR）
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>set：： key_compare （STL/CLR）
 
 兩個索引鍵的排序委派。
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a>set：： key_type （STL/CLR）
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a>set：： key_type （STL/CLR）
 
 排序索引鍵的類型。
 
@@ -1420,7 +1420,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a>set：： lower_bound （STL/CLR）
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>set：： lower_bound （STL/CLR）
 
 尋找符合指定之索引鍵的範圍開頭。
 
@@ -1477,7 +1477,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a>set：： make_value （STL/CLR）
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a>set：： make_value （STL/CLR）
 
 構造值物件。
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>set：： operator = （STL/CLR）
+## <a name="setoperator-stlclr"></a><a name="op_as"></a>set：： operator = （STL/CLR）
 
 取代受控制的序列。
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a>set：： rbegin （STL/CLR）
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>set：： rbegin （STL/CLR）
 
 指定反向受控制序列的開頭。
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a>set：： reference （STL/CLR）
+## <a name="setreference-stlclr"></a><a name="reference"></a>set：： reference （STL/CLR）
 
 項目的參考類型。
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a>set：： rend （STL/CLR）
+## <a name="setrend-stlclr"></a><a name="rend"></a>set：： rend （STL/CLR）
 
 指定反向受控制序列的結尾。
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a>set：： reverse_iterator （STL/CLR）
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>set：： reverse_iterator （STL/CLR）
 
 受控制序列的反向迭代器類型。
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="set"></a>set：： set （STL/CLR）
+## <a name="setset-stlclr"></a><a name="set"></a>set：： set （STL/CLR）
 
 建構容器物件。
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="size"></a>set：： size （STL/CLR）
+## <a name="setsize-stlclr"></a><a name="size"></a>set：： size （STL/CLR）
 
 計算元素的數目。
 
@@ -1987,7 +1987,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a>set：： size_type （STL/CLR）
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a>set：： size_type （STL/CLR）
 
 兩個元素之間帶正負號距離的類型。
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a>set：： swap （STL/CLR）
+## <a name="setswap-stlclr"></a><a name="swap"></a>set：： swap （STL/CLR）
 
 交換兩個容器的內容。
 
@@ -2103,7 +2103,7 @@ d e f
 a b c
 ```
 
-## <a name="to_array"></a>set：： to_array （STL/CLR）
+## <a name="setto_array-stlclr"></a><a name="to_array"></a>set：： to_array （STL/CLR）
 
 將受控制序列複製到新的陣列。
 
@@ -2153,7 +2153,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a>set：： upper_bound （STL/CLR）
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>set：： upper_bound （STL/CLR）
 
 尋找符合指定之索引鍵的結束範圍。
 
@@ -2210,7 +2210,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a>set：： value_comp （STL/CLR）
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>set：： value_comp （STL/CLR）
 
 複製兩個元素值的順序委派。
 
@@ -2254,7 +2254,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a>set：： value_compare （STL/CLR）
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>set：： value_compare （STL/CLR）
 
 兩個元素值的排序委派。
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a>set：： value_type （STL/CLR）
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>set：： value_type （STL/CLR）
 
 元素類型。
 
@@ -2344,7 +2344,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a>operator！ = （set）（STL/CLR）
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operator！ = （set）（STL/CLR）
 
 清單不等於比較。
 
@@ -2414,7 +2414,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>運算子&lt; （set）（STL/CLR）
+## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>運算子&lt; （set）（STL/CLR）
 
 清單小於比較。
 
@@ -2484,7 +2484,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>運算子&lt;= （set）（STL/CLR）
+## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>運算子&lt;= （set）（STL/CLR）
 
 列出小於或等於比較。
 
@@ -2554,7 +2554,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>operator = = （set）（STL/CLR）
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a>operator = = （set）（STL/CLR）
 
 列出相等比較。
 
@@ -2624,7 +2624,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>運算子&gt; （set）（STL/CLR）
+## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>運算子&gt; （set）（STL/CLR）
 
 清單大於比較。
 
@@ -2694,7 +2694,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>運算子&gt;= （set）（STL/CLR）
+## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>運算子&gt;= （set）（STL/CLR）
 
 列出大於或等於比較。
 

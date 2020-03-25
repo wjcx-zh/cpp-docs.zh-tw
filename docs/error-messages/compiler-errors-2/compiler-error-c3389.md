@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b166096390169939f01bcb976a57612f10f7df2e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402576"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201132"
 ---
 # <a name="compiler-error-c3389"></a>編譯器錯誤 C3389
 
-> __declspec (*關鍵字*) 不能以 /clr: pure 或 /clr: safe
+> __declspec （*關鍵字*）不能搭配/clr： pure 或/clr： safe 使用
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+**/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
-A [__declspec](../../cpp/declspec.md)修飾詞表示每個處理序狀態。  [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)表示每個[appdomain](../../cpp/appdomain.md)狀態。  因此，宣告的變數`keyword` **__declspec**修飾詞和編譯 **/clr: pure**不允許。
+使用的[__declspec](../../cpp/declspec.md)修飾詞表示每個進程狀態。  [/clr： pure](../../build/reference/clr-common-language-runtime-compilation.md)意指每個[appdomain](../../cpp/appdomain.md)的狀態。  因此，不允許使用 `keyword`的 **__declspec**修飾詞來宣告變數，並以 **/clr： pure**進行編譯。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3389:
+下列範例會產生 C3389：
 
 ```cpp
 // C3389.cpp

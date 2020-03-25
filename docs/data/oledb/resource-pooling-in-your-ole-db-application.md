@@ -7,24 +7,24 @@ helpviewer_keywords:
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-ms.openlocfilehash: 786c2b31bb93b0691d80885c86377e2afba8c1dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3604f6eaaf0f34a0ff7e54826923c2aa92eef4a2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209757"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 應用程式的資源集中化
 
-若要充分利用在您的應用程式集區，您必須確定 OLE DB 服務由通過您的資料來源叫用`IDataInitialize`或`IDBPromptInitialize`。 如果您直接使用`CoCreateInstance`要叫用提供者的 CLSID 為基礎的提供者，會叫用任何 OLE DB 服務。
+若要在您的應用程式中利用共用，您必須透過 `IDataInitialize` 或 `IDBPromptInitialize`取得您的資料來源，以確保叫用 OLE DB 的服務。 如果您直接使用 `CoCreateInstance` 根據提供者的 CLSID 叫用提供者，則不會叫用任何 OLE DB 的服務。
 
-OLE DB 服務維護連接的資料來源，只要參考的集區`IDataInitialize`或`IDBPromptInitialize`保留或只要是使用中的連線。 集區也會在 COM + 1.0 服務或 Internet Information Services (IIS) 的環境中自動維護。 如果您的應用程式會利用共用外部 COM + 1.0 服務或 IIS 環境，您應該保留的參考`IDataInitialize`或`IDBPromptInitialize`或保留至少一個連線。 若要確保集區不會終結，最後一次連接發行應用程式時，保留參考，或保存您的應用程式的存留期的連接。
+只要 `IDataInitialize` 或 `IDBPromptInitialize` 的參考，或只要有使用中的連接，OLE DB 服務就會維護已連線資料來源的集區。 集區也會自動在 COM + 1.0 服務或 Internet Information Services （IIS）環境中維護。 如果您的應用程式利用 COM + 1.0 服務或 IIS 環境的外部共用，您應該保留 `IDataInitialize` 或 `IDBPromptInitialize` 的參考，或保存至少一個連接。 為確保在應用程式發行最後一個連接時，不會終結集區，請在應用程式的存留期內保留參考或保存連接。
 
-OLE DB 服務中識別集區連線繪製時的起點，`Initialize`呼叫。 連接取自集區之後，它不能移至不同的集區中。 因此，請避免在您的應用程式中變更初始化資訊，例如呼叫的事`UnInitialize`或呼叫`QueryInterface`提供者特定介面，然後再呼叫`Initialize`。 此外，不被共用與 DBPROMPT_NOPROMPT 以外的提示值建立的連線。 不過，從透過提示所建立的連接擷取的初始化字串可用來建立其他共用相同的資料來源的連接。
+OLE DB 服務會識別在呼叫 `Initialize` 時，用來繪製連接的集區。 從集區中繪製連接之後，就無法將它移至不同的集區。 因此，請避免在您的應用程式中進行變更初始化資訊的作業，例如呼叫 `UnInitialize` 或呼叫提供者特定介面的 `QueryInterface`，再呼叫 `Initialize`。 此外，使用 DBPROMPT_NOPROMPT 以外的提示值所建立的連線不會共用。 不過，從透過提示所建立的連接中抓取的初始化字串，可以用來建立與相同資料來源的其他共用連接。
 
-某些提供者必須建立個別的連線，每個工作階段。 這些額外的連線都必須個別登錄在分散式交易中，如果有的話。 OLE DB 服務的快取和重複使用單一的工作階段，每個資料來源，但如果應用程式會要求一次的多個工作階段，從單一資料來源，最後的提供者可能會建立其他連接，以及進行其他的交易登記，不共用。 它會更有效率的方式建立的集區的環境，而不是從單一資料來源建立多個工作階段中的每個工作階段的不同資料來源。
+某些提供者必須為每個會話建立個別的連接。 這些額外的連接必須分別登錄在分散式交易中（如果有的話）。 OLE DB 服務會在每個資料來源中快取和重複使用單一會話，但如果應用程式一次要求一個以上的會話來自單一資料來源，則提供者可能會建立額外的連接，並執行其他的交易登記，不是集區。 針對集區環境中的每個會話建立不同的資料來源，會比從單一資料來源建立多個會話更有效率。
 
-最後，因為 ADO 會自動將使用的 OLE DB 服務，您可以使用 ADO 來建立連接，以及共用和登記會自動發生。
+最後，因為 ADO 會自動使用 OLE DB 服務，所以您可以使用 ADO 來建立連接，而共用和登記會自動進行。
 
 ## <a name="see-also"></a>另請參閱
 

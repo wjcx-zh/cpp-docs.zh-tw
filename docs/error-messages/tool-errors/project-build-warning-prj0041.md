@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0041
 ms.assetid: dc9f4cf9-6bd5-4222-89e8-7802a59bb96b
-ms.openlocfilehash: b0fceff05ffe35515965b7e0a880c8b4c941b07e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb6469b1daf193223a9b3361cc3e4bfb96d0c751
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297719"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191924"
 ---
 # <a name="project-build-warning-prj0041"></a>專案建置警告 PRJ0041
 
-找不到遺失依存性的檔案 'file' 的 「 相依性 」。 您的專案仍會建置，但可能會繼續顯示為過期，直到找到這個檔案。
+找不到檔案 ' file ' 的遺漏相依性 ' dependency '。 您的專案可能仍會建立，但可能會繼續顯示，直到找到此檔案為止。
 
-檔案 （資源檔或.idl/.odl 檔案，例如包含專案系統無法解析的 include 陳述式。
+例如，檔案（資源檔或 .idl/odl 檔案包含專案系統無法解析的 include 語句）。
 
-由於專案系統不會處理前置處理器陳述式 (例如 #if)，產生錯誤的陳述式實際上可能不是組建的一部分。
+因為專案系統不會處理預處理器語句（例如 #if），所以違規的語句實際上可能不是組建的一部分。
 
-若要解決這個警告，刪除在.rc 檔中所有不必要的程式碼，或加入的適當名稱的預留位置檔案。
+若要解決這個警告，請刪除 .rc 檔中所有不必要的程式碼，或加入適當名稱的預留位置檔案。

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0026
 ms.assetid: c52bc9b5-8b22-4015-b477-8645ae56c489
-ms.openlocfilehash: 7450d655e4cc8cc073940ef13f8bd57db2ad5219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9193d91d6abd3b1c9a4fbac1e3c50c045658ddff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384013"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192272"
 ---
 # <a name="project-build-error-prj0026"></a>專案建置錯誤 PRJ0026
 
-> 回應檔 '*檔案*' 包含無法轉譯為使用者 ANSI 字碼頁的 Unicode 內容。
+> 回應檔 '*file*' 包含無法轉譯為使用者 ANSI 字碼頁的 Unicode 內容。
 >
 > *檔案的 UNICODE 內容*
 
-專案系統無法正確轉譯成使用者的目前的 ANSI 字碼頁的回應檔案中找到的 Unicode 內容。
+專案系統在回應檔中找到 Unicode 內容，但該檔案無法正確轉譯成使用者的目前 ANSI 字碼頁。
 
-此錯誤的解決方法是更新來使用 ANSI，或是在電腦上安裝的字碼頁，並將它設為系統預設值的回應檔案的內容。
+此錯誤的解決方法是將回應檔的內容更新為使用 ANSI，或將字碼頁安裝在您的電腦上，並將它設定為系統預設值。

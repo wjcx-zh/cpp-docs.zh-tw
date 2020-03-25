@@ -9,24 +9,24 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-ms.openlocfilehash: f46c6f493ae41570c75c384fcc836707faeab99f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eeffff2bf165a5ccbdbaa546ad5b9ca9a57914
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210024"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB 資源集中化和服務
 
-若要搭配 OLE DB 共用，或任何 OLE DB 服務，您的提供者必須支援所有物件的彙的總。 這是任何 OLE DB 1.5 或更新版本的提供者的需求。 最重要的是利用服務。 不支援彙總的提供者無法共用，並且會提供任何其他服務。
+您的提供者必須支援所有物件的匯總，才能與 OLE DB 共用或任何 OLE DB 服務搭配運作。 這是任何 OLE DB 1.5 或更新版本提供者的需求。 這對於利用服務非常重要。 不支援匯總的提供者無法集區，也不會提供其他服務。
 
-若要共用，提供者必須支援無限制執行緒模型。 資源集區會決定根據 DBPROP_THREADMODEL 屬性的提供者的執行緒模型。
+若要進行集區，提供者必須支援免費的執行緒模型。 資源集區會根據 DBPROP_THREADMODEL 屬性來決定提供者的執行緒模型。
 
-如果提供者具有全域連線狀態，可能會變更資料來源初始化的狀態時，它應該支援新的 DBPROP_RESETDATASOURCE 屬性。 此屬性稱為之前連線重複使用，並讓提供者有機會先清除其下一步 使用之前的狀態。 如果提供者無法清除某些與連接相關聯的狀態，它會傳回 DBPROPSTATUS_NOTSETTABLE 的屬性，並不會重複使用的連接。
+如果提供者的全域連接狀態在資料來源處於初始化狀態時可能會變更，則它應該支援新的 DBPROP_RESETDATASOURCE 屬性。 在重複使用連接之前，會呼叫這個屬性，讓提供者有機會在下一次使用之前清除狀態。 如果提供者無法清除與連接相關聯的某些狀態，它可以傳回屬性的 DBPROPSTATUS_NOTSETTABLE，而且不會重複使用連接。
 
-連接到遠端資料庫，以及可以偵測到該連線是否可能遺失的提供者應該支援 DBPROP_CONNECTIONSTATUS 屬性。 這個屬性會讓 OLE DB 服務能夠偵測無作用的連線，並確定它們未返回集區。
+連接到遠端資料庫並可偵測該連接是否可能遺失的提供者，應該支援 DBPROP_CONNECTIONSTATUS 屬性。 此屬性可讓 OLE DB 服務偵測出不正確連線，並確保它們不會傳回到集區。
 
-最後，自動異動登記通常無法運作除非它實作共用，就會發生相同層級。 支援自動交易登記的提供者應該支援停用這個登記公開 DBPROP_INIT_OLEDBSERVICES 屬性，而如果 DBPROPVAL_OS_TXNENLISTMENT 取消選取此選項，請停用登錄。
+最後，自動交易登記通常不會運作，除非它是在共用發生的相同層級上執行。 支援自動交易登錄的提供者應該支援藉由公開 DBPROP_INIT_OLEDBSERVICES 屬性來停用此登記，如果取消選取 DBPROPVAL_OS_TXNENLISTMENT 則停用登記。
 
 ## <a name="see-also"></a>另請參閱
 

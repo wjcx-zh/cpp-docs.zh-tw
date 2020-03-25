@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3555
 ms.assetid: b4311bd3-851b-479a-9965-d03f39dd8fd4
-ms.openlocfilehash: 6545f708fd23b9f3a292ab8fa86087b9e67b3623
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f5b3ba45d64b23cdfb4d157193e826ac0c90998f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200586"
 ---
 # <a name="compiler-error-c3555"></a>編譯器錯誤 C3555
 
 > 'decltype' 的引數不正確
 
-引數`decltype(`*運算式*`)`類型規範不是有效的運算式。
+`decltype(`*運算式*`)` 類型規範的引數不是有效的運算式。
 
 > [!NOTE]
 >  C3555 不太可能發生。 如果編譯器發出 C3555，可能是因為發生編譯器內部錯誤。

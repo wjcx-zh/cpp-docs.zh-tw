@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2150
 ms.assetid: 21e82a10-c1d4-4c0d-9dc6-c5d92ea42a31
-ms.openlocfilehash: a9c6465ef87c12135ad4e6709741f0027d8ea3c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c21f7ee9435220a9ca0b50bb85567506b6ad3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175143"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207216"
 ---
 # <a name="compiler-error-c2150"></a>編譯器錯誤 C2150
 
-> '*識別碼*': 位元欄位必須有類型 'int'、 'signed 的 int' unsigned 的 int'
+> '*identifier*'：位欄位必須有類型 ' int '、' 帶正負號的 int ' 或 ' 不帶正負號的 int '
 
-位元欄位的基礎類型必須是`int`， `signed int`，或`unsigned int`。
+需要 `int`、`signed int`或 `unsigned int`的位欄位基底類型。
 
 ## <a name="example"></a>範例
 
-這個範例示範如何可能會遇到 C2150，以及您如何修正它：
+這個範例會顯示您可能會遇到 C2150 的情況，以及您可以如何修正此問題：
 
 ```cpp
 // C2150.cpp

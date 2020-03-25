@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aed7ca5dcf5803305d8765f50430520a5b73d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192532"
 ---
 # <a name="project-build-error-prj0019"></a>專案建置錯誤 PRJ0019
 
-工具傳回錯誤碼
+工具從傳回錯誤碼
 
-錯誤層級的非零代表自訂建置步驟或建置事件。
+自訂群組建步驟或組建事件的錯誤層級不是零。
 
-工具傳回錯誤碼，但沒有任何錯誤訊息時，您也會看到 PRJ0019。 這種情形，例如，如果您將 MIDL 輸出重新導向到 NUL。
+當工具傳回錯誤碼但沒有錯誤訊息時，您也會看到 PRJ0019。 例如，如果您將 MIDL 的輸出重新導向至 NUL，就會發生這種情況。
 
-請參閱[疑難排解自訂建置步驟和建置事件](../../build/troubleshooting-build-customizations.md)如需詳細資訊。
+如需詳細資訊，請參閱針對[自訂群組建步驟和組建事件進行疑難排解](../../build/troubleshooting-build-customizations.md)。
 
-當您正在以 Users 群組的成員，而且需要系統管理存取權，也會發生此錯誤。 如需詳細資訊，請參閱 < [Users 群組的成員身分執行](../../security/running-as-a-member-of-the-users-group.md)。
+當您以 Users 群組的成員身分執行，而且需要系統管理存取權時，也可能會發生此錯誤。 如需詳細資訊，請參閱[以使用者群組的成員](../../security/running-as-a-member-of-the-users-group.md)身分執行。

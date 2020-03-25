@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4559
 ms.assetid: ed542f60-454d-45cb-85da-987ede61b1ab
-ms.openlocfilehash: afb4fb493c7c3e34ca691720a30d74517b0ab5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0788824dd4180476d81d9682f99fb95883b8c4f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220868"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198337"
 ---
 # <a name="compiler-warning-level-4-c4559"></a>編譯器警告 (層級 4) C4559
 
-> '*函式*': 重複定義; 函式取得 __declspec (*修飾詞*)
+> '*function*'：重複定義;函數增益 __declspec （*修飾*詞）
 
 ## <a name="remarks"></a>備註
 
-函式已重新定義或宣告並新增第二個定義或宣告 **__declspec**修飾詞 (*修飾詞*)。 這個警告僅供參考。 若要修正這個警告，請刪除其中一個定義。
+已重新定義或重新宣告函式，而第二個定義或宣告已加入 **__declspec**修飾詞（*修飾*詞）。 這個警告僅供參考。 若要修正這個警告，請刪除其中一個定義。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4559:
+下列範例會產生 C4559：
 
 ```cpp
 // C4559.cpp

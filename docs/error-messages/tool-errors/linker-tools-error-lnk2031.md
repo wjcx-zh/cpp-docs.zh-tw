@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298915"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194560"
 ---
 # <a name="linker-tools-error-lnk2031"></a>連結器工具錯誤 LNK2031
 
-> 無法產生 p/invoke，如 「*function_declaration*" *decorated_name*; 中繼資料中遺漏呼叫慣例
+> 無法產生 "*function_declaration*" 的 p/invoke *decorated_name*;中繼資料中遺漏呼叫慣例
 
 ## <a name="remarks"></a>備註
 
-當嘗試將純映像匯入原生函式，請記住，隱含的呼叫慣例，不同於原生和單純的編譯。 如需純映像的詳細資訊，請參閱[純粹的和可驗證程式碼 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+嘗試將原生函式匯入純映射時，請記住，在原生和純編譯之間的隱含呼叫慣例不同。 如需純圖像的詳細資訊，請參閱[單純和可C++驗證的程式碼（/cli）](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
-**/Clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
+**/Clr： pure**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
 ## <a name="example"></a>範例
 
-此程式碼範例會產生具有其呼叫慣例是隱含的匯出、 原生函式的元件[__cdecl](../../cpp/cdecl.md)。
+這個程式碼範例會產生一個元件，其中包含已匯出的原生函數，其呼叫慣例會隱含[__cdecl](../../cpp/cdecl.md)。
 
 ```cpp
 // LNK2031.cpp
@@ -37,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>範例
 
-下列範例會建立單純的用戶端使用原生函式。 不過，底下的呼叫慣例 **/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下列範例會產生 LNK2031。
+下列範例會建立使用原生函式的單純用戶端。 不過，在 **/clr： pure**下的呼叫慣例是[__clrcall](../../cpp/clrcall.md)。 下列範例會產生 LNK2031。
 
 ```cpp
 // LNK2031_b.cpp
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用原生函式，從純映像。 請注意明確 **__cdecl**呼叫慣例的規範。
+下列範例示範如何從純映射取用原生函式。 請注意明確 **__cdecl**呼叫慣例規範。
 
 ```cpp
 // LNK2031_c.cpp

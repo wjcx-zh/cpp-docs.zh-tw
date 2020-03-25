@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196062"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>運算式評估工具錯誤 CXX0015
 
-運算式太複雜 （堆疊溢位）
+運算式太複雜（堆疊溢位）
 
-輸入的運算式是太複雜或巢狀層數太多量 C 運算式評估工具的可用儲存空間。
+輸入的運算式太複雜或太深，無法用於 C 運算式評估工具的儲存空間數量。
 
-溢位，通常會發生因為太多暫止的計算。
+溢位通常是因為太多暫止的計算所造成。
 
-重新排列的運算式，以便可以評估運算式的每個元件，會發現，而無需等待計算運算式的其他部分。
+重新排列運算式，讓運算式的每個元件都可以在遇到時進行評估，而不必等候計算運算式的其他部分。
 
-將運算式分割為多個命令。
+將運算式分成多個命令。
 
-此錯誤是與 can0015 相同。
+此錯誤與 CAN0015 相同。

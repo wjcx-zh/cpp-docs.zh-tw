@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1215
 ms.assetid: 0774d8e6-f0c1-4efb-8723-7e1be6863d81
-ms.openlocfilehash: cc9763771778118a823d8c54f922026215b534f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35279d9f47735489902fde284314a2c94f7a682
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195067"
 ---
 # <a name="linker-tools-error-lnk1215"></a>連結器工具錯誤 LNK1215
 
-中繼資料作業失敗 (HRESULT): 錯誤
+中繼資料作業失敗（HRESULT）：錯誤
 
-連結器時從.NET 執行階段嘗試進行透過.NET 執行階段中繼資料更新時收到錯誤。
+連結器在嘗試透過 .NET 執行時間進行中繼資料更新時，從 .NET 執行時間收到錯誤。
 
-`HRESULT` 是從.NET 執行階段方法的 HRESULT。 `error` 是。NET 提供的文字。
+`HRESULT` 是 .NET 執行時間方法中的 HRESULT。 `error` 是。NET 提供的文字。
 
-您可能有不相符的連結器和.NET 執行階段;重新安裝 Visual C++。
+您可能有不相符的連結器和 .NET 執行時間;重新安裝C++視覺效果。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311941"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208798"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>將專案從混合模式轉換為純中繼語言
 
@@ -27,7 +27,7 @@ ms.locfileid: "70311941"
 
 1. 移除[C 執行時間程式庫](../c-runtime-library/crt-library-features.md)（CRT）的連結：
 
-   1. 在定義應用程式進入點的 .cpp 檔案中，將進入點變更為`Main()`。 使用`Main()`表示您的專案不會連結至 CRT。
+   1. 在定義應用程式進入點的 .cpp 檔案中，將進入點變更為 `Main()`。 使用 `Main()` 表示您的專案未連結至 CRT。
 
    2. 在方案總管中，以滑鼠右鍵按一下您的專案，然後選取快捷方式功能表上的 [**屬性**]，以開啟應用程式的屬性頁。
 
@@ -38,7 +38,7 @@ ms.locfileid: "70311941"
       > [!NOTE]
       > 您不需要為 Windows Forms 應用程式設定此屬性，因為 [**子系統**] 欄位預設會設定為 [ **windows （/SUBSYSTEM： windows）** ]。
 
-   5. 在*stdafx.h*中，將所有語句標記為`#include`批註。 例如，在主控台應用程式中：
+   5. 在*stdafx.h*中，將所有 `#include` 語句標記為批註。 例如，在主控台應用程式中：
 
       ```cpp
       // #include <iostream>
@@ -56,7 +56,7 @@ ms.locfileid: "70311941"
       // #include <tchar.h>
       ```
 
-   6. 針對 Windows Forms 應用程式，在 form1.vb 中，將參考 Windows `#include`的語句標記為批註。 例如：
+   6. 針對 Windows Forms 應用程式，在 form1.vb 中，將參考 Windows 的 `#include` 語句標記為批註。 例如：
 
       ```cpp
       // #include <windows.h>
@@ -77,22 +77,22 @@ ms.locfileid: "70311941"
 
    |結構|描述|
    |---------------|-----------------|
-   |[布林值](/dotnet/api/system.boolean)|表示布林值。|
-   |[Byte](/dotnet/api/system.byte)|代表 8 位元不帶正負號的整數。|
+   |[布林值](/dotnet/api/system.boolean)|代表布林值。|
+   |[位元組](/dotnet/api/system.byte)|代表 8 位元不帶正負號的整數。|
    |[Char](/dotnet/api/system.char)|代表 Unicode 字元。|
    |[DateTime](/dotnet/api/system.datetime)|表示時間的瞬間，通常以一天的日期和時間表示。|
-   |[Decimal](/dotnet/api/system.decimal)|代表十進位數值。|
-   |[Double](/dotnet/api/system.double)|表示雙精度浮點數。|
-   |[Guid](/dotnet/api/system.guid)|表示全域唯一識別項 (GUID)。|
-   |[Int16](/dotnet/api/system.int16)|表示 16 位元帶正負號的整數。|
-   |[Int32](/dotnet/api/system.int32)|表示 32 位元帶正負號的整數。|
-   |[Int64](/dotnet/api/system.int64)|表示 64 位元帶正負號的整數。|
-   |[IntPtr](/dotnet/api/system.intptr)|平台專用的類型，用以代表指標或控點。|
+   |[Decimal](/dotnet/api/system.decimal)|代表十進位數字。|
+   |[Double](/dotnet/api/system.double)|代表雙精度浮點數。|
+   |[Guid](/dotnet/api/system.guid)|代表全域唯一識別項 (GUID)。|
+   |[Int16](/dotnet/api/system.int16)|代表 16 位元帶正負號的整數。|
+   |[Int32](/dotnet/api/system.int32)|代表 32 位元帶正負號的整數。|
+   |[Int64](/dotnet/api/system.int64)|代表 64 位元帶正負號的整數。|
+   |[IntPtr](/dotnet/api/system.intptr)|平台專用的類型，用以代表指標或控制代碼。|
    |[SByte](/dotnet/api/system.byte)|代表 8 位元帶正負號的整數。|
-   |[Single](/dotnet/api/system.single)|表示單精確度浮點數。|
-   |[TimeSpan](/dotnet/api/system.timespan)|表示時間間隔。|
-   |[UInt16](/dotnet/api/system.uint16)|表示 16 位元不帶正負號的整數 (Unsigned Integer)。|
-   |[UInt32](/dotnet/api/system.uint32)|表示 32 位元不帶正負號的整數 (Unsigned Integer)。|
-   |[UInt64](/dotnet/api/system.uint64)|表示 64 位元不帶正負號的整數 (Unsigned Integer)。|
-   |[UIntPtr](/dotnet/api/system.uintptr)|平台專用的類型，用以代表指標或控點。|
+   |[Single](/dotnet/api/system.single)|代表單精確度浮點數。|
+   |[TimeSpan](/dotnet/api/system.timespan)|代表時間間隔。|
+   |[UInt16](/dotnet/api/system.uint16)|代表 16 位元不帶正負號的整數。|
+   |[UInt32](/dotnet/api/system.uint32)|代表 32 位元不帶正負號的整數。|
+   |[UInt64](/dotnet/api/system.uint64)|代表 64 位元不帶正負號的整數。|
+   |[UIntPtr](/dotnet/api/system.uintptr)|平台專用的類型，用以代表指標或控制代碼。|
    |[空位](/dotnet/api/system.void)|表示不會傳回值的方法。也就是說，此方法具有 void 傳回型別。|

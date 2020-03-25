@@ -7,24 +7,24 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 0f4c4ad84abf2a5de2cdf09e7064396ea01eeebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bab086bf6982eae5779d3199cfd2ac2c8efe77f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211000"
 ---
 # <a name="defining-stored-procedures"></a>定義預存程序
 
-然後再呼叫預存程序，您必須先定義，使用[DEFINE_COMMAND](../../data/oledb/define-command.md)巨集。 當您定義的命令時，表示參數加上問號 （？） 作為參數標記：
+在呼叫預存程式之前，您必須先使用[DEFINE_COMMAND](../../data/oledb/define-command.md)宏來定義它。 當您定義命令時，請以問號（？）做為參數標記來表示參數：
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
 ```
 
-本主題中的程式碼範例中所使用的語法 （使用大括號，依此類推） 是 SQL Server 特有的。 您在您的預存程序中使用的語法可能會根據您所使用的提供者而有所不同。
+本主題的程式碼範例中使用的語法（使用大括弧等）是 SQL Server 特定的。 您在預存程式中使用的語法可能會根據您所使用的提供者而有所不同。
 
-接下來，在參數對應中指定的參數清單出現在命令中的順序中的參數，在命令中，使用：
+接下來，在參數對應中，指定您在命令中使用的參數，並依命令中出現的順序列出參數：
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -35,20 +35,20 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-前一個範例會定義預存程序，因為它會。 一般而言，有效率的重複使用的程式碼時，資料庫包含一組預先定義的預存程序的名稱這類`Sales by Year`或`dt_adduserobject`。 您可以檢視其使用 SQL Server Enterprise Manager 中的定義。 如下所示呼叫 (放置*嗎？* 參數取決於預存程序介面）：
+先前的範例會定義預存程式。 通常，為了有效率地重複使用程式碼，資料庫會包含一組具有名稱的預先定義預存程式，例如 `Sales by Year` 或 `dt_adduserobject`。 您可以使用 SQL Server Enterprise Manager 來查看其定義。 您可以依照下列方式呼叫它們（的位置 *？* 參數取決於預存程式的介面）：
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }"))
 ```
 
-接下來，請在命令類別宣告：
+接下來，宣告命令類別：
 
 ```cpp
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>
 ```
 
-最後，呼叫預存程序`OpenRowset`，如下所示：
+最後，在 `OpenRowset` 中呼叫預存程式，如下所示：
 
 ```cpp
 CSession m_session;
@@ -59,7 +59,7 @@ HRESULT OpenRowset()
 }
 ```
 
-也請注意，您可以定義預存程序中使用的資料庫屬性[db_command](../../windows/db-command.md) ，如下所示：
+另請注意，您可以使用資料庫屬性來定義預存程式， [db_command](../../windows/db-command.md)如下所示：
 
 ```cpp
 db_command("{ ? = CALL dbo.dt_adduserobject }")

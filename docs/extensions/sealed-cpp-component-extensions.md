@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181794"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C++/CLI 和 C++/CX)
 
@@ -47,7 +47,7 @@ virtual return-type identifier() sealed {...};
 
 您可以在編譯時期使用 `__is_sealed(type)` 型別特性來偵測是否已密封某個型別。 如需詳細資訊，請參閱[型別特性的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
-**sealed** 是內容相關性關鍵字。  如需詳細資訊，請參閱[內容相關性關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
+**sealed** 是內容相關性關鍵字。  如需詳細資訊，請參閱[即時線上關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 

@@ -53,12 +53,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208321"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -144,7 +144,7 @@ template<typename Value,
 
 ## <a name="members"></a>成員
 
-## <a name="assign"></a>stack：： assign （STL/CLR）
+## <a name="stackassign-stlclr"></a><a name="assign"></a>stack：： assign （STL/CLR）
 
 取代所有項目。
 
@@ -198,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a>stack：： const_reference （STL/CLR）
+## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a>stack：： const_reference （STL/CLR）
 
 項目的常數參考類型。
 
@@ -242,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a>stack：： container_type （STL/CLR）
+## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a>stack：： container_type （STL/CLR）
 
 基礎容器的類型。
 
@@ -284,7 +284,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a>stack：:d ifference_type （STL/CLR）
+## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a>stack：:d ifference_type （STL/CLR）
 
 兩個元素之間帶正負號距離的類型。
 
@@ -342,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a>stack：： empty （STL/CLR）
+## <a name="stackempty-stlclr"></a><a name="empty"></a>stack：： empty （STL/CLR）
 
 測試項目是否不存在。
 
@@ -396,7 +396,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a>stack：： generic_container （STL/CLR）
+## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a>stack：： generic_container （STL/CLR）
 
 容器介面卡的泛型介面類別型。
 
@@ -459,7 +459,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a>stack：： generic_value （STL/CLR）
+## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a>stack：： generic_value （STL/CLR）
 
 要與容器的泛型介面搭配使用之元素的類型。
 
@@ -517,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a>stack：： get_container （STL/CLR）
+## <a name="stackget_container-stlclr"></a><a name="get_container"></a>stack：： get_container （STL/CLR）
 
 存取基礎容器。
 
@@ -559,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>stack：： operator = （STL/CLR）
+## <a name="stackoperator-stlclr"></a><a name="op_as"></a>stack：： operator = （STL/CLR）
 
 取代受控制的序列。
 
@@ -613,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a>stack：:p op （STL/CLR）
+## <a name="stackpop-stlclr"></a><a name="pop"></a>stack：:p op （STL/CLR）
 
 移除最後一個元素。
 
@@ -661,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a>stack：:p ush （STL/CLR）
+## <a name="stackpush-stlclr"></a><a name="push"></a>stack：:p ush （STL/CLR）
 
 加入新的最後一個元素。
 
@@ -702,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a>stack：： reference （STL/CLR）
+## <a name="stackreference-stlclr"></a><a name="reference"></a>stack：： reference （STL/CLR）
 
 項目的參考類型。
 
@@ -751,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a>stack：： size （STL/CLR）
+## <a name="stacksize-stlclr"></a><a name="size"></a>stack：： size （STL/CLR）
 
 計算元素的數目。
 
@@ -805,7 +805,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a>stack：： size_type （STL/CLR）
+## <a name="stacksize_type-stlclr"></a><a name="size_type"></a>stack：： size_type （STL/CLR）
 
 兩個元素之間帶正負號距離的類型。
 
@@ -854,7 +854,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a>stack：： stack （STL/CLR）
+## <a name="stackstack-stlclr"></a><a name="stack"></a>stack：： stack （STL/CLR）
 
 建立容器介面卡物件。
 
@@ -947,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a>stack：： to_array （STL/CLR）
+## <a name="stackto_array-stlclr"></a><a name="to_array"></a>stack：： to_array （STL/CLR）
 
 將受控制序列複製到新的陣列。
 
@@ -997,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a>stack：： top （STL/CLR）
+## <a name="stacktop-stlclr"></a><a name="top"></a>stack：： top （STL/CLR）
 
 存取最後一個項目。
 
@@ -1049,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a>stack：： top_item （STL/CLR）
+## <a name="stacktop_item-stlclr"></a><a name="top_item"></a>stack：： top_item （STL/CLR）
 
 存取最後一個項目。
 
@@ -1101,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a>stack：： value_type （STL/CLR）
+## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a>stack：： value_type （STL/CLR）
 
 元素類型。
 
@@ -1146,7 +1146,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a>operator！ = （stack）（STL/CLR）
+## <a name="operator-stack-stlclr"></a><a name="op_neq"></a>operator！ = （stack）（STL/CLR）
 
 堆疊不等於比較。
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>運算子&lt; （stack）（STL/CLR）
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>運算子&lt; （stack）（STL/CLR）
 
 堆疊小於比較。
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>運算子&lt;= （stack）（STL/CLR）
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>運算子&lt;= （stack）（STL/CLR）
 
 堆疊小於或等於比較。
 
@@ -1359,7 +1359,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>operator = = （stack）（STL/CLR）
+## <a name="operator-stack-stlclr"></a><a name="op_eq"></a>operator = = （stack）（STL/CLR）
 
 堆疊相等比較。
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>運算子&gt; （stack）（STL/CLR）
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>運算子&gt; （stack）（STL/CLR）
 
 堆疊大於比較。
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>運算子&gt;= （stack）（STL/CLR）
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>運算子&gt;= （stack）（STL/CLR）
 
 堆疊大於或等於比較。
 

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C4650
 ms.assetid: 3190b3e3-dcd6-4846-939b-f900ab652b2a
-ms.openlocfilehash: ea3f1b6e792239692960e74c8360c6c3a1323815
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57f1d9acba4a8734339f3b8e538120abe542efc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393528"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199564"
 ---
 # <a name="compiler-warning-level-1-c4650"></a>編譯器警告 (層級 1) C4650
 
-不在先行編譯標頭; 中的偵錯資訊只有全域符號標頭中的會提供
+不在先行編譯標頭檔中的調試資訊;只有標頭中的全域符號才可使用
 
-先行編譯標頭檔不是使用 Microsoft 符號偵錯資訊編譯。
+先行編譯標頭檔未使用 Microsoft 符號偵錯工具資訊進行編譯。
 
-連結時，產生的可執行檔或動態連結程式庫檔案不會包含先行編譯標頭中包含的本機符號的偵錯資訊。
+當連結時，產生的可執行檔或動態連結程式庫檔案將不會包含先行編譯標頭檔中所包含之本機符號的偵錯工具資訊。
 
-重新編譯的先行編譯的標頭檔，也可以避免此警告[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)命令列選項。
+藉由使用[/zi](../../build/reference/z7-zi-zi-debug-information-format.md)命令列選項重新編譯先行編譯標頭檔，即可避免此警告。

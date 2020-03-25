@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30445a3abc2a6ad05c983448f57ed5b93df6e61f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383942"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192350"
 ---
 # <a name="project-build-error-prj0025"></a>專案建置錯誤 PRJ0025
 
-> 批次檔 '*檔案*' 包含無法轉譯為使用者 ANSI 字碼頁的 Unicode 內容。
+> 批次檔 '*file*' 包含無法轉譯為使用者 ANSI 字碼頁的 Unicode 內容。
 >
 > *檔案的 UNICODE 內容*
 
-專案系統找到 Unicode 內容中自訂建置規則，或建置無法正確轉譯成使用者的目前的 ANSI 字碼頁的事件。
+專案系統在自訂群組建規則或組建事件中發現 Unicode 內容，無法正確轉譯成使用者目前的 ANSI 字碼頁。
 
-此錯誤的解決方法是更新的建置規則的內容，或建置事件，來使用 ANSI，或是在電腦上安裝的字碼頁，並將它設為系統預設值。
+此錯誤的解決方法是將組建規則或組建事件的內容更新為使用 ANSI，或將字碼頁安裝在您的電腦上，並將它設定為系統預設值。
 
-如需有關自訂建置步驟和建置事件，請參閱[了解自訂建置步驟和建置事件](../../build/understanding-custom-build-steps-and-build-events.md)。
+如需自訂群組建步驟和組建事件的詳細資訊，請參閱[瞭解自訂群組建步驟和組建事件](../../build/understanding-custom-build-steps-and-build-events.md)。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6d193c530cbe0258d8713883b769fe4828a248c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857199"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187423"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -56,7 +56,7 @@ C#如果您熟悉 volatile 關鍵字，或熟悉舊版 Microsoft C++編譯器（
 
 **Microsoft 專屬**
 
-使用 **/volatile： ms**編譯器選項時—根據預設，當 ARM 以外的架構為目標時，編譯器會產生額外的程式碼來維護對 volatile 物件之參考的順序，以及維護其他全域物件參考的順序。 特別之處在於：
+使用 **/volatile： ms**編譯器選項時—根據預設，當 ARM 以外的架構為目標時，編譯器會產生額外的程式碼來維護對 volatile 物件之參考的順序，以及維護其他全域物件參考的順序。 尤其是：
 
 - 暫時性物件的寫入 (也稱為暫時性寫入) 有 Release 語義，也就是說，在指令序列中暫時性物件寫入之前的全域或靜態物件參考，會在已編譯二進位檔中的暫時性寫入之前發生。
 
@@ -67,9 +67,9 @@ C#如果您熟悉 volatile 關鍵字，或熟悉舊版 Microsoft C++編譯器（
 > [!NOTE]
 >  當使用 **/volatile： ms**編譯器選項時所提供的增強保證時，程式碼是不可移植的。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [const](../cpp/const-cpp.md)<br/>

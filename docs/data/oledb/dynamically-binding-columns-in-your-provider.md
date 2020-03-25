@@ -6,34 +6,34 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 3c66cf58ce1f8b83b2b3308c8dabba6cf8cdf0ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175539"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210973"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
 
-請確定您真的需要動態的資料行繫結。 因為您可能需要它：
+請確定您真的需要動態資料行系結。 您可能需要它，因為：
 
-- 您的資料列集資料行未定義在編譯時期。
+- 在編譯時期不會定義您的資料列集資料行。
 
-- 您支援的項目，例如將資料行加入書籤。
+- 您支援一個專案，例如新增資料行的書簽。
 
-## <a name="to-implement-dynamic-column-binding"></a>若要實作動態資料行繫結
+## <a name="to-implement-dynamic-column-binding"></a>若要執行動態資料行系結
 
-1. 移除任何`PROVIDER_COLUMN_MAP`從您的程式碼。
+1. 從您的程式碼移除任何 `PROVIDER_COLUMN_MAP`。
 
-1. 在使用者記錄 （您的結構） 中，加入下列宣告：
+1. 在 [使用者記錄（您的結構）] 中，新增下列宣告：
 
     ```cpp
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. 實作`GetColumnInfo`函式。 此函式會配置儲存資訊的方式。 您可能需要取得的屬性或此函式的其他資訊。 您可能想要建立巨集，類似於[COLUMN_ENTRY](../../data/oledb/column-entry.md)巨集，以新增您自己的資訊。
+1. 執行 `GetColumnInfo` 函式。 此函式會配置資訊的儲存方式。 您可能需要取得此函式的屬性或其他資訊。 您可能會想要建立類似于[COLUMN_ENTRY](../../data/oledb/column-entry.md)宏的宏，以新增您自己的資訊。
 
-   下列範例所示`GetColumnInfo`函式。
+   下列範例顯示 `GetColumnInfo` 函數。
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero

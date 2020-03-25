@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
-ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b0750fe50e18214e0841eff6b3459438e9a6aec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359952"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197947"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>編譯器警告 (層級 2 和 4) C4200
 
@@ -19,7 +19,7 @@ ms.locfileid: "62359952"
 
 表示結構或等位包含大小為零的陣列。
 
-宣告大小為零的陣列為 Microsoft 擴充功能。 這會導致編譯 C++ 檔案時出現層級 2 警告以及編譯 C 檔案時出現層級 4 警告。 C++編譯也會發出這個警告：「 無法產生複製建構函式或複製指派運算子 UDT 包含大小為零的陣列時。 」 本範例會產生警告 C4200：
+宣告大小為零的陣列為 Microsoft 擴充功能。 這會導致編譯 C++ 檔案時出現層級 2 警告以及編譯 C 檔案時出現層級 4 警告。 C + + 編譯也會發出這項警告：「UDT 包含大小為零的陣列時，無法產生 copy-ctor 或 copy-assignment 運算子」。 本範例會產生警告 C4200：
 
 ```cpp
 // C4200.cpp

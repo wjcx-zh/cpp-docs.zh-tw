@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - BK1515
 ms.assetid: 4cf2aedb-10c4-4ae8-abe6-c681fd4d617d
-ms.openlocfilehash: 047840a49242a889fbf45378dfa8cac4faf8140e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c0b9ddd5598e8928003aa8265e29dd1460a2421
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214229"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197570"
 ---
 # <a name="bscmake-error-bk1515"></a>BSCMAKE 錯誤 BK1515
 
-bscfile： 版本不相容： 無法以累加方式更新
+bscfile：不相容的版本：無法以累加方式更新
 
-.Bsc 檔是以另一個版本的 BSCMAKE 建立。 重新建立.bsc 檔案。
+.Bsc 檔案是使用另一個 BSCMAKE 版本所建立。 重新建立 .bsc 檔案。

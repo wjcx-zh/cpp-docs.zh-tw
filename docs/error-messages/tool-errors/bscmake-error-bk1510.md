@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - BK1510
 ms.assetid: e67290c0-58cf-44da-ad01-f8dffc34ea2d
-ms.openlocfilehash: d9e4d99430715102cb2f4d2e2cc1f37abd30070d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d42ab014a2f7ffb0ad96a99db629215461bb93b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279537"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197661"
 ---
 # <a name="bscmake-error-bk1510"></a>BSCMAKE 錯誤 BK1510
 
-損毀。SBR 檔案的檔名
+受損..SBR 檔檔案名
 
-指定的.sbr 檔並沒有預期的格式。 重新編譯以建立新的.sbr。
+給定的 .sbr 檔不具有預期的格式。 重新編譯以建立新的 .sbr。

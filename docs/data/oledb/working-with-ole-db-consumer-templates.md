@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395543"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209257"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 消費者樣板
 
-下列主題提供如何在常見的案例中使用 OLE DB 消費者樣板的一些範例：
+下列主題提供一些範例，說明如何在常見案例中使用 OLE DB 取用者範本：
 
 - [以資料庫屬性簡化資料存取](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -48,16 +48,16 @@ ms.locfileid: "62395543"
 
 - [接收通知](../../data/oledb/receiving-notifications.md)
 
-如需建立和實作 OLE DB 取用者的範例，請參閱 <<c0> [ 建立簡單消費者](../../data/oledb/creating-an-ole-db-consumer.md)。
+如需建立和執行 OLE DB 取用者的範例，請參閱[建立簡單的取用者](../../data/oledb/creating-an-ole-db-consumer.md)。
 
-您也可以找到有關如何在下列範例中使用 OLE DB 消費者樣板的範例：
+您也可以在下列範例中找到如何使用 OLE DB 取用者範本的範例：
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - PG1039
 ms.assetid: a67dfd66-b610-4d78-9658-2bcf7a506b9f
-ms.openlocfilehash: 5b23d3fe48b80ad63aee1ea31c5d767b90dc85ff
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4020f90ac2c1d60f00055d2e659bd1a3c9c44ef7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344382"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192987"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>特性指引最佳化警告 PG1039
 
-無法以掃掠的空閒時間等候。
+無法等待靜音時間進行清除。
 
-不允許應用程式[pgosweep](../../build/pgosweep.md)執行。  當應用程式處於閒置狀態時，可能的話，請執行 pgosweep。
+應用程式不允許執行[pgosweep](../../build/pgosweep.md) 。  可能的話，請在應用程式處於閒置狀態時執行 pgosweep。

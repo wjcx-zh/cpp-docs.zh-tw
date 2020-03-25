@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 793b820264d001fbfbf7920fd322a55b98e90f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230382"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211714"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults 類別
 
-做為範本引數 (*TMultiple*) 來[CCommand](../../data/oledb/ccommand-class.md)建立最佳化的命令處理單一結果集。
+做為[CCommand](../../data/oledb/ccommand-class.md)的樣板引數（*TMultiple*），用來建立可處理單一結果集的優化命令。
 
 ## <a name="syntax"></a>語法
 
@@ -27,7 +27,7 @@ class CNoMultipleResults
 
 ## <a name="remarks"></a>備註
 
-如果您想要處理多個結果集的命令，使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)改。
+如果您想要使用命令來處理多個結果集，請改用[CMultipleResults](../../data/oledb/cmultipleresults-class.md) 。
 
 ## <a name="requirements"></a>需求
 
@@ -35,5 +35,5 @@ class CNoMultipleResults
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

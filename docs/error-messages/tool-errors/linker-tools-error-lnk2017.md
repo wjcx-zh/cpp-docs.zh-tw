@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2017
 ms.assetid: f7c21733-b0fb-4888-a295-9b453ba6ee77
-ms.openlocfilehash: ce5332c2812740ef0b8c7d8e9c64a095d20a4e2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02e80de5c34809a331003f3b0fb28d32e138a531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299051"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194729"
 ---
 # <a name="linker-tools-error-lnk2017"></a>連結器工具錯誤 LNK2017
 
-'symbol' 重新配置至 'segment' 沒有 /largeaddressaware: no 無效
+' symbol ' 重新配置至 ' segment ' 無效，沒有/LARGEADDRESSAWARE：否
 
-您嘗試建置 32 位元位址的 64 位元映像。 若要這樣做，您必須：
+您正嘗試建立具有32位位址的64位映射。 若要進行此動作，您必須：
 
 - 使用固定的載入位址。
 
-- 限制為 3 GB 的映像。
+- 將映射限制為 3 GB。
 
-- 指定[/largeaddressaware: no](../../build/reference/largeaddressaware-handle-large-addresses.md)。
+- 指定[/largeaddressaware： no](../../build/reference/largeaddressaware-handle-large-addresses.md)。

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
-ms.openlocfilehash: 39d8a20dacb0cdeb2a767529e9716bd476f406dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86ac98a2635975b811c7b50020e4d4782675ae4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197013"
 ---
 # <a name="c-runtime-error-r6033"></a>C 執行階段錯誤 R6033
 
-嘗試使用從原生程式碼初始化期間的這個組件的 MSIL 程式碼。 這表示您的應用程式中的 bug。 它很可能是呼叫 MSIL 編譯的結果 (/ clr) 從原生的建構函式，或從 DllMain 的函式。
+在機器碼初始化期間，嘗試在此元件中使用 MSIL 程式碼。 這表示您的應用程式中有錯誤。 最可能的結果是從原生的函式或 DllMain 呼叫 MSIL 編譯（/clr）函數。
 
 > [!NOTE]
-> 如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉發生內部問題。 可能造成此錯誤，應用程式中的 bug 或增益集或延伸模組，它會使用中的 bug。
+> 如果您在執行應用程式時遇到此錯誤訊息，則應用程式已關閉，因為它有內部問題。 此錯誤可能是應用程式中的 bug，或其所使用之增益集或延伸中的 bug 所造成。
 >
 > 您可以嘗試進行下列步驟來修正這個錯誤：
 >
-> - 使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。
-> - 使用**應用程式和功能**或是**程式和功能**頁面**控制台**移除，請修復或重新安裝任何延伸模組或增益集。
-> - 請檢查**Windows Update**中**控制台**軟體更新。
-> - 檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。
+> - 使用 [**控制台**] 中的 [**應用程式和功能**] 或 [**程式和功能**] 頁面修復或重新安裝程式。
+> - 使用 [**控制台**] 中的 [**應用程式和功能**] 或 [**程式和功能**] 頁面，移除、修復或重新安裝任何延伸模組或增益集。
+> - 在 [**控制台**] 中選取 [軟體更新] **Windows Update** 。
+> - 檢查應用程式的更新版本。 如果問題持續發生，請洽詢應用程式廠商。
 
-**適用於程式設計人員的資訊**
+**程式設計人員的資訊**
 
-這項診斷表示 MSIL 指示在執行期間載入器鎖定。 這可能會發生，如果您編譯原生C++使用 /clr 旗標。 只包含 managed 程式碼的模組上使用 /clr 旗標。 如需詳細資訊，請參閱 <<c0> [ 初始化混合組件](../../dotnet/initialization-of-mixed-assemblies.md)。
+此診斷表示 MSIL 指令在載入器鎖定期間執行。 如果您使用/clr 旗標編譯了C++ native，就可能發生這種情況。 只在包含 managed 程式碼的模組上使用/clr 旗標。 如需詳細資訊，請參閱[混合元件的初始化](../../dotnet/initialization-of-mixed-assemblies.md)。

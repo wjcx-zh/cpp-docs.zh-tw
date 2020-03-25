@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1054
 ms.assetid: 9cfb7307-b22a-4418-b7c0-2621b0ab5b1b
-ms.openlocfilehash: 0bfd0c03378b1a9c616a014ac96153b3ab04af9d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d094d0892d43a5f9894f03538f72e59b57bad6db
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344804"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204460"
 ---
 # <a name="fatal-error-c1054"></a>嚴重錯誤 C1054
 
-編譯器限制： 初始設定式巢狀太深
+編譯器限制：初始化運算式的嵌套太深
 
-程式碼超過初始設定式 （10 至 15 層級，根據正在初始化的類型的組合） 的巢狀限制。
+程式碼超過初始化運算式的嵌套限制（10-15 層級，視所要初始化的類型組合而定）。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正
 
-1. 簡化的資料類型，以減少巢狀結構正在初始化。
+1. 簡化要初始化的資料類型，以減少嵌套。
 
-1. 初始化個別的陳述式中的變數宣告之後。
+1. 在宣告之後的個別語句中初始化變數。

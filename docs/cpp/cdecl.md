@@ -9,18 +9,18 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: f4cca797c0bff94a54b0f3302c6c475908870a99
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 8f2b2b0cea8ff30cc450aae534fbff0d7b77f457
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857615"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190090"
 ---
 # <a name="__cdecl"></a>__cdecl
 
 **__cdecl**是 C 和C++程式的預設呼叫慣例。 因為堆疊是由呼叫端所清除，所以它可以執行 `vararg` 函式。 **__Cdecl**呼叫慣例會建立比[__stdcall](../cpp/stdcall.md)更大的可執行檔，因為它會要求每個函式呼叫都包含堆疊清除程式碼。 下列清單會顯示這個呼叫慣例的實作。 **__Cdecl**修飾詞是 Microsoft 專有的。
 
-|項目|實作|
+|元素|實作|
 |-------------|--------------------|
 |引數傳遞順序|由右至左。|
 |堆疊維護責任|呼叫函式會從堆疊取出引數。|
@@ -67,7 +67,7 @@ int __cdecl system(const char *);
 typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

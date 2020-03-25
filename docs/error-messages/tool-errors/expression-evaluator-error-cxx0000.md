@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0000
 - CXX0000
 ms.assetid: 95a7f17d-88ea-4a6c-a3af-2289bf0529fe
-ms.openlocfilehash: 8bd552b59d9a6fe9dbc128ed7d670c795d7e3819
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 498ea4f218fced461134e24e06e27fbe100c5747
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406206"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196414"
 ---
 # <a name="expression-evaluator-error-cxx0000"></a>運算式評估工具錯誤 CXX0000
 
-沒有錯誤條件
+沒有錯誤狀況
 
-沒有發生任何錯誤。 您可以繼續正常地偵錯。
+未發生任何錯誤。 您可以繼續正常地進行調試。
 
-癥結，並通知 Microsoft 產品支援服務。
+請注意這些情況，並通知 Microsoft 產品支援服務。

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3501
 ms.assetid: cad69fab-2687-41ac-961f-25dc4c51b167
-ms.openlocfilehash: cbe4437b79031da3cb0cfbd7151cc9387a23dffd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c00628832c6dc8f0d67656bb32236f9e1347bab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300307"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200810"
 ---
 # <a name="compiler-error-c3501"></a>編譯器錯誤 C3501
 
-沒有為 ProgID 'progid' 註冊的 typelib
+沒有為 ProgID ' progid ' 註冊的 typelib
 
-頇蜞頇指定 progid 並沒有相關聯的型別程式庫。 因此，您無法傳遞此 progid 來`#import`陳述式。
+指定 progid 的類別 ID 沒有關聯的類型程式庫。 因此，您無法將這個 progid 傳遞給 `#import` 語句。

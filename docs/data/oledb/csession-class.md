@@ -40,16 +40,16 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211129"
 ---
 # <a name="csession-class"></a>CSession 類別
 
-表示單一的資料庫存取工作階段。
+表示單一資料庫存取會話。
 
 ## <a name="syntax"></a>語法
 
@@ -67,20 +67,20 @@ class CSession
 
 |||
 |-|-|
-|[Abort](#abort)|取消 （終止） 交易。|
-|[關閉](#close)|關閉工作階段。|
-|[Commit](#commit)|認可的交易。|
+|[Abort](#abort)|取消（終止）交易。|
+|[關閉](#close)|關閉會話。|
+|[認可](#commit)|認可交易。|
 |[GetTransactionInfo](#gettransactioninfo)|傳回交易的相關資訊。|
-|[開啟](#open)|開啟資料來源物件的新工作階段。|
-|[StartTransaction](#starttransaction)|開始新的交易，此工作階段。|
+|[開啟](#open)|為數據源物件開啟新的會話。|
+|[StartTransaction](#starttransaction)|開始此會話的新交易。|
 
 ## <a name="remarks"></a>備註
 
-一或多個工作階段可由每個提供者連接 （資料來源），與相關聯[CDataSource](../../data/oledb/cdatasource-class.md)物件。 若要建立新`CSession`for `CDataSource`，呼叫[csession:: Open](../../data/oledb/csession-open.md)。 若要開始資料庫交易`CSession`提供`StartTransaction`方法。 交易啟動之後，您可以在使用認可`Commit`方法，或取消使用`Abort`方法。
+一或多個會話可以與每個提供者連接（資料來源）相關聯，其以[CDataSource](../../data/oledb/cdatasource-class.md)物件表示。 若要建立 `CDataSource`的新 `CSession`，請呼叫[CSession：： Open](../../data/oledb/csession-open.md)。 若要開始資料庫交易，`CSession` 提供 `StartTransaction` 方法。 一旦交易啟動之後，您可以使用 `Commit` 方法進行認可，或使用 `Abort` 方法將它取消。
 
-## <a name="abort"></a> Csession:: Abort
+## <a name="csessionabort"></a><a name="abort"></a>CSession：： Abort
 
-結束交易。
+終止交易。
 
 ### <a name="syntax"></a>語法
 
@@ -92,15 +92,15 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 #### <a name="parameters"></a>參數
 
-請參閱[itransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ITransaction：： Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) 。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
-## <a name="close"></a> Csession:: Close
+## <a name="csessionclose"></a><a name="close"></a>CSession：： Close
 
-關閉工作階段，利用已開啟[csession:: Open](../../data/oledb/csession-open.md)。
+關閉由[CSession：： Open](../../data/oledb/csession-open.md)開啟的會話。
 
 ### <a name="syntax"></a>語法
 
@@ -110,11 +110,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>備註
 
-版本`m_spOpenRowset`指標。
+釋放 `m_spOpenRowset` 指標。
 
-## <a name="commit"></a> CSession::Commit
+## <a name="csessioncommit"></a><a name="commit"></a>CSession：： Commit
 
-認可的交易。
+認可交易。
 
 ### <a name="syntax"></a>語法
 
@@ -126,17 +126,17 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 #### <a name="parameters"></a>參數
 
-請參閱[itransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) 。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [itransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
+如需詳細資訊，請參閱[ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
 
-## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession：： GetTransactionInfo
 
 傳回交易的相關資訊。
 
@@ -148,19 +148,19 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>參數
 
-請參閱[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程式設計人員參考*。
+如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
 
-## <a name="open"></a> Csession:: Open
+## <a name="csessionopen"></a><a name="open"></a>CSession：： Open
 
-開啟資料來源物件的新工作階段。
+為數據源物件開啟新的會話。
 
 ### <a name="syntax"></a>語法
 
@@ -173,25 +173,25 @@ HRESULT Open(const CDataSource& ds,
 #### <a name="parameters"></a>參數
 
 *ds*<br/>
-[in]若要開啟工作階段的資料來源。
+在要開啟會話的資料來源。
 
-*pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
+*傳入 ppropset*<br/>
+在[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構陣列的指標，其中包含要設定的屬性和值。 請參閱 Windows SDK 中 OLE DB 程式設計*人員參考*中的[屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))。
 
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
+在在*傳入 ppropset*引數中傳遞的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構數目。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-您必須開啟資料來源物件使用[cdatasource:: Open](../../data/oledb/cdatasource-open.md)再傳遞給`CSession::Open`。
+您必須先使用[CDataSource：： open](../../data/oledb/cdatasource-open.md)開啟資料來源物件，然後再將它傳遞給 `CSession::Open`。
 
-## <a name="starttransaction"></a> CSession::StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession：： StartTransaction
 
-開始新的交易，此工作階段。
+開始此會話的新交易。
 
 ### <a name="syntax"></a>語法
 
@@ -204,18 +204,18 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>參數
 
-請參閱[itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱 OLE DB 程式設計*人員參考*中的[ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程式設計人員參考*。
+如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
 
 ## <a name="see-also"></a>另請參閱
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

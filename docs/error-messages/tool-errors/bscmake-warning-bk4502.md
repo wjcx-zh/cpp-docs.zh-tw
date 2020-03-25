@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-ms.openlocfilehash: 47bb81827bb6ae1f580ff907be6c0acf7139a29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c5204239909e579fa93006e245e3841b7fb64eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299734"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197453"
 ---
 # <a name="bscmake-warning-bk4502"></a>BSCMAKE 警告 BK4502
 
-截斷。SBR 檔案 'filename' 不是在檔案名稱
+去.不在檔案名中的 .SBR 檔案 ' filename '
 
-在更新期間指定原本並不是.bsc 檔的一部分的長度為零的.sbr 檔案。
+在更新期間，未指定原本為 .bsc 檔案一部分的長度為零的 .sbr 檔案名。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
 
-1. 指定了錯誤的檔案名稱。
+1. 指定了錯誤的檔案名。
 
-1. 刪除的檔案。 (錯誤[BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md)結果。)
+1. 檔案已刪除。 （ [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md)結果時發生錯誤）。
 
-1. 檔案已損毀，需要執行完整建置 BSCMAKE。
+1. 檔案損毀，需要 BSCMAKE 執行完整組建。

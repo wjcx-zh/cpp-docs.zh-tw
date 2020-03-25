@@ -39,16 +39,16 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a841c41c8f640dcde2a3d98841f66f6c6dc04602
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384461"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208282"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
-包含 STL/CLR 標頭`<cliext/utility>`來定義範本類別`pair`和數個支援的樣板函式。
+包含 STL/CLR 標頭 `<cliext/utility>` 以定義樣板類別 `pair` 和數個支援的範本函式。
 
 ## <a name="syntax"></a>語法
 
@@ -66,25 +66,25 @@ ms.locfileid: "62384461"
 
 |類別|描述|
 |-----------|-----------------|
-|[pair (STL/CLR)](#pair)|換行組的項目。|
+|[pair (STL/CLR)](#pair)|包裝一對元素。|
 
 |運算子|描述|
 |--------------|-----------------|
-|[operator== (pair) (STL/CLR)](#op_eq)|對等於比較。|
-|[operator!= (pair) (STL/CLR)](#op_neq)|配對不相等比較。|
-|[operator< (pair) (STL/CLR)](#op_lt)|組小於比較。|
-|[operator\<= (pair) (STL/CLR)](#op_lteq)|配對小於或等於比較。|
-|[operator> (pair) (STL/CLR)](#op_gt)|大於比較的配對。|
-|[operator>= (pair) (STL/CLR)](#op_gteq)|對大於或等於的比較。|
+|[operator== (pair) (STL/CLR)](#op_eq)|配對相等比較。|
+|[operator!= (pair) (STL/CLR)](#op_neq)|配對不等於比較。|
+|[operator< (pair) (STL/CLR)](#op_lt)|配對小於比較。|
+|[operator\<= （配對）（STL/CLR）](#op_lteq)|配對小於或等於比較。|
+|[operator> (pair) (STL/CLR)](#op_gt)|配對大於比較。|
+|[operator>= (pair) (STL/CLR)](#op_gteq)|配對大於或等於比較。|
 
-|功能|描述|
+|函式|描述|
 |--------------|-----------------|
-|[make_pair (STL/CLR)](#make_pair)|請一組來自一組值。|
+|[make_pair (STL/CLR)](#make_pair)|從一對值進行配對。|
 
 ## <a name="members"></a>成員
 
-## <a name="pair"></a> pair (STL/CLR)
-此範本類別描述包裝一組值的物件。
+## <a name="pair-stlclr"></a><a name="pair"></a>配對（STL/CLR）
+此範本類別描述包裝一對值的物件。
 
 ### <a name="syntax"></a>語法
 
@@ -97,39 +97,39 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *Value1*<br/>
-第一個包裝值類型。
+第一個包裝值的類型。
 
 *Value2*<br/>
-第二個包裝值的型別。
+第二個包裝值的類型。
 
 ## <a name="members"></a>成員
 
 |類型定義|描述|
 |---------------------|-----------------|
-|[pair::first_type (STL/CLR)](#first_type)|第一個包裝值類型。|
-|[pair::second_type (STL/CLR)](#second_type)|第二個包裝值的型別。|
+|[pair::first_type (STL/CLR)](#first_type)|第一個包裝值的類型。|
+|[pair::second_type (STL/CLR)](#second_type)|第二個包裝值的類型。|
 
 |成員物件|描述|
 |-------------------|-----------------|
-|[pair::first (STL/CLR)](#first)|第一個預存的值。|
-|[pair::second (STL/CLR)](#second)|第二個預存的值。|
+|[pair::first (STL/CLR)](#first)|第一個儲存的值。|
+|[pair::second (STL/CLR)](#second)|第二個儲存的值。|
 
 |成員函式|描述|
 |---------------------|-----------------|
-|[pair::pair (STL/CLR)](#pair_pair)|建構配對物件。|
-|[pair::swap (STL/CLR)](#swap)|交換兩個配對的內容。|
+|[pair::pair (STL/CLR)](#pair_pair)|構造配對物件。|
+|[pair::swap (STL/CLR)](#swap)|交換兩組的內容。|
 
 |運算子|描述|
 |--------------|-----------------|
-|[pair::operator= (STL/CLR)](#op_as)|取代預存的值的配對。|
+|[pair::operator= (STL/CLR)](#op_as)|取代預存值的配對。|
 
 ## <a name="remarks"></a>備註
 
-這個物件會儲存一組值。 您可以使用此範本類別來將兩個值合併成單一物件。 此外，該物件`cliext::pair`（此處所述） 存放區只有 managed 類型; 若要儲存的未受管理的一組使用型別`std::pair`中宣告`<utility>`。
+物件會儲存一對值。 您可以使用此範本類別，將兩個值結合成單一物件。 此外，物件 `cliext::pair` （在此描述）只會儲存 managed 類型;若要儲存一對非受控類型，請使用在 `<utility>`中宣告的 `std::pair`。
 
-## <a name="first"></a> pair::first (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a>成對：： first （STL/CLR）
 
-第一個包裝的值。
+第一個已包裝的值。
 
 ### <a name="syntax"></a>語法
 
@@ -139,7 +139,7 @@ Value1 first;
 
 ### <a name="remarks"></a>備註
 
-這個物件會儲存第一個包裝的值。
+物件會儲存第一個包裝的值。
 
 ### <a name="example"></a>範例
 
@@ -164,9 +164,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="first_type"></a> pair::first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>成對：： first_type （STL/CLR）
 
-第一個包裝值類型。
+第一個包裝值的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -176,7 +176,7 @@ typedef Value1 first_type;
 
 ### <a name="remarks"></a>備註
 
-類型是範本參數的同義字*Value1*。
+此類型是樣板參數*Value1*的同義字。
 
 ### <a name="example"></a>範例
 
@@ -201,9 +201,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="op_as"></a> pair::operator= (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a>成對：： operator = （STL/CLR）
 
-取代預存的值的配對。
+取代預存值的配對。
 
 ### <a name="syntax"></a>語法
 
@@ -214,11 +214,11 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 #### <a name="parameters"></a>參數
 
 *right*<br/>
-要複製組。
+配對以複製。
 
 ### <a name="remarks"></a>備註
 
-成員運算子複製*右*物件，然後傳回`*this`。 您使用它來取代儲存的值一組以一份儲存的值在一組*右*。
+成員運算子會將*許可權*複製到物件，然後傳回 `*this`。 您可以使用它，以*右邊*的一組預存值來取代儲存的值配對。
 
 ### <a name="example"></a>範例
 
@@ -245,9 +245,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pair_pair"></a> pair::pair (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>配對：:p 空中（STL/CLR）
 
-建構配對物件。
+構造配對物件。
 
 ### <a name="syntax"></a>語法
 
@@ -261,7 +261,7 @@ pair(Value1 val1, Value2 val2);
 #### <a name="parameters"></a>參數
 
 *right*<br/>
-若要儲存的配對。
+要儲存的配對。
 
 *val1*<br/>
 要儲存的第一個值。
@@ -271,27 +271,27 @@ pair(Value1 val1, Value2 val2);
 
 ### <a name="remarks"></a>備註
 
-建構函式：
+此構造函式：
 
 `pair();`
 
-初始化預存的配對，其中建構的預設值。
+使用預設的結構值，初始化預存的配對。
 
-建構函式：
+此構造函式：
 
 `pair(pair<Value1, Value2>% right);`
 
-初始化預存的配對，其中`right.` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)並`right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。
+使用 `right.`組[： first （stl/clr）](../dotnet/pair-first-stl-clr.md)和 `right.`組[：： second （stl/clr）](../dotnet/pair-second-stl-clr.md)，初始化預存配對。
 
 `pair(pair<Value1, Value2>^ right);`
 
-初始化預存的配對，其中`right->` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)並`right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。
+使用 `right->`組[： first （stl/clr）](../dotnet/pair-first-stl-clr.md)和 `right>`組[：： second （stl/clr）](../dotnet/pair-second-stl-clr.md)，初始化預存配對。
 
-建構函式：
+此構造函式：
 
 `pair(Value1 val1, Value2 val2);`
 
-初始化預存的配對，其中*val1*並*val2*。
+使用*val1*和*val2*，初始化預存配對。
 
 ### <a name="example"></a>範例
 
@@ -330,9 +330,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="second"></a> pair::second (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a>成對：： second （STL/CLR）
 
-第二個包裝值。
+第二個已包裝的值。
 
 ### <a name="syntax"></a>語法
 
@@ -342,7 +342,7 @@ Value2 second;
 
 ### <a name="remarks"></a>備註
 
-這個物件會儲存第二個包裝的值。
+物件會儲存第二個已包裝的值。
 
 ### <a name="example"></a>範例
 
@@ -367,9 +367,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="second_type"></a> pair::second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>成對：： second_type （STL/CLR）
 
-第二個包裝值的型別。
+第二個包裝值的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -379,7 +379,7 @@ typedef Value2 second_type;
 
 ### <a name="remarks"></a>備註
 
-類型是範本參數的同義字*Value2*。
+此類型是樣板參數*Value2*的同義字。
 
 ### <a name="example"></a>範例
 
@@ -404,9 +404,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="swap"></a> pair::swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a>成對：： swap （STL/CLR）
 
-交換兩個配對的內容。
+交換兩組的內容。
 
 ### <a name="syntax"></a>語法
 
@@ -417,11 +417,11 @@ void swap(pair<Value1, Value2>% right);
 #### <a name="parameters"></a>參數
 
 *right*<br/>
-要交換內容的配對。
+與交換內容的配對。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會交換預存的值之間的配對`*this`並*右*。
+成員函式會在 `*this` 和*right*之間交換已儲存的值配對。
 
 ### <a name="example"></a>範例
 
@@ -473,9 +473,9 @@ x x x x x
 a b c
 ```
 
-## <a name="make_pair"></a> make_pair (STL/CLR)
+## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair （STL/CLR）
 
-請`pair`從一組值。
+從一對值進行 `pair`。
 
 ### <a name="syntax"></a>語法
 
@@ -488,20 +488,20 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *Value1*<br/>
-第一個包裝值類型。
+第一個包裝值的類型。
 
 *Value2*<br/>
-第二個包裝值的型別。
+第二個包裝值的類型。
 
 *first*<br/>
 要包裝的第一個值。
 
 *second*<br/>
-要包裝的第二個值。
+要換行的第二個值。
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回 `pair<Value1, Value2>(first, second)`。 您會使用它來建構`pair<Value1, Value2>`從一組值的物件。
+此範本函式會傳回 `pair<Value1, Value2>(first, second)`。 您可以使用它來從一對值中建立 `pair<Value1, Value2>` 物件。
 
 ### <a name="example"></a>範例
 
@@ -526,9 +526,9 @@ int main()
 [y, 4]
 ```
 
-## <a name="op_neq"></a> operator!= (pair) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator！ = （配對）（STL/CLR）
 
-配對不相等比較。
+配對不等於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -542,14 +542,14 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *left*<br/>
-要比較的左的組。
+要比較的左邊配對。
 
 *right*<br/>
-要比較的右組。
+要比較的右配對。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`!(left == right)`。 您會使用它來測試是否*左*未經過排序相同*右*兩組時由項目相比較的項目。
+Operator 函數會傳回 `!(left == right)`。 您可以使用它來測試當兩個配對是以元素進行比較時，是否將*left*與*right*排序。
 
 ### <a name="example"></a>範例
 
@@ -580,9 +580,9 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="op_lt"></a> operator&lt; (pair) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operator&lt; （配對）（STL/CLR）
 
-組小於比較。
+配對小於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -596,14 +596,14 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *left*<br/>
-要比較的左的組。
+要比較的左邊配對。
 
 *right*<br/>
-要比較的右組。
+要比較的右配對。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`。 您會使用它來測試是否*左*排序之前*右*兩組時由項目相比較的項目。
+Operator 函數會傳回 `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`。 您可以使用它來*測試當兩*個配對是以元素進行比較時，是否將*left*排序。
 
 ### <a name="example"></a>範例
 
@@ -634,7 +634,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (pair) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operator&lt;= （配對）（STL/CLR）
 
 配對小於或等於比較。
 
@@ -650,14 +650,14 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *left*<br/>
-要比較的左的組。
+要比較的左邊配對。
 
 *right*<br/>
-要比較的右組。
+要比較的右配對。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`!(right < left)`。 您會使用它來測試是否*左*未經過排序之後*右*兩組時由項目相比較的項目。
+Operator 函數會傳回 `!(right < left)`。 您可以使用它來測試當兩個配對是以元素進行比較時，*左側*是否未按*右*排序。
 
 ### <a name="example"></a>範例
 
@@ -688,9 +688,9 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="op_eq"></a> operator== (pair) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator = = （配對）（STL/CLR）
 
-對等於比較。
+配對相等比較。
 
 ### <a name="syntax"></a>語法
 
@@ -704,14 +704,14 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *left*<br/>
-要比較的左的組。
+要比較的左邊配對。
 
 *right*<br/>
-要比較的右組。
+要比較的右配對。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`left.first ==` `right.first &&` `left.second ==` `right.second`。 您會使用它來測試是否*左*排序相同*右*兩組時由項目相比較的項目。
+Operator 函數會傳回 `left.first ==` `right.first &&` `left.second ==` `right.second`。 您可以使用它來測試當兩個配對是以元素進行比較時，*左側*是否與*右*排序相同。
 
 ### <a name="example"></a>範例
 
@@ -742,9 +742,9 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (pair) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operator&gt; （配對）（STL/CLR）
 
-大於比較的配對。
+配對大於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -758,14 +758,14 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *left*<br/>
-要比較的左的組。
+要比較的左邊配對。
 
 *right*<br/>
-要比較的右組。
+要比較的右配對。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`right` `<` `left`。 您會使用它來測試是否*左*經過排序之後*右*兩組時由項目相比較的項目。
+Operator 函數會傳回 `right` `<` `left`。 您可以使用它來測試當兩個配對是以元素進行比較時 *，是否要*在*右*向後排序。
 
 ### <a name="example"></a>範例
 
@@ -796,9 +796,9 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (pair) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operator&gt;= （配對）（STL/CLR）
 
-對大於或等於的比較。
+配對大於或等於比較。
 
 ### <a name="syntax"></a>語法
 
@@ -812,14 +812,14 @@ template<typename Value1,
 #### <a name="parameters"></a>參數
 
 *left*<br/>
-要比較的左的組。
+要比較的左邊配對。
 
 *right*<br/>
-要比較的右組。
+要比較的右配對。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回`!(left < right)`。 使用它來測試是否*左*未經過排序再*右*兩組時由項目相比較的項目。
+Operator 函數會傳回 `!(left < right)`。 您可以使用它來*測試當兩*個配對是以元素進行比較時，*左側*是否未排序。
 
 ### <a name="example"></a>範例
 

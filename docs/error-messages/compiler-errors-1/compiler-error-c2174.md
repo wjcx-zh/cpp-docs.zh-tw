@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2174
 ms.assetid: 161d563c-76e9-47e9-9142-7812e9ea169e
-ms.openlocfilehash: c9634dea7a29df55612c2f20e70c94601881af57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a951cc6e31c8cc25a728e9fc1599ea9303060f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174597"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206985"
 ---
 # <a name="compiler-error-c2174"></a>編譯器錯誤 C2174
 
-'function': 實質參數具有類型 'void': 參數 number1，參數清單 number2
+' function '：實際參數具有類型 ' void '：參數數位1，參數清單數位2
 
-參數`number1`傳遞至參數清單`number2`是`void`參數。 參數不能有類型`void`。 請改用 `void*`。
+傳遞至參數清單 `number2` 的參數 `number1` 是 `void` 參數。 參數的類型不能 `void`。 請改用 `void*`。

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2410
 ms.assetid: b69b2de1-56f3-4ebc-8913-04ac57ffe8a1
-ms.openlocfilehash: 8b01a2f7b9c55fb57c880df5033538f4e45f76b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4d30ff0fbca7428fb1dcf252bcad50bd53488d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205685"
 ---
 # <a name="compiler-error-c2410"></a>編譯器錯誤 C2410
 
-'identifier': 'context' 中的模稜兩可的成員名稱
+' identifier '： ' coNtext ' 中有不明確的成員名稱
 
-識別碼是一個以上的結構或等位在此內容中的成員。
+此識別碼是此內容中多個結構或等位的成員。
 
-使用造成錯誤的運算元是結構或等位的規範。 結構或等位的規範是識別項的型別`struct`或是`union`(`typedef`名稱或變數中的結構或等位正在參考相同的型別)。 規範必須是要使用運算元的第一個成員選取運算子 （.） 的左的運算元。
+在造成錯誤的運算元上使用結構或聯集規範。 結構或等位規範是類型的識別碼 `struct` 或 `union` （`typedef` 名稱或與所參考之結構或等位相同類型的變數）。 規範必須是第一個成員選取運算子（）的左運算元，才能使用運算元。

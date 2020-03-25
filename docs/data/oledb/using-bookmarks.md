@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 579e67151858904e877a34bf30467e3cb97fe2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388952"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209309"
 ---
 # <a name="using-bookmarks"></a>使用書籤
 
-開啟資料列集之前，您必須告訴提供者想要使用書籤。 若要這樣做，請設定`DBPROP_BOOKMARKS`屬性，以 **，則為 true**在您的屬性集。 提供者會擷取書籤做為資料行的零，因此您必須使用特殊的巨集 BOOKMARK_ENTRY 和`CBookmark`類別，如果您使用靜態存取子。 `CBookmark` 是範本類別，其中的引數是以位元組為單位的書籤緩衝區的長度。 所需的書籤緩衝區的長度取決於提供者。 如果您使用的 ODBC OLE DB 提供者，如下列範例所示，緩衝區必須是 4 個位元組。
+在開啟資料列集之前，您必須告知提供者您想要使用書簽。 若要這麼做，請在您的屬性集內，將 `DBPROP_BOOKMARKS` 屬性設定為**true** 。 提供者會將書簽抓取為數據行零，因此，如果您使用靜態存取子，則必須使用特殊宏 BOOKMARK_ENTRY 和 `CBookmark` 類別。 `CBookmark` 是範本類別，其中引數是書簽緩衝區的長度（以位元組為單位）。 書簽所需的緩衝區長度取決於提供者。 如果您使用的是 ODBC OLE DB 提供者（如下列範例所示），則緩衝區必須是4個位元組。
 
 ```cpp
 class CProducts
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-如果您使用`CDynamicAccessor`，在執行階段動態設定緩衝區。 在此情況下，您可以使用特製化的版本`CBookmark`不指定緩衝區長度。 使用函式`GetBookmark`書籤擷取目前的記錄，此程式碼範例所示：
+如果您使用 `CDynamicAccessor`，則會在執行時間以動態方式設定緩衝區。 在此情況下，您可以使用未指定緩衝區長度之 `CBookmark` 的特製化版本。 使用函數 `GetBookmark` 從目前的記錄抓取書簽，如下列程式碼範例所示：
 
 ```cpp
 CTable<CDynamicAccessor> product;
@@ -55,7 +55,7 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-如需支援書籤的提供者資訊，請參閱[書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)。
+如需在提供者中支援書簽的詳細資訊，請參閱[提供者支援書簽](../../data/oledb/provider-support-for-bookmarks.md)。
 
 ## <a name="see-also"></a>另請參閱
 

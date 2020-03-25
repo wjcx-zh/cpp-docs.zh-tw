@@ -7,16 +7,16 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165784"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209236"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>使用 OLE DB 提供者樣板
 
-若要了解如何使用 OLE DB 提供者範本，請參閱下列主題：
+若要瞭解如何使用 OLE DB 提供者範本，請參閱下列主題：
 
 - [將介面新增至提供者](../../data/oledb/adding-an-interface-to-your-provider.md)
 
@@ -37,4 +37,4 @@ ms.locfileid: "62165784"
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者範本參考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)

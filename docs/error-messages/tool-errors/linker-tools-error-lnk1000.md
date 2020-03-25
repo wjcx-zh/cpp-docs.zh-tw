@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1000
 ms.assetid: 86421b9a-460a-4285-8dce-9b8257d78122
-ms.openlocfilehash: b0e6eb3ba44216e9300506eb84adb61a6529903d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48b976f6e996d0e076849dc9b20b4cedd47dfbcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195418"
 ---
 # <a name="linker-tools-error-lnk1000"></a>連結器工具錯誤 LNK1000
 
-> 未知的錯誤;如需技術支援選項，請參閱文件
+> 未知的錯誤;如需技術支援選項，請參閱檔
 
-請注意錯誤的情況下，然後試著找出問題，並建立可重現的測試案例。 如需如何調查與報告這些錯誤的資訊，請參閱[如何回報問題與視覺效果C++工具組或文件](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
+請注意錯誤的狀況，然後嘗試找出問題，並建立可重現的測試案例。 如需如何調查和報告這些錯誤的相關資訊，請參閱[如何回報視覺效果C++工具組或檔的問題](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
 
-如果您混合使用標準標頭檔 (例如 Windows.h) 和您自己的檔案，您可能會發生此錯誤。 先行編譯標頭，如果包含任何、 第一個，則標準的標頭，後面加上您自己的標頭檔。
+如果您混用標準標頭檔（例如，Windows .h）和您自己的檔案，可能會收到這個錯誤。 包含先行編譯的標頭（如果有的話），然後是標準標頭，後面接著您自己的標頭檔。

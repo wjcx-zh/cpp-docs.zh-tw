@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1223
 ms.assetid: c4728c36-daee-462f-a1c7-8733dcdec88e
-ms.openlocfilehash: 331521c357389c2f7c1aa786969154a2b747ffe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9d4c7224a7e65775354a86bd34fa9ea1b074af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242821"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195028"
 ---
 # <a name="linker-tools-error-lnk1223"></a>連結器工具錯誤 LNK1223
 
@@ -19,4 +19,4 @@ ms.locfileid: "62242821"
 
 針對使用 pdata 的 RISC 平台，如果編譯器發出的 .pdata 區段具有未排序的項目，會發生這個錯誤。
 
-若要修正此問題，請嘗試編譯時不要[/GL （整個程式最佳化）](../../error-messages/tool-errors/linker-tools-error-lnk1223.md)啟用。 空白的函式主體也可能在某些情況下導致此錯誤。
+若要修正此問題，請嘗試在未啟用[/gl （整個程式優化）](../../error-messages/tool-errors/linker-tools-error-lnk1223.md)的情況下進行編譯。 空白的函式主體也可能在某些情況下導致此錯誤。

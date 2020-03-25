@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1126
 ms.assetid: f22b26a6-8ad7-47cf-a237-196c8ea60aca
-ms.openlocfilehash: 3f4d152163d3b21ddf99644c34e63f35ca15e6e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6c9d06cd087eb4462ae475cc1f6d64ba451887f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230008"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203624"
 ---
 # <a name="fatal-error-c1126"></a>嚴重錯誤 C1126
 
-'identifier': 自動配置超過大小
+' identifier '：自動設定超過大小
 
-配置給本機變數的函式 （加上的編譯器，例如額外的 20 個位元組，可切換的函式所使用的空間數量有限） 的空間超過限制。
+為函式的區域變數（加上編譯器所使用的空間數量限制）所配置的空間（例如，用於交換函式的額外20個位元組）超過限制。
 
-若要更正這個錯誤，請使用`malloc`或`new`配置大量的資料。
+若要更正此錯誤，請使用 `malloc` 或 `new` 來配置大量資料。

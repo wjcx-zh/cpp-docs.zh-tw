@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9026
 ms.assetid: 149fe5e3-5329-4be8-b871-49dfd423aaba
-ms.openlocfilehash: 3fd8d442dfabaf2f03d8b564c9fdfb1537f6ff28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59dfcdc97fb9caf60a018cb20583ee6fca3dcb27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196699"
 ---
 # <a name="command-line-warning-d9026"></a>命令列警告 D9026
 
-選項會套用至整個命令列
+選項適用于整個命令列
 
-指定檔案名稱之後命令上指定的選項。 選項已套用到它前面的檔案。
+指定 filename 之後，在命令上指定了選項。 此選項已套用至其前面的檔案。
 
 例如，在命令中
 
@@ -25,6 +25,6 @@ ms.locfileid: "62214203"
 CL verdi.c /G5 puccini.c
 ```
 
-將使用 /G5 選項，而不是 /g4 是預設會編譯 /g4 的檔案。
+將使用/G5 選項（而非/G4 預設值）來編譯 VERDI 檔案。
 
-此行為是不同的一些先前的版本，才要編譯的檔名，導致 /g4 之前所指定的選項，使用/第 4 代 」 和 「 而 puccini.c 會以要編譯使用 /G5 套用。
+這種行為不同于先前的某些版本，只會套用 filename 前面指定的選項，因此會使用/G4 來編譯 VERDI，並使用/G5. 編譯 PUCCINI。 c

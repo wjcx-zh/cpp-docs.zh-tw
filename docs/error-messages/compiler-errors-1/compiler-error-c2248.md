@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: d9b9a6c04e7e9a5d88df516125280b6b23894a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302549"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206536"
 ---
 # <a name="compiler-error-c2248"></a>編譯器錯誤 C2248
 
-'*成員*': 無法存取'*access_level*'在類別中宣告成員'*類別*'
+'*member*'：無法存取類別 '*class*' 中宣告的 '*access_level*' 成員
 
-在衍生類別的成員無法存取`private`基底類別成員。 您無法存取`private`或`protected`類別執行個體的成員。
+衍生類別的成員無法存取基類 `private` 成員。 您無法存取 `private` 或 `protected` 類別實例的成員。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2248 私用時，或從類別外部存取類別的受保護的成員。 若要修正此問題，不會存取這些類別之外的直接成員。 使用公用成員資料和成員函式與類別互動。
+下列範例會在從類別外部存取類別的私用或受保護成員時，產生 C2248。 若要修正此問題，請不要直接在類別之外存取這些成員。 使用公用成員資料和成員函式來與類別互動。
 
 ```cpp
 // C2248_access.cpp
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-另一個 c2248 的一致性問題是使用樣板 friend 和特製化。 若要修正此問題，請使用空白參數清單 template<> 或特定的範本參數範本函式宣告 friend。
+另一個公開 C2248 的一致性問題，就是使用範本朋友和特製化。 若要修正此問題，請使用空的範本參數清單 < > 或特定的範本參數來宣告 friend 範本函式。
 
 ```cpp
 // C2248_template.cpp
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-另一個 c2248 的一致性問題時，您嘗試宣告 friend 的類別和類別看不到 friend 宣告範圍中的類別。 若要修正此問題，授與至封入類別的夥伴關係。
+公開 C2248 的另一個一致性問題是當您嘗試宣告類別的 friend，以及類別的範圍中的 friend 宣告看不到該類別時。 若要修正此問題，請對封入類別授與更好的關係。
 
 ```cpp
 // C2248_enclose.cpp

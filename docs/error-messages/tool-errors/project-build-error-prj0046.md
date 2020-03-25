@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0046
 ms.assetid: 59442319-4481-4b97-a4a5-16f52fc718e7
-ms.openlocfilehash: 3ce16ce55133b2e6a1afadc434a9328472900a31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e070065ceaa4b5ffe87f89096bf42509d9e3ce2b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346771"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192129"
 ---
 # <a name="project-build-error-prj0046"></a>專案建置錯誤 PRJ0046
 
-無法繁衍命令列，因為指定的一個是空的。
+無法產生命令列，因為指定的是空的。
 
-空白的命令列指定 makefile 組態;需要命令列。
+為 makefile 設定指定了空白的命令列;需要命令列。

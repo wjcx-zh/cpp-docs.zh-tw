@@ -5,32 +5,32 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: 08011f65ca220885e124e5ad6072244e4ad6e80d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cf3ad1064627f64315822a5045642aa50330d10
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282945"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209791"
 ---
 # <a name="overriding-provider-service-defaults"></a>覆寫提供者服務預設值
 
-OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85))初始化資料來源物件的屬性。
+提供者的 OLEDB_SERVICES 的登錄值會當做資料來源物件上[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85))初始化屬性的預設值傳回。
 
-只要存在的登錄項目，會彙總提供者的物件。 使用者可以覆寫提供者的預設設定初始化之前 DBPROP_INIT_OLEDBSERVICES 屬性值已啟用的服務。 若要啟用或停用特定的服務，使用者會取得 DBPROP_INIT_OLEDBSERVICES 屬性的目前值、 設定或清除的位元為特定的屬性來啟用或停用，以及重設屬性。 直接在 OLE DB 或 ado 傳遞的連接字串中，就可以設定 DBPROP_INIT_OLEDBSERVICES 或`IDataInitialize::GetDatasource`。 啟用/停用個別的服務對應的值詳列於下表。
+只要登錄專案存在，就會匯總提供者的物件。 使用者可以在初始化之前設定 DBPROP_INIT_OLEDBSERVICES 屬性，以覆寫已啟用服務之提供者的預設設定。 若要啟用或停用特定服務，使用者會取得 DBPROP_INIT_OLEDBSERVICES 屬性的目前值，設定或清除要啟用或停用之特定屬性的位，然後重設屬性。 DBPROP_INIT_OLEDBSERVICES 可以直接在 OLE DB 中，或在傳遞至 ADO 或 `IDataInitialize::GetDatasource`的連接字串中設定。 下表列出啟用/停用個別服務的對應值。
 
-|預設啟用的服務|DBPROP_INIT_OLEDBSERVICES 屬性值|連接字串中的值|
+|預設服務已啟用|DBPROP_INIT_OLEDBSERVICES 屬性值|連接字串中的值|
 |------------------------------|------------------------------------------------|--------------------------------|
-|所有服務 （預設值）|DBPROPVAL_OS_ENABLEALL|"OLE DB Services = -1;"|
-|集區以外的所有與自動編列|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|「 OLE DB 服務 =-4; 」|
-|用戶端資料指標的全部項目|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB Services = -5;"|
-|以外所有集區，自動編列和用戶端資料指標|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|「 OLE DB 服務 =-7;"|
-|沒有服務|`~DBPROPVAL_OS_ENABLEALL`|「 OLE DB 服務 = 0;"|
+|所有服務（預設值）|DBPROPVAL_OS_ENABLEALL|"OLE DB Services =-1;"|
+|除了 Pooling 和 AutoEnlistment 以外的所有|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"OLE DB Services =-4;"|
+|除了用戶端資料指標以外的所有|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB Services =-5;"|
+|除了 Pooling、AutoEnlistment 和用戶端資料指標以外的所有|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB Services =-7;"|
+|沒有服務|`~DBPROPVAL_OS_ENABLEALL`|"OLE DB Services = 0;"|
 
-如果登錄項目不存在提供者，元件管理員不會收集提供者的物件。 任何服務將會不開啟，即使使用者明確要求。
+如果提供者的登錄專案不存在，則元件管理員不會收集提供者的物件。 即使使用者明確要求，也不會開啟任何服務。
 
 ## <a name="see-also"></a>另請參閱
 
 [資源集區](/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
-[如何取用者會使用資源集區](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
-[提供者如何有效地使用資源集區](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
+[取用者如何使用資源分享](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[提供者如何有效地與資源分享搭配運作](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [啟用和停用 OLE DB 服務](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

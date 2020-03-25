@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: a2284395b09c34b0d22c4499bf804cfcc3a74c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155273"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181521"
 ---
 # <a name="allocate"></a>allocate
 
 **Microsoft 專屬**
 
-**配置**宣告指定名稱命名的資料區段配置資料的項目。
+「**配置**宣告規範」會為將在其中配置資料項目的資料區段命名。
 
 ## <a name="syntax"></a>語法
 
@@ -28,7 +28,7 @@ ms.locfileid: "62155273"
 
 ## <a name="remarks"></a>備註
 
-名稱*segname*必須宣告為使用其中一種下列 pragma:
+名稱*segname*必須使用下列其中一個 pragma 來宣告：
 
 - [code_seg](../preprocessor/code-seg.md)
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

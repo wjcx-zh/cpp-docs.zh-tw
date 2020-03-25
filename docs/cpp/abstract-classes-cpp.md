@@ -7,12 +7,12 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181690"
 ---
 # <a name="abstract-classes-c"></a>抽象類別 (C++)
 
@@ -20,7 +20,7 @@ ms.locfileid: "62385085"
 
 至少包含一個純虛擬函式的類別會被視為抽象類別。 衍生自抽象類別的類別必須實作純虛擬函式，否則這些類別也是抽象類別。
 
-中的範例，請考慮[虛擬函式](../cpp/virtual-functions.md)。 `Account` 類別的目的是要提供一般功能，但 `Account` 類型的物件則過於籠統，實用性不高。 因此，`Account` 非常適合作為抽象類別：
+請考慮在[虛擬](../cpp/virtual-functions.md)函式中呈現的範例。 `Account` 類別的目的是要提供一般功能，但 `Account` 類型的物件則過於籠統，實用性不高。 因此，`Account` 非常適合作為抽象類別：
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -53,9 +53,9 @@ private:
 
 您可以為抽象類別定義純虛擬函式，但是只能使用下列語法直接呼叫：
 
-*abstract-class-name*::*function-name*()
+*抽象類別-name*：：*function-name*（）
 
-這在設計基底類別包含純虛擬解構函式的類別階層架構時很有幫助，因為基底類別解構函式會一律在終結物件的處理序中呼叫。 參考下列範例：
+這在設計基底類別包含純虛擬解構函式的類別階層架構時很有幫助，因為基底類別解構函式會一律在終結物件的處理序中呼叫。 請考慮下列範例：
 
 ```cpp
 // Declare an abstract base class with a pure virtual destructor.

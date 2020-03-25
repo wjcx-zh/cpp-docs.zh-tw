@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2821
 ms.assetid: e8d71988-a968-4484-94db-e8c3bad74a4a
-ms.openlocfilehash: 5c725d9648a7800c68a2fbff20e594a400c296c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d099c4a0f6e1ea77a25213e3873b8a0814e28dcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208180"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201991"
 ---
 # <a name="compiler-error-c2821"></a>編譯器錯誤 C2821
 
-'operator new' 的第一個型式參數必須是 'unsigned 的 int'
+' operator new ' 的第一個型式參數必須是 ' 不帶正負號的 int '
 
-第一個正式參數[new 運算子](../../standard-library/new-operators.md#op_new)必須是不帶正負號`int`。
+[Operator new](../../standard-library/new-operators.md#op_new)的第一個型式參數必須是不帶正負號的 `int`。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2821:
+下列範例會產生 C2821：
 
 ```cpp
 // C2821.cpp

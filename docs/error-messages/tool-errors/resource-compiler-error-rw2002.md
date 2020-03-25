@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230412"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190686"
 ---
 # <a name="resource-compiler-error-rw2002"></a>資源編譯器錯誤 RW2002
 
@@ -53,7 +53,7 @@ ms.locfileid: "71230412"
 
 1. **不允許空的功能表**
 
-   在**功能表**語句中定義任何功能表項目之前，會出現**END**關鍵字。 資源編譯器不允許空的功能表。 請確定您沒有任何開啟的引號內 **功能表** 陳述式。
+   在**功能表**語句中定義任何功能表項目之前，會出現**END**關鍵字。 資源編譯器不允許空的功能表。 請確定您在**MENU**語句中沒有任何左引號。
 
 1. **對話方塊中預期的結尾**
 
@@ -69,7 +69,7 @@ ms.locfileid: "71230412"
 
 1. **需要的控制項類別名稱**
 
-   DIALOG `class`語句中**CONTROL**語句的欄位必須是下列其中一種類型：按鈕、COMBOBOX、編輯、LISTBOX、捲軸、靜態或使用者定義。 請確定類別的拼寫正確。
+   **DIALOG**語句中**CONTROL**語句的 `class` 欄位必須是下列其中一種類型：按鈕、COMBOBOX、編輯、LISTBOX、捲軸、靜態或使用者定義。 請確定類別的拼寫正確。
 
 1. **預期的字型名稱**
 
@@ -85,7 +85,7 @@ ms.locfileid: "71230412"
 
 1. **預期的數值命令值**
 
-   資源編譯器在**快速鍵**語句中預期會有數值*idvalue*欄位。 請確定您已使用`#define`常數來指定值，且常數的拼寫正確。
+   資源編譯器在**快速鍵**語句中預期會有數值*idvalue*欄位。 請確定您已使用 `#define` 常數來指定值，且常數的拼寫正確。
 
 1. **字串資料表中必須有數值常數**
 
@@ -97,7 +97,7 @@ ms.locfileid: "71230412"
 
 1. **預期的數值對話方塊常數**
 
-   A **對話方塊** 陳述式需要整數值做為 *x、 y、 寬度*，並 *高度* 欄位。 請確定這些值會包含在後 **對話方塊** 關鍵字和它們不是負數。
+   DIALOG 語句需要 [x]、[ *y]、[width*] 和 [ *height* **]** 欄位的整數值。 請確定這些值都包含在**DIALOG**關鍵字之後，而且不是負數。
 
 1. **STRINGTABLE 中需要的字串**
 
@@ -109,7 +109,7 @@ ms.locfileid: "71230412"
 
 1. **需要 ID 的數位**
 
-   在 DIALOG 語句中， `id`控制項語句的欄位必須要有數位。 請確定您有控制項識別碼的`#define`數位或語句。
+   在**DIALOG**語句中，控制項語句的 `id` 欄位應為數字。 請確定您有控制項識別碼的數位或 `#define` 語句。
 
 1. **對話方塊類別中必須有引號的字串**
 
@@ -141,7 +141,7 @@ ms.locfileid: "71230412"
 
 1. **不正確控制項類型**
 
-   **DIALOG**語句中的每個控制語句都必須是下列其中一項：CHECKBOX、COMBOBOX、CONTROL、CTEXT、DEFPUSHBUTTON、EDITTEXT、群組方塊、圖示、LISTBOX、LTEXT、按鈕、選項按鈕、RTEXT、捲軸。 請確定這些控制語句的拼寫正確。
+   **DIALOG**語句中的每個控制語句都必須是下列其中一項： CHECKBOX、COMBOBOX、CONTROL、CTEXT、DEFPUSHBUTTON、EDITTEXT、群組方塊、圖示、LISTBOX、LTEXT、按鈕、選項按鈕、RTEXT、捲軸。 請確定這些控制語句的拼寫正確。
 
 1. **不正確類型**
 
@@ -153,7 +153,7 @@ ms.locfileid: "71230412"
 
 1. **不成對的括弧**
 
-   請確定您已關閉每個左括弧 **對話方塊** 陳述式。
+   請確定您已關閉**DIALOG**語句中的每個左括弧。
 
 1. **RCData 中有未預期的值**
 

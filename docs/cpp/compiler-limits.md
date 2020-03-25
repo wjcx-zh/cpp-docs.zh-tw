@@ -4,34 +4,34 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, limits for language constructs
 ms.assetid: f1fa59c6-55b4-414b-80c5-3df72952160d
-ms.openlocfilehash: 9663da06c97886ef1cd20ca2928944795b39dc18
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9e61cae1638c87f03b6fa775552408961bde6859
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189571"
 ---
 # <a name="compiler-limits"></a>編譯器限制
 
-C++ 標準會建議各種語言的建構限制。 以下是一份的情況下，MicrosoftC++編譯器不會實作所建議的限制。 第一個數字是 ISO 中建立的限制C++11 標準 (INCITS/ISO/IEC 14882-2011 [2012]，Annex B) 第二個數字是 Microsoft 實作的限制C++編譯器：
+C++ 標準會建議各種語言的建構限制。 以下是 Microsoft C++編譯器不會執行建議限制的案例清單。 第一個數位是 ISO C++ 11 標準（INCITS/ISO/IEC 14882-2011 [2012]，附錄 B）中所建立的限制，而第二個數字是 Microsoft C++編譯器所實行的限制：
 
-- 巢狀層級的複合陳述式、 反覆項目控制結構，以及選取控制結構-C++標準：256，MicrosoftC++編譯器： 視陳述式的巢狀，但通常介於 100 和 110 之間的組合。
+- 複合陳述式、反復專案控制結構和選取控制結構的嵌套層級C++ -標準：256、 C++ Microsoft 編譯器：取決於嵌套的語句組合，但通常是在100與110之間。
 
-- 一個巨集定義-中的參數C++標準：256，MicrosoftC++編譯器：127.
+- 一個巨集定義中的參數- C++標準：256、Microsoft C++編譯器：127。
 
-- 在一個巨集引動過程的引數C++標準：256，MicrosoftC++編譯器： 127。
+- 一個宏調用中的自C++變數-標準： 256 C++ 、Microsoft 編譯器127。
 
-- 中字元的字元字串常值或寬字串常值 （串連之後）-C++標準：65536，MicrosoftC++編譯器：65535 的單一位元組字元，包括 NULL 結束字元和 32767 雙位元組字元，包括 NULL 結束字元。
+- 字元字串常值或寬字元串常值中的字元（在串連C++之後）-標準： C++ 65536、Microsoft 編譯器：65535單位元組字元，包括 null 結束字元和32767雙位元組字元，包括 null 結束字元。
 
-- 層級的巢狀的類別、 結構或等位的定義，在單一`struct-declaration-list`-C++標準：256，MicrosoftC++編譯器：16.
+- 單一 `struct-declaration-list` 標準中的嵌套類別、結構或等位C++定義層級：256、Microsoft C++編譯器：16。
 
-- 成員初始設定式中建構函式定義為C++標準：6144，MicrosoftC++編譯器： 至少 6144。
+- 在函式定義中的成員初始化C++運算式-標準： 6144 C++ 、Microsoft 編譯器：至少6144。
 
-- 範圍限定性條件的識別碼-C++標準：256，MicrosoftC++編譯器：127.
+- 一個識別碼的範圍限定C++標準：256、Microsoft C++編譯器：127。
 
-- 巢狀**extern**規格-C++標準：1024，MicrosoftC++編譯器：9 (不計入隱含**extern**規格在全域範圍或 10，如果您計算隱含**extern**規格在全域範圍中的...
+- Nested **extern**規格- C++標準：1024、Microsoft C++編譯器：9（不計算全域範圍中的隱含**外部**規格，或10，如果您在全域範圍中計算隱含**外部**規格。
 
-- 樣板宣告-中的樣板引數C++標準：1024，MicrosoftC++編譯器：2046.
+- 範本宣告中的樣板引數C++ -標準：1024、 C++ Microsoft 編譯器：2046。
 
 ## <a name="see-also"></a>另請參閱
 

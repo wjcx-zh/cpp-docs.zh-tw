@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-ms.openlocfilehash: 58b4a7f8a87658db72048902230e6b4ec3e2eb18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34e047bf02c51cf226b29bf291aa8fe0e08f5ee4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395049"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193546"
 ---
 # <a name="nmake-fatal-error-u1052"></a>NMAKE 嚴重錯誤 U1052
 
-> 檔案 '*filename*' 找不到
+> 找不到檔案 '*filename*'
 
-NMAKE 找不到與下列其中一項指定的檔案：
+NMAKE 找不到使用下列其中一項所指定的檔案：
 
 - **/F**選項
 
-- **!包含**前置處理器指示詞
+- **!INCLUDE**前置處理指示詞
 
-- At 符號 (**\@**) 規範的回應檔案
+- 回應檔的 At sign （ **\@** ）規範
 
-請確認檔案存在，檔案名稱的拼字正確。
+檢查檔案是否存在，以及檔案名是否拼寫正確。

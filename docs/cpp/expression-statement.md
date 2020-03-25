@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C++], expression
 - expression statements
 ms.assetid: 547d7f7a-58be-4ffc-a4b3-d64c7ae7538c
-ms.openlocfilehash: 2973c3e0a1cd59edfc7ef1e771454b780da23cf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f12bbbafd9be50f851e36f472098431f9ac0d5d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400600"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188996"
 ---
 # <a name="expression-statement"></a>運算陳述式
 
@@ -26,7 +26,7 @@ ms.locfileid: "62400600"
 
 ## <a name="remarks"></a>備註
 
-在下一個陳述式執行之前，會完成運算陳述式中所有運算式的評估，以及所有副作用。 最常見的運算陳述式是指派和函式呼叫。  由於運算式是選擇性的單獨的分號會被視為空的運算陳述式，稱為[null](../cpp/null-statement.md)陳述式。
+在下一個陳述式執行之前，會完成運算陳述式中所有運算式的評估，以及所有副作用。 最常見的運算陳述式是指派和函式呼叫。  因為運算式是選擇性的，所以會將分號單獨視為空的運算式語句，稱為[null](../cpp/null-statement.md)語句。
 
 ## <a name="see-also"></a>另請參閱
 

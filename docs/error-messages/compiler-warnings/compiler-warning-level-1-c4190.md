@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 （層級 1） C4190
+title: 編譯器警告（層級1） C4190
 ms.date: 11/04/2016
 f1_keywords:
 - C4190
 helpviewer_keywords:
 - C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
-ms.openlocfilehash: 05984594a57878aad8037861a15ac9284ff65192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d110aa70a470382e274546e95599804fa3bc7d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199871"
 ---
-# <a name="compiler-warning-level-1-c4190"></a>編譯器警告 （層級 1） C4190
+# <a name="compiler-warning-level-1-c4190"></a>編譯器警告（層級1） C4190
 
-'identifier1' 具有 C 連結指定，但傳回 UDT 與 C 不相容的 ' identifier2'
+' identifier1 ' 已指定 C-連結，但傳回的 UDT ' identifier2 ' 與 C 不相容
 
-函式或函式指標具有 UDT （使用者定義型別，也就是類別、 結構、 列舉或等位） 的傳回型別和`extern`"C"連結。 這是合法的如果：
+函式或函式的指標有 UDT （使用者定義型別，也就是類別、結構、列舉或等位）做為傳回型別，並 `extern` "C" 連結。 這在下列情況下是合法的：
 
-- 此函式所有呼叫都都由C++。
+- 此函式的所有呼叫都C++是從進行。
 
-- 函式的定義位於C++。
+- 函數的定義在中C++。
 
 ## <a name="example"></a>範例
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447821"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202071"
 ---
 # <a name="compiler-error-c2797"></a>編譯器錯誤 C2797
 
-（已過時）未實作成員初始設定式清單或非靜態資料成員初始設定式內的清單初始化。
+過時不會實作為成員初始化運算式清單或非靜態資料成員初始化運算式中的清單初始設定。
 
-這項警告是在 Visual Studio 2015 中已過時。 在 Visual Studio 2013 和舊版中，MicrosoftC++編譯器不會實作成員初始設定式清單或非靜態資料成員初始設定式內的清單初始化。 在 Visual Studio 2013 Update 3 之前，這會以無訊息模式轉換成函式呼叫，這樣可能會導致產生錯誤的程式碼。 Visual Studio 2013 Update 3 將此報告為錯誤。
+此警告在 Visual Studio 2015 中已過時。 在 Visual Studio 2013 和較舊版本中， C++ Microsoft 編譯器不會在成員初始化運算式清單或非靜態資料成員初始化運算式內，執行清單初始化。 在 Visual Studio 2013 Update 3 之前，這會以無訊息模式轉換成函式呼叫，這樣可能會導致產生錯誤的程式碼。 Visual Studio 2013 Update 3 將此報告為錯誤。
 
 本範例會產生 C2797：
 

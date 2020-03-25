@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2129
 ms.assetid: 21a8223e-1d22-4baa-9ca1-922b7f751dd0
-ms.openlocfilehash: e55107419235420d272c738e9d8ef7cf277c11c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3e2268bfc5597668e8689d093a0c2bb7f18e037
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397623"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207281"
 ---
 # <a name="compiler-error-c2129"></a>編譯器錯誤 C2129
 
-靜態函式 'function' 宣告但未定義
+靜態函式 ' function ' 已宣告但未定義
 
-向前參考對`static`永遠不會定義函式。
+對從未定義的 `static` 函式進行正向參考。
 
-A`static`函式必須在檔案範圍內定義。 如果函式定義於另一個檔案，它必須宣告`extern`。
+必須在檔案範圍內定義 `static` 函數。 如果函式是在另一個檔案中定義，則必須將它宣告 `extern`。

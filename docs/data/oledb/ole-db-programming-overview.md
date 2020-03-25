@@ -5,28 +5,28 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b855e0917ba9cdbdaa38a92473d7bddb4279101
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361915"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210064"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 程式設計概觀
 
-OLE DB 是以 COM 為基礎的高效能資料庫技術。 它提供存取資料儲存所在表單的獨立的常見方式。 在典型的企業的情況下，大量的資訊不會儲存在公司的資料庫中。 編製索引-循序檔案、 個人 （例如存取） 的資料庫、 試算表 （例如 Excel)、 專案規劃應用程式 （例如專案） 和 （例如 Outlook) 的電子郵件 （例如 FAT 或 NTFS） 的檔案系統中找到這項資訊。 OLE DB 可讓您以相同的方式，存取任何種類的資料存放區，只要資料存放區有 OLE DB 提供者。
+OLE DB 是高效能、以 COM 為基礎的資料庫技術。 它提供了一種常見的方式來存取資料，而不受其儲存所在的表單影響。 在一般的商務情況下，大量的資訊並不會儲存在公司資料庫中。 這項資訊可在檔案系統（例如 FAT 或 NTFS）、索引順序檔案、個人資料庫（例如 Access）、試算表（例如 Excel）、專案規劃應用程式（例如專案）和電子郵件（例如 Outlook）中找到。 OLE DB 可讓您以相同的方式存取任何類型的資料存放區，只要資料存放區具有 OLE DB 提供者即可。
 
-OLE DB 可讓您開發應用程式以存取不同資料來源，不論它們是 DBMS 與否。 OLE DB 通用存取可讓使用適當的 DBMS 功能對給定的資料來源的 COM 介面。 COM 可減少不必要的重複資料刪除的服務，並最大化不只在資料來源之間，也在其他應用程式之間的互通性。
+OLE DB 可讓您開發存取不同資料來源的應用程式，不論它們是否為 DBMS。 OLE DB 使用支援給定資料來源之適當 DBMS 功能的 COM 介面，讓您能夠進行通用存取。 COM 可減少不必要的服務重複，而且不只是在資料來源，也能達到最大的互通性。
 
 ## <a name="benefits-of-com"></a>COM 的優點
 
-這是 COM 之處。 OLE DB 是一組 COM 介面。 藉由透過一組一致的介面存取資料，您可以將資料庫組織成合作元件的矩陣。
+這就是 COM 的來源。 OLE DB 是一組 COM 介面。 藉由一組統一的介面來存取資料，您可以將資料庫組織成一個合作元件的矩陣。
 
-以 COM 規格為基礎，OLE DB 定義的可延伸且可維護的集合的因素，並將封裝的 DBMS 功能的一致、 可重複使用部分的介面。 這些介面定義資料列的容器，查詢處理器和交易協調器，可統一各種資訊來源的交易式存取等的 DBMS 元件的界限。
+根據 COM 規格，OLE DB 會定義可延伸和可維護的介面集合，以構成並封裝一致、可重複使用的 DBMS 功能部分。 這些介面會定義 DBMS 元件的界限，例如資料列容器、查詢處理器和交易協調員，這可讓您對各種資訊來源進行統一的交易式存取。
 
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)<br/>
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 範本](../../data/oledb/ole-db-templates.md)

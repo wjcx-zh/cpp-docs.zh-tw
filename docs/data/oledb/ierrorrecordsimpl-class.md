@@ -63,12 +63,12 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: dd9e1f39d30dc8289b0236bf655c87da04b14de6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 40ac0b248e1e90dae29a787d59f6ded9581aca70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447367"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210596"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 類別
 
@@ -122,7 +122,7 @@ class IErrorRecordsImpl : public IErrorRecords
 |-|-|
 |[m_rgErrors](#rgerrors)|錯誤記錄的陣列。|
 
-## <a name="geterrordescriptionstring"></a>IErrorRecordsImpl：： GetErrorDescriptionString
+## <a name="ierrorrecordsimplgeterrordescriptionstring"></a><a name="geterrordescriptionstring"></a>IErrorRecordsImpl：： GetErrorDescriptionString
 
 取得錯誤記錄中的錯誤描述字串。
 
@@ -141,7 +141,7 @@ LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 
 描述錯誤之字串的指標。
 
-## <a name="geterrorguid"></a>IErrorRecordsImpl：： GetErrorGUID
+## <a name="ierrorrecordsimplgeterrorguid"></a><a name="geterrorguid"></a>IErrorRecordsImpl：： GetErrorGUID
 
 從錯誤記錄取得錯誤 GUID。
 
@@ -160,7 +160,7 @@ REFGUID GetErrorGUID(ERRORINFO& rCurError);
 
 錯誤之 GUID 的參考。
 
-## <a name="geterrorhelpcontext"></a>IErrorRecordsImpl：： GetErrorHelpCoNtext
+## <a name="ierrorrecordsimplgeterrorhelpcontext"></a><a name="geterrorhelpcontext"></a>IErrorRecordsImpl：： GetErrorHelpCoNtext
 
 從錯誤記錄取得說明內容識別碼。
 
@@ -179,7 +179,7 @@ DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 
 錯誤的說明內容識別碼。
 
-## <a name="geterrorhelpfile"></a>IErrorRecordsImpl：： GetErrorHelpFile
+## <a name="ierrorrecordsimplgeterrorhelpfile"></a><a name="geterrorhelpfile"></a>IErrorRecordsImpl：： GetErrorHelpFile
 
 從錯誤記錄取得說明檔的路徑名稱。
 
@@ -198,7 +198,7 @@ LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 
 字串的指標，其中包含錯誤之說明檔的路徑名稱。
 
-## <a name="geterrorsource"></a>IErrorRecordsImpl：： GetErrorSource
+## <a name="ierrorrecordsimplgeterrorsource"></a><a name="geterrorsource"></a>IErrorRecordsImpl：： GetErrorSource
 
 從錯誤記錄取得導致錯誤的原始程式碼。
 
@@ -217,7 +217,7 @@ LPOLESTR GetErrorSource(ERRORINFO& rCurError);
 
 字串的指標，其中包含錯誤的原始程式碼。
 
-## <a name="adderrorrecord"></a>IErrorRecordsImpl：： AddErrorRecord
+## <a name="ierrorrecordsimpladderrorrecord"></a><a name="adderrorrecord"></a>IErrorRecordsImpl：： AddErrorRecord
 
 將記錄新增至 OLE DB 錯誤物件。
 
@@ -235,7 +235,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IErrorRecords：： AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) 。
 
-## <a name="getbasicerrorinfo"></a>IErrorRecordsImpl：： GetBasicErrorInfo
+## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>IErrorRecordsImpl：： GetBasicErrorInfo
 
 傳回有關錯誤的基本資訊，例如傳回碼和提供者特定的錯誤號碼。
 
@@ -250,7 +250,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IErrorRecords：： GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 。
 
-## <a name="getcustomerrorobject"></a>IErrorRecordsImpl：： GetCustomErrorObject
+## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a>IErrorRecordsImpl：： GetCustomErrorObject
 
 傳回自訂錯誤物件上介面的指標。
 
@@ -266,7 +266,7 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IErrorRecords：： GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 。
 
-## <a name="geterrorinfo"></a>IErrorRecordsImpl：： GetErrorInfo
+## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a>IErrorRecordsImpl：： GetErrorInfo
 
 傳回指定之記錄上的[IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85))介面指標。
 
@@ -282,7 +282,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 。
 
-## <a name="geterrorparameters"></a>IErrorRecordsImpl：： GetErrorParameters
+## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a>IErrorRecordsImpl：： GetErrorParameters
 
 傳回錯誤參數。
 
@@ -297,7 +297,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IErrorRecords：： GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 。
 
-## <a name="getrecordcount"></a>IErrorRecordsImpl：： GetRecordCount
+## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a>IErrorRecordsImpl：： GetRecordCount
 
 傳回 OLE DB 記錄物件中的記錄數目。
 
@@ -311,7 +311,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 請參閱 OLE DB 程式設計*人員參考*中的[IErrorRecords：： GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) 。
 
-## <a name="rgerrors"></a>IErrorRecordsImpl：： m_rgErrors
+## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a>IErrorRecordsImpl：： m_rgErrors
 
 錯誤記錄的陣列。
 

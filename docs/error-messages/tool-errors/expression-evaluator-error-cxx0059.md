@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0059
 - CAN0059
 ms.assetid: e8bdcb74-1315-4083-b24d-e47eac7d1ec0
-ms.openlocfilehash: 9d031044ffc89df40bb4196c8c5f19749b76898d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3473d4ae3380b5896005bc2801ef334f3a5ec4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184576"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>運算式評估工具錯誤 CXX0059
 
-左的運算元是類別不是函式名稱
+左運算元的類別不是函數名稱
 
-函式呼叫的左的運算元是類別名稱，並無法解析函式呼叫。 省略運算式中的成員函式的名稱可能會導致此錯誤。
+函數呼叫的左運算元是類別名稱，無法解析為函式呼叫。 省略運算式中的成員函式名稱可能會造成這個錯誤。
 
-此錯誤是與 can0059 相同。
+此錯誤與 CAN0059 相同。

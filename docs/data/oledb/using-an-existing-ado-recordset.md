@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209348"
 ---
 # <a name="using-an-existing-ado-recordset"></a>使用現有的 ADO 資料錄集
 
-若要混合使用 OLE DB 消費者範本和 Active Data Objects (ADO)、 使用 ADO 開啟資料錄集 （相當於 OLE DB 消費者樣板中的資料列集）。 當您有一個資料錄集時，執行下列命令來連接到 OLE DB 資料列集：
+若要混合 OLE DB 取用者範本和 Active Data Objects （ADO），請使用 ADO 開啟記錄集（對應至 OLE DB 取用者範本中的資料列集）。 當您擁有記錄集時，請執行下列動作來連接到 OLE DB 的資料列集：
 
-1. 呼叫`QueryInterface`for`IRowset`和`IAccessor`指標。
+1. 呼叫 `IRowset` 和 `IAccessor` 指標的 `QueryInterface`。
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ ms.locfileid: "62389004"
     ```
 
     > [!NOTE]
-    > *lpUnk*指向`IUnknown`ADO 資料錄集物件。
+    > *lpUnk*會指向 ADO 記錄集的 `IUnknown` 物件。
 
-1. 附加至其適當的 OLE DB 消費者範本類別的存取子和資料列集。
+1. 將存取子和資料列集附加至適當的 OLE DB 取用者範本類別。
 
     ```cpp
     CRowset rs;

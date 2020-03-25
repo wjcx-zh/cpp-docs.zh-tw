@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - D9036
 ms.assetid: 68276e84-8d4e-4d4a-a9db-2874c81dfe66
-ms.openlocfilehash: 2dd6cd528f6a3799176c77435ebd62d103303806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16e97819c7e3752285b8f8caa69517d5a06a4701
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213792"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196621"
 ---
 # <a name="command-line-warning-d9036"></a>命令列警告 D9036
 
-> '*選項\_2*' 而不是 ' *選項\_1* '
+> '*option\_2*'，而不是 '*option\_1*'
 
 ## <a name="remarks"></a>備註
 
-警告 D9036 是將延續[命令列警告 D9035](../../error-messages/tool-errors/command-line-warning-d9035.md)。 如果其中一個編譯器選項是慣用來取代已被取代的選項，它會在此處列出。 如需詳細資訊的連結，請參閱[已取代及已移除的編譯器選項](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)。
+警告 D9036 是[命令列警告 D9035](../../error-messages/tool-errors/command-line-warning-d9035.md)的接續。 如果慣用一個編譯器選項，而不是已被取代的選項，則會在此列出。 如需詳細資訊的連結，請參閱[已取代和已移除的編譯器選項](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)。
 
 ## <a name="see-also"></a>另請參閱
 
-[已取代及移除的編譯器選項](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
+[已取代和已移除的編譯器選項](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
 [命令列警告 D9035](command-line-warning-d9035.md)

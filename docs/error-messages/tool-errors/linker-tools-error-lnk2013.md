@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299064"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194742"
 ---
 # <a name="linker-tools-error-lnk2013"></a>連結器工具錯誤 LNK2013
 
-修復類型修復溢位。 目標 'symbol name' je mimo rozsah
+修復類型修復溢位。 目標 ' symbol name ' 超出範圍
 
-連結器無法容納所需的位址或 offset 成指定的指示，因為目標符號太遠而從指示的位置。
+連結器無法將必要的位址或位移放入指定的指令，因為目標符號太遠超出指令的位置。
 
-您可以解決這個問題，藉由建立多個映像或使用[/order](../../build/reference/order-put-functions-in-order.md)選項使指令和目標更接近。
+若要解決這個問題，您可以建立多個映射，或使用[/order](../../build/reference/order-put-functions-in-order.md)選項，讓指示和目標更接近在一起。
 
-符號名稱的使用者定義的符號 （和不是編譯器所產生的符號） 時，您也可以嘗試下列動作來解決這個錯誤：
+當符號名稱是使用者定義的符號（而不是編譯器產生的符號）時，您也可以嘗試下列動作來解決此錯誤：
 
-- 變更靜態的函式為非靜態。
+- 將靜態函數變更為非靜態。
 
-- 重新命名包含靜態的函式，呼叫端相同的程式碼區段。
+- 將包含靜態函式的程式碼區段重新命名為與呼叫者相同。
 
-使用`DUMPBIN /SYMBOLS`、 函式是否為靜態。
+使用 `DUMPBIN /SYMBOLS`，以查看函式是否為靜態。

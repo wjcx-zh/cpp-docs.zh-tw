@@ -3,12 +3,12 @@ title: MFC 概念
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927910"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178518"
 ---
 # <a name="mfc-concepts"></a>MFC 概念
 
@@ -20,7 +20,7 @@ ms.locfileid: "70927910"
 討論 MFC 程式庫的技術詳細資料。
 
 [使用 CObject](../mfc/using-cobject.md)<br/>
-提供在 MFC 中`CObject`大部分類別的基類使用的連結。
+提供使用 `CObject`的連結，也就是 MFC 中大部分類別的基底類別。
 
 [集合](../mfc/collections.md)<br/>
 討論從範本建立的集合類別，而C++不是從樣板建立的。
@@ -29,7 +29,7 @@ ms.locfileid: "70927910"
 提供主題連結，討論如何搭配 MFC 使用日期和時間。
 
 [檔案](../mfc/files-in-mfc.md)<br/>
-討論`CFile`和如何在 MFC 中處理檔案。
+討論 `CFile` 以及如何在 MFC 中處理檔案。
 
 [記憶體管理（MFC）](../mfc/memory-management.md)<br/>
 描述如何利用與記憶體管理相關的一般用途服務。
@@ -66,5 +66,5 @@ ms.locfileid: "70927910"
 [MFC 參考](../mfc/mfc-desktop-applications.md)<br/>
 提供 MFC 程式庫的參考資料，包含一組構成應用程式架構的類別，這是為 Windows API 撰寫的應用程式架構。
 
-[MFC 範例](../overview/visual-cpp-samples.md)<br/>
+[MFC 範例](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 提供範例的連結，示範如何在桌面應用程式、Dll、資料庫應用程式、控制項、Web 應用程式等中使用 MFC。

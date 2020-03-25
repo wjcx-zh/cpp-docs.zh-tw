@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212158"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
 
@@ -106,7 +106,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 命令物件上的強制介面。
 
-## <a name="cancel"></a>ICommandImpl：： Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl：： Cancel
 
 取消目前的命令執行。
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 請參閱 OLE DB 程式設計*人員參考*中的[ICommand：： Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 。
 
-## <a name="cancelexecution"></a>ICommandImpl：： CancelExecution
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl：： CancelExecution
 
 取消目前的命令執行。
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a>ICommandImpl：： CreateRowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl：： CreateRowset
 
 由[Execute](../../data/oledb/icommandimpl-execute.md)呼叫以建立單一資料列集。
 
@@ -179,7 +179,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 請參閱 OLE DB 程式設計*人員參考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
-## <a name="execute"></a>ICommandImpl：： Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl：： Execute
 
 執行命令。
 
@@ -203,7 +203,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 `Execute` 會呼叫[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 覆寫預設的實作為建立多個資料列集，或提供您自己的條件來建立不同的資料列集。
 
-## <a name="getdbsession"></a>ICommandImpl：： GetDBSession
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl：： GetDBSession
 
 傳回建立命令之會話的介面指標。
 
@@ -222,7 +222,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 適用于從會話抓取屬性。
 
-## <a name="icommandimpl"></a>ICommandImpl：： ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl：： ICommandImpl
 
 建構函式。
 
@@ -232,7 +232,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a>ICommandImpl：： m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl：： m_bCancel
 
 指出是否已取消命令。
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 您可以在命令類別的 `Execute` 方法中取出此變數，並視需要取消。
 
-## <a name="bcancelwhenexecuting"></a>ICommandImpl：： m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl：： m_bCancelWhenExecuting
 
 指出執行時是否可以取消命令。
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 預設值為**true** （可以取消）。
 
-## <a name="bisexecuting"></a>ICommandImpl：： m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl：： m_bIsExecuting
 
 指出命令目前是否正在執行。
 

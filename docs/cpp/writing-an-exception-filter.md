@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-ms.openlocfilehash: aaf0dc77207399d7c6be86127d7decf03895ced5
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5b207e90c1a04a91d85706f6fa4c390ef60c4718
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187293"
 ---
 # <a name="writing-an-exception-filter"></a>撰寫例外狀況篩選條件
 
@@ -80,4 +80,4 @@ __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )
 ## <a name="see-also"></a>另請參閱
 
 [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

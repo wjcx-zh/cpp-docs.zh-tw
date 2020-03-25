@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2002
 ms.assetid: 91982314-203a-4de1-b884-94e39a623f61
-ms.openlocfilehash: 30f472aa7a9475a19eea0e92fe5c2ea0d54e382b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c37a9b94be837248c8025a4fc069d8a242128542
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208243"
 ---
 # <a name="compiler-error-c2002"></a>編譯器錯誤 C2002
 
-無效的寬字元常數
+寬字元常數無效
 
-多位元組字元常數不正確。
+多位元組字元常數無效。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
 
-1. 寬字元常數會包含比預期更多的位元組。
+1. 寬字元常數包含比預期還要多的位元組。
 
-1. 不包含標準標頭檔 STDDEF.h。
+1. 不包含標準標頭 STDDEF.H。
 
-1. 無法使用一般的字串常值串連的寬字元。
+1. 寬字元無法與一般字串常值串連。
 
-1. 寬字元常數前面必須有字元 'L':
+1. 寬字元常數前面必須加上字元 ' L '：
 
     ```
     L'mbconst'
     ```
 
-1. Microsoft C++，前置處理器指示詞的文字引數必須是 ASCII。 比方說，指示詞， `#pragma message(L"string")`，不正確。
+1. 若為C++Microsoft，預處理器指示詞的文字引數必須是 ASCII。 例如，指示詞 `#pragma message(L"string")`無效。

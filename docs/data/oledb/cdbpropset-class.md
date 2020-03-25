@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447449"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212009"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 OLE DB 提供者和取用者會使用 `DBPROPSET` 結構來傳遞 `DBPROP` 結構的陣列。 每個 `DBPROP` 結構都代表可設定的單一屬性。
 
-## <a name="addproperty"></a>CDBPropSet：： AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet：： AddProperty
 
 將屬性加入至屬性集。
 
@@ -124,7 +124,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 如果成功加入屬性，**則為 true** 。 否則為 **false**。
 
-## <a name="cdbpropset"></a>CDBPropSet：： CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet：： CDBPropSet
 
 建構函式。 初始化[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構的 `rgProperties`、`cProperties`和 `guidPropertySet` 欄位。
 
@@ -146,7 +146,7 @@ CDBPropSet();
 *propset*<br/>
 [in] 複製建構的另一個 `CDBPropSet` 物件。
 
-## <a name="setguid"></a>CDBPropSet：： SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet：： SetGUID
 
 設定 `DBPROPSET` 結構中的 `guidPropertySet` 欄位。
 
@@ -165,7 +165,7 @@ void SetGUID(const GUID& guid) throw();
 
 此欄位也可以由「[函數](../../data/oledb/cdbpropset-cdbpropset.md)」設定。
 
-## <a name="op_equal"></a>CDBPropSet：： operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet：： operator =
 
 將一個屬性集的內容指派給另一個屬性集。
 

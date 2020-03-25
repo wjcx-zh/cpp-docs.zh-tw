@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-ms.openlocfilehash: d62c774411fda80a3e94044b3272567177328ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 816355276a203adba1401841ce02eb94a18085b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192779"
 ---
 # <a name="project-build-error-prj0006"></a>專案建置錯誤 PRJ0006
 
-無法開啟暫存檔案 'file'。 請確定檔案存在，而且該目錄沒有寫入保護。
+無法開啟暫存檔案 ' file '。 請確定檔案存在，而且目錄不受寫入保護。
 
-視覺化C++無法在建置流程期間建立暫存檔案。 原因包括：
+視覺C++效果無法在建立程式期間建立暫存檔案。 原因包括：
 
-- 沒有暫存目錄。
+- 沒有臨時目錄。
 
-- 唯讀的暫存目錄。
+- 唯讀臨時目錄。
 
 - 磁碟空間不足。
 
-- $ （intdir） 資料夾是唯讀，或包含處於唯讀狀態的暫存檔案。
+- $ （IntDir）資料夾可能是唯讀的，或是包含唯讀的暫存檔案。
 
-這項錯誤也會發生下列錯誤 PRJ0007:無法建立輸出目錄 'directory'。 錯誤 PRJ0007 表示無法建立 $ （intdir） 目錄，其中隱含建立的暫時檔案也會失敗。
+此錯誤也會發生在錯誤 PRJ0007：無法建立輸出目錄 ' directory '。 錯誤 PRJ0007 表示無法建立 $ （IntDir）目錄，也就是說，暫時檔案的建立也會失敗。
 
-每當您指定時，會建立暫存檔案：
+每當您指定時，就會建立暫存檔案：
 
 - 回應檔。
 
-- 自訂建置步驟。
+- 自訂的組建步驟。
 
-- 建置事件。
+- 組建事件。

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168092"
 ---
-# <a name="hidden"></a>隱藏
+# <a name="hidden"></a>hidden
 
 表示專案存在，但不應該顯示在使用者導向的瀏覽器中。
 
@@ -39,7 +39,7 @@ ms.locfileid: "69501453"
 |-|-|
 |**適用於**|**介面**、**類別**、**結構**、方法、屬性|
 |**可重複**|否|
-|**必要屬性**|**coclass**（套用至**類別**或**結構**時）|
+|**必要屬性**|**coclass** （套用至**類別**或**結構**時）|
 |**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0008
 - CAN0008
 ms.assetid: 49e0968c-a6ce-4ba9-9762-02a55c08124e
-ms.openlocfilehash: 84fcd13610ca5d0b0b0e342a472934303ed8dca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43d3f6833c3472011c119e53c109b471d1b1a23e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406141"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196233"
 ---
 # <a name="expression-evaluator-error-cxx0008"></a>運算式評估工具錯誤 CXX0008
 
-**「 在字串結尾遺失**
+**在字串結尾處遺失 "**
 
-缺少預期結尾的字串常值雙引號。 重新輸入運算式，字串常值雙引號括住。
+遺漏字串常值結尾所預期的雙引號。 重新輸入運算式，以雙引號括住字串常值。
 
-此錯誤是與 can0008 相同。
+此錯誤與 CAN0008 相同。

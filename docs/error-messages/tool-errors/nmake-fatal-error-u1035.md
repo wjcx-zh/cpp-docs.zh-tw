@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - U1035
 ms.assetid: 68f0cc59-007e-4109-ac30-7ac4ac447e6d
-ms.openlocfilehash: 9c4055bb99243f7d20c1da90aef7b916c46c2749
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eda424574dfa48901cf4dc6aea3b28beb739dc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324333"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193715"
 ---
 # <a name="nmake-fatal-error-u1035"></a>NMAKE 嚴重錯誤 U1035
 
-語法錯誤： 必須是 ':' 或 '=' 分隔符號
+語法錯誤：必須是 '： ' 或 ' = ' 分隔符號
 
-冒號 (**:**) 或等號 (**=**) 所預期。
+必須是冒號（ **：** ）或等號（ **=** ）。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
 
-1. 冒號未遵循為目標。
+1. 不是在目標後面的冒號。
 
-1. 冒號且不得包含空格 （例如，a:） 後面接著單一字母的目標。 NMAKE 解譯它做為磁碟機規格。
+1. 冒號且不含空格（例如：）後面接著單一字母目標。 NMAKE 將它解釋為磁片磁碟機規格。
 
-1. 冒號未遵循推斷規則。
+1. 推斷規則未遵循冒號。
 
 1. 巨集定義後面沒有等號。
 
-1. 字元後面接著反斜線 (**\\**)，用來繼續執行至新的一行命令。
+1. 後面接著一個字元，用來將命令繼續到新行的反斜線（ **\\** ）。
 
-1. 在出現未遵循任何 NMAKE 語法規則的字串。
+1. 出現未遵循任何 NMAKE 語法規則的字串。
 
-1. 文書處理器來格式化的 makefile。
+1. Makefile 已由字處理器格式化。

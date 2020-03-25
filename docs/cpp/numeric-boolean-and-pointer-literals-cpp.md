@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 21685af5fc4f2dcf042698e054430e50531163b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301362"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177738"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>數值、布林值和指標常值
 
@@ -109,7 +109,7 @@ void func( double );
 void func( long double );
 ```
 
-## <a name="boolean-literals"></a>布林值常值
+## <a name="boolean-literals"></a>布林常值
 
 布林常值為**true**和**false**。
 
@@ -137,7 +137,7 @@ if (num < 100)
 
 在先前的範例中，可能最好使用傳達清楚意義的具名常數 (例如 "MAXIMUM_ERROR_THRESHOLD")。 而且，如果使用者看到傳回值「成功」，則可能最好使用具名字串常數，而具名字串常數可以儲存於可將其當地語系化為其他語言之檔案的單一位置中。 使用具名常數，可協助他人和您自己了解程式碼的用途。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [語彙慣例](../cpp/lexical-conventions.md)<br/>
 [C++字串常值](../cpp/string-and-character-literals-cpp.md)<br/>

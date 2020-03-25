@@ -1,17 +1,17 @@
 ---
-title: 分配介面C++ (COM 屬性)
+title: 分配介面C++ （COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501618"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168235"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -50,7 +50,7 @@ dispinterface helloPro
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|無|
+|**必要屬性**|None|
 |**無效屬性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

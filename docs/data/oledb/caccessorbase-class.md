@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 34c92f9057f2273d57b69bdb42c49a81923c3d2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284055"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212288"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 類別
 
-OLE DB 範本中的所有存取子會衍生自這個類別。 `CAccessorBase` 可讓管理多個存取子的一個資料列集。 它也會提供參數和輸出資料行的繫結。
+OLE DB 範本中的所有存取子都是衍生自這個類別。 `CAccessorBase` 可讓一個資料列集管理多個存取子。 它也會提供參數和輸出資料行的系結。
 
 ## <a name="syntax"></a>語法
 
@@ -49,16 +49,16 @@ OLE DB 範本中的所有存取子會衍生自這個類別。 `CAccessorBase` �
 |||
 |-|-|
 |[關閉](#close)|關閉存取子。|
-|[GetHAccessor](#geth)|擷取存取子控制代碼。|
-|[GetNumAccessors](#getnum)|擷取此類別所建立的存取子數目。|
-|[IsAutoAccessor](#isauto)|測試指定的存取子是否 autoaccessor。|
+|[GetHAccessor](#geth)|抓取存取子控制碼。|
+|[GetNumAccessors](#getnum)|抓取類別所建立的存取子數目。|
+|[IsAutoAccessor](#isauto)|測試指定的存取子是否為 autoaccessor。|
 |[ReleaseAccessors](#release)|釋放存取子。|
 
 ## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
-## <a name="close"></a> Caccessorbase:: Close
+## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase：： Close
 
 關閉存取子。
 
@@ -70,9 +70,9 @@ void Close();
 
 ### <a name="remarks"></a>備註
 
-您必須呼叫[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)第一次。
+您必須先呼叫[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) 。
 
-## <a name="geth"></a> CAccessorBase::GetHAccessor
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase：： GetHAccessor
 
 擷取指定之存取子的存取子控制代碼。
 
@@ -91,9 +91,9 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 
 存取子控制代碼。
 
-## <a name="getnum"></a> Caccessorbase:: Getnumaccessors
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase：： GetNumAccessors
 
-擷取此類別所建立的存取子數目。
+抓取類別所建立的存取子數目。
 
 ### <a name="syntax"></a>語法
 
@@ -105,9 +105,9 @@ ULONG GetNumAccessors() const;
 
 類別所建立的存取子數目。
 
-## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase：： IsAutoAccessor
 
-如果會自動擷取資料的存取子的移動作業期間，則傳回 true。
+如果在移動作業期間自動取得存取子的資料，則傳回 true。
 
 ### <a name="syntax"></a>語法
 
@@ -122,11 +122,11 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果存取子是 autoaccessor。 否則會傳回 **false**。
+如果存取子是 autoaccessor，則傳回**true** 。 否則會傳回 **false**。
 
-## <a name="release"></a> Caccessorbase:: Releaseaccessors
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase：： ReleaseAccessors
 
-釋放存取子類別建立的。
+釋放類別所建立的存取子。
 
 ### <a name="syntax"></a>語法
 
@@ -137,18 +137,18 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>參數
 
 *pUnk*<br/>
-[in]指標`IUnknown`已為其建立存取子的 COM 物件的介面。
+在COM 物件之 `IUnknown` 介面的指標，其已建立存取子。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-從呼叫[caccessorrowset:: Close](../../data/oledb/caccessorrowset-close.md)。
+從[CAccessorRowset：： Close](../../data/oledb/caccessorrowset-close.md)呼叫。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessorBase 類別](../../data/oledb/caccessorbase-class.md)

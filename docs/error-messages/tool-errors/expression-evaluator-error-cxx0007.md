@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0007
 - CAN0007
 ms.assetid: 270a6d2d-ea6b-4a94-9871-841a6a133292
-ms.openlocfilehash: 5aba07517e924f0ae0b044466b43a4a8d7364578
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4c2ce8812c7eb8be1b4eb9fd47267db5e6f20f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406093"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196283"
 ---
 # <a name="expression-evaluator-error-cxx0007"></a>運算式評估工具錯誤 CXX0007
 
-遺漏右括號
+缺少右括弧
 
-找不到運算式中的不對稱的括號。 重新輸入與對稱的括號運算式。
+運算式中找到不對稱的括弧。 以對稱的括弧重新輸入運算式。
 
-此錯誤是與 can0007 相同。
+此錯誤與 CAN0007 相同。

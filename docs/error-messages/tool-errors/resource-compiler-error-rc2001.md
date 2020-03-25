@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346687"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191715"
 ---
 # <a name="resource-compiler-error-rc2001"></a>資源編譯器錯誤 RC2001
 
-常數中的新行
+常數中的分行符號
 
-字串常數，已繼續但沒有第二行的反斜線 (**\\**) 或餘額和期末雙引號 (**"**)。
+字串常數在第二行繼續，但不含反斜線（ **\\** ）或結尾和左雙引號（ **"** ）。
 
-若要中斷位於原始程式檔中的兩行的字串常數，執行下列其中一項動作：
+若要中斷位於原始程式檔中兩行的字串常數，請執行下列其中一項動作：
 
-- 最後第一行的行接續字元、 反斜線。
+- 結束具有行接續字元的第一行，也就是反斜線。
 
-- 關閉第一列中利用雙引號字串並開啟下一行上的字串，加上另一個單引號。
+- 以雙引號關閉第一行中的字串，然後在下一行以另一個引號開啟字串。
 
-不足結束 \n，字串常數中內嵌新行字元的逸出序列的第一行。
+以 \n 結束第一行的程式碼並不足夠，而是在字串常數中嵌入分行符號的逸出序列。

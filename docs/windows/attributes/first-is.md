@@ -1,17 +1,17 @@
 ---
-title: first_is (C++ COM 屬性)
+title: first_is （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501563"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167013"
 ---
 # <a name="first_is"></a>first_is
 
@@ -34,7 +34,7 @@ ms.locfileid: "69501563"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示在陣列中指定區段的各種方式:
+下列程式碼顯示在陣列中指定區段的各種方式：
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
+|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

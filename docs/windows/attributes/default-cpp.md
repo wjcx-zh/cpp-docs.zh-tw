@@ -1,5 +1,5 @@
 ---
-title: default (C++ COM 屬性)
+title: default （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501687"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167182"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -43,7 +43,7 @@ ms.locfileid: "69501687"
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何在 coclass 的定義上使用**預設值**, 以指定`ICustomDispatch`做為預設的可程式性介面:
+下列程式碼示範如何在 coclass 定義上使用**default**來指定 `ICustomDispatch` 做為預設的可程式性介面：
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -101,7 +101,7 @@ int main() {
 |-|-|
 |**適用於**|**類別**、**結構**、資料成員|
 |**可重複**|否|
-|**必要屬性**|**coclass**(套用至**類別**或**結構**時)|
+|**必要屬性**|**coclass** （套用至**類別**或**結構**時）|
 |**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

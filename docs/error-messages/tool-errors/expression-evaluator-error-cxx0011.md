@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196153"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>運算式評估工具錯誤 CXX0011
 
-遺漏右括號
+缺少右括弧
 
-運算式包含不對稱的方括號。 重新輸入使用平衡方括弧括住的運算式。
+運算式包含不對稱的方括弧。 以對稱的方括弧重新輸入運算式。
 
-此錯誤是與 can0011 相同。
+此錯誤與 CAN0011 相同。

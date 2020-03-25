@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0022
 - CAN0022
 ms.assetid: f6b299ac-a4ee-492c-bd9f-6fff005bc537
-ms.openlocfilehash: ac726c60d30a13d6458636d31dda6a8fb2cbd02d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5858ce936acfb8b949351c9263f3a9379c73648e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195821"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>運算式評估工具錯誤 CXX0022
 
-函式呼叫之前 （_m）
+_main 之前的函式呼叫
 
-C 運算式評估工具無法評估的函式，才能偵錯工具進入函式 **_main**。 程式未正確初始化直到 **_main**已呼叫。
+C 運算式評估工具在偵錯工具進入函數 **_main**之前，無法評估函式。 在呼叫 **_main**之前，程式未正確初始化。
 
-此錯誤是與 can0022 相同。
+此錯誤與 CAN0022 相同。

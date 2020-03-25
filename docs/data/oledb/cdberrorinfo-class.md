@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 2d2b21652fd5ee3604c3c72c2168c3d9a495caf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8c91beb2a305604f663d5e81b4a534a1699705cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447465"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212008"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 類別
 
@@ -76,7 +76,7 @@ class CDBErrorInfo
 
 此介面會將一或多個錯誤記錄傳回給使用者。 請先呼叫[CDBErrorInfo：： GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) ，以取得錯誤記錄的計數。 然後呼叫其中一個 access 函式（例如[CDBErrorInfo：： GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)），以取得每一筆記錄的錯誤資訊。
 
-## <a name="getallerrorinfo"></a>CDBErrorInfo：： GetAllErrorInfo
+## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a>CDBErrorInfo：： GetAllErrorInfo
 
 傳回錯誤記錄中所包含的所有錯誤資訊類型。
 
@@ -126,7 +126,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 1. *lcid*的值不等於 GetUserDefaultLCID 所傳回的值。
 
-## <a name="getbasicerrorinfo"></a>CDBErrorInfo：： GetBasicErrorInfo
+## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>CDBErrorInfo：： GetBasicErrorInfo
 
 呼叫[IErrorRecords：： GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85))以傳回有關錯誤的基本資訊，例如傳回碼和提供者特定的錯誤號碼。
 
@@ -145,7 +145,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 標準 HRESULT。
 
-## <a name="getcustomerrorobject"></a>CDBErrorInfo：： GetCustomErrorObject
+## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a>CDBErrorInfo：： GetCustomErrorObject
 
 呼叫[IErrorRecords：： GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) ，以傳回自訂錯誤物件上介面的指標。
 
@@ -164,7 +164,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 標準 HRESULT。
 
-## <a name="geterrorinfo"></a>CDBErrorInfo：： GetErrorInfo
+## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a>CDBErrorInfo：： GetErrorInfo
 
 呼叫[IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) ，將[IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85))介面指標傳回至指定的記錄。
 
@@ -183,7 +183,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 標準 HRESULT。
 
-## <a name="geterrorparameters"></a>CDBErrorInfo：： GetErrorParameters
+## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a>CDBErrorInfo：： GetErrorParameters
 
 呼叫[IErrorRecords：： GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85))以傳回錯誤參數。
 
@@ -202,7 +202,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 
 標準 HRESULT。
 
-## <a name="geterrorrecords"></a>CDBErrorInfo：： GetErrorRecords
+## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a>CDBErrorInfo：： GetErrorRecords
 
 取得指定之物件的錯誤記錄。
 

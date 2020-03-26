@@ -30,12 +30,12 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-ms.openlocfilehash: 5080f390d302840e9e7b349cf1c21ab618ae48db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168795"
 ---
 # <a name="c-assignment-operators"></a>C 指派運算子
 
@@ -45,10 +45,10 @@ ms.locfileid: "50657024"
 
 *assignment-expression*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*一元運算式* *指派-運算子* *指派運算式*
 
 *assignment-operator*：下列其中一個<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=%=+=** **-=\<** **\<=** **>>=** **>>=** **&=** **^=** **|=** **&=^=|=**
 
 C 中的指派運算子可以在單一操作中轉換以及指派值。 C 會提供下列指派運算子：
 

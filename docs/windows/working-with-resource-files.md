@@ -6,23 +6,23 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165881"
 ---
 # <a name="working-with-resource-files"></a>使用資源檔
 
 > [!WARNING]
 > 本節適用於以 C++ 撰寫的 Windows 桌面應用程式。
 >
-> 如需通用 Windows 平臺應用程式中所撰寫資源C++的相關資訊, 請參閱[定義應用程式資源](/windows/uwp/app-resources/), C++或在將資源新增至/cli (受控) 專案中參閱 .NET Framework 開發人員的[桌面應用程式](/dotnet/framework/resources/index)中的資源輥.
+> C++如需在中撰寫之通用 Windows 平臺應用程式中資源的相關資訊，請參閱[定義應用程式資源](/windows/uwp/app-resources/)或將資源新增至C++/cli （受控）專案中的 .NET Framework 開發人員指南中的 <<c3>桌面應用程式中的資源。</c3>
 
-資源可以由各種元素組成, 例如:
+資源可以由各種元素組成，例如：
 
-- 提供資訊給使用者的介面元素, 例如點陣圖、圖示或游標。
+- 提供資訊給使用者的介面元素，例如點陣圖、圖示或游標。
 - 包含資料和應用程式需求的自訂資源。
 - 安裝程式 Api 所使用的版本資源。
 - 功能表和對話方塊資源。
@@ -32,9 +32,9 @@ ms.locfileid: "69513584"
 > [!NOTE]
 > **資源編輯器**和**資源檢視**無法在 Express 版本中使用。
 
-若要手動將資源檔新增至受管理的專案, 請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 本文包含如何存取資源、顯示靜態資源, 以及將資源字串指派給屬性。
+若要手動將資源檔新增至受管理的專案，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 本文包含如何存取資源、顯示靜態資源，以及將資源字串指派給屬性。
 
-若要在受管理的應用程式中全球化和當地語系化資源, 請參閱[全球化和當地語系化 .NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
+若要在受管理的應用程式中全球化和當地語系化資源，請參閱[全球化和當地語系化 .NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -45,7 +45,7 @@ ms.locfileid: "69513584"
 描述符號，並提供如何使用 **資源符號** 對話方塊，來管理專案中符號的相關資訊。
 
 [資源編輯器](../windows/resource-editors.md)<br/>
-描述 Visual Studio 中提供的資源編輯器, 以及您可以使用每個編輯器修改的資源類型。 也提供有關使用每個編輯器之詳細資訊的連結。
+描述 Visual Studio 中提供的資源編輯器，以及您可以使用每個編輯器修改的資源類型。 也提供有關使用每個編輯器之詳細資訊的連結。
 
 ## <a name="related-sections"></a>相關章節
 

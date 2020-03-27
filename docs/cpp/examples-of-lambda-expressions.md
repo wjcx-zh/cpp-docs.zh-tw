@@ -4,22 +4,22 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 07c0f6b12c3c6a5dd0c3273acccbaacbc0db08a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189035"
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 運算式的範例
 
-本文說明如何在您的程式中使用 Lambda 運算式。 如需 lambda 運算式的概觀，請參閱 < [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。 如需 lambda 運算式結構的詳細資訊，請參閱[Lambda 運算式語法](../cpp/lambda-expression-syntax.md)。
+本文說明如何在您的程式中使用 Lambda 運算式。 如需 lambda 運算式的總覽，請參閱[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。 如需 lambda 運算式結構的詳細資訊，請參閱[Lambda 運算式語法](../cpp/lambda-expression-syntax.md)。
 
-##  <a name="declaringLambdaExpressions"></a> 宣告 Lambda 運算式
+##  <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>宣告 Lambda 運算式
 
 ### <a name="example-1"></a>範例 1
 
-因為 lambda 運算式的型別，您可以將它指派給**自動**變數，或者[函式](../standard-library/function-class.md)物件，如下所示：
+因為 lambda 運算式具有類型，所以您可以將它指派給**自動**變數或函式[物件，](../standard-library/function-class.md)如下所示：
 
 ### <a name="code"></a>程式碼
 
@@ -46,7 +46,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 5
@@ -55,13 +55,13 @@ int main()
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 <<c0> [ 自動](../cpp/auto-cpp.md)，[函式類別](../standard-library/function-class.md)，並[函式呼叫](../cpp/function-call-cpp.md)。
+如需詳細資訊，請參閱[auto](../cpp/auto-cpp.md)、 [Function Class](../standard-library/function-class.md)和[function Call](../cpp/function-call-cpp.md)。
 
 雖然 Lambda 運算式最常在函式的主體中宣告，但您也可以在可初始化變數的任何位置宣告 Lambda 運算式。
 
 ### <a name="example-2"></a>範例 2
 
-MicrosoftC++編譯器繫結的 lambda 運算式來擷取的變數而不是宣告運算式，所呼叫的運算式時。 下列範例示範 Lambda 運算式以傳值方式擷取區域變數 `i`，以及以傳址方式擷取區域變數 `j`： 因為 Lambda 運算式是以傳值方式擷取 `i` 的值，因此之後在程式中重新指派 `i` 的值並不會影響運算式的結果。 不過，因為 Lambda 運算式是以傳址方式擷取 `j` 的值，因此之後重新指派 `j` 的值會影響運算式的結果。
+當宣告C++運算式時，Microsoft 編譯器會將 lambda 運算式系結至其已捕捉的變數，而不是呼叫運算式時。 下列範例示範 Lambda 運算式以傳值方式擷取區域變數 `i`，以及以傳址方式擷取區域變數 `j`： 因為 Lambda 運算式是以傳值方式擷取 `i` 的值，因此之後在程式中重新指派 `i` 的值並不會影響運算式的結果。 不過，因為 Lambda 運算式是以傳址方式擷取 `j` 的值，因此之後重新指派 `j` 的值會影響運算式的結果。
 
 ### <a name="code"></a>程式碼
 
@@ -91,7 +91,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 47
@@ -99,9 +99,9 @@ int main()
 
 [[本文內容](#top)]
 
-##  <a name="callingLambdaExpressions"></a> 呼叫 Lambda 運算式
+##  <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>呼叫 Lambda 運算式
 
-如下程式碼片段所示，您可以立即呼叫 Lambda 運算式。 第二個程式碼片段示範如何將 lambda 傳遞做為引數C++這類的標準程式庫演算法`find_if`。
+如下程式碼片段所示，您可以立即呼叫 Lambda 運算式。 第二個程式碼片段顯示如何將 lambda 當做引數傳遞C++至標準程式庫演算法，例如 `find_if`。
 
 ### <a name="example-1"></a>範例 1
 
@@ -122,7 +122,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 9
@@ -130,7 +130,7 @@ int main()
 
 ### <a name="example-2"></a>範例 2
 
-此範例將 Lambda 運算式當做引數傳遞至 `find_if` 函式。 Lambda 運算式會傳回 **，則為 true**參數是否為偶數。
+此範例將 Lambda 運算式當做引數傳遞至 `find_if` 函式。 如果 lambda 運算式的參數是偶數，則會傳回**true** 。
 
 ### <a name="code"></a>程式碼
 
@@ -167,7 +167,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 The first even number in the list is 42.
@@ -175,11 +175,11 @@ The first even number in the list is 42.
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊`find_if`函式，請參閱 < [find_if](../standard-library/algorithm-functions.md#find_if)。 如需詳細資訊C++標準程式庫函式可執行常見的演算法，請參閱[\<演算法 >](../standard-library/algorithm.md)。
+如需 `find_if` 函數的詳細資訊，請參閱[find_if](../standard-library/algorithm-functions.md#find_if)。 如需執行一般演算法C++之標準程式庫函式的詳細資訊，請參閱[\<演算法 >](../standard-library/algorithm.md)。
 
 [[本文內容](#top)]
 
-##  <a name="nestingLambdaExpressions"></a> Lambda 運算式巢狀結構
+##  <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>嵌套 Lambda 運算式
 
 ### <a name="example"></a>範例
 
@@ -205,7 +205,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 13
@@ -217,11 +217,11 @@ int main()
 
 [[本文內容](#top)]
 
-##  <a name="higherOrderLambdaExpressions"></a> 高階 Lambda 函式
+##  <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>高階 Lambda 函數
 
 ### <a name="example"></a>範例
 
-許多程式設計語言支援的概念*較高順序函式。* 高階函式是以另一個 Lambda 運算式為其引數或傳回 Lambda 運算式的 Lambda 運算式。 您可以使用[函式](../standard-library/function-class.md)類別，讓C++等較高順序函式行為的 lambda 運算式。 下列範例說明傳回 `function` 物件的 Lambd 運算式，以及使用 `function` 物件做為其引數的 Lambda 運算式。
+許多程式設計語言都支援*更高順序函式*的概念。 高階函式是以另一個 Lambda 運算式為其引數或傳回 Lambda 運算式的 Lambda 運算式。 您可以使用函[式類別，](../standard-library/function-class.md)讓 lambda C++運算式的行為類似于高階函數。 下列範例說明傳回 `function` 物件的 Lambd 運算式，以及使用 `function` 物件做為其引數的 Lambda 運算式。
 
 ### <a name="code"></a>程式碼
 
@@ -258,7 +258,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 30
@@ -266,14 +266,14 @@ int main()
 
 [[本文內容](#top)]
 
-##  <a name="methodLambdaExpressions"></a> 函式中使用 Lambda 運算式
+##  <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>在函式中使用 Lambda 運算式
 
 ### <a name="example"></a>範例
 
-您可以在函式的主體中使用 Lambda 運算式。 Lambda 運算式可以存取封入函式能夠存取的任何函式或資料成員。 您可以明確或隱含擷取**這**指標，以便提供封入類別的函式和資料成員的存取。
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):擷取**這**的值 (`[*this]`) 時 lambda 將使用中的非同步或平行作業的原始物件超出範圍的程式碼可能會執行的位置。
+您可以在函式的主體中使用 Lambda 運算式。 Lambda 運算式可以存取封入函式能夠存取的任何函式或資料成員。 您可以明確或隱含地捕捉**this**指標，以提供封入類別之函式和資料成員的存取權。
+**Visual Studio 2017 15.3 版和更新**版本（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：當 lambda 將用於非同步或並行作業，而**該程式碼**可能會在原始物件超出範圍之後執行時，以傳值方式（`[*this]`）來捕捉。
 
-您可以使用**這**指標明確地在函數中，如下所示：
+您可以在函式中明確使用**this**指標，如下所示：
 
 ```cpp
 // capture "this" by reference
@@ -291,7 +291,7 @@ void ApplyScale2(const vector<int>& v) const
 }
 ```
 
-您也可以擷取**這**指標以隱含方式：
+您也可以隱含地捕捉**this**指標：
 
 ```cpp
 void ApplyScale(const vector<int>& v) const
@@ -344,7 +344,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 3
@@ -355,15 +355,15 @@ int main()
 
 ### <a name="remarks"></a>備註
 
-`ApplyScale` 函式使用 Lambda 運算式列印小數位數值和 `vector` 物件中每個元素的乘積。 Lambda 運算式會隱含地擷取**這**使其可以存取`_scale`成員。
+`ApplyScale` 函式使用 Lambda 運算式列印小數位數值和 `vector` 物件中每個元素的乘積。 Lambda 運算式會隱含地捕捉**此**，使其可以存取 `_scale` 成員。
 
 [[本文內容](#top)]
 
-##  <a name="templateLambdaExpressions"></a> 搭配範本使用 Lambda 運算式
+##  <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>搭配範本使用 Lambda 運算式
 
 ### <a name="example"></a>範例
 
-因為 Lambda 運算式具有類型，因此您可以搭配 C++ 範本使用。 下列範例顯示 `negate_all` 和 `print_all` 函式。 `negate_all`函式適用於一元**operator-** 中的每個項目`vector`物件。 `print_all` 函式會將 `vector` 物件中的每個元素印出至主控台。
+因為 Lambda 運算式具有類型，因此您可以搭配 C++ 範本使用。 下列範例顯示 `negate_all` 和 `print_all` 函式。 `negate_all` 函式會將一元**運算子**套用至 `vector` 物件中的每個元素。 `print_all` 函式會將 `vector` 物件中的每個元素印出至主控台。
 
 ### <a name="code"></a>程式碼
 
@@ -405,7 +405,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 34
@@ -419,15 +419,15 @@ After negate_all():
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊C++範本，請參閱[範本](../cpp/templates-cpp.md)。
+如需C++範本的詳細資訊，請參閱[範本](../cpp/templates-cpp.md)。
 
 [[本文內容](#top)]
 
-##  <a name="ehLambdaExpressions"></a> 處理例外狀況
+##  <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>處理例外狀況
 
 ### <a name="example"></a>範例
 
-Lambda 運算式的主體遵循結構化例外狀況處理（SEH）和 C++ 例外狀況處理這兩種規則。 您可以處理在 Lambda 運算式主體中引發的例外狀況，也可以延後至封閉範圍再處理例外狀況。 下列範例會使用**for_each**函式和 lambda 運算式來填滿`vector`物件的另一個的值。 它會使用**嘗試**/**攔截**區塊來處理無效的存取權的第一個向量。
+Lambda 運算式的主體遵循結構化例外狀況處理（SEH）和 C++ 例外狀況處理這兩種規則。 您可以處理在 Lambda 運算式主體中引發的例外狀況，也可以延後至封閉範圍再處理例外狀況。 下列範例會使用**for_each**函式和 lambda 運算式，以另一個的值填入 `vector` 物件。 它會使用**try**/**catch**區塊來處理對第一個向量的無效存取。
 
 ### <a name="code"></a>程式碼
 
@@ -467,7 +467,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Caught 'invalid vector<T> subscript'.
@@ -479,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
 
 [[本文內容](#top)]
 
-##  <a name="managedLambdaExpressions"></a> 使用 Lambda 運算式與 Managed 類型 (C++/CLI)
+##  <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>使用 Lambda 運算式搭配 Managed 類型（C++/cli）
 
 ### <a name="example"></a>範例
 
@@ -504,7 +504,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Hello!
@@ -512,10 +512,10 @@ Hello!
 
 ### <a name="remarks"></a>備註
 
-您也可以使用 Lambda 運算式搭配 STL/CLR 程式庫。 如需詳細資訊，請參閱 < [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)。
+您也可以使用 Lambda 運算式搭配 STL/CLR 程式庫。 如需詳細資訊，請參閱[STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)。
 
 > [!IMPORTANT]
->  這些通用語言執行平台 (CLR) managed 實體不支援 lambda: **ref 類別**， **ref struct**，**實值類別**，和**實值結構**.
+>  在這些 common language runtime （CLR）受管理的實體中不支援 lambda： **ref 類別**、 **ref 結構**、實**值類別**和**值結構**。
 
 [[本文內容](#top)]
 

@@ -1,8 +1,9 @@
 ---
 title: rand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand
+- _o_rand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949546"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338154"
 ---
 # <a name="rand"></a>rand
 
-使用已知且完全可重現的演算法，產生偽虛擬數位。 此函式有更具程式設計的安全版本可供使用;請參閱[rand_s](rand-s.md)。 **Rand**所產生的數位不會以密碼編譯方式保護。 如需更多密碼編譯安全的亂數字產生，請使用[rand_s](rand-s.md)或C++在標準程式庫中以[ \<隨機 >](../../standard-library/random.md)宣告的函式。
+使用眾所周知且完全可重現的演演演算法生成偽隨機數。 此函數的程式設計安全性版本可用;見[rand_s](rand-s.md)。 **蘭特**生成的數位在加密上並不安全。 要生成更加密安全的隨機數,請使用[rand_s](rand-s.md)或C++標準庫中聲明的函數,以[\<隨機>](../../standard-library/random.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -48,19 +50,21 @@ int rand( void );
 
 ## <a name="return-value"></a>傳回值
 
-**rand**會傳回亂數字，如上所述。 不會傳回錯誤。
+**如**上文所述,蘭特返回偽隨機數。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-**Rand**函數會傳回0到**RAND_MAX** （32767）範圍內的隨機整數。 呼叫**rand**之前，請先使用[srand](srand.md)函數來植入亂數產生器。
+**蘭特**函數返回範圍 0 到**RAND_MAX** (32767) 中的偽隨機整數。 在調用**rand**之前,使用[srand](srand.md)函數來播種偽隨機數生成器。
 
-**Rand**函式會產生知名的順序，而不適合當做密碼編譯功能使用。 如需更多密碼編譯安全的亂數字產生，請使用[rand_s](rand-s.md)或C++在標準程式庫中以[ \<隨機 >](../../standard-library/random.md)宣告的函式。 如需**rand**問題的相關資訊，以及隨機\<> 如何解決這些缺點，請參閱這段標題為[rand 視為有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的影片。
+**蘭特**函數生成一個眾所周知的序列,不適合用作加密函數。 要生成更加密安全的隨機數,請使用[rand_s](rand-s.md)或C++標準庫中聲明的函數,以[\<隨機>](../../standard-library/random.md)。 有關**蘭特**出了什麼問題以及隨機>\<如何解決 這些缺點的資訊,請參閱此名為[rand 被視為有害的](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)視頻。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**rand**|\<stdlib.h>|
+|**蘭德**|\<stdlib.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

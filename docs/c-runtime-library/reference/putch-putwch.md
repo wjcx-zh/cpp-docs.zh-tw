@@ -1,9 +1,11 @@
 ---
 title: _putch、_putwch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putwch
 - _putch
+- _o__putch
+- _o__putwch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,19 +35,19 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950038"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338414"
 ---
 # <a name="_putch-_putwch"></a>_putch、_putwch
 
 將字元寫入至主控台。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -65,13 +68,15 @@ wint_t _putwch(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則會傳回 *c*。 如果 **_putch**失敗，則會傳回**EOF**;如果 **_putwch**失敗，則會傳回**WEOF**。
+如果成功，則會傳回 *c*。 如果 **_putch**失敗,它將返回**EOF**;如果 **_putwch**失敗,它會傳回**WEOF**。
 
 ## <a name="remarks"></a>備註
 
-這些函式會直接將字元*c*寫入主控台，而不需要緩衝處理。 在 Windows NT 中， **_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。
+這些函數直接將字元*c*寫入主控台,無需緩衝。 在 Windows NT 中，**_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。
 
-具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 **_putch_nolock**、 **_putwch_nolock**。
+具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 有關詳細資訊,請參閱 **_putch_nolock** **,_putwch_nolock**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -86,7 +91,7 @@ wint_t _putwch(
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -98,6 +103,6 @@ wint_t _putwch(
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch、_getwch](getch-getwch.md)<br/>

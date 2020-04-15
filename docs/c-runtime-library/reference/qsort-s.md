@@ -1,8 +1,9 @@
 ---
 title: qsort_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort_s
+- _o_qsort_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6013098199e1b69d03dc9cf2780cbf4376abcc0d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332966"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -56,21 +58,21 @@ void qsort_s(
 *base*<br/>
 目標陣列的開頭。
 
-*number*<br/>
+*數量*<br/>
 陣列大小 (以項目計)。
 
-*width*<br/>
-項目大小 (以位元組計)。
+*寬度*<br/>
+元素大小 (以位元組為單位)。
 
-*compare*<br/>
-比較函式。 第一個引數是*內容*指標。 第二個引數是搜尋索引*鍵*的指標。 第三個引數是要與索引*鍵*比較之陣列元素的指標。
+*比較*<br/>
+比較函式。 第一個參數是*上下文*指標。 第二個參數是指向搜索*鍵*的指標。 第三個參數是指向要與*鍵*進行比較的陣列元素的指標。
 
-*context*<br/>
-內容的指標，可以是*比較*常式需要存取的任何物件。
+*內容*<br/>
+指向上下文的指標,可以是*比較*例程需要訪問的任何物件。
 
 ## <a name="remarks"></a>備註
 
-**Qsort_s**函式會執行快速排序演算法，以排序*數位*元素陣列，每個*寬度*為位元組。 引數*基底*是要排序之陣列基底的指標。 **qsort_s**會以排序的元素覆寫此陣列。 引數*比較*是使用者提供的常式指標，可比較兩個陣列元素，並傳回指定其關聯性的值。 **qsort_s**會在排序期間呼叫*比較*常式一或多次，並在每次呼叫時將指標傳遞至兩個陣列元素：
+**qsort_s**函數實現快速排序演演演算法,以對*數位*元素陣列進行排序,每個陣列都是*寬度*位元組。 參數*庫*是指向要排序的陣列基礎的指標。 **qsort_s**使用已排序的元素覆蓋此陣列。 參數*比較*是指向使用者提供的例程的指標,該例程比較兩個陣組元素並返回指定其關係的值。 **qsort_s**在排序過程中調用*比較*例程一次或多次,將指標傳遞給每個調用上的兩個陣列元素:
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -81,23 +83,25 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |傳回值|描述|
 |------------------|-----------------|
 |< 0|**elem1**小於**elem2**|
-|0|**elem1**相當於**elem2**|
+|0|**elem1**等效**於 elem2**|
 |> 0|**elem1**大於**elem2**|
 
 陣列是以比較函式所定義的遞增順序排序。 若要以遞減順序排序陣列，請將比較函式中的「大於」和「小於」意義反轉。
 
-若傳遞了無效的參數到此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回，而**errno**會設定為**EINVAL**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果將無效參數傳遞給函數,則調用無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,則函數傳回 **,errno**設定為**EINVAL**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|key|base|compare|num|寬度|errno|
+|索引鍵|base|compare|num|width|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
-|any|any|any|any|<= 0|**EINVAL**|
-|any|any|**NULL**|any|any|**EINVAL**|
+|**空**|任意|任意|任意|任意|**埃因瓦爾**|
+|任意|**空**|任意|!= 0|任意|**埃因瓦爾**|
+|任意|任意|任意|任意|<= 0|**埃因瓦爾**|
+|任意|任意|**空**|任意|任意|**埃因瓦爾**|
 
-**qsort_s**與**qsort**具有相同的行為，但具有*內容*參數並設定**errno**。 藉由傳遞*內容*參數，比較函數可以使用物件指標來存取物件功能或其他無法透過專案指標存取的資訊。 加入*內容*參數會讓**qsort_s**更安全，因為*內容*可以用來避免因為使用靜態變數而引進的重新進入 bug，以提供共用資訊給*compare*函數。
+**qsort_s**的行為與**qsort**相同,但具有*上下文*參數並設定**errno**。 通過傳遞*上下文*參數,比較函數可以使用物件指標訪問物件功能或通過元素指標無法訪問的其他資訊。 添加*上下文*參數使**qsort_s**更安全,因為*上下文*可用於避免使用靜態變數使共用資訊可供*比較*函數使用引入的重入錯誤。
 
 ## <a name="requirements"></a>需求
 
@@ -107,11 +111,11 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**磁帶**[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)的所有版本。
+**程式庫︰** 所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何在**qsort_s**函數中使用*coNtext*參數。 *CoNtext*參數可讓您更輕鬆地執行安全線程排序。 不使用必須同步處理以確保執行緒安全性的靜態變數，而是在每個排序中傳遞不同的*內容*參數。 在此範例中，會使用地區設定物件做為*內容*參數。
+下面的範例展示如何在**qsort_s**函數中使用*上下文*參數。 上下文*參數*使執行線程安全排序變得更加容易。 使用必須同步的靜態變數以確保線程安全,而不是使用靜態變數,而是在每一類中傳遞不同的*上下文*參數。 在此範例中,區域設置物件用作*上下文*參數。
 
 ```cpp
 // crt_qsort_s.cpp
@@ -265,7 +269,7 @@ table tablet tableux
 
 ## <a name="see-also"></a>另請參閱
 
-[搜尋和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
+[搜尋及排序](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>
 [_lsearch_s](lsearch-s.md)<br/>
 [qsort](qsort.md)<br/>

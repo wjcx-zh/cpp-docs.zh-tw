@@ -1,10 +1,13 @@
 ---
 title: exp2、exp2f、exp2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - exp2
 - exp2f
 - exp2l
+- _o_exp2
+- _o_exp2f
+- _o_exp2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 89e0448501cbd423278607bb22959c6cd1ed9464
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5df1a216b4565f013a4c42b4ef4369b5b7f9b04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941573"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347587"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2、exp2f、exp2l
 
-計算2會引發至指定的值。
+計算 2 提升到指定值。
 
 ## <a name="syntax"></a>語法
 
@@ -70,33 +74,35 @@ long double exp2l(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 指數值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回*x*的基底2指數，也就是 2<sup>x</sup>。 否則，它會傳回下列其中一個值：
+如果成功,則傳回*x*的基-2 指數,即 2<sup>x</sup>。 否則,它將返回以下值之一:
 
-|問題|Return|
+|問題|傳回|
 |-----------|------------|
-|*x* = ±0|1|
+|*x* = |0|1|
 |*x* = -INFINITY|+0|
-|*x* = + 無限大|+INFINITY|
+|*x* = [無限]|+INFINITY|
 |*x* = NaN|NaN|
 |溢位範圍錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
-|反向溢位範圍錯誤|更正結果，四捨五入之後|
+|反向溢位範圍錯誤|進位後得出正確的結果|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long double**類型之**exp2**的多載。 在 C 程式中， **exp2**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用**exp2**的重載,這些重載和返回**浮點**和**長雙**類型。 在 C 程式中 **,exp2**始終取得並傳回**一個雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**exp**、 **expf**、**總管**|\<math.h>|\<cmath>|
+|**exp**, **expf** **,**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

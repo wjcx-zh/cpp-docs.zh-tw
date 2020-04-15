@@ -1,8 +1,9 @@
 ---
 title: _getw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getw
+- _o__getw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eddb68ae6108c8a66966472cebca60a9969b78d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954883"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344168"
 ---
 # <a name="_getw"></a>_getw
 
@@ -47,16 +49,18 @@ int _getw(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
 
-**_getw**會傳回讀取的整數值。 **EOF**的傳回值表示錯誤或檔案結尾。 不過，因為**EOF**值也是合法的整數值，所以請使用**feof**或**ferror**來驗證檔案結尾或錯誤狀況。 如果*stream*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EOF**。
+**_getw**返回讀取的整數值。 **EOF**的返回值指示錯誤或檔結尾。 但是,由於**EOF**值也是合法的整數值,因此使用**feof**或**ferror**來驗證檔結尾或錯誤條件。 如果*串*流為**NULL,** 則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續 **,errno**設定為**EINVAL,** 並且函數傳回**EOF**。
 
 ## <a name="remarks"></a>備註
 
-**_Getw**函式會從與*資料流程*相關聯的檔案中讀取**int**類型的下一個二進位值，並遞增相關聯的檔案指標（如果有的話），以指向下一個未讀取的字元。 **_getw**不會假設資料流程中的專案有任何特殊的對齊方式。 使用 **_getw**時可能會發生移植問題，因為**int**類型的大小和**int**類型內的位元組順序在系統之間有所不同。
+**_getw**函數從與*流*關聯的檔中讀取**int**類型的下一個二進位值,並遞增關聯的檔指標(如果有),以指向下一個未讀字元。 **_getw**不假定流中項的任何特殊對齊。 **移植**問題可能_getw因為**int**類型的大小和**int**類型中的位元組順序因系統而異。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -64,7 +68,7 @@ int _getw(
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -108,7 +112,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 First data word in file: 0x656e694c

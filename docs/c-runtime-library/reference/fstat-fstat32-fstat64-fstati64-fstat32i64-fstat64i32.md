@@ -1,6 +1,6 @@
 ---
 title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fstat32
 - _fstat64
@@ -8,6 +8,10 @@ api_name:
 - _fstat
 - _fstat64i32
 - _fstat32i64
+- _o__fstat32
+- _o__fstat32i64
+- _o__fstat64
+- _o__fstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 1ab71071fdf5578295cfcd72f79930787e634d5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 02d297fec2ada545a8b693abacfecc7981149dae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956468"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345675"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -94,40 +99,42 @@ int _fstat64i32(
 
 ### <a name="parameters"></a>參數
 
-*fd*<br/>
+*Fd*<br/>
 已開啟之檔案的檔案描述項。
 
-*buffer*<br/>
+*緩衝區*<br/>
 儲存結果的結構指標。
 
 ## <a name="return-value"></a>傳回值
 
-如果取得檔案狀態資訊，則傳回 0。 傳回值-1 表示發生錯誤。 如果檔案描述元無效或*buffer*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設定為**EBADF**（如果是不正確檔案描述項）或**EINVAL**（如果*buffer*是**Null**的話）。
+如果取得檔案狀態資訊，則傳回 0。 返回值 -1 表示錯誤。 如果檔案描述符不合法或*緩衝區*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則**errno**設定為**EBADF**,如果檔描述符無效,則設置為**EINVAL(** 如果*緩衝區*為**NULL**)。
 
 ## <a name="remarks"></a>備註
 
-**_Fstat**函式會取得與*fd*關聯之開啟檔案的相關資訊，並將它儲存在*buffer*所指向的結構中。 定義于 SYS\Stat.h 中的 **_stat**結構包含下欄欄位。
+**_fstat**函數獲取與*fd*關聯的打開檔的資訊,並將其存儲在*緩衝區*指向的結構中。 在 SYS_Stat.h 中定義的 **_stat**結構包含以下欄位。
 
 |欄位|意義|
 |-|-|
 | **st_atime** | 最後存取檔案的時間。 |
 | **st_ctime** | 建立檔案的時間。 |
-| **st_dev** | 如果裝置， *fd*;否則為0。 |
-| **st_mode** | 檔案模式資訊的位元遮罩。 如果*fd*參照裝置，則會設定 **_S_IFCHR**位。 如果*fd*參考一般檔案，則會設定 **_S_IFREG**位。 讀取/寫入位元會根據檔案的權限模式設定。 **_S_IFCHR**和其他常數定義于 sys\stat.h 所 |
+| **st_dev** | 如果裝置 *,fd*;否則 0。 |
+| **st_mode** | 檔案模式資訊的位元遮罩。 如果*fd*引用設備,則設置 **_S_IFCHR**位元。 如果*fd*引用普通檔,則設置 **_S_IFREG**位元。 讀取/寫入位元會根據檔案的權限模式設定。 **_S_IFCHR**和其他常量在 SYS_Stat.h 中定義。 |
 | **st_mtime** | 檔案的上次修改時間。 |
 | **st_nlink** | 在非 NTFS 檔案系統上一律為 1。 |
-| **st_rdev** | 如果裝置， *fd*;否則為0。 |
+| **st_rdev** | 如果裝置 *,fd*;否則 0。 |
 | **st_size** | 檔案大小，以位元組為單位。 |
 
-如果*fd*參考到裝置， **st_atime**、 **st_ctime**、 **st_mtime**和**st_size**欄位就沒有意義。
+如果*fd*引用設備,**則st_atime、st_ctime、st_mtime**和**st_size**欄位沒有意義。 **st_ctime** **st_mtime**
 
 因為 Stat.h 使用在 Types.h 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) 類型，所以您必須在程式碼中的 Stat.h 之前包含 Types.h。
 
-使用 **__stat64**結構的 **_fstat64**，可讓檔案建立日期以23:59:59 年12月31日3000，UTC 表示。而其他函式則只代表日期到23:59:59 年1月 18 2038 日，UTC。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
+**_fstat64 ()** 使用 **__stat64**結構,允許將檔案創建日期表達到 UTC 12 月 31 日 23:59:59;而其他函數僅表示 2038 年 1 月 18 日 23:59:59,UTC 的日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
 
-這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數位尾碼（**32**或**64**）表示所使用的時間類型大小;第二個尾碼為**i32**或**i64**，指出檔案大小是否以32位或64位整數表示。
+這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數字後綴 (**32**或**64**) 表示使用的時間類型的大小;第二個後綴是**i32**或**i64,** 指示檔大小是表示為 32 位元還是 64 位整數。
 
-**_fstat**相當於 **_fstat64i32**，而**struct** **_stat**包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則這會是 true。 **_fstat**使用32位時間，而**結構** **_stat**包含32位時間。 **_Fstati64**也是如此。
+**_fstat**等效於 **_fstat64i32**,**結構****_stat**包含 64 位元時間。 除非定義了 **_USE_32BIT_TIME_T,** 否則這是事實,在這種情況下,舊行為有效;**_fstat**使用 32 位**時間,結構****_stat**包含 32 位元時間。 **_fstati64**也是如此。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>_stat 的時間類型和檔案長度類型版本
 
@@ -144,7 +151,7 @@ int _fstat64i32(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fstat**|\<sys/stat.h> 和 \<sys/types.h>|
 |**_fstat32**|\<sys/stat.h> 和 \<sys/types.h>|
@@ -153,7 +160,7 @@ int _fstat64i32(
 |**_fstat32i64**|\<sys/stat.h> 和 \<sys/types.h>|
 |**_fstat64i32**|\<sys/stat.h> 和 \<sys/types.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

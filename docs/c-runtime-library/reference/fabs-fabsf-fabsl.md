@@ -1,10 +1,11 @@
 ---
 title: fabs、fabsf、fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941487"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347543"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -68,26 +70,28 @@ long double fabsl(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Fabs**函數會傳回引數*x*的絕對值。 不會傳回錯誤。
+**fabs**函數傳回參數*x*的絕對值。 不會傳回錯誤。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|none|_DOMAIN|
+|• QNAN,IND|無|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-C++允許多載，因此如果您包含\<h > 標頭，您可以呼叫**fabs**的多載。 在 C 程式中， **fabs**一律會採用並傳回**雙精度浮點數**。
+C++允許重載,因此,如果包含\<cmath>标头,則可以調用**fab**的重載。 在 C 程式中,**晶圓廠**總是取得**並傳回一個雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的 C 標頭|必要的 C++ 標頭|
+|函式|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|-----------------------|---------------------------|
-|**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**工廠**,**晶圓廠**,**法布斯爾**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

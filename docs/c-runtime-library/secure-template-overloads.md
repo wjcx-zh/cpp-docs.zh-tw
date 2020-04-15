@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: dfb13d5a48376efb72a845e2f5e2380407937f5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744561"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361131"
 ---
 # <a name="secure-template-overloads"></a>安全範本多載
 
@@ -50,7 +50,7 @@ strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 巨集 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 並不會影響採用計數的函數 (例如 `strncpy`)。 若要針對 Count 函數啟用範本多載，請將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定義為 1。 不過，在這麼做之前，請確定您的程式碼是傳遞字元的計數，而非緩衝區的大小 (這是一個常見的錯誤)。 此外，在呼叫安全版本的情況下，於函數呼叫後在緩衝區末端明確寫入 null 結束字元的程式碼是不必要的。 如果您需要截斷行為，請參閱 [_TRUNCATE](../c-runtime-library/truncate.md)。
 
 > [!NOTE]
->  巨集 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 也需要將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 1。 如果 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定義為 1，且 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 0，應用程式將不會執行任何範本多載。
+> 巨集 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 也需要將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 1。 如果 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定義為 1，且 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 0，應用程式將不會執行任何範本多載。
 
 當您將 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 定義為 1 時，會啟用安全版本 (名稱結尾為 "_s") 的範本多載。 在此情況下，如果 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 為 1，便必須對原始程式碼做出一項小變更：
 
@@ -94,4 +94,4 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
 ## <a name="see-also"></a>另請參閱
 
 [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)<br/>
-[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
+[CRT 函式庫功能](../c-runtime-library/crt-library-features.md)

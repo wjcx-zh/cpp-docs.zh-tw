@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338026"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -49,19 +51,21 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>傳回值
 
-**_rmtmp**會傳回已關閉和刪除的暫存檔案數目。
+**_rmtmp**返回關閉和刪除的暫存檔數。
 
 ## <a name="remarks"></a>備註
 
-**_Rmtmp**函式會清除目前目錄中的所有暫存檔案。 此函式只會移除**tmpfile**所建立的檔案;只在建立暫存檔案的相同目錄中使用它。
+**_rmtmp**函數清理當前目錄中的所有臨時檔。 此函數只刪除到**tmpfile**建立的檔案 。僅在創建暫存檔的同一目錄中使用它。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

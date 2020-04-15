@@ -1,9 +1,11 @@
 ---
 title: _ismbbpunct、_ismbbpunct_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbpunct
 - _ismbbpunct_l
+- _o__ismbbpunct
+- _o__ismbbpunct_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-ms.openlocfilehash: 8a56df7ffda64a2a2cecaac6bc15d2cbaa1d0a71
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db0725215b6568300602c55ca253d959c27aedc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343455"
 ---
 # <a name="_ismbbpunct-_ismbbpunct_l"></a>_ismbbpunct、_ismbbpunct_l
 
@@ -59,12 +62,16 @@ int _ismbbpunct_l(
 *C*<br/>
 待測試整數。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果整數*c*是非 ASCII 標點符號，則 **_ismbbpunct**會傳回非零值。 **_ismbbpunct**會針對任何與地區設定相關的字元設定，使用目前的地區設定。 **_ismbbpunct_l**是相同的，不同之處在于它會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果整數*c*是非 ASCII 標點符號,**則_ismbbpunct**返回非零值。 **_ismbbpunct**將當前區域設置用於任何與區域設置相關的字元設置。 **_ismbbpunct_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+## <a name="remarks"></a>備註
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -73,9 +80,9 @@ int _ismbbpunct_l(
 |**_ismbbpunct**|\<mbctype.h>|
 |**_ismbbpunct_l**|\<mbctype.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952435"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340922"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -48,41 +50,43 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>參數
 
-*wchar*<br/>
-用來接收已轉換寬字元字串（類型**wchar_t**）之寬字元的位址。 如果不需要傳回任何寬字元，這個值可以是 null 指標。
+*瓦查爾*<br/>
+寬字元的位址以接收轉換的寬字元字串(**類型wchar_t**)。 如果不需要傳回任何寬字元，這個值可以是 null 指標。
 
-*mbchar*<br/>
+*姆布查爾*<br/>
 位元組序列 (多位元組字元) 的位址。
 
-*計數*<br/>
+*count*<br/>
 要檢查的位元組數目。
 
 *mbstate*<br/>
-轉換狀態物件的指標。 如果這個值是 null 指標，函式會使用靜態內部轉換狀態物件。 由於內部**mbstate_t**物件不是安全線程，因此建議您一律傳遞自己的*mbstate*引數。
+轉換狀態物件的指標。 如果這個值是 null 指標，函式會使用靜態內部轉換狀態物件。 由於內部**mbstate_t**物件不是線程安全的,因此我們建議您始終傳遞自己的*mbstate*參數。
 
 ## <a name="return-value"></a>傳回值
 
 下列其中一個值：
 
-0如果*wchar*不是 null 指標，則下一個*計數*或較少的位元組會完成代表 null 寬字元的多位元組字元（儲存在*wchar*中）。
+0 下一*個計數*或更少位元組完成表示空寬字元的多位元組字元,如果*wchar*不是空指標,該字元存儲在*wchar*中。
 
-1以*計數*，包含下一個*計數*或較少個位元組，完成有效的多位元組字元。 傳回的值是完成多位元組字元的位元組數目。 如果*wchar*不是 null 指標，則對等的寬字元會儲存在*wchar*中。
+1 表示*計數*,包括下一個*計數*或更少的位元組完成有效的多位元組位元元。 傳回的值是完成多位元組字元的位元組數目。 如果*wchar*不是空指標,則寬字元等效項存儲在*wchar*中。
 
-（size_t）（-1）發生編碼錯誤。 下一個*計數*或較少的位元組不會參與完整且有效的多位元組字元。 在此情況下， **errno**會設定為 EILSEQ，而*mbstate*中的轉換移位狀態則為未指定。
+(size_t)(-1)發生編碼錯誤。 下一個*計數*或更少的位元組不會貢獻為完整且有效的多位元組位元元。 在這種情況下 **,errno**設置為 EILSEQ,並且未指定*mbstate*的轉換移位狀態。
 
-（size_t）（-2）下一個*計數*位元組有助於不完整但可能是有效的多位元組字元，而且所有的*計數*位元組都已經處理。 *Wchar*中不會儲存任何值，但會更新*mbstate*以重新開機函數。
+(size_t)(-2)下一個*計數*位元組將貢獻為不完整但可能有效的多位元組位元元,並且所有*計數*位元組都已處理。 *wchar*中不儲存任何值,但*mbstate*將更新以重新啟動函數。
 
 ## <a name="remarks"></a>備註
 
-如果*mbchar*為 null 指標，則函式相當於呼叫：
+如果*mbchar*是空指標,則函數等效於呼叫:
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-在此情況下，會忽略引數*wchar*和*count*的值。
+在這種情況下,將忽略參數*wchar*和*count*的值。
 
-如果*mbchar*不是 null 指標，此函式會檢查來自*mbchar*的*count*個位元組，以判斷完成下一個多位元組字元所需的必要位元組數目。 如果下一個字元是有效的，則對應的多位元組字元會儲存在*wchar*中（如果不是 null 指標）。 如果字元是對應的寬 null 字元， *mbstate*的產生狀態就是初始轉換狀態。
+如果*mbchar*不是空指標,則函數將檢查*mbchar*中的*計數*位元組,以確定完成下一個多位元元元元所需的位元組數。 如果下一個字元有效,則相應的多位元組字元存儲在*wchar*中(如果它不是空指標)。 如果字元是相應的寬空字元,則生成的*mbstate*狀態為初始轉換狀態。
 
-**解譯 mbrtowc**函式與[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**wcsrtombs**的後續呼叫，而不是**wcstombs**，則應用程式應該使用**wcsrlen**而不是**wcslen** 。
+**mbrtowc**函數與[mbtowc不同,_mbtowc_l](mbtowc-mbtowc-l.md)其可重新啟動性。 轉換狀態以*mbstate*儲存,用於後續對相同或其他可重新啟動函數的調用。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如,如果使用後續對**wcsrtombs**的調用而不是**wcstombs,** 則應用程式應使用**wcsrlen**而不是**wcslen。**
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="example"></a>範例
 

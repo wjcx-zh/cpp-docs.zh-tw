@@ -1,10 +1,11 @@
 ---
 title: fmod、fmodf、fmodl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346559"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -70,24 +72,26 @@ long double fmodl(
 
 ### <a name="parameters"></a>參數
 
-*x*、 *y*<br/>
+*x*, *y*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**fmod**會傳回*x*  /  *y*的浮點餘數。 如果*y*的值是0.0，則**fmod**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
+**fmod**傳回*x* / *y*的浮點餘數。 如果*y*的值為 0.0,fmod 將返回一個安靜**fmod**的 NaN。 有關**printf**家族表示安靜 NaN 的資訊,請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fmod**函數會計算*x*  /  *y*的浮點餘數*f* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是一個整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
+**fmod**函數計算*x* / *y*的浮點餘數*f,* 以便*x* = *i* \* *y* + *f*(其中*i*是整數 *),f*與*x*具有相同的符號,並且*f*的絕對值小於*y*的絕對值。
 
-C++允許多載，因此您可以呼叫採用並傳回**浮點**和**長** **雙精度**值之**fmod**的多載。 在 C 程式中， **fmod**一律採用兩個**雙**精確度引數，並傳回**雙精度浮點數**。
+C++允許重載,因此您可以呼叫帶和返回**浮點**和**長****雙**值的**fmod**重載。 在 C 程式中 **,fmod**始終採用兩**個雙**參數並傳回**一個雙**參數 。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
-|**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
+|**fmod,** **fmodf**, **fmodl**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

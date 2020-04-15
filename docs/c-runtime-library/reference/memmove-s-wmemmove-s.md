@@ -1,9 +1,10 @@
 ---
 title: memmove_s、wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333159"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -61,14 +63,14 @@ errno_t wmemmove_s(
 *dest*<br/>
 目的地物件。
 
-*numberOfElements*<br/>
+*元素數*<br/>
 目的緩衝區大小。
 
 *src*<br/>
 來源物件。
 
-*計數*<br/>
-要複製的位元組數目（**memmove_s**）或字元數（**wmemmove_s**）。
+*count*<br/>
+要複製的位元組數 (**memmove_s**) 或字元 (**wmemmove_s**) 。
 
 ## <a name="return-value"></a>傳回值
 
@@ -76,17 +78,19 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*numberOfElements*|*src*|傳回值|*Dest*的內容|
+|*dest*|*元素數*|*src*|傳回值|*dest*的內容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|未修改|
-|any|any|**NULL**|**EINVAL**|未修改|
-|any|< *計數*|any|**ERANGE**|未修改|
+|**空**|任意|任意|**埃因瓦爾**|未修改|
+|任意|任意|**空**|**埃因瓦爾**|未修改|
+|任意|< *計數*|任意|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-將字元的*計數*位元組從*src*複製到*dest*。 如果來源區域與目的地的某些區域重迭， **memmove_s**會確保重迭區域中的原始來源位元組會在覆寫之前複製。
+複本*計數*從*src*到*dest*的字元位元組數。 如果源區域和目標的某些區域重疊 **,memmove_s**可確保在覆蓋之前複製重疊區域中的原始源位元組。
 
-如果*dest*或*src*是 null 指標，或如果目的字串太小，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
+如果*dest*或*src*是空指標,或者如果目標字串太小,這些函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將傳回**EINVAL**並將**errno**設定為**EINVAL**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -126,7 +130,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Before: 0123456789

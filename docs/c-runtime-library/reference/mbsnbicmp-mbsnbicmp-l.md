@@ -1,9 +1,11 @@
 ---
 title: _mbsnbicmp、_mbsnbicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
+- _o__mbsnbicmp
+- _o__mbsnbicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,19 +40,19 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 80d2708396cdaeb86c25932c3d13129fb318719a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340569"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp、_mbsnbicmp_l
 
-比較兩個多位元組字元字串的**n**個位元組，並忽略大小寫。
+比較兩個多位元位元串的**n**位元組,並忽略大小寫。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -63,10 +66,10 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>參數
 
-*string1*、 *string2*<br/>
+*字串1*,*字串2*<br/>
 以 Null 結束的待比較字串。
 
-*計數*<br/>
+*count*<br/>
 要比較的位元組數目。
 
 ## <a name="return-value"></a>傳回值
@@ -75,23 +78,25 @@ int _mbsnbicmp(
 
 |傳回值|描述|
 |------------------|-----------------|
-|< 0|小於*string2*子字串的*string1*子字串。|
-|0|*string1*子字串與*string2*子字串相同。|
-|> 0|大於*string2*子字串的*string1*子字串。|
+|< 0|*字串 1*子字串小於*string2*子字串。|
+|0|*字串1*子字串與*string2*子字串相同。|
+|> 0|*字串1*子字串大於*string2*子字串。|
 
-發生錯誤時， **_mbsnbicmp**會傳回 **_NLSCMPERROR**，其定義在字串 .h 和 g. 中。
+在錯誤時 **,_mbsnbicmp**返回 **_NLSCMPERROR**,在 String.h 和 Mbstring.h 中定義。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbicmp**函數最多可執行*string1*和*string2*的第一個*計數*位元組的序數比較。 比較是藉由將每個字元轉換成小寫來執行;[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)是 **_mbsnbicmp**的區分大小寫版本。 如果在比較*count*個字元之前，在任一字串中達到終止的 null 字元，則會結束比較。 如果字串在比較*計數*字元之前的任一字串中到達結束的 null 字元時相等，則較短的字串會較小。
+**_mbsnbicmp**函數最多執行*string1*和*string2*的第一個*計數位*的位級比較。 通過將每個字元轉換為小寫來執行比較;[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)是 **_mbsnbicmp**區分大小寫的版本。 如果在比較*計數*字元之前在任一字串中到達終止空字元,則比較結束。 如果在比較*計數*字元之前在任一字串中到達終止空字元時,字串相等,則較短的字串較小。
 
-**_mbsnbicmp**類似[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)，不同之處在于它會將字串與*計數*位元組（而非字元）進行比較。
+**_mbsnbicmp**與[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)類似,只是它將字串向上比較為*計數*位元組而不是按字元。
 
-包含 ASCII 資料表中介於 'Z' 和 'a' 之間字元 ('['、'\\'、']'、'^'、'_' 和 '\`') 的兩個字串，會根據其大小寫以不同的方式進行比較。 例如，如果比較為小寫（"ABCDE" > "abcd ^"），則兩個字串 "ABCDE" 和 "ABCD ^" 會比較一種方式，如果是大寫，則會另一種方式（"ABCDE" < "ABCD ^"）。
+包含 ASCII 資料表中介於 'Z' 和 'a' 之間字元 ('['、'\\'、']'、'^'、'_' 和 '\`') 的兩個字串，會根據其大小寫以不同的方式進行比較。 例如,如果比較小寫("abcde">"abcd")和"ABCDE"<"ABCD_")是大寫,則兩個字串"ABCDE"和"ABCD+"比較一種方法。
 
-**_mbsnbicmp**會根據目前使用中的[多位元組字碼頁](../../c-runtime-library/code-pages.md)，辨識多位元組字元序列。 不受目前地區設定的影響。
+**_mbsnbicmp**根據當前使用的[多位元組代碼頁](../../c-runtime-library/code-pages.md)識別多位元組字串序列。 不受目前地區設定的影響。
 
-如果*string1*或*string2*是 null 指標， **_mbsnbicmp**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。
+如果*string1*或*string2*是空指標 **,_mbsnbicmp**調用參數[驗證](../../c-runtime-library/parameter-validation.md)中所述的無效參數處理程式。 如果允許繼續執行,則函數將**傳回_NLSCMPERROR**並將**errno**設定到**EINVAL**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -102,11 +107,11 @@ int _mbsnbicmp(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -114,7 +119,7 @@ int _mbsnbicmp(
 
 ## <a name="see-also"></a>另請參閱
 
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp、_mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>

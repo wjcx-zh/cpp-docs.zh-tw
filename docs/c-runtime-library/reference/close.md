@@ -1,8 +1,9 @@
 ---
 title: _close
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _close
+- _o__close
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4d8b702a10624ae80629b4ce4644c428322500cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942938"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348649"
 ---
 # <a name="_close"></a>_close
 
@@ -47,20 +49,22 @@ int _close(
 
 ### <a name="parameters"></a>參數
 
-*fd*<br/>
+*Fd*<br/>
 參照已開啟之檔案的檔案描述元。
 
 ## <a name="return-value"></a>傳回值
 
-如果檔案已成功關閉， **_close**會傳回0。 傳回值-1 表示發生錯誤。
+如果檔已成功關閉 **,_close**返回 0。 返回值 -1 表示錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Close**函式會關閉與*fd*相關聯的檔案。
+**_close**函數關閉與*fd*關聯的檔。
 
-關閉檔案描述元和基礎 OS 檔案控制代碼。 因此，如果檔案原本是使用 Win32 函式**CreateFile**開啟，並使用 **_open_osfhandle**轉換成檔案描述項，則不需要呼叫**CloseHandle** 。
+關閉檔案描述元和基礎 OS 檔案控制代碼。 因此,如果檔最初使用 Win32 函數**CreateFile**打開並使用 **_open_osfhandle**轉換為檔描述符,則無需調用**CloseHandle。**
 
-這個函式會驗證它的參數。 如果*fd*是不正確的檔案描述項，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，而**errno**會設定為**EBADF**。
+這個函式會驗證它的參數。 如果*fd*是一個壞的檔描述符,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數傳回 **-1,errno**設定為**EBADF**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -68,7 +72,7 @@ int _close(
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -79,6 +83,6 @@ int _close(
 [低層級 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
-[dup、dup2](dup-dup2.md)<br/>
+[_dup,_dup2](dup-dup2.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>
 [_unlink、_wunlink](unlink-wunlink.md)<br/>

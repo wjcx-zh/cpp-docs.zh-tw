@@ -1,6 +1,6 @@
 ---
-title: log、logf、記錄、log10、log10f、log10l
-ms.date: 04/05/2018
+title: log、logf、logl、log10、log10f、log10l
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341868"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、記錄、log10、log10f、log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
 計算對數。
 
@@ -74,30 +77,32 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 要求得其對數的值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則**記錄**函數會傳回*x*的自然對數（底數*e*）。 **Log10**函數會傳回以10為底數的對數。 如果*x*是負數，這些函式預設會傳回無限（IND）。 如果*x*為0，則會傳回無限大（INF）。
+如果成功,**日誌**函數傳回*x*的自然對數 (基*e)。* **log10**函數返回基-10對數m。 如果*x*為負數,則默認情況下,這些函數將返回不確定 (IND)。 如果*x*為 0,它們返回無窮大 (INF)。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|none|_DOMAIN|
+|• QNAN,IND|無|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
-|*x* < 0|INVALID|_DOMAIN|
+|*x* < 0|無效|_DOMAIN|
 
-**記錄**和**log10**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**日誌**和**log10**具有使用流式 SIMD 擴展 2 (SSE2) 的實現。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C++允許多載，因此您可以呼叫採用並傳回**float**或**long double**值的**log**和**log10**多載。 在 C 程式中， **log**和**log10**一律會採用並傳回**雙精度浮點數**。
+C++允許重載,因此您可以調用獲取和返回**浮點**值或**長雙精度值**的**日誌**和**log10**的重載。 在 C 程式中,**紀錄**與**log10**始終取得並傳回**雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**log**、 **logf**、**記錄**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
+|**紀錄**紀錄,**紀錄**,**紀錄**紀錄 ,**紀錄10**, **log10f**, **log10l**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,9 +1,11 @@
 ---
 title: _mbbtombc、_mbbtombc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbbtombc_l
 - _mbbtombc
+- _o__mbbtombc
+- _o__mbbtombc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d26b06da1dcf8c53abda5d4ff2ee06ec3e7cd11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952741"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341422"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc、_mbbtombc_l
 
 將單一位元組的多位元組字元轉換成對應之雙位元組的多位元組字元。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -62,20 +65,22 @@ unsigned int _mbbtombc_l(
 *C*<br/>
 要轉換的單一位元組字元。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果 **_mbbtombc**成功轉換*c*，則會傳回多位元組字元;否則，它會傳回*c*。
+如果 **_mbbtombc**成功轉換*c*,它將傳回一個多位元組的位元;如果 _mbbtombc成功轉換 c ,則傳回一個多位元組的字元。否則,它將傳回*c*。
 
 ## <a name="remarks"></a>備註
 
-**_Mbbtombc**函數會將指定的單一位元組多位元組字元轉換成對應的雙位元組多位元組字元。 字元必須在 0x20-0x7E 或 0xA1-0xDF 的範圍內，才能進行轉換。
+**_mbbtombc**函數將給定的單位元組多位元組位元轉換為相應的雙位元組多位元元元。 字元必須在 0x20 - 0x7E 或 0xA1 - 0xDF 範圍內才能轉換。
 
-輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這個函式的版本完全相同，不同之處在于 **_mbbtombc**會針對此地區設定相關的行為使用目前的地區設定，而 **_mbbtombc_l**則改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值受區域設置**LC_CTYPE**類別設置的影響;有關詳細資訊[,請參閱集本地設置_wsetlocale。](setlocale-wsetlocale.md) 此函數的版本相同,只不過 **_mbbtombc**使用此區域設置依賴於區域設置**的行為,_mbbtombc_l**而是使用傳入區域設置參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在舊版中， **_mbbtombc**的名稱為**hantozen**。 針對新的程式碼，請使用 **_mbbtombc**。
+在早期版本中 **,_mbbtombc**被命名為**hantozen**。 對新代碼,請使用 **_mbbtombc**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -84,7 +89,7 @@ unsigned int _mbbtombc_l(
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

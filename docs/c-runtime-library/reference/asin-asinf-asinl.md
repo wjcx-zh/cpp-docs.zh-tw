@@ -1,10 +1,11 @@
 ---
 title: asin、asinf、asinl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinf
 - asinl
 - asin
+- _o_asin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943654"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334134"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -58,30 +60,32 @@ long double asin( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 要計算的反正弦值。
 
 ## <a name="return-value"></a>傳回值
 
-**Asin**函數會傳回介於-π/2 到π/2 弧度之間的*x*反正弦值（反正弦函數）。
+**asin**函數傳回範圍 -+/2 到 +/2 弧度中的*x*的弧線(逆正因函數)。
 
-根據預設，如果*x*小於-1 或大於1，則**asin**會傳回不定的。
+預設情況下,如果*x*小於 -1 或大於 1,**則 asin**返回無限期。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± ∞|**無效**|**_DOMAIN**|
-|± **QNAN**， **IND**|none|**_DOMAIN**|
+|• **QNAN**, **IND**|無|**_DOMAIN**|
 |&#124;x&#124;>1|**無效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以使用**float**和**long** **double**值來呼叫**asin**的多載。 在 C 程式中， **asin**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以使用**浮點**和**長****雙**精度值調用**asin**的重載。 在 C 程式中 **,asin**始終採用並傳**回一個雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
-|**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**阿辛**,**阿辛夫**,**阿辛**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="example"></a>範例
 

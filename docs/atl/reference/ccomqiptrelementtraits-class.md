@@ -1,5 +1,5 @@
 ---
-title: CComQIPtrElementTraits 類別
+title: CComQIPtr 元素類別
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtrElementTraits
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f2669c157310be02f746672b22f6c0ed005075
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246163"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327402"
 ---
-# <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits 類別
+# <a name="ccomqiptrelementtraits-class"></a>CComQIPtr 元素類別
 
-當建立 COM 介面指標的集合，這個類別會提供方法、 靜態的函式和實用的 typedef。
+此類提供在創建 COM 介面指標集合時有用的方法、靜態函數和 typedef。
 
 ## <a name="syntax"></a>語法
 
@@ -29,11 +29,11 @@ class CComQIPtrElementTraits :
 
 #### <a name="parameters"></a>參數
 
-*I*<br/>
-COM 介面，用來指定要儲存的指標的類型。
+*I.*<br/>
+指定要儲存的指標類型的 COM 介面。
 
-*piid*<br/>
-指向 IID*我*。
+*皮伊德*<br/>
+指向*I*的 IID 的指標。
 
 ## <a name="members"></a>成員
 
@@ -41,33 +41,33 @@ COM 介面，用來指定要儲存的指標的類型。
 
 |名稱|描述|
 |----------|-----------------|
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|
+|[CComQIPtr元素::INARGTYPE](#inargtype)|用於向集合類物件添加元素的數據類型。|
 
 ## <a name="remarks"></a>備註
 
-此類別衍生的方法，並建立的集合類別時提供有用的 typedef [CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM 介面指標物件。 這個類別會利用兩[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)並[CInterfaceList](../../atl/reference/cinterfacelist-class.md)類別。
+類派生方法並提供類型def,用於創建[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM介面指針對象的集合類。 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md)和[CInterfaceList](../../atl/reference/cinterfacelist-class.md)類都使用此類。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+[C 預設比較特徵](../../atl/reference/cdefaultcomparetraits-class.md)
 
 [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[元素庫](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefault 元素](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CComQIPtrElementTraits`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE
+## <a name="ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtr元素::INARGTYPE
 
-要用於將項目加入至集合的類別物件的資料類型。
+用於向集合類物件添加元素的數據類型。
 
 ```
 typedef I* INARGTYPE;
@@ -75,5 +75,5 @@ typedef I* INARGTYPE;
 
 ## <a name="see-also"></a>另請參閱
 
-[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CDefaultElementtraits 類別](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

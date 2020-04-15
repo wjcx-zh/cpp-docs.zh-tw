@@ -1,10 +1,11 @@
 ---
 title: floor、floorf、floorl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - floorf
 - floorl
 - floor
+- _o_floor
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957149"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346677"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -65,28 +67,30 @@ long double floorl(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Floor**函式會傳回浮點值，代表小於或等於*x*的最大整數。 不會傳回錯誤。
+**底面**函數返回一個浮點值,該值表示小於或等於*x*的最大整數。 不會傳回錯誤。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|none|_DOMAIN|
+|• QNAN,IND|無|_DOMAIN|
 
-**floor**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**樓層**具有使用流式 SIMD 擴展 2 (SSE2) 的實現。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C++允許多載，因此您可以呼叫採用並傳回**浮點**和**長** **雙精度**值的**floor**多載。 在 C 程式中， **floor**一律會採用並傳回**雙精度浮點數**。
+C++允許重載,因此您可以調用帶和返回**浮點**和**長****雙**值的**地板**重載。 在 C 程式中,**地板**始終採用並傳**回雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
-|**floor**、 **floorf**、 **floorl**|\<math.h>|
+|**地板****, 地板,****地板**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

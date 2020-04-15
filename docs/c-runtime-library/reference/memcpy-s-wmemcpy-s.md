@@ -1,9 +1,11 @@
 ---
 title: memcpy_s、wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952806"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333331"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
@@ -61,13 +64,13 @@ errno_t wmemcpy_s(
 *dest*<br/>
 新的緩衝區。
 
-*destSize*<br/>
+*放大縮小字型功能 放大縮小字型功能*<br/>
 memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位元組為單位)。
 
 *src*<br/>
 要複製的緩衝區。
 
-*計數*<br/>
+*count*<br/>
 要複製的字元數目。
 
 ## <a name="return-value"></a>傳回值
@@ -76,18 +79,20 @@ memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位�
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*destSize*|*src*|*計數*|傳回值|*Dest*的內容|
+|*dest*|*放大縮小字型功能 放大縮小字型功能*|*src*|*count*|傳回值|*dest*的內容|
 |------------|----------------|-----------|---|------------------|------------------------|
-|any|any|any|0|0|未修改|
-|**NULL**|any|any|非零|**EINVAL**|未修改|
-|any|any|**NULL**|非零|**EINVAL**|*dest*已歸零|
-|any|< *計數*|any|非零|**ERANGE**|*dest*已歸零|
+|任意|任意|任意|0|0|未修改|
+|**空**|任意|任意|非零|**埃因瓦爾**|未修改|
+|任意|任意|**空**|非零|**埃因瓦爾**|*dest*被歸零|
+|任意|< *計數*|任意|非零|**ERANGE**|*dest*被歸零|
 
 ## <a name="remarks"></a>備註
 
-**memcpy_s**會將*計數*位元組從*src*複製到*目的地*;**wmemcpy_s**會複製整個*計數*的寬字元（兩個位元組）。 如果來源和目的地重迭， **memcpy_s**的行為會是未定義的。 使用**memmove_s**來處理重迭的區域。
+**memcpy_s**副本*計數*位元組從*src*到*dest*;**wmemcpy_s**副本*計數*寬字元(兩個字節)。 如果源和目標重疊,則**memcpy_s**的行為未定義。 使用**memmove_s**來處理重疊區域。
 
-這些函式會驗證它們的參數。 如果*count*不是零，而*dest*或*src*是 null 指標，或*destSize*小於*count*，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EINVAL**或**ERANGE** ，並將**errno**設定為傳回值。
+這些函式會驗證它們的參數。 如果*計數*是非零,並且*dest*或*src*是空指標,或者*destSize*小於*計數*,則這些函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將返回**EINVAL**或**ERANGE,** 並將**errno**設置為返回值。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

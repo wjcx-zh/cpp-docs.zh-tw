@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: 52b6bfd74a08200f7d924d2601b85718a941dd85
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f8f3c88c1b203ed7fcea148843fa99590e27b888
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451659"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331862"
 ---
-# <a name="regexerror-class"></a>regex_error 類別
+# <a name="regex_error-class"></a>regex_error 類別
 
 回報錯誤的 basic_regex 物件。
 
@@ -31,15 +31,15 @@ class regex_error
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[regex_error](#regex_error)|建構物件。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
-|[程式碼](#code)|傳回錯誤碼。|
+|[代碼](#code)|傳回錯誤碼。|
 
 ## <a name="requirements"></a>需求
 
@@ -82,7 +82,7 @@ int main()
 regex error: unbalanced parentheses
 ```
 
-## <a name="code"></a>  regex_error::code
+## <a name="regex_errorcode"></a><a name="code"></a>regex_error:代碼
 
 傳回錯誤碼。
 
@@ -94,7 +94,7 @@ regex_constants::error_code code() const;
 
 成員函式會傳回傳遞給物件建構函式的值。
 
-## <a name="regex_error"></a>  regex_error::regex_error
+## <a name="regex_errorregex_error"></a><a name="regex_error"></a>regex_error::regex_error
 
 建構物件。
 
@@ -104,20 +104,20 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>參數
 
-*糾錯*\
+*錯誤*\
 錯誤碼。
 
 ### <a name="remarks"></a>備註
 
-此函式會建立保存值*錯誤*的物件。
+構造函數構造保存值*誤差*的物件。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)\
-[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
-[\<RegEx > 函式](../standard-library/regex-functions.md)\
-[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
-[\<RegEx > 運算子](../standard-library/regex-operators.md)\
-[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
-[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<正則>](../standard-library/regex.md)\
+[regex_constants類](../standard-library/regex-constants-class.md)\
+[\<正規表示式>函數](../standard-library/regex-functions.md)\
+[regex_iterator類](../standard-library/regex-iterator-class.md)\
+[\<正則>運算子](../standard-library/regex-operators.md)\
+[regex_token_iterator類](../standard-library/regex-token-iterator-class.md)\
+[regex_traits類](../standard-library/regex-traits-class.md)\
+[\<正則>型態](../standard-library/regex-typedefs.md)

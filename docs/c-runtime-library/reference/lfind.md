@@ -1,8 +1,9 @@
 ---
 title: _lfind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lfind
+- _o__lfind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 287cbd8bc9cc567a4a0d5b9505d57098197bc545
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442915"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342167"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -54,38 +56,40 @@ void *_lfind(
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
+*關鍵*<br/>
 要搜尋的物件。
 
 *base*<br/>
 搜尋資料基底的指標。
 
-*number*<br/>
+*數量*<br/>
 陣列元素數目。
 
 *寬度*<br/>
 陣列元素的寬度。
 
-*compare*<br/>
+*比較*<br/>
 比較常式的指標。 第一個參數是搜尋索引鍵的指標。 第二個參數是要與索引鍵比較之陣列元素的指標。
 
 ## <a name="return-value"></a>傳回值
 
-如果找到索引鍵， **_lfind**會傳回符合索引*鍵*之*基底*陣列元素的指標。 如果找不到索引鍵， **_lfind**會傳回**Null**。
+如果找到該鍵 **,_lfind**返回指向*基中*與*鍵*匹配的陣列元素的指標。 如果未找到這個鍵 **,_lfind**傳回**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Lfind**函式會在*數位*元素陣列中執行值索引*鍵*的線性搜尋，每個*寬度*為位元組。 不同于**bsearch**， **_lfind**不需要排序陣列。 *基底*引數是要搜尋之陣列基底的指標。 *Compare*引數是使用者所提供之常式的指標，可比較兩個陣列元素，然後傳回一個指定其關聯性的值。 **_lfind**在搜尋期間呼叫*比較*常式一或多次，並在每次呼叫時將指標傳遞至兩個陣列元素。 *比較*常式必須比較元素，然後傳回非零（表示專案不同）或0（表示元素完全相同）。
+**_lfind**函數對*數位*元素陣列中的值*鍵*執行線性搜索,每個數位都是*寬度*位元組。 與**bsearch**不同 **,_lfind**不需要對陣列進行排序。 *基*參數是指向要搜索的陣列基礎的指標。 *比較*參數是指向使用者提供的例程的指標,該例程比較兩個陣列元素,然後返回指定其關係的值。 **_lfind**在搜索期間調用*比較*例程一次或多次,將指標傳遞到每個調用上的兩個陣組元素。 *比較*例程必須比較元素,然後返回非零(表示元素不同)或 0(表示元素相同)。
 
-這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*Width*小於零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。
+這個函式會驗證它的參數。 如果*比較*,*鍵*或*數位*為**NULL,** 或者如果*基*為**NULL**且*數位*為非零,或者如果*寬度*小於零,則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行 **,errno**將設定為**EINVAL,** 並且函數傳回**NULL**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -126,7 +130,7 @@ Hello found
 
 ## <a name="see-also"></a>另請參閱
 
-[搜尋和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
+[搜尋及排序](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lsearch](lsearch.md)<br/>

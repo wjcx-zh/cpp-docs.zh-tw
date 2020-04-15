@@ -1,9 +1,11 @@
 ---
 title: _fgetchar、_fgetwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fgetchar
 - _fgetwchar
+- _o__fgetchar
+- _o__fgetwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b9d805483395d3050a1eb0bc78afef8cd99ca984
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940868"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346936"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
@@ -55,15 +58,17 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>傳回值
 
-fgetchar 會傳回讀取為**int**的字元，或`EOF`傳回表示錯誤或檔案結尾。 **\_** fgetwchar 會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應`WEOF`于讀取或傳回字元的寬字元，以表示錯誤或檔案結尾。 **\_** 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。
+fgetchar 返回讀取為**int**`EOF`的字元 或返回以指示檔錯誤**\_** 或結尾。 fgetwchar 傳回,作為[wint_t,](../../c-runtime-library/standard-types.md)對應於`WEOF`讀取或傳回的字元的寬字元以指示錯誤**\_** 或檔結尾。 對於這兩個函數,使用**fefe**或**ferror**來區分錯誤和檔結尾條件。
 
 ## <a name="remarks"></a>備註
 
-這些函式會從**stdin**讀取單一字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
+這些函數從**stdin**讀取單個字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
 
-**_fgetchar**相當於`fgetc( stdin )`。 它也相當於**getchar**，但只實作為函式，而不是函式和宏。 **_fgetwchar**是 **_fgetchar**的寬字元版本。
+**_fgetchar**等效`fgetc( stdin )`於 。 它也等效於**getchar,** 但僅作為函數實現,而不是作為函數和宏實現。 **_fgetwchar**是 **_fgetchar**的寬字元版本。
 
 這些函式與 ANSI 標準不相容。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -73,12 +78,12 @@ fgetchar 會傳回讀取為**int**的字元，或`EOF`傳回表示錯誤或檔�
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台相關聯的標準資料流程控制碼（**stdin**、 **stdout**和**stderr**）必須先重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用中不支援該主控台。 在與主控台關聯的標準流句柄 (**stdin、** **stdout**和**stder**) 必須重定向,C 運行時函數才能在 UWP 應用中使用它們。 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

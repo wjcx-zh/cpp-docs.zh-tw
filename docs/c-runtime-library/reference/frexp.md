@@ -1,8 +1,9 @@
 ---
 title: frexp、frexpf、frexpl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - frexp
+- _o_frexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345803"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -68,7 +70,7 @@ long double frexp(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點值。
 
 *expptr*<br/>
@@ -76,19 +78,21 @@ long double frexp(
 
 ## <a name="return-value"></a>傳回值
 
-**frexp**會傳回尾數。 如果*x*為0，則函數會針對尾數和指數傳回0。 如果*expptr*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會將**errno**設定為**EINVAL** , 並傳回0。
+**弗雷智浦**返回曼蒂薩。 如果*x*為 0,則對於曼蒂薩和指數,函數返回 0。 如果*expptr*為**NULL,** 則無效參數處理程式將呼叫[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設置到**EINVAL**並返回0。
 
 ## <a name="remarks"></a>備註
 
-**Frexp**函式會將浮點值（*x*）細分為尾數（*m*）和指數（*n*），讓*m*的絕對值大於或等於0.5 且小於1.0，以及*x*  = *m* * 2<sup>*n*</sup>。 整數指數*n*會儲存在*expptr*所指向的位置。
+**frexp**函數會浮點值 *(x*) 分解為曼蒂薩 *(m*) 和指數 *(n),* 以便*m*的絕對值大於或等於*x* = 0.5 和小於 1.0,x *m* = 2<sup>*n*</sup>。 整數指數*n*存儲在*expptr*指向的位置。
 
-C++允許多載，因此您可以呼叫**frexp**的多載。 在 C 程式中， **frexp**一律採用**double**和**int**指標，並傳回**雙精度浮點數**。
+C++允許重載,所以你可以調用**frexp**的重載。 在 C 程式中 **,frexp**始終採用**雙**和**int**指標,並傳回**一個雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
-|**frexp**、 **frexpf**、 **frexpl**|\<math.h>|
+|**弗雷浦普斯**,**弗雷克斯普 ,****弗勒克普爾**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

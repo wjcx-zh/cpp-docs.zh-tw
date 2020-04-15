@@ -1,9 +1,11 @@
 ---
 title: _ismbbtrail、_ismbbtrail_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbtrail
 - _ismbbtrail_l
+- _o__ismbbtrail
+- _o__ismbbtrail_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: e445de41b05ac4829bdf108d1c98113cd5240ec0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e8615adf5d17986c1a52658fe5d680cc326976a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953965"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343392"
 ---
 # <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail、_ismbbtrail_l
 
@@ -59,16 +62,18 @@ int _ismbbtrail_l(
 *C*<br/>
 要測試的整數。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果整數*c*是多位元組字元的第二個位元組，則 **_ismbbtrail**會傳回非零值。 例如，僅限在字碼頁 932 中，有效範圍是 0x40 到 0x7E 以及 0x80 到 0xFC。
+如果整數*c*是多位元位元元的第二個字節,**則_ismbbtrail**返回非零值。 例如，僅限在字碼頁 932 中，有效範圍是 0x40 到 0x7E 以及 0x80 到 0xFC。
 
 ## <a name="remarks"></a>備註
 
-**_ismbbtrail**會針對與地區設定相關的行為使用目前的地區設定。 **_ismbbtrail_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbtrail**使用當前區域設置進行與區域設置相關的行為。 **_ismbbtrail_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -79,9 +84,9 @@ int _ismbbtrail_l(
 
 \* 針對此測試條件的資訊清單常數。
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>

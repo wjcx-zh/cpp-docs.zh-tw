@@ -1,10 +1,12 @@
 ---
 title: gmtime、_gmtime32、_gmtime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _gmtime32
 - gmtime
 - _gmtime64
+- _o__gmtime32
+- _o__gmtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: ca5f424ac7006d2976ea03bbae9f0ad3a96abf6c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: afa46e583437ebace8edd3a54a6d85e61e02854c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954859"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344093"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime、_gmtime32、_gmtime64
 
-將**time_t**時間值轉換成**tm**結構。 這些函式有更安全的版本可供使用；請參閱 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)。
+將**time_t**時間值轉換為**tm**結構。 這些函式有更安全的版本可供使用；請參閱 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -55,45 +58,47 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ### <a name="parameters"></a>參數
 
-*sourceTime*<br/>
+*來源時間*<br/>
 預存時間的指標。 時間以國際標準時間 1970 年 1 月 1 日 (UTC) 午夜 (00: 00:00) 以來經過的秒代表。
 
 ## <a name="return-value"></a>傳回值
 
-[tm](../../c-runtime-library/standard-types.md) 類型之結構的指標。 傳回結構的欄位會以 UTC 而非當地時間來保存*sourceTime*引數的評估值。 每個結構欄位的類型為**int**，如下所示：
+[tm](../../c-runtime-library/standard-types.md) 類型之結構的指標。 返回結構的欄位在UTC而不是本地時間保存*源時間*參數的計算值。 每個結構欄位的類型**為 int,** 如下所示:
 
 |欄位|描述|
 |-|-|
-|**tm_sec**|分鐘後的秒數（0-59）。|
-|**tm_min**|小時之後的分鐘（0-59）。|
-|**tm_hour**|午夜後的小時（0-23）。|
-|**tm_mday**|月中的日（1-31）。|
-|**tm_mon**|月份（0-11;1月 = 0）。|
+|**tm_sec**|一分鐘后秒 (0 - 59)。|
+|**tm_min**|一小時后幾分鐘 (0 - 59)。|
+|**tm_hour**|午夜起(0 - 23日)的上班時間。|
+|**tm_mday**|月日(1 - 31)。|
+|**tm_mon**|月 (0 - 11;1 月 = 0)。|
 |**tm_year**|年份 (目前年份減去 1900)。|
-|**tm_wday**|周中的日（0-6;星期日 = 0）。|
-|**tm_yday**|年中的日（0-365;1月1日 = 0）。|
-|**tm_isdst**|**Gmtime**一律為0。|
+|**tm_wday**|星期一(0 - 6;周日 = 0)。|
+|**tm_yday**|一年中的日子(0 - 365;1 月 1 = 0)。|
+|**tm_isdst**|總是 0**為 gmtime**。|
 
-32位和64位版本的**gmtime**、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)和[localtime](localtime-localtime32-localtime64.md)都使用每個執行緒的一個通用**tm**結構來進行轉換。 每次呼叫這些函式的其中之一時，會終結任何先前呼叫的結果。 如果*sourceTime*代表1970年1月1日午夜之前的日期， **Gmtime**會傳回**Null**。 不會傳回錯誤。
+**tm** gmtime、mktime、mkgmtime 和[本地時間的](localtime-localtime32-localtime64.md)[mktime](mktime-mktime32-mktime64.md)32[mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)位元和 64 位元版本都使用每個執行緒的一**gmtime**個通用 tm 結構進行轉換。 每次呼叫這些函式的其中之一時，會終結任何先前呼叫的結果。 如果*sourceTime*表示 1970 年 1 月 1 日午夜前的日期 **,gmtime**將傳回**NULL**。 不會傳回錯誤。
 
-**_gmtime64**會使用 **__time64_t**結構，讓日期以23:59:59 年12月31日3000，utc 表示，而 **_gmtime32**只代表日期到23:59:59 年1月 18 2038 日（utc）。 1970 年 1 月 1 日午夜是這兩個函式的日期範圍下限。
+**_gmtime64**(_gmtime64 () 使用 **__time64_t**結構,允許日期在 UTC 12 月 31 日 23:59:59、UTC 之前表示,而 **_gmtime32**僅表示 2038 年 1 月 18 日 23:59:59,UTC 的日期。 1970 年 1 月 1 日午夜是這兩個函式的日期範圍下限。
 
-**gmtime**是評估為 **_gmtime64**的內嵌函式，而**time_t**則相當於 **__time64_t** ，除非已定義 **_USE_32BIT_TIME_T** 。 如果您必須強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**，但是這麼做會使**gmtime**在 **_gmtime32**和**time_t**中定義為 **__time32_t**。 我們建議您不要這麼做，因為 64 位元平台上不允許這種定義，而且在任何情況下，您的應用程式可能會在 2038 年 1 月 18 日之後失敗。
+**gmtime**是一個內聯函數,用於計算到 **_gmtime64**,除非定義 **_USE_32BIT_TIME_T,****否則time_t**等效於 **__time64_t。** 如果必須強制編譯器將**time_t**解釋為舊的 32 位**元time_t,** 則可以定義 **_USE_32BIT_TIME_T,** 但這樣做會導致**gmtime**在內列,**以_gmtime32,time_t**定義為 **__time32_t** **time_t** 。 我們建議您不要這麼做，因為 64 位元平台上不允許這種定義，而且在任何情況下，您的應用程式可能會在 2038 年 1 月 18 日之後失敗。
 
-這些函式會驗證它們的參數。 如果*sourceTime*為 null 指標，或如果*sourceTime*值為負數，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
+這些函式會驗證它們的參數。 如果*sourceTime*是空指標,或者如果*sourceTime*值為負,則這些函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將傳回**NULL**並將**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Gmtime32**函式會細分*sourceTime*值，並將其儲存在以時間定義的類型**tm**靜態配置結構中。H. *SourceTime*的值通常是從[time](time-time32-time64.md)函數的呼叫取得。
+**_gmtime32**函數分解*了 sourceTime*值並將其存儲在在 TIME 中定義的**tm**類型的靜態分配結構中。H。 *源時間*的值通常是從對[時間](time-time32-time64.md)函數的調用中獲得的。
 
 > [!NOTE]
 > 在大部分情況下，目標環境會嘗試判斷日光節約時間是否生效。 C 執行階段程式庫會假定使用美國的規則，以實作日光節約時間 (DST) 的計算。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime > 或\<time. h >|
+|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<ctime\<> 或時間.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

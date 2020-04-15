@@ -1,8 +1,9 @@
 ---
 title: _get_wpgmptr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_wpgmptr
+- _o__get_wpgmptr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-ms.openlocfilehash: 0cd2dc9c2f82d3dc49a17dc438157233c50b3261
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1e54d3dbdc837c491f5b39d33a9b8197094ac60b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344870"
 ---
 # <a name="_get_wpgmptr"></a>_get_wpgmptr
 
-取得 **_wpgmptr**全域變數的目前值。
+獲取 **_wpgmptr**全域變數的當前值。
 
 ## <a name="syntax"></a>語法
 
@@ -50,15 +52,17 @@ errno_t _get_wpgmptr(
 ### <a name="parameters"></a>參數
 
 *pValue*<br/>
-要填入 **_wpgmptr**變數目前值的字串指標。
+指向要用 **_wpgmptr**變數的當前值填充的字串的指標。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pValue*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
+如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pValue*為**NULL,** 則無效參數處理程式將呼叫[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,此函數將**errno**設定到**EINVAL**並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-只有在您的程式具有寬進入點（例如**wmain （）** 或**wWinMain （））** 時，才呼叫 **_get_wpgmptr** 。 **_Wpgmptr** global 變數包含與進程相關聯之可執行檔的完整路徑，做為寬字元字串。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
+僅當程式具有寬入口點(如**wmain()** 或**wWinMain()** 時,才撥打 **_get_wpgmptr。** **_wpgmptr**全域變數包含作為寬字元字串與進程關聯的可執行檔的完整路徑。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -66,7 +70,7 @@ errno_t _get_wpgmptr(
 |-------------|---------------------|
 |**_get_wpgmptr**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

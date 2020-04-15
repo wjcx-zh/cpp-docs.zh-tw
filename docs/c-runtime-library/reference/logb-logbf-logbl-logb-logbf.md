@@ -1,12 +1,17 @@
 ---
 title: logb、logbf、logbl、_logb、_logbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - logb
 - _logb
 - _logbl
 - logbf
+- _logbf
 - logbl
+- _o__logb
+- _o_logb
+- _o_logbf
+- _o_logbl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341673"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -80,32 +86,34 @@ float _logbf(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**logb**會以浮點值表示的帶正負號整數，傳回*x*的非偏誤指數值。
+**logb**將*x*的無偏指數值作為表示為浮點值的符號整數返回 x。
 
 ## <a name="remarks"></a>備註
 
-**Logb**函式會將浮點引數*x*的指數值解壓縮，如同*x*是以無限範圍表示。 如果引數*x*反正規化，則會將它視為正規化。
+**logb**函數提取浮點參數*x*的指數值,就像*x*以無限範圍表示一樣。 如果參數*x*非規範化,則將其視為規範化。
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**logb**的多載。 在 C 程式中， **logb**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用獲取和返回**浮點**值或**長****雙精度值**的**logb**重載。 在 C 程式中 **,logb**始終取得並傳回**一個雙**。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|無|_DOMAIN|
+|• QNAN,IND|None|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
-|**logb**、 **logbf**、 **logbl**、 **_logbf**|\<math.h>|
+|**紀錄**,**紀錄,****日誌**, **_logbf**|\<math.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

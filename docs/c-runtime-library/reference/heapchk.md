@@ -1,8 +1,9 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapchk
+- _o__heapchk
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954815"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344064"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -48,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>傳回值
 
-**_heapchk**會傳回在 Malloc. h 中定義的下列其中一個整數資訊清單常數。
+**_heapchk**返回在 Malloc.h 中定義的以下整數清單常量之一。
 
 |傳回值|條件|
 |-|-|
@@ -58,11 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | 堆積尚未初始化。 |
 | **_HEAPOK** | 堆積看似一致。 |
 
-此外，如果發生錯誤， **_heapchk**會將**Errno**設定為**ENOSYS**。
+此外,如果發生錯誤 **,_heapchk**將**errno**設定到**ENOSYS**。
 
 ## <a name="remarks"></a>備註
 
-**_Heapchk**函數藉由檢查堆積的最小一致性，協助您進行堆積相關的問題。 如果作業系統不支援 **_heapchk**（例如，Windows 98），此函式會傳回 **_HEAPOK** ，並將**errno**設定為**ENOSYS**。
+**_heapchk**函數通過檢查堆的最小一致性,幫助調試與堆相關的問題。 如果作業系統不支援 **_heapchk(** 例如,Windows 98),則函數將傳回 **_HEAPOK**並將**errno**設定到**ENOSYS**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -70,7 +74,7 @@ int _heapchk( void );
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

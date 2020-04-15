@@ -1,9 +1,11 @@
 ---
 title: _ismbbgraph、_ismbbgraph_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbgraph_l
 - _ismbbgraph
+- _o__ismbbgraph
+- _o__ismbbgraph_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: 096450869f9a150585b3102cea155ecd948c5751
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 28e52c564bb554df1bd2228691034db5a13a2300
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343714"
 ---
 # <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph、_ismbbgraph_l
 
@@ -59,7 +62,7 @@ int _ismbbgraph_l (
 *C*<br/>
 待測試整數。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -68,7 +71,11 @@ int _ismbbgraph_l (
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-*c*為非零值; 如果不是，則為0。 **_ismbbgraph**會針對任何與地區設定相關的行為使用目前的地區設定。 **_ismbbgraph_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+*c*的非零,如果不是,則為 0。 **_ismbbgraph**將當前區域設置用於任何與區域設置相關的行為。 **_ismbbgraph_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+## <a name="remarks"></a>備註
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -77,7 +84,7 @@ int _ismbbgraph_l (
 |**_ismbbgraph**|\<mbctype.h>|
 |**_ismbbgraph_l**|\<mbctype.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -86,4 +93,4 @@ int _ismbbgraph_l (
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>

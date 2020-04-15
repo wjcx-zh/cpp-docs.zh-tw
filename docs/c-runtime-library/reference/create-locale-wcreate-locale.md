@@ -1,10 +1,12 @@
 ---
 title: _create_locale、_wcreate_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
+- _o__create_locale
+- _o__wcreate_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 611eaf342776b9a0f57c4f55c52a841c3fd13fb5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473837"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348259"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale、_wcreate_locale
 
@@ -60,48 +63,50 @@ _locale_t _wcreate_locale(
 *類別*<br/>
 分類。
 
-*locale*<br/>
+*現場*<br/>
 地區設定指定名稱。
 
 ## <a name="return-value"></a>傳回值
 
-如果指定有效的*地區*設定和*類別*，則會以 **_locale_t**物件的形式傳回指定的地區設定。 但不會變更程式的目前地區設定。
+如果提供了有效的*區域設置*和*類別*,則返回指定的區域設置作為 **_locale_t**物件。 但不會變更程式的目前地區設定。
 
 ## <a name="remarks"></a>備註
 
-**_Create_locale**函式可讓您建立代表特定地區特定設定的物件，以用於許多 CRT 函式的地區設定特定版本（具有 **_l**尾碼的函式）。 此行為類似于**setlocale**，不同之處在于，設定會儲存在傳回的 **_locale_t**結構中，而不會將指定的地區設定套用至目前的環境。 當不再需要 **_locale_t**結構時，應該使用[_free_locale](free-locale.md)加以釋放。
+**_create_locale**函數允許您創建表示特定區域設置的物件,以便在許多 CRT 函數的區域設置特定版本中使用(具有 **_l**後綴的函數)。 該行為類似於**setlocale,** 只不過,這些設置不是將指定的區域設置應用於當前環境,而是保存在返回 **_locale_t**結構中。 當不再需要 **_locale_t**結構時,應使用[_free_locale](free-locale.md)釋放結構。
 
-**_wcreate_locale**是寬字元版本的 **_create_locale**; **_wcreate_locale**的*地區*設定引數是寬字元字串。 相反地， **_wcreate_locale**和 **_create_locale**的行為相同。
+**_wcreate_locale**是 **_create_locale**的寬字元版本;從 **_wcreate_locale***區域設定*參數是寬字元字串。 **_wcreate_locale**和 **_create_locale**行為相同。
 
-*Category*引數會指定受影響之地區設定特定行為的部分。 用於*分類*的旗標及其影響的程式部分如下表所示：
+*類別*參數指定受影響的特定於區域設置的行為的部分。 類別*的*標誌及其影響的程式部分如下表所示:
 
-| *類別*旗標 | 影響 |
+| *類別*標誌 | 影響 |
 |-----------------|---------|
 | **LC_ALL** |所有分類，如下所示。 |
-| **LC_COLLATE** |**Strcoll**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**和**wcsxfrm**函數。 |
-| **LC_CTYPE** | 字元處理函式（不受影響的**isdigit**、 **isxdigit**、 **mbstowcs**和**mbtowc**除外）。 |
-| **LC_MONETARY** | **Localeconv**函數所傳回的貨幣格式資訊。 |
-| **LC_NUMERIC** | 格式化輸出常式（例如**printf**）的小數點字元、資料轉換常式，以及**localeconv**所傳回的非貨幣格式資訊。 除了小數點字元以外， **LC_NUMERIC**會設定[localeconv](localeconv.md)所傳回的千位分隔符號和群組控制字元串。 |
-| **LC_TIME** | **Strftime**和**wcsftime**函數。 |
+| **LC_COLLATE** |**斯特科爾****,_stricoll,wcscoll,_wcsicoll,****斯特克斯弗姆****_stricoll****_wcsicoll**,_strncoll,_strnicoll,_wcsncoll,_wcsnicoll,和**wcsxfrm**功能。 **_strncoll** **_strnicoll** **_wcsncoll** **_wcsnicoll** |
+| **LC_CTYPE** | 字元處理函數(除**數位****、isxdigit、mbstowcs**和**mbtowc** **mbstowcs** (未受影響) |
+| **LC_MONETARY** | **本地 econv**函數傳回的貨幣格式資訊。 |
+| **LC_NUMERIC** | 格式化的輸出例程(如**printf**)的數據轉換例程和**localeconv**傳回的非貨幣格式資訊的十進位元字元。 除了小數點字元外 **,LC_NUMERIC**設置數千分隔元和[由 localeconv](localeconv.md)返回的分組控制字串。 |
+| **LC_TIME** | **穩時**和**wcsftime**函數。 |
 
-此函式會驗證*分類*和*地區*設定參數。 如果 category 參數不是上表中所指定的其中一個值，或*地區*設定為**null**，則函式會傳回**null**。
+此函數驗證*類別*和*區域設置*參數。 如果類別參數不是上表中給出的值之一,或者如果*區域設定*為**NULL,** 則函數將傳回**NULL**。
 
-*Locale*引數是指定地區設定之字串的指標。 如需*地區*設定引數格式的詳細資訊，請參閱[地區設定名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。
+*區域設定*參數是指向指定區域設置的字串的指標。 關於*區域設定*參數格式的資訊,請參閱[區域設定名稱、語言和國家/ 區域字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。
 
-*地區*設定引數可以採用地區設定名稱、語言字串、語言字串和國家/地區代碼、字碼頁，或語言字串、國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/地區碼和字碼頁的集合包含 Windows NLS API 所支援的所有。 地區設定[名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)中會描述 **_create_locale**支援的地區設定名稱集合。 **_Create_locale**所支援的語言和國家/地區字串集合會列在[語言字串](../../c-runtime-library/language-strings.md)和[國家/地區字串](../../c-runtime-library/country-region-strings.md)中。
+*區域設置*參數可以採用區域設置名稱、語言字串、語言字串和國家/地區代碼、代碼頁或語言字串、國家/區域代碼和代碼頁。 可用的區域設定名稱、語言、國家/地區代碼和代碼頁集包括 Windows NLS API 支援的所有區域設定名稱、 語言/區域代碼和代碼頁。 **_create_locale**支援的區域設置名稱集在[區域設置名稱、語言和國家/區域字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)中描述。 **_create_locale**支援的語言和國家/區域字串集列在[語言字串](../../c-runtime-library/language-strings.md)和國家[/區域字串](../../c-runtime-library/country-region-strings.md)中。
 
 如需地區設定的詳細資訊，請參閱 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。
 
-此函式的舊名稱（加上兩個前置底線） **__create_locale**已被取代。
+此函數的前一個名稱 **__create_locale(** 具有兩個前導下劃線)已被棄用。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_create_locale**|\<locale.h>|
 |**_wcreate_locale**|\<locale.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -167,12 +172,12 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 
 ## <a name="see-also"></a>另請參閱
 
-[地區設定名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[區域設定名稱、語言和國家/區域字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [語言字串](../../c-runtime-library/language-strings.md)<br/>
 [國家/地區字串](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
-[setlocale](../../preprocessor/setlocale.md)<br/>
+[設定區域設定](../../preprocessor/setlocale.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
@@ -181,7 +186,7 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [_setmbcp](setmbcp.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: c21b5b1ff059f26558749e904894cb5d15572519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410560"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375759"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>多位元組字元集 (MBCS) 的支援
 
@@ -28,11 +28,11 @@ ms.locfileid: "62410560"
 
 請在您的 MBCS 程式設計中考慮以下所有項目。
 
-環境 MBCS 字元的 MBCS 字元可出現在例如檔案和目錄名稱的字串。
+環境中 MBCS 字元中的 MBCS 字元可以顯示在字串中,如檔案和目錄名稱。
 
 ### <a name="editing-operations"></a>編輯作業
 
-MBCS 應用程式中的編輯作業，應該可對字元而不是位元組運作。 插入號不應分割字元**向右箭號**金鑰應該移動一個字元，以滑鼠右鍵，然後依此類推。 **刪除**應該刪除字元;**復原**應該將它重新插入。
+MBCS 應用程式中的編輯作業，應該可對字元而不是位元組運作。 該字元不應拆分字元,**右箭頭**鍵應向右移動一個字元,等等。 **刪除**應刪除字元;**撤銷**重新插入它。
 
 ### <a name="string-handling"></a>字串處理
 
@@ -40,30 +40,30 @@ MBCS 應用程式中的編輯作業，應該可對字元而不是位元組運作
 
 ### <a name="run-time-library-support"></a>執行階段程式庫支援
 
-C 執行階段程式庫和 MFC 支援單一位元組、MBCS 和 Unicode 程式設計。 會處理單一位元組字串，並以`str`系列的執行階段函式，MBCS 字串處理和對應`_mbs`函式，而 Unicode 字串會使用對應的處理`wcs`函式。 MFC 類別成員函式實作會使用可攜式執行階段，在正確的情況下，其會將函式對應至函式的正常 `str` 系列、MBCS 函式或 Unicode 函式，如「MBCS/Unicode 可攜性」中所述。
+C 執行階段程式庫和 MFC 支援單一位元組、MBCS 和 Unicode 程式設計。 單位元組位元串使用運行時函`str`數 系列進行處理,MBCS 字串`_mbs`使用相應的 函數進行處理,Unicode 字`wcs`串使用相應的函數進行處理。 MFC 類別成員函式實作會使用可攜式執行階段，在正確的情況下，其會將函式對應至函式的正常 `str` 系列、MBCS 函式或 Unicode 函式，如「MBCS/Unicode 可攜性」中所述。
 
 ### <a name="mbcsunicode-portability"></a>MBCS/Unicode 可攜性
 
-使用 tchar.h 標頭檔，您可以建置單一位元組、 MBCS 和 Unicode 來源相同的應用程式。 Tchar.h 中定義巨集前面加上 *_tcs* ，其對應至`str`， `_mbs`，或`wcs`函式，視需要。 若要建立 MBCS，請定義符號`_MBCS`。 若要建置 Unicode，請定義符號`_UNICODE`。 根據預設，`_UNICODE`定義針對 MFC 應用程式。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+使用 tchar.h 標頭檔,可以從同一源生成單位元組、MBCS 和 Unicode 應用程式。 Tchar.h 定義以 *_tcs* () 的`str`預`_mbs`置的`wcs`巨集, 這些巨集將映射到或函數(視適用而言)。 要產生 MBCS,請`_MBCS`定義符號 。 要產生 Unicode,請`_UNICODE`定義符號 。 預設情況下,`_UNICODE`為 MFC 應用程式定義。 有關詳細資訊,請參閱[tchar.h 中的通用文字映射](../text/generic-text-mappings-in-tchar-h.md)。
 
 > [!NOTE]
->  如果您同時定義行為是未定義`_UNICODE`和`_MBCS`。
+> 如果同時定義`_UNICODE``_MBCS`和 ,則行為未定義。
 
 Mbctype.h 和 Mbstring.h 標頭檔會定義 MBCS 特有的函式和巨集，在某些情況下您可能需要。 例如，`_ismbblead` 會告訴您在字串中的特定位元組是否為前導位元組。
 
-國際可攜性，程式碼將程式與[Unicode](../text/support-for-unicode.md)或多位元組字元集 (Mbcs)。
+為獲得國際可移植性,請使用[Unicode](../text/support-for-unicode.md)或多位元組位元集 (MBCS) 對程式進行編碼。
 
-## <a name="what-do-you-want-to-do"></a>請您指定選項。
+## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [在程式中啟用 MBCS](../text/international-enabling.md)
+- [在我的程式中啟用 MBCS](../text/international-enabling.md)
 
-- [在程式中啟用 Unicode 和 MBCS](../text/internationalization-strategies.md)
+- [在我的程式開啟 Unicode 和 MBCS](../text/internationalization-strategies.md)
 
-- [使用 MBCS 來建立國際化的程式](../text/mbcs-programming-tips.md)
+- [使用 MBCS 來建立國際化程式](../text/mbcs-programming-tips.md)
 
 - [請參閱 MBCS 程式設計的摘要](../text/mbcs-programming-tips.md)
 
-- [了解位元組寬度可移植性的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)
+- [了解位元組寬度可移植性的一般文字對應](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>另請參閱
 

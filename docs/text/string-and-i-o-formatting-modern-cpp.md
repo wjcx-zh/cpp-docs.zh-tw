@@ -1,19 +1,19 @@
 ---
 title: 字串和 I/O 格式化 (現代 C++)
-description: 新式C++中提供的格式化字串 i/o 選項。
+description: 格式化字串 I/O 的選擇在現代C++中可用。
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 7ea858a8a8126d3754783edee0dd3ea5409e5f73
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: a3fc93b0baf414759eb50c787c4057fb85dcb370
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375778"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字串和 I/O 格式化 (現代 C++)
 
-C++[\<iostream >](../standard-library/iostream.md)類別、函數和運算子支援格式化的字串 i/o。 例如，下列程式碼會示範如何設定 `cout`，以將整數格式化為十六進位的輸出。 首先，它會儲存目前的狀態，以便在之後重設，因為一旦將狀態傳遞給 `cout`之後，它就會維持不變，直到變更為止。 它不只適用于一行程式碼。
+C++ [ \<iostream>](../standard-library/iostream.md)類、函數和運算支援格式化的字串 I/O。 例如,以下代碼演示如何設置`cout`以十六進位形式輸出的整數格式。 首先,它保存當前狀態以在之後重置它,因為一旦格式狀態傳遞給`cout`,它將一直保持這種狀態,直到更改。 它不僅僅適用於一行代碼。
 
 ```cpp
 #include <iostream>
@@ -39,23 +39,23 @@ int main()
 }
 ```
 
-這種方法是型別安全且可延伸，但也很複雜而且更冗長。
+此方法類型安全且可擴展,但它也複雜而詳細。
 
-## <a name="alternative-format-options"></a>替代格式選項
+## <a name="alternative-format-options"></a>選擇性的格式選項
 
-或者，您也可以從提升C++程式庫使用 `Boost.Format`，即使它不是標準的也一樣。 您可以從[提升](https://www.boost.org/)的網站下載任何提升程式庫。
+作為替代方法,您可以使用`Boost.Format`Boost C++庫,即使它不標準。 您可以從 Boost 網站下載任何[Boost](https://www.boost.org/)庫。
 
-`Boost.Format` 的一些優點如下：
+一些優點`Boost.Format`是:
 
-- Safe：型別安全，並擲回錯誤的例外狀況，例如，太少或太多專案的規格。
+- 安全:類型安全,並引發錯誤的異常,例如,規格太少或太多項。
 
-- 可延伸的：適用於可以進行資料流處理的任何類型。
+- 可擴展:適用於任何可以流式傳輸的類型。
 
-- 方便：標準 POSIX 和類似的格式字串。
+- 方便:標準 POSIX 和類似的格式字串。
 
-雖然 `Boost.Format` 是建置於C++安全且可擴充的[\<iostream >](../standard-library/iostream-programming.md)設備上，但它們不會優化效能。 當您需要效能優化時，請考慮 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，這是快速且容易使用的。 不過，它們不是可延伸或不安全的弱點。 (安全版本存在，但是產生些微的效能損失。 如需詳細資訊，請參閱[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)）。
+雖然`Boost.Format`基於C++[\<物聯網>](../standard-library/iostream-programming.md)設施,這些設施是安全和可擴展的,但它們沒有經過性能優化。 當您需要性能優化時,請考慮 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf,](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)它們快速且易於使用。 但是,它們不能擴展或免受漏洞的攻擊。 (存在安全版本,但它們會受到輕微的性能損失。 有關詳細資訊,請參閱[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l。](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)
 
-下列程式碼示範部分提升格式化功能。
+以下代碼演示了一些 Boost 格式設置功能。
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
@@ -67,11 +67,11 @@ int main()
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [歡迎回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++語言參考](../cpp/cpp-language-reference.md)<br/>
+[C++標準庫](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>
-[\<limits>](../standard-library/limits.md)<br/>
-[\<iomanip>](../standard-library/iomanip.md)
+[\<限制>](../standard-library/limits.md)<br/>
+[\<奧馬尼普>](../standard-library/iomanip.md)

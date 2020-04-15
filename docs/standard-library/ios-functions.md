@@ -56,16 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 67ac9259110abbd03fc054ea4e60ed1715030dcc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150625"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375407"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函式
 
-## <a name="boolalpha"></a><a name="boolalpha"></a>boolAlpha
+## <a name="boolalpha"></a><a name="boolalpha"></a>布林阿爾法
 
 指定讓 [bool](../cpp/bool-cpp.md) 類型的變數在資料流中顯示為 **true** 或 **false**。
 
@@ -75,18 +75,18 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
-根據預設， **bool**類型的變數會顯示為1或0。
+預設情況下,**布林**類型的變數顯示為 1 或 0。
 
-`boolalpha` 會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)（`ios_base::boolalpha`），然後傳回*str*。
+`boolalpha`有效地呼叫`str.` [setf](../standard-library/ios-base-class.md#setf)(),`ios_base::boolalpha`然後傳回*str*。
 
 [noboolalpha](../standard-library/ios-functions.md#noboolalpha) 會回復 `boolalpha` 的效果。
 
@@ -117,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a><a name="dec"></a>十進位
+## <a name="dec"></a><a name="dec"></a>12 月
 
 指定整數變數會以基底 10 標記法顯示。
 
@@ -127,18 +127,18 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 整數變數預設會使用以 10 為底數的方式來顯示。
 
-`dec` 會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)（`ios_base::dec`，`ios_base::basefield`），然後傳回*str*。
+`dec`有效地呼叫`str.` [setf](../standard-library/ios-base-class.md#setf) `ios_base::basefield`(,),`ios_base::dec`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -170,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a> &lt;ios&gt; defaultfloat
 
 設定 `ios_base` 物件的旗標會使用浮點值的預設顯示格式。
 
@@ -185,9 +185,9 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 ### <a name="remarks"></a>備註
 
-操作工具會有效地呼叫 `iosbase.`[ios_base：： unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`，然後傳回*iosbase*。
+操縱器有效地調用`iosbase.`[ios_base:unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`然後返回*iosbase。*
 
-## <a name="fixed"></a><a name="fixed"></a>固定匯率
+## <a name="fixed"></a><a name="fixed"></a>固定
 
 指定浮點數會以固定十進位標記法顯示。
 
@@ -197,18 +197,18 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
-`fixed` 是浮點數的預設顯示標記法。 [scientific](../standard-library/ios-functions.md#scientific) 會讓浮點數以科學標記法顯示。
+`fixed`是浮點數位的默認顯示表示法。 [scientific](../standard-library/ios-functions.md#scientific) 會讓浮點數以科學標記法顯示。
 
-操作工具會有效地呼叫*str*。[setf](../standard-library/ios-base-class.md#setf)（`ios_base::fixed`，`ios_base::floatfield`），然後傳回*str*。
+操作有效地呼叫*str*。[setf](../standard-library/ios-base-class.md#setf) `ios_base::fixed`(,`ios_base::floatfield`然後傳*回 str*。
 
 ### <a name="example"></a>範例
 
@@ -235,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a><a name="hex"></a>進制
+## <a name="hex"></a><a name="hex"></a>十六進位
 
 指定整數變數應使用以 16 為底數的標記法來顯示。
 
@@ -245,24 +245,24 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 整數變數預設會使用以 10 為底數的標記法來顯示。 [dec](../standard-library/ios-functions.md#dec) 和 [oct](../standard-library/ios-functions.md#oct) 也會變更整數變數的顯示方式。
 
-操作工具會有效地呼叫 `str` **。** [setf](../standard-library/ios-base-class.md#setf)（`ios_base::hex`，`ios_base::basefield`），然後傳回*str*。
+操作器有效地呼叫`str` **。**[setf](../standard-library/ios-base-class.md#setf) `ios_base::hex`(,`ios_base::basefield`然後傳*回 str*。
 
 ### <a name="example"></a>範例
 
-如需如何使用 `hex`的範例，請參閱[dec](../standard-library/ios-functions.md#dec) 。
+有關如何使用`hex`的示例,請參閱[dec。](../standard-library/ios-functions.md#dec)
 
-## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a>六角漂浮
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
@@ -286,18 +286,18 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [showpos](../standard-library/ios-functions.md#showpos) 會導致針對正數顯示正負號。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：： internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base：： adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回*str*。
+操縱器有效地調用`str.` [setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:內部](../standard-library/ios-base-class.md#fmtflags)`,`[ios_base:調整場](../standard-library/ios-base-class.md#fmtflags)`)`,然後返回*str*。
 
 ### <a name="example"></a>範例
 
@@ -334,7 +334,7 @@ template <> struct is_error_code_enum<io_errc> : public true_type { };
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a><a name="left"></a>左面
+## <a name="left"></a><a name="left"></a>離開
 
 使與輸出寬度不同寬的文字出現在具有左邊界的資料流排清中。
 
@@ -344,16 +344,16 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::left, ios_base::adjustfield)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::left, ios_base::adjustfield)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -389,7 +389,7 @@ error_code make_error_code(io_errc e) noexcept;
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolAlpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>諾布爾阿爾法
 
 指定讓 [bool](../cpp/bool-cpp.md) 類型的變數在資料流中顯示為 0 或 1。
 
@@ -399,26 +399,26 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 `noboolalpha` 預設為啟用。
 
-`noboolalpha` 會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::boolalpha)`，然後傳回*str*。
+`noboolalpha`有效地呼叫`str.` [unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::boolalpha)`然後傳回*str*。
 
 [boolalpha](../standard-library/ios-functions.md#boolalpha) 會回復 `noboolalpha` 的效果。
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`。
+如需使用 `noboolalpha` 的範例，請參閱 [boolalpha](../standard-library/ios-functions.md#boolalpha)。
 
-## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a>沒有顯示基地
 
 關閉指出據以顯示數字之標記基底的功能。
 
@@ -428,24 +428,24 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 `noshowbase` 。 請使用 [showbase](../standard-library/ios-functions.md#showbase) 來指出數字的標記底數。
 
-操作工具會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showbase)`，然後傳回*str*。
+`str.`操作器有效地呼叫[unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::showbase)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
-如需如何使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#showbase)showbase`noshowbase`。
+如需如何使用 `noshowbase` 的範例，請參閱 [showbase](../standard-library/ios-functions.md#showbase)。
 
-## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a>沒有顯示點
 
 顯示小數部分為零之浮點數的整數部分。
 
@@ -455,18 +455,18 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 `noshowpoint` 預設為開啟；請使用 [showpoint](../standard-library/ios-functions.md#showpoint) 和 [precision](../standard-library/ios-base-class.md#precision) 來顯示小數點後的零。
 
-操作工具會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showpoint)`，然後傳回*str*。
+`str.`操作器有效地呼叫[unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::showpoint)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -492,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a>諾秀波
 
 使正數不明確標示正負號。
 
@@ -502,24 +502,24 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 `noshowpos` 。
 
-操作工具會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showps)`，然後傳回*str*。
+`str.`操作器有效地呼叫[unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::showps)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#showpos)showpos`noshowpos`。
+如需使用 `noshowpos` 的範例，請參閱 [showpos](../standard-library/ios-functions.md#showpos)。
 
-## <a name="noskipws"></a><a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>諾斯基普斯
 
 使輸入資料流讀取空格。
 
@@ -529,18 +529,18 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [skipws](../standard-library/ios-functions.md#skipws) 預設為啟用。 在輸入資料流中讀取到空格時，即表示已達到緩衝區結尾。
 
-操作工具會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::skipws)`，然後傳回*str*。
+`str.`操作器有效地呼叫[unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::skipws)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -561,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a>努尼布夫
 
 使輸出在緩衝區已滿時進行緩衝並繼續處理。
 
@@ -571,20 +571,20 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) 會使得在緩衝區不為空時處理緩衝區。
 
-操作工具會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`，然後傳回*str*。
+`str.`操作器有效地呼叫[unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`然後傳回*str*。
 
-## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a><a name="nouppercase"></a>無大寫
 
 指定以小寫顯示十六進位數字和科學標記法中的指數。
 
@@ -594,22 +594,22 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
-操作工具會有效地呼叫 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::uppercase)`，然後傳回*str*。
+`str.`操作器有效地呼叫[unsetf,](../standard-library/ios-base-class.md#unsetf)`(ios_base::uppercase)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`。
+如需使用 `nouppercase` 的範例，請參閱 [uppercase](../standard-library/ios-functions.md#uppercase)。
 
-## <a name="oct"></a><a name="oct"></a>月
+## <a name="oct"></a><a name="oct"></a>十月
 
 指定以基底 8 標記法顯示整數變數。
 
@@ -619,24 +619,24 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 整數變數預設會使用以 10 為底數的標記法來顯示。 [dec](../standard-library/ios-functions.md#dec) 和 [hex](../standard-library/ios-functions.md#hex) 也會變更整數變數的顯示方式。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::oct, ios_base::basefield)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::oct, ios_base::basefield)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
-如需如何使用 `oct`的範例，請參閱[dec](../standard-library/ios-functions.md#dec) 。
+有關如何使用`oct`的示例,請參閱[dec。](../standard-library/ios-functions.md#dec)
 
-## <a name="right"></a><a name="right"></a>再
+## <a name="right"></a><a name="right"></a>對
 
 使與輸出寬度不同寬的文字出現在具有右邊界的資料流排清中。
 
@@ -646,18 +646,18 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [left](../standard-library/ios-functions.md#left) 也會修改文字的對齊方式。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::right, ios_base::adjustfield)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::right, ios_base::adjustfield)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -693,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a><a name="scientific"></a>記
+## <a name="scientific"></a><a name="scientific"></a>科學
 
 讓浮點數以科學標記法顯示。
 
@@ -703,18 +703,18 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [fixed](../standard-library/ios-functions.md#fixed) 標記法是浮點數的預設標記法。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::scientific, ios_base::floatfield)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::scientific, ios_base::floatfield)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -738,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a><a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a>顯示庫
 
 指出據以顯示數字的標記基底。
 
@@ -748,18 +748,18 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 數字的標示底數可以藉由 [dec](../standard-library/ios-functions.md#dec)、[oct](../standard-library/ios-functions.md#oct) 或 [hex](../standard-library/ios-functions.md#hex) 來變更。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::showbase)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::showbase)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -792,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a><a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>顯示點
 
 顯示浮點數的整數部分和小數點右側的數字，即使小數部分為零亦然。
 
@@ -802,24 +802,24 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [noshowpoint](../standard-library/ios-functions.md#noshowpoint) 預設為啟用。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::showpoint)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::showpoint)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`。
+如需使用 `showpoint` 的範例，請參閱 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)。
 
-## <a name="showpos"></a><a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a>顯示波
 
 使正數明確標示正負號。
 
@@ -829,18 +829,18 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [noshowpos](../standard-library/ios-functions.md#noshowpos) 是預設值。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::showpos)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::showpos)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -864,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a><a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>略過
 
 使輸入資料流不讀取空格。
 
@@ -874,18 +874,18 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 `skipws` 預設為啟用。 [noskipws](../standard-library/ios-functions.md#noskipws) 會導致從輸入資料流讀取空格。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::skipws)`，然後傳回*str*。
+`str.`操作有效地呼叫[setf,](../standard-library/ios-base-class.md#setf)`(ios_base::skipws)`然後傳回*str*。
 
 ### <a name="example"></a>範例
 
@@ -916,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>單位布夫
 
 使輸出在緩衝區不為空時進行處理。
 
@@ -926,12 +926,12 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
@@ -939,9 +939,9 @@ ios_base& unitbuf(ios_base& str);
 
 [nounitbuf](../standard-library/ios-functions.md#nounitbuf) 預設為啟用。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：： unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回*str*。
+操作`str.`器有效地呼叫[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:單位 buf,](../standard-library/ios-base-class.md#fmtflags)`)`然後傳回*str*。
 
-## <a name="uppercase"></a><a name="uppercase"></a>  uppercase
+## <a name="uppercase"></a><a name="uppercase"></a>大寫
 
 指定以大寫顯示十六進位數字和科學標記法中的指數。
 
@@ -951,18 +951,18 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
-衍生*str*之物件的參考。
+對派生*str*的物件的引用。
 
 ### <a name="remarks"></a>備註
 
 [nouppercase](../standard-library/ios-functions.md#nouppercase) 預設為啟用。
 
-操作工具會有效地呼叫 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：：大寫](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回*str*。
+操縱`str.`器有效地調用[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:大寫](../standard-library/ios-base-class.md#fmtflags)`)`,然後返回*str*。
 
 ### <a name="example"></a>範例
 

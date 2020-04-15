@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f065894ff49af755ab4020f71b0213b19db49054
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374887"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 類別
 
@@ -45,36 +45,36 @@ class COlePropertiesDialog : public COleDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|建構 `COlePropertiesDialog` 物件。|
+|[COle 屬性對話框::COle 屬性對話框](#colepropertiesdialog)|建構 `COlePropertiesDialog` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COlePropertiesDialog::DoModal](#domodal)|顯示對話方塊, 並允許使用者進行選取。|
-|[COlePropertiesDialog::OnApplyScale](#onapplyscale)|當檔專案的縮放比例變更時由架構呼叫。|
+|[COle屬性對話::Do模態](#domodal)|顯示對話框,並允許用戶進行選擇。|
+|[COle 屬性對話框::應用刻度](#onapplyscale)|當文檔項的縮放已更改時,由框架調用。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COlePropertiesDialog::m_gp](#m_gp)|用來初始化`COlePropertiesDialog`物件的 [一般] 頁面的結構。|
-|[COlePropertiesDialog::m_lp](#m_lp)|用來初始化`COlePropertiesDialog`物件之「連結」頁面的結構。|
-|[COlePropertiesDialog::m_op](#m_op)|用來初始化`COlePropertiesDialog`物件的結構。|
-|[COlePropertiesDialog::m_psh](#m_psh)|用來加入其他自訂屬性頁的結構。|
-|[COlePropertiesDialog::m_vp](#m_vp)|用來自訂`COlePropertiesDialog`物件之「視圖」頁面的結構。|
+|[COle 屬性對話框::m_gp](#m_gp)|用於初始化`COlePropertiesDialog`物件的「一般」頁的結構。|
+|[COle 屬性對話框::m_lp](#m_lp)|用於初始化`COlePropertiesDialog`物件的「連結」頁的結構。|
+|[COle 屬性對話框::m_op](#m_op)|初始化物件的結構`COlePropertiesDialog`。|
+|[COle屬性對話::m_psh](#m_psh)|用於添加其他自定義屬性頁的結構。|
+|[COle屬性對話::m_vp](#m_vp)|用於自定義`COlePropertiesDialog`物件的「檢視」頁的結構。|
 
 ## <a name="remarks"></a>備註
 
-[一般 OLE 物件屬性] 對話方塊提供簡單的方式, 以與 Windows 標準一致的方式來顯示和修改 OLE 檔專案的屬性。 這些屬性會包含檔專案所代表之檔案的相關資訊、顯示圖示和影像縮放比例的選項, 以及專案連結的相關資訊 (如果專案已連結)。
+通用 OLE 物件屬性對話方塊提供了一種以符合 Windows 標準的方式顯示和修改 OLE 文件項屬性的簡單方法。 這些屬性包括文件項表示的檔資訊、用於顯示圖示和圖像縮放的選項以及項連結上的資訊(如果項是連結的)。
 
-若要使用`COlePropertiesDialog`物件, 請先使用此`COlePropertiesDialog`函數建立物件。 在結構化對話方塊之後, 呼叫`DoModal`成員函式以顯示對話方塊, 並允許使用者修改專案的任何屬性。 `DoModal`傳回使用者是否選取 [確定] (IDOK) 或 [取消] (IDCANCEL) 按鈕。 除了 [確定] 和 [取消] 按鈕, 還有 [套用] 按鈕。 當使用者選取 [套用] 時, 對檔專案的屬性所做的任何變更都會套用至該專案, 而且其影像會自動更新, 但會保持作用中狀態。
+要使用`COlePropertiesDialog`物件,請首先`COlePropertiesDialog`使用 建構函數創建物件。 建構對話框後,調用`DoModal`成員函數以顯示對話方塊,並允許使用者修改項的任何屬性。 `DoModal`返回使用者是否選擇了"確定 (IDOK)"還是"取消"(IDCANCEL)按鈕。 除了"確定"和"取消"按鈕外,還有一個"應用"按鈕。 當使用者選擇"應用"時,對文檔項屬性所做的任何更改將應用於該專案,其圖像將自動更新,但保持活動狀態。
 
-[M_psh](#m_psh)資料成員是`PROPSHEETHEADER`結構的指標, 在大多數情況下, 您不需要明確地存取它。 其中一個例外狀況是當您需要的其他屬性頁超出預設的 [一般]、[視圖] 和 [連結] 頁面時。 在此情況下, 您可以在`m_psh` `DoModal`呼叫成員函式之前, 修改資料成員以包含您的自訂頁面。
+[m_psh](#m_psh)資料成員是指向結構`PROPSHEETHEADER`的指標,在大多數情況下,您不需要顯式訪問它。 一個例外是,當您需要預設的"常規"、"視圖"和"链接"頁以外的其他屬性頁時。 在這種情況下,您可以在調用`m_psh``DoModal`成員函數之前修改數據成員以包括自定義頁面。
 
-如需有關 OLE 對話方塊的詳細資訊, 請參閱[ole 中](../../mfc/dialog-boxes-in-ole.md)的文章對話方塊。
+有關 OLE 對話框的詳細資訊,請參閱 OLE[中的「對話框](../../mfc/dialog-boxes-in-ole.md)」一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -92,9 +92,9 @@ class COlePropertiesDialog : public COleDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxodlgs。h
+**標題:** afxodlgs.h
 
-##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog
+## <a name="colepropertiesdialogcolepropertiesdialog"></a><a name="colepropertiesdialog"></a>COle 屬性對話框::COle 屬性對話框
 
 建立 `COlePropertiesDialog` 物件。
 
@@ -109,40 +109,40 @@ COlePropertiesDialog(
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-要存取其屬性之檔專案的指標。
+指向正在訪問其屬性的文檔項的指標。
 
 *nScaleMin*<br/>
-檔專案影像的最小縮放百分比。
+文件項圖像的最小縮放百分比。
 
 *nScaleMax*<br/>
-檔專案影像的最大縮放百分比。
+文件項圖像的最大縮放百分比。
 
-*pParentWnd*<br/>
-對話方塊的父系或擁有者的指標。
+*pparentwnd*<br/>
+指向對話框的父或所有者的指標。
 
 ### <a name="remarks"></a>備註
 
-從`COlePropertiesDialog`衍生您的一般 OLE 物件屬性對話方塊類別, 以便為您的檔專案進行調整。 這個類別的實例所執行的任何對話方塊都不支援縮放檔專案。
+從`COlePropertiesDialog`派生常見的 OLE 物件屬性對話方塊類,以便實現文檔項的縮放。 此類實例實現的任何對話方塊都不支援文檔項的縮放。
 
-根據預設, [一般 OLE 物件屬性] 對話方塊有三個預設頁面:
+預設情況下,常見的 OLE 物件屬性對話框有三個預設頁面:
 
 - 一般
 
-   此頁面包含所選檔專案所代表之檔案的系統資訊。 在此頁面中, 使用者可以將選取的專案轉換成另一種類型。
+   此頁包含選取文件項表示的檔的系統資訊。 從此頁面中,用戶可以將所選專案轉換為其他類型。
 
 - 檢視
 
-   此頁面包含的選項可顯示專案、變更圖示, 以及變更影像的縮放比例。
+   此頁包含用於顯示專案、更改圖示和更改圖像縮放的選項。
 
 - 連結
 
-   此頁面包含變更連結專案位置及更新連結專案的選項。 在此頁面中, 使用者可以中斷所選取專案的連結。
+   此頁包含用於更改連結專案的位置和更新連結項的選項。 從此頁面中,用戶可以斷開所選項目的連結。
 
-若要新增超過預設提供的頁面, 請先修改[m_psh](#m_psh)成員變數, 再`COlePropertiesDialog`結束衍生類別的函式。 這是此函式的先進`COlePropertiesDialog`實作為函數。
+要將頁面添加到預設提供的頁面之外,請在離開[m_psh](#m_psh)`COlePropertiesDialog`派生類的構造函數之前修改m_psh成員變數。 這是構造函數的高級`COlePropertiesDialog`實現。
 
-##  <a name="domodal"></a>COlePropertiesDialog::D oModal
+## <a name="colepropertiesdialogdomodal"></a><a name="domodal"></a>COle屬性對話::Do模態
 
-呼叫這個成員函式以顯示 [Windows 通用 OLE 物件屬性] 對話方塊, 並允許使用者查看和 (或) 變更檔專案的各種屬性。
+調用此成員函數以顯示 Windows 常見 OLE 物件屬性對話方塊,並允許使用者查看和/或更改文檔項的各種屬性。
 
 ```
 virtual INT_PTR DoModal();
@@ -150,13 +150,13 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-IDOK 或 IDCANCEL (如果成功);否則為0。 IDOK 和 IDCANCEL 是常數, 指出使用者是否選取 [確定] 或 [取消] 按鈕。
+IDOK 或 IDCANCEL(如果成功);否則 0。 IDOK 和 IDCANCEL 是指示使用者選擇"確定"還是"取消"按鈕的常量。
 
-如果傳回 IDCANCEL, 您可以呼叫 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
+如果返回 IDCANCEL,您可以調用 Windows [CommDlg 擴充錯誤](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)功能以確定是否發生了錯誤。
 
-##  <a name="m_gp"></a>COlePropertiesDialog::m_gp
+## <a name="colepropertiesdialogm_gp"></a><a name="m_gp"></a>COle 屬性對話框::m_gp
 
-類型的結構[OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)，用來初始化 OLE 物件屬性對話方塊的 [一般] 頁面。
+[OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)類型的一種結構,用於初始化 OLE 物件屬性對話框的"常規"頁。
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -164,13 +164,13 @@ OLEUIGNRLPROPS m_gp;
 
 ### <a name="remarks"></a>備註
 
-此頁面會顯示內嵌的類型和大小, 並允許使用者存取 [轉換] 對話方塊。 如果物件是連結, 此頁面也會顯示連結目的地。
+此頁顯示嵌入的類型和大小,並允許使用者存取"轉換"對話框。 如果對像是連結,此頁面還會顯示連結目標。
 
-如需`OLEUIGNRLPROPS`結構的詳細資訊, 請參閱 Windows SDK。
+有關結構的詳細資訊,`OLEUIGNRLPROPS`請參閱 Windows SDK。
 
-##  <a name="m_lp"></a>COlePropertiesDialog::m_lp
+## <a name="colepropertiesdialogm_lp"></a><a name="m_lp"></a>COle 屬性對話框::m_lp
 
-類型的結構[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)，用來初始化 OLE 物件屬性對話方塊的 [連結] 頁面。
+用於初始化 OLE 物件屬性對話框的連結頁的類型[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)的結構。
 
 ```
 OLEUILINKPROPS m_lp;
@@ -178,13 +178,13 @@ OLEUILINKPROPS m_lp;
 
 ### <a name="remarks"></a>備註
 
-此頁面會顯示連結專案的位置, 並允許使用者更新或中斷專案的連結。
+此頁顯示連結專案的位置,並允許使用者更新或中斷指向該專案的連結。
 
-如需`OLEUILINKPROPS`結構的詳細資訊, 請參閱 Windows SDK。
+有關結構的詳細資訊,`OLEUILINKPROPS`請參閱 Windows SDK。
 
-##  <a name="m_op"></a>COlePropertiesDialog::m_op
+## <a name="colepropertiesdialogm_op"></a><a name="m_op"></a>COle 屬性對話框::m_op
 
-[OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)類型的結構, 用來初始化 [一般 OLE 物件屬性] 對話方塊。
+[用於](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)初始化通用 OLE 物件屬性對話框的結構。
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -192,13 +192,13 @@ OLEUIOBJECTPROPS m_op;
 
 ### <a name="remarks"></a>備註
 
-此結構包含用來初始化 [一般]、[連結] 和 [視圖] 頁面的成員。
+此結構包含用於初始化常規、鏈接和檢視頁的成員。
 
-如需詳細資訊, 請參閱 Windows SDK 中的 OLEUIOBJECTPROPS 和[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的 OLEUIOBJECTPROPS 和[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)結構。
 
-##  <a name="m_psh"></a>COlePropertiesDialog::m_psh
+## <a name="colepropertiesdialogm_psh"></a><a name="m_psh"></a>COle屬性對話::m_psh
 
-[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)類型的結構, 其成員會儲存對話方塊物件的特性。
+[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)類型的一個結構,其成員存儲對話框對象的特徵。
 
 ```
 PROPSHEETHEADER m_psh;
@@ -206,15 +206,15 @@ PROPSHEETHEADER m_psh;
 
 ### <a name="remarks"></a>備註
 
-在建立`COlePropertiesDialog`物件之後, 您可以在`m_psh`呼叫`DoModal`成員函式之前, 使用來設定對話方塊的各個層面。
+建構`COlePropertiesDialog`物件后,可以`m_psh`使用 在`DoModal`調用 成員函數之前設置對話框的各個方面。
 
-如果您直接修改`m_psh`資料成員, 將會覆寫任何預設行為。
+如果直接修改`m_psh`數據成員,將覆蓋任何默認行為。
 
-如需`PROPSHEETHEADER`結構的詳細資訊, 請參閱 Windows SDK。
+有關結構的詳細資訊,`PROPSHEETHEADER`請參閱 Windows SDK。
 
-##  <a name="m_vp"></a>COlePropertiesDialog::m_vp
+## <a name="colepropertiesdialogm_vp"></a><a name="m_vp"></a>COle屬性對話::m_vp
 
-類型的結構[OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw)，用來初始化 OLE 物件屬性對話方塊的 [檢視] 頁面。
+[用於](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw)初始化 OLE 物件屬性對話框的「檢視」頁的結構。
 
 ```
 OLEUIVIEWPROPS m_vp;
@@ -222,13 +222,13 @@ OLEUIVIEWPROPS m_vp;
 
 ### <a name="remarks"></a>備註
 
-此頁面可讓使用者切換物件的「內容」和「iconic」視圖, 以及變更其在容器內的縮放比例。 當物件顯示為圖示時, 它也可讓使用者存取 [變更圖示] 對話方塊。
+此頁面允許使用者在物件的「內容」 和「標誌性」檢視之間切換,並在容器中更改其縮放。 它還允許使用者在物件顯示為圖示時訪問"更改圖示"對話方塊。
 
-如需`OLEUIVIEWPROPS`結構的詳細資訊, 請參閱 Windows SDK。
+有關結構的詳細資訊,`OLEUIVIEWPROPS`請參閱 Windows SDK。
 
-##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale
+## <a name="colepropertiesdialogonapplyscale"></a><a name="onapplyscale"></a>COle 屬性對話框::應用刻度
 
-當調整值已變更, 且已選取 [確定] 或 [套用] 時, 由架構呼叫。
+當縮放值已更改並選擇了"確定"或"應用"時,由框架調用。
 
 ```
 virtual BOOL OnApplyScale(
@@ -240,28 +240,28 @@ virtual BOOL OnApplyScale(
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-要存取其屬性之檔專案的指標。
+指向正在訪問其屬性的文檔項的指標。
 
 *nCurrentScale*<br/>
-對話方塊小數位數的數值。
+對話框刻度的數值。
 
-*bRelativeToOrig*<br/>
-指出縮放是否適用于檔專案的原始大小。
+*b 相對托奧裡格*<br/>
+指示縮放是否應用於文檔項的原始大小。
 
 ### <a name="return-value"></a>傳回值
 
-若已處理, 則為非零否則為0。
+處理時非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-預設實作不做任何動作。 您必須覆寫這個函式, 才能啟用縮放控制項。
+預設實作不做任何動作。 必須重寫此函數才能啟用縮放控制件。
 
 > [!NOTE]
->  在顯示 [一般 OLE 物件屬性] 對話方塊之前, 架構會呼叫此函式, 並以 Null 表示*pItem* , 而*nCurrentScale*則會使用-1。 這麼做是為了判斷是否應啟用縮放控制項。
+> 在顯示常見的 OLE 物件屬性對話框之前,框架呼叫此函數,該函數為*pItem*的 NULL,nCurrentScale 調用 1。 *nCurrentScale* 這樣做是為了確定是否應啟用縮放控件。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CIRC](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品中國保監會](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog 類別](../../mfc/reference/coledialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog 類別](../../mfc/reference/coledialog-class.md)<br/>

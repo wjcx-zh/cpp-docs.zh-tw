@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3a277b2f97fd53c52b705051c30eb18faf6364d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419851"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366241"
 ---
 # <a name="moneypunct-class"></a>moneypunct 類別
 
-類別樣板描述可以做為地區設定 facet 的物件，以描述用來表示貨幣輸入欄位或貨幣輸出欄位之*CharType*類型的序列。 如果範本參數*國際*為*true*，則會觀察到國際慣例。
+類範本描述一個物件,該物件可用作區域設置面,用於描述用於表示貨幣輸入欄位或貨幣輸出欄位的*CharType 類型的*序列。 如果範本參數*Intl* *為 true,* 則遵守國際慣例。
 
 ## <a name="syntax"></a>語法
 
@@ -66,7 +66,7 @@ class moneypunct;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*字元類型*\
 用於程式內部字元編碼的類型。
 
 *國際*\
@@ -74,7 +74,7 @@ class moneypunct;
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
 
 常數靜態物件 intl 會儲存範本參數 *Intl* 的值。
 
@@ -107,7 +107,7 @@ class moneypunct;
 |[do_positive_sign](#do_positive_sign)|受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為正號。|
 |[do_thousands_sep](#do_thousands_sep)|受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為千位分隔符號。|
 |[frac_digits](#frac_digits)|傳回地區設定特定的小數點右邊位數。|
-|[grouping](#grouping)|傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。|
+|[群組](#grouping)|傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。|
 |[neg_format](#neg_format)|傳回具有負數數量的格式化輸出的地區設定特定規則。|
 |[negative_sign](#negative_sign)|傳回地區設定特定的項目序列，做為負號。|
 |[pos_format](#pos_format)|傳回具有正數數量的格式化輸出的地區設定特定規則。|
@@ -116,11 +116,11 @@ class moneypunct;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<地區設定 >
+**標頭︰** \<locale>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="char_type"></a>  moneypunct::char_type
+## <a name="moneypunctchar_type"></a><a name="char_type"></a>錢幣::char_type
 
 類型，用來描述由地區設定使用的字元。
 
@@ -130,9 +130,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型是範本參數 **CharType** 的同義字。
 
-## <a name="curr_symbol"></a>  moneypunct::curr_symbol
+## <a name="moneypunctcurr_symbol"></a><a name="curr_symbol"></a>錢幣::curr_symbol
 
 傳回地區設定特定的項目序列，做為貨幣符號。
 
@@ -169,7 +169,7 @@ int main( )
 };
 ```
 
-## <a name="decimal_point"></a>  moneypunct::decimal_point
+## <a name="moneypunctdecimal_point"></a><a name="decimal_point"></a>金錢::decimal_point
 
 傳回地區設定特定的項目序列，做為小數點符號。
 
@@ -215,7 +215,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,
 ```
 
-## <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol
+## <a name="moneypunctdo_curr_symbol"></a><a name="do_curr_symbol"></a>貨幣插語::do_curr_符號
 
 受保護的虛擬成員函式，傳回地區設定特定的項目序列以做為貨幣符號。
 
@@ -231,7 +231,7 @@ virtual string_type do_curr_symbol() const;
 
 請參閱 [curr_symbol](#curr_symbol) 的範例，其中會由 `curr_symbol` 呼叫此虛擬成員函式。
 
-## <a name="do_decimal_point"></a>  moneypunct::do_decimal_point
+## <a name="moneypunctdo_decimal_point"></a><a name="do_decimal_point"></a>貨幣尖::d奧多數點
 
 受保護的虛擬成員函式，會傳回地區設定特定的元素序列以作為貨幣符號。
 
@@ -245,9 +245,9 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="example"></a>範例
 
-請參閱 [decimal_point](#decimal_point) 的範例，其中 `decimal_point` 會呼叫虛擬成員函式。
+請參閱 [decimal_point](#decimal_point) 的範例，其中會由 `decimal_point` 呼叫此虛擬成員函式。
 
-## <a name="do_frac_digits"></a>  moneypunct::do_frac_digits
+## <a name="moneypunctdo_frac_digits"></a><a name="do_frac_digits"></a>貨幣::do_frac_數位
 
 受保護的虛擬成員函式，會傳回地區設定特定的小數點右邊位數。
 
@@ -263,7 +263,7 @@ virtual int do_frac_digits() const;
 
 請參閱 [frac_digits](#frac_digits) 的範例，其中會由 `frac_digits` 呼叫此虛擬成員函式。
 
-## <a name="do_grouping"></a>  moneypunct::do_grouping
+## <a name="moneypunctdo_grouping"></a><a name="do_grouping"></a>金錢::do_分組
 
 受保護的虛擬成員函式，會傳回地區設定特定規則，來決定任何小數點左邊數字分組的方式。
 
@@ -277,9 +277,9 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-請參閱[群組](#grouping)的範例，其中 `grouping`會呼叫虛擬成員函式。
+請參閱[分組的示例](#grouping),其中虛擬成員函`grouping`數由 調用。
 
-## <a name="do_neg_format"></a>  moneypunct::do_neg_format
+## <a name="moneypunctdo_neg_format"></a><a name="do_neg_format"></a>貨幣插語::do_neg_格式
 
 受保護的虛擬成員函式，呼叫以傳回具有負數數量的格式化輸出的地區設定特定規則。
 
@@ -289,27 +289,27 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>傳回值
 
-受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 `pattern::field` 的四個元素都可以有下列值：
+受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 的四個元素中的每一`pattern::field`個都可以具有以下值:
 
-- `none` 比對零或多個空格，或不產生任何內容。
+- `none`匹配零個或多個空格或生成任何空格。
 
-- `sign` 符合或產生正號或負號。
+- `sign`匹配或生成正或負符號。
 
-- `space`，以符合零或多個空格或產生空格。
+- `space`以匹配零個或多個空格或生成空格。
 
-- `symbol` 以符合或產生貨幣符號。
+- `symbol`匹配或生成貨幣符號。
 
-- `value` 以符合或產生貨幣值。
+- `value`匹配或生成貨幣價值。
 
-會產生貨幣輸出欄位的元件，而貨幣輸入欄位的元件會依照這些元素出現在 `pattern::field`中的順序進行比對。 每個值 `sign`、`symbol`、`value`，以及 `none` 或 `space` 都必須只出現一次。 `none` 的值不能先出現。 space 值「不得」第一個或最後一個出現。 如果 `Intl` 為 true，則順序會 `symbol`、`sign`、`none`，然後 `value`。
+生成貨幣輸出欄位的元件,貨幣輸入欄位的元件按這些元素在中的`pattern::field`顯示順序匹配。 每個值`sign`、、`symbol``value`和`none``space`必須正好顯示一次。 該值`none`不能首先顯示。 space 值「不得」**** 第一個或最後一個出現。 如果`Intl`為 true,則順序`symbol`為`sign``none`,,`value`然後 。
 
-`moneypunct`\< **CharType**，**國際**> 的範本版本會傳回 `{`**money_base：： symbol**、 **money_base：： sign**、 **money_base：： value**、 **money_base：： none**`}`。
+`moneypunct`\< **CharType**, **Intl**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
 ### <a name="example"></a>範例
 
 請參閱 [neg_format](#neg_format) 的範例，其中會由 `neg_format` 呼叫此虛擬成員函式。
 
-## <a name="do_negative_sign"></a>  moneypunct::do_negative_sign
+## <a name="moneypunctdo_negative_sign"></a><a name="do_negative_sign"></a>金錢::do_負_符號
 
 受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為負號。
 
@@ -325,7 +325,7 @@ virtual string_type do_negative_sign() const;
 
 請參閱 [negative_sign](#negative_sign) 的範例，其中會由 `negative_sign` 呼叫此虛擬成員函式。
 
-## <a name="do_pos_format"></a>  moneypunct::do_pos_format
+## <a name="moneypunctdo_pos_format"></a><a name="do_pos_format"></a>貨幣插語::do_pos_格式
 
 受保護的虛擬成員函式，呼叫以傳回具有正數數量的格式化輸出的地區設定特定規則。
 
@@ -335,15 +335,15 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>傳回值
 
-受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為正數金額產生貨幣輸出欄位。 （它也會決定如何比對貨幣輸入欄位的元件）。編碼方式與[do_neg_format](#do_neg_format)相同。
+受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為正數金額產生貨幣輸出欄位。 (它還確定如何匹配貨幣輸入欄位的元件。編碼與[do_neg_format](#do_neg_format)相同。
 
-Moneypunct\< **CharType**， **Inputlterator**> 的範本版本會傳回 `{`**money_base：： symbol**、 **money_base：： sign**、 **money_base：： value**、 **money_base：： none**`}`。
+moneypunct\< **CharType**, **Inputlterator**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
 ### <a name="example"></a>範例
 
 請參閱 [pos_format](#pos_format) 的範例，其中會由 `pos_format` 呼叫此虛擬成員函式。
 
-## <a name="do_positive_sign"></a>  moneypunct::do_positive_sign
+## <a name="moneypunctdo_positive_sign"></a><a name="do_positive_sign"></a>金錢::do_正\符號
 
 受保護的虛擬成員函式，會傳回地區設定特定的元素序列以作為正號。
 
@@ -359,7 +359,7 @@ virtual string_type do_positive_sign() const;
 
 請參閱 [positive_sign](#positive_sign) 的範例，其中會由 `positive_sign` 呼叫此虛擬成員函式。
 
-## <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep
+## <a name="moneypunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>錢幣::do_千_sep
 
 受保護的虛擬成員函式，會傳回地區設定特定的元素，用來作為任何小數點左邊的群組分隔符號。
 
@@ -373,9 +373,9 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="example"></a>範例
 
-請參閱 [thousands_sep](#thousands_sep) 的範例，其中 `thousands_sep` 會呼叫虛擬成員函式。
+請參閱 [thousands_sep](#thousands_sep) 的範例，其中會由 `thousands_sep` 呼叫此虛擬成員函式。
 
-## <a name="frac_digits"></a>  moneypunct::frac_digits
+## <a name="moneypunctfrac_digits"></a><a name="frac_digits"></a>錢幣::frac_digits
 
 傳回地區設定特定的小數點右邊位數。
 
@@ -444,7 +444,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="grouping"></a>  moneypunct::grouping
+## <a name="moneypunctgrouping"></a><a name="grouping"></a>金錢::分組
 
 傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。
 
@@ -513,7 +513,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunct"></a>  moneypunct::moneypunct
+## <a name="moneypunctmoneypunct"></a><a name="moneypunct"></a>金錢::金錢
 
 `moneypunct` 類型物件的建構函式。
 
@@ -528,19 +528,19 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數和其重要性的可能值為：
+*_Refs*參數的可能值及其顯著性為:
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
 - 1：物件的存留期必須以手動方式管理。
 
-- \> 1：未定義這些值。
+- \>1: 未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
 建構函式會以 [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*) 將其基底物件初始化。
 
-## <a name="neg_format"></a>  moneypunct::neg_format
+## <a name="moneypunctneg_format"></a><a name="neg_format"></a>錢幣::neg_format
 
 傳回具有負數數量的格式化輸出的地區設定特定規則。
 
@@ -588,7 +588,7 @@ int main( ) {
 }
 ```
 
-## <a name="negative_sign"></a>  moneypunct::negative_sign
+## <a name="moneypunctnegative_sign"></a><a name="negative_sign"></a>錢幣::negative_sign
 
 傳回地區設定特定的項目序列，做為負號。
 
@@ -650,7 +650,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -
 ```
 
-## <a name="pos_format"></a>  moneypunct::pos_format
+## <a name="moneypunctpos_format"></a><a name="pos_format"></a>金錢::pos_格式
 
 傳回具有正數數量的格式化輸出的地區設定特定規則。
 
@@ -698,7 +698,7 @@ int main() {
 }
 ```
 
-## <a name="positive_sign"></a>  moneypunct::positive_sign
+## <a name="moneypunctpositive_sign"></a><a name="positive_sign"></a>金錢::p的_sign
 
 傳回地區設定特定的項目序列，做為正號。
 
@@ -760,7 +760,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="string_type"></a>  moneypunct::string_type
+## <a name="moneypunctstring_type"></a><a name="string_type"></a>錢幣::string_type
 
 類型，描述包含 **CharType** 類型字元的字串。
 
@@ -770,9 +770,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)其物件可以儲存標點符號序列的複本。
+該類型描述了類範本的專門化[basic_string](../standard-library/basic-string-class.md)其物件可以存儲標點序列的副本。
 
-## <a name="thousands_sep"></a>  moneypunct::thousands_sep
+## <a name="moneypunctthousands_sep"></a><a name="thousands_sep"></a>錢幣::thousands_sep
 
 傳回地區設定特定的項目序列，做為千位分隔符號。
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)\
+[\<區域設定>](../standard-library/locale.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

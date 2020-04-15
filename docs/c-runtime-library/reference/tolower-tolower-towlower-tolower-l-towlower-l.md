@@ -1,12 +1,17 @@
 ---
 title: tolower、_tolower、towlower、_tolower_l、_towlower_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
+- _o__tolower
+- _o__tolower_l
+- _o__towlower_l
+- _o_tolower
+- _o_towlower
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +26,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 560fde4ae2167256acd54856fced15bc6ccecae6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957459"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362366"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
 
@@ -84,34 +90,36 @@ int _towlower_l(
 *C*<br/>
 要轉換的字元。
 
-*locale*<br/>
+*現場*<br/>
 要用於地區設定特定翻譯的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果轉換可行，這些常式會將*c*的複本轉換成小寫，並傳回結果。 沒有表示錯誤的保留傳回值。
+如果轉換是可能的,則每個例程都會將*c*的副本轉換為小寫,並返回結果。 沒有表示錯誤的保留傳回值。
 
 ## <a name="remarks"></a>備註
 
-這些常式都會將指定的大寫字母轉換為小寫字母 (如果可能且相關的話)。 **Towlower**的大小寫轉換是地區設定特有的。 只有與目前地區設定相關字元的大小寫會變更。 沒有 **_l**尾碼的函式會使用目前設定的地區設定。 這些具有 **_l**尾碼的函式版本採用地區設定作為參數，並使用它，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些常式都會將指定的大寫字母轉換為小寫字母 (如果可能且相關的話)。 **拖風**的外殼轉換是特定於區域設置的。 只有與目前地區設定相關字元的大小寫會變更。 沒有 **_l**後綴的函數使用當前設置區域設置。 具有 **_l**後綴的這些函數的版本將區域設置作為參數,並使用該區域設置而不是當前設置區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-為了讓 **_tolower**提供預期的結果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)都必須傳回非零值。
+為了使 **_tolower**給出預期結果[,__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)都必須返回非零。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**降**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l**和 **_towlower_l**沒有地區設定相依性，因此不應該直接呼叫。 其提供供 **_totlower_l**內部使用。
+> **_tolower_l**和 **_towlower_l**沒有區域依賴性,並且不應直接調用。 它們由 **_totlower_l**提供供內部使用。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**tolower**|\<ctype.h>|
+|**降**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|
 |**towlower**|\<ctype.h> 或 \<wchar.h>|
 

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 60757b0edea6b60d080c2175d4df4830ffec0cc3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f642a29d0a80568f7a5f2a5e89f6951d4819243e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139887"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364252"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 結構
 
@@ -34,32 +34,32 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[IVirtualProcessorRoot：： Activate](#activate)|使與執行內容介面相關聯的執行緒 proxy `pContext` 在此虛擬處理器根目錄上開始執行。|
-|[IVirtualProcessorRoot：:D eactivate](#deactivate)|導致目前在此虛擬處理器根上執行的執行緒 proxy 停止分派執行內容。 執行緒 proxy 會在呼叫 `Activate` 方法時繼續執行。|
-|[IVirtualProcessorRoot：： EnsureAllTasksVisible](#ensurealltasksvisible)|讓系統上的所有處理器都可以看到儲存在個別處理器記憶體階層中的資料。 它可確保在方法傳回之前，已在所有處理器上執行完整的記憶體隔離。|
-|[IVirtualProcessorRoot：： GetId](#getid)|傳回虛擬處理器根的唯一識別碼。|
+|[I虛擬處理器根:啟動](#activate)|使與執行上下文介面`pContext`關聯的線程代理開始在此虛擬處理器根上執行。|
+|[I虛擬處理器根::D啟動](#deactivate)|導致當前在此虛擬處理器根上執行的線程代理停止調度執行上下文。 線程代理將在調用`Activate`方法時繼續執行。|
+|[I虛擬處理器根::確保所有任務可見](#ensurealltasksvisible)|使存儲在各個處理器的記憶體層次結構中的數據對系統上的所有處理器都可見。 它可確保在方法返回之前在所有處理器上執行完整的記憶體圍欄。|
+|[I虛擬處理器根:GetId](#getid)|返回虛擬處理器根的唯一標識符。|
 
 ## <a name="remarks"></a>備註
 
-每個虛擬處理器根都有相關聯的執行資源。 `IVirtualProcessorRoot` 介面會繼承自[IExecutionResource](iexecutionresource-structure.md)介面。 多個虛擬處理器根目錄可能對應至相同的基礎硬體執行緒。
+每個虛擬處理器根都有關聯的執行資源。 介面`IVirtualProcessorRoot`從[I執行資源](iexecutionresource-structure.md)介面繼承。 多個虛擬處理器根可能對應於同一基礎硬體線程。
 
-Resource Manager 會將虛擬處理器根授與排程器，以回應資源的要求。 排程器可以使用虛擬處理器根來執行工作，方法是透過執行內容來啟用它。
+資源管理員將虛擬處理器根授予計劃程式以回應資源請求。 計劃程式可以使用虛擬處理器根通過使用執行上下文啟動它來執行工作。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[IExecutionResource](iexecutionresource-structure.md)
+[I 執行資源](iexecutionresource-structure.md)
 
 `IVirtualProcessorRoot`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="activate"></a>IVirtualProcessorRoot：： Activate 方法
+## <a name="ivirtualprocessorrootactivate-method"></a><a name="activate"></a>I虛擬處理器根:啟動方法
 
-使與執行內容介面相關聯的執行緒 proxy `pContext` 在此虛擬處理器根目錄上開始執行。
+使與執行上下文介面`pContext`關聯的線程代理開始在此虛擬處理器根上執行。
 
 ```cpp
 virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
@@ -68,27 +68,27 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
 ### <a name="parameters"></a>參數
 
 *pContext*<br/>
-將在此虛擬處理器根目錄上分派的執行內容介面。
+將在此虛擬處理器根上調度的執行上下文的介面。
 
 ### <a name="remarks"></a>備註
 
-Resource Manager 會提供執行緒 proxy （如果其中一個未與執行內容介面相關聯） `pContext`
+如果線程代理未與執行上下文介面關聯,資源管理員將提供線程代理`pContext`
 
-`Activate` 方法可以用來開始在 Resource Manager 所傳回的新虛擬處理器根上執行工作，或在已停用或即將停用的虛擬處理器根上繼續執行緒 proxy。 如需停用的詳細資訊，請參閱[IVirtualProcessorRoot：:D eactivate](#deactivate) 。 當您繼續已停用的虛擬處理器根時，參數 `pContext` 必須與用來停用虛擬處理器根的參數相同。
+該方法`Activate`可用於開始執行資源管理器返回的新虛擬處理器根的工作,或恢復已停用或即將停用的虛擬處理器根上的線程代理。 有關停用的詳細資訊,請參閱[IVirtualProcessorRoot::D啟動](#deactivate)。 恢復停用的虛擬處理器根時,參數`pContext`必須與用於停用虛擬處理器根的參數相同。
 
-第一次啟動虛擬處理器根之後，對 `Deactivate` 和 `Activate` 進行的後續呼叫，可能會彼此競爭。 這表示 Resource Manager 可以接受 `Activate` 的呼叫，然後才收到其所適用的 `Deactivate` 呼叫。
+首次啟動虛擬處理器根后,後續對調用`Deactivate``Activate`可能會相互競爭。 這意味著資源管理器在收到其應為的`Activate``Deactivate`呼叫之前可以收到呼叫。
 
-當您啟動虛擬處理器根時，會向 Resource Manager 表示此虛擬處理器根目前忙碌中的工作。 如果您的排程器找不到任何要在此根節點上執行的工作，則應該叫用 `Deactivate` 方法，以通知 Resource Manager 虛擬處理器根處於閒置狀態。 Resource Manager 使用此資料來對系統進行負載平衡。
+啟動虛擬處理器根時,會向資源管理器發出信號,表明此虛擬處理器根當前正忙於工作。 如果計劃程式找不到在此根上執行的任何工作,則應呼叫方法,`Deactivate`通知資源管理器虛擬處理器根處於空閒狀態。 資源管理器使用此數據來負載平衡系統。
 
-如果引數 `pContext` 具有 `NULL`值，則會擲回 `invalid_argument`。
+`invalid_argument`如果參數`pContext`有`NULL`值 ,則引發 。
 
-如果引數 `pContext` 不代表此虛擬處理器根目錄最近分派的執行內容，則會擲回 `invalid_operation`。
+`invalid_operation`如果參數`pContext`不表示此虛擬處理器根最近調度的執行上下文,則引發該參數。
 
-啟用虛擬處理器根的動作會增加基礎硬體執行緒的訂用帳戶層級。 如需訂用帳戶層級的詳細資訊，請參閱[IExecutionResource：： CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)。
+啟動虛擬處理器根的行為將基礎硬體線程的訂閱級別增加一個。 有關訂閱等級的詳細資訊,請參閱[I 執行資源::當前訂閱等級](iexecutionresource-structure.md#currentsubscriptionlevel)。
 
-## <a name="deactivate"></a>IVirtualProcessorRoot：:D eactivate 方法
+## <a name="ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>I虛擬處理器Root::D啟動方法
 
-導致目前在此虛擬處理器根上執行的執行緒 proxy 停止分派執行內容。 執行緒 proxy 會在呼叫 `Activate` 方法時繼續執行。
+導致當前在此虛擬處理器根上執行的線程代理停止調度執行上下文。 線程代理將在調用`Activate`方法時繼續執行。
 
 ```cpp
 virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
@@ -97,29 +97,29 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 ### <a name="parameters"></a>參數
 
 *pContext*<br/>
-目前正由這個根分派的內容。
+當前由此根調度的上下文。
 
 ### <a name="return-value"></a>傳回值
 
-布林值。 值為**true**時，表示從 `Deactivate` 方法傳回的執行緒 proxy，以回應 `Activate` 方法的呼叫。 值為 `false` 表示從方法傳回的執行緒 proxy，以回應 Resource Manager 中的通知事件。 在使用者模式可排程（UMS）執行緒排程器上，這表示專案已出現在排程器的完成清單上，而且需要排程器來處理它們。
+布林值。 **值 true**表示線程`Deactivate`代理從 方法返回以回應`Activate`對方法的 調用。 的值`false`指示線程代理從 方法返回以回應資源管理器中的通知事件。 在使用者模式可分排 (UMS) 執行緒計畫程式上,這表示專案已出現在計畫程式的完成清單中,並且計劃程式需要處理它們。
 
 ### <a name="remarks"></a>備註
 
-當您在排程器中找不到任何工作時，請使用這個方法來暫時停止執行虛擬處理器根。 `Deactivate` 方法的呼叫必須源自于上次啟動虛擬處理器根之執行內容的 `Dispatch` 方法中。 換句話說，叫用 `Deactivate` 方法的執行緒 proxy 必須是目前在虛擬處理器根上執行的。 在您未執行的虛擬處理器根目錄上呼叫方法，可能會導致未定義的行為。
+當在計劃程式中找不到任何工作時,使用此方法可以暫時停止執行虛擬處理器根。 對方法的`Deactivate`調用必須源自上次啟動虛擬處理器`Dispatch`根的執行上下文的方法。 換句話說,調用該方法的`Deactivate`線程代理必須是當前在虛擬處理器根上執行的代理。 在未執行的虛擬處理器根上調用方法可能會導致未定義的行為。
 
-已停用的虛擬處理器根可能會喚醒呼叫 `Activate` 方法，並將相同的引數傳入 `Deactivate` 方法。 排程器負責確保對 `Activate` 和 `Deactivate` 方法的呼叫都是配對的，但不一定要以特定順序接收。 Resource Manager 可以在收到 `Activate` 方法的呼叫之前，先處理它的呼叫，然後才接收到它所代表的 `Deactivate` 方法。
+停用的虛擬處理器根可能透過呼叫方法喚醒,`Activate`其參數與傳遞`Deactivate`給 該方法的參數相同。 計劃程序負責確保對`Activate`和`Deactivate`方法的調用是配對的,但不需要按特定順序接收它們。 資源管理員可以在收到對`Activate`該方法的調用之前處理對該方法的調用`Deactivate`。
 
-如果虛擬處理器根 awakens 和來自 `Deactivate` 方法的傳回值為**false**值，則排程器應該透過 `IUMSCompletionList::GetUnblockNotifications` 方法來查詢 UMS 完成清單、對該資訊採取行動，然後再次呼叫 `Deactivate` 方法。 這應該重複，直到 `Deactivate` 方法傳回 `true`的值為止。
+如果虛擬處理器根喚醒`Deactivate`,並且方法的返回值為**false**值,則計劃`IUMSCompletionList::GetUnblockNotifications`程式應通過 該方法查詢 UMS 完成清單,對該資訊執行`Deactivate`操作,然後再次調用 該方法。 應重複這一點,`Deactivate`直到方法返回`true`值 為止。
 
-如果引數 `pContext` 的值為 Null，則會擲回 `invalid_argument`。
+`invalid_argument`如果參數的值為`pContext`NULL,則引發該參數。
 
-如果從未啟動虛擬處理器根，或引數 `pContext` 不代表此虛擬處理器根目錄最近分派的執行內容，就會擲回 `invalid_operation`。
+`invalid_operation`如果虛擬處理器根從未啟動,或者參數`pContext`不表示此虛擬處理器根最近調度的執行上下文,則引發該參數。
 
-停用虛擬處理器根的動作會降低基礎硬體執行緒的訂用帳戶層級。 如需訂用帳戶層級的詳細資訊，請參閱[IExecutionResource：： CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)。
+停用虛擬處理器根的行為將基礎硬體線程的訂閱級別降低一個。 有關訂閱等級的詳細資訊,請參閱[I 執行資源::當前訂閱等級](iexecutionresource-structure.md#currentsubscriptionlevel)。
 
-## <a name="ensurealltasksvisible"></a>IVirtualProcessorRoot：： EnsureAllTasksVisible 方法
+## <a name="ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>I虛擬處理器根::確保所有任務可見方法
 
-讓系統上的所有處理器都可以看到儲存在個別處理器記憶體階層中的資料。 它可確保在方法傳回之前，已在所有處理器上執行完整的記憶體隔離。
+使存儲在各個處理器的記憶體層次結構中的數據對系統上的所有處理器都可見。 它可確保在方法返回之前在所有處理器上執行完整的記憶體圍欄。
 
 ```cpp
 virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
@@ -128,21 +128,21 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
 ### <a name="parameters"></a>參數
 
 *pContext*<br/>
-目前正由這個虛擬處理器根分派的內容。
+當前由此虛擬處理器根調度的上下文。
 
 ### <a name="remarks"></a>備註
 
-當您想要同步處理虛擬處理器根的停用，並將新工作新增至排程器時，您可能會發現這個方法很有用。 基於效能考慮，您可能會決定將工作專案加入至您的排程器，而不執行記憶體屏障，這表示在一個處理器上執行的執行緒所新增的工作專案，不會立即顯示在所有其他處理器上。 藉由搭配使用此方法與 `Deactivate` 方法，您可以確保排程器不會停用其所有虛擬處理器根，而工作專案存在於排程器的集合中。
+當您要同步虛擬處理器根的停用以及向計畫程式添加新工作時,您可能會發現此方法很有用。 出於性能原因,您可能決定在不執行記憶體障礙的情況下將工作項添加到計劃程式,這意味著在一個處理器上執行的線程添加的工作項對所有其他處理器都無法立即看到。 通過將此方法與`Deactivate`方法結合使用,可以確保計劃程式不會在計劃程式集合中存在工作項時停用其所有虛擬處理器根。
 
-`EnsureAllTasksVisibleThe` 方法的呼叫必須源自于上次啟動虛擬處理器根之執行內容的 `Dispatch` 方法中。 換句話說，叫用 `EnsureAllTasksVisible` 方法的執行緒 proxy 必須是目前在虛擬處理器根上執行的。 在您未執行的虛擬處理器根目錄上呼叫方法，可能會導致未定義的行為。
+對方法的`EnsureAllTasksVisibleThe`調用必須源自上次啟動虛擬處理器`Dispatch`根的執行上下文的方法。 換句話說,調用該方法的`EnsureAllTasksVisible`線程代理必須是當前在虛擬處理器根上執行的代理。 在未執行的虛擬處理器根上調用方法可能會導致未定義的行為。
 
-如果引數 `pContext` 具有 `NULL`值，則會擲回 `invalid_argument`。
+`invalid_argument`如果參數`pContext`有`NULL`值 ,則引發 。
 
-如果從未啟動虛擬處理器根，或引數 `pContext` 不代表此虛擬處理器根目錄最近分派的執行內容，就會擲回 `invalid_operation`。
+`invalid_operation`如果虛擬處理器根從未啟動,或者參數`pContext`不表示此虛擬處理器根最近調度的執行上下文,則引發該參數。
 
-## <a name="getid"></a>IVirtualProcessorRoot：： GetId 方法
+## <a name="ivirtualprocessorrootgetid-method"></a><a name="getid"></a>I虛擬處理器根:GetId 方法
 
-傳回虛擬處理器根的唯一識別碼。
+返回虛擬處理器根的唯一標識符。
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -150,7 +150,7 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-整數識別碼。
+整數標識碼。
 
 ## <a name="see-also"></a>另請參閱
 

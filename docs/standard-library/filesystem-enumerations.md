@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368419"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 
@@ -24,11 +24,11 @@ ms.locfileid: "79421832"
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<實驗性/檔案系統 >
+**標頭：** \<experimental/filesystem>
 
 **命名空間：** std::experimental::filesystem
 
-## <a name="copy_options"></a>  copy_options
+## <a name="copy_options"></a><a name="copy_options"></a>copy_options
 
 此位元遮罩值的列舉可搭配 [copy](filesystem-functions.md#copy) 和 [copy_file](filesystem-functions.md#copy_file) 函式來指定行為。
 
@@ -64,7 +64,7 @@ enum class copy_options {
 |`create_symlinks`|建立符號連結，而不要複製檔案。 除非目的地是目前的目錄，否則就必須將絕對路徑作為來源路徑。|
 |`create_hard_links`|建立永久連結，而不要複製檔案。|
 
-## <a name="directory_options"></a> directory_options
+## <a name="directory_options"></a><a name="directory_options"></a> directory_options
 
 指定是否要遵循目錄的符號連結，或忽略它們。
 
@@ -84,9 +84,9 @@ enum class directory_options {
 |`none`|預設行為︰忽略目錄的符號連結。 權限遭拒是一種錯誤。|
 |`follow_directory_symlink`|將目錄的符號連結視為實際的目錄。|
 
-## <a name="file_type"></a>  file_type
+## <a name="file_type"></a><a name="file_type"></a>file_type
 
-檔案類型的列舉。 支援的值為 [一般]、[目錄]、[not_found] 和 [未知]。
+檔案類型的列舉。 支援的值是常規的、目錄的、not_found和未知的。
 
 ### <a name="syntax"></a>語法
 
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|代表 UNIX 系統上的通訊端。 (不支援。)|
 |`unknown`|8|代表無法判斷狀態的檔案。|
 
-## <a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a>perm_options
 
-包含 `replace`、`add`、`remove`和 `nofollow`的值。
+包括值`replace``add`、`remove``nofollow`與 。
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a>  perms
+## <a name="perms"></a><a name="perms"></a>佩爾姆斯
 
-檔案權限的旗標。 支援的值基本上是 "readonly" 和 all。 對於唯讀檔案，未設定任何 *_write 位元。 否則會設定 `all` 位元 (0x0777)。
+檔案權限的旗標。 支援的值本質上是「唯讀」和所有值。 對於唯讀檔案，未設定任何 *_write 位元。 否則會設定 `all` 位元 (0x0777)。
 
 ### <a name="syntax"></a>語法
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
-[\<filesystem>](../standard-library/filesystem.md)
+[標題檔案參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<檔案系統>](../standard-library/filesystem.md)

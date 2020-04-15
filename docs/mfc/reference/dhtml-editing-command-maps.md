@@ -2,32 +2,32 @@
 title: DHTML 編輯命令對應
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62b388eb178be018655ea2b2be00d7321da50335
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365812"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編輯命令對應
 
-下列巨集可以用來對應 DHTML 編輯命令[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-衍生的類別。 如需其用法的範例，請參閱 < [HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
+以下宏可用於映射[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)派生類中的 DHTML 編輯命令。 關於它們的使用範例,請參考[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML 編輯命令對應巨集
 
 |||
 |-|-|
-|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|宣告 DHTML 編輯命令對應類別中。|
-|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|啟動 DHTML 編輯命令對應類別內的定義。|
-|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|標示 DHTML 編輯命令對應的結尾。|
-|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|命令 ID 對應至 HTML 編輯命令。|
-|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|命令 ID 對應至 HTML 編輯命令和訊息處理常式。|
-|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|命令 ID 對應至 HTML 編輯命令和使用者介面項目。|
+|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|在類中聲明 DHTML 編輯命令映射。|
+|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|在類中啟動 DHTML 編輯命令映射的定義。|
+|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|標記 DHTML 編輯命令對應的末尾。|
+|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|將指令 ID 映射到 HTML 編輯命令。|
+|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|將命令 ID 映射到 HTML 編輯命令和訊息處理程式。|
+|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|將指令 ID 映射到 HTML 編輯命令和使用者介面元素。|
 |[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|將命令 ID 對應至 HTML 編輯命令、訊息處理常式和使用者介面項目。|
 
-##  <a name="declare_dhtmlediting_cmdmap"></a>  DECLARE_DHTMLEDITING_CMDMAP
+## <a name="declare_dhtmlediting_cmdmap"></a><a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP
 
-宣告 DHTML 編輯命令對應類別中。
+在類中聲明 DHTML 編輯命令映射。
 
 ```
 DECLARE_DHTMLEDITING_CMDMAP(className)
@@ -35,26 +35,26 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>參數
 
-*className*<br/>
+*類別名稱*<br/>
 類別的名稱。
 
 ### <a name="remarks"></a>備註
 
-這個巨集是用於定義[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-衍生的類別。
+此宏將用於[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)派生類的定義。
 
-使用[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)實作對應。
+使用[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)實現映射。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
+請參考[HTML 編輯範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxhtml.h
+  **頭**afxhtml.h
 
-##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP
+## <a name="begin_dhtmlediting_cmdmap"></a><a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP
 
-啟動 DHTML 編輯命令對應類別內的定義。
+在類中啟動 DHTML 編輯命令映射的定義。
 
 ```
 BEGIN_DHTMLEDITING_CMDMAP(className)
@@ -62,22 +62,22 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>參數
 
-*className*<br/>
-包含 DHTML 編輯命令對應的類別名稱。 這個類別應該直接或間接衍生自[CHtmlEditView](../../mfc/reference/chtmleditview-class.md) ，並包含[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)其類別定義中的巨集。
+*類別名稱*<br/>
+包含 DHTML 編輯命令對應的類別名稱。 此類應直接或間接地派生自[CHtmlEditView,](../../mfc/reference/chtmleditview-class.md)並在其類定義中包括[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)宏。
 
 ### <a name="remarks"></a>備註
 
-DHTML 編輯命令對應加入您的類別，以 HTML 編輯命令對應使用者介面的命令。
+加入 DHTML 編輯命令映射,將使用者介面命令映射到 HTML 編輯命令。
 
-將 BEGIN_DHTMLEDITING_CMDMAP 巨集放在類別的實作 (.cpp) 檔案，後面接著[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)巨集的類別是對應 （例如，從以 IDM_CUT ID_EDIT_CUT) 的命令。 使用[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)巨集來標示事件對應的結尾。
+將BEGIN_DHTMLEDITING_CMDMAP宏放在類的實現 (.cpp)[檔中,然後](#dhtmlediting_cmd_entry)DHTMLEDITING_CMD_ENTRY宏,用於類要映射的命令(例如,從ID_EDIT_CUT到IDM_CUT)。 使用[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)宏標記事件映射的結尾。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxhtml.h
+  **頭**afxhtml.h
 
-##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP
+## <a name="end_dhtmlediting_cmdmap"></a><a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP
 
-標示 DHTML 編輯命令對應的結尾。
+標記 DHTML 編輯命令對應的末尾。
 
 ```
 END_DHTMLEDITING_CMDMAP()
@@ -85,19 +85,19 @@ END_DHTMLEDITING_CMDMAP()
 
 ### <a name="remarks"></a>備註
 
-搭配使用[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)。
+與[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)一起使用。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
+請參考[HTML 編輯範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxhtml.h
+  **頭**afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY
+## <a name="dhtmlediting_cmd_entry"></a><a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY
 
-命令 ID 對應至 HTML 編輯命令。
+將指令 ID 映射到 HTML 編輯命令。
 
 ```
 DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
@@ -106,22 +106,22 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
-（例如 ID_EDIT_COPY) 命令識別碼。
+命令 ID (例如 ID_EDIT_COPY)。
 
 *dhtmlcmdID*<br/>
-HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
+CMdID 對應到哪個*cmdID*的 HTML 編輯命令(如IDM_COPY)。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
+請參考[HTML 編輯範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxhtml.h
+  **頭**afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC
+## <a name="dhtmlediting_cmd_entry_func"></a><a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC
 
-命令 ID 對應至 HTML 編輯命令和訊息處理常式。
+將命令 ID 映射到 HTML 編輯命令和訊息處理程式。
 
 ```
 DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
@@ -130,25 +130,25 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
-（例如 ID_EDIT_COPY) 命令識別碼。
+命令 ID (例如 ID_EDIT_COPY)。
 
 *dhtmlcmdID*<br/>
-HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
+CMdID 對應到哪個*cmdID*的 HTML 編輯命令(如IDM_COPY)。
 
 *member_func_name*<br/>
 命令對應的訊息處理函式名稱。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
+請參考[HTML 編輯範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxhtml.h
+  **頭**afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE
+## <a name="dhtmlediting_cmd_entry_type"></a><a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE
 
-命令 ID 對應至 HTML 編輯命令和使用者介面項目。
+將指令 ID 映射到 HTML 編輯命令和使用者介面元素。
 
 ```
 DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
@@ -157,23 +157,23 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
-（例如 ID_EDIT_COPY) 命令識別碼。
+命令 ID (例如 ID_EDIT_COPY)。
 
 *dhtmlcmdID*<br/>
-HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
+CMdID 對應到哪個*cmdID*的 HTML 編輯命令(如IDM_COPY)。
 
-*elemType*<br/>
-使用者介面項目型別;其中一個 AFX_UI_ELEMTYPE_NORMAL、 AFX_UI_ELEMTYPE_CHECKBOX 或 AFX_UI_ELEMTYPE_RADIO。
+*埃萊姆類型*<br/>
+使用者介面項目類型；AFX_UI_ELEMTYPE_NORMAL、AFX_UI_ELEMTYPE_CHECKBOX 或 AFX_UI_ELEMTYPE_RADIO 中的其中一項。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
+請參考[HTML 編輯範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxhtml.h
+  **頭**afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
+## <a name="dhtmlediting_cmd_entry_func_type"></a><a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
 
 將命令 ID 對應至 HTML 編輯命令、訊息處理常式和使用者介面項目。
 
@@ -184,24 +184,24 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
-（例如 ID_EDIT_COPY) 命令識別碼。
+命令 ID (例如 ID_EDIT_COPY)。
 
 *dhtmlcmdID*<br/>
-HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
+CMdID 對應到哪個*cmdID*的 HTML 編輯命令(如IDM_COPY)。
 
 *member_func_name*<br/>
 命令對應的訊息處理函式名稱。
 
-*elemType*<br/>
-使用者介面項目型別;其中一個 AFX_UI_ELEMTYPE_NORMAL、 AFX_UI_ELEMTYPE_CHECKBOX 或 AFX_UI_ELEMTYPE_RADIO。
+*埃萊姆類型*<br/>
+使用者介面項目類型；AFX_UI_ELEMTYPE_NORMAL、AFX_UI_ELEMTYPE_CHECKBOX 或 AFX_UI_ELEMTYPE_RADIO 中的其中一項。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
+請參考[HTML 編輯範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxhtml.h
+  **頭**afxhtml.h
 
 ## <a name="see-also"></a>另請參閱
 

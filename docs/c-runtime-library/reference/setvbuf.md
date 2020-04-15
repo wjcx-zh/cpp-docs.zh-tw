@@ -1,8 +1,9 @@
 ---
 title: setvbuf
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - setvbuf
+- _o_setvbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948187"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316256"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -50,37 +52,39 @@ int setvbuf(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
-*buffer*<br/>
+*緩衝區*<br/>
 使用者配置的緩衝區。
 
-*mode*<br/>
+*模式*<br/>
 緩衝處理的模式。
 
-*size*<br/>
-緩衝區大小 (以位元組為單位)。 允許的範圍：2 < =*大小*< = INT_MAX （2147483647）。 就內部而言，針對*size*提供的值會四捨五入到最接近的倍數（共2個）。
+*大小*<br/>
+緩衝區大小 (以位元組為單位)。 允許範圍:2 個<=*大小*<= INT_MAX (2147483647)。 在內部,為*大小*提供的值向下舍入到最接近的倍數 2。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回 0。
+若成功，即傳回 0。
 
-如果*stream*為**Null**，或如果*模式*或*大小*不在有效的變更中，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會傳回 -1，並將 **errno** 設為 **EINVAL**。
+如果*串*流為**NULL**,或者*模式*或*大小*不在有效的更改範圍內,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會傳回 -1，並將 **errno** 設為 **EINVAL**。
 
-如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Setvbuf**函數可讓程式同時控制*資料流程*的緩衝和緩衝區大小。 *資料流程*必須參考開啟的檔案，而該檔案尚未在 i/o 作業開啟後進行。 *Buffer*所指向的陣列會當做緩衝區使用，除非它是**Null**，在此情況下， **setvbuf**會使用長度*大小*/2 \* 2 位元組的自動設定緩衝區。
+**setvbuf**函數允許程式控制*串流的*緩衝和緩衝區大小。 *流*必須引用自打開以來未經過 I/O 操作的打開檔。 *緩衝區*指向的陣列用作緩衝區,除非它是**NULL,** 在這種情況下**setvbuf**使用\*長度*大小*/2 2 位元組的自動分配的緩衝區。
 
-此模式必須是 **_IOFBF**、 **_IOLBF**或 **_IONBF**。 如果*mode*為 **_IOFBF**或 **_IOLBF**，則*size*會當做緩衝區的大小使用。 如果*模式*為 **_IONBF**，則資料流程未緩衝，而且會忽略*大小*和*緩衝區*。 *Mode*的值和其意義如下：
+模式必須 **_IOFBF、_IOLBF****_IOLBF**或 **_IONBF**。 如果*模式***為_IOFBF**或 **_IOLBF**,則*大小*用作緩衝區的大小。 如果 *_IONBF模式***,則**流將取消緩衝,並忽略*大小*和*緩衝區*。 *模式*及其含義的值包括:
 
 |*模式*值|意義|
 |-|-|
-| **_IOFBF** | 完整緩衝;也就是說， *buffer*會當做緩衝區使用，而*大小*會當做緩衝區的大小使用。 如果*buffer*為**Null**，則會使用自動設定的緩衝區*大小*位元組長度。 |
-| **_IOLBF** | 對於某些系統，這提供行緩衝處理。 不過，針對 Win32，行為與 **_IOFBF** -Full 緩衝相同。 |
-| **_IONBF** | 無論*緩衝區*或*大小*為何，都不會使用任何緩衝區。 |
+| **_IOFBF** | 完全緩衝;也就是說,*緩衝區*用作緩衝區,*大小*用作緩衝區的大小。 如果*緩衝區*為**NULL,** 則使用自動分配的緩衝區*大小*位元組長。 |
+| **_IOLBF** | 對於某些系統，這提供行緩衝處理。 但是,對於 Win32,該行為與 **_IOFBF** - 完全緩衝相同。 |
+| **_IONBF** | 無論緩衝區或*大小*如何,都不使用*緩衝區*。 |
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

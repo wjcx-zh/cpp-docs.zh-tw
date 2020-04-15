@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: db99c5e72e84bb359184f4c62594fcddff7d8ff6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367540"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 類別
 
-`CMFCEditBrowseCtrl`類別支援 [編輯] [流覽] 控制項, 這是可編輯的文字方塊, 選擇性地包含 [流覽] 按鈕。 當使用者按一下瀏覽按鈕時，控制項就會執行自訂動作或顯示包含檔案瀏覽器或資料夾瀏覽器的標準對話方塊。
+該`CMFCEditBrowseCtrl`類支援編輯流覽控制項,這是一個可編輯的文本框,可選包含瀏覽按鈕。 當使用者按一下瀏覽按鈕時，控制項就會執行自訂動作或顯示包含檔案瀏覽器或資料夾瀏覽器的標準對話方塊。
 
 ## <a name="syntax"></a>語法
 
@@ -56,57 +56,57 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|啟用或停用 (隱藏) [流覽] 按鈕。|
-|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|啟用 [流覽] 按鈕, 並將 [編輯流覽] 控制項放在檔案*流覽*模式。|
-|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|啟用 [流覽] 按鈕, 並將 [編輯流覽] 控制項放在*資料夾流覽*模式中。|
-|[CMFCEditBrowseCtrl::GetMode](#getmode)|傳回目前的瀏覽模式。|
-|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|在編輯流覽控制項更新為流覽動作的結果之後, 由架構呼叫。|
-|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|在使用者按一下 [流覽] 按鈕之後, 由架構呼叫。|
-|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|重新繪製目前的編輯流覽控制項。|
-|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|由架構呼叫以繪製 [流覽] 按鈕。|
-|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|當編輯控制項中輸入了不合法的檔案名時, 由架構呼叫。|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|會先轉譯視窗訊息, 再將它們分派至[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 如需語法和詳細資訊, 請參閱[CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|
-|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|設定 [流覽] 按鈕的自訂影像。|
+|[CMFCEdit 瀏覽Ctrl::啟用瀏覽按鈕](#enablebrowsebutton)|啟用或禁用(隱藏)瀏覽按鈕。|
+|[CMFCEdit 瀏覽Ctrl::啟用檔案瀏覽按鈕](#enablefilebrowsebutton)|啟用流覽按鈕並將編輯流覽控制項置於*檔案瀏覽*模式。|
+|[CMFCEdit 瀏覽Ctrl::啟用資料夾瀏覽按鈕](#enablefolderbrowsebutton)|啟用流覽按鈕並將編輯流覽控制項置於*資料夾瀏覽*模式。|
+|[CMFCEdit 瀏覽Ctrl:取得模式](#getmode)|返回當前流覽模式。|
+|[CMFCEdit 瀏覽Ctrl:在更新後開啟](#onafterupdate)|編輯流覽控制件使用流覽操作的結果更新後由框架調用。|
+|[CMFCEdit 流覽Ctrl::在流覽](#onbrowse)|用戶按一下瀏覽按鈕後由框架呼叫。|
+|[CMFCEdit 流覽Ctrl::在更改佈局上](#onchangelayout)|重繪目前編輯流覽控制元件。|
+|[CMFCEdit 流覽Ctrl::在繪製瀏覽按鈕](#ondrawbrowsebutton)|由框架調用以繪製瀏覽按鈕。|
+|[CMFCEdit 流覽Ctrl:在非法檔名上](#onillegalfilename)|在編輯控制項中輸入非法檔名時由框架調用。|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|在視窗訊息發送到[翻譯訊息](/windows/win32/api/winuser/nf-winuser-translatemessage)和[調度消息](/windows/win32/api/winuser/nf-winuser-dispatchmessage)視窗功能之前進行翻譯。 有關語法和更多資訊,請參閱[CWnd::P重新翻譯消息](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|
+|[CMFCEdit 瀏覽Ctrl::設定瀏覽按鈕影像](#setbrowsebuttonimage)|為流覽按鈕設置自定義圖像。|
 
 ## <a name="remarks"></a>備註
 
-使用 [編輯流覽] 控制項來選取檔案或資料夾名稱。 (選擇性) 使用控制項來執行自訂動作 (例如), 以顯示對話方塊。 您可以顯示或不顯示 [流覽] 按鈕, 也可以在按鈕上套用自訂標籤或影像。
+使用編輯流覽控制項選擇檔或資料夾名稱。 或者,使用控制項執行自訂操作,例如顯示對話方塊。 您可以顯示或不顯示瀏覽按鈕,也可以在按鈕上應用自定義標籤或圖像。
 
-[編輯流覽] 控制項的 [*流覽] 模式*會決定是否要顯示 [流覽] 按鈕, 以及按一下按鈕時所發生的動作。 如需詳細資訊, 請參閱[GetMode](#getmode)方法。
+編輯*流覽控制項的瀏覽模式*確定它是否顯示瀏覽按鈕,以及按下這個按鈕時將執行什麼操作。 有關詳細資訊,請參閱[GetMode](#getmode)方法。
 
-`CMFCEditBrowseCtrl`類別支援下列模式。
+該`CMFCEditBrowseCtrl`類支援以下模式。
 
 - **自訂模式**
 
-   當使用者按一下 [流覽] 按鈕時, 就會執行自訂動作。 例如, 您可以顯示應用程式特定的對話方塊。
+   當用戶按一下瀏覽按鈕時,將執行自定義操作。 例如,可以顯示特定於應用程式的對話方塊。
 
 - **檔案模式**
 
-   當使用者按一下 [流覽] 按鈕時, 會顯示標準的檔案選取對話方塊。
+   當用戶按一下瀏覽按鈕時,將顯示一個標準檔選擇對話方塊。
 
 - **資料夾模式**
 
-   當使用者按一下 [流覽] 按鈕時, 就會顯示 [標準資料夾選取範圍] 對話方塊。
+   當用戶按一下瀏覽按鈕時,將顯示一個標準資料夾選擇對話方塊。
 
-## <a name="how-to-specify-an-edit-browse-control"></a>操作說明：指定編輯流覽控制項
+## <a name="how-to-specify-an-edit-browse-control"></a>如何:指定編輯瀏覽控制項
 
-請執行下列步驟, 在您的應用程式中併入編輯流覽控制項:
+執行以下步驟以在應用程式中合併編輯瀏覽控制元件:
 
-1. 如果您想要執行自訂瀏覽模式, 請從`CMFCEditBrowseCtrl`類別衍生您自己的類別, 然後覆寫[CMFCEditBrowseCtrl:: OnBrowse](#onbrowse)方法。 在覆寫的方法中, 執行自訂的流覽動作, 並以結果更新 [編輯流覽] 控制項。
+1. 如果要實現自定義流覽模式,請`CMFCEditBrowseCtrl`從 類派生您自己的類,然後重寫[CMFCEditBrowseCtrl::onBrowse](#onbrowse)方法。 在重寫方法中,執行自定義流覽操作,並隨結果更新編輯流覽控制元件。
 
-1. `CMFCEditBrowseCtrl`將物件或衍生的編輯流覽控制項物件內嵌到父視窗物件中。
+1. 將`CMFCEditBrowseCtrl`物件或派生的編輯流覽控制控制件物件嵌入到父視窗物件中。
 
-1. 如果您使用 [**類別] Wizard**建立對話方塊, 請將編輯控制項 ( `CEdit`) 新增至對話方塊表單。 此外, 新增變數以存取標頭檔中的控制項。 在您的標頭檔中, 將變數的類型從`CEdit`變更`CMFCEditBrowseCtrl`為。 [編輯流覽] 控制項將會自動建立。 如果您未使用**類別 Wizard**, 請將`CMFCEditBrowseCtrl`變數新增至標頭檔, 然後呼叫其`Create`方法。
+1. 如果使用**類別精靈**建立對話框,請向對話框表單新增編輯控制件`CEdit`( 。 此外,添加變數以訪問標頭檔中的控制項。 在標頭檔中,將變數的類型從`CEdit`變更為`CMFCEditBrowseCtrl`。 將自動建立編輯流覽控制元件。 如果不使用**類嚮導**,請向標頭檔添加`CMFCEditBrowseCtrl`變數 ,然後調`Create`用其 方法。
 
-1. 如果您將 [編輯流覽] 控制項加入對話方塊中, 請使用**ClassWizard**工具來設定資料交換。
+1. 如果將編輯流覽控制元件添加到對話方塊中,請使用**ClassWizard**工具設置數據交換。
 
-1. 呼叫[EnableFolderBrowseButton](#enablefolderbrowsebutton)、 [EnableFileBrowseButton](#enablefilebrowsebutton)或[EnableBrowseButton](#enablebrowsebutton)方法來設定瀏覽模式, 並顯示 [流覽] 按鈕。 呼叫[GetMode](#getmode)方法, 以取得目前的瀏覽模式。
+1. 呼叫[啟用資料夾瀏覽按鈕](#enablefolderbrowsebutton),[啟用檔案瀏覽按鈕](#enablefilebrowsebutton),或[啟用瀏覽按鈕](#enablebrowsebutton)方法,以設定瀏覽模式並顯示流覽按鈕。 調用[GetMode](#getmode)方法以獲取當前瀏覽模式。
 
-1. 若要提供 [流覽] 按鈕的自訂影像, 請呼叫[SetBrowseButtonImage](#setbrowsebuttonimage)方法, 或覆寫[OnDrawBrowseButton](#ondrawbrowsebutton)方法。
+1. 要為瀏覽按鈕提供自訂圖像,請調用[SetBrowseButtonImage](#setbrowsebuttonimage)方法或重寫[OnDrawBrowseButton](#ondrawbrowsebutton)方法。
 
-1. 若要從 [編輯流覽] 控制項移除 [流覽] 按鈕, 請呼叫[EnableBrowseButton](#enablebrowsebutton)方法, 並將*bEnable*參數設定為 FALSE。
+1. 要從編輯流覽控制元件中刪除瀏覽按鈕,請呼叫[啟用BrowseButton](#enablebrowsebutton)方法,將*bEnable*參數設置為FALSE。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -120,18 +120,18 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ## <a name="example"></a>範例
 
-下列範例示範如何在`CMFCEditBrowseCtrl`類別中使用兩個方法: `EnableFolderBrowseButton`和`EnableFileBrowseButton`。 這個範例是[新控制項範例](../../overview/visual-cpp-samples.md)的一部分。
+下面的範例展示如何在`CMFCEditBrowseCtrl`類別使用兩種方法:`EnableFolderBrowseButton`與`EnableFileBrowseButton`。 此示例是[「新控制件」範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxeditbrowsectrl。h
+**標題:** afxeditbrowsectrl.h
 
-##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl:: EnableBrowseButton
+## <a name="cmfceditbrowsectrlenablebrowsebutton"></a><a name="enablebrowsebutton"></a>CMFCEdit 瀏覽Ctrl::啟用瀏覽按鈕
 
-顯示或不會在目前的編輯流覽控制項上顯示 [流覽] 按鈕。
+顯示或不在當前編輯流覽控制件上顯示流覽按鈕。
 
 ```
 void EnableBrowseButton(
@@ -141,21 +141,21 @@ void EnableBrowseButton(
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-TRUE 表示要顯示 [流覽] 按鈕;FALSE 則不會顯示 [流覽] 按鈕。 預設值為 TRUE。
+*b 啟用*<br/>
+TRUE 顯示瀏覽按鈕;FALSE 不顯示瀏覽按鈕。 預設值為 TRUE。
 
 *szLabel*<br/>
-顯示在 [流覽] 按鈕上的標籤。 預設值為 " **...** "。
+瀏覽按鈕上顯示的標籤。 默認值為 **"..."。**
 
 ### <a name="remarks"></a>備註
 
-如果*bEnable*參數為 TRUE, 請在按下 [流覽] 按鈕時, 執行自訂動作來執行。 若要執行自訂動作, 請從`CMFCEditBrowseCtrl`類別衍生一個類別, 然後覆寫它的[OnBrowse](#onbrowse)方法。
+如果*bEnable*參數為 TRUE,則實現自訂操作,以便在按一下瀏覽按鈕時執行。 要實現自定義操作,請從類派生一個`CMFCEditBrowseCtrl`類,然後重寫其[OnBrowse](#onbrowse)方法。
 
-如果*bEnable*參數為 TRUE, 則控制項`BrowseMode_Default`的瀏覽模式為, 否則瀏覽模式為。 `BrowseMode_None` 如需瀏覽模式的詳細資訊, 請參閱[GetMode](#getmode)方法。
+如果*bEnable*參數為 TRUE,則控制元件`BrowseMode_Default`的瀏覽模式 為 ;否則,瀏覽模式`BrowseMode_None`為 。 有關流覽模式的詳細資訊,請參閱[GetMode](#getmode)方法。
 
-##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl:: EnableFileBrowseButton
+## <a name="cmfceditbrowsectrlenablefilebrowsebutton"></a><a name="enablefilebrowsebutton"></a>CMFCEdit 瀏覽Ctrl::啟用檔案瀏覽按鈕
 
-顯示目前編輯流覽控制項的 [流覽] 按鈕, 並將控制項置於檔案*流覽*模式。
+在當前編輯流覽控制件上顯示流覽按鈕,並將控制項置於*檔案流覽*模式。
 
 ```
 void EnableFileBrowseButton(
@@ -167,10 +167,10 @@ void EnableFileBrowseButton(
 ### <a name="parameters"></a>參數
 
 *lpszDefExt*<br/>
-指定用於檔案選取對話方塊中的預設副檔名。 預設值為 Null。
+指定用於檔案選取對話方塊中的預設副檔名。 預設值是 NULL。
 
 *lpszFilter*<br/>
-指定用於檔案選取對話方塊中的預設篩選字串。 預設值為 Null。
+指定用於檔案選取對話方塊中的預設篩選字串。 預設值是 NULL。
 
 *dwFlags*<br/>
 對話方塊旗標。 預設值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的位元組合 (OR)。
@@ -179,11 +179,11 @@ void EnableFileBrowseButton(
 
 當編輯瀏覽控制項處於檔案瀏覽模式時，若使用者按一下 [瀏覽] 按鈕，控制項將會顯示標準檔案選取對話方塊。
 
-如需可用旗標的完整清單, 請參閱[OPENFILENAME 結構](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)。
+關於可用的旗標的清單,請參閱[OPENFILENAME 結構](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)。
 
-##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl:: EnableFolderBrowseButton
+## <a name="cmfceditbrowsectrlenablefolderbrowsebutton"></a><a name="enablefolderbrowsebutton"></a>CMFCEdit 瀏覽Ctrl::啟用資料夾瀏覽按鈕
 
-顯示目前編輯流覽控制項的 [流覽] 按鈕, 並將控制項置於*資料夾流覽*模式。
+在當前編輯流覽控制件上顯示流覽按鈕,並將該控制件置於*資料夾流覽*模式。
 
 ```
 void EnableFolderBrowseButton();
@@ -191,11 +191,11 @@ void EnableFolderBrowseButton();
 
 ### <a name="remarks"></a>備註
 
-當編輯流覽控制項在資料夾瀏覽模式中, 且使用者按一下 [流覽] 按鈕時, 控制項會顯示 [標準資料夾選取範圍] 對話方塊。
+當編輯流覽控制控制項處於資料夾瀏覽模式,並且使用者按一下流覽按鈕時,該控制項將顯示標準資料夾選擇對話方塊。
 
-##  <a name="getmode"></a>CMFCEditBrowseCtrl:: GetMode
+## <a name="cmfceditbrowsectrlgetmode"></a><a name="getmode"></a>CMFCEdit 瀏覽Ctrl:取得模式
 
-抓取目前編輯流覽控制項的瀏覽模式。
+檢索當前編輯流覽控制件的流覽模式。
 
 ```
 CMFCEditBrowseCtrl::BrowseMode GetMode() const;
@@ -203,24 +203,24 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-其中一個列舉值, 指定編輯流覽控制項的目前模式。 [流覽] 模式會決定架構是否顯示 [流覽] 按鈕, 以及當使用者按一下該按鈕時, 會發生什麼動作。
+指定編輯流覽控制件的當前模式的枚舉值之一。 瀏覽模式確定框架是否顯示瀏覽按鈕,以及當用戶按下該按鈕時將執行什麼操作。
 
 下表列出可能的傳回值。
 
 |值|描述|
 |-----------|-----------------|
-|`BrowseMode_Default`|**自訂模式**。 執行程式設計人員定義的動作。|
-|`BrowseMode_File`|檔案**模式**。 [標準檔案瀏覽器] 對話方塊隨即顯示。|
-|`BrowseMode_Folder`|**資料夾模式**。 [標準資料夾瀏覽器] 對話方塊隨即顯示。|
-|`BrowseMode_None`|[流覽] 按鈕不會顯示。|
+|`BrowseMode_Default`|**自訂模式**。 執行程式師定義的操作。|
+|`BrowseMode_File`|**檔案模式**. 將顯示標準文件瀏覽器對話方塊。|
+|`BrowseMode_Folder`|**資料夾模式**。 將顯示標準資料夾瀏覽器對話方塊。|
+|`BrowseMode_None`|不顯示瀏覽按鈕。|
 
 ### <a name="remarks"></a>備註
 
-根據預設, `CMFCEditBrowseCtrl`物件會初始化為`BrowseMode_None`模式。 使用[CMFCEditBrowseCtrl:: EnableBrowseButton](#enablebrowsebutton)、 [CMFCEditBrowseCtrl:: EnableFileBrowseButton](#enablefilebrowsebutton)和[CMFCEditBrowseCtrl:: EnableFolderBrowseButton](#enablefolderbrowsebutton)方法修改瀏覽模式。
+默認情況下,`CMFCEditBrowseCtrl`物件被初始化`BrowseMode_None`為模式。 使用[CMFCEditBrowseCtrl 修改流覽模式::啟用流覽按鈕](#enablebrowsebutton)[、CMFCEditBrowseCtrl::啟用文件流覽按鈕](#enablefilebrowsebutton)和[CMFCEditBrowseCtrl::啟用資料夾瀏覽按鈕](#enablefolderbrowsebutton)方法。
 
-##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl:: OnAfterUpdate
+## <a name="cmfceditbrowsectrlonafterupdate"></a><a name="onafterupdate"></a>CMFCEdit 瀏覽Ctrl:在更新後開啟
 
-在編輯流覽控制項更新為流覽動作的結果之後, 由架構呼叫。
+編輯流覽控制件使用流覽操作的結果更新後由框架調用。
 
 ```
 virtual void OnAfterUpdate();
@@ -228,11 +228,11 @@ virtual void OnAfterUpdate();
 
 ### <a name="remarks"></a>備註
 
-在衍生類別中覆寫這個方法, 以執行自訂動作。
+重寫派生類中的此方法以實現自定義操作。
 
-##  <a name="onbrowse"></a>CMFCEditBrowseCtrl:: OnBrowse
+## <a name="cmfceditbrowsectrlonbrowse"></a><a name="onbrowse"></a>CMFCEdit 流覽Ctrl::在流覽
 
-在使用者按一下 [編輯流覽] 控制項的 [流覽] 按鈕之後, 由架構呼叫。
+使用者按一下編輯流覽控制件的瀏覽按鈕後由框架呼叫。
 
 ```
 virtual void OnBrowse();
@@ -240,11 +240,11 @@ virtual void OnBrowse();
 
 ### <a name="remarks"></a>備註
 
-當使用者按一下 [編輯流覽] 控制項的 [流覽] 按鈕時, 請使用這個方法來執行自訂程式碼。 從`CMFCEditBrowseCtrl`類別衍生您自己的類別, 並覆`OnBrowse`寫其方法。 在該方法中, 執行自訂的流覽動作, 並選擇性地更新編輯流覽控制項的文字方塊。 在您的應用程式中, 使用[EnableBrowseButton](#enablebrowsebutton)方法, 將 [編輯流覽] 控制項放在*自訂流覽*模式。
+當用戶按一下編輯流覽控制元件的瀏覽按鈕時,使用此方法執行自訂代碼。 從`CMFCEditBrowseCtrl`類派生您自己的類並重寫`OnBrowse`其 方法。 在該方法中,實現自定義流覽操作,並選擇更新編輯流覽控制元件的文本框。 在應用程式中,使用[啟用BrowseButton](#enablebrowsebutton)方法將編輯流覽控制項元件置於*自訂流覽*模式。
 
-##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl:: OnChangeLayout
+## <a name="cmfceditbrowsectrlonchangelayout"></a><a name="onchangelayout"></a>CMFCEdit 流覽Ctrl::在更改佈局上
 
-重新繪製目前的編輯流覽控制項。
+重繪目前編輯流覽控制元件。
 
 ```
 virtual void OnChangeLayout();
@@ -252,11 +252,11 @@ virtual void OnChangeLayout();
 
 ### <a name="remarks"></a>備註
 
-當編輯流覽控制項的瀏覽模式變更時, 架構會呼叫這個方法。 如需詳細資訊, 請參閱[CMFCEditBrowseCtrl:: GetMode](#getmode)。
+當編輯流覽控制元件的流覽模式發生更改時,框架將調用此方法。 有關詳細資訊,請參閱[CMFCEditBrowseCtrl::取得模式](#getmode)。
 
-##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl:: OnDrawBrowseButton
+## <a name="cmfceditbrowsectrlondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCEdit 流覽Ctrl::在繪製瀏覽按鈕
 
-由架構呼叫, 以在編輯流覽控制項上繪製 [流覽] 按鈕。
+框架呼叫以在編輯流覽控制元件上繪製流覽按鈕。
 
 ```
 virtual void OnDrawBrowseButton(
@@ -271,22 +271,22 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 裝置內容的指標。
 
-[週框]<br/>
-[流覽] 按鈕的周框。
+*Rect*<br/>
+瀏覽按鈕的邊界矩形。
 
-*bIsButtonPressed*<br/>
-如果按鈕已按下, 則為 TRUE;否則為 FALSE。
+*bIsButton壓榨*<br/>
+如果按下按鈕,則為 TRUE;否則,FALSE。
 
 *bIsButtonHot*<br/>
-如果按鈕已反白顯示, 則為 TRUE;否則為 FALSE。
+如果按鈕突出顯示,則為 TRUE;如果按鈕突出顯示,則為 TRUE。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-覆寫衍生類別中的這個函式, 以自訂 [流覽] 按鈕的外觀。
+在派生類中重寫此函數以自定義流覽按鈕的外觀。
 
-##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl:: SetBrowseButtonImage
+## <a name="cmfceditbrowsectrlsetbrowsebuttonimage"></a><a name="setbrowsebuttonimage"></a>CMFCEdit 瀏覽Ctrl::設定瀏覽按鈕影像
 
-在 [編輯流覽] 控制項的 [流覽] 按鈕上設定自訂影像。
+在編輯流覽控制件的流覽按鈕上設置自定義圖像。
 
 ```
 void SetBrowseButtonImage(
@@ -303,24 +303,24 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ### <a name="parameters"></a>參數
 
 *hIcon*<br/>
-圖示的控制碼。
+圖示的句柄。
 
 *hBitmap*<br/>
-點陣圖的控制碼。
+位圖的句柄。
 
-*uiBmpResId*<br/>
-點陣圖的資源識別碼。
+*烏布佈雷西德*<br/>
+位圖的資源識別碼。
 
-*bAutoDestroy*<br/>
-TRUE 表示在此方法結束時刪除指定的圖示或點陣圖;否則為 FALSE。 預設值為 TRUE。
+*bAuto銷毀*<br/>
+TRUE 在此方法退出時刪除指定的圖示或位圖;否則,FALSE。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 
-使用此方法可將自訂影像套用至 [流覽] 按鈕。 根據預設, 當 [編輯流覽] 控制項處於 *[檔案流覽]* 或 *[資料夾流覽*] 模式時, 架構會取得標準影像。
+使用此方法將自定義圖像應用於瀏覽按鈕。 預設情況下,當編輯流覽控制控制件處於*文件流覽*或*資料夾流覽*模式時,框架將獲取標準圖像。
 
-##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName
+## <a name="cmfceditbrowsectrlonillegalfilename"></a><a name="onillegalfilename"></a>CMFCEdit 流覽Ctrl:在非法檔名上
 
-當編輯控制項中輸入了不合法的檔案名時, 由架構呼叫。
+在編輯控制項中輸入非法檔名時由框架調用。
 
 ```
 virtual BOOL OnIllegalFileName(CString& strFileName);
@@ -328,12 +328,12 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 
 ### <a name="parameters"></a>參數
 
-*strFileName*<br/>
-指定不正確的檔案名。
+*strFilename*<br/>
+指定非法檔名。
 
 ### <a name="return-value"></a>傳回值
 
-如果無法將此檔案名進一步傳遞至檔案對話方塊, 則應該傳回 FALSE。 在此情況下, 焦點會設回編輯控制項, 使用者應該繼續編輯。 預設的執行會顯示訊息方塊, 告知使用者不合法的檔案名, 並傳回 FALSE。 您可以覆寫這個方法、更正檔案名, 並傳回 TRUE 進行進一步的處理。
+如果無法將此檔名進一步傳遞到文件對話框,則應返回 FALSE。 在這種情況下,焦點將設置回編輯控件,使用者應繼續編輯。 默認實現顯示一個消息框,告知使用者非法檔名並返回 FALSE。 您可以重寫此方法、更正檔名並返回 TRUE 以進行進一步處理。
 
 ### <a name="remarks"></a>備註
 

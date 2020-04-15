@@ -7,16 +7,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-ms.openlocfilehash: d88d919bb87f614d140d710aee9df3fdf4fd10bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2f0325237a30989637821464c63a4d8b8000b1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368941"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 結構
 
-`CDaoQueryDefInfo`結構包含的資料存取物件 (DAO) 定義 recordset 物件的相關資訊。
+該`CDaoQueryDefInfo`結構包含有關為數據訪問物件 (DAO) 定義的查詢def物件的資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -38,72 +38,72 @@ struct CDaoQueryDefInfo
 #### <a name="parameters"></a>參數
 
 *m_strName*<br/>
-唯一名稱的 recordset 物件。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。 呼叫[CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname)直接擷取此屬性。
+唯一地命名查詢def物件。 有關詳細資訊,請參閱 DAO 説明中的主題"名稱屬性"。 調用[CDaoQueryDef:獲取名稱](../../mfc/reference/cdaoquerydef-class.md#getname)以直接檢索此屬性。
 
 *m_nType*<br/>
-值，指出作業的 recordset 物件類型。 值可以是下列其中一項：
+指示查詢def物件的操作類型的值。 這個值可以是下列值之一：
 
-- `dbQSelect` 選取時，查詢會選取記錄。
+- `dbQSelect`選擇 = 查詢選擇記錄。
 
-- `dbQAction` 動作-查詢移動或變更資料，但不會傳回記錄。
+- `dbQAction`操作 — 查詢移動或更改數據,但不返回記錄。
 
-- `dbQCrosstab` 交叉資料表，查詢會類似試算表的格式傳回資料。
+- `dbQCrosstab`交叉選項卡 – 查詢以類似電子表格的格式返回資料。
 
-- `dbQDelete` 刪除，查詢會刪除指定的資料列集。
+- `dbQDelete`刪除 = 查詢刪除一組指定的列。
 
-- `dbQUpdate` 更新 — 此查詢會變更一組記錄。
+- `dbQUpdate`更新 = 查詢更改一組記錄。
 
-- `dbQAppend` 附加，查詢可以將新記錄加入資料表或查詢的結尾。
+- `dbQAppend`追加 - 查詢將新記錄添加到表或查詢的末尾。
 
-- `dbQMakeTable` 製成資料表，查詢會從資料錄集，建立新的資料表。
+- `dbQMakeTable`製作表 – 查詢從記錄集創建新表。
 
-- `dbQDDL` 資料定義-查詢影響的資料表或其組件的結構。
+- `dbQDDL`數據定義 – 查詢影響表或其部件的結構。
 
-- `dbQSQLPassThrough` 傳遞 — SQL 陳述式會直接傳遞至資料庫後端，而不需要中繼的處理。
+- `dbQSQLPassThrough`傳遞 – SQL 語句直接傳遞到資料庫後端,無需中間處理。
 
-- `dbQSetOperation` 聯集，此查詢會建立快照集類型的資料錄集物件，包含所有指定的記錄，在兩個資料或多個資料表的所有重複的記錄中移除。 若要包含重複的項目，請將關鍵字加入**所有**querydef 的 SQL 陳述式中。
+- `dbQSetOperation`聯合 = 查詢創建一個快照類型記錄集物件,其中包含來自兩個或多個表中所有指定記錄的數據,並刪除了任何重複的記錄。 要包括重複項,請在查詢def的 SQL 語句中添加關鍵字**ALL。**
 
-- `dbQSPTBulk` 搭配`dbQSQLPassThrough`指定不會傳回記錄的查詢。
+- `dbQSPTBulk``dbQSQLPassThrough`用於指定不返回記錄的查詢。
 
 > [!NOTE]
->  若要建立 SQL 的通過查詢，您未設定`dbQSQLPassThrough`常數。 這會自動設定由 Microsoft Jet 資料庫引擎時建立 recordset 物件，並設定連接屬性。
+> 要創建 SQL 傳遞查詢,請不要`dbQSQLPassThrough`設置常 量。 當您創建查詢def物件並設置 Connect 屬性時,Microsoft Jet 資料庫引擎會自動設置此設置。
 
-如需詳細資訊，請參閱主題 DAO [說明] 中的 「 型別屬性 」。
+有關詳細資訊,請參閱 DAO 説明中的主題"類型屬性"。
 
 *m_dateCreated*<br/>
-日期和時間 querydef 所建立。 若要直接擷取 querydef 的建立的日期，請呼叫[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成員函式`CDaoTableDef`與資料表相關聯的物件。 如需詳細資訊，請參閱下方的註解。 DAO [說明] 中，另請參閱本主題 「 DateCreated LastUpdated 屬性 」。
+創建查詢def的日期和時間。 要直接檢索創建查詢def的日期,請調用與表關聯的`CDaoTableDef`物件的[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成員函數。 有關詳細資訊,請參閱下面的註釋。 另請參閱 DAO 説明中的主題" 創建日期,上次更新的屬性」。
 
 *m_dateLastUpdated*<br/>
-日期和時間的最新 querydef 所做的變更。 若要直接擷取資料表上次更新日期，請呼叫[GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) querydef 成員函式。 如需詳細資訊，請參閱下方的註解。 和 DAO [說明] 中，請參閱主題"DateCreated LastUpdated 屬性 」。
+對查詢 def 進行的最新更改的日期和時間。 要直接檢索表上次更新的日期,請調用查詢def的[GetDateLast 更新](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated)成員函數。 有關詳細資訊,請參閱下面的註釋。 並查看 DAO 説明中的主題" 建立日期,上次更新的屬性。
 
 *m_bUpdatable*<br/>
-指出是否可以變更 recordset 物件。 如果這個屬性為 TRUE，querydef 是可更新;否則，它不是。 可更新，表示可以變更 recordset 物件的查詢定義。 Recordset 物件的可更新的屬性是設定為 TRUE，如果可以更新查詢定義，即使不是可更新結果的資料錄集。 若要直接擷取此屬性，呼叫 querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。
+指示是否可以對查詢def物件進行更改。 如果此屬性為 TRUE,則查詢def 是可升的;如果此屬性為 TRUE,則查詢 def 是可向上的。否則,它不是。 可上可意味著可以更改查詢def物件的查詢定義。 如果查詢定義可以更新,即使生成的記錄集不可更新,查詢def物件的 Upda 可屬性也設置為 TRUE。 要直接檢索此屬性,請調用查詢def 的[CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)成員函數。 有關詳細資訊,請參閱 DAO 説明中的主題"可增加屬性」。
 
 *m_bReturnsRecords*<br/>
-指出外部資料庫的 SQL 傳遞查詢是否傳回記錄。 如果這個屬性為 TRUE，則查詢會傳回的記錄。 若要直接擷取此屬性，請呼叫[CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)。 並非所有 SQL 傳遞查詢外部的資料庫都傳回資料錄。 例如，SQL**更新**陳述式會更新記錄，而不會傳回記錄，同時 SQL**選取**陳述式會傳回記錄。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 傳回記錄屬性 」。
+指示對外部資料庫的 SQL 傳遞查詢是否返回記錄。 如果此屬性為 TRUE,則查詢將返回記錄。 要直接檢查此屬性,請執行電[CdaoQueryDef::取得傳回紀錄](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)。 並非所有 SQL 傳遞到外部資料庫的查詢都返回記錄。 例如,SQL **UPDATE**語句在不返回記錄的情況下更新記錄,而 SQL **SELECT**語句會返回記錄。 有關詳細資訊,請參閱 DAO 説明中的主題"返回記錄屬性"。
 
 *m_strSQL*<br/>
-Recordset 物件所執行的查詢會定義 SQL 陳述式。 SQL 屬性包含決定如何記錄時，未選取，分組，並依序執行查詢的 SQL 陳述式。 您可以使用查詢來選取要包含在動態或快照集類型的資料錄集物件中的記錄。 您也可以定義要修改的資料，而不會傳回記錄的大量查詢。 您可以擷取這個屬性的值直接藉由呼叫 querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)成員函式。
+定義由查詢def物件執行的查詢的SQL語句。 SQL 屬性包含 SQL 語句,用於確定在執行查詢時記錄的選擇、分組和排序方式。 可以使用查詢選擇要包含在動態集或快照類型記錄集物件中的記錄。 您還可以定義批量查詢以修改數據,而無需返回記錄。 您可以通過調用查詢def的[GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)成員函數直接檢索此屬性的值。
 
 *m_strConnect*<br/>
-提供的傳遞查詢所用的資料庫來源的相關資訊。 這項資訊使用的連接字串的格式。 如需詳細資訊即將連接字串，並直接擷取值，這個屬性的相關資訊，請參閱[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函式。
+提供有關傳遞查詢中使用的資料庫源的資訊。 此資訊採用連接字串的形式。 有關連接字串的詳細資訊,以及有關直接檢索此屬性值的資訊,請參閱[CDao 資料庫::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函數。
 
 *m_nODBCTimeout*<br/>
-ODBC 資料庫上執行查詢時，就會發生 Microsoft Jet 資料庫引擎在逾時錯誤之前等候的秒數。 當您使用 ODBC 資料庫，例如 Microsoft SQL Server，因為 ODBC 伺服器的網路流量或負載過重使用可能會延遲。 而不是無限期等候，您可以指定它會產生錯誤之前，Microsoft Jet 引擎的等候時間長度。 預設逾時值為 60 秒。 您可以擷取這個屬性的值直接藉由呼叫 querydef [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 odbc 逾時屬性 」。
+在 ODBC 資料庫上運行查詢之前,Microsoft Jet 資料庫引擎等待的秒數。 當您使用 ODBC 資料庫(如 Microsoft SQL Server)時,可能會由於網路流量或大量使用 ODBC 伺服器而出現延遲。 您可以指定 Microsoft Jet 引擎在產生錯誤之前等待多長時間,而不是無限期地等待。 預設超時值為 60 秒。 您可以通過調用查詢def的[GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout)成員函數直接檢索此屬性的值。 有關詳細資訊,請參閱 DAO 説明中的主題"ODBCTimeout 屬性"。
 
 ## <a name="remarks"></a>備註
 
-Querydef 是類別的物件[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 主要、 次要資料庫，且上述所有的參考會指出所傳回的資訊是如何[GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)類別中的成員函式`CDaoDatabase`。
+查詢def是類別[CDaoQueryDef 的物件](../../mfc/reference/cdaoquerydef-class.md)。 對上述主要、次要和所有的引用指示類別中的[GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成員函數如何`CDaoDatabase`傳回資訊 。
 
-所擷取的資訊[CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成員函式會儲存在`CDaoQueryDefInfo`結構。 呼叫`GetQueryDefInfo`recordset 物件會儲存其 QueryDefs 集合中的資料庫物件。 `CDaoQueryDefInfo` 也會定義`Dump`成員函式，在偵錯組建。 您可以使用`Dump`傾印的內容`CDaoQueryDefInfo`物件。 類別`CDaoDatabase`也提供用來直接存取的所有屬性中傳回的成員函式`CDaoQueryDefInfo`物件，因此您可能很少需要呼叫`GetQueryDefInfo`。
+[CDao 資料庫檢索的資訊::getQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成員函數`CDaoQueryDefInfo`存儲在結構 中。 調用`GetQueryDefInfo`其 QueryDefs 集合中的資料庫物件,其中儲存查詢def物件。 `CDaoQueryDefInfo`還在調試生成中`Dump`定義成員函數。 可以使用`Dump`轉`CDaoQueryDefInfo`儲 對象的內容。 類別`CDaoDatabase`提供成員函數,用於直接存`CDaoQueryDefInfo`取物件中傳回的所有屬性,因此您可能很少需要`GetQueryDefInfo`呼叫 。
 
-當您將新的欄位或參數物件附加至欄位或參數的 recordset 物件集合時，如果基礎資料庫不支援指定為新物件的資料類型，會擲回例外狀況。
+將新欄位或參數物件追加到查詢def物件的欄位或參數集合時,如果基礎資料庫不支援為新物件指定的數據類型,則將引發異常。
 
-日期和時間設定被衍生自 querydef 已建立或上次更新的電腦。 在多使用者環境中，使用者應該直接從檔案伺服器使用取得這些設定**net 時間**命令，以避免 DateCreated 和 LastUpdated 的屬性設定不一致的地方。
+日期和時間設置派生自創建或上次更新查詢def 的電腦。 在多使用者環境中,使用者應使用**網路時間**命令直接從檔伺服器獲取這些設置,以避免在 Date"創建"和"上次更新"屬性設置中出現差異。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdao.h
+**標題:** afxdao.h
 
 ## <a name="see-also"></a>另請參閱
 

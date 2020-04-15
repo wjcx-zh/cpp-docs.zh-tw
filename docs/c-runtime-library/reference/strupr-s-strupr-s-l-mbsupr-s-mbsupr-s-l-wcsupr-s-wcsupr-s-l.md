@@ -1,6 +1,6 @@
 ---
 title: _strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strupr_s
 - _strupr_s_l
@@ -8,6 +8,12 @@ api_name:
 - _wcsupr_s_l
 - _mbsupr_s_l
 - _wcsupr_s
+- _o__mbsupr_s
+- _o__mbsupr_s_l
+- _o__strupr_s
+- _o__strupr_s_l
+- _o__wcsupr_s
+- _o__wcsupr_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +70,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-ms.openlocfilehash: 04ae6fe34d51de8b026cb1c3536f4e3ed6fc5c22
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2fd90f462787df739f41a9e8e10f84d2fc52c456
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362990"
 ---
 # <a name="_strupr_s-_strupr_s_l-_mbsupr_s-_mbsupr_s_l-_wcsupr_s-_wcsupr_s_l"></a>_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
 
 使用目前的地區設定或傳入的指定地區設定，將字串轉換成大寫。 這些版本的 [_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsupr_s**和 **_mbsupr_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsupr_s**和 **_mbsupr_s_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -138,30 +145,32 @@ errno_t _mbsupr_s_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*Str*<br/>
 改為大寫的字串。
 
-*numberOfElements*<br/>
+*元素數*<br/>
 緩衝區的大小。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
 如果成功，則傳回零；如果失敗，則傳回非零的錯誤碼。
 
-這些函式會驗證它們的參數。 如果*str*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。 如果*numberOfElements*小於字串的長度，函數會傳回**ERANGE** ，並將**errno**設定為**ERANGE**。
+這些函式會驗證它們的參數。 如果*str*是**NULL**指標,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將傳回**EINVAL**並將**errno**設定為**EINVAL**。 如果*元素數*小於字串的長度,則函數將傳回**ERANGE**並將**errno**設定為**ERANGE**。
 
 ## <a name="remarks"></a>備註
 
-**_Strupr_s**函式會就地將*str*中的每個小寫字母轉換成大寫。 **_wcsupr_s**是 **_strupr_s**的寬字元版本。 **_mbsupr_s**是 **_strupr_s**的多位元組字元版本。
+**_strupr_s**函數將每個小寫字母以*str*轉換為大寫。 **_wcsupr_s**是 **_strupr_s**的寬字元版本。 **_mbsupr_s**是 **_strupr_s**的多位元位元版本。
 
-轉換是由地區設定的 [ **LC_CTYPE**類別] 設定所決定。 不會影響其他字元。 如需**LC_CTYPE**的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本會使用目前的地區設定;具有 **_l**尾碼的前景相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+轉換由區域設置**LC_CTYPE**類別設置確定。 不會影響其他字元。 有關**LC_CTYPE**的詳細資訊,請參考[設定區域設定](setlocale-wsetlocale.md)。 沒有 **_l**後綴的這些函數的版本使用當前區域設置;具有 **_l**後綴的視點是相同的,只是它們使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -174,18 +183,18 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_strupr_s**， **_strupr_s_l**|\<string.h>|
-|**_wcsupr_s**、 **_wcsupr_s_l**、 **_mbsupr_s**、 **_mbsupr_s_l**|\<string.h> 或 \<wchar.h>|
+|**_strupr_s**, **_strupr_s_l**|\<string.h>|
+|**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<string.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
 請參閱 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md) 的範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)<br/>

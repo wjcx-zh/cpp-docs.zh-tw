@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 655d7b08c452bed94277aaed2cc8368aaeb462c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 59201fbaba6f2e8ae0ed5f53925b287b4d33aab3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454934"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367263"
 ---
-# <a name="uniquelock-class"></a>unique_lock 類別
+# <a name="unique_lock-class"></a>unique_lock 類別
 
 表示可以具現化的範本，用來建立管理鎖定和解除鎖定 `mutex` 的物件。
 
@@ -24,9 +24,9 @@ class unique_lock;
 
 ## <a name="remarks"></a>備註
 
-範本引數 `Mutex` 必須指定一個「mutex 類型」。
+範本引數 `Mutex` 必須指定一個「mutex 類型」**。
 
-就內部而言`unique_lock` , 會儲存相關聯`mutex`物件的指標, 以及**布林**值, `mutex`指出目前的執行緒是否擁有。
+在內部,`unique_lock`儲存指向`mutex`關聯 物件的指標和指示當前線程是否擁有`mutex`的**bool。**
 
 ## <a name="members"></a>成員
 
@@ -41,40 +41,40 @@ class unique_lock;
 |名稱|描述|
 |----------|-----------------|
 |[unique_lock](#unique_lock)|建構 `unique_lock` 物件。|
-|[~unique_lock 解構函式](#dtorunique_lock_destructor)|釋放任何與 `unique_lock` 物件相關聯的資源。|
+|[*unique_lock析構函數](#dtorunique_lock_destructor)|釋放任何與 `unique_lock` 物件相關聯的資源。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[lock](#lock)|封鎖呼叫的執行緒，直到執行緒取得相關聯 `mutex` 的擁有權。|
-|[mutex](#mutex)|擷取相關聯 `mutex` 的已儲存指標。|
+|[鎖定](#lock)|封鎖呼叫的執行緒，直到執行緒取得相關聯 `mutex` 的擁有權。|
+|[互斥](#mutex)|擷取相關聯 `mutex` 的已儲存指標。|
 |[owns_lock](#owns_lock)|指定呼叫的執行緒是否擁有相關聯 `mutex`。|
-|[release](#release)|從相關聯 `mutex` 物件解除 `unique_lock` 物件的關聯。|
-|[swap](#swap)|交換指定物件的相關聯 `mutex` 和擁有權狀態。|
+|[釋放](#release)|從相關聯 `mutex` 物件解除 `unique_lock` 物件的關聯。|
+|[交換](#swap)|交換指定物件的相關聯 `mutex` 和擁有權狀態。|
 |[try_lock](#try_lock)|嘗試在不造成封鎖的情況下，取得關聯 `mutex` 的擁有權。|
 |[try_lock_for](#try_lock_for)|嘗試在不造成封鎖的情況下，取得關聯 `mutex` 的擁有權。|
 |[try_lock_until](#try_lock_until)|嘗試在不造成封鎖的情況下，取得關聯 `mutex` 的擁有權。|
-|[unlock](#unlock)|釋放相關聯 `mutex` 的擁有權。|
+|[解除鎖定](#unlock)|釋放相關聯 `mutex` 的擁有權。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[operator bool](#op_bool)|指定呼叫的執行緒是否有相關聯 `mutex` 的擁有權。|
-|[operator=](#op_eq)|複製指定物件的已儲存 `mutex` 指標和相關聯擁有權狀態。|
+|[運算子布爾](#op_bool)|指定呼叫的執行緒是否有相關聯 `mutex` 的擁有權。|
+|[運算子*](#op_eq)|複製指定物件的已儲存 `mutex` 指標和相關聯擁有權狀態。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 *unique_lock*
 
 ## <a name="requirements"></a>需求
 
-**標頭:** \<mutex >
+**標題:**\<互斥>
 
 **命名空間：** std
 
-## <a name="lock"></a>  lock
+## <a name="lock"></a><a name="lock"></a>鎖
 
 封鎖呼叫的執行緒，直到執行緒取得相關聯 `mutex` 的擁有權。
 
@@ -84,13 +84,13 @@ void lock();
 
 ### <a name="remarks"></a>備註
 
-如果儲存`mutex`的指標是 Null, 則這個方法會[](../standard-library/system-error-class.md)擲回錯誤碼為的`operation_not_permitted`system_error。
+如果儲存`mutex`的指標為 NULL,則此方法將引發一個錯誤代碼為`operation_not_permitted`的[system_error。](../standard-library/system-error-class.md)
 
 如果呼叫的執行緒已經擁有相關聯 `mutex`，此方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
-否則, 這個方法會`lock`在相關聯`mutex`的上呼叫, 並將內部執行緒擁有權旗標設定為**true**。
+否則,此方法將調用`lock`關聯`mutex`的 ,並將內部線程擁有權標誌設定為**true**。
 
-## <a name="mutex"></a>  mutex
+## <a name="mutex"></a><a name="mutex"></a>互斥
 
 擷取相關聯 `mutex` 的已儲存指標。
 
@@ -98,7 +98,7 @@ void lock();
 mutex_type *mutex() const noexcept;
 ```
 
-## <a name="op_bool"></a>  operator bool
+## <a name="operator-bool"></a><a name="op_bool"></a>運算子布爾
 
 指定呼叫的執行緒是否有相關聯 mutex 的擁有權。
 
@@ -108,9 +108,9 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>傳回值
 
-如果執行緒擁有 mutex, 則為**true** ;否則**為 false**。
+如果線程擁有互斥體,**則為 true;** 否則**錯誤**。
 
-## <a name="op_eq"></a>  operator=
+## <a name="operator"></a><a name="op_eq"></a>運算子*
 
 複製指定物件的已儲存 `mutex` 指標和相關聯擁有權狀態。
 
@@ -120,8 +120,8 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*另一方面*\
-          `unique_lock` 物件。
+*其他*\
+`unique_lock` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -131,9 +131,9 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 如果呼叫的執行緒擁有先前的相關聯 `mutex`，在此方法於 `mutex` 上呼叫 `unlock` 之前，它會指派新的值。
 
-複製之後, 這個方法會將*其他*設定為預設結構的狀態。
+複製後,此方法將 *「其他」* 設定為預設構造狀態。
 
-## <a name="owns_lock"></a>  owns_lock
+## <a name="owns_lock"></a><a name="owns_lock"></a>owns_lock
 
 指定呼叫的執行緒是否擁有相關聯 `mutex`。
 
@@ -143,9 +143,9 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果執行緒擁有, `mutex`則為 true, 否則為**false**。
+如果線程擁有`mutex`,**則為 true。** 否則,**假**。
 
-## <a name="release"></a>  release
+## <a name="release"></a><a name="release"></a>釋放
 
 從相關聯 `mutex` 物件解除 `unique_lock` 物件的關聯。
 
@@ -159,9 +159,9 @@ mutex_type *release() noexcept;
 
 ### <a name="remarks"></a>備註
 
-這個方法會將儲存`mutex`的指標值設定為 0, 並將內部`mutex`擁有權旗標設定為**false**。
+此方法將儲存`mutex`指標的值設定為 0,並將內部`mutex`擁有權旗標設定為**false**。
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>交換
 
 交換指定物件的相關聯 `mutex` 和擁有權狀態。
 
@@ -171,10 +171,10 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*另一方面*\
-          `unique_lock` 物件。
+*其他*\
+`unique_lock` 物件。
 
-## <a name="try_lock"></a>  try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 嘗試在不造成封鎖的情況下，取得關聯 `mutex` 的擁有權。
 
@@ -184,15 +184,15 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
+**如果**該方法成功獲得 的`mutex`擁有權,否則,**假**。
 
 ### <a name="remarks"></a>備註
 
-如果儲存`mutex`的指標是 Null, 則方法會擲[](../standard-library/system-error-class.md)回錯誤碼為的`operation_not_permitted`system_error。
+如果儲存`mutex`的指標為 NULL,則該方法將引發一個錯誤代碼為`operation_not_permitted`的[system_error。](../standard-library/system-error-class.md)
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
-## <a name="try_lock_for"></a>  try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
 嘗試在不造成封鎖的情況下，取得關聯 `mutex` 的擁有權。
 
@@ -209,15 +209,15 @@ bool try_lock_for(
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
+**如果**該方法成功獲得 的`mutex`擁有權,否則,**假**。
 
 ### <a name="remarks"></a>備註
 
-如果儲存`mutex`的指標是 Null, 則方法會擲[](../standard-library/system-error-class.md)回錯誤碼為的`operation_not_permitted`system_error。
+如果儲存`mutex`的指標為 NULL,則該方法將引發一個錯誤代碼為`operation_not_permitted`的[system_error。](../standard-library/system-error-class.md)
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
-## <a name="try_lock_until"></a>  try_lock_until
+## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
 
 嘗試在不造成封鎖的情況下，取得關聯 `mutex` 的擁有權。
 
@@ -235,15 +235,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
+**如果**該方法成功獲得 的`mutex`擁有權,否則,**假**。
 
 ### <a name="remarks"></a>備註
 
-如果儲存`mutex`的指標是 Null, 則方法會擲[](../standard-library/system-error-class.md)回錯誤碼為的`operation_not_permitted`system_error。
+如果儲存`mutex`的指標為 NULL,則該方法將引發一個錯誤代碼為`operation_not_permitted`的[system_error。](../standard-library/system-error-class.md)
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
-## <a name="unique_lock"></a>  unique_lock Constructor
+## <a name="unique_lock-constructor"></a><a name="unique_lock"></a>unique_lock建構函數
 
 建構 `unique_lock` 物件。
 
@@ -273,7 +273,7 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>參數
 
-*.Mtx*\
+*Mtx*\
 mutex 類型物件。
 
 *Rel_time*\
@@ -282,16 +282,16 @@ mutex 類型物件。
 *Abs_time*\
 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
-*另一方面*\
-          `unique_lock` 物件。
+*其他*\
+`unique_lock` 物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構相關聯 mutex 指標值為 0 的物件。
 
-第二個函式會將相關聯的 mutex 狀態與*其他的相互*關聯。 移動之後,*其他*則不再與 mutex 相關聯。
+第二個構造*函數從其他*移動關聯的互斥體狀態。 移動後,*其他*不再與互斥體關聯。
 
-其餘的函式會將 & *.mtx*儲存`mutex`為儲存的指標。 `mutex` 的擁有權取決於第二個引數 (如果存在的話)。
+其餘的構造函數將& *Mtx*存儲`mutex`為存儲的指標。 `mutex` 的擁有權取決於第二個引數 (如果存在的話)。
 
 |||
 |-|-|
@@ -300,9 +300,9 @@ mutex 類型物件。
 |`Defer`|將假設呼叫的執行緒不擁有 `mutex` 物件。 當呼叫建構函式時，不能鎖定 `Mtx`。|
 |`Try`|擁有權是透過在相關聯 `mutex` 物件上呼叫 `try_lock` 來決定。 建構函式不會擲回任何項目。|
 |`Rel_time`|擁有權是透過呼叫 `try_lock_for(Rel_time)` 來決定。|
-|`Abs_time`|擁有權透過呼叫 `try_lock_until(Abs_time)` 來決定。|
+|`Abs_time`|擁有權是透過呼叫 `try_lock_until(Abs_time)` 來決定。|
 
-## <a name="dtorunique_lock_destructor"></a>  ~unique_lock 解構函式
+## <a name="unique_lock-destructor"></a><a name="dtorunique_lock_destructor"></a>  ~unique_lock 解構函式
 
 釋放任何與 `unique_lock` 物件相關聯的資源。
 
@@ -314,7 +314,7 @@ mutex 類型物件。
 
 如果呼叫的執行緒擁有相關聯 `mutex`，解構函式會透過在 `mutex` 物件上呼叫 unlock 來釋放擁有權。
 
-## <a name="unlock"></a>  unlock
+## <a name="unlock"></a><a name="unlock"></a>解除鎖定
 
 釋放相關聯 `mutex` 的擁有權。
 
@@ -326,9 +326,9 @@ void unlock();
 
 如果呼叫的執行緒不擁有相關聯 `mutex`，此方法會擲回錯誤碼為 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
 
-否則, 這個方法會`unlock`在相關聯`mutex`的上呼叫, 並將內部執行緒擁有權旗標設定為**false**。
+否則,此方法將調用`unlock`關聯`mutex`的 ,並將內部線程擁有權標誌設置為**false**。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[標題檔案參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<互斥>](../standard-library/mutex.md)

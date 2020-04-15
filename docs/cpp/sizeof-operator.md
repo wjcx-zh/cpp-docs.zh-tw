@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: bc1165cf1df3933575013906d1b24673467f0b36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178713"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365573"
 ---
 # <a name="sizeof-operator"></a>sizeof 運算子
 
-根據**char**類型的大小，產生其運算元的大小。
+相對於**字元**類型的大小,生成其操作數的大小。
 
 > [!NOTE]
->  如需 `sizeof ...` 運算子的詳細資訊，請參閱[省略號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md)。
+> 有關運算子的資訊,`sizeof ...`請參考[圓和瓦里亞迪奇樣本](../cpp/ellipses-and-variadic-templates.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -29,15 +29,15 @@ sizeof  ( type-name )
 
 ## <a name="remarks"></a>備註
 
-**Sizeof**運算子的結果是 `size_t`的類型，包含檔案中定義的整數類型 \<stddef.h >。 這個運算子可以避免在您的程式中指定與電腦相關的資料大小。
+**大小運算符**的結果為類型`size_t`,在包含\<檔 stddef.h>中定义的积分类型。 這個運算子可以避免在您的程式中指定與電腦相關的資料大小。
 
-**Sizeof**的運算元可以是下列其中一項：
+**大小**操作數可以是以下操作數之一:
 
-- 類型名稱。 若要搭配類型名稱使用**sizeof** ，此名稱必須以括弧括住。
+- 類型名稱。 要使用 具有類型名稱**的大小**,名稱必須包含在括弧中。
 
-- 運算式。 與運算式搭配使用時，可以使用或不搭配括弧來指定**sizeof** 。 並不會評估運算式。
+- 運算式。 當與運算式一起使用時,可以使用或沒有括弧指定**size。** 並不會評估運算式。
 
-當**sizeof**運算子套用至**char**類型的物件時，它會產生1。 當**sizeof**運算子套用至陣列時，它會產生該陣列中的總位元組數，而不是陣列識別碼所表示的指標大小。 若要取得陣列識別碼所表示的指標大小，請將它當做參數傳遞給使用**sizeof**的函式。 例如：
+當**sizeof**運算元應用於**字元**類型的物件時,它會產生 1。 當**sizeOF**運算子應用於陣列時,它將生成該陣列中的位元組總數,而不是數位標識符表示的指標的大小。 要取得數位識別碼表示的指標的大小,請將其作為參數傳遞給使用**size 的**函數。 例如：
 
 ## <a name="example"></a>範例
 
@@ -71,19 +71,19 @@ The length of Hello, world! is: 14
 The size of the pointer is 4
 ```
 
-當**sizeof**運算子套用至**類別**、**結構** **或等**位類型時，結果會是該類型物件中的位元組數目，加上加入以對齊字邊界上成員的任何填補。 在加上個別成員的儲存需求之後，其結果不一定會對應計算的大小。 [/Zp](../build/reference/zp-struct-member-alignment.md)編譯器選項和[pack](../preprocessor/pack.md) pragma 會影響成員的對齊界限。
+當**sizeof**運算子應用於**類**、**結構**類型或**聯合**類型時,結果是該類型物件中的位元組數,以及為對齊單詞邊界上的成員添加的任何填充。 在加上個別成員的儲存需求之後，其結果不一定會對應計算的大小。 [/Zp](../build/reference/zp-struct-member-alignment.md)編譯器選項和[包](../preprocessor/pack.md)雜注會影響成員的對齊邊界。
 
-**Sizeof**運算子絕不會產生0，即使是空的類別也一樣。
+即使對於空類,**大小運算子**也永遠不會產生 0。
 
-**Sizeof**運算子不能與下列運算元搭配使用：
+**大小運算子**不能與以下操作數一起使用:
 
-- 函數。 （不過， **sizeof**可以套用至函式的指標）。
+- 函數。 (但是,**大小**可以應用於指向函數的指標。
 
 - 位元欄位。
 
 - 未定義的類別。
 
-- 類型**void**。
+- 型**態 void**。
 
 - 以動態方式配置的陣列。
 
@@ -93,11 +93,11 @@ The size of the pointer is 4
 
 - 以括號括住的不完整類型名稱。
 
-當**sizeof**運算子套用至參考時，結果會與將**sizeof**套用至物件本身相同。
+當**sizeOF**運算子應用於引用時,結果與將**sizesize**應用於物件本身的結果相同。
 
-如果可變大小陣列是結構的最後一個元素， **sizeof**運算子會傳回不含陣列的結構大小。
+如果大小陣列是結構的最後一個元素,**則 sizeof**運算符返回沒有陣列的結構的大小。
 
-**Sizeof**運算子通常用來計算陣列中的元素數目，其使用的運算式格式如下：
+**sizeof**運算子通常用於使用表單的運算子組中的元素數:
 
 ```cpp
 sizeof array / sizeof array[0]

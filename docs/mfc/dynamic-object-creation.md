@@ -1,29 +1,30 @@
 ---
 title: 動態物件建立
-ms.date: 11/04/2016
+ms.date: 03/27/2020
 helpviewer_keywords:
 - object creation [MFC], dynamically at run time
 - CObject class [MFC], dynamic object creation
 - objects [MFC], creating dynamically at run time
 - dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
-ms.openlocfilehash: 3478e5481c177e0ebca1e6b5c2cd07509371c5ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40a17d3ed458d0634fd5bf27b54d0a36a65e35b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364800"
 ---
 # <a name="dynamic-object-creation"></a>動態物件建立
 
-本文說明如何在執行階段動態建立物件。 程序會使用執行階段類別資訊，如本文所述[存取執行階段類別資訊](../mfc/accessing-run-time-class-information.md)。
+本文說明如何在執行階段動態建立物件。 該過程使用運行時類資訊,如[訪問運行時類資訊](../mfc/accessing-run-time-class-information.md)一文中所述。
 
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>動態建立指定其為執行階段類別的物件
+#### <a name="dynamically-create-an-object-given-its-run-time-class"></a>在執行時類別中動態建立物件
 
-1. 使用下列程式碼，透過 `CreateObject` 的 `CRuntimeClass` 函式動態建立物件。 請注意，在失敗時，`CreateObject`會傳回**NULL**而非引發例外狀況：
+1. 使用以下代碼使用的`CreateObject`函數動態創建物件。 `CRuntimeClass` 發生故障時,`CreateObject`傳回**NULL**而不是引發異常:
 
    [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CObject](../mfc/using-cobject.md)
+[Destroying Window Objects](tn017-destroying-window-objects.md)使用[CObject](using-cobject.md)銷毀視窗物件
+

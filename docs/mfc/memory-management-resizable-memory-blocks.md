@@ -9,19 +9,19 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: 124a2599e1523d5393fcf6255c88de0fd8cd72cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364780"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>記憶體管理：可調整大小的記憶體區塊
 
-**新**並**刪除**運算子，本文所述[記憶體管理：範例](../mfc/memory-management-examples.md)，適合用於配置和解除配置的固定大小的記憶體區塊和物件。 有時候，您的應用程式可能需要可調整大小的記憶體區塊。 您必須使用標準的 C 執行階段程式庫函式[malloc](../c-runtime-library/reference/malloc.md)， [realloc](../c-runtime-library/reference/realloc.md)，並[免費](../c-runtime-library/reference/free.md)來管理堆積上的可調整的記憶體區塊。
+新的**new****和刪除**運算符,在文章[記憶體管理:示例](../mfc/memory-management-examples.md)中介紹,非常適合分配和釋放固定大小的記憶體塊和物件。 有時,應用程式可能需要可調整大小的記憶體區塊。 您必須使用標準的 C 執行時庫函數[malloc、realloc](../c-runtime-library/reference/malloc.md)和[免費](../c-runtime-library/reference/free.md)來管理堆上可調整[realloc](../c-runtime-library/reference/realloc.md)大小的記憶體區塊。
 
 > [!IMPORTANT]
->  混合**新**並**刪除**運算子與可調整大小的記憶體配置上的函式相同的記憶體區塊將會導致損毀的記憶體，在 MFC 的偵錯版本。 您不應該使用**realloc**上的記憶體區塊，以配置**新**。 同樣地，您不應該配置的記憶體區塊**新**運算子並將它與刪除**免費**，或使用**刪除**所配置的記憶體區塊的運算子**malloc**。
+> 將**新的**運算子和**刪除**運算元與同一記憶體區塊上的可調整大小的記憶體分配函數混合將導致 MFC 的調試版本中的記憶體損壞。 不應在使用**new**分配的記憶體區塊上使用**realloc。** 同樣,您不應使用**新**運算符分配記憶體區塊,並使用**空閒**的刪除記憶體區塊,或使用使用**malloc**分配的記憶體區塊上的**刪除**運算符號。
 
 ## <a name="see-also"></a>另請參閱
 

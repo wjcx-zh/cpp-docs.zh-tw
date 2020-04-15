@@ -1,17 +1,17 @@
 ---
-title: 委派的函C++式（）
-description: 在中使用委派C++的函式來叫用其他的函式，並減少程式碼重複。
+title: 委派建構函數 (C++)
+description: 在C++中使用委派構造函數來調用其他構造函數並減少代碼重複。
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250671"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316664"
 ---
 # <a name="delegating-constructors"></a>委派建構函式
 
-許多類別都有多個執行類似專案的函式，例如，驗證參數：
+許多類別有多個執行類似操作的建構函數,例如,驗證參數:
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-您可以藉由新增可執行所有驗證的函式來減少重複的程式碼，但是 `class_c` 的程式碼會更容易瞭解和維護，如果一個函式可以將一些工作委派給另一個函式。 若要加入委派的函式，請使用 `constructor (. . .) : constructor (. . .)` 語法：
+您可以通過添加執行所有驗證的函數來減少重複代碼,但如果一個構造函數可以將某些工作委託給`class_c`另一個構造函數,則代碼更易於理解和維護。 要新增委派建構函數,請使用語法`constructor (. . .) : constructor (. . .)`:
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-當您逐步執行前一個範例時，請注意，此函式 `class_c(int, int, int)` 會先呼叫 `class_c(int, int)`的函式，而該函式會接著呼叫 `class_c(int)`。 每個函式都只會執行其他函式未執行的工作。
+在遍歷前面的範例中,請注意建構函數`class_c(int, int, int)`首先呼叫式函數,而建構函數`class_c(int, int)`又呼`class_c(int)`叫 。 每個構造函數只執行其他構造函數未執行的工作。
 
-第一個呼叫的函式會初始化物件，使其所有成員都在該點初始化。 您無法在委派給另一個函式的函式中執行成員初始化，如下所示：
+調用物件的第一個構造函數將初始化該物件,以便此時為其所有成員初始化。 不能在委託給其他構造函數的構造函數中執行成員初始化,如下所示:
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-下一個範例示範如何使用非靜態資料成員初始化運算式。 請注意，如果某個函數也初始化了指定的資料成員，則會覆寫成員初始化運算式：
+下一個範例顯示了非靜態數據成員初始化器的使用。 請注意,如果建構函數還初始化給定的資料成員,則成員初始化器將被覆蓋:
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-「函式委派」語法不會防止意外建立的「函式遞迴」（Constructor1 會呼叫呼叫 Constructor1 的 Constructor2），而且不會擲回任何錯誤，直到發生堆疊溢位為止。 您必須負責避免迴圈。
+建構函數委派語法不會阻止意外創建構造函數遞歸 — 構造函數1 調用構造函數2,調用構造函數 1 — 並且在存在堆疊溢出之前不會引發任何錯誤。 你有責任避免迴圈。
 
 ```cpp
 class class_f{

@@ -11,39 +11,39 @@ helpviewer_keywords:
 - TBSTYLE_EX_DRAWDDARROWS
 - TBN_DROPDOWN notification [MFC]
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
-ms.openlocfilehash: 8d1a13b1921f111d97bb515e7932a0116277f9ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc4df4c07ec4b8bc5b488925cbb140609302186
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411600"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365058"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>在工具列控制項中使用下拉按鈕
 
-除了標準按鈕，工具列也可以有下拉式按鈕。 下拉式清單按鈕通常會以附加向下箭號的目前狀態。
+除了標準按鈕外,工具列還可以具有下拉按鈕。 下拉按鈕通常由附加的下箭頭指示。
 
 > [!NOTE]
->  只有當已設定延伸樣式 TBSTYLE_EX_DRAWDDARROWS，會出現連接向下箭號。
+> 僅當設置了TBSTYLE_EX_DRAWDDARROWS擴展樣式時,才會顯示附加的向下箭頭。
 
-當使用者按一下此箭號 （或在按鈕本身，如果沒有出現箭頭時） 時，TBN_DROPDOWN 告知訊息會傳送至工具列控制項的父代。 您可以處理此通知並顯示快顯功能表中;類似於 Internet Explorer 的行為。
+當用戶按下此箭頭(或按鈕本身,如果沒有箭頭),TBN_DROPDOWN通知消息發送到工具列控制件的父級。 然後,您可以處理此通知並顯示一個彈出式功能表;例如,您可以處理此通知並顯示一個彈出式功能表。類似於 Internet 資源管理員的行為。
 
-下列程序說明如何實作快顯功能表的下拉工具列按鈕：
+以下過程展示如何使用彈出式選單實現下拉工具列按鈕:
 
-### <a name="to-implement-a-drop-down-button"></a>若要實作下拉式按鈕
+### <a name="to-implement-a-drop-down-button"></a>實現下拉按鈕
 
-1. 一旦您`CToolBarCtrl`已建立物件、 設定 TBSTYLE_EX_DRAWDDARROWS 樣式，使用下列程式碼：
+1. 建立`CToolBarCtrl`物件後,請使用以下代碼設定TBSTYLE_EX_DRAWDDARROWS樣式:
 
    [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
 
-1. 為任何新設定 TBSTYLE_DROPDOWN 樣式 ([InsertButton](../mfc/reference/ctoolbarctrl-class.md#insertbutton)或是[AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons)) 或現有的 ([SetButtonInfo](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)) 會下拉按鈕的按鈕。 下列範例示範如何修改現有按鈕在`CToolBarCtrl`物件：
+1. 設定任何新 ([插入按鈕](../mfc/reference/ctoolbarctrl-class.md#insertbutton)或[附加按鈕](../mfc/reference/ctoolbarctrl-class.md#addbuttons)) 或將成為下拉按鈕的現有[(SetButtonInfo)](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)按鈕的TBSTYLE_DROPDOWN樣式。 以下範例展示修改`CToolBarCtrl`物件中的現有按鈕:
 
    [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
 
-1. TBN_DROPDOWN 處理常式加入工具列物件的父類別。
+1. 將TBN_DROPDOWN處理程式添加到工具列物件的父類。
 
    [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
 
-1. 在新的處理常式中顯示適當的快顯功能表。 下列程式碼示範一種方法：
+1. 在新處理程式中,顯示相應的彈出功能表。 以下代碼展示了一種方法:
 
    [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
 

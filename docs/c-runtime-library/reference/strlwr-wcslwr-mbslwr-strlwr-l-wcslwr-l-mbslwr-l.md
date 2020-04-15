@@ -1,6 +1,6 @@
 ---
 title: _strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strlwr_l
 - _strlwr
@@ -8,6 +8,12 @@ api_name:
 - _mbslwr_l
 - _wcslwr
 - _mbslwr
+- _o__mbslwr
+- _o__mbslwr_l
+- _o__strlwr
+- _o__strlwr_l
+- _o__wcslwr
+- _o__wcslwr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -60,19 +67,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 7393f634aeb7de0e8e65866dc11c6d41cc9de6b8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 40bf64af8284d84c6e58bcb3e8591a1ef6fc9f48
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947433"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363823"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
 
-將字串轉換成小寫。 這些函式已有更安全的版本可供使用，請參閱 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。
+將字串轉換為小寫。 這些函式已有更安全的版本可供使用，請參閱 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbslwr**和 **_mbslwr_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbslwr**和 **_mbslwr_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -129,10 +136,10 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*Str*<br/>
 要轉換為小寫的以 Null 終止的字串。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -141,13 +148,15 @@ unsigned char *_mbslwr_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strlwr**函式會將*str*中的任何大寫字母轉換成小寫，如地區設定的**LC_CTYPE**分類設定所決定。 不會影響其他字元。 如需**LC_CTYPE**的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本，會針對其與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_strlwr**函數將*str*中的任何大寫字母轉換為小寫字母,由區域設置**的LC_CTYPE**類別設置確定。 不會影響其他字元。 有關**LC_CTYPE**的詳細資訊,請參考[設定區域設定](setlocale-wsetlocale.md)。 沒有 **_l**後綴的這些函數的版本使用當前區域設置來執行與區域設置相關的行為;具有 **_l**後綴的版本是相同的,只是它們使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**_Wcslwr**和 **_mbslwr**函式是寬字元和多位元組字元版本的 **_strlwr**。 **_Wcslwr**的引數和傳回值是寬字元字串; **_mbslwr**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**_wcslwr**和 **_mbslwr**函數是寬字元和多位元組位元版本的 **_strlwr。** **_wcslwr**的參數和返回值是寬字元字串;**_mbslwr**是多位元位位元串。 除此之外，這三個函式的行為相同。
 
-如果*str*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回原始字串，並將**errno**設定為**EINVAL**。
+如果*str*是**NULL**指標,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將傳回原始字串並將**errno**設定為**EINVAL**。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -160,9 +169,9 @@ unsigned char *_mbslwr_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_strlwr**、 **_strlwr_l**|\<string.h>|
-|**_wcslwr**、 **_wcslwr_l**|\<string.h> 或 \<wchar.h>|
-|**_mbslwr**、 **_mbslwr_l**|\<mbstring.h>|
+|**_strlwr**, **_strlwr_l**|\<string.h>|
+|**_wcslwr**, **_wcslwr_l**|\<string.h> 或 \<wchar.h>|
+|**_mbslwr**, **_mbslwr_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -204,6 +213,6 @@ Upper: THE STRING TO END ALL STRINGS!
 
 ## <a name="see-also"></a>另請參閱
 
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

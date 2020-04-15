@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161377"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363797"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
 
@@ -36,11 +36,11 @@ template <typename T, typename E>
 `VectorView` 物件中包含的元素類型。
 
 *E*<br/>
-指定二元述詞，以測試是否與 `T`型別的值相等。 預設值為 `std::equal_to<T>`。
+指定二元述詞，以測試是否與 `T`型別的值相等。 預設值是 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>備註
 
-`VectorView`類別會實作[2&gt;{3&gt;windows::foundation::collections::ivectorview&lt;t&lt;3}&lt;2}\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)介面，也支援標準樣板程式庫迭代器。
+該`VectorView`類實現[Windows:基礎::集合::iVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)介面,並支援標準範本庫反覆運算器。
 
 ### <a name="members"></a>成員
 
@@ -48,19 +48,19 @@ template <typename T, typename E>
 
 |名稱|描述|
 |----------|-----------------|
-|[VectorView::VectorView](#ctor)|初始化 VectorView 類別的新執行個體。|
+|[向量檢視:向量檢視](#ctor)|初始化 VectorView 類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[VectorView::First](#first)|傳回迭代器，指定 VectorView 中的第一個項目。|
-|[VectorView::GetAt](#getat)|擷取由指定之索引所表示的目前 VectorView 項目。|
-|[VectorView::GetMany](#getmany)|由指定的索引處開始，從目前 VectorView 擷取一連串項目。|
-|[VectorView::IndexOf](#indexof)|在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。|
+|[向量檢視:第一](#first)|傳回迭代器，指定 VectorView 中的第一個項目。|
+|[向量檢視:抓取](#getat)|擷取由指定之索引所表示的目前 VectorView 項目。|
+|[向量檢視:抓取許多](#getmany)|由指定的索引處開始，從目前 VectorView 擷取一連串項目。|
+|[向量檢視:索引](#indexof)|在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。|
 |[VectorView::Size](#size)|傳回目前 VectorView 物件中的項目數。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `VectorView`
 
@@ -70,7 +70,7 @@ template <typename T, typename E>
 
 **命名空間：** Platform::Collections
 
-## <a name="first"></a>  Vectorview:: First 方法
+## <a name="vectorviewfirst-method"></a><a name="first"></a>向量檢視:第一種方法
 
 傳回迭代器，指定 VectorView 中的第一個項目。
 
@@ -88,9 +88,9 @@ virtual Windows::Foundation::Collections::IIterator<T>^
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如， `auto x = myVectorView->First();` 。
+保存 First() 傳回的反覆運算器的一個方便方法是將返回值分配給使用**自動**類型扣減關鍵字聲明的變數。 例如： `auto x = myVectorView->First();` 。
 
-## <a name="getat"></a>  Vectorview:: Getat 方法
+## <a name="vectorviewgetat-method"></a><a name="getat"></a>向量檢視:GetAt 方法
 
 擷取由指定之索引所表示的目前 VectorView 項目。
 
@@ -105,14 +105,14 @@ T GetAt(
 
 ### <a name="parameters"></a>參數
 
-*index*<br/>
+*指數*<br/>
 以零起始、不帶正負號的整數，在 VectorView 物件中指定特別項目。
 
 ### <a name="return-value"></a>傳回值
 
-`index` 參數指定的項目。 VectorView 範本參數所指定的項目類型*T*。
+`index` 參數指定的項目。 元素類型由 VectorView 範本參數*T*指定。
 
-## <a name="getmany"></a>  Vectorview:: Getmany 方法
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>向量檢視:抓取許多方法
 
 由指定的索引處開始，從目前 VectorView 擷取一連串項目。
 
@@ -138,7 +138,7 @@ virtual unsigned int GetMany(
 
 擷取的項目數目。
 
-## <a name="indexof"></a>  Vectorview:: Indexof 方法
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a>向量檢視:方法索引
 
 在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。
 
@@ -154,19 +154,19 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>參數
 
-*value*<br/>
+*值*<br/>
 要尋找的項目。
 
-*index*<br/>
+*指數*<br/>
 如果找到參數 `value`，則為項目以零起始的索引，否則為 0。
 
-*Index*參數為 0，如果任一項目是第一個項目`VectorView`或找不到項目。 如果傳回的值是 **，則為 true**，找不到項目，而且它的第一個元素; 否則項目找不到。
+如果項是 的第一個`VectorView`元素 ,或者未找到項,*則索引*參數為 0。 如果返回值為**true,** 則找到項,它是第一個元素;否則,未找到該專案。
 
 ### <a name="return-value"></a>傳回值
 
-**真**找到則為指定的項目是否**false**。
+如果找到指定的項,為 true;如果找到指定的項,則**為 true。** 否則,**假**。
 
-## <a name="size"></a>  Vectorview:: Size 方法
+## <a name="vectorviewsize-method"></a><a name="size"></a>向量檢視:大小方法
 
 傳回目前 VectorView 物件中的項目數。
 
@@ -181,7 +181,7 @@ virtual property unsigned int Size;
 
 目前 VectorView 中的項目數。
 
-## <a name="ctor"></a>  Vectorview:: Vectorview 建構函式
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>向量檢視:向量檢視構造函數
 
 初始化 VectorView 類別的新執行個體。
 
@@ -241,40 +241,40 @@ VectorView(
 
 ### <a name="parameters"></a>參數
 
-*InIt*<br/>
+*Init*<br/>
 用來初始化目前 VectorView 的物件集合類型。
 
-*il*<br/>
-A [std:: initializer_list](../standard-library/initializer-list-class.md)其項目會用來初始化 VectorView。
+*I l*<br/>
+[std::initializer_list](../standard-library/initializer-list-class.md)其元素將用於初始化 VectorView。
 
 *N*<br/>
 用來初始化目前 VectorView 之物件集合中的項目數。
 
-*size*<br/>
+*大小*<br/>
 VectorView 中的項目數。
 
-*value*<br/>
+*值*<br/>
 用來初始化目前 VectorView 中各個項目的值。
 
-*v*<br/>
-[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: vector](../standard-library/vector-class.md)用來初始化目前 VectorView。
+*五*<br/>
+初始化目前的 VectorView 的 l[值與 R 值](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std::向量](../standard-library/vector-class.md)。
 
-*ptr*<br/>
+*Ptr*<br/>
 用來初始化目前 VectorView 之 `std::vector` 的指標。
 
-*arr*<br/>
-A [platform:: array](../cppcx/platform-array-class.md)用來初始化目前 VectorView 的物件。
+*阿爾爾*<br/>
+平臺[:用於](../cppcx/platform-array-class.md)初始化當前 VectorView 的陣列物件。
 
 *a*<br/>
-A [std:: array](../standard-library/array-class-stl.md)用來初始化目前 VectorView 的物件。
+用於初始化當前 VectorView 的[std::陣列](../standard-library/array-class-stl.md)物件。
 
-*first*<br/>
-用來初始化目前 VectorView 之物件序列中的第一個項目。 型別`first`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+*第一*<br/>
+用來初始化目前 VectorView 之物件序列中的第一個項目。 的類型`first`是通過*完美的轉發*傳遞的。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*last*<br/>
-用來初始化目前 VectorView 之物件序列中的最後一個項目。 型別`last`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+*最後*<br/>
+用來初始化目前 VectorView 之物件序列中的最後一個項目。 的類型`last`是通過*完美的轉發*傳遞的。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](platform-namespace-c-cx.md)<br/>
+[平台命名空間](platform-namespace-c-cx.md)<br/>
 [在 C++ 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

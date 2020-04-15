@@ -6,64 +6,64 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-ms.openlocfilehash: 79ec102aa27440c64f03c6e22b9f2fe959cac6b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b989e5c3df63ee7b5129d01468a0f869772ed286
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367329"
 ---
 # <a name="wininet-basics"></a>WinInet 基本概念
 
-您可以使用 WinInet 新增 FTP 支援，以下載和上傳您的應用程式中的檔案。 您可以覆寫[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)並用*dwContext*進度資訊提供給使用者，當您搜尋和下載檔案的參數。
+您可以使用 WinInet 添加 FTP 支援,以便從應用程式內下載和上傳檔。 您可以覆寫[OnStatusCallback,](../mfc/reference/cinternetsession-class.md#onstatuscallback)並使用*dwContext*參數在搜尋和下載檔時向使用者提供進度資訊。
 
-這篇文章包含下列主題：
+本文包含以下主題:
 
-- [建立簡單的瀏覽器](#_core_create_a_very_simple_browser)
+- [建立非常簡單的瀏覽器](#_core_create_a_very_simple_browser)
 
 - [下載網頁](#_core_download_a_web_page)
 
 - [FTP 檔案](#_core_ftp_a_file)
 
-- [擷取 Gopher 目錄](#_core_retrieve_a_gopher_directory)
+- [檢索 Gopher 目錄](#_core_retrieve_a_gopher_directory)
 
-- [顯示進度資訊在傳輸檔案時](#_core_display_progress_information_while_transferring_files)
+- [傳輸檔案時顯示進度資訊](#_core_display_progress_information_while_transferring_files)
 
-下列程式碼摘錄會示範如何建立簡單的瀏覽器、 下載網頁，而 ftp 下載檔案，並搜尋 gopher 檔案。 它們不一定會做為完整的範例，並不是全部包含例外狀況處理。
+下面的代碼摘錄演示如何創建簡單的瀏覽器、下載網頁、FTP 檔以及搜索 gopher 檔案。 它們不是作為完整示例,也不都包含異常處理。
 
-如需其他有關 WinInet 的詳細資訊，請參閱[Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)。
+有關 WinInet 的更多資訊,請參閱[Win32 互聯網擴展 (WinInet)。](../mfc/win32-internet-extensions-wininet.md)
 
-##  <a name="_core_create_a_very_simple_browser"></a> 建立簡單的瀏覽器
+## <a name="create-a-very-simple-browser"></a><a name="_core_create_a_very_simple_browser"></a>建立非常簡單的瀏覽器
 
 [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]
 
-##  <a name="_core_download_a_web_page"></a> 下載網頁
+## <a name="download-a-web-page"></a><a name="_core_download_a_web_page"></a>下載網頁
 
 [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]
 
-##  <a name="_core_ftp_a_file"></a> FTP 檔案
+## <a name="ftp-a-file"></a><a name="_core_ftp_a_file"></a>FTP 檔案
 
 [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]
 
-##  <a name="_core_retrieve_a_gopher_directory"></a> 擷取 Gopher 目錄
+## <a name="retrieve-a-gopher-directory"></a><a name="_core_retrieve_a_gopher_directory"></a>檢索 Gopher 目錄
 
 [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]
 
-## <a name="use-onstatuscallback"></a>使用 OnStatusCallback
+## <a name="use-onstatuscallback"></a>使用「開啟狀態」 回退
 
-WinInet 類別時，您可以使用[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)您的應用程式的成員[CInternetSession](../mfc/reference/cinternetsession-class.md)擷取狀態資訊的物件。 如果您衍生您自己`CInternetSession`物件，覆寫`OnStatusCallback`，並啟用狀態回呼，MFC 會呼叫您`OnStatusCallback`相關的所有活動的進度資訊，該網際網路工作階段中的函式。
+使用 WinInet 類時,可以使用應用程式的[CInternetSession](../mfc/reference/cinternetsession-class.md)物件的[OnStatusBack](../mfc/reference/cinternetsession-class.md#onstatuscallback)成員來檢索狀態資訊。 如果派生自己的`CInternetSession`物件、重`OnStatusCallback`寫 和啟用狀態回調,MFC 將調`OnStatusCallback`用函數 ,並提供有關該 Internet 會話中所有活動的進度資訊。
 
-因為在單一工作階段可能支援數個連結 （透過其存留期，可能會執行許多不同的作業），`OnStatusCallback`需要某種機制，識別在特定的連線或交易的每個狀態變更。 此機制是由提供給許多在 WinInet 支援類別的成員函式的內容 ID 參數提供。 此參數一律會是型別**DWORD**稱為一律*dwContext*。
+因為單個工作階段可能支援多個連線(在其生存期內,這些連接可能執行許多不同的操作),`OnStatusCallback`因此需要一種機制來識別具有特定連接或事務的每個狀態更改。 該機制由 WinInet 支援類中許多成員函數提供的上下文 ID 參數提供。 這裡為**DWORD**類型,並且始終命名為*dwContext*。
 
-指派給特定的網際網路物件的內容僅用來識別的活動物件會造成`OnStatusCallback`隸屬`CInternetSession`物件。 若要呼叫`OnStatusCallback`接收數個參數; 這些參數會共同運作來告訴您的應用程式的交易和連接已對哪些進度。
+分配給特定 Internet 物件的上下文僅`OnStatusCallback``CInternetSession`用於識別 物件成員中的物件引起的活動。 調用接收`OnStatusCallback`多個參數;這些參數協同工作,告訴應用程式已為哪個事務和連接取得了哪些進展。
 
-當您建立`CInternetSession`物件，您可以指定*dwContext*建構函式的參數。 `CInternetSession` 本身不會使用內容識別碼;相反地，它會傳遞到任何的內容 ID **InternetConnection**-衍生不明確地取得自己的內容識別碼的物件。 在開啟，那些`CInternetConnection`物件會傳遞要沿著內容 ID`CInternetFile`物件他們建立如果您未明確指定不同的內容識別碼。 如果相反地，您指定自己的特定內容 ID、 物件和任何工作，它會將相關聯的內容識別碼。 您可以使用內容識別碼來識別哪些狀態資訊提供給您在您`OnStatusCallback`函式。
+建立物件時`CInternetSession`,可以為建構函數指定*dwContext*參數。 `CInternetSession`本身不使用上下文 ID;因此,它不使用上下文 ID。相反,它將上下文 ID 傳遞給任何**InternetConnect**派生的物件,這些物件沒有明確獲取自己的上下文 ID。 反過來,如果不顯式`CInternetConnection`指定其他上下文 ID,`CInternetFile`這些物件 將上下文 ID 傳遞給它們創建的物件。 另一方面,如果確實指定您自己的特定上下文 ID、物件及其所做的任何工作都將與該上下文 ID 相關聯。 您可以使用上下文標識標識在`OnStatusCallback`函數中為您提供的狀態資訊。
 
-##  <a name="_core_display_progress_information_while_transferring_files"></a> 顯示進度資訊在傳輸檔案時
+## <a name="display-progress-information-while-transferring-files"></a><a name="_core_display_progress_information_while_transferring_files"></a>傳輸檔案時顯示進度資訊
 
-例如，如果您撰寫會建立與 FTP 伺服器讀取檔案的連線，並也會連線到 HTTP 伺服器，以取得網頁上的應用程式時，您必須`CInternetSession`物件、 兩個`CInternetConnection`物件 (其中就是`CFtpSession`，其他則是`CHttpSession`)，並將兩個`CInternetFile`物件 （一個用於每個連線）。 如果您使用的預設值*dwContext*參數，就無法區別`OnStatusCallback`指出進度的 FTP 連接，並指出進度的引動過程的引動過程HTTP 連接。 如果您指定*dwContext*識別碼，您可以稍後測試在`OnStatusCallback`，您將了解哪一項作業產生的回呼。
+例如,如果編寫一個應用程式創建與 FTP 伺服器的連接以讀取檔,並且還連接到 HTTP 伺服器以獲取 Web`CInternetSession`頁,則您將`CInternetConnection`具有一個物件、兩`CFtpSession`個物件(`CHttpSession`一個物件, 另`CInternetFile`一個 物件是 ),以及兩個物件(每個連接一個)。 如果為*dwContext*參數使用預設值,則無法`OnStatusCallback`區分 指示 FTP 連接進度的調用和指示 HTTP 連接進度的呼叫。 如果指定*dwContext* ID,則可以稍後`OnStatusCallback`在 中 測試該 ID,您將知道生成回調的操作。
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)<br/>
-[Win32 網際網路延伸模組 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+[Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)

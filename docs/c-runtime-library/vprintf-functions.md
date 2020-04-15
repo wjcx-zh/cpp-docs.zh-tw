@@ -18,12 +18,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365669"
 ---
 # <a name="vprintf-functions"></a>vprintf 函式
 
@@ -44,16 +44,16 @@ ms.locfileid: "70957227"
 
 這些函式會設定要輸出到目的地的資料格式，如下所示。
 
-|函數|對應函式|輸出目的地|參數驗證|位置參數支援|
+|函式|對應函式|輸出目的地|參數驗證|位置參數支援|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|主控台|檢查是否 Null。|否|
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|主控台|檢查是否 Null。|否|
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*資料流*|檢查是否 Null。|否|
-|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*資料流*|檢查 Null 與有效格式。|是|
-|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*資料流*|檢查 Null 與有效格式。|否|
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*資料流*|檢查是否 Null。|否|
-|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*資料流*|檢查 Null 與有效格式。|是|
-|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*資料流*|檢查 Null 與有效格式。|否|
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|檢查是否 Null。|否|
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|檢查是否 Null。|否|
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*流*|檢查是否 Null。|否|
+|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*流*|檢查 Null 與有效格式。|是|
+|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*流*|檢查 Null 與有效格式。|否|
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*流*|檢查是否 Null。|否|
+|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*流*|檢查 Null 與有效格式。|是|
+|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*流*|檢查 Null 與有效格式。|否|
 |`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|檢查是否 Null。|否|
 |**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|檢查 Null 與有效格式。|是|
 |`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|檢查 Null 與有效格式。|否|
@@ -81,10 +81,10 @@ ms.locfileid: "70957227"
 
 這些名稱具有 **_p** 尾碼的函式版本可讓您指定在格式字串中代換所指定引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../c-runtime-library/printf-p-positional-parameters.md)。
 
-針對 **vsprintf**、`vswprintf`、`_vsnprintf` 與 `_vsnwprintf`，如果在重疊的字串之間進行複製，則行為是未定義的。
+對於**vsprintf** `_vsnprintf` ,`_vsnwprintf``vswprintf`和 , 如果在重疊的字串之間發生複製, 行為未定義。
 
 > [!IMPORTANT]
->  確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 若使用這些函式的安全版本 (不論是 **_s** 或 **_p** 尾碼)，使用者提供的格式字串可能觸發無效的參數例外狀況 (若使用者提供的字串包含無效的格式設定字元)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 若使用這些函式的安全版本 (不論是 **_s** 或 **_p** 尾碼)，使用者提供的格式字串可能觸發無效的參數例外狀況 (若使用者提供的字串包含無效的格式設定字元)。
 
 ## <a name="see-also"></a>另請參閱
 

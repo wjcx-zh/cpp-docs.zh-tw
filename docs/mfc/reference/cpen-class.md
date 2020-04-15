@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: 952d270acd47b5834a06b731f7875ea2efdd4695
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e15dc53fafa0d80f1b52b3fe77f3635c592a4346
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502944"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364074"
 ---
 # <a name="cpen-class"></a>CPen 類別
 
@@ -41,29 +41,29 @@ class CPen : public CGdiObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CPen:: CPen](#cpen)|建構 `CPen` 物件。|
+|[CPen:CPen](#cpen)|建構 `CPen` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPen::CreatePen](#createpen)|使用指定的樣式、寬度和筆刷屬性, 建立邏輯表面或幾何畫筆, 並將其附加至`CPen`物件。|
-|[CPen::CreatePenIndirect](#createpenindirect)|使用[LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)結構中提供的樣式、寬度和色彩來建立畫筆, 並將其附加至`CPen`物件。|
-|[CPen::FromHandle](#fromhandle)|當給定 Windows HPEN 時`CPen` , 傳回物件的指標。|
-|[CPen::GetExtLogPen](#getextlogpen)|取得[EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)的基礎結構。|
-|[CPen::GetLogPen](#getlogpen)|取得[LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)的基礎結構。|
+|[CPen::創建筆](#createpen)|創建具有指定樣式、寬度和畫筆屬性的邏輯修飾筆或幾何筆,並將其附加到`CPen`物件。|
+|[CPen:創建間接](#createpenindirect)|創建具有[LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)結構中給定的樣式、寬度和顏色的筆,並將其`CPen`附加到 物件。|
+|[CPen:從手柄](#fromhandle)|在給定 Windows `CPen` HPEN 時返回指向物件的指標。|
+|[CPen:獲取ExtLogPen](#getextlogpen)|獲取[EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)基礎結構。|
+|[CPen:獲取LogPen](#getlogpen)|獲取[LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)基礎結構。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CPen:: operator HPEN](#operator_hpen)|傳回附加至`CPen`物件的 Windows 控制碼。|
+|[CPen::操作員 HPEN](#operator_hpen)|返回附加到`CPen`物件的 Windows 句柄。|
 
 ## <a name="remarks"></a>備註
 
-如需使用`CPen`的詳細資訊, 請參閱[繪圖物件](../../mfc/graphic-objects.md)。
+有關`CPen`使用的詳細資訊,請參考[圖形物件](../../mfc/graphic-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -75,7 +75,7 @@ class CPen : public CGdiObject
 
 **標題:** afxwin.h
 
-##  <a name="cpen"></a>CPen:: CPen
+## <a name="cpencpen"></a><a name="cpen"></a>CPen:CPen
 
 建構 `CPen` 物件。
 
@@ -98,82 +98,82 @@ CPen(
 ### <a name="parameters"></a>參數
 
 *nPenStyle*<br/>
-指定畫筆樣式。 第一個版本的函式中的這個參數可以是下列其中一個值:
+指定筆樣式。 建構函數的第一版本中的此參數可以是以下值之一:
 
-- PS_SOLID 會建立實心畫筆。
+- PS_SOLID 創建實心筆。
 
-- PS_DASH 會建立虛線畫筆。 只有當畫筆寬度為1或小於 (以裝置為單位) 時才有效。
+- PS_DASH創建虛線筆。 僅當筆寬度為 1 或更少時(以設備單位為單位)才有效。
 
-- PS_DOT 會建立虛線畫筆。 只有當畫筆寬度為1或小於 (以裝置為單位) 時才有效。
+- PS_DOT創建虛筆。 僅當筆寬度為 1 或更少時(以設備單位為單位)才有效。
 
-- PS_DASHDOT 會建立具有交替破折號和點的畫筆。 只有當畫筆寬度為1或小於 (以裝置為單位) 時才有效。
+- PS_DASHDOT創建具有交替破折號和點的筆。 僅當筆寬度為 1 或更少時(以設備單位為單位)才有效。
 
-- PS_DASHDOTDOT 會建立具有交替破折號和雙點的畫筆。 只有當畫筆寬度為1或小於 (以裝置為單位) 時才有效。
+- PS_DASHDOTDOT創建具有交替破折號和雙點的筆。 僅當筆寬度為 1 或更少時(以設備單位為單位)才有效。
 
-- PS_Null 會建立 Null 畫筆。
+- PS_NULL創建空筆。
 
-- PS_INSIDEFRAME 會建立一個畫筆, 它會在指定周框矩形的 Windows GDI 輸出函式所產生的封閉圖形框架`Ellipse`內繪製線條 ( `Rectangle` `RoundRect` `Pie`例如,、、、和`Chord`成員函式)。 當此樣式與未指定周框矩形的 Windows GDI 輸出函式 ( `LineTo`例如成員函式) 搭配使用時, 畫筆的繪圖區域不會受到框架的限制。
+- PS_INSIDEFRAME 創建一個筆,在 Windows GDI`Ellipse`輸出函數`Rectangle``RoundRect`(`Pie``Chord`例如, 、 、 和成員函數) 生成的封閉形狀框架內繪製一條線。 當此樣式與不指定邊界矩形(例如`LineTo`成員函數)的 Windows GDI 輸出函數一起使用時,筆的繪圖區域不受框架的限制。
 
-第二個版本的`CPen`函式會指定類型、樣式、結束端點和聯結屬性的組合。 每個類別目錄的值都應該使用位 OR 運算子 (&#124;) 結合。 畫筆類型可以是下列其中一個值:
+建構函數的第`CPen`二個版本指定類型、樣式、結束上限和聯接屬性的組合。 每個類別中的值應使用位或運算符 (&#124;)進行組合。 筆型態可以是以下值之一:
 
-- PS_GEOMETRIC 會建立幾何畫筆。
+- PS_GEOMETRIC創建幾何筆。
 
-- PS_COSMETIC 會建立裝飾畫筆。
+- PS_COSMETIC創建一個化妝筆。
 
-   第二個版本的`CPen`函式會為*nPenStyle*新增下列畫筆樣式:
+   建構函數的第`CPen`二個版本為*nPenStyle*新增了以下筆樣式 :
 
-- PS_ALTERNATE 會建立可設定每個其他圖元的畫筆。 (此樣式僅適用于裝飾畫筆)。
+- PS_ALTERNATE 創建一個可設置其他像素的筆。 (此樣式僅適用於化妝筆。
 
-- PS_USERSTYLE 會建立一個使用使用者所提供之樣式陣列的畫筆。
+- PS_USERSTYLE 創建使用使用者提供的樣式陣列的筆。
 
-   結尾上限可以是下列其中一個值:
+   端蓋可以是以下值之一:
 
-- PS_ENDCAP_ROUND 結束上限為 ROUND。
+- PS_ENDCAP_ROUND端蓋是圓形的。
 
-- PS_ENDCAP_SQUARE 結束上限為方形。
+- PS_ENDCAP_SQUARE端蓋是方形的。
 
-- PS_ENDCAP_FLAT 結束上限是平面的。
+- PS_ENDCAP_FLAT端蓋是平的。
 
-   聯結可以是下列其中一個值:
+   聯接可以是以下值之一:
 
-- PS_JOIN_BEVEL 聯結是斜切的。
+- PS_JOIN_BEVEL聯接是被否決的。
 
-- 當 PS_JOIN_MITER 聯結在[SetMiterLimit](/windows/win32/api/wingdi/nf-wingdi-setmiterlimit)函式所設定的目前限制範圍內時, 會進行斜接。 如果聯結超過此限制, 則為「斜切」。
+- PS_JOIN_MITER聯接在[SetMiter Limit](/windows/win32/api/wingdi/nf-wingdi-setmiterlimit)函數設置的當前限制內時,將小入。 如果聯接超過此限制,則將其所仿。
 
-- PS_JOIN_ROUND 聯結是 ROUND 的。
+- PS_JOIN_ROUND聯接是圓的。
 
-*nWidth*<br/>
-指定畫筆的寬度。
+*n 寬度*<br/>
+指定筆的寬度。
 
-- 針對第一個版本的函式, 如果此值為 0, 則不論對應模式為何, 裝置單位的寬度一律為1個圖元。
+- 對於構造函數的第一個版本,如果此值為 0,則無論映射模式如何,設備單位的寬度始終為 1 圖元。
 
-- 針對第二個版本的函式, 如果*nPenStyle*為 PS_GEOMETRIC, 則會以邏輯單元指定寬度。 如果*nPenStyle*為 PS_COSMETIC, 則寬度必須設定為1。
+- 對於構造函數的第二個版本,如果*nPenStyle* PS_GEOMETRIC,則寬度以邏輯單位表示。 如果*nPenStyle* PS_COSMETIC,則必須將寬度設置為 1。
 
 *crColor*<br/>
-包含畫筆的 RGB 色彩。
+包含筆的 RGB 顏色。
 
 *pLogBrush*<br/>
-`LOGBRUSH`指向結構。 如果*nPenStyle*是 PS_COSMETIC, 則 `LOGBRUSH`結構的 lbColor 成員會指定畫筆的色彩, `LOGBRUSH`而結構的*lbStyle*成員必須設定為 BS_SOLID。 如果*nPenStyle*為 PS_GEOMETRIC, 則所有成員都必須用來指定畫筆的筆刷屬性。
+指向結構`LOGBRUSH`。 如果*nPenStyle*是`LOGBRUSH`PS_COSMETIC, 則結構的*lbColor*成員指定筆的顏色,`LOGBRUSH`並且必須將結構的*lbStyle*成員設置為BS_SOLID。 如果*nPenStyle* PS_GEOMETRIC,則必須使用所有成員指定筆的畫筆屬性。
 
-*nStyleCount*<br/>
-指定*lpStyle*陣列的長度 (以長時間單位表示)。 如果*nPenStyle*不是 PS_USERSTYLE, 這個值必須是零。
+*n 樣式計數*<br/>
+指定*lpStyle*陣列的長度(以雙字單位為單位)。 如果*nPenStyle*不是PS_USERSTYLE,則此值必須為零。
 
 *lpStyle*<br/>
-指向雙量值的陣列。 第一個值會指定使用者定義樣式中第一個虛線的長度, 第二個值指定第一個空格的長度, 依此類推。 如果*nPenStyle*不是 PS_USERSTYLE, 這個指標必須是 Null。
+指向雙字值陣列。 第一個值指定用戶定義樣式中第一個虛線的長度,第二個值指定第一個空格的長度,等等。 如果未PS_USERSTYLE *nPenStyle,* 則此指標必須為 NULL。
 
 ### <a name="remarks"></a>備註
 
-如果您使用不含引數的函式, 則必須使用`CPen` `CreatePen`、 `CreatePenIndirect`或`CreateStockObject`成員函式來初始化產生的物件。
+如果使用沒有參數的建構函數,`CPen`則必須`CreatePen`使用 初始化生成的`CreatePenIndirect`物件`CreateStockObject`, 或成員函數。
 
-如果您使用接受引數的函數, 則不需要進一步的初始化。 如果遇到錯誤, 含有引數的函式可能會擲回例外狀況, 而不含引數的函式一律會成功。
+如果使用採用參數的構造函數,則無需進一步初始化。 如果遇到錯誤,帶參數的構造函數可以引發異常,而沒有參數的構造函數將始終成功。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]
 
-##  <a name="createpen"></a>CPen:: CreatePen
+## <a name="cpencreatepen"></a><a name="createpen"></a>CPen::創建筆
 
-使用指定的樣式、寬度和筆刷屬性, 建立邏輯表面或幾何畫筆, 並將其附加至`CPen`物件。
+創建具有指定樣式、寬度和畫筆屬性的邏輯修飾筆或幾何筆,並將其附加到`CPen`物件。
 
 ```
 BOOL CreatePen(
@@ -192,56 +192,56 @@ BOOL CreatePen(
 ### <a name="parameters"></a>參數
 
 *nPenStyle*<br/>
-指定畫筆的樣式。 如需可能值的清單, 請參閱[CPen](#cpen)函數中的*nPenStyle*參數。
+指定筆的樣式。 有關可能值的清單,請參閱[CPen](#cpen)構造函數中的*nPenStyle*參數。
 
-*nWidth*<br/>
-指定畫筆的寬度。
+*n 寬度*<br/>
+指定筆的寬度。
 
-- 若為第一個版本`CreatePen`的, 如果此值為 0, 則不論對應模式為何, 裝置單位的寬度一律為1個圖元。
+- 對於的第一個版本`CreatePen`,如果此值為 0,則無論映射模式如何,設備單位的寬度始終為 1 圖元。
 
-- 針對第二個版本`CreatePen`的, 如果*nPenStyle*為 PS_GEOMETRIC, 則會以邏輯單元指定寬度。 如果*nPenStyle*為 PS_COSMETIC, 則寬度必須設定為1。
+- 對於的第二個版本`CreatePen`,如果*nPenStylePS_GEOMETRIC,* 則寬度以邏輯單位表示。 如果*nPenStyle* PS_COSMETIC,則必須將寬度設置為 1。
 
 *crColor*<br/>
-包含畫筆的 RGB 色彩。
+包含筆的 RGB 顏色。
 
 *pLogBrush*<br/>
-指向[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)結構。 如果*nPenStyle*為 PS_COSMETIC, `lbColor`則`LOGBRUSH`結構的成員會指定`LOGBRUSH`畫筆的色彩, 而結構的*lbStyle*成員則必須設定為 BS_SOLID。 如果 nPenStyle 為 PS_GEOMETRIC, 則所有成員都必須用來指定畫筆的筆刷屬性。
+指向[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)結構。 如果*nPenStyle* `lbColor``LOGBRUSH`PS_COSMETIC, 則結構成員指定筆的顏色,並且必須`LOGBRUSH`將結構的*lbStyle*成員設置為BS_SOLID。 如果 nPenStyle PS_GEOMETRIC,則必須使用所有成員指定筆的畫筆屬性。
 
-*nStyleCount*<br/>
-指定*lpStyle*陣列的長度 (以長時間單位表示)。 如果*nPenStyle*不是 PS_USERSTYLE, 這個值必須是零。
+*n 樣式計數*<br/>
+指定*lpStyle*陣列的長度(以雙字單位為單位)。 如果*nPenStyle*不是PS_USERSTYLE,則此值必須為零。
 
 *lpStyle*<br/>
-指向雙量值的陣列。 第一個值會指定使用者定義樣式中第一個虛線的長度, 第二個值指定第一個空格的長度, 依此類推。 如果*nPenStyle*不是 PS_USERSTYLE, 這個指標必須是 Null。
+指向雙字值陣列。 第一個值指定用戶定義樣式中第一個虛線的長度,第二個值指定第一個空格的長度,等等。 如果未PS_USERSTYLE *nPenStyle,* 則此指標必須為 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則為非零, 如果方法失敗, 則為零。
+如果成功,則為非零;如果方法失敗,則為零。
 
 ### <a name="remarks"></a>備註
 
-第一個版本會`CreatePen`使用指定的樣式、寬度和色彩來初始化畫筆。 接著, 您可以將畫筆選取為任何裝置內容的目前畫筆。
+第一個版本的初始`CreatePen`化具有指定樣式、寬度和顏色的筆。 隨後,可以為任何設備上下文選擇筆作為當前筆。
 
-寬度大於1圖元的畫筆一定要有 PS_Null、PS_SOLID 或 PS_INSIDEFRAME 樣式。
+寬度大於 1 像素的筆應始終具有PS_NULL、PS_SOLID或PS_INSIDEFRAME樣式。
 
-如果畫筆的 PS_INSIDEFRAME 樣式和色彩與邏輯色彩表中的色彩不相符, 就會以遞色繪製畫筆。 PS_SOLID 畫筆樣式無法用來建立具有遞色色彩的畫筆。 如果畫筆寬度小於或等於 1, 則樣式 PS_INSIDEFRAME 與 PS_SOLID 相同。
+如果筆具有PS_INSIDEFRAME樣式和與邏輯顏色表中的顏色不匹配的顏色,則筆將繪製為抖紅色。 PS_SOLID筆樣式不能用於創建具有抖紅色的筆。 如果筆寬度小於或等於 1,則樣式PS_INSIDEFRAME與PS_SOLID相同。
 
-的第二個`CreatePen`版本會初始化具有指定的樣式、寬度和筆刷屬性的邏輯表面或幾何畫筆。 表面畫筆的寬度一律為 1;幾何畫筆的寬度一律是以世界單位來指定。 在應用程式建立邏輯畫筆之後, 它可以藉由呼叫[CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)函式, 將該畫筆選取到裝置內容中。 將畫筆選取到裝置內容之後, 就可以用來繪製線條和曲線。
+第二個版本的初始`CreatePen`化邏輯修飾筆或幾何筆具有指定的樣式、寬度和畫筆屬性。 化妝筆的寬度始終為 1;幾何筆的寬度始終以世界單位指定。 應用程式創建邏輯筆後,可以透過調用[CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject)函數選擇該筆到設備上下文中。 將筆選擇到設備上下文中后,它可用於繪製線條和曲線。
 
-- 如果*nPenStyle*為 PS_COSMETIC 和 PS_USERSTYLE, 則*lpStyle*陣列中的專案會在樣式單位中指定虛線和空格的長度。 樣式單位是由畫筆用來繪製線條的裝置所定義。
+- 如果*nPenStyle* PS_COSMETIC和PS_USERSTYLE,*則 lpStyle*陣列中的條目以樣式單位指定破折號和空格的長度。 樣式單元由筆用於繪製線條的設備定義。
 
-- 如果*nPenStyle*為 PS_GEOMETRIC 和 PS_USERSTYLE, 則*lpStyle*陣列中的專案會以邏輯單元指定破折號和空格的長度。
+- 如果*nPenStyle*是PS_GEOMETRIC和PS_USERSTYLE,則*lpStyle*陣列中的條目以邏輯單位指定破折號和空格的長度。
 
-- 如果*nPenStyle*為 PS_ALTERNATE, 則會忽略樣式單位, 並設定其他每個圖元。
+- 如果*nPenStyle* PS_ALTERNATE,則忽略樣式單元,並設置所有其他圖元。
 
-當應用程式不再需要指定的畫筆時, 它應該呼叫[CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject)成員函式, 或`CPen`終結物件, 使資源不再使用。 在裝置內容中選取畫筆時, 應用程式不應該刪除畫筆。
+當應用程式不再需要給定的筆時,它應該調用[CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成員函數或`CPen`銷毀 物件,以便資源不再使用。 在設備上下文中選擇筆時,應用程式不應刪除筆。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]
 
-##  <a name="createpenindirect"></a>CPen:: CreatePenIndirect
+## <a name="cpencreatepenindirect"></a><a name="createpenindirect"></a>CPen:創建間接
 
-初始化畫筆, 其具有在*lpLogPen*所指向的結構中提供的樣式、寬度和色彩。
+初始化具有*lpLogPen*指向的結構中給出的樣式、寬度和顏色的筆。
 
 ```
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
@@ -250,7 +250,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="parameters"></a>參數
 
 *lpLogPen*<br/>
-指向包含畫筆相關資訊的 Windows [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen)結構。
+指向包含筆資訊的 Windows [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -258,17 +258,17 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 
 ### <a name="remarks"></a>備註
 
-寬度大於1圖元的畫筆一定要有 PS_Null、PS_SOLID 或 PS_INSIDEFRAME 樣式。
+寬度大於 1 像素的筆應始終具有PS_NULL、PS_SOLID或PS_INSIDEFRAME樣式。
 
-如果畫筆的 PS_INSIDEFRAME 樣式和色彩與邏輯色彩表中的色彩不相符, 就會以遞色繪製畫筆。 如果畫筆寬度小於或等於 1, 則 PS_INSIDEFRAME 樣式與 PS_SOLID 相同。
+如果筆具有PS_INSIDEFRAME樣式和與邏輯顏色表中的顏色不匹配的顏色,則筆將繪製為抖紅色。 如果筆寬度小於或等於 1,則PS_INSIDEFRAME樣式與PS_SOLID相同。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]
 
-##  <a name="fromhandle"></a>CPen:: FromHandle
+## <a name="cpenfromhandle"></a><a name="fromhandle"></a>CPen:從手柄
 
-傳回`CPen`物件的指標, 指定 Windows GDI 畫筆物件的控制碼。
+返回指向給定 Windows `CPen` GDI 筆物件的句柄的物件的指標。
 
 ```
 static CPen* PASCAL FromHandle(HPEN hPen);
@@ -277,23 +277,23 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="parameters"></a>參數
 
 *hPen*<br/>
-`HPEN`Windows GDI 畫筆的控制碼。
+`HPEN`句柄到 Windows GDI 筆。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則`CPen`為物件的指標; 否則為 Null。
+指向`CPen`物件的指標(如果成功);如果成功,則指向物件。否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-如果 `CPen` 物件沒有附加至控制代碼，會建立並附加暫存 `CPen` 物件。 這個暫存`CPen`物件只有在下一次應用程式的事件迴圈中有閒置時間時才有效, 此時所有的暫存繪圖物件都會被刪除。 換句話說, 暫存物件只在處理一個視窗訊息期間有效。
+如果 `CPen` 物件沒有附加至控制代碼，會建立並附加暫存 `CPen` 物件。 此臨時`CPen`物件僅在下次應用程式在其事件迴圈中有空閑時間之前有效,此時將刪除所有臨時圖形物件。 換句話說,臨時物件僅在處理一個視窗消息期間有效。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]
 
-##  <a name="getextlogpen"></a>CPen:: GetExtLogPen
+## <a name="cpengetextlogpen"></a><a name="getextlogpen"></a>CPen:獲取ExtLogPen
 
-`EXTLOGPEN`取得基礎結構。
+獲取`EXTLOGPEN`基礎結構。
 
 ```
 int GetExtLogPen(EXTLOGPEN* pLogPen);
@@ -302,7 +302,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ### <a name="parameters"></a>參數
 
 *pLogPen*<br/>
-指向包含畫筆相關資訊的[EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)結構。
+指向包含筆資訊的[EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -310,27 +310,27 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 
 ### <a name="remarks"></a>備註
 
-`EXTLOGPEN`結構會定義畫筆的樣式、寬度和筆刷屬性。 例如, 呼叫`GetExtLogPen`以符合畫筆的特定樣式。
+結構`EXTLOGPEN`定義筆的樣式、寬度和畫筆屬性。 例如,調用`GetExtLogPen`以匹配筆的特定樣式。
 
-如需畫筆屬性的相關資訊, 請參閱 Windows SDK 中的下列主題:
+有關筆屬性的資訊,請參閱 Windows SDK 中的以下主題:
 
-- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
+- [取得物件](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
 - [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)
 
-- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
+- [洛彭](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
 - [ExtCreatePen](/windows/win32/api/wingdi/nf-wingdi-extcreatepen)
 
 ### <a name="example"></a>範例
 
-下列程式碼範例將示範`GetExtLogPen`如何呼叫來抓取畫筆的屬性, 然後使用相同的色彩建立新的表面畫筆。
+以下代碼示例演示了調用`GetExtLogPen`檢索筆的屬性,然後創建具有相同顏色的新修飾筆。
 
 [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]
 
-##  <a name="getlogpen"></a>  CPen::GetLogPen
+## <a name="cpengetlogpen"></a><a name="getlogpen"></a>CPen:獲取LogPen
 
-`LOGPEN`取得基礎結構。
+獲取`LOGPEN`基礎結構。
 
 ```
 int GetLogPen(LOGPEN* pLogPen);
@@ -339,7 +339,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ### <a name="parameters"></a>參數
 
 *pLogPen*<br/>
-指向包含畫筆相關資訊的[LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)結構。
+指向[LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)結構以包含有關筆的資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -347,25 +347,25 @@ int GetLogPen(LOGPEN* pLogPen);
 
 ### <a name="remarks"></a>備註
 
-`LOGPEN`結構會定義畫筆的樣式、色彩和模式。
+結構`LOGPEN`定義筆的樣式、顏色和圖案。
 
-例如, 呼叫`GetLogPen`以符合特定的畫筆樣式。
+例如,調用`GetLogPen`以匹配筆的特定樣式。
 
-如需畫筆屬性的相關資訊, 請參閱 Windows SDK 中的下列主題:
+有關筆屬性的資訊,請參閱 Windows SDK 中的以下主題:
 
-- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
+- [取得物件](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
+- [洛彭](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
 ### <a name="example"></a>範例
 
-下列程式碼範例將示範`GetLogPen`如何呼叫來抓取畫筆字元, 然後使用相同的色彩建立新的單色筆刷。
+以下代碼示例演示了調用`GetLogPen`以檢索筆字元,然後創建具有相同顏色的新實心筆。
 
 [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]
 
-##  <a name="operator_hpen"></a>CPen:: operator HPEN
+## <a name="cpenoperator-hpen"></a><a name="operator_hpen"></a>CPen::操作員 HPEN
 
-取得`CPen`物件附加的 Windows GDI 控制碼。
+獲取`CPen`物件的附加 Windows GDI 句柄。
 
 ```
 operator HPEN() const;
@@ -373,13 +373,13 @@ operator HPEN() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則為`CPen`物件所表示之 Windows GDI 物件的控制碼, 否則為 Null。
+如果成功,則對物件表示的 Windows`CPen`GDI 物件的句柄;如果成功,則對物件表示的 Windows GDI 物件的句柄。否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-這個運算子是一個轉型運算子, 可支援直接使用 HPEN 物件。
+此運算元是強制轉換運算符,支援直接使用 HPEN 物件。
 
-如需使用繪圖物件的詳細資訊, 請參閱 Windows SDK 中的[繪圖物件](/windows/win32/gdi/graphic-objects)一文。
+有關使用圖形物件的詳細資訊,請參閱 Windows SDK 中的[圖形物件](/windows/win32/gdi/graphic-objects)一文。
 
 ### <a name="example"></a>範例
 

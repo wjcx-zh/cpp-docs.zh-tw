@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364904"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 運算子
 
-\<陣列 > 標頭包含這些**陣列**非成員比較範本函數。
+數位\<>标头包括这些**陣列**非成員比較範本函數。
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[操作員!](#op_neq)|[算子&gt;](#op_gt)|[算子&gt;=](#op_gt_eq)|
+|[算子&lt;](#op_lt)|[算子&lt;=](#op_lt_eq)|[運算子*](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>操作員!
 
 陣列比較，不相等。
 
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*Ty*\
-元素類型。
+*泰*\
+項目的類型。
 
 *N*\
 陣列的大小。
 
-*左方*\
+*離開*\
 要比較的左容器。
 
-*right*\
+*對*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
 
 陣列比較，小於。
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*Ty*\
-元素類型。
+*泰*\
+項目的類型。
 
 *N*\
 陣列的大小。
 
-*左方*\
+*離開*\
 要比較的左容器。
 
-*right*\
+*對*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-範本函式會多載 `operator<` 來比較類別樣板[陣列類別](../standard-library/array-class-stl.md)的兩個物件。 此函式會傳回 `lexicographical_compare(left.begin(), left.end(), right.begin())`。
+範本函數重載`operator<`以比較類範本陣[組 Class](../standard-library/array-class-stl.md)的兩個物件。 函式會傳回 `lexicographical_compare(left.begin(), left.end(), right.begin())`。
 
 ### <a name="example"></a>範例
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
 
 陣列比較，小於或相等。
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*Ty*\
-元素類型。
+*泰*\
+項目的類型。
 
 *N*\
 陣列的大小。
 
-*左方*\
+*離開*\
 要比較的左容器。
 
-*right*\
+*對*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
 
 陣列比較，相等。
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*Ty*\
-元素類型。
+*泰*\
+項目的類型。
 
 *N*\
 陣列的大小。
 
-*左方*\
+*離開*\
 要比較的左容器。
 
-*right*\
+*對*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-範本函式會多載 `operator==` 來比較類別樣板[陣列類別](../standard-library/array-class-stl.md)的兩個物件。 此函式會傳回 `equal(left.begin(), left.end(), right.begin())`。
+範本函數重載`operator==`以比較類範本陣[組 Class](../standard-library/array-class-stl.md)的兩個物件。 函式會傳回 `equal(left.begin(), left.end(), right.begin())`。
 
 ### <a name="example"></a>範例
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
 
 陣列比較，大於。
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*Ty*\
-元素類型。
+*泰*\
+項目的類型。
 
 *N*\
 陣列的大小。
 
-*左方*\
+*離開*\
 要比較的左容器。
 
-*right*\
+*對*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
 
 陣列比較，大於或相等。
 
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*Ty*\
-元素類型。
+*泰*\
+項目的類型。
 
 *N*\
 陣列的大小。
 
-*左方*\
+*離開*\
 要比較的左容器。
 
-*right*\
+*對*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>另請參閱
 
-[\<array>](../standard-library/array.md)
+[\<陣列>](../standard-library/array.md)

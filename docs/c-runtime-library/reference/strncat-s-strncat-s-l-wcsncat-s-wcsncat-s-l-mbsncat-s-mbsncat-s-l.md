@@ -1,6 +1,6 @@
 ---
 title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsncat_s_l
 - wcsncat_s
@@ -8,6 +8,10 @@ api_name:
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
+- _o__mbsncat_s
+- _o__mbsncat_s_l
+- _o_strncat_s
+- _o_wcsncat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -51,19 +56,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 7e3359a97ff8e11f47c61590f4af11d51f62073a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626175"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364225"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
 將字元附加至字串。 這些版本的 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsncat_s**和 **_mbsncat_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncat_s**和 **_mbsncat_s_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -150,10 +155,10 @@ errno_t _mbsncat_s_l(
 
 ### <a name="parameters"></a>參數
 
-*strDest*<br/>
+*斯特德斯特*<br/>
 以 Null 終止的目的字串。
 
-*numberOfElements*<br/>
+*元素數*<br/>
 目的緩衝區大小。
 
 *strSource*<br/>
@@ -162,7 +167,7 @@ errno_t _mbsncat_s_l(
 *count*<br/>
 要附加的字元數或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -171,19 +176,19 @@ errno_t _mbsncat_s_l(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*strDestination*|*numberOfElements*|*strSource*|傳回值|*StrDestination*的內容|
+|*斯特雷特*|*元素數*|*strSource*|傳回值|*內容*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**或未結束|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|未修改|
-|任何|0 或太小|任何|**ERANGE**|未修改|
+|**NULL**或未終止|任意|任意|**埃因瓦爾**|未修改|
+|任意|任意|**空**|**埃因瓦爾**|未修改|
+|任意|0 或太小|任意|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-這些函式會嘗試將*strSource*的前*D*個字元附加至*strDest*結尾，其中*D*是*count*的較小者，以及*strSource*的長度。 如果附加這些*D*字元會放入*strDest*中（其大小會指定為*numberOfElements*），而且仍留出空間給 null 結束字元，則會附加這些字元，從原始終止的*null 開始。strDest*，而且會附加新的終止 null;否則， *strDest*[0] 會設定為 null 字元，且會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+這些函數試圖將*strSource*的第一個*D*字元追加到*strDest 的*末尾,其中*D*是*計數*的較小和*strSource*的長度。 如果附加這些*D*字元將適合*strD 最值*(其大小為*numberOfElements)* 中,並且仍為空終止符留有餘地,則這些字元將被追加,從*stest 的原*終止 null 開始,並附加新的終止空;否則 *,strDest*{0} 設置為空字元,並調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
-上述段落有一個例外狀況。 如果[_TRUNCATE](../../c-runtime-library/truncate.md) *count* ，則會將符合的大部分*strSource*附加至*strDest* ，同時仍留出空間來附加終止的 null。
+上述段落有一個例外狀況。 如果*計數*[_TRUNCATE](../../c-runtime-library/truncate.md)則盡可能多的*strSource*將追加到*strD 最起,* 同時仍留有空間追加終止空。
 
-例如，套用至物件的
+例如，
 
 ```C
 char dst[5];
@@ -191,9 +196,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-表示我們會要求**strncat_s**將三個字元附加至緩衝區中五個字元長的兩個字元;這不會留下任何空間給 null 結束字元，因此**strncat_s**零出字串，並呼叫不正確參數處理常式。
+意味著我們要求**strncat_s**在緩衝區五個字元長的兩個字元中附加三個字元;這將不為空終止符留下任何空間,因此**strncat_s**將字串歸零並調用無效的參數處理程式。
 
-如果需要截斷行為，請使用 **_TRUNCATE**或據以調整*大小*參數：
+如果需要截斷行為,請使用 **_TRUNCATE**或相應地調整*大小*參數:
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -207,15 +212,17 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
-如果*strSource*或*strDest*為**Null**，或*numberOfElements*為零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回**EINVAL** ，而不會修改其參數。
+如果*strSource*或*strDest*為**NULL**,或者*元素數*為零,則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數返回**EINVAL**而不修改其參數。
 
-**wcsncat_s**和 **_mbsncat_s**是**strncat_s**的寬字元和多位元組字元版本。 **Wcsncat_s**的字串引數和傳回值是寬字元字串; **_mbsncat_s**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcsncat_s**和 **_mbsncat_s**是**strncat_s**的寬字元和多位元組位元版本。 **wcsncat_s**的字串參數和返回值是寬字元字串;**_mbsncat_s**的字串是多位元位元串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -224,7 +231,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l**和 **_wcsncat_s_l**沒有地區設定相依性;僅針對 **_tcsncat_s_l**提供。
+**_strncat_s_l**和 **_wcsncat_s_l**沒有區域依賴性;它們只供 **_tcsncat_s_l。**
 
 ## <a name="requirements"></a>需求
 
@@ -232,9 +239,9 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> 或 \<wchar.h>|
-|**_mbsncat_s**， **_mbsncat_s_l**|\<mbstring.h>|
+|**_mbsncat_s**, **_mbsncat_s_l**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -373,9 +380,9 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

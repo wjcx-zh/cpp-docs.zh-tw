@@ -15,83 +15,83 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d804486b612906f537b6ed1665dfc0cec5149826
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324736"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364541"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控制項：序列化
 
-這篇文章討論如何序列化 ActiveX 控制項。 序列化是讀取或寫入至永續性儲存體媒體，例如磁碟檔案的程序。 Microsoft Foundation Class (MFC) 程式庫類別中的序列化提供內建支援`CObject`。 `COleControl` 這將支援延伸到透過內容交換機制使用的 ActiveX 控制項。
+本文討論如何序列化 ActiveX 控制項。 序列化是從持久存儲媒體(如磁碟檔)讀取或寫入的過程。 微軟基礎類 (MFC) 庫`CObject`為類 中的序列化提供了內置支援。 `COleControl`使用屬換機制將此支援擴展到 ActiveX 控制件。
 
 >[!IMPORTANT]
-> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
+> ActiveX 是一種不應用於新開發的傳統技術。 有關取代 ActiveX 的現代技術的詳細資訊,請參閱[ActiveX 控制件](activex-controls.md)。
 
-適用於 ActiveX 控制項的序列化藉由覆寫[COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)。 此函式，在載入期間呼叫，並儲存的控制項物件，將實作的成員變數或變更通知的成員變數的所有屬性。
+ActiveX 控制項序列化是透過重寫[COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)實現的。 此函數在載入和保存控制項件物件期間調用,儲存使用成員變數或成員變數實現的所有屬性以及更改通知。
 
-下列主題涵蓋的相關序列化 ActiveX 控制項的主要問題：
+以下主題涵蓋與序列化 ActiveX 控制項相關的主要問題:
 
-- 實作`DoPropExchange`序列化控制物件的函式
+- 實現`DoPropExchange`對控制元件物件進行序列化的功能
 
 - [自訂序列化程序](#_core_customizing_the_default_behavior_of_dopropexchange)
 
-- [實作版本支援](#_core_implementing_version_support)
+- [實現版本支援](#_core_implementing_version_support)
 
-##  <a name="_core_implementing_the_dopropexchange_function"></a> 實作 DoPropExchange 函式
+## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a>完整 DoPropExchange 功能
 
-當您使用 ActiveX 控制項精靈產生的控制專案時，數個預設處理常式函式會自動加入至控制項類別，包括的預設實作[COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)。 下列範例示範使用 ActiveX 控制項精靈 」 建立的類別加入的程式碼：
+當您使用 ActiveX 控制件精靈生成控制項專案時,多個預設處理程式函數將自動添加到控制項類別中,包括[COleControl::Do PropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)的預設實現。 以下範例顯示新增到使用 ActiveX 控制項精靈建立的類別的程式碼:
 
 [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]
 
-如果您想要將屬性設為持續性，修改`DoPropExchange`藉由新增屬性交換函式的呼叫。 下列範例示範自訂的布林 CircleShape 屬性，其中 CircleShape 屬性具有預設值是序列化 **，則為 TRUE**:
+如果要使屬性持久化,請通過向屬性`DoPropExchange`交換函數添加調用進行修改。 下面的範例展示自訂布林元件屬性的序列化,其中 CircleShape 屬性的預設值為**TRUE**:
 
 [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
 [!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]
 
-下表列出可用來序列化控制項的屬性可能的屬性交換函式：
+下表列出了可用於序列化控制屬性的可能屬換函數:
 
-|屬性交換函式|用途|
+|屬換功能|目的|
 |---------------------------------|-------------|
-|**PX_Blob( )**|將序列化的二進位大型物件 (BLOB) 資料屬性的型別。|
-|**PX_Bool( )**|將序列化的類型為布林值屬性。|
-|**PX_Color( )**|將序列化的類型色彩屬性。|
-|**PX_Currency( )**|序列化型別的**CY** （貨幣） 屬性。|
-|**PX_Double( )**|序列化型別的**double**屬性。|
-|**PX_Font( )**|將序列化字型類型的屬性。|
-|**PX_Float( )**|序列化型別的**浮點數**屬性。|
-|**PX_IUnknown( )**|將序列化的型別屬性`LPUNKNOWN`。|
-|**PX_Long( )**|序列化型別的**長**屬性。|
-|**PX_Picture( )**|序列化型別的圖片屬性。|
-|**PX_Short( )**|序列化型別的**簡短**屬性。|
-|**PXstring( )**|序列化型別的`CString`屬性。|
-|**PX_ULong( )**|序列化型別的**ULONG**屬性。|
-|**PX_UShort( )**|序列化型別的**USHORT**屬性。|
+|**PX_Blob)**|序列化類型二進位元物件 (BLOB) 資料屬性。|
+|**PX_Bool)**|序列化布爾屬性類型。|
+|**PX_Color)**|序列化類型顏色屬性。|
+|**PX_Currency)**|序列化類型**CY(** 貨幣)屬性。|
+|**PX_Double)**|序列化型**態 雙屬性**。|
+|**PX_Font)**|序列化字體類型屬性。|
+|**PX_Float)**|序列化類型**浮動**屬性。|
+|**PX_IUnknown)**|序列化類型`LPUNKNOWN`的屬性。|
+|**PX_Long)**|序列化類型**長**屬性。|
+|**PX_Picture)**|序列化類型圖片屬性。|
+|**PX_Short)**|序列化類型**短**屬性。|
+|**PXstring( )**|序列化類型`CString`屬性。|
+|**PX_ULong)**|序列化類型**ULONG**屬性。|
+|**PX_UShort)**|序列化類型**USHORT**屬性。|
 
-如需有關這些屬性交換函式的詳細資訊，請參閱 <<c0> [ 持續性的 OLE 控制項](../mfc/reference/persistence-of-ole-controls.md)中*MFC 參考 》*。
+有關這些屬換函數的詳細資訊,請參閱*MFC 參考*中的[OLE 控制項持久性](../mfc/reference/persistence-of-ole-controls.md)。
 
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> 自訂 DoPropExchange 的預設行為
+## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>自訂 DoPropExchange 的預設行為
 
-預設實作`DoPropertyExchange`（如前一個主題中所示） 中，會呼叫基底類別`COleControl`。 這將會序列化自動所支援的屬性`COleControl`，它會使用更多的儲存體空間序列化在控制項的自訂屬性。 移除這個呼叫，可讓您只在您認為重要的屬性進行序列化的物件。 控制項已實作的任何內建屬性狀態不會序列化時儲存或載入的控制項物件，除非您明確地新增**PX_** 呼叫它們。
+的`DoPropertyExchange`默認實現(如上一個主題所示)對基`COleControl`類 進行調用。 這將序列化`COleControl`由 自動支援的屬性集,該屬性使用比僅序列化控制件的自定義屬性更多的儲存空間。 刪除此呼叫允許物件僅序列化您認為重要的屬性。 保存或載入控制項物件時,不會序列化控制項已實現的任何股票屬性,除非您顯式添加**PX_** 調用它們。
 
-##  <a name="_core_implementing_version_support"></a> 實作版本支援
+## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a>實現版本支援
 
-版本支援讓修改過的 ActiveX 控制項，以新增新的持續性屬性，而且仍然能夠偵測並載入控制項的舊版本所建立的永續性狀態。 若要讓控制項的版本可供隨著持續性資料的詳細資訊，請呼叫[COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion)控制項的`DoPropExchange`函式。 如果使用 ActiveX 控制項精靈 」 來建立 「 ActiveX 控制項，會自動插入這個呼叫。 如果不需要的版本支援，也可以加以移除。 不過，控制項大小的成本是很小 （4 個位元組） 的版本支援可提供額外的彈性。
+版本支援使修訂後的 ActiveX 控制件能夠添加新的持久性屬性,並且仍然能夠檢測和載入控制項的早期版本創建的持久狀態。 要使控制項的版本作為其持久資料的一部分可用,請調用控制項`DoPropExchange`函數中的[COleControl::ExchangeVersion。](../mfc/reference/colecontrol-class.md#exchangeversion) 如果使用 ActiveX 控制精靈創建 ActiveX 控制件,則會自動插入此調用。 如果不需要版本支援,可以將其刪除。 但是,對於版本支援提供的額外靈活性,控制大小的成本非常小(4 位元組)。
 
-如果控制項不是使用 ActiveX 控制項精靈，將呼叫加入`COleControl::ExchangeVersion`插入下面這一行的開頭您`DoPropExchange`函式 (呼叫前面`COleControl::DoPropExchange`):
+如果未使用 ActiveX 控制件精靈建立控制項`COleControl::ExchangeVersion`, 請`DoPropExchange`透過在函數開頭插入以下行(在調用`COleControl::DoPropExchange`之前) 添加調用。
 
 [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-您可以使用任何**DWORD**做為版本號碼。 ActiveX 控制項精靈所產生的專案使用`_wVerMinor`和`_wVerMajor`為預設值。 這些是定義專案的 ActiveX 控制項類別的實作檔案中的全域常數。 中的其餘部分您`DoPropExchange`函式，您可以呼叫[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)隨時擷取您要儲存或擷取的版本。
+您可以使用任何**DWORD**作為版本號。 由 ActiveX 控制件精靈生成的`_wVerMinor`專案`_wVerMajor`使用並作為預設值。 這些是在專案 ActiveX 控制項類的實現檔中定義的全域常量。 在`DoPropExchange`函數的其餘部分中,您可以隨時調用[CPropExchange:GetVersion](../mfc/reference/cpropexchange-class.md#getversion)檢索要保存或檢索的版本。
 
-在下列範例中，此範例控制項的第 1 版會有"ReleaseDate"屬性。 第 2 版，將 「 OriginalDate"屬性。 如果控制項指示載入持續性的狀態從舊的版本，它會初始化為預設值的新屬性的成員變數。
+在下面的示例中,此示例控件的版本 1 僅具有"發佈日期"屬性。 版本 2 添加了「原始日期」屬性。 如果指示控制項從舊版本中載入持久狀態,它將新屬性的成員變數初始化為預設值。
 
 [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-根據預設，控制項 」 「 舊將資料轉換成最新的格式。 例如，如果控制項的第 2 版中載入第 1 版所儲存的資料，它會寫入第 2 版格式一次儲存時。 如果您想要在上一個讀取的格式儲存資料的控制項，則會傳遞**假**做為第三個參數呼叫時`ExchangeVersion`。 此第三個參數是選擇性的而且是 **，則為 TRUE**預設。
+預設情況下,控制項會將舊資料轉換為「最新格式。 例如,如果控件的版本 2 載入由版本 1 保存的資料,則當再次儲存版本 2 格式時,它將編寫版本 2 格式。 如果希望控制檔在上次讀取時以格式保存資料,則在調用**FALSE**`ExchangeVersion`時將 FALSE 作為第三個參數傳遞。 此第三個參數是可選的,預設情況下為**TRUE。**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 067ea7238c48f2698d7bfe469e9c4be10129c065
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372877"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364046"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 類別
 
-實作 [圖片] 屬性，可讓使用者在控制項中顯示圖片。
+實現圖片屬性,允許使用者在控件中顯示圖片。
 
 ## <a name="syntax"></a>語法
 
@@ -51,45 +51,45 @@ class CPictureHolder
 
 |名稱|描述|
 |----------|-----------------|
-|[CPictureHolder::CPictureHolder](#cpictureholder)|建構 `CPictureHolder` 物件。|
+|[CPicture持有人::CPictureHolder](#cpictureholder)|建構 `CPictureHolder` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPictureHolder::CreateEmpty](#createempty)|建立空的 `CPictureHolder` 物件。|
-|[CPictureHolder::CreateFromBitmap](#createfrombitmap)|建立`CPictureHolder`從點陣圖物件。|
-|[CPictureHolder::CreateFromIcon](#createfromicon)|建立`CPictureHolder`從圖示的物件。|
-|[CPictureHolder::CreateFromMetafile](#createfrommetafile)|建立`CPictureHolder`中繼檔中的物件。|
-|[CPictureHolder::GetDisplayString](#getdisplaystring)|擷取控制項容器的屬性瀏覽器中顯示的字串。|
-|[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|傳回`CPictureHolder`物件的`IDispatch`介面。|
-|[CPictureHolder::GetType](#gettype)|會告知是否`CPictureHolder`物件是點陣圖、 中繼檔或圖示。|
-|[CPictureHolder::Render](#render)|呈現圖片。|
-|[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|設定組`CPictureHolder`物件的`IDispatch`介面。|
+|[CPicture持有人:建立空](#createempty)|建立空的 `CPictureHolder` 物件。|
+|[CPicture持有人::從位圖創建](#createfrombitmap)|從位`CPictureHolder`圖創建物件。|
+|[CPicture持有人:從圖示建立](#createfromicon)|從圖示`CPictureHolder`創建物件。|
+|[CPicture持有人::從Metafile創建](#createfrommetafile)|從元`CPictureHolder`檔案創建物件。|
+|[CPicture 持有人:取得顯示字串](#getdisplaystring)|檢索控制容器的屬性瀏覽器中顯示的字串。|
+|[CPicture持有人:獲取圖片調度](#getpicturedispatch)|返回`CPictureHolder`物件的`IDispatch`介面。|
+|[CPicture 持有人:取得類型](#gettype)|告訴`CPictureHolder`對像是點陣圖、元檔還是圖示。|
+|[CPicture持有人:呈現](#render)|渲染圖片。|
+|[CPicture持有人::設置圖片調度](#setpicturedispatch)|設置`CPictureHolder`物件`IDispatch`的介面。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CPictureHolder::m_pPict](#m_ppict)|圖片物件指標。|
+|[CPicture持有人:m_pPict](#m_ppict)|指向圖片物件的指標。|
 
 ## <a name="remarks"></a>備註
 
-`CPictureHolder` 沒有基底類別。
+`CPictureHolder`沒有基類。
 
-使用內建的 [圖片] 屬性中，開發人員可以指定點陣圖、 圖示或顯示的中繼檔。
+使用「庫存圖片」屬性,開發人員可以指定用於顯示的點陣圖、圖示或元檔。
 
-如需建立自訂圖片屬性的詳細資訊，請參閱文章[MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)。
+有關建立自訂圖片屬性的資訊,請參閱文章[MFC ActiveX 控制件:在 ActiveX 控制件中使用圖片](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CPictureHolder`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxctl.h
+**標題:** afxctl.h
 
-##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder
+## <a name="cpictureholdercpictureholder"></a><a name="cpictureholder"></a>CPicture持有人::CPictureHolder
 
 建構 `CPictureHolder` 物件。
 
@@ -97,9 +97,9 @@ class CPictureHolder
 CPictureHolder();
 ```
 
-##  <a name="createempty"></a>  CPictureHolder::CreateEmpty
+## <a name="cpictureholdercreateempty"></a><a name="createempty"></a>CPicture持有人:建立空
 
-建立空`CPictureHolder`物件，並將它連接到`IPicture`介面。
+建立空`CPictureHolder`物件並將其連接`IPicture`到介面。
 
 ```
 BOOL CreateEmpty();
@@ -107,11 +107,11 @@ BOOL CreateEmpty();
 
 ### <a name="return-value"></a>傳回值
 
-已成功建立該物件; 如果為非零否則為 0。
+如果成功創建物件,則非零;否則 0。
 
-##  <a name="createfrombitmap"></a>  CPictureHolder::CreateFromBitmap
+## <a name="cpictureholdercreatefrombitmap"></a><a name="createfrombitmap"></a>CPicture持有人::從位圖創建
 
-利用點陣圖來初始化中的圖片物件`CPictureHolder`。
+使用點陣圖在 中初始化`CPictureHolder`圖片物件 。
 
 ```
 BOOL CreateFromBitmap(
@@ -131,34 +131,34 @@ BOOL CreateFromBitmap(
 ### <a name="parameters"></a>參數
 
 *idResource*<br/>
-點陣圖資源的資源識別碼。
+位圖資源的資源 ID。
 
 *pBitmap*<br/>
-指標[CBitmap](../../mfc/reference/cbitmap-class.md)物件。
+指向[CBitmap](../../mfc/reference/cbitmap-class.md)物件的指標。
 
 *pPal*<br/>
-指標[CPalette](../../mfc/reference/cpalette-class.md)物件。
+指向[CPalette](../../mfc/reference/cpalette-class.md)物件的指標。
 
-*bTransferOwnership*<br/>
-指出圖片物件是否會採取點陣圖和調色盤物件的擁有權。
+*b 轉讓擁有權*<br/>
+指示圖片物件是否將取得位圖和調色板物件的擁有權。
 
-*hbm*<br/>
-從中的點陣圖控制代碼`CPictureHolder`建立物件。
+*Hbm*<br/>
+處理從中`CPictureHolder`創建物件的點陣圖。
 
-*hpal*<br/>
-用於轉譯點陣圖的調色盤的控制代碼。
+*赫帕爾*<br/>
+處理用於呈現點陣圖的調色板。
 
 ### <a name="return-value"></a>傳回值
 
-已成功建立該物件; 如果為非零否則為 0。
+如果成功創建物件,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果*bTransferOwnership*為 TRUE、 呼叫端不應該使用點陣圖或以任何方式在這個呼叫之後的調色盤物件傳回。 如果*bTransferOwnership*為 FALSE 時，呼叫端會負責確保圖片物件的存留期內保持有效的點陣圖和調色盤的物件。
+如果*bTransport 擁有權*為 TRUE,則在此調用返回後,調用方不應以任何方式使用位圖或調色板物件。 如果*bTransport 擁有權*為 FALSE,則調用方負責確保位圖和調色板物件在圖片物件的生存期內保持有效。
 
-##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon
+## <a name="cpictureholdercreatefromicon"></a><a name="createfromicon"></a>CPicture持有人:從圖示建立
 
-使用圖示來初始化中的圖片物件`CPictureHolder`。
+使用圖示在 中初始化圖片`CPictureHolder`物件 。
 
 ```
 BOOL CreateFromIcon(
@@ -172,25 +172,25 @@ BOOL CreateFromIcon(
 ### <a name="parameters"></a>參數
 
 *idResource*<br/>
-點陣圖資源的資源識別碼。
+位圖資源的資源 ID。
 
 *hIcon*<br/>
-從其控制代碼，以圖示`CPictureHolder`建立物件。
+處理從中`CPictureHolder`創建物件的圖示。
 
-*bTransferOwnership*<br/>
-指出圖片物件是否會採取圖示物件的擁有權。
+*b 轉讓擁有權*<br/>
+指示圖片物件是否將取得圖示物件的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
-已成功建立該物件; 如果為非零否則為 0。
+如果成功創建物件,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果*bTransferOwnership*為 TRUE 時，呼叫端不應該使用的圖示物件以任何方式之後這個呼叫會傳回。 如果*bTransferOwnership*為 FALSE 時，呼叫端會負責確保圖示物件圖片物件的存留期內維持有效。
+如果*bTransport 擁有權*為 TRUE,則在此調用返回後,調用方不應以任何方式使用圖示物件。 如果*bTransport 擁有權*為 FALSE,則調用方負責確保圖示物件在圖片物件的生存期內保持有效。
 
-##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile
+## <a name="cpictureholdercreatefrommetafile"></a><a name="createfrommetafile"></a>CPicture持有人::從Metafile創建
 
-使用中繼檔圖片物件初始化在`CPictureHolder`。
+使用中繼媒體初始化 的`CPictureHolder`圖片物件 。
 
 ```
 BOOL CreateFromMetafile(
@@ -202,29 +202,29 @@ BOOL CreateFromMetafile(
 
 ### <a name="parameters"></a>參數
 
-*hmf*<br/>
-用來建立中繼檔案的控制代碼`CPictureHolder`物件。
+*姆夫*<br/>
+處理用於創建`CPictureHolder`物件的元檔。
 
 *xExt*<br/>
-X 圖片的範圍。
+圖片的 X 範圍。
 
 *yExt*<br/>
 圖片的 Y 範圍。
 
-*bTransferOwnership*<br/>
-指出圖片物件是否需要中繼檔物件的擁有權。
+*b 轉讓擁有權*<br/>
+指示圖片物件是否將取得元檔物件的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
-已成功建立該物件; 如果為非零否則為 0。
+如果成功創建物件,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果*bTransferOwnership*為 TRUE 時，呼叫端不應該使用中繼檔的物件以任何方式之後這個呼叫會傳回。 如果*bTransferOwnership*為 FALSE 時，呼叫端會負責確保圖片物件的存留期內維持有效的中繼檔物件。
+如果*bTransport 擁有權*為 TRUE,則調用方不應在此調用返回後以任何方式使用元檔物件。 如果*bTransport 擁有權*為 FALSE,則調用方負責確保元檔物件在圖片物件的生存期內保持有效。
 
-##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString
+## <a name="cpictureholdergetdisplaystring"></a><a name="getdisplaystring"></a>CPicture 持有人:取得顯示字串
 
-擷取容器的屬性瀏覽器中顯示的字串。
+檢索容器的屬性瀏覽器中顯示的字串。
 
 ```
 BOOL GetDisplayString(CString& strValue);
@@ -233,15 +233,15 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="parameters"></a>參數
 
 *strValue*<br/>
-若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)要保存的顯示字串。
+引用用於保存顯示字串的[CString。](../../atl-mfc-shared/reference/cstringt-class.md)
 
 ### <a name="return-value"></a>傳回值
 
-已成功擷取的字串; 如果為非零否則為 0。
+如果已成功檢索字串,則非零;否則 0。
 
-##  <a name="getpicturedispatch"></a>  CPictureHolder::GetPictureDispatch
+## <a name="cpictureholdergetpicturedispatch"></a><a name="getpicturedispatch"></a>CPicture持有人:獲取圖片調度
 
-此函式傳回的指標`CPictureHolder`物件的`IPictureDisp`介面。
+此函數返回指向`CPictureHolder`物件介面`IPictureDisp`的指標。
 
 ```
 LPPICTUREDISP GetPictureDispatch();
@@ -249,15 +249,15 @@ LPPICTUREDISP GetPictureDispatch();
 
 ### <a name="return-value"></a>傳回值
 
-指標`CPictureHolder`物件的`IPictureDisp`介面。
+指向`CPictureHolder`物件介面`IPictureDisp`的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫端必須呼叫`Release`在當它完成時，這個指標上。
+調用方在完成此`Release`指標後必須調用它。
 
-##  <a name="gettype"></a>  CPictureHolder::GetType
+## <a name="cpictureholdergettype"></a><a name="gettype"></a>CPicture 持有人:取得類型
 
-指出圖片是否為點陣圖、 中繼檔或圖示。
+指示圖片是點陣圖、元文件還是圖示。
 
 ```
 short GetType();
@@ -265,27 +265,27 @@ short GetType();
 
 ### <a name="return-value"></a>傳回值
 
-值，指出類型的圖片。 可能的值和其意義如下：
+指示圖片類型的值。 可能的值及其含義如下:
 
 |值|意義|
 |-----------|-------------|
-|PICTYPE_UNINITIALIZED|`CPictureHolder` 物件被 unititialized。|
-|PICTYPE_NONE|`CPictureHolder` 物件是空的。|
-|PICTYPE_BITMAP|圖片是點陣圖。|
-|PICTYPE_METAFILE|圖片會在中繼檔。|
-|PICTYPE_ICON|圖片顯示為圖示。|
+|PICTYPE_UNINITIALIZED|`CPictureHolder`對像是統一的。|
+|PICTYPE_NONE|`CPictureHolder`物件為空。|
+|PICTYPE_BITMAP|圖片是位圖。|
+|PICTYPE_METAFILE|圖片是一個元檔。|
+|PICTYPE_ICON|圖片是一個圖示。|
 
-##  <a name="m_ppict"></a>  CPictureHolder::m_pPict
+## <a name="cpictureholderm_ppict"></a><a name="m_ppict"></a>CPicture持有人:m_pPict
 
-指標`CPictureHolder`物件的`IPicture`介面。
+指向`CPictureHolder`物件介面`IPicture`的指標。
 
 ```
 LPPICTURE m_pPict;
 ```
 
-##  <a name="render"></a>  CPictureHolder::Render
+## <a name="cpictureholderrender"></a><a name="render"></a>CPicture持有人:呈現
 
-呈現的圖片中所參考的矩形*rcRender*。
+在*rcRender*引用的矩形中渲染圖片。
 
 ```
 void Render(
@@ -297,17 +297,17 @@ void Render(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-要轉譯圖片的顯示內容的指標。
+指向要呈現圖片的顯示上下文。
 
 *rcRender*<br/>
-圖片為呈現的矩形。
+要在其中渲染圖片的矩形。
 
 *rcWBounds*<br/>
-表示轉譯圖片物件週框矩形。 是控制項，這個矩形是*rcbounds 就*參數傳遞至的覆寫[COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)。
+表示呈現圖片的物件的邊界矩形的矩形。 對於控制項,此矩形是傳遞給[COleControl:::onDraw](../../mfc/reference/colecontrol-class.md#ondraw)的重寫的*rcBounds*參數。
 
-##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch
+## <a name="cpictureholdersetpicturedispatch"></a><a name="setpicturedispatch"></a>CPicture持有人::設置圖片調度
 
-連接`CPictureHolder`物件至`IPictureDisp`介面。
+將`CPictureHolder`物件連接`IPictureDisp`到介面。
 
 ```
 void SetPictureDispatch(LPPICTUREDISP pDisp);
@@ -316,7 +316,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ### <a name="parameters"></a>參數
 
 *pDisp*<br/>
-新的指標`IPictureDisp`介面。
+指向新`IPictureDisp`介面的指標。
 
 ## <a name="see-also"></a>另請參閱
 

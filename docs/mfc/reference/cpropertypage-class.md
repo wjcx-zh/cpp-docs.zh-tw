@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363993"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 類別
 
@@ -63,43 +63,43 @@ class CPropertyPage : public CDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[CPropertyPage：： CPropertyPage](#cpropertypage)|建構 `CPropertyPage` 物件。|
+|[C 屬性頁:C屬性頁](#cpropertypage)|建構 `CPropertyPage` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPropertyPage：： CancelToClose](#canceltoclose)|將 [確定] 按鈕變更為 [關閉]，並停用模式屬性工作表頁面中無法復原的變更之後的 [取消] 按鈕。|
-|[CPropertyPage：：結構](#construct)|建構 `CPropertyPage` 物件。 如果您想要在執行時間指定參數，或使用陣列，請使用 `Construct`。|
-|[CPropertyPage：： GetPSP](#getpsp)|抓取與 `CPropertyPage` 物件相關聯的 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)結構。|
-|[CPropertyPage：： OnApply](#onapply)|當按一下 [立即套用] 按鈕時，由架構呼叫。|
-|[CPropertyPage：： OnCancel](#oncancel)|當按一下 [取消] 按鈕時由架構呼叫。|
-|[CPropertyPage：： OnKillActive](#onkillactive)|當目前的頁面不再是使用中的頁面時，由架構呼叫。 在這裡執行資料驗證。|
-|[CPropertyPage：： OnOK](#onok)|當按一下 [確定]、[立即套用] 或 [關閉] 按鈕時，由架構呼叫。|
-|[CPropertyPage：： OnQueryCancel](#onquerycancel)|當按一下 [取消] 按鈕時，以及在取消動作之前，由架構呼叫。|
-|[CPropertyPage：： OnReset](#onreset)|當按一下 [取消] 按鈕時由架構呼叫。|
-|[CPropertyPage：： OnSetActive](#onsetactive)|當頁面設為使用中頁面時由架構呼叫。|
-|[CPropertyPage：： OnWizardBack](#onwizardback)|在使用 wizard 類型的屬性工作表時，按一下 [上一頁] 按鈕時由架構呼叫。|
-|[CPropertyPage：： OnWizardFinish](#onwizardfinish)|在使用 wizard 類型的屬性工作表時，按一下 [完成] 按鈕時由架構呼叫。|
-|[CPropertyPage：： OnWizardNext](#onwizardnext)|在使用 wizard 類型的屬性工作表時，按一下 [下一步] 按鈕時由架構呼叫。|
-|[CPropertyPage：： QuerySiblings](#querysiblings)|將訊息轉送至屬性工作表的每個頁面。|
-|[CPropertyPage：： SetModified](#setmodified)|呼叫以啟用或停用 [立即套用] 按鈕。|
+|[C 屬性頁::取消關閉](#canceltoclose)|在模態屬性表頁面發生不可恢復更改後,將"確定"按鈕更改為"關閉",並禁用"取消"按鈕。|
+|[C 屬性頁:建構](#construct)|建構 `CPropertyPage` 物件。 `Construct`如果要在運行時指定參數,或者使用陣列,請使用。|
+|[C 屬性頁:取得 PSP](#getpsp)|檢索與`CPropertyPage`物件關聯的 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)結構。|
+|[C屬性頁::在申請上](#onapply)|按下「立即應用」按鈕時由框架調用。|
+|[C 屬性頁:開啟取消](#oncancel)|按下「取消」按鈕時由框架呼叫。|
+|[C 屬性頁:在活動](#onkillactive)|當當前頁面不再是活動頁時,由框架調用。 在此處執行數據驗證。|
+|[C 屬性頁:ONOK](#onok)|按下「確定」「立即應用」或「關閉」按鈕時,由框架調用。|
+|[C 屬性頁:在查詢取消](#onquerycancel)|按下「取消」按鈕時和取消發生之前,由框架調用。|
+|[C 屬性頁:開啟重設](#onreset)|按下「取消」按鈕時由框架呼叫。|
+|[C 屬性頁開啟活動](#onsetactive)|當頁面成為活動頁時,由框架調用。|
+|[C屬性頁::在嚮導背面](#onwizardback)|使用嚮導類型屬性表按兩擊「後退」按鈕時,由框架調用。|
+|[C 屬性頁:在精靈完成](#onwizardfinish)|使用嚮導類型屬性表按兩擊"完成"按鈕時,由框架調用。|
+|[C屬性頁::在精靈下一頁](#onwizardnext)|使用嚮導類型屬性表按下「下一步」按鈕時,由框架調用。|
+|[C 屬性頁:查詢同級](#querysiblings)|將消息轉發到屬性表的每個頁面。|
+|[C 屬性頁::已修改](#setmodified)|呼叫以啟動或停用「立即應用」按鈕。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CPropertyPage：： m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)結構。 提供基本屬性頁參數的存取權。|
+|[C 屬性頁:m_psp](#m_psp)|Windows [PROPPAGE 結構](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)。 提供對基本屬性頁參數的訪問。|
 
 ## <a name="remarks"></a>備註
 
-如同標準對話方塊，您可以從屬性工作表中每個頁面的 `CPropertyPage` 衍生一個類別。 若要使用 `CPropertyPage`衍生的物件，請先建立[CPropertySheet](../../mfc/reference/cpropertysheet-class.md)物件，然後為屬性工作表中的每個頁面建立一個物件。 針對工作表中的每個頁面呼叫[CPropertySheet：： AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) ，然後藉由呼叫模式屬性工作表的[CPropertySheet：:D omodal](../../mfc/reference/cpropertysheet-class.md#domodal) ，或針對非模式屬性工作表的[CPropertySheet：： Create](../../mfc/reference/cpropertysheet-class.md#create) ，顯示內容表。
+與標準對話框一樣,從屬性表中的每個頁面`CPropertyPage`派生一個類。 要使用`CPropertyPage`派生物件,請先創建[CPropertySheet](../../mfc/reference/cpropertysheet-class.md)物件,然後為屬性表中的每個頁面創建一個物件。 呼叫[CPropertySheet::為工作表中的每個頁面新增 Page,](../../mfc/reference/cpropertysheet-class.md#addpage)然後透過呼叫模式屬性表的[CPropertySheet::DoModal)](../../mfc/reference/cpropertysheet-class.md#domodal)或[CPropertySheet::為](../../mfc/reference/cpropertysheet-class.md#create)無模式屬性表創建來顯示屬性表。
 
-您可以建立一個稱為「wizard」的 [索引標籤] 對話方塊，其中包含具有一系列屬性頁的屬性工作表，可引導使用者完成作業的步驟，例如設定裝置或建立電子報。 在 [wizard-類型] 索引標籤對話方塊中，屬性頁沒有索引標籤，而且一次只能顯示一個屬性頁。 此外，[wizard type] 索引標籤對話方塊會有 [上一頁] 按鈕、[下一步] 或 [完成] 按鈕和 [取消] 按鈕，而不是 [確定] 和 [立即套用] 按鈕。
+您可以創建稱為嚮導的選項卡對話框類型,該對話方塊由包含一系列屬性頁的屬性表組成,該屬性頁指導使用者完成操作的步驟,例如設置設備或創建新聞稿。 在嚮導類型選項卡對話方塊中,屬性頁沒有選項卡,並且一次只能看到一個屬性頁。 此外,嚮導類型選項卡對話框沒有"確定"和"立即應用"按鈕,而是具有"後退"按鈕、"下一步"或"完成"按鈕以及"取消"按鈕。
 
-如需將屬性工作表建立為 wizard 的詳細資訊，請參閱[CPropertySheet：： SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。 如需使用 `CPropertyPage` 物件的詳細資訊，請參閱[屬性工作表和屬性頁](../../mfc/property-sheets-and-property-pages-in-mfc.md)一文。
+有關將屬性表設定為精靈的詳細資訊,請參閱[CPropertySheet:setWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。 有關使用`CPropertyPage`物件的詳細資訊,請參閱文章[「屬性表」和「屬性頁](../../mfc/property-sheets-and-property-pages-in-mfc.md)」。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -113,11 +113,11 @@ class CPropertyPage : public CDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdlgs。h
+**標題:** afxdlgs.h
 
-##  <a name="canceltoclose"></a>CPropertyPage：： CancelToClose
+## <a name="cpropertypagecanceltoclose"></a><a name="canceltoclose"></a>C 屬性頁::取消關閉
 
-在對模式屬性工作表的頁面中的資料進行無法復原的變更之後，呼叫此函式。
+對模態屬性表頁面中的數據進行了不可恢復的更改後,請調用此函數。
 
 ```
 void CancelToClose();
@@ -125,17 +125,17 @@ void CancelToClose();
 
 ### <a name="remarks"></a>備註
 
-此函式會變更 [確定] 按鈕，以關閉並停用 [取消] 按鈕。 這種變更會向使用者通知變更為永久性，而且無法取消修改。
+此功能將「確定」按鈕更改為"關閉"並禁用"取消"按鈕。 此更改提醒使用者更改是永久性的,並且無法取消修改。
 
-`CancelToClose` 成員函式不會在非模式屬性工作表中執行任何操作，因為非模式屬性工作表預設不會有 [取消] 按鈕。
+成員`CancelToClose`函數在無模式屬性表中不執行任何操作,因為默認情況下,無模式屬性表沒有"取消"按鈕。
 
 ### <a name="example"></a>範例
 
-  請參閱[CPropertyPage：： QuerySiblings](#querysiblings)的範例。
+  請參考[CPropertyPage:查詢同級的範例](#querysiblings)。
 
-##  <a name="construct"></a>CPropertyPage：：結構
+## <a name="cpropertypageconstruct"></a><a name="construct"></a>C 屬性頁:建構
 
-呼叫這個成員函式來建立 `CPropertyPage` 物件。
+呼叫此成員函數以建構物件`CPropertyPage`。
 
 ```
 void Construct(
@@ -162,39 +162,39 @@ void Construct(
 ### <a name="parameters"></a>參數
 
 *nIDTemplate*<br/>
-此頁面所使用之範本的識別碼。
+用於此頁面的範本的 ID。
 
 *nIDCaption*<br/>
-要放置在此頁面索引標籤中的名稱識別碼。 如果是0，則會從這個頁面的對話方塊範本取得名稱。
+要放置在此頁選項卡中的名稱的 ID。 如果為 0,則名稱將從此頁面的對話方塊樣本中獲取。
 
-*lpszTemplateName*<br/>
-包含以 null 終止的字串，這是範本資源的名稱。
+*lpszTemplate 名稱*<br/>
+包含一個 null 連接端字串,該字串是樣本資源的名稱。
 
-*nIDHeaderTitle*<br/>
-要放在屬性頁標頭之標題位置的名稱識別碼。 預設為0。
+*nIDHeader標題*<br/>
+要放置在屬性頁頁頁標題的標題位置的名稱的 ID。 默認情況下,0。
 
-*nIDHeaderSubTitle*<br/>
-要放在屬性頁標題之副標題位置的名稱識別碼。 預設為0。
+*nIDHeader 子標題*<br/>
+要放置在屬性頁頁標題的字幕位置的名稱的 ID。 默認情況下,0。
 
 ### <a name="remarks"></a>備註
 
-符合下列所有條件之後，就會顯示物件：
+滿足以下所有條件後,將顯示該物件:
 
-- 已使用[CPropertySheet：： AddPage](../../mfc/reference/cpropertysheet-class.md#addpage)將頁面新增至屬性工作表。
+- 該頁已使用[CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage)添加到屬性表。
 
-- 已呼叫屬性工作表的[DoModal](../../mfc/reference/cpropertysheet-class.md#domodal)或[Create](../../mfc/reference/cpropertysheet-class.md#create)函式。
+- 屬性表的[「DoModal」](../../mfc/reference/cpropertysheet-class.md#domodal)或[「創建」](../../mfc/reference/cpropertysheet-class.md#create)函數已呼叫。
 
-- 使用者已選取（索引標籤式）此頁面。
+- 使用者已選擇(選項卡到)此頁面。
 
-如果未呼叫其中一個其他類別的函式，請呼叫 `Construct`。 `Construct` 成員函式很有彈性，因為您可以將參數語句保留空白，然後在程式碼中的任何時間點指定多個參數和結構。
+如果`Construct`尚未調用其他類構造函數之一,則調用。 `Construct`成員函數是靈活的,因為您可以將參數語句留空,然後在代碼中的任何點指定多個參數和構造。
 
-當您使用陣列時，必須使用 `Construct`，而且您必須針對陣列的每個成員呼叫 `Construct`，以便將適當的值指派給資料成員。
+在使用陣列`Construct`時必須使用,並且必須調`Construct`用 陣列的每個成員,以便為數據成員分配正確的值。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]
 
-##  <a name="cpropertypage"></a>CPropertyPage：： CPropertyPage
+## <a name="cpropertypagecpropertypage"></a><a name="cpropertypage"></a>C 屬性頁:C屬性頁
 
 建構 `CPropertyPage` 物件。
 
@@ -229,39 +229,39 @@ CPropertyPage(
 ### <a name="parameters"></a>參數
 
 *nIDTemplate*<br/>
-此頁面所使用之範本的識別碼。
+用於此頁面的範本的 ID。
 
 *nIDCaption*<br/>
-要放置在此頁面索引標籤中的名稱識別碼。 如果是0，則會從這個頁面的對話方塊範本取得名稱。
+要放置在此頁選項卡中的名稱的 ID。 如果為 0,則名稱將從此頁面的對話方塊樣本中獲取。
 
 *dwSize*<br/>
-*lpszTemplateName*指向包含此頁面之範本名稱的字串。 不能是 NULL。
+*lpszTemplate 名稱*指向包含此頁面樣本名稱的字串。 不能是 NULL。
 
-*nIDHeaderTitle*<br/>
-要放在屬性頁標頭之標題位置的名稱識別碼。
+*nIDHeader標題*<br/>
+要放置在屬性頁頁頁標題的標題位置的名稱的 ID。
 
-*nIDHeaderSubTitle*<br/>
-要放在屬性頁標題之副標題位置的名稱識別碼。
+*nIDHeader 子標題*<br/>
+要放置在屬性頁頁標題的字幕位置的名稱的 ID。
 
 ### <a name="remarks"></a>備註
 
-符合下列所有條件之後，就會顯示物件：
+滿足以下所有條件後,將顯示該物件:
 
-- 已使用[CPropertySheet：： AddPage](../../mfc/reference/cpropertysheet-class.md#addpage)將頁面新增至屬性工作表。
+- 該頁已使用[CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage)添加到屬性表。
 
-- 已呼叫屬性工作表的[DoModal](../../mfc/reference/cpropertysheet-class.md#domodal)或[Create](../../mfc/reference/cpropertysheet-class.md#create)函式。
+- 屬性表的[「DoModal」](../../mfc/reference/cpropertysheet-class.md#domodal)或[「創建」](../../mfc/reference/cpropertysheet-class.md#create)函數已呼叫。
 
-- 使用者已選取（索引標籤式）此頁面。
+- 使用者已選擇(選項卡到)此頁面。
 
-如果您有多個參數（例如，如果您使用的是陣列），請使用[CPropertySheet：：結構](../../mfc/reference/cpropertysheet-class.md#construct)，而不是 `CPropertyPage`。
+如果有多個參數(例如,如果您正在使用陣列),請使用[CPropertySheet::建構](../../mfc/reference/cpropertysheet-class.md#construct)而不是`CPropertyPage`。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]
 
-##  <a name="getpsp"></a>CPropertyPage：： GetPSP
+## <a name="cpropertypagegetpsp"></a><a name="getpsp"></a>C 屬性頁:取得 PSP
 
-抓取與 `CPropertyPage` 物件相關聯的 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)結構。
+檢索與`CPropertyPage`物件關聯的 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)結構。
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -271,11 +271,11 @@ PROPSHEETPAGE& GetPSP();
 
 ### <a name="return-value"></a>傳回值
 
-`PROPSHEETPAGE` 結構的參考。
+對結構的`PROPSHEETPAGE`引用。
 
-##  <a name="m_psp"></a>CPropertyPage：： m_psp
+## <a name="cpropertypagem_psp"></a><a name="m_psp"></a>C 屬性頁:m_psp
 
-`m_psp` 是一種結構，其成員會儲存[PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)的特性。
+`m_psp`是一個結構,其成員存儲[PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)的特徵。
 
 ```
 PROPSHEETPAGE m_psp;
@@ -283,17 +283,17 @@ PROPSHEETPAGE m_psp;
 
 ### <a name="remarks"></a>備註
 
-使用此結構來初始化屬性頁在建立後的外觀。
+使用此結構在構造屬性頁后初始化屬性頁的外觀。
 
-如需此結構的詳細資訊，包括其成員的清單，請參閱 Windows SDK 中的 `PROPSHEETPAGE`。
+有關此結構的詳細資訊(包括其成員的清單),請參閱`PROPSHEETPAGE`Windows SDK。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]
 
-##  <a name="onapply"></a>CPropertyPage：： OnApply
+## <a name="cpropertypageonapply"></a><a name="onapply"></a>C屬性頁::在申請上
 
-當使用者選擇 [確定] 或 [立即套用] 按鈕時，架構會呼叫這個成員函式。
+當使用者選擇"確定"或"立即應用"按鈕時,框架將調用此成員函數。
 
 ```
 virtual BOOL OnApply();
@@ -301,25 +301,25 @@ virtual BOOL OnApply();
 
 ### <a name="return-value"></a>傳回值
 
-如果接受變更，則為非零值;否則為0。
+如果接受更改,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-當架構呼叫此函式時，會接受屬性工作表中所有屬性頁上所做的變更，屬性工作表會保留焦點，而 `OnApply` 會傳回 TRUE （值1）。 在架構呼叫 `OnApply` 之前，您必須先呼叫[SetModified](#setmodified) ，並將其參數設定為 TRUE。 這會在使用者于屬性頁上進行變更時立即啟用 [立即套用] 按鈕。
+當框架調用此函數時,接受在屬性表中的所有屬性頁上所做的更改,屬性表將保留焦點,並`OnApply`返回 TRUE(值 1)。 在`OnApply`框架可以調用之前,必須調用[Set修改](#setmodified)並將其參數設置為 TRUE。 當使用者在屬性頁上進行更改時,這將啟動"立即應用"按鈕。
 
-覆寫此成員函式，以指定當使用者按一下 [立即套用] 按鈕時，您的程式所採取的動作。 覆寫時，函式應該傳回 TRUE 以接受變更，FALSE 則會防止變更生效。
+覆蓋此成員函數,以指定當使用者按下「立即應用」按鈕時程式執行的操作。 重寫時,函數應返回 TRUE 以接受更改和 FALSE,以防止更改生效。
 
-`OnApply` 呼叫的預設執行 `OnOK`。
+調用`OnApply``OnOK`的默認實現。
 
-如需使用者在屬性工作表中按下 [立即套用] 或 [確定] 按鈕時所傳送之通知訊息的詳細資訊，請參閱 Windows SDK 中的[PSN_APPLY](/windows/win32/Controls/psn-apply) 。
+有關使用者在屬性表中按下「立即應用」或「確定」按鈕時發送的通知訊息的詳細資訊,請參閱 Windows SDK 中的[PSN_APPLY。](/windows/win32/Controls/psn-apply)
 
 ### <a name="example"></a>範例
 
-  請參閱[CPropertyPage：： OnOK](#onok)的範例。
+  請參考[CPropertyPage 範例::OnOK](#onok)。
 
-##  <a name="oncancel"></a>CPropertyPage：： OnCancel
+## <a name="cpropertypageoncancel"></a><a name="oncancel"></a>C 屬性頁:開啟取消
 
-選取 [取消] 按鈕時，架構會呼叫這個成員函式。
+選擇"取消"按鈕時,框架將調用此成員函數。
 
 ```
 virtual void OnCancel();
@@ -327,15 +327,15 @@ virtual void OnCancel();
 
 ### <a name="remarks"></a>備註
 
-覆寫此成員函式以執行 [取消] 按鈕動作。 預設會否定已進行的任何變更。
+覆蓋此成員函數以執行"取消"按鈕操作。 默認值將否定已進行的任何更改。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]
 
-##  <a name="onkillactive"></a>CPropertyPage：： OnKillActive
+## <a name="cpropertypageonkillactive"></a><a name="onkillactive"></a>C 屬性頁:在活動
 
-當頁面不再是使用中的頁面時，架構會呼叫這個成員函式。
+當頁面不再是活動頁時,框架將調用此成員函數。
 
 ```
 virtual BOOL OnKillActive();
@@ -343,23 +343,23 @@ virtual BOOL OnKillActive();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功更新資料，則為非零，否則為0。
+如果數據已成功更新,則非零,否則為 0。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個成員函式以執行特殊的資料驗證工作。
+重寫此成員函數以執行特殊的資料驗證任務。
 
-這個成員函式的預設實作用會將設定從屬性頁中的控制項複製到屬性頁的成員變數。 如果資料因為對話方塊資料驗證（DDV）錯誤而未成功更新，則頁面會保留焦點。
+此成員函數的預設實現將設置從屬性頁的控制項複製到屬性頁的成員變數。 如果由於對話框數據驗證 (DDV) 錯誤而未成功更新數據,則頁面將保留焦點。
 
-在此成員函式傳回成功之後，架構會呼叫頁面的[OnOK](#onok)函數。
+此成員函數成功返回後,框架將調用頁面的[OnOK](#onok)函數。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]
 
-##  <a name="onok"></a>CPropertyPage：： OnOK
+## <a name="cpropertypageonok"></a><a name="onok"></a>C 屬性頁:ONOK
 
-當使用者在架構呼叫[OnKillActive](#onkillactive)之後，立即選擇 [確定] 或 [立即套用] 按鈕時，架構會呼叫這個成員函式。
+當用戶選擇"確定"或"立即申請"按鈕時,在框架調用[OnKillActive](#onkillactive)之後,框架會調用此成員函數。
 
 ```
 virtual void OnOK();
@@ -367,19 +367,19 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>備註
 
-當使用者選擇 [確定] 或 [立即套用] 按鈕時，架構會從屬性頁接收[PSN_APPLY](/windows/win32/Controls/psn-apply)通知。 如果您呼叫[CPropertySheet：:P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) ，則不會進行 `OnOK` 的呼叫，因為屬性頁不會在該情況下傳送通知。
+當使用者選擇"確定"或"立即應用"按鈕時,框架將從屬性頁收到[PSN_APPLY](/windows/win32/Controls/psn-apply)通知。 如果您調用`OnOK`[CPropertySheet::PresButton,](../../mfc/reference/cpropertysheet-class.md#pressbutton)則不會調用 to,因為在這種情況下,屬性頁不會發送通知。
 
-當使用者關閉整個屬性工作表時，請覆寫這個成員函式，以執行目前使用中頁面的其他特定行為。
+重寫此成員函數,在使用者關閉整個屬性表時實現特定於當前活動頁的其他行為。
 
-此成員函式的預設執行會將頁面標示為「清除」，以反映資料已在 `OnKillActive` 函數中更新。
+此成員函數的預設實現將頁面標記為"乾淨",以反映數據在`OnKillActive`函數中已更新。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]
 
-##  <a name="onquerycancel"></a>CPropertyPage：： OnQueryCancel
+## <a name="cpropertypageonquerycancel"></a><a name="onquerycancel"></a>C 屬性頁:在查詢取消
 
-當使用者按一下 [取消] 按鈕時，以及在取消動作執行之前，架構會呼叫這個成員函式。
+當用戶按下「取消」按鈕並在執行取消操作之前,框架將調用此成員函數。
 
 ```
 virtual BOOL OnQueryCancel();
@@ -387,21 +387,21 @@ virtual BOOL OnQueryCancel();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 FALSE 以防止取消作業，或傳回 TRUE 來允許它。
+返回 FALSE 以防止取消操作或 TRUE 以允許它。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個成員函式，以指定當使用者按一下 [取消] 按鈕時，程式所採取的動作。
+覆蓋此成員函數以指定程式在使用者按下「取消」按鈕時執行的操作。
 
-`OnQueryCancel` 的預設執行會傳回 TRUE。
+預設實現`OnQueryCancel`返回 TRUE。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]
 
-##  <a name="onreset"></a>CPropertyPage：： OnReset
+## <a name="cpropertypageonreset"></a><a name="onreset"></a>C 屬性頁:開啟重設
 
-當使用者選擇 [取消] 按鈕時，架構會呼叫這個成員函式。
+當用戶選擇"取消"按鈕時,框架將調用此成員函數。
 
 ```
 virtual void OnReset();
@@ -409,19 +409,19 @@ virtual void OnReset();
 
 ### <a name="remarks"></a>備註
 
-當架構呼叫此函式時，使用者先前選擇 [立即套用] 按鈕所做的所有屬性頁變更都會被捨棄，且屬性工作表會保留焦點。
+當框架調用此函數時,將放棄使用者以前選擇"立即應用"按鈕所做的所有屬性頁的更改,並且屬性表將保留焦點。
 
-覆寫這個成員函式，以指定當使用者按一下 [取消] 按鈕時，程式所採取的動作。
+覆蓋此成員函數以指定當用戶按下「取消」按鈕時程式執行的操作。
 
-`OnReset` 的預設執行不會執行任何操作。
+的`OnReset`默認實現不執行任何操作。
 
 ### <a name="example"></a>範例
 
-  請參閱[CPropertyPage：： OnCancel](#oncancel)的範例。
+  請參考[CPropertyPage 範例:開啟取消](#oncancel)。
 
-##  <a name="onsetactive"></a>CPropertyPage：： OnSetActive
+## <a name="cpropertypageonsetactive"></a><a name="onsetactive"></a>C 屬性頁開啟活動
 
-當使用者選擇頁面時，架構會呼叫這個成員函式，並成為使用中的頁面。
+當用戶選擇頁面並成為活動頁時,框架將調用此成員函數。
 
 ```
 virtual BOOL OnSetActive();
@@ -429,21 +429,21 @@ virtual BOOL OnSetActive();
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功設定頁面，則為非零值;否則為0。
+如果頁面已成功設置為活動,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-當網頁啟動時，覆寫此成員函式以執行工作。 您在更新資料成員之後，此成員函式的覆寫通常會呼叫預設版本，讓它能夠以新的資料更新頁面控制項。
+覆蓋此成員函數,以在啟動頁面時執行任務。 重寫此成員函數通常會在更新數據成員後調用預設版本,以允許它使用新數據更新頁面控制項。
 
-預設的執行會建立頁面的視窗（如果先前未建立），並將它變成使用中的頁面。
+預設實現為頁面創建視窗(如果不是以前創建)並使其成為活動頁。
 
 ### <a name="example"></a>範例
 
-  請參閱[CPropertySheet：： SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext)的範例。
+  請參閱[CPropertySheet 的範例:setFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext)。
 
-##  <a name="onwizardback"></a>CPropertyPage：： OnWizardBack
+## <a name="cpropertypageonwizardback"></a><a name="onwizardback"></a>C屬性頁::在嚮導背面
 
-當使用者按一下 wizard 中的 [上一頁] 按鈕時，架構會呼叫這個成員函式。
+當用戶單擊嚮導中的"後退"按鈕時,框架將調用此成員函數。
 
 ```
 virtual LRESULT OnWizardBack();
@@ -451,21 +451,21 @@ virtual LRESULT OnWizardBack();
 
 ### <a name="return-value"></a>傳回值
 
-0會自動前進到下一個頁面;-1 以防止頁面變更。 若要跳至下一頁以外的頁面，請傳回要顯示之對話方塊的識別碼。
+0 自動前進到下一頁;-1 以防止頁面更改。 要跳到下一個頁面以外的頁面,傳回要顯示的對話框的標識符。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個成員函式，以指定當按下 [上一頁] 按鈕時，使用者必須採取的動作。
+重寫此成員函數以指定按下"後退"按鈕時用戶必須執行的操作。
 
-如需如何建立 wizard 類型屬性工作表的詳細資訊，請參閱[CPropertySheet：： SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。
+有關如何創建精靈類型屬性表的詳細資訊,請參閱[CPropertySheet:setWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]
 
-##  <a name="onwizardfinish"></a>CPropertyPage：： OnWizardFinish
+## <a name="cpropertypageonwizardfinish"></a><a name="onwizardfinish"></a>C 屬性頁:在精靈完成
 
-當使用者按一下 wizard 中的 [完成] 按鈕時，架構會呼叫這個成員函式。
+當用戶單擊嚮導中的"完成"按鈕時,框架將調用此成員函數。
 
 ```
 virtual BOOL OnWizardFinish();
@@ -473,17 +473,17 @@ virtual BOOL OnWizardFinish();
 
 ### <a name="return-value"></a>傳回值
 
-如果在 wizard 完成時終結屬性工作表則為非零，否則為。否則為零。
+如果屬性表在嚮導完成時銷毀,則非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
-當使用者按一下 wizard 中的 [**完成]** 按鈕時，架構會呼叫這個函式;當 `OnWizardFinish` 傳回 TRUE （非零值）時，就可以終結屬性工作表（但實際上不會損毀）。 呼叫 `DestroyWindow` 以摧毀屬性工作表。 請勿從 `OnWizardFinish`呼叫 `DestroyWindow`;這麼做會造成堆積損毀或其他錯誤。
+當使用者按一下精靈中的「完成」按鈕時,框架將呼叫此函數;當使用者按一下精靈中的 **「完成」** 按鈕時,框架將呼叫此函數。當`OnWizardFinish`返回 TRUE(非零值)時,屬性表可以銷毀(但實際上不會銷毀)。 調用`DestroyWindow`以銷毀屬性表。 不要從`OnWizardFinish``DestroyWindow`撥打 。這樣做將導致堆損壞或其他錯誤。
 
-您可以覆寫這個成員函式，以指定當按下 [完成] 按鈕時，使用者必須採取的動作。 覆寫這個函式時，會傳回 FALSE，以防止屬性工作表遭到終結。
+您可以重寫此成員函數,以指定使用者在按下"完成"按鈕時必須執行的操作。 重寫此函數時,返回 FALSE 以防止屬性表被銷毀。
 
-如需使用者按下 wizard 屬性工作表中的 [完成] 按鈕時所傳送之通知訊息的詳細資訊，請參閱 Windows SDK 中的[PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) 。
+有關使用者在嚮導屬性表中按下"完成"按鈕時發送的通知消息的詳細資訊,請參閱 Windows SDK 中的[PSN_WIZFINISH。](/windows/win32/Controls/psn-wizfinish)
 
-如需如何建立 wizard 類型屬性工作表的詳細資訊，請參閱[CPropertySheet：： SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。
+有關如何創建精靈類型屬性表的詳細資訊,請參閱[CPropertySheet:setWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。
 
 ### <a name="example"></a>範例
 
@@ -495,9 +495,9 @@ virtual BOOL OnWizardFinish();
 
 [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]
 
-##  <a name="onwizardnext"></a>CPropertyPage：： OnWizardNext
+## <a name="cpropertypageonwizardnext"></a><a name="onwizardnext"></a>C屬性頁::在精靈下一頁
 
-當使用者按一下嚮導中的 [下一步] 按鈕時，架構會呼叫這個成員函式。
+當用戶單擊嚮導中的"下一步"按鈕時,框架將調用此成員函數。
 
 ```
 virtual LRESULT OnWizardNext();
@@ -505,21 +505,21 @@ virtual LRESULT OnWizardNext();
 
 ### <a name="return-value"></a>傳回值
 
-0會自動前進到下一個頁面;-1 以防止頁面變更。 若要跳至下一頁以外的頁面，請傳回要顯示之對話方塊的識別碼。
+0 自動前進到下一頁;-1 以防止頁面更改。 要跳到下一個頁面以外的頁面,傳回要顯示的對話框的標識符。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個成員函式，以指定當按下 [下一步] 按鈕時，使用者必須採取的動作。
+重寫此成員函數以指定按下「下一步」按鈕時用戶必須執行的操作。
 
-如需如何建立 wizard 類型屬性工作表的詳細資訊，請參閱[CPropertySheet：： SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。
+有關如何創建精靈類型屬性表的詳細資訊,請參閱[CPropertySheet:setWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]
 
-##  <a name="querysiblings"></a>CPropertyPage：： QuerySiblings
+## <a name="cpropertypagequerysiblings"></a><a name="querysiblings"></a>C 屬性頁:查詢同級
 
-呼叫這個成員函式，將訊息轉送至屬性工作表中的每個頁面。
+調用此成員函數將消息轉發到屬性表中的每個頁面。
 
 ```
 LRESULT QuerySiblings(
@@ -530,18 +530,18 @@ LRESULT QuerySiblings(
 ### <a name="parameters"></a>參數
 
 *wParam*<br/>
-指定與訊息相關的其他資訊。
+指定其他與消息相關的資訊。
 
 *lParam*<br/>
-指定與訊息相關的其他資訊
+指定其他與訊息相關的資訊
 
 ### <a name="return-value"></a>傳回值
 
-來自屬性工作表中頁面的非零值，如果所有頁面都傳回0值，則為0。
+屬性表中的頁面中的非零值;如果所有頁面返回值 0,則為 0。
 
 ### <a name="remarks"></a>備註
 
-如果頁面傳回非零值，則屬性工作表不會將訊息傳送至後續頁面。
+如果頁面返回非零值,則屬性表不會將消息發送到後續頁面。
 
 ### <a name="example"></a>範例
 
@@ -551,9 +551,9 @@ LRESULT QuerySiblings(
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>CPropertyPage：： SetModified
+## <a name="cpropertypagesetmodified"></a><a name="setmodified"></a>C 屬性頁::已修改
 
-根據屬性頁中的設定是否應該套用至適當的外部物件，呼叫這個成員函式來啟用或停用 [立即套用] 按鈕。
+調用此成員函數以啟用或禁用"立即應用"按鈕,具體取決於屬性頁中的設置是否應應用於相應的外部物件。
 
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -561,12 +561,12 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*bChanged*<br/>
-TRUE 表示屬性頁設定自上次套用之後已經修改;FALSE 表示已套用屬性頁設定，或應予以忽略。
+*b 已變更*<br/>
+TRUE 以指示自上次應用屬性頁設置以來已修改屬性頁設置;FALSE 以指示已應用屬性頁設置,或應忽略。
 
 ### <a name="remarks"></a>備註
 
-架構會持續追蹤哪些頁面是「已變更」，也就是您已呼叫 `SetModified( TRUE )`的屬性頁。 如果您為其中一個頁面呼叫 `SetModified( TRUE )`，一律會啟用 [立即套用] 按鈕。 當您呼叫其中一個頁面的 `SetModified( FALSE )` 時，[立即套用] 按鈕將會停用，但只有在沒有其他頁面為 [已變更] 時才會停用。
+框架追蹤哪些頁面是「臟」的,即您為其調用`SetModified( TRUE )`的屬性頁。 如果調用`SetModified( TRUE )`其中一個頁面,則始終啟用"立即應用"按鈕。 當您調用`SetModified( FALSE )`其中一個頁面時,將禁用"立即應用"按鈕,但前提是其他頁面均未"臟"。
 
 ### <a name="example"></a>範例
 
@@ -574,10 +574,10 @@ TRUE 表示屬性頁設定自上次套用之後已經修改;FALSE 表示已套�
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CDialog 類別](../../mfc/reference/cdialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CPropertySheet 類別](../../mfc/reference/cpropertysheet-class.md)<br/>

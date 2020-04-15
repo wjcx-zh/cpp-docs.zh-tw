@@ -1,5 +1,5 @@
 ---
-title: CMFCCmdUsageCount 類別
+title: CMFCCmd 使用計數類
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCmdUsageCount
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c03f0c62e508f9d00a352b71c8f3a18604e36c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403798"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367746"
 ---
-# <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 類別
+# <a name="cmfccmdusagecount-class"></a>CMFCCmd 使用計數類
 
-追蹤 Windows 訊息，例如當使用者從功能表選取項目時的使用的計數。
+跟蹤 Windows 消息的使用計數,例如當使用者從功能表中選擇專案時。
 
 ## <a name="syntax"></a>語法
 
@@ -52,43 +52,43 @@ class CMFCCmdUsageCount : public CObject
 |||
 |-|-|
 |名稱|描述|
-|[CMFCCmdUsageCount::AddCmd](#addcmd)|一個指定的命令相關聯的計數器遞增。|
-|[CMFCCmdUsageCount::GetCount](#getcount)|擷取與指定的命令識別碼相關聯的使用計數|
-|[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|判斷這個物件是否已收集追蹤資料的最小數量。|
-|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|判斷是否經常使用指定的命令。|
-|[CMFCCmdUsageCount::Reset](#reset)|清除所有命令的使用計數。|
-|[CMFCCmdUsageCount::Serialize](#serialize)|從封存讀取這個物件，或將其寫入至封存。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
-|[CMFCCmdUsageCount::SetOptions](#setoptions)|設定的值共用`CMFCCmdUsageCount`類別資料成員。|
+|[CMFCCmd 使用計數:添加Cmd](#addcmd)|增加與給定命令關聯的計數器的一個。|
+|[CMFCCmd 使用計數:取得計數](#getcount)|檢索與給定命令 ID 關聯的使用計數。|
+|[CMFCCmd 使用計數::有足夠資訊](#hasenoughinformation)|確定此物件是否已收集最小數量的跟蹤數據。|
+|[CMFCCmd 使用計數: IsFreqeuntly使用Cmd](#isfreqeuntlyusedcmd)|確定是否經常使用給定命令。|
+|[CMFCCmd 使用計數:重置](#reset)|清除所有命令的使用方式計數。|
+|[CMFCCmd 使用計數:序列化](#serialize)|從存檔中讀取此物件或將其寫入存檔。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
+|[CMFCCmd使用計數::設定選項](#setoptions)|設置共用`CMFCCmdUsageCount`類數據成員的值。|
 
 ### <a name="data-members"></a>資料成員
 
 |||
 |-|-|
 |名稱|描述|
-|`m_CmdUsage`|A`CMap`將命令對應至其使用方式計數的物件。|
-|`m_nMinUsagePercentage`|命令常用的最小使用量百分比。|
-|`m_nStartCount`|用來判斷這個物件是否已收集追蹤資料的最小數量開始計數器。|
-|`m_nTotalUsage`|所有追蹤的命令數目。|
+|`m_CmdUsage`|將`CMap`命令映射到其用法計數的物件。|
+|`m_nMinUsagePercentage`|經常使用命令的最低使用百分比。|
+|`m_nStartCount`|用於確定此物件是否已收集最小數量的跟蹤數據的起始計數器。|
+|`m_nTotalUsage`|所有跟蹤命令的計數。|
 
 ### <a name="remarks"></a>備註
 
-`CMFCCmdUsageCount`類別會將每個數值的 Windows 訊息識別項對應至 32 位元不帶正負號的整數的計數器。 `CMFCToolBar` 您可以使用這個類別來顯示常用的工具列項目。 如需詳細資訊`CMFCToolBar`，請參閱 < [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)。
+該`CMFCCmdUsageCount`類將每個數位 Windows 消息識別符映射到 32 位未簽名的整數計數器。 `CMFCToolBar`使用此類顯示常用工具列項。 有關 的詳細`CMFCToolBar`資訊 ,請參閱[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)。
 
-您可以保存`CMFCCmdUsageCount`類別執行您的程式之間的資料。 使用[CMFCCmdUsageCount::Serialize](#serialize)方法，將類別成員資料的序列化並[CMFCCmdUsageCount::SetOptions](#setoptions)方法來設定共用的成員資料。
+您可以在程式執行`CMFCCmdUsageCount`之間保留類數據。 使用[CMFCCmdUseCount::序列化](#serialize)方法序列化類成員數據,使用[CMFCCmdUseCount::SetOptions](#setoptions)方法設置共享成員數據。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
+[CMFCCmd 使用計數](../../mfc/reference/cmfccmdusagecount-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxcmdusagecount.h
+**標題:** afxcmd 用法計數.h
 
-##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd
+## <a name="cmfccmdusagecountaddcmd"></a><a name="addcmd"></a>CMFCCmd 使用計數:添加Cmd
 
-一個指定的命令相關聯的計數器遞增。
+增加與給定命令關聯的計數器的一個。
 
 ```
 void AddCmd(UINT uiCmd);
@@ -99,23 +99,23 @@ void AddCmd(UINT uiCmd);
 |||
 |-|-|
 |參數|描述|
-|*uiCmd*|[in]指定命令要計數器遞增。|
+|*烏伊Cmd*|[在]指定命令計數器以遞增。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會加入新項目指令計數的對應結構`m_CmdUsage`，如果項目不存在。
+此方法向命令計數的地圖結構添加新條目,`m_CmdUsage`如果該條目不存在。
 
-這個方法會在下列案例中為 nothing:
+在以下情況下,此方法不執行任何操作:
 
-- 工具列架構已自訂模式 ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)方法會傳回非零值)。
+- 工具列框架處於自定義模式[(CMFCToolBar:is自定義模式](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)方法返回非零值)。
 
-- 此命令是指子功能表或功能表分隔符號 ( *uiCmd*等於 0，則為-1)。
+- 該命令引用子功能表或功能表分隔符 *(uiCmd*等於 0 或 -1)。
 
-- *uiCmd*指的是標準的命令 (全域`IsStandardCommand`函式會傳回非零值)。
+- *uiCmd*引用標準命令(全域`IsStandardCommand`函數返回非零值)。
 
-##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount
+## <a name="cmfccmdusagecountgetcount"></a><a name="getcount"></a>CMFCCmd 使用計數:取得計數
 
-擷取與指定的命令識別碼相關聯的使用計數
+檢索與給定命令 ID 關聯的使用計數。
 
 ```
 UINT GetCount(UINT uiCmd) const;
@@ -126,15 +126,15 @@ UINT GetCount(UINT uiCmd) const;
 |||
 |-|-|
 |參數|描述|
-|*uiCmd*|[in]要擷取 [命令] 計數器的識別碼。|
+|*烏伊Cmd*|[在]要檢索的命令計數器的 ID。|
 
 ### <a name="return-value"></a>傳回值
 
-與指定的命令識別碼相關聯的使用計數
+與給定命令 ID 關聯的用法計數。
 
-##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation
+## <a name="cmfccmdusagecounthasenoughinformation"></a><a name="hasenoughinformation"></a>CMFCCmd 使用計數::有足夠資訊
 
-決定是否此物件已接收追蹤資料的最小數量。
+確定此物件是否已收到最小數量的跟蹤數據。
 
 ```
 BOOL HasEnoughInformation() const;
@@ -142,17 +142,17 @@ BOOL HasEnoughInformation() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果此物件已接收追蹤資料的最小數量，非零值。否則為 0。
+如果此物件已收到最小數量的跟蹤數據,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果此方法會傳回非零值的總計數， `m_nTotalUsage`，所有追蹤的命令是等於或大於初始的計數， `m_nStartCount`。 根據預設，架構會將初始計數 0。 您可以使用覆寫此值[CMFCCmdUsageCount::SetOptions](#setoptions)方法。
+如果所有追蹤命令的總計計數`m_nTotalUsage`等於或大於初始計數`m_nStartCount`, 則此方法返回非零值。 默認情況下,框架設置初始計數 0。 您可以使用[CMFCCmd 使用計數::設定選項](#setoptions)方法覆蓋此值。
 
-這個方法由[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)來判斷是否要顯示所有可用的功能表命令。
+此方法由[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)用於確定是否顯示所有可用的功能表命令。
 
-##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
+## <a name="cmfccmdusagecountisfreqeuntlyusedcmd"></a><a name="isfreqeuntlyusedcmd"></a>CMFCCmd 使用計數: IsFreqeuntly使用Cmd
 
-判斷是否經常使用指定的命令。
+確定是否經常使用給定命令。
 
 ```
 BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
@@ -163,21 +163,21 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||
 |-|-|
 |參數|描述|
-|*uiCmd*|[in]指定要檢查的命令。|
+|*烏伊Cmd*|[在]指定要檢查的命令。|
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果經常使用的命令;否則為 0。
+如果經常使用該命令,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳回 0，如果總命令的用法， `m_nTotalUsage`，為 0。 否則，這個方法會傳回非零值，如果指定的命令使用其中的百分比大於最小的百分比， `m_nMinUsagePercentage`。 根據預設，架構會設定為 5 的最小百分比。 您可以使用覆寫此值[CMFCCmdUsageCount::SetOptions](#setoptions)方法。 如果百分比下限為 0，則這個方法會傳回非零值，如果指定的命令計數大於 0。
+如果總命令用法為 0,`m_nTotalUsage`則此方法返回 0。 否則,如果使用指定命令的百分比大於最小百分比,`m_nMinUsagePercentage`則此方法返回非零。 默認情況下,框架將最小百分比設置為 5。 您可以使用[CMFCCmd 使用計數::設定選項](#setoptions)方法覆蓋此值。 如果最小百分比為 0,則如果指定的命令計數大於 0,此方法將返回非零。
 
-[CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused)使用這個方法來判斷是否有很少使用的命令。
+[CMFCToolBar:IsCommand很少使用](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused)此方法來確定是否很少使用命令。
 
-##  <a name="reset"></a>  CMFCCmdUsageCount::Reset
+## <a name="cmfccmdusagecountreset"></a><a name="reset"></a>CMFCCmd 使用計數:重置
 
-清除所有命令的使用計數。
+清除所有命令的使用方式計數。
 
 ```
 void Reset();
@@ -185,11 +185,11 @@ void Reset();
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來清除所有的項目，從對應結構的指令計數`m_CmdUsage`，以及重設總計命令的用法， `m_nTotalUsage`、 計數器為 0。
+呼叫此方法以清除命令計數的映射結構中的所有項目,`m_CmdUsage`並將總命令用法重置為`m_nTotalUsage`0。
 
-##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize
+## <a name="cmfccmdusagecountserialize"></a><a name="serialize"></a>CMFCCmd 使用計數:序列化
 
-讀取此物件從封存，或將它寫入封存。
+從存檔中讀取此物件,或將其寫入存檔。
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -200,17 +200,17 @@ virtual void Serialize(CArchive& ar);
 |||
 |-|-|
 |參數|描述|
-|*ar*|[in]A`CArchive`来序列化或物件。|
+|*ar*|[在]`CArchive`要序列化的物件。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會序列化的指令計數的對應結構`m_CmdUsage`，和 總命令的用法， `m_nTotalUsage`、 計數器或指定的封存。
+此方法序列化指令計數的映射結構、`m_CmdUsage`和總命令用法`m_nTotalUsage`, 從指定存檔或到指定的存檔。
 
-如需序列化的範例，請參閱[序列化：將物件序列化為](../../mfc/serialization-serializing-an-object.md)。
+有關序列化範例,請參閱[序列化:序列化物件](../../mfc/serialization-serializing-an-object.md)。
 
-##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
+## <a name="cmfccmdusagecountsetoptions"></a><a name="setoptions"></a>CMFCCmd使用計數::設定選項
 
-設定的值共用`CMFCCmdUsageCount`類別資料成員。
+設置共用`CMFCCmdUsageCount`類數據成員的值。
 
 ```
 static BOOL __stdcall SetOptions(
@@ -223,18 +223,18 @@ static BOOL __stdcall SetOptions(
 |||
 |-|-|
 |參數|描述|
-|*nStartCount*|[in]所有追蹤的命令新增初始的計數。|
-|*nMinUsagePercentage*|[in]新的最小的使用量百分比。|
+|*N 開始計數*|[在]所有跟蹤命令的新初始計數。|
+|*nMinUsage百分比*|[在]新的最小使用百分比。|
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，FALSE 則為 TRUE *nMinUsagePercentage*參數是大於或等於 100。
+如果方法成功,則為 TRUE,如果*nMinUsage 百分比*參數大於或等於 100,則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會設定共用`CMFCCmdUsageCount`類別資料成員`m_nStartCount`並`m_nMinUsagePercentage`來*nStartCount*並*nMinUsagePercentage*分別。 `m_nStartCount` 由[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法，以判斷這個物件是否已收集追蹤資料的最小數量。 `m_nMinUsagePercentage` 由[Isfreqeuntlyusedcmd](#isfreqeuntlyusedcmd)方法，以判斷是否經常使用指定的命令。
+此方法分別設定`CMFCCmdUsageCount`共享類別資料`m_nStartCount`成員`m_nMinUsagePercentage`與*nStartCount*和*nMinUsage 百分比*。 `m_nStartCount`[由 CMFCCmdUsageCount::HasOfof 資訊](#hasenoughinformation)方法用於確定此物件是否已收集最小數量的跟蹤數據。 `m_nMinUsagePercentage`[由 CMFCCmdUsageCount 使用:IsFreqeuntly使用Cmd](#isfreqeuntlyusedcmd)方法來確定是否經常使用給定命令。
 
-在 偵錯組建中這個方法如果會產生判斷提示失敗*nMinUsagePercentage*參數是大於或等於 100。
+在除錯產生中,如果*nMinUsage 百分比*參數大於或等於 100,此方法將生成斷言失敗。
 
 ## <a name="see-also"></a>另請參閱
 

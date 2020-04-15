@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36b8b524591693775403d66fdc1f0754aaf67778
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338255"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364993"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler 類別
 
@@ -39,22 +39,22 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|建構 `CAnimationStoryboardEventHandler` 物件。|
+|[動畫故事板事件處理程式::動畫故事板事件處理程式](#canimationstoryboardeventhandler)|建構 `CAnimationStoryboardEventHandler` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|建立的執行個體`CAnimationStoryboardEventHandler`回呼。|
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|會處理`OnStoryboardStatusChanged`分鏡腳本的狀態變更時，會發生的事件 (會覆寫`CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`。)|
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|會處理`OnStoryboardUpdated`分鏡腳本更新時，會發生的事件 (會覆寫`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`。)|
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|儲存路由事件的動畫控制器的指標。|
+|[動畫故事板事件處理常式:建立實體](#createinstance)|建立回檔實體`CAnimationStoryboardEventHandler`。|
+|[C動畫故事板事件處理程式::在故事板狀態更改](#onstoryboardstatuschanged)|處理`OnStoryboardStatusChanged`情節提要的狀態變更時發生的事件(`CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`覆寫 . )|
+|[C動畫故事板事件處理程式::在故事板上更新](#onstoryboardupdated)|處理`OnStoryboardUpdated`更新情節提要時發生的事件(`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`覆蓋 .)|
+|[動畫故事板事件處理程式::設定動畫控制器](#setanimationcontroller)|存儲指向動畫控制器的指標以路由事件。|
 
 ## <a name="remarks"></a>備註
 
-建立並傳遞至這個事件處理常式`IUIAnimationStoryboard::SetStoryboardEventHandler`方法中，當您呼叫`CAnimationController::EnableStoryboardEventHandler`。
+當您呼叫`CAnimationController::EnableStoryboardEventHandler`時,將建立`IUIAnimationStoryboard::SetStoryboardEventHandler`此事件處理程式並傳遞給方法。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CUIAnimationCallbackBase`
 
@@ -66,17 +66,17 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+## <a name="canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>動畫故事板事件處理程式::動畫故事板事件處理程式
 
-建構 CAnimationStoryboardEventHandler 物件。
+建構 CAnimationStoryboard 事件處理程式物件。
 
 ```
 CAnimationStoryboardEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance
+## <a name="canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>動畫故事板事件處理常式:建立實體
 
-建立 CAnimationStoryboardEventHandler 回呼的執行個體。
+創建 CAnimationStoryboard 事件處理程序回調的實例。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,18 +86,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>參數
 
-*pAnimationController*<br/>
-動畫控制器，會收到的事件指標。
+*動畫控制器*<br/>
+指向動畫控制器的指標,該控制器將接收事件。
 
-*ppHandler*
+*普漢德勒*
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+## <a name="canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>C動畫故事板事件處理程式::在故事板狀態更改
 
-處理 OnStoryboardStatusChanged 事件，分鏡腳本的狀態變更時，會發生
+處理故事板狀態更改事件,這些事件發生在情節提要的狀態更改時
 
 ```
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -108,22 +108,22 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>參數
 
-*storyboard*<br/>
-分鏡腳本的狀態已變更的指標。
+*文稿*<br/>
+指向狀態已更改的情節提要的指標。
 
-*newStatus*<br/>
-指定新分鏡腳本的狀態。
+*新狀態*<br/>
+指定新的情節提要狀態。
 
-*previousStatus*<br/>
-指定前一個分鏡腳本的狀態。
+*前一個狀態*<br/>
+指定以前的情節提要狀態。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 S_OK否則 E_FAIL。
+如果方法成功,S_OK;否則E_FAIL。
 
-##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated
+## <a name="canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>C動畫故事板事件處理程式::在故事板上更新
 
-處理更新分鏡腳本時，就會發生的 OnStoryboardUpdated 事件
+處理更新情節提要時發生的更新事件
 
 ```
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
@@ -131,16 +131,16 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>參數
 
-*storyboard*<br/>
-分鏡腳本，指標已更新。
+*文稿*<br/>
+指向故事板的指標,已更新。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 S_OK否則 E_FAIL。
+如果方法成功,S_OK;否則E_FAIL。
 
-##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController
+## <a name="canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>動畫故事板事件處理程式::設定動畫控制器
 
-儲存路由事件的動畫控制器的指標。
+存儲指向動畫控制器的指標以路由事件。
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -148,8 +148,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>參數
 
-*pAnimationController*<br/>
-動畫控制器，會收到的事件指標。
+*動畫控制器*<br/>
+指向動畫控制器的指標,該控制器將接收事件。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8901b974d1fb9c9fca434b13700211aab74b60b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443996"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366539"
 ---
 # <a name="using-cheaderctrl"></a>使用 CHeaderCtrl
 
-使用 [類別[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)] 所代表的標題控制項，以顯示單欄式清單的資料行標頭。 例如，標題控制項適用于在試算表中執行資料行控制項。
+使用由類[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)表示的標頭控制項顯示列清單的列標題。 例如,標頭控制項可用於在電子表格中實現列控制元件。
 
-標題控制項通常會分成幾個部分，稱為「標頭專案」，每個都有相關聯之文字資料行的標題。 視您設定的樣式而定，您可以提供一些直接的方式讓使用者操作標頭專案。
+標題控制項通常分為部分,稱為"標題項",每個部分都帶有文本或數位關聯列的標題。 根據設置的樣式,您可以為使用者提供許多直接方法來操作標頭項。
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md)提供內嵌的標題控制項，而[CListView](../mfc/reference/clistview-class.md)會將 `CListCtrl` 封裝在 MFC 類別中。 一般來說，請考慮使用 `CHeaderCtrl` 來標記您想要自行繪製的清單。
+> [CListCtrl](../mfc/reference/clistctrl-class.md)提供嵌入式標頭控制[項,CListView](../mfc/reference/clistview-class.md)`CListCtrl`封裝 在 MFC 類中。 通常,考慮使用標記`CHeaderCtrl`您打算自己繪製的清單。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
+## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
 - [標題控制項和清單控制項](../mfc/header-control-and-list-control.md)
 
@@ -41,11 +41,11 @@ ms.locfileid: "79443996"
 
 - [建立標題控制項](../mfc/creating-the-header-control.md)
 
-- [將項目新增至標題控制項](../mfc/adding-items-to-the-header-control.md)
+- [將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)
 
 - [排序標題控制項中的項目](../mfc/ordering-items-in-the-header-control.md)
 
-- [處理標題控制項通知](../mfc/processing-header-control-notifications.md)
+- [處理標題控制項告知](../mfc/processing-header-control-notifications.md)
 
 ## <a name="see-also"></a>另請參閱
 

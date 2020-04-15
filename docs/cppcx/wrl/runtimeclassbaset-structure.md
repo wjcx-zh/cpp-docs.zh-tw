@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375726"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -31,12 +31,12 @@ friend struct Details::RuntimeClassBaseT;
 
 ### <a name="parameters"></a>參數
 
-*RuntimeClassTypeT*<br/>
-指定一或多個旗標欄位[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
+*執行時類別類型T*<br/>
+指定一個或多個[執行時類類型](runtimeclasstype-enumeration.md)枚舉器的標誌欄位。
 
 ## <a name="remarks"></a>備註
 
-提供 helper 方法來`QueryInterface`作業和取得的介面識別碼。
+為`QueryInterface`操作和獲取介面識別器提供説明程式方法。
 
 ## <a name="members"></a>成員
 
@@ -44,22 +44,22 @@ friend struct Details::RuntimeClassBaseT;
 
 名稱                                                         | 描述
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
-[RuntimeClassBaseT::AsIID](#asiid)                           | 擷取指定的介面 ID 的指標
-[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | 擷取介面 Id 所指定的型別實作的陣列。
+[執行時類基礎::AsIID](#asiid)                           | 檢索指向指定介面 ID 的指標。
+[執行時類基礎::獲取已實現 IIDS](#getimplementediids) | 檢索由指定類型實現的介面指示的陣列。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `RuntimeClassBaseT`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標題:** 實現.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>執行時類基礎::AsIID
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 template<typename T>
@@ -73,28 +73,28 @@ __forceinline static HRESULT AsIID(
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-實作介面識別碼參數所指定的型別*riid*。
+實現參數*riid*指定的介面 ID 的類型。
 
-*implements*<br/>
-範本參數所指定類型的變數*T*。
+*實現*<br/>
+樣本參數*T*指定的類型的變數。
 
 *riid*<br/>
-要擷取的介面識別碼。
+要檢索的介面 ID。
 
 *ppvObject*<br/>
-如果這項作業成功時，參數所指定的指標-至-a-介面的指標*riid*。
+如果此操作成功,則指向參數*riid*指定的介面的指標指向指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，會描述錯誤的 HRESULT。
+S_OK如果成功;否則,描述錯誤的 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-擷取指定的介面 ID 的指標
+檢索指向指定介面 ID 的指標。
 
-## <a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>執行時類基礎::獲取已實現 IIDS
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 template<typename T>
@@ -108,21 +108,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-型別*實作*參數。
+*實現*參數的類型。
 
-*implements*<br/>
-參數所指定的類型指標*T*。
+*實現*<br/>
+指向參數*T*指定的類型的指標。
 
-*iidCount*<br/>
-若要擷取的介面識別碼的數目上限。
+*iid( Iid) Count*<br/>
+要檢索的介面指示的最大數量。
 
-*iids*<br/>
-如果這項作業已順利完成，介面型別實作的 Id 陣列*T*。
+*伊德*<br/>
+如果此操作成功完成,則按*類型 T*實現的介面 I 的陣列。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，會描述錯誤的 HRESULT。
+S_OK如果成功;否則,描述錯誤的 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-擷取介面 Id 所指定的型別實作的陣列。
+檢索由指定類型實現的介面指示的陣列。

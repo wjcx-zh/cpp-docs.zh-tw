@@ -8,33 +8,33 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: 9240a227cdc4004d1e6e2b7ac26946ca233b71ec
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e2421e047d217fdc7a138509385399fa37d36a1f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212624"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374504"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL：製作直接的 SQL 呼叫 (ODBC)
 
 本主題將說明：
 
-- 使用直接 SQL 呼叫的時機。
+- 何時使用直接 SQL 調用。
 
-- 對[資料來源進行直接 SQL 呼叫的方式](#_core_making_direct_sql_function_calls)。
+- [如何直接對資料來源進行 SQL 呼叫](#_core_making_direct_sql_function_calls)。
 
 > [!NOTE]
->  此資訊適用於 MFC ODBC 類別。 如果您要使用 MFC DAO 類別，請參閱 DAO 說明中的 < Microsoft Jet 資料庫引擎 SQL 和 ANSI SQL 的比較主題。
+> 此資訊適用於 MFC ODBC 類別。 如果您正在使用 MFC DAO 類,請參閱 DAO 説明中的主題「微軟噴氣資料庫引擎 SQL 和 ANSI SQL 的比較」。。
 
-##  <a name="when-to-call-sql-directly"></a><a name="_core_when_to_call_sql_directly"></a>直接呼叫 SQL 的時機
+## <a name="when-to-call-sql-directly"></a><a name="_core_when_to_call_sql_directly"></a>何時直接呼叫 SQL
 
-若要建立新的資料表、卸載（刪除）資料表、改變現有的資料表、建立索引，以及執行其他可變更[資料來源（ODBC）](../../data/odbc/data-source-odbc.md)架構的 sql 函數，您必須使用資料庫定義語言（DDL）將 sql 語句直接發行至資料來源。 當您使用 wizard 建立資料表的記錄集時（在設計階段），您可以選擇要在記錄集中表示的資料表資料行。 這不允許您或資料來源的其他使用者在您的程式編譯之後加入資料表的資料行。 資料庫類別不直接支援 DDL，但是您仍然可以撰寫程式碼，在執行時間動態地將新的資料行系結至您的記錄集。 如需如何執行此系結的詳細資訊，請參閱[記錄集：動態地系結資料行（ODBC）](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+要建立新表、刪除(刪除)表、更改現有表、創建索引和執行更改[資料源 (ODBC)](../../data/odbc/data-source-odbc.md)架構的其他 SQL 函數,必須使用資料庫定義語言 (DDL) 直接向資料來源發出 SQL 語句。 使用嚮導為表創建記錄集(在設計時)時,可以選擇要在記錄集中表示的表的列。 這不允許在編譯程式後,稍後將數據源的其他使用者添加到表中。 資料庫類不直接支援 DDL,但您仍然可以編寫代碼,在運行時動態地將新列綁定到記錄集。 有關如何執行此操作綁定的資訊,請參閱[記錄集:動態綁定數據列 (ODBC)。](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-您可以使用 DBMS 本身來改變架構或另一個可讓您執行 DDL 函數的工具。 您也可以使用 ODBC 函數呼叫來傳送 SQL 語句，例如呼叫不會傳回記錄的預先定義查詢（預存程式）。
+您可以使用 DBMS 本身來更改架構或其他工具,以便執行 DDL 函數。 您還可以使用 ODBC 函數呼叫發送 SQL 語句,例如呼叫不返回記錄的預定義查詢(儲存過程)。
 
-##  <a name="making-direct-sql-function-calls"></a><a name="_core_making_direct_sql_function_calls"></a>進行直接 SQL 函數呼叫
+## <a name="making-direct-sql-function-calls"></a><a name="_core_making_direct_sql_function_calls"></a>直接 SQL 函式呼叫
 
-您可以使用[CDatabase 類別](../../mfc/reference/cdatabase-class.md)物件，直接執行 SQL 呼叫。 設定 SQL 語句字串（通常在 `CString`中），並將它傳遞至您 `CDatabase` 物件的[CDatabase：： ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)成員函式。 如果您使用 ODBC 函數呼叫來傳送通常會傳回記錄的 SQL 語句，則會忽略記錄。
+您可以使用[CDatabase 類](../../mfc/reference/cdatabase-class.md)物件直接執行 SQL 呼叫。 設置 SQL 語句字串(通常`CString`在中),並將其傳遞`CDatabase`給 物件的[CDatabase::執行 SQL](../../mfc/reference/cdatabase-class.md#executesql)成員函數。 如果使用 ODBC 函數呼叫發送通常傳回記錄的 SQL 語句,則忽略這些記錄。
 
 ## <a name="see-also"></a>另請參閱
 

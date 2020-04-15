@@ -1,5 +1,5 @@
 ---
-title: Coleipframewnd 來衍生類別
+title: COleIPFrameWnd 類別
 ms.date: 11/04/2016
 f1_keywords:
 - COleIPFrameWnd
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 8eab2ddfc778900b53d77105f1d8215a2c095e9f
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 01e259cf01c42add26088b0cbd2f6dab311eb9b1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741564"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374962"
 ---
-# <a name="coleipframewnd-class"></a>Coleipframewnd 來衍生類別
+# <a name="coleipframewnd-class"></a>COleIPFrameWnd 類別
 
 應用程式就地編輯視窗的基底。
 
@@ -35,22 +35,22 @@ class COleIPFrameWnd : public CFrameWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[Coleipframewnd 來衍生：： Coleipframewnd 來衍生](#coleipframewnd)|建構 `COleIPFrameWnd` 物件。|
+|[COleIPFramewnd:COleIPFramewnd](#coleipframewnd)|建構 `COleIPFrameWnd` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|當啟用就地編輯的專案時，由架構呼叫。|
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|由架構呼叫，以重新調整就地編輯視窗的位置。|
+|[COleIPFramewnd::在建立控制列上](#oncreatecontrolbars)|當專案被啟動進行就地編輯時,由框架調用。|
+|[COleIPFramewnd::重新置放框架](#repositionframe)|由框架調用重新置放就地編輯視窗。|
 
 ## <a name="remarks"></a>備註
 
-這個類別會在容器應用程式的文件視窗中建立並放置控制列。 當使用者調整就地編輯視窗的大小時，它也會處理內嵌[COleResizeBar](../../mfc/reference/coleresizebar-class.md)物件所產生的通知。
+此類在容器應用程式的文件視窗中創建和定位控制欄。 當使用者調整就地編輯視窗的大小時,它還處理由嵌入式[COle ResizeBar](../../mfc/reference/coleresizebar-class.md)物件生成的通知。
 
-如需有關使用`COleIPFrameWnd`的詳細資訊，請參閱[啟用](../../mfc/activation-cpp.md)文章。
+有關使用`COleIPFrameWnd`的詳細資訊,請參閱文章[啟動](../../mfc/activation-cpp.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -64,11 +64,11 @@ class COleIPFrameWnd : public CFrameWnd
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxole。h
+**標題:** afxole.h
 
-##  <a name="coleipframewnd"></a>Coleipframewnd 來衍生：： Coleipframewnd 來衍生
+## <a name="coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a>COleIPFramewnd:COleIPFramewnd
 
-會建立`COleIPFrameWnd`物件，並初始化其就地狀態資訊，並儲存在 OLEINPLACEFRAMEINFO 類型的結構中。
+構造`COleIPFrameWnd`物件並初始化其就地狀態資訊,這些資訊存儲在 OLEINPLACEFRAMEINFO 類型的結構中。
 
 ```
 COleIPFrameWnd();
@@ -76,11 +76,11 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 Windows SDK 中的[OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) 。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEINPLACEFRAMEINFO。](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo)
 
-##  <a name="oncreatecontrolbars"></a>Coleipframewnd 來衍生：： OnCreateControlBars
+## <a name="coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a>COleIPFramewnd::在建立控制列上
 
-當啟用就地編輯`OnCreateControlBars`的專案時，架構會呼叫函數。
+當啟動項目進行`OnCreateControlBars`就地編輯時,框架將調用該函數。
 
 ```
 virtual BOOL OnCreateControlBars(
@@ -95,22 +95,22 @@ virtual BOOL OnCreateControlBars(
 ### <a name="parameters"></a>參數
 
 *pWndFrame*<br/>
-容器應用程式框架視窗的指標。
+指向容器應用程式的幀視窗的指標。
 
-*pWndDoc*<br/>
-容器檔案層級視窗的指標。 如果容器是 SDI 應用程式，則可以是 Null。
+*普恩德多克*<br/>
+指向容器的文件級視窗的指標。 如果容器是 SDI 應用程式,則可以為 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-成功時為非零;否則為0。
+成功時為非零;否則,0。
 
 ### <a name="remarks"></a>備註
 
-預設實作不做任何動作。 覆寫此函式，以執行建立控制列時所需的任何特殊處理。
+預設實作不做任何動作。 重寫此函數以在創建控制條時執行所需的任何特殊處理。
 
-##  <a name="repositionframe"></a>Coleipframewnd 來衍生：： RepositionFrame
+## <a name="coleipframewndrepositionframe"></a><a name="repositionframe"></a>COleIPFramewnd::重新置放框架
 
-架構會呼叫`RepositionFrame`成員函式來配置控制列，並重新調整就地編輯視窗的位置，使其全部可見。
+框架調用`RepositionFrame`成員函數來佈局控制欄並重新置放就地編輯視窗,以便所有控制項都可見。
 
 ```
 virtual void RepositionFrame(
@@ -121,18 +121,18 @@ virtual void RepositionFrame(
 ### <a name="parameters"></a>參數
 
 *lpPosRect*<br/>
-`RECT` 結構`CRect`或物件的指標，其中包含就地框架視窗的目前位置座標（以圖元為單位），相對於工作區。
+指向`RECT`包含就地幀`CRect`視窗 當前位置座標的結構或物件(以像素為單位)相對於工作區的指標。
 
 *lpClipRect*<br/>
-`RECT` 結構`CRect`或物件的指標，其中包含就地框架視窗的目前裁剪矩形座標（以圖元為單位），相對於工作區。
+指向`RECT`包含就地框架`CRect`視窗 當前剪切矩形座標的結構或物件(以圖元為單位)相對於工作區的指標。
 
 ### <a name="remarks"></a>備註
 
-[容器] 視窗中控制列的配置與非 OLE 框架視窗所執行的版面配置不同。 非 OLE 框架視窗會從給定的框架視窗大小來計算控制列和其他物件的位置，如同呼叫[CFrameWnd：： RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。 [用戶端] 區域是控制列的空間，以及其他物件被減去之後的保留內容。 另一方面`COleIPFrameWnd` ，視窗會根據指定的工作區定位工具列。 換句話說， `CFrameWnd::RecalcLayout` 「從外部的」運作，而`COleIPFrameWnd::RepositionFrame` 「從內部」開始運作」。
+容器視窗中的控制欄的佈局不同於非 OLE 框架視窗執行的佈局。 非 OLE 框架視窗計算來自給定畫面視窗大小的控制條和其他物件的位置,如對[CFrameWnd 的呼叫::recalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。 工作區是減去控制條和其他對象的空間後保留的內容。 另`COleIPFrameWnd`一方面,窗口根據給定的工作區定位工具列。 換句話說,`CFrameWnd::RecalcLayout`作品"從外面",`COleIPFrameWnd::RepositionFrame`而 工作"從內到外"。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)

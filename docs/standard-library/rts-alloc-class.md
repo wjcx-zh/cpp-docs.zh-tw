@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ed84d906944a09fa355e281640e9480f3173554
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688987"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373417"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc 類別
 
-Rts_alloc 類別樣板描述的[篩選準則](../standard-library/allocators-header.md)會保存快取實例的陣列，並決定在執行時間（而不是編譯時期）配置和解除配置時所使用的實例。
+rts_alloc類範本描述一個[篩選器](../standard-library/allocators-header.md),該篩選器包含緩存實例陣列,並確定在運行時而不是在編譯時使用哪個實例進行分配和分配。
 
 ## <a name="syntax"></a>語法
 
@@ -38,14 +38,14 @@ class rts_alloc
 
 ## <a name="remarks"></a>備註
 
-這個類別樣板會保存多個區塊配置器實例，並判斷在執行時間（而不是編譯時期）要用來配置或解除配置的實例。 它會搭配不可編譯重新繫結的編譯器使用。
+此類範本包含多個塊分配器實例,並確定在運行時而不是在編譯時使用哪個實例進行分配或分配。 它會搭配不可編譯重新繫結的編譯器使用。
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
-|[allocate](#allocate)|配置記憶體區塊。|
-|[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
+|[配置](#allocate)|配置記憶體區塊。|
+|[去分配](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
 |[equals](#equals)|比較兩個快取是否相等。|
 
 ## <a name="requirements"></a>需求
@@ -54,7 +54,7 @@ class rts_alloc
 
 **命名空間：** stdext
 
-## <a name="allocate"></a>  rts_alloc::allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc::分配
 
 配置記憶體區塊。
 
@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*count*|陣列中要配置的項目數。|
+|*count*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -74,9 +74,9 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `caches[_IDX].allocate(count)`，其中索引 `_IDX` 取決於要求的區塊大小*計數*，或者，如果*count*太大，則會傳回 `operator new(count)`。 `cache`，代表快取物件。
+成員函數`caches[_IDX].allocate(count)`傳回 ,`_IDX`其中索引 由請求的區塊*大小 計數*確定,或者,`operator new(count)`如果*計數*太大,則傳回 。 `cache`，代表快取物件。
 
-## <a name="deallocate"></a>  rts_alloc::deallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::d分配
 
 從指定位置起算的儲存體中，釋放指定數目的物件。
 
@@ -88,14 +88,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*Ptr*|要從儲存空間解除配置之第一個物件的指標。|
 |*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 `caches[_IDX].deallocate(ptr, count)`，其中索引 `_IDX` 取決於所要求的區塊大小*計數*，或者，如果*計數*太大，則會傳回 `operator delete(ptr)`。
+成員函數`caches[_IDX].deallocate(ptr, count)`呼叫 ,其中`_IDX`索引 由請求的塊大小*計數*確定,或者,如果*計數*太大,則傳回`operator delete(ptr)`。
 
-## <a name="equals"></a>  rts_alloc::equals
+## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc:等於
 
 比較兩個快取是否相等。
 
@@ -112,9 +112,9 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>備註
 
-如果 `caches[0].equals(other.caches[0])` 的結果，則為**true** ;否則**為 false**。 `caches` 代表快取物件的陣列。
+**如果 為**`caches[0].equals(other.caches[0])`,則 為否則,**假**。 `caches` 代表快取物件的陣列。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
-[\<allocators>](../standard-library/allocators-header.md)
+[\<配置器>](../standard-library/allocators-header.md)

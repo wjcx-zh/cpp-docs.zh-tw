@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: 8c790ca249f34a3c9b36d1bd77dafdc4a91bd352
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c77e2fed1067091c139eee664fb291b83742eb54
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375190"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 類別
 
-實作自訂頁面**自訂**在功能區應用程式中的對話方塊。
+在基於功能區的應用程式中為 **「自定義**」對話框實現自訂頁面。
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +36,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |||
 |-|-|
 |名稱|描述|
-|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|建構 `CMFCRibbonCustomizePropertyPage` 物件。|
+|[CMFC 功能自定義屬性頁::CMFC 功能定製屬性頁](#cmfcribboncustomizepropertypage)|建構 `CMFCRibbonCustomizePropertyPage` 物件。|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
@@ -44,22 +44,22 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |||
 |-|-|
 |名稱|描述|
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|加入自訂分類來**命令**下拉式方塊。|
+|[CMFC 功能自訂屬性頁::新增自訂類別](#addcustomcategory)|將自訂類別添加到 **「指令**」組合框。|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|當使用者按一下時，由系統呼叫**確定**上**自訂** 對話方塊。|
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
+|[CMFC 功能定製屬性頁::OnOK](#onok)|當使用者按下 **「自訂」** 對話方塊上的 **「確定」** 時,系統調用。|
 
 ## <a name="remarks"></a>備註
 
-如果您想要新增自訂命令**自訂** 對話方塊中，您必須處理 AFX_WM_ON_RIBBON_CUSTOMIZE 訊息。 在訊息處理常式中，具現化`CMFCRibbonCustomizePropertyPage`堆疊上的物件。 建立自訂的命令清單，然後呼叫`AddCustomCategory`若要加入新的頁面，以便**自訂** 對話方塊。
+如果要將自定義命令添加到 **「自定義」** 對話方塊中,則必須處理AFX_WM_ON_RIBBON_CUSTOMIZE消息。 在消息處理程式中,實例化堆疊上的`CMFCRibbonCustomizePropertyPage`物件。 建立自定義命令的清單,然後調用`AddCustomCategory`以將新頁面添加到 **「自定義」** 對話方塊中。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCRibbonCustomizePropertyPage`物件，並加入自訂分類。
+下面的範例展示如何建構`CMFCRibbonCustomizePropertyPage`物件和添加自定義類別。
 
 [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -73,15 +73,15 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
 
-[CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)
+[CMFC 功能製製屬性頁](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxribboncustomizedialog.h
+**標題:** afxribbon自定義對話框.h
 
-##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory
+## <a name="cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFC 功能自訂屬性頁::新增自訂類別
 
-加入自訂分類來**命令**下拉式方塊。
+將自訂類別添加到 **「指令**」組合框。
 
 ```
 void AddCustomCategory(
@@ -94,14 +94,14 @@ void AddCustomCategory(
 |||
 |-|-|
 |參數|描述|
-|*lpszName*|[in]指定自訂的類別名稱。|
-|*lstIDS*|[in]包含要顯示在 [自訂] 類別的功能區命令識別碼。|
+|*lpsz名稱*|[在]指定自定義類別名稱。|
+|*伊斯蒂迪斯*|[在]包含要在自定義類別中顯示的功能區命令 ID。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會加入名為 category *lpszName*要**命令**下拉式方塊。 當使用者選取分類時，在指定的命令*lstIDS*命令清單中會出現。
+此方法將名為*lpszName 的*類別**加入指令組合**框中。 當使用者選擇該類別時,*在 lstIDS*中指定的命令將顯示在命令清單中。
 
-##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+## <a name="cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFC 功能自定義屬性頁::CMFC 功能定製屬性頁
 
 建構 `CMFCRibbonCustomizePropertyPage` 物件。
 
@@ -111,12 +111,12 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 
 ### <a name="parameters"></a>參數
 
-*pRibbonBar*<br/>
-[in]要為其功能區控制項的指標以自訂選項。
+*pRibbonbar*<br/>
+[在]指向要自定義選項的功能區控制件的指標。
 
-##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK
+## <a name="cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFC 功能定製屬性頁::OnOK
 
-當使用者按一下系統 Calleld **確定**上**自訂** 對話方塊。
+當使用者按下 **「自訂」** 對話方塊上的 **「確定**」時,由系統進行呼叫。
 
 ```
 virtual void OnOK();
@@ -124,7 +124,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>備註
 
-預設實作適用於中選取的選項**自訂**對話方塊，即可快速存取工具列。
+默認實現將 **「自訂」** 對話方塊選擇的選項應用於「快速存取工具列」。
 
 ## <a name="see-also"></a>另請參閱
 

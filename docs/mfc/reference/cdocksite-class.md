@@ -86,16 +86,16 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 9c154fe621fb88a6dc96a9835fae95c4b86763de
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: a95ee024d9df835102eeffc8443ae6225775aff7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866198"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375544"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
-如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 提供可將衍生自 [CPane Class](../../mfc/reference/cpane-class.md) 的窗格排列成資料列集合的功能。
 
@@ -109,27 +109,27 @@ class CDockSite: public CBasePane
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CDockSite::AddRow](#addrow)||
-|[CDockSite:: AdjustDockingLayout](#adjustdockinglayout)|(覆寫[CBasePane:: AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout)。)|
-|[CDockSite:: AdjustLayout](#adjustlayout)|(覆寫[CBasePane:: AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout)。)|
+|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(覆蓋[CBasePane::調整停靠佈局](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|
+|[CDockSite::AdjustLayout](#adjustlayout)|(覆蓋[CBasePane::調整佈局](../../mfc/reference/cbasepane-class.md#adjustlayout).)|
 |[CDockSite::AlignDockSite](#aligndocksite)||
-|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(覆寫[CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|
-|[CDockSite::CanAcceptPane](#canacceptpane)|(覆寫[CBasePane:: CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane)。)|
-|[CDockSite::CreateEx](#createex)|(覆寫[CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex)。)|
+|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(覆蓋[CBasePane::CalcFixed 佈局](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CDockSite::CanAcceptPane](#canacceptpane)|(覆蓋[CBasePane::接受窗格](../../mfc/reference/cbasepane-class.md#canacceptpane).)|
+|[CDockSite::CreateEx](#createex)|(覆蓋[CBasePane:createEx](../../mfc/reference/cbasepane-class.md#createex).)|
 |[CDockSite::CreateRow](#createrow)||
-|[CDockSite::DockPane](#dockpane)|(覆寫[CBasePane::D ockpane](../../mfc/reference/cbasepane-class.md#dockpane)。)|
-|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(覆寫[CBasePane::D oesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore)。)|
+|[CDockSite::DockPane](#dockpane)|(覆蓋[CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane).)|
+|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(覆蓋[CBasePane::DoesAllowDynInsert 之前](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
 |[CDockSite::FindRowIndex](#findrowindex)||
-|[CDockSite:: FixupVirtualRects](#fixupvirtualrects)||
+|[CDockSite::FixupVirtualRects](#fixupvirtualrects)||
 |[CDockSite::GetDockSiteID](#getdocksiteid)||
 |[CDockSite::GetDockSiteRowsList](#getdocksiterowslist)||
 |[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|(覆寫 `CBasePane::IsAccessibilityCompatible`。)|
 |[CDockSite::IsDragMode](#isdragmode)||
 |[CDockSite::IsLastRow](#islastrow)||
 |[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||
-|[CDockSite::IsResizable](#isresizable)|(覆寫[CBasePane:: IsResizable](../../mfc/reference/cbasepane-class.md#isresizable)。)|
+|[CDockSite::IsResizable](#isresizable)|(覆蓋[CBasePane:可調整大小](../../mfc/reference/cbasepane-class.md#isresizable).|
 |[CDockSite::MovePane](#movepane)||
 |[CDockSite::OnInsertRow](#oninsertrow)||
 |[CDockSite::OnRemoveRow](#onremoverow)||
@@ -139,7 +139,7 @@ class CDockSite: public CBasePane
 |[CDockSite::OnSizeParent](#onsizeparent)||
 |[CDockSite::PaneFromPoint](#panefrompoint)|由給定參數指定時，傳回停駐於停駐位置的窗格。|
 |[CDockSite::DockPaneLeftOf](#dockpaneleftof)|將窗格停駐於另一個窗格的左邊。|
-|[CDockSite::FindPaneByID](#findpanebyid)|傳回給定識別碼所識別的窗格。|
+|[CDockSite::查找PaneByID](#findpanebyid)|傳回給定識別碼所識別的窗格。|
 |[CDockSite::GetPaneList](#getpanelist)|傳回停駐於停駐位置的窗格清單。|
 |[CDockSite::RectSideFromPoint](#rectsidefrompoint)||
 |[CDockSite::RemovePane](#removepane)||
@@ -154,9 +154,9 @@ class CDockSite: public CBasePane
 
 ## <a name="remarks"></a>備註
 
-當您呼叫`CDockSite` [CFrameWndEx:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)時, 架構會自動建立物件。 停駐位置視窗位於主框架視窗上用戶端區域的邊緣。
+當您調用`CDockSite`[CFramewndEx::啟用停靠](../../mfc/reference/cframewndex-class.md#enabledocking)時,框架會自動創建物件。 停駐位置視窗位於主框架視窗上用戶端區域的邊緣。
 
-您通常不需要呼叫 dock 網站所提供的服務, 因為[CFrameWndEx 類別](../../mfc/reference/cframewndex-class.md)會處理這些服務。
+您通常不必調用銜接站網站提供的服務,因為[CFrameWndEx 類](../../mfc/reference/cframewndex-class.md)處理這些服務。
 
 ## <a name="example"></a>範例
 
@@ -164,19 +164,19 @@ class CDockSite: public CBasePane
 
 [!code-cpp[NVC_MFC_RibbonApp#27](../../mfc/reference/codesnippet/cpp/cdocksite-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp; [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CBasePane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CDockSite](../../mfc/reference/cdocksite-class.md)
+•&nbsp;[CMD目標](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[Cwnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CDockSite](../../mfc/reference/cdocksite-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxDockSite。h
+**標題:** afxDockSite.h
 
-##  <a name="addrow"></a>CDockSite:: AddRow
+## <a name="cdocksiteaddrow"></a><a name="addrow"></a>CDock 網站:新增行
 
 ```
 CDockingPanesRow* AddRow(
@@ -186,15 +186,15 @@ CDockingPanesRow* AddRow(
 
 ### <a name="parameters"></a>參數
 
-在*pos*<br/>
+[在]*pos*<br/>
 
-[in] *nHeight*<br/>
+[在]*nHeight*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="adjustdockinglayout"></a>CDockSite:: AdjustDockingLayout
+## <a name="cdocksiteadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockSite::調整停靠佈局
 
 ```
 virtual void AdjustDockingLayout();
@@ -202,7 +202,7 @@ virtual void AdjustDockingLayout();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="adjustlayout"></a>CDockSite:: AdjustLayout
+## <a name="cdocksiteadjustlayout"></a><a name="adjustlayout"></a>CDockSite::調整佈局
 
 ```
 virtual void AdjustLayout();
@@ -210,7 +210,7 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="aligndocksite"></a>CDockSite:: AlignDockSite
+## <a name="cdocksitealigndocksite"></a><a name="aligndocksite"></a>CDock網站:對齊Dock網站
 
 ```
 void AlignDockSite(
@@ -221,15 +221,15 @@ void AlignDockSite(
 
 ### <a name="parameters"></a>參數
 
-在*rectToAlignBy*<br/>
+[在]*整流比*<br/>
 
-在*rectResult*<br/>
+[在]*rectResult*<br/>
 
-在*bMoveImmediately*<br/>
+[在]*b 立即移動*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcfixedlayout"></a>CDockSite:: CalcFixedLayout
+## <a name="cdocksitecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDock網站::卡爾卡固定佈局
 
 ```
 virtual CSize CalcFixedLayout(
@@ -239,15 +239,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-在*bStretch*<br/>
+[在]*b 伸*<br/>
 
-[in] *bHorz*<br/>
+[在]*布霍茲*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="canacceptpane"></a>CDockSite:: CanAcceptPane
+## <a name="cdocksitecanacceptpane"></a><a name="canacceptpane"></a>CDock網站::接受窗格
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -255,13 +255,13 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>參數
 
-在*pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="createex"></a>CDockSite:: CreateEx
+## <a name="cdocksitecreateex"></a><a name="createex"></a>CDock 網站:建立Ex
 
 ```
 virtual BOOL CreateEx(
@@ -275,23 +275,23 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>參數
 
-在*dwStyleEx*<br/>
+[在]*dwStyleEx*<br/>
 
-在*dwStyle*<br/>
+[在]*dwStyle*<br/>
 
-在*rect*<br/>
+[在]*rect*<br/>
 
-[in] *pParentWnd*<br/>
+[在]*pparentwnd*<br/>
 
-[in] *dwControlBarStyle*<br/>
+[在]*dwControlBar 樣式*<br/>
 
-在*pCoNtext*<br/>
+[在]*pContext*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="createrow"></a>CDockSite:: CreateRow
+## <a name="cdocksitecreaterow"></a><a name="createrow"></a>CDock 網站:建立行
 
 ```
 virtual CDockingPanesRow* CreateRow(
@@ -302,17 +302,17 @@ virtual CDockingPanesRow* CreateRow(
 
 ### <a name="parameters"></a>參數
 
-[in] *pParentDockBar*<br/>
+[在]*p 父塢列*<br/>
 
-在*nOffset*<br/>
+[在]*n位移*<br/>
 
-[in] *nRowHeight*<br/>
+[在]*n 羅高地*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="dockpane"></a>CDockSite::D ockPane
+## <a name="cdocksitedockpane"></a><a name="dockpane"></a>CDockSite::DockPane
 
 ```
 virtual void DockPane(
@@ -323,15 +323,15 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
-在*dockMethod*<br/>
+[在]*基方法*<br/>
 
-[in] *lpRect*<br/>
+[在]*lpRect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="dockpaneleftof"></a>CDockSite::D ockPaneLeftOf
+## <a name="cdocksitedockpaneleftof"></a><a name="dockpaneleftof"></a>克多克網站::D奧克帕內左
 
 將窗格停駐於另一個窗格的左邊。
 
@@ -343,19 +343,19 @@ virtual BOOL DockPaneLeftOf(
 
 ### <a name="parameters"></a>參數
 
-*pBarToDock*<br/>
-[in、out]要停駐在*pTargetBar*左邊的窗格指標。
+*pBartodock*<br/>
+[進出]指向要停靠在*pTargetBar*左側的窗格的指標。
 
-*pTargetBar*<br/>
-[in、out]目標窗格的指標。
+*p 目標列*<br/>
+[進出]指向目標窗格的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格已成功停駐, 則為 TRUE;否則為 FALSE。
+如果窗格已成功停靠,則為 TRUE;如果窗格已成功停靠。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="doesallowdyninsertbefore"></a>CDockSite::D oesAllowDynInsertBefore
+## <a name="cdocksitedoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CDockSite::DoesAllowDynInsert之前
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -365,9 +365,9 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="findpanebyid"></a>CDockSite:: FindPaneByID
+## <a name="cdocksitefindpanebyid"></a><a name="findpanebyid"></a>CDockSite::查找PaneByID
 
-傳回具有指定識別碼的窗格。
+返回具有給定 ID 的窗格。
 
 ```
 CPane* FindPaneByID(UINT nID);
@@ -376,15 +376,15 @@ CPane* FindPaneByID(UINT nID);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-在要尋找之窗格的命令識別碼。
+[在]要找到的窗格的命令 ID。
 
 ### <a name="return-value"></a>傳回值
 
-具有指定命令識別碼之窗格的指標, 如果找不到窗格, 則為 Null。
+指向具有指定命令 ID 的窗格的指標,如果未找到窗格,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="findrowindex"></a>CDockSite:: FindRowIndex
+## <a name="cdocksitefindrowindex"></a><a name="findrowindex"></a>CDock網站:尋找羅索引
 
 ```
 int FindRowIndex(CDockingPanesRow* pRow);
@@ -392,13 +392,13 @@ int FindRowIndex(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>參數
 
-[in] *pRow*<br/>
+[在]*pRow*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="fixupvirtualrects"></a>CDockSite:: FixupVirtualRects
+## <a name="cdocksitefixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockSite:修復虛擬Rects
 
 ```
 virtual void FixupVirtualRects();
@@ -406,7 +406,7 @@ virtual void FixupVirtualRects();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdocksiteid"></a>CDockSite:: GetDockSiteID
+## <a name="cdocksitegetdocksiteid"></a><a name="getdocksiteid"></a>CDockSite::取得DockSiteID
 
 ```
 virtual UINT GetDockSiteID() const;
@@ -416,7 +416,7 @@ virtual UINT GetDockSiteID() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdocksiterowslist"></a>CDockSite:: GetDockSiteRowsList
+## <a name="cdocksitegetdocksiterowslist"></a><a name="getdocksiterowslist"></a>CDock 網站:取得Dock網站清單
 
 ```
 const CObList& GetDockSiteRowsList() const;
@@ -426,9 +426,9 @@ const CObList& GetDockSiteRowsList() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpanelist"></a>CDockSite:: GetPaneList
+## <a name="cdocksitegetpanelist"></a><a name="getpanelist"></a>CDock 網站:抓取窗格清單
 
-傳回固定在停駐網站中的窗格清單。
+返回停靠在停靠網站中的窗格的清單。
 
 ```
 const CObList& GetPaneList() const;
@@ -436,9 +436,9 @@ const CObList& GetPaneList() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前停駐在停駐列之窗格清單的唯讀參考。
+對當前停靠欄中停靠的窗格列表的唯讀引用。
 
-##  <a name="isaccessibilitycompatible"></a>CDockSite:: IsAccessibilityCompatible
+## <a name="cdocksiteisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CDockSite:可存取性相容
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -448,7 +448,7 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isdragmode"></a>CDockSite:: IsDragMode
+## <a name="cdocksiteisdragmode"></a><a name="isdragmode"></a>CDockSite::是德拉格模式
 
 ```
 virtual BOOL IsDragMode() const;
@@ -458,7 +458,7 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="islastrow"></a>CDockSite:: IsLastRow
+## <a name="cdocksiteislastrow"></a><a name="islastrow"></a>CDockSite:是最後一個
 
 ```
 bool IsLastRow(CDockingPanesRow* pRow) const;
@@ -466,13 +466,13 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *pRow*<br/>
+[在]*pRow*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isrectwithindocksite"></a>CDockSite:: IsRectWithinDockSite
+## <a name="cdocksiteisrectwithindocksite"></a><a name="isrectwithindocksite"></a>CDockSite:isrect在DockSite
 
 ```
 BOOL IsRectWithinDockSite(
@@ -482,15 +482,15 @@ BOOL IsRectWithinDockSite(
 
 ### <a name="parameters"></a>參數
 
-在*rect*<br/>
+[在]*rect*<br/>
 
-[in] *ptDelta*<br/>
+[在]*ptDelta*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isresizable"></a>CDockSite:: IsResizable
+## <a name="cdocksiteisresizable"></a><a name="isresizable"></a>CDockSite:可調整大小
 
 ```
 virtual BOOL IsResizable() const;
@@ -500,7 +500,7 @@ virtual BOOL IsResizable() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="movepane"></a>CDockSite:: MovePane
+## <a name="cdocksitemovepane"></a><a name="movepane"></a>CDock 網站:移動窗格
 
 ```
 virtual BOOL MovePane(
@@ -511,17 +511,17 @@ virtual BOOL MovePane(
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
-在*nFlags*<br/>
+[在]*nFlags*<br/>
 
-[in] *ptOffset*<br/>
+[在]*pt 位移*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="oninsertrow"></a>CDockSite:: OnInsertRow
+## <a name="cdocksiteoninsertrow"></a><a name="oninsertrow"></a>CDockSite:插入器
 
 ```
 virtual void OnInsertRow(POSITION pos);
@@ -529,11 +529,11 @@ virtual void OnInsertRow(POSITION pos);
 
 ### <a name="parameters"></a>參數
 
-在*pos*<br/>
+[在]*pos*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onremoverow"></a>CDockSite:: OnRemoveRow
+## <a name="cdocksiteonremoverow"></a><a name="onremoverow"></a>CDockSite::在刪除行
 
 ```
 virtual void OnRemoveRow(
@@ -543,13 +543,13 @@ virtual void OnRemoveRow(
 
 ### <a name="parameters"></a>參數
 
-在*pos*<br/>
+[在]*pos*<br/>
 
-[in] *bByShow*<br/>
+[在]*bByShow*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onresizerow"></a>CDockSite:: OnResizeRow
+## <a name="cdocksiteonresizerow"></a><a name="onresizerow"></a>CDockSite:在重新大小行上
 
 ```
 virtual int OnResizeRow(
@@ -559,15 +559,15 @@ virtual int OnResizeRow(
 
 ### <a name="parameters"></a>參數
 
-[in] *pRowToResize*<br/>
+[在]*prowtoresize*<br/>
 
-在*nOffset*<br/>
+[在]*n位移*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onsizeparent"></a>CDockSite:: OnSizeParent
+## <a name="cdocksiteonsizeparent"></a><a name="onsizeparent"></a>CDockSite::在大小父
 
 ```
 virtual void OnSizeParent(
@@ -579,17 +579,17 @@ virtual void OnSizeParent(
 
 ### <a name="parameters"></a>參數
 
-在*rectAvailable*<br/>
+[在]*重新提供*<br/>
 
-在*russinovich*<br/>
+[在]*n側*<br/>
 
-在*bExpand*<br/>
+[在]*b 延伸*<br/>
 
-在*nOffset*<br/>
+[在]*n位移*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onsetwindowpos"></a>CDockSite:: OnSetWindowPos
+## <a name="cdocksiteonsetwindowpos"></a><a name="onsetwindowpos"></a>CDock 網站:開啟視窗Pos
 
 ```
 virtual BOOL OnSetWindowPos(
@@ -600,17 +600,17 @@ virtual BOOL OnSetWindowPos(
 
 ### <a name="parameters"></a>參數
 
-[in] *pWndInsertAfter*<br/>
+[在]*pWndInsert 後*<br/>
 
-在*rectWnd*<br/>
+[在]*雷克溫德*<br/>
 
-在*nFlags*<br/>
+[在]*nFlags*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onshowrow"></a>CDockSite:: OnShowRow
+## <a name="cdocksiteonshowrow"></a><a name="onshowrow"></a>CDock網站:在ShowRow
 
 ```
 virtual void OnShowRow(
@@ -620,13 +620,13 @@ virtual void OnShowRow(
 
 ### <a name="parameters"></a>參數
 
-在*pos*<br/>
+[在]*pos*<br/>
 
-在*bShow*<br/>
+[在]*b 顯示*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="panefrompoint"></a>CDockSite::P aneFromPoint
+## <a name="cdocksitepanefrompoint"></a><a name="panefrompoint"></a>CDockSite::P從點
 
 由給定參數指定時，傳回停駐於停駐位置的窗格。
 
@@ -637,15 +637,15 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-在螢幕座標中的點, 供窗格抓取。
+[在]要檢索的窗格的點,位於螢幕座標中。
 
 ### <a name="return-value"></a>傳回值
 
-位於指定點之窗格的指標, 如果指定的點上沒有任何窗格, 則為 Null。
+指向位於指定點的窗格的指標,或 NULL 的指標,如果指定點上不存在窗格。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="rectsidefrompoint"></a>CDockSite:: RectSideFromPoint
+## <a name="cdocksiterectsidefrompoint"></a><a name="rectsidefrompoint"></a>CDockSite::從點
 
 ```
 static int __stdcall RectSideFromPoint(
@@ -655,15 +655,15 @@ static int __stdcall RectSideFromPoint(
 
 ### <a name="parameters"></a>參數
 
-在*rect*<br/>
+[在]*rect*<br/>
 
-在*點*<br/>
+[在]*點*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="removepane"></a>CDockSite:: RemovePane
+## <a name="cdocksiteremovepane"></a><a name="removepane"></a>CDock 網站:移除窗格
 
 ```
 virtual void RemovePane(
@@ -673,13 +673,13 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
-在*dockMethod*<br/>
+[在]*基方法*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="removerow"></a>CDockSite:: RemoveRow
+## <a name="cdocksiteremoverow"></a><a name="removerow"></a>CDock 網站:刪除行
 
 ```
 void RemoveRow(CDockingPanesRow* pRow);
@@ -687,11 +687,11 @@ void RemoveRow(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>參數
 
-[in] *pRow*<br/>
+[在]*pRow*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="replacepane"></a>CDockSite:: ReplacePane
+## <a name="cdocksitereplacepane"></a><a name="replacepane"></a>CDockSite::取代窗格
 
 ```
 BOOL ReplacePane(
@@ -701,15 +701,15 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>參數
 
-在*pOldBar*<br/>
+[在]*pOldBar*<br/>
 
-[in] *pNewBar*<br/>
+[在]*pNewBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="repositionpanes"></a>CDockSite:: RepositionPanes
+## <a name="cdocksiterepositionpanes"></a><a name="repositionpanes"></a>CDockSite::重新置放窗格
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -717,11 +717,11 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>參數
 
-[in] *rectNewClientArea*<br/>
+[在]*rectNewClient區域*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="resizedocksite"></a>CDockSite:: ResizeDockSite
+## <a name="cdocksiteresizedocksite"></a><a name="resizedocksite"></a>CDock 網站:調整Dock網站
 
 ```
 void ResizeDockSite(
@@ -731,13 +731,13 @@ void ResizeDockSite(
 
 ### <a name="parameters"></a>參數
 
-[in] *nNewWidth*<br/>
+[在]*n 新寬度*<br/>
 
-[in] *nNewHeight*<br/>
+[在]*n 新高度*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="resizerow"></a>CDockSite:: ResizeRow
+## <a name="cdocksiteresizerow"></a><a name="resizerow"></a>CDockSite::調整大小
 
 ```
 int ResizeRow(
@@ -748,17 +748,17 @@ int ResizeRow(
 
 ### <a name="parameters"></a>參數
 
-[in] *pRow*<br/>
+[在]*pRow*<br/>
 
-[in] *nNewSize*<br/>
+[在]*n 新尺寸*<br/>
 
-在*bAdjustLayout*<br/>
+[在]*b 調整佈局*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="showpane"></a>CDockSite:: ShowPane
+## <a name="cdocksiteshowpane"></a><a name="showpane"></a>CDock網站::顯示窗格
 
 顯示窗格。
 
@@ -773,26 +773,26 @@ virtual BOOL ShowPane(
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[in、out]要顯示或隱藏之窗格的指標。
+[進出]指向要顯示或隱藏的窗格的指標。
 
-*bShow*<br/>
-在TRUE 表示要顯示窗格;FALSE 指定要隱藏窗格。
+*b 顯示*<br/>
+[在]TRUE 以指定要顯示的窗格;FALSE 以指定要隱藏的窗格。
 
 *bDelay*<br/>
-[in]若要指定，版面配置窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。
+[在]TRUE 指定窗格的佈局應延遲到顯示窗格之後;否則,請將窗格的佈局延遲到否則,FALSE。
 
-*bActivate*<br/>
-在不使用這個參數。
+*b 啟動*<br/>
+[在]不使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功顯示或隱藏窗格, 則為 TRUE。 如果指定的窗格不屬於此停駐網站, 則為 FALSE。
+如果窗格已顯示或已成功隱藏,則為 TRUE。 如果指定的窗格不屬於此銜接站站點,則FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法, 以顯示或隱藏停駐的窗格。 一般來說, 您不需要直接呼叫`CDockSite::ShowPane` , 因為父框架視窗或基底窗格會呼叫它。
+呼叫此方法以顯示或隱藏停靠的窗格。 通常,您不必直接調用`CDockSite::ShowPane`,因為它由父框架視窗或基窗格調用。
 
-##  <a name="showrow"></a>CDockSite:: ShowRow
+## <a name="cdocksiteshowrow"></a><a name="showrow"></a>CDock 網站:顯示行
 
 ```
 void ShowRow(
@@ -803,15 +803,15 @@ void ShowRow(
 
 ### <a name="parameters"></a>參數
 
-[in] *pRow*<br/>
+[在]*pRow*<br/>
 
-在*bShow*<br/>
+[在]*b 顯示*<br/>
 
-在*bAdjustLayout*<br/>
+[在]*b 調整佈局*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="swaprows"></a>CDockSite:: SwapRows
+## <a name="cdocksiteswaprows"></a><a name="swaprows"></a>CDock網站::交換
 
 ```
 void SwapRows(
@@ -821,9 +821,9 @@ void SwapRows(
 
 ### <a name="parameters"></a>參數
 
-[in] *pFirstRow*<br/>
+[在]*pFirstRow*<br/>
 
-[in] *pSecondRow*<br/>
+[在]*p 秒羅*<br/>
 
 ### <a name="remarks"></a>備註
 

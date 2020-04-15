@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a80c0ec14da2a955a95ac84dd3975212ef20ae04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374211"
 ---
 # <a name="weakreference-class"></a>WeakReference 類別
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -38,13 +38,13 @@ class WeakReference;
 
 ## <a name="remarks"></a>備註
 
-代表*弱式參考*可用於使用 Windows 執行階段或傳統 com 使用。 弱式參考代表不一定可存取的物件。
+表示可與 Windows 執行時或經典 COM 一起使用*的弱參考*。 弱式參考代表不一定可存取的物件。
 
-A`WeakReference`物件會維護*強式參考*，這是物件的指標和*強式參考計數*，這是已藉由散發的強式參考的份數`Resolve()`方法。 強式參考計數為非零值，而強式參考有效，且該物件是可存取。 當強式參考計數變成零時，強式參考無效，而且該物件是無法存取。
+物件維護*強引用*,它是指向物件的指標和*強引用計數*,即`Resolve()`該方法 分發的強引用的副`WeakReference`本數。 雖然強引用計數是非零的,但強引用是有效的,並且對像是可訪問的。 當強引用計數變為零時,強引用無效,並且物件不可訪問。
 
-A`WeakReference`物件一般用來代表其存在由外部執行緒或應用程式所控制的物件。 例如，建構`WeakReference`檔案物件的參考物件。 在檔案開啟時，強式參考是有效的。 但若檔案關閉，強式參考就變成無效的。
+物件`WeakReference`通常用於表示其存在由外部線程或應用程式控制的物件。 例如,從對檔`WeakReference`物件的引用構造物件。 在檔案開啟時，強式參考是有效的。 但若檔案關閉，強式參考就變成無效的。
 
-`WeakReference`方法都是安全執行緒。
+這些方法`WeakReference`是線程安全的。
 
 ## <a name="members"></a>成員
 
@@ -52,31 +52,31 @@ A`WeakReference`物件一般用來代表其存在由外部執行緒或應用程�
 
 名稱                                                  | 描述
 ----------------------------------------------------- | ---------------------------------------------------------------------------
-[Weakreference:: Weakreference](#weakreference)        | 初始化 `WeakReference` 類別的新執行個體。
-[WeakReference:: ~ WeakReference](#tilde-weakreference) | 取消初始化 （終結） 的目前執行個體`WeakReference`類別。
+[弱參考::弱參考](#weakreference)        | 將 `WeakReference` 類別的新執行個體初始化。
+[弱參考:*弱參考](#tilde-weakreference) | 取消初始化(銷毀)`WeakReference`類的當前實例。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                                 | 描述
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[WeakReference::DecrementStrongReference](#decrementstrongreference) | 目前的強式的參考計數的遞減`WeakReference`物件。
-[WeakReference::IncrementStrongReference](#incrementstrongreference) | 目前的強式參考計數遞增`WeakReference`物件。
-[WeakReference::Resolve](#resolve)                                   | 如果強式參考計數為非零值，請為目前的強式參考值設定指定的指標。
-[WeakReference::SetUnknown](#setunknown)                             | 設定目前的強式參考`WeakReference`物件與指定的介面指標。
+[弱參考::D強參考](#decrementstrongreference) | 聲明當前`WeakReference`物件的強引用計數。
+[弱參考::增量強參考](#incrementstrongreference) | 增加當前`WeakReference`對象的強引用計數。
+[弱參考::解決](#resolve)                                   | 如果強引用計數為非零,則設置指向當前強引用值的指定指標。
+[弱參考::設定未知](#setunknown)                             | 將當前`WeakReference`物件的強引用設置到指定的介面指標。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `WeakReference`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標題:** 實現.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>弱參考:*弱參考
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 virtual ~WeakReference();
@@ -86,11 +86,11 @@ virtual ~WeakReference();
 
 ### <a name="remarks"></a>備註
 
-取消初始化目前的執行個體`WeakReference`類別。
+取消初始化類的`WeakReference`當前實例。
 
-## <a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>弱參考::D強參考
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ULONG DecrementStrongReference();
@@ -98,17 +98,17 @@ ULONG DecrementStrongReference();
 
 ### <a name="remarks"></a>備註
 
-目前的強式的參考計數的遞減`WeakReference`物件。
+聲明當前`WeakReference`物件的強引用計數。
 
-當強式參考計數變成零時，強式參考會設定為`nullptr`。
+當強引用計數變為零時,強引用設定為`nullptr`。
 
 ### <a name="return-value"></a>傳回值
 
-遞減的強式參考計數。
+遞減的強引用計數。
 
-## <a name="incrementstrongreference"></a>WeakReference::IncrementStrongReference
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>弱參考::增量強參考
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ULONG IncrementStrongReference();
@@ -116,15 +116,15 @@ ULONG IncrementStrongReference();
 
 ### <a name="return-value"></a>傳回值
 
-遞增的強式參考計數。
+遞增的強引用計數。
 
 ### <a name="remarks"></a>備註
 
-目前的強式參考計數遞增`WeakReference`物件。
+增加當前`WeakReference`對象的強引用計數。
 
-## <a name="resolve"></a>WeakReference::Resolve
+## <a name="weakreferenceresolve"></a><a name="resolve"></a>弱參考::解決
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 STDMETHOD(Resolve)
@@ -139,23 +139,23 @@ STDMETHOD(Resolve)
 介面識別碼。
 
 *ppvObject*<br/>
-這項作業完成時，一份目前的強式參考，如果強式參考計數為非零值。
+此操作完成後,如果強引用計數為非零,則當前強引用的副本。
 
 ### <a name="return-value"></a>傳回值
 
-- 如果這項作業會成功，為 S_OK 和強式參考計數為零。 *PpvObject*參數設為`nullptr`。
+- 如果此操作成功且強引用計數為零,S_OK。 *ppvObject*參數設定`nullptr`為 。
 
-- 如果這項作業會成功，為 S_OK 和強式參考計數為非零值。 *PpvObject*參數設為強式參考。
+- 如果此操作成功且強引用計數為非零,則S_OK。 *ppvObject*參數設定為強引用。
 
-- 否則，指出原因的 HRESULT 這項作業失敗。
+- 否則,指示此操作失敗原因的 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-如果強式參考計數為非零值，請為目前的強式參考值設定指定的指標。
+如果強引用計數為非零,則設置指向當前強引用值的指定指標。
 
-## <a name="setunknown"></a>Weakreference:: Setunknown
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>弱參考::設定未知
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 void SetUnknown(
@@ -166,15 +166,15 @@ void SetUnknown(
 ### <a name="parameters"></a>參數
 
 *unk*<br/>
-指標`IUnknown`物件的介面。
+指向物件`IUnknown`介面的指標。
 
 ### <a name="remarks"></a>備註
 
-設定目前的強式參考`WeakReference`物件與指定的介面指標。
+將當前`WeakReference`物件的強引用設置到指定的介面指標。
 
-## <a name="weakreference"></a>Weakreference:: Weakreference
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>弱參考::弱參考
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 WeakReference();
@@ -182,6 +182,6 @@ WeakReference();
 
 ### <a name="remarks"></a>備註
 
-初始化 `WeakReference` 類別的新執行個體。
+將 `WeakReference` 類別的新執行個體初始化。
 
-強式參考指標`WeakReference`物件會初始化為`nullptr`，和強式參考計數會初始化為 1。
+`WeakReference`物件的強引用指標初始化到`nullptr`,強引用計數初始化為 1。

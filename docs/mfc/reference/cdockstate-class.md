@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391175"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375557"
 ---
 # <a name="cdockstate-class"></a>CDockState 類別
 
@@ -39,28 +39,28 @@ class CDockState : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CDockState::Clear](#clear)|清除停駐狀態資訊。|
-|[CDockState::GetVersion](#getversion)|擷取儲存的版本號碼列狀態。|
-|[CDockState::LoadState](#loadstate)|擷取狀態資訊從登錄或。INI 檔案。|
-|[CDockState::SaveState](#savestate)|將狀態資訊儲存至登錄或 INI 檔。|
+|[CDockState:清除](#clear)|清除停靠狀態資訊。|
+|[CDockState:取得版本](#getversion)|檢索存儲條狀態的版本號。|
+|[CDockState::載入狀態](#loadstate)|從註冊表或 檢索狀態資訊。INI 檔。|
+|[CDockState::儲存狀態](#savestate)|將狀態資訊保存到註冊表或 INI 檔。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CDockState::m_arrBarInfo](#m_arrbarinfo)|若要儲存的指標陣列停駐狀態資訊，與每個控制列的一個項目。|
+|[克多克州:m_arrBarInfo](#m_arrbarinfo)|指向存儲的停靠狀態資訊的指標數組,每個控制欄有一個條目。|
 
 ## <a name="remarks"></a>備註
 
-停駐狀態包含大小和列和停駐的位置。 當擷取預存停駐狀態，`CDockState`檢查列的位置，如果目前的畫面設定值，看不到 列`CDockState`調整列的位置，讓它會顯示。 主要目的`CDockState`是保存的數個控制列的整個狀態，並允許該狀態儲存和載入至登錄，應用程式的其中一個。INI 檔案，或以二進位格式的一部分`CArchive`物件的內容。
+停靠狀態包括條形的大小和位置,以及是否停靠。 檢索儲存的停靠狀態時,`CDockState`檢查條形圖的位置,如果當前螢幕設置不可見,`CDockState`則 縮放條形的位置,使其可見。 主要目的是`CDockState`保持多個控制列的整個狀態,並允許儲存該狀態並將其載入到註冊表,應用程式的 。INI 檔,或作為物件內容的`CArchive`一部分的二進位形式。
 
-列可以是任何可停駐控制項列，包括工具列、 狀態列、 或對話方塊列。 `CDockState` 物件會寫入和讀取檔案，以透過來回`CArchive`物件。
+該欄可以是任何可停靠的控制欄,包括工具列、狀態列或對話方塊列。 `CDockState`對象`CArchive`以對對象寫入和讀取到檔案或從檔案讀取。
 
-[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate)擷取所有框架視窗的狀態資訊`CControlBar`物件，並將其放入`CDockState`物件。 然後，您可以撰寫的內容`CDockState`至儲存體使用的物件[Serialize](../../mfc/reference/cobject-class.md#serialize)或是[CDockState::SaveState](#savestate)。 如果您稍後想要還原在框架視窗中的控制列的狀態，您可以載入的狀態與`Serialize`或是[CDockState::LoadState](#loadstate)，然後使用[CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate)套用已儲存框架視窗的控制列的狀態。
+[CFrameWnd:GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate)檢索所有幀`CControlBar`視窗 物件的狀態資訊並將其放入物件`CDockState`中。 然後,您可以使用`CDockState`[序列化](../../mfc/reference/cobject-class.md#serialize)或[CDockState:::保存狀態](#savestate)將物件的內容寫入存儲。 如果以後要還原框架視窗中控制欄的狀態,則可以使用`Serialize`或[CDockState:LoadState](#loadstate)載入狀態,然後使用[CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate)將保存的狀態應用於幀視窗的控制欄。
 
-如需有關如何停駐控制列的詳細資訊，請參閱文章[控制列](../../mfc/control-bars.md)，[工具列：停駐和浮動](../../mfc/docking-and-floating-toolbars.md)，並[框架 Windows](../../mfc/frame-windows.md)。
+有關停靠控制列的詳細資訊,請參閱[文章「控制件欄](../../mfc/control-bars.md)」、[工具列:停靠和浮動](../../mfc/docking-and-floating-toolbars.md),以及[框架視窗](../../mfc/frame-windows.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -68,11 +68,11 @@ class CDockState : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxadv.h
+**標題:** afxadv.h
 
-##  <a name="clear"></a>  CDockState::Clear
+## <a name="cdockstateclear"></a><a name="clear"></a>CDockState:清除
 
-呼叫此函式來清除所有停駐的資訊儲存在`CDockState`物件。
+調用此函數以清除存儲在物件中的所有`CDockState`停靠資訊。
 
 ```
 void Clear();
@@ -80,11 +80,11 @@ void Clear();
 
 ### <a name="remarks"></a>備註
 
-這包括不僅是否列停駐，但列的大小和位置，以及它可見。
+這不僅包括柱線是否停靠,還包括條形的大小和位置以及它是否可見。
 
-##  <a name="getversion"></a>  CDockState::GetVersion
+## <a name="cdockstategetversion"></a><a name="getversion"></a>CDockState:取得版本
 
-呼叫此函式可擷取儲存的版本號碼列狀態。
+調用此函數以檢索存儲的條形狀態的版本號。
 
 ```
 DWORD GetVersion();
@@ -92,15 +92,15 @@ DWORD GetVersion();
 
 ### <a name="return-value"></a>傳回值
 
-1，否則預存的列資訊已超過目前列檢視狀態。2 如果預存的列資訊等同於目前列狀態。
+如果存儲的條形資訊早於當前條形狀態,則為 1;2 如果儲存的條形資訊與當前條形狀態相同。
 
 ### <a name="remarks"></a>備註
 
-版本支援讓修改過的列，來加入新的持續性屬性，而且仍然能夠偵測並載入列的舊版本所建立的永續性狀態。
+版本支援使修訂後的柱線能夠添加新的持久屬性,並且仍然能夠檢測和載入由早期版本的條形創建的持續狀態。
 
-##  <a name="loadstate"></a>  CDockState::LoadState
+## <a name="cdockstateloadstate"></a><a name="loadstate"></a>CDockState::載入狀態
 
-呼叫此函式可從登錄擷取狀態資訊或。INI 檔案。
+調用此函數從註冊表或 檢索狀態資訊。INI 檔。
 
 ```
 void LoadState(LPCTSTR lpszProfileName);
@@ -108,24 +108,24 @@ void LoadState(LPCTSTR lpszProfileName);
 
 ### <a name="parameters"></a>參數
 
-*lpszProfileName*<br/>
-指向以 null teminated 字串，指定的初始設定檔案或儲存狀態資訊的 Windows 登錄機碼中的區段的名稱。
+*lpsz 設定檔名稱*<br/>
+指向一個空事件字串,該字串指定初始化檔中的節的名稱或存儲狀態資訊的 Windows 註冊表中的鍵。
 
 ### <a name="remarks"></a>備註
 
-設定檔名稱是應用程式的區段。INI 檔案或登錄，其中包含的橫條的狀態資訊。 您可以將控制列的狀態資訊儲存至登錄或。INI 檔案`SaveState`。
+設定檔名稱是應用程式的部分。INI 檔或包含條形的狀態資訊的註冊表。 您可以將控制器資訊儲存到註冊表或 。INI`SaveState`檔案與 。
 
-##  <a name="m_arrbarinfo"></a>  CDockState::m_arrBarInfo
+## <a name="cdockstatem_arrbarinfo"></a><a name="m_arrbarinfo"></a>克多克州:m_arrBarInfo
 
-A`CPtrArray`亦即已儲存的狀態資訊在每個控制列的預存的控制列資訊的指標陣列`CDockState`物件。
+物件`CPtrArray`,它是指向在物件中保存狀態資訊的每個控制件欄的存儲控制欄資訊`CDockState`的指標陣列。
 
 ```
 CPtrArray m_arrBarInfo;
 ```
 
-##  <a name="savestate"></a>  CDockState::SaveState
+## <a name="cdockstatesavestate"></a><a name="savestate"></a>CDockState::儲存狀態
 
-呼叫此函式，以將狀態資訊儲存至登錄或。INI 檔案。
+呼叫此函數以將狀態資訊儲存到註冊表或 。INI 檔。
 
 ```
 void SaveState(LPCTSTR lpszProfileName);
@@ -133,12 +133,12 @@ void SaveState(LPCTSTR lpszProfileName);
 
 ### <a name="parameters"></a>參數
 
-*lpszProfileName*<br/>
-指向以 null teminated 字串，指定的初始設定檔案或儲存狀態資訊的 Windows 登錄機碼中的區段的名稱。
+*lpsz 設定檔名稱*<br/>
+指向一個空事件字串,該字串指定初始化檔中的節的名稱或存儲狀態資訊的 Windows 註冊表中的鍵。
 
 ### <a name="remarks"></a>備註
 
-設定檔名稱是應用程式的區段。INI 檔案或登錄，其中包含控制列的狀態資訊。 `SaveState` 也會儲存目前的螢幕大小。 您可以從登錄擷取控制列資訊或。INI 檔案`LoadState`。
+設定檔名稱是應用程式的部分。INI 檔或包含控制欄狀態資訊的註冊表。 `SaveState`還保存當前螢幕大小。 可以從註冊表或 檢索控件欄資訊。INI`LoadState`檔案與 。
 
 ## <a name="see-also"></a>另請參閱
 

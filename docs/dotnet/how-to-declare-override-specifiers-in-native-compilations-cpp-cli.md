@@ -1,28 +1,28 @@
 ---
-title: HOW TO：宣告覆寫規範 (C++/CLI)
+title: 如何:宣告覆寫指定器(C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387418"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374455"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>HOW TO：宣告在原生編譯中的覆寫規範 (C++/CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>如何：在原生編譯中宣告覆寫指定名稱 (C++/CLI)
 
-[密封](../extensions/sealed-cpp-component-extensions.md)，[抽象](../extensions/abstract-cpp-component-extensions.md)，和[覆寫](../extensions/override-cpp-component-extensions.md)可用在不使用的編譯中 **/ZW**或是[/clr](../build/reference/clr-common-language-runtime-compilation.md)。
+[密封](../extensions/sealed-cpp-component-extensions.md)、[抽象](../extensions/abstract-cpp-component-extensions.md)和[重寫](../extensions/override-cpp-component-extensions.md)在不使用 **/ZW**或[/clr](../build/reference/clr-common-language-runtime-compilation.md)的編譯中可用。
 
 > [!NOTE]
->  ISO C + + 11 標準語言有[覆寫](../cpp/override-specifier.md)識別項並[最終](../cpp/final-specifier.md)識別項，以及同時支援 Visual Studio 中使用`final`而不是`sealed`旨在的程式碼中為僅限原生編譯。
+> ISO C++11 標準語言具有[重寫](../cpp/override-specifier.md)標識符和[最終](../cpp/final-specifier.md)識別符,並且兩者都在`final`Visual Studio 使用中`sealed`支援,而不是在旨在編譯為本機代碼的代碼中。
 
 ## <a name="example"></a>範例
 
 ### <a name="description"></a>描述
 
-下列範例顯示`sealed`是在原生編譯中有效。
+下面的示例顯示在`sealed`本機編譯中有效。
 
 ### <a name="code"></a>程式碼
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="description"></a>描述
 
-下一個範例顯示`override`是在原生編譯中有效。
+下一個範例顯示`override`在本機編譯中有效。
 
 ### <a name="code"></a>程式碼
 
@@ -73,7 +73,7 @@ public:
 
 ### <a name="description"></a>描述
 
-這個範例將示範`abstract`是在原生編譯中有效。
+此示例顯示在`abstract`本機編譯中有效。
 
 ### <a name="code"></a>程式碼
 

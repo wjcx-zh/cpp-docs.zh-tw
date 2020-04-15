@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66c0a19c04e0a900b91c0c28c45bb9c766d25c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375199"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog 類別
 
-顯示功能區**自訂**頁面。
+顯示功能區 **「自訂**」頁。
 
 ## <a name="syntax"></a>語法
 
@@ -31,24 +31,24 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|建構 `CMFCRibbonCustomizeDialog` 物件。|
+|[CMFC 功能定製對話::CMFC 功能定製對話](#cmfcribboncustomizedialog)|建構 `CMFCRibbonCustomizeDialog` 物件。|
 |`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|
+|`CMFCRibbonCustomizeDialog::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
 
 ## <a name="remarks"></a>備註
 
-MFC 會自動產生這個類別，如果您不會處理 AFX_WM_ON_RIBBON_CUSTOMIZE 訊息，或如果您從訊息處理常式傳回 0。
+如果您不處理AFX_WM_ON_RIBBON_CUSTOMIZE消息,或者從消息處理程式返回 0,MFC 會自動實例化此類。
 
-如果您想要在您的應用程式中使用這個類別，以顯示功能區**自訂**對話方塊方塊中，只要它具現化，並呼叫`DoModal`方法。
+如果要在應用程式中使用此類來顯示功能區**自定義**對話框,只需實例化它並`DoModal`調用 方法。
 
-因為這個類別衍生自[CMFCPropertySheet 類別](../../mfc/reference/cmfcpropertysheet-class.md)，您可以使用，以新增自訂頁面`CMFCPropertySheet`API。
+由於此類派生自[CMFC 屬性表類](../../mfc/reference/cmfcpropertysheet-class.md),`CMFCPropertySheet`因此可以使用 API 添加自定義頁面。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -60,13 +60,13 @@ MFC 會自動產生這個類別，如果您不會處理 AFX_WM_ON_RIBBON_CUSTOMI
 
 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-[CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
+[CMFC 功能定製對話](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxribboncustomizedialog.h
+**標題:** afxribbon自定義對話框.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CMFC 功能定製對話::CMFC 功能定製對話
 
 建構 `CMFCRibbonCustomizeDialog` 物件。
 
@@ -78,21 +78,21 @@ CMFCRibbonCustomizeDialog(
 
 ### <a name="parameters"></a>參數
 
-*pWndParent*<br/>
-[in]父視窗 （通常是主要畫面格） 的指標。
+*pwnd 父級*<br/>
+[在]指向父視窗(通常是主框架)的指標。
 
 *pRibbon*<br/>
-[in]指標`CMFCRibbonBar`要進行自訂。
+[在]要自定義的`CMFCRibbonBar`指標。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCRibbonCustomizeDialog`物件。
+下面的示例演示如何構造`CMFCRibbonCustomizeDialog`物件。
 
 [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]
 
 ### <a name="remarks"></a>備註
 
-建構函式具現化[CMFCRibbonCustomizePropertyPage 類別](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)物件，並將它加入至屬性工作表頁的集合。
+建構函數實例化[了 CMFCRibbon 自定義屬性頁類](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)物件,並將其添加到屬性工作表頁的集合中。
 
 ## <a name="see-also"></a>另請參閱
 

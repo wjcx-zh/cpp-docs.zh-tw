@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a1fe516869aa98cc291597211eee175ef591e45d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373768"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 類別
 
-管理網際網路伺服器的 FTP 連線，並允許直接操作該伺服器上的目錄和檔案。
+管理與 Internet 伺服器的 FTP 連接,並允許直接操作該伺服器上的目錄和檔。
 
 ## <a name="syntax"></a>語法
 
@@ -53,37 +53,37 @@ class CFtpConnection : public CInternetConnection
 
 |名稱|描述|
 |----------|-----------------|
-|[CFtpConnection：： CFtpConnection](#cftpconnection)|建構 `CFtpConnection` 物件。|
+|[CFtp 連線::CFtp 連接](#cftpconnection)|建構 `CFtpConnection` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CFtpConnection：： Command](#command)|將命令直接傳送至 FTP 伺服器。|
-|[CFtpConnection：： CreateDirectory](#createdirectory)|在伺服器上建立目錄。|
-|[CFtpConnection：： GetCurrentDirectory](#getcurrentdirectory)|取得此連接的目前的目錄。|
-|[CFtpConnection：： GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|取得此連接的目前目錄作為 URL。|
-|[CFtpConnection：： GetFile](#getfile)|從連接的伺服器取得檔案|
-|[CFtpConnection：： OpenFile](#openfile)|在連接的伺服器上開啟檔案。|
-|[CFtpConnection：:P utFile](#putfile)|將檔案放在伺服器上。|
-|[CFtpConnection：： Remove](#remove)|從伺服器中移除檔案。|
-|[CFtpConnection：： RemoveDirectory](#removedirectory)|從伺服器中移除指定的目錄。|
-|[CFtpConnection：： Rename](#rename)|重新命名伺服器上的檔案。|
-|[CFtpConnection：： SetCurrentDirectory](#setcurrentdirectory)|設定目前的 FTP 目錄。|
+|[CFtp 連線::指令](#command)|將命令直接傳送至 FTP 伺服器。|
+|[CFtp 連線:建立目錄](#createdirectory)|在伺服器上創建目錄。|
+|[CFtp 連線::取得目前的目錄](#getcurrentdirectory)|獲取此連接的當前目錄。|
+|[CFtp 連線::取得目前的目錄](#getcurrentdirectoryasurl)|取得此連線的目前目錄作為 URL。|
+|[CFtp 連線:抓取檔案](#getfile)|從連線的伺服器抓取檔案|
+|[CFtp 連線::開啟檔案](#openfile)|在連接的伺服器上打開檔。|
+|[CFtp 連接::PutFile](#putfile)|將檔放在伺服器上。|
+|[CFtp 連線::刪除](#remove)|從伺服器中刪除檔。|
+|[CFtp 連線::刪除目錄](#removedirectory)|從伺服器中刪除指定的目錄。|
+|[CFtp 連線:重新命名](#rename)|重新命名伺服器上的檔案。|
+|[CFtp 連線::設定目前的目錄](#setcurrentdirectory)|設置當前 FTP 目錄。|
 
 ## <a name="remarks"></a>備註
 
-FTP 是 MFC WinInet 類別所識別的三種網際網路服務之一。
+FTP 是 MFC WinInet 類認可的三大互聯網服務之一。
 
-若要與 FTP 網際網路伺服器通訊，您必須先建立[CInternetSession](../../mfc/reference/cinternetsession-class.md)的實例，然後建立 `CFtpConnection` 物件。 您永遠不會直接建立 `CFtpConnection` 物件;相反地，請呼叫[CInternetSession：： GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)，它會建立 `CFtpConnection` 物件，並傳回它的指標。
+要與 FTP Internet 伺服器通訊,必須首先建立[CInternetSession](../../mfc/reference/cinternetsession-class.md)的`CFtpConnection`實例,然後創建 物件。 您從不直接創建`CFtpConnection`物件;相反,調用[CInternetSession::GetFtpConnect](../../mfc/reference/cinternetsession-class.md#getftpconnection)`CFtpConnection`,它 創建物件並返回指向它的指標。
 
-若要深入瞭解 `CFtpConnection` 如何與其他 MFC 網際網路類別搭配運作，請參閱[使用 WinInet 進行網際網路程式設計](../../mfc/win32-internet-extensions-wininet.md)一文。 如需與其他兩個支援的服務（HTTP 和 gopher）進行通訊的詳細資訊，請參閱類別[CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)。
+要瞭解有關如何`CFtpConnection`與其他 MFC Internet 類合作,請參閱[WinInet](../../mfc/win32-internet-extensions-wininet.md)的 Internet 程式設計文章。 有關與其他兩個受支援的服務 HTTP 和 gopher 通信的詳細資訊,請參閱[CHTTPConnection](../../mfc/reference/chttpconnection-class.md)和[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)的類。
 
 ## <a name="example"></a>範例
 
-  請參閱[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)類別總覽中的範例。
+  請參閱[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)類概述中的範例。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -93,11 +93,11 @@ FTP 是 MFC WinInet 類別所識別的三種網際網路服務之一。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxinet.h。h
+**標題:** afxinet.h
 
-##  <a name="cftpconnection"></a>CFtpConnection：： CFtpConnection
+## <a name="cftpconnectioncftpconnection"></a><a name="cftpconnection"></a>CFtp 連線::CFtp 連接
 
-呼叫這個成員函式來建立 `CFtpConnection` 物件。
+呼叫此成員函數以建構物件`CFtpConnection`。
 
 ```
 CFtpConnection(
@@ -118,42 +118,42 @@ CFtpConnection(
 
 ### <a name="parameters"></a>參數
 
-*pSession*<br/>
-相關[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的指標。
+*p 工作階段*<br/>
+指向相關[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的指標。
 
-*hConnected*<br/>
-目前網際網路會話的 Windows 控制碼。
+*h 連線*<br/>
+當前 Internet 作業階段的 Windows 句柄。
 
 *pstrServer*<br/>
-包含 FTP 伺服器名稱之字串的指標。
+指向包含 FTP 伺服器名稱的字串的指標。
 
-*dwCoNtext*<br/>
-作業的內容識別碼。 *dwCoNtext*會識別[CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)傳回的作業狀態資訊。 預設值設定為 1;不過，您可以明確地指派作業的特定內容識別碼。 物件及其執行的任何工作都會與該內容識別碼相關聯。
+*dwContext*<br/>
+操作的上下文標識碼。 *dwContext*識別 CInternetSession 傳回的作業的狀態資訊[::onStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 預設值設定為 1;將預設值設定為 1但是,您可以顯式為操作分配特定的上下文 ID。 物件及其執行的任何工作都將與該上下文 ID 相關聯。
 
-*pstrUserName*<br/>
-以 null 結束的字串指標，指定要登入之使用者的名稱。 如果是 Null，則預設值為 anonymous。
+*pstrUser 名稱*<br/>
+指向 null 終止字串的指標,該字串指定要登錄的使用者的名稱。 如果為 NULL,則預設值為匿名。
 
-*pstrPassword*<br/>
-以 null 結束的字串指標，指定要用來登入的密碼。 如果*pstrPassword*和*PSTRUSERNAME*都是 Null，則預設的匿名密碼就是使用者的電子郵件名稱。 如果*pstrPassword*為 Null （或空字串），但*PSTRUSERNAME*不是 null，則會使用空白密碼。 下表描述*pstrUserName*和*pstrPassword*的四個可能設定的行為：
+*pstr密碼*<br/>
+指向 null 終止字串的指標,用於指定用於登入的密碼。 如果*pstrPassword*和*pstrUserName*均為 NULL,則預設的匿名密碼是使用者的電子郵件名稱。 如果*pstrPassword*為 NULL(或空字串),但*pstrUserName*不是 NULL,則使用空白密碼。 下表描述了*pstrUserName*和*pstrPassword*的四種可能設定的行為:
 
-|*pstrUserName*|*pstrPassword*|傳送到 FTP 伺服器的使用者名稱|傳送到 FTP 伺服器的密碼|
+|*pstrUser 名稱*|*pstr密碼*|傳送 FTP 伺服器的使用者名稱|傳送 FTP 伺服器的密碼|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|Null 或 ""|Null 或 ""|匿名|使用者的電子郵件名稱|
-|非 Null 字串|Null 或 ""|*pstrUserName*|" "|
-|Null 非 Null 字串|ERROR|ERROR||
-|非 Null 字串|非 Null 字串|*pstrUserName*|*pstrPassword*|
+|NULL 或""|NULL 或""|"匿名"|使用者的電子郵件名稱|
+|NULL 字串|NULL 或""|*pstrUser 名稱*|" "|
+|NULL 非 NULL 字串|ERROR|ERROR||
+|NULL 字串|NULL 字串|*pstrUser 名稱*|*pstr密碼*|
 
-*nPort*<br/>
-識別要在伺服器上使用之 TCP/IP 通訊埠的數位。
+*n波特*<br/>
+標識要在伺服器上使用的 TCP/IP 連接埠的數位。
 
-*bPassive*<br/>
-指定此 FTP 會話的被動或主動模式。 如果設定為 TRUE，它會將 WIN32 API *dwFlag*設定為 INTERNET_FLAG_PASSIVE。
+*b被動*<br/>
+為此 FTP 會話指定被動或主動模式。 如果設置為 TRUE,它將 Win32 API *dwFlag*設置為INTERNET_FLAG_PASSIVE。
 
 ### <a name="remarks"></a>備註
 
-您永遠不會直接建立 `CFtpConnection` 物件。 相反地，請呼叫[CInternetSession：： GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)，它會建立 `CFptConnection` 物件。
+您從不直接創建`CFtpConnection`物件。 相反,調用[CInternetSession::GetFtpConnect](../../mfc/reference/cinternetsession-class.md#getftpconnection),`CFptConnection`這將 創建物件。
 
-##  <a name="command"></a>CFtpConnection：： Command
+## <a name="cftpconnectioncommand"></a><a name="command"></a>CFtp 連線::指令
 
 將命令直接傳送至 FTP 伺服器。
 
@@ -173,16 +173,16 @@ CInternetFile* Command(
 *eResponse*<br/>
 指定是否預期來自 FTP 伺服器的回應。 可以是下列其中一個值：
 
-- `CmdRespNone` 不需要回應。
-- `CmdRespRead` 預期的回應。
-- 未使用 `CmdRespWrite`。
+- `CmdRespNone`預期不會回應。
+- `CmdRespRead`預期會做出回應。
+- `CmdRespWrite`未使用。
 
-CmdResponseType 是 CFtpConnection 的成員，定義于*afxinet.h*中。
+CmdResponseType 是 CFtpConnection 的成員,在*afxinet.h*中定義。
 
 *dwFlags*<br/>
-一個值，包含控制此函式的旗標。 如需完整清單，請參閱[FTPCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw)。
+一個值，包含控制此函式的旗標。 有關完整清單,請參閱[FTP 命令](/windows/win32/api/wininet/nf-wininet-ftpcommandw)。
 
-*dwCoNtext*<br/>
+*dwContext*<br/>
 值的指標，包含應用程式定義的值，用以識別回呼中的應用程式內容。
 
 ### <a name="return-value"></a>傳回值
@@ -191,13 +191,13 @@ CmdResponseType 是 CFtpConnection 的成員，定義于*afxinet.h*中。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[FTPCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw)函式的功能，如 Windows SDK 中所述。
+此成員函數類比[FTPCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw)函數的功能,如 Windows SDK 中所述。
 
-如果發生錯誤，MFC 會擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)類型的例外狀況。
+如果發生錯誤,MFC將引發[CInternetException](../../mfc/reference/cinternetexception-class.md)類型的異常。
 
-##  <a name="createdirectory"></a>CFtpConnection：： CreateDirectory
+## <a name="cftpconnectioncreatedirectory"></a><a name="createdirectory"></a>CFtp 連線:建立目錄
 
-呼叫這個成員函式，在連接的伺服器上建立目錄。
+呼叫此成員函數在連接的伺服器上創建目錄。
 
 ```
 BOOL CreateDirectory(LPCTSTR pstrDirName);
@@ -205,22 +205,22 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 
 ### <a name="parameters"></a>參數
 
-*pstrDirName*<br/>
-字串的指標，其中包含要建立的目錄名稱。
+*普斯特迪爾名稱*<br/>
+指向包含要建立的目錄名稱的字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，可能會呼叫 Windows 函式[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Windows 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-使用 `GetCurrentDirectory` 來判斷此伺服器連接的目前工作目錄。 不要假設遠端系統已將您連接到根目錄。
+用於`GetCurrentDirectory`確定此連接到伺服器的當前工作目錄。 不要假定遠端系統已將您連接到根目錄。
 
-`pstrDirName` 參數可以是部分或相對於目前的目錄的完整檔案名。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `CreateDirectory` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+參數`pstrDirName`可以是相對於當前目錄的部分或完全限定的檔名。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `CreateDirectory`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-##  <a name="getcurrentdirectory"></a>CFtpConnection：： GetCurrentDirectory
+## <a name="cftpconnectiongetcurrentdirectory"></a><a name="getcurrentdirectory"></a>CFtp 連線::取得目前的目錄
 
-呼叫這個成員函式以取得目前目錄的名稱。
+呼叫此成員函數以獲取當前目錄的名稱。
 
 ```
 BOOL GetCurrentDirectory(CString& strDirName) const;
@@ -232,33 +232,33 @@ BOOL GetCurrentDirectory(
 
 ### <a name="parameters"></a>參數
 
-*strDirName*<br/>
-將接收目錄名稱之字串的參考。
+*斯特迪爾名稱*<br/>
+對將接收目錄名稱的字串的引用。
 
-*pstrDirName*<br/>
-將接收目錄名稱之字串的指標。
+*普斯特迪爾名稱*<br/>
+指向將接收目錄名稱的字串的指標。
 
 *lpdwLen*<br/>
-DWORD 的指標，其中包含下列資訊：
+指向包含以下資訊的 DWORD 的指標:
 
 |||
 |-|-|
-|進入時|*PstrDirName*所參考的緩衝區大小。|
-|返回時|儲存至*pstrDirName*的字元數。 如果成員函式失敗並傳回 ERROR_INSUFFICIENT_BUFFER，則*lpdwLen*會包含應用程式必須配置才能接收字串的位元組數目。|
+|入場時|*pstrDirName*引用的緩衝區的大小。|
+|返回時|儲存到*pstrDirName*的字元數。 如果成員函數失敗並返回ERROR_INSUFFICIENT_BUFFER,則*lpdwLen*包含應用程式必須分配的位元組數才能接收字串。|
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-若要改為取得目錄名稱作為 URL，請呼叫[GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)。
+要將目錄名稱作為網址,請呼叫[GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)。
 
-*PstrDirName*或*strDirName*參數可以是相對於目前的目錄的部分限定檔案名或完整名稱。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `GetCurrentDirectory` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+參數*pstrDirName*或*strDirName*可以是相對於目前的目錄的部分限定檔名,也可以是完全限定的。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `GetCurrentDirectory`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection：： GetCurrentDirectoryAsURL
+## <a name="cftpconnectiongetcurrentdirectoryasurl"></a><a name="getcurrentdirectoryasurl"></a>CFtp 連線::取得目前的目錄
 
-呼叫這個成員函式以取得目前目錄的名稱做為 URL。
+呼叫此成員函數以獲取當前目錄的名稱作為網址。
 
 ```
 BOOL GetCurrentDirectoryAsURL(CString& strDirName) const;
@@ -270,33 +270,33 @@ BOOL GetCurrentDirectoryAsURL(
 
 ### <a name="parameters"></a>參數
 
-*strDirName*<br/>
-將接收目錄名稱之字串的參考。
+*斯特迪爾名稱*<br/>
+對將接收目錄名稱的字串的引用。
 
-*pstrDirName*<br/>
-將接收目錄名稱之字串的指標。
+*普斯特迪爾名稱*<br/>
+指向將接收目錄名稱的字串的指標。
 
 *lpdwLen*<br/>
-DWORD 的指標，其中包含下列資訊：
+指向包含以下資訊的 DWORD 的指標:
 
 |||
 |-|-|
-|進入時|*PstrDirName*所參考的緩衝區大小。|
-|返回時|儲存至*pstrDirName*的字元數。 如果成員函式失敗並傳回 ERROR_INSUFFICIENT_BUFFER，則*lpdwLen*會包含應用程式必須配置才能接收字串的位元組數目。|
+|入場時|*pstrDirName*引用的緩衝區的大小。|
+|返回時|儲存到*pstrDirName*的字元數。 如果成員函數失敗並返回ERROR_INSUFFICIENT_BUFFER,則*lpdwLen*包含應用程式必須分配的位元組數才能接收字串。|
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-`GetCurrentDirectoryAsURL` 的行為與[GetCurrentDirectory](#getcurrentdirectory)相同
+`GetCurrentDirectoryAsURL`產生與[GetCurrentDirectory](#getcurrentdirectory)相同
 
-參數*strDirName*可以是相對於目前目錄或完整格式的部分限定檔案名。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `GetCurrentDirectoryAsURL` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+參數*strDirName*可以是相對於當前目錄的部分限定檔名,也可以是完全限定的。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `GetCurrentDirectoryAsURL`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-##  <a name="getfile"></a>CFtpConnection：： GetFile
+## <a name="cftpconnectiongetfile"></a><a name="getfile"></a>CFtp 連線:抓取檔案
 
-呼叫這個成員函式可從 FTP 伺服器取得檔案，並將它儲存在本機電腦上。
+呼叫此成員函數從 FTP 伺服器獲取檔案並將其儲存在本地電腦上。
 
 ```
 BOOL GetFile(
@@ -311,56 +311,56 @@ BOOL GetFile(
 ### <a name="parameters"></a>參數
 
 *pstrRemoteFile*<br/>
-以 null 終止的字串指標，其中包含要從 FTP 伺服器取出的檔案名。
+指向從 FTP 伺服器檢索的檔名稱的 null 連接端接字串的指標。
 
-*pstrLocalFile*<br/>
-以 null 終止的字串指標，其中包含要在本機系統上建立的檔案名。
+*pstrlocalFile*<br/>
+指向在本地系統上建立的檔案名稱的 null 端結束的字串的指標。
 
-*bFailIfExists*<br/>
-指出現有檔案是否可能已經使用此檔案名。 如果本機檔案名已經存在，且此參數為 TRUE，`GetFile` 會失敗。 否則，`GetFile` 將會清除檔案的現有複本。
+*bFailIf 存在*<br/>
+指示現有檔是否已經使用檔名。 如果本地檔名已存在,並且此參數為 TRUE,`GetFile`則失敗。 否則,`GetFile`將擦除檔的現有副本。
 
 *dwAttributes*<br/>
-表示檔案的屬性。 這可以是下列 FILE_ATTRIBUTE_ * 旗標的任意組合。
+指示檔的屬性。 這可以是以下FILE_ATTRIBUTE_* 標誌的任意組合。
 
-- FILE_ATTRIBUTE_ARCHIVE 檔案是封存檔案。 應用程式會使用此屬性來標示要備份或移除的檔案。
+- FILE_ATTRIBUTE_ARCHIVE 該檔是存檔檔。 應用程式使用此屬性標記檔以進行備份或刪除。
 
-- FILE_ATTRIBUTE_COMPRESSED 檔案或目錄已壓縮。 針對檔案，壓縮表示檔案中的所有資料都是壓縮檔案。 針對目錄，新建立的檔案和子目錄的預設值為壓縮。
+- FILE_ATTRIBUTE_COMPRESSED檔或目錄被壓縮。 對於檔,壓縮意味著檔中的所有數據被壓縮。 對於目錄,壓縮是新創建的檔和子目錄的預設值。
 
-- FILE_ATTRIBUTE_DIRECTORY 檔案是目錄。
+- FILE_ATTRIBUTE_DIRECTORY 該檔是目錄。
 
-- FILE_ATTRIBUTE_NORMAL 檔案未設定其他屬性。 這個屬性只有在單獨使用時才有效。 所有其他的檔案屬性都會覆寫 FILE_ATTRIBUTE_NORMAL：
+- FILE_ATTRIBUTE_NORMAL 該檔沒有其他屬性集。 此屬性僅在單獨使用時有效。 所有其他檔案屬性將覆寫FILE_ATTRIBUTE_NORMAL:
 
-- FILE_ATTRIBUTE_HIDDEN 檔案已隱藏。 這不會包含在一般目錄清單中。
+- FILE_ATTRIBUTE_HIDDEN檔案已隱藏。 它不包含在普通目錄清單中。
 
-- FILE_ATTRIBUTE_READONLY 檔案是唯讀的。 應用程式可以讀取檔案，但無法寫入或刪除檔案。
+- FILE_ATTRIBUTE_READONLY該檔是唯讀的。 應用程式可以讀取檔,但不能寫入或刪除該檔。
 
-- FILE_ATTRIBUTE_SYSTEM 檔案是的一部分，或僅供作業系統使用。
+- FILE_ATTRIBUTE_SYSTEM 該檔是 操作系統的一部分或由操作系統專門使用。
 
-- FILE_ATTRIBUTE_TEMPORARY 檔案正用於暫存儲存體。 只有在絕對必要時，應用程式才應該寫入檔案。 大部分檔案的資料會保留在記憶體中，而不會排清到媒體，因為檔案很快就會遭到刪除。
+- FILE_ATTRIBUTE_TEMPORARY 該檔用於臨時存儲。 應用程式僅在絕對必要時才應寫入檔。 檔的大部分數據保留在記憶體中,而不會刷新到介質,因為該檔將很快被刪除。
 
 *dwFlags*<br/>
-指定發生傳輸的條件。 這個參數可以是 Windows SDK 的[FtpGetFile](/windows/win32/api/wininet/nf-wininet-ftpgetfilew)中所述的任何*dwFlags*值。
+指定傳輸發生的條件。 此參數可以是 Windows SDK 中[FtpGetFile](/windows/win32/api/wininet/nf-wininet-ftpgetfilew)中描述的任何*dwFlags*值。
 
-*dwCoNtext*<br/>
-檔案抓取的內容識別碼。 如需*dwCoNtext*的詳細資訊，請參閱**備註**。
+*dwContext*<br/>
+檔檢索的上下文標識符。 關於*dwContext*的詳細資訊,請參閱**備註**。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-`GetFile` 是高階常式，它會處理與從 FTP 伺服器讀取檔案並將檔案儲存在本機的相關聯的所有額外負荷。 只抓取檔案資料或需要對檔案傳輸進行關閉控制的應用程式，應該改用 `OpenFile` 和[CInternetFile：： Read](../../mfc/reference/cinternetfile-class.md#read) 。
+`GetFile`是一種高級例程,用於處理與從 FTP 伺服器讀取檔並在本地存儲檔案相關的所有開銷。 只取得檔案資料或需要嚴格控制檔案傳輸的應用程式應使用`OpenFile` [CInternetFile::改為讀取](../../mfc/reference/cinternetfile-class.md#read)。
 
-如果 FILE_TRANSFER_TYPE_ASCII *dwFlags* ，則檔案資料的轉譯也會將控制和格式化字元轉換成 Windows 對等專案。 預設傳輸是二進位模式，其下載檔案的格式與儲存在伺服器上的相同。
+如果*dwFlags* FILE_TRANSFER_TYPE_ASCII,則文件數據的轉換也會將控制項和格式字元轉換為 Windows 等效項。 默認傳輸是二進位模式,其中檔案下載的格式與儲存在伺服器上的格式相同。
 
-*PstrRemoteFile*和*pstrLocalFile*都可以是相對於目前的目錄的部分限定檔案名或完整名稱。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `GetFile` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+*pstrRemoteFile*和*pstrLocalFile*都可以是相對於當前目錄的部分限定檔名,也可以是完全限定的。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `GetFile`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-覆寫*dwCoNtext*預設值，將內容識別碼設定為您選擇的值。 內容識別碼會與[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件所建立之 `CFtpConnection` 物件的這個特定作業相關聯。 此值會傳回[CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) ，以提供所識別之作業的狀態。 如需內容識別碼的詳細資訊，請參閱[網際網路第一個步驟： WinInet 一](../../mfc/wininet-basics.md)文。
+覆寫*dwContext*預設值,將上下文識別子設定為您選擇的值。 上下文識別碼`CFtpConnection`[與其 CInternetSession](../../mfc/reference/cinternetsession-class.md)對象創建的物件的此特定操作相關聯。 該值將返回到[CInternetSession::onStatusBack](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供標識該值的操作的狀態。 有關上下文標識符的詳細資訊[,請參閱"Internet 第一步:WinInet"](../../mfc/wininet-basics.md)一文。
 
-##  <a name="openfile"></a>CFtpConnection：： OpenFile
+## <a name="cftpconnectionopenfile"></a><a name="openfile"></a>CFtp 連線::開啟檔案
 
-呼叫這個成員函式可開啟位於 FTP 伺服器上的檔案，以供讀取或寫入。
+呼叫此成員函數打開位於 FTP 伺服器上的檔以進行讀取或寫入。
 
 ```
 CInternetFile* OpenFile(
@@ -372,45 +372,45 @@ CInternetFile* OpenFile(
 
 ### <a name="parameters"></a>參數
 
-*pstrFileName*<br/>
-字串的指標，其中包含要開啟的檔案名。
+*pstrFile 名稱*<br/>
+指向包含要打開的檔案名稱的字串的指標。
 
 *dwAccess*<br/>
-決定如何存取檔案。 可以是 GENERIC_READ 或 GENERIC_WRITE，但不能同時是兩者。
+確定如何訪問該檔。 可以是GENERIC_READ或GENERIC_WRITE,但不能同時使用這兩者。
 
 *dwFlags*<br/>
-指定後續傳輸發生的條件。 這可以是下列其中一個 FTP_TRANSFER_ * 常數：
+指定後續傳輸發生的條件。 這可以是以下任何FTP_TRANSFER_* 常量:
 
-- FTP_TRANSFER_TYPE_ASCII 使用 FTP ASCII （類型 A）傳輸方法的檔案傳輸。 將控制項和格式設定資訊轉換為本機對等專案。
+- FTP_TRANSFER_TYPE_ASCII使用 FTP ASCII (類型 A) 傳輸方法傳輸檔。 將控制項和格式資訊轉換為本地等效項。
 
-- FTP_TRANSFER_TYPE_BINARY 檔案會使用 FTP 的 Image （類型 I）傳輸方法來傳輸資料。 檔案會以完全相同的方式傳輸資料，而不會有任何變更。 這是預設的傳輸方法。
+- FTP_TRANSFER_TYPE_BINARY檔使用 FTP 的圖像(類型 I)傳輸方法傳輸數據。 檔案傳輸數據完全與它存在一樣,沒有更改。 這是默認傳輸方法。
 
-*dwCoNtext*<br/>
-用來開啟檔案的內容識別碼。 如需*dwCoNtext*的詳細資訊，請參閱**備註**。
+*dwContext*<br/>
+用於打開檔的上下文標識符。 關於*dwContext*的詳細資訊,請參閱**備註**。
 
 ### <a name="return-value"></a>傳回值
 
-[CInternetFile](../../mfc/reference/cinternetfile-class.md)物件的指標。
+指向[CInternetFile](../../mfc/reference/cinternetfile-class.md)物件的指標。
 
 ### <a name="remarks"></a>備註
 
-`OpenFile` 應該用於下列情況：
+`OpenFile`應在以下情況下使用:
 
-- 應用程式的資料必須以 FTP 伺服器上的檔案的形式傳送和建立，但該資料不在本機檔案中。 一旦 `OpenFile` 開啟檔案，應用程式就會使用[CInternetFile：： Write](../../mfc/reference/cinternetfile-class.md#write)將 FTP 檔案資料傳送至伺服器。
+- 應用程式的數據需要作為 FTP 伺服器上的檔發送和創建,但該數據不在本地檔中。 打開`OpenFile`檔案後,應用程式將使用[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)將 FTP 檔案資料發送到伺服器。
 
-- 應用程式必須從伺服器抓取檔案，並將它放入應用程式控制的記憶體中，而不是將它寫入磁片。 應用程式會在使用 `OpenFile` 開啟檔案之後，使用[CInternetFile：： Read](../../mfc/reference/cinternetfile-class.md#read) 。
+- 應用程式必須從伺服器檢索檔並將其放入應用程式控制的記憶體中,而不是將其寫入磁碟。 應用程式使用[CInternetFile:使用後讀取](../../mfc/reference/cinternetfile-class.md#read)`OpenFile`以打開檔。
 
-- 應用程式需要對檔案傳輸進行精細的控制層級。 例如，應用程式可能會想要顯示進度控制項，指出下載檔案時檔案傳輸狀態的進度。
+- 應用程式需要對文件傳輸進行精細級別的控制。 例如,應用程式可能想要顯示進度控制,指示檔案傳輸狀態在下載檔時的進度。
 
-呼叫 `OpenFile` 並直到呼叫 `CInternetConnection::Close`之後，應用程式只能呼叫[CInternetFile：： Read](../../mfc/reference/cinternetfile-class.md#read)、 [CInternetFile：： Write](../../mfc/reference/cinternetfile-class.md#write)、`CInternetConnection::Close`或[CFtpFileFind：： FindFile](../../mfc/reference/cftpfilefind-class.md#findfile)。 相同 FTP 會話的其他 FTP 函數呼叫將會失敗，並將錯誤碼設定為 FTP_ETRANSFER_IN_PROGRESS。
+`OpenFile`呼叫後,直到呼叫`CInternetConnection::Close`, 應用程式只能呼叫[CInternetFile::讀取](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::寫入](../../mfc/reference/cinternetfile-class.md#write),`CInternetConnection::Close`或[CFtpFile 尋找::尋找檔案](../../mfc/reference/cftpfilefind-class.md#findfile)。 對同一 FTP 會話的其他 FTP 函數的調用將失敗,並將錯誤代碼設置為FTP_ETRANSFER_IN_PROGRESS。
 
-*PstrFileName*參數可以是相對於目前的目錄的部分限定檔案名，或是完整的。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `OpenFile` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+*pstrFileName*參數可以是相對於當前目錄的部分限定檔名,也可以是完全限定的。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `OpenFile`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-覆寫*dwCoNtext*預設值，將內容識別碼設定為您選擇的值。 內容識別碼會與[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件所建立之 `CFtpConnection` 物件的這個特定作業相關聯。 此值會傳回[CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) ，以提供所識別之作業的狀態。 如需內容識別碼的詳細資訊，請參閱[網際網路第一個步驟： WinInet 一](../../mfc/wininet-basics.md)文。
+覆寫*dwContext*預設值,將上下文識別子設定為您選擇的值。 上下文識別碼`CFtpConnection`[與其 CInternetSession](../../mfc/reference/cinternetsession-class.md)對象創建的物件的此特定操作相關聯。 該值將返回到[CInternetSession::onStatusBack](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供標識該值的操作的狀態。 有關上下文標識符的詳細資訊[,請參閱"Internet 第一步:WinInet"](../../mfc/wininet-basics.md)一文。
 
-##  <a name="putfile"></a>CFtpConnection：:P utFile
+## <a name="cftpconnectionputfile"></a><a name="putfile"></a>CFtp 連接::PutFile
 
-呼叫這個成員函式，將檔案儲存在 FTP 伺服器上。
+調用此成員函數以在 FTP 伺服器上儲存檔。
 
 ```
 BOOL PutFile(
@@ -422,31 +422,31 @@ BOOL PutFile(
 
 ### <a name="parameters"></a>參數
 
-*pstrLocalFile*<br/>
-字串的指標，包含要從本機系統傳送的檔案名。
+*pstrlocalFile*<br/>
+指向從本地系統發送的檔案名稱的字串的指標。
 
 *pstrRemoteFile*<br/>
-字串的指標，其中包含要在 FTP 伺服器上建立的檔案名。
+指向在 FTP 伺服器上建立的檔案名稱的字串的指標。
 
 *dwFlags*<br/>
-指定發生檔案傳輸的條件。 可以是[OpenFile](#openfile)中所述的任何 FTP_TRANSFER_ * 常數。
+指定檔案傳輸的條件。 可以是[OpenFile](#openfile)中描述的任何FTP_TRANSFER_* 常量。
 
-*dwCoNtext*<br/>
-用於放置檔案的內容識別碼。 如需*dwCoNtext*的詳細資訊，請參閱**備註**。
+*dwContext*<br/>
+放置檔的上下文標識碼。 關於*dwContext*的詳細資訊,請參閱**備註**。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-`PutFile` 是高階常式，它會處理與在 FTP 伺服器上儲存檔案相關聯的所有作業。 只傳送資料或需要更進一步控制檔案傳輸的應用程式，應該使用[OpenFile](#openfile)和[CInternetFile：： Write](../../mfc/reference/cinternetfile-class.md#write)。
+`PutFile`是一種高級例程,用於處理與在 FTP 伺服器上存儲檔關聯的所有操作。 只送出資料或需要更密切地控制檔案傳輸的應用程式應使用[OpenFile](#openfile)和[CInternetFile::write](../../mfc/reference/cinternetfile-class.md#write)。
 
-覆寫 `dwContext` 預設值，將內容識別碼設定為您所選擇的值。 內容識別碼會與[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件所建立之 `CFtpConnection` 物件的這個特定作業相關聯。 此值會傳回[CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) ，以提供所識別之作業的狀態。 如需內容識別碼的詳細資訊，請參閱[網際網路第一個步驟： WinInet 一](../../mfc/wininet-basics.md)文。
+覆蓋`dwContext`預設值,將上下文識別碼設定為您選擇的值。 上下文識別碼`CFtpConnection`[與其 CInternetSession](../../mfc/reference/cinternetsession-class.md)對象創建的物件的此特定操作相關聯。 該值將返回到[CInternetSession::onStatusBack](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供標識該值的操作的狀態。 有關上下文標識符的詳細資訊[,請參閱"Internet 第一步:WinInet"](../../mfc/wininet-basics.md)一文。
 
-##  <a name="remove"></a>CFtpConnection：： Remove
+## <a name="cftpconnectionremove"></a><a name="remove"></a>CFtp 連線::刪除
 
-呼叫這個成員函式，從連接的伺服器刪除指定的檔案。
+呼叫此成員函數從連接的伺服器中刪除指定的檔案。
 
 ```
 BOOL Remove(LPCTSTR pstrFileName);
@@ -454,20 +454,20 @@ BOOL Remove(LPCTSTR pstrFileName);
 
 ### <a name="parameters"></a>參數
 
-*pstrFileName*<br/>
-包含要移除之檔案名的字串指標。
+*pstrFile 名稱*<br/>
+指向要刪除的檔名的字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-*PstrFileName*參數可以是相對於目前的目錄的部分限定檔案名，或是完整的。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `Remove` 函式會在使用之前，將目錄名稱分隔符號轉譯為適當的字元。
+*pstrFileName*參數可以是相對於當前目錄的部分限定檔名,也可以是完全限定的。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 函數`Remove`在使用目錄名稱分隔符之前將其轉換為相應的字元。
 
-##  <a name="removedirectory"></a>CFtpConnection：： RemoveDirectory
+## <a name="cftpconnectionremovedirectory"></a><a name="removedirectory"></a>CFtp 連線::刪除目錄
 
-呼叫這個成員函式，從連接的伺服器中移除指定的目錄。
+呼叫此成員函數從連接的伺服器中刪除指定的目錄。
 
 ```
 BOOL RemoveDirectory(LPCTSTR pstrDirName);
@@ -475,22 +475,22 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 
 ### <a name="parameters"></a>參數
 
-*pstrDirName*<br/>
-包含要移除之目錄的字串指標。
+*普斯特迪爾名稱*<br/>
+指向包含要刪除的目錄的字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-使用[GetCurrentDirectory](#getcurrentdirectory)來判斷伺服器目前的工作目錄。 不要假設遠端系統已將您連接到根目錄。
+使用[GetCurrentDirectory](#getcurrentdirectory)確定伺服器的當前工作目錄。 不要假定遠端系統已將您連接到根目錄。
 
-*PstrDirName*參數可以是相對於目前的目錄的部分或完整檔案名。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `RemoveDirectory` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+*pstrDirName*參數可以是相對於當前目錄的部分或完全限定的檔名。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `RemoveDirectory`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-##  <a name="rename"></a>CFtpConnection：： Rename
+## <a name="cftpconnectionrename"></a><a name="rename"></a>CFtp 連線:重新命名
 
-呼叫這個成員函式，在連接的伺服器上重新命名指定的檔案。
+呼叫此成員函數重新命名連接的伺服器上的指定檔。
 
 ```
 BOOL Rename(
@@ -500,23 +500,23 @@ BOOL Rename(
 
 ### <a name="parameters"></a>參數
 
-*pstrExisting*<br/>
-字串的指標，其中包含要重新命名之檔案的目前名稱。
+*普斯特存在*<br/>
+指向要重新命名的檔案的目前的名稱的字串的指標。
 
-*pstrNew*<br/>
-包含檔案新名稱之字串的指標。
+*普斯特新*<br/>
+指向包含檔新名稱的字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-*PstrExisting*和*pstrNew*參數可以是相對於目前目錄或完整格式的部分限定檔案名。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `Rename` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+*pstr存在*和*pstrNew*參數可以是相對於當前目錄的部分限定檔名,也可以是完全限定的。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `Rename`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-##  <a name="setcurrentdirectory"></a>CFtpConnection：： SetCurrentDirectory
+## <a name="cftpconnectionsetcurrentdirectory"></a><a name="setcurrentdirectory"></a>CFtp 連線::設定目前的目錄
 
-呼叫這個成員函式，以變更至 FTP 伺服器上的不同目錄。
+呼叫此成員函數以更改為 FTP 伺服器上的不同目錄。
 
 ```
 BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
@@ -524,18 +524,18 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 
 ### <a name="parameters"></a>參數
 
-*pstrDirName*<br/>
-包含目錄名稱之字串的指標。
+*普斯特迪爾名稱*<br/>
+指向包含目錄名稱的字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-*PstrDirName*參數可以是相對於目前的目錄的部分或完整檔案名。 您可以使用反斜線（\\）或斜線（/）做為任一名稱的目錄分隔符號。 `SetCurrentDirectory` 在使用之前，會將目錄名稱分隔符號轉譯為適當的字元。
+*pstrDirName*參數可以是相對於當前目錄的部分或完全限定的檔名。 反斜杠\\( ) 或正向斜杠 (/) 可用作任一名稱的目錄分隔符。 `SetCurrentDirectory`在使用目錄名稱分隔符之前,將其轉換為相應的字元。
 
-使用[GetCurrentDirectory](#getcurrentdirectory)來判斷 FTP 伺服器目前的工作目錄。 不要假設遠端系統已將您連接到根目錄。
+使用[GetCurrentDirectory](#getcurrentdirectory)確定 FTP 伺服器的當前工作目錄。 不要假定遠端系統已將您連接到根目錄。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403590"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375097"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 類別
 
-實作功能區面板，其中顯示當您按一下  [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。
+實現功能區面板,當您按下[CMFC 功能應用程式按鈕](../../mfc/reference/cmfcribbonapplicationbutton-class.md)時顯示。
 
 ## <a name="syntax"></a>語法
 
@@ -46,25 +46,25 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonMainPanel::Add](#add)|將功能區項目加入至應用程式按鈕面板的左窗格中。 (覆寫[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。)|
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|將新的檔案清單功能表中的文字字串。|
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|將功能區項目加入至功能區應用程式面板的下方窗格中。|
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|將功能區項目加入至應用程式按鈕面板的右窗格中。|
+|[CMFC功能中心面板:添加](#add)|將功能區元素添加到應用程式按鈕面板的左側窗格中。 (覆寫[CMFC 功能面板::新增](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
+|[CMFC 功能中心面板::新增最新檔案清單](#addrecentfileslist)|將文字字串添加到最近的檔案清單選單。|
+|[CMFC 剪彩主面板::添加](#addtobottom)|將功能區元素添加到功能區應用程式面板的底部窗格中。|
+|[CMFC 功能主面板::添加右側](#addtoright)|將功能區元素添加到應用程式按鈕面板的右側窗格中。|
 |`CMFCRibbonMainPanel::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|傳回矩形，表示功能區的 main 面板的區域。|
-|`CMFCRibbonMainPanel::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|
+|[CMFC 功能主機面板::取得命令框架](#getcommandsframe)|返回表示功能區主面板區域的矩形。|
+|`CMFCRibbonMainPanel::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
 
 ## <a name="remarks"></a>備註
 
-架構會顯示`CMFCRibbonMainPanel`當您開啟應用程式的面板。 它包含三個窗格：
+框架顯示開啟應用程式`CMFCRibbonMainPanel`面板時的 。 它包含三個窗格:
 
-- 左的窗格包含命令相關聯的檔案，例如**開放**，**儲存**，**列印**，以及**關閉**。 若要加入此窗格中的命令，請呼叫[CMFCRibbonMainPanel::Add](#add)。
+- 左方窗格包含與檔案關聯的指令,如 **'開啟**'**Save**、**列印**、**關閉**。 要向此窗格加入命令,請致電[CMFCRibbonMainPanel:::添加](#add)。
 
-- 右窗格包含修改的左窗格中按一下 命令的選項。 例如，如果您按一下**另存新檔**左窗格中，從右窗格可以顯示可用的檔案類型。 若要加入此窗格中的項目，請呼叫[CMFCRibbonMainPanel::AddToRight](#addtoright)。
+- 右方窗格包含修改在左下格中按下的命令的選項。 例如,如果從左側窗格按一下 **「保存為」** 則右側窗格可以顯示可用的檔案類型。 要將專案加入此窗格,請執行電[CMFC 功能區主面板::新增右](#addtoright)。
 
-- 下方窗格包含按鈕，可讓您變更應用程式的設定，並結束程式。 若要加入此窗格中的項目，請呼叫[CMFCRibbonMainPanel::AddToBottom](#addtobottom)。
+- 底部窗格包含允許您更改應用程式設定並退出程式的按鈕。 要將專案加入此表單,請執行電[CMFC 功能區主面板::新增到底部](#addtobottom)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -74,11 +74,11 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxRibbonMainPanel.h
+**標題:** afxRibbonMainPanel.h
 
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFC功能中心面板:添加
 
-將功能區項目加入至應用程式按鈕面板的左窗格中。
+將功能區元素添加到應用程式按鈕面板的左側窗格中。
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -86,16 +86,16 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>參數
 
-*pElem*<br/>
-[in、 out]若要加入至主面板的功能區項目指標。
+*佩萊姆*<br/>
+[進出]指向要添加到主面板的功能區元素的指標。
 
 ### <a name="remarks"></a>備註
 
-將功能區項目的加入面板。 使用此方法加入的項目會位於主面板左側資料行。
+向面板添加功能區元素。 使用此方法添加的元素將位於主面板的左列中。
 
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFC 功能中心面板::新增最新檔案清單
 
-將新的檔案清單功能表中的文字字串。
+將文字字串添加到最近的檔案清單選單。
 
 ```
 void AddRecentFilesList(
@@ -106,16 +106,16 @@ void AddRecentFilesList(
 ### <a name="parameters"></a>參數
 
 *lpszLabel*<br/>
-指定要加入至新的檔案清單的字串。
+指定要加入最近檔案清單的字串。
 
-*nWidth*<br/>
-指定寬度，單位為像素的最新的檔案清單 面板。
+*n 寬度*<br/>
+指定最近檔案清單面板的寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFC 剪彩主面板::添加
 
-將功能區項目加入至功能區應用程式面板的下方窗格中。
+將功能區元素添加到功能區應用程式面板的底部窗格中。
 
 ```
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
@@ -123,14 +123,14 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>參數
 
-*pElem*<br/>
-[in、 out]將新增至 [main] 面板底部的功能區項目指標。
+*佩萊姆*<br/>
+[進出]指向功能區元素的指標,用於添加到主面板的底部。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFC 功能主面板::添加右側
 
-將功能區項目加入至應用程式按鈕面板的右窗格中。
+將功能區元素添加到應用程式按鈕面板的右側窗格中。
 
 ```
 void AddToRight(
@@ -140,19 +140,19 @@ void AddToRight(
 
 ### <a name="parameters"></a>參數
 
-*pElem*<br/>
-要加入至主面板右側的功能區項目指標。
+*佩萊姆*<br/>
+指向要添加到主面板右側的功能區元素的指標。
 
-*nWidth*<br/>
-指定寬度，單位為像素的右方面板。
+*n 寬度*<br/>
+指定右側面板的寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-若要將功能區項目新增至右窗格的 使用此函式。 右窗格的 通常會顯示最近的檔案清單，但您可以加入其他任何功能區項目這裡。
+使用此函數向右側面板添加功能區元素。 右側面板通常顯示最近的檔案清單,但您可以在此處添加任何其他功能區元素。
 
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFC 功能主機面板::取得命令框架
 
-傳回矩形，表示功能區的 main 面板的區域。
+返回表示功能區主面板區域的矩形。
 
 ```
 CRect GetCommandsFrame() const;
@@ -160,10 +160,10 @@ CRect GetCommandsFrame() const;
 
 ### <a name="return-value"></a>傳回值
 
-表示功能區的主面板區域的矩形。
+表示功能區主面板區域的矩形。
 
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)
+[CMFC 剪彩面板類](../../mfc/reference/cmfcribbonpanel-class.md)

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2ef93152c83d3bbec2b89ada0596ee612b24701b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421426"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373298"
 ---
 # <a name="ctreeview-class"></a>CTreeView 類別
 
-透過 MFC 的檔查看架構，簡化樹狀目錄控制項及[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)（封裝樹狀目錄控制項功能的類別）的使用。
+使用 MFC 的文檔檢視體系結構簡化了樹控件和[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)的類,該類封裝了樹控制功能。
 
 ## <a name="syntax"></a>語法
 
@@ -33,19 +33,19 @@ class CTreeView : public CCtrlView
 
 |名稱|描述|
 |----------|-----------------|
-|[CTreeView：： CTreeView](#ctreeview)|建構 `CTreeView` 物件。|
+|[CTree檢視:CTreeView](#ctreeview)|建構 `CTreeView` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CTreeView：： GetTreeCtrl](#gettreectrl)|傳回與此視圖相關聯的樹狀目錄控制項。|
+|[CTreeView::獲取樹譜](#gettreectrl)|返回與視圖關聯的樹控件。|
 
 ## <a name="remarks"></a>備註
 
-如需此架構的詳細資訊，請參閱[CView](../../mfc/reference/cview-class.md)類別的總覽和此處提及的交互參考。
+有關此體系結構的詳細資訊,請參閱[CView](../../mfc/reference/cview-class.md)類的概述以及其中引用的交叉引用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -61,9 +61,9 @@ class CTreeView : public CCtrlView
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxcview。h
+**標題:** afxcview.h
 
-##  <a name="ctreeview"></a>CTreeView：： CTreeView
+## <a name="ctreeviewctreeview"></a><a name="ctreeview"></a>CTree檢視:CTreeView
 
 建構 `CTreeView` 物件。
 
@@ -71,9 +71,9 @@ class CTreeView : public CCtrlView
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>CTreeView：： GetTreeCtrl
+## <a name="ctreeviewgettreectrl"></a><a name="gettreectrl"></a>CTreeView::獲取樹譜
 
-傳回與此視圖相關聯之樹狀控制項的參考。
+返回對與檢視關聯的樹控件的引用。
 
 ```
 CTreeCtrl& GetTreeCtrl() const;
@@ -85,4 +85,4 @@ CTreeCtrl& GetTreeCtrl() const;
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>
 [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)<br/>
-[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)
+[CTreeCtrl 類別](../../mfc/reference/ctreectrl-class.md)

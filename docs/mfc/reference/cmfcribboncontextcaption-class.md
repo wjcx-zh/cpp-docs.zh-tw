@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-ms.openlocfilehash: 26cc509db55bc95688123a7c6e673dcfc87c975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7aacbe23684914c91129d9962ae847d442cc411b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237303"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375211"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption 類別
 
@@ -36,15 +36,15 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 |`CMFCRibbonContextCaption::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
 |[CMFCRibbonContextCaption::GetColor](#getcolor)|傳回標題的色彩。|
 |[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||
-|`CMFCRibbonContextCaption::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|
+|`CMFCRibbonContextCaption::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
 
 ## <a name="remarks"></a>備註
 
-此類別無法直接具現化。 [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)類別會使用此類別在內部將色彩加入至功能區分類。
+此類別無法直接具現化。 [CMFCRibbonBar 類](../../mfc/reference/cmfcribbonbar-class.md)在內部使用此類向功能區類別添加顏色。
 
-若要設定功能區分類的色彩，請呼叫[cmfcribboncategory:: Settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)。 若要設定內容分類的色彩，請呼叫[cmfcribbonbar:: Addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)。
+要設定功能區類別的顏色,請致電[CMFC 功能區類別::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)。 要設定內容內容的顏色,請致電[CMFC 功能區列::新增上下文類別](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -56,11 +56,11 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxRibbonBar.h
+**標題:** afxRibbonBar.h
 
-##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor
+## <a name="cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>CMFC功能相關標題:取得顏色
 
-傳回標題的背景色彩。
+返回標題的背景顏色。
 
 ```
 AFX_RibbonCategoryColor GetColor() const;
@@ -68,7 +68,7 @@ AFX_RibbonCategoryColor GetColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回的值可以是下列的列舉值之一：
+傳回的值可以是以下枚舉值之一:
 
 - `AFX_CategoryColor_None`
 
@@ -88,11 +88,11 @@ AFX_RibbonCategoryColor GetColor() const;
 
 ### <a name="remarks"></a>備註
 
-來設定標題的色彩，請呼叫[cmfcribboncategory:: Settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)或是[cmfcribbonbar:: Addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)。
+標題的顏色可以通過調用[CMFC 功能分類::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)或[CMFC 功能列::添加上下文類別](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)來設置。
 
-##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX
+## <a name="cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>CMFC功能相關標題:取得正確的TabX
 
-擷取類別的功能區索引標籤的右側邊緣的位置。
+檢索類別功能區選項卡右側邊緣的位置。
 
 ```
 int GetRightTabX() const;
@@ -100,7 +100,7 @@ int GetRightTabX() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回右側的 X 值的封入矩形`CMFCRibbonCategory`物件的 [功能區] 索引標籤上或-1，如果 [] 索引標籤會截斷值。
+傳`CMFCRibbonCategory`回 物件功能區選項卡的封閉矩形的右側 X 值,如果選項卡被截斷,則返回 -1 的值。
 
 ### <a name="remarks"></a>備註
 

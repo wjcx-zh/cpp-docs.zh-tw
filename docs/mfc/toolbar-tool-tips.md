@@ -13,61 +13,61 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-ms.openlocfilehash: 4582b03844e1be3d4cf70bcc3fff1c3b66119ae3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1762931b75734801659fd6271377260bd0473614
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373463"
 ---
 # <a name="toolbar-tool-tips"></a>工具列工具提示
 
-工具提示會顯示工具列按鈕的用途的簡短描述，當您將滑鼠游標移到按鈕上放一段時間的小型的快顯視窗。 當您建立應用程式有一個工具列應用程式精靈 時，工具提示支援被提供給您。 這篇文章說明這兩個工具提示支援應用程式精靈 」 和 「 如何將工具提示支援新增至您的應用程式所建立的。
+工具提示是微小的彈出視窗,當您將滑鼠放在按鈕上一段時間時,該視窗會簡要說明工具列按鈕的用途。 當您使用具有工具列的應用程式嚮導創建應用程式時,會為您提供工具提示支援。 本文介紹了應用程式精靈創建的工具提示支援以及如何向應用程式添加工具提示支援。
 
-本文涵蓋：
+本文將說明：
 
-- [啟用工具提示](#_core_activating_tool_tips)
+- [工具提示](#_core_activating_tool_tips)
 
-- [Flyby 狀態列更新](#_core_fly_by_status_bar_updates)
+- [飛天狀態列更新](#_core_fly_by_status_bar_updates)
 
-##  <a name="_core_activating_tool_tips"></a> 啟用工具提示
+## <a name="activating-tool-tips"></a><a name="_core_activating_tool_tips"></a>工具提示
 
-若要啟用應用程式中的工具提示，您必須執行兩件事：
+要啟動應用程式中的工具提示,必須執行以下兩項操作:
 
-- CBRS_TOOLTIPS 樣式加入其他樣式 (例如 WS_CHILD、 WS_VISIBLE，和其他**CBRS_** 樣式) 做為傳遞*cheaderctrl:: Create*參數[CToolBar::Create](../mfc/reference/ctoolbar-class.md#create)函式或[SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)。
+- 將CBRS_TOOLTIPS樣式添加到其他樣式(如WS_CHILD、WS_VISIBLE和其他**CBRS_** 樣式),作為*dwStyle*參數傳遞到[CToolBar::創建](../mfc/reference/ctoolbar-class.md#create)函數或[SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)中。
 
-- 下列程序中所述，將附加工具列的提示文字，以新行字元 ('\n') 分隔包含工具列命令的命令列提示字元的字串資源。 字串資源共用的工具列按鈕的識別碼。
+- 如下所述,將工具列提示文本(由換行元 (『\n』) 分隔到包含工具列命令的命令列提示符的字串資源。 字串資源分享工具列按鈕的 ID。
 
-#### <a name="to-add-the-tool-tip-text"></a>若要新增的工具提示文字
+#### <a name="to-add-the-tool-tip-text"></a>新增工具提示文字
 
-1. 您正在編輯工具列編輯器的工具列，開啟**工具列按鈕屬性**指定按鈕的視窗。
+1. 編輯工具列編輯器中的工具列時,打開給定按鈕的**工具列按鈕屬性**視窗。
 
-1. 在 **提示**方塊中，指定您想要出現在該按鈕的工具提示的文字。
+1. 在 **「提示」** 框中,指定要顯示在該按鈕的工具提示中的文字。
 
 > [!NOTE]
->  設定文字，如按鈕屬性工具列編輯器會取代先前的程序，您必須用來開啟並編輯字串資源。
+> 將文字設定為工具列編輯器中的按鈕屬性將替換前一個過程,您必須在其中打開和編輯字串資源。
 
-如果使用啟用的工具提示的控制列置於它的子控制項，將控制列會顯示控制列上的每一個子控制項的工具提示，只要符合下列準則：
+開啟工具提示的控制列上放置了子控制項,則控制列將顯示控制列上每個子控制元件的工具提示,只要它滿足以下條件:
 
-- 控制項的 ID 是-1。
+- 控制項的識別碼不是 - 1。
 
-- 字串資料表項目具有相同識別碼的資源檔中的子控制項的工具提示字串。
+- 與資源檔中的子控制檔具有相同 ID 的字串表項目具有工具提示字串。
 
-##  <a name="_core_fly_by_status_bar_updates"></a> Flyby 狀態列更新
+## <a name="flyby-status-bar-updates"></a><a name="_core_fly_by_status_bar_updates"></a>飛天狀態列更新
 
-工具提示的相關功能是 「 flyby"狀態列更新。 根據預設，狀態 列上的訊息會描述特定工具列按鈕，啟動 按鈕時。 藉由在傳遞至樣式的清單中包括 CBRS_FLYBY `CToolBar::Create`，您可以將滑鼠游標經過工具列而不需實際啟用按鈕時，更新這些訊息。
+與工具提示相關的功能是「飛天」狀態列更新。 默認情況下,狀態列上的消息僅描述激活按鈕時的特定工具列按鈕。 通過在傳遞給`CToolBar::Create`的樣式清單中包含CBRS_FLYBY,您可以在滑鼠游標通過工具列時更新這些消息,而無需實際啟動按鈕。
 
-### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+### <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
-- [MFC 工具列實作 （在工具列上的概觀資訊）](../mfc/mfc-toolbar-implementation.md)
+- [MFC 工具列實現(工具列概述資訊)](../mfc/mfc-toolbar-implementation.md)
 
 - [停駐和浮動工具列](../mfc/docking-and-floating-toolbars.md)
 
-- [CToolBar](../mfc/reference/ctoolbar-class.md)並[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)類別
+- [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)類別
 
 - [使用工具列控制項](../mfc/working-with-the-toolbar-control.md)
 
-- [使用舊的工具列](../mfc/using-your-old-toolbars.md)
+- [使用舊工具列](../mfc/using-your-old-toolbars.md)
 
 ## <a name="see-also"></a>另請參閱
 

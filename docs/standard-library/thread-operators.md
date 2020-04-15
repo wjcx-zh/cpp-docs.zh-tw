@@ -18,22 +18,22 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6312d14dc681736ee396d5c7af6c50ba8d72cd3a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375825"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 運算子
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[操作員!](#op_neq)|[算子&gt;](#op_gt)|[算子&gt;=](#op_gt_eq)|
+|[算子&lt;](#op_lt)|[算子&lt;&lt;](#op_lt_lt)|[算子&lt;=](#op_lt_eq)|
+|[運算子*](#op_eq_eq)|
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
 
 判斷某個 `thread::id` 物件是否大於或等於另一個。
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 左 `thread::id` 物件。
 
-*Right*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -59,7 +59,7 @@ bool operator>= (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
 
 判斷某個 `thread::id` 物件是否大於另一個。
 
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 左 `thread::id` 物件。
 
-*Right*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -85,7 +85,7 @@ bool operator> (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
 
 判斷某個 `thread::id` 物件是否小於或等於另一個。
 
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 左 `thread::id` 物件。
 
-*Right*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -111,7 +111,7 @@ bool operator<= (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
 
 判斷某個 `thread::id` 物件是否小於另一個。
 
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 左 `thread::id` 物件。
 
-*Right*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果*左*在總排序中的*右邊*，**則為 true** ;否則**為 false**。
+如果 *「左」* 在總排序中位於*右側*,**則為 true;** 否則,**假**。
 
 ### <a name="remarks"></a>備註
 
@@ -139,7 +139,7 @@ bool operator<(
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>操作員!
 
 比較兩個 `thread::id` 物件是否不相等。
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 左 `thread::id` 物件。
 
-*Right*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -165,7 +165,7 @@ bool operator!= (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
 
 比較兩個 `thread::id` 物件是否相等。
 
@@ -177,21 +177,21 @@ bool operator== (
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 左 `thread::id` 物件。
 
-*Right*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個物件代表相同的執行執行緒，或如果沒有物件代表執行的執行緒，**則為 true** ;否則**為 false**。
+如果兩個物件表示相同的執行線程,或者兩個物件都不表示執行線程,**則為 true;** 否則,**假**。
 
 ### <a name="remarks"></a>備註
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>算子&lt;&lt;
 
 將 `thread::id` 物件的文字表示插入資料流。
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*Ostr*\
+*奧斯特*\
 [basic_ostream](../standard-library/basic-ostream-class.md) 物件。
 
-*識別碼*\
+*Id*\
 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-*Ostr*。
+*奧斯特*.
 
 ### <a name="remarks"></a>備註
 
-此函式會將*識別碼*插入*Ostr*中。
+此函數將*ID*插入*到 Ostr*。
 
 如果有兩個 `thread::id` 物件要比較是否相等，則這些物件插入的文字表示會一樣。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<thread>](../standard-library/thread.md)
+[\<執行緒>](../standard-library/thread.md)

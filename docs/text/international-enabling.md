@@ -8,35 +8,35 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 22f2dba49e894e93cb6791d76a65730f3269199e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6c645bafef87ed0b2d43903f4752ef659d79f89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375796"
 ---
 # <a name="international-enabling"></a>啟用國際化
 
-大部分傳統的 C 和C++程式碼會建立假設字元和字串操作的國際應用程式無法運作。 MFC 和執行階段程式庫支援 Unicode 或 MBCS，但仍要執行的工作。 若要引導您，本章節將說明 「 國際啟用 」 的意義在視覺效果C++:
+大多數傳統的 C 和 C++ 代碼對字元和字串操作做出的假設,這些假設不適用於國際應用程式。 雖然 MFC 和執行時庫都支援 Unicode 或 MBCS,但仍有工作要做。 為了指導您,本節在 Visual C++ 中解釋了"國際啟用"的含義:
 
-- Unicode 和 MBCS 可透過 MFC 的函式參數清單中的可移植資料型別和傳回型別。 這些類型有條件地定義適當的方式，取決於您的組建是否定義符號`_UNICODE`或符號`_MBCS`（這表示 DBCS）。 您的應用程式中，然後再根據這兩個符號的組建定義自動連結的 MFC 程式庫的不同變化。
+- Unicode 和 MBCS 都透過 MFC 函數參數清單和返回類型中的可移植數據類型啟用。 這些類型以適當的方式有條件地定義,具體取決於生成是定義符號`_UNICODE`還是符`_MBCS`號 (這意味著 DBCS)。 MFC 庫的不同變體會自動與應用程式連結,具體取決於生成定義的這兩個符號中的哪一個。
 
-- 類別程式庫程式碼會使用可移植的執行階段函式與其他方法，以確保正確的 Unicode 或 MBCS 行為。
+- 類庫代碼使用可攜式運行時函數和其他方法來確保正確的 Unicode 或 MBCS 行為。
 
-- 您仍然必須處理特定種類的國際化工作程式碼中：
+- 您必須在代碼中處理某些類型的國際化工作:
 
-   - 使用相同的可攜式執行階段功能可讓 MFC 可攜式下其中一個環境。
+  - 使用使 MFC 在任一環境下可移植的相同便攜式運行時功能。
 
-   - 請常值字串和字元可攜式下其中一個環境中，使用`_T`巨集。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+  - 使用`_T`宏使文字字串和字元在任一環境中可移植。 有關詳細資訊,請參閱[tchar.h 中的通用文字映射](../text/generic-text-mappings-in-tchar-h.md)。
 
-   - 剖析字串，在 MBCS 下的時，請採取預防措施。 這些措施並不需要在 Unicode。 如需詳細資訊，請參閱 < [MBCS 程式設計提示](../text/mbcs-programming-tips.md)。
+  - 在 MBCS 下分析字串時採取預防措施。 在 Unicode 下不需要這些預防措施。 有關詳細資訊,請參閱[MBCS 程式設計提示](../text/mbcs-programming-tips.md)。
 
-   - 請注意，如果您在應用程式中混合使用 ANSI （8 位元） 和 Unicode （16 位元） 字元。 可使用您的程式的某些部分中的 ANSI 字元和 Unicode 字元，在其他項目，但您不能在相同的字串中混用它們。
+  - 如果將 ANSI(8 位)和 Unicode(16 位)字元混合在應用程式中,請小心。 可以在程式的某些部分使用 ANSI 字元,在另一些部分使用 Unicode 字元,但不能將它們混合在同一字串中。
 
-   - 執行應用程式中的硬式編碼字串。 相反地，讓它們 STRINGTABLE 資源新增至應用程式的.rc 檔。 然後可以當地語系化應用程式而不需要變更原始程式碼或重新編譯。 如需有關 STRINGTABLE 資源的詳細資訊，請參閱[字串值編輯器](../windows/string-editor.md)。
+  - 不要在應用程式中硬編碼字串。 相反,通過將資源添加到應用程式的 .rc 檔中,使它們成為 STRINGTABLE 資源。 然後,可以當地語系化應用程式,而無需更改原始碼或重新編譯。 有關 STRINGTABLE 資源的詳細資訊,請參閱[字串編輯器](../windows/string-editor.md)。
 
 > [!NOTE]
->  歐洲和 MBCS 字元集有某些字元，例如重音字母，與字元碼大於 0x80。 大於 0x80 這些字元因為大部分的程式碼使用帶正負號的字元時，有正負號擴充時轉換成**int**。這會是陣列編製索引的問題，因為陣列外的正負號擴充的字元，可用為負數，編製索引。 使用 MBCS，例如日文語言也是唯一的。 因為字元可能會由 1 或 2 個位元組所組成，您應該一律在相同的時間來處理這兩個位元組。
+> 歐洲字元集和 MBCS 字元集具有一些字元,如重音字母,字元代碼大於 0x80。 由於大多數代碼使用簽名字符,因此這些大於 0x80 的字元在轉換為**int**時將簽名擴展。這是陣列索引的問題,因為符號擴展字元(為負字元)在陣列外部編製索引。 使用 MBCS 的語言(如日語)也是唯一的。 由於字元可能由 1 或 2 個字節組成,因此應始終同時操作兩個字節。
 
 ## <a name="see-also"></a>另請參閱
 

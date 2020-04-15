@@ -14,19 +14,19 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f5d655aa7fd2eb9e41c15c60a71492c24ba43c43
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: eade1a82b674d5ad2e91146559139445ef017180
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418584"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373705"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 類別
 
 管理您與 Gopher 網際網路伺服器的連接。
 
 > [!NOTE]
->  類別 `CGopherConnection`、`CGopherFile`、`CGopherFileFind`、`CGopherLocator` 及其成員已被取代，因為它們無法在 Windows XP 平臺上執行，但它們仍可在舊版平臺上繼續工作。
+> 類`CGopherConnection``CGopherFile` `CGopherFileFind`、`CGopherLocator`、 及其成員已被棄用,因為它們在 Windows XP 平臺上不工作,但它們將繼續在較早的平臺上工作。
 
 ## <a name="syntax"></a>語法
 
@@ -40,27 +40,27 @@ class CGopherConnection : public CInternetConnection
 
 |名稱|描述|
 |----------|-----------------|
-|[CGopherConnection::CGopherConnection](#cgopherconnection)|建構 `CGopherConnection` 物件。|
+|[Gopher 連接::Cgopher 連接](#cgopherconnection)|建構 `CGopherConnection` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CGopherConnection：： CreateLocator](#createlocator)|建立[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件，以在 Gopher 伺服器上尋找檔案。|
-|[CGopherConnection：： GetAttribute](#getattribute)|抓取有關 gopher 物件的屬性資訊。|
-|[CGopherConnection：： OpenFile](#openfile)|開啟 gopher 檔案。|
+|[Gopher 連線:建立定位器](#createlocator)|創建一個[CGopherLocator 物件](../../mfc/reference/cgopherlocator-class.md)來查找 gopher 伺服器上的檔。|
+|[Gopher 連線:抓取屬性](#getattribute)|檢索有關 gopher 物件的屬性資訊。|
+|[Gopher 連線::開啟檔案](#openfile)|打開一個 gopher 檔。|
 
 ## <a name="remarks"></a>備註
 
-Gopher 服務是由 MFC WinInet 類別識別的三種網際網路服務之一。
+gopher 服務是 MFC WinInet 類認可的三種互聯網服務之一。
 
-類別 `CGopherConnection` 包含一個可管理 gopher 服務的函式和三個額外的成員函式： [OpenFile](#openfile)、 [CreateLocator](#createlocator)和[GetAttribute](#getattribute)。
+這個類別`CGopherConnection`包含一個建構函數和三個管理 gopher 服務的附加成員函數[:OpenFile、CreateLocator](#openfile)和[CreateLocator](#createlocator)[GetAttribute](#getattribute)。
 
-若要與 gopher 網際網路伺服器通訊，您必須先建立[CInternetSession](../../mfc/reference/cinternetsession-class.md)的實例，然後呼叫[CInternetSession：： GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)，它會建立 `CGopherConnection` 物件，並傳回它的指標。 您永遠不會直接建立 `CGopherConnection` 物件。
+要與 gopher Internet 伺服器通訊,必須首先建立[CInternetSession](../../mfc/reference/cinternetsession-class.md)的實例,然後調用[CInternetSession::getGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection),`CGopherConnection`它建立物件並傳回指向它的指標。 您從不直接創建`CGopherConnection`物件。
 
-若要深入瞭解 `CGopherConnection` 如何與其他 MFC 網際網路類別搭配運作，請參閱[使用 WinInet 進行網際網路程式設計](../../mfc/win32-internet-extensions-wininet.md)一文。 如需使用其他兩個支援的網際網路服務的詳細資訊，請參閱 < 類別[CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[CFtpConnection](../../mfc/reference/cftpconnection-class.md)。
+要瞭解有關如何`CGopherConnection`與其他 MFC Internet 類合作,請參閱[WinInet](../../mfc/win32-internet-extensions-wininet.md)的 Internet 程式設計文章。 有關使用其他兩個受支援的 Internet 服務的詳細資訊,FTP 和 HTTP 請參閱[類別 CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[CFtpConnection](../../mfc/reference/cftpconnection-class.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -70,11 +70,11 @@ Gopher 服務是由 MFC WinInet 類別識別的三種網際網路服務之一。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxinet.h。h
+**標題:** afxinet.h
 
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection
+## <a name="cgopherconnectioncgopherconnection"></a><a name="cgopherconnection"></a>Gopher 連接::Cgopher 連接
 
-呼叫這個成員函式來建立 `CGopherConnection` 物件。
+呼叫此成員函數以建構物件`CGopherConnection`。
 
 ```
 CGopherConnection(
@@ -94,41 +94,41 @@ CGopherConnection(
 
 ### <a name="parameters"></a>參數
 
-*pSession*<br/>
-相關[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的指標。
+*p 工作階段*<br/>
+指向相關[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的指標。
 
-*hConnected*<br/>
-目前網際網路會話的 Windows 控制碼。
+*h 連線*<br/>
+當前 Internet 作業階段的 Windows 句柄。
 
 *pstrServer*<br/>
-包含 FTP 伺服器名稱之字串的指標。
+指向包含 FTP 伺服器名稱的字串的指標。
 
-*dwCoNtext*<br/>
-作業的內容識別碼。 *dwCoNtext*會識別[CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)傳回的作業狀態資訊。 預設值設定為 1;不過，您可以明確地指派作業的特定內容識別碼。 物件及其執行的任何工作都會與該內容識別碼相關聯。
+*dwContext*<br/>
+操作的上下文標識碼。 *dwContext*識別 CInternetSession 傳回的作業的狀態資訊[::onStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 預設值設定為 1;將預設值設定為 1但是,您可以顯式為操作分配特定的上下文 ID。 物件及其執行的任何工作都將與該上下文 ID 相關聯。
 
-*pstrUserName*<br/>
-以 null 結束的字串指標，指定要登入之使用者的名稱。 如果是 Null，則預設值為 anonymous。
+*pstrUser 名稱*<br/>
+指向 null 終止字串的指標,該字串指定要登錄的使用者的名稱。 如果為 NULL,則預設值為匿名。
 
-*pstrPassword*<br/>
-以 null 結束的字串指標，指定要用來登入的密碼。 如果*pstrPassword*和*PSTRUSERNAME*都是 Null，則預設的匿名密碼就是使用者的電子郵件名稱。 如果*pstrPassword*為 Null （或空字串），但*PSTRUSERNAME*不是 null，則會使用空白密碼。 下表描述*pstrUserName*和*pstrPassword*的四個可能設定的行為：
+*pstr密碼*<br/>
+指向 null 終止字串的指標,用於指定用於登入的密碼。 如果*pstrPassword*和*pstrUserName*均為 NULL,則預設的匿名密碼是使用者的電子郵件名稱。 如果*pstrPassword*為 NULL(或空字串),但*pstrUserName*不是 NULL,則使用空白密碼。 下表描述了*pstrUserName*和*pstrPassword*的四種可能設定的行為:
 
-|*pstrUserName*|*pstrPassword*|傳送到 FTP 伺服器的使用者名稱|傳送到 FTP 伺服器的密碼|
+|*pstrUser 名稱*|*pstr密碼*|傳送 FTP 伺服器的使用者名稱|傳送 FTP 伺服器的密碼|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|Null 或 ""|Null 或 ""|匿名|使用者的電子郵件名稱|
-|非 Null 字串|Null 或 ""|*pstrUserName*|" "|
-|Null 非 Null 字串|ERROR|ERROR||
-|非 Null 字串|非 Null 字串|*pstrUserName*|*pstrPassword*|
+|NULL 或""|NULL 或""|"匿名"|使用者的電子郵件名稱|
+|NULL 字串|NULL 或""|*pstrUser 名稱*|" "|
+|NULL 非 NULL 字串|ERROR|ERROR||
+|NULL 字串|NULL 字串|*pstrUser 名稱*|*pstr密碼*|
 
-*nPort*<br/>
-識別要在伺服器上使用之 TCP/IP 通訊埠的數位。
+*n波特*<br/>
+標識要在伺服器上使用的 TCP/IP 連接埠的數位。
 
 ### <a name="remarks"></a>備註
 
-您永遠不會直接建立 `CGopherConnection`。 相反地，呼叫[CInternetSession：： GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)，它會建立 `CGopherConnection` 物件，並傳回其指標。
+您從不直接建立`CGopherConnection`。 相反,調用[CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)`CGopherConnection`,它 創建一個物件並返回指向它的指標。
 
-##  <a name="createlocator"></a>CGopherConnection：： CreateLocator
+## <a name="cgopherconnectioncreatelocator"></a><a name="createlocator"></a>Gopher 連線:建立定位器
 
-呼叫這個成員函式以建立 gopher 定位器，以尋找或識別 Gopher 伺服器上的檔案。
+呼叫此成員函數以創建 gopher 定位器以查找或識別 gopher 伺服器上的檔案。
 
 ```
 CGopherLocator CreateLocator(
@@ -149,36 +149,36 @@ static CGopherLocator CreateLocator(
 ### <a name="parameters"></a>參數
 
 *pstrDisplayString*<br/>
-字串的指標，其中包含要抓取的 gopher 檔或目錄的名稱。 如果*pstrDisplayString*參數是 Null，則會傳回 Gopher 伺服器的預設目錄。
+指向要檢索的 gopher 文件或目錄名稱的字串的指標。 如果*pstrDisplayString*參數為 NULL,則傳回 gopher 伺服器的預設目錄。
 
 *pstrSelectorString*<br/>
-要傳送至 Gopher 伺服器以取得專案的選取器字串指標。 *pstrSelectorString*可以是 Null。
+指向要發送到 gopher 伺服器以檢索項的選擇器字串的指標。 *pstrSelectorString*可以是 NULL。
 
-*dwGopherType*<br/>
-這會指定*pstrSelectorString*是否指的是目錄或檔，以及要求是 gopher 還是 gopher +。 請參閱 Windows SDK 中結構[GOPHER_FIND_DATA](/windows/win32/api/wininet/ns-wininet-gopher_find_dataw)的屬性。
+*dwGopher 類型*<br/>
+這指定*pstrSelectorString*是否引用目錄或文檔,以及請求是 gopher 還是 gopher*。 請參閱 Windows SDK 中[結構GOPHER_FIND_DATA](/windows/win32/api/wininet/ns-wininet-gopher_find_dataw)的屬性。
 
 *pstrLocator*<br/>
-字串的指標，識別要開啟的檔案。 一般來說，這個字串是從呼叫[CGopherFileFind：： GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator)傳回。
+指向標識要打開的檔的字串的指標。 通常,此字串是從呼叫[CGopherFileFind 傳回:getLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator)。
 
-*pstrServerName*<br/>
-包含 Gopher 伺服器名稱之字串的指標。
+*pstrServer 名稱*<br/>
+指向包含 gopher 伺服器名稱的字串的指標。
 
-*nPort*<br/>
-識別此連線之網際網路埠的編號。
+*n波特*<br/>
+標識此連接的 Internet 埠的編號。
 
 ### <a name="return-value"></a>傳回值
 
-[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件。
+[Gopher 定位器](../../mfc/reference/cgopherlocator-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-成員函式的靜態版本需要您指定伺服器，而非靜態版本則使用連線物件中的伺服器名稱。
+成員函數的靜態版本要求您指定伺服器,而非靜態版本使用連接對象的伺服器名稱。
 
-為了從 Gopher 伺服器取出資訊，應用程式必須先取得 gopher 定位器。 然後，應用程式必須將定位器視為不透明的 token （也就是說，應用程式可以使用定位器，但不能直接操作或比較）。 一般來說，應用程式會使用定位器來呼叫[CGopherFileFind：： FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)成員函式，以取得特定的資訊片段。
+為了從 gopher 伺服器檢索資訊,應用程式必須首先獲取 gopher 定位器。 然後,應用程式必須將定位器視為不透明權杖(即,應用程式可以使用定位器,但不能直接操作或比較它)。 通常,應用程式使用定位器調用[CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)成員函數來檢索特定資訊。
 
-##  <a name="getattribute"></a>CGopherConnection：： GetAttribute
+## <a name="cgopherconnectiongetattribute"></a><a name="getattribute"></a>Gopher 連線:抓取屬性
 
-呼叫這個成員函式，從 Gopher 伺服器抓取專案的特定屬性資訊。
+調用此成員函數從 gopher 伺服器檢索有關專案的特定屬性資訊。
 
 ```
 BOOL GetAttribute(
@@ -188,22 +188,22 @@ BOOL GetAttribute(
 
 ### <a name="parameters"></a>參數
 
-*refLocator*<br/>
-[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件的參考。
+*參考定位器*<br/>
+對[CGopher 定位器物件的參考](../../mfc/reference/cgopherlocator-class.md)。
 
-*strRequestedAttributes*<br/>
-以空格分隔的字串，指定所要求屬性的名稱。
+*str 被要求屬性*<br/>
+指定要求屬性名稱的空間分隔字串。
 
 *strResult*<br/>
-可接收定位器類型之[CString](../../atl-mfc-shared/reference/cstringt-class.md)的參考。
+對接收定位器類型的[CString](../../atl-mfc-shared/reference/cstringt-class.md)的引用。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
 
-##  <a name="openfile"></a>CGopherConnection：： OpenFile
+## <a name="cgopherconnectionopenfile"></a><a name="openfile"></a>Gopher 連線::開啟檔案
 
-呼叫這個成員函式，在 Gopher 伺服器上開啟檔案。
+呼叫此成員函數以在 gopher 伺服器上打開檔。
 
 ```
 CGopherFile* OpenFile(
@@ -215,25 +215,25 @@ CGopherFile* OpenFile(
 
 ### <a name="parameters"></a>參數
 
-*refLocator*<br/>
-[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件的參考。
+*參考定位器*<br/>
+對[CGopher 定位器物件的參考](../../mfc/reference/cgopherlocator-class.md)。
 
 *dwFlags*<br/>
-INTERNET_FLAG_ * 旗標的任何組合。 如需 INTERNET_FLAG_\* 旗標的進一步資訊，請參閱[CInternetSession：： OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) 。
+INTERNET_FLAG_* 標誌的任意組合。 有關INTERNET_FLAG_\*標誌的詳細資訊,請參閱[CInternetSession::OpenUrl。](../../mfc/reference/cinternetsession-class.md#openurl)
 
 *pstrView*<br/>
-檔案視圖字串的指標。 如果伺服器上有多個檔案的流覽，此參數會指定要開啟的檔案。 如果*pstrView*為 Null，則會使用預設的檔案視圖。
+指向檔檢視字串的指標。 如果伺服器中存在該檔的多個檢視,則此參數指定要打開的文件檢視。 如果*pstrView*為 NULL,則使用預設檔案檢視。
 
-*dwCoNtext*<br/>
-要開啟之檔案的內容識別碼。 如需*dwCoNtext*的詳細資訊，請參閱**備註**。
+*dwContext*<br/>
+正在打開的檔的上下文 ID。 關於*dwContext*的詳細資訊,請參閱**備註**。
 
 ### <a name="return-value"></a>傳回值
 
-要開啟的[CGopherFile](../../mfc/reference/cgopherfile-class.md)物件指標。
+指向要打開[的 CGopherFile](../../mfc/reference/cgopherfile-class.md)物件的指標。
 
 ### <a name="remarks"></a>備註
 
-覆寫*dwCoNtext*預設值，將內容識別碼設定為您選擇的值。 內容識別碼會與[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件所建立之 `CGopherConnection` 物件的這個特定作業相關聯。 此值會傳回[CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) ，以提供所識別之作業的狀態。 如需內容識別碼的詳細資訊，請參閱[網際網路第一個步驟： WinInet 一](../../mfc/wininet-basics.md)文。
+覆寫*dwContext*預設值,將上下文識別子設定為您選擇的值。 上下文識別碼`CGopherConnection`[與其 CInternetSession](../../mfc/reference/cinternetsession-class.md)對象創建的物件的此特定操作相關聯。 該值將返回到[CInternetSession::onStatusBack](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供標識該值的操作的狀態。 有關上下文標識符的詳細資訊[,請參閱"Internet 第一步:WinInet"](../../mfc/wininet-basics.md)一文。
 
 ## <a name="see-also"></a>另請參閱
 

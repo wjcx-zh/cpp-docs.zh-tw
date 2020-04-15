@@ -1,5 +1,5 @@
 ---
-title: _U_RECT 類別
+title: _U_RECT類
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_U_RECT
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-ms.openlocfilehash: 306092a00a1e119263f4563eea181d7d3ee2b4b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a4d5b2a770b3f0ecfe10be0fbad22a702aa0531
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274521"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325815"
 ---
-# <a name="urect-class"></a>_U_RECT 類別
+# <a name="_u_rect-class"></a>_U_RECT類
 
-這個引數的配接器類別可讓`RECT`指標或參考傳遞至函式實作方面的指標。
+此參數適配器類允許將`RECT`指標或引用傳遞給在指標方面實現的函數。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -35,33 +35,33 @@ class _U_RECT
 
 |名稱|描述|
 |----------|-----------------|
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|建構函式。|
+|[_U_RECT:_U_RECT](#_u_rect___u_rect)|建構函式。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|指標`RECT`。|
+|[_U_RECT:m_lpRect](#_u_rect__m_lprect)|指向的`RECT`指標。|
 
 ## <a name="remarks"></a>備註
 
-此類別會定義兩個建構函式多載： 其中一個接受**RECT &** 引數，而另一個接受`LPRECT`引數。 第一個建構函式會參考引數的位址儲存在該類別的單一資料成員中， [m_lpRect](#_u_rect__m_lprect)。 轉換不直接儲存的指標建構函式的引數。
+類定義兩個構造函數重載:一個接受**RECT&** 參數,`LPRECT`另一個 接受參數。 第一個建構函數將引用參數的位址儲存在類的單個資料成員[m_lpRect](#_u_rect__m_lprect)。 指標構造函數的參數直接存儲而不轉換。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標題:** atlwin.h
 
-##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect
+## <a name="_u_rectm_lprect"></a><a name="_u_rect__m_lprect"></a>_U_RECT:m_lpRect
 
-類別會保存的值傳遞至其建構函式為公用`LPRECT`資料成員。
+類保存作為公共`LPRECT`數據成員傳遞給其任一構造函數的值。
 
 ```
 LPRECT m_lpRect;
 ```
 
-##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT
+## <a name="_u_rect_u_rect"></a><a name="_u_rect___u_rect"></a>_U_RECT:_U_RECT
 
-參考引數的位址儲存在該類別的單一資料成員中， [m_lpRect](#_u_rect__m_lprect)。
+參考參數的位址儲存在類別的單個資料成員[中,m_lpRect](#_u_rect__m_lprect)。
 
 ```
 _U_RECT(RECT& rc);
@@ -70,15 +70,15 @@ _U_RECT(LPRECT lpRect);
 
 ### <a name="parameters"></a>參數
 
-*rc*<br/>
-A`RECT`參考。
+*鋼筋混凝土*<br/>
+`RECT` 參考。
 
 *lpRect*<br/>
-A`RECT`指標。
+指標`RECT`。
 
 ### <a name="remarks"></a>備註
 
-轉換不直接儲存的指標建構函式的引數。
+指標構造函數的參數直接存儲而不轉換。
 
 ## <a name="see-also"></a>另請參閱
 

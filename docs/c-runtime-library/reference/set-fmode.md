@@ -1,8 +1,9 @@
 ---
 title: _set_fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_fmode
+- _o__set_fmode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: ef3b811a607184de54bb736bddcc456af53ac089
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba8a4b3867eb0a18d4a14cb2f5480bc5800303c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948553"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337698"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -49,18 +51,20 @@ errno_t _set_fmode(
 
 ### <a name="parameters"></a>參數
 
-*mode*<br/>
-所需的檔案轉譯模式： **_O_TEXT**或 **_O_BINARY**。
+*模式*<br/>
+需要的檔案轉換模式 **:_O_TEXT**或 **_O_BINARY**。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回零；如果失敗，則傳回錯誤碼。 如果*mode*不是 **_O_TEXT**或 **_O_BINARY**或 **_O_WTEXT**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
+如果成功，會傳回零；如果失敗，則傳回錯誤碼。 如果未 **_O_TEXT**或 **_O_BINARY**或 **_O_WTEXT***模式*,則調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,此函數將**errno**設定到**EINVAL**並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-此函式會設定 [_fmode](../../c-runtime-library/fmode.md) 全域變數。 這個變數會指定檔案 i/o 作業 **_open**和 **_pipe**的預設檔案轉譯模式。
+此函式會設定 [_fmode](../../c-runtime-library/fmode.md) 全域變數。 此變數指定檔 I/O 操作 **_open**和 **_pipe**的預設檔案轉換模式。
 
-**_O_TEXT**和 **_O_BINARY**定義于 fcntl.h> 中。 **EINVAL**定義于 Errno 中。
+**_O_TEXT**和 **_O_BINARY**在 Fcntl.h 中定義。 **EINVAL**在 Errno.h 中定義。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -68,7 +72,7 @@ errno_t _set_fmode(
 |-------------|---------------------|---------------------|
 |**_set_fmode**|\<stdlib.h>|\<fcntl.h>、\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -138,4 +142,4 @@ A   B   C   D   E   F   G   H   I   J   K   L
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[文字與二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

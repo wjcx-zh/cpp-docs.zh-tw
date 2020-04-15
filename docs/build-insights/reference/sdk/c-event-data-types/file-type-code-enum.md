@@ -1,6 +1,6 @@
 ---
-title: FILE_TYPE_CODE 列舉
-description: C++ BUILD Insights SDK FILE_TYPE_CODE 列舉參考。
+title: FILE_TYPE_CODE枚舉
+description: C++生成見解 SDK FILE_TYPE_CODE枚舉引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e64f9315c62ce40c436032d6c96fdfa725847a7f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: dea603a072d7b2f472112a75b2e9ccded78399a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333717"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325568"
 ---
-# <a name="file_type_code-enum"></a>FILE_TYPE_CODE 列舉
+# <a name="file_type_code-enum"></a>FILE_TYPE_CODE枚舉
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FILE_TYPE_CODE` 列舉會描述檔案的類型。
+枚`FILE_TYPE_CODE`舉描述檔的類型。
 
 ## <a name="members"></a>成員
 
 | 名稱 | 值 | 描述 |
 |--|--|--|
-| `FILE_TYPE_CODE_OTHER` | 0（0x00000000） | 未列在此列舉中的檔案類型。 |
-| `FILE_TYPE_CODE_OBJ` | 1 (0x00000001) | 物件（\*.obj）檔案。 |
-| `FILE_TYPE_CODE_EXECUTABLE_IMAGE` | 2（0x00000002） | 可執行檔（\*.exe）或 DLL （\*.dll）檔案。 |
-| `FILE_TYPE_CODE_LIB` | 3（0x00000003） | 靜態程式庫（* .lib）檔案。 |
-| `FILE_TYPE_CODE_IMP_LIB` | 4（0x00000004） | 匯入程式庫（* .lib） |
-| `FILE_TYPE_CODE_EXP` | 5（0x00000005） | 匯出（* .exp）檔案。 |
+| `FILE_TYPE_CODE_OTHER` | 0 (0x000000) | 此枚舉中未列出的文件類型。 |
+| `FILE_TYPE_CODE_OBJ` | 1 (0x00000001) | 物件 (.obj)\*檔案。 |
+| `FILE_TYPE_CODE_EXECUTABLE_IMAGE` | 2 (0x0000002) | 可執行檔\*(.exe)\*或 DLL (.dll) 檔案。 |
+| `FILE_TYPE_CODE_LIB` | 3 (0x0000003) | 靜態庫 (*.lib) 檔案。 |
+| `FILE_TYPE_CODE_IMP_LIB` | 4 (0x0000004) | 匯入函式庫 (lib) |
+| `FILE_TYPE_CODE_EXP` | 5 (0x0000005) | 匯出 (*.exp) 檔案。 |
 
 ## <a name="remarks"></a>備註
 

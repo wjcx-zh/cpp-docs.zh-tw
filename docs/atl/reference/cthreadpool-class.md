@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b970915aa07fe2d1af2b3a07345d5b19826be69
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330573"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 類別
 
-這個類別會提供可處理工作專案佇列的背景工作執行緒集區。
+此類提供處理工作項佇列的工作線程池。
 
 ## <a name="syntax"></a>語法
 
@@ -40,65 +40,65 @@ class CThreadPool : public IThreadPoolConfig
 
 #### <a name="parameters"></a>參數
 
-*工作*<br/>
-類別符合背景[工作原型](../../atl/reference/worker-archetype.md), 提供用來處理線上程集區上排入佇列之工作專案的程式碼。
+*工人*<br/>
+類符合[輔助角色原型](../../atl/reference/worker-archetype.md),提供用於處理線程池上排隊的工作項的代碼。
 
-*ThreadTraits*<br/>
-提供用來在集區中建立執行緒之函數的類別。
+*執行緒特徵*<br/>
+提供用於在池中創建線程的函數的類。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CThreadPool::CThreadPool](#cthreadpool)|執行緒集區的構造函式。|
-|[CThreadPool:: ~ CThreadPool](#dtor)|執行緒集區的析構函式。|
+|[CThreadPool:CThreadPool](#cthreadpool)|線程池的構造函數。|
+|[CThreadPool:*CThreadPool](#dtor)|線程池的析構函數。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CThreadPool::AddRef](#addref)|的`IUnknown::AddRef`執行。|
-|[CThreadPool::GetNumThreads](#getnumthreads)|呼叫這個方法, 以取得集區中的執行緒數目。|
-|[CThreadPool::GetQueueHandle](#getqueuehandle)|呼叫這個方法, 以取得用來將工作專案排入佇列之 IO 完成通訊埠的控制碼。|
-|[CThreadPool::GetSize](#getsize)|呼叫這個方法, 以取得集區中的執行緒數目。|
-|[CThreadPool::GetTimeout](#gettimeout)|呼叫這個方法以取得執行緒集區等候執行緒關閉的最長時間 (以毫秒為單位)。|
-|[CThreadPool::Initialize](#initialize)|呼叫這個方法來初始化執行緒集區。|
-|[CThreadPool::QueryInterface](#queryinterface)|的`IUnknown::QueryInterface`執行。|
-|[CThreadPool::QueueRequest](#queuerequest)|呼叫這個方法, 將工作專案排入佇列, 以便由集區中的執行緒。|
-|[CThreadPool::Release](#release)|的`IUnknown::Release`執行。|
-|[CThreadPool::SetSize](#setsize)|呼叫這個方法, 以設定集區中的執行緒數目。|
-|[CThreadPool::SetTimeout](#settimeout)|呼叫這個方法來設定執行緒集區等候執行緒關閉的最長時間 (以毫秒為單位)。|
-|[CThreadPool::Shutdown](#shutdown)|呼叫這個方法來關閉執行緒集區。|
+|[CThreadPool::添加參考](#addref)|`IUnknown::AddRef` 的實作。|
+|[CThreadPool:取得線程](#getnumthreads)|調用此方法獲取池中的線程數。|
+|[CThreadPool:取得QueueHandle](#getqueuehandle)|呼叫此方法取得用於對工作項進行排隊的 IO 完成連接埠的句柄。|
+|[CThreadPool:取得 Size](#getsize)|調用此方法獲取池中的線程數。|
+|[CThreadPool:取得超時](#gettimeout)|調用此方法,獲取線程池將等待線程關閉的最大時間(以毫秒為單位)。|
+|[CThreadPool:初始化](#initialize)|調用此方法以初始化線程池。|
+|[CThreadPool:查詢介面](#queryinterface)|`IUnknown::QueryInterface` 的實作。|
+|[CThreadPool:佇列請求](#queuerequest)|調用此方法以對池中的線程要處理的工作項進行排隊。|
+|[CThreadPool:發佈](#release)|`IUnknown::Release` 的實作。|
+|[CThreadPool:設定大小](#setsize)|調用此方法以設置池中的線程數。|
+|[CThreadPool:設置超時](#settimeout)|調用此方法以設置線程池將等待線程關閉的最大時間(以毫秒為單位)。|
+|[CThreadPool:關閉](#shutdown)|調用此方法以關閉線程池。|
 
 ## <a name="remarks"></a>備註
 
-當集區已初始化、調整大小或關閉時, 會建立並終結集區中的執行緒。 系統會在集區中每個背景工作執行緒的堆疊上建立類別背景*工作角色*的實例。 每個實例都會線上程的存留期記憶體留。
+在初始化、調整大小或關閉池時,將創建和銷毀池中的線程。 將在池中每個輔助線程的堆疊上創建類*輔助角色*實例。 每個實例將活在線程的生存期內。
 
-建立執行緒之後, 會立即在與該執行緒`Initialize`相關聯的物件上呼叫 Worker::。 線上程的銷毀之前, 會立即呼叫 Worker`Terminate` ::。 這兩種方法都必須接受**void** <strong>\*</strong>引數。 這個引數的值會透過[CThreadPool:: Initialize](#initialize)的*pvWorkerParam*參數傳遞至執行緒集區。
+建立線程後,將立即呼叫與該緒關聯的`Initialize`物件上的*輔助角色*:: 。 在銷毀線程之前,將立即呼叫*輔助角色*`Terminate`:: 。 這兩種方法都必須接受**void**<strong>\*</strong>參數。 此參數的值透過 CThreadPool 的*pvWorkerParam*參數傳遞給線程池[::初始化](#initialize)。
 
-當佇列和背景工作執行緒中有工作專案可用於工作時, 背景工作執行緒會從佇列提取專案, 並呼叫`Execute`該執行緒之背景*工作*物件的方法。 然後會將三個專案傳遞至方法: 佇列中的專案、 `pvWorkerParam`傳遞給*worker*:: `Initialize`和*worker*:: `Terminate`, 以及用於 IO 完成埠佇列之[重疊](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)結構的指標。
+當佇列中的工作項和工作線程中可用於工作時,工作線程將從佇列中拉出一個項,並調用該線程`Execute`*的輔助物件*的方法。 然後,三個項傳遞給方法:佇列中的項,相同的`pvWorkerParam`傳遞給*輔助角色*`Initialize`:: 和`Terminate`*輔助角色*:: , 以及指向 IO 完成埠佇列的[OVERLAPPED](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)結構的指標。
 
-*Worker*類別會藉由提供 Typedef, *worker*:: `RequestType`, 宣告將線上程集區上排入佇列的專案類型。 這個類型必須能夠在 ULONG_PTR 中來回轉換。
+Worker 類透過`RequestType`提供 typedef、Worker:: , 聲明將線上程池上排隊的*Worker**Worker*項目的類型。 此類型必須能夠強制轉換到ULONG_PTR。
 
-背景*工作*類別的範例是[CNonStatelessWorker 類別](../../atl/reference/cnonstatelessworker-class.md)。
+*輔助工*類別的範例是[「無狀態輔助角色」 類別](../../atl/reference/cnonstatelessworker-class.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IUnknown`
 
-[IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)
+[IThreadPool 設定](../../atl/reference/ithreadpoolconfig-interface.md)
 
 `CThreadPool`
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlutil。h
+**標題:** atlutil.h
 
-##  <a name="addref"></a>CThreadPool:: AddRef
+## <a name="cthreadpooladdref"></a><a name="addref"></a>CThreadPool::添加參考
 
-的`IUnknown::AddRef`執行。
+`IUnknown::AddRef` 的實作。
 
 ```
 ULONG STDMETHODCALLTYPE AddRef() throw();
@@ -106,15 +106,15 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 
 ### <a name="return-value"></a>傳回值
 
-一律傳回1。
+始終返回 1。
 
 ### <a name="remarks"></a>備註
 
-這個類別不會使用參考計數來執行存留期控制。
+此類不使用引用計數實現存留期控制。
 
-##  <a name="cthreadpool"></a>CThreadPool::CThreadPool
+## <a name="cthreadpoolcthreadpool"></a><a name="cthreadpool"></a>CThreadPool:CThreadPool
 
-執行緒集區的構造函式。
+線程池的構造函數。
 
 ```
 CThreadPool() throw();
@@ -122,11 +122,11 @@ CThreadPool() throw();
 
 ### <a name="remarks"></a>備註
 
-將 timeout 值初始化為 ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT。 預設時間為36秒。 如有需要, 您可以在包含 atlutil 之前, 為這個符號定義您自己的正整數值。
+將超時值初始化為ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT。 默認時間是 36 秒。 如有必要,您可以在包含 atlutil.h 之前為此符號定義您自己的正整數值。
 
-##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool
+## <a name="cthreadpoolcthreadpool"></a><a name="dtor"></a>CThreadPool:*CThreadPool
 
-執行緒集區的析構函式。
+線程池的析構函數。
 
 ```
 ~CThreadPool() throw();
@@ -134,11 +134,11 @@ CThreadPool() throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫[CThreadPool:: Shutdown](#shutdown)。
+呼叫[CThreadPool:: 關閉](#shutdown)。
 
-##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads
+## <a name="cthreadpoolgetnumthreads"></a><a name="getnumthreads"></a>CThreadPool:取得線程
 
-呼叫這個方法, 以取得集區中的執行緒數目。
+調用此方法獲取池中的線程數。
 
 ```
 int GetNumThreads() throw();
@@ -146,11 +146,11 @@ int GetNumThreads() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回集區中的執行緒數目。
+返回池中的線程數。
 
-##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle
+## <a name="cthreadpoolgetqueuehandle"></a><a name="getqueuehandle"></a>CThreadPool:取得QueueHandle
 
-呼叫這個方法, 以取得用來將工作專案排入佇列之 IO 完成通訊埠的控制碼。
+呼叫此方法取得用於對工作項進行排隊的 IO 完成連接埠的句柄。
 
 ```
 HANDLE GetQueueHandle() throw();
@@ -158,11 +158,11 @@ HANDLE GetQueueHandle() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回佇列控制碼, 如果尚未初始化執行緒集區, 則傳回 Null。
+如果線程池尚未初始化,則返回佇列句柄或 NULL。
 
-##  <a name="getsize"></a>CThreadPool:: GetSize
+## <a name="cthreadpoolgetsize"></a><a name="getsize"></a>CThreadPool:取得 Size
 
-呼叫這個方法, 以取得集區中的執行緒數目。
+調用此方法獲取池中的線程數。
 
 ```
 HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
@@ -171,15 +171,15 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="parameters"></a>參數
 
 *pnNumThreads*<br/>
-脫銷在成功時, 會收到集區中的執行緒數目之變數的位址。
+[出]變數的位址,在成功時,接收池中的線程數。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
-##  <a name="gettimeout"></a>CThreadPool::GetTimeout
+## <a name="cthreadpoolgettimeout"></a><a name="gettimeout"></a>CThreadPool:取得超時
 
-呼叫這個方法以取得執行緒集區等候執行緒關閉的最長時間 (以毫秒為單位)。
+調用此方法,獲取線程池將等待線程關閉的最大時間(以毫秒為單位)。
 
 ```
 HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
@@ -188,19 +188,19 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="parameters"></a>參數
 
 *pdwMaxWait*<br/>
-脫銷在成功時, 變數的位址會收到執行緒集區等候執行緒關閉的最長時間 (以毫秒為單位)。
+[出]變數的位址,在成功時,接收線程池將等待線程關閉的最大時間(以毫秒為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-如果沒有提供其他值給該方法, [CThreadPool:: Shutdown](#shutdown)會使用這個 timeout 值。
+[CThreadPool::](#shutdown)如果未向該方法提供其他值,則使用此超時值::如果未向該方法提供其他值,則關閉。
 
-##  <a name="initialize"></a>CThreadPool:: Initialize
+## <a name="cthreadpoolinitialize"></a><a name="initialize"></a>CThreadPool:初始化
 
-呼叫這個方法來初始化執行緒集區。
+調用此方法以初始化線程池。
 
 ```
 HRESULT Initialize(
@@ -213,28 +213,28 @@ HRESULT Initialize(
 ### <a name="parameters"></a>參數
 
 *pvWorkerParam*<br/>
-要傳遞至背景工作執行緒物件`Initialize`之、 `Execute`和`Terminate`方法的背景工作參數。
+要傳遞給輔助線程物件的`Initialize`輔助角色`Execute`參數 ,`Terminate`和方法。
 
 *nNumThreads*<br/>
-集區中要求的執行緒數目。
+池中請求的線程數。
 
-如果*nNumThreads*為負數, 則其絕對值會乘以電腦中的處理器數目, 以取得執行緒總數。
+如果*nNumThreads*為負值,則其絕對值將乘以電腦中的處理器數,以獲得線程總數。
 
-如果*nNumThreads*為零, 則 ATLS_DEFAULT_THREADSPERPROC 會乘以電腦中的處理器數目, 以取得執行緒的總數目。  預設值為每個處理器2個執行緒。 如有需要, 您可以在包含 atlutil 之前, 為這個符號定義您自己的正整數值。
+如果*nNumThreads*為零,ATLS_DEFAULT_THREADSPERPROC將乘以計算機中的處理器數,以獲得線程總數。  默認值為每處理器 2 個線程。 如有必要,您可以在包含 atlutil.h 之前為此符號定義您自己的正整數值。
 
 *dwStackSize*<br/>
-集區中每個執行緒的堆疊大小。
+池中每個線程的堆疊大小。
 
-*hCompletion*<br/>
-要與完成通訊埠產生關聯之物件的控制碼。
+*h 完成*<br/>
+要與完成埠關聯的物件的句柄。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
-##  <a name="queryinterface"></a>CThreadPool:: QueryInterface
+## <a name="cthreadpoolqueryinterface"></a><a name="queryinterface"></a>CThreadPool:查詢介面
 
-的`IUnknown::QueryInterface`執行。
+`IUnknown::QueryInterface` 的實作。
 
 ```
 HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
@@ -242,11 +242,11 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 
 ### <a name="remarks"></a>備註
 
-這個類別的物件可以成功地查詢`IUnknown`和[IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)介面。
+可以成功查詢此類的物件`IUnknown`和[IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)介面。
 
-##  <a name="queuerequest"></a>CThreadPool::QueueRequest
+## <a name="cthreadpoolqueuerequest"></a><a name="queuerequest"></a>CThreadPool:佇列請求
 
-呼叫這個方法, 將工作專案排入佇列, 以便由集區中的執行緒。
+調用此方法以對池中的線程要處理的工作項進行排隊。
 
 ```
 BOOL QueueRequest(Worker::RequestType request) throw();
@@ -254,20 +254,20 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>參數
 
-*request*<br/>
-要排入佇列的要求。
+*要求*<br/>
+要排隊的請求。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將工作專案加入至佇列。 集區中的執行緒會依照接收的順序來挑選佇列中的專案。
+此方法將工作項添加到佇列中。 池中的線程按接收項的順序從佇列中選取項。
 
-##  <a name="release"></a>CThreadPool:: Release
+## <a name="cthreadpoolrelease"></a><a name="release"></a>CThreadPool:發佈
 
-的`IUnknown::Release`執行。
+`IUnknown::Release` 的實作。
 
 ```
 ULONG STDMETHODCALLTYPE Release() throw();
@@ -275,15 +275,15 @@ ULONG STDMETHODCALLTYPE Release() throw();
 
 ### <a name="return-value"></a>傳回值
 
-一律傳回1。
+始終返回 1。
 
 ### <a name="remarks"></a>備註
 
-這個類別不會使用參考計數來執行存留期控制。
+此類不使用引用計數實現存留期控制。
 
-##  <a name="setsize"></a>CThreadPool:: SetSize
+## <a name="cthreadpoolsetsize"></a><a name="setsize"></a>CThreadPool:設定大小
 
-呼叫這個方法, 以設定集區中的執行緒數目。
+調用此方法以設置池中的線程數。
 
 ```
 HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
@@ -292,23 +292,23 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 ### <a name="parameters"></a>參數
 
 *nNumThreads*<br/>
-集區中要求的執行緒數目。
+池中請求的線程數。
 
-如果*nNumThreads*為負數, 則其絕對值會乘以電腦中的處理器數目, 以取得執行緒總數。
+如果*nNumThreads*為負值,則其絕對值將乘以電腦中的處理器數,以獲得線程總數。
 
-如果*nNumThreads*為零, 則 ATLS_DEFAULT_THREADSPERPROC 會乘以電腦中的處理器數目, 以取得執行緒的總數目。 預設值為每個處理器2個執行緒。 如有需要, 您可以在包含 atlutil 之前, 為這個符號定義您自己的正整數值。
+如果*nNumThreads*為零,ATLS_DEFAULT_THREADSPERPROC將乘以計算機中的處理器數,以獲得線程總數。 默認值為每處理器 2 個線程。 如有必要,您可以在包含 atlutil.h 之前為此符號定義您自己的正整數值。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-如果指定的執行緒數目小於目前在集區中的執行緒數目, 此物件會將關閉訊息放在佇列上, 以等待中的執行緒拾取。 當等候中的執行緒從佇列中提取訊息時, 它會通知執行緒集區, 並結束執行緒程式。 此程式會重複執行, 直到集區中的執行緒數目達到指定的數目, 或直到[GetTimeout](#gettimeout) /  [SetTimeout](#settimeout)所指定的期間內沒有任何執行緒結束為止。 在這種情況下, 方法會傳回對應至 WAIT_TIMEOUT 的 HRESULT, 並取消暫止的關閉訊息。
+如果指定的線程數小於池中當前線程數,則物件將在佇列中放置一條關機消息,以便等待線程選取。 當等待的線程將消息從佇列中拉出時,它會通知線程池並退出線程過程。 此過程將重複,直到池中的線程數達到指定數量,或者直到[GetTimeout](#gettimeout)/ [設置超時](#settimeout)指定的期間沒有線程退出。 在此情況下,該方法將返回一個對應於WAIT_TIMEOUT的 HRESULT,並且掛起的關機消息將被取消。
 
-##  <a name="settimeout"></a>CThreadPool:: SetTimeout
+## <a name="cthreadpoolsettimeout"></a><a name="settimeout"></a>CThreadPool:設置超時
 
-呼叫這個方法來設定執行緒集區等候執行緒關閉的最長時間 (以毫秒為單位)。
+調用此方法以設置線程池將等待線程關閉的最大時間(以毫秒為單位)。
 
 ```
 HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
@@ -317,21 +317,21 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 ### <a name="parameters"></a>參數
 
 *dwMaxWait*<br/>
-執行緒集區等候執行緒關閉的要求最大時間 (以毫秒為單位)。
+請求的最大時間(以毫秒為單位)用於線程池將等待線程關閉。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-Timeout 會初始化為 ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT。 預設時間為36秒。 如有需要, 您可以在包含 atlutil 之前, 為這個符號定義您自己的正整數值。
+超時初始化為ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT。 默認時間是 36 秒。 如有必要,您可以在包含 atlutil.h 之前為此符號定義您自己的正整數值。
 
-請注意, *dwMaxWait*是集區等候單一執行緒關閉的時間。 從集區中移除多個執行緒所能採取的時間上限, 可能會稍微小於*dwMaxWait*乘以執行緒數目。
+請注意 *,dwMaxWait*是池將等待單個線程關閉的時間。 從池中刪除多個線程所可能需要的最大時間可能略低於*dwMaxWait*乘以線程數。
 
-##  <a name="shutdown"></a>CThreadPool:: Shutdown
+## <a name="cthreadpoolshutdown"></a><a name="shutdown"></a>CThreadPool:關閉
 
-呼叫這個方法來關閉執行緒集區。
+調用此方法以關閉線程池。
 
 ```
 void Shutdown(DWORD dwMaxWait = 0) throw();
@@ -340,14 +340,14 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 ### <a name="parameters"></a>參數
 
 *dwMaxWait*<br/>
-執行緒集區等候執行緒關閉的要求最大時間 (以毫秒為單位)。 如果0或未提供任何值, 這個方法會使用[CThreadPool:: SetTimeout](#settimeout)所設定的超時時間。
+請求的最大時間(以毫秒為單位)用於線程池將等待線程關閉。 如果提供 0 或沒有值,此方法將使用[CThreadPool::SetTimeout](#settimeout)設置的超時設置。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將關閉要求張貼至集區中的所有線程。 如果超時時間過期, 這個方法會在未結束的任何執行緒上呼叫[TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) 。 這個方法是從類別的「析構函式」自動呼叫。
+此方法將關機請求發佈到池中的所有線程。 如果超時過期,此方法將在未退出的任何線程上調用[TerminateThread。](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) 此方法從類的析構函數自動調用。
 
 ## <a name="see-also"></a>另請參閱
 
-[IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[IThreadPool 設定介面](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[預設執行緒特徵](atl-typedefs.md#defaultthreadtraits)<br/>
 [類別](../../atl/reference/atl-classes.md)

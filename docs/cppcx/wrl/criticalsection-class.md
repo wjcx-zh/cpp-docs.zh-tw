@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: dd34206741ba8fee8b283e22b6e8eefb3b3efb0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5deb89e795d1886ca316886ae1ea260ce1f36fd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398585"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372593"
 ---
 # <a name="criticalsection-class"></a>CriticalSection 類別
 
-表示重要區段物件。
+表示關鍵節物件。
 
 ## <a name="syntax"></a>語法
 
@@ -42,44 +42,44 @@ class CriticalSection;
 
 名稱                                                        | 描述
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::CriticalSection](#criticalsection)        | 初始化同步處理物件，類似於 mutex 物件，但可由單一的程序的執行緒。
-[CriticalSection::~CriticalSection](#tilde-criticalsection) | 取消初始化並終結目前`CriticalSection`物件。
+[關鍵部分::關鍵部分](#criticalsection)        | 初始化類似於互斥物件的同步物件,但只能由單個進程的線程使用。
+[關鍵部分::*關鍵部分](#tilde-criticalsection) | 取消初始化和銷毀當前`CriticalSection`物件。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                 | 描述
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::IsValid](#isvalid) | 指出目前的重要區段是否有效。
-[CriticalSection::Lock](#lock)       | 等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。
-[CriticalSection::TryLock](#trylock) | 嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。
+[關鍵部分::有效](#isvalid) | 指示當前關鍵部分是否有效。
+[關鍵部份:鎖定](#lock)       | 等待指定關鍵節物件的擁有權。 當調用線程被授予擁有權時,函數將返回。
+[關鍵部份::嘗試鎖定](#trylock) | 嘗試在不阻塞的情況下進入關鍵部分。 如果調用成功,則調用線程將接管關鍵部分的擁有權。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 名稱                        | 描述
 --------------------------- | ----------------------------------------
-[CriticalSection::cs_](#cs) | 宣告重要區段的資料成員。
+[關鍵部分::cs_](#cs) | 聲明關鍵節數據成員。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CriticalSection`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft::WRL::Wrappers
+**命名空間:** 微軟::WRL:包裝
 
-## <a name="tilde-criticalsection"></a>CriticalSection::~CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>關鍵部分::*關鍵部分
 
-取消初始化並終結目前`CriticalSection`物件。
+取消初始化和銷毀當前`CriticalSection`物件。
 
 ```cpp
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsection"></a>CriticalSection::CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>關鍵部分::關鍵部分
 
-初始化同步處理物件，類似於 mutex 物件，但可由單一的程序的執行緒。
+初始化類似於互斥物件的同步物件,但只能由單個進程的線程使用。
 
 ```cpp
 explicit CriticalSection(
@@ -89,16 +89,16 @@ explicit CriticalSection(
 
 ### <a name="parameters"></a>參數
 
-*spincount*<br/>
-重要區段物件旋轉計數。 預設值為 0。
+*旋轉計數*<br/>
+關鍵截面物件的自旋計數。 預設值為 0。
 
 ### <a name="remarks"></a>備註
 
-如需關鍵區段和 spincounts 的詳細資訊，請參閱`InitializeCriticalSectionAndSpinCount`函式中`Synchronization`Windows API 文件的區段。
+有關關鍵部分和自旋計數的詳細資訊,請參閱 Windows `InitializeCriticalSectionAndSpinCount` `Synchronization`API 操作版部分中的函數。
 
-## <a name="cs"></a>CriticalSection::cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a>關鍵部分::cs_
 
-宣告重要區段的資料成員。
+聲明關鍵節數據成員。
 
 ```cpp
 CRITICAL_SECTION cs_;
@@ -106,11 +106,11 @@ CRITICAL_SECTION cs_;
 
 ### <a name="remarks"></a>備註
 
-此資料成員會受到保護。
+此數據成員受到保護。
 
-## <a name="isvalid"></a>CriticalSection::IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>關鍵部分::有效
 
-指出目前的重要區段是否有效。
+指示當前關鍵部分是否有效。
 
 ```cpp
 bool IsValid() const;
@@ -118,11 +118,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-根據預設，一律會傳回 **，則為 true**。
+預設情況下,始終返回**true**。
 
-## <a name="lock"></a>CriticalSection::Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a>關鍵部份:鎖定
 
-等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。
+等待指定關鍵節物件的擁有權。 當調用線程被授予擁有權時,函數將返回。
 
 ```cpp
 SyncLock Lock();
@@ -135,19 +135,19 @@ SyncLock Lock();
 ### <a name="parameters"></a>參數
 
 *cs*<br/>
-使用者指定的重要區段物件。
+使用者指定的關鍵節物件。
 
 ### <a name="return-value"></a>傳回值
 
-鎖定物件，可用來解除鎖定目前的重要區段。
+可用於解鎖當前關鍵部分的鎖定物件。
 
 ### <a name="remarks"></a>備註
 
-第一個`Lock`函式會影響目前的重要區段物件。 第二個`Lock`函式會影響使用者指定的重要區段。
+第一`Lock`個函數影響當前關鍵截面物件。 第二`Lock`個函數影響使用者指定的關鍵部分。
 
-## <a name="trylock"></a>CriticalSection::TryLock
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a>關鍵部份::嘗試鎖定
 
-嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。
+嘗試在不阻塞的情況下進入關鍵部分。 如果調用成功,則調用線程將接管關鍵部分的擁有權。
 
 ```cpp
 SyncLock TryLock();
@@ -160,12 +160,12 @@ static SyncLock TryLock(
 ### <a name="parameters"></a>參數
 
 *cs*<br/>
-使用者指定的重要區段物件。
+使用者指定的關鍵節物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功進入重要區段，為非零值或目前的執行緒已經擁有重要區段。 如果另一個執行緒已經擁有重要區段，則為零。
+如果成功輸入關鍵節或當前線程已擁有關鍵節,則為非零值。 如果另一個線程已擁有關鍵部分,則為零。
 
 ### <a name="remarks"></a>備註
 
-第一個`TryLock`函式會影響目前的重要區段物件。 第二個`TryLock`函式會影響使用者指定的重要區段。
+第一`TryLock`個函數影響當前關鍵截面物件。 第二`TryLock`個函數影響使用者指定的關鍵部分。

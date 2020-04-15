@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df9ca6d140cb9e3ec85be3ce32760a66599c5d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324463"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318238"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity 類別
 
@@ -37,40 +37,40 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 
 |名稱|描述|
 |----------|-----------------|
-|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|建構轉換物件。|
+|[從速度的CSinusoid過渡:從速度中轉換的CSinusoid](#csinusoidaltransitionfromvelocity)|構造過渡物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSinusoidalTransitionFromVelocity::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[從速度轉換的 CSinusoid 轉換:建立](#create)|呼叫過渡庫以建立封裝的過渡 COM 物件。 ( 覆寫[CBase 轉換:建立](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|轉換的持續時間。|
-|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|以秒為單位的正弦曲線 wave 振動期間。|
+|[從速度轉換的CSinusoid轉換::m_duration](#m_duration)|轉換的持續時間。|
+|[從速度轉換的CSinusoid轉換::m_period](#m_period)|正弦波的振蕩週期(以秒為單位)。|
 
 ## <a name="remarks"></a>備註
 
-正弦曲線範圍轉換中的整個持續期間內，初始值前後 oscillates 動畫變數的值。 轉換開始時由動畫變數的速度決定振動撤回。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。
+動畫變數的值在正弦範圍轉換的整個持續時間內圍繞初始值振蕩。 振蕩的振幅由轉換開始時動畫變數的速度決定。 由於所有轉換都將自動清除,因此建議使用運算符 new 分配。 封裝的 IUI動畫轉換 COM 物件由 C動畫控制器::AnimateGroup 創建,直到此為止,它才為 NULL。 建立此 COM 物件後更改成員變數不起作用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 轉換](../../mfc/reference/cbasetransition-class.md)
 
-[CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)
+[從速度轉換的 CSinusoid](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)
 
 ## <a name="requirements"></a>需求
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create
+## <a name="csinusoidaltransitionfromvelocitycreate"></a><a name="create"></a>從速度轉換的 CSinusoid 轉換:建立
 
-呼叫轉換程式庫來建立封裝的轉換 COM 物件。
+呼叫過渡庫以建立封裝的過渡 COM 物件。
 
 ```
 virtual BOOL Create(
@@ -80,16 +80,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pLibrary*<br/>
-轉換程式庫，也就是負責建立的標準轉換指標。
+*p庫*<br/>
+指向過渡庫的指標,它負責創建標準轉換。
 
 ### <a name="return-value"></a>傳回值
 
-如果轉換成功; 建立，則為 TRUE。否則為 FALSE。
+如果成功創建轉換,則為 TRUE;如果成功創建轉換,則為 TRUE。否則 FALSE。
 
-##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+## <a name="csinusoidaltransitionfromvelocitycsinusoidaltransitionfromvelocity"></a><a name="csinusoidaltransitionfromvelocity"></a>從速度的CSinusoid過渡:從速度中轉換的CSinusoid
 
-建構轉換物件。
+構造過渡物件。
 
 ```
 CSinusoidalTransitionFromVelocity(
@@ -99,13 +99,13 @@ CSinusoidalTransitionFromVelocity(
 
 ### <a name="parameters"></a>參數
 
-*duration*<br/>
+*時間*<br/>
 轉換的持續時間。
 
-*period*<br/>
-以秒為單位的正弦曲線 wave 振動期間。
+*時期*<br/>
+正弦波的振蕩週期(以秒為單位)。
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration
+## <a name="csinusoidaltransitionfromvelocitym_duration"></a><a name="m_duration"></a>從速度轉換的CSinusoid轉換::m_duration
 
 轉換的持續時間。
 
@@ -113,9 +113,9 @@ CSinusoidalTransitionFromVelocity(
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period
+## <a name="csinusoidaltransitionfromvelocitym_period"></a><a name="m_period"></a>從速度轉換的CSinusoid轉換::m_period
 
-以秒為單位的正弦曲線 wave 振動期間。
+正弦波的振蕩週期(以秒為單位)。
 
 ```
 UI_ANIMATION_SECONDS m_period;

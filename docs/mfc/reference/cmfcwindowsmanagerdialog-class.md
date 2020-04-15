@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCWindowsManagerDialog [MFC], CMFCWindowsManagerDialog
 ms.assetid: 35b4b0db-33c4-4b22-94d8-5e3396341340
-ms.openlocfilehash: 5089decc7a118cd867aa14df51f5d7e269221108
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3928c0d3ae4f607dceb99c0762277e8ea9ddbde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373657"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319831"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog 類別
 
-`CMFCWindowsManagerDialog`物件可讓使用者管理 MDI 應用程式中的 MDI 子視窗。
+該`CMFCWindowsManagerDialog`物件使用戶能夠在 MDI 應用程式中管理 MDI 子視窗。
 
 ## <a name="syntax"></a>語法
 
@@ -31,21 +31,21 @@ class CMFCWindowsManagerDialog : public CDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|建構 `CMFCWindowsManagerDialog` 物件。|
+|[CMFCWindows 管理員對話::CMFCWindows管理員對話](#cmfcwindowsmanagerdialog)|建構 `CMFCWindowsManagerDialog` 物件。|
 
 ## <a name="remarks"></a>備註
 
-`CMFCWindowsManagerDialog`包含應用程式中目前開啟的 MDI 子視窗的清單。 使用者可以使用此對話方塊，手動控制 MDI 子視窗的狀態。
+包含`CMFCWindowsManagerDialog`目前在應用程式中打開的 MDI 子視窗的清單。 用戶可以使用此對話方塊手動控制 MDI 子視窗的狀態。
 
-`CMFCWindowsManagerDialog` 內嵌於[CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)。 `CMFCWindowsManagerDialog`不是您應該以手動方式建立的類別。 相反地，呼叫此函式[CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog)，它就會建立及顯示`CMFCWindowsManagerDialog`物件。
+`CMFCWindowsManagerDialog`嵌入在[CMDIFrameWndEx 類](../../mfc/reference/cmdiframewndex-class.md)中。 `CMFCWindowsManagerDialog`不是應手動創建的類。 相反,調用函數[CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog),它將創建並顯示`CMFCWindowsManagerDialog`一個 物件。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCWindowsManagerDialog`藉由呼叫物件`CMDIFrameWndEx::ShowWindowsDialog`。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何通過調用`CMFCWindowsManagerDialog``CMDIFrameWndEx::ShowWindowsDialog`構造物件。 此代碼段是[可視化工作室演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -59,11 +59,11 @@ class CMFCWindowsManagerDialog : public CDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxWindowsManagerDialog.h
+**標題:** afxWindowsManagerDialog.h
 
-##  <a name="cmfcwindowsmanagerdialog"></a>  CMFCWindowsManagerDialog::CMFCWindowsManagerDialog
+## <a name="cmfcwindowsmanagerdialogcmfcwindowsmanagerdialog"></a><a name="cmfcwindowsmanagerdialog"></a>CMFCWindows 管理員對話::CMFCWindows管理員對話
 
-建構[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)物件。
+構造[CMFCWindowsManager對話](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)物件。
 
 ```
 CMFCWindowsManagerDialog(
@@ -73,15 +73,15 @@ CMFCWindowsManagerDialog(
 
 ### <a name="parameters"></a>參數
 
-*pMDIFrame*<br/>
-[in]父系或擁有者視窗的指標。
+*pMDI框架*<br/>
+[在]指向父視窗或擁有者視窗的指標。
 
-*bHelpButton*<br/>
-[in]布林值參數，指定是否要顯示架構**協助** 按鈕。
+*B 說明按鈕*<br/>
+[在]指定框架是否顯示 **「説明」** 按鈕的布林參數。
 
 ### <a name="remarks"></a>備註
 
-如需有關視覺管理員的詳細資訊，請參閱[視覺化管理員](../../mfc/visualization-manager.md)。
+有關視覺化管理員的詳細資訊,請參考[視覺化管理員](../../mfc/visualization-manager.md)。
 
 ## <a name="see-also"></a>另請參閱
 

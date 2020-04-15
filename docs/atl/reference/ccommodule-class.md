@@ -31,19 +31,19 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 652c5f078ddbaf8d3e333f7003d6515a94dd8f83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417912"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327765"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 
-從 ATL 7.0，`CComModule` 已被取代：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+自 ATL 7.0`CComModule`起,已棄用:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -57,57 +57,57 @@ class CComModule : public _ATL_MODULE
 
 |名稱|描述|
 |----------|-----------------|
-|[CComModule：： GetClassObject](#getclassobject)|建立指定之 CLSID 的物件。 僅適用于 Dll。|
-|[CComModule：： GetModuleInstance](#getmoduleinstance)|傳回 `m_hInst`。|
-|[CComModule：： GetResourceInstance](#getresourceinstance)|傳回 `m_hInstResource`。|
-|[CComModule：： GetTypeLibInstance](#gettypelibinstance)|傳回 `m_hInstTypeLib`。|
-|[CComModule：： Init](#init)|初始化資料成員。|
-|[CComModule：： RegisterClassHelper](#registerclasshelper)|在系統登錄中輸入物件的標準類別註冊。|
-|[CComModule：： RegisterClassObjects](#registerclassobjects)|註冊類別物件。 僅適用于 Exe。|
-|[CComModule：： RegisterServer](#registerserver)|更新物件對應中每個物件的系統登錄。|
-|[CComModule：： RegisterTypeLib](#registertypelib)|註冊類型程式庫。|
-|[CComModule：： RevokeClassObjects](#revokeclassobjects)|撤銷類別物件。 僅適用于 Exe。|
-|[CComModule：： Term](#term)|發行資料成員。|
-|[CComModule：： UnregisterClassHelper](#unregisterclasshelper)|從系統登錄移除物件的標準類別註冊。|
-|[CComModule：： UnregisterServer](#unregisterserver)|取消註冊物件對應中的每個物件。|
-|[CComModule：： UpdateRegistryClass](#updateregistryclass)|註冊或取消註冊物件的標準類別註冊。|
-|[CComModule：： UpdateRegistryFromResourceD](#updateregistryfromresourced)|執行包含在指定資源中的腳本，以註冊或取消註冊物件。|
-|[CComModule：： UpdateRegistryFromResourceS](#updateregistryfromresources)|以靜態方式連結至 ATL 登錄元件。 執行包含在指定資源中的腳本，以註冊或取消註冊物件。|
+|[CCom 模組:取得類別](#getclassobject)|建立指定 CLSID 的物件。 僅適用於 DLL。|
+|[CCom 模組:抓取模組實體](#getmoduleinstance)|傳回 `m_hInst`。|
+|[CCom 模組:抓取資源實體](#getresourceinstance)|傳回 `m_hInstResource`。|
+|[CCom 模組:取得類型 Lib實例](#gettypelibinstance)|傳回 `m_hInstTypeLib`。|
+|[CCom模組::Init](#init)|初始化數據成員。|
+|[CCom模組::註冊類説明者](#registerclasshelper)|在系統註冊表中輸入物件的標準類註冊。|
+|[CCom 模組::註冊類物件](#registerclassobjects)|註冊類物件。 僅適用於 EXEs。|
+|[CCom 模組::註冊伺服器](#registerserver)|更新物件映射中每個物件的系統註冊表。|
+|[CCom模組::註冊類型Lib](#registertypelib)|註冊類型程式庫。|
+|[CCom 模組::撤銷類別](#revokeclassobjects)|撤銷類物件。 僅適用於 EXEs。|
+|[CCom 模組::學期](#term)|釋放數據成員。|
+|[CCom 模組::未註冊類幫助程式](#unregisterclasshelper)|從系統註冊表中刪除物件的標準類註冊。|
+|[CCom 模組::取消註冊伺服器](#unregisterserver)|取消註冊物件映射中的每個物件。|
+|[CCom 模組::更新註冊表類](#updateregistryclass)|註冊或取消註冊對象的標準類註冊。|
+|[CCom 模組::從資源中更新註冊表](#updateregistryfromresourced)|運行指定資源中包含的腳本以註冊或取消註冊物件。|
+|[CCom模組::從資源更新註冊表](#updateregistryfromresources)|靜態連結到 ATL 註冊表元件。 運行指定資源中包含的腳本以註冊或取消註冊物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CComModule：： m_csObjMap](#m_csobjmap)|確保同步存取物件對應資訊。|
-|[CComModule：： m_csTypeInfoHolder](#m_cstypeinfoholder)|確保對類型程式庫資訊的同步存取。|
-|[CComModule：： m_csWindowCreate](#m_cswindowcreate)|確保同步存取視窗類別資訊，以及在建立視窗期間所使用的靜態資料。|
-|[CComModule：： m_hInst](#m_hinst)|包含模組實例的控制碼。|
-|[CComModule：： m_hInstResource](#m_hinstresource)|根據預設，會包含模組實例的控制碼。|
-|[CComModule：： m_hInstTypeLib](#m_hinsttypelib)|根據預設，會包含模組實例的控制碼。|
-|[CComModule：： m_pObjMap](#m_pobjmap)|指向模組實例所維護的物件對應。|
+|[CCom模組:m_csObjMap](#m_csobjmap)|確保同步訪問物件映射資訊。|
+|[CCom模組::m_csTypeInfoHolder](#m_cstypeinfoholder)|確保同步存取類型庫資訊。|
+|[CCom模組:m_csWindowCreate](#m_cswindowcreate)|確保同步存取視窗創建期間使用的視窗類資訊和靜態資料。|
+|[CCom模組::m_hInst](#m_hinst)|包含模組實例的句柄。|
+|[CCom模組:m_hInstResource](#m_hinstresource)|默認情況下,包含模組實例的句柄。|
+|[CCom模組::m_hInstTypeLib](#m_hinsttypelib)|默認情況下,包含模組實例的句柄。|
+|[CCom模組:m_pObjMap](#m_pobjmap)|指向模組實例維護的物件映射。|
 
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
->  這個類別已被取代，而 ATL 程式碼產生的嚮導現在會使用[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)和[CAtlModule](../../atl/reference/catlmodule-class.md)衍生的類別。 如需詳細資訊，請參閱[ATL 模組類別](../../atl/atl-module-classes.md)。 接下來的資訊適用于使用舊版 ATL 所建立的應用程式。 `CComModule` 仍然是 ATL 的一部分，以便回溯功能。
+> 此類被棄用,ATL 代碼生成嚮導現在使用[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)和[CAtlModule](../../atl/reference/catlmodule-class.md)派生類。 有關詳細資訊[,請參閱 ATL 模組課程](../../atl/atl-module-classes.md)。 以下資訊適用於使用舊版本的 ATL 創建的應用程式。 `CComModule`仍然是 ATL 的一部分,用於向後功能。
 
-`CComModule` 會執行 COM 伺服器模組，讓用戶端可以存取模組的元件。 `CComModule` 支援 DLL （同進程）和 EXE （本機）模組。
+`CComModule`實現 COM 伺服器模組,允許用戶端訪問模組的元件。 `CComModule`支援 DLL(在位)和 EXE(本地)模組。
 
-`CComModule` 實例會使用物件對應來維護一組類別物件定義。 這個物件對應會實作為 `_ATL_OBJMAP_ENTRY` 結構的陣列，並包含下列資訊：
+實例`CComModule`使用物件映射來維護一組類物件定義。 此物件對應為結構列來`_ATL_OBJMAP_ENTRY`實現,並包含用於:
 
-- 在系統登錄中輸入和移除物件描述。
+- 在系統註冊表中輸入和刪除物件描述。
 
-- 透過 Class Factory 來具現化物件。
+- 通過類工廠實例化物件。
 
-- 建立用戶端與元件中根物件之間的通訊。
+- 建立用戶端和元件中的根對象之間的通信。
 
-- 執行類別物件的存留期管理。
+- 執行類物件的存留期管理。
 
-當您執行 ATL COM 建立嚮導時，嚮導會自動產生 `_Module`、`CComModule` 的全域實例，或衍生自它的類別。 如需 ATL 專案 Wizard 的詳細資訊，請參閱[建立 Atl 專案一](../../atl/reference/creating-an-atl-project.md)文。
+運行 ATL COM 應用精靈時,嚮導會`_Module`自動`CComModule`生成的全域實例或派生自它的類。 有關 ATL 專案精靈的詳細資訊,請參閱創建[ATL 專案](../../atl/reference/creating-an-atl-project.md)的文章。
 
-除了 `CComModule`以外，ATL 還提供[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)，其可執行 Exe 和 Windows 服務的單元模型模組。 當您想要在多個單元中建立物件時，請從 `CComAutoThreadModule` 衍生您的模組。
+此外,ATL`CComModule`還提供[CComAutoThread 模組](../../atl/reference/ccomautothreadmodule-class.md),該模組為 EXEs 和 Windows 服務實現了單元模型模組。 從`CComAutoThreadModule`要在多個單元中創建物件時派生模組。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
@@ -119,11 +119,11 @@ class CComModule : public _ATL_MODULE
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h。h
+**標題:** atlbase.h
 
-##  <a name="getclassobject"></a>CComModule：： GetClassObject
+## <a name="ccommodulegetclassobject"></a><a name="getclassobject"></a>CCom 模組:取得類別
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HRESULT GetClassObject(
@@ -135,27 +135,27 @@ HRESULT GetClassObject(
 ### <a name="parameters"></a>參數
 
 *rclsid*<br/>
-在要建立之物件的 CLSID。
+[在]要建立的物件的 CLSID。
 
 *riid*<br/>
-在所要求介面的 IID。
+[在]請求介面的 IID。
 
-*ppv*<br/>
-脫銷由*riid*識別之介面指標的指標。 如果物件不支援這個介面， *ppv*會設定為 Null。
+*Ppv*<br/>
+[出]指向*riid*標識的介面指標的指標。 如果物件不支援此介面,*則 ppv*設定為 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-建立指定之 CLSID 的物件，並抓取這個物件的介面指標。
+建立指定的 CLSID 的物件並檢索指向此物件的介面指標。
 
-`GetClassObject` 僅適用于 Dll。
+`GetClassObject`僅適用於 DLL。
 
-##  <a name="getmoduleinstance"></a>CComModule：： GetModuleInstance
+## <a name="ccommodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CCom 模組:抓取模組實體
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -167,11 +167,11 @@ HINSTANCE GetModuleInstance() throw();
 
 ### <a name="remarks"></a>備註
 
-傳回[m_hInst](#m_hinst)的資料成員。
+返回[m_hInst](#m_hinst)數據成員。
 
-##  <a name="getresourceinstance"></a>CComModule：： GetResourceInstance
+## <a name="ccommodulegetresourceinstance"></a><a name="getresourceinstance"></a>CCom 模組:抓取資源實體
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HINSTANCE GetResourceInstance() throw();
@@ -179,15 +179,15 @@ HINSTANCE GetResourceInstance() throw();
 
 ### <a name="return-value"></a>傳回值
 
-HINSTANCE。
+一個哈普。
 
 ### <a name="remarks"></a>備註
 
-傳回[m_hInstResource](#m_hinstresource)的資料成員。
+返回[m_hInstResource](#m_hinstresource)數據成員。
 
-##  <a name="gettypelibinstance"></a>CComModule：： GetTypeLibInstance
+## <a name="ccommodulegettypelibinstance"></a><a name="gettypelibinstance"></a>CCom 模組:取得類型 Lib實例
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HINSTANCE GetTypeLibInstance() const throw();
@@ -195,15 +195,15 @@ HINSTANCE GetTypeLibInstance() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-HINSTANCE。
+一個哈普。
 
 ### <a name="remarks"></a>備註
 
-傳回[m_hInstTypeLib](#m_hinsttypelib)的資料成員。
+返回[m_hInstTypeLib](#m_hinsttypelib)數據成員。
 
-##  <a name="init"></a>CComModule：： Init
+## <a name="ccommoduleinit"></a><a name="init"></a>CCom模組::Init
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HRESULT Init(
@@ -214,26 +214,26 @@ HRESULT Init(
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
-在物件對應專案陣列的指標。
+*P*<br/>
+[在]指向物件映射條目陣列的指標。
 
-*h*<br/>
-在傳遞至 `DLLMain` 或 `WinMain`的 HINSTANCE。
+*H*<br/>
+[在]傳遞給`DLLMain``WinMain`或的 HINSTANCE。
 
-*plibid*<br/>
-在與專案相關聯之類型程式庫的 LIBID 指標。
+*普利比德*<br/>
+[在]指向與專案關聯的類型庫的 LIBID 的指標。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-初始化所有資料成員。
+初始化所有數據成員。
 
-##  <a name="m_csobjmap"></a>CComModule：： m_csObjMap
+## <a name="ccommodulem_csobjmap"></a><a name="m_csobjmap"></a>CCom模組:m_csObjMap
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 CRITICAL_SECTION m_csObjMap;
@@ -241,11 +241,11 @@ CRITICAL_SECTION m_csObjMap;
 
 ### <a name="remarks"></a>備註
 
-確保物件對應的同步存取。
+確保同步訪問對象映射。
 
-##  <a name="m_cstypeinfoholder"></a>CComModule：： m_csTypeInfoHolder
+## <a name="ccommodulem_cstypeinfoholder"></a><a name="m_cstypeinfoholder"></a>CCom模組::m_csTypeInfoHolder
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 CRITICAL_SECTION m_csTypeInfoHolder;
@@ -253,11 +253,11 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 
 ### <a name="remarks"></a>備註
 
-確保對類型程式庫的同步存取。
+確保同步存取類型庫。
 
-##  <a name="m_cswindowcreate"></a>CComModule：： m_csWindowCreate
+## <a name="ccommodulem_cswindowcreate"></a><a name="m_cswindowcreate"></a>CCom模組:m_csWindowCreate
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 CRITICAL_SECTION m_csWindowCreate;
@@ -265,11 +265,11 @@ CRITICAL_SECTION m_csWindowCreate;
 
 ### <a name="remarks"></a>備註
 
-確保同步存取 window 類別資訊，以及在建立視窗期間所使用的靜態資料。
+確保同步存取視窗類資訊和視窗創建期間使用的靜態資料。
 
-##  <a name="m_hinst"></a>CComModule：： m_hInst
+## <a name="ccommodulem_hinst"></a><a name="m_hinst"></a>CCom模組::m_hInst
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HINSTANCE m_hInst;
@@ -277,13 +277,13 @@ HINSTANCE m_hInst;
 
 ### <a name="remarks"></a>備註
 
-包含模組實例的控制碼。
+包含模組實例的句柄。
 
-[Init](#init)方法會將 `m_hInst` 設定為傳遞給 `DLLMain` 或 `WinMain`的控制碼。
+[Init](#init)方法`m_hInst`集 到`DLLMain`傳遞`WinMain`給 或 的句柄。
 
-##  <a name="m_hinstresource"></a>CComModule：： m_hInstResource
+## <a name="ccommodulem_hinstresource"></a><a name="m_hinstresource"></a>CCom模組:m_hInstResource
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HINSTANCE m_hInstResource;
@@ -291,15 +291,15 @@ HINSTANCE m_hInstResource;
 
 ### <a name="remarks"></a>備註
 
-根據預設，會包含模組實例的控制碼。
+默認情況下,包含模組實例的句柄。
 
-[Init](#init)方法會將 `m_hInstResource` 設定為傳遞給 `DLLMain` 或 `WinMain`的控制碼。 您可以明確地將 `m_hInstResource` 設定為資源的控制碼。
+[Init](#init)方法`m_hInstResource`集 到`DLLMain`傳遞`WinMain`給 或 的句柄。 您可以顯式設置為`m_hInstResource`資源的句柄。
 
-[GetResourceInstance](#getresourceinstance)方法會傳回儲存在 `m_hInstResource`中的控制碼。
+[GetResourceInstance](#getresourceinstance)方法返回存儲在`m_hInstResource`中的句柄。
 
-##  <a name="m_hinsttypelib"></a>CComModule：： m_hInstTypeLib
+## <a name="ccommodulem_hinsttypelib"></a><a name="m_hinsttypelib"></a>CCom模組::m_hInstTypeLib
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HINSTANCE m_hInstTypeLib;
@@ -307,15 +307,15 @@ HINSTANCE m_hInstTypeLib;
 
 ### <a name="remarks"></a>備註
 
-根據預設，會包含模組實例的控制碼。
+默認情況下,包含模組實例的句柄。
 
-[Init](#init)方法會將 `m_hInstTypeLib` 設定為傳遞給 `DLLMain` 或 `WinMain`的控制碼。 您可以明確地將 `m_hInstTypeLib` 設定為類型程式庫的控制碼。
+[Init](#init)方法`m_hInstTypeLib`集 到`DLLMain`傳遞`WinMain`給 或 的句柄。 您可以顯式設定為`m_hInstTypeLib`類型庫的句柄。
 
-[GetTypeLibInstance](#gettypelibinstance)方法會傳回儲存在 `m_hInstTypeLib`中的控制碼。
+[GetTypeLibinstance](#gettypelibinstance)方法返回存儲在`m_hInstTypeLib`中的句柄。
 
-##  <a name="m_pobjmap"></a>CComModule：： m_pObjMap
+## <a name="ccommodulem_pobjmap"></a><a name="m_pobjmap"></a>CCom模組:m_pObjMap
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 _ATL_OBJMAP_ENTRY* m_pObjMap;
@@ -323,11 +323,11 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 
 ### <a name="remarks"></a>備註
 
-指向模組實例所維護的物件對應。
+指向模組實例維護的物件映射。
 
-##  <a name="registerclasshelper"></a>CComModule：： RegisterClassHelper
+## <a name="ccommoduleregisterclasshelper"></a><a name="registerclasshelper"></a>CCom模組::註冊類説明者
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 ATL_DEPRECATED HRESULT RegisterClassHelper(
@@ -340,34 +340,34 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>參數
 
-*clsid*<br/>
-在要註冊之物件的 CLSID。
+*Clsid*<br/>
+[在]要註冊的物件的 CLSID。
 
 *lpszProgID*<br/>
-在與物件相關聯的 ProgID。
+[在]與物件關聯的 ProgID。
 
-*lpszVerIndProgID*<br/>
-在與物件相關聯的與版本無關的 ProgID。
+*lpszVerindProgID*<br/>
+[在]與物件關聯的版本無關的 ProgID。
 
 *nDescID*<br/>
-在物件描述的字串資源識別碼。
+[在]物件描述的字串資源的標識碼。
 
 *dwFlags*<br/>
-在指定要在登錄中輸入的執行緒模型。 可能的值為 THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
+[在]指定要在註冊表中輸入的線程模型。 可能的值是THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-在系統登錄中輸入物件的標準類別註冊。
+在系統註冊表中輸入物件的標準類註冊。
 
-[UpdateRegistryClass](#updateregistryclass)方法會呼叫 `RegisterClassHelper`。
+[更新註冊表類別](#updateregistryclass)方法呼`RegisterClassHelper`叫 。
 
-##  <a name="registerclassobjects"></a>CComModule：： RegisterClassObjects
+## <a name="ccommoduleregisterclassobjects"></a><a name="registerclassobjects"></a>CCom 模組::註冊類物件
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -375,23 +375,23 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwClsCoNtext*<br/>
-在指定要在其中執行類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 如需這些值的說明，請參閱 Windows SDK 中的[CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) 。
+*dwCls 上下文*<br/>
+[在]指定要在其中運行類物件的上下文。 可能的值是CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER或CLSCTX_LOCAL_SERVER。 有關這些值的說明,請參閱 Windows SDK 中的[CLSCTX。](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx)
 
 *dwFlags*<br/>
-在判斷類別物件的連線類型。 可能的值為 REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 如需這些值的說明，請參閱 Windows SDK 中的[REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) 。
+[在]確定與類對象的連接類型。 可能的值是REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE 或REGCLS_MULTI_SEPARATE。 有關這些值的說明,請參閱 Windows SDK 中的[REGCLS。](/windows/win32/api/combaseapi/ne-combaseapi-regcls)
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-向 OLE 註冊 EXE 類別物件，讓其他應用程式可以連接到它。 這個方法僅適用于 Exe。
+將 EXE 類物件註冊到 OLE,以便其他應用程式可以連接到它。 此方法僅適用於 EXEs。
 
-##  <a name="registerserver"></a>CComModule：： RegisterServer
+## <a name="ccommoduleregisterserver"></a><a name="registerserver"></a>CCom 模組::註冊伺服器
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HRESULT RegisterServer(
@@ -402,28 +402,28 @@ HRESULT RegisterServer(
 ### <a name="parameters"></a>參數
 
 *bRegTypeLib*<br/>
-在指出是否將註冊類型程式庫。 預設值為 FALSE。
+[在]指示類型庫是否將註冊。 預設值為 FALSE。
 
 *pCLSID*<br/>
-在指向要註冊之物件的 CLSID。 如果為 Null （預設值），則會註冊物件對應中的所有物件。
+[在]指向要註冊的物件的 CLSID。 如果 NULL(預設值),則將註冊物件映射中的所有物件。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-視*pCLSID*參數而定，會更新單一類別物件或物件對應中所有物件的系統登錄。
+根據*pCLSID*參數,更新單個類物件或物件映射中的所有物件的系統註冊表。
 
-如果*bRegTypeLib*為 TRUE，則也會更新類型程式庫資訊。
+如果*bRegTypeLib*為 TRUE,則類型庫資訊也將更新。
 
-如需如何將專案加入至物件對應的詳細資訊，請參閱[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) 。
+有關如何向物件映射添加條目的資訊,請參閱[OBJECT_ENTRY_AUTO。](object-map-macros.md#object_entry_auto)
 
-DLL 的 `DLLRegisterServer` 或使用 `/RegServer` 命令列選項執行 EXE 的 `WinMain`，會自動呼叫 `RegisterServer`。
+`RegisterServer`將自動呼叫`DLLRegisterServer`DLL`WinMain`或使用 命令列`/RegServer`選項執行的 EXE。
 
-##  <a name="registertypelib"></a>CComModule：： RegisterTypeLib
+## <a name="ccommoduleregistertypelib"></a><a name="registertypelib"></a>CCom模組::註冊類型Lib
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HRESULT RegisterTypeLib() throw();
@@ -433,21 +433,21 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 ### <a name="parameters"></a>參數
 
 *lpszIndex*<br/>
-在格式為 `"\\N"`的字串，其中 `N` 是 TYPELIB 資源的整數索引。
+[在]格式`"\\N"`的字串,`N`其中是 TYPELIB 資源的整數索引。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-將類型程式庫的相關資訊新增至系統登錄。
+將有關類型庫的資訊添加到系統註冊表。
 
-如果模組實例包含多個類型程式庫，請使用這個方法的第二個版本來指定應該使用的類型程式庫。
+如果模組實例包含多個類型庫,請使用此方法的第二個版本指定應使用的類型庫。
 
-##  <a name="revokeclassobjects"></a>CComModule：： RevokeClassObjects
+## <a name="ccommodulerevokeclassobjects"></a><a name="revokeclassobjects"></a>CCom 模組::撤銷類別
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HRESULT RevokeClassObjects() throw();
@@ -455,15 +455,15 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-移除類別物件。 這個方法僅適用于 Exe。
+刪除類物件。 此方法僅適用於 EXEs。
 
-##  <a name="term"></a>CComModule：： Term
+## <a name="ccommoduleterm"></a><a name="term"></a>CCom 模組::學期
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 void Term() throw();
@@ -471,11 +471,11 @@ void Term() throw();
 
 ### <a name="remarks"></a>備註
 
-釋放所有資料成員。
+釋放所有數據成員。
 
-##  <a name="unregisterclasshelper"></a>CComModule：： UnregisterClassHelper
+## <a name="ccommoduleunregisterclasshelper"></a><a name="unregisterclasshelper"></a>CCom 模組::未註冊類幫助程式
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 ATL_DEPRECATED HRESULT UnregisterClassHelper(
@@ -486,28 +486,28 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>參數
 
-*clsid*<br/>
-在要取消註冊之物件的 CLSID。
+*Clsid*<br/>
+[在]要未註冊的物件的 CLSID。
 
 *lpszProgID*<br/>
-在與物件相關聯的 ProgID。
+[在]與物件關聯的 ProgID。
 
-*lpszVerIndProgID*<br/>
-在與物件相關聯的與版本無關的 ProgID。
+*lpszVerindProgID*<br/>
+[在]與物件關聯的版本無關的 ProgID。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-從系統登錄移除物件的標準類別註冊。
+從系統註冊表中刪除物件的標準類註冊。
 
-[UpdateRegistryClass](#updateregistryclass)方法會呼叫 `UnregisterClassHelper`。
+[更新註冊表類別](#updateregistryclass)方法呼`UnregisterClassHelper`叫 。
 
-##  <a name="unregisterserver"></a>CComModule：： UnregisterServer
+## <a name="ccommoduleunregisterserver"></a><a name="unregisterserver"></a>CCom 模組::取消註冊伺服器
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
@@ -517,26 +517,26 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 ### <a name="parameters"></a>參數
 
 *bUnRegTypeLib*<br/>
-若為 TRUE，則也會取消註冊類型程式庫。
+如果為 TRUE,則類型庫也未註冊。
 
 *pCLSID*<br/>
-指向要取消註冊之物件的 CLSID。 如果為 Null （預設值），則會取消註冊物件對應中的所有物件。
+指向要未註冊的物件的 CLSID。 如果 NULL(預設值),則物件映射中的所有物件都將取消註冊。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-視*pCLSID*參數而定，會取消註冊單一類別物件或物件對應中的所有物件。
+根據*pCLSID*參數,取消註冊單個類物件或物件映射中的所有物件。
 
-DLL 的 `DLLUnregisterServer` 或使用 `/UnregServer` 命令列選項執行 EXE 的 `WinMain`，會自動呼叫 `UnregisterServer`。
+`UnregisterServer`將自動呼叫`DLLUnregisterServer`DLL`WinMain`或使用 命令列`/UnregServer`選項執行的 EXE。
 
-如需如何將專案加入至物件對應的詳細資訊，請參閱[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) 。
+有關如何向物件映射添加條目的資訊,請參閱[OBJECT_ENTRY_AUTO。](object-map-macros.md#object_entry_auto)
 
-##  <a name="updateregistryclass"></a>CComModule：： UpdateRegistryClass
+## <a name="ccommoduleupdateregistryclass"></a><a name="updateregistryclass"></a>CCom 模組::更新註冊表類
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 ATL_DEPRECATED HRESULT UpdateRegistryClass(
@@ -558,44 +558,44 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>參數
 
-*clsid*<br/>
-要註冊或取消註冊之物件的 CLSID。
+*Clsid*<br/>
+要註冊或未註冊的物件的 CLSID。
 
 *lpszProgID*<br/>
-與物件相關聯的 ProgID。
+與物件關聯的 ProgID。
 
-*lpszVerIndProgID*<br/>
-與物件相關聯的與版本無關的 ProgID。
+*lpszVerindProgID*<br/>
+與物件關聯的版本無關的 ProgID。
 
 *nDescID*<br/>
-物件描述的字串資源識別碼。
+物件描述的字串資源的標識碼。
 
-*szDesc*<br/>
+*什德斯茨*<br/>
 包含物件描述的字串。
 
 *dwFlags*<br/>
-指定要在登錄中輸入的執行緒模型。 可能的值為 THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
+指定要在註冊表中輸入的線程模型。 可能的值是THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
-*bRegister*<br/>
-指出是否應該註冊物件。
+*b 註冊*<br/>
+指示是否應註冊物件。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-如果*bRegister*為 TRUE，則這個方法會在系統登錄中輸入物件的標準類別註冊。
+如果*b寄存器*為 TRUE,則此方法在系統註冊表中輸入對象的標準類註冊。
 
-如果*bRegister*為 FALSE，則會移除物件的註冊。
+如果*b 註冊*為 FALSE,則刪除物件的註冊。
 
-視*bRegister*的值而定，`UpdateRegistryClass` 會呼叫[RegisterClassHelper](#registerclasshelper)或[UnregisterClassHelper](#unregisterclasshelper)。
+從*b 寄存器*的`UpdateRegistryClass`值, 呼叫[註冊類別說明程式](#registerclasshelper)或[取消註冊類別說明程式](#unregisterclasshelper)。
 
-藉由指定[DECLARE_REGISTRY](registry-macros.md#declare_registry)宏，在處理物件對應時，將會自動叫用 `UpdateRegistryClass`。
+通過指定[DECLARE_REGISTRY](registry-macros.md#declare_registry)`UpdateRegistryClass`宏, 將在處理物件映射時自動調用。
 
-##  <a name="updateregistryfromresourced"></a>CComModule：： UpdateRegistryFromResourceD
+## <a name="ccommoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>CCom 模組::從資源中更新註冊表
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 virtual HRESULT UpdateRegistryFromResourceD(
@@ -612,40 +612,40 @@ virtual HRESULT UpdateRegistryFromResourceD(
 ### <a name="parameters"></a>參數
 
 *lpszRes*<br/>
-在資源名稱。
+[在]資源名稱。
 
 *nResID*<br/>
-在資源識別碼。
+[在]資源識別碼。
 
-*bRegister*<br/>
-在指出是否應該註冊物件。
+*b 註冊*<br/>
+[在]指示是否應註冊物件。
 
-*pMapEntries*<br/>
-在取代對應的指標，儲存與腳本可取代參數相關聯的值。 ATL 會自動使用 `%MODULE%`。 若要使用其他可替換的參數，請參閱備註以取得詳細資料。 否則，請使用 Null 預設值。
+*pMap 項目*<br/>
+[在]指向替換映射的指標,儲存與腳本的可替換參數關聯的值。 ATL`%MODULE%`自動 使用 。 要使用其他可替換參數,請參閱備註瞭解詳細資訊。 否則,請使用 NULL 預設值。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-執行包含在*lpszRes*或*nResID*所指定之資源中的腳本。
+執行*lpszRes*或*nResID*指定的資源中包含的文稿。
 
-如果*bRegister*為 TRUE，這個方法會在系統登錄中註冊物件;否則，它會取消註冊物件。
+如果*b寄存器*為 TRUE,則此方法將註冊系統註冊表中的物件;如果 b 寄存器為 TRUE,則此方法將註冊到系統註冊表中的物件。否則,它將取消註冊該物件。
 
-藉由指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏，在處理物件對應時，將會自動叫用 `UpdateRegistryFromResourceD`。
-
-> [!NOTE]
->  若要在執行時間取代取代值，請勿指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反地，請建立 `_ATL_REGMAP_ENTRIES` 結構的陣列，其中每個專案都包含一個與值配對的變數預留位置，以在執行時間取代預留位置。 然後，呼叫 `UpdateRegistryFromResourceD`，傳遞*pMapEntries*參數的陣列。 這會將 `_ATL_REGMAP_ENTRIES` 結構中的所有取代值新增至註冊機構的取代對應。
+通過指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或`UpdateRegistryFromResourceD`[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏, 將在處理物件映射時自動調用。
 
 > [!NOTE]
->  若要以靜態方式連結至 ATL 登錄元件（註冊機構），請參閱[UpdateRegistryFromResourceS](#updateregistryfromresources)。
+> 要在運行時替換替換值,請不要指定DECLARE_REGISTRY_RESOURCE或DECLARE_REGISTRY_RESOURCEID宏。 相反,請創建一個`_ATL_REGMAP_ENTRIES`結構陣列,其中每個條目包含一個變數占位符,該占位符與值配對,以在運行時替換佔位符。 然後調用`UpdateRegistryFromResourceD`,傳遞*pMapEntries*參數的陣列。 這會將結構中的所有`_ATL_REGMAP_ENTRIES`替換值添加到註冊器的替換映射中。
 
-如需可取代參數和腳本的詳細資訊，請參閱[ATL 登錄元件（註冊機構）](../../atl/atl-registry-component-registrar.md)一文。
+> [!NOTE]
+> 要靜態連結到 ATL 註冊表元件 (註冊),請參閱[從資源更新註冊表 。](#updateregistryfromresources)
 
-##  <a name="updateregistryfromresources"></a>CComModule：： UpdateRegistryFromResourceS
+有關可替換參數和腳本的詳細資訊,請參閱[ATL 註冊表元件 (註冊) 一](../../atl/atl-registry-component-registrar.md)文。
 
-從 ATL 7.0，`CComModule` 已過時：如需詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
+## <a name="ccommoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>CCom模組::從資源更新註冊表
+
+從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
 ```
 virtual HRESULT UpdateRegistryFromResourceS(
@@ -662,32 +662,32 @@ virtual HRESULT UpdateRegistryFromResourceS(
 ### <a name="parameters"></a>參數
 
 *lpszRes*<br/>
-在資源名稱。
+[在]資源名稱。
 
 *nResID*<br/>
-在資源識別碼。
+[在]資源識別碼。
 
-*bRegister*<br/>
-在指出是否應該註冊資源腳本。
+*b 註冊*<br/>
+[在]指示是否應註冊資源腳本。
 
-*pMapEntries*<br/>
-在取代對應的指標，儲存與腳本可取代參數相關聯的值。 ATL 會自動使用 `%MODULE%`。 若要使用其他可替換的參數，請參閱備註以取得詳細資料。 否則，請使用 Null 預設值。
+*pMap 項目*<br/>
+[在]指向替換映射的指標,儲存與腳本的可替換參數關聯的值。 ATL`%MODULE%`自動 使用 。 要使用其他可替換參數,請參閱備註瞭解詳細資訊。 否則,請使用 NULL 預設值。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-類似于[UpdateRegistryFromResourceD](#updateregistryfromresourced) ，但 `UpdateRegistryFromResourceS` 會建立 ATL 登錄元件（註冊機構）的靜態連結。
+類似於[更新註冊器資源D,](#updateregistryfromresourced)但`UpdateRegistryFromResourceS`創建指向 ATL 註冊表元件 (註冊器) 的靜態連結除外。
 
-當您處理物件對應時，會自動叫用 `UpdateRegistryFromResourceS`，前提是您將 `#define _ATL_STATIC_REGISTRY` 新增至您的*pch. h* （Visual Studio 2017 和更早版本中的*stdafx.h* ）。
+`UpdateRegistryFromResourceS`處理物件映射時將自動調用物件映射,前提是您添加到`#define _ATL_STATIC_REGISTRY` *pch.h(Visual* Studio 2017 和更早版本中的*stdafx.h)。*
 
 > [!NOTE]
->  若要在執行時間取代取代值，請勿指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏。 相反地，請建立 `_ATL_REGMAP_ENTRIES` 結構的陣列，其中每個專案都包含一個與值配對的變數預留位置，以在執行時間取代預留位置。 然後，呼叫 `UpdateRegistryFromResourceS`，傳遞*pMapEntries*參數的陣列。 這會將 `_ATL_REGMAP_ENTRIES` 結構中的所有取代值新增至註冊機構的取代對應。
+> 要在運行時替換替換值,請不要指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏。 相反,請創建一個`_ATL_REGMAP_ENTRIES`結構陣列,其中每個條目包含一個變數占位符,該占位符與值配對,以在運行時替換佔位符。 然後調用`UpdateRegistryFromResourceS`,傳遞*pMapEntries*參數的陣列。 這會將結構中的所有`_ATL_REGMAP_ENTRIES`替換值添加到註冊器的替換映射中。
 
-如需可取代參數和腳本的詳細資訊，請參閱[ATL 登錄元件（註冊機構）](../../atl/atl-registry-component-registrar.md)一文。
+有關可替換參數和腳本的詳細資訊,請參閱[ATL 註冊表元件 (註冊) 一](../../atl/atl-registry-component-registrar.md)文。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

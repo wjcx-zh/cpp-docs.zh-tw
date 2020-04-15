@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerVS2005 Class
+title: CMFCVisualManagerVS2005 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerVS2005
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92077ecf4670dd5395296327c767ee3c7b848ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338112"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319909"
 ---
-# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 Class
+# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 類別
 
-`CMFCVisualManagerVS2005` 為應用程式提供 Microsoft Visual Studio 2005 的外觀。
+`CMFCVisualManagerVS2005`為應用程式提供 Microsoft Visual Studio 2005 外觀。
 
 ## <a name="syntax"></a>語法
 
@@ -61,44 +61,44 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|當它繪製為停駐和索引標籤式窗格時，架構會呼叫這個方法。 (覆寫[CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize)。)|
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|架構會呼叫這個方法，以判斷 /mditabs 視窗的框線大小之前它繪製視窗。 (覆寫[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)。)|
-|[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(覆寫[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor)。)|
-|[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(覆寫[CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors)。)|
-|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|傳回在目前的視覺化管理員是否重疊的自動隱藏按鈕。 (覆寫[CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons)。)|
-|[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(覆寫[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder)。)|
-|[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`。)|
-|[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(覆寫[CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption)。)|
-|[CMFCVisualManagerVS2005::OnDrawSeparator](#ondrawseparator)|(覆寫[CMFCVisualManagerOffice2003::OnDrawSeparator](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator)。)|
-|[CMFCVisualManagerVS2005::OnDrawTab](#ondrawtab)|(覆寫[CMFCVisualManagerOffice2003::OnDrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab)。)|
-|[CMFCVisualManagerVS2005::OnDrawToolBoxFrame](#ondrawtoolboxframe)|(覆寫[CMFCVisualManager::OnDrawToolBoxFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe)。)|
-|[CMFCVisualManagerVS2005::OnEraseTabsArea](#onerasetabsarea)|(覆寫[CMFCVisualManagerOffice2003::OnEraseTabsArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea)。)|
-|[CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|(覆寫[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground)。)|
-|[CMFCVisualManagerVS2005::OnFillHighlightedArea](#onfillhighlightedarea)|(覆寫[CMFCVisualManagerOffice2003::OnFillHighlightedArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea)。)|
-|[CMFCVisualManagerVS2005::OnFillMiniFrameCaption](#onfillminiframecaption)|(覆寫 `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`。)|
-|[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(覆寫[CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors)。)|
+|[CMFCVisualManagerVS2005::獲取對接塔布邊界大小](#getdockingtabsborderssize)|框架在繪製停靠和選項卡式窗格時調用此方法。 ( 覆[寫 CMFC 視覺管理器:取得停靠選項卡邊界大小](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize)。|
+|[CMFCVisualManagerVS2005::獲取MDITabsBordersSize](#getmditabsborderssize)|框架呼叫此方法以確定 MDITabs 視窗在繪製視窗之前的邊界大小。 ( 覆[寫 CMFC 視覺管理員:取得 MDITabs 邊界大小](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)。|
+|[CMFCVisualManagerVS2005::獲取財產網格群彩](#getpropertygridgroupcolor)|(覆蓋[CMFC 視覺化管理員Office2003:取得屬性網格群顏色](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|
+|[CMFC視覺管理器VS2005::取得TabFrame顏色](#gettabframecolors)|(覆蓋[CMFC 視覺化管理員Office2003:取得 TabFrame 顏色](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|
+|[CMFCVisualManagerVS2005:: 已重疊自動隱藏按鈕](#hasoverlappedautohidebuttons)|返回自動隱藏按鈕是否在當前可視管理器中重疊。 ( 覆[寫 CMFC 視覺管理器:已重疊自動隱藏按鈕](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons)。|
+|[CMFCVisualManagervs2005::在Draw自動隱藏按鈕邊框](#ondrawautohidebuttonborder)|(覆蓋[CMFCVisualManagerOffice2003:onDraw 自動隱藏按鈕邊框](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder).)|
+|[CMFCVisualManagerVS2005::ONDrawCaption按鈕](#ondrawcaptionbutton)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`。)|
+|[CMFCVisualManagervs2005::在DrawPaneCaption](#ondrawpanecaption)|(覆蓋[CMFCVisualManagerOffice2003:onDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption).)|
+|[CMFCVisualManagerVS2005:OnDrawSeator](#ondrawseparator)|(覆蓋[CMFCVisualManagerOffice2003:onDrawSeor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator).)|
+|[CMFCVisualManagerVS2005::在DrawTab](#ondrawtab)|(覆蓋[CMFCVisualManagerOffice2003:onDrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab).)|
+|[CMFCVisualManagerVS2005::在畫工具框框](#ondrawtoolboxframe)|(覆寫[CMFC 視覺管理員:onDrawToolBox框架](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe)。|
+|[CMFCVisualManagerVS2005::在EraseTabs區域](#onerasetabsarea)|(覆蓋[CMFCVisualManagerOffice2003:在 EraseTabs 區域](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea).)|
+|[CMFCVisualManagerVS2005::在填充自動隱藏按鈕背景](#onfillautohidebuttonbackground)|(覆蓋[CMFCVisualManagerOffice2003::onfill 自動隱藏按鈕背景](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground).)|
+|[CMFCVisualManagerVS2005::在填充突出顯示區域](#onfillhighlightedarea)|(覆蓋[CMFCVisualManagerOffice2003:onFill 突出顯示區域](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea).)|
+|[CMFCVisualManagerVS2005::在填充迷你框架標題](#onfillminiframecaption)|(覆寫 `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`。)|
+|[CMFCVisualManagerVS2005::更新系統顏色](#onupdatesystemcolors)|(覆蓋[CMFCVisualManagerOffice2003:上更新系統顏色](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|
 
 ## <a name="remarks"></a>備註
 
-您可以使用 CMFCVisualManagerVS2005 類別來變更您的應用程式，類似於 Microsoft Visual Studio 2005 的視覺外觀。
+您可以使用 CMFCVisualManagerVS2005 類來更改應用程式的可視外觀,以類似於 Microsoft Visual Studio 2005。
 
-這個類別的成員都衍生自這個類別的祖系的虛擬函式[CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)。
+此類的所有成員都是從此類的祖先[CMFCVisualManager 類](../../mfc/reference/cmfcvisualmanager-class.md)派生的虛擬函數。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用 VS 2005 的視覺管理員。 此程式碼片段是一部分[桌面警示示範範例](../../overview/visual-cpp-samples.md)。
+下面的範例展示如何使用視覺化管理員 VS 2005。 此代碼段是[桌面警報演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBase 視覺化管理員](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFC可視化經理辦公室XP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
 
@@ -106,9 +106,9 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxvisualmanagervs2005.h
+**標題:** afxvisualmanagervs2005.h
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManagerVS2005::GetDockingTabsBordersSize
+## <a name="cmfcvisualmanagervs2005getdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a>CMFCVisualManagerVS2005::獲取對接塔布邊界大小
 
 ```
 virtual int GetDockingTabsBordersSize();
@@ -118,7 +118,7 @@ virtual int GetDockingTabsBordersSize();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getmditabsborderssize"></a>  CMFCVisualManagerVS2005::GetMDITabsBordersSize
+## <a name="cmfcvisualmanagervs2005getmditabsborderssize"></a><a name="getmditabsborderssize"></a>CMFCVisualManagerVS2005::獲取MDITabsBordersSize
 
 ```
 virtual int GetMDITabsBordersSize();
@@ -128,7 +128,7 @@ virtual int GetMDITabsBordersSize();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerVS2005::GetPropertyGridGroupColor
+## <a name="cmfcvisualmanagervs2005getpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a>CMFCVisualManagerVS2005::獲取財產網格群彩
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -136,13 +136,13 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>參數
 
-[in] *pPropList*<br/>
+[在]*pProplist*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerVS2005::GetTabFrameColors
+## <a name="cmfcvisualmanagervs2005gettabframecolors"></a><a name="gettabframecolors"></a>CMFC視覺管理器VS2005::取得TabFrame顏色
 
 ```
 virtual void GetTabFrameColors(
@@ -159,19 +159,19 @@ virtual void GetTabFrameColors(
 
 ### <a name="parameters"></a>參數
 
-[in] *pTabWnd*<br/>
-[in] *clrDark*<br/>
-[in] *clrBlack*<br/>
-[in] *clrHighlight*<br/>
-[in] *clrFace*<br/>
-[in] *clrDarkShadow*<br/>
-[in] *clrLight*<br/>
-[in] *pbrFace*<br/>
-[in] *pbrBlack*<br/>
+[在]*pTabwnd*<br/>
+[在]*clrDark*<br/>
+[在]*clrBlack*<br/>
+[在]*clr 高光*<br/>
+[在]*clrFace*<br/>
+[在]*clrDark陰影*<br/>
+[在]*clrLight*<br/>
+[在]*pbrFace*<br/>
+[在]*普布布萊克*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons
+## <a name="cmfcvisualmanagervs2005hasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a>CMFCVisualManagerVS2005:: 已重疊自動隱藏按鈕
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
@@ -181,7 +181,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder
+## <a name="cmfcvisualmanagervs2005ondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a>CMFCVisualManagervs2005::在Draw自動隱藏按鈕邊框
 
 ```
 virtual void OnDrawAutoHideButtonBorder(
@@ -193,14 +193,14 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in]*rectBounds*<br/>
-[in] *rectBorderSize*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*rectBunds*<br/>
+[在]*整邊界大小*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerVS2005::OnDrawCaptionButton
+## <a name="cmfcvisualmanagervs2005ondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFCVisualManagerVS2005::ONDrawCaption按鈕
 
 ```
 virtual void OnDrawCaptionButton(
@@ -215,17 +215,17 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *bActive*<br/>
-[in] *bHorz*<br/>
-[in]*bMaximized*<br/>
-[in] *bDisabled*<br/>
-[in] *nImageID*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*b 活動*<br/>
+[在]*布霍茲*<br/>
+[在]*b 最大化*<br/>
+[在]*b 殘疾*<br/>
+[在]*nImageID*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerVS2005::OnDrawPaneCaption
+## <a name="cmfcvisualmanagervs2005ondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManagervs2005::在DrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -238,17 +238,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *bActive*<br/>
-[in] *rectCaption*<br/>
-[in]*rectButtons*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*b 活動*<br/>
+[在]*rectCaption*<br/>
+[在]*rectButtons*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerVS2005::OnDrawSeparator
+## <a name="cmfcvisualmanagervs2005ondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManagerVS2005:OnDrawSeator
 
 ```
 virtual void OnDrawSeparator(
@@ -260,14 +260,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
-[in] *bIsHoriz*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*rect*<br/>
+[在]*比索裡茲*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerVS2005::OnDrawTab
+## <a name="cmfcvisualmanagervs2005ondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManagerVS2005::在DrawTab
 
 ```
 virtual void OnDrawTab(
@@ -280,15 +280,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *rectTab*<br/>
-[in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+[在]*pDC*<br/>
+[在]*rectTab*<br/>
+[在]*iTab*<br/>
+[在]*bIsActive*<br/>
+[在]*pTabwnd*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManagerVS2005::OnDrawToolBoxFrame
+## <a name="cmfcvisualmanagervs2005ondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a>CMFCVisualManagerVS2005::在畫工具框框
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -298,12 +298,12 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerVS2005::OnEraseTabsArea
+## <a name="cmfcvisualmanagervs2005onerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManagerVS2005::在EraseTabs區域
 
 ```
 virtual void OnEraseTabsArea(
@@ -314,13 +314,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pTabWnd*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pTabwnd*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground
+## <a name="cmfcvisualmanagervs2005onfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a>CMFCVisualManagerVS2005::在填充自動隱藏按鈕背景
 
 ```
 virtual void OnFillAutoHideButtonBackground(
@@ -331,13 +331,13 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerVS2005::OnFillHighlightedArea
+## <a name="cmfcvisualmanagervs2005onfillhighlightedarea"></a><a name="onfillhighlightedarea"></a>CMFCVisualManagerVS2005::在填充突出顯示區域
 
 ```
 virtual void OnFillHighlightedArea(
@@ -349,14 +349,14 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pBrush*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pBrush*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerVS2005::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanagervs2005onfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManagerVS2005::在填充迷你框架標題
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -368,16 +368,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pFrameWnd*<br/>
-[in] *bActive*<br/>
+[在]*pDC*<br/>
+[在]*rectCaption*<br/>
+[在]*pFramewnd*<br/>
+[在]*b 活動*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerVS2005::OnUpdateSystemColors
+## <a name="cmfcvisualmanagervs2005onupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManagerVS2005::更新系統顏色
 
 ```
 virtual void OnUpdateSystemColors();
@@ -391,5 +391,5 @@ virtual void OnUpdateSystemColors();
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
 [CMFCVisualManagerOfficeXP 類別](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
-[CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
+[CMFC 視覺化管理員類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
 [CMFCVisualManagerOffice2003 類別](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

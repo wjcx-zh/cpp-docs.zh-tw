@@ -42,19 +42,19 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 3faf446f74577034a3d0676b90ebe7027ef6da06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331031"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 
-這個類別會提供方法來作業系統註冊表中的專案。
+此類提供用於操作系統註冊表中的條目的方法。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -68,74 +68,74 @@ class CRegKey
 
 |名稱|描述|
 |----------|-----------------|
-|[CRegKey::CRegKey](#cregkey)|建構函式。|
-|[CRegKey:: ~ CRegKey](#dtor)|解構函式。|
+|[CRegKey:CRegKey](#cregkey)|建構函式。|
+|[CRegKey:*CRegKey](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CRegKey::Attach](#attach)|呼叫這個方法, 藉由將[m_hKey](#m_hkey)成員`CRegKey`控制碼設定為`hKey`, 將 HKEY 附加至物件。|
-|[CRegKey:: Close](#close)|呼叫這個方法以釋放[m_hKey](#m_hkey)成員控制碼, 並將它設定為 Null。|
-|[CRegKey::Create](#create)|如果指定的索引鍵不是以的子`hKeyParent`機碼形式存在, 請呼叫這個方法來建立。|
-|[CRegKey::DeleteSubKey](#deletesubkey)|呼叫這個方法, 從登錄中移除指定的機碼。|
-|[CRegKey::DeleteValue](#deletevalue)|呼叫這個方法, 從[m_hKey](#m_hkey)中移除值欄位。|
-|[CRegKey::Detach](#detach)|呼叫這個方法, 從`CRegKey`物件卸離[m_hKey](#m_hkey)成員控制碼, 並`m_hKey`將設定為 Null。|
-|[CRegKey::EnumKey](#enumkey)|呼叫這個方法來列舉 open 登錄機碼的子機碼。|
-|[CRegKey:: Flush](#flush)|呼叫這個方法, 將開啟的登錄機碼的所有屬性寫入登錄中。|
-|[CRegKey::GetKeySecurity](#getkeysecurity)|呼叫這個方法來抓取保護開啟登錄機碼的安全描述項複本。|
-|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|這個方法會通知呼叫者有關已開啟之登錄機碼的屬性或內容的變更。|
-|[CRegKey::Open](#open)|呼叫這個方法來開啟指定的索引鍵, 並將[m_hKey](#m_hkey)設定為這個機碼的控制碼。|
-|[CRegKey::QueryBinaryValue](#querybinaryvalue)|呼叫這個方法, 以取得指定值名稱的二進位資料。|
-|[CRegKey::QueryDWORDValue](#querydwordvalue)|呼叫這個方法, 以取得指定值名稱的 DWORD 資料。|
-|[CRegKey::QueryGUIDValue](#queryguidvalue)|呼叫這個方法, 以取得指定值名稱的 GUID 資料。|
-|[CRegKey::QueryMultiStringValue](#querymultistringvalue)|呼叫這個方法, 以取得指定值名稱的 multistring 資料。|
-|[CRegKey::QueryQWORDValue](#queryqwordvalue)|呼叫這個方法, 以取得指定值名稱的 QWORD 資料。|
-|[CRegKey::QueryStringValue](#querystringvalue)|呼叫這個方法, 以取得指定值名稱的字串資料。|
-|[CRegKey::QueryValue](#queryvalue)|呼叫這個方法, 以取得[m_hKey](#m_hkey)之指定值欄位的資料。 已不再支援此方法的舊版, 並將其標示為 ATL_DEPRECATED。|
-|[CRegKey::RecurseDeleteKey](#recursedeletekey)|呼叫這個方法, 從登錄中移除指定的索引鍵, 並明確移除任何子機碼。|
-|[CRegKey::SetBinaryValue](#setbinaryvalue)|呼叫這個方法以設定登錄機碼的二進位值。|
-|[CRegKey::SetDWORDValue](#setdwordvalue)|呼叫這個方法來設定登錄機碼的 DWORD 值。|
-|[CRegKey::SetGUIDValue](#setguidvalue)|呼叫這個方法來設定登錄機碼的 GUID 值。|
-|[CRegKey::SetKeySecurity](#setkeysecurity)|呼叫這個方法來設定登錄機碼的安全性。|
-|[CRegKey::SetKeyValue](#setkeyvalue)|呼叫這個方法, 將資料儲存在指定之索引鍵的指定值欄位中。|
-|[CRegKey::SetMultiStringValue](#setmultistringvalue)|呼叫這個方法以設定登錄機碼的 multistring 值。|
-|[CRegKey::SetQWORDValue](#setqwordvalue)|呼叫這個方法來設定登錄機碼的 QWORD 值。|
-|[CRegKey::SetStringValue](#setstringvalue)|呼叫這個方法以設定登錄機碼的字串值。|
-|[CRegKey::SetValue](#setvalue)|呼叫這個方法, 將資料儲存在[m_hKey](#m_hkey)的指定值欄位中。 已不再支援此方法的舊版, 並將其標示為 ATL_DEPRECATED。|
+|[CRegKey::附加](#attach)|呼叫此方法[透過m_hKey成員](#m_hkey)句柄設定為將`hKey``CRegKey`HKEY附加到物件。|
+|[CRegKey:關閉](#close)|呼叫此方法以釋放[m_hKey](#m_hkey)成員句柄並將其設定為 NULL。|
+|[CRegKey:建立](#create)|呼叫此方法以建立指定的密鑰(如果該鍵不存在為`hKeyParent`的子鍵)。|
+|[CRegKey::DeleteSubKey](#deletesubkey)|呼叫此方法從註冊表中刪除指定的密鑰。|
+|[CRegKey::Delete價值](#deletevalue)|呼叫此方法從[m_hKey](#m_hkey)中刪除值欄位。|
+|[CRegKey::D埃塔奇](#detach)|呼叫此方法以將[m_hKey](#m_hkey)成員句柄從物件中分離`CRegKey`出來,`m_hKey`並設定為 NULL。|
+|[CregKey::枚舉鍵](#enumkey)|調用此方法以枚舉打開註冊表項的子鍵。|
+|[CRegKey::沖洗](#flush)|調用此方法將打開註冊表項的所有屬性寫入註冊表。|
+|[CRegKey:抓取金鑰安全](#getkeysecurity)|呼叫此方法以檢索保護打開註冊表項的安全描述符的副本。|
+|[CRegKey::通知更改鍵值](#notifychangekeyvalue)|此方法通知調用方對打開註冊表項的屬性或內容的更改。|
+|[CRegKey::開啟](#open)|呼叫此方法以開啟指定的金鑰並將[m_hKey](#m_hkey)設定為此金鑰的句柄。|
+|[CRegKey::查詢二元值](#querybinaryvalue)|調用此方法以檢索指定值名稱的二進位數據。|
+|[CregKey::查詢DWORD值](#querydwordvalue)|調用此方法以檢索指定值名稱的 DWORD 資料。|
+|[CregKey::查詢GUID值](#queryguidvalue)|呼叫此方法以檢索指定值名稱的 GUID 資料。|
+|[CregKey::查詢多字串值](#querymultistringvalue)|呼叫此方法以檢索指定值名稱的多字串資料。|
+|[CregKey::查詢QWORD值](#queryqwordvalue)|調用此方法以檢索指定值名稱的 QWORD 資料。|
+|[CRegKey::查詢字串值](#querystringvalue)|呼叫此方法以檢索指定值名稱的字串資料。|
+|[CRegKey::查詢值](#queryvalue)|調用此方法以檢索[m_hKey](#m_hkey)的指定值欄位的數據。 此方法的早期版本不再受支援,並標記為ATL_DEPRECATED。|
+|[CRegKey::重新詛咒刪除金鑰](#recursedeletekey)|呼叫此方法從註冊表中刪除指定的密鑰,並顯式刪除任何子鍵。|
+|[CRegKey::設定Binary值](#setbinaryvalue)|調用此方法以設置註冊表項的二進位值。|
+|[CregKey::設定DWORD值](#setdwordvalue)|調用此方法以設置註冊表項的 DWORD 值。|
+|[CRegKey::SetGUID值](#setguidvalue)|調用此方法以設置註冊表項的 GUID 值。|
+|[CRegKey::設定金鑰安全性](#setkeysecurity)|調用此方法以設置註冊表項的安全性。|
+|[CRegKey::設定鍵值](#setkeyvalue)|呼叫此方法將資料儲存在指定金鑰的指定值欄位中。|
+|[CRegKey::設定多字串值](#setmultistringvalue)|呼叫此方法以設定註冊表項的多字串值。|
+|[CRegKey::設定QWORD值](#setqwordvalue)|調用此方法以設置註冊表項的 QWORD 值。|
+|[CRegKey::設定字串值](#setstringvalue)|呼叫此方法以設定註冊表項的字串值。|
+|[CRegKey::設定價值](#setvalue)|呼叫此方法將資料儲存在指定的值欄位中[m_hKey](#m_hkey)。 此方法的早期版本不再受支援,並標記為ATL_DEPRECATED。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CRegKey:: operator HKEY](#operator_hkey)|`CRegKey`將物件轉換成 HKEY。|
-|[CRegKey:: operator =](#operator_eq)|指派運算子。|
+|[CRegKey::管理員HKEY](#operator_hkey)|將`CRegKey`物件轉換為 HKEY。|
+|[CRegKey::運算符 |](#operator_eq)|指派運算子。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CRegKey::m_hKey](#m_hkey)|包含與`CRegKey`物件相關聯之登錄機碼的控制碼。|
-|[CRegKey::m_pTM](#m_ptm)|物件的`CAtlTransactionManager`指標|
+|[CRegKey:m_hKey](#m_hkey)|包含與對象關聯的註冊表項`CRegKey`的句柄。|
+|[CRegKey:m_pTM](#m_ptm)|指向`CAtlTransactionManager`物件的指標|
 
 ## <a name="remarks"></a>備註
 
-`CRegKey`提供方法來建立和刪除系統登錄中的機碼和值。 登錄包含系統元件的一組安裝特定定義, 例如軟體版本號碼、已安裝硬體的邏輯對實體對應, 以及 COM 物件。
+`CRegKey`提供了在系統註冊表中創建和刪除鍵和值的方法。 註冊表包含系統元件的特定於安裝的定義集,例如軟體版本號、已安裝硬體的邏輯到物理映射以及 COM 物件。
 
-`CRegKey`為指定的電腦提供系統登錄的程式設計介面。 例如, 若要開啟特定登錄機碼, 請`CRegKey::Open`呼叫。 若要取出或修改資料值, 請`CRegKey::QueryValue`分別`CRegKey::SetValue`呼叫或。 若要關閉金鑰, 請`CRegKey::Close`呼叫。
+`CRegKey`為給定的計算機提供到系統註冊表的程式設計介面。 例如,要打開特定的註冊表項,請呼叫`CRegKey::Open`。 要檢查或修改資料值,請分別`CRegKey::QueryValue`呼叫`CRegKey::SetValue`或 。 要關閉金鑰,請呼叫`CRegKey::Close`。
 
-當您關閉金鑰時, 其登錄資料會寫入 (排清) 至硬碟。 此程式可能需要幾秒鐘的時間。 如果您的應用程式必須明確地將登錄資料寫入硬碟, 您可以呼叫[RegFlushKey](/windows/win32/api/winreg/nf-winreg-regflushkey) Win32 函數。 不過, `RegFlushKey`會使用多個系統資源, 而且只有在絕對必要時才應呼叫。
+關閉金鑰時,其註冊表數據將寫入(刷新)到硬碟。 這個程序可能需要幾秒鐘。 如果應用程式必須顯式將註冊表數據寫入硬碟,則可以調用[RegFlushKey](/windows/win32/api/winreg/nf-winreg-regflushkey) Win32 函數。 但是,`RegFlushKey`使用許多系統資源,並且僅在絕對必要時才應調用。
 
 > [!IMPORTANT]
->  任何可讓呼叫者指定登錄位置的方法, 都有可能讀取不受信任的資料。 使用[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)的方法應考慮此函式不會明確處理 Null 終止的字串。 呼叫程式碼應檢查這兩個條件。
+> 允許調用方指定註冊表位置的任何方法都有可能讀取無法信任的數據。 使用[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)的方法應考慮此函數不顯式處理 NULL 終止的字串。 這兩個條件都應由調用代碼檢查。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlbase.h。h
+**標題:** atlbase.h
 
-##  <a name="attach"></a>CRegKey:: Attach
+## <a name="cregkeyattach"></a><a name="attach"></a>CRegKey::附加
 
-呼叫這個方法, 藉由將[m_hKey](#m_hkey)成員`CRegKey`控制碼設定為*HKEY*, 將 HKEY 附加至物件。
+呼叫此方法透過`CRegKey`[m_hKey](#m_hkey)成員句柄設定為*hKey*將 HKEY 附加到物件。
 
 ```
 void Attach(HKEY hKey) throw();
@@ -143,16 +143,16 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>參數
 
-*hKey*<br/>
-登錄機碼的控制碼。
+*h鍵*<br/>
+註冊表項的句柄。
 
 ### <a name="remarks"></a>備註
 
-`Attach`如果為非`m_hKey` Null, 則會判斷提示。
+`Attach`將斷言如果`m_hKey`為非 NULL。
 
-##  <a name="close"></a>CRegKey:: Close
+## <a name="cregkeyclose"></a><a name="close"></a>CRegKey:關閉
 
-呼叫這個方法以釋放[m_hKey](#m_hkey)成員控制碼, 並將它設定為 Null。
+呼叫此方法以釋放[m_hKey](#m_hkey)成員句柄並將其設定為 NULL。
 
 ```
 LONG Close() throw();
@@ -160,11 +160,11 @@ LONG Close() throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS;否則會傳回錯誤值。
+如果成功,則返回ERROR_SUCCESS;否則返回錯誤值。
 
-##  <a name="create"></a>CRegKey:: Create
+## <a name="cregkeycreate"></a><a name="create"></a>CRegKey:建立
 
-呼叫此方法以建立指定的索引鍵 (如果它不是*hKeyParent*的子機碼)。
+呼叫此方法以建立指定的密鑰(如果它不存在為*hKeyParent*的子鍵)。
 
 ```
 LONG Create(
@@ -179,36 +179,36 @@ LONG Create(
 
 ### <a name="parameters"></a>參數
 
-*hKeyParent*<br/>
-Open 鍵的控制碼。
+*hKey父*<br/>
+打開鍵的句柄。
 
-*lpszKeyName*<br/>
-指定要建立或開啟之金鑰的名稱。 此名稱必須是*hKeyParent*的子機碼。
+*lpszKey名稱*<br/>
+指定要建立或打開的鍵的名稱。 此名稱必須是*hKeyParent*的子鍵。
 
 *lpszClass*<br/>
-指定要建立或開啟之金鑰的類別。 預設值為 REG_NONE。
+指定要建立或打開的鍵的類。 默認值為REG_NONE。
 
 *dwOptions*<br/>
-索引鍵的選項。 預設值為 REG_OPTION_NON_VOLATILE。 如需可能值和描述的清單, 請參閱 Windows SDK 中的[RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) 。
+鍵的選項。 默認值為REG_OPTION_NON_VOLATILE。 有關可能的值和說明的清單,請參閱 Windows SDK 中的[RegCreateKeyEx。](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw)
 
-*samDesired*<br/>
-金鑰的安全性存取權。 預設值為 KEY_READ &#124; KEY_WRITE。 如需可能值和描述的清單, 請`RegCreateKeyEx`參閱。
+*薩姆·阿喬*<br/>
+密鑰的安全訪問。 默認值為KEY_READ&#124;KEY_WRITE。 有關可能的值和說明的清單,請參閱`RegCreateKeyEx`。
 
-*lpSecAttr*<br/>
-[Security attributes 這個](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標, 指出子進程是否可以繼承索引鍵的控制碼。 根據預設, 此參數為 Null (表示無法繼承控制碼)。
+*lpSecattr*<br/>
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標,指示密鑰的句柄是否可以由子進程繼承。 預設情況下,此參數為 NULL(表示無法繼承句柄)。
 
-*lpdwDisposition*<br/>
-脫銷如果不是 Null, 則會抓取 REG_CREATED_NEW_KEY (如果索引鍵不存在且已建立) 或 REG_OPENED_EXISTING_KEY (如果索引鍵存在且已開啟)。
+*lpdw 處理*<br/>
+[出]如果非 NULL,則檢索REG_CREATED_NEW_KEY(如果金鑰不存在並創建)或REG_OPENED_EXISTING_KEY(如果金鑰存在且已打開)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS 並開啟金鑰。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果成功,返回ERROR_SUCCESS並打開密鑰。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-`Create`將[m_hKey](#m_hkey)成員設定為此索引鍵的控制碼。
+`Create`將[m_hKey](#m_hkey)成員設置為此鍵的句柄。
 
-##  <a name="cregkey"></a>CRegKey::CRegKey
+## <a name="cregkeycregkey"></a><a name="cregkey"></a>CRegKey:CRegKey
 
 建構函式。
 
@@ -221,20 +221,20 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-對 `CRegKey` 物件的參考。
+*關鍵*<br/>
+`CRegKey` 物件的參考。
 
-*hKey*<br/>
-登錄機碼的控制碼。
+*h鍵*<br/>
+註冊表項的句柄。
 
 *pTM*<br/>
 CAtlTransactionManager 物件的指標
 
 ### <a name="remarks"></a>備註
 
-建立新的 `CRegKey` 物件。 物件可以從現有`CRegKey`的物件或登錄機碼的控制碼建立。
+建立新 `CRegKey` 物件。 可以從現有`CRegKey`物件或從句柄創建物件,也可以從註冊表項創建物件。
 
-##  <a name="dtor"></a>CRegKey:: ~ CRegKey
+## <a name="cregkeycregkey"></a><a name="dtor"></a>CRegKey:*CRegKey
 
 解構函式。
 
@@ -244,11 +244,11 @@ CAtlTransactionManager 物件的指標
 
 ### <a name="remarks"></a>備註
 
-此函式`m_hKey`會發行。
+析構函數釋放`m_hKey`。
 
-##  <a name="deletesubkey"></a>CRegKey::D eleteSubKey
+## <a name="cregkeydeletesubkey"></a><a name="deletesubkey"></a>CRegKey::DeleteSubKey
 
-呼叫這個方法, 從登錄中移除指定的機碼。
+呼叫此方法從註冊表中刪除指定的密鑰。
 
 ```
 LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
@@ -256,20 +256,20 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpszSubKey*<br/>
-指定要刪除之金鑰的名稱。 此名稱必須是[m_hKey](#m_hkey)的子機碼。
+*lpszSubkey*<br/>
+指定要刪除的鍵的名稱。 此名稱必須是[m_hKey](#m_hkey)的子鍵。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果成功,則返回ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-`DeleteSubKey`只能刪除沒有子機碼的索引鍵。 如果索引鍵有子機碼, 請改為呼叫[RecurseDeleteKey](#recursedeletekey) 。
+`DeleteSubKey`只能刪除沒有子鍵的金鑰。 如果金鑰具有子鍵,請改為調用[「重新詛咒刪除密鑰](#recursedeletekey)」。
 
-##  <a name="deletevalue"></a>CRegKey::D eleteValue
+## <a name="cregkeydeletevalue"></a><a name="deletevalue"></a>CRegKey::Delete價值
 
-呼叫這個方法, 從[m_hKey](#m_hkey)中移除值欄位。
+呼叫此方法從[m_hKey](#m_hkey)中刪除值欄位。
 
 ```
 LONG DeleteValue(LPCTSTR lpszValue) throw();
@@ -278,15 +278,15 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="parameters"></a>參數
 
 *lpszValue*<br/>
-指定要移除的值欄位。
+指定要刪除的值欄位。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果成功,則返回ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
-##  <a name="detach"></a>CRegKey::D etach
+## <a name="cregkeydetach"></a><a name="detach"></a>CRegKey::D埃塔奇
 
-呼叫這個方法, 從`CRegKey`物件卸離[m_hKey](#m_hkey)成員控制碼, 並`m_hKey`將設定為 Null。
+呼叫此方法以將[m_hKey](#m_hkey)成員句柄從物件中分離`CRegKey`出來,`m_hKey`並設定為 NULL。
 
 ```
 HKEY Detach() throw();
@@ -294,11 +294,11 @@ HKEY Detach() throw();
 
 ### <a name="return-value"></a>傳回值
 
-與`CRegKey`物件相關聯的 HKEY。
+與`CRegKey`物件關聯的 HKEY。
 
-##  <a name="enumkey"></a>CRegKey::EnumKey
+## <a name="cregkeyenumkey"></a><a name="enumkey"></a>CregKey::枚舉鍵
 
-呼叫這個方法來列舉 open 登錄機碼的子機碼。
+調用此方法以枚舉打開註冊表項的子鍵。
 
 ```
 LONG EnumKey(
@@ -311,28 +311,28 @@ LONG EnumKey(
 ### <a name="parameters"></a>參數
 
 *iIndex*<br/>
-子機碼索引。 第一次呼叫時, 此參數應為零, 然後針對後續呼叫遞增
+子鍵索引。 此參數對於第一個調用應為零,然後為後續調用遞增
 
 *pszName*<br/>
-接收子機碼名稱之緩衝區的指標, 包括終止的 null 字元。 只有子機碼的名稱會複製到緩衝區, 而不是完整的金鑰階層。
+指向接收子鍵名稱(包括終止空字元)的緩衝區的指標。 只有子鍵的名稱複製到緩衝區,而不是完整鍵層次結構。
 
-*pnNameLength*<br/>
-變數的指標, 指定*pszName*參數所指定之緩衝區的大小 (以 TCHARs)。 此大小應包含終止的 null 字元。 當此方法傳回時, *pnNameLength*所指向的變數會包含儲存在緩衝區中的字元數。 傳回的計數不包含終止的 null 字元。
+*pn名稱長度*<br/>
+指定*pszName*參數指定的緩衝區的大小(在 TCHAR 中)的變數的指標。 此大小應包括終止空字元。 當方法返回時 *,pnNameLength*指向的變數包含存儲在緩衝區中的字元數。 返回的計數不包括終止空字元。
 
-*pftLastWriteTime*<br/>
-變數的指標, 該變數會接收列舉子機碼上次被寫入的時間。
+*pftLast 寫入時間*<br/>
+指向接收上次寫入枚舉子鍵時間的變數的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-若要列舉子機碼`CRegKey::EnumKey` , 請呼叫索引為零的。 遞增索引值並重複執行, 直到方法傳回 ERROR_NO_MORE_ITEMS。 如需詳細資訊, 請參閱 Windows SDK 中的[RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) 。
+要枚舉子鍵,請`CRegKey::EnumKey`調用索引為零。 增加索引值並重複,直到方法返回ERROR_NO_MORE_ITEMS。 有關詳細資訊,請參閱 Windows SDK 中的[RegEnumKeyEx。](/windows/win32/api/winreg/nf-winreg-regenumkeyexw)
 
-##  <a name="flush"></a>CRegKey:: Flush
+## <a name="cregkeyflush"></a><a name="flush"></a>CRegKey::沖洗
 
-呼叫這個方法, 將開啟的登錄機碼的所有屬性寫入登錄中。
+調用此方法將打開註冊表項的所有屬性寫入註冊表。
 
 ```
 LONG Flush() throw();
@@ -340,15 +340,15 @@ LONG Flush() throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱 Windows SDK 中的[RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) 。
+有關詳細資訊,請參閱 Windows SDK 中的[RegEnumFlush。](/windows/win32/api/winreg/nf-winreg-regflushkey)
 
-##  <a name="getkeysecurity"></a>CRegKey::GetKeySecurity
+## <a name="cregkeygetkeysecurity"></a><a name="getkeysecurity"></a>CRegKey:抓取金鑰安全
 
-呼叫這個方法來抓取保護開啟登錄機碼的安全描述項複本。
+呼叫此方法以檢索保護打開註冊表項的安全描述符的副本。
 
 ```
 LONG GetKeySecurity(
@@ -360,31 +360,31 @@ LONG GetKeySecurity(
 ### <a name="parameters"></a>參數
 
 *si*<br/>
-[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)值, 表示所要求的安全性資訊。
+指示請求的安全資訊[的SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)值。
 
-*psd*<br/>
-接收要求的安全描述項複本之緩衝區的指標。
+*Psd*<br/>
+指向接收請求的安全描述符副本的緩衝區的指標。
 
-*pnBytes*<br/>
-*Psd*所指向之緩衝區的大小 (以位元組為單位)。
+*pn位元組*<br/>
+以位元組為單位的緩衝區的大小(以位元組為單位)指向*sd*。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為非零的錯誤碼, 在 WINERROR.H 中定義。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值為非零錯誤代碼,在 WINERROR 中定義。H。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱[RegGetKeySecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity)。
+有關詳細資訊,請參閱[RegGetKey 安全](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity)。
 
-##  <a name="m_hkey"></a>CRegKey::m_hKey
+## <a name="cregkeym_hkey"></a><a name="m_hkey"></a>CRegKey:m_hKey
 
-包含與`CRegKey`物件相關聯之登錄機碼的控制碼。
+包含與對象關聯的註冊表項`CRegKey`的句柄。
 
 ```
 HKEY m_hKey;
 ```
 
-##  <a name="m_ptm"></a>CRegKey::m_pTM
+## <a name="cregkeym_ptm"></a><a name="m_ptm"></a>CRegKey:m_pTM
 
 指向 `CAtlTransactionManager` 物件的指標。
 
@@ -394,9 +394,9 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue
+## <a name="cregkeynotifychangekeyvalue"></a><a name="notifychangekeyvalue"></a>CRegKey::通知更改鍵值
 
-這個方法會通知呼叫者有關已開啟之登錄機碼的屬性或內容的變更。
+此方法通知調用方對打開註冊表項的屬性或內容的更改。
 
 ```
 LONG NotifyChangeKeyValue(
@@ -408,39 +408,39 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>參數
 
-*bWatchSubtree*<br/>
-指定一個旗標, 指出是否要在指定的索引鍵及其所有子機碼中, 或只報告指定之索引鍵中的變更。 如果此參數為 TRUE, 則方法會報告索引鍵和其子機碼中的變更。 如果參數為 FALSE, 則方法只會報告索引鍵中的變更。
+*b觀察子樹*<br/>
+指定指示是報告指定金鑰及其所有子鍵中的更改的標誌,還是僅在指定鍵中報告更改。 如果此參數為 TRUE,則該方法將報告鍵及其子鍵中的更改。 如果參數為 FALSE,則方法僅報告鍵中的更改。
 
 *dwNotifyFilter*<br/>
-指定一組旗標, 以控制應回報的變更。 這個參數可以是下列值的組合:
+指定一組標誌,用於控制應報告哪些更改。 這裡可以是以下值的組合:
 
 |值|意義|
 |-----------|-------------|
-|REG_NOTIFY_CHANGE_NAME|如果已新增或刪除子機碼, 請通知呼叫者。|
-|REG_NOTIFY_CHANGE_ATTRIBUTES|通知呼叫者對索引鍵的屬性進行變更, 例如安全描述項資訊。|
-|REG_NOTIFY_CHANGE_LAST_SET|通知呼叫者有金鑰值的變更。 這可能包括新增或刪除值, 或變更現有的值。|
-|REG_NOTIFY_CHANGE_SECURITY|通知呼叫者對金鑰的安全描述項有變更。|
+|REG_NOTIFY_CHANGE_NAME|如果添加或刪除子鍵,則通知呼叫方。|
+|REG_NOTIFY_CHANGE_ATTRIBUTES|通知呼叫方對金鑰屬性的更改,例如安全描述符資訊。|
+|REG_NOTIFY_CHANGE_LAST_SET|通知呼叫方對金鑰值的更改。 這可能包括添加或刪除值,或更改現有值。|
+|REG_NOTIFY_CHANGE_SECURITY|通知呼叫方金鑰的安全描述符的更改。|
 
 *hEvent*<br/>
-事件的控制代碼。 如果*bAsync*參數為 TRUE, 則此方法會立即傳回, 並藉由發出此事件的信號來回報變更。 如果*bAsync*為 FALSE, 則會忽略*hEvent* 。
+事件的控制代碼。 如果*bAsync*參數為 TRUE,則該方法會立即返回,並通過向此事件發出信號來報告更改。 如果*bAsync*為 FALSE,則忽略*hEvent。*
 
 *bAsync*<br/>
-指定表示方法如何報告變更的旗標。 如果此參數為 TRUE, 方法會立即傳回, 並藉由發出指定事件的信號來回報變更。 當此參數為 FALSE 時, 除非發生變更, 否則方法不會傳回。 如果*hEvent*未指定有效的事件, *bAsync*參數就不能為 TRUE。
+指定指示方法報告方式更改的標誌。 如果此參數為 TRUE,則該方法會立即返回,並通過向指定事件發出信號來報告更改。 當此參數為 FALSE 時,該方法在發生更改之前不會返回。 如果*hEvent*未指定有效事件,*則 bAsync*參數不能為 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  如果刪除指定的索引鍵, 這個方法不會通知呼叫端。
+> 如果刪除了指定的密鑰,此方法不會通知呼叫方。
 
-如需更多詳細資料和範例程式, 請參閱[RegNotifyChangeKeyValue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue)。
+有關詳細資訊和範例程式,請參閱[RegNotifyChangeKeyValue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue)。
 
-##  <a name="open"></a>CRegKey:: Open
+## <a name="cregkeyopen"></a><a name="open"></a>CRegKey::開啟
 
-呼叫這個方法來開啟指定的索引鍵, 並將[m_hKey](#m_hkey)設定為這個機碼的控制碼。
+呼叫此方法以開啟指定的金鑰並將[m_hKey](#m_hkey)設定為此金鑰的句柄。
 
 ```
 LONG Open(
@@ -451,34 +451,34 @@ LONG Open(
 
 ### <a name="parameters"></a>參數
 
-*hKeyParent*<br/>
-Open 鍵的控制碼。
+*hKey父*<br/>
+打開鍵的句柄。
 
-*lpszKeyName*<br/>
-指定要建立或開啟之金鑰的名稱。 此名稱必須是*hKeyParent*的子機碼。
+*lpszKey名稱*<br/>
+指定要建立或打開的鍵的名稱。 此名稱必須是*hKeyParent*的子鍵。
 
-*samDesired*<br/>
-金鑰的安全性存取權。 預設值為 KEY_ALL_ACCESS。 如需可能值和描述的清單, 請參閱 Windows SDK 中的[RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) 。
+*薩姆·阿喬*<br/>
+密鑰的安全訪問。 默認值為KEY_ALL_ACCESS。 有關可能的值和說明的清單,請參閱 Windows SDK 中的[RegCreateKeyEx。](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw)
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS;否則, 會在 WINERROR.H 中定義非零的錯誤值。H.
+如果成功,則返回ERROR_SUCCESS;否則,在 WINERROR 中定義的非零錯誤值。H。
 
 ### <a name="remarks"></a>備註
 
-如果*lpszKeyName*參數是 Null 或指向空字串, `Open`則會開啟*hKeyParent*所識別之索引鍵的新控制碼, 但不會關閉任何先前開啟的控制碼。
+如果*lpszKeyName*參數為 NULL 或指向`Open`空字串 ,則打開*hKeyParent*識別的鍵的新句柄,但不會關閉任何以前打開的句柄。
 
-不同于[CRegKey:: Create](#create), 如果不存在, `Open`將不會建立指定的索引鍵。
+與[CRegKey::create](#create)`Open`不同, 如果不存在,將不會創建指定的密鑰。
 
-##  <a name="operator_hkey"></a>CRegKey:: operator HKEY
+## <a name="cregkeyoperator-hkey"></a><a name="operator_hkey"></a>CRegKey::管理員HKEY
 
-`CRegKey`將物件轉換成 HKEY。
+將`CRegKey`物件轉換為 HKEY。
 
 ```
 operator HKEY() const throw();
 ```
 
-##  <a name="operator_eq"></a>CRegKey:: operator =
+## <a name="cregkeyoperator-"></a><a name="operator_eq"></a>CRegKey::運算符 |
 
 指派運算子。
 
@@ -488,20 +488,20 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-要複製的索引鍵。
+*關鍵*<br/>
+要複製的鍵。
 
 ### <a name="return-value"></a>傳回值
 
-傳回新索引鍵的參考。
+返回對新鍵的引用。
 
 ### <a name="remarks"></a>備註
 
-這個運算子會從目前的物件卸離索引*鍵*, 並`CRegKey`改為將它指派給物件。
+此運算符從其當前物件分離*密鑰*,並將其分配給`CRegKey`物件。
 
-##  <a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue
+## <a name="cregkeyquerybinaryvalue"></a><a name="querybinaryvalue"></a>CRegKey::查詢二元值
 
-呼叫這個方法, 以取得指定值名稱的二進位資料。
+調用此方法以檢索指定值名稱的二進位數據。
 
 ```
 LONG QueryBinaryValue(
@@ -512,29 +512,29 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-以 null 終止的字串指標, 其中包含要查詢之值的名稱。
+*pszValue名稱*<br/>
+包含要查詢的值名稱的 null 連接端的字串的指標。
 
 *pValue*<br/>
-接收值資料之緩衝區的指標。
+指向接收值數據的緩衝區的指標。
 
-*pnBytes*<br/>
-變數的指標, 指定*pValue*參數所指向的緩衝區大小 (以位元組為單位)。 當此方法傳回時, 這個變數會包含複製到緩衝區的資料大小。
+*pn位元組*<br/>
+指向指定*pValue*參數指向的緩衝區的大小(以位元組為單位)的變數的指標。 當方法返回時,此變數包含複製到緩衝區的數據的大小。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則會傳回 ERROR_SUCCESS。 如果方法無法讀取值, 則會傳回 WINERROR.H 中定義的非零錯誤碼。H. 如果參考的資料不是 REG_BINARY 類型, 則會傳回 ERROR_INVALID_DATA。
+如果該方法成功,將返回ERROR_SUCCESS。 如果方法無法讀取值,它將返回在 WINERROR 中定義的非零錯誤代碼。H。 如果引用的數據不是REG_BINARY類型,則返回ERROR_INVALID_DATA。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用`RegQueryValueEx`並確認傳回正確的資料類型。 如需詳細資訊, 請參閱[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) 。
+此方法使用`RegQueryValueEx`並確認返回正確的數據類型。 有關詳細資訊[,請參閱 RegQueryValueEx。](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置, 可能會讀取不受信任的資料。 此外, 這個方法所使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函式並不會明確處理 Null 終止的字串。 呼叫程式碼應檢查這兩個條件。
+> 此方法允許調用方指定任何註冊表位置,可能讀取無法信任的數據。 此外,此方法使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函數不會顯式處理 NULL 終止的字串。 這兩個條件都應由調用代碼檢查。
 
-##  <a name="querydwordvalue"></a>CRegKey::QueryDWORDValue
+## <a name="cregkeyquerydwordvalue"></a><a name="querydwordvalue"></a>CregKey::查詢DWORD值
 
-呼叫這個方法, 以取得指定值名稱的 DWORD 資料。
+調用此方法以檢索指定值名稱的 DWORD 資料。
 
 ```
 LONG QueryDWORDValue(
@@ -544,26 +544,26 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-以 null 終止的字串指標, 其中包含要查詢之值的名稱。
+*pszValue名稱*<br/>
+包含要查詢的值名稱的 null 連接端的字串的指標。
 
 *dwValue*<br/>
-接收 DWORD 之緩衝區的指標。
+指向接收 DWORD 的緩衝區的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則會傳回 ERROR_SUCCESS。 如果方法無法讀取值, 則會傳回 WINERROR.H 中定義的非零錯誤碼。H. 如果參考的資料不是 REG_DWORD 類型, 則會傳回 ERROR_INVALID_DATA。
+如果該方法成功,將返回ERROR_SUCCESS。 如果方法無法讀取值,它將返回在 WINERROR 中定義的非零錯誤代碼。H。 如果引用的數據不是REG_DWORD類型,則返回ERROR_INVALID_DATA。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用`RegQueryValueEx`並確認傳回正確的資料類型。 如需詳細資訊, 請參閱[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) 。
+此方法使用`RegQueryValueEx`並確認返回正確的數據類型。 有關詳細資訊[,請參閱 RegQueryValueEx。](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置, 可能會讀取不受信任的資料。 此外, 這個方法所使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函式並不會明確處理 Null 終止的字串。 呼叫程式碼應檢查這兩個條件。
+> 此方法允許調用方指定任何註冊表位置,可能讀取無法信任的數據。 此外,此方法使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函數不會顯式處理 NULL 終止的字串。 這兩個條件都應由調用代碼檢查。
 
-##  <a name="queryguidvalue"></a>CRegKey::QueryGUIDValue
+## <a name="cregkeyqueryguidvalue"></a><a name="queryguidvalue"></a>CregKey::查詢GUID值
 
-呼叫這個方法, 以取得指定值名稱的 GUID 資料。
+呼叫此方法以檢索指定值名稱的 GUID 資料。
 
 ```
 LONG QueryGUIDValue(
@@ -573,26 +573,26 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-以 null 終止的字串指標, 其中包含要查詢之值的名稱。
+*pszValue名稱*<br/>
+包含要查詢的值名稱的 null 連接端的字串的指標。
 
-*guidValue*<br/>
-接收 GUID 之變數的指標。
+*吉德價值*<br/>
+指向接收 GUID 的變數的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則會傳回 ERROR_SUCCESS。 如果方法無法讀取值, 則會傳回 WINERROR.H 中定義的非零錯誤碼。H. 如果參考的資料不是有效的 GUID, 則會傳回 ERROR_INVALID_DATA。
+如果該方法成功,將返回ERROR_SUCCESS。 如果方法無法讀取值,它將返回在 WINERROR 中定義的非零錯誤代碼。H。 如果引用的數據不是有效的 GUID,則返回ERROR_INVALID_DATA。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用`CRegKey::QueryStringValue` , 並使用[CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring)將字串轉換成 GUID。
+此方法使用`CRegKey::QueryStringValue`[CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring)使用字串並將其轉換為 GUID。
 
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置, 可能會讀取不受信任的資料。
+> 此方法允許調用方指定任何註冊表位置,可能讀取無法信任的數據。
 
-##  <a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue
+## <a name="cregkeyquerymultistringvalue"></a><a name="querymultistringvalue"></a>CregKey::查詢多字串值
 
-呼叫這個方法, 以取得指定值名稱的 multistring 資料。
+呼叫此方法以檢索指定值名稱的多字串資料。
 
 ```
 LONG QueryMultiStringValue(
@@ -603,29 +603,29 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-以 null 終止的字串指標, 其中包含要查詢之值的名稱。
+*pszValue名稱*<br/>
+包含要查詢的值名稱的 null 連接端的字串的指標。
 
 *pszValue*<br/>
-接收 multistring 資料之緩衝區的指標。 Multistring 是以 null 結束的字串陣列, 以兩個 null 字元結束。
+指向接收多字串數據的緩衝區的指標。 多字串是 null 終止字串的陣列,由兩個空字元終止。
 
 *pnChars*<br/>
-*PszValue*所指向之緩衝區的大小 (以 TCHARs)。 當此方法傳回時, *pnChars*會包含所抓取 multistring 的大小 (以 TCHARs 為限), 包括終止的 null 字元。
+以 TCHAR 表示的緩衝區大小(以 TR 形式)指向*pszValue*。 當方法返回時 *,pnChars*包含檢索的多字串(包括終止空字元)的大小(在 TCHA 中)。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則會傳回 ERROR_SUCCESS。 如果方法無法讀取值, 則會傳回 WINERROR.H 中定義的非零錯誤碼。H. 如果參考的資料不是 REG_MULTI_SZ 類型, 則會傳回 ERROR_INVALID_DATA。
+如果該方法成功,將返回ERROR_SUCCESS。 如果方法無法讀取值,它將返回在 WINERROR 中定義的非零錯誤代碼。H。 如果引用的數據不是REG_MULTI_SZ類型,則返回ERROR_INVALID_DATA。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用`RegQueryValueEx`並確認傳回正確的資料類型。 如需詳細資訊, 請參閱[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) 。
+此方法使用`RegQueryValueEx`並確認返回正確的數據類型。 有關詳細資訊[,請參閱 RegQueryValueEx。](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置, 可能會讀取不受信任的資料。 此外, 這個方法所使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函式並不會明確處理 Null 終止的字串。 呼叫程式碼應檢查這兩個條件。
+> 此方法允許調用方指定任何註冊表位置,可能讀取無法信任的數據。 此外,此方法使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函數不會顯式處理 NULL 終止的字串。 這兩個條件都應由調用代碼檢查。
 
-##  <a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue
+## <a name="cregkeyqueryqwordvalue"></a><a name="queryqwordvalue"></a>CregKey::查詢QWORD值
 
-呼叫這個方法, 以取得指定值名稱的 QWORD 資料。
+調用此方法以檢索指定值名稱的 QWORD 資料。
 
 ```
 LONG QueryQWORDValue(
@@ -635,26 +635,26 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-以 null 終止的字串指標, 其中包含要查詢之值的名稱。
+*pszValue名稱*<br/>
+包含要查詢的值名稱的 null 連接端的字串的指標。
 
 *qwValue*<br/>
-接收 QWORD 之緩衝區的指標。
+指向接收QWORD的緩衝區的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則會傳回 ERROR_SUCCESS。 如果方法無法讀取值, 則會傳回 WINERROR.H 中定義的非零錯誤碼。H. 如果參考的資料不是 REG_QWORD 類型, 則會傳回 ERROR_INVALID_DATA。
+如果該方法成功,將返回ERROR_SUCCESS。 如果方法無法讀取值,它將返回在 WINERROR 中定義的非零錯誤代碼。H。 如果引用的數據不是REG_QWORD類型,則返回ERROR_INVALID_DATA。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用`RegQueryValueEx`並確認傳回正確的資料類型。 如需詳細資訊, 請參閱[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) 。
+此方法使用`RegQueryValueEx`並確認返回正確的數據類型。 有關詳細資訊[,請參閱 RegQueryValueEx。](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置, 可能會讀取不受信任的資料。 此外, 這個方法所使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函式並不會明確處理 Null 終止的字串。 呼叫程式碼應檢查這兩個條件。
+> 此方法允許調用方指定任何註冊表位置,可能讀取無法信任的數據。 此外,此方法使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函數不會顯式處理 NULL 終止的字串。 這兩個條件都應由調用代碼檢查。
 
-##  <a name="querystringvalue"></a>CRegKey::QueryStringValue
+## <a name="cregkeyquerystringvalue"></a><a name="querystringvalue"></a>CRegKey::查詢字串值
 
-呼叫這個方法, 以取得指定值名稱的字串資料。
+呼叫此方法以檢索指定值名稱的字串資料。
 
 ```
 LONG QueryStringValue(
@@ -665,29 +665,29 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-以 null 終止的字串指標, 其中包含要查詢之值的名稱。
+*pszValue名稱*<br/>
+包含要查詢的值名稱的 null 連接端的字串的指標。
 
 *pszValue*<br/>
-接收字串資料的緩衝區指標。
+指向接收字串數據的緩衝區的指標。
 
 *pnChars*<br/>
-*PszValue*所指向之緩衝區的大小 (以 TCHARs)。 當此方法傳回時, *pnChars*會包含所抓取字串的大小 (以 TCHARs 為結尾), 包括結束的 null 字元。
+以 TCHAR 表示的緩衝區大小(以 TR 形式)指向*pszValue*。 當方法返回時 *,pnChars*包含檢索的字串的大小(TCHAR),包括終止空字元。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則會傳回 ERROR_SUCCESS。 如果方法無法讀取值, 則會傳回 WINERROR.H 中定義的非零錯誤碼。H. 如果參考的資料不是 REG_SZ 類型, 則會傳回 ERROR_INVALID_DATA。 如果方法傳回 ERROR_MORE_DATA, 則*pnChars*等於零, 而不是所需的緩衝區大小 (以位元組為單位)。
+如果該方法成功,將返回ERROR_SUCCESS。 如果方法無法讀取值,它將返回在 WINERROR 中定義的非零錯誤代碼。H。 如果引用的數據不是REG_SZ類型,則返回ERROR_INVALID_DATA。 如果方法返回*ERROR_MORE_DATA,pnChars*等於零,而不是所需的緩衝區大小(以位元組為單位)。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用`RegQueryValueEx`並確認傳回正確的資料類型。 如需詳細資訊, 請參閱[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) 。
+此方法使用`RegQueryValueEx`並確認返回正確的數據類型。 有關詳細資訊[,請參閱 RegQueryValueEx。](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置, 可能會讀取不受信任的資料。 此外, 這個方法所使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函式並不會明確處理 Null 終止的字串。 呼叫程式碼應檢查這兩個條件。
+> 此方法允許調用方指定任何註冊表位置,可能讀取無法信任的數據。 此外,此方法使用的[RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)函數不會顯式處理 NULL 終止的字串。 這兩個條件都應由調用代碼檢查。
 
-##  <a name="queryvalue"></a>CRegKey::QueryValue
+## <a name="cregkeyqueryvalue"></a><a name="queryvalue"></a>CRegKey::查詢值
 
-呼叫這個方法, 以取得[m_hKey](#m_hkey)之指定值欄位的資料。 已不再支援此方法的舊版, 並將其標示為 ATL_DEPRECATED。
+調用此方法以檢索[m_hKey](#m_hkey)的指定值欄位的數據。 此方法的早期版本不再受支援,並標記為ATL_DEPRECATED。
 
 ```
 LONG QueryValue(
@@ -708,46 +708,46 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-以 null 終止的字串指標, 其中包含要查詢之值的名稱。 如果*pszValueName*為 Null 或空字串 "", 則方法會針對索引鍵的未命名或預設值 (如果有的話), 抓取類型和資料。
+*pszValue名稱*<br/>
+包含要查詢的值名稱的 null 連接端的字串的指標。 如果*pszValueName*為 NULL 或空字串" 則該方法將檢索金鑰未命名或預設值的類型和資料(如果有)。
 
 *pdwType*<br/>
-變數的指標, 該變數會接收程式碼, 指出儲存在指定值中的資料類型。 如果不需要型別程式碼, *pdwType*參數可以是 Null。
+指向接收代碼的變數的指標,該代碼指示存儲在指定值中的數據類型。 如果不需要類型代碼,*則 pdwType*參數可以是 NULL。
 
 *pData*<br/>
-接收值資料之緩衝區的指標。 如果資料不是必要的, 這個參數可以是 Null。
+指向接收值數據的緩衝區的指標。 如果不需要資料,此參數可以是 NULL。
 
-*pnBytes*<br/>
-變數的指標, 指定*pData*參數所指向的緩衝區大小 (以位元組為單位)。 當此方法傳回時, 這個變數會包含複製到 PData 的資料大小 *。*
+*pn位元組*<br/>
+指向指定*pData*參數指向的緩衝區的大小(以位元組為單位)的變數的指標。 當方法返回時,此變數包含複製到*pData*的數據的大小。
 
 *dwValue*<br/>
-值欄位的數值資料。
+值欄位的數字數據。
 
-*lpszValueName*<br/>
+*lpszValue名稱*<br/>
 指定要查詢的值欄位。
 
 *szValue*<br/>
 值欄位的字串資料。
 
-*pdwCount*<br/>
-字串資料的大小。 其值最初會設定為*szValue*緩衝區的大小。
+*pdw( A) Counts*<br/>
+字串資料的大小。 其值最初設置為*szValue*緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS;否則, 會在 WINERROR.H 中定義非零的錯誤碼。H.
+如果成功,則返回ERROR_SUCCESS;否則,在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-`QueryValue`已不再支援的兩個原始版本, 並將其標示為 ATL_DEPRECATED。 如果使用這些表單, 編譯器會發出警告。
+不再支援 的`QueryValue`兩 個原始版本,並標記為ATL_DEPRECATED。 如果使用這些窗體,編譯器將發出警告。
 
-其餘的方法會呼叫 RegQueryValueEx。
+其餘方法稱為 RegQueryValueEx。
 
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置, 可能會讀取不受信任的資料。 此外, 這個方法所使用的 RegQueryValueEx 函式並不會明確處理 Null 終止的字串。 呼叫程式碼應檢查這兩個條件。
+> 此方法允許調用方指定任何註冊表位置,可能讀取無法信任的數據。 此外,此方法使用的 RegQueryValueEx 函數不會顯式處理 NULL 終止的字串。 這兩個條件都應由調用代碼檢查。
 
-##  <a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey
+## <a name="cregkeyrecursedeletekey"></a><a name="recursedeletekey"></a>CRegKey::重新詛咒刪除金鑰
 
-呼叫這個方法, 從登錄中移除指定的索引鍵, 並明確移除任何子機碼。
+呼叫此方法從註冊表中刪除指定的密鑰,並顯式刪除任何子鍵。
 
 ```
 LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
@@ -756,19 +756,19 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="parameters"></a>參數
 
 *lpszKey*<br/>
-指定要刪除之金鑰的名稱。 此名稱必須是[m_hKey](#m_hkey)的子機碼。
+指定要刪除的鍵的名稱。 此名稱必須是[m_hKey](#m_hkey)的子鍵。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS;否則, 會在 WINERROR.H 中定義非零的錯誤值。H.
+如果成功,則返回ERROR_SUCCESS;否則,在 WINERROR 中定義的非零錯誤值。H。
 
 ### <a name="remarks"></a>備註
 
-如果金鑰具有子機碼, 您必須呼叫這個方法來刪除金鑰。
+如果金鑰具有子鍵,則必須調用此方法以刪除該密鑰。
 
-##  <a name="setbinaryvalue"></a>CRegKey::SetBinaryValue
+## <a name="cregkeysetbinaryvalue"></a><a name="setbinaryvalue"></a>CRegKey::設定Binary值
 
-呼叫這個方法以設定登錄機碼的二進位值。
+調用此方法以設置註冊表項的二進位值。
 
 ```
 LONG SetBinaryValue(
@@ -779,26 +779,26 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-字串的指標, 包含要設定之值的名稱。 如果具有此名稱的值尚未存在, 則方法會將它新增至索引鍵。
+*pszValue名稱*<br/>
+指向包含要設定的值名稱的字串的指標。 如果存在具有此名稱的值,則方法將其添加到鍵中。
 
 *pValue*<br/>
-包含要以指定的值名稱儲存之資料的緩衝區指標。
+指向包含要使用指定值名稱儲存的數據的緩衝區的指標。
 
-*nBytes*<br/>
-指定*pValue*參數所指向的資訊大小 (以位元組為單位)。
+*n 位元組*<br/>
+指定*pValue*參數指向的資訊大小(以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入登錄。
+此方法使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入註冊表。
 
-##  <a name="setdwordvalue"></a>CRegKey:: SetDWORDValue
+## <a name="cregkeysetdwordvalue"></a><a name="setdwordvalue"></a>CregKey::設定DWORD值
 
-呼叫這個方法來設定登錄機碼的 DWORD 值。
+調用此方法以設置註冊表項的 DWORD 值。
 
 ```
 LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
@@ -806,23 +806,23 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-字串的指標, 包含要設定之值的名稱。 如果具有此名稱的值尚未存在, 則方法會將它新增至索引鍵。
+*pszValue名稱*<br/>
+指向包含要設定的值名稱的字串的指標。 如果存在具有此名稱的值,則方法將其添加到鍵中。
 
 *dwValue*<br/>
-要以指定的值名稱儲存的 DWORD 資料。
+要使用指定值名稱儲存的 DWORD 資料。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入登錄。
+此方法使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入註冊表。
 
-##  <a name="setguidvalue"></a>CRegKey::SetGUIDValue
+## <a name="cregkeysetguidvalue"></a><a name="setguidvalue"></a>CRegKey::SetGUID值
 
-呼叫這個方法來設定登錄機碼的 GUID 值。
+調用此方法以設置註冊表項的 GUID 值。
 
 ```
 LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
@@ -830,23 +830,23 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-字串的指標, 包含要設定之值的名稱。 如果具有此名稱的值尚未存在, 則方法會將它新增至索引鍵。
+*pszValue名稱*<br/>
+指向包含要設定的值名稱的字串的指標。 如果存在具有此名稱的值,則方法將其添加到鍵中。
 
-*guidValue*<br/>
-要以指定的值名稱儲存之 GUID 的參考。
+*吉德價值*<br/>
+引用要使用指定值名稱儲存的 GUID。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用`CRegKey::SetStringValue` , 並使用[StringFromGUID2](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2)將 GUID 轉換成字串。
+此方法使用`CRegKey::SetStringValue` [StringFromGUID](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2)將 GUID 轉換為字串。
 
-##  <a name="setkeyvalue"></a>CRegKey::SetKeyValue
+## <a name="cregkeysetkeyvalue"></a><a name="setkeyvalue"></a>CRegKey::設定鍵值
 
-呼叫這個方法, 將資料儲存在指定之索引鍵的指定值欄位中。
+呼叫此方法將資料儲存在指定金鑰的指定值欄位中。
 
 ```
 LONG SetKeyValue(
@@ -857,26 +857,26 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>參數
 
-*lpszKeyName*<br/>
-指定要建立或開啟之金鑰的名稱。 此名稱必須是[m_hKey](#m_hkey)的子機碼。
+*lpszKey名稱*<br/>
+指定要建立或打開的鍵的名稱。 此名稱必須是[m_hKey](#m_hkey)的子鍵。
 
 *lpszValue*<br/>
-指定要儲存的資料。 此參數必須為非 Null。
+指定要存儲的數據。 此參數必須為非 NULL。
 
-*lpszValueName*<br/>
-指定要設定的值欄位。 如果具有此名稱的值欄位尚未存在於索引鍵中, 則會加入。
+*lpszValue名稱*<br/>
+指定要設定的值欄位。 如果鍵中不存在具有此名稱的值欄位,則添加該欄位。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS;否則, 會在 WINERROR.H 中定義非零的錯誤碼。H.
+如果成功,則返回ERROR_SUCCESS;否則,在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來建立或開啟*lpszKeyName*索引鍵, 並將*lpszValue*資料儲存在*lpszValueName*值欄位中。
+呼叫此方法以建立或開啟*lpszKeyName*金鑰,並將*lpszValue*資料儲存在*lpszValueName*值欄位中。
 
-##  <a name="setkeysecurity"></a>CRegKey::SetKeySecurity
+## <a name="cregkeysetkeysecurity"></a><a name="setkeysecurity"></a>CRegKey::設定金鑰安全性
 
-呼叫這個方法來設定登錄機碼的安全性。
+調用此方法以設置註冊表項的安全性。
 
 ```
 LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
@@ -885,29 +885,29 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="parameters"></a>參數
 
 *si*<br/>
-指定要設定之安全描述項的元件。 此值可以是下列值的組合:
+指定要設置的安全描述符的元件。 該值可以是以下值的組合:
 
 |值|意義|
 |-----------|-------------|
-|DACL_SECURITY_INFORMATION|設定金鑰的任意存取控制清單 (DACL)。 金鑰必須具有 WRITE_DAC 存取權, 或者呼叫進程必須是物件的擁有者。|
-|GROUP_SECURITY_INFORMATION|設定金鑰的主要群組安全識別碼 (SID)。 金鑰必須具有 WRITE_OWNER 存取權, 或者呼叫進程必須是物件的擁有者。|
-|OWNER_SECURITY_INFORMATION|設定金鑰的擁有者 SID。 金鑰必須具有 WRITE_OWNER 存取權, 或呼叫進程必須是物件的擁有者, 或已啟用 SE_TAKE_OWNERSHIP_NAME 許可權。|
-|SACL_SECURITY_INFORMATION|設定金鑰的系統存取控制清單 (SACL)。 金鑰必須具有 ACCESS_SYSTEM_SECURITY 存取權。 取得此存取權的正確方式是在呼叫端的目前存取權杖中啟用 SE_SECURITY_NAME[許可權](/windows/win32/secauthz/privileges)、開啟 ACCESS_SYSTEM_SECURITY 存取的控制碼, 然後停用許可權。|
+|DACL_SECURITY_INFORMATION|設置金鑰的任意存取控制清單 (DACL)。 金鑰必須具有WRITE_DAC訪問許可權,或者調用進程必須是物件的擁有者。|
+|GROUP_SECURITY_INFORMATION|設置金鑰的主組安全識別碼 (SID)。 金鑰必須具有WRITE_OWNER訪問許可權,或者調用進程必須是物件的擁有者。|
+|OWNER_SECURITY_INFORMATION|設置金鑰的所有者 SID。 密鑰必須具有WRITE_OWNER訪問許可權,或者調用進程必須是物件的所有者或啟用了SE_TAKE_OWNERSHIP_NAME許可權。|
+|SACL_SECURITY_INFORMATION|設置金鑰的系統存取控制清單 (SACL)。 金鑰必須具有ACCESS_SYSTEM_SECURITY訪問許可權。 獲取此訪問許可權的正確方法是在調用方的當前訪問權杖中啟用SE_SECURITY_NAME[許可權](/windows/win32/secauthz/privileges),打開句柄以ACCESS_SYSTEM_SECURITY訪問,然後禁用該許可權。|
 
-*psd*<br/>
-[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)結構的指標, 指定要針對指定的索引鍵設定的安全性屬性。
+*Psd*<br/>
+指向[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)結構的指標,該結構指定要為指定金鑰設置的安全屬性。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-設定金鑰的安全性屬性。 如需詳細資訊, 請參閱[RegSetKeySecurity](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity) 。
+設置金鑰的安全屬性。 有關詳細資訊[,請參閱 RegSetKey 安全](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity)。
 
-##  <a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue
+## <a name="cregkeysetmultistringvalue"></a><a name="setmultistringvalue"></a>CRegKey::設定多字串值
 
-呼叫這個方法以設定登錄機碼的 multistring 值。
+呼叫此方法以設定註冊表項的多字串值。
 
 ```
 LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
@@ -915,23 +915,23 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-字串的指標, 包含要設定之值的名稱。 如果具有此名稱的值尚未存在, 則方法會將它新增至索引鍵。
+*pszValue名稱*<br/>
+指向包含要設定的值名稱的字串的指標。 如果存在具有此名稱的值,則方法將其添加到鍵中。
 
 *pszValue*<br/>
-要以指定的值名稱儲存的 multistring 資料指標。 Multistring 是以 null 結束的字串陣列, 以兩個 null 字元結束。
+指向要使用指定值名稱儲存的多字串資料的指標。 多字串是 null 終止字串的陣列,由兩個空字元終止。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入登錄。
+此方法使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入註冊表。
 
-##  <a name="setqwordvalue"></a>CRegKey::SetQWORDValue
+## <a name="cregkeysetqwordvalue"></a><a name="setqwordvalue"></a>CRegKey::設定QWORD值
 
-呼叫這個方法來設定登錄機碼的 QWORD 值。
+調用此方法以設置註冊表項的 QWORD 值。
 
 ```
 LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
@@ -939,23 +939,23 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-字串的指標, 包含要設定之值的名稱。 如果具有此名稱的值尚未存在, 則方法會將它新增至索引鍵。
+*pszValue名稱*<br/>
+指向包含要設定的值名稱的字串的指標。 如果存在具有此名稱的值,則方法將其添加到鍵中。
 
 *qwValue*<br/>
-要以指定的值名稱儲存的 QWORD 資料。
+要使用指定值名稱儲存的 QWORD 資料。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入登錄。
+此方法使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入註冊表。
 
-##  <a name="setstringvalue"></a>CRegKey:: SetStringValue
+## <a name="cregkeysetstringvalue"></a><a name="setstringvalue"></a>CRegKey::設定字串值
 
-呼叫這個方法以設定登錄機碼的字串值。
+呼叫此方法以設定註冊表項的字串值。
 
 ```
 LONG SetStringValue(
@@ -966,26 +966,26 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-字串的指標, 包含要設定之值的名稱。 如果具有此名稱的值尚未存在, 則方法會將它新增至索引鍵。
+*pszValue名稱*<br/>
+指向包含要設定的值名稱的字串的指標。 如果存在具有此名稱的值,則方法將其添加到鍵中。
 
 *pszValue*<br/>
-要以指定的值名稱儲存之字串資料的指標。
+指向要使用指定值名稱儲存的字串資料的指標。
 
 *dwType*<br/>
-要寫入登錄的字串類型: REG_SZ (預設值) 或 REG_EXPAND_SZ (適用于 multistring)。
+要寫入註冊表的字串的類型:REG_SZ(預設值)或REG_EXPAND_SZ(用於多字串)。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功, 則傳回值為 ERROR_SUCCESS。 如果方法失敗, 則傳回值為 WINERROR.H 中定義的非零的錯誤碼。H.
+如果該方法成功,則返回值ERROR_SUCCESS。 如果方法失敗,返回值是在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入登錄。
+此方法使用[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)將值寫入註冊表。
 
-##  <a name="setvalue"></a>CRegKey:: SetValue
+## <a name="cregkeysetvalue"></a><a name="setvalue"></a>CRegKey::設定價值
 
-呼叫這個方法, 將資料儲存在[m_hKey](#m_hkey)的指定值欄位中。 已不再支援此方法的舊版, 並將其標示為 ATL_DEPRECATED。
+呼叫此方法將資料儲存在指定的值欄位中[m_hKey](#m_hkey)。 此方法的早期版本不再受支援,並標記為ATL_DEPRECATED。
 
 ```
 LONG SetValue(
@@ -1013,50 +1013,50 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*<br/>
-字串的指標, 包含要設定之值的名稱。 如果具有此名稱的值尚未出現在索引鍵中, 則方法會將它新增至索引鍵。 如果*pszValueName*為 Null 或空字串 "", 則方法會針對索引鍵的未命名或預設值設定類型和資料。
+*pszValue名稱*<br/>
+指向包含要設定的值名稱的字串的指標。 如果具有此名稱的值在鍵中不存在,則方法將其添加到鍵中。 如果*pszValueName*為 NULL 或空字串" 則該方法將設定鍵的未命名或預設值的類型和資料。
 
 *dwType*<br/>
-指定程式碼, 指出*pValue*參數所指向的資料類型。
+指定指示*pValue*參數指向的數據類型的代碼。
 
 *pValue*<br/>
-包含要以指定的值名稱儲存之資料的緩衝區指標。
+指向包含要使用指定值名稱儲存的數據的緩衝區的指標。
 
-*nBytes*<br/>
-指定*pValue*參數所指向的資訊大小 (以位元組為單位)。 如果資料屬於 REG_SZ、REG_EXPAND_SZ 或 REG_MULTI_SZ 類型, *nBytes*必須包含結束的 null 字元的大小。
+*n 位元組*<br/>
+指定*pValue*參數指向的資訊大小(以位元組為單位)。 如果資料的類型為REG_SZ、REG_EXPAND_SZ或REG_MULTI_SZ,*則 nBytes*必須包括終止空字元的大小。
 
-*hKeyParent*<br/>
-Open 鍵的控制碼。
+*hKey父*<br/>
+打開鍵的句柄。
 
-*lpszKeyName*<br/>
-指定要建立或開啟之金鑰的名稱。 此名稱必須是*hKeyParent*的子機碼。
+*lpszKey名稱*<br/>
+指定要建立或打開的鍵的名稱。 此名稱必須是*hKeyParent*的子鍵。
 
 *lpszValue*<br/>
-指定要儲存的資料。 此參數必須為非 Null。
+指定要存儲的數據。 此參數必須為非 NULL。
 
-*lpszValueName*<br/>
-指定要設定的值欄位。 如果具有此名稱的值欄位尚未存在於索引鍵中, 則會加入。
+*lpszValue名稱*<br/>
+指定要設定的值欄位。 如果鍵中不存在具有此名稱的值欄位,則添加該欄位。
 
 *dwValue*<br/>
-指定要儲存的資料。
+指定要存儲的數據。
 
-*bMulti*<br/>
-如果為 false, 表示字串為 REG_SZ 類型。 若為 true, 表示字串為 REG_MULTI_SZ 類型的 multistring。
+*b多*<br/>
+如果為 false,則指示字串的類型為REG_SZ。 如果為 true,則指示該字串是類型REG_MULTI_SZ的多字串。
 
 *nValueLen*<br/>
-如果*bMulti*為 true, 則*nValueLen*是*lpszValue*字串的長度 (以字元為單位)。 如果*bMulti*為 false, 則-1 的值表示方法會自動計算長度。
+如果*bMulti*為 true,*則 nValueLen*是字元中的*lpszValue*字串的長度。 如果*bMulti*為 false,則值 -1 表示該方法將自動計算長度。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回 ERROR_SUCCESS;否則, 會在 WINERROR.H 中定義非零的錯誤碼。H.
+如果成功,則返回ERROR_SUCCESS;否則,在 WINERROR 中定義的非零錯誤代碼。H。
 
 ### <a name="remarks"></a>備註
 
-的兩個原始版本`SetValue`會標示為 ATL_DEPRECATED, 且不應再使用。 如果使用這些表單, 編譯器會發出警告。
+的兩個`SetValue`原始版本標記為ATL_DEPRECATED,不應再使用。 如果使用這些窗體,編譯器將發出警告。
 
-第三個方法會呼叫[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)。
+第三種方法稱為[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)。
 
 ## <a name="see-also"></a>另請參閱
 
-[DCOM 範例](../../overview/visual-cpp-samples.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[DCOM 樣品](../../overview/visual-cpp-samples.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)

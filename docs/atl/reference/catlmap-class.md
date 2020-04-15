@@ -37,16 +37,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321446"
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 
-這個類別提供方法來建立和管理一個 map 物件。
+此類提供創建和管理地圖物件的方法。
 
 ## <a name="syntax"></a>語法
 
@@ -61,16 +61,16 @@ class CAtlMap
 #### <a name="parameters"></a>參數
 
 *K*<br/>
-索引鍵的項目類型。
+鍵元素類型。
 
-*V*<br/>
-值的項目型別。
+*五*<br/>
+值元素類型。
 
-*KTraits*<br/>
-程式碼，用來複製或移動索引鍵的項目。 請參閱[CElementTraits 類別](../../atl/reference/celementtraits-class.md)如需詳細資訊。
+*克瓦次克*<br/>
+複製或移動關鍵元素的代碼。 有關詳細資訊[,請參閱 CElementTraits 類別](../../atl/reference/celementtraits-class.md)。
 
 *VTraits*<br/>
-若要複製或移動值的項目所使用的程式碼。
+複製或移動值元素的代碼。
 
 ## <a name="members"></a>成員
 
@@ -78,86 +78,86 @@ class CAtlMap
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlMap::KINARGTYPE](#kinargtype)|使用索引鍵做為輸入引數傳遞時的類型|
-|[CAtlMap::KOUTARGTYPE](#koutargtype)|索引鍵會傳回做為輸出引數時所使用的類型。|
-|[CAtlMap::VINARGTYPE](#vinargtype)|值會傳遞做為輸入引數時所使用的類型。|
-|[CAtlMap::VOUTARGTYPE](#voutargtype)|值會傳遞做為輸出引數時所使用的類型。|
+|[CAtlMap::金納格](#kinargtype)|當輸入參數的參數來傳遞時使用的類型|
+|[CAtlMap:庫塔格格](#koutargtype)|當將鍵返回為輸出參數時使用的類型。|
+|[CAtlMap::維納格](#vinargtype)|當值作為輸入參數傳遞時使用的類型。|
+|[CAtlMap::VOUTARGTYPE](#voutargtype)|當值作為輸出參數傳遞時使用的類型。|
 
 ### <a name="public-classes"></a>公用類別
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlMap::CPair 類別](#cpair_class)|類別，其中包含索引鍵和值的項目。|
+|[CAtlMap:CPair 類](#cpair_class)|包含鍵和值元素的類。|
 
 ### <a name="cpair-data-members"></a>CPair 資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CPair::m_key](#m_key)|儲存索引鍵的項目之資料成員。|
-|[CPair::m_value](#m_value)|儲存值的項目之資料成員。|
+|[CPair::m_key](#m_key)|存儲鍵元素的數據成員。|
+|[CPair:m_value](#m_value)|存儲值元素的數據成員。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlMap::CAtlMap](#catlmap)|建構函式。|
-|[CAtlMap::~CAtlMap](#dtor)|解構函式。|
+|[CAtlMap:CAtlMap](#catlmap)|建構函式。|
+|[CAtlMap:_CAtlMap](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlMap::AssertValid](#assertvalid)|呼叫這個方法會造成判斷提示，如果`CAtlMap`無效。|
-|[CAtlMap::DisableAutoRehash](#disableautorehash)|呼叫這個方法，以停用的自動湊`CAtlMap`物件。|
-|[CAtlMap::EnableAutoRehash](#enableautorehash)|呼叫這個方法來啟用的自動湊`CAtlMap`物件。|
-|[CAtlMap::GetAt](#getat)|呼叫此方法以傳回對應中的指定位置處的項目。|
-|[CAtlMap::GetCount](#getcount)|呼叫這個方法來擷取在對應中的項目數。|
-|[CAtlMap::GetHashTableSize](#gethashtablesize)|呼叫這個方法來判斷對應的雜湊表中的分類收納數目。|
-|[CAtlMap::GetKeyAt](#getkeyat)|呼叫這個方法來擷取儲存在指定的位置中的索引鍵`CAtlMap`物件。|
-|[CAtlMap::GetNext](#getnext)|呼叫這個方法來取得對儲存在下一個元素的指標`CAtlMap`物件。|
-|[CAtlMap::GetNextAssoc](#getnextassoc)|取得逐一查看的下一個項目。|
-|[CAtlMap::GetNextKey](#getnextkey)|呼叫這個方法來擷取下一個索引鍵，從`CAtlMap`物件。|
-|[CAtlMap::GetNextValue](#getnextvalue)|呼叫這個方法來取得下一步 的值從`CAtlMap`物件。|
-|[CAtlMap::GetStartPosition](#getstartposition)|呼叫此方法以啟動對應的反覆項目。|
-|[CAtlMap::GetValueAt](#getvalueat)|呼叫這個方法來擷取儲存在指定的位置中的值`CAtlMap`物件。|
-|[CAtlMap::InitHashTable](#inithashtable)|呼叫這個方法來初始化雜湊表。|
-|[CAtlMap::IsEmpty](#isempty)|呼叫此方法來測試空白的 map 物件。|
-|[CAtlMap::Lookup](#lookup)|呼叫這個方法來查閱索引鍵或值中的`CAtlMap`物件。|
-|[CAtlMap::Rehash](#rehash)|呼叫此方法以 rehash`CAtlMap`物件。|
-|[CAtlMap::RemoveAll](#removeall)|呼叫這個方法來移除所有項目從`CAtlMap`物件。|
-|[CAtlMap::RemoveAtPos](#removeatpos)|呼叫這個方法來移除處的指定位置中的項目`CAtlMap`物件。|
-|[CAtlMap::RemoveKey](#removekey)|呼叫這個方法來移除項目從`CAtlMap`指定索引鍵的物件。|
-|[CAtlMap::SetAt](#setat)|呼叫這個方法來插入對應中的項目配對。|
-|[CAtlMap::SetOptimalLoad](#setoptimalload)|呼叫這個方法來設定最佳的負載`CAtlMap`物件。|
-|[CAtlMap::SetValueAt](#setvalueat)|呼叫這個方法來變更儲存在指定的位置中的值`CAtlMap`物件。|
+|[CAtlMap::斷言有效](#assertvalid)|如果不合法`CAtlMap`, 請呼叫此方法以引起 ASSERT。|
+|[CAtlMap::D可自動重新哈希](#disableautorehash)|調用此方法以禁用`CAtlMap`物件的自動重新哈希。|
+|[CAtlMap:開啟自動復原哈希](#enableautorehash)|呼叫此方法以啟用`CAtlMap`物件的自動重新哈希。|
+|[CAtlMap:GetAt](#getat)|呼叫此方法以在地圖中指定位置返回元素。|
+|[CAtlMap:取得計數](#getcount)|調用此方法以檢索映射中的元素數。|
+|[CAtlMap:取得哈希表大小](#gethashtablesize)|調用此方法以確定地圖哈希表中的條柱數。|
+|[CAtlMap:取得鍵](#getkeyat)|調用此方法以檢索存儲在物件中給定位置的`CAtlMap`鍵。|
+|[CAtlMap:取得下一個](#getnext)|呼叫此方法以獲取指向存儲在物件中的下一個元素對的`CAtlMap`指標。|
+|[CAtlMap:getNextAssoc](#getnextassoc)|獲取下一個反覆運算元素。|
+|[CAtlMap:取得下一個鍵](#getnextkey)|調用此方法從物件檢索下一個`CAtlMap`鍵。|
+|[CAtlMap:取得下一個值](#getnextvalue)|調用此方法從`CAtlMap`物件獲取下一個值。|
+|[CAtlMap:取得起始位置](#getstartposition)|調用此方法以啟動映射反覆運算。|
+|[CAtlMap:取得價值At](#getvalueat)|調用此方法以檢索存儲在`CAtlMap`物件中給定位置的值。|
+|[CAtlMap:initHashTable](#inithashtable)|調用此方法以初始化哈希表。|
+|[CAtlMap::空](#isempty)|調用此方法以測試空地圖物件。|
+|[CAtlMap::尋找](#lookup)|調用此方法以查找物件中的`CAtlMap`鍵或值。|
+|[CAtlMap:rehash](#rehash)|調用此方法以重新哈希`CAtlMap`物件。|
+|[CAtlMap:移除所有](#removeall)|呼叫此方法從`CAtlMap`物件中刪除所有元素。|
+|[CAtlMap::刪除AtPos](#removeatpos)|呼叫此方法以移除物件中給定位置的元素`CAtlMap`。|
+|[CAtlMap::刪除鍵](#removekey)|呼叫此方法以在給定鍵的情況下從`CAtlMap`物件中刪除元素。|
+|[CAtlMap:setat](#setat)|呼叫此方法以將元素對插入到地圖中。|
+|[CAtlMap::設定最佳載入](#setoptimalload)|調用此方法以設置`CAtlMap`物件的最佳負載。|
+|[CAtlMap::設定價值At](#setvalueat)|呼叫此方法以變更儲存在物件中給定位置的值`CAtlMap`。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|取代或新增新的項目`CAtlMap`。|
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|替換 或向`CAtlMap`添加新元素。|
 
 ## <a name="remarks"></a>備註
 
-`CAtlMap` 支援任何指定的型別，管理未排序的索引鍵的項目和其相關聯的值陣列的對應陣列。 項目 （包含索引鍵和值） 會儲存使用雜湊演算法，可讓大量的有效率地儲存和擷取資料。
+`CAtlMap`支援任何給定類型的映射陣列,管理鍵元素及其關聯值的無序陣列。 元素(由鍵和值組成)使用哈希演演演算法存儲,從而能夠高效地存儲和檢索大量數據。
 
-*KTraits*並*VTraits*參數會包含任何複製或移動的項目所需的補充程式碼的 traits 類別。
+*KTraits*和*VTraits*參數是包含複製或移動元素所需的任何補充代碼的特徵類。
 
-替代`CAtlMap`提供[CRBMap](../../atl/reference/crbmap-class.md)類別。 `CRBMap` 也會儲存索引鍵/值組，但表現不同的效能特性。 要插入的項目所花費的時間查閱索引鍵，或刪除的金鑰`CRBMap`物件屬於訂單*log(n)*，其中*n*是項目數目。 針對`CAtlMap`，所有這些作業通常需要常數的時間，雖然最壞狀況案例可能會對訂單*n*。 因此，在典型的情況下，`CAtlMap`速度。
+`CAtlMap` [CRBMap](../../atl/reference/crbmap-class.md)類提供了替代項。 `CRBMap`還存儲鍵/值對,但表現出不同的性能特徵。 插入項目、尋找鍵或從`CRBMap`物件中移除鍵所花時間是順序*日誌(n),* 其中*n*是元素數。 對於`CAtlMap`,所有這些操作通常需要恆定的時間,儘管最壞情況可能是順序*為 n*。 因此,在典型情況下,`CAtlMap`速度更快。
 
-之間的差異`CRBMap`和`CAtlMap`時逐一查看儲存的項目變得顯而易見。 在  `CRBMap`，項目造訪按照排序順序。 在  `CAtlMap`、 未排序的項目，和任何順序來推斷。
+和`CRBMap``CAtlMap`之間的另一個區別在遍歷存儲的元素時變得明顯。 在`CRBMap`中,按排序的順序訪問元素。 在`CAtlMap`中,元素未排序,無法推斷任何順序。
 
-當項目數量少需要儲存時，請考慮使用[CSimpleMap](../../atl/reference/csimplemap-class.md)類別。
+當需要存儲少量元素時,請考慮改用[CSimpleMap](../../atl/reference/csimplemap-class.md)類。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="assertvalid"></a>  CAtlMap::AssertValid
+## <a name="catlmapassertvalid"></a><a name="assertvalid"></a>CAtlMap::斷言有效
 
-呼叫這個方法會造成判斷提示，如果`CAtlMap`物件無效。
+如果物件無效,`CAtlMap`呼叫此方法以導致 ASSERT。
 
 ```
 void AssertValid() const;
@@ -165,13 +165,13 @@ void AssertValid() const;
 
 ### <a name="remarks"></a>備註
 
-在偵錯組建中，這個方法會造成判斷提示如果`CAtlMap`物件無效。
+在除錯產生中,如果物件無效,`CAtlMap`此方法將導致 ASSERT。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="catlmap"></a>  CAtlMap::CAtlMap
+## <a name="catlmapcatlmap"></a><a name="catlmap"></a>CAtlMap:CAtlMap
 
 建構函式。
 
@@ -186,42 +186,42 @@ CAtlMap(
 
 ### <a name="parameters"></a>參數
 
-*nBins*<br/>
-提供的預存的項目指標的分類收納數目。 稍後本主題適用於分類收納組的說明，請參閱備註。
+*n賓斯*<br/>
+提供指向存儲元素的指標的條柱數。 有關 bin的說明,請參閱本主題後面的備註。
 
-*fOptimalLoad*<br/>
-最佳的負載比率。
+*f優負荷*<br/>
+最佳負載比。
 
-*fLoThreshold*<br/>
-負載比率下限臨界值。
+*fLo 閾值*<br/>
+負載比的較低閾值。
 
 *fHiThreshold*<br/>
-負載比率上限臨界值。
+負載比的上限。
 
 *nBlockSize*<br/>
 區塊大小。
 
 ### <a name="remarks"></a>備註
 
-`CAtlMap` 參考的所有其預存的項目首先會建立索引的索引鍵上使用雜湊演算法。 此索引參考"bin"包含預存的元素的指標。 紙匣已在使用中，如果連結清單會建立來存取後續的項目。 周遊清單低於直接存取正確的項目，並因此網站導覽結構就必須對效能的儲存體需求之間取得平衡。 在大部分情況下提供很好的結果已選擇的預設參數。
+`CAtlMap`通過首先在鍵上使用哈希演演演算法創建索引來引用其所有存儲的元素。 此索引引用包含指向存儲元素的指標的「bin」。。 如果 bin 已在使用中,則創建連結列表以訪問後續元素。 遍歷清單比直接存取正確的元素要慢,因此映射結構需要平衡存儲要求和性能。 在大多數情況下,選擇默認參數以提供良好的結果。
 
-負載比例為儲存在 map 物件中的元素數目的分類收納數目的比率。 網站導覽結構時， *fOptimalLoad*參數值會用來計算所需的分類收納數目。 這個值可以使用來變更[CAtlMap::SetOptimalLoad](#setoptimalload)方法。
+負載比率是條柱數與存儲在地圖物件中的元素數的比率。 重新計算地圖結構時 *,fOptimalLoad*參數值將用於計算所需的條柱數。 可以使用[CAtlMap:set 優載入](#setoptimalload)方法更改此值。
 
-*FLoThreshold*參數是較低的值之前的負載比率可以觸達`CAtlMap`會重新計算對應的最佳大小。
+*fLoThreshold*參數是負載比可以達到的較低值,在`CAtlMap`重新 計算地圖的最佳大小之前。
 
-*FHiThreshold*參數是負載比率可以連線到之前的上限值`CAtlMap`物件將會重新計算對應的最佳大小。
+*fHiThreshold*參數是負載比`CAtlMap`在 物件重新計算地圖的最佳大小之前可以達到的上限值。
 
-預設為啟用 （又稱為湊） 此重新計算程序。 如果您想要時，停用此程序，可能是輸入一次呼叫資料大量[CAtlMap::DisableAutoRehash](#disableautorehash)方法。 重新啟動它[CAtlMap::EnableAutoRehash](#enableautorehash)方法。
+默認情況下,此重新計算過程(稱為重新哈希)處於啟用狀態。 如果要禁用此過程(也許在一次輸入大量數據時),請調用[CAtlMap::D可自動重新哈希](#disableautorehash)方法。 使用[CAtlMap::啟用自動重哈希](#enableautorehash)方法重新啟動它。
 
-*NBlockSize*參數是配置新的項目時所需的記憶體數量的量值。 較大的區塊大小會減少記憶體配置常式，呼叫，但使用較多資源。
+*nBlockSize*參數是需要新元素時分配的內存量的度量。 較大的塊大小減少了對記憶體分配例程的調用,但使用的資源更多。
 
-可以儲存任何資料之前，就必須初始化雜湊表，藉由呼叫[CAtlMap::InitHashTable](#inithashtable)。
+在存儲任何數據之前,必須使用調用[CAtlMap:::init HashTable](#inithashtable)來初始化哈希錶。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap::~CAtlMap
+## <a name="catlmapcatlmap"></a><a name="dtor"></a>CAtlMap:_CAtlMap
 
 解構函式。
 
@@ -231,11 +231,11 @@ CAtlMap(
 
 ### <a name="remarks"></a>備註
 
-會釋放所有配置的資源。
+釋放任何分配的資源。
 
-##  <a name="cpair_class"></a>  CAtlMap::CPair 類別
+## <a name="catlmapcpair-class"></a><a name="cpair_class"></a>CAtlMap:CPair 類
 
-類別，其中包含索引鍵和值的項目。
+包含鍵和值元素的類。
 
 ```
 class CPair : public __POSITION
@@ -243,11 +243,11 @@ class CPair : public __POSITION
 
 ### <a name="remarks"></a>備註
 
-此類別由方法[CAtlMap::GetNext](#getnext)並[CAtlMap::Lookup](#lookup)來存取儲存在對應結構的索引鍵和值的元素。
+類由[CAtlMap::GetNext](#getnext)和[CAtlMap:查找](#lookup)來存取映射結構中儲存的鍵和值元素的方法。
 
-##  <a name="disableautorehash"></a>  CAtlMap::DisableAutoRehash
+## <a name="catlmapdisableautorehash"></a><a name="disableautorehash"></a>CAtlMap::D可自動重新哈希
 
-呼叫這個方法，以停用的自動湊`CAtlMap`物件。
+調用此方法以禁用`CAtlMap`物件的自動重新哈希。
 
 ```
 void DisableAutoRehash() throw();
@@ -255,13 +255,13 @@ void DisableAutoRehash() throw();
 
 ### <a name="remarks"></a>備註
 
-自動重新啟用時 （這是預設情況下），在雜湊表的分類收納數目會自動重新計算如果負載值 （儲存在陣列中的元素數目的分類收納數目的比率） 超過最大或最小值建立對應時所指定。
+啟用自動重新哈希時(預設情況下,如果負載值(條柱數與陣列中存儲的元素數的比率)超過創建映射時指定的最大值或最小值,則哈希表中的條柱數將自動重新計算。
 
-`DisableAutoRehash` 當大量項目會加入對應一次，則會是最有用。 而不是每次超過限制，請觸發 rehashing 程序，會呼叫更有效率`DisableAutoRehash`、 新增項目，以及最後呼叫[CAtlMap::EnableAutoRehash](#enableautorehash)。
+`DisableAutoRehash`當大量元素一次添加到地圖中時,最有用。 在每次超出限制時,不要觸發重新哈希過程,而是更高效地調用`DisableAutoRehash`、添加元素,最後調用[CAtlMap::啟用AutoRehash](#enableautorehash)。
 
-##  <a name="enableautorehash"></a>  CAtlMap::EnableAutoRehash
+## <a name="catlmapenableautorehash"></a><a name="enableautorehash"></a>CAtlMap:開啟自動復原哈希
 
-呼叫這個方法來啟用的自動湊`CAtlMap`物件。
+呼叫此方法以啟用`CAtlMap`物件的自動重新哈希。
 
 ```
 void EnableAutoRehash() throw();
@@ -269,13 +269,13 @@ void EnableAutoRehash() throw();
 
 ### <a name="remarks"></a>備註
 
-自動重新啟用時 （這是預設情況下），在雜湊表的分類收納數目會自動重新計算如果負載值 （儲存在陣列中的元素數目的分類收納數目的比率） 超過最大或最小值建立對應時所指定。
+啟用自動重新哈希時(預設情況下,如果負載值(條柱數與陣列中存儲的元素數的比率)超過創建地圖時指定的最大值或最小值,則哈希表中的條柱數將自動重新計算。
 
-`EnableAutoRefresh` 在呼叫之後最常用[CAtlMap::DisableAutoRehash](#disableautorehash)。
+`EnableAutoRefresh`最常在調用[CAtlMap::D可自動復原哈希](#disableautorehash)後使用。
 
-##  <a name="getat"></a>  CAtlMap::GetAt
+## <a name="catlmapgetat"></a><a name="getat"></a>CAtlMap:GetAt
 
-呼叫此方法以傳回對應中的指定位置處的項目。
+呼叫此方法以在地圖中指定位置返回元素。
 
 ```
 void GetAt(
@@ -288,26 +288,26 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
-*key*<br/>
-指定對應的索引鍵的類型樣板參數。
+*關鍵*<br/>
+指定地圖鍵類型的範本參數。
 
-*value*<br/>
-指定的對應值的類型樣板參數。
+*值*<br/>
+指定地圖值類型的範本參數。
 
 ### <a name="return-value"></a>傳回值
 
-讓指標回到目前的索引鍵/值儲存在 map 中的項目組。
+返回指向地圖中存儲的當前鍵/值元素對的指標。
 
 ### <a name="remarks"></a>備註
 
-在偵錯組建中，判斷提示就會發生錯誤，如果*pos*等於 NULL。
+在除錯產生中,如果*pos*等於 NULL,則會發生斷言錯誤。
 
-##  <a name="getcount"></a>  CAtlMap::GetCount
+## <a name="catlmapgetcount"></a><a name="getcount"></a>CAtlMap:取得計數
 
-呼叫這個方法來擷取在對應中的項目數。
+調用此方法以檢索映射中的元素數。
 
 ```
 size_t GetCount() const throw();
@@ -315,15 +315,15 @@ size_t GetCount() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-Map 物件中傳回的項目數。 單一項目是索引鍵/值組。
+返回地圖物件中的元素數。 單個元素是鍵/值對。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="gethashtablesize"></a>  CAtlMap::GetHashTableSize
+## <a name="catlmapgethashtablesize"></a><a name="gethashtablesize"></a>CAtlMap:取得哈希表大小
 
-呼叫這個方法來判斷對應的雜湊表中的分類收納數目。
+調用此方法以確定地圖哈希表中的條柱數。
 
 ```
 UINT GetHashTableSize() const throw();
@@ -331,11 +331,11 @@ UINT GetHashTableSize() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回雜湊表中的分類收納數目。 請參閱[CAtlMap::CAtlMap](#catlmap)取得說明。
+返回哈希表中的條柱數。 有關說明,請參閱[CAtlMap:CAtlMap。](#catlmap)
 
-##  <a name="getkeyat"></a>  CAtlMap::GetKeyAt
+## <a name="catlmapgetkeyat"></a><a name="getkeyat"></a>CAtlMap:取得鍵
 
-呼叫這個方法來擷取儲存在指定的位置中的索引鍵`CAtlMap`物件。
+調用此方法以檢索存儲在物件中給定位置的`CAtlMap`鍵。
 
 ```
 const K& GetKeyAt(POSITION pos) const throw();
@@ -343,20 +343,20 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
 
-傳回在指定的位置中儲存的索引鍵的參考`CAtlMap`物件。
+返回對存儲在物件中給定位置的鍵的`CAtlMap`引用。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="getnext"></a>  CAtlMap::GetNext
+## <a name="catlmapgetnext"></a><a name="getnext"></a>CAtlMap:取得下一個
 
-呼叫這個方法來取得對儲存在下一個元素的指標`CAtlMap`物件。
+呼叫此方法以獲取指向存儲在物件中的下一個元素對的`CAtlMap`指標。
 
 ```
 CPair* GetNext(POSITION& pos) throw();
@@ -365,16 +365,16 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
 
-讓指標回到下一個配對的索引鍵/值儲存在 map 中的項目。 *Pos*位置計數器會在每次呼叫之後進行更新。 如果擷取的項目是在對應中，最後*pos*設為 NULL。
+返回指向存儲在地圖中的下一對鍵/值元素的指標。 每次調用後,將更新*pos*位置計數器。 如果檢索到的元素是地圖中的最後一個元素,*則 pos*設定為 NULL。
 
-##  <a name="getnextassoc"></a>  CAtlMap::GetNextAssoc
+## <a name="catlmapgetnextassoc"></a><a name="getnextassoc"></a>CAtlMap:getNextAssoc
 
-取得逐一查看的下一個項目。
+獲取下一個反覆運算元素。
 
 ```
 void GetNextAssoc(
@@ -385,22 +385,22 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
-*key*<br/>
-指定對應的索引鍵的類型樣板參數。
+*關鍵*<br/>
+指定地圖鍵類型的範本參數。
 
-*value*<br/>
-指定的對應值的類型樣板參數。
+*值*<br/>
+指定地圖值類型的範本參數。
 
 ### <a name="remarks"></a>備註
 
-*Pos*位置計數器會在每次呼叫之後進行更新。 如果擷取的項目是在對應中，最後*pos*設為 NULL。
+每次調用後,將更新*pos*位置計數器。 如果檢索到的元素是地圖中的最後一個元素,*則 pos*設定為 NULL。
 
-##  <a name="getnextkey"></a>  CAtlMap::GetNextKey
+## <a name="catlmapgetnextkey"></a><a name="getnextkey"></a>CAtlMap:取得下一個鍵
 
-呼叫這個方法來擷取下一個索引鍵，從`CAtlMap`物件。
+調用此方法從物件檢索下一個`CAtlMap`鍵。
 
 ```
 const K& GetNextKey(POSITION& pos) const throw();
@@ -408,20 +408,20 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
 
-傳回對應中的下一個索引鍵的參考。
+返回對地圖中下一個鍵的引用。
 
 ### <a name="remarks"></a>備註
 
-更新的目前位置計數器*pos*。如果在對應中有沒有更多的項目，[位置] 計數器是設為 NULL。
+更新目前位置計數器,*位置*。如果地圖中沒有更多的條目,則位置計數器將設置為 NULL。
 
-##  <a name="getnextvalue"></a>  CAtlMap::GetNextValue
+## <a name="catlmapgetnextvalue"></a><a name="getnextvalue"></a>CAtlMap:取得下一個值
 
-呼叫這個方法來取得下一步 的值從`CAtlMap`物件。
+調用此方法從`CAtlMap`物件獲取下一個值。
 
 ```
 V& GetNextValue(POSITION& pos) throw();
@@ -430,24 +430,24 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
 
-傳回對應中的下一個值的參考。
+返回對地圖中下一個值的引用。
 
 ### <a name="remarks"></a>備註
 
-更新的目前位置計數器*pos*。如果在對應中有沒有更多的項目，[位置] 計數器是設為 NULL。
+更新目前位置計數器,*位置*。如果地圖中沒有更多的條目,則位置計數器將設置為 NULL。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="getstartposition"></a>  CAtlMap::GetStartPosition
+## <a name="catlmapgetstartposition"></a><a name="getstartposition"></a>CAtlMap:取得起始位置
 
-呼叫此方法以啟動對應的反覆項目。
+調用此方法以啟動映射反覆運算。
 
 ```
 POSITION GetStartPosition() const throw();
@@ -455,22 +455,22 @@ POSITION GetStartPosition() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回的起始位置或 NULL 會傳回如果 map 是空的。
+返回起始位置,如果地圖為空,則返回 NULL。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法所傳回的位置啟動對應的反覆項目值可以傳遞至`GetNextAssoc`方法。
+呼叫此方法通過返回可以傳遞給`GetNextAssoc`方法的"位置"值來啟動映射反覆運算。
 
 > [!NOTE]
->  反覆項目序列不是可預測
+> 反覆序列是不可預測的
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="getvalueat"></a>  CAtlMap::GetValueAt
+## <a name="catlmapgetvalueat"></a><a name="getvalueat"></a>CAtlMap:取得價值At
 
-呼叫這個方法來擷取儲存在指定的位置中的值`CAtlMap`物件。
+調用此方法以檢索存儲在`CAtlMap`物件中給定位置的值。
 
 ```
 V& GetValueAt(POSITION pos) throw();
@@ -479,16 +479,16 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
 
-傳回儲存在指定的位置中的值的參考`CAtlMap`物件。
+返回對存儲在物件中給定位置的值的`CAtlMap`引用。
 
-##  <a name="inithashtable"></a>  CAtlMap::InitHashTable
+## <a name="catlmapinithashtable"></a><a name="inithashtable"></a>CAtlMap:initHashTable
 
-呼叫這個方法來初始化雜湊表。
+調用此方法以初始化哈希表。
 
 ```
 bool InitHashTable(
@@ -498,29 +498,29 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>參數
 
-*nBins*<br/>
-雜湊資料表所使用的分類收納數目。 請參閱[CAtlMap::CAtlMap](#catlmap)取得說明。
+*n賓斯*<br/>
+哈希表使用的條柱數。 有關說明,請參閱[CAtlMap:CAtlMap。](#catlmap)
 
-*bAllocNow*<br/>
-旗標指示應該配置記憶體時。
+*巴羅克現在*<br/>
+應分配記憶體的標誌指示。
 
 ### <a name="return-value"></a>傳回值
 
-在成功初始化，則傳回 TRUE 失敗則為 FALSE。
+成功初始化時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`InitHashTable` 雜湊表中儲存任何項目之前，必須呼叫。  如果未明確呼叫此方法，它將會自動呼叫第一次的項目加入使用所指定量化計數`CAtlMap`建構函式。  否則，對應將會使用初始化所指定新的量化計數*nBins*參數。
+`InitHashTable`在哈希表中存儲任何元素之前,必須調用。  如果未顯式調用此方法,則首次使用`CAtlMap`建構函數指定的 bin 計數添加元素時將自動調用它。  否則,將使用*nBins*參數指定的新 bin 計數初始化地圖。
 
-如果*bAllocNow*參數為 false，直到第一次所需的雜湊資料表所需的記憶體不會配置。 這可以是很有用，如果不確定，若要使用對應項目。
+如果*bAllocNow*參數為 false,則哈希表所需的記憶體在首次需要之前不會分配。 如果不確定是否將使用地圖,則此功能非常有用。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="isempty"></a>  CAtlMap::IsEmpty
+## <a name="catlmapisempty"></a><a name="isempty"></a>CAtlMap::空
 
-呼叫此方法來測試空白的 map 物件。
+調用此方法以測試空地圖物件。
 
 ```
 bool IsEmpty() const throw();
@@ -528,27 +528,27 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回為 true，則如果 map 是空的 FALSE 否則。
+如果地圖為空,則返回 TRUE,否則返回 FALSE。
 
-##  <a name="kinargtype"></a>  CAtlMap::KINARGTYPE
+## <a name="catlmapkinargtype"></a><a name="kinargtype"></a>CAtlMap::金納格
 
-做為輸入引數傳遞的索引鍵時所使用的類型。
+當將鍵作為輸入參數傳遞時使用的類型。
 
 ```
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```
 
-##  <a name="koutargtype"></a>  CAtlMap::KOUTARGTYPE
+## <a name="catlmapkoutargtype"></a><a name="koutargtype"></a>CAtlMap:庫塔格格
 
-索引鍵會傳回做為輸出引數時所使用的類型。
+當將鍵返回為輸出參數時使用的類型。
 
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```
 
-##  <a name="lookup"></a>  CAtlMap::Lookup
+## <a name="catlmaplookup"></a><a name="lookup"></a>CAtlMap::尋找
 
-呼叫這個方法來查閱索引鍵或值中的`CAtlMap`物件。
+調用此方法以查找物件中的`CAtlMap`鍵或值。
 
 ```
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const;
@@ -558,23 +558,23 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-指定識別的項目，是要查閱的索引鍵。
+*關鍵*<br/>
+指定標識要備份的元素的鍵。
 
-*value*<br/>
-收到的查閱值的變數。
+*值*<br/>
+接收上值的變數。
 
 ### <a name="return-value"></a>傳回值
 
-第一種形式的方法會傳回 true，如果找到索引鍵為，否則為 false。 第二個和第三個表單傳回的指標[CPair](#cpair_class)這可用來當做位置呼叫[CAtlMap::GetNext](#getnext) ，依此類推。
+如果找到鍵,則方法的第一種形式返回 true,否則為 false。 第二個和第三個窗體返回指向[CPair](#cpair_class)的指標,該指標可用作調用[CAtlMap::getNext](#getnext)等的位置。
 
 ### <a name="remarks"></a>備註
 
-`Lookup` 若要快速尋找對應項目，包含與指定的索引鍵參數完全相符的索引鍵使用雜湊演算法。
+`Lookup`使用散列演演演算法快速查找包含與給定鍵參數完全匹配的鍵的映射元素。
 
-##  <a name="operator_at"></a>  CAtlMap::operator \[\]
+## <a name="catlmapoperator-"></a><a name="operator_at"></a>CAtlMap::運算子\[\]
 
-取代或新增新的項目`CAtlMap`。
+替換 或向`CAtlMap`添加新元素。
 
 ```
 V& operator[](kinargtype key) throw();
@@ -582,20 +582,20 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-要加入或取代之項目的索引鍵。
+*關鍵*<br/>
+要添加或替換的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
 
-傳回與指定的索引鍵相關聯的值的參考。
+返回對與給定鍵關聯的值的引用。
 
 ### <a name="example"></a>範例
 
-如果金鑰已存在，則會取代項目。 如果索引鍵不存在，則會加入新項目。 範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+如果金鑰已存在,則替換該元素。 如果金鑰不存在,則添加新元素。 請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="rehash"></a>  CAtlMap::Rehash
+## <a name="catlmaprehash"></a><a name="rehash"></a>CAtlMap:rehash
 
-呼叫此方法以 rehash`CAtlMap`物件。
+調用此方法以重新哈希`CAtlMap`物件。
 
 ```
 void Rehash(UINT nBins = 0);
@@ -603,16 +603,16 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>參數
 
-*nBins*<br/>
-若要使用的雜湊表的分類收納新的數目。 請參閱[CAtlMap::CAtlMap](#catlmap)取得說明。
+*n賓斯*<br/>
+要在哈希表中使用的新條柱數。 有關說明,請參閱[CAtlMap:CAtlMap。](#catlmap)
 
 ### <a name="remarks"></a>備註
 
-如果*nBins*為 0，`CAtlMap`計算合理數目為基礎的地圖與最佳的負載設定中的項目數。 通常 rehashing 程序會自動進行，但若是[CAtlMap::DisableAutoRehash](#disableautorehash)已呼叫，這個方法會執行必要的調整大小。
+如果*nBins*為`CAtlMap`0,則根據地圖中的元素數和最佳負載設置計算合理的數位。 通常,重新哈希過程是自動的,但如果調用[了 CAtlMap::D可自動重新哈希](#disableautorehash),則此方法將執行必要的調整大小。
 
-##  <a name="removeall"></a>  CAtlMap::RemoveAll
+## <a name="catlmapremoveall"></a><a name="removeall"></a>CAtlMap:移除所有
 
-呼叫這個方法來移除所有項目從`CAtlMap`物件。
+呼叫此方法從`CAtlMap`物件中刪除所有元素。
 
 ```
 void RemoveAll() throw();
@@ -620,11 +620,11 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>備註
 
-清除`CAtlMap`物件，即釋放記憶體來儲存項目。
+清除物件,`CAtlMap`釋放用於儲存元素的記憶體。
 
-##  <a name="removeatpos"></a>  CAtlMap::RemoveAtPos
+## <a name="catlmapremoveatpos"></a><a name="removeatpos"></a>CAtlMap::刪除AtPos
 
-呼叫這個方法來移除處的指定位置中的項目`CAtlMap`物件。
+呼叫此方法以移除物件中給定位置的元素`CAtlMap`。
 
 ```
 void RemoveAtPos(POSITION pos) throw();
@@ -632,16 +632,16 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
 ### <a name="remarks"></a>備註
 
-移除指定位置處儲存的索引鍵/值組。 用來將元素儲存的記憶體，會釋放。 所參考的位置*pos*失效，並在對應中的任何其他項目位置保持有效，就不一定保留相同的順序。
+刪除存儲在指定位置的鍵/值對。 釋放用於存儲元素的記憶體。 *pos*引用的定位將變為無效,雖然地圖中任何其他元素的定位仍然有效,但它們不一定保留相同的順序。
 
-##  <a name="removekey"></a>  CAtlMap::RemoveKey
+## <a name="catlmapremovekey"></a><a name="removekey"></a>CAtlMap::刪除鍵
 
-呼叫這個方法來移除項目從`CAtlMap`指定索引鍵的物件。
+呼叫此方法以在給定鍵的情況下從`CAtlMap`物件中刪除元素。
 
 ```
 bool RemoveKey(KINARGTYPE key) throw();
@@ -649,20 +649,20 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-您想要移除對應至項目配對的索引鍵。
+*關鍵*<br/>
+與要刪除的元素對對應的鍵。
 
 ### <a name="return-value"></a>傳回值
 
-為 true，則會傳回索引鍵是否找到並移除，失敗則為 FALSE。
+如果找到並刪除金鑰,則返回 TRUE,在發生故障時返回 FALSE。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CAtlMap::CAtlMap](#catlmap)。
+請參閱[CAtlMap::CAtlMap](#catlmap)的範例。
 
-##  <a name="setat"></a>  CAtlMap::SetAt
+## <a name="catlmapsetat"></a><a name="setat"></a>CAtlMap:setat
 
-呼叫這個方法來插入對應中的項目配對。
+呼叫此方法以將元素對插入到地圖中。
 
 ```
 POSITION SetAt(
@@ -672,23 +672,23 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-若要加入的索引鍵值`CAtlMap`物件。
+*關鍵*<br/>
+要添加到`CAtlMap`物件的鍵值。
 
-*value*<br/>
-要加入至值`CAtlMap`物件。
+*值*<br/>
+要新增到物件的值`CAtlMap`。
 
 ### <a name="return-value"></a>傳回值
 
-傳回的位置中的索引鍵/值項目組`CAtlMap`物件。
+返回鍵/值元素對在物件中`CAtlMap`的位置。
 
 ### <a name="remarks"></a>備註
 
-`SetAt` 如果找到相符的索引鍵，會取代現有的項目。 如果找不到索引鍵，則會建立新的索引鍵/值組。
+`SetAt`如果找到匹配的鍵,則替換現有元素。 如果未找到該鍵,則創建新的鍵/值對。
 
-##  <a name="setoptimalload"></a>  CAtlMap::SetOptimalLoad
+## <a name="catlmapsetoptimalload"></a><a name="setoptimalload"></a>CAtlMap::設定最佳載入
 
-呼叫這個方法來設定最佳的負載`CAtlMap`物件。
+調用此方法以設置`CAtlMap`物件的最佳負載。
 
 ```
 void SetOptimalLoad(
@@ -700,25 +700,25 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>參數
 
-*fOptimalLoad*<br/>
-最佳的負載比率。
+*f優負荷*<br/>
+最佳負載比。
 
-*fLoThreshold*<br/>
-負載比率下限臨界值。
+*fLo 閾值*<br/>
+負載比的較低閾值。
 
 *fHiThreshold*<br/>
-負載比率上限臨界值。
+負載比的上限。
 
-*bRehashNow*<br/>
-表示是否應該重新計算雜湊表的旗標。
+*b 雷哈什現在*<br/>
+指示是否應重新計算哈希表的標誌。
 
 ### <a name="remarks"></a>備註
 
-這個方法會重新定義的最佳的負載值`CAtlMap`物件。 請參閱[CAtlMap::CAtlMap](#catlmap)討論的各種不同的參數。 如果*bRehashNow*為 true，而且項目數目超出的最小和最大值，則會重新計算雜湊表。
+此方法重新定義`CAtlMap`物件的最佳負載值。 有關各種參數的討論,請參閱[CAtlMap:CAtlMap。](#catlmap) 如果*bRehashNow*為 true,並且元素數超出最小值和最大值,則重新計算哈希表。
 
-##  <a name="setvalueat"></a>  CAtlMap::SetValueAt
+## <a name="catlmapsetvalueat"></a><a name="setvalueat"></a>CAtlMap::設定價值At
 
-呼叫這個方法來變更儲存在指定的位置中的值`CAtlMap`物件。
+呼叫此方法以變更儲存在物件中給定位置的值`CAtlMap`。
 
 ```
 void SetValueAt(
@@ -728,35 +728,35 @@ void SetValueAt(
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
+*Pos*<br/>
+位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
-*value*<br/>
-要加入至值`CAtlMap`物件。
+*值*<br/>
+要新增到物件的值`CAtlMap`。
 
 ### <a name="remarks"></a>備註
 
-變更儲存在指定的位置中的值項目`CAtlMap`物件。
+更改存儲在`CAtlMap`物件中給定位置的值元素。
 
-##  <a name="vinargtype"></a>  CAtlMap::VINARGTYPE
+## <a name="catlmapvinargtype"></a><a name="vinargtype"></a>CAtlMap::維納格
 
-值會傳遞做為輸入引數時所使用的類型。
+當值作為輸入參數傳遞時使用的類型。
 
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```
 
-##  <a name="voutargtype"></a>  CAtlMap::VOUTARGTYPE
+## <a name="catlmapvoutargtype"></a><a name="voutargtype"></a>CAtlMap::VOUTARGTYPE
 
-值會傳遞做為輸出引數時所使用的類型。
+當值作為輸出參數傳遞時使用的類型。
 
 ```
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-##  <a name="m_key"></a>  CAtlMap::CPair::m_key
+## <a name="catlmapcpairm_key"></a><a name="m_key"></a>CAtlMap:CPair::m_key
 
-儲存索引鍵的項目之資料成員。
+存儲鍵元素的數據成員。
 
 ```
 const K m_key;
@@ -765,11 +765,11 @@ const K m_key;
 ### <a name="parameters"></a>參數
 
 *K*<br/>
-索引鍵的項目類型。
+鍵元素類型。
 
-##  <a name="m_value"></a>  CAtlMap::CPair::m_value
+## <a name="catlmapcpairm_value"></a><a name="m_value"></a>CAtlMap:CPair::m_value
 
-儲存值的項目之資料成員。
+存儲值元素的數據成員。
 
 ```
 V  m_value;
@@ -777,11 +777,11 @@ V  m_value;
 
 ### <a name="parameters"></a>參數
 
-*V*<br/>
-值的項目型別。
+*五*<br/>
+值元素類型。
 
 ## <a name="see-also"></a>另請參閱
 
-[跑馬燈範例](../../overview/visual-cpp-samples.md)<br/>
-[UpdatePV 範例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
+[選取方塊範例](../../overview/visual-cpp-samples.md)<br/>
+[更新PV範例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

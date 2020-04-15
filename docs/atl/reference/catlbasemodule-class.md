@@ -1,5 +1,5 @@
 ---
-title: CAtlBaseModule 類別
+title: CAtlBase 模組類別
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlBaseModule
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d382d1fe7d50a2fdeefc9b477625580792de7d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55412eff18fd04ac4e41c0f001991c1cf725b9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321501"
 ---
-# <a name="catlbasemodule-class"></a>CAtlBaseModule 類別
+# <a name="catlbasemodule-class"></a>CAtlBase 模組類別
 
-這個類別是在每個 ATL 專案中具現化。
+此類在每個 ATL 專案中都實例化。
 
 ## <a name="syntax"></a>語法
 
@@ -38,32 +38,32 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlBaseModule::CAtlBaseModule](#catlbasemodule)|建構函式。|
+|[CAtlBase模組:CAtlBase模組](#catlbasemodule)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|將資源執行個體加入至預存的控制代碼清單。|
-|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|傳回指定的資源執行個體的控制代碼。|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|傳回從模組執行個體`CAtlBaseModule`物件。|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|傳回資源的執行個體從`CAtlBaseModule`物件。|
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|移除的預存的控制代碼清單中的資源執行個體。|
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|設定的資源執行個體`CAtlBaseModule`物件。|
+|[CAtlBase模組::新增資源實例](#addresourceinstance)|將資源實例添加到存儲句柄清單中。|
+|[CAtlBase模組::取得實例](#gethinstanceat)|將句柄返回到指定的資源實例。|
+|[CAtlBase模組:取得模組實例](#getmoduleinstance)|從`CAtlBaseModule`物件返回模組實例。|
+|[CAtlBase 模組:抓取資源實體](#getresourceinstance)|從`CAtlBaseModule`物件返回資源實例。|
+|[CAtlBase 模組::刪除資源實例](#removeresourceinstance)|從儲存句柄清單中刪除資源實例。|
+|[CAtlBase 模組::設定資源實例](#setresourceinstance)|設置`CAtlBaseModule`物件的資源實例。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|指出是否已經失敗。 模組初始化的變數。|
+|[CAtlBase模組::m_bInitFailed](#m_binitfailed)|指示模組初始化是否失敗的變數。|
 
 ## <a name="remarks"></a>備註
 
-執行個體`CAtlBaseModule`具名的 _AtlBaseModule 位於每個包含模組執行個體的控制代碼，包含資源 （根據預設，同一個），此模組並提供主要的模組控制代碼陣列的控制代碼的 ATL 專案資源。 `CAtlBaseModule` 可以安全地從多個執行緒存取。
+每個 ATL 專案中都存在命名`CAtlBaseModule`_AtlBaseModule的 實例,其中包含模組實例的句柄、包含資源(預設情況下為相同)的模組句柄以及提供主資源的模組的句柄陣列。 `CAtlBaseModule`可以從多個線程安全地訪問。
 
-這個類別會取代過時[CComModule](../../atl/reference/ccommodule-class.md)用在舊版的 ATL 類別
+此類將替換早期版本的 ATL 中使用的過時的[CComModule](../../atl/reference/ccommodule-class.md)類。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)
 
@@ -71,11 +71,11 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcore.h
+**標題:** atlcore.h
 
-##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBase模組::新增資源實例
 
-將資源執行個體加入至預存的控制代碼清單。
+將資源實例添加到存儲句柄清單中。
 
 ```
 bool AddResourceInstance(HINSTANCE hInst) throw();
@@ -84,13 +84,13 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="parameters"></a>參數
 
 *hInst*<br/>
-要加入資源執行個體。
+要添加的資源實例。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 true，如果資源已成功新增，false 否則。
+如果資源已成功添加,則返回 true,否則為 false。
 
-##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBase模組:CAtlBase模組
 
 建構函式。
 
@@ -102,9 +102,9 @@ CAtlBaseModule() throw();
 
 建立 `CAtlBaseModule`。
 
-##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBase模組::取得實例
 
-傳回指定的資源執行個體的控制代碼。
+將句柄返回到指定的資源實例。
 
 ```
 HINSTANCE GetHInstanceAt(int i) throw();
@@ -112,16 +112,16 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>參數
 
-*i*<br/>
-資源執行個體數目。
+*I.*<br/>
+資源實例的編號。
 
 ### <a name="return-value"></a>傳回值
 
-如果沒有對應的資源執行個體存在，傳回的控制代碼資源的執行個體，或 NULL。
+如果不存在相應的資源實例,則將句柄返回給資源實例,或返回 NULL。
 
-##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBase模組:取得模組實例
 
-傳回從模組執行個體`CAtlBaseModule`物件。
+從`CAtlBaseModule`物件返回模組實例。
 
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -129,11 +129,11 @@ HINSTANCE GetModuleInstance() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回模組執行個體。
+返回模組實例。
 
-##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBase 模組:抓取資源實體
 
-傳回的資源執行個體。
+返回資源實例。
 
 ```
 HINSTANCE GetResourceInstance() throw();
@@ -141,11 +141,11 @@ HINSTANCE GetResourceInstance() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回的資源執行個體。
+返回資源實例。
 
-##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBase模組::m_bInitFailed
 
-指出是否已經失敗。 模組初始化的變數。
+指示模組初始化是否失敗的變數。
 
 ```
 static bool m_bInitFailed;
@@ -153,11 +153,11 @@ static bool m_bInitFailed;
 
 ### <a name="remarks"></a>備註
 
-如果模組初始化，false 如果它無法初始化，則為 true。
+如果模組初始化為 True,則為 false,如果模組未能初始化。"
 
-##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBase 模組::刪除資源實例
 
-移除的預存的控制代碼清單中的資源執行個體。
+從儲存句柄清單中刪除資源實例。
 
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -166,15 +166,15 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="parameters"></a>參數
 
 *hInst*<br/>
-若要移除資源執行個體。
+要刪除的資源實例。
 
 ### <a name="return-value"></a>傳回值
 
-如果資源已成功移除，否則為 false 否則，就會傳回 true。
+如果資源已成功刪除,則返回 true,否則為 false。
 
-##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBase 模組::設定資源實例
 
-設定的資源執行個體`CAtlBaseModule`物件。
+設置`CAtlBaseModule`物件的資源實例。
 
 ```
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
@@ -183,13 +183,13 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ### <a name="parameters"></a>參數
 
 *hInst*<br/>
-新的資源執行個體。
+新資源實例。
 
 ### <a name="return-value"></a>傳回值
 
-傳回更新的資源執行個體。
+返回更新的資源實例。
 
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../../atl/atl-class-overview.md)<br/>
-[模組類別](../../atl/atl-module-classes.md)
+[模組類](../../atl/atl-module-classes.md)

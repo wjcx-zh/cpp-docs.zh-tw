@@ -52,19 +52,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9ae63946dfa6244e97c376f9eccd9bab93586990
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319031"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
-此類別是存取權杖的包裝函式。
+此類是訪問權杖的包裝器。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -78,71 +78,71 @@ class CAccessToken
 
 |名稱|描述|
 |----------|-----------------|
-|[CAccessToken：： ~ CAccessToken](#dtor)|解構函式。|
+|[CAccessToken::*CAccessToken](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAccessToken：： Attach](#attach)|呼叫此方法以取得給定存取權杖控制碼的擁有權。|
-|[CAccessToken：： CheckTokenMembership](#checktokenmembership)|呼叫這個方法，以判斷 `CAccessToken` 物件中是否已啟用指定的 SID。|
-|[CAccessToken：： CreateImpersonationToken](#createimpersonationtoken)|呼叫這個方法，以建立新的模擬存取權杖。|
-|[CAccessToken：： CreatePrimaryToken](#createprimarytoken)|呼叫這個方法，以建立新的主要權杖。|
-|[CAccessToken：： CreateProcessAsUser](#createprocessasuser)|呼叫這個方法，在 `CAccessToken` 物件所表示之使用者的安全性內容中，建立執行的新進程。|
-|[CAccessToken：： CreateRestrictedToken](#createrestrictedtoken)|呼叫這個方法，以建立新的受限制 `CAccessToken` 物件。|
-|[CAccessToken：:D etach](#detach)|呼叫此方法以撤銷存取權杖的擁有權。|
-|[CAccessToken：:D isablePrivilege](#disableprivilege)|呼叫這個方法，以停用 `CAccessToken` 物件中的許可權。|
-|[CAccessToken：:D isablePrivileges](#disableprivileges)|呼叫這個方法，以停用 `CAccessToken` 物件中的一或多個許可權。|
-|[CAccessToken：： EnablePrivilege](#enableprivilege)|呼叫這個方法，以在 `CAccessToken` 物件中啟用許可權。|
-|[CAccessToken：： EnablePrivileges](#enableprivileges)|呼叫這個方法，以啟用 `CAccessToken` 物件中的一或多個許可權。|
-|[CAccessToken：： GetDefaultDacl](#getdefaultdacl)|呼叫這個方法，以傳回 `CAccessToken` 物件的預設 DACL。|
-|[CAccessToken：： GetEffectiveToken](#geteffectivetoken)|呼叫這個方法，讓 `CAccessToken` 物件等於目前線程的作用中存取權杖。|
-|[CAccessToken：： GetGroups](#getgroups)|呼叫這個方法，以傳回 `CAccessToken` 物件的 token 群組。|
-|[CAccessToken：： GetHandle](#gethandle)|呼叫這個方法來抓取存取權杖的控制碼。|
-|[CAccessToken：： GetImpersonationLevel](#getimpersonationlevel)|呼叫這個方法，從存取權杖取得模擬層級。|
-|[CAccessToken：： GetLogonSessionId](#getlogonsessionid)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的登入會話識別碼。|
-|[CAccessToken：： GetLogonSid](#getlogonsid)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的登入 SID。|
-|[CAccessToken：： GetOwner](#getowner)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的擁有者。|
-|[CAccessToken：： GetPrimaryGroup](#getprimarygroup)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的主要群組。|
-|[CAccessToken：： GetPrivileges](#getprivileges)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的許可權。|
-|[CAccessToken：： GetProcessToken](#getprocesstoken)|呼叫這個方法，以所指處理序的存取權杖初始化 `CAccessToken`。|
-|[CAccessToken：： GetProfile](#getprofile)|呼叫這個方法，以取得指向與 `CAccessToken` 物件相關聯之使用者設定檔的控制碼。|
-|[CAccessToken：： GetSource](#getsource)|呼叫這個方法以取得 `CAccessToken` 物件的來源。|
-|[CAccessToken：： GetStatistics](#getstatistics)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的資訊。|
-|[CAccessToken：： GetTerminalServicesSessionId](#getterminalservicessessionid)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的終端機服務會話識別碼。|
-|[CAccessToken：： GetThreadToken](#getthreadtoken)|呼叫這個方法，以使用來自給定執行緒的 token 來初始化 `CAccessToken`。|
-|[CAccessToken：： GetTokenId](#gettokenid)|呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的 Token 識別碼。|
-|[CAccessToken：： GetType](#gettype)|呼叫這個方法，以取得 `CAccessToken` 物件的 token 類型。|
-|[CAccessToken：： GetUser](#getuser)|呼叫這個方法，以識別與 `CAccessToken` 物件相關聯的使用者。|
-|[CAccessToken：： HKeyCurrentUser](#hkeycurrentuser)|呼叫這個方法，以取得指向與 `CAccessToken` 物件相關聯之使用者設定檔的控制碼。|
-|[CAccessToken：：模擬](#impersonate)|呼叫這個方法，將模擬 `CAccessToken` 指派給執行緒。|
-|[CAccessToken：： ImpersonateLoggedOnUser](#impersonateloggedonuser)|呼叫此方法可讓呼叫執行緒模擬已登入使用者的安全性內容。|
-|[CAccessToken：： IsTokenRestricted](#istokenrestricted)|呼叫這個方法來測試 `CAccessToken` 物件是否包含受限制的 Sid 清單。|
-|[CAccessToken：： LoadUserProfile](#loaduserprofile)|呼叫這個方法，載入與 `CAccessToken` 物件相關聯的使用者設定檔。|
-|[CAccessToken：： LogonUser](#logonuser)|呼叫這個方法，為與指定認證相關聯的使用者建立登入會話。|
-|[CAccessToken：： OpenCOMClientToken](#opencomclienttoken)|從 COM 伺服器內呼叫此方法，以處理來自用戶端的呼叫，以使用來自 COM 用戶端的存取權杖來初始化 `CAccessToken`。|
-|[CAccessToken：： OpenNamedPipeClientToken](#opennamedpipeclienttoken)|從伺服器內呼叫此方法，透過具名管道取得要求，使用來自用戶端的存取權杖初始化 `CAccessToken`。|
-|[CAccessToken：： OpenRPCClientToken](#openrpcclienttoken)|從處理 RPC 用戶端呼叫的伺服器內呼叫此方法，以使用來自用戶端的存取權杖來初始化 `CAccessToken`。|
-|[CAccessToken：： OpenThreadToken](#openthreadtoken)|呼叫這個方法以設定模擬層級，然後使用來自給定執行緒的權杖初始化 `CAccessToken`。|
-|[CAccessToken：:P rivilegeCheck](#privilegecheck)|呼叫這個方法，以判斷是否在 `CAccessToken` 物件中啟用一組指定的許可權。|
-|[CAccessToken：： Revert](#revert)|呼叫這個方法，以停止使用模擬 token 的執行緒。|
-|[CAccessToken：： SetDefaultDacl](#setdefaultdacl)|呼叫這個方法，以設定 `CAccessToken` 物件的預設 DACL。|
-|[CAccessToken：： SetOwner](#setowner)|呼叫這個方法來設定 `CAccessToken` 物件的擁有者。|
-|[CAccessToken：： SetPrimaryGroup](#setprimarygroup)|呼叫這個方法，以設定 `CAccessToken` 物件的主要群組。|
+|[CAccessToken::附加](#attach)|調用此方法以取得給定訪問權杖句柄的擁有權。|
+|[CAccessToken::檢查權杖成員資格](#checktokenmembership)|呼叫此方法以確定`CAccessToken`物件中是否啟用了指定的 SID。|
+|[CAccessToken:: 建立模擬權杖](#createimpersonationtoken)|呼叫此方法以創建新的模擬存取權杖。|
+|[CAccessToken::建立主要權杖](#createprimarytoken)|調用此方法以創建新的主權杖。|
+|[CAccessToken::建立行程使用者](#createprocessasuser)|調用此方法以創建在`CAccessToken`物件表示的使用者的安全上下文中運行的新進程。|
+|[CAccessToken::建立受限權杖](#createrestrictedtoken)|調用此方法以創建新的受限`CAccessToken`物件。|
+|[CAccessToken::Detach](#detach)|調用此方法以撤銷訪問權杖的擁有權。|
+|[CAccessToken::D可特權](#disableprivilege)|調用此方法以禁用物件中`CAccessToken`的特權。|
+|[CAccessToken::D可特權](#disableprivileges)|調用此方法以禁用`CAccessToken`物件中的一個或多個許可權。|
+|[CAccessToken::啟用特權](#enableprivilege)|調用此方法以在`CAccessToken`物件中啟用許可權。|
+|[CAccessToken::啟用特權](#enableprivileges)|調用此方法以啟用物件中的`CAccessToken`一個或多個許可權。|
+|[CAccessToken:取得預設Dacl](#getdefaultdacl)|調用此方法以返回`CAccessToken`物件的預設 DACL。|
+|[CAccessToken:取得有效權杖](#geteffectivetoken)|呼叫此方法以獲取等於當前`CAccessToken`線程有效的訪問權杖的物件。|
+|[CAccessToken:取得群組](#getgroups)|調用此方法以返回`CAccessToken`物件的權杖組。|
+|[CAccessToken:取得句柄](#gethandle)|調用此方法以檢索訪問權杖的句柄。|
+|[CAccessToken:取得模擬層級](#getimpersonationlevel)|調用此方法從訪問權杖獲取類比級別。|
+|[CAccessToken:取得登入工作階段 Id](#getlogonsessionid)|呼叫此方法以獲取與`CAccessToken`物件關聯的登錄會話 ID。|
+|[CAccessToken:取得登入 Sid](#getlogonsid)|呼叫此方法以獲取與`CAccessToken`物件關聯的登錄 SID。|
+|[CAccessToken:取得擁有者](#getowner)|調用此方法以獲取與`CAccessToken`對象關聯的擁有者。|
+|[CAccessToken:取得主要組](#getprimarygroup)|調用此方法獲取與`CAccessToken`物件關聯的主組。|
+|[CAccessToken:取得特權](#getprivileges)|調用此方法獲取與`CAccessToken`對象關聯的許可權。|
+|[CAccessToken::取得行程權杖](#getprocesstoken)|呼叫這個方法，以所指處理序的存取權杖初始化 `CAccessToken`。|
+|[CAccessToken:取得設定檔](#getprofile)|呼叫此方法以獲取指向與物件關聯的使用者設定檔的`CAccessToken`句柄。|
+|[CAccessToken:取得來源](#getsource)|調用此方法以獲取`CAccessToken`物件的源。|
+|[CAccessToken:取得統計資訊](#getstatistics)|調用此方法以獲取有關`CAccessToken`物件的資訊。|
+|[CAccessToken::取得終端服務會話Id](#getterminalservicessessionid)|呼叫此方法獲取與`CAccessToken`物件關聯的終端服務會話 ID。|
+|[CAccessToken:抓取緒權杖](#getthreadtoken)|呼叫此方法以使用給定緒中的`CAccessToken`權杖初始化 。|
+|[CAccessToken::取得權杖 ID](#gettokenid)|呼叫此方法以獲取與`CAccessToken`物件關聯的權杖 ID。|
+|[CAccessToken:取得類型](#gettype)|調用此方法以獲取`CAccessToken`物件的權杖類型。|
+|[CAccessToken:取得使用者](#getuser)|調用此方法以標識與`CAccessToken`物件關聯的使用者。|
+|[CAccessToken::HKeycurrentUser](#hkeycurrentuser)|呼叫此方法以獲取指向與物件關聯的使用者設定檔的`CAccessToken`句柄。|
+|[CAccessToken:模擬](#impersonate)|調用此方法以將類`CAccessToken`比分配給線程。|
+|[CAccessToken::模擬登錄使用者](#impersonateloggedonuser)|調用此方法以允許調用線程類比登錄使用者的安全上下文。|
+|[CAccessToken::受限制](#istokenrestricted)|調用此方法以測試`CAccessToken`物件是否包含受限 S 的清單。|
+|[CAccessToken::載入使用者設定檔](#loaduserprofile)|呼叫此方法以載入與`CAccessToken`物件關聯的使用者配置檔。|
+|[CAccessToken::登錄使用者](#logonuser)|調用此方法為與給定憑據關聯的用戶創建登錄會話。|
+|[CAccessToken::打開COM用戶端權杖](#opencomclienttoken)|從處理來自用戶端的電話的 COM 伺服器內呼叫此方法,`CAccessToken`以便使用 COM 用戶端的存取權杖初始化 。|
+|[CAccessToken::開啟命名導管客戶端權杖](#opennamedpipeclienttoken)|從伺服器內呼叫此方法,透過命名導管取得請求,以便使用客戶端的存`CAccessToken`取權杖 初始化 。|
+|[CAccessToken::打開RPC客戶端權杖](#openrpcclienttoken)|從伺服器內呼叫此方法,以處理來自 RPC 客戶端的呼`CAccessToken`叫,以便使用客戶端的存取權杖初始化 。|
+|[CAccessToken::開啟線程權杖](#openthreadtoken)|呼叫此方法以設定模擬等級,然後使用給定線程中的權杖初始化`CAccessToken`。|
+|[CAccessToken::P里維萊格檢查](#privilegecheck)|呼叫此方法以確定物件中`CAccessToken`是否啟用了指定的許可權集。|
+|[CAccessToken::恢復](#revert)|調用此方法以阻止使用類比權杖的線程。|
+|[CAccessToken::設定預設Dacl](#setdefaultdacl)|呼叫此方法以設定`CAccessToken`物件的預設 DACL。|
+|[CAccessToken::SetOwner](#setowner)|調用此方法以設置`CAccessToken`物件的擁有者。|
+|[CAccessToken::設定主要組](#setprimarygroup)|調用此方法以設置`CAccessToken`物件的主組。|
 
 ## <a name="remarks"></a>備註
 
-[存取權杖](/windows/win32/SecAuthZ/access-tokens)是一種物件，可描述處理常式或執行緒的安全性內容，並配置給每位登入 Windows 系統的使用者。
+[訪問權杖](/windows/win32/SecAuthZ/access-tokens)是描述進程或線程的安全上下文並分配給登錄到 Windows 系統的每個使用者的物件。
 
-如需 Windows 中的存取控制模型簡介，請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
+有關 Windows 中存取控制模型的簡介,請參閱 Windows SDK[中的存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsecurity。h
+**標題:** atlsecurity.h
 
-##  <a name="attach"></a>CAccessToken：： Attach
+## <a name="caccesstokenattach"></a><a name="attach"></a>CAccessToken::附加
 
-呼叫此方法以取得給定存取權杖控制碼的擁有權。
+調用此方法以取得給定訪問權杖句柄的擁有權。
 
 ```
 void Attach(HANDLE hToken) throw();
@@ -151,13 +151,13 @@ void Attach(HANDLE hToken) throw();
 ### <a name="parameters"></a>參數
 
 *hToken*<br/>
-存取權杖的控制碼。
+訪問權杖的句柄。
 
 ### <a name="remarks"></a>備註
 
-在 [偵錯工具] 組建中，如果 `CAccessToken` 物件已經有存取權杖的擁有權，就會發生判斷提示錯誤。
+在調試生成中,如果物件已擁有訪問令牌`CAccessToken`的擁有權,則會發生斷言錯誤。
 
-##  <a name="dtor"></a>CAccessToken：： ~ CAccessToken
+## <a name="caccesstokencaccesstoken"></a><a name="dtor"></a>CAccessToken::*CAccessToken
 
 解構函式。
 
@@ -167,11 +167,11 @@ virtual ~CAccessToken() throw();
 
 ### <a name="remarks"></a>備註
 
-釋放所有配置的資源。
+釋放所有分配的資源。
 
-##  <a name="checktokenmembership"></a>CAccessToken：： CheckTokenMembership
+## <a name="caccesstokenchecktokenmembership"></a><a name="checktokenmembership"></a>CAccessToken::檢查權杖成員資格
 
-呼叫這個方法，以判斷 `CAccessToken` 物件中是否已啟用指定的 SID。
+呼叫此方法以確定`CAccessToken`物件中是否啟用了指定的 SID。
 
 ```
 bool CheckTokenMembership(
@@ -182,27 +182,27 @@ bool CheckTokenMembership(
 ### <a name="parameters"></a>參數
 
 *rSid*<br/>
-[CSid 類別](../../atl/reference/csid-class.md)物件的參考。
+對[CSid 類](../../atl/reference/csid-class.md)物件的引用。
 
-*pbIsMember*<br/>
-接收檢查結果之變數的指標。
+*pbIs成員*<br/>
+指向接收檢查結果的變數的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`CheckTokenMembership` 方法會檢查使用者的 SID 是否存在，以及存取權杖的群組 Sid。 如果 SID 存在，而且具有 SE_GROUP_ENABLED 屬性， *pbIsMember*會設定為 TRUE;否則，它會設定為 FALSE。
+該方法`CheckTokenMembership`檢查存取權杖的使用者和組SID中是否存在SID。 如果 SID 存在並且具有SE_GROUP_ENABLED屬性,*則 pbIs成員*設置為 TRUE;如果 SID 具有 SE_GROUP_ENABLED屬性,則 pbIs 會員將設置為 TRUE;否則,它將設置為 FALSE。
 
-在 [偵錯工具] 組建中，如果*pbIsMember*不是有效的指標，就會發生判斷提示錯誤。
+在調試生成中,如果*pbIs會員*不是有效的指標,則會發生斷言錯誤。
 
 > [!NOTE]
->  `CAccessToken` 物件必須是模擬 token，而不是主要 token。
+> 該`CAccessToken`物件必須是類比權杖,而不是主權杖。
 
-##  <a name="createimpersonationtoken"></a>CAccessToken：： CreateImpersonationToken
+## <a name="caccesstokencreateimpersonationtoken"></a><a name="createimpersonationtoken"></a>CAccessToken:: 建立模擬權杖
 
-呼叫這個方法來建立模擬存取權杖。
+呼叫此方法以建立模擬存取權杖。
 
 ```
 bool CreateImpersonationToken(
@@ -212,23 +212,23 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>參數
 
-*pImp*<br/>
-新 `CAccessToken` 物件的指標。
+*皮條 客*<br/>
+指向新`CAccessToken`物件的指標。
 
-*sil*<br/>
-指定提供新權杖之模擬層級的[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列舉類型。
+*Sil*<br/>
+指定提供新權杖的類比等級的[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)枚舉類型。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`CreateImpersonationToken` 會呼叫[DuplicateToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)來建立新的模擬權杖。
+`CreateImpersonationToken`呼叫[重複權杖](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)以建立新的模擬權杖。
 
-##  <a name="createprimarytoken"></a>CAccessToken：： CreatePrimaryToken
+## <a name="caccesstokencreateprimarytoken"></a><a name="createprimarytoken"></a>CAccessToken::建立主要權杖
 
-呼叫這個方法，以建立新的主要權杖。
+調用此方法以創建新的主權杖。
 
 ```
 bool CreatePrimaryToken(
@@ -240,25 +240,25 @@ bool CreatePrimaryToken(
 ### <a name="parameters"></a>參數
 
 *pPri*<br/>
-新 `CAccessToken` 物件的指標。
+指向新`CAccessToken`物件的指標。
 
-*dwDesiredAccess*<br/>
-指定新權杖的要求存取權限。 預設的 MAXIMUM_ALLOWED 會要求對呼叫者有效的所有存取權限。 如需存取權限的詳細資訊，請參閱[存取權限和存取遮罩](/windows/win32/SecAuthZ/access-rights-and-access-masks)。
+*dwddAccess*<br/>
+指定新權杖的請求訪問許可權。 默認的 MAXIMUM_ALLOWED 請求對調用方有效的所有訪問許可權。 有關存取權限的更多,請參閱[存取權限和存取遮罩](/windows/win32/SecAuthZ/access-rights-and-access-masks)。
 
-*pTokenAttributes*<br/>
-[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標，指定新權杖的安全描述項，並決定子進程是否可以繼承該 token。 如果*pTokenAttributes*為 Null，則權杖會取得預設的安全描述項，而且無法繼承控制碼。
+*pToken 屬性*<br/>
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標,該結構指定新令牌的安全描述符,並確定子進程是否可以繼承權杖。 如果*pTokenAttributes*為 NULL,則令牌獲取預設安全描述符,並且無法繼承句柄。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`CreatePrimaryToken` 會呼叫[DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)來建立新的主要權杖。
+`CreatePrimaryToken`呼叫[重複權杖Ex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)創建新的主權杖。
 
-##  <a name="createprocessasuser"></a>CAccessToken：： CreateProcessAsUser
+## <a name="caccesstokencreateprocessasuser"></a><a name="createprocessasuser"></a>CAccessToken::建立行程使用者
 
-呼叫這個方法，在 `CAccessToken` 物件所表示之使用者的安全性內容中，建立執行的新進程。
+調用此方法以創建在`CAccessToken`物件表示的使用者的安全上下文中運行的新進程。
 
 ```
 bool CreateProcessAsUser(
@@ -276,49 +276,49 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>參數
 
-*pApplicationName*<br/>
-以 null 結束的字串指標，指定要執行的模組。 這個參數不可以是 Null。
+*p 應用程式名稱*<br/>
+指定要執行的模組的 null 的標頭針。 此參數可能不是 NULL。
 
 *pCommandLine*<br/>
-以 null 結束的字串指標，指定要執行的命令列。
+指定要執行的命令列的 null 的標記。
 
-*pProcessInformation*<br/>
-接收新進程之識別資訊的[PROCESS_INFORMATION 結構](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information)的指標。
+*p 行程資訊*<br/>
+指向接收有關新進程的標識資訊[的PROCESS_INFORMATION結構](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information)的指標。
 
-*pStartupInfo*<br/>
-[STARTUPINFO](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow)結構的指標，指定新處理常式的主視窗應該如何出現。
+*pStartup資訊*<br/>
+指向[STARTUPINFO](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow)結構的指標,該結構指定新進程的主視窗的顯示方式。
 
-*dwCreationFlags*<br/>
-指定其他旗標，以控制優先順序類別和進程的建立。 如需旗標的清單，請參閱 Win32 函數[CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) 。
+*dw創造標誌*<br/>
+指定控制優先權類和進程創建的其他標誌。 有關標誌清單,請參閱 Win32 函數[「創建行程AsUser」。。](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)
 
-*bLoadProfile*<br/>
-若為 TRUE，則會使用[LoadUserProfile](/windows/win32/api/userenv/nf-userenv-loaduserprofilew)載入使用者的設定檔。
+*bLoad 設定檔*<br/>
+如果為 TRUE,則使用者的設定檔將載入[LoadUserProfile](/windows/win32/api/userenv/nf-userenv-loaduserprofilew)。
 
-*pProcessAttributes*<br/>
-[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標，指定新進程的安全描述項，並決定子進程是否可以繼承傳回的控制碼。 如果*pProcessAttributes*為 Null，進程會取得預設的安全描述項，而且無法繼承控制碼。
+*p 行程屬性*<br/>
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標,該結構指定新進程的安全描述符,並確定子進程是否可以繼承返回的句柄。 如果*pProcessAttributes*為 NULL,則行程將獲取預設安全描述符,並且無法繼承句柄。
 
-*pThreadAttributes*<br/>
-[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標，指定新執行緒的安全描述項，並決定子進程是否可以繼承傳回的控制碼。 如果*pThreadAttributes*為 Null，則執行緒會取得預設的安全描述項，而且無法繼承控制碼。
+*pThread屬性*<br/>
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標,該結構指定新線程的安全描述符,並確定子進程是否可以繼承返回的句柄。 如果*pThreadAttributes*為 NULL,則執行緒將取得預設安全描述符,並且無法繼承句柄。
 
-*bInherit*<br/>
-指出新的進程是否繼承呼叫進程的控制碼。 若為 TRUE，新的進程會繼承呼叫進程中每個可繼承的開啟控制碼。 繼承的控制碼與原始控制碼具有相同的值和存取權限。
+*b繼承*<br/>
+指示新進程是否從調用進程繼承句柄。 如果為 TRUE,則調用進程中的每個可繼承打開句柄都由新進程繼承。 繼承的句柄具有與原始句柄相同的值和訪問許可權。
 
 *pCurrentDirectory*<br/>
-以 null 結束的字串指標，指定新進程的目前磁片磁碟機和目錄。 此字串必須是包含磁碟機號的完整路徑。 如果此參數為 Null，新的進程將會具有與呼叫進程相同的目前磁片磁碟機和目錄。
+指向 null 連接端的字串的指標,該字串指定新行程的當前驅動器和目錄。 字串必須是包含驅動器號的完整路徑。 如果此參數為 NULL,則新進程將具有與調用進程相同的當前驅動器和目錄。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`CreateProcessAsUser` 會使用 `CreateProcessAsUser` Win32 函式來建立新的處理常式，該進程會在 `CAccessToken` 物件所代表之使用者的安全性內容中執行。 請參閱[CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)函數的說明，以取得所需參數的完整討論。
+`CreateProcessAsUser`使用`CreateProcessAsUser`Win32 函數`CAccessToken`創建在 物件表示的使用者的安全上下文中運行的新進程。 有關所需參數的完整討論,請參閱[CreateProcessAsUser 函數](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)的說明。
 
-若要讓此方法成功，`CAccessToken` 物件必須保留 AssignPrimaryToken （除非它是受限制的 token）和 IncreaseQuota 許可權。
+要讓此方法成功,`CAccessToken`對象必須保留 AssignPrimaryToken(除非它是受限權杖)和「增加配額」許可權。
 
-##  <a name="createrestrictedtoken"></a>CAccessToken：： CreateRestrictedToken
+## <a name="caccesstokencreaterestrictedtoken"></a><a name="createrestrictedtoken"></a>CAccessToken::建立受限權杖
 
-呼叫這個方法，以建立新的受限制 `CAccessToken` 物件。
+調用此方法以創建新的受限`CAccessToken`物件。
 
 ```
 bool CreateRestrictedToken(
@@ -330,32 +330,32 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>參數
 
-*pRestrictedToken*<br/>
-新的、受限制的 `CAccessToken` 物件。
+*p受限權杖*<br/>
+新的受限`CAccessToken`物件。
 
-*SidsToDisable*<br/>
-指定僅拒絕 Sid 的 `CTokenGroups` 物件。
+*Sidsto 停用*<br/>
+指定`CTokenGroups`僅拒絕 S 的物件。
 
-*SidsToRestrict*<br/>
-指定限制 Sid 的 `CTokenGroups` 物件。
+*Sidsto 限制*<br/>
+`CTokenGroups`指定限制 S 的物件。
 
-*PrivilegesToDelete*<br/>
-`CTokenPrivileges` 物件，指定要在限制的權杖中刪除的許可權。 預設會建立空的物件。
+*要刪除的權限*<br/>
+指定`CTokenPrivileges`在受限權杖中刪除的許可權的物件。 預設值創建一個空物件。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`CreateRestrictedToken` 使用[CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 函式來建立新的 `CAccessToken` 物件，並具有限制。
+`CreateRestrictedToken`使用[Create 限制權杖](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken)Win32`CAccessToken`函數建立 具有限制的新物件。
 
 > [!IMPORTANT]
->  使用 `CreateRestrictedToken`時，請確定下列事項：現有的權杖有效（而且不是由使用者輸入），而且*SidsToDisable*和*PrivilegesToDelete*都是有效的（而且不是由使用者輸入）。 如果方法傳回 FALSE，則拒絕功能。
+> 使用`CreateRestrictedToken`時,請確保以下內容:現有權杖有效(使用者未輸入)和*SidsTo 禁用*和*特權刪除*都有效(並且使用者不輸入)。 如果該方法返回 FALSE,則拒絕功能。
 
-##  <a name="detach"></a>CAccessToken：:D etach
+## <a name="caccesstokendetach"></a><a name="detach"></a>CAccessToken::Detach
 
-呼叫此方法以撤銷存取權杖的擁有權。
+調用此方法以撤銷訪問權杖的擁有權。
 
 ```
 HANDLE Detach() throw();
@@ -363,15 +363,15 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回已卸離之 `CAccessToken` 的控制碼。
+將句柄返回到已分離`CAccessToken`的句柄。
 
 ### <a name="remarks"></a>備註
 
-這個方法會撤銷 `CAccessToken`的存取權杖擁有權。
+此方法撤消`CAccessToken`訪問權杖的擁有權。
 
-##  <a name="disableprivilege"></a>CAccessToken：:D isablePrivilege
+## <a name="caccesstokendisableprivilege"></a><a name="disableprivilege"></a>CAccessToken::D可特權
 
-呼叫這個方法，以停用 `CAccessToken` 物件中的許可權。
+調用此方法以禁用物件中`CAccessToken`的特權。
 
 ```
 bool DisablePrivilege(
@@ -381,19 +381,19 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>參數
 
-*pszPrivilege*<br/>
-字串的指標，其中包含要在 `CAccessToken` 物件中停用的許可權。
+*psz特權*<br/>
+指向包含要在物件中禁用的許可權的字串的`CAccessToken`指標。
 
-*pPreviousState*<br/>
-`CTokenPrivileges` 物件的指標，其中將包含先前的許可權狀態。
+*p 上一個狀態*<br/>
+指向將包含`CTokenPrivileges`許可權的上一個狀態的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="disableprivileges"></a>CAccessToken：:D isablePrivileges
+## <a name="caccesstokendisableprivileges"></a><a name="disableprivileges"></a>CAccessToken::D可特權
 
-呼叫這個方法，以停用 `CAccessToken` 物件中的一或多個許可權。
+調用此方法以禁用`CAccessToken`物件中的一個或多個許可權。
 
 ```
 bool DisablePrivileges(
@@ -403,19 +403,19 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>參數
 
-*rPrivileges*<br/>
-字串陣列的指標，其中包含要在 `CAccessToken` 物件中停用的許可權。
+*r特權*<br/>
+指向包含要在`CAccessToken`物件中禁用的許可權的字串陣列的指標。
 
-*pPreviousState*<br/>
-`CTokenPrivileges` 物件的指標，其中將包含先前的許可權狀態。
+*p 上一個狀態*<br/>
+指向將包含`CTokenPrivileges`許可權的上一個狀態的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="enableprivilege"></a>CAccessToken：： EnablePrivilege
+## <a name="caccesstokenenableprivilege"></a><a name="enableprivilege"></a>CAccessToken::啟用特權
 
-呼叫這個方法，以在 `CAccessToken` 物件中啟用許可權。
+調用此方法以在`CAccessToken`物件中啟用許可權。
 
 ```
 bool EnablePrivilege(
@@ -425,19 +425,19 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>參數
 
-*pszPrivilege*<br/>
-字串的指標，其中包含要在 `CAccessToken` 物件中啟用的許可權。
+*psz特權*<br/>
+指向包含要在物件中啟用的權限`CAccessToken`的字串的指標。
 
-*pPreviousState*<br/>
-`CTokenPrivileges` 物件的指標，其中將包含先前的許可權狀態。
+*p 上一個狀態*<br/>
+指向將包含`CTokenPrivileges`許可權的上一個狀態的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="enableprivileges"></a>CAccessToken：： EnablePrivileges
+## <a name="caccesstokenenableprivileges"></a><a name="enableprivileges"></a>CAccessToken::啟用特權
 
-呼叫這個方法，以啟用 `CAccessToken` 物件中的一或多個許可權。
+調用此方法以啟用物件中的`CAccessToken`一個或多個許可權。
 
 ```
 bool EnablePrivileges(
@@ -447,19 +447,19 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>參數
 
-*rPrivileges*<br/>
-字串陣列的指標，其中包含要在 `CAccessToken` 物件中啟用的許可權。
+*r特權*<br/>
+指向包含在`CAccessToken`物件中啟用的權限的字串陣列。
 
-*pPreviousState*<br/>
-`CTokenPrivileges` 物件的指標，其中將包含先前的許可權狀態。
+*p 上一個狀態*<br/>
+指向將包含`CTokenPrivileges`許可權的上一個狀態的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="getdefaultdacl"></a>CAccessToken：： GetDefaultDacl
+## <a name="caccesstokengetdefaultdacl"></a><a name="getdefaultdacl"></a>CAccessToken:取得預設Dacl
 
-呼叫這個方法，以傳回 `CAccessToken` 物件的預設 DACL。
+調用此方法以返回`CAccessToken`物件的預設 DACL。
 
 ```
 bool GetDefaultDacl(CDacl* pDacl) const throw(...);
@@ -468,15 +468,15 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pDacl*<br/>
-[CDacl 類別](../../atl/reference/cdacl-class.md)物件的指標，它會接收 `CAccessToken` 物件的預設 DACL。
+指向[CDacl 類別](../../atl/reference/cdacl-class.md)的指標,`CAccessToken`該物件將接收物件的預設 DACL。
 
 ### <a name="return-value"></a>傳回值
 
-如果預設的 DACL 已復原，則傳回 TRUE，否則傳回 FALSE。
+如果預設 DACL 已恢復,則傳回 TRUE,否則返回 FALSE。
 
-##  <a name="geteffectivetoken"></a>CAccessToken：： GetEffectiveToken
+## <a name="caccesstokengeteffectivetoken"></a><a name="geteffectivetoken"></a>CAccessToken:取得有效權杖
 
-呼叫這個方法，讓 `CAccessToken` 物件等於目前線程的作用中存取權杖。
+呼叫此方法以獲取等於當前`CAccessToken`線程有效的訪問權杖的物件。
 
 ```
 bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
@@ -484,16 +484,16 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*<br/>
+*dwddAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="getgroups"></a>CAccessToken：： GetGroups
+## <a name="caccesstokengetgroups"></a><a name="getgroups"></a>CAccessToken:取得群組
 
-呼叫這個方法，以傳回 `CAccessToken` 物件的 token 群組。
+調用此方法以返回`CAccessToken`物件的權杖組。
 
 ```
 bool GetGroups(CTokenGroups* pGroups) const throw(...);
@@ -501,16 +501,16 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pGroups*<br/>
-[CTokenGroups 類別](../../atl/reference/ctokengroups-class.md)物件的指標，它會接收群組資訊。
+*p組*<br/>
+指向將接收組資訊的[CTokenGroup 類](../../atl/reference/ctokengroups-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="gethandle"></a>CAccessToken：： GetHandle
+## <a name="caccesstokengethandle"></a><a name="gethandle"></a>CAccessToken:取得句柄
 
-呼叫這個方法來抓取存取權杖的控制碼。
+調用此方法以檢索訪問權杖的句柄。
 
 ```
 HANDLE GetHandle() const throw();
@@ -518,11 +518,11 @@ HANDLE GetHandle() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 `CAccessToken` 物件之存取權杖的控制碼。
+返回對象訪問權杖`CAccessToken`的句柄。
 
-##  <a name="getimpersonationlevel"></a>CAccessToken：： GetImpersonationLevel
+## <a name="caccesstokengetimpersonationlevel"></a><a name="getimpersonationlevel"></a>CAccessToken:取得模擬層級
 
-呼叫這個方法，從存取權杖取得模擬層級。
+調用此方法從訪問權杖獲取類比級別。
 
 ```
 bool GetImpersonationLevel(
@@ -531,16 +531,16 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>參數
 
-*pImpersonationLevel*<br/>
-將接收模擬層級資訊的[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列舉類型的指標。
+*p 模擬等級*<br/>
+指向[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)枚舉類型的指標,該類型將接收模擬級別資訊。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="getlogonsessionid"></a>CAccessToken：： GetLogonSessionId
+## <a name="caccesstokengetlogonsessionid"></a><a name="getlogonsessionid"></a>CAccessToken:取得登入工作階段 Id
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的登入會話識別碼。
+呼叫此方法以獲取與`CAccessToken`物件關聯的登錄會話 ID。
 
 ```
 bool GetLogonSessionId(LUID* pluid) const throw(...);
@@ -548,20 +548,20 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pluid*<br/>
-將接收登入會話識別碼之[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指標。
+*普盧伊德*<br/>
+指向將接收登錄會話 ID 的[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在 debug build 中，如果*pluid*是不正確值，就會發生判斷提示錯誤。
+在調試生成中,如果*pluid*是無效值,則會發生斷言錯誤。
 
-##  <a name="getlogonsid"></a>CAccessToken：： GetLogonSid
+## <a name="caccesstokengetlogonsid"></a><a name="getlogonsid"></a>CAccessToken:取得登入 Sid
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的登入 SID。
+呼叫此方法以獲取與`CAccessToken`物件關聯的登錄 SID。
 
 ```
 bool GetLogonSid(CSid* pSid) const throw(...);
@@ -570,19 +570,19 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pSid*<br/>
-[CSid 類別](../../atl/reference/csid-class.md)物件的指標。
+指向[CSid 類](../../atl/reference/csid-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在 debug build 中，如果*pSid*是不正確值，就會發生判斷提示錯誤。
+在調試生成中,如果*pSid*是無效值,則會發生斷言錯誤。
 
-##  <a name="getowner"></a>CAccessToken：： GetOwner
+## <a name="caccesstokengetowner"></a><a name="getowner"></a>CAccessToken:取得擁有者
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的擁有者。
+調用此方法以獲取與`CAccessToken`對象關聯的擁有者。
 
 ```
 bool GetOwner(CSid* pSid) const throw(...);
@@ -591,19 +591,19 @@ bool GetOwner(CSid* pSid) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pSid*<br/>
-[CSid 類別](../../atl/reference/csid-class.md)物件的指標。
+指向[CSid 類](../../atl/reference/csid-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-當此存取權杖生效時，預設會在任何建立的物件上設定擁有者。
+默認情況下,將在此訪問權杖生效時創建的任何物件上設置擁有者。
 
-##  <a name="getprimarygroup"></a>CAccessToken：： GetPrimaryGroup
+## <a name="caccesstokengetprimarygroup"></a><a name="getprimarygroup"></a>CAccessToken:取得主要組
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的主要群組。
+調用此方法獲取與`CAccessToken`物件關聯的主組。
 
 ```
 bool GetPrimaryGroup(CSid* pSid) const throw(...);
@@ -612,19 +612,19 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pSid*<br/>
-[CSid 類別](../../atl/reference/csid-class.md)物件的指標。
+指向[CSid 類](../../atl/reference/csid-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-群組預設會在此存取權杖生效時建立的任何物件上設定。
+默認情況下,該組將設置在此訪問權杖生效時創建的任何物件上。
 
-##  <a name="getprivileges"></a>CAccessToken：： GetPrivileges
+## <a name="caccesstokengetprivileges"></a><a name="getprivileges"></a>CAccessToken:取得特權
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的許可權。
+調用此方法獲取與`CAccessToken`對象關聯的許可權。
 
 ```
 bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
@@ -632,14 +632,14 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pPrivileges*<br/>
-[CTokenPrivileges 類別](../../atl/reference/ctokenprivileges-class.md)物件的指標，它會接收許可權。
+*p權限*<br/>
+指向將收到特權[的 CToken 特權類](../../atl/reference/ctokenprivileges-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="getprocesstoken"></a>CAccessToken：： GetProcessToken
+## <a name="caccesstokengetprocesstoken"></a><a name="getprocesstoken"></a>CAccessToken::取得行程權杖
 
 呼叫這個方法，以所指處理序的存取權杖初始化 `CAccessToken`。
 
@@ -649,23 +649,23 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*<br/>
+*dwddAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*hProcess*<br/>
-處理已開啟存取權杖的處理序。 如果使用預設值 Null，則會使用目前的進程。
+*h行程*<br/>
+處理已開啟存取權杖的處理序。 如果使用 NULL 的預設值,則使用當前過程。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫[OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 函數。
+調用[OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 功能。
 
-##  <a name="getprofile"></a>CAccessToken：： GetProfile
+## <a name="caccesstokengetprofile"></a><a name="getprofile"></a>CAccessToken:取得設定檔
 
-呼叫這個方法，以取得指向與 `CAccessToken` 物件相關聯之使用者設定檔的控制碼。
+呼叫此方法以獲取指向與物件關聯的使用者設定檔的`CAccessToken`句柄。
 
 ```
 HANDLE GetProfile() const throw();
@@ -673,11 +673,11 @@ HANDLE GetProfile() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回指向使用者設定檔的控制碼，如果沒有設定檔存在則傳回 Null。
+傳回指向使用者設定檔的句柄,如果不存在設定檔,則傳回 NULL。
 
-##  <a name="getsource"></a>CAccessToken：： GetSource
+## <a name="caccesstokengetsource"></a><a name="getsource"></a>CAccessToken:取得來源
 
-呼叫這個方法以取得 `CAccessToken` 物件的來源。
+調用此方法以獲取`CAccessToken`物件的源。
 
 ```
 bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
@@ -685,16 +685,16 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pSource*<br/>
-[TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source)結構的指標。
+*p來源*<br/>
+指向[TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="getstatistics"></a>CAccessToken：： GetStatistics
+## <a name="caccesstokengetstatistics"></a><a name="getstatistics"></a>CAccessToken:取得統計資訊
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的資訊。
+調用此方法以獲取有關`CAccessToken`物件的資訊。
 
 ```
 bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
@@ -702,16 +702,16 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pStatistics*<br/>
-[TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics)結構的指標。
+*p 統計*<br/>
+指向[TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="getterminalservicessessionid"></a>CAccessToken：： GetTerminalServicesSessionId
+## <a name="caccesstokengetterminalservicessessionid"></a><a name="getterminalservicessessionid"></a>CAccessToken::取得終端服務會話Id
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的終端機服務會話識別碼。
+呼叫此方法獲取與`CAccessToken`物件關聯的終端服務會話 ID。
 
 ```
 bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
@@ -720,15 +720,15 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pdwSessionId*<br/>
-終端機服務會話識別碼。
+終端服務會話 ID。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="getthreadtoken"></a>CAccessToken：： GetThreadToken
+## <a name="caccesstokengetthreadtoken"></a><a name="getthreadtoken"></a>CAccessToken:抓取緒權杖
 
-呼叫這個方法，以使用來自給定執行緒的 token 來初始化 `CAccessToken`。
+呼叫此方法以使用給定緒中的`CAccessToken`權杖初始化 。
 
 ```
 bool GetThreadToken(
@@ -739,24 +739,24 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*<br/>
+*dwddAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
 *hThread*<br/>
-已開啟其存取權杖之執行緒的控制碼。
+處理其訪問權杖打開的線程。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫 `GetThreadToken` 方法的執行緒安全性內容，或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指示是針對調用`GetThreadToken`方法的線程的安全上下文或調用線程的進程的安全上下文進行訪問檢查。
 
-如果此參數為 FALSE，則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端，此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE，則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
+如果此參數為 FALSE,則使用呼叫線程的安全上下文執行訪問檢查。 如果線程正在模擬用戶端,則此安全上下文可以是客戶端進程的安全上下文。 如果此參數為 TRUE,則使用呼叫線程的進程的安全上下文進行訪問檢查。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="gettokenid"></a>CAccessToken：： GetTokenId
+## <a name="caccesstokengettokenid"></a><a name="gettokenid"></a>CAccessToken::取得權杖 ID
 
-呼叫這個方法，以取得與 `CAccessToken` 物件相關聯的 Token 識別碼。
+呼叫此方法以獲取與`CAccessToken`物件關聯的權杖 ID。
 
 ```
 bool GetTokenId(LUID* pluid) const throw(...);
@@ -764,16 +764,16 @@ bool GetTokenId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pluid*<br/>
-將接收 Token 識別碼之[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指標。
+*普盧伊德*<br/>
+指向將接收權杖 ID 的[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="gettype"></a>CAccessToken：： GetType
+## <a name="caccesstokengettype"></a><a name="gettype"></a>CAccessToken:取得類型
 
-呼叫這個方法，以取得 `CAccessToken` 物件的 token 類型。
+調用此方法以獲取`CAccessToken`物件的權杖類型。
 
 ```
 bool GetType(TOKEN_TYPE* pType) const throw(...);
@@ -781,20 +781,20 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pType*<br/>
-成功時， [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type)變數的位址會接收 TOKEN 的類型。
+*p 型態*<br/>
+[TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type)變數的位址,在成功時,該變數接收令牌的類型。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-TOKEN_TYPE 列舉類型包含可區別主要權杖和模擬權杖的值。
+TOKEN_TYPE枚舉類型包含區分主權杖和類比權杖的值。
 
-##  <a name="getuser"></a>CAccessToken：： GetUser
+## <a name="caccesstokengetuser"></a><a name="getuser"></a>CAccessToken:取得使用者
 
-呼叫這個方法，以識別與 `CAccessToken` 物件相關聯的使用者。
+調用此方法以標識與`CAccessToken`物件關聯的使用者。
 
 ```
 bool GetUser(CSid* pSid) const throw(...);
@@ -803,15 +803,15 @@ bool GetUser(CSid* pSid) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pSid*<br/>
-[CSid 類別](../../atl/reference/csid-class.md)物件的指標。
+指向[CSid 類](../../atl/reference/csid-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
-##  <a name="hkeycurrentuser"></a>CAccessToken：： HKeyCurrentUser
+## <a name="caccesstokenhkeycurrentuser"></a><a name="hkeycurrentuser"></a>CAccessToken::HKeycurrentUser
 
-呼叫這個方法，以取得指向與 `CAccessToken` 物件相關聯之使用者設定檔的控制碼。
+呼叫此方法以獲取指向與物件關聯的使用者設定檔的`CAccessToken`句柄。
 
 ```
 HKEY HKeyCurrentUser() const throw();
@@ -819,11 +819,11 @@ HKEY HKeyCurrentUser() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回指向使用者設定檔的控制碼，如果沒有設定檔存在則傳回 Null。
+傳回指向使用者設定檔的句柄,如果不存在設定檔,則傳回 NULL。
 
-##  <a name="impersonate"></a>CAccessToken：：模擬
+## <a name="caccesstokenimpersonate"></a><a name="impersonate"></a>CAccessToken:模擬
 
-呼叫這個方法，將模擬 `CAccessToken` 指派給執行緒。
+調用此方法以將類`CAccessToken`比分配給線程。
 
 ```
 bool Impersonate(HANDLE hThread = NULL) const throw(...);
@@ -832,21 +832,21 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 ### <a name="parameters"></a>參數
 
 *hThread*<br/>
-要指派模擬權杖的執行緒控制碼。 這個控制碼必須以 TOKEN_IMPERSONATE 存取權限開啟。 如果*hThread*為 Null，則方法會使執行緒停止使用模擬 token。
+將搖桿將模擬的權號來分配 。 此句柄必須已打開,具有TOKEN_IMPERSONATE訪問許可權。 如果*hThread*為 NULL,則該方法會導致線程停止使用類比令牌。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在 [偵錯工具] 組建中，如果 `CAccessToken` 沒有標記的有效指標，就會發生判斷提示錯誤。
+在調試生成中,如果沒有`CAccessToken`指向令牌的有效指標,將發生斷言錯誤。
 
-[CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用於自動還原模擬的存取權杖。
+[CAuto 還原類比類](../../atl/reference/cautorevertimpersonation-class.md)可用於自動還原模擬訪問權杖。
 
-##  <a name="impersonateloggedonuser"></a>CAccessToken：： ImpersonateLoggedOnUser
+## <a name="caccesstokenimpersonateloggedonuser"></a><a name="impersonateloggedonuser"></a>CAccessToken::模擬登錄使用者
 
-呼叫此方法可讓呼叫執行緒模擬已登入使用者的安全性內容。
+調用此方法以允許調用線程類比登錄使用者的安全上下文。
 
 ```
 bool ImpersonateLoggedOnUser() const throw(...);
@@ -854,16 +854,16 @@ bool ImpersonateLoggedOnUser() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
 > [!IMPORTANT]
->  如果模擬函式的呼叫因任何原因而失敗，則不會模擬用戶端，並且會在進行呼叫之進程的安全性內容中提出用戶端要求。 如果進程是以高許可權帳戶或系統管理群組成員的身分執行，則使用者可能會在不允許的情況下執行動作。 因此，應一律確認此函數的傳回值。
+> 如果對類比函數的調用由於任何原因失敗,則用戶端不會類比,並且用戶端請求是在發出調用的進程的安全上下文中進行的。 如果進程以高度特權帳戶或管理組的成員運行,則使用者可能能夠執行否則將不允許執行的操作。 因此,應始終確認此函數的返回值。
 
-##  <a name="istokenrestricted"></a>CAccessToken：： IsTokenRestricted
+## <a name="caccesstokenistokenrestricted"></a><a name="istokenrestricted"></a>CAccessToken::受限制
 
-呼叫這個方法來測試 `CAccessToken` 物件是否包含受限制的 Sid 清單。
+調用此方法以測試`CAccessToken`物件是否包含受限 S 的清單。
 
 ```
 bool IsTokenRestricted() const throw();
@@ -871,11 +871,11 @@ bool IsTokenRestricted() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件包含限制 Sid 的清單，則傳回 TRUE，如果沒有限制 Sid，或方法失敗，則傳回 FALSE。
+如果物件包含限制 S 的清單,則傳回 TRUE;如果沒有限制 SID 或方法失敗,則為 FALSE。
 
-##  <a name="loaduserprofile"></a>CAccessToken：： LoadUserProfile
+## <a name="caccesstokenloaduserprofile"></a><a name="loaduserprofile"></a>CAccessToken::載入使用者設定檔
 
-呼叫這個方法，載入與 `CAccessToken` 物件相關聯的使用者設定檔。
+呼叫此方法以載入與`CAccessToken`物件關聯的使用者配置檔。
 
 ```
 bool LoadUserProfile() throw(...);
@@ -883,15 +883,15 @@ bool LoadUserProfile() throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在 [偵錯工具] 組建中，如果 `CAccessToken` 不包含有效的 token，或使用者設定檔已經存在，就會發生判斷提示錯誤。
+在調試生成中,如果`CAccessToken`不包含有效的權杖,或者使用者配置檔已存在,則會發生斷言錯誤。
 
-##  <a name="logonuser"></a>CAccessToken：： LogonUser
+## <a name="caccesstokenlogonuser"></a><a name="logonuser"></a>CAccessToken::登錄使用者
 
-呼叫這個方法，為與指定認證相關聯的使用者建立登入會話。
+調用此方法為與給定憑據關聯的用戶創建登錄會話。
 
 ```
 bool LogonUser(
@@ -904,32 +904,32 @@ bool LogonUser(
 
 ### <a name="parameters"></a>參數
 
-*pszUserName*<br/>
-指定使用者名稱之以 null 終止之字串的指標。 這是用來登入的使用者帳戶名稱。
+*pszUser 名稱*<br/>
+指定使用者名稱的 null 的字串的指標。 這是要登錄的使用者帳戶的名稱。
 
 *pszDomain*<br/>
-以 null 結束的字串指標，指定其帳戶資料庫包含*pszUserName*帳戶的網域或伺服器名稱。
+指向 null 終止字串的指標,該字串指定其帳戶資料庫包含*pszUserName*帳戶的域或伺服器的名稱。
 
-*pszPassword*<br/>
-以 null 結束的字串指標，指定*pszUserName*所指定之使用者帳戶的純文字密碼。
+*psz密碼*<br/>
+指向 null 終止字串的指標,該字串指定*pszUserName*指定的使用者帳戶的明文密碼。
 
-*dwLogonType*<br/>
-指定要執行的登入操作類型。 如需詳細資訊，請參閱[LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 。
+*dwLogon 類型*<br/>
+指定要執行的登入操作的類型。 有關詳細資訊[,請參閱登入使用者](/windows/win32/api/winbase/nf-winbase-logonuserw)。
 
-*dwLogonProvider*<br/>
-指定登入提供者。 如需詳細資訊，請參閱[LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 。
+*dwLogon 提供者*<br/>
+指定登錄提供程式。 有關詳細資訊[,請參閱登入使用者](/windows/win32/api/winbase/nf-winbase-logonuserw)。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-登入所產生的存取權杖將會與 `CAccessToken`相關聯。 若要讓此方法成功，`CAccessToken` 物件必須持有 SE_TCB_NAME 許可權，將持有者識別為信任的電腦基底的一部分。 如需有關必要許可權的詳細資訊，請參閱[LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 。
+登入產生的存取權杖將與`CAccessToken`相關聯 。 要使此方法成功,`CAccessToken`物件必須保留SE_TCB_NAME許可權,將持有者標識為受信任的計算機基礎的一部分。 有關需要權限的詳細資訊,請參考[登入使用者](/windows/win32/api/winbase/nf-winbase-logonuserw)。
 
-##  <a name="opencomclienttoken"></a>CAccessToken：： OpenCOMClientToken
+## <a name="caccesstokenopencomclienttoken"></a><a name="opencomclienttoken"></a>CAccessToken::打開COM用戶端權杖
 
-從 COM 伺服器內呼叫此方法，以處理來自用戶端的呼叫，以使用來自 COM 用戶端的存取權杖來初始化 `CAccessToken`。
+從處理來自用戶端的電話的 COM 伺服器內呼叫此方法,`CAccessToken`以便使用 COM 用戶端的存取權杖初始化 。
 
 ```
 bool OpenCOMClientToken(
@@ -940,28 +940,28 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*<br/>
+*dwddAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*<br/>
-若為 TRUE，當此呼叫成功完成時，目前的執行緒會模擬呼叫的 COM 用戶端。 若為 FALSE，將會開啟存取權杖，但當此呼叫完成時，執行緒將不會有模擬 token。
+*B 模擬*<br/>
+如果為 TRUE,則如果此調用成功完成,則當前線程將類比呼叫 COM 用戶端。 如果 FALSE,將打開訪問權杖,但線程將在此調用完成時沒有類比權杖。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容，或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指示是針對調用[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的線程的安全上下文或調用線程進程的安全上下文進行訪問檢查。
 
-如果此參數為 FALSE，則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端，此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE，則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
+如果此參數為 FALSE,則使用呼叫線程的安全上下文執行訪問檢查。 如果線程正在模擬用戶端,則此安全上下文可以是客戶端進程的安全上下文。 如果此參數為 TRUE,則使用呼叫線程的進程的安全上下文進行訪問檢查。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-[CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用於自動還原藉由將*bImpersonate*旗標設定為 TRUE 而建立的模擬存取權杖。
+[CAuto 還原類比類](../../atl/reference/cautorevertimpersonation-class.md)可用於透過將*bImpersonate*標誌設定為 TRUE 自動還原建立的模擬存取權杖。
 
-##  <a name="opennamedpipeclienttoken"></a>CAccessToken：： OpenNamedPipeClientToken
+## <a name="caccesstokenopennamedpipeclienttoken"></a><a name="opennamedpipeclienttoken"></a>CAccessToken::開啟命名導管客戶端權杖
 
-從伺服器內呼叫此方法，透過具名管道取得要求，使用來自用戶端的存取權杖初始化 `CAccessToken`。
+從伺服器內呼叫此方法,透過命名導管取得請求,以便使用客戶端的存`CAccessToken`取權杖 初始化 。
 
 ```
 bool OpenNamedPipeClientToken(
@@ -974,30 +974,30 @@ bool OpenNamedPipeClientToken(
 ### <a name="parameters"></a>參數
 
 *hPipe*<br/>
-具名管道的控制碼。
+處理命名管道。
 
-*dwDesiredAccess*<br/>
+*dwddAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*<br/>
-若為 TRUE，當此呼叫成功完成時，目前的執行緒會模擬呼叫管道用戶端。 若為 FALSE，將會開啟存取權杖，但當此呼叫完成時，執行緒將不會有模擬 token。
+*B 模擬*<br/>
+如果 TRUE,如果此調用成功完成,則當前線程將類比調用管道用戶端。 如果 FALSE,將打開訪問權杖,但線程將在此調用完成時沒有類比權杖。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容，或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指示是針對調用[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的線程的安全上下文或調用線程進程的安全上下文進行訪問檢查。
 
-如果此參數為 FALSE，則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端，此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE，則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
+如果此參數為 FALSE,則使用呼叫線程的安全上下文執行訪問檢查。 如果線程正在模擬用戶端,則此安全上下文可以是客戶端進程的安全上下文。 如果此參數為 TRUE,則使用呼叫線程的進程的安全上下文進行訪問檢查。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-[CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用於自動還原藉由將*bImpersonate*旗標設定為 TRUE 而建立的模擬存取權杖。
+[CAuto 還原類比類](../../atl/reference/cautorevertimpersonation-class.md)可用於透過將*bImpersonate*標誌設定為 TRUE 自動還原建立的模擬存取權杖。
 
-##  <a name="openrpcclienttoken"></a>CAccessToken：： OpenRPCClientToken
+## <a name="caccesstokenopenrpcclienttoken"></a><a name="openrpcclienttoken"></a>CAccessToken::打開RPC客戶端權杖
 
-從處理 RPC 用戶端呼叫的伺服器內呼叫此方法，以使用來自用戶端的存取權杖來初始化 `CAccessToken`。
+從伺服器內呼叫此方法,以處理來自 RPC 客戶端的呼`CAccessToken`叫,以便使用客戶端的存取權杖初始化 。
 
 ```
 bool OpenRPCClientToken(
@@ -1009,31 +1009,31 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>參數
 
-*BindingHandle*<br/>
-伺服器上的系結控制碼，代表用戶端的系結。
+*繫結句柄*<br/>
+伺服器上表示對用戶端綁定的綁定句柄。
 
-*dwDesiredAccess*<br/>
+*dwddAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*<br/>
-若為 TRUE，當此呼叫成功完成時，目前的執行緒會模擬呼叫 RPC 用戶端。 若為 FALSE，將會開啟存取權杖，但當此呼叫完成時，執行緒將不會有模擬 token。
+*B 模擬*<br/>
+如果為 TRUE,則如果此調用成功完成,則當前線程將類比調用 RPC 用戶端。 如果 FALSE,將打開訪問權杖,但線程將在此調用完成時沒有類比權杖。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容，或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指示是針對調用[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的線程的安全上下文或調用線程進程的安全上下文進行訪問檢查。
 
-如果此參數為 FALSE，則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端，此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE，則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
+如果此參數為 FALSE,則使用呼叫線程的安全上下文執行訪問檢查。 如果線程正在模擬用戶端,則此安全上下文可以是客戶端進程的安全上下文。 如果此參數為 TRUE,則使用呼叫線程的進程的安全上下文進行訪問檢查。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-[CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用於自動還原藉由將*bImpersonate*旗標設定為 TRUE 而建立的模擬存取權杖。
+[CAuto 還原類比類](../../atl/reference/cautorevertimpersonation-class.md)可用於透過將*bImpersonate*標誌設定為 TRUE 自動還原建立的模擬存取權杖。
 
-##  <a name="openthreadtoken"></a>CAccessToken：： OpenThreadToken
+## <a name="caccesstokenopenthreadtoken"></a><a name="openthreadtoken"></a>CAccessToken::開啟線程權杖
 
-呼叫這個方法以設定模擬層級，然後使用來自給定執行緒的權杖初始化 `CAccessToken`。
+呼叫此方法以設定模擬等級,然後使用給定線程中的權杖初始化`CAccessToken`。
 
 ```
 bool OpenThreadToken(
@@ -1045,33 +1045,33 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*<br/>
+*dwddAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*<br/>
-若為 TRUE，則在此方法完成後，執行緒會保留在要求的模擬層級。 如果為 FALSE，則執行緒會還原為其原始模擬層級。
+*B 模擬*<br/>
+如果為 TRUE,則在此方法完成後,線程將留在請求的類比級別。 如果 FALSE,線程將恢復為其原始模擬級別。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容，或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指示是針對調用[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的線程的安全上下文或調用線程進程的安全上下文進行訪問檢查。
 
-如果此參數為 FALSE，則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端，此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE，則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
+如果此參數為 FALSE,則使用呼叫線程的安全上下文執行訪問檢查。 如果線程正在模擬用戶端,則此安全上下文可以是客戶端進程的安全上下文。 如果此參數為 TRUE,則使用呼叫線程的進程的安全上下文進行訪問檢查。
 
-*sil*<br/>
-指定提供權杖模擬層級的[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列舉類型。
+*Sil*<br/>
+指定提供權杖類比等級的[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)枚舉類型。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`OpenThreadToken` 類似于[CAccessToken：： GetThreadToken](#getthreadtoken)，但會先設定模擬層級，再從執行緒的存取權杖初始化 `CAccessToken`。
+`OpenThreadToken`類似於[CAccessToken::getThreadToken](#getthreadtoken),但在從線程的訪問權杖`CAccessToken`初始化 之前設置類比級別。
 
-[CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用於自動還原藉由將*bImpersonate*旗標設定為 TRUE 而建立的模擬存取權杖。
+[CAuto 還原類比類](../../atl/reference/cautorevertimpersonation-class.md)可用於透過將*bImpersonate*標誌設定為 TRUE 自動還原建立的模擬存取權杖。
 
-##  <a name="privilegecheck"></a>CAccessToken：:P rivilegeCheck
+## <a name="caccesstokenprivilegecheck"></a><a name="privilegecheck"></a>CAccessToken::P里維萊格檢查
 
-呼叫這個方法，以判斷是否在 `CAccessToken` 物件中啟用一組指定的許可權。
+呼叫此方法以確定物件中`CAccessToken`是否啟用了指定的許可權集。
 
 ```
 bool PrivilegeCheck(
@@ -1081,23 +1081,23 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>參數
 
-*RequiredPrivileges*<br/>
-[PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set)結構的指標。
+*必要權限*<br/>
+指向[PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set)結構的指標。
 
-*pbResult*<br/>
-此方法所設定之值的指標，表示 `CAccessToken` 物件中是否已啟用任何或所有指定的許可權。
+*pb 結果*<br/>
+指向方法集的值的指標,以指示`CAccessToken`物件中是否啟用了任何或所有指定的許可權。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-當 `PrivilegeCheck` 傳回時，如果已啟用對應的許可權，則會將每個[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)結構的 `Attributes` 成員設定為 SE_PRIVILEGE_USED_FOR_ACCESS。 這個方法會呼叫[PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 函數。
+返回`PrivilegeCheck`時,`Attributes`如果 啟用了相應的許可權,則每個[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)結構的成員設置為SE_PRIVILEGE_USED_FOR_ACCESS。 此方法調用[特權檢查](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck)Win32 函數。
 
-##  <a name="revert"></a>CAccessToken：： Revert
+## <a name="caccesstokenrevert"></a><a name="revert"></a>CAccessToken::恢復
 
-呼叫這個方法，以停止執行緒使用模擬 token。
+調用此方法以阻止線程使用類比權杖。
 
 ```
 bool Revert(HANDLE hThread = NULL) const throw();
@@ -1106,19 +1106,19 @@ bool Revert(HANDLE hThread = NULL) const throw();
 ### <a name="parameters"></a>參數
 
 *hThread*<br/>
-要從模擬還原之執行緒的控制碼。 如果*hThread*為 Null，則會假設為目前的執行緒。
+句柄到線程以從類比還原。 如果*hThread*為 NULL,則假定當前線程。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-模擬權杖的回復可以使用[CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)自動執行。
+類比權杖的還原可以使用[CAuto還原類比類](../../atl/reference/cautorevertimpersonation-class.md)自動執行。
 
-##  <a name="setdefaultdacl"></a>CAccessToken：： SetDefaultDacl
+## <a name="caccesstokensetdefaultdacl"></a><a name="setdefaultdacl"></a>CAccessToken::設定預設Dacl
 
-呼叫這個方法，以設定 `CAccessToken` 物件的預設 DACL。
+呼叫此方法以設定`CAccessToken`物件的預設 DACL。
 
 ```
 bool SetDefaultDacl(const CDacl& rDacl) throw(...);
@@ -1127,19 +1127,19 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ### <a name="parameters"></a>參數
 
 *rDacl*<br/>
-新的預設[CDacl 類別](../../atl/reference/cdacl-class.md)資訊。
+新的預設[CDacl 類](../../atl/reference/cdacl-class.md)資訊。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-預設的 DACL 是當使用此存取權杖來建立新物件時，預設會使用的 DACL。
+默認 DACL 是 DACL,預設情況下,當使用此訪問權杖創建新物件時,它使用 DACL。
 
-##  <a name="setowner"></a>CAccessToken：： SetOwner
+## <a name="caccesstokensetowner"></a><a name="setowner"></a>CAccessToken::SetOwner
 
-呼叫這個方法來設定 `CAccessToken` 物件的擁有者。
+調用此方法以設置`CAccessToken`物件的擁有者。
 
 ```
 bool SetOwner(const CSid& rSid) throw(...);
@@ -1148,19 +1148,19 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="parameters"></a>參數
 
 *rSid*<br/>
-包含擁有者資訊的[CSid 類別](../../atl/reference/csid-class.md)物件。
+包含擁有者資訊的[CSid 類](../../atl/reference/csid-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-「擁有者」是預設的擁有者，用於在此存取權杖生效時建立的新物件。
+擁有者是預設擁有者,用於在此訪問權杖生效時創建的新物件。
 
-##  <a name="setprimarygroup"></a>CAccessToken：： SetPrimaryGroup
+## <a name="caccesstokensetprimarygroup"></a><a name="setprimarygroup"></a>CAccessToken::設定主要組
 
-呼叫這個方法，以設定 `CAccessToken` 物件的主要群組。
+調用此方法以設置`CAccessToken`物件的主組。
 
 ```
 bool SetPrimaryGroup(const CSid& rSid) throw(...);
@@ -1169,18 +1169,18 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ### <a name="parameters"></a>參數
 
 *rSid*<br/>
-包含主要群組資訊的[CSid 類別](../../atl/reference/csid-class.md)物件。
+包含主組資訊的[CSid 類](../../atl/reference/csid-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-主要群組是在此存取權杖生效時，所建立新物件的預設群組。
+主組是此訪問權杖生效時創建的新物件的預設組。
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLSecurity 範例](../../overview/visual-cpp-samples.md)<br/>
+[ATL 安全範例](../../overview/visual-cpp-samples.md)<br/>
 [存取權杖](/windows/win32/SecAuthZ/access-tokens)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

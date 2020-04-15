@@ -1,6 +1,6 @@
 ---
-title: MakeDynamicReloggerGroup
-description: C++ BUILD Insights SDK MakeDynamicReloggerGroup 函數參考。
+title: 將動態重新記錄群組
+description: C++生成見解 SDK 使動態重新記錄組函數引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4ad394d3ba2982e7ee4f2a497fef2ea65a3c1769
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: f49e37f8e1a8b9ca9a800d20b2891a54453095ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323944"
 ---
-# <a name="makedynamicreloggergroup"></a>MakeDynamicReloggerGroup
+# <a name="makedynamicreloggergroup"></a>將動態重新記錄群組
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`MakeDynamicReloggerGroup` 函數是用來建立動態 relogger 群組。 Relogger 群組的成員會從左至右接收事件，直到追蹤中的所有事件都已處理為止。
+該`MakeDynamicReloggerGroup`函數用於創建動態重新記錄組。 重新記錄組的成員從左到右逐個接收事件,直到跟蹤中的所有事件都得到處理。
 
 ## <a name="syntax"></a>語法
 
@@ -39,17 +39,17 @@ auto MakeDynamicReloggerGroup(std::vector<std::unique_ptr<IRelogger>> reloggers)
 
 ### <a name="parameters"></a>參數
 
-*reloggers*\
-包含在動態 relogger 群組中的[IRelogger](../other-types/irelogger-class.md)指標向量。 這些指標可以是 raw、`std::unique_ptr`或 `std::shared_ptr`。 [IAnalyzer](../other-types/ianalyzer-class.md)指標也會被視為 `IRelogger` 指標，因為繼承關聯性。
+*重新記錄*\
+動態[重新記錄組中包含的 IRelogger](../other-types/irelogger-class.md)指標的向量。 這些指標可以是生的,`std::unique_ptr`也可以`std::shared_ptr`是 。 [由於繼承關係,IAnalyzer](../other-types/ianalyzer-class.md)指標也被視為`IRelogger`指標。
 
 ### <a name="return-value"></a>傳回值
 
-動態 relogger 群組。 使用**auto**關鍵字來捕捉傳回值。
+動態重新記錄組。 使用**自動**關鍵字捕獲返回值。
 
 ## <a name="remarks"></a>備註
 
-不同于靜態 relogger 群組，dynamic relogger 群組的成員在編譯時期不需要知道。 您可以根據程式輸入，或根據在編譯時期未知的其他值，在執行時間選擇 relogger 群組成員。 不同于靜態 relogger 群組，動態 relogger 群組內的[IRelogger](../other-types/irelogger-class.md)指標具有多型行為，而且會正確分派虛擬函式呼叫。 這項彈性的代價是，事件處理時間可能較慢。 當所有 relogger 群組成員都在編譯階段為已知時，如果您不需要多型行為，請考慮使用靜態 relogger 群組。 若要使用靜態 relogger 群組，請改為呼叫[MakeStaticReloggerGroup](make-static-relogger-group.md) 。
+與靜態重新記錄組不同,動態重新記錄組的成員不需要在編譯時已知。 您可以根據程式輸入或在執行時根據編譯時未知的其他值選擇重新記錄組成員。 與靜態重新記錄器組不同,動態重新記錄器組中的[IRelogger](../other-types/irelogger-class.md)指標具有多態行為,並且虛擬函數調用正確調度。 這種靈活性的代價可能是較慢的事件處理時間。 當所有重新記錄組成員在編譯時都已知,並且不需要多態行為時,請考慮使用靜態重新記錄組。 要使用靜態重新記錄組,請改為調用[MakeStaticReloggerGroup。](make-static-relogger-group.md)
 
-動態 relogger 群組可以封裝在靜態 relogger 群組內。 您會將其位址傳遞給[MakeStaticReloggerGroup](make-static-relogger-group.md)。 使用這項技術，將動態 relogger 群組傳遞至函數（例如重新執行[），這](relog.md)只接受靜態 relogger 群組。
+動態重新記錄器組可以封裝在靜態重新記錄器組中。 您可以透過它的位址[,讓靜態重新紀錄群組](make-static-relogger-group.md)。 使用此技術將動態重新記錄器組傳遞給函數,如[Relog](relog.md),該函數僅接受靜態重新記錄組。
 
 ::: moniker-end

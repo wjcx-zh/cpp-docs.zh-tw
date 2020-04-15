@@ -1,6 +1,6 @@
 ---
-title: ANALYSIS_DESCRIPTOR 結構
-description: C++ BUILD Insights SDK ANALYSIS_DESCRIPTOR 結構參考。
+title: ANALYSIS_DESCRIPTOR結構
+description: C++生成見解 SDK ANALYSIS_DESCRIPTOR結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fc11ce11e1faaae02edb36aac447c18ea8107e35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1de7f2a5bc3f02a327daaecf8c2cebc44687ba43
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332478"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323618"
 ---
-# <a name="analysis_descriptor-structure"></a>ANALYSIS_DESCRIPTOR 結構
+# <a name="analysis_descriptor-structure"></a>ANALYSIS_DESCRIPTOR結構
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`ANALYSIS_DESCRIPTOR` 結構與[AnalyzeA](../functions/analyze-a.md)和[AnalyzeW](../functions/analyze-w.md)函數搭配使用。 其中說明如何分析 Windows 事件追蹤（ETW）追蹤。
+該`ANALYSIS_DESCRIPTOR`結構與[分析A](../functions/analyze-a.md)[和分析W](../functions/analyze-w.md)函數一起使用。 它描述了如何分析 Windows (ETW) 追蹤的事件追蹤。
 
 ## <a name="syntax"></a>語法
 
@@ -42,12 +42,12 @@ typedef struct ANALYSIS_DESCRIPTOR_TAG
 
 |  |  |
 |--|--|
-| `NumberOfPasses` | 應該透過 ETW 追蹤完成的分析傳遞數目。 |
-| `Callbacks` | [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)物件，指定要在分析會話期間呼叫的函數。 |
-| `Context` | 使用者提供的內容，會當做引數傳遞給在中指定的所有回呼函數 `Callbacks` |
+| `NumberOfPasses` | 應通過ETW跟蹤執行的分析次數。 |
+| `Callbacks` | 指定[在](analysis-callbacks-struct.md)分析會話期間調用哪些函數ANALYSIS_CALLBACKS物件。 |
+| `Context` | 以參數傳遞給在`Callbacks` |
 
 ## <a name="remarks"></a>備註
 
-`Callbacks` 結構只接受非成員函式的指標。 您可以藉由將 `Context` 設定為物件指標來規避這項限制。 這個物件指標會當做引數傳遞給您所有的非成員回呼函數。 使用這個指標，從您的非成員回呼函式中呼叫成員函式。
+結構`Callbacks`僅接受指向非成員函數的指標。 您可以通過`Context`設置 到物件指標來繞過此限制。 此物件指標將作為參數傳遞給所有非成員回調函數。 使用此指標可以從非成員回調函數中調用成員函數。
 
 ::: moniker-end

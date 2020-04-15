@@ -1,5 +1,5 @@
 ---
-title: 登錄宏
+title: 註冊表宏
 ms.date: 08/19/2019
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
@@ -12,34 +12,34 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fd012b4300f4cd72cdc9ab363b770ac1dbefa06e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326048"
 ---
-# <a name="registry-macros"></a>登錄宏
+# <a name="registry-macros"></a>註冊表宏
 
-這些宏會定義有用的型別程式庫和登錄工具。
+這些宏定義有用的類型庫和註冊表工具。
 
 |||
 |-|-|
-|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|表示您希望物件的註冊程式碼位於物件中，以避免對 ATL 的相依性。URLMON.DLL.|
-|[DECLARE_LIBID](#declare_libid)|提供一種方法，讓 ATL 取得類型程式庫的*libid* 。|
-|[DECLARE_NO_REGISTRY](#declare_no_registry)|避免預設的 ATL 註冊。|
-|[DECLARE_REGISTRY](#declare_registry)|在系統登錄中輸入或移除主要物件的專案。|
-|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自動註冊*appid*所需的資訊。|
-|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|尋找已命名的資源，並在其中執行登入指令檔。|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|尋找識別碼所識別的資源，並在其中執行登入指令檔。|
+|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|指示您希望物件的註冊代碼位於物件中,以避免依賴 ATL。Dll。|
+|[DECLARE_LIBID](#declare_libid)|為 ATL 提供了獲取類型庫的*升標*的方法。|
+|[DECLARE_NO_REGISTRY](#declare_no_registry)|避免預設 ATL 註冊。|
+|[DECLARE_REGISTRY](#declare_registry)|在系統註冊表中輸入或刪除主物件的條目。|
+|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自動註冊*應用程式所需的*資訊。|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|查找命名資源並在其中運行註冊表腳本。|
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|查找由 ID 號標識的資源,並在其中運行註冊表腳本。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY
+## <a name="_atl_static_registry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY
 
-符號，表示您希望物件的註冊程式碼位於物件中，以避免對 ATL 的相依性。URLMON.DLL.
+指示您希望物件的註冊代碼位於物件中以避免依賴 ATL 的符號。Dll。
 
 ```
 #define _ATL_STATIC_REGISTRY
@@ -47,13 +47,13 @@ ms.locfileid: "79417499"
 
 ### <a name="remarks"></a>備註
 
-當您定義 ATL_STATIC_REGISTRY 時，您應該使用下列程式碼：
+定義ATL_STATIC_REGISTRY時,應使用以下代碼:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]
 
-##  <a name="declare_libid"></a>DECLARE_LIBID
+## <a name="declare_libid"></a><a name="declare_libid"></a>DECLARE_LIBID
 
-提供一種方法，讓 ATL 取得類型程式庫的*libid* 。
+為 ATL 提供了獲取類型庫的*升標*的方法。
 
 ```
 DECLARE_LIBID( libid )
@@ -61,28 +61,28 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>參數
 
-*libid*<br/>
+*利比德*<br/>
 型別程式庫的 GUID。
 
 ### <a name="remarks"></a>備註
 
-使用 `CAtlModuleT`衍生類別中的 DECLARE_LIBID。
+在`CAtlModuleT`派生類中使用DECLARE_LIBID。
 
 ### <a name="example"></a>範例
 
-非屬性化的 wizard 產生的 ATL 專案會有使用此宏的範例。
+非屬性化精靈生成的 ATL 專案將具有使用此巨集的範例。
 
-##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
+## <a name="declare_no_registry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
 
-如果您想要避免出現此宏的類別有任何預設的 ATL 註冊，請使用 DECLARE_NO_REGISTRY。
+如果要避免顯示此宏的類的任何預設 ATL 註冊,請使用DECLARE_NO_REGISTRY。
 
 ```
 DECLARE_NO_REGISTRY()
 ```
 
-##  <a name="declare_registry"></a>DECLARE_REGISTRY
+## <a name="declare_registry"></a><a name="declare_registry"></a>DECLARE_REGISTRY
 
-輸入標準類別註冊到系統登錄中，或將它從系統登錄中移除。
+將標準類註冊輸入系統註冊表,或將其從系統註冊表中刪除。
 
 ```
 DECLARE_REGISTRY(
@@ -96,29 +96,29 @@ DECLARE_REGISTRY(
 ### <a name="parameters"></a>參數
 
 *class*<br/>
-在包含以提供回溯相容性。
+[在]包括用於向後相容性。
 
 *pid*<br/>
-在屬於特定版本程式識別碼的 LPCTSTR。
+[在]LPCTSTR,它是特定於版本的程序標識碼。
 
 *vpid*<br/>
-在LPCTSTR，它是與版本無關的程式識別碼。
+[在]LPCTSTR,它是一個獨立於版本的程序標識符。
 
-*nid*<br/>
-在UINT，這是登錄中的資源字串索引，用來做為程式的描述。
+*尼德*<br/>
+[在]UINT,它是註冊表中資源字串的索引,用於用作程式的說明。
 
-*flags*<br/>
-在DWORD，包含登錄中的程式執行緒模型。 必須是下列其中一個值： THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
+*標誌*<br/>
+[在]包含註冊表中程式線程模型的 DWORD。 必須為以下值之一:THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="remarks"></a>備註
 
-標準註冊包含 CLSID、程式識別碼、與版本無關的程式識別碼、描述字串和執行緒模型。
+標準註冊由 CLSID、程式 ID、獨立於版本的程式 ID、描述字串和線程模型組成。
 
-當您使用 ATL 的 [加入類別] Wizard 建立物件或控制項時，嚮導會自動執行以腳本為基礎的登錄支援，並將[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏新增至您的檔案。 如果您不想要以腳本為基礎的登錄支援，則必須將此宏取代為 DECLARE_REGISTRY。 DECLARE_REGISTRY 只會將上述五個基本金鑰插入登錄中。 您必須手動撰寫程式碼，將其他金鑰插入登錄中。
+使用 ATL 添加類嚮導創建物件或控制項時,精靈將自動實現基於文稿的註冊表支援,並將[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏添加到檔中。 如果不需要基於腳本的註冊表支援,則需要將此宏替換為DECLARE_REGISTRY。 DECLARE_REGISTRY僅將上述五個基本鍵插入註冊表。 您必須手動編寫代碼才能將其他鍵插入註冊表。
 
-##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
+## <a name="declare_registry_appid_resourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
 
-指定自動註冊*appid*所需的資訊。
+指定自動註冊*應用程式所需的*資訊。
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
@@ -128,23 +128,23 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>參數
 
-*resid*<br/>
-.Rgs 檔案的資源識別碼，其中包含*appid*的相關資訊。
+*渣 油*<br/>
+包含有關*應用程式*的資訊的 .rgs 檔案的資源識別碼。
 
-*標識*<br/>
+*應用程式*<br/>
 GUID。
 
 ### <a name="remarks"></a>備註
 
-使用 `CAtlModuleT`衍生類別中的 DECLARE_REGISTRY_APPID_RESOURCEID。
+在`CAtlModuleT`派生類中使用DECLARE_REGISTRY_APPID_RESOURCEID。
 
 ### <a name="example"></a>範例
 
-新增至 ATL 專案的類別若使用 [加入類別程式碼] wizard，將會有使用此宏的範例。
+使用「添加類」代碼向導添加到 ATL 專案的類將具有使用此宏的範例。
 
-##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE
+## <a name="declare_registry_resource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE
 
-取得包含登錄檔的已命名資源，並執行腳本以將物件輸入系統登錄中，或從系統登錄中將它們移除。
+獲取包含註冊表檔的命名資源,並運行文稿以將物件輸入到系統註冊表中或從系統註冊表中刪除它們。
 
 ```
 DECLARE_REGISTRY_RESOURCE( x )
@@ -152,24 +152,24 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
-在資源的字串識別碼。
+*X.*<br/>
+[在]資源的字串標識碼。
 
 ### <a name="remarks"></a>備註
 
-當您使用 ATL 專案 Wizard 建立物件或控制項時，嚮導會自動執行以腳本為基礎的登錄支援，並將[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏（類似 DECLARE_REGISTRY_RESOURCE）新增至您的檔案。
+使用 ATL 專案精靈建立物件或控制項時,精靈將自動實現基於文稿的註冊表支援,並將[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏(類似於DECLARE_REGISTRY_RESOURCE)添加到檔中。
 
-您可以使用 ATL 登錄元件（註冊機構）以靜態方式連結，以進行優化的登錄存取。 若要以靜態方式連結到註冊機構程式碼，請將下行新增至您的*pch .h*檔案（Visual Studio 2017 和更早版本中的*stdafx.h* ）：
+您可以靜態地與 ATL 註冊表元件 (註冊器) 連結,以優化註冊表訪問。 要靜態連結到註冊器代碼,請向*pch.h*檔添加以下行(Visual Studio 2017 和更早版本中的*stdafx.h):*
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果您想要 ATL 在執行時間取代取代值，請勿指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反地，請建立 `_ATL_REGMAP_ENTRIES` 結構的陣列，其中每個專案都包含一個與值配對的變數預留位置，以在執行時間取代預留位置。 然後，呼叫[CAtlModule：： UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule：： UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，傳遞陣列。 這會將 `_ATL_REGMAP_ENTRIES` 結構中的所有取代值新增至註冊機構的取代對應。
+如果希望 ATL 在運行時替換替換值,請不要指定DECLARE_REGISTRY_RESOURCE或DECLARE_REGISTRY_RESOURCEID宏。 相反,請創建一個`_ATL_REGMAP_ENTRIES`結構陣列,其中每個條目包含一個變數占位符,該占位符與值配對,以在運行時替換佔位符。 然後調用[CAtlModule::從資源D](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule 更新註冊表:更新註冊表從資源](catlmodule-class.md#updateregistryfromresources),傳遞陣列。 這會將`_ATL_REGMAP_ENTRIES`結構中的所有替換值添加到註冊器的替換映射中。
 
-如需可取代參數和腳本的詳細資訊，請參閱[ATL 登錄元件（註冊機構）](../../atl/atl-registry-component-registrar.md)一文。
+有關可替換參數和腳本的詳細資訊,請參閱[ATL 註冊表元件 (註冊) 一](../../atl/atl-registry-component-registrar.md)文。
 
-##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
+## <a name="declare_registry_resourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
 
-與[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)相同，不同之處在于它會使用 wizard 產生的 UINT 來識別資源，而不是字串名稱。
+與[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)相同,只不過它使用嚮導生成的 UINT 來標識資源,而不是字串名稱。
 
 ```
 DECLARE_REGISTRY_RESOURCEID( x )
@@ -177,20 +177,20 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
-在Wizard 產生的資源識別碼。
+*X.*<br/>
+[在]嚮導生成的資源標識碼。
 
 ### <a name="remarks"></a>備註
 
-當您使用 ATL 專案 Wizard 建立物件或控制項時，嚮導會自動執行以腳本為基礎的登錄支援，並將 DECLARE_REGISTRY_RESOURCEID 宏新增至您的檔案。
+使用 ATL 專案精靈建立物件或控制項時,精靈將自動實現基於文稿的註冊表支援,並將DECLARE_REGISTRY_RESOURCEID宏添加到檔中。
 
-您可以使用 ATL 登錄元件（註冊機構）以靜態方式連結，以進行優化的登錄存取。 若要以靜態方式連結到註冊機構程式碼，請將下行新增至您的*stdafx.h*檔案（在 Visual Studio 2019 和更新版本中為*pch. h* ）：
+您可以靜態地與 ATL 註冊表元件 (註冊器) 連結,以優化註冊表訪問。 要靜態鏈接到註冊器代碼,請向*stdafx.h*檔添加以下行(Visual Studio 2019 及更高版本中*的 pch.h):*
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果您想要 ATL 在執行時間取代取代值，請勿指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反地，請建立 `_ATL_REGMAP_ENTRIES` 結構的陣列，其中每個專案都包含一個與值配對的變數預留位置，以在執行時間取代預留位置。 然後，呼叫[CAtlModule：： UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule：： UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，傳遞陣列。 這會將 `_ATL_REGMAP_ENTRIES` 結構中的所有取代值新增至註冊機構的取代對應。
+如果希望 ATL 在運行時替換替換值,請不要指定DECLARE_REGISTRY_RESOURCE或DECLARE_REGISTRY_RESOURCEID宏。 相反,請創建一個`_ATL_REGMAP_ENTRIES`結構陣列,其中每個條目包含一個變數占位符,該占位符與值配對,以在運行時替換佔位符。 然後調用[CAtlModule::從資源D](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule 更新註冊表:更新註冊表從資源](catlmodule-class.md#updateregistryfromresources),傳遞陣列。 這會將`_ATL_REGMAP_ENTRIES`結構中的所有替換值添加到註冊器的替換映射中。
 
-如需可取代參數和腳本的詳細資訊，請參閱[ATL 登錄元件（註冊機構）](../../atl/atl-registry-component-registrar.md)一文。
+有關可替換參數和腳本的詳細資訊,請參閱[ATL 註冊表元件 (註冊) 一](../../atl/atl-registry-component-registrar.md)文。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301700"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322965"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn、_wspawn 函式
 
@@ -63,12 +63,12 @@ ms.locfileid: "75301700"
 |-|-|
 |[_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv、_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|
 |[_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve、_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|
-|[_spawnlp、_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
+|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
 |[_spawnlpe、_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|
 
 函式名稱結尾的字母決定了變化。
 
-|Letter|變異|
+|字母|變數|
 |-|-|
 | `e`  | `envp`，環境設定的指標陣列，會傳遞至新處理序。  |
 | `l`  | 命令列引數會分別傳遞至 `_spawn` 函式。 當預先知道新處理序的參數數目時，通常會使用此尾碼。  |
@@ -110,27 +110,27 @@ ms.locfileid: "75301700"
 以前，這些函式有些會在成功時將 `errno` 設成零，目前的行為則是在成功時，如 C 標準所指定的維持 `errno` 原封不動。 如果您需要模擬舊版的行為，只要在呼叫這些函式前將 `errno` 設為零即可。
 
 > [!NOTE]
->  若要確保正確的重疊初始化及終止，請勿使用 `setjmp` 或 `longjmp` 函式進入或離開重疊常式。
+> 若要確保正確的重疊初始化及終止，請勿使用 `setjmp` 或 `longjmp` 函式進入或離開重疊常式。
 
 ## <a name="arguments-for-the-spawned-process"></a>繁衍處理序的引數
 
 若要將引數傳遞給新的處理序，請提供一或多個字元字串的指標當做 `_spawn` 呼叫中的引數。 這些字元字串會形成繁衍處理序的引數清單。 形成新處理序引數清單的字串合併長度不得超過 1024 個位元組。 計數中不會包含每個字串的終止 Null 字元 ('\0')，但會包含自動插入以區隔引數的空格字元。
 
 > [!NOTE]
->  字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_spawn` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。
+> 字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_spawn` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。
 
 > [!IMPORTANT]
->  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_spawn`。 `_spawn` 會導致呼叫 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
+> 請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_spawn`。 `_spawn` 會導致呼叫 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
 
 您可以將引數指標當做個別的參數 (在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中) 或指標陣列 (在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中) 傳遞。 您必須至少將一個引數，`arg0` 或 `argv`[0]，傳遞至繁衍的處理序。 依照慣例，此引數是您會在命令列上輸入的程式名稱。 不同的值不會產生錯誤。
 
 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 呼叫通常是在預知引數數目時使用。 `arg0` 引數通常是 `cmdname`的指標。 `arg1` 到 `argn` 的引數是形成新引數清單之字元字串的指標。 `argn` 之後必須有一個 **NULL** 指標，以標記引數清單的結尾。
 
-當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。 引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 **NULL** 指標，以標記引數清單的結尾。
+當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。** 引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 **NULL** 指標，以標記引數清單的結尾。
 
 ## <a name="environment-of-the-spawned-process"></a>繁衍處理序的環境
 
-執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 （請注意，`value` 不會以雙引號括住）。`envp` 陣列的最後一個元素應該是**Null**。 當 `envp` 本身是 **NULL** 時，繁衍的處理序會繼承父代處理序的環境設定。
+執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意,`value`未以雙引弧括起來。陣列的最後一`envp`個元素應為**NULL**。 當 `envp` 本身是 **NULL** 時，繁衍的處理序會繼承父代處理序的環境設定。
 
 `_spawn` 函式可以將開啟的檔案的所有資訊，包括轉譯模式在內，傳遞至新的處理序。 這項資訊會透過環境中的 `C_FILE_INFO` 項目以真實模式傳遞。 啟始程式碼通常會處理此項目，再從環境中刪除它。 不過，如果 `_spawn` 函式產生非 C 程序，此項目會保留在環境中。 列印環境會在此項目的定義字串中顯示圖形字元，因為環境資訊以真實模式的二進位格式傳遞。 它對正常作業應該沒有任何其他影響。 在受保護的模式中，環境資訊會以文字格式傳遞，因此不包含任何圖形字元。
 
@@ -229,9 +229,9 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
+[處理序和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [_exec、_wexec 函式](../c-runtime-library/exec-wexec-functions.md)<br/>

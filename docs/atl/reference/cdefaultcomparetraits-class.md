@@ -1,5 +1,5 @@
 ---
-title: CDefaultCompareTraits 類別
+title: CDefault 比較功能類別
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultCompareTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8262800ef613424c37c53931d97dd4b1b1a71321
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245908"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327067"
 ---
-# <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 類別
+# <a name="cdefaultcomparetraits-class"></a>CDefault 比較功能類別
 
-這個類別會提供預設項目比較函式。
+此類提供預設元素比較函數。
 
 ## <a name="syntax"></a>語法
 
@@ -30,7 +30,7 @@ class CDefaultCompareTraits
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-若要在集合中儲存的資料型別。
+要存儲在集合中的數據類型。
 
 ## <a name="members"></a>成員
 
@@ -38,22 +38,22 @@ class CDefaultCompareTraits
 
 |名稱|描述|
 |----------|-----------------|
-|[CDefaultCompareTraits::CompareElements](#compareelements)|（靜態）呼叫此函式來比較兩個項目相等。|
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式可判斷的更高和較低的項目。|
+|[預設比較特徵::比較元素](#compareelements)|(靜態)調用此函數以比較兩個元素以實現相等性。|
+|[預設比較特徵:比較元素排序](#compareelementsordered)|(靜態)調用此函數以確定更大和更小的元素。|
 
 ## <a name="remarks"></a>備註
 
-這個類別包含兩個靜態函式來比較集合類別物件中儲存的項目。 這個類別會利用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。
+此類包含兩個靜態函數,用於比較存儲在集合類物件中的元素。 此類由[CDefault Element Traits 類](../../atl/reference/cdefaultelementtraits-class.md)使用。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements
+## <a name="cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>預設比較特徵::比較元素
 
-呼叫此函式來比較兩個項目相等。
+調用此函數以比較兩個元素以實現相等性。
 
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -61,23 +61,23 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>參數
 
-*element1*<br/>
+*元素1*<br/>
 第一個元素。
 
-*element2*<br/>
-第二個項目中。
+*元素2*<br/>
+第二個元素。
 
 ### <a name="return-value"></a>傳回值
 
-如果項目相等，false 否則，就會傳回 true。
+如果元素相等,則返回 true,否則為 false。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作是等號 ( **==** ) 運算子。 針對簡單的資料類型以外的物件，此函式可能需要覆寫。
+此函數的預設實現是相等**==**( ) 運算子。 對於簡單數據類型以外的物件,可能需要重寫此函數。
 
-##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
+## <a name="cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>預設比較特徵:比較元素排序
 
-呼叫此函式可判斷的更高和較低的項目。
+調用此函數以確定更大和更小的元素。
 
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -85,25 +85,25 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>參數
 
-*element1*<br/>
+*元素1*<br/>
 第一個元素。
 
-*element2*<br/>
-第二個項目中。
+*元素2*<br/>
+第二個元素。
 
 ### <a name="return-value"></a>傳回值
 
-傳回整數，根據下表：
+傳回基於下表的整數:
 
 |條件|傳回值|
 |---------------|------------------|
-|*element1* < *element2*|<0|
-|*element1* == *element2*|0|
-|*element1* > *element2*|>0|
+|*元素1* < *元素2*|<0|
+|*元素1* == *元素2*|0|
+|*元素1* > *元素2*|>0|
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作會使用 **==** ， **\<** ，以及 **>** 運算子。 針對簡單的資料類型以外的物件，此函式可能需要覆寫。
+此函數的預設實現使用**==**、**\<****>** 運算子。 對於簡單數據類型以外的物件,可能需要重寫此函數。
 
 ## <a name="see-also"></a>另請參閱
 

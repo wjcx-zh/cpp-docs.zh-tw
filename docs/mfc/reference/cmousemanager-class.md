@@ -1,5 +1,5 @@
 ---
-title: CMouseManager 類別
+title: 滑鼠管理員類別
 ms.date: 11/04/2016
 f1_keywords:
 - CMouseManager
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d05a2e186f001a69310e99cec013193a4d1bff3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338242"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319728"
 ---
-# <a name="cmousemanager-class"></a>CMouseManager 類別
+# <a name="cmousemanager-class"></a>滑鼠管理員類別
 
-可讓使用者建立不同的命令與特定的關聯[CView](../../mfc/reference/cview-class.md)物件的使用者在該檢視內部按兩下時。
+允許使用者在用戶雙擊該檢視中時將不同的命令與特定的[CView](../../mfc/reference/cview-class.md)物件相關聯。
 
 ## <a name="syntax"></a>語法
 
@@ -45,22 +45,22 @@ class CMouseManager : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CMouseManager::AddView](#addview)|新增`CView`物件至**自訂** 對話方塊。 **自訂**對話方塊可讓使用者按兩下關聯的命令，針對每個列出的檢視。|
-|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|傳回使用者在提供的檢視內部按兩下時，所執行的命令。|
-|[CMouseManager::GetViewIconId](#getviewiconid)|傳回與提供的檢視識別碼相關聯的圖示|
-|[CMouseManager::GetViewIdByName](#getviewidbyname)|傳回提供的檢視名稱相關聯的檢視識別碼。|
-|[CMouseManager::GetViewNames](#getviewnames)|擷取所有已加入的檢視名稱的清單。|
-|[CMouseManager::LoadState](#loadstate)|載入`CMouseManager`狀態從 Windows 登錄。|
-|[CMouseManager::SaveState](#savestate)|寫入`CMouseManager`狀態到 Windows 登錄。|
-|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|將提供的命令，並提供的檢視。|
+|[滑鼠管理員::新增檢視](#addview)|將`CView`物件添加到 **「自定義」** 對話框中。 「**自訂」** 對話方塊使用戶能夠將按兩下與每個列出的檢視的命令相關聯。|
+|[滑鼠管理員::取得查看點擊指令](#getviewdblclickcommand)|返回使用者在提供的檢視中按兩下時執行的命令。|
+|[滑鼠管理員::取得檢視圖示](#getviewiconid)|返回與提供的檢視 ID 關聯的圖示。|
+|[滑鼠管理員:取得檢視 IdBY 名稱](#getviewidbyname)|返回與提供的檢視名稱關聯的檢視 ID。|
+|[滑鼠管理員::取得檢視名稱](#getviewnames)|檢索所有添加的檢視名稱的清單。|
+|[滑鼠管理員::載入狀態](#loadstate)|從`CMouseManager`Windows 註冊表載入狀態。|
+|[滑鼠管理員::儲存狀態](#savestate)|將`CMouseManager`狀態寫入 Windows 註冊表。|
+|[滑鼠管理員::SetCommandForBlClk](#setcommandfordblclk)|關聯提供的命令和提供的檢視。|
 
 ## <a name="remarks"></a>備註
 
-`CMouseManager`類別會負責維護的集合`CView`物件。 每個檢視被識別由名稱和識別碼。 這些檢視表所示**自訂** 對話方塊。 使用者可以變更與透過任何檢視相關聯的命令**自訂** 對話方塊。 當使用者按兩下該檢視中，會執行相關聯的命令。 若要支援此功能從程式碼撰寫的觀點來看，您必須處理需要知道 WM_LBUTTONDBLCLK 訊息並呼叫[CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick)函式的程式碼中`CView`物件...
+類`CMouseManager`維護`CView`物件的集合。 每個檢視都由名稱和 ID 標識。 這些檢視顯示在 **「自定義」** 對話框中。 使用者可以通過 **「自定義」** 對話方塊更改與任何檢視關聯的命令。 當用戶雙擊該視圖中時,將執行關聯的命令。 要從編碼角度支援這一點,您必須處理WM_LBUTTONDBLCLK消息,並在該`CView`物件的代碼中調用[CWinAppEx:onViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick)函數。
 
-您不應建立`CMouseManager`手動物件。 它會建立您的應用程式的架構。 它也將被終結自動當使用者結束應用程式。 若要取得至滑鼠管理員的指標，您的應用程式，請呼叫[CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager)。
+不應手動創建`CMouseManager`物件。 它將由應用程式的框架創建。 當使用者退出應用程式時,它也會自動銷毀。 要取得指向應用程式的滑鼠管理員的指標,請致電[CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -68,11 +68,11 @@ class CMouseManager : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxmousemanager.h
+**標題:** afxmouse 管理器.h
 
-##  <a name="addview"></a>  CMouseManager::AddView
+## <a name="cmousemanageraddview"></a><a name="addview"></a>滑鼠管理員::新增檢視
 
-註冊[CView](../../mfc/reference/cview-class.md)物件[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)以支援自訂的滑鼠行為。
+將[CView](../../mfc/reference/cview-class.md)物件註冊到[CMouseManager 類](../../mfc/reference/cmousemanager-class.md),以支援自訂滑鼠行為。
 
 ```
 BOOL AddView(
@@ -89,19 +89,19 @@ BOOL AddView(
 ### <a name="parameters"></a>參數
 
 *iViewId*<br/>
-[in]檢視識別碼。
+[在]視圖 ID。
 
 *uiViewNameResId*<br/>
-[in]參考的檢視表名稱的資源字串識別碼。
+[在]引用檢視名稱的資源字串 ID。
 
-*uiIconId*<br/>
-[in]檢視圖示識別碼。
+*烏伊科尼*<br/>
+[在]視圖圖示 ID。
 
-*iId*<br/>
-[in]檢視識別碼。
+*Iid*<br/>
+[在]視圖 ID。
 
-*lpszViewName*<br/>
-[in]檢視名稱。
+*lpszView名稱*<br/>
+[在]視圖名稱。
 
 ### <a name="return-value"></a>傳回值
 
@@ -109,21 +109,21 @@ BOOL AddView(
 
 ### <a name="remarks"></a>備註
 
-若要支援自訂的滑鼠行為，檢視必須向`CMouseManager`物件。 任何物件衍生自`CView`類別可以向滑鼠管理員。 字串和檢視表相關聯的圖示會顯示在**滑鼠**索引標籤**自訂** 對話方塊。
+為了支援自定義滑鼠行為,必須向`CMouseManager`物件註冊視圖。 從`CView`類派生的任何物件都可以註冊到滑鼠管理器。 與檢視關聯的字串和圖示將顯示在 **「自訂」** 對話框的 **「滑鼠」** 選項卡中。
 
-建立和維護檢視識別碼，例如，程式設計師負責*iViewId*並*iId*。
+程式師有責任建立和維護檢視 ID,如*iViewId*和*iId*。
 
-如需如何提供自訂的滑鼠行為的詳細資訊，請參閱[鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)。
+有關如何提供自訂滑鼠行為的詳細資訊,請參閱[鍵盤和滑鼠自定義](../../mfc/keyboard-and-mouse-customization.md)。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何擷取變數的指標，`CMouseManager`使用的物件`CWinAppEx::GetMouseManager`方法並`AddView`方法中的`CMouseManager`類別。 此程式碼片段是一部分[狀態集合範例](../../overview/visual-cpp-samples.md)。
+`CMouseManager`下面的範例展示如何使用`CWinAppEx::GetMouseManager``AddView``CMouseManager`類中的方法和 方法檢索指向物件的指標。 此代碼段是[狀態收集示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 
-##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand
+## <a name="cmousemanagergetviewdblclickcommand"></a><a name="getviewdblclickcommand"></a>滑鼠管理員::取得查看點擊指令
 
-傳回使用者在提供的檢視內部按兩下時，所執行的命令。
+返回使用者在提供的檢視中按兩下時執行的命令。
 
 ```
 UINT GetViewDblClickCommand(int iId) const;
@@ -131,16 +131,16 @@ UINT GetViewDblClickCommand(int iId) const;
 
 ### <a name="parameters"></a>參數
 
-*iId*<br/>
-[in]檢視識別碼。
+*Iid*<br/>
+[在]視圖 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果檢視是相關聯的命令; 命令識別碼否則為 0。
+如果視圖與命令關聯,則命令標識符;否則 0。
 
-##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId
+## <a name="cmousemanagergetviewiconid"></a><a name="getviewiconid"></a>滑鼠管理員::取得檢視圖示
 
-擷取與檢視識別碼相關聯的圖示
+檢索與檢視 ID 關聯的圖示。
 
 ```
 UINT GetViewIconId(int iViewId) const;
@@ -149,19 +149,19 @@ UINT GetViewIconId(int iViewId) const;
 ### <a name="parameters"></a>參數
 
 *iViewId*<br/>
-[in]檢視識別碼。
+[在]視圖 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則圖示資源識別碼否則為 0。
+圖示資源標識符(如果成功);否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果檢視未使用第一次註冊，這個方法將會失敗[CMouseManager::AddView](#addview)。
+如果檢視不是首先使用[CMouseManager 註冊,](#addview)則此方法將失敗: :addView 。
 
-##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName
+## <a name="cmousemanagergetviewidbyname"></a><a name="getviewidbyname"></a>滑鼠管理員:取得檢視 IdBY 名稱
 
-擷取與檢視名稱相關聯的檢視識別碼。
+檢索與檢視名稱關聯的檢視 ID。
 
 ```
 int GetViewIdByName(LPCTSTR lpszName) const;
@@ -169,20 +169,20 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-[in]檢視名稱。
+*lpsz名稱*<br/>
+[在]視圖名稱。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則檢視表識別碼否則為 0。
+視圖 ID(如果成功);否則 0。
 
 ### <a name="remarks"></a>備註
 
-這個方法會透過使用註冊的檢視搜尋[CMouseManager::AddView](#addview)。
+此方法搜尋使用[CMouseManager 註冊的檢視::addView](#addview)。
 
-##  <a name="getviewnames"></a>  CMouseManager::GetViewNames
+## <a name="cmousemanagergetviewnames"></a><a name="getviewnames"></a>滑鼠管理員::取得檢視名稱
 
-擷取所有已註冊的檢視名稱的清單。
+檢索所有已註冊視圖名稱的清單。
 
 ```
 void GetViewNames(CStringList& listOfNames) const;
@@ -190,16 +190,16 @@ void GetViewNames(CStringList& listOfNames) const;
 
 ### <a name="parameters"></a>參數
 
-*listOfNames*<br/>
-[out]參考`CStringList`物件。
+*名稱清單*<br/>
+[出]對`CStringList`物件的引用。
 
 ### <a name="remarks"></a>備註
 
-這個方法會填入參數`listOfNames`使用註冊的所有檢視的名稱[CMouseManager::AddView](#addview)。
+此方法使用`listOfNames`[CMouseManager:::AddView](#addview)註冊的所有檢視的名稱填充參數。
 
-##  <a name="loadstate"></a>  CMouseManager::LoadState
+## <a name="cmousemanagerloadstate"></a><a name="loadstate"></a>滑鼠管理員::載入狀態
 
-載入的狀態[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)從登錄。
+從註冊表載入[CMouseManager 類](../../mfc/reference/cmousemanager-class.md)的狀態。
 
 ```
 BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -207,8 +207,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>參數
 
-*lpszProfileName*<br/>
-[in]登錄機碼的路徑。
+*lpsz 設定檔名稱*<br/>
+[在]註冊表項的路徑。
 
 ### <a name="return-value"></a>傳回值
 
@@ -216,13 +216,13 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="remarks"></a>備註
 
-從登錄載入狀態資訊會包括已註冊的檢視，檢視識別項，以及相關聯的命令。 如果參數*lpszProfileName*是 NULL，此函式會載入`CMouseManager`所控制的預設登錄位置的資料[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)。
+從註冊表載入的狀態資訊包括已註冊的檢視、檢視識別碼和關聯的命令。 如果參數*lpszProfileName*為 NULL,則此`CMouseManager`函數將載入[CWinAppEx 類](../../mfc/reference/cwinappex-class.md)控制的預設註冊表位置的數據。
 
-在大部分情況下，您不必直接呼叫此函式。 它稱為工作區初始化程序的一部分。 如需工作區初始化程序的詳細資訊，請參閱[CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)。
+在大多數情況下,您不必直接調用此函數。 它稱為工作區初始化過程的一部分。 有關工作區初始化過程的詳細資訊,請參閱[CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)。
 
-##  <a name="savestate"></a>  CMouseManager::SaveState
+## <a name="cmousemanagersavestate"></a><a name="savestate"></a>滑鼠管理員::儲存狀態
 
-寫入的狀態[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)至登錄。
+將[CMouseManager 類](../../mfc/reference/cmousemanager-class.md)的狀態寫入註冊表。
 
 ```
 BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -230,8 +230,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>參數
 
-*lpszProfileName*<br/>
-[in]登錄機碼的路徑。
+*lpsz 設定檔名稱*<br/>
+[在]註冊表項的路徑。
 
 ### <a name="return-value"></a>傳回值
 
@@ -239,13 +239,13 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="remarks"></a>備註
 
-寫入登錄的狀態資訊包括所有已註冊的檢視，檢視識別項，以及相關聯的命令。 如果參數*lpszProfileName*是 NULL，此函式會寫入`CMouseManager`所控制的預設登錄位置的資料[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)。
+寫入註冊表的狀態資訊包括所有已註冊的視圖、視圖標識符和關聯的命令。 如果參數*lpszProfileName*為 NULL,則此`CMouseManager`函數將數據寫入[CWinAppEx 類](../../mfc/reference/cwinappex-class.md)控制的預設註冊表位置。
 
-在大部分情況下，您不必直接呼叫此函式。 它稱為工作區序列化程序的一部分。 如需工作區序列化程序的詳細資訊，請參閱[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)。
+在大多數情況下,您不必直接調用此函數。 它稱為工作區序列化過程的一部分。 有關工作區序列化過程的詳細資訊,請參閱[CWinAppEx:::保存狀態](../../mfc/reference/cwinappex-class.md#savestate)。
 
-##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk
+## <a name="cmousemanagersetcommandfordblclk"></a><a name="setcommandfordblclk"></a>滑鼠管理員::SetCommandForBlClk
 
-關聯已先向滑鼠管理員的檢視中的自訂命令。
+將自定義命令與首次向滑鼠管理器註冊的檢視關聯。
 
 ```
 void SetCommandForDblClk(
@@ -256,16 +256,16 @@ void SetCommandForDblClk(
 ### <a name="parameters"></a>參數
 
 *iViewId*<br/>
-[in]檢視識別項。
+[在]視圖標識碼。
 
-*uiCmd*<br/>
-[in]命令識別項。
+*烏伊Cmd*<br/>
+[在]命令識別碼。
 
 ### <a name="remarks"></a>備註
 
-若要將自訂命令產生關聯的檢視，您必須先註冊檢視使用[CMouseManager::AddView](#addview)。 `AddView`方法需要檢視識別碼做為輸入參數。 一旦您註冊的檢視時，您可以呼叫`CMouseManager::SetCommandForDblClk`具有相同檢視識別碼輸入參數提供給`AddView`。 之後，當使用者按兩下滑鼠在已註冊的檢視時，應用程式將執行命令以*uiCmd。* 若要支援自訂的滑鼠行為，您也需要自訂向滑鼠管理員的檢視。 如需有關自訂的滑鼠行為的詳細資訊，請參閱[鍵盤和滑鼠自訂](../keyboard-and-mouse-customization.md)。
+為了將自定義命令與檢視關聯,必須首先使用[CMouseManager:::AddView](#addview)註冊檢視。 該方法`AddView`需要視圖標識符作為輸入參數。 註冊檢視後,可以使用提供給的相同檢視`CMouseManager::SetCommandForDblClk`識別碼輸入參數進行呼叫`AddView`。 此後,當用戶雙擊已註冊檢視中的滑鼠時,應用程式將執行*uiCmd*指示的命令。 要支援自定義滑鼠行為,還需要自定義在滑鼠管理器中註冊的視圖。 有關自訂滑鼠行為的詳細資訊,請參閱[鍵盤和滑鼠自訂](../keyboard-and-mouse-customization.md)。
 
-如果*uiCmd*設為 0，指定的檢視已不再與命令相關聯。
+如果*uiCmd*設置為 0,則指定的檢視不再與命令關聯。
 
 ## <a name="see-also"></a>另請參閱
 

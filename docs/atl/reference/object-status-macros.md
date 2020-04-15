@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-ms.openlocfilehash: dc50825d6b6e74dc263a097e86d8ea0d42989825
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5617ce7fb972c98775072f72244f91052d41ece3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326170"
 ---
 # <a name="object-status-macros"></a>物件狀態宏
 
-這個宏會設定屬於 ActiveX 控制項的旗標。
+此宏設置屬於 ActiveX 控制件的標誌。
 
 |||
 |-|-|
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|用於 ATL ActiveX 控制項中, 以設定 OLEMISC 旗標。|
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|用於 ATL ActiveX 控制件,用於設置 OLEMISC 標誌。|
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS
+## <a name="declare_olemisc_status"></a><a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS
 
-用於 ATL ActiveX 控制項中, 以設定 OLEMISC 旗標。
+用於 ATL ActiveX 控制件,用於設置 OLEMISC 標誌。
 
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
@@ -33,12 +33,12 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 
 ### <a name="parameters"></a>參數
 
-*miscstatus*<br/>
-所有適用的 OLEMISC 旗標。
+*錯誤狀態*<br/>
+所有適用的 OLEMISC 標誌。
 
 ### <a name="remarks"></a>備註
 
-這個宏是用來設定 ActiveX 控制項的 OLEMISC 旗標。 如需詳細資訊, 請參閱[IOleObject:: GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) 。
+此宏用於為 ActiveX 控件設置 OLEMISC 標誌。 有關詳細資訊,請參閱[IOleObject:獲取 MiscCStatus。](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)
 
 ### <a name="example"></a>範例
 

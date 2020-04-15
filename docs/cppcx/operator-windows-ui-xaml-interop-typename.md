@@ -2,12 +2,12 @@
 title: 運算子 Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: 5acf17b7c87a71259dba6579d8ee69e0eea86fa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35056ca1a4e7f06c9f91fe86998a676a12395f2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161585"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337004"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>運算子 Windows::UI::Xaml::Interop::TypeName
 
@@ -27,7 +27,7 @@ Operator TypeName(Platform::Type^ type);
 
 `TypeName` 是用來表示類型資訊的非語言相關 Windows 執行階段結構。 [Platform::Type](../cppcx/platform-type-class.md) 則是 C++ 專屬，並且無法跨應用程式二進位介面 (ABI) 傳遞。 以下是 `TypeName`其中一種在 [Navigate](/uwp/api/windows.ui.xaml.controls.frame.navigate) 函式內的用法：
 
-```
+```cpp
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
@@ -35,8 +35,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 
 下一個範例顯示如何在 `TypeName` 和 `Type`之間轉換。
 
-```
-
+```cpp
 // Convert from Type to TypeName
 Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid);
 
@@ -46,7 +45,7 @@ Type^ tx2 = (Type^)(tn);
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
-.NET Framework 程式會將 `TypeName` 視為 [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True)。
+.NET Framework 程式會將 `TypeName` 視為 [System.Type](/dotnet/api/system.type)。
 
 ### <a name="requirements"></a>需求
 

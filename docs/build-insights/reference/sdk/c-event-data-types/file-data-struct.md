@@ -1,6 +1,6 @@
 ---
-title: FILE_DATA 結構
-description: C++ BUILD Insights SDK FILE_DATA 結構參考。
+title: FILE_DATA結構
+description: C++生成見解 SDK FILE_DATA結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72cae8c8eb81bdb8d94897c46c5af90c89e92ab4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6b7b0129c54fa4b1d5285bafb38761da45bab4e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333752"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325594"
 ---
-# <a name="file_data-structure"></a>FILE_DATA 結構
+# <a name="file_data-structure"></a>FILE_DATA結構
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FILE_DATA` 結構描述檔案輸入或輸出。
+結構`FILE_DATA`描述檔輸入或輸出。
 
 ## <a name="syntax"></a>語法
 
@@ -43,6 +43,6 @@ typedef struct FILE_DATA_TAG
 |  |  |
 |--|--|
 | `Path` | 檔案的絕對路徑 |
-| `TypeCode` | 描述檔案類型的程式碼。 如需詳細資訊，請參閱[FILE_TYPE_CODE](file-type-code-enum.md)。 |
+| `TypeCode` | 描述檔類型的代碼。 有關詳細資訊,請參閱[FILE_TYPE_CODE](file-type-code-enum.md)。 |
 
 ::: moniker-end

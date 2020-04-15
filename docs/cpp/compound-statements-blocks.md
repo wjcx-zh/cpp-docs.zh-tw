@@ -8,16 +8,16 @@ helpviewer_keywords:
 - blocks, about blocks
 - compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
-ms.openlocfilehash: cd0e5daa2232f17a34bee2f0d8b9569e524fbf34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 60d7e88c5ccccac5a1d967a91c8a82dd954d9afc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189555"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337335"
 ---
 # <a name="compound-statements-blocks"></a>複合陳述式 (區塊)
 
-複合陳述式是由零個或多個以大括弧（ **{}** ）括住的語句所組成。 複合陳述式可以在必須有陳述式的任何位置使用。 複合陳述式通常稱為「區塊」(Block)。
+複合語句由以大括弧 **(***) 括起來的零個或多個語句組成。 複合陳述式可以在必須有陳述式的任何位置使用。 複合陳述式通常稱為「區塊」(Block)。
 
 ## <a name="syntax"></a>語法
 
@@ -27,7 +27,7 @@ ms.locfileid: "80189555"
 
 ## <a name="remarks"></a>備註
 
-下列範例會使用複合陳述式作為**if**語句的*語句*部分（如需語法的詳細資訊，請參閱[if 語句](../cpp/if-else-statement-cpp.md)）：
+下面的範例使用複合語句作為**if** *語句的語句*部分(有關語法的詳細資訊,請參閱[if 語句](../cpp/if-else-statement-cpp.md)):
 
 ```cpp
 if( Amount > 100 )
@@ -42,8 +42,8 @@ else
 ```
 
 > [!NOTE]
->  因為宣告是語句，所以宣告可以是*語句清單*中的其中一個語句。 因此，在複合陳述式內宣告，但未明確宣告為靜態的名稱，會具有區域範圍和 (為物件時) 存留期。 請參閱[範圍](../cpp/scope-visual-cpp.md)，以取得有關使用區域範圍來處理名稱的詳細資料。
+> 由於聲明是語句,因此聲明可以是*語句清單中*的語句之一。 因此，在複合陳述式內宣告，但未明確宣告為靜態的名稱，會具有區域範圍和 (為物件時) 存留期。 有關使用本地作用域的名稱的處理的詳細資訊,請參閱[Scope。](../cpp/scope-visual-cpp.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)
+[C++宣告概述](../cpp/overview-of-cpp-statements.md)

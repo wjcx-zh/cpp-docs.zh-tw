@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: a57ca6f36546a17b9a35ebea875ff01b43de1332
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6a03c46c972f7746f39a3c5c65ca9b5509983d59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445707"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356983"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 介面
 
-管理從命令來源物件傳送到使用者控制項的命令。
+管理從命令源物件發送到使用者控制項的命令。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 interface class ICommandSource
 ```
 
@@ -40,34 +40,34 @@ interface class ICommandSource
 
 |名稱|描述|
 |----------|-----------------|
-|[ICommandSource：： AddCommandHandler](#addcommandhandler)|將命令處理常式加入至命令來源物件。|
-|[ICommandSource：： AddCommandRangeHandler](#addcommandrangehandler)|將一組命令處理常式加入至命令來源物件。|
-|[ICommandSource：： AddCommandRangeUIHandler](#addcommandrangeuihandler)|將使用者介面命令訊息處理常式群組新增至命令來源物件。|
-|[ICommandSource：： AddCommandUIHandler](#addcommandrangeuihandler)|將使用者介面命令訊息處理常式加入至命令來源物件。|
-|[ICommandSource：:P ostCommand](#postcommand)|張貼訊息，而不等候處理。|
-|[ICommandSource：： RemoveCommandHandler](#removecommandhandler)|從命令來源物件移除命令處理常式。|
-|[ICommandSource：： RemoveCommandRangeHandler](#removecommandrangehandler)|從命令來源物件移除一組命令處理常式。|
-|[ICommandSource：： RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|從命令來源物件移除使用者介面命令訊息處理常式群組。|
-|[ICommandSource：： RemoveCommandUIHandler](#removecommandrangeuihandler)|從命令來源物件移除使用者介面命令訊息處理常式。|
-|[ICommandSource：： SendCommand](#sendcommand)|傳送訊息，並等候它在傳回之前處理。|
+|[ICommand 來源:新增指令處理程式](#addcommandhandler)|將命令處理程式添加到命令源物件。|
+|[ICommand 來源:新增指令來源處理程式](#addcommandrangehandler)|將一組命令處理程式添加到命令源物件。|
+|[ICommand 來源:添加命令RangeUIHandler](#addcommandrangeuihandler)|將一組使用者介面命令訊息處理程式添加到命令源物件。|
+|[ICommand 來源:新增命令UIHandler](#addcommandrangeuihandler)|將使用者介面命令訊息處理程式添加到命令源物件。|
+|[ICommand 來源::PostCommand](#postcommand)|發佈消息,無需等待處理。|
+|[ICommand 來源:移除命令處理程式](#removecommandhandler)|從命令來源物件中刪除命令處理程式。|
+|[ICommand 來源:移除命令來源處理程式](#removecommandrangehandler)|從命令來源物件中移除一組命令處理程式。|
+|[ICommand 來源:刪除命令RangeUIHandler](#removecommandrangeuihandler)|從命令來源物件中刪除一組使用者介面命令訊息處理程式。|
+|[ICommand 來源:刪除命令UIHandler](#removecommandrangeuihandler)|從命令來源物件中刪除使用者介面命令訊息處理程式。|
+|[ICommand 來源:傳送指令](#sendcommand)|發送消息並等待處理它,然後再返回。|
 
 ### <a name="remarks"></a>備註
 
-當您在 MFC 視圖中裝載使用者控制項時， [CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)會將命令和更新命令 UI 訊息傳送至使用者控制項，讓它可以處理 MFC 命令（例如，框架功能表項目和工具列按鈕）。 藉由執行[ICommandTarget 介面](../../mfc/reference/icommandtarget-interface.md)，您可以為使用者控制項提供 `ICommandSource` 物件的參考。
+當您在 MFC 檢視中託管使用者控件時[,CWinFormsView 類](../../mfc/reference/cwinformsview-class.md)會將命令和命令 UI 訊息更新到使用者控制項,以允許它處理 MFC 命令(例如,框架功能表項和工具列按鈕)。 通過實現[ICommandTarget 介面](../../mfc/reference/icommandtarget-interface.md),您可以為`ICommandSource`使用者提供對 物件的引用。
 
-如需如何使用 `ICommandTarget`的範例，請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+有關如何使用,請參閱[:將指令路由新增到 Windows 窗體控制 。](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)`ICommandTarget`
 
-如需使用 Windows Forms 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+有關使用 Windows 表單的詳細資訊,請參閱[在 MFC 中使用 Windows 元件使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ### <a name="requirements"></a>需求
 
-**Header：** afxwinforms. h （定義于 assembly atlmfc\lib\mfcmifc80.dll）
+**標題**:afxwinforms.h(在程式集 atlmfc_lib_mfcmc80.dll 中定義)
 
-## <a name="addcommandhandler"></a>ICommandSource：： AddCommandHandler
+## <a name="icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommand 來源:新增指令處理程式
 
-將命令處理常式加入至命令來源物件。
+將命令處理程式添加到命令源物件。
 
-```
+```cpp
 void AddCommandHandler(
     unsigned int cmdID,
     CommandHandler^ cmdHandler);
@@ -78,18 +78,18 @@ void AddCommandHandler(
 *cmdID*<br/>
 命令 ID。
 *cmdHandler*<br/>
-命令處理常式方法的控制碼。
+命令處理程式方法的句柄。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將命令處理常式 cmdHandler 新增至命令來源物件，並將處理常式對應至 cmdID。
-如需如何使用 AddCommandHandler 的範例，請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+此方法將命令處理程式 cmdHandler 添加到命令源物件,並將處理程式映射到 cmdID。
+有關如何使用 AddCommandHandler 的範例,請參閱[:將指令路由新增到 Windows 元件控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
-## <a name="addcommandrangehandler"></a>ICommandSource：： AddCommandRangeHandler
+## <a name="icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommand 來源:新增指令來源處理程式
 
-將一組命令處理常式加入至命令來源物件。
+將一組命令處理程式添加到命令源物件。
 
-```
+```cpp
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -98,21 +98,22 @@ void AddCommandRangeHandler(
 
 ### <a name="parameters"></a>參數
 
-*cmdIDMin*<br/>
-命令識別碼範圍的開始索引。
+*釐米德明*<br/>
+命令 ID 範圍的開頭索引。
 *cmdIDMax*<br/>
-命令識別碼範圍的結束索引。
+命令 ID 範圍的結束索引。
 *cmdHandler*<br/>
-訊息處理常式方法的控制碼，其對應至命令。
+命令映射到的消息處理程式方法的句柄。
+
 ### <a name="remarks"></a>備註
 
-這個方法會將連續範圍的命令識別碼對應至單一訊息處理常式，並將它新增至命令來源物件。 這是用來處理一組具有一種方法的相關按鈕。
+此方法將連續範圍的命令指示映射到單個消息處理程式,並將其添加到命令源物件。 這用於使用一種方法處理一組相關按鈕。
 
-## <a name="addcommandrangeuihandler"></a>ICommandSource：： AddCommandRangeUIHandler
+## <a name="icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommand 來源:添加命令RangeUIHandler
 
-將使用者介面命令訊息處理常式群組新增至命令來源物件。
+將一組使用者介面命令訊息處理程式添加到命令源物件。
 
-```
+```cpp
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -121,22 +122,22 @@ void AddCommandRangeUIHandler(
 
 ### <a name="parameters"></a>參數
 
-*cmdIDMin*<br/>
-命令識別碼範圍的開始索引。
+*釐米德明*<br/>
+命令 ID 範圍的開頭索引。
 *cmdIDMax*<br/>
-命令識別碼範圍的結束索引。
+命令 ID 範圍的結束索引。
 *cmdHandler*<br/>
-訊息處理常式方法的控制碼，其對應至命令。
+命令映射到的消息處理程式方法的句柄。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將連續範圍的命令識別碼對應至單一使用者介面命令訊息處理常式，並將它新增至命令來源物件。 這是用來處理一組具有一種方法的相關按鈕。
+此方法將連續範圍的命令指示映射到單個使用者介面命令訊息處理程式,並將其添加到命令源物件。 這用於使用一種方法處理一組相關按鈕。
 
-## <a name="addcommanduihandler"></a>ICommandSource：： AddCommandUIHandler
+## <a name="icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommand 來源:新增命令UIHandler
 
-將使用者介面命令訊息處理常式加入至命令來源物件。
+將使用者介面命令訊息處理程式添加到命令源物件。
 
-```
+```cpp
 void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
@@ -147,33 +148,34 @@ void AddCommandUIHandler(
 *cmdID*<br/>
 命令 ID。
 *cmdUIHandler*<br/>
-使用者介面命令訊息處理常式方法的控制碼。
+使用者介面命令訊息處理程式方法的句柄。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將使用者介面命令訊息處理常式 cmdHandler 加入至命令來源物件，並將處理常式對應至 cmdID。
+此方法將使用者介面命令訊息處理程式 cmdHandler 添加到命令源物件,並將處理程式映射到 cmdID。
 
-## <a name="postcommand"></a>ICommandSource：:P ostCommand
+## <a name="icommandsourcepostcommand"></a><a name="postcommand"></a>ICommand 來源::PostCommand
 
-張貼訊息，而不等候處理。
+發佈消息,無需等待處理。
 
-```
+```cpp
 void PostCommand(unsigned int command);
 ```
 
 ### <a name="parameters"></a>參數
 
-*command*<br/>
-要張貼之訊息的命令識別碼。
+*命令*<br/>
+要過帳的消息的命令 ID。
+
 ### <a name="remarks"></a>備註
 
-這個方法會以非同步方式張貼對應至命令所指定之識別碼的訊息。 它會呼叫 CWnd：:P ostMessage，將訊息放在視窗的訊息佇列中，然後傳回而不等待對應的視窗處理訊息。
+此方法非同步發布映射到命令指定的 ID 的消息。 它調用 CWnd::PostMessage 將消息放在視窗的消息佇列中,然後返回而不等待相應的視窗來處理消息。
 
-## <a name="removecommandhandler"></a>ICommandSource：： RemoveCommandHandler
+## <a name="icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommand 來源:移除命令處理程式
 
-從命令來源物件移除命令處理常式。
+從命令來源物件中刪除命令處理程式。
 
-```
+```cpp
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 
@@ -181,15 +183,16 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 *cmdID*<br/>
 命令 ID。
+
 ### <a name="remarks"></a>備註
 
-這個方法會從命令來源物件移除對應至 cmdID 的命令處理常式。
+此方法從命令源物件中刪除映射到 cmdID 的命令處理程式。
 
-## <a name="removecommandrangehandler"></a>ICommandSource：： RemoveCommandRangeHandler
+## <a name="icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommand 來源:移除命令來源處理程式
 
-從命令來源物件移除一組命令處理常式。
+從命令來源物件中移除一組命令處理程式。
 
-```
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -197,19 +200,20 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="parameters"></a>參數
 
-*cmdIDMin*<br/>
-命令識別碼範圍的開始索引。
+*釐米德明*<br/>
+命令 ID 範圍的開頭索引。
 *cmdIDMax*<br/>
-命令識別碼範圍的結束索引。
+命令 ID 範圍的結束索引。
+
 ### <a name="remarks"></a>備註
 
-這個方法會從命令來源物件中，移除對應至 cmdIDMin 和 cmdIDMax 所指定命令識別碼的訊息處理常式群組。
+此方法從命令源物件中刪除一組訊息處理程式,這些處理程式映射到 cmdIDMin 和 cmdIDMax 指定的命令 ID。
 
-## <a name="removecommandrangeuihandler"></a>ICommandSource：： RemoveCommandRangeUIHandler
+## <a name="icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommand 來源:刪除命令RangeUIHandler
 
-從命令來源物件移除使用者介面命令訊息處理常式群組。
+從命令來源物件中刪除一組使用者介面命令訊息處理程式。
 
-```
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -217,19 +221,20 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="parameters"></a>參數
 
-*cmdIDMin*<br/>
-命令識別碼範圍的開始索引。
+*釐米德明*<br/>
+命令 ID 範圍的開頭索引。
 *cmdIDMax*<br/>
-命令識別碼範圍的結束索引。
+命令 ID 範圍的結束索引。
+
 ### <a name="remarks"></a>備註
 
-這個方法會從命令來源物件中，移除一組使用者介面命令訊息處理常式，並對應至 cmdIDMin 和 cmdIDMax 所指定的命令識別碼。
+此方法從命令源物件中刪除一組使用者介面命令訊息處理程式,這些處理程式映射到 cmdIDMin 和 cmdIDMax 指定的命令 ID。
 
-## <a name="removecommanduihandler"></a>ICommandSource：： RemoveCommandUIHandler
+## <a name="icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommand 來源:刪除命令UIHandler
 
-從命令來源物件移除使用者介面命令訊息處理常式。
+從命令來源物件中刪除使用者介面命令訊息處理程式。
 
-```
+```cpp
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 
@@ -237,25 +242,28 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 
 *cmdID*<br/>
 命令 ID。
+
 ### <a name="remarks"></a>備註
 
-這個方法會從命令來源物件移除對應至 cmdID 的使用者介面命令訊息處理常式。
+此方法從命令源物件中刪除映射到 cmdID 的使用者介面命令訊息處理程式。
 
-## <a name="sendcommand"></a>ICommandSource：： SendCommand
+## <a name="icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommand 來源:傳送指令
 
-傳送訊息，並等候它在傳回之前處理。
+發送消息並等待處理它,然後再返回。
 
-```
+```cpp
 void SendCommand(unsigned int command);
 ```
 
 ### <a name="parameters"></a>參數
 
-*command*<br/>
-要傳送之訊息的命令識別碼。
+*命令*<br/>
+要發送的消息的命令 ID。
+
 ### <a name="remarks"></a>備註
 
-這個方法會以同步方式傳送對應至命令所指定之識別碼的訊息。 它會呼叫 CWnd：： SendMessage 將訊息放在視窗的訊息佇列中，並等到該視窗程式在傳回之前處理訊息。
+此方法同步發送映射到指令指定的 ID 的消息。 它調用 CWnd::SendMessage 將消息放在視窗的消息佇列中,並等待該視窗過程處理該消息後再返回。
+
 ## <a name="see-also"></a>另請參閱
 
 [如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>

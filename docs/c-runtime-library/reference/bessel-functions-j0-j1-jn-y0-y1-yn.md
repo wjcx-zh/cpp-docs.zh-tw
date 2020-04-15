@@ -1,6 +1,6 @@
 ---
 title: Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _j0
 - _j1
@@ -8,6 +8,12 @@ api_name:
 - _y0
 - _y1
 - _yn
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939465"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348666"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
 
@@ -79,7 +86,7 @@ double _yn(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點值。
 
 *n*<br/>
@@ -87,29 +94,31 @@ Bessel 函數的整數階數。
 
 ## <a name="return-value"></a>傳回值
 
-這些常式都會傳回*x*的貝賽耳函數。 如果 **_y0**、 **_y1**或 **_yn**函式中的*x*是負數，常式會將**errno**設定為**EDOM**、將 **_DOMAIN**錯誤訊息列印到**stderr**，然後傳回 **_HUGE_VAL**。 您可以使用 **_matherr**來修改錯誤處理。
+每個例程返回*x*的貝氏氏函數。 如果*x* **在_y0、_y1**或 **_yn**函數中為負數,則例程將**errno**設定到**EDOM,** 將 **_DOMAIN**錯誤訊息列印到**斯特,** 並**傳回_HUGE_VAL**。 **_y1** 您可以使用 **_matherr**修改錯誤處理。
 
 ## <a name="remarks"></a>備註
 
-**_J0**、 **_j1**和 **_jn**常式會分別傳回第一種的貝賽耳函式：訂單0、1和 n。
+**_j0、_j1**和 **_jn**例程返回第一類貝塞爾函數:順序分別為 0、1 **_j1**和 n。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
+|• **QNAN**, **IND**|**無效**|**_DOMAIN**|
 
-**_Y0**、 **_y1**和 **_yn**常式會傳回第二種類型的貝賽耳函式：分別是訂單0、1和 n。
+**_y0、_y1**和 **_yn**例程返回第二類貝塞爾函數:順序 0、1 **_y1**和 n。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
+|• **QNAN**, **IND**|**無效**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0。0|**無效**|**_DOMAIN**|
+|&#124;x&#124; < 0.0|**無效**|**_DOMAIN**|
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++)、\<math.h> (C、C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++)、\<math.h> (C、C++)|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,8 +1,9 @@
 ---
 title: _read
-ms.date: 02/13/2019
+ms.date: 4/2/2020
 api_name:
 - _read
+- _o__read
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 32238923aeef14230f68def15e27c676753faf61
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db3726b85bb4ba7c8e9a691bef3fb063ec5709c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949540"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338139"
 ---
 # <a name="_read"></a>_read
 
@@ -52,10 +54,10 @@ int _read(
 
 ### <a name="parameters"></a>參數
 
-*fd*<br/>
+*Fd*<br/>
 參照已開啟之檔案的檔案描述元。
 
-*buffer*<br/>
+*緩衝區*<br/>
 資料的儲存位置。
 
 *buffer_size*<br/>
@@ -63,19 +65,21 @@ int _read(
 
 ## <a name="return-value"></a>傳回值
 
-**_read**會傳回讀取的位元組數目，如果檔案中剩餘少於*buffer_size*個位元組，或者檔案是以文字模式開啟，則可能小於*buffer_size* 。 在文字模式中, 每個換行`\r\n`字元摘要組都會取代為單一換行字元。 `\n` 只有單行換行字元會在傳回值中計算。 這種取代不會影響檔案指標。
+**_read**返回讀取的位元組數,如果檔中還剩少於*buffer_size*個字節,或者檔在文本模式下打開,則位元數可能小於*buffer_size。* 在文字模式下,每個回車換行對`\r\n`替換為單個行進給字元`\n`。 只有單個換行符計入返回值。 這種取代不會影響檔案指標。
 
-如果函式嘗試讀取檔案的結尾，則會傳回 0。 如果*fd*無效, 檔案不會開啟以供讀取, 或檔案已鎖定, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會傳回-1, 並將**errno**設定為**EBADF**。
+如果函式嘗試讀取檔案的結尾，則會傳回 0。 如果*fd*無效,則檔未打開以進行讀取,或者檔被鎖定,將呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將傳回 -1 並將**errno**設定到**EBADF**。
 
-如果*buffer*為**Null**，或*buffer_size*  >  **INT_MAX**，則會叫用不正確參數處理常式。 如果允許繼續執行, 此函式會傳回-1, 而**errno**會設定為**EINVAL**。
+如果*緩衝區*為**NULL,** 或者如果*buffer_sizeINT_MAX* > **INT_MAX**,則呼叫無效的參數處理程式。 如果允許執行繼續,則函數傳回 **-1,errno**設定為**EINVAL**。
 
 如需此函式與其他傳回碼的詳細資訊，請參閱 [_doserrno, errno、_sys_errlist 及 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Read**函數會從與*fd*相關聯的檔案中，讀取最多*buffer_size*個位元組到*緩衝區*。 讀取作業會從與指定檔案相關之檔案指標的目前位置開始。 讀取作業之後，檔案指標會指向下一個未讀取的字元。
+**_read**函數從與*fd*關聯的檔中向*緩衝區*中讀取最多*buffer_size*個字節。 讀取作業會從與指定檔案相關之檔案指標的目前位置開始。 讀取作業之後，檔案指標會指向下一個未讀取的字元。
 
-如果檔案是在文字模式中開啟，當 **_read**遇到 CTRL + Z 字元時，讀取就會終止，這會被視為檔案結尾指標。 使用 [_lseek](lseek-lseeki64.md) 可清除檔案結尾指標。
+如果在文本模式下打開檔,則讀取在 **_read**遇到CTRL_Z字元時終止,該字元被視為檔結尾指示器。 使用 [_lseek](lseek-lseeki64.md) 可清除檔案結尾指標。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -83,7 +87,7 @@ int _read(
 |-------------|---------------------|
 |**_read**|\<io.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -136,7 +140,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Read 19 bytes from file

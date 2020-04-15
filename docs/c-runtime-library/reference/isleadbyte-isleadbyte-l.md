@@ -1,9 +1,11 @@
 ---
 title: isleadbyte、_isleadbyte_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isleadbyte_l
 - isleadbyte
+- _o__isleadbyte_l
+- _o_isleadbyte
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954303"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343832"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
 判斷某個字元是否為多位元組字元的前導位元組。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -59,15 +62,17 @@ int _isleadbyte_l( int c );
 
 ## <a name="return-value"></a>傳回值
 
-如果引數符合測試條件， **isleadbyte**會傳回非零值，否則會傳回0。 在 "C" 地區設定和單位元組字元集（SBCS）地區設定中， **isleadbyte**一律會傳回0。
+如果參數滿足測試條件,**則 isleadbyte**返回一個非零值;如果參數滿足測試條件,則返回 0。" 在「C」區域設定和單位元組字元集 (SBCS) 區域設定中,**正代位元組**始終返回 0。
 
 ## <a name="remarks"></a>備註
 
-如果**isleadbyte**宏的引數是多位元組字元的第一個位元組，則會傳回非零值。 **isleadbyte**會針對任何從-1 （**EOF**）到**UCHAR_MAX** （0xff）（含）的整數引數產生有意義的結果。
+**如果 isleadbyte**宏的參數是多位元組位元元的第一個字節,則該宏將返回非零值。 對於從 -1 **(EOF**) 到**UCHAR_MAX** (0xFF) 的任何整數參數(包括 0xFF),**正數生成**有意義的結果。
 
-**Isleadbyte**的預期引數類型為**int**。如果傳遞帶正負號的字元，編譯器可能會將它轉換成整數（藉由符號延伸），因而產生無法預期的結果。
+**isleadbyte**的預期參數類型是**int;** 如果傳遞了簽名字符,編譯器可以通過符號擴展將其轉換為整數,從而產生不可預知的結果。
 
-具有 **_l**後置字元的這個函式版本是一樣的，不同之處在于它會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。
+具有 **_l**後綴的函數版本相同,只不過它使用傳入區域設置,而不是當前區域設置,使其與區域設置相關的行為。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -88,4 +93,4 @@ int _isleadbyte_l( int c );
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
-[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>

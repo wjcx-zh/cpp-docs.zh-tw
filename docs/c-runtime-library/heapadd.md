@@ -24,19 +24,19 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c5eeb66ff0e6fb05063ec395e12cd97106ad724d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940277"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351324"
 ---
 # <a name="_heapadd"></a>_heapadd
 
 將記憶體加入堆積。
 
 > [!IMPORTANT]
->  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
+> 此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -52,7 +52,7 @@ int _heapadd(
 *memblock*<br/>
 指向堆積記憶體的指標。
 
-*size*<br/>
+*大小*<br/>
 要加入的記憶體大小 (位元組)。
 
 ## <a name="return-value"></a>傳回值
@@ -71,12 +71,12 @@ int _heapadd(
 |-------------|---------------------|---------------------|
 |`_heapadd`|\<malloc.h>|\<errno.h>|
 
-如需相容性詳細資訊，請參閱簡介中的 [相容性](../c-runtime-library/compatibility.md) 。
+如需詳細的相容性資訊，請參閱簡介中的 [Compatibility](../c-runtime-library/compatibility.md) 。
 
 ## <a name="see-also"></a>另請參閱
 
 [記憶體配置](../c-runtime-library/memory-allocation.md)<br/>
-[free](../c-runtime-library/reference/free.md)<br/>
+[自由](../c-runtime-library/reference/free.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

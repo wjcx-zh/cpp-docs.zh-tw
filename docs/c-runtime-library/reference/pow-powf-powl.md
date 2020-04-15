@@ -1,10 +1,12 @@
 ---
 title: pow、powf、powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b181959ac05814a673ab11f33e4cfc5a39e3869e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950293"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333110"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
-計算*x*到*y*的乘冪。
+*計算*x 提升到*y*的功率。
 
 ## <a name="syntax"></a>語法
 
@@ -65,37 +68,39 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
-底數。
+*X.*<br/>
+Base：
 
-*y*<br/>
+*Y*<br/>
 指數。
 
 ## <a name="return-value"></a>傳回值
 
-傳回*x*<sup>*y*</sup>的值。 溢位或反向溢位時不會列印錯誤訊息。
+傳回*x* <sup>*xy*</sup>的值 。 溢位或反向溢位時不會列印錯誤訊息。
 
 |x 和 y 的值|pow 的傳回值|
 |-----------------------|-------------------------|
-|*x* ！ = 0.0 和*y* = = 0。0|1|
-|*x* = = 0.0 和*y* = = 0。0|1|
-|*x* = = 0.0 和*y* < 0|INF|
+|*x* != 0.0 和*y* = 0.0|1|
+|*x* = 0.0 和*y* = 0.0|1|
+|*x* = 0.0 和*y* < 0|INF|
 
 ## <a name="remarks"></a>備註
 
-**pow**無法辨識大於 2<sup>64</sup>的整數浮點值（例如，1.0 e100）。
+**pow**無法識別大於 2<sup>64(</sup>例如,1.0E100)的積分浮點值。
 
-**pow**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**pow**具有使用流式 SIMD 擴展 2 (SSE2) 的實現。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因為C++允許多載，所以您可以呼叫**pow**的任何不同多載。 在 C 程式中， **pow**一律會採用兩個**雙精度浮點數**，並傳回**雙精度**值。
+由於C++允許重載,您可以調用**pow**的任何各種過載。 在 C 程式中 **,pow**始終採用兩**個雙精度**值並返回**一個雙**值。
 
-`pow(int, int)` 已無法使用。 如果您使用這個多載，編譯器可能會發出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免這個問題，請將第一個參數轉換為**double**、 **float**或**long** **double**。
+`pow(int, int)` 已無法使用。 如果使用此重載,編譯器可能會發出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 為了避免此問題,將第一個參數轉換為**雙精度**、**浮動**或**長****雙**精度。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-|-|-|
-|**pow**、 **powf**、 **powl**|\<math.h>|\<math.h> 或 \<cmath>|
+|**波夫**,**波夫**,**家禽**|\<math.h>|\<math.h> 或 \<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

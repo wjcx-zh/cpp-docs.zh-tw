@@ -1,10 +1,13 @@
 ---
 title: nan、nanf、nanl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - nanf
 - nan
 - nanl
+- _o_nan
+- _o_nanf
+- _o_nanl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 9574eb0382f3bb7fc3c51d504aba9e29d0692c09
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d8f0db5020f274de27f7f1bbf3a76659eae568e4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951425"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338634"
 ---
 # <a name="nan-nanf-nanl"></a>nan、nanf、nanl
 
@@ -56,17 +60,19 @@ long double nanl( const char* input );
 
 ## <a name="return-value"></a>傳回值
 
-**Nan**函數會傳回無訊息 nan 值。
+**nan**函數返回一個安靜的 NaN 值。
 
 ## <a name="remarks"></a>備註
 
-**Nan**函數會傳回對應于無訊息（非信號） nan 的浮點值。 *輸入*值會被忽略。 如需 NAN 如何在輸出中表示的資訊，請參閱 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**nan**函數返回對應於靜默(非信號)NaN 的浮點值。 *將忽略輸入*值。 如需 NAN 如何在輸出中表示的資訊，請參閱 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**nan**、 **nanf**、 **nanl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**南**夫 ,**南夫**,**南**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="see-also"></a>另請參閱
 
@@ -74,6 +80,6 @@ long double nanl( const char* input );
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[是因夫](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

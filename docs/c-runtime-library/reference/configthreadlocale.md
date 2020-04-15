@@ -1,8 +1,9 @@
 ---
 title: _configthreadlocale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _configthreadlocale
+- _o__configthreadlocale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: aac0d36654a81e5d616ffff28e5a254fe06628a3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 46983843e128b59df89722c8d4694c30a858011f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348548"
 ---
 # <a name="_configthreadlocale"></a>_configthreadlocale
 
@@ -53,23 +55,25 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ## <a name="return-value"></a>傳回值
 
-先前的每一線程地區設定狀態（ **_DISABLE_PER_THREAD_LOCALE**或 **_ENABLE_PER_THREAD_LOCALE**），或失敗時為-1。
+以前的每個線程區域設置狀態 **(_DISABLE_PER_THREAD_LOCALE**或 **_ENABLE_PER_THREAD_LOCALE),** 或失敗時為 -1。
 
 ## <a name="remarks"></a>備註
 
-**_Configurethreadlocale**函數是用來控制執行緒特定地區設定的使用。 使用下列其中一個*per_thread_locale_type*選項來指定或決定每個執行緒的地區設定狀態：
+**_configurethreadlocale**函數用於控制線程特定區域設置的使用。 使用這些*per_thread_locale_type*選項的一指定或確定每個線程區域設定狀態:
 
 | 選項 | 描述 |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | 讓目前執行緒使用執行緒特定地區設定。 在此執行緒中的後續呼叫**setlocale**只會影響執行緒本身的地區設定。 |
-| **_DISABLE_PER_THREAD_LOCALE** | 讓目前執行緒使用全域地區設定。 後續呼叫此執行緒中的**setlocale**會影響使用全域地區設定的其他執行緒。 |
+| **_ENABLE_PER_THREAD_LOCALE** | 讓目前執行緒使用執行緒特定地區設定。 在此線程中**設置區域設置的**後續調用僅影響線程自己的區域設置。 |
+| **_DISABLE_PER_THREAD_LOCALE** | 讓目前執行緒使用全域地區設定。 在此線程中**設置區域設置的**後續調用會影響使用全域區域設置的其他線程。 |
 | **0** | 擷取這個特定執行緒的目前設定。 |
 
-這些函式會影響**setlocale**、 **_tsetlocale**、 **_wsetlocale**和 **_setmbcp**的行為。 停用個別執行緒地區設定時，任何後續對**setlocale**或 **_wsetlocale**的呼叫都會變更使用全域地區設定之所有線程的地區設定。 啟用每個執行緒的地區設定時， **setlocale**或 **_wsetlocale**只會影響目前線程的地區設定。
+這些函數影響**集區域設置****、_tsetlocale、_wsetlocale**和 **_setmbcp**的行為 **_wsetlocale**。 禁用每個線程區域設置時,任何後續設置**區域設置**或 **_wsetlocale**調用都更改使用全域區域設置的所有線程的區域設置。 啟用每個線程區域設定時,**設定區域設定**或 **_wsetlocale**只會影響當前線程區域設置。
 
-如果您使用 **_configurethreadlocale**來啟用每個執行緒的地區設定，建議您先呼叫**setlocale**或 **_wsetlocale** ，以在該執行緒中立即設定慣用的地區設定。
+如果使用 **_configurethreadlocale**啟用每個線程區域設定,我們建議您調用**setlocale**或 **_wsetlocale,** 以便立即在該線程中設置首選區域設置。
 
-如果*per_thread_locale_type*不是資料表中所列的其中一個值，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回-1。
+如果*per_thread_locale_type*不是表中列出的值之一,則此函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設置到**EINVAL**並返回 -1。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -191,4 +195,4 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [_beginthread、_beginthreadex](beginthread-beginthreadex.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
-[多執行緒和地區設定](../../parallel/multithreading-and-locales.md)<br/>
+[多線緒與區域設定](../../parallel/multithreading-and-locales.md)<br/>

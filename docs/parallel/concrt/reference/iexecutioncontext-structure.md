@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-ms.openlocfilehash: 45d65a5e16121d39233c3ceb801933aa1f5a5f8e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 532247ca1776452ad32476d2bcdfafcee3481058
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138919"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358795"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 結構
 
@@ -35,29 +35,29 @@ struct IExecutionContext;
 
 |名稱|描述|
 |----------|-----------------|
-|[IExecutionCoNtext：:D ispatch](#dispatch)|當執行緒 proxy 開始執行特定的執行內容時，所呼叫的方法。 這應該是您排程器的主要背景工作角色。|
-|[IExecutionCoNtext：： GetId](#getid)|傳回執行內容的唯一識別碼。|
-|[IExecutionCoNtext：： GetProxy](#getproxy)|傳回執行此內容的執行緒 proxy 介面。|
-|[IExecutionCoNtext：： GetScheduler](#getscheduler)|傳回此執行內容所屬之排程器的介面。|
-|[IExecutionCoNtext：： SetProxy](#setproxy)|將執行緒 proxy 與這個執行內容產生關聯。 相關聯的執行緒 proxy 會在開始執行內容的 `Dispatch` 方法之前，先叫用此方法。|
+|[I 執行上下文::D](#dispatch)|線程代理開始執行特定執行上下文時調用的方法。 這應該是計劃程式的主要工作例程。|
+|[I 執行內容:GetId](#getid)|返回執行上下文的唯一標識符。|
+|[I 執行內容文:取得代理](#getproxy)|返回執行此上下文的線程代理的介面。|
+|[I 執行內容:抓取排程](#getscheduler)|將介面返回此執行上下文所屬的計劃程式。|
+|[I 執行內容:設定代理](#setproxy)|將線程代理與此執行上下文關聯。 關聯的線程代理在開始執行上下文`Dispatch`的方法之前調用此方法。|
 
 ## <a name="remarks"></a>備註
 
-如果您要執行與並行執行階段的 Resource Manager 介面互動的自訂排程器，您將需要執行 `IExecutionContext` 介面。 Resource Manager 所建立的執行緒會藉由執行 `IExecutionContext::Dispatch` 方法，代表您的排程器執行工作。
+如果要實現與併發運行時的資源管理器介面的自定義計劃程式,則需要實現該`IExecutionContext`介面。 資源管理器創建的線程通過執行`IExecutionContext::Dispatch`方法代表計劃程式執行工作。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IExecutionContext`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="dispatch"></a>IExecutionCoNtext：:D ispatch 方法
+## <a name="iexecutioncontextdispatch-method"></a><a name="dispatch"></a>I 執行上下文::Dispatch 方法
 
-當執行緒 proxy 開始執行特定的執行內容時，所呼叫的方法。 這應該是您排程器的主要背景工作角色。
+線程代理開始執行特定執行上下文時調用的方法。 這應該是計劃程式的主要工作例程。
 
 ```cpp
 virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
@@ -65,12 +65,12 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
 
 ### <a name="parameters"></a>參數
 
-*pDispatchState*<br/>
-分派此執行內容之狀態的指標。 如需分派狀態的詳細資訊，請參閱[DispatchState](dispatchstate-structure.md)。
+*p 排程狀態*<br/>
+指向調度此執行上下文的狀態的指標。 有關調度狀態的詳細資訊,請參閱[調整器狀態](dispatchstate-structure.md)。
 
-## <a name="getid"></a>IExecutionCoNtext：： GetId 方法
+## <a name="iexecutioncontextgetid-method"></a><a name="getid"></a>I 執行內容:getId 方法
 
-傳回執行內容的唯一識別碼。
+返回執行上下文的唯一標識符。
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -78,17 +78,17 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-唯一的整數識別碼。
+唯一的整數標識符。
 
 ### <a name="remarks"></a>備註
 
-在使用介面做為 Resource Manager 所提供之方法的參數之前，您應該使用方法 `GetExecutionContextId` 來取得執行 `IExecutionContext` 介面之物件的唯一識別碼。 叫用 `GetId` 函式時，您應該會傳回相同的識別碼。
+在使用介面作為資源管理器`GetExecutionContextId`提供的方法的參數之前,應使用方法`IExecutionContext`為 實現介面的對象獲取唯一標識符。 調用`GetId`函數時,應返回相同的標識符。
 
-從不同來源取得的識別碼可能會導致未定義的行為。
+從其他源獲取的標識符可能會導致未定義的行為。
 
-## <a name="getproxy"></a>IExecutionCoNtext：： GetProxy 方法
+## <a name="iexecutioncontextgetproxy-method"></a><a name="getproxy"></a>I 執行內容:抓取代理方法
 
-傳回執行此內容的執行緒 proxy 介面。
+返回執行此上下文的線程代理的介面。
 
 ```cpp
 virtual IThreadProxy* GetProxy() = 0;
@@ -96,15 +96,15 @@ virtual IThreadProxy* GetProxy() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-`IThreadProxy` 介面。 如果未使用 `SetProxy`呼叫來初始化執行內容的執行緒 proxy，函數必須傳回 `NULL`。
+`IThreadProxy` 介面。 如果執行上下文的執行緒代理未用 呼`SetProxy`叫 初始化 ,則函`NULL`數必須傳回 。
 
 ### <a name="remarks"></a>備註
 
-Resource Manager 會在執行內容上叫用 `SetProxy` 方法，並以 `IThreadProxy` 介面做為參數，然後再于內容上輸入 `Dispatch` 方法。 您應該儲存此引數，並將它傳回給 `GetProxy()`的呼叫。
+資源管理員將在執行上下文中調用`SetProxy`該方法,在上下文中`IThreadProxy``Dispatch`輸入 方法之前,將介面作為參數。 無法儲存此參數, 並將呼叫`GetProxy()`時傳回到 。
 
-## <a name="getscheduler"></a>IExecutionCoNtext：： GetScheduler 方法
+## <a name="iexecutioncontextgetscheduler-method"></a><a name="getscheduler"></a>I 執行內容:取得排程工具
 
-傳回此執行內容所屬之排程器的介面。
+將介面返回此執行上下文所屬的計劃程式。
 
 ```cpp
 virtual IScheduler* GetScheduler() = 0;
@@ -116,11 +116,11 @@ virtual IScheduler* GetScheduler() = 0;
 
 ### <a name="remarks"></a>備註
 
-您必須使用有效的 `IScheduler` 介面來初始化執行內容，才能將它當做 Resource Manager 所提供之方法的參數。
+在執行的功能使用的參數之前,`IScheduler`您需要使用有效的介面初始化執行上下文。
 
-## <a name="setproxy"></a>IExecutionCoNtext：： SetProxy 方法
+## <a name="iexecutioncontextsetproxy-method"></a><a name="setproxy"></a>I 執行內容:設定代理方法
 
-將執行緒 proxy 與這個執行內容產生關聯。 相關聯的執行緒 proxy 會在開始執行內容的 `Dispatch` 方法之前，先叫用此方法。
+將線程代理與此執行上下文關聯。 關聯的線程代理在開始執行上下文`Dispatch`的方法之前調用此方法。
 
 ```cpp
 virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
@@ -129,11 +129,11 @@ virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
 ### <a name="parameters"></a>參數
 
 *pThreadProxy*<br/>
-執行緒 proxy 的介面，即將在此執行內容中輸入 `Dispatch` 方法。
+即將在此執行上下文中輸入方法的`Dispatch`線程代理的介面。
 
 ### <a name="remarks"></a>備註
 
-您應該將參數儲存 `pThreadProxy`，並在呼叫 `GetProxy` 方法時將它傳回。 Resource Manager 保證當執行緒 proxy 執行 `Dispatch` 方法時，與執行內容相關聯的執行緒 proxy 將不會變更。
+應保存參數`pThreadProxy`並在調`GetProxy`用 方法時將其返回。 資源管理員保證與執行上下文關聯的線程代理線上程代理執行`Dispatch`該方法時不會更改。
 
 ## <a name="see-also"></a>另請參閱
 

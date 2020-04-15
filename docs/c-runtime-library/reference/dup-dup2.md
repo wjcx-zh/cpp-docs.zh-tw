@@ -1,9 +1,11 @@
 ---
 title: _dup、_dup2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dup
 - _dup2
+- _o__dup
+- _o__dup2
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: da47d6f040b62906d30107f9036ffa2a3ea05a1c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 239f857bb40c9609cb6f7ff373295a7a1f8523a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348120"
 ---
 # <a name="_dup-_dup2"></a>_dup、_dup2
 
-為開啟的檔案（ **_dup**）建立第二個檔案描述項，或重新指派檔案描述項（ **_dup2**）。
+為打開的檔 **(_dup)** 創建第二個檔描述符,或重新分配檔描述符 **(_dup2**)。
 
 ## <a name="syntax"></a>語法
 
@@ -51,7 +54,7 @@ int _dup2( int fd1, int fd2 );
 
 ### <a name="parameters"></a>參數
 
-*fd*， *fd1*<br/>
+*fd*, *fd1*<br/>
 參考已開啟檔案的檔案描述項。
 
 *fd2*<br/>
@@ -59,19 +62,21 @@ int _dup2( int fd1, int fd2 );
 
 ## <a name="return-value"></a>傳回值
 
-**_dup**會傳回新的檔案描述項。 **_dup2**會傳回0，表示成功。 如果發生錯誤，每個函式都會傳回-1，如果檔案描述元無效，則將**errno**設定為**EBADF** ，如果沒有其他可用的檔案描述項，則將設為**EMFILE** 。 如果檔案描述項無效，函式也會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+**_dup**傳回新的檔描述符。 **_dup2**返回 0 表示成功。 如果發生錯誤,每個函數將返回 -1 並將**errno**設定到**EBADF(** 如果檔案描述符無效)或**EMFILE(** 如果沒有更多的檔案描述符)時。 如果檔案描述項無效，函式也會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
-如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Dup**和 **_dup2**函數會將第二個檔案描述項與目前開啟的檔案產生關聯。 這些函式可以用來將預先定義的檔案描述項（例如**stdout**的）與不同的檔案產生關聯。 可使用任一檔案描述項來執行檔案作業。 建立新的描述項不會影響檔案所允許的存取類型。 **_dup**會傳回指定檔案的下一個可用檔案描述項。 **_dup2**會強制*fd2*參考與*fd1*相同的檔案。 如果在呼叫時， *fd2*與開啟的檔案相關聯，該檔案就會關閉。
+**_dup**和 **_dup2**函數將第二個檔描述符與當前打開的文件相關聯。 這些函數可用於將預定義的檔描述符(如**用於stdout)** 與其他文件相關聯。 可使用任一檔案描述項來執行檔案作業。 建立新的描述項不會影響檔案所允許的存取類型。 **_dup**傳回給定檔的下一個可用檔案描述符。 **_dup2**強制*fd2*引用與*fd1*相同的檔案。 如果*fd2*在調用時與打開的文件關聯,則該檔將關閉。
 
-**_Dup**和 **_dup2**都接受檔案描述元做為參數。 若要將資料流程（`FILE *`）傳遞給其中一個函數，請使用[_fileno](fileno.md)。 **Fileno**常式會傳回目前與指定資料流程相關聯的檔案描述項。 下列範例示範如何將**stderr** （定義為`FILE *`在 stdio.h 中）與檔案描述項產生關聯：
+**_dup**和 **_dup2**都接受檔描述符作為參數。 要將串流`FILE *`( ) 傳送給這些函數的任何一個,請使用[_fileno](fileno.md)。 **fileno**程式程傳回目前與給定流關聯的檔描述符。 下面的範例展示如何將**Stderr(**`FILE *`定義為 Stdio.h)與檔案描述符相關聯:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -80,7 +85,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用中不支援該主控台。 在與主控台 **、stdin、stdout**和**stder**關聯的標準流句柄必須重定向,C 運行時函數才能在UWP應用中使用**stdout**它們。 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

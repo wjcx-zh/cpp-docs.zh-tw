@@ -1,9 +1,11 @@
 ---
 title: _memicmp、_memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333229"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
@@ -59,16 +62,16 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>參數
 
-*buffer1*<br/>
+*緩衝區1*<br/>
 第一個緩衝區。
 
-*buffer2*<br/>
+*緩衝區2*<br/>
 第二個緩衝區。
 
-*計數*<br/>
+*count*<br/>
 字元數。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -77,18 +80,20 @@ int _memicmp_l(
 
 |傳回值|buf1 和 buf2 的前幾個位元組的關聯性|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*小於*buffer2*。|
-|0|*buffer1*與*buffer2*相同。|
-|> 0|*buffer1*大於*buffer2*。|
+|< 0|*緩衝區1*小於*緩衝區2*。|
+|0|*緩衝區1*與*緩衝區2*相同。|
+|> 0|*緩衝區1*大於*緩衝區2*。|
 |**_NLSCMPERROR**|發生錯誤。|
 
 ## <a name="remarks"></a>備註
 
-**_Memicmp**函數會比較兩個緩衝區的第一個*計數*字元*buffer1*和*buffer2* byte by byte。 這項比較不會區分大小寫。
+**_memicmp**函數比較兩個緩衝區*緩衝區1*和*緩衝區2*位元組位元組的第一*個計數*字元。 這項比較不會區分大小寫。
 
-如果*buffer1*或*buffer2*是 null 指標，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。
+如果*buffer1*或*buffer2*是空指標,則此函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將**傳回_NLSCMPERROR**並將**errno**設定到**EINVAL**。
 
-**_memicmp**會針對與地區設定相關的行為使用目前的地區設定; **_memicmp_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**使用當前區域設置進行與區域設置相關的行為;**_memicmp_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -97,7 +102,7 @@ int _memicmp_l(
 |**_memicmp**|\<memory.h> 或 \<string.h>|
 |**_memicmp_l**|\<memory.h> 或 \<string.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

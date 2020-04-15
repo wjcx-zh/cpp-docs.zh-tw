@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b25db4d6c260c3c6751de293aa2a82df8aa05e7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320242"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336228"
 ---
 # <a name="opt-optimizations"></a>/OPT (最佳化)
 
@@ -30,60 +30,60 @@ ms.locfileid: "62320242"
 
 ## <a name="syntax"></a>語法
 
-> **/OPT:**{**REF** | **NOREF**}<br/>
-> **/OPT:**{**ICF**[**=**_反覆項目_] |**NOICF**}<br/>
-> **/OPT:**{**LBR** | **NOLBR**}
+> **/選擇:**【**參考** | **NOREF**]<br/>
+> **/OPT:**[**ICF**]**=**_反覆運算_|**NOICF**|<br/>
+> **/OPT:**[**LBR** | **NOLBR**]
 
 ## <a name="arguments"></a>引數
 
-**REF** &#124; **NOREF**
+**參考&#124;****諾夫雷**
 
-**/Opt: ref**消除函式和永遠不會參考; 的資料 **/Opt: noref 則**函式和永不參考的資料會保留。
+**/OPT:REF**消除了從未引用的函數和數據;**/OPT:NOREF**保留從未引用的函數和數據。
 
-啟用 /opt: ref 時，LINK 會移除未參考的封裝函式和資料，又稱為*Comdat*。 這種最佳化稱為可轉移 COMDAT 刪除。 **/Opt: ref**選項也會停用累加連結。
+啟用 /OPT:REF 後,LINK 將刪除未引用的打包函數和數據,稱為*COMDAT。* 這種最佳化稱為可轉移 COMDAT 刪除。 **/OPT:REF**選項還禁用增量連結。
 
-內嵌函式和類別宣告內定義的成員函式都 Comdat。 所有目的檔中的函式會結合成為 Comdat 如果來編譯[/Gy](gy-enable-function-level-linking.md)選項。 要放置**const** Comdat 中的資料，您必須將它宣告使用`__declspec(selectany)`。 如需如何指定要移除或摺疊的資料，請參閱[selectany](../../cpp/selectany.md)。
+在類聲明中定義的內聯函數和成員函數始終是 COMDAT。 如果使用[/Gy](gy-enable-function-level-linking.md)選項編譯物件檔中的所有函數,則將其製作為 COMDAT。 要將**const**資料放在 COMDAT`__declspec(selectany)`中,必須使用聲明數據。 有關如何指定資料進行刪除或折疊的資訊,請參閱[selectany](../../cpp/selectany.md)。
 
-根據預設， **/opt: ref**除非已啟用連結器 **/opt: noref**或是[/偵錯](debug-generate-debug-info.md)指定。 若要覆寫此預設值，並保留未參考的 Comdat 程式中，指定 **/opt: noref 則**。 您可以使用[/include](include-force-symbol-references.md)選項來覆寫特定符號的移除。
+預設情況下 **,/OPT:REF**由連結器啟用,除非指定 **/OPT:NOREF**或[/DEBUG。](debug-generate-debug-info.md) 要覆寫此預設值並在程式中保留未參考的 COMDAT,請指定 **/OPT:NOREF**。 您可以使用[/INCLUDE](include-force-symbol-references.md)選項來覆蓋特定符號的刪除。
 
-如果[/偵錯](debug-generate-debug-info.md)指定的預設值為 **/opt**是**NOREF**，而且所有函式都會保留在映像。 若要覆寫此預設值，並最佳化偵錯組建中，指定 **/opt: ref**。 這可以減少您的可執行檔的大小，而且可以是有用的最佳化，甚至是在偵錯組建。 我們建議您也指定 **/opt: noicf**保留相同的函式在偵錯組建。 這可讓您更容易讀取堆疊追蹤，並且在會摺疊在一起的函式中設定中斷點。
+如果指定[/DEBUG,](debug-generate-debug-info.md)**則 /OPT**的預設值為**NOREF**,並且所有函數都保留在映射中。 要覆寫此預設值並優化除錯產生,請指定 **/OPT:REF**。 這可以減小可執行檔的大小,即使在調試生成中也可以進行有用的優化。 我們建議您也指定 **/OPT:NOICF**以在除錯生成中保留相同的函數。 這可讓您更容易讀取堆疊追蹤，並且在會摺疊在一起的函式中設定中斷點。
 
-**ICF**\[**=**_反覆項目_] &#124; **NOICF**
+**ICF**\[**=**_發疊代_= &#124; **NOICF**
 
-使用**ICF**\[**=**_反覆項目_] 來執行相同的 COMDAT 摺疊。 重複的 COMDAT 可以從連結器輸出中移除。 選擇性*反覆項目*參數會指定要周遊的重複項目符號的次數。 反覆項目中的預設數目是 1。 其他反覆項目可能會找出更多經由先前反覆項目中摺疊所揭露的重複項目。
+使用**ICF**\[**=**_的發運算_= 執行相同的 COMDAT 折疊。 重複的 COMDAT 可以從連結器輸出中移除。 可選*反覆運算*參數指定遍歷重複符號的次數。 默認反覆運算次數為 1。 其他反覆項目可能會找出更多經由先前反覆項目中摺疊所揭露的重複項目。
 
-根據預設， **/opt: icf**已啟用連結器中，除非 **/opt: noicf**或是[/偵錯](debug-generate-debug-info.md)指定。 若要覆寫此預設值，並在程式中摺疊時，防止 Comdat，請指定 **/opt: noicf**。
+預設情況下 **,/OPT:ICF**由連結器啟用,除非指定 **/OPT:NOICF**或[/DEBUG。](debug-generate-debug-info.md) 要覆寫此預設值並防止在應用程式中折疊 COMDAT,請指定 **/OPT:NOICF**。
 
-在偵錯組建中，您必須明確指定 **/opt: icf**啟用 COMDAT 摺疊。 不過，因為 **/opt: icf**可以合併相同的資料或函式，所以可以變更會出現在堆疊追蹤的函式名稱。 它也可以設定成不可能在某些函式中設定中斷點，或檢查偵錯工具中的部分資料，並帶您進入未預期的函式時您逐步執行程式碼。 程式碼的行為相同，但偵錯工具簡報可以是很令人困惑。 因此，我們執行不建議您使用 **/opt: icf**在偵錯組建除非較小的程式碼的優點大過這些缺點。
+在除錯產生中,必須顯式指定 **/OPT:ICF**才能啟用 COMDAT 折疊。 但是,由於 **/OPT:ICF**可以合併相同的數據或函數,因此它可以更改堆疊跟蹤中顯示的函數名稱。 它還會使無法在某些函數中設置斷點或檢查調試器中的某些數據,並且在單步執行代碼時,可能會將您帶入意外的函數。 代碼的行為是相同的,但調試器表示可能非常混亂。 因此,我們不建議在調試生成中使用 **/OPT:ICF,** 除非較小的代碼的優點大於這些缺點。
 
 > [!NOTE]
-> 因為 **/opt: icf**可能會導致相同的位址指派給不同的函式或唯讀資料成員 (也就是**const**變數時使用編譯 **/Gy**)，它可以中斷的程式，取決於函式或唯讀資料成員的唯一位址。 如需詳細資訊，請參閱 [/Gy (啟用函式階層連結)](gy-enable-function-level-linking.md)。
+> 因為 **/OPT:ICF**會導致將同一位址分配給不同的函數或唯讀資料成員(即,使用 **/Gy**編譯時**的 const**變數),因此它可以破壞依賴於函數的唯一位址或唯讀資料成員的程式。 如需詳細資訊，請參閱 [/Gy (啟用函式階層連結)](gy-enable-function-level-linking.md)。
 
 **LBR** &#124; **NOLBR**
 
-**/OPT:LBR**並 **/OPT:NOLBR**選項只適用於 ARM 二進位檔。 由於某些 ARM 處理器分支指示的範圍有限，如果連結器偵測到跳至超出範圍的位址時，會以包含以實際目的地為目標的分支指令程式碼 "island" 位址取代分支指令的目的位址。 您可以使用 **/OPT:LBR**最佳化長分支指令的偵測和整體的程式碼大小降到最低的中繼程式碼島的放置。 **/OPT:NOLBR**會指示連結器產生長分支指令的程式碼島，他們發現，不需要最佳化。
+**/OPT:LBR**和 **/OPT:NOLBR**選項僅適用於 ARM 二進位檔案。 由於某些 ARM 處理器分支指令的範圍有限,因此如果連結器檢測到跳轉到範圍外的位址,它將分支指令的目標位址替換為包含指向實際目標的分支指令的代碼"island"的位址。 您可以使用 **/OPT:LBR**優化長分支指令的檢測和中間代碼孤島的位置,以最小化總體代碼大小。 **/OPT:NOLBR**指示連結器在遇到長分支指令時生成代碼孤島,而不進行優化。
 
-根據預設， **/OPT:LBR**未啟用累加連結時，設定選項。 如果您想要非累加連結，而不是長分支最佳化，指定 **/OPT:NOLBR**。 **/OPT:LBR**選項會停用累加連結。
+預設情況下,如果未啟用增量連結,則設置 **/OPT:LBR**選項。 如果需要非增量連結,但分支優化時間不長,請指定 **/OPT:NOLBR**。 **/OPT:LBR**選項禁用增量連結。
 
 ## <a name="remarks"></a>備註
 
-在命令列使用時，連結器會預設為**ICF，/opt: ref，LBR**。 如果 **/debug**指定，預設值是 **/opt: noref NOICF，NOLBR**。
+在命令列使用時,連結器預設為 **/OPT:REF、ICF、LBR**。 若指定 **/DEBUG,** 則預設值為 **/OPT:NOREF、NOICF、NOLBR**。
 
-**/Opt**最佳化通常減少映像大小，以及增加程式的速度。 這些增強功能可能很長，在較大的程式中，這也是為什麼在零售組建的預設啟用。
+**/OPT**優化通常會減小圖像大小並提高程式速度。 這些改進在較大的程式中可能很大,這就是為什麼默認情況下為零售生成啟用這些改進的原因。
 
-連結器最佳化，採用額外的時間，但最佳化程式碼還能節省的時間，當連結器有較少的重新配置，若要修正，並建立較小的最終映像，並將儲存更多的時間有較少的偵錯資訊來處理和寫入 PDB。 啟用最佳化時，它可能會導致更快速的連結時間整體來說，因為在分析中的小型額外成本可能會超過所節省的連結器經過較小的二進位檔的時間位移。
+Linker 優化確實需要額外的時間,但優化的代碼也會節省時間,當連結器的重新定位較少以進行修復並創建較小的最終映射時,當它具有較少的調試資訊來處理並寫入 PDB 時,它可以節省更多的時間。 啟用優化后,它可能會導致整體連結時間更快,因為分析中的少量額外成本可能會因連結器通過較小的二進位檔所節省的時間而抵消。
 
-**/Opt**指定引數會放在一起，並以逗號分隔。 比方說，而不是 **/opt: ref /opt: noicf**，您可以指定 **/opt: ref、 NOICF**。
+**/OPT**參數可以一起指定,用逗號分隔。 例如,您可以指定 **/OPT:REF,而不是** **:REF /OPT:NOICF。**
 
-您可以使用[/verbose](verbose-print-progress-messages.md)連結器選項，以查看會移除的函式 **/opt: ref**和 摺疊的函式 **/opt: icf**。
+您可以使用[/VERBOSE](verbose-print-progress-messages.md)連結器選項查看 **/OPT:REF**刪除的函數以及 **/OPT:ICF**折疊的函數。
 
-**/Opt**引數通常已為使用建立的專案**新的專案**對話方塊在 Visual Studio IDE 中，而且通常有不同的值進行偵錯和發行組態。 如果未不設定任何值，這些連結器選項，在您的專案中，您可能會取得專案預設值，可能會不同於在命令列連結器所使用的預設值。
+**/OPT**參數通常設置為使用 Visual Studio IDE 中的 **"新項目**"對話框創建的項目,並且通常具有不同的調試和發佈配置值。 如果專案中未為這些連結器選項設置任何值,則您可能會獲取專案預設值,這可能與命令列連結器使用的預設值不同。
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定 OPT:ICF 或 OPT:REF 連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **連結器** > **最佳化**屬性頁。
+1. 選擇**配置屬性** > **連結器** > **優化**屬性頁面。
 
 1. 修改其中一個屬性：
 
@@ -93,11 +93,11 @@ ms.locfileid: "62320242"
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定 OPT:LBR 連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
+1. 選擇**設定屬性** > **連結器** > **命令列**屬性頁。
 
-1. 輸入中的選項**其他選項**:
+1. 在 **'其他選項**' 中輸入選項 :
 
    `/opt:lbr` 或 `/opt:nolbr`
 

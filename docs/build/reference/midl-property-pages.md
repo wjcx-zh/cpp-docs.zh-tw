@@ -47,46 +47,46 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d6833230baca892836c187799df7f0658aa16772
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076136"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336245"
 ---
 # <a name="midl-property-pages"></a>MIDL 屬性頁
 
-MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案中的 IDL 檔案。 使用它們來設定[MIDL 編譯器](/windows/win32/midl/using-the-midl-compiler-2)。 如需如何以程式設計方式存取 C++ 專案的 MIDL 選項的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> 物件。 另請參閱[一般 MIDL 命令列語法](/windows/win32/midl/general-midl-command-line-syntax)。
+MIDL 屬性頁作為 項屬性在上可用。使用 COM 的 C++專案中的 IDL 檔。 使用它們來設定[MIDL 編譯器](/windows/win32/midl/using-the-midl-compiler-2)。 如需如何以程式設計方式存取 C++ 專案的 MIDL 選項的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> 物件。 另請參閱[一般 MIDL 命令列語法](/windows/win32/midl/general-midl-command-line-syntax)。
 
 ## <a name="general-property-page"></a>一般屬性頁
 
 ### <a name="preprocessor-definitions"></a>前置處理器定義
 
-指定一或多個定義，包括 MIDL 宏（[/d](/windows/win32/midl/-d)）\[宏\]）。
+指定或多個定義,包括 MIDL 巨集 (\][/D)](/windows/win32/midl/-d)\[巨集 。
 
 ### <a name="additional-include-directories"></a>其他 Include 目錄
 
-指定一或多個要新增至 include 路徑的目錄（[/i](/windows/win32/midl/-i)\[路徑\]）。
+指定要添加到包含路徑[(/I](/windows/win32/midl/-i)\[路徑\]) 的一個或多個目錄。
 
 ### <a name="additional-metadata-directories"></a>其他中繼資料目錄
 
-指定包含 Windows. Foundation WinMD 檔案（[/metadata_dir](/windows/win32/midl/-metadata-dir) \[路徑\]）的目錄。
+指定包含 Windows.Foundation.WinMD 檔的目錄[(/metadata_dir](/windows/win32/midl/-metadata-dir)\[路徑\])。
 
-### <a name="enable-windows-runtime"></a>啟用 Windows 執行階段
+### <a name="enable-windows-runtime"></a>開啟 Windows 執行時
 
-啟用 Windows 執行階段的語義來建立 Windows 中繼資料檔（[/winrt](/windows/win32/midl/-winrt)）。
+啟用 Windows 執行時語義以創建 Windows 中數據檔[(/winrt](/windows/win32/midl/-winrt))。
 
-### <a name="ignore-standard-include-path"></a>忽略標準 Include 路徑
+### <a name="ignore-standard-include-path"></a>忽略標準包含路徑
 
-忽略目前的和 INCLUDE 目錄（[/no_def_idir](/windows/win32/midl/-no-def-idir)）。
+忽略目前目錄和 INCLUDE 目錄[(/no_def_idir](/windows/win32/midl/-no-def-idir))。
 
-### <a name="mktyplib-compatible"></a>Mktyplib.exe 相容
+### <a name="mktyplib-compatible"></a>MkTypLib 相容
 
-強制與 mktyplib.exe 2.03 版（[/mktyplib203](/windows/win32/midl/-mktyplib203)）相容。
+強制相容 mktyplib.exe 版本 2.03[(/mktyplib203](/windows/win32/midl/-mktyplib203))。
 
-### <a name="warning-level"></a>警告等級
+### <a name="warning-level"></a>警告層級
 
-選取 MIDL 程式碼錯誤（[/w](/windows/win32/midl/-w)）的嚴謹度。
+選擇 MIDL 代碼錯誤的嚴格性 ([/W](/windows/win32/midl/-w))。
 
 **Choices**
 
@@ -96,190 +96,190 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 - **3**
 - **4**
 
-### <a name="treat-warnings-as-errors"></a>將警告視為錯誤
+### <a name="treat-warnings-as-errors"></a>警告視為錯誤
 
-讓 MIDL 將所有警告視為錯誤（[/wx](/windows/win32/midl/-wx)）。
+使 MIDL 將所有警告視為錯誤[(/WX](/windows/win32/midl/-wx))。
 
 ### <a name="suppress-startup-banner"></a>隱藏啟動橫幅
 
-隱藏啟動橫幅和資訊訊息（[/nologo](/windows/win32/midl/-nologo)）的顯示。
+禁止顯示啟動橫幅和資訊消息[(/nologo)。](/windows/win32/midl/-nologo)
 
-### <a name="c-compiler-char-type"></a>C 編譯器 Char 類型
+### <a name="c-compiler-char-type"></a>C 編譯器字元類型
 
-指定將用來編譯所產生程式碼的 C 編譯器的預設字元類型。 （[/char](/windows/win32/midl/-char)已簽署 | 未簽署 | ascii7）。
+指定將用於編譯生成的代碼的 C 編譯器的預設字元類型。 [(/字元](/windows/win32/midl/-char)簽名_未簽名_ascii7)。
 
 **Choices**
 
-- **已簽署**簽署
-- 不帶**正負**號
-- **Ascii** -ascii
+- **已簽署**─ 已簽署
+- **未簽署**─ 未簽署
+- **阿西**- 阿西
 
 ### <a name="target-environment"></a>目標環境
 
-指定要設為目標的環境（[/env](/windows/win32/midl/-env) arm32 | win32 | ia64 | x64）。
+指定要定位的環境[(/env](/windows/win32/midl/-env)臂 32_win32_ia64_x64)。
 
 **Choices**
 
-- **未設定**-Win32
-- **Microsoft Windows 32 位**-Win32
-- **Itanium 上的 Microsoft Windows 64 位**-IA64
-- **Microsoft WINDOWS arm** -arm
-- **Microsoft WINDOWS ARM64** -ARM64
-- **X64 上的 Microsoft Windows 64 位**-x64
+- **未設定**- 贏 32
+- **微軟視窗 32 位**- Win32
+- **微軟視窗 64 位元上 Itanium** - IA64
+- **微軟視窗 ARM** - ARM
+- **微軟視窗ARM64** - ARM64
+- **微軟視窗 64 位 x64** - X64
 
-### <a name="generate-stubless-proxies"></a>產生 Stubless proxy
+### <a name="generate-stubless-proxies"></a>產生無存代理程式
 
-使用物件介面（[/Oicf](/windows/win32/midl/-oi)、 [/Oif](/windows/win32/midl/-oi) ）的延伸模組和 stubless proxy，產生完全解讀的存根。
+生成具有物件介面[(/Oicf](/windows/win32/midl/-oi), [/Oif)](/windows/win32/midl/-oi)的擴展和無存根代理的完全解釋的存根。
 
 ### <a name="suppress-compiler-warnings"></a>隱藏編譯器警告
 
-隱藏編譯器警告訊息（[/no_warn](/windows/win32/midl/-no-warn)）。
+禁止編譯器警告消息[(/no_warn](/windows/win32/midl/-no-warn))。
 
 ### <a name="application-configuration-mode"></a>應用程式設定模式
 
-允許在 IDL 檔案中選取的 ACF 屬性（[/app_config](/windows/win32/midl/-app-config)）。
+允許在 IDL 檔中選擇 ACF 屬性[(/app_config](/windows/win32/midl/-app-config))。
 
-### <a name="locale-id"></a>地區識別碼
+### <a name="locale-id"></a>地區設定識別碼
 
-指定輸入檔的 LCID、檔案名和目錄路徑（[/Lcid](/windows/win32/midl/-lcid) DECIMAL）。
+指定輸入檔案、檔名和目錄路徑[(/lcid](/windows/win32/midl/-lcid) DECIMAL) 的 LCID。
 
 ### <a name="multi-processor-compilation"></a>多處理器編譯
 
-同時執行多個實例。
+同時運行多個實例。
 
 ## <a name="output-property-page"></a>輸出屬性頁
 
 ### <a name="output-directory"></a>輸出目錄
 
-指定輸出目錄（[/out](/windows/win32/midl/-out) [目錄]）。
+指定輸出目錄[(/out](/windows/win32/midl/-out) [目錄])。
 
-### <a name="metadata-file"></a>中繼資料檔案
+### <a name="metadata-file"></a>中繼資料檔
 
-指定所產生中繼資料檔案的名稱（[/winmd](/windows/win32/midl/-winmd) filename）。
+指定生成的中繼資料檔[(/winmd](/windows/win32/midl/-winmd)檔名)的名稱。
 
-### <a name="header-file"></a>標頭檔
+### <a name="header-file"></a>標頭檔案
 
-指定所產生之標頭檔的名稱（[/h](/windows/win32/midl/-h) filename）。
+指定產生的標頭檔[(/h](/windows/win32/midl/-h)檔名)的名稱。
 
-### <a name="dlldata-file"></a>Dlldata.c 檔案
+### <a name="dlldata-file"></a>DllData 檔案
 
-指定 DLLDATA.C 檔的名稱（[/dlldata](/windows/win32/midl/-dlldata) filename）。
+指定 DLLDATA 檔案[(/dlldata](/windows/win32/midl/-dlldata)檔案名稱) 的名稱。
 
 ### <a name="iid-file"></a>IID 檔案
 
-指定介面識別碼檔的名稱（[/iid](/windows/win32/midl/-iid) filename）。
+指定介面識別碼[(/iid](/windows/win32/midl/-iid)檔名) 的名稱。
 
-### <a name="proxy-file"></a>Proxy 檔案
+### <a name="proxy-file"></a>代理檔案
 
-指定 proxy 檔案的名稱（[/proxy](/windows/win32/midl/-proxy) filename）。
+指定代理檔[(/代理](/windows/win32/midl/-proxy)檔案名稱)的名稱。
 
-### <a name="generate-type-library"></a>產生類型程式庫
+### <a name="generate-type-library"></a>產生類型庫
 
-指定不產生類型程式庫（[/notlb] 代表否）。
+指定不生成類型庫(\/notlb= 否)。
 
-### <a name="type-library"></a>類型程式庫
+### <a name="type-library"></a>類型庫
 
-指定類型程式庫檔案的名稱（[/tlb](/windows/win32/midl/-tlb) filename）。
+指定類型函式庫檔[(/tlb](/windows/win32/midl/-tlb)檔名) 的名稱。
 
-### <a name="generate-client-stub-files"></a>產生用戶端 Stub 檔案
+### <a name="generate-client-stub-files"></a>產生用戶端存取根檔案
 
-僅產生用戶端 stub 檔案（[/client](/windows/win32/midl/-client) [stub | none]）。
-
-**Choices**
-
-- **存根**-stub
-- **無**-無
-
-### <a name="generate-server-stub-files"></a>產生伺服器 Stub 檔案
-
-僅產生伺服器 stub 檔案（[/server](/windows/win32/midl/-server) [stub | none]）。
+僅生成用戶端存根檔[(/用戶端](/windows/win32/midl/-client)[存根]無)。
 
 **Choices**
 
-- **存根**-stub
-- **無**-無
+- **存根**- 存根
+- **無**- 無
 
-### <a name="client-stub-file"></a>用戶端 Stub 檔案
+### <a name="generate-server-stub-files"></a>組建伺服器存取根檔案
 
-指定用戶端 stub 檔案（[/cstub](/windows/win32/midl/-cstub) [檔案]）。
-
-### <a name="server-stub-file"></a>伺服器 Stub 檔案
-
-指定伺服器 stub 檔（[/sstub](/windows/win32/midl/-sstub) [檔案]）。
-
-### <a name="type-library-format"></a>型別程式庫格式
-
-指定類型程式庫檔案格式（[/oldtlb |/newtlb]）。
+僅生成伺服器存根檔[(/伺服器](/windows/win32/midl/-server)[存根]無)。
 
 **Choices**
 
-- **NewFormat** -新格式
-- **OldFormat** -舊格式
+- **存根**- 存根
+- **無**- 無
 
-## <a name="advanced-property-page"></a>Advanced 屬性頁
+### <a name="client-stub-file"></a>用戶端存取檔案
 
-### <a name="c-preprocess-options"></a>C 前置處理選項
+指定用戶端存根檔[(/cstub](/windows/win32/midl/-cstub) [檔案])。
 
-指定要傳遞至 C 編譯器預處理器（[/cpp_opt](/windows/win32/midl/-cpp-opt)參數）的參數。
+### <a name="server-stub-file"></a>伺服器存根檔案
+
+指定伺服器存根檔[(/stub](/windows/win32/midl/-sstub) [檔案])。
+
+### <a name="type-library-format"></a>型態庫格式
+
+指定類型庫檔案格式(*/舊\tlb_/newtlb*)。
+
+**Choices**
+
+- **新格式**- 新格式
+- **舊格式**- 舊格式
+
+## <a name="advanced-property-page"></a>進階屬性頁
+
+### <a name="c-preprocess-options"></a>C 預處理選項
+
+指定交換機以傳遞給 C 編譯器預處理器[(/cpp_opt](/windows/win32/midl/-cpp-opt)交換機)。
 
 ### <a name="undefine-preprocessor-definitions"></a>取消前置處理器的定義
 
-指定一或多個取消加入，包括 MIDL 宏（[/u](/windows/win32/midl/-U) [宏]）。
+指定一個或多個未定義,包括 MIDL 宏[(/U[](/windows/win32/midl/-U)宏])。
 
-### <a name="enable-error-checking"></a>啟用錯誤檢查
+### <a name="enable-error-checking"></a>開啟錯誤檢查
 
-選取錯誤檢查選項（[/error 全部 | 無]）。
+選擇錯誤檢查選項(*/錯誤全部=無])。
 
 **Choices**
 
-- **EnableCustom** -全部
-- **全部**-全部
-- **無**-無
+- **開啟自訂**- 所有
+- **全部**- 所有
+- **無**- 無
 
 ### <a name="check-allocations"></a>檢查配置
 
-檢查是否有記憶體不足的錯誤（[/error](/windows/win32/midl/-error)配置）。
+檢查記憶體不足錯誤[(/錯誤](/windows/win32/midl/-error)分配)。
 
-### <a name="check-bounds"></a>檢查界限
+### <a name="check-bounds"></a>檢查邊界
 
-檢查大小與傳輸長度規格（[/error](/windows/win32/midl/-error) bounds_check）。
+檢查大小與傳輸長度規格[(/錯誤](/windows/win32/midl/-error)bounds_check)。
 
-### <a name="check-enum-range"></a>檢查列舉範圍
+### <a name="check-enum-range"></a>檢查枚舉範圍
 
-檢查列舉值是否在允許的範圍內（[/error](/windows/win32/midl/-error)列舉）。
+檢查枚舉值是否在允許範圍內[(/錯誤](/windows/win32/midl/-error)枚舉)。
 
 ### <a name="check-reference-pointers"></a>檢查參考指標
 
-請檢查 ref 指標是否為非 null （[/error](/windows/win32/midl/-error) ref）。
+檢查引用指標為非空[(/錯誤](/windows/win32/midl/-error)參考)。
 
 ### <a name="check-stub-data"></a>檢查存根資料
 
-發出伺服器端存根資料有效性的額外檢查（[/error](/windows/win32/midl/-error) stub_data）。
+發出其他檢查,檢查伺服器端存根數據的有效性[(/錯誤](/windows/win32/midl/-error)stub_data)。
 
-### <a name="prepend-with-abi-namespace"></a>前面加上 ' ABI ' 命名空間
+### <a name="prepend-with-abi-namespace"></a>使用「ABI」命名空間進行預寫
 
-在所有類型前面加上 ' ABI ' 命名空間。  （[/ns_prefix](/windows/win32/midl/-ns-prefix)）。
+將「ABI」命名空間準備到所有類型的。  [(/ns_prefix](/windows/win32/midl/-ns-prefix))。
 
 ### <a name="validate-parameters"></a>驗證參數
 
-產生其他資訊來驗證參數（[/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)）。
+生成其他資訊以驗證參數[(/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust))。
 
 ### <a name="struct-member-alignment"></a>結構成員對齊
 
-指定目標系統中結構的封裝層級（/ZpN）。
+指定目標系統中結構 (/ZpN) 中的封裝水準。
 
 **Choices**
 
-- **未設定**-未設定
-- **1 個位元組**-Zp1
-- **2 個位元組**-Zp2
-- **4 個位元組**-Zp4
-- **8 個位元組**-Zp8
+- **未設定**- 未設定
+- **1 位元組**- Zp1
+- **2 位元組**- Zp2
+- **4 位元組**- Zp4
+- **8 位元組**- Zp8
 
-### <a name="redirect-output"></a>重新導向輸出
+### <a name="redirect-output"></a>重定向輸出
 
-將畫面的輸出重新導向至檔案（[/o](/windows/win32/midl/-o)檔案）。
+將輸出從螢幕重定向到檔[(/o](/windows/win32/midl/-o)檔案)。
 
 ### <a name="minimum-target-system"></a>最小目標系統
 
-設定最小目標系統（[/Target](/windows/win32/midl/-target) STRING）。
+設置最小目標系統[(/目標](/windows/win32/midl/-target)STRING)。

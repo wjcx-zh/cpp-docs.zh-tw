@@ -10,16 +10,16 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152322"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349733"
 ---
 # <a name="try-except-statement-c"></a>try-except 陳述式 (C)
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 **try-except** 陳述式是 Microsoft C 語言的延伸模組，可讓應用程式在發生通常會終止程式執行的事件時取得程式控制權。 這類事件稱為例外狀況，而處理例外狀況的機制稱為結構化例外狀況處理。
 
@@ -29,7 +29,7 @@ ms.locfileid: "56152322"
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *expression*  **)**  *compound-statement*
+**__except (**  *運算*  **式 )**  *複合語句*
 
 `__try` 子句後面的複合陳述式是保護的區段。 `__except` 子句後面的複合陳述式則是例外狀況處理常式。 如果在執行保護區段時引發例外狀況，則處理常式會指定要採取的一組動作。 執行程序如下所示：
 
@@ -48,10 +48,10 @@ ms.locfileid: "56152322"
 由於 `__except` 運算式會以 C 運算式求值，因此限於單一值、條件運算式運算子或逗號運算子。 如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。
 
 > [!NOTE]
->  結構化例外狀況處理可搭配 C 和 C++ 原始程式檔使用。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理機制更有彈性，因為它可以處理任何類型的例外狀況。
+> 結構化例外狀況處理可搭配 C 和 C++ 原始程式檔使用。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理機制更有彈性，因為它可以處理任何類型的例外狀況。
 
 > [!NOTE]
->  針對 C++ 程式，應該使用 C++ 例外狀況處理，而不是結構化例外狀況處理。 如需詳細資訊，請參閱《C++ 語言參考》中的[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。
+> 針對 C++ 程式，應該使用 C++ 例外狀況處理，而不是結構化例外狀況處理。 如需詳細資訊，請參閱《C++ 語言參考》** 中的[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。
 
 應用程式中的每個常式都可以有其本身的例外狀況處理常式。 `__except` 運算式會在 `__try` 主體的範圍內執行。 這表示它可以存取在此宣告的任何區域變數。
 
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**結束 Microsoft 專屬**
+**結束微軟的**
 
 ## <a name="see-also"></a>另請參閱
 

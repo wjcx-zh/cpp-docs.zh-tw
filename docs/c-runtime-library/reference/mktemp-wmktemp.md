@@ -1,9 +1,11 @@
 ---
 title: _mktemp、_wmktemp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmktemp
 - _mktemp
+- _o__mktemp
+- _o__wmktemp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 7cfca04d4f0df2673a2221f00a1263f73e8516ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8affd20ca7826f0d383f749567c9625d61dacd48
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951572"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338724"
 ---
 # <a name="_mktemp-_wmktemp"></a>_mktemp、_wmktemp
 
@@ -68,16 +71,18 @@ wchar_t *_wmktemp(
 
 ### <a name="parameters"></a>參數
 
-*nameTemplate*<br/>
+*名稱範本*<br/>
 檔案名稱模式。
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回已修改之 nameTemplate 的指標。 如果*nameTemplate*的格式不正確，或無法從指定的 nameTemplate 建立更多的唯一名稱，此函數會傳回**Null** 。
+每個函數都返回指向修改的名稱範本的指標。 如果*名稱樣本*格式錯誤,或者無法從給定名稱範本創建更多唯一名稱,則函數將返回**NULL。**
 
 ## <a name="remarks"></a>備註
 
-**_Mktemp**函數會藉由修改*nameTemplate*引數來建立唯一的檔案名。 **_mktemp**會自動將多位元組字元字串引數處理為適當的，並根據執行時間系統目前使用的多位元組字碼頁來辨識多位元組字元序列。 **_wmktemp**是寬字元版本的 **_mktemp**; **_wmktemp**的引數和傳回值是寬字元字串。 相反地， **_wmktemp**和 **_mktemp**的行為相同，不同之處在于 **_wmktemp**不會處理多位元組字元字串。
+**_mktemp**函數通過修改*nameTemplate*參數創建唯一的檔名。 **_mktemp**根據需要自動處理多位元位元串參數,根據運行時系統當前使用的多位元組碼頁識別多位元組字串序列。 **_wmktemp**是 **_mktemp**的寬字元版本;**_wmktemp**的參數和返回值是寬字元字串。 **_wmktemp**和 **_mktemp**行為相同,只不過 **_wmktemp**不處理多位元組位元串。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -85,17 +90,17 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*引數的格式為*base*XXXXXX，其中*base*是您所提供之新檔案名的一部分，而每個 X 是 **_mktemp**所提供之字元的預留位置。 *NameTemplate*中的每個預留位置字元都必須是大寫的 x。 **_mktemp**會保留*基底*，並以字母字元取代第一個尾端 X。 **_mktemp**會以五位數的值取代下列尾端 X：這個值是識別呼叫進程或多執行緒程式中呼叫執行緒的唯一數位。
+*nameTemplate*參數具有表單*基礎*XXXXXX,其中*base*是您提供的新檔名的一部分,每個 X 是 **_mktemp**提供的字元的佔位元。 *名稱範本*中的每個佔位元字元都必須是大寫**X,_mktemp**保留*基數*,並將第一個尾隨 X 替換為字母字元。 **_mktemp**將以下尾隨 X 替換為五位值;此值是標識調用過程的唯一編號,或在多線程程序中標識調用線程。
 
-每次成功呼叫 **_mktemp**都會修改*nameTemplate*。 在每次來自具有相同*nameTemplate*引數的相同進程或執行緒的後續呼叫中， **_mktemp**會檢查符合先前呼叫中 **_mktemp**所傳回之名稱的檔案名。 如果指定名稱的檔案不存在， **_mktemp**會傳回該名稱。 如果所有先前傳回的名稱都有檔案， **_mktemp**會藉由將先前傳回名稱中使用的字母字元取代為下一個可用的小寫字母（依序），從 ' a ' 到 ' z ' 來建立新名稱。 例如，如果*base*為：
+每次成功呼叫 **_mktemp**都會修改*名稱樣本*。 在來自具有相同*名稱Template*參數的同一進程或線程的每個後續調用中 **,_mktemp**檢查與 **_mktemp**在以前的調用中返回的名稱匹配的檔名。 如果給定名稱不存在檔 **,_mktemp**返回該名稱。 如果以前返回的所有名稱都有檔 **,_mktemp**通過將以前返回的名稱中使用的字母字元替換為下一個可用小寫字母(按順序從"a"到"z")來創建新名稱。 例如,如果*基為*:
 
-> **fn**
+> **Fn**
 
-**_mktemp**所提供的五位數值是12345，傳回的第一個名稱是：
+**_mktemp**提供的五位值為 12345,傳回的第一個名稱是:
 
 > **fna12345**
 
-如果這個名稱是用來建立檔案 FNA12345，而且這個檔案仍然存在，則從相同進程或具有相同*nameTemplate* *基底*之執行緒的呼叫傳回的下一個名稱為：
+如果此名稱用於建立檔案 FNA12345,並且此檔仍然存在,則從具有相同*名稱樣本**基礎*的同一行程或線程呼叫時傳回的下一個名稱是:
 
 > **fnb12345**
 
@@ -103,11 +108,11 @@ wchar_t *_wmktemp(
 
 > **fna12345**
 
-針對任何指定的*base*和*nameTemplate*值組合， **_mktemp**最多可以建立26個唯一的檔案名。 因此，FNZ12345 是最後一個唯一檔案名 **_mktemp**可以針對此範例中使用的*基底*和*nameTemplate*值來建立的名稱。
+**_mktemp**最多可以為*基本*值和*nameTemplate*值的任意給定組合創建 26 個唯一檔名。 因此,FNZ12345 是 **_mktemp可以為本**範例中使用*的基礎*和*名稱範本*值創建的最後一個唯一檔名。
 
-失敗時，會設定**errno** 。 如果*nameTemplate*的格式無效（例如，少於 6 X）， **errno**會設定為**EINVAL**。 如果 **_mktemp**無法建立唯一的名稱，因為所有26個可能的檔案名已經存在， **_Mktemp**會將 nameTemplate 設為空字串，並傳回**EEXIST**。
+失敗時,將設置**errno。** 如果*nameTemplate*的格式無效(例如,小於 6 X),**則 errno**設定為**EINVAL**。 如果 **_mktemp**無法建立唯一名稱,因為所有 26 個可能的檔案名稱都已存在 **,_mktemp**將 nameTemplate 設定到一個空字串,並傳回**EEXIST**。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -116,7 +121,7 @@ wchar_t *_wmktemp(
 |**_mktemp**|\<io.h>|
 |**_wmktemp**|\<io.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

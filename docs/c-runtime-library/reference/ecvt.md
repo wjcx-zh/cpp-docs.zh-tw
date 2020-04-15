@@ -1,8 +1,9 @@
 ---
 title: _ecvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _ecvt
+- _o__ecvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9f91733c566c1782d5ccfc9a7c01e490a5915a85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e1760d5c68e650f6fbf44866d4e368b9d6233b6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942051"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348017"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-將**雙精度浮**點數轉換為字串。 這個函式已有更安全的版本可用；請參閱 [_ecvt_s](ecvt-s.md)。
+將**雙**數轉換為字串。 這個函式已有更安全的版本可用；請參閱 [_ecvt_s](ecvt-s.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -54,40 +56,42 @@ char *_ecvt(
 *值*<br/>
 要轉換的數字。
 
-*計數*<br/>
+*count*<br/>
 儲存的位數。
 
-*dec*<br/>
+*12 月*<br/>
 儲存的小數點位置。
 
-*簽署*<br/>
+*標誌*<br/>
 已轉換數字的正負號。
 
 ## <a name="return-value"></a>傳回值
 
-**_ecvt**會傳回數位字串的指標;如果發生錯誤，則**為 Null** 。
+**_ecvt**返回指向數字字串的指標;如果發生錯誤,**則為 NULL。**
 
 ## <a name="remarks"></a>備註
 
-**_Ecvt**函數會將浮點數轉換成字元字串。 *Value*參數是要轉換的浮點數。 此函式會將*值*的*計數*數位儲存為字串，並附加 null 字元（' \ 0 '）。 如果*value*中的位數超過*count*，則會四捨五入低序位數位。 如果數位少於*計數*，字串會以零填補。
+**_ecvt**函數將浮點數轉換為字串。 *值*參數是要轉換的浮點數。 此函數將*值*的數位*儲存*起來為字串,並追加空字元 ("\0")。 如果*值*中的位數超過*計數*,則低階數位將四捨五入。 如果*數位少於計數*數位,則字串將用零填充。
 
-**_Ecvt**傳回的總位數不會超過 **_CVTBUFSIZE**。
+**_ecvt**返回的總數不會超過 **_CVTBUFSIZE。**
 
-字串中只能儲存數字。 在呼叫之後，可以從*dec*和*sign*取得小數點和*值*正負號的位置。 *Dec*參數會指向整數值，以提供相對於字串開頭的小數點位置。 0 或負整數值表示小數點位於第一位數字的左邊。 *Sign*參數會指向一個整數，表示已轉換數位的正負號。 如果整數值為 0，則數字為正數。 否則，數字為負數。
+字串中只能儲存數字。 小數點的位置和*值*符號可以從調用後的*dec*和*sign*獲得。 *dec*參數指向一個整數值,該值給出相對於字串開頭的小數點的位置。 0 或負整數值表示小數點位於第一位數字的左邊。 *符號*參數指向指示轉換數位符號的整數。 如果整數值為 0，則數字為正數。 否則，數字為負數。
 
-**_Ecvt**和 **_fcvt**之間的差異在於*count*參數的轉譯。 **_ecvt**會將*count*解讀為輸出字串中的總位數，而 **_fcvt**會將*count*解讀為小數點後的位數。
+**_ecvt**和 **_fcvt**的區別在於對*計數*參數的解釋。 **_ecvt**將*計數*解釋為輸出字串中的總位數,而 **_fcvt**將*計數*解釋為小數點之後的位數。
 
-**_ecvt**和 **_fcvt**使用單一靜態配置的緩衝區來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
+**_ecvt**和 **_fcvt**使用單個靜態分配的緩衝區進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
 
-這個函式會驗證它的參數。 如果*dec*或*sign*為**Null**，或*count*為0，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，並傳回**Null** 。
+這個函式會驗證它的參數。 如果*de*或*符號*為**NULL**,或者*計數*為 0,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則**errno**設定為**EINVAL**並返回**NULL。**
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

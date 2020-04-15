@@ -1,6 +1,6 @@
 ---
 title: erf、erff、erfl、erfc、erfcf、erfcl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - erff
 - erfl
@@ -8,6 +8,12 @@ api_name:
 - erfc
 - erfcf
 - erfcl
+- _o_erf
+- _o_erfc
+- _o_erfcf
+- _o_erfcl
+- _o_erff
+- _o_erfl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: ad7ad279d3686e4f33a6f5f901c60348c131b89a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70937611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347915"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -87,31 +94,33 @@ long double erfcl(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Erf**函數會傳回*x*的高斯錯誤函式。 **Erfc**函數會傳回*x*的互補高斯錯誤函式。
+**erf**函數傳回*x*的高斯錯誤函數 。 **erfc**函數傳回*x*的互補高斯誤差函數。
 
 ## <a name="remarks"></a>備註
 
-**Erf**函數會計算*x*的高斯錯誤函式，其定義為：
+**erf**函數計算*x*的高斯誤差函數,該函數定義為:
 
-![X 的錯誤函式](media/crt_erf_formula.PNG "x 的誤差函式")
+![x 的誤差函式值](media/crt_erf_formula.PNG "x 的誤差函式值")
 
-互補高斯 error 函式定義為 erf （x）。 **Erf**函數會傳回範圍-1.0 到1.0 的值。 不會傳回錯誤。 **Erfc**函數會傳回0到2範圍內的值。 如果*x*對**erfc**而言太大， **Errno**變數會設定為**ERANGE**。
+互補高斯誤差函數定義為 1 - erf(x)。 **erf**函數傳回範圍 -1.0 到 1.0 中的值。 不會傳回錯誤。 **erfc**函數返回範圍 0 到 2 中的值。 如果*x*對於**erfc**來說太大,則**errno**變數設定為**ERANGE**。
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型的**erf**和**erfc**多載。 在 C 程式中， **erf**和**erfc**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用獲取和返回**浮點**和**長****雙**類型的**erf**和**erfc**的重載。 在C程式中 **,erf**和**erfc**總是將傳**回一個雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
-|**erf**、 **erff**、 **erfl**、 **erfc**、 **erfcf**、 **erfcl**|\<math.h>|
+|**埃爾夫**,**埃爾夫**,**埃爾弗爾**,**埃爾夫夫**,**埃爾夫夫**,**埃爾夫**|\<math.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

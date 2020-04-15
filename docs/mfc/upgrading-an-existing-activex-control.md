@@ -12,47 +12,47 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 06c39240d3718f6fbaa15b46abeb8ac9132b5945
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 802640d5132c28dbda564afcb63c12d8a4133042
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510871"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353549"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 
-現有的 ActiveX 控制項 (先前稱為 OLE 控制項) 可以在網際網路上使用, 而不需要修改。 不過, 您可能會想要修改控制項來改善其效能。
+現有的 ActiveX 控件(以前的 OLE 控制件)無需修改即可在 Internet 上使用。 但是,您可能希望修改控件以提高其性能。
 
 > [!IMPORTANT]
-> ActiveX 是不應該用於新開發的舊版技術。 如需取代 ActiveX 之新式技術的詳細資訊, 請參閱[ActiveX 控制項](activex-controls.md)。
+> ActiveX 是一種不應用於新開發的傳統技術。 有關取代 ActiveX 的現代技術的詳細資訊,請參閱[ActiveX 控制件](activex-controls.md)。
 
-當您在網頁上使用控制項時, 還有其他考慮。 .Ocx 檔案和所有支援的檔案都必須在目的電腦上, 或透過網際網路下載。 這會讓程式碼大小和下載時間成為重要的考慮。 下載可以封裝在帶正負號的 .cab 檔案中。 您可以將控制項標示為安全進行腳本處理, 並以安全的方式進行初始化。
+在 Web 頁上使用控制件時,還有其他注意事項。 .ocx 檔和所有支援文件必須在目標計算機上或通過互聯網下載。 這使得代碼大小和下載時間成為一個重要的考慮因素。 下載可以打包在簽名的 .cab 檔中。 您可以將控制項標記為腳本化安全,並且標記為安全初始化。
 
-本文討論下列主題：
+本文章討論下列主題：
 
-- [封裝要下載的程式碼](#_core_packaging_code_for_downloading)
+- [下載的包裝碼](#_core_packaging_code_for_downloading)
 
-- [將控制項標示為可安全編寫腳本和初始化](#_core_marking_a_control_safe_for_scripting_and_initializing)
+- [為文稿化與初始化標記控制安全](#_core_marking_a_control_safe_for_scripting_and_initializing)
 
 - [授權問題](#_core_licensing_issues)
 
-- [簽署程式碼](#_core_signing_code)
+- [簽署代碼](#_core_signing_code)
 
-- [管理調色板](#_core_managing_the_palette)
+- [管理調色盤](#_core_managing_the_palette)
 
-- [Internet Explorer 瀏覽器安全性層級和控制行為](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
+- [網際網路瀏覽器瀏覽器安全等級和控制行為](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-您也可以新增 [優化], 如[ActiveX 控制項中所述:優化](../mfc/mfc-activex-controls-optimization.md)。 您可以使用標記來非同步下載屬性和大型 Blob, 如[網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)中所述。
+您還可以添加優化,如[ActiveX 控件:優化](../mfc/mfc-activex-controls-optimization.md)中所述。 例如,在[Internet 上的 ActiveX 控制件](../mfc/activex-controls-on-the-internet.md)中所述,Monikers 可用於非同步下載屬性和大型 BLOB。
 
-##  <a name="_core_packaging_code_for_downloading"></a>封裝要下載的程式碼
+## <a name="packaging-code-for-downloading"></a><a name="_core_packaging_code_for_downloading"></a>下載的包裝碼
 
-如需這個主題的詳細資訊, 請參閱[封裝 ActiveX 控制項](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)。
+有關此主題的詳細資訊,請參閱打包[ActiveX 控制件](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)。
 
-### <a name="the-codebase-tag"></a>CODEBASE 標記
+### <a name="the-codebase-tag"></a>CODEBASE 標籤
 
-ActiveX 控制項是使用`<OBJECT>`標記內嵌在網頁中。 `<OBJECT>`標記的參數會指定要從中下載控制項的位置。 `CODEBASE` `CODEBASE`可以成功指向數種不同的檔案類型。
+ActiveX 控制項使用標記嵌入到網頁`<OBJECT>`中 。 標記`CODEBASE``<OBJECT>`的 參數指定從中下載控制項的位置。 `CODEBASE`可以成功指向許多不同的文件類型。
 
-### <a name="using-the-codebase-tag-with-an-ocx-file"></a>搭配 OCX 檔案使用 CODEBASE 標記
+### <a name="using-the-codebase-tag-with-an-ocx-file"></a>將 CODEBASE 標籤與 OCX 檔一起使用
 
 ```
 CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
@@ -61,17 +61,17 @@ CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
     1086"
 ```
 
-此解決方案只會下載控制項的 .ocx 檔案, 而且需要有任何支援的 Dll 已安裝在用戶端電腦上。 這適用于以視覺C++效果建立的 internet EXPLORER 和 MFC ActiveX 控制項, 因為 internet Explorer 隨附視覺C++控制項的支援 dll。 如果另一個具有 ActiveX 控制項功能的網際網路瀏覽器用來觀看此控制項, 此方案將無法使用。
+此解決方案僅下載控制項的.ocx檔,並要求已在用戶端電腦上安裝任何支援 DLL。 這將適用於使用視覺C++構建的 Internet Explorer 和 MFC ActiveX 控件,因為 Internet Explorer 附帶支援用於視覺C++控件的 LLL。 如果使用另一個支援 ActiveX 控制的 Internet 瀏覽器查看此控制項,則此解決方案將不起作用。
 
-### <a name="using-the-codebase-tag-with-an-inf-file"></a>搭配使用程式碼基底標記與 INF 檔案
+### <a name="using-the-codebase-tag-with-an-inf-file"></a>將 CODEBASE 標籤與 INF 檔案一起使用
 
 ```
 CODEBASE="http://example.microsoft.com/trustme.inf"
 ```
 
-.Inf 檔案將控制 .ocx 和其支援檔案的安裝。 不建議使用這個方法, 因為您無法簽署 .inf 檔案 (請參閱在程式碼簽署上的指標的[簽署程式碼](#_core_signing_code))。
+.inf 檔將控制 .ocx 及其支援檔的安裝。 不建議使用此方法,因為無法對 .inf 文件進行簽名(請參閱代碼簽名指標[的簽名代碼](#_core_signing_code))。
 
-### <a name="using-the-codebase-tag-with-a-cab-file"></a>搭配使用程式碼基底標記與 CAB 檔案
+### <a name="using-the-codebase-tag-with-a-cab-file"></a>將 CODEBASE 標籤與 CAB 檔案一起使用
 
 ```
 CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
@@ -80,19 +80,19 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
     0"
 ```
 
-封包檔是封裝使用 MFC 之 ActiveX 控制項的建議方式。 封裝封包檔中的 MFC ActiveX 控制項可讓您包含 .inf 檔案, 以控制 ActiveX 控制項和任何相依 Dll (例如 MFC Dll) 的安裝。 使用 CAB 檔案會自動壓縮程式碼, 以便更快速地下載。 如果您使用 .cab 檔案進行元件下載, 則簽署整個 .cab 檔案的速度會比每個個別元件更快。
+機櫃檔是打包使用 MFC 的 ActiveX 控件的推薦方法。 在檔案櫃檔中打包 MFC ActiveX 控制件允許包含 .inf 檔案來控制 ActiveX 控制件和任何從屬 DLL(如 MFC DLL)的安裝。 使用 CAB 檔會自動壓縮代碼,以便更快地下載。 如果使用 .cab 檔進行元件下載,則對整個 .cab 檔進行簽名比每個單獨的元件更快。
 
 ### <a name="creating-cab-files"></a>建立 CAB 檔案
 
-建立封包檔的工具現在是[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)的一部分。
+創建檔案櫃檔的工具現在是[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)的一部分。
 
-所指向的封包檔`CODEBASE`應該包含您的 ActiveX 控制項的 .ocx 檔案, 以及用來控制其安裝的 .inf 檔。 您可以藉由指定控制檔的名稱和 .inf 檔案來建立封包檔。 請勿包含可能已存在於此封包檔中之系統上的相依 Dll。 例如, MFC Dll 會封裝在個別的封包檔中, 並由控制 .inf 檔案所參考。
+指向的`CODEBASE`機櫃檔應包含 ActiveX 控制件的 .ocx 檔和用於控制其安裝的 .inf 檔。 通過指定控制檔和 .inf 檔案的名稱來創建檔案櫃檔。 請勿包括此檔櫃檔中系統中可能已經存在的從屬 DLL。 例如,MFC DLL 打包在單獨的檔櫃檔中,並由控制 .inf 檔案引用。
 
-如需如何建立 CAB 檔案的詳細資訊, 請參閱[建立](/windows/win32/devnotes/cabinet-api-functions)封包檔。
+有關如何建立 CAB 檔的詳細資訊,請參考[BAB 檔案](/windows/win32/devnotes/cabinet-api-functions)。
 
 ### <a name="the-inf-file"></a>INF 檔案
 
-下列 spindial 範例會列出支援的檔案, 以及 MFC Spindial 控制項所需的版本資訊。 請注意, MFC Dll 的位置是 Microsoft 網站。 Mfc42 是由 Microsoft 提供和簽署。
+下面的範例 spindial.inf 列出了支援檔和 MFC 自旋控制所需的版本資訊。 請注意,MFC DLL 的位置是 Microsoft 網站。 mfc42.cab 由微軟提供並簽名。
 
 ```
 Contents of spindial.inf:
@@ -112,9 +112,9 @@ file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab
     0
 ```
 
-### <a name="the-object-tag"></a>\<物件 > 標記
+### <a name="the-object-tag"></a>物件\<>标记
 
-下列範例說明如何使用`<OBJECT>`標記來封裝 MFC Spindial 範例控制項。
+下面的範例演示了`<OBJECT>`使用標記打包 MFC 旋轉採樣控制件。
 
 ```
 <OBJECT ID="Spindial1" WIDTH=100 HEIGHT=51
@@ -128,72 +128,72 @@ file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab
 </OBJECT>
 ```
 
-在此情況下, spindial 會包含兩個檔案: spindial 和 spindial。 下列命令會建立封包檔:
+在這種情況下,spindial.cab 將包含兩個檔,自旋.ocx 和 spindial.inf。 以下指令將產生檔案櫃檔:
 
 ```
 C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
 ```
 
-`-s 6144`參數會在封包中保留空間以進行程式碼簽署。
+參數`-s 6144`在機櫃中保留用於代碼簽名的空間。
 
-### <a name="the-version-tag"></a>版本戳記
+### <a name="the-version-tag"></a>版本標記
 
-請注意, 使用`#Version` CAB 檔案指定的資訊會套用至`<OBJECT>`標記的*CLASSID*參數所指定的控制項。
+請注意,`#Version`使用 CAB 檔`<OBJECT>`指定的資訊適用於 標記的*CLASSID*參數指定的控制項。
 
-視指定的版本而定, 您可以強制下載您的控制項。 如需包含程式`OBJECT` *代碼基*底參數之標記的完整規格, 請參閱 W3C 參考。
+根據指定的版本,您可以強制下載控制項。 有關標記的完整規格(`OBJECT`包括*CODEBASE*參數),請參閱 W3C 參考。
 
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a>將控制項標示為可安全編寫腳本和初始化
+## <a name="marking-a-control-safe-for-scripting-and-initializing"></a><a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a>為文稿化與初始化標記控制安全
 
-在網頁中使用的 ActiveX 控制項應標示為安全的腳本, 並可安全地進行初始化 (如果它們實際上是安全的)。 安全控制項不會執行磁片 IO, 或直接存取電腦的記憶體或暫存器。
+在網頁中使用的 ActiveX 控件應標記為腳本安全,如果實際上是安全的,則對於初始化是安全的。 安全控制不會直接執行磁碟 IO 或存取電腦的記憶體或寄存器。
 
-控制項可以標示為安全的腳本, 並可透過登錄安全地進行初始化。 修改`DllRegisterServer`以加入類似下列的專案, 將控制項標示為安全, 以便在登錄中進行腳本和持續性。 另一種方法是執行`IObjectSafety`。
+控件可以標記為腳本安全,並且對於通過註冊表進行初始化是安全的。 修改`DllRegisterServer`以添加類似於以下內容的條目,以將控制項標記為註冊表中的腳本和持久性安全。 另一種方法是實現`IObjectSafety`。
 
-您將為控制項定義 Guid (全域唯一識別碼), 將它標示為安全的腳本處理和持續性。 可以安全編寫腳本的控制項將包含類似下列的登錄專案:
+您將為控制項定義 GUID(全域唯一識別子),以將其標記為腳本和持久性安全。 可以安全編寫文稿的控制項將包含類似於以下內容的註冊表項:
 
 ```
 HKEY_CLASSES_ROOT\Component Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}
 ```
 
-可以安全地從持續性資料初始化的控制項, 會標示為具有類似下列登錄專案的持續性:
+可以從持久資料安全地初始化的控制項標記為安全的持久性,註冊表項類似於:
 
 ```
 HKEY_CLASSES_ROOT\Component Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}
 ```
 
-新增類似下列的專案 (以`{06889605-B8D0-101A-91F1-00608CEAD5B3}`控制項的類別識別碼取代), 將您的金鑰與下列類別識別碼建立關聯:
+新增類似於以下內容的項目(取代控制項的類別代碼 )`{06889605-B8D0-101A-91F1-00608CEAD5B3}`以將金鑰與以下類別 ID 相關聯:
 
 ```
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}
 ```
 
-##  <a name="_core_licensing_issues"></a>授權問題
+## <a name="licensing-issues"></a><a name="_core_licensing_issues"></a>許可問題
 
-如果您想要在網頁上使用授權的控制項, 您必須確認授權合約允許其在網際網路上使用, 並為其建立授權套件檔案 (LPK)。
+如果要在 Web 頁上使用許可控制項,則必須驗證許可協定是否允許在 Internet 上使用該控制項,並為其創建許可證套件檔 (LPK)。
 
-如果執行 Internet Explorer 的電腦未獲授權使用該控制項, 授權的 ActiveX 控制項將無法在 HTML 網頁中正確載入。 例如, 如果授權控制項是使用視覺效果C++所建立, 則使用控制項的 HTML 網頁將會在建立控制項的電腦上正確載入, 但除非包含授權資訊, 否則不會載入到其他電腦上。
+如果運行 Internet Explorer 的電腦未獲得使用該控制件的許可,則許可的 ActiveX 控制件將無法正確載入 HTML 頁中。 例如,如果使用 Visual C++構建許可控制項,則使用該控制項的 HTML 頁將正確載入到生成控制項的電腦上,但除非包含許可資訊,否則該控制檔不會載入到其他電腦上。
 
-若要在 Internet Explorer 中使用已授權的 ActiveX 控制項, 您必須檢查廠商的授權合約, 確認該控制項的授權允許:
+要在網際網路資源管理員使用授權的 ActiveX 控制項,必須檢查供應商的授權協定,以驗證控制項的授權是否允許:
 
-- 轉散發
+- 可轉散發
 
-- 在網際網路上使用控制項
+- 網際網路控制的使用
 
-- 使用 Codebase 參數
+- 使用程式庫參數
 
-若要在 nonlicensed 電腦的 HTML 網頁中使用授權的控制項, 您必須產生授權封裝檔案 (LPK)。 LPK 檔案包含 HTML 網頁中授權控制項的執行時間授權。 此檔案是透過 LPK_TOOL 所產生。隨附于 ActiveX SDK 的 EXE。
+要在非授權電腦上的 HTML 頁中使用許可控制項,必須生成許可證套件檔 (LPK)。 LPK 檔包含 HTML 頁中許可控制件的執行時許可證。 此文件通過LPK_TOOL生成。ActiveX SDK 附帶的 EXE。
 
-#### <a name="to-create-an-lpk-file"></a>若要建立 LPK 檔案
+#### <a name="to-create-an-lpk-file"></a>建立 LPK 檔案
 
-1. 執行 LPK_TOOL。在授權使用控制項的電腦上的 EXE。
+1. 運行LPK_TOOL。授權使用該控制件的電腦上的 EXE。
 
-1. 在 [**授權套件撰寫工具**] 對話方塊的 [**可用的控制項**] 清單方塊中, 選取要在 HTML 頁面上使用的每個授權 ActiveX 控制項, 然後按一下 [**新增**]。
+1. 在 **「許可證套件創作工具」** 對話方塊中,在 **「可用控制件」** 清單框中,選擇將在 HTML 頁面上使用的每個許可的 ActiveX 控制件,然後按下「**添加**」。
 
-1. 按一下 **儲存 &** 結束, 然後輸入 LPK 檔案的名稱。 這會建立 LPK 檔案並關閉應用程式。
+1. 按下 **「保存&退出**併鍵入 LPK 檔的名稱。 這將創建 LPK 檔並關閉應用程式。
 
-#### <a name="to-embed-a-licensed-control-on-an-html-page"></a>在 HTML 頁面上內嵌授權的控制項
+#### <a name="to-embed-a-licensed-control-on-an-html-page"></a>嵌入 HTML 頁面內嵌入授權的元件
 
-1. 編輯您的 HTML 網頁。 在 [HTML] 頁面中, \<將 [授權管理員] 物件的物件 > 標籤\<插入至任何其他物件 > 標記之前。 授權管理員是一種與 Internet Explorer 一起安裝的 ActiveX 控制項。 其類別識別碼如下所示。 將授權管理員物件的 LPKPath 屬性設定為 LPK 檔案的路徑和名稱。 每個 HTML 頁面只能有一個 LPK 檔案。
+1. 編輯 HTML 頁面。 在 HTML 頁\<中,\<在任何其他 OBJECT> 標記之前插入許可證管理器物件的 OBJECT>标记。 許可證管理員是一個 ActiveX 控制項,隨 Internet 資源管理器一起安裝。 其類 ID 如下所示。 將授權管理員物件的 LPKPath 屬性設置為 LPK 檔的路徑和名稱。 每個 HTML 頁只能有一個 LPK 檔。
 
 ```
 <OBJECT CLASSID = "clsid:5220cb21-c88d-11cf-b347-00aa00a28331">
@@ -201,13 +201,13 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 </OBJECT>
 ```
 
-1. 在 [授權管理員] 標籤之後, 為授權的控制項插入物件>標記。\<
+1. 在\<許可證管理器標記後插入許可控制項的物件>標記。
 
-   例如, 顯示 Microsoft 遮罩編輯控制項的 HTML 頁面如下所示。 第一個類別識別碼是用於授權管理員控制項, 第二個類別識別碼是用於遮罩編輯控制項。 將標籤變更為指向您稍早建立之 .lpk 檔案的相對路徑, 並新增物件標記, 包括控制項的類別 ID。
+   例如,顯示 Microsoft 遮罩編輯控制件的 HTML 頁面如下所示。 第一類 ID 用於許可證管理器控制項,第二類 ID 用於「遮罩編輯」控制件。 更改標記以指向之前創建的 .lpk 檔的相對路徑,並添加物件標記,包括控制項的類 ID。
 
-1. 如果使用\<NCompass ActiveX 外掛程式, 請插入您的 LPK 檔案的內嵌 > 屬性。
+1. 如果使用\<NCompass ActiveX 外掛程式,請插入 LPK 檔的 EMBED>属性。
 
-   如果您的控制項可以在其他啟用作用中的瀏覽器上查看 (例如, 使用 NCompass ActiveX 外掛程式的 Netscape), 您必須\<新增內嵌 > 語法, 如下所示。
+   如果可以在其他啟用"活動"的瀏覽器上查看您的控制項(例如,使用 NCompass ActiveX 外掛程式的 Netscape),\<則必須添加 EMBED>语法,如下所示。
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">
@@ -220,55 +220,55 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 </OBJECT>
 ```
 
-如需控制授權的詳細資訊, [請參閱 ActiveX 控制項:授權 ActiveX 控制項](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
+有關控制項授權的詳細資訊,請參閱[ActiveX 控制件:授權 ActiveX 控制件](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
 
-##  <a name="_core_signing_code"></a>簽署程式碼
+## <a name="signing-code"></a><a name="_core_signing_code"></a>簽署代碼
 
-程式碼簽署是設計用來識別程式碼的來源, 並確保程式碼在簽署之後不會變更。 視瀏覽器的安全性設定而定, 可能會在下載程式代碼之前警告使用者。 使用者可以選擇信任特定的憑證擁有者或公司, 在此情況下, 將會下載受信任的程式碼而不發出警告。 程式碼經過數位簽署, 以避免遭到篡改。
+代碼簽名旨在標識代碼源,並保證代碼自簽名以來未發生更改。 根據瀏覽器安全設置,在下載代碼之前可能會警告使用者。 用戶可以選擇信任某些證書擁有者或公司,在這種情況下,由受信任者簽名的代碼將在沒有警告的情況下下載。 代碼通過數字簽名,以避免篡改。
 
-請確定您的最終程式碼已簽署, 讓您的控制項可以自動下載, 而不會顯示信任警告訊息。 如需如何簽署程式碼的詳細資訊, 請參閱 ActiveX SDK 中有關 Authenticode 的檔, 並參閱[簽署 CAB](/windows/win32/devnotes/cabinet-api-functions)檔案。
+請確保您的最終代碼已簽名,以便可以自動下載控制項,而無需顯示信任警告消息。 有關如何對程式碼進行簽署的詳細資訊,請查看 ActiveX SDK 中的身份驗證文件,請參閱簽署[CAB 檔](/windows/win32/devnotes/cabinet-api-functions)。
 
-視信任和瀏覽器的安全性層級設定而定, 可能會顯示憑證以識別簽署人員或公司。 如果安全性層級為 [無], 或已簽署控制項的憑證擁有者是受信任的, 則不會顯示憑證。 如需瀏覽器安全性設定如何判斷您的控制項是否已下載並顯示憑證的詳細資訊, 請參閱[Internet Explorer 瀏覽器安全性層級和控制項行為](#_core_internet_explorer_browser_safety_levels_and_control_behavior)。
+根據信任和瀏覽器安全級別設置,可能會顯示證書以標識簽名人或公司。 如果安全級別為 none,或者簽名控制件的證書擁有者受信任,將不會顯示證書。 有關如何下載控制項和顯示憑證的詳細資訊,請參閱[Internet Explorer 瀏覽器瀏覽器安全等級和控制行為](#_core_internet_explorer_browser_safety_levels_and_control_behavior)。
 
-數位簽章保證程式碼經過簽署後, 尚未變更。 程式碼的雜湊會被採用, 並內嵌在憑證中。 此雜湊稍後會與在程式碼下載後但執行之前所建立的程式碼雜湊進行比較。 Verisign 之類的公司可以提供簽署程式碼所需的私用金鑰和公開金鑰。 ActiveX SDK 隨附 MakeCert, 這是用來建立測試憑證的公用程式。
+數位簽名保證代碼自簽名以來未更改。 獲取代碼的哈希並嵌入到證書中。 稍後,此哈希與下載代碼後但在運行之前獲取的代碼的哈希進行比較。 威瑞信等公司可以提供簽名代碼所需的私鑰和公開金鑰。 ActiveX SDK 附帶 MakeCert,這是一個用於創建測試證書的實用程式。
 
-##  <a name="_core_managing_the_palette"></a>管理調色板
+## <a name="managing-the-palette"></a><a name="_core_managing_the_palette"></a>管理調色盤
 
-容器會決定調色板, 並將其提供為環境屬性**DISPID_AMBIENT_PALETTE**。 容器 (例如 Internet Explorer) 會選擇頁面上所有 ActiveX 控制項所使用的調色板, 以判斷自己的調色板。 這可避免顯示閃爍, 並顯示一致的外觀。
+容器確定調色板,並將其作為環境屬性提供 **,DISPID_AMBIENT_PALETTE**。 容器(例如,Internet Explorer)選擇頁面上所有 ActiveX 控制項使用的調色板來確定自己的調色板。 這樣可以防止顯示閃爍,並呈現一致的外觀。
 
-控制項可以覆寫`OnAmbientPropertyChange`以處理對調色板的變更通知。
+控制項可以重寫`OnAmbientPropertyChange`以處理對調色板的更改通知。
 
-控制項可以覆寫`OnGetColorSet` , 以傳回用來繪製調色板的色彩集。 容器會使用傳回值來判斷控制項是否為調色板感知。
+控制項可以重寫`OnGetColorSet`以返回顏色集以繪製調色板。 容器使用返回值來確定控制項是否具有調色板感知性。
 
-在 OCX 96 指導方針底下, 控制項必須一律在背景中實現其調色板。
+根據 OCX 96 準則,控件必須始終在後台實現其調色板。
 
-不使用環境調色板屬性的舊版容器會傳送 WM_QUERYNEWPALETTE 和 WM_PALETTECHANGED 訊息。 控制項可以覆寫`OnQueryNewPalette`和`OnPaletteChanged`以處理這些訊息。
+不使用環境調色板屬性的舊容器將發送WM_QUERYNEWPALETTE和WM_PALETTECHANGED消息。 控件可以重寫`OnQueryNewPalette`和處理`OnPaletteChanged`這些消息。
 
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a>Internet Explorer 瀏覽器安全性層級和控制行為
+## <a name="internet-explorer-browser-safety-levels-and-control-behavior"></a><a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a>網際網路瀏覽器瀏覽器安全等級和控制行為
 
-瀏覽器具有安全性層級的選項, 可由使用者進行設定。 由於網頁可包含可能會危害使用者電腦的活動內容, 因此瀏覽器允許使用者選取安全性層級的選項。 視瀏覽器執行安全層級的方式而定, 可能完全不會下載控制項, 或是會顯示憑證或警告訊息, 讓使用者在執行時間選擇是否要下載控制項。 在 Internet Explorer 上, [高]、[中] 和 [低] 安全性層級下 ActiveX 控制項的行為如下所示。
+瀏覽器具有安全級別選項,由使用者配置。 由於網頁可能包含可能損害使用者計算機的活動內容,因此瀏覽器允許使用者選擇安全級別選項。 根據瀏覽器實現安全級別的方式,控件可能根本不下載,或者將顯示證書或警告消息,以允許使用者在運行時選擇是否下載控件。 下面列出了 Internet Explorer 上高、中、低安全級別下 ActiveX 控件的行為。
 
-### <a name="high-safety-mode"></a>高安全性模式
+### <a name="high-safety-mode"></a>高安全模式
 
-- 不會下載未簽署的控制項。
+- 將不會下載未簽名的控制項。
 
-- 如果未受信任, 已簽署的控制項將會顯示憑證 (使用者可以選擇一律信任來自此憑證擁有者的程式碼, 從現在開始)。
+- 如果不受信任,簽名的控制項將顯示證書(用戶可以選擇一個選項,以便從現在起始終信任來自此證書擁有者的代碼)。
 
-- 只有標示為 safe 的控制項才會有持續性資料和/或可編寫腳本。
+- 只有標記為安全的控制項才會具有持久性資料和/或可編寫腳本。
 
-### <a name="medium-safety-mode"></a>中安全性模式
+### <a name="medium-safety-mode"></a>中型安全模式
 
-- 未簽署的控制項在下載前會顯示警告。
+- 未簽名的控制器將在下載前顯示警告。
 
-- 已簽署的控制項將會顯示憑證 (如果未受信任)。
+- 如果不受信任,簽名的控制項將顯示證書。
 
-- 未標示為安全的控制項將會顯示警告。
+- 未標記為安全的控制項將顯示警告。
 
-### <a name="low-safety-mode"></a>低安全性模式
+### <a name="low-safety-mode"></a>低安全模式
 
-- 下載控制項而不發出警告。
+- 在未發出警告的情況下下載控制項。
 
-- 腳本和持續性會在沒有警告的情況下發生。
+- 腳本和持久性在沒有任何警告的情況下進行。
 
 ## <a name="see-also"></a>另請參閱
 

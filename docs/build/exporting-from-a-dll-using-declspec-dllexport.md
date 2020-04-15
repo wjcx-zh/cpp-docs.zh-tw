@@ -9,28 +9,28 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: c84a8eca25c90e0790ec8c4991d9d5a116afa59f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 075962758773660085ae0b98b668c264524cc6aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328587"
 ---
 # <a name="exporting-from-a-dll-using-__declspecdllexport"></a>使用 __declspec(dllexport) 從 DLL 匯出
 
-您可以使用 **__declspec （dllexport）** 關鍵字，從 DLL 匯出資料、函式、類別或類別成員函式。 **__declspec （dllexport）** 會將 export 指示詞加入至目的檔，因此您不需要使用 .def 檔案。
+您可以使用 **__declspec(dllexport)** 關鍵字從 DLL 匯出資料、函數、類或類成員函數。 **__declspec(dllexport)** 將匯出指令添加到物件檔,因此無需使用 .def 檔案。
 
-嘗試匯出裝飾C++的函式名稱時，這是最明顯的便利性。 因為沒有名稱裝飾的標準規格，所以匯出函式的名稱可能會在編譯器版本之間變更。 如果您使用 **__declspec （dllexport）** ，則只需要重新編譯 DLL 和相依的 .exe 檔案，以考慮任何命名慣例的變更。
+在嘗試匯出修飾C++函數名稱時,這種便利性最為明顯。 由於沒有名稱修飾的標準規範,匯出函數的名稱可能會在編譯器版本之間更改。 如果使用 **__declspec(dllexport),** 則重新編譯 DLL 和從屬 .exe 檔僅需要考慮任何命名約定更改。
 
-許多匯出指示詞（例如序數、NONAME 和私用）只能在 .def 檔案中進行，而且沒有任何方法可以在不使用 .def 檔的情況下指定這些屬性。 不過，除了使用 .def 檔案之外，使用 **__declspec （dllexport）** 並不會造成組建錯誤。
+許多匯出指令(如指令指令、NONAME 和 PRIVATE)只能在 .def 檔中進行,並且沒有 .def 檔案無法指定這些屬性。 但是,除了使用 .def 檔外,使用 **__declspec(dllexport)** 不會導致生成錯誤。
 
-若要匯出函式，如果已指定關鍵字，則 **__declspec （dllexport）** 關鍵字必須出現在呼叫慣例關鍵字的左邊。 例如：
+要匯出函數,如果指定了關鍵字,**則__declspec(dllexport)** 關鍵字必須顯示在調用約定關鍵字的左側。 例如：
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
 ```
 
-若要匯出類別中的所有公用資料成員和成員函式，關鍵字必須出現在類別名稱的左邊，如下所示：
+要匯出類中的所有公共資料成員和成員函數,關鍵字必須顯示在類名稱的左側,如下所示:
 
 ```
 class __declspec(dllexport) CExampleExport : public CObject
@@ -38,27 +38,27 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 > [!NOTE]
->  `__declspec(dllexport)` 不能套用至具有 `__clrcall` 呼叫慣例的函式。
+> `__declspec(dllexport)`不能應用於具有調用約定的`__clrcall`函數。
 
-建立 DLL 時，您通常會建立標頭檔，其中包含您要匯出的函式原型和/或類別，並將 **__declspec （dllexport）** 新增至標頭檔中的宣告。 若要讓您的程式碼更容易閱讀，請為 **__declspec （dllexport）** 定義宏，並使用宏搭配您要匯出的每個符號：
+構建 DLL 時,通常會創建包含要匯出的函數原型和/或類的標頭檔,並將 **__declspec(dllexport)** 添加到標頭檔中的聲明。 要使程式碼更具可讀性,請為 **__declspec(dllexport)** 定義巨集,並將巨集與要匯出的每個符號一起使用:
 
 ```
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec （dllexport）** 會在 DLL 的匯出資料表中儲存函數名稱。 如果您想要優化資料表的大小，請參閱[依序數而不是依名稱匯出 DLL 中的函數](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
+**__declspec(dllexport)** 在 DLL 匯出表中儲存函數名稱。 如果要優化表的大小,請參閱[按 Ordinal 而不是按名稱 從 DLL 匯出函數](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
 
 ## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [使用 .def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
+- [使用 .def 檔案從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 AFX_EXT_CLASS 匯出和匯入](exporting-and-importing-using-afx-ext-class.md)
+- [使用AFX_EXT_CLASS匯出及匯入](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出C++函數以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出C++函數,用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式以用於 C 或C++語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函數,用於 C 或 C++語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
+- [確定要使用的匯出方法](determining-which-exporting-method-to-use.md)
 
 - [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -66,11 +66,11 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [__Declspec 關鍵字](../cpp/declspec.md)
+- [__declspec關鍵字](../cpp/declspec.md)
 
 - [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [相互匯入](mutual-imports.md)
+- [相互進口](mutual-imports.md)
 
 ## <a name="see-also"></a>另請參閱
 

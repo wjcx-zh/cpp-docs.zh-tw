@@ -30,12 +30,12 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5637a4709e90bb14caff3fe4e396487e62e213e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416757"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360355"
 ---
 # <a name="coccmanager-class"></a>COccManager 類別
 
@@ -53,24 +53,24 @@ class COccManager : public CNoTrackObject
 
 |名稱|描述|
 |----------|-----------------|
-|[COccManager：： CreateContainer](#createcontainer)|建立 `COleContainer` 物件。|
-|[COccManager::CreateDlgControls](#createdlgcontrols)|建立由相關聯 `COleContainer` 物件主控的 ActiveX 控制項。|
-|[COccManager：： CreateSite](#createsite)|建立 `COleClientSite` 物件。|
-|[COccManager::GetDefBtnCode](#getdefbtncode)|抓取預設按鈕的程式碼。|
-|[COccManager::IsDialogMessage](#isdialogmessage)|決定對話訊息的目標。|
-|[COccManager::IsLabelControl](#islabelcontrol)|判斷指定的控制項是否為標籤控制項。|
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|判斷目前的助憶鍵是否符合指定之控制項的助憶鍵。|
-|[COccManager：： OnEvent](#onevent)|嘗試處理指定的事件。|
-|[COccManager：:P ostCreateDialog](#postcreatedialog)|釋放在對話建立期間配置的資源。|
-|[COccManager：:P reCreateDialog](#precreatedialog)|處理 ActiveX 控制項的對話方塊範本。|
-|[COccManager::SetDefaultButton](#setdefaultbutton)|切換指定控制項的預設狀態。|
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|將任何現有的 ActiveX 控制項與指定之對話方塊範本中的通用控制項隔開。|
+|[COcc 管理員:建立容器](#createcontainer)|建立 `COleContainer` 物件。|
+|[COcc管理員::創建Dlg控制](#createdlgcontrols)|創建由關聯`COleContainer`物件託管的 ActiveX 控制件。|
+|[COcc經理:創建網站](#createsite)|建立 `COleClientSite` 物件。|
+|[COcc經理:取得DefBtn代碼](#getdefbtncode)|檢索默認按鈕的代碼。|
+|[COcc經理::對話消息](#isdialogmessage)|確定對話框消息的目標。|
+|[COcc管理員::是標籤控制](#islabelcontrol)|確定指定的控制項是否為標籤控制項。|
+|[COcc經理:是匹配的Mnemonic](#ismatchingmnemonic)|確定當前助記符是否與指定控制項的助記符匹配。|
+|[COcc經理:在活動](#onevent)|嘗試處理指定事件。|
+|[COcc經理::P創造對話](#postcreatedialog)|釋放在創建對話框期間分配的資源。|
+|[COcc經理::P重新創建對話](#precreatedialog)|處理 ActiveX 控件的對話方塊樣本。|
+|[COcc 管理員:設定預設按鈕](#setdefaultbutton)|切換指定控制項的預設狀態。|
+|[COcc管理員:分割對話範本](#splitdialogtemplate)|將任何現有的 ActiveX 控制件與指定對話方塊樣本中的常用控制件分開。|
 
 ## <a name="remarks"></a>備註
 
-基類（`CNoTrackObject`）是未記載的基類（位於 AFXTLS 中。H）。 由 MFC 架構所設計，衍生自 `CNoTrackObject` 類別的類別不會受到記憶體流失偵測的豁免。 不建議您直接從 `CNoTrackObject`衍生。
+基類`CNoTrackObject`是未記錄的基類(位於 AFXTLS 中)。H)。 設計為供 MFC 框架使用,派生自`CNoTrackObject`類的 類不受記憶體洩漏檢測。 不建議您直接從`CNoTrackObject`派生。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CNoTrackObject`
 
@@ -78,11 +78,11 @@ class COccManager : public CNoTrackObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxocc。h
+**標題:** afxocc.h
 
-##  <a name="createcontainer"></a>COccManager：： CreateContainer
+## <a name="coccmanagercreatecontainer"></a><a name="createcontainer"></a>COcc 管理員:建立容器
 
-由架構呼叫以建立控制項容器。
+由框架調用以創建控制項容器。
 
 ```
 virtual COleControlContainer* CreateContainer(CWnd* pWnd);
@@ -90,20 +90,20 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-與自訂網站容器相關聯之 window 物件的指標。
+*pwnd*<br/>
+指向與自定義網站容器關聯的視窗物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-新建立之容器的指標;否則為 Null。
+指向新創建的容器的指標;指向新創建的容器的指標。否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-如需建立自訂網站的詳細資訊，請參閱[COleControlContainer：： AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)。
+有關建立自訂網站的詳細資訊,請參閱[COleControl 容器::附加控制網站](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)。
 
-##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls
+## <a name="coccmanagercreatedlgcontrols"></a><a name="createdlgcontrols"></a>COcc管理員::創建Dlg控制
 
-呼叫此函式可建立*pOccDialogInfo*參數所指定的 ActiveX 控制項。
+呼叫此函數以創建由*pOccDialogInfo*參數指定的 ActiveX 控制項。
 
 ```
 virtual BOOL CreateDlgControls(
@@ -119,25 +119,25 @@ virtual BOOL CreateDlgControls(
 
 ### <a name="parameters"></a>參數
 
-*pWndParent*<br/>
-對話方塊物件父系的指標。
+*pwnd 父級*<br/>
+指向對話框物件的父級的指標。
 
-*lpszResourceName*<br/>
-要建立之資源的名稱。
+*lpsz 資源名稱*<br/>
+正在建立的資源的名稱。
 
-*pOccDialogInfo*<br/>
-用來建立對話方塊物件之對話方塊範本的指標。
+*pOccDialog 資訊*<br/>
+指向用於創建對話框物件的對話框範本的指標。
 
-*lpResource*<br/>
-資源的指標。
+*lp資源*<br/>
+指向資源的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立控制項，則為非零;否則為零。
+如果控件已成功創建,則非零;否則為零。
 
-##  <a name="createsite"></a>COccManager：： CreateSite
+## <a name="coccmanagercreatesite"></a><a name="createsite"></a>COcc經理:創建網站
 
-由架構呼叫，以建立由*pCtrlCont*所指向之容器所裝載的控制網站。
+由框架調用以創建一個控制網站,由*pCtrlCont*指向的容器託管。
 
 ```
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
@@ -146,21 +146,21 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ### <a name="parameters"></a>參數
 
 *pCtrlCont*<br/>
-裝載新控制項網站之控制項容器的指標。
+指向承載新控制件網站的控制容器的指標。
 
 ### <a name="return-value"></a>傳回值
 
-新建立之控制項網站的指標。
+指向新創建的控制件網站的指標。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式，以使用[COleControlSite](../../mfc/reference/colecontrolsite-class.md)衍生的類別來建立自訂控制項網站。
+重寫此函數,使用[COleControlControlSite](../../mfc/reference/colecontrolsite-class.md)派生類創建自定義控制項網站。
 
-每個控制項容器都可以裝載多個網站。 建立具有多個 `CreateSite`呼叫的其他網站。
+每個控件容器可以承載多個網站。 建立有多個呼叫的其他網站`CreateSite`。
 
-##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode
+## <a name="coccmanagergetdefbtncode"></a><a name="getdefbtncode"></a>COcc經理:取得DefBtn代碼
 
-呼叫此函式可判斷控制項是否為預設的 [推送] 按鈕。
+呼叫此函數以確定控制項是否為預設按鈕。
 
 ```
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
@@ -168,22 +168,22 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-包含按鈕控制項的視窗物件。
+*pwnd*<br/>
+包含按鈕控制的視窗物件。
 
 ### <a name="return-value"></a>傳回值
 
 下列其中一個值：
 
-- DLGC_DEFPUSHBUTTON 控制項是對話方塊中的預設按鈕。
+- DLGC_DEFPUSHBUTTON控制項是對話框中的預設按鈕。
 
-- DLGC_UNDEFPUSHBUTTON 控制項不是對話方塊中的預設按鈕。
+- DLGC_UNDEFPUSHBUTTON控制項不是對話框中的預設按鈕。
 
 - **0**控制項不是按鈕。
 
-##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage
+## <a name="coccmanagerisdialogmessage"></a><a name="isdialogmessage"></a>COcc經理::對話消息
 
-由架構呼叫以判斷訊息是否適用于指定的對話方塊，如果是，則會處理訊息。
+由框架調用以確定消息是否用於指定的對話方塊,如果是,則處理消息。
 
 ```
 virtual BOOL IsDialogMessage(
@@ -193,25 +193,25 @@ virtual BOOL IsDialogMessage(
 
 ### <a name="parameters"></a>參數
 
-*pWndDlg*<br/>
-訊息之預定目標對話的指標。
+*普恩德德格*<br/>
+指向消息的預期目標對話框的指標。
 
 *lpMsg*<br/>
-`MSG` 結構的指標，其中包含要檢查的訊息。
+指向包含要檢查`MSG`的消息的結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果已處理訊息，則為非零值;否則為零。
+處理消息時非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
-`IsDialogMessage` 的預設行為是檢查鍵盤訊息，並將其轉換成對應對話方塊的選取專案。 例如，按下 TAB 鍵時，會選取下一個控制項或控制項群組。
+的默認行為`IsDialogMessage`是檢查鍵盤消息並將其轉換為相應對話框的選擇。 例如,按下 TAB 鍵時,選擇下一個控制項或控制元件元件。
 
-覆寫此函式，為傳送至指定對話的訊息提供自訂行為。
+重寫此函數,為發送到指定對話方塊的消息提供自定義行為。
 
-##  <a name="islabelcontrol"></a>COccManager::IsLabelControl
+## <a name="coccmanagerislabelcontrol"></a><a name="islabelcontrol"></a>COcc管理員::是標籤控制
 
-呼叫此函式可判斷指定的控制項是否為標籤控制項。
+呼叫此函數以確定指定的控制項是否為標籤控制項。
 
 ```
 static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);
@@ -220,20 +220,20 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-包含控制項之視窗的指標。
+*pwnd*<br/>
+指向包含控制項的視窗的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果控制項是標籤，則為非零值;否則為零
+如果控件是標籤,則非零;否則零
 
 ### <a name="remarks"></a>備註
 
-標籤控制項就像順序中下一個控制項的標籤一樣。
+標籤控制項類似於排序中下一個控制項的標籤。
 
-##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic
+## <a name="coccmanagerismatchingmnemonic"></a><a name="ismatchingmnemonic"></a>COcc經理:是匹配的Mnemonic
 
-呼叫此函式可判斷目前的助憶鍵是否與控制項所表示的相符。
+呼叫此函數以確定當前助記符是否與控制項表示的表示匹配。
 
 ```
 static BOOL AFX_CDECL IsMatchingMnemonic(
@@ -247,21 +247,21 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-包含控制項之視窗的指標。
+*pwnd*<br/>
+指向包含控制項的視窗的指標。
 
 *lpMsg*<br/>
-包含要比對之助憶鍵的訊息指標。
+指向要匹配的助記符的消息的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果助憶鍵與控制項相符，則為非零值。否則為零
+如果助記符與控件匹配,則非零;否則零
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onevent"></a>COccManager：： OnEvent
+## <a name="coccmanageronevent"></a><a name="onevent"></a>COcc經理:在活動
 
-由架構呼叫以處理指定的事件。
+由框架調用以處理指定的事件。
 
 ```
 virtual BOOL OnEvent(
@@ -274,28 +274,28 @@ virtual BOOL OnEvent(
 ### <a name="parameters"></a>參數
 
 *pCmdTarget*<br/>
-嘗試處理事件之 `CCmdTarget` 物件的指標
+測試事件`CCmdTarget`的物件的指標
 
 *idCtrl*<br/>
-控制項的資源識別碼。
+控件的資源識別碼。
 
 *pEvent*<br/>
 正在處理的事件。
 
 *pHandlerInfo*<br/>
-如果不是 Null，`OnEvent` 會填入 `AFX_CMDHANDLERINFO` 結構的 `pTarget` 和 `pmf` 成員，而不是分派命令。 通常，這個參數應該是 Null。
+`OnEvent`如果不是 NULL, 請填`pTarget``pmf`寫結構`AFX_CMDHANDLERINFO`的和成員,而不是調度命令。 通常,此參數應為 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-如果事件已處理，則為非零，否則為零。
+如果處理了事件,則非零,否則為零。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式以自訂預設事件處理常式。
+重寫此函數以自定義預設事件處理過程。
 
-##  <a name="precreatedialog"></a>COccManager：:P reCreateDialog
+## <a name="coccmanagerprecreatedialog"></a><a name="precreatedialog"></a>COcc經理::P重新創建對話
 
-由架構呼叫，以處理 ActiveX 控制項的對話方塊範本，然後再建立實際的對話方塊。
+框架調用在創建實際對話方塊之前處理 ActiveX 控制件的對話方塊樣本。
 
 ```
 virtual const DLGTEMPLATE* PreCreateDialog(
@@ -305,25 +305,25 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 
 ### <a name="parameters"></a>參數
 
-*pOccDialogInfo*<br/>
-`_AFX_OCC_DIALOG_INFO` 結構，其中包含對話方塊範本以及對話方塊所裝載的任何 ActiveX 控制項的資訊。
+*pOccDialog 資訊*<br/>
+包含`_AFX_OCC_DIALOG_INFO`對話方塊範本和對話方塊託管的任何 ActiveX 控制件的資訊。
 
 *pOrigTemplate*<br/>
-要在建立對話方塊時使用之對話方塊範本的指標。
+指向用於創建對話框的對話框的對話框的指標。
 
 ### <a name="return-value"></a>傳回值
 
-用來建立對話方塊之對話方塊範本結構的指標。
+指向用於創建對話框的對話框的對話框範本結構的指標。
 
 ### <a name="remarks"></a>備註
 
-預設行為會呼叫 `SplitDialogTemplate`，判斷是否有任何 ActiveX 控制項存在，然後傳回結果對話方塊範本。
+默認行為調用`SplitDialogTemplate`,確定是否存在任何 ActiveX 控件,然後返回由此產生的對話方塊樣本。
 
-覆寫此函式，以自訂建立裝載 ActiveX 控制項之對話方塊的進程。
+重寫此函數以自定義創建承載 ActiveX 控制件的對話方塊的過程。
 
-##  <a name="postcreatedialog"></a>COccManager：:P ostCreateDialog
+## <a name="coccmanagerpostcreatedialog"></a><a name="postcreatedialog"></a>COcc經理::P創造對話
 
-由架構呼叫以釋放配置給對話方塊範本的記憶體。
+框架調用以釋放分配給對話框範本的記憶體。
 
 ```
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
@@ -331,18 +331,18 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 
 ### <a name="parameters"></a>參數
 
-*pOccDialogInfo*<br/>
-`_AFX_OCC_DIALOG_INFO` 結構，其中包含對話方塊範本以及對話方塊所裝載的任何 ActiveX 控制項的資訊。
+*pOccDialog 資訊*<br/>
+包含`_AFX_OCC_DIALOG_INFO`對話方塊範本和對話方塊託管的任何 ActiveX 控制件的資訊。
 
 ### <a name="remarks"></a>備註
 
-這個記憶體是由對 `SplitDialogTemplate`的呼叫所配置，並用於對話方塊中任何裝載的 ActiveX 控制項。
+此記憶體由 調用`SplitDialogTemplate`分配給分配,並用於對話方塊中的任何託管 ActiveX 控制件。
 
-覆寫此函式，以自訂清除對話方塊物件所使用之任何資源的進程。
+重寫此函數以自定義清理對話框物件使用的任何資源的過程。
 
-##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton
+## <a name="coccmanagersetdefaultbutton"></a><a name="setdefaultbutton"></a>COcc 管理員:設定預設按鈕
 
-呼叫此函式可將控制項設定為預設按鈕。
+調用此函數將控制項設定為預設按鈕。
 
 ```
 static void AFX_CDECL SetDefaultButton(
@@ -352,11 +352,11 @@ static void AFX_CDECL SetDefaultButton(
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-包含控制項之視窗的指標。
+*pwnd*<br/>
+指向包含控制項的視窗的指標。
 
-*bDefault*<br/>
-如果控制項應該成為預設按鈕，則為非零。否則為零。
+*b預設*<br/>
+如果控件應成為默認按鈕,則非零;否則為零。
 
 ### <a name="return-value"></a>傳回值
 
@@ -365,11 +365,11 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  控制項必須設定 OLEMISC_ACTSLIKEBUTTON 狀態位。 如需 OLEMISC 旗標的詳細資訊，請參閱 Windows SDK 中的[OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc)主題。
+> 控件必須設置OLEMISC_ACTSLIKEBUTTON狀態位。 有關OLEMISC標誌的詳細資訊,請參閱Windows SDK中的[OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc)主題。
 
-##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate
+## <a name="coccmanagersplitdialogtemplate"></a><a name="splitdialogtemplate"></a>COcc管理員:分割對話範本
 
-由架構呼叫，以從通用對話方塊控制項分割 ActiveX 控制項。
+由框架調用以從公共對話框控制項拆分 ActiveX 控制件。
 
 ```
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -380,28 +380,28 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ### <a name="parameters"></a>參數
 
 *pTemplate*<br/>
-要檢查之對話方塊範本的指標。
+指向要檢查的對話框範本的指標。
 
-*ppOleDlgItems*<br/>
-屬於 ActiveX 控制項之對話方塊專案的指標清單。
+*ppOleDlg 專案*<br/>
+指向作為 ActiveX 控制件的對話方塊項的指標清單。
 
 ### <a name="return-value"></a>傳回值
 
-僅包含非 ActiveX 控制項之對話方塊範本結構的指標。 如果沒有 ActiveX 控制項存在，則會傳回 Null。
+指向僅包含非 ActiveX 控制件的對話方塊範本結構的指標。 如果不存在 ActiveX 控制項,則傳回 NULL。
 
 ### <a name="remarks"></a>備註
 
-如果找到任何 ActiveX 控制項，則會分析範本，並建立只包含非 ActiveX 控制項的新範本。 在此程式期間找到的任何 ActiveX 控制項都會加入至*ppOleDlgItems*。
+如果找到任何 ActiveX 控制件,將分析範本,並創建新樣本,其中僅包含非 ActiveX 控制件。 在此過程中找到的任何 ActiveX 控制項都添加到*ppOleDlgItems*中。
 
-如果範本中沒有任何 ActiveX 控制項，則會傳回 Null *。*
+如果範本中沒有 ActiveX 控制項,則傳*回 NULL。*
 
 > [!NOTE]
->  配置給新範本的記憶體會在 `PostCreateDialog` 函式中釋放。
+> 為新範本分配的記憶體將在`PostCreateDialog`函數中釋放。
 
-覆寫此函式以自訂此進程。
+重寫此函數以自定義此過程。
 
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[COleControlSite 類別](../../mfc/reference/colecontrolsite-class.md)<br/>
+[COle 控制網站類別](../../mfc/reference/colecontrolsite-class.md)<br/>
 [COleControlContainer 類別](../../mfc/reference/colecontrolcontainer-class.md)

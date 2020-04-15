@@ -1,46 +1,47 @@
 ---
-title: / SOURCELINK （包括 Sourcelink PDB 檔案）
-ms.date: 08/20/2018
+title: /SOURCELINK (在 PDB 中納入 Sourcelink 檔案)
+description: 微軟C++/SOURCELINK連結器選項的參考指南。
+ms.date: 03/31/2020
 f1_keywords:
 - /sourcelink
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde55c401e17f7b3c84ffcdad29dda2badcc260b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317948"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336060"
 ---
-# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK （包含來源連結 PDB 檔案）
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/SOURCELINK(在 PDB 中包括源連結檔案)
 
-指定要包含在連結器所產生的 PDB 檔案中的來源連結組態檔。
+指定要包含在連結器生成的 PDB 檔中的來源連結設定檔。
 
 ## <a name="syntax"></a>語法
 
-> **/ SOURCELINK:**_檔名_
+> **`/SOURCELINK:`**_`filename`_
 
 ## <a name="arguments"></a>引數
 
-*filename*<br/>
-指定的 JSON 格式組態檔，其中包含 url 的本機檔案路徑的簡單對應，可以擷取原始程式檔偵錯工具的顯示。 此檔案的格式資訊，請參閱[來源連結 JSON 結構描述](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema)。
+*檔案名稱*<br/>
+指定 JSON 格式的設定檔,該檔包含本地端檔案路徑的簡單映射到 URL,以便源檔在除錯器中顯示。 有關此檔案格式的詳細資訊,請參閱[源連結 JSON 架構](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md#source-link-json-schema)。
 
 ## <a name="remarks"></a>備註
 
-來源連結是語言和原始檔控制無從驗證的系統，可提供來源偵錯二進位檔。 來源連結支援原生C++開始在 Visual Studio 2017 版本 15.8 的二進位檔。 如需來源連結的概觀，請參閱 <<c0> [ 來源連結](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)。 如需如何在專案中使用來源連結，以及如何為您專案的一部分產生 SourceLink 檔案資訊，請參閱[使用來源連結](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)。
+源連結是一個語言和原始程式碼管理無關的系統,用於為二進位檔案提供源調試。 源連結支援從 Visual Studio 2017 版本 15.8 開始的本機C++二進位檔。 有關源連結的概述,請參閱[源連結](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md)。 有關如何在專案中使用來源連結以及如何將 SourceLink 檔產生作為專案的一部分的資訊,請參閱[使用來源連結](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)。
 
-### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /SOURCELINK 連結器選項
+### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>在視覺化工作室中設定 /SOURCELINK 連結器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 打開項目**的屬性頁**對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
+1. 選擇**設定屬性** > **連結器** > **命令列**屬性頁。
 
-1. 在 **其他選項**方塊中，加入 **/SOURCELINK:**_檔名_，然後選擇  **確定**或**套用**以儲存變更。
+1. 在「**其他選項**」框中,**`/SOURCELINK:`**_`filename`_ 新增然後選擇 **「確定」** 或 **「應用」** 以儲存變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 此選項並沒有對等的程式設計。
+- 此選項沒有程式設計等效項。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589458"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334423"
 ---
 # <a name="c-run-time-library-reference"></a>C 執行階段程式庫參考
 
@@ -35,10 +35,13 @@ Microsoft 執行階段程式庫提供一些為 Microsoft Windows 作業系統設
 [全域常數](../c-runtime-library/global-constants.md)<br/>
 提供執行階段程式庫所定義的全域常數連結。
 
+[全球狀態](../c-runtime-library/global-state.md)<br/>
+描述 C 運行時庫中的全域狀態範圍。
+
 [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 提供依字母順序列出之所有 C 執行階段程式庫函式的目錄進入點。
 
-[泛型文字對應](../c-runtime-library/generic-text-mappings.md)<br/>
+[通用文字對應](../c-runtime-library/generic-text-mappings.md)<br/>
 提供 Tchar.h 中定義的泛型文字對應連結。
 
 [語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>

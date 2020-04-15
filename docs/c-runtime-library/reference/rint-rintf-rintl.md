@@ -1,10 +1,13 @@
 ---
 title: rint、rintf、rintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - rintf
 - rintl
 - rint
+- _o_rint
+- _o_rintf
+- _o_rintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170887"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332765"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -56,29 +60,31 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 要四捨五入的浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Rint**函式會傳回浮點值，表示最接近*x*的整數。 中間值會根據浮點舍入模式的目前設定進行舍入，與**nearbyint**函數相同。 與**nearbyint**函式不同的是，如果結果與引數的值不同， **rint**函數可能會引發**FE_INEXACT**浮點例外狀況。 不會傳回錯誤。
+**rint**函數傳回浮點值,該值表示最接近的整數到*x*。 半向值根據浮點舍入模式的當前設置進行捨入,與**附近的函數**相同。 與**附近的函數**不同,如果結果與參數的值不同 **,rint**函數可能會引發**FE_INEXACT**浮點異常。 不會傳回錯誤。
 
-|輸入|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr**例外|
 |-----------|-------------------|--------------------------|
-|±∞、QNAN、IND|無|無|
+|• , QNAN, IND|無|無|
 |非正規數|EXCEPTION_FLT_UNDERFLOW|無|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**浮點**和**長** **雙精度**值之**rint**的多載。 在 C 程式中， **rint**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用獲取和返回**浮點**值**和長****雙**值的**rint**重載。 在 C 程式中 **,rint**始終取得並傳回**一個雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
+|**林特**,**林特**,**林特爾**|\<math.h>|\<cmath>|
 
-如需其他相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

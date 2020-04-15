@@ -1,8 +1,9 @@
 ---
 title: mbsrtowcs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbsrtowcs
+- _o_mbsrtowcs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: de7b25ea8a520dfe2c9cb26ec8989624b670dcb9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 509046e1c55d89cd78b09076838983691423a1ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338889"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -55,41 +57,43 @@ size_t mbsrtowcs(
 
 ### <a name="parameters"></a>參數
 
-*wcstr*<br/>
+*wc斯特*<br/>
 用來儲存所產生之已轉換寬字元字串的位址。
 
-*mbstr*<br/>
+*姆布斯特*<br/>
 要轉換之多位元組字元字串位置的間接指標。
 
-*計數*<br/>
-要轉換並儲存在*wcstr*中的最大字元數（不是位元組）。
+*count*<br/>
+要在*wcstr*中轉換和存儲的最大字元數(而不是位元組數)。
 
 *mbstate*<br/>
-**Mbstate_t**轉換狀態物件的指標。 如果此值為 null 指標，會使用靜態內部轉換狀態物件。 由於內部**mbstate_t**物件不是安全線程，因此建議您一律傳遞自己的*mbstate*參數。
+指向**mbstate_t**轉換狀態物件的指標。 如果此值為 null 指標，會使用靜態內部轉換狀態物件。 由於內部**mbstate_t**物件不是線程安全的,因此我們建議您始終傳遞自己的*mbstate*參數。
 
 ## <a name="return-value"></a>傳回值
 
-傳回成功轉換的字元數，但不包含結束的 null 字元 (如果有的話)。 如果發生錯誤，則傳回（size_t）（-1），並將**errno**設定為 EILSEQ。
+傳回成功轉換的字元數，但不包含結束的 null 字元 (如果有的話)。 如果發生錯誤,則返回 (size_t)(-1),並將**errno**設置到 EILSEQ。
 
 ## <a name="remarks"></a>備註
 
-**Mbsrtowcs**函式會使用*mbstate*中包含的轉換狀態，將*mbstr*間接指向的多位元組字元字串轉換為*wcstr*所指向之緩衝區中儲存的寬字元。 每個字元的轉換會繼續進行，直到遇到終止的 null 多位元組字元、遇到未對應到目前地區設定中有效字元的多位元組序列，或直到*計數*字元已轉換. 如果**mbsrtowcs**在之前或發生*計數*時遇到多位元組 null 字元（' \ 0 '），則會將它轉換成16位終止的 null 字元，並停止。
+**mbsrtowcs**函數通過使用*mbstate*中包含的轉換狀態,將*mbstr*間接指向的多位元組字元字串轉換為存儲在*wcstr*指向的緩衝區中的寬字元。 每個字元的轉換將繼續,直到遇到終止 null 多位元組位元元、遇到與當前區域設置中的有效字元不對應的多位元組序列,或直到*計數*字元已轉換。 如果**mbsrtowcs**在*計數*發生之前或發生計數時遇到多位元組空字元 ("\0"),它將轉換為 16 位元終止空字元並停止。
 
-因此，只有在**mbsrtowcs**在轉換期間遇到多位元組的 null 字元時， *wcstr*的寬字元字串才會以 null 結束。 如果*mbstr*和*wcstr*所指向的序列重迭，則**mbsrtowcs**的行為會是未定義的。 **mbsrtowcs**會受到目前地區設定的 LC_TYPE 類別目錄所影響。
+因此,僅當**mbsrtowcs**在轉換期間遇到多位元組空字元時 *,wcstr*處的寬字元字串才為null終止。 如果*mbstr*和*wcstr*指向的序列重疊,則**mbsrtowcs**的行為未定義。 **mbsrtowcs**受當前區域設置LC_TYPE類別的影響。
 
-**Mbsrtowcs**函式與[mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**mbsrtowcs**的後續呼叫，而不是**mbstowcs**，則應用程式應該使用**mbsrlen**而不是**mbslen**。
+**mbsrtowcs**函數不同於[mbstowcs,_mbstowcs_l](mbstowcs-mbstowcs-l.md)它的可重新啟動性。 轉換狀態以*mbstate*儲存,用於後續對相同或其他可重新啟動函數的調用。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如,如果使用對**mbsrtowc 的**後續呼叫而不是**mbstowcs,** 則應用程式應使用**mbsrlen**而不是**mbslen。**
 
-如果*wcstr*不是 null 指標，則會在轉換因為到達結束的 null 字元而停止時，將 null 指標指派給*mbstr*所指向的指標物件。 否則會將超過已轉換之最後一個多位元組字元的位址指派給該物件 (如果有的話)。 這可讓後續的函式呼叫，從此呼叫的停止處重新啟動轉換。
+如果*wcstr*不是空指標,則如果由於達到終止空字元而停止轉換,則*mbstr*指向的指針對象將分配一個空指標。 否則會將超過已轉換之最後一個多位元組字元的位址指派給該物件 (如果有的話)。 這可讓後續的函式呼叫，從此呼叫的停止處重新啟動轉換。
 
-如果*wcstr*引數為 null 指標，則會忽略*count*引數，而**mbsrtowcs**會傳回目的字串所需的寬字元大小。 如果*mbstate*是 null 指標，此函式會使用非安全線程的靜態內部**mbstate_t**轉換狀態物件。 如果字元順序*mbstr*沒有對應的多位元組字元標記法，則會傳回-1，並將**Errno**設定為**EILSEQ**。
+如果*wcstr*參數是空指標,則忽略*count*參數 **,mbsrtowcs**返回目標字串所需的寬字元大小。 如果*mbstate*是空指標,則函數使用非線程安全靜態**mbstate_t**轉換狀態物件。 如果字元序列*mbstr*沒有相應的多位元組字元表示形式,則傳回 -1 並將**errno**設定為**EILSEQ**。
 
-如果*mbstr* isa null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回-1。
+如果*mbstr*是空指標,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設置到**EINVAL**並返回 -1。
 
-在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-只要此函式正在執行，而且*mbstate*引數不是 null 指標， **mbsrtowcs**函式就是多執行緒安全，前提是目前線程中的任何函式都不會呼叫**setlocale** 。
+只要此函式正在執行並且*mbstate*參數不是空指標 **,mbsrtowcs**函數是多線程安全的,只要當前線程呼叫中沒有函數**設定局部性**。
 
 ## <a name="requirements"></a>需求
 

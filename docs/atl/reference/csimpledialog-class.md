@@ -1,5 +1,5 @@
 ---
-title: CSimpleDialog 類別
+title: C簡單對話類別
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleDialog
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 345372d71ad96a74bb0ae6dd7e89bdf0724cd822
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330823"
 ---
-# <a name="csimpledialog-class"></a>CSimpleDialog 類別
+# <a name="csimpledialog-class"></a>C簡單對話類別
 
-這個類別會實作基本的強制回應對話方塊。
+此類實現基本模式對話方塊。
 
 ## <a name="syntax"></a>語法
 
@@ -33,10 +33,10 @@ class CSimpleDialog : public CDialogImplBase
 
 *t_wDlgTemplateID*
 
-對話方塊範本資源的資源識別碼。
+對話框範本資源的資源 ID。
 
 *t_bCenter*<br/>
-如果對話方塊物件擁有者 視窗中，位於中央，則為 TRUE。否則為 FALSE。
+如果對話框物件要居於所有者視窗,則為 TRUE;如果對話框物件要位於擁有者視窗上,則為 TRUE。否則 FALSE。
 
 ## <a name="members"></a>成員
 
@@ -44,17 +44,17 @@ class CSimpleDialog : public CDialogImplBase
 
 |名稱|描述|
 |----------|-----------------|
-|[CSimpleDialog::DoModal](#domodal)|建立強制回應對話方塊。|
+|[C簡單對話::Do模態](#domodal)|創建模式對話方塊。|
 
 ## <a name="remarks"></a>備註
 
-實作基本功能的強制回應對話方塊。 `CSimpleDialog` 提供 Windows 通用控制項僅支援。 若要建立並顯示強制回應對話方塊中，建立這個對話方塊中提供現有的資源範本的名稱的類別的執行個體。 當使用者按下任何控制項 （例如 IDOK 或 IDCANCEL） 的預先定義的值時，就會關閉對話方塊物件。
+實現具有基本功能的模式對話方塊。 `CSimpleDialog`僅支援 Windows 公共控件。 要創建和顯示模態對話框,請創建此類的實例,為對話方塊提供現有資源範本的名稱。 當用戶單擊具有預定義值(如 IDOK 或 IDCANCEL)的任何控制項時,對話方塊物件將關閉。
 
-`CSimpleDialog` 可讓您建立只能強制回應對話方塊。 `CSimpleDialog` 提供的對話方塊方塊程序，會使用預設的訊息對應將導向至適當的處理常式的訊息。
+`CSimpleDialog`允許您僅建立模式對話方塊。 `CSimpleDialog`提供對話框過程,該過程使用預設消息映射將消息定向到相應的處理程式。
 
-請參閱[實作對話方塊](../../atl/implementing-a-dialog-box.md)如需詳細資訊。
+有關詳細資訊[,請參閱實現對話框](../../atl/implementing-a-dialog-box.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CDialogImplBase`
 
@@ -62,11 +62,11 @@ class CSimpleDialog : public CDialogImplBase
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標題:** atlwin.h
 
-##  <a name="domodal"></a>  CSimpleDialog::DoModal
+## <a name="csimpledialogdomodal"></a><a name="domodal"></a>C簡單對話::Do模態
 
-叫用強制回應對話方塊，並傳回完成的對話方塊結果。
+調用模態對話框,並在完成後返回對話框結果。
 
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
@@ -74,18 +74,18 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*<br/>
-對話方塊的父控制代碼。 如果未不提供任何值，父代設為目前使用中視窗。
+*hWnd 父母*<br/>
+對話框父級的句柄。 如果未提供任何值,則父級設置為當前活動視窗。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，傳回的值會是關閉的對話方塊控制項的資源識別碼。
+如果成功,返回值是取消對話框的控制項的資源 ID。
 
-如果函式失敗，傳回的值為-1。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
+如果函數失敗,返回值為 -1。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
 
 ### <a name="remarks"></a>備註
 
-對話方塊為作用中時，這個方法會處理使用者的所有互動。 這是讓對話方塊強制回應;也就是使用者無法互動與其他視窗中，直到在關閉對話方塊。
+此方法處理與使用者的所有交互,當對話框處於活動狀態時。 這就是使對話框模態的原因;也就是說,在關閉對話方塊之前,用戶無法與其他窗互。
 
 ## <a name="see-also"></a>另請參閱
 

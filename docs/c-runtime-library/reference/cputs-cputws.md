@@ -1,9 +1,11 @@
 ---
 title: _cputs、_cputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cputws
 - _cputs
+- _o__cputs
+- _o__cputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348375"
 ---
 # <a name="_cputs-_cputws"></a>_cputs、_cputws
 
 將字串放入主控台。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -60,18 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*Str*<br/>
 輸出字串。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_cputs**會傳回0。 如果函式失敗，則會傳回非零值。
+如果成功 **,_cputs**返回 0。 如果函式失敗，則會傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-**_Cputs**函式會將*str*直接指向的以 null 結束的字串寫入主控台。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
+**_cputs**函數*透過直接*str 到主控台來寫入指向的 null 連接字串。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
 
-這個函式會驗證其參數。 如果*str*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，並傳回-1。
+這個函式會驗證其參數。 如果*str*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則**errno**設置為**EINVAL,** 並返回 -1。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -86,7 +91,7 @@ int _cputws(
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -151,5 +156,5 @@ Hello world (courtesy of _cputws)!
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch、_putwch](putch-putwch.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _expand
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _expand
+- _o__expand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: cb986d893bd862e61ae595317a890fb489c19919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7f2a789bc5f475411808bc00a4280b7573b67cf2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941549"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347536"
 ---
 # <a name="_expand"></a>_expand
 
@@ -58,33 +60,35 @@ void *_expand(
 *memblock*<br/>
 先前配置之記憶體區塊的指標。
 
-*size*<br/>
+*大小*<br/>
 新的大小 (以位元組計)。
 
 ## <a name="return-value"></a>傳回值
 
-**_expand**會傳回重新配置記憶體區塊的 void 指標。 與**realloc**不同的是， **_expand**無法移動區塊來變更其大小。 因此，如果有足夠的記憶體可用來展開區塊，而不移動它，則 **_expand**的*memblock*參數會與傳回值相同。
+**_expand**返回指向重新分配的記憶體塊的空指標。 **_expand,** 不像**真正的塊**,不能移動一個方塊來改變其大小。 因此,如果有足夠的記憶體可用於展開塊而不移動它,則**要_expand**的*memblock*參數與返回值相同。
 
-在作業期間偵測到錯誤時， **_expand**會傳回**Null** 。 例如，如果使用 **_expand**來壓縮記憶體區塊，它可能會偵測到社區塊堆積中的損毀或不正確區塊指標，並傳回**Null**。
+**_expand**在操作過程中檢測到錯誤時傳回**NULL。** 例如,如果 **_expand**用於收縮記憶體,它可能會偵測小塊堆或無效區塊的損壞,並傳**回 NULL**。
 
-如果沒有足夠的記憶體可將區塊展開為指定大小，而不移動它，則函數會傳回**Null**。 **_expand**絕不會傳回擴充到小於所要求之大小的區塊。 如果發生失敗， **errno**會指出失敗的本質。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果沒有足夠的記憶體可用於在不移動區將區擴展到給定大小,則函數將傳回**NULL**。 **_expand**永遠不會返回擴展為小於請求的大小的塊。 如果發生故障 **,errno**指示故障的性質。 有關**errno**的詳細資訊,請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要檢查項目的新大小，請使用 **_msize**。 若要取得**void**以外類型的指標，請在傳回值上使用類型轉換。
+儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 要檢查專案的新大小,請使用 **_msize**。 要取得指向**void**以外的類型的指標,請使用返回值上強制轉換的類型。
 
 ## <a name="remarks"></a>備註
 
-**_Expand**函數會藉由嘗試展開或收縮區塊，而不在堆積中移動其位置，來變更先前配置的記憶體區塊大小。 *Memblock*參數會指向區塊的開頭。 *Size*參數會提供新的區塊大小（以位元組為單位）。 區塊內容在不超過新的和舊的大小範圍內不會變更。 *memblock*不應該是已釋放的區塊。
+**_expand**函數通過嘗試展開或收縮塊而不移動其在堆中的位置來更改以前分配的記憶體塊的大小。 *memblock*參數指向塊的開頭。 *大小*參數提供塊的新大小(以位元組為單位)。 區塊內容在不超過新的和舊的大小範圍內不會變更。 *memblock*不應是已釋放的塊。
 
 > [!NOTE]
-> 在64位平臺上，如果新的大小小於目前的大小， **_expand**可能不會對區塊進行合約。特別是，如果區塊的大小小於16K，因而配置於低分散堆積中， **_expand**會將區塊保持不變並傳回*memblock*。
+> 在 64 位平臺上,如果新大小小於當前大小 **,_expand**可能不會收縮塊;特別是,如果塊的大小小於 16K,因此在低碎片堆中分配 **,_expand**保留塊不變並返回*memblock*。
 
-當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_expand**會解析為[_expand_dbg](expand-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式連結到 C 執行時庫的除錯版本時 **,_expand**解析為[_expand_dbg](expand-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-這個函式會驗證它的參數。 如果*memblock*為 null 指標，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。 如果*size*大於 **_HEAP_MAXREQ**， **errno**會設定為**ENOMEM** ，而函數會傳回**Null**。
+這個函式會驗證它的參數。 如果*memblock*是空指標,則此函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行 **,errno**將設定為**EINVAL,** 並且函數傳回**NULL**。 如果*大小*大於 **_HEAP_MAXREQ** **,errno**設定為**ENOMEM,** 函數傳回**NULL**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 
@@ -128,7 +132,7 @@ Expanded block to 1024 bytes at 002C12BC
 
 [記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[自由](free.md)<br/>
 [malloc](malloc.md)<br/>
 [_msize](msize.md)<br/>
 [realloc](realloc.md)<br/>

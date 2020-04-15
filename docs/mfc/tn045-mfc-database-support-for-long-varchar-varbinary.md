@@ -1,49 +1,49 @@
 ---
-title: TN045:Varchar-varbinary 的 MFC 資料庫支援
+title: TN045：Long Varchar-Varbinary 的 MFC-資料庫支援
 ms.date: 11/04/2016
 helpviewer_keywords:
 - TN045
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 3e8b356027e5c5b7c604a0354624d9f11e32fb9a
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f67d159fb600dcacd8eedd40e672edf18bddee9a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365502"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045:Varchar/Varbinary 的 MFC/資料庫支援
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045：Long Varchar/Varbinary 的 MFC/資料庫支援
 
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
+> 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-此附註將描述如何擷取和傳送 ODBC **SQL_LONGVARCHAR**並**SQL_LONGVARBINARY**資料型別使用 MFC 資料庫類別。
+本說明介紹如何使用 MFC 資料庫類檢索和發送 ODBC **SQL_LONGVARCHAR**和**SQL_LONGVARBINARY**數據類型。
 
-## <a name="overview-of-long-varcharvarbinary-support"></a>Long Varchar/Varbinary 支援概觀
+## <a name="overview-of-long-varcharvarbinary-support"></a>長瓦爾查爾/瓦二進位支援概述
 
-ODBC **SQL_LONG_VARCHAR**並**SQL_LONGBINARY** （稱為這裡長資料行） 的資料類型可以保存大量的資料。 有 3 種方法，您可以處理這項資料：
+ODBC **SQL_LONG_VARCHAR**和**SQL_LONGBINARY**資料類型(此處稱為長數據列)可以保存大量數據。 有三種方法可以處理這些資料:
 
-- 將它繫結`CString` / `CByteArray`。
+- 繫結到`CString`/`CByteArray`。
 
 - 繫結到`CLongBinary`。
 
-- 請勿完全將其繫結和擷取並傳送長資料值以手動的方式，獨立的資料庫類別。
+- 完全不要綁定它,並手動檢索和發送長數據值,與資料庫類無關。
 
-每個三個方法都有其優缺點。
+這三種方法各有優缺點。
 
-長資料行不支援查詢參數。 它們僅支援 outputColumns。
+查詢的參數不支援長數據列。 它們僅支援輸出列。
 
-## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>繫結至 CString/CByteArray 的長資料行
+## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>將長資料列繫結到 CString/CByteArray
 
 優點：
 
-這種方法很容易理解，及您使用熟悉的類別。 「 架構 」 提供`CFormView`支援`CString`使用`DDX_Text`。 您有許多一般字串或集合的功能與`CString`和`CByteArray`類別，以及您可以控制配置在本機保存資料值的記憶體數量。 架構會維護期間的欄位資料的舊副本`Edit`或`AddNew`函式呼叫，而且架構可以自動為您偵測資料變更。
+此方法易於理解,並且您使用熟悉的類。 該框架為`CFormView``CString`提供了`DDX_Text`對的支援。 您具有大量常規字串或集合功能`CString`和`CByteArray`類,您可以控制在本地分配的記憶體量以儲存資料值。 框架在或`Edit``AddNew`函數調用期間維護欄位數據的舊副本,並且框架可以自動檢測對數據的更改。
 
 > [!NOTE]
->  由於`CString`專為處理字元資料，並`CByteArray`處理二進位資料時，建議您將字元資料 (**SQL_LONGVARCHAR**) 到`CString`，和二進位資料 (**SQL_LONGVARBINARY**) 到`CByteArray`。
+> 由於`CString`用於處理字元`CByteArray`數據,以及處理二進位資料,因此建議您將字元資料 **(SQL_LONGVARCHAR**`CString`) 放入中,並將二進位資料 **(SQL_LONGVARBINARY)** 放入`CByteArray`中。
 
-RFX 函式的`CString`和`CByteArray`有其他引數，可讓您覆寫預設大小的已配置的記憶體來容納擷取的資料行的值。 請注意下列函式宣告中的 nMaxLength 引數：
+RFX 函`CString`數`CByteArray`,並且 具有一個附加參數,允許您覆蓋已分配記憶體的預設大小,以保存數據列的檢索值。 請注意以下函數聲明中的 nMaxLength 參數:
 
 ```
 void AFXAPI RFX_Text(CFieldExchange* pFX,
@@ -59,62 +59,62 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
     int nMaxLength = 255);
 ```
 
-如果您擷取到很長的資料行`CString`或`CByteArray`，傳回的資料量是，根據預設，255 個位元組的最大值。 除此之外的任何項目會被忽略。 在此情況下，架構會擲回例外狀況**AFX_SQL_ERROR_DATA_TRUNCATED**。 幸運的是，您可以明確地增加 nMaxLength 為更高的值，最多**MAXINT**。
+如果將長數據列檢索到`CString``CByteArray`或 中,默認情況下,返回的最大數據量為 255 位元組。 除此以外的任何內容都將被忽略。 在這種情況下,框架將AFX_SQL_ERROR_DATA_TRUNCATED**引發異常。** 幸運的是,您可以顯式將 nMaxLength 增加到更大的值,最高為**MAXINT**。
 
 > [!NOTE]
->  MFC 會使用 nMaxLength 的值來設定的本機緩衝區`SQLBindColumn`函式。 這是資料的儲存體的本機緩衝區，而且實際上不會影響的 ODBC 驅動程式所傳回的資料量。 `RFX_Text` 並`RFX_Binary`只進行一個呼叫使用`SQLFetch`從後端資料庫擷取資料。 每個 ODBC 驅動程式會有不同的限制，它們可以傳回單一擷取中的資料量。 這項限制可能會遠小於中的值設定 nMaxLength，在此情況下，例外狀況**AFX_SQL_ERROR_DATA_TRUNCATED**就會擲回。 在這些情況下，切換成使用`RFX_LongBinary`而非`RFX_Text`或`RFX_Binary`如此可以擷取所有資料。
+> MFC 使用 nMaxLength 的`SQLBindColumn`值來設置 函數的本地緩衝區。 這是用於存儲數據的本地緩衝區,實際上不會影響ODBC驅動程式返回的數據量。 `RFX_Text`並`RFX_Binary`進行一次調用`SQLFetch`,用於從後端資料庫檢索數據。 每個 ODBC 驅動程式對可在單個提取中返回的數據量有不同的限制。 此限制可能比 nMaxLength 中設置的值小得多,在這種情況下,將引發**異常AFX_SQL_ERROR_DATA_TRUNCATED。** 在這些情況下,切換到使用`RFX_LongBinary``RFX_Text`而不是`RFX_Binary`或這樣,以便檢索所有數據。
 
-ClassWizard 會繫結**SQL_LONGVARCHAR**要`CString`，或有**SQL_LONGVARBINARY**至`CByteArray`您。 如果您想要配置超過 255 個位元組到其中，您擷取長的資料行，您可以再提供 nMaxLength 明確的值。
+ClassWizard 會將**SQL_LONGVARCHAR**`CString`綁定到 ,或`CByteArray`將**SQL_LONGVARBINARY**綁定 到 如果要將超過 255 個字節分配給檢索長數據列,則可以為 nMaxLength 提供顯式值。
 
-當長資料行繫結至`CString`或是`CByteArray`，更新欄位的運作方式就像它繫結至時 SQL_**VARCHAR**或 SQL_**VARBINARY**。 期間`Edit`，立即和更新版本時比較快取的資料值`Update`呼叫以偵測變更的資料值和設定麻煩並適當地 Null 資料行的值。
+當長數據列綁定`CString`到`CByteArray`或 時,更新欄位的工作方式與綁定到SQL_**VARCHAR**或SQL_**VARBINARY**時的工作方式相同。 在`Edit`期間,數據值將緩存離開,並在調用時`Update`進行比較,以檢測對數據值的更改並適當地設置列的「臟」和「空」值。
 
-## <a name="binding-a-long-data-column-to-a-clongbinary"></a>繫結至 CLongBinary 的長資料行
+## <a name="binding-a-long-data-column-to-a-clongbinary"></a>將長資料列繫結到 CLongBinary
 
-如果您的長資料行可能包含多個**MAXINT**個位元組的資料，您應該考慮擷取到`CLongBinary`。
+如果長資料列可能包含更多**MAXINT**位元組的資料,則可能需要考慮將其`CLongBinary`檢索到中 。
 
 優點：
 
-這樣會擷取整個很長的資料行中，最多可用的記憶體。
+這將檢索整個長數據列,最多可訪問記憶體。
 
 缺點：
 
-資料會保留在記憶體中。 這個方法也很費不貲的非常大量的資料。 您必須呼叫`SetFieldDirty`進行繫結的資料，以確保欄位的成員會包含在`Update`作業。
+數據存儲在記憶體中。 對於大量數據來說,這種方法的成本也高得令人望而卻步。 您必須調用`SetFieldDirty`綁定的數據成員,以確保該欄位包含`Update`在操作中。
 
-如果您擷取到的長資料行`CLongBinary`，資料庫類別會檢查總大小的長資料行，則配置`HGLOBAL`夠大，無法容納它的整個資料值的記憶體區段。 資料庫類別然後擷取整個資料值到配置`HGLOBAL`。
+如果將長數據列檢索到`CLongBinary`中 ,資料庫類將檢查長數據列的總大小,然後分配足夠`HGLOBAL`大的 記憶體段以容納整個數據值。 然後,資料庫類將整個數據值檢索到分配的`HGLOBAL`中。
 
-如果資料來源無法傳回預期的長資料行大小，此架構將會擲回例外狀況**AFX_SQL_ERROR_SQL_NO_TOTAL**。 如果嘗試配置`HGLOBAL`失敗，standard 記憶體的例外狀況會擲回。
+如果數據源無法返回長數據列的預期大小,則框架將AFX_SQL_ERROR_SQL_NO_TOTAL**引發異常。** 如果嘗試分配`HGLOBAL`失敗 ,將引發標準記憶體異常。
 
-ClassWizard 會繫結**SQL_LONGVARCHAR**或是**SQL_LONGVARBINARY**到`CLongBinary`您。 選取`CLongBinary`為變數的型別，在 [加入成員變數] 對話方塊。 接著會新增 ClassWizard`RFX_LongBinary`呼叫您`DoFieldExchange`呼叫且遞增量為繫結欄位的總數。
+ClassWizard`CLongBinary`會為您綁定**SQL_LONGVARCHAR**或**SQL_LONGVARBINARY。** 在`CLongBinary`「添加成員變數」對話框中選擇"變數類型」。 然後,ClassWizard`RFX_LongBinary`將呼叫添加到`DoFieldExchange`您的話務,並增加綁定欄位的總數。
 
-若要更新長資料的資料行值，請先確定已配置`HGLOBAL`夠大，足以容納您的新資料，藉由呼叫 **:: GlobalSize**上*m_hData*隸屬`CLongBinary`。 如果太小，釋放`HGLOBAL`和配置一個適當的大小。 然後設定*m_dwDataLength*以反映新的大小。
+`HGLOBAL`要更新長資料列值,首先通過在`CLongBinary`m_hData 成員上調用 **:: GlobalSize,** 確保已分配*m_hData*的值足夠大以 保存新數據。 如果太小,釋放`HGLOBAL`並分配一個適當的大小。 然後設置*m_dwDataLength*以反映新大小。
 
-否則，如果*m_dwDataLength*大小大於您要取代的資料，您可以釋放，並重新配置`HGLOBAL`，或保留配置。 請務必指出實際使用中的位元組數目*m_dwDataLength*。
+否則,如果*m_dwDataLength*大於要替換的數據的大小,則可以釋放並重新分配`HGLOBAL`, 也可以將其保留為分配。 請確保指示*m_dwDataLength*中實際使用的位元組數。
 
-## <a name="how-updating-a-clongbinary-works"></a>如何更新 CLongBinary 運作方式
+## <a name="how-updating-a-clongbinary-works"></a>更新 CLongBinary 的工作原理
 
-您不需要了解如何更新`CLongBinary`可行，但它可能有助於範例有關如何將 long 資料值傳送至資料來源，如果您選擇這個第三個方法，如下所述。
+不必瞭解更新`CLongBinary`如何工作,但如果選擇下面介紹的第三種方法,則瞭解如何向數據源發送長數據值的示例可能很有用。
 
 > [!NOTE]
->  為了讓`CLongBinary`欄位包含在更新中，您必須明確呼叫`SetFieldDirty`欄位。 如果您進行任何變更至欄位，包括將它設定為 Null，您必須呼叫`SetFieldDirty`。 您還必須呼叫`SetFieldNull`，其中第二個參數是**FALSE**將標示為具有值的欄位。
+> 為了在更新中`CLongBinary`包含欄位,必須顯式調`SetFieldDirty`用 該欄位。 如果對欄位進行任何變更(包括將其設定為 Null),則必須呼`SetFieldDirty`叫 。 您必須呼叫`SetFieldNull`,第二個參數為**FALSE,** 以將欄位標記為具有值。
 
-更新時`CLongBinary`欄位中，資料庫類別使用 ODBC 的**DATA_AT_EXEC**機制 (請參閱 ODBC 文件`SQLSetPos`的 rgbValue 引數)。 當架構準備 insert 或 update 陳述式，而不是指向`HGLOBAL`包含資料，*地址*的`CLongBinary`已設為*值*的資料行相反地，以及長度指標設定為**SQL_DATA_AT_EXEC**。 稍後，當 update 陳述式會傳送至資料來源`SQLExecDirect`會傳回**SQL_NEED_DATA**。 這會提醒架構的參數，此資料行的值是實際的地址`CLongBinary`。 這個架構會呼叫`SQLGetData`一次使用小型緩衝區，必須是要傳回之資料的實際長度的驅動程式。 如果驅動程式會傳回二進位大型物件 (BLOB) 的實際長度，MFC 將一樣多的空間重新配置所需的擷取 BLOB。 如果資料來源會傳回**SQL_NO_TOTAL**，表示它無法判斷 BLOB 的大小，MFC 會建立較小的區塊。 預設的初始大小是 64 K 和後續的區塊都會進行倍;比方說，第二個會為 128k，第三個是 256 KB，依此類推。 初始大小是可設定的。
+更新`CLongBinary`欄位時,資料庫類使用 ODBC**的DATA_AT_EXEC**機制(請`SQLSetPos`參閱有關 rgbValue 參數的 ODBC 文件)。 當框架準備插入或更新敘述時,`HGLOBAL`而不是指向包含資料,而是將的*address*`CLongBinary`位址設定為欄*的值*,長度指示器設定為**SQL_DATA_AT_EXEC**。 稍後,當更新敘述傳送到資料來源時`SQLExecDirect`, 傳回**SQL_NEED_DATA**。 這會提醒框架,此欄的參數值是的位址`CLongBinary`。 框架使用小`SQLGetData`緩衝區調用一次,期望驅動程式返回數據的實際長度。 如果驅動程式返回二進位大型物件(BLOB)的實際長度,MFC將重新分配獲取 BLOB 所需的空間。 如果數據源返回**SQL_NO_TOTAL**,指示它無法確定 BLOB 的大小,則 MFC 將創建較小的塊。 默認初始大小為 64K,後續塊的大小將是兩倍;例如,第二個將是 128K,第三個是 256K,等等。 初始大小是可配置的。
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>未繫結：直接從 ODBC 使用 SQLGetData 擷取/傳送的資料
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>不結合:使用 SQLGetData 直接從 ODBC 檢索/傳送資料
 
-使用此方法，完全略過資料庫類別，並自行處理的長資料行。
+使用此方法,您可以完全繞過資料庫類,並自行處理長數據列。
 
 優點：
 
-您可以快取磁碟，如有必要，或決定要擷取的資料以動態方式量的資料。
+如有必要,可以將數據緩存到磁碟,也可以動態決定要檢索的數據量。
 
 缺點：
 
-您未獲得的 framework`Edit`或`AddNew`支援，以及您必須撰寫程式碼來執行基本的功能 (`Delete`運作，因為它不是資料行層級的作業)。
+您沒有得到框架`Edit``AddNew`或 支援,您必須自己編寫代碼以執行基本`Delete`功能( 雖然確實工作,因為它不是列級操作)。
 
-在此情況下，長的資料行必須是資料錄集，選取清單中，但應該不會繫結至架構。 這是提供您自己的 SQL 陳述式，透過其中一種方式`GetDefaultSQL`或做為 lpszSQL 引數`CRecordset`的`Open`函式，並不會繫結的 RFX_ 函式呼叫的額外資料行。 ODBC 需要未繫結的欄位會顯示要繫結欄位的右邊，因此將您的繫結資料行或資料行新增至選取清單的結尾。
+在這種情況下,長數據列必須位於記錄集的選擇清單中,但不應受框架的約束。 這樣做的一種方法是通過`GetDefaultSQL`或作為 lpszSQL 參數`CRecordset``Open`提供您自己的 SQL 語句,而不是將附加列與RFX_函數調用綁定。 ODBC 要求未綁定欄位顯示在綁定欄位的右側,因此將未綁定列或列添加到選擇清單的末尾。
 
 > [!NOTE]
->  長資料行未繫結架構，因為它的變更不會與處理`CRecordset::Update`呼叫。 您必須建立並傳送必要的 SQL**插入**並**更新**陳述式自己。
+> 由於長數據列不受框架的約束,因此不會通過`CRecordset::Update`調用處理對它的更改。 您必須自己建立併發送所需的 SQL **INSERT**和**更新**語句。
 
 ## <a name="see-also"></a>另請參閱
 

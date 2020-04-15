@@ -1,5 +1,5 @@
 ---
-title: TN021:命令和訊息路由
+title: TN021：命令和訊息路由
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,91 +8,91 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdd405bda5c0af9e04a50eee4ef5738f3a53259e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370401"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021:命令和訊息路由
+# <a name="tn021-command-and-message-routing"></a>TN021：命令和訊息路由
 
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
+> 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-此提示說明命令路由，並分派架構，以及一般視窗訊息路由中的進階的主題。
+本說明描述了命令路由和調度體系結構以及常規視窗消息路由中的高級主題。
 
-視覺效果，請參閱C++一般的詳細資料所述，在架構上特別區分 Windows 訊息、 控制通知和命令。 這個附註會假設您已非常熟悉進行列印的文件中所述的問題，並只處理非常進階的主題。
+有關此處描述的體系結構的一般詳細資訊,請參閱 Visual C++,特別是 Windows 消息、控件通知和命令之間的區別。 本說明假定您非常熟悉列印文檔中描述的問題,並且僅涉及非常高級的主題。
 
-## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>命令路由，並分派 MFC 1.0 功能進化到 MFC 2.0 架構
+## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>命令路由和調度 MFC 1.0 功能演變為 MFC 2.0 體系結構
 
-Windows 具有 WM_COMMAND 訊息是多載來提供的功能表命令、 快速鍵和對話方塊控制項告知的通知。
+Windows 具有已重載入WM_COMMAND訊息,以提供功能表命令、快速鍵和對話方塊控制通知的通知。
 
-MFC 1.0，有點藉由使用命令處理常式 (例如，"OnFileNew 」) 內建`CWnd`衍生類別呼叫以回應特定的 WM_COMMAND。 這黏附搭配呼叫訊息對應中，資料結構，並導致空間非常有效率的命令機制。
+MFC 1.0`CWnd`通過允許 派生類中的命令處理程式(例如"OnFileNew")調用以回應特定WM_COMMAND,從而在此基礎上構建了一點。 這與稱為消息映射的數據結構粘合在一起,併產生了非常節省空間的命令機制。
 
-MFC 1.0 也會提供額外的功能，來分隔命令訊息中的控制項通知。 命令會以 16 位元識別碼，有時也稱為命令識別碼。 一般而言，命令會開始從`CFrameWnd`（也就是功能表中，選取或翻譯的加速器） 和路由傳送至各種不同的其他視窗。
+MFC 1.0 還提供了用於將控制通知與命令消息分開的其他功能。 命令由 16 位 ID 表示,有時稱為命令 ID。 命令通常從(`CFrameWnd`即選單選擇或翻譯的加速器) 開始,並路由到各種其他視窗。
 
-MFC 1.0 使用的有限的意義上實作的多個文件介面 (MDI) 的命令路由。 （MDI 框架視窗會委派至其作用中的 MDI 子視窗的命令）。
+MFC 1.0 在有限意義上使用命令路由,用於實現多文檔介面 (MDI)。 (MDI 框架視窗將命令委託給其活動 MDI 子視窗。
 
-這項功能已一般化並擴充 MFC 2.0，以允許由更廣泛的物件 （不只是視窗物件） 的命令。 它提供更多的正式和可延伸的架構，以路由訊息，並重複使用的命令目標，路由不只處理的命令，但也以反映目前的命令更新 UI 物件 （例如功能表項目和工具列按鈕）.
+此功能已在 MFC 2.0 中進行推廣和擴展,以允許由更廣泛的物件(而不僅僅是視窗物件)處理命令。 它為路由消息提供了更正式和可擴展的體系結構,並重用命令目標路由,不僅用於處理命令,還用於更新 UI 物件(如功能表項和工具列按鈕),以反映命令的當前可用性。
 
 ## <a name="command-ids"></a>命令 ID
 
-請參閱 VisualC++如需說明路由與繫結程序的命令。 [技術提示 20](../mfc/tn020-id-naming-and-numbering-conventions.md)包含識別碼命名的相關資訊。
+有關命令路由和綁定過程的說明,請參閱可視化C++。 [技術說明 20](../mfc/tn020-id-naming-and-numbering-conventions.md)包含有關 ID 命名的資訊。
 
-我們可以使用一般的前置詞"ID_"命令識別碼。 命令 Id 是 > = 0x8000。 訊息列或狀態列會顯示命令描述字串是否有 STRINGTABLE 資源具有相同識別碼的命令識別碼。
+我們使用通用首碼"ID_"用於命令 ID。 命令 ID >= 0x8000。 如果存在與命令 ID 具有相同 ID 的 STRINGTABLE 資源,則消息行或狀態列將顯示命令描述字串。
 
-在您的應用程式的資源，命令識別碼可以出現在幾個地方：
+在應用程式的資源中,命令 ID 可以出現在多個位置:
 
-- 在某個 STRINGTABLE 資源中，會有在訊息列提示字元相同的識別碼。
+- 在一個與消息列提示具有相同 ID 的 STRINGTABLE 資源中。
 
-- 可能是許多功能表資源中附加至叫用相同的命令的功能表項目。
+- 在可能附加到調用同一命令的功能表項的許多 MENU 資源中。
 
-- （進階） 對話方塊按鈕 GOSUB 命令中。
+- (ADVANCED)在 GOSUB 命令的對話框按鈕中。
 
-在您的應用程式的原始程式碼，識別碼可以命令會出現在幾個地方：
+在應用程式的原始碼中,命令 ID 可以出現在多個位置:
 
-- 在您的資源。H （或其他主要的符號標頭檔） 來定義應用程式特有的命令識別碼。
+- 在你的資源中。H(或其他主符號標頭檔)用於定義特定於應用程式的命令指示。
 
-- 也許在 ID 陣列，用來建立工具列。
+- 用於建立工具列的 ID 陣列中。
 
-- 在 ON_COMMAND 巨集。
+- 在ON_COMMAND宏中。
 
-- 或許在 ON_UPDATE_COMMAND_UI 巨集。
+- 在ON_UPDATE_COMMAND_UI宏中。
 
-目前，唯一需要的命令 Id 的 MFC 中實作的是 > = 0x8000 是 GOSUB 對話方塊或命令的實作。
+目前,MFC 中唯一需要命令 ID >= 0x8000 的實現是 GOSUB 對話方塊/命令的實現。
 
-## <a name="gosub-commands-using-command-architecture-in-dialogs"></a>使用對話方塊中的命令架構的 GOSUB 命令
+## <a name="gosub-commands-using-command-architecture-in-dialogs"></a>GOSUB 指令,在對話框中使用命令體系結構
 
-路由並啟用命令的命令架構的運作方式與框架視窗、 功能表項目、 工具列按鈕、 對話方塊列按鈕、 其他控制列和其他設計用來更新需求和路由命令或控制項 Id 加入至 main 的使用者介面項目命令目標 （通常是主框架視窗）。 主要的命令目標可能會視需要的其他命令目標物件路由命令或控制項通知。
+路由和啟用命令的命令體系結構非常適合框架視窗、功能表項、工具列按鈕、對話框列按鈕、其他控制欄和其他使用者介面元素,這些元素旨在按需更新命令或控制指示到主命令目標(通常是主框架視窗)。 該主命令目標可以根據需要將命令或控制通知路由到其他命令目標物件。
 
-（強制回應或非強制回應） 的對話方塊可受益於某些命令架構的功能如果您將對話方塊控制項的控制項 ID 指派給適當的命令識別碼。 因此您可能需要撰寫一些額外的程式碼，不是自動的對話方塊的支援。
+如果將對話方塊控制件的控制 ID 分配給相應的命令 ID,則對話方塊(模式或無模式)可以從命令體系結構的某些功能中受益。 對對話框的支援不是自動的,因此您可能需要編寫一些附加代碼。
 
-請注意，所有這些功能才能正常運作，您的命令 Id 應該是 > = 0x8000。 由於許多對話方塊無法路由傳送至同一個框架，共用的命令應該是 > = 0x8000，而在特定的對話方塊中的非共用的 IDCs 應該是 < = 0x7FFF。
+請注意,要使所有這些功能正常工作,命令 ID 應>= 0x8000。 由於許多對話框可以路由到同一幀,因此共用命令應>= 0x8000,而特定對話方塊中的非共用 IDC 應<= 0x7FFF。
 
-您可以將一般按鈕放，一般的強制回應對話方塊，並設定為適當的命令 id。 按鈕的 IDC 當使用者選取按鈕時，對話方塊 （通常是主框架視窗） 的擁有者會取得命令，就像任何其他命令。 這就稱為 GOSUB 命令，因為它通常用來顯示其他對話方塊 (GOSUB 的第一個對話方塊)。
+您可以將普通按鈕放在正常模式對話框中,將按鈕的 IDC 設定為相應的命令 ID。 當用戶選擇該按鈕時,對話框的所有者(通常是主框架視窗)將像任何其他命令一樣獲取該命令。 這稱為 GOSUB 命令,因為它通常用於啟動另一個對話方塊(第一個對話框的 GOSUB)。
 
-您也可以呼叫此函式`CWnd::UpdateDialogControls`上您的對話方塊，並傳遞您的主框架視窗的位址。 此函式將會啟用或停用您根據它們是否具有命令處理常式在框架中的對話方塊控制項。 會呼叫此函數會自動為您的控制列，在您的應用程式閒置迴圈中，但您必須針對您想要讓這項功能的一般對話方塊的直接呼叫它。
+您還可以在對話框上調用該`CWnd::UpdateDialogControls`函數,並將其傳遞給主框架視窗的位址。 此函數將根據對話方塊控制程式在幀中是否具有命令處理程式啟用或禁用它們。 對於應用程式空閒迴圈中的控制欄,將自動調用此功能,但您必須直接調用它,用於希望具有此功能的正常對話方塊。
 
-## <a name="when-onupdatecommandui-is-called"></a>ON_UPDATE_COMMAND_UI 呼叫時
+## <a name="when-on_update_command_ui-is-called"></a>呼叫ON_UPDATE_COMMAND_UI時
 
-維護啟用/已核取狀態的所有程式 功能表項目所有的時間，可能會耗費大量運算資源的問題。 啟用/核取功能表項目只有在使用者選取快顯視窗時，才是常用的技巧。 MFC 2.0 實作`CFrameWnd`WM_INITMENUPOPUP 訊息的處理，並使用命令路由架構決定功能表透過 ON_UPDATE_COMMAND_UI 處理常式的狀態。
+始終保持程式功能表項的所有啟用/檢查狀態可能是計算上成本高昂的問題。 一種常見技術是僅在使用者選擇 POPUP 時啟用/檢查功能表項。 mFC 2.0`CFrameWnd`的 實現處理WM_INITMENUPOPUP消息,並使用命令路由體系結構通過ON_UPDATE_COMMAND_UI處理程序確定功能表狀態。
 
-`CFrameWnd` 也會處理 WM_ENTERIDLE 訊息來描述在目前的功能表，選取狀態列的 （也稱為訊息列） 的項目。
+`CFrameWnd`還處理WM_ENTERIDLE消息來描述在狀態列(也稱為消息行)上選擇的當前功能表項。
 
-編輯視覺效果的應用程式的功能表結構C++，用來代表潛在 WM_INITMENUPOPUP 次可用的命令。 ON_UPDATE_COMMAND_UI 處理常式可以修改的狀態或文字的功能表，或如 （例如檔案 MRU 清單或 OLE 動詞命令的快顯功能表） 的進階用法，實際修改功能表結構 功能表繪製前。
+由 Visual C++ 編輯的應用程式功能表結構用於表示WM_INITMENUPOPUP時可用的潛在命令。 ON_UPDATE_COMMAND_UI處理程式可以修改選單的狀態或文本,或用於高級用途(如檔 MRU 清單或 OLE Verbs 彈出式功能表),在繪製選單之前實際修改功能表結構。
 
-ON_UPDATE_COMMAND_UI 處理同一種為了工具列 （和其他控制項列） 應用程式時進入其閒置迴圈。 請參閱*類別庫參考*並[技術提示 31](../mfc/tn031-control-bars.md)如需有關控制列。
+當應用程式進入空閒迴圈時,對工具列(和其他控制欄)執行相同的ON_UPDATE_COMMAND_UI處理。 有關控制欄的詳細資訊,請參閱*類庫參考*[和技術說明 31。](../mfc/tn031-control-bars.md)
 
-## <a name="nested-pop-up-menus"></a>巢狀的快顯功能表
+## <a name="nested-pop-up-menus"></a>巢狀彈出式選單
 
-如果您使用巢狀的功能表結構，您會發現，在兩個不同的情況下，會呼叫 ON_UPDATE_COMMAND_UI 處理常式，如快顯功能表中的第一個功能表項目。
+如果使用嵌套功能表結構,您會注意到在兩個不同的情況下調用彈出功能表中第一個功能表項ON_UPDATE_COMMAND_UI處理程式。
 
-首先，它會呼叫本身的快顯功能表。 這是必要的因為快顯功能表中沒有識別碼，我們使用的快顯功能表的第一個功能表項目識別碼來參考整個快顯功能表。 在此情況下， *m_pSubMenu*成員變數`CCmdUI`物件將為非 NULL，並將指向的快顯功能表。
+首先,它調用彈出功能表本身。 這是必要的,因為彈出式功能表沒有 ID,我們使用彈出式功能表的第一個功能表項的 ID 來引用整個彈出式功能表。 在這種情況下,`CCmdUI`物件的*m_pSubMenu*成員變數將為非 NULL,並將指向彈出功能表。
 
-第二，它會呼叫之前所要繪製的快顯功能表中的功能表項目。 在此情況下，識別碼是指只是第一個功能表項目和*m_pSubMenu*成員變數`CCmdUI`物件將會是 NULL。
+其次,在繪製彈出式功能表中的功能表項之前調用它。 在這種情況下,ID 僅引用第一個功能表項`CCmdUI`, 物件*m_pSubMenu*成員變數將為 NULL。
 
-這可讓您啟用快顯功能表區別其功能表項目，但您必須撰寫一些功能表感知程式碼。 例如，在具有下列結構的巢狀功能表：
+這允許您啟用不同於其功能表項的彈出式功能表,但需要編寫一些功能表感知代碼。 例如,在具有以下結構的嵌套功能表中:
 
 ```Output
 File>
@@ -101,9 +101,9 @@ File>
     Chart (ID_NEW_CHART)
 ```
 
-ID_NEW_SHEET 和 ID_NEW_CHART 命令可以個別啟用或停用。 **新增**應該啟用快顯功能表，如果其中一種已啟用。
+可以獨立啟用或禁用ID_NEW_SHEET和ID_NEW_CHART命令。 如果啟用了兩個中的一個,則應啟用 **"新建**"彈出式功能表。
 
-ID_NEW_SHEET （快顯視窗中的第一個命令） 的命令處理常式會看起來像：
+ID_NEW_SHEET的命令處理程式(彈出視窗中的第一個命令)如下所示:
 
 ```cpp
 void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)
@@ -125,7 +125,7 @@ void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)
 }
 ```
 
-ID_NEW_CHART 的命令處理常式會是一般更新命令處理常式和類似的外觀：
+ID_NEW_CHART的命令處理程式將是一個正常的更新命令處理程式,如下所示:
 
 ```cpp
 void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
@@ -134,74 +134,74 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
 }
 ```
 
-## <a name="oncommand-and-onbnclicked"></a>ON_COMMAND 和 ON_BN_CLICKED
+## <a name="on_command-and-on_bn_clicked"></a>ON_COMMAND和ON_BN_CLICKED
 
-訊息對應巨集，如**ON_COMMAND**並**ON_BN_CLICKED**都相同。 MFC 命令和控制通知路由機制只會使用的命令 ID 來決定路由傳送至的位置。 控制使用通知控制通知碼為零 (**BN_CLICKED**) 解譯為命令。
+**ON_COMMAND**和**ON_BN_CLICKED**的消息映射宏相同。 MFC 命令和控制通知路由機制僅使用命令 ID 來決定路由到何處。 控制項通知代碼為零 **(BN_CLICKED**) 的控制項通知被解釋為命令。
 
 > [!NOTE]
-> 事實上，所有的控制項通知訊息會通過命令處理常式鏈結。 比方說，就技術上可行，您可以撰寫的控制項告知處理常式**EN_CHANGE**文件類別中。 這是功能的不一般建議，因為實際的應用程式，這項功能很少、 ClassWizard，不支援的功能和使用可能會導致易損壞的程式碼。
+> 事實上,所有控件通知消息都通過命令處理程序鏈。 例如,從技術上講,您可以在文檔類中為**EN_CHANGE**編寫控件通知處理程式。 這通常不可取,因為此功能的實際應用很少,ClassWizard 不支援該功能,並且使用該功能可能會導致代碼脆弱。
 
-## <a name="disabling-the-automatic-disabling-of-button-controls"></a>停用按鈕控制項的自動停用
+## <a name="disabling-the-automatic-disabling-of-button-controls"></a>關閉自動關閉按鈕控制項
 
-如果您放置對話方塊列上的按鈕控制項，或使用 where 對話方塊中，您要呼叫**CWnd::UpdateDialogControls**自己，您會注意到該按鈕，並沒有**ON_COMMAND** 或**ON_UPDATE_COMMAND_UI**處理常式將會自動停用您的架構。 在某些情況下，您不需要有處理常式，但您會想要持續啟用按鈕。 若要這麼做最簡單方式是將空的命令處理常式 （簡單與 ClassWizard） 和不在其中執行任何動作。
+如果在對話方塊列或使用您自己調用**CWnd::UpdateDialogControls**的對話框中放置按鈕控制項,您會注意到框架會自動為您禁用沒有**ON_COMMAND**或**ON_UPDATE_COMMAND_UI**處理程式的按鈕。 在某些情況下,您不需要有處理程式,但您希望該按鈕保持啟用狀態。 實現此目的的最簡單方法是添加虛擬命令處理程式(易於使用 ClassWizard),並且不執行任何操作。
 
 ## <a name="window-message-routing"></a>視窗訊息路由
 
-以下會說明一些更進階的主題上的 MFC 類別，以及它們如何影響 Windows 訊息路由和其他主題。 此處提供的資訊只簡短描述。 請參閱*類別庫參考*公用 Api 的詳細資料。 請參閱 MFC 程式庫原始程式碼，如需有關實作詳細資料。
+下面介紹了 MFC 類上的一些更高級的主題,以及 Windows 消息路由和其他主題如何影響它們。 此處的資訊僅簡要描述。 有關公共 API 的詳細資訊,請參閱*類別庫參考*。 有關實現詳細資訊的詳細資訊,請參閱 MFC 庫原始程式碼。
 
-請參閱[技術的附註 17](../mfc/tn017-destroying-window-objects.md)視窗中清除的詳細資訊，非常重要的主題針對所有**CWnd**-衍生的類別。
+有關視窗清理的詳細資訊,請參閱[技術說明 17,](../mfc/tn017-destroying-window-objects.md)這是所有**CWnd**派生類的一個非常重要的主題。
 
-## <a name="cwnd-issues"></a>CWnd 問題
+## <a name="cwnd-issues"></a>問題
 
-實作成員函式**On_xxx_reflect**提供一種功能強大且可擴充的架構，用於連結或否則通知的訊息、 命令和控制項的子視窗 （也稱為控制項）請移至其父代 （或 「 擁有者 」） 的通知。 如果子視窗 （/ 控制） 是C++ **CWnd**物件本身，虛擬函式**OnChildNotify**稱為第一次使用的參數從原始訊息 (也就是**訊息**結構)。 子視窗可以單獨將訊息、 吃下它，或修改父 （罕見） 的訊息。
+實現成員函數**CWnd::OnChildNotify**為子視窗(也稱為控件)提供了一個強大且可擴展的體系結構,用於鉤住或以其他方式通知發送到其父級(或"擁有者")的消息、命令和控制通知。 如果子視窗(/控件)是**cWnd**物件本身C++,則首先使用原始消息(即**MSG**結構)中的參數調用虛擬函數**OnChildNotify。** 子視窗可以單獨保留消息、食用郵件或修改父級的消息(罕見)。
 
-預設值**CWnd**實作會處理下列訊息，並使用**OnChildNotify**攔截程序，讓子視窗 （控制項） 在訊息的第一次存取：
+預設**的 CWnd**實現處理以下訊息,並使用**OnChildNotify**掛鈎允許子視窗(控制件)首先存取消息:
 
-- **WM_MEASUREITEM**並**WM_DRAWITEM** （的自繪）
+- **WM_MEASUREITEM**與**WM_DRAWITEM(** 用於自繪 )
 
-- **WM_COMPAREITEM**並**WM_DELETEITEM** （的自繪）
+- **WM_COMPAREITEM**與**WM_DELETEITEM(** 用於自繪 )
 
-- **時傳遞 WM_HSCROLL**和**WM_VSCROLL**
+- **WM_HSCROLL**和**WM_VSCROLL**
 
 - **WM_CTLCOLOR**
 
 - **WM_PARENTNOTIFY**
 
-您會發現**OnChildNotify**攔截程序用來變更成自繪訊息的主控描繪訊息。
+您會注意到**OnChildNotify**挂鉤用於將擁有者繪製消息更改為自製消息。
 
-除了**OnChildNotify**攔截程序捲動訊息有進一步的路由行為。 如需捲軸及來源的詳細資訊請參閱下方**時傳遞 WM_HSCROLL**並**WM_VSCROLL**訊息。
+除了**OnChildNotify**掛鈎之外,滾動消息還有進一步的路由行為。 有關滾動條以及**WM_HSCROLL**和**WM_VSCROLL**消息源的更多詳細資訊,請參閱下文。
 
-## <a name="cframewnd-issues"></a>CFrameWnd 問題
+## <a name="cframewnd-issues"></a>CFramewnd 問題
 
-**CFrameWnd**類別提供的大部分命令路由和使用者介面更新實作。 這主要用於應用程式的主框架視窗 (**M_pmainwnd**)，但適用於所有框架視窗。
+**CFrameWnd**類提供大部分命令路由和使用者介面更新實現。 這主要用於應用程式的主框架視窗 (**CWinApp::m_pMainWnd**),但適用於所有框架視窗。
 
-主框架視窗是使用功能表列的視窗和 [狀態] 列的父系或訊息列。 請參閱上述的討論內容，在命令路由和**WM_INITMENUPOPUP。**
+主框架視窗是帶有功能表欄的視窗,是狀態列或消息行的父級。 請參閱上述有關命令路由和**WM_INITMENUPOPUP的討論。**
 
-**CFrameWnd**類別提供管理功能的作用中的檢視。 下列訊息會路由傳送到現用檢視表：
+**CFrameWnd**類提供活動檢視的管理。 以下訊息通過活動檢視路由:
 
-- （使用中的檢視會取得它們的第一次存取） 的所有命令訊息。
+- 所有命令消息(活動檢視將首先訪問它們)。
 
-- **時傳遞 WM_HSCROLL**並**WM_VSCROLL**來自同層級捲軸 （如下所示）。
+- **來自**同級滾動條WM_HSCROLL和**WM_VSCROLL**消息(見下文)。
 
-- **WM_ACTIVATE** (與**WM_MDIACTIVATE** mdi) 取得轉換成虛擬函式呼叫**CView::OnActivateView**。
+- **WM_ACTIVATE(** 與**MDI 的WM_MDIACTIVATE)** 轉換為對虛擬函數**CView 的呼叫:onActivateView**。
 
-## <a name="cmdiframewndcmdichildwnd-issues"></a>CMDIFrameWnd/CMDIChildWnd 問題
+## <a name="cmdiframewndcmdichildwnd-issues"></a>CMDIFramewnd/CMDIChildwnd 問題
 
-這兩個 MDI 框架視窗類別衍生自**CFrameWnd**同時啟用相同的命令路由排序因此和使用者介面更新中提供**CFrameWnd**。 在典型的 MDI 應用程式，只在主框架視窗 (也就是**CMDIFrameWnd**物件) 保留在功能表列和狀態列，因此命令路由實作的主要來源。
+兩個 MDI 幀視窗類都派生自**CFrameWnd,** 因此都啟用了相同的命令路由和用戶介面更新在**CFrameWnd**中提供。 在典型的 MDI 應用程式中,只有主框架視窗(即**CMDIFrameWnd**物件)保存功能表欄和狀態列,因此是命令路由實現的主要來源。
 
-一般路由的配置是現用的 MDI 子視窗取得命令的第一次存取。 預設值**PreTranslateMessage**函式中處理這兩個 MDI 子視窗的快速鍵對應表 （第一次） 和 MDI 框架 （第二個） 以及通常由標準 MDI 系統命令加速器**TranslateMDISysAccel** （最後一個）。
+常規路由方案是活動 MDI 子視窗首先訪問命令。 預設**PreTranslateMessage**函數可處理 MDI 子視窗(第一個)和 MDI 幀(第二個)以及通常由**TranslateMDISysAccel(** 最後)處理的標準 MDI 系統命令加速器的加速器表。
 
-## <a name="scroll-bar-issues"></a>捲軸的問題
+## <a name="scroll-bar-issues"></a>捲動條問題
 
-處理捲動訊息時 (**時傳遞 WM_HSCROLL**/**OnHScroll**及/或**WM_VSCROLL**/**OnVScroll**)，您應該嘗試寫入處理常式程式碼，因此它不會依賴捲軸列訊息的來源。 這不只是一般的 Windows 問題，因為捲動訊息可能來自，則為 true 的捲軸控制項，或從**WS_HSCROLL**/**WS_VSCROLL**捲軸不是捲軸控制項。
+處理滾動訊息時 **(WM_HSCROLL**/**OnHScroll**和/或**WM_VSCROLL**/**OnVScroll),** 應嘗試編寫處理程式代碼,以便它不依賴於滾動條消息的來龍去向。 這不僅是一般 Windows 問題,因為滾動消息可能來自真正的滾動條控/件或**WS_HSCROLLWS_VSCROLL**滾動條**WS_HSCROLL**(不是滾動條控件)。
 
-MFC 擴充，讓子系或同層級項目正在捲動視窗的捲軸控制項 （事實上，捲軸和要捲動的視窗之間的父子式關聯性可以是任何項目）。 這是特別重要的分隔視窗具有共用的捲軸。 請參閱[技術的附註 29](../mfc/tn029-splitter-windows.md)如需實作詳細資料**CSplitterWnd**包括的詳細資訊，在共用的捲軸列的問題。
+MFC 擴展了該控件,以使滾動條控件可以是要滾動的視窗的子控制件或同級控制件(事實上,滾動條和要滾動的視窗之間的父/子關係可以是任何)。 對於具有拆分視窗的共用滾動條,這一點尤其重要。 有關**CSplitterWnd**實施的詳細資訊,請參閱[技術說明 29,](../mfc/tn029-splitter-windows.md)包括有關共用滾動條問題的詳細資訊。
 
-附帶一提，在有兩個**CWnd**衍生的類別，在指定捲軸樣式建立的時間會截取並不會傳遞給 Windows。 建立常式，傳遞**WS_HSCROLL**並**WS_VSCROLL**可以獨立設定，但之後無法變更建立。 當然，您應該不是直接測試，或設定他們所建立之視窗的 WS_SCROLL 樣式位元。
+在旁注中,有兩個**CWnd**派生類,其中在創建時指定的滾動條樣式被困,不會傳遞到Windows。 當傳遞到建立例程時,可以獨立設置**WS_HSCROLL**和**WS_VSCROLL,** 但在創建後無法更改。 當然,不應直接測試或設置它們創建的視窗的WS_SCROLL樣式位。
 
-針對**CMDIFrameWnd**捲軸樣式您傳遞給**建立**或是**LoadFrame**用來建立 MDICLIENT。 如果您想要的是可捲動的 MDICLIENT 區域 （例如 Windows 程式經理） 務必設定兩者捲軸樣式 (**WS_HSCROLL** &#124; **WS_VSCROLL**) 用來建立樣式**CMDIFrameWnd**。
+對於**CMDIFrame,** 您傳遞給 **「建立**」或 **「載入幀」** 的滾動條樣式用於創建 MDICLIENT。 如果您希望有一個可滾動的 MDICLIENT 區域(如 Windows 程式管理器),請確保為用於創建**CMDIFrameWnd**的樣式設置滾動條樣式 **(WS_HSCROLL&#124;WS_VSCROLL)。** **WS_VSCROLL**
 
-針對**CSplitterWnd**捲軸樣式套用至特殊的共用的捲軸的分隔器區域。 對於靜態分隔視窗，您通常不會設定任一捲軸樣式。 動態分隔視窗中，您通常必須捲軸樣式集，您將分割，也就是方向**WS_HSCROLL**您可以將分割的資料列，如果**WS_VSCROLL**可以分割資料行。
+對於**CSplitterWnd,** 滾動條樣式適用於拆分器區域的特殊共用滾動條。 對於靜態拆分視窗,通常不會設置任一滾動條樣式。 對於動態拆分視窗,通常為要拆分的方向設置了滾動條樣式,也就是說,如果可以拆分行 **,WS_HSCROLL,WS_VSCROLL****拆分**列。
 
 ## <a name="see-also"></a>另請參閱
 

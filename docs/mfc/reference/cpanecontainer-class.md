@@ -120,18 +120,18 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 316a144cf043c9732b5f3ab943aa120100d9ee32
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373111"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364138"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 類別
 
-`CPaneContainer`類別是由 MFC 實作停駐模型的基本元件。 這個類別的物件儲存兩個停駐窗格的指標或 `CPaneContainer.` 的兩個執行個體的指標，也存放分隔窗格 (或容器) 的分割線的指標。 Framework 可以將容器巢狀於容器內部，建置表示複雜停駐配置的二進位樹狀目錄。 二進位樹狀目錄的根儲存在[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)物件。
+類`CPaneContainer`是 MFC 實現的停靠模型的基本元件。 這個類別的物件儲存兩個停駐窗格的指標或 `CPaneContainer.` 的兩個執行個體的指標，也存放分隔窗格 (或容器) 的分割線的指標。 Framework 可以將容器巢狀於容器內部，建置表示複雜停駐配置的二進位樹狀目錄。 二進位樹的根儲存在[CPane容器管理員](../../mfc/reference/cpanecontainermanager-class.md)物件中。
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -145,81 +145,81 @@ class CPaneContainer : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CPaneContainer::CPaneContainer](#cpanecontainer)|預設建構函式。|
+|[CPane 容器:CPane 容器](#cpanecontainer)|預設建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPaneContainer::AddPane](#addpane)||
-|[CPaneContainer::AddRef](#addref)||
-|[CPaneContainer::AddSubPaneContainer](#addsubpanecontainer)||
-|[CPaneContainer::CalcAvailablePaneSpace](#calcavailablepanespace)||
-|[CPaneContainer::CalcAvailableSpace](#calcavailablespace)||
-|[CPaneContainer::CalculateRecentSize](#calculaterecentsize)||
-|[CPaneContainer::CheckPaneDividerVisibility](#checkpanedividervisibility)||
-|[CPaneContainer::Copy](#copy)||
-|[CPaneContainer::DeletePane](#deletepane)||
-|[CPaneContainer::FindSubPaneContainer](#findsubpanecontainer)||
-|[CPaneContainer::FindTabbedPane](#findtabbedpane)||
-|[CPaneContainer::GetAssociatedSiblingPaneIDs](#getassociatedsiblingpaneids)||
-|[CPaneContainer::GetLeftPane](#getleftpane)||
-|[CPaneContainer::GetLeftPaneContainer](#getleftpanecontainer)||
-|[CPaneContainer::GetMinSize](#getminsize)||
-|[CPaneContainer::GetMinSizeLeft](#getminsizeleft)||
-|[CPaneContainer::GetMinSizeRight](#getminsizeright)||
-|[CPaneContainer::GetNodeCount](#getnodecount)||
-|[CPaneContainer::GetPaneDivider](#getpanedivider)||
-|[CPaneContainer::GetParentPaneContainer](#getparentpanecontainer)||
-|[CPaneContainer::GetRecentPaneDividerRect](#getrecentpanedividerrect)||
-|[CPaneContainer::GetRecentPaneDividerStyle](#getrecentpanedividerstyle)||
-|[CPaneContainer::GetRecentPercent](#getrecentpercent)||
-|[CPaneContainer::GetRefCount](#getrefcount)||
-|[CPaneContainer::GetResizeStep](#getresizestep)||
-|[CPaneContainer::GetRightPane](#getrightpane)||
-|[CPaneContainer::GetRightPaneContainer](#getrightpanecontainer)||
-|[CPaneContainer::GetTotalReferenceCount](#gettotalreferencecount)||
-|[CPaneContainer::GetWindowRect](#getwindowrect)||
-|[CPaneContainer::IsDisposed](#isdisposed)||
-|[CPaneContainer::IsEmpty](#isempty)||
-|[CPaneContainer::IsLeftPane](#isleftpane)||
-|[CPaneContainer::IsLeftPaneContainer](#isleftpanecontainer)||
-|[CPaneContainer::IsLeftPartEmpty](#isleftpartempty)||
-|[CPaneContainer::IsRightPartEmpty](#isrightpartempty)||
-|[CPaneContainer::IsVisible](#isvisible)||
-|[CPaneContainer::Move](#move)||
-|[CPaneContainer::OnDeleteHidePane](#ondeletehidepane)||
-|[CPaneContainer::OnMoveInternalPaneDivider](#onmoveinternalpanedivider)||
-|[CPaneContainer::OnShowPane](#onshowpane)||
-|[CPaneContainer::Release](#release)||
-|[CPaneContainer::ReleaseEmptyPaneContainer](#releaseemptypanecontainer)||
-|[CPaneContainer::RemoveNonValidPanes](#removenonvalidpanes)||
-|[CPaneContainer::RemovePane](#removepane)||
-|[CPaneContainer::Resize](#resize)||
-|[CPaneContainer::ResizePane](#resizepane)||
-|[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||
-|[CPaneContainer::Serialize](#serialize)|從封存中讀取或寫入此物件。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
-|[CPaneContainer::SetPane](#setpane)||
-|[CPaneContainer::SetPaneContainer](#setpanecontainer)||
-|[CPaneContainer::SetPaneDivider](#setpanedivider)||
-|[CPaneContainer::SetParentPaneContainer](#setparentpanecontainer)||
-|[CPaneContainer::SetRecentPercent](#setrecentpercent)||
-|[CPaneContainer::SetUpByID](#setupbyid)||
-|[CPaneContainer::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
-|[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||
+|[CPane 容器::添加窗格](#addpane)||
+|[CPane 容器::添加參考](#addref)||
+|[CPane 容器::添加子窗格容器](#addsubpanecontainer)||
+|[CPane 容器::卡爾庫可導航窗格空間](#calcavailablepanespace)||
+|[CPane 容器::卡爾庫空間](#calcavailablespace)||
+|[CPane 容器::計算最近大小](#calculaterecentsize)||
+|[CPane 容器::檢查窗格差異可見性](#checkpanedividervisibility)||
+|[CPane 容器:複製](#copy)||
+|[CPane 容器::DeletePane](#deletepane)||
+|[CPane 容器::查找子窗格容器](#findsubpanecontainer)||
+|[CPane 容器::尋找選項卡式窗格](#findtabbedpane)||
+|[CPane 容器:取得關聯的同級窗格](#getassociatedsiblingpaneids)||
+|[CPane 容器:抓取左窗格](#getleftpane)||
+|[CPane 容器:抓取左方窗格容器](#getleftpanecontainer)||
+|[CPane 容器:取得最小值](#getminsize)||
+|[CPane 容器::取得最小值左](#getminsizeleft)||
+|[CPane 容器::獲取正確的](#getminsizeright)||
+|[CPane 容器::獲取節點計數](#getnodecount)||
+|[CPane 容器::抓取窗格分頻器](#getpanedivider)||
+|[CPane 容器:抓取父窗格容器](#getparentpanecontainer)||
+|[CPane 容器:抓取最新窗格分流器](#getrecentpanedividerrect)||
+|[CPane 容器:取得最新窗格轉換器樣式](#getrecentpanedividerstyle)||
+|[CPane 容器:獲取最新百分比](#getrecentpercent)||
+|[CPane 容器:獲取參考計數](#getrefcount)||
+|[CPane 容器:獲取重調整步驟](#getresizestep)||
+|[CPane 容器::獲取右窗格](#getrightpane)||
+|[CPane 容器:抓取右方窗格容器](#getrightpanecontainer)||
+|[CPane 容器:獲取總參考計數](#gettotalreferencecount)||
+|[CPane 容器:抓取視窗重新](#getwindowrect)||
+|[CPane 容器:已釋放](#isdisposed)||
+|[CPane 容器::為空](#isempty)||
+|[CPane 容器::左窗格](#isleftpane)||
+|[CPane 容器::左窗格容器](#isleftpanecontainer)||
+|[CPane 容器::左撇子空](#isleftpartempty)||
+|[CPane 容器::右部分空](#isrightpartempty)||
+|[CPane 容器:可見](#isvisible)||
+|[CPane 容器:移動](#move)||
+|[CPane 容器::打開隱藏窗格](#ondeletehidepane)||
+|[CPane 容器::行動內部窗格分頻器](#onmoveinternalpanedivider)||
+|[CPane 容器::在顯示窗格上](#onshowpane)||
+|[CPane 容器::發佈](#release)||
+|[CPane 容器::釋放空窗格容器](#releaseemptypanecontainer)||
+|[CPane 容器::刪除非有效窗格](#removenonvalidpanes)||
+|[CPane 容器::刪除窗格](#removepane)||
+|[CPane 容器:調整大小](#resize)||
+|[CPane 容器:調整窗格大小](#resizepane)||
+|[CPane 容器:調整窗格容器的大小](#resizepartofpanecontainer)||
+|[CPane 容器:序列化](#serialize)|從封存中讀取或寫入此物件。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
+|[CPane 容器::設定窗格](#setpane)||
+|[CPane 容器:設定窗格容器](#setpanecontainer)||
+|[CPane 容器::設定窗格轉換器](#setpanedivider)||
+|[CPane 容器::設定父窗格容器](#setparentpanecontainer)||
+|[CPane 容器::設置最近百分比](#setrecentpercent)||
+|[CPane 容器:設定 ByID](#setupbyid)||
+|[CPane 容器::存儲最新網站資訊](#storerecentdocksiteinfo)||
+|[CPane 容器:拉伸窗格容器](#stretchpanecontainer)||
 
 ### <a name="remarks"></a>備註
 
-`CPaneContainer` 此架構會自動建立物件。
+`CPaneContainer`物件由框架自動創建。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建構的執行個體`CPaneContainer`類別。 此程式碼片段是一部分[設定窗格大小範例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何構造類的`CPaneContainer`實例。 此程式碼段是[「設定窗格大小」範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -227,9 +227,9 @@ class CPaneContainer : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxpanecontainer.h
+**標題:** afxpane 容器.h
 
-##  <a name="addpane"></a>  CPaneContainer::AddPane
+## <a name="cpanecontaineraddpane"></a><a name="addpane"></a>CPane 容器::添加窗格
 
 ```
 CDockablePane* AddPane(CDockablePane* pBar);
@@ -237,13 +237,13 @@ CDockablePane* AddPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addref"></a>  CPaneContainer::AddRef
+## <a name="cpanecontaineraddref"></a><a name="addref"></a>CPane 容器::添加參考
 
 ```
 void AddRef();
@@ -251,7 +251,7 @@ void AddRef();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addsubpanecontainer"></a>  CPaneContainer::AddSubPaneContainer
+## <a name="cpanecontaineraddsubpanecontainer"></a><a name="addsubpanecontainer"></a>CPane 容器::添加子窗格容器
 
 ```
 BOOL AddSubPaneContainer(
@@ -261,14 +261,14 @@ BOOL AddSubPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in] *pContainer*<br/>
-[in] *bRightNodeNew*<br/>
+[在]*p 容器*<br/>
+[在]*bRightNode New*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcavailablepanespace"></a>  CPaneContainer::CalcAvailablePaneSpace
+## <a name="cpanecontainercalcavailablepanespace"></a><a name="calcavailablepanespace"></a>CPane 容器::卡爾庫可導航窗格空間
 
 ```
 virtual int CalcAvailablePaneSpace(
@@ -280,16 +280,16 @@ virtual int CalcAvailablePaneSpace(
 
 ### <a name="parameters"></a>參數
 
-[in] *nRequiredOffset*<br/>
-[in] *pBar*<br/>
-[in] *pContainer*<br/>
-[in] *bLeftBar*<br/>
+[在]*n必需偏移*<br/>
+[在]*pBar*<br/>
+[在]*p 容器*<br/>
+[在]*b左欄*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcavailablespace"></a>  CPaneContainer::CalcAvailableSpace
+## <a name="cpanecontainercalcavailablespace"></a><a name="calcavailablespace"></a>CPane 容器::卡爾庫空間
 
 ```
 virtual CSize CalcAvailableSpace(
@@ -299,14 +299,14 @@ virtual CSize CalcAvailableSpace(
 
 ### <a name="parameters"></a>參數
 
-[in] *sizeStretch*<br/>
-[in] *bLeftBar*<br/>
+[在]*大小拉伸*<br/>
+[在]*b左欄*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calculaterecentsize"></a>  CPaneContainer::CalculateRecentSize
+## <a name="cpanecontainercalculaterecentsize"></a><a name="calculaterecentsize"></a>CPane 容器::計算最近大小
 
 ```
 void CalculateRecentSize();
@@ -314,7 +314,7 @@ void CalculateRecentSize();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="checkpanedividervisibility"></a>  CPaneContainer::CheckPaneDividerVisibility
+## <a name="cpanecontainercheckpanedividervisibility"></a><a name="checkpanedividervisibility"></a>CPane 容器::檢查窗格差異可見性
 
 ```
 void CheckPaneDividerVisibility();
@@ -322,7 +322,7 @@ void CheckPaneDividerVisibility();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="copy"></a>  CPaneContainer::Copy
+## <a name="cpanecontainercopy"></a><a name="copy"></a>CPane 容器:複製
 
 ```
 virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
@@ -330,13 +330,13 @@ virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
 
 ### <a name="parameters"></a>參數
 
-[in] *pParentContainer*<br/>
+[在]*p 父容器*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cpanecontainer"></a>  CPaneContainer::CPaneContainer
+## <a name="cpanecontainercpanecontainer"></a><a name="cpanecontainer"></a>CPane 容器:CPane 容器
 
 ```
 CPaneContainer(
@@ -348,14 +348,14 @@ CPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in] *pManager*<br/>
-[in] *pLeftBar*<br/>
-[in] *pRightBar*<br/>
-[in] *pSlider*<br/>
+[在]*p經理*<br/>
+[在]*左鍵列*<br/>
+[在]*pRightBar*<br/>
+[在]*pSlider*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="deletepane"></a>  CPaneContainer::DeletePane
+## <a name="cpanecontainerdeletepane"></a><a name="deletepane"></a>CPane 容器::DeletePane
 
 ```
 virtual void DeletePane(
@@ -365,12 +365,12 @@ virtual void DeletePane(
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
-[in] *barType*<br/>
+[在]*pBar*<br/>
+[在]*條型類型*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="findsubpanecontainer"></a>  CPaneContainer::FindSubPaneContainer
+## <a name="cpanecontainerfindsubpanecontainer"></a><a name="findsubpanecontainer"></a>CPane 容器::查找子窗格容器
 
 ```
 CPaneContainer* FindSubPaneContainer(
@@ -380,14 +380,14 @@ CPaneContainer* FindSubPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in] *pObject*<br/>
-[in] *findCriteria*<br/>
+[在]*pObject*<br/>
+[在]*尋找標準*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="findtabbedpane"></a>  CPaneContainer::FindTabbedPane
+## <a name="cpanecontainerfindtabbedpane"></a><a name="findtabbedpane"></a>CPane 容器::尋找選項卡式窗格
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
@@ -395,13 +395,13 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>參數
 
-[in] *nID*<br/>
+[在]*nID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getassociatedsiblingpaneids"></a>  CPaneContainer::GetAssociatedSiblingPaneIDs
+## <a name="cpanecontainergetassociatedsiblingpaneids"></a><a name="getassociatedsiblingpaneids"></a>CPane 容器:取得關聯的同級窗格
 
 ```
 CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
@@ -409,13 +409,13 @@ CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getleftpane"></a>  CPaneContainer::GetLeftPane
+## <a name="cpanecontainergetleftpane"></a><a name="getleftpane"></a>CPane 容器:抓取左窗格
 
 ```
 const CDockablePane* GetLeftPane() const;
@@ -425,7 +425,7 @@ const CDockablePane* GetLeftPane() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getleftpanecontainer"></a>  CPaneContainer::GetLeftPaneContainer
+## <a name="cpanecontainergetleftpanecontainer"></a><a name="getleftpanecontainer"></a>CPane 容器:抓取左方窗格容器
 
 ```
 const CPaneContainer* GetLeftPaneContainer() const;
@@ -435,7 +435,7 @@ const CPaneContainer* GetLeftPaneContainer() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getminsize"></a>  CPaneContainer::GetMinSize
+## <a name="cpanecontainergetminsize"></a><a name="getminsize"></a>CPane 容器:取得最小值
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -443,11 +443,11 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *size*<br/>
+[在]*大小*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getminsizeleft"></a>  CPaneContainer::GetMinSizeLeft
+## <a name="cpanecontainergetminsizeleft"></a><a name="getminsizeleft"></a>CPane 容器::取得最小值左
 
 ```
 virtual void GetMinSizeLeft(CSize& size) const;
@@ -455,11 +455,11 @@ virtual void GetMinSizeLeft(CSize& size) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *size*<br/>
+[在]*大小*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getminsizeright"></a>  CPaneContainer::GetMinSizeRight
+## <a name="cpanecontainergetminsizeright"></a><a name="getminsizeright"></a>CPane 容器::獲取正確的
 
 ```
 virtual void GetMinSizeRight(CSize& size) const;
@@ -467,11 +467,11 @@ virtual void GetMinSizeRight(CSize& size) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *size*<br/>
+[在]*大小*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getnodecount"></a>  CPaneContainer::GetNodeCount
+## <a name="cpanecontainergetnodecount"></a><a name="getnodecount"></a>CPane 容器::獲取節點計數
 
 ```
 int GetNodeCount() const;
@@ -481,7 +481,7 @@ int GetNodeCount() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpanedivider"></a>  CPaneContainer::GetPaneDivider
+## <a name="cpanecontainergetpanedivider"></a><a name="getpanedivider"></a>CPane 容器::抓取窗格分頻器
 
 ```
 const CPaneDivider* GetPaneDivider() const;
@@ -491,7 +491,7 @@ const CPaneDivider* GetPaneDivider() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getparentpanecontainer"></a>  CPaneContainer::GetParentPaneContainer
+## <a name="cpanecontainergetparentpanecontainer"></a><a name="getparentpanecontainer"></a>CPane 容器:抓取父窗格容器
 
 ```
 CPaneContainer* GetParentPaneContainer() const;
@@ -501,7 +501,7 @@ CPaneContainer* GetParentPaneContainer() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrecentpanedividerrect"></a>  CPaneContainer::GetRecentPaneDividerRect
+## <a name="cpanecontainergetrecentpanedividerrect"></a><a name="getrecentpanedividerrect"></a>CPane 容器:抓取最新窗格分流器
 
 ```
 CRect GetRecentPaneDividerRect() const;
@@ -511,7 +511,7 @@ CRect GetRecentPaneDividerRect() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrecentpanedividerstyle"></a>  CPaneContainer::GetRecentPaneDividerStyle
+## <a name="cpanecontainergetrecentpanedividerstyle"></a><a name="getrecentpanedividerstyle"></a>CPane 容器:取得最新窗格轉換器樣式
 
 ```
 DWORD GetRecentPaneDividerStyle() const;
@@ -521,7 +521,7 @@ DWORD GetRecentPaneDividerStyle() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrecentpercent"></a>  CPaneContainer::GetRecentPercent
+## <a name="cpanecontainergetrecentpercent"></a><a name="getrecentpercent"></a>CPane 容器:獲取最新百分比
 
 ```
 int GetRecentPercent();
@@ -531,7 +531,7 @@ int GetRecentPercent();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrefcount"></a>  CPaneContainer::GetRefCount
+## <a name="cpanecontainergetrefcount"></a><a name="getrefcount"></a>CPane 容器:獲取參考計數
 
 ```
 LONG GetRefCount();
@@ -541,7 +541,7 @@ LONG GetRefCount();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getresizestep"></a>  CPaneContainer::GetResizeStep
+## <a name="cpanecontainergetresizestep"></a><a name="getresizestep"></a>CPane 容器:獲取重調整步驟
 
 ```
 virtual int GetResizeStep() const;
@@ -551,7 +551,7 @@ virtual int GetResizeStep() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrightpane"></a>  CPaneContainer::GetRightPane
+## <a name="cpanecontainergetrightpane"></a><a name="getrightpane"></a>CPane 容器::獲取右窗格
 
 ```
 const CDockablePane* GetRightPane() const;
@@ -561,7 +561,7 @@ const CDockablePane* GetRightPane() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrightpanecontainer"></a>  CPaneContainer::GetRightPaneContainer
+## <a name="cpanecontainergetrightpanecontainer"></a><a name="getrightpanecontainer"></a>CPane 容器:抓取右方窗格容器
 
 ```
 const CPaneContainer* GetRightPaneContainer() const;
@@ -571,7 +571,7 @@ const CPaneContainer* GetRightPaneContainer() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettotalreferencecount"></a>  CPaneContainer::GetTotalReferenceCount
+## <a name="cpanecontainergettotalreferencecount"></a><a name="gettotalreferencecount"></a>CPane 容器:獲取總參考計數
 
 ```
 int GetTotalReferenceCount() const;
@@ -581,7 +581,7 @@ int GetTotalReferenceCount() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getwindowrect"></a>  CPaneContainer::GetWindowRect
+## <a name="cpanecontainergetwindowrect"></a><a name="getwindowrect"></a>CPane 容器:抓取視窗重新
 
 ```
 virtual void GetWindowRect(
@@ -591,12 +591,12 @@ virtual void GetWindowRect(
 
 ### <a name="parameters"></a>參數
 
-[in] *rect*<br/>
-[in] *bIgnoreVisibility*<br/>
+[在]*rect*<br/>
+[在]*b忽略可見度*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isdisposed"></a>  CPaneContainer::IsDisposed
+## <a name="cpanecontainerisdisposed"></a><a name="isdisposed"></a>CPane 容器:已釋放
 
 ```
 BOOL IsDisposed() const;
@@ -606,7 +606,7 @@ BOOL IsDisposed() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isempty"></a>  CPaneContainer::IsEmpty
+## <a name="cpanecontainerisempty"></a><a name="isempty"></a>CPane 容器::為空
 
 ```
 BOOL IsEmpty() const;
@@ -616,7 +616,7 @@ BOOL IsEmpty() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isleftpane"></a>  CPaneContainer::IsLeftPane
+## <a name="cpanecontainerisleftpane"></a><a name="isleftpane"></a>CPane 容器::左窗格
 
 ```
 BOOL IsLeftPane(CDockablePane* pBar) const;
@@ -624,13 +624,13 @@ BOOL IsLeftPane(CDockablePane* pBar) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isleftpanecontainer"></a>  CPaneContainer::IsLeftPaneContainer
+## <a name="cpanecontainerisleftpanecontainer"></a><a name="isleftpanecontainer"></a>CPane 容器::左窗格容器
 
 ```
 BOOL IsLeftPaneContainer() const;
@@ -640,7 +640,7 @@ BOOL IsLeftPaneContainer() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isleftpartempty"></a>  CPaneContainer::IsLeftPartEmpty
+## <a name="cpanecontainerisleftpartempty"></a><a name="isleftpartempty"></a>CPane 容器::左撇子空
 
 ```
 BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
@@ -648,13 +648,13 @@ BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *bCheckVisibility*<br/>
+[在]*b 檢查可見度*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isrightpartempty"></a>  CPaneContainer::IsRightPartEmpty
+## <a name="cpanecontainerisrightpartempty"></a><a name="isrightpartempty"></a>CPane 容器::右部分空
 
 ```
 BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
@@ -662,13 +662,13 @@ BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *bCheckVisibility*<br/>
+[在]*b 檢查可見度*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isvisible"></a>  CPaneContainer::IsVisible
+## <a name="cpanecontainerisvisible"></a><a name="isvisible"></a>CPane 容器:可見
 
 ```
 BOOL IsVisible() const;
@@ -678,7 +678,7 @@ BOOL IsVisible() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="move"></a>  CPaneContainer::Move
+## <a name="cpanecontainermove"></a><a name="move"></a>CPane 容器:移動
 
 ```
 virtual void Move(CPoint ptNewLeftTop);
@@ -686,11 +686,11 @@ virtual void Move(CPoint ptNewLeftTop);
 
 ### <a name="parameters"></a>參數
 
-[in] *ptNewLeftTop*<br/>
+[在]*pt 中左頂*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondeletehidepane"></a>  CPaneContainer::OnDeleteHidePane
+## <a name="cpanecontainerondeletehidepane"></a><a name="ondeletehidepane"></a>CPane 容器::打開隱藏窗格
 
 ```
 void OnDeleteHidePane(
@@ -700,12 +700,12 @@ void OnDeleteHidePane(
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
-[in] *bHide*<br/>
+[在]*pBar*<br/>
+[在]*bHide*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onmoveinternalpanedivider"></a>  CPaneContainer::OnMoveInternalPaneDivider
+## <a name="cpanecontaineronmoveinternalpanedivider"></a><a name="onmoveinternalpanedivider"></a>CPane 容器::行動內部窗格分頻器
 
 ```
 virtual int OnMoveInternalPaneDivider(
@@ -715,14 +715,14 @@ virtual int OnMoveInternalPaneDivider(
 
 ### <a name="parameters"></a>參數
 
-[in] *nOffset*<br/>
-[in] *hdwp*<br/>
+[在]*n位移*<br/>
+[在]*hdwp*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onshowpane"></a>  CPaneContainer::OnShowPane
+## <a name="cpanecontaineronshowpane"></a><a name="onshowpane"></a>CPane 容器::在顯示窗格上
 
 ```
 virtual void OnShowPane(
@@ -732,12 +732,12 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
+[在]*pBar*<br/>
+[在]*b 顯示*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="release"></a>  CPaneContainer::Release
+## <a name="cpanecontainerrelease"></a><a name="release"></a>CPane 容器::發佈
 
 ```
 DWORD Release();
@@ -747,7 +747,7 @@ DWORD Release();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="releaseemptypanecontainer"></a>  CPaneContainer::ReleaseEmptyPaneContainer
+## <a name="cpanecontainerreleaseemptypanecontainer"></a><a name="releaseemptypanecontainer"></a>CPane 容器::釋放空窗格容器
 
 ```
 void ReleaseEmptyPaneContainer();
@@ -755,7 +755,7 @@ void ReleaseEmptyPaneContainer();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="removenonvalidpanes"></a>  CPaneContainer::RemoveNonValidPanes
+## <a name="cpanecontainerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPane 容器::刪除非有效窗格
 
 ```
 void RemoveNonValidPanes();
@@ -763,7 +763,7 @@ void RemoveNonValidPanes();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="removepane"></a>  CPaneContainer::RemovePane
+## <a name="cpanecontainerremovepane"></a><a name="removepane"></a>CPane 容器::刪除窗格
 
 ```
 virtual void RemovePane(CDockablePane* pBar);
@@ -771,11 +771,11 @@ virtual void RemovePane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="resize"></a>  CPaneContainer::Resize
+## <a name="cpanecontainerresize"></a><a name="resize"></a>CPane 容器:調整大小
 
 ```
 virtual void Resize(
@@ -786,13 +786,13 @@ virtual void Resize(
 
 ### <a name="parameters"></a>參數
 
-[in] *rect*<br/>
-[in] *hdwp*<br/>
-[in] *bRedraw*<br/>
+[在]*rect*<br/>
+[在]*hdwp*<br/>
+[在]*bredraw*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="resizepane"></a>  CPaneContainer::ResizePane
+## <a name="cpanecontainerresizepane"></a><a name="resizepane"></a>CPane 容器:調整窗格大小
 
 ```
 virtual void ResizePane(
@@ -806,16 +806,16 @@ virtual void ResizePane(
 
 ### <a name="parameters"></a>參數
 
-[in] *nOffset*<br/>
-[in] *pBar*<br/>
-[in] *pContainer*<br/>
-[in] *bHorz*<br/>
-[in] *bLeftBar*<br/>
-[in] *hdwp*<br/>
+[在]*n位移*<br/>
+[在]*pBar*<br/>
+[在]*p 容器*<br/>
+[在]*布霍茲*<br/>
+[在]*b左欄*<br/>
+[在]*hdwp*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="resizepartofpanecontainer"></a>  CPaneContainer::ResizePartOfPaneContainer
+## <a name="cpanecontainerresizepartofpanecontainer"></a><a name="resizepartofpanecontainer"></a>CPane 容器:調整窗格容器的大小
 
 ```
 virtual void ResizePartOfPaneContainer(
@@ -826,13 +826,13 @@ virtual void ResizePartOfPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in] *nOffset*<br/>
-[in] *bLeftPart*<br/>
-[in] *hdwp*<br/>
+[在]*n位移*<br/>
+[在]*b左件*<br/>
+[在]*hdwp*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="serialize"></a>  CPaneContainer::Serialize
+## <a name="cpanecontainerserialize"></a><a name="serialize"></a>CPane 容器:序列化
 
 ```
 void Serialize(CArchive& ar);
@@ -840,11 +840,11 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-[in] *ar*<br/>
+[在]*阿爾*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpane"></a>  CPaneContainer::SetPane
+## <a name="cpanecontainersetpane"></a><a name="setpane"></a>CPane 容器::設定窗格
 
 ```
 void SetPane(
@@ -854,12 +854,12 @@ void SetPane(
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
-[in] *bLeft*<br/>
+[在]*pBar*<br/>
+[在]*b 左*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpanecontainer"></a>  CPaneContainer::SetPaneContainer
+## <a name="cpanecontainersetpanecontainer"></a><a name="setpanecontainer"></a>CPane 容器:設定窗格容器
 
 ```
 void SetPaneContainer(
@@ -869,12 +869,12 @@ void SetPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in] *pContainer*<br/>
-[in] *bLeft*<br/>
+[在]*p 容器*<br/>
+[在]*b 左*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpanedivider"></a>  CPaneContainer::SetPaneDivider
+## <a name="cpanecontainersetpanedivider"></a><a name="setpanedivider"></a>CPane 容器::設定窗格轉換器
 
 ```
 void SetPaneDivider(CPaneDivider* pSlider);
@@ -882,11 +882,11 @@ void SetPaneDivider(CPaneDivider* pSlider);
 
 ### <a name="parameters"></a>參數
 
-[in] *pSlider*<br/>
+[在]*pSlider*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setparentpanecontainer"></a>  CPaneContainer::SetParentPaneContainer
+## <a name="cpanecontainersetparentpanecontainer"></a><a name="setparentpanecontainer"></a>CPane 容器::設定父窗格容器
 
 ```
 void SetParentPaneContainer(CPaneContainer* p);
@@ -894,11 +894,11 @@ void SetParentPaneContainer(CPaneContainer* p);
 
 ### <a name="parameters"></a>參數
 
-[in] *p*<br/>
+[在]*p*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setrecentpercent"></a>  CPaneContainer::SetRecentPercent
+## <a name="cpanecontainersetrecentpercent"></a><a name="setrecentpercent"></a>CPane 容器::設置最近百分比
 
 ```
 void SetRecentPercent(int nRecentPercent);
@@ -906,11 +906,11 @@ void SetRecentPercent(int nRecentPercent);
 
 ### <a name="parameters"></a>參數
 
-[in] *nRecentPercent*<br/>
+[在]*n 最新百分比*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setupbyid"></a>  CPaneContainer::SetUpByID
+## <a name="cpanecontainersetupbyid"></a><a name="setupbyid"></a>CPane 容器:設定 ByID
 
 ```
 BOOL SetUpByID(
@@ -920,14 +920,14 @@ BOOL SetUpByID(
 
 ### <a name="parameters"></a>參數
 
-[in] *nID*<br/>
-[in] *pBar*<br/>
+[在]*nID*<br/>
+[在]*pBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="storerecentdocksiteinfo"></a>  CPaneContainer::StoreRecentDockSiteInfo
+## <a name="cpanecontainerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPane 容器::存儲最新網站資訊
 
 ```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -935,11 +935,11 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="stretchpanecontainer"></a>  CPaneContainer::StretchPaneContainer
+## <a name="cpanecontainerstretchpanecontainer"></a><a name="stretchpanecontainer"></a>CPane 容器:拉伸窗格容器
 
 ```
 virtual int StretchPaneContainer(
@@ -952,11 +952,11 @@ virtual int StretchPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in] *nOffset*<br/>
-[in] *bStretchHorz*<br/>
-[in] *bLeftBar*<br/>
-[in] *bMoveSlider*<br/>
-[in] *hdwp*<br/>
+[在]*n位移*<br/>
+[在]*b 拉伸霍爾茲*<br/>
+[在]*b左欄*<br/>
+[在]*b 移至滑區*<br/>
+[在]*hdwp*<br/>
 
 ### <a name="return-value"></a>傳回值
 

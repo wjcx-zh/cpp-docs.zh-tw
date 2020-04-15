@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182263"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369451"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 類別
 
@@ -31,11 +31,11 @@ class CCommonDialog : public CDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[CCommonDialog::CCommonDialog](#ccommondialog)|建構 `CCommonDialog` 物件。|
+|[C 公共對話:C 公共對話](#ccommondialog)|建構 `CCommonDialog` 物件。|
 
 ## <a name="remarks"></a>備註
 
-下列類別會封裝 Windows 通用對話方塊的功能：
+以下類別封裝 Windows 通用對話框的功能:
 
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
@@ -53,7 +53,7 @@ class CCommonDialog : public CDialog
 
 - [COleDialog](../../mfc/reference/coledialog-class.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -67,9 +67,9 @@ class CCommonDialog : public CDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdlgs.h
+**標題:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>C 公共對話:C 公共對話
 
 建構 `CCommonDialog` 物件。
 
@@ -79,12 +79,12 @@ explicit CCommonDialog(CWnd* pParentWnd);
 
 ### <a name="parameters"></a>參數
 
-*pParentWnd*<br/>
-指向的父系或擁有者的視窗物件 (型別的[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果它是 NULL 時，對話方塊物件的父視窗設為主要的應用程式視窗。
+*pparentwnd*<br/>
+指向對話框物件所屬的父視窗或所有者視窗物件[(CWnd](../../mfc/reference/cwnd-class.md)類型)。 如果為 NULL,則對話方塊物件的父視窗將設置為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-請參閱[CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog)如需完整資訊。
+有關詳細資訊[,請參閱 CDialog:CDialog。](../../mfc/reference/cdialog-class.md#cdialog)
 
 ## <a name="see-also"></a>另請參閱
 

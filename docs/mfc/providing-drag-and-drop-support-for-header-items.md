@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfaabf3da62c216d3da662f59c57b63e695d9ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297030"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371155"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>為標題項目提供拖放支援
 
-若要針對標題項目提供拖放支援，請指定 HDS_DRAGDROP 樣式。 為標題項目提供的拖放功能支援可讓使用者重新排列標題控制項的標題項目。 如果置放標題項目，預設行為會提供拖曳之標題項目的半透明拖曳影像，以及新位置的視覺指標。
+要為標頭項提供拖放支援,請指定HDS_DRAGDROP樣式。 為標題項目提供的拖放功能支援可讓使用者重新排列標題控制項的標題項目。 如果置放標題項目，預設行為會提供拖曳之標題項目的半透明拖曳影像，以及新位置的視覺指標。
 
-做為一般的拖放功能，您可以藉由處理 HDN_BEGINDRAG 和 HDN_ENDDRAG 通知擴充預設的拖放行為。 您也可以藉由覆寫自訂拖曳影像的外觀[cheaderctrl:: Createdragimage](../mfc/reference/cheaderctrl-class.md#createdragimage)成員函式。
+如同一般拖放功能，您可以藉由處理 HDN_BEGINDRAG 和 HDN_ENDDRAG 通知來延伸預設拖放行為。 您還可以透過重寫[CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage)成員函數來自定義拖動影像的外觀。
 
 > [!NOTE]
->  如果您在清單控制項中的內嵌的標題控制項提供拖放支援，請參閱中的延伸樣式 」 一節[變更清單控制項樣式](../mfc/changing-list-control-styles.md)主題。
+> 如果要在清單控制項中為嵌入標頭控制項提供拖放支援,請參閱[「更改清單控制件樣式」](../mfc/changing-list-control-styles.md)主題中的「擴展樣式」 部分。
 
 ## <a name="see-also"></a>另請參閱
 

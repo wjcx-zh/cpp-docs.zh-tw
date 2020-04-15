@@ -7,14 +7,14 @@ f1_keywords:
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-ms.openlocfilehash: ba4b202a5c8c6da742ac884bf58a5b8c55373d14
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e2c03b4540ea5f89843562d1310b71635b3bc259
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454295"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368737"
 ---
-# <a name="durationvalues-structure"></a>duration_values 結構
+# <a name="duration_values-structure"></a>duration_values 結構
 
 提供 [duration](../standard-library/duration-class.md) 範本參數 `Rep` 的特定值。
 
@@ -31,17 +31,17 @@ struct duration_values;
 
 |名稱|描述|
 |----------|-----------------|
-|[max](#max)|靜態。 指定 `Rep` 類型的值上限。|
-|[min](#min)|靜態。 指定 `Rep` 類型的值下限。|
+|[麥克斯](#max)|靜態。 指定 `Rep` 類型的值上限。|
+|[分鐘](#min)|靜態。 指定 `Rep` 類型的值下限。|
 |[零](#zero)|靜態。 傳回 `Rep(0)`。|
 
 ## <a name="requirements"></a>需求
 
-**標頭:** \<chrono >
+**標題:**\<計時>
 
 **命名空間：** std::chrono
 
-## <a name="max"></a>  duration_values::max
+## <a name="duration_valuesmax"></a><a name="max"></a>duration_values:最大
 
 靜態方法會傳回型別 `Ref` 的上限值。
 
@@ -57,7 +57,7 @@ static constexpr Rep max();
 
 當 `Rep` 是使用者定義的類型時，傳回的值必須大於 [duration_values::zero](#zero)。
 
-## <a name="min"></a>  duration_values::min
+## <a name="duration_valuesmin"></a><a name="min"></a>duration_values:分鐘
 
 靜態方法會傳回型別 `Ref` 的下限值。
 
@@ -73,7 +73,7 @@ static constexpr Rep min();
 
 當 `Rep` 是使用者定義的類型時，傳回的值必須小於或等於 [duration_values::zero](#zero)。
 
-## <a name="zero"></a>  duration_values::zero
+## <a name="duration_valueszero"></a><a name="zero"></a>duration_values::零
 
 傳回 `Rep(0)`。
 
@@ -87,5 +87,5 @@ static constexpr Rep zero();
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[標題檔案參考](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)

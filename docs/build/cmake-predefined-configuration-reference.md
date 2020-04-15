@@ -4,24 +4,25 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322985"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 預先組建組態
 
 ::: moniker range="vs-2015"
 
-Visual Studio 2017 和更新版本支援 CMake 專案。
+2017 年及以後的 Visual Studio 支援 CMake 專案。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態] 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
+在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態]**** 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
+
 - x86 偵錯
 - x86 發行
 - x64 偵錯
@@ -33,7 +34,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - MinGW 偵錯
 - MinGW 發行
 
-當您選擇設定時，它會新增至專案根資料夾中的*CMakeSettings。* 您接著便可以使用它來建置您的專案。 如需設定屬性的詳細資訊，請參閱[CMakeSettings 參考](cmakesettings-reference.md)。
+選擇設定時,該配置將添加到專案的根資料夾中的*CMakeSettings.json*檔中。 您接著便可以使用它來建置您的專案。 有關設定屬性的資訊,請參閱[CMakeSettings 參考](cmakesettings-reference.md)。
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 預先定義組建組態：
 
@@ -355,29 +356,29 @@ You can use these optional settings for more control:
 
 ::: moniker range="vs-2019"
 
-在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態] 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
+在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態]**** 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
 
 - x86 偵錯
-- x86 Clang Debug
+- x86 Clang 除錯
 - x86 發行
 - x86 Clang 版本
 - x64 偵錯
-- x64 Clang Debug
+- x64 Clang 除錯
 - x64 發行
 - x64 Clang 版本
 - Linux-Debug
 - Linux-Release
-- Linux-Clang-Debug
-- Linux-Clang-發行
-- 現有快取（遠端）
+- Linux-Clang-除錯
+- Linux-Clang-發佈
+- 現有快取(遠端)
 - 現有快取
 - MinGW 偵錯
 - MinGW 發行
-- WSL Debug
+- WSL 除錯
 - WSL 版本
-- WSL Clang Debug
+- WSL Clang 除錯
 - WSL Clang 版本
-- Clang
+- 鐺
 
 當您選擇一個組態時，它便會新增至專案根資料夾的 CMakeSettings.json 檔案內。 您接著便可以使用它來建置您的專案。
 
@@ -694,6 +695,7 @@ You can use these optional settings for more control:
 ```
 
 ::: moniker-end
+
 ## <a name="see-also"></a>另請參閱
 
 [CMake Projects in Visual Studio](cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>

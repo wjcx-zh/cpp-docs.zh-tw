@@ -7,31 +7,31 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c393269d6af108ee82786e9d59f81aad11428157
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308494"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372779"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>建立資料庫應用程式的作業順序
 
-下表顯示您的角色和架構的角色中撰寫資料庫應用程式。
+下表顯示了您在編寫資料庫應用程式時的角色和框架的作用。
 
 > [!NOTE]
->  視覺效果C++環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您針對新的 MFC 專案，使用 ODBC。 您只應該使用 DAO，在維護現有的應用程式。
+> 視覺化C++環境和精靈不支援DAO(儘管包含DAO類,您仍可以使用它們)。 Microsoft 建議您將 ODBC 用於新的 MFC 專案。 您只應在維護現有應用程式時使用 DAO。
 
 ### <a name="creating-database-applications"></a>建立資料庫應用程式
 
-|工作|您會做|架構會做|
+|Task|您會做|架構會做|
 |----------|------------|------------------------|
-|決定是否要使用 MFC ODBC 或 DAO 類別。|針對新的 MFC 專案中使用 ODBC。 您可以使用 DAO 來維護現有的應用程式。 如需一般資訊，請參閱文章[資料存取程式設計](../data/data-access-programming-mfc-atl.md)。|架構會提供類別，可支援資料庫存取權。|
-|建立基本架構應用程式與資料庫選項。|執行 MFC 應用程式精靈。 選取資料庫支援頁面上的選項。 如果您選擇一個選項可建立資料錄檢視時，也指定：<br /><br />資料來源和資料表名稱或名稱<br />-查詢名稱。|MFC 應用程式精靈會建立檔案，並指定包含必要的。 根據您指定的選項，檔案可以包含資料錄集類別。|
-|設計您的資料庫表單。|使用視覺效果C++對話方塊編輯器，將控制項放入您的資料錄檢視類別的對話方塊範本資源。|MFC 應用程式精靈會建立為您填入的空白對話方塊範本資源。|
-|視需要建立額外的資料錄檢視和資料錄集類別。|您可以使用 類別檢視來建立類別和對話方塊編輯器設計檢視。|類別檢視 中建立額外的檔案，為您的新類別。|
-|視您的程式碼，請建立資料錄集物件。 您可以使用每個資料錄集來操作記錄...|資料錄集根據衍生自類別[CRecordset](../mfc/reference/crecordset-class.md)精靈。|ODBC 會使用資料錄欄位交換 (RFX)，資料庫和資料錄集的欄位資料成員之間交換資料。 如果您使用資料錄檢視時，對話方塊資料交換 (DDX) 之間交換資料的資料錄集和資料錄檢視上的控制項。|
-|...或建立明確[CDatabase](../mfc/reference/cdatabase-class.md)在您的程式碼，為您想要開啟每個資料庫中。|資料錄集物件為基礎的資料庫物件。|資料庫物件提供資料來源的介面。|
-|將繫結資料行資料錄集動態。|在 ODBC 中，加入您的衍生的資料錄集類別，來管理繫結中的程式碼。 請參閱文章[資料錄集：動態繫結資料行 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||
+|決定是使用 MFC ODBC 還是 DAO 類。|將 ODBC 用於新的 MFC 專案。 僅使用 DAO 維護現有應用程式。 有關一般資訊,請參閱文章[「數據訪問程式設計](../data/data-access-programming-mfc-atl.md)」。|框架提供支持資料庫訪問的類。|
+|使用資料庫選項創建骨架應用程式。|執行 MFC 應用程式精靈。 在「資料庫支援」頁上選擇選項。 如果選擇建立記錄檢視的選項,請指定:<br /><br />- 資料來源與表格名稱或名稱<br />- 查詢名稱或名稱。|MFC 應用程式精靈建立檔並指定必要的包含。 根據指定的選項,檔可以包括記錄集類。|
+|設計資料庫窗體或表單。|使用視覺化C++對話框編輯器在記錄檢視類的對話框範本資源上放置控制項。|MFC 應用程式精靈將創建一個空對話框範本資源,供您填寫。|
+|根據需要創建其他記錄視圖和記錄集類。|使用類檢視創建類和對話框編輯器來設計檢視。|類視圖會為新類創建其他檔。|
+|根據需要在代碼中創建記錄集物件。 使用每個紀錄集來操作記錄...|記錄集基於從[CRecordset](../mfc/reference/crecordset-class.md)派生的具有嚮導的類。|ODBC 使用記錄欄位交換 (RFX) 在資料庫和記錄集的欄位數據成員之間交換數據。 如果使用記錄檢視,則對話數據交換 (DDX) 在記錄集和記錄檢視中的控制項之間交換數據。|
+|...或為要打開的每個資料庫在代碼中創建顯式[CDatabase。](../mfc/reference/cdatabase-class.md)|將記錄集對象基於資料庫物件。|資料庫物件提供數據源的介面。|
+|動態地將數據列綁定到記錄集。|在 ODBC 中,將代碼添加到派生的記錄集類以管理綁定。 請參閱文章[「記錄集:動態綁定數據列 (ODBC)」。](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)||
 
 ## <a name="see-also"></a>另請參閱
 

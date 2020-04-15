@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2865db023425fa301ad5440a0dc8ed491213f33f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418934"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368048"
 ---
 # <a name="insert_iterator-class"></a>insert_iterator 類別
 
@@ -35,7 +35,7 @@ class insert_iterator;
 
 ## <a name="remarks"></a>備註
 
-`Container` 類型的容器必須滿足可變大小容器的需求，而且具有兩個引數插入成員函式，其中參數的類型為 `Container::iterator` 和 `Container::value_type`，而且會傳回 `Container::iterator`的類型。 「C++ 標準程式庫」序列容器和已排序關聯容器可滿足這些需求，並可調整來與 `insert_iterator` 搭配使用。 對於關聯容器，位置引數視為提示，可能會根據提示品質改善或降低效能。 `insert_iterator` 一定要以其容器初始化。
+類型的`Container`容器必須滿足可變大小的容器的要求,並且具有一個雙參數插入成員函數,其中參數的`Container::iterator`類型為,`Container::value_type`並且傳`Container::iterator`回類型 。 「C++ 標準程式庫」序列容器和已排序關聯容器可滿足這些需求，並可調整來與 `insert_iterator` 搭配使用。 對於關聯容器，位置引數視為提示，可能會根據提示品質改善或降低效能。 `insert_iterator` 一定要以其容器初始化。
 
 ### <a name="constructors"></a>建構函式
 
@@ -48,23 +48,23 @@ class insert_iterator;
 |類型名稱|描述|
 |-|-|
 |[container_type](#container_type)|類型，表示要執行一般插入的容器。|
-|[reference](#reference)|類型，提供關聯容器控制之序列中項目的參考。|
+|[參考](#reference)|類型，提供關聯容器控制之序列中項目的參考。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|
-|[operator++](#op_add_add)|將 `insert_iterator` 遞增至可儲存值的下一個位置。|
-|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|
+|[運算子*](#op_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|
+|[運算子*](#op_add_add)|將 `insert_iterator` 遞增至可儲存值的下一個位置。|
+|[運算子*](#op_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|
 
 ## <a name="requirements"></a>需求
 
-**標頭**：\<iterator>
+**標題**\<: 發著器>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="container_type"></a>  insert_iterator::container_type
+## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a>insert_iterator::container_type
 
 類型，表示要執行一般插入的容器。
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iterator"></a>  insert_iterator::insert_iterator
+## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a>insert_iterator:insert_iterator
 
 建構 `insert_iterator`，將項目插入容器中的指定位置。
 
@@ -172,7 +172,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  insert_iterator::operator*
+## <a name="insert_iteratoroperator"></a><a name="op_star"></a>insert_iterator::操作員*
 
 對傳回所定址之元素的插入迭代器進行取值。
 
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>備註
 
-用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果 `Iter` 是定址序列中專案的反覆運算器，則 **\*Iter** = **值**會以值取代該元素，而且不會變更序列中的元素總數。
+用於輸出影像運算器表示式 = **\*Iter****值**。 如果`Iter`反覆運算器處理序列中的元素,則**\*Iter** = **值**將該元素替換為值,並且不會更改序列中元素的總數。
 
 ### <a name="example"></a>範例
 
@@ -232,7 +232,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  insert_iterator::operator++
+## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a>insert_iterator::操作員*
 
 將 `insert_iterator` 遞增至可儲存值的下一個位置。
 
@@ -244,7 +244,7 @@ insert_iterator<Container> operator++(int);
 
 ### <a name="parameters"></a>參數
 
-`insert_iterator`，定址對象為可儲存值的下一個位置。
+`insert_iterator`，定址可儲存值的下一個位置。
 
 ### <a name="remarks"></a>備註
 
@@ -296,7 +296,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="op_eq"></a>  insert_iterator::operator=
+## <a name="insert_iteratoroperator"></a><a name="op_eq"></a>insert_iterator::操作員*
 
 將值插入到容器中並傳回已更新成指向新元素的迭代器。
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>參數
 
-*val*\
+*瓦爾*\
 要指派給容器的值。
 
 ### <a name="return-value"></a>傳回值
@@ -327,7 +327,7 @@ insert_iterator<Container>& operator=(
 
 然後傳回 `*this`。
 
-第二個成員運算子會評估
+在第二個成員運算子會評估
 
 `Iter = container->insert(Iter, std::move(val));`
 
@@ -379,7 +379,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="reference"></a>  insert_iterator::reference
+## <a name="insert_iteratorreference"></a><a name="reference"></a>insert_iterator:參考
 
 類型，提供關聯容器控制之序列中項目的參考。
 
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)
+[\<反覆運算器>](../standard-library/iterator.md)\
+[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++標準函式庫參考](../standard-library/cpp-standard-library-reference.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 11be0eba080085c507ed718ea23219ca1c93aeba
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369999"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException 類別
 
@@ -31,19 +31,19 @@ class CMemoryException : public CSimpleException
 
 |名稱|描述|
 |----------|-----------------|
-|[CMemoryException::CMemoryException](#cmemoryexception)|建構 `CMemoryException` 物件。|
+|[記憶體例外::C記憶體異常](#cmemoryexception)|建構 `CMemoryException` 物件。|
 
 ## <a name="remarks"></a>備註
 
-沒有進一步限定性條件是必要或不可能。 會自動擲回記憶體例外狀況**新**。 如果您撰寫您自己的記憶體函式，使用`malloc`，範例中，則您必須負責擲回記憶體例外狀況。
+沒有必要或可能進一步的資格。 記憶體異常由**新**自動引發。 例如,`malloc`如果您編寫自己的記憶體函數,則負責引發記憶體異常。
 
-如需詳細資訊`CMemoryException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+有關的詳細資訊`CMemoryException`,請參閱文章[異常處理 (MFC)。](../../mfc/exception-handling-in-mfc.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[C 例外](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -51,9 +51,9 @@ class CMemoryException : public CSimpleException
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afx.h
+**標題:** afx.h
 
-##  <a name="cmemoryexception"></a>  CMemoryException::CMemoryException
+## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>記憶體例外::C記憶體異常
 
 建構 `CMemoryException` 物件。
 
@@ -63,7 +63,7 @@ CMemoryException();
 
 ### <a name="remarks"></a>備註
 
-請勿直接使用這個建構函式，但而不是呼叫全域函式[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 此全域函式會在記憶體不足的情況下成功，因為它是由建構先前配置的記憶體中的例外狀況物件。 如需例外狀況處理的詳細資訊，請參閱文章[例外狀況](../exception-handling-in-mfc.md)。
+不要直接使用此建構函數,而是調用全域函數[AfxThrowMemoryexception](exception-processing.md#afxthrowmemoryexception)。 此全域函數可以在記憶體不足的情況下成功,因為它在以前分配的記憶體中構造異常物件。 有關異常處理的詳細資訊,請參閱文章[異常](../exception-handling-in-mfc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

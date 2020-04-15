@@ -1,5 +1,5 @@
 ---
-title: 使用 Managed 例外狀況的基本概念
+title: 使用 Managed 例外狀況中的基本概念
 ms.date: 11/04/2016
 helpviewer_keywords:
 - try-catch exception handling, managed applications
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: cf241d4e599ad58c2e39680d8ed4e4e250b42b18
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6bc1e9c6d40599ae9a821179dcf56dbb7e21bf10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988546"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372520"
 ---
-# <a name="basic-concepts-in-using-managed-exceptions"></a>使用 Managed 例外狀況的基本概念
+# <a name="basic-concepts-in-using-managed-exceptions"></a>使用 Managed 例外狀況中的基本概念
 
-本主題討論 managed 應用程式中的例外狀況處理。 也就是使用 **/clr**編譯器選項編譯的應用程式。
+本主題討論託管應用程式中的異常處理。 也就是說,使用 **/clr**編譯器選項編譯的應用程式。
 
 ## <a name="in-this-topic"></a>本主題內容
 
-- [在/clr 下擲回例外狀況](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [在 /clr 下引發異常](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [CLR 延伸模組的 Try/Catch 區塊](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [CLR 延伸的嘗試/擷取區塊](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
 ## <a name="remarks"></a>備註
 
-如果您使用 **/clr**選項進行編譯，則可以處理 clr 例外狀況，而標準 <xref:System.Exception> 類別則提供許多有用的方法來處理 clr 例外狀況，而且建議做為使用者定義的例外狀況類別的基類。
+如果使用 **/clr**選項進行編譯,則可以處理 CLR<xref:System.Exception>異常以及標準 類提供了許多用於處理 CLR 異常的有用方法,建議作為使用者定義的異常類的基類。
 
-**/Clr**不支援攔截衍生自介面的例外狀況類型。 此外，common language runtime 不允許您捕捉堆疊溢位例外狀況;堆疊溢位例外狀況會終止進程。
+**在 /clr**下不支援捕獲從介面派生的異常類型。 此外,通用語言運行時不允許捕獲堆疊溢出異常;堆疊溢出異常將終止進程。
 
-如需受控和未受管理的應用程式中例外狀況處理差異的詳細資訊，請參閱[的 Managed 擴充C++功能底下例外狀況處理行為的差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。
+有關託管和非託管應用程式中異常處理差異的詳細資訊,請參閱[C++ 的「託管擴展下異常處理行為差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)」。。
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>在/clr 下擲回例外狀況
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>在 /clr 下引發異常
 
-C++ Throw 運算式會擴充，以擲回 CLR 類型的控制碼。 下列範例會建立自訂例外狀況類型，然後擲回該類型的實例：
+C++引發運算式將擴展以將句柄扔到 CLR 類型。 下面的範例建立自訂異常類型,然後引發該類型的實例:
 
 ```cpp
 // clr_exception_handling.cpp
@@ -53,7 +53,7 @@ void GlobalFunction() {
 }
 ```
 
-實值型別必須先進行裝箱，才會擲回：
+在引發之前,必須裝箱值類型:
 
 ```cpp
 // clr_exception_handling_2.cpp
@@ -68,9 +68,9 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>CLR 延伸模組的 Try/Catch 區塊
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>CLR 延伸的嘗試/擷取區塊
 
-相同的**try**/**catch**區塊結構可以用來攔截 CLR 和原生例外狀況：
+相同的**try**/**catch**塊結構可用於捕捉 CLR 和本機異常:
 
 ```cpp
 // clr_exception_handling_3.cpp
@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```
 In 'catch(CMyClass& catchC)'
@@ -126,27 +126,27 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>C++物件的回溯順序
+### <a name="order-of-unwinding-for-c-objects"></a>C++物件的展開順序
 
-具有析構函式C++的任何物件會發生回溯，而這些物件可能會在擲回函數和處理函數之間的執行時間堆疊上。 因為 CLR 類型是在堆積上配置，所以回溯不適用。
+對於具有析構函數的任何C++對象,這些物件可能在引發函數和處理函數之間的運行時堆疊上。 由於 CLR 類型在堆上分配,因此展開不適用於它們。
 
-所擲回例外狀況的事件順序如下所示：
+引發異常的事件順序如下:
 
-1. 執行時間會引導堆疊尋找適當的 catch 子句，或在 SEH 的情況下，使用 seh 的 except 篩選準則來攔截例外狀況。 Catch 子句會先以詞法順序搜尋，然後再動態地向下呼叫堆疊。
+1. 運行時遍網查找適當的 catch 子句,或者對於 SEH(SEH 的篩選器除外)的情況,則運行以捕獲異常。 先按詞法順序搜索 Catch 子句,然後動態向下調用堆疊。
 
-1. 一旦找到正確的處理常式，就會將堆疊展開到該點。 對於堆疊上的每個函式呼叫，其本機物件都是解構的，而且會從大部分的對外向外執行 __finally 區塊。
+1. 找到正確的處理程式后,堆疊將解纏到該點。 對於堆疊上的每個函數調用,其本地物件都會被破壞,並且__finally塊從大多數嵌套向外執行。
 
-1. 展開堆疊之後，就會執行 catch 子句。
+1. 解包后,將執行 catch 子句。
 
-### <a name="catching-unmanaged-types"></a>攔截非受控類型
+### <a name="catching-unmanaged-types"></a>捕捉非託管類型
 
-當擲回非受控物件類型時，它會包裝 <xref:System.Runtime.InteropServices.SEHException>類型的例外狀況。 搜尋適當的**catch**子句時，有兩種可能性。
+引發非託管物件類型時,將用類型<xref:System.Runtime.InteropServices.SEHException>的異常包裝它。 搜索適當的 CATCH 子**句**時,有兩種可能性。
 
-- 如果遇到原C++生類型，則會解除包裝例外狀況，並將其與所遇到的類型相比較。 這項比較可讓C++您以正常方式攔截原生類型。
+- 如果遇到本機C++類型,則取消包裝異常,並將其與遇到的類型進行比較。 此比較允許以正常方式捕獲本機C++類型。
 
-- 不過，如果先檢查**SEHException**類型的**catch**子句或其任何基類，則子句會攔截例外狀況。 因此，您應該先將攔截原生C++類型的所有 catch 子句，放在 CLR 類型的任何 catch 子句之前。
+- 但是,如果首先檢查**SEHException**類型或其任何基類的**catch**子句,則子句將截取異常。 因此,應首先將捕獲本機C++類型的所有 catch 子句放在 CLR 類型的任何 catch 子句之前。
 
-請注意：
+請注意
 
 ```
 catch(Object^)
@@ -158,13 +158,13 @@ catch(Object^)
 catch(...)
 ```
 
-會攔截任何擲回的型別，包括 SEH 例外狀況。
+都會捕獲任何引發類型,包括 SEH 異常。
 
-如果 catch （Object ^）攔截到非受控型別，它就不會損毀所擲回的物件。
+如果非託管類型被 catch(Object_)捕獲,則不會破壞引發的物件。
 
-當擲回或攔截未受管理的例外狀況時，建議您使用[/ehsc](../build/reference/eh-exception-handling-model.md)編譯器選項，而不要使用 **/ehs**或 **/eha**。
+在引發或擷取非託管異常時,我們建議您使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項而不是 **/EHs**或 **/EHa**。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>

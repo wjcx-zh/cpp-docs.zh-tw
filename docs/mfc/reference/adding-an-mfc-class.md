@@ -7,26 +7,26 @@ helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: 266940092e68a76f2ac485a81ac6ac90b02ee0ac
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 3b0ebf3aafb11dfbacd1c57618c21aff8d776c47
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907645"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371704"
 ---
 # <a name="adding-an-mfc-class"></a>加入 MFC 類別
 
-若要將衍生自 Microsoft Foundation Class （MFC）程式庫類別的類別新增至您的專案，請使用[類別 Wizard](mfc-class-wizard.md)中的 [**加入類別**] 按鈕。 指定新類別的名稱，選取 [基類]，然後選取與它相關聯之對話方塊的識別碼（如果有的話）。 此 wizard 會建立標頭檔和執行檔，並將其新增至您的專案。
+要將派生自 Microsoft 基礎類 (MFC) 庫類的類添加到專案,請使用[類嚮導](mfc-class-wizard.md)中的 **「添加類**」按鈕。 指定新類的名稱,選擇基類,然後選擇與其關聯的對話框的 ID(如果有)。 該嚮導創建一個標頭檔和一個實現檔,並將它們添加到您的專案中。
 
 > [!NOTE]
->  如果您最初[是使用 mfc 支援來建立應用程式](../../atl/reference/mfc-support-in-atl-projects.md)，您可以將 MFC 類別加入至 ATL COM 應用程式。 您也可以將 MFC 類別加入至具有 MFC 支援的 Win32 專案。
+> 如果最初[使用 MFC 支援建立了應用程式,](../../atl/reference/mfc-support-in-atl-projects.md)則可以將 MFC 類添加到 ATL COM 應用程式。 您還可以向支援 MFC 的 Win32 專案添加 MFC 類。
 
-### <a name="to-add-an-mfc-class-to-your-project"></a>將 MFC 類別加入至您的專案
+### <a name="to-add-an-mfc-class-to-your-project"></a>新增 MFC 類別
 
-在類別檢視中，以滑鼠右鍵按一下專案名稱。 按一下 [**類別] [Wizard]** ，然後按一下 [**加入類別**] 以開啟 [[加入 MFC 類別](mfc-add-class-wizard.md)] 對話方塊。 使用 [**類別] Wizard**加入訊息處理常式或新方法。
+在類視圖中,右鍵單擊專案名稱。 按下 **「類嚮導**」,然後按下「**添加類**」以打開「[添加 MFC 類」](mfc-add-class-wizard.md)對話方塊。 使用**類嚮導**添加消息處理程式或新方法。
 
 ## <a name="see-also"></a>另請參閱
 
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
-[類別總覽](../../mfc/class-library-overview.md)
+[類別概觀](../../mfc/class-library-overview.md)

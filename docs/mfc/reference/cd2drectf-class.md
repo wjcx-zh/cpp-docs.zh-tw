@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: 9b91cfaec3827a61152c4116b56e817a436606be
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 33d3c5f9e795ad6c91b689436e8a3b1b56966dce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682394"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369114"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF 類別
 
@@ -33,21 +33,21 @@ class CD2DRectF : public D2D1_RECT_F;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DRectF::CD2DRectF](#cd2drectf)|多載。 `CD2DRectF` 從`D2D1_RECT_F`物件結構建立物件。|
+|[CD2DrectF:CD2DrectF](#cd2drectf)|已多載。 從`CD2DRectF``D2D1_RECT_F`物件構造物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CD2DRectF::IsNull](#isnull)|傳回**布林**值, 指出運算式是否不包含有效的資料 (Null)。|
+|[CD2DrectF::IsNull](#isnull)|傳回**一個布林值**,指示運算式是否不包含有效資料 (NULL)。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DRectF:: operator CRect](#operator_crect)|轉換`CD2DRectF` 成`CRect`物件。|
+|[CD2DRectF::運算子 CRect](#operator_crect)|轉換為`CD2DRectF``CRect`物件。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `D2D1_RECT_F`
 
@@ -55,11 +55,11 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxrendertarget。h
+**標題:** afxrendertarget.h
 
-##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF
+## <a name="cd2drectfcd2drectf"></a><a name="cd2drectf"></a>CD2DrectF:CD2DrectF
 
-從 CRect 物件中, 建立 CD2DRectF 物件。
+從 CRect 物件建構 CD2DRectF 物件。
 
 ```
 CD2DRectF(const CRect& rect);
@@ -75,24 +75,24 @@ CD2DRectF(
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*矩形*<br/>
 來源矩形
 
-*fLeft*<br/>
-來源左邊座標
+*f左*<br/>
+源左座標
 
 *fTop*<br/>
-來源最上層座標
+來源頂端座標
 
-*fRight*<br/>
-來源右座標
+*恐懼*<br/>
+源右座標
 
 *fBottom*<br/>
 來源底部座標
 
-##  <a name="isnull"></a>  CD2DRectF::IsNull
+## <a name="cd2drectfisnull"></a><a name="isnull"></a>CD2DrectF::IsNull
 
-傳回布林值, 指出運算式是否不包含有效的資料 (Null)。
+返回一個布爾值,指示表達式是否不包含有效數據 (Null)。
 
 ```
 BOOL IsNull() const;
@@ -100,9 +100,9 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果矩形的上、左、下和右值全都等於 0, 則為 TRUE;否則為 FALSE。
+如果矩形的頂部、左側、底部和右側值都等於 0,則為 TRUE;否則 FALSE。
 
-##  <a name="operator_crect"></a>  CD2DRectF::operator CRect
+## <a name="cd2drectfoperator-crect"></a><a name="operator_crect"></a>CD2DRectF::運算子 CRect
 
 將 CD2DRectF 轉換為 CRect 物件。
 
@@ -112,7 +112,7 @@ operator CRect();
 
 ### <a name="return-value"></a>傳回值
 
-D2D 矩形的目前值。
+D2D 矩形的當前值。
 
 ## <a name="see-also"></a>另請參閱
 

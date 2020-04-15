@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: fa2f3b663cb5258c64ec0405abacf2e4eedeb987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7310fd3ca2ac34df7cc1a99cd5527ea8ba709c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369039"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 類別
 
-IDWriteTextFormat 包裝函式。
+IDWriteText格式的包裝。
 
 ## <a name="syntax"></a>語法
 
@@ -47,56 +47,56 @@ class CD2DTextFormat : public CD2DResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|建構 CD2DTextFormat 物件。|
-|[CD2DTextFormat::~CD2DTextFormat](#_dtorcd2dtextformat)|解構函式。 D2D 文字格式物件正在被終結時呼叫。|
+|[CD2D 文字格式:CD2D文字格式](#cd2dtextformat)|建構 CD2DText 格式物件。|
+|[CD2D 文字格式:*CD2D文字格式](#_dtorcd2dtextformat)|解構函式。 銷毀 D2D 文字格式物件時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DTextFormat::Create](#create)|建立 CD2DTextFormat。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|
-|[CD2DTextFormat::Destroy](#destroy)|終結 CD2DTextFormat 物件。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|
-|[CD2DTextFormat::Get](#get)|傳回 IDWriteTextFormat 介面|
-|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|取得一份字型家族名稱。|
-|[CD2DTextFormat::GetLocaleName](#getlocalename)|取得地區設定名稱的複本。|
-|[CD2DTextFormat::IsValid](#isvalid)|檢查資源的有效性 (會覆寫[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
-|[CD2DTextFormat::ReCreate](#recreate)|CD2DTextFormat 會重新建立。 (覆寫[CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate)。)|
+|[CD2D 文字格式:建立](#create)|建立 CD2D 文字格式。 (覆寫[CD2D 資源:建立](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2D 文字格式::D](#destroy)|銷毀 CD2DText 格式物件。 (覆蓋[CD2D 資源::D)](../../mfc/reference/cd2dresource-class.md#destroy)|
+|[CD2D 文字格式:取得](#get)|傳回 IDWriteText 格式介面|
+|[CD2D 文字格式::取得方特家庭名稱](#getfontfamilyname)|獲取字體姓氏的副本。|
+|[CD2D 文字格式:抓取本地化名稱](#getlocalename)|獲取區域設置名稱的副本。|
+|[CD2D 文字格式::有效](#isvalid)|檢查資源有效性(覆寫[CD2D 資源::有效](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
+|[CD2D 文字格式:重新建立](#recreate)|重新建立 CD2D 文字格式。 (覆寫[CD2D 資源:重新建立](../../mfc/reference/cd2dresource-class.md#recreate).)|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|傳回 IDWriteTextFormat 介面|
+|[CD2D 文字格式::操作員 IDWriteText 格式*](#operator_idwritetextformat_star)|傳回 IDWriteText 格式介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|IDWriteTextFormat 指標。|
+|[CD2D文字格式::m_pTextFormat](#m_ptextformat)|指向 IDWriteText 格式的指標。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)
+[CD2D 文字格式](../../mfc/reference/cd2dtextformat-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat
+## <a name="cd2dtextformatcd2dtextformat"></a><a name="_dtorcd2dtextformat"></a>CD2D 文字格式:*CD2D文字格式
 
-解構函式。 D2D 文字格式物件正在被終結時呼叫。
+解構函式。 銷毀 D2D 文字格式物件時呼叫。
 
 ```
 virtual ~CD2DTextFormat();
 ```
 
-##  <a name="cd2dtextformat"></a>  CD2DTextFormat::CD2DTextFormat
+## <a name="cd2dtextformatcd2dtextformat"></a><a name="cd2dtextformat"></a>CD2D 文字格式:CD2D文字格式
 
-建構 CD2DTextFormat 物件。
+建構 CD2DText 格式物件。
 
 ```
 CD2DTextFormat(
@@ -113,36 +113,36 @@ CD2DTextFormat(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
-*strFontFamilyName*<br/>
-CString 物件，包含字型家族的名稱。
+*斯特方特家族名稱*<br/>
+包含字體系列名稱的 CString 物件。
 
-*fontSize*<br/>
-以 DIP （「 裝置獨立畫素"） 為單位的字型的邏輯大小。 DIPequals 1/96 英吋。
+*字型大小*<br/>
+以 DIP("與設備無關的圖元")為單位的字體的邏輯大小。 DIP 等於1/96英寸。
 
-*fontWeight*<br/>
-值，指出文字物件的字型粗細。
+*字體重量*<br/>
+指示文本物件的字體粗細的值。
 
-*fontStyle*<br/>
-值，指出文字物件的字型樣式。
+*字型樣式*<br/>
+指示文本物件的字體樣式的值。
 
-*fontStretch*<br/>
-值，指出字型自動縮放的文字物件。
+*字型拉伸*<br/>
+指示文本物件的字體拉伸的值。
 
-*strFontLocale*<br/>
-CString 物件，其中包含地區設定名稱。
+*斯特方特拉茲*<br/>
+包含區域設置名稱的 CString 物件。
 
 *pFontCollection*<br/>
-字型集合物件的指標。 當這是 NULL 時，表示系統字型集合。
+指向字體集合物件的指標。 當為 NULL 時,指示系統字體收集。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
-##  <a name="create"></a>  CD2DTextFormat::Create
+## <a name="cd2dtextformatcreate"></a><a name="create"></a>CD2D 文字格式:建立
 
-建立 CD2DTextFormat。
+建立 CD2D 文字格式。
 
 ```
 virtual HRESULT Create(CRenderTarget* */);
@@ -150,19 +150,19 @@ virtual HRESULT Create(CRenderTarget* */);
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="destroy"></a>  CD2DTextFormat::Destroy
+## <a name="cd2dtextformatdestroy"></a><a name="destroy"></a>CD2D 文字格式::D
 
-終結 CD2DTextFormat 物件。
+銷毀 CD2DText 格式物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="get"></a>  CD2DTextFormat::Get
+## <a name="cd2dtextformatget"></a><a name="get"></a>CD2D 文字格式:取得
 
-傳回 IDWriteTextFormat 介面
+傳回 IDWriteText 格式介面
 
 ```
 IDWriteTextFormat* Get();
@@ -170,11 +170,11 @@ IDWriteTextFormat* Get();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 IDWriteTextFormat 介面的指標。
+如果物件尚未初始化,則指向 IDWriteTextFormat 介面或 NULL 的指標。
 
-##  <a name="getfontfamilyname"></a>  CD2DTextFormat::GetFontFamilyName
+## <a name="cd2dtextformatgetfontfamilyname"></a><a name="getfontfamilyname"></a>CD2D 文字格式::取得方特家庭名稱
 
-取得一份字型家族名稱。
+獲取字體姓氏的副本。
 
 ```
 CString GetFontFamilyName() const;
@@ -182,11 +182,11 @@ CString GetFontFamilyName() const;
 
 ### <a name="return-value"></a>傳回值
 
-CString 物件，包含目前的字型家族名稱。
+包含當前字體族名的 CString 物件。
 
-##  <a name="getlocalename"></a>  CD2DTextFormat::GetLocaleName
+## <a name="cd2dtextformatgetlocalename"></a><a name="getlocalename"></a>CD2D 文字格式:抓取本地化名稱
 
-取得地區設定名稱的複本。
+獲取區域設置名稱的副本。
 
 ```
 CString GetLocaleName() const;
@@ -194,11 +194,11 @@ CString GetLocaleName() const;
 
 ### <a name="return-value"></a>傳回值
 
-CString 物件，包含目前的地區設定名稱。
+包含當前區域設置名稱的 CString 物件。
 
-##  <a name="isvalid"></a>  CD2DTextFormat::IsValid
+## <a name="cd2dtextformatisvalid"></a><a name="isvalid"></a>CD2D 文字格式::有效
 
-檢查資源的有效性
+檢查資源有效性
 
 ```
 virtual BOOL IsValid() const;
@@ -206,19 +206,19 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資源無效，則為 TRUE否則為 FALSE。
+如果資源有效,則為 TRUE;否則 FALSE。
 
-##  <a name="m_ptextformat"></a>  CD2DTextFormat::m_pTextFormat
+## <a name="cd2dtextformatm_ptextformat"></a><a name="m_ptextformat"></a>CD2D文字格式::m_pTextFormat
 
-IDWriteTextFormat 指標。
+指向 IDWriteText 格式的指標。
 
 ```
 IDWriteTextFormat* m_pTextFormat;
 ```
 
-##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*
+## <a name="cd2dtextformatoperator-idwritetextformat"></a><a name="operator_idwritetextformat_star"></a>CD2D 文字格式::操作員 IDWriteText 格式*
 
-傳回 IDWriteTextFormat 介面
+傳回 IDWriteText 格式介面
 
 ```
 operator IDWriteTextFormat*();
@@ -226,11 +226,11 @@ operator IDWriteTextFormat*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 IDWriteTextFormat 介面的指標。
+如果物件尚未初始化,則指向 IDWriteTextFormat 介面或 NULL 的指標。
 
-##  <a name="recreate"></a>  CD2DTextFormat::ReCreate
+## <a name="cd2dtextformatrecreate"></a><a name="recreate"></a>CD2D 文字格式:重新建立
 
-CD2DTextFormat 會重新建立。
+重新建立 CD2D 文字格式。
 
 ```
 virtual HRESULT ReCreate(CRenderTarget* */);
@@ -238,7 +238,7 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403954"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369932"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 類別
 
-實作虛擬按鍵對應和格式化的協助程式類別。
+實現虛擬金鑰映射和格式化的幫助程式類。
 
 ## <a name="syntax"></a>語法
 
@@ -35,28 +35,28 @@ class CMFCAcceleratorKey : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|建構 `CMFCAcceleratorKey` 物件。|
+|[CMFC加速器鍵:CMFC加速器鍵](#cmfcacceleratorkey)|建構 `CMFCAcceleratorKey` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCAcceleratorKey::Format](#format)|將轉譯成它的視覺表示的加速度結構。|
-|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|設定快速鍵`CMFCAcceleratorKey`物件。|
+|[CMFC 加速器鍵:格式](#format)|將 ACCEL 結構轉換為其可視表示形式。|
+|[CMFC加速器鍵::設定加速器](#setaccelerator)|設置`CMFCAcceleratorKey`物件的快速鍵。|
 
 ## <a name="remarks"></a>備註
 
-快速鍵是也稱為快速鍵。 如果您想要顯示使用者輸入的鍵盤快速鍵[CMFCAcceleratorKeyAssignCtrl 類別](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)對應鍵盤快速鍵，例如 Alt + Shift + S，自訂文字格式，例如"Alt + Shift + S"。 每個`CMFCAcceleratorKey`物件對應至以文字格式的單一的快速鍵。
+快速鍵也稱為快捷鍵。 如果要顯示使用者輸入的鍵盤快速鍵[,CMFC加速器KeyAssignCtrl 類](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)會將鍵盤快捷鍵(如 Alt_Shift_S)映射到自定義文本格式,如"Alt + Shift + S"。 每個`CMFCAcceleratorKey`物件將單個快速鍵映射到文字格式。
 
-如需如何使用快速鍵和快速鍵對應表的詳細資訊，請參閱[CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)。
+有關如何使用快捷鍵和快捷鍵表的詳細資訊,請參閱[CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCAcceleratorKey`物件，以及如何使用其`Format`方法。
+下面的範例展示如何建構`CMFCAcceleratorKey`物件以及如何使用`Format`其方法。
 
 [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -64,11 +64,11 @@ class CMFCAcceleratorKey : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxacceleratorkey.h
+**標題:** afx加速器鍵.h
 
-##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey
+## <a name="cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFC加速器鍵:CMFC加速器鍵
 
-建構[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件。
+建構[CMFC 加速器鍵](../../mfc/reference/cmfcacceleratorkey-class.md)物件。
 
 ```
 CMFCAcceleratorKey();
@@ -78,15 +78,15 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="parameters"></a>參數
 
 *lpAccel*<br/>
-[in]攠摝坫指標。
+[在]指向快速鍵的指標。
 
 ### <a name="remarks"></a>備註
 
-當您建立時如果您未提供攠摝坫`CMFCAccleratorKey`，使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)方法，以建立關聯的快速鍵，與您`CMFCAcceleratorKey`物件。
+如果在創建 時未提供快速`CMFCAccleratorKey`鍵 ,請使用[CMFCAcceleratorKey::setAccelerator](#setaccelerator)方法`CMFCAcceleratorKey`將快速鍵與 對象相關聯。
 
-##  <a name="format"></a>  CMFCAcceleratorKey::Format
+## <a name="cmfcacceleratorkeyformat"></a><a name="format"></a>CMFC 加速器鍵:格式
 
-將轉譯的加速度結構，其相關聯的字串值。
+將 ACCEL 結構轉換為其關聯的字串值。
 
 ```
 void Format(CString& str) const;
@@ -94,16 +94,16 @@ void Format(CString& str) const;
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-[out]參考`CString`物件，方法會將寫入的已翻譯的快速鍵。
+*Str*<br/>
+[出]對物件引用`CString`,該方法在其中寫入已翻譯的快捷鍵。
 
 ### <a name="remarks"></a>備註
 
-這個方法會擷取字串的格式相關聯的快速鍵。 您可以設定的字串格式[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件使用建構函式或方法[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)。
+此方法檢索關聯的快捷鍵的字串格式。 您可以使用建構函數或方法[CMFC 加速器鍵:::setaccelerator](#setaccelerator)設置,設定[CMFC加速器Key](../../mfc/reference/cmfcacceleratorkey-class.md)物件的字串格式。
 
-##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator
+## <a name="cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFC加速器鍵::設定加速器
 
-設定快速鍵[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件。
+設置[CMFC 加速器鍵](../../mfc/reference/cmfcacceleratorkey-class.md)物件的快速鍵。
 
 ```
 void SetAccelerator(LPACCEL lpAccel);
@@ -112,11 +112,11 @@ void SetAccelerator(LPACCEL lpAccel);
 ### <a name="parameters"></a>參數
 
 *lpAccel*<br/>
-[in]攠摝坫指標。
+[在]指向快速鍵的指標。
 
 ### <a name="remarks"></a>備註
 
-使用此方法來設定的快速鍵`CMFCAcceleratorKey`如果您未提供攠摝坫您在建立時`CMFCAcceleratorKey`。
+`CMFCAcceleratorKey`如果在創建 時未提供快捷鍵,請使用 此方法為`CMFCAcceleratorKey`設置的快速鍵。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944935"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320434"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,18 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>參數
 
-*wchar*<br/>
+*瓦查爾*<br/>
 要轉譯的值。
 
 ## <a name="return-value"></a>傳回值
 
-如果**wctob**成功轉換寬字元，則只有在多位元組字元剛好是一個位元組長時，才會傳回其多位元組字元標記法。 如果**wctob**遇到無法轉換成多位元組字元的寬字元，或多位元組字元的長度不是正好一個位元組，則會傳回-1。
+如果**wctob**成功轉換寬字元,則僅當多位元位元元正好是一個字節長時,它才會返回其多位元組字元表示形式。 如果**wctob**遇到寬字元,它不能轉換為多位元組位元元,或者多位元組位元符不完全是一個字節長,它將返回 -1。
 
 ## <a name="remarks"></a>備註
 
-**Wctob**函式會將*wchar*中包含的寬字元轉換成傳回**int**值所傳遞的對應多位元組字元（如果多位元組字元剛好是一個位元組長）。
+如果多位元元元正好是一個字節長,**則 wctob**函數將*wchar*中包含的寬字元轉換為返回**int**值傳遞的相應多位元字元。
 
-如果**wctob**不成功，而且找不到對應的多位元組字元，則函式會將**Errno**設定為**EILSEQ** ，並傳回-1。
+如果**wctob**不成功,並且未找到相應的多位元組位元,則函數將**errno**設置到**EILSEQ**並返回 -1。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -70,7 +74,7 @@ int wctob(
 
 ## <a name="example"></a>範例
 
-此程式說明**wcstombs**函數的行為。
+此程式說明瞭**wcstombs**函數的行為。
 
 ```C
 // crt_wctob.c

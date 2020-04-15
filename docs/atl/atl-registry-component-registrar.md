@@ -10,27 +10,27 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: c64d47be6df515a0bd4a8d2cfef51f8d56311f4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b4492ea393c01b3fa382828d3ca6097d52493f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317353"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 登錄元件 (登錄器)
 
-ATL 登錄器提供最佳化的存取系統登錄的自訂介面。 註冊機構是 無限制執行緒，並允許靜態連結程式碼的C++用戶端。
+ATL 註冊器通過自定義介面提供對系統註冊表的優化訪問。 註冊器是自由線程的,允許C++用戶端的靜態代碼連結。
 
 > [!NOTE]
->  ATL 登錄器的原始程式碼位於 atlmfc\include\atliface.h。
+> ATL 註冊器的原始碼可在 atlmfc_include_atliface.h 中找到。
 
 ## <a name="in-this-section"></a>本節內容
 
-[建立登錄器指令碼](../atl/creating-registrar-scripts.md)<br/>
-建立登錄器指令碼指南。 包含在 backus-naur form，BNF 語法，剖析樹狀結構、 登錄指令碼範例，使用可置換的參數，並叫用指令碼上的主題。
+[建立註冊器文稿](../atl/creating-registrar-scripts.md)<br/>
+創建註冊器腳本的指南。 包括有關 BNF 語法、解析樹、註冊表腳本示例、使用可替換參數和調用腳本的主題。
 
-[設定登錄器程式碼的靜態連結 (C++只)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
-列出的步驟來設定靜態連結至該註冊機構。
+[設定指向註冊器代碼的靜態連結(僅限C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
+列出設置到註冊器的靜態連結的步驟。
 
 ## <a name="related-sections"></a>相關章節
 

@@ -7,51 +7,51 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 536729e27c89d068957ea451355957e4a35348ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294625"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320615"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 之後 DLL 延遲載入 Helper 函式的變更
 
-如果您有多個版本，視覺效果的C++在您的電腦上或如果您定義自己的協助程式函式時，您可能會受到延遲載入 helper 函式的 dll 所做的變更。 例如: 
+如果電腦上有多個版本的 Visual C++,或者如果您定義了自己的幫助程式功能,則可能會受到對 DLL 延遲載入説明程式功能所做的更改的影響。 例如：
 
-- **__delayLoadHelper**現在是 **__delayLoadHelper2**
+- **__delayLoadHelper**現在 **__delayLoadHelper2**
 
-- **__pfnDliNotifyHook**現在是 **__pfnDliNotifyHook2**
+- **__pfnDliNotifyHook**現在 **__pfnDliNotifyHook2**
 
-- **__pfnDliFailureHook**現在是 **__pfnDliFailureHook2**
+- **__pfnDliFailureHook**正在 **__pfnDliFailureHook2**
 
-- **__FUnloadDelayLoadedDLL**現在是 **__FUnloadDelayLoadedDLL2**
+- **__FUnloadDelayLoadedDLL**現在 **__FUnloadDelayLoadedDLL2**
 
 > [!NOTE]
->  如果您使用預設的 helper 函式，這些變更不會影響您。 沒有任何變更，叫用連結器的方式。
+> 如果使用默認幫助器函數,這些更改不會影響您。 對於調用連結器的方式,沒有更改。
 
-## <a name="multiple-versions-of-visual-c"></a>視覺效果的多個版本C++
+## <a name="multiple-versions-of-visual-c"></a>視覺化C++的多個版本
 
-如果您有多個版本，視覺效果的C++在您的電腦，請確定連結器符合 delayimp.lib。 如果不相符，就會報告其中一個連結器錯誤`___delayLoadHelper2@8`或`___delayLoadHelper@8`為無法解析的外部符號。 前者表示舊的 delayimp.lib 之新連結器，後者表示新的 delayimp.lib 舊連結器。
+如果電腦上有多個版本的 Visual C++,請確保連結器與 delayimp.lib 匹配。 如果不匹配,您將獲得連結器錯誤報告或`___delayLoadHelper2@8``___delayLoadHelper@8`作為未解析的外部符號。 前者意味著一個新的連結器與舊的delayimp.lib,後者意味著一個舊連結器與一個新的delayimp.lib。
 
-如果您收到無法解析的連結器錯誤，執行[dumpbin /linkermember](linkermember.md)： 在您要包含 helper 函式，以查看哪一個協助程式函式改為定義 delayimp.lib 1。 在物件的檔案中; 也可定義 helper 函式執行[dumpbin /symbols](symbols.md)並尋找`delayLoadHelper(2)`。
+如果收到未解析的連結器錯誤,則在 delayimp.lib 上運行[轉儲bin/linker成員](linkermember.md):1,您希望該函數包含説明器函數,以查看定義哪個説明器函數。 説明器函數也可以在物件檔中定義;也可以在物件檔中定義説明器函數。執行[傾印 bin /符號](symbols.md)並尋找`delayLoadHelper(2)`。
 
-如果您知道有視覺效果C++6.0 連結器，然後：
+如果您知道您具有 Visual C++ 6.0 連結器,則:
 
-- 延遲載入 helper 的.lib 或.obj 檔案，以判斷它是否定義執行 dumpbin **__delayLoadHelper2**。 如果沒有，則連結將會失敗。
+- 在延遲載入說明器的 .lib 或 .obj 檔執行轉印bin,以確定它是否定義 **__delayLoadHelper2**。 如果沒有,連結將失敗。
 
-- 定義 **__delayLoadHelper**延遲載入 helper 的.lib 或.obj 檔案。
+- 在延遲載入幫助器的 .lib 或 .obj 檔中定義 **__delayLoadHelper。**
 
-## <a name="user-defined-helper-function"></a>使用者定義的 Helper 函式
+## <a name="user-defined-helper-function"></a>使用者定義的說明器功能
 
-如果您定義自己的協助程式函式，並且使用目前的版本，視覺效果的C++，執行下列動作：
+如果您定義了自己的說明器功能並使用目前版本的 Visual C++,請執行以下操作:
 
-- 重新命名的協助程式函式 **__delayLoadHelper2**。
+- 將說明器函數重新命名為 **__delayLoadHelper2**。
 
-- 因為延遲描述項 (ImgDelayDescr 中 delayimp.h) 中的指標已經從絕對位址 (VAs) 變更為相對位址 (Rva)，如預期般運作，在這兩個 32 位元和 64 位元程式，您需要將這些回轉換成指標。 導入了新的函式：PFromRva，delayhlp.cpp 中找到。 您可以使用此函式上每個描述元中的欄位，將它們轉換回 32 位元或 64 位元指標。 預設的延遲載入 helper 函式仍然是很好的範本，以做為範例。
+- 由於延遲描述符中的指標(delayimp.h 中的 ImgDelayDescr)已經從絕對位址 (VA) 更改為相對位址 (RVA),在 32 位元和 64 位元程序中按預期方式工作,因此您需要將這些指標轉換回指標。 引入了一項新功能:PFromRva,在 delayhlp.cpp中發現。 可以在描述符中的每個欄位上使用此函數將它們轉換回 32 位元或 64 位元指標。 默認延遲載入幫助器函數仍然是一個很好的範本,用作範例。
 
-## <a name="load-all-imports-for-a-delay-loaded-dll"></a>延遲載入 DLL 的載入所有匯入
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>載入延遲載入 DLL 的所有匯入
 
-連結器可以從您指定要延遲載入的 DLL 載入所有匯入。 請參閱[載入延遲載入 dll 的所有匯入](loading-all-imports-for-a-delay-loaded-dll.md)如需詳細資訊。
+連結器可以從指定的延遲載入 DLL 載入所有導入。 有關詳細資訊[,請參閱載所有匯入以瞭解延遲載入 DLL。](loading-all-imports-for-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>另請參閱
 

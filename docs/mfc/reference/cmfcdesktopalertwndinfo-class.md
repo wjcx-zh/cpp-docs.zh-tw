@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f51c1b75e0c096a34b190e36e097aaca4109b5f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403642"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367592"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 類別
 
-`CMFCDesktopAlertWndInfo`類別會搭配[CMFCDesktopAlertWnd 類別](../../mfc/reference/cmfcdesktopalertwnd-class.md)。 這會指定如果桌面警示視窗出現時要顯示的控制項。
+該`CMFCDesktopAlertWndInfo`類與[CMFC 桌面警報類](../../mfc/reference/cmfcdesktopalertwnd-class.md)一起使用。 這會指定如果桌面警示視窗出現時要顯示的控制項。
 
 ## <a name="syntax"></a>語法
 
@@ -43,46 +43,46 @@ class CMFCDesktopAlertWndInfo
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||
+|[CMFC桌面警報資訊::操作員*](#operator_eq)||
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|顯示之圖示的控制代碼。|
-|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|桌面警示視窗上的連結相關聯的命令識別碼。|
-|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|會顯示在桌面警示視窗文字。|
-|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|會顯示在桌面警示視窗中的連結。|
+|[CMFC桌面警報資訊::m_hIcon](#m_hicon)|顯示的圖示的句柄。|
+|[CMFC 桌面警報資訊::m_nURLCmdID](#m_nurlcmdid)|與桌面警報視窗中的連結關聯的命令 ID。|
+|[CMFC桌面警報資訊::m_strText](#m_strtext)|桌面警示視窗中顯示的文字。|
+|[CMFC桌面警報資訊::m_strURL](#m_strurl)|桌面警示視窗中顯示的連結。|
 
 ## <a name="remarks"></a>備註
 
-`CMFCDesktopAlertWndInfo`類別傳遞給[cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)方法，以指定的桌面警示視窗的 [預設] 對話方塊顯示的項目。 [預設] 對話方塊可以包含三個項目：
+類`CMFCDesktopAlertWndInfo`將傳遞給[CMFCDesktopAlertWnd::創建](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)方法來指定桌面警報視窗的默認對話框中顯示的元素。 預設對話框可以包含三個專案:
 
-- 圖示，它會設定藉由呼叫[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)。
+- 一個圖示,它通過調用[CMFCDesktopAlertWndinfo::m_hIcon](#m_hicon)設置。
 
-- 標籤或文字訊息，它會設定藉由呼叫[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)。
+- 標籤或簡訊,通過調用[CMFCDesktopAlertWndinfo:m_strText](#m_strtext)設置。
 
-- 藉由呼叫設定連結[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)。 若要設定在按一下連結時執行的命令，請呼叫[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)。
+- 連結,通過調用[CMFCDesktopAlertWndinfo:m_strURL](#m_strurl)設置。 要設定按下連結時執行的指令,請致電[CMFCDesktopAlertWndinfo::m_nURLCmdID](#m_nurlcmdid)。
 
-如果預設對話方塊不足夠，您可以建立自訂對話方塊，並將它傳遞給[cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)而不是使用這個類別的方法。 如需詳細資訊，請參閱 < [CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)。
+如果默認對話框不夠,您可以創建自定義對話框並將其傳遞給[CMFCDesktopAlertWnd::創建](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)方法,而不是使用此類。 有關詳細資訊,請參閱[CMFC 桌面警示對話類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種成員`CMFCDesktopAlertWndInfo`類別。 範例會示範如何將控制代碼設定為顯示圖示，會顯示在桌面警示視窗，顯示在桌面警示視窗中，連結和桌面警示視窗上的連結相關聯的命令 ID 的文字。 此範例中是屬於[桌面警示示範範例](../../overview/visual-cpp-samples.md)。
+下面的範例展示如何在`CMFCDesktopAlertWndInfo`類中使用各種成員。 此範例展示如何將句柄設定為顯示的圖示、桌面警報視窗中顯示的文本、桌面警報視窗中顯示的連結以及與桌面警報視窗中的連結關聯的命令 ID。 此示例是[桌面警報演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxDesktopAlertDialog.h
+**標題:** afxDesktopAlertDialog.h
 
-##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator=
+## <a name="cmfcdesktopalertwndinfooperator"></a><a name="operator_eq"></a>CMFC桌面警報資訊::操作員*
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
@@ -90,15 +90,15 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 
 ### <a name="parameters"></a>參數
 
-[in] *src*<br/>
+[在]*斯爾克*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_hicon"></a>  CMFCDesktopAlertWndInfo::m_hIcon
+## <a name="cmfcdesktopalertwndinfom_hicon"></a><a name="m_hicon"></a>CMFC桌面警報資訊::m_hIcon
 
-顯示之圖示的控制代碼。
+顯示的圖示的句柄。
 
 ```
 HICON m_hIcon;
@@ -106,9 +106,9 @@ HICON m_hIcon;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID
+## <a name="cmfcdesktopalertwndinfom_nurlcmdid"></a><a name="m_nurlcmdid"></a>CMFC 桌面警報資訊::m_nURLCmdID
 
-桌面警示視窗上的連結相關聯的命令識別碼。
+與桌面警報視窗中的連結關聯的命令 ID。
 
 ```
 UINT m_nURLCmdID;
@@ -116,11 +116,11 @@ UINT m_nURLCmdID;
 
 ### <a name="remarks"></a>備註
 
-當使用者按一下連結所指定的命令 ID 傳送至快顯視窗的擁有者[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)。
+當使用者按下[CMFCDesktopAlertWndinfo 指定的](#m_strurl)連結時,命令 ID 將發送給彈出視窗的擁有者:m_strURL 。
 
-##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText
+## <a name="cmfcdesktopalertwndinfom_strtext"></a><a name="m_strtext"></a>CMFC桌面警報資訊::m_strText
 
-會顯示在桌面警示視窗文字。
+桌面警示視窗中顯示的文字。
 
 ```
 CString m_strText;
@@ -128,9 +128,9 @@ CString m_strText;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL
+## <a name="cmfcdesktopalertwndinfom_strurl"></a><a name="m_strurl"></a>CMFC桌面警報資訊::m_strURL
 
-會顯示在桌面警示視窗中的連結。
+桌面警示視窗中顯示的連結。
 
 ```
 CString m_strURL;
@@ -138,12 +138,12 @@ CString m_strURL;
 
 ### <a name="remarks"></a>備註
 
-當使用者按一下連結時，此命令可[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)命令 ID 將會傳送至快顯視窗的擁有者。
+當用戶按一下該連結時,具有[CMFCDesktopAlertWndinfo:m_nURLCmdID](#m_nurlcmdid)命令 ID 的命令將發送給彈出視窗的擁有者。
 
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDesktopAlertWnd 類別](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
-[CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
+[CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
+[CMFC 桌面警示::建立](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
 [CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)

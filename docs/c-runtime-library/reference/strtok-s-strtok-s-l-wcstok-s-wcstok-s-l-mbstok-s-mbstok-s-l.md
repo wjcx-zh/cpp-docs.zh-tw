@@ -1,6 +1,6 @@
 ---
 title: strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
-ms.date: 03/25/2019
+ms.date: 4/2/2020
 api_name:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -8,6 +8,10 @@ api_name:
 - strtok_s
 - wcstok_s
 - _strtok_s_l
+- _o__mbstok_s
+- _o__mbstok_s_l
+- _o_strtok_s
+- _o_wcstok_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -51,19 +56,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 1bbc5910e6242a0df262cc43b58815ea80ff9681
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fe89fb897a5459b16c49060359b4bb40bc062a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946450"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365226"
 ---
 # <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
 使用目前的地區設定或傳入的地區設定，在字串中尋找下一個 Token。 這些版本的 [strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbstok_s**和 **_mbstok_s_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbstok_s**和 **_mbstok_s_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -110,45 +115,47 @@ unsigned char* _mbstok_s_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-字串，包含要尋找的 token 或標記。
+*Str*<br/>
+包含要查找的權杖或權杖的字串。
 
-*限定詞*<br/>
-要使用的分隔符號組。
+*分隔符*<br/>
+要使用的分隔符集。
 
-*context*<br/>
-用來儲存對函式的呼叫之間的位置資訊。
+*內容*<br/>
+用於在調用函數之間存儲位置資訊。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-傳回在*str*中找到的下一個 token 的指標。 當找不到其他標記時，會傳回**Null** 。 每個呼叫都會以 null 字元取代傳回標記之後發生的第一個分隔符號來修改*str* 。
+傳回指向 str 中找到的下一個權*杖 的指標*。 當找不到更多權杖時傳回**NULL。** 每個呼叫透過 null 字元替換在返回的權杖之後發生的第一個分隔符來修改*str。*
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*str*|*限定詞*|*context*|傳回值|**errno**|
+|*Str*|*分隔符*|*內容*|傳回值|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**NULL**|any|Null 指標的指標|**NULL**|**EINVAL**|
-|any|**NULL**|any|**NULL**|**EINVAL**|
-|any|any|**NULL**|**NULL**|**EINVAL**|
+|**空**|任意|Null 指標的指標|**空**|**埃因瓦爾**|
+|任意|**空**|任意|**空**|**埃因瓦爾**|
+|任意|任意|**空**|**空**|**埃因瓦爾**|
 
-如果*str*為**Null** ，但*內容*是指向有效內容指標的指標，則不會發生錯誤。
+如果*str*為**NULL,** 但*上下文*是指向有效上下文指標的指標,則沒有錯誤。
 
 ## <a name="remarks"></a>備註
 
-**Strtok_s**系列的函數會尋找*str*中的下一個 token。 *分隔符號*中的一組字元會指定要在目前呼叫上的*str*中找到的 token 可能分隔符號。 **wcstok_s**和 **_mbstok_s**是**strtok_s**的寬字元和多位元組字元版本。 **Wcstok_s**和 **_wcstok_s_l**的引數和傳回值是寬字元字串; **_mbstok_s**和 **_mbstok_s_l**的是多位元組字元字串。 除此之外，這些函式的行為相同。
+**函數的strtok_s**系列在*str*中找到下一個權杖。 *分隔符*中的字元集指定在當前呼叫的*str*中找到的權杖的可能分隔符。 **wcstok_s**和 **_mbstok_s**是**strtok_s**的寬字元和多位元組位元版本。 **wcstok_s**和 **_wcstok_s_l**的參數和返回值是寬字元字串;**_mbstok_s**和 **_mbstok_s_l**的字串是多位元位元字串。 除此之外，這些函式的行為相同。
 
-這個函式會驗證它的參數。 發生錯誤狀況時，如錯誤狀況資料表所示，會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回**Null**。
+這個函式會驗證它的參數。 當發生錯誤條件時(如錯誤條件表中)中,將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將**errno**設定為**EINVAL**並傳回**NULL**。
 
-在第一次呼叫**strtok_s**時，函式會略過前置分隔符號，並將指標傳回至*str*中的第一個 token，並以 null 字元終止 token。 對於**strtok_s**的一系列呼叫，可以將更多的 token 細分成*str*的其餘部分。 **Strtok_s**的每個呼叫都會在該呼叫傳回的權杖之後插入一個 null 字元，藉此修改*str* 。 *內容*指標會持續追蹤正在讀取的字串，以及在字串中要讀取的下一個 token。 若要讀取*str*中的下一個 token，請以*str*引數的**Null**值呼叫**strtok_s** ，並傳遞相同的*內容*參數。 **Null** *str*引數會讓**strtok_s**搜尋已修改的*str*中的下一個 token。 *分隔符號*引數可接受來自下一個呼叫的任何值，如此一來，分隔符號集合可能會有所不同。
+在第一個調用**strtok_s**時,函數跳過前導分隔符,並返回指向*str*中的第一個令牌的指標,用空字元終止令牌。 通過一系列對**strtok_s**調用,可以在*str*的其餘部分中分解更多令牌。 對**strtok_s**的每個調用通過在該調用返回的權杖後插入一個空字元來修改*str。* *上下文*指標追蹤正在讀取的字串以及要讀取下一個權杖的位置。 要從*str*讀取下一個標記,請呼叫具有*str*參數的**NULL**值**strtok_s,** 並傳遞相同的*上下文*參數。 **NULL** *str*參數導致**strtok_s**在修改後的*str*中搜索下一個權杖。 *分隔符*參數可以從一個調用到下一個調用獲取任何值,以便分隔符集可能會有所不同。
 
-由於*內容*參數會取代**strtok**和 **_strtok_l**中使用的靜態緩衝區，因此可以在同一個執行緒中同時剖析兩個字串。
+由於*上下文*參數取代了**strtok**和 **_strtok_l**中使用的靜態緩衝區,因此可以在同一線程中同時解析兩個字串。
 
-輸出值會受到地區設定的**LC_CTYPE**分類設定影響。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。
+輸出值受區域設置**LC_CTYPE**類別設置的影響。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。
 
-這些沒有 **_l**尾碼的函式版本，會針對此與地區設定相關的行為使用目前的執行緒地區設定。 具有 **_l**後置字元的版本相同，不同之處在于它們會改用*locale*參數所指定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+沒有 **_l**後綴的這些函數的版本使用此與區域設置相關的行為的當前線程區域設置。 具有 **_l**後綴的版本是相同的,只是它們使用*區域設置*參數指定的區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -156,14 +163,14 @@ unsigned char* _mbstok_s_l(
 |-------------|---------------------|
 |**strtok_s**|\<string.h>|
 |**_strtok_s_l**|\<string.h>|
-|**wcstok_s**，<br />**_wcstok_s_l**|\<string.h> 或 \<wchar.h>|
-|**_mbstok_s**，<br />**_mbstok_s_l**|\<mbstring.h>|
+|**wcstok_s**,<br />**_wcstok_s_l**|\<string.h> 或 \<wchar.h>|
+|**_mbstok_s**,<br />**_mbstok_s_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
-|TCHAR.H 常式|\_未定義\_UNICODE & MBCS|\_定義的 MBCS|_UNICODE 已定義|
+|TCHAR.H 常式|\_未定義\_& MBCS 的 UNICODE|\_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
@@ -236,7 +243,7 @@ tokens
 
 ## <a name="see-also"></a>另請參閱
 
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

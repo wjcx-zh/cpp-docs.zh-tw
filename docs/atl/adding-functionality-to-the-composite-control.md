@@ -1,34 +1,34 @@
 ---
-title: 將功能加入至複合控制項
+title: 新增組合的控制項
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [C++], ActiveX controls
 - composite controls, handling events
 - ActiveX controls [C++], events
 ms.assetid: 98f85681-9564-480d-af38-03f9733fe58b
-ms.openlocfilehash: 9ad7ef3d80579804ac614fbefac1a042a9cf2fba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de18f863831973af384d2456adb5b2214f0dd68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252490"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317418"
 ---
-# <a name="adding-functionality-to-the-composite-control"></a>將功能加入至複合控制項
+# <a name="adding-functionality-to-the-composite-control"></a>新增組合的控制項
 
-一旦您已將任何必要的控制項插入複合控制項下, 一個步驟牽涉到新增的新功能。 這項新功能通常會分成兩類：
+將任何必要的控制項插入到複合控制項中後,下一步將添加新功能。 此新功能通常分為兩類:
 
-- 支援的其他介面，並自訂您的複合控制項，與其他的特定功能的行為。
+- 支援其他介面,並自定義複合控制項的行為與其他特定功能。
 
-- 處理從包含 ActiveX 控制項 （或控制項） 的事件。
+- 從包含的 ActiveX 控制件(或控制項)處理事件。
 
-目的及本文的範圍中，本節的其餘部分著重於從 ActiveX 控制項中處理事件。
+就本文的目的和範圍而言,本節的其餘部分僅側重於處理來自 ActiveX 控件的事件。
 
 > [!NOTE]
->  如果您需要處理從 Windows 控制項的訊息，請參閱[實作視窗](../atl/implementing-a-window.md)如需有關在 ATL 中處理的訊息
+> 如果需要處理來自 Windows 控件的消息,請參閱[實現視窗](../atl/implementing-a-window.md),瞭解有關 ATL 中郵件處理的詳細資訊。
 
-之後插入 ActiveX 控制項對話方塊資源，以滑鼠右鍵按一下控制項，然後按一下**加入事件處理常式**。 選取您想要處理，並按一下 的事件**新增和編輯**。 事件處理常式程式碼會加入至控制項的.h 檔案。
+在對話框資源中插入 ActiveX 控制項後,右鍵按一下該控制項並按下「**添加事件處理程式**」 。。 選擇要處理的事件,然後按下「**添加和編輯**」。 事件處理程式代碼將添加到控制項的 .h 檔中。
 
-複合控制項上的 ActiveX 控制項連接點會自動連線及中斷連線透過呼叫[CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)。
+複合控制的 ActiveX 控制項的連線點來透過[電話連線的 CCom 複合控制系統自動連線與斷線連接::建議SinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)。
 
 ## <a name="see-also"></a>另請參閱
 

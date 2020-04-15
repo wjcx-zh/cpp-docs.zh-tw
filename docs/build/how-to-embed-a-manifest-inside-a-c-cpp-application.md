@@ -1,27 +1,27 @@
 ---
-title: HOW TO：中嵌入資訊清單的 C /C++應用程式
+title: 如何：在 C/C++ 應用程式中嵌入資訊清單
 ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 2f125ee445d4ee9efdf21c37134d4c5adbca256d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322982"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>HOW TO：中嵌入資訊清單的 C /C++應用程式
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：在 C/C++ 應用程式中嵌入資訊清單
 
-我們建議您嵌入您的應用程式或程式庫最終二進位檔的資訊清單，因為這可確保正確的執行階段行為，在大部分情況下。 根據預設，Visual Studio 會嘗試建置專案時嵌入資訊清單。 如需詳細資訊，請參閱 < [Visual Studio 中的資訊清單產生](manifest-generation-in-visual-studio.md)。 不過，如果您使用 nmake 來建置您的應用程式，您必須進行一些變更 makefile。 本節說明如何變更，讓它自動內嵌於最終二進位檔的資訊清單的 makefile。
+我們建議您將應用程式或庫的清單嵌入到最終二進位檔中,因為這保證了在大多數情況下正確的運行時行為。 默認情況下,Visual Studio 嘗試在生成專案時嵌入清單。 有關詳細資訊,請參閱[可視化工作室中的"清單生成](manifest-generation-in-visual-studio.md)"。 但是,如果使用 nmake 構建應用程式,則必須對 makefile 進行一些更改。 本節演示如何更改 makefile,以便它自動將清單嵌入到最終二進位檔中。
 
 ## <a name="two-approaches"></a>兩種方法
 
-有兩種方式可以內嵌在應用程式或程式庫內的資訊清單。
+有兩種方法可以將清單嵌入到應用程式或庫中。
 
-- 如果您不想要執行累加建置您可以將直接內嵌資訊清單做為建置後步驟中使用命令列如下所示：
+- 如果不執行增量生成,則可以使用類似於以下內容的命令列直接嵌入清單作為生成後步驟:
 
    ```cmd
    mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
@@ -33,21 +33,21 @@ ms.locfileid: "65220697"
    mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
    ```
 
-   使用 1 表示 EXE 和 2 中，dll。
+   EXE 使用 1,對 DLL 使用 2。
 
-- 如果您要執行累加建置，請使用下列步驟：
+- 如果要執行增量生成,請使用以下步驟:
 
-   - 連結要產生 MyApp.exe.manifest 檔案的二進位檔。
+  - 連結二進位檔以生成MyApp.exe.manifest檔。
 
-   - 轉換的資源檔中的資訊清單。
+  - 將清單轉換為資源檔。
 
-   - 重新 （以累加方式連結） 將資訊清單資源內嵌於二進位檔。
+  - 重新連結(增量)以將清單資源嵌入到二進位檔案中。
 
-下列範例顯示如何變更將這兩種技術的 makefile。
+以下範例展示如何更改 makefile 以合併這兩種技術。
 
-## <a name="makefiles-before"></a>Makefile （之前）
+## <a name="makefiles-before"></a>製作檔案 (之前)
 
-MyApp.exe，建置從一個檔案的簡單應用程式，請考慮 nmake 指令碼：
+請考慮 MyApp.exe 的 nmake 文稿,這是一個從一個檔案建構的簡單應用程式:
 
 ```
 # build MyApp.exe
@@ -67,9 +67,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-此指令碼執行時使用 Visual Studio 不變的如果已成功建立 MyApp.exe。 它也會建立由作業系統載入相依組件，在執行階段使用的外部資訊清單檔 MyApp.exe.manifest。
+如果此腳本在 Visual Studio 下運行不變,則已成功創建 MyApp.exe。 它還創建外部清單檔 MyApp.exe.manifest,供作業系統在運行時載入從屬程式集。
 
-MyLibrary.dll 的 nmake 指令碼看起來非常類似：
+MyLibrary.dll 的 nmake 腳本看起來非常類似:
 
 ```
 # build MyLibrary.dll
@@ -92,9 +92,9 @@ clean :
     del MyLibrary.obj MyLibrary.dll
 ```
 
-## <a name="makefiles-after"></a>Makefile （之後）
+## <a name="makefiles-after"></a>製作檔案 (之後)
 
-若要建置使用內嵌資訊清單，您必須對原始的 makefile 中的四個的小型變更。 針對 MyApp.exe makefile 中：
+要使用嵌入的清單建構,您必須對原始 makefile 進行四個小更改。 對於 MyApp.exe 製作檔:
 
 ```
 # build MyApp.exe
@@ -124,7 +124,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-針對 MyLibrary.dll makefile 中：
+對於 MyLibrary.dll 製作檔:
 
 ```
 # build MyLibrary.dll
@@ -157,9 +157,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Makefile 現在包含兩個檔案執行實際工作、 makefile.inc 和 makefile.targ.inc。
+makefile 現在包括兩個檔,做真正的工作, 使file.inc 和 makefile.targ.inc.
 
-建立 makefile.inc，並將下列內容複製到其中：
+建立 makefile.inc 並將它的複製到其中:
 
 ```
 # makefile.inc -- Include this file into existing makefile at the very top.
@@ -230,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-現在，建立**makefile.targ.inc**並將下列內容複製到其中：
+現在建立**makefile.targ.inc**並將其複製到其中:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile
@@ -259,4 +259,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 C/C++ 程式的資訊清單產生過程](understanding-manifest-generation-for-c-cpp-programs.md)
+[瞭解 C/C++計劃清單產生](understanding-manifest-generation-for-c-cpp-programs.md)

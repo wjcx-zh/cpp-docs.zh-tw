@@ -1,59 +1,59 @@
 ---
-title: HOW TO：將命令路由傳送至 Windows Forms 控制項
+title: 如何：新增命令傳送至 Windows Form 控制項
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad64a12051c22a0cfca99d3ec9c5abef579902f4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222906"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365162"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>HOW TO：將命令路由傳送至 Windows Forms 控制項
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：新增命令傳送至 Windows Form 控制項
 
-[CWinFormsView](../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息傳送至使用者控制項，以允許它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。
+[CWinFormsView](../mfc/reference/cwinformsview-class.md)將指令和更新命令 UI 消息路由到使用者控制項,以允許它處理 MFC 命令(例如,框架功能表項和工具列按鈕)。
 
-使用者控制項使用[ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize)來儲存中的命令來源物件的參考`m_CmdSrc`，如下列範例所示。 若要使用`ICommandTarget`您必須加入 mfcmifc80.dll 的參考。
+使用者控制項使用[ICommandTarget::初始化](../mfc/reference/icommandtarget-interface.md#initialize)來儲存對 命令來源`m_CmdSrc`物件的引用,如以下範例所示。 要使用`ICommandTarget`,必須添加對 mfcmifc80.dll 的引用。
 
-`CWinFormsView` 處理數個常見的 MFC 檢視告知轉寄給受管理的使用者控制項。 這些通知會包含[OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)， [OnUpdate](../mfc/reference/iview-interface.md#onupdate)並[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)方法。
+`CWinFormsView`通過將多個常見的 MFC 檢視通知轉發到託管使用者控件來處理它們。 這些通知包括[「初始更新](../mfc/reference/iview-interface.md#oninitialupdate)[」、「更新」](../mfc/reference/iview-interface.md#onupdate)和[「啟動檢視」](../mfc/reference/iview-interface.md#onactivateview)方法。
 
-本主題假設您先前已完成[How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[How to:建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+這個主題假定您以前已完成[了「如何操作:在對話框中建立使用者控制和主機](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)[」以及如何:建立使用者控制和主機 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
-### <a name="to-create-the-mfc-host-application"></a>若要建立 MFC 主應用程式
+### <a name="to-create-the-mfc-host-application"></a>建立 MFC 主機應用程式
 
-1. 開啟您在中建立的 Windows Form 控制項程式庫[How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+1. 開啟您在「如何操作」 中建立的 Windows 窗體控制件庫[:在對話框中建立使用者控制件和主機](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
 
-1. 將參考加入 mfcmifc80.dll 的參考，您可以以滑鼠右鍵按一下專案節點，在這麼做**方案總管**，並選取**新增**，**參考**，然後瀏覽至Microsoft Visual Studio 10.0\VC\atlmfc\lib。
+1. 新增對 mfcmifc80.dll 的引用,您可以通過右鍵單擊**解決方案資源管理器**中的專案節點,選擇 **"添加**",**參考**,然後流覽到 Microsoft Visual Studio 10.0_VC_atlmfc_lib。
 
-1. 開啟 UserControl1.Designer.cs，並新增下列 using 陳述式：
+1. 開啟UserControl1.Designer.cs並添加以下使用語句:
 
     ```
     using Microsoft.VisualC.MFC;
     ```
 
-1. 此外，在 UserControl1.Designer.cs 中將這一行：
+1. 此外,在UserControl1.Designer.cs中,更改此行:
 
     ```
     partial class UserControl1
     ```
 
-   轉換為：
+   變更為以下程式碼：
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
     ```
 
-1. 將下列類別定義的第一行`UserControl1`:
+1. 將新增為`UserControl1`的類別定義的第一行:
 
     ```
     private ICommandSource m_CmdSrc;
     ```
 
-1. 新增下列方法定義，以便`UserControl1`（我們將在下一個步驟中建立 MFC 控制項的 ID）：
+1. 將以下方法定義加入`UserControl1`(我們將在下一步中建立 MFC 控制件的 ID):
 
     ```
     public void Initialize (ICommandSource cmdSrc)
@@ -70,23 +70,23 @@ ms.locfileid: "62222906"
     }
     ```
 
-1. 開啟您建立的 MFC 應用程式[How to:建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+1. 開啟您在[「如何建立」 的 MFC 應用程式:建立使用者控制和主機 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
-1. 加入功能表選項將會叫用`singleMenuHandler`。
+1. 添加將調用`singleMenuHandler`的功能表選項。
 
-   移至**資源檢視**(Ctrl + Shift + E)，展開**功能表**資料夾，然後再按兩下**IDR_MFC02TYPE**。 這會顯示功能表編輯器。
+   跳到**資源檢視**(Ctrl_Shift_E),展開**選單**資料夾,然後按兩下**IDR_MFC02TYPE**。 這將顯示功能表編輯器。
 
-   加入功能表選項，在底部**檢視**功能表。 請注意中的功能表選項 ID**屬性**視窗。 儲存檔案。
+   在 **「檢視」** 選單底部添加功能表選項。 請注意「**屬性」** 視窗中選單選項的 ID。 儲存檔案。
 
-   在 [**方案總管] 中**、 開啟 Resource.h 檔案，複製您剛才新增的功能表選項 ID 值並貼上該值，做為第一個參數`m_CmdSrc.AddCommandHandler`C# 專案中呼叫`Initialize`方法 （取代`32771`如有必要)。
+   在**解決方案資源管理員**中,打開 Resource.h 檔,複製剛剛新增的選單選項的 ID 值,並將該值`m_CmdSrc.AddCommandHandler`作為第一個參數貼上`Initialize`C#`32771`專案方法中的呼叫( 如有必要取代)。
 
-9. 建置並執行專案。
+1. 建置並執行專案。
 
-   在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
+   在 [建置]**** 功能表上，按一下 [建置方案]****。
 
-   在 **偵錯**功能表上，按一下**啟動但不偵錯**。
+   在 **「調試」** 選單上,按一下 **「 不調試即可開始**」。
 
-   選取您所加入的功能表選項。 請注意，會呼叫此.dll 檔中的方法。
+   選擇您添加的功能表選項。 請注意,調用 .dll 中的方法。
 
 ## <a name="see-also"></a>另請參閱
 

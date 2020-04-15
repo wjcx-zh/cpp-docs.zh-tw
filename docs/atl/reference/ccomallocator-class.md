@@ -1,5 +1,5 @@
 ---
-title: CComAllocator 類別
+title: CComallocator 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CComAllocator
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-ms.openlocfilehash: de302c7a58bf1b15e63e7cd391621ed9558e5a70
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 165cdb8b0b16a4872214f4556c26ee141e6a4d89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497589"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321145"
 ---
-# <a name="ccomallocator-class"></a>CComAllocator 類別
+# <a name="ccomallocator-class"></a>CComallocator 類別
 
-這個類別會提供使用 COM 記憶體常式來管理記憶體的方法。
+此類提供了使用 COM 記憶體例程管理記憶體的方法。
 
 ## <a name="syntax"></a>語法
 
@@ -31,21 +31,21 @@ class CComAllocator
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CComAllocator::Allocate](#allocate)|呼叫此靜態方法來配置記憶體。|
-|[CComAllocator::Free](#free)|呼叫此靜態方法以釋放已配置的記憶體。|
-|[CComAllocator::Reallocate](#reallocate)|呼叫此靜態方法來重新配置記憶體。|
+|[CComallocator:分配](#allocate)|調用此靜態方法以分配記憶體。|
+|[CComallocator:免費](#free)|調用此靜態方法以釋放分配的記憶體。|
+|[CComallocator::重新分配](#reallocate)|調用此靜態方法重新分配記憶體。|
 
 ## <a name="remarks"></a>備註
 
-[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)會使用這個類別來提供 COM 記憶體配置常式。 對應的類別[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)會使用 CRT 常式提供相同的方法。
+[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)使用此類來提供 COM 記憶體分配例程。 對應類[CCRT 分配器](../../atl/reference/ccrtallocator-class.md)使用 CRT 例程提供相同的方法。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlbase.h。h
+**標題:** atlbase.h
 
-##  <a name="allocate"></a>CComAllocator:: Allocate
+## <a name="ccomallocatorallocate"></a><a name="allocate"></a>CComallocator:分配
 
 呼叫此靜態函式以配置記憶體。
 
@@ -55,7 +55,7 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*<br/>
+*n 位元組*<br/>
 要配置的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -64,11 +64,11 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>備註
 
-配置記憶體。 如需詳細資訊, 請參閱[CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) 。
+配置記憶體。 有關詳細資訊[,請參閱 CoTaskMemAlloc。](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc)
 
-##  <a name="free"></a>CComAllocator:: Free
+## <a name="ccomallocatorfree"></a><a name="free"></a>CComallocator:免費
 
-呼叫此靜態函式以釋放已配置的記憶體。
+調用此靜態函數以釋放分配的記憶體。
 
 ```
 static void Free(void* p) throw();
@@ -76,14 +76,14 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*P*<br/>
 配置的記憶體之指標。
 
 ### <a name="remarks"></a>備註
 
-釋放已配置的記憶體。 如需詳細資訊, 請參閱[CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) 。
+釋放分配的記憶體。 有關詳細資訊,請參閱[CoTaskMem 免費](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)。
 
-##  <a name="reallocate"></a>CComAllocator:: 重新配置
+## <a name="ccomallocatorreallocate"></a><a name="reallocate"></a>CComallocator::重新分配
 
 呼叫此靜態函式以重新配置記憶體。
 
@@ -93,22 +93,22 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*P*<br/>
 配置的記憶體之指標。
 
-*nBytes*<br/>
+*n 位元組*<br/>
 要重新配置的位元組數目。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已配置空間的 void 指標, 如果記憶體不足, 則傳回 Null
+傳回指向已分配空間的空指標,如果記憶體不足,則傳回 NULL
 
 ### <a name="remarks"></a>備註
 
-調整配置的記憶體數量。 如需詳細資訊, 請參閱[CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc) 。
+調整配置的記憶體數量。 有關詳細資訊[,請參閱 CoTaskMemRealloc。](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
 ## <a name="see-also"></a>另請參閱
 
 [CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)<br/>
-[CCRTAllocator 類別](../../atl/reference/ccrtallocator-class.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[CCRTAllocator 類](../../atl/reference/ccrtallocator-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)

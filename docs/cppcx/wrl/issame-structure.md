@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: b659f832756b79289181db34fa8d6fc0d974609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161273"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371339"
 ---
 # <a name="issame-structure"></a>IsSame 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -36,11 +36,11 @@ struct IsSame<T1, T1>;
 類型。
 
 *T2*<br/>
-另一個型別。
+另一種類型。
 
 ## <a name="remarks"></a>備註
 
-其中一個指定的型別是否相當於另一個測試指定的類型。
+測試一個指定類型是否與另一個指定類型相同。
 
 ## <a name="members"></a>成員
 
@@ -48,21 +48,21 @@ struct IsSame<T1, T1>;
 
 名稱                    | 描述
 ----------------------- | --------------------------------------------------
-[IsSame::value](#value) | 表示一種型別是否與另一個相同。
+[相同:值](#value) | 指示一種類型是否與另一種類型相同。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IsSame`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** internal.h
+**標題:** 內部.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="value"></a>Issame:: Value
+## <a name="issamevalue"></a><a name="value"></a>相同:值
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 template <typename T1, typename T2>
@@ -80,6 +80,6 @@ struct IsSame<T1, T1>
 
 ### <a name="remarks"></a>備註
 
-表示一種型別是否與另一個相同。
+指示一種類型是否與另一種類型相同。
 
-`value` 是 **，則為 true**如果範本參數相同，並**false**範本參數是否不同。
+`value`如果樣本參數相同,**則為 true;** 如果樣本參數不同,**則為 false。**

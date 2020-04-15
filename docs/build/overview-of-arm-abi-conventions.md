@@ -2,16 +2,16 @@
 title: ARM ABI 慣例概觀
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320722"
 ---
-# <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 慣例的總覽
+# <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 公約概述
 
-此針對 Windows on ARM 處理器程式碼編譯的應用程式二進位介面 (ABI) 是以標準 ARM EABI 為基礎。 本文章重點說明 Windows on ARM 和標準之間的主要差異。 本檔涵蓋 ARM32 ABI。 如需 ARM64 ABI 的詳細資訊，請參閱[ARM64 ABI 慣例的總覽](arm64-windows-abi-conventions.md)。 如需標準 ARM EABI 的詳細資訊，請參閱[ARM 架構的應用程式二進位介面（ABI）](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) （外部連結）。
+此針對 Windows on ARM 處理器程式碼編譯的應用程式二進位介面 (ABI) 是以標準 ARM EABI 為基礎。 本文章重點說明 Windows on ARM 和標準之間的主要差異。 本文檔介紹 ARM32 ABI。 有關 ARM64 ABI 的資訊,請參閱[ARM64 ABI 約定概述](arm64-windows-abi-conventions.md)。 有關標準 ARM EABI 的詳細資訊,請參閱 ARM 體系結構(外部連結[)的應用程式二進位介面 (ABI)。](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)
 
 ## <a name="base-requirements"></a>基本需求
 
@@ -23,9 +23,9 @@ ARM 上的 Windows 會假設其始終在 ARMv7 架構上執行。 硬體中必�
 
 ## <a name="endianness"></a>位元組序
 
-Windows on ARM 在由小到大的格式模式下執行。 MSVC 編譯器和 Windows 執行時間都預期會有極小的位元組資料。 雖然 ARM 指令集架構 (ISA) 中的 SETEND 指令甚至容許以使用者模式程式碼，來變更目前的位元組序，但不建議這樣做，因為這對應用程式而言太過危險。 如果在由大到小格式的模式下產生例外狀況，則行為不可預期，且可能會在使用者模式中導致應用程式錯誤，或在核心模式中導致檢查錯誤。
+Windows on ARM 在由小到大的格式模式下執行。 MSVC 編譯器和 Windows 運行時都期望隨時提供很少的終端數據。 雖然 ARM 指令集架構 (ISA) 中的 SETEND 指令甚至容許以使用者模式程式碼，來變更目前的位元組序，但不建議這樣做，因為這對應用程式而言太過危險。 如果在由大到小格式的模式下產生例外狀況，則行為不可預期，且可能會在使用者模式中導致應用程式錯誤，或在核心模式中導致檢查錯誤。
 
-## <a name="alignment"></a>對齊方式
+## <a name="alignment"></a>Alignment
 
 雖然 Windows 可讓 ARM 硬體無障礙地控制未對齊的整數存取，但在某些情況下，仍可能產生對齊錯誤。 請遵循下列規則，來進行對齊：
 
@@ -53,34 +53,34 @@ ARM 上 Windows 的指令集嚴格限制為 Thumb-2。 在此平台上執行的�
 
 - 目標指令必須是下列其中一種：
 
-   |16 位元作業碼|執行個體|限制|
+   |16 位元作業碼|類別|限制|
    |---------------------|-----------|------------------|
    |MOV、MVN|移動|Rm != PC、Rd != PC|
    |LDR、LDR[S]B、LDR[S]H|從記憶體載入|但不是 LDR 常值格式|
    |STR、STRB、STRH|儲存至記憶體||
    |ADD、ADC、RSB、SBC、SUB|加法或減法|但不是 ADD/SUB SP、SP、imm7 格式<br /><br /> Rm != PC、Rdn != PC、Rdm != PC|
-   |CMP、CMN|Compare|Rm != PC、Rn != PC|
-   |MUL|乘法||
+   |CMP、CMN|比較|Rm != PC、Rn != PC|
+   |MUL|乘||
    |ASR、LSL、LSR、ROR|位元移位||
    |AND、BIC、EOR、ORR、TST|位元算術||
    |BX|分支到暫存器|Rm != PC|
 
 雖然目前 ARMv7 CPU 無法報告不容許之指令格式的使用情況，但預期未來版本可以報告。 如果偵錯到這些格式，則使用它們的任何程式可能會因未定義的指令例外狀況而終止。
 
-### <a name="sdivudiv-instructions"></a>SDIV/UDIV 指示
+### <a name="sdivudiv-instructions"></a>SDIV/UDIV 說明
 
 完全支援使用整數除法指令 SDIV 和 UDIV，即使在沒有原生硬體處理它們的平台上也支援。 Cortex-A9 處理器上每一個 SDIV 或 UDIV 除法的額外負荷都大約是 80 個週期，再加上 20-250 個週期的整體除法時間，具體取決於輸入。
 
-## <a name="integer-registers"></a>整數暫存器
+## <a name="integer-registers"></a>整數寄存器
 
 ARM 處理器支援 16 個整數暫存器：
 
-|登錄|動態？|角色|
+|註冊|動態？|角色|
 |--------------|---------------|----------|
-|r0|Volatile|參數、結果、臨時暫存器 1|
-|r1|Volatile|參數、結果、臨時暫存器 2|
-|r2|Volatile|參數、臨時暫存器 3|
-|r3|Volatile|參數、臨時暫存器 4|
+|r0|動態|參數、結果、臨時暫存器 1|
+|r1|動態|參數、結果、臨時暫存器 2|
+|r2|動態|參數、臨時暫存器 3|
+|r3|動態|參數、臨時暫存器 4|
 |r4|靜態||
 |r5|靜態||
 |r6|靜態||
@@ -89,7 +89,7 @@ ARM 處理器支援 16 個整數暫存器：
 |r9|靜態||
 |r10|靜態||
 |r11|靜態|框架指標|
-|r12|Volatile|程序內呼叫臨時暫存器|
+|r12|動態|程序內呼叫臨時暫存器|
 |r13 (SP)|靜態|堆疊指標|
 |r14 (LR)|靜態|連結暫存器|
 |r15 (PC)|靜態|程式計數器|
@@ -98,46 +98,46 @@ ARM 處理器支援 16 個整數暫存器：
 
 Windows 使用 r11 進行堆疊框架的快速查核行程。 如需詳細資訊，請參閱＜堆疊查核行程＞一節。 由於此需求，r11 必須始終指向鏈結中的最頂端連結。 請勿將 r11 用於一般用途，在分析期間，您的程式碼不會產生正確的堆疊查核行程。
 
-## <a name="vfp-registers"></a>VFP 暫存器
+## <a name="vfp-registers"></a>VFP 寄存器
 
 Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示浮點暫存器一律存在，並可用於參數傳遞，而完整的 32 個暫存器集則可以使用。 VFP 暫存器及其使用方式在下表中彙總：
 
 |單核心|雙核心|四核心|動態？|角色|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volatile|參數、結果、臨時暫存器|
-|s4-s7|d2-d3|q1|Volatile|參數、臨時暫存器|
-|s8-s11|d4-d5|q2|Volatile|參數、臨時暫存器|
-|s12-s15|d6-d7|q3|Volatile|參數、臨時暫存器|
+|s0-s3|d0-d1|q0|動態|參數、結果、臨時暫存器|
+|s4-s7|d2-d3|q1|動態|參數、臨時暫存器|
+|s8-s11|d4-d5|q2|動態|參數、臨時暫存器|
+|s12-s15|d6-d7|q3|動態|參數、臨時暫存器|
 |s16-s19|d8-d9|q4|靜態||
 |s20-s23|d10-d11|q5|靜態||
 |s24-s27|d12-d13|q6|靜態||
 |s28-s31|d14-d15|q7|靜態||
-||d16-d31|q8-q15|Volatile||
+||d16-d31|q8-q15|動態||
 
 下一個表格說明浮點狀態和控制暫存器 (FPSCR) 位元欄位：
 
 |Bits|意義|動態？|角色|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volatile|狀態旗標|
-|27|QC|Volatile|累加飽和度|
+|31-28|NZCV|動態|狀態旗標|
+|27|QC|動態|累加飽和度|
 |26|AHP|靜態|替代半精確度控制|
 |25|DN|靜態|預設 NaN 模式控制|
 |24|FZ|靜態|清除為零模式控制|
 |23-22|RMode|靜態|捨入模式控制|
 |21-20|分散|靜態|向量分散，必須一律為 0|
-|18-16|長度|靜態|向量長度，必須一律為 0|
+|18-16|Len|靜態|向量長度，必須一律為 0|
 |15, 12-8|IDE、IXE 等|靜態|例外狀況截取啟用位元，必須一律為 0|
-|7, 4-0|IDC、IXC 等|Volatile|累加例外狀況旗標|
+|7, 4-0|IDC、IXC 等|動態|累加例外狀況旗標|
 
-## <a name="floating-point-exceptions"></a>浮點例外狀況
+## <a name="floating-point-exceptions"></a>浮點異常
 
 大部分 ARM 硬體都不支援 IEEE 浮點例外狀況。 在具有硬體浮點例外狀況的處理器變異上，Windows 核心會以無訊息模式攔截例外狀況，並隱含地在 FPSCR 暫存器中停用它們。 這可確保所有處理器變異都具有標準化的行為。 否則，在沒有例外狀況支援的平台上開發的程式碼，在具有例外狀況支援的平台上執行時，可能會收到未預期的例外狀況。
 
 ## <a name="parameter-passing"></a>參數傳遞
 
-對於非 variadic 函式，Windows on ARM ABI 會遵循 ARM 規則進行參數傳遞，這包括 VFP 和進階 SIMD 擴充功能。 這些規則遵循[ARM 架構的程式調用標準](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)，並與 VFP 延伸模組合併。 根據預設，前四個整數引數及多達八個浮點或向量引數會在暫存器中傳遞，其他引數會在堆疊中傳遞。 使用下列程序，將引數指派給暫存器或堆疊：
+對於非 variadic 函式，Windows on ARM ABI 會遵循 ARM 規則進行參數傳遞，這包括 VFP 和進階 SIMD 擴充功能。 這些規則遵循[ARM 體系結構的過程調用標準](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf),與 VFP 擴展合併。 根據預設，前四個整數引數及多達八個浮點或向量引數會在暫存器中傳遞，其他引數會在堆疊中傳遞。 使用下列程序，將引數指派給暫存器或堆疊：
 
-### <a name="stage-a-initialization"></a>階段 A：初始化
+### <a name="stage-a-initialization"></a>階段 A:初始化
 
 初始化在開始處理引數之前，僅執行一次：
 
@@ -149,7 +149,7 @@ Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示�
 
 1. 如果呼叫在記憶體中傳回結果的函式，則結果的位址會置於 r0，且 NCRN 會設定為 r1。
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>階段 B：引數的前置填補和擴充
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>階段 B:參數的預填充和擴充
 
 對於清單中的每一個引數，下列清單的第一個相符規則適用：
 
@@ -159,7 +159,7 @@ Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示�
 
 1. 如果該引數是複合類型，則其大小會四捨五入至最近的 4 個倍數。
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>階段 C：將引數指派給暫存器和堆疊
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>階段 C:將參數分配給寄存器和堆疊
 
 對於清單中的每一個引數，下列規則輪流適用，直到已配置該引數為止：
 
@@ -181,41 +181,41 @@ VFP 暫存器不用於 variadic 函式，這時會忽略階段 C 規則 1 和 2�
 
 整數類型值在 r0 中傳回，對於 64 位元傳回值，可選擇性地擴充到 r1。 VFP/NEON 浮點或 SIMD 類型值在 s0、d0 或 q0 中傳回 (適當的話)。
 
-## <a name="stack"></a>堆疊
+## <a name="stack"></a>Stack
 
 堆疊必須始終保持 4 位元組對齊，且在任何函式界限上，必須保持 8 位元組對齊。 若要支援對 64 位元堆疊變數頻繁使用聯鎖作業，必須符合上述情況。 ARM EABI 說明堆疊在任何公用介面上是 8 位元組對齊的。 為了保持一致性，Windows on ARM ABI 會將任何函式界限視為公用介面。
 
 必須使用框架指標的函式 (例如呼叫 `alloca` 或動態變更堆疊指標的函式)，必須在函式序言中，設定 r11 中的框架指標，且保持其不變，直到結尾。 不需要框架指標的函式必須在序言中執行所有堆疊更新，且保持堆疊指標不變，直到結尾。
 
-在堆疊上配置 4 KB 或更多的函式，必須確保最終頁面之前的每一個頁面都按順序碰觸。 這可確保不會有任何程式碼「超越」 Windows 用來展開堆疊的防護頁面。 一般而言，此作業由 `__chkstk` 協助程式完成，在 r4 中，會對該協助程式傳遞堆疊配置總量除以 4 (以位元組為單位)，這會在 r4 中傳回最終的堆疊配置量 (以位元組為單位)。
+在堆疊上配置 4 KB 或更多的函式，必須確保最終頁面之前的每一個頁面都按順序碰觸。 這可確保任何代碼都無法「跳過」Windows 用於擴展堆疊的防護頁面。 一般而言，此作業由 `__chkstk` 協助程式完成，在 r4 中，會對該協助程式傳遞堆疊配置總量除以 4 (以位元組為單位)，這會在 r4 中傳回最終的堆疊配置量 (以位元組為單位)。
 
 ### <a name="red-zone"></a>紅色區域
 
 緊接在目前堆疊指標下的 8 位元組區域，保留供分析和動態修補之用。 這允許插入小心產生的程式碼，其在 [sp, #-8] 儲存兩個暫存器，並臨時用它們來進行任意目的作業。 Windows 核心可保證在使用者模式和核心模式中發生例外狀況或中斷時，不會覆寫這 8 個位元組。
 
-### <a name="kernel-stack"></a>核心堆疊
+### <a name="kernel-stack"></a>內核堆疊
 
 Windows 中預設核心模式堆疊是三個頁面 (12 KB)。 請注意，在核心模式中，不要建立具有大型堆疊緩衝區的函式。 中斷可能帶來非常小的堆疊空餘空間，會導致堆疊緊急檢查錯誤。
 
-## <a name="cc-specifics"></a>C/C++特定
+## <a name="cc-specifics"></a>C/C++細節
 
 列舉型別是 32 位元整數類型，除非列舉型別中至少有一個值需要 64 位元雙字組儲存區。 在該情況下，列舉型別會提升至 64 位元整數類型。
 
-`wchar_t` 定義為相當於 `unsigned short`，以保留與其他平臺的相容性。
+`wchar_t` 定義為等同於 `unsigned short`，以保留與其他平台的相容性。
 
-## <a name="stack-walking"></a>堆疊流覽
+## <a name="stack-walking"></a>堆疊行走
 
-Windows 程式碼會使用已啟用的框架指標（[/oy （框架指標省略）](reference/oy-frame-pointer-omission.md)）進行編譯，以啟用快速堆疊的流覽。 一般而言，r11 暫存器會指向鏈結中的下一個連結，即 {r11, lr} 配對，其會指定堆疊上前一個框架的指標，並傳回位址。 我們建議您的程式碼也啟用框架指標，以改進分析和追蹤。
+Windows 代碼編譯時啟用幀指標[(/Oy (幀指標省略),](reference/oy-frame-pointer-omission.md)以啟用快速堆疊行走。 一般而言，r11 暫存器會指向鏈結中的下一個連結，即 {r11, lr} 配對，其會指定堆疊上前一個框架的指標，並傳回位址。 我們建議您的程式碼也啟用框架指標，以改進分析和追蹤。
 
-## <a name="exception-unwinding"></a>例外狀況回溯
+## <a name="exception-unwinding"></a>異常展開
 
-例外狀況處理期間的堆疊回溯透過使用回溯程式碼啟用。 回溯程式碼是儲存在可執行映像檔 .xdata 區段的位元組序列。 它們以抽象方法描述函式序言和結尾程式碼的作業，因此函式序言的影響可以在準備回溯至呼叫者堆疊框架時復原。
+例外狀況處理期間的堆疊回溯透過使用回溯程式碼啟用。 回溯程式碼是儲存在可執行映像檔 .xdata 區段的位元組序列。 它們以抽象的方式描述函數序言和尾聲代碼的操作,以便可以撤銷函數序言的效果,為展開到調用方的堆疊幀做準備。
 
-ARM EABI 會指定使用回溯程式碼的例外狀況回溯模型。 不過，此規格在 Windows 中不足以進行回溯，因為在 Windows 中必須處理處理器位於函式序言或結尾中間的情況。 如需有關 Windows on ARM 例外狀況資料和回溯的詳細資訊，請參閱[Arm 例外狀況處理](arm-exception-handling.md)。
+ARM EABI 會指定使用回溯程式碼的例外狀況回溯模型。 不過，此規格在 Windows 中不足以進行回溯，因為在 Windows 中必須處理處理器位於函式序言或結尾中間的情況。 有關有關 ARM 異常資料和展開的 Windows 的詳細資訊,請參閱[ARM 異常處理](arm-exception-handling.md)。
 
 我們建議動態產生的程式碼使用 `RtlAddFunctionTable` 及相關聯函式呼叫中指定的動態函式表格描述，以便所產生的程式碼可以參與例外狀況處理。
 
-## <a name="cycle-counter"></a>Cycle 計數器
+## <a name="cycle-counter"></a>循環計數器
 
 若要支援週期計數器，需要執行 Windows 的 ARM 處理器，但直接使用計數器可能會引起問題。 為避免這些問題，Windows on ARM 使用未定義的 opcode，來要求標準化的 64 位元週期計數器值。 從 C 或 C++ 中，使用 `__rdpmccntr64` 內建功能，來發出適當的 opcode；從組件中，使用 `__rdpmccntr64` 指令。 讀取週期計數器在 Cortex-A9 上大約要 60 個週期。
 

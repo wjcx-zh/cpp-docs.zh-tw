@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b859b939baef018e69b245e597eea90e608253ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407922"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363186"
 ---
 # <a name="cnotsupportedexception-class"></a>CNotSupportedException 類別
 
@@ -31,19 +31,19 @@ class CNotSupportedException : public CSimpleException
 
 |名稱|描述|
 |----------|-----------------|
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|建構 `CNotSupportedException` 物件。|
+|[不支援的例外::不支援例外](#cnotsupportedexception)|建構 `CNotSupportedException` 物件。|
 
 ## <a name="remarks"></a>備註
 
-沒有進一步限定性條件是必要或不可能。
+沒有必要或可能進一步的資格。
 
-如需有關使用`CNotSupportedException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+有關`CNotSupportedException`使用的詳細資訊,請參閱[異常處理 (MFC) 一](../../mfc/exception-handling-in-mfc.md)文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[C 例外](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -51,9 +51,9 @@ class CNotSupportedException : public CSimpleException
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afx.h
+**標題:** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>不支援的例外::不支援例外
 
 建構 `CNotSupportedException` 物件。
 
@@ -63,7 +63,7 @@ CNotSupportedException();
 
 ### <a name="remarks"></a>備註
 
-請勿直接使用這個建構函式，但而不是呼叫全域函式[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)。 如需例外狀況處理的詳細資訊，請參閱文章[MFC 的例外狀況處理](../exception-handling-in-mfc.md)。
+不要直接使用此構造函數,而是調用全域函數[AfxThrowNot 支援異常](exception-processing.md#afxthrownotsupportedexception)。 有關異常處理的詳細資訊,請參閱[MFC 中的異常處理](../exception-handling-in-mfc.md)一文。
 
 ## <a name="see-also"></a>另請參閱
 

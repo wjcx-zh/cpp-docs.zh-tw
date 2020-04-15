@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: e31cf35c903a0e7572ce7d47ada21c4603119cb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c1c5593aee19254d4348d4e8658ffe9c3f0cf1b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515573"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368244"
 ---
 # <a name="safeint-functions"></a>SafeInt 函式
 
@@ -47,28 +47,28 @@ SafeInt 程式庫提供幾個您不需要建立 [SafeInt 類別](../safeint/safe
 這些函式每一個都有兩種範本型別：`T` 和 `U`。 每一種型別都可以是布林值、字元或整數型別。 整數型別不一定要帶正負號，且大小從 8 位元到 64 位元均可。
 
 > [!NOTE]
-> 此程式庫的最新版本位於 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)。
+> 此函式庫的最新[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)版本 。
 
 ## <a name="in-this-section"></a>本節內容
 
-功能                      | 說明
+函式                      | 描述
 ----------------------------- | --------------------------------------------------------------
-[SafeAdd](#safeadd)           | 可將兩個數字相加並防止溢位。
-[SafeCast](#safecast)         | 可將某個型別的參數轉換成另一種型別。
-[SafeDivide](#safedivide)     | 可將兩個數字相除並防止將它們除以零。
+[安全新增](#safeadd)           | 可將兩個數字相加並防止溢位。
+[安全廣播](#safecast)         | 可將某個型別的參數轉換成另一種型別。
+[安全分流](#safedivide)     | 可將兩個數字相除並防止將它們除以零。
 [SafeEquals](#safeequals)、[SafeGreaterThan](#safegreaterthan)、[SafeGreaterThanEquals](#safegreaterthanequals)、[SafeLessThan](#safelessthan)、[SafeLessThanEquals](#safelessthanequals)、[SafeNotEquals](#safenotequals) | 比較兩個數字。 這些函式可讓您比較兩種不同型別的數字，而不需要變更它們的型別。
-[SafeModulus](#safemodulus)   | 可在兩個數字上執行模數運算。
-[SafeMultiply](#safemultiply) | 可將兩個數字相乘並防止溢位。
-[SafeSubtract](#safesubtract) | 可將兩個數字相減並防止溢位。
+[安全性Modulus](#safemodulus)   | 可在兩個數字上執行模數運算。
+[安全乘法](#safemultiply) | 可將兩個數字相乘並防止溢位。
+[安全減法](#safesubtract) | 可將兩個數字相減並防止溢位。
 
 ## <a name="related-sections"></a>相關章節
 
-區段                                                  | 說明
+區段                                                  | 描述
 -------------------------------------------------------- | ----------------------------------------------------
 [SafeInt](../safeint/safeint-class.md)                   | `SafeInt` 類別。
 [SafeIntException](../safeint/safeintexception-class.md) | SafeInt 程式庫特定的例外狀況類別。
 
-## <a name="safeadd"></a>SafeAdd
+## <a name="safeadd"></a><a name="safeadd"></a>安全新增
 
 可透過防止溢位的方式將兩個數字相加。
 
@@ -96,7 +96,7 @@ inline bool SafeAdd (
 
 如果沒有發生錯誤為 **true**；如果發生錯誤則為 **false**。
 
-## <a name="safecast"></a>SafeCast
+## <a name="safecast"></a><a name="safecast"></a>安全廣播
 
 可將某個型別的數字轉換成另一種型別。
 
@@ -110,17 +110,17 @@ inline bool SafeCast (
 
 ### <a name="parameters"></a>參數
 
-*From*<br/>
+*從*<br/>
 [in] 要轉換的來源數字。 它必須是 `T` 型別。
 
-*若要*<br/>
+*自*<br/>
 [out] 對新數字型別的參考。 它必須是 `U` 型別。
 
 ### <a name="return-value"></a>傳回值
 
 如果沒有發生錯誤為 **true**；如果發生錯誤則為 **false**。
 
-## <a name="safedivide"></a>SafeDivide
+## <a name="safedivide"></a><a name="safedivide"></a>安全分流
 
 可透過防止除以零的方式將兩個數字相除。
 
@@ -146,9 +146,9 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>傳回值
 
-如果沒有發生錯誤為 **true**；發生錯誤則為 **false**。
+如果沒有發生錯誤為 **true**；如果發生錯誤則為 **false**。
 
-## <a name="safeequals"></a>SafeEquals
+## <a name="safeequals"></a><a name="safeequals"></a>安全平等
 
 比較兩個數字以判斷它們是否相等。
 
@@ -176,7 +176,7 @@ inline bool SafeEquals (
 
 因為 `==` 可讓您比較兩種不同類型的數字，所以此方法會增強 `SafeEquals`。
 
-## <a name="safegreaterthan"></a>SafeGreaterThan
+## <a name="safegreaterthan"></a><a name="safegreaterthan"></a>安全大於
 
 比較兩個數字。
 
@@ -204,7 +204,7 @@ inline bool SafeGreaterThan (
 
 `SafeGreaterThan` 可透過讓您比較兩個不同型別的數字，來延伸一般比較運算子。
 
-## <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
+## <a name="safegreaterthanequals"></a><a name="safegreaterthanequals"></a>安全大於均等
 
 比較兩個數字。
 
@@ -232,7 +232,7 @@ inline bool SafeGreaterThanEquals (
 
 `SafeGreaterThanEquals` 可增強標準比較運算子，因為它可以讓您比較兩個不同型別的數字。
 
-## <a name="safelessthan"></a>SafeLessThan
+## <a name="safelessthan"></a><a name="safelessthan"></a>安全不點
 
 可判斷某個數字是否小於另一個。
 
@@ -260,7 +260,7 @@ inline bool SafeLessThan (
 
 此方法可增強標準比較運算子，因為 `SafeLessThan` 可以讓您比較兩個不同型別的數字。
 
-## <a name="safelessthanequals"></a>SafeLessThanEquals
+## <a name="safelessthanequals"></a><a name="safelessthanequals"></a>安全不相等
 
 比較兩個數字。
 
@@ -288,7 +288,7 @@ inline bool SafeLessThanEquals (
 
 `SafeLessThanEquals` 可透過讓您比較兩個不同型別的數字，來延伸一般比較運算子。
 
-## <a name="safemodulus"></a>SafeModulus
+## <a name="safemodulus"></a><a name="safemodulus"></a>安全性Modulus
 
 可在兩個數字上執行模數運算。
 
@@ -314,9 +314,9 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>傳回值
 
-如果沒有發生錯誤為 **true**；發生錯誤則為 **false**。
+如果沒有發生錯誤為 **true**；如果發生錯誤則為 **false**。
 
-## <a name="safemultiply"></a>SafeMultiply
+## <a name="safemultiply"></a><a name="safemultiply"></a>安全乘法
 
 可透過防止溢位的方式將兩個數字相乘。
 
@@ -344,7 +344,7 @@ inline bool SafeMultiply (
 
 如果沒有發生錯誤為 `true`；發生錯誤則為 `false`。
 
-## <a name="safenotequals"></a>SafeNotEquals
+## <a name="safenotequals"></a><a name="safenotequals"></a>安全不相等
 
 判斷兩個數字是否不相等。
 
@@ -372,7 +372,7 @@ inline bool SafeNotEquals (
 
 因為 `!=` 可讓您比較兩種不同類型的數字，所以此方法會增強 `SafeNotEquals`。
 
-## <a name="safesubtract"></a>SafeSubtract
+## <a name="safesubtract"></a><a name="safesubtract"></a>安全減法
 
 可透過防止溢位的方式將兩個數字相減。
 
@@ -398,4 +398,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>傳回值
 
-如果沒有發生錯誤為 **true**；發生錯誤則為 **false**。
+如果沒有發生錯誤為 **true**；如果發生錯誤則為 **false**。

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonSlider 類別
+title: CMFC 剪桿級
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonSlider
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: 85c646e2fa524268e4559b587f90c5e06971b765
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2a05ca1433ca3a44b0459360e3f09fe7a274c68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374073"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368840"
 ---
-# <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 類別
+# <a name="cmfcribbonslider-class"></a>CMFC 剪桿級
 
-`CMFCRibbonSlider`類別會實作可以加入功能區列或功能區狀態列的滑桿控制項。 功能區滑桿控制項類似出現在 Office 2007 應用程式中的縮放滑桿。
+類`CMFCRibbonSlider`實現滑動器控制項,您可以將該控制項添加到功能區列或功能區狀態列中。 功能區滑桿控制項類似出現在 Office 2007 應用程式中的縮放滑桿。
 
 ## <a name="syntax"></a>語法
 
@@ -53,39 +53,39 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|建構並初始化功能區滑桿控制項。|
+|[CMFC剪彩滑塊:CMFC剪綵滑塊](#cmfcribbonslider)|構造和初始化功能區滑塊控制元件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonSlider::GetPos](#getpos)|傳回滑桿控制項的目前的位置。|
-|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|傳回滑桿的最大值。|
-|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|傳回滑桿的最小值。|
-|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|傳回功能區項目的一般大小。 (覆寫[cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|
-|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|傳回的滑桿控制項的縮放增量的大小。|
-|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|指定是否在滑桿有顯示比例按鈕。|
-|[CMFCRibbonSlider::OnDraw](#ondraw)|由架構呼叫以繪製功能區項目。 (覆寫[cmfcribbonbaseelement:: Ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|
-|[CMFCRibbonSlider::SetPos](#setpos)|設定滑桿控制項的目前位置。|
-|[CMFCRibbonSlider::SetRange](#setrange)|藉由設定 最小和最大值，指定滑桿控制項的範圍。|
-|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|顯示或隱藏 [縮放] 按鈕。|
-|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|設定縮放增量滑桿控制項的大小。|
+|[CMFC剪桿:GetPos](#getpos)|返回滑塊控制項的目前位置。|
+|[CMFC剪綵滑塊:獲取山脈最大值](#getrangemax)|返回滑塊的最大值。|
+|[CMFC剪綵者:獲取蘭格明](#getrangemin)|返回滑塊的最小值。|
+|[CMFC 功能滑動器:取得一般大小](#getregularsize)|傳回功能區項目的一般大小。 (覆寫[CMFC 功能基礎元素:取得一般大小](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFC 功能滑塊::取得放大增量](#getzoomincrement)|返回滑塊控制件的縮放增量大小。|
+|[CMFC 功能滑動器::有縮放按鈕](#haszoombuttons)|指定滑塊是否具有縮放按鈕。|
+|[CMFC剪綵器:在畫上](#ondraw)|由架構呼叫以繪製功能區項目。 (覆寫[CMFC 功能基礎元素:onDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFC 剪桿::設置Pos](#setpos)|設置滑塊控制的當前位置。|
+|[CMFC 剪桿滑塊::設定範圍](#setrange)|通過設置最小值和最大值來指定滑塊控制項的範圍。|
+|[CMFC 功能滑動器:設定縮放按鈕](#setzoombuttons)|顯示或隱藏縮放按鈕。|
+|[CMFC 功能滑塊::設定放大增量](#setzoomincrement)|設置滑塊控制的縮放增量大小。|
 
 ## <a name="remarks"></a>備註
 
-您可以使用`SetRange`方法，以設定範圍的滑桿縮放增量。 您可以設定滑桿的目前位置使用`SetPos`方法。
+可以使用方法`SetRange`配置滑塊的縮放增量範圍。 您可以使用`SetPos`方法設定滑塊的當前位置。
 
-您也可以使用在左邊和右邊的滑桿控制項顯示循環顯示比例按鈕`SetZoomButtons`方法。 根據預設，滑桿是水平的左側顯示比例按鈕會顯示減號，適當的顯示比例 按鈕會顯示一個加號。
+您可以使用`SetZoomButtons`方法在滑塊控制元件的左側和右側顯示圓形縮放按鈕。 默認情況下,滑塊是水準的,左側縮放按鈕顯示減號,右側縮放按鈕顯示加號。
 
-`SetZoomIncrement`方法定義新增至，或當使用者按一下 [縮放] 按鈕，從目前位置減去遞增。
+該方法`SetZoomIncrement`定義在使用者按下縮放按鈕時要添加到或從當前位置減去的增量。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCRibbonSlider`類別，以設定滑桿的屬性。 此範例示範如何建構`CMFCRibbonSlider`物件、 顯示縮放按鈕、 滑桿控制項，將目前位置設定和設定範圍滑桿控制項的值。
+下面的範例展示如何在`CMFCRibbonSlider`類中使用各種方法來設置滑塊的屬性。 該示例演示如何建構`CMFCRibbonSlider`對象、顯示縮放按鈕、設置滑塊控制項的當前位置以及設置滑塊控制項的值範圍。
 
 [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -95,11 +95,11 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxribbonslider.h
+**標題:** afxribbon 滑塊.h
 
-##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider
+## <a name="cmfcribbonslidercmfcribbonslider"></a><a name="cmfcribbonslider"></a>CMFC剪彩滑塊:CMFC剪綵滑塊
 
-建構功能區滑桿。
+構造功能區滑塊。
 
 ```
 CMFCRibbonSlider(
@@ -110,17 +110,17 @@ CMFCRibbonSlider(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-[in]滑桿的識別碼。
+[在]滑塊識別碼。
 
-[in]. *nWidth*滑桿的寬度，以像素為單位。
+[在]。 *n 寬度*滑塊寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-建構是功能區滑桿*nWidth*像素寬面板類別加入滑桿的位置中。 根據預設，滑桿是水平的。
+建構在添加滑塊的面板類別中為*nWidth*像素寬的功能區滑塊。 默認情況下,滑塊是水準的。
 
-##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos
+## <a name="cmfcribbonslidergetpos"></a><a name="getpos"></a>CMFC剪桿:GetPos
 
-傳回滑桿控制項的目前的位置。
+返回滑塊控制項的目前位置。
 
 ```
 int GetPos() const;
@@ -128,11 +128,11 @@ int GetPos() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前的滑桿控制項，也就是相對於開始的位置，滑桿的位置。
+滑塊控制項的目前位置,該位置相對於滑塊的開頭。
 
-##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax
+## <a name="cmfcribbonslidergetrangemax"></a><a name="getrangemax"></a>CMFC剪綵滑塊:獲取山脈最大值
 
-取得滑動軸可行駛的滑桿控制項的滑桿的最大的遞增值。
+獲取滑塊可以在滑塊控制件上移動的最大增量。
 
 ```
 int GetRangeMax() const;
@@ -140,11 +140,11 @@ int GetRangeMax() const;
 
 ### <a name="return-value"></a>傳回值
 
-滑桿可行駛的滑桿控制項的滑桿的最大的增量。
+滑塊可以在滑塊控制件上移動的滑塊的最大增量。
 
-##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin
+## <a name="cmfcribbonslidergetrangemin"></a><a name="getrangemin"></a>CMFC剪綵者:獲取蘭格明
 
-傳回的最小值的遞增量滑桿可行駛的滑桿控制項。
+返回滑塊在滑塊控制件上可以移動的最小增量。
 
 ```
 int GetRangeMin() const;
@@ -152,11 +152,11 @@ int GetRangeMin() const;
 
 ### <a name="return-value"></a>傳回值
 
-滑桿可行駛滑桿控制項的最小的增量。
+滑塊在滑塊控制件上可以移動的最小增量。
 
-##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize
+## <a name="cmfcribbonslidergetregularsize"></a><a name="getregularsize"></a>CMFC 功能滑動器:取得一般大小
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -164,15 +164,15 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement
+## <a name="cmfcribbonslidergetzoomincrement"></a><a name="getzoomincrement"></a>CMFC 功能滑塊::取得放大增量
 
-取得滑動軸控制項的縮放增量。
+獲取滑塊控制的縮放增量。
 
 ```
 int GetZoomIncrement() const;
@@ -180,11 +180,11 @@ int GetZoomIncrement() const;
 
 ### <a name="return-value"></a>傳回值
 
-滑桿控制項縮放增量。
+滑塊控制的縮放增量。
 
-##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons
+## <a name="cmfcribbonsliderhaszoombuttons"></a><a name="haszoombuttons"></a>CMFC 功能滑動器::有縮放按鈕
 
-指定是否在滑桿有顯示比例按鈕。
+指定滑塊是否具有縮放按鈕。
 
 ```
 BOOL HasZoomButtons() const;
@@ -192,11 +192,11 @@ BOOL HasZoomButtons() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果滑桿縮放按鈕;，則為 TRUE。FALSE 否則。
+如果滑塊具有縮放按鈕,則為 TRUE;否則。
 
-##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw
+## <a name="cmfcribbonsliderondraw"></a><a name="ondraw"></a>CMFC剪綵器:在畫上
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -204,13 +204,13 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpos"></a>  CMFCRibbonSlider::SetPos
+## <a name="cmfcribbonslidersetpos"></a><a name="setpos"></a>CMFC 剪桿::設置Pos
 
-將滑桿控制項的目前位置的設定。
+設置滑塊控制的當前位置。
 
 ```
 void SetPos(
@@ -221,14 +221,14 @@ void SetPos(
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-[in]指定要設定滑桿的位置。 這個位置是相對於滑桿的開頭。
+[在]指定要為滑塊設置的位置。 該位置相對於滑塊的開頭。
 
-*bRedraw*<br/>
-[in]如果為 TRUE，就會重新繪製滑桿。
+*bredraw*<br/>
+[在]如果為 TRUE,則滑塊將重新繪製。
 
-##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange
+## <a name="cmfcribbonslidersetrange"></a><a name="setrange"></a>CMFC 剪桿滑塊::設定範圍
 
-設定範圍滑桿控制項的值。
+設置滑塊控制的值範圍。
 
 ```
 void SetRange(
@@ -239,16 +239,16 @@ void SetRange(
 ### <a name="parameters"></a>參數
 
 *nMin*<br/>
-[in]指定滑桿控制項的最小值。
+[在]指定滑塊控制的最小值。
 
 *nMax*<br/>
-[in]指定滑桿控制項的最大值。
+[在]指定滑塊控制項的最大值。
 
 ### <a name="remarks"></a>備註
 
-藉由設定 最小和最大值，指定滑桿控制項的值範圍。
+通過設置最小值和最大值來指定滑塊控制項的值範圍。
 
-##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons
+## <a name="cmfcribbonslidersetzoombuttons"></a><a name="setzoombuttons"></a>CMFC 功能滑動器:設定縮放按鈕
 
 顯示或隱藏縮放按鈕。
 
@@ -258,11 +258,11 @@ void SetZoomButtons(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]. *bSet* true 會顯示顯示比例按鈕;若要隱藏它們，則為 FALSE。
+[在]。 *bSet*TRUE 以顯示縮放按鈕;假隱藏它們。
 
-##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement
+## <a name="cmfcribbonslidersetzoomincrement"></a><a name="setzoomincrement"></a>CMFC 功能滑塊::設定放大增量
 
-設定滑桿控制項的縮放增量。
+設置滑塊控制的縮放增量。
 
 ```
 void SetZoomIncrement(int nZoomIncrement);
@@ -270,8 +270,8 @@ void SetZoomIncrement(int nZoomIncrement);
 
 ### <a name="parameters"></a>參數
 
-*nZoomIncrement*<br/>
-[in]指定滑桿控制項的縮放增量。
+*nZoom 增量*<br/>
+[在]指定滑塊控制的縮放增量。
 
 ## <a name="see-also"></a>另請參閱
 

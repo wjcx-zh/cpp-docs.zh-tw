@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: b28711991835dd14929e5387709046c3867c715e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01b73f44fcf26a820e43eb87a65e99c2ec186e64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403694"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367670"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 類別
 
-表示屬性頁，可以在 [色彩] 對話方塊中選取自訂色彩。
+表示可在顏色對話框中選擇自定義顏色的屬性頁。
 
 ## <a name="syntax"></a>語法
 
@@ -40,20 +40,20 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 |-|-|
 |名稱|描述|
 |`CMFCCustomColorsPropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
-|`CMFCCustomColorsPropertyPage::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|設定色彩元件的屬性頁。|
+|`CMFCCustomColorsPropertyPage::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
+|[CMFC自訂顏色屬性頁::設定](#setup)|設定屬性頁的顏色元件。|
 
 ### <a name="remarks"></a>備註
 
-`CMFCColorDialog`類別會使用這個類別來顯示 [自訂色彩] 屬性頁。 如需詳細資訊`CMFCColorDialog`，請參閱 < [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)。
+類`CMFCColorDialog`使用此類來顯示自定義顏色屬性頁。 有關 的詳細`CMFCColorDialog`資訊 ,請參閱[CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCCustomColorsPropertyPage`物件，並設定 [屬性] 頁面的色彩元件。
+下面的範例展示如何建構`CMFCCustomColorsPropertyPage`物件並設置屬性頁的顏色元件。
 
 [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -65,15 +65,15 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 [CPropertyPage](../../mfc/reference/cpropertypage-class.md)
 
-[CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
+[CMFC自訂顏色屬性頁](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxcustomcolorspropertypage.h
+**標題:** afx自訂顏色屬性頁.h
 
-##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup
+## <a name="cmfccustomcolorspropertypagesetup"></a><a name="setup"></a>CMFC自訂顏色屬性頁::設定
 
-設定色彩元件的屬性頁。
+設定屬性頁的顏色元件。
 
 ```
 void Setup(
@@ -87,13 +87,13 @@ void Setup(
 |||
 |-|-|
 |參數|描述|
-|*R*|[in]紅色的 RGB 值的元件。|
-|*G*|[in]綠色的 RGB 值的元件。|
-|*B*|[in]RGB 值的藍色元件。|
+|*R*|[在]RGB 值的紅色元件。|
+|*G*|[在]RGB 值的綠色元件。|
+|*B*|[在]RGB 值的藍色元件。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會更新目前的 RGB 和關聯的 HLS （色調、 亮度和飽和度） 色彩值的屬性頁。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)架構初始化 [色彩] 對話方塊中，或使用者按下滑鼠左的按鈕時，方法會呼叫這個方法。 如需詳細資訊`CMFCColorDialog`，請參閱 < [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)。
+此方法更新屬性頁的當前 RGB 和關聯的 HLS(色調、光度和飽和度)顏色值。 當框架初始化顏色對話方塊或使用者按下滑鼠左鍵時[,CMFCColorDialog:setPageTWO](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)方法調用此方法。 有關 的詳細`CMFCColorDialog`資訊 ,請參閱[CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)。
 
 ## <a name="see-also"></a>另請參閱
 

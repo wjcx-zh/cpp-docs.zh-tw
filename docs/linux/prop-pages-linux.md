@@ -3,11 +3,11 @@ title: Visual Studio 中的 Linux C++ 專案屬性頁
 ms.date: 07/20/2018
 ms.assetid: 33d8c1f4-13f1-4f61-b407-30715b28142f
 ms.openlocfilehash: 0df31f3dac7026f3171f8af7b7ede664ea7fe346
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451944"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "62393125"
 ---
 # <a name="linux-project-property-page-reference"></a>Linux 專案屬性頁參考
 

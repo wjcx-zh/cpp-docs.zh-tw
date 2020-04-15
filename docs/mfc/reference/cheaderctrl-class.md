@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418556"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366858"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 
@@ -87,62 +87,62 @@ class CHeaderCtrl : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeaderCtrl：： CHeaderCtrl](#cheaderctrl)|建構 `CHeaderCtrl` 物件。|
+|[斬首::斬首](#cheaderctrl)|建構 `CHeaderCtrl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeaderCtrl：： ClearAllFilters](#clearallfilters)|清除標題控制項的所有篩選。|
-|[CHeaderCtrl：： ClearFilter](#clearfilter)|清除標題控制項的篩選準則。|
-|[CHeaderCtrl：： Create](#create)|建立標題控制項並將它附加至 `CHeaderCtrl` 物件。|
-|[CHeaderCtrl：： CreateDragImage](#createdragimage)|在標題控制項內建立專案影像的透明版本。|
-|[CHeaderCtrl：： CreateEx](#createex)|使用指定的 Windows 擴充樣式建立標題控制項，並將它附加至 `CListCtrl` 物件。|
-|[CHeaderCtrl：:D eleteItem](#deleteitem)|刪除標題控制項中的專案。|
-|[CHeaderCtrl：:D rawItem](#drawitem)|繪製標題控制項的指定專案。|
-|[CHeaderCtrl：： EditFilter](#editfilter)|開始編輯標頭控制項的指定篩選。|
-|[CHeaderCtrl：： GetBitmapMargin](#getbitmapmargin)|抓取標題控制項中點陣圖邊界的寬度。|
-|[CHeaderCtrl：： GetFocusedItem](#getfocuseditem)|取得目前標題控制項中具有焦點之專案的識別碼。|
-|[CHeaderCtrl：： GetImageList](#getimagelist)|抓取用於在標題控制項中繪製標題專案之影像清單的控制碼。|
-|[CHeaderCtrl：： GetItem](#getitem)|抓取標題控制項中專案的相關資訊。|
-|[CHeaderCtrl：： GetItemCount](#getitemcount)|抓取標題控制項中的專案計數。|
-|[CHeaderCtrl：： GetItemDropDownRect](#getitemdropdownrect)|取得標題控制項中指定下拉按鈕的周框資訊。|
-|[CHeaderCtrl：： GetItemRect](#getitemrect)|抓取標題控制項中指定專案的周框。|
-|[CHeaderCtrl：： GetOrderArray](#getorderarray)|抓取標題控制項中專案的由左至右順序。|
-|[CHeaderCtrl：： GetOverflowRect](#getoverflowrect)|取得目前標題控制項之溢位按鈕的周框。|
-|[CHeaderCtrl：： HitTest](#hittest)|判斷哪個標頭專案（如果有的話）位於指定的點。|
-|[CHeaderCtrl：： InsertItem](#insertitem)|將新專案插入至標題控制項。|
-|[CHeaderCtrl：： Layout](#layout)|抓取指定矩形內標題控制項的大小和位置。|
-|[CHeaderCtrl：： OrderToIndex](#ordertoindex)|根據標題控制項中的順序，抓取專案的索引值。|
-|[CHeaderCtrl：： SetBitmapMargin](#setbitmapmargin)|設定標題控制項中點陣圖邊界的寬度。|
-|[CHeaderCtrl：： SetFilterChangeTimeout](#setfilterchangetimeout)|設定篩選屬性中發生變更的時間與張貼 `HDN_FILTERCHANGE` 通知之間的逾時間隔。|
-|[CHeaderCtrl：： SetFocusedItem](#setfocuseditem)|將焦點設定為目前標題控制項中的指定標題專案。|
-|[CHeaderCtrl：： SetHotDivider](#sethotdivider)|變更標頭專案之間的分隔線，以指示標頭專案的手動拖放。|
-|[CHeaderCtrl：： SetImageList](#setimagelist)|將影像清單指派給標題控制項。|
-|[CHeaderCtrl：： SetItem](#setitem)|設定標題控制項中指定專案的屬性。|
-|[CHeaderCtrl：： SetOrderArray](#setorderarray)|設定標題控制項中專案的由左至右順序。|
+|[斬首::清除所有篩選器](#clearallfilters)|清除標頭控制件的所有篩選器。|
+|[斬首::清除過濾器](#clearfilter)|清除標頭控制的篩選器。|
+|[斬首::建立](#create)|創建標頭控制項並將其附加到`CHeaderCtrl`物件。|
+|[斬首::建立拖動影像](#createdragimage)|在標題控制項中創建項影像的透明版本。|
+|[斬首::創建Ex](#createex)|使用指定的 Windows 擴充樣式創建標頭控制項並將`CListCtrl`其附加到 物件。|
+|[CHeaderctrl::Delete專案](#deleteitem)|從標頭控制項中刪除項。|
+|[斬首::D原始專案](#drawitem)|繪製標頭控件的指定項。|
+|[斬首::編輯過濾器](#editfilter)|開始編輯標頭控制件的指定篩選器。|
+|[斬首::獲取比特圖保證金](#getbitmapmargin)|檢索標頭控件中位圖邊距的寬度。|
+|[斬首::取得焦點專案](#getfocuseditem)|獲取具有焦點的當前標頭控制項中的項的標識碼。|
+|[斬首::抓取影像清單](#getimagelist)|檢索用於繪製標頭控制項標頭項的圖像清單的句柄。|
+|[斬首::取得專案](#getitem)|檢索有關標頭控件中項的資訊。|
+|[斬首::獲取項目計數](#getitemcount)|檢索標頭控件中的項計數。|
+|[斬首::獲取專案下拉](#getitemdropdownrect)|獲取標題控制項中指定下拉按鈕的邊界矩形資訊。|
+|[斬首::取得專案重新完成](#getitemrect)|檢索標頭控件中給定項的邊界矩形。|
+|[斬首::獲取訂單陣列](#getorderarray)|檢索標頭控件中項的從左到右的順序。|
+|[斬首::獲取溢出](#getoverflowrect)|獲取當前標頭控制件的溢出按鈕的邊界矩形。|
+|[斬首::HitTest](#hittest)|確定指定點上的位置(如果有)標頭項。|
+|[斬首::插入項目](#insertitem)|將新專案插入到標頭控制項中。|
+|[斬首::佈局](#layout)|檢索給定矩形內標頭控制的大小和位置。|
+|[斬首::訂單索引](#ordertoindex)|根據物料在標頭控件中的順序檢索物料的索引值。|
+|[斬首::設定點陣圖頁距](#setbitmapmargin)|設置標題控制項中點陣圖邊距的寬度。|
+|[斬首::設定篩選器更改逾時](#setfilterchangetimeout)|設置篩選器屬性中發生更改的時間與`HDN_FILTERCHANGE`通知的過帳之間的超時間隔。|
+|[斬首::設定焦點專案](#setfocuseditem)|將焦點設定在當前標頭控制項中的指定標頭項。|
+|[斬首::SetHotDivider](#sethotdivider)|更改標題項之間的分隔符以指示標題項的手動拖放。|
+|[斬首::設定影像清單](#setimagelist)|將圖像清單分配給標頭控制項。|
+|[斬首::設定項目](#setitem)|在標頭控制項中設置指定項的屬性。|
+|[斬首::設定順序陣列](#setorderarray)|設置標頭控件中項的從左至右的順序。|
 
 ## <a name="remarks"></a>備註
 
-標題控制項是一個視窗，通常位於一組文字或數位的資料行上方。 它包含每個資料行的標題，而且可以分成幾個部分。 使用者可以拖曳分隔各個部分的分隔線，以設定每個資料行的寬度。 如需標題控制項的圖例，請參閱[標頭控制項](/windows/win32/Controls/header-controls)。
+標題控制項是通常位於一組文本或數位列上方的視窗。 它包含每列的標題,可以分為部分。 用戶可以拖動分隔零件的分隔符以設置每列的寬度。 有關標頭控制件的圖示,請參考[標題控制件](/windows/win32/Controls/header-controls)。
 
-這個控制項（因此 `CHeaderCtrl` 類別）僅適用于在 Windows 95/98 和 Windows NT 3.51 版和更新版本下執行的程式。
+此控制項(因此類別`CHeaderCtrl`)僅適用於在 Windows 95/98 和 Windows NT 版本 3.51 及更高版本下運行的程式。
 
-針對 Windows 95/Internet Explorer 4.0 通用控制項新增的功能包括下列各項：
+為 Windows 95/IE4.0 常見控制項添加的功能包括:
 
-- 標頭專案自訂順序。
+- 標題項自定義排序。
 
-- 標頭專案拖放，用於重新排列標頭專案。 當您建立 `CHeaderCtrl` 物件時，請使用 HDS_DRAGDROP 樣式。
+- 標題項拖放,用於重新排序標頭項。 創建`CHeaderCtrl`物件時使用HDS_DRAGDROP樣式。
 
-- 資料行調整大小時，標題列文字持續可供查看。 當您建立 `CHeaderCtrl` 物件時，請使用 HDS_FULLDRAG 樣式。
+- 標題列文字在列調整大小期間不斷查看。 創建`CHeaderCtrl`物件時使用HDS_FULLDRAG樣式。
 
-- 標頭熱追蹤，這會在指標停留在標題專案上方時反白顯示。 當您建立 `CHeaderCtrl` 物件時，請使用 HDS_HOTTRACK 樣式。
+- 頭熱跟蹤,當指標懸停在標題上時,它突出顯示標題項。 創建`CHeaderCtrl`物件時使用HDS_HOTTRACK樣式。
 
-- 影像清單支援。 標頭專案可以包含儲存在 `CImageList` 物件或文字中的影像。
+- 圖像清單支援。 標題項可以包含存儲在`CImageList`物件或文本中的圖像。
 
-如需使用 `CHeaderCtrl`的詳細資訊，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CHeaderCtrl](../../mfc/using-cheaderctrl.md)。
+有關`CHeaderCtrl`使用的詳細資訊,請參閱[控制項](../../mfc/controls-mfc.md)與[CHeaderCtrl](../../mfc/using-cheaderctrl.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -156,7 +156,7 @@ class CHeaderCtrl : public CWnd
 
 **標頭：** afxcmn.h
 
-##  <a name="cheaderctrl"></a>CHeaderCtrl：： CHeaderCtrl
+## <a name="cheaderctrlcheaderctrl"></a><a name="cheaderctrl"></a>斬首::斬首
 
 建構 `CHeaderCtrl` 物件。
 
@@ -168,9 +168,9 @@ CHeaderCtrl();
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]
 
-##  <a name="clearallfilters"></a>CHeaderCtrl：： ClearAllFilters
+## <a name="cheaderctrlclearallfilters"></a><a name="clearallfilters"></a>斬首::清除所有篩選器
 
-清除標題控制項的所有篩選。
+清除標頭控制件的所有篩選器。
 
 ```
 BOOL ClearAllFilters();
@@ -178,19 +178,19 @@ BOOL ClearAllFilters();
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會以-1 的資料行值來執行 Win32 message [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter)的行為，如 Windows SDK 所述。
+此方法實現 Win32 消息[HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter)的行為,列值為 -1,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]
 
-##  <a name="clearfilter"></a>CHeaderCtrl：： ClearFilter
+## <a name="cheaderctrlclearfilter"></a><a name="clearfilter"></a>斬首::清除過濾器
 
-清除標題控制項的篩選準則。
+清除標頭控制的篩選器。
 
 ```
 BOOL ClearFilter(int nColumn);
@@ -199,23 +199,23 @@ BOOL ClearFilter(int nColumn);
 ### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-指出要清除哪一個篩選的資料行值。
+列值,指示要清除的篩選器。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會執行 Win32 訊息[HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter)的行為，如 Windows SDK 中所述。
+此方法實現 Win32 消息[HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]
 
-##  <a name="create"></a>CHeaderCtrl：： Create
+## <a name="cheaderctrlcreate"></a><a name="create"></a>斬首::建立
 
-建立標題控制項並將它附加至 `CHeaderCtrl` 物件。
+創建標頭控制項並將其附加到`CHeaderCtrl`物件。
 
 ```
 virtual BOOL Create(
@@ -228,60 +228,60 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定標題控制項的樣式。 如需標題控制項樣式的說明，請參閱 Windows SDK 中的[標題控制項樣式](/windows/win32/Controls/header-control-styles)。
+指定標頭控制件的樣式。 有關標頭控制項樣式的說明,請參閱 Windows SDK 中的[標頭控制式樣式](/windows/win32/Controls/header-control-styles)。
 
-*各種*<br/>
-指定標題控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+*矩形*<br/>
+指定標頭控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
-*pParentWnd*<br/>
-指定標題控制項的父視窗，通常是 `CDialog`。 它不得為 NULL。
+*pparentwnd*<br/>
+指定標頭控制的父視窗,通常為`CDialog`。 它不得為 NULL。
 
 *nID*<br/>
 指定標頭控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果初始化成功，則為非零;否則為零。
+初始化成功時非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
-您可以使用兩個步驟來建立 `CHeaderCtrl` 物件。 首先，呼叫此函式，然後呼叫 `Create`，這會建立標頭控制項並將其附加至 `CHeaderCtrl` 物件。
+分兩步`CHeaderCtrl`構造物件。 首先,調用構造函數,然後調用`Create`,這將創建標頭控件並將其附加`CHeaderCtrl`到 物件。
 
-除了標題控制項樣式以外，您還可以使用下列通用控制項樣式，來判斷標題控制項的位置和大小本身（如需詳細資訊，請參閱[常見的控制項樣式](/windows/win32/Controls/common-control-styles)）：
+除了標頭控制樣式外,還可以使用以下通用控制樣式來確定標頭控制項的位置和調整本身的大小(有關詳細資訊,請參閱[通用控制樣式](/windows/win32/Controls/common-control-styles)):
 
-- CCS_BOTTOM 會使控制項在父視窗的工作區底部放置自己的位置，並將寬度設定為與父視窗的寬度相同。
+- CCS_BOTTOM 使控制項將自己定位在父視窗工作區的底部,並將寬度設置為與父視窗的寬度相同。
 
-- CCS_NODIVIDER 防止在控制項的頂端繪製兩個圖元的反白顯示。
+- CCS_NODIVIDER 防止在控制式頂部繪製兩畫素高光。
 
-- CCS_NOMOVEY 會使控制項調整大小，並在回應 WM_SIZE 訊息時，以水準方式（但不是垂直）移動。 如果使用 CCS_NORESIZE 樣式，則不適用此樣式。 標題控制項預設具有此樣式。
+- CCS_NOMOVEY 使控制項在水準(而不是垂直)上調整控制項的大小並移動自身,以回應WM_SIZE消息。 如果使用CCS_NORESIZE樣式,則此樣式不適用。 默認情況下,標頭控件具有此樣式。
 
-- CCS_NOPARENTALIGN 防止控制項自動移至父視窗的頂端或底部。 相反地，控制項會在父視窗中保留其位置，而不論父視窗的大小變更。 如果也使用了 CCS_TOP 或 CCS_BOTTOM 樣式，則高度會調整為預設值，但位置和寬度會保持不變。
+- CCS_NOPARENTALIGN防止控制式自動移動到父視窗的頂部或底部。 相反,控制程式將其位置保留在父視窗中,儘管父視窗的大小發生了變化。 如果還使用CCS_TOP或CCS_BOTTOM樣式,則高度將調整為預設值,但位置和寬度保持不變。
 
-- CCS_NORESIZE 在設定其初始大小或新大小時，防止控制項使用預設的寬度和高度。 相反地，控制項會使用建立或調整大小要求中所指定的寬度和高度。
+- CCS_NORESIZE 防止控制項在設定其初始大小或新大小時使用預設寬度和高度。 相反,控制項使用創建或調整大小請求中指定的寬度和高度。
 
-- CCS_TOP 會使控制項在父視窗工作區的頂端放置本身，並將寬度設定為與父視窗的寬度相同。
+- CCS_TOP 使控制項將自己定位在父視窗工作區的頂部,並將寬度設置為與父視窗的寬度相同。
 
-您也可以將下列視窗樣式套用至標題控制項（如需詳細資訊，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)）：
+您還可以將以下視窗樣式應用於標頭控制項(有關詳細資訊,請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)):
 
-- WS_CHILD 建立子視窗。 不能與 WS_POPUP 樣式一起使用。
+- WS_CHILD 創建子視窗。 不能與WS_POPUP樣式一起使用。
 
-- WS_VISIBLE 會建立一開始顯示的視窗。
+- WS_VISIBLE 創建最初可見的視窗。
 
-- WS_DISABLED 會建立一開始停用的視窗。
+- WS_DISABLED 創建最初禁用的視窗。
 
-- WS_GROUP 指定控制項群組的第一個控制項，使用者可以在其中使用方向鍵從某個控制項移到下一個控制項。 在第一個控制項屬於相同群組之後，以 WS_GROUP 樣式定義的所有控制項。 下一個具有 WS_GROUP 樣式的控制項會結束樣式群組並啟動下一個群組（也就是一個群組結束于下一個開始的位置）。
+- WS_GROUP 指定一組控件的第一個控制項,用戶可以在其中使用箭頭鍵從一個控制項移動到下一個控制項。 在第一個控制項之後使用WS_GROUP樣式定義的所有控制項都屬於同一組。 具有WS_GROUP樣式的下一個控制項結束樣式組並啟動下一個組(即,一個組結束下一個組開始的位置)。
 
-- WS_TABSTOP 指定使用者可以使用 TAB 鍵移動的任意數目控制項之一。 TAB 鍵會將使用者移至 [WS_TABSTOP] 樣式所指定的下一個控制項。
+- WS_TABSTOP 指定使用者可以使用 TAB 鍵移動的任意數量的控制項之一。 TAB 鍵將使用者移動到WS_TABSTOP樣式指定的下一個控制項。
 
-如果您想要搭配控制項使用擴充的 windows 樣式，請呼叫[CreateEx](#createex) ，而不是 `Create`。
+如果要將延伸視窗樣式與控制項一起使用,請呼叫[CreateEx](#createex)`Create`而不是 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]
 
-##  <a name="createex"></a>CHeaderCtrl：： CreateEx
+## <a name="cheaderctrlcreateex"></a><a name="createex"></a>斬首::創建Ex
 
-建立控制項（子視窗），並將它與 `CHeaderCtrl` 物件產生關聯。
+創建控制項(子視窗)並將其與`CHeaderCtrl`物件關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -295,19 +295,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定所要建立之控制項的延伸樣式。 如需擴充 Windows 樣式的清單，請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
+指定要創建的控制項的擴充樣式。 有關擴展 Windows 樣式的清單,請參閱 Windows SDK 中[創建 WindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-標題控制項的樣式。 如需標題控制項樣式的說明，請參閱 Windows SDK 中的[標題控制項樣式](/windows/win32/Controls/header-control-styles)。 如需其他樣式的清單，請參閱[建立](#create)。
+標頭控件的樣式。 有關標頭控制項樣式的說明,請參閱 Windows SDK 中的[標頭控制式樣式](/windows/win32/Controls/header-control-styles)。 有關其他樣式的清單,請參閱[建立](#create)。
 
-*各種*<br/>
-[矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考，描述要建立之視窗的大小和位置，以*pParentWnd*的用戶端座標表示。
+*矩形*<br/>
+對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
-*pParentWnd*<br/>
-做為控制項父系之視窗的指標。
+*pparentwnd*<br/>
+指向控件的父視窗的指標。
 
 *nID*<br/>
-控制項的子視窗識別碼。
+控制項的子視窗 ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -315,11 +315,11 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用 `CreateEx` 而不是 `Create` 來套用擴充的 Windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。
+使用`CreateEx``Create`而不是應用擴展的 Windows 樣式,由 Windows 擴充樣式前言**WS_EX_** 指定。
 
-##  <a name="createdragimage"></a>CHeaderCtrl：： CreateDragImage
+## <a name="cheaderctrlcreatedragimage"></a><a name="createdragimage"></a>斬首::建立拖動影像
 
-在標題控制項內建立專案影像的透明版本。
+在標題控制項中創建項影像的透明版本。
 
 ```
 CImageList* CreateDragImage(int nIndex);
@@ -328,21 +328,21 @@ CImageList* CreateDragImage(int nIndex);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-標題控制項中專案之以零為起始的索引。 指派給這個專案的影像是透明影像的基礎。
+標頭控件中項的零基索引。 分配給此項的圖像是透明圖像的基礎。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標;否則為 Null。 傳回的清單只包含一個影像。
+如果成功,指向[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標;否則 NULL。 返回的清單僅包含一個圖像。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_CREATEDRAGIMAGE](/windows/win32/Controls/hdm-createdragimage)Win32 訊息的行為。 它是提供來支援標頭專案拖放。
+此成員函數實現 win32 消息[HDM_CREATEDRAGIMAGE](/windows/win32/Controls/hdm-createdragimage)的行為,如Windows SDK中所述。 它用於支持標題項的拖放。
 
-傳回的指標點為暫存物件的 `CImageList` 物件，會在下一次閒置時間處理時刪除。
+返回`CImageList`的指標指向的對像是臨時物件,並在下次空閒時處理中被刪除。
 
-##  <a name="deleteitem"></a>CHeaderCtrl：:D eleteItem
+## <a name="cheaderctrldeleteitem"></a><a name="deleteitem"></a>CHeaderctrl::Delete專案
 
-刪除標題控制項中的專案。
+從標頭控制項中刪除項。
 
 ```
 BOOL DeleteItem(int nPos);
@@ -351,7 +351,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-指定要刪除之專案的以零為基底的索引。
+指定要刪除的項的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -361,9 +361,9 @@ BOOL DeleteItem(int nPos);
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]
 
-##  <a name="drawitem"></a>CHeaderCtrl：:D rawItem
+## <a name="cheaderctrldrawitem"></a><a name="drawitem"></a>斬首::D原始專案
 
-當主控描繪標題控制項的視覺外觀變更時，由架構呼叫。
+當所有者繪製標頭控件的可視方面發生更改時,由框架調用。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -371,24 +371,24 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="parameters"></a>參數
 
-*lpDrawItemStruct*<br/>
-[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)結構的指標，描述要繪製的專案。
+*lpDraw 專案已結*<br/>
+指向描述要繪製的項的[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)結構的指標。
 
 ### <a name="remarks"></a>備註
 
-`DRAWITEMSTRUCT` 結構的 `itemAction` 成員會定義要執行的繪圖動作。
+`DRAWITEMSTRUCT`結構`itemAction`的成員定義要執行的繪圖操作。
 
-根據預設，此成員函式不會執行任何工作。 覆寫這個成員函式，以針對主控描繪 `CHeaderCtrl` 物件來執行繪製。
+默認情況下,此成員函數不執行任何操作。 重寫此成員函數以擁有擁有者繪製物件的繪圖`CHeaderCtrl`。
 
-在此成員函式終止之前，應用程式應該還原為*lpDrawItemStruct*中提供的顯示內容所選取的所有圖形裝置介面（GDI）物件。
+應用程式應還原在此成員函數終止之前為*lpDrawItemStruct*中提供的顯示上下文選擇的所有圖形設備介面 (GDI) 物件。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]
 
-##  <a name="editfilter"></a>CHeaderCtrl：： EditFilter
+## <a name="cheaderctrleditfilter"></a><a name="editfilter"></a>斬首::編輯過濾器
 
-開始編輯標頭控制項的指定篩選。
+開始編輯標頭控制件的指定篩選器。
 
 ```
 BOOL EditFilter(
@@ -399,28 +399,28 @@ BOOL EditFilter(
 ### <a name="parameters"></a>參數
 
 *nColumn*<br/>
-要編輯的資料行。
+要編輯的欄。
 
-*bDiscardChanges*<br/>
-值，指定當傳送[HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter)訊息時，使用者正在編輯篩選的過程中，如何處理使用者的編輯變更。
+*b 放棄變更*<br/>
+指定在發送[HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter)訊息時使用者正在編輯篩選器時如何處理使用者的編輯更改的值。
 
-指定 TRUE 以捨棄使用者所做的變更，或使用 FALSE 來接受使用者所做的變更。
+指定 TRUE 以放棄使用者所做的更改,或指定 FALSE 以接受使用者所做的更改。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會執行 Win32 訊息[HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter)的行為，如 Windows SDK 中所述。
+此方法實現 win32 消息[HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]
 
-##  <a name="getbitmapmargin"></a>CHeaderCtrl：： GetBitmapMargin
+## <a name="cheaderctrlgetbitmapmargin"></a><a name="getbitmapmargin"></a>斬首::獲取比特圖保證金
 
-抓取標題控制項中點陣圖邊界的寬度。
+檢索標頭控件中位圖邊距的寬度。
 
 ```
 int GetBitmapMargin() const;
@@ -428,19 +428,19 @@ int GetBitmapMargin() const;
 
 ### <a name="return-value"></a>傳回值
 
-點陣圖邊界的寬度（以圖元為單位）。
+位圖邊距的寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_GETBITMAPMARGIN](/windows/win32/Controls/hdm-getbitmapmargin)Win32 訊息的行為。
+此成員函數實現 Win32 消息[HDM_GETBITMAPMARGIN](/windows/win32/Controls/hdm-getbitmapmargin)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]
 
-##  <a name="getfocuseditem"></a>CHeaderCtrl：： GetFocusedItem
+## <a name="cheaderctrlgetfocuseditem"></a><a name="getfocuseditem"></a>斬首::取得焦點專案
 
-取得在目前標題控制項中具有焦點之專案的索引。
+獲取當前標頭控件中具有焦點的項的索引。
 
 ```
 int GetFocusedItem() const;
@@ -448,27 +448,27 @@ int GetFocusedItem() const;
 
 ### <a name="return-value"></a>傳回值
 
-具有焦點之標頭專案的以零為基底的索引。
+具有焦點的標頭項的零基索引。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem)訊息，如 Windows SDK 所述。
+此方法發送[HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前標題控制項的變數 `m_headerCtrl`。 下一個範例中會使用此變數。
+以下代碼範例定義用於存取目前的標頭控制`m_headerCtrl`的元件的變數 。 下一個範例中會使用此變數。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `SetFocusedItem` 和 `GetFocusedItem` 方法。 在先前的程式碼區段中，我們建立了具有五個數據行的標題控制項。 不過，您可以拖曳資料行分隔符號，讓資料行看不見。 下列範例會設定並確認最後一個資料行標頭為焦點專案。
+以下代碼示例演示`SetFocusedItem``GetFocusedItem`和 方法。 在代碼的早期版本中,我們創建了一個包含五列的標頭控件。 但是,您可以拖動列分隔符,以便該列不可見。 以下示例將設置,然後將最後一個列標頭確認為焦點項。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
-##  <a name="getimagelist"></a>CHeaderCtrl：： GetImageList
+## <a name="cheaderctrlgetimagelist"></a><a name="getimagelist"></a>斬首::抓取影像清單
 
-抓取用於在標題控制項中繪製標題專案之影像清單的控制碼。
+檢索用於繪製標頭控制項標頭項的圖像清單的句柄。
 
 ```
 CImageList* GetImageList() const;
@@ -476,19 +476,19 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標。
+指向[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_GETIMAGELIST](/windows/win32/Controls/hdm-getimagelist)Win32 訊息的行為。 傳回的指標點為暫存物件的 `CImageList` 物件，會在下一次閒置時間處理時刪除。
+此成員函數實現 Win32 消息[HDM_GETIMAGELIST](/windows/win32/Controls/hdm-getimagelist)的行為,如 Windows SDK 中所述。 返回`CImageList`的指標指向的對像是臨時物件,並在下次空閒時處理中被刪除。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]
 
-##  <a name="getitem"></a>CHeaderCtrl：： GetItem
+## <a name="cheaderctrlgetitem"></a><a name="getitem"></a>斬首::取得專案
 
-抓取標題控制項專案的相關資訊。
+檢索有關標頭控件項的資訊。
 
 ```
 BOOL GetItem(
@@ -499,10 +499,10 @@ BOOL GetItem(
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-指定要抓取之專案的以零為起始的索引。
+指定要檢索的項的零基索引。
 
-*pHeaderItem*<br/>
-接收新專案之[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的指標。 這個結構會與 `InsertItem` 和 `SetItem` 成員函式搭配使用。 在 `mask` 元素中設定的任何旗標，可確保在傳回時適當地填入對應元素中的值。 如果 `mask` 專案設定為零，則其他結構專案中的值就沒有意義。
+*pHeader 專案*<br/>
+指向接收新專案的[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的指標。 此結構與`InsertItem`和`SetItem`成員函數一起使用。 `mask`元素中設置的任何標誌都可確保在返回時正確填充相應元素中的值。 如果元素`mask`設置為零,則其他結構元素中的值毫無意義。
 
 ### <a name="return-value"></a>傳回值
 
@@ -512,9 +512,9 @@ BOOL GetItem(
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]
 
-##  <a name="getitemcount"></a>CHeaderCtrl：： GetItemCount
+## <a name="cheaderctrlgetitemcount"></a><a name="getitemcount"></a>斬首::獲取項目計數
 
-抓取標題控制項中的專案計數。
+檢索標頭控件中的項計數。
 
 ```
 int GetItemCount() const;
@@ -522,15 +522,15 @@ int GetItemCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為標頭控制項專案的數目;否則為-1。
+標頭控制項數(如果成功);否則 - 1。
 
 ### <a name="example"></a>範例
 
-  請參閱[CHeaderCtrl：:D eleteitem](#deleteitem)的範例。
+  請參閱[CHeaderCtrl::DeleteItem](#deleteitem)) 的範例。
 
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl：： GetItemDropDownRect
+## <a name="cheaderctrlgetitemdropdownrect"></a><a name="getitemdropdownrect"></a>斬首::獲取專案下拉
 
-取得目前標題控制項中標題專案之下拉按鈕的周框。
+獲取當前標頭控制項中頭項的下拉按鈕的邊界矩形。
 
 ```
 BOOL GetItemDropDownRect(
@@ -542,32 +542,32 @@ BOOL GetItemDropDownRect(
 
 |參數|描述|
 |---------------|-----------------|
-|*iItem*|在以零為基底的標題專案索引，其樣式為 HDF_SPLITBUTTON。 如需詳細資訊，請參閱[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的 `fmt` 成員。|
-|*lpRect*|脫銷用來接收周框資訊之[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。|
+|*iItem*|[在]其樣式為HDF_SPLITBUTTON的標頭項的從零為基礎的索引。 有關詳細資訊,請參閱`fmt`[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的成員。|
+|*lpRect*|[出]指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構以接收邊界矩形資訊的指標。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此函式成功，則為 TRUE;否則為 FALSE。
+如果此函數成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[HDM_GETITEMDROPDOWNRECT](/windows/win32/Controls/hdm-getitemdropdownrect)訊息，如 Windows SDK 所述。
+此方法發送[HDM_GETITEMDROPDOWNRECT](/windows/win32/Controls/hdm-getitemdropdownrect)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前標題控制項的變數 `m_headerCtrl`。 下一個範例中會使用此變數。
+以下代碼範例定義用於存取目前的標頭控制`m_headerCtrl`的元件的變數 。 下一個範例中會使用此變數。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `GetItemDropDownRect` 方法。 在先前的程式碼區段中，我們建立了具有五個數據行的標題控制項。 下列程式碼範例會在保留給標頭下拉按鈕的第一個資料行上，繪製一個圍繞位置的3D 矩形。
+以下代碼範例展示該方法`GetItemDropDownRect`。 在代碼的早期版本中,我們創建了一個包含五列的標頭控件。 以下代碼示例圍繞為標題下拉按鈕保留的第一列上的位置繪製一個 3D 矩形。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]
 
-##  <a name="getitemrect"></a>CHeaderCtrl：： GetItemRect
+## <a name="cheaderctrlgetitemrect"></a><a name="getitemrect"></a>斬首::取得專案重新完成
 
-抓取標題控制項中指定專案的周框。
+檢索標頭控件中給定項的邊界矩形。
 
 ```
 BOOL GetItemRect(
@@ -578,10 +578,10 @@ BOOL GetItemRect(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-標題控制項專案之以零為起始的索引。
+標頭控件項的零基索引。
 
 *lpRect*<br/>
-接收周框資訊之[RECT](/previous-versions/dd162897\(v=vs.85\))結構位址的指標。
+指向接收邊界矩形資訊的[RECT](/previous-versions/dd162897\(v=vs.85\))結構位址的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -589,11 +589,11 @@ BOOL GetItemRect(
 
 ### <a name="remarks"></a>備註
 
-這個方法會執行 Win32 訊息[HDM_GETITEMRECT](/windows/win32/Controls/hdm-getitemrect)的行為，如 Windows SDK 中所述。
+此方法實現 Win32 消息[HDM_GETITEMRECT](/windows/win32/Controls/hdm-getitemrect)的行為,如 Windows SDK 中所述。
 
-##  <a name="getorderarray"></a>CHeaderCtrl：： GetOrderArray
+## <a name="cheaderctrlgetorderarray"></a><a name="getorderarray"></a>斬首::獲取訂單陣列
 
-抓取標題控制項中專案的由左至右順序。
+檢索標頭控件中項的從左到右的順序。
 
 ```
 BOOL GetOrderArray(
@@ -603,11 +603,11 @@ BOOL GetOrderArray(
 
 ### <a name="parameters"></a>參數
 
-*piArray*<br/>
-緩衝區位址的指標，接收標頭控制項中專案的索引值（依其出現的順序）。
+*皮拉裡*<br/>
+指向緩衝區位址的指標,該緩衝區接收標頭控件中項的索引值,其顯示順序從左到右。
 
-*iCount*<br/>
-標題控制項專案的數目。 必須為非負數。
+*i. Count*<br/>
+標頭控制項數。 必須是非負數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -615,15 +615,15 @@ BOOL GetOrderArray(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_GETORDERARRAY](/windows/win32/Controls/hdm-getorderarray)Win32 訊息的行為。 它是提供來支援標頭專案排序。
+此成員函數實現 Win32 消息[HDM_GETORDERARRAY](/windows/win32/Controls/hdm-getorderarray)的行為,如 Windows SDK 中所述。 它用於支援標頭項排序。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]
 
-##  <a name="getoverflowrect"></a>CHeaderCtrl：： GetOverflowRect
+## <a name="cheaderctrlgetoverflowrect"></a><a name="getoverflowrect"></a>斬首::獲取溢出
 
-取得目前標題控制項之溢位按鈕的周框。
+獲取當前標頭控制件的溢出按鈕的邊界矩形。
 
 ```
 BOOL GetOverflowRect(LPRECT lpRect) const;
@@ -633,33 +633,33 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*lpRect*|脫銷接收周框資訊之[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。|
+|*lpRect*|[出]指向接收邊界矩形資訊的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此函式成功，則為 TRUE;否則為 FALSE。
+如果此函數成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果標題控制項所包含的專案數多於可以同時顯示的數目，控制項可以顯示會滾動至不可見專案的溢位按鈕。 標題控制項必須具有 [HDS_OVERFLOW] 和 [HDF_SPLITBUTTON] 樣式，才能顯示 [溢位] 按鈕。 周框方塊會括住溢位按鈕，只有在顯示溢位按鈕時才會存在。 如需詳細資訊，請參閱[標題控制項樣式](/windows/win32/Controls/header-control-styles)。
+如果標題控制項包含的專案多於可以同時顯示的項,則控件可以顯示一個溢出按鈕,該按鈕滾動到不可見的專案。 標頭控件必須具有HDS_OVERFLOW和HDF_SPLITBUTTON樣式才能顯示溢出按鈕。 邊界矩形將溢出按鈕封閉起來,僅在顯示溢出按鈕時才存在。 有關詳細資訊,請參閱[標題控制項樣式](/windows/win32/Controls/header-control-styles)。
 
-這個方法會傳送[HDM_GETOVERFLOWRECT](/windows/win32/Controls/hdm-getoverflowrect)訊息，如 Windows SDK 所述。
+此方法發送[HDM_GETOVERFLOWRECT](/windows/win32/Controls/hdm-getoverflowrect)訊息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前標題控制項的變數 `m_headerCtrl`。 下一個範例中會使用此變數。
+以下代碼範例定義用於存取目前的標頭控制`m_headerCtrl`的元件的變數 。 下一個範例中會使用此變數。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `GetOverflowRect` 方法。 在先前的程式碼區段中，我們建立了具有五個數據行的標題控制項。 不過，您可以拖曳資料行分隔符號，讓資料行看不見。 如果看不到某些資料行，標題控制項會繪製溢位按鈕。 下列程式碼範例會在溢位按鈕的位置周圍繪製3D 矩形。
+以下代碼範例展示該方法`GetOverflowRect`。 在代碼的早期版本中,我們創建了一個包含五列的標頭控件。 但是,您可以拖動列分隔符,以便該列不可見。 如果某些列不可見,則標題控制項將繪製溢出按鈕。 以下代碼示例圍繞溢出按鈕的位置繪製一個 3D 矩形。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]
 
-##  <a name="hittest"></a>CHeaderCtrl：： HitTest
+## <a name="cheaderctrlhittest"></a><a name="hittest"></a>斬首::HitTest
 
-判斷哪個標頭專案（如果有的話）位於指定的點。
+確定指定點上的位置(如果有)標頭項。
 
 ```
 int HitTest(LPHDHITTESTINFO* phdhti);
@@ -669,31 +669,31 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |參數|描述|
 |---------------|-----------------|
-|*phdhti*|[in、out][HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo)結構的指標，指定要測試的點，並接收測試的結果。|
+|*phdhti*|[進出]指向[HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo)結構的指標,該結構指定要測試的點並接收測試結果。|
 
 ### <a name="return-value"></a>傳回值
 
-在指定位置的標頭專案之以零為起始的索引（如果有的話）。否則為-1。
+標題項的零索引(如果有)位於指定位置;否則,-1。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[HDM_HITTEST](/windows/win32/Controls/hdm-hittest)訊息，如 Windows SDK 所述。
+此方法發送[HDM_HITTEST](/windows/win32/Controls/hdm-hittest)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前標題控制項的變數 `m_headerCtrl`。 下一個範例中會使用此變數。
+以下代碼範例定義用於存取目前的標頭控制`m_headerCtrl`的元件的變數 。 下一個範例中會使用此變數。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `HitTest` 方法。 在此程式碼範例的先前章節中，我們建立了具有五個數據行的標題控制項。 不過，您可以拖曳資料行分隔符號，讓資料行看不見。 這個範例會報告資料行的索引（如果有的話），如果看不到資料行，則為-1。
+以下代碼範例展示該方法`HitTest`。 在本代碼示例的早期版本中,我們創建了一個包含五列的標頭控制項。 但是,您可以拖動列分隔符,以便該列不可見。 此示例報告列的索引(如果該列為可見)和 -1(如果列不可見)。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
-##  <a name="insertitem"></a>CHeaderCtrl：： InsertItem
+## <a name="cheaderctrlinsertitem"></a><a name="insertitem"></a>斬首::插入項目
 
-將新專案插入至指定索引處的標頭控制項。
+將新項目插入指定索引的標頭控制項。
 
 ```
 int InsertItem(
@@ -704,22 +704,22 @@ int InsertItem(
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-要插入之項目之以零起始的索引。 如果值為零，則會將專案插入標頭控制項的開頭。 如果值大於最大值，則會將專案插入標題控制項的結尾。
+要插入之項目之以零起始的索引。 如果值為零,則項將插入到標頭控件的開頭。 如果該值大於最大值,則項將插入到標頭控件的末尾。
 
-*phdi*<br/>
-[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的指標，其中包含要插入之專案的相關資訊。
+*菲迪*<br/>
+指向[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的指標,該結構包含有關要插入的項的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為新專案的索引;否則為-1。
+新專案的索引(如果成功);否則 - 1。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]
 
-##  <a name="layout"></a>CHeaderCtrl：： Layout
+## <a name="cheaderctrllayout"></a><a name="layout"></a>斬首::佈局
 
-抓取指定矩形內標題控制項的大小和位置。
+檢索給定矩形內標頭控制的大小和位置。
 
 ```
 BOOL Layout(HDLAYOUT* pHeaderLayout);
@@ -727,8 +727,8 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 
 ### <a name="parameters"></a>參數
 
-*pHeaderLayout*<br/>
-[HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout)結構的指標，其中包含用來設定標題控制項之大小和位置的資訊。
+*pHeader 佈局*<br/>
+指向[HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout)結構的指標,其中包含用於設置標頭控件的大小和位置的資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -736,15 +736,15 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 
 ### <a name="remarks"></a>備註
 
-此函式是用來為新的標題控制項決定適當的維度，以佔用指定的矩形。
+此函數用於確定要佔用給定矩形的新標頭控件的適當維度。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]
 
-##  <a name="ordertoindex"></a>CHeaderCtrl：： OrderToIndex
+## <a name="cheaderctrlordertoindex"></a><a name="ordertoindex"></a>斬首::訂單索引
 
-根據標題控制項中的順序，抓取專案的索引值。
+根據物料在標頭控件中的順序檢索物料的索引值。
 
 ```
 int OrderToIndex(int nOrder) const;
@@ -752,20 +752,20 @@ int OrderToIndex(int nOrder) const;
 
 ### <a name="parameters"></a>參數
 
-*nOrder*<br/>
-專案出現在標題控制項中的以零為起始的順序（由左至右）。
+*N訂單*<br/>
+項從左至右顯示在標頭控制件中的零基順序。
 
 ### <a name="return-value"></a>傳回值
 
-專案的索引，根據其在標題控制項中的順序。 索引會從左至右算起，從0開始計算。
+項的索引,基於其在標頭控件中的順序。 索引從左到右計數,從 0 開始。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_ORDERTOINDEX](/windows/win32/controls/hdm-ordertoindex)Win32 宏的行為。 它是提供來支援標頭專案排序。
+此成員函數實現 Win32 宏[HDM_ORDERTOINDEX](/windows/win32/controls/hdm-ordertoindex)的行為,如 Windows SDK 中所述。 它用於支援標頭項排序。
 
-##  <a name="setbitmapmargin"></a>CHeaderCtrl：： SetBitmapMargin
+## <a name="cheaderctrlsetbitmapmargin"></a><a name="setbitmapmargin"></a>斬首::設定點陣圖頁距
 
-設定標題控制項中點陣圖邊界的寬度。
+設置標題控制項中點陣圖邊距的寬度。
 
 ```
 int SetBitmapMargin(int nWidth);
@@ -773,24 +773,24 @@ int SetBitmapMargin(int nWidth);
 
 ### <a name="parameters"></a>參數
 
-*nWidth*<br/>
-在現有標題控制項內環繞點陣圖之邊界的寬度（以圖元為單位）。
+*n 寬度*<br/>
+在現有標頭控制項中圍繞位圖的邊距的寬度(以圖元為單位指定)。
 
 ### <a name="return-value"></a>傳回值
 
-點陣圖邊界的寬度（以圖元為單位）。
+位圖邊距的寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_SETBITMAPMARGIN](/windows/win32/Controls/hdm-setbitmapmargin)Win32 訊息的行為。
+此成員函數實現 Win32 消息[HDM_SETBITMAPMARGIN](/windows/win32/Controls/hdm-setbitmapmargin)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]
 
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl：： SetFilterChangeTimeout
+## <a name="cheaderctrlsetfilterchangetimeout"></a><a name="setfilterchangetimeout"></a>斬首::設定篩選器更改逾時
 
-設定篩選屬性中發生變更的時間與張貼[HDN_FILTERCHANGE](/windows/win32/Controls/hdn-filterchange)通知之間的逾時間隔。
+設置篩選器屬性中發生更改的時間與[發佈HDN_FILTERCHANGE](/windows/win32/Controls/hdn-filterchange)通知之間的超時間隔。
 
 ```
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -799,23 +799,23 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="parameters"></a>參數
 
 *dwTimeOut*<br/>
-Timeout 值（以毫秒為單位）。
+超時值,以毫秒為單位。
 
 ### <a name="return-value"></a>傳回值
 
-正在修改之篩選控制項的索引。
+要修改的篩選器控制件的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_SETFILTERCHANGETIMEOUT](/windows/win32/Controls/hdm-setfilterchangetimeout)Win32 訊息的行為。
+此成員函數實現 Win32 消息[HDM_SETFILTERCHANGETIMEOUT](/windows/win32/Controls/hdm-setfilterchangetimeout)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]
 
-##  <a name="setfocuseditem"></a>CHeaderCtrl：： SetFocusedItem
+## <a name="cheaderctrlsetfocuseditem"></a><a name="setfocuseditem"></a>斬首::設定焦點專案
 
-將焦點設定為目前標題控制項中的指定標題專案。
+將焦點設定在當前標頭控制項中的指定標頭項。
 
 ```
 BOOL SetFocusedItem(int iItem);
@@ -825,31 +825,31 @@ BOOL SetFocusedItem(int iItem);
 
 |參數|描述|
 |---------------|-----------------|
-|*iItem*|在標頭專案以零為基底的索引。|
+|*iItem*|[在]標頭項的零索引。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[HDM_SETFOCUSEDITEM](/windows/win32/Controls/hdm-setfocuseditem)訊息，如 Windows SDK 所述。
+此方法發送[HDM_SETFOCUSEDITEM](/windows/win32/Controls/hdm-setfocuseditem)消息,這在Windows SDK中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前標題控制項的變數 `m_headerCtrl`。 下一個範例中會使用此變數。
+以下代碼範例定義用於存取目前的標頭控制`m_headerCtrl`的元件的變數 。 下一個範例中會使用此變數。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `SetFocusedItem` 和 `GetFocusedItem` 方法。 在先前的程式碼區段中，我們建立了具有五個數據行的標題控制項。 不過，您可以拖曳資料行分隔符號，讓資料行看不見。 下列範例會設定並確認最後一個資料行標頭為焦點專案。
+以下代碼示例演示`SetFocusedItem``GetFocusedItem`和 方法。 在代碼的早期版本中,我們創建了一個包含五列的標頭控件。 但是,您可以拖動列分隔符,以便該列不可見。 以下示例將設置,然後將最後一個列標頭確認為焦點項。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
-##  <a name="sethotdivider"></a>CHeaderCtrl：： SetHotDivider
+## <a name="cheaderctrlsethotdivider"></a><a name="sethotdivider"></a>斬首::SetHotDivider
 
-變更標頭專案之間的分隔線，以指示標頭專案的手動拖放。
+更改標題項之間的分隔符以指示標題項的手動拖放。
 
 ```
 int SetHotDivider(CPoint pt);
@@ -859,26 +859,26 @@ int SetHotDivider(int nIndex);
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-指標的位置。 標題控制項會根據指標的位置來反白顯示適當的分隔線。
+指標的位置。 頭控件根據指標的位置突出顯示相應的分隔線。
 
 *nIndex*<br/>
-反白顯示之分隔線的索引。
+突出顯示的分隔符的索引。
 
 ### <a name="return-value"></a>傳回值
 
-反白顯示之分隔線的索引。
+突出顯示的分隔符的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_SETHOTDIVIDER](/windows/win32/Controls/hdm-sethotdivider)Win32 訊息的行為。 它是提供來支援標頭專案拖放。
+此成員函數實現 Win32 消息[的行為HDM_SETHOTDIVIDER,](/windows/win32/Controls/hdm-sethotdivider)如 Windows SDK 中所述。 它用於支持標題項的拖放。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]
 
-##  <a name="setimagelist"></a>CHeaderCtrl：： SetImageList
+## <a name="cheaderctrlsetimagelist"></a><a name="setimagelist"></a>斬首::設定影像清單
 
-將影像清單指派給標題控制項。
+將圖像清單分配給標頭控制項。
 
 ```
 CImageList* SetImageList(CImageList* pImageList);
@@ -887,23 +887,23 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>參數
 
 *pImageList*<br/>
-`CImageList` 物件的指標，其中包含要指派給標題控制項的影像清單。
+指向包含要分配給`CImageList`標頭控制件的影像清單的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-先前指派給標題控制項之[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標。
+指向以前分配給標頭控制件的[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)Win32 訊息的行為。 傳回的指標點為暫存物件的 `CImageList` 物件，會在下一次閒置時間處理時刪除。
+此成員函數實現 Win32 消息[HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)的行為,如 Windows SDK 中所述。 返回`CImageList`的指標指向的對像是臨時物件,並在下次空閒時處理中被刪除。
 
 ### <a name="example"></a>範例
 
-  請參閱[CHeaderCtrl：： GetImageList](#getimagelist)的範例。
+  請參考[CHeaderCtrl 的範例::抓取影像清單](#getimagelist)。
 
-##  <a name="setitem"></a>CHeaderCtrl：： SetItem
+## <a name="cheaderctrlsetitem"></a><a name="setitem"></a>斬首::設定項目
 
-設定標題控制項中指定專案的屬性。
+在標頭控制項中設置指定項的屬性。
 
 ```
 BOOL SetItem(
@@ -914,10 +914,10 @@ BOOL SetItem(
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-要操作之專案的以零為基底的索引。
+要操作的項的零基索引。
 
-*pHeaderItem*<br/>
-[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的指標，其中包含新專案的相關資訊。
+*pHeader 專案*<br/>
+指向包含新專案資訊的[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -925,11 +925,11 @@ BOOL SetItem(
 
 ### <a name="example"></a>範例
 
-  請參閱[CHeaderCtrl：： GetItem](#getitem)的範例。
+  請參考[CHeaderCtrl 的範例::抓取項目](#getitem)。
 
-##  <a name="setorderarray"></a>CHeaderCtrl：： SetOrderArray
+## <a name="cheaderctrlsetorderarray"></a><a name="setorderarray"></a>斬首::設定順序陣列
 
-設定標題控制項中專案的由左至右順序。
+設置標頭控件中項的從左至右的順序。
 
 ```
 BOOL SetOrderArray(
@@ -939,11 +939,11 @@ BOOL SetOrderArray(
 
 ### <a name="parameters"></a>參數
 
-*iCount*<br/>
-標題控制項專案的數目。
+*i. Count*<br/>
+標頭控制項數。
 
-*piArray*<br/>
-緩衝區位址的指標，接收標頭控制項中專案的索引值（依其出現的順序）。
+*皮拉裡*<br/>
+指向緩衝區位址的指標,該緩衝區接收標頭控件中項的索引值,其顯示順序從左到右。
 
 ### <a name="return-value"></a>傳回值
 
@@ -951,11 +951,11 @@ BOOL SetOrderArray(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[HDM_SETORDERARRAY](/windows/win32/Controls/hdm-setorderarray)Win32 宏的行為。 它是提供來支援標頭專案排序。
+此成員函數實現 Win32 宏[HDM_SETORDERARRAY](/windows/win32/Controls/hdm-setorderarray)的行為,如 Windows SDK 中所述。 它用於支援標頭項排序。
 
 ### <a name="example"></a>範例
 
-  請參閱[CHeaderCtrl：： GetOrderArray](#getorderarray)的範例。
+  請參考[CHeaderCtrl 的範例:取得Orderarray](#getorderarray)。
 
 ## <a name="see-also"></a>另請參閱
 

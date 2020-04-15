@@ -1,6 +1,6 @@
 ---
 title: strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncpy
 - _strncpy_l
@@ -8,6 +8,8 @@ api_name:
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
+- _o__mbsncpy
+- _o__mbsncpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -65,19 +68,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e5ab815e95c1b8ee03cac86d5c3355874f8860b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947215"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363824"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
 將一個字串的字元複製到另一個。 這些函式已有更安全的版本可供使用，請參閱 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncpy**和 **_mbsncpy_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncpy**和 **_mbsncpy_l**不能在Windows運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -158,36 +161,38 @@ unsigned char *_mbsncpy_l(
 
 ### <a name="parameters"></a>參數
 
-*strDest*<br/>
+*斯特德斯特*<br/>
 目的字串。
 
 *strSource*<br/>
 來源字串。
 
-*計數*<br/>
+*count*<br/>
 要複製的字元數。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-傳回*strDest*。 未保留表示錯誤的傳回值。
+返回*strD。* 未保留表示錯誤的傳回值。
 
 ## <a name="remarks"></a>備註
 
-**Strncpy**函數會將*strSource*的初始*計數*字元複製到*strDest* ，並傳回*strDest*。 如果*count*小於或等於*strSource*的長度，則 null 字元不會自動附加至複製的字串。 如果*count*大於*strSource*的長度，則會以 null 字元填補目的字串，最多可達長度*計數*。 如果來源和目的字串重迭，則**strncpy**的行為是未定義的。
+**strncpy**函數將*strSource*的初始*計數*字元複製到*strD 並*返回*strD。* 如果*計數*小於或等於*strSource*的長度,則不會自動將空字元追加到複製的字串中。 如果*計數*大於*strSource*的長度,則目標字串將填充為 null 字元,最多為長度*計數*。 如果原始字串和目標字串重疊,則未定義**strncpy**的行為。
 
 > [!IMPORTANT]
-> **strncpy**不會檢查*strDest*中是否有足夠的空間;這會導致緩衝區溢位的可能原因。 *Count*引數會限制已複製的字元數;這不是*strDest*大小的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> **不**檢查*在最斯特德*有足夠的空間;這使得它成為緩衝區溢出的潛在原因。 *count*參數限制複製的字元數;它不是對*strDest*的大小的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*strDest*或*strSource*是**Null**指標，或*count*小於或等於零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
+如果*strDest*或*strSource*是**NULL**指標,或者如果*計數*小於或等於零,則調用無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將傳回 -1 並將**errno**設定為**EINVAL**。
 
-**wcsncpy**和 **_mbsncpy**是**strncpy**的寬字元和多位元組字元版本。 **Wcsncpy**和 **_mbsncpy**的引數和傳回值會隨之改變。 除此之外，這六個函式的行為相同。
+**wcsncpy**和 **_mbsncpy**是寬字元和多位元組位元版本的**Srncpy。** **wcsncpy**和 **_mbsncpy**的參數和返回值也相應不同。 除此之外，這六個函式的行為相同。
 
-這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**後綴的這些函數的版本是相同的,只是它們使用傳入區域設置,而不是當前區域設置,用於其與區域設置相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -197,7 +202,7 @@ unsigned char *_mbsncpy_l(
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**和 **_wcsncpy_l**沒有地區設定相依性;它們僅供 **_tcsncpy_l**之用，不適合直接呼叫。
+> **_strncpy_l**和 **_wcsncpy_l**沒有區域依賴性;它們僅供 **_tcsncpy_l,** 不用於直接調用。
 
 ## <a name="requirements"></a>需求
 
@@ -205,13 +210,13 @@ unsigned char *_mbsncpy_l(
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> 或 \<wchar.h>|
-|**_mbsncpy**、 **_mbsncpy_l**|\<mbstring.h>|
+|**_mbsncpy**, **_mbsncpy_l**|\<mbstring.h>|
 
 如需其他平台的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**strncpy** ，以及如何將其誤用以造成程式錯誤和安全性問題。 編譯器會針對**strncpy**的每個呼叫產生警告，類似**于 crt_strncpy_x86。 c （15）：警告 C4996： ' strncpy '：此函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
+下面的示例演示了**srncpy**的使用,以及如何濫用它來導致程式錯誤和安全問題。 編譯器為每個調用生成類似於**strncpy****crt_strncpy_x86.c(15) 的警告:警告 C4996:"strncpy":此函數或變數可能不安全。請考慮改用strncpy_s。要禁用棄用,請使用_CRT_SECURE_NO_WARNINGS。有關詳細資訊,請參閱連線説明。**
 
 ```C
 // crt_strncpy_x86.c
@@ -265,7 +270,7 @@ int main() {
 }
 ```
 
-Output
+輸出
 
 ```Output
 ZZ
@@ -280,7 +285,7 @@ Buffer overrun: s = 'ars.' (should be 'test')
 
 ## <a name="see-also"></a>另請參閱
 
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>

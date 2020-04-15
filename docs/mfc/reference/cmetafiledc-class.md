@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 61e8442c085a5be0a7266409daf973bf63f52a7f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0919dacfd758df39064c5381690e9e23a029fcd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505509"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369954"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 類別
 
@@ -39,36 +39,36 @@ class CMetaFileDC : public CDC
 
 |名稱|描述|
 |----------|-----------------|
-|[CMetaFileDC::CMetaFileDC](#cmetafiledc)|建構 `CMetaFileDC` 物件。|
+|[CMetaFileDC:CMetaFileDC](#cmetafiledc)|建構 `CMetaFileDC` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CMetaFileDC::Close](#close)|關閉裝置內容, 並建立中繼檔控制碼。|
-|[CMetaFileDC::CloseEnhanced](#closeenhanced)|關閉增強型中繼檔裝置內容, 並建立增強型中繼檔控制碼。|
-|[CMetaFileDC::Create](#create)|建立 Windows 中繼檔裝置內容, 並將其附加`CMetaFileDC`至物件。|
-|[CMetaFileDC::CreateEnhanced](#createenhanced)|建立增強格式中繼檔的中繼檔裝置內容。|
+|[CMetaFileDC:關閉](#close)|關閉設備上下文並創建元檔句柄。|
+|[CMetaFileDC:關閉增強](#closeenhanced)|關閉增強元檔設備上下文並創建增強元檔句柄。|
+|[CMetaFileDC:建立](#create)|創建 Windows 檔裝置上下文並將其附加`CMetaFileDC`到 物件。|
+|[CMetaFileDC:建立增強](#createenhanced)|為增強格式的元檔創建元檔設備上下文。|
 
 ## <a name="remarks"></a>備註
 
-若要執行 Windows 中繼檔, 請先`CMetaFileDC`建立物件。 叫用`CMetaFileDC`此函式, 然後呼叫[Create](#create)成員函式, 該函式會建立 Windows 中繼檔裝置內容`CMetaFileDC` , 並將其附加至物件。
+要實現 Windows 元檔,`CMetaFileDC`請先 創建一個物件。 調用`CMetaFileDC`建構函數,然後調用[Create](#create)成員函數,該函數創建 Windows 元檔設備上下`CMetaFileDC`文並將其附加到 物件。
 
-接下來, `CMetaFileDC`將您想要重新執行的 CDC GDI 命令順序傳送給物件。 只能使用建立輸出的 GDI 命令, 例如`MoveTo`和。 `LineTo`
+接下來,將`CMetaFileDC`物件發送您打算重播的CDC GDI 命令的順序。 只能使用建立輸出的 GDI`MoveTo`指令`LineTo`, 如與 。
 
-在您將所需的命令傳送至中繼檔之後, `Close`請呼叫成員函式, 這會關閉中繼檔裝置內容並傳回中繼檔控制碼。 然後處置`CMetaFileDC`物件。
+將所需命令發送到元檔後,調用`Close`成員函數,該函數將關閉元檔設備上下文並返回元檔句柄。 然後釋放物件`CMetaFileDC`。
 
-[CDC::P laymetafile](../../mfc/reference/cdc-class.md#playmetafile)可以接著使用中繼檔控制碼, 重複播放中繼檔。 中繼檔也可以由 Windows 函式 (例如[CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew)) 操作, 該函式會將元檔案複製到磁片。
+[然後,CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)可以使用元檔句柄反覆播放元檔。 元檔也可以由 Windows 函數(如[CopyMetaFile)](/windows/win32/api/wingdi/nf-wingdi-copymetafilew)進行操作,這些函數將中檔案複製到磁碟。
 
-當不再需要中繼檔時, 請使用[DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile) Windows 函數將它從記憶體中刪除。
+當不再需要元檔時,使用[DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile) Windows 功能將其從記憶體中刪除。
 
-您也可以執行`CMetaFileDC`物件, 讓它可以處理輸出呼叫和屬性 GDI 呼叫 (例如)。 `GetTextExtent` 這類中繼檔比較有彈性, 而且可以更輕鬆地重複使用一般 GDI 程式碼, 這通常是由輸出和屬性呼叫的混合所組成。 類別會從 CDC 繼承兩個`m_hDC`裝置內容: 和`m_hAttribDC`。 `CMetaFileDC` 裝置內容會處理所有[cdc](../../mfc/reference/cdc-class.md) gdi `m_hAttribDC`輸出呼叫, 而裝置內容會處理所有 cdc gdi 屬性呼叫。 `m_hDC` 一般來說, 這兩個裝置內容會參考相同的裝置。 在案例`CMetaFileDC`中, 屬性 DC 預設會設定為 Null。
+您還可以實現該`CMetaFileDC`物件,以便它可以同時處理輸出調用和屬性 GDI 調`GetTextExtent`用(如 )。 這種元檔更靈活,可以更輕鬆地重用常規 GDI 代碼,該代碼通常由輸出和屬性調用的組合組成。 類別`CMetaFileDC`繼承兩個裝置中,`m_hDC`並從`m_hAttribDC`CDC 繼承與 。 設備上下文處理所有[CDC](../../mfc/reference/cdc-class.md) GDI`m_hAttribDC`輸出呼叫 ,設備上下文處理所有 CDC `m_hDC` GDI 屬性呼叫。 通常,這兩個設備上下文引用同一設備。 在的情況下`CMetaFileDC`,預設情況下,屬性 DC 設定為 NULL。
 
-建立第二個裝置內容, 指向螢幕、印表機或非中繼檔以外的裝置, 然後呼叫`SetAttribDC`成員函式, 將新的裝置內容與`m_hAttribDC`建立關聯。 資訊的 GDI 呼叫現在會導向至新`m_hAttribDC`的。 輸出 GDI 呼叫將會移`m_hDC`至, 代表中繼檔。
+創建指向螢幕、印表機或元檔以外的設備的第二個設備上下文,然後調`SetAttribDC`用 成員函數將新設備上下`m_hAttribDC`文與關聯。 GDI 要求的資訊現在將定到`m_hAttribDC`新的 。 輸出 GDI 呼`m_hDC`叫將轉到 ,這表示元檔。
 
-如需的詳細`CMetaFileDC`資訊, 請參閱[裝置](../../mfc/device-contexts.md)內容。
+有關 的詳細`CMetaFileDC`資訊 ,請參閱[裝置上下文](../../mfc/device-contexts.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -78,11 +78,11 @@ class CMetaFileDC : public CDC
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxext.h。h
+**標題:** afxext.h
 
-##  <a name="close"></a>  CMetaFileDC::Close
+## <a name="cmetafiledcclose"></a><a name="close"></a>CMetaFileDC:關閉
 
-關閉中繼檔裝置內容, 並建立可使用[CDC::P laymetafile](../../mfc/reference/cdc-class.md#playmetafile)成員函式來播放中繼檔的 Windows 中繼檔控制碼。
+關閉中檔案裝置上下文並建立一個 Windows 檔片檔,該句柄可用於使用[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)成員函數播放元檔。
 
 ```
 HMETAFILE Close();
@@ -90,17 +90,17 @@ HMETAFILE Close();
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功, 則為有效的 HMETAFILE;否則為 Null。
+如果函數成功,則為有效的 HMETAFILE;否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-Windows 中繼檔控制碼也可以用來操作具有 Windows 函式 (例如[CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew)) 的中繼檔。
+Windows 中繼檔句柄還可用於使用 Windows 函數(如[CopyMetaFile)](/windows/win32/api/wingdi/nf-wingdi-copymetafilew)操作元檔。
 
-藉由呼叫 Windows [DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile)函數, 在使用後刪除中繼檔。
+使用後透過調用 Windows [DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile)功能刪除元檔。
 
-##  <a name="closeenhanced"></a>CMetaFileDC:: CloseEnhanced
+## <a name="cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC:關閉增強
 
-關閉增強型中繼檔裝置內容, 並傳回識別增強格式中繼檔的控制碼。
+關閉增強元文件設備上下文並返回標識增強格式元檔的句柄。
 
 ```
 HENHMETAFILE CloseEnhanced();
@@ -108,33 +108,33 @@ HENHMETAFILE CloseEnhanced();
 
 ### <a name="return-value"></a>傳回值
 
-增強型中繼檔的控制碼 (如果成功);否則為 Null。
+增強元檔的句柄(如果成功);否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-應用程式可以使用此函式所傳回的增強型中繼檔控制碼來執行下列工作:
+應用程式可以使用此函數傳回的擴增中檔案片控以下工作:
 
-- 顯示儲存在增強型中繼檔中的圖片
+- 顯示儲存在增強中繼的圖片
 
-- 建立增強型中繼檔的複本
+- 建立增強的中繼檔的複本
 
-- 列舉、編輯或複製增強型中繼檔中的個別記錄
+- 列舉、編輯或複製增強的中繼檔的單一個紀錄
 
-- 從增強的中繼檔標頭抓取中繼檔內容的選擇性描述
+- 從增強中繼檔案標題檢索元檔案內容的可選說明
 
-- 取出增強型中繼檔標頭的複本
+- 檢索增強中繼標頭的複本
 
-- 取出增強型中繼檔的二進位複本
+- 檢索增強的元檔的二進制副本
 
-- 列舉選擇性調色板中的色彩
+- 列舉選擇的顏色
 
-- 將增強格式中繼檔轉換成 Windows 格式中繼檔
+- 將增強格式的中繼檔轉換為 Windows 格式的中繼檔
 
-當應用程式不再需要增強型中繼檔控制碼時, 它應該藉由呼叫 Win32 `DeleteEnhMetaFile`函數來釋放控制碼。
+當應用程式不再需要增強的元檔句柄時,它應該通過調用 Win32`DeleteEnhMetaFile`函數來釋放句柄。
 
-##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC
+## <a name="cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC:CMetaFileDC
 
-以兩個步驟來建立物件。`CMetaFileDC`
+分兩`CMetaFileDC`步構造物件。
 
 ```
 CMetaFileDC();
@@ -142,11 +142,11 @@ CMetaFileDC();
 
 ### <a name="remarks"></a>備註
 
-首先, 呼叫`CMetaFileDC`, 然後呼叫`Create`, 它會建立 Windows 中繼檔裝置內容, `CMetaFileDC`並將其附加至物件。
+首先,調用`CMetaFileDC`,`Create`然後調用 ,這將創建 Windows 元檔設備上下文`CMetaFileDC`並將其附加到 物件。
 
-##  <a name="create"></a>  CMetaFileDC::Create
+## <a name="cmetafiledccreate"></a><a name="create"></a>CMetaFileDC:建立
 
-以兩個步驟來建立物件。`CMetaFileDC`
+分兩`CMetaFileDC`步構造物件。
 
 ```
 BOOL Create(LPCTSTR lpszFilename = NULL);
@@ -154,8 +154,8 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 
 ### <a name="parameters"></a>參數
 
-*lpszFilename*<br/>
-指向以 null 結束的字元字串。 指定要建立之中繼檔的檔案名。 如果*lpszFilename*為 Null, 就會建立新的記憶體中中繼檔。
+*lpszFile 名稱*<br/>
+指向 null 終止的字串。 指定要建立的元檔的檔名。 如果*lpszFile 名*為 NULL,則建立新的記憶體中元檔。
 
 ### <a name="return-value"></a>傳回值
 
@@ -163,11 +163,11 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 
 ### <a name="remarks"></a>備註
 
-首先, 呼叫此`CMetaFileDC`函式, 然後呼叫`Create`, 它會建立 Windows 中繼檔裝置內容, `CMetaFileDC`並將其附加至物件。
+首先調用建構函數`CMetaFileDC`,然後調`Create`用 ,這將創建 Windows 元檔設備上下文`CMetaFileDC`並將其附加到 物件。
 
-##  <a name="createenhanced"></a>CMetaFileDC:: CreateEnhanced
+## <a name="cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC:建立增強
 
-建立增強格式中繼檔的裝置內容。
+為增強格式的元文件創建設備上下文。
 
 ```
 BOOL CreateEnhanced(
@@ -180,38 +180,38 @@ BOOL CreateEnhanced(
 ### <a name="parameters"></a>參數
 
 *pDCRef*<br/>
-識別增強型中繼檔的參照裝置。
+標識增強的元文件的參考設備。
 
-*lpszFileName*<br/>
-指向以 null 結束的字元字串。 指定要建立之增強型中繼檔的檔案名。 如果此參數為 Null, 則增強型中繼檔會以記憶體為基礎, 而且當物件終結或呼叫 Win32 `DeleteEnhMetaFile`函式時, 其內容會遺失。
+*lpszFile 名稱*<br/>
+指向 null 終止的字串。 指定要創建的擴增元檔的檔名。 如果此參數為 NULL,則增強的元檔基於記憶體,當物件被銷毀或調用 Win32`DeleteEnhMetaFile`函數時,其內容將丟失。
 
 *lpBounds*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件, 指定要儲存在增強型中繼檔中之圖片的 HIMETRIC 單位 (以 .01-毫米增量計算) 大小。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件,該物件以 HIMETRIC 單位(以 .01 毫米的增量)指定要存儲在增強的元檔中的圖片的尺寸。
 
-*lpszDescription*<br/>
-指向以零結束的字串, 指定建立圖片的應用程式名稱, 以及圖片的標題。
+*lpsz描述*<br/>
+指向一個零端接字串,該字串指定創建圖片的應用程式的名稱以及圖片的標題。
 
 ### <a name="return-value"></a>傳回值
 
-增強型中繼檔的裝置內容控制碼 (如果成功);否則為 Null。
+增強元檔的設備上下文的句柄(如果成功);否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-此 DC 可以用來儲存與裝置無關的圖片。
+此DC可用於存儲與設備無關的圖片。
 
-Windows 會使用*pDCRef*參數所識別的參照裝置來記錄原先出現圖片之裝置的解析度和單位。 如果*pDCRef*參數為 Null, 則會使用目前的顯示裝置來進行參考。
+Windows 使用*pDCRef*參數識別的參考設備來記錄最初顯示圖片的設備的解析度和單位。 如果*pDCRef*參數為 NULL,則使用當前顯示設備進行參考。
 
-`RECT` *LpBounds*參數所指向之資料結構的左側和最上層成員, 必須分別小於右邊和底部成員。 沿著矩形邊緣的點會包含在圖片中。 如果*lpBounds*為 Null, 則圖形裝置介面 (GDI) 會計算最小矩形的尺寸, 而該矩形可以括住應用程式所繪製的圖片。 應該盡可能提供*lpBounds*參數。
+`RECT` *lpBounds*參數指向的數據結構的左側和頂部成員必須分別小於右側和底部成員。 沿矩形邊緣的點包含在圖片中。 如果*lpBounds*為 NULL,則圖形裝置介面 (GDI) 計算最小矩形的尺寸,該矩形可以包含應用程式繪製的圖片。 應盡可能提供*lpBounds*參數。
 
-*LpszDescription*參數所指向的字串必須在應用程式名稱與圖片名稱之間包含 null 字元, 而且必須以兩個 null 字元結束, 例如 "XYZ Graphics Editor\0Bald Eagle\0\0", 其中 \ 0 代表null 字元。 如果*lpszDescription*為 Null, 則增強型中繼檔標頭中沒有對應的專案。
+*lpsz描述*參數指向的字串必須在應用程式名稱和圖片名稱之間包含一個空字元,並且必須用兩個空字元終止-例如,"XYZ 圖形編輯器\0Bald Eagle_0_0",其中 |0 表示空字元。 如果*lpsz 描述*為 NULL,則增強元檔標頭中沒有相應的條目。
 
-應用程式會使用此函式所建立的 DC, 將圖形圖片儲存在增強型中繼檔中。 識別此 DC 的控制碼可以傳遞至任何 GDI 函數。
+應用程式使用此函數創建的 DC 將圖形圖片存儲在增強的元檔中。 標識此 DC 的句柄可以傳遞給任何 GDI 函數。
 
-應用程式在增強的中繼檔中儲存圖片之後, 即可藉由呼叫`CDC::PlayMetaFile`函式, 在任何輸出裝置上顯示圖片。 顯示圖片時, Windows 會使用*lpBounds*參數所指向的矩形, 以及參考裝置的解析度資料來定位和縮放圖片。 此函式所傳回的裝置內容包含與任何新 DC 相關聯的預設屬性。
+應用程式將圖片存儲在增強的元檔中后,可以通過調用函數在`CDC::PlayMetaFile`任何 輸出設備上顯示圖片。 顯示圖片時,Windows 使用*lpBounds*參數指向的矩形和參考設備的解析度數據來定位和縮放圖片。 此函數傳回的裝置上下文包含與任何新 DC 關聯的相同預設屬性。
 
-應用程式必須使用 Win32 `GetWinMetaFileBits`函式, 將增強型中繼檔轉換成較舊的 Windows 元檔案格式。
+應用程式必須使用 Win32`GetWinMetaFileBits`函數將增強的元檔轉換為較舊的 Windows 元檔格式。
 
-增強型中繼檔的檔案名應該使用。EMF 延伸模組。
+增強的中繼檔的檔案名稱應使用 。EMF 擴展。
 
 ## <a name="see-also"></a>另請參閱
 

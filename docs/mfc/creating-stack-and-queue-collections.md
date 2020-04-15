@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: ed0ad9b98a69e56df4e66b25bc6ca08cdaaad413
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b3427f7bb2e46435ddf2768bcbb816f9d7e5c1a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242402"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371598"
 ---
 # <a name="creating-stack-and-queue-collections"></a>建立堆疊和佇列集合
 
-這篇文章說明如何建立其他資料結構，例如[堆疊](#_core_stacks)並[佇列](#_core_queues)，從 MFC 清單類別。 這些範例會使用衍生自 `CList` 的類別，不過除非您需要新增其他功能，否則您可以直接使用 `CList`。
+本文介紹如何從 MFC 清單類建立其他資料結構,如[堆疊](#_core_stacks)和[佇列](#_core_queues)。 這些範例會使用衍生自 `CList` 的類別，不過除非您需要新增其他功能，否則您可以直接使用 `CList`。
 
-##  <a name="_core_stacks"></a> Stacks
+## <a name="stacks"></a><a name="_core_stacks"></a>棧
 
 因為標準的清單集合具有一個頭部和尾部，建立模擬後進先出的堆疊行為之衍生清單集合是很容易的。 堆疊就像自助餐廳的一疊盤子。 當餐盤加入堆疊時，它們會位於堆疊的上方。 最後加入的盤子是第一個被移除的盤子。 清單集合成員函式 `AddHead` 和 `RemoveHead` 可用來從清單的開頭明確地加入和移除項目；因此，最新加入的項目會最先被移除。
 
@@ -36,7 +36,7 @@ ms.locfileid: "62242402"
 
 請注意，這種方法會公開基礎 `CObList` 類別。 使用者可以呼叫任何 `CObList` 成員函式，無論它是否對堆疊具有意義。
 
-##  <a name="_core_queues"></a> 佇列
+## <a name="queues"></a><a name="_core_queues"></a>佇列
 
 因為標準清單集合具有一個頭部和尾部，建立模擬先進先出的佇列行為之衍生清單集合也是很容易的。 佇列就像是在自助餐廳排隊的人。 隊伍中的第一個人會是第一個被服務的人。 當更多人來的時候，他們會走到隊伍的尾端等待。 清單集合成員函式 `AddTail` 和 `RemoveHead` 可用來從清單的開頭或尾端明確地加入和移除項目；因此，最新加入的項目會最後被移除。
 

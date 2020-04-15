@@ -1,5 +1,5 @@
 ---
-title: CTooltipManager 類別
+title: CTooltip管理員類別
 ms.date: 11/04/2016
 f1_keywords:
 - CTooltipManager
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323748"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365080"
 ---
-# <a name="ctooltipmanager-class"></a>CTooltipManager 類別
+# <a name="ctooltipmanager-class"></a>CTooltip管理員類別
 
 維護工具提示的執行階段資訊。 `CTooltipManager` 類別會在每個應用程式具現化一次。
 
@@ -47,9 +47,9 @@ class CTooltipManager : public CObject
 
 ## <a name="remarks"></a>備註
 
-使用[CMFCToolTipCtrl 類別](../../mfc/reference/cmfctooltipctrl-class.md)， `CMFCToolTipInfo`，和`CTooltipManager`應用程式中實作自訂的工具提示。 如需如何使用這些工具提示類別的範例，請參閱 < [CMFCToolTipCtrl 類別](../../mfc/reference/cmfctooltipctrl-class.md)主題。
+使用[CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)`CMFCToolTipInfo`類`CTooltipManager`,並一起實現應用程式中的自定義工具提示。 有關如何使用這些工具提示類別的範例,請參閱[CMFCToolTipCtrl 類別主題](../../mfc/reference/cmfctooltipctrl-class.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -57,9 +57,9 @@ class CTooltipManager : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxtooltipmanager.h
+**標題:** afxtooltip管理員.h
 
-##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip
+## <a name="ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>CTooltip管理員:建立工具提示
 
 建立工具提示控制項。
 
@@ -73,41 +73,41 @@ static BOOL CreateToolTip(
 ### <a name="parameters"></a>參數
 
 *pToolTip*<br/>
-[out]工具提示 」 指標的參考。 它是設定為函式傳回時指向新建立的工具提示。
+[出]對工具提示指標的引用。 當函數返回時,它將指向新創建的工具提示。
 
-*pWndParent*<br/>
-[in]工具提示的父代。
+*pwnd 父級*<br/>
+[在]工具提示的父級。
 
 *nType*<br/>
-[in]工具提示的型別。
+[在]工具提示的類型。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立工具提示，非零值。
+如果已成功創建工具提示,則非零。
 
 ### <a name="remarks"></a>備註
 
-您必須呼叫[CTooltipManager::DeleteToolTip](#deletetooltip)刪除會傳回到的工具提示控制項*pToolTip*。
+您必須調用[CTooltipManager::DeleteToolTip](#deletetooltip)刪除在*pToolTip*中傳遞的工具提示控制項。
 
-[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)它會建立每個工具提示的視覺顯示參數為基礎的工具提示的集合型別*n*指定。 若要變更一個或多個工具提示類型的參數，呼叫[Settooltipparams](#settooltipparams)。
+[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)根據*nType*指定的工具提示類型設定它創建的每個工具提示的可視顯示參數。 要改變一個或多個工具提示類型的參數,請致電[CTooltipManager::設定工具提示Params](#settooltipparams)。
 
-下表列出有效的工具提示類型：
+下表列的工具提示類型:
 
-|工具提示類型|控制項類別|範例型別|
+|工具提示類型|控制類別|範例類型|
 |------------------|----------------------|-------------------|
-|AFX_TOOLTIP_TYPE_BUTTON|按鈕。|CMFCButton|
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|標題列。|CMFCCaptionBar|
-|AFX_TOOLTIP_TYPE_DEFAULT|不符合另一個類別目錄的任何控制項。|無。|
-|AFX_TOOLTIP_TYPE_DOCKBAR|可停駐窗格。|CDockablePane|
+|AFX_TOOLTIP_TYPE_BUTTON|一個按鈕。|CMFCButton|
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|標題欄。|CMFCCaptionBar|
+|AFX_TOOLTIP_TYPE_DEFAULT|不適合其他類別的任何控制項。|無。|
+|AFX_TOOLTIP_TYPE_DOCKBAR|可停靠窗格。|CDockablePane|
 |AFX_TOOLTIP_TYPE_EDIT|文字方塊。|無。|
-|AFX_TOOLTIP_TYPE_MINIFRAME|迷你。|CPaneFrameWnd|
-|AFX_TOOLTIP_TYPE_PLANNER|一個活動規劃中。|無。|
-|AFX_TOOLTIP_TYPE_RIBBON|功能區列。|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
-|AFX_TOOLTIP_TYPE_TAB|索引標籤控制項。|CMFCTabCtrl|
-|AFX_TOOLTIP_TYPE_TOOLBAR|工具列。|CMFCToolBar, CMFCPopupMenuBar|
-|AFX_TOOLTIP_TYPE_TOOLBOX|工具箱中。|無。|
+|AFX_TOOLTIP_TYPE_MINIFRAME|小型框架。|CPaneFrameWnd|
+|AFX_TOOLTIP_TYPE_PLANNER|規劃師|無。|
+|AFX_TOOLTIP_TYPE_RIBBON|帶狀欄。|CMFC絲帶欄,CMFC絲帶面板功能表欄|
+|AFX_TOOLTIP_TYPE_TAB|選項卡控件。|CMFCTabCtrl|
+|AFX_TOOLTIP_TYPE_TOOLBAR|工具列。|CMFC工具列,CMFCPopupMenuBar|
+|AFX_TOOLTIP_TYPE_TOOLBOX|工具箱。|無。|
 
-##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip
+## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltip管理員::DeleteTooltip
 
 刪除工具提示控制項。
 
@@ -118,15 +118,15 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="parameters"></a>參數
 
 *pToolTip*<br/>
-[in、 out]指向要終結的工具提示的參考。
+[進出]指向要銷毀的工具提示的指標的引用。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法，每個[CToolTipCtrl 類別](../../mfc/reference/ctooltipctrl-class.md)中建立[CTooltipManager::CreateToolTip](#createtooltip)。 父控制項應該呼叫這個方法，從其`OnDestroy`處理常式。 如此才能正確地移除架構中的工具提示。 這個方法會設定*pToolTip*為之前它會傳回 NULL。
+呼叫此方法的每個[CToolTipCtrl 類別](../../mfc/reference/ctooltipctrl-class.md)由[CTooltipManager 建立::建立工具提示](#createtooltip)。 父控件應從其`OnDestroy`處理程式調用此方法。 這是正確從框架中刪除工具提示所必需的。 此方法在返回之前將*pToolTip*設定為 NULL。
 
-##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams
+## <a name="ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltip管理員::設定工具提示
 
-自訂指定的 Windows 控制項類型的工具提示控制項的外觀。
+自定義指定 Windows 控制件類型的工具提示控制項的外觀。
 
 ```
 void SetTooltipParams(
@@ -137,32 +137,32 @@ void SetTooltipParams(
 
 ### <a name="parameters"></a>參數
 
-*nTypes*<br/>
-[in]指定控制項類型。
+*n 類型*<br/>
+[在]指定控制項類型。
 
 *pRTC*<br/>
-[in]執行階段類別的自訂工具提示。
+[在]自定義工具提示的運行時類。
 
 *pParams*<br/>
-[in]工具提示的參數。
+[在]工具提示參數。
 
 ### <a name="remarks"></a>備註
 
-這個方法會設定初始參數與執行階段類別的[CToolTipManager](../../mfc/reference/ctooltipmanager-class.md)時它會建立工具提示使用。 當控制項便會呼叫[CTooltipManager::CreateToolTip](#createtooltip)和工具提示中的階段類型，它是其中一個所指定的型別*nTypes*，工具提示管理員建立的執行個體的工具提示控制項指定的執行階段類別*pRTC* ，並傳遞所指定的參數*pParams*新的工具提示。
+此方法設置[CToolTipManager](../../mfc/reference/ctooltipmanager-class.md)在建立工具提示時使用的運行時類和初始參數。 當控制項呼叫[CTooltipManager::CreateTooltip](#createtooltip)並傳遞工具提示類型(這是*nTypes*指示的類型之一),工具提示管理員將創建一個工具提示控制項,該控件是*pRTC*指定的執行時類的實例,並將*pParams*指定的參數傳遞給新的工具提示。
 
-當您呼叫這個方法時，所有現有的工具提示擁有者會收到 AFX_WM_UPDATETOOLTIPS 訊息而他們必須使用，以重新建立其工具提示[CTooltipManager::CreateToolTip](#createtooltip)。
+呼叫此方法時,所有現有的工具提示擁有者都會收到AFX_WM_UPDATETOOLTIPS消息,他們必須使用[CTooltipManager:::createToolTip](#createtooltip)重新建立工具提示。
 
-*nTypes*可以是任何組合有效的工具提示的型別[CTooltipManager::CreateToolTip](#createtooltip)用途，也可以當作 AFX_TOOLTIP_TYPE_ALL。 如果您傳遞 AFX_TOOLTIP_TYPE_ALL 時，會影響所有的工具提示類型。
+*nTypes*可以是[CTooltipManager 使用的有效工具提示類型的任意組合:創建工具提示](#createtooltip),也可以AFX_TOOLTIP_TYPE_ALL。 如果傳遞AFX_TOOLTIP_TYPE_ALL,則所有工具提示類型都受到影響。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`SetTooltipParams`方法的`CTooltipManager`類別。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何使用`SetTooltipParams``CTooltipManager`類的方法。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 
-##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText
+## <a name="ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltip管理員::設定工具提示文字
 
-設定文字和工具提示描述。
+設定工具提示的文本和說明。
 
 ```
 static void SetTooltipText(
@@ -175,28 +175,28 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>參數
 
-*pTI*<br/>
-[in]TOOLINFO 物件的指標。
+*Pti*<br/>
+[在]指向 TOOLINFO 物件的指標。
 
 *pToolTip*<br/>
-[in、 out]若要為其設定文字與描述的工具提示控制項的指標。
+[進出]指向工具提示控件的指標,用於設置文本和說明。
 
 *nType*<br/>
-[in]指定與此工具提示相關聯的控制項型別。
+[在]指定與此工具提示關聯的控制項類型。
 
-*strText*<br/>
-[in]要設定為工具提示文字的文字。
+*斯特文字*<br/>
+[在]要設定為工具提示文本的文本。
 
 *lpszDescr*<br/>
-[in]工具提示描述指標。 可以是 NULL。
+[在]指向工具提示說明的指標。 可以是 NULL。
 
 ### <a name="remarks"></a>備註
 
-值*n*必須是相同的值*n*參數[CTooltipManager::CreateToolTip](#createtooltip)當您建立工具提示。
+*nType*的值必須與[CTooltipManager 的](#createtooltip) *nType*參數的值相同:創建工具提示時創建工具提示。
 
-##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips
+## <a name="ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTool提示管理員::更新工具提示
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 void UpdateTooltips();

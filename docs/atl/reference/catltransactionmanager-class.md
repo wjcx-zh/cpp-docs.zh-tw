@@ -1,5 +1,5 @@
 ---
-title: CAtlTransactionManager 類別
+title: CAtl 交易管理員類別
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlTransactionManager
@@ -25,19 +25,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: d72867eaa449a20e676d4eddc4c94c02090334e5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c2814f963ea4814e0d7585e0e4d6dda26c1f04d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497725"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321330"
 ---
-# <a name="catltransactionmanager-class"></a>CAtlTransactionManager 類別
+# <a name="catltransactionmanager-class"></a>CAtl 交易管理員類別
 
-CAtlTransactionManager 類別提供核心交易管理員 (KTM) 函數的包裝函式。
+CAtl交易管理員類提供內核事務管理員 (KTM) 函數的包裝。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -51,50 +51,50 @@ class CAtlTransactionManager;
 
 |名稱|描述|
 |----------|-----------------|
-|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager 的析構函式。|
-|[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager 的構造函式。|
+|[*交易管理員](#dtor)|CAtl交易管理員析構函數。|
+|[CAtl 交易管理員](#catltransactionmanager)|CAtl交易管理器建構函數。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[關閉](#close)|關閉其中一個交易控制碼。|
-|[Commit](#commit)|要求認可交易。|
-|[建立](#create)|建立交易控制碼。|
-|[CreateFile](#createfile)|建立或開啟檔案、檔案資料流程或目錄做為交易作業。|
-|[DeleteFile](#deletefile)|刪除現有的檔案做為交易作業。|
-|[FindFirstFile](#findfirstfile)|在目錄中搜尋檔案或子目錄, 做為交易作業。|
-|[GetFileAttributes](#getfileattributes)|以交易作業的形式, 抓取指定檔案或目錄的檔案系統屬性。|
-|[GetFileAttributesEx](#getfileattributesex)|以交易作業的形式, 抓取指定檔案或目錄的檔案系統屬性。|
-|[GetHandle](#gethandle)|傳回交易控制碼。|
-|[IsFallback](#isfallback)|判斷是否已啟用 fallback 呼叫。|
-|[MoveFile](#movefile)|將現有的檔案或目錄 (包括其子系) 移動為交易作業。|
-|[RegCreateKeyEx](#regcreatekeyex)|建立指定的登錄機碼, 並將它與交易產生關聯。 如果索引鍵已經存在, 則函式會將它開啟。|
-|[RegDeleteKey](#regdeletekey)|從登錄的指定平臺特定視圖中, 將子機碼和其值刪除為交易作業。|
-|[RegOpenKeyEx](#regopenkeyex)|開啟指定的登錄機碼, 並將它與交易產生關聯。|
-|[回退](#rollback)|要求回復交易。|
-|[SetFileAttributes](#setfileattributes)|將檔案或目錄的屬性設定為交易作業。|
+|[關閉](#close)|關閉事務句柄的一個。|
+|[認可](#commit)|請求提交事務。|
+|[建立](#create)|創建事務句柄。|
+|[CreateFile](#createfile)|建立或打開檔案、檔案流或目錄作為事務操作。|
+|[DeleteFile](#deletefile)|將現有檔案刪除為事務操作。|
+|[尋找第一檔案](#findfirstfile)|將檔或子目錄搜索為已處理的操作。|
+|[取得檔案屬性](#getfileattributes)|檢索指定檔或目錄的檔案系統屬性作為事務操作。|
+|[取得檔案屬性Ex](#getfileattributesex)|檢索指定檔或目錄的檔案系統屬性作為事務操作。|
+|[取得手柄](#gethandle)|返回事務句柄。|
+|[是倒退](#isfallback)|確定是否啟用回退調用。|
+|[MoveFile](#movefile)|將現有檔案或目錄(包括其子檔)作為事務操作移動。|
+|[註冊創造鍵Ex](#regcreatekeyex)|創建指定的註冊表項並將其與事務關聯。 如果金鑰已存在,則函數將打開它。|
+|[註冊刪除鍵](#regdeletekey)|從註冊表的指定平臺特定視圖中刪除子鍵及其值,作為事務操作。|
+|[RegOpenKeyEx](#regopenkeyex)|打開指定的註冊表項並將其與事務關聯。|
+|[捲軸](#rollback)|請求回滾事務。|
+|[設定檔案屬性](#setfileattributes)|將檔案或目錄的屬性設置為事務處理操作。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[m_bFallback](#m_bfallback)|如果支援 fallback, 則為 TRUE;否則為 FALSE。|
-|[m_hTransaction](#m_htransaction)|交易控制碼。|
+|[m_bFallback](#m_bfallback)|如果支援回退,則為 TRUE;否則。|
+|[m_hTransaction](#m_htransaction)|事務句柄。|
 
 ## <a name="remarks"></a>備註
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
+[ATL::CAtl交易管理員](../../atl/reference/catltransactionmanager-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atltransactionmanager。h
+**標題:** atl交易管理員.h
 
-##  <a name="dtor"></a>  ~CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="dtor"></a>*交易管理員
 
-CAtlTransactionManager 的析構函式。
+CAtl交易管理員析構函數。
 
 ```
 virtual ~CAtlTransactionManager();
@@ -102,11 +102,11 @@ virtual ~CAtlTransactionManager();
 
 ### <a name="remarks"></a>備註
 
-在正常處理中, 會自動認可和關閉交易。 如果在例外狀況回溯期間呼叫了此函式, 則會回復和關閉交易。
+在正常處理中,事務將自動提交並關閉。 如果在異常展開期間調用析構函數,則事務將回滾並關閉。
 
-##  <a name="catltransactionmanager"></a>  CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtl 交易管理員
 
-CAtlTransactionManager 的構造函式。
+CAtl交易管理器建構函數。
 
 ```
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
@@ -114,17 +114,17 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>參數
 
-*bFallback*<br/>
-TRUE 表示支援 fallback。 如果交易函數失敗, 類別會自動呼叫「非交易」函式。 FALSE 表示沒有 "fallback" 呼叫。
+*b 回退*<br/>
+TRUE 表示支援回退。 如果事務處理的函數失敗,類將自動調用"非事務化"函數。 FALSE 表示沒有「回退」呼叫。
 
-*bAutoCreateTransaction*<br/>
-TRUE 表示交易處理常式會在此函式中自動建立。 FALSE 表示它不是。
+*b 自動建立交易*<br/>
+TRUE 表示事務處理程式是在建構函數中自動創建的。 FALSE 表示它不是。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="close"></a>關閉
+## <a name="close"></a><a name="close"></a>關閉
 
-關閉交易控制碼。
+關閉事務句柄。
 
 ```
 inline BOOL Close();
@@ -136,11 +136,11 @@ inline BOOL Close();
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`CloseHandle`會呼叫函數。 方法會在析構函式中自動呼叫。
+此包裝器呼叫函數`CloseHandle`。 該方法在析構函數中自動調用。
 
-##  <a name="commit"></a>Commit
+## <a name="commit"></a><a name="commit"></a>提交
 
-要求認可交易。
+請求提交事務。
 
 ```
 inline BOOL Commit();
@@ -152,11 +152,11 @@ inline BOOL Commit();
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`CommitTransaction`會呼叫函數。 方法會在析構函式中自動呼叫。
+此包裝器呼叫函數`CommitTransaction`。 該方法在析構函數中自動調用。
 
-##  <a name="create"></a>建立
+## <a name="create"></a><a name="create"></a>建立
 
-建立交易控制碼。
+創建事務句柄。
 
 ```
 inline BOOL Create();
@@ -168,11 +168,11 @@ inline BOOL Create();
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`CreateTransaction`會呼叫函數。 檢查
+此包裝器呼叫函數`CreateTransaction`。 檢查其
 
-##  <a name="createfile"></a>CreateFile
+## <a name="createfile"></a><a name="createfile"></a>建立檔案
 
-建立或開啟檔案、檔案資料流程或目錄做為交易作業。
+建立或打開檔案、檔案流或目錄作為事務操作。
 
 ```
 inline HANDLE CreateFile(
@@ -187,38 +187,38 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*<br/>
-要建立或開啟之物件的名稱。
+*lpFile 名稱*<br/>
+要建立或打開的物件的名稱。
 
-*dwDesiredAccess*<br/>
-物件的存取權, 可以摘要為讀取、寫入、兩者或兩者 (零)。 最常使用的值為 GENERIC_READ、GENERIC_WRITE 或兩者:GENERIC_READ &#124; GENERIC_WRITE.
+*dwddAccess*<br/>
+對對象的訪問,可以概括為讀取、寫入,兩者,或兩者(零)。 最常用的值是GENERIC_READ、GENERIC_WRITE 或兩者:GENERIC_READ&#124;GENERIC_WRITE。
 
 *dwShareMode*<br/>
-物件的共用模式, 可以是 [讀取]、[寫入]、[刪除]、[全部]、[全部] 或 [無]:0、FILE_SHARE_DELETE、FILE_SHARE_READ、FILE_SHARE_WRITE。
+對象的共用模式,可以讀取、寫入、刪除所有這些內容,或者無:0、FILE_SHARE_DELETE、FILE_SHARE_READFILE_SHARE_WRITE。
 
-*lpSecurityAttributes*<br/>
-SECURITY ATTRIBUTES 這個結構的指標, 其中包含選擇性的安全描述項, 而且也會決定子進程是否可以繼承傳回的控制碼。 參數可以是 Null。
+*lp安全屬性*<br/>
+指向SECURITY_ATTRIBUTES結構的指標,其中包含可選的安全描述符,並確定返回的句柄是否可以由子進程繼承。 參數可以是 NULL。
 
-*dwCreationDisposition*<br/>
-要對存在但不存在的檔案採取的動作。 這個參數必須是下列其中一個不能結合的值:CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING 或 TRUNCATE_EXISTING。
+*德沃創意*<br/>
+要對存在和不存在的檔執行的操作。 此參數必須是無法組合的以下值之一:CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING或TRUNCATE_EXISTING。
 
-*dwFlagsAndAttributes*<br/>
-檔案屬性和旗標。 這個參數可以包含可用檔案屬性的任意組合 (FILE_ATTRIBUTE_ *)。 所有其他的檔案屬性都會覆寫 FILE_ATTRIBUTE_NORMAL。 這個參數也可以包含用來控制緩衝行為\*、存取模式和其他特殊用途旗標的旗標 (FILE_FLAG_) 組合。 這些會結合任何 FILE_ATTRIBUTE_\*值。
+*dwflags 與屬性*<br/>
+檔屬性和標誌。 此參數可以包括可用檔案屬性 (FILE_ATTRIBUTE_* 的任意組合。 所有其他文件屬性都覆蓋FILE_ATTRIBUTE_NORMAL。 此參數還可以包含用於控制緩衝行為、訪問\*模式和其他特殊用途標誌的標誌 (FILE_FLAG_ ) 的組合。 這些值與任何FILE_ATTRIBUTE_\*值結合使用。
 
-*hTemplateFile*<br/>
-具有 GENERIC_READ 存取權限之範本檔案的有效控制碼。 範本檔案提供所建立之檔案的檔案屬性和擴充屬性。 這個參數可以是 Null。
+*h範本檔案*<br/>
+具有GENERIC_READ訪問許可權的範本檔的有效句柄。 樣本檔為正在創建的檔案提供文件屬性和擴展屬性。 此參數可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-傳回可用於存取物件的控制碼。
+返回可用於訪問物件的句柄。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`CreateFileTransacted`會呼叫函數。
+此包裝器呼叫函數`CreateFileTransacted`。
 
-##  <a name="deletefile"></a>  DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a>刪除檔案
 
-刪除現有的檔案做為交易作業。
+將現有檔案刪除為事務操作。
 
 ```
 inline BOOL DeleteFile(LPCTSTR lpFileName);
@@ -226,16 +226,16 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*<br/>
+*lpFile 名稱*<br/>
 要刪除的檔案的名稱。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`DeleteFileTransacted`會呼叫函數。
+此包裝器呼叫函數`DeleteFileTransacted`。
 
-##  <a name="findfirstfile"></a>FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a>尋找第一檔案
 
-在目錄中搜尋檔案或子目錄, 做為交易作業。
+將檔或子目錄搜索為已處理的操作。
 
 ```
 inline HANDLE FindFirstFile(
@@ -245,23 +245,23 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*<br/>
-目錄或路徑, 以及要搜尋的檔案名。 這個參數可以包含萬用字元, 例如星號 (*) 或問號 ()。
+*lpFile 名稱*<br/>
+要搜索的目錄或路徑以及檔名。 此參數可以包括通配符,如星號 (*) 或問號 ()。
 
-*pNextInfo*<br/>
-WIN32_FIND_DATA 結構的指標, 它會接收找到的檔案或子目錄的相關資訊。
+*pNext資訊*<br/>
+指向WIN32_FIND_DATA結構的指標,該結構接收有關找到的檔或子目錄的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功, 則傳回值是用於後續呼叫`FindNextFile`或`FindClose`的搜尋控制碼。 如果函式失敗, 或無法在*lpFileName*參數中從搜尋字串尋找檔案, 則傳回值會是 INVALID_HANDLE_VALUE。
+如果函數成功,則返回值是後續調用`FindNextFile``FindClose`或 中使用的搜索句柄。 如果函數失敗或無法從*lpFileName*參數中的搜尋字串中尋找檔案,則傳回值INVALID_HANDLE_VALUE。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`FindFirstFileTransacted`會呼叫函數。
+此包裝器呼叫函數`FindFirstFileTransacted`。
 
-##  <a name="getfileattributes"></a>GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a>取得檔案屬性
 
-以交易作業的形式, 抓取指定檔案或目錄的檔案系統屬性。
+檢索指定檔或目錄的檔案系統屬性作為事務操作。
 
 ```
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
@@ -269,16 +269,16 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*<br/>
+*lpFile 名稱*<br/>
 檔案或目錄的名稱。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`GetFileAttributesTransacted`會呼叫函數。
+此包裝器呼叫函數`GetFileAttributesTransacted`。
 
-##  <a name="getfileattributesex"></a>  GetFileAttributesEx
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>取得檔案屬性Ex
 
-以交易作業的形式, 抓取指定檔案或目錄的檔案系統屬性。
+檢索指定檔或目錄的檔案系統屬性作為事務操作。
 
 ```
 inline BOOL GetFileAttributesEx(
@@ -289,22 +289,22 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*<br/>
+*lpFile 名稱*<br/>
 檔案或目錄的名稱。
 
 *fInfoLevelId*<br/>
-要取出的屬性資訊層級。
+要檢索的屬性信息級別。
 
-*lpFileInformation*<br/>
-接收屬性資訊之緩衝區的指標。 儲存在這個緩衝區中的屬性資訊類型是由*fInfoLevelId*的值決定。 如果*fInfoLevelId*參數為 GetFileExInfoStandard, 則此參數會指向 WIN32_FILE_ATTRIBUTE_DATA 結構。
+*lpFile 資訊*<br/>
+指向接收屬性資訊的緩衝區的指標。 存儲在此緩衝區中的屬性資訊的類型由*fInfoLevelId*的值決定。 如果*fInfoLevelId*參數為 GetFileExInfoStandard,則此參數指向WIN32_FILE_ATTRIBUTE_DATA結構。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`GetFileAttributesTransacted`會呼叫函數。
+此包裝器呼叫函數`GetFileAttributesTransacted`。
 
-##  <a name="gethandle"></a>  GetHandle
+## <a name="gethandle"></a><a name="gethandle"></a>取得手柄
 
-傳回交易控制碼。
+返回事務句柄。
 
 ```
 HANDLE GetHandle() const;
@@ -312,13 +312,13 @@ HANDLE GetHandle() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回類別的交易控制碼。 如果未附加至`CAtlTransactionManager`控制碼, 則會傳回 Null。
+返回類的事務句柄。 如果 未附加`CAtlTransactionManager`到句柄,則傳回 NULL。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isfallback"></a>IsFallback
+## <a name="isfallback"></a><a name="isfallback"></a>是倒退
 
-判斷是否已啟用 fallback 呼叫。
+確定是否啟用回退調用。
 
 ```
 BOOL IsFallback() const;
@@ -326,13 +326,13 @@ BOOL IsFallback() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果類別支援回溯呼叫, 則傳回 TRUE。 否則為 FALSE。
+返回 TRUE 是類支援回退調用。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_bfallback"></a>  m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
 
-如果支援 fallback, 則為 TRUE;否則為 FALSE。
+如果支援回退,則為 TRUE;否則。
 
 ```
 BOOL m_bFallback;
@@ -340,9 +340,9 @@ BOOL m_bFallback;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_htransaction"></a>  m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
 
-交易控制碼。
+事務句柄。
 
 ```
 HANDLE m_hTransaction;
@@ -350,9 +350,9 @@ HANDLE m_hTransaction;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="movefile"></a>  MoveFile
+## <a name="movefile"></a><a name="movefile"></a>移動檔案
 
-將現有的檔案或目錄 (包括其子系) 移動為交易作業。
+將現有檔案或目錄(包括其子檔)作為事務操作移動。
 
 ```
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
@@ -360,19 +360,19 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>參數
 
-*lpOldFileName*<br/>
-本機電腦上現有檔案或目錄的目前名稱。
+*lpOld 檔案名稱*<br/>
+本地電腦上的現有檔案或目錄的目前名稱。
 
-*lpNewFileName*<br/>
-檔案或目錄的新名稱。 這個名稱不能已經存在。 新檔案可能在不同的檔案系統或磁片磁碟機上。 新的目錄必須位於相同的磁片磁碟機上。
+*lpNewFile 名稱*<br/>
+檔案或目錄的新名稱。 此名稱必須不存在。 新檔可能位於其他文件系統或驅動器上。 新目錄必須位於同一驅動器上。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`MoveFileTransacted`會呼叫函數。
+此包裝器呼叫函數`MoveFileTransacted`。
 
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>註冊創造鍵Ex
 
-建立指定的登錄機碼, 並將它與交易產生關聯。 如果索引鍵已經存在, 則函式會將它開啟。
+創建指定的註冊表項並將其與事務關聯。 如果金鑰已存在,則函數將打開它。
 
 ```
 inline LSTATUS RegCreateKeyEx(
@@ -389,44 +389,44 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>參數
 
-*hKey*<br/>
-開啟登錄機碼的控制碼。
+*h鍵*<br/>
+打開註冊表項的句柄。
 
-*lpSubKey*<br/>
-此函式開啟或建立的子機碼名稱。
+*lpSubkey*<br/>
+此函數打開或創建的子鍵的名稱。
 
-*dwReserved*<br/>
-這個參數是保留的, 而且必須為零。
+*dw 保留*<br/>
+此參數已保留,必須為零。
 
 *lpClass*<br/>
-此索引鍵的使用者定義類別。 可以忽略這個參數。 這個參數可以是 Null。
+此鍵的使用者定義類。 可以忽略此參數。 此參數可以是 NULL。
 
 *dwOptions*<br/>
-這個參數可以是下列其中一個值:REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
+此參數可以是以下值之一:REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE 或REG_OPTION_VOLATILE。
 
-*samDesired*<br/>
-遮罩, 指定金鑰的存取權限。
+*薩姆·阿喬*<br/>
+指定金鑰的存取權限的掩碼。
 
-*lpSecurityAttributes*<br/>
-SECURITY ATTRIBUTES 這個結構的指標, 判斷子進程是否可以繼承傳回的控制碼。 如果*lpSecurityAttributes*為 Null, 則無法繼承控制碼。
+*lp安全屬性*<br/>
+SECURITY ATTRIBUTES 結構的指標，這個結構會判斷子處理序是否可以繼承傳回的控制代碼。 如果*lpSecurity 屬性*為 NULL,則無法繼承該句柄。
 
 *phkResult*<br/>
-可接收已開啟或已建立索引鍵控制碼之變數的指標。 如果索引鍵不是其中一個預先定義的登錄機碼, `RegCloseKey`則在您完成使用控制碼之後, 請呼叫函式。
+指向接收打開或創建的鍵的句柄的變數的指標。 如果密鑰不是預定義的註冊表項之一,則在使用完句柄`RegCloseKey`后調用該函數。
 
-*lpdwDisposition*<br/>
-可接收下列其中一個配置值之變數的指標:REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
+*lpdw 處理*<br/>
+指向接收以下處置值之一的變數的指標:REG_CREATED_NEW_KEY或REG_OPENED_EXISTING_KEY。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功, 則傳回值為 ERROR_SUCCESS。 如果函式失敗, 則傳回值為 Winerror.h 中定義的非零錯誤碼。
+如果函數成功,則返回值ERROR_SUCCESS。 如果函數失敗,返回值是在 Winerror.h 中定義的非零錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`RegCreateKeyTransacted`會呼叫函數。
+此包裝器呼叫函數`RegCreateKeyTransacted`。
 
-##  <a name="regdeletekey"></a>RegDeleteKey
+## <a name="regdeletekey"></a><a name="regdeletekey"></a>註冊刪除鍵
 
-從登錄的指定平臺特定視圖中, 將子機碼和其值刪除為交易作業。
+從註冊表的指定平臺特定視圖中刪除子鍵及其值,作為事務操作。
 
 ```
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
@@ -434,22 +434,22 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*hKey*|開啟登錄機碼的控制碼。|
-|*lpSubKey*|要刪除之金鑰的名稱。|
+|*h鍵*|打開註冊表項的句柄。|
+|*lpSubkey*|要刪除的鍵的名稱。|
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功, 則傳回值為 ERROR_SUCCESS。 如果函式失敗, 則傳回值為 Winerror.h 中定義的非零錯誤碼。
+如果函數成功,則返回值ERROR_SUCCESS。 如果函數失敗,返回值是在 Winerror.h 中定義的非零錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`RegDeleteKeyTransacted`會呼叫函數。
+此包裝器呼叫函數`RegDeleteKeyTransacted`。
 
-##  <a name="regopenkeyex"></a>RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx
 
-開啟指定的登錄機碼, 並將它與交易產生關聯。
+打開指定的註冊表項並將其與事務關聯。
 
 ```
 inline LSTATUS RegOpenKeyEx(
@@ -462,32 +462,32 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>參數
 
-*hKey*<br/>
-開啟登錄機碼的控制碼。
+*h鍵*<br/>
+打開註冊表項的句柄。
 
-*lpSubKey*<br/>
-要開啟之登錄子機碼的名稱。
+*lpSubkey*<br/>
+要打開的註冊表子鍵的名稱。
 
 *ulOptions*<br/>
-這個參數是保留的, 而且必須為零。
+此參數已保留,必須為零。
 
-*samDesired*<br/>
-遮罩, 指定金鑰的存取權限。
+*薩姆·阿喬*<br/>
+指定金鑰的存取權限的掩碼。
 
 *phkResult*<br/>
-可接收已開啟或已建立索引鍵控制碼之變數的指標。 如果索引鍵不是其中一個預先定義的登錄機碼, `RegCloseKey`則在您完成使用控制碼之後, 請呼叫函式。
+指向接收打開或創建的鍵的句柄的變數的指標。 如果密鑰不是預定義的註冊表項之一,則在使用完句柄`RegCloseKey`后調用該函數。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功, 則傳回值為 ERROR_SUCCESS。 如果函式失敗, 則傳回值為 Winerror.h 中定義的非零的錯誤碼。
+如果函數成功,則返回值ERROR_SUCCESS。 如果函數失敗,返回值是在 Winerror.h 中定義的非零錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`RegOpenKeyTransacted`會呼叫函數。
+此包裝器呼叫函數`RegOpenKeyTransacted`。
 
-##  <a name="rollback"></a>回退
+## <a name="rollback"></a><a name="rollback"></a>捲軸
 
-要求回復交易。
+請求回滾事務。
 
 ```
 inline BOOL Rollback();
@@ -499,11 +499,11 @@ inline BOOL Rollback();
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`RollbackTransaction`會呼叫函數。
+此包裝器呼叫函數`RollbackTransaction`。
 
-##  <a name="setfileattributes"></a>SetFileAttributes
+## <a name="setfileattributes"></a><a name="setfileattributes"></a>設定檔案屬性
 
-將檔案或目錄的屬性設定為交易作業。
+將檔案或目錄的屬性設置為事務處理操作。
 
 ```
 inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
@@ -511,15 +511,15 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*<br/>
+*lpFile 名稱*<br/>
 檔案或目錄的名稱。
 
 *dwAttributes*<br/>
-要為檔案設定的檔案屬性。 如需詳細資訊, 請參閱[SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw)。
+要為檔設定的文件屬性。 關於詳細資訊,請參考[設定檔屬性轉換](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw)。
 
 ### <a name="remarks"></a>備註
 
-此包裝函式`SetFileAttributesTransacted`會呼叫函數。
+此包裝器呼叫函數`SetFileAttributesTransacted`。
 
 ## <a name="see-also"></a>另請參閱
 

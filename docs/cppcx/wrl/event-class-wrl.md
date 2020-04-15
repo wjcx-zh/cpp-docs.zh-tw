@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 2d36b4fa3d1824f43e0cfafe55c439a6bdeccb6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85b4c2d1f1a27e90a65e47aa749e079f4aa08739
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398546"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371527"
 ---
 # <a name="event-class-wrl"></a>事件類別 (WRL)
 
@@ -34,15 +34,15 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 名稱                   | 描述
 ---------------------- | ------------------------------------------------
-[Event::Event](#event) | 初始化 `Event` 類別的新執行個體。
+[事件:事件](#event) | 將 `Event` 類別的新執行個體初始化。
 
 ### <a name="public-operators"></a>公用運算子
 
 名稱                                 | 描述
 ------------------------------------ | ------------------------------------------------------------------------
-[Event::operator=](#operator-assign) | 指派指定的`Event`參考目前`Event`執行個體。
+[事件::操作員*](#operator-assign) | 將指定的`Event`引用分配給`Event`當前 實例。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `HandleT`
 
@@ -50,13 +50,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft::WRL::Wrappers
+**命名空間:** 微軟::WRL:包裝
 
-## <a name="event"></a>Event::Event
+## <a name="eventevent"></a><a name="event"></a>事件:事件
 
-初始化 `Event` 類別的新執行個體。
+將 `Event` 類別的新執行個體初始化。
 
 ```cpp
 explicit Event(
@@ -69,12 +69,12 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-事件的控制代碼。 根據預設， *h*初始化為`nullptr`。
+*H*<br/>
+事件的控制代碼。 預設情況下 *,h*初始`nullptr`化到 。
 
-## <a name="operator-assign"></a>Event::operator=
+## <a name="eventoperator"></a><a name="operator-assign"></a>事件::操作員*
 
-指派指定的`Event`參考目前`Event`執行個體。
+將指定的`Event`引用分配給`Event`當前 實例。
 
 ```cpp
 WRL_NOTHROW Event& operator=(
@@ -84,9 +84,9 @@ WRL_NOTHROW Event& operator=(
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-若要為右值參考`Event`執行個體。
+*H*<br/>
+實例的`Event`rvalue 引用。
 
 ### <a name="return-value"></a>傳回值
 
-目前的指標`Event`執行個體。
+指向當前`Event`實例的指標。

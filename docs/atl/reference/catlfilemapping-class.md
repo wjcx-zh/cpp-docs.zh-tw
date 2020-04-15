@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMapping 類別
+title: CAtl 檔案映射類別
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMapping
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca46ccdacf5ea24f1de26cdc75bf808c4ecfaa40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247165"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318964"
 ---
-# <a name="catlfilemapping-class"></a>CAtlFileMapping 類別
+# <a name="catlfilemapping-class"></a>CAtl 檔案映射類別
 
-此類別代表記憶體對應檔案，加入的方法中的轉換運算子[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。
+此類表示記憶體映射檔,將強制轉換運算符添加到[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)的方法。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +31,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-用於轉換運算子的資料型別。
+用於強制轉換運算符的資料類型。
 
 ## <a name="members"></a>成員
 
@@ -39,25 +39,25 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlFileMapping::operator T *](#operator_t_star)|允許隱含轉換`CAtlFileMapping`物件至`T*`。|
+|[CAtlFile映射::運算元 T*](#operator_t_star)|允許將`CAtlFileMapping`物件隱式轉換`T*`為 。|
 
 ## <a name="remarks"></a>備註
 
-此類別會加入單一的轉換運算子，以允許隱含轉換`CAtlFileMapping`物件至`T*`。 基底類別，提供其他成員[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。
+此新增單個強制轉換運算子,讓允許`CAtlFileMapping`將物件隱式轉換為`T*`。 其他成員由基類[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)提供。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)
+[CAtlFile 映射庫](../../atl/reference/catlfilemappingbase-class.md)
 
 `CAtlFileMapping`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlfile.h
+**標題:** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T*
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFile映射::運算元 T*
 
-允許隱含轉換`CAtlFileMapping`物件至`T*`。
+允許將`CAtlFileMapping`物件隱式轉換`T*`為 。
 
 ```
 operator T*() const throw();
@@ -65,13 +65,13 @@ operator T*() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回`T*`記憶體對應檔案開頭的指標。
+返回指向`T*`記憶體映射檔的開頭的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)並轉換為傳回的指標`T*`何處*T*是做為範本參數，這個類別的型別。
+調用[CAtlFileMappingBase:getData](../../atl/reference/catlfilemappingbase-class.md#getdata)並將返回的指標重新解釋`T*`為*T*是用作此類範本參數的類型的類型。
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlFileMappingBase 類別](../../atl/reference/catlfilemappingbase-class.md)<br/>
+[CAtlFile對應基質](../../atl/reference/catlfilemappingbase-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

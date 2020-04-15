@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 8990566fb3a700d61de324f725dea3ec00006d04
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f3be8cc3ab9a0f36027cc38c88f026570d1fdb55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370894"
 ---
 # <a name="accelerator_view-class"></a>accelerator_view 類別
 
-代表C++ AMP 資料平行加速器上的虛擬裝置抽象化。
+表示 C++ AMP 資料並行加速器上的虛擬設備抽象。
 
 ## <a name="syntax"></a>語法
 
@@ -44,61 +44,61 @@ class accelerator_view;
 
 |名稱|描述|
 |----------|-----------------|
-|[accelerator_view 的構造函式](#ctor)|初始化 `accelerator_view` 類別的新執行個體。|
-|[~ accelerator_view 的析構函式](#dtor)|終結 `accelerator_view` 物件。|
+|[accelerator_view建構函數](#ctor)|將 `accelerator_view` 類別的新執行個體初始化。|
+|[*accelerator_view析構圖](#dtor)|銷毀`accelerator_view`物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[create_marker](#create_marker)|傳回未來追蹤目前為止送到這個 `accelerator_view` 物件之所有命令的完成。|
-|[flush](#flush)|將所有已排入佇列至 `accelerator_view` 物件的暫止命令提交至加速器進行執行。|
+|[create_marker](#create_marker)|返回一個未來,以跟蹤到目前為止提交給此`accelerator_view`物件的所有命令的完成情況。|
+|[沖洗](#flush)|將所有排隊到物件等待`accelerator_view`執行的掛起命令提交到加速器執行。|
 |[get_accelerator](#get_accelerator)|傳回 `accelerator` 物件的 `accelerator_view` 物件。|
-|[get_is_auto_selection](#get_is_auto_selection)|傳回布林值，指出當 `accelerator_view` 物件傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時，執行時間是否會自動選取適當的快速鍵。|
-|[get_is_debug](#get_is_debug)|傳回布林值，指出 `accelerator_view` 物件是否已啟用 DEBUG 層來進行大量錯誤報表。|
-|[get_queuing_mode](#get_queuing_mode)|傳回 `accelerator_view` 物件的佇列模式。|
-|[get_version](#get_version)|傳回 `accelerator_view`的版本。|
-|[等候](#wait)|等待提交至 `accelerator_view` 物件的所有命令完成。|
+|[get_is_auto_selection](#get_is_auto_selection)|返回一個布爾值,指示當`accelerator_view`物件傳遞給[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時,運行時是否將自動選擇適當的快速鍵。|
+|[get_is_debug](#get_is_debug)|返回一個布爾值,指示`accelerator_view`物件是否啟用了 DEBUG 層以進行大量錯誤報告。|
+|[get_queuing_mode](#get_queuing_mode)|返回`accelerator_view`物件的排隊模式。|
+|[get_version](#get_version)|傳回的`accelerator_view`版本 。|
+|[等](#wait)|等待提交到`accelerator_view`物件的所有命令完成。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[operator!=](#operator_neq)|比較這個 `accelerator_view` 物件與另一個，如果相同，則傳回**false** ;否則，會傳回**true**。|
-|[operator=](#operator_eq)|將指定 `accelerator_view` 物件的內容複寫到這個。|
-|[operator==](#operator_eq_eq)|比較這個 `accelerator_view` 物件與另一個，如果相同，則傳回**true** ;否則，會傳回**false**。|
+|[操作員!](#operator_neq)|將此`accelerator_view`物件與另一個對象進行比較,如果物件相同,則返回**false;** 否則,傳回**true**。|
+|[運算子*](#operator_eq)|將指定`accelerator_view`物件的內容複製到此物件中。|
+|[運算子*](#operator_eq_eq)|將此`accelerator_view`物件與另一個對象進行比較,如果物件相同,則返回**true;** 否則,傳回**false**。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[加速器](#accelerator)|取得 `accelerator` 物件的 `accelerator_view` 物件。|
-|[is_auto_selection](#is_auto_selection)|取得布林值，指出當 `accelerator_view` 物件傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時，執行時間是否會自動選取適當的快速鍵。|
-|[is_debug](#is_debug)|取得布林值，指出 `accelerator_view` 物件是否已啟用 DEBUG 層來進行大量錯誤報表。|
-|[queuing_mode](#queuing_mode)|取得 `accelerator_view` 物件的佇列模式。|
-|[version](#version)|取得加速器的版本。|
+|[加速器](#accelerator)|取得 `accelerator_view` 物件的 `accelerator` 物件。|
+|[is_auto_selection](#is_auto_selection)|獲取布爾值,指示當`accelerator_view`物件傳遞到[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時,運行時是否將自動選擇適當的加速器。|
+|[is_debug](#is_debug)|獲取布林值,`accelerator_view`指示 物件是否已啟用 DEBUG 層以進行大量錯誤報告。|
+|[queuing_mode](#queuing_mode)|獲取`accelerator_view`對象的排隊模式。|
+|[version](#version)|獲取加速器的版本。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `accelerator_view`
 
 ### <a name="remarks"></a>備註
 
-`accelerator_view` 物件代表快速鍵的邏輯獨立視圖。 單一實體計算裝置可以有多個邏輯、隔離的 `accelerator_view` 物件。 每個加速器都有預設的 `accelerator_view` 物件。 可以建立其他 `accelerator_view` 物件。
+物件`accelerator_view`表示加速器的邏輯隔離視圖。 單個物理計算設備可以具有許多邏輯隔離`accelerator_view`物件。 每個加速器都有一個`accelerator_view`默認物件。 可以`accelerator_view`創建其他物件。
 
-實體裝置可以在許多用戶端執行緒之間共用。 用戶端執行緒可以合作使用相同的 `accelerator_view` 加速器物件，或每個用戶端都可以透過獨立的 `accelerator_view` 物件與計算裝置進行通訊，以與其他用戶端執行緒隔離。
+物理設備可以在許多用戶端線程之間共用。 用戶端線程可以協同使用加速器的同一`accelerator_view`物件,或者每個用戶端可以`accelerator_view`通過獨立 物件與計算設備通信,以便與其他用戶端線程隔離。
 
-`accelerator_view` 物件可以有兩個[Queuing_mode 列舉](concurrency-namespace-enums-amp.md#queuing_mode)狀態的其中一種。 如果佇列模式是 `immediate`，`copy` 和 `parallel_for_each` 等命令會在傳回給呼叫者時立即傳送至對應的加速器裝置。 如果佇列模式是 `deferred`，這類命令會在對應至 `accelerator_view` 物件的命令佇列上排入佇列。 在呼叫 `flush()` 之前，命令實際上不會傳送至裝置。
+物件`accelerator_view`可以具有兩[個queuing_mode枚舉](concurrency-namespace-enums-amp.md#queuing_mode)狀態之一。 如果佇列模式為`immediate`,則`copy`命令`parallel_for_each`, 如和的命令在返回調用方後立即發送到相應的加速器設備。 如果排隊模式為`deferred`,則此類命令在對應`accelerator_view`於 物件的命令佇列上排隊。 在呼叫命令之前`flush()`,實際上不會將命令發送到設備。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amprt。h
+**標題:** amprt.h
 
 **命名空間：** 並行
 
-## <a name="accelerator"></a>加速器
+## <a name="accelerator"></a><a name="accelerator"></a>加速器
 
-取得 accelerator_view 物件的快速鍵物件。
+獲取accelerator_view物件的快速鍵物件。
 
 ### <a name="syntax"></a>語法
 
@@ -106,9 +106,9 @@ class accelerator_view;
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
 ```
 
-## <a name="ctor"></a>accelerator_view
+## <a name="accelerator_view"></a><a name="ctor"></a>accelerator_view
 
-藉由複製現有的 `accelerator_view` 物件，初始化 accelerator_view 類別的新實例。
+通過複製現有`accelerator_view`對象來初始化accelerator_view類的新實例。
 
 ### <a name="syntax"></a>語法
 
@@ -118,12 +118,12 @@ accelerator_view( const accelerator_view & other );
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
+*其他*<br/>
 要複製的 `accelerator_view` 物件。
 
-## <a name="create_marker"></a>create_marker
+## <a name="create_marker"></a><a name="create_marker"></a>create_marker
 
-傳回未來追蹤目前為止送到這個 `accelerator_view` 物件之所有命令的完成。
+返回一個未來,以跟蹤到目前為止提交給此`accelerator_view`物件的所有命令的完成情況。
 
 ### <a name="syntax"></a>語法
 
@@ -133,11 +133,11 @@ concurrency::completion_future create_marker();
 
 ### <a name="return-value"></a>傳回值
 
-未來追蹤到目前為止提交到這個 `accelerator_view` 物件的所有命令是否完成。
+跟蹤到目前為止提交給此`accelerator_view`物件的所有命令的完成情況。
 
-## <a name="flush"></a>排清
+## <a name="flush"></a>flush
 
-將所有已排入佇列至 accelerator_view 物件的暫止命令提交至加速器進行執行。
+將所有排隊到accelerator_view物件等待執行的命令提交到加速器執行。
 
 ### <a name="syntax"></a>語法
 
@@ -149,9 +149,9 @@ void flush();
 
 傳回 `void`。
 
-## <a name="get_accelerator"></a>get_accelerator
+## <a name="get_accelerator"></a><a name="get_accelerator"></a>get_accelerator
 
-傳回 accelerator_view 物件的快速鍵物件。
+返回accelerator_view物件的快速鍵物件。
 
 ### <a name="syntax"></a>語法
 
@@ -161,11 +161,11 @@ accelerator get_accelerator() const;
 
 ### <a name="return-value"></a>傳回值
 
-Accelerator_view 物件的快速鍵物件。
+accelerator_view物件的快捷鍵物件。
 
-## <a name="get_is_auto_selection"></a>get_is_auto_selection
+## <a name="get_is_auto_selection"></a><a name="get_is_auto_selection"></a>get_is_auto_selection
 
-傳回布林值，指出當 accelerator_view 傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時，執行時間是否會自動選取適當的快速鍵。
+返回一個布爾值,指示當accelerator_view傳遞到[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時,運行時是否將自動選擇適當的加速器。
 
 ### <a name="syntax"></a>語法
 
@@ -175,11 +175,11 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果執行時間會自動選取適當的快速鍵，則為**true** ;否則**為 false**。
+如果執行時將自動選擇適當的加速器,**則為 true;** 否則,**假**。
 
-## <a name="get_is_debug"></a>get_is_debug
+## <a name="get_is_debug"></a><a name="get_is_debug"></a>get_is_debug
 
-傳回布林值，指出 accelerator_view 物件是否已啟用 DEBUG 層來進行大量錯誤報表。
+返回一個布爾值,指示accelerator_view物件是否已啟用 DEBUG 層以進行大量錯誤報告。
 
 ### <a name="syntax"></a>語法
 
@@ -189,11 +189,11 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>傳回值
 
-布林值，指出 `accelerator_view` 物件是否已啟用 DEBUG 層來進行大量錯誤報表。
+一個布爾值,指示`accelerator_view`物件是否啟用了 DEBUG 層以進行大量錯誤報告。
 
-## <a name="get_queuing_mode"></a>get_queuing_mode
+## <a name="get_queuing_mode"></a><a name="get_queuing_mode"></a>get_queuing_mode
 
-傳回 accelerator_view 物件的佇列模式。
+返回accelerator_view物件的排隊模式。
 
 ### <a name="syntax"></a>語法
 
@@ -203,11 +203,11 @@ queuing_mode get_queuing_mode() const;
 
 ### <a name="return-value"></a>傳回值
 
-`accelerator_view` 物件的佇列模式。
+`accelerator_view`對象的排隊模式。
 
-## <a name="get_version"></a>get_version
+## <a name="get_version"></a><a name="get_version"></a>get_version
 
-傳回 accelerator_view 的版本。
+返回accelerator_view的版本。
 
 ### <a name="syntax"></a>語法
 
@@ -219,9 +219,9 @@ unsigned int get_version() const;
 
 `accelerator_view` 的版本。
 
-## <a name="is_auto_selection"></a>is_auto_selection
+## <a name="is_auto_selection"></a><a name="is_auto_selection"></a>is_auto_selection
 
-取得布林值，指出當 accelerator_view 傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時，執行時間是否會自動選取適當的快速鍵。
+獲取布爾值,指示當accelerator_view傳遞到[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)時,運行時是否將自動選擇適當的加速器。
 
 ### <a name="syntax"></a>語法
 
@@ -229,7 +229,7 @@ unsigned int get_version() const;
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="is_debug"></a>is_debug
+## <a name="is_debug"></a><a name="is_debug"></a>is_debug
 
 取得布林值，該值會指出 accelerator_view 物件是否已啟用 DEBUG 層以提供更詳細的錯誤報告。
 
@@ -239,9 +239,9 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-## <a name="operator_neq"></a>operator！ =
+## <a name="operator"></a><a name="operator_neq"></a>操作員!
 
-比較這個 accelerator_view 物件與另一個，如果相同，則傳回**false** ;否則，會傳回**true**。
+將此accelerator_view物件與另一個對象進行比較,如果物件相同,則返回**false;** 否則,傳回**true**。
 
 ### <a name="syntax"></a>語法
 
@@ -251,16 +251,16 @@ bool operator!= ( const accelerator_view & other ) const;
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
-要與這個比較的 `accelerator_view` 物件。
+*其他*<br/>
+要`accelerator_view`與此比較的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個物件相同，則為**false** ;否則**為 true**。
+如果兩個物件相同,**則為 false;** 否則,**真**。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>運算子*
 
-將指定 accelerator_view 物件的內容複寫到這個。
+將指定accelerator_view物件的內容複製到此物件中。
 
 ### <a name="syntax"></a>語法
 
@@ -270,16 +270,16 @@ accelerator_view & operator= ( const accelerator_view & other );
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
-要複製的來源 `accelerator_view` 物件。
+*其他*<br/>
+要`accelerator_view`複製的物件。
 
 ### <a name="return-value"></a>傳回值
 
-已修改之 `accelerator_view` 物件的參考。
+對修改`accelerator_view`物件的引用。
 
-## <a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a>運算子*
 
-比較這個 accelerator_view 物件與另一個，如果相同，則傳回**true** ;否則，會傳回**false**。
+將此accelerator_view物件與另一個對象進行比較,如果物件相同,則返回**true;** 否則,傳回**false**。
 
 ### <a name="syntax"></a>語法
 
@@ -289,16 +289,16 @@ bool operator== ( const accelerator_view & other ) const;
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
-要與這個比較的 `accelerator_view` 物件。
+*其他*<br/>
+要`accelerator_view`與此比較的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個物件相同，則為**true** ;否則**為 false**。
+如果兩個物件相同,**則為 true;** 否則,**假**。
 
-## <a name="queuing_mode"></a>queuing_mode
+## <a name="queuing_mode"></a><a name="queuing_mode"></a>queuing_mode
 
-取得 accelerator_view 物件的佇列模式。
+獲取accelerator_view對象的排隊模式。
 
 ### <a name="syntax"></a>語法
 
@@ -306,9 +306,9 @@ bool operator== ( const accelerator_view & other ) const;
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;
 ```
 
-## <a name="version"></a>版本
+## <a name="version"></a>version
 
-取得 accelerator_view 的版本。
+獲取accelerator_view的版本。
 
 ### <a name="syntax"></a>語法
 
@@ -318,7 +318,7 @@ __declspec(property(get= get_version)) unsigned int version;
 
 ## <a name="wait"></a>wait
 
-等待提交至 accelerator_view 物件的所有命令完成。
+等待提交到物件accelerator_view的所有命令完成。
 
 ### <a name="syntax"></a>語法
 
@@ -332,11 +332,11 @@ void wait();
 
 ### <a name="remarks"></a>備註
 
-如果 `immediate`[queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) ，這個方法會立即傳回，而不會封鎖。
+如果[queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)queuing_mode`immediate`為 ,則此方法將立即返回而不阻塞。
 
-## <a name="dtor"></a>~ accelerator_view
+## <a name="accelerator_view"></a><a name="dtor"></a>*accelerator_view
 
-終結 accelerator_view 物件。
+銷毀accelerator_view物件。
 
 ### <a name="syntax"></a>語法
 
@@ -346,4 +346,4 @@ void wait();
 
 ## <a name="see-also"></a>另請參閱
 
-[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[併發命名空間(C++ AMP)](concurrency-namespace-cpp-amp.md)

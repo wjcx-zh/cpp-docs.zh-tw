@@ -1,6 +1,6 @@
 ---
 title: _strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnicoll_l
 - _mbsnicoll
@@ -8,6 +8,12 @@ api_name:
 - _strnicoll
 - _strnicoll_l
 - _wcsnicoll
+- _o__mbsnicoll
+- _o__mbsnicoll_l
+- _o__strnicoll
+- _o__strnicoll_l
+- _o__wcsnicoll
+- _o__wcsnicoll_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +70,19 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: c1a26690f4913cb35486886f6548927fc09efc89
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef609ddecfcdd9834d32cac696f9ba334a60c1a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947086"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364812"
 ---
 # <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
 
 使用地區設定特定資訊，以比較字串。
 
 > [!IMPORTANT]
-> **_mbsnicoll**和 **_mbsnicoll_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsnicoll**和 **_mbsnicoll_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -117,32 +124,34 @@ int _mbsnicoll_l(
 
 ### <a name="parameters"></a>參數
 
-*string1*、 *string2*<br/>
+*字串1*,*字串2*<br/>
 以 Null 終止的待比較字串
 
-*計數*<br/>
+*count*<br/>
 要比較的字元數
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回一個值，指出*string1*和*string2*子字串的關聯性，如下所示。
+每個函數返回一個值,指示*string1*和*string2*的子字串之間的關係,如下所示。
 
 |傳回值|string1 與 string2 的關係|
 |------------------|----------------------------------------|
-|< 0|*string1*小於*string2*|
-|0|*string1*與*string2*相同|
-|> 0|*string1*大於*string2*|
+|< 0|*字串1*小於*字串2*|
+|0|*字串1*與*字串2*相同|
+|> 0|*字串1*大於*字串2*|
 
-所有這些函式都會傳回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，請包含其中一個字串。H 或 G.H。 如果*string1*或*string2*包含定序順序之網域以外的寬字元碼，則 **_wcsnicoll**可能會失敗。 發生錯誤時， **_wcsnicoll**可能會將**Errno**設定為**EINVAL**。 若要在呼叫 **_wcsnicoll**時檢查是否發生錯誤，請將**errno**設定為0，然後在呼叫 **_wcsnicoll**之後檢查**errno** 。
+這些函數中的每一個都**傳回_NLSCMPERROR**。 要使用 **_NLSCMPERROR**,請包括 String。H 或 MBSTRING。H。 如果*string1*或*string2*在整理序列的域之外包含寬字元代碼,**則_wcsnicoll**可能會失敗。 發生錯誤時 **,_wcsnicoll**可能會將**errno**設定為**EINVAL**。 要檢查調用 **_wcsnicoll**時的錯誤,請將**errno**設置為 0,然後在調用 **_wcsnicoll**後檢查**errno。**
 
 ## <a name="remarks"></a>備註
 
-這些函式中的每一個都會根據字碼頁，執行*string1*和*string2*中的第一個*計數*字元的不區分大小寫比較。 只有在字元集順序與字碼頁中的字典編撰字元順序不同時，以及字串比較注意這項差異時，才應該使用這些函式。 這些沒有 **_l**尾碼的函式版本會使用目前的地區設定和字碼頁。 具有 **_l**尾碼的版本相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+根據代碼頁,每個函數都執行*對 string1*和*string2*中的第一*個計數*字元不相關的比較。 只有在字元集順序與字碼頁中的字典編撰字元順序不同時，以及字串比較注意這項差異時，才應該使用這些函式。 沒有 **_l**後綴的這些函數的版本使用當前區域設置和代碼頁。 具有 **_l**後綴的版本是相同的,只是它們使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-這些函式全都會驗證它們的參數。 如果*string1*或*string2*是 null 指標，或 count 大於**INT_MAX**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。
+這些函式全都會驗證它們的參數。 如果*string1*或*string2*是空指標,或者如果計數大於**INT_MAX,** 則調用無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將**傳回_NLSCMPERROR**並將**errno**設定為**EINVAL**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -156,17 +165,17 @@ int _mbsnicoll_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_strnicoll**、 **_strnicoll_l**|\<string.h>|
-|**_wcsnicoll**、 **_wcsnicoll_l**|\<wchar.h> 或 \<string.h>|
-|**_mbsnicoll**、 **_mbsnicoll_l**|\<mbstring.h>|
+|**_strnicoll**, **_strnicoll_l**|\<string.h>|
+|**_wcsnicoll**, **_wcsnicoll_l**|\<wchar.h> 或 \<string.h>|
+|**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [地區設定](../../c-runtime-library/locale.md)<br/>
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>

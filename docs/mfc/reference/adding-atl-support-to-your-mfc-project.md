@@ -7,43 +7,43 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: fba79db013cd9f4cc62ba5826b53e5fa9b15c83a
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 05c4e8ba54d9a573b422f136c9e8cf69e48d1c9a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108407"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371675"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>將 ATL 支援加入至 MFC 專案
 
-如果您已經建立以 MFC 為基礎的應用程式, 則可以使用 IDE 輕鬆地加入 Active Template Library (ATL) 的支援。
+如果您已經創建了基於 MFC 的應用程式,則可以使用 IDE 輕鬆添加對活動範本庫 (ATL) 的支援。
 
 > [!NOTE]
->  這項支援只適用於新增至 MFC 可執行檔或 DLL 專案的簡單 COM 物件。 您可以將其他 COM 物件 (包括 ActiveX 控制項) 新增至 MFC 專案, 但這些物件可能無法如預期般運作。
+> 這項支援只適用於新增至 MFC 可執行檔或 DLL 專案的簡單 COM 物件。 您可以將其他 COM 物件(包括 ActiveX 控制項)添加到 MFC 專案中,但物件可能無法按預期方式運行。
 
 ::: moniker range=">=vs-2019"
 
-1. 在方案總管中, 以滑鼠右鍵按一下專案節點。
+1. 在解決方案資源管理器中,右鍵單擊專案節點。
 
-1. 在捷徑功能表上，按一下 [新增]，然後按一下 [新增項目]。
+1. 在捷徑功能表上，按一下 [新增]****，然後按一下 [新增項目]****。
 
-1. 選擇左窗格中的 [ **atl** ], 然後選擇中間窗格中的 [ **atl 支援**]。
+1. 在左邊窗格中選擇**ATL,** 然後在中心窗格中選擇**ATL 支援**。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-add-atl-support-to-your-mfc-project"></a>將 ATL 支援新增至 MFC 專案
+### <a name="to-add-atl-support-to-your-mfc-project"></a>將 ATL 支援新增到 MFC 專案
 
-1. 在方案總管中, 以滑鼠右鍵按一下專案節點。
+1. 在解決方案資源管理器中,右鍵單擊專案節點。
 
-1. 在捷徑功能表上，按一下 [加入]，然後按一下 [加入類別]。
+1. 在捷徑功能表上，按一下 [加入]****，然後按一下 [加入類別]****。
 
-1. 在左窗格中選取 [ **atl** ], 然後選擇中央窗格中的 [**將 atl 支援新增至 MFC 專案**]。
+1. 在左邊窗格中選擇**ATL,** 然後在中心窗格中選擇 **「將 ATL 支援添加到 MFC 專案**」。
 
 ::: moniker-end
 
-如需新增 ATL 支援如何變更您的 MFC 專案程式碼的詳細資訊, 請參閱[Atl Wizard 新增的 Atl 支援詳細資料](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+有關新增 ATL 支援如何變更 MFC 專案代碼的詳細資訊,請參閱[ATL 精靈新增的 ATL 支援的詳細資訊](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
 
 ## <a name="see-also"></a>另請參閱
 

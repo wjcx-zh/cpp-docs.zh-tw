@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 4dd2cde62d36c46926e703e6fb649e2ae4ef7811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398364"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371453"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 結構
 
-定義通用的控制代碼的特性。
+定義句柄的常見特徵。
 
 ## <a name="syntax"></a>語法
 
@@ -34,28 +34,28 @@ struct HANDLETraits;
 
 名稱   | 描述
 ------ | ---------------------
-`Type` | 控制代碼的同義字。
+`Type` | HANDLE 的同義詞。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                              | 描述
 ------------------------------------------------- | -----------------------------
-[HANDLETraits::Close](#close)                     | 關閉指定的控制代碼。
-[HANDLETraits::GetInvalidValue](#getinvalidvalue) | 表示無效的控制代碼。
+[操作:關閉](#close)                     | 關閉指定的句柄。
+[操作:抓取無效值](#getinvalidvalue) | 表示無效的句柄。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `HANDLETraits`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空間:** 微軟::WRL:包裝::處理特徵
 
-## <a name="close"></a>HANDLETraits::Close
+## <a name="handletraitsclose"></a><a name="close"></a>操作:關閉
 
-關閉指定的控制代碼。
+關閉指定的句柄。
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-若要關閉控制代碼。
+*H*<br/>
+要關閉的句柄。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果處理*h*關閉順利完成，否則**false**。
+如果句柄*h*成功關閉,**則為 true;** 否則,**假**。
 
-## <a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>操作:抓取無效值
 
-表示無效的控制代碼。
+表示無效的句柄。
 
 ```cpp
 inline static HANDLE GetInvalidValue();
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>傳回值
 
-一律會傳回 INVALID_HANDLE_VALUE。 （INVALID_HANDLE_VALUE 是由 Windows 定義）。
+始終返回INVALID_HANDLE_VALUE。 (INVALID_HANDLE_VALUE由 Windows 定義。

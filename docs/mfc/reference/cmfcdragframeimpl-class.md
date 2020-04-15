@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f6f558d6b4452ca06429c7e3017b7c575c6676
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367554"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 類別
 
-`CMFCDragFrameImpl`類別繪製使用者以標準停駐模式拖曳窗格時，會出現的拖曳矩形。
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+類`CMFCDragFrameImpl`繪製在標準停靠模式下拖動窗格時出現的拖動矩形。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -26,19 +26,19 @@ class CMFCDragFrameImpl
 
 ## <a name="remarks"></a>備註
 
-這個類別的物件在每個內嵌[CPane 類別](../../mfc/reference/cpane-class.md)物件。 因此，會使用每個窗格`CanFloat`方法會在使用者拖曳時，會顯示拖曳矩形。
+此類的物件嵌入在每個[CPane 類](../../mfc/reference/cpane-class.md)物件中。 因此,當使用者拖動該方法時,`CanFloat`使用 方法的每個窗格都會顯示拖動矩形。
 
-您可以使用來控制拖放矩形的粗細[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)並[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。
+您可以使用[AFX_GLOBAL_DATA:m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)和[AFX_GLOBAL_DATA:m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)來控制拖動矩形的厚度。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdragframeimpl.h
+**標題:** afxdragframeimpl.h
 
-##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
+## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCDragFrameimpl::結束繪製拖動框架
 
 ```
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
@@ -46,11 +46,11 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in] *bClearInternalRects*<br/>
+[在]*b清除內部重新*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="init"></a>  CMFCDragFrameImpl::Init
+## <a name="cmfcdragframeimplinit"></a><a name="init"></a>CMFCDragframeimpl::Init
 
 ```
 void Init(CWnd* pDraggedWnd);
@@ -58,11 +58,11 @@ void Init(CWnd* pDraggedWnd);
 
 ### <a name="parameters"></a>參數
 
-[in] *pDraggedWnd*<br/>
+[在]*普拉普恩德*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
+## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCDragFrameimpl::移動拖動框架
 
 ```
 void MoveDragFrame(BOOL bForceMove = FALSE);
@@ -70,11 +70,11 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in] *bForceMove*<br/>
+[在]*bForceMove*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
+## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCDragFrameimpl::PlaceTab預對接
 
 ```
 void PlaceTabPreDocking(
@@ -86,15 +86,15 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>參數
 
-[in] *pTabbedBar*<br/>
+[在]*pTabbedBar*<br/>
 
-[in] *bFirstTime*<br/>
+[在]*b 第一次*<br/>
 
-[in] *pCBarToPlaceOn*<br/>
+[在]*pCBARtoPlaceon*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
+## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCDragFrameimpl::刪除TabpreDocking
 
 ```
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
@@ -102,11 +102,11 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 
 ### <a name="parameters"></a>參數
 
-[in] *pOldTargetBar*<br/>
+[在]*pOldTargetBar*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
+## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCDragFrameimpl::重置狀態
 
 ```
 void ResetState();
@@ -118,4 +118,4 @@ void ResetState();
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CPane 類別](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

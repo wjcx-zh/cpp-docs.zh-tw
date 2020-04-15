@@ -1,128 +1,179 @@
 ---
-title: 逐步解說：分析 CC++ /程式碼是否有瑕疵
-ms.date: 11/04/2016
+title: 演練:分析 C/C++缺陷代碼
+description: 演示如何在 Visual Studio 中使用 Microsoft C++的代碼分析。
+ms.date: 04/14/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - C/C++, code analysis
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-ms.openlocfilehash: 5fbdf9e223b3c1e1b8664de2018381958c458f45
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: fe9b3775199b2a18cf940b99e87852350f1fbea9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418652"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370207"
 ---
-# <a name="walkthrough-analyzing-cc-code-for-defects"></a>逐步解說：分析 CC++ /程式碼是否有瑕疵
+# <a name="walkthrough-analyzing-cc-code-for-defects"></a>演練:分析 C/C++缺陷代碼
 
-本逐步解說示範如何使用 C/C++ C++ code 的程式碼分析工具，分析 c/程式碼是否有潛在的程式碼缺失。
+本演練演示如何分析 C/C++代碼的潛在代碼缺陷。 它使用 C/C++ 代碼的代碼分析工具。
 
-- 針對機器碼執行程式碼分析。
-- 分析程式碼瑕疵警告。
+在本演練中,您將:
+
+- 對本機代碼運行代碼分析。
+- 分析代碼缺陷警告。
 - 將警告視為錯誤。
-- 標注原始程式碼以改善程式碼缺失分析。
+- 對原始碼進行一些規範,以改進程式碼缺陷分析。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- [示範範例](../code-quality/demo-sample.md)的複本。
-- 對 C/C++的基本瞭解。
+- [CppDemo 範例](../code-quality/demo-sample.md)的副本。
+- 對C/C++的基本理解。
 
-### <a name="to-run-code-defect-analysis-on-native-code"></a>若要在機器碼上執行程式碼瑕疵分析
+## <a name="run-code-analysis-on-native-code"></a>在本機代碼上執行代碼分析
 
-1. 在 Visual Studio 中開啟示範解決方案。
+### <a name="to-run-code-defect-analysis-on-native-code"></a>在本機代碼上執行程式碼缺陷分析
 
-     示範解決方案現在會填入**方案總管**。
+::: moniker range=">=vs-2019"
 
-1. 在 [建置] 功能表上，按一下 [重建方案]。
+1. 在視覺工作室中打開 CppDemo 解決方案。
 
-     此解決方案會建立，且不會出現任何錯誤或警告。
+     CppDemo 解決方案現在填充**解決方案資源管理員**。
 
-1. 在 **方案總管**中，選取 CodeDefects 專案。
+1. 在 **「生成」** 功能表上,選擇 **「重建解決方案**」。
 
-1. 按一下 [專案] 功能表上的 [屬性]。
+     解決方案生成時沒有任何錯誤或警告。
 
-     [ **CodeDefects 屬性頁**] 對話方塊隨即顯示。
+1. 在**解決方案資源管理員中**,選擇代碼缺陷專案。
 
-1. 按一下 [程式碼分析]。
+1. 在 **「專案」** 選單上,選擇 **「屬性**」。
 
-1. 按一下 [**啟用 C/C++ on Build 的程式碼分析**] 核取方塊。
+     將顯示「**代碼缺陷屬性頁**」 對話框。
 
-1. 重建 CodeDefects 專案。
+1. 選擇**代碼分析**屬性頁。
 
-     程式碼分析警告會顯示在**錯誤清單**中。
+1. 將**生成屬性上的啟用代碼分析**更改為 **"是**" 選取 [確定]**** 儲存您的變更。
 
-### <a name="to-analyze-code-defect-warnings"></a>若要分析程式碼瑕疵警告
+1. 重建代碼缺陷專案。
 
-1. 在 [檢視] 功能表上，按一下 [錯誤清單]。
+     代碼分析警告顯示在 **「錯誤清單」** 視窗中。
 
-     根據您在 Visual Studio 中選擇的開發人員設定檔而定，您可能必須指向 [ **View** ] 功能表上的 [**其他視窗**]，然後按一下 [**錯誤清單**]。
+::: moniker-end
 
-1. 在 **錯誤清單**中，按兩下下列警告：
+::: moniker range="<=vs-2017"
 
-     警告 C6230：語義不同類型之間的隱含轉換：在布林內容中使用 HRESULT。
+1. 在視覺工作室中打開 CppDemo 解決方案。
 
-     [程式碼編輯器] 會在函式 `bool ProcessDomain()`中顯示造成警告的那一行。 此警告表示在預期布林結果的 ' if ' 語句中使用了 `HRESULT`。  這通常是錯誤的，因為從它傳回的 `S_OK` HRESULT 是表示成功的，但轉換成布林值時，它會評估為 `false`。
+     CppDemo 解決方案現在填充**解決方案資源管理員**。
 
-1. 使用 `SUCCEEDED` 宏來更正這個警告，當 `HRESULT` 傳回值表示成功時，會轉換成 `true`。 您的程式碼應該類似下列程式碼：
+1. 在 **「生成」** 功能表上,選擇 **「重建解決方案**」。
+
+     解決方案生成時沒有任何錯誤或警告。
+
+     > [!NOTE]
+     > 在 Visual Studio 2017 中`E1097 unknown attribute "no_init_all"`,您可能會在 IntelliSense 引擎中看到虛假警告。 您可以放心地忽略此警告。
+
+1. 在**解決方案資源管理員中**,選擇代碼缺陷專案。
+
+1. 在 **「專案」** 選單上,選擇 **「屬性**」。
+
+     將顯示「**代碼缺陷屬性頁**」 對話框。
+
+1. 選擇**代碼分析**屬性頁。
+
+1. 勾選此選項 **, 在產生時啟用代碼分析**「複選框。 選取 [確定]**** 儲存您的變更。
+
+1. 重建代碼缺陷專案。
+
+     代碼分析警告顯示在 **「錯誤清單」** 視窗中。
+
+::: moniker-end
+
+### <a name="to-analyze-code-defect-warnings"></a>分析代碼錯誤警告
+
+1. 在 **「查看」** 選單上,選擇 **「錯誤清單**」。
+
+     此功能表項可能不可見。 這取決於您在可視化工作室中選擇的開發人員配置檔。 您可能需要在 **「查看」** 選單上指向**其他 Windows,** 然後選擇 **「錯誤清單**」 。
+
+1. 在 **「錯誤清單」** 視窗中,按兩下以下警告:
+
+     C6230:語義上不同類型的隱式強制轉換:在布爾上下文中使用 HRESULT。
+
+     代碼編輯器顯示在函數`bool ProcessDomain()`內引起警告的行。 此警告指示`HRESULT`正在「if」語句中使用,其中預期存在布林結果。 這通常是一個錯誤,因為當`S_OK`HRESULT 從函數傳回時,它表示成功,但當轉換為布林值時,`false`它將評估為 。
+
+1. 使用`SUCCEEDED`宏更正此警告,宏將`true`轉換為`HRESULT`返回值指示成功時。 您的代碼應類似於以下代碼:
 
    ```cpp
-   if (SUCCEEDED (ReadUserAccount()) )
+   if (SUCCEEDED(ReadUserAccount()))
    ```
 
-1. 在 **錯誤清單**中，按兩下下列警告：
+1. 在**錯誤清單中**,按兩下以下警告:
 
-     警告 C6282：不正確的運算子：在測試內容中指派給常數。 Was = = 預定嗎？
+     C6282:不正確的運算符:在布爾上下文中分配常量。 請考慮改用"
 
-1. 藉由測試是否相等來更正此警告。 您的程式碼看起來應該與下列程式碼類似：
+1. 通過測試相等性來更正此警告。 您的代碼應類似於以下代碼:
 
    ```cpp
-   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != L'\\'))
    ```
 
-### <a name="to-treat-warning-as-an-error"></a>將警告視為錯誤
+1. 通過初始化和`i``j`0 更正**錯誤清單中**的剩餘 C6001 警告。
 
-1. 在錯誤 .cpp 檔案中，將下列 `#pragma` 語句加入至檔案的開頭，將警告 C6001 視為錯誤：
+1. 重建代碼缺陷專案。
+
+     專案生成時沒有任何警告或錯誤。
+
+## <a name="correct-source-code-annotation-warnings"></a>正確的源碼註解警告
+
+### <a name="to-enable-the-source-code-annotation-warnings-in-annotationc"></a>在註解.c 中開啟原始碼註解警告
+
+::: moniker range=">=vs-2019"
+
+1. 在解決方案資源管理器中,選擇註釋專案。
+
+1. 在 **「專案」** 選單上,選擇 **「屬性**」。
+
+     將顯示 **「註釋屬性頁**」對話框。
+
+1. 選擇**代碼分析**屬性頁。
+
+1. 將**生成屬性上的啟用代碼分析**更改為 **"是**" 選取 [確定]**** 儲存您的變更。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. 在解決方案資源管理器中,選擇註釋專案。
+
+1. 在 **「專案」** 選單上,選擇 **「屬性**」。
+
+     將顯示 **「註釋屬性頁**」對話框。
+
+1. 選擇**代碼分析**屬性頁。
+
+1. 勾選此選項 **, 在產生時啟用代碼分析**「複選框。 選取 [確定]**** 儲存您的變更。
+
+::: moniker-end
+
+### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>解記的原始碼註解警告
+
+1. 重建註釋專案。
+
+1. 在 **「生成」** 選單上,選擇 **「在註釋上運行代碼分析**」。
+
+1. 在**錯誤清單中**,按兩下以下警告:
+
+     C6011:取消引用 NULL 指標"newNode"。
+
+     此警告指示調用方檢查返回值失敗。 在這種情況下,調用可能會`AllocateNode`返回 NULL 值。 有關的函數聲明,請參閱 註釋.h`AllocateNode`標頭 檔。
+
+1. 游標位於發生警告的註釋.cpp 檔中的位置。
+
+1. 要更正此警告,請使用"if"語句來測試返回值。 您的代碼應類似於以下代碼:
 
    ```cpp
-   #pragma warning (error: 6001)
-   ```
-
-1. 重建 CodeDefects 專案。
-
-     在**錯誤清單**中，C6001 現在會顯示為錯誤。
-
-1. 藉由初始化 `i` 並 `j` 為0，修正**錯誤清單**中剩餘的兩個 C6001 錯誤。
-
-1. 重建 CodeDefects 專案。
-
-     專案建立時不會出現任何警告或錯誤。
-
-### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>更正 annotation 中的原始程式碼批註警告
-
-1. 在 方案總管中，選取 注釋 專案。
-
-1. 按一下 [專案] 功能表上的 [屬性]。
-
-     [**批註屬性頁**] 對話方塊隨即顯示。
-
-1. 按一下 [程式碼分析]。
-
-1. 選取 [**啟用 C/C++ on Build 的程式碼分析**] 核取方塊。
-
-1. 重建注釋專案。
-
-1. 在 **錯誤清單**中，按兩下下列警告：
-
-     警告 C6011：引用 Null 指標 ' newNode '。
-
-     此警告表示呼叫端無法檢查傳回值。 在此情況下，對**AllocateNode**的呼叫可能會傳回 Null 值（請參閱 AllocateNode 的函式聲明的注釋 .h 標頭檔）。
-
-1. 開啟注釋 .cpp 檔案。
-
-1. 若要修正這個警告，請使用 ' if ' 語句來測試傳回值。 您的程式碼應該類似下列程式碼：
-
-   ```cpp
+   LinkedList* newNode = AllocateNode();
    if (nullptr != newNode)
    {
        newNode->data = value;
@@ -131,27 +182,29 @@ ms.locfileid: "77418652"
    }
    ```
 
-1. 重建注釋專案。
+1. 重建註釋專案。
 
-     專案建立時不會出現任何警告或錯誤。
+     專案生成時沒有任何警告或錯誤。
 
-### <a name="to-use-source-code-annotation"></a>若要使用原始程式碼注釋
+## <a name="use-source-code-annotation-to-discover-more-issues"></a>使用原始碼註解發現更多問題
 
-1. 標注函式的型式參數和傳回值 `AddTail` 以指出指標值可能為 null：
+### <a name="to-use-source-code-annotation"></a>使用原始碼註解
+
+1. 批次參數與函數`AddTail`傳回值以指示指標值可能為空:
 
    ```cpp
    _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
-1. 重建注釋專案。
+1. 在 [建置]**** 功能表上，選擇 [針對方案執行程式碼分析]****。
 
-1. 在 **錯誤清單**中，按兩下下列警告：
+1. 在**錯誤清單中**,按兩下以下警告:
 
-     警告 C6011：引用 Null 指標 ' node '。
+     C6011:取消引用 NULL指標"節點"
 
-     此警告表示傳入函式的節點可能是 null，而表示引發警告的行號。
+     此警告指示傳遞到函數中的節點可能為空。
 
-1. 若要修正這個警告，請使用函式開頭的 ' if ' 語句來測試傳入的值。 您的程式碼應該類似下列程式碼：
+1. 要更正此警告,請使用函數開頭的"if"語句來測試傳入的值。 您的代碼應類似於以下代碼:
 
    ```cpp
    if (nullptr == node)
@@ -160,11 +213,11 @@ ms.locfileid: "77418652"
    }
    ```
 
-1. 重建注釋專案。
+1. 在 [建置]**** 功能表上，選擇 [針對方案執行程式碼分析]****。
 
-     專案現在會建立，而不會出現任何警告或錯誤。
+     項目現在生成時沒有任何警告或錯誤。
 
 ## <a name="see-also"></a>另請參閱
 
-[逐步解說：分析 Managed 程式碼是否有缺陷](/visualstudio/code-quality/walkthrough-analyzing-managed-code-for-code-defects)\
-[C/的程式碼分析C++](../code-quality/code-analysis-for-c-cpp-overview.md)
+[演練:分析代碼缺陷的託管代碼](/visualstudio/code-quality/walkthrough-analyzing-managed-code-for-code-defects)\
+[C/C++ 的程式碼分析](../code-quality/code-analysis-for-c-cpp-overview.md)

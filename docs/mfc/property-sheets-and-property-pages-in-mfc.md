@@ -7,26 +7,26 @@ helpviewer_keywords:
 - property sheets, MFC
 - tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
-ms.openlocfilehash: fa8ee3518ad2b32e0eace77f0961eb86ccde1822
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb34c79745e672d30dd2d3c3b97d457583f795
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371176"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>MFC 中的屬性工作表和屬性頁
 
-屬性工作表，也稱為索引標籤對話方塊中，會包含屬性頁的對話方塊。 每個屬性頁對話方塊範本資源為基礎，並包含控制項。 它會以頁面上，最上層顯示 索引標籤。 [] 索引標籤命名頁面，並指出其用途。 使用者按一下來選取一組控制項的屬性工作表中的索引標籤。
+屬性表(也稱為選項卡對話方塊)是一個包含屬性頁的對話方塊。 每個屬性頁都基於對話框範本資源,並包含控制項。 它包含在頁面上,上面有一個選項卡。 選項卡命名頁面並指示其用途。 使用者按一下屬性表中的選項卡以選擇一組控制項。
 
-您可以使用頁面屬性工作表中的這些控制項聚集成有意義的集合。 包含的屬性工作表通常會有自己的數個控制項。 這些適用於所有頁面。
+使用頁面將屬性表中的控制件分組到有意義的集中。 包含的屬性表通常具有其自己的多個控制項。 這些適用於所有頁面。
 
-以類別為基礎的屬性工作表[CPropertySheet](../mfc/reference/cpropertysheet-class.md)。 屬性頁面會以類別為基礎[CPropertyPage](../mfc/reference/cpropertypage-class.md)。
+屬性表基於類別[C 屬性表](../mfc/reference/cpropertysheet-class.md)。 屬性頁面基於[類別 CPropertyPage](../mfc/reference/cpropertypage-class.md)。
 
-屬性工作表是一種特殊的對話方塊中，通常用來修改某些外部物件，例如目前的選取範圍，在檢視中的屬性。 屬性工作表有三個主要部分: [包含] 對話方塊中，一或多個屬性頁，顯示的一次，並在使用者按一下以選取該頁面的每個頁面頂端的索引標籤。 屬性工作表可用於當您具有數個類似的群組，設定或變更的選項。 屬性工作表，以易於了解的方式分組的資訊。
+屬性表是一種特殊的對話框,通常用於修改某些外部物件的屬性,例如視圖中的當前選擇。 屬性表有三個主要部分:包含對話框、一個或多個屬性頁一次顯示一個,以及使用者按一下以選擇該頁面的每個頁面頂部的選項卡。 屬性表可用於您有多個類似的設定組或要更改的選項的情況。 屬性表以易於理解的方式對信息進行分組。
 
 > [!NOTE]
->  當您嘗試使用顯示屬性工作表`CPropertySheet::DoModal`，系統可能會產生 first-chance 例外狀況。 因為系統嘗試變更，就會發生這個例外狀況[的視窗樣式](../mfc/reference/styles-used-by-mfc.md#window-styles)之前已建立物件的物件。 如需有關此例外狀況，以及如何避免它，或處理的詳細資訊，請參閱[cpropertysheet:: Setwizardmode](../mfc/reference/cpropertysheet-class.md#domodal)。
+> 當您嘗試使用`CPropertySheet::DoModal`顯示屬性表時,系統可能會生成第一個異常。 發生此例外的原因是系統在建立物件之前試著變更物件[的視窗樣式](../mfc/reference/styles-used-by-mfc.md#window-styles)。 有關此異常的詳細資訊以及如何避免或處理它,請參閱[CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal)。
 
 ## <a name="see-also"></a>另請參閱
 
-[屬性工作表](../mfc/property-sheets-mfc.md)
+[屬性表](../mfc/property-sheets-mfc.md)

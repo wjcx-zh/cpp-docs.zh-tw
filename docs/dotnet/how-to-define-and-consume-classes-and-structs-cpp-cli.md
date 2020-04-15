@@ -5,20 +5,20 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5bec92ce2bd97f11723cdf59c58b7331b39565f2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370188"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定義與使用類別和結構 (C++/CLI)
 
-本文說明如何在/Cli 中C++定義和使用使用者定義的參考型別和實數值型別。
+本文演示如何在C++/CLI中定義和使用使用者定義的引用類型和值類型。
 
-##  <a name="BKMK_Contents"></a> Contents
+## <a name="contents"></a><a name="BKMK_Contents"></a>內容
 
-[物件具現化](#BKMK_Object_instantiation)
+[物件實例化](#BKMK_Object_instantiation)
 
 [隱含抽象類別](#BKMK_Implicitly_abstract_classes)
 
@@ -26,21 +26,21 @@ ms.locfileid: "79418290"
 
 [成員可見度](#BKMK_Member_visibility)
 
-[公用和私用原生類別](#BKMK_Public_and_private_native_classes)
+[公共和私有本機類](#BKMK_Public_and_private_native_classes)
 
-[靜態建構函式](#BKMK_Static_constructors)
+[靜態建構函數](#BKMK_Static_constructors)
 
-[This 指標的語義](#BKMK_Semantics_of_the_this_pointer)
+[此指標的語義](#BKMK_Semantics_of_the_this_pointer)
 
-[逐特徵隱藏函式](#BKMK_Hide_by_signature_functions)
+[按簽署隱藏功能](#BKMK_Hide_by_signature_functions)
 
 [複製建構函式](#BKMK_Copy_constructors)
 
-[析構函數和完成項](#BKMK_Destructors_and_finalizers)
+[析構函數和終結器](#BKMK_Destructors_and_finalizers)
 
-##  <a name="BKMK_Object_instantiation"></a>物件具現化
+## <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a>物件實例化
 
-Reference （ref）型別只能在 managed 堆積上具現化，而不是在堆疊上或原生堆積上。 實值型別可以在堆疊或 managed 堆積上具現化。
+引用(ref) 類型只能在託管堆上實例化,只能在堆疊上或本機堆上實例化。 值類型可以在堆疊或託管堆上實例化。
 
 ```cpp
 // mcppv2_ref_class2.cpp
@@ -93,13 +93,13 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Implicitly_abstract_classes"></a>隱含抽象類別
+## <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a>隱含抽象類別
 
-*隱含抽象類別*無法具現化。 如果類別的基底類型是介面，而且類別不會實作用介面的所有成員函式，則類別會隱含抽象化。
+無法執行式*隱含抽象類別*。 如果類的基類型是介面,並且類未實現介面的所有成員函數,則類是隱式抽象的。
 
-如果您無法從衍生自介面的類別來建立物件，原因可能是類別是隱含抽象的。 如需抽象類別的詳細資訊，請參閱[abstract](../extensions/abstract-cpp-component-extensions.md)。
+如果無法從從介面派生的類構造物件,原因可能是該類是隱式抽象的。 有關抽象類的詳細資訊,請參閱[抽象](../extensions/abstract-cpp-component-extensions.md)。
 
-下列程式碼範例會示範無法將 `MyClass` 類別具現化，因為函式 `MyClass::func2` 不會實作為函式。 若要讓範例進行編譯，請取消批註 `MyClass::func2`。
+以下代碼示例演示了由於函數`MyClass``MyClass::func2`未實現而無法實例化類。 要讓範例編譯,請取消註解`MyClass::func2`。
 
 ```cpp
 // mcppv2_ref_class5.cpp
@@ -121,17 +121,17 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Type_visibility"></a>類型可見度
+## <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a>類型可見度
 
-您可以控制 common language runtime （CLR）型別的可見度，以便在參考元件時，元件中的型別可以是可見的，或是在元件外部看不到的類型。
+您可以控制通用語言執行時 (CLR) 類型的可見性,以便在引用程式集時,程式集中的類型可以在程式集外部可見或不可見。
 
-`public` 表示包含型別之元件的 `#using` 指示詞的任何原始程式檔都可以看到某個型別。  `private` 表示包含型別之元件 `#using` 指示詞的原始程式檔中，看不到型別。 不過，您可以在相同的元件中看到私用類型。 根據預設，會 `private`類別的可見度。
+`public`指示類型對包含該類型的程式集的`#using`指令的任何源檔都可見。  `private`指示類型對於包含該類型的程式集的`#using`指令的源檔不可見。 但是,私有類型在同一程式集中可見。 預設情況下,類的可見性為`private`。
 
-根據預設，在 Visual Studio 2005 之前，原生類型具有元件外部的公用存取範圍。 啟用[編譯器警告（層級1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) ，以協助您瞭解私用原生類型的使用不正確的位置。 您可以使用[make_public](../preprocessor/make-public.md) pragma，在無法修改的原始程式碼檔中提供原生類型的公用存取範圍。
+默認情況下,在 Visual Studio 2005 之前,本機類型具有程式集外部的公共可存取性。 啟用[編譯器警告(級別 1) C4692,](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以説明您查看私有本機類型的使用不正確的位置。 使用[make_public](../preprocessor/make-public.md)實用新型為原始碼檔中無法修改的本機類型提供公共可存取。
 
 如需詳細資訊，請參閱 [#using 指示詞](../preprocessor/hash-using-directive-cpp.md)。
 
-下列範例顯示如何宣告型別並指定其存取範圍，然後在元件記憶體取這些型別。 當然，如果使用 `#using`來參考具有私用類型的元件，則只會顯示元件中的公用類型。
+下面的範例展示如何聲明類型並指定其可存取性,然後在程式集中存取這些類型。 當然,如果使用引用具有私有類型的程式集`#using`,則只有程式集中的公共類型可見。
 
 ```cpp
 // type_visibility.cpp
@@ -173,7 +173,7 @@ in Private_Class
 in Private_Class_2
 ```
 
-現在，讓我們重寫先前的範例，使其建立為 DLL。
+現在,讓我們重寫前面的示例,以便將其構建為 DLL。
 
 ```cpp
 // type_visibility_2.cpp
@@ -196,7 +196,7 @@ public:
 };
 ```
 
-下一個範例顯示如何存取元件外部的類型。 在此範例中，用戶端會使用上一個範例中所建立的元件。
+下一個範例簡用如何存取程式集外部的類型。 在此範例中,用戶端使用上一個範例中生成的元件。
 
 ```cpp
 // type_visibility_3.cpp
@@ -218,22 +218,22 @@ int main() {
 in Public_Class
 ```
 
-##  <a name="BKMK_Member_visibility"></a>成員可見度
+## <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a>成員可見度
 
-您可以使用 `public`、`protected`和 `private` 的存取規範配對，從相同的元件記憶體取公用類別的成員，而不是從元件外部存取。
+您可以使用訪問指定器`public`對 ,使從同一程式集中訪問公共類的成員不同於從程式集外部存取公共類`protected`的成員。`private`
 
-下表摘要說明各種存取規範的效果：
+下表總結了各種存取指定器的效果:
 
 |規範|效果|
 |---------------|------------|
-|public|成員可在元件內部和外部存取。  如需詳細資訊，請參閱[public](../cpp/public-cpp.md) 。|
-|private|成員無法存取，不在元件內部或外部。  如需詳細資訊，請參閱[私](../cpp/private-cpp.md)用。|
-|受保護的 - protected|成員可在元件內部和外部存取，但僅限於衍生的類型。  如需詳細資訊，請參閱[protected](../cpp/protected-cpp.md) 。|
-|內部|成員在元件內是公用的，但在元件外部是私用的。  `internal` 是即時線上關鍵字。  如需詳細資訊，請參閱[即時線上關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
-|公開保護或受保護的公用|成員在元件內是公用的，但在元件外部受到保護。|
-|私用保護或受保護的私用|成員會在元件內部受到保護，但在元件外部是私用的。|
+|public|成員可在程式集內外訪問。  有關詳細資訊,請參閱[公眾](../cpp/public-cpp.md)。|
+|private|成員不可訪問,無論是在程式集內部還是外部。  有關詳細資訊,請參閱[私有](../cpp/private-cpp.md)。|
+|protected|成員可在程式集內外訪問,但只能訪問派生類型。  有關詳細資訊,請參閱[受保護](../cpp/protected-cpp.md)。|
+|internal|成員在程式集內是公共的,但在程式集外部是私有的。  `internal` 是即時線上關鍵字。  如需詳細資訊，請參閱[內容相關性關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
+|公共保護-或受保護的公眾|成員在程式集內是公共的,但在程式集外部受到保護。|
+|私有保護 -或受保護的私有|成員在程式集內受到保護,但在程式集外部是私有的。|
 
-下列範例顯示的公用型別具有以不同存取性宣告的成員，然後顯示從元件內部存取這些成員的方式。
+下面的示例顯示了一種公共類型,該類型具有使用不同的訪問許可權聲明的成員,然後顯示這些成員從程式集內訪問。
 
 ```cpp
 // compile with: /clr
@@ -312,7 +312,7 @@ exiting function of derived class
 =======================
 ```
 
-現在讓我們將先前的範例建立為 DLL。
+現在,讓我們將前面的示例構建為 DLL。
 
 ```cpp
 // compile with: /clr /LD
@@ -358,7 +358,7 @@ ref struct MyClass : public Public_Class {
 };
 ```
 
-下列範例會使用先前範例中所建立的元件，因此會顯示如何從元件外部存取成員。
+以下範例使用在前一個範例中創建的元件,從而演示如何從程式集外部訪問成員。
 
 ```cpp
 // compile with: /clr
@@ -406,9 +406,9 @@ exiting function of derived class
 =======================
 ```
 
-##  <a name="BKMK_Public_and_private_native_classes"></a>公用和私用原生類別
+## <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a>公共和私有本機類
 
-您可以從 managed 型別參考原生型別。  例如，managed 類型中的函式可以接受其類型為原生結構的參數。  如果 managed 類型和函式在元件中是公用的，則原生類型也必須是公用的。
+可以從託管類型引用本機類型。  例如,託管類型的函數可以採用其類型為本機結構的參數。  如果託管類型和函數在程式集中是公共的,則本機類型也必須為公共類型。
 
 ```cpp
 // native type
@@ -418,7 +418,7 @@ public struct N {
 };
 ```
 
-接下來，建立會使用原生類型的原始程式碼檔：
+您可以建立使用本機類型的源碼檔:
 
 ```cpp
 // compile with: /clr /LD
@@ -430,7 +430,7 @@ public ref struct R {
 };
 ```
 
-現在，請編譯用戶端：
+現在,編譯用戶端:
 
 ```cpp
 // compile with: /clr
@@ -445,17 +445,17 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Static_constructors"></a> 靜態建構函式
+## <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a>靜態建構函數
 
-CLR 型別（例如，類別或結構）可以有一個可以用來初始化靜態資料成員的靜態函數。  靜態的函式最多隻會呼叫一次，而且會在第一次存取類型的任何靜態成員之前呼叫。
+CLR 類型(例如類或結構)可以具有可用於初始化靜態數據成員的靜態構造函數。  靜態構造函數最多調用一次,並在首次訪問類型的任何靜態成員之前調用。
 
-實例的函式一律會在靜態的函數之後執行。
+實例構造函數始終在靜態構造函數之後運行。
 
-如果類別具有靜態的函式，編譯器就無法將呼叫內嵌至函式。  如果類別是實值型別、具有靜態的函式，而且沒有實例的「函數」，則編譯器無法將呼叫內嵌至任何成員函式。  CLR 可以內嵌呼叫，但編譯器無法。
+如果類具有靜態構造函數,編譯器不能將調用內聯到構造函數。  如果類是值類型、具有靜態構造函數並且沒有實例構造函數,則編譯器不能將調用內聯到任何成員函數。  CLR 可以內聯調用,但編譯器不能。
 
-將靜態的函式定義為私用成員函式，因為它只能由 CLR 呼叫。
+將靜態構造函數定義為私有成員函數,因為它僅由CLR調用。
 
-如需靜態函式的詳細資訊，請參閱[如何：定義介面靜態函數C++（/cli）](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
+有關靜態構造函數的詳細資訊,請參閱[如何:定義介面靜態構造函數 (C++/CLI)。](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -491,13 +491,13 @@ in static constructor
 11
 ```
 
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>This 指標的語義
+## <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a>此指標的語義
 
-當您使用視覺效果C++來定義型別時，參考型別中的 `this` 指標是「控制碼」類型。 實值型別中的 `this` 指標是「內部指標」類型。
+使用 Visual C++定義類型`this`時, 引用類型的指標的類型為「句柄」。 值`this`類型的指標為「內部指標」類型。
 
-呼叫預設的索引子時，`this` 指標的這些不同的語義可能會導致非預期的行為。 下一個範例顯示在 ref 型別和實值型別中存取預設索引子的正確方式。
+當調用預設索引器時`this`,指標的這些不同語義可能會導致意外行為。 下一個範例顯示了在 ref 類型和值類型中訪問預設索引器的正確方法。
 
-如需詳細資訊，請參閱
+如需相關資訊，請參閱
 
 - [物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
@@ -546,19 +546,19 @@ int main() {
 10.89
 ```
 
-##  <a name="BKMK_Hide_by_signature_functions"></a>逐特徵隱藏函式
+## <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a>按簽署隱藏功能
 
-在 standard C++中，基類中的函式會由在衍生類別中具有相同名稱的函式隱藏，即使衍生類別函數的參數數目或種類不相同也一樣。 這稱為「*隱藏名稱*」的語義。 在參考型別中，如果名稱和參數清單都相同，則基類中的函數只能由衍生類別中的函式隱藏。 這就是所謂的*隱藏式*簽章的語義。
+在標準C++中,基類中的函數由派生類中具有相同名稱的函數隱藏,即使派生類函數的參數數量或類型不同。 這稱為 *「逐名隱藏*」語義。 在引用類型中,如果名稱和參數清單相同,則基類中的函數只能由派生類中的函數隱藏。 這稱為 *"按簽名隱藏*"語義。
 
-當類別的所有函式都在中繼資料中標記為 `hidebysig`時，會將其視為隱藏簽章類別。 根據預設，在 **/clr**底下建立的所有類別都有 `hidebysig` 函數。 當類別具有 `hidebysig` 函式時，編譯器不會依名稱在任何直接基類中隱藏函式，但如果編譯器在繼承鏈中遇到隱藏名稱的類別，它會繼續該程式的隱藏名稱行為。
+當類的所有函數在元數據中標記為`hidebysig`時,類被視為按簽名隱藏類。 預設情況下,在 **/clr**下創建的所有`hidebysig`類都有 函數。 當類具有`hidebysig`函數時,編譯器不會在任何直接基類中按名稱隱藏函數,但如果編譯器在繼承鏈中遇到逐名隱藏類,則它將繼續這種逐個名稱隱藏行為。
 
-在隱藏簽章的語義之下，當在物件上呼叫函式時，編譯器會識別包含可滿足函式呼叫之函式的最衍生類別。 如果類別中只有一個可滿足呼叫的函式，則編譯器會呼叫該函式。 如果類別中有一個以上的函式可以滿足呼叫，編譯器會使用多載解析規則來判斷要呼叫的函式。 如需多載規則的詳細資訊，請參閱[函數](../cpp/function-overloading.md)多載。
+在"逐個簽名"語義下,當在對象上調用函數時,編譯器標識包含可滿足函數調用的函數的最派生類。 如果類中只有一個函數可以滿足調用,編譯器將調用該函數。 如果類中有多個函數可以滿足調用,編譯器將使用重載解析規則來確定調用哪個函數。 有關重載規則的詳細資訊,請參閱[函數重載](../cpp/function-overloading.md)。
 
-針對指定的函式呼叫，基類中的函式可能會有簽章，使其比衍生類別中的函式更符合。 不過，如果函式是在衍生類別的物件上明確呼叫，則會呼叫衍生類別中的函數。
+對於給定的函數調用,基類中的函數可能具有一個簽名,使其比派生類中的函數稍微匹配一些。 但是,如果在派生類的對象上顯式調用該函數,則調用派生類中的函數。
 
-由於傳回值不會被視為函式簽章的一部分，因此如果基類函式具有相同的名稱，並採用與衍生類別函式相同的引數數目和種類，即使它在傳回值的類型不同時，也會隱藏該函數。
+由於返回值不被視為函數簽名的一部分,因此,如果基類函數具有相同的名稱,並且採用與派生類函數相同的數量和類型的參數,即使它在返回值的類型上有所不同,則隱藏該函數。
 
-下列範例顯示，衍生類別中的函式不會隱藏基類中的函數。
+下面的示例顯示基類中的函數不被派生類中的函數隱藏。
 
 ```cpp
 // compile with: /clr
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-下一個範例顯示，即使轉換C++必須符合一個或多個參數，Microsoft 編譯器還是會呼叫最常衍生類別中的函式，而不是在基類中呼叫與函式呼叫較佳相符的函式。
+下一個範例顯示 Microsoft C++編譯器調用派生最多的類中的函數,即使需要轉換以匹配一個或多個參數,也不會調用基類中更適合函數調用的函數。
 
 ```cpp
 // compile with: /clr
@@ -619,7 +619,7 @@ int main() {
 Derived::Test2
 ```
 
-下列範例顯示即使基類與衍生類別具有相同的簽章，也可以隱藏函式。
+下面的示例顯示,即使基類具有與派生類相同的簽名,也可以隱藏函數。
 
 ```cpp
 // compile with: /clr
@@ -654,15 +654,15 @@ Derived::Test4
 97
 ```
 
-##  <a name="BKMK_Copy_constructors"></a>複製構造函式
+## <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a>複製建構函式
 
-C++標準表示當物件移動時，會呼叫複製的函式，因此會在相同位址建立和終結物件。
+C++標準表示,在移動物件時調用複製構造函數,以便在同一位址創建和銷毀物件。
 
-不過，當使用 **/clr**進行編譯時，如果編譯為 MSIL 的函式呼叫原生函式，而原生類別（或多個）是以傳值方式傳遞，而原生類別具有複製的函數和/或析構函式，則不會呼叫任何複製程式，而且會在與建立該物件不同的位址上終結該物件。 如果類別有指向本身的指標，或如果程式碼依位址追蹤物件，這可能會造成問題。
+但是,當 **/clr**用於編譯,編譯到 MSIL 的函數調用本機函數,其中本機類(或多個類)通過值傳遞,而本機類具有複製構造函數和/或析構函數,則不調用任何複製構造函數,並且物件在創建位置不同的位址被銷毀。 如果類本身有指標,或者代碼按位址跟蹤物件,則可能會導致問題。
 
-如需詳細資訊，請參閱 [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md)。
+有關詳細資訊,請參閱[/clr(通用語言執行時編譯)](../build/reference/clr-common-language-runtime-compilation.md)。
 
-下列範例會示範何時不會產生複製的函式。
+以下範例示範如何生成複製建構函數。
 
 ```cpp
 // compile with: /clr
@@ -719,9 +719,9 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378
 ```
 
-##  <a name="BKMK_Destructors_and_finalizers"></a>析構函數和完成項
+## <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a>析構函數和終結器
 
-參考型別中的析構函數會執行具決定性的資源清除。 完成項會清除非受控資源，並可由析構函式以決定性的方式呼叫，或由垃圾收集行程非確定性地。 如需有關標準C++中的析構函數的詳細資訊，請參閱[析構函數](../cpp/destructors-cpp.md)。
+引用類型的析構函數執行資源確定性清理。 終結器清理非託管資源,並且可以由析構函數或垃圾回收器在確定性上調用確定性資源。 有關標準C++中的析構函數的資訊,請參閱[析構函數](../cpp/destructors-cpp.md)。
 
 ```cpp
 class classname {
@@ -730,13 +730,13 @@ class classname {
 };
 ```
 
-Managed 視覺效果C++類別中的析構函數行為與的 managed 擴充功能C++不同。 如需這項變更的詳細資訊，請參閱[析構函式語義的變更](../dotnet/changes-in-destructor-semantics.md)。
+託管 Visual C++ 類中的析構函數的行為不同於 C++的託管擴展。 有關此更改的詳細資訊,請參閱[析構函數語義中的變更](../dotnet/changes-in-destructor-semantics.md)。
 
-CLR 垃圾收集行程會刪除未使用的 managed 物件，並在不再需要時釋放其記憶體。 不過，型別可能會使用垃圾收集行程不知道如何釋放的資源。 這些資源稱為非受控資源（例如原生檔案控制代碼）。 我們建議您釋放完成項中的所有非受控資源。 由於受控資源是由垃圾收集行程所非確定性地，因此在完成項中參考 managed 資源並不安全，因為可能是垃圾收集行程已經清除該受控資源。
+CLR 垃圾回收器刪除未使用的託管物件,並在不再需要它們時釋放其記憶體。 但是,類型可能使用垃圾回收器不知道如何釋放的資源。 這些資源稱為非託管資源(例如本機檔句柄)。 我們建議您釋放終結器中的所有非託管資源。 由於託管資源由垃圾回收器非確定性地釋放,因此在終結器中引用託管資源不安全,因為垃圾回收器可能已清理該託管資源。
 
-Visual C++完成項與 <xref:System.Object.Finalize%2A> 方法不同。 （CLR 檔使用完成項和 <xref:System.Object.Finalize%2A> 方法同義）。 <xref:System.Object.Finalize%2A> 方法是由垃圾收集行程所呼叫，它會叫用類別繼承鏈中的每個完成項。 不同于C++ Visual 析構函數，衍生類別的完成項呼叫不會使編譯器在所有基類中叫用完成項。
+可視化C++終結器與<xref:System.Object.Finalize%2A>方法不同。 (CLR 文件使用終結器和<xref:System.Object.Finalize%2A>方法 同義)。 垃圾<xref:System.Object.Finalize%2A>回收器調用該方法,它調用類繼承鏈中的每個終結器。 與 Visual C++析構函數不同,派生類終結器調用不會導致編譯器調用所有基類中的終結器。
 
-因為 Microsoft C++編譯器支援決定性的資源發行，所以請勿嘗試執行 <xref:System.IDisposable.Dispose%2A> 或 <xref:System.Object.Finalize%2A> 方法。 不過，如果您熟悉這些方法，以下是 Visual C++ finalizer 和呼叫完成項的析構函式如何對應至 <xref:System.IDisposable.Dispose%2A> 模式：
+由於 Microsoft C++編譯器支援資源確定性釋放,因此不要嘗試<xref:System.IDisposable.Dispose%2A><xref:System.Object.Finalize%2A>實現 或 方法。 但是,如果您熟悉這些方法,下面是 Visual C++終結器和將終結器映射<xref:System.IDisposable.Dispose%2A>調用 模式的析構函數的方式:
 
 ```cpp
 // Visual C++ code
@@ -755,9 +755,9 @@ void Dispose(bool disposing) {
 }
 ```
 
-Managed 類型也可以使用您想要以決定性方式發行的 managed 資源，而不是在不再需要物件之後，讓垃圾收集行程在某個時間點釋放非確定性地。 具決定性的資源發行可以大幅提升效能。
+託管類型還可以使用您希望以確定性方式釋放的託管資源,而不是讓垃圾回收器在不再需要物件后的某個時間點以非確定性方式釋放。 確定性資源釋放可以顯著提高性能。
 
-Microsoft C++編譯器會啟用析構函式的定義，以決定性地清除物件。 使用此析構函式來釋放您想要以決定性方式釋放的所有資源。  如果有完成項，請從析構函式呼叫它，以避免程式碼重複。
+Microsoft C++編譯器使析構函數的定義能夠確定清理物件。 使用析構函數釋放要確定釋放的所有資源。  如果存在終結器,請從析構函數調用它,以避免代碼重複。
 
 ```cpp
 // compile with: /clr /c
@@ -781,35 +781,35 @@ ref struct A {
 };
 ```
 
-如果使用您的型別的程式碼不會呼叫此函式，垃圾收集行程最後會釋放所有 managed 資源。
+如果使用您的類型的代碼不調用析構函數,則垃圾回收器最終將釋放所有託管資源。
 
-出現的析構函數並不表示完成項的存在。 不過，完成項的存在表示您必須定義一個析構函式，並從該析構函式呼叫完成項。 這可提供具決定性的非受控資源版本。
+析構函數的存在並不意味著存在終結器。 但是,終結器的存在意味著您必須定義析構函數並從該析構函數調用終結器。 這提供了非託管資源的確定性釋放。
 
-呼叫析構函式會隱藏，方法是使用 <xref:System.GC.SuppressFinalize%2A>-結束物件。 如果未呼叫此函式，則垃圾收集行程最後會呼叫您的類型完成項。
+調用析構函數會通過物件的<xref:System.GC.SuppressFinalize%2A>「定稿」來抑制。 如果未調用析構函數,則垃圾回收器最終將調用類型的終結器。
 
-藉由呼叫析構函式來確定清除物件的資源，可以改善效能，相較于讓 CLR 非確定性地完成物件。
+與讓 CLR 非確定性地完成物件相比,通過調用析構函數來確定清理物件的資源可以提高性能。
 
-以 Visual C++撰寫並使用 **/clr**編譯的程式碼，會在下列情況執行類型的析構函式：
+從 Visual C++ 中編寫並使用 **/clr**編譯的代碼在:
 
-- 使用堆疊語義所建立的物件超出範圍。 如需詳細資訊，請參閱[ C++參考型別的堆疊語義](../dotnet/cpp-stack-semantics-for-reference-types.md)。
+- 使用堆疊語義創建的物件超出範圍。 有關詳細資訊,請參閱[C++堆疊文的參考類型](../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
-- 在物件的結構中，會擲回例外狀況。
+- 在對象的構造期間引發異常。
 
-- 物件是物件中的成員，其析構函式正在執行。
+- 該物件是正在運行析構函數的物件中的成員。
 
-- 您在控制碼上呼叫[delete](../cpp/delete-operator-cpp.md)運算子（[物件運算子的控制碼（^）](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)）。
+- 在句柄上調用[刪除](../cpp/delete-operator-cpp.md)運算符 ([句柄到對象運算符(*)。](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- 您會明確地呼叫此函式。
+- 顯式調用析構函數。
 
-如果您的型別是由以另一種語言撰寫的用戶端所使用，則會呼叫此函式，如下所示：
+如果類型被用其他語言編寫的用戶端使用,則析構函數的調用方式如下:
 
-- 呼叫 <xref:System.IDisposable.Dispose%2A>。
+- 在呼叫<xref:System.IDisposable.Dispose%2A>時。
 
-- 呼叫類型上的 `Dispose(void)`。
+- 在類型`Dispose(void)`上的調用。
 
-- 如果類型超出C# `using` 語句的範圍。
+- 如果類型超出 C#`using`語句的範圍。
 
-如果您在 managed 堆積上建立參考型別的物件（不使用參考型別的堆疊語義），請使用[try-catch](../cpp/try-finally-statement.md)語法來確保例外狀況不會阻止執行析構函式。
+如果在託管堆上創建引用類型的物件(不對引用類型使用堆疊語義),請使用[嘗試-finally](../cpp/try-finally-statement.md)語法來確保異常不會阻止析構函數運行。
 
 ```cpp
 // compile with: /clr
@@ -828,25 +828,25 @@ int main() {
 }
 ```
 
-如果您的型別具有「析構函式」，則編譯器會產生可執行 <xref:System.IDisposable>的 `Dispose` 方法。 如果以 Visual C++撰寫的型別具有從另一個語言取用的析構函式，則在該型別上呼叫 `IDisposable::Dispose` 會導致呼叫型別的析構函式。 從 Visual C++ client 取用型別時，您無法直接呼叫 `Dispose`;相反地，請使用 `delete` 運算子來呼叫析構函式。
+如果類型具有析構函數,編譯器將生成實現`Dispose`<xref:System.IDisposable>的方法。 如果以 Visual C++編寫的類型具有從另一種語言消耗的析構函數,則`IDisposable::Dispose`調用 該類型會導致調用該類型的析構函數。 當類型從 Visual C++ 用戶端使用時,不能`Dispose`直接調用 ;相反,使用`delete`運算符調用析構函數。
 
-如果您的型別具有完成項，編譯器會產生覆寫 <xref:System.Object.Finalize%2A>的 `Finalize(void)` 方法。
+如果類型具有終結器,編譯器將生成一個`Finalize(void)`重<xref:System.Object.Finalize%2A>寫的方法。
 
-如果類型具有完成項或析構函式，編譯器會根據設計模式來產生 `Dispose(bool)` 方法。 （如需詳細資訊，請參閱[處置模式](/dotnet/standard/design-guidelines/dispose-pattern)）。 您無法在視覺效果C++中明確地撰寫或呼叫 `Dispose(bool)`。
+如果類型具有終結器或析構函數,編譯器將根據設計模式產生方法`Dispose(bool)`。 (有關資訊,請參閱[處置模式](/dotnet/standard/design-guidelines/dispose-pattern)。 您不能在 Visual C++中`Dispose(bool)`顯式創作或調用。
 
-如果類型具有符合設計模式的基類，則會在呼叫衍生類別的析構函式時呼叫所有基類的析構函數。 （如果您的類型是以 Visual C++撰寫，則編譯器會確保您的類型會執行此模式）。換句話說，參考類別的析構函式會連結至其基底和成員（如C++標準所指定），首先會執行類別的「析構函式」，然後以它們的結構順序反轉其成員的析構函數，最後再以其結構化的順序反轉其基類的析構函數。
+如果類型具有符合設計模式的基類,則當調用派生類的析構函數時,將調用所有基類的析構函數。 (如果類型是在 Visual C++中編寫的,編譯器將確保類型實現此模式。換句話說,引用類的析構函數按C++標準指定,鏈到其基和成員,首先運行類的析構函數,然後按其構造順序相反的成員的析構函數,最後以其基類的析構函數按其構造順序的相反運行。
 
-在實數值型別或介面中不允許有析構函數和完成項。
+不允許在值類型或介面內使用析構函數和終結器。
 
-完成項只能在參考型別中定義或宣告。 如同函式和析構函數，完成項沒有傳回型別。
+只能以引用類型定義或聲明終結器。 與構造函數和析構函數一樣,終結器沒有返回類型。
 
-在物件的完成項執行之後，也會呼叫任何基類中的處理常式，並從最小的衍生類型開始。 資料成員的完成項不會由類別的完成項自動連結到。
+運行物件的終結器后,還會調用任何基類中的終結器,從派生最少的類型開始。 數據成員的終結者不會由類的終結器自動連結到。
 
-如果完成項刪除 managed 類型中的原生指標，您必須確定原生指標的參考不會提早被收集;呼叫 managed 類型上的析構函式，而不是使用 <xref:System.GC.KeepAlive%2A>。
+如果終結器刪除託管類型的本機指標,則必須確保不會過早地收集對本機指標的引用或通過本機指標收集的引用;否則,將不過早地收集對本機指標的引用。呼叫託管型態的析構函數,而不是使用<xref:System.GC.KeepAlive%2A>。
 
-在編譯時期，您可以偵測類型是否有完成項或析構函式。 如需詳細資訊，請參閱[型別特性的編譯器支援](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
+在編譯時,可以檢測類型是具有終結器還是析構函數。 如需詳細資訊，請參閱[類型特徵的編譯器支援](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
 
-下一個範例會顯示兩個類型，其中一個具有未受管理的資源，另一個則具有決定性釋放的 managed 資源。
+下一個示例顯示兩種類型,一種具有非託管資源,另一種具有具有確定性釋放的託管資源。
 
 ```cpp
 // compile with: /clr

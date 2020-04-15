@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: 5f60a07d709a79f3ce4845c8fbd1c40cb2ee7328
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e79dd7979b587ae807c8984a04b79be362b03758
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142537"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368599"
 ---
 # <a name="task_options-class-concurrency-runtime"></a>task_options 類別 (並行執行階段)
 
@@ -27,31 +27,31 @@ class task_options;
 
 |名稱|描述|
 |----------|-----------------|
-|[task_options：： task_options 的構造函式（並行執行階段）](#ctor)|已多載。 工作建立選項的預設清單|
+|[task_options::task_options 建構函式 (並行執行階段)](#ctor)|已多載。 工作建立選項的預設清單|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[task_options：： get_cancellation_token 方法（並行執行階段）](#get_cancellation_token)|傳回取消語彙基元|
-|[task_options：： get_continuation_coNtext 方法（並行執行階段）](#get_continuation_context)|傳回接續內容|
-|[task_options：： get_scheduler 方法（並行執行階段）](#get_scheduler)|傳回排程器|
-|[task_options：： has_cancellation_token 方法（並行執行階段）](#has_cancellation_token)|表示使用者是否已指定取消語彙基元|
-|[task_options：： has_scheduler 方法（並行執行階段）](#has_scheduler)|表示使用者是否已指定排程器|
-|[task_options：： set_cancellation_token 方法（並行執行階段）](#set_cancellation_token)|設定選項中的指定語彙基元|
-|[task_options：： set_continuation_coNtext 方法（並行執行階段）](#set_continuation_context)|設定選項中的指定接續內容|
+|[task_options::get_cancellation_token 方法 (並行執行階段)](#get_cancellation_token)|傳回取消語彙基元|
+|[task_options::get_continuation_context 方法 (並行執行階段)](#get_continuation_context)|傳回接續內容|
+|[task_options::get_scheduler 方法 (並行執行階段)](#get_scheduler)|傳回排程器|
+|[task_options::has_cancellation_token 方法 (並行執行階段)](#has_cancellation_token)|表示使用者是否已指定取消語彙基元|
+|[task_options::has_scheduler 方法 (並行執行階段)](#has_scheduler)|表示使用者是否已指定排程器|
+|[task_options::set_cancellation_token 方法 (並行執行階段)](#set_cancellation_token)|設定選項中的指定語彙基元|
+|[task_options::set_continuation_context 方法 (並行執行階段)](#set_continuation_context)|設定選項中的指定接續內容|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `task_options`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ppltasks.h。h
+**標題:** ppltasks.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="get_cancellation_token"></a>task_options：： get_cancellation_token 方法（並行執行階段）
+## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>task_options:get_cancellation_token方法(併發運行時)
 
 傳回取消語彙基元
 
@@ -61,7 +61,7 @@ cancellation_token get_cancellation_token() const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="get_continuation_context"></a>task_options：： get_continuation_coNtext 方法（並行執行階段）
+## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a>task_options::get_continuation_context方法(併發運行時)
 
 傳回接續內容
 
@@ -71,7 +71,7 @@ task_continuation_context get_continuation_context() const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="get_scheduler"></a>task_options：： get_scheduler 方法（並行執行階段）
+## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>task_options::get_scheduler方法(併發運行時)
 
 傳回排程器
 
@@ -81,7 +81,7 @@ scheduler_ptr get_scheduler() const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="has_cancellation_token"></a>task_options：： has_cancellation_token 方法（並行執行階段）
+## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>task_options::has_cancellation_token方法(併發運行時)
 
 表示使用者是否已指定取消語彙基元
 
@@ -91,7 +91,7 @@ bool has_cancellation_token() const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="has_scheduler"></a>task_options：： has_scheduler 方法（並行執行階段）
+## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>task_options::has_scheduler方法(併發運行時)
 
 表示使用者是否已指定排程器
 
@@ -101,7 +101,7 @@ bool has_scheduler() const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="set_cancellation_token"></a>task_options：： set_cancellation_token 方法（並行執行階段）
+## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>task_options::set_cancellation_token方法(併發運行時)
 
 設定選項中的指定語彙基元
 
@@ -113,7 +113,7 @@ void set_cancellation_token(cancellation_token _Token);
 
 `_Token`
 
-## <a name="set_continuation_context"></a>task_options：： set_continuation_coNtext 方法（並行執行階段）
+## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a>task_options::set_continuation_context方法(併發運行時)
 
 設定選項中的指定接續內容
 
@@ -125,7 +125,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 
 `_ContinuationContext`
 
-## <a name="ctor"></a>task_options：： task_options 的構造函式（並行執行階段）
+## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a>task_options::task_options構造函數(併發運行時)
 
 工作建立選項的預設清單
 

@@ -1,5 +1,5 @@
 ---
-title: CAtlPreviewCtrlImpl 類別
+title: CAtlPreviewCtrlimpl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlPreviewCtrlImpl
@@ -20,19 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ccd01bc4d48dc088538f4799b595cce3fb910ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321361"
 ---
-# <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl 類別
+# <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlimpl 類別
 
-這個類別是視窗的 ATL 的實作會放在 Shell for Rich Preview 提供的主視窗。
+此類是放置在「豐富預覽」的 Shell 提供的主機視窗中的視窗的 ATL 實現。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -46,44 +46,44 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Destructs 預覽控制項物件。|
-|[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|建構預覽控制項物件。|
+|[CAtlPreviewCtrlimpl::_CatlPreviewCtrlimpl](#dtor)|析構預覽控件物件。|
+|[CAtlPreviewCtrlimpl::CAtlPreviewCtrlimpl](#catlpreviewctrlimpl)|構造預覽控件物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::Create](#create)|由建立 Windows 視窗的豐富預覽處理常式呼叫。|
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|需要終結此控制項時，由豐富的預覽處理常式呼叫。|
-|[CAtlPreviewCtrlImpl::Focus](#focus)|設定輸入這個控制項的焦點。|
-|[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|處理 WM_PAINT 訊息。|
-|[CAtlPreviewCtrlImpl::Redraw](#redraw)|會告知此控制項重繪。|
-|[CAtlPreviewCtrlImpl::SetHost](#sethost)|設定這個控制項的新父系。|
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|豐富的預覽處理常式時呼叫它需要設定視覺效果豐富的預覽的內容。|
-|[CAtlPreviewCtrlImpl::SetRect](#setrect)|設定這個控制項的新週框矩形。|
+|[CAtlPreviewCtrlimpl::建立](#create)|由「豐富預覽」處理程式呼叫以創建 Windows 視窗。|
+|[CAtlPreviewCtrlImpl::D](#destroy)|當需要銷毀此控件時,由富預覽處理程序調用。|
+|[CAtlPreviewCtrlimpl::聚焦](#focus)|對這個控制項設定輸入焦點。|
+|[CAtlPreviewCtrlimpl::在油漆上](#onpaint)|處理WM_PAINT消息。|
+|[CAtlPreviewCtrlImpl::重繪](#redraw)|告訴此控制件重繪。|
+|[CAtlPreviewCtrlimpl::SetHost](#sethost)|為此控件設置新父級。|
+|[CAtlPreviewCtrlImpl::設定預覽視覺物件](#setpreviewvisuals)|當需要設置富預覽內容的可視物件時,由"豐富預覽"處理程序調用。|
+|[CAtlPreviewCtrlimpl::Setrect](#setrect)|為此控件設置一個新的邊界矩形。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|由架構呼叫以呈現預覽。|
+|[CAtlPreviewCtrlimpl::DoPaint](#dopaint)|由框架調用以呈現預覽。|
 
-### <a name="protected-constants"></a>受保護的常數
+### <a name="protected-constants"></a>受保護的常量
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|用來在 [預覽] 視窗中顯示文字的字型。|
+|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|用於在預覽視窗中顯示文本的字型。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|[預覽] 視窗的背景色彩。|
-|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|預覽視窗的文字色彩。|
+|[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|預覽視窗的背景顏色。|
+|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|預覽視窗的文字顏色。|
 
 ## <a name="remarks"></a>備註
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `TBase`
 
@@ -93,7 +93,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
+[ATL::C視窗,CAtlPreviewCtrlimpl>\<](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
@@ -101,11 +101,11 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlpreviewctrlimpl.h
+**標題:** atlpreviewctrlimpl.h
 
-##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlimpl::CAtlPreviewCtrlimpl
 
-建構預覽控制項物件。
+構造預覽控件物件。
 
 ```
 CAtlPreviewCtrlImpl(void) : m_clrText(0),
@@ -114,9 +114,9 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>備註
 
-##  <a name="dtor"></a>  CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a>CAtlPreviewCtrlimpl::_CatlPreviewCtrlimpl
 
-Destructs 預覽控制項物件。
+析構預覽控件物件。
 
 ```
 virtual ~CAtlPreviewCtrlImpl(void);
@@ -124,9 +124,9 @@ virtual ~CAtlPreviewCtrlImpl(void);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create
+## <a name="catlpreviewctrlimplcreate"></a><a name="create"></a>CAtlPreviewCtrlimpl::建立
 
-由建立 Windows 視窗的豐富預覽處理常式呼叫。
+由「豐富預覽」處理程式呼叫以創建 Windows 視窗。
 
 ```
 virtual BOOL Create(HWND hWndParent, const RECT* prc);
@@ -134,11 +134,11 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*<br/>
-提供由 Shell for Rich Preview 主機視窗的控制代碼。
+*hWnd 父母*<br/>
+用於富預覽的 Shell 提供的主機視窗的句柄。
 
-*prc*<br/>
-指定的初始大小和視窗的位置。
+*中國*<br/>
+指定視窗的初始大小和位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -146,9 +146,9 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy
+## <a name="catlpreviewctrlimpldestroy"></a><a name="destroy"></a>CAtlPreviewCtrlImpl::D
 
-需要終結此控制項時，由豐富的預覽處理常式呼叫。
+當需要銷毀此控件時,由富預覽處理程序調用。
 
 ```
 virtual void Destroy();
@@ -156,9 +156,9 @@ virtual void Destroy();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint
+## <a name="catlpreviewctrlimpldopaint"></a><a name="dopaint"></a>CAtlPreviewCtrlimpl::DoPaint
 
-由架構呼叫以呈現預覽。
+由框架調用以呈現預覽。
 
 ```
 virtual void DoPaint(HDC hdc);
@@ -167,13 +167,13 @@ virtual void DoPaint(HDC hdc);
 ### <a name="parameters"></a>參數
 
 *hdc*<br/>
-繪製的裝置內容控制代碼。
+用於繪製的設備上下文的句柄。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus
+## <a name="catlpreviewctrlimplfocus"></a><a name="focus"></a>CAtlPreviewCtrlimpl::聚焦
 
-設定輸入這個控制項的焦點。
+對這個控制項設定輸入焦點。
 
 ```
 virtual void Focus();
@@ -181,9 +181,9 @@ virtual void Focus();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack
+## <a name="catlpreviewctrlimplm_clrback"></a><a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack
 
-[預覽] 視窗的背景色彩。
+預覽視窗的背景顏色。
 
 ```
 COLORREF m_clrBack;
@@ -191,9 +191,9 @@ COLORREF m_clrBack;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText
+## <a name="catlpreviewctrlimplm_clrtext"></a><a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText
 
-[預覽] 視窗的文字色彩。
+預覽視窗的文字顏色。
 
 ```
 COLORREF m_clrText;
@@ -201,9 +201,9 @@ COLORREF m_clrText;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf
+## <a name="catlpreviewctrlimplm_plf"></a><a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf
 
-用來在 [預覽] 視窗中顯示文字的字型。
+用於在預覽視窗中顯示文本的字型。
 
 ```
 const LOGFONTW* m_plf;
@@ -211,9 +211,9 @@ const LOGFONTW* m_plf;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint
+## <a name="catlpreviewctrlimplonpaint"></a><a name="onpaint"></a>CAtlPreviewCtrlimpl::在油漆上
 
-處理 WM_PAINT 訊息。
+處理WM_PAINT消息。
 
 ```
 LRESULT OnPaint(
@@ -226,7 +226,7 @@ LRESULT OnPaint(
 ### <a name="parameters"></a>參數
 
 *nMsg*<br/>
-設定為 WM_PAINT。
+設置為WM_PAINT。
 
 *wParam*<br/>
 不使用這個參數。
@@ -235,17 +235,17 @@ LRESULT OnPaint(
 不使用這個參數。
 
 *bHandled*<br/>
-此函式傳回時，它會包含 TRUE。
+當此函數返回時,它包含 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
-一律傳回 0。
+永遠傳回 0。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw
+## <a name="catlpreviewctrlimplredraw"></a><a name="redraw"></a>CAtlPreviewCtrlImpl::重繪
 
-會告知此控制項重繪。
+告訴此控制件重繪。
 
 ```
 virtual void Redraw();
@@ -253,9 +253,9 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost
+## <a name="catlpreviewctrlimplsethost"></a><a name="sethost"></a>CAtlPreviewCtrlimpl::SetHost
 
-設定這個控制項的新父系。
+為此控件設置新父級。
 
 ```
 virtual void SetHost(HWND hWndParent);
@@ -263,14 +263,14 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*<br/>
-新的父視窗的控制代碼。
+*hWnd 父母*<br/>
+新父視窗的句柄。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals
+## <a name="catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::設定預覽視覺物件
 
-豐富的預覽處理常式時呼叫它需要設定視覺效果豐富的預覽的內容。
+當需要設置富預覽內容的可視物件時,由"豐富預覽"處理程序調用。
 
 ```
 virtual void SetPreviewVisuals(
@@ -282,19 +282,19 @@ virtual void SetPreviewVisuals(
 ### <a name="parameters"></a>參數
 
 *clrBack*<br/>
-[預覽] 視窗的背景色彩。
+預覽視窗的背景顏色。
 
 *clrText*<br/>
-[預覽] 視窗的文字色彩。
+預覽視窗的文字顏色。
 
 *plf*<br/>
-用來在 [預覽] 視窗中顯示文字的字型。
+用於在預覽視窗中顯示文本的字型。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect
+## <a name="catlpreviewctrlimplsetrect"></a><a name="setrect"></a>CAtlPreviewCtrlimpl::Setrect
 
-設定這個控制項的新週框矩形。
+為此控件設置一個新的邊界矩形。
 
 ```
 virtual void SetRect(const RECT* prc, BOOL bRedraw);
@@ -302,11 +302,11 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>參數
 
-*prc*<br/>
-指定新的大小和預覽控制項的位置。
+*中國*<br/>
+指定預覽控制件的新大小和位置。
 
-*bRedraw*<br/>
-指定是否應該重新繪製控制項。
+*bredraw*<br/>
+指定是否應重繪控制件。
 
 ### <a name="remarks"></a>備註
 

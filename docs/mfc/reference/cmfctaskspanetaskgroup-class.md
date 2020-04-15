@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: a28f00fb732727ec1334946a9e752679307cd3a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c24eba646bede462a5f3cfb85715278cfa7daee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222218"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366260"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 類別
 
-`CMFCTasksPaneTaskGroup`類別是所使用的 helper 類別[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控制項。 屬於類型 `CMFCTasksPaneTaskGroup` 的物件表示「 *工作群組*」(Task Group)。 工作群組是 Framework 顯示在具有摺疊按鈕之不同方塊中的項目清單。 方塊可以有選擇性的標題 (群組名稱)。 如果群組已摺疊，工作清單是不可見的。
+該`CMFCTasksPaneTaskGroup`類是[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件使用的幫助器類。 屬於類型 `CMFCTasksPaneTaskGroup` 的物件表示「 *工作群組*」(Task Group)。 工作群組是 Framework 顯示在具有摺疊按鈕之不同方塊中的項目清單。 方塊可以有選擇性的標題 (群組名稱)。 如果群組已摺疊，工作清單是不可見的。
 
 ## <a name="syntax"></a>語法
 
@@ -47,46 +47,46 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|建構 `CMFCTasksPaneTaskGroup` 物件。|
+|[CMFC任務窗格任務組::CMFC任務窗格任務組](#cmfctaskspanetaskgroup)|建構 `CMFCTasksPaneTaskGroup` 物件。|
 |`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|判斷目前的工作群組的協助工具資料。|
+|[CMFC任務窗格任務組::設定ACC資料](#setaccdata)|確定當前任務組的輔助功能數據。|
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|決定是否要將工作群組對齊工作窗格控制項的底部。|
-|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|決定是否要摺疊工作群組。|
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|判斷是否要為工作群組*特殊。* 架構會顯示特殊的標題中不同的色彩。|
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|包含內部工作清單。|
-|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|指定群組標題的週框矩形。|
-|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|指定群組的週框矩形。|
-|[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|指定群組的名稱。|
+|[CMFC任務窗格任務組::m_bIsBottom](#m_bisbottom)|確定任務組是否與任務窗格控制件的底部對齊。|
+|[CMFC任務窗格任務組::m_bIsCollapsed](#m_biscollapsed)|確定任務組是否摺疊。|
+|[CMFC任務窗格任務組::m_bIsSpecial](#m_bisspecial)|確定任務組是否*特殊。* 框架以不同顏色顯示特殊標題。|
+|[CMFC任務窗格任務組::m_lstTasks](#m_lsttasks)|包含任務的內部清單。|
+|[CMFC任務窗格任務組::m_rect](#m_rect)|指定組標題的邊界矩形。|
+|[CMFC任務窗格任務組::m_rectGroup](#m_rectgroup)|指定組的邊界矩形。|
+|[CMFC任務窗格任務組::m_strName](#m_strname)|指定群組的名稱。|
 
 ## <a name="remarks"></a>備註
 
-下圖顯示已展開的工作群組：
+下圖顯示了展開的工作列:
 
-![工作群組中，展開](../../mfc/reference/media/nexttaskgrpexpand.png "展開的工作群組")
+![任務組,展開](../../mfc/reference/media/nexttaskgrpexpand.png "展開的工作群組")
 
-下圖顯示已摺疊的工作群組：
+下圖顯示了折疊的工作列:
 
-![摺疊工作群組](../../mfc/reference/media/nexttaskgrpcollapse.png "摺疊工作群組")
+![摺疊的工作群組](../../mfc/reference/media/nexttaskgrpcollapse.png "摺疊的工作群組")
 
-下圖顯示沒有標題的工作群組：
+下圖顯示沒有標題的工作列:
 
 ![沒有標題的工作群組](../../mfc/reference/media/nexttaskgrpnocapt.png "沒有標題的工作群組")
 
-下圖顯示兩個工作群組。 第一個工作群組設定標示為特殊`m_bIsSpecial`旗標設為 TRUE，而第二個工作群組並不特殊。 請注意如何在第一個工作群組的標題比第二個工作群組深：
+下圖顯示了兩個任務組。 通過將`m_bIsSpecial`標誌設置為 TRUE,將第一個任務組標記為特殊,而第二個任務組不特殊。 請注意第一個工作列的標題如何比第二個工作列暗:
 
-![特殊的工作群組](../../mfc/reference/media/nexttaskgrpspecial.png "特殊工作群組")
+![特殊工作群組](../../mfc/reference/media/nexttaskgrpspecial.png "特殊工作群組")
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -94,9 +94,9 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxTasksPane.h
+**標題:** afxTasksPane.h
 
-##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
+## <a name="cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a>CMFC任務窗格任務組::CMFC任務窗格任務組
 
 建構 `CMFCTasksPaneTaskGroup` 物件。
 
@@ -112,29 +112,29 @@ CMFCTasksPaneTaskGroup(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-群組標題中指定的群組名稱。
+*lpsz名稱*<br/>
+在組標題中指定群組的名稱。
 
 *bIsBottom*<br/>
-指定群組是否工作窗格控制項的底部對齊。
+指定群組是否與工作窗格控制的底部對齊。
 
-*bIsSpecial*<br/>
-指定是否要將群組指定為*特殊*，因此，不論群組標題填滿不同色彩。
+*b 特別*<br/>
+指定群組是否指定為*特殊*,因此,組標題是否以不同顏色填充。
 
-*bIsCollapsed*<br/>
-指定是否要摺疊的群組。
+*bIs 折疊*<br/>
+指定組是否摺疊。
 
 *pPage*<br/>
 指定此工作群組所屬的屬性頁。
 
 *hIcon*<br/>
-指定在群組標題中顯示的圖示。
+指定在組標題中顯示的圖示。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom
+## <a name="cmfctaskspanetaskgroupm_bisbottom"></a><a name="m_bisbottom"></a>CMFC任務窗格任務組::m_bIsBottom
 
-決定是否要將工作群組對齊工作窗格控制項的底部。
+確定任務組是否與任務窗格控制件的底部對齊。
 
 ```
 BOOL m_bIsBottom;
@@ -142,11 +142,11 @@ BOOL m_bIsBottom;
 
 ### <a name="remarks"></a>備註
 
-只有一個群組可以工作窗格控制項的底部對齊。 此工作群組必須新增上一次。 如需詳細資訊，請參閱 < [cmfctaskspane:: Addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。
+只能將一個組與任務窗格控件的底部對齊。 必須最後添加此任務組。 有關詳細資訊,請參閱[CMFC 任務窗格::新增群組](../../mfc/reference/cmfctaskspane-class.md#addgroup)。
 
-##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed
+## <a name="cmfctaskspanetaskgroupm_biscollapsed"></a><a name="m_biscollapsed"></a>CMFC任務窗格任務組::m_bIsCollapsed
 
-決定是否要摺疊工作群組。
+確定任務組是否摺疊。
 
 ```
 BOOL m_bIsCollapsed;
@@ -154,11 +154,11 @@ BOOL m_bIsCollapsed;
 
 ### <a name="remarks"></a>備註
 
-您可以啟用或停用的功能，在 [工作] 窗格上摺疊群組，藉由呼叫[cmfctaskspane:: Enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)。
+您可以通過調用[CMFCTasksPane::啟用組摺疊](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)來啟用或禁用在任務窗格上摺疊組的能力。
 
-##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial
+## <a name="cmfctaskspanetaskgroupm_bisspecial"></a><a name="m_bisspecial"></a>CMFC任務窗格任務組::m_bIsSpecial
 
-判斷是否要為工作群組*特殊*和特殊工作群組的標題是否應該由不同的色彩。
+確定工作組是否*特殊*,以及是否應以不同顏色識別特殊任務組的標題。
 
 ```
 BOOL m_bIsSpecial;
@@ -166,11 +166,11 @@ BOOL m_bIsSpecial;
 
 ### <a name="remarks"></a>備註
 
-如果您的應用程式使用 Windows XP 的視覺效果佈景主題及`m_bIsSpecial`為 FALSE 時，這個架構會呼叫`DrawThemeBackground`EBP_NORMALGROUPBACKGROUND 旗標。 如果`m_bIsSpecial`為 TRUE 時，這個架構會呼叫`DrawThemeBackground`EBP_SPECIALGROUPBACKGROUND 旗標。
+如果應用程式使用 Windows XP 可視`m_bIsSpecial`主題,並且為 FALSE,則框架`DrawThemeBackground`將使用EBP_NORMALGROUPBACKGROUND標誌調用。 如果`m_bIsSpecial`為 TRUE,則`DrawThemeBackground`框架 使用EBP_SPECIALGROUPBACKGROUND標誌調用。
 
-##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks
+## <a name="cmfctaskspanetaskgroupm_lsttasks"></a><a name="m_lsttasks"></a>CMFC任務窗格任務組::m_lstTasks
 
-包含內部工作清單。
+包含任務的內部清單。
 
 ```
 CObList m_lstTasks;
@@ -178,11 +178,11 @@ CObList m_lstTasks;
 
 ### <a name="remarks"></a>備註
 
-若要填滿這份清單，請呼叫[cmfctaskspane:: Addtask](../../mfc/reference/cmfctaskspane-class.md#addtask)。
+要填寫此清單,請致電[CMFC 工作窗格::新增工作](../../mfc/reference/cmfctaskspane-class.md#addtask)。
 
-##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect
+## <a name="cmfctaskspanetaskgroupm_rect"></a><a name="m_rect"></a>CMFC任務窗格任務組::m_rect
 
-指定群組標題的週框矩形。
+指定組標題的邊界矩形。
 
 ```
 CRect m_rect;
@@ -190,11 +190,11 @@ CRect m_rect;
 
 ### <a name="remarks"></a>備註
 
-由架構自動計算此值。
+此值由框架自動計算。
 
-##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup
+## <a name="cmfctaskspanetaskgroupm_rectgroup"></a><a name="m_rectgroup"></a>CMFC任務窗格任務組::m_rectGroup
 
-指定群組的週框矩形。
+指定組的邊界矩形。
 
 ```
 CRect m_rectGroup;
@@ -202,9 +202,9 @@ CRect m_rectGroup;
 
 ### <a name="remarks"></a>備註
 
-由架構自動計算此值。
+此值由框架自動計算。
 
-##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName
+## <a name="cmfctaskspanetaskgroupm_strname"></a><a name="m_strname"></a>CMFC任務窗格任務組::m_strName
 
 指定群組的名稱。
 
@@ -214,11 +214,11 @@ CString m_strName;
 
 ### <a name="remarks"></a>備註
 
-如果這個值是空的不會顯示群組標題，並不能摺疊的群組。
+如果此值為空,則不顯示組標題,並且無法摺疊組。
 
-##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData
+## <a name="cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a>CMFC任務窗格任務組::設定ACC資料
 
-判斷目前的工作群組的協助工具資料。
+確定當前任務組的輔助功能數據。
 
 ```
 virtual BOOL SetACCData(
@@ -229,14 +229,14 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>參數
 
 *pParent*<br/>
-[in]表示目前的工作群組的父視窗。
+[在]表示當前任務組的父視窗。
 
-*data*<br/>
-[out]型別的物件`CAccessibilityData`，並填入目前的工作群組的協助工具資料。
+*資料*<br/>
+[出]使用當前任務組的`CAccessibilityData`輔助功能數據填充的類型物件。
 
 ### <a name="return-value"></a>傳回值
 
-則為 TRUE*資料*參數，則已成功填入目前的工作群組的協助工具資料; 否則為 FALSE。
+如果*資料*參數已成功填充當前任務組的輔助功能資料,則為 TRUE;否則,FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

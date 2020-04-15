@@ -6,18 +6,18 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371936"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; 列舉
 
-## <a name="codecvt_mode"></a>  codecvt_mode 列舉
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>codecvt_mode枚舉
 
-指定[地區設定](../standard-library/locale-class.md) Facet 的設定資訊。
+指定[區域設定](../standard-library/locale-class.md)方面的設定資訊。
 
 ```cpp
 enum codecvt_mode {
@@ -29,7 +29,7 @@ enum codecvt_mode {
 
 ### <a name="remarks"></a>備註
 
-列舉可定義三個常數，以提供 [\<codecvt>](../standard-library/codecvt.md) 中所宣告之地區設定 Facet 的設定資訊。 相異值如下：
+枚舉定義了三個常量,這些常量向[\<codecvt>](../standard-library/codecvt.md)中聲明的區域設置面提供配置資訊。 相異值如下：
 
 - `consume_header` 可在讀取多位元組序列時使用初始的標頭順序，並判斷後續多位元組序列的讀取位元組序。
 
@@ -41,4 +41,4 @@ enum codecvt_mode {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<codecvt>](../standard-library/codecvt.md)
+[\<編碼>](../standard-library/codecvt.md)

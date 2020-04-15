@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320524"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr (建立 .Sbr 檔案)
 
@@ -47,15 +47,15 @@ ms.locfileid: "62292792"
 **/Fr** 已被取代，請改用 **/FR** 。 如需詳細資訊，請參閱 [Compiler Options Listed by Category](compiler-options-listed-by-category.md)中的＜已取代及移除的編譯器選項＞。
 
 > [!NOTE]
->  請勿變更 .sbr 副檔名。 BSCMAKE 要求中繼檔必須具有該副檔名。
+> 請勿變更 .sbr 副檔名。 BSCMAKE 要求中繼檔必須具有該副檔名。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 在瀏覽窗格中，依序選擇 [C/C++] 及 [瀏覽資訊]  屬性頁面。
+1. 在瀏覽窗格中，依序選擇 [C/C++] **** 及 [瀏覽資訊] **** 屬性頁面。
 
-1. 修改 [瀏覽資訊檔]  或 [啟用瀏覽資訊]  屬性。
+1. 修改 [瀏覽資訊檔] **** 或 [啟用瀏覽資訊] **** 屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

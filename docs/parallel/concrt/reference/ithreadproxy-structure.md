@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fc2fb2df06225a5c963fe39178c1b4a10f77953d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368134"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 結構
 
@@ -34,28 +34,28 @@ struct IThreadProxy;
 
 |名稱|描述|
 |----------|-----------------|
-|[IThreadProxy：： GetId](#getid)|傳回執行緒 proxy 的唯一識別碼。|
-|[IThreadProxy：： SwitchOut](#switchout)|解除基礎虛擬處理器根內容的關聯。|
-|[IThreadProxy：： SwitchTo](#switchto)|執行合作內容切換，從目前執行的內容切換到另一個。|
-|[IThreadProxy：： YieldToSystem](#yieldtosystem)|造成呼叫執行緒執行目前處理器上已就緒可執行的其他執行緒。 作業系統會選取要執行的下一個執行緒。|
+|[IThread 代理::GetId](#getid)|返回線程代理的唯一標識符。|
+|[IThreadProxy::切換出](#switchout)|解除基礎虛擬處理器根內容的關聯。|
+|[IThreadProxy::切換到](#switchto)|執行協作上下文從當前執行的上下文切換到其他上下文。|
+|[IThreadProxy::屈服到系統](#yieldtosystem)|造成呼叫執行緒執行目前處理器上已就緒可執行的其他執行緒。 操作系統選擇要執行的下一個線程。|
 
 ## <a name="remarks"></a>備註
 
-執行緒 proxy 結合了介面所表示的執行內容 `IExecutionContext` 做為分派工作的手段。
+線程代理與介面`IExecutionContext`表示的執行上下文耦合,作為調度工作的一種手段。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IThreadProxy`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="getid"></a>IThreadProxy：： GetId 方法
+## <a name="ithreadproxygetid-method"></a><a name="getid"></a>IThreadProxy:GetId 方法
 
-傳回執行緒 proxy 的唯一識別碼。
+返回線程代理的唯一標識符。
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -63,9 +63,9 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-唯一的整數識別碼。
+唯一的整數標識符。
 
-## <a name="switchout"></a>IThreadProxy：： SwitchOut 方法
+## <a name="ithreadproxyswitchout-method"></a><a name="switchout"></a>IThreadProxy::切換方法
 
 解除基礎虛擬處理器根內容的關聯。
 
@@ -75,26 +75,26 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 
 ### <a name="parameters"></a>參數
 
-*switchState*<br/>
-指出執行參數之執行緒 proxy 的狀態。 參數的類型為 `SwitchingProxyState`。
+*開關狀態*<br/>
+指示執行交換機的線程代理的狀態。 參數的型`SwitchingProxyState`態為 。
 
 ### <a name="remarks"></a>備註
 
-如果因故需要將內容與其執行所在的虛擬處理器根解除關聯，請使用 `SwitchOut`。 根據您傳遞給 `switchState` 參數的值，以及它是否在虛擬處理器根上執行而定，呼叫會立即傳回或是封鎖與內容相關聯的執行緒 Proxy。 在將參數設定為 `SwitchOut` 的情況下呼叫 `Idle` 是錯誤的做法。 這麼做會導致[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況。
+如果因故需要將內容與其執行所在的虛擬處理器根解除關聯，請使用 `SwitchOut`。 根據您傳遞給 `switchState` 參數的值，以及它是否在虛擬處理器根上執行而定，呼叫會立即傳回或是封鎖與內容相關聯的執行緒 Proxy。 在將參數設定為 `SwitchOut` 的情況下呼叫 `Idle` 是錯誤的做法。 這樣做將導致[invalid_argument](../../../standard-library/invalid-argument-class.md)異常。
 
-無論是因為資源管理員的指示，或是您要求暫時過度訂閱虛擬處理器根，但已經不再需要這樣做，只要您想要減少排程器擁有的虛擬處理器根數目，`SwitchOut` 都會很有用。 在此情況下，您應該先在虛擬處理器根目錄上叫用[IVirtualProcessorRoot：： Remove](iexecutionresource-structure.md#remove)方法，再使用參數 `switchState` 設定為 `Blocking`來呼叫 `SwitchOut`。 這樣將會封鎖執行緒 Proxy，而且它會在排程器中有不同的虛擬處理器根可用於執行時繼續執行。 封鎖執行緒 proxy 可以藉由呼叫函式 `SwitchTo` 來繼續，以切換至這個執行緒 proxy 的執行內容。 您也可以使用相關聯的內容來啟動虛擬處理器根，以繼續執行緒 proxy。 如需如何執行此動作的詳細資訊，請參閱[IVirtualProcessorRoot：： Activate](ivirtualprocessorroot-structure.md#activate)。
+無論是因為資源管理員的指示，或是您要求暫時過度訂閱虛擬處理器根，但已經不再需要這樣做，只要您想要減少排程器擁有的虛擬處理器根數目，`SwitchOut` 都會很有用。 在這種情況下,您應該呼叫方法[IVirtualProcessorRoot::刪除](iexecutionresource-structure.md#remove)虛擬處理器根,然後再呼`SwitchOut`叫`switchState`參數`Blocking`設定為 。 這樣將會封鎖執行緒 Proxy，而且它會在排程器中有不同的虛擬處理器根可用於執行時繼續執行。 可以通過調用函`SwitchTo`數 切換到此線程代理的執行上下文來恢復阻塞線程代理。 您還可以使用其關聯的上下文來啟動虛擬處理器根,從而恢復線程代理。 有關如何執行此操作的詳細資訊,請參閱[IVirtualProcessorRoot:::啟動](ivirtualprocessorroot-structure.md#activate)。
 
-當您想要重新初始化虛擬處理器，讓它能夠在未來發生封鎖執行緒 Proxy，或是暫時將它卸離執行所在的虛擬處理器根以及對其分派工作的排程器時可以啟動，您也可以使用 `SwitchOut`。 如果您想要封鎖執行緒 Proxy，請使用 `SwitchOut`，並將 `switchState` 參數設定為 `Blocking`。 之後可以使用 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 讓它繼續執行，如上面所述。 當您想要暫時將這個執行緒 Proxy 卸離執行所在的虛擬處理器根，以及與虛擬處理器相關聯的排程器，請使用 `SwitchOut` 並將參數設定為 `Nesting`。 若呼叫 `SwitchOut` 並將 `switchState` 參數設定為 `Nesting` 時，它正在虛擬處理器根上執行，則會造成根重新初始化，而且目前執行緒 Proxy 會繼續執行，不需要根。 執行緒 proxy 會被視為已離開排程器，直到它使用 `Blocking` 在稍後的時間點呼叫[IThreadProxy：： SwitchOut](#switchout)方法為止。 第二次呼叫 `SwitchOut` 並將參數設定為 `Blocking` 時，該呼叫會將內容返回已封鎖狀態，以便在卸離的排程器中透過 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 繼續執行。 由於它並未在虛擬處理器根上執行，因此不會發生重新初始化。
+當您想要重新初始化虛擬處理器，讓它能夠在未來發生封鎖執行緒 Proxy，或是暫時將它卸離執行所在的虛擬處理器根以及對其分派工作的排程器時可以啟動，您也可以使用 `SwitchOut`。 如果您想要封鎖執行緒 Proxy，請使用 `SwitchOut`，並將 `switchState` 參數設定為 `Blocking`。 之後可以使用 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 讓它繼續執行，如上面所述。 當您想要暫時將這個執行緒 Proxy 卸離執行所在的虛擬處理器根，以及與虛擬處理器相關聯的排程器，請使用 `SwitchOut` 並將參數設定為 `Nesting`。 若呼叫 `SwitchOut` 並將 `switchState` 參數設定為 `Nesting` 時，它正在虛擬處理器根上執行，則會造成根重新初始化，而且目前執行緒 Proxy 會繼續執行，不需要根。 線程代理被視為已離開計劃程式,直到它調用[IThreadProxy::switchOut](#switchout)方法,稍後`Blocking`時間點使用。 第二次呼叫 `SwitchOut` 並將參數設定為 `Blocking` 時，該呼叫會將內容返回已封鎖狀態，以便在卸離的排程器中透過 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 繼續執行。 由於它並未在虛擬處理器根上執行，因此不會發生重新初始化。
 
 已重新初始化的虛擬處理器根與資源管理員授與排程器的全新虛擬處理器根並無不同。 您可以在執行內容中使用 `IVirtualProcessorRoot::Activate` 啟用它，這樣就可以用它來執行。
 
-必須在代表目前執行中線程的 `IThreadProxy` 介面上呼叫 `SwitchOut`，否則不會定義結果。
+`SwitchOut`必須在表示當前正在執行`IThreadProxy`的線程的介面上調用,否則結果未定義。
 
 在隨附於 Visual Studio 2010 的程式庫和標頭中，這個方法不會使用參數，也不會重新初始化虛擬處理器根。 若要保留舊有行為，可以提供預設參數值 `Blocking`。
 
-## <a name="switchto"></a>IThreadProxy：： SwitchTo 方法
+## <a name="ithreadproxyswitchto-method"></a><a name="switchto"></a>IThreadProxy::切換到方法
 
-執行合作內容切換，從目前執行的內容切換到另一個。
+執行協作上下文從當前執行的上下文切換到其他上下文。
 
 ```cpp
 virtual void SwitchTo(
@@ -105,26 +105,26 @@ virtual void SwitchTo(
 ### <a name="parameters"></a>參數
 
 *pContext*<br/>
-要以合作方式切換的執行內容。
+要協同切換到的執行上下文。
 
-*switchState*<br/>
-指出執行參數之執行緒 proxy 的狀態。 參數的類型為 `SwitchingProxyState`。
+*開關狀態*<br/>
+指示執行交換機的線程代理的狀態。 參數的型`SwitchingProxyState`態為 。
 
 ### <a name="remarks"></a>備註
 
-使用這個方法，從第一個執行內容的[IExecutionCoNtext：:D ispatch](iexecutioncontext-structure.md#dispatch)方法切換到另一個執行內容。 方法會將執行內容與執行緒 proxy `pContext` 相關聯（如果它尚未與它關聯）。 目前線程 proxy 的擁有權取決於您為 `switchState` 引數指定的值。
+使用此方法從第一個執行上下文的[iExecutionContext::Dispatch](iexecutioncontext-structure.md#dispatch)方法從一個執行上下文切換到另一個執行上下文。 如果執行上下文尚未與線程`pContext`代理關聯,則該方法將執行上下文與線程代理關聯。 當前線程代理的所有權由您為`switchState`參數指定的值確定。
 
-當您想要將目前執行的執行緒 proxy 傳回至 Resource Manager 時，請使用 `Idle` 值。 使用參數 `switchState` 設定為 `Idle` 呼叫 `SwitchTo`，會使執行內容 `pContext` 開始在基礎執行資源上執行。 此執行緒 proxy 的擁有權會傳送至 Resource Manager，而且您應該會在 `SwitchTo` 傳回之後，立即從執行內容的 `Dispatch` 方法傳回，以便完成傳輸。 執行緒 proxy 所分派的執行內容與執行緒 proxy 解除關聯，而且排程器可以自由地重複使用它，或在它看到的情況下損毀。
+如果要將當前`Idle`正在執行的線程代理返回到資源管理員,請使用該值。 使用`SwitchTo``switchState`參數設置為調`Idle`用將導致執行上下`pContext`文 開始在基礎執行資源上執行。 此線程代理的所有權將轉移到資源管理員,並且您希望在返回後立即`Dispatch``SwitchTo`從執行上下文的方法返回,以便完成傳輸。 線程代理調度的執行上下文與線程代理分離,調度程式可以自由地重用它或銷毀它,因為它認為合適。
 
-當您想要讓此執行緒 proxy 進入封鎖狀態時，請使用值 `Blocking`。 使用參數呼叫 `SwitchTo` `switchState` 設定為 `Blocking` 會使執行內容 `pContext` 開始執行，並封鎖目前的執行緒 proxy，直到它繼續進行為止。 當執行緒 proxy 處於 `Blocking` 狀態時，排程器會保留執行緒 proxy 的擁有權。 封鎖執行緒 proxy 可以藉由呼叫函式 `SwitchTo` 來繼續，以切換至這個執行緒 proxy 的執行內容。 您也可以使用相關聯的內容來啟動虛擬處理器根，以繼續執行緒 proxy。 如需如何執行此動作的詳細資訊，請參閱[IVirtualProcessorRoot：： Activate](ivirtualprocessorroot-structure.md#activate)。
+當希望此`Blocking`線程代理進入阻止狀態時,請使用 該值。 使用`SwitchTo``switchState`參數設置為調`Blocking`用 將導致執行`pContext`上下文 開始執行,並阻止當前線程代理,直到恢復它。 當線程代理處於`Blocking`狀態時,計劃程式保留線程代理的擁有權。 可以通過調用函`SwitchTo`數 切換到此線程代理的執行上下文來恢復阻塞線程代理。 您還可以使用其關聯的上下文來啟動虛擬處理器根,從而恢復線程代理。 有關如何執行此操作的詳細資訊,請參閱[IVirtualProcessorRoot:::啟動](ivirtualprocessorroot-structure.md#activate)。
 
-當您想要暫時將此執行緒 proxy 從其執行所在的虛擬處理器根目錄中斷連結時，請使用 `Nesting` 值，並將其分派工作的排程器設為正在執行的排程器。 使用參數呼叫 `SwitchTo` `switchState` 設定為 `Nesting` 會使執行內容 `pContext` 開始執行，而目前的執行緒 proxy 也會繼續執行，而不需要虛擬處理器根。 執行緒 proxy 會被視為已離開排程器，直到它在稍後的時間點呼叫[IThreadProxy：： SwitchOut](#switchout)方法為止。 `IThreadProxy::SwitchOut` 方法可能會封鎖執行緒 proxy，直到虛擬處理器根目錄可供重新排定為止。
+如果要暫時將`Nesting`此線程代理從正在運行的虛擬處理器根和為其調度工作的調度程式分離時,請使用該值。 使用`SwitchTo``switchState`參數設置為調`Nesting`用 將導致執行`pContext`上下文 開始執行,並且當前線程代理也繼續執行,而無需虛擬處理器根。 線程代理被視為已離開計劃程式,直到它在以後的時間點調用[IThreadProxy::SwitchOut](#switchout)方法。 該方法`IThreadProxy::SwitchOut`可以阻止線程代理,直到虛擬處理器根可用於重新計劃它。
 
-必須在代表目前執行中線程的 `IThreadProxy` 介面上呼叫 `SwitchTo`，否則不會定義結果。 如果參數 `pContext` 設定為 `NULL`，則函式會擲回 `invalid_argument`。
+`SwitchTo`必須在表示當前正在執行`IThreadProxy`的線程的介面上調用,否則結果未定義。 如果參數`invalid_argument``pContext`設定`NULL`為 ,則將引發該函數。
 
-## <a name="yieldtosystem"></a>IThreadProxy：： YieldToSystem 方法
+## <a name="ithreadproxyyieldtosystem-method"></a><a name="yieldtosystem"></a>IThreadProxy:屈服到系統方法
 
-造成呼叫執行緒執行目前處理器上已就緒可執行的其他執行緒。 作業系統會選取要執行的下一個執行緒。
+造成呼叫執行緒執行目前處理器上已就緒可執行的其他執行緒。 操作系統選擇要執行的下一個線程。
 
 ```cpp
 virtual void YieldToSystem() = 0;
@@ -132,9 +132,9 @@ virtual void YieldToSystem() = 0;
 
 ### <a name="remarks"></a>備註
 
-由一般 Windows 執行緒支援的執行緒 proxy 呼叫時，`YieldToSystem` 的行為與 Windows 函數 `SwitchToThread`完全相同。 不過，從使用者模式可排程（UMS）執行緒呼叫時，`SwitchToThread` 函式會將挑選下一個執行緒的工作委派給使用者模式排程器，而不是作業系統。 若要達成切換至系統中不同就緒執行緒的預期效果，請使用 `YieldToSystem`。
+當由一般 Windows 執行緒支援的線程代理呼`YieldToSystem`叫時, 其執行方式與`SwitchToThread`Windows 函數 完全一樣。 但是,當從使用者模式可分排 (UMS) 線程調`SwitchToThread`用時 ,該函數將選取要運行的下一個線程的任務委派給使用者模式計劃程式,而不是操作系統。 要達到在系統中切換到其他就緒線程的預期效果,請使用`YieldToSystem`。
 
-必須在代表目前執行中線程的 `IThreadProxy` 介面上呼叫 `YieldToSystem`，否則不會定義結果。
+`YieldToSystem`必須在表示當前正在執行`IThreadProxy`的線程的介面上調用,否則結果未定義。
 
 ## <a name="see-also"></a>另請參閱
 

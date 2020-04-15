@@ -8,67 +8,67 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 578b3b39d90b3beb80dbd201d4982fee30dc6bce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03fb696c1fadd834962d37c8e75b5f8910af819e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212871"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366972"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>資料錄集：資料錄集更新資料錄的方式 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
-除了能夠從資料來源選取記錄之外，記錄集可以（選擇性）更新或刪除選取的記錄或加入新的記錄。 有三個因素會決定記錄集的可更新性：是否可以更新連接的資料來源、建立記錄集物件時所指定的選項，以及所建立的 SQL。
+除了從數據源中選擇記錄的能力外,記錄集還可以(可選)更新或刪除所選記錄或添加新記錄。 三個因素決定了記錄集的可更新性:連接的資料來源是否可更新、創建記錄集物件時指定的選項以及創建的 SQL。
 
 > [!NOTE]
->  您的 `CRecordset` 物件所依據的 SQL 可能會影響記錄集的可更新性。 例如，如果您的 SQL 包含 join 或**GROUP by**子句，MFC 會將可更新性設定為 FALSE。
+> `CRecordset`對象基於的 SQL 可能會影響記錄集的可更新性。 例如,如果您的 SQL 包含聯接或 GROUP **BY**子句,MFC 會將可更新性設置為 FALSE。
 
 > [!NOTE]
->  本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果您使用大量資料列提取，請參閱[記錄集：提取大量的記錄（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果使用批量行提取,請參閱[記錄集:批量提取記錄 (ODBC)。](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 本主題將說明：
 
-- [您在記錄集內更新的角色](#_core_your_role_in_recordset_updating)，以及架構為您提供的功能。
+- [您在記錄集更新中的角色](#_core_your_role_in_recordset_updating)以及框架為您做什麼。
 
-- [記錄集作為編輯緩衝區](#_core_the_edit_buffer)，以及[動態集與快照之間的差異](#_core_dynasets_and_snapshots)。
+- [紀錄集為編輯緩衝區](#_core_the_edit_buffer)以及[動態集和快照之間的差異](#_core_dynasets_and_snapshots)。
 
-[記錄集： AddNew、Edit 和 Delete Work （ODBC）如何](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)從記錄集的觀點來描述這些函式的動作。
+[記錄集:如何](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)從記錄集的角度描述這些函數的操作。"
 
-[記錄集：有關更新的詳細資訊（ODBC）](../../data/odbc/recordset-more-about-updates-odbc.md)藉由說明交易如何影響更新、關閉記錄集或滾動對進行中的更新，以及更新與其他使用者的更新互動的方式，完成記錄集更新的故事。
+[記錄集:有關更新的詳細資訊 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)通過解釋事務如何影響更新、關閉記錄集或滾動如何影響正在進行的更新以及更新如何與其他使用者的更新交互來完成記錄集更新故事。
 
-##  <a name="your-role-in-recordset-updating"></a><a name="_core_your_role_in_recordset_updating"></a>您在記錄集更新中的角色
+## <a name="your-role-in-recordset-updating"></a><a name="_core_your_role_in_recordset_updating"></a>您在紀錄集更新中的角色
 
-下表顯示您在使用記錄集來新增、編輯或刪除記錄時的角色，以及架構為您提供的功能。
+下表顯示了您在使用記錄集添加、編輯或刪除記錄中的角色,以及框架為您執行的作用。
 
-### <a name="recordset-updating-you-and-the-framework"></a>記錄集更新：您和架構
+### <a name="recordset-updating-you-and-the-framework"></a>記錄集更新:您和框架
 
 |您|架構|
 |---------|-------------------|
-|判斷資料來源是否可更新（或可附加）。|提供[CDatabase](../../mfc/reference/cdatabase-class.md)成員函式，以測試資料來源的可更新性或 appendability。|
-|開啟可更新的記錄集（屬於任何類型）。||
-|藉由呼叫 `CRecordset` 的更新函數（例如 `CanUpdate` 或 `CanAppend`），判斷記錄集是否可更新。||
-|通話記錄集成員函式來加入、編輯和刪除記錄。|管理您的記錄集物件與資料來源之間交換資料的機制。|
-|（選擇性）使用交易來控制更新程式。|提供 `CDatabase` 成員函式以支援交易。|
+|確定數據源是可更新的(或可追加的)。|提供[CDatabase](../../mfc/reference/cdatabase-class.md)成員函數,用於測試數據源的可更新性或可追加性。|
+|打開可上升的記錄集(任何類型的)。||
+|通過調用`CRecordset`更新函數(`CanUpdate`如`CanAppend`或 )確定記錄集是否可更新。||
+|調用記錄集成員函數以添加、編輯和刪除記錄。|管理記錄集對象和數據源之間交換數據的機制。|
+|或者,使用事務來控制更新過程。|提供`CDatabase`成員功能以支援事務。|
 
-如需交易的詳細資訊，請參閱[交易（ODBC）](../../data/odbc/transaction-odbc.md)。
+有關交易記錄的詳細資訊,請參閱事務[(ODBC)](../../data/odbc/transaction-odbc.md)。
 
-##  <a name="the-edit-buffer"></a><a name="_core_the_edit_buffer"></a>編輯緩衝區
+## <a name="the-edit-buffer"></a><a name="_core_the_edit_buffer"></a>編輯緩衝區
 
-總之，記錄集的欄位資料成員可作為編輯緩衝區，其中包含一筆記錄，也就是目前的記錄。 更新作業會使用這個緩衝區來操作目前的記錄。
+綜合而言,記錄集的欄位數據成員用作包含一條記錄 (當前記錄)的編輯緩衝區。 更新操作使用此緩衝區對當前記錄進行操作。
 
-- 當您新增記錄時，會使用編輯緩衝區來建立新的記錄。 當您完成新增記錄時，先前目前的記錄會再次變成「最新」。
+- 添加記錄時,編輯緩衝區用於生成新記錄。 完成添加記錄後,以前當前的記錄將再次變為當前。
 
-- 當您更新（編輯）記錄時，會使用編輯緩衝區將記錄集的欄位資料成員設定為新的值。 當您完成更新時，更新的記錄仍然是最新的。
+- 更新(編輯)記錄時,編輯緩衝區用於將記錄集的欄位數據成員設置為新值。 更新完成後,更新的記錄仍然是最新的。
 
-當您呼叫[AddNew](../../mfc/reference/crecordset-class.md#addnew)或[Edit](../../mfc/reference/crecordset-class.md#edit)時，會儲存目前的記錄，以便稍後視需要進行還原。 當您呼叫[Delete](../../mfc/reference/crecordset-class.md#delete)時，不會儲存目前的記錄，但會標示為已刪除，而且您必須滾動到另一筆記錄。
+當您調用[AddNew](../../mfc/reference/crecordset-class.md#addnew)或[Edit](../../mfc/reference/crecordset-class.md#edit)時,將儲存當前記錄,以便以後可以根據需要還原該記錄。 當您調用[Delete](../../mfc/reference/crecordset-class.md#delete)時,不會儲存當前記錄,但標記為已刪除,您必須滾動到其他記錄。
 
 > [!NOTE]
->  編輯緩衝區在刪除記錄時不會扮演任何角色。 當您刪除目前的記錄時，記錄會標示為已刪除，而記錄集是「不在記錄」上，直到您滾動到不同的記錄為止。
+> 編輯緩衝區在記錄刪除中不扮演任何角色。 刪除當前記錄時,記錄將標記為已刪除,並且記錄集在滾動到其他記錄之前"不在記錄上"。
 
-##  <a name="dynasets-and-snapshots"></a><a name="_core_dynasets_and_snapshots"></a>動態集和快照
+## <a name="dynasets-and-snapshots"></a><a name="_core_dynasets_and_snapshots"></a>動態集和快照
 
-當您滾動到記錄時，[動態集](../../data/odbc/dynaset.md)會重新整理記錄的內容。 [快照](../../data/odbc/snapshot.md)集是記錄的靜態標記法，因此除非您呼叫重新[查詢](../../mfc/reference/crecordset-class.md#requery)，否則不會重新整理記錄的內容。 若要使用動態集的所有功能，您必須使用符合正確 ODBC API 支援層級的 ODBC 驅動程式。 如需詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)和[動態集](../../data/odbc/dynaset.md)。
+當您滾動到記錄時,[動態集](../../data/odbc/dynaset.md)會刷新記錄的內容。 [快照](../../data/odbc/snapshot.md)是記錄的靜態表示形式,因此除非調用[Requery](../../mfc/reference/crecordset-class.md#requery),否則不會刷新記錄的內容。 要使用動態集的所有功能,您必須使用符合正確等級的 ODBC API 支援的 ODBC 驅動程式。 有關詳細資訊,請參閱[ODBC](../../data/odbc/odbc-basics.md)和[Dynaset](../../data/odbc/dynaset.md)。
 
 ## <a name="see-also"></a>另請參閱
 

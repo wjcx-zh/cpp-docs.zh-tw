@@ -1,5 +1,5 @@
 ---
-title: CCoNtextMenuManager 類別
+title: CContextMenuManager 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CContextMenuManager
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420502"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369416"
 ---
-# <a name="ccontextmenumanager-class"></a>CCoNtextMenuManager 類別
+# <a name="ccontextmenumanager-class"></a>CContextMenuManager 類別
 
-`CContextMenuManager` 物件會管理快捷方式功能表，也稱為內容功能表。
+物件`CContextMenuManager`管理快捷功能表,也稱為上下文菜單。
 
 ## <a name="syntax"></a>語法
 
@@ -51,41 +51,41 @@ class CContextMenuManager : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CCoNtextMenuManager::CCoNtextMenuManager](#ccontextmenumanager)|建構 `CContextMenuManager` 物件。|
+|[CContext 選單管理員:C上下文選單管理員](#ccontextmenumanager)|建構 `CContextMenuManager` 物件。|
 |`CContextMenuManager::~CContextMenuManager`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CCoNtextMenuManager：： AddMenu](#addmenu)|加入新的快捷方式功能表。|
-|[CCoNtextMenuManager::GetMenuById](#getmenubyid)|傳回與所提供資源識別碼相關聯之功能表的控制碼。|
-|[CCoNtextMenuManager::GetMenuByName](#getmenubyname)|傳回符合提供的功能表名稱之功能表的控制碼。|
-|[CCoNtextMenuManager::GetMenuNames](#getmenunames)|傳回功能表名稱的清單。|
-|[CCoNtextMenuManager：： LoadState](#loadstate)|載入儲存在 Windows 登錄中的快捷方式功能表。|
-|[CCoNtextMenuManager：： ResetState](#resetstate)|從內容功能表管理員清除快捷方式功能表。|
-|[CCoNtextMenuManager：： SaveState](#savestate)|將快捷方式功能表儲存至 Windows 登錄。|
-|[CCoNtextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|控制當顯示新的快捷方式功能表時，`CContextMenuManager` 是否關閉使用中的快捷方式功能表。|
-|[CCoNtextMenuManager::ShowPopupMenu](#showpopupmenu)|顯示指定的快捷方式功能表。|
-|[CCoNtextMenuManager：： Trackpopupmenu 讓](#trackpopupmenu)|顯示指定的快捷方式功能表。 傳回所選功能表命令的索引。|
+|[CContext 選單管理員:新增選單](#addmenu)|添加新的快捷功能表。|
+|[CContext 選單管理員::取得選單ById](#getmenubyid)|返回與提供的資源 ID 關聯的功能表的句柄。|
+|[CContext 選單管理員::取得Menubyname](#getmenubyname)|返回與提供的功能表名稱匹配的菜單的句柄。|
+|[CContext 選單管理員::取得選單名稱](#getmenunames)|傳回選單名稱的清單。|
+|[CContext 選單管理員:載入狀態](#loadstate)|載入儲存在 Windows 註冊表中的快捷功能表。|
+|[CContext 選單管理員::重置狀態](#resetstate)|從上下文菜單管理器清除快捷功能表。|
+|[CContext 選單管理員::儲存狀態](#savestate)|將快捷功能表保存到 Windows 註冊表。|
+|[CContext 選單管理員::設定不關閉活動選單](#setdontcloseactivemenu)|控制`CContextMenuManager`在 顯示新快捷功能表時,是否關閉活動快捷功能表。|
+|[CContext 選單管理員::顯示彈出選單](#showpopupmenu)|顯示指定的快捷功能表。|
+|[CContext 選單管理員::追蹤彈出選單](#trackpopupmenu)|顯示指定的快捷功能表。 返回所選功能表命令的索引。|
 
 ## <a name="remarks"></a>備註
 
-`CContextMenuManager` 管理快捷方式功能表，並確保它們具有一致的外觀。
+`CContextMenuManager`管理快捷功能表並確保它們具有一致的外觀。
 
-您不應該手動建立 `CContextMenuManager` 物件。 應用程式的架構會建立 `CContextMenuManager` 物件。 不過，當您的應用程式初始化時，您應該呼叫[CWinAppEx：： InitCoNtextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 。 在初始化內容管理員之後，請使用[CWinAppEx：： GetCoNtextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)方法來取得應用程式內容管理員的指標。
+不應手動創建`CContextMenuManager`物件。 應用程式框架將建立物件`CContextMenuManager`。 但是,在初始化應用程式時,應調用[CWinAppEx:itContextMenuManager。](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 初始化上下文管理器後,使用方法[CWinAppEx::getContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)獲取指向應用程式的上下文管理器的指標。
 
-您可以藉由呼叫 `AddMenu`，在執行時間建立快捷方式功能表。 如果您想要顯示功能表，而不先收到使用者輸入，請呼叫 `ShowPopupMenu`。 當您想要建立功能表並等候使用者輸入時，會使用 `TrackPopupMenu`。 `TrackPopupMenu` 會傳回所選命令的索引，如果使用者結束但未選取任何專案，則傳回0。
+您可以通過呼`AddMenu`叫 在執行時建立快捷選單。 如果要在未首先接收使用者輸入的情況下顯示選單,請呼叫`ShowPopupMenu`。 `TrackPopupMenu`在要創建功能表並等待使用者輸入時使用。 `TrackPopupMenu`如果使用者退出而不選擇任何內容,則返回所選命令的索引或 0。
 
-`CContextMenuManager` 也可以將其狀態儲存並載入至 Windows 登錄。
+`CContextMenuManager`還可以將其狀態保存並載入Windows註冊表。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將功能表加入至 `CContextMenuManager` 物件，以及當 `CContextMenuManager` 物件顯示新的快顯功能表時，如何關閉現用快顯功能表。 此程式碼片段是[自訂頁面範例](../../overview/visual-cpp-samples.md)的一部分。
+下面的範例展示如何向`CContextMenuManager`物件添加功能表,以及如何在`CContextMenuManager`物件顯示新的彈出式功能表時不關閉活動彈出式功能表。 此代碼段是[自定義頁示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -93,11 +93,11 @@ class CContextMenuManager : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxcoNtextmenumanager。h
+**標題:** afxcontextmenumanager.h
 
-##  <a name="addmenu"></a>CCoNtextMenuManager：： AddMenu
+## <a name="ccontextmenumanageraddmenu"></a><a name="addmenu"></a>CContext 選單管理員:新增選單
 
-將新的快捷方式功能表加入至[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)。
+加入[CContextMenu 管理員](../../mfc/reference/ccontextmenumanager-class.md)加入新的快捷選單。
 
 ```
 BOOL AddMenu(
@@ -111,26 +111,26 @@ BOOL AddMenu(
 
 ### <a name="parameters"></a>參數
 
-*uiMenuNameResId*<br/>
-在包含新功能表名稱的字串資源識別碼。
+*uiMenuNameResid*<br/>
+[在]包含新選單名稱的字串的資源 ID。
 
 *uiMenuResId*<br/>
-在功能表資源識別碼。
+[在]功能表資源識別碼。
 
-*lpszName*<br/>
-在包含新功能表名稱的字串。
+*lpsz名稱*<br/>
+[在]包含新選單名稱的字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為非零;如果方法失敗，則為0。
+如果方法成功,則非零;如果方法失敗,為 0。
 
 ### <a name="remarks"></a>備註
 
-如果*uiMenuResId*無效，或 `CContextMenuManager`中已經有另一個同名的功能表，這個方法就會失敗。
+如果*uiMenuResId*無效,或者同一名稱的另一個功能表已在`CContextMenuManager`中, 則此方法將失敗。
 
-##  <a name="ccontextmenumanager"></a>CCoNtextMenuManager::CCoNtextMenuManager
+## <a name="ccontextmenumanagerccontextmenumanager"></a><a name="ccontextmenumanager"></a>CContext 選單管理員:C上下文選單管理員
 
-結構[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。
+建構[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。
 
 ```
 CContextMenuManager();
@@ -138,11 +138,11 @@ CContextMenuManager();
 
 ### <a name="remarks"></a>備註
 
-在大部分的情況下，您不應該手動建立 `CContextMenuManager`。 應用程式的架構會建立 `CContextMenuManager` 物件。 在初始化應用程式期間，您應該呼叫[CWinAppEx：： InitCoNtextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 。 若要取得內容管理員的指標，請呼叫[CWinAppEx：： GetCoNtextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)。
+在大多數情況下,不應手動創建。 `CContextMenuManager` 應用程式框架將建立物件`CContextMenuManager`。 您應該在應用程式的初始化期間調用[CWinAppEx:initContextMenuManager。](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 要取得指向上下文管理員的指標,請致電[CWinAppEx::取得ContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)。
 
-##  <a name="getmenubyid"></a>CCoNtextMenuManager::GetMenuById
+## <a name="ccontextmenumanagergetmenubyid"></a><a name="getmenubyid"></a>CContext 選單管理員::取得選單ById
 
-傳回與指定資源識別碼相關聯之功能表的控制碼。
+返回與給定資源 ID 關聯的功能表的句柄。
 
 ```
 HMENU GetMenuById(UINT nMenuResId) const;
@@ -150,16 +150,16 @@ HMENU GetMenuById(UINT nMenuResId) const;
 
 ### <a name="parameters"></a>參數
 
-*nMenuResId*<br/>
-在功能表的資源識別碼。
+*恩梅努雷斯Id*<br/>
+[在]功能表的資源識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果找不到功能表，則為相關聯功能表或 `NULL` 的控制碼。
+關聯功能表的句柄或`NULL`找不到功能表。
 
-##  <a name="getmenubyname"></a>CCoNtextMenuManager::GetMenuByName
+## <a name="ccontextmenumanagergetmenubyname"></a><a name="getmenubyname"></a>CContext 選單管理員::取得Menubyname
 
-傳回特定功能表的控制碼。
+將句柄返回到特定功能表。
 
 ```
 HMENU GetMenuByName(
@@ -169,23 +169,23 @@ HMENU GetMenuByName(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-在包含要抓取之功能表名稱的字串。
+*lpsz名稱*<br/>
+[在]包含要檢索的功能表名稱的字串。
 
-*puiOrigResID*<br/>
-脫銷UINT 的指標。 如果找到，此參數會包含指定功能表的資源識別碼。
+*普伊奧裡格雷斯ID*<br/>
+[出]指向 UINT 的指標。 這裡包含指定選單的資源 ID(如果找到)。
 
 ### <a name="return-value"></a>傳回值
 
-符合*lpszName*所指定之名稱的功能表控制碼。 如果沒有名為*lpszName*的功能表，則為 Null。
+與*lpszName*指定的名稱符合的選單的句柄。 如果沒有名為*lpszName*的選單,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-如果此方法找到符合*lpszName*的功能表，`GetMenuByName` 會將功能表資源識別碼儲存在參數*puiOrigResID*中。
+如果此方法找到與*lpszName*匹配的`GetMenuByName`選單 ,則將選單資源 ID 儲存在參數*puiOrigResID*中。
 
-##  <a name="getmenunames"></a>CCoNtextMenuManager::GetMenuNames
+## <a name="ccontextmenumanagergetmenunames"></a><a name="getmenunames"></a>CContext 選單管理員::取得選單名稱
 
-傳回已新增至[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)的功能表名稱清單。
+返回添加到[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)的功能表名稱清單。
 
 ```
 void GetMenuNames(CStringList& listOfNames) const;
@@ -193,12 +193,12 @@ void GetMenuNames(CStringList& listOfNames) const;
 
 ### <a name="parameters"></a>參數
 
-*listOfNames*<br/>
-脫銷[CStringList](../../mfc/reference/cstringlist-class.md)參數的參考。 這個方法會將功能表名稱的清單寫入此參數。
+*名稱清單*<br/>
+[出]對[CStringList](../../mfc/reference/cstringlist-class.md)參數的引用。 此方法將功能表名稱清單寫入此參數。
 
-##  <a name="loadstate"></a>CCoNtextMenuManager：： LoadState
+## <a name="ccontextmenumanagerloadstate"></a><a name="loadstate"></a>CContext 選單管理員:載入狀態
 
-從 Windows 登錄載入與[CCoNtextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)相關聯的資訊。
+從 Windows 註冊表載入與[CContextMenuManager 類](../../mfc/reference/ccontextmenumanager-class.md)關聯的資訊。
 
 ```
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -206,22 +206,22 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>參數
 
-*lpszProfileName*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz 設定檔名稱*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為非零;否則為0。
+如果方法成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-*LpszProfileName*參數不是登錄專案的絕對路徑。 它是新增至您應用程式的預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx：： SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)方法。
+*lpszProfileName*參數不是註冊表項的絕對路徑。 它是添加到應用程式的預設註冊表項末尾的相對路徑。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx::設定註冊表項的方法](../../mfc/reference/cwinappex-class.md#setregistrybase)。
 
-使用方法[CCoNtextMenuManager：： SaveState](#savestate) ，將快捷方式功能表儲存至登錄。
+使用方法[CContextMenuManager::儲存狀態](#savestate)以將快捷菜單保存到註冊表。
 
-##  <a name="resetstate"></a>CCoNtextMenuManager：： ResetState
+## <a name="ccontextmenumanagerresetstate"></a><a name="resetstate"></a>CContext 選單管理員::重置狀態
 
-從與[CCoNtextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)相關聯的快捷方式功能表清除所有專案。
+清除與[CContextMenuManager 類](../../mfc/reference/ccontextmenumanager-class.md)關聯的快捷功能表中的所有項。
 
 ```
 virtual BOOL ResetState();
@@ -229,15 +229,15 @@ virtual BOOL ResetState();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE;如果發生失敗，則為 FALSE。
+如果方法成功,則為 TRUE;如果發生故障,則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會清除快顯功能表，並將其從 `CContextMenuManager`中移除。
+此方法清除彈出式功能表並從 中`CContextMenuManager`刪除 它們。
 
-##  <a name="savestate"></a>CCoNtextMenuManager：： SaveState
+## <a name="ccontextmenumanagersavestate"></a><a name="savestate"></a>CContext 選單管理員::儲存狀態
 
-將與[CCoNtextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)相關聯的資訊儲存至 Windows 登錄。
+將與[CContextMenuManager 類](../../mfc/reference/ccontextmenumanager-class.md)關聯的資訊保存到 Windows 註冊表。
 
 ```
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -245,22 +245,22 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>參數
 
-*lpszProfileName*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz 設定檔名稱*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為非零;否則為0。
+如果方法成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-*LpszProfileName*參數不是登錄專案的絕對路徑。 它是新增至您應用程式的預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx：： SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)方法。
+*lpszProfileName*參數不是註冊表項的絕對路徑。 它是添加到應用程式的預設註冊表項末尾的相對路徑。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx::設定註冊表項的方法](../../mfc/reference/cwinappex-class.md#setregistrybase)。
 
-使用方法[CCoNtextMenuManager：： LoadState](#loadstate)從登錄載入快捷方式功能表。
+使用方法[CContextMenuManager:LoadState](#loadstate)從註冊表載入快捷選單。
 
-##  <a name="setdontcloseactivemenu"></a>CCoNtextMenuManager::SetDontCloseActiveMenu
+## <a name="ccontextmenumanagersetdontcloseactivemenu"></a><a name="setdontcloseactivemenu"></a>CContext 選單管理員::設定不關閉活動選單
 
-控制當[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)顯示新的快顯功能表時，是否關閉作用中的快顯功能表。
+控制[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)在顯示新的彈出式功能表時是否關閉活動彈出式功能表。
 
 ```
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
@@ -269,15 +269,15 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ### <a name="parameters"></a>參數
 
 *bSet*<br/>
-在布林值參數，控制是否要關閉現用快顯功能表。 值為 TRUE 時，表示未關閉作用中的快顯功能表。 FALSE 表示已關閉現用快顯功能表。
+[在]控制是否關閉活動彈出功能表的布林參數。 "TRUE"值表示活動彈出功能表未關閉。 FALSE 表示活動彈出視窗功能表已關閉。
 
 ### <a name="remarks"></a>備註
 
-根據預設，`CContextMenuManager` 會關閉作用中的快顯功能表。
+默認情況下,關閉`CContextMenuManager`活動彈出視窗功能表。
 
-##  <a name="showpopupmenu"></a>CCoNtextMenuManager::ShowPopupMenu
+## <a name="ccontextmenumanagershowpopupmenu"></a><a name="showpopupmenu"></a>CContext 選單管理員::顯示彈出選單
 
-顯示指定的快捷方式功能表。
+顯示指定的快捷功能表。
 
 ```
 virtual BOOL ShowPopupMenu(
@@ -301,42 +301,42 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ### <a name="parameters"></a>參數
 
 *uiMenuResId*<br/>
-在這個方法將會顯示之功能表的資源識別碼。
+[在]此方法將顯示的功能表的資源 ID。
 
-*x*<br/>
-在在用戶端座標中，快捷方式功能表的水準位移。
+*X.*<br/>
+[在]用戶端座標中快捷功能表的水準偏移。
 
-*y*<br/>
-在在用戶端座標中，快捷方式功能表的垂直位移
+*Y*<br/>
+[在]用戶端座標中快捷選單垂直偏移
 
-*pWndOwner*<br/>
-在快捷方式功能表父視窗的指標。
+*pwndOwner*<br/>
+[在]指向快捷功能表的父視窗的指標。
 
-*bOwnMessage*<br/>
-在布林值參數，指出訊息的路由方式。 如果*bOwnMessage*為 FALSE，則會使用標準 MFC 路由。 否則， *pWndOwner*會接收訊息。
+*bown消息*<br/>
+[在]指示消息路由方式的布爾參數。 如果*bown 消息*為 FALSE,則使用標準 MFC 路由。 否則 *,pWndOwner*會接收消息。
 
-*hmenuPopup*<br/>
-在這個方法將會顯示之功能表的控制碼。
+*赫梅努普*<br/>
+[在]此方法將顯示的功能表的句柄。
 
-*bAutoDestroy*<br/>
-在布林值參數，指出是否會自動終結功能表。
+*bAuto銷毀*<br/>
+[在]指示功能表是否將自動銷毀的布爾參數。
 
-*bRightAlign*<br/>
-在布林值參數，指出功能表項目的對齊方式。 如果*bRightAlign*為 TRUE，則功能表靠右到左的讀取順序為右對齊。
+*b 右對齊*<br/>
+[在]指示功能表項對齊方式的布爾參數。 如果*bRight 對齊*為 TRUE,則功能表在從右到左讀取順序時右對齊。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功顯示功能表，第一個方法多載會傳回非零;否則為0。 如果快捷方式功能表正確顯示，第二個方法多載會傳回[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)的指標;否則為 Null。
+如果該方法成功顯示功能表,則第一個方法重載將返回非零;否則 0。 如果快捷功能表顯示正確,則第二個方法重載返回指向[CMFCPopupMenu 的](../../mfc/reference/cmfcpopupmenu-class.md)指標;否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-這個方法類似于[CCoNtextMenuManager：： trackpopupmenu 讓](#trackpopupmenu)方法，因為這兩種方法都會顯示快捷方式功能表。 不過，`TrackPopupMenu` 會傳回所選功能表命令的索引。
+此方法類似於方法[CContextMenuManager::TrackPopupMenu,](#trackpopupmenu)因為兩種方法都顯示一個快捷功能表。 但是,`TrackPopupMenu`返回所選功能表命令的索引。
 
-如果參數*bAutoDestroy*為 FALSE，您就必須手動呼叫繼承的 `DestroyMenu` 方法來釋放記憶體資源。 `ShowPopupMenu` 的預設執行不會使用*bAutoDestroy*參數。 它會提供供日後使用，或用於從 `CContextMenuManager` 類別衍生的自訂類別。
+如果參數*bAuto銷毀*是 FALSE,則必須手動`DestroyMenu`調用繼承 的方法來釋放記憶體資源。 預設`ShowPopupMenu`可使用參數*bAuto 銷毀*。 它供將來使用或用於從類派生的`CContextMenuManager`自定義類。
 
-##  <a name="trackpopupmenu"></a>CCoNtextMenuManager：： Trackpopupmenu 讓
+## <a name="ccontextmenumanagertrackpopupmenu"></a><a name="trackpopupmenu"></a>CContext 選單管理員::追蹤彈出選單
 
-顯示指定的快捷方式功能表，並傳回所選快捷方式功能表命令的索引。
+顯示指定的快捷功能表並返回所選快捷功能表命令的索引。
 
 ```
 virtual UINT TrackPopupMenu(
@@ -349,28 +349,28 @@ virtual UINT TrackPopupMenu(
 
 ### <a name="parameters"></a>參數
 
-*hmenuPopup*<br/>
-在這個方法所顯示之快捷方式功能表的控制碼。
+*赫梅努普*<br/>
+[在]此方法顯示的快捷功能表的句柄。
 
-*x*<br/>
-在在用戶端座標中，快捷方式功能表的水準位移。
+*X.*<br/>
+[在]用戶端座標中快捷功能表的水準偏移。
 
-*y*<br/>
-在在用戶端座標中，快捷方式功能表的垂直位移。
+*Y*<br/>
+[在]用戶端座標中快捷功能表的垂直偏移。
 
-*pWndOwner*<br/>
-在快捷方式功能表父視窗的指標。
+*pwndOwner*<br/>
+[在]指向快捷功能表的父視窗的指標。
 
-*bRightAlign*<br/>
-在布林值參數，指出功能表項目的對齊方式。 如果*bRightAlign*為 TRUE，則功能表靠右到左的讀取順序為右對齊。 如果*bRightAlign*為 FALSE，則會從左至右的讀取順序，將功能表靠左對齊。
+*b 右對齊*<br/>
+[在]指示功能表項對齊方式的布爾參數。 如果*bRight 對齊*為 TRUE,則功能表在從右到左讀取順序時右對齊。 如果*bRightAlign*為 FALSE,則功能表在從左到右的閱讀順序中左對齊。
 
 ### <a name="return-value"></a>傳回值
 
-使用者選擇之命令的功能表命令識別碼;如果使用者關閉快捷方式功能表而不選取功能表命令，則為0。
+用戶選擇的命令的功能表命令 ID;如果使用者在不選擇功能表命令的情況下關閉快捷功能表,則為 0。
 
 ### <a name="remarks"></a>備註
 
-這個方法會當做模式呼叫來顯示快捷方式功能表。 在使用者關閉快捷方式功能表或選取命令之前，應用程式將不會繼續執行程式碼中的下面這一行。 您可以用來顯示快捷方式功能表的替代方法是[CCoNtextMenuManager：： ShowPopupMenu](#showpopupmenu)。 該方法不是強制回應的呼叫，而且不會傳回所選命令的識別碼。
+此方法用作顯示快捷功能表的模態調用。 在使用者關閉快捷功能表或選擇命令之前,應用程式不會繼續到代碼中的下一行。 可用於顯示快捷選單的替代方法是[CContextMenuManager::ShowPopupMenu](#showpopupmenu)。 該方法不是模態調用,不會返回所選命令的 ID。
 
 ## <a name="see-also"></a>另請參閱
 

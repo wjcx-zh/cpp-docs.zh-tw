@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403213"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371264"
 ---
 # <a name="modulebase-class"></a>ModuleBase 類別
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +34,7 @@ class ModuleBase;
 
 ## <a name="remarks"></a>備註
 
-表示基底類別[模組](module-class.md)類別。
+表示[模組](module-class.md)類的基類。
 
 ## <a name="members"></a>成員
 
@@ -42,29 +42,29 @@ class ModuleBase;
 
 名稱                                         | 描述
 -------------------------------------------- | ---------------------------------------------------------
-[ModuleBase::ModuleBase](#modulebase)        | 初始化 `Module` 類別的執行個體。
-[ModuleBase::~ModuleBase](#tilde-modulebase) | 取消初始化目前的執行個體`Module`類別。
+[模組基礎::模組庫](#modulebase)        | 初始化 `Module` 類別的執行個體。
+[模組基礎::*模組庫](#tilde-modulebase) | 取消初始化類的`Module`當前實例。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                      | 描述
 --------------------------------------------------------- | -------------------------------------------------------------------------
-[ModuleBase::DecrementObjectCount](#decrementobjectcount) | 實作時，遞減模組所追蹤的物件數目。
-[ModuleBase::IncrementObjectCount](#incrementobjectcount) | 實作時，遞增模組所追蹤的物件數目。
+[模組基礎::D物件計數](#decrementobjectcount) | 實現後,將聲明模組跟蹤的物件數。
+[模組基礎::增量物件計數](#incrementobjectcount) | 實現後,將遞增模組跟蹤的物件數。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ModuleBase`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標題:** 實現.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="tilde-modulebase"></a>ModuleBase:: ~ ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>模組基礎::*模組庫
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 virtual ~ModuleBase();
@@ -72,11 +72,11 @@ virtual ~ModuleBase();
 
 ### <a name="remarks"></a>備註
 
-取消初始化目前的執行個體`ModuleBase`類別。
+取消初始化類的`ModuleBase`當前實例。
 
-## <a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>模組基礎::D物件計數
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 virtual long DecrementObjectCount() = 0;
@@ -84,15 +84,15 @@ virtual long DecrementObjectCount() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-遞減作業之前計數。
+遞減操作前的計數。
 
 ### <a name="remarks"></a>備註
 
-實作時，遞減模組所追蹤的物件數目。
+實現後,將聲明模組跟蹤的物件數。
 
-## <a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>模組基礎::增量物件計數
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 virtual long IncrementObjectCount() = 0;
@@ -100,15 +100,15 @@ virtual long IncrementObjectCount() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-之前的遞增作業計數。
+增量操作之前的計數。
 
 ### <a name="remarks"></a>備註
 
-實作時，遞增模組所追蹤的物件數目。
+實現後,將遞增模組跟蹤的物件數。
 
-## <a name="modulebase"></a>ModuleBase::ModuleBase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>模組基礎::模組庫
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ModuleBase();

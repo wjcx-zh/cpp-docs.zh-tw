@@ -1,5 +1,5 @@
 ---
-title: Isupporterrorinfoimpl 當成基類類別
+title: ISupportErrorInfoimpl 課程
 ms.date: 06/13/2019
 f1_keywords:
 - ISupportErrorInfoImpl
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: d5e7f087f6646940777ae8b2d2a4ea888fdd3593
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4c60b58ba697f00b146077a2cdecd727fe2cac02
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326371"
 ---
-# <a name="isupporterrorinfoimpl-class"></a>Isupporterrorinfoimpl 當成基類類別
+# <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoimpl 課程
 
-這個類別會提供[ISupportErrorInfo 介面](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo)的預設實值, 而且可以在只有單一介面產生物件錯誤時使用。
+此類提供[ISupportErrorInfo 介面](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo)的預設實現,當只有一個介面在物件上生成錯誤時,可以使用。
 
 > [!IMPORTANT]
-> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,8 +34,8 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 ### <a name="parameters"></a>參數
 
-*piid*<br/>
-支援[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)之介面的 IID 指標。
+*皮伊德*<br/>
+指向支援[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)的介面的 IID 的指標。
 
 ## <a name="members"></a>成員
 
@@ -43,17 +43,17 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 |名稱|描述|
 |----------|-----------------|
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|指出所識別`riid`的介面是否支援[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)介面。|
+|[ISupportErrorinfoimpl::介面支援錯誤資訊](#interfacesupportserrorinfo)|指示由`riid`[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)介面標識的介面是否支援。|
 
 ## <a name="remarks"></a>備註
 
-[ISupportErrorInfo 介面](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo)可確保錯誤資訊可以傳回至用戶端。 使用`IErrorInfo`的物件必須執行`ISupportErrorInfo`。
+[ISupportErrorInfo 介面](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo)可確保可以將錯誤資訊返回到用戶端。 使用`IErrorInfo`物件必須實作`ISupportErrorInfo`。
 
-類別`ISupportErrorInfoImpl`提供的預設`ISupportErrorInfo`執行, 而且可以在只有單一介面產生物件錯誤時使用。 例如：
+類別`ISupportErrorInfoImpl`提供的`ISupportErrorInfo`預設實現,當只有一個介面在物件上產生錯誤時可以使用 。 例如：
 
 [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ISupportErrorInfo`
 
@@ -61,11 +61,11 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
+## <a name="isupporterrorinfoimplinterfacesupportserrorinfo"></a><a name="interfacesupportserrorinfo"></a>ISupportErrorinfoimpl::介面支援錯誤資訊
 
-指出所識別`riid`的介面是否支援[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)介面。
+指示由`riid`[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)介面標識的介面是否支援。
 
 ```cpp
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
@@ -73,8 +73,8 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[ISupportErrorInfo:: InterfaceSupportsErrorInfo](/windows/win32/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) 。
+請參閱[ISupportErrorInfo:介面支援 Windows](/windows/win32/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) SDK 中的錯誤資訊。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

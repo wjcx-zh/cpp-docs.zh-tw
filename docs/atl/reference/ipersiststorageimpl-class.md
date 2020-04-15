@@ -1,5 +1,5 @@
 ---
-title: IPersistStorageImpl 類別
+title: IPersist 儲存堆類
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistStorageImpl
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - storage, ATL
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
-ms.openlocfilehash: a5b5dd4e5be43d01f00687ed9b96a3f27abcad0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b235b190f237293932705e4d290ac963088722f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326474"
 ---
-# <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 類別
+# <a name="ipersiststorageimpl-class"></a>IPersist 儲存堆類
 
-這個類別會實[IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage)介面。
+此類實現[IPersist 儲存](/windows/win32/api/objidl/nn-objidl-ipersiststorage)介面。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自`IPersistStorageImpl`的類別。
+您的類,派生自`IPersistStorageImpl`。
 
 ## <a name="members"></a>成員
 
@@ -47,23 +47,23 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 
 |名稱|描述|
 |----------|-----------------|
-|[IPersistStorageImpl::GetClassID](#getclassid)|抓取物件的 CLSID。|
-|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|指示物件釋放所有儲存物件, 並進入 HandsOff 模式。 ATL 實作為傳回 S_OK。|
-|[IPersistStorageImpl::InitNew](#initnew)|初始化新的儲存體。|
-|[IPersistStorageImpl::IsDirty](#isdirty)|檢查物件的資料自從上次儲存之後是否已變更。|
-|[IPersistStorageImpl::Load](#load)|從指定的儲存體載入物件的屬性。|
-|[IPersistStorageImpl::Save](#save)|將物件的屬性儲存至指定的儲存體。|
-|[IPersistStorageImpl::SaveCompleted](#savecompleted)|通知物件, 它可以返回正常模式以寫入其儲存物件。 ATL 實作為傳回 S_OK。|
+|[I 檔案記憶體 impl:取得類別識別碼](#getclassid)|檢索物件的 CLSID。|
+|[I 檔案記憶體 Impl::手關閉儲存](#handsoffstorage)|指示物件釋放所有存儲物件並進入"手關閉"模式。 ATL 實現返回S_OK。|
+|[I 持久儲存 impl::ININnew](#initnew)|初始化新存儲。|
+|[I 持久儲存 impl::是臟的](#isdirty)|檢查物件的數據自上次保存以來是否已更改。|
+|[I 檔案記憶體 Impl::載入](#load)|從指定的存儲載入物件的屬性。|
+|[IPersist 儲存impl::儲存](#save)|將物件的屬性保存到指定的存儲。|
+|[IPersist 儲存impl::儲存完成](#savecompleted)|通知物件它可以返回到"正常"模式以寫入其存儲物件。 ATL 實現返回S_OK。|
 
 ## <a name="remarks"></a>備註
 
-`IPersistStorageImpl`會執行[IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage)介面, 這可讓用戶端要求您的物件載入, 並使用儲存體來儲存其持續性資料。
+`IPersistStorageImpl`實現[IPersistStorage 介面](/windows/win32/api/objidl/nn-objidl-ipersiststorage),它允許用戶端請求物件載入並使用儲存保存其持久數據。
 
-這個類別的執行需要類別`T` , 才能透過來`IPersistStreamInit`執行介面`QueryInterface`。 這通常表示類別`T`應該衍生自[ipersiststreaminitimpl<ccomspy>](../../atl/reference/ipersiststreaminitimpl-class.md), `IPersistStreamInit`在[COM 對應](com-map-macros.md)中提供的專案, 並使用[屬性對應](property-map-macros.md)來描述類別的持續性資料。
+此類的實現要求類`T`通過`IPersistStreamInit`使介面的實現`QueryInterface`可用。 通常,`T`這意味著類應派生自[IPersistStreamInitImpl,](../../atl/reference/ipersiststreaminitimpl-class.md)在 COM`IPersistStreamInit`[映射](com-map-macros.md)中提供條目,並使用[屬性映射](property-map-macros.md)來描述類的持久數據。
 
-**相關文章**[Atl 教學](../../atl/active-template-library-atl-tutorial.md)課程,[建立 atl 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md), 建立[ATL 專案](../../atl/reference/creating-an-atl-project.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IPersistStorage`
 
@@ -71,11 +71,11 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="getclassid"></a>IPersistStorageImpl::GetClassID
+## <a name="ipersiststorageimplgetclassid"></a><a name="getclassid"></a>I 檔案記憶體 impl:取得類別識別碼
 
-抓取物件的 CLSID。
+檢索物件的 CLSID。
 
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
@@ -83,11 +83,11 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) 。
+請參閱[IPersist:在](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid)Windows SDK 中獲取 ClassID。
 
-##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage
+## <a name="ipersiststorageimplhandsoffstorage"></a><a name="handsoffstorage"></a>I 檔案記憶體 Impl::手關閉儲存
 
-指示物件釋放所有儲存物件, 並進入 HandsOff 模式。
+指示物件釋放所有存儲物件並進入"手關閉"模式。
 
 ```
 STDMETHOD(HandsOffStorage)(void);
@@ -95,15 +95,15 @@ STDMETHOD(HandsOffStorage)(void);
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK。
+返回S_OK。
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IPersistStorage:: HandsOffStorage](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) 。
+請參閱[IPersist 儲存::Windows SDK 中的「手關閉存儲](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage)」 。
 
-##  <a name="initnew"></a>IPersistStorageImpl:: InitNew
+## <a name="ipersiststorageimplinitnew"></a><a name="initnew"></a>I 持久儲存 impl::ININnew
 
-初始化新的儲存體。
+初始化新存儲。
 
 ```
 STDMETHOD(InitNew)(IStorage*);
@@ -111,13 +111,13 @@ STDMETHOD(InitNew)(IStorage*);
 
 ### <a name="remarks"></a>備註
 
-ATL 的執行會委派給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。
+ATL 實現委託給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。
 
-請參閱 Windows SDK 中的[IPersistStorage: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) 。
+請參閱[IPersist 儲存:Windows](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) SDK 中的 Init New。
 
-##  <a name="isdirty"></a>IPersistStorageImpl:: IsDirty
+## <a name="ipersiststorageimplisdirty"></a><a name="isdirty"></a>I 持久儲存 impl::是臟的
 
-檢查物件的資料自從上次儲存之後是否已變更。
+檢查物件的數據自上次保存以來是否已更改。
 
 ```
 STDMETHOD(IsDirty)(void);
@@ -125,13 +125,13 @@ STDMETHOD(IsDirty)(void);
 
 ### <a name="remarks"></a>備註
 
-ATL 的執行會委派給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。
+ATL 實現委託給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。
 
-請參閱 Windows SDK 中的[IPersistStorage: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) 。
+請參閱[IPersist 存儲:Windows](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) SDK 中髒汙。
 
-##  <a name="load"></a>IPersistStorageImpl:: Load
+## <a name="ipersiststorageimplload"></a><a name="load"></a>I 檔案記憶體 Impl::載入
 
-從指定的儲存體載入物件的屬性。
+從指定的存儲載入物件的屬性。
 
 ```
 STDMETHOD(Load)(IStorage* pStorage);
@@ -139,13 +139,13 @@ STDMETHOD(Load)(IStorage* pStorage);
 
 ### <a name="remarks"></a>備註
 
-ATL 的執行會委派給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。 `Load`使用名為 "內容" 的資料流程來抓取物件的資料。 [Save](#save)方法原本會建立此資料流程。
+ATL 實現委託給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。 `Load`使用名為"內容"的流檢索物件的數據。 [Save](#save)方法最初創建此流。
 
-請參閱[IPersistStorage:](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) Windows SDK 中的載入。
+請參閱[IPersist 存儲:在](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load)Windows SDK 中載入。
 
-##  <a name="save"></a>IPersistStorageImpl:: Save
+## <a name="ipersiststorageimplsave"></a><a name="save"></a>IPersist 儲存impl::儲存
 
-將物件的屬性儲存至指定的儲存體。
+將物件的屬性保存到指定的存儲。
 
 ```
 STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
@@ -153,13 +153,13 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
 
 ### <a name="remarks"></a>備註
 
-ATL 的執行會委派給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。 第`Save`一次呼叫時, 它會在指定的儲存體上建立名為 "內容" 的資料流程。 然後, 此資料流程會在稍後呼叫`Save`以[載入](#load)時使用。
+ATL 實現委託給[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面。 首次`Save`調用時,它會在指定的存儲上創建名為"內容"的流。 然後,此流用於以後對`Save` [Load](#load)的呼叫和呼叫 。
 
-請參閱[IPersistStorage:](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save)在 Windows SDK 中儲存。
+請參閱[IPersist 儲存:保存在](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save)Windows SDK 中。
 
-##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted
+## <a name="ipersiststorageimplsavecompleted"></a><a name="savecompleted"></a>IPersist 儲存impl::儲存完成
 
-通知物件, 它可以返回正常模式以寫入其儲存物件。
+通知物件它可以返回到"正常"模式以寫入其存儲物件。
 
 ```
 STDMETHOD(SaveCompleted)(IStorage*);
@@ -167,15 +167,15 @@ STDMETHOD(SaveCompleted)(IStorage*);
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK。
+返回S_OK。
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IPersistStorage: SaveCompleted](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted) 。
+請參閱[IPersist 儲存:在](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted)Windows SDK 中保存已完成。
 
 ## <a name="see-also"></a>另請參閱
 
-[儲存體和串流](/windows/win32/Stg/storages-and-streams)<br/>
-[IPersistStreamInitImpl 類別](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
-[IPersistPropertyBagImpl 類別](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[儲存和流](/windows/win32/Stg/storages-and-streams)<br/>
+[I 堅持流內普普類](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
+[IPersist財產巴格普普類](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371299"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 類別
 
-發行目前的模組中的最後一個物件時，會叫用事件處理常式。 Lambda、 函式或函式指標上所指定的事件處理常式。
+釋放當前模組中的最後一個物件時調用事件處理程式。 事件處理程式由 lambda、functor 或指標到函數指定。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +34,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-包含事件處理常式的位置資料成員的型別。
+包含事件處理程式位置的數據成員的類型。
 
 ## <a name="members"></a>成員
 
@@ -42,21 +42,21 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 名稱                                                                                                     | 描述
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | 初始化 `Module::GenericReleaseNotifier` 類別的新執行個體。
+[模組::通用釋放程式::通用釋放程式](#genericreleasenotifier-genericreleasenotifier) | 將 `Module::GenericReleaseNotifier` 類別的新執行個體初始化。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                                     | 描述
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::Invoke](#genericreleasenotifier-invoke) | 呼叫目前相關聯的事件處理常式`Module::GenericReleaseNotifier`物件。
+[模組::通用釋放程式::呼叫](#genericreleasenotifier-invoke) | 調用與當前`Module::GenericReleaseNotifier`物件關聯的事件處理程式。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 名稱                                                                          | 描述
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | 保存 lambda、 函式或目前相關聯的函式指標事件處理常式`Module::GenericReleaseNotifier`物件。
+[模組::通用釋放程式::callback_](#genericreleasenotifier-callback) | 保存與當前`Module::GenericReleaseNotifier`物件關聯的 lambda、functor 或指向函數的指標事件處理程式。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ReleaseNotifier`
 
@@ -64,21 +64,21 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標題:** 模組.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="genericreleasenotifier-callback"></a>Module::GenericReleaseNotifier::callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>模組::通用釋放程式::callback_
 
-保存 lambda、 函式或目前相關聯的函式指標事件處理常式`Module::GenericReleaseNotifier`物件。
+保存與當前`Module::GenericReleaseNotifier`物件關聯的 lambda、functor 或指向函數的指標事件處理程式。
 
 ```cpp
 T callback_;
 ```
 
-## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>模組::通用釋放程式::通用釋放程式
 
-初始化 `Module::GenericReleaseNotifier` 類別的新執行個體。
+將 `Module::GenericReleaseNotifier` 類別的新執行個體初始化。
 
 ```cpp
 GenericReleaseNotifier(
@@ -89,15 +89,15 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>參數
 
-*callback*<br/>
-Lambda、 函式或可以使用括號函式運算子叫用的函式指標事件處理常式 (`()`)。
+*回撥*<br/>
+可以使用括弧函數運算符 ()`()`呼叫的 lambda、functor 或指標到函數事件處理程式。
 
-*release*<br/>
-指定`true`若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release)方法; 否則指定`false`。
+*釋放*<br/>
+指定`true`以啟用調用基礎[模組::釋放說明器:::釋放()](module-releasenotifier-class.md#releasenotifier-release)方法;否則,指定`false`。
 
-## <a name="genericreleasenotifier-invoke"></a>Module::GenericReleaseNotifier::Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>模組::通用釋放程式::呼叫
 
-呼叫目前相關聯的事件處理常式`Module::GenericReleaseNotifier`物件。
+調用與當前`Module::GenericReleaseNotifier`物件關聯的事件處理程式。
 
 ```cpp
 void Invoke();

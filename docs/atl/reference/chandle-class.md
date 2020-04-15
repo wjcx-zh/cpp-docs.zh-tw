@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: 7c72ded75298ed69efe73c1a81abf404545ea9b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693404"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326929"
 ---
 # <a name="chandle-class"></a>CHandle 類別
 
-這個類別提供建立及使用控制代碼物件的方法。
+此類提供了創建和使用句柄物件的方法。
 
 ## <a name="syntax"></a>語法
 
@@ -35,44 +35,44 @@ class CHandle
 
 |名稱|描述|
 |----------|-----------------|
-|[CHandle::CHandle](#chandle)|建構函式。|
-|[CHandle:: ~ CHandle](#dtor)|解構函式。|
+|[操作::CHandle](#chandle)|建構函式。|
+|[操作::*CHandle](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CHandle::Attach](#attach)|呼叫這個方法來附加`CHandle`至現有的控制代碼的物件。|
-|[CHandle::Close](#close)|呼叫這個方法來關閉`CHandle`物件。|
-|[CHandle::Detach](#detach)|呼叫此方法以中斷連結的控制代碼從`CHandle`物件。|
+|[操作::附加](#attach)|調用此方法將`CHandle`物件附加到現有句柄。|
+|[操作:關閉](#close)|呼叫此方法以關閉物件`CHandle`。|
+|[查德::D塔奇](#detach)|調用此方法以從`CHandle`物件分離句柄。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CHandle::operator 控制代碼](#operator_handle)|傳回預存的控制代碼的值。|
-|[CHandle::operator =](#operator_eq)|指派運算子。|
+|[操作::操作員操作](#operator_handle)|返回存儲句柄的值。|
+|[操作::運算符 |](#operator_eq)|指派運算子。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CHandle::m_h](#m_h)|儲存的控制代碼的成員變數。|
+|[操作::m_h](#m_h)|存儲句柄的成員變數。|
 
 ## <a name="remarks"></a>備註
 
-A`CHandle`每當需要控制代碼時，就可以使用物件： 主要差異在於`CHandle`物件會自動刪除。
+每當`CHandle`需要句柄時,都可以使用物件:主要區別是該`CHandle`物件將自動刪除。
 
 > [!NOTE]
->  某些 API 函數將 NULL 做為空白或無效的控制代碼，而其他則使用 INVALID_HANDLE_VALUE。 `CHandle` 只會使用 NULL，而且會視為真正的控制代碼的 INVALID_HANDLE_VALUE。 如果您呼叫可傳回 INVALID_HANDLE_VALUE API 時，您應該檢查此值，然後再呼叫[CHandle::Attach](#attach)或將其傳遞至`CHandle`建構函式，並改為傳遞 NULL。
+> 某些 API 函數將使用 NULL 作為空句柄或無效句柄,而其他函數則使用INVALID_HANDLE_VALUE。 `CHandle`僅使用 NULL,並將INVALID_HANDLE_VALUE視為真正的句柄。 如果調用可以返回INVALID_HANDLE_VALUE的 API,則應在調用[CHandle::附加](#attach)`CHandle`或傳遞給 構造函數之前檢查此值,然後傳遞 NULL。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標題:** atlbase.h
 
-##  <a name="attach"></a>  CHandle::Attach
+## <a name="chandleattach"></a><a name="attach"></a>操作::附加
 
-呼叫這個方法來附加`CHandle`至現有的控制代碼的物件。
+調用此方法將`CHandle`物件附加到現有句柄。
 
 ```
 void Attach(HANDLE h) throw();
@@ -80,14 +80,14 @@ void Attach(HANDLE h) throw();
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-`CHandle` 需要的控制代碼的擁有權*h*。
+*H*<br/>
+`CHandle`將取得句柄*h*的擁有權。
 
 ### <a name="remarks"></a>備註
 
-指派`CHandle`物件至*h*控點，然後呼叫**h.Detach()** 。 在對其偵錯組建中，ATLASSERT 如果就會引發*h*是 NULL。 控制代碼的有效性的任何其他檢查不撤銷狀態。
+將`CHandle`物件配置給*h*句柄,然後呼叫**h.detach()**。 在除錯產生中,如果*h*為 NULL,將引發 ATLASSERT。 沒有對手柄的有效性進行其他檢查。
 
-##  <a name="chandle"></a>  CHandle::CHandle
+## <a name="chandlechandle"></a><a name="chandle"></a>操作::CHandle
 
 建構函式。
 
@@ -99,14 +99,14 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-現有的控制代碼或`CHandle`。
+*H*<br/>
+現有句柄`CHandle`或 。
 
 ### <a name="remarks"></a>備註
 
-建立新`CHandle`物件，選擇性地使用現有的控制代碼或`CHandle`物件。
+創建新`CHandle`物件,可以選擇使用現有句柄`CHandle`或 物件。
 
-##  <a name="dtor"></a>  CHandle:: ~ CHandle
+## <a name="chandlechandle"></a><a name="dtor"></a>操作::*CHandle
 
 解構函式。
 
@@ -116,11 +116,11 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="remarks"></a>備註
 
-釋放`CHandle`藉由呼叫物件[CHandle::Close](#close)。
+通過調用`CHandle`[CHandle::關閉](#close)來釋放物件。
 
-##  <a name="close"></a>  CHandle::Close
+## <a name="chandleclose"></a><a name="close"></a>操作:關閉
 
-呼叫這個方法來關閉`CHandle`物件。
+呼叫此方法以關閉物件`CHandle`。
 
 ```
 void Close() throw();
@@ -128,11 +128,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>備註
 
-關閉開啟的物件控制代碼。 如果控制代碼就是 NULL，則是`Close`已經被呼叫，ATLASSERT 就會引發在偵錯組建。
+關閉打開的物件句柄。 如果句柄為 NULL(`Close`如果已呼叫,則為 NULL,則將在調試生成中引發 ATLASSERT)。
 
-##  <a name="detach"></a>  CHandle::Detach
+## <a name="chandledetach"></a><a name="detach"></a>查德::D塔奇
 
-呼叫此方法以中斷連結的控制代碼從`CHandle`物件。
+調用此方法以從`CHandle`物件分離句柄。
 
 ```
 HANDLE Detach() throw();
@@ -140,23 +140,23 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回要卸離的控制代碼。
+返回要分離的句柄。
 
 ### <a name="remarks"></a>備註
 
-釋放的控制代碼的擁有權。
+釋放句柄的擁有權。
 
-##  <a name="m_h"></a>  CHandle::m_h
+## <a name="chandlem_h"></a><a name="m_h"></a>操作::m_h
 
-儲存的控制代碼的成員變數。
+存儲句柄的成員變數。
 
 ```
 HANDLE m_h;
 ```
 
-##  <a name="operator_eq"></a>  CHandle::operator =
+## <a name="chandleoperator-"></a><a name="operator_eq"></a>操作::運算符 |
 
-指派運算子。
+分配運算符。
 
 ```
 CHandle& operator=(CHandle& h) throw();
@@ -164,20 +164,20 @@ CHandle& operator=(CHandle& h) throw();
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-`CHandle` 需要的控制代碼的擁有權*h*。
+*H*<br/>
+`CHandle`將取得句柄*h*的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
-傳回新的參考`CHandle`物件。
+返回對新`CHandle`物件的引用。
 
 ### <a name="remarks"></a>備註
 
-如果`CHandle`物件目前包含的控制代碼，因此將會關閉。 `CHandle`物件傳入必須設為 NULL 的控制代碼參考。 這可確保兩個`CHandle`物件絕不會包含相同的作用中控制代碼。
+如果`CHandle`物件當前包含句柄,它將關閉。 傳入`CHandle`的物件的句柄引用集 NULL。 這可確保兩`CHandle`個對象永遠不會包含相同的活動句柄。
 
-##  <a name="operator_handle"></a>  CHandle::operator 控制代碼
+## <a name="chandleoperator-handle"></a><a name="operator_handle"></a>操作::操作員操作
 
-傳回預存的控制代碼的值。
+返回存儲句柄的值。
 
 ```
 operator HANDLE() const throw();
@@ -185,7 +185,7 @@ operator HANDLE() const throw();
 
 ### <a name="remarks"></a>備註
 
-傳回值儲存在[CHandle::m_h](#m_h)。
+返回存儲在[CHandle::m_h](#m_h)中的值。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 2cf2844fd4247c3c69648823302a6ad56ff5fd45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 082aa353d3046d9c9b20669e075e200c96017bce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371756"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>使用 Visual Studio IDE 進行 C++ 桌面程式開發
 
@@ -30,11 +30,11 @@ Visual Studio 整合式開發環境 (IDE) 提供一組功能，可協助您管�
 
 **Visual Studio 2017 安裝**
 
-若要取得 Visual Studio 2017，您可以從[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)進行下載。 當您安裝 Visual Studio 時請務必包含 C++ 開發工具，因為預設不會安裝。 如需如何安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)，並將頁面上的版本選擇器設為 **Visual Studio 2017**。
+若要取得 Visual Studio 2017，您可以從[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)進行下載。 當您安裝 Visual Studio 時請務必包含 C++ 開發工具，因為預設不會安裝。 如需如何安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 要查看 Visual Studio 2017 的說明,請將 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017。 它在頁面上的目錄頂部找到。
 
 **Visual Studio 2015 安裝**
 
-若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]，然後選擇 C++ 元件。
+若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]****，然後選擇 C++ 元件。
 
 一旦您的 Visual Studio 安裝完成，便可以繼續進行。
 

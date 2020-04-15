@@ -1,8 +1,9 @@
 ---
 title: _CIatan2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIatan2
+- _o__CIatan2
 api_location:
 - msvcr80.dll
 - msvcrt.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: dee536b41ccb4c45284fa418e92b99807e51c53a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2535cb5747b5eac9257594bd4c6d91e64ee7b3eb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940522"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334391"
 ---
 # <a name="_ciatan2"></a>_CIatan2
 
-計算的 *x* / *y* 的反正切值，其中 *x* 和 *y* 是堆疊的頂端值。
+計算*x* / *y*的弧形,其中*x*和*y*是堆疊頂部的值。
 
 ## <a name="syntax"></a>語法
 
@@ -46,9 +48,11 @@ void __cdecl _CIatan2();
 
 產生的值會推入至堆疊的頂端。
 
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-**平台：** x86
+**平台:** x86
 
 ## <a name="see-also"></a>另請參閱
 

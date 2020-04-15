@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraits 類別
+title: CStringElementtraits 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CStringElementTraits
@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-ms.openlocfilehash: 80efd4dbc4ff0541e083ed61bed872d5e69c7a74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 078cfd5ff93bfcd8acc747904ea05e6a2e762bc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277444"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330626"
 ---
-# <a name="cstringelementtraits-class"></a>CStringElementTraits 類別
+# <a name="cstringelementtraits-class"></a>CStringElementtraits 類別
 
-這個類別會提供使用儲存的集合類別的靜態函式`CString`物件。
+此類提供存儲`CString`物件的集合類使用的靜態函數。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ class CStringElementTraits
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-若要在集合中儲存的資料型別。
+要存儲在集合中的數據類型。
 
 ## <a name="members"></a>成員
 
@@ -43,32 +43,32 @@ class CStringElementTraits
 
 |名稱|描述|
 |----------|-----------------|
-|[CStringElementTraits::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|
+|[弦元素::INARGTYPE](#inargtype)|用於向集合類物件添加元素的數據類型。|
+|[弦元素::OUTARGTYPE](#outargtype)|用於從集合類物件檢索元素的數據類型。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CStringElementTraits::CompareElements](#compareelements)|（靜態）呼叫此函式來比較兩個字串項目相等。|
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式來比較兩個字串項目。|
-|[CStringElementTraits::CopyElements](#copyelements)|（靜態）呼叫此函式來複製`CString`集合類別物件中儲存的項目。|
-|[CStringElementTraits::Hash](#hash)|（靜態）呼叫此函式來計算雜湊值，指定的字串項目。|
-|[CStringElementTraits::RelocateElements](#relocateelements)|（靜態）呼叫此函式來重新放置`CString`集合類別物件中儲存的項目。|
+|[弦元素::比較元素](#compareelements)|(靜態)調用此函數以比較兩個字串元素以表示相等。|
+|[弦元素::比較元素排序](#compareelementsordered)|(靜態)呼叫此函數以比較兩個字串元素。|
+|[弦元素::複製元素](#copyelements)|(靜態)調用此函數以複製`CString`儲存在集合類物件中的元素。|
+|[弦樂元素:哈希](#hash)|(靜態)呼叫此函數以計算給定字串元素的哈希值。|
+|[弦元素::重新置放元素](#relocateelements)|(靜態)調用此函數以重新定位`CString`儲存在集合類物件中的元素。|
 
 ## <a name="remarks"></a>備註
 
-這個類別提供靜態函式，如複製、 移動和比較字串，以及如何建立雜湊值。 使用集合類別來儲存字串為基礎的資料時，則這些函式會很有用。 使用[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)需要不區分大小寫的比較時。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)字串物件時處理做為參考。
+此類提供用於複製、移動和比較字串以及創建哈希值的靜態函數。 當使用集合類存儲基於字串的數據時,這些函數非常有用。 當需要不區分大小寫的比較時,請使用[CStringElementTraitsI。](../../atl/reference/cstringelementtraitsi-class.md) 當字串物件要作為引用處理時,請使用[CStringRefElementTraits。](../../atl/reference/cstringrefelementtraits-class.md)
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** cstringt.h
+**標題:** cstringt.h
 
-##  <a name="compareelements"></a>  CStringElementTraits::CompareElements
+## <a name="cstringelementtraitscompareelements"></a><a name="compareelements"></a>弦元素::比較元素
 
-呼叫此靜態函式來比較兩個字串項目相等。
+調用此靜態函數以比較兩個字串元素以獲得相等性。
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
@@ -77,18 +77,18 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個字串項目。
+第一個字串元素。
 
 *str2*<br/>
-第二個字串項目。
+第二個字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-如果項目相等，false 否則，就會傳回 true。
+如果元素相等,則返回 true,否則為 false。
 
-##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered
+## <a name="cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>弦元素::比較元素排序
 
-呼叫此靜態函式來比較兩個字串元素。
+呼叫此靜態函數以比較兩個字串元素。
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
@@ -97,18 +97,18 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個字串項目。
+第一個字串元素。
 
 *str2*<br/>
-第二個字串項目。
+第二個字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-若字串相同的零，< 0 如果*str1*是小於*str2*，或 > 0 如果*str1*大於*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用來執行比較。
+如果字串相同,則為零,如果*str1*小於*str2,* 則< 0;如果*str1*大於*str2,* 則> 0。 [CStringT::比較](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用於執行比較。
 
-##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
+## <a name="cstringelementtraitscopyelements"></a><a name="copyelements"></a>弦元素::複製元素
 
-呼叫此靜態函式來複製`CString`集合類別物件中儲存的項目。
+呼叫此靜態函數以複製`CString`儲存在集合類物件中的元素。
 
 ```
 static void CopyElements(
@@ -120,21 +120,21 @@ static void CopyElements(
 ### <a name="parameters"></a>參數
 
 *pDest*<br/>
-將接收複製的資料的第一個元素的指標。
+指向將接收複製數據的第一個元素的指標。
 
 *pSrc*<br/>
-若要複製的第一個元素的指標。
+指向要複製的第一個元素的指標。
 
-*nElements*<br/>
+*n 元素*<br/>
 要複製的項目數目。
 
 ### <a name="remarks"></a>備註
 
-不應該重疊的來源和目的地的項目。
+源元素和目標元素不應重疊。
 
-##  <a name="hash"></a>  CStringElementTraits::Hash
+## <a name="cstringelementtraitshash"></a><a name="hash"></a>弦樂元素:哈希
 
-呼叫此靜態函式來計算雜湊值，指定的字串項目。
+呼叫此靜態函數以計算給定字串元素的哈希值。
 
 ```
 static ULONG Hash(INARGTYPE str);
@@ -142,32 +142,32 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-字串項目中。
+*Str*<br/>
+字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-傳回使用字串的內容計算的雜湊值。
+傳回使用字串內容計算的哈希值。
 
-##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE
+## <a name="cstringelementtraitsinargtype"></a><a name="inargtype"></a>弦元素::INARGTYPE
 
-要用於將項目加入至集合的類別物件的資料類型。
+用於向集合類物件添加元素的數據類型。
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE
+## <a name="cstringelementtraitsoutargtype"></a><a name="outargtype"></a>弦元素::OUTARGTYPE
 
-要用來擷取元素的集合類別物件的資料類型。
+用於從集合類物件檢索元素的數據類型。
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements
+## <a name="cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>弦元素::重新置放元素
 
-呼叫此靜態函式來重新放置`CString`集合類別物件中儲存的項目。
+調用此靜態函數以重新定位`CString`儲存在集合類物件中的元素。
 
 ```
 static void RelocateElements(
@@ -179,20 +179,20 @@ static void RelocateElements(
 ### <a name="parameters"></a>參數
 
 *pDest*<br/>
-將會收到重新定位的資料的第一個元素的指標。
+指向將接收重新置放數據的第一個元素的指標。
 
 *pSrc*<br/>
-重新定位之第一個元素的指標。
+指向要重新置放的第一個元素的指標。
 
-*nElements*<br/>
-若要重新配置的元素數目。
+*n 元素*<br/>
+要重新置放的元素數。
 
 ### <a name="remarks"></a>備註
 
-此靜態函式會呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大部分的資料類型。 如果要移動的物件包含其本身的成員的指標，此靜態函式必須覆寫。
+此靜態函數稱為[memmove,](../../c-runtime-library/reference/memmove-wmemmove.md)對於大多數數據類型來說,這就足夠了。 如果要移動的物件包含指向其自己的成員的指標,則需要重寫此靜態函數。
 
 ## <a name="see-also"></a>另請參閱
 
-[CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)<br/>
-[CStringElementTraitsI 類別](../../atl/reference/cstringelementtraitsi-class.md)<br/>
+[元素基礎類](../../atl/reference/celementtraitsbase-class.md)<br/>
+[弦元素功能I類](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

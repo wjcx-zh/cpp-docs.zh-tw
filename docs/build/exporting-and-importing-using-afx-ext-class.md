@@ -11,18 +11,18 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95c72f8251a8a59833483eb948709c80a69d03d7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195325"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328602"
 ---
-# <a name="exporting-and-importing-using-afxextclass"></a>使用 AFX_EXT_CLASS 匯出和匯入
+# <a name="exporting-and-importing-using-afx_ext_class"></a>使用 AFX_EXT_CLASS 匯出和匯入
 
-[MFC 延伸模組 Dll](extension-dlls-overview.md)使用巨集**AFX_EXT_CLASS**匯出的類別，可執行檔連結至 MFC 擴充 DLL 的匯入類別使用巨集。 具有**AFX_EXT_CLASS**巨集，用來建置 MFC 擴充功能 DLL 可以搭配連結至 DLL 的可執行檔的相同標頭檔。
+[MFC 擴展 DLL](extension-dlls-overview.md)使用宏**AFX_EXT_CLASS**匯出類;連結到 MFC 擴展 DLL 的可執行檔使用巨集導入類。 使用**AFX_EXT_CLASS**宏時,用於建構 MFC 擴展名 DLL 的相同標頭檔可用於連結到 DLL 的可執行檔。
 
-在您的 DLL 的標頭檔，新增**AFX_EXT_CLASS**關鍵字加入類別的宣告，如下所示：
+在 DLL 的標頭檔中,將**AFX_EXT_CLASS**關鍵字添加到類的聲明中,如下所示:
 
 ```cpp
 class AFX_EXT_CLASS CMyClass : public CDocument
@@ -31,11 +31,11 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 };
 ```
 
-這個巨集定義為 mfc`__declspec(dllexport)`時的前置處理器符號`_AFXDLL`和`_AFXEXT`所定義。 但定義為巨集`__declspec(dllimport)`時`_AFXDLL`定義和`_AFXEXT`未定義。 定義時，前置處理器符號`_AFXDLL`指出，目標可執行檔 （DLL 或應用程式） 正在使用 MFC 的共用的版本。 當兩者`_AFXDLL`和`_AFXEXT`所定義，這表示目標可執行檔是 MFC 擴充 DLL。
+此宏由 MFC`__declspec(dllexport)`定義為 預`_AFXDLL`處理器`_AFXEXT`符號 和定義時。 但是宏定義為`__declspec(dllimport)``_AFXDLL`何時`_AFXEXT`定義, 並且未定義。 定義時,預處理器符號`_AFXDLL`指示目標可執行檔(DLL 或應用程式)正在使用 MFC 的共用版本。 當和`_AFXDLL``_AFXEXT`都定義時,這表示目標可執行檔是 MFC 擴展 DLL。
 
-因為`AFX_EXT_CLASS`定義為`__declspec(dllexport)`時從 MFC 擴充 DLL 的匯出，您可以匯出整個類別，而不針對所有該類別的符號的裝飾的名稱置於.def 檔。
+由於`AFX_EXT_CLASS`定義為`__declspec(dllexport)`從 MFC 擴展 DLL 匯出時,因此可以匯出整個類,而無需在 .def 檔中放置該類的所有符號的修飾名稱。
 
-雖然您可以避免使用這個方法建立.def 檔與所有裝飾類別的名稱，建立.def 檔會更有效率，因為可以依序數匯出名稱。 若要使用.def 檔的匯出的方法，將下列程式碼的開頭和結尾標頭檔：
+儘管可以避免使用此方法創建 .def 檔案和類的所有修飾名稱,但創建 .def 檔案的效率更高,因為名稱可以通過 ddinal 匯出。 要使用 .def 檔案匯出方法,請將以下代碼放在標頭檔的開頭和結尾:
 
 ```cpp
 #undef AFX_DATA
@@ -46,13 +46,13 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 ```
 
 > [!CAUTION]
->  時要小心匯出內嵌函式，因為他們可以建立版本衝突的可能性。 內嵌函式可展開成的應用程式程式碼;因此，如果您稍後重新撰寫函式，它不會更新除非重新編譯應用程式本身。 一般來說，可以更新 DLL 函式，而不需重建使用它們的應用程式。
+> 匯出內聯函數時要小心,因為它們可能會造成版本衝突。 內聯函數將擴展到應用程式代碼中;因此,如果以後重寫函數,則不會更新該函數,除非重新編譯應用程式本身。 通常,DLL 函數可以更新,而無需重新生成使用它們的應用程式。
 
-## <a name="exporting-individual-members-in-a-class"></a>匯出類別中的個別成員
+## <a name="exporting-individual-members-in-a-class"></a>匯出類別的單個成員
 
-有時您可能想要匯出之類別的個別成員。 例如，如果您要匯出`CDialog`-衍生的類別，您可能只需要將匯出的建構函式和`DoModal`呼叫。 您可以使用`AFX_EXT_CLASS`上您要匯出的個別成員。
+有時,您可能希望匯出類的各個成員。 例如,如果要匯出`CDialog`派生類,可能只需要匯出構造函數`DoModal`和調用。 您可以在需要匯出`AFX_EXT_CLASS`的單個成員上使用。
 
-例如: 
+例如：
 
 ```cpp
 class CExampleDialog : public CDialog
@@ -66,9 +66,9 @@ public:
 };
 ```
 
-因為您不會再匯出類別的所有成員，可能會遇到其他問題，因為 MFC 巨集可。 有幾個 MFC 的協助程式巨集實際宣告或定義的資料成員。 因此，這些資料成員也必須從您的 DLL 匯出。
+由於您不再匯出類的所有成員,因此由於 MFC 宏的工作方式,可能會遇到其他問題。 MFC 的幾個幫助宏實際上聲明或定義了數據成員。 因此,這些數據成員也必須從 DLL 匯出。
 
-比方說，`DECLARE_DYNAMIC`建置 MFC 擴充 DLL 時，如下所示定義巨集：
+例如,在構建`DECLARE_DYNAMIC`MFC 擴展 DLL 時,宏的定義如下:
 
 ```cpp
 #define DECLARE_DYNAMIC(class_name) \
@@ -79,7 +79,7 @@ public: \
    virtual CRuntimeClass* GetRuntimeClass() const; \
 ```
 
-具有靜態開頭`AFX_DATA`宣告在您的類別內的靜態物件。 若要正確匯出這個類別，並從可執行的用戶端存取執行階段資訊，您必須匯出此靜態物件。 因為靜態物件會使用修飾詞宣告`AFX_DATA`，您只需要定義`AFX_DATA`要`__declspec(dllexport)`建置 DLL 時，它定義為`__declspec(dllimport)`建置您的用戶端可執行檔時。 因為`AFX_EXT_CLASS`已定義在如此一來，您只需要重新定義`AFX_DATA`是相同`AFX_EXT_CLASS`解決您的類別定義。
+以靜態`AFX_DATA`開頭的行是在類內部聲明靜態物件。 要正確匯出此類並從用戶端可執行文件訪問運行時資訊,必須匯出此靜態物件。 由於靜態物件是使用修飾`AFX_DATA`符聲明的,因此在構建`AFX_DATA`DLL 時`__declspec(dllexport)`只需定義為 ,並將`__declspec(dllimport)`其定義為構建用戶端 可執行檔時。 因為`AFX_EXT_CLASS`以這種方式定義,你只需要重新`AFX_DATA`定義`AFX_EXT_CLASS`,與 類定義相同。
 
 例如：
 
@@ -97,22 +97,22 @@ class CExampleView : public CView
 #define AFX_DATA
 ```
 
-因為一律會使用 MFC`AFX_DATA`所有這類情況下此項技術可在其巨集，它會定義的資料項目上符號。 比方說，這也適用於`DECLARE_MESSAGE_MAP`。
+由於 MFC`AFX_DATA`始終在其宏中定義的數據項上使用符號,因此此技術適用於所有此類方案。 例如,它適用於`DECLARE_MESSAGE_MAP`。
 
 > [!NOTE]
->  如果您要匯出整個類別，而不是所選的類別的成員，靜態資料成員會自動匯出。
+> 如果要匯出整個類而不是類的選定成員,則會自動匯出靜態數據成員。
 
-### <a name="what-do-you-want-to-do"></a>請您指定選項。
+### <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [使用.def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
+- [使用 .def 檔案從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec(出口)從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出C++函數,用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式，以用於 C 或C++-語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函數,用於 C 或 C++語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
+- [確定要使用的匯出方法](determining-which-exporting-method-to-use.md)
 
 - [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -120,11 +120,11 @@ class CExampleView : public CView
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [裝飾的名稱](reference/decorated-names.md)
+- [修飾名稱](reference/decorated-names.md)
 
 - [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [交互匯入](mutual-imports.md)
+- [相互進口](mutual-imports.md)
 
 ## <a name="see-also"></a>另請參閱
 

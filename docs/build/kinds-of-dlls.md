@@ -6,65 +6,65 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: 9e66fa1c24ea00961d99eef02c15526eff4eb533
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: dae44d2dd39597420ce2a2c4e1642e8a7f0784e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221484"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328506"
 ---
 # <a name="kinds-of-dlls"></a>DLL 的類型
 
-本主題提供資訊以協助您決定要建置之 DLL 的種類。
+本主題提供的資訊可説明您確定要構建的 DLL 類型。
 
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 不同類型的 Dll 可用
+## <a name="different-kinds-of-dlls-available"></a><a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>提供不同類型的 DLL
 
-使用 Visual Studio，您可以建置在 C 中的 Win32 Dll 或C++，請勿使用 Microsoft Foundation Class (MFC) 程式庫。 您可以使用 Win32 應用程式精靈 建立非 MFC DLL 專案。
+使用 Visual Studio,您可以在 C 或不使用 Microsoft 基礎類 (MFC) 庫的 C++中構建 Win32 DLL。 您可以使用 Win32 應用程式精靈建立非 MFC DLL 專案。
 
-其中一個靜態連結程式庫中或在 Dll、 MFC DLL 精靈具有許多可用，MFC 程式庫本身。 如果您的 DLL 使用 MFC，Visual Studio 支援三種不同的 DLL 開發案例：
+MFC 庫本身在靜態連結庫中或多個 DLL 中可用,帶有 MFC DLL 嚮導。 如果您的 DLL 使用 MFC,Visual Studio 支援三種不同的 DLL 開發方案:
 
-- 建置一般 MFC DLL 會以靜態方式連結至 MFC
+- 建構一個常規的 MFC DLL,以靜態方式連結 MFC
 
-- 建置一般 MFC DLL，以動態方式連結至 MFC
+- 建構動態連結 MFC 的一般 MFC DLL
 
-- 建置 MFC 擴充 DLL，這一律動態連結至 MFC
+- 建構 MFC 延伸 DLL,始終動態連結 MFC
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
 - [非 MFC DLL：概觀](non-mfc-dlls-overview.md)
 
-- [靜態連結至 MFC 的標準 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
+- [一般 MFC DLL 靜態連結到 MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [動態連結至 MFC 的標準 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC 延伸模組 DLL：概觀](extension-dlls-overview.md)
 
-- [若要使用的 DLL 的種類](#_core_which_kind_of_dll_to_use)
+- [使用哪種 DLL](#_core_which_kind_of_dll_to_use)
 
-##  <a name="_core_which_kind_of_dll_to_use"></a> 決定要使用的 DLL 的種類
+## <a name="deciding-which-kind-of-dll-to-use"></a><a name="_core_which_kind_of_dll_to_use"></a>決定使用哪種 DLL
 
-如果您的 DLL 不使用 MFC，請使用 Visual Studio 來建置非 MFC Win32 DLL。 將您的 DLL 連結至 MFC （靜態或動態） 會佔用大量的磁碟空間和記憶體。 除非您的 DLL 實際上是使用 MFC，您不應該連結至 MFC。
+如果您的 DLL 不使用 MFC,請使用 Visual Studio 構建非 MFC Win32 DLL。 將 DLL 連結到 MFC(靜態或動態)會佔用大量磁碟空間和記憶體。 除非 DLL 實際使用 MFC,否則不應連結到 MFC。
 
-如果您的 DLL 會使用 MFC，而且會由 MFC 或非 MFC 應用程式，您必須建置動態連結至 MFC 之標準 MFC DLL 或靜態連結至 MFC 之標準 MFC DLL。 在大部分情況下，您可能想要使用動態連結至 MFC，因為 DLL 的檔案大小會小很多，而且在使用 MFC 的共用的版本的記憶體中的節省金額可能會顯著的標準 MFC DLL。 如果您以靜態方式連結至 MFC，您的 DLL 的檔案大小會大很多，並可能佔用額外的記憶體，因為它會載入自己的 MFC 程式庫程式碼的私用複本。
+如果您的 DLL 將使用 MFC,並且將由 MFC 或非 MFC 應用程式使用,則必須建構動態連結到 MFC 的常規 MFC DLL 或靜態連結到 MFC 的一般 MFC DLL。 在大多數情況下,您可能需要使用動態連結到 MFC 的常規 MFC DLL,因為 DLL 的檔大小將小得多,並且使用 MFC 的共用版本可以節省記憶體。 如果靜態連結到 MFC,則 DLL 的檔大小將更大,並可能佔用額外的記憶體,因為它載入了 MFC 庫代碼的私有副本。
 
-建置動態連結至 MFC 的 DLL 的速度會比建置靜態連結至 MFC，因為它不需要連結 MFC 本身的 DLL。 特別是在偵錯組建，連結器必須壓縮偵錯資訊。 藉由連結與已經包含偵錯資訊的 DLL，沒有較少至精簡您的 DLL 內的偵錯資訊。
+構建動態連結到 MFC 的 DLL 比建構一個靜態連結到 MFC 的 DLL 更快,因為沒有必要連結 MFC 本身。 在調試生成中尤其如此,其中連結器必須壓縮調試資訊。 通過連結到已包含調試資訊的 DLL,DLL 中要壓縮的調試資訊就更少了。
 
-動態連結至 MFC 的一個缺點是，您必須將共用的 Dll Mfcx0.dll 和 Msvcrxx.dll （或類似檔案） 與您的 DLL。 MFC Dll 可以自由轉散發，但您仍然必須安裝 Dll 中您的安裝程式。 此外，您必須將 Msvcrxx.dll，它包含會使用您的程式和 MFC Dll 本身的 C 執行階段程式庫。
+動態連結到 MFC 的一個缺點是,您必須將共用的 DlL Mfcx0.dll 和 Msvcrxx.dll(或類似檔)與 DLL 一起分發。 MFC DLL 可自由再分發,但您仍必須在安裝程式中安裝 DLL。 此外,您必須提供 Msvcrxx.dll,其中包含程式和 MFC DLL 本身使用的 C 執行時庫。
 
-如果您的 DLL 只會由 MFC 可執行檔，您可以選擇建置標準的 MFC DLL 或 MFC 擴充 DLL。 如果您的 DLL 實作衍生自現有 MFC 類別的可重複使用類別或您需要應用程式和 DLL 之間傳遞 MFC 衍生的物件，您必須建置 MFC 擴充 DLL。
+如果 DLL 僅由 MFC 可執行檔使用,則可以在構建常規 MFC DLL 或 MFC 擴展 DLL 之間進行選擇。 如果 DLL 實現了從現有 MFC 類派生的可重用類,或者需要在應用程式和 DLL 之間傳遞 MFC 派生的物件,則必須構建 MFC 擴展 DLL。
 
-如果您的 DLL 動態連結至 MFC，可能會與您的 DLL 轉散發 MFC Dll。 此架構是特別適用於共用類別庫，以節省磁碟空間和記憶體使用量降到最低的多個可執行檔之間。
+如果您的 DLL 動態連結到 MFC,則 MFC DLL 可能會與您的 DLL 重新分發。 此體系結構對於在多個可執行文件之間共用類庫以節省磁碟空間並最大限度地減少記憶體使用量特別有用。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
 - [非 MFC DLL：概觀](non-mfc-dlls-overview.md)
 
-- [靜態連結至 MFC 的標準 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
+- [一般 MFC DLL 靜態連結到 MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [動態連結至 MFC 的標準 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC 延伸模組 DLL：概觀](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

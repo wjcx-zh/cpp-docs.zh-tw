@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328403"
 ---
 # <a name="batch-mode-rules"></a>批次模式規則
 
@@ -20,18 +20,18 @@ ms.locfileid: "62295015"
    commands
 ```
 
-當 N 命令進行此推斷規則時，批次模式推斷規則會提供推斷規則只有一個引動過程。 沒有批次模式推斷規則，它將需要 N 要叫用的命令。 N 是推斷規則觸發程序的相依項目數目。
+當 N 命令通過此推理規則時,批處理模式推理規則僅提供一個推理規則的調用。 如果沒有批處理模式推理規則,則需要調用 N 命令。 N 是觸發推理規則的從屬項數。
 
-包含批次模式推斷規則的 Makefile 必須使用 NMAKE 1.62 或更高版本。 若要檢查的 NMAKE 版本，1.62 或更新版本，NMAKE 版本搭配執行可用 _NMAKE_VER 巨集。 這個巨集會傳回字串，表示視覺效果C++產品版本。
+製作包含批次處理模式推理規則的檔必須使用 NMAKE 版本 1.62 或更高版本。 要檢查 NMAKE 版本,請運行與 NMAKE 版本 1.62 或更高版本的_NMAKE_VER宏。 此宏返回表示 VisualC++產品版本的字串。
 
-之間唯一的語法差異的標準的推斷規則是以雙冒號 （:），終止批次模式推斷規則。
+與標準推理規則的唯一語法區別是批處理模式推理規則終止了雙冒號 (::)。
 
 > [!NOTE]
->  叫用的工具必須能夠處理多個檔案。 必須使用批次模式推斷規則`$<`為巨集來存取相依檔案。
+> 正在呼叫的工具必須能夠處理多個檔。 批次處理模式推理規則必須用作`$<`宏才能存取相關文件。
 
-批次模式推斷規則可以加速建置程序。 這是更快提供給編譯器的批次中的檔案因為一次叫用編譯器的驅動程式。 例如，C 和C++編譯器執行得更好處理一組檔案，因為它可以維持記憶體駐留在程序期間。
+批次處理模式推理規則可以加快生成過程。 批量向編譯器提供檔會更快,因為編譯器驅動程式只調用一次。 例如,在處理一組檔時,C 和C++編譯器性能更好,因為它可以在過程中保持記憶體駐留。
 
-下列範例示範如何使用批次模式推斷規則：
+下面的範例展示如何使用批次處理模式推理規則:
 
 ```
 #
@@ -56,7 +56,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE 會產生下列輸出，不含批次模式推斷規則：
+NMAKE 產生以下輸出,無需批次處理模式推理規則:
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +73,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE 會產生下列結果與批次模式推斷規則：
+NMAKE 使用批次處理模式推理規則產生以下結果:
 
 ```
 E:\tmp> nmake -f test.mak -a

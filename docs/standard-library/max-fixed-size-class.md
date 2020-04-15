@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: bbc39a169f9a4bbac3e78b208b3a1a31e4e30ff2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7f75dd71caa3cfcfec19264b1da62c6d47a3e01d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371011"
 ---
-# <a name="maxfixedsize-class"></a>max_fixed_size 類別
+# <a name="max_fixed_size-class"></a>max_fixed_size 類別
 
 描述 [max 類別](../standard-library/allocators-header.md)物件，此物件可將 [freelist](../standard-library/freelist-class.md) 物件的長度上限限制為固定值。
 
@@ -38,22 +38,22 @@ class max_fixed_size
 
 |參數|描述|
 |---------------|-----------------|
-|*最大值*|max 類別，可決定要在 `freelist` 中儲存的元素數目上限。|
+|*麥克斯*|max 類別，可決定要在 `freelist` 中儲存的元素數目上限。|
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[max_fixed_size](#max_fixed_size)|建構類型 `max_fixed_size` 的物件。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[allocated](#allocated)|遞增已配置的記憶體區塊計數。|
-|[deallocated](#deallocated)|遞減已配置的記憶體區塊計數。|
-|[full](#full)|傳回指定是否應該為可用清單新增更多記憶體區塊的值。|
-|[released](#released)|遞減可用清單上的記憶體區塊計數。|
+|[交易](#deallocated)|遞減已配置的記憶體區塊計數。|
+|[全](#full)|傳回指定是否應該為可用清單新增更多記憶體區塊的值。|
+|[釋放](#released)|遞減可用清單上的記憶體區塊計數。|
 |[saved](#saved)|遞增可用清單上的記憶體區塊計數。|
 
 ## <a name="requirements"></a>需求
@@ -62,7 +62,7 @@ class max_fixed_size
 
 **命名空間：** stdext
 
-## <a name="allocated"></a>  max_fixed_size::allocated
+## <a name="max_fixed_sizeallocated"></a><a name="allocated"></a>max_fixed_size::已分配
 
 遞增已配置的記憶體區塊計數。
 
@@ -78,9 +78,9 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 每次成功呼叫`cache_freelist::allocate`運算子**new**之後, 會呼叫這個成員函式。 引數 *_Nx*是由 operator **new**所配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 此成員函數在每次成功調用`cache_freelist::allocate`運算符**new**後調用。 *參數_Nx*是運算符**new**分配區塊中的記憶體區塊數。
 
-## <a name="deallocated"></a>  max_fixed_size::deallocated
+## <a name="max_fixed_sizedeallocated"></a><a name="deallocated"></a>max_fixed_size::d分配
 
 遞減已配置的記憶體區塊計數。
 
@@ -96,9 +96,9 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 每次呼叫`cache_freelist::deallocate`運算子**delete**之後, 會呼叫這個成員函式。 引數 *_Nx*是由 operator **delete**解除配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 此成員函數在每次呼叫後呼叫`cache_freelist::deallocate`運算子**刪除**後呼叫 。 *參數_Nx*是由運算符**刪除**處理塊中的記憶體區塊數。
 
-## <a name="full"></a>  max_fixed_size::full
+## <a name="max_fixed_sizefull"></a><a name="full"></a>max_fixed_size::完整
 
 傳回指定是否應該為可用清單新增更多記憶體區塊的值。
 
@@ -108,13 +108,13 @@ bool full();
 
 ### <a name="return-value"></a>傳回值
 
- 若`Max <= _Nblocks`為 true, 則為 true, 否則為**false**。
+**如果為**`Max <= _Nblocks`true;否則,**假**。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回**true** `deallocate` , 則會將記憶體區塊放在可用的清單上; 如果傳回 false `deallocate` , 則呼叫 operator **delete**來解除配置區塊。
+此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳**回 true,** 則將記憶體區塊放在空閒清單中;如果呼叫`deallocate`回 true, 則將記憶體區塊放在可用清單中。如果返回 false,`deallocate`則呼叫運算符**刪除**以取消分配區塊。
 
-## <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size
+## <a name="max_fixed_sizemax_fixed_size"></a><a name="max_fixed_size"></a>max_fixed_size:max_fixed_size
 
 建構類型 `max_fixed_size` 的物件。
 
@@ -126,7 +126,7 @@ max_fixed_size();
 
 此建構函式會將預存值 `_Nblocks` 初始化為零。
 
-## <a name="released"></a>  max_fixed_size::released
+## <a name="max_fixed_sizereleased"></a><a name="released"></a>max_fixed_size::已發佈
 
 遞減可用清單上的記憶體區塊計數。
 
@@ -136,9 +136,9 @@ void released();
 
 ### <a name="remarks"></a>備註
 
-遞減預存值 `_Nblocks`。 每當 `cache_freelist::allocate` 從可用清單中移除記憶體區塊時，都會呼叫目前 [max 類別](../standard-library/allocators-header.md)的 `released` 成員函式。
+遞減預存值 `_Nblocks`。 每當從空閒清單中刪除記憶體區,就會調用當前 max`released`[類](../standard-library/allocators-header.md)的成員函數。 `cache_freelist::allocate`
 
-## <a name="saved"></a>  max_fixed_size::saved
+## <a name="max_fixed_sizesaved"></a><a name="saved"></a>max_fixed_size::已儲存
 
 遞增可用清單上的記憶體區塊計數。
 
@@ -152,4 +152,4 @@ void saved();
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<配置器>](../standard-library/allocators-header.md)

@@ -1,5 +1,5 @@
 ---
-title: CSimpleArrayEqualHelper 類別
+title: CSimplearray 平等説明者類
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelper
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277990"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330875"
 ---
-# <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 類別
+# <a name="csimplearrayequalhelper-class"></a>CSimplearray 平等説明者類
 
-這個類別是 helper [CSimpleArray](../../atl/reference/csimplearray-class.md)類別。
+此類是[CSimpleArray](../../atl/reference/csimplearray-class.md)類的幫助程式。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ class CSimpleArrayEqualHelper
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-在衍生的類別中。
+派生類。
 
 ## <a name="members"></a>成員
 
@@ -37,19 +37,19 @@ class CSimpleArrayEqualHelper
 
 |名稱|描述|
 |----------|-----------------|
-|[CSimpleArrayEqualHelper::IsEqual](#isequal)|（靜態）測試兩個`CSimpleArray`物件項目是否相等。|
+|[CSimplearray 平等説明者::是相等的](#isequal)|(靜態)測試兩`CSimpleArray`個物件元素的相等性。|
 
 ## <a name="remarks"></a>備註
 
-此特性類別是補充`CSimpleArray`類別。 它會提供方法來比較兩個項目儲存在`CSimpleArray`物件。 根據預設，項目會使用 「 比較**operator=()**，但如果陣列包含沒有自己的等號比較運算子的複雜資料型別，您必須覆寫這個類別。
+此特徵類是對`CSimpleArray`類的補充。 它提供了一種比較存儲在物件中的兩個`CSimpleArray`元素的方法。 預設情況下,使用**運算符 _()** 比較元素,但如果陣列包含缺少其自身相等運算符的複雜數據類型,則需要重寫此類。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsimpcoll.h
+**標題:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimplearray 平等説明者::是相等的
 
-測試兩個`CSimpleArray`物件項目是否相等。
+測試兩`CSimpleArray`個物件元素的相等性。
 
 ```
 static bool IsEqual(
@@ -60,17 +60,17 @@ static bool IsEqual(
 ### <a name="parameters"></a>參數
 
 *t1*<br/>
-型別 t 的物件
+類型  的物件。
 
 *t2*<br/>
-型別 t 的物件
+類型  的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果項目相等，false 否則，就會傳回 true。
+如果元素相等,則返回 true,否則為 false。
 
 ## <a name="see-also"></a>另請參閱
 
-[CSimpleArray 類別](../../atl/reference/csimplearray-class.md)<br/>
-[CSimpleArrayEqualHelperFalse 類別](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
+[CSimplearray 類別](../../atl/reference/csimplearray-class.md)<br/>
+[CSimplearray 平等説明者假類](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

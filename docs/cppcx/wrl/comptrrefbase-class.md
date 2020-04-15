@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown** operator
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4f6dd6449cf8135ad14486d64cea95d8329e0014
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418311"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372623"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 類別
 
-支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,11 +34,11 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-[ComPtr\<t >](comptr-class.md)類型或從中衍生的類型，而不只是 `ComPtr`所表示的介面。
+[ComPtr\<T>](comptr-class.md)類型或從它派生的類型,而不僅僅是`ComPtr`由 表示的介面。
 
 ## <a name="remarks"></a>備註
 
-表示[ComPtrRef](comptrref-class.md)類別的基類。
+表示[ComPtrRef](comptrref-class.md)類的基類。
 
 ## <a name="members"></a>成員
 
@@ -46,22 +46,22 @@ class ComPtrRefBase;
 
 名稱            | 描述
 --------------- | -------------------------------------------------
-`InterfaceType` | 樣板參數*T*類型的同義字。
+`InterfaceType` | 範本參數*T*類型的同義詞。
 
 ### <a name="public-operators"></a>公用運算子
 
 名稱                                                                       | 描述
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
-[ComPtrRefBase：： operator IInspectable * *](#operator-iinspectable-star-star) | 將目前的[ptr_](#ptr)資料成員轉換成指向 `IInspectable` 介面的指標。
-[ComPtrRefBase：： operator IUnknown * *](#operator-iunknown-star-star)         | 將目前的[ptr_](#ptr)資料成員轉換成指向 `IUnknown` 介面的指標。
+[ComPtrRefBase::操作員可檢測*](#operator-iinspectable-star-star) | 將當前[ptr_](#ptr)資料成員轉換為指向`IInspectable`介面的指標。
+[ComPtrRefBase::操作員I未知*](#operator-iunknown-star-star)         | 將當前[ptr_](#ptr)資料成員轉換為指向`IUnknown`介面的指標。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 名稱                        | 描述
 --------------------------- | ----------------------------------------------------------------
-[ComPtrRefBase：:p tr_](#ptr) | 目前範本參數所指定之類型的指標。
+[ComPtrRefBase::ptr]](#ptr) | 指向當前範本參數指定的類型。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ComPtrRefBase`
 
@@ -69,11 +69,11 @@ class ComPtrRefBase;
 
 **標頭：** client.h
 
-**命名空間：** Microsoft：： WRL：:D etails
+**命名空間:** 微軟::WRL::D
 
-## <a name="operator-iinspectable-star-star"></a>ComPtrRefBase：： operator IInspectable\*\* 運算子
+## <a name="comptrrefbaseoperator-iinspectable-operator"></a><a name="operator-iinspectable-star-star"></a>ComPtrRefBase::管理員可檢查\*\*操作員
 
-支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 operator IInspectable**() const;
@@ -81,15 +81,15 @@ operator IInspectable**() const;
 
 ### <a name="remarks"></a>備註
 
-將目前的[ptr_](#ptr)資料成員轉換成指向 `IInspectable` 介面的指標。
+將當前[ptr_](#ptr)資料成員轉換為指向`IInspectable`介面的指標。
 
-如果目前的 `ComPtrRefBase` 不是衍生自 `IInspectable`，就會發出錯誤。
+如果電流`ComPtrRefBase`未派生`IInspectable`自 ,則將發出錯誤。
 
-只有在已定義 `__WRL_CLASSIC_COM__` 時，才可以使用這個轉換。
+此強制轉換僅在定義時`__WRL_CLASSIC_COM__`才可用。
 
-## <a name="operator-iunknown-star-star"></a>ComPtrRefBase：： operator IUnknown * * 運算子
+## <a name="comptrrefbaseoperator-iunknown-operator"></a><a name="operator-iunknown-star-star"></a>ComPtrRefBase::管理員 I 未知* 運算子
 
-支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 operator IUnknown**() const;
@@ -97,13 +97,13 @@ operator IUnknown**() const;
 
 ### <a name="remarks"></a>備註
 
-將目前的[ptr_](#ptr)資料成員轉換成指向 `IUnknown` 介面的指標。
+將當前[ptr_](#ptr)資料成員轉換為指向`IUnknown`介面的指標。
 
-如果目前的 `ComPtrRefBase` 不是衍生自 `IUnknown`，就會發出錯誤。
+如果電流`ComPtrRefBase`未派生`IUnknown`自 ,則將發出錯誤。
 
-## <a name="ptr"></a>ComPtrRefBase：:p tr_
+## <a name="comptrrefbaseptr_"></a><a name="ptr"></a>ComPtrRefBase::ptr]
 
-支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 T* ptr_;
@@ -111,4 +111,4 @@ T* ptr_;
 
 ### <a name="remarks"></a>備註
 
-目前範本參數所指定之類型的指標。 `ptr_` 是受保護的資料成員。
+指向當前範本參數指定的類型。 `ptr_`是受保護的數據成員。

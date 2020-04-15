@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: 250a59152e9b41eb48c453caaa696fdc8ca3d3b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e33842f574df5617fb40c5b3f6bb8324d5ba7c1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371390"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -35,20 +35,20 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>參數
 
-*RuntimeClassFlagsT*<br/>
-指定一或多個旗標欄位[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
+*執行時類別標誌T*<br/>
+指定一個或多個[執行時類類型](runtimeclasstype-enumeration.md)枚舉器的標誌欄位。
 
 *ILst*<br/>
-介面識別碼的清單。
+介面指示清單。
 
-*IsDelegateToClass*<br/>
-指定 **，則為 true**如果目前的執行個體`Implements`的基底類別中的第一個介面識別碼*ILst*; 否則**false**。
+*是委託類*<br/>
+如果`Implements`目前 實體是*ILst*中第一個介面 ID 的基項,請**指定 true;** 否則,**假**。
 
 ## <a name="remarks"></a>備註
 
-可協助實作[實作](implements-structure.md)結構。
+幫助實現[實現器](implements-structure.md)結構。
 
-此範本會周遊之介面的清單，並將它們加入做為基底類別，以及啟用所需的資訊`QueryInterface`。
+此範本遍歷介面清單,並將它們添加為基類,並作為啟用`QueryInterface`所需的資訊。
 
 ## <a name="members"></a>成員
 
@@ -56,24 +56,24 @@ friend struct Details::ImplementsHelper;
 
 名稱                                                    | 描述
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ImplementsHelper::CanCastTo](#cancastto)               | 取得指標的指定的介面 id。
-[ImplementsHelper::CastToUnknown](#casttounknown)       | 取得指標的基礎`IUnknown`目前的介面`Implements`結構。
-[ImplementsHelper::FillArrayWithIid](#fillarraywithiid) | 插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。
-[ImplementsHelper::IidCount](#iidcount)                 | 會保留在目前已實作的介面 Id 號碼`Implements`物件。
+[實現幫助器::坎卡斯特托](#cancastto)               | 獲取指向指定介面 ID 的指標。
+[實現說明器:Castto 未知](#casttounknown)       | 獲取指向當前`IUnknown``Implements`結構的基礎介面的指標。
+[實現說明器::fillarray 與 Id](#fillarraywithiid) | 將當前零點範本參數指定的介面 ID 插入指定的陣列元素。
+[實現說明器::IidCount](#iidcount)                 | 保存當前`Implements`物件中已實現的介面指示數。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ImplementsHelper`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標題:** 實現.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="cancastto"></a>ImplementsHelper::CanCastTo
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a>實現幫助器::坎卡斯特托
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 HRESULT CanCastTo(
@@ -90,13 +90,13 @@ HRESULT CanCastTo(
 ### <a name="parameters"></a>參數
 
 *riid*<br/>
-參考介面識別碼。
+對介面 ID 的引用。
 
-*ppv*<br/>
-如果這項作業成功時，所指定之介面指標*riid*或是*iid*。
+*Ppv*<br/>
+如果此操作成功,則指向*riid*或*iid*指定的介面的指標。
 
-*iid*<br/>
-參考介面識別碼。
+*Iid*<br/>
+對介面 ID 的引用。
 
 ### <a name="return-value"></a>傳回值
 
@@ -104,11 +104,11 @@ HRESULT CanCastTo(
 
 ### <a name="remarks"></a>備註
 
-取得指標的指定的介面 id。
+獲取指向指定介面 ID 的指標。
 
-## <a name="casttounknown"></a>ImplementsHelper::CastToUnknown
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>實現說明器:Castto 未知
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 IUnknown* CastToUnknown();
@@ -116,15 +116,15 @@ IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>傳回值
 
-指向基礎`IUnknown`介面。
+指向基礎`IUnknown`介面的指標。
 
 ### <a name="remarks"></a>備註
 
-取得指標的基礎`IUnknown`目前的介面`Implements`結構。
+獲取指向當前`IUnknown``Implements`結構的基礎介面的指標。
 
-## <a name="fillarraywithiid"></a>ImplementsHelper::FillArrayWithIid
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>實現說明器::fillarray 與 Id
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 void FillArrayWithIid(
@@ -134,19 +134,19 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>參數
 
-*index*<br/>
-以零為起始的索引，指出起始的陣列項目，這項作業。 這項作業完成時， *index*都會遞增 1。
+*指數*<br/>
+一個基於零的索引,指示此操作的起始陣組元素。 此動作完成後,*索引*將遞增 1。
 
-*iids*<br/>
-Iid 類型的陣列。
+*伊德*<br/>
+IID 類型的陣列。
 
 ### <a name="remarks"></a>備註
 
-插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。
+將當前零點範本參數指定的介面 ID 插入指定的陣列元素。
 
-## <a name="iidcount"></a>ImplementsHelper::IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a>實現說明器::IidCount
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 static const unsigned long IidCount;
@@ -154,4 +154,4 @@ static const unsigned long IidCount;
 
 ### <a name="remarks"></a>備註
 
-會保留在目前已實作的介面 Id 號碼`Implements`物件。
+保存當前`Implements`物件中已實現的介面指示數。

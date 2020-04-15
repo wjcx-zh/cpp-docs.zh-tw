@@ -1,5 +1,5 @@
 ---
-title: IOleInPlaceObjectWindowlessImpl 類別
+title: IOleInPlace 無視窗函數類別
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: fdd660daae109ac2a656519131dd9869ceaeaf4e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b0438692161f38445eb7cbed54edcc8a0ba8c0d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326571"
 ---
-# <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl 類別
+# <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlace 無視窗函數類別
 
-這個類別`IUnknown`會執行並提供方法, 以啟用無視窗控制項來接收視窗訊息, 以及參與拖放作業。
+此類實現`IUnknown`並提供了使無視窗控制項能夠接收視窗訊息和參與拖放操作的方法。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +44,7 @@ class IOleInPlaceObjectWindowlessImpl
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自`IOleInPlaceObjectWindowlessImpl`的類別。
+您的類,派生自`IOleInPlaceObjectWindowlessImpl`。
 
 ## <a name="members"></a>成員
 
@@ -52,22 +52,22 @@ class IOleInPlaceObjectWindowlessImpl
 
 |名稱|描述|
 |----------|-----------------|
-|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|啟用即時線上說明。 ATL 執行會傳回 E_NOTIMPL。|
-|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|為支援拖放功能的就地作用中的無視窗物件提供介面。`IDropTarget` ATL 執行會傳回 E_NOTIMPL。|
-|[IOleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|取得視窗控制碼。|
-|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|停用現用的就地控制項。|
-|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|將來自容器的訊息分派至就地作用中的無視窗控制項。|
-|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|重新啟動先前停用的控制項。 ATL 執行會傳回 E_NOTIMPL。|
-|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|表示可以看到就地控制項的哪個部分。|
-|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|停用並移除支援就地啟用的使用者介面。|
+|[IOleInPlace 無視窗::上下文敏感説明](#contextsensitivehelp)|啟用上下文相關的説明。 ATL 實現返回E_NOTIMPL。|
+|[IOleInPlace 無視窗::取得刪除目標](#getdroptarget)|為支援拖`IDropTarget`放的就地活動、無視窗物件提供介面。 ATL 實現返回E_NOTIMPL。|
+|[IOleInPlace 無視窗::抓取視窗](#getwindow)|獲取視窗句柄。|
+|[IOleinplace 無視窗::原位停用](#inplacedeactivate)|停用活動就地控件。|
+|[IOleInPlace 無視窗::在視窗訊息](#onwindowmessage)|將消息從容器調度到處於活動位置的無視窗控制項。|
+|[IOleInPlace 無視窗::重新啟動和Undo](#reactivateandundo)|重新啟動以前停用的控制項。 ATL 實現返回E_NOTIMPL。|
+|[IOleInPlace 無視窗::設定物件重新物件](#setobjectrects)|指示就地控件的哪一部分可見。|
+|[IOleInPlace 無視窗::UIdede](#uideactivate)|停用並刪除支援就地啟動的用戶介面。|
 
 ## <a name="remarks"></a>備註
 
-[IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)介面會管理就地控制項的重新開機和停用, 並決定應顯示多少控制項。 [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)介面可讓無視窗控制項接收視窗訊息, 以及參與拖放作業。 類別`IOleInPlaceObjectWindowlessImpl`提供`IOleInPlaceObject`和`IUnknown`的預設執行, 並在偵錯工具中將資訊傳送至傾印裝置。 `IOleInPlaceObjectWindowless`
+[IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)介面管理就地控制項重新啟動和停用,並確定該控制項應可見的數量。 [IOleInPlace 無視窗](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)介面使無視窗控制項能夠接收視窗訊息並參與拖放操作。 類`IOleInPlaceObjectWindowlessImpl`通過在調試生成中`IOleInPlaceObject`向`IOleInPlaceObjectWindowless`轉儲`IUnknown`設備發送 資訊來提供 和和實現的預設實現。
 
-**相關文章**[Atl 教學](../../atl/active-template-library-atl-tutorial.md)課程,[建立 atl 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md), 建立[ATL 專案](../../atl/reference/creating-an-atl-project.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IOleInPlaceObjectWindowless`
 
@@ -75,11 +75,11 @@ class IOleInPlaceObjectWindowlessImpl
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlctl。h
+**標題:** atlctl.h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+## <a name="ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlace 無視窗::上下文敏感説明
 
-傳回 E_NOTIMPL。
+返回E_NOTIMPL。
 
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
@@ -87,11 +87,11 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IOleWindow:: CoNtextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) 。
+請參閱[IOleWindow:Windows](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) SDK 中的上下文敏感説明。
 
-##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget
+## <a name="ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a>IOleInPlace 無視窗::取得刪除目標
 
-傳回 E_NOTIMPL。
+返回E_NOTIMPL。
 
 ```
 HRESULT GetDropTarget(IDropTarget** ppDropTarget);
@@ -99,11 +99,11 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IOleInPlaceObjectWindowless:: GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) 。
+請參閱[IOleInPlace 無視窗::在](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget)Windows SDK 中獲取 DropTarget。
 
-##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow
+## <a name="ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a>IOleInPlace 無視窗::抓取視窗
 
-容器會呼叫這個函式, 以取得控制項的視窗控制碼。
+容器呼叫此函數以獲取控制項的視窗句柄。
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -111,13 +111,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>備註
 
-某些容器無法與沒有視窗的控制項搭配使用, 即使它目前是視窗型也一樣。 在 ATL 的執行中, 如果控制項類別的資料成員`m_bWasOnceWindowless`為 TRUE, 則函數會傳回 E_FAIL。 否則, 如果*phwnd*不是 Null, `GetWindow`會\*將*phwnd*設定為控制項類別的資料`m_hWnd`成員, 並傳回 S_OK。
+某些容器不適用於無視窗控制項,即使它當前是視窗的。 在 ATL 的實現中,如果控制類`m_bWasOnceWindowless`的數據成員 為 TRUE,則函數返回E_FAIL。 否則,如果*phwnd*不是`GetWindow`NULL,則\*將*phwnd*設置到控制項`m_hWnd`類的數據成員並返回S_OK。
 
-請參閱 Windows SDK 中的[IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) 。
+請參閱[IOleWindow:在](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow)Windows SDK 中獲取視窗。
 
-##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
+## <a name="ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a>IOleinplace 無視窗::原位停用
 
-由容器呼叫以停用就地現用控制項。
+容器調用以停用就地活動控制件。
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
@@ -125,13 +125,13 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
 
 ### <a name="remarks"></a>備註
 
-視控制項的狀態而定, 這個方法會執行完整或部分停用。 如有必要, 會停用控制項的使用者介面, 並終結控制項的視窗 (如果有的話)。 容器會收到通知, 指出控制項已不再作用中。 已`IOleInPlaceUIWindow`釋放容器用來協調功能表和邊界空間的介面。
+此方法執行完全或部分停用,具體取決於控件的狀態。 如有必要,將停用控制項的使用者介面,並銷毀控制件的視窗(如果有)。 將通知容器控件不再處於活動狀態。 容器`IOleInPlaceUIWindow`用於協商功能表和邊框空間的介面被釋放。
 
-請參閱 Windows SDK 中的[IOleInPlaceObject:: InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) 。
+請參閱[IOleInPlace 物件:在](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate)Windows SDK 中原地停用。
 
-##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+## <a name="ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a>IOleInPlace 無視窗::在視窗訊息
 
-將來自容器的訊息分派至就地作用中的無視窗控制項。
+將消息從容器調度到處於活動位置的無視窗控制項。
 
 ```
 HRESULT OnWindowMessage(
@@ -143,11 +143,11 @@ HRESULT OnWindowMessage(
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IOleInPlaceObjectWindowless:: OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) 。
+請參閱[IOleInPlace 無視窗:Windows](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) SDK 中的「視窗訊息」。
 
-##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+## <a name="ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a>IOleInPlace 無視窗::重新啟動和Undo
 
-傳回 E_NOTIMPL。
+返回E_NOTIMPL。
 
 ```
 HRESULT ReactivateAndUndo();
@@ -155,11 +155,11 @@ HRESULT ReactivateAndUndo();
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IOleInPlaceObject:: ReactivateAndUndo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) 。
+請參閱[IOleInPlace 物件::在](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo)Windows SDK 中重新啟動並撤銷。
 
-##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects
+## <a name="ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a>IOleInPlace 無視窗::設定物件重新物件
 
-由容器呼叫, 以通知控制項其大小和/或位置已變更。
+容器調用以通知控制項其大小和/或位置已更改。
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
@@ -167,13 +167,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 
 ### <a name="remarks"></a>備註
 
-更新控制項的`m_rcPos`資料成員和控制項顯示。 只會顯示與剪輯區域相交的控制項部分。 如果控制項的顯示先前已裁剪, 但已移除裁剪, 則可以呼叫此函式來重繪控制項的完整視圖。
+更新控制項`m_rcPos`的數據成員和控制顯示。 僅顯示與剪輯區域相交的控制部分。 如果控件的顯示以前已剪切,但剪切已被刪除,則可以調用此功能以重繪控制件的完整視圖。
 
-請參閱 Windows SDK 中的[IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) 。
+請參閱[IOleInPlace 物件:在](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects)Windows SDK 中設置物件重新物件。
 
-##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate
+## <a name="ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a>IOleInPlace 無視窗::UIdede
 
-停用並移除支援就地啟用的控制項使用者介面。
+停用並刪除控制項支援就地啟動的用戶介面。
 
 ```
 HRESULT UIDeactivate();
@@ -181,11 +181,11 @@ HRESULT UIDeactivate();
 
 ### <a name="remarks"></a>備註
 
-將控制項類別的資料成員`m_bUIActive`設定為 FALSE。 此函式的 ATL 實作為一律會傳回 S_OK。
+將控制類的數據成員`m_bUIActive`設置為 FALSE。 此函數的 ATL 實現始終返回S_OK。
 
-請參閱 Windows SDK 中的[IOleInPlaceObject:: UIDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) 。
+請參閱[IOleInPlace 物件::在](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate)Windows SDK 中啟動 UI。
 
 ## <a name="see-also"></a>另請參閱
 
 [CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ce4e4723faa943a8de1431a604fc7acca2d528
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291492"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328208"
 ---
 # <a name="lib-reference"></a>LIB 參考
 
-Microsoft 程式庫管理員 (LIB.exe) 會建立並管理通用物件檔案格式 (COFF) 物件檔的程式庫。 LIB 也可用來建立匯出檔案和程式庫匯入參考匯出的定義。
+Microsoft 函式庫管理員 (LIB.exe) 建立和管理公共物件檔案格式 (COFF) 物件檔案的庫。 LIB 還可用於創建匯出檔和導入庫以引用匯出的定義。
 
 > [!NOTE]
->  您可以啟動此工具只能從 Visual Studio 命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。
+> 只能從可視化工作室命令提示符啟動此工具。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。
 
 - [LIB 概觀](overview-of-lib.md)
 

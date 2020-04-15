@@ -1,9 +1,11 @@
 ---
 title: _access_s、_waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171316"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349130"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
-決定檔案的讀取/寫入權限。 這是如 [CRT 中的安全性功能](access-waccess.md)中所述之增強安全性的 [_access、_waccess](../../c-runtime-library/security-features-in-the-crt.md) 版本。
+決定檔案的讀取/寫入權限。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [_access、_waccess](access-waccess.md) 版本。
 
 ## <a name="syntax"></a>語法
 
@@ -59,10 +62,10 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>參數
 
-*path*<br/>
+*路徑*<br/>
 檔案或目錄路徑。
 
-*mode*<br/>
+*模式*<br/>
 權限設定。
 
 ## <a name="return-value"></a>傳回值
@@ -79,7 +82,7 @@ errno_t _waccess_s(
 
 ## <a name="remarks"></a>備註
 
-搭配檔案使用時， **_access_s**函式會判斷指定的檔案是否存在，並可依*模式*值的指定來存取。 搭配目錄使用時， **_access_s**只會判斷指定的目錄是否存在。 在 Windows 2000 和更新版本的作業系統中，所有目錄都有讀取和寫入存取權。
+當與檔一起使用時 **,_access_s**函數確定指定的檔是否存在,並且可以按*模式*的值指定進行訪問。 當與目錄一起使用時 **,_access_s**僅確定指定的目錄是否存在。 在 Windows 2000 和更高版本的作業系統中,所有目錄都具有讀取和寫入訪問許可權。
 
 |模式值|檢查檔案|
 |----------------|---------------------|
@@ -88,11 +91,13 @@ errno_t _waccess_s(
 |04|讀取權限。|
 |06|讀取和寫入權限。|
 
-讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案已由另一個進程鎖定，即使 **_access_s**傳回0，也可能無法存取。
+讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如,如果檔被另一個進程鎖定,即使 **_access_s**返回 0,它也可能無法訪問。
 
-**_waccess_s**是寬字元版本的 **_access_s**，其中 **_waccess_s**的*path*引數是寬字元字串。 否則， **_waccess_s**和 **_access_s**的行為完全相同。
+**_waccess_s**是 **_access_s**的寬字元版本 **,_waccess_s**的*路徑*參數是寬字元字串。 否則 **,_waccess_s**和 **_access_s**行為相同。
 
-這些函式會驗證它們的參數。 如果*path*為 Null，或*模式*未指定有效的模式，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
+這些函式會驗證它們的參數。 如果*路徑*為 NULL 或*模式*未指定有效模式,則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -102,14 +107,14 @@ errno_t _waccess_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h> 或 \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>範例
 
-這個範例會使用 **_access_s**來檢查名為 crt_access_s 的檔案，以查看它是否存在，以及是否允許寫入。
+此示例使用 **_access_s**檢查名為 crt_access_s.c 的檔以查看是否存在,以及是否允許寫入。
 
 ```C
 // crt_access_s.c

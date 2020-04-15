@@ -1,18 +1,18 @@
 ---
-title: HOW TO：整理專案輸出檔案以進行建置
+title: 如何：組織組建的專案輸出檔案
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220659"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328522"
 ---
-# <a name="how-to-organize-project-output-files-for-builds"></a>HOW TO：整理專案輸出檔案以進行建置
+# <a name="how-to-organize-project-output-files-for-builds"></a>如何：組織組建的專案輸出檔案
 
 本主題描述組織專案輸出檔的最佳做法。 當您不正確地設定專案輸出檔時，可能會發生建置錯誤。 本主題也會概述組織專案輸出檔之每個替代方案的優缺點。
 
@@ -22,7 +22,7 @@ ms.locfileid: "65220659"
 
 1. 您可以使用 #using 指示詞，直接從您的程式碼參考組件，例如 `#using <System.Data.dll>`。 如需詳細資訊，請參閱 [#using 指示詞](../preprocessor/hash-using-directive-cpp.md)。
 
-   指定的檔案可以是 .dll、.exe、.netmodule 或.obj，只要是以 MSIL 撰寫即可。 您可以使用任何語言建置參考的元件。 使用此選項，您將可以存取 IntelliSense，因為系統會從 MSIL 擷取中繼資料。 指定的檔案必須位於專案的路徑中；否則，專案不會編譯，且無法使用 IntelliSense。 判斷檔案是否在路徑中的一個簡單方法是以滑鼠右鍵按一下 #using 行，然後選擇 [開啟文件] 命令。 如果找不到檔案，系統會通知您。
+   指定的檔案可以是 .dll、.exe、.netmodule 或.obj，只要是以 MSIL 撰寫即可。 您可以使用任何語言建置參考的元件。 使用此選項，您將可以存取 IntelliSense，因為系統會從 MSIL 擷取中繼資料。 指定的檔案必須位於專案的路徑中；否則，專案不會編譯，且無法使用 IntelliSense。 判斷檔案是否在路徑中的一個簡單方法是以滑鼠右鍵按一下 #using 行，然後選擇 [開啟文件]**** 命令。 如果找不到檔案，系統會通知您。
 
    如果您不想要放入檔案的完整路徑，您可以使用 **/AI** 編譯器選項，編輯 #using 參考的搜尋路徑。 如需詳細資訊，請參閱 [/AI (指定中繼資料目錄)](reference/ai-specify-metadata-directories.md)。
 
@@ -30,13 +30,13 @@ ms.locfileid: "65220659"
 
 1. 您不必直接從程式碼檔參考組件 (如上所述)，您可以使用 **/FU** 編譯器選項。 這個方法的優點是，您不需要將個別 #using 陳述式新增至每個參考指定組件的檔案。
 
-   若要設定此選項，請開啟專案的 [屬性頁]。 展開 [組態屬性] 節點，然後展開 [C/C++] 節點並選取 [進階]。 將所需的組件新增至 **Force #using** 旁。 如需詳細資訊，請參閱 [/FU (指定強制的 #using 檔)](reference/fu-name-forced-hash-using-file.md)。
+   若要設定此選項，請開啟專案的 [屬性頁]****。 展開 [組態屬性]**** 節點，然後展開 [C/C++]**** 節點並選取 [進階]****。 將所需的組件新增至 **Force #using** 旁。 如需詳細資訊，請參閱 [/FU (指定強制的 #using 檔)](reference/fu-name-forced-hash-using-file.md)。
 
 #### <a name="to-reference-assemblies-with-add-new-reference"></a>使用 [新增參考] 參考組件
 
-1. 這是使用 CLR 組件的最簡單方法。 首先，確定使用 **/clr** 編譯器選項編譯專案。 然後，以滑鼠右鍵按一下 [方案總管] 中的專案，然後選取 [新增]、[參考]。 [屬性頁] 對話方塊隨即出現。
+1. 這是使用 CLR 組件的最簡單方法。 首先，確定使用 **/clr** 編譯器選項編譯專案。 然後，以滑鼠右鍵按一下 [方案總管]**** 中的專案，然後選取 [新增]****、[參考]****。 [屬性頁]**** 對話方塊隨即出現。
 
-1. 從 [屬性頁] 對話方塊，選取 [新增參考]。 這會顯示一個對話方塊，其中列出所有 .NET、COM 及目前專案中可用的其他組件。 選取所需的組件，然後按一下 [確定]。
+1. 從 [屬性頁]**** 對話方塊，選取 [新增參考]****。 這會顯示一個對話方塊，其中列出所有 .NET、COM 及目前專案中可用的其他組件。 選取所需的組件，然後按一下 [確定]****。
 
    設定專案參考之後，即會自動處理對應的相依性。 此外，由於中繼資料是組件的一部分，因此不需要新增標頭檔或為要從受控組件使用的項目設計原型。
 
@@ -46,9 +46,9 @@ ms.locfileid: "65220659"
 
 1. 使用 #include 指示詞參考您程式碼中的適當標頭檔。 標頭檔必須在 Include 路徑中，或是目前專案的一部分。 如需詳細資訊，請參閱 [#include 指示詞 (C/C++)](../preprocessor/hash-include-directive-c-cpp.md)。
 
-1. 您也可以設定專案相依性。 設定專案相依性可確保兩件事。 首先，它會確保專案依正確順序建置，因此專案一可以找到所需的相依檔案。 其次，它會隱含地將相依專案的輸出目錄新增至路徑，因此輕鬆就能在連結時間找到檔案。
+1. 您也可以設定專案相依性。 設定專案相依性可確保兩件事。 首先，它會確保專案依正確順序建置，因此專案一可以找到所需的相依檔案。 其次,它隱式地將從屬項目的輸出目錄添加到路徑中,以便在連結時間輕鬆找到檔。
 
-1. 若要部署應用程式，您必須將 DLL 放在適當的位置。 這可以是下列其中一個位置：
+1. 若要部署應用程式，您必須將 DLL 放在適當的位置。 這可以是下列項目之一：
 
    1. 與可執行檔相同的路徑。
 
@@ -66,8 +66,8 @@ ms.locfileid: "65220659"
 
 #### <a name="how-to-specify-where-output-files-go"></a>如何指定輸出檔位置
 
-1. 您可以在專案的 [屬性頁] 中找到專案輸出設定的位置。 展開 [組態屬性] 旁的節點，然後選取 [一般]。 在 [輸出目錄] 旁指定輸出位置。 如需詳細資訊，請參閱[一般屬性頁 (專案)](reference/general-property-page-project.md)。
+1. 您可以在專案的 [屬性頁]**** 中找到專案輸出設定的位置。 展開 [組態屬性]**** 旁的節點，然後選取 [一般]****。 在 [輸出目錄]**** 旁指定輸出位置。 如需詳細資訊，請參閱[一般屬性頁 (專案)](reference/general-property-page-project.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++在 Visual Studio 中的專案類型](reference/visual-cpp-project-types.md)
+[Visual Studio 中的 C++ 專案類型](reference/visual-cpp-project-types.md)

@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 599a00af28ee5b8effbabbe5b334022ceb49f91a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370776"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 類別
 
-`CMFCListCtrl` 類別藉由支援[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)的 advanced 標頭控制項功能，擴充[CListCtrl 類別](../../mfc/reference/clistctrl-class.md)類別的功能。
+該`CMFCListCtrl`類通過支援[CMFCHeaderCtrl 類](../../mfc/reference/cmfcheaderctrl-class.md)的高級標頭控制功能擴展[了 CListCtrl 類](../../mfc/reference/clistctrl-class.md)的功能。
 
 ## <a name="syntax"></a>語法
 
@@ -51,30 +51,30 @@ class CMFCListCtrl : public CListCtrl
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|讓您能夠以不同的背景色彩來標示已排序的資料行。|
-|[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|啟用多重排序模式。|
-|[CMFCListCtrl::GetHeaderCtrl](#getheaderctrl)|傳回加底線的標題控制項的參考。|
-|[CMFCListCtrl::IsMultipleSort](#ismultiplesort)|檢查清單控制項是否處於多重排序模式。|
-|[CMFCListCtrl::OnCompareItems](#oncompareitems)|當它必須比較兩個清單控制項專案時，由架構呼叫。|
-|[CMFCListCtrl::OnGetCellBkColor](#ongetcellbkcolor)|當它必須決定個別資料格的背景色彩時，由架構呼叫。|
-|[CMFCListCtrl::OnGetCellFont](#ongetcellfont)|當它必須取得所繪製儲存格的字型時，由架構呼叫。|
-|[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|架構在必須決定個別資料格的文字色彩時呼叫。|
-|[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|從已排序的資料行清單中移除排序資料行。|
-|[CMFCListCtrl::SetSortColumn](#setsortcolumn)|設定目前排序的資料行和排序次序。|
-|[CMFCListCtrl：： Sort](#sort)|排序清單控制項。|
+|[CMFCListctrl::啟用標籤排序](#enablemarksortedcolumn)|能夠用不同的背景顏色標記已排序的列。|
+|[CMFCListctrl::啟用多排序](#enablemultiplesort)|啟用多個排序模式。|
+|[CMFCListCtrl::獲取頭Ctrl](#getheaderctrl)|返回對帶下劃線標頭控件的引用。|
+|[CMFCListctrl::是多排序](#ismultiplesort)|檢查清單控制項是否處於多個排序模式。|
+|[CMFCListctrl::上比較專案](#oncompareitems)|當框架必須比較兩個清單控制項時,由框架調用。|
+|[CMFCListctrl::在GetCellBkColor上](#ongetcellbkcolor)|當框架必須確定單個單元格的背景顏色時,由框架調用。|
+|[CMFCListctrl::在Getcellcellfont](#ongetcellfont)|當框架必須獲取所繪製的單元格的字體時,由框架調用。|
+|[CMFCListctrl::在獲取細胞文字顏色](#ongetcelltextcolor)|當框架必須確定單個儲存格的文本顏色時,由框架調用。|
+|[CMFCListctrl::刪除排序列](#removesortcolumn)|從排序列清單中移除排序。|
+|[CMFCListctrl::SetSortColumn](#setsortcolumn)|設置當前排序列和排序順序。|
+|[CMFCListctrl:排序](#sort)|對清單控制件進行排序。|
 
 ## <a name="remarks"></a>備註
 
-`CMFCListCtrl` 為[CListCtrl 類別](../../mfc/reference/clistctrl-class.md)類別提供兩種增強功能。 首先，它會透過在標頭上自動繪製排序箭號，指出資料行排序是可用的選項。 第二，它支援同時對多個資料行進行資料排序。
+`CMFCListCtrl`提供了[CListCtrl 類](../../mfc/reference/clistctrl-class.md)的兩個增強功能。 首先,它指示列排序是一個可用選項,通過在標題上自動繪製排序箭頭。 其次,它支持同時對多個列的數據排序。
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCListCtrl` 類別中使用各種方法。 此範例顯示如何建立清單控制項、插入資料行、插入專案、設定專案的文字，以及設定清單控制項的字型。 此程式碼片段是[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCListCtrl` 類別中使用各種方法。 該範例展示如何建立清單控制項、插入列、插入項、設定項的文本以及設置清單控制件的字型。 此代碼段是[可視化工作室演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -88,11 +88,11 @@ class CMFCListCtrl : public CListCtrl
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxlistctrl。h
+**標題:** afxlistctrl.h
 
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn
+## <a name="cmfclistctrlenablemarksortedcolumn"></a><a name="enablemarksortedcolumn"></a>CMFCListctrl::啟用標籤排序
 
-以不同的背景色彩標示已排序的資料行。
+用不同的背景顏色標記已排序的欄。
 
 ```
 void EnableMarkSortedColumn(
@@ -102,19 +102,19 @@ void EnableMarkSortedColumn(
 
 ### <a name="parameters"></a>參數
 
-*bMark*<br/>
-在布林值參數，決定是否要啟用不同的背景色彩。
+*b馬克*<br/>
+[在]確定是否啟用其他背景顏色的布林參數。
 
-*bRedraw*<br/>
-在判斷是否要立即重繪控制項的布林值參數。
+*bredraw*<br/>
+[在]確定是否立即重繪控件的布爾參數。
 
 ### <a name="remarks"></a>備註
 
-`EnableMarkSortedColumn` 使用方法 `CDrawingManager::PixelAlpha` 來計算要用於排序資料行的色彩。 選取的色彩是依據一般背景色彩。
+`EnableMarkSortedColumn`使用方法`CDrawingManager::PixelAlpha`計算對已排序列使用的顏色。 拾取的顏色基於常規背景顏色。
 
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort
+## <a name="cmfclistctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCListctrl::啟用多排序
 
-啟用排序清單控制項中資料列的多個資料行。
+開啟按多個欄位中的資料列進行排序。
 
 ```
 void EnableMultipleSort(BOOL bEnable = TRUE);
@@ -122,16 +122,16 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-在布林值，指定是否啟用多重資料行排序模式。
+*b 啟用*<br/>
+[在]指定是否啟用多個欄位模式的布林。
 
 ### <a name="remarks"></a>備註
 
-當您根據多個資料行啟用排序時，資料行的確具有階層。 資料列會先依照主要資料行排序。 任何對等的值接著會根據優先順序，依據後續的每個資料行來排序。
+當您基於多個列啟用排序時,列確實具有層次結構。 數據行將首先按主列排序。 然後,根據優先順序按每個後續列對任何等效值進行排序。
 
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl
+## <a name="cmfclistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCListCtrl::獲取頭Ctrl
 
-傳回標頭控制項的參考。
+返回對標頭控件的引用。
 
 ```
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
@@ -139,15 +139,15 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 
 ### <a name="return-value"></a>傳回值
 
-基礎[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)物件的參考。
+對基礎[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)物件的引用。
 
 ### <a name="remarks"></a>備註
 
-清單控制項的標題控制項是包含資料行標題的視窗。 它通常位於資料行的正上方。
+清單控制項標頭控制檔是包含欄標題的視窗。 它通常位於列正上方。
 
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort
+## <a name="cmfclistctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCListctrl::是多排序
 
-檢查清單控制項目前是否支援對多個資料行進行排序。
+檢查清單控制項目前是否支援對多個欄列進行排序。
 
 ```
 BOOL IsMultipleSort() const;
@@ -155,15 +155,15 @@ BOOL IsMultipleSort() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果清單控制項支援多個排序，則為 TRUE;否則為 FALSE。
+如果清單控制件支援多個排序,則為 TRUE;如果清單控制件支援多個排序。"否則。
 
 ### <a name="remarks"></a>備註
 
-當[CMFCListCtrl 類別](../../mfc/reference/cmfclistctrl-class.md)支援多個排序時，使用者可以依照多個資料行來排序清單控制項中的資料。 若要啟用多個排序，請呼叫[CMFCListCtrl：： EnableMultipleSort](#enablemultiplesort)。
+當[CMFCListCtrl 類](../../mfc/reference/cmfclistctrl-class.md)支援多個排序時,用戶可以按多個列對清單控制項中的數據進行排序。 要啟用多個排序,請致電[CMFCListCtrl::開啟多排序](#enablemultiplesort)。
 
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems
+## <a name="cmfclistctrloncompareitems"></a><a name="oncompareitems"></a>CMFCListctrl::上比較專案
 
-架構會在比較兩個專案時呼叫這個方法。
+框架在比較兩個專案時調用此方法。
 
 ```
 virtual int OnCompareItems(
@@ -175,25 +175,25 @@ virtual int OnCompareItems(
 ### <a name="parameters"></a>參數
 
 *lParam1*<br/>
-在要比較的第一個專案。
+[在]要比較的第一項。
 
 *lParam2*<br/>
-在要比較的第二個專案。
+[在]要比較的第二個專案。
 
 *iColumn*<br/>
-在這個方法所排序之資料行的索引。
+[在]此方法正在排序的列的索引。
 
 ### <a name="return-value"></a>傳回值
 
-整數，表示兩個專案的相對位置。 負值表示第一個專案應該在第二個元素之前，正值表示第一個專案應該在第二個專案之後，而零表示兩個專案相等。
+指示兩個項的相對位置的整數。 負值表示第一個項應位於第二個項之前,正值表示第一個項應遵循第二個項,零表示兩個項等效。
 
 ### <a name="remarks"></a>備註
 
-預設的執行一律會傳回0。 覆寫此函式以提供您自己的排序演算法。
+默認實現始終返回 0。 重寫此函數以提供您自己的排序演演算法。
 
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor
+## <a name="cmfclistctrlongetcellbkcolor"></a><a name="ongetcellbkcolor"></a>CMFCListctrl::在GetCellBkColor上
 
-當架構必須決定個別資料格的背景色彩時，會呼叫這個方法。
+當框架必須確定單個儲存格的背景顏色時,該框架將調用此方法。
 
 ```
 virtual COLORREF OnGetCellBkColor(
@@ -204,22 +204,22 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="parameters"></a>參數
 
 *nRow*<br/>
-在有問題的資料格資料列。
+[在]有問題的單元格的行。
 
 *nColumn*<br/>
-在有問題的資料格的資料行。
+[在]有問題的單元格的列。
 
 ### <a name="return-value"></a>傳回值
 
-COLORE光圈值，指定儲存格的背景色彩。
+指定儲存格背景顏色的 COLOREF 值。
 
 ### <a name="remarks"></a>備註
 
-`OnGetCellBkColor` 的預設執行不會使用提供的輸入參數，而是只會呼叫 `GetBkColor`。 因此，整個清單控制項預設會有相同的背景色彩。 您可以覆寫衍生類別中的 `OnGetCellBkColor`，以不同的背景色彩標記個別的儲存格。
+預設`OnGetCellBkColor`可使用提供的輸入參數,而只是呼叫`GetBkColor`。 因此,默認情況下,整個清單控制項將具有相同的背景顏色。 可以在派生類`OnGetCellBkColor`中重寫以標記具有單獨背景顏色的各個單元格。
 
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont
+## <a name="cmfclistctrlongetcellfont"></a><a name="ongetcellfont"></a>CMFCListctrl::在Getcellcellfont
 
-當此架構取得個別資料格的字型時，會呼叫這個方法。
+當框架獲取單個單元格的字體時,它將調用此方法。
 
 ```
 virtual HFONT OnGetCellFont(
@@ -231,25 +231,25 @@ virtual HFONT OnGetCellFont(
 ### <a name="parameters"></a>參數
 
 *nRow*<br/>
-在有問題的資料格資料列。
+[在]有問題的單元格的行。
 
 *nColumn*<br/>
-在有問題的資料格的資料行。
+[在]有問題的單元格的列。
 
 *dwData*<br/>
-在使用者定義的資料。 預設的執行不會使用此參數。
+[在]使用者定義的數據。 預設實現不使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-用於目前儲存格之字型的控制碼。
+用於當前儲存格的字型的句柄。
 
 ### <a name="remarks"></a>備註
 
-根據預設，這個方法會傳回 Null。 清單控制項中的所有儲存格都具有相同的字型。 覆寫這個方法，為不同的儲存格提供不同的字型。
+預設情況下,此方法傳回 NULL。 清單控制項的所有儲存格具有相同的字型。 重寫此方法,為不同的單元格提供不同的字體。
 
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor
+## <a name="cmfclistctrlongetcelltextcolor"></a><a name="ongetcelltextcolor"></a>CMFCListctrl::在獲取細胞文字顏色
 
-當架構必須決定個別資料格的文字色彩時，會呼叫這個方法。
+當框架必須確定單個儲存格的文本顏色時,它將調用此方法。
 
 ```
 virtual COLORREF OnGetCellTextColor(
@@ -260,22 +260,22 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="parameters"></a>參數
 
 *nRow*<br/>
-在有問題的資料格資料列。
+[在]有問題的單元格的行。
 
 *nColumn*<br/>
-在有問題的資料格的資料行。
+[在]有問題的單元格的列。
 
 ### <a name="return-value"></a>傳回值
 
-COLORE光圈值，指定儲存格的文字色彩。
+指定儲存格的文字顏色的 COLOREF 值。
 
 ### <a name="remarks"></a>備註
 
-根據預設，不論輸入參數為何，這個方法都會呼叫 `GetTextColor`。 整個清單控制項將會有相同的文字色彩。 您可以覆寫衍生類別中的 `OnGetCellTextColor`，將個別的資料格標記為不同的文字色彩。
+默認情況下,此方法調用`GetTextColor`,而不考慮輸入參數。 整個清單控制項將具有相同的文字顏色。 可以在派生類`OnGetCellTextColor`中重寫以標記具有單獨文本顏色的各個單元格。
 
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn
+## <a name="cmfclistctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCListctrl::刪除排序列
 
-從已排序的資料行清單中移除排序資料行。
+從排序列清單中移除排序。
 
 ```
 void RemoveSortColumn(int iColumn);
@@ -284,15 +284,15 @@ void RemoveSortColumn(int iColumn);
 ### <a name="parameters"></a>參數
 
 *iColumn*<br/>
-在要移除的資料行。
+[在]要刪除的欄。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從標題控制項中移除排序資料行。 它會呼叫[CMFCHeaderCtrl：： RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)。
+此方法從標頭控制項中刪除排序列。 它呼叫[CMFCHeaderCtrl::刪除排序](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)。
 
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn
+## <a name="cmfclistctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCListctrl::SetSortColumn
 
-設定目前排序的資料行和排序次序。
+設置當前排序列和排序順序。
 
 ```
 void SetSortColumn(
@@ -304,21 +304,21 @@ void SetSortColumn(
 ### <a name="parameters"></a>參數
 
 *iColumn*<br/>
-在要排序的資料行。
+[在]要排序的列。
 
-*bAscending*<br/>
-在指定排序次序的布林值。
+*b 上升*<br/>
+[在]指定排序順序的布林。
 
 *bAdd*<br/>
-在布林值，指定方法是否將*iColumn*所指定的資料行加入至排序資料行清單。
+[在]指定方法是否將*iColumn*指示的列添加到排序列清單中的布林。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[CMFCHeaderCtrl：： SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)方法，將輸入參數傳遞至標頭控制項。
+此方法使用[CMFCHeaderCtrl::setSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)的方法將輸入參數傳遞給標頭控制項。
 
-##  <a name="sort"></a>CMFCListCtrl：： Sort
+## <a name="cmfclistctrlsort"></a><a name="sort"></a>CMFCListctrl:排序
 
-排序清單控制項。
+對清單控制件進行排序。
 
 ```
 virtual void Sort(
@@ -330,13 +330,13 @@ virtual void Sort(
 ### <a name="parameters"></a>參數
 
 *iColumn*<br/>
-在要排序的資料行。
+[在]要排序的列。
 
-*bAscending*<br/>
-在指定排序次序的布林值。
+*b 上升*<br/>
+[在]指定排序順序的布林。
 
 *bAdd*<br/>
-在布林值，指定這個方法是否將*iColumn*所指定的資料行加入至排序資料行清單。
+[在]指定此方法是否將*iColumn*指示的列添加到排序列清單中的布林。
 
 ## <a name="see-also"></a>另請參閱
 

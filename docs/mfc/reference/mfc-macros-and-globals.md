@@ -11,52 +11,52 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 86fbda42d97c9086a3c1d021618a4694cfade7df
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: ed45fc7014bda18887be6dc8fbcdff8ba9a9c5f1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611804"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373048"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 巨集和全域
 
-Microsoft Foundation 類別程式庫可以分成兩個主要章節：（1） 的 MFC 類別和 （2） 巨集和全域變數。 如果函式或變數不是類別的成員，它是全域函式或變數。
+Microsoft 基礎類庫可以分為兩個主要部分:(1) MFC 類和 (2) 宏和全域。 如果函數或變數不是類的成員,則它是全域函數或變數。
 
-MFC 程式庫和 Active Template Library (ATL) 共用字串轉換巨集。 如需詳細資訊，請參閱 <<c0> [ 字串轉換巨集](../../atl/reference/string-conversion-macros.md)ATL 文件中。
+MFC 庫和活動範本庫 (ATL) 共用字串轉換巨集。 有關詳細資訊,請參閱 ATL 文件中的[字串轉換巨集](../../atl/reference/string-conversion-macros.md)。
 
-MFC 巨集和全域變數提供以下類別的功能。
+MFC 宏和全域提供以下類別的功能。
 
-## <a name="general-mfc"></a>一般 MFC
+## <a name="general-mfc"></a>一般MFC
 
 - [資料類型](data-types-mfc.md)
 
-- [MFC 類別物件的型別轉換](type-casting-of-mfc-class-objects.md)
+- [MFC 類別類型轉換](type-casting-of-mfc-class-objects.md)
 
-- [執行階段物件模型服務](run-time-object-model-services.md)
+- [執行時物件模型服務](run-time-object-model-services.md)
 
 - [診斷服務](diagnostic-services.md)
 
-- [例外狀況處理](exception-processing.md)
+- [例外處理](exception-processing.md)
 
-- [CString 格式和訊息方塊顯示](cstring-formatting-and-message-box-display.md)
+- [CString 格式與訊息盒顯示](cstring-formatting-and-message-box-display.md)
 
 - [訊息對應](message-map-macros-mfc.md)
 
-- [委派和介面對應](delegate-and-interface-maps.md)
+- [委託和介面對應](delegate-and-interface-maps.md)
 
 - [模組和 DLL](extension-dll-macros.md)
 
-- [應用程式資訊和管理](application-information-and-management.md)
+- [套用資訊與管理](application-information-and-management.md)
 
-- [標準命令和視窗 Id](standard-command-and-window-ids.md)
+- [標準命令與視窗指示](standard-command-and-window-ids.md)
 
-- [集合類別 helper](collection-class-helpers.md)
+- [集合類說明器](collection-class-helpers.md)
 
-- [灰色和遞色點陣圖函式](gray-and-dithered-bitmap-functions.md)
+- [灰色與抖除點陣陣陣](gray-and-dithered-bitmap-functions.md)
 
-- [標準對話方塊資料交換 (DDX) 常式](standard-dialog-data-exchange-routines.md)
+- [標準對話框資料交換 (DDX) 例程](standard-dialog-data-exchange-routines.md)
 
-- [標準對話方塊資料驗證 (DDV) 常式](standard-dialog-data-validation-routines.md)
+- [標準對話框資料驗證 (DDV) 例程](standard-dialog-data-validation-routines.md)
 
 - [AFX 訊息](afx-messages.md)
 
@@ -66,25 +66,25 @@ MFC 巨集和全域變數提供以下類別的功能。
 
 ## <a name="database"></a>資料庫
 
-- [記錄欄位交換 (RFX) 函數](record-field-exchange-functions.md)並[大量資料錄欄位交換 (bulk RFX) 函式](record-field-exchange-functions.md)MFC ODBC 類別
+- MFC ODBC 類別[的記錄現場交換 (RFX) 功能](record-field-exchange-functions.md)和[大量記錄現場交換 (批量 RFX) 功能](record-field-exchange-functions.md)
 
-- [記錄欄位交換 (DFX) 函式](record-field-exchange-functions.md)MFC DAO 類別
+- MFC DAO 類別[的記錄欄位交換 (DFX) 函數](record-field-exchange-functions.md)
 
-- [CRecordView 和 CDaoRecordView 的對話方塊資料交換 (DDX) 函式](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md)（MFC ODBC 和 DAO 類別）
+- CRecordView 和 CDaoRecordView(MFC ODBC 和 DAO 類別[)的對話資料交換 (DDX) 功能](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md)
 
-- [OLE 控制項的對話方塊資料交換 (DDX) 函式](dialog-data-exchange-functions-for-ole-controls.md)
+- [用於 OLE 控制的交談 (DDX) 函數](dialog-data-exchange-functions-for-ole-controls.md)
 
-- [巨集和全域變數，以協助直接呼叫開放式資料庫連接 (ODBC) API 函式](database-macros-and-globals.md)
+- [巨集和全域,以協助直接呼叫開放資料庫連線 (ODBC) API 功能](database-macros-and-globals.md)
 
-- [DAO 資料庫引擎初始化及終止](dao-database-engine-initialization-and-termination.md)
+- [DAO 資料庫引擎初始化與終止](dao-database-engine-initialization-and-termination.md)
 
-## <a name="internet"></a>網際網路
+## <a name="internet"></a>Internet
 
-- [網際網路 URL 剖析全域](internet-url-parsing-globals.md)
+- [網際網路網址解析全域](internet-url-parsing-globals.md)
 
 ## <a name="dhtml--dhtml-event-maps"></a>DHTML / DHTML 事件對應
 
-- [DHTML 對話方塊資料交換 (DDX) 協助程式巨集](ddx-dhtml-helper-macros.md)
+- [DHTML 對話框資料交換 (DDX) 說明器巨集](ddx-dhtml-helper-macros.md)
 
 - [DHTML 事件對應](dhtml-event-maps.md)
 
@@ -94,34 +94,34 @@ MFC 巨集和全域變數提供以下類別的功能。
 
 - [應用程式控制](application-control.md)
 
-- [分派對應](dispatch-maps.md)
+- [調度地圖](dispatch-maps.md)
 
-此外，MFC 提供函式，呼叫[AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer)任何 OLE 容器開發的完整支援的 MFC 4.0 可讓內嵌 OLE 控制項。
+此外,MFC 還提供名為[AfxEnableControl 容器](ole-initialization.md#afxenablecontrolcontainer)的功能,使使用 MFC 4.0 開發的任何 OLE 容器能夠完全支援嵌入式 OLE 控制。
 
-## <a name="ole-controls"></a>OLE 控制項
+## <a name="ole-controls"></a>OLE 控制
 
-- [變異參數類型常數](variant-parameter-type-constants.md)
+- [變數參數類型常量](variant-parameter-type-constants.md)
 
-- [類型程式庫存取](type-library-access.md)
+- [型態庫存取](type-library-access.md)
 
-- [屬性頁](property-pages-mfc.md)
+- [「屬性頁」](property-pages-mfc.md)
 
-- [事件對應](event-maps.md)
+- [事件地圖](event-maps.md)
 
-- [事件接收對應](event-sink-maps.md)
+- [事件接收器對應](event-sink-maps.md)
 
 - [連接對應](connection-maps.md)
 
 - [註冊 OLE 控制項](registering-ole-controls.md)
 
-- [Class factory 和授權](class-factories-and-licensing.md)
+- [級工廠和授權](class-factories-and-licensing.md)
 
-- [OLE 控制項的持續性](persistence-of-ole-controls.md)
+- [OLE 控制項的持久性](persistence-of-ole-controls.md)
 
-本章節的第一個部分簡要討論每個先前的類別，並列出的全域變數和巨集，在類別中，以及功能的簡短描述。 接下來是全域函式、 全域變數和 MFC 程式庫中的巨集的描述。
+本節的第一部分簡要討論了前面的每個類別,並列出了類別中的全域和宏,以及功能的簡要說明。 以下是 MFC 庫中全域函數、全域變數和宏的說明。
 
 > [!NOTE]
->  許多全域函式開頭的前置詞 「 Afx 」，但某些，比方說，對話方塊資料交換 (DDX) 函式和許多資料庫函式，不會遵循此慣例。 所有全域變數的開頭 「 afx 」 做為前置詞。 不要啟動巨集，這是以任何特定的前置詞，但它們以大寫字母撰寫。
+> 許多全域函數以前綴"Afx"開頭,但有些,例如,對話框數據交換 (DDX) 函數和許多資料庫函數,不遵循此約定。 所有全域變數都以「afx」作為首碼開頭。 宏不以任何特定首碼開頭,但它們用大寫字母編寫。
 
 ## <a name="see-also"></a>另請參閱
 

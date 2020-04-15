@@ -1,5 +1,5 @@
 ---
-title: 函式呼叫
+title: 函數呼叫
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function calls, C functions
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 2402f3fef77b19c0420f0c4a52407a730b53b1d5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148201"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334566"
 ---
-# <a name="function-calls"></a>函式呼叫
+# <a name="function-calls"></a>函數呼叫
 
-「函式呼叫」是一種運算式，會將控制項和引數 (如果有的話) 傳遞至函式，且具有下列形式：
+「函式呼叫」** 是一種運算式，會將控制項和引數 (如果有的話) 傳遞至函式，且具有下列形式：
 
-*運算式* (*expression-list*<sub>opt</sub>)
+*表示式*(*表示式清單*<sub>選擇</sub>)
 
 其中 *expression* 是函式名稱，或會評估為函式位址，而 *expression-list* 是運算式的清單 (以逗號分隔)。 這些後方運算式的值為傳遞至函式的引數。 如果函式不會傳回值，那麼您會將它宣告為傳回 `void` 的函式。
 
 如果宣告出現在函式呼叫之前，但是未提供有關參數的任何資訊，則所有未宣告的引數都會直接進行一般算術轉換。
 
 > [!NOTE]
->  函式引數清單中的運算式可以依照任意順序求值，因此，若引數的值可能因其他引數的副作用而變更，則這類引數會擁有未定義的值。 函式呼叫運算子所定義的序列點僅保證，引數清單中的所有副作用都會先經過求值，控制項才會傳遞至呼叫的函式  (請注意，引數推送至堆疊的順序與上述不相關)。如需詳細資訊，請參閱[序列點](../c-language/c-sequence-points.md)。
+> 函式引數清單中的運算式可以依照任意順序求值，因此，若引數的值可能因其他引數的副作用而變更，則這類引數會擁有未定義的值。 函式呼叫運算子所定義的序列點僅保證，引數清單中的所有副作用都會先經過求值，控制項才會傳遞至呼叫的函式  (請注意,在堆疊上推送參數的順序是單獨的問題。有關詳細資訊,請參閱[序列點](../c-language/c-sequence-points.md)。
 
 所有函式呼叫的唯一需求就是，括號前面的運算式必須求出函式位址值。 這表示，函式可以透過任何函式指標運算式呼叫。
 

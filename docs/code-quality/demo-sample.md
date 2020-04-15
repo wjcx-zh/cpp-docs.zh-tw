@@ -1,72 +1,122 @@
 ---
 title: 用於程式碼分析的 C++ 專案範例
-ms.date: 11/04/2016
+description: 如何創建範例解決方案,用於 Visual Studio 中 Microsoft C++的代碼分析演練。
+ms.date: 04/14/2020
 ms.topic: sample
 helpviewer_keywords:
 - demo sample [Visual Studio ALM]
 - code analysis, samples
 ms.assetid: 09e1b9f7-5916-4ed6-a001-5c2d7e710682
-ms.openlocfilehash: 1966e9cec5825ae37728bbf28c0f21ff4eed62fc
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: c2a1b8c80b7e7aebd1f1530c66ade5859b392028
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418820"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372052"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>用於程式碼分析的 C++ 專案範例
 
-下列程式示範如何建立[逐步解說：分析 C/C++程式碼是否有瑕疵](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)的範例。 這些程序會建立：
+以下過程展示如何為演練建立範例[:分析 C/C++缺陷代碼](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)。 這些程序會建立：
 
-- 名為 CppDemo 的 Visual Studio 解決方案。
+- 名為*CppDemo*的視覺工作室解決方案。
 
-- 名為 CodeDefects 的靜態程式庫專案。
+- 一個名為*Code缺陷的*靜態庫專案。
 
-- 名為 Annotations 的靜態程式庫專案。
+- 名為*註解 的*靜態庫專案 。
 
 這些程序也會提供標頭的程式碼，以及用於靜態程式庫的 *.cpp* 檔案。
 
 ## <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>建立 CppDemo 解決方案和 CodeDefects 專案
 
-1. 開啟 Visual Studio，然後選取 [**建立新專案**]
+::: moniker range=">=vs-2019"
 
-1. 將語言篩選變更為**C++**
+1. 打開視覺化工作室並選擇 **"創建新專案**"
 
-1. 選取 [**空專案**] 並按 **[下一步]**
+1. 在 **「建立新項目**」 對話框中,將語言篩選器更改為**C++**。
 
-1. 在 [**專案名稱**] 文字方塊中，輸入**CodeDefects**
+1. 選擇**Windows 桌面精靈**並選擇 **「 下一步**」 按鈕。
 
-1. 在 [**方案名稱**] 文字方塊中，輸入**CppDemo**
+1. 在「**設定新項目**」 頁上,在 **「專案名稱**」 文字框中, 輸入*程式碼缺陷*。
 
-1. 按一下 [建立]
+1. 在 **「解決方案名稱**文字」 框中,輸入*CppDemo*。
 
-## <a name="configure-the-codedefects-project-as-a-static-library"></a>將 CodeDefects 專案設定為靜態程式庫
+1. 選擇 **[建立]**。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [CodeDefects]，然後按一下 [屬性]。
+1. 在**Windows 桌面項目**對話方塊中,將**應用程式類型**更改為**靜態庫 (.lib)。**
 
-1. 展開 [組態屬性]，然後按一下 [一般]。
+1. 在 [其他選項] **** 下，選取 [空專案] ****。
 
-1. 在 [**一般**] 清單中，將 [設定**類型**] 變更為 [**靜態程式庫（.lib）** ]。
+1. 選擇 **「確定」** 以創建解決方案和專案。
 
-1. 在 [ **Advanced** ] 清單中，將 [**目標副檔名**] 變更為 **.lib**
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. 開啟 Visual Studio。 在選單列上,選擇 **「檔** > **新專案** > **」。。**
+
+1. 在 **「新項目」** 對話框中,**選擇「視覺C++** > **Windows 桌面**」 。
+
+1. 選擇**Windows 桌面精靈**。
+
+1. 在 **「名稱**」 文字框中,輸入*程式碼缺陷*。
+
+1. 在 **「解決方案名稱**文字」 框中,輸入*CppDemo*。
+
+1. 選擇 **"確定**"。
+
+1. 在**Windows 桌面項目**對話方塊中,將**應用程式類型**更改為**靜態庫 (.lib)。**
+
+1. 在 [其他選項] **** 下，選取 [空專案] ****。
+
+1. 選擇 **「確定」** 以創建解決方案和專案。
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+1. 開啟 Visual Studio。 在選單列上,選擇 **「檔** > **新專案** > **」。。**
+
+1. 在**新項目**對話框中,**選擇樣本**>**視覺化C++** > **Win32**。
+
+1. 選擇**Win32 主控台應用程式**。
+
+1. 在 **「名稱**」 文字框中,輸入*程式碼缺陷*。
+
+1. 在 **「解決方案名稱**文字」 框中,輸入*CppDemo*。
+
+1. 選擇 **"確定**"。
+
+1. 在**Win32 應用程式精靈**對話框中,選擇 **「下一步**」按鈕。
+
+1. 將**應用程式型態**改變為**靜態庫**。
+
+1. 在 **'其他選項**' 下,取消選擇**預編譯標頭**。
+
+1. 選擇 **「完成」** 以建立解決方案和專案。
+
+::: moniker-end
 
 ## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>將標頭和來源檔案新增至 CodeDefects 專案
 
-1. 在 [方案總管] 中，展開 [CodeDefects]，以滑鼠右鍵按一下 [標頭檔]，按一下 [新增]，然後按一下 [新增項目]。
+1. 在解決方案資源管理員中,展開**程式碼缺陷**。
 
-1. 在 [新增項目] 對話方塊中，按一下 [程式碼]，然後按一下 [標頭檔 (.h)]。
+1. 右鍵按一下以打開**標題檔的**上下文選單。 選擇 **「添加新** > **專案**」。
 
-1. 在 [名稱] 方塊中，鍵入 **Bug.h**，然後按一下 [新增]。
+1. 在「**新增新項目」** 對話方塊中,選擇 **「可視C++** > **程式碼**」,然後選擇 **「標題檔 」(.h)。**
 
-1. 複製下列程式碼，並將它貼入編輯器中的*錯誤 .h*檔案。
+1. 在 **「名稱**編輯」框中,輸入*Bug.h,* 然後選擇「**添加**」 按鈕。
+
+1. 在*Bug.h*的編輯視窗中,選擇並刪除內容。
+
+1. 複製以下代碼並將其貼上到編輯器中的*Bug.h*檔中。
 
     ```cpp
     #pragma once
 
     #include <windows.h>
 
-    // These functions are consumed by the sample
-    // but are not defined. This project cannot be linked!
-    bool CheckDomain(LPCTSTR);
+    // Function prototypes
+    bool CheckDomain(wchar_t const *);
     HRESULT ReadUserAccount();
 
     // These constants define the common sizes of the
@@ -75,24 +125,34 @@ ms.locfileid: "77418820"
     const int ACCOUNT_DOMAIN_LEN = 128;
     ```
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [來源檔案]，指向 [新增]，然後按一下 [新增項目]。
+1. 在解決方案資源管理器中,右鍵單擊以打開**源檔的**上下文菜單。 選擇 **「添加新** > **專案**」。
 
-1. 在 [新增項目] 對話方塊中，按一下 [C++ 檔案 (.cpp)]
+1. 在 [加入新項目] **** 對話方塊中，選取 [C++ 檔 (.cpp)] ****。
 
-1. 在 [名稱] 方塊中，鍵入 **Bug.cpp**，然後按一下 [新增]。
+1. 在 **「名稱**編輯」框中,輸入*Bug.cpp,* 然後選擇「**添加**」按鈕。
 
-1. 複製下列程式碼，並將它貼入編輯器中的*錯誤 .cpp*檔案。
+1. 複製以下代碼並將其貼上到編輯器中的*Bug.cpp*檔中。
 
     ```cpp
     #include "Bug.h"
 
     // the user account
-    TCHAR g_userAccount[USER_ACCOUNT_LEN] = {};
+    wchar_t g_userAccount[USER_ACCOUNT_LEN] = { L"domain\\user" };
     int len = 0;
+
+    bool CheckDomain(wchar_t const* domain)
+    {
+        return (wcsnlen_s(domain, USER_ACCOUNT_LEN) > 0);
+    }
+
+    HRESULT ReadUserAccount()
+    {
+        return S_OK;
+    }
 
     bool ProcessDomain()
     {
-        TCHAR* domain = new TCHAR[ACCOUNT_DOMAIN_LEN];
+        wchar_t* domain = new wchar_t[ACCOUNT_DOMAIN_LEN];
         // ReadUserAccount gets a 'domain\user' input from
         //the user into the global 'g_userAccount'
         if (ReadUserAccount())
@@ -101,14 +161,14 @@ ms.locfileid: "77418820"
             // character onto the 'domain' buffer
             for (len = 0; (len < ACCOUNT_DOMAIN_LEN) && (g_userAccount[len] != L'\0'); len++)
             {
-                if (g_userAccount[len] == '\\')
+                if (g_userAccount[len] == L'\\')
                 {
                     // Stops copying on the domain and user separator ('\')
                     break;
                 }
                 domain[len] = g_userAccount[len];
             }
-            if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+            if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != L'\\'))
             {
                 // '\' was not found. Invalid domain\user string.
                 delete[] domain;
@@ -116,7 +176,7 @@ ms.locfileid: "77418820"
             }
             else
             {
-                domain[len] = '\0';
+                domain[len] = L'\0';
             }
             // Process domain string
             bool result = CheckDomain(domain);
@@ -139,33 +199,79 @@ ms.locfileid: "77418820"
     }
     ```
 
-1. 按一下 [檔案] 功能表，然後按一下 [全部儲存]。
+1. 在選單列上,選擇 **「全部儲存檔** > **Save All**」。
 
 ## <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>新增 Annotations 專案並將其設定為靜態程式庫
 
-1. 在 [方案總管] 中，按一下 [CppDemo]，指向 [新增]，然後按一下 [新增專案]。
+::: moniker range=">=vs-2019"
 
-1. 在 [新增**專案**] 對話方塊中，將 [語言篩選] **C++** 變更為，然後選取 [**空白專案**]，然後按 **[下一步]** 。
+1. 在解決方案資源管理器中,右鍵單擊**CppDemo**以打開上下文菜單。 選擇 **「添加新** > **專案**」。
 
-1. 在 [**專案名稱**] 文字方塊中，輸入**批註**，然後按一下 [**建立**]。
+1. 在「**新增新項目**」 對話框中,選擇**Windows 桌面精靈**,然後選擇 **「 下一步**」 按鈕。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [Annotations]，然後按一下 [屬性]。
+1. 在「**設定新項目**」 頁上,在 **「專案名稱**」文字框中輸入*註釋*,然後選擇「**創建**」 。
 
-1. 展開 [組態屬性]，然後按一下 [一般]。
+1. 在**Windows 桌面項目**對話方塊中,將**應用程式類型**更改為**靜態庫 (.lib)。**
 
-1. 在 [**一般**] 清單中，將 [設定**類型**] 變更為，然後按一下 [**靜態程式庫（.lib）** ]。
+1. 在 [其他選項] **** 下，選取 [空專案] ****。
 
-1. 在 [ **Advanced** ] 清單中，選取 [**目標檔案副檔名**] 旁邊的資料行中的文字，然後輸入 **.lib**。
+1. 選擇 **「確定」** 以建立專案。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. 在解決方案資源管理器中,右鍵單擊**CppDemo**以打開上下文菜單。 選擇 **「添加新** > **專案**」。
+
+1. 在「**新增新項目」** 對話框中,選擇**視覺C++** > **Windows 桌面**。
+
+1. 選擇**Windows 桌面精靈**。
+
+1. 在 **「名稱**」 文字框中,輸入*註解*,然後選擇 **「確定**」 。
+
+1. 在**Windows 桌面項目**對話方塊中,將**應用程式類型**更改為**靜態庫 (.lib)。**
+
+1. 在 [其他選項] **** 下，選取 [空專案] ****。
+
+1. 選擇 **「確定」** 以建立專案。
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+1. 在解決方案資源管理器中,右鍵單擊**CppDemo**以打開上下文菜單。 選擇 **「添加新** > **專案**」。
+
+1. 在 **「新增新項目」** 對話方塊中,**選擇「視覺C++** > **Win32」。。**
+
+1. 選擇**Win32 主控台應用程式**。
+
+1. 在 **「名稱**」 文字框中, 輸入*註解*。
+
+1. 選擇 **"確定**"。
+
+1. 在**Win32 應用程式精靈**對話框中,選擇 **「下一步**」按鈕。
+
+1. 將**應用程式型態**改變為**靜態庫**。
+
+1. 在 **'其他選項**' 下,取消選擇**預編譯標頭**。
+
+1. 選擇 **「完成」** 以建立專案。
+
+::: moniker-end
 
 ## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>將標頭檔和來源檔案新增至 Annotations 專案
 
-1. 在 [方案總管] 中，展開 [Annotations]，以滑鼠右鍵按一下 [標頭檔]，按一下 [新增]，然後按一下 [新增項目]。
+1. 在解決方案資源管理員中,展開**註解**。
 
-1. 在 [新增項目] 對話方塊中，按一下 [標頭檔 (.h)]。
+1. 右鍵按一下以在 **「註釋**」下打開**標題檔的**上下文選單。 選擇 **「添加新** > **專案**」。
 
-1. 在 [名稱] 方塊中，鍵入 **annotations.h**，然後按一下 [新增]。
+1. 在「**新增新項目」** 對話方塊中,選擇 **「可視C++** > **程式碼**」,然後選擇 **「標題檔 」(.h)。**
 
-1. 複製下列程式碼，並將它貼到編輯器中的 [ *.h* ] 檔案。
+1. 在 **「名稱**編輯」框中,輸入*註解.h,* 然後選擇「**添加**」 按鈕。
+
+1. 在*註解.h*的編輯視窗中,選擇並刪除內容。
+
+1. 複製以下代碼並將其貼上到編輯器中的*註解.h*檔中。
 
     ```cpp
     #pragma once
@@ -182,16 +288,23 @@ ms.locfileid: "77418820"
     _Ret_maybenull_ LinkedList* AllocateNode();
     ```
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [來源檔案]，指向 [新增]，然後按一下 [新增項目]。
+1. 在解決方案資源管理器中,右鍵單擊以在 **「註釋**」下打開**源檔的**上下文菜單。 選擇 **「添加新** > **專案**」。
 
-1. 在 [新增項目] 對話方塊中，按一下 [程式碼]，然後按一下 [C++ 檔案 (.cpp)]
+1. 在 [加入新項目] **** 對話方塊中，選取 [C++ 檔 (.cpp)] ****。
 
-1. 在 [名稱] 方塊中，鍵入 **annotations.cpp**，然後按一下 [新增]。
+1. 在 **「名稱**編輯」框中,輸入*註釋.cpp,* 然後選擇「**添加**」 按鈕。
 
-1. 複製下列程式碼，並將它貼到編輯器中的*注釋 .cpp*檔案。
+1. 複製以下代碼並將其貼上到編輯器中的*註解.cpp*檔中。
 
     ```cpp
     #include "annotations.h"
+    #include <malloc.h>
+
+    _Ret_maybenull_ LinkedList* AllocateNode()
+    {
+        LinkedList* result = static_cast<LinkedList*>(malloc(sizeof(LinkedList)));
+        return result;
+    }
 
     LinkedList* AddTail(LinkedList* node, int value)
     {
@@ -211,6 +324,13 @@ ms.locfileid: "77418820"
     }
     ```
 
-1. 按一下 [檔案] 功能表，然後按一下 [全部儲存]。
+1. 在選單列上,選擇 **「全部儲存檔** > **Save All**」。
 
-解決方案現在已完成，應建立而不會發生錯誤。
+解決方案現已完成,應生成時無錯誤。
+
+::: moniker range="vs-2017"
+
+> [!NOTE]
+> 在 Visual Studio 2017 中`E1097 unknown attribute "no_init_all"`,您可能會在 IntelliSense 引擎中看到虛假警告。 您可以放心地忽略此警告。
+
+::: moniker-end

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325061"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371293"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier 類別
 
-發行目前的模組中的最後一個物件時，會叫用事件處理常式。 物件和其指標-至-a-方法成員所指定的事件處理常式。
+釋放當前模組中的最後一個物件時調用事件處理程式。 事件處理程式由物件及其指向方法的成員指定。
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +36,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-成員函式是事件處理常式的物件類型。
+其成員函數為事件處理程序的物件的類型。
 
 ## <a name="members"></a>成員
 
@@ -44,22 +44,22 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 名稱                                                                                                 | 描述
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | 初始化 `Module::MethodReleaseNotifier` 類別的新執行個體。
+[模組::方法釋放程式::方法釋放器](#methodreleasenotifier-methodreleasenotifier) | 將 `Module::MethodReleaseNotifier` 類別的新執行個體初始化。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                                   | 描述
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | 呼叫目前相關聯的事件處理常式`Module::MethodReleaseNotifier`物件。
+[模組::方法釋放程式::調用](#methodreleasenotifier-invoke) | 調用與當前`Module::MethodReleaseNotifier`物件關聯的事件處理程式。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 名稱                                                                    | 描述
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | 目前的事件處理常式會保留指標`Module::MethodReleaseNotifier`物件。
-[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | 成員函式是目前的事件處理常式的物件會保留指標`Module::MethodReleaseNotifier`物件。
+[模組::方法釋放程式::method_](#methodreleasenotifier-method) | 為當前`Module::MethodReleaseNotifier`物件保留指向事件處理程序的指標。
+[模組::方法釋放程式::object_](#methodreleasenotifier-object) | 保存指向其成員函數是當前`Module::MethodReleaseNotifier`物件的事件處理程序的物件的指標。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ReleaseNotifier`
 
@@ -67,29 +67,29 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標題:** 模組.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module:: methodreleasenotifier:: 叫用
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>模組::方法釋放程式::調用
 
-呼叫目前相關聯的事件處理常式`Module::MethodReleaseNotifier`物件。
+調用與當前`Module::MethodReleaseNotifier`物件關聯的事件處理程式。
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>模組::方法釋放程式::method_
 
-目前的事件處理常式會保留指標`Module::MethodReleaseNotifier`物件。
+為當前`Module::MethodReleaseNotifier`物件保留指向事件處理程序的指標。
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>模組::方法釋放程式::方法釋放器
 
-初始化 `Module::MethodReleaseNotifier` 類別的新執行個體。
+將 `Module::MethodReleaseNotifier` 類別的新執行個體初始化。
 
 ```cpp
 MethodReleaseNotifier(
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>參數
 
-*object*<br/>
-物件，其成員函式為事件處理常式。
+*物件*<br/>
+其成員函數為事件處理程序的物件。
 
 *方法*<br/>
-成員函式的參數*物件*也就是事件處理常式。
+參數*物件*的成員函數,即事件處理程式。
 
-*release*<br/>
-指定`true`若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release)方法; 否則指定`false`。
+*釋放*<br/>
+指定`true`以啟用調用基礎[模組::釋放說明器:::釋放()](module-releasenotifier-class.md#releasenotifier-release)方法;否則,指定`false`。
 
-## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>模組::方法釋放程式::object_
 
-成員函式是目前的事件處理常式的物件會保留指標`Module::MethodReleaseNotifier`物件。
+保存指向其成員函數是當前`Module::MethodReleaseNotifier`物件的事件處理程序的物件的指標。
 
 ```cpp
 T* object_;

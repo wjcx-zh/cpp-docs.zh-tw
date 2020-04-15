@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-ms.openlocfilehash: 8cb35139e707d81a53edb762a2b7fc2ab41ff247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a512aa974cb57072915f887f0c2a20ed1263ffa3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326908"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 類別
 
-用來管理堆積指標的智慧型指標類別。
+用於管理堆指標的智慧指標類。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,10 +34,10 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-要儲存在堆積上的物件類型。
+要存儲在堆上的物件類型。
 
-*Allocator*<br/>
-要使用的記憶體配置類別。
+*配置器*<br/>
+要使用的記憶體分配類。
 
 ## <a name="members"></a>成員
 
@@ -45,26 +45,26 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtr::CHeapPtr](#cheapptr)|建構函式。|
+|[CHeapPtr:CHeapPtr](#cheapptr)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtr::Allocate](#allocate)|呼叫這個方法來儲存物件在堆積上配置記憶體。|
-|[CHeapPtr::Reallocate](#reallocate)|呼叫這個方法來重新配置在堆積上的記憶體。|
+|[CHeapPtr:分配](#allocate)|調用此方法以在堆上分配記憶體以存儲物件。|
+|[CHeapPtr:重新分配](#reallocate)|調用此方法以重新分配堆上的記憶體。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtr::operator =](#operator_eq)|指派運算子。|
+|[CHeapPtr::運算符 |](#operator_eq)|分配運算符。|
 
 ## <a name="remarks"></a>備註
 
-`CHeapPtr` 衍生自[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) ，並預設使用的 CRT 常式 (在[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 來配置和釋放記憶體。 此類別[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可用來建構清單的堆積指標。 另請參閱[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，它會使用 COM 記憶體配置常式。
+`CHeapPtr`派生自[CHeapPtrBase,](../../atl/reference/cheapptrbase-class.md)預設使用 CRT 例程(在[CCRTAllocator)](../../atl/reference/ccrtallocator-class.md)來分配和釋放記憶體。 類[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可用於建構堆指標的清單。 另請參閱使用 COM 記憶體分配例程[的 CcomHeapPtr。](../../atl/reference/ccomheapptr-class.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
 
@@ -72,11 +72,11 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcore.h
+**標題:** atlcore.h
 
-##  <a name="allocate"></a>  CHeapPtr::Allocate
+## <a name="cheapptrallocate"></a><a name="allocate"></a>CHeapPtr:分配
 
-呼叫這個方法來儲存物件在堆積上配置記憶體。
+調用此方法以在堆上分配記憶體以存儲物件。
 
 ```
 bool Allocate(size_t nElements = 1) throw();
@@ -84,22 +84,22 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>參數
 
-*nElements*<br/>
-用來計算配置的記憶體數量的項目數目。 預設值為 1。
+*n 元素*<br/>
+用於計算要分配的內存量的元素數。 預設值為 1。
 
 ### <a name="return-value"></a>傳回值
 
-如果記憶體已成功，則傳回 true 配置失敗的 false。
+如果記憶體已成功分配,則返回 true,在失敗時為 false。
 
 ### <a name="remarks"></a>備註
 
-配置器常式用來保留足夠的記憶體來儲存堆積*nElement*物件的建構函式中定義的類型。
+分配器例程用於在堆上保留足夠的記憶體,以儲存構造函數中定義的類型的*nElement*物件。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]
 
-##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr
+## <a name="cheapptrcheapptr"></a><a name="cheapptr"></a>CHeapPtr:CHeapPtr
 
 建構函式。
 
@@ -111,18 +111,18 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
-現有的堆積指標或`CHeapPtr`。
+*P*<br/>
+現有堆指標或`CHeapPtr`。
 
 ### <a name="remarks"></a>備註
 
-堆積指標可以選擇性地建立使用現有的指標，或`CHeapPtr`物件。 如果是的話，新`CHeapPtr`物件負責管理資源與新的指標。
+可以使用現有指標或`CHeapPtr`物件選擇創建堆指標。 如果是這樣,新`CHeapPtr`對象將負責管理新的指標和資源。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]
 
-##  <a name="operator_eq"></a>  CHeapPtr::operator =
+## <a name="cheapptroperator-"></a><a name="operator_eq"></a>CHeapPtr::運算符 |
 
 指派運算子。
 
@@ -133,20 +133,20 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*P*<br/>
 現有的 `CHeapPtr` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新的參考`CHeapPtr`。
+返回對更新`CHeapPtr`的的引用。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]
 
-##  <a name="reallocate"></a>  CHeapPtr::Reallocate
+## <a name="cheapptrreallocate"></a><a name="reallocate"></a>CHeapPtr:重新分配
 
-呼叫這個方法來重新配置在堆積上的記憶體。
+調用此方法以重新分配堆上的記憶體。
 
 ```
 bool Reallocate(size_t nElements) throw();
@@ -154,12 +154,12 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>參數
 
-*nElements*<br/>
-新的用來計算配置的記憶體數量的項目數目。
+*n 元素*<br/>
+用於計算要分配的內存量的新元素數。
 
 ### <a name="return-value"></a>傳回值
 
-如果記憶體已成功，則傳回 true 配置失敗的 false。
+如果記憶體已成功分配,則返回 true,在失敗時為 false。
 
 ### <a name="example"></a>範例
 
@@ -168,5 +168,5 @@ bool Reallocate(size_t nElements) throw();
 ## <a name="see-also"></a>另請參閱
 
 [CHeapPtrBase 類別](../../atl/reference/cheapptrbase-class.md)<br/>
-[CCRTAllocator 類別](../../atl/reference/ccrtallocator-class.md)<br/>
+[CCRTAllocator 類](../../atl/reference/ccrtallocator-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

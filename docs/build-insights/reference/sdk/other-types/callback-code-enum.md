@@ -1,6 +1,6 @@
 ---
-title: CALLBACK_CODE 列舉
-description: C++ BUILD Insights SDK CALLBACK_CODE 列舉參考。
+title: CALLBACK_CODE枚舉
+description: C++生成見解 SDK CALLBACK_CODE枚舉引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 68eaa9aa04d2f0a55ac12fb7dde14a080188a38d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: d0d3dcc70040f562cd40755188e545f709a807b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332464"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329183"
 ---
-# <a name="callback_code-enum"></a>CALLBACK_CODE 列舉
+# <a name="callback_code-enum"></a>CALLBACK_CODE枚舉
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`CALLBACK_CODE` 列舉是用來控制分析或 relogging 會話的流程。 從[ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)或[RELOG_CALLBACKS](relog-callbacks-struct.md)中的函式傳回 CALLBACK_CODE 值，以控制接下來應該發生的情況。
+枚`CALLBACK_CODE`舉用於控制分析或重新記錄會話的流。 從[ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)或[RELOG_CALLBACKS](relog-callbacks-struct.md)中的函數返回CALLBACK_CODE值,以控制接下來會發生什麼。
 
 ## <a name="members"></a>成員
 
 | 名稱 | 值 | 描述 |
 |--|--|--|
-| `CALLBACK_CODE_ANALYSIS_SUCCESS` | 1 (0x00000001) | 繼續正常執行目前的分析或 relogging 會話。 |
-| `CALLBACK_CODE_ANALYSIS_FAILURE` | 2（0x00000002） | 取消目前的分析或 relogging 會話，併發出錯誤。 |
-| `CALLBACK_CODE_ANALYSIS_CANCEL` | 4（0x00000004） | 取消目前的分析或 relogging 會話。 |
+| `CALLBACK_CODE_ANALYSIS_SUCCESS` | 1 (0x00000001) | 正常繼續當前分析或重新記錄會話。 |
+| `CALLBACK_CODE_ANALYSIS_FAILURE` | 2 (0x0000002) | 取消當前分析或重新記錄會話併發出錯誤信號。 |
+| `CALLBACK_CODE_ANALYSIS_CANCEL` | 4 (0x0000004) | 取消當前分析或重新記錄工作階段。 |
 
 ::: moniker-end

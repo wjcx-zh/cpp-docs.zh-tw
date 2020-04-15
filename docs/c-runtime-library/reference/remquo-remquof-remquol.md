@@ -1,10 +1,13 @@
 ---
 title: remquo、remquof、remquol
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remquof
 - remquo
 - remquol
+- _o_remquo
+- _o_remquof
+- _o_remquol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332844"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -56,10 +60,10 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>參數
 
-*推*<br/>
+*numer*<br/>
 分子。
 
-*denom*<br/>
+*德諾姆*<br/>
 分母。
 
 *現狀*<br/>
@@ -67,21 +71,23 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>傳回值
 
-**remquo**會傳回*x*  /  *y*的浮點餘數。 如果*y*的值是0.0，則**remquo**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**傳回*x* / *y*的浮點餘數。 如果*y*的值為 0.0,**則重新quo**返回一個安靜的 NaN。 有關**printf**家族表示安靜 NaN 的資訊,請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Remquo**函數會計算*x*  /  *y*的浮點餘數*f* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是一個整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
+**remquo**函數計算*x* / *y*的浮點餘數*f,* 以便*x* = *i* \* *y* + *f*(其中*i*是整數 *),f*與*x*具有相同的符號,並且*f*的絕對值小於*y*的絕對值。
 
-C++允許多載，因此您可以呼叫採用並傳回**浮點數**或**長** **雙精度**值之**remquo**的多載。 在 C 程式中， **remquo**一律採用兩個**雙**精確度引數，並傳回**雙精度浮點數**。
+C++允許重載,因此您可以呼叫重載重載,這些**重**載值來傳回**浮點**值或**長****雙精度值**。 在 C 程式中 **,remquo**始終採用兩**個雙**參數並傳回**一個雙**參數 。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭 (C)|必要的標頭 (C++)|
+|函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------|-|
-|**remquo**、 **remquof**、 **remquol**|\<math.h>|\<cmath> 或 \<math.h>|
+|**再復,****再, 再, 再,****remquol**|\<math.h>|\<cmath> 或 \<math.h>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

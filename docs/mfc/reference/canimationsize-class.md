@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80a90dfa37bc1d2c3c84e6451ae23af7ded767c2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325113"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369708"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 類別
 
@@ -49,48 +49,48 @@ class CAnimationSize : public CAnimationBaseObject;
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationSize::CAnimationSize](#canimationsize)|多載。 建構動畫大小的物件。|
+|[動畫大小:動畫大小](#canimationsize)|已多載。 構造動畫大小物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationSize::AddTransition](#addtransition)|將轉換的寬度和高度。|
-|[CAnimationSize::GetCX](#getcx)|提供存取權 CAnimationVariable 代表寬度。|
-|[CAnimationSize::GetCY](#getcy)|提供存取權 CAnimationVariable 代表高度。|
-|[CAnimationSize::GetDefaultValue](#getdefaultvalue)|傳回的預設值，寬度和高度。|
-|[CAnimationSize::GetValue](#getvalue)|傳回目前的值。|
-|[CAnimationSize::SetDefaultValue](#setdefaultvalue)|設定預設值。|
+|[動畫大小::新增轉換](#addtransition)|添加寬度和高度的過渡。|
+|[動畫大小:取得CX](#getcx)|提供對表示寬度的「動畫變數」的訪問。|
+|[動畫大小:取得](#getcy)|提供對表示高度的 CAnimation 變數的訪問。|
+|[動畫大小:取得預設值](#getdefaultvalue)|返回"寬度"和"高度"的預設值。|
+|[動畫大小:取得價值](#getvalue)|返回當前值。|
+|[動畫大小:設定預設值](#setdefaultvalue)|設置預設值。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|將封裝的動畫變數放入清單中。 (覆寫[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|
+|[動畫大小:抓取動畫變數清單](#getanimationvariablelist)|將封裝的動畫變數放入清單中。 ( 覆[寫動畫基礎物件:抓取動畫變數列表](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationSize::operator CSize](#operator_csize)|將 CSize CAnimationSize。|
-|[CAnimationSize::operator=](#operator_eq)|給 CAnimationSize szSrc。|
+|[動畫大小::運算子 CSize](#operator_csize)|將「動畫大小」轉換為「CSize」。|
+|[動畫大小::操作員*](#operator_eq)|將 szSrc 分配給 CAnimation Size。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationSize::m_cxValue](#m_cxvalue)|封裝的動畫變數，表示動畫大小的寬度。|
-|[CAnimationSize::m_cyValue](#m_cyvalue)|封裝的動畫變數，表示動畫大小的高度。|
+|[動畫大小::m_cxValue](#m_cxvalue)|表示動畫大小寬度的封裝動畫變數。|
+|[動畫大小::m_cyValue](#m_cyvalue)|表示動畫大小高度的封裝動畫變數。|
 
 ## <a name="remarks"></a>備註
 
-CAnimationSize 類別包含兩個 CAnimationVariable 物件，並可以代表在應用程式大小。 比方說，您可以使用這個類別以動畫顯示的任何兩個大小螢幕上的維度物件 (例如矩形中，控制等)。 若要在應用程式中使用這個類別，只要具現化這個類別的物件、 將它新增至使用 CAnimationController::AddAnimationObject 的動畫控制器，並呼叫 AddTransition 針對每個轉換套用至寬度或高度。
+CAnimationSize 類封裝了兩個 CAnimationvariable 物件,可以在應用程式中表示大小。 例如,可以使用此類為螢幕上任何二維物件的大小(如矩形、控制項等)設置動畫。 要在應用程式中使用此類,只需實例化此類的物件,請使用 CAnimationController::addAnimationObject 將其添加到動畫控制器,並調用要應用於寬度和/或高度的每個轉換的 AddTransition。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
+[動畫基礎物件](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationSize`
 
@@ -98,9 +98,9 @@ CAnimationSize 類別包含兩個 CAnimationVariable 物件，並可以代表在
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationSize::AddTransition
+## <a name="canimationsizeaddtransition"></a><a name="addtransition"></a>動畫大小::新增轉換
 
-將轉換的寬度和高度。
+添加寬度和高度的過渡。
 
 ```
 void AddTransition(
@@ -110,19 +110,19 @@ void AddTransition(
 
 ### <a name="parameters"></a>參數
 
-*pCXTransition*<br/>
-轉換寬指標。
+*pCX 轉換*<br/>
+指向寬度過渡的指標。
 
-*pCYTransition*<br/>
-對於高度轉換指標。
+*pCY 轉換*<br/>
+指向高度過渡的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可將轉換套用至動畫變數的寬度和高度內部清單中指定的轉換。 當您新增轉換時，它們就會不立即套用，並儲存在內部清單。 轉換會套用 （加入至特定值如分鏡腳本） 當您呼叫 CAnimationController::AnimateGroup。 如果您不需要將轉換套用到其中一個維度，您可以傳遞 NULL。
+呼叫此函數以將指定的過渡添加到要應用於"寬度"和"高"的動畫變數的內部過渡清單中。 添加轉換時,不會立即應用這些轉換並存儲在內部清單中。 當您調用 CAnimationController::AnimateGroup 時,將應用轉換(添加到特定值的情節提要中)。 如果不需要將轉換應用於其中一個維度,則可以傳遞 NULL。
 
-##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize
+## <a name="canimationsizecanimationsize"></a><a name="canimationsize"></a>動畫大小:動畫大小
 
-建構動畫大小的物件。
+構造動畫大小物件。
 
 ```
 CAnimationSize();
@@ -139,20 +139,20 @@ CAnimationSize(
 *szDefault*<br/>
 指定預設大小。
 
-*nGroupID*<br/>
-指定群組識別碼。
+*n集團ID*<br/>
+指定組識別碼。
 
 *nObjectID*<br/>
 指定物件識別碼。
 
 *dwUserData*<br/>
-指定使用者定義的資料。
+指定使用者定義的數據。
 
 ### <a name="remarks"></a>備註
 
-在物件建構的寬度、 高度預設值的物件識別碼和群組識別碼，將會設定為 0。 它們都可以在執行階段使用 SetDefaultValue 和 SetID 稍後變更。
+對象建構的預設值為寬度、高度、物件ID和組ID,該值將設置為0。 可以使用 SetDefaultValue 和 SetID 在運行時稍後更改它們。
 
-##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList
+## <a name="canimationsizegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>動畫大小:抓取動畫變數清單
 
 將封裝的動畫變數放入清單中。
 
@@ -164,12 +164,12 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>參數
 
-*lst*<br/>
-當函式傳回時，它會包含代表的寬度和高度的兩個 CAnimationVariable 物件的指標。
+*Lst*<br/>
+當函數返回時,它包含指向表示寬度和高度的兩個 CAnimation 變數物件的指標。
 
-##  <a name="getcx"></a>  CAnimationSize::GetCX
+## <a name="canimationsizegetcx"></a><a name="getcx"></a>動畫大小:取得CX
 
-提供存取權 CAnimationVariable 代表寬度。
+提供對表示寬度的「動畫變數」的訪問。
 
 ```
 CAnimationVariable& GetCX();
@@ -177,15 +177,15 @@ CAnimationVariable& GetCX();
 
 ### <a name="return-value"></a>傳回值
 
-表示寬度的 CAnimationVariable 封裝參考。
+對表示寬度的封裝的 C動畫變數的引用。
 
 ### <a name="remarks"></a>備註
 
-您可以呼叫此方法以直接存取基礎 CAnimationVariable 代表寬度。
+可以調用此方法來直接訪問表示寬度的基礎 C動畫變數。
 
-##  <a name="getcy"></a>  CAnimationSize::GetCY
+## <a name="canimationsizegetcy"></a><a name="getcy"></a>動畫大小:取得
 
-提供存取權 CAnimationVariable 代表高度。
+提供對表示高度的 CAnimation 變數的訪問。
 
 ```
 CAnimationVariable& GetCY();
@@ -193,15 +193,15 @@ CAnimationVariable& GetCY();
 
 ### <a name="return-value"></a>傳回值
 
-封裝表示高度的 CAnimationVariable 參考。
+對表示高度的封裝的 C動畫變數的引用。
 
 ### <a name="remarks"></a>備註
 
-您可以呼叫此方法以直接存取基礎 CAnimationVariable 代表高度。
+可以調用此方法來直接訪問表示高度的基礎 C動畫變數。
 
-##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue
+## <a name="canimationsizegetdefaultvalue"></a><a name="getdefaultvalue"></a>動畫大小:取得預設值
 
-傳回的預設值，寬度和高度。
+返回"寬度"和"高度"的預設值。
 
 ```
 CSize GetDefaultValue();
@@ -209,15 +209,15 @@ CSize GetDefaultValue();
 
 ### <a name="return-value"></a>傳回值
 
-CSize 物件，其中包含預設值。
+包含預設值的 CSize 物件。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可擷取預設值，也就先前設定的建構函式或 SetDefaultValue。
+調用此函數以檢索以前由建構函數或 SetDefaultValue 設置的預設值。
 
-##  <a name="getvalue"></a>  CAnimationSize::GetValue
+## <a name="canimationsizegetvalue"></a><a name="getvalue"></a>動畫大小:取得價值
 
-傳回目前的值。
+返回當前值。
 
 ```
 BOOL GetValue(CSize& szValue);
@@ -226,35 +226,35 @@ BOOL GetValue(CSize& szValue);
 ### <a name="parameters"></a>參數
 
 *szValue*<br/>
-輸出。 這個方法傳回時，包含目前的值。
+輸出。 當此方法返回時,包含當前值。
 
 ### <a name="return-value"></a>傳回值
 
-為 TRUE，如果已成功擷取目前的值;否則為 FALSE。
+TRUE,如果成功檢索當前值;如果成功檢索當前值,則為 TRUE。否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可擷取目前的動畫大小值。 如果此方法失敗或尚未初始化的寬度和大小的基礎 COM 物件，szValue 會包含在建構函式或 SetDefaultValue 先前設定的預設值。
+呼叫此函數以檢索動畫大小的當前值。 如果此方法失敗或「寬度和大小」的基礎 COM 物件尚未初始化,szValue 包含預設值,該預設值以前在建構函數或 SetDefaultValue 中設置。
 
-##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue
+## <a name="canimationsizem_cxvalue"></a><a name="m_cxvalue"></a>動畫大小::m_cxValue
 
-封裝的動畫變數，表示動畫大小的寬度。
+表示動畫大小寬度的封裝動畫變數。
 
 ```
 CAnimationVariable m_cxValue;
 ```
 
-##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue
+## <a name="canimationsizem_cyvalue"></a><a name="m_cyvalue"></a>動畫大小::m_cyValue
 
-封裝的動畫變數，表示動畫大小的高度。
+表示動畫大小高度的封裝動畫變數。
 
 ```
 CAnimationVariable m_cyValue;
 ```
 
-##  <a name="operator_csize"></a>  CAnimationSize::operator CSize
+## <a name="canimationsizeoperator-csize"></a><a name="operator_csize"></a>動畫大小::運算子 CSize
 
-將 CSize CAnimationSize。
+將「動畫大小」轉換為「CSize」。
 
 ```
 operator CSize();
@@ -262,15 +262,15 @@ operator CSize();
 
 ### <a name="return-value"></a>傳回值
 
-目前的動畫 CSize 大小值。
+動畫大小的當前值為"大小"。
 
 ### <a name="remarks"></a>備註
 
-此函式會在內部呼叫 GetValue。 如果基於某些原因的 GetValue 失敗，傳回的大小會包含預設值，寬度和高度。
+此功能在內部調用 GetValue。 如果由於某種原因 GetValue 失敗,則返回的大小將包含"寬度"和"高度"的預設值。
 
-##  <a name="operator_eq"></a>  CAnimationSize::operator=
+## <a name="canimationsizeoperator"></a><a name="operator_eq"></a>動畫大小::操作員*
 
-給 CAnimationSize szSrc。
+將 szSrc 分配給 CAnimation Size。
 
 ```
 void operator=(const CSize& szSrc);
@@ -278,16 +278,16 @@ void operator=(const CSize& szSrc);
 
 ### <a name="parameters"></a>參數
 
-*szSrc*<br/>
-是指 CSize 或大小。
+*什施爾克*<br/>
+指"大小"或"大小"。
 
 ### <a name="remarks"></a>備註
 
-給 CAnimationSize szSrc。 建議您在動畫開始之前這樣做，因為此運算子會呼叫 SetDefaultValue，寬度和高度重新建立基礎的 COM 物件，如果尚未建立。 如果您訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。
+將 szSrc 分配給 CAnimation Size。 建議在動畫啟動之前執行此操作,因為此運算符稱為 SetDefaultValue,如果已創建"寬度"和"高度",則重新創建寬度和高度的基礎 COM 物件。 如果將此動畫物件訂閱到事件(Value已更改或整數值更改),則需要重新啟用這些事件。
 
-##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue
+## <a name="canimationsizesetdefaultvalue"></a><a name="setdefaultvalue"></a>動畫大小:設定預設值
 
-設定預設值。
+設置預設值。
 
 ```
 void SetDefaultValue(const CSize& szDefault);
@@ -300,7 +300,7 @@ void SetDefaultValue(const CSize& szDefault);
 
 ### <a name="remarks"></a>備註
 
-此函式可用於設定動畫物件的預設值。 這個方法會將預設值指派給動畫大小的寬度和高度。 如果尚未建立，它也會重建基礎 COM 物件。 如果您訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。
+使用此函數可為動畫物件設置預設值。 此方法將預設值分配給動畫大小的寬度和高度。 它還會重新創建基礎 COM 物件(如果已創建)。 如果將此動畫物件訂閱到事件(Value已更改或整數值更改),則需要重新啟用這些事件。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,65 +1,65 @@
 ---
-title: 剪貼簿：複製並貼上資料
+title: 剪貼簿：複製和貼上資料
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74348dd3e790cceada9aafd718464694997316ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374561"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>剪貼簿：複製並貼上資料
+# <a name="clipboard-copying-and-pasting-data"></a>剪貼簿：複製和貼上資料
 
-本主題說明實作複製和貼上從剪貼簿 OLE 應用程式所需的最少工作。 建議您閱讀[資料物件和資料來源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)主題後再繼續。
+本主題介紹在 OLE 應用程式中實現複製和貼上從剪貼簿所需的最小工作。 建議您在繼續操作之前閱讀[「資料物件和數據來源 (OLE)」](../mfc/data-objects-and-data-sources-ole.md)主題。
 
-您可以實作複製或貼上之前，您必須先提供函數來處理的複製、 剪下和貼上的選項，在 [編輯] 功能表上。
+在可以實現複製或粘貼之前,必須首先提供函數來處理"編輯"功能表上的"複製"、"剪切"和"貼貼"選項。
 
-##  <a name="_core_copying_or_cutting_data"></a> 複製或剪下資料
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>複製或切割資料
 
-#### <a name="to-copy-data-to-the-clipboard"></a>若要將資料複製到剪貼簿
+#### <a name="to-copy-data-to-the-clipboard"></a>複製到剪貼簿
 
-1. 決定是否要複製的資料是原生資料，或內嵌或連結的項目。
+1. 確定要複製的數據是本機數據還是嵌入或連結項。
 
-   - 如果資料是內嵌或連結，取得的指標`COleClientItem`已選取的物件。
+   - 如果資料是嵌入或連結的,請獲取指向已選擇`COleClientItem`物件的指標。
 
-   - 如果資料是原生應用程式是伺服器，建立新的物件衍生自`COleServerItem`包含選取的資料。 否則，請建立`COleDataSource`資料物件。
+   - 如果數據是本機數據,並且應用程式是伺服器,請創建一個從`COleServerItem`包含所選數據派生的新物件。 否則,為數據`COleDataSource`創建物件。
 
-1. 呼叫選取的項目`CopyToClipboard`成員函式。
+1. 調用所選項的成員`CopyToClipboard`函數。
 
-1. 如果使用者選擇剪下的作業，而不是複製作業，請從您的應用程式中刪除選取的資料。
+1. 如果用戶選擇了「剪切」操作而不是「複製」操作,請從應用程式中刪除所選數據。
 
-若要查看這個序列的範例，請參閱`OnEditCut`並`OnEditCopy`函式，在 MFC OLE 範例程式[OCLIENT](../overview/visual-cpp-samples.md)並[HIERSVR](../overview/visual-cpp-samples.md)。 請注意這些範例會維護目前選取的資料指標，所以已完成步驟 1。
+要查看`OnEditCut`此序列的範例,請參閱 MFC`OnEditCopy`OLE 範例程式[OCLIENT](../overview/visual-cpp-samples.md)和[HIERSVR](../overview/visual-cpp-samples.md)中的和函數。 請注意,這些示例維護指向當前選定數據的指標,因此步驟 1 已完成。
 
-##  <a name="_core_pasting_data"></a> 貼上資料
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a>貼上資料
 
-貼上資料是單純將它複製，因為您必須選擇要將資料貼到您的應用程式中使用的格式。
+貼上資料比複製資料要複雜得多,因為您需要選擇要在將資料貼上到應用程式中的格式。
 
-#### <a name="to-paste-data-from-the-clipboard"></a>若要貼上剪貼簿的資料
+#### <a name="to-paste-data-from-the-clipboard"></a>貼上剪貼簿中的資料
 
-1. 在您的檢視類別，實作`OnEditPaste`處理使用者從 [編輯] 功能表中選擇 [貼上] 選項。
+1. 在檢視類中,實現`OnEditPaste`處理使用者從"編輯"功能表中選擇"粘貼"選項。
 
-1. 在 `OnEditPaste`函式中，建立`COleDataObject`物件並呼叫其`AttachClipboard`成員函式，此物件連結到剪貼簿上的資料。
+1. 在`OnEditPaste`函數中,創建`COleDataObject`一個對象`AttachClipboard`並調用其成員函數以將此物件連結到剪貼簿上的數據。
 
-1. 呼叫`COleDataObject::IsDataAvailable`來檢查是否以特定格式。
+1. 呼叫`COleDataObject::IsDataAvailable`以檢查特定格式是否可用。
 
-   或者，您可以使用`COleDataObject::BeginEnumFormats`必須尋求其他格式，直到您找到其中一個最適合您的應用程式。
+   或者,您可以使用`COleDataObject::BeginEnumFormats`查找其他格式,直到找到最適合您的應用程式。
 
-1. 執行貼上作業的格式。
+1. 執行格式的粘貼。
 
-如需其運作方式的範例，請參閱 < 實作`OnEditPaste`MFC OLE 範例程式中定義的檢視類別的成員函式[OCLIENT](../overview/visual-cpp-samples.md)並[HIERSVR](../overview/visual-cpp-samples.md)。
+有關其工作原理的示例,請參閱 MFC OLE`OnEditPaste`範例程式[OCLIENT](../overview/visual-cpp-samples.md)和[HIERSVR](../overview/visual-cpp-samples.md)中定義的視圖類中成員函數的實現。
 
 > [!TIP]
->  分隔成自己的函式貼上作業的主要優點是將資料放入您拖放作業期間的應用程式時，可以使用相同的貼上程式碼。 OCLIENT 和 HIERSVR，如同您`OnDrop`函式也可以呼叫`DoPasteItem`，重複使用來實作貼上作業所撰寫的程式碼。
+> 將貼上操作分離到其自己的函數的主要好處是,在拖放操作期間,當數據在應用程式中丟棄時,可以使用相同的粘貼代碼。 與 OCLIENT 和`OnDrop`HIERSVR`DoPasteItem`中一樣 ,函數還可以調用 ,重用編寫的代碼來實現粘貼操作。
 
-若要處理 [編輯] 功能表上的選擇性貼上選項，請參閱主題[對話方塊，在 OLE 中](../mfc/dialog-boxes-in-ole.md)。
+要處理「編輯」選單上的「貼上特殊」選項,請參閱[OLE 中的主題對話框](../mfc/dialog-boxes-in-ole.md)。
 
-### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+### <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
-- [加入其他格式](../mfc/clipboard-adding-other-formats.md)
+- [新增其他格式](../mfc/clipboard-adding-other-formats.md)
 
 - [OLE 資料物件和資料來源以及一致的資料傳輸](../mfc/data-objects-and-data-sources-ole.md)
 

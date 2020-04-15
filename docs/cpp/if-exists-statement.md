@@ -8,16 +8,16 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: ea136ac0312b78519fe2d8ea88ace4d8b0d69946
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 609d576c6ab3eddca569ed4f19a4024b47b6a1d2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374157"
 ---
 # <a name="__if_exists-statement"></a>__if_exists 陳述式
 
-**__If_exists**語句會測試指定的識別碼是否存在。 如果識別項存在，就會執行指定的陳述式區塊。
+**__if_exists**語句測試指定的標識符是否存在。 如果識別項存在，就會執行指定的陳述式區塊。
 
 ## <a name="syntax"></a>語法
 
@@ -31,23 +31,23 @@ statements
 
 |參數|描述|
 |---------------|-----------------|
-|*identifier*|要測試其是否存在的識別項。|
-|*報表*|如果*識別碼*存在，要執行的一或多個語句。|
+|*識別碼*|要測試其是否存在的識別項。|
+|*語句*|如果存在*識別碼*,要執行的一個或多個語句。|
 
 ## <a name="remarks"></a>備註
 
 > [!CAUTION]
->  若要達到最可靠的結果，請使用下列條件約束底下的 **__if_exists**語句。
+> 要獲得最可靠的結果,請使用以下約束下的 **__if_exists**語句。
 
-- 只將 **__if_exists**語句套用至簡單類型，而不套用至範本。
+- 將 **__if_exists**語句僅應用於簡單類型,而不是範本。
 
-- 將 **__if_exists**語句套用至類別內部或外部的識別碼。 請勿將 **__if_exists**語句套用至本機變數。
+- 將 **__if_exists**語句應用於類內部或外部的標識碼。 不要將 **__if_exists**語句應用於局部變數。
 
-- 請只在函式主體中使用 **__if_exists**語句。 在函式的主體之外， **__if_exists**語句只能測試完整定義的類型。
+- 僅在函數正文中使用 **__if_exists**語句。 在函數的正文之外 **,__if_exists**語句只能測試完全定義的類型。
 
 - 當您對多載函式進行測試時，無法對特定形式的多載進行測試。
 
-**__If_exists**語句的補數是[__if_not_exists](../cpp/if-not-exists-statement.md)語句。
+**__if_exists**語句的補充是[__if_not_exists](../cpp/if-not-exists-statement.md)語句。
 
 ## <a name="example"></a>範例
 

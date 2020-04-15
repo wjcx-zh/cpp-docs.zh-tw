@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonFontComboBox 類別
+title: CMFC 功能放大縮小字型功能 放大縮小字型功能
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonFontComboBox
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 186c4bc3e1b26529ed0e000d2893e1b2d81c4304
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 822f4f6fe76bb5b82b455daec54ed96568ea6ba7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504960"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375159"
 ---
-# <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 類別
+# <a name="cmfcribbonfontcombobox-class"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
 實作包含字型清單的下拉式方塊。 您可以在功能區面板上放置下拉式方塊。
 
@@ -55,7 +55,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|在功能區字型下拉式方塊中填入指定字型類型的字型、字元集，及字距和系列。|
 |`CMFCRibbonFontComboBox::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
@@ -63,15 +63,15 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||
 |[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|傳回要在下拉式方塊中顯示的字型類型。 有效的選項為 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE，或任何位元組合。|
 |[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|傳回在下拉式方塊中顯示之字型的字距和系列。|
-|`CMFCRibbonFontComboBox::GetThisClass`|供架構用來取得與這個類別類型相關聯之[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
+|`CMFCRibbonFontComboBox::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
 |[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|在功能區字型下拉式方塊中填入先前指定之字型類型的字型、字元集，及字距和系列。|
 |[CMFCRibbonFontComboBox::SetFont](#setfont)|在下拉式方塊中選取指定的字型。|
 
 ## <a name="remarks"></a>備註
 
-建立`CMFCRibbonFontComboBox`物件之後，請呼叫[CMFCRibbonPanel：： add](../../mfc/reference/cmfcribbonpanel-class.md#add)將它加入至功能區面板。
+建立`CMFCRibbonFontComboBox`物件後,請呼叫[CMFC 功能面板將其新增到功能區面板::新增](../../mfc/reference/cmfcribbonpanel-class.md#add)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -87,11 +87,11 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxRibbonComboBox。h
+**標題:** afxRibbonComboBox.h
 
-##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts
+## <a name="cmfcribbonfontcomboboxbuildfonts"></a><a name="buildfonts"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
-在功能區的下拉式方塊中填入字型。
+使用字體填充功能區上的組合框。
 
 ```
 void BuildFonts(
@@ -102,18 +102,18 @@ void BuildFonts(
 
 ### <a name="parameters"></a>參數
 
-*nFontType*<br/>
-在指定要加入之字型的字型類型。
+*n 字型型別*<br/>
+[在]指定要添加的字型的字型類型。
 
 *nCharSet*<br/>
-在指定要加入之字型的字元集。
+[在]指定要新增的字型的字元集。
 
-*nPitchAndFamily*<br/>
-在指定要加入之字型的音調和系列。
+*n 皮奇和家庭*<br/>
+[在]指定要添加的字型的間距和族。
 
-##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox
+## <a name="cmfcribbonfontcomboboxcmfcribbonfontcombobox"></a><a name="cmfcribbonfontcombobox"></a>CMFC 功能豐豐盒::CMFC 功能豐豐博盒
 
-建立[CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)物件的結構並加以初始化。
+構造並初始化[CMFC 功能豐博盒](../../mfc/reference/cmfcribbonfontcombobox-class.md)物件。
 
 ```
 CMFCRibbonFontComboBox(
@@ -127,29 +127,29 @@ CMFCRibbonFontComboBox(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-在當使用者從下拉式方塊中選取專案時，所執行命令的命令 ID。
+[在]當使用者從組合框中選擇項時執行的命令的命令 ID。
 
-*nFontType*<br/>
-在指定要在下拉式方塊中顯示的字型類型。 有效的選項為 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE，或任何位元組合。
+*n 字型型別*<br/>
+[在]指定要在組合框中顯示的字型類型。 有效的選項為 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE，或任何位元組合。
 
 *nCharSet*<br/>
-在將下拉式方塊中的字型篩選成屬於指定字元集的字型。
+[在]將組合框中的字型篩選為屬於指定字元集的字型。
 
-*nPitchAndFamily*<br/>
-在指定顯示在下拉式方塊中的字型音調和系列。
+*n 皮奇和家庭*<br/>
+[在]指定組合框中顯示的字型的間距和族。
 
-*nWidth*<br/>
-在指定下拉式方塊的寬度（以圖元為單位）。
+*n 寬度*<br/>
+[在]指定組合框的寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-如需可能*nFontType*參數值的詳細資訊，請參閱 Windows SDK 檔中的[EnumFontFamProc](/previous-versions/dd162621\(v=vs.85\)) 。
+有關可能的*nFontType*參數值的詳細資訊,請參閱 Windows SDK 文檔中的[EnumFontFamProc。](/previous-versions/dd162621\(v=vs.85\))
 
-如需可指派給*nCharSet*之有效字元集的詳細資訊，以及可指派給*nPitchAndFamily*的有效值，請參閱 Windows SDK 檔中的[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) 。
+有關可分配給*nCharSet*的有效字元集的詳細資訊,以及可分配給*nPitch 和Family*的有效值,請參閱 Windows SDK 文件中的[LOGFONT。](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
-##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc
+## <a name="cmfcribbonfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
-如需詳細資訊，請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
@@ -157,15 +157,15 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 ### <a name="parameters"></a>參數
 
-在*iIndex*<br/>
+[在]*iIndex*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts
+## <a name="cmfcribbonfontcomboboxrebuildfonts"></a><a name="rebuildfonts"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
-在功能區的下拉式方塊中填入先前指定的字型類型、字元集和音調和系列的字型。
+使用以前指定的字型類型、字元集、間距和族的字體填充功能區上的組合框。
 
 ```
 void RebuildFonts();
@@ -173,9 +173,9 @@ void RebuildFonts();
 
 ### <a name="remarks"></a>備註
 
-您[可以在這個類別的函](#cmfcribbonfontcombobox)式中，指定要包含在功能區字型下拉式方塊中的字型類型、字元集和音調和系列，或是呼叫[CMFCRibbonFontComboBox：： BuildFonts](#buildfonts)。
+您可以指定字型類型、字元集、間距以及字體的音調以及要包含在此類[建構函數](#cmfcribbonfontcombobox)的功能區字型組合框中,或者通過調用[CMFCRibbonFontCombox::BuildFonts。](#buildfonts)
 
-##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont
+## <a name="cmfcribbonfontcomboboxsetfont"></a><a name="setfont"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
 在下拉式方塊中選取指定的字型。
 
@@ -188,21 +188,21 @@ BOOL SetFont(
 
 ### <a name="parameters"></a>參數
 
-' lpszName * 指定要選取之字型的名稱。
+"lpszName" 指定要選擇的字型名稱。
 
 *nCharSet*<br/>
-指定所選取字型的字元集。
+指定選取的字型集。
 
-*bExact*<br/>
-TRUE 表示選取字型時，字元集必須相符;[FALSE] 指定在選取字型時可以忽略字元集。
+*b精確*<br/>
+TRUE 指定字元集在選擇字體時必須匹配;FALSE 指定在選擇字型時可以忽略字元集。
 
 ### <a name="return-value"></a>傳回值
 
-如果找到指定的字型並加以選取，則為非零值;否則為零。
+如果找到並選擇了指定的字體,則非零;否則,零。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet
+## <a name="cmfcribbonfontcomboboxgetcharset"></a><a name="getcharset"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
 傳回指定的字元集。
 
@@ -212,11 +212,11 @@ BYTE GetCharSet() const;
 
 ### <a name="return-value"></a>傳回值
 
-字元集（請參閱 Windows SDK 檔中的 LOGFONT）。
+字元集(請參閱 Windows SDK 文檔中的 LOGFONT)。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType
+## <a name="cmfcribbonfontcomboboxgetfonttype"></a><a name="getfonttype"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
 傳回要在下拉式方塊中顯示的字型類型。 有效的選項為 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE，或任何位元組合。
 
@@ -226,11 +226,11 @@ int GetFontType() const;
 
 ### <a name="return-value"></a>傳回值
 
-字型類型（請參閱 Windows SDK 檔中的 EnumFontFamProc）。
+字型類型(請參閱 Windows SDK 文檔中的 EnumFontFamProc)。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily
+## <a name="cmfcribbonfontcomboboxgetpitchandfamily"></a><a name="getpitchandfamily"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
 傳回在下拉式方塊中顯示之字型的字距和系列。
 
@@ -240,7 +240,7 @@ BYTE GetPitchAndFamily() const;
 
 ### <a name="return-value"></a>傳回值
 
-音調和系列（請參閱 Windows SDK 檔中的 LOGFONT）。
+間距和系列(請參閱 Windows SDK 文檔中的 LOGFONT)。
 
 ### <a name="remarks"></a>備註
 

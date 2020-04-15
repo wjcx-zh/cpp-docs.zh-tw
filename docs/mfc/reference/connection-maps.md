@@ -4,45 +4,45 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: a36c112de8c760f91afd5cf544b355f7cb8e1bed
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 947cd09023ef4028a32db8e2e4e8b33f7e04e0dd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612281"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374795"
 ---
 # <a name="connection-maps"></a>連接對應
 
-OLE 控制項可將介面公開給其他應用程式。 這些介面只允許從容器的存取權，至該控制項。 如果 OLE 控制項要存取的其他 OLE 物件的外部介面時，就必須建立連接點。 這個連接點可讓連出外部的分派對應，例如事件對應或通知函式的存取控制。
+OLE 控制項能夠將介面公開給其他應用程式。 這些介面只允許從容器訪問該控制項。 如果 OLE 控制者想要存取其他 OLE 物件的外部介面,則必須建立連接點。 此連接點允許控件向外訪問外部調度映射,如事件映射或通知函數。
 
-Microsoft Foundation Class Library 會提供支援的連接點的程式設計模型。 在此模型中，「 連接對應 」 用來指派介面或 OLE 控制項的連接點。 連接對應包含一個巨集，每個連接點。 如需有關連接對應的詳細資訊，請參閱[CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md)類別。
+Microsoft 基礎類庫提供了支援連接點的程式設計模型。 在此模型中,「連接映射」用於為 OLE 控制件指定介面或連接點。 連接映射包含每個連接點的一個宏。 有關連接映射的詳細資訊,請參閱[CConnectPoint](../../mfc/reference/cconnectionpoint-class.md)類。
 
-一般而言，控制項將會支援兩個連接點： 一個用於事件，其中的屬性通知。 藉由實作這些`COleControl`基底類別，而需要控制寫入器沒有其他工作。 您想要在類別中實作的任何其他連接點必須以手動方式新增。 若要支援連接對應和點，MFC 提供下列巨集：
+通常,控件僅支援兩個連接點:一個用於事件,一個用於屬性通知。 這些由基類實現`COleControl`,不需要控件編寫器的額外工作。 必須在類中實現任何其他連接點都必須手動添加。 為了支援連接映射和點,MFC 提供以下宏:
 
-### <a name="connection-map-declaration-and-demarcation"></a>連接對應宣告和區分
-
-|||
-|-|-|
-|[BEGIN_CONNECTION_PART](#begin_connection_part)|宣告內嵌的類別實作 （必須使用類別宣告中） 的其他連接點。|
-|[END_CONNECTION_PART](#end_connection_part)|宣告的結尾 （必須使用類別宣告中） 的連接點。|
-|[CONNECTION_IID](#connection_iid)|指定控制項的連接點的介面 ID。|
-|[DECLARE_CONNECTION_MAP](#declare_connection_map)|宣告連接對應將用於 （必須使用類別宣告中） 的類別。|
-|[BEGIN_CONNECTION_MAP](#begin_connection_map)|開始連接對應 （必須使用在類別實作） 的定義。|
-|[END_CONNECTION_MAP](#end_connection_map)|結束連接對應 （必須使用在類別實作） 的定義。|
-|[CONNECTION_PART](#connection_part)|在控制項的連線對應中指定的連接點。|
-
-下列功能協助建立與中斷連接使用的連接點的連線接收：
-
-### <a name="initializationtermination-of-connection-points"></a>初始化/終止的連接點
+### <a name="connection-map-declaration-and-demarcation"></a>連接映射宣告和標界
 
 |||
 |-|-|
-|[AfxConnectionAdvise](#afxconnectionadvise)|建立來源和接收器之間的連線。|
-|[AfxConnectionUnadvise](#afxconnectionunadvise)|中斷來源和接收器之間的連線。|
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|聲明實現附加連接點的嵌入類(必須在類聲明中使用)。|
+|[END_CONNECTION_PART](#end_connection_part)|結束連接點的聲明(必須在類聲明中使用)。|
+|[CONNECTION_IID](#connection_iid)|指定控制項連接點的介面 ID。|
+|[DECLARE_CONNECTION_MAP](#declare_connection_map)|聲明連接映射將在類中使用(必須在類聲明中使用)。|
+|[BEGIN_CONNECTION_MAP](#begin_connection_map)|開始定義連接映射(必須在類實現中使用)。|
+|[END_CONNECTION_MAP](#end_connection_map)|結束連接映射的定義(必須在類實現中使用)。|
+|[CONNECTION_PART](#connection_part)|在控制項的連接對應中指定連接點。|
 
-##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART
+以下功能可説明接收器使用連接點建立和斷線連線:
 
-若要開始的事件和屬性的告知連接點以外的其他連接點定義使用 BEGIN_CONNECTION_PART 巨集。
+### <a name="initializationtermination-of-connection-points"></a>連接點的初始化/終止
+
+|||
+|-|-|
+|[AfxConnectionAdvise](#afxconnectionadvise)|在源和接收器之間建立連接。|
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|斷開源和接收器之間的連接。|
+
+## <a name="begin_connection_part"></a><a name="begin_connection_part"></a>BEGIN_CONNECTION_PART
+
+使用BEGIN_CONNECTION_PART宏開始定義事件和屬性通知連接點以外的其他連接點。
 
 ```
 BEGIN_CONNECTION_PART(theClass, localClass)
@@ -50,21 +50,21 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*<br/>
-指定的連接點這個控制項類別的名稱。
+*類別*<br/>
+指定連接點為該連接點的控制項類的名稱。
 
 *localClass*<br/>
 指定實作連接點之區域類別的名稱。
 
 ### <a name="remarks"></a>備註
 
-在定義您的類別成員函式宣告 (.h) 檔案中，開始 BEGIN_CONNECTION_PART 巨集的連接點，然後新增 CONNECTION_IID 巨集和您想要實作，任何其他成員函式並完成連線END_CONNECTION_PART 巨集的點對應。
+在定義類成員函數的聲明 (.h) 檔中,使用BEGIN_CONNECTION_PART宏啟動連接點,然後添加CONNECTION_IID宏和要實現的任何其他成員函數,然後使用END_CONNECTION_PART宏完成連接點映射。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h
+  **標題**afxdisp.h
 
-##  <a name="end_connection_part"></a>  END_CONNECTION_PART
+## <a name="end_connection_part"></a><a name="end_connection_part"></a>END_CONNECTION_PART
 
 結束連接點的宣告。
 
@@ -79,11 +79,11 @@ END_CONNECTION_PART(localClass)
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h
+  **標題**afxdisp.h
 
-##  <a name="connection_iid"></a>  CONNECTION_IID
+## <a name="connection_iid"></a><a name="connection_iid"></a>CONNECTION_IID
 
-使用 BEGIN_CONNECTION_PART 之間 END_CONNECTION_PART 巨集來定義 OLE 控制項所支援的連接點的介面識別碼。
+在BEGIN_CONNECTION_PART和END_CONNECTION_PART宏之間使用為 OLE 控制項支援的連接點定義介面 ID。
 
 ```
 CONNECTION_IID(iid)
@@ -91,12 +91,12 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>參數
 
-*iid*<br/>
+*Iid*<br/>
 連接點所呼叫介面的介面 ID。
 
 ### <a name="remarks"></a>備註
 
-*Iid*引數是用來識別連接點會在其連接的接收器呼叫的介面識別碼的介面。 例如: 
+*iid*參數是一個介面 ID,用於標識連接點將在其連接的接收器上調用的介面。 例如：
 
 [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]
 
@@ -104,9 +104,9 @@ CONNECTION_IID(iid)
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h
+  **標題**afxdisp.h
 
-##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP
+## <a name="declare_connection_map"></a><a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP
 
 程式中的每個 `COleControl` 衍生類別都可以提供一個連接對應，用於指定您的控制項所支援的其他連接點。
 
@@ -116,13 +116,13 @@ DECLARE_CONNECTION_MAP()
 
 ### <a name="remarks"></a>備註
 
-如果您的控制項支援額外的點，請在類別宣告的結尾使用 DECLARE_CONNECTION_MAP 巨集。 接著，在定義類別的成員函式的.cpp 檔案，使用 BEGIN_CONNECTION_MAP 巨集、 CONNECTION_PART 巨集，每個控制項的連接點和 END_CONNECTION_MAP 巨集來宣告連接對應的結尾。
+如果控件支援其他點,請使用類聲明末尾的DECLARE_CONNECTION_MAP宏。 然後,在定義類成員函數的 .cpp 檔中,使用BEGIN_CONNECTION_MAP宏,CONNECTION_PART每個控件的連接點CONNECTION_PART宏,END_CONNECTION_MAP宏來聲明連接映射的結束。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h
+  **標題**afxdisp.h
 
-##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP
+## <a name="begin_connection_map"></a><a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP
 
 程式中每個 `COleControl` 衍生類別可以提供連接對應，以指定控制項支援的連接點。
 
@@ -132,21 +132,21 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 
 ### <a name="parameters"></a>參數
 
-*theClass*<br/>
+*類別*<br/>
 指定連接對應之控制項類別的名稱。
 
 *theBase*<br/>
-指定的基底類別的名稱*theClass*。
+指定*類*的基類的名稱。
 
 ### <a name="remarks"></a>備註
 
-在實作 (。CPP) 檔案，可定義成員函式類別，BEGIN_CONNECTION_MAP 巨集啟動連接對應，然後針對每一個您使用的連接點加入巨集項目[CONNECTION_PART](#connection_part)巨集。 最後，完成連接對應，與[END_CONNECTION_MAP](#end_connection_map)巨集。
+在實現中 (.CPP) 檔案,用於定義類的成員函數,使用BEGIN_CONNECTION_MAP宏啟動連接映射,然後使用[CONNECTION_PART](#connection_part)宏為每個連接點添加宏條目。 最後,使用[END_CONNECTION_MAP](#end_connection_map)宏完成連接映射。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h
+  **標題**afxdisp.h
 
-##  <a name="end_connection_map"></a>  END_CONNECTION_MAP
+## <a name="end_connection_map"></a><a name="end_connection_map"></a>END_CONNECTION_MAP
 
 結束連接對應的定義。
 
@@ -156,11 +156,11 @@ END_CONNECTION_MAP()
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h
+  **標題**afxdisp.h
 
-##  <a name="connection_part"></a>  CONNECTION_PART
+## <a name="connection_part"></a><a name="connection_part"></a>CONNECTION_PART
 
-將您的 OLE 控制項的連接點對應到特定的介面識別碼。
+將 OLE 控制元件的連接點映射到特定的介面 ID。
 
 ```
 CONNECTION_PART(theClass, iid, localClass)
@@ -168,10 +168,10 @@ CONNECTION_PART(theClass, iid, localClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*<br/>
-指定的連接點這個控制項類別的名稱。
+*類別*<br/>
+指定連接點為該連接點的控制項類的名稱。
 
-*iid*<br/>
+*Iid*<br/>
 連接點所呼叫介面的介面 ID。
 
 *localClass*<br/>
@@ -183,15 +183,15 @@ CONNECTION_PART(theClass, iid, localClass)
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]
 
-實作連接對應，與連接點，呼叫`IID_ISinkInterface`介面。
+實現連接映射,連接點,呼叫`IID_ISinkInterface`介面 。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h
+  **標題**afxdisp.h
 
-##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise
+## <a name="afxconnectionadvise"></a><a name="afxconnectionadvise"></a>AfxConnection 建議
 
-呼叫此函式，以建立所指定的來源之間的連線*pUnkSrc*，和所指定的接收器*pUnkSink*。
+呼叫此函數以建立由*pUnkSrc*指定的源和*pUnkSink*指定的接收器之間的連接。
 
 ```
 BOOL AFXAPI AfxConnectionAdvise(
@@ -204,24 +204,24 @@ BOOL AFXAPI AfxConnectionAdvise(
 
 ### <a name="parameters"></a>參數
 
-*pUnkSrc*<br/>
-呼叫介面的物件指標。
+*普恩克斯克*<br/>
+指向調用介面的物件的指標。
 
 *pUnkSink*<br/>
-實作介面的物件指標。
+指向實現介面的物件的指標。
 
-*iid*<br/>
-連接的介面識別碼。
+*Iid*<br/>
+連接的介面 ID。
 
-*bRefCount*<br/>
-TRUE 表示建立的連線應該會造成參考計數*pUnkSink*遞增。 FALSE 表示不應該遞增參考計數。
+*bRef( B) Count*<br/>
+TRUE 表示創建連接應導致*pUnkSink*的引用計數增加。 FALSE 表示不應增加引用計數。
 
 *pdwCookie*<br/>
-Dword，其中傳回的連線識別碼的指標。 此值應該傳遞為*dwCookie*參數來`AfxConnectionUnadvise`時中斷連線的連線。
+指向返回連接標識碼的 DWORD 的指標。 斷開連接時,此值應作為*dwCookie*`AfxConnectionUnadvise`參數傳遞給。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果已建立連線;否則為 0。
+建立連接時非零;否則 0。
 
 ### <a name="example"></a>範例
 
@@ -229,11 +229,11 @@ Dword，其中傳回的連線識別碼的指標。 此值應該傳遞為*dwCooki
 
 ### <a name="requirements"></a>需求
 
-**標頭：** afxctl.h
+**標題:** afxctl.h
 
-##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise
+## <a name="afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a>AfxConnectionUn建議
 
-呼叫此函式，若要中斷連線，以指定的來源之間*pUnkSrc*，和所指定的接收器*pUnkSink*。
+呼叫此函數以斷開由*pUnkSrc*指定的源和*pUnkSink*指定的接收器之間的連接。
 
 ```
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -246,24 +246,24 @@ BOOL AFXAPI AfxConnectionUnadvise(
 
 ### <a name="parameters"></a>參數
 
-*pUnkSrc*<br/>
-呼叫介面的物件指標。
+*普恩克斯克*<br/>
+指向調用介面的物件的指標。
 
 *pUnkSink*<br/>
-實作介面的物件指標。
+指向實現介面的物件的指標。
 
-*iid*<br/>
-連接點介面的介面識別碼。
+*Iid*<br/>
+連接點介面的介面 ID。
 
-*bRefCount*<br/>
-TRUE 表示中斷連線的連線應該會造成參考計數*pUnkSink*遞減。 FALSE 表示不應遞減參考計數。
+*bRef( B) Count*<br/>
+TRUE 表示斷開連接應會導致*pUnkSink*的引用計數被遞減。 FALSE 表示不應減少引用計數。
 
 *dwCookie*<br/>
-所傳回的連接識別碼`AfxConnectionAdvise`。
+傳`AfxConnectionAdvise`回的連接識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果連線已中斷連線;否則為 0。
+如果連接斷開,則非零;否則 0。
 
 ### <a name="example"></a>範例
 
@@ -271,7 +271,7 @@ TRUE 表示中斷連線的連線應該會造成參考計數*pUnkSink*遞減。 F
 
 ### <a name="requirements"></a>需求
 
-**標頭：** afxctl.h
+**標題:** afxctl.h
 
 ## <a name="see-also"></a>另請參閱
 

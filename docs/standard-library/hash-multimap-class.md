@@ -86,17 +86,17 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: b42dd5ba4aa3df12e3ef1aba930b2214dde19756
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2fe9056996876d24fba285c0c7aaec8607b2509c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419018"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375440"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap 類別
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 容器類別 hash_multimap 是「C++ 標準程式庫」的擴充功能，可用來在集合中儲存及快速擷取資料，其中集合中的每個元素都成對，具有排序鍵 (其值不需要是唯一的) 和關聯的資料值。
 
@@ -112,16 +112,16 @@ class hash_multimap
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*關鍵*\
 要存放在 hash_multimap 中的索引鍵資料類型。
 
 *類型*\
 要存放在 hash_multimap 中的項目資料類型。
 
-*特性*\
-包含兩個函式物件的類型：其中一個類別*特性*，可以將兩個專案值做為排序關鍵字進行比較，以判斷其相對順序和雜湊函式，其為類型為不帶正負號整數的一元述詞 `size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key>>`。
+*性狀*\
+包含兩個函數物件的類型,一個是類*Traits,* 能夠將兩個元素值作為排序鍵來確定其相對順序;另一種是哈希函數,它是一個未排序謂詞,將元素的鍵值映射到類型的`size_t`無 符號整數。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key>>`。
 
-配置*器\*
+*配置器*\
 代表預存配置器物件的類型，其可封裝有關 hash_multimap 之記憶體配置與解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<pair <const Key, Type>>`。
 
 ## <a name="remarks"></a>備註
@@ -138,17 +138,17 @@ hash_multimap 是：
 
 - 成對且相關聯的容器，因為其項目值與其索引鍵值不同。
 
-- 類別樣板，因為它所提供的功能是泛型，因此獨立于包含做為元素或索引鍵的特定資料類型。 用於項目或索引鍵的資料類型是在類別樣板中指定為參數 (和比較函式與配置器一起指定)。
+- 類範本,因為它提供的功能是泛型的,因此與作為元素或鍵包含的特定數據類型無關。 用於項目或索引鍵的資料類型是在類別樣板中指定為參數 (和比較函式與配置器一起指定)。
 
 透過排序進行雜湊的主要優點是效率更佳；成功的雜湊能執行插入、刪除，相較於和排序技術容器中項目數目對數值成比例的時間，它會以常數平均時間進行搜尋。 hash_multimap 中項目的值可以直接變更，但相關聯的索引鍵值不可以直接變更。 相反地，與舊項目相關聯的索引鍵值必須刪除，然後插入與新項目相關聯的新索引鍵值。
 
-選擇容器類型時，通常應根據應用程式所需的搜尋和插入類型。 經過雜湊處理的相關聯容器，已針對查閱、插入及移除作業進行過最佳化。 搭配設計良好的雜湊函式使用時，明確支援這些作業的成員函式，效率相當良好，其會以平均而言為常數的時間執行作業，而與此容器中的項目數目無關。 設計良好的雜湊函式會產生雜湊值的均勻分佈，並盡可能減少衝突發生，當相異索引鍵值對應到相同的雜湊值時，就會發生所謂的衝突。 在最壞的情況下，使用最糟的雜湊函式時，作業數目與序列中的項目數目成正比 (線性時間)。
+選擇容器類型時，通常應根據應用程式所需的搜尋和插入類型。 經過雜湊處理的相關聯容器，已針對查閱、插入及移除作業進行過最佳化。 搭配設計良好的雜湊函式使用時，明確支援這些作業的成員函式，效率相當良好，其會以平均而言為常數的時間執行作業，而與此容器中的項目數目無關。 設計良好的雜湊函式會產生雜湊值的均勻分佈，並盡可能減少衝突發生，當相異索引鍵值對應到相同的雜湊值時，就會發生所謂的衝突。 使用最糟的雜湊函式的最壞情況下，作業數目與序列中的項目數目成正比 (線性時間)。
 
 當關聯值與其索引鍵的條件由應用程式滿足時，hash_multimap 應該要當成首選的相關聯容器。 這種結構的模型是已排序的關鍵字清單，其關聯的字串値 (例如) 提供定義，但不一定唯一定義文字。 如果以不重複的方式定義了關鍵字，而讓索引鍵沒有重複，則 hash_map 會是首選容器。 另一方面，如果只儲存了文字清單，則 hash_set 會是正確的容器。 如果允許出現多次文字，則 hash_multiset 即是適當的容器結構。
 
-hash_multimap 會藉由呼叫 `Traits`value_compare[ 類型的預存雜湊 ](../standard-library/value-compare-class.md) 物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](../standard-library/hash-map-class.md#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與 [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>` 類別的物件相同。 尤其是針對 `Key` 類型的所有 `Key` 值，呼叫 `Traits (Key)` 會產生 `size_t` 類型值的分佈。
+hash_multimap 會藉由呼叫 [value_compare](../standard-library/value-compare-class.md) 類型的預存雜湊 `Traits` 物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](../standard-library/hash-map-class.md#key_comp)，即可存取這個預存物件。 這樣的函數對象必須與類[hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>`的物件一樣。 尤其是針對 `Key` 類型的所有 `Key` 值，呼叫 `Traits (Key)` 會產生 `size_t` 類型值的分佈。
 
-通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等項目之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 f （x，y）是有兩個引數物件 `x` 和 `y`，以及傳回值**true**或**false**的函式物件。 如果二元述詞是非反、對稱性和可轉移的，而且當 f （x，y）和 f （y，x）為**false**時，會將兩個物件 `x` 和 `y` 定義為相等，則強加于 hash_multimap 的順序就是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
+通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等項目之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二進位謂詞f(x,y)是一個函數物件,具有兩`x``y`個 參數物件和**true**或**false**的返回值。 如果二進位謂詞是不可反反射的、反對稱的和傳遞性的,並且當 f(x、y 和 f(y,x)`x``y`都是 false 時,則對 hash_multimap施加的順序是一個嚴格的弱排序,如果等價性是傳遞的,則兩個對象**false**被定義為等效物件。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
 
 受控制序列中實際的項目順序取決於雜湊函式、排序函式以及儲存於此容器物件中雜湊資料表目前的大小。 您無法判斷目前雜湊資料表的大小，因此一般而言，無法預測受控制序列中項目的順序。 插入項目不會使任何迭代器無效，移除項目則僅會使特別指向被移除項目的迭代器無效。
 
@@ -166,16 +166,16 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `hash_multimap` 類別。|
 |[const_iterator](#const_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的 `hash_multimap` 項目。|
-|[const_pointer](#const_pointer)|一種類型，提供 `hash_multimap`中**const**元素的指標。|
-|[const_reference](#const_reference)|一種類型，提供儲存在 `hash_multimap` 中以供讀取和執行**const**運算之**const**元素的參考。|
-|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取 `hash_multimap`中任何**const**元素的雙向反覆運算器。|
+|[const_pointer](#const_pointer)|提供指向`hash_multimap`中**const**元素的指標的類型。|
+|[const_reference](#const_reference)|一種類型,用於讀取和執行**const**操作`hash_multimap`,提供 對**const**存儲在中的 const 元素的引用。|
+|[const_reverse_iterator](#const_reverse_iterator)|提供可讀取 中的任何**const**元素的雙向反覆運算`hash_multimap`器的類型 。|
 |[difference_type](#difference_type)|帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的項目) 中 `hash_multimap` 的項目數。|
-|[iterator](#iterator)|類型，其提供可讀取或修改 `hash_multimap` 中任何項目的雙向迭代器。|
+|[反覆運算](#iterator)|類型，其提供可讀取或修改 `hash_multimap` 中任何項目的雙向迭代器。|
 |[key_compare](#key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在 `hash_multimap` 中的相對順序。|
 |[key_type](#key_type)|類型，描述構成 `hash_multimap` 每個元素的排序鍵物件。|
 |[mapped_type](#mapped_type)|類型，表示儲存在 `hash_multimap` 中的資料類型。|
-|[pointer](#pointer)|類型，其提供 `hash_multimap` 中項目的指標。|
-|[reference](#reference)|類型，提供儲存在 `hash_multimap` 中之項目的參考。|
+|[指標](#pointer)|類型，其提供 `hash_multimap` 中項目的指標。|
+|[參考](#reference)|類型，提供儲存在 `hash_multimap` 中之項目的參考。|
 |[reverse_iterator](#reverse_iterator)|類型，提供可以讀取或修改反轉 `hash_multimap` 中之項目的雙向迭代器。|
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示 `hash_multimap` 中的項目數。|
 |[value_type](#value_type)|類型，提供可將兩個項目做為排序鍵進行比較之函式物件，以判斷項目在 `hash_multimap` 中的相對順序。|
@@ -184,20 +184,20 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 
 |成員函數|描述|
 |-|-|
-|[begin](#begin)|傳回迭代器，為 `hash_multimap` 中的第一個項目定址。|
+|[開始](#begin)|傳回迭代器，為 `hash_multimap` 中的第一個項目定址。|
 |[cbegin](#cbegin)|傳回常數迭代器，為 `hash_multimap` 中的第一個項目定址。|
 |[cend](#cend)|傳回常數迭代器，為 `hash_multimap` 中最後一個項目的下一個位置定址。|
-|[清除](#clear)|清除 `hash_multimap` 的所有項目。|
-|[計數](#count)|傳回 `hash_multimap` 中索引鍵符合參數指定之索引鍵的項目數目。|
+|[清楚](#clear)|清除 `hash_multimap` 的所有項目。|
+|[count](#count)|傳回 `hash_multimap` 中索引鍵符合參數指定之索引鍵的項目數目。|
 |[crbegin](#crbegin)|傳回常數迭代器，為反轉 `hash_multimap` 中的第一個項目定址。|
 |[crend](#crend)|傳回常數迭代器，為反轉 `hash_multimap` 中最後一個項目的下一個位置定址。|
 |[emplace](#emplace)|將就地建構的項目插入 `hash_multimap` 中。|
 |[emplace_hint](#emplace_hint)|將就地建構的項目 (含位置提示) 插入 `hash_multimap` 中。|
-|[empty](#empty)|測試 `hash_multimap` 是否為空白。|
-|[end](#end)|傳回迭代器，為 `hash_multimap` 中最後一個項目的下一個位置定址。|
+|[空](#empty)|測試 `hash_multimap` 是否為空白。|
+|[結束](#end)|傳回迭代器，為 `hash_multimap` 中最後一個項目的下一個位置定址。|
 |[equal_range](#equal_range)|傳回迭代器，為 `hash_multimap` 中最後一個項目的下一個位置定址。|
 |[erase](#erase)|從指定位置移除在 `hash_multimap` 中的項目或某個範圍的項目。|
-|[find](#find)|傳回迭代器，為 `hash_multimap` 中索引鍵等於指定索引鍵項目位置定址。|
+|[尋找](#find)|傳回迭代器，為 `hash_multimap` 中索引鍵等於指定索引鍵項目位置定址。|
 |[get_allocator](#get_allocator)|傳回用來建構 `allocator` 的 `hash_multimap` 物件複本。|
 |[insert](#insert)|在 `hash_multimap` 中的指定位置插入項目或某個範圍的項目。|
 |[key_comp](#key_comp)|擷取 `hash_multimap` 中用來排序索引鍵的比較物件之複本。|
@@ -205,12 +205,12 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 |[max_size](#max_size)|傳回 `hash_multimap` 的最大長度。|
 |[rbegin](#rbegin)|傳回迭代器，為反轉 `hash_multimap` 中的第一個項目定址。|
 |[rend](#rend)|傳回迭代器，為反轉 `hash_multimap` 中最後一個項目的下一個位置定址。|
-|[size](#size)|指定 `hash_multimap` 的新大小。|
-|[swap](#swap)|交換兩個 `hash_multimap` 的項目。|
+|[大小](#size)|指定 `hash_multimap` 的新大小。|
+|[交換](#swap)|交換兩個 `hash_multimap` 的項目。|
 |[upper_bound](#upper_bound)|傳回迭代器，其會指向 `hash_multimap` 中索引鍵值大於特定索引鍵值的第一個項目。|
 |[value_comp](#value_comp)|擷取 `hash_multimap` 中用於排序項目值之比較物件的複本。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -218,14 +218,14 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<hash_map >
+**標頭：** \<hash_map>
 
 **命名空間：** stdext
 
-## <a name="allocator_type"></a>  hash_multimap::allocator_type
+## <a name="hash_multimapallocator_type"></a><a name="allocator_type"></a>hash_multimap:allocator_type
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，代表 hash_multimap 物件的配置器類別。
 
@@ -241,12 +241,12 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](#get_allocator)get_allocator`allocator_type` 的範例。
+如需使用 `allocator_type` 的範例，請參閱 [get_allocator](#get_allocator) 的範例。
 
-## <a name="begin"></a>  hash_multimap::begin
+## <a name="hash_multimapbegin"></a><a name="begin"></a>hash_multimap:開始
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回迭代器，定址對象是 hash_multimap 中的第一個元素。
 
@@ -262,7 +262,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-如果 `begin` 的傳回值指派給 `const_iterator`，則無法修改 hash_multimap 物件中的元素。 如果 `begin` 的傳回值指派給 `iterator`，則可以修改 hash_multimap 物件中的元素。
+如果將傳`begin`回值分配給`const_iterator`, 則無法修改物件hash_multimap中的元素。 如果將返回`begin`值分配給`iterator`, 則可以修改hash_multimap物件中的元素。
 
 ### <a name="example"></a>範例
 
@@ -308,10 +308,10 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.
 ```
 
-## <a name="cbegin"></a>  hash_multimap::cbegin
+## <a name="hash_multimapcbegin"></a><a name="cbegin"></a>hash_multimap::cbegin
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回常數迭代器，定址對象是 hash_multimap 中的第一個元素。
 
@@ -352,10 +352,10 @@ int main( )
 The first element of hm1 is 2.
 ```
 
-## <a name="cend"></a>  hash_multimap::cend
+## <a name="hash_multimapcend"></a><a name="cend"></a>hash_multimap:克恩德
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回常數迭代器，定址對象是 hash_multimap 中最後一個元素後面的位置。
 
@@ -403,10 +403,10 @@ int main( )
 The value of last element of hm1 is 30.
 ```
 
-## <a name="clear"></a>  hash_multimap::clear
+## <a name="hash_multimapclear"></a><a name="clear"></a>hash_multimap::清除
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 清除 hash_multimap 的所有項目。
 
@@ -453,10 +453,10 @@ The size of the hash_multimap is initially 2.
 The size of the hash_multimap after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  hash_multimap::const_iterator
+## <a name="hash_multimapconst_iterator"></a><a name="const_iterator"></a>hash_multimap:const_iterator
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供可讀取 hash_multimap 中 **const** 元素的雙向迭代器。
 
@@ -468,20 +468,20 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 類型 `const_iterator` 無法用來修改元素的值。
 
-Hash_multimap 所定義的 `const_iterator` 指向[value_type](#value_type)的物件，其類型為 `pair<const Key, Type>`。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+由`const_iterator`hash_multimap定義的物件指向[value_type](#value_type)的物件,該`pair<const Key, Type>`物件的類型為 。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
-若要對指向 hash_multimap 中某個元素的 `const_iterator` `cIter` 取值，請使用 `->` 運算子。
+要取消引用`const_iterator``cIter`指向hash_multimap元素,請使用`->`運算元。
 
-若要存取元素的索引鍵值，請使用 `cIter->first`，這相當於 `(*cIter).first`。 若要存取專案的對應基準值，請使用 `cIter->second`，這相當於 `(*cIter).second`。
+要存取元素的鍵的值,請`cIter->first`使用等效`(*cIter).first`於 。 要存取元素的映射基底,請`cIter->second`使用 ,這等`(*cIter).second`效於 。
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](#begin)begin`const_iterator` 的範例。
+如需使用 `const_iterator` 的範例，請參閱 [begin](#begin) 的範例。
 
-## <a name="const_pointer"></a>  hash_multimap::const_pointer
+## <a name="hash_multimapconst_pointer"></a><a name="const_pointer"></a>hash_multimap:const_pointer
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供 hash_multimap 中 **const** 元素的指標。
 
@@ -495,10 +495,10 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 在大多數情況下，應該使用 [iterator](#iterator) 來存取 hash_multimap 物件中的元素。
 
-## <a name="const_reference"></a>  hash_multimap::const_reference
+## <a name="hash_multimapconst_reference"></a><a name="const_reference"></a>hash_multimap:const_reference
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供對儲存在 hash_multimap 中以供讀取和執行 **const** 運算之 **const** 元素的參考。
 
@@ -551,10 +551,10 @@ The key of first element in the hash_multimap is 1.
 The data value of 1st element in the hash_multimap is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  hash_multimap::const_reverse_iterator
+## <a name="hash_multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multimap:const_reverse_iterator
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供可讀取 hash_multimap 中任何 **const** 元素的雙向迭代器。
 
@@ -566,20 +566,20 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 hash_multimap。
 
-Hash_multimap 所定義的 `const_reverse_iterator` 指向[value_type](#value_type)的物件，其類型為 `pair<const Key, Type>`，其第一個成員是專案的索引鍵，而第二個成員是元素所持有的對應基準。
+由`const_reverse_iterator`hash_multimap定義的物件指向[value_type](#value_type)的物件,這些`pair<const Key, Type>`對象的類型 為,其第一個成員是元素的鍵,其第二個成員是元素持有的映射基準。
 
-若要對指向 hash_multimap 中某個元素的 `const_reverse_iterator` `crIter` 取值，請使用 `->` 運算子。
+要取消引用`const_reverse_iterator``crIter`指向hash_multimap元素,請使用`->`運算元。
 
-若要存取元素的索引鍵值，請使用 `crIter->first`，這相當於 `(*crIter).first`。 若要存取專案的對應基準值，請使用 `crIter->second`，這相當於 `(*crIter).second`。
+要存取元素的鍵的值,請`crIter->first`使用等效`(*crIter).first`於 。 要存取元素的映射基底,請`crIter->second`使用 ,這等`(*crIter).second`效於 。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 [ 的範例，請參閱 ](#rend)rend`const_reverse_iterator` 的範例。
+如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rend](#rend) 的範例。
 
-## <a name="count"></a>  hash_multimap::count
+## <a name="hash_multimapcount"></a><a name="count"></a>hash_multimap:計數
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回 hash_multimap 中索引鍵符合參數指定之索引鍵的項目數目。
 
@@ -589,7 +589,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*關鍵*\
 要從 hash_multimap 中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -600,9 +600,9 @@ size_type count(const Key& key) const;
 
 成員函式會傳回範圍中的項目數
 
-**[lower_bound （** `key` **）、upper_bound （** `key` **））**
+**[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-具有金鑰值索引*鍵*的。
+具有鍵值*鍵*的 。
 
 ### <a name="example"></a>範例
 
@@ -649,10 +649,10 @@ The number of elements in hm1 with a sort key of 2 is: 2.
 The number of elements in hm1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a>  hash_multimap::crbegin
+## <a name="hash_multimapcrbegin"></a><a name="crbegin"></a>hash_multimap:克·克貝京
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回常數迭代器，定址對象是反轉 hash_multimap 中的第一個元素。
 
@@ -701,10 +701,10 @@ int main( )
 The first element of the reversed hash_multimap hm1 is 3.
 ```
 
-## <a name="crend"></a>  hash_multimap::crend
+## <a name="hash_multimapcrend"></a><a name="crend"></a>hash_multimap:克倫德
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回常數迭代器，定址對象是反轉 hash_multimap 中最後一個元素後面的位置。
 
@@ -756,10 +756,10 @@ int main( )
 The last element of the reversed hash_multimap hm1 is 3.
 ```
 
-## <a name="difference_type"></a>  hash_multimap::difference_type
+## <a name="hash_multimapdifference_type"></a><a name="difference_type"></a>hash_multimap::d)類型
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種帶正負號的整數類型，可用來代表範圍 (介於迭代器所指的元素之間) 中 hash_multimap 的元素數目。
 
@@ -769,9 +769,9 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>備註
 
-`difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type` 通常用來代表迭代器 *和* 之間範圍 `first`[ first,  last)`last` 內的項目數，包括 `first` 所指的項目，以及上限到 `last` 所指項目 (但不包含此項目) 的項目範圍。
+`difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type` 通常用來代表迭代器 `first` 和 `last` 之間範圍 *[ first,  last)* 內的項目數，包括 `first` 所指的項目，以及上限到 `last` 所指項目 (但不包含此項目) 的項目範圍。
 
-請注意，儘管 `difference_type` 適用於符合輸入迭代器需求的所有迭代器，其中包括可反轉容器 (例如 set) 所支援的雙向迭代器類別，但只有隨機存取容器 (例如 vector) 所提供的隨機存取迭代器，才支援迭代器之間的減法。
+請注意，儘管 `difference_type` 適用於符合輸入迭代器需求的所有迭代器，其中包括可反轉容器 (例如 set) 所支援之雙向迭代器的類別，但只有隨機存取容器 (例如 vector) 所提供的隨機存取迭代器，才支援迭代器之間的減法。
 
 ### <a name="example"></a>範例
 
@@ -833,10 +833,10 @@ The keys of the mapped elements are: 1 2 2 3.
 The values of the mapped elements are: 10 20 30 20.
 ```
 
-## <a name="emplace"></a>  hash_multimap::emplace
+## <a name="hash_multimapemplace"></a><a name="emplace"></a>hash_multimap::地點
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 將就地建構的元素插入到 hash_multimap 中。
 
@@ -849,7 +849,7 @@ iterator emplace(ValTy&& val);
 
 |參數|描述|
 |-|-|
-|*val*|用來移動建構要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 中之元素的值。|
+|*瓦爾*|用來移動建構要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 中之元素的值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -888,10 +888,10 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="emplace_hint"></a>  hash_multimap::emplace_hint
+## <a name="hash_multimapemplace_hint"></a><a name="emplace_hint"></a>hash_multimap:emplace_hint
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 將就地建構的元素 (含位置提示) 插入到 hash_multimap 中。
 
@@ -906,8 +906,8 @@ iterator emplace_hint(
 
 |參數|描述|
 |-|-|
-|*val*|用來建構要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 中之元素的值，除非 `hash_multimap` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|
-|*_Where*|有關要從何處開始搜尋正確插入點的提示。|
+|*瓦爾*|用來建構要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 中之元素的值，除非 `hash_multimap` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|
+|*_Where*|一個有關要從哪裡開始搜尋正確插入點的提示。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -917,7 +917,7 @@ iterator emplace_hint(
 
 元素的 [hash_multimap::value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
-如果插入點緊接在 *_Where*，則會在分攤的常數時間（而不是對數時間）中進行插入。
+如果插入點緊隨 *_Where*之後,則插入可以在攤銷常量時間(而不是對數時間)進行。
 
 ### <a name="example"></a>範例
 
@@ -948,10 +948,10 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="empty"></a>  hash_multimap::empty
+## <a name="hash_multimapempty"></a><a name="empty"></a>hash_multimap::空
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 測試 hash_multimap 是否是空的。
 
@@ -999,10 +999,10 @@ The hash_multimap hm1 is not empty.
 The hash_multimap hm2 is empty.
 ```
 
-## <a name="end"></a>  hash_multimap::end
+## <a name="hash_multimapend"></a><a name="end"></a>hash_multimap:結束
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回迭代器，定址對象是 hash_multimap 中最後一個元素後面的位置。
 
@@ -1070,10 +1070,10 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.
 ```
 
-## <a name="equal_range"></a>  hash_multimap::equal_range
+## <a name="hash_multimapequal_range"></a><a name="equal_range"></a>hash_multimap:equal_range
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回一組迭代器，分別指向 hash_multimap 中索引鍵大於指定索引鍵的第一個元素，以及指向 hash_multimap 中索引鍵等於或大於該索引鍵的第一個元素。
 
@@ -1085,14 +1085,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*關鍵*\
 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
 一組迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個是索引鍵的 [upper_bound](#upper_bound)。
 
-若要存取成員函式所傳回之 `pr` 配對的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之 `pr` 配對的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。
+若要存取成員函式所傳回之 `pr` 配對的第一個迭代器，請使用 `pr`. **第一**,並取消引用下限反覆運算器,\*使用`pr`(。 **第一**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **第二**,並取消引用上綁定反覆運算器,\*使用`pr`(。 **第二**)。
 
 ### <a name="remarks"></a>備註
 
@@ -1159,10 +1159,10 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_multimap hm1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="erase"></a>  hash_multimap::erase
+## <a name="hash_multimaperase"></a><a name="erase"></a>hash_multimap:擦除
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 從指定的位置移除 hash_multimap 中的元素或元素範圍，或移除符合指定索引鍵的元素。
 
@@ -1179,13 +1179,13 @@ size_type erase(const key_type& key);
 *_Where*\
 要從 hash_multimap 移除之元素的位置。
 
-*第一個*\
+*第一*\
 從 hash_multimap 移除之第一個元素的位置。
 
-*上次*\
+*最後*\
 從 hash_multimap 移除之最後一個元素以外的最近位置。
 
-*金鑰*\
+*關鍵*\
 要從 hash_multimap 中移除之元素的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -1285,10 +1285,10 @@ After another element with a key equal to that of the
 2nd element is deleted, the hash_multimap hm3 is: 0 3.
 ```
 
-## <a name="find"></a>  hash_multimap::find
+## <a name="hash_multimapfind"></a><a name="find"></a>hash_multimap:查找
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回迭代器，定址對象是 hash_multimap 中索引鍵等於指定索引鍵的第一個元素位置。
 
@@ -1300,7 +1300,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*關鍵*\
 要以所搜尋之 hash_multimap 中元素的排序鍵比對的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -1309,9 +1309,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回反覆運算器，其定址 hash_multimap 中的專案，其排序關鍵字會在根據小於可比較性關聯性而引發順序的二元述詞下，`equivalent` 至引數索引鍵。
+成員函數返回一個反覆運算器,用於解決hash_multimap的元素,該元素的排序鍵是`equivalent`二進位謂詞下的參數鍵,該參數基於不太可比性的關係引發排序。
 
-如果將 `find` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果 `find` 的傳回值指派給 `iterator`，則可以修改 hash_multimap 物件。
+如果將 `find` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果將返回`find`值分配給`iterator`, 則可以修改hash_multimap物件。
 
 ### <a name="example"></a>範例
 
@@ -1381,10 +1381,10 @@ that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
-## <a name="get_allocator"></a>  hash_multimap::get_allocator
+## <a name="hash_multimapget_allocator"></a><a name="get_allocator"></a>hash_multimap:get_allocator
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回一份用來建構 hash_multimap 的配置器物件複本。
 
@@ -1398,7 +1398,7 @@ hash_multimap 所使用的配置器。
 
 ### <a name="remarks"></a>備註
 
-hash_multimap 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
+hash_multimap 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
 
 ### <a name="example"></a>範例
 
@@ -1457,10 +1457,10 @@ int main( )
 }
 ```
 
-## <a name="hash_multimap"></a>  hash_multimap::hash_multimap
+## <a name="hash_multimaphash_multimap"></a><a name="hash_multimap"></a>hash_multimap:hash_multimap
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 建構一個空的 hash_multimap，或是某個其他 hash_multimap 之全部或部分複本的 hash_multimap。
 
@@ -1515,11 +1515,11 @@ hash_multimap(
 
 |參數|描述|
 |-|-|
-|*Al*|要用於此 hash_multimap 物件的儲存體配置器類別，預設為 `Allocator`。|
-|*背光*|類型為 `const Traits` 並用來排序 map 中元素的比較函式，預設為 `Traits`。|
-|*Right*|要從中複製所建構之集合的對應。|
-|*第一個*|要複製的元素範圍中第一個元素的位置。|
-|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*鋁*|要用於此 hash_multimap 物件的儲存體配置器類別，預設為 `Allocator`。|
+|*康普*|類型為 `const Traits` 並用來排序 map 中元素的比較函式，預設為 `Traits`。|
+|*對*|要從中複製所建構之集合的對應。|
+|*第一*|要複製的元素範圍中第一個元素的位置。|
+|*最後*|超出要複製之元素範圍的第一個元素的位置。|
 |*IList*|要作為複製來源的 initializer_list。|
 
 ### <a name="remarks"></a>備註
@@ -1530,7 +1530,7 @@ hash_multimap(
 
 所有建構函式都會儲存一個 `Traits` 類型的函式物件，此物件可用來在 hash_multimap 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#key_comp) 即可傳回此物件。
 
-前三個構造函式會指定空的初始 hash_multimap;第二個指定要用來建立元素順序的比較函數（*Comp*）類型，而第三個則明確指定要使用的配置器類型（`_Al`）。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。
+前三個構造函數指定一個空的初始hash_multimap;第二種指定用於建立元素順序的比較函數型態(*Comp*),第三個指定要使用的分配器`_Al`型態 ( ) 。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。
 
 第四個建構函式會指定 hash_multimap `Right` 的複本。
 
@@ -1540,10 +1540,10 @@ hash_multimap(
 
 最後三個建構函式會使用 initializer_list。
 
-## <a name="insert"></a>  hash_multimap::insert
+## <a name="hash_multimapinsert"></a><a name="insert"></a>hash_multimap:插入
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 將某個項目或項目範圍插入 hash_multimap 中。
 
@@ -1575,10 +1575,10 @@ iterator insert(
 
 |參數|描述|
 |-|-|
-|*初始值*|要插入 hash_multimap 中的項目值，除非其中已包含了該項目，或是更廣泛性地，其中已包含索引鍵經過對等排序的項目。|
-|*其中*|要開始搜尋正確插入點之位置的提示。|
-|*第一個*|要從對應複製之第一個項目的位置。|
-|*最後一個*|要從對應複製之最後一個項目後方的位置。|
+|*Val*|要插入 hash_multimap 中的項目值，除非其中已包含了該項目，或是更廣泛性地，其中已包含索引鍵經過對等排序的項目。|
+|*哪裡*|要開始搜尋正確插入點之位置的提示。|
+|*第一*|要從對應複製之第一個項目的位置。|
+|*最後*|要從對應複製之最後一個項目後方的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1594,12 +1594,12 @@ iterator insert(
 
 元素的 [value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
-如果插入點緊接在*Where*，則會在分攤的常數時間內，針對 `insert`的提示版本進行插入，而不是對數時間。
+如果插入點緊隨`insert`*何處*之後,則插入可以發生在 提示版本的攤銷常量時間中,而不是對數時間。
 
-## <a name="iterator"></a>  hash_multimap::iterator
+## <a name="hash_multimapiterator"></a><a name="iterator"></a>hash_multimap:反覆運算器
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供可讀取或修改 hash_multimap 中任何元素的雙向迭代器。
 
@@ -1609,22 +1609,22 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>備註
 
-Hash_multimap 所定義的 `iterator` 指向[value_type](#value_type)的物件，其類型為 `pair`\< **Const Key，type**>，其第一個成員是專案的索引鍵，而第二個成員是元素所持有的對應基準。
+由`iterator`hash_multimap定義的物件指向[value_type](#value_type)的物件,這些`pair`\<物件的類型 為**const Key,類型**>,其第一個成員是元素的鍵,其第二個成員是元素持有的映射基準。
 
-若要對**反覆運算器**取值`Iter` 指向 hash_multimap 中的元素，請使用 `->` 運算子。
+要取消引用指向hash_multimap元素的**反覆運算器**`Iter`,請`->`使用 運算子。
 
-若要存取元素的索引鍵值，請使用 `Iter` -> **first**，這相當於（\* `Iter`）。 **first**。 若要存取專案的對應基準值，請使用 `Iter` -> **second**，這相當於（\* `Iter`）。 **first**。
+若要存取該元素的索引鍵值，請使用 `Iter` -> **first**，這等同於 (\* `Iter`). **第一**個 。 若要存取該元素的已對應資料值，請使用 `Iter` -> **second**，這等同於 (\* `Iter`). **第一**個 。
 
-類型 `iterator` 可用來修改元素的值。
+類型`iterator`可用於修改元素的值。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 [ 的範例，請參閱 ](#begin)begin`iterator` 的範例。
+如需如何宣告及使用 `iterator` 的範例，請參閱 [begin](#begin) 的範例。
 
-## <a name="key_comp"></a>  hash_multimap::key_comp
+## <a name="hash_multimapkey_comp"></a><a name="key_comp"></a>hash_multimap::key_comp
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 擷取一份用來排序 hash_multimap 中索引鍵的比較物件複本。
 
@@ -1640,9 +1640,9 @@ key_compare key_comp() const;
 
 預存物件會定義成員函式
 
-**bool 運算子（Const key &** `left` **，const key &** `right` **）;**
+**bool operator(const Key&** `left` **, const Key&** `right` **);**
 
-如果 **在前面且在排序次序中不等於**，此函式就會傳回 `left`true`right`。
+如果`left`前面和排序順序不等於`right`,則返回**true。**
 
 ### <a name="example"></a>範例
 
@@ -1693,10 +1693,10 @@ int main( )
 }
 ```
 
-## <a name="key_compare"></a>  hash_multimap::key_compare
+## <a name="hash_multimapkey_compare"></a><a name="key_compare"></a>hash_multimap:key_compare
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種提供函式物件的類型，該函式物件可比較兩個排序鍵來判斷 hash_multimap 中兩個元素的相對順序。
 
@@ -1706,18 +1706,18 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>備註
 
-`key_compare` 是範本參數*特性*的同義字。
+`key_compare`是範本參數*Traits*的同義詞。
 
-如需有關*特性*的詳細資訊，請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題。
+有關*Traits*的詳細資訊,請參閱[hash_multimap 類](../standard-library/hash-multimap-class.md)主題。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 [ 的範例，請參閱 ](#key_comp)key_comp`key_compare` 的範例。
+如需如何宣告及使用 `key_compare` 的範例，請參閱 [key_comp](#key_comp) 的範例。
 
-## <a name="key_type"></a>  hash_multimap::key_type
+## <a name="hash_multimapkey_type"></a><a name="key_type"></a>hash_multimap::key_type
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，描述構成 hash_multimap 每個元素的排序鍵物件。
 
@@ -1727,18 +1727,18 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-`key_type` 是範本參數索引*鍵*的同義字。
+`key_type`是範本參數*Key*的同義詞。
 
-如需*金鑰*的詳細資訊，請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題的「備註」一節。
+有關*密鑰*的詳細資訊,請參閱[hash_multimap 類](../standard-library/hash-multimap-class.md)主題的備註部分。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 [ 的範例，請參閱 ](#value_type)value_type`key_compare` 的範例。
+如需如何宣告及使用 `key_compare` 的範例，請參閱 [value_type](#value_type) 的範例。
 
-## <a name="lower_bound"></a>  hash_multimap::lower_bound
+## <a name="hash_multimaplower_bound"></a><a name="lower_bound"></a>hash_multimap:lower_bound
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回迭代器，指向 hash_multimap 中索引鍵等於或大於指定索引鍵的第一個元素。
 
@@ -1750,14 +1750,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*關鍵*\
 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
 [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_multimap 中索引鍵等於或大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_multimap 中最後一個元素後面的位置。
 
-如果將 `lower_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果 `lower_bound` 的傳回值指派給 `iterator`，則可以修改 hash_multimap 物件。
+如果將 `lower_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果將返回`lower_bound`值分配給`iterator`, 則可以修改hash_multimap物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1830,10 +1830,10 @@ that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
-## <a name="mapped_type"></a>  hash_multimap::mapped_type
+## <a name="hash_multimapmapped_type"></a><a name="mapped_type"></a>hash_multimap:mapped_type
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，代表儲存在 hash_multimap 中的資料類型。
 
@@ -1845,16 +1845,16 @@ typedef Type mapped_type;
 
 `mapped_type` 與範本參數 *Type* 同義。
 
-如需*類型*的詳細資訊，請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題。
+有關*類型*的詳細資訊,請參閱[hash_multimap類](../standard-library/hash-multimap-class.md)主題。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 [ 的範例，請參閱 ](#value_type)value_type`key_type` 的範例。
+如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#value_type) 的範例。
 
-## <a name="max_size"></a>  hash_multimap::max_size
+## <a name="hash_multimapmax_size"></a><a name="max_size"></a>hash_multimap:max_size
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回 hash_multimap 的最大長度。
 
@@ -1889,10 +1889,10 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  hash_multimap::operator=
+## <a name="hash_multimapoperator"></a><a name="op_eq"></a>hash_multimap::操作員*
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 將 hash_multimap 的元素以另一個 hash_multimap 的複本取代。
 
@@ -1906,11 +1906,11 @@ hash_multimap& operator=(hash_multimap&& right);
 
 |參數|描述|
 |-|-|
-|*right*|要複製到 [ 中的 ](../standard-library/hash-multimap-class.md)hash_multimap`hash_multimap`。|
+|*對*|要複製到 `hash_multimap` 中的 [hash_multimap](../standard-library/hash-multimap-class.md)。|
 
 ### <a name="remarks"></a>備註
 
-清除 `hash_multimap`中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移至 `hash_multimap`。
+在上用 的任何現有元素`hash_multimap`後`operator=`, 複製或將*右邊*的內容移到右邊的內容移到 。`hash_multimap`
 
 ### <a name="example"></a>範例
 
@@ -1950,10 +1950,10 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  hash_multimap::pointer
+## <a name="hash_multimappointer"></a><a name="pointer"></a>hash_multimap::p奧米特
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供 hash_multimap 中元素的指標。
 
@@ -1963,14 +1963,14 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>備註
 
-類型 `pointer` 可用來修改元素的值。
+類型`pointer`可用於修改元素的值。
 
 在大多數情況下，應該使用 [iterator](#iterator) 來存取 hash_multimap 物件中的元素。
 
-## <a name="rbegin"></a>  hash_multimap::rbegin
+## <a name="hash_multimaprbegin"></a><a name="rbegin"></a>hash_multimap::rbegin
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回迭代器，定址對象是反轉 hash_multimap 中的第一個元素。
 
@@ -2052,10 +2052,10 @@ After the erasure, the first element
 in the reversed hash_multimap is 2.
 ```
 
-## <a name="reference"></a>  hash_multimap::reference
+## <a name="hash_multimapreference"></a><a name="reference"></a>hash_multimap:參考
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供對儲存在 hash_multimap 中元素的參考。
 
@@ -2115,10 +2115,10 @@ The data value of first element in the hash_multimap is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a>  hash_multimap::rend
+## <a name="hash_multimaprend"></a><a name="rend"></a>hash_multimap:end
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回迭代器，定址對象是反轉 hash_multimap 中最後一個元素後面的位置。
 
@@ -2203,10 +2203,10 @@ The reversed hash_multimap is: 3 2 1 .
 After the erasure, the last element in the reversed hash_multimap is 2.
 ```
 
-## <a name="reverse_iterator"></a>  hash_multimap::reverse_iterator
+## <a name="hash_multimapreverse_iterator"></a><a name="reverse_iterator"></a>hash_multimap:reverse_iterator
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，提供可讀取或修改反轉 hash_multimap 中元素的雙向迭代器。
 
@@ -2218,16 +2218,16 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 類型 `reverse_iterator` 是用來反向逐一查看 hash_multimap。
 
-Hash_multimap 所定義的 `reverse_iterator` 指向[value_type](#value_type)的物件，其類型 `pair`\< **const 索引鍵，類型**>。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+hash_multimap 所定義的 `reverse_iterator` 會指向 [value_type](#value_type) 的物件，value_type 的類型為 `pair`\< **const Key, Type**>。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 [ 的範例，請參閱 ](#rbegin)rbegin`reverse_iterator` 的範例。
+如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。
 
-## <a name="size"></a>  hash_multimap::size
+## <a name="hash_multimapsize"></a><a name="size"></a>hash_multimap:大小
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回 hash_multimap 中的項目數。
 
@@ -2274,10 +2274,10 @@ The hash_multimap length is 1.
 The hash_multimap length is now 2.
 ```
 
-## <a name="size_type"></a>  hash_multimap::size_type
+## <a name="hash_multimapsize_type"></a><a name="size_type"></a>hash_multimap::size_type
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種不帶正負號的整數類型，可計算 hash_multimap 中的元素數目。
 
@@ -2289,12 +2289,12 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 [ 的範例，請參閱 ](#size)size`size_type` 的範例。
+如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例。
 
-## <a name="swap"></a>  hash_multimap::swap
+## <a name="hash_multimapswap"></a><a name="swap"></a>hash_multimap:交換
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 交換兩個 hash_multimap 的元素。
 
@@ -2304,7 +2304,7 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>參數
 
-*right*\
+*對*\
 提供要交換之元素的 hash_multimap，或要與該 hash_multimap 交換元素的 hash_multimap。
 
 ### <a name="remarks"></a>備註
@@ -2363,10 +2363,10 @@ After swapping with hm2, hash_multimap hm1 is: 100 200.
 After swapping with hm3, hash_multimap hm1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  hash_multimap::upper_bound
+## <a name="hash_multimapupper_bound"></a><a name="upper_bound"></a>hash_multimap:upper_bound
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 傳回迭代器，指向 hash_multimap 中索引鍵大於指定索引鍵的第一個元素。
 
@@ -2378,14 +2378,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*關鍵*\
 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
 [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_multimap 中索引鍵大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_multimap 中最後一個元素後面的位置。
 
-如果將 `upper_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果 `upper_bound` 的傳回值指派給 `iterator`，則可以修改 hash_multimap 物件。
+如果將 `upper_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果將返回`upper_bound`值分配給`iterator`, 則可以修改hash_multimap物件。
 
 ### <a name="remarks"></a>備註
 
@@ -2449,10 +2449,10 @@ The first element of hm1 with a key greater than
 that of the initial element of hm1 is: 20.
 ```
 
-## <a name="value_comp"></a>  hash_multimap::value_comp
+## <a name="hash_multimapvalue_comp"></a><a name="value_comp"></a>hash_multimap:value_comp
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 成員函式會傳回函式物件，此物件可藉由比較 hash_multimap 中元素的索引鍵值來判斷這些元素的順序。
 
@@ -2466,11 +2466,11 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>備註
 
-針對 hash_multimap *m*，如果兩個元素*e1* （*版 k1*， *d1*）和*e2*（*k2*， *d2*）是類型的物件[value_type](#value_type)，其中*版 k1*和*k2*是其類型的索引鍵[key_type](#key_type)而*d1*和*d2*是其類型的資料[mapped_type](#mapped_type)，則 `m.value_comp()(e1, e2)` 就相當於 `m.key_comp()(k1, k2)`。 預存物件會定義成員函式
+對hash_multimap *,* 如果兩個元素 e1 *(k1,* *d1)* 與*e2**(k2,* *d2)* 是[類型value_type](#value_type)的物件, 其中*k1*和*k2*是其類型`m.value_comp()(e1, e2)`[key_type](#key_type)鍵, d1 和`m.key_comp()(k1, k2)` *d2* [是它們mapped_type](#mapped_type)類型的資料, 則等效於 。 *e1* *d2* 預存物件會定義成員函式
 
 `bool operator( value_type& left, value_type& right);`
 
-如果 **的索引鍵值在前面且在排序次序中不等於** 的索引鍵值，此函式就會傳回 `left`true`right`。
+如果 `left` 的索引鍵值在前面且在排序次序中不等於 `right` 的索引鍵值，此函式就會傳回 **true**。
 
 ### <a name="example"></a>範例
 
@@ -2519,10 +2519,10 @@ int main( )
 }
 ```
 
-## <a name="value_type"></a>  hash_multimap::value_type
+## <a name="hash_multimapvalue_type"></a><a name="value_type"></a>hash_multimap:value_type
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
 
 一種類型，代表儲存在 hash_multimap 中的物件類型。
 
@@ -2532,7 +2532,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 宣告為成對\<const [key_type](#key_type)、 [mapped_type](#mapped_type)> 和不配對\<key_type，mapped_type > 因為關聯容器的索引鍵可能無法使用非常數反覆運算器或參考來變更。
+`value_type`由於關聯容器的鍵\<不能使用非恆定反覆運算器或\<引用 更改關聯容器的鍵,因此mapped_type>,因此聲明為對[key_type,mapped_type>,](#mapped_type)[key_type](#key_type)而不是對key_type。
 
 ### <a name="example"></a>範例
 
@@ -2595,5 +2595,5 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)
+[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++標準函式庫參考](../standard-library/cpp-standard-library-reference.md)

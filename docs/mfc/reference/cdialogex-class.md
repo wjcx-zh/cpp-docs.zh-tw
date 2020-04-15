@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: f92058d1aa0dabccf6623d20a248fed8eb99ab26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b34c441ac63b023ae6272a1646151aad4be1bfbc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375628"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 類別
 
@@ -49,11 +49,11 @@ class CDialogEx : public CDialog
 
 若要使用 `CDialogEx` 類別，請將您的對話方塊類別從 `CDialogEx` 類別進行衍生，而不是從 `CDialog` 類別。
 
-對話方塊影像會儲存在資源檔中。 架構會自動刪除從資源檔載入的任何影像。 若要以程式設計方式刪除目前的背景影像，請呼叫[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法或實作`OnDestroy`事件處理常式。 當您呼叫[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法，請傳入`HBITMAP`參數做為影像控點。 `CDialogEx` 物件會取得影像的擁有權，而若 `m_bAutoDestroyBmp` 旗標是 `TRUE` 的話，則會將它刪除。
+對話方塊影像會儲存在資源檔中。 架構會自動刪除從資源檔載入的任何影像。 要以程式設計方式刪除當前背景圖像,請調用[CDialogEx::Set背景影像](#setbackgroundimage)方法`OnDestroy`或實現 事件處理程式。 呼叫[CDialogEx::Set背景影像](#setbackgroundimage)方法時,`HBITMAP`將參數 作為圖像句柄傳遞。 `CDialogEx` 物件會取得影像的擁有權，而若 `m_bAutoDestroyBmp` 旗標是 `TRUE` 的話，則會將它刪除。
 
-A`CDialogEx`物件可以是父代[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件。 [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件會呼叫`CDialogEx::SetActiveMenu`方法時[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件開啟。 之後，`CDialogEx`物件會處理任何功能表事件，直到[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件已關閉。
+對`CDialogEx`象 可以是[CMFCPopupMenu 類](../../mfc/reference/cmfcpopupmenu-class.md)物件的父物件。 [CMFCPopupMenu 類](../../mfc/reference/cmfcpopupmenu-class.md)`CDialogEx::SetActiveMenu`物件在[CMFCPopupMenu 類](../../mfc/reference/cmfcpopupmenu-class.md)物件打開時調用該方法。 之後,`CDialogEx`物件處理任何功能表事件,直到[CMFCPopupMenu 類](../../mfc/reference/cmfcpopupmenu-class.md)物件關閉。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -67,9 +67,9 @@ A`CDialogEx`物件可以是父代[CMFCPopupMenu 類別](../../mfc/reference/cmfc
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdialogex.h
+**標題:** afxdialogex.h
 
-##  <a name="cdialogex"></a>  CDialogEx::CDialogEx
+## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx:CDialogEx
 
 建構 `CDialogEx` 物件。
 
@@ -86,22 +86,22 @@ CDialogEx(
 ### <a name="parameters"></a>參數
 
 *nIDTemplate*<br/>
-[in]對話方塊範本資源識別碼。
+[在]對話框範本的資源 ID。
 
-*lpszTemplateName*<br/>
-[in]對話方塊範本資源名稱。
+*lpszTemplate 名稱*<br/>
+[在]對話框範本的資源名稱。
 
 *pParent*<br/>
-[in]父視窗的指標。 預設值是 NULL。
+[在]指向父視窗的指標。 預設值是 NULL。
 
-*pParentWnd*<br/>
-[in]父視窗的指標。 預設值是 NULL。
+*pparentwnd*<br/>
+[在]指向父視窗的指標。 預設值是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor
+## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogEx::設定背景顏色
 
 設定對話方塊的背景色彩。
 
@@ -113,15 +113,15 @@ void SetBackgroundColor(
 
 ### <a name="parameters"></a>參數
 
-*color*<br/>
-[in]RGB 色彩值。
+*顏色*<br/>
+[在]RGB 顏色值。
 
 *bRepaint*<br/>
-[in]若要立即更新畫面; TRUE否則為 FALSE。 預設值為 TRUE。
+[在]TRUE 可立即更新螢幕;否則,FALSE。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage
+## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx::設定背景影像
 
 設定對話方塊的背景影像。
 
@@ -141,27 +141,27 @@ BOOL SetBackgroundImage(
 ### <a name="parameters"></a>參數
 
 *hBitmap*<br/>
-[in]背景影像控制代碼。
+[在]背景圖像的句柄。
 
-*uiBmpResId*<br/>
-[in]背景影像的資源識別碼。
+*烏布佈雷西德*<br/>
+[在]背景圖像的資源識別碼。
 
 *location*<br/>
-[in]其中一個`CDialogEx::BackgroundLocation`指定映像的位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 預設值是 BACKGR_TILE。
+[在]指定影像位置`CDialogEx::BackgroundLocation`的值之一。 有效值包括BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT和BACKGR_BOTTOMRIGHT。 默認值為BACKGR_TILE。
 
-*bAutoDestroy*<br/>
-[in]為 true，則會自動終結背景影像否則為 FALSE。
+*bAuto銷毀*<br/>
+[在]TRUE 自動銷毀背景圖像;否則,FALSE。
 
 *bRepaint*<br/>
-[in]若要立即重繪對話方塊中，TRUE否則為 FALSE。
+[在]TRUE 可立即重繪對話方塊;否則,FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-在第二個方法多載的語法，為 true，則如果方法成功，否則為 FALSE。
+在第二個方法重載語法中,如果該方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-您所指定的映像不會自動縮放以符合對話方塊用戶端區域。
+指定的圖像不會拉伸以適合對話框工作區。
 
 ## <a name="see-also"></a>另請參閱
 

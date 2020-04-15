@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLabel 類別
+title: CMFC 功能標籤類
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLabel
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: b79d6191d2deb0a295e81da1150cc7b38fd81232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388406"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375129"
 ---
-# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 類別
+# <a name="cmfcribbonlabel-class"></a>CMFC 功能標籤類
 
 實作功能區的不可點選式文字標籤。
 
@@ -33,7 +33,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|建構並初始化`CMFCRibbonLabel`物件與指定的文字字串。|
+|[CMFC帶標籤::CMFC帶標籤](#cmfcribbonlabel)|使用指定的文字字串建構和初始`CMFCRibbonLabel`化物件。|
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
@@ -41,16 +41,16 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |名稱|描述|
 |----------|-----------------|
 |`CMFCRibbonLabel::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
-|`CMFCRibbonLabel::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|判斷目前的功能區標籤元素的協助工具資料。 (覆寫[cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。)|
+|`CMFCRibbonLabel::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
+|[CMFC 功能標籤::設定ACC數據](#setaccdata)|確定當前功能區標籤元素的輔助功能數據。 ( 覆寫[CMFC 功能按鈕:設定ACC資料](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
 ### <a name="remarks"></a>備註
 
-建立功能區標籤之後，將它新增至面板藉由呼叫[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。
+建立功能區標籤後,請調用[CMFC 功能面板:::添加](../../mfc/reference/cmfcribbonpanel-class.md#add),將其添加到面板中。
 
-您無法將功能區標籤新增至快速存取工具列。
+不能向「快速存取」工具列添加功能區標籤。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -62,11 +62,11 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxRibbonLabel.h
+**標題:** afxRibbonLabel.h
 
-##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFC帶標籤::CMFC帶標籤
 
-建構並初始化[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)會顯示指定的文字字串的物件。
+建構並初始化顯示指定文本字串的[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)物件。
 
 ```
 CMFCRibbonLabel(
@@ -77,14 +77,14 @@ CMFCRibbonLabel(
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-[in]要在標籤中顯示的文字。
+[在]要顯示在標籤中的文本。
 
-*bIsMultiLine*<br/>
-[in]若要指定標籤為多行標籤;，則為 TRUE否則為 FALSE。
+*bIs 多行*<br/>
+[在]TRUE 指定標籤是多行標籤;否則,FALSE。
 
-##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFC 功能標籤::設定ACC數據
 
-判斷目前的功能區標籤元素的協助工具資料。
+確定當前功能區標籤元素的輔助功能數據。
 
 ```
 virtual BOOL SetACCData(
@@ -95,14 +95,14 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>參數
 
 *pParent*<br/>
-[in]表示目前的功能區標籤的父視窗。
+[在]表示當前功能區標籤的父視窗。
 
-*data*<br/>
-[out]型別的物件`CAccessibilityData`，並填入目前的功能區標籤的協助工具資料。
+*資料*<br/>
+[出]使用當前功能區`CAccessibilityData`標籤的輔助功能數據的填充的類型物件。
 
 ### <a name="return-value"></a>傳回值
 
-則為 TRUE*資料*參數，則已成功填入目前的功能區標籤的協助工具資料; 否則為 FALSE。
+如果*資料*參數已成功填充當前功能區標籤的輔助功能數據,則為 TRUE;否則,FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

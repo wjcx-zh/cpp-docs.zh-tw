@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: 2d5b9d2a0dc1e716ea8cb20f0d0dcb4c5d765079
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4572b639b757569d8e3cfa731f99c123762f3900
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375055"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 類別
 
@@ -39,25 +39,25 @@ class COleDispatchException : public CException
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|錯誤的說明內容。|
-|[COleDispatchException::m_strDescription](#m_strdescription)|口頭錯誤描述。|
-|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|說明檔，以搭配`m_dwHelpContext`。|
-|[COleDispatchException::m_strSource](#m_strsource)|產生例外狀況的應用程式。|
-|[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`為特定的錯誤碼。|
+|[COleDispatch例外:m_dwHelpContext](#m_dwhelpcontext)|説明上下文查找錯誤。|
+|[COleDispatch例外::m_strDescription](#m_strdescription)|口頭錯誤描述。|
+|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|說明檔案與`m_dwHelpContext`使用 。|
+|[COleDispatch例外::m_strSource](#m_strsource)|生成異常的應用程式。|
+|[COleDispatch例外:m_wCode](#m_wcode)|`IDispatch`-特定於錯誤代碼。|
 
 ## <a name="remarks"></a>備註
 
-像其他的例外狀況類別衍生自`CException`基底類別，`COleDispatchException`可以搭配 THROW、 THROW_LAST、 TRY、 CATCH、 AND_CATCH 和 END_CATCH 巨集。
+與從`CException`基類派生的其他異常類一樣`COleDispatchException`, 可以使用 THROW、THROW_LAST、TRY、CATCH、AND_CATCH 和END_CATCH宏。
 
-一般情況下，您應該呼叫[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)來建立和擲回`COleDispatchException`物件。
+通常,應呼叫[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)來建立和`COleDispatchException`引發物件 。
 
-如需有關例外狀況的詳細資訊，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[例外狀況：OLE 例外狀況](../../mfc/exceptions-ole-exceptions.md)。
+有關異常的詳細資訊,請參閱[異常處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[異常:OLE 異常](../../mfc/exceptions-ole-exceptions.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[C 例外](../../mfc/reference/cexception-class.md)
 
 `COleDispatchException`
 
@@ -65,9 +65,9 @@ class COleDispatchException : public CException
 
 **標頭：** afxdisp.h
 
-##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext
+## <a name="coledispatchexceptionm_dwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatch例外:m_dwHelpContext
 
-識別您的應用程式說明中的說明內容 (。HLP) 檔案。
+在應用程式的説明 (中標識説明上下文。HLP)檔。
 
 ```
 DWORD m_dwHelpContext;
@@ -75,15 +75,15 @@ DWORD m_dwHelpContext;
 
 ### <a name="remarks"></a>備註
 
-這個成員會設定函式[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)擲回例外狀況時。
+此成員由函數[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)設置,當引發異常時。
 
 ### <a name="example"></a>範例
 
   請參閱 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的範例。
 
-##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription
+## <a name="coledispatchexceptionm_strdescription"></a><a name="m_strdescription"></a>COleDispatch例外::m_strDescription
 
-包含詳細錯誤描述，例如 「 磁碟已滿。 」
+包含口頭錯誤描述,如"磁碟已滿"。
 
 ```
 CString m_strDescription;
@@ -91,23 +91,23 @@ CString m_strDescription;
 
 ### <a name="remarks"></a>備註
 
-這個成員會設定函式[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)擲回例外狀況時。
+此成員由函數[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)設置,當引發異常時。
 
 ### <a name="example"></a>範例
 
   請參閱 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的範例。
 
-##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile
+## <a name="coledispatchexceptionm_strhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile
 
-架構會填入這個字串的應用程式的說明檔名稱。
+框架用應用程式的幫助檔的名稱填充此字串。
 
 ```
 CString m_strHelpFile;
 ```
 
-##  <a name="m_strsource"></a>  COleDispatchException::m_strSource
+## <a name="coledispatchexceptionm_strsource"></a><a name="m_strsource"></a>COleDispatch例外::m_strSource
 
-架構會填入此字串，以產生例外狀況的應用程式的名稱。
+框架用生成異常的應用程式的名稱填充此字串。
 
 ```
 CString m_strSource;
@@ -117,9 +117,9 @@ CString m_strSource;
 
   請參閱 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的範例。
 
-##  <a name="m_wcode"></a>  COleDispatchException::m_wCode
+## <a name="coledispatchexceptionm_wcode"></a><a name="m_wcode"></a>COleDispatch例外:m_wCode
 
-包含您的應用程式特定的錯誤碼。
+包含特定於應用程式的錯誤代碼。
 
 ```
 WORD m_wCode;
@@ -127,12 +127,12 @@ WORD m_wCode;
 
 ### <a name="remarks"></a>備註
 
-這個成員會設定函式[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)擲回例外狀況時。
+此成員由函數[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)設置,當引發異常時。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException 類別](../../mfc/reference/cexception-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[COleDispatchDriver 類別](../../mfc/reference/coledispatchdriver-class.md)<br/>
+[COle排程驅動程式類別](../../mfc/reference/coledispatchdriver-class.md)<br/>
 [COleException 類別](../../mfc/reference/coleexception-class.md)

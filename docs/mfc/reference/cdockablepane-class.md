@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 9ba5cfa2fc30c19cabc3f9f45a10f2c23e7d4269
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552316"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375612"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -155,147 +155,147 @@ class CDockablePane : public CPane
 
 |名稱|描述|
 |----------|-----------------|
-|[CDockablePane::CDockablePane](#cdockablepane)|建構並初始化 `CDockablePane` 物件。|
+|[可裝窗格::可裝板](#cdockablepane)|建構並初始化 `CDockablePane` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDockablePane::AttachToTabWnd](#attachtotabwnd)|將一個窗格附加到另一個窗格。 這會建立索引標籤式的窗格。|
-|[CDockablePane::CalcFixedLayout](#calcfixedlayout)|傳回窗格矩形的大小。|
-|[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|判斷指定的迷你框架是否可以停駐窗格。|
-|[CDockablePane::CanAcceptPane](#canacceptpane)|判斷另一個窗格是否可以固定到目前的窗格。|
-|[CDockablePane::CanAutoHide](#canautohide)|判斷窗格是否支援自動隱藏模式。 (覆寫[CBasePane::CanAutoHide](../../mfc/reference/cbasepane-class.md#canautohide)。)|
-|[CDockablePane::CanBeAttached](#canbeattached)|判斷目前的窗格是否可以停駐到另一個窗格。|
-|[CDockablePane::ConvertToTabbedDocument](#converttotabbeddocument)|MDI 索引標籤式文件會將一或多個可停駐窗格。|
-|[CDockablePane::CopyState](#copystate)|複製可停駐窗格的狀態。|
-|[CDockablePane::Create](#create)|建立 Windows 控制項，並將它附加至`CDockablePane`物件。|
-|[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|它所停駐在框架視窗將會建立預設分割線的窗格。|
-|[CDockablePane::CreateEx](#createex)|建立 Windows 控制項，並將它附加至`CDockablePane`物件。|
-|[CDockablePane::CreateTabbedPane](#createtabbedpane)|從目前的窗格中建立索引標籤式的窗格。|
-|[CDockablePane::DockPaneContainer](#dockpanecontainer)|窗格停駐的容器。|
-|[CDockablePane::DockPaneStandard](#dockpanestandard)|使用 外框 （標準） 的停駐停駐窗格。|
-|`CDockablePane::DockToFrameWindow`|在內部使用。 若要停駐窗格，請使用[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)或是[CDockablePane::DockToWindow](#docktowindow)。|
-|[CDockablePane::DockToRecentPos](#docktorecentpos)|窗格停駐於其預存的最新的停駐位置。|
-|[CDockablePane::DockToWindow](#docktowindow)|一個停駐窗格停駐於停駐的另一個窗格。|
-|[CDockablePane::EnableAutohideAll](#enableautohideall)|啟用或停用此窗格，以及在容器中的其他窗格的 自動隱藏模式。|
-|[CDockablePane::EnableGripper](#enablegripper)|顯示或隱藏標題 (gripper)。|
-|[CDockablePane::GetAHRestoredRect](#getahrestoredrect)|指定當自動隱藏模式中顯示 窗格的位置。|
-|[CDockablePane::GetAHSlideMode](#getahslidemode)|擷取窗格的 [自動隱藏投影片] 模式。|
-|`CDockablePane::GetAutoHideButton`|在內部使用。|
-|`CDockablePane::GetAutoHideToolBar`|在內部使用。|
-|[CDockablePane::GetCaptionHeight](#getcaptionheight)|傳回目前的標題的高度。|
-|[CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)|傳回預設值 窗格分割線，窗格的容器。|
-|[CDockablePane::GetDockingStatus](#getdockingstatus)|判斷提供的指標位置為基礎的停駐窗格的能力。|
-|[CDockablePane::GetDragSensitivity](#getdragsensitivity)|傳回停駐窗格拖曳機密性。|
-|[CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)|擷取其容器中的窗格所佔用的空間百分比。|
-|[CDockablePane::GetTabArea](#gettabarea)|擷取窗格 索引標籤區域。|
-|[CDockablePane::GetTabbedPaneRTC](#gettabbedpanertc)|傳回目前的窗格停駐於另一個窗格時，會建立索引標籤式視窗的執行階段類別資訊。|
-|[CDockablePane::HasAutoHideMode](#hasautohidemode)|指定是否可以停駐窗格切換為自動隱藏模式。|
-|[CDockablePane::HitTest](#hittest)|在使用者按一下滑鼠的位置 窗格中指定特定的位置。|
-|`CDockablePane::IsAccessibilityCompatible`|在內部使用。|
-|[CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)|指出是否停駐窗格和容器中的所有其他窗格可以放在 自動隱藏模式。|
-|[CDockablePane::IsAutoHideMode](#isautohidemode)|決定是否自動隱藏模式中的窗格。|
-|`CDockablePane::IsChangeState`|在內部使用。|
-|[CDockablePane::IsDocked](#isdocked)|判斷目前的窗格是否停駐。|
-|[CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)|決定的窗格是 自動隱藏模式中，如果它是顯示 （或隱藏） 藉由呼叫行為`ShowPane`。|
-|[CDockablePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|指定是否在多窗格框架視窗中窗格。|
-|[CDockablePane::IsResizable](#isresizable)|指定是否可調整大小的窗格。|
-|[CDockablePane::IsTabLocationBottom](#istablocationbottom)|指定是否位在頂端或底部窗格的索引標籤。|
-|[CDockablePane::IsTracked](#istracked)|指定一個窗格由使用者拖曳。|
-|[CDockablePane::IsVisible](#isvisible)|判斷目前的窗格是否可見。|
-|[CDockablePane::LoadState](#loadstate)|在內部使用。|
-|[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|當一個窗格的父代變更時由架構呼叫。 (覆寫[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent)。)|
-|[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|在框架視窗停駐浮動的停駐列時，由架構呼叫。|
-|[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|若要變更窗格的父代時，由架構呼叫。 (覆寫[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent)。)|
-|[CDockablePane::OnBeforeFloat](#onbeforefloat)|當窗格即將浮點數時，由架構呼叫。 (覆寫[CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat)。)|
-|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|當窗格能卸除時，架構會呼叫這個方法。|
-|[CDockablePane::ReplacePane](#replacepane)|取代指定的窗格中的窗格。|
-|[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|還原預設的窗格分割線的窗格是還原序列化，架構會呼叫這個方法。|
-|`CDockablePane::SaveState`|在內部使用。|
-|`CDockablePane::Serialize`|將序列化的窗格。 (覆寫 `CBasePane::Serialize`。)|
-|[CDockablePane::SetAutoHideMode](#setautohidemode)|切換之間顯示停駐窗格和 自動隱藏模式。|
-|[CDockablePane::SetAutoHideParents](#setautohideparents)|設定自動隱藏按鈕和 [] 窗格中的自動隱藏工具列。|
-|`CDockablePane::SetDefaultPaneDivider`|在內部使用。|
-|[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|設定其容器中的窗格所佔用的空間百分比。|
-|`CDockablePane::SetResizeMode`|在內部使用。|
-|[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|設定還原的預設的窗格分割線。|
-|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|設定兩個窗格停駐在一起時，會建立索引標籤式視窗的執行階段類別資訊。|
-|[CDockablePane::ShowPane](#showpane)|顯示或隱藏窗格。|
-|[CDockablePane::Slide](#slide)|顯示或隱藏窗格中的，滑動動畫顯示] 窗格處於 [自動隱藏模式時，才使用。|
-|[CDockablePane::ToggleAutoHide](#toggleautohide)|切換自動隱藏模式。 (覆寫[CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) 。)|
-|[CDockablePane::UndockPane](#undockpane)|從主框架視窗或迷你視窗容器窗格可以卸除。|
-|`CDockablePane::UnSetAutoHideMode`|在內部使用。 若要設定自動隱藏模式，請使用[CDockablePane::SetAutoHideMode](#setautohidemode)|
+|[可停靠窗格::附加到標籤](#attachtotabwnd)|將窗格附加到另一個窗格。 這將創建一個選項卡式窗格。|
+|[可裝窗格::鈣固定佈局](#calcfixedlayout)|傳回窗格矩形的大小。|
+|[可停靠窗格::接受迷你框架](#canacceptminiframe)|確定指定的迷你框架是否可以停靠到窗格。|
+|[可停靠窗格::可接受窗格](#canacceptpane)|確定是否可以將另一個窗格停靠到當前窗格。|
+|[可停靠窗格::可自動隱藏](#canautohide)|確定窗格是否支援自動隱藏模式。 (覆蓋[CBasePane::可以自動隱藏](../../mfc/reference/cbasepane-class.md#canautohide).)|
+|[可停靠窗格::可附加](#canbeattached)|確定當前窗格是否可以停靠到另一個窗格。|
+|[可嵌入單格::轉換為選項卡文件](#converttotabbeddocument)|將一個或多個可停靠窗格轉換為 MDI 選項卡式文件。|
+|[可裝窗格::複製狀態](#copystate)|複製可停靠窗格的狀態。|
+|[可裝窗格::建立](#create)|創建 Windows 控制件並將其`CDockablePane`附加到 物件。|
+|[可嵌入視窗格:建立預設的窗格分隔符](#createdefaultpanedivider)|在窗格停靠到框架視窗時為其創建預設分隔線。|
+|[可裝窗格::建立Ex](#createex)|創建 Windows 控制件並將其`CDockablePane`附加到 物件。|
+|[可嵌入窗格:建立選項卡式窗格](#createtabbedpane)|從目前窗格建立選項卡式窗格。|
+|[可裝窗格::DockPane 容器](#dockpanecontainer)|將容器停靠到窗格。|
+|[可多克窗格::DockPane 標準](#dockpanestandard)|使用輪廓(標準)停靠來停靠窗格。|
+|`CDockablePane::DockToFrameWindow`|內部使用。 要停靠窗格,請使用[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)或[CdockPane::DocktoWindow](#docktowindow)。|
+|[可多克窗格::D](#docktorecentpos)|將窗格停靠到其存儲的最近停靠位置。|
+|[可裝窗格::D](#docktowindow)|將一個停靠窗格停靠到另一個停靠窗格。|
+|[可嵌入窗格:開啟自動隱藏所有](#enableautohideall)|啟用或禁用此窗格的自動隱藏模式以及容器中的其他窗格。|
+|[可裝窗格::啟用夾鉗](#enablegripper)|顯示或隱藏標題(抓握器)。|
+|[可停靠窗格::取得 AH 復原](#getahrestoredrect)|指定在自動隱藏模式下可見時窗格的位置。|
+|[可停靠窗格::取得AHSlide模式](#getahslidemode)|檢索窗格的自動隱藏幻燈片模式。|
+|`CDockablePane::GetAutoHideButton`|內部使用。|
+|`CDockablePane::GetAutoHideToolBar`|內部使用。|
+|[可載窗格::取得標題高度](#getcaptionheight)|返回當前標題的高度。|
+|[可嵌入單格::取得預設的窗格分隔符](#getdefaultpanedivider)|傳回窗格容器的預設窗格分隔符。|
+|[可停靠窗格:取得停靠狀態](#getdockingstatus)|確定根據提供的指標位置停靠窗格的能力。|
+|[可裝窗格::獲取拖動敏感性](#getdragsensitivity)|返回停靠窗格的拖動靈敏度。|
+|[可停靠窗格::取得上載百分比在窗格容器](#getlastpercentinpanecontainer)|檢索窗格在其容器中佔用的空間百分比。|
+|[可停靠窗格::取得選項卡區域](#gettabarea)|檢索窗格的選項卡區域。|
+|[可停靠窗格::獲取 TabbedPaneRTC](#gettabbedpanertc)|返回有關另一個窗格停靠到當前窗格時創建的選項卡式視窗的運行時類資訊。|
+|[可停靠窗格::具有自動隱藏模式](#hasautohidemode)|指定停靠窗格是否可以切換到自動隱藏模式。|
+|[可裝窗格::命中測試](#hittest)|指定用戶按下滑鼠窗格中的特定位置。|
+|`CDockablePane::IsAccessibilityCompatible`|內部使用。|
+|[可停靠窗格::自動隱藏已啟用](#isautohideallenabled)|指示是否可以將停靠窗格和容器中的所有其他窗格置於自動隱藏模式。|
+|[可停靠窗格::自動隱藏模式](#isautohidemode)|確定窗格是否處於自動隱藏模式。|
+|`CDockablePane::IsChangeState`|內部使用。|
+|[可裝窗格::已裝](#isdocked)|確定當前窗格是否停靠。|
+|[可停靠窗格::ishideinautohide模式](#ishideinautohidemode)|決定自動隱藏模式的窗格的行為(如果透過呼叫`ShowPane`顯示(或隱藏)|
+|[可停靠窗格::在浮動多窗格框架中](#isinfloatingmultipaneframewnd)|指定窗格是否位於多窗格框架視窗中。|
+|[可停靠窗格::可調整大小](#isresizable)|指定窗格是否可調整大小。|
+|[可停靠窗格::位置位置底部](#istablocationbottom)|指定選項卡是位於窗格的頂部還是底部。|
+|[可裝窗格::已追蹤](#istracked)|指定使用者是否正在拖動窗格。|
+|[可裝窗格::可見](#isvisible)|確定當前窗格是否可見。|
+|[可裝窗格::載入狀態](#loadstate)|內部使用。|
+|[可停靠窗格::更改後父級](#onafterchangeparent)|當窗格的父級已更改時由框架調用。 (覆蓋[CPane:之後更改父項目](../../mfc/reference/cpane-class.md#onafterchangeparent). )|
+|[可停靠窗格::從 MiniFrame 的後塢站](#onafterdockfromminiframe)|當浮動停靠欄停靠在框架視窗時,由框架調用。|
+|[可停靠窗格::在更改父級之前打開](#onbeforechangeparent)|當窗格的父級即將更改時,由框架調用。 (覆蓋[CPane::在更改父項目之前開啟](../../mfc/reference/cpane-class.md#onbeforechangeparent)。|
+|[可停靠窗格::在漂浮前打開](#onbeforefloat)|當窗格即將浮動時,由框架調用。 (覆蓋[CPane::在浮動之前](../../mfc/reference/cpane-class.md#onbeforefloat)開啟 。|
+|[可停靠窗格::從預設窗格迪迪迪爾中刪除](#removefromdefaultpanedividier)|當取消停靠窗格時,框架調用此方法。|
+|[可裝窗格::取代窗格](#replacepane)|將窗格替換為指定的窗格。|
+|[可停靠窗格::回復預設窗格分隔符](#restoredefaultpanedivider)|框架將此方法稱為窗格,以進行反序列化以還原預設窗格分隔符。|
+|`CDockablePane::SaveState`|內部使用。|
+|`CDockablePane::Serialize`|序列化窗格。 (覆寫 `CBasePane::Serialize`。)|
+|[可停靠窗格::設定自動隱藏模式](#setautohidemode)|在可見模式和自動隱藏模式之間切換停靠窗格。|
+|[可停靠窗格::設定自動隱藏父](#setautohideparents)|設定窗格的自動隱藏按鈕和自動隱藏工具列。|
+|`CDockablePane::SetDefaultPaneDivider`|內部使用。|
+|[可停靠窗格::設定上位百分比在窗格容器](#setlastpercentinpanecontainer)|設置窗格在其容器中佔用的空間百分比。|
+|`CDockablePane::SetResizeMode`|內部使用。|
+|[可停靠窗格::設定已回復的預設窗格分隔符](#setrestoreddefaultpanedivider)|設置還原的預設窗格分隔符。|
+|[可停靠窗格::設置塔貝帕內RTC](#settabbedpanertc)|設置兩個窗格停靠在一起時創建的選項卡式視窗的運行時類資訊。|
+|[可裝窗格::顯示窗格](#showpane)|顯示或隱藏窗格。|
+|[可裝窗格::幻燈片](#slide)|使用滑動動畫顯示或隱藏窗格,該動畫僅在窗格處於自動隱藏模式時顯示。|
+|[可嵌入窗格:切換自動隱藏](#toggleautohide)|切換自動隱藏模式。 (覆蓋[CPane:切換自動隱藏](../../mfc/reference/cpane-class.md#toggleautohide).)|
+|[可停靠窗格::未多克窗格](#undockpane)|從主框架視窗或小型框架視窗容器取消停靠窗格。|
+|`CDockablePane::UnSetAutoHideMode`|內部使用。 要設定自動隱藏模式,請使用[可載窗格::設定自動隱藏模式](#setautohidemode)|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|決定是否要停駐窗格隱藏 （處於自動隱藏模式）。|
-|[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|決定何時自動隱藏固定窗格應該停止滑動。|
-|[CDockablePane::DrawCaption](#drawcaption)|繪製停駐窗格標題 (gripper)。|
-|[CDockablePane::OnPressButtons](#onpressbuttons)|當使用者按下標題按鈕而非 AFX_HTCLOSE 和 AFX_HTMAXBUTTON 按鈕時呼叫。|
-|[CDockablePane::OnSlide](#onslide)|由架構呼叫以呈現自動隱藏投影片效果，當顯示或隱藏窗格時。|
+|[可停靠窗格::檢查自動隱藏條件](#checkautohidecondition)|確定停靠窗格是否隱藏(在自動隱藏模式下)。|
+|[可停靠窗格::檢查停止滑動條件](#checkstopslidecondition)|確定自動隱藏停靠窗格何時停止滑動。|
+|[可裝窗格::D原始標題](#drawcaption)|繪製停靠窗格標題(夾持器)。|
+|[可停靠窗格::在按鈕上](#onpressbuttons)|當使用者按下AFX_HTCLOSE和AFX_HTMAXBUTTON按鈕以外的標題按鈕時調用。|
+|[可裝窗格::在滑動](#onslide)|由框架呼叫,以在顯示或隱藏窗格時呈現自動隱藏幻燈片效果。|
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|指定是否要停用自動隱藏可停駐窗格的動畫。|
-|[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|[] 窗格處於自動隱藏模式時，請決定窗格的行為。|
-|[CDockablePane::m_nSlideSteps](#m_nslidesteps)|指定動畫速度的窗格中，當顯示或隱藏在 自動隱藏模式。|
+|[可裝窗格::m_bDisableAnimation](#m_bdisableanimation)|指定是否停用可停靠窗格的自動隱藏動畫。|
+|[可裝窗格::m_bHideInAutoHideMode](#m_bhideinautohidemode)|確定窗格處於自動隱藏模式時窗格的行為。|
+|[可裝窗格::m_nSlideSteps](#m_nslidesteps)|指定窗格在自動隱藏模式下顯示或隱藏時的動畫速度。|
 
 ## <a name="remarks"></a>備註
 
-`CDockablePane` 實作下列功能：
+`CDockablePane`完整功能:
 
-- 主框架視窗的停駐窗格。
+- 將窗格停靠到主框架視窗。
 
-- 切換自動隱藏模式的窗格。
+- 將窗格切換到自動隱藏模式。
 
-- 將一個窗格附加至索引標籤式視窗中。
+- 將窗格附加到選項卡式視窗。
 
-- 浮動迷你框架中的窗格。
+- 在小型框架視窗中浮動窗格。
 
-- 浮動迷你框架中的另一個窗格的停駐窗格。
+- 將窗格停靠到漂浮在小型框架視窗中的另一個窗格。
 
 - 調整窗格的大小。
 
-- 載入和儲存狀態的停駐窗格。
+- 載入和保存停靠窗格的狀態。
 
     > [!NOTE]
-    >  狀態資訊會儲存到 Windows 登錄中。
+    >  狀態資訊將保存到 Windows 註冊表。
 
-- 包含或不含標題，請建立一個窗格。 標題可以有文字標籤，並填入的漸層色彩。
+- 建立具有或不帶標題的窗格。 標題可以有一個文字標籤,並且可以使用漸變顏色填充。
 
-- 顯示窗格的內容時拖曳窗格
+- 在顯示窗格內容時拖曳窗格
 
-- 您可以拖曳窗格時顯示拖曳矩形。
+- 在顯示拖動矩形時拖動窗格。
 
-若要在您的應用程式中使用的停駐窗格，衍生您的窗格類別，從`CDockablePane`類別。 主框架視窗物件或視窗物件可控制您的窗格中的執行個體，可能被內嵌衍生的物件。 然後呼叫[CDockablePane::Create](#create)方法或[cdockablepane:: Createex](#createex)方法，當您處理主框架視窗中的 WM_CREATE 訊息。 最後，設定窗格物件，藉由呼叫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)， [cbasepane:: Dockpane](../../mfc/reference/cbasepane-class.md#dockpane)，或[cdockablepane:: Attachtotabwnd](#attachtotabwnd)。
+要在應用程式中使用停靠窗格,請從`CDockablePane`類派生窗格類。 將派生物件嵌入到主框架視窗物件中,或嵌入控制窗格實例的視窗物件。 然後在主框架視窗中處理WM_CREATE消息時調用[CDockablePane::創建](#create)方法或[CDockablePane::創建Ex](#createex)方法。 最後,通過調用[CBasePane:::啟用停靠](../../mfc/reference/cbasepane-class.md#enabledocking)[、CBasePane::Dockpane](../../mfc/reference/cbasepane-class.md#dockpane)或[Cdockpane::附加到 Tabwnd,](#attachtotabwnd)設置窗格物件。
 
 ## <a name="customization-tips"></a>自訂秘訣
 
-下列秘訣適用於`CDockablePane`物件：
+以下提示適用於`CDockablePane`物件:
 
-- 如果您呼叫[cdockablepane:: Attachtotabwnd](#attachtotabwnd)兩個非索引標籤，可停駐窗格的索引標籤式視窗的指標將會傳回*ppTabbedControlBar*參數。 您可以繼續使用此參數，將索引標籤新增至索引標籤式視窗。
+- 如果您為兩個非選項卡式可停靠窗格調用[CDockablePane::附加 ToTabWnd,](#attachtotabwnd)則在*ppTabbedControlBar*參數中將傳回指向選項卡式視窗的指標。 使用此參數,可以繼續向選項卡式視窗添加選項卡。
 
-- 索引標籤式窗格所建立的種類[cdockablepane:: Attachtotabwnd](#attachtotabwnd)取決`CDockablePane`物件*pTabControlBarAttachTo*參數。 您可以呼叫[cdockablepane:: Settabbedpanertc](#settabbedpanertc)若要設定的索引標籤式窗格類型`CDockablePane`會建立。 預設類型取決於`dwTabbedStyle`的[CDockablePane::Create](#create)當您第一次建立`CDockablePane`。 如果*dwTabbedStyle*是預設的類型是的 AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md); 如果*dwTabbedStyle* AFX_CBRS_REGULAR_TABS 預設類型是[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。
+- 由[CdockablePane::AttachToTabWnd](#attachtotabwnd)創建的選項卡式窗格`CDockablePane`類型由*pTabControlBarAttachto*參數中的物件確定。 您可以調用[CDockablePane::設置 TabbedPaneRTC](#settabbedpanertc)來設置`CDockablePane`將創建的選項卡式窗格類型。 默認類型由`dwTabbedStyle` [CDockablePane:::創建](#create)時首次`CDockablePane`創建。 如果*dwTabbedStyle* AFX_CBRS_OUTLOOK_TABS預設類型為[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md);如果*dwTabbedStyle* AFX_CBRS_REGULAR_TABS預設類型為[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。
 
-- 如果您想要將其中一個可停駐窗格停駐到另一個，呼叫[CDockablePane::DockToWindow](#docktowindow)方法。 [原始] 窗格，必須停駐位置之前呼叫這個方法。
+- 如果要將一個可停靠窗格停靠到另一個窗格,請調用[CdockablePane::DockToWindow](#docktowindow)方法。 在調用此方法之前,必須停靠在某處原始窗格。
 
-- 成員變數[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)控制項的方式可停駐窗格行為中自動隱藏模式當您呼叫[CDockablePane::ShowPane](#showpane)。 如果此成員變數設定為 TRUE，將隱藏可停駐窗格和其自動隱藏按鈕。 否則，它們會投影片縮小和相應放大。
+- 成員變數[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)控制在調用[CdockablePane:::ShowPane](#showpane)時可停靠窗格在自動隱藏模式下如何表現。 如果此成員變數設置為 TRUE,則可停靠窗格及其自動隱藏按鈕將被隱藏。 否則,它們將滑入和滑出。
 
-- 您可以藉由設定停用自動隱藏動畫[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)成員變數設為 TRUE。
+- 您可以通過將[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)成員變數設置為 TRUE 來禁用自動隱藏動畫。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定`CDockablePane`使用中的各種方法的物件`CDockablePane`類別。 此範例說明如何啟用自動隱藏可停駐窗格的所有功能，都啟用標題 」 或 「 移駐夾，都啟用自動隱藏模式、 顯示窗格中，並以動畫顯示自動隱藏模式中的窗格。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
+下面的範例展示如何使用`CDockablePane``CDockablePane`類中的各種方法配置物件。 該示例展示如何為可停靠窗格啟用自動隱藏所有功能、啟用標題或夾持器、啟用自動隱藏模式、顯示窗格以及為處於自動隱藏模式的窗格設置動畫。 此代碼段是[可視化工作室演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -311,11 +311,11 @@ class CDockablePane : public CPane
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxDockablePane.h
+**標題:** afxDockablePane.h
 
-##  <a name="attachtotabwnd"></a>  CDockablePane::AttachToTabWnd
+## <a name="cdockablepaneattachtotabwnd"></a><a name="attachtotabwnd"></a>可停靠窗格::附加到標籤
 
-將目前的窗格附加至 [目標] 窗格中，建立索引標籤式的窗格。
+將目前的窗格附加到目標窗格,建立選項卡式窗格。
 
 ```
 virtual CDockablePane* AttachToTabWnd(
@@ -327,45 +327,45 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>參數
 
-*pTabControlBarAttachTo*<br/>
-[in、 out]指定目前的窗格會將附加至 [目標] 窗格。 [目標] 窗格中必須是可停駐窗格。
+*pTab 控制列附加到*<br/>
+[進出]指定目前的窗格附加到的目標窗格。 目標窗格必須是可停靠窗格。
 
-*dockMethod*<br/>
-[in]指定的停駐的方法。
+*基方法*<br/>
+[在]指定停靠方法。
 
 *bSetActive*<br/>
-[in]若要啟用索引標籤式的窗格在附加作業; 之後，則為 TRUE否則為 FALSE。
+[在]TRUE 在附加操作後啟動選項卡式窗格;否則,FALSE。
 
-*ppTabbedControlBar*<br/>
-[out]包含附加作業所產生的索引標籤式的窗格。
+*ppTabbed 控制列*<br/>
+[出]包含附加操作產生的選項卡式窗格。
 
 ### <a name="return-value"></a>傳回值
 
-指向目前的窗格，如果不是索引標籤式的窗格;否則附加作業所產生的索引標籤式窗格的指標。 如果無法連接目前的窗格，或發生錯誤時，傳回的值會是 NULL。
+指向當前窗格的指標(如果它不是選項卡式窗格);否則,將指向附加操作產生的選項卡式窗格的指標。 如果無法附加當前窗格,或者發生錯誤,則返回值為 NULL。
 
 ### <a name="remarks"></a>備註
 
-一個可停駐窗格將附加至使用此方法的另一個窗格中，會發生下列情況：
+使用此方法將一個可停靠窗格附加到另一個窗格時,將發生以下情況:
 
-1. Framework 檢查是否 [目標] 窗格*pTabControlBarAttachTo*一般停駐窗格，或如果它衍生自[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)。
+1. 框架檢查目標窗格*pTabControlBarAttachTo*是常規停靠窗格,還是從[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)派生。
 
-1. 如果目標是索引標籤式的窗格，則架構會將加入其中目前的窗格以索引標籤。
+1. 如果目標窗格是選項卡式窗格,則框架將當前窗格作為選項卡添加到該窗格。
 
-1. 如果 [目標] 窗格的一般停駐窗格時，framework 就會建立索引標籤式的窗格。
+1. 如果目標窗格是常規停靠窗格,則框架將創建一個選項卡式窗格。
 
-   - 這個架構會呼叫`pTabControlBarAttachTo->CreateTabbedPane`。 新的索引標籤式窗格的樣式取決於`m_pTabbedControlBarRTC`成員。 根據預設，這個成員會設定為執行階段類別的[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。 如果您傳遞做為 AFX_CBRS_OUTLOOK_TABS 樣式*dwTabbedStyle*參數來[CDockablePane::Create](#create)方法，設定執行階段類別物件的執行階段類別[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)。 您可以在任何時間，若要變更新的窗格樣式來變更這個成員。
+   - 框架呼叫`pTabControlBarAttachTo->CreateTabbedPane`。 新的選項卡式窗格的樣式取決於成員`m_pTabbedControlBarRTC`。 默認情況下,此成員設置為[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)的運行時類。 如果將 AFX_CBRS_OUTLOOK_TABS 樣式作為*dwTabbedStyle*參數傳遞給[CDockablePane:create](#create)方法,則運行時類物件將設置為[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)的運行時類。 您可以隨時更改此成員以更改新窗格的樣式。
 
-   - 當這個方法會建立索引標籤式的窗格時，架構會取代指標*pTabControlBarAttachTo* （ 窗格是否停駐或浮動多迷你 視窗中） 與新的索引標籤式窗格的指標。
+   - 此方法創建選項卡式窗格時,框架將指向*pTabControlBarAttachTo*的指標替換為指向新選項卡式窗格的指標(如果窗格已停靠或浮動在多微型框架視窗中)。
 
-   - Framework 中新增*pTabControlBarAttachTo*為第一個索引標籤索引標籤式窗格的窗格。然後，架構會將目前的窗格新增為第二個索引標籤。
+   - 框架將*pTabControlBarAttachTo*窗格作為第一個選項卡添加到選項卡式窗格中。然後,框架將當前窗格添加為第二個選項卡。
 
-1. 如果目前的窗格衍生自`CBaseTabbedPane`，其索引標籤的所有已移至*pTabControlBarAttachTo*和終結目前的窗格。 因此，要特別小心時呼叫這個方法，因為在方法傳回時，目前的窗格的指標可能不正確。
+1. 如果當前窗格派生自`CBaseTabbedPane`,則其所有選項卡將移動到*pTabControlBarAttachto,* 並且當前窗格將銷毀。 因此,在調用此方法時要小心,因為當方法返回時,指向當前窗格的指標可能無效。
 
-如果建置停駐的配置時，您可以附加到另一個的其中一個窗格，設定`dockMethod`DM_SHOW 到。
+如果在構建停靠佈局時將一個窗格附加到另一個窗格`dockMethod`,則設置為DM_SHOW。
 
-您將另一個窗格附加到它之前，應停駐的第一個窗格。
+在將另一個窗格附加到該窗格之前,應停靠第一個窗格。
 
-##  <a name="calcfixedlayout"></a>  CDockablePane::CalcFixedLayout
+## <a name="cdockablepanecalcfixedlayout"></a><a name="calcfixedlayout"></a>可裝窗格::鈣固定佈局
 
 傳回窗格矩形的大小。
 
@@ -377,19 +377,19 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-*bStretch*<br/>
-[in]不使用。
+*b 伸*<br/>
+[在]未使用。
 
-*bHorz*<br/>
-[in]不使用。
+*布霍茲*<br/>
+[在]未使用。
 
 ### <a name="return-value"></a>傳回值
 
-A`CSize`物件，其中包含窗格矩形的大小。
+包含`CSize`窗格矩形大小的物件。
 
-##  <a name="canacceptminiframe"></a>  CDockablePane::CanAcceptMiniFrame
+## <a name="cdockablepanecanacceptminiframe"></a><a name="canacceptminiframe"></a>可停靠窗格::接受迷你框架
 
-判斷指定的迷你框架是否可以停駐窗格。
+確定指定的迷你框架是否可以停靠到窗格。
 
 ```
 virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
@@ -397,16 +397,16 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 
 ### <a name="parameters"></a>參數
 
-*pMiniFrame*<br/>
-[in]指標`CPaneFrameWnd`物件。
+*pMini框架*<br/>
+[在]指向物件的指標`CPaneFrameWnd`。
 
 ### <a name="return-value"></a>傳回值
 
-則為 TRUE *pMiniFrame*可停駐於窗格中; 否則為 FALSE。
+如果*pMiniFrame*可以停靠到窗格,則為 TRUE;否則,FALSE。
 
-##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane
+## <a name="cdockablepanecanacceptpane"></a><a name="canacceptpane"></a>可停靠窗格::可接受窗格
 
-判斷另一個窗格是否可以固定到目前的窗格。
+確定是否可以將另一個窗格停靠到當前窗格。
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -415,23 +415,23 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[in]指定目前的窗格停駐窗格。
+[在]指定要停靠到目前的窗格的窗格。
 
 ### <a name="return-value"></a>傳回值
 
-如果可以停駐此窗格中，指定的窗格，則為 TRUE。否則為 FALSE。
+如果指定的窗格可以停靠到此窗格,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-之前的窗格即停駐到目前的窗格，架構會呼叫這個方法。
+框架在窗格停靠到當前窗格之前調用此方法。
 
-若要啟用或停用特定窗格停駐在衍生類別中的此函式會覆寫。
+覆蓋派生類中的此函數以啟用或禁用對特定窗格的停靠。
 
-根據預設，這個方法會傳回 TRUE 如果任一*pBar*或其父代類型`CDockablePane`。
+預設情況下,如果*pBar*或其父項`CDockablePane`的類型 為 ,則此方法將返回 TRUE。
 
-##  <a name="canautohide"></a>  CDockablePane::CanAutoHide
+## <a name="cdockablepanecanautohide"></a><a name="canautohide"></a>可停靠窗格::可自動隱藏
 
-決定是否窗格可以自動隱藏。
+確定窗格是否可以自動隱藏。
 
 ```
 virtual BOOL CanAutoHide() const;
@@ -439,21 +439,21 @@ virtual BOOL CanAutoHide() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格可以自動隱藏則為 TRUE;否則為 FALSE。
+如果窗格可以自動隱藏,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-`CDockablePane::CanAutoHide` 在下列情況下，會傳回 FALSE:
+`CDockablePane::CanAutoHide`在以下任何情況下傳回 FALSE:
 
-- 窗格就會有沒有父代。
+- 窗格沒有父窗格。
 
-- 停駐的管理員不允許以自動隱藏窗格。
+- 停靠管理器不允許窗格自動隱藏。
 
-- 未停駐窗格。
+- 窗格未停靠。
 
-##  <a name="canbeattached"></a>  CDockablePane::CanBeAttached
+## <a name="cdockablepanecanbeattached"></a><a name="canbeattached"></a>可停靠窗格::可附加
 
-判斷目前的窗格是否可以停駐到另一個窗格。
+確定當前窗格是否可以停靠到另一個窗格。
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -461,15 +461,15 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果可停駐窗格可停駐到另一個窗格或主框架視窗中，則為 TRUE否則為 FALSE。
+如果可停靠窗格可以停靠到另一個窗格或主框架視窗,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-根據預設，此方法一律會傳回 TRUE。 若要啟用或停用而不需呼叫停駐在衍生類別中置換此方法[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。
+默認情況下,此方法始終返回 TRUE。 在派生類別中重寫此方法以啟用或關閉停靠,而無需呼叫[CBasePane::啟用停靠](../../mfc/reference/cbasepane-class.md#enabledocking)。
 
-##  <a name="cdockablepane"></a>  CDockablePane::CDockablePane
+## <a name="cdockablepanecdockablepane"></a><a name="cdockablepane"></a>可裝窗格::可裝板
 
-建構並初始化[CDockablePane](../../mfc/reference/cdockablepane-class.md)物件。
+建構並初始化[可載入物件](../../mfc/reference/cdockablepane-class.md)。
 
 ```
 CDockablePane();
@@ -477,11 +477,11 @@ CDockablePane();
 
 ### <a name="remarks"></a>備註
 
-建構可停駐窗格物件之後，請呼叫[CDockablePane::Create](#create)或是[cdockablepane:: Createex](#createex)來建立它。
+建構可停靠窗格物件後,調用[CDockablePane::創建](#create)或[CdockPane:createEx](#createex)以創建它。
 
-##  <a name="converttotabbeddocument"></a>  CDockablePane::ConvertToTabbedDocument
+## <a name="cdockablepaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>可嵌入單格::轉換為選項卡文件
 
-MDI 索引標籤式文件會將一或多個可停駐窗格。
+將一個或多個可停靠窗格轉換為 MDI 選項卡式文件。
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -489,12 +489,12 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*bActiveTabOnly*<br/>
-[in]當您將轉換`CTabbedPane`，指定 TRUE，以轉換是使用索引標籤。指定為 FALSE，則轉換在窗格中的所有索引標籤。
+*b 作用分頁*<br/>
+[在]轉換`CTabbedPane`時 ,指定 TRUE 以僅轉換活動選項卡。 指定 FALSE 以轉換窗格中的所有選項卡。
 
-##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition
+## <a name="cdockablepanecheckautohidecondition"></a><a name="checkautohidecondition"></a>可停靠窗格::檢查自動隱藏條件
 
-判斷是否停駐窗格為隱藏狀態 （也稱為自動隱藏模式）。
+確定停靠窗格是否隱藏(也稱為自動隱藏模式)。
 
 ```
 virtual BOOL CheckAutoHideCondition();
@@ -502,17 +502,17 @@ virtual BOOL CheckAutoHideCondition();
 
 ### <a name="return-value"></a>傳回值
 
-如果隱藏條件符合時，則為 TRUE否則為 FALSE。
+如果滿足隱藏條件,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-架構會使用計時器定期檢查是否要隱藏自動隱藏可停駐窗格。 不在使用中 窗格，窗格不正在調整大小，和滑鼠指標不是移至窗格上方時，這個方法會傳回 TRUE。
+框架使用計時器定期檢查是否隱藏自動隱藏可停靠窗格。 當窗格未處於活動狀態、窗格未調整大小以及滑鼠指標不在窗格上時,該方法將返回 TRUE。
 
-如果符合所有先前的條件，架構會呼叫[CDockablePane::Slide](#slide)隱藏窗格。
+如果滿足所有以前的條件,框架將調用[CDockablePane::滑動](#slide)以隱藏窗格。
 
-##  <a name="checkstopslidecondition"></a>  CDockablePane::CheckStopSlideCondition
+## <a name="cdockablepanecheckstopslidecondition"></a><a name="checkstopslidecondition"></a>可停靠窗格::檢查停止滑動條件
 
-決定何時自動隱藏固定窗格應該停止滑動。
+確定自動隱藏停靠窗格何時停止滑動。
 
 ```
 virtual BOOL CheckStopSlideCondition(BOOL bDirection);
@@ -520,22 +520,22 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 
 ### <a name="parameters"></a>參數
 
-*bDirection*<br/>
-[in]如果窗格為可見;，則為 TRUE。如果隱藏的窗格中，則為 FALSE。
+*b方向*<br/>
+[在]如果窗格可見,則為 TRUE;如果窗格處於隱藏狀態,則 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果符合的停止條件;，則為 TRUE。否則為 FALSE。
+如果滿足停止條件,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-當可停駐窗格設定為自動隱藏模式時，架構會使用滑動效果以顯示或隱藏窗格。 在滑動窗格時，架構會呼叫此函式。 `CheckStopSlideCondition` 完整可見窗格時，或完全隱藏時，會傳回 TRUE。
+將可停靠窗格設置為自動隱藏模式時,框架將使用滑動效果來顯示或隱藏窗格。 當窗格滑動時,框架調用此函數。 `CheckStopSlideCondition`當窗格完全可見或完全隱藏時返回 TRUE。
 
-覆寫此方法在衍生類別來實作自訂的自動隱藏效果。
+在派生類中重寫此方法以實現自定義自動隱藏效果。
 
-##  <a name="copystate"></a>  CDockablePane::CopyState
+## <a name="cdockablepanecopystate"></a><a name="copystate"></a>可裝窗格::複製狀態
 
-複製可停駐窗格的狀態。
+複製可停靠窗格的狀態。
 
 ```
 virtual void CopyState(CDockablePane* pOrgBar);
@@ -544,25 +544,25 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ### <a name="parameters"></a>參數
 
 *pOrgBar*<br/>
-[in]指標，可停駐窗格。
+[在]指向可停靠窗格的指標。
 
 ### <a name="remarks"></a>備註
 
-`CDockablePane::CopyState` 將複製的狀態*pOrgBar*到目前的窗格，藉由呼叫下列方法：
+`CDockablePane::CopyState`以呼叫以下方法將*pOrgBar*的狀態複製到目前的窗格:
 
-- [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)
+- [CPane:複製狀態](../../mfc/reference/cpane-class.md#copystate)
 
-- [CDockablePane::GetAHRestoredRect](#getahrestoredrect)
+- [可停靠窗格::取得 AH 復原](#getahrestoredrect)
 
-- [CDockablePane::GetAHSlideMode](#getahslidemode)
+- [可停靠窗格::取得AHSlide模式](#getahslidemode)
 
-- [CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)
+- [可停靠窗格::取得上載百分比在窗格容器](#getlastpercentinpanecontainer)
 
-- [CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)
+- [可停靠窗格::自動隱藏已啟用](#isautohideallenabled)
 
-##  <a name="create"></a>  CDockablePane::Create
+## <a name="cdockablepanecreate"></a><a name="create"></a>可裝窗格::建立
 
-建立 Windows 控制項，並將它附加至[CDockablePane](../../mfc/reference/cdockablepane-class.md)物件。
+創建 Windows 控制件並將其附加到[可操作窗格](../../mfc/reference/cdockablepane-class.md)物件。
 
 ```
 virtual BOOL Create(
@@ -590,53 +590,53 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *lpszCaption*<br/>
-[in]指定視窗名稱。
+[在]指定視窗名稱。
 
-*pParentWnd*<br/>
-[in、 out]指定父視窗。
+*pparentwnd*<br/>
+[進出]指定父視窗。
 
-*rect*<br/>
-[in]在用戶端座標中指定的大小和位置視窗中， *pParentWnd*。
+*矩形*<br/>
+[在]在*pParentWnd*的用戶端座標中指定視窗的大小和位置。
 
-*bHasGripper*<br/>
-[in]若要建立窗格使用的標題;，則為 TRUE否則為 FALSE。
+*b哈斯格裡珀*<br/>
+[在]TRUE 以創建帶標題的窗格;否則,FALSE。
 
 *nID*<br/>
-[in]指定的子視窗的識別碼。 此值必須是唯一，如果您想要儲存此停駐窗格的停駐狀態。
+[在]指定子視窗的識別碼。 如果要為此停靠窗格保存停靠狀態,此值必須是唯一的。
 
 *dwStyle*<br/>
-[in]指定視窗的樣式屬性。
+[在]指定視窗樣式屬性。
 
-*dwTabbedStyle*<br/>
-[in]指定使用者在此窗格的標題拖曳窗格時，會建立索引標籤式視窗的索引標籤式的樣式。
+*dwTabbed 樣式*<br/>
+[在]指定當使用者在此窗格的標題上拖動窗格時創建的選項卡式視窗的選項卡式樣式。
 
-*dwControlBarStyle*<br/>
-[in]指定其他的樣式屬性。
+*dwControlBar 樣式*<br/>
+[在]指定其他樣式屬性。
 
 *pContext*<br/>
-[in、 out]指定視窗的建立內容。
+[進出]指定視窗的建立上下文。
 
-*lpszWindowName*<br/>
-[in]指定視窗名稱。
+*lpsz 視窗名稱*<br/>
+[在]指定視窗名稱。
 
-*sizeDefault*<br/>
-[in]指定視窗的大小。
+*預設*<br/>
+[在]指定視窗的大小。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立可停駐窗格;，則為 TRUE。否則為 FALSE。
+如果已成功創建可停靠窗格,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-建立 Windows 窗格，並將它附加至`CDockablePane`物件。
+創建 Windows 窗格並將其`CDockablePane`附加到 物件。
 
-如果*cheaderctrl:: Create*視窗樣式 CBRS_FLOAT_MULTI 旗標，迷你視窗可以浮動迷你框架中的其他窗格。 根據預設，停駐窗格可以只在浮動個別。
+如果*dwStyle*視窗樣式具有CBRS_FLOAT_MULTI標誌,則小型框架視窗可以浮動與小型框架視窗中的其他窗格一起。 默認情況下,停靠窗格只能單獨浮動。
 
-如果*dwTabbedStyle*參數指定 AFX_CBRS_OUTLOOK_TABS 旗標，窗格建立 Outlook 樣式索引標籤式窗格，當另一個窗格附加到這個窗格使用[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 根據預設，可停駐窗格建立一般的索引標籤式的窗格的型別[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。
+如果*dwTabbedStyle*參數指定了AFX_CBRS_OUTLOOK_TABS標誌,則當使用[CDockablePane:AttachToTabWnd](#attachtotabwnd)方法將另一個窗格附加到此窗格時,窗格將創建 Outlook 樣式選項卡式窗格。 默認情況下,可停靠窗格創建[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)類型的常規選項卡式窗格。
 
-##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider
+## <a name="cdockablepanecreatedefaultpanedivider"></a><a name="createdefaultpanedivider"></a>可嵌入視窗格:建立預設的窗格分隔符
 
-它所停駐在框架視窗將會建立預設分割線的窗格。
+在窗格停靠到框架視窗時為其創建預設分隔線。
 
 ```
 static CPaneDivider* __stdcall CreateDefaultPaneDivider(
@@ -647,33 +647,33 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 
 ### <a name="parameters"></a>參數
 
-*dwAlignment*<br/>
-[in]指定主要畫面格的正固定窗格的側邊。 如果*dwAlignment*包含了 CBRS_ALIGN_LEFT 或 CBRS_ALIGN_RIGHT 旗標，這個方法會建立垂直 (`CPaneDivider::SS_VERT`) 分隔線; 否則這個方法會建立水平 (`CPaneDivider::SS_HORZ`) 分割線。
+*dwalignment*<br/>
+[在]指定窗格停靠到的主框架的一側。 如果*dwalignment*包含CBRS_ALIGN_LEFT或CBRS_ALIGN_RIGHT標誌,則此方法將創建`CPaneDivider::SS_VERT`一個垂直 ( ) 分隔線;否則,此方法將創建一個水準`CPaneDivider::SS_HORZ`( ) 分隔符。
 
 *pParent*<br/>
-[in]父框架指標。
+[在]指向父幀的指標。
 
 *pSliderRTC*<br/>
-[in]不使用。
+[在]未使用。
 
 ### <a name="return-value"></a>傳回值
 
-如果分割線建立失敗，這個方法會傳回指標至新建立的分割線或 NULL。
+此方法傳回指向新建立的分隔符的指標,如果分隔符創建失敗,則返回 NULL。
 
 ### <a name="remarks"></a>備註
 
-*dwAlignment*可以是下列值之一：
+*dwalignment*可以是以下任一值:
 
 |值|描述|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|正在加入的框架視窗工作區頂端停駐窗格。|
-|CBRS_ALIGN_BOTTOM|框架視窗的工作區底部所停駐窗格。|
-|CBRS_ALIGN_LEFT|正在工作區框架視窗的左側停駐窗格。|
-|CBRS_ALIGN_RIGHT|要到右邊，框架視窗的工作區的停駐窗格。|
+|CBRS_ALIGN_TOP|窗格正在停靠到框架視窗的工作區的頂部。|
+|CBRS_ALIGN_BOTTOM|窗格正在停靠到框架視窗的工作區的底部。|
+|CBRS_ALIGN_LEFT|窗格正停靠在框架視窗的工作區左側。|
+|CBRS_ALIGN_RIGHT|窗格正停靠在框架視窗的工作區的右側。|
 
-##  <a name="createex"></a>  CDockablePane::CreateEx
+## <a name="cdockablepanecreateex"></a><a name="createex"></a>可裝窗格::建立Ex
 
-建立 Windows 控制項，並將它附加至[CDockablePane](../../mfc/reference/cdockablepane-class.md)物件。
+創建 Windows 控制件並將其附加到[可操作窗格](../../mfc/reference/cdockablepane-class.md)物件。
 
 ```
 virtual BOOL CreateEx(
@@ -692,50 +692,50 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwStyleEx*<br/>
-[in]指定新的視窗的延伸的樣式屬性。
+[在]指定新視窗的延伸樣式屬性。
 
 *lpszCaption*<br/>
-[in]指定視窗名稱。
+[在]指定視窗名稱。
 
-*pParentWnd*<br/>
-[in、 out]指定父視窗。
+*pparentwnd*<br/>
+[進出]指定父視窗。
 
-*rect*<br/>
-[in]在用戶端座標中指定的大小和位置視窗中， *pParentWnd*。
+*矩形*<br/>
+[在]在*pParentWnd*的用戶端座標中指定視窗的大小和位置。
 
-*bHasGripper*<br/>
-[in]若要建立窗格使用的標題;，則為 TRUE否則為 FALSE。
+*b哈斯格裡珀*<br/>
+[在]TRUE 以創建帶標題的窗格;否則,FALSE。
 
 *nID*<br/>
-[in]指定的子視窗的識別碼。 此值必須是唯一，如果您想要儲存此停駐窗格的停駐狀態。
+[在]指定子視窗的識別碼。 如果要為此停靠窗格保存停靠狀態,此值必須是唯一的。
 
 *dwStyle*<br/>
-[in]指定視窗的樣式屬性。
+[在]指定視窗樣式屬性。
 
-*dwTabbedStyle*<br/>
-[in]指定使用者在此窗格的標題拖曳窗格時，會建立索引標籤式視窗的索引標籤式的樣式。
+*dwTabbed 樣式*<br/>
+[在]指定當使用者在此窗格的標題上拖動窗格時創建的選項卡式視窗的選項卡式樣式。
 
-*dwControlBarStyle*<br/>
-[in]指定的其他樣式屬性。
+*dwControlBar 樣式*<br/>
+[在]指定其他樣式屬性。
 
 *pContext*<br/>
-[in、 out]指定視窗的建立內容。
+[進出]指定視窗的建立上下文。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立可停駐窗格;，則為 TRUE。否則為 FALSE。
+如果已成功創建可停靠窗格,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-建立 Windows 窗格，並將它附加至`CDockablePane`物件。
+創建 Windows 窗格並將其`CDockablePane`附加到 物件。
 
-如果*cheaderctrl:: Create*視窗樣式 CBRS_FLOAT_MULTI 旗標，迷你視窗可以浮動迷你框架中的其他窗格。 根據預設，停駐窗格可以只在浮動個別。
+如果*dwStyle*視窗樣式具有CBRS_FLOAT_MULTI標誌,則小型框架視窗可以浮動與小型框架視窗中的其他窗格一起。 默認情況下,停靠窗格只能單獨浮動。
 
-如果*dwTabbedStyle*參數指定 AFX_CBRS_OUTLOOK_TABS 旗標，窗格建立 Outlook 樣式索引標籤式窗格，當另一個窗格附加到這個窗格使用[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 根據預設，可停駐窗格建立一般的索引標籤式的窗格的型別[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。
+如果*dwTabbedStyle*參數指定了AFX_CBRS_OUTLOOK_TABS標誌,則當使用[CDockablePane:AttachToTabWnd](#attachtotabwnd)方法將另一個窗格附加到此窗格時,窗格將創建 Outlook 樣式選項卡式窗格。 默認情況下,可停靠窗格創建[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)類型的常規選項卡式窗格。
 
-##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane
+## <a name="cdockablepanecreatetabbedpane"></a><a name="createtabbedpane"></a>可嵌入窗格:建立選項卡式窗格
 
-從目前的窗格中建立索引標籤式的窗格。
+從目前窗格建立選項卡式窗格。
 
 ```
 virtual CTabbedPane* CreateTabbedPane();
@@ -743,19 +743,19 @@ virtual CTabbedPane* CreateTabbedPane();
 
 ### <a name="return-value"></a>傳回值
 
-新索引標籤式的窗格中或如果建立作業失敗則為 NULL。
+如果建立操作失敗,則新的選項卡式窗格或 NULL。
 
 ### <a name="remarks"></a>備註
 
-建立索引標籤式的窗格來取代此窗格時，架構會呼叫這個方法。 如需詳細資訊，請參閱 < [cdockablepane:: Attachtotabwnd](#attachtotabwnd)。
+當框架創建選項卡式窗格以替換此窗格時,它將調用此方法。 有關詳細資訊,請參閱[可停靠窗格::附加標籤](#attachtotabwnd)。
 
-覆寫衍生類別來自訂如何索引標籤式的窗格中，這個方法會建立並初始化。
+在派生類中重寫此方法,以自定義如何創建和初始化選項卡式窗格。
 
-索引標籤式的窗格根據儲存在執行階段類別資訊建立`m_pTabbedControlBarRTC`成員，初始化[cdockablepane:: Createex](#createex)方法。
+選項卡式窗格是根據存儲在`m_pTabbedControlBarRTC`成員中的運行時類資訊創建的,該資訊由[CDockablePane:createEx](#createex)方法初始化。
 
-##  <a name="dockpanecontainer"></a>  CDockablePane::DockPaneContainer
+## <a name="cdockablepanedockpanecontainer"></a><a name="dockpanecontainer"></a>可裝窗格::DockPane 容器
 
-窗格停駐的容器。
+將容器停靠到窗格。
 
 ```
 virtual BOOL DockPaneContainer(
@@ -766,33 +766,33 @@ virtual BOOL DockPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-*barContainerManager*<br/>
-[in]正在停駐容器的容器管理員的參考。
+*酒吧容器管理員*<br/>
+[在]對要停靠的容器的容器管理員的引用。
 
-*dwAlignment*<br/>
-[in]指定的容器所停駐的窗格的側邊的 DWORD。
+*dwalignment*<br/>
+[在]DWORD,用於指定要停靠容器的窗格的一側。
 
-*dockMethod*<br/>
-[in]不使用。
+*基方法*<br/>
+[在]未使用。
 
 ### <a name="return-value"></a>傳回值
 
-如果容器已成功停駐窗格;，則為 TRUE。否則為 FALSE。
+如果容器已成功停靠到窗格,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-*dwAlignment*可以是下列值之一：
+*dwalignment*可以是以下任一值:
 
 |值|描述|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|容器是所停駐窗格的頂端。|
-|CBRS_ALIGN_BOTTOM|窗格的底部所停駐容器。|
-|CBRS_ALIGN_LEFT|正在向左窗格的停駐容器。|
-|CBRS_ALIGN_RIGHT|在右邊窗格的停駐容器。|
+|CBRS_ALIGN_TOP|容器正在停靠到窗格的頂部。|
+|CBRS_ALIGN_BOTTOM|容器正在停靠到窗格的底部。|
+|CBRS_ALIGN_LEFT|容器停靠在窗格的左側。|
+|CBRS_ALIGN_RIGHT|容器停靠在窗格的右側。|
 
-##  <a name="dockpanestandard"></a>  CDockablePane::DockPaneStandard
+## <a name="cdockablepanedockpanestandard"></a><a name="dockpanestandard"></a>可多克窗格::DockPane 標準
 
-使用 外框 （標準） 的停駐停駐窗格。
+使用輪廓(標準)停靠來停靠窗格。
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
@@ -800,16 +800,16 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 
 ### <a name="parameters"></a>參數
 
-*bWasDocked*<br/>
-[in]方法傳回時，這個值為 true，則包含若窗格已成功停駐;否則，它會為 FALSE。
+*bWasdocked*<br/>
+[在]當方法返回時,如果窗格已成功停靠,則此值包含 TRUE;否則,它包含 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格已停駐索引標籤式視窗中，或如果已建立索引標籤式的視窗停駐，則這個方法會傳回指標至索引標籤式視窗。 如果窗格卻已成功停駐，則這個方法會傳回**這**指標。 如果停駐失敗，則這個方法會傳回 NULL。
+如果窗格已停靠到選項卡式視窗,或者由於停靠而創建了選項卡式視窗,則此方法將返回指向選項卡式視窗的指標。 如果窗格以其他方式成功停靠,此方法將返回**此**指標。 如果停靠失敗,此方法將傳回 NULL。
 
-##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos
+## <a name="cdockablepanedocktorecentpos"></a><a name="docktorecentpos"></a>可多克窗格::D
 
-窗格停駐於其預存的停駐位置。
+將窗格停靠到其存儲的停靠位置。
 
 ```
 BOOL CDockablePane::DockToRecentPos();
@@ -817,15 +817,15 @@ BOOL CDockablePane::DockToRecentPos();
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功停駐窗格;，則為 TRUE。否則為 FALSE。
+如果窗格已成功停靠,則為 TRUE;如果窗格已成功停靠否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-可停駐窗格最近停駐資訊儲存在[CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)物件。
+可停靠窗格將最近的停靠資訊存儲在[CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)物件中。
 
-##  <a name="docktowindow"></a>  CDockablePane::DockToWindow
+## <a name="cdockablepanedocktowindow"></a><a name="docktowindow"></a>可裝窗格::D
 
-一個停駐窗格停駐於停駐的另一個窗格。
+將一個停靠窗格停靠到另一個停靠窗格。
 
 ```
 virtual BOOL DockToWindow(
@@ -836,26 +836,26 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>參數
 
-*pTargetWindow*<br/>
-[in、 out]指定停駐此窗格可停駐窗格。
+*p 目標視窗*<br/>
+[進出]指定要停靠此窗格的可停靠窗格。
 
-*dwAlignment*<br/>
-[in]指定 [] 窗格的停駐對齊方式。 可能是 CBRS_ALIGN_LEFT、 CBRS_ALIGN_TOP、 CBRS_ALIGN_RIGHT、 CBRS_ALIGN_BOTTOM 或 CBRS_ALIGN_ANY 之一。 （在 afxres.h 中定義。）
+*dwalignment*<br/>
+[在]指定窗格的停靠對齊方式。 可能是CBRS_ALIGN_LEFT、CBRS_ALIGN_TOP、CBRS_ALIGN_RIGHT、CBRS_ALIGN_BOTTOM或CBRS_ALIGN_ANY之一。 (在 afxres.h.
 
 *lpRect*<br/>
-[in]指定停駐窗格的矩形。
+[在]指定窗格的停靠矩形。
 
 ### <a name="return-value"></a>傳回值
 
-如果已順利停駐窗格，則為 TRUE。否則為 FALSE。
+如果窗格已成功停靠,則為 TRUE;如果窗格已成功停靠。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來將一個窗格停駐到另一個窗格所指定的對齊*dwAlignment*。
+調用此方法將一個窗格停靠到另一個窗格,其對齊方式由*dwAlignment*指定。
 
-##  <a name="drawcaption"></a>  CDockablePane::DrawCaption
+## <a name="cdockablepanedrawcaption"></a><a name="drawcaption"></a>可裝窗格::D原始標題
 
-繪製標題的停駐窗格 （也稱為 「 移駐夾 」）。
+繪製停靠窗格的標題(也稱為夾持器)。
 
 ```
 virtual void DrawCaption(
@@ -866,20 +866,20 @@ virtual void DrawCaption(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]表示用於繪製的裝置內容。
+[在]表示用於繪圖的設備上下文。
 
 *rectCaption*<br/>
-[in]指定的週框的窗格的標題。
+[在]指定窗格標題的邊界矩形。
 
 ### <a name="remarks"></a>備註
 
-架構會呼叫這個方法，以繪製可停駐窗格的標題。
+框架調用此方法以繪製可停靠窗格的標題。
 
-覆寫此方法在衍生類別來自訂標題的外觀。
+重寫派生類中的此方法以自定義標題的外觀。
 
-##  <a name="enableautohideall"></a>  CDockablePane::EnableAutohideAll
+## <a name="cdockablepaneenableautohideall"></a><a name="enableautohideall"></a>可嵌入窗格:開啟自動隱藏所有
 
-啟用或停用自動隱藏模式，針對此窗格和其他容器中的窗格。
+啟用或禁用此窗格和容器中其他窗格的自動隱藏模式。
 
 ```
 void EnableAutohideAll(BOOL bEnable = TRUE);
@@ -887,18 +887,18 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-[in]TRUE 表示啟用自動隱藏可停駐窗格; 的所有功能否則為 FALSE。
+*b 啟用*<br/>
+[在]TRUE 啟用可停靠窗格的所有功能自動隱藏;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-當使用者保留**Ctrl**金鑰，並按一下 釘選 按鈕，切換到 自動隱藏模式中，相同的容器中的所有其他窗格的窗格也會切換為自動隱藏模式。
+當使用者持有**Ctrl**鍵並按下 Pin 按鈕將窗格切換到自動隱藏模式時,同一容器中的所有其他窗格也會切換到自動隱藏模式。
 
-呼叫這個方法時*bEnable*設定為 FALSE 以停用此功能適用於特定的窗格。
+將*此方法設置為*FALSE 以停用特定窗格的此功能。
 
-##  <a name="enablegripper"></a>  CDockablePane::EnableGripper
+## <a name="cdockablepaneenablegripper"></a><a name="enablegripper"></a>可裝窗格::啟用夾鉗
 
-顯示或隱藏標題 （也稱為 「 移駐夾 」）。
+顯示或隱藏標題(也稱為抓手)。
 
 ```
 virtual void EnableGripper(BOOL bEnable);
@@ -906,18 +906,18 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-[in]若要啟用標題;，則為 TRUE否則為 FALSE。
+*b 啟用*<br/>
+[在]TRUE 啟用標題;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-當架構建立可停駐窗格時，它們並沒有 WS_STYLE 視窗樣式，即使指定。 這表示窗格的標題是由 framework，控制非工作區，但這方面不同於標準的視窗標題。
+當框架創建可停靠窗格時,它們沒有WS_STYLE視窗樣式,即使指定也是如此。 這意味著窗格的標題是由框架控制的非工作區,但此區域不同於標準視窗標題。
 
-您可以顯示或隱藏標題在任何時間。 為索引標籤式視窗或窗格浮動迷你框架中，將會加入為一個索引標籤的窗格時，framework 就會隱藏標題。
+您可以隨時顯示或隱藏標題。 當窗格作為選項卡添加到選項卡視窗或窗格浮動在小型框架視窗中時,框架將隱藏標題。
 
-##  <a name="getahrestoredrect"></a>  CDockablePane::GetAHRestoredRect
+## <a name="cdockablepanegetahrestoredrect"></a><a name="getahrestoredrect"></a>可停靠窗格::取得 AH 復原
 
-指定在自動隱藏模式中窗格的位置。
+指定在自動隱藏模式下窗格的位置。
 
 ```
 CRect GetAHRestoredRect() const;
@@ -925,13 +925,13 @@ CRect GetAHRestoredRect() const;
 
 ### <a name="return-value"></a>傳回值
 
-A`CRect`包含窗格的位置，在 自動隱藏模式時的物件。
+在`CRect`窗格處於自動隱藏模式時包含窗格位置的物件。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getahslidemode"></a>  CDockablePane::GetAHSlideMode
+## <a name="cdockablepanegetahslidemode"></a><a name="getahslidemode"></a>可停靠窗格::取得AHSlide模式
 
-擷取窗格的 自動隱藏投影片模式。
+檢索窗格的自動隱藏幻燈片模式。
 
 ```
 virtual UINT GetAHSlideMode() const;
@@ -939,13 +939,13 @@ virtual UINT GetAHSlideMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-單位，指定  窗格的 自動隱藏投影片模式。 傳回值可以是 AFX_AHSM_MOVE 或 AFX_AHSM_STRETCH，但實作只會使用 AFX_AHSM_MOVE。
+指定窗格的自動隱藏投影片模式的 UINT。 返回值可以是AFX_AHSM_MOVE或AFX_AHSM_STRETCH,但實現僅使用AFX_AHSM_MOVE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getcaptionheight"></a>  CDockablePane::GetCaptionHeight
+## <a name="cdockablepanegetcaptionheight"></a><a name="getcaptionheight"></a>可載窗格::取得標題高度
 
-傳回高度，單位為像素的目前的標題。
+返回當前標題的高度(以像素為單位)。
 
 ```
 virtual int GetCaptionHeight() const;
@@ -953,15 +953,15 @@ virtual int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>傳回值
 
-標題，單位為像素的高度。
+標題的高度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-標題高度為 0，如果已隱藏標題[CDockablePane::EnableGripper](#enablegripper)方法，或如果窗格沒有標題。
+如果標題被[CDockablePane::啟用 Gripper](#enablegripper)方法隱藏,或者窗格沒有標題,則標題高度為 0。
 
-##  <a name="getdefaultpanedivider"></a>  CDockablePane::GetDefaultPaneDivider
+## <a name="cdockablepanegetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>可嵌入單格::取得預設的窗格分隔符
 
-傳回預設值 窗格分割線，窗格的容器。
+傳回窗格容器的預設窗格分隔符。
 
 ```
 CPaneDivider* GetDefaultPaneDivider() const;
@@ -969,15 +969,15 @@ CPaneDivider* GetDefaultPaneDivider() const;
 
 ### <a name="return-value"></a>傳回值
 
-有效[CPaneDivider](../../mfc/reference/cpanedivider-class.md)物件，如果可停駐窗格停駐於主框架視窗中，或`NULL`如果可停駐窗格未停駐或浮動。
+如果可停靠窗格停靠到主框架視窗,或者`NULL`可停靠窗格未停靠或是否浮動,則為有效的[CPaneDivider](../../mfc/reference/cpanedivider-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊窗格分割線的詳細資訊，請參閱[CPaneDivider 類別](../../mfc/reference/cpanedivider-class.md)。
+有關窗格分隔符的詳細資訊,請參閱[CPaneDivider 類別](../../mfc/reference/cpanedivider-class.md)。
 
-##  <a name="getdockingstatus"></a>  CDockablePane::GetDockingStatus
+## <a name="cdockablepanegetdockingstatus"></a><a name="getdockingstatus"></a>可停靠窗格:取得停靠狀態
 
-判斷提供的指標位置為基礎的停駐窗格的能力。
+確定根據提供的指標位置停靠窗格的能力。
 
 ```
 virtual AFX_CS_STATUS GetDockingStatus(
@@ -988,33 +988,33 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-[in]螢幕座標中指標的位置。
+[在]指標在螢幕座標中的位置。
 
 *nSensitivity*<br/>
-[in]距離，單位為像素矩形的邊緣與指標必須在啟用停駐。
+[在]距離矩形邊緣的距離(以像素為單位)是啟用停靠時指標必須為的。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個下列的狀態值：
+以下狀態值之一:
 
-|AFX_CS_STATUS 值|意義|
+|AFX_CS_STATUS值|意義|
 |---------------------------|-------------|
-|CS_NOTHING|指標不是透過與停駐位置。 此架構不會不停駐窗格。|
-|CS_DOCK_IMMEDIATELY|滑鼠指標位於移轉停駐網站 （[] 窗格中會使用 DT_IMMEDIATE 停駐模式） 的即時模式中。 此架構會立即固定窗格。|
-|CS_DELAY_DOCK|指標是透過與另一個停駐窗格或主要畫面格的一個邊緣的停駐位置。 此架構會在延遲之後固定窗格。 請參閱 < 備註 > 一節，如需有關此延遲。|
-|CS_DELAY_DOCK_TO_TAB|滑鼠指標位於移轉時，要在索引標籤式視窗停駐窗格會停駐網站。 會發生這種情況是當滑鼠指標位於，透過標題的停駐的另一個窗格或索引標籤式窗格的索引標籤區域。|
+|CS_NOTHING|指標不在停靠網站上。 框架不停靠窗格。|
+|CS_DOCK_IMMEDIATELY|指標位於停靠網站上,處於即時模式(窗格使用DT_IMMEDIATE停靠模式)。 框架立即停靠窗格。|
+|CS_DELAY_DOCK|指標位於另一個停靠窗格或主框架的邊緣的停靠網站上。 延遲後,框架將停靠窗格。 有關此延遲的詳細資訊,請參閱備註部分。|
+|CS_DELAY_DOCK_TO_TAB|指標位於停靠網站上,該網站會導致窗格停靠在選項卡式視窗中。 當指標位於另一個停靠窗格的標題或選項卡式窗格的選項卡區域上時,將發生這種情況。|
 
 ### <a name="remarks"></a>備註
 
-架構會呼叫此方法以處理停駐浮動窗格。
+框架調用此方法來處理浮動窗格的停靠。
 
-浮動工具列或固定使用 DT_IMMEDIATE 停駐模式的窗格，架構會延遲停駐命令，以讓使用者將視窗移出父框架工作區，停駐發生之前。 延遲的時間長度以毫秒為單位，並且受到[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)資料成員... 預設值[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)為 200。 此行為是模擬 Microsoft Word 2007 停駐的行為。
+對於使用DT_IMMEDIATE停靠模式的浮動工具列或停靠窗格,框架會延遲停靠命令,以使用戶能夠在停靠發生之前將視窗移出父框架的工作區。 延遲的長度以毫秒為單位測量,並由[CDockingManager::::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)數據成員控制。 [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)的預設值為 200。 此行為類比 Microsoft Word 2007 的停靠行為。
 
-延遲停駐狀態 （CS_DELAY_DOCK 和 CS_DELAY_DOCK_TO_TAB），此架構不會執行停駐，直到使用者放開滑鼠按鈕。 如果窗格使用 DT_STANDARD 固定模式，架構會顯示在預計的停駐位置的矩形。 如果窗格使用 DT_SMART 固定模式，架構，則會顯示智慧停駐標記與半透明矩形在預計的停駐位置。 若要指定您窗格停駐模式，請呼叫[CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode)方法。 如需智慧停駐的詳細資訊，請參閱[CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)。
+對於延遲的停靠狀態(CS_DELAY_DOCK和CS_DELAY_DOCK_TO_TAB),在使用者釋放滑鼠按鈕之前,框架不會執行停靠。 如果窗格使用DT_STANDARD停靠模式,則框架將在投影停靠位置顯示矩形。 如果窗格使用DT_SMART停靠模式,則框架將在投影停靠位置顯示智慧停靠標記和半透明矩形。 要為窗格指定停靠模式,請調用[CBasePane::設置停靠模式](../../mfc/reference/cbasepane-class.md#setdockingmode)方法。 有關智慧停靠的詳細資訊,請參閱[CDockingManager:取得智慧擴展參數](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)。
 
-##  <a name="getdragsensitivity"></a>  CDockablePane::GetDragSensitivity
+## <a name="cdockablepanegetdragsensitivity"></a><a name="getdragsensitivity"></a>可裝窗格::獲取拖動敏感性
 
-傳回停駐窗格拖曳機密性。
+返回停靠窗格的拖動靈敏度。
 
 ```
 static const CSize& GetDragSensitivity();
@@ -1022,11 +1022,11 @@ static const CSize& GetDragSensitivity();
 
 ### <a name="return-value"></a>傳回值
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含的寬度和高度，單位為像素矩形拖曳點上置中。 不會開始拖曳作業，直到滑鼠指標移動此矩形的外面。
+包含以拖動點為中心的矩形的寬度和高度(以像素為單位)的[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。 拖動操作不會開始,直到滑鼠指標移動到此矩形之外。
 
-##  <a name="getlastpercentinpanecontainer"></a>  CDockablePane::GetLastPercentInPaneContainer
+## <a name="cdockablepanegetlastpercentinpanecontainer"></a><a name="getlastpercentinpanecontainer"></a>可停靠窗格::取得上載百分比在窗格容器
 
-擷取在其容器中的窗格中所佔的空間百分比 ( [CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md))。
+檢索窗格在其容器中佔用的空間百分比[(CPane 容器類](../../mfc/reference/cpanecontainer-class.md))。
 
 ```
 int GetLastPercentInPaneContainer() const;
@@ -1034,15 +1034,15 @@ int GetLastPercentInPaneContainer() const;
 
 ### <a name="return-value"></a>傳回值
 
-*Int* ，指定在其容器中的窗格中所佔的空間百分比。
+指定窗格在其容器中佔用的空間百分比*的 int。*
 
 ### <a name="remarks"></a>備註
 
-容器調整其版面配置時，會使用這個方法。
+當容器調整其佈局時,使用此方法。
 
-##  <a name="gettabarea"></a>  CDockablePane::GetTabArea
+## <a name="cdockablepanegettabarea"></a><a name="gettabarea"></a>可停靠窗格::取得選項卡區域
 
-擷取窗格 索引標籤區域。
+檢索窗格的選項卡區域。
 
 ```
 virtual void GetTabArea(
@@ -1053,18 +1053,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>參數
 
 *rectTabAreaTop*<br/>
-[in]`GetTabArea`中填入此變數索引標籤區域是否位在窗格頂端的索引標籤。 如果索引標籤底端的窗格中，此變數會填入空的矩形中。
+[在]`GetTabArea`如果選項卡位於窗格的頂部,則使用選項卡區域填充此變數。 如果選項卡位於窗格的底部,則此變數將填充一個空矩形。
 
-*rectTabAreaBottom*<br/>
-[in]`GetTabArea`中填入此變數索引標籤區域底部窗格的索引標籤時。 如果索引標籤頂端的窗格中，此變數會填入空的矩形中。
+*rectTab 區域底部*<br/>
+[在]`GetTabArea`如果選項卡位於窗格的底部,則用選項卡區域填充此變數。 如果選項卡位於窗格的頂部,則此變數將填充一個空矩形。
 
 ### <a name="remarks"></a>備註
 
-這個方法只適用於類別衍生自`CDockablePane`和有索引標籤。 如需詳細資訊，請參閱 < [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea)並[CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea)。
+此方法僅在派生自`CDockablePane`具有選項卡的類中使用。 有關詳細資訊,請參閱[CTabbedPane::取得 TabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea)和[CMFCOutlookBar::取得 TabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea)。
 
-##  <a name="gettabbedpanertc"></a>  CDockablePane::GetTabbedPaneRTC
+## <a name="cdockablepanegettabbedpanertc"></a><a name="gettabbedpanertc"></a>可停靠窗格::獲取 TabbedPaneRTC
 
-傳回目前的窗格停駐於另一個窗格時，會建立索引標籤式視窗的執行階段類別資訊。
+返回有關另一個窗格停靠到當前窗格時創建的選項卡式視窗的運行時類資訊。
 
 ```
 CRuntimeClass* GetTabbedPaneRTC() const;
@@ -1072,17 +1072,17 @@ CRuntimeClass* GetTabbedPaneRTC() const;
 
 ### <a name="return-value"></a>傳回值
 
-可停駐窗格執行階段類別資訊。
+可停靠窗格的運行時類資訊。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來擷取索引標籤式窗格，以動態方式建立的執行階段類別資訊。 這可能是當使用者將一個窗格拖曳至標題的另一個窗格中，或如果您呼叫[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法用來以程式設計方式建立索引標籤式的窗格，從兩個可停駐窗格。
+呼叫此方法以檢索動態創建的選項卡式窗格的運行時類資訊。 當使用者將一個窗格拖動到另一個窗格的標題時,或者如果您調用[CDockablePane::AttachToTabWnd](#attachtotabwnd)方法以程式設計方式從兩個可停靠窗格創建選項卡式窗格,則可能發生這種情況。
 
-您可以設定執行階段類別資訊，藉由呼叫[cdockablepane:: Settabbedpanertc](#settabbedpanertc)方法。
+您可以通過調用[CdockablePane::setTabbedPaneRTC](#settabbedpanertc)方法來設置運行時類資訊。
 
-##  <a name="hasautohidemode"></a>  CDockablePane::HasAutoHideMode
+## <a name="cdockablepanehasautohidemode"></a><a name="hasautohidemode"></a>可停靠窗格::具有自動隱藏模式
 
-指定是否可以停駐窗格切換為自動隱藏模式。
+指定停靠窗格是否可以切換到自動隱藏模式。
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -1090,15 +1090,15 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果可停駐窗格可以切換為 自動隱藏模式，則為 TRUE否則為 FALSE。
+如果可停靠窗格可以切換到自動隱藏模式,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-若要停用特定的可停駐窗格的 自動隱藏模式在衍生類別中，這個方法會覆寫。
+在派生類中重寫此方法,以禁用特定可停靠窗格的自動隱藏模式。
 
-##  <a name="hittest"></a>  CDockablePane::HitTest
+## <a name="cdockablepanehittest"></a><a name="hittest"></a>可裝窗格::命中測試
 
-在使用者按一下滑鼠的位置 窗格中指定的位置。
+指定用戶按下滑鼠窗格中的位置。
 
 ```
 virtual int HitTest(
@@ -1108,29 +1108,29 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
-[in]指定要測試的點。
+*點*<br/>
+[在]指定要測試的點。
 
-*bDetectCaption*<br/>
-[in]如果應傳回 HTCAPTION 點位在窗格的標題，則為 TRUE否則為 FALSE。
+*B 偵測標題*<br/>
+[在]如果點位於窗格的標題上,則應返回 HTCAPTION;否則,FALSE。
 
 ### <a name="return-value"></a>傳回值
 
 下列其中一個值：
 
-- HTNOWHERE 如果*點*不在可停駐窗格。
+- 如果*點*不在可停靠窗格中,則 HTNOWHERE。
 
-- HTCLIENT 如果*點*可停駐窗格的工作區中。
+- 如果*點*位於可停靠窗格的工作區中,則 HTCLIENT。
 
-- HTCAPTION 如果*點*可停駐窗格的標題區域中。
+- 如果*點*位於可停靠窗格的標題區域中,則 HTCAPTION。
 
-- AFX_HTCLOSE 如果*點*位於 [關閉] 按鈕。
+- 如果*點*位於關閉按鈕上,AFX_HTCLOSE。
 
-- HTMAXBUTTON 如果*點*釘選按鈕上。
+- 如果*點*位於引腳按鈕上,則 HTMAXBUTTON。
 
-##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled
+## <a name="cdockablepaneisautohideallenabled"></a><a name="isautohideallenabled"></a>可停靠窗格::自動隱藏已啟用
 
-指出是否停駐窗格和容器中的所有其他窗格可以切換為自動隱藏模式。
+指示是否可以將停靠窗格和容器中的所有其他窗格切換到自動隱藏模式。
 
 ```
 virtual BOOL IsAutohideAllEnabled() const;
@@ -1138,17 +1138,17 @@ virtual BOOL IsAutohideAllEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果可停駐窗格中，並在容器中，所有其他窗格可以切換為 自動隱藏模式，則為 TRUE否則為 FALSE。
+如果可停靠窗格和容器中的所有其他窗格可以切換到自動隱藏模式,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用者會啟用自動隱藏模式時保存停駐的 [釘選] 按鈕，即可**Ctrl**金鑰
+使用者透過按住**Ctrl**鍵時按下停靠引腳按鈕開啟自動隱藏模式
 
-若要啟用或停用此行為，請呼叫[CDockablePane::EnableAutohideAll](#enableautohideall)方法。
+要啟用或禁用此行為,請調用[CdockPane::啟用 AutohideAll](#enableautohideall)方法。
 
-##  <a name="isautohidemode"></a>  CDockablePane::IsAutoHideMode
+## <a name="cdockablepaneisautohidemode"></a><a name="isautohidemode"></a>可停靠窗格::自動隱藏模式
 
-判斷一個窗格是否處於自動隱藏模式。
+確定窗格是否處於自動隱藏模式。
 
 ```
 virtual BOOL IsAutoHideMode() const;
@@ -1156,11 +1156,11 @@ virtual BOOL IsAutoHideMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-自動隱藏模式，可停駐窗格時，則為 TRUE。否則為 FALSE。
+如果可停靠窗格處於自動隱藏模式,則為 TRUE;否則,FALSE。
 
-##  <a name="isdocked"></a>  CDockablePane::IsDocked
+## <a name="cdockablepaneisdocked"></a><a name="isdocked"></a>可裝窗格::已裝
 
-判斷目前的窗格是否停駐。
+確定當前窗格是否停靠。
 
 ```
 virtual BOOL IsDocked() const;
@@ -1168,15 +1168,15 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果可停駐窗格不屬於迷你框架，或是浮動迷你框架與另一個窗格中，則為 TRUE。 如果窗格迷你視窗的子系，而且沒有任何屬於迷你框架的其他窗格中，則為 FALSE。
+如果可停靠窗格不屬於微型框架視窗,或者它與另一個窗格一起浮動在小型框架視窗中,則為 TRUE。 如果窗格是微型框架視窗的子視窗,並且沒有其他窗格屬於微型框架視窗,則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-若要判斷是否停駐於主框架視窗的窗格，請呼叫[CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)。 如果此方法會傳回非 NULL 指標，會窗格停駐於主框架視窗。
+要確定窗格是否停靠到主框架視窗,請呼叫[CdockablePane::取得預設窗格轉換器](#getdefaultpanedivider)。 如果方法返回非 NULL 指標,則窗格將停靠在主框架視窗。
 
-##  <a name="ishideinautohidemode"></a>  CDockablePane::IsHideInAutoHideMode
+## <a name="cdockablepaneishideinautohidemode"></a><a name="ishideinautohidemode"></a>可停靠窗格::ishideinautohide模式
 
-決定的窗格是自動隱藏模式中，如果它是顯示 （或隱藏） 藉由呼叫行為[CDockablePane::ShowPane](#showpane)。
+以呼叫[CDockablePane:::ShowPane,](#showpane)確定處於自動隱藏模式的窗格的行為(如果顯示(或隱藏)。
 
 ```
 virtual BOOL IsHideInAutoHideMode() const;
@@ -1184,19 +1184,19 @@ virtual BOOL IsHideInAutoHideMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果應該隱藏可停駐窗格，在 自動隱藏模式，則為 TRUE否則為 FALSE。
+如果可停靠窗格在自動隱藏模式下應隱藏,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-在 自動隱藏模式中可停駐窗格時，它的行為方式當您呼叫`ShowPane`隱藏或顯示的窗格。 此行為受到靜態成員[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)。 如果這個成員是 TRUE，可停駐窗格和其相關的自動隱藏工具列，或自動隱藏 按鈕會隱藏或顯示當您呼叫`ShowPane`。 否則，可停駐窗格啟用或停用，而且其相關的自動隱藏工具列或 [自動隱藏] 按鈕一律會顯示。
+當可停靠窗格處於自動隱藏模式時,當您調用`ShowPane`以隱藏或顯示窗格時,它的行為方式不同。 此行為由靜態成員[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)控制。 如果此成員為 TRUE,則當您調`ShowPane`用 時,可停靠窗格及其相關的自動隱藏工具列或自動隱藏按鈕將隱藏或顯示。 否則,可停靠窗格將啟動或停用,其相關的自動隱藏工具列或自動隱藏按鈕始終可見。
 
-若要變更個別窗格的預設行為的衍生類別中，這個方法會覆寫。
+重寫派生類中的此方法以更改各個窗格的默認行為。
 
-預設值為`m_bHideInAutoHideMode`為 FALSE。
+的`m_bHideInAutoHideMode`預設值為 FALSE。
 
-##  <a name="isinfloatingmultipaneframewnd"></a>  CDockablePane::IsInFloatingMultiPaneFrameWnd
+## <a name="cdockablepaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>可停靠窗格::在浮動多窗格框架中
 
-指定是否在多窗格框架視窗窗格 ( [CMultiPaneFrameWnd 類別](../../mfc/reference/cmultipaneframewnd-class.md))。
+指定窗格是否位於多窗格框架視窗中[(CMultiPaneFramewnd 類](../../mfc/reference/cmultipaneframewnd-class.md))。
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -1204,13 +1204,13 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格為多窗格框架視窗; 中，則為 TRUE。否則為 FALSE。
+如果窗格位於多窗格框架視窗中,則為 TRUE;如果窗格位於多窗格框架視窗中,則為 TRUE。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isresizable"></a>  CDockablePane::IsResizable
+## <a name="cdockablepaneisresizable"></a><a name="isresizable"></a>可停靠窗格::可調整大小
 
-指定是否可調整大小的窗格。
+指定窗格是否可調整大小。
 
 ```
 virtual BOOL IsResizable() const;
@@ -1218,17 +1218,17 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格為可調整大小;，則為 TRUE。否則為 FALSE。
+如果窗格可調整大小,則為 TRUE;如果窗格可調整大小,則為 TRUE。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-根據預設，可停駐窗格是可調整大小。 若要避免重新調整大小，在衍生類別中置換此方法，並傳回 FALSE。 請注意，則為 FALSE 的值會導致容錯**ASSERT**中[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)。 使用[CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane)改為停駐在父範圍內的窗格。
+默認情況下,可停靠窗格可調整大小。 為了防止調整大小,在派生類中重寫此方法並返回 FALSE。 請注意,FALSE 值會導致[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)中的**ASSERT**失敗。 使用[CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane)改為停靠父幀中的窗格。
 
-無法調整大小的窗格可以兩者皆非浮動，也不進入自動隱藏模式，並會一律位於父框架的外部邊緣。
+無法調整大小的窗格既不能浮動,也不能進入自動隱藏模式,並且始終位於父框架的外邊緣。
 
-##  <a name="istablocationbottom"></a>  CDockablePane::IsTabLocationBottom
+## <a name="cdockablepaneistablocationbottom"></a><a name="istablocationbottom"></a>可停靠窗格::位置位置底部
 
-指定是否位在頂端或底部窗格的索引標籤。
+指定選項卡是位於窗格的頂部還是底部。
 
 ```
 virtual BOOL IsTabLocationBottom() const;
@@ -1236,15 +1236,15 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果索引標籤會位於底部窗格中，則為 TRUE如果索引標籤位於頂端的窗格中，則為 FALSE。
+如果選項卡位於窗格的底部,則為 TRUE;如果選項卡位於窗格的頂部,則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom)。
+有關詳細資訊,請參閱[CTabbedPane::是 Tablocation 底部](../../mfc/reference/ctabbedpane-class.md#istablocationbottom)。
 
-##  <a name="istracked"></a>  CDockablePane::IsTracked
+## <a name="cdockablepaneistracked"></a><a name="istracked"></a>可裝窗格::已追蹤
 
-指定使用者是否正在移動的窗格。
+指定使用者是否移動窗格。
 
 ```
 BOOL IsTracked() const;
@@ -1252,11 +1252,11 @@ BOOL IsTracked() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果正在移動窗格;，則為 TRUE。否則為 FALSE。
+如果正在移動窗格,則為 TRUE;否則,FALSE。
 
-##  <a name="isvisible"></a>  CDockablePane::IsVisible
+## <a name="cdockablepaneisvisible"></a><a name="isvisible"></a>可裝窗格::可見
 
-判斷目前的窗格是否可見。
+確定當前窗格是否可見。
 
 ```
 virtual BOOL IsVisible() const;
@@ -1264,19 +1264,19 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果可停駐窗格是可見的則為 TRUE否則為 FALSE。
+如果可停靠窗格可見,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法，以判斷可停駐窗格是否可見。 您可以使用這個方法，而不是呼叫[CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible)或 WS_VISIBLE 樣式測試。 傳回的可見性狀態取決於是否啟用或停用自動隱藏模式和值[CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)屬性。
+調用此方法以確定可停靠窗格是否可見。 您可以使用此方法,而不是調用[CWnd::是視窗可見或](../../mfc/reference/cwnd-class.md#iswindowvisible)測試WS_VISIBLE樣式。 返回的可見性狀態取決於自動隱藏模式是啟用還是禁用,以及[CdockablePane::isHideInAutoHideMode](#ishideinautohidemode)屬性的值。
 
-如果可停駐窗格處於自動隱藏模式和`IsHideInAutoHideMode`傳回 FALSE 的可見性狀態永遠是 FALSE。
+如果可停靠窗格處於自動隱藏模式並`IsHideInAutoHideMode`返回 FALSE,則可見性狀態始終為 FALSE。
 
-如果可停駐窗格處於自動隱藏模式和`IsHideInAutoHideMode`傳回 TRUE 的可見性狀態取決於最相關的自動隱藏工具列的可見性狀態。
+如果可停靠窗格處於自動隱藏模式並`IsHideInAutoHideMode`返回 TRUE,則可見性狀態取決於相關自動隱藏工具列的可見性狀態。
 
-如果可停駐窗格不是處於自動隱藏模式中，有的可見性狀態會由[CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)方法。
+如果可停靠窗格未處於自動隱藏模式,則可見性狀態由[CBasePane::是可見的](../../mfc/reference/cbasepane-class.md#isvisible)方法確定。
 
-## ##  <a name="loadstate"></a>  CDockablePane::LoadState
+## <a name="---cdockablepaneloadstate"></a>##  <a name="loadstate"></a>可裝窗格::載入狀態
 
 僅供內部使用。 如需詳細資訊，請參閱 Visual Studio 安裝位置下之 VC\atlmfc\src\mfc 資料夾中的原始程式碼。
 
@@ -1288,17 +1288,17 @@ virtual BOOL LoadState(
 );
 ```
 
-##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation
+## <a name="cdockablepanem_bdisableanimation"></a><a name="m_bdisableanimation"></a>可裝窗格::m_bDisableAnimation
 
-指定是否要停用自動隱藏可停駐窗格的動畫。
+指定是否停用可停靠窗格的自動隱藏動畫。
 
 ```
 AFX_IMPORT_DATA static BOOL m_bDisableAnimation;
 ```
 
-##  <a name="m_bhideinautohidemode"></a>  CDockablePane::m_bHideInAutoHideMode
+## <a name="cdockablepanem_bhideinautohidemode"></a><a name="m_bhideinautohidemode"></a>可裝窗格::m_bHideInAutoHideMode
 
-[] 窗格處於自動隱藏模式時，請決定窗格的行為。
+確定窗格處於自動隱藏模式時窗格的行為。
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
@@ -1306,15 +1306,15 @@ AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
 
 ### <a name="remarks"></a>備註
 
-這個值會影響應用程式中的所有停駐窗格。
+此值會影響應用程式中的所有停靠窗格。
 
-如果您將這個成員設定為 TRUE，可停駐窗格為隱藏或顯示其相關的自動隱藏工具列和按鈕，當您呼叫[CDockablePane::ShowPane](#showpane)。
+如果將此成員設置為 TRUE,則當您調用[CDockablePane::ShowPane](#showpane)時,可停靠窗格將隱藏或顯示其相關的自動隱藏工具列和按鈕。
 
-如果您將這個成員設定為 FALSE，可停駐窗格會啟用或停用當您呼叫[CDockablePane::ShowPane](#showpane)。
+如果將此成員設置為 FALSE,則當您調用[CDockablePane::ShowPane](#showpane)時,可停靠窗格將啟動或停用。
 
-##  <a name="m_nslidesteps"></a>  CDockablePane::m_nSlideSteps
+## <a name="cdockablepanem_nslidesteps"></a><a name="m_nslidesteps"></a>可裝窗格::m_nSlideSteps
 
-在 自動隱藏模式中時，請指定動畫速度的窗格。
+指定窗格處於自動隱藏模式時的動畫速度。
 
 ```
 AFX_IMPORT_DATA static int m_nSlideSteps;
@@ -1322,11 +1322,11 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
 
 ### <a name="remarks"></a>備註
 
-如需更快的動畫效果，請降低此值。 如需較慢的動畫效果，增加此值。
+要獲得更快的動畫效果,減小此值。 對於較慢的動畫效果,請增加此值。
 
-##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent
+## <a name="cdockablepaneonafterchangeparent"></a><a name="onafterchangeparent"></a>可停靠窗格::更改後父級
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1334,13 +1334,13 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>參數
 
-[in] *pWndOldParent*<br/>
+[在]*pWndOld 父級*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onafterdockfromminiframe"></a>  CDockablePane::OnAfterDockFromMiniFrame
+## <a name="cdockablepaneonafterdockfromminiframe"></a><a name="onafterdockfromminiframe"></a>可停靠窗格::從 MiniFrame 的後塢站
 
-在框架視窗停駐浮動的停駐列時，由架構呼叫。
+當浮動停靠欄停靠在框架視窗時,由框架調用。
 
 ```
 virtual void OnAfterDockFromMiniFrame();
@@ -1348,11 +1348,11 @@ virtual void OnAfterDockFromMiniFrame();
 
 ### <a name="remarks"></a>備註
 
-根據預設，這個方法沒有任何作用。
+默認情況下,此方法不執行任何操作。
 
-##  <a name="onbeforechangeparent"></a>  CDockablePane::OnBeforeChangeParent
+## <a name="cdockablepaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>可停靠窗格::在更改父級之前打開
 
-架構會呼叫這個方法，然後才會變更窗格的父代。
+框架在更改窗格的父級之前調用此方法。
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1362,21 +1362,21 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>參數
 
-*pWndNewParent*<br/>
-[in]新的父視窗的指標。
+*pWnd 新家長*<br/>
+[在]指向新父視窗的指標。
 
 *bDelay*<br/>
-[in]布林，指定是否要延遲的停駐的配置重新計算，如果未停駐窗格。 如需詳細資訊，請參閱 < [CDockablePane::UndockPane](#undockpane)。
+[在]BOOL,用於指定如果窗格未停靠,是否延遲重新計算停靠佈局。 有關詳細資訊,請參閱[可多克窗格::取消停靠窗格](#undockpane)。
 
 ### <a name="remarks"></a>備註
 
-如果停駐窗格的新父系不允許停駐，這個方法可以卸除的窗格。
+如果窗格停靠,並且新父級不允許停靠,則此方法取消停靠窗格。
 
-如果窗格正在轉換為索引標籤式文件時，這個方法會儲存其最近停駐位置。 架構會使用最新的停駐位置時則會轉換回停駐狀態還原窗格的位置。
+如果窗格正在轉換為選項卡式文件,則此方法將存儲其最近的停靠位置。 框架使用最近的停靠位置在窗格轉換回停靠狀態時還原其位置。
 
-##  <a name="onbeforefloat"></a>  CDockablePane::OnBeforeFloat
+## <a name="cdockablepaneonbeforefloat"></a><a name="onbeforefloat"></a>可停靠窗格::在漂浮前打開
 
-Framework 之前呼叫這個方法窗格轉換為浮點狀態。
+框架在窗格轉換為浮動狀態之前調用此方法。
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1387,22 +1387,22 @@ virtual BOOL OnBeforeFloat(
 ### <a name="parameters"></a>參數
 
 *rectFloat*<br/>
-[in]處於浮動狀態時，指定的位置和大小的窗格。
+[在]指定窗格處於浮動狀態時的位置和大小。
 
-*dockMethod*<br/>
-[in]指定的停駐的方法。 請參閱[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)取得一份可能的值。
+*基方法*<br/>
+[在]指定停靠方法。 有關可能值的清單,請參閱[CPane::DockPane。](../../mfc/reference/cpane-class.md#dockpane)
 
 ### <a name="return-value"></a>傳回值
 
-如果可以浮動窗格;，則為 TRUE。否則為 FALSE。
+如果窗格可以浮動,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-窗格即將浮點數時，這個方法是由架構呼叫。 如果您想要執行任何處理，才能窗格浮動，您可以覆寫這個方法在衍生類別中。
+當窗格即將浮動時,框架將調用此方法。 如果要在窗格浮動之前執行任何處理,則可以在派生類中重寫此方法。
 
-##  <a name="onpressbuttons"></a>  CDockablePane::OnPressButtons
+## <a name="cdockablepaneonpressbuttons"></a><a name="onpressbuttons"></a>可停靠窗格::在按鈕上
 
-當使用者按下標題按鈕而非 AFX_HTCLOSE 和 AFX_HTMAXBUTTON 按鈕時呼叫。
+當使用者按下AFX_HTCLOSE和AFX_HTMAXBUTTON按鈕以外的標題按鈕時調用。
 
 ```
 virtual void OnPressButtons(UINT nHit);
@@ -1411,15 +1411,15 @@ virtual void OnPressButtons(UINT nHit);
 ### <a name="parameters"></a>參數
 
 *nHit*<br/>
-[in]未使用此參數。
+[在]不使用此參數。
 
 ### <a name="remarks"></a>備註
 
-如果您的自訂按鈕加入可停駐窗格的標題，請覆寫這個方法，以接收通知，當使用者按下按鈕時。
+如果將自定義按鈕添加到可停靠窗格的標題中,請重寫此方法,在使用者按下該按鈕時接收通知。
 
-##  <a name="onslide"></a>  CDockablePane::OnSlide
+## <a name="cdockablepaneonslide"></a><a name="onslide"></a>可裝窗格::在滑動
 
-由架構呼叫以動畫顯示的窗格中，以自動隱藏模式時。
+框架調用,在窗格處於自動隱藏模式時為其設置動畫。
 
 ```
 virtual void OnSlide(BOOL bSlideOut);
@@ -1428,15 +1428,15 @@ virtual void OnSlide(BOOL bSlideOut);
 ### <a name="parameters"></a>參數
 
 *bSlideOut*<br/>
-[in]True 表示要顯示的窗格中;如果為 false，則隱藏窗格。
+[在]TRUE 以顯示窗格;FALSE 以隱藏窗格。
 
 ### <a name="remarks"></a>備註
 
-覆寫此方法在衍生類別來實作自訂的自動隱藏效果。
+在派生類中重寫此方法以實現自定義自動隱藏效果。
 
-##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier
+## <a name="cdockablepaneremovefromdefaultpanedividier"></a><a name="removefromdefaultpanedividier"></a>可停靠窗格::從預設窗格迪迪迪爾中刪除
 
-當窗格能卸除時，架構會呼叫這個方法。
+當取消停靠窗格時,框架調用此方法。
 
 ```
 void RemoveFromDefaultPaneDividier();
@@ -1444,11 +1444,11 @@ void RemoveFromDefaultPaneDividier();
 
 ### <a name="remarks"></a>備註
 
-這個方法會設定為 NULL 的預設值 窗格分割線，並從其容器中移除窗格。
+此方法將預設窗格分隔符設定為 NULL,並從其容器中刪除窗格。
 
-##  <a name="replacepane"></a>  CDockablePane::ReplacePane
+## <a name="cdockablepanereplacepane"></a><a name="replacepane"></a>可裝窗格::取代窗格
 
-取代指定的窗格中的窗格。
+將窗格替換為指定的窗格。
 
 ```
 BOOL ReplacePane(
@@ -1459,22 +1459,22 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>參數
 
-*pBarToReplaceWith*<br/>
-[in]指標，可停駐窗格。
+*pbarto 取代為*<br/>
+[在]指向可停靠窗格的指標。
 
-*dockMethod*<br/>
-[in]不使用。
+*基方法*<br/>
+[在]未使用。
 
-*bRegisterWithFrame*<br/>
-[in]如果為 TRUE，新的窗格會向父代的舊窗格停駐的管理員。 舊的窗格，窗格停駐的管理員所維護的清單中的索引處插入新的窗格。
+*b 註冊與框架*<br/>
+[在]如果為 TRUE,則新窗格將註冊到舊窗格的父窗格的停靠管理器。 新窗格將插入到停靠管理器維護的窗格清單中的舊窗格的索引中。
 
 ### <a name="return-value"></a>傳回值
 
-如果取代成功，則為 TRUE否則為 FALSE。
+如果更換成功,則為 TRUE;否則,FALSE。
 
-##  <a name="restoredefaultpanedivider"></a>  CDockablePane::RestoreDefaultPaneDivider
+## <a name="cdockablepanerestoredefaultpanedivider"></a><a name="restoredefaultpanedivider"></a>可停靠窗格::回復預設窗格分隔符
 
-當還原序列化的窗格時，架構會呼叫這個方法，以還原預設的窗格分割線。
+當窗格反序列化時,框架調用此方法來還原預設窗格分隔符。
 
 ```
 void RestoreDefaultPaneDivider();
@@ -1482,11 +1482,11 @@ void RestoreDefaultPaneDivider();
 
 ### <a name="remarks"></a>備註
 
-還原的預設的窗格分割線會取代目前的預設值 窗格分割線，若有的話。
+還原的預設窗格分隔符將替換當前預設窗格分隔符(如果存在)。
 
-##  <a name="setautohidemode"></a>  CDockablePane::SetAutoHideMode
+## <a name="cdockablepanesetautohidemode"></a><a name="setautohidemode"></a>可停靠窗格::設定自動隱藏模式
 
-切換之間顯示停駐窗格和 自動隱藏模式。
+在可見模式和自動隱藏模式之間切換停靠窗格。
 
 ```
 virtual CMFCAutoHideBar* SetAutoHideMode(
@@ -1499,30 +1499,30 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ### <a name="parameters"></a>參數
 
 *bMode*<br/>
-[in]TRUE 表示啟用自動隱藏模式;若要啟用一般停駐的模式，則為 FALSE。
+[在]TRUE 以啟用自動隱藏模式;FALSE 以啟用常規停靠模式。
 
-*dwAlignment*<br/>
-[in]指定要建立的 [自動隱藏] 窗格的對齊方式。
+*dwalignment*<br/>
+[在]指定要建立的自動隱藏窗格的對齊方式。
 
-*pCurrAutoHideBar*<br/>
-[in、 out]在目前的自動隱藏工具列的指標。 可以是 NULL。
+*pCurrAutoHidebar*<br/>
+[進出]指向目前自動隱藏工具列的指標。 可以是 NULL。
 
 *bUseTimer*<br/>
-[in]指定要使用的自動隱藏 」 效果，當使用者將窗格切換為自動隱藏模式還是要立即隱藏窗格。
+[在]指定使用者在將窗格切換到自動隱藏模式時是否使用自動隱藏效果,還是立即隱藏窗格。
 
 ### <a name="return-value"></a>傳回值
 
-自動隱藏工具列切換到 自動隱藏模式中，則為 NULL 的結果所建立。
+由於切換到自動隱藏模式或 NULL 而建立的自動隱藏工具列。
 
 ### <a name="remarks"></a>備註
 
-當使用者按一下釘選按鈕，切換為自動隱藏模式或一般停駐模式的可停駐窗格時，架構會呼叫這個方法。
+當用戶按下針腳按鈕將可停靠窗格切換到自動隱藏模式或常規停靠模式時,框架將調用此方法。
 
-呼叫這個方法來以程式設計方式將可停駐窗格切換為自動隱藏模式。 必須停駐窗格中，於主框架視窗 ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)必須傳回的有效指標[CPaneDivider](../../mfc/reference/cpanedivider-class.md))。
+呼叫此方法以程式設計方式將可停靠窗格切換到自動隱藏模式。 窗格必須停靠到主框架視窗[(CDockable Pane::GetDefaultPaneDivider](#getdefaultpanedivider)必須返回指向[CPaneDivider](../../mfc/reference/cpanedivider-class.md)的有效指標)。
 
-##  <a name="setautohideparents"></a>  CDockablePane::SetAutoHideParents
+## <a name="cdockablepanesetautohideparents"></a><a name="setautohideparents"></a>可停靠窗格::設定自動隱藏父
 
-設定自動隱藏按鈕和 [] 窗格中的自動隱藏工具列。
+設定窗格的自動隱藏按鈕和自動隱藏工具列。
 
 ```
 void SetAutoHideParents(
@@ -1533,14 +1533,14 @@ void SetAutoHideParents(
 ### <a name="parameters"></a>參數
 
 *pToolBar*<br/>
-[in]自動隱藏工具列的指標。
+[在]指向自動隱藏工具列的指標。
 
 *pBtn*<br/>
-[in]自動隱藏按鈕的指標。
+[在]指向自動隱藏按鈕的指標。
 
-##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer
+## <a name="cdockablepanesetlastpercentinpanecontainer"></a><a name="setlastpercentinpanecontainer"></a>可停靠窗格::設定上位百分比在窗格容器
 
-設定 窗格，則在其容器中所佔的空間百分比。
+設置窗格在其容器中佔用的空間百分比。
 
 ```
 void SetLastPercentInPaneContainer(int n);
@@ -1549,15 +1549,15 @@ void SetLastPercentInPaneContainer(int n);
 ### <a name="parameters"></a>參數
 
 *n*<br/>
-[in]**Int** ，指定在其容器中的窗格中所佔的空間百分比。
+[在]指定窗格在其容器中佔用的空間百分比**的 int。**
 
 ### <a name="remarks"></a>備註
 
-架構會調整版面配置時，使用新值 窗格。
+重新計算佈局時,框架將調整窗格以使用新值。
 
-##  <a name="setrestoreddefaultpanedivider"></a>  CDockablePane::SetRestoredDefaultPaneDivider
+## <a name="cdockablepanesetrestoreddefaultpanedivider"></a><a name="setrestoreddefaultpanedivider"></a>可停靠窗格::設定已回復的預設窗格分隔符
 
-設定還原的預設的窗格分割線。
+設置還原的預設窗格分隔符。
 
 ```
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
@@ -1565,16 +1565,16 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 ### <a name="parameters"></a>參數
 
-*hRestoredSlider*<br/>
-[in]窗格分割線 （滑桿） 控制代碼。
+*h 回復滑動*<br/>
+[在]窗格分隔符(滑塊)的句柄。
 
 ### <a name="remarks"></a>備註
 
-還原序列化的窗格時，會取得還原的預設的窗格分割線。 如需詳細資訊，請參閱 < [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)。
+當窗格反序列化時,將獲取還原的預設窗格分隔符。 有關詳細資訊,請參閱[可多克窗格::還原預設窗格轉換器](#restoredefaultpanedivider)。
 
-##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC
+## <a name="cdockablepanesettabbedpanertc"></a><a name="settabbedpanertc"></a>可停靠窗格::設置塔貝帕內RTC
 
-設定兩個窗格停駐在一起時，會建立索引標籤式視窗的執行階段類別資訊。
+設置兩個窗格停靠在一起時創建的選項卡式視窗的運行時類資訊。
 
 ```
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
@@ -1583,23 +1583,23 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ### <a name="parameters"></a>參數
 
 *pRTC*<br/>
-[in]索引標籤式窗格執行階段類別資訊。
+[在]選項卡式窗格的運行時類資訊。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來設定索引標籤式窗格，以動態方式建立的執行階段類別資訊。 這可能是當使用者將一個窗格拖曳至標題的另一個窗格中，或如果您呼叫[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法用來以程式設計方式建立索引標籤式的窗格，從兩個可停駐窗格。
+呼叫此方法可為動態創建的選項卡式窗格設置運行時類資訊。 當使用者將一個窗格拖動到另一個窗格的標題時,或者如果您調用[CDockablePane::AttachToTabWnd](#attachtotabwnd)方法以程式設計方式從兩個可停靠窗格創建選項卡式窗格,則可能發生這種情況。
 
-根據設定的預設執行階段類別*dwTabbedStyle*的參數[CDockablePane::Create](#create)並[cdockablepane:: Createex](#createex)。 若要自訂新的索引標籤式的窗格，請從其中一個下列類別衍生您的類別：
+預設執行時類別是根據[「可操作窗格::建立](#create)」和「可裝即用」的*dwTabbedStyle*參數設定的:建立與[可裝窗格:CreateEx](#createex)。 要自訂新的選項卡式窗格,請從以下類之一派生類:
 
 - [CBaseTabbedPane 類別](../../mfc/reference/cbasetabbedpane-class.md)
 
 - [CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)
 
-- [CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)。
+- [CMFCOutlookBar 類](../../mfc/reference/cmfcoutlookbar-class.md).
 
-然後，呼叫這個方法時對其執行階段類別資訊指標。
+然後,使用指向其運行時類資訊的指標調用此方法。
 
-##  <a name="showpane"></a>  CDockablePane::ShowPane
+## <a name="cdockablepaneshowpane"></a><a name="showpane"></a>可裝窗格::顯示窗格
 
 顯示或隱藏窗格。
 
@@ -1612,22 +1612,22 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>參數
 
-*bShow*<br/>
-[in]True 表示要顯示的窗格中;如果為 false，則隱藏窗格。
+*b 顯示*<br/>
+[在]TRUE 以顯示窗格;FALSE 以隱藏窗格。
 
 *bDelay*<br/>
-[in]True 會延遲調整停駐的版面配置。立即調整停駐的配置，則為 FALSE。
+[在]TRUE 延遲調整停靠佈局;FALSE 可立即調整停靠佈局。
 
-*bActivate*<br/>
-[in]若要啟用的窗格顯示; 時，則為 TRUE否則為 FALSE。
+*b 啟動*<br/>
+[在]TRUE 在顯示時啟動窗格;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法，而非[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)顯示或隱藏可停駐窗格時。
+在顯示或隱藏可停靠窗格時調用此方法,而不是[CWnd::ShowWindow。](../../mfc/reference/cwnd-class.md#showwindow)
 
-##  <a name="slide"></a>  CDockablePane::Slide
+## <a name="cdockablepaneslide"></a><a name="slide"></a>可裝窗格::幻燈片
 
-以動畫顯示自動隱藏模式中的窗格。
+為處於自動隱藏模式的窗格設置動畫。
 
 ```
 virtual void Slide(
@@ -1638,20 +1638,20 @@ virtual void Slide(
 ### <a name="parameters"></a>參數
 
 *bSlideOut*<br/>
-[in]True 表示要顯示的窗格中;如果為 false，則隱藏窗格。
+[在]TRUE 以顯示窗格;FALSE 以隱藏窗格。
 
 *bUseTimer*<br/>
-[in]若要顯示或隱藏窗格中的，使用 [自動隱藏] 效果;，則為 TRUE若要顯示或隱藏窗格立即，則為 FALSE。
+[在]TRUE 以顯示或隱藏具有自動隱藏效果的窗格;FALSE 以立即顯示或隱藏窗格。
 
 ### <a name="remarks"></a>備註
 
-架構會呼叫這個方法，以動畫顯示自動隱藏模式中的窗格。
+框架調用此方法為處於自動隱藏模式的窗格設置動畫。
 
-這個方法會使用`CDockablePane::m_nSlideDefaultTimeOut`值，以判斷的投影片效果逾時。 逾時的預設值為 1。 如果您自訂的自動隱藏 」 演算法，修改這個成員，才能變更逾時。
+此方法使用`CDockablePane::m_nSlideDefaultTimeOut`該 值來確定幻燈片效果的超時。 超時的預設值為 1。 如果自定義自動隱藏演演演算法,請修改此成員以更改超時。
 
-##  <a name="toggleautohide"></a>  CDockablePane::ToggleAutoHide
+## <a name="cdockablepanetoggleautohide"></a><a name="toggleautohide"></a>可嵌入窗格:切換自動隱藏
 
-切換 顯示的 之間一律窗格 和 自動隱藏模式。
+在始終可見模式和自動隱藏模式之間切換窗格。
 
 ```
 virtual void ToggleAutoHide();
@@ -1659,11 +1659,11 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>備註
 
-這個方法會切換窗格的 自動隱藏模式藉由呼叫[CDockablePane::SetAutoHideMode](#setautohidemode)。
+此方法通過調用[CdockablePane::setAutoHideMode](#setautohidemode)來切換窗格的自動隱藏模式。
 
-##  <a name="undockpane"></a>  CDockablePane::UndockPane
+## <a name="cdockablepaneundockpane"></a><a name="undockpane"></a>可停靠窗格::未多克窗格
 
-從主框架視窗或迷你視窗容器窗格可以卸除。
+從主框架視窗或小型框架視窗容器取消停靠窗格。
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1672,18 +1672,18 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="parameters"></a>參數
 
 *bDelay*<br/>
-[in]True 會延遲計算停駐的版面配置。若要立即重新計算停駐的配置，則為 FALSE。
+[在]TRUE 延遲計算停靠佈局;FALSE 可立即重新計算停靠佈局。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來取消停駐窗格的主框架視窗或從多個迷你視窗容器 （在單一迷你視窗，內含其他窗格浮動窗格）。
+呼叫此方法從主框架視窗或多微型框架視窗容器(浮動在單個小型框架視窗中與其他窗格的窗格)取消停靠窗格。
 
-您必須取消停駐窗格執行不由執行的任何外部作業之前，先[CDockingManager](../../mfc/reference/cdockingmanager-class.md)。 例如，您必須卸除它以程式設計方式從一個位置移到另一個窗格。
+在執行[CDockingManager](../../mfc/reference/cdockingmanager-class.md)未執行的任何外部操作之前,必須取消停靠窗格。 例如,必須取消停靠窗格,以程式設計方式將其從一個位置移動到另一個位置。
 
-架構會自動取消停駐這些窗格之前終結。
+框架在銷毀窗格之前會自動取消停靠窗格。
 
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CPane 類別](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

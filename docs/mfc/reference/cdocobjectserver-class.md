@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: f4b1a352a9fa62dfcb46d1c1cb0784661e66e5b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd8ddc9f4981b3d9f7f4e1decdf6790cd05b98b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391128"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375485"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 類別
 
@@ -39,33 +39,33 @@ class CDocObjectServer : public CCmdTarget
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|建構 `CDocObjectServer` 物件。|
+|[CDocObject 伺服器:CDocObjectServer](#cdocobjectserver)|建構 `CDocObjectServer` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocObjectServer::ActivateDocObject](#activatedocobject)|會啟用文件物件的伺服器，但不會顯示。|
+|[CDocObject 伺服器:啟用文件物件](#activatedocobject)|激活文檔物件伺服器,但不顯示它。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocObjectServer::OnActivateView](#onactivateview)|顯示 DocObject 檢視表。|
-|[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|還原 DocObject 檢視表的狀態。|
-|[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|儲存 DocObject 檢視表的狀態。|
+|[CDocObject 伺服器:開啟啟動檢視](#onactivateview)|顯示文件物件檢視。|
+|[CDocObject 伺服器:在應用檢視狀態](#onapplyviewstate)|還原文件物件視圖的狀態。|
+|[CDocObject 伺服器::儲存檢視狀態](#onsaveviewstate)|保存文檔物件檢視的狀態。|
 
 ## <a name="remarks"></a>備註
 
-`CDocObjectServer` 衍生自`CCmdTarget`與密切`COleServerDoc`公開的介面。
+`CDocObjectServer`派生自`CCmdTarget`並緊密地`COleServerDoc`與 公開介面。
 
-DocObject 伺服器文件可以包含[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) DocObject 項目代表的伺服器介面的物件。
+DocObject 伺服器文件可以包含[CDocObjectServerItem 物件](../../mfc/reference/cdocobjectserveritem-class.md),這些物件表示文件物件項的伺服器介面。
 
-若要自訂您的 DocObject 伺服器，衍生您自己的類別，從`CDocObjectServer`，並覆寫其檢視設定函式中， [OnActivateView](#onactivateview)， [OnApplyViewState](#onapplyviewstate)，和[OnSaveViewState](#onsaveviewstate). 您必須提供來回架構會呼叫您類別的新執行個體。
+要自訂文件物件伺服器,`CDocObjectServer`請從其檢視設定功能[「啟用」、應用程式](#onactivateview)[檢視](#onapplyviewstate)狀態和[OnSaveViewState](#onsaveviewstate)派生您自己的類並重寫其檢視設定功能。 您需要提供類的新實例來回應框架調用。
 
-如需 DocObjects 的詳細資訊，請參閱[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)並[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 參考 》*。
+有關文件物件的詳細資訊,請參閱*MFC 參考*中的[CDocObjectServerItem 專案和](../../mfc/reference/cdocobjectserveritem-class.md) [COleCmdUI。](../../mfc/reference/colecmdui-class.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -75,11 +75,11 @@ DocObject 伺服器文件可以包含[CDocObjectServerItem](../../mfc/reference/
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdocob.h
+**標題:** afxdocob.h
 
-##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject
+## <a name="cdocobjectserveractivatedocobject"></a><a name="activatedocobject"></a>CDocObject 伺服器:啟用文件物件
 
-呼叫此函式可啟用 （但不是顯示） 的文件物件的伺服器。
+呼叫此函數以啟動(但不顯示)文件物件伺服器。
 
 ```
 void ActivateDocObject();
@@ -87,11 +87,11 @@ void ActivateDocObject();
 
 ### <a name="remarks"></a>備註
 
-`ActivateDocObject` 呼叫`IOleDocumentSite`的`ActivateMe`方法，但不會顯示檢視，因為它會等候特定的指示，有關如何設定及顯示檢視中，指定在呼叫[CDocObjectServer::OnActivateView](#onactivateview)。
+`ActivateDocObject`呼叫`IOleDocumentSite`的方法`ActivateMe`,但不顯示檢視,因為它等待有關如何設定和顯示檢視的特定說明,在呼叫[CDocObjectServer 時給出::OnActivateView](#onactivateview)。
 
-共同`ActivateDocObject`和`OnActivateView`啟動並顯示 DocObject 檢視表。 DocObject 啟用不同於其他類型的 OLE 就地啟用。 DocObject 啟用會略過顯示就地規劃框線和物件 （例如調整大小控點） 的裝飾，忽略物件範圍函式，並繪製捲軸 檢視相對於該矩形 （如同一般外繪製它們之矩形內在就地啟用）。
+一起`ActivateDocObject`,`OnActivateView`並啟動和顯示文件物件檢視。 DocObject 啟動不同於其他類型的 OLE 就地啟動。 DocObject 啟動繞過顯示就地填充邊框和物件修飾(如大小調整控點),忽略物件範圍函數,並在檢視矩形中繪製滾動條,而不是將其繪製到該矩形之外(如正常就地啟動)。
 
-##  <a name="cdocobjectserver"></a>  CDocObjectServer::CDocObjectServer
+## <a name="cdocobjectservercdocobjectserver"></a><a name="cdocobjectserver"></a>CDocObject 伺服器:CDocObjectServer
 
 建構並初始化 `CDocObjectServer` 物件。
 
@@ -104,18 +104,18 @@ explicit CDocObjectServer(
 ### <a name="parameters"></a>參數
 
 *pOwner*<br/>
-是 DocObject 伺服器的用戶端的用戶端站台文件指標。
+指向用戶端網站文件的指標,該文檔是 DocObject 伺服器的用戶端。
 
 *pDocSite*<br/>
-指標`IOleDocumentSite`容器所實作的介面。
+指向容器實現的`IOleDocumentSite`介面的指標。
 
 ### <a name="remarks"></a>備註
 
-DocObject 作用中時，用戶端站台 OLE 介面 ( `IOleDocumentSite`) 可讓 DocObject 伺服器通訊使用其用戶端 （容器）。 DocObject 伺服器啟動時，它會先檢查容器實作`IOleDocumentSite`介面。 如果是的話[COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver)稱為容器是否支援 DocObjects。 根據預設，`GetDocObjectServer`會傳回 NULL。 您必須覆寫`COleServerDoc::GetDocObjectServer`用以建構新`CDocObjectServer`物件或衍生您自己的資源，以指向的物件`COleServerDoc`容器並將其`IOleDocumentSite`做為建構函式的引數的介面。
+當 DocObject 處於活動狀態時,用戶端網站`IOleDocumentSite`OLE 介面 ( ) 是允許 DocObject 伺服器與其用戶端(容器)通信的原因。 啟動 DocObject 伺服器時,它首先檢查容器`IOleDocumentSite`是否實現了介面。 如果是這樣,則調用[COleServerDoc:getDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver)以檢視容器是否支援文件物件。 預設情況下,`GetDocObjectServer`傳回 NULL。 必須重寫`COleServerDoc::GetDocObjectServer`以建構自己的`CDocObjectServer`新 物件或派生物件,`COleServerDoc`並將指向`IOleDocumentSite`容器及其 介面的指標作為構造函數的參數。
 
-##  <a name="onactivateview"></a>  CDocObjectServer::OnActivateView
+## <a name="cdocobjectserveronactivateview"></a><a name="onactivateview"></a>CDocObject 伺服器:開啟啟動檢視
 
-呼叫此函式可顯示 DocObject 檢視表。
+呼叫此函數以顯示文件物件檢視。
 
 ```
 virtual HRESULT OnActivateView();
@@ -123,15 +123,15 @@ virtual HRESULT OnActivateView();
 
 ### <a name="return-value"></a>傳回值
 
-會傳回錯誤或警告的值。 根據預設，會傳回 NOERROR 如果登錄成功。否則，E_FAIL。
+返回錯誤或警告值。 默認情況下,如果成功,則返回 NOERROR;否則,E_FAIL。
 
 ### <a name="remarks"></a>備註
 
-此函式建立的就地框架視窗、 繪製捲軸檢視內、 設定伺服器以其容器的共用、 加入框架控制項、 設定作用中的物件，則最後的就地框架視窗會顯示，並將焦點設定功能表。
+此函數創建一個就地框架視窗,在檢視中繪製滾動條,設置伺服器與其容器共用的功能表,添加幀控制件,設置活動物件,最後顯示就地框架視窗並設置焦點。
 
-##  <a name="onapplyviewstate"></a>  CDocObjectServer::OnApplyViewState
+## <a name="cdocobjectserveronapplyviewstate"></a><a name="onapplyviewstate"></a>CDocObject 伺服器:在應用檢視狀態
 
-覆寫這個函式來還原 DocObject 檢視表的狀態。
+重寫此函數以還原文件物件檢視的狀態。
 
 ```
 virtual void OnApplyViewState(CArchive& ar);
@@ -140,17 +140,17 @@ virtual void OnApplyViewState(CArchive& ar);
 ### <a name="parameters"></a>參數
 
 *ar*<br/>
-A`CArchive`要序列化的檢視狀態的物件。
+用於`CArchive`序列化檢視狀態的物件。
 
 ### <a name="remarks"></a>備註
 
-當第一次在其執行個體化之後顯示的檢視時，會呼叫此函數。 `OnApplyViewState` 會指示檢視，以重新初始化本身中的資料根據`CArchive`先前所儲存的物件[OnSaveViewState](#onsaveviewstate)。 檢視必須驗證中的資料`CArchive`物件，因為容器並不會嘗試解譯以任何方式的檢視狀態資料。
+當視圖在實例化後首次顯示時,將調用此功能。 `OnApplyViewState`指示檢視根據以前與[OnSaveViewState](#onsaveviewstate)一起保存的`CArchive`對象 中的數據重新初始化自身。 視圖必須驗證物件中`CArchive`的數據,因為容器不會嘗試以任何方式解釋視圖狀態數據。
 
-您可以使用`OnSaveViewState`來儲存您的檢視狀態的特定的持續性資訊。 如果您覆寫`OnSaveViewState`來儲存資訊，您會想要覆寫`OnApplyViewState`讀取該資訊，並將它套用至您的檢視中，新啟動時。
+可以使用`OnSaveViewState`來存儲特定於視圖狀態的持久資訊。 如果重寫`OnSaveViewState`以存儲資訊,則需要重`OnApplyViewState`寫 以讀取該資訊,並在視圖新啟動時將其應用於視圖。
 
-##  <a name="onsaveviewstate"></a>  CDocObjectServer::OnSaveViewState
+## <a name="cdocobjectserveronsaveviewstate"></a><a name="onsaveviewstate"></a>CDocObject 伺服器::儲存檢視狀態
 
-覆寫這個函式，以儲存您 DocObject 檢視表的額外狀態資訊。
+重寫此函數以保存有關 DocObject 檢視的額外狀態資訊。
 
 ```
 virtual void OnSaveViewState(CArchive& ar);
@@ -159,13 +159,13 @@ virtual void OnSaveViewState(CArchive& ar);
 ### <a name="parameters"></a>參數
 
 *ar*<br/>
-A`CArchive`来序列化的檢視狀態的物件。
+視圖`CArchive`狀態序列化的物件。
 
 ### <a name="remarks"></a>備註
 
-您的狀態可能包含屬性，例如檢視類型、 比例、 插入和選取範圍點，依此類推。 通常，容器會呼叫此函式之前停用檢視。 稍後可以透過還原的已儲存的狀態[OnApplyViewState](#onapplyviewstate)。
+您的狀態可能包括檢視類型、縮放係數、插入和選擇點等屬性。 容器通常在停用檢視之前調用此函數。 保存的狀態稍後可以通過[OnApplyViewState](#onapplyviewstate)還原。
 
-您可以使用`OnSaveViewState`來儲存您的檢視狀態的特定的持續性資訊。 如果您覆寫`OnSaveViewState`來儲存資訊，您會想要覆寫`OnApplyViewState`讀取該資訊，並將它套用至您的檢視中，新啟動時。
+可以使用`OnSaveViewState`來存儲特定於視圖狀態的持久資訊。 如果重寫`OnSaveViewState`以存儲資訊,則需要重`OnApplyViewState`寫 以讀取該資訊,並在視圖新啟動時將其應用於視圖。
 
 ## <a name="see-also"></a>另請參閱
 

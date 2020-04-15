@@ -132,16 +132,16 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: c301766b64af7fc1523b39adad91d9b52a5e88f7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506601"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373910"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
-封裝用於檔案開啟或檔案儲存作業的通用對話方塊。
+封裝用於檔打開或檔案儲存操作的通用對話方塊。
 
 ## <a name="syntax"></a>語法
 
@@ -153,7 +153,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|建構 `CFileDialog` 物件。|
 
@@ -161,130 +161,130 @@ class CFileDialog : public CCommonDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[CFileDialog::AddCheckButton](#addcheckbutton)|將核取按鈕新增至對話方塊。|
-|[CFileDialog::AddComboBox](#addcombobox)|將下拉式方塊加入至對話方塊。|
-|[CFileDialog::AddControlItem](#addcontrolitem)|將專案加入至對話方塊中的容器控制項。|
-|[CFileDialog::AddEditBox](#addeditbox)|將編輯方塊新增至對話方塊。|
-|[CFileDialog::AddMenu](#addmenu)|將功能表加入至對話方塊。|
-|[CFileDialog::AddPlace](#addplace)|多載。 將資料夾新增至可讓使用者開啟或儲存專案的位置清單。|
-|[CFileDialog::AddPushButton](#addpushbutton)|將按鈕加入至對話方塊。|
-|[CFileDialog::AddRadioButtonList](#addradiobuttonlist)|將選項按鈕 (也稱為選項按鈕) 群組新增至對話方塊。|
-|[CFileDialog::AddSeparator](#addseparator)|在對話方塊中加入分隔符號。|
-|[CFileDialog::AddText](#addtext)|將文字內容新增至對話方塊。|
-|[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)|更新的`CFileDialog`狀態, 以符合儲存`m_ofn`在成員變數中的參數和旗標。|
-|[CFileDialog::DoModal](#domodal)|顯示對話方塊, 並讓使用者進行選取。|
-|[CFileDialog::EnableOpenDropDown](#enableopendropdown)|啟用對話方塊中 [**開啟**] 或 [**儲存**] 按鈕上的下拉式清單。|
-|[CFileDialog::EndVisualGroup](#endvisualgroup)|停止將專案新增至對話方塊中的視覺效果群組。|
-|[CFileDialog::GetCheckButtonState](#getcheckbuttonstate)|取得對話方塊中複選按鈕 (核取方塊) 的目前狀態。|
-|[CFileDialog::GetControlItemState](#getcontrolitemstate)|取得在對話方塊中找到之容器控制項內專案的目前狀態。|
-|[CFileDialog::GetControlState](#getcontrolstate)|取得指定控制項的目前可見度和已啟用狀態。|
-|[CFileDialog::GetEditBoxText](#geteditboxtext)|取得編輯方塊控制項中的目前文字。|
-|[CFileDialog::GetFileExt](#getfileext)|傳回所選取檔案的副檔名。|
-|[CFileDialog::GetFileName](#getfilename)|傳回選取之檔案的檔案名。|
-|[CFileDialog::GetFileTitle](#getfiletitle)|傳回選取之檔案的標題。|
-|[CFileDialog::GetFolderPath](#getfolderpath)|抓取目前開啟的資料夾或目錄的路徑, 以取得 Explorer 樣式的**開啟**或**另存為**通用對話方塊。|
-|[CFileDialog::GetIFileDialogCustomize](#getifiledialogcustomize)|抓取自訂`CFileDialog`物件的內部 COM 物件。|
-|[CFileDialog::GetIFileOpenDialog](#getifileopendialog)|針對`CFileDialog`當做 [**開啟**檔案] 對話方塊使用的, 抓取的內部 COM 物件。|
-|[CFileDialog::GetIFileSaveDialog](#getifilesavedialog)|抓取當做 [**儲存**盤案] `CFileDialog`對話方塊使用之的內部 COM 物件。|
-|[CFileDialog::GetNextPathName](#getnextpathname)|傳回下一個選取之檔案的完整路徑。|
-|[CFileDialog::GetOFN](#getofn)|抓取物件`CFileDialog`的結構。 `OPENFILENAME`|
-|[CFileDialog::GetPathName](#getpathname)|傳回選取之檔案的完整路徑。|
-|[CFileDialog::GetReadOnlyPref](#getreadonlypref)|傳回所選取檔案的唯讀狀態。|
-|[CFileDialog::GetResult](#getresult)|取得使用者在對話方塊中所做的選擇。|
-|[CFileDialog::GetResults](#getresults)|在允許多重選取的對話方塊中, 取得使用者的選擇。|
-|[CFileDialog::GetSelectedControlItem](#getselectedcontrolitem)|從對話方塊中指定的容器控制項取得特定專案。|
-|[CFileDialog::GetStartPosition](#getstartposition)|傳回檔案名清單中第一個元素的位置。|
-|[CFileDialog::HideControl](#hidecontrol)|在 Explorer 樣式的 [**開啟**] 或 [**另存為**通用] 對話方塊中隱藏指定的控制項。|
-|[CFileDialog::IsPickFoldersMode](#ispickfoldersmode)|判斷資料夾選擇器模式中目前的對話方塊。|
-|[CFileDialog::MakeProminent](#makeprominent)|將控制項放在對話方塊中, 以便與其他加入的控制項相對應。|
-|[CFileDialog::RemoveControlItem](#removecontrolitem)|從對話方塊中的容器控制項移除專案。|
-|[CFileDialog::SetCheckButtonState](#setcheckbuttonstate)|設定對話方塊中複選按鈕 (核取方塊) 的目前狀態。|
-|[CFileDialog::SetControlItemState](#setcontrolitemstate)|設定在對話方塊中找到之容器控制項內專案的目前狀態。|
-|[CFileDialog::SetControlItemText](#setcontrolitemtext)|設定控制項專案的文字。 例如, 出現在功能表中的選項按鈕或專案的文字。|
-|[CFileDialog::SetControlLabel](#setcontrollabel)|設定與控制項相關聯的文字, 例如按鈕文字或編輯方塊標籤。|
-|[CFileDialog::SetControlState](#setcontrolstate)|設定指定控制項的目前可見度和已啟用狀態。|
-|[CFileDialog::SetControlText](#setcontroltext)|在 [Explorer] 樣式的 [**開啟**] 或 [**另存為**通用] 對話方塊中, 設定指定之控制項的文字。|
-|[CFileDialog::SetDefExt](#setdefext)|為 Explorer 樣式的**開啟**或 [**另存為**通用] 對話方塊設定預設的副檔名。|
-|[CFileDialog::SetEditBoxText](#seteditboxtext)|設定編輯方塊控制項中的目前文字。|
-|[CFileDialog::SetProperties](#setproperties)|提供屬性儲存區，可定義要用於所儲存之項目的預設值。|
-|[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|設定選項按鈕群組中特定專案的選取狀態, 或在對話方塊中找到的下拉式方塊。|
-|[CFileDialog::SetTemplate](#settemplate)|設定`CFileDialog`物件的對話方塊範本。|
-|[CFileDialog::StartVisualGroup](#startvisualgroup)|在對話方塊中宣告視覺效果群組。 後續呼叫任何 "add" 方法會將這些元素新增至此群組。|
-|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|更新儲存在`m_ofn`成員變數中的資料, 以符合 [檔案] 對話方塊的目前狀態。|
+|[檔案對話::新增檢查按鈕](#addcheckbutton)|向對話框添加檢查按鈕。|
+|[檔案對話::新增康博盒](#addcombobox)|向對話框添加組合框。|
+|[檔案對話::新增控制項目](#addcontrolitem)|將項添加到對話方塊中的容器控制項。|
+|[檔案對話::新增編輯框](#addeditbox)|向對話框添加編輯框。|
+|[檔案對話::新增選單](#addmenu)|向對話框添加功能表。|
+|[檔案對話::新增位置](#addplace)|已多載。 將資料夾添加到可供使用者打開或儲存專案的地方清單中。|
+|[檔案對話::新增按鈕](#addpushbutton)|向對話框添加一個按鈕。|
+|[檔案對話::新增無線按鈕清單](#addradiobuttonlist)|向對話框添加選項按鈕(也稱為單選按鈕)組。|
+|[檔案對話::新增分離器](#addseparator)|向對話框添加分隔符。|
+|[檔案對話::新增文字](#addtext)|將文字內容添加到對話框中。|
+|[檔案對話::應用ofntoshell對話](#applyofntoshelldialog)|更新`CFileDialog`的狀態 以匹配存儲在成員變數`m_ofn`中的 參數和標誌。|
+|[檔案對話::Do 模態](#domodal)|顯示對話框,並允許用戶進行選擇。|
+|[檔案對話:開啟開啟下拉](#enableopendropdown)|在對話框中的 **「打開**」 或「**儲存」** 按鈕上啟用下拉清單。|
+|[檔案對話::結束視覺群組](#endvisualgroup)|停止向對話框中的可視組添加元素。|
+|[檔案對話::抓取檢查按鈕狀態](#getcheckbuttonstate)|獲取對話框中的複選框(複選框)的當前狀態。|
+|[檔案對話框:抓取控制項目狀態](#getcontrolitemstate)|獲取對話框中找到的容器控制件中的項目的當前狀態。|
+|[檔案對話::取得控制狀態](#getcontrolstate)|獲取給定控制件的目前可見性和啟用狀態。|
+|[檔案對話::取得編輯框文字](#geteditboxtext)|取得編輯框控制檔中的目前文字。|
+|[檔案對話::取得檔案Ext](#getfileext)|返回所選檔的副檔名。|
+|[檔案對話::取得檔案名稱](#getfilename)|返回所選檔的檔名。|
+|[檔案對話::取得檔案標題](#getfiletitle)|返回所選檔的標題。|
+|[檔案對話::抓取資料夾路徑](#getfolderpath)|檢索目前打開的資料夾或目錄的路徑,用於資源管理器樣式**的"打開**"或 **"另存為**常見"對話方塊。|
+|[檔案對話::取得檔案對話自訂](#getifiledialogcustomize)|檢索自定義`CFileDialog`物件的內部 COM 物件。|
+|[檔案對話::取得I檔案開啟對話框](#getifileopendialog)|檢索用作打開檔案對話方塊的內部`CFileDialog`COM**Open**物件。|
+|[檔案對話::取得I檔案儲存對話框](#getifilesavedialog)|檢索用作 **「保存**檔案」對話`CFileDialog`框的內部 COM 物件。|
+|[檔案對話::抓取下一個路徑名稱](#getnextpathname)|返回下一個選定檔的完整路徑。|
+|[檔案對話::GetOFN](#getofn)|檢索物件`OPENFILENAME`的結構`CFileDialog`。|
+|[檔案對話::抓取路徑名稱](#getpathname)|返回所選檔的完整路徑。|
+|[檔案對話::取得唯讀](#getreadonlypref)|返回所選檔的唯讀狀態。|
+|[檔案對話::抓取結果](#getresult)|獲取使用者在對話框中所做的選擇。|
+|[檔案對話::抓取結果](#getresults)|在允許多次選擇的對話框中獲取用戶的選擇。|
+|[檔案對話::取得所選取的控制項目](#getselectedcontrolitem)|從對話框中的指定容器控制件獲取特定項。|
+|[檔案對話::抓取起始位置](#getstartposition)|傳回檔案名清單的第一個元素的位置。|
+|[檔案對話::隱藏控制](#hidecontrol)|在資源管理器樣式 **「打開**」 或「**儲存為**常見」 對話方塊中隱藏指定的控制項。|
+|[檔案對話框::正在選取資料夾模式](#ispickfoldersmode)|確定當前對話框是否處於資料夾選取器模式。|
+|[檔案對話::製作突出](#makeprominent)|在對話框中放置控制項,使其與其他添加的控制項相比脫穎而出。|
+|[檔案對話::移除控制項目](#removecontrolitem)|從對話方塊中的容器控制件中刪除項。|
+|[檔案對話::設定檢查按鈕狀態](#setcheckbuttonstate)|設置對話框中複選框(複選框)的當前狀態。|
+|[檔案對話框::設定控制項狀態](#setcontrolitemstate)|設置對話框中容器控制項中的項目的當前狀態。|
+|[檔案對話::設定控制項目文字](#setcontrolitemtext)|設定控制項項的文字。 例如,帶有單選按鈕或功能表中的專案的文本。|
+|[檔案對話::設定控制標籤](#setcontrollabel)|設置與控制項關聯的文字,如按鈕文本或編輯框標籤。|
+|[檔案對話::設定控制狀態](#setcontrolstate)|設置給定控制件的當前可見性和啟用狀態。|
+|[檔案對話::設定控制文字](#setcontroltext)|在資源管理器樣式的 **「打開**」 或「**儲存為**常見」 對話方塊中設定指定控制項的文字。|
+|[檔案對話::設定DefExt](#setdefext)|設定資源管理員樣式**的「打開**」或「**儲存」** 為「對話框的預設檔案名副檔名。|
+|[檔案對話::設定編輯框文字](#seteditboxtext)|在編輯框控制項中設定目前的文字。|
+|[檔案對話::設定屬性](#setproperties)|提供屬性儲存區，可定義要用於所儲存之項目的預設值。|
+|[檔案對話::設定選擇的控制項目](#setselectedcontrolitem)|在選項按鈕組或對話方塊中找到的組合框中設置特定項的選定狀態。|
+|[檔案對話::設定樣本](#settemplate)|設置`CFileDialog`物件的對話方塊範本。|
+|[檔案對話::開始視覺群組](#startvisualgroup)|在對話框中聲明可視組。 對任何「添加」方法的後續調用將這些元素添加到此組中。|
+|[檔案對話::從 ShellDialog 更新](#updateofnfromshelldialog)|更新儲存在成員變數中`m_ofn`的數據,以匹配文件對話框的當前狀態。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CFileDialog::OnButtonClicked](#onbuttonclicked)|按一下按鈕時呼叫。|
-|[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|已勾選/未核取核取方塊時呼叫。|
-|[CFileDialog::OnControlActivating](#oncontrolactivating)|當控制項處於作用中狀態時呼叫。|
-|[CFileDialog::OnFileNameChange](#onfilenamechange)|處理 WM_NOTIFY CDN_SELCHANGE 訊息。|
-|[CFileDialog::OnFileNameOK](#onfilenameok)|驗證在對話方塊中輸入的檔案名。|
-|[CFileDialog::OnFolderChange](#onfolderchange)|處理 WM_NOTIFY CDN_FOLDERCHANGE 訊息。|
-|[CFileDialog::OnInitDone](#oninitdone)|處理 WM_NOTIFY CDN_INITDONE 訊息。|
-|[CFileDialog::OnItemSelected](#onitemselected)|當選取容器專案時呼叫。|
-|[CFileDialog::OnLBSelChangedNotify](#onlbselchangednotify)|可讓您在檔案選取變更時執行自訂動作。|
-|[CFileDialog::OnShareViolation](#onshareviolation)|處理共用違規。|
-|[CFileDialog::OnTypeChange](#ontypechange)|處理 WM_NOTIFY CDN_TYPECHANGE 訊息。|
+|[檔案對話::點擊按鈕](#onbuttonclicked)|按下按鈕時調用。|
+|[檔案對話::開啟檢查按鈕切換](#oncheckbuttontoggled)|選中/取消選中複選框時調用。|
+|[檔案對話::在控制啟動](#oncontrolactivating)|當控件處於活動狀態時調用。|
+|[檔案對話::檔案名稱變更](#onfilenamechange)|處理WM_NOTIFYCDN_SELCHANGE消息。|
+|[檔案對話::在檔案名稱OK](#onfilenameok)|驗證在對話框中輸入的檔名。|
+|[檔案對話::開啟資料夾變更](#onfolderchange)|處理WM_NOTIFYCDN_FOLDERCHANGE消息。|
+|[檔案對話::OnInitdone](#oninitdone)|處理WM_NOTIFYCDN_INITDONE消息。|
+|[檔案對話::項目選定](#onitemselected)|選擇容器項時調用。|
+|[檔案對話::在LBSel改變通知](#onlbselchangednotify)|允許您在檔案選擇更改時執行自定義操作。|
+|[檔案對話::在共用衝突](#onshareviolation)|處理共用衝突。|
+|[檔案對話::在類型變更上](#ontypechange)|處理WM_NOTIFYCDN_TYPECHANGE消息。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME`結構。 提供基本檔案對話方塊參數的存取權。|
+|[檔案對話::m_ofn](#m_ofn)|窗口`OPENFILENAME`結構。 提供對基本文件對話框參數的訪問。|
 
 ## <a name="remarks"></a>備註
 
-一般檔案對話方塊可讓您以與 Windows 標準一致的方式, 執行檔案選擇對話方塊, 例如**開啟**檔案並**另存**新檔。
+通用檔案對話框允許您以符合 Windows 標準的方式實現檔案選擇對話方塊,例如「**打開檔案和****另存為**」,
 
-您可以使用`CFileDialog`所提供的函式, 也可以從`CFileDialog`衍生您自己的對話方塊類別, 並撰寫符合您需求的函式。 不論是哪一種情況, 這些對話方塊的行為都像標準 MFC 對話方塊, 因為它們衍生自[CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)。 `CFileDialog`依賴 COMMDLG。包含在 Windows 中的 DLL 檔案。
+您可以按照提供的`CFileDialog`建構函數使用,也可以`CFileDialog`從派生您自己的對話方塊類並編寫構造函數以滿足您的需要。 在這兩種情況下,這些對話框將類似於標準 MFC 對話框,因為它們派生自[CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)。 `CFileDialog`依賴於 COMMDLG。包含在 Windows 中的 DLL 檔。
 
-`CFileDialog`與 windows Vista 或更新版本的外觀和功能, 與舊版 windows 不同。 如果程式`CFileDialog`是在 Windows vista 或更新版本下編譯和執行, 則預設會自動使用新的 Windows Vista 或更新版本的樣式, 而不會變更程式碼。 在此函式中使用*bVistaStyle*參數, 以手動覆寫此自動更新。 自動更新的例外狀況是自訂的對話方塊。 它們將不會轉換成新的樣式。 如需有關此函數的詳細資訊, 請參閱[CFileDialog:: CFileDialog](#cfiledialog)。
-
-> [!NOTE]
->  當您使用`CFileDialog`時, 控制項識別碼系統在 windows Vista 或更新版本中與舊版 windows 不同。 您必須先更新程式碼`CFileDialog`中控制項的所有參考, 然後才能從舊版 Windows 移植您的專案。
-
-Windows `CFileDialog` Vista 或更新版本不支援某些方法。 請檢查個別的方法主題, 以取得是否支援該方法的相關資訊。 此外, Windows Vista 或更新版本下不支援下列繼承函式:
-
-- [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
-
-- [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
-
-`CFileDialog`類別的 windows 訊息會根據您使用的作業系統而有所不同。 例如, Windows XP 不支援類別`CFileDialog`的[CDialog:: OnCancel](../../mfc/reference/cdialog-class.md#oncancel)和[CDialog:: OnOK](../../mfc/reference/cdialog-class.md#onok) 。 不過, Windows Vista 和更新版本的作業系統支援它們。 如需所產生之不同訊息和接收順序的詳細資訊, 請參閱[CFileDialog 範例:記錄事件順序](../../overview/visual-cpp-samples.md)。
-
-若要使用`CFileDialog`物件, 請先使用此`CFileDialog`函式建立物件。 在結構化對話方塊之後, 您可以設定或修改[CFileDialog:: m_ofn](#m_ofn)結構中的任何值, 以初始化對話方塊控制項的值或狀態。 結構的類型`OPENFILENAME`為。 `m_ofn` 如需詳細資訊, 請參閱 Windows SDK 中的[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構。
-
-初始化對話方塊控制項之後, 請呼叫[CFileDialog::D omodal](#domodal)方法來顯示對話方塊, 讓使用者可以輸入路徑和檔案名。 `DoModal`傳回使用者是否已按一下 [確定] (IDOK) 或 [取消] (IDCANCEL) 按鈕。 如果`DoModal`傳回 IDOK, 您可以使用其中一個`CFileDialog`公用成員函式來抓取使用者所放入的資訊。
+`CFileDialog` Windows Vista 的外觀和功能都不同於早期版本的 Windows。 如果程式`CFileDialog`在 Windows Vista 或更高版本下編譯和運行,則預設將自動使用新的 Windows Vista 或更高版本樣式,而無需更改代碼。 使用建構函數中的*bVistaStyle*參數手動覆蓋此自動更新。 自動更新的例外情況是自定義對話方塊。 它們不會轉換為新樣式。 有關建構函數的詳細資訊,請參閱[CFileDialog::CFileDialog](#cfiledialog)。
 
 > [!NOTE]
-> 在 Windows Vista 或更新版本中, 對[IFileDialog:: SetFileTypes](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)的多次呼叫會造成錯誤。 `SetFileTypes`針對任何實例`CFileDialog`的第二個呼叫會在 Windows Vista 或更新版本中傳回 E_UNEXPECTED。 某些`CFileDialog`方法函數會`SetFileTypes`呼叫。 例如, `CFileDialog::DoModal`針對相同實例 `CFileDialog`的兩個呼叫會產生[判斷提示](diagnostic-services.md#assert)。
+> 使用 時,Windows Vista或更高版本的 Windows`CFileDialog`中控制項 ID 系統與早期版本的 Windows 不同。 必須先更新對`CFileDialog`代碼中控制件的所有引用,然後才能從早期版本的 Windows 移植專案。
 
-`CFileDialog`包含數個受保護的成員, 可讓您進行共用違規、檔案名驗證和清單方塊變更通知的自訂處理。 這些受保護的成員是回呼函式, 大部分的應用程式都不需要使用, 因為預設處理會自動執行。 這些函式的訊息對應專案並不是必要的, 因為它們都是標準虛擬函數。
+Windows `CFileDialog` Vista 或更高版本不支援某些方法。 有關是否支援該方法的資訊,請查看各個方法主題。 此外,Windows Vista 或更高版本中不支援以下繼承函數:
 
-您可以使用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷對話方塊初始化期間是否發生錯誤, 並深入瞭解錯誤。
+- [CDialog:onInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
 
-`CFileDialog`物件的銷毀會自動處理。 您不需要呼叫[CDialog:: EndDialog](../../mfc/reference/cdialog-class.md#enddialog)。
+- [CDialog::放大縮小字型功能 放大縮小字型功能](../../mfc/reference/cdialog-class.md#onsetfont)
 
-若要讓使用者選取多個檔案, 請在呼叫`DoModal`之前設定 OFN_ALLOWMULTISELECT 旗標。 您必須提供自己的檔案名緩衝區, 以容納傳回的多個檔案名清單。 若要這麼做`m_ofn.lpstrFile` , 請將取代為您已配置之緩衝區的指標, 在`CFileDialog`您建立之後, 但`DoModal`在呼叫之前。
+類的視窗`CFileDialog`消息因您使用的作業系統而異。 例如,Windows XP 不支援[CDialog:::打開取消](../../mfc/reference/cdialog-class.md#oncancel)和[CDialog::類](../../mfc/reference/cdialog-class.md#onok)的`CFileDialog`OnOK。 但是,Windows Vista 和後來的作業系統確實支持它們。 有關產生的不同郵件及其接收順序的詳細資訊,請參閱[CFileDialog 範例:紀錄紀錄事件順序](../../overview/visual-cpp-samples.md)。
 
-此外, 您必須使用`m_ofn.nMaxFile`所指向`m_ofn.lpstrFile`之緩衝區中的字元數來設定。 如果您設定要選取`n`的檔案數目上限, 則所需的緩衝區大小為。 `n * (_MAX_PATH + 1) + 1` 緩衝區中傳回的第一個專案是選取檔案之資料夾的路徑。 針對 Windows Vista 或更新版本的對話方塊, 目錄和檔案名字串會以 null 結束, 最後一個檔案名後面會有額外的 null 字元。 此格式可讓 Explorer 樣式的對話方塊傳回包含空格的長檔名。 若是舊樣式的對話方塊, 目錄和檔案名字串會以空格分隔, 而函式會使用短檔案名來表示檔案名加上空格。
+要使用`CFileDialog`物件,請首先`CFileDialog`使用 建構函數創建物件。 建構對話框後,可以設置或修改[CFileDialog::m_ofn](#m_ofn)結構中的任何值,以初始化對話方塊控制項的值或狀態。 結構`m_ofn`的類型`OPENFILENAME`。 有關詳細資訊,請參閱 Windows SDK 中的[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構。
 
-下列範例示範如何使用緩衝區來取出和列出多個檔案名。
+初始化對話方塊控制項後,呼叫[CFileDialog::DoModal](#domodal)方法以顯示對話方塊,以便用戶可以鍵入路徑和檔名。 `DoModal`返回使用者按下「確定」(IDOK) 還是「取消」(IDCANCEL)按鈕。 如果`DoModal`返回 IDOK,則可以`CFileDialog`使用 其中一個公共成員函數來檢索使用者輸入的資訊。
+
+> [!NOTE]
+> 在 Windows Vista 或更高版本中,多次調用[IFileDialog:設定檔類型](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)會導致錯誤。 對於 任何實`SetFileTypes`例 ,對`CFileDialog`的第二個調用將在 Windows Vista 中返回E_UNEXPECTED或更高版本。 某些`CFileDialog`方法函數呼叫`SetFileTypes`。 例如,對於`CFileDialog::DoModal``CFileDialog`生成[ASSERT](diagnostic-services.md#assert)的相同實體,對
+
+`CFileDialog`包括幾個受保護的成員,允許您自定義處理共用衝突、檔名驗證和列表框更改通知。 這些受保護的成員是大多數應用程式不必使用的回調函數,因為默認處理是自動執行的。 這些函數的消息映射條目是必需的,因為它們是標準虛擬函數。
+
+您可以使用 Windows [CommDlg 擴充錯誤](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)功能來確定在對話方塊的初始化過程中是否發生了錯誤,並瞭解有關該錯誤的詳細資訊。
+
+對象的銷`CFileDialog`毀 會自動處理。 您不必呼叫[CDialog::結束對話](../../mfc/reference/cdialog-class.md#enddialog)。
+
+要允許使用者選擇多個檔,請在調用`DoModal`之前設置OFN_ALLOWMULTISELECT標誌。 您必須提供您自己的檔名緩衝區,以適應返回的多個檔名的清單。 為此,在構造`m_ofn.lpstrFile``CFileDialog`之後,但在調`DoModal`用 之前,使用指向已分配的緩衝區的指標進行替換。
+
+此外,必須使用`m_ofn.nMaxFile``m_ofn.lpstrFile`指向的緩衝區中的字元數進行設置。 如果將要選擇的最大檔案數設定為`n`,則所需的緩衝區大小`n * (_MAX_PATH + 1) + 1`為 。 緩衝區中返回的第一個專案是選擇檔的資料夾的路徑。 對於 Windows Vista 或更高樣式的對話框,目錄和檔名字符串為 null 終止,姓氏後具有額外的空字元。 此格式使資源管理器樣式對話框能夠返回包含空格的長檔名。 對於舊樣式的對話框,目錄和檔名字符串由空格分隔,函數使用短檔名對具有空格的檔名。
+
+下面的範例展示如何使用緩衝區檢索和列出多個檔名。
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 
-若要變更緩衝區大小以回應使用者選取多個檔案名, 您必須從`CFileDialog`衍生新的類別, 並覆寫[CFileDialog:: OnFileNameChange](#onfilenamechange)方法。
+要更改緩衝區大小以回應使用者選擇多個檔名,必須從`CFileDialog` [CFileDialog:::onFileNameChange](#onfilenamechange)方法派生一個新類並重寫。
 
-如果您從`CFileDialog`衍生新的類別, 您可以使用訊息對應來處理任何訊息。 若要擴充預設訊息處理, 請從`CFileDialog`衍生類別, 將訊息對應加入至新的類別, 並提供新訊息的成員函式。 您不需要提供攔截函式來自訂對話方塊。
+如果派生自`CFileDialog`的新類,則可以使用消息映射來處理任何消息。 要擴展預設消息處理,請從`CFileDialog`派生類,向新類添加消息映射,併為新消息提供成員函數。 不必提供挂鉤函數來自定義對話方塊。
 
-若要自訂對話方塊、從`CFileDialog`衍生類別, 請提供自訂對話方塊範本, 並加入訊息對應以處理來自擴充控制項的通知訊息。 將任何未處理的訊息傳遞至基類。 您不需要自訂攔截函式。
+要自定義對話框,請從`CFileDialog`派生類,提供自定義對話方塊樣本,並添加消息映射來處理來自擴展控制項的通知訊息。 將任何未處理的消息傳遞給基類。 您不必自定義挂鉤功能。
 
-當您使用的 Windows Vista 或更新版本的`CFileDialog`樣式時, 無法使用訊息對應和對話方塊範本。 相反地, 您必須使用 COM 介面來進行類似的功能。
+當您使用 Windows Vista`CFileDialog`或更高 樣式時,不能使用消息映射和對話方塊樣本。 相反,您必須將 COM 介面用於類似的功能。
 
-如需如何使用`CFileDialog`的詳細資訊, 請參閱[通用對話方塊類別](../../mfc/common-dialog-classes.md)。
+關於如何使用的詳細資訊`CFileDialog`,請參閱[通用對話方塊類別](../../mfc/common-dialog-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -300,11 +300,11 @@ Windows `CFileDialog` Vista 或更新版本不支援某些方法。 請檢查個
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxdlgs。h
+**標題:** afxdlgs.h
 
-##  <a name="addcheckbutton"></a>CFileDialog:: AddCheckButton
+## <a name="cfiledialogaddcheckbutton"></a><a name="addcheckbutton"></a>檔案對話::新增檢查按鈕
 
-將核取按鈕新增至對話方塊。
+向對話框添加檢查按鈕。
 
 ```
 HRESULT AddCheckButton(
@@ -315,20 +315,20 @@ HRESULT AddCheckButton(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入之複選按鈕的識別碼。
+*德維塞爾*<br/>
+要添加的檢查按鈕的 ID。
 
-*strLabel*<br/>
-核取按鈕名稱。
+*斯特蘭*<br/>
+檢查按鈕名稱。
 
 *bChecked*<br/>
-布林值, 指出核取按鈕的目前狀態。 若已核取, 則為 TRUE;否則為 FALSE
+指示檢查按鈕當前狀態的布爾。 如果選中,為 TRUE;否則
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addcombobox"></a>CFileDialog:: AddComboBox
+## <a name="cfiledialogaddcombobox"></a><a name="addcombobox"></a>檔案對話::新增康博盒
 
-將下拉式方塊加入至對話方塊。
+向對話框添加組合框。
 
 ```
 HRESULT AddComboBox(DWORD dwIDCtl);
@@ -336,14 +336,14 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入之下拉式方塊的識別碼。
+*德維塞爾*<br/>
+要添加的組合框的 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addcontrolitem"></a>CFileDialog:: AddControlItem
+## <a name="cfiledialogaddcontrolitem"></a><a name="addcontrolitem"></a>檔案對話::新增控制項目
 
-將專案加入至對話方塊中的容器控制項。
+將項添加到對話方塊中的容器控制項。
 
 ```
 HRESULT AddControlItem(
@@ -354,20 +354,20 @@ HRESULT AddControlItem(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入專案的容器控制項識別碼。
+*德維塞爾*<br/>
+要將項添加到的容器控制件的 ID。
 
 *dwIDItem*<br/>
-專案的識別碼。
+項目的 ID。
 
-*strLabel*<br/>
+*斯特蘭*<br/>
 專案的文字。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addeditbox"></a>CFileDialog:: AddEditBox
+## <a name="cfiledialogaddeditbox"></a><a name="addeditbox"></a>檔案對話::新增編輯框
 
-將編輯方塊新增至對話方塊。
+向對話框添加編輯框。
 
 ```
 HRESULT AddEditBox(
@@ -377,17 +377,17 @@ HRESULT AddEditBox(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入之編輯方塊的識別碼。
+*德維塞爾*<br/>
+要添加的編輯框的 ID。
 
-*strText*<br/>
-編輯方塊名稱。
+*斯特文字*<br/>
+編輯框名稱。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addmenu"></a>CFileDialog:: AddMenu
+## <a name="cfiledialogaddmenu"></a><a name="addmenu"></a>檔案對話::新增選單
 
-將功能表加入至對話方塊。
+向對話框添加功能表。
 
 ```
 HRESULT AddMenu(
@@ -397,17 +397,17 @@ HRESULT AddMenu(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入之功能表的識別碼。
+*德維塞爾*<br/>
+要添加的功能表的 ID。
 
-*strLabel*<br/>
+*斯特蘭*<br/>
 功能表名稱。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addplace"></a>CFileDialog:: AddPlace
+## <a name="cfiledialogaddplace"></a><a name="addplace"></a>檔案對話::新增位置
 
-將資料夾新增至可讓使用者開啟或儲存專案的位置清單。
+將資料夾添加到可供使用者打開或儲存專案的地方清單中。
 
 ```
 void AddPlace(
@@ -422,19 +422,19 @@ void AddPlace(
 ### <a name="parameters"></a>參數
 
 *lpszFolder*<br/>
-可供使用者使用之資料夾的路徑。 這只能是資料夾。
+要提供給使用者的資料夾的路徑。 這隻能是一個資料夾。
 
-*fdap*<br/>
-指定資料夾放在清單中的位置。
+*達夫普*<br/>
+指定資料夾在清單中的位置。
 
 *psi*<br/>
-代表要提供給使用者之資料夾的 IShellItem 指標。 這只能是資料夾。
+指向 IShellItem 的指標,該指標表示要提供給使用者的資料夾。 這隻能是一個資料夾。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addpushbutton"></a>CFileDialog:: AddPushButton
+## <a name="cfiledialogaddpushbutton"></a><a name="addpushbutton"></a>檔案對話::新增按鈕
 
-將按鈕加入至對話方塊。
+向對話框添加一個按鈕。
 
 ```
 HRESULT AddPushButton(
@@ -444,17 +444,17 @@ HRESULT AddPushButton(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入之按鈕的識別碼。
+*德維塞爾*<br/>
+要添加的按鈕的 ID。
 
-*strLabel*<br/>
+*斯特蘭*<br/>
 按鈕名稱。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addradiobuttonlist"></a>CFileDialog:: AddRadioButtonList
+## <a name="cfiledialogaddradiobuttonlist"></a><a name="addradiobuttonlist"></a>檔案對話::新增無線按鈕清單
 
-將選項按鈕 (也稱為選項按鈕) 群組新增至對話方塊。
+向對話框添加選項按鈕(也稱為單選按鈕)組。
 
 ```
 HRESULT AddRadioButtonList(DWORD dwIDCtl);
@@ -462,14 +462,14 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入之選項按鈕群組的識別碼。
+*德維塞爾*<br/>
+要添加的選項按鈕組的 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addseparator"></a>CFileDialog:: AddSeparator
+## <a name="cfiledialogaddseparator"></a><a name="addseparator"></a>檔案對話::新增分離器
 
-在對話方塊中加入分隔符號。
+向對話框添加分隔符。
 
 ```
 HRESULT AddSeparator(DWORD dwIDCtl);
@@ -477,14 +477,14 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-加入分隔符號的識別碼。
+*德維塞爾*<br/>
+分隔符的 ID 添加。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addtext"></a>CFileDialog:: Shapes.addtext
+## <a name="cfiledialogaddtext"></a><a name="addtext"></a>檔案對話::新增文字
 
-將文字加入至對話方塊。
+將文字添加到對話框中。
 
 ```
 HRESULT AddText(
@@ -494,17 +494,17 @@ HRESULT AddText(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要加入之文字的識別碼。
+*德維塞爾*<br/>
+要添加的文本的 ID。
 
-*strText*<br/>
+*斯特文字*<br/>
 文字名稱。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="applyofntoshelldialog"></a>  CFileDialog::ApplyOFNToShellDialog
+## <a name="cfiledialogapplyofntoshelldialog"></a><a name="applyofntoshelldialog"></a>檔案對話::應用ofntoshell對話
 
-根據儲存在`m_ofn`資料結構中的值, 更新[CFileDialog](../../mfc/reference/cfiledialog-class.md)的目前狀態。
+根據`m_ofn`儲存在資料結構中的值更新[CFileDialog](../../mfc/reference/cfiledialog-class.md)的當前狀態。
 
 ```
 void ApplyOFNToShellDialog();
@@ -512,19 +512,19 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>備註
 
-在 Windows Vista 之前的 Windows 版本中, 成員[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))資料結構會持續與的狀態`CFileDialog`同步處理。 [M_ofn](#m_ofn)成員變數的任何變更都會立即反映在對話方塊的狀態中。 此外, 對對話方塊狀態所做的任何變更都會立即更新`m_ofn`成員變數。
+在 Windows Vista 之前的 Windows 版本中,成員[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))數據結構與`CFileDialog`的狀態持續同步。 [對m_ofn](#m_ofn)成員變數的任何更改將立即反映在對話框的狀態中。 此外,對對話框狀態的任何更改都立即更新`m_ofn`成員變數。
 
-在 Windows Vista 或更新版本中, `m_ofn`成員變數中的值和的狀態`CFileDialog`不保證會進行同步處理。 此函式會強制更新的`CFileDialog`狀態, 以`m_ofn`符合結構。 Windows 會在 CFileDialog 期間自動呼叫此函式[::D omodal](#domodal)。
+在 Windows Vista 或更高`m_ofn`版本中, 成員變數`CFileDialog`中的值和 的狀態不保證同步。 此函數強制更新`CFileDialog`的狀態`m_ofn`以匹配 結構。 Windows 在[CFileDialog::Do 模式](#domodal)化 期間自動調用此功能。
 
-如需如何在 Windows Vista 或更新`CFileDialog`版本中使用類別的詳細資訊, 請參閱[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。
+有關如何在 Windows Vista 下`CFileDialog`或以後使用類別的詳細資訊,請參閱[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。
 
 ### <a name="example"></a>範例
 
-  請參閱[CFileDialog:: UpdateOFNFromShellDialog](#updateofnfromshelldialog)的範例。
+  請參考[檔案對話「 的範例: 從 ShellDialog 更新](#updateofnfromshelldialog)。
 
-##  <a name="cfiledialog"></a>CFileDialog:: CFileDialog
+## <a name="cfiledialogcfiledialog"></a><a name="cfiledialog"></a>檔案對話::檔案對話
 
-呼叫此函式可建立標準 Windows 檔案對話方塊。
+調用此函數以建構標準 Windows 檔案對話方塊。
 
 ```
 explicit CFileDialog(
@@ -540,63 +540,63 @@ explicit CFileDialog(
 
 ### <a name="parameters"></a>參數
 
-*bOpenFileDialog*<br/>
-在參數, 指定要建立哪種類型的對話方塊。 將它設定為 TRUE, 以建立 [**開啟**檔案] 對話方塊。 將它設定為 FALSE, 以建立 [檔案**另存**新檔] 對話方塊。
+*b 開啟檔案對話*<br/>
+[在]指定要建立的對話方塊類型的參數。 將設定為 TRUE 以建構**檔案開啟對話**框。 將其設置為 FALSE 以建構**檔案儲存為**對話方塊。
 
 *lpszDefExt*<br/>
-在預設的副檔名。 如果使用者在 [檔案名] 方塊中未包含已知的擴充功能 (與使用者電腦具有關聯性的延伸模組), 則*lpszDefExt*所指定的副檔名會自動附加至檔案名。 如果此參數為 Null, 則不會附加任何延伸模組。
+[在]預設檔名副檔名。 如果使用者在 Filename 框中不包含已知的副檔名(在使用者電腦上具有關聯的擴展名),*則 lpszDefExt*指定的擴展名將自動追加到檔名中。 如果此參數為 NULL,則不附加任何擴展。
 
-*lpszFileName*<br/>
-在出現在 [檔案名] 方塊中的初始檔案名。 如果是 Null, 則不會顯示初始檔案名。
+*lpszFile 名稱*<br/>
+[在]顯示在「檔名」框中的初始檔名。 如果為 NULL,則不顯示初始檔名。
 
 *dwFlags*<br/>
-在一或多個旗標的組合, 可讓您用來自訂對話方塊。 如需這些旗標的說明, 請參閱 Windows SDK 中的[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構。 如果您修改`m_ofn.Flags`結構成員, 請在您的變更中使用位 or 運算子, 讓預設行為保持不變。
+[在]可用於自定義對話框的一個或多個標誌的組合。 有關這些標誌的說明,請參閱 Windows SDK 中的[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構。 如果修改`m_ofn.Flags`結構成員,則在更改中使用位-OR 運算符以保持預設行為不變。
 
 *lpszFilter*<br/>
-在一系列字串組, 指定您可以套用至檔案的篩選準則。 如果您指定檔案篩選, 檔案清單中只會顯示符合篩選準則的檔案。 如需如何使用檔案篩選器的詳細資訊, 請參閱備註一節。
+[在]一系列字串對,用於指定可以應用於檔的篩選器。 如果指定檔案篩選器,則「檔案」清單中將僅顯示與篩選條件匹配的檔。 有關如何使用文件篩選器的詳細資訊,請參閱備註部分。
 
-*pParentWnd*<br/>
-在[檔案] 對話方塊的父代或擁有者視窗的指標。
+*pparentwnd*<br/>
+[在]指向文件對話框的父視窗或所有者視窗的指標。
 
 *dwSize*<br/>
-在`OPENFILENAME`結構的大小。 此值取決於作業系統版本。 MFC 使用此參數來決定要建立的適當類型對話方塊。 預設的大小為 0, 表示 MFC 程式碼會根據程式執行所在的作業系統版本, 決定要使用的正確對話方塊大小。
+[在]`OPENFILENAME`結構的大小。 此值取決於操作系統版本。 MFC 使用此參數確定要創建的相應類型的對話方塊。 默認大小 0 表示 MFC 代碼將根據執行程式的作業系統版本確定要使用的正確對話方塊大小。
 
-*bVistaStyle*<br/>
-在**注意**此參數可在 Visual Studio 2008 和更新版本中使用, 而且只有在 Windows Vista 或更新版本中執行時, 才會使用新樣式的對話方塊。
+*bVista風格*<br/>
+[在]**注意**此參數在 Visual Studio 2008 及更高版本中可用,並且僅在 Windows Vista 中或更高版本中運行時才使用新樣式對話方塊。
 
-指定檔案對話方塊樣式的參數。 將它設定為 TRUE, 以使用新的 Vista 樣式檔案對話方塊。 否則, 將會使用舊樣式的對話方塊。 如需在 Vista 底下執行的詳細資訊, 請參閱備註一節。
+指定檔案對話框樣式的參數。 將其設置為 TRUE 以使用新的 Vista 樣式檔對話方塊。 否則,將使用對話框的舊樣式。 有關在 Vista 下運行的詳細資訊,請參閱備註部分。
 
 ### <a name="remarks"></a>備註
 
-視*bOpenFileDialog*的值而定, 會建立 [檔案**開啟**] 或 [檔案**另存**新檔] 對話方塊。
+根據*bOpenFileDialog*的值,建構**檔案打開**或 **「檔案儲存為**」對話框。
 
-使用*lpszDefExt*指定預設延伸模組可能不會產生您所預期的行為, 因為它不太容易預測哪些擴充功能在使用者的電腦上有檔案關聯。 如果您需要更充分掌控預設延伸模組的附加, 您可以從`CFileDialog`衍生您自己的類別, 並覆`CFileDialog::OnFileNameOK`寫方法來執行您自己的擴充功能處理。
+使用*lpszDefExt*指定預設擴充可能不會產生您期望的行為,因為很少可以預測哪些擴展在使用者的電腦上具有文件關聯。 如果需要對預設擴展的追加進行更多控制,可以從 派`CFileDialog`生 自己的類,並`CFileDialog::OnFileNameOK`重寫 方法以執行自己的擴展處理。
 
-若要讓使用者選取多個檔案, 請在呼叫[DoModal](#domodal)之前設定 OFN_ALLOWMULTISELECT 旗標。 您必須提供自己的檔案名緩衝區來儲存多個檔案名的傳回清單。 若要這麼做`m_ofn.lpstrFile` , 請將取代為您已配置之緩衝區的指標 (在您建立[CFileDialog](../../mfc/reference/cfiledialog-class.md)之後, 但`DoModal`在呼叫之前)。 此外, 您必須使用`m_ofn.nMaxFile`所指向之緩衝區中的字元數`m_ofn.lpstrFile`來設定。 如果您將選取的檔案數目上限設定為*n*, 則必要的緩衝區大小為`n`* (_MAX_PATH + 1) + 1。 例如：
+要使用戶能夠選擇多個檔,請在調用[DoModal](#domodal)之前設置OFN_ALLOWMULTISELECT標誌。 您必須提供自己的檔名緩衝區來存儲返回的多個檔名的清單。 在建構[CFileDialog](../../mfc/reference/cfiledialog-class.md)後,但在`DoModal`調用 之前,使用指向已分配的緩衝區的指標`m_ofn.lpstrFile`進行替換 來執行此操作。 此外,必須使用`m_ofn.nMaxFile`指向`m_ofn.lpstrFile`的緩衝區中的字元數進行設置。 如果將要選擇的最大檔案數設定為*n,* 則必要的緩衝區`n`大小為 *(_MAX_PATH = 1) = 1。 例如：
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 
-若要讓使用者可以使用滑鼠或鍵盤來調整 [Explorer 樣式] 對話方塊的大小, 請設定 OFN_ENABLESIZING 旗標。 只有當您提供攔截程式或自訂範本時, 才需要設定此旗標。 旗標僅適用于 Explorer 樣式的對話方塊;舊樣式的對話方塊無法調整大小。
+要使用戶能夠使用滑鼠或鍵盤調整資源管理器樣式對話方塊的大小,請設置OFN_ENABLESIZING標誌。 僅當提供挂鉤過程或自定義範本時,才需要設置此標誌。 該標誌僅適用於資源管理器樣式對話方塊;因此,該標誌僅適用於"資源管理器"樣式對話方塊。舊樣式對話框無法調整大小。
 
-*LpszFilter*參數是用來判斷檔案必須要顯示在檔案清單中的檔案名類型。 字串配對中的第一個字串描述篩選準則;第二個字串表示要使用的檔案名副檔名。 您可以使用分號 ('; ' 字元) 做為分隔符號來指定多個擴充功能。 字串以兩個 '&#124;' 字元結尾, 後面接著 Null 字元。 您也可以針對此參數使用[CString](../../atl-mfc-shared/using-cstring.md)物件。
+*lpszFilter*參數用於確定文件必須在檔案清單中顯示的檔名的類型。 字串對中的第一個字串描述篩選器;第二個字串指示要使用的檔名副檔名。 可以使用分號(';'字元)作為分隔符來指定多個擴展。 字串以兩個"&#124;"字元結束,後跟 NULL 字元。 也可以為此參數使用[CString](../../atl-mfc-shared/using-cstring.md)物件。
 
-例如, Microsoft Excel 可讓使用者開啟副檔名為 xlc (chart) 或 .xls (工作表) 的檔案。 Excel 的篩選準則可以撰寫為:
+例如,Microsoft Excel 允許使用者打開具有擴充名 .xlc(圖表) 或 .xls(工作表)等的檔。 Excel 的篩選器可以編寫為:
 
 [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]
 
-不過, 如果您打算使用此字串直接更新`OPENFILENAME`結構, 則應使用 null 字元 ' \ 0 ' (而不是分隔號 ('&#124;')) 來分隔字串。
+但是,如果您計劃使用此字串直接更新`OPENFILENAME`結構,則應用 null 字元"\0"而不是垂直條("&#124;")來分隔字串。
 
-只有在 Windows Vista 或更新版本底下執行時, *bVistaStyle*參數才適用。 在舊版的 Windows 下, 會忽略這個參數。 如果*bVistaStyle*設定為 TRUE, 則當您編譯具有 Visual Studio 2008 或更新版本的程式時, 將會使用 [新的 Vista 樣式檔案 **] 對話方塊**。 否則, 將會使用先前的 [MFC 樣式檔案 **] 對話方塊**。
+*bVistaStyle*參數僅在 Windows Vista 下或更高版本運行時才適用。 在早期版本的 Windows 下,將忽略此參數。 如果*bVistaStyle*設定為 TRUE,則當您使用 Visual Studio 2008 或更高版本編譯程式時,將使用新的 Vista 樣式**檔案對話框**。 否則,將使用以前的 MFC 樣式**檔案對話框**。
 
-對話方塊範本在以*bVistaStyle*為基礎的對話上不受支援
+基於*bVistaStyle*的對話框不支援對話框樣本
 
 ### <a name="example"></a>範例
 
-  請參閱[CFileDialog::D omodal](#domodal)的範例。
+  請參考[CFileDialog::Do 模態的範例](#domodal)。
 
-##  <a name="domodal"></a>CFileDialog::D oModal
+## <a name="cfiledialogdomodal"></a><a name="domodal"></a>檔案對話::Do 模態
 
-呼叫此函式以顯示 [Windows 通用檔案] 對話方塊, 並允許使用者流覽檔案和目錄, 然後輸入檔案名。
+呼叫此函數以顯示 Windows 通用檔案對話方塊,並允許使用者瀏覽檔和目錄並輸入檔名。
 
 ```
 virtual INT_PTR DoModal();
@@ -604,27 +604,27 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
+IDOK 或 IDCANCEL。 如果返回 IDCANCEL,請呼叫 Windows [CommDlg 擴充錯誤](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)功能以確定是否發生了錯誤。
 
-IDOK 和 IDCANCEL 是常數, 指出使用者是否選取 [確定] 或 [取消] 按鈕。
+IDOK 和 IDCANCEL 是指示使用者選擇"確定"還是"取消"按鈕的常量。
 
 ### <a name="remarks"></a>備註
 
-如果您想要藉由設定`m_ofn`結構的成員來初始化各種 [檔案] 對話方塊選項, 您應該在呼叫`DoModal`之前執行此動作, 但在構造對話方塊物件之後。
+如果要通過設置`m_ofn`結構成員來初始化各種文件對話框選項,則應在調`DoModal`用 之前執行此操作,但在構造對話框物件之後。
 
-例如, 如果您想要允許使用者選取多個檔案, 請在呼叫`DoModal`之前設定 OFN_ALLOWMULTISELECT 旗標, 如本主題中的程式碼範例所示。
+例如,如果要允許使用者選擇多個檔,請在調用`DoModal`之前設置OFN_ALLOWMULTISELECT標誌,如本主題中的代碼示例所示。
 
-當使用者按一下對話方塊的 [確定] 或 [取消] 按鈕, 或從對話方塊的 [控制項] 功能表中選取 [關閉] 選項時, 控制項就會傳回給您的應用程式。 接著, 您可以呼叫其他成員函式, 以抓取使用者在對話方塊中輸入的設定或資訊。
+當用戶按一下對話方塊的「確定」或「取消」按鈕,或從對話框的控制選單中選擇「關閉」選項時,控制件將返回到應用程式。 然後,您可以調用其他成員函數來檢索用戶輸入到對話方塊中的設置或資訊。
 
-`DoModal`是從類別`CDialog`覆寫的虛擬函式。
+`DoModal`是從類`CDialog`重寫的虛擬函數。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCFiles#25](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]
 
-##  <a name="enableopendropdown"></a>CFileDialog:: EnableOpenDropDown
+## <a name="cfiledialogenableopendropdown"></a><a name="enableopendropdown"></a>檔案對話:開啟開啟下拉
 
-啟用對話方塊中 [開啟] 或 [儲存] 按鈕上的下拉式清單。
+在對話框中的「打開」或「儲存」按鈕上啟用下拉清單。
 
 ```
 HRESULT EnableOpenDropDown(DWORD dwIDCtl);
@@ -632,14 +632,14 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-下拉式清單的識別碼。
+*德維塞爾*<br/>
+下拉清單的 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="endvisualgroup"></a>CFileDialog:: EndVisualGroup
+## <a name="cfiledialogendvisualgroup"></a><a name="endvisualgroup"></a>檔案對話::結束視覺群組
 
-停止將專案新增至對話方塊中的視覺效果群組。
+停止向對話框中的可視組添加元素。
 
 ```
 HRESULT EndVisualGroup();
@@ -647,13 +647,13 @@ HRESULT EndVisualGroup();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則傳回 S_OK;否則為錯誤值。
+如果成功,返回S_OK;否則為錯誤值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getcheckbuttonstate"></a>CFileDialog:: GetCheckButtonState
+## <a name="cfiledialoggetcheckbuttonstate"></a><a name="getcheckbuttonstate"></a>檔案對話::抓取檢查按鈕狀態
 
-抓取對話方塊中複選按鈕 (核取方塊) 的目前狀態。
+檢索對話框中複選框(複選框)的當前狀態。
 
 ```
 HRESULT GetCheckButtonState(
@@ -663,17 +663,17 @@ HRESULT GetCheckButtonState(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-核取方塊的識別碼。
+*德維塞爾*<br/>
+複選框的 ID。
 
 *bChecked*<br/>
-核取方塊的狀態。 TRUE 表示已核取;FALSE 表示未核取。
+複選框的狀態。 TRUE 指示已檢查;FALSE 表示未選中。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getcontrolitemstate"></a>CFileDialog:: GetControlItemState
+## <a name="cfiledialoggetcontrolitemstate"></a><a name="getcontrolitemstate"></a>檔案對話框:抓取控制項目狀態
 
-在對話方塊中找到的容器控制項內, 抓取專案的目前狀態。
+檢索對話框中找到的容器控制件中的項目的當前狀態。
 
 ```
 HRESULT GetControlItemState(
@@ -684,20 +684,20 @@ HRESULT GetControlItemState(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-容器控制項的識別碼。
+*德維塞爾*<br/>
+容器控制項的 ID。
 
 *dwIDItem*<br/>
-專案的識別碼。
+項目的 ID。
 
-*dwState*<br/>
-變數的參考, 會從指出控制項目前狀態的 CDCONTROLSTATE 列舉中, 接收一個以上的值。
+*德沃州*<br/>
+對從 CDCONTROLSTATE 枚舉中接收更多值之一的變數的引用,該引用指示控制項的當前狀態。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getcontrolstate"></a>CFileDialog:: GetControlState
+## <a name="cfiledialoggetcontrolstate"></a><a name="getcontrolstate"></a>檔案對話::取得控制狀態
 
-抓取指定控制項的目前可見度和已啟用狀態。
+檢索給定控制件的當前可見性和啟用狀態。
 
 ```
 HRESULT GetControlState(
@@ -707,17 +707,17 @@ HRESULT GetControlState(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
+*德維塞爾*<br/>
 控制項的識別碼。
 
-*dwState*<br/>
-變數的參考, 從指出控制項目前狀態的 CDCONTROLSTATE 列舉中接收一或多個值。
+*德沃州*<br/>
+對從 CDCONTROLSTATE 枚舉中接收一個或多個值的變數的引用,該枚舉指示控制項的當前狀態。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="geteditboxtext"></a>CFileDialog:: GetEditBoxText
+## <a name="cfiledialoggeteditboxtext"></a><a name="geteditboxtext"></a>檔案對話::取得編輯框文字
 
-抓取編輯方塊控制項中的目前文字。
+檢索編輯框控制件中的目前文字。
 
 ```
 HRESULT GetEditBoxText(
@@ -727,17 +727,17 @@ HRESULT GetEditBoxText(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-編輯方塊的識別碼。
+*德維塞爾*<br/>
+編輯框的識別碼。
 
-*strText*<br/>
+*斯特文字*<br/>
 文字值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getfileext"></a>CFileDialog:: GetFileExt
+## <a name="cfiledialoggetfileext"></a><a name="getfileext"></a>檔案對話::取得檔案Ext
 
-呼叫此函式可抓取在對話方塊中輸入之檔案名的副檔名。
+呼叫此函數以檢索輸入到對話方塊中的檔名的副檔名。
 
 ```
 CString GetFileExt() const;
@@ -745,17 +745,17 @@ CString GetFileExt() const;
 
 ### <a name="return-value"></a>傳回值
 
-檔案名的副檔名。
+檔名的副檔名。
 
 ### <a name="remarks"></a>備註
 
-例如, 如果輸入的檔案名是 DATA。Txt, `GetFileExt`傳回 "TXT"。
+例如,如果輸入的檔的名稱是 DATA。TXT,`GetFileExt`傳回"TXT"。
 
-如果`m_ofn.Flags`已設定 OFN_ALLOWMULTISELECT 旗標, 此字串會包含一連串以 null 結束的字串, 其中第一個字串為所選取檔案群組的目錄路徑, 後面接著使用者選取的所有檔案的名稱。 若要取出檔案路徑路徑, 請使用[GetStartPosition](#getstartposition)和[GetNextPathName](#getnextpathname)成員函式。
+如果`m_ofn.Flags`設定了OFN_ALLOWMULTISELECT標誌,則此字串包含一系列 null 終止字串,第一個字串是所選檔組的目錄路徑,後跟使用者選擇的所有檔案的名稱。 要檢查檔案路徑名稱,請使用[「獲取啟動位置](#getstartposition)」和[「獲取NextPathName」](#getnextpathname)成員函數。
 
-##  <a name="getfilename"></a>CFileDialog:: GetFileName
+## <a name="cfiledialoggetfilename"></a><a name="getfilename"></a>檔案對話::取得檔案名稱
 
-呼叫此函式可抓取在對話方塊中輸入的檔案名。
+呼叫此函數以檢索對話框中輸入的檔名的名稱。
 
 ```
 CString GetFileName() const;
@@ -763,17 +763,17 @@ CString GetFileName() const;
 
 ### <a name="return-value"></a>傳回值
 
-檔案的檔名。
+檔案的名稱。
 
 ### <a name="remarks"></a>備註
 
-檔案的名稱同時包含前置詞和副檔名。 例如, `GetFileName`會傳回「文字」。「DAT」 (適用于 file C:\FILES\TEXT.DAT.)
+檔的名稱包括首碼和副檔名。 例如,`GetFileName`將傳回「TEXT」。檔 C:_FILES_TEXT.DAT 的 DAT"。
 
-如果`m_ofn.Flags`已設定旗標，您應該呼叫 [GetStartPosition](#getstartposition) 和 [GetNextPathName](#getnextpathname) 來取出檔案路徑名稱。`OFN_ALLOWMULTISELECT`
+如果`m_ofn.Flags`設定`OFN_ALLOWMULTISELECT`了 標誌,則應調用[GetStart定位](#getstartposition)和[GetNextPathName 來](#getnextpathname)檢索檔路徑名。
 
-##  <a name="getfiletitle"></a>CFileDialog:: GetFileTitle
+## <a name="cfiledialoggetfiletitle"></a><a name="getfiletitle"></a>檔案對話::取得檔案標題
 
-呼叫此函式可抓取對話方塊中所輸入之檔案的標題。
+呼叫此函式以檢索對話框中輸入的檔案的標題。
 
 ```
 CString GetFileTitle() const;
@@ -785,17 +785,17 @@ CString GetFileTitle() const;
 
 ### <a name="remarks"></a>備註
 
-檔案的標題只包含其前置詞, 不含路徑或副檔名。 例如, `GetFileTitle`將會傳回檔案 C:\FILES\TEXT.DAT. 的 "TEXT"
+檔的標題僅包括其首碼,沒有路徑或副檔名。 例如,`GetFileTitle`將返回檔 C:_FILES_TEXT.DAT 的"TEXT"
 
-如果`m_ofn.Flags`已設定 OFN_ALLOWMULTISELECT 旗標, 此字串會包含一連串以 null 結束的字串, 其中第一個字串為所選取檔案群組的目錄路徑, 後面接著使用者選取的所有檔案的名稱。 基於這個理由, 請使用[GetStartPosition](#getstartposition)和[GetNextPathName](#getnextpathname)成員函式來取出清單中的下一個檔案名。
+如果`m_ofn.Flags`設定了OFN_ALLOWMULTISELECT標誌,則此字串包含一系列 null 終止字串,第一個字串是所選檔組的目錄路徑,後跟使用者選擇的所有檔案的名稱。 因此,請使用[「獲取啟動位置](#getstartposition)」和[「GetNextPathName」](#getnextpathname)成員函數檢索清單中的下一個檔名。
 
 ### <a name="example"></a>範例
 
-  請參閱[CFileDialog::D omodal](#domodal)的範例。
+  請參考[CFileDialog::Do 模態的範例](#domodal)。
 
-##  <a name="getfolderpath"></a>CFileDialog:: GetFolderPath
+## <a name="cfiledialoggetfolderpath"></a><a name="getfolderpath"></a>檔案對話::抓取資料夾路徑
 
-呼叫這個成員函式可抓取目前開啟的資料夾或目錄的路徑, 以取得 Explorer 樣式的開啟或另存為通用對話方塊。
+呼叫此成員函數以檢索資源管理器樣式的"打開"或"保存為通用"對話框的當前打開資料夾或目錄的路徑。
 
 ```
 CString GetFolderPath() const;
@@ -803,17 +803,17 @@ CString GetFolderPath() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件, 其中包含目前開啟的資料夾或目錄。
+包含當前打開的資料夾或目錄的[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-必須使用 OFN_EXPLORER 樣式建立對話方塊;否則, 此方法將會失敗並產生判斷提示。
+對話框必須使用OFN_EXPLORER樣式創建;因此,該對話框必須使用 OFN_EXPLORER 樣式創建。否則,該方法將失敗與斷言。
 
-只有在顯示對話方塊時, 才可以呼叫此方法。 在關閉對話方塊之後, 此函式將不再有效, 而且方法將會失敗並產生判斷提示。
+僅當顯示對話方塊時,才能調用此方法。 關閉對話方塊後,此函數將不再工作,並且該方法將失敗,斷言。
 
-##  <a name="getifiledialogcustomize"></a>CFileDialog:: GetIFileDialogCustomize
+## <a name="cfiledialoggetifiledialogcustomize"></a><a name="getifiledialogcustomize"></a>檔案對話::取得檔案對話自訂
 
-針對給定的[CFileDialog](../../mfc/reference/cfiledialog-class.md), 抓取內部 COM 物件的指標。
+檢索指向給定[CFileDialog](../../mfc/reference/cfiledialog-class.md)的內部 COM 物件的指標。
 
 ```
 IFileDialogCustomize* GetIFileDialogCustomize();
@@ -821,23 +821,23 @@ IFileDialogCustomize* GetIFileDialogCustomize();
 
 ### <a name="return-value"></a>傳回值
 
-之內部 COM 物件`CFileDialog`的指標。 您必須負責適當地釋放此指標。
+指向的內部 COM 物件的`CFileDialog`指標 。 您有責任適當地釋放此指標。
 
 ### <a name="remarks"></a>備註
 
-僅在 Windows Vista 或更新版本中使用此函式, 並將*bVistaStyle*設定為 TRUE 的物件。 如果您在*bVistaStyle*為 FALSE 時使用此函式, 它會在發行模式中傳回 Null, 並在 debug 模式中擲回判斷提示。
+僅在 Windows Vista 下或以後使用將*bVistaStyle*設置為 TRUE 的物件使用此功能。 如果在*bVistaStyle*為 FALSE 時使用此函數,它將在釋放模式下返回 NULL,並在調試模式下引發斷言。
 
-如需`IFileDialogCustomize`介面的詳細資訊, 請參閱[IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
+有關該介面的詳細資訊,`IFileDialogCustomize`請參考[IFileDialog 自訂](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
 
 ### <a name="example"></a>範例
 
-這個範例會抓取內部 COM 物件。 若要執行這個程式碼範例, 您必須在 Windows Vista 或更新版本中進行編譯。
+此示例檢索內部 COM 物件。 要運行此代碼示例,必須在 Windows Vista 或更高版本中編譯它。
 
 [!code-cpp[NVC_MFC_CFileDialog#4](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]
 
-##  <a name="getifileopendialog"></a>CFileDialog:: GetIFileOpenDialog
+## <a name="cfiledialoggetifileopendialog"></a><a name="getifileopendialog"></a>檔案對話::取得I檔案開啟對話框
 
-針對指定`CFileDialog`的, 抓取內部 COM 物件的指標。
+檢索指向給定`CFileDialog`的內部 COM 物件的指標。
 
 ```
 IFileOpenDialog* GetIFileOpenDialog();
@@ -845,23 +845,23 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 ### <a name="return-value"></a>傳回值
 
-之內部 COM 物件`CFileDialog`的指標。 您必須負責適當地釋放此指標。
+指向的內部 COM 物件的`CFileDialog`指標 。 您有責任適當地釋放此指標。
 
 ### <a name="remarks"></a>備註
 
-僅在 Windows Vista 或更新版本中使用此函式, 並將*bVistaStyle*設定為 TRUE 的物件。 如果不是`CFileDialog` **開啟**的對話方塊, 或*bVistaStyle*設定為 FALSE, 則此函式會傳回 Null。 在這最後一個案例中, 函式只會在發行模式中傳回 Null-在 debug 模式中, 它會擲回判斷提示。
+僅在 Windows Vista 下或以後使用將*bVistaStyle*設置為 TRUE 的物件使用此功能。 如果 不是**打開**對話框`CFileDialog`或*bVistaStyle*設置為 FALSE,則此功能將返回 NULL。 在最後情況下,函數僅在釋放模式下返回 NULL - 在調試模式下,它將引發斷言。
 
-如需`IFileOpenDialog`介面的詳細資訊, 請參閱[IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)。
+關於該介面的詳細資訊,`IFileOpenDialog`請參考[IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)。
 
 ### <a name="example"></a>範例
 
-這個範例會抓取內部 COM 物件。 若要執行此程式碼, 您必須在 Windows Vista 或更新版本中進行編譯。
+此示例檢索內部 COM 物件。 要運行此代碼,必須在 Windows Vista 下或更高版本中編譯它。
 
 [!code-cpp[NVC_MFC_CFileDialog#2](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]
 
-##  <a name="getifilesavedialog"></a>CFileDialog:: GetIFileSaveDialog
+## <a name="cfiledialoggetifilesavedialog"></a><a name="getifilesavedialog"></a>檔案對話::取得I檔案儲存對話框
 
-針對指定`CFileDialog`的, 抓取內部 COM 物件的指標。
+檢索指向給定`CFileDialog`的內部 COM 物件的指標。
 
 ```
 IFileSaveDialog* GetIFileSaveDialog();
@@ -869,23 +869,23 @@ IFileSaveDialog* GetIFileSaveDialog();
 
 ### <a name="return-value"></a>傳回值
 
-之內部 COM 物件`CFileDialog`的指標。 您必須負責適當地釋放此指標。
+指向的內部 COM 物件的`CFileDialog`指標 。 您有責任適當地釋放此指標。
 
 ### <a name="remarks"></a>備註
 
-僅在 Windows Vista 或更新版本中使用此函式, 並將*bVistaStyle*設定為 TRUE 的物件。 如果不是 [ `CFileDialog` **儲存**] 對話方塊, 或*bVistaStyle*設定為 FALSE, 則此函式會傳回 Null。 在這最後一個案例中, 函式只會在發行模式中傳回 Null-在 debug 模式中, 它會擲回判斷提示。
+僅在 Windows Vista 下或以後使用將*bVistaStyle*設置為 TRUE 的物件使用此功能。 如果不是 **"保存'** 對話`CFileDialog`框, 或者*bVistaStyle*設置為 FALSE,則此功能將返回 NULL。 在最後情況下,函數僅在釋放模式下返回 NULL - 在調試模式下,它將引發斷言。
 
-如需`IFileSaveDialog`介面的詳細資訊, 請參閱[IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog)。
+有關該介面的詳細資訊,`IFileSaveDialog`請參考[IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog)。
 
 ### <a name="example"></a>範例
 
-這個範例會抓取內部 COM 物件。 若要執行這個程式碼範例, 您必須在 Windows Vista 或更新版本中進行編譯。
+此示例檢索內部 COM 物件。 要運行此代碼示例,必須在 Windows Vista 或更高版本中編譯它。
 
 [!code-cpp[NVC_MFC_CFileDialog#3](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]
 
-##  <a name="getnextpathname"></a>CFileDialog:: GetNextPathName
+## <a name="cfiledialoggetnextpathname"></a><a name="getnextpathname"></a>檔案對話::抓取下一個路徑名稱
 
-呼叫此函式, 以從對話方塊中選取的群組抓取下一個檔案名。
+呼叫此函數從對話框中選擇的組中檢索下一個檔名。
 
 ```
 CString GetNextPathName(POSITION& pos) const;
@@ -893,8 +893,8 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>參數
 
-*採購*<br/>
-先前`GetNextPathName` 或`GetStartPosition`函式呼叫所傳回之位置值的參考。 如果已到達清單的結尾, 則為 Null。
+*Pos*<br/>
+對前一個或多個`GetNextPathName``GetStartPosition`函數調用返回的定位值的引用。 如果已達到清單的末尾,則 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -902,13 +902,13 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="remarks"></a>備註
 
-檔案名的路徑包含檔案的標題加上整個目錄路徑。 例如, `GetNextPathName`會傳回 "C:\FILES\TEXT。「DAT」 (適用于 file C:\FILES\TEXT.DAT.) 如果您使用`GetNextPathName`的呼叫來`GetStartPosition`建立初始位置, 則可以在正向反復專案迴圈中使用。
+檔名的路徑包括檔的標題以及整個目錄路徑。 例如,`GetNextPathName`將返回"C:_FILES_TEXT"檔 C:_FILES_TEXT.DAT 的 DAT"。 如果使用`GetNextPathName`調`GetStartPosition`用 建立初始位置,則可以在轉發反覆運算迴圈中使用。
 
-如果選取專案只包含一個檔案, 就會傳回該檔案名。
+如果所選內容僅包含一個檔,則將返回該檔名。
 
-##  <a name="getofn"></a>CFileDialog:: GetOFN
+## <a name="cfiledialoggetofn"></a><a name="getofn"></a>檔案對話::GetOFN
 
-捕獲關聯`OPENFILENAME`的結構。
+檢索關聯的`OPENFILENAME`結構。
 
 ```
 const OPENFILENAME& GetOFN() const;
@@ -922,11 +922,11 @@ OPENFILENAME& GetOFN();
 
 ### <a name="remarks"></a>備註
 
-使用此函式的第二個版本, 在結構化之後但在`DoModal`顯示成員函式之前, 初始化檔案**開啟**或檔案**另存**新檔對話方塊的外觀。 例如, 您可以將的`lpstrTitle` `m_ofn`成員設定為您要對話方塊擁有的標題。
+使用此函數的第二個版本在建構後,但在使用`DoModal`成員函數顯示之前,初始化**了檔打開**或**檔保存為**對話框的外觀。 例如,您可以將`lpstrTitle`其成員`m_ofn`設置為希望對話方塊具有的標題。
 
-##  <a name="getpathname"></a>CFileDialog:: GetPathName
+## <a name="cfiledialoggetpathname"></a><a name="getpathname"></a>檔案對話::抓取路徑名稱
 
-呼叫此函式可取得在對話方塊中輸入之檔案的完整路徑。
+調用此函數以檢索對話框中輸入的檔的完整路徑。
 
 ```
 CString GetPathName() const;
@@ -938,17 +938,17 @@ CString GetPathName() const;
 
 ### <a name="remarks"></a>備註
 
-檔案名的路徑包含檔案的標題加上整個目錄路徑。 例如, `GetPathName`會傳回 "C:\FILES\TEXT。「DAT」 (適用于 file C:\FILES\TEXT.DAT.)
+檔名的路徑包括檔的標題以及整個目錄路徑。 例如,`GetPathName`將返回"C:_FILES_TEXT"檔 C:_FILES_TEXT.DAT 的 DAT"。
 
-如果`m_ofn.Flags`已設定 OFN_ALLOWMULTISELECT 旗標, 則此字串包含一連串的 teminated 字串, 其中第一個字串為所選取檔案群組的目錄路徑, 後面接著使用者選取的所有檔案的名稱。 基於這個理由, 請使用[GetStartPosition](#getstartposition)和[GetNextPathName](#getnextpathname)成員函式來取出清單中的下一個檔案名。
+如果`m_ofn.Flags`設置了OFN_ALLOWMULTISELECT標誌集,則此字串包含一系列空壓縮字串,第一個字串是所選檔組的目錄路徑,後跟使用者選擇的所有檔的名稱。 因此,請使用[「獲取啟動位置](#getstartposition)」和[「GetNextPathName」](#getnextpathname)成員函數檢索清單中的下一個檔名。
 
 ### <a name="example"></a>範例
 
-  請參閱[CFileDialog::D omodal](#domodal)的範例。
+  請參考[CFileDialog::Do 模態的範例](#domodal)。
 
-##  <a name="getreadonlypref"></a>CFileDialog:: GetReadOnlyPref
+## <a name="cfiledialoggetreadonlypref"></a><a name="getreadonlypref"></a>檔案對話::取得唯讀
 
-呼叫此函式可判斷 [Windows 標準檔案] [開啟] 和 [檔案另存新檔] 對話方塊中是否已選取 [唯讀] 核取方塊。
+呼叫此函數以確定「唯讀」複選框是否已在 Windows 標準檔打開和檔案儲存為對話框中選中。
 
 ```
 BOOL GetReadOnlyPref() const;
@@ -956,18 +956,18 @@ BOOL GetReadOnlyPref() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已選取對話方塊中的 [唯讀] 核取方塊, 則為非零;否則為0。
+如果選擇了對話方塊中的「唯讀」複選框,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-您可以藉由在函式中`CFileDialog`設定 OFN_HIDEREADONLY 樣式, 隱藏 [唯讀] 核取方塊。
+通過在`CFileDialog`建構函數中設置OFN_HIDEREADONLY樣式,可以隱藏"唯讀"複選框。
 
 > [!NOTE]
-> Windows Vista 或更新版本`CFileDialog`的樣式物件不支援此功能。 嘗試在 Windows Vista 或更新版本的樣式`CFileDialog`上使用此函數將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。
+> Windows Vista`CFileDialog`或更高版本的樣式物件不支援此功能。 試著在 Windows Vista 或更高`CFileDialog`版本的樣式 上使用此函數將引發[CNot 支援異常](../../mfc/reference/cnotsupportedexception-class.md)。
 
-##  <a name="getresult"></a>CFileDialog:: GetResult
+## <a name="cfiledialoggetresult"></a><a name="getresult"></a>檔案對話::抓取結果
 
-抓取使用者在對話方塊中所做的選擇。
+檢索用戶在對話框中所做的選擇。
 
 ```
 IShellItem* GetResult() throw();
@@ -975,13 +975,13 @@ IShellItem* GetResult() throw();
 
 ### <a name="return-value"></a>傳回值
 
-代表使用者選擇之 IShellItem 的指標。
+指向表示用戶選擇的 IShellItem 的指標。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getresults"></a>CFileDialog:: GetResults
+## <a name="cfiledialoggetresults"></a><a name="getresults"></a>檔案對話::抓取結果
 
-在允許多重選取的對話方塊中, 抓取使用者的選擇。
+在允許多次選擇的對話框中檢索用戶的選擇。
 
 ```
 IShellItemArray* GetResults() throw();
@@ -989,13 +989,13 @@ IShellItemArray* GetResults() throw();
 
 ### <a name="return-value"></a>傳回值
 
-可存取在對話方塊中選取的專案之 IShellItemArray 的指標。
+指向 IShellItemArray 的指標,透過該指標可以訪問對話框中選擇的專案。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getselectedcontrolitem"></a>CFileDialog:: GetSelectedControlItem
+## <a name="cfiledialoggetselectedcontrolitem"></a><a name="getselectedcontrolitem"></a>檔案對話::取得所選取的控制項目
 
-從對話方塊中指定的容器控制項, 抓取特定專案。
+從對話方塊中的指定容器控制件檢索特定項。
 
 ```
 HRESULT GetSelectedControlItem(
@@ -1005,17 +1005,17 @@ HRESULT GetSelectedControlItem(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-容器控制項的識別碼。
+*德維塞爾*<br/>
+容器控制項的 ID。
 
 *dwIDItem*<br/>
-使用者在控制項中選取之專案的識別碼。
+使用者在控制項中選擇的項的 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getstartposition"></a>CFileDialog:: GetStartPosition
+## <a name="cfiledialoggetstartposition"></a><a name="getstartposition"></a>檔案對話::抓取起始位置
 
-如果`m_ofn.Flags`已設定 OFN_ALLOWMULTISELECT 旗標, 請呼叫此成員函式來抓取清單中第一個檔案路徑名稱的位置。
+如果設定了OFN_ALLOWMULTISELECT標誌,`m_ofn.Flags`則調用此成員函數以檢索清單中第一個檔路徑名的位置。
 
 ```
 POSITION GetStartPosition() const;
@@ -1023,11 +1023,11 @@ POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>傳回值
 
-可以用於反復專案的位置值;如果清單是空的, 則為 Null。
+可用於反覆運算的定位值;如果清單為空,則為 NULL。
 
-##  <a name="hidecontrol"></a>CFileDialog:: HideControl
+## <a name="cfiledialoghidecontrol"></a><a name="hidecontrol"></a>檔案對話::隱藏控制
 
-呼叫這個成員函式可在 Explorer 樣式的 [開啟] 或 [另存為通用] 對話方塊中隱藏指定的控制項。
+呼叫此成員函數以在資源管理器樣式的"打開"或"保存為常見"對話框中隱藏指定的控制項。
 
 ```
 void HideControl(int nID);
@@ -1036,15 +1036,15 @@ void HideControl(int nID);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要隱藏之控制項的識別碼。
+要隱藏的控制項的識別碼。
 
 ### <a name="remarks"></a>備註
 
-必須使用 OFN_EXPLORER 樣式建立對話方塊;否則, 此函式會失敗並產生判斷提示。
+對話框必須使用OFN_EXPLORER樣式創建;因此,該對話框必須使用 OFN_EXPLORER 樣式創建。否則,函數將失敗與斷言。
 
-##  <a name="ispickfoldersmode"></a>CFileDialog:: IsPickFoldersMode
+## <a name="cfiledialogispickfoldersmode"></a><a name="ispickfoldersmode"></a>檔案對話框::正在選取資料夾模式
 
-判斷目前的對話是否處於資料夾選擇器模式。
+確定當前對話框是否處於資料夾選取器模式。
 
 ```
 BOOL IsPickFoldersMode() const;
@@ -1052,23 +1052,23 @@ BOOL IsPickFoldersMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果對話方塊在資料夾選擇器模式中, 則為 TRUE;否則為 FALSE。
+如果對話框處於資料夾選取器模式,則為 TRUE;如果對話框處於資料夾選取器模式。"否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_ofn"></a>CFileDialog:: m_ofn
+## <a name="cfiledialogm_ofn"></a><a name="m_ofn"></a>檔案對話::m_ofn
 
-`m_ofn`是類型`OPENFILENAME`的結構。 此結構中的資料代表的目前狀態`CFileDialog`。
+`m_ofn`是類型的`OPENFILENAME`結構。 此結構中的數據表示的`CFileDialog`當前狀態。
 
 ### <a name="remarks"></a>備註
 
-在您加以建立之後, 但在使用[DoModal](#domodal)方法顯示之前, 請使用這個結構來初始化 [檔案**開啟**] 或 [檔案**另存**新檔] 對話方塊的外觀。 例如, 您可以將的*lpstrTitle*成員`m_ofn`設定為您要對話方塊擁有的標題。
+使用此結構在建構**檔案打開**或**檔案保存為**對話框後,但在使用[DoModal](#domodal)方法顯示之前,可以初始化它的外觀。 例如,您可以將的`m_ofn` *lpstrTitle*成員設置為希望對話方塊具有的標題。
 
-使用 Windows Vista 或更新版本的[CFileDialog](../../mfc/reference/cfiledialog-class.md)樣式時`m_ofn` , 不保證一定會符合對話方塊的狀態。 它會與舊版 Windows 中的對話方塊進行同步處理。 `CFileDialog`如需`m_ofn`有關在 Windows Vista 或更新版本下同步處理結構和狀態的詳細資訊, 請參閱[CFileDialog:: ApplyOFNToShellDialog](#applyofntoshelldialog)和[CFileDialog:: UpdateOFNFromShellDialog](#updateofnfromshelldialog) 。
+使用 Windows Vista 或[CFileDialog](../../mfc/reference/cfiledialog-class.md)`m_ofn`的更高樣式時,不能保證始終匹配對話框的狀態。 它與早期版本的 Windows 中的對話框同步。 請參閱[CFileDialog:應用 OFNToShellDialog](#applyofntoshelldialog)和[CFileDialog::更新 OfofofShellDialog,](#updateofnfromshelldialog)瞭解`m_ofn`有關在`CFileDialog`Windows Vista 下或更高 版本中同步結構和狀態的詳細資訊。
 
-Windows Vista 或更新版本的樣式檔案對話方塊不支援的`CFileDialog`某些成員和旗標。 因此, 這些不會有任何作用。
+Windows Vista 或更高版本的樣式文件對話方塊不`CFileDialog`支援 的某些成員和標誌。 因此,這些將不起作用。
 
-以下是 Windows Vista 或更新版本不支援的成員清單:
+以下是 Windows Vista 或更高版本不支援的成員清單:
 
 - `lpstrCustomFilter`
 
@@ -1080,7 +1080,7 @@ Windows Vista 或更新版本的樣式檔案對話方塊不支援的`CFileDialog
 
 - `lpTemplateName`
 
-下列旗標不受支援, 因此當您使用 Windows Vista 或更新版本的`CFileDialog`樣式時, 不會有任何作用:
+不支援以下標誌,因此在使用 Windows Vista 或`CFileDialog`更高版本的 樣式時不起作用:
 
 - OFN_ENABLEHOOK
 
@@ -1096,21 +1096,21 @@ Windows Vista 或更新版本的樣式檔案對話方塊不支援的`CFileDialog
 
 - OFN_HIDEREADONLY
 
-- Windows Vista 或更新版本中的 OFN_LONGNAMES-有效 always on
+- OFN_LONGNAMES - 在 Windows Vista 或更高版本中始終有效開啟
 
-- Windows Vista 或更新版本中的 OFN_NOLONGNAMES-有效率
+- OFN_NOLONGNAMES - Windows Vista 或更高版本中始終有效關閉
 
-- Windows Vista 或更新版本中的 OFN_NONETWORKBUTTON-有效 always on
+- OFN_NONETWORKBUTTON - Windows Vista 或更高版本中始終有效開啟
 
 - OFN_READONLY
 
 - OFN_SHOWHELP
 
-如需此結構的詳細資訊, 請參閱 Windows SDK 中的[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構。
+有關此結構的詳細資訊,請參閱 Windows SDK 中的[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構。
 
-##  <a name="makeprominent"></a>CFileDialog:: MakeProminent
+## <a name="cfiledialogmakeprominent"></a><a name="makeprominent"></a>檔案對話::製作突出
 
-將控制項放在對話方塊中, 以便與其他控制項相對應。
+在對話框中放置控件,使其與其他控制項相比脫穎而出。
 
 ```
 HRESULT MakeProminent(DWORD dwIDCtl);
@@ -1118,14 +1118,14 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
+*德維塞爾*<br/>
 控制項的識別碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onbuttonclicked"></a>  CFileDialog::OnButtonClicked
+## <a name="cfiledialogonbuttonclicked"></a><a name="onbuttonclicked"></a>檔案對話::點擊按鈕
 
-按一下按鈕時呼叫。
+按下按鈕時調用。
 
 ```
 virtual void OnButtonClicked(DWORD dwIDCtl);
@@ -1133,14 +1133,14 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
+*德維塞爾*<br/>
 按鈕的識別碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="oncheckbuttontoggled"></a>CFileDialog:: OnCheckButtonToggled
+## <a name="cfiledialogoncheckbuttontoggled"></a><a name="oncheckbuttontoggled"></a>檔案對話::開啟檢查按鈕切換
 
-核取方塊已核取或取消選取時呼叫。
+選中或取消選中複選框時調用。
 
 ```
 virtual void OnCheckButtonToggled(
@@ -1150,17 +1150,17 @@ virtual void OnCheckButtonToggled(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-核取方塊的識別碼。
+*德維塞爾*<br/>
+複選框的 ID。
 
 *bChecked*<br/>
-Checked 或 unchecked。
+已選中或未選中。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="oncontrolactivating"></a>CFileDialog:: OnControlActivating
+## <a name="cfiledialogoncontrolactivating"></a><a name="oncontrolactivating"></a>檔案對話::在控制啟動
 
-當控制項啟動時呼叫。
+啟動控件時調用。
 
 ```
 virtual void OnControlActivating(DWORD dwIDCtl);
@@ -1168,14 +1168,14 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
+*德維塞爾*<br/>
 控制項的識別碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfilenamechange"></a>CFileDialog:: OnFileNameChange
+## <a name="cfiledialogonfilenamechange"></a><a name="onfilenamechange"></a>檔案對話::檔案名稱變更
 
-如果您想要處理 WM_NOTIFY CDN_SELCHANGE 訊息, 請覆寫這個方法。
+如果要處理WM_NOTIFYCDN_SELCHANGE消息,則重寫此方法。
 
 ```
 virtual void OnFileNameChange();
@@ -1183,13 +1183,13 @@ virtual void OnFileNameChange();
 
 ### <a name="remarks"></a>備註
 
-當使用者在 [**開啟**] 或 [**另存**新檔] 對話方塊的 [檔案] 清單中選取新的檔案或資料夾時, 系統會傳送 CDN_SELCHANGE 訊息。 如果您想要執行任何動作來回應此訊息, 請覆寫這個方法。
+當使用者在 **「打開**」或「**另存為」** 對話框的檔案清單中選擇新檔案或資料夾時,系統將發送CDN_SELCHANGE郵件。 如果要執行回應此消息的任何操作,則重寫此方法。
 
-只有在已開啟 [OFN_EXPLORER] 旗標的情況下建立對話方塊時, 系統才會傳送此訊息。 如需有關通知的詳細資訊, 請參閱[CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange)。 如需 OFN_EXPLORER 旗標的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和[開啟和另存](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)新檔對話方塊。
+僅當對話框在啟用OFN_EXPLORER標誌時創建時,系統才會發送此消息。 有關通知的詳細資訊,請參閱[CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange)。 有關OFN_EXPLORER標誌的資訊,請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構以及[「打開並另存為對話框](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)」。
 
-##  <a name="onfilenameok"></a>  CFileDialog::OnFileNameOK
+## <a name="cfiledialogonfilenameok"></a><a name="onfilenameok"></a>檔案對話::在檔案名稱OK
 
-只有當您想要提供自訂驗證以輸入 [一般檔案] 對話方塊中的檔案名時, 才覆寫此函數。
+僅當要提供在常見文件對話框中輸入的檔名的自定義驗證時,才重寫此函數。
 
 ```
 virtual BOOL OnFileNameOK();
@@ -1197,17 +1197,17 @@ virtual BOOL OnFileNameOK();
 
 ### <a name="return-value"></a>傳回值
 
-如果檔案名不是有效的檔案名, 則為 1;否則為0。
+如果檔名不是有效的檔名,則為 1;否則 0。
 
 ### <a name="remarks"></a>備註
 
-此函式可讓您拒絕任何應用程式特定原因的檔案名。 一般來說, 您不需要使用此函式, 因為架構會提供檔案名的預設驗證, 如果輸入的檔案名無效, 則會顯示訊息方塊。
+此函數允許您出於任何特定於應用程式的原因拒絕檔名。 通常,您不需要使用此函數,因為框架提供檔名的默認驗證,並在輸入無效的檔名時顯示消息框。
 
-如果傳回 1, 則會持續顯示對話方塊, 讓使用者輸入另一個檔案名。 如果傳回的是 0, 則對話方塊程式會關閉對話方塊。 其他非零的傳回值目前已保留, 因此不應使用。
+如果返回 1,該對話方塊將保持顯示,以便使用者輸入另一個檔名。 如果返回為 0,則對話框過程將關閉該對話方塊。 其他非零返回值當前是保留的,不應使用。
 
-##  <a name="onfolderchange"></a>CFileDialog:: OnFolderChange
+## <a name="cfiledialogonfolderchange"></a><a name="onfolderchange"></a>檔案對話::開啟資料夾變更
 
-覆寫此函式以處理 WM_NOTIFYCDN_FOLDERCHANGE 訊息。
+重寫此函數以處理WM_NOTIFYCDN_FOLDERCHANGE消息。
 
 ```
 virtual void OnFolderChange();
@@ -1215,13 +1215,13 @@ virtual void OnFolderChange();
 
 ### <a name="remarks"></a>備註
 
-在 [開啟] 或 [另存新檔] 對話方塊中開啟新資料夾時, 就會傳送通知訊息。
+在"打開"或"另存為"對話框中打開新資料夾時,將發送通知消息。
 
-只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 才會傳送通知。 如需有關通知的詳細資訊, 請參閱[CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)。
+僅當使用OFN_EXPLORER樣式創建對話方塊時,才會發送通知。 有關通知的詳細資訊,請參閱[CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange)。 有關OFN_EXPLORER樣式的資訊,請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構以及[「打開並另存為對話框](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)」。
 
-##  <a name="oninitdone"></a>CFileDialog:: OnInitDone
+## <a name="cfiledialogoninitdone"></a><a name="oninitdone"></a>檔案對話::OnInitdone
 
-覆寫此函式以處理 WM_NOTIFY CDN_INITDONE 訊息。
+重寫此函數以處理WM_NOTIFYCDN_INITDONE消息。
 
 ```
 virtual void OnInitDone();
@@ -1229,16 +1229,16 @@ virtual void OnInitDone();
 
 ### <a name="remarks"></a>備註
 
-系統會在系統完成 [**開啟**] 或 [**另存**新檔] 對話方塊中的控制項排列時傳送此通知訊息, 以騰出空間給子對話方塊的控制項。
+當系統在 **「打開**」或「**另存為」** 對話框中完成排列控制項,為子對話框的控制器騰出空間時,系統將發送此通知訊息。
 
-只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 系統才會傳送此程式。 如需有關通知的詳細資訊, 請參閱[CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)。
+僅當使用OFN_EXPLORER樣式創建對話框時,系統才會發送此對話方塊。 有關通知的詳細資訊,請參閱[CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone)。 有關OFN_EXPLORER樣式的資訊,請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構以及[「打開並另存為對話框](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)」。
 
 > [!NOTE]
-> Windows Vista 或更新版本的樣式檔案對話方塊不支援此功能。 嘗試在 Windows Vista 或更新版本的樣式檔案對話方塊上使用此函式, 將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。
+> Windows Vista 或更高版本的樣式文件對話方塊不支援此功能。 試著在 Windows Vista 或更高樣式檔案對話框上使用此函數將引發[CNot 支援異常](../../mfc/reference/cnotsupportedexception-class.md)。
 
-##  <a name="onitemselected"></a>  CFileDialog::OnItemSelected
+## <a name="cfiledialogonitemselected"></a><a name="onitemselected"></a>檔案對話::項目選定
 
-在選取容器專案時呼叫。
+選擇容器項時調用。
 
 ```
 virtual void OnItemSelected(
@@ -1248,17 +1248,17 @@ virtual void OnItemSelected(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-容器控制項的識別碼。
+*德維塞爾*<br/>
+容器控制項的 ID。
 
 *dwIDItem*<br/>
-專案的識別碼。
+項目的 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onlbselchangednotify"></a>CFileDialog:: OnLBSelChangedNotify
+## <a name="cfiledialogonlbselchangednotify"></a><a name="onlbselchangednotify"></a>檔案對話::在LBSel改變通知
 
-每當清單方塊中目前的選取範圍即將變更時, 就會呼叫這個函式。
+每當清單框中的當前選擇即將更改時,都會調用此功能。
 
 ```
 virtual void OnLBSelChangedNotify(
@@ -1270,29 +1270,29 @@ virtual void OnLBSelChangedNotify(
 ### <a name="parameters"></a>參數
 
 *nIDBox*<br/>
-發生選取範圍之清單方塊或下拉式方塊的識別碼。
+發生選擇的清單框或組合框的 ID。
 
 *iCurSel*<br/>
-目前選取範圍的索引。
+當前選擇的索引。
 
-*nCode*<br/>
-控制項通知代碼。 這個參數必須具有下列其中一個值:
+*n代碼*<br/>
+控件通知代碼。 這個參數必須具有以下值之一:
 
-- CD_LBSELCHANGE 指定*iCurSel*是單一挑選清單框中選取的專案。
+- CD_LBSELCHANGE指定*iCurSel*是單選清單框中的選定專案。
 
-- CD_LBSELSUB 指定不會再于 multiselection 清單方塊中選取*iCurSel* 。
+- CD_LBSELSUB 指定不再在多選清單框中選擇*iCurSel。*
 
-- CD_LBSELADD 指定在 multiselection 清單方塊中選取*iCurSel* 。
+- CD_LBSELADD 指定在多選清單框中選擇*iCurSel。*
 
-- CD_LBSELNOITEMS 指定 multiselection 清單方塊中沒有任何選取專案。
+- CD_LBSELNOITEMS 指定多選清單框中不存在選擇。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式, 以在清單方塊中提供選取範圍變更的自訂處理。 例如, 您可以使用此函式來顯示使用者選取之每個檔案的存取權限或上次修改日期。
+重寫此函數以在清單框中提供選擇更改的自定義處理。 例如,可以使用此函數顯示使用者選擇的每個檔的訪問許可權或上次修改日期。
 
-##  <a name="onshareviolation"></a>CFileDialog:: OnShareViolation
+## <a name="cfiledialogonshareviolation"></a><a name="onshareviolation"></a>檔案對話::在共用衝突
 
-覆寫此函數以提供共用違規的自訂處理。
+重寫此函數以提供對共享衝突的自定義處理。
 
 ```
 virtual UINT OnShareViolation(LPCTSTR lpszPathName);
@@ -1300,28 +1300,28 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>參數
 
-*lpszPathName*<br/>
-發生共用違規之檔案的路徑。
+*lpszPath名稱*<br/>
+發生共用衝突的檔的路徑。
 
 ### <a name="return-value"></a>傳回值
 
 下列其中一個值：
 
-- OFN_SHAREFALLTHROUGH 會從對話方塊傳回檔案名。
+- OFN_SHAREFALLTHROUGH從對話框返回檔名。
 
-- OFN_SHARENOWARN 不需要採取進一步的動作。
+- OFN_SHARENOWARN無需採取進一步行動。
 
-- OFN_SHAREWARN 使用者會收到此錯誤的標準警告訊息。
+- OFN_SHAREWARN使用者會收到此錯誤的標準警告消息。
 
 ### <a name="remarks"></a>備註
 
-一般來說, 您不需要使用此函式, 因為架構會提供共用違規的預設檢查, 並在發生共用違規時顯示訊息方塊。
+通常,您不需要使用此函數,因為框架提供預設的共用衝突檢查,並在發生共用衝突時顯示消息框。
 
-如果您想要停用共用違規檢查, 請使用位 OR 運算子結合旗標 OFN_SHAREAWARE 與`m_ofn.Flags`。
+如果要關閉共享衝突檢查,請使用位元或運算子將標誌OFN_SHAREAWARE與`m_ofn.Flags`。
 
-##  <a name="ontypechange"></a>CFileDialog:: OnTypeChange
+## <a name="cfiledialogontypechange"></a><a name="ontypechange"></a>檔案對話::在類型變更上
 
-覆寫此函式以處理 WM_NOTIFYCDN_TYPECHANGE 訊息。
+重寫此函數以處理WM_NOTIFYCDN_TYPECHANGE消息。
 
 ```
 virtual void OnTypeChange();
@@ -1329,13 +1329,13 @@ virtual void OnTypeChange();
 
 ### <a name="remarks"></a>備註
 
-當使用者從 [開啟] 或 [另存新檔] 對話方塊的檔案類型清單中選取新的檔案類型時, 就會傳送通知訊息。
+當使用者從"打開"或"另存為"對話框中的檔案類型清單中選擇新檔案類型時,將發送通知消息。
 
-只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 才會傳送通知。 如需有關通知的詳細資訊, 請參閱[CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)。
+僅當使用OFN_EXPLORER樣式創建對話方塊時,才會發送通知。 有關通知的詳細資訊,請參閱[CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange)。 有關OFN_EXPLORER樣式的資訊,請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構以及[「打開並另存為對話框](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)」。
 
-##  <a name="removecontrolitem"></a>  CFileDialog::RemoveControlItem
+## <a name="cfiledialogremovecontrolitem"></a><a name="removecontrolitem"></a>檔案對話::移除控制項目
 
-從對話方塊中的容器控制項移除專案。
+從對話方塊中的容器控制件中刪除項。
 
 ```
 HRESULT RemoveControlItem(
@@ -1345,17 +1345,17 @@ HRESULT RemoveControlItem(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-要從中移除專案的容器控制項識別碼。
+*德維塞爾*<br/>
+要從中刪除項的容器控制件的 ID。
 
 *dwIDItem*<br/>
-專案的識別碼。
+項目的 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setcheckbuttonstate"></a>  CFileDialog::SetCheckButtonState
+## <a name="cfiledialogsetcheckbuttonstate"></a><a name="setcheckbuttonstate"></a>檔案對話::設定檢查按鈕狀態
 
-設定對話方塊中複選按鈕 (核取方塊) 的目前狀態。
+設置對話框中複選框(複選框)的當前狀態。
 
 ```
 HRESULT SetCheckButtonState(
@@ -1365,17 +1365,17 @@ HRESULT SetCheckButtonState(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-核取方塊的識別碼。
+*德維塞爾*<br/>
+複選框的 ID。
 
 *bChecked*<br/>
-核取方塊的狀態。 TRUE 表示已核取;FALSE 表示未核取。
+複選框的狀態。 TRUE 指示已檢查;FALSE 表示未選中。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setcontrolitemstate"></a>CFileDialog:: SetControlItemState
+## <a name="cfiledialogsetcontrolitemstate"></a><a name="setcontrolitemstate"></a>檔案對話框::設定控制項狀態
 
-設定在對話方塊中找到之容器控制項內專案的目前狀態。
+設置對話框中容器控制項中的項目的當前狀態。
 
 ```
 HRESULT SetControlItemState(
@@ -1386,20 +1386,20 @@ HRESULT SetControlItemState(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-容器控制項的識別碼。
+*德維塞爾*<br/>
+容器控制項的 ID。
 
 *dwIDItem*<br/>
-專案的識別碼。
+項目的 ID。
 
-*dwState*<br/>
-CDCONTROLSTATE 列舉中的一或多個值, 表示控制項的新狀態。
+*德沃州*<br/>
+來自 CDCONTROLSTATE 枚舉的一個或多個值,指示控制項的新狀態。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setcontrolitemtext"></a>  CFileDialog::SetControlItemText
+## <a name="cfiledialogsetcontrolitemtext"></a><a name="setcontrolitemtext"></a>檔案對話::設定控制項目文字
 
-設定控制項專案的文字。 例如, 出現在功能表中的選項按鈕或專案的文字。
+設定控制項項的文字。 例如,帶有單選按鈕或功能表中的專案的文本。
 
 ```
 HRESULT SetControlItemText(
@@ -1410,20 +1410,20 @@ HRESULT SetControlItemText(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-容器控制項的識別碼。
+*德維塞爾*<br/>
+容器控制項的 ID。
 
 *dwIDItem*<br/>
-專案的識別碼。
+項目的 ID。
 
-*strLabel*<br/>
+*斯特蘭*<br/>
 專案的文字。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setcontrollabel"></a>CFileDialog:: SetControlLabel
+## <a name="cfiledialogsetcontrollabel"></a><a name="setcontrollabel"></a>檔案對話::設定控制標籤
 
-設定與控制項相關聯的文字, 例如按鈕文字或編輯方塊標籤。
+設置與控制項關聯的文字,如按鈕文本或編輯框標籤。
 
 ```
 HRESULT SetControlLabel(
@@ -1433,17 +1433,17 @@ HRESULT SetControlLabel(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
+*德維塞爾*<br/>
 控制項的識別碼。
 
-*strLabel*<br/>
+*斯特蘭*<br/>
 控制項名稱。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setcontrolstate"></a>CFileDialog:: SetControlState
+## <a name="cfiledialogsetcontrolstate"></a><a name="setcontrolstate"></a>檔案對話::設定控制狀態
 
-設定指定控制項的目前可見度和已啟用狀態。
+設置給定控制件的當前可見性和啟用狀態。
 
 ```
 HRESULT SetControlState(
@@ -1453,17 +1453,17 @@ HRESULT SetControlState(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
+*德維塞爾*<br/>
 控制項的識別碼。
 
-*dwState*<br/>
-來自 CDCONTROLSTATE 列舉的一個或多個值, 指出控制項的目前狀態。
+*德沃州*<br/>
+來自 CDCONTROLSTATE 枚舉的一個或多個值,指示控制項的當前狀態。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setcontroltext"></a>CFileDialog:: SetControlText
+## <a name="cfiledialogsetcontroltext"></a><a name="setcontroltext"></a>檔案對話::設定控制文字
 
-呼叫這個方法, 即可在 [Explorer 樣式的**開啟**] 或 [**另存**新檔] 對話方塊中, 設定指定之控制項的文字。
+呼叫此方法以在資源管理器樣式**的「打開**」或「**另存為」** 對話框中設定指定控制項的文字。
 
 ```
 void SetControlText(
@@ -1478,20 +1478,20 @@ void SetControlText(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-在要設定文字之控制項的識別碼。
+[在]要為其設定文本的控制項的 ID。
 
 *lpsz*<br/>
-在字串的指標, 其中包含要為控制項設定的文字。
+[在]指向要為控制項設定的文字的字串的指標。
 
 ### <a name="remarks"></a>備註
 
-此函式的兩個版本對於使用 Unicode 的應用程式而言是有效的。 不過, 只有具有 LPCSTR 類型的版本對使用 ANSI 的應用程式有效。
+此函數的兩個版本都適用於使用 Unicode 的應用程式。 但是,只有具有 LPCSTR 類型的版本才適用於使用 ANSI 的應用程式。
 
-若要使用這個方法, 您必須使用 OFN_EXPLORER 樣式來建立對話方塊。 否則, 此函式會失敗並產生判斷提示。
+要使用此方法,必須使用OFN_EXPLORER樣式創建對話方塊。 否則,函數將失敗與斷言。
 
-##  <a name="setdefext"></a>CFileDialog:: SetDefExt
+## <a name="cfiledialogsetdefext"></a><a name="setdefext"></a>檔案對話::設定DefExt
 
-呼叫此函式可設定 Explorer 樣式開啟或 [另存為通用] 對話方塊的預設副檔名。
+呼叫此函數可為資源管理器樣式的"打開"或"保存為常見"對話框設置預設檔名副檔名。
 
 ```
 void SetDefExt(LPCSTR lpsz);
@@ -1500,15 +1500,15 @@ void SetDefExt(LPCSTR lpsz);
 ### <a name="parameters"></a>參數
 
 *lpsz*<br/>
-字串的指標, 其中包含要用於對話方塊物件的預設延伸模組。 這個字串不能包含句號 (.)。
+指向包含用於對話方塊物件的預設副檔名的字串的指標。 此字串不能包含句點 (.)。
 
 ### <a name="remarks"></a>備註
 
-必須使用 OFN_EXPLORER 樣式建立對話方塊;否則, 此函式會失敗並產生判斷提示。
+對話框必須使用OFN_EXPLORER樣式創建;因此,該對話框必須使用 OFN_EXPLORER 樣式創建。否則,函數將失敗與斷言。
 
-##  <a name="seteditboxtext"></a>CFileDialog:: SetEditBoxText
+## <a name="cfiledialogseteditboxtext"></a><a name="seteditboxtext"></a>檔案對話::設定編輯框文字
 
-設定編輯方塊控制項中的目前文字。
+在編輯框控制項中設定目前的文字。
 
 ```
 HRESULT SetEditBoxText(
@@ -1518,15 +1518,15 @@ HRESULT SetEditBoxText(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-編輯方塊的識別碼。
+*德維塞爾*<br/>
+編輯框的識別碼。
 
-*strText*<br/>
+*斯特文字*<br/>
 文字值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setproperties"></a>CFileDialog:: SetProperties
+## <a name="cfiledialogsetproperties"></a><a name="setproperties"></a>檔案對話::設定屬性
 
 提供屬性儲存區，可定義要用於所儲存之項目的預設值。
 
@@ -1536,14 +1536,14 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 
 ### <a name="parameters"></a>參數
 
-*lpszPropList*<br/>
-預先定義的屬性清單，以 ";" 分隔。 如需旗標的清單, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)的**旗標**一節。
+*lpszProplist*<br/>
+預先定義的屬性清單，以 ";" 分隔。 有關標誌的清單,請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)的 **「標誌」** 部分。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setselectedcontrolitem"></a>CFileDialog:: SetSelectedControlItem
+## <a name="cfiledialogsetselectedcontrolitem"></a><a name="setselectedcontrolitem"></a>檔案對話::設定選擇的控制項目
 
-設定選項按鈕群組中特定專案的選取狀態, 或在對話方塊中找到的下拉式方塊。
+在選項按鈕組或對話方塊中找到的組合框中設置特定項的選定狀態。
 
 ```
 HRESULT SetSelectedControlItem(
@@ -1553,17 +1553,17 @@ HRESULT SetSelectedControlItem(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-容器控制項的識別碼。
+*德維塞爾*<br/>
+容器控制項的 ID。
 
 *dwIDItem*<br/>
-使用者在控制項中選取之專案的識別碼。
+使用者在控制項中選擇的項的 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="settemplate"></a>CFileDialog:: SetTemplate
+## <a name="cfiledialogsettemplate"></a><a name="settemplate"></a>檔案對話::設定樣本
 
-設定[CFileDialog](../../mfc/reference/cfiledialog-class.md)物件的對話方塊範本。
+設置[CFileDialog](../../mfc/reference/cfiledialog-class.md)物件的對話方塊樣本。
 
 ```
 void SetTemplate(
@@ -1578,27 +1578,27 @@ void SetTemplate(
 ### <a name="parameters"></a>參數
 
 *nWin3ID*<br/>
-在包含非 Explorer `CFileDialog`物件之範本資源的 ID 編號。 此範本僅適用于 Windows NT 3.51, 或不存在 OFN_EXPLORER 樣式時。
+[在]包含非資源管理員`CFileDialog`物件的範本資源的 ID 號。 此範本僅在 Windows NT 3.51 上或不存在OFN_EXPLORER樣式時使用。
 
 *nWin4ID*<br/>
-在包含 Explorer `CFileDialog`物件之範本資源的 ID 編號。 此範本僅適用于 Windows NT 4.0 和更新版本、Windows 95 和更新版本, 或存在 OFN_EXPLORER 樣式時。
+[在]包含資源管理員`CFileDialog`物件的範本資源的 ID 號。 此範本僅在 Windows NT 4.0 和更高版本、Windows 95 和更高版本或存在OFN_EXPLORER樣式時使用。
 
 *lpWin3ID*<br/>
-在包含非 Explorer `CFileDialog`物件的範本資源名稱。 此範本僅適用于 Windows NT 3.51, 或不存在 OFN_EXPLORER 樣式時。
+[在]包含非資源管理員`CFileDialog`物件的範本資源的名稱。 此範本僅在 Windows NT 3.51 上或不存在OFN_EXPLORER樣式時使用。
 
 *lpWin4ID*<br/>
-在包含 Explorer `CFileDialog`物件的範本資源名稱。 此範本僅適用于 Windows NT 4.0 和更新版本、Windows 95 和更新版本, 或存在 OFN_EXPLORER 樣式時。
+[在]包含資源管理員`CFileDialog`物件的範本資源的名稱。 此範本僅在 Windows NT 4.0 和更高版本、Windows 95 和更高版本或存在OFN_EXPLORER樣式時使用。
 
 ### <a name="remarks"></a>備註
 
-系統將只會使用其中一個指定的範本。 系統會根據 OFN_EXPLORER 樣式和應用程式執行所在的作業系統, 決定要使用哪一個範本。 藉由指定非 Explorer 和 Explorer 樣式的範本, 就可以輕鬆地支援 Windows NT 3.51、Windows NT 4.0 和更新版本, 以及 Windows 95 和更新版本。
+系統將僅使用其中一個指定的範本。 系統根據OFN_EXPLORER樣式的存在和應用程式正在運行的作業系統確定要使用的範本。 通過同時指定非資源管理器和資源管理器樣式的範本,可以輕鬆支援 Windows NT 3.51、Windows NT 4.0 和更高版本以及 Windows 95 及更高版本。
 
 > [!NOTE]
-> Windows Vista 或更新版本的樣式檔案對話方塊不支援此功能。 嘗試在 Windows Vista 或更新版本的 [樣式檔案] 對話方塊中使用此功能, 將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 另一種方式是使用自訂的對話方塊。 如需使用自訂`CFileDialog`的詳細資訊, 請參閱[IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
+> Windows Vista 或更高版本的樣式文件對話方塊不支援此功能。 試著在 Windows Vista 或更高樣式的檔案對話框上使用此函數將引發[CNot 支援異常](../../mfc/reference/cnotsupportedexception-class.md)。 另一種方法是使用自定義對話方塊。 有關使用自訂`CFileDialog`的詳細資訊,請參閱[IFileDialog 自訂](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
 
-##  <a name="startvisualgroup"></a>CFileDialog:: StartVisualGroup
+## <a name="cfiledialogstartvisualgroup"></a><a name="startvisualgroup"></a>檔案對話::開始視覺群組
 
-在對話方塊中宣告視覺效果群組。 後續呼叫任何 "add" 方法會將這些元素新增至此群組。
+在對話框中聲明可視組。 對任何「添加」方法的後續調用將這些元素添加到此組中。
 
 ```
 HRESULT StartVisualGroup(
@@ -1608,17 +1608,17 @@ HRESULT StartVisualGroup(
 
 ### <a name="parameters"></a>參數
 
-*dwIDCtl*<br/>
-視覺效果群組的識別碼。
+*德維塞爾*<br/>
+可視組的 ID。
 
-*strLabel*<br/>
-組名。
+*斯特蘭*<br/>
+群組名稱。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="updateofnfromshelldialog"></a>CFileDialog:: UpdateOFNFromShellDialog
+## <a name="cfiledialogupdateofnfromshelldialog"></a><a name="updateofnfromshelldialog"></a>檔案對話::從 ShellDialog 更新
 
-根據內部`m_ofn`物件的目前狀態, 更新[CFileDialog](../../mfc/reference/cfiledialog-class.md)的資料結構。
+根據內部`m_ofn`物件的當前狀態更新[CFileDialog](../../mfc/reference/cfiledialog-class.md)的數據結構。
 
 ```
 void UpdateOFNFromShellDialog();
@@ -1626,15 +1626,15 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>備註
 
-在 Windows Vista 之前的 Windows 版本中, 成員[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))資料結構會持續與的狀態`CFileDialog`同步處理。 對[m_ofn](#m_ofn)成員變數所做的任何變更都會直接影響對話方塊的狀態。 此外, 對對話方塊狀態所做的任何變更都會立即更新 m_ofn 成員變數。
+在 Windows Vista 之前的 Windows 版本中,成員[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))數據結構與`CFileDialog`的狀態持續同步。 對[m_ofn](#m_ofn)成員變數的任何更改都直接影響對話框的狀態。 此外,對對話框狀態的任何更改都立即更新了m_ofn成員變數。
 
-在 Windows Vista 或更新版本中`m_ofn` , 資料結構不會自動更新。 若要保證`m_ofn`成員變數中資料的精確度, 您應該在存取資料之前`UpdateOFNFromShellDialog`呼叫函數。 在處理[IFileDialog:: OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)時, Windows 會自動呼叫此函式。
+在 Windows Vista 或`m_ofn`更高版本中,數據結構不會自動更新。 為了保證`m_ofn`成員變數中數據的準確性,應在訪問數據之前調用`UpdateOFNFromShellDialog`該函數。 Windows 在處理[IFileDialog 時自動呼叫此功能:onFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)。
 
-如需如何在 Windows Vista 或更新`CFileDialog`版本中使用類別的詳細資訊, 請參閱[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。
+有關如何在 Windows Vista 下`CFileDialog`或以後使用類別的詳細資訊,請參閱[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。
 
 ### <a name="example"></a>範例
 
-這個範例會先`CFileDialog`更新, 再顯示它。 在更新`m_ofn`成員變數之前, 我們需要將它同步處理到對話方塊的目前狀態。
+這個範例在顯示`CFileDialog`它之前更新 。 在更新`m_ofn`成員變數之前,我們需要將其同步到對話框的當前狀態。
 
 [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]
 

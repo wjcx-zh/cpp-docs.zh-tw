@@ -94,17 +94,17 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4c5f4aa9a34e8cc8f30c0ef49f2f56c2bc2e0c3c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421552"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374985"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 類別
 
 `COleIPFrameWndEx` 類別會實作支援 MFC 的 OLE 容器。 您必須從 `COleIPFrameWndEx` 類別衍生應用程式的就地框架視窗類別，而不是從 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)類別來衍生。
-如需詳細資訊，請參閱位於**VC\\atlmfc\\src\\** Visual Studio 安裝的 mfc 資料夾中的原始程式碼。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -118,55 +118,55 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[COleIPFrameWndEx::AddDockSite](#adddocksite)||
-|[COleIPFrameWndEx::AddPane](#addpane)||
-|[COleIPFrameWndEx：： AdjustDockingLayout](#adjustdockinglayout)||
-|[COleIPFrameWndEx：:D ockPane](#dockpane)||
-|[COleIPFrameWndEx：:D ockPaneLeftOf](#dockpaneleftof)|將窗格停駐在另一個窗格的左邊。|
-|[COleIPFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)||
-|[COleIPFrameWndEx：： EnableDocking](#enabledocking)||
-|[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||
-|[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|將指標傳回到目前顯示的快顯功能表。|
-|[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||
-|[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|在載入視窗時傳回您指定的框架視窗資源識別碼。|
-|[COleIPFrameWndEx::GetDockFrame](#getdockframe)||
-|[COleIPFrameWndEx::GetDockingManager](#getdockingmanager)||
-|[COleIPFrameWndEx::GetMainFrame](#getmainframe)||
-|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|將指標傳回到附加在框架視窗的功能表列物件。|
-|[COleIPFrameWndEx::GetPane](#getpane)||
-|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|傳回分割狀態的窗格物件清單。|
-|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|架構先呼叫，再顯示工具提示按鈕。|
-|[COleIPFrameWndEx::InsertPane](#insertpane)||
-|[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|決定功能表列物件的指標是否不是 `NULL`。|
-|[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx::LoadFrame](#loadframe)|(覆寫 `COleIPFrameWnd::LoadFrame`)。|
-|[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
-|[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
-|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。|
-|[COleIPFrameWndEx：： OnCmdMsg](#oncmdmsg)|(覆寫 `CFrameWnd::OnCmdMsg`)。|
-|[COleIPFrameWndEx：： OnDrawMenuImage](#ondrawmenuimage)|架構在繪製與功能表項目相關聯的映像時所呼叫。|
-|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|架構在 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件處理 WM_PAINT 訊息時所呼叫。|
-|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|架構在 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件處理 WM_NCHITTEST 訊息時所呼叫。|
-|[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||
-|[COleIPFrameWndEx：： OnSetPreviewMode](#onsetpreviewmode)|呼叫這個成員函式，在預覽列印模式裡外設定應用程式的主框架視窗。 (覆寫 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。)|
-|[COleIPFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)||
-|[COleIPFrameWndEx::OnShowPanes](#onshowpanes)||
-|[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|架構在啟動快顯功能表時所呼叫。|
-|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|架構在啟動有分割列的功能表時所呼叫。|
-|[COleIPFrameWndEx：:P aneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx：:P reTranslateMessage](#pretranslatemessage)|(覆寫 `COleIPFrameWnd::PreTranslateMessage`)。|
-|[COleIPFrameWndEx：： RecalcLayout](#recalclayout)|(覆寫 `COleIPFrameWnd::RecalcLayout`)。|
-|[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
-|[COleIPFrameWndEx::SetDockState](#setdockstate)|將指定的停駐狀態套用到屬於框架視窗的窗格。|
-|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|藉由搜尋虛設項目並替換成指定的使用者定義項目，修改工具列物件。|
-|[COleIPFrameWndEx::ShowPane](#showpane)||
-|[COleIPFrameWndEx::WinHelpA](#winhelpa)|架構所呼叫以起始 WinHelp 應用程式或內容說明。|
+|[COleIPFramewndEx::添加網站](#adddocksite)||
+|[COleIPFramewndEx::添加窗格](#addpane)||
+|[COleIPFramewndEx::調整對接佈局](#adjustdockinglayout)||
+|[COleIPFramewndEx::Dockpane](#dockpane)||
+|[COleIPframewndEx::Dockpane左側](#dockpaneleftof)|將窗格停駐在另一個窗格的左邊。|
+|[COleIPFrameWndEx::啟用自動隱藏窗格](#enableautohidepanes)||
+|[COleIPFramewndEx::啟用對接](#enabledocking)||
+|[COleIPFramewndEx::啟用PaneMenu](#enablepanemenu)||
+|[COleIPFramewndEx:取得主動彈出](#getactivepopup)|將指標傳回到目前顯示的快顯功能表。|
+|[COleIPFramewndEx:抓取容器框架視窗](#getcontainerframewindow)||
+|[COleIPFramewndEx:取得預設Resid](#getdefaultresid)|在載入視窗時傳回您指定的框架視窗資源識別碼。|
+|[COleIPFramewndEx::獲取DockFrame](#getdockframe)||
+|[COleIPFramewndEx::取得對接管理器](#getdockingmanager)||
+|[COleIPFramewndEx::取得主線](#getmainframe)||
+|[COleIPFramewndEx::獲取功能表列](#getmenubar)|將指標傳回到附加在框架視窗的功能表列物件。|
+|[COleIPFramewndEx::GetPane](#getpane)||
+|[COleIPFramewndEx::取得關閉條形](#gettearoffbars)|傳回分割狀態的窗格物件清單。|
+|[COleIPFramewndEx::取得工具列按鈕工具提示文字](#gettoolbarbuttontooltiptext)|架構先呼叫，再顯示工具提示按鈕。|
+|[COleIPFramewndEx::插入窗格](#insertpane)||
+|[COleIPFramewndEx::isMenuBar可用](#ismenubaravailable)|決定功能表列物件的指標是否不是 `NULL`。|
+|[COleIPFramewndEx::IsPointNearDockSite](#ispointneardocksite)||
+|[COleIPFramewndEx::載入幀](#loadframe)|(覆寫 `COleIPFrameWnd::LoadFrame`。)|
+|[COleIPFramewndEx::關閉對接窗格](#onclosedockingpane)||
+|[COleIPFramewndEx::在關閉迷你框架上](#oncloseminiframe)||
+|[COleIPFramewndEx::在關閉彈出功能表上](#onclosepopupmenu)|架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。|
+|[COleIPFramewndEx::OnCmdMsg](#oncmdmsg)|(覆寫 `CFrameWnd::OnCmdMsg`。)|
+|[COleIPFramewndEx::在畫上功能表圖像](#ondrawmenuimage)|架構在繪製與功能表項目相關聯的映像時所呼叫。|
+|[COleIPFramewndEx::在DrawMenulogo](#ondrawmenulogo)|架構在 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件處理 WM_PAINT 訊息時所呼叫。|
+|[COleIPFramewndEx::在MenuButton工具命中測試](#onmenubuttontoolhittest)|架構在 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件處理 WM_NCHITTEST 訊息時所呼叫。|
+|[COleIPFramewndEx::移動迷你框架](#onmoveminiframe)||
+|[COleIPFramewndEx::打開預覽模式](#onsetpreviewmode)|呼叫這個成員函式，在預覽列印模式裡外設定應用程式的主框架視窗。 (覆寫 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。)|
+|[COleIPFramewndEx::在顯示定製窗格上](#onshowcustomizepane)||
+|[COleIPFramewndEx::在顯示窗格](#onshowpanes)||
+|[COleIPFramewndEx::在顯示彈出選單](#onshowpopupmenu)|架構在啟動快顯功能表時所呼叫。|
+|[COleIPFramewndEx::在TearoffMenu上](#ontearoffmenu)|架構在啟動有分割列的功能表時所呼叫。|
+|[COleIPFramewndEx::P從點](#panefrompoint)||
+|[COleIPFramewndEx::P重新翻譯訊息](#pretranslatemessage)|(覆寫 `COleIPFrameWnd::PreTranslateMessage`。)|
+|[COleIPFrameWndEx:recalclayout](#recalclayout)|(覆寫 `COleIPFrameWnd::RecalcLayout`。)|
+|[COleIPFramewndEx::從Dock管理器中刪除Pane](#removepanefromdockmanager)||
+|[COleIPFramewndEx::SetDockstate](#setdockstate)|將指定的停駐狀態套用到屬於框架視窗的窗格。|
+|[COleIPFramewndEx::設定工具列選單](#setuptoolbarmenu)|藉由搜尋虛設項目並替換成指定的使用者定義項目，修改工具列物件。|
+|[COleIPFramewndEx::顯示窗格](#showpane)||
+|[COleIPFramewndEx::溫説明](#winhelpa)|架構所呼叫以起始 WinHelp 應用程式或內容說明。|
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|告知架構初始化指派給使用者定義工具列的控制項識別碼範圍。|
+|[COleIPFramewndEx::InituserToobars](#initusertoobars)|告知架構初始化指派給使用者定義工具列的控制項識別碼範圍。|
 
 ## <a name="example"></a>範例
 
@@ -174,7 +174,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -192,7 +192,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 **標頭：** afxoleipframewndex.h
 
-##  <a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite
+## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>COleIPFramewndEx::添加網站
 
 ```
 void AddDockSite();
@@ -200,7 +200,7 @@ void AddDockSite();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="addpane"></a>COleIPFrameWndEx::AddPane
+## <a name="coleipframewndexaddpane"></a><a name="addpane"></a>COleIPFramewndEx::添加窗格
 
 ```
 BOOL AddPane(
@@ -210,14 +210,14 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>參數
 
-在*pControlBar*<br/>
-在*bTail*<br/>
+[在]*p控制列*<br/>
+[在]*b泰爾*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx：： AdjustDockingLayout
+## <a name="coleipframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>COleIPFramewndEx::調整對接佈局
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -225,11 +225,11 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>參數
 
-在*hdwp*<br/>
+[在]*hdwp*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="dockpane"></a>COleIPFrameWndEx：:D ockPane
+## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>COleIPFramewndEx::Dockpane
 
 ```
 void DockPane(
@@ -240,13 +240,13 @@ void DockPane(
 
 ### <a name="parameters"></a>參數
 
-在*pBar*<br/>
-在*nDockBarID*<br/>
-在*lpRect*<br/>
+[在]*pBar*<br/>
+[在]*nDockBarID*<br/>
+[在]*lpRect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="dockpaneleftof"></a>COleIPFrameWndEx：:D ockPaneLeftOf
+## <a name="coleipframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>COleIPframewndEx::Dockpane左側
 
 將窗格停駐在另一個窗格的左邊。
 
@@ -259,20 +259,20 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-在要停駐之窗格的指標。
+[在]指向要停靠的窗格的指標。
 
-*pLeftOf*<br/>
-在作為原點之窗格的指標。
+*左撇子*<br/>
+[在]指向用作源的窗格的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果作業成功，則傳回 TRUE。 否則傳回 FALSE。
+如果操作成功,則返回 TRUE。 否則傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法，以預先定義的順序停駐數個窗格物件。 這個方法會將*pBar*所指定的窗格，停駐在*pLeftOf*所指定之窗格的左邊。
+調用此方法以預定義的順序停靠多個窗格物件。 此方法將*pBar*指定的窗格停靠到*pLeftOf*指定的窗格的左側。
 
-##  <a name="enableautohidepanes"></a>COleIPFrameWndEx::EnableAutoHidePanes
+## <a name="coleipframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>COleIPFrameWndEx::啟用自動隱藏窗格
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -280,13 +280,13 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>參數
 
-在*dwDockStyle*<br/>
+[在]*dwDock 風格*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="enabledocking"></a>COleIPFrameWndEx：： EnableDocking
+## <a name="coleipframewndexenabledocking"></a><a name="enabledocking"></a>COleIPFramewndEx::啟用對接
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -294,13 +294,13 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>參數
 
-在*dwDockStyle*<br/>
+[在]*dwDock 風格*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu
+## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>COleIPFramewndEx::啟用PaneMenu
 
 ```
 void EnablePaneMenu(
@@ -314,18 +314,18 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>參數
 
-在*bEnable*<br/>
-在*uiCustomizeCmd*<br/>
-在*strCustomizeLabel*<br/>
-在*uiViewToolbarsMenuEntryID*<br/>
-在*bCoNtextMenuShowsToolbarsOnly*<br/>
-在*bViewMenuShowsToolbarsOnly*<br/>
+[在]*b 啟用*<br/>
+[在]*ui 客製化Cmd*<br/>
+[在]*str定製標籤*<br/>
+[在]*uiView 工具列選單入口ID*<br/>
+[在]*bContextMenu 只顯示工具列*<br/>
+[在]*b 只檢視選單顯示工具列*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getactivepopup"></a>COleIPFrameWndEx::GetActivePopup
+## <a name="coleipframewndexgetactivepopup"></a><a name="getactivepopup"></a>COleIPFramewndEx:取得主動彈出
 
-傳回目前所顯示快顯功能表的指標。
+返回指向當前顯示的彈出式功能表的指標。
 
 ```
 CMFCPopupMenu* GetActivePopup() const;
@@ -333,13 +333,13 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>傳回值
 
-活動快顯功能表的指標;否則為 Null。
+指向活動彈出功能表的指標;否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-您可以使用這個方法來取得目前顯示之[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件的指標。
+使用此方法獲取指向當前顯示的[CMFCPopupMenu 類](../../mfc/reference/cmfcpopupmenu-class.md)物件的指標。
 
-##  <a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow
+## <a name="coleipframewndexgetcontainerframewindow"></a><a name="getcontainerframewindow"></a>COleIPFramewndEx:抓取容器框架視窗
 
 ```
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -349,9 +349,9 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdefaultresid"></a>COleIPFrameWndEx::GetDefaultResId
+## <a name="coleipframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>COleIPFramewndEx:取得預設Resid
 
-傳回框架視窗載入功能表時所指定的功能表資源識別碼。
+返回框架視窗載入功能表時指定的功能表資源 ID。
 
 ```
 UINT GetDefaultResId() const;
@@ -359,13 +359,13 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回功能表的資源識別碼，如果框架視窗沒有功能表列，則傳回0。
+返回功能表的資源 ID,如果框架視窗沒有功能表欄,則返回 0。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式，以取得框架視窗藉由呼叫 `COleIPFrameWndEx::LoadFrame`來載入功能表資源時所指定的資源識別碼。
+調用此函數以檢索幀窗口通過調用`COleIPFrameWndEx::LoadFrame`載入功能表資源時指定的資源 ID。
 
-##  <a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame
+## <a name="coleipframewndexgetdockframe"></a><a name="getdockframe"></a>COleIPFramewndEx::獲取DockFrame
 
 ```
 CFrameWnd* GetDockFrame();
@@ -375,7 +375,7 @@ CFrameWnd* GetDockFrame();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager
+## <a name="coleipframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>COleIPFramewndEx::取得對接管理器
 
 ```
 CDockingManager* GetDockingManager();
@@ -385,7 +385,7 @@ CDockingManager* GetDockingManager();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getmainframe"></a>COleIPFrameWndEx::GetMainFrame
+## <a name="coleipframewndexgetmainframe"></a><a name="getmainframe"></a>COleIPFramewndEx::取得主線
 
 ```
 CFrameWnd* GetMainFrame();
@@ -395,7 +395,7 @@ CFrameWnd* GetMainFrame();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getmenubar"></a>COleIPFrameWndEx::GetMenuBar
+## <a name="coleipframewndexgetmenubar"></a><a name="getmenubar"></a>COleIPFramewndEx::獲取功能表列
 
 將指標傳回到附加在框架視窗的功能表列物件。
 
@@ -405,13 +405,13 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能表列物件的指標。
+指向功能表欄物件的指標。
 
 ### <a name="remarks"></a>備註
 
-使用此函式可取出屬於 `COleIPFrameWndEx` 物件之功能表列物件的指標。
+使用此函數可以檢索指向屬於`COleIPFrameWndEx`物件的功能表欄物件的指標。
 
-##  <a name="getpane"></a>COleIPFrameWndEx::GetPane
+## <a name="coleipframewndexgetpane"></a><a name="getpane"></a>COleIPFramewndEx::GetPane
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -419,13 +419,13 @@ CBasePane* GetPane(UINT nID);
 
 ### <a name="parameters"></a>參數
 
-在*nID*<br/>
+[在]*nID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettearoffbars"></a>COleIPFrameWndEx::GetTearOffBars
+## <a name="coleipframewndexgettearoffbars"></a><a name="gettearoffbars"></a>COleIPFramewndEx::取得關閉條形
 
 傳回分割狀態的窗格物件清單。
 
@@ -435,13 +435,13 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>傳回值
 
-`CObList` 物件的參考，其中包含[CBasePane 類別](../../mfc/reference/cbasepane-class.md)衍生物件的指標集合。
+對包含指向`CObList`[CBasePane 類](../../mfc/reference/cbasepane-class.md)派生物件的指標集合的物件的引用。
 
 ### <a name="remarks"></a>備註
 
-`COleIPFrameWndEx` 物件會以[CBasePane 類別](../../mfc/reference/cbasepane-class.md)衍生物件的清單來維護卸載功能表的集合。 使用此方法來抓取此清單的參考。
+該`COleIPFrameWndEx`物件將撕下功能表的集合保留為[CBasePane 類](../../mfc/reference/cbasepane-class.md)派生物件的清單。 使用此方法檢索對此清單的引用。
 
-##  <a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText
+## <a name="coleipframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>COleIPFramewndEx::取得工具列按鈕工具提示文字
 
 架構先呼叫，再顯示工具提示按鈕。
 
@@ -454,22 +454,22 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="parameters"></a>參數
 
 *pButton*<br/>
-在按鈕的指標。
+[在]指向按鈕。
 
-*strTTText*<br/>
-在工具提示文字的指標。
+*斯特特文字*<br/>
+[在]指向工具提示文字的指標。
 
 ### <a name="return-value"></a>傳回值
 
-預設的實值會傳回0。
+預設實現返回 0。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式以自訂工具列按鈕上工具提示的顯示。
+重寫此函數以自訂工具列按鈕上工具提示的顯示。
 
-##  <a name="initusertoobars"></a>COleIPFrameWndEx::InitUserToobars
+## <a name="coleipframewndexinitusertoobars"></a><a name="initusertoobars"></a>COleIPFramewndEx::InituserToobars
 
-指定架構指派給使用者定義工具列的控制項識別碼範圍。
+指定框架分配給使用者定義的工具列的控制項識別範圍。
 
 ```
 void InitUserToolbars(
@@ -481,19 +481,19 @@ void InitUserToolbars(
 ### <a name="parameters"></a>參數
 
 *lpszRegEntry*<br/>
-在程式庫用來儲存使用者工具列設定的登錄專案。
+[在]庫存儲使用者工具列設置的註冊表項。
 
-*uiUserToolbarFirst*<br/>
-在指派給第一個使用者定義工具列的控制項識別碼。
+*uiUserToolbar 優先*<br/>
+[在]分配給第一個使用者定義的工具列的控制 ID。
 
-*uiUserToolbarLast*<br/>
-在指派給最後一個使用者定義工具列的控制項識別碼。
+*uiUser 工具列最後*<br/>
+[在]分配給最後一個使用者定義的工具列的控制 ID。
 
 ### <a name="remarks"></a>備註
 
-使用此函式可初始化控制項 Id 的範圍，以便指派給使用者動態定義的工具列。 *UiUserToolbarFirst*和*uiUserToolbarLast*參數會定義允許的工具列控制項識別碼範圍。 若要停用使用者定義工具列的建立，請將*uiUserToolbarFirst*或*uiUserToolbarLast*設定為-1。
+使用此函數可以初始化一系列控制項,以便分配給使用者動態定義的工具列。 參數*uiUserToolbarFirst*和*uiUserToolbarLast*定義一系列允許的工具列控制項 ID。 要禁用創建使用者定義的工具列,請將*uiUserToolbarFirst*或*uiUserToolbar"設置為*-1"。
 
-##  <a name="insertpane"></a>COleIPFrameWndEx::InsertPane
+## <a name="coleipframewndexinsertpane"></a><a name="insertpane"></a>COleIPFramewndEx::插入窗格
 
 ```
 BOOL InsertPane(
@@ -504,17 +504,17 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>參數
 
-在*pControlBar*<br/>
-在*pTarget*<br/>
-在*bAfter*<br/>
+[在]*p控制列*<br/>
+[在]*p 目標*<br/>
+[在]*b 後*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismenubaravailable"></a>COleIPFrameWndEx::IsMenuBarAvailable
+## <a name="coleipframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>COleIPFramewndEx::isMenuBar可用
 
-決定功能表列物件的指標是否不是 Null
+確定指向選單列物件的指標是否為 NULL
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -522,13 +522,13 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果框架視窗具有功能表列，則傳回非零的值。否則會傳回0。
+如果框架視窗具有功能表欄,則返回非零值;如果框架視窗具有菜單欄,則返回非零值。否則返回 0。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法，以判斷框架視窗是否維護其功能表列物件的非 Null 指標。
+呼叫此方法以確定幀視窗是否維護指向其選單欄物件的非 NULL 指標。
 
-##  <a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite
+## <a name="coleipframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>COleIPFramewndEx::IsPointNearDockSite
 
 ```
 BOOL IsPointNearDockSite(
@@ -539,15 +539,15 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>參數
 
-在*點*<br/>
-在*dwBarAlignment*<br/>
-在*bOuterEdge*<br/>
+[在]*點*<br/>
+[在]*dwBaralignment*<br/>
+[在]*bouterEdge*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="loadframe"></a>COleIPFrameWndEx::LoadFrame
+## <a name="coleipframewndexloadframe"></a><a name="loadframe"></a>COleIPFramewndEx::載入幀
 
 ```
 virtual BOOL LoadFrame(
@@ -559,16 +559,16 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>參數
 
-在*nIDResource*<br/>
-在*dwDefaultStyle*<br/>
-在*pParentWnd*<br/>
-在*pCoNtext*<br/>
+[在]*nID資源*<br/>
+[在]*dwDefault 樣式*<br/>
+[在]*pparentwnd*<br/>
+[在]*pContext*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onclosedockingpane"></a>COleIPFrameWndEx::OnCloseDockingPane
+## <a name="coleipframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>COleIPFramewndEx::關閉對接窗格
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane*);
@@ -576,13 +576,13 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ### <a name="parameters"></a>參數
 
-在*CDockablePane&#42;*<br/>
+[在]*可停靠窗格&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="oncloseminiframe"></a>COleIPFrameWndEx::OnCloseMiniFrame
+## <a name="coleipframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>COleIPFramewndEx::在關閉迷你框架上
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -590,13 +590,13 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>參數
 
-在*CPaneFrameWnd&#42;*<br/>
+[在]*CPaneFramewnd&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onclosepopupmenu"></a>COleIPFrameWndEx::OnClosePopupMenu
+## <a name="coleipframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>COleIPFramewndEx::在關閉彈出功能表上
 
 架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。
 
@@ -607,13 +607,13 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>參數
 
 *pMenuPopup*<br/>
-在快顯功能表物件的指標。
+[在]指向彈出功能表物件的指標。
 
 ### <a name="remarks"></a>備註
 
-覆寫此方法，以便在處理 WM_DESTROY 訊息時，接收來自 `CMFCPopupMenu` 物件的通知。
+重寫此方法,在物件處理WM_DESTROY`CMFCPopupMenu`消息時接收來自它們的通知。
 
-##  <a name="oncmdmsg"></a>COleIPFrameWndEx：： OnCmdMsg
+## <a name="coleipframewndexoncmdmsg"></a><a name="oncmdmsg"></a>COleIPFramewndEx::OnCmdMsg
 
 ```
 virtual BOOL OnCmdMsg(
@@ -625,18 +625,18 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>參數
 
-在*nID*<br/>
-在*nCode*<br/>
-在*pExtra*<br/>
-在*pHandlerInfo*<br/>
+[在]*nID*<br/>
+[在]*n代碼*<br/>
+[在]*pExtra*<br/>
+[在]*pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenuimage"></a>COleIPFrameWndEx：： OnDrawMenuImage
+## <a name="coleipframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>COleIPFramewndEx::在畫上功能表圖像
 
-當繪製與功能表項目相關聯的影像時，由架構呼叫。
+繪製與功能表項關聯的圖像時,由框架調用。
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -648,23 +648,23 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-在裝置內容的指標。
+[在]指向設備上下文的指標。
 
-*pMenuButton*<br/>
-在功能表按鈕的指標。
+*pMenu 按鈕*<br/>
+[在]指向功能表按鈕。
 
 *rectImage*<br/>
-在與功能表項目相關聯的影像。
+[在]與功能表項關聯的圖像。
 
 ### <a name="return-value"></a>傳回值
 
-預設的執行不會執行任何操作，而且會傳回0。
+默認實現不執行任何操作,並返回 0。
 
 ### <a name="remarks"></a>備註
 
-如果您想要針對屬於 `COleIPFrameWndEx`衍生物件所擁有之功能表列的功能表項目自訂影像繪製，請覆寫這個方法。
+如果要為屬於`COleIPFrameWndEx`派生對象擁有的功能表欄的功能表項自定義圖像繪圖,請重寫此方法。
 
-##  <a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo
+## <a name="coleipframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>COleIPFramewndEx::在DrawMenulogo
 
 架構在 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件處理 WM_PAINT 訊息時所呼叫。
 
@@ -678,21 +678,21 @@ virtual void OnDrawMenuLogo(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-在裝置內容的指標。
+[在]指向設備上下文的指標。
 
 *pMenu*<br/>
-在快顯功能表物件的指標。
+[在]指向彈出功能表物件的指標。
 
-*rectLogo*<br/>
-在要顯示之標誌的指標。
+*雷科洛格*<br/>
+[在]指向要顯示的徽標。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個方法，以在與 `COleIPFrameWndEx`衍生物件所擁有之功能表列相關聯的快顯功能表上顯示標誌。 預設實作不做任何動作。
+重寫此方法,在與`COleIPFrameWndEx`派生對象擁有的功能表欄關聯的彈出式功能表上顯示徽標。 預設實作不做任何動作。
 
-##  <a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
+## <a name="coleipframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>COleIPFramewndEx::在MenuButton工具命中測試
 
-當[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件處理 WM_NCHITTEST 訊息時，由架構呼叫。
+當[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件處理WM_NCHITTEST消息時,由框架調用。
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -702,19 +702,19 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ### <a name="parameters"></a>參數
 
-[in] pButton 功能表按鈕的指標。
+[in] pButton 指標指向功能表按鈕。
 
-[out] pTI 指向 `TOOLINFO` 結構的指標。
+[出] pTI`TOOLINFO`指標到結構。
 
 ### <a name="return-value"></a>傳回值
 
-預設的執行不會執行任何操作，而且會傳回0。 如果您的執行填滿*pTI*參數，則應該傳回非零值。
+默認實現不執行任何操作,並返回 0。 如果實現填充*pTI*參數,則應返回非零值。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個方法，以提供有關特定功能表項目的工具提示資訊。
+重寫此方法以提供有關特定功能表項的工具提示資訊。
 
-##  <a name="onmoveminiframe"></a>COleIPFrameWndEx::OnMoveMiniFrame
+## <a name="coleipframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>COleIPFramewndEx::移動迷你框架
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -722,13 +722,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="parameters"></a>參數
 
-在*pFrame*<br/>
+[在]*pFrame*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onsetpreviewmode"></a>COleIPFrameWndEx：： OnSetPreviewMode
+## <a name="coleipframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>COleIPFramewndEx::打開預覽模式
 
 ```
 virtual void OnSetPreviewMode(
@@ -738,12 +738,12 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>參數
 
-在*bPreview*<br/>
-在*pState*<br/>
+[在]*b預覽*<br/>
+[在]*pState*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowCustomizePane
+## <a name="coleipframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>COleIPFramewndEx::在顯示定製窗格上
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -753,14 +753,14 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="parameters"></a>參數
 
-在*pMenuPane*<br/>
-在*uiToolbarID*<br/>
+[在]*pMenuPane*<br/>
+[在]*uiToolbarID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes
+## <a name="coleipframewndexonshowpanes"></a><a name="onshowpanes"></a>COleIPFramewndEx::在顯示窗格
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -768,15 +768,15 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>參數
 
-在*bShow*<br/>
+[在]*b 顯示*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onshowpopupmenu"></a>COleIPFrameWndEx::OnShowPopupMenu
+## <a name="coleipframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>COleIPFramewndEx::在顯示彈出選單
 
-在顯示快顯功能表時由架構呼叫。
+顯示彈出式功能表時由框架呼叫。
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
@@ -785,19 +785,19 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>參數
 
 *pMenuPopup*<br/>
-在要顯示之快顯功能表的指標。
+[在]指向要顯示的彈出式功能表的指標。
 
 ### <a name="return-value"></a>傳回值
 
-預設的執行不會執行任何操作，而且會傳回非零值。 如果無法顯示快顯功能表，則您的執行應該會傳回 FALSE。
+預設實現不執行任何操作,並返回非零值。 如果無法顯示彈出式功能表,則實現應返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個方法，以自訂快顯功能表的顯示。 例如，您可以將功能表按鈕變更為 [色彩] 功能表按鈕或初始化 [卸載] 橫條。
+重寫此方法以自定義彈出式功能表的顯示。 例如,您可以將功能表按鈕更改為顏色功能表按鈕或初始化撕線。
 
-##  <a name="ontearoffmenu"></a>COleIPFrameWndEx::OnTearOffMenu
+## <a name="coleipframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>COleIPFramewndEx::在TearoffMenu上
 
-當使用者選取具有卸載式列的功能表時，由架構呼叫。
+當使用者選擇具有撕開欄的功能表時,由框架調用。
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -808,20 +808,20 @@ virtual BOOL OnTearOffMenu(
 ### <a name="parameters"></a>參數
 
 *pMenuPopup*<br/>
-在使用者所選取快顯功能表的指標。
+[在]指向用戶選擇的彈出式功能表的指標。
 
 *pBar*<br/>
-在主控功能表之窗格的指標。
+[在]指向承載功能表的窗格的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果您想要讓架構啟動快顯功能表，則為 TRUE;否則為 FALSE。 預設值為 TRUE。
+如果希望框架啟動彈出式功能表,則為 TRUE;否則 FALSE。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 
-如果您想要自訂卸載列的設定，請覆寫此函數。
+如果要自定義撕開欄的設置,請覆蓋此函數。
 
-##  <a name="panefrompoint"></a>COleIPFrameWndEx：:P aneFromPoint
+## <a name="coleipframewndexpanefrompoint"></a><a name="panefrompoint"></a>COleIPFramewndEx::P從點
 
 ```
 CBasePane* PaneFromPoint(
@@ -839,17 +839,17 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-在*點*<br/>
-在*nSensitivity*<br/>
-在*bExactBar*<br/>
-在*pRTCBarType*<br/>
-在*dwAlignment*<br/>
+[在]*點*<br/>
+[在]*nSensitivity*<br/>
+[在]*bExactBar*<br/>
+[在]*pRTCBar 類型*<br/>
+[在]*dwalignment*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="pretranslatemessage"></a>COleIPFrameWndEx：:P reTranslateMessage
+## <a name="coleipframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>COleIPFramewndEx::P重新翻譯訊息
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -857,13 +857,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-在*pMsg*<br/>
+[在]*pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="recalclayout"></a>COleIPFrameWndEx：： RecalcLayout
+## <a name="coleipframewndexrecalclayout"></a><a name="recalclayout"></a>COleIPFrameWndEx:recalclayout
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -871,11 +871,11 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>參數
 
-在*bNotify*<br/>
+[在]*b 通知*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager
+## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFramewndEx::從Dock管理器中刪除Pane
 
 ```
 void RemovePaneFromDockManager(
@@ -888,17 +888,17 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>參數
 
-在*pControlBar*<br/>
-在*bDestroy*<br/>
-在*bAdjustLayout*<br/>
-在*bAutoHide*<br/>
-在*pBarReplacement*<br/>
+[在]*p控制列*<br/>
+[在]*b破壞*<br/>
+[在]*b 調整佈局*<br/>
+[在]*bAutoHide*<br/>
+[在]*pBar 取代*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setdockstate"></a>COleIPFrameWndEx::SetDockState
+## <a name="coleipframewndexsetdockstate"></a><a name="setdockstate"></a>COleIPFramewndEx::SetDockstate
 
-將指定的停駐狀態套用到屬於框架視窗的窗格。
+將指定的停靠狀態應用於屬於框架視窗的窗格。
 
 ```
 void SetDockState(const CDockState& state);
@@ -907,13 +907,13 @@ void SetDockState(const CDockState& state);
 ### <a name="parameters"></a>參數
 
 *state*<br/>
-在指定停駐狀態。
+[在]指定停靠狀態。
 
 ### <a name="remarks"></a>備註
 
-使用此函式可針對屬於 `COleIPFrameWndEx` 物件的窗格，指定新的停駐狀態。
+使用此函數可為屬於`COleIPFrameWndEx`物件的窗格指定新的停靠狀態。
 
-##  <a name="setuptoolbarmenu"></a>COleIPFrameWndEx::SetupToolbarMenu
+## <a name="coleipframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>COleIPFramewndEx::設定工具列選單
 
 藉由搜尋虛設項目並替換成指定的使用者定義項目，修改工具列物件。
 
@@ -926,18 +926,18 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>參數
 
-*下拉式功能表*<br/>
-在要修改之[CMenu](../../mfc/reference/cmenu-class.md)物件的參考。
+*選單*<br/>
+[在]對要修改的[CMenu](../../mfc/reference/cmenu-class.md)物件的引用。
 
 *uiViewUserToolbarCmdFirst*<br/>
-在指定第一個使用者定義的命令。
+[在]指定第一個使用者定義的命令。
 
 *uiViewUserToolbarCmdLast*<br/>
-在指定最後一個使用者定義的命令。
+[在]指定最後一個使用者定義的命令。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="showpane"></a>COleIPFrameWndEx::ShowPane
+## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>COleIPFramewndEx::顯示窗格
 
 ```
 void ShowPane(
@@ -949,14 +949,14 @@ void ShowPane(
 
 ### <a name="parameters"></a>參數
 
-在*pBar*<br/>
-在*bShow*<br/>
-在*bDelay*<br/>
-在*bActivate*<br/>
+[在]*pBar*<br/>
+[在]*b 顯示*<br/>
+[在]*bDelay*<br/>
+[在]*b 啟動*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="winhelpa"></a>COleIPFrameWndEx::WinHelpA
+## <a name="coleipframewndexwinhelpa"></a><a name="winhelpa"></a>COleIPFramewndEx::溫説明
 
 架構所呼叫以起始 WinHelp 應用程式或內容說明。
 
@@ -968,10 +968,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>參數
 
-[in] dwData 會根據*nCmd*所指定的說明類型，指定所需的資料。
+[in] dwData 指定*nCmd*指定的幫助類型所需的數據。
 
 *nCmd*<br/>
-在指定所要求的說明類型。 如需可能值的清單，以及它們對*dwData*參數的影響，請參閱 Windows SDK 中的[WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)函式。
+[在]指定請求的幫助類型。 有關可能值的清單及其如何影響*dwData*參數,請參閱 Windows SDK 中的[WinHelp 函數](/windows/win32/api/winuser/nf-winuser-winhelpw)。
 
 ### <a name="remarks"></a>備註
 

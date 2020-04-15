@@ -14,21 +14,21 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420733"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375843"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函式
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[交換](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 可唯一識別執行目前的執行緒。
 
@@ -40,7 +40,7 @@ thread::id this_thread::get_id() noexcept;
 
 [thread:: id](../standard-library/thread-class.md) 類型的物件，可唯一識別執行目前的執行緒。
 
-## <a name="sleep_for"></a>  sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 封鎖呼叫執行緒。
 
@@ -57,9 +57,9 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="remarks"></a>備註
 
-函式至少會封鎖呼叫的執行緒， *Rel_time*所指定的時間。 這個函式不會擲回任何例外狀況。
+該函數至少阻止呼叫線程,至少*Rel_time指定的時間*。 這個函式不會擲回任何例外狀況。
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 封鎖呼叫執行緒，至少直到指定的時間。
 
@@ -79,9 +79,9 @@ void sleep_until(const xtime *Abs_time);
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>交換
 
-交換兩個**thread**物件的狀態。
+交換兩個**線程**物件狀態。
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*左方*\
-左邊的**thread**物件。
+*離開*\
+左**線程**物件。
 
-*Right*\
-右邊的**thread**物件。
+*對*\
+正確的**線程**物件。
 
 ### <a name="remarks"></a>備註
 
 此函式會呼叫 `Left.swap(Right)`。
 
-## <a name="yield"></a>  yield
+## <a name="yield"></a><a name="yield"></a>產量
 
 向作業系統表示執行其他執行緒，即使目前的執行緒通常會繼續執行。
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<thread>](../standard-library/thread.md)
+[\<執行緒>](../standard-library/thread.md)

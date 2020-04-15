@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: f1ddf35b514d9b89f53d5f1307a6ecb7132d2854
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177507"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367518"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 類別
 
@@ -36,7 +36,7 @@ class CMFCDynamicLayout : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |`CMFCDynamicLayout::CMFCDynamicLayout`|建構 `CMFCDynamicLayout` 物件。|
 |`CMFCDynamicLayout::~CMFCDynamicLayout`|解構函式。|
@@ -54,26 +54,26 @@ class CMFCDynamicLayout : public CObject
 |[CMFCDynamicLayout::HasItem](#hasitem)|檢查如果子控制項是否已加入動態配置。|
 |[CMFCDynamicLayout::IsEmpty](#isempty)|檢查動態配置是否未加入任何子視窗。|
 |[CMFCDynamicLayout::LoadResource](#loadresource)|從 AFX_DIALOG_LAYOUT 資源讀取動態配置，然後將配置套用至主控視窗。|
-|靜態[CMFCDynamicLayout:: MoveHorizontal](#movehorizontal)|取得[MoveSettings](#movesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準移動子控制項的程度。|
-|靜態[CMFCDynamicLayout:: MoveHorizontalAndVertical](#movehorizontalandvertical)|取得[MoveSettings](#movesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準移動子控制項的程度。|
-|靜態[CMFCDynamicLayout:: MoveNone](#movenone)|取得[MoveSettings](#movesettings_structure)值, 表示子控制項沒有任何動作 (垂直或水準)。|
-|靜態[CMFCDynamicLayout:: MoveVertical](#movevertical)|取得[MoveSettings](#movesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 垂直移動子控制項的程度。|
+|靜態[CMFC 動態佈局::移動水準](#movehorizontal)|獲取[MoveSettings](#movesettings_structure)值,該值定義使用者調整其託管視窗的大小時,子控件的水準移動量。|
+|靜態[CMFC 動態佈局::移動水準和垂直](#movehorizontalandvertical)|獲取[MoveSettings](#movesettings_structure)值,該值定義使用者調整其託管視窗的大小時,子控件的水準移動量。|
+|靜態[CMFC 動態佈局::移動無](#movenone)|獲取表示子控制項沒有垂直或水平運動的[MoveSettings](#movesettings_structure)值。|
+|靜態[CMFC 動態佈局::垂直移動](#movevertical)|獲取[MoveSettings](#movesettings_structure)值,該值定義使用者調整其託管視窗的大小時垂直移動子控制項的大小。|
 |[CMFCDynamicLayout::SetMinSize](#setminsize)|設定視窗大小下限，低於此值就不調整版面配置。|
-|靜態[CMFCDynamicLayout:: SizeHorizontal](#sizehorizontal)|取得[SizeSettings](#sizesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準調整子控制項的大小。|
-|靜態[CMFCDynamicLayout:: SizeHorizontalAndVertical](#sizehorizontalandvertical)|取得[SizeSettings](#sizesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準調整子控制項的大小。|
-|靜態[CMFCDynamicLayout:: SizeNone](#sizenone)|取得[SizeSettings](#sizesettings_structure)值, 表示子控制項的大小沒有變更。|
-|靜態[CMFCDynamicLayout:: SizeVertical](#sizevertical)|取得[SizeSettings](#sizesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 垂直調整子控制項的大小。|
+|靜態[CMFC 動態佈局::水準大小](#sizehorizontal)|獲取[SizeSettings](#sizesettings_structure)值,該值定義當用戶調整其宿主視窗的大小時,子控制件水準調整大小的大小。|
+|靜態[CMFC 動態佈局::水平和垂直大小](#sizehorizontalandvertical)|獲取[SizeSettings](#sizesettings_structure)值,該值定義當用戶調整其宿主視窗的大小時,子控制件水準調整大小的大小。|
+|靜態[CMFC 動態佈局::大小無](#sizenone)|獲取表示子控制件大小不更改的[SizeSettings](#sizesettings_structure)值。|
+|靜態[CMFC 動態佈局:: 垂直尺寸](#sizevertical)|獲取[SizeSettings](#sizesettings_structure)值,該值定義當用戶調整其宿主視窗的大小時垂直調整子控制件的大小。|
 
 ## <a name="nested-types"></a>巢狀類型
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCDynamicLayout:: MoveSettings 結構](#movesettings_structure)|為動態配置中控制項封裝移動資料。|
-|[CMFCDynamicLayout:: SizeSettings 結構](#sizesettings_structure)|為動態配置中的控制項封裝大小變更資料。|
+|[CMFCDynamicLayout::MoveSettings 結構](#movesettings_structure)|為動態配置中控制項封裝移動資料。|
+|[CMFCDynamicLayout::SizeSettings 結構](#sizesettings_structure)|為動態配置中的控制項封裝大小變更資料。|
 
 ## <a name="remarks"></a>備註
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -81,9 +81,9 @@ class CMFCDynamicLayout : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxlayout.h。h
+**標題:** afxlayout.h
 
-##  <a name="additem"></a>CMFCDynamicLayout:: AddItem
+## <a name="cmfcdynamiclayoutadditem"></a><a name="additem"></a>CMFC動態佈局::添加專案
 
 將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。
 
@@ -99,16 +99,16 @@ BOOL AddItem(
 
 ### <a name="parameters"></a>參數
 
-*hwnd*<br/>
+*霍恩德*<br/>
 要加入之視窗的控制代碼。
 
 *nID*<br/>
 要加入之子控制項的 ID。
 
-*moveSettings*<br/>
+*移動設定*<br/>
 說明在視窗大小變更時應如何移動控制項的結構。
 
-*sizeSettings*<br/>
+*大小設定*<br/>
 說明在視窗大小變更時應如何為控制項調整大小的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -119,7 +119,7 @@ BOOL AddItem(
 
 調整主控視窗的大小時，子控制項的位置和大小會動態變更。
 
-##  <a name="adjust"></a>CMFCDynamicLayout:: 調整
+## <a name="cmfcdynamiclayoutadjust"></a><a name="adjust"></a>CMFC動態佈局:調整
 
 將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。
 
@@ -131,7 +131,7 @@ void Adjust();
 
 調整主控視窗的大小時，子控制項的位置和大小會動態變更。
 
-##  <a name="create"></a>CMFCDynamicLayout:: Create
+## <a name="cmfcdynamiclayoutcreate"></a><a name="create"></a>CMFC動態佈局:建立
 
 儲存並驗證主控視窗。
 
@@ -150,7 +150,7 @@ BOOL Create(CWnd* pHostWnd);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gethostwnd"></a>CMFCDynamicLayout:: GetHostWnd
+## <a name="cmfcdynamiclayoutgethostwnd"></a><a name="gethostwnd"></a>CMFC動態佈局::獲取主機
 
 傳回主控視窗的指標。
 
@@ -166,7 +166,7 @@ CWnd* GetHostWnd();
 
 根據預設，會重新計算所有子控制項相對於此視窗的位置。
 
-##  <a name="getminsize"></a>CMFCDynamicLayout:: GetMinSize
+## <a name="cmfcdynamiclayoutgetminsize"></a><a name="getminsize"></a>CMFC動態佈局:取得最小值
 
 傳回視窗大小下限，低於此值就不調整版面配置。
 
@@ -182,7 +182,7 @@ CSize GetMinSize();
 
 調整主控視窗的大小時，子控制項的位置和大小會動態變更，但是有大小下限，低於此值就不會調整版面配置。 使用者可以將視窗調小，但視窗的某些部分就看不見。
 
-##  <a name="getwindowrect"></a>CMFCDynamicLayout:: GetWindowRect
+## <a name="cmfcdynamiclayoutgetwindowrect"></a><a name="getwindowrect"></a>CMFC動態佈局::取得視窗重新
 
 擷取視窗的目前用戶端區域的週框。
 
@@ -192,12 +192,12 @@ void GetHostWndRect(CRect& rect,);
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*矩形*<br/>
 在此函數傳回之後，此參數會包含版面配置區域的週框。 這是輸出參數；輸入值會被覆寫。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hasitem"></a>CMFCDynamicLayout:: HasItem
+## <a name="cmfcdynamiclayouthasitem"></a><a name="hasitem"></a>CMFC動態佈局::有專案
 
 檢查如果子控制項是否已加入動態配置。
 
@@ -207,7 +207,7 @@ BOOL HasItem(HWND hwnd);
 
 ### <a name="parameters"></a>參數
 
-*hwnd*<br/>
+*霍恩德*<br/>
 控制項的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -216,7 +216,7 @@ BOOL HasItem(HWND hwnd);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isempty"></a>CMFCDynamicLayout:: IsEmpty
+## <a name="cmfcdynamiclayoutisempty"></a><a name="isempty"></a>CMFC動態佈局::空
 
 檢查動態配置是否未加入任何子視窗。
 
@@ -230,7 +230,7 @@ BOOL IsEmpty();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="loadresource"></a>CMFCDynamicLayout:: LoadResource
+## <a name="cmfcdynamiclayoutloadresource"></a><a name="loadresource"></a>CMFC動態佈局::載入資源
 
 從 AFX_DIALOG_LAYOUT 資源讀取動態配置，然後將配置套用至主控視窗。
 
@@ -245,7 +245,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
 *pHostWnd*<br/>
 主控視窗的指標。
 
-*lpResource*<br/>
+*lp資源*<br/>
 包含 AFX_DIALOG_LAYOUT 資源的緩衝區的指標。
 
 *dwSize*<br/>
@@ -257,9 +257,9 @@ static BOOL LoadResource(CWnd* pHostWnd,
 
 ### <a name="remarks"></a>備註
 
-##  <a name="movehorizontal"></a>CMFCDynamicLayout:: MoveHorizontal
+## <a name="cmfcdynamiclayoutmovehorizontal"></a><a name="movehorizontal"></a>CMFC 動態佈局::移動水準
 
-取得[MoveSettings](#movesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準移動子控制項的程度。
+獲取[MoveSettings](#movesettings_structure)值,該值定義使用者調整其託管視窗的大小時,子控件的水準移動量。
 
 ```
 static MoveSettings MoveHorizontal(int nRatio);
@@ -272,13 +272,13 @@ static MoveSettings MoveHorizontal(int nRatio);
 
 ### <a name="return-value"></a>傳回值
 
-封裝所要求之移動比例的[MoveSettings](#movesettings_structure)值。
+封裝請求的移動比的[移動設置](#movesettings_structure)值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical
+## <a name="cmfcdynamiclayoutmovehorizontalandvertical"></a><a name="movehorizontalandvertical"></a>CMFC動態佈局::移動水準和垂直
 
-取得[MoveSettings](#movesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準移動子控制項的程度。
+獲取[MoveSettings](#movesettings_structure)值,該值定義使用者調整其託管視窗的大小時,子控件的水準移動量。
 
 ```
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
@@ -294,13 +294,13 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 
 ### <a name="return-value"></a>傳回值
 
-封裝所要求之移動比例的[MoveSettings](#movesettings_structure)值。
+封裝請求的移動比的[移動設置](#movesettings_structure)值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone
+## <a name="cmfcdynamiclayoutmovenone"></a><a name="movenone"></a>CMFC動態佈局::移動無
 
-取得[MoveSettings](#movesettings_structure)值, 表示子控制項沒有任何動作 (垂直或水準)。
+獲取表示子控制項沒有垂直或水平運動的[MoveSettings](#movesettings_structure)值。
 
 ```
 static MoveSettings MoveNone();
@@ -308,11 +308,11 @@ static MoveSettings MoveNone();
 
 ### <a name="return-value"></a>傳回值
 
-[MoveSettings](#movesettings_structure)值, 可就地修正控制項, 讓它不會隨著使用者調整主機視窗大小而移動。
+一個[MoveSettings](#movesettings_structure)值,用於修復控制項,以便在使用者調整主機視窗大小時不會移動。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="movesettings_structure"></a>CMFCDynamicLayout:: MoveSettings 結構
+## <a name="cmfcdynamiclayoutmovesettings-structure"></a><a name="movesettings_structure"></a>CMFC動態佈局::移動設置結構
 
 為動態配置中控制項封裝移動資料。
 
@@ -324,7 +324,7 @@ struct CMFCDynamicLayout::MoveSettings;
 
 這是 `CMFCDynamicLayout` 內部的巢狀類別。
 
-## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
+## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFC 動態佈局::移動設置::是水準的
 
 檢查移動資料是否指定非零的水平移動。
 
@@ -336,7 +336,7 @@ BOOL IsHorizontal() const
 
 如果 `MoveSettings` 物件指定非零的水平移動，則為 TRUE。
 
-## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFCDynamicLayout::MoveSettings::IsNone
+## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFC動態佈局::移動設置::無
 
 檢查移動資料是否指定不移動。
 
@@ -348,7 +348,7 @@ BOOL IsNone() const
 
 如果 `MoveSettings` 物件指定不移動，則為 TRUE 。
 
-## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout::MoveSettings::IsVertical
+## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFC 動態佈局::移動設置::垂直
 
 請檢查移動資料是否指定非零的垂直移動。
 
@@ -360,9 +360,9 @@ BOOL IsVertical() const
 
 如果 `MoveSettings` 物件指定非零的垂直移動，則為 TRUE。
 
-##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical
+## <a name="cmfcdynamiclayoutmovevertical"></a><a name="movevertical"></a>CMFC動態佈局::垂直移動
 
-取得[MoveSettings](#movesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 垂直移動子控制項的程度。
+獲取[MoveSettings](#movesettings_structure)值,該值定義使用者調整其託管視窗的大小時垂直移動子控制項的大小。
 
 ```
 static MoveSettings MoveVertical(int nRatio);
@@ -375,11 +375,11 @@ static MoveSettings MoveVertical(int nRatio);
 
 ### <a name="return-value"></a>傳回值
 
-封裝所要求之移動比例的[MoveSettings](#movesettings_structure)值。
+封裝請求的移動比的[移動設置](#movesettings_structure)值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setminsize"></a>CMFCDynamicLayout:: SetMinSize
+## <a name="cmfcdynamiclayoutsetminsize"></a><a name="setminsize"></a>CMFC 動態佈局::設定最小值
 
 設定視窗大小下限，低於此值就不調整版面配置。
 
@@ -389,16 +389,16 @@ void SetMinSize(const CSize& size);
 
 ### <a name="parameters"></a>參數
 
-*size*<br/>
+*大小*<br/>
 所需的大小下限，低於此值就不調整版面配置。
 
 ### <a name="remarks"></a>備註
 
 調整主控視窗的大小時，子控制項的位置和大小會動態變更，但是有大小下限，低於此值就不會調整版面配置。 使用者可以將視窗調小，但視窗的某些部分就看不見。
 
-##  <a name="sizehorizontal"></a>CMFCDynamicLayout:: SizeHorizontal
+## <a name="cmfcdynamiclayoutsizehorizontal"></a><a name="sizehorizontal"></a>CMFC 動態佈局::水平大小
 
-取得[SizeSettings](#sizesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準調整子控制項的大小。
+獲取[SizeSettings](#sizesettings_structure)值,該值定義當用戶調整其宿主視窗的大小時,子控制件水準調整大小的大小。
 
 ```
 static SizeSettings SizeHorizontal(int nRatio);
@@ -411,13 +411,13 @@ static SizeSettings SizeHorizontal(int nRatio);
 
 ### <a name="return-value"></a>傳回值
 
-封裝所要求之大小比例的[SizeSettings](#sizesettings_structure)值。
+封裝請求的大小比[的 SizeSettings](#sizesettings_structure)值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout:: SizeHorizontalAndVertical
+## <a name="cmfcdynamiclayoutsizehorizontalandvertical"></a><a name="sizehorizontalandvertical"></a>CMFC動態佈局::水平和垂直大小
 
-取得[SizeSettings](#sizesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 水準調整子控制項的大小。
+獲取[SizeSettings](#sizesettings_structure)值,該值定義當用戶調整其宿主視窗的大小時,子控制件水準調整大小的大小。
 
 ```
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
@@ -433,13 +433,13 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 
 ### <a name="return-value"></a>傳回值
 
-封裝所要求之大小比例的[SizeSettings](#sizesettings_structure)值。
+封裝請求的大小比[的 SizeSettings](#sizesettings_structure)值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="sizenone"></a>CMFCDynamicLayout:: SizeNone
+## <a name="cmfcdynamiclayoutsizenone"></a><a name="sizenone"></a>CMFC動態佈局::大小無
 
-取得[SizeSettings](#sizesettings_structure)值, 表示子控制項的大小沒有變更。
+獲取表示子控制件大小不更改的[SizeSettings](#sizesettings_structure)值。
 
 ```
 static SizeSettings SizeNone();
@@ -447,11 +447,11 @@ static SizeSettings SizeNone();
 
 ### <a name="return-value"></a>傳回值
 
-[SizeSettings](#sizesettings_structure)值, 可修正特定大小的控制項, 使其不會隨著使用者調整主機視窗的大小而改變。
+[大小設置](#sizesettings_structure)值,用於將控制項固定在特定大小,以便它不會在使用者調整主機視窗大小時更改大小。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="sizesettings_structure"></a>CMFCDynamicLayout:: SizeSettings 結構
+## <a name="cmfcdynamiclayoutsizesettings-structure"></a><a name="sizesettings_structure"></a>CMFC動態佈局::大小設置結構
 
 為動態配置中的控制項封裝大小變更資料。
 
@@ -463,7 +463,7 @@ struct CMFCDynamicLayout::SizeSettings;
 
 這是 `CMFCDynamicLayout` 內部的巢狀類別。
 
-## <a name="cmfcdynamiclayoutsizesettingsishorizontal"></a>CMFCDynamicLayout::SizeSettings::IsHorizontal
+## <a name="cmfcdynamiclayoutsizesettingsishorizontal"></a>CMFC 動態佈局::大小設置::是水準的
 
 檢查調整大小資料是否指定非零的水平調整大小。
 
@@ -475,7 +475,7 @@ BOOL IsHorizontal() const
 
 如果 `SizeSettings` 物件指定非零的水平調整大小，則為 TRUE。
 
-## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFCDynamicLayout::SizeSettings::IsNone
+## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFC動態佈局::大小設置::無
 
 檢查調整大小資料是否指定不調整大小。
 
@@ -487,7 +487,7 @@ BOOL IsNone() const
 
 如果 `SizeSettings` 物件指定不調整大小，則為 TRUE 。
 
-## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFCDynamicLayout::SizeSettings::IsVertical
+## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFC 動態佈局::大小設置::垂直
 
 檢查調整大小資料是否指定非零的垂直調整大小。
 
@@ -499,9 +499,9 @@ BOOL IsVertical() const
 
 如果 `SizeSettings` 物件指定非零的垂直調整大小，則為 TRUE。
 
-##  <a name="sizevertical"></a>CMFCDynamicLayout:: SizeVertical
+## <a name="cmfcdynamiclayoutsizevertical"></a><a name="sizevertical"></a>CMFC 動態佈局:: 垂直尺寸
 
-取得[SizeSettings](#sizesettings_structure)值, 定義當使用者調整其裝載視窗的大小時, 垂直調整子控制項的大小。
+獲取[SizeSettings](#sizesettings_structure)值,該值定義當用戶調整其宿主視窗的大小時垂直調整子控制件的大小。
 
 ```
 static SizeSettings SizeVertical(int nRatio);
@@ -514,7 +514,7 @@ static SizeSettings SizeVertical(int nRatio);
 
 ### <a name="return-value"></a>傳回值
 
-封裝所要求之大小比例的[SizeSettings](#sizesettings_structure)值。
+封裝請求的大小比[的 SizeSettings](#sizesettings_structure)值。
 
 ### <a name="remarks"></a>備註
 

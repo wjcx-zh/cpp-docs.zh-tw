@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-ms.openlocfilehash: 2558c522f7903e8d59363cd77d1a86027f6a7511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48c7ad6fe13c5f5fbbe5829c25ce1c27896841be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260275"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318808"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 類別
 
-建構的智慧型指標清單時，這個類別會提供有用的方法。
+此類提供在構造智慧指標清單時有用的方法。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -41,15 +41,15 @@ class CAutoPtrList :
 
 |名稱|描述|
 |----------|-----------------|
-|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|建構函式。|
+|[CAutoPtr 清單:CAutoPtr 清單](#cautoptrlist)|建構函式。|
 
 ## <a name="remarks"></a>備註
 
-這個類別提供建構函式，並衍生方法從[CAtlList](../../atl/reference/catllist-class.md)並[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)來協助建立儲存智慧型指標的清單物件。 此類別[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)的陣列物件提供類似的函式。
+此類提供一個建構函數,並從[CAtlList](../../atl/reference/catllist-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)派生方法,以幫助創建儲存智慧指標的清單物件。 類[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)為陣列物件提供了類似的函數。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CAtlList](../../atl/reference/catllist-class.md)
 
@@ -57,9 +57,9 @@ class CAutoPtrList :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList
+## <a name="cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a>CAutoPtr 清單:CAutoPtr 清單
 
 建構函式。
 
@@ -70,14 +70,14 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ### <a name="parameters"></a>參數
 
 *nBlockSize*<br/>
-區塊的大小，預設值是 10。
+塊大小,預設值為 10。
 
 ### <a name="remarks"></a>備註
 
-區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小會減少記憶體配置常式，呼叫，但使用較多資源。
+塊大小是需要新元素時分配的記憶體量的度量。 較大的塊大小減少了對記憶體分配例程的調用,但使用的資源更多。
 
 ## <a name="see-also"></a>另請參閱
 
 [CAtlList 類別](../../atl/reference/catllist-class.md)<br/>
-[CAutoPtrElementTraits 類別](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[CAutoPtr 元素類別](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 1b4cb6a856d6da7b8eee7f9cba1ad51e375c024d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7cb815c4f7dc5ad09e8d352abc3f3375b8d9e205
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140052"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368112"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 結構
 
@@ -35,27 +35,27 @@ struct ITopologyNode;
 
 |名稱|描述|
 |----------|-----------------|
-|[ITopologyNode：： GetExecutionResourceCount](#getexecutionresourcecount)|傳回結合在這個節點下的執行資源數目。|
-|[ITopologyNode：： GetFirstExecutionResource](#getfirstexecutionresource)|傳回依列舉順序在這個節點下設為群組的第一個執行資源。|
-|[ITopologyNode：： GetId](#getid)|傳回此節點 Resource Manager 的唯一識別碼。|
-|[ITopologyNode：： GetNext](#getnext)|讓介面返回列舉順序中的下一個拓撲節點。|
-|[ITopologyNode：： GetNumaNode](#getnumanode)|傳回此資源 Maanger 節點所屬的 Windows 指派的 NUMA 節點編號。|
+|[I拓撲節點:取得執行資源計數](#getexecutionresourcecount)|傳回結合在這個節點下的執行資源數目。|
+|[I拓撲節點:取得第一個執行資源](#getfirstexecutionresource)|傳回依列舉順序在這個節點下設為群組的第一個執行資源。|
+|[I拓撲節點:GetId](#getid)|返回資源管理員對此節點的唯一標識符。|
+|[I拓撲節點:取得下一個](#getnext)|讓介面返回列舉順序中的下一個拓撲節點。|
+|[I拓撲節點::取得NumaNode](#getnumanode)|返回此資源馬anger節點所屬的Windows分配的NUMA節點號。|
 
 ## <a name="remarks"></a>備註
 
-此介面通常用來逐步引導系統的拓撲，如 Resource Manager 所觀察到的。
+此介面通常用於遍歷資源管理器觀察到的系統拓撲。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ITopologyNode`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="getexecutionresourcecount"></a>ITopologyNode：： GetExecutionResourceCount 方法
+## <a name="itopologynodegetexecutionresourcecount-method"></a><a name="getexecutionresourcecount"></a>I拓撲節點:取得執行資源計數方法
 
 傳回結合在這個節點下的執行資源數目。
 
@@ -67,7 +67,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 
 結合在這個節點下的執行資源數目。
 
-## <a name="getfirstexecutionresource"></a>ITopologyNode：： GetFirstExecutionResource 方法
+## <a name="itopologynodegetfirstexecutionresource-method"></a><a name="getfirstexecutionresource"></a>I拓撲節點:取得第一個執行資源方法
 
 傳回依列舉順序在這個節點下設為群組的第一個執行資源。
 
@@ -79,9 +79,9 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 
 依列舉順序在這個節點下設為群組的第一個執行資源。
 
-## <a name="getid"></a>ITopologyNode：： GetId 方法
+## <a name="itopologynodegetid-method"></a><a name="getid"></a>I拓撲節點:GetId 方法
 
-傳回此節點 Resource Manager 的唯一識別碼。
+返回資源管理員對此節點的唯一標識符。
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -89,15 +89,15 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-此節點 Resource Manager 的唯一識別碼。
+資源管理員對此節點的唯一標識符。
 
 ### <a name="remarks"></a>備註
 
-並行執行階段代表處理器節點群組中系統上的硬體執行緒。 節點通常是從系統的硬體拓朴衍生而來。 例如，特定通訊端或特定 NUMA 節點上的所有處理器都可能屬於相同的處理器節點。 Resource Manager 會將唯一識別碼指派給這些節點，從 `0` 到，包括 `nodeCount - 1`，其中 `nodeCount` 代表系統上的處理器節點總數。
+併發運行時以處理器節點組表示系統上的硬體線程。 節點通常派生自系統的硬體拓撲。 例如,特定套接字或特定 NUMA 節點上的所有處理器可能屬於同一處理器節點。 資源管理器為這些節點分配唯一標識符,從`0`最多和`nodeCount - 1`包括 開始`nodeCount`,其中 表示系統上的處理器節點總數。
 
-您可以從函數[GetProcessorNodeCount](concurrency-namespace-functions.md)取得節點計數。
+節點計數可以從函數[GetProcessorNodeCount](concurrency-namespace-functions.md)獲得。
 
-## <a name="getnext"></a>ITopologyNode：： GetNext 方法
+## <a name="itopologynodegetnext-method"></a><a name="getnext"></a>I拓撲節點:取得下一個方法
 
 讓介面返回列舉順序中的下一個拓撲節點。
 
@@ -109,9 +109,9 @@ virtual ITopologyNode *GetNext() const = 0;
 
 介面返回列舉順序中的下一個節點。 如果系統拓撲的列舉順序中沒有其他節點，這個方法將傳回值 `NULL`。
 
-## <a name="getnumanode"></a>ITopologyNode：： GetNumaNode 方法
+## <a name="itopologynodegetnumanode-method"></a><a name="getnumanode"></a>I拓撲節點::取得NumaNode方法
 
-傳回此資源 Maanger 節點所屬的 Windows 指派的 NUMA 節點編號。
+返回此資源馬anger節點所屬的Windows分配的NUMA節點號。
 
 ```cpp
 virtual unsigned long GetNumaNode() const = 0;
@@ -119,11 +119,11 @@ virtual unsigned long GetNumaNode() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-此 Resource Manager 節點所屬的 Windows 指派 NUMA 節點編號。
+此資源管理員節點所屬的 Windows 分配了 NUMA 節點號。
 
 ### <a name="remarks"></a>備註
 
-在屬於此節點的虛擬處理器根上執行的執行緒 proxy，對於此方法所傳回之 NUMA 節點的 NUMA 節點層級，至少會有相似性。
+在屬於此節點的虛擬處理器根上運行的線程代理將至少具有此方法返回的 NUMA 節點的 NUMA 節點等級的關聯。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebfbc185cdca2effc96ce2e6d96d05f997c52bf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324866"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365976"
 ---
 # <a name="csyncobject-class"></a>CSyncObject 類別
 
@@ -37,34 +37,34 @@ class CSyncObject : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CSyncObject::CSyncObject](#csyncobject)|建構 `CSyncObject` 物件。|
+|[CSync 物件:CSync物件](#csyncobject)|建構 `CSyncObject` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSyncObject::Lock](#lock)|提升存取同步處理物件。|
-|[CSyncObject::Unlock](#unlock)|提升存取同步處理物件。|
+|[CSync 物件:鎖定](#lock)|獲得對同步對象的訪問許可權。|
+|[CSync 物件:解鎖](#unlock)|獲得對同步對象的訪問許可權。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CSyncObject::operator 控制代碼](#operator_handle)|提供同步處理物件的存取權。|
+|[CSync物件::操作員HANDLE](#operator_handle)|提供對同步對象的訪問。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CSyncObject::m_hObject](#m_hobject)|基礎的同步處理物件的控制代碼。|
+|[CSync 物件:m_hObject](#m_hobject)|基礎同步物件的句柄。|
 
 ## <a name="remarks"></a>備註
 
-Microsoft Foundation 類別庫提供數個類別衍生自`CSyncObject`。 這些是[CEvent](../../mfc/reference/cevent-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)， [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)，以及[CSemaphore](../../mfc/reference/csemaphore-class.md)。
+Microsoft 基礎類庫提供`CSyncObject`來自的多個類。 這些是[CEvent,CMutex,C](../../mfc/reference/cmutex-class.md)[臨界截面](../../mfc/reference/ccriticalsection-class.md),和[CSemaphore。](../../mfc/reference/csemaphore-class.md) [CEvent](../../mfc/reference/cevent-class.md)
 
-如需如何使用同步處理物件的詳細資訊，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有關如何使用同步物件的資訊,請參閱"[多線程:如何使用同步類](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)「一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -72,11 +72,11 @@ Microsoft Foundation 類別庫提供數個類別衍生自`CSyncObject`。 這些
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxmt.h
+**標題:** afxmt.h
 
-##  <a name="csyncobject"></a>  CSyncObject::CSyncObject
+## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSync 物件:CSync物件
 
-建構一個同步處理物件，使用提供的名稱。
+建構具有提供名稱的同步物件。
 
 ```
 explicit CSyncObject(LPCTSTR pstrName);
@@ -86,11 +86,11 @@ virtual ~CSyncObject();
 ### <a name="parameters"></a>參數
 
 *pstrName*<br/>
-物件的名稱。 如果是 NULL， *pstrName*將會是 null。
+物件的名稱。 如果為 NULL,*則 pstrName*將為空。
 
-##  <a name="lock"></a>  CSyncObject::Lock
+## <a name="csyncobjectlock"></a><a name="lock"></a>CSync 物件:鎖定
 
-呼叫此函式可取得由同步處理物件所控制資源的存取權。
+調用此函數以訪問由同步物件控制的資源。
 
 ```
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
@@ -99,27 +99,27 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="parameters"></a>參數
 
 *dwTimeout*<br/>
-以毫秒為單位，等候同步處理物件，才能使用指定的時間量 （發出訊號）。 如果是無限的`Lock`會等候，直到物件收到信號之前傳回。
+指定等待同步物件可用(信號)的時間量(以毫秒為單位)。 如果 INFINITE,`Lock`將等待物件發出信號後再返回。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式時成功則為非零否則為 0。
+如果函數成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果在同步物件收到信號，`Lock`成功會傳回與執行緒現在擁有的物件。 如果未收到信號之同步處理物件 （無法使用），`Lock`會等候同步處理物件變成已收到訊號的中指定的毫秒數最*dwTimeOut*參數。 如果同步處理物件未變成收到訊號在指定的時間內，`Lock`傳回失敗。
+如果同步物件發出信號,`Lock`將成功返回,並且線程現在擁有該物件。 如果同步物件是非信號(不可用),`Lock`則將等待同步物件發出信號,最多達到*dwTimeOut*參數中指定的毫秒數。 如果同步物件未在指定的時間內發出信號,則`Lock`返回失敗。
 
-##  <a name="m_hobject"></a>  CSyncObject::m_hObject
+## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a>CSync 物件:m_hObject
 
-基礎的同步處理物件的控制代碼。
+基礎同步物件的句柄。
 
 ```
 HANDLE m_hObject;
 ```
 
-##  <a name="operator_handle"></a>  CSyncObject::operator 控制代碼
+## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSync物件::操作員HANDLE
 
-若要取得的控制代碼使用這個運算子`CSyncObject`物件。
+使用此運算元獲取`CSyncObject`物件的句柄。
 
 ```
 operator HANDLE() const;
@@ -127,15 +127,15 @@ operator HANDLE() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，同步處理物件的控制代碼否則為 NULL。
+如果成功,則處理同步物件的句柄;否則,NULL。
 
 ### <a name="remarks"></a>備註
 
-您可以使用控制代碼來直接呼叫 Windows Api。
+您可以使用該句柄直接呼叫 Windows API。
 
-##  <a name="unlock"></a>  CSyncObject::Unlock
+## <a name="csyncobjectunlock"></a><a name="unlock"></a>CSync 物件:解鎖
 
-Deklarace`Unlock`不含任何參數是純虛擬函式，並且必須被覆寫的所有類別衍生自`CSyncObject`。
+`Unlock`無參數的聲明是純虛擬函數,必須由派生自`CSyncObject`的所有類重寫。
 
 ```
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -145,19 +145,19 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 ### <a name="parameters"></a>參數
 
-*lCount*<br/>
-不使用預設實作。
+*l. Count*<br/>
+默認情況下不使用實現。
 
-*lpPrevCount*<br/>
-不使用預設實作。
+*lpPrev( A) Counts*<br/>
+默認情況下不使用實現。
 
 ### <a name="return-value"></a>傳回值
 
-預設實作一律會傳回 TRUE。
+預設實現始終返回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-預設實作的兩個參數宣告一律會傳回 TRUE。 您可以呼叫此函式釋放呼叫執行緒所擁有的同步處理物件的存取權。 第二個宣告可供同步處理物件，例如號誌，可讓多個受控制的資源存取權。
+具有兩個參數的聲明的預設實現始終返回 TRUE。 調用此函數是為了釋放對調用線程擁有的同步物件的訪問。 第二個聲明用於同步物件,如允許對受控資源的多個訪問許可權的信號量。
 
 ## <a name="see-also"></a>另請參閱
 

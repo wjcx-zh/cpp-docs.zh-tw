@@ -20,19 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 784086b1c2edef5eb0de3bba4a97d1e3cc6272e7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 39f323874ccde5178722235b9beb34c2572407a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318969"
 ---
 # <a name="catlfile-class"></a>CAtlFile 類別
 
-這個類別會提供 Windows 檔案處理 API 的精簡型包裝函式。
+此類在 Windows 檔處理 API 周圍提供一個精簡包裝器。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -46,45 +46,45 @@ class CAtlFile : public CHandle
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlFile::CAtlFile](#catlfile)|建構函式。|
+|[CAtlFile:CAtlFile](#catlfile)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlFile::Create](#create)|呼叫這個方法來建立或開啟檔案。|
-|[CAtlFile::Flush](#flush)|呼叫這個方法來清除檔案的緩衝區, 並造成所有緩衝資料都寫入檔案中。|
-|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|呼叫這個方法, 以取得檔案上重迭作業的結果。|
-|[CAtlFile::GetPosition](#getposition)|呼叫這個方法, 從檔案中取得目前的檔案指標位置。|
-|[CAtlFile::GetSize](#getsize)|呼叫此方法以取得檔案的大小 (以位元組為單位)。|
-|[CAtlFile::LockRange](#lockrange)|呼叫這個方法來鎖定檔案中的區域, 以防止其他處理常式存取它。|
-|[CAtlFile::Read](#read)|呼叫這個方法, 從檔案指標所指示的位置開始, 讀取檔案中的資料。|
-|[CAtlFile::Seek](#seek)|呼叫這個方法來移動檔案的檔案指標。|
-|[CAtlFile::SetSize](#setsize)|呼叫這個方法來設定檔案的大小。|
-|[CAtlFile::UnlockRange](#unlockrange)|呼叫這個方法來解除鎖定檔案的區域。|
-|[CAtlFile::Write](#write)|呼叫這個方法, 從檔案指標所指示的位置開始, 將資料寫入檔案。|
+|[CAtlFile:建立](#create)|呼叫此方法以建立或打開檔。|
+|[CAtlFile:沖洗](#flush)|呼叫此方法以清除檔的緩衝區,並導致將所有緩衝資料寫入該檔。|
+|[CAtlFile:取得重疊結果](#getoverlappedresult)|調用此方法以獲取檔上重疊操作的結果。|
+|[CAtlFile:抓取位置](#getposition)|呼叫此方法從檔案中獲取當前檔指標位置。|
+|[CAtlFile:取得 Size](#getsize)|呼叫此方法以獲取檔的大小(以位元組為單位)。|
+|[CAtlFile:鎖定範圍](#lockrange)|調用此方法以鎖定檔中的區域,以防止其他進程訪問它。|
+|[CAtlFile:閱讀](#read)|調用此方法從檔讀取數據,從檔指標指示的位置開始。|
+|[CAtlFile:尋找](#seek)|呼叫此方法以移動檔的檔指標。|
+|[CAtlFile:設定大小](#setsize)|呼叫此方法以設定檔的大小。|
+|[CAtlFile:解鎖範圍](#unlockrange)|呼叫此方法以解鎖檔的區域。|
+|[CAtlFile:寫入](#write)|調用此方法將數據寫入檔,從檔指標指示的位置開始。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlFile::m_pTM](#m_ptm)|物件的`CAtlTransactionManager`指標|
+|[CAtlFile:m_pTM](#m_ptm)|指向`CAtlTransactionManager`物件的指標|
 
 ## <a name="remarks"></a>備註
 
-當檔案處理需求相當簡單, 但需要比 Windows API 提供的更多抽象概念時, 請使用這個類別, 而不需包含 MFC 相依性。
+當文件處理需求相對簡單,但需要比 Windows API 提供的更多的抽象,但不包括 MFC 依賴項時,請使用此類。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CHandle](../../atl/reference/chandle-class.md)
+[手柄](../../atl/reference/chandle-class.md)
 
 `CAtlFile`
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlfile。h
+**標題:** atlfile.h
 
-##  <a name="catlfile"></a>CAtlFile::CAtlFile
+## <a name="catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile:CAtlFile
 
 建構函式。
 
@@ -97,22 +97,22 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>參數
 
-*file*<br/>
-File 物件。
+*檔案*<br/>
+檔物件。
 
 *hFile*<br/>
-檔案控制代碼。
+檔句柄。
 
 *pTM*<br/>
 CAtlTransactionManager 物件的指標
 
 ### <a name="remarks"></a>備註
 
-複製的函式會將檔案控制代碼的擁有權`CAtlFile`從原始物件轉移至新建立的物件。
+複製建構函數將檔句柄的擁有權從`CAtlFile`原始 物件轉移到新構造的物件。
 
-##  <a name="create"></a>CAtlFile:: Create
+## <a name="catlfilecreate"></a><a name="create"></a>CAtlFile:建立
 
-呼叫這個方法來建立或開啟檔案。
+呼叫此方法以建立或打開檔。
 
 ```
 HRESULT Create(
@@ -130,35 +130,35 @@ HRESULT Create(
 *szFilename*<br/>
 檔案名稱。
 
-*dwDesiredAccess*<br/>
-所需的存取權。 請參閱 Windows SDK 中[CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew)的*dwDesiredAccess* 。
+*dwddAccess*<br/>
+所需的訪問。 請參閱 Windows SDK 中的[「創建檔案](/windows/win32/api/fileapi/nf-fileapi-createfilew)」中的*dwdDAccess。*
 
 *dwShareMode*<br/>
-共用模式。 請參閱中`CreateFile`的 dwShareMode。
+共用模式。 請參閱`CreateFile`中的*dwShareMode。*
 
-*dwCreationDisposition*<br/>
-建立配置。 請參閱中`CreateFile`的 dwCreationDisposition。
+*德沃創意*<br/>
+創建處置。 請參閱`CreateFile`中的*dw 創造處理。*
 
-*dwFlagsAndAttributes*<br/>
-旗標和屬性。 請參閱中`CreateFile`的 dwFlagsAndAttributes。
+*dwflags 與屬性*<br/>
+標誌和屬性。 請參考中的`CreateFile` *dwFlags 與屬性*。
 
 *lpsa*<br/>
-安全性屬性。 請參閱中`CreateFile`的 lpSecurityAttributes。
+安全屬性。 請參考中的`CreateFile` *lpSecurity 屬性*。
 
-*hTemplateFile*<br/>
-範本檔案。 請參閱中`CreateFile`的 hTemplateFile。
+*h範本檔案*<br/>
+範本檔。 請參閱`CreateFile`中的*hTemplateFile。*
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew)以建立或開啟檔案。
+呼叫[CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew)建立或開啟檔案。
 
-##  <a name="flush"></a>CAtlFile:: Flush
+## <a name="catlfileflush"></a><a name="flush"></a>CAtlFile:沖洗
 
-呼叫這個方法來清除檔案的緩衝區, 並造成所有緩衝資料都寫入檔案中。
+呼叫此方法以清除檔的緩衝區,並導致將所有緩衝資料寫入該檔。
 
 ```
 HRESULT Flush() throw();
@@ -166,15 +166,15 @@ HRESULT Flush() throw();
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers)以將緩衝的資料排清到檔案。
+呼叫[FlushFileBuffer 以](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers)刷新緩衝的資料到檔。
 
-##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult
+## <a name="catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile:取得重疊結果
 
-呼叫這個方法, 以取得檔案上重迭作業的結果。
+調用此方法以獲取檔上重疊操作的結果。
 
 ```
 HRESULT GetOverlappedResult(
@@ -185,26 +185,26 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>參數
 
-*pOverlapped*<br/>
-重迭的結構。 請參閱 Windows SDK 中[GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult)的*lpOverlapped* 。
+*p 重疊*<br/>
+重疊的結構。 在 Windows SDK 中查看 *「重疊*[結果](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult)」。。
 
-*dwBytesTransferred*<br/>
-傳輸的位元組數。 請參閱中`GetOverlappedResult`的 lpNumberOfBytesTransferred。
+*dwBytes 傳輸*<br/>
+傳輸的位元組數。 請參考 在中`GetOverlappedResult`*傳輸的 lp 編號數*。
 
-*bWait*<br/>
-Wait 選項。 請參閱中`GetOverlappedResult`的 bWait。
+*b 等待*<br/>
+等待選項。 請參閱*b*`GetOverlappedResult`等待。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult)以取得檔案上重迭作業的結果。
+調用[GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult)獲取檔上重疊操作的結果。
 
-##  <a name="getposition"></a>CAtlFile::GetPosition
+## <a name="catlfilegetposition"></a><a name="getposition"></a>CAtlFile:抓取位置
 
-呼叫這個方法, 以取得目前的檔案指標位置。
+呼叫此方法獲取當前檔指標位置。
 
 ```
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
@@ -213,19 +213,19 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-以位元組為單位的位置。
+位元組中的位置。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)以取得目前的檔案指標位置。
+呼叫[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)取得目前的檔案指標位置。
 
-##  <a name="getsize"></a>CAtlFile:: GetSize
+## <a name="catlfilegetsize"></a><a name="getsize"></a>CAtlFile:取得 Size
 
-呼叫此方法以取得檔案的大小 (以位元組為單位)。
+呼叫此方法以獲取檔的大小(以位元組為單位)。
 
 ```
 HRESULT GetSize(ULONGLONG& nLen) const throw();
@@ -234,19 +234,19 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="parameters"></a>參數
 
 *nLen*<br/>
-檔案中的位元組數目。
+檔中的位元組數。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[GetFileSize](/windows/win32/api/fileapi/nf-fileapi-getfilesize)來取得檔案的大小 (以位元組為單位)。
+呼叫[GetFileSize](/windows/win32/api/fileapi/nf-fileapi-getfilesize)以取得檔案的大小(以位元組為單位)。
 
-##  <a name="lockrange"></a>CAtlFile::LockRange
+## <a name="catlfilelockrange"></a><a name="lockrange"></a>CAtlFile:鎖定範圍
 
-呼叫這個方法來鎖定檔案中的區域, 以防止其他處理常式存取它。
+調用此方法以鎖定檔中的區域,以防止其他進程訪問它。
 
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
@@ -255,20 +255,20 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-檔案中應該開始鎖定的位置。
+鎖應開始的檔中的位置。
 
-*nCount*<br/>
-要鎖定的位元組範圍長度。
+*n( N) Count*<br/>
+要鎖定的位元組範圍的長度。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[LockFile](/windows/win32/api/fileapi/nf-fileapi-lockfile)以鎖定檔案中的區域。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 您可以鎖定一個以上的檔案區域, 但不允許重迭的區域。 當您使用[CAtlFile:: UnlockRange](#unlockrange)解除鎖定區域時, 位元組範圍必須完全對應到先前鎖定的區域。 `LockRange`不會合並相鄰區域;如果兩個鎖定的區域是連續的, 您必須分別解除鎖定。
+呼叫[鎖定檔案](/windows/win32/api/fileapi/nf-fileapi-lockfile)中的區域。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 可以鎖定檔的多個區域,但不允許重疊區域。 當您解鎖區域時,使用[CAtlFile::unlockRange,](#unlockrange)位元組範圍必須與以前鎖定的區域完全對應。 `LockRange`不合併相鄰區域;不合併相鄰區域。如果兩個鎖定區域相鄰,則必須單獨解鎖每個區域。
 
-##  <a name="m_ptm"></a>  CAtlFile::m_pTM
+## <a name="catlfilem_ptm"></a><a name="m_ptm"></a>CAtlFile:m_pTM
 
 指向 `CAtlTransactionManager` 物件的指標。
 
@@ -278,9 +278,9 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="read"></a>CAtlFile:: Read
+## <a name="catlfileread"></a><a name="read"></a>CAtlFile:閱讀
 
-呼叫這個方法, 從檔案指標所指示的位置開始, 讀取檔案中的資料。
+調用此方法從檔讀取數據,從檔指標指示的位置開始。
 
 ```
 HRESULT Read(
@@ -307,31 +307,31 @@ HRESULT Read(
 ### <a name="parameters"></a>參數
 
 *pBuffer*<br/>
-緩衝區的指標, 將會接收從檔案讀取的資料。
+指向將接收從檔讀取的數據的緩衝區的指標。
 
 *nBufSize*<br/>
 緩衝區大小，以位元組為單位。
 
-*nBytesRead*<br/>
+*n 位元組讀取*<br/>
 讀取的位元組數。
 
-*pOverlapped*<br/>
-重迭的結構。 請參閱 Windows SDK 中[ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile)的*lpOverlapped* 。
+*p 重疊*<br/>
+重疊的結構。 在 Windows SDK 中的[「讀取檔案](/windows/win32/api/fileapi/nf-fileapi-readfile)」 中檢視*lp 重疊*。
 
-*pfnCompletionRoutine*<br/>
-完成常式。 請參閱 Windows SDK 中[ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex)的*lpCompletionRoutine* 。
+*pfn 完成常式*<br/>
+完成例程。 請參考 Windows SDK 中的[「閱讀檔更新](/windows/win32/api/fileapi/nf-fileapi-readfileex)」 的*lp 完成例程式*。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-前三個表單會呼叫[ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), 最後一個[ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex)從檔案讀取資料。 使用[CAtlFile:: Seek](#seek)來移動檔案指標。
+前三個表單調用[ReadFile,](/windows/win32/api/fileapi/nf-fileapi-readfile)這是最後一個從檔讀取資料的[ReadFileEx。](/windows/win32/api/fileapi/nf-fileapi-readfileex) 使用[CAtlFile::尋求](#seek)移動檔指標。
 
-##  <a name="seek"></a>CAtlFile:: Seek
+## <a name="catlfileseek"></a><a name="seek"></a>CAtlFile:尋找
 
-呼叫這個方法來移動檔案的檔案指標。
+呼叫此方法以移動檔的檔指標。
 
 ```
 HRESULT Seek(
@@ -341,23 +341,23 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>參數
 
-*nOffset*<br/>
-*DwFrom*所指定之起點的位移。
+*n位移*<br/>
+dwFrom 給出的起始點的偏*dwFrom*移 量。
 
-*dwFrom*<br/>
-起始點 (FILE_BEGIN、FILE_CURRENT 或 FILE_END)。
+*dwfrom*<br/>
+起點(FILE_BEGIN、FILE_CURRENT或FILE_END)。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)以移動檔案指標。
+呼叫[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)以移動檔指標。
 
-##  <a name="setsize"></a>CAtlFile:: SetSize
+## <a name="catlfilesetsize"></a><a name="setsize"></a>CAtlFile:設定大小
 
-呼叫這個方法來設定檔案的大小。
+呼叫此方法以設定檔的大小。
 
 ```
 HRESULT SetSize(ULONGLONG nNewLen) throw();
@@ -365,20 +365,20 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>參數
 
-*nNewLen*<br/>
-檔案的新長度 (以位元組為單位)。
+*n 紐倫*<br/>
+檔的新長度(以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)和[SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile)來設定檔案的大小。 在傳回時, 檔案指標會放在檔案結尾。
+呼叫[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)和[SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile)來設定檔的大小。 返回時,檔指標位於檔的末尾。
 
-##  <a name="unlockrange"></a>CAtlFile::UnlockRange
+## <a name="catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile:解鎖範圍
 
-呼叫這個方法來解除鎖定檔案的區域。
+呼叫此方法以解鎖檔的區域。
 
 ```
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
@@ -387,22 +387,22 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-檔案中應開始解除鎖定的位置。
+應開始解鎖的檔中的位置。
 
-*nCount*<br/>
-要解除鎖定的位元組範圍長度。
+*n( N) Count*<br/>
+要解鎖的位元組範圍的長度。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-呼叫[UnlockFile](/windows/win32/api/fileapi/nf-fileapi-unlockfile)來解除鎖定檔案的區域。
+呼叫[解鎖檔](/windows/win32/api/fileapi/nf-fileapi-unlockfile)以解鎖檔的區域。
 
-##  <a name="write"></a>CAtlFile:: Write
+## <a name="catlfilewrite"></a><a name="write"></a>CAtlFile:寫入
 
-呼叫這個方法, 從檔案指標所指示的位置開始, 將資料寫入檔案。
+調用此方法將數據寫入檔,從檔指標指示的位置開始。
 
 ```
 HRESULT Write(
@@ -425,30 +425,30 @@ HRESULT Write(
 ### <a name="parameters"></a>參數
 
 *pBuffer*<br/>
-包含要寫入檔案之資料的緩衝區。
+包含要寫入文件的數據的緩衝區。
 
 *nBufSize*<br/>
-要從緩衝區傳送的位元組數目。
+要從緩衝區傳輸的位元組數。
 
-*pOverlapped*<br/>
-重迭的結構。 請參閱 Windows SDK 中[WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile)的*lpOverlapped* 。
+*p 重疊*<br/>
+重疊的結構。 在 Windows SDK 的[寫入檔案](/windows/win32/api/fileapi/nf-fileapi-writefile)中檢視*lp 重疊*。
 
-*pfnCompletionRoutine*<br/>
-完成常式。 請參閱 Windows SDK 中[WriteFileEx](/windows/win32/api/fileapi/nf-fileapi-writefileex)的*lpCompletionRoutine* 。
+*pfn 完成常式*<br/>
+完成例程。 請參考 Windows SDK 中[寫入檔案Ex](/windows/win32/api/fileapi/nf-fileapi-writefileex)中的*lp 完成例程式*。
 
-*pnBytesWritten*<br/>
+*pn位元組寫入*<br/>
 寫入的位元組。
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-前三個表單呼叫[WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), 最後一次呼叫[WriteFileEx](/windows/win32/api/fileapi/nf-fileapi-writefileex)將資料寫入檔案。 使用[CAtlFile:: Seek](#seek)來移動檔案指標。
+前三個表單調用[WriteFile,](/windows/win32/api/fileapi/nf-fileapi-writefile)最後呼叫[WriteFileEx](/windows/win32/api/fileapi/nf-fileapi-writefileex)將資料寫入檔。 使用[CAtlFile::尋求](#seek)移動檔指標。
 
 ## <a name="see-also"></a>另請參閱
 
-[天棚範例](../../overview/visual-cpp-samples.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)<br/>
+[選取方塊範例](../../overview/visual-cpp-samples.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [CHandle 類別](../../atl/reference/chandle-class.md)

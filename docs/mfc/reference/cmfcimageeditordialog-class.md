@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c2a919428689fe107b82041bd87b758ede2bc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394518"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367472"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog 類別
 
-`CMFCImageEditorDialog`類別支援影像編輯器 對話方塊。
+類`CMFCImageEditorDialog`支援圖像編輯器對話方塊。
 
 ## <a name="syntax"></a>語法
 
@@ -31,27 +31,27 @@ class CMFCImageEditorDialog : public CDialogEx
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|建構 `CMFCImageEditorDialog` 物件。|
+|[CMFC 影像編輯器:CMFC影像編輯器對話](#cmfcimageeditordialog)|建構 `CMFCImageEditorDialog` 物件。|
 
 ## <a name="remarks"></a>備註
 
-`CMFCImageEditorDialog`類別提供一個對話方塊，其中包含：
+該`CMFCImageEditorDialog`類提供一個對話框,其中包括:
 
-- 您用來修改映像中的個別像素 [圖片] 區域中。
+- 用於修改圖像中單個像素的圖片區域。
 
-- 繪圖工具來修改 [圖片] 區域中的像素。
+- 繪圖工具以修改圖片區域中的圖元。
 
-- 若要指定使用繪圖工具的色彩調色盤。
+- 用於指定繪圖工具使用的顏色的調色板。
 
-- 預覽區域會顯示您的編輯的效果。
+- 顯示編輯效果的預覽區域。
 
-下圖顯示的影像編輯器 對話方塊。
+下圖顯示了圖像編輯器對話方塊。
 
 ![CMFCImageEditorDialog 對話方塊](../../mfc/reference/media/imageedit.png "CMFCImageEditorDialog 對話方塊")
 
-使用一種方式`CMFCImageEditorDialog`物件是將它傳遞`CBitmap`編輯映像。 請勿建立大型映像，因為編輯區域的映像具有大小限制，且邏輯像素大小會進行調整以納入區域。 呼叫`DoModal`方法來啟動強制回應對話方塊。
+使用物件的一種方法`CMFCImageEditorDialog`是傳遞要`CBitmap`編輯 的圖像。 不要創建大圖像,因為圖像編輯區域的大小有限,並且調整邏輯圖元大小以適合該區域。 調用`DoModal`方法以啟動模式對話方塊。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -67,9 +67,9 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afximageeditordialog.h
+**標題:** afx 影像編輯器.h
 
-##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog
+## <a name="cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a>CMFC 影像編輯器:CMFC影像編輯器對話
 
 建構 `CMFCImageEditorDialog` 物件。
 
@@ -83,23 +83,23 @@ CMFCImageEditorDialog(
 ### <a name="parameters"></a>參數
 
 *pBitmap*<br/>
-映像的指標。
+指向圖像的指標。
 
 *pParent*<br/>
-目前的影像編輯器對話方塊的父視窗的指標。
+指向當前圖像編輯器對話框的父視窗。
 
-*nBitsPixel*<br/>
-用來代表單一像素，也稱為色彩深度的色彩位元數。  如果*nBitsPixel*參數為-1，色彩深度衍生自所指定的影像*pBitmap*參數。 預設值為 -1。
+*nBits 圖元*<br/>
+用於表示單個像素顏色(也稱為顏色深度)的位數。  如果*nBitsPixel*參數為 -1,則顏色深度將從*pBitmap*參數指定的圖像派生。 預設值為 -1。
 
 ### <a name="return-value"></a>傳回值
 
-若要修改映像，將傳遞的映像指標`CMFCImageEditorDialog`建構函式。 然後呼叫`DoModal`方法來開啟強制回應對話方塊。 當`DoModal`方法傳回時，點陣圖包含新的映像。
+要修改圖像,請將圖像指標傳遞給`CMFCImageEditorDialog`構造函數。 然後調用`DoModal`方法以打開一個模態對話方塊。 當`DoModal`方法返回時,位圖包含新圖像。
 
 ### <a name="remarks"></a>備註
 
 ### <a name="example"></a>範例
 
-下列範例示範如何建構的物件`CMFCImageEditorDialog`類別。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何構造`CMFCImageEditorDialog`類的物件。 此示例是[「新控制件」範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]

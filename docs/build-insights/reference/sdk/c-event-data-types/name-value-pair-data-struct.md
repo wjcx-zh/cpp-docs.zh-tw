@@ -1,6 +1,6 @@
 ---
-title: NAME_VALUE_PAIR_DATA 結構
-description: C++ BUILD Insights SDK NAME_VALUE_PAIR_DATA 結構參考。
+title: NAME_VALUE_PAIR_DATA結構
+description: C++生成見解 SDK NAME_VALUE_PAIR_DATA結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f6c4f6fef11e6365bdc930d5df1f48f72186ebdb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 4a0bf8e8ba32d94d30a56d0ef26ca4ed0c9b0711
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325348"
 ---
-# <a name="name_value_pair_data-structure"></a>NAME_VALUE_PAIR_DATA 結構
+# <a name="name_value_pair_data-structure"></a>NAME_VALUE_PAIR_DATA結構
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`NAME_VALUE_PAIR_DATA` 結構描述名稱和值配對。
+結構`NAME_VALUE_PAIR_DATA`描述名稱和值對。
 
 ## <a name="syntax"></a>語法
 

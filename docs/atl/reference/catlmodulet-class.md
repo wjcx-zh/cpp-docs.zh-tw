@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: 2cd207038a92b944bf95575f0e0c820b8f09d615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf64c073249b7426fafb430a708573d9d06d11fd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260145"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321417"
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT 類別
 
-這個類別會實作 「 ATL 模組。
+此類實現 ATL 模組。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別衍生自`CAtlModuleT`。
+來自 的`CAtlModuleT`類 派生自 。
 
 ## <a name="members"></a>成員
 
@@ -43,26 +43,26 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlModuleT::CAtlModuleT](#catlmodulet)|建構函式。|
+|[CAtlModuleT:CAtlModuleT](#catlmodulet)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlModuleT::InitLibId](#initlibid)|初始化資料成員包含在目前模組的 GUID。|
-|[CAtlModuleT::RegisterAppId](#registerappid)|將 EXE 加入至登錄。|
-|[CAtlModuleT::RegisterServer](#registerserver)|將服務加入至登錄中。|
-|[CAtlModuleT::UnregisterAppId](#unregisterappid)|從登錄移除 EXE。|
-|[CAtlModuleT::UnregisterServer](#unregisterserver)|從登錄中移除服務。|
-|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|更新登錄中的 EXE 資訊。|
+|[Catlmodulet::InitLibId](#initlibid)|初始化包含當前模組 GUID 的數據成員。|
+|[CAtlModuleT::註冊應用程式](#registerappid)|將 EXE 添加到註冊表。|
+|[CAtlModuleT::註冊伺服器](#registerserver)|將服務添加到註冊表。|
+|[CAtlModuleT::未註冊AppId](#unregisterappid)|從註冊表中刪除 EXE。|
+|[CAtlModuleT::未註冊伺服器](#unregisterserver)|從註冊表中刪除服務。|
+|[CAtlModuleT::更新註冊應用程式](#updateregistryappid)|更新註冊表中的 EXE 資訊。|
 
 ## <a name="remarks"></a>備註
 
-`CAtlModuleT`衍生自[CAtlModule](../../atl/reference/catlmodule-class.md)，實作可執行檔 (EXE) 或服務 (EXE) ATL 模組。 可執行模組中將是本機的跨處理序伺服器，而服務模組是 Windows 啟動時，會在背景中執行的 Windows 應用程式。
+`CAtlModuleT`,派生自[CAtlModule](../../atl/reference/catlmodule-class.md), 實現可執行 (EXE) 或服務 (EXE) ATL 模組。 可執行模組是本地、程序外伺服器,而服務模組是 Windows 應用程式,在 Windows 啟動時在後台運行。
 
-`CAtlModuleT` 提供初始化、 註冊和取消登錄模組的支援。
+`CAtlModuleT`支援模組的初始化、註冊和取消註冊。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
@@ -72,9 +72,9 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標題:** atlbase.h
 
-##  <a name="catlmodulet"></a>  CAtlModuleT::CAtlModuleT
+## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT:CAtlModuleT
 
 建構函式。
 
@@ -84,11 +84,11 @@ CAtlModuleT() throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫[CAtlModuleT::InitLibId](#initlibid)。
+呼叫[Catlmodulet:initLibId](#initlibid)。
 
-##  <a name="initlibid"></a>  CAtlModuleT::InitLibId
+## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a>Catlmodulet::InitLibId
 
-初始化資料成員包含在目前模組的 GUID。
+初始化包含當前模組 GUID 的數據成員。
 
 ```
 static void InitLibId() throw();
@@ -96,11 +96,11 @@ static void InitLibId() throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫建構函式[CAtlModuleT::CAtlModuleT](#catlmodulet)。
+由建構函數[CAtlModuleT 呼叫:CAtlModuleT](#catlmodulet)。
 
-##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId
+## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::註冊應用程式
 
-將 EXE 加入至登錄。
+將 EXE 添加到註冊表。
 
 ```
 HRESULT RegisterAppId() throw();
@@ -108,11 +108,11 @@ HRESULT RegisterAppId() throw();
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
-##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer
+## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::註冊伺服器
 
-將服務加入至登錄中。
+將服務添加到註冊表。
 
 ```
 HRESULT RegisterServer(
@@ -123,18 +123,18 @@ HRESULT RegisterServer(
 ### <a name="parameters"></a>參數
 
 *bRegTypeLib*<br/>
-如果型別程式庫是要註冊，則為 TRUE。 預設值為 FALSE。
+如果要註冊類型庫,則為 TRUE。 預設值為 FALSE。
 
 *pCLSID*<br/>
-要註冊之物件的 clsid 點。 若要註冊 NULL （預設值），在物件對應中的所有物件。
+指向要註冊的物件的 CLSID。 如果 NULL(預設值),則將註冊物件映射中的所有物件。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
-##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId
+## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::未註冊AppId
 
-從登錄移除 EXE。
+從註冊表中刪除 EXE。
 
 ```
 HRESULT UnregisterAppId() throw();
@@ -142,11 +142,11 @@ HRESULT UnregisterAppId() throw();
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
-##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer
+## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::未註冊伺服器
 
-從登錄中移除服務。
+從註冊表中刪除服務。
 
 ```
 HRESULT UnregisterServer(
@@ -157,18 +157,18 @@ HRESULT UnregisterServer(
 ### <a name="parameters"></a>參數
 
 *bUnRegTypeLib*<br/>
-如果型別程式庫也要取消註冊，則為 TRUE。
+如果類型庫也要取消註冊,則為 TRUE。
 
 *pCLSID*<br/>
-要移除註冊物件的 clsid 點。 如果 NULL （預設值），在物件對應中的所有物件就會取消註冊。
+指向要未註冊的物件的 CLSID。 如果 NULL(預設值),則物件映射中的所有物件都將取消註冊。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
-##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId
+## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::更新註冊應用程式
 
-更新登錄中的 EXE 資訊。
+更新註冊表中的 EXE 資訊。
 
 ```
 static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
@@ -176,15 +176,15 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ### <a name="parameters"></a>參數
 
-*bRegister*<br/>
-保留的。
+*b 註冊*<br/>
+已保留。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ## <a name="see-also"></a>另請參閱
 
 [CAtlModule 類別](../../atl/reference/catlmodule-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
-[模組類別](../../atl/atl-module-classes.md)
+[模組類](../../atl/atl-module-classes.md)

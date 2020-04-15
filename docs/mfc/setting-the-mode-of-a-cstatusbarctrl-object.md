@@ -9,23 +9,23 @@ helpviewer_keywords:
 - non-simple mode and status bar controls
 - CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
-ms.openlocfilehash: 79b499533196447898ce62ea9dc86c1674fc0302
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e09a7bd274c44df2da48bbc007a95802fadd8cf0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365409"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>設定 CStatusBarCtrl 物件的模式
 
-`CStatusBarCtrl` 物件有兩種模式： simple 和簡單。 在大部分的情況下，您的狀態列控制項將會有一或多個元件，以及文字，可能是圖示或圖示。 這稱為簡單模式。 如需此模式的詳細資訊，請參閱[初始化 CStatusBarCtrl 物件的元件](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。
+對象有兩`CStatusBarCtrl`種 模式:簡單和非簡單。 在大多數情況下,您的狀態列控制項將包含一個或多個部分,以及文本,以及圖示或圖示。 這稱為非簡單模式。 關於此模式的詳細資訊,請參閱[初始化 CStatusBarCtrl 物件的部分](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。
 
-不過，在某些情況下，您只需要顯示一行文字。 在此情況下，簡單模式就足以滿足您的需求。 若要將 `CStatusBarCtrl` 物件的模式變更為 simple，請呼叫[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成員函式。 當狀態列控制項處於簡單模式後，請呼叫 `SetText` 成員函式來設定文字，傳遞255做為*nPane*參數的值。
+但是,在某些情況下,您只需要顯示一行文本。 在這種情況下,簡單模式足以滿足您的需要。 要將`CStatusBarCtrl`物件模式更改為簡單,請調用[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成員函數。 狀態欄控件處於簡單模式后,通過調用`SetText`成員函數設置文本,傳遞 255 作為*nPane*參數的值。
 
-您可以使用[IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)函數來判斷 `CStatusBarCtrl` 物件所在的模式。
+可以使用[IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)函數`CStatusBarCtrl`來確定 物件處於何種模式。
 
 > [!NOTE]
->  如果狀態列物件從簡單變更為 simple，或反之亦然，則會立即重新繪製視窗，如果適用的話，會自動還原任何已定義的元件。
+> 如果狀態列物件從非簡單更改為簡單,反之亦然,則立即重新繪製視窗,如果適用,將自動還原任何定義的部件。
 
 ## <a name="see-also"></a>另請參閱
 

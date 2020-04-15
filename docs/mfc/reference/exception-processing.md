@@ -11,84 +11,84 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420845"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365720"
 ---
 # <a name="exception-processing"></a>例外狀況處理
 
-當程式執行時，可能會發生一些異常情況和稱為「例外狀況」的錯誤。 這些可能包括記憶體不足、資源配置錯誤，以及找不到檔案的問題。
+當程式執行時,可能會出現許多稱為"異常"的異常條件和錯誤。 這些可能包括記憶體不足、資源分配錯誤和找不到檔。
 
-MFC 程式庫使用的例外狀況處理配置，會在 ANSI 標準委員會所提議的之後，仔細模型化C++。 必須先設定例外狀況處理常式，才能呼叫可能會遇到異常情況的函式。 如果函式遇到異常情況，則會擲回例外狀況，並將控制權傳遞給例外狀況處理常式。
+Microsoft 基礎類庫使用一種異常處理方案,該方案與 ANSI 標準委員會提出的 C++方案緊密建模。 在調用可能遇到異常情況的函數之前,必須設置異常處理程式。 如果函數遇到異常情況,它將引發異常,並將控件傳遞給異常處理程式。
 
-MFC 程式庫所包含的數個宏將會設定例外狀況處理常式。 如有必要，還有一些其他全域函式有助於擲回特定的例外狀況並終止程式。 這些宏和全域函式分成下列類別：
+Microsoft 基礎類庫中包含的幾個宏將設置異常處理程式。 許多其他全域函數有助於引發專用異常並在必要時終止程式。 這些宏和全域函數分為以下幾類:
 
-- 例外狀況宏，這會為您的例外狀況處理常式進行結構。
+- 異常宏,它構造異常處理程式。
 
-- 例外狀況擲回的函式），會產生特定類型的例外狀況。
+- 異常引發函數),生成特定類型的異常。
 
-- 終止函式，這會造成程式終止。
+- 終止函數,導致程序終止。
 
-如需範例和詳細資訊，請參閱[例外](../../mfc/exception-handling-in-mfc.md)狀況一文。
+有關範例和更多詳細資訊,請參閱文章["例外](../../mfc/exception-handling-in-mfc.md)"。
 
-### <a name="exception-macros"></a>例外狀況宏
-
-|||
-|-|-|
-|[次](#try)|指定例外狀況處理的程式碼區塊。|
-|[抓住](#catch)|指定程式碼區塊，以攔截上述**TRY**區塊中的例外狀況。|
-|[CATCH_ALL](#catch_all)|指定程式碼區塊，以攔截上述**TRY**區塊中的所有例外狀況。|
-|[AND_CATCH](#and_catch)|指定程式碼區塊，以攔截上述**TRY**區塊中的其他例外狀況類型。|
-|[AND_CATCH_ALL](#and_catch_all)|指定程式碼區塊，以攔截先前的**TRY**區塊中擲回的所有其他例外狀況類型。|
-|[END_CATCH](#end_catch)|結束最後一個**CATCH**或**AND_CATCH**的程式碼區塊。|
-|[END_CATCH_ALL](#end_catch_all)|結束最後**CATCH_ALL**的程式碼區塊。|
-|[THROW](#throw)|擲回指定的例外狀況。|
-|[THROW_LAST](#throw_last)|將目前處理的例外狀況擲回至下一個外部處理常式。|
-
-### <a name="exception-throwing-functions"></a>例外狀況擲回函式
+### <a name="exception-macros"></a>異常宏
 
 |||
 |-|-|
-|[AfxThrowArchiveException](#afxthrowarchiveexception)|擲回封存例外狀況。|
-|[AfxThrowFileException](#afxthrowfileexception)|擲回檔案例外狀況。|
-|[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|擲回不正確引數例外狀況。|
-|[AfxThrowMemoryException](#afxthrowmemoryexception)|擲回記憶體例外狀況。|
-|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|擲回不支援的例外狀況。|
-|[AfxThrowResourceException](#afxthrowresourceexception)|擲回 Windows 資源-找不到的例外狀況。|
-|[AfxThrowUserException](#afxthrowuserexception)|在使用者起始的程式動作中擲回例外狀況。|
+|[土耳其里拉](#try)|指定用於異常處理的代碼塊。|
+|[抓住](#catch)|指定一個程式碼塊,用於從前面的**TRY**塊捕獲異常。|
+|[CATCH_ALL](#catch_all)|指定一個程式碼塊,用於捕獲前面**TRY**塊中的所有異常。|
+|[AND_CATCH](#and_catch)|指定一個程式碼塊,用於從前面的**TRY**塊捕捉其他異常類型。|
+|[AND_CATCH_ALL](#and_catch_all)|指定一個程式碼塊,用於捕獲前面**TRY**塊中引發的任何其他異常類型。|
+|[END_CATCH](#end_catch)|結束最後一個**CATCH**或**AND_CATCH**代碼塊。|
+|[END_CATCH_ALL](#end_catch_all)|結束最後**一個CATCH_ALL**代碼塊。|
+|[扔](#throw)|引發指定的異常。|
+|[THROW_LAST](#throw_last)|將當前處理的異常引發到下一個外部處理程式。|
 
-MFC 提供兩個專門用於 OLE 例外狀況的例外狀況擲回函式：
-
-### <a name="ole-exception-functions"></a>OLE 例外狀況函式
-
-|||
-|-|-|
-|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|在 OLE automation 函數中擲回例外狀況。|
-|[AfxThrowOleException](#afxthrowoleexception)|擲回 OLE 例外狀況。|
-
-為了支援資料庫例外狀況，資料庫類別提供了兩個例外狀況類別，`CDBException` 和 `CDaoException`，以及支援例外狀況類型的全域函式：
-
-### <a name="dao-exception-functions"></a>DAO 例外狀況函式
+### <a name="exception-throwing-functions"></a>例外引發函數
 
 |||
 |-|-|
-|[AfxThrowDAOException](#afxthrowdaoexception)|從您自己的程式碼擲回[CDaoException](../../mfc/reference/cdaoexception-class.md) 。|
-|[AfxThrowDBException](#afxthrowdbexception)|從您自己的程式碼擲回[CDBException](../../mfc/reference/cdbexception-class.md) 。|
+|[AfxThrowArchiveException](#afxthrowarchiveexception)|引發存檔異常。|
+|[AfxThrowFileException](#afxthrowfileexception)|引發文件異常。|
+|[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|引發無效參數異常。|
+|[AfxThrowMemoryException](#afxthrowmemoryexception)|引發記憶體異常。|
+|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|引發不支持的異常。|
+|[AfxThrowResourceException](#afxthrowresourceexception)|引發未找到的 Windows 資源異常。|
+|[AfxThrowUserException](#afxthrowuserexception)|在用戶啟動的程式操作中引發異常。|
 
-MFC 提供下列終止函式：
+MFC 提供兩個專門針對 OLE 異常的異常引發功能:
 
-### <a name="termination-functions"></a>終止函式
+### <a name="ole-exception-functions"></a>OLE 例外函數
 
 |||
 |-|-|
-|[AfxAbort](#afxabort)|呼叫以在發生嚴重錯誤時終止應用程式。|
+|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|在 OLE 自動化功能中引發異常。|
+|[AfxThrowOleException](#afxthrowoleexception)|引發 OLE 異常。|
 
-##  <a name="try"></a>次
+為了支援資料庫異常,資料庫類提供了兩個異常類和`CDBException``CDaoException`和全域函數來支援異常類型:
 
-設定**TRY**區塊。
+### <a name="dao-exception-functions"></a>DAO 例外函數
+
+|||
+|-|-|
+|[阿不都·阿不都拉多例外](#afxthrowdaoexception)|從您自己的代碼中拋出一個[CDaoException。](../../mfc/reference/cdaoexception-class.md)|
+|[AfxThrowDBException](#afxthrowdbexception)|從您自己的代碼中引發[CDBException。](../../mfc/reference/cdbexception-class.md)|
+
+MFC 提供以下終止功能:
+
+### <a name="termination-functions"></a>終止功能
+
+|||
+|-|-|
+|[AfxAbort](#afxabort)|調用以在發生致命錯誤時終止應用程式。|
+
+## <a name="try"></a><a name="try"></a>嘗試
+
+設置**TRY**塊。
 
 ```
 TRY
@@ -96,9 +96,9 @@ TRY
 
 ### <a name="remarks"></a>備註
 
-**TRY**區塊會識別可能會擲回例外狀況的程式碼區塊。 這些例外狀況會在下列**CATCH**和**AND_CATCH**區塊中處理。 允許遞迴：例外狀況可能會藉由忽略它們或使用 THROW_LAST 宏來傳遞至外部**TRY**區塊。 使用 END_CATCH 或 END_CATCH_ALL 宏來結束**TRY**區塊。
+**TRY**塊標識可能會引發異常的代碼塊。 這些異常在以下**CATCH**和**AND_CATCH**塊中處理。 允許遞歸:異常可以通過忽略它們或使用THROW_LAST宏傳遞給外部**TRY**塊。 使用END_CATCH或END_CATCH_ALL宏結束**TRY**塊。
 
-如需詳細資訊，請參閱[例外](../../mfc/exception-handling-in-mfc.md)狀況。
+有關詳細資訊,請參閱文章["例外](../../mfc/exception-handling-in-mfc.md)"。
 
 ### <a name="example"></a>範例
 
@@ -106,11 +106,11 @@ TRY
 
 ### <a name="requirements"></a>需求
 
-標頭： afx.h
+標頭：afx.h
 
-##  <a name="catch"></a>抓住
+## <a name="catch"></a><a name="catch"></a>抓住
 
-定義程式碼區塊，以攔截上述**TRY**區塊中擲回的第一個例外狀況類型。
+定義捕獲前面**TRY**塊中引發的第一個異常類型的代碼塊。
 
 ```
 CATCH(exception_class, exception_object_pointer_name)
@@ -119,31 +119,31 @@ CATCH(exception_class, exception_object_pointer_name)
 ### <a name="parameters"></a>參數
 
 *exception_class*<br/>
-指定要測試的例外狀況類型。 如需標準例外狀況類別的清單，請參閱類別[CException](../../mfc/reference/cexception-class.md)。
+指定要測試的異常類型。 有關標準異常類的清單,請參閱類[Cexception](../../mfc/reference/cexception-class.md)。
 
 *exception_object_pointer_name*<br/>
-指定將由巨集建立的例外狀況物件指標的名稱。 您可以使用指標名稱來存取**CATCH**區塊內的 exception 物件。 會為您宣告這個變數。
+指定將由巨集建立的例外狀況物件指標的名稱。 可以使用指標名稱訪問**CATCH**塊中的異常物件。 會為您宣告這個變數。
 
 ### <a name="remarks"></a>備註
 
-處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 叫用 THROW_LAST 宏，將處理移到下一個外部例外狀況框架。 使用 END_CATCH 宏結束**TRY**區塊。
+處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 調用THROW_LAST宏以將處理轉移到下一個外部異常幀。 使用END_CATCH宏結束**TRY**塊。
 
-如果*exception_class*是 `CException`的類別，則會攔截所有例外狀況類型。 您可以使用[CObject：： IsKindOf](../../mfc/reference/cobject-class.md#iskindof)成員函式來判斷所擲回的特定例外狀況。 捕捉數種例外狀況的更好方法是使用順序**AND_CATCH**語句，而每個語句都有不同的例外狀況類型。
+如果*exception_class*`CException`是類 ,則將捕獲所有異常類型。 您可以使用[CObject:IsKindOf](../../mfc/reference/cobject-class.md#iskindof)成員函數來確定引發的特定異常。 捕獲多種異常的更好方法是使用順序**AND_CATCH**語句,每種語句都具有不同的異常類型。
 
-例外狀況物件指標是由宏所建立。 您不需要自行宣告。
+異常物件指標由宏創建。 你不需要自己聲明它。
 
 > [!NOTE]
->  **CATCH**區塊會定義為以大C++括弧分隔的範圍。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。 這也適用于*exception_object_pointer_name*。
+> **CATCH**塊定義為由大括弧劃定的C++作用域。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。 這也適用於*exception_object_pointer_name。*
 
-如需例外狀況和 CATCH 宏的詳細資訊，請參閱[例外](../../mfc/exception-handling-in-mfc.md)狀況。
+有關異常和 CATCH 宏的詳細資訊,請參閱文章["例外](../../mfc/exception-handling-in-mfc.md)"。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]
 
-##  <a name="catch_all"></a>CATCH_ALL
+## <a name="catch_all"></a><a name="catch_all"></a>CATCH_ALL
 
-定義程式碼區塊，以攔截上述**TRY**區塊中擲回的所有例外狀況類型。
+定義捕獲前面**TRY**塊中引發的所有異常類型的代碼塊。
 
 ```
 CATCH_ALL(exception_object_pointer_name)
@@ -156,24 +156,24 @@ CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="remarks"></a>備註
 
-處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 叫用 `THROW_LAST` 巨集將處理移位到下個外部例外狀況框架。 如果您使用**CATCH_ALL**，請使用 END_CATCH_ALL 宏結束**TRY**區塊。
+處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 叫用 `THROW_LAST` 巨集將處理移位到下個外部例外狀況框架。 如果使用**CATCH_ALL**,請用END_CATCH_ALL宏結束**TRY**塊。
 
 > [!NOTE]
->  **CATCH_ALL**區塊會定義為以大C++括弧分隔的範圍。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。
+> **CATCH_ALL**塊定義為由大括弧劃定的C++作用域。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。
 
-如需例外狀況的詳細資訊，請參閱[例外](../../mfc/exception-handling-in-mfc.md)狀況。
+有關異常的詳細資訊,請參閱文章["例外](../../mfc/exception-handling-in-mfc.md)"。
 
 ### <a name="example"></a>範例
 
-請參閱[CFile：： Abort](../../mfc/reference/cfile-class.md#abort)的範例。
+請參閱[CFile 的範例::中止](../../mfc/reference/cfile-class.md#abort)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="and_catch"></a>AND_CATCH
+## <a name="and_catch"></a><a name="and_catch"></a>AND_CATCH
 
-定義程式碼區塊，以攔截在先前的**TRY**區塊中擲回的其他例外狀況類型。
+定義代碼塊,用於捕獲在前面的**TRY**塊中引發的其他異常類型。
 
 ```
 AND_CATCH(exception_class, exception_object_pointer_name)
@@ -182,19 +182,19 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="parameters"></a>參數
 
 *exception_class*<br/>
-指定要測試的例外狀況類型。 如需標準例外狀況類別的清單，請參閱類別[CException](../../mfc/reference/cexception-class.md)。
+指定要測試的異常類型。 有關標準異常類的清單,請參閱類[Cexception](../../mfc/reference/cexception-class.md)。
 
 *exception_object_pointer_name*<br/>
-由宏所建立的例外狀況物件指標名稱。 您可以使用指標名稱來存取**AND_CATCH**區塊內的例外狀況物件。 會為您宣告這個變數。
+由宏創建的異常物件指標的名稱。 可以使用指標名稱訪問**AND_CATCH**塊中的異常物件。 會為您宣告這個變數。
 
 ### <a name="remarks"></a>備註
 
-使用 CATCH 宏攔截一種例外狀況類型，然後 AND_CATCH 宏來捕捉每個後續的類型。 使用 END_CATCH 宏結束**TRY**區塊。
+使用 CATCH 宏捕獲一種異常類型,然後AND_CATCH宏捕獲每個後續類型。 使用END_CATCH宏結束**TRY**塊。
 
-處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫**AND_CATCH**區塊內的 THROW_LAST 宏，將處理轉移至下一個外部例外狀況框架。 **AND_CATCH**會標示先前**CATCH**或**AND_CATCH**區塊的結尾。
+處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 調用**AND_CATCH**塊中的THROW_LAST宏,將處理轉移到下一個外部異常幀。 **AND_CATCH**標記前一個**CATCH**或**AND_CATCH**塊的末尾。
 
 > [!NOTE]
->  **AND_CATCH**區塊會定義為C++範圍（以大括弧描繪）。 如果您在此範圍中宣告變數，請記住它們只能在該範圍內進行存取。 這也適用于*exception_object_pointer_name*變數。
+> **AND_CATCH**塊定義為C++範圍(由大括弧定義)。 如果在此作用域中聲明變數,請記住它們只能在該作用域內訪問。 這也適用於*exception_object_pointer_name*變數。
 
 ### <a name="example"></a>範例
 
@@ -202,10 +202,11 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
-##  <a name="and_catch_all"></a>AND_CATCH_ALL
+  **標題**afx.h
 
-定義程式碼區塊，以攔截在先前的**TRY**區塊中擲回的其他例外狀況類型。
+## <a name="and_catch_all"></a><a name="and_catch_all"></a>AND_CATCH_ALL
+
+定義代碼塊,用於捕獲在前面的**TRY**塊中引發的其他異常類型。
 
 ```
 AND_CATCH_ALL(exception_object_pointer_name)
@@ -214,24 +215,24 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="parameters"></a>參數
 
 *exception_object_pointer_name*<br/>
-由宏所建立的例外狀況物件指標名稱。 您可以使用指標名稱來存取**AND_CATCH_ALL**區塊內的例外狀況物件。 會為您宣告這個變數。
+由宏創建的異常物件指標的名稱。 可以使用指標名稱訪問**AND_CATCH_ALL**塊中的異常物件。 會為您宣告這個變數。
 
 ### <a name="remarks"></a>備註
 
-使用**catch**宏攔截一種例外狀況類型，然後 AND_CATCH_ALL 宏來攔截所有其他後續的類型。 如果您使用 AND_CATCH_ALL，請使用 END_CATCH_ALL 宏結束**TRY**區塊。
+使用**CATCH**宏捕獲一種異常類型,然後AND_CATCH_ALL宏捕獲所有其他後續類型。 如果使用AND_CATCH_ALL,請用END_CATCH_ALL宏結束**TRY**塊。
 
-處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫**AND_CATCH_ALL**區塊內的 THROW_LAST 宏，將處理轉移至下一個外部例外狀況框架。 **AND_CATCH_ALL**會標示先前**CATCH**或**AND_CATCH_ALL**區塊的結尾。
+處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 調用**AND_CATCH_ALL**塊中的THROW_LAST宏以將處理轉移到下一個外部異常幀。 **AND_CATCH_ALL**標記前一個**CATCH**或**AND_CATCH_ALL**塊的末尾。
 
 > [!NOTE]
->  **AND_CATCH_ALL**區塊會定義為C++範圍（以大括弧描繪）。 如果您在此範圍中宣告變數，請記住它們只能在該範圍內進行存取。
+> **AND_CATCH_ALL**塊定義為C++範圍(由大括弧定義)。 如果在此作用域中聲明變數,請記住它們只能在該作用域內訪問。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="end_catch"></a>END_CATCH
+## <a name="end_catch"></a><a name="end_catch"></a>END_CATCH
 
-標記最後一個**CATCH**或**AND_CATCH**區塊的結尾。
+標記最後一個**CATCH**或**AND_CATCH**塊的末尾。
 
 ```
 END_CATCH
@@ -239,15 +240,15 @@ END_CATCH
 
 ### <a name="remarks"></a>備註
 
-如需 END_CATCH 宏的詳細資訊，請參閱[例外](../../mfc/exception-handling-in-mfc.md)狀況。
+有關END_CATCH宏的詳細資訊,請參閱文章["例外](../../mfc/exception-handling-in-mfc.md)"。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="end_catch_all"></a>END_CATCH_ALL
+## <a name="end_catch_all"></a><a name="end_catch_all"></a>END_CATCH_ALL
 
-標記最後一個**CATCH_ALL88**或**AND_CATCH_ALL**區塊的結尾。
+標記最後一**個CATCH_ALL88**或**AND_CATCH_ALL**塊的結束。
 
 ```
 END_CATCH_ALL
@@ -255,11 +256,11 @@ END_CATCH_ALL
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="throw"></a>THROW （MFC）
+## <a name="throw-mfc"></a><a name="throw"></a>THROW (MFC)
 
-擲回指定的例外狀況。
+引發指定的異常。
 
 ```
 THROW(exception_object_pointer)
@@ -268,21 +269,21 @@ THROW(exception_object_pointer)
 ### <a name="parameters"></a>參數
 
 *exception_object_pointer*<br/>
-指向衍生自 `CException`的例外狀況物件。
+指向派生自`CException`的異常物件。
 
 ### <a name="remarks"></a>備註
 
-**擲**回會中斷程式執行，並將控制權傳遞至程式中的相關聯**CATCH**區塊。 如果您尚未提供**CATCH**區塊，則控制權會傳遞至會列印錯誤訊息並結束的 MFC 程式庫模組。
+**THROW**中斷程式執行,將控制權傳遞到程式中的關聯**CATCH**塊。 如果尚未提供**CATCH**塊,則控制項將傳遞給 Microsoft 基礎類庫模組,該模組列印錯誤訊息並退出。
 
-如需詳細資訊，請參閱[例外](../../mfc/exception-handling-in-mfc.md)狀況。
+有關詳細資訊,請參閱文章["例外](../../mfc/exception-handling-in-mfc.md)"。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="throw_last"></a>THROW_LAST
+## <a name="throw_last"></a><a name="throw_last"></a>THROW_LAST
 
-將例外狀況擲回至下一個外部**CATCH**區塊。
+將異常扔回下一個外部**CATCH**塊。
 
 ```
 THROW_LAST()
@@ -290,21 +291,21 @@ THROW_LAST()
 
 ### <a name="remarks"></a>備註
 
-此宏可讓您擲回本機建立的例外狀況。 如果您嘗試擲回您剛攔截到的例外狀況，則通常會超出範圍並予以刪除。 使用**THROW_LAST**，例外狀況會正確地傳遞至下一個**CATCH**處理常式。
+此宏允許您引發本地創建的異常。 如果您嘗試引發剛剛捕獲的異常,它通常會超出範圍並被刪除。 對於**THROW_LAST**,異常將正確傳遞給下一個**CATCH**處理程式。
 
-如需詳細資訊，請參閱[例外](../../mfc/exception-handling-in-mfc.md)狀況。
+有關詳細資訊,請參閱文章["例外](../../mfc/exception-handling-in-mfc.md)"。
 
 ### <a name="example"></a>範例
 
-請參閱[CFile：： Abort](../../mfc/reference/cfile-class.md#abort)的範例。
+請參閱[CFile 的範例::中止](../../mfc/reference/cfile-class.md#abort)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException
+## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a>AfxThrow存檔例外
 
-擲回封存例外狀況。
+引發存檔異常。
 
 ```
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
@@ -313,18 +314,18 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="parameters"></a>參數
 
 *cause*<br/>
-指定表示例外狀況原因的整數。 如需可能值的清單，請參閱[CArchiveException：： m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)。
+指定指示異常原因的整數。 有關可能值的清單,請參閱[CArchiveException:::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)。
 
-*lpszArchiveName*<br/>
-指向字串，其中包含造成例外狀況之 `CArchive` 物件的名稱（如果有的話）。
+*lpsz 壓縮檔名稱*<br/>
+指向包含導致異常`CArchive`的物件的名稱的字串(如果可用)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException
+## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a>AfxThrow檔例外
 
-擲回檔案例外狀況。
+引發文件異常。
 
 ```
 void AfxThrowFileException(
@@ -336,25 +337,25 @@ void AfxThrowFileException(
 ### <a name="parameters"></a>參數
 
 *cause*<br/>
-指定表示例外狀況原因的整數。 如需可能值的清單，請參閱[CFileException：： m_cause](../../mfc/reference/cfileexception-class.md#m_cause)。
+指定指示異常原因的整數。 有關可能值的清單,請參閱[CFileException:::m_cause](../../mfc/reference/cfileexception-class.md#m_cause)。
 
-*lOsError*<br/>
-包含指出例外狀況原因的作業系統錯誤號碼（如果有的話）。 如需錯誤碼的清單，請參閱您的作業系統手冊。
+*LOsError*<br/>
+包含說明異常原因的操作系統錯誤編號(如果可用)。 有關錯誤代碼的清單,請參閱作業系統手冊。
 
-*lpszFileName*<br/>
-指向字串，其中包含造成例外狀況之檔案的名稱（如果有的話）。
+*lpszFile 名稱*<br/>
+指向包含導致異常的檔案名稱的檔名稱的字串(如果可用)。
 
 ### <a name="remarks"></a>備註
 
-您必須負責根據作業系統錯誤碼來判斷原因。
+您負責根據作業系統錯誤代碼確定原因。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a>AfxThrow 無效異常
 
-擲回不正確引數例外狀況。
+引發無效參數異常。
 
 ### <a name="syntax"></a>語法
 
@@ -364,15 +365,15 @@ void AfxThrowInvalidArgException( );
 
 ### <a name="remarks"></a>備註
 
-使用不正確引數時，會呼叫這個函式。
+使用無效參數時調用此函數。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** afx.h
+**標題:** afx.h
 
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException
+## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a>AfxThrow 記憶異常
 
-擲回記憶體例外狀況。
+引發記憶體異常。
 
 ```
 void AfxThrowMemoryException();
@@ -380,15 +381,15 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>備註
 
-如果對基礎系統記憶體配置器的呼叫（例如**malloc**和[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 函數）失敗，請呼叫此函式。 您不需要為**新**的呼叫它，因為如果記憶體配置失敗，**新**的會自動擲回記憶體例外狀況。
+如果對基礎系統記憶體分配器(如**malloc**和[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 函數)的調用失敗,請調用此功能。 您無需呼叫它**作為新**,因為如果記憶體分配失敗 **,new**將自動引發記憶體異常。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException
+## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a>AfxThrow 不支援例外
 
-會擲回例外狀況，這是不支援之功能的要求結果。
+引發由請求不支援的功能的結果的異常。
 
 ```
 void AfxThrowNotSupportedException();
@@ -396,11 +397,11 @@ void AfxThrowNotSupportedException();
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException
+## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a>AfxThrow 資源異常
 
-擲回資源例外狀況。
+引發資源異常。
 
 ```
 void  AfxThrowResourceException();
@@ -408,15 +409,15 @@ void  AfxThrowResourceException();
 
 ### <a name="remarks"></a>備註
 
-當無法載入 Windows 資源時，通常會呼叫這個函式。
+當無法載入 Windows 資源時,通常會調用此功能。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException
+## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a>AfxThrowUser 例外
 
-會擲回例外狀況來停止使用者操作。
+引發異常以停止最終使用者操作。
 
 ```
 void AfxThrowUserException();
@@ -424,13 +425,13 @@ void AfxThrowUserException();
 
 ### <a name="remarks"></a>備註
 
-此函式通常會在 `AfxMessageBox` 向使用者回報錯誤之後立即呼叫。
+通常在向使用者報告錯誤後立即`AfxMessageBox`呼叫此功能。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException
+## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a>AfxThrowOle調度異常
 
 使用此函式在 OLE Automation 函式內擲回例外狀況。
 
@@ -448,13 +449,13 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="parameters"></a>參數
 
-*wCode*<br/>
+*w代碼*<br/>
 應用程式特定的錯誤碼。
 
-*lpszDescription*<br/>
+*lpsz描述*<br/>
 錯誤的詳細描述。
 
-*nDescriptionID*<br/>
+*描述 ID*<br/>
 詳細錯誤描述的資源 ID。
 
 *nHelpID*<br/>
@@ -470,11 +471,11 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException
+## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a>阿不都·阿不都列索
 
-建立 `COleException` 類型的物件，並擲回例外狀況。
+創建類型`COleException`物件並引發異常。
 
 ```
 void AFXAPI AfxThrowOleException(SCODE sc);
@@ -483,23 +484,23 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="parameters"></a>參數
 
-*sc*<br/>
-表示例外狀況原因的 OLE 狀態碼。
+*Sc*<br/>
+指示異常原因的 OLE 狀態代碼。
 
-*工時*<br/>
-結果碼的控制碼，表示例外狀況的原因。
+*人力資源*<br/>
+處理指示異常原因的結果代碼。
 
 ### <a name="remarks"></a>備註
 
-接受 HRESULT 做為引數的版本，會將該結果程式碼轉換成對應的 SCODE。 如需 HRESULT 和 SCODE 的詳細資訊，請參閱 Windows SDK 中[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
+將 HRESULT 作為參數的版本將結果代碼轉換為相應的 SCODE。 有關 HRESULT 與 SCODE 的詳細資訊,請參閱 Windows SDK 中的[COM 錯誤代碼結構](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdao。h
+  **標題**afxdao.h
 
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException
+## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a>阿fxThrowDao例外
 
-呼叫此函式，從您自己的程式碼擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的例外狀況。
+呼叫此函數從您自己的代碼中引發[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的異常。
 
 ```
 void AFXAPI AfxThrowDaoException(
@@ -509,25 +510,25 @@ void AFXAPI AfxThrowDaoException(
 
 ### <a name="parameters"></a>參數
 
-*nAfxDaoError*<br/>
-表示 DAO 擴充錯誤碼的整數值，它可以是 [ [CDaoException：： m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)] 底下所列的其中一個值。
+*nAfxDao錯誤*<br/>
+表示 DAO 擴展錯誤代碼的整數值,可以是[CDaoException:::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)下列出的值之一。
 
 *scode*<br/>
-DAO 的 OLE 錯誤碼，屬於 SCODE 類型。 如需相關資訊，請參閱[CDaoException：： m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)。
+來自 DAO 的 OLE 錯誤代碼,類型為 SCODE。 有關詳細資訊,請參閱[CDaoexception::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)。
 
 ### <a name="remarks"></a>備註
 
-此架構也會呼叫 `AfxThrowDaoException`。 在您的呼叫中，您可以傳遞其中一個參數或兩者。 例如，如果您想要引發**CDaoException：： nAfxDaoError**中所定義的其中一個錯誤，但不在意*scode*參數，請在*nAfxDaoError*參數中傳遞有效的程式碼，並接受*scode*的預設值。
+框架也稱為`AfxThrowDaoException`。 在呼叫中,您可以傳遞其中一個參數或兩者。 例如,如果要引發**CDaoException::nAfxDaoError**中定義的錯誤之一,但您不關心*scode*參數,請透過*nAfxDaoError*參數中的有效代碼,並接受*scode*的預設值。
 
-如需 MFC DAO 類別相關例外狀況的詳細資訊，請參閱本書中的 class `CDaoException` 和文章[例外狀況：資料庫例外](../../mfc/exceptions-database-exceptions.md)狀況。
+有關與 MFC DAO 類相關的異常的資訊,`CDaoException`請參閱本書 中的類和文章[「例外:資料庫例外](../../mfc/exceptions-database-exceptions.md)」。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdb。h
+  **頭**afxdb.h
 
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException
+## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a>AfxThrowDB例外
 
-呼叫此函式，從您自己的程式碼中擲回類型 `CDBException` 的例外狀況。
+呼叫此函數從您自己的代碼中引發類型`CDBException`異常。
 
 ```
 void AfxThrowDBException(
@@ -539,27 +540,27 @@ void AfxThrowDBException(
 ### <a name="parameters"></a>參數
 
 *nRetCode*<br/>
-RETCODE 類型的值，定義導致擲回例外狀況的錯誤類型。
+類型 RETCODE 的值,用於定義導致引發異常的錯誤類型。
 
-*pdb*<br/>
-`CDatabase` 物件的指標，表示與例外狀況相關聯的資料來源連接。
+*Pdb*<br/>
+指向表示與異常`CDatabase`關聯的數據源連接的物件的指標。
 
 *hstmt*<br/>
-ODBC HSTMT 控制碼，指定與例外狀況相關聯的語句控制碼。
+指定與異常關聯的語句句柄的 ODBC HSTMT 句柄。
 
 ### <a name="remarks"></a>備註
 
-架構會在從 ODBC API 函式的呼叫接收 ODBC RETCODE 時呼叫 `AfxThrowDBException`，並將 RETCODE 解讀為異常條件，而不是 expectable 錯誤。 例如，資料存取作業可能會因為磁片讀取錯誤而失敗。
+當從調用`AfxThrowDBException`ODBC API 函數收到 ODBC RETCODE 時,該框架會調用該框架,並將 RETCODE 解釋為特殊條件,而不是預期錯誤。 例如,數據訪問操作可能會由於磁碟讀取錯誤而失敗。
 
-如需 ODBC 所定義之 RETCODE 值的相關資訊，請參閱 Windows SDK 中的「取得狀態和錯誤資訊」第8章。 如需這些程式碼之 MFC 延伸模組的相關資訊，請參閱類別[CDBException](../../mfc/reference/cdbexception-class.md)。
+有關 ODBC 定義的 RETCODE 值的資訊,請參閱 Windows SDK 中的第 8 章"檢索狀態和錯誤資訊" 有關 MFC 延伸到這些程式碼的資訊,請參閱式[CDBException](../../mfc/reference/cdbexception-class.md)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
-##  <a name="afxabort"></a>AfxAbort
+## <a name="afxabort"></a><a name="afxabort"></a>阿fxAbort
 
-MFC 提供的預設終止函式。
+MFC 提供的默認終止功能。
 
 ```
 void  AfxAbort();
@@ -567,7 +568,7 @@ void  AfxAbort();
 
 ### <a name="remarks"></a>備註
 
-當發生嚴重錯誤（例如無法處理的無法攔截的例外狀況）時，MFC 成員函式會在內部呼叫 `AfxAbort`。 當您遇到無法復原的嚴重錯誤時，可以在罕見的情況下呼叫 `AfxAbort`。
+`AfxAbort`當出現致命錯誤(如無法處理的未捕獲異常)時,MFC 成員函數將在內部調用。 當您遇到無法`AfxAbort`恢復的災難性錯誤時,可以在極少數情況下調用。
 
 ### <a name="example"></a>範例
 
@@ -575,10 +576,10 @@ void  AfxAbort();
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afx。h
+  **標題**afx.h
 
 ## <a name="see-also"></a>另請參閱
 
-[宏和全域](mfc-macros-and-globals.md)<br/>
+[巨集和全域](mfc-macros-and-globals.md)<br/>
 [CException 類別](cexception-class.md)<br/>
 [CInvalidArgException 類別](cinvalidargexception-class.md)

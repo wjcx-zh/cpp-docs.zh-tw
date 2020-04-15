@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-ms.openlocfilehash: b29112b4901a1fecac37aa7ae61496e874959370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 557bfe1cc41c3dda65bd95d7d687820c0b9862b7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372189"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368321"
 ---
 # <a name="cresourceexception-class"></a>CResourceException 類別
 
@@ -31,19 +31,19 @@ class CResourceException : public CSimpleException
 
 |名稱|描述|
 |----------|-----------------|
-|[CResourceException::CResourceException](#cresourceexception)|建構 `CResourceException` 物件。|
+|[資源例外:C 資源例外](#cresourceexception)|建構 `CResourceException` 物件。|
 
 ## <a name="remarks"></a>備註
 
-沒有進一步限定性條件是必要或不可能。
+沒有必要或可能進一步的資格。
 
-如需有關使用`CResourceException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+有關`CResourceException`使用的詳細資訊,請參閱[異常處理 (MFC) 一](../../mfc/exception-handling-in-mfc.md)文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[C 例外](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -53,7 +53,7 @@ class CResourceException : public CSimpleException
 
 **標題:** afxwin.h
 
-##  <a name="cresourceexception"></a>  CResourceException::CResourceException
+## <a name="cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>資源例外:C 資源例外
 
 建構 `CResourceException` 物件。
 
@@ -63,7 +63,7 @@ CResourceException();
 
 ### <a name="remarks"></a>備註
 
-請勿直接使用這個建構函式，但而不是呼叫全域函式[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 如需例外狀況的詳細資訊，請參閱文章[MFC 的例外狀況處理](../exception-handling-in-mfc.md)。
+不要直接使用此建構函數,而應呼叫全域函數[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 有關異常的詳細資訊,請參閱[MFC 中的異常處理](../exception-handling-in-mfc.md)一文。
 
 ## <a name="see-also"></a>另請參閱
 

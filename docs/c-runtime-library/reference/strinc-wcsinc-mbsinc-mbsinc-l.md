@@ -1,11 +1,13 @@
 ---
 title: _strinc、_wcsinc、_mbsinc、_mbsinc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsinc
 - _wcsinc
 - _mbsinc_l
 - _strinc
+- _o__mbsinc
+- _o__mbsinc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a468438d747a9497e974b10f9974bb79ffef1add
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cfbe857ec8bbcdec887d4594cee0bf2b66de380
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958241"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362901"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
 
 使字串指標前進一個字元。
 
 > [!IMPORTANT]
-> **_mbsinc**和 **_mbsinc_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsinc****和_mbsinc_l**不能在Windows運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -79,26 +82,28 @@ unsigned char *_mbsinc_l(
 
 ### <a name="parameters"></a>參數
 
-*current*<br/>
+*目前*<br/>
 字元指標。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-這些常式都會傳回緊接在*目前*後面之字元的指標。
+每個例程返回一個指向緊鄰*當前*的字元的指標。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsinc**函式會將指標傳回至緊接在*目前*後面的多位元組字元的第一個位元組。 **_mbsinc**會根據目前使用中的[多位元組字碼頁](../../c-runtime-library/code-pages.md)，辨識多位元組字元序列。 **_mbsinc_l**相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbsinc**函數返回指向多位元位元元的第一個字節的指標,該位元組緊隨*當前*之後。 **_mbsinc**根據當前正在使用的[多位元節代碼頁](../../c-runtime-library/code-pages.md)識別多位元組位元序列;**_mbsinc_l**是相同的,只是它使用傳入區域設置參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果已定義 **_MBCS** ，則在 Tchar 中定義的泛型文字函式 **_tcsinc**會對應到 **_Mbsinc** ，如果已定義 **_wcsinc** ，則為 **_UNICODE** 。 否則， **_tcsinc**會對應至 **_strinc**。 **_strinc**和 **_wcsinc**是 **_mbsinc**的單一位元組字元和寬字元版本。 僅針對此對應提供 **_strinc**和 **_wcsinc** ，否則不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
+_tcsinc在 Tchar.h 中定義的泛**文字函數將**映射到**已**定義 **_MBCS_mbsinc,** 或者如果定義了 **_UNICODE,** 則映射到 **_wcsinc。** 否則 **,_tcsinc**映射到 **_strinc**。 **_strinc**與 **_wcsinc**是單位元位元與寬字元版本的 **_mbsinc**。 **_strinc**和 **_wcsinc**僅為此映射提供,否則不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 
-如果*current*是**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
+如果*電流*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,則此函數將傳回**EINVAL**並將**errno**設定到**EINVAL**。
 
 > [!IMPORTANT]
 > 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -109,11 +114,11 @@ unsigned char *_mbsinc_l(
 |**_strinc**|\<tchar.h>|
 |**_wcsinc**|\<tchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec、_wcsdec、_mbsdec、_mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc、_wcsninc、_mbsninc、_mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

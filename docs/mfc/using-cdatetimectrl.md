@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-ms.openlocfilehash: 57c437c97ad6c6d377b3bc62099e569b29f03346
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 697ca7446712853594d6e4e3e49872d5710562aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366540"
 ---
 # <a name="using-cdatetimectrl"></a>使用 CDateTimeCtrl
 
-日期和時間選擇器控制項（[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)）會實作為輸入或選取特定日期的直覺且可辨識方法。 控制項的主要介面與下拉式方塊的功能類似。 不過，如果使用者展開控制項，月曆控制項就會出現（預設為），讓使用者可以指定特定日期。 選擇日期時，月曆控制項就會自動消失。
+日期和時間選取器控制件([CDateTimeCtrl)](../mfc/reference/cdatetimectrl-class.md)實現了輸入或選擇特定日期的直覺且可辨識的方法。 控件的主介面在功能上與組合框類似。 但是,如果用戶展開控件,則會出現一個月的日曆控件(預設情況下),允許使用者指定特定日期。 選擇日期時,月曆控件將自動消失。
 
 > [!NOTE]
->  若要在專案中同時使用 `CDateTimePicker` 和 `CMonthCalCtrl` 類別，您必須包含 AFXDTCTL。H，通常在專案的 STDAFX.H 中。H 檔案。
+> 要在專案中同時`CDateTimePicker``CMonthCalCtrl`使用和類,必須包括 AFXDTCTL。H,通常在專案的STDAFX中。H 檔。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
+## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
 - [建立日期時間選擇器控制項](../mfc/creating-the-date-and-time-picker-control.md)
 

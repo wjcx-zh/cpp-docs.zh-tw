@@ -1,11 +1,15 @@
 ---
 title: strtof、_strtof_l、wcstof、_wcstof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _strtof_l
 - wcstof
 - strtof
 - _wcstof_l
+- _o__strtof_l
+- _o__wcstof_l
+- _o_strtof
+- _o_wcstof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: b2b2e7d230074b5a464260d36b41c28b9951d65b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f61aa0edeadd74a254f906dd745e18b059da7f24
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365139"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof、_strtof_l、wcstof、_wcstof_l
 
@@ -80,23 +85,25 @@ float wcstof_l(
 *strSource*<br/>
 以 Null 終止的待轉換字串。
 
-*endptr*<br/>
+*端點*<br/>
 停止掃描的字元指標。
 
-*locale*<br/>
+*現場*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-**strtof**會傳回浮點數的值，但標記法會造成溢位，在這種情況下，函數會傳回 +/-**HUGE_VALF**。 **HUGE_VALF**的正負號符合無法表示之值的正負號。 如果無法執行轉換或下溢，則**strtof**會傳回0。
+**strtof**傳回浮點數的值,除非表示形式將導致溢出,在這種情況下,函數傳回 +/-**HUGE_VALF**。 **HUGE_VALF**的符號與無法表示的值的符號匹配。 無法執行轉換或發生,**則 strtof**傳回 0 。
 
-**wcstof**會傳回類似至**strtof**的值。 對於這兩個函式，如果發生溢位或下溢，且叫用不正確參數處理常式（如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述），則**errno**會設定為**ERANGE** 。
+**wcstof**返回的值類似於**strtof。** 對於這兩個函數,如果發生溢出或下溢並調用無效的參數處理程式 **,errno**設置為**ERANGE,** 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-每個函式都會將輸入字串*strSource*轉換成**float**。 **Strtof**函數會將*strSource*轉換成單精確度值。 **strtof**會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 Null 字元。 **wcstof**是寬字元版本的**strtof**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
+每個函數會輸入字串*strSource*轉換為**浮點**。 **strtof**函數將*strSource*轉換為單精度值。 **strtof**停止讀取字串*strSource*的第一個字元,它不能識別為數位的一部分。 這可能是終止的 Null 字元。 **wcSTof**是一個寬字元版本的**斯特夫**;其*strSource*參數是寬字元字串。 除此之外，這些函式的行為相同。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -105,24 +112,24 @@ float wcstof_l(
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-目前地區設定的 [ **LC_NUMERIC** ] 分類設定會決定*strSource*中的基底字元辨識;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 沒有 **_l**尾碼的函式會使用目前的地區設定;具有尾碼的是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+當前區域設置**LC_NUMERIC**類別設置決定了*strSource*中半徑字元的識別;有關詳細資訊,請參閱[設定區域設置,_wsetlocale](setlocale-wsetlocale.md)。 沒有 **_l**後綴的函數使用當前區域設置;但是,沒有_l後綴的函數使用當前區域設置。具有後綴的那些是相同的,只是它們使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不是**Null**，則停止掃描的字元指標會儲存在*endptr*所指向的位置。 如果無法執行任何轉換（找不到任何有效的數位或指定了不正確基底），則*strSource*的值會儲存在*endptr*所指向的位置。
+如果*端點*不是**NULL,** 則指向停止掃描的字元的指標儲存在*端點指向*的位置。 如果無法執行轉換(未找到有效數位或指定了無效的基),*則 strSource*的值儲存在*endptr*指向的位置。
 
-**strtof**預期*strSource*會指向下列格式的字串：
+**strtof**期望*strSource*指向以下形式的字串:
 
-[*空格*][*sign*][*數位*][ __.__ *數位*][{**e** &#124; **e**} [*sign*]*數位*]
+[*空白 ]*【*符號*】[*數字*][__.__*數位*|[**e** &#124; **E**= =*符號*=*數位*|
 
-空白字元*可能是*由空格和定位字元所組成，這些字元會被忽略;*sign*是加號（ **+** ）或減號（ **-** ）; 而*數位*則是一或多個十進位數。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 十進位數後面可以加上一個指數，其中包含一個簡介字母（**e**或**e**）和一個選擇性帶正負號的整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
+*空格*可以由忽略的空格和制表符組成;*符號*是加**+**(**-**) 或 減 ( );*數位*是一個或多個十進位數位。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 十進位數字可以跟一個指數,它由介紹性字母 **(e**或**E)** 和可選簽名的整數組成。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
 
-這些函式的 UCRT 版本不支援轉換 Fortran 樣式（**d**或**d**）指數位母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
+這些函數的 UCRT 版本不支援轉換 Fortran 樣式 (**d**或**D**) 指數字母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strtof**、 **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> 或 \<stdlib.h>|
-|**wcstof**、 **_wcstof_l**|C:\<stdlib.h> 或 \<wchar.h> C++: &lt;cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**斯特特_strtof_l** **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> 或 \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：&lt;cstdlib>、\<stdlib.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

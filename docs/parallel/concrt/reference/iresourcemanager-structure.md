@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7ce5b07f5eb4272db1b00b7f0105b790ddbb28fe
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 15e27a586fc039791255c01a053f6a1109183f90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142976"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368180"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 結構
 
@@ -33,40 +33,40 @@ struct IResourceManager;
 
 ## <a name="members"></a>成員
 
-### <a name="public-enumerations"></a>公用列舉型別
+### <a name="public-enumerations"></a>公用列舉類型
 
 |名稱|描述|
 |----------|-----------------|
-|[IResourceManager：： OSVersion](#osversion)|代表作業系統版本的列舉類型。|
+|[I 資源管理員:OSVersion](#osversion)|代表作業系統版本的列舉類型。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[IResourceManager：： CreateNodeTopology](#createnodetopology)|此方法僅存在於執行時間的 debug 組建中，這是一種測試攔截，其設計目的是為了協助測試不同硬體拓撲的 Resource Manager，而不需要實際符合設定的硬體。 在執行時間的零售組建中，這個方法會傳回，而不會執行任何動作。|
-|[IResourceManager：： GetAvailableNodeCount](#getavailablenodecount)|傳回可供資源管理員使用的節點數目。|
-|[IResourceManager：： GetFirstNode](#getfirstnode)|傳回資源管理員所定義之列舉順序中的第一個節點。|
-|[IResourceManager：： Reference](#reference)|遞增 Resource Manager 實例上的參考計數。|
-|[IResourceManager：： RegisterScheduler](#registerscheduler)|向 Resource Manager 註冊排程器。 一旦註冊排程器，就應該使用傳回的 `ISchedulerProxy` 介面與 Resource Manager 進行通訊。|
-|[IResourceManager：： Release](#release)|遞減 Resource Manager 實例上的參考計數。 Resource Manager 會在其參考計數進入 `0`時終結。|
+|[I 資源管理員::建立節點拓撲](#createnodetopology)|此方法僅在運行時的調試版本中存在,它是一個測試挂鉤,旨在方便在不同硬體拓撲上測試資源管理器,而無需實際硬體匹配配置。 使用運行時的零售生成時,此方法將返回而不執行任何操作。|
+|[I 資源管理員::取得可用節點計數](#getavailablenodecount)|傳回可供資源管理員使用的節點數目。|
+|[I 資源管理員::取得第一節點](#getfirstnode)|傳回資源管理員所定義之列舉順序中的第一個節點。|
+|[I資源管理員:參考](#reference)|增加資源管理員實例上的引用計數。|
+|[I資源管理員::註冊時程表](#registerscheduler)|向資源管理器註冊計劃程式。 註冊計劃程式后,它應使用返回的`ISchedulerProxy`介面與資源管理器通信。|
+|[I 資源管理員::發佈](#release)|在資源管理器實例上取消引用計數。 當資源管理員的引用計數轉到`0`時,它將被銷毀。|
 
 ## <a name="remarks"></a>備註
 
-使用[CreateResourceManager](concurrency-namespace-functions.md)函數來取得單一 Resource Manager 實例的介面。 方法會遞增 Resource Manager 上的參考計數，而且您應該在完成 Resource Manager 時，叫用[IResourceManager：： release](#release)方法以釋放參考。 一般來說，您建立的每個排程器都會在建立期間叫用這個方法，並在關閉後釋放 Resource Manager 的參考。
+使用[CreateResourceManager](concurrency-namespace-functions.md)函數獲取與單一資源管理器實例的介面。 該方法將引用計數遞增到資源管理員上,您應該調用[IResourceManager:::釋放](#release)方法,在使用資源管理器時釋放引用。 通常,您創建的每個計劃程式將在創建期間調用此方法,並在資源管理器關閉后釋放對資源管理員的引用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IResourceManager`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="createnodetopology"></a>IResourceManager：： CreateNodeTopology 方法
+## <a name="iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>I資源管理員::建立節點拓撲方法
 
-此方法僅存在於執行時間的 debug 組建中，這是一種測試攔截，其設計目的是為了協助測試不同硬體拓撲的 Resource Manager，而不需要實際符合設定的硬體。 在執行時間的零售組建中，這個方法會傳回，而不會執行任何動作。
+此方法僅在運行時的調試版本中存在,它是一個測試挂鉤,旨在方便在不同硬體拓撲上測試資源管理器,而無需實際硬體匹配配置。 使用運行時的零售生成時,此方法將返回而不執行任何操作。
 
 ```cpp
 virtual void CreateNodeTopology(
@@ -78,25 +78,25 @@ virtual void CreateNodeTopology(
 
 ### <a name="parameters"></a>參數
 
-*nodeCount*<br/>
-模擬的處理器節點數目。
+*節點計數*<br/>
+正在類比的處理器節點數。
 
-*pCoreCount*<br/>
-陣列，指定每個節點上的核心數目。
+*pCore( S) Count*<br/>
+指定每個節點上的內核數的陣列。
 
-*pNodeDistance*<br/>
-指定兩個節點之間的節點距離的矩陣。 這個參數的值可以 `NULL`。
+*pNode 距離*<br/>
+指定任意兩個節點之間的節點距離的矩陣。 這裡可以有值`NULL`。
 
-*pProcessorGroups*<br/>
-陣列，指定每個節點所屬的處理器群組。
+*p 處理器群組*<br/>
+指定每個節點所屬的處理器組的陣列。
 
 ### <a name="remarks"></a>備註
 
-如果參數 `nodeCount` 已傳入值 `0`，或參數 `pCoreCount` 的值為 `NULL`，則會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md) 。
+如果`nodeCount`參數`0`已傳入值,或者`pCoreCount`參數`NULL`具有值 ,則引發[invalid_argument。](../../../standard-library/invalid-argument-class.md)
 
-如果在處理常式中有其他排程器時呼叫這個方法，則會擲回[invalid_operation](invalid-operation-class.md) 。
+如果調用此方法,而進程中存在其他計劃程式,則引發[invalid_operation。](invalid-operation-class.md)
 
-## <a name="getavailablenodecount"></a>IResourceManager：： GetAvailableNodeCount 方法
+## <a name="iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>I 資源管理員::取得可用節點計數方法
 
 傳回可供資源管理員使用的節點數目。
 
@@ -106,9 +106,9 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-可供 Resource Manager 使用的節點數目。
+資源管理器可用的節點數。
 
-## <a name="getfirstnode"></a>IResourceManager：： GetFirstNode 方法
+## <a name="iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>I 資源管理員:取得第一節點方法
 
 傳回資源管理員所定義之列舉順序中的第一個節點。
 
@@ -118,9 +118,9 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-列舉順序中的第一個節點，如 Resource Manager 所定義。
+資源管理員定義的枚舉順序中的第一個節點。
 
-## <a name="osversion"></a>IResourceManager：： OSVersion 列舉
+## <a name="iresourcemanagerosversion-enumeration"></a><a name="osversion"></a>I 資源管理員::OSversion 枚舉
 
 代表作業系統版本的列舉類型。
 
@@ -128,9 +128,9 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 enum OSVersion;
 ```
 
-## <a name="reference"></a>IResourceManager：： Reference 方法
+## <a name="iresourcemanagerreference-method"></a><a name="reference"></a>I資源管理員:參考方法
 
-遞增 Resource Manager 實例上的參考計數。
+增加資源管理員實例上的引用計數。
 
 ```cpp
 virtual unsigned int Reference() = 0;
@@ -138,11 +138,11 @@ virtual unsigned int Reference() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-產生的參考計數。
+生成的引用計數。
 
-## <a name="registerscheduler"></a>IResourceManager：： RegisterScheduler 方法
+## <a name="iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>I資源管理員::註冊調度器方法
 
-向 Resource Manager 註冊排程器。 一旦註冊排程器，就應該使用傳回的 `ISchedulerProxy` 介面與 Resource Manager 進行通訊。
+向資源管理器註冊計劃程式。 註冊計劃程式后,它應使用返回的`ISchedulerProxy`介面與資源管理器通信。
 
 ```cpp
 virtual ISchedulerProxy *RegisterScheduler(
@@ -152,25 +152,25 @@ virtual ISchedulerProxy *RegisterScheduler(
 
 ### <a name="parameters"></a>參數
 
-*pScheduler*<br/>
-要註冊之排程器的 `IScheduler` 介面。
+*p 時間*<br/>
+要`IScheduler`註冊的計劃程式的介面。
 
 *version*<br/>
-排程器用來與 Resource Manager 通訊的通訊介面版本。 使用版本可讓 Resource Manager 發展通訊介面，同時允許排程器取得舊版功能的存取權。 想要使用 Visual Studio 2010 中 Resource Manager 功能的排程器應該使用版本 `CONCRT_RM_VERSION_1`。
+計劃程式用於與資源管理器通信的通信介面的版本。 使用版本允許資源管理器發展通信介面,同時允許計劃程序訪問較舊的功能。 希望使用 Visual Studio 2010 中存在的資源管理員功能的計畫`CONCRT_RM_VERSION_1`程式應使用版本 。
 
 ### <a name="return-value"></a>傳回值
 
-Resource Manager 與您的排程器相關聯的 `ISchedulerProxy` 介面。 您的排程器應該使用此介面，從上的這個點與 Resource Manager 進行通訊。
+資源管理員`ISchedulerProxy`與您的計劃程序關聯的介面。 此時,您的計劃程式應使用此介面與資源管理器進行通信。
 
 ### <a name="remarks"></a>備註
 
-使用此方法來起始與 Resource Manager 的通訊。 方法會將排程器的 `IScheduler` 介面與 `ISchedulerProxy` 介面建立關聯，並將其交給您。 您可以使用傳回的介面來要求執行資源供排程器使用，或用來訂閱具有 Resource Manager 的執行緒。 Resource Manager 會使用[IScheduler：： GetPolicy](ischeduler-structure.md#getpolicy)方法所傳回的排程器原則中的原則元素，來判斷排程器執行工作所需的執行緒類型。 如果您的 `SchedulerKind` 原則金鑰具有 `UmsThreadDefault` 值，而且值是從原則中讀回值 `UmsThreadDefault`，則傳遞至方法的 `IScheduler` 介面必須是 `IUMSScheduler` 介面。
+使用此方法啟動與資源管理器的通信。 該方法將計劃程式`IScheduler`的介面與介面關聯`ISchedulerProxy`,並將其交還給您。 您可以使用返回的介面請求執行資源供計畫程式使用,或者與資源管理器訂閱線程。 資源管理員將使用[I-計劃器返回](ischeduler-structure.md#getpolicy)的計畫程式策略的策略元素來確定計畫程式執行工作所需的線程類型。 `SchedulerKind`如果策略`UmsThreadDefault`鍵具有該值,並且該值作為`UmsThreadDefault`值 從策略中讀出,則傳遞`IScheduler`給 方法的介面`IUMSScheduler`必須是介面 。
 
-如果參數 `pScheduler` 的值 `NULL`，或如果參數 `version` 不是有效的通訊介面版本，方法會擲回 `invalid_argument` 例外狀況。
+`invalid_argument`如果參數`pScheduler`具有`NULL`值`version`或參數 不是通信介面的有效版本,則該方法將引發異常。
 
-## <a name="release"></a>IResourceManager：： Release 方法
+## <a name="iresourcemanagerrelease-method"></a><a name="release"></a>I資源管理員::發佈方法
 
-遞減 Resource Manager 實例上的參考計數。 Resource Manager 會在其參考計數進入 `0`時終結。
+在資源管理器實例上取消引用計數。 當資源管理員的引用計數轉到`0`時,它將被銷毀。
 
 ```cpp
 virtual unsigned int Release() = 0;
@@ -178,7 +178,7 @@ virtual unsigned int Release() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-產生的參考計數。
+生成的引用計數。
 
 ## <a name="see-also"></a>另請參閱
 

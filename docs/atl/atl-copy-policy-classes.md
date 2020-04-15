@@ -8,30 +8,30 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f40f31124d4547076249a7459ac4b63cc25305d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252213"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317385"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 複製原則類別
 
-複製原則類別是[公用程式類別](../atl/utility-classes.md)用來初始化、 複製和刪除資料。 複製原則類別可讓您定義的任何類型的資料，複製語意，並定義不同的資料類型之間的轉換。
+複製策略類別是用於初始化、複製與移除資料的[實用程式類別](../atl/utility-classes.md)。 複製策略類允許您為任何類型的數據定義複製語義,並定義不同數據類型之間的轉換。
 
-ATL 用法複製原則類別在其實作中的下列範本：
+ATL 在其實用以下樣本時使用複製策略類別:
 
-- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)
+- [CComEnumimpl](../atl/reference/ccomenumimpl-class.md)
 
-- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)
+- [伊納姆翁斯特萊普](../atl/reference/ienumonstlimpl-class.md)
 
-- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)
+- [ICollectiononSTLimpl](../atl/reference/icollectiononstlimpl-class.md)
 
-藉由將封裝複製或轉換可以作為範本引數傳遞的複製原則類別中的資料所需的資訊，ATL 開發者提供極大的重複使用這些類別。 例如，如果您需要實作使用任何任意的資料類型的集合，您只需要提供是適當的複製原則;您永遠不必碰觸實作集合的程式碼。
+通過封裝複製或轉換數據所需的資訊,這些數據可以作為範本參數傳遞,ATL 開發人員提供了這些類的極端可重用性。 例如,如果需要使用任何任意數據類型實現集合,則只需提供相應的複製策略;如果需要使用任意數據類型實現集合,則只需適當的複製策略。您永遠不必觸摸實現集合的代碼。
 
 ## <a name="definition"></a>定義
 
-根據定義，這個類別提供下列的靜態函式是複製原則類別：
+根據定義,提供以下靜態函數的類別是複製策略類:
 
 `static void init(` `DestinationType` `* p);`
 
@@ -39,46 +39,46 @@ ATL 用法複製原則類別在其實作中的下列範本：
 
 `static void destroy(` `DestinationType` `* p);`
 
-您可以取代類型`DestinationType`並*SourceType*複本的每個原則的任意資料類型。
+您可以將類型`DestinationType`和*SourceType*取代為每個複製策略的任意資料類型。
 
 > [!NOTE]
->  雖然您可以定義任何任意的資料類型的複製原則類別，使用 ATL 程式碼中的類別應該限制有意義的類型。 例如，當使用複製原則類別與 ATL 的集合或列舉值實作`DestinationType`必須是可用來當做 COM 介面方法中的參數類型。
+> 儘管可以為任何任意數據類型定義複製策略類,但在 ATL 代碼中使用類應限制有意義的類型。 例如,在將複製策略類與 ATL 的集合或枚舉器實現一起使用`DestinationType`時, 必須是一種類型,可以在 COM 介面方法中用作參數。
 
-使用**init**初始化資料，**複製**若要複製資料，並**終結**釋放資料。 初始化的確切意義、 複製和解構複製原則類別的網域和相關的資料類型會有所不同。
+使用**init**初始化資料、**複製**以複製數據以及**銷毀**以釋放數據。 初始化、複製和銷毀的確切含義是複製策略類的域,並且會根據所涉及的數據類型而變化。
 
-有兩項需求的使用和複製原則類別的實作：
+關於複製策略類的使用和實現有兩個要求:
 
-- 第一個參數**複製**必須只會收到您先前已初始化使用的資料指標**init**。
+- 要**複製**的第一個參數只能接收指向以前使用**init**初始化的數據的指標。
 
-- **終結**必須只會接收您先前已初始化使用的資料指標**init**或透過複製**複製**。
+- **銷毀**必須只接收指向以前使用**init**或通過**複製**複製的數據的指標。
 
-## <a name="standard-implementations"></a>標準的實作
+## <a name="standard-implementations"></a>標準實現
 
-ATL 提供兩個複製原則類別的形式`_Copy`和`_CopyInterface`範本類別：
+ATL`_Copy`以`_CopyInterface`與 樣本類別提供兩個複製策略類別:
 
-- `_Copy`類別可讓同質只複製 （不轉換資料類型之間） 因為它只會提供單一範本參數同時指定`DestinationType`並*SourceType*。 此範本的一般實作包含未初始化或解構的程式碼，並使用`memcpy`來複製資料。 ATL 也提供的特製化`_Copy`VARIANT、 LPOLESTR、 OLEVERB 和 CONNECTDATA 資料類型。
+- 這個`_Copy`類別複製(資料類型) 之間不轉換,因為它只提供一個樣本參數來指定與`DestinationType` *SourceType*。 此範本的通用實現不包含初始化或銷毀代碼,並用於`memcpy`複製數據。 ATL 還提供 VARIANT、LPOLESTR、OLEVERB 和 CONNECTDATA 數據類型的`_Copy`專業化認證。
 
-- `_CopyInterface`類別會提供複製下列標準的 COM 規則的介面指標的實作。 一次一次這個類別可讓只複製，因此它會使用簡單的設定，以及呼叫`AddRef`來執行複製。
+- 類`_CopyInterface`提供了一個實現,用於按照標準 COM 規則複製介面指標。 同樣,此類只允許同質複製,因此它使用簡單的賦值和調用`AddRef`來執行複製。
 
 ## <a name="custom-implementations"></a>自訂實作
 
-一般而言，您必須定義您自己的複製原則類別，針對異質的複製 （也就是資料類型之間的轉換）。 如需自訂複製原則類別的一些範例，查看 VCUE_Copy.h 和 VCUE_CopyString.h 中的檔案[ATLCollections](../overview/visual-cpp-samples.md)範例。 這些檔案包含兩個範本複製原則類別，`GenericCopy`並`MapCopy`，再加上幾個的特製化的`GenericCopy`不同資料類型。
+通常,您需要為異構複製(即資料類型之間的轉換)定義自己的複製策略類。 有關自定義複製策略類的一些範例,請查看[ATLCollections](../overview/visual-cpp-samples.md)範例中VCUE_Copy.h和 VCUE_CopyString.h 的檔。 這些檔包含兩個範本複製策略類,`GenericCopy``MapCopy`以及 ,以及針對不同數據`GenericCopy`類型的多種專門化。
 
-### <a name="genericcopy"></a>GenericCopy
+### <a name="genericcopy"></a>通用複製
 
-`GenericCopy` 可讓您指定*SourceType*和`DestinationType`當做樣板引數。 以下是最常見的形式`GenericCopy`VCUE_Copy.h 類別：
+`GenericCopy`允許您指定*SourceType*`DestinationType`並作為 範本參數。 以下是 VCUE_Copy.h 類別的`GenericCopy`最通用 形式:
 
 [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]
 
-VCUE_Copy.h 也包含此類別的下列特製化： `GenericCopy<BSTR>`， `GenericCopy<VARIANT, BSTR>`， `GenericCopy<BSTR, VARIANT>`。 VCUE_CopyString.h 包含從複製的特製化**std:: string**s `GenericCopy<std::string>`， `GenericCopy<VARIANT, std::string>`，和`GenericCopy<BSTR, std::string>`。 您可以增強`GenericCopy`進一步提供您自己的特製化。
+VCUE_Copy.h 還包含此類的以下專門化`GenericCopy<BSTR>`: `GenericCopy<VARIANT, BSTR>` `GenericCopy<BSTR, VARIANT>` , . VCUE_CopyString.h 包含用於從**std:字串**s`GenericCopy<std::string>`複製`GenericCopy<VARIANT, std::string>`的`GenericCopy<BSTR, std::string>`專門 化 : 與 。 您可以通過提供您`GenericCopy`自己的 進一步專業化來增強。
 
-### <a name="mapcopy"></a>MapCopy
+### <a name="mapcopy"></a>地圖複製
 
-`MapCopy` 假設正在複製的資料會儲存到C++標準程式庫 style 對應，因此它可讓您指定的對應中的資料儲存和目的地輸入類型。 類別的實作只會使用所提供的 typedef *MapType*類別來判斷來源資料的型別，並呼叫適當`GenericCopy`類別。 此類別的任何特製化所不需。
+`MapCopy`假定要複製的數據存儲在C++標準庫樣式映射中,因此允許您指定存儲數據的地圖類型和目標類型。 類的實現只是使用*MapType*類提供的 typedefs 來確定源數據類型`GenericCopy`並調用相應的 類。 不需要此類的專業化化。
 
 [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]
 
 ## <a name="see-also"></a>另請參閱
 
-[實作 C++ 標準程式庫架構集合](../atl/implementing-an-stl-based-collection.md)<br/>
-[ATLCollections 範例](../overview/visual-cpp-samples.md)
+[實現基於C++標準庫集合](../atl/implementing-an-stl-based-collection.md)<br/>
+[ATL集合範例](../overview/visual-cpp-samples.md)

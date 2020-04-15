@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0d230d2a3401ab556adc1183f4c4210ec6ff3c29
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341685"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370024"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo 類別
 
-`CMDITabInfo`類別用來將參數傳遞給[cmdiframewndex:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)方法。 設定這個類別的成員以控制 MDI 索引標籤式群組的行為。
+該`CMDITabInfo`類用於將參數傳遞給[CMDIFrameWndEx::啟用MDITabbed組](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)方法。 設定這個類別的成員以控制 MDI 索引標籤式群組的行為。
 
 ## <a name="syntax"></a>語法
 
@@ -57,45 +57,45 @@ class CMDITabInfo
 
 |名稱|描述|
 |----------|-----------------|
-|[CMDITabInfo::Serialize](#serialize)|從封存中讀取或寫入此物件。|
+|[CMDITab資訊:序列化](#serialize)|從封存中讀取或寫入此物件。|
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|指定是否**關閉**按鈕顯示在 [作用中] 索引標籤的標籤。|
-|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|指定是否要色彩 MDI 索引標籤。|
-|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|指定的索引標籤群組是否顯示快顯功能表，以顯示一份開啟的文件或顯示捲軸按鈕。|
-|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|指定使用者是否可以拖曳來交換的索引標籤的位置。|
-|[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|指定的索引標籤是否有一般的框架。|
-|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|指定是否會顯示每個索引標籤的標籤**關閉** 按鈕。|
-|[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|指定是否啟用自訂的工具提示。|
-|[CMDITabInfo::m_bTabIcons](#m_btabicons)|指定是否要在 MDI 索引標籤上顯示圖示。|
-|[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|指定每個索引標籤視窗的框線大小。|
-|[CMDITabInfo::m_style](#m_style)|指定的索引標籤的樣式。|
-|[CMDITabInfo::m_tabLocation](#m_tablocation)|指定的索引標籤的標籤是否位在頂端或底部的頁面。|
+|[CMDITab資訊:m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|指定「**關閉**」按鈕是否顯示在作用選項卡的標籤上。|
+|[CMDITab資訊:m_bAutoColor](#m_bautocolor)|指定是否為 MDI 選項卡著色。|
+|[CMDITab資訊:m_bDocumentMenu](#m_bdocumentmenu)|指定選項卡組是顯示顯示打開的文檔列表的彈出功能表還是顯示滾動按鈕。|
+|[CMDITab資訊:m_bEnableTabSwap](#m_benabletabswap)|指定使用者是否可以通過拖動交換選項卡的位置。|
+|[CMDITab資訊:m_bFlatFrame](#m_bflatframe)|指定選項卡是否具有平面框架。|
+|[CMDITab資訊:m_bTabCloseButton](#m_btabclosebutton)|指定每個選項卡標籤是否顯示 **「關閉」** 按鈕。|
+|[CMDITab資訊:m_bTabCustomTooltips](#m_btabcustomtooltips)|指定是否啟用了自訂工具提示。|
+|[CMDITab資訊:m_bTabIcons](#m_btabicons)|指定是否在 MDI 選項卡上顯示圖示。|
+|[CMDITab資訊:m_nTabBorderSize](#m_ntabbordersize)|指定每個選項卡視窗的邊框大小。|
+|[CMDITab資訊:m_style](#m_style)|指定選項卡標籤的樣式。|
+|[CMDITab資訊:m_tabLocation](#m_tablocation)|指定選項卡標籤是位於頁面的頂部還是底部。|
 
 ## <a name="remarks"></a>備註
 
-這個類別會指定此架構會建立 MDI 索引標籤群組的參數。
+此類指定框架創建的 MDI 選項卡組的參數。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定各種成員變數中的值`CMDITabInfo`類別。
+下面的範例展示如何在類中`CMDITabInfo`設置各種成員變數的值。
 
 [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxmdiclientareawnd.h
+**標題:** afxmdiclient 區域wnd.h
 
-##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;
+## <a name="cmditabinfom_bactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>CMDITab資訊:m_bActiveTabCloseButton;
 
-指定是否**關閉**按鈕顯示在 [作用中] 索引標籤的標籤。
+指定「**關閉**」按鈕是否顯示在作用選項卡的標籤上。
 
 ```
 BOOL m_bActiveTabCloseButton;
@@ -103,11 +103,11 @@ BOOL m_bActiveTabCloseButton;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，將會顯示 作用中 索引標籤的標籤**關閉** 按鈕。 **關閉**按鈕會移除索引標籤區域的右上角。 否則，不會顯示 作用中 索引標籤的標籤**關閉** 按鈕。 **關閉**按鈕會出現在索引標籤區域的右上角。
+如果為 TRUE,則活動選項卡的標籤將顯示「**關閉」** 按鈕。 關閉**Close**「按鈕將從選項卡區域的右上角刪除。 否則,活動選項卡的標籤將不會顯示 **"關閉"** 按鈕。 關閉**Close**「按鈕將顯示在選項卡區域的右上角。
 
-##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor
+## <a name="cmditabinfom_bautocolor"></a><a name="m_bautocolor"></a>CMDITab資訊:m_bAutoColor
 
-指定每個 MDI 索引標籤是否有它自己的色彩。
+指定每個 MDI 選項卡是否具有自己的顏色。
 
 ```
 BOOL m_bAutoColor;
@@ -115,11 +115,11 @@ BOOL m_bAutoColor;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，每個索引標籤會有自己的色彩。 色彩是由 MFC 程式庫管理。 否則，索引標籤會以白色顯示。 預設值為 FALSE。
+如果為 TRUE,則每個選項卡將有自己的顏色。 顏色集由 MFC 庫管理。 否則,選項卡顯示為白色。 預設值為 FALSE。
 
-##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu
+## <a name="cmditabinfom_bdocumentmenu"></a><a name="m_bdocumentmenu"></a>CMDITab資訊:m_bDocumentMenu
 
-指定是否每個索引標籤會顯示快顯功能表會顯示開啟的文件索引標籤區域右側的清單。
+指定每個選項卡是否顯示一個彈出功能表,該功能表在選項卡區域的右邊緣顯示打開的文檔清單。
 
 ```
 BOOL m_bDocumentMenu;
@@ -127,11 +127,11 @@ BOOL m_bDocumentMenu;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，每個索引標籤式視窗會顯示快顯功能表會顯示在右邊緣的索引標籤區域中，開啟的文件的清單否則 索引標籤視窗會顯示捲軸按鈕 索引標籤 區域右邊緣。 預設值為 FALSE。
+如果為 TRUE,則每個選項卡視窗都會顯示一個彈出菜單,該功能表在選項卡區域的右邊緣顯示打開的文檔的清單;如果為 TRUE,則顯示一個彈出視窗。如果為 TRUE,則顯示選項卡區域右側打開的文件清單。否則,選項卡視窗將顯示選項卡區域右邊緣的滾動按鈕。 預設值為 FALSE。
 
-##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap
+## <a name="cmditabinfom_benabletabswap"></a><a name="m_benabletabswap"></a>CMDITab資訊:m_bEnableTabSwap
 
-指定使用者是否可以拖曳來交換的索引標籤的位置。
+指定使用者是否可以通過拖動交換選項卡的位置。
 
 ```
 BOOL m_bEnableTabSwap;
@@ -139,19 +139,19 @@ BOOL m_bEnableTabSwap;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，使用者可以拖曳索引標籤，變更索引標籤位置。 否則，使用者無法變更索引標籤位置。 預設值為 TRUE。
+如果為 TRUE,則使用者可以通過拖動選項卡來更改選項卡位置。 否則,使用者無法更改選項卡位置。 預設值為 TRUE。
 
-##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame
+## <a name="cmditabinfom_bflatframe"></a><a name="m_bflatframe"></a>CMDITab資訊:m_bFlatFrame
 
-指定每個索引標籤視窗是否有一般的框架。
+指定每個選項卡視窗是否具有平面框架。
 
 ```
 BOOL m_bFlatFrame;
 ```
 
-##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton
+## <a name="cmditabinfom_btabclosebutton"></a><a name="m_btabclosebutton"></a>CMDITab資訊:m_bTabCloseButton
 
-指定是否要顯示每個索引標籤視窗**關閉** 按鈕。
+指定每個選項卡視窗是否顯示 **「關閉」** 按鈕。
 
 ```
 BOOL m_bTabCloseButton;
@@ -159,11 +159,11 @@ BOOL m_bTabCloseButton;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，就會顯示每個索引標籤視窗**關閉** 索引標籤的右邊緣的按鈕。否則，請**關閉**按鈕不會顯示。 預設值為 TRUE。
+如果為 TRUE,則每個選項卡視窗都會在選項卡的右邊緣顯示 **「關閉**」按鈕。否則,不顯示 **「關閉**」按鈕。 預設值為 TRUE。
 
-##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips
+## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>CMDITab資訊:m_bTabCustomTooltips
 
-指定是否在索引標籤顯示工具提示。
+指定選項卡是否顯示工具提示。
 
 ```
 BOOL m_bTabCustomTooltips;
@@ -171,11 +171,11 @@ BOOL m_bTabCustomTooltips;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，應用程式會傳送回主框架 AFX_WM_ON_GET_TAB_TOOLTIP 訊息。 您可以使用 ON_REGISTERED_MESSAGE 巨集來處理此訊息。
+如果為 TRUE,則應用程式向主幀發送AFX_WM_ON_GET_TAB_TOOLTIP消息。 您可以使用ON_REGISTERED_MESSAGE宏來處理此消息。
 
-##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons
+## <a name="cmditabinfom_btabicons"></a><a name="m_btabicons"></a>CMDITab資訊:m_bTabIcons
 
-指定是否要在 MDI 索引標籤上顯示圖示。
+指定是否在 MDI 選項卡上顯示圖示。
 
 ```
 BOOL m_bTabIcons;
@@ -183,11 +183,11 @@ BOOL m_bTabIcons;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，則會在每個 MDI 索引標籤上顯示圖示。否則，圖示不會顯示在索引標籤上。 預設值為 FALSE。
+如果為 TRUE,則每個 MDI 選項卡上都會顯示圖示。否則,圖示不會顯示在選項卡上。 預設值為 FALSE。
 
-##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize
+## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a>CMDITab資訊:m_nTabBorderSize
 
-指定的框線大小，單位為像素，每個索引標籤視窗。
+指定每個選項卡視窗的邊框大小(以像素為單位)。
 
 ```
 int m_nTabBorderSize;
@@ -195,11 +195,11 @@ int m_nTabBorderSize;
 
 ### <a name="remarks"></a>備註
 
-[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)傳回的預設值。
+[CMFCVisualManager:getMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)返回預設值。
 
-##  <a name="m_style"></a>  CMDITabInfo::m_style
+## <a name="cmditabinfom_style"></a><a name="m_style"></a>CMDITab資訊:m_style
 
-指定的索引標籤的樣式。
+指定選項卡標籤的樣式。
 
 ```
 CMFCTabCtrl::Style m_style
@@ -207,20 +207,20 @@ CMFCTabCtrl::Style m_style
 
 ### <a name="remarks"></a>備註
 
-指定其中一個索引標籤的下列樣式：
+指定指定以下樣式之一:
 
 |||
 |-|-|
 |STYLE_3D|3D 樣式。  |
-|STYLE_3D_ONENOTE|Microsoft OneNote 樣式。  |
-|STYLE_3D_VS2005|Microsoft Visual Studio 2005 樣式。  |
-|STYLE_3D_SCROLLED|使用矩形的索引標籤的 3D 樣式。  |
-|STYLE_FLAT_SHARED_HORZ_SCROLL|使用共用的水平捲軸的平面樣式。  |
-|STYLE_3D_ROUNDED_SCROLL|使用 round 索引標籤的 3D 樣式。  |
+|STYLE_3D_ONENOTE|微軟 OneNote 樣式。  |
+|STYLE_3D_VS2005|微軟視覺工作室2005年風格。  |
+|STYLE_3D_SCROLLED|帶矩形選項卡標籤的 3D 樣式。  |
+|STYLE_FLAT_SHARED_HORZ_SCROLL|具有共用水準滾動條的平面樣式。  |
+|STYLE_3D_ROUNDED_SCROLL|帶圓形標籤的 3D 樣式。  |
 
-##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation
+## <a name="cmditabinfom_tablocation"></a><a name="m_tablocation"></a>CMDITab資訊:m_tabLocation
 
-指定的索引標籤的標籤是否位在頂端或底部的頁面。
+指定選項卡標籤是位於頁面的頂部還是底部。
 
 ```
 CMFCTabCtrl::Location m_tabLocation;
@@ -228,15 +228,15 @@ CMFCTabCtrl::Location m_tabLocation;
 
 ### <a name="remarks"></a>備註
 
-適用於下列位置旗標的一個索引標籤：
+套用於選項卡,以下位置標誌之一:
 
-- LOCATION_BOTTOM： 索引標籤的標籤會位於頁面底部。
+- LOCATION_BOTTOM:選項卡標籤位於頁面底部。
 
-- LOCATION_TOP： 索引標籤的標籤會位於頁面頂端
+- LOCATION_TOP:選項卡標籤位於頁面頂部
 
-##  <a name="serialize"></a>  CMDITabInfo::Serialize
+## <a name="cmditabinfoserialize"></a><a name="serialize"></a>CMDITab資訊:序列化
 
-讀取或寫入此物件從封存至封存。
+從存檔或存檔讀取或寫入此物件。
 
 ```
 void Serialize(CArchive& ar);
@@ -245,7 +245,7 @@ void Serialize(CArchive& ar);
 ### <a name="parameters"></a>參數
 
 *ar*<br/>
-[in]A [CArchive 類別](../../mfc/reference/carchive-class.md)来序列化的物件。
+[在]要序列化的[CArchive 類](../../mfc/reference/carchive-class.md)物件。
 
 ## <a name="see-also"></a>另請參閱
 

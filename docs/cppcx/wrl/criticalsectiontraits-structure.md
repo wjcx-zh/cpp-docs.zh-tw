@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: ce904ecbd9a5855c63fd43f07f88c215cef544ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05c93bf6a2765bd11489075067c627ab3c3ab691
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398598"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372573"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 結構
 
-特製化`CriticalSection`支援無效的重要區段或函式來釋放重要區段物件。
+專門化`CriticalSection`物件以支援無效的關鍵部分或釋放關鍵部分的函數。
 
 ## <a name="syntax"></a>語法
 
@@ -34,28 +34,28 @@ struct CriticalSectionTraits;
 
 名稱   | 描述
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | A`typedef`重要區段定義的指標。 `Type` 定義為`typedef CRITICAL_SECTION* Type;`。
+`Type` | 定義`typedef`指向關鍵節的指標的 。 `Type` 定義為 `typedef CRITICAL_SECTION* Type;`。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                       | 描述
 ---------------------------------------------------------- | -----------------
-[CriticalSectionTraits::GetInvalidValue](#getinvalidvalue) | 特製化`CriticalSection`範本，讓範本不一定正確。
-[CriticalSectionTraits::Unlock](#unlock)                   | 特製化`CriticalSection`範本，因此它支援指定的重要區段物件釋放擁有權。
+[關鍵節特徵::獲取無效值](#getinvalidvalue) | 專門化`CriticalSection`範本,以便範本始終無效。
+[臨界截面:解鎖](#unlock)                   | 專門化`CriticalSection`範本,以便它支援釋放指定關鍵節物件的擁有權。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CriticalSectionTraits`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空間:** 微軟::WRL:包裝::處理特徵
 
-## <a name="getinvalidvalue"></a>CriticalSectionTraits::GetInvalidValue
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>關鍵節特徵::獲取無效值
 
-特製化`CriticalSection`範本，讓範本不一定正確。
+專門化`CriticalSection`範本,以便範本始終無效。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -63,15 +63,15 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>傳回值
 
-一律傳回無效的重要區段的指標。
+始終返回指向無效關鍵部分的指標。
 
 ### <a name="remarks"></a>備註
 
-`Type`修飾詞指`typedef CRITICAL_SECTION* Type;`。
+修飾`Type`定義為`typedef CRITICAL_SECTION* Type;`。
 
-## <a name="unlock"></a>CriticalSectionTraits::Unlock
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>臨界截面:解鎖
 
-特製化`CriticalSection`範本，因此它支援指定的重要區段物件釋放擁有權。
+專門化`CriticalSection`範本,以便它支援釋放指定關鍵節物件的擁有權。
 
 ```cpp
 inline static void Unlock(
@@ -82,10 +82,10 @@ inline static void Unlock(
 ### <a name="parameters"></a>參數
 
 *cs*<br/>
-重要區段物件的指標。
+指向關鍵截面物件的指標。
 
 ### <a name="remarks"></a>備註
 
-`Type`修飾詞指`typedef CRITICAL_SECTION* Type;`。
+修飾`Type`定義為`typedef CRITICAL_SECTION* Type;`。
 
-如需詳細資訊，請參閱 < **LeaveCriticalSection 函式**中**同步處理函式**Windows API 文件的章節。
+有關詳細資訊,請參閱 Windows API 文件的**同步函數**部份中的 **「Leave 關鍵」節功能**。

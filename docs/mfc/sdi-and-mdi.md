@@ -8,23 +8,23 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9730e7baf9589c4b05a60703c619aae2e941bdec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308525"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372762"
 ---
 # <a name="sdi-and-mdi"></a>SDI 和 MDI
 
-MFC 可讓您輕鬆地使用單一文件介面 (SDI) 和多重文件介面 (MDI) 應用程式。
+MFC 便於使用單文檔介面 (SDI) 和多文檔介面 (MDI) 應用程式。
 
-SDI 應用程式可讓一次只能有一個開啟的文件框架視窗。 MDI 應用程式允許多個文件框架視窗，在相同的執行個體的應用程式中開啟。 MDI 應用程式有的視窗內的多個 MDI 子視窗，也就是本身的框架視窗，即可開啟，每個都包含個別的文件。 在某些應用程式中，子視窗可以是不同的類型，例如圖表視窗和試算表的視窗。 在此情況下，會啟用不同類型的 MDI 子視窗，可以變更功能表列。
+SDI 應用程式一次只允許一個打開的文檔框架視窗。 MDI 應用程式允許在應用程式的同一實例中打開多個文檔框架視窗。 MDI 應用程式有一個視窗,其中可以打開多個 MDI 子視窗(即框架視窗本身),每個視窗包含單獨的文檔。 在某些應用程式中,子視窗可以是不同類型的,例如圖表視窗和電子錶格視窗。 在這種情況下,功能表列可以隨著不同類型的 MDI 子視窗的啟動而更改。
 
 > [!NOTE]
->  在 Windows 95 和更新版本，但應用程式通常是 SDI 因為作業系統已採用 」 的文件為中心 」 檢視。
+> 在 Windows 95 及更高版本下,應用程式通常是 SDI,因為作業系統採用了「以文檔為中心的」視圖。
 
-如需詳細資訊，請參閱 <<c0> [ 文件、 檢視和架構](../mfc/documents-views-and-the-framework.md)。
+有關詳細資訊,請參考[文件、檢視和框架](../mfc/documents-views-and-the-framework.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f05c2e9482f8a0bada3868fdc946d4d26a0e0e1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421895"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371928"
 ---
 # <a name="collate-class"></a>collate 類別
 
-類別樣板，描述可以做為地區設定 facet 的物件，以控制字元串中的字元順序和群組、兩者之間的比較，以及字串的雜湊。
+一個類範本,用於描述可用作區域設置面的物件,用於控制字串中字元的順序和分組、字串之間的比較和字串的哈希。
 
 ## <a name="syntax"></a>語法
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*字元類型*\
 用於程式內部字元編碼的類型。
 
 ## <a name="remarks"></a>備註
@@ -53,7 +53,7 @@ class collate : public locale::facet;
 
 |建構函式|描述|
 |-|-|
-|[collate](#collate)|做為地區設定 facet 處理字串排序慣例之 `collate` 類別物件的建構函式。|
+|[整理](#collate)|做為地區設定 facet 處理字串排序慣例之 `collate` 類別物件的建構函式。|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -66,20 +66,20 @@ class collate : public locale::facet;
 
 |成員函數|描述|
 |-|-|
-|[compare](#compare)|根據其 facet 特定規則，比較兩個字元序列相等或不等。|
+|[比較](#compare)|根據其 facet 特定規則，比較兩個字元序列相等或不等。|
 |[do_compare](#do_compare)|虛擬函式，呼叫以根據其 facet 特定規則，比較兩個字元序列相等或不等。|
 |[do_hash](#do_hash)|虛擬函式，呼叫以根據其 facet 特定規則，決定序列的雜湊值。|
 |[do_transform](#do_transform)|虛擬函式，呼叫以將地區設定的字元序列轉換為字串，可用來與從相同地區設定轉換的其他字元序列進行語彙比較。|
-|[hash](#hash)|根據其 facet 特定規則，決定序列的雜湊值。|
-|[transform](#transform)|將地區設定的字元序列轉換為字串，可用來與從相同地區設定轉換的其他字元序列進行語彙比較。|
+|[散 列](#hash)|根據其 facet 特定規則，決定序列的雜湊值。|
+|[變換](#transform)|將地區設定的字元序列轉換為字串，可用來與從相同地區設定轉換的其他字元序列進行語彙比較。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<地區設定 >
+**標頭︰** \<locale>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="char_type"></a>  collate::char_type
+## <a name="collatechar_type"></a><a name="char_type"></a>整理::char_type
 
 類型，描述 `CharType` 類型之字元。
 
@@ -89,9 +89,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-這個類型與樣板參數 `CharType`同義。
+此類型是樣板參數 `CharType` 的同義字。
 
-## <a name="collate"></a>  collate::collate
+## <a name="collatecollate"></a><a name="collate"></a>整理::整理
 
 collate 類別物件的建構函式，可作為地區設定 Facet 以處理字串排序慣例。
 
@@ -116,17 +116,17 @@ const char* _Locname,
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數和其重要性的可能值為：
+*_Refs*參數的可能值及其顯著性為:
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
 - 1：物件的存留期必須以手動方式管理。
 
-- \> 1：未定義這些值。
+- \>1: 未定義這些值。
 
-此函式會使用**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基底物件。
+建構函式用區域設定初始化其基本物件 **::**[分面](../standard-library/locale-class.md#facet_class)(`_Refs`。
 
-## <a name="compare"></a>  collate::compare
+## <a name="collatecompare"></a><a name="compare"></a>整理::比較
 
 根據其 facet 特定規則，比較兩個字元序列相等或不等。
 
@@ -139,21 +139,21 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*\
+*第一1*\
 要比較之第一個序列中第一個元素的指標。
 
-*last1*\
+*最後1*\
 要比較之第一個序列中最後一個元素的指標。
 
-*first2*\
+*第一2*\
 要比較之第二個序列中第一個元素的指標。
 
-*last2*\
+*最後2*\
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回下列值：
+成員函式會傳回：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -165,7 +165,7 @@ int compare(const CharType* first1,
 
 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或者，表示不相等配對存在，但第一個序列較短。
 
-成員函式會傳回 [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`)。
+成員函數傳[do_compare](#do_compare)`first1`回 do_compare `last1` `first2` `last2`(、 、 )
 
 ### <a name="example"></a>範例
 
@@ -192,7 +192,7 @@ int main() {
 }
 ```
 
-## <a name="do_compare"></a>  collate::do_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a>整理::do_比較
 
 虛擬函式，呼叫以根據其 facet 特定規則，比較兩個字元序列相等或不等。
 
@@ -205,21 +205,21 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*\
+*第一1*\
 要比較之第一個序列中第一個元素的指標。
 
-*last1*\
+*最後1*\
 要比較之第一個序列中最後一個元素的指標。
 
-*first2*\
+*第一2*\
 要比較之第二個序列中第一個元素的指標。
 
-*last2*\
+*最後2*\
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回下列值：
+成員函式會傳回：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -229,13 +229,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會將位於 [* first1，Last1） * 的順序與序列（位於 *[first2，last2*））進行比較。 它會在 `CharType`類型的對應元素配對之間套用 `operator<`，藉此比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
+受保護的虛擬成員函數將 * 前 11,Last1)] 處的序列與 *# first2, last2*的序列進行比較。 它通過在類型`CharType`對應`operator<`元素的對之間應用來比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
 
 ### <a name="example"></a>範例
 
 請參閱 [collate::compare](#compare) 的範例，其會呼叫 `do_compare`。
 
-## <a name="do_hash"></a>  collate::do_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a>整理::d
 
 虛擬函式，呼叫以根據其 facet 特定規則，決定序列的雜湊值。
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*第一*\
 要決定其序列值之第一個字元的指標。
 
-*上次*\
+*最後*\
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -263,7 +263,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 請參閱 [hash](#hash) 的範例，其會呼叫 `do_hash`。
 
-## <a name="do_transform"></a>  collate::do_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a>整理::do_變換
 
 虛擬函式，呼叫以將地區設定的字元序列轉換為字串，可用來與從相同地區設定轉換的其他字元序列進行語彙比較。
 
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*第一*\
 要轉換之序列中第一個字元的指標。
 
-*上次*\
+*最後*\
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -285,13 +285,13 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會傳回 [string_type](#string_type) 類別的物件，其受控制的序列是 [ `first`, `last`) 序列的複本。 如果從 collate\< **CharType**衍生的類別 > 覆寫[do_compare](#do_compare)，它也應該覆寫 `do_transform` 以符合。 相較於傳遞要在衍生類別中比較的未轉換字串，若將兩個已轉換的字串傳遞至 `collate::compare`，應該可以產生相同結果。
+受保護的虛擬成員函數傳回類別[string_type的物件,](#string_type)其受控序列是序列的複`first``last`本 * 。 如果衍生自 collate\< **CharType**> 的類別會覆寫 [do_compare](#do_compare)，該類別也會覆寫 `do_transform` 以彼此相符。 相較於傳遞要在衍生類別中比較的未轉換字串，若將兩個已轉換的字串傳遞至 `collate::compare`，應該可以產生相同結果。
 
 ### <a name="example"></a>範例
 
 請參閱 [transform](#transform) 的範例，其會呼叫 `do_transform`。
 
-## <a name="hash"></a>  collate::hash
+## <a name="collatehash"></a><a name="hash"></a>整理::哈希
 
 根據其 facet 特定規則，決定序列的雜湊值。
 
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*第一*\
 要決定其序列值之第一個字元的指標。
 
-*上次*\
+*最後*\
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -313,7 +313,7 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 [do_hash](#do_hash)( `first`, `last`)。
+成員函數返回[do_hash](#do_hash) `first` `last` (。
 
 雜湊值非常適合在清單陣列之間虛擬隨機散發序列。
 
@@ -345,7 +345,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="string_type"></a>  collate::string_type
+## <a name="collatestring_type"></a><a name="string_type"></a>整理::string_type
 
 類型，描述包含 `basic_string` 類型字元的 `CharType` 類型字串。
 
@@ -355,13 +355,13 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)其物件可以儲存來源序列的複本。
+類型描述類範本的專門化[basic_string](../standard-library/basic-string-class.md)其物件可以存儲源序列的副本。
 
 ### <a name="example"></a>範例
 
 如需如何宣告和使用 `string_type` 的範例，請參閱 [transform](#transform)。
 
-## <a name="transform"></a>  collate::transform
+## <a name="collatetransform"></a><a name="transform"></a>整理::轉換
 
 將地區設定的字元序列轉換為字串，可用來與從相同地區設定轉換的其他字元序列進行語彙比較。
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*第一*\
 要轉換之序列中第一個字元的指標。
 
-*上次*\
+*最後*\
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回[do_transform](#do_transform)（`first`，`last`）。
+成員函數返回[do_transform](#do_transform)`first` `last` (。
 
 ### <a name="example"></a>範例
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)\
+[\<區域設定>](../standard-library/locale.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

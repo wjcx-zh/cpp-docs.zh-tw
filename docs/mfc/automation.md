@@ -1,5 +1,5 @@
 ---
-title: Automation
+title: 自動化
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers, about Automation servers
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374151"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370829"
 ---
-# <a name="automation"></a>Automation
+# <a name="automation"></a>自動化
 
 Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用程式中實作的物件，或者公開物件以便提供給其他程式操作。
 
@@ -37,7 +37,7 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 - Automation (區域)。
 
-- （在網路上使用分散式 COM 或 DCOM） 遠端 Automation。
+- 遠端 Automation (在網路上使用分散式 COM 或 DCOM)。
 
 當應用程式提供可供其他應用程式使用的功能時，公開物件是有益處的。 例如，某個 ActiveX 控制項是一種 Automation 伺服器類型，此時裝載 ActiveX 控制項的應用程式即是該控制項的 Automation 用戶端。
 
@@ -45,11 +45,11 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 更重要的是，其支援提供給使用者和方案提供者的 Automation。 透過通用、明確定義的介面公開應用程式的功能，Automation 可讓單一的一般程式語言 (如 Microsoft Visual Basic) 建立複雜的解決方案，而不需要使用應用程式專屬的巨集語言才能建立。
 
-許多商業應用程式 (例如 Microsoft Excel 和 Microsoft Visual C++) 可讓您自動化其大部分的功能。 例如，在視覺效果C++，您可以撰寫 VBScript 巨集來自動化組建、 程式碼編輯，或偵錯工作的層面。
+許多商業應用程式 (例如 Microsoft Excel 和 Microsoft Visual C++) 可讓您自動化其大部分的功能。 例如，在 Visual C++ 中，您可以撰寫 VBScript 巨集來自動化組建、程式碼編輯的外觀或偵錯工作。
 
-##  <a name="_core_passing_parameters_in_automation"></a> 在 Automation 內傳遞參數
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> 在 Automation 內傳遞參數
 
-建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT**類型支援許多標準的資料類型：2 與 4 位元組整數、 4 和 8 位元組浮點數、 字串和布林值。 此外，它支援**HRESULT** （OLE 錯誤碼）、**貨幣**（固定點數字類型），並**日期**（絕對日期和時間） 類型，以及指標`IUnknown`和`IDispatch`介面。
+建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT** 類型支援許多標準的資料類型：2 位元和 4 位元的整數、4 位元和 8 位元的浮點數、字串和布林值。 此外,它還支援**HRESULT(OLE**錯誤代碼)、**貨幣**(定點數值類型)和**日期**(絕對日期和時間)`IUnknown``IDispatch`類型,以及指向和介面的指標。
 
 **VARIANT** 類型封裝在 [COleVariant](../mfc/reference/colevariant-class.md) 類別中。 支援 **CURRENCY** 和 **DATE** 的類別封裝在 [COleCurrency](../mfc/reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 類別中。
 
@@ -67,7 +67,7 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 - [MFCCALC](../overview/visual-cpp-samples.md) ：示範 Automation 用戶端應用程式。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
 - [Automation 用戶端](../mfc/automation-clients.md)
 
@@ -77,7 +77,7 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 - [Active 技術](../mfc/mfc-com.md)
 
-## <a name="what-do-you-want-to-do"></a>您要做什麼
+## <a name="what-do-you-want-to-do"></a>你想做什麼
 
 - [加入 Automation 類別](../mfc/automation-servers.md)
 

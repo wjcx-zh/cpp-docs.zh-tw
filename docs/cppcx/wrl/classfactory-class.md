@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398728"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372671"
 ---
 # <a name="classfactory-class"></a>ClassFactory 類別
 
@@ -53,19 +53,19 @@ class ClassFactory :
 ### <a name="parameters"></a>參數
 
 *I0*<br/>
-第零個介面中。
+第零個介面。
 
 *I1*<br/>
 第一個介面。
 
 *I2*<br/>
-第二個介面中。
+第二個介面。
 
 ## <a name="remarks"></a>備註
 
-利用`ClassFactory`以提供使用者定義的 factory 實作。
+利用`ClassFactory`來提供使用者定義的工廠實現。
 
-下列的程式設計模式將示範如何使用[實作](implements-structure.md)結構，以指定三個以上的介面上的 class factory。
+以下程式設計模式展示如何使用[實現器](implements-structure.md)結構在類工廠上指定三個多個介面。
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -75,18 +75,18 @@ class ClassFactory :
 
 名稱                                        | 描述
 ------------------------------------------- | -----------
-[ClassFactory::ClassFactory](#classfactory) |
+[類工廠::類工廠](#classfactory) |
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                            | 描述
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | 遞增參考計數目前`ClassFactory`物件。
-[ClassFactory::LockServer](#lockserver)         | 遞增或遞減目前所追蹤物件數量基礎`ClassFactory`物件。
-[ClassFactory::QueryInterface](#queryinterface) | 擷取指定參數的介面指標。
-[ClassFactory::Release](#release)               | 遞減參考計數目前`ClassFactory`物件。
+[類別工廠::新增參考](#addref)                 | 增加當前`ClassFactory`物件的引用計數。
+[類別工廠::鎖伺服器](#lockserver)         | 增加或遞減當前`ClassFactory`物件跟蹤的基礎物件數。
+[類工廠::查詢介面](#queryinterface) | 檢索指向參數指定的介面的指標。
+[類工廠::發佈](#release)               | 取消當前`ClassFactory`物件的引用計數。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `I0`
 
@@ -110,13 +110,13 @@ class ClassFactory :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標題:** 模組.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>類別工廠::新增參考
 
-遞增參考計數目前`ClassFactory`物件。
+增加當前`ClassFactory`物件的引用計數。
 
 ```cpp
 STDMETHOD_(
@@ -129,15 +129,15 @@ STDMETHOD_(
 
 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
 
-## <a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>類工廠::類工廠
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>類別工廠::鎖伺服器
 
-遞增或遞減目前所追蹤物件數量基礎`ClassFactory`物件。
+增加或遞減當前`ClassFactory`物件跟蹤的基礎物件數。
 
 ```cpp
 STDMETHOD(
@@ -147,20 +147,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*fLock*<br/>
-**true**遞增追蹤的物件數目。 **false**來減少追蹤的物件數目。
+*羊群*<br/>
+**true**以增加追蹤物件的數量。 **false**以減少被跟蹤物件的數量。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_FAIL。
+S_OK如果成功;否則,E_FAIL。
 
 ### <a name="remarks"></a>備註
 
-`ClassFactory` 追蹤的基礎執行個體中的物件[模組](module-class.md)類別。
+`ClassFactory`跟蹤[模組](module-class.md)類的基礎實例中的物件。
 
-## <a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>類工廠::查詢介面
 
-擷取指定參數的介面指標。
+檢索指向參數指定的介面的指標。
 
 ```cpp
 STDMETHOD(
@@ -174,15 +174,15 @@ STDMETHOD(
 介面識別碼。
 
 *ppvObject*<br/>
-這項作業完成時，參數所指定之介面指標*riid*。
+此操作完成後,指向參數*riid*指定的介面的指標。
 
 ### <a name="return-value"></a>傳回值
 
 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
 
-## <a name="release"></a>ClassFactory::Release
+## <a name="classfactoryrelease"></a><a name="release"></a>類工廠::發佈
 
-遞減參考計數目前`ClassFactory`物件。
+取消當前`ClassFactory`物件的引用計數。
 
 ```cpp
 STDMETHOD_(

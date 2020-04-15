@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2631005fcedfb8d5db69667e22c375f585b4f044
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405725"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369252"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 類別
 
-ID2D1Geometry 包裝函式。
+ID2D1 幾何體的包裝器。
 
 ## <a name="syntax"></a>語法
 
@@ -69,67 +69,67 @@ class CD2DGeometry : public CD2DResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|建構 CD2DGeometry 物件。|
-|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|解構函式。 D2D geometry 物件正在被終結時呼叫。|
+|[CD2D 幾何:CD2D幾何](#cd2dgeometry)|構造 CD2D 幾何物件。|
+|[CD2D幾何:*CD2D幾何](#_dtorcd2dgeometry)|解構函式。 銷毀 D2D 幾何物件時調用。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DGeometry::Attach](#attach)|將現有的資源物件的介面|
-|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|結合這個幾何與所指定幾何，並將結果儲存在 ID2D1SimplifiedGeometrySink。|
-|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|描述這個幾何與所指定的幾何的交集。 使用指定的簡維容錯來進行比較。|
-|[CD2DGeometry::ComputeArea](#computearea)|之後，計算的幾何區域所指定的矩陣轉換，並簡維使用指定的容許誤差。|
-|[CD2DGeometry::ComputeLength](#computelength)|如同每個區段已 unrolled 成一條線，請計算幾何的長度。|
-|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|之後，會計算沿著幾何距離點和正切向量轉換所指定的矩陣及壓平合併使用指定的容許誤差。|
-|[CD2DGeometry::Destroy](#destroy)|終結 CD2DGeometry 物件。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|
-|[CD2DGeometry::Detach](#detach)|中斷連結物件中的資源介面|
-|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|表示幾何的填滿的區域是否包含指定指定簡維的容許誤差的指定的點。|
-|[CD2DGeometry::Get](#get)|傳回 ID2D1Geometry 介面|
-|[CD2DGeometry::GetBounds](#getbounds)||
-|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|在擴展所指定的筆劃的寬度和樣式及所指定的矩陣轉換之後，請取得幾何的界限。|
-|[CD2DGeometry::IsValid](#isvalid)|檢查資源的有效性 (會覆寫[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
-|[CD2DGeometry::Outline](#outline)|計算外框的幾何，並將結果寫入 ID2D1SimplifiedGeometrySink。|
-|[CD2DGeometry::Simplify](#simplify)|建立只包含線條和 （選擇性） 三次方貝茲曲線，並將結果寫入至 ID2D1SimplifiedGeometrySink 之幾何的簡化的版本。|
-|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|判斷幾何筆劃是否包含指定的點，提供指定的筆劃粗細、 樣式和轉換。|
-|[CD2DGeometry::Tessellate](#tessellate)|建立一份涵蓋幾何之後轉換使用指定的矩陣及壓平合併使用指定的容許誤差的順時針彎曲三角形。|
-|[CD2DGeometry::Widen](#widen)|將幾何擴展所指定的筆劃並將結果寫入 ID2D1SimplifiedGeometrySink 之後, 所指定的矩陣轉換，並簡維使用指定的容許誤差。|
+|[CD2D 幾何:附加](#attach)|將現有資源介面附加到物件|
+|[CD2D幾何::與幾何體結合](#combinewithgeometry)|將此幾何體與指定的幾何體相結合,並將結果存儲在 ID2D1 簡化幾何結構中。|
+|[CD2D幾何::與幾何體比較](#comparewithgeometry)|描述此幾何體和指定幾何體之間的交集。 比較使用指定的展平容差執行。|
+|[CD2D 幾何:計算區域](#computearea)|計算幾何體的面積后,它已被指定的矩陣轉換,並使用指定的容差拼平。|
+|[CD2D 幾何:計算長度](#computelength)|計算幾何的長度,就像每個線段都展開成一條線一樣。|
+|[CD2D 幾何::計算點長度](#computepointatlength)|計算沿幾何體的指定距離的點和切線向量,然後由指定的矩陣轉換並使用指定的容差進行拼合。|
+|[CD2D 幾何::D](#destroy)|銷毀 CD2D 幾何物件。 (覆蓋[CD2D 資源::D)](../../mfc/reference/cd2dresource-class.md#destroy)|
+|[CD2D 幾何::D](#detach)|從物件分離資源介面|
+|[CD2D 幾何::填充包含點](#fillcontainspoint)|指示幾何圖形填充的區域是否包含給定指定平整容差的指定點。|
+|[CD2D 幾何:取得](#get)|傳回 ID2D1 幾何介面|
+|[CD2D 幾何:取得繫結](#getbounds)||
+|[CD2D 幾何::獲取加束](#getwidenedbounds)|在幾何體被指定的描邊寬度和樣式加寬並由指定的矩陣轉換后獲取幾何體的邊界。|
+|[CD2D 幾何:有效](#isvalid)|檢查資源有效性(覆寫[CD2D 資源::有效](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
+|[CD2D 幾何:大綱](#outline)|計算幾何體的輪廓並將結果寫入 ID2D1 簡化幾何結構。|
+|[CD2D 幾何:簡化](#simplify)|創建僅包含線條和(可選)立方貝塞爾曲線的幾何圖形的簡化版本,並將結果寫入 ID2D1 簡化幾何結構。|
+|[CD2D 幾何::筆劃包含點](#strokecontainspoint)|確定幾何體的描邊是否包含指定描邊厚度、樣式和變換的指定點。|
+|[CD2D 幾何::底紋](#tessellate)|建立一組順時針彎曲的三角形，這組三角形在使用指定的矩陣轉換並且使用指定的容錯扁平化之後，將涵蓋幾何。|
+|[CD2D 幾何:寬寬](#widen)|通過指定的描邊加寬幾何體,並將結果寫入 ID2D1SimplifiedGeometry Sink 後,該結果被指定的矩陣轉換並使用指定的容差進行拼合。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|傳回 ID2D1Geometry 介面|
+|[CD2D幾何::操作員 ID2D1 幾何*](#operator_id2d1geometry_star)|傳回 ID2D1 幾何介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DGeometry::m_pGeometry](#m_pgeometry)|ID2D1Geometry 指標。|
+|[CD2D 幾何::m_pGeometry](#m_pgeometry)|指向 ID2D1 幾何體的指標。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DGeometry`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2D幾何:*CD2D幾何
 
-解構函式。 D2D geometry 物件正在被終結時呼叫。
+解構函式。 銷毀 D2D 幾何物件時調用。
 
 ```
 virtual ~CD2DGeometry();
 ```
 
-##  <a name="attach"></a>  CD2DGeometry::Attach
+## <a name="cd2dgeometryattach"></a><a name="attach"></a>CD2D 幾何:附加
 
-將現有的資源物件的介面
+將現有資源介面附加到物件
 
 ```
 void Attach(ID2D1Geometry* pResource);
@@ -137,12 +137,12 @@ void Attach(ID2D1Geometry* pResource);
 
 ### <a name="parameters"></a>參數
 
-*pResource*<br/>
-現有的資源介面。 不能是 NULL
+*p資源*<br/>
+現有資源介面。 無法為 NULL
 
-##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2D 幾何:CD2D幾何
 
-建構 CD2DGeometry 物件。
+構造 CD2D 幾何物件。
 
 ```
 CD2DGeometry(
@@ -152,15 +152,15 @@ CD2DGeometry(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
-##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry
+## <a name="cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2D幾何::與幾何體結合
 
-結合這個幾何與所指定幾何，並將結果儲存在 ID2D1SimplifiedGeometrySink。
+將此幾何體與指定的幾何體相結合,並將結果存儲在 ID2D1 簡化幾何結構中。
 
 ```
 BOOL CombineWithGeometry(
@@ -173,28 +173,28 @@ BOOL CombineWithGeometry(
 
 ### <a name="parameters"></a>參數
 
-*inputGeometry*<br/>
-要結合與這個執行個體的幾何。
+*輸入幾何學*<br/>
+要與此實例組合的幾何體。
 
-*combineMode*<br/>
-若要執行的合併作業的類型。
+*組合模式*<br/>
+要執行的組合操作的類型。
 
-*inputGeometryTransform*<br/>
-要套用至 inputGeometry 合併之前的轉換。
+*輸入幾何轉換*<br/>
+要應用於輸入幾何的轉換,然後再合併。
 
-*geometrySink*<br/>
-合併作業的結果。
+*幾何結構*<br/>
+合併操作的結果。
 
-*flatteningTolerance*<br/>
-距離的幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry
+## <a name="cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>CD2D幾何::與幾何體比較
 
-描述這個幾何與所指定的幾何的交集。 使用指定的簡維容錯來進行比較。
+描述此幾何體和指定幾何體之間的交集。 比較使用指定的展平容差執行。
 
 ```
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
@@ -205,22 +205,22 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 
 ### <a name="parameters"></a>參數
 
-*inputGeometry*<br/>
-要測試的幾何。
+*輸入幾何學*<br/>
+要測試的幾何體。
 
-*inputGeometryTransform*<br/>
-要套用至 inputGeometry 轉換。
+*輸入幾何轉換*<br/>
+應用於輸入幾何的轉換。
 
-*flatteningTolerance*<br/>
-距離的幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="computearea"></a>  CD2DGeometry::ComputeArea
+## <a name="cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2D 幾何:計算區域
 
-之後，計算的幾何區域所指定的矩陣轉換，並簡維使用指定的容許誤差。
+計算幾何體的面積后,它已被指定的矩陣轉換,並使用指定的容差拼平。
 
 ```
 BOOL ComputeArea(
@@ -231,22 +231,22 @@ BOOL ComputeArea(
 
 ### <a name="parameters"></a>參數
 
-*worldTransform*<br/>
-要計算其區域之前套用至這個幾何的轉換。
+*世界轉型*<br/>
+在計算其面積之前應用於此幾何體的轉換。
 
-*area*<br/>
-當這個方法傳回時，包含這個幾何的轉換扁平化版本的區域的指標。 您必須為此參數來配置儲存體。
+*地區*<br/>
+當此方法返回時,包含指向此幾何體的轉換的拼合版本的區域的指標。 您必須為此參數分配存儲。
 
-*flatteningTolerance*<br/>
-距離幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="computelength"></a>  CD2DGeometry::ComputeLength
+## <a name="cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2D 幾何:計算長度
 
-如同每個區段已 unrolled 成一條線，請計算幾何的長度。
+計算幾何的長度,就像每個線段都展開成一條線一樣。
 
 ```
 BOOL ComputeLength(
@@ -257,22 +257,22 @@ BOOL ComputeLength(
 
 ### <a name="parameters"></a>參數
 
-*worldTransform*<br/>
-要計算其長度之前套用至幾何的轉換。
+*世界轉型*<br/>
+在計算幾何體的長度之前應用於幾何體的變換。
 
-*length*<br/>
-當這個方法傳回時，包含幾何的長度的指標。 對於已關閉的幾何，長度會包含隱含的結尾區段。 您必須為此參數來配置儲存體。
+*長度*<br/>
+當此方法返回時,包含指向幾何長度的指標。 對於閉合幾何體,長度包括隱式閉合段。 您必須為此參數分配存儲。
 
-*flatteningTolerance*<br/>
-距離幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength
+## <a name="cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2D 幾何::計算點長度
 
-之後，會計算沿著幾何距離點和正切向量轉換所指定的矩陣及壓平合併使用指定的容許誤差。
+計算沿幾何體的指定距離的點和切線向量,然後由指定的矩陣轉換並使用指定的容差進行拼合。
 
 ```
 BOOL ComputePointAtLength(
@@ -285,36 +285,36 @@ BOOL ComputePointAtLength(
 
 ### <a name="parameters"></a>參數
 
-*length*<br/>
-沿著點和要尋找的正切值的幾何距離。 如果這個距離很少然後 0，這個方法會計算幾何中的第一個點。 如果此距離大於幾何的長度，這個方法會計算幾何中的最後一個點。
+*長度*<br/>
+沿點的幾何體和要查找的切線的距離。 如果此距離小於 0,則此方法計算幾何體中的第一個點。 如果此距離大於幾何的長度,則此方法計算幾何體中的最後一個點。
 
-*worldTransform*<br/>
-要計算正切值與指定的點之前套用至幾何的轉換。
+*世界轉型*<br/>
+在計算指定點和切線之前應用於幾何體的變換。
 
-*point*<br/>
-指定沿著幾何距離位置。 如果幾何是空的這點就會包含 NaN 作為其 x 和 y 值。
+*點*<br/>
+沿幾何圖形指定距離的位置。 如果幾何體為空,則此點包含 NaN 作為其 x 和 y 值。
 
-*unitTangentVector*<br/>
-當這個方法傳回時，會包含正切向量，指定沿著幾何距離的指標。 如果幾何是空的則這個向量會包含 NaN 作為其 x 和 y 值。 您必須為此參數來配置儲存體。
+*單位唐特向量*<br/>
+當此方法返回時,包含指向沿幾何體指定距離的切線向量的指標。 如果幾何體為空,則此向量包含 NaN 作為其 x 和 y 值。 您必須為此參數分配存儲。
 
-*flatteningTolerance*<br/>
-距離幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="destroy"></a>  CD2DGeometry::Destroy
+## <a name="cd2dgeometrydestroy"></a><a name="destroy"></a>CD2D 幾何::D
 
-終結 CD2DGeometry 物件。
+銷毀 CD2D 幾何物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DGeometry::Detach
+## <a name="cd2dgeometrydetach"></a><a name="detach"></a>CD2D 幾何::D
 
-中斷連結物件中的資源介面
+從物件分離資源介面
 
 ```
 ID2D1Geometry* Detach();
@@ -322,11 +322,11 @@ ID2D1Geometry* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-中斷連結的資源介面指標。
+指向分離的資源介面的指標。
 
-##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint
+## <a name="cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2D 幾何::填充包含點
 
-表示幾何的填滿的區域是否包含指定指定簡維的容許誤差的指定的點。
+指示幾何圖形填充的區域是否包含給定指定平整容差的指定點。
 
 ```
 BOOL FillContainsPoint(
@@ -338,25 +338,25 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*點*<br/>
 要測試的點。
 
-*worldTransform*<br/>
-要套用至測試內含項目之前的幾何轉換。
+*世界轉型*<br/>
+在測試包含之前應用於幾何體的轉換。
 
-*contains*<br/>
-當這個方法傳回時，包含幾何的填滿的區域包含點，則為 TRUE 的 bool 值否則為 FALSE。 您必須為此參數來配置儲存體。
+*包含*<br/>
+當此方法返回時,如果幾何圖形填充的區域包含點,則包含為 TRUE 的 bool 值;否則,FALSE。 您必須為此參數分配存儲。
 
-*flatteningTolerance*<br/>
-數值的精確度，但它的精確的幾何路徑和路徑交集的計算。 在仍視為遺失小於一個容錯的填色的點。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+計算精確幾何路徑和路徑交集的數位精度。 內仍考慮缺少小於容差的填充點。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="get"></a>  CD2DGeometry::Get
+## <a name="cd2dgeometryget"></a><a name="get"></a>CD2D 幾何:取得
 
-傳回 ID2D1Geometry 介面
+傳回 ID2D1 幾何介面
 
 ```
 ID2D1Geometry* Get();
@@ -364,9 +364,9 @@ ID2D1Geometry* Get();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1Geometry 介面的指標。
+如果物件尚未初始化,則指向 ID2D1 幾何介面或 NULL 的指標。
 
-##  <a name="getbounds"></a>  CD2DGeometry::GetBounds
+## <a name="cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2D 幾何:取得繫結
 
 ```
 BOOL GetBounds(
@@ -376,14 +376,14 @@ CD2DRectF& bounds) const;
 
 ### <a name="parameters"></a>參數
 
-*worldTransform*<br/>
-*bounds*
+*世界轉型*<br/>
+*邊界*
 
 ### <a name="return-value"></a>傳回值
 
-##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds
+## <a name="cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2D 幾何::獲取加束
 
-在擴展所指定的筆劃的寬度和樣式及所指定的矩陣轉換之後，請取得幾何的界限。
+在幾何體被指定的描邊寬度和樣式加寬並由指定的矩陣轉換后獲取幾何體的邊界。
 
 ```
 BOOL GetWidenedBounds(
@@ -396,28 +396,28 @@ BOOL GetWidenedBounds(
 
 ### <a name="parameters"></a>參數
 
-*strokeWidth*<br/>
-用來擴展所繪製其外框的幾何數量。
+*筆劃寬度*<br/>
+通過撫摸幾何輪廓來擴大幾何體的數量。
 
-*strokeStyle*<br/>
-可擴展幾何筆劃的樣式。
+*筆劃樣式*<br/>
+寬大幾何形狀的描邊樣式。
 
-*worldTransform*<br/>
-要套用至幾何的幾何轉換之後，而且已將描邊的幾何轉換。
+*世界轉型*<br/>
+轉換幾何體后和幾何圖形描邊後應用於幾何圖形的變換。
 
-*bounds*<br/>
-當這個方法傳回時，包含加寬的幾何的範圍。 您必須為此參數來配置儲存體。
+*邊界*<br/>
+當此方法返回時,包含加寬幾何體的邊界。 您必須為此參數分配存儲。
 
-*flatteningTolerance*<br/>
-距離的幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="isvalid"></a>  CD2DGeometry::IsValid
+## <a name="cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2D 幾何:有效
 
-檢查資源的有效性
+檢查資源有效性
 
 ```
 virtual BOOL IsValid() const;
@@ -425,19 +425,19 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資源無效，則為 TRUE否則為 FALSE。
+如果資源有效,則為 TRUE;否則 FALSE。
 
-##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry
+## <a name="cd2dgeometrym_pgeometry"></a><a name="m_pgeometry"></a>CD2D 幾何::m_pGeometry
 
-ID2D1Geometry 指標。
+指向 ID2D1 幾何體的指標。
 
 ```
 ID2D1Geometry* m_pGeometry;
 ```
 
-##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry *
+## <a name="cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2D幾何::操作員 ID2D1 幾何*
 
-傳回 ID2D1Geometry 介面
+傳回 ID2D1 幾何介面
 
 ```
 operator ID2D1Geometry*();
@@ -445,11 +445,11 @@ operator ID2D1Geometry*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1Geometry 介面的指標。
+如果物件尚未初始化,則指向 ID2D1 幾何介面或 NULL 的指標。
 
-##  <a name="outline"></a>  CD2DGeometry::Outline
+## <a name="cd2dgeometryoutline"></a><a name="outline"></a>CD2D 幾何:大綱
 
-計算外框的幾何，並將結果寫入 ID2D1SimplifiedGeometrySink。
+計算幾何體的輪廓並將結果寫入 ID2D1 簡化幾何結構。
 
 ```
 BOOL Outline(
@@ -460,22 +460,22 @@ BOOL Outline(
 
 ### <a name="parameters"></a>參數
 
-*worldTransform*<br/>
-要套用至幾何外框的轉換。
+*世界轉型*<br/>
+要應用於幾何輪廓的變換。
 
-*geometrySink*<br/>
-要附加的幾何轉換的外框 ID2D1SimplifiedGeometrySink。
+*幾何結構*<br/>
+附加幾何體變換輪廓的 ID2D1 簡化幾何圖形。
 
-*flatteningTolerance*<br/>
-距離幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="simplify"></a>  CD2DGeometry::Simplify
+## <a name="cd2dgeometrysimplify"></a><a name="simplify"></a>CD2D 幾何:簡化
 
-建立只包含線條和 （選擇性） 三次方貝茲曲線，並將結果寫入至 ID2D1SimplifiedGeometrySink 之幾何的簡化的版本。
+創建僅包含線條和(可選)立方貝塞爾曲線的幾何圖形的簡化版本,並將結果寫入 ID2D1 簡化幾何結構。
 
 ```
 BOOL Simplify(
@@ -487,25 +487,25 @@ BOOL Simplify(
 
 ### <a name="parameters"></a>參數
 
-*simplificationOption*<br/>
-值，指定簡化的幾何是否應該包含曲線。
+*簡化選項*<br/>
+指定簡化幾何圖形是否應包含曲線的值。
 
-*worldTransform*<br/>
-要套用至簡化的幾何轉換。
+*世界轉型*<br/>
+要應用於簡化幾何體的變換。
 
-*geometrySink*<br/>
-要附加的簡化的幾何 ID2D1SimplifiedGeometrySink。
+*幾何結構*<br/>
+附加簡化幾何圖形的 ID2D1 簡化幾何圖形。
 
-*flatteningTolerance*<br/>
-距離幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint
+## <a name="cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2D 幾何::筆劃包含點
 
-判斷幾何筆劃是否包含指定的點，提供指定的筆劃粗細、 樣式和轉換。
+確定幾何體的描邊是否包含指定描邊厚度、樣式和變換的指定點。
 
 ```
 BOOL StrokeContainsPoint(
@@ -519,31 +519,31 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*點*<br/>
 用來測試內含項目的點。
 
-*strokeWidth*<br/>
-若要套用的筆劃粗細。
+*筆劃寬度*<br/>
+要應用的描邊的厚度。
 
-*strokeStyle*<br/>
-要套用的樣式。
+*筆劃樣式*<br/>
+要應用的筆畫樣式。
 
-*worldTransform*<br/>
-要套用至繪製幾何轉換。
+*世界轉型*<br/>
+要應用於描邊幾何的變換。
 
-*contains*<br/>
-當這個方法傳回時，會包含布林值設定為 TRUE，如果幾何筆劃包含指定的點;否則為 FALSE。 您必須為此參數來配置儲存體。
+*包含*<br/>
+當此方法返回時,如果幾何體的描邊包含指定的點,則包含設置為 TRUE 的布爾值;否則,FALSE。 您必須為此參數分配存儲。
 
-*flatteningTolerance*<br/>
-數值的精確度，但它的精確的幾何路徑和路徑交集的計算。 在仍視為遺失小於一個容錯的筆劃的點。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+計算精確幾何路徑和路徑交集的數位精度。 內仍考慮以小於容差的筆劃點。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="tessellate"></a>  CD2DGeometry::Tessellate
+## <a name="cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2D 幾何::底紋
 
-建立一份涵蓋幾何之後轉換使用指定的矩陣及壓平合併使用指定的容許誤差的順時針彎曲三角形。
+建立一組順時針彎曲的三角形，這組三角形在使用指定的矩陣轉換並且使用指定的容錯扁平化之後，將涵蓋幾何。
 
 ```
 BOOL Tessellate(
@@ -554,22 +554,22 @@ BOOL Tessellate(
 
 ### <a name="parameters"></a>參數
 
-*worldTransform*<br/>
-要套用至這個幾何或 NULL 的轉換。
+*世界轉型*<br/>
+要應用於此幾何體或 NULL 的變換。
 
-*tessellationSink*<br/>
-要鑲嵌附加 ID2D1TessellationSink。
+*鑲嵌*<br/>
+附加鑲嵌的 ID2D1Tesssink。
 
-*flatteningTolerance*<br/>
-距離幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="widen"></a>  CD2DGeometry::Widen
+## <a name="cd2dgeometrywiden"></a><a name="widen"></a>CD2D 幾何:寬寬
 
-將幾何擴展所指定的筆劃並將結果寫入 ID2D1SimplifiedGeometrySink 之後, 所指定的矩陣轉換，並簡維使用指定的容許誤差。
+通過指定的描邊加寬幾何體,並將結果寫入 ID2D1SimplifiedGeometry Sink 後,該結果被指定的矩陣轉換並使用指定的容差進行拼合。
 
 ```
 BOOL Widen(
@@ -582,24 +582,24 @@ BOOL Widen(
 
 ### <a name="parameters"></a>參數
 
-*strokeWidth*<br/>
-用來擴大幾何數量。
+*筆劃寬度*<br/>
+加寬幾何體的數量。
 
-*strokeStyle*<br/>
-要套用至幾何，則為 NULL 的筆劃的樣式。
+*筆劃樣式*<br/>
+要應用於幾何體或 NULL 的描邊樣式。
 
-*worldTransform*<br/>
-要套用至幾何後擴展它的轉換。
+*世界轉型*<br/>
+在加寬幾何體后應用於幾何體的變換。
 
-*geometrySink*<br/>
-要附加的加寬的幾何 ID2D1SimplifiedGeometrySink。
+*幾何結構*<br/>
+附加加寬幾何圖形的 ID2D1 簡化幾何圖形。
 
-*flatteningTolerance*<br/>
-距離幾何多邊形近似法中的點之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。
+*扁平公差*<br/>
+在幾何多邊形近似法中，點之間的距離上限。 值越小，產生的結果越精確，但執行過程也會比較慢。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

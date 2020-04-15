@@ -2,40 +2,40 @@
 title: 4. 環境變數
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e93c59654c17ed6dbfb7483ac2dce716ce24b52a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417051"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370259"
 ---
 # <a name="4-environment-variables"></a>4. 環境變數
 
-本章說明 OpenMP C 和C++ API 環境變數（或類似的平臺特定機制），以控制平行程式碼的執行。  環境變數的名稱必須是大寫。 指派給它們的值不區分大小寫，而且可能有開頭和尾端的空白字元。  在程式啟動後對值所做的修改會被忽略。
+本章介紹 OpenMP C 和C++控制並行代碼執行的 API 環境變數(或類似特定於平臺的機制)。  環境變數的名稱必須為大寫。 分配給它們的值不區分大小寫,並且可能具有前導空格和尾隨空格。  程序啟動後對值的修改將被忽略。
 
-環境變數如下所示：
+環境變數如下所示:
 
-- [OMP_SCHEDULE](#41-omp_schedule)設定執行時間排程類型和區塊大小。
-- [OMP_NUM_THREADS](#42-omp_num_threads)設定要在執行期間使用的執行緒數目。
-- [OMP_DYNAMIC](#43-omp_dynamic)啟用或停用執行緒數目的動態調整。
-- [OMP_NESTED](#44-omp_nested)啟用或停用嵌套的平行處理原則。
+- [OMP_SCHEDULE](#41-omp_schedule)設置運行時計劃類型和區塊大小。
+- [OMP_NUM_THREADS](#42-omp_num_threads)設置執行期間要使用的線程數。
+- [OMP_DYNAMIC](#43-omp_dynamic)啟用或禁用線程數的動態調整。
+- [OMP_NESTED](#44-omp_nested)啟用或禁用嵌套並行性。
 
-本章節中的範例只會示範如何在 Unix C shell （csh）環境中設定這些變數。 在 Korn shell 和 DOS 環境中，動作很類似：
+本章中的示例僅演示如何在 Unix C 外殼 (csh) 環境中設置這些變數。 在 Korn 外殼和 DOS 環境中,操作類似:
 
 csh:  
 `setenv OMP_SCHEDULE "dynamic"`
 
-ksh  
+ksh:  
 `export OMP_SCHEDULE="dynamic"`
 
-造成  
+Dos:  
 `set OMP_SCHEDULE="dynamic"`
 
-## <a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
+## <a name="41-omp_schedule"></a><a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
 
-`OMP_SCHEDULE` 僅適用于具有排程類型 `runtime`的 `for` 和 `parallel for` 指示詞。 所有這類迴圈的排程類型和區塊大小都可以在執行時間設定。 將此環境變數設定為任何可辨識的排程類型，以及選擇性的*chunk_size*。
+`OMP_SCHEDULE`僅適用於具有`for`計畫`parallel for`類型的`runtime`和指令。 可在運行時設置所有此類循環的計劃類型和區塊大小。 將此環境變數設置為任何已識別的計畫類型和可選*chunk_size。*
 
-對於具有 `runtime`以外之排程類型的 `for` 和 `parallel for` 指示詞，`OMP_SCHEDULE` 會被忽略。 此環境變數的預設值為「執行定義」。 如果設定了選擇性的*chunk_size* ，此值必須是正數。 如果未設定*chunk_size* ，則會假設為1的值，除非 `static`排程。 若為 `static` 排程，預設的區塊大小會設定為迴圈反覆運算空間，除以套用至迴圈的執行緒數目。
+將`for`忽略`parallel for`具有計畫類型`runtime`而不是`OMP_SCHEDULE`的和指令。 此環境變數的預設值是實現定義。 如果設置了可選*chunk_size,* 則該值必須為正。 如果未設置*chunk_size,* 則假定值為 1,`static`但計劃為 時除外。 對於`static`計劃,預設區塊大小設置為迴圈反覆運算空間除以應用於迴圈的線程數。
 
 範例：
 
@@ -44,22 +44,22 @@ setenv OMP_SCHEDULE "guided,4"
 setenv OMP_SCHEDULE "dynamic"
 ```
 
-### <a name="cross-references"></a>交互參考
+### <a name="cross-references"></a>交叉參考
 
-- [for](2-directives.md#241-for-construct)指示詞
-- [parallel for](2-directives.md#251-parallel-for-construct)指示詞
+- [指令](2-directives.md#241-for-construct)
+- [指令的併行](2-directives.md#251-parallel-for-construct)
 
-## <a name="42-omp_num_threads"></a>4.2 OMP_NUM_THREADS
+## <a name="42-omp_num_threads"></a><a name="42-omp_num_threads"></a>4.2 OMP_NUM_THREADS
 
-`OMP_NUM_THREADS` 環境變數會設定要在執行期間使用的預設執行緒數目。 如果藉由呼叫 `omp_set_num_threads` 程式庫常式明確變更該數位，則會忽略 `OMP_NUM_THREADS`。 如果 `parallel` 指示詞上有明確的 `num_threads` 子句，也會予以忽略。
+環境`OMP_NUM_THREADS`變數設置執行期間要使用的預設線程數。 `OMP_NUM_THREADS`如果透過呼叫庫例程顯式更改該號碼,`omp_set_num_threads`則忽略該編號。 如果指令上有顯式`num_threads`子句`parallel`, 也會忽略它。
 
-`OMP_NUM_THREADS` 環境變數的值必須是正整數。 其效果取決於是否已啟用執行緒數目的動態調整。 如需有關 `OMP_NUM_THREADS` 環境變數與執行緒動態調整之間互動的一組完整規則，請參閱[2.3 區段](2-directives.md#23-parallel-construct)。
+`OMP_NUM_THREADS`環境變數的值必須為正整數。 其效果取決於是否啟用了線程數的動態調整。 有關`OMP_NUM_THREADS`環境變數和線程動態調整之間互動的一套全面規則,請參閱[第 2.3 節](2-directives.md#23-parallel-construct)。
 
-在下列情況中，要使用的執行緒數目是執行定義的：
+在以下情況下,要使用的線程數是實現定義的:
 
-- 未指定 `OMP_NUM_THREADS` 環境變數，
-- 指定的值不是正整數，或
-- 值大於系統可支援的執行緒數目上限。
+- 未`OMP_NUM_THREADS`指定環境變數,
+- 指定的值不是正整數或
+- 該值大於系統可以支援的最大線程數。
 
 範例：
 
@@ -67,17 +67,17 @@ setenv OMP_SCHEDULE "dynamic"
 setenv OMP_NUM_THREADS 16
 ```
 
-### <a name="cross-references"></a>交互參考
+### <a name="cross-references"></a>交叉參考
 
-- [num_threads](2-directives.md#23-parallel-construct)子句
-- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)函式
-- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)函式
+- [num_threads](2-directives.md#23-parallel-construct)條款
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)功能
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)功能
 
-## <a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
+## <a name="43-omp_dynamic"></a><a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
 
-`OMP_DYNAMIC` 環境變數會啟用或停用動態調整平列區域執行可用的執行緒數目。 藉由呼叫 `omp_set_dynamic` 程式庫常式明確地啟用或停用動態調整時，會忽略 `OMP_DYNAMIC`。 其值必須 `TRUE` 或 `FALSE`。
+環境`OMP_DYNAMIC`變數啟用或禁用可用於執行並列區域的線程數的動態調整。 `OMP_DYNAMIC`當透過呼叫庫例程顯式啟用或禁用動態調整時,`omp_set_dynamic`將忽略。 其值必須為`TRUE``FALSE`或 。
 
-如果 `OMP_DYNAMIC` 設定為 `TRUE`，則執行時間環境可能會調整用於執行平列區域的執行緒數目，以充分利用系統資源。  如果 `OMP_DYNAMIC` 設定為 `FALSE`，則會停用動態調整。 預設條件為「執行定義」。
+如果`OMP_DYNAMIC`設置`TRUE`為 ,則用於執行並行區域的線程數可能由運行時環境調整,以最佳使用系統資源。  如果`OMP_DYNAMIC`設置為`FALSE`,則禁用動態調整。 默認條件為實現定義。
 
 範例：
 
@@ -85,14 +85,14 @@ setenv OMP_NUM_THREADS 16
 setenv OMP_DYNAMIC TRUE
 ```
 
-### <a name="cross-references"></a>交互參考
+### <a name="cross-references"></a>交叉參考
 
-- [平列區域](2-directives.md#23-parallel-construct)
-- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)函式
+- [平行區域](2-directives.md#23-parallel-construct)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)功能
 
-## <a name="44-omp_nested"></a>4.4 OMP_NESTED
+## <a name="44-omp_nested"></a><a name="44-omp_nested"></a>4.4 OMP_NESTED
 
-除非藉由呼叫 `omp_set_nested` 程式庫常式來啟用或停用嵌套平行處理原則，否則 `OMP_NESTED` 環境變數會啟用或停用嵌套的平行處理原則。 如果 `OMP_NESTED` 設定為 `TRUE`，則會啟用嵌套的平行處理原則。 如果 `OMP_NESTED` 設定為 `FALSE`，則會停用嵌套的平行處理原則。 預設值是 `FALSE`。
+除非`OMP_NESTED`通過調`omp_set_nested`用 庫例程啟用或禁用嵌套並行性,否則環境變數將啟用或禁用嵌套並行性。 如果`OMP_NESTED`設置`TRUE`為 ,則啟用嵌套並行性。 如果`OMP_NESTED`設置`FALSE`為 ,則嵌套並行性將禁用。 預設值是 `FALSE`。
 
 範例：
 
@@ -100,6 +100,6 @@ setenv OMP_DYNAMIC TRUE
 setenv OMP_NESTED TRUE
 ```
 
-### <a name="cross-reference"></a>交互參考
+### <a name="cross-reference"></a>交叉參考
 
-- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)函式
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)功能

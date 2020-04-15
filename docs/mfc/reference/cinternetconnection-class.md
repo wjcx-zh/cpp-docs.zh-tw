@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6649986f279e010a833b31157922cb4fd1ea8613
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345691"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372417"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection 類別
 
@@ -37,31 +37,31 @@ class CInternetConnection : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CInternetConnection::CInternetConnection](#cinternetconnection)|建構 `CInternetConnection` 物件。|
+|[C 網路連線:C 網連線](#cinternetconnection)|建構 `CInternetConnection` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CInternetConnection::GetContext](#getcontext)|取得這個連線物件的內容識別碼。|
-|[CInternetConnection::GetServerName](#getservername)|取得與連接相關聯的伺服器名稱。|
-|[CInternetConnection::GetSession](#getsession)|取得指標[CInternetSession](../../mfc/reference/cinternetsession-class.md)與連接相關聯的物件。|
+|[C 網路連線:抓取內容](#getcontext)|獲取此連接物件的上下文 ID。|
+|[C 網路連線::取得伺服器名稱](#getservername)|獲取與連接關聯的伺服器的名稱。|
+|[C 網路連線:抓取工作階段](#getsession)|獲取指向與連接關聯的[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的指標。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CInternetConnection::operator HINTERNET](#operator_hinternet)|網際網路工作階段控制代碼。|
+|[C網連接::運營商HINTERNET](#operator_hinternet)|互聯網會話的句柄。|
 
 ## <a name="remarks"></a>備註
 
-它是 MFC 類別的基底類別[CFtpConnection](../../mfc/reference/cftpconnection-class.md)， [CHttpConnection](../../mfc/reference/chttpconnection-class.md)，並[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)。 每個類別提供額外的功能與個別的 FTP、 HTTP 或 gopher 伺服器通訊。
+它是 MFC 類[CFtpConnection、CHTTPConnection](../../mfc/reference/cftpconnection-class.md)和[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)的基類。 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 每個類都提供了與相應的 FTP、HTTP 或 gopher 伺服器通訊的其他功能。
 
-若要直接與網際網路伺服器通訊，您必須擁有[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件和`CInternetConnection`物件。
+要直接與 Internet 伺服器通訊,您必須具有[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件和`CInternetConnection`物件。
 
-若要深入了解如何 WinInet 類別都能，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
+要瞭解有關 WinInet 類別的資訊,請參閱[使用 WinInet 進行 Internet 編程的文章](../../mfc/win32-internet-extensions-wininet.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -69,11 +69,11 @@ class CInternetConnection : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxinet.h
+**標題:** afxinet.h
 
-##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection
+## <a name="cinternetconnectioncinternetconnection"></a><a name="cinternetconnection"></a>C 網路連線:C 網連線
 
-此成員函式時，會呼叫`CInternetConnection`建立物件。
+創建`CInternetConnection`物件時將調用此成員函數。
 
 ```
 CInternetConnection(
@@ -85,33 +85,33 @@ CInternetConnection(
 
 ### <a name="parameters"></a>參數
 
-*pSession*<br/>
-指標[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。
+*p 工作階段*<br/>
+指向[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的指標。
 
 *pstrServer*<br/>
-包含伺服器名稱的字串指標。
+指向包含伺服器名稱的字串的指標。
 
-*nPort*<br/>
-識別此連線的網際網路連接埠的數字。
+*n波特*<br/>
+標識此連接的 Internet 連接埠的數位。
 
 *dwContext*<br/>
-內容識別碼`CInternetConnection`物件。 請參閱**備註**如需詳細資訊*dwContext*。
+`CInternetConnection`物件的上下文標識碼。 關於*dwContext*的詳細資訊,請參閱**備註**。
 
 ### <a name="remarks"></a>備註
 
-您永遠不會呼叫`CInternetConnection`自行; 相反地，呼叫[CInternetSession](../../mfc/reference/cinternetsession-class.md)您想要建立的連線類型的成員函式：
+你從來不叫`CInternetConnection`自己;相反,請呼叫[CInternetSession](../../mfc/reference/cinternetsession-class.md)成員函數,表示要建立的連線類型:
 
-- [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
+- [C 網際網路工作階段::取得Ftp連接](../../mfc/reference/cinternetsession-class.md#getftpconnection)
 
-- [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
+- [C 網際網路工作階段::取得HTTP連接](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
 
-- [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
+- [C 網路工作階段::取得 Gopher 連接](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-預設值*dwContext* MFC，以便傳送`CInternetConnection`-衍生的物件，從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立**InternetConnection**-在衍生的物件。 預設值設為 1。不過，您可以明確指派的特定內容識別項[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)建構函式的連接。 物件，而且它沒有任何工作將會與該內容識別碼相關聯 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+mFC 將*dwContext*的預設值`CInternetConnection`發送到創建**InternetConnection**派生物件的[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的派生物件。 預設值設定為 1;將預設值設定為 1但是,您可以在連接的[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)建構函數中顯式分配特定的上下文標識符。 物件及其執行的任何工作都將與該上下文 ID 相關聯。 上下文標識符返回到[CInternetSession::onStatusBackononononononback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)提供標識它的物件的狀態。 有關上下文標識符的詳細資訊[,請參閱"Internet 第一步:WinInet"](../../mfc/wininet-basics.md)一文。
 
-##  <a name="getcontext"></a>  CInternetConnection::GetContext
+## <a name="cinternetconnectiongetcontext"></a><a name="getcontext"></a>C 網路連線:抓取內容
 
-呼叫此成員函式，以取得此工作階段的內容識別碼。
+調用此成員函數獲取此會話的上下文 ID。
 
 ```
 DWORD_PTR GetContext() const;
@@ -119,17 +119,17 @@ DWORD_PTR GetContext() const;
 
 ### <a name="return-value"></a>傳回值
 
-使用應用程式指派的內容識別碼。
+應用程式分配的上下文 ID。
 
 ### <a name="remarks"></a>備註
 
-中原本指定的內容 ID [CInternetSession](../../mfc/reference/cinternetsession-class.md)並將傳播到`CInternetConnection`-並[CInternetFile](../../mfc/reference/cinternetfile-class.md)-除非開啟函式呼叫中所指定以不同的方式衍生的類別，連接。 內容識別碼是否與指定任何的物件作業相關聯，以及識別傳回作業的狀態資訊[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。
+內容代碼最初在[CInternetSession](../../mfc/reference/cinternetsession-class.md)中指定`CInternetConnection`, 並傳播到 - 和[CInternetFile](../../mfc/reference/cinternetfile-class.md)派生類,除非在調用打開連接的函數時以不同方式指定。 上下文 ID 與給定物件的任何操作相關聯,並標識 CInternetSession 返回的操作的狀態資訊[::onStatusCallback。](../../mfc/reference/cinternetsession-class.md#onstatuscallback)
 
-如需有關如何`GetContext`適用於其他 WinInet 類別，以提供使用者的狀態資訊，請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+有關如何使用`GetContext`其他 WinInet 類提供使用者狀態資訊的詳細資訊,請參閱文章[「Internet 第一步:WinInet」](../../mfc/wininet-basics.md)瞭解有關上下文標識符的詳細資訊。
 
-##  <a name="getservername"></a>  CInternetConnection::GetServerName
+## <a name="cinternetconnectiongetservername"></a><a name="getservername"></a>C 網路連線::取得伺服器名稱
 
-呼叫此成員函式，以取得與這個網際網路連接相關聯的伺服器名稱。
+呼叫此成員函數獲取與此 Internet 連接關聯的伺服器的名稱。
 
 ```
 CString GetServerName() const;
@@ -137,11 +137,11 @@ CString GetServerName() const;
 
 ### <a name="return-value"></a>傳回值
 
-此連接物件正在使用的伺服器名稱。
+此連接物件正在使用的伺服器的名稱。
 
-##  <a name="getsession"></a>  CInternetConnection::GetSession
+## <a name="cinternetconnectiongetsession"></a><a name="getsession"></a>C 網路連線:抓取工作階段
 
-呼叫以取得變數的指標，此成員函式`CInternetSession`與此連線相關聯的物件。
+呼叫此成員函數以獲取指向與此連接關聯的`CInternetSession`物件的指標。
 
 ```
 CInternetSession* GetSession() const;
@@ -149,11 +149,11 @@ CInternetSession* GetSession() const;
 
 ### <a name="return-value"></a>傳回值
 
-指標[CInternetSession](../../mfc/reference/cinternetsession-class.md)這個網際網路連線物件相關聯的物件。
+指向與此 Internet 連接物件關聯的[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件的指標。
 
-##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET
+## <a name="cinternetconnectionoperator-hinternet"></a><a name="operator_hinternet"></a>C網連接::運營商HINTERNET
 
-您可以使用這個運算子來取得目前的網際網路工作階段的 API 層級控制代碼。
+使用此運算元獲取當前 Internet 會話的 API 級句柄。
 
 ```
 operator HINTERNET() const;

@@ -1,9 +1,11 @@
 ---
 title: _splitpath_s、_wsplitpath_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsplitpath_s
 - _splitpath_s
+- _o__splitpath_s
+- _o__wsplitpath_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 364544a9423668494747405e801d59b73de4e6c6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355624"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s、_wsplitpath_s
 
@@ -90,32 +93,32 @@ errno_t _wsplitpath_s(
 
 ### <a name="parameters"></a>參數
 
-*path*<br/>
+*路徑*<br/>
 完整路徑。
 
-*硬碟磁碟機*<br/>
-磁碟機號，後面接著冒號（ **：** ）。 如果您不需要磁碟機號，您可以為此參數傳遞**Null** 。
+*驅動*<br/>
+驅動器號,後跟冒號 (**。** 如果不需要驅動器號,可以傳遞此參數的**NULL。**
 
-*driveNumberOfElements*<br/>
-*磁片磁碟機*緩衝區的大小，以單一位元組或寬字元為單位。 如果*drive*是**Null**，這個值必須是0。
+*磁碟數量元素*<br/>
+*驅動器*緩衝區的大小(以單位元組或寬字元表示)。 如果*驅動器*為**NULL,** 則此值必須為 0。
 
 *dir*<br/>
-目錄路徑，包括結尾斜線。 可以使用正斜線（ **/** ）、反斜線（ **\\** ）或兩者。 如果您不需要目錄路徑，您可以為此參數傳遞**Null** 。
+目錄路徑，包括結尾斜線。 可使用向前斜**/** 杠 ()、斜**\\**杠 () 或兩者。 如果不需要目錄路徑,可以傳遞此參數的**NULL。**
 
-*dirNumberOfElements*<br/>
-*目錄*緩衝區的大小，以單一位元組或寬字元為單位。 如果*dir*是**Null**，這個值必須是0。
+*元素的底數*<br/>
+以單位元組或寬字元表示*的 dir*緩衝區的大小。 如果*dir*為**NULL,** 則此值必須為 0。
 
 *fname*<br/>
-基底檔名 (不含副檔名)。 如果您不需要檔案名，可以針對這個參數傳遞**Null** 。
+基底檔名 (不含副檔名)。 如果不需要檔名,可以傳遞此參數的**NULL。**
 
-*nameNumberOfElements*<br/>
-*Fname*緩衝區的大小，以單一位元組或寬字元為單位。 如果*fname*為**Null**，則這個值必須是0。
+*名稱 元素數量*<br/>
+以單位元組或寬字元表示*fname*緩衝區的大小。 如果*fname*為**NULL,** 則此值必須為 0。
 
-*分機*<br/>
-副檔名，包括前置句點（ **.** ）。如果您不需要副檔名，則可以傳遞此參數的**Null** 。
+*內線*<br/>
+檔案名副檔名,包括前導期 **(. 。** 如果不需要檔案名副檔名,可以傳遞此參數的**NULL。**
 
-*extNumberOfElements*<br/>
-以單一位元組或寬字元為單位的*ext*緩衝區大小。 如果*ext*是**Null**，這個值必須是0。
+*元素的分量*<br/>
+以單位元組或寬字元表示*的 ext*緩衝區的大小。 如果*分機*為**NULL,** 則此值必須為 0。
 
 ## <a name="return-value"></a>傳回值
 
@@ -125,23 +128,25 @@ errno_t _wsplitpath_s(
 
 |條件|傳回值|
 |---------------|------------------|
-|*path*為**Null**|**EINVAL**|
-|*磁片磁碟機*為**Null**， *driveNumberOfElements*為非零|**EINVAL**|
-|*磁片磁碟機*為非**Null**， *driveNumberOfElements*為零|**EINVAL**|
-|*dir*為**Null**， *dirNumberOfElements*為非零|**EINVAL**|
-|*dir*為非**Null**， *dirNumberOfElements*為零|**EINVAL**|
-|*fname*為**Null**， *nameNumberOfElements*為非零|**EINVAL**|
-|*fname*為非**Null**， *nameNumberOfElements*為零|**EINVAL**|
-|*ext*為**Null**， *extNumberOfElements*為非零|**EINVAL**|
-|*ext*為非**Null**， *extNumberOfElements*為零|**EINVAL**|
+|*路徑*為**NULL**|**埃因瓦爾**|
+|*驅動器*為**NULL,***磁碟機數元素*為非零|**埃因瓦爾**|
+|*驅動器*是非**NULL,***磁碟機數元素*數為零|**埃因瓦爾**|
+|*dir*為**NULL,***迪線元素為*非零|**埃因瓦爾**|
+|*dir*是非**NULL,***迪值元素數*為零|**埃因瓦爾**|
+|*fname*為**NULL,***名稱為元素編號*為非零|**埃因瓦爾**|
+|*fname*是非**NULL,***名稱元素數*為零|**埃因瓦爾**|
+|*ext*為**NULL,***元素的分量*為非零|**埃因瓦爾**|
+|*ext*是非**NULL,***元素的分值為*零|**埃因瓦爾**|
 
-如果發生上述任何狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
+如果發生上述任何狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將**errno**設定為**EINVAL**並傳回**EINVAL**。
 
-如果有任何緩衝區太短而無法保存結果，這些函式會將所有緩衝區清除為空字串、將**errno**設定為**ERANGE**，並傳回**ERANGE**。
+如果任何緩衝區太短而無法儲存結果,這些函數將清除所有緩衝區為空字串,將**errno**設定為**ERANGE,** 並傳回**ERANGE**。
 
 ## <a name="remarks"></a>備註
 
-**_Splitpath_s**函式會將路徑分割成四個元件。 **_splitpath_s**會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當的，並辨識多位元組字元序列。 **_wsplitpath_s**是寬字元版本的 **_splitpath_s**; **_wsplitpath_s**的引數是寬字元字串。 否則，這些函式的行為相同。
+**_splitpath_s**函數將路徑分解為四個元件。 **_splitpath_s**根據需要自動處理多位元位元串參數,根據當前使用的多位元組碼頁識別多位元組位元序列。 **_wsplitpath_s**是 **_splitpath_s**的寬字元版本;要 **_wsplitpath_s**的參數是寬字元字串。 否則，這些函式的行為相同。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -149,22 +154,22 @@ errno_t _wsplitpath_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-完整路徑的每個元件都會儲存在個別的緩衝區中;資訊清單常數 **_MAX_DRIVE**、 **_MAX_DIR**、 **_MAX_FNAME**和 **_MAX_EXT** （定義于 stdlib.h> 中。H）指定每個檔案元件的允許大小上限。 大於對應資訊清單常數的檔案元件會造成堆積損毀。
+完整路徑的每個元件都存儲在單獨的緩衝區中;清單常量 **_MAX_DRIVE、_MAX_DIR、_MAX_FNAME**和 **_MAX_EXT(** 在 STDLIB 中定義)。 **_MAX_DRIVE** **_MAX_FNAME**H) 為每個檔案元件指定最大允許大小。 大於對應資訊清單常數的檔案元件會造成堆積損毀。
 
 下表列出資訊清單常數的值。
 
-|[屬性]|值|
+|名稱|值|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-如果完整路徑未包含元件（例如檔案名）， **_splitpath_s**會將空字串指派給對應的緩衝區。
+如果完整路徑不包含元件(例如檔名 **),_splitpath_s**將空字串分配給相應的緩衝區。
 
-在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用這些函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -173,13 +178,13 @@ errno_t _wsplitpath_s(
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
 請參閱 [_makepath_s、_wmakepath_s](makepath-s-wmakepath-s.md) 的範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [檔案處理](../../c-runtime-library/file-handling.md)<br/>
 [_splitpath、_wsplitpath](splitpath-wsplitpath.md)<br/>

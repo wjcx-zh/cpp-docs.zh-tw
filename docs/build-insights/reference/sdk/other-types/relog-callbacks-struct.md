@@ -1,6 +1,6 @@
 ---
-title: RELOG_CALLBACKS 結構
-description: C++ BUILD Insights SDK RELOG_CALLBACKS 結構參考。
+title: RELOG_CALLBACKS結構
+description: C++構建見解 SDK RELOG_CALLBACKS結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c5dbed196e6cafaa301b6e07cd0f5546a0f4d563
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 60e7db81a48731090a23b82332704a79a51e97df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328965"
 ---
-# <a name="relog_callbacks-structure"></a>RELOG_CALLBACKS 結構
+# <a name="relog_callbacks-structure"></a>RELOG_CALLBACKS結構
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-初始化[RELOG_DESCRIPTOR](relog-descriptor-struct.md)物件時，會使用 `RELOG_CALLBACKS` 結構。 它會指定在 Windows 事件追蹤（ETW）追蹤 relogging 期間所要呼叫的函式。
+在`RELOG_CALLBACKS`初始化[RELOG_DESCRIPTOR](relog-descriptor-struct.md)物件時,將使用該結構。 它指定在重新記錄 Windows (ETW) 追蹤的事件追蹤期間調用哪些函數。
 
 ## <a name="syntax"></a>語法
 
@@ -47,17 +47,17 @@ typedef struct RELOG_CALLBACKS_TAG
 
 |  |  |
 |--|--|
-| `OnStartActivity` | 呼叫以處理活動開始事件。 |
-| `OnStopActivity` | 呼叫以處理活動停止事件。 |
-| `OnSimpleEvent` | 呼叫以處理簡單事件。 |
-| `OnTraceInfo` | 呼叫 `OnBeginReloggingPass` 之後，在 relogging 階段開始時呼叫一次。 |
-| `OnBeginRelogging` | 開始 relogging 會話時呼叫，在 relogging 階段開始之前。 |
-| `OnEndRelogging` | 結束 relogging 會話時，在 relogging 階段結束後呼叫。 |
-| `OnBeginReloggingPass` | 在處理任何事件之前，于開始 relogging 階段時呼叫。 |
-| `OnEndReloggingPass` | 在處理所有事件之後，于結束 relogging 階段時呼叫。 |
+| `OnStartActivity` | 調用以處理活動開始事件。 |
+| `OnStopActivity` | 調用以處理活動停止事件。 |
+| `OnSimpleEvent` | 調用 以處理簡單事件。 |
+| `OnTraceInfo` | 調用一次在重新記錄通過開始,之後`OnBeginReloggingPass`已被調用。 |
+| `OnBeginRelogging` | 在開始重新記錄作業階段時調用,在重新記錄通道開始之前。 |
+| `OnEndRelogging` | 在結束重新記錄會話時調用,重新記錄通過結束後。 |
+| `OnBeginReloggingPass` | 在處理任何事件之前,在開始重新記錄傳遞時調用。 |
+| `OnEndReloggingPass` | 在處理所有事件後結束重新記錄傳遞時調用。 |
 
 ## <a name="remarks"></a>備註
 
-`RELOG_CALLBACKS` 結構的所有成員都必須指向有效的函式。 如需有關已接受之函式簽章的詳細資訊，請參閱[OnRelogEventFunc](on-relog-event-func-typedef.md)、 [OnTraceInfoFunc](on-trace-info-func-typedef.md)和[OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md)。
+`RELOG_CALLBACKS`結構的所有成員必須指向有效的函數。 有關接受的函數簽名的詳細資訊,請參閱[OnRelogEventFunc、OnTraceInfoFunc](on-relog-event-func-typedef.md)和[OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md)。 [OnTraceInfoFunc](on-trace-info-func-typedef.md)
 
 ::: moniker-end

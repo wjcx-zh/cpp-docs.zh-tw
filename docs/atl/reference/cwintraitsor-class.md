@@ -1,5 +1,5 @@
 ---
-title: CWinTraitsOR 類別
+title: CwinTraitsor 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CWinTraitsOR
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-ms.openlocfilehash: ec628fcde40d3cc4601d6b6ddf49fa5599ac5a86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 825f79190c6f68cd1372154e4e02f430f545aa48
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330277"
 ---
-# <a name="cwintraitsor-class"></a>CWinTraitsOR 類別
+# <a name="cwintraitsor-class"></a>CwinTraitsor 類別
 
-這個類別提供的方法標準化建立視窗物件時所使用的樣式。
+此類提供了一種用於標準化創建視窗物件時使用的樣式的方法。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -36,10 +36,10 @@ class CWinTraitsOR
 #### <a name="parameters"></a>參數
 
 *t_dwStyle*<br/>
-預設的視窗樣式。
+默認視窗樣式。
 
 *t_dwExStyle*<br/>
-預設延伸的視窗樣式。
+默認擴展視窗樣式。
 
 ## <a name="members"></a>成員
 
@@ -47,24 +47,24 @@ class CWinTraitsOR
 
 |名稱|描述|
 |----------|-----------------|
-|[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|擷取的擴充的樣式`CWinTraitsOR`物件。|
-|[CWinTraitsOR::GetWndStyle](#getwndstyle)|擷取標準樣式`CWinTraitsOR`物件。|
+|[CWinTraitsOR:獲取WndEx樣式](#getwndexstyle)|檢索`CWinTraitsOR`物件的擴展樣式。|
+|[CWinTraitsOR:獲得溫德風格](#getwndstyle)|檢索`CWinTraitsOR`物件的標準樣式。|
 
 ## <a name="remarks"></a>備註
 
-這[視窗特性](../../atl/understanding-window-traits.md)類別提供簡單的方法標準化用於建立 ATL 視窗物件的樣式。 使用此類別的特製化，做為範本參數[CWindowImpl](../../atl/reference/cwindowimpl-class.md)或 ATL 的視窗類別，來指定要用於標準與擴充樣式的最小集合的另一個該視窗類別的執行個體。
+此[視窗特徵類](../../atl/understanding-window-traits.md)提供了一種用於標準化用於創建 ATL 視窗物件的樣式的簡單方法。 將此類的專門化用作[CWindowImpl](../../atl/reference/cwindowimpl-class.md)或其他 ATL 視窗類的範本參數,以指定要用於該視窗類實例的最小標準和擴展樣式集。
 
-如果您想要確定特定樣式設定視窗類別的所有執行個體同時允許其他樣式設定的呼叫中以個別執行個體為基礎，請使用此樣板的特製化[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)。
+如果要確保為視窗類的所有實例設置某些樣式,同時允許在調用[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)中按實例設置其他樣式,請使用此範本的專用化。
 
-如果您想要提供預設會在呼叫中不指定任何其他樣式時使用的視窗樣式`CWindowImpl::Create`，使用[CWinTraits](../../atl/reference/cwintraits-class.md)改。
+如果要提供默認視窗樣式,僅當調用`CWindowImpl::Create`中 未指定其他樣式時才會使用,請改用[CWinTraits。](../../atl/reference/cwintraits-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標題:** atlwin.h
 
-##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle
+## <a name="cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a>CWinTraitsOR:獲得溫德風格
 
-呼叫此函式可擷取 （使用邏輯 OR 運算子） 的標準樣式的組合`CWinTraits`物件和所指定的預設樣式*t_dwStyle*。
+調用此函數以檢索`CWinTraits`物件的標準樣式和*t_dwStyle*指定的預設樣式的組合(使用邏輯 OR 運算符)。
 
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
@@ -73,15 +73,15 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-用於建立視窗的樣式。
+用於創建視窗的樣式。
 
 ### <a name="return-value"></a>傳回值
 
-傳入的樣式的組合*cheaderctrl:: Create* ，預設值是由`t_dwStyle`，使用邏輯 OR 運算子。
+使用邏輯 OR 運算子在*dwStyle*中傳遞`t_dwStyle`的樣式 和 指定的預設樣式的組合。
 
-##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle
+## <a name="cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraitsOR:獲取WndEx樣式
 
-呼叫此函式可擷取 （使用邏輯 OR 運算子） 的延伸樣式的組合`CWinTraits`物件和所指定的預設樣式`t_dwStyle`。
+呼叫此函數以檢索`CWinTraits`物件擴充樣式和`t_dwStyle`指定的 預設樣式的組合(使用邏輯 OR 運算子)。
 
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
@@ -90,13 +90,13 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-用來建立視窗的延伸的樣式。
+用於創建視窗的擴展樣式。
 
 ### <a name="return-value"></a>傳回值
 
-傳入的延伸樣式的組合*dwExStyle*所指定的預設和`t_dwExStyle`，使用邏輯 OR 運算子
+使用邏輯 OR 運算子在*dwExStyle*中`t_dwExStyle`傳遞的擴充 樣式和指定的預設樣式的組合
 
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../../atl/atl-class-overview.md)<br/>
-[了解視窗特性](../../atl/understanding-window-traits.md)
+[瞭解視窗特徵](../../atl/understanding-window-traits.md)

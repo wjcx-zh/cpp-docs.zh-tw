@@ -1,10 +1,13 @@
 ---
 title: log1p、log1pf、log1pl2
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log1p
 - log1pf
 - log1pl
+- _o_log1p
+- _o_log1pf
+- _o_log1pl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4e077f5b806dbe38ed4a4f4e8eef0259170cb7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341815"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -70,41 +74,43 @@ long double log1pl(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點引數。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回（*x* + 1）的自然（base-*e*）記錄。
+如果成功,則返回 (*x* = 1) 的自然 (基 *-e*) 日誌。
 
 否則，可能會傳回下列其中一個值：
 
-|Input|結果|SEH 例外狀況|errno|
+|輸入|結果|SEH 例外狀況|errno|
 |-----------|------------|-------------------|-----------|
 |+inf|+inf|||
 |非正規數|與輸入相同|UNDERFLOW||
 |±0|與輸入相同|||
 |-1|-inf|DIVBYZERO|ERANGE|
-|< -1|NAN|INVALID|EDOM|
-|-inf|NAN|INVALID|EDOM|
-|±SNaN|與輸入相同|INVALID||
-|± QNaN，不定|與輸入相同|||
+|< -1|nan|無效|EDOM|
+|-inf|nan|無效|EDOM|
+|*SNaN|與輸入相同|無效||
+|*QNaN,無限期|與輸入相同|||
 
-如果*x* =-1， **errno**值會設定為 ERANGE。 如果*x* <-1， **errno**值會設定為**EDOM** 。
+如果*x* = -1,**則 errno**值設定為 ERANGE。 如果*x* < -1,**則 errno**值設置為**EDOM。**
 
 ## <a name="remarks"></a>備註
 
-當*x*接近0時， **log1p**函數可能`log(x + 1)`會比使用更精確。
+**log1p**函數可能比 當`log(x + 1)`*x*接近 0 時使用更準確。
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**log1p**的多載。 在 C 程式中， **log1p**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用**log1p**的重載,這些重載和返回**浮點**和**長****雙**類型。 在 C 程式中 **,log1p**始終採用並傳回**一個雙**。
 
-如果*x*是自然數位，此函數會傳回（*x* -1）階乘的對數。
+如果*x*是自然數位,則此函數返回 (*x* - 1) 因數的對數。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**log1p**、 **log1pf**、 **log1pl**|\<math.h>|\<cmath>|
+|**紀錄1p**,**紀錄1pf**,**紀錄1pl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

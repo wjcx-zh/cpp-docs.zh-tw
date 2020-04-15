@@ -1,5 +1,5 @@
 ---
-title: CStringRefElementTraits 類別
+title: CStringRefelementtraits 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CStringRefElementTraits
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4dd76b9592b255a1553be3ca7a249f58fb2672e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277405"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330574"
 ---
-# <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits 類別
+# <a name="cstringrefelementtraits-class"></a>CStringRefelementtraits 類別
 
-這個類別提供靜態的函式與儲存在集合類別物件的字串。 做為參考未處理的字串物件。
+此類提供與集合類物件中存儲的字串相關的靜態函數。 字串物件作為引用處理。
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +31,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-若要在集合中儲存的資料型別。
+要存儲在集合中的數據類型。
 
 ## <a name="members"></a>成員
 
@@ -39,29 +39,29 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 
 |名稱|描述|
 |----------|-----------------|
-|[CStringRefElementTraits::CompareElements](#compareelements)|呼叫此靜態函式來比較兩個字串項目相等。|
-|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|呼叫此靜態函式來比較兩個字串元素。|
-|[CStringRefElementTraits::Hash](#hash)|呼叫此靜態函式來計算雜湊值，指定的字串項目。|
+|[CStringRefElement::比較元素](#compareelements)|調用此靜態函數以比較兩個字串元素以獲得相等性。|
+|[CStringRefElement::比較元素排序](#compareelementsordered)|呼叫此靜態函數以比較兩個字串元素。|
+|[弦樂元素:哈希](#hash)|呼叫此靜態函數以計算給定字串元素的哈希值。|
 
 ## <a name="remarks"></a>備註
 
-這個類別提供靜態函式，來比較字串，以及如何建立雜湊值。 使用集合類別來儲存字串為基礎的資料時，則這些函式會很有用。 不同於[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)並[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)，`CStringRefElementTraits`導致`CString`不可傳遞為引數**const** `CString&`參考。
+此類提供用於比較字串和創建哈希值的靜態函數。 當使用集合類存儲基於字串的數據時,這些函數非常有用。 與[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)和[CStringElementTraitsI 不同](../../atl/reference/cstringelementtraitsi-class.md)`CStringRefElementTraits``CString`, 這些參數作為**const**`CString&`引用傳遞。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[元素庫](../../atl/reference/celementtraitsbase-class.md)
 
 `CStringRefElementTraits`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="compareelements"></a>  CStringRefElementTraits::CompareElements
+## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElement::比較元素
 
-呼叫此靜態函式來比較兩個字串項目相等。
+調用此靜態函數以比較兩個字串元素以獲得相等性。
 
 ```
 static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
@@ -69,19 +69,19 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>參數
 
-*element1*<br/>
-第一個字串項目。
+*元素1*<br/>
+第一個字串元素。
 
-*element2*<br/>
-第二個字串項目。
+*元素2*<br/>
+第二個字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-如果項目相等，false 否則，就會傳回 true。
+如果元素相等,則返回 true,否則為 false。
 
-##  <a name="compareelementsordered"></a>  CStringRefElementTraits::CompareElementsOrdered
+## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElement::比較元素排序
 
-呼叫此靜態函式來比較兩個字串元素。
+呼叫此靜態函數以比較兩個字串元素。
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -90,18 +90,18 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個字串項目。
+第一個字串元素。
 
 *str2*<br/>
-第二個字串項目。
+第二個字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-若字串相同的零，< 0 如果*str1*是小於*str2*，或 > 0 如果*str1*大於*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用來執行比較。
+如果字串相同,則為零,如果*str1*小於*str2,* 則< 0;如果*str1*大於*str2,* 則> 0。 [CStringT::比較](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用於執行比較。
 
-##  <a name="hash"></a>  CStringRefElementTraits::Hash
+## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>弦樂元素:哈希
 
-呼叫此靜態函式來計算雜湊值，指定的字串項目。
+呼叫此靜態函數以計算給定字串元素的哈希值。
 
 ```
 static ULONG Hash(INARGTYPE str) throw();
@@ -109,14 +109,14 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-字串項目中。
+*Str*<br/>
+字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-傳回使用字串的內容計算的雜湊值。
+傳回使用字串內容計算的哈希值。
 
 ## <a name="see-also"></a>另請參閱
 
-[CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)<br/>
+[元素基礎類](../../atl/reference/celementtraitsbase-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

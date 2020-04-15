@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420523"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352281"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 
-MFC 程式庫訊息對應架構的基類。
+微軟基礎類庫消息映射體系結構的基類。
 
 ## <a name="syntax"></a>語法
 
@@ -69,45 +69,45 @@ class CCmdTarget : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CCmdTarget：： CCmdTarget](#ccmdtarget)|建構 `CCmdTarget` 物件。|
+|[CmD目標::CMD目標](#ccmdtarget)|建構 `CCmdTarget` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CCmdTarget：： BeginWaitCursor](#beginwaitcursor)|將游標顯示為沙漏游標。|
-|[CCmdTarget：:D oOleVerb](#dooleverb)|造成執行 OLE 動詞指定的動作。|
-|[CCmdTarget：： EnableAutomation](#enableautomation)|允許 `CCmdTarget` 物件的 OLE automation。|
-|[CCmdTarget：： EnableConnections](#enableconnections)|啟用透過連接點引發事件的功能。|
-|[CCmdTarget：： EnableTypeLib](#enabletypelib)|啟用物件的類型程式庫。|
-|[CCmdTarget：： EndWaitCursor](#endwaitcursor)|回到上一個資料指標。|
-|[CCmdTarget：： EnumOleVerbs](#enumoleverbs)|列舉物件的 OLE 動詞。|
-|[CCmdTarget：： FromIDispatch](#fromidispatch)|傳回與 `IDispatch` 指標相關聯之 `CCmdTarget` 物件的指標。|
-|[CCmdTarget：： GetDispatchIID](#getdispatchiid)|取得主要分派介面識別碼。|
-|[CCmdTarget：： GetIDispatch](#getidispatch)|傳回與 `CCmdTarget` 物件相關聯之 `IDispatch` 物件的指標。|
-|[CCmdTarget：： GetTypeInfoCount](#gettypeinfocount)|抓取物件提供的類型資訊介面數目。|
-|[CCmdTarget：： GetTypeInfoOfGuid](#gettypeinfoofguid)|擷取對應到所指定 GUID 的型別描述。|
-|[CCmdTarget：： GetTypeLib](#gettypelib)|取得類型程式庫的指標。|
-|[CCmdTarget：： GetTypeLibCache](#gettypelibcache)|取得類型程式庫快取。|
-|[CCmdTarget：： IsInvokeAllowed](#isinvokeallowed)|啟用自動化方法調用。|
-|[CCmdTarget：： IsResultExpected](#isresultexpected)|如果 automation 函數應該傳回值，則傳回非零。|
-|[CCmdTarget：： OnCmdMsg](#oncmdmsg)|路由及分派命令訊息。|
-|[CCmdTarget：： OnFinalRelease](#onfinalrelease)|在最後一個 OLE 參考發行之後清除。|
-|[CCmdTarget：： RestoreWaitCursor](#restorewaitcursor)|還原沙漏游標。|
+|[CMD目標::開始等待游標](#beginwaitcursor)|將游標顯示為沙漏游標。|
+|[CmdTarget::DoOleVerb](#dooleverb)|導致執行由 OLE 謂詞指定的操作。|
+|[CmD目標::啟用自動化](#enableautomation)|允許`CCmdTarget`物件進行 OLE 自動化。|
+|[CmD 目標:開啟連線](#enableconnections)|啟用在連接點上觸發事件。|
+|[CmD 目標::啟用類型Lib](#enabletypelib)|啟用物件的類型庫。|
+|[CmD目標::結束等待游標](#endwaitcursor)|返回到上一個游標。|
+|[Cmd目標::枚舉](#enumoleverbs)|枚舉物件的 OLE 謂詞。|
+|[Cmd目標::從I調度](#fromidispatch)|返回指向與`IDispatch`指標關聯的`CCmdTarget`物件的指標。|
+|[CmD目標::取得調度IID](#getdispatchiid)|獲取主調度介面 ID。|
+|[CmD目標::取得I調度](#getidispatch)|返回指向與`IDispatch``CCmdTarget`對象關聯的物件的指標。|
+|[CmD目標::取得類型資訊計數](#gettypeinfocount)|檢索物件提供的類型資訊介面的數量。|
+|[Cmd目標::取得資訊](#gettypeinfoofguid)|擷取對應到所指定 GUID 的型別描述。|
+|[CmD目標::取得類型Lib](#gettypelib)|獲取指向類型庫的指標。|
+|[CmD目標::取得類型LibCache](#gettypelibcache)|獲取類型庫緩存。|
+|[Cmd目標::已呼叫](#isinvokeallowed)|啟用自動化方法調用。|
+|[Cmd目標::預期結果](#isresultexpected)|如果自動化函數應返回值,則返回非零。|
+|[CmD目標::OnCmdMsg](#oncmdmsg)|路由和調度命令消息。|
+|[Cmd目標::最終發佈](#onfinalrelease)|釋放最後一個 OLE 參考後進行清理。|
+|[Cmd目標::恢復等待游標](#restorewaitcursor)|恢復沙漏游標。|
 
 ## <a name="remarks"></a>備註
 
-訊息對應會將命令或訊息路由傳送至您撰寫來處理它們的成員函式。 （命令是來自功能表項目、命令按鈕或快速鍵的訊息）。
+消息對應將命令或消息路由到您編寫處理這些命令或消息的成員函數。 (命令是來自功能表項、命令按鈕或快捷鍵的消息。
 
-衍生自 `CCmdTarget` 的主要架構類別包括[CView](../../mfc/reference/cview-class.md)、 [CWinApp](../../mfc/reference/cwinapp-class.md)、 [CDocument](../../mfc/reference/cdocument-class.md)、 [CWnd](../../mfc/reference/cwnd-class.md)和[CFrameWnd](../../mfc/reference/cframewnd-class.md)。 如果您想要新的類別來處理訊息，請從這些 `CCmdTarget`衍生類別的其中一個來衍生類別。 您很少會直接從 `CCmdTarget` 衍生類別。
+`CCmdTarget`來自的關鍵框架類包括CView、CWinApp、CDocument、CWnd和[CFrameWnd。](../../mfc/reference/cframewnd-class.md) [CView](../../mfc/reference/cview-class.md) [CWinApp](../../mfc/reference/cwinapp-class.md) [CDocument](../../mfc/reference/cdocument-class.md) [CWnd](../../mfc/reference/cwnd-class.md) 如果希望新類處理消息,則從這些`CCmdTarget`派生類之一派生類。 您很少直接從`CCmdTarget`派生類。
 
-如需命令目標和 `OnCmdMsg` 路由的總覽，請參閱[命令目標](../../mfc/command-targets.md)、[命令路由](../../mfc/command-routing.md)和[對應訊息](../../mfc/mapping-messages.md)。
+有關`OnCmdMsg`指令目標與路由的概述,請參閱[命令目標](../../mfc/command-targets.md), 請參考指令與[映](../../mfc/command-routing.md)[射訊息](../../mfc/mapping-messages.md)。
 
-`CCmdTarget` 包含處理沙漏游標顯示的成員函式。 當您預期命令會花很明顯的時間間隔來執行時，請顯示沙漏游標。
+`CCmdTarget`包括處理沙漏游標顯示的成員函數。 當您希望命令需要一個明顯的時間間隔執行時,顯示沙漏游標。
 
-分派對應（類似于訊息對應）是用來公開 OLE automation `IDispatch` 功能。 藉由公開此介面，其他應用程式（例如 Visual Basic）就可以呼叫您的應用程式。
+調度對應於消息映射,用於公開 OLE 自動化`IDispatch`功能。 通過公開此介面,其他應用程式(如 Visual Basic)可以調用到應用程式中。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -117,9 +117,9 @@ class CCmdTarget : public CObject
 
 **標題:** afxwin.h
 
-##  <a name="beginwaitcursor"></a>CCmdTarget：： BeginWaitCursor
+## <a name="ccmdtargetbeginwaitcursor"></a><a name="beginwaitcursor"></a>CMD目標::開始等待游標
 
-呼叫此函式可在您預期命令採取明顯的時間間隔執行時，將游標顯示為沙漏。
+調用此函數,當希望命令需要一個明顯的時間間隔執行時,將游標顯示為沙漏。
 
 ```
 void BeginWaitCursor();
@@ -127,17 +127,17 @@ void BeginWaitCursor();
 
 ### <a name="remarks"></a>備註
 
-架構會呼叫這個函式來顯示其忙碌中的使用者，例如當 `CDocument` 物件將本身載入或儲存至檔案時。
+框架呼叫此函數是為了向使用者顯示它正忙,例如當`CDocument`物件載入或保存到檔中時。
 
-`BeginWaitCursor` 的動作不一定會在單一訊息處理常式之外生效，因為其他動作（例如 `OnSetCursor` 處理）可能會變更資料指標。
+的操作`BeginWaitCursor`並不總是在單個消息處理程式之外有效,因為其他操作(`OnSetCursor`如處理)可能會更改游標。
 
-呼叫 `EndWaitCursor` 以還原先前的資料指標。
+調用`EndWaitCursor`以還原上一個游標。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-##  <a name="ccmdtarget"></a>CCmdTarget：： CCmdTarget
+## <a name="ccmdtargetccmdtarget"></a><a name="ccmdtarget"></a>CmD目標::CMD目標
 
 建構 `CCmdTarget` 物件。
 
@@ -145,9 +145,9 @@ void BeginWaitCursor();
 CCmdTarget();
 ```
 
-##  <a name="dooleverb"></a>CCmdTarget：:D oOleVerb
+## <a name="ccmdtargetdooleverb"></a><a name="dooleverb"></a>CmdTarget::DoOleVerb
 
-造成執行 OLE 動詞指定的動作。
+導致執行由 OLE 謂詞指定的操作。
 
 ```
 BOOL DoOleVerb(
@@ -160,28 +160,28 @@ BOOL DoOleVerb(
 ### <a name="parameters"></a>參數
 
 *iVerb*<br/>
-動詞命令的數值識別碼。
+動詞的數值標識符。
 
 *lpMsg*<br/>
-訊息結構的指標，描述叫用動詞[命令的事件](/windows/win32/api/winuser/ns-winuser-msg)（例如按兩下）。
+指向描述調用謂詞的事件(如按兩下)的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構的指標。
 
-*hWndParent*<br/>
+*hWnd 父母*<br/>
 文件視窗的控制代碼，包含物件。
 
 *lpRect*<br/>
-[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標，其中包含在*hwndParent*中定義物件周框的座標（以圖元為單位）。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,該結構以像素為單位定義物件的邊界矩形,以*hwndParent*。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUE，否則為 FALSE。
+如果成功,則為 TRUE,否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式基本上是 IOleObject 的實作為[：:D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb)。 可能的動作是由[CCmdTarget：： EnumOleVerbs](#enumoleverbs)所列舉。
+此成員函數基本上是[IOleObject::DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb)) 的實現。 可能的操作由[CCmdTarget::枚舉EmeOleVerbs](#enumoleverbs)枚舉。
 
-##  <a name="enableautomation"></a>CCmdTarget：： EnableAutomation
+## <a name="ccmdtargetenableautomation"></a><a name="enableautomation"></a>CmD目標::啟用自動化
 
-呼叫此函式可啟用物件的 OLE automation。
+調用此函數以啟用物件的 OLE 自動化。
 
 ```
 void EnableAutomation();
@@ -189,11 +189,11 @@ void EnableAutomation();
 
 ### <a name="remarks"></a>備註
 
-此函式通常是從您物件的函式呼叫，而且只有在已針對類別宣告分派對應時，才會呼叫這個函式。 如需有關自動化的詳細資訊，請參閱[Automation 用戶端](../../mfc/automation-clients.md)和[automation 伺服器](../../mfc/automation-servers.md)文章。
+此函數通常從物件的構造函數調用,並且僅當已聲明類調度映射時才應調用。 有關自動化的詳細資訊,請參閱[文章"自動化用戶端](../../mfc/automation-clients.md)"和["自動化伺服器](../../mfc/automation-servers.md)"。
 
-##  <a name="enableconnections"></a>CCmdTarget：： EnableConnections
+## <a name="ccmdtargetenableconnections"></a><a name="enableconnections"></a>CmD 目標:開啟連線
 
-啟用透過連接點引發事件的功能。
+啟用在連接點上觸發事件。
 
 ```
 void EnableConnections();
@@ -201,11 +201,11 @@ void EnableConnections();
 
 ### <a name="remarks"></a>備註
 
-若要啟用連接點，請在衍生類別的函式中呼叫這個成員函式。
+要啟用連接點,請調用派生類的構造函數中的此成員函數。
 
-##  <a name="enabletypelib"></a>CCmdTarget：： EnableTypeLib
+## <a name="ccmdtargetenabletypelib"></a><a name="enabletypelib"></a>CmD 目標::啟用類型Lib
 
-啟用物件的類型程式庫。
+啟用物件的類型庫。
 
 ```
 void EnableTypeLib();
@@ -213,11 +213,11 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>備註
 
-如果提供型別資訊，請在 `CCmdTarget`衍生物件的函式中呼叫這個成員函式。
+如果`CCmdTarget`派生對象的構造函數提供類型資訊,則調用此成員函數。
 
-##  <a name="endwaitcursor"></a>CCmdTarget：： EndWaitCursor
+## <a name="ccmdtargetendwaitcursor"></a><a name="endwaitcursor"></a>CmD目標::結束等待游標
 
-在您呼叫 `BeginWaitCursor` 成員函式從沙漏游標回到上一個資料指標之後，請呼叫這個函式。
+調用`BeginWaitCursor`成員函數後調用此函數,以便從沙漏游標返回到上一個游標。
 
 ```
 void EndWaitCursor();
@@ -225,15 +225,15 @@ void EndWaitCursor();
 
 ### <a name="remarks"></a>備註
 
-架構也會呼叫這個成員函式，但它也稱為沙漏游標。
+框架在調用沙漏游標后還會調用此成員函數。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-##  <a name="enumoleverbs"></a>CCmdTarget：： EnumOleVerbs
+## <a name="ccmdtargetenumoleverbs"></a><a name="enumoleverbs"></a>Cmd目標::枚舉
 
-列舉物件的 OLE 動詞。
+枚舉物件的 OLE 謂詞。
 
 ```
 BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
@@ -241,20 +241,20 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 
 ### <a name="parameters"></a>參數
 
-*ppenumOleVerb*<br/>
-指向[IEnumOLEVERB](/windows/win32/api/oleidl/nn-oleidl-ienumoleverb)介面指標的指標。
+*佩納姆奧勒Verb*<br/>
+指向[IEnumOLEVERB 介面](/windows/win32/api/oleidl/nn-oleidl-ienumoleverb)的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果物件至少支援一個 OLE 動詞命令，則為 TRUE （在此情況下，\* *ppenumOleVerb*會指向 `IEnumOLEVERB` 列舉值介面），否則為 FALSE。
+如果物件支援至少一個 OLE 謂詞(在\*這種情況下 *,ppenOleVerb*指向`IEnumOLEVERB`枚舉器介面),則為 TRUE,否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式基本上是[IOleObject：： EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs)的執行。
+此成員函數基本上是[IOleObject::enumVerbs 的](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs)實現。
 
-##  <a name="fromidispatch"></a>CCmdTarget：： FromIDispatch
+## <a name="ccmdtargetfromidispatch"></a><a name="fromidispatch"></a>Cmd目標::從I調度
 
-呼叫此函式可將從類別的 automation 成員函式接收的 `IDispatch` 指標對應到實作用 `IDispatch` 物件介面的 `CCmdTarget` 物件。
+調用此函數將從類`IDispatch`的自動化成員函數接收的指標映射到實現`CCmdTarget``IDispatch`物件介面的物件中。
 
 ```
 static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
@@ -267,15 +267,15 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 
 ### <a name="return-value"></a>傳回值
 
-與*lpDispatch*相關聯之 `CCmdTarget` 物件的指標。 如果 `IDispatch` 物件無法被辨識為 Microsoft Foundation Class `IDispatch` 物件，此函式會傳回 Null。
+指向與`CCmdTarget`*lpDispatch*關聯的物件的指標。 如果物件未識別為`IDispatch`Microsoft`IDispatch`基礎類 物件,則此功能將返回 NULL。
 
 ### <a name="remarks"></a>備註
 
-此函式的結果是對成員函式的呼叫 `GetIDispatch`的反向。
+此函數的結果是對成員函數的調用的相反。 `GetIDispatch`
 
-##  <a name="getdispatchiid"></a>CCmdTarget：： GetDispatchIID
+## <a name="ccmdtargetgetdispatchiid"></a><a name="getdispatchiid"></a>CmD目標::取得調度IID
 
-取得主要分派介面識別碼。
+獲取主調度介面 ID。
 
 ```
 virtual BOOL GetDispatchIID(IID* pIID);
@@ -284,19 +284,19 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>參數
 
 *pIID*<br/>
-介面識別碼（ [GUID](/previous-versions/cc317743(v%3dmsdn.10))）的指標。
+指向介面 ID [(GUID)](/previous-versions/cc317743(v%3dmsdn.10))的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUE，否則為 FALSE。 如果成功，\* *pIID*會設定為主要分派介面識別碼。
+如果成功,則為 TRUE,否則為 FALSE。 如果成功\**,pIID*將設置為主調度介面 ID。
 
 ### <a name="remarks"></a>備註
 
-衍生類別應該覆寫這個成員函式（如果未覆寫，`GetDispatchIID` 會傳回 FALSE）。 請參閱[COleControl](../../mfc/reference/colecontrol-class.md)。
+派生類應覆蓋此成員函數(如果不重寫,`GetDispatchIID`則返回 FALSE)。 請參考[COleControl](../../mfc/reference/colecontrol-class.md)。
 
-##  <a name="getidispatch"></a>CCmdTarget：： GetIDispatch
+## <a name="ccmdtargetgetidispatch"></a><a name="getidispatch"></a>CmD目標::取得I調度
 
-呼叫這個成員函式，從傳回 `IDispatch` 指標或以傳址方式接受 `IDispatch` 指標的自動化方法，抓取 `IDispatch` 的指標。
+調用此成員函數從返回`IDispatch``IDispatch`指標或通過引用獲取`IDispatch`指標的自動化方法檢索指標。
 
 ```
 LPDISPATCH GetIDispatch(BOOL bAddRef);
@@ -305,19 +305,19 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="parameters"></a>參數
 
 *bAddRef*<br/>
-指定是否要遞增物件的參考計數。
+指定是否增加物件的引用計數。
 
 ### <a name="return-value"></a>傳回值
 
-與物件相關聯的 `IDispatch` 指標。
+與`IDispatch`物件關聯的指標。
 
 ### <a name="remarks"></a>備註
 
-對於在其函式中呼叫 `EnableAutomation` 的物件，使其自動化啟用時，此函式會傳回 `IDispatch` 的基礎類別實作用指標，而用戶端會使用此介面透過 `IDispatch` 介面進行通訊。 呼叫此函式會自動將參考加入至指標，因此不需要呼叫[IUnknown：： AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)。
+對於在其構造函數`EnableAutomation`中調用的物件,使其啟用自動化,此函數返回一個指標,指向通過`IDispatch``IDispatch`介面通信的用戶端使用的基類實現。 呼叫此函數會自動新增對指標的引用,因此不必呼叫[IUnknown:::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)。
 
-##  <a name="gettypeinfocount"></a>CCmdTarget：： GetTypeInfoCount
+## <a name="ccmdtargetgettypeinfocount"></a><a name="gettypeinfocount"></a>CmD目標::取得類型資訊計數
 
-抓取物件提供的類型資訊介面數目。
+檢索物件提供的類型資訊介面的數量。
 
 ```
 virtual UINT GetTypeInfoCount();
@@ -325,15 +325,15 @@ virtual UINT GetTypeInfoCount();
 
 ### <a name="return-value"></a>傳回值
 
-類型資訊介面的數目。
+類型資訊介面的數量。
 
 ### <a name="remarks"></a>備註
 
-這個成員函式基本上會實作為[IDispatch：： GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount)。
+此成員函數基本上實現了[IDispatch:getTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount)。
 
-衍生類別應該覆寫此函式，以傳回所提供的類型資訊介面數目（0或1）。 如果未覆寫，`GetTypeInfoCount` 會傳回0。 若要覆寫，請使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，這也會實行 `GetTypeLib` 和 `GetTypeLibCache`。
+派生類應重寫此函數以返回提供的類型資訊介面數(0 或 1)。 如果未重寫,`GetTypeInfoCount`則返回 0。 要重寫,請使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏,該宏`GetTypeLib``GetTypeLibCache`還實現 和 。
 
-##  <a name="gettypeinfoofguid"></a>CCmdTarget：： GetTypeInfoOfGuid
+## <a name="ccmdtargetgettypeinfoofguid"></a><a name="gettypeinfoofguid"></a>Cmd目標::取得資訊
 
 擷取對應到所指定 GUID 的型別描述。
 
@@ -347,21 +347,21 @@ HRESULT GetTypeInfoOfGuid(
 ### <a name="parameters"></a>參數
 
 *lcid*<br/>
-地區設定識別碼（`LCID`）。
+區域設定識別碼`LCID`( 。
 
-*guid*<br/>
-型別描述的[GUID](/previous-versions/cc317743(v%3dmsdn.10)) 。
+*Guid*<br/>
+類型描述的[GUID。](/previous-versions/cc317743(v%3dmsdn.10))
 
 *ppTypeInfo*<br/>
-指向 `ITypeInfo` 介面之指標的指標。
+指向介面的`ITypeInfo`指標。
 
 ### <a name="return-value"></a>傳回值
 
-表示呼叫成功或失敗的 HRESULT。 如果成功，\* *ppTypeInfo*會指向類型資訊介面。
+指示呼叫成功或失敗的 HRESULT。 如果成功\**,ppTypeInfo*將指向類型資訊介面。
 
-##  <a name="gettypelib"></a>CCmdTarget：： GetTypeLib
+## <a name="ccmdtargetgettypelib"></a><a name="gettypelib"></a>CmD目標::取得類型Lib
 
-取得類型程式庫的指標。
+獲取指向類型庫的指標。
 
 ```
 virtual HRESULT GetTypeLib(
@@ -375,19 +375,19 @@ virtual HRESULT GetTypeLib(
 地區設定識別項 (LCID)。
 
 *ppTypeLib*<br/>
-指向 `ITypeLib` 介面指標的指標。
+指向介面的`ITypeLib`指標。
 
 ### <a name="return-value"></a>傳回值
 
-表示呼叫成功或失敗的 HRESULT。 如果成功，\* *ppTypeLib*會指向類型程式庫介面。
+指示呼叫成功或失敗的 HRESULT。 如果成功\**,ppTypeLib*將指向類型庫介面。
 
 ### <a name="remarks"></a>備註
 
-衍生類別應該覆寫這個成員函式（如果未覆寫，`GetTypeLib` 會傳回 TYPE_E_CANTLOADLIBRARY）。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，這也會實行 `GetTypeInfoCount` 和 `GetTypeLibCache`。
+派生類應覆蓋此成員函數(如果不重寫,`GetTypeLib`則返回TYPE_E_CANTLOADLIBRARY)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏,該宏`GetTypeInfoCount``GetTypeLibCache`還實現 和 。
 
-##  <a name="gettypelibcache"></a>CCmdTarget：： GetTypeLibCache
+## <a name="ccmdtargetgettypelibcache"></a><a name="gettypelibcache"></a>CmD目標::取得類型LibCache
 
-取得類型程式庫快取。
+獲取類型庫緩存。
 
 ```
 virtual CTypeLibCache* GetTypeLibCache();
@@ -399,11 +399,11 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="remarks"></a>備註
 
-衍生類別應該覆寫這個成員函式（如果未覆寫，`GetTypeLibCache` 會傳回 Null）。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，這也會實行 `GetTypeInfoCount` 和 `GetTypeLib`。
+派生類應覆寫此成員函數(如果不重寫`GetTypeLibCache`, 則傳回 NULL)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏,該宏`GetTypeInfoCount``GetTypeLib`還實現 和 。
 
-##  <a name="isinvokeallowed"></a>CCmdTarget：： IsInvokeAllowed
+## <a name="ccmdtargetisinvokeallowed"></a><a name="isinvokeallowed"></a>Cmd目標::已呼叫
 
-MFC 的 `IDispatch::Invoke` 的執行會呼叫這個函式，以判斷是否可以叫用指定的 automation 方法（由*dispid*識別）。
+MFC 的實現調用此函`IDispatch::Invoke`數 ,以確定是否可以調用給定的自動化方法(由*dispid*標識)。
 
 ```
 virtual BOOL IsInvokeAllowed(DISPID dispid);
@@ -411,22 +411,22 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>參數
 
-*dispid*<br/>
-分派識別碼。
+*不一部分*<br/>
+調度識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果可以叫用方法，則為 TRUE，否則為 FALSE。
+如果可以調用該方法,則為 TRUE,否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果 `IsInvokeAllowed` 傳回 TRUE，`Invoke` 會繼續呼叫方法;否則，`Invoke` 將會失敗，並傳回 E_UNEXPECTED。
+如果`IsInvokeAllowed`返回 TRUE,`Invoke`則繼續調用 方法;如果返回 TRUE,則繼續調用 方法。否則,`Invoke`將失敗,返回E_UNEXPECTED。
 
-衍生類別可以覆寫這個函式，以傳回適當的值（如果未覆寫，`IsInvokeAllowed` 會傳回 TRUE）。 請參閱特定[COleControl：： IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)。
+派生類可以重寫此函數以返回適當的值(如果不重寫,`IsInvokeAllowed`則返回 TRUE)。 請特別參見[COleControl:是呼叫允許](../../mfc/reference/colecontrol-class.md#isinvokeallowed)的 。
 
-##  <a name="isresultexpected"></a>CCmdTarget：： IsResultExpected
+## <a name="ccmdtargetisresultexpected"></a><a name="isresultexpected"></a>Cmd目標::預期結果
 
-使用 `IsResultExpected`，以確定用戶端是否預期會從其對 automation 函數的呼叫傳回值。
+用於`IsResultExpected`確定用戶端是否期望從調用自動化函數返回值。
 
 ```
 BOOL IsResultExpected();
@@ -434,19 +434,19 @@ BOOL IsResultExpected();
 
 ### <a name="return-value"></a>傳回值
 
-如果 automation 函數應該傳回值，則為非零。否則為0。
+如果自動化函數應返回值,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-OLE 介面會提供資訊給 MFC，指出用戶端是否使用或忽略函式呼叫的結果，而 MFC 則會使用這項資訊來判斷 `IsResultExpected`呼叫的結果。 如果傳回值的生產環境是需要大量時間或資源，您可以在計算傳回值之前呼叫此函式，以提高效率。
+OLE 介面向 MFC 提供有關用戶端是否正在使用或忽略函數調用結果的資訊,而 MFC 則使用`IsResultExpected`此資訊來確定調用 的結果。 如果返回值的生產是時間或資源密集型,則可以在計算返回值之前調用此函數來提高效率。
 
-此函式只會傳回0次，因此，如果您從用戶端呼叫的 automation 函式呼叫它們，則會從其他自動化函式取得有效的傳回值。
+此函數僅返回 0 一次,以便從用戶端調用的自動化函數中調用它們,則從其他自動化函數中獲取有效返回值。
 
-如果未進行 automation 函數呼叫，`IsResultExpected` 會傳回非零值。
+`IsResultExpected`如果在自動化函數調用未進行時調用,則返回非零值。
 
-##  <a name="oncmdmsg"></a>CCmdTarget：： OnCmdMsg
+## <a name="ccmdtargetoncmdmsg"></a><a name="oncmdmsg"></a>CmD目標::OnCmdMsg
 
-由架構呼叫以路由傳送和分派命令訊息，以及處理命令使用者介面物件的更新。
+由框架呼叫以路由和調度命令訊息,並處理命令使用者介面物件的更新。
 
 ```
 virtual BOOL OnCmdMsg(
@@ -459,34 +459,34 @@ virtual BOOL OnCmdMsg(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-包含命令 ID。
+包含命令識別碼。
 
-*nCode*<br/>
-識別命令通知碼。 如需*nCode*值的詳細資訊，請參閱**備註**。
+*n代碼*<br/>
+標識命令通知代碼。 有關*nCode*的值的詳細資訊,請參閱**備註**。
 
 *pExtra*<br/>
-根據*nCode*的值使用。 如需*pExtra*的詳細資訊，請參閱**備註**。
+根據*nCode*的值使用。 有關*pExtra*的更多資訊,請參閱**備註**。
 
 *pHandlerInfo*<br/>
-如果不是 Null，`OnCmdMsg` 會填入*pHandlerInfo*結構的*pTarget*和*pmf*成員，而不是分派命令。 通常，這個參數應該是 Null。
+如果不是`OnCmdMsg`NULL, 請填寫*pHandlerInfo*結構的*pTarget*和*pmf*成員,而不是調度命令。 通常,此參數應為 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-如果已處理訊息，則為非零值。否則為0。
+處理消息時非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這是架構命令架構的主要執行常式。
+這是框架命令體系結構的主要實現例程。
 
-在執行時間，`OnCmdMsg` 會將命令分派給其他物件，或藉由呼叫根類別 `CCmdTarget::OnCmdMsg`（其會執行實際的訊息對應查閱）來處理命令本身。 如需預設命令路由的完整描述，請參閱[訊息處理和對應主題](../../mfc/message-handling-and-mapping.md)。
+在執行時,`OnCmdMsg`將命令調度到其他物件,或者透過呼叫 root 類來處理`CCmdTarget::OnCmdMsg`命令本身, 該類執行實際的消息映射查找。 有關預設指令路由的完整說明,請參閱[訊息處理和映射主題](../../mfc/message-handling-and-mapping.md)。
 
-在罕見的情況下，您可能會想要覆寫此成員函式，以擴充架構的標準命令路由。 如需命令路由架構的先進詳細資料，請參閱[技術提示 21](../../mfc/tn021-command-and-message-routing.md) 。
+在極少數情況下,您可能希望重寫此成員函數以擴展框架的標準命令路由。 有關命令路由體系結構的高級詳細資訊,請參閱[技術說明 21。](../../mfc/tn021-command-and-message-routing.md)
 
-如果您覆寫 `OnCmdMsg`，則必須為*nCode*、命令通知碼和*pExtra*提供適當的值，這取決於*nCode*的值。 下表列出其對應的值：
+`OnCmdMsg`如果重寫 ,則必須提供*nCode、* 命令通知代碼和*pExtra*的相應值,具體取決於*nCode*的值。 下表列出了其相應的值:
 
-|*nCode*值|*pExtra*值|
+|*n代碼*值|*p額外*值|
 |-------------------|--------------------|
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
+|CN_COMMAND|[CmDUI](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
 |CN_UPDATE_COMMAND_UI|CCmdUI\*|
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|
@@ -498,9 +498,9 @@ virtual BOOL OnCmdMsg(
 
 [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]
 
-##  <a name="onfinalrelease"></a>CCmdTarget：： OnFinalRelease
+## <a name="ccmdtargetonfinalrelease"></a><a name="onfinalrelease"></a>Cmd目標::最終發佈
 
-當物件的最後一個 OLE 參考被釋放時，由架構呼叫。
+釋放物件或物件的最後一個 OLE 引用時,由框架調用。
 
 ```
 virtual void OnFinalRelease();
@@ -508,11 +508,11 @@ virtual void OnFinalRelease();
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式，以提供這種情況的特殊處理。 預設的執行會刪除物件。
+重寫此函數以為此情況提供特殊處理。 預設實現將刪除該物件。
 
-##  <a name="restorewaitcursor"></a>CCmdTarget：： RestoreWaitCursor
+## <a name="ccmdtargetrestorewaitcursor"></a><a name="restorewaitcursor"></a>Cmd目標::恢復等待游標
 
-呼叫此函式可在系統資料指標變更之後，還原適當的沙漏游標（例如，在訊息方塊開啟後關閉，然後在長時間的作業中關閉）。
+呼叫此函數以在系統游標更改後(例如,在長時間操作期間打開消息框然後關閉後)還原相應的沙漏游標。
 
 ```
 void RestoreWaitCursor();
@@ -524,7 +524,7 @@ void RestoreWaitCursor();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 ACDUAL:](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)<br/>
@@ -534,4 +534,4 @@ void RestoreWaitCursor();
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>
 [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)<br/>
-[COleDispatchDriver 類別](../../mfc/reference/coledispatchdriver-class.md)
+[COle排程驅動程式類別](../../mfc/reference/coledispatchdriver-class.md)

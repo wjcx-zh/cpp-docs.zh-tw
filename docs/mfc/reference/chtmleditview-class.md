@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352084"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 類別
 
@@ -37,17 +37,17 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 |名稱|描述|
 |----------|-----------------|
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|建構 `CHtmlEditView` 物件。|
+|[Html 編輯檢視:CHtmlEditView](#chtmleditview)|建構 `CHtmlEditView` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|建立新的視窗物件。|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|傳回`IHTMLDocument2`介面上目前的文件。|
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|擷取此檢視的預設文件的名稱。|
+|[CHtmlEditView:建立](#create)|創建新視窗物件。|
+|[CHtml 編輯檢視:取得 Html 文件](#getdhtmldocument)|返回`IHTMLDocument2`當前文件上的介面。|
+|[CHtmlEditView:取得開始檔案](#getstartdocument)|檢索此檢視的預設文件的名稱。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -71,7 +71,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 **Header:** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>Html 編輯檢視:CHtmlEditView
 
 建構 `CHtmlEditView` 物件。
 
@@ -79,9 +79,9 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView:建立
 
-建立新的視窗物件。
+創建新視窗物件。
 
 ```
 virtual BOOL Create(
@@ -96,34 +96,34 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*lpszClassName*<br/>
-指向以 null 結束的字元字串，可命名 Windows 類別。 類別名稱可以是任何名稱向[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式或`RegisterClass`Windows 函式。 如果是 NULL，會使用預先定義的預設[CFrameWnd](../../mfc/reference/cframewnd-class.md)屬性。
+*lpszClass 名稱*<br/>
+指向命名 Windows 類的 null 連接字串。 類名稱可以是註冊到[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函數`RegisterClass`或 Windows 函數的任何名稱。 如果為 NULL,則使用預定義的預設[CFramewnd](../../mfc/reference/cframewnd-class.md)屬性。
 
-*lpszWindowName*<br/>
-指向以 null 結束的字元字串，表示視窗名稱。
+*lpsz 視窗名稱*<br/>
+指向表示視窗名稱的 null 連接字串。
 
 *dwStyle*<br/>
-指定視窗的樣式屬性。 根據預設，會設定 WS_VISIBLE 和 WS_CHILD Windows 樣式。
+指定視窗樣式屬性。 默認情況下,將設置WS_VISIBLE和WS_CHILD Windows 樣式。
 
-*rect*<br/>
-參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定的大小和視窗的位置。 *RectDefault*值允許指定的大小和位置的新視窗中的 Windows。
+*矩形*<br/>
+對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,指定視窗的大小和位置。 *rectDefault*值允許 Windows 指定新視窗的大小和位置。
 
-*pParentWnd*<br/>
-控制項的父視窗指標。
+*pparentwnd*<br/>
+指向控件的父視窗的指標。
 
 *nID*<br/>
-檢視的識別碼。 根據預設，設定為 AFX_IDW_PANE_FIRST。
+視圖的 ID 號。 默認情況下,設置為AFX_IDW_PANE_FIRST。
 
 *pContext*<br/>
-指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 預設為 NULL。
+指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)的指標。 預設情況下為 NULL。
 
 ### <a name="remarks"></a>備註
 
-這個方法也會呼叫包含的 WebBrowser`Navigate`方法以載入預設文件 (請參閱 < [CHtmlEditView::GetStartDocument](#getstartdocument))。
+此方法還將調用包含的`Navigate`WebBrowser 方法來載入預設文件(請參閱[CHtmlEditView::getStartDocument)。](#getstartdocument)
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtml 編輯檢視:取得 Html 文件
 
-傳回`IHTMLDocument2`介面上目前的文件。
+返回`IHTMLDocument2`當前文件上的介面。
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -134,9 +134,9 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 *ppDocument*<br/>
 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))介面。
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView:取得開始檔案
 
-擷取此檢視的預設文件的名稱。
+檢索此檢視的預設文件的名稱。
 
 ```
 virtual LPCTSTR GetStartDocument();
@@ -144,5 +144,5 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>另請參閱
 
-[HTMLEdit 範例](../../overview/visual-cpp-samples.md)<br/>
+[HTML編輯範例](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

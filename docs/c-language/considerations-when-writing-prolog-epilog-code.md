@@ -7,20 +7,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334586"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>撰寫初構/終解程式碼時的考量
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-在您撰寫自己的初構和終解程式碼序列之前，務必先了解堆疊框架的配置方式。另外，了解如何使用 **__LOCAL_SIZE** 預先定義常數也會很實用。
+在編寫自己的 prolog 和 epilog 代碼序列之前,瞭解堆疊幀的佈局非常重要。瞭解如何使用預定義常量 **__LOCAL_SIZE**也很有用。
 
-##  <a name="_clang_c_stack_frame_layout"></a> C 堆疊框架配置
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>CStack 框架配置
 
 這個範例將示範可能出現在 32 位元函式中的標準初構程式碼：
 
@@ -42,7 +42,7 @@ ret                          ; Return from function
 
 堆疊一律從高到低排列 (從高到低記憶體位址)。 基底指標 (`ebp`) 會指向 `ebp` 的推送值。 區域變數區域是從 `ebp-2` 開始。 若要存取區域變數，請從 `ebp` 減去適當的值計算 `ebp` 的位移。
 
-##  <a name="_clang_the___local_size_constant"></a> __LOCAL_SIZE 常數
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a> __LOCAL_SIZE 常數
 
 編譯器會提供常數 **__LOCAL_SIZE**，用於函式初構程式碼的內嵌組合語言區塊中。 這個常數是用來配置區域變數在自訂初構程式碼中堆疊框架上的空間。
 
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**結束 Microsoft 專屬**
+**結束微軟的**
 
 ## <a name="see-also"></a>另請參閱
 
-[Naked 函式](../c-language/naked-functions.md)
+[裸功能](../c-language/naked-functions.md)

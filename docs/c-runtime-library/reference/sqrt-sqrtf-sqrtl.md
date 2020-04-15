@@ -1,10 +1,11 @@
 ---
 title: sqrt、sqrtf、sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355574"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -67,30 +69,32 @@ long double sqrtl(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 非負值浮點值
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用**float**或**long** **double**類型的**sqrt**多載。 在 C 程式中， **sqrt**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用採用**浮點**或**長****雙**類型平方**的**重載。 在 C 程式中 **,sqrt**始終採用並返回**雙**精度 值。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="return-value"></a>傳回值
 
-**Sqrt**函數會傳回*x*的平方根。 根據預設，如果*x*是負數， **sqrt**會傳回不限的 NaN。
+**平方函數**返回*x*的平方根。 默認情況下,如果*x*為負數 **,sqrt**將返回不確定的 NaN。
 
-|Input|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr**例外|
 |-----------|-------------------|--------------------------|
-|± QNAN，IND|none|_DOMAIN|
-|- ∞|none|_DOMAIN|
-|x<0|none|_DOMAIN|
+|• QNAN,IND|無|_DOMAIN|
+|- ∞|無|_DOMAIN|
+|x<0|無|_DOMAIN|
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**sqrt**、 **sqrtf**、 **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

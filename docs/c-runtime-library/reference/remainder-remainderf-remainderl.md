@@ -1,10 +1,13 @@
 ---
 title: remainder、remainderf、remainderl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remainderl
 - remainder
 - remainderf
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949417"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332870"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -56,29 +60,31 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 分子。
 
-*y*<br/>
+*Y*<br/>
 分母。
 
 ## <a name="return-value"></a>傳回值
 
-*X*  /  *y*的浮點餘數。 如果*y*的值是0.0，**餘數**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+*x* / y 的浮點餘*數。* 如果*y*的值為 0.0,**則餘數**將返回一個安靜的 NaN。 有關**printf**家族表示安靜 NaN 的資訊,請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**餘數**函數會計算*x*  /  *y*的浮點餘數*r* ，例如*x*  =  *n* \* *y*  +  *r*，其中*n*這是最接近*x*  /  *y*值的整數，而*n*則是每次&#124; *n*  -  *x*  /  *y* &#124; = 1/2 時。 *R* = 0 時， *r*的正負號與*x*相同。
+**其餘**函數計算*浮* / 點餘數*r* x*y,* 以便*x* = *n* \* *y* + *r*,其中*n*是最接近*值 x* / *y*和*n*的整數,即使當 &#124; *n* - *x* / *y* &#124; = 1/2 時也是如此。 當*r* = 0 時 *,r*具有相同的符號*x*。
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**餘數**的多載。 在 C 程式中，**餘數**一律採用兩個**雙**精確度引數，並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用獲取和返回**浮點**值或**長****雙精度**值的剩餘**項**的重載。 在 C 程式中,**其餘始終**採用兩**個雙**參數並傳回**一個雙**參數 。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭 (C)|必要的標頭 (C++)|
+|函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------|-|
-|**餘數**、 **remainderf**、 **remainderl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**餘數**,**餘費**,**餘數**|\<math.h>|\<cmath> 或 \<math.h>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

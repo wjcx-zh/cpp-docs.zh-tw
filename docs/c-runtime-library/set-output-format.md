@@ -25,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957316"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360912"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
 自訂格式化 I/O 函式所使用的輸出格式。
 
 > [!IMPORTANT]
->  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
+> 此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -58,7 +58,7 @@ unsigned int _set_output_format(
 
 ## <a name="remarks"></a>備註
 
-`_set_output_format` 可用於設定格式化 I/O 函式的輸出，例如 [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)。 目前此函式唯一能變更的格式化慣例，是在浮點數字輸出指數中顯示的位數。
+`_set_output_format`用於配置格式化的 I/O 函數(如[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md))的輸出。 目前此函式唯一能變更的格式化慣例，是在浮點數字輸出指數中顯示的位數。
 
 即使三不需要三位數代表指數值，函式 (例如 `printf_s`、 `wprintf_s`及 Visual C++ 標準 C 程式庫中的相關函式) 的預設浮點數字輸出仍會列印三位數的指數。 零會用來將值填補到三位數。 `_set_output_format` 可用於變更此行為。除非指數大小需要第三位數，否則將會列印只有兩位數的指數。
 
@@ -70,7 +70,7 @@ unsigned int _set_output_format(
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-如需相容性詳細資訊，請參閱簡介中的 [相容性](../c-runtime-library/compatibility.md) 。
+如需詳細的相容性資訊，請參閱簡介中的 [Compatibility](../c-runtime-library/compatibility.md) 。
 
 ## <a name="example"></a>範例
 

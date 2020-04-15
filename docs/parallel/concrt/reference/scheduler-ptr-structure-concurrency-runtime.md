@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr 結構
+title: scheduler_ptr結構
 ms.date: 11/04/2016
 f1_keywords:
 - scheduler_ptr
@@ -8,16 +8,16 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: fd044a6255a17882c26183223f71564f98c9f7b2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 60d71a26e5dffcadfb900ef15c26a6d9dc6d6f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358774"
 ---
-# <a name="scheduler_ptr-structure"></a>scheduler_ptr 結構
+# <a name="scheduler_ptr-structure"></a>scheduler_ptr結構
 
-代表排程器的指標。 這個類別是用來允許使用 shared_ptr 或只使用原始指標的一般參考，來指定共用存留期間的規格。
+代表排程器的指標。 此類的存在是為了通過使用shared_ptr或僅使用原始指標進行簡單引用來規範共用存留期。
 
 ## <a name="syntax"></a>語法
 
@@ -31,34 +31,34 @@ struct scheduler_ptr;
 
 |名稱|描述|
 |----------|-----------------|
-|[scheduler_ptr：： scheduler_ptr](#ctor)|已多載。 從排程器 shared_ptr 建立排程器指標|
+|[scheduler_ptr::scheduler_ptr](#ctor)|已多載。 從排程器 shared_ptr 建立排程器指標|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[scheduler_ptr：： get](#get)|傳回排程器的原始指標|
+|[scheduler_ptr:取得](#get)|傳回排程器的原始指標|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[scheduler_ptr：： operator bool](#operator_bool)|測試排程器指標是否為非 null|
-|[scheduler_ptr：： operator-&gt;](#operator_ptr)|作用如同指標|
+|[scheduler_ptr::操作員布爾](#operator_bool)|測試排程器指標是否為非 null|
+|[scheduler_ptr:操作員-&gt;](#operator_ptr)|作用如同指標|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `scheduler_ptr`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** pplinterface。h
+**標題:** pplinterface.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="get"></a>scheduler_ptr：： get 方法
+## <a name="scheduler_ptrget-method"></a><a name="get"></a>scheduler_ptr:獲取方法
 
-傳回排程器的原始指標。
+返回指向計劃程式的原始指標。
 
 ```cpp
 scheduler_interface* get() const;
@@ -66,17 +66,17 @@ scheduler_interface* get() const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="operator_bool"></a>scheduler_ptr：： operator bool
+## <a name="scheduler_ptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr::操作員布爾
 
-測試排程器指標是否為非 null。
+測試計劃程式指標是否為非空。
 
 ```cpp
 operator bool() const;
 ```
 
-## <a name="operator_ptr"></a>scheduler_ptr：： operator-&gt;
+## <a name="scheduler_ptroperator-gt"></a><a name="operator_ptr"></a>scheduler_ptr:操作員-&gt;
 
-行為就像指標。
+像指標一樣。
 
 ```cpp
 scheduler_interface* operator->() const;
@@ -84,9 +84,9 @@ scheduler_interface* operator->() const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="ctor"></a>scheduler_ptr：： scheduler_ptr 的構造函式
+## <a name="scheduler_ptrscheduler_ptr-constructor"></a><a name="ctor"></a>scheduler_ptr:scheduler_ptr構造函數
 
-建立從 shared_ptr 到排程器的排程器指標。
+從shared_ptr創建計劃程式指標到計畫程式。
 
 ```cpp
 explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
@@ -95,11 +95,11 @@ explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 
 ### <a name="parameters"></a>參數
 
-*日程*<br/>
-要轉換的排程器。
+*調度*<br/>
+要轉換的計畫程式。
 
-*pScheduler*<br/>
-要轉換的排程器指標。
+*p 時間*<br/>
+要轉換的計劃程式指標。
 
 ## <a name="see-also"></a>另請參閱
 

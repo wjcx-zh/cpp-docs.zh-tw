@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
-ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 98943fe294322715723bd91207a6f3320ca1ffb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329456"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 介面
 
-這個介面是在 atliface 中定義，並由 CAtlModule 成員函式（例如[UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)）在內部使用。
+此介面在 atliface.h 中定義,並由 CAtlModule 成員函數(如[UpdateRegistry FromResourceD)](catlmodule-class.md#updateregistryfromresourced)在內部使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +34,7 @@ typedef interface IRegistrar IRegistrar;
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[使用可取代的參數（註冊機構的預處理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)主題。
+有關詳細資訊,請參閱["使用可替換參數(註冊器的預處理器)"](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)主題。
 
 ## <a name="members"></a>成員
 
@@ -42,20 +42,20 @@ typedef interface IRegistrar IRegistrar;
 
 |名稱|描述|
 |----------|-----------------|
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|註冊資源。 |
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 取消註冊資源。|
-|[IRegistrar::FileRegister](#fileregister)|註冊檔案。|
-|[IRegistrar::FileUnregister](#fileunregister)|取消註冊檔案。|
-|[IRegistrar::StringRegister](#stringregister)|註冊字串。|
-|[IRegistrar::StringUnregister](#stringunregister)|取消註冊字串|
-|[IRegistrar::ResourceRegister](#resourceregister)|註冊資源。|
-|[IRegistrar::ResourceUnregister](#resourceunregister)|取消註冊資源。|
+|[I註冊商::資源註冊](#resourceregistersz)|註冊資源。 |
+|[I註冊人::資源未註冊](#resourceunregistersz)| 取消註冊資源。|
+|[I註冊人:檔案註冊](#fileregister)|註冊檔。|
+|[I註冊人::檔未註冊](#fileunregister)|取消註冊該檔。|
+|[IRegistrar::字串註冊](#stringregister)|註冊字串。|
+|[I註冊人::字串未註冊](#stringunregister)|取消註冊字串|
+|[I註冊人::資源註冊](#resourceregister)|註冊資源。|
+|[I註冊人::資源未註冊](#resourceunregister)|取消註冊資源。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlifase。h
+**標題:** atlifase.h
 
-##  <a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz
+## <a name="iregistrarresourceregistersz"></a><a name="resourceregistersz"></a>I註冊商::資源註冊
 
 註冊資源。
 
@@ -66,7 +66,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregistersz"></a>IRegistrar::ResourceUnregisterSz
+## <a name="iregistrarresourceunregistersz"></a><a name="resourceunregistersz"></a>I註冊人::資源未註冊
 
 取消註冊資源。
 
@@ -77,25 +77,25 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="fileregister"></a>IRegistrar::FileRegister
+## <a name="iregistrarfileregister"></a><a name="fileregister"></a>I註冊人:檔案註冊
 
-註冊檔案。
+註冊檔。
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="fileunregister"></a>IRegistrar::FileUnregister
+## <a name="iregistrarfileunregister"></a><a name="fileunregister"></a>I註冊人::檔未註冊
 
-取消註冊檔案。
+取消註冊該檔。
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="stringregister"></a>IRegistrar::StringRegister
+## <a name="iregistrarstringregister"></a><a name="stringregister"></a>IRegistrar::字串註冊
 
 註冊指定的字串資料。
 
@@ -104,7 +104,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="stringunregister"></a>IRegistrar::StringUnregister
+## <a name="iregistrarstringunregister"></a><a name="stringunregister"></a>I註冊人::字串未註冊
 
 取消註冊指定的字串資料。
 
@@ -113,7 +113,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="resourceregister"></a>IRegistrar::ResourceRegister
+## <a name="iregistrarresourceregister"></a><a name="resourceregister"></a>I註冊人::資源註冊
 
 註冊資源。
 
@@ -124,7 +124,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregister"></a>IRegistrar::ResourceUnregister
+## <a name="iregistrarresourceunregister"></a><a name="resourceunregister"></a>I註冊人::資源未註冊
 
 取消註冊資源。
 
@@ -137,7 +137,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 
 ## <a name="see-also"></a>另請參閱
 
-[使用可置換的參數 (登錄器的前置處理器)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)<br/>
-[模組類別](../../atl/atl-module-classes.md)<br/>
+[使用可取代參數(註冊商的預處理器)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[模組類](../../atl/atl-module-classes.md)<br/>
 [登錄元件 (登錄器)](../../atl/atl-registry-component-registrar.md)

@@ -1,5 +1,5 @@
 ---
-title: CComFakeCriticalSection 類別
+title: CComFake臨界科類
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 39a9859380eba1b72768234eb8f43d80fca0143f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259153"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327845"
 ---
-# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 類別
+# <a name="ccomfakecriticalsection-class"></a>CComFake臨界科類
 
-這個類別會提供相同的方法， [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)但並不會提供重要的區段。
+此類提供的方法與[CCom臨界節](../../atl/reference/ccomcriticalsection-class.md)相同,但不提供關鍵部分。
 
 ## <a name="syntax"></a>語法
 
@@ -34,24 +34,24 @@ class CComFakeCriticalSection
 
 |名稱|描述|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|沒有任何作用，因為沒有任何重要的區段。|
-|[CComFakeCriticalSection::Lock](#lock)|沒有任何作用，因為沒有任何重要的區段。|
-|[CComFakeCriticalSection::Term](#term)|沒有任何作用，因為沒有任何重要的區段。|
-|[CComFakeCriticalSection::Unlock](#unlock)|沒有任何作用，因為沒有任何重要的區段。|
+|[CcomFake關鍵部分::Init](#init)|由於沒有關鍵部分,因此不執行任何操作。|
+|[CComFake 關鍵部份::鎖定](#lock)|由於沒有關鍵部分,因此不執行任何操作。|
+|[CComFake關鍵部分::學期](#term)|由於沒有關鍵部分,因此不執行任何操作。|
+|[CComFake關鍵部分::解鎖](#unlock)|由於沒有關鍵部分,因此不執行任何操作。|
 
 ## <a name="remarks"></a>備註
 
-`CComFakeCriticalSection` 鏡像中找到的方法[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 不過，`CComFakeCriticalSection`不會提供重要的區段中; 因此，其方法會執行任何動作。
+`CComFakeCriticalSection`鏡像[CCom臨界節](../../atl/reference/ccomcriticalsection-class.md)中找到的方法。 但是,`CComFakeCriticalSection`不提供關鍵部分;但是,不提供關鍵部分。因此,它的方法什麼都不做。
 
-一般而言，您可以使用`CComFakeCriticalSection`經由`typedef`名稱，或是`AutoCriticalSection`或`CriticalSection`。 使用時[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或是[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，這兩種`typedef`名稱參考`CComFakeCriticalSection`。 使用時[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，它們會參考[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)和`CComCriticalSection`分別。
+通常`CComFakeCriticalSection`,您`typedef`可以通過`AutoCriticalSection`名稱`CriticalSection`或 。 當使用[CCom 單線程模型](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)時,這`typedef`兩個名稱`CComFakeCriticalSection`都引用。 使用[CComMultiThread 模型](../../atl/reference/ccommultithreadmodel-class.md)時,它們分別參考[CComAuto 臨界部分](../../atl/reference/ccomautocriticalsection-class.md)和`CComCriticalSection`。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcore.h
+**標題:** atlcore.h
 
-##  <a name="init"></a>  CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CcomFake關鍵部分::Init
 
-沒有任何作用，因為沒有任何重要的區段。
+由於沒有關鍵部分,因此不執行任何操作。
 
 ```
 HRESULT Init() throw();
@@ -59,11 +59,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK。
+返回S_OK。
 
-##  <a name="lock"></a>  CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFake 關鍵部份::鎖定
 
-沒有任何作用，因為沒有任何重要的區段。
+由於沒有關鍵部分,因此不執行任何操作。
 
 ```
 HRESULT Lock() throw();
@@ -71,11 +71,11 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK。
+返回S_OK。
 
-##  <a name="term"></a>  CComFakeCriticalSection::Term
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFake關鍵部分::學期
 
-沒有任何作用，因為沒有任何重要的區段。
+由於沒有關鍵部分,因此不執行任何操作。
 
 ```
 HRESULT Term() throw();
@@ -83,11 +83,11 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK。
+返回S_OK。
 
-##  <a name="unlock"></a>  CComFakeCriticalSection::Unlock
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFake關鍵部分::解鎖
 
-沒有任何作用，因為沒有任何重要的區段。
+由於沒有關鍵部分,因此不執行任何操作。
 
 ```
 HRESULT Unlock() throw();
@@ -95,7 +95,7 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK。
+返回S_OK。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,8 +1,9 @@
 ---
 title: _set_abort_behavior
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - _set_abort_behavior
+- _o__set_abort_behavior
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: a63d4e77a91dafa4500d5fef8e9b5e94ee28cfbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fd3a3c2f99d1702cdccf68328c2122b965b2d078
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337875"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 指定要在程式異常終止時採取的動作。
 
 > [!NOTE]
-> 請勿使用[abort](abort.md)函式來關閉 Microsoft Store 應用程式，但不包括測試或偵測案例。 根據[Microsoft Store 的原則](/legal/windows/agreements/store-policies)，不允許以程式設計或 UI 方式關閉存放區應用程式。 如需詳細資訊，請參閱[UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。
+> 請勿使用[中止](abort.md)函數關閉 Microsoft 應用商店應用,除非在測試或調試方案中。 根據[Microsoft 應用商店策略](/legal/windows/agreements/store-policies),不允許以程式設計或 UI 方式關閉應用商店應用。 有關詳細資訊,請參閱[UWP 應用生命週期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>語法
 
@@ -51,11 +53,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>參數
 
-*flags*<br/>
-[Abort](abort.md)旗標的新值。
+*標誌*<br/>
+[中止](abort.md)標誌的新值。
 
-*mask*<br/>
-要設定之[中止](abort.md)旗標位的遮罩。
+*遮罩*<br/>
+[要設置的中止](abort.md)標誌位的掩碼。
 
 ## <a name="return-value"></a>傳回值
 
@@ -63,7 +65,9 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>備註
 
-有兩個[中止](abort.md)旗標： **_WRITE_ABORT_MSG**和 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**決定當程式異常終止時，是否要列印有用的文字訊息。 訊息指出應用程式已呼叫[abort](abort.md)函數。 預設行為是列印訊息。 如果設定， **_CALL_REPORTFAULT**會指定在呼叫[Abort](abort.md)時產生 Watson 損毀傾印並回報。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
+有兩個[中止](abort.md)旗標 **:_WRITE_ABORT_MSG**與 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**確定在程式異常終止時是否列印有用的文本消息。 消息指出應用程式已調用[中止](abort.md)函數。 預設行為是列印訊息。 **_CALL_REPORTFAULT**(如果已設定)指定在調用[中止](abort.md)時生成並報告 Watson 崩潰轉儲。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -71,7 +75,7 @@ unsigned int _set_abort_behavior(
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

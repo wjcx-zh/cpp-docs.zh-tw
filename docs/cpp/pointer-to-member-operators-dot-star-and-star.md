@@ -1,5 +1,5 @@
 ---
-title: 成員指標運算子：. * 和-&gt;*
+title: 指標到成員運算符:.* 和 -&gt;*
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2100933bf525f0717978528301049085eaecd4f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188333"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320331"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子：. * 和-&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>指標到成員運算符:.* 和 -&gt;*
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ expression ->* expression
 
 ## <a name="remarks"></a>備註
 
-成員指標運算子：. * 和->\*會針對運算式左邊指定的物件，傳回特定類別成員的值。  右邊則必須指定類別的成員。  以下範例會示範如何使用這些運算子：
+指標到成員運算子 .* 和 ->\*返回運算式左側指定物件的特定類成員的值。  右邊則必須指定類別的成員。  以下範例會示範如何使用這些運算子：
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -82,11 +82,11 @@ m_func1
 
 二元運算子 .* 會將其第一個運算元 (該運算元必須是類別類型的物件) 與其第二個運算元 (該運算元必須是成員指標類型) 結合。
 
-二元運算子 > * 會將其第一個運算元（必須是類別類型物件的指標）與其第二個運算元（必須是成員指標類型）結合。
+二進位運算符 ->+ 將其第一個操作數(必須是指向類類型物件的指標)與其第二個操作數(必須是指向成員的指標類型)合併。
 
 在包含 .* 運算子的運算式中，第一個運算元必須是第二個運算元中所指定成員指標本身所屬且可存取的類別類型，或是該類別所明確衍生且可存取的類型。
 
-在包含-> * 運算子的運算式中，第一個運算元必須是第二個運算元中所指定類型的「類別類型指標」類型，或者必須是明確衍生自該類別的類型。
+在包含 ->+ 運算符的運算式中,第一個操作數必須是第二個操作數中指定的類型的"指向類類型的指標"類型,或者它必須是明確派生自該類的類型。
 
 ## <a name="example"></a>範例
 
@@ -128,10 +128,10 @@ int main() {
 }
 ```
 
-. * 或->\* 成員指標運算子的結果是成員的指標宣告中所指定類型的物件或函式。 因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。 如果第二個運算元是左值，則這個結果會是左值。
+.* 或\*->指向成員的指標運算符的結果是指向成員的指標聲明中指定的類型的物件或函數。 因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。 如果第二個運算元是左值，則這個結果會是左值。
 
 > [!NOTE]
->  如果其中一個成員指標運算子的結果是函式，則結果只能做為函式呼叫運算子的運算元使用。
+> 如果其中一個成員指標運算子的結果是函式，則結果只能做為函式呼叫運算子的運算元使用。
 
 ## <a name="see-also"></a>另請參閱
 

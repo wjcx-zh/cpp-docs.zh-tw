@@ -1,5 +1,5 @@
 ---
-title: CDefaultHashTraits 類別
+title: CDefaultHashTraits類
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultHashTraits
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-ms.openlocfilehash: a51b4460d7fcdf778fce24b6e404b75190f598f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43932092621d44cfc8b07270df92e2765665f23f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245829"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327077"
 ---
-# <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 類別
+# <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits類
 
-這個類別提供靜態函式來計算雜湊值。
+此類提供用於計算哈希值的靜態函數。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ class CDefaultHashTraits
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-若要在集合中儲存的資料型別。
+要存儲在集合中的數據類型。
 
 ## <a name="members"></a>成員
 
@@ -37,21 +37,21 @@ class CDefaultHashTraits
 
 |名稱|描述|
 |----------|-----------------|
-|[CDefaultHashTraits::Hash](#hash)|（靜態）呼叫此函式來計算雜湊值的指定項目。|
+|[CDefaultHashTraits:哈希](#hash)|(靜態)調用此函數以計算給定元素的哈希值。|
 
 ## <a name="remarks"></a>備註
 
-這個類別包含單一的靜態函式會傳回指定項目的雜湊值。 這個類別會利用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。
+此類包含單個靜態函數,該函數返回給定元素的哈希值。 此類由[CDefault Element Traits 類](../../atl/reference/cdefaultelementtraits-class.md)使用。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="hash"></a>  CDefaultHashTraits::Hash
+## <a name="cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits:哈希
 
-呼叫此函式來計算雜湊值的指定項目。
+調用此函數以計算給定元素的哈希值。
 
 ```
 static ULONG Hash(const T& element) throw();
@@ -59,16 +59,16 @@ static ULONG Hash(const T& element) throw();
 
 ### <a name="parameters"></a>參數
 
-*element*<br/>
+*元素*<br/>
 元素。
 
 ### <a name="return-value"></a>傳回值
 
-傳回雜湊值。
+返回哈希值。
 
 ### <a name="remarks"></a>備註
 
-預設雜湊演算法是非常簡單： 傳回的值是項目數目。 如果需要更複雜的演算法，則會覆寫這個函式。
+默認哈希演演演算法非常簡單:返回值是元素編號。 如果需要更複雜的演演演算法,則重寫此函數。
 
 ## <a name="see-also"></a>另請參閱
 

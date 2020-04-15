@@ -1,5 +1,5 @@
 ---
-title: CComUnkArray 類別
+title: CComUnkarray 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CComUnkArray
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-ms.openlocfilehash: 7a73158e407279b529f76484e4c32f0a8a7a63c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1d2f0296394d3979ef4f152e3f902c89adf5b45
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259452"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327310"
 ---
-# <a name="ccomunkarray-class"></a>CComUnkArray 類別
+# <a name="ccomunkarray-class"></a>CComUnkarray 類別
 
-這個類別會儲存`IUnknown`指標，並設計來做為參數[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)範本類別。
+此類存儲`IUnknown`指標,並設計為用作[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)範本類的參數。
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +36,7 @@ class CComUnkArray
 #### <a name="parameters"></a>參數
 
 *nMaxSize*<br/>
-最大數目`IUnknown`可保存於靜態陣列的指標。
+可在靜態陣列中`IUnknown`持有的指標的最大數量。
 
 ## <a name="members"></a>成員
 
@@ -44,37 +44,37 @@ class CComUnkArray
 
 |名稱|描述|
 |----------|-----------------|
-|[CComUnkArray::CComUnkArray](#ccomunkarray)|建構函式。|
+|[CComUnkarray:CComUnkarray](#ccomunkarray)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CComUnkArray::Add](#add)|呼叫這個方法來加入`IUnknown`陣列的指標。|
-|[CComUnkArray::begin](#begin)|讓指標回到第一個`IUnknown`集合中的指標。|
-|[CComUnkArray::end](#end)|讓指標回到越過最後一個`IUnknown`集合中的指標。|
-|[CComUnkArray::GetCookie](#getcookie)|呼叫此方法，以取得相關聯的 cookie 指定`IUnknown`指標。|
-|[CComUnkArray::GetUnknown](#getunknown)|呼叫這個方法來取得`IUnknown`與指定的 cookie 相關聯的指標。|
-|[CComUnkArray::Remove](#remove)|呼叫這個方法來移除`IUnknown`從陣列的指標。|
+|[CComUnkarray:新增](#add)|調用此方法以向陣組添加`IUnknown`指標。|
+|[CComUnkarray:開始](#begin)|返回指向集合中第一`IUnknown`個指標的指標。|
+|[CComUnkarray:結束](#end)|返回指向集合中最後`IUnknown`一個指標的指標。|
+|[CComUnkarray:取得餅乾](#getcookie)|調用此方法獲取與給定`IUnknown`指標關聯的 Cookie。|
+|[CComUnkarray:取得未知](#getunknown)|調用此方法獲取與給定`IUnknown`Cookie 關聯的指標。|
+|[CComUnkarray::刪除](#remove)|呼叫此方法從陣列中刪除`IUnknown`指標。|
 
 ## <a name="remarks"></a>備註
 
-`CComUnkArray` 保留固定的數目的`IUnknown`指標，每個介面的連接上的點。 `CComUnkArray` 可用的參數當做[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)範本類別。 `CComUnkArray<1>` 是的樣板特製化`CComUnkArray`，已經過最佳化，一個連接點。
+`CComUnkArray`包含固定數量的`IUnknown`指標,每個指標位於連接點上。 `CComUnkArray`可用作[IConnectPointImpl](../../atl/reference/iconnectionpointimpl-class.md)範本類的參數。 `CComUnkArray<1>`是已針對一個`CComUnkArray`連接點優化的範本專門化。
 
-`CComUnkArray`方法[開始](#begin)並[結束](#end)可用來循環 （例如，當引發事件時） 的所有連接點。
+方法`CComUnkArray`[開始和結束](#begin)[可用於迴圈](#end)遍歷所有連接點(例如,觸發事件時)。
 
-請參閱[新增連接點物件](../../atl/adding-connection-points-to-an-object.md)如需有關自動建立連接點 proxy。
+有關自動建立連接點代理的詳細資訊[,請參閱向物件新增連接點](../../atl/adding-connection-points-to-an-object.md)。
 
 > [!NOTE]
-> **附註**類別[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)正由**加入類別**精靈建立具有連接點的控制項時。 如果您想要以手動方式指定連接點的數目，變更 從參考`CComDynamicUnkArray`要`CComUnkArray<` *n* `>`，其中*n*是連接點的數目必要的。
+> **注意**添加**類**嚮導在創建具有連接點的控制項時使用類[CComDynamicUnkarray。](../../atl/reference/ccomdynamicunkarray-class.md) 如果要手動指定連接點的數量,請將引用從`CComDynamicUnkArray`更改`CComUnkArray<`為*n* `>`,其中*n*是所需的連接點數。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標題:** atlcom.h
 
-##  <a name="add"></a>  CComUnkArray::Add
+## <a name="ccomunkarrayadd"></a><a name="add"></a>CComUnkarray:新增
 
-呼叫這個方法來加入`IUnknown`陣列的指標。
+調用此方法以向陣組添加`IUnknown`指標。
 
 ```
 DWORD Add(IUnknown* pUnk);
@@ -82,16 +82,16 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*<br/>
-呼叫這個方法來加入`IUnknown`陣列的指標。
+*龐克*<br/>
+調用此方法以向陣組添加`IUnknown`指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回陣列是否不能夠容納新的指標，以新加入的指標或 0 相關聯的 cookie。
+返回與新添加的指標關聯的 Cookie,如果數位不夠大以包含新指標,則返回 0。
 
-##  <a name="begin"></a>  CComUnkArray::begin
+## <a name="ccomunkarraybegin"></a><a name="begin"></a>CComUnkarray:開始
 
-傳回的集合開頭的指標`IUnknown`介面指標。
+返回指向介面指標集合開頭的`IUnknown`指標。
 
 ```
 IUnknown**
@@ -100,15 +100,15 @@ IUnknown**
 
 ### <a name="return-value"></a>傳回值
 
-指標`IUnknown`介面指標。
+指向介面指標的`IUnknown`指標。
 
 ### <a name="remarks"></a>備註
 
-集合包含儲存在本機作為的介面指標`IUnknown`。 您將每個轉換`IUnknown`介面為實際的介面型別，並透過它然後呼叫。 您不需要先查詢介面。
+集合包含指向本地存儲為`IUnknown`的介面的指標。 將每個`IUnknown`介面強制轉換為真正的介面類型,然後通過該介面類型調用它。 您不需要首先查詢介面。
 
-使用之前`IUnknown`介面，您應該檢查，它不是 NULL。
+在使用介面`IUnknown`之前,應檢查該介面是否為 NULL。
 
-##  <a name="ccomunkarray"></a>  CComUnkArray::CComUnkArray
+## <a name="ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a>CComUnkarray:CComUnkarray
 
 建構函式。
 
@@ -118,11 +118,11 @@ CComUnkArray();
 
 ### <a name="remarks"></a>備註
 
-設定集合來保有`nMaxSize``IUnknown`指標，並初始化為 NULL 指標。
+將集合集集用於`nMaxSize``IUnknown`保存指標,並初始化指向 NULL 的指標。
 
-##  <a name="end"></a>  CComUnkArray::end
+## <a name="ccomunkarrayend"></a><a name="end"></a>CComUnkarray:結束
 
-讓指標回到越過最後一個`IUnknown`集合中的指標。
+返回指向集合中最後`IUnknown`一個指標的指標。
 
 ```
 IUnknown**
@@ -131,17 +131,17 @@ IUnknown**
 
 ### <a name="return-value"></a>傳回值
 
-指標`IUnknown`介面指標。
+指向介面指標的`IUnknown`指標。
 
 ### <a name="remarks"></a>備註
 
-`CComUnkArray`方法`begin`和`end`可以用來引發事件時執行迴圈的所有連接點，例如。
+`CComUnkArray`方法`begin``end`, 可用於迴圈遍曆所有連接點,例如,觸發事件時。
 
 [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]
 
-##  <a name="getcookie"></a>  CComUnkArray::GetCookie
+## <a name="ccomunkarraygetcookie"></a><a name="getcookie"></a>CComUnkarray:取得餅乾
 
-呼叫此方法，以取得相關聯的 cookie 指定`IUnknown`指標。
+調用此方法獲取與給定`IUnknown`指標關聯的 Cookie。
 
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
@@ -150,19 +150,19 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="parameters"></a>參數
 
 *ppFind*<br/>
-`IUnknown`相關聯的 cookie 是必要的指標。
+需要`IUnknown`關聯的 Cookie 的指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回具有相關聯的 cookie`IUnknown`指標或 0，如果沒有相符的`IUnknown`找到指標。
+返回與`IUnknown`指標關聯的 Cookie,如果未找到匹配`IUnknown`的指標,則返回 0。
 
 ### <a name="remarks"></a>備註
 
-如果有一個以上的執行個體的相同`IUnknown`指標，此函數會傳回第一個 cookie。
+如果同`IUnknown`一指標有多個實例,則此函數將返回第一個指標的 Cookie。
 
-##  <a name="getunknown"></a>  CComUnkArray::GetUnknown
+## <a name="ccomunkarraygetunknown"></a><a name="getunknown"></a>CComUnkarray:取得未知
 
-呼叫這個方法來取得`IUnknown`與指定的 cookie 相關聯的指標。
+調用此方法獲取與給定`IUnknown`Cookie 關聯的指標。
 
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -171,15 +171,15 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="parameters"></a>參數
 
 *dwCookie*<br/>
-Cookie 的相關聯`IUnknown`指標是必要。
+需要關聯`IUnknown`指標的 Cookie。
 
 ### <a name="return-value"></a>傳回值
 
-傳回`IUnknown`指標或如果找不到任何相符的 cookie 是 NULL。
+如果未找到`IUnknown`匹配的 Cookie,則傳回指標或 NULL。
 
-##  <a name="remove"></a>  CComUnkArray::Remove
+## <a name="ccomunkarrayremove"></a><a name="remove"></a>CComUnkarray::刪除
 
-呼叫這個方法來移除`IUnknown`從陣列的指標。
+呼叫此方法從陣列中刪除`IUnknown`指標。
 
 ```
 BOOL Remove(DWORD dwCookie);
@@ -188,13 +188,13 @@ BOOL Remove(DWORD dwCookie);
 ### <a name="parameters"></a>參數
 
 *dwCookie*<br/>
-Cookie 參考`IUnknown`移除從陣列的指標。
+引用要從陣列中刪除`IUnknown`的指標的 Cookie。
 
 ### <a name="return-value"></a>傳回值
 
-傳回為 true，則如果指標不移除，否則為 FALSE。
+如果刪除指標,則返回 TRUE,否則返回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 
-[CComDynamicUnkArray 類別](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
+[CComDynamicUnkarray 類別](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

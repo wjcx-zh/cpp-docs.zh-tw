@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d6e12a1003ea125b0da4bfef580d8096e97553a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319274"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336106"
 ---
-# <a name="qifist-suppress-ftol"></a>/QIfist (抑制 _ftol)
+# <a name="qifist-suppress-_ftol"></a>/QIfist (抑制 _ftol)
 
-已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。
+已被取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。
 
 ## <a name="syntax"></a>語法
 
@@ -28,40 +28,40 @@ ms.locfileid: "62319274"
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
->  **/Qifist**僅供以編譯器目標 x86; 這個編譯器選項不適用於以 x64 為目標的編譯器 Arm。
+> **/QIfist**僅在針對 x86 的編譯器中可用;針對 x64 或 ARM 的編譯器中不提供此編譯器選項。
 
-除了從浮點類型轉換成整數類資料類型，`_ftol`函式可確保趨近於零 （截斷），是藉由設定 10 和 11 位元的控制字組的浮點單位 (FPU) 的捨入模式。 這可確保會從浮點類型轉換成整數類資料類型發生 ANSI C 標準 （數字的小數部分會被捨棄） 所述。 使用時 **/QIfist**，這項保證就不再適用。 捨入模式將會是其中四個 Intel 參考手冊所述：
+除了從浮點類型轉換為積分類型外,`_ftol`該函數還通過設置控制字位 10 和 11 來確保浮點單元 (FPU) 的舍入模式朝零(截斷) 方向發展。 這保證了從浮點類型轉換為積分類型發生,如 ANSI C 標準所述(放棄數位的小數部分)。 使用 **/QIfist 時**,此保證不再適用。 進一個模式將是英特爾參考手冊中記錄的四種模式之一:
 
-- 四捨五入到最接近 （偶數如果等距）
+- 向最近旋轉(偶數,如果等距)
 
-- 往負無限大方向捨入
+- 向負無窮大圓
 
-- 趨向正無限大捨入
+- 向正無窮大圓
 
-- 趨近於零的捨入
+- 向零旋轉
 
-您可以使用[_control87、 _controlfp， \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C 執行階段函式來修改 FPU 捨入行為。 捨入模式的 FPU 預設值是"趨向最接近。 」 使用 **/QIfist**可以改善效能，您的應用程式，但不是沒有風險。 您應該徹底測試您的程式碼所依賴的程式碼以在建置之前，捨入模式的部分 **/QIfist**在生產環境中。
+您可以使用[_control87、_controlfp、_control87_2 \_ ](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C 執行時函數來修改 FPU 的舍入行為。 FPU 的預設舍入模式為"向最近旋轉」。 使用 **/QIfist**可以提高應用程式的性能,但不能沒有風險。 在依賴生產環境中使用 **/QIfist**構建的代碼之前,應徹底測試代碼對舍入模式敏感的部分。
 
-[/arch (x86)](arch-x86.md)並 **/QIfist**不適用於在相同的編譯模組。
+[/arch (x86)](arch-x86.md)和 **/QIfist**不能用於同一編譯和。
 
 > [!NOTE]
->  **/Qifist**是不作用中預設因為捨入位元也會影響浮點數到浮點數會指向捨入 （發生於每次計算之後），因此當您設定的旗標 （趨近於零） 的 C 樣式捨入，您的浮點數計算可能會不同。 **/Qifist**不應在截斷的小數部分的浮點數的預期行為取決於您的程式碼。 如果您不確定，請不要使用 **/QIfist**。
+> **/QIfist**在預設情況下無效,因為舍入位也會影響浮點到浮點舍入(每次計算后發生),因此,當您為 C 樣式(向零)舍入設置標誌時,浮動點計算可能會有所不同。 如果代碼依賴於截斷浮點數的分幾部分的預期行為,則不應使用 **/QIfist。** 如果您不確定,請勿使用 **/QIfist**。
 
-**/QIfist**選項已被取代，在 Visual Studio 2005 中啟動。 編譯器已對有長足的改進在 float int 轉換速度。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
+**/QIfist**選項從 Visual Studio 2005 開始被棄用。 編譯器在浮點到 int 轉換速度方面進行了顯著改進。 關於棄編譯器選項的清單,請參閱[按類別列出的編譯器選項](compiler-options-listed-by-category.md)中的**棄用與刪除編譯器選項**。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 按一下 [C/C++] **** 資料夾。
 
-1. 按一下 [命令列]  屬性頁。
+1. 按一下 [命令列] **** 屬性頁。
 
-1. 在 [其他選項]  方塊中，輸入編譯器選項。
+1. 在 [其他選項] **** 方塊中，輸入編譯器選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>＞。
 
 ## <a name="see-also"></a>另請參閱
 

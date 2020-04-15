@@ -1,8 +1,9 @@
 ---
 title: wcrtomb
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb
+- _o_wcrtomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eda857b80404aebe46b090741e0b56d4fe692f34
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328102"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -56,14 +58,14 @@ size_t wcrtomb(
 
 ### <a name="parameters"></a>參數
 
-*mbchar*<br/>
+*姆布查爾*<br/>
 產生的多位元組轉換字元。
 
-*wchar*<br/>
+*瓦查爾*<br/>
 要轉換的寬字元。
 
 *mbstate*<br/>
-**Mbstate_t**物件的指標。
+指向**mbstate_t**物件的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -71,17 +73,19 @@ size_t wcrtomb(
 
 ## <a name="remarks"></a>備註
 
-**Wcrtomb**函式會將寬字元（從包含在*mbstate*中的指定轉換狀態開始，從*wchar*中包含的值）轉換成*mbchar*所代表的位址。 傳回值是表示對應的多位元組字元所需的位元組數目，但不會傳回超過**MB_CUR_MAX**個位元組。
+**wcrtomb**函數將寬字元(從*mbstate*中包含的指定轉換狀態開始)從*wchar*中包含的值轉換為*mbchar*表示的位址。 返回值是表示相應多位元位元元所需的位元組數,但不會返回超過**MB_CUR_MAX**位元組。
 
-如果*mbstate*為 null，則會使用包含*mbchar*轉換狀態的內部**mbstate_t**物件。 如果字元順序*wchar*沒有對應的多位元組字元標記法，則會傳回-1，並將**Errno**設定為**EILSEQ**。
+如果*mbstate*為 null,則使用包含*mbchar*轉換狀態的內部**mbstate_t**物件。 如果字元序列*wchar*沒有相應的多位元位元表示形式,則傳回 -1 並將**errno**設定為**EILSEQ**。
 
-**Wcrtomb**函式與[wctomb、_wctomb_l](wctomb-wctomb-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了**wcsrtombs**的後續呼叫（而不是**wcstombs**），應用程式會使用**wcsrlen**而非**wcsnlen**。
+**wcrtomb**函數不同於[wctomb,_wctomb_l](wctomb-wctomb-l.md)其可重新啟動性。 轉換狀態以*mbstate*儲存,用於後續對相同或其他可重新啟動函數的調用。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如,如果使用隨後對**wcsrtombs**的調用而不是**wcstombs,** 則應用程式將使用**wcsrlen**而不是**wcsnlen。**
 
-在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-只要目前線程中的函式在執行中且*mbstate*為**null 時，** **wcrtomb**函式就是多執行緒安全。
+**wcrtomb**函數是多線程安全的,只要此函數執行時當前線程呼叫中沒有函數**設置局部性**,並且*mbstate*為null。
 
 ## <a name="example"></a>範例
 

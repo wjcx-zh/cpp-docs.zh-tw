@@ -5,26 +5,26 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 70acf3b5b78e0bc58555ef3f1f8e72e8aed74dd5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422091"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353256"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>在 Visual Studio 中使用原生多目標來建置舊專案
 
-一般來說，建議您在安裝最新版 Visual Studio 時更新專案。 更新專案和程式碼的成本通常高於新 IDE、編譯器、程式庫和工具的優點。 不過，我們知道您可能無法更新某些專案。 您可能會有繫結至舊版程式庫或平台的二進位檔，但基於維護原因而無法進行升級。 您的程式碼可以使用非標準語言建構，而非標準語言建構會在您移至較新編譯器時中斷。 您的程式碼可能會依賴針對特定 Visual C++ 版本所編譯的協力廠商程式庫。 或者，您可能必須針對將目標設為特定舊版 Visual C++ 的其他版本產生程式庫。
+一般來說，建議您在安裝最新版 Visual Studio 時更新專案。 更新專案和程式碼的成本通常高於新 IDE、編譯器、程式庫和工具的優點。 不過，我們知道您可能無法更新某些專案。 您可能有綁定到舊庫或平臺的二進位檔,出於維護原因無法升級。 您的程式碼可以使用非標準語言建構，而非標準語言建構會在您移至較新編譯器時中斷。 您的程式碼可能會依賴針對特定 Visual C++ 版本所編譯的協力廠商程式庫。 或者，您可能必須針對將目標設為特定舊版 Visual C++ 的其他版本產生程式庫。
 
 幸運的是，您可以使用 Visual Studio 2017 和 Visual Studio 2015 來建置目標為舊版編譯器工具組和程式庫的專案。 您不需要升級 Visual Studio 2010、Visual Studio 2012、Visual Studio 2013 或 Visual Studio 2015 專案，即可利用 IDE 中的新功能：
 
-  - 新的 C++ 重構功能和編輯器實驗性功能
-  - 新的診斷工具偵錯工具視窗和錯誤清單視窗
-  - 改寫的中斷點、例外狀況視窗和新的效能提示
-  - 新的程式碼瀏覽和搜尋工具
-  - 新的 C++ 快速修正和生產力支援工具延伸模組。
+- 新的 C++ 重構功能和編輯器實驗性功能
+- 新的診斷工具偵錯工具視窗和錯誤清單視窗
+- 改寫的中斷點、例外狀況視窗和新的效能提示
+- 新的程式碼瀏覽和搜尋工具
+- 新的 C++ 快速修正和生產力支援工具延伸模組。
 
-您也可以將目標設為 Visual Studio 2008 專案，但它們必須進行變更才能使用。 如需詳細資料，請參閱 **Visual Studio 2008 的指示**一節。
+您也可以將目標設為 Visual Studio 2008 專案，但它們必須進行變更才能使用。 有關詳細資訊,請參閱**Visual Studio 2008**說明部分。
 
 最新版 Visual Studio 支援專案的原生多目標和往返。 原生多目標是使用舊版 Visual Studio 所安裝的工具組來建置的最新 IDE 能力。 往返是最新 IDE 載入舊版 IDE 所建立的專案而不對專案進行任何變更的能力。 如果您並存安裝最新版 Visual Studio 與現有版本，則可以搭配使用新版 IDE 與現有版本的編譯器和工具來建置專案。 您小組的其他成員可以繼續在舊版 Visual Studio 中使用專案。
 
@@ -32,7 +32,7 @@ ms.locfileid: "79422091"
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>如何在 Visual Studio 中使用原生多目標
 
-並存安裝 Visual Studio 與舊版本之後，請在新版 Visual Studio 中開啟現有專案。 載入專案時，Visual Studio 會詢問您是否要將它升級成使用最新的 C++ 編譯器和程式庫。 因為您想要專案保留舊版編譯器和程式庫，所以請選擇 [取消] 按鈕。
+並存安裝 Visual Studio 與舊版本之後，請在新版 Visual Studio 中開啟現有專案。 載入專案時，Visual Studio 會詢問您是否要將它升級成使用最新的 C++ 編譯器和程式庫。 因為您想要專案保留舊版編譯器和程式庫，所以請選擇 [取消]**** 按鈕。
 
 Visual Studio 一律會升級您的專案。 若要避免在每次載入專案時看到升級對話方塊，您可以在專案中或者其所匯入的 .props 或 .targets 檔案中定義下列屬性：
 
@@ -40,22 +40,22 @@ Visual Studio 一律會升級您的專案。 若要避免在每次載入專案�
 
 當您想要升級專案時，必須移除這個屬性。
 
-如果您選擇不升級，則 Visual Studio 不會變更方案或專案檔。 當您建置專案時，產生的二進位檔會與您使用舊版 Visual Studio 所建置的二進位檔完全相容。 原因是 Visual Studio 會使用相同的 C++ 編譯器，並且連結舊版 IDE 隨附的相同程式庫。 這也是您選擇 [取消] 時，升級對話方塊警告您保留已安裝的舊版 Visual Studio 的原因。
+如果您選擇不升級，則 Visual Studio 不會變更方案或專案檔。 當您建置專案時，產生的二進位檔會與您使用舊版 Visual Studio 所建置的二進位檔完全相容。 原因是 Visual Studio 會使用相同的 C++ 編譯器，並且連結舊版 IDE 隨附的相同程式庫。 這也是您選擇 [取消]**** 時，升級對話方塊警告您保留已安裝的舊版 Visual Studio 的原因。
 
 ## <a name="instructions-for-visual-studio-2008"></a>Visual Studio 2008 的指示
 
-Visual Studio 2008 有自己適用於 C++ 的專屬建置系統，稱為 **VCBuild**。 從 Visual Studio 2010 開始，Visual Studio C++ 專案已變更成使用 **MSBuild**。 這表示不論是永久升級或多目標，您都必須完成更新步驟，才能在最新版本的 Visual Studio 中建立 Visual Studio 2008 專案。 已更新的專案仍然會產生與使用 Visual Studio 2008 IDE 所建立的二進位檔完全相符的二進位檔。
+Visual Studio 2008 有它自己的專用構建系統C++稱為**VCBuild**。 從 Visual Studio 2010 開始，Visual Studio C++ 專案已變更成使用 **MSBuild**。 這意味著,無論是永久升級還是多目標級,都必須執行更新步驟,才能在最新版本的 Visual Studio 中構建 Visual Studio 2008 專案。 已更新的專案仍然會產生與使用 Visual Studio 2008 IDE 所建立的二進位檔完全相符的二進位檔。
 
-首先，除了 Visual Studio 的目前版本之外，您還必須在與 Visual Studio 2008 相同的電腦上安裝 Visual Studio 2010。 只有 Visual Studio 2010 才會安裝將目標設為 Visual Studio 2008 專案所需的 **MSBuild** 指令碼。
+首先，除了 Visual Studio 的目前版本之外，您還必須在與 Visual Studio 2008 相同的電腦上安裝 Visual Studio 2010。 只有 Visual Studio 2010 安裝面向 Visual Studio 2008 專案所需的**MSBuild**腳本。
 
-接下來，您必須將 Visual Studio 2008 方案和專案更新成目前 Visual Studio 版本。 建議您在升級之前建立專案和方案檔的備份。 若要開始升級程序，請在目前 Visual Studio 版本中開啟方案。 當您收到升級提示時，請檢閱出現的資訊，然後選擇 [確定] 開始升級。 如果方案中有多個專案，則必須更新。這個精靈會建立與現有 .vcproj 檔案並存的新 .vcxproj 專案檔。 只要您同時擁有原始 .sln 檔案的複本，升級就不會對現有 Visual Studio 2008 專案造成其他影響。
+接下來，您必須將 Visual Studio 2008 方案和專案更新成目前 Visual Studio 版本。 建議您在升級之前建立專案和方案檔的備份。 若要開始升級程序，請在目前 Visual Studio 版本中開啟方案。 當您收到升級提示時，請檢閱出現的資訊，然後選擇 [確定]**** 開始升級。 如果方案中有多個專案，則必須更新。這個精靈會建立與現有 .vcproj 檔案並存的新 .vcxproj 專案檔。 只要您同時擁有原始 .sln 檔案的複本，升級就不會對現有 Visual Studio 2008 專案造成其他影響。
 
 > [!NOTE]
-> 下列步驟僅適用于多目標案例。 如果您想要將專案永久升級為較新的工具組，則下一個步驟是儲存專案、在 Visual Studio 2019 中開啟，然後解決出現在該處的組建問題。
+> 以下步驟僅適用於多目標方案。 如果打算將專案永久升級到以後的工具集,則下一步是保存專案,在 Visual Studio 2019 中打開該專案,並解決那裡出現的生成問題。
 
-升級完成時，如果記錄檔報表具有任何專案的錯誤或警告，則請仔細進行檢閱。 從 **VCBuild** 轉換成 **MSBuild** 可能會造成問題。 請確定您了解並實作報表中所列出的任何動作項目。 如需詳細資訊，以了解升級記錄報表以及將 **VCBuild** 轉換為 **MSBuild** 時可能發生的問題，請參閱這篇 [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) (C++ 原生多目標) 部落格文章。
+升級完成時，如果記錄檔報表具有任何專案的錯誤或警告，則請仔細進行檢閱。 從**VCBuild**轉換為**MSBuild**可能會導致問題。 請確定您了解並實作報表中所列出的任何動作項目。 有關升級日誌報告以及將**VCBuild**轉換為**MSBuild**時可能出現的問題的詳細資訊,請參閱此[C++本機多目標](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)博客帖子。
 
-如果完成專案升級，並且您已更正記錄檔中的任何問題，則方案會實際將目標設為最新工具組。 在最後一個步驟，將方案中每個專案的屬性都變更成使用 Visual Studio 2008 工具組。 在 Visual Studio 的目前版本中載入方案之後，針對方案中的每個專案，開啟 [專案屬性頁] 對話方塊：以滑鼠右鍵按一下方案總管中的專案，然後選取 [屬性]。 在 [屬性頁] 對話方塊中，將 [組態] 下拉式值變更為 [所有組態]。 在 [組態屬性] 中，選取 [一般]，然後將 [平台工具組] 變更為 [Visual Studio 2008 (v90)]。
+如果完成專案升級，並且您已更正記錄檔中的任何問題，則方案會實際將目標設為最新工具組。 在最後一個步驟，將方案中每個專案的屬性都變更成使用 Visual Studio 2008 工具組。 在 Visual Studio 的目前版本中載入方案之後，針對方案中的每個專案，開啟 [專案屬性頁]**** 對話方塊：以滑鼠右鍵按一下方案總管**** 中的專案，然後選取 [屬性]****。 在 [屬性頁]**** 對話方塊中，將 [組態]**** 下拉式值變更為 [所有組態]****。 在 [組態屬性]**** 中，選取 [一般]****，然後將 [平台工具組]**** 變更為 [Visual Studio 2008 (v90)]****。
 
 在這項變更之後，當您在目前 Visual Studio 版本中建置方案時，會使用 Visual Studio 2008 編譯器和程式庫來產生專案二進位檔。
 
@@ -65,9 +65,9 @@ Visual Studio 2008 有自己適用於 C++ 的專屬建置系統，稱為 **VCBui
 
 如需目前可用的下載，請參閱[下載舊版 Visual Studio 軟體](https://visualstudio.microsoft.com/vs/older-downloads/)。
 
-安裝這些產品之後，[屬性頁] 對話方塊的 [平台工具組] 屬性下拉式清單會自動更新，以顯示可用的工具組。 您現在可以使用最新版的 Visual Studio 來建置適用於這些舊版工具組的專案，而不需要轉換或升級這些專案。
+安裝這些產品之後，[屬性頁]**** 對話方塊的 [平台工具組]**** 屬性下拉式清單會自動更新，以顯示可用的工具組。 您現在可以使用最新版的 Visual Studio 來建置適用於這些舊版工具組的專案，而不需要轉換或升級這些專案。
 
 ## <a name="see-also"></a>另請參閱
 
-[從舊版的 Visual 升級專案C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[從早期版本的 Visual C++升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

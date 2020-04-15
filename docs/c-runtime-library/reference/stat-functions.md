@@ -1,6 +1,6 @@
 ---
 title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstat64
 - _stati64
@@ -14,6 +14,14 @@ api_name:
 - _stat64
 - _stat64i32
 - _wstat32i64
+- _o__stat32
+- _o__stat32i64
+- _o__stat64
+- _o__stat64i32
+- _o__wstat32
+- _o__wstat32i64
+- _o__wstat64
+- _o__wstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -109,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 5a6e78c0d98871e4becbb5e7411d9c819e9d0596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 32a96a93eb8a18e366ac7a075b414dbca732fb61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957953"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355409"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -175,47 +184,49 @@ int _wstat64i32(
 
 ### <a name="parameters"></a>參數
 
-*path*<br/>
+*路徑*<br/>
 包含現有檔案或目錄路徑的字串指標。
 
-*buffer*<br/>
+*緩衝區*<br/>
 儲存結果的結構指標。
 
 ## <a name="return-value"></a>傳回值
 
-上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值-1 表示發生錯誤，在此情況下， **errno**會設定為**ENOENT**，表示找不到檔案名或路徑。 **EINVAL**的傳回值表示不正確參數。在此情況下， **errno**也會設為**EINVAL** 。
+上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值 -1 表示錯誤,在這種情況下 **,errno**設置為**ENOENT,** 指示找不到檔名或路徑。 **EINVAL**的返回值指示無效的參數;在這種情況下 **,errno**也設置為**EINVAL。**
 
-如需這個及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
+有關此代碼和其他返回代碼的詳細資訊[,請參閱_doserrno、errno、_sys_errlist 和_sys_nerr。](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
-如果檔案的日期戳記晚于1970年1月1日午夜，而在23:59:59 年12月 31 3000 日（UTC）之前，則可以表示，除非您使用 **_stat32**或 **_wstat32**，或已定義 **_USE_32BIT_TIME_T**，在此情況下，日期可以是僅表示到23:59:59 年1月 18 2038 日，UTC。
+如果檔的日期戳晚於 1970 年 1 月 1 日午夜和 UTC 12 月 31 日 23:59:59 之前,則可以表示該日期戳,除非您使用 **_stat32**或 **_wstat32,** 或者已定義 **_USE_32BIT_TIME_T**,在這種情況下,該日期只能表示到 2038 年 1 月 18 日 23:59:59,UTC。
 
 ## <a name="remarks"></a>備註
 
-**_Stat**函數會取得*path*所指定之檔案或目錄的相關資訊，並將它儲存在*buffer*所指向的結構中。 **_stat**會自動將多位元組字元字串引數處理為適當，並根據目前使用中的多位元組字碼頁來辨識多位元組字元序列。
+**_stat**函數獲取有關*路徑*指定的檔或目錄的資訊,並將其存儲在*緩衝區*指向的結構中。 **_stat**根據需要自動處理多位元位元串參數,根據當前使用的多位元組碼頁識別多位元組位元序列。
 
-**_wstat**是寬字元版本的 **_stat**; **_wstat**的*path*引數是寬字元字串。 **_wstat**和 **_stat**的行為相同，不同之處在于 **_wstat**不會處理多位元組字元字串。
+**_wstat**是 **_stat**的寬字元版本;**_wstat的***路徑*參數是寬字元字串。 **_wstat**和 **_stat**行為相同,只是 **_wstat**不處理多位元組位元串。
 
-這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數位尾碼（**32**或**64**）表示所使用的時間類型大小;第二個尾碼為**i32**或**i64**，指出檔案大小是否以32位或64位整數表示。
+這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數字後綴 (**32**或**64**) 表示使用的時間類型的大小;第二個後綴是**i32**或**i64,** 指示檔大小是表示為 32 位元還是 64 位整數。
 
-**_stat**相當於 **_stat64i32**，而**struct** **_stat**包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則這會是 true。 **_stat**使用32位時間，而**結構** **_stat**包含32位時間。 **_Stati64**也是如此。
+**_stat**等效於 **_stat64i32** **,結構****_stat**包含 64 位元時間。 除非定義了 **_USE_32BIT_TIME_T,** 否則這是事實,在這種情況下,舊行為有效;**_stat**使用 32 位時間 **,結構****_stat**包含 32 位元時間。 **_stati64**也是如此。
 
 > [!NOTE]
-> **_wstat**無法用於 Windows Vista 符號連結。 在這些情況下， **_wstat**一律會報告檔案大小為0。 **_stat**可與符號連結正常搭配運作。
+> **_wstat**不適用於 Windows Vista 符號連結。 在這些情況下 **,_wstat**將始終報告檔大小為 0。 **_stat**使用符號連結正常工作。
 
-這個函式會驗證它的參數。 如果*路徑*或*緩衝區*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+這個函式會驗證它的參數。 如果*路徑*或*緩衝區*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>_stat 的時間類型和檔案長度類型版本
 
 |函式|是否已定義 _USE_32BIT_TIME_T？|時間類型|檔案長度類型|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat**、 **_wstat**|未定義|64 位元|32 位元|
-|**_stat**、 **_wstat**|已定義|32 位元|32 位元|
-|**_stat32**、 **_wstat32**|不會受到巨集定義的影響|32 位元|32 位元|
-|**_stat64**、 **_wstat64**|不會受到巨集定義的影響|64 位元|64 位元|
-|**_stati64**、 **_wstati64**|未定義|64 位元|64 位元|
-|**_stati64**、 **_wstati64**|已定義|32 位元|64 位元|
-|**_stat32i64**、 **_wstat32i64**|不會受到巨集定義的影響|32 位元|64 位元|
-|**_stat64i32**、 **_wstat64i32**|不會受到巨集定義的影響|64 位元|32 位元|
+|**_stat**, **_wstat**|未定義|64 位元|32 位元|
+|**_stat**, **_wstat**|已定義|32 位元|32 位元|
+|**_stat32**, **_wstat32**|不會受到巨集定義的影響|32 位元|32 位元|
+|**_stat64**, **_wstat64**|不會受到巨集定義的影響|64 位元|64 位元|
+|**_stati64**, **_wstati64**|未定義|64 位元|64 位元|
+|**_stati64**, **_wstati64**|已定義|32 位元|64 位元|
+|**_stat32i64**, **_wstat32i64**|不會受到巨集定義的影響|32 位元|64 位元|
+|**_stat64i32**, **_wstat64i32**|不會受到巨集定義的影響|64 位元|32 位元|
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -227,30 +238,30 @@ int _wstat64i32(
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-**_Stat**結構（定義于 SYS\STAT.）H，包含下欄欄位。
+_stat**結構**,在 SYS_STAT 中定義。H,包括以下欄位。
 
 |欄位||
 |-|-|
 | **st_gid** | 擁有檔案 (UNIX 特定) 之群組的數值識別碼。這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。 |
 | **st_atime** | 檔案的上次存取時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。 |
 | **st_ctime** | 檔案的建立時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。 |
-| **st_dev** | 包含檔案的磁片磁碟機號（與**st_rdev**相同）。 |
-| **st_ino** | 檔案（UNIX 特定）的資訊節點數目（ **inode**）。 在 UNIX 檔案系統上， **inode**會描述檔案日期和時間戳記、許可權和內容。 當檔案永久連結到另一個檔案時，它們會共用相同的**inode**。 因此， **inode**（因此**ST_INO**）在 FAT、HPFS 或 NTFS 檔案系統中沒有意義。 |
-| **st_mode** | 檔案模式資訊的位元遮罩。 如果*path*指定目錄，則會設定 **_S_IFDIR**位;如果*path*指定一般檔案或裝置，則會設定 **_S_IFREG**位。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。 |
+| **st_dev** | 包含該檔的磁碟的驅動器編號(與**st_rdev**相同)。 |
+| **st_ino** | 檔案的資訊節點 **(inode)** 的編號(特定於 UNIX)。 在 UNIX 檔案系統上 **,inode**描述了檔案日期和時間戳、許可權和內容。 當檔案彼此硬連結時,它們分享相同的**inode**。 **inode,** 因此**st_ino,** 在FAT、HPFS或NTFS檔系統中沒有任何意義。 |
+| **st_mode** | 檔案模式資訊的位元遮罩。 如果*路徑*指定目錄,則設置 **_S_IFDIR**位;如果*路徑*指定普通檔或設備,則設置 **_S_IFREG**位元。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。 |
 | **st_mtime** | 檔案的上次修改時間。 |
 | **st_nlink** | 在非 NTFS 檔案系統上一律為 1。 |
-| **st_rdev** | 包含檔案的磁片磁碟機號（與**st_dev**相同）。 |
-| **st_size** | 檔案大小（以位元組為單位）;具有**i64**後置詞之變數的64位整數。 |
+| **st_rdev** | 包含該檔的磁碟的驅動器編號(與**st_dev**相同)。 |
+| **st_size** | 以位元組為單位的檔大小;64 位整數,用於使用**i64**後綴的變化。 |
 | **st_uid** | 擁有檔案 (UNIX 特定) 之使用者的數值識別碼。 這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。 |
 
-如果*path*參考到裝置，則 **_stat**結構中的**st_size**、各種時間欄位、 **st_dev**和**st_rdev**欄位都沒有意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) ，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
+如果*路徑*引用設備,則 **_stat**結構中**st_size、** 不同時間欄位 **、st_dev**和**st_rdev**欄位毫無意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) 類型，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**_stat**、 **_stat32**、 **_stat64**、 **_stati64**、 **_stat32i64**、 **_stat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h>|\<errno.h>|
-|**_wstat**、 **_wstat32**、 **_wstat64**、 **_wstati64**、 **_wstat32i64**、 **_wstat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|
+|**_stat,** **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

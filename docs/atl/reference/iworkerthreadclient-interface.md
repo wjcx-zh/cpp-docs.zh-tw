@@ -1,5 +1,5 @@
 ---
-title: IWorkerThreadClient Interface
+title: IWorkerThread用戶端介面
 ms.date: 11/04/2016
 f1_keywords:
 - IWorkerThreadClient
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a68f25f153a0ad2cf42ebfaa374ff63c5746fcd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197402"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326305"
 ---
-# <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient Interface
+# <a name="iworkerthreadclient-interface"></a>IWorkerThread用戶端介面
 
-`IWorkerThreadClient` 是用戶端所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。
+`IWorkerThreadClient`是[CWorkerThread](../../atl/reference/cworkerthread-class.md)類的用戶端實現的介面。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -35,20 +35,20 @@ __interface IWorkerThreadClient
 
 |||
 |-|-|
-|[CloseHandle](#closehandle)|實作此方法以關閉這個物件相關聯的控制代碼。|
-|[Execute](#execute)|實作這個方法，這個物件相關聯的控制代碼會變成收到訊號時執行程式碼。|
+|[關閉手柄](#closehandle)|實現此方法以關閉與此物件關聯的句柄。|
+|[執行](#execute)|實現此方法,當與此物件關聯的句柄發出信號時執行代碼。|
 
 ## <a name="remarks"></a>備註
 
-當您擁有需要回應變成收到訊號的控制代碼的背景工作執行緒上執行的程式碼時，請實作這個介面。
+當您有代碼需要在工作線程上執行以回應變為信號的句柄時,實現此介面。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlutil.h
+**標題:** atlutil.h
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThread用戶端::關閉句柄
 
-實作此方法以關閉這個物件相關聯的控制代碼。
+實現此方法以關閉與此物件關聯的句柄。
 
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
@@ -57,25 +57,25 @@ HRESULT CloseHandle(HANDLE  hHandle);
 ### <a name="parameters"></a>參數
 
 *hHandle*<br/>
-關閉控制代碼。
+要關閉的句柄。
 
 ### <a name="return-value"></a>傳回值
 
-在成功或失敗的錯誤 HRESULT 傳回 S_OK。
+返回成功時S_OK,或失敗時出現錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-控制代碼傳遞給這個方法是先前物件相關聯的呼叫所[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)。
+傳遞給此方法的句柄以前通過調用[CWorkerThread::addHandle](../../atl/reference/cworkerthread-class.md#addhandle)與此物件相關聯。
 
 ### <a name="example"></a>範例
 
-下列程式碼顯示的簡單實作`IWorkerThreadClient::CloseHandle`。
+以下代碼顯示了`IWorkerThreadClient::CloseHandle`的簡單實現。
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThread用戶端:執行
 
-實作這個方法，這個物件相關聯的控制代碼會變成收到訊號時執行程式碼。
+實現此方法,當與此物件關聯的句柄發出信號時執行代碼。
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -83,23 +83,23 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>參數
 
-*dwParam*<br/>
-User 參數。
+*德帕拉姆*<br/>
+用戶參數。
 
 *hObject*<br/>
-變成已收到訊號的控制代碼。
+已發出信號的句柄。
 
 ### <a name="return-value"></a>傳回值
 
-在成功或失敗的錯誤 HRESULT 傳回 S_OK。
+返回成功時S_OK,或失敗時出現錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-控制代碼和 DWORD/指標傳遞給這個方法是先前物件相關聯的呼叫所[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)。
+傳遞給此方法的句柄和 DWORD/指標以前通過調用[CWorkerThread::addHandle](../../atl/reference/cworkerthread-class.md#addhandle)與此物件相關聯。
 
 ### <a name="example"></a>範例
 
-下列程式碼顯示的簡單實作`IWorkerThreadClient::Execute`。
+以下代碼顯示了`IWorkerThreadClient::Execute`的簡單實現。
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 

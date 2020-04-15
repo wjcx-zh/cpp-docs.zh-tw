@@ -1,9 +1,11 @@
 ---
 title: _chdir、_wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939377"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333394"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir、_wchdir
 
@@ -64,19 +67,21 @@ int _wchdir(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，這些函式會傳回值 0。 傳回值-1 表示失敗。 如果找不到指定的路徑， **errno**會設定為**ENOENT**。 如果*dirname*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函式會傳回-1。
+如果成功，這些函式會傳回值 0。 返回值 -1 表示失敗。 找不到指定的路徑,**則 errno**設定為**ENOENT**。 如果*dirname*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則**errno**設置為**EINVAL,** 函數傳回 -1。
 
 ## <a name="remarks"></a>備註
 
-**_Chdir**函數會將目前的工作目錄變更為*dirname*所指定的目錄。 *Dirname*參數必須參考現有的目錄。 這個函式可以變更任何磁碟機上的目前工作目錄。 如果在*dirname*中指定了新的磁碟機號，預設的磁碟機號也會變更。 例如，如果 A 是預設磁碟機代號，而 \BIN 是目前工作目錄，下列呼叫會變更磁碟機 C 的目前工作目錄，並將 C 建立為新的預設磁碟機：
+**_chdir**函數將當前工作目錄更改為*dirname*指定的目錄。 *dirname*參數必須引用現有目錄。 這個函式可以變更任何磁碟機上的目前工作目錄。 如果在*dirname*中指定了新的驅動器號,則預設驅動器號也已更改。 例如，如果 A 是預設磁碟機代號，而 \BIN 是目前工作目錄，下列呼叫會變更磁碟機 C 的目前工作目錄，並將 C 建立為新的預設磁碟機：
 
 ```C
 _chdir("c:\temp");
 ```
 
-當您在路徑中使用選擇性反 **&#92;** 斜杠字元（）時，您必須在 C **&#92;** 字串常值中放置兩個反斜線（）， **&#92;** 以代表單一反斜線（）。
+當您在路徑中使用可選的反斜杠字元 **(&#92;**) 時,必須在 C 字串文字中放置兩個反斜杠 **(&#92;&#92;**) 以表示單個反斜杠 (**&#92;**)。
 
-**_wchdir**是寬字元版本的 **_chdir**; **_wchdir**的*dirname*引數是寬字元字串。 相反地， **_wchdir**和 **_chdir**的行為相同。
+**_wchdir**是 **_chdir**的寬字元版本;**_wchdir***的 dirname*參數是寬字元字串。 **_wchdir**和 **_chdir**行為相同。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文字常式對應
 
@@ -91,7 +96,7 @@ _chdir("c:\temp");
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> 或 \<wchar.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

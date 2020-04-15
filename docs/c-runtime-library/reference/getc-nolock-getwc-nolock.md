@@ -1,9 +1,11 @@
 ---
 title: _getc_nolock、_getwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getc_nolock
 - _getwc_nolock
+- _o__getc_nolock
+- _o__getwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5a352338f84c9f5dd7dc52099aed1de9aa26c09e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344794"
 ---
 # <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock、_getwc_nolock
 
@@ -62,7 +65,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 輸入資料流。
 
 ## <a name="return-value"></a>傳回值
@@ -71,7 +74,9 @@ wint_t _getwc_nolock(
 
 ## <a name="remarks"></a>備註
 
-這些函式與**getc**和**getwc**相同，不同之處在于它們不會鎖定呼叫執行緒。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+這些函數與**getc**和**getwc**相同,只是它們不鎖定調用線程。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -86,7 +91,7 @@ wint_t _getwc_nolock(
 |**getc_nolock**|\<stdio.h>|
 |**getwc_nolock**|\<stdio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -131,7 +136,7 @@ Line the first.
 Line the second.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Input was: Line the first.

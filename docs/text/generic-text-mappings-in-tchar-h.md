@@ -1,5 +1,5 @@
 ---
-title: 在 tchar.h 中的泛型文字對應
+title: tchar.h 中的泛型文字對應
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,54 +10,54 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf872df2e6fb49e64a973e8799eef98dec1cb472
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410703"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361348"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>在 tchar.h 中的泛型文字對應
+# <a name="generic-text-mappings-in-tcharh"></a>tchar.h 中的泛型文字對應
 
-若要簡化國際使用的程式碼的傳輸，Microsoft 執行階段程式庫會提供 Microsoft 特定的泛型文字對應的許多資料類型、 常式和其他物件。 您可以使用這些對應，在撰寫一般單一位元組、 多位元組，也能編譯的程式碼的 tchar.h 中定義或 Unicode 字元的設定，根據您使用定義的資訊清單常數`#define`陳述式。 泛型文字對應是與 ANSI 不相容的 Microsoft 延伸模組。
+為了簡化代碼的傳輸,國際使用,Microsoft 運行時庫為許多數據類型、例程和其他物件提供了特定於 Microsoft 的泛文字映射。 您可以使用這些在 tchar.h 中定義的映射來編寫可用於單位元組、多位元組或 Unicode 字元集的泛`#define`型代碼,具體取決於使用語句定義的清單常量。 泛型文字對應是與 ANSI 不相容的 Microsoft 延伸模組。
 
-藉由使用 tchar.h，您可以建置單一位元組、 多位元組字元集 (MBCS)，與來源相同的 Unicode 應用程式。 Tchar.h 中定義的巨集 (具有前置詞`_tcs`) 會使用正確的前置處理器定義中，對應到`str`， `_mbs`，或`wcs`函式，視需要。 若要建立 MBCS，請定義符號`_MBCS`。 若要建置 Unicode，請定義符號`_UNICODE`。 若要建置單一位元組的應用程式，定義未 （預設值）。 根據預設，`_UNICODE`定義針對 MFC 應用程式。
+通過使用 tchar.h,可以從同一源建構單位元組、多位元組位元集 (MBCS) 和 Unicode 應用程式。 tchar.h`_tcs`定義宏(具有首碼),這些宏具有正確的前處理器定義,根據需要映射`str`到`_mbs``wcs`、 或 函數。 要產生 MBCS,請`_MBCS`定義符號 。 要產生 Unicode,請`_UNICODE`定義符號 。 要生成單位元組應用程式,請定義兩者(預設值)。 預設情況下,`_UNICODE`為 MFC 應用程式定義。
 
-`_TCHAR`有條件地在 tchar.h 中定義資料類型。 如果符號`_UNICODE`為您的組建定義`_TCHAR`定義為**wchar_t**; 否則它定義為單一位元組和 MBCS 組建， **char**。 (**wchar_t**，基本的 Unicode 寬字元資料類型，是以 8 位元帶正負號的 16 位元對應項目**char**。)國際應用程式，使用`_tcs`系列函式，在運作`_TCHAR`單位，不是位元組。 例如，`_tcsncpy`複本`n` `_TCHARs`，而非`n`位元組。
+數據類型`_TCHAR`在 tchar.h 中有條件地定義。 若是為定義`_UNICODE`定義符號,`_TCHAR`則定義為**wchar_t**。否則,對於單位元組和 MBCS 產生,它定義為**字元**。 **(wchar_t,** 基本 Unicode 寬字元資料類型,是 8 位元簽名**字元**的 16 位元對應項目 。對於國際應用,請使用以`_tcs`單位而不是位元組為`_TCHAR`單位的函數系列。 例如,`_tcsncpy`副`n``_TCHARs`本`n`,而不是位元組。
 
-因為某些單一位元組字元設定 (SBCS) 的字串處理函式採用 （帶正負號），所以`char*`參數，類型不相符編譯器警告結果時`_MBCS`定義。 有三種方式可避免這個警告：
+由於某些單位元組位元集 (SBCS) 字串處理函數採用(`char*`簽名) 參數,因此在定義類型不匹配編譯`_MBCS`器警告時 會導致錯誤。 有三種方法可以避免此警告:
 
-1. 在 tchar.h 中使用類型安全的內嵌函式 thunk。 這是預設行為。
+1. 在 tchar.h 中使用類型安全內聯函數 thunks。 此為預設行為。
 
-1. 藉由定義在 tchar.h 中使用直接的巨集`_MB_MAP_DIRECT`命令列上。 如果這麼做，就必須手動對應類型。 這是最快的方法，但不是類型安全。
+1. 通過在命令行上定義`_MB_MAP_DIRECT`,使用 tchar.h 中的直接宏。 如果這麼做，就必須手動對應類型。 這是最快的方法,但不是類型安全的。
 
-1. 在 tchar.h 中使用型別安全的靜態連結程式庫函式 thunk。 若要這樣做，請在命令列上定義常數 `_NO_INLINING`。 這是最慢、但類型最安全的方法。
+1. 在 tchar.h 中使用類型安全的靜態連結庫函數 thunks。 若要這樣做，請在命令列上定義常數 `_NO_INLINING`。 這是最慢、但類型最安全的方法。
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>泛型文字對應的前置處理器指示詞
 
-|# 定義|編譯的版本|範例|
+|• 定義|編譯的版本|範例|
 |---------------|----------------------|-------------|
 |`_UNICODE`|Unicode (寬字元)|`_tcsrev` 對應到 `_wcsrev`|
 |`_MBCS`|多位元組字元|`_tcsrev` 對應到 `_mbsrev`|
-|無 (預設值沒有`_UNICODE`也不`_MBCS`定義)|SBCS (ASCII)|`_tcsrev` 對應到 `strrev`|
+|沒有(預設值既未`_UNICODE`定義,`_MBCS`也未定義 )|SBCS (ASCII)|`_tcsrev` 對應到 `strrev`|
 
-比方說，泛型文字函式`_tcsrev`，其定義在 tchar.h 中對應至`_mbsrev`如果您定義`_MBCS`在您的程式，或`_wcsrev`如果您定義`_UNICODE`。 若兩者皆否，則 `_tcsrev` 會對應至 `strrev`。 為了方便程式設計，在 tchar.h 中提供其他資料類型對應但`_TCHAR`最為實用。
+例如,在 tchar.h`_tcsrev`中定義的泛文字`_mbsrev`函數 對應到在`_MBCS`應用程式中定義時,`_wcsrev`或者如果`_UNICODE`定義了 。 若兩者皆否，則 `_tcsrev` 會對應至 `strrev`。 其他數據類型映射在 tchar.h 中提供,以方便程式設計`_TCHAR`,但 最有用。
 
 ### <a name="generic-text-data-type-mappings"></a>泛型文字資料類型對應
 
-|Generic-Text<br /> 資料型別名稱|_UNICODE （&AMP; S)<br /> _MBCS 未定義|_MBCS<br /> 已定義|_UNICODE<br /> 已定義|
+|通用文字<br /> 資料類型名稱|_UNICODE&<br /> 未定義_MBCS|_MBCS<br /> 已定義|_UNICODE<br /> 已定義|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
-|`_TINT`|**int**|**unsigned int**|`wint_t`|
-|`_TSCHAR`|**帶正負號的 char**|**帶正負號的 char**|**wchar_t**|
+|`_TINT`|**int**|**不帶正負號的整數**|`wint_t`|
+|`_TSCHAR`|**signed char**|**signed char**|**wchar_t**|
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
-|`_T` 或 `_TEXT`|無效果 (已由前置處理器移除)|無效果 (已由前置處理器移除)|`L` （將轉換成其 Unicode 對應項的下列字元或字串）|
+|`_T` 或 `_TEXT`|無效果 (已由前置處理器移除)|無效果 (已由前置處理器移除)|`L`( 將以下字元或字串轉換為其 Unicode 對應字元)|
 
-如需常式、 變數和其他物件的泛型文字對應的清單，請參閱 <<c0> [ 泛型文字對應](../c-runtime-library/generic-text-mappings.md)執行階段程式庫參考中。
+有關例程、變數和其他物件的泛文字映射的清單,請參閱執行時庫參考中的[通用文字映射](../c-runtime-library/generic-text-mappings.md)。
 
 > [!NOTE]
->  請勿使用`str`系列的函式使用 Unicode 字串，其中可能包含內嵌 null 位元組。 同樣地，請勿使用`wcs`系列函式使用 MBCS （或 SBCS） 的字串。
+> 請勿將具有`str`Unicode 字串的函數系列使用,該字串可能包含嵌入的 null 位元組。 同樣,不要將`wcs`函數系列與 MBCS(或 SBCS) 字串一起使用。
 
 下列程式碼片段示範如何使用 `_TCHAR` 與 `_tcsrev` 來對應到 MBCS、Unicode 與 SBCS 模型。
 
@@ -66,28 +66,28 @@ _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-如果`_MBCS`已定義，前置處理器將這個片段對應到此程式碼：
+如果`_MBCS`已定義,預處理器將此片段映射到此代碼:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-如果`_UNICODE`已定義，前置處理器將這個片段對應到此程式碼：
+如果`_UNICODE`已定義,預處理器將此片段映射到此代碼:
 
 ```cpp
 wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);
 ```
 
-如果沒有`_MBCS`也不`_UNICODE`已定義，前置處理器會將片段對應至單一位元組的 ASCII 碼，如下所示：
+如果未定義`_MBCS`,`_UNICODE`則預處理器將片段映射到單位元組 ASCII 代碼,如下所示:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = strrev(szString);
 ```
 
-因此，您可以撰寫、 維護及編譯單一原始程式碼檔案執行以三種字元集的任何特定的常式。
+因此,您可以編寫、維護和編譯單原始程式碼檔,以便使用特定於三種字元集中的任何一種的例程運行。
 
 ## <a name="see-also"></a>另請參閱
 

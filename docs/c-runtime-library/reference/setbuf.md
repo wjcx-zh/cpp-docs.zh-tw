@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948270"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332070"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -47,17 +49,19 @@ void setbuf(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
-*buffer*<br/>
+*緩衝區*<br/>
 使用者配置的緩衝區。
 
 ## <a name="remarks"></a>備註
 
-**Setbuf**函數會控制*資料流程*的緩衝處理。 *資料流程*引數必須參考尚未讀取或寫入的開啟檔案。 如果*緩衝區*引數為**Null**，則資料流程未緩衝。 如果不是，緩衝區必須指向長度為**BUFSIZ**的字元陣列，其中**BUFSIZ**是 stdio.h 中所定義的緩衝區大小。H. 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 **Stderr**資料流程預設為無緩衝，但是您可以使用**setbuf**將緩衝區指派給**stderr**。
+**setbuf**函數控制*流的*緩衝。 *串*流參數必須引用尚未讀取或寫入的打開檔。 如果*緩衝區*參數為**NULL,** 則流將取消緩衝。 如果不是,緩衝區必須指向長度**為 BUFSIZ**的字元陣列,其中**BUFSIZ**是 STDIO 中定義的緩衝區大小。H。 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 預設情況下,**斯特值流**未緩衝,但您可以使用**setbuf**將緩衝區分配給**更穩。**
 
-**setbuf**已由[setvbuf](setvbuf.md)取代，這是新程式碼慣用的常式。 不同于**setvbuf**， **setbuf**無法報告錯誤。 **setvbuf**也可讓您同時控制緩衝處理模式和緩衝區大小。 **setbuf**存在以提供與現有程式碼的相容性。
+**setbuf**已被[setvbuf](setvbuf.md)替換,這是新代碼的首選例程。 與**setvbuf**不同 **,setbuf**無法報告錯誤。 **setvbuf**還允許您控制緩衝模式和緩衝區大小。 **setbuf**存在是為了與現有代碼相容。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -65,7 +69,7 @@ void setbuf(
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,6 +1,6 @@
 ---
-title: OnRelogEventFunc typedef
-description: C++ BUILD Insights SDK OnRelogEventFunc typedef 參考。
+title: OnRelogEventFunc 類型def
+description: C++在 RelogEventFunc 類型定義引用上生成見解 SDK。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 619f9a142ad19a7809b867eda93f2db634825a8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332387"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329072"
 ---
-# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc typedef
+# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc 類型def
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OnRelogEventFunc` typedef 是[RELOG_CALLBACKS](relog-callbacks-struct.md)結構中所使用的其中一個函式簽章。
+typedef`OnRelogEventFunc`是[RELOG_CALLBACKS](relog-callbacks-struct.md)結構中使用的函數簽名之一。
 
 ## <a name="syntax"></a>語法
 
@@ -38,17 +38,17 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 
 ### <a name="parameters"></a>參數
 
-*eventStack*\
-目前事件的事件堆疊。 如需事件堆疊的詳細資訊，請參閱[事件](../event-table.md)。
+*事件堆疊*\
+當前事件的事件堆疊。 有關事件堆疊的詳細資訊,請參閱[事件](../event-table.md)。
 
-*relogSession*\
-呼叫[InjectEvent](../functions/inject-event.md)時要使用的 relogging 會話指標。
+*重新登入工作階段*\
+調用[InjectEvent](../functions/inject-event.md)時使用的重新記錄會話指標。
 
-*callbackCoNtext*\
-在[RELOG_DESCRIPTOR](analysis-descriptor-struct.md)中為此回呼設定的內容值。
+*回檔內容*\
+為RELOG_DESCRIPTOR[中為此](analysis-descriptor-struct.md)回調設置的上下文值。
 
 ### <a name="return-value"></a>傳回值
 
-控制接下來應發生之情況的[CALLBACK_CODE](callback-code-enum.md)值。
+控制接下來會發生什麼[CALLBACK_CODE](callback-code-enum.md)值。
 
 ::: moniker-end

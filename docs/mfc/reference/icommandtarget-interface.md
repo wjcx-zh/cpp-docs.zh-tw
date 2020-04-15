@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: a224b868ea1923bb4f84b0d682c71fadb63da572
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 865a8a27d96f84f536e40ec5a7bbbbdd9837dfcd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322065"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356919"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 介面
 
-提供介面，以接收來自命令來源物件的命令中的使用者控制項。
+為使用者提供具有從命令源物件接收命令的介面。
 
 ## <a name="syntax"></a>語法
 
@@ -31,21 +31,21 @@ interface class ICommandTarget
 
 |名稱|描述|
 |----------|-----------------|
-|[ICommandTarget::Initialize](#initialize)|初始化命令目標物件。|
+|[ICommand 目標::初始化](#initialize)|初始化命令目標物件。|
 
 ## <a name="remarks"></a>備註
 
-當您裝載在 MFC 檢視中，使用者控制項時[CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息至使用者控制項讓它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。 藉由實作`ICommandTarget`，讓使用者控制項的參考[ICommandSource](../../mfc/reference/icommandsource-interface.md)物件。
+當您在 MFC 檢視中託管使用者控件時[,CWinFormsView](../../mfc/reference/cwinformsview-class.md)會將命令和命令 UI 訊息更新到使用者控制項,以允許它處理 MFC 命令(例如,架構功能表和工具列按鈕)。 通過實現`ICommandTarget`,向使用者控制件提供對[ICommandSource](../../mfc/reference/icommandsource-interface.md)物件的引用。
 
-請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
+有關如何使用,請參閱[:將指令路由新增到 Windows 窗體控制 。](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)`ICommandTarget`
 
-如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+有關使用 Windows 表單的詳細資訊,請參閱[在 MFC 中使用 Windows 元件使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）
+**標題**:afxwinforms.h(在程式集 atlmfc_lib_mfcmc80.dll 中定義)
 
-##  <a name="initialize"></a> ICommandTarget::Initialize
+## <a name="icommandtargetinitialize"></a><a name="initialize"></a>ICommand 目標::初始化
 
 初始化命令目標物件。
 
@@ -55,14 +55,14 @@ void Initialize(ICommandSource^ cmdSource);
 
 ### <a name="parameters"></a>參數
 
-*cmdSource*<br/>
-命令來源物件的控制代碼。
+*cmd 來源*<br/>
+命令源物件的句柄。
 
 ### <a name="remarks"></a>備註
 
-當您裝載在 MFC 檢視的使用者控制項時，CWinFormsView 會將命令和更新命令 UI 訊息路由至使用者控制項，以允許它處理 MFC 命令。
+當您在 MFC 檢視中託管使用者控件時,CWinFormsView 會將命令和命令 UI 消息更新到使用者控制項以允許它處理 MFC 命令。
 
-這個方法會初始化命令目標物件，並將它與指定的命令來源物件 cmdSource 產生關聯。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該在初始化實作中呼叫 ICommandSource::AddCommandHandler 命令來源物件與註冊命令處理常式。 請參閱操作說明：將命令路由新增至 Windows Forms 控制項，如需如何執行這項操作時，用以初始化的範例。
+此方法初始化命令目標物件並將其與指定的命令源物件 cmdSource 關聯。 應在使用者控件類實現中調用它。 在初始化時,應通過在初始化實現中調用 ICommandSource::addCommandHandler,將命令處理程式與命令源物件註冊。 有關如何將命令路由添加到 Windows 窗體控制項,請參閱如何使用初始化執行此操作的範例。
 
 ## <a name="see-also"></a>另請參閱
 

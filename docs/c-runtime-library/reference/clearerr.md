@@ -1,8 +1,9 @@
 ---
 title: clearerr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr
+- _o_clearerr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 174c94136cdc8b603416ff1dd239703489925bae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942942"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350021"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -47,16 +49,18 @@ void clearerr(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
 ## <a name="remarks"></a>備註
 
-**Clearerr**函數會重設*資料流程*的錯誤指標和檔案結尾指標。 錯誤指示器不會自動清除;一旦設定了指定資料流程的錯誤指示器之後，該資料流程上的[作業會繼續](rewind.md)傳回錯誤值，直到呼叫**clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或倒轉為止。
+**更清晰的**函數重置*流*的錯誤指示器和檔結尾指示器。 錯誤指示燈不會自動清除;設定指定流的錯誤指示器後,該流上的操作將繼續返回錯誤值,直到呼叫**更清晰**[、fseek、fsetpos](fseek-fseeki64.md)**fsetpos**或[倒帶](rewind.md)。
 
-如果*stream*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回。 如需**errno**和錯誤碼的詳細資訊，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
+如果*串*流為**NULL,** 則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設置到**EINVAL**並返回。 有關**errno**與錯誤代碼的詳細資訊,請參閱[errno 常量](../../c-runtime-library/errno-constants.md)。
 
 這個函式已有更安全的版本可用；請參閱 [clearerr_s](clearerr-s.md)。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -64,7 +68,7 @@ void clearerr(
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -100,13 +104,13 @@ int main( void )
 }
 ```
 
-### <a name="input"></a>Input
+### <a name="input"></a>輸入
 
 ```Input
 n
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Write error: No error

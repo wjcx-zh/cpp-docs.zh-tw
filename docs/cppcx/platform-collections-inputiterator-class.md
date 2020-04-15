@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f9b15f474a5aa3d063f0ccfb663f56baf8de31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354557"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 類別
 
-衍生自 Windows 執行階段的集合提供標準樣板程式庫 InputIterator。
+為從 Windows 運行時派生的集合提供標準範本庫輸入反覆運算器。
 
 ## <a name="syntax"></a>語法
 
@@ -38,27 +38,27 @@ InputIterator 樣板類別的 typename。
 |----------|-----------------|
 |`difference_type`|指標差異 (ptrdiff_t)。|
 |`iterator_category`|輸入迭代器的類別 (::std::input_iterator_tag)。|
-|`pointer`|指標 `const X`|
-|`reference`|參考 `const X`|
+|`pointer`|指向的指標`const X`|
+|`reference`|`const X` 的參考|
 |`value_type`|`X` typename。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[InputIterator::InputIterator](#ctor)|初始化 InputIterator 類別的新執行個體。|
+|[輸入反覆運算器::輸入式發運算器](#ctor)|初始化 InputIterator 類別的新執行個體。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[InputIterator::operator!= 運算子](#operator-inequality)|指出目前 InputIterator 是否不等於指定的 InputIterator。|
+|[輸入反覆運算器::操作員!= 操作員](#operator-inequality)|指出目前 InputIterator 是否不等於指定的 InputIterator。|
 |[InputIterator::operator* 運算子](#operator-dereference)|擷取目前 InputIterator 指定之項目的參考。|
-|[InputIterator::operator++ 運算子](#operator-increment)|遞增目前 InputIterator。|
-|[InputIterator::operator== 運算子](#operator-equality)|指出目前 InputIterator 是否等於指定的 InputIterator。|
-|[InputIterator::operator-> 運算子](#operator-arrow)|擷取目前 InputIterator 參考的項目位址。|
+|[輸入反覆運算器::運算子* 運算子](#operator-increment)|遞增目前 InputIterator。|
+|[輸入反覆運算器::運算符 = 運算子](#operator-equality)|指出目前 InputIterator 是否等於指定的 InputIterator。|
+|[輸入反覆運算器::操作員->运算符](#operator-arrow)|擷取目前 InputIterator 參考的項目位址。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `InputIterator`
 
@@ -68,7 +68,7 @@ InputIterator 樣板類別的 typename。
 
 **命名空間：** Platform::Collections
 
-## <a name="ctor"></a>  Inputiterator:: Inputiterator 建構函式
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>輸入反覆運算器::輸入反覆運算器建構函數
 
 初始化 InputIterator 類別的新執行個體。
 
@@ -81,10 +81,10 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 
 ### <a name="parameters"></a>參數
 
-*iterator*<br/>
+*反覆運算*<br/>
 迭代器物件。
 
-## <a name="operator-arrow"></a>  Inputiterator:: Operator-&gt;運算子
+## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>輸入迭代器::管理員-&gt;管理員
 
 擷取目前 InputIterator 指定的項目位址。
 
@@ -98,7 +98,7 @@ pointer operator->() const;
 
 目前 InputIterator 指定的項目位址。
 
-## <a name="operator-dereference"></a>  Inputiterator:: Operator\*運算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>輸入反覆運算器::操作員\*
 
 擷取目前 InputIterator 指定之項目的參考。
 
@@ -112,7 +112,7 @@ reference operator*() const;
 
 目前 InputIterator 指定的項目。
 
-## <a name="operator-equality"></a>  Inputiterator:: Operator = = 運算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>輸入反覆運算器::運算符 = 運算子
 
 指出目前 InputIterator 是否等於指定的 InputIterator。
 
@@ -124,14 +124,14 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
+*其他*<br/>
 另一個 InputIterator。
 
 ### <a name="return-value"></a>傳回值
 
-**true**是否等於目前 InputIterator*其他*; 否則**false**。
+如果目前輸入反覆運算器等於*其他*輸入反覆運算器,**則為 true;** 否則,**假**。
 
-## <a name="operator-increment"></a>  Inputiterator:: Operator + + 運算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>輸入反覆運算器::運算子* 運算子
 
 遞增目前 InputIterator。
 
@@ -152,7 +152,7 @@ InputIterator operator++(int);
 
 第二種語法會後置遞增目前 InputIterator。 第二個語法中的 `int` 類型代表後置遞增作業，而不是實際的整數運算元。
 
-## <a name="operator-inequality"></a>  Inputiterator:: Operator ！ = 運算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>輸入反覆運算器::操作員!= 操作員
 
 指出目前 InputIterator 是否不等於指定的 InputIterator。
 
@@ -164,13 +164,13 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
+*其他*<br/>
 另一個 InputIterator。
 
 ### <a name="return-value"></a>傳回值
 
-**真**目前 InputIterator 是否不等於*其他*; 否則**false**。
+如果目前輸入反覆運算器不等於*其他*輸入反覆運算器,**則為 true;** 否則,**假**。
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](platform-namespace-c-cx.md)
+[平台命名空間](platform-namespace-c-cx.md)

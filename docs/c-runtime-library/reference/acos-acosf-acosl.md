@@ -1,10 +1,11 @@
 ---
 title: acos、acosf、acosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acosf
 - acos
 - acosl
+- _o_acos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348978"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -60,30 +62,32 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
-介於-1 和1之間的值，用於計算反余弦函數（反余弦值）。
+*X.*<br/>
+值介於 -1 和 1 之間,用於計算弧形(反向協成)。
 
 ## <a name="return-value"></a>傳回值
 
-**Acos**函式會傳回0到π弧度之間*x*的反余弦函數。
+**acos**函數將*0*範圍內 x 的弧線返回至 +弧度。
 
-根據預設，如果*x*小於-1 或大於1，則**acos**會傳回不定的。
+預設情況下,如果*x*小於 -1 或大於 1,**則 acos**將返回無限期。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|±∞|INVALID|_DOMAIN|
-|± QNAN，IND|無|_DOMAIN|
-|&#124;x&#124;>1|INVALID|_DOMAIN|
+|± ∞|無效|_DOMAIN|
+|• QNAN,IND|無|_DOMAIN|
+|&#124;x&#124;>1|無效|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**acos**的多載。 在 C 程式中， **acos**一律會採用並傳回**雙精度浮點數**。
+由於C++允許重載,因此可以調用獲取和返回**浮點**和**長****雙**型的**aco**的重載。 在 C 程式中 **,acos**總是取得並傳回**一個雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
+|**阿科斯**,**阿科斯夫**,**阿科斯爾**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>範例
 

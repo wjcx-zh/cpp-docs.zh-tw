@@ -43,22 +43,22 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99fce804ad30e01bdbaa99b1636a5238ff535f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371777"
 ---
 # <a name="windows-operations-ccli"></a>Windows 作業 (C++/CLI)
 
-示範各種 Windows 特定的工作，使用 Windows SDK。
+使用 Windows SDK 演示各種特定於 Windows 的任務。
 
-下列主題示範如何使用視覺效果的 Windows sdk 所執行的各種 Windows 作業C++。
+以下主題演示了使用可視化C++使用Windows SDK執行的各種Windows操作。
 
-## <a name="determine_shutdown"></a> 判斷是否已開始關機
+## <a name="determine-if-shutdown-has-started"></a><a name="determine_shutdown"></a>確定關機是否已啟動
 
-下列程式碼範例示範如何判斷是否在應用程式或.NET Framework 目前正在終止。 這可用於存取.NET Framework 中的靜態項目，因為在關機時這些建構，系統會完成，且無法可靠地用。 藉由檢查<xref:System.Environment.HasShutdownStarted%2A>屬性第一次，您可以避免潛在的失敗不會存取這些項目。
+以下代碼示例演示如何確定應用程式或 .NET 框架當前是否正在終止。 這對於訪問 .NET Framework 中的靜態元素非常有用,因為在關機期間,這些構造由系統最終確定,無法可靠地使用。 通過首先檢查<xref:System.Environment.HasShutdownStarted%2A>屬性,可以通過不訪問這些元素來避免潛在的故障。
 
 ### <a name="example"></a>範例
 
@@ -76,9 +76,9 @@ int main()
 }
 ```
 
-## <a name="determine_user"></a> 判斷使用者互動狀態
+## <a name="determine-the-user-interactive-state"></a><a name="determine_user"></a>確定使用者互動狀態
 
-下列程式碼範例示範如何判斷使用者互動的內容中是否正在執行的程式碼。 如果<xref:System.Environment.UserInteractive%2A>為 false，則程式碼執行為服務程序，或從在 Web 應用程式中，在此情況下您不應該嘗試與使用者互動。
+以下代碼示例演示如何確定代碼是否在使用者交互上下文中運行。 如果<xref:System.Environment.UserInteractive%2A>為 false,則代碼作為服務進程或 Web 應用程式內部運行,在這種情況下,不應嘗試與使用者互動。
 
 ### <a name="example"></a>範例
 
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-## <a name="read_registry"></a> 從 Windows 登錄讀取資料
+## <a name="read-data-from-the-windows-registry"></a><a name="read_registry"></a>從 Windows 註冊表讀取資料
 
-下列程式碼範例使用<xref:Microsoft.Win32.Registry.CurrentUser>從 Windows 登錄讀取資料的索引鍵。 首先，使用列舉子機碼<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>方法，然後將身分識別子機碼則使用開啟<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>方法。 根目錄機碼，例如每個子機碼由<xref:Microsoft.Win32.RegistryKey>類別。 最後，新<xref:Microsoft.Win32.RegistryKey>物件用來列舉的索引鍵/值組。
+以下代碼示例使用<xref:Microsoft.Win32.Registry.CurrentUser>密鑰從 Windows 註冊表讀取數據。 首先,使用<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>方法枚舉子鍵,然後使用方法<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>打開標識子鍵。 與根鍵一樣,每個子鍵由<xref:Microsoft.Win32.RegistryKey>類表示。 最後,新<xref:Microsoft.Win32.RegistryKey>物件用於枚舉鍵/值對。
 
 ### <a name="example"></a>範例
 
@@ -142,20 +142,20 @@ int main( )
 
 ### <a name="remarks"></a>備註
 
-<xref:Microsoft.Win32.Registry>類別是只是靜態的執行個體的容器<xref:Microsoft.Win32.RegistryKey>。 每個執行個體表示的根登錄節點。 執行個體<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
+類<xref:Microsoft.Win32.Registry>只是的靜態實例的<xref:Microsoft.Win32.RegistryKey>容器。 每個實例表示一個根註冊表節點。 實體<xref:Microsoft.Win32.Registry.ClassesRoot><xref:Microsoft.Win32.Registry.CurrentConfig>是 、、、<xref:Microsoft.Win32.Registry.CurrentUser><xref:Microsoft.Win32.Registry.LocalMachine><xref:Microsoft.Win32.Registry.Users>與 。
 
-此外若要在靜態的中的物件<xref:Microsoft.Win32.Registry>類別是唯讀。 此外，執行個體的<xref:Microsoft.Win32.RegistryKey>類別來存取登錄的內容建立的物件也是唯讀。 如需如何覆寫這個行為的範例，請參閱[How to:將資料寫入至 Windows 登錄 (C++/CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。
+除了靜態之外,類中的物件也是唯讀<xref:Microsoft.Win32.Registry>的。 此外,<xref:Microsoft.Win32.RegistryKey>為訪問註冊表物件的內容而創建的類的實例也是唯讀的。 有關如何重寫此行為的示例,請參閱[如何:將數據寫入 Windows 註冊表 (C++/CLI)。](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)
 
-有兩個額外的物件中<xref:Microsoft.Win32.Registry>類別：<xref:Microsoft.Win32.Registry.DynData>和<xref:Microsoft.Win32.Registry.PerformanceData>。 兩者都是執行個體<xref:Microsoft.Win32.RegistryKey>類別。 <xref:Microsoft.Win32.Registry.DynData>物件包含動態登錄資訊，只支援 Windows 98 和 Windows me。 <xref:Microsoft.Win32.Registry.PerformanceData>物件可以用來存取使用 Windows 效能監視系統的應用程式的效能計數器資訊。 <xref:Microsoft.Win32.Registry.PerformanceData>節點表示資訊不會實際儲存在登錄中，因此無法檢視使用 Regedit.exe。
+<xref:Microsoft.Win32.Registry>類別中還有兩個其他物件:<xref:Microsoft.Win32.Registry.DynData><xref:Microsoft.Win32.Registry.PerformanceData>與 。 兩者都是類的<xref:Microsoft.Win32.RegistryKey>實例。 該<xref:Microsoft.Win32.Registry.DynData>物件包含動態註冊表資訊,僅在 Windows 98 和 Windows Me 中支援這些資訊。 該<xref:Microsoft.Win32.Registry.PerformanceData>物件可用於存取使用 Windows 效能監視系統的應用程式的性能計數器資訊。 節點<xref:Microsoft.Win32.Registry.PerformanceData>表示未實際存儲在註冊表中的資訊,因此無法使用 Regedit.exe 查看這些資訊。
 
-## <a name="read_performance"></a> 讀取 Windows 效能計數器
+## <a name="read-windows-performance-counters"></a><a name="read_performance"></a>讀取 Windows 效能計數器
 
-某些應用程式和 Windows 子系統會公開透過 Windows 效能系統的效能資料。 這些計數器可以使用來存取<xref:System.Diagnostics.PerformanceCounterCategory>並<xref:System.Diagnostics.PerformanceCounter>類別，位於<xref:System.Diagnostics?displayProperty=fullName>命名空間。
+某些應用程式和 Windows 子系統透過 Windows 效能系統公開效能數據。 可以使用 駐<xref:System.Diagnostics.PerformanceCounterCategory><xref:System.Diagnostics.PerformanceCounter><xref:System.Diagnostics?displayProperty=fullName>留在 命名空間中的和 類訪問這些計數器。
 
-下列程式碼範例會使用這些類別來擷取並顯示更新的 Windows，以指出在處理器處於忙碌的時間的百分比計數器。
+以下代碼示例使用這些類來檢索和顯示由 Windows 更新的計數器,以指示處理器忙的時間百分比。
 
 > [!NOTE]
->  這個範例需要系統管理權限才能在 Windows Vista 上執行。
+> 這個範例需要系統管理權限才能在 Windows Vista 上執行。
 
 ### <a name="example"></a>範例
 
@@ -246,9 +246,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_text"></a> 從剪貼簿擷取文字
+## <a name="retrieve-text-from-the-clipboard"></a><a name="retrieve_text"></a>從剪貼簿檢索文字
 
-下列程式碼範例會使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成員函式傳回的指標<xref:System.Windows.Forms.IDataObject>介面。 可以查詢的資料格式的這個介面，然後用來擷取實際的資料。
+以下代碼示例使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成員函數返回指向介面的<xref:System.Windows.Forms.IDataObject>指標。 然後,可以查詢此介面的數據格式,並用於檢索實際數據。
 
 ### <a name="example"></a>範例
 
@@ -286,9 +286,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="retrieve_current"></a> 擷取目前的使用者名稱
+## <a name="retrieve-the-current-username"></a><a name="retrieve_current"></a>取索目前使用者名稱
 
-下列程式碼範例示範如何擷取目前的使用者名稱 （登入 Windows 的使用者名稱）。 名稱會儲存在<xref:System.Environment.UserName%2A>字串，其定義於<xref:System.Environment>命名空間。
+以下代碼示例演示了檢索當前使用者名(登錄到 Windows 的使用者的名稱)。 名稱儲存在字串中<xref:System.Environment.UserName%2A>,該字串在命名空間中<xref:System.Environment>定義。
 
 ### <a name="example"></a>範例
 
@@ -304,9 +304,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_dotnet"></a> 擷取.NET Framework 版本
+## <a name="retrieve-the-net-framework-version"></a><a name="retrieve_dotnet"></a>取出網路 .NET 架構版本
 
-下列程式碼範例示範如何判斷目前已安裝.NET Framework 版本<xref:System.Environment.Version%2A>屬性，這是一個指標至<xref:System.Version>物件，包含版本資訊。
+以下代碼示例演示如何使用<xref:System.Environment.Version%2A>屬性確定當前安裝的 .NET Framework 的版本,該屬性是<xref:System.Version>指向包含版本資訊的物件的指標。
 
 ### <a name="example"></a>範例
 
@@ -331,9 +331,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_local"></a> 擷取本機電腦名稱
+## <a name="retrieve-the-local-machine-name"></a><a name="retrieve_local"></a>以索機電腦名稱
 
-下列程式碼範例示範如何擷取本機電腦名稱 （因為它的電腦名稱會出現在網路上）。 您可以取得來完成這<xref:System.Environment.MachineName%2A>字串，其定義於<xref:System.Environment>命名空間。
+以下代碼示例演示了本地電腦名稱(在網路上顯示的計算機名稱)的檢索。 可以通過<xref:System.Environment.MachineName%2A>獲取<xref:System.Environment>在 命名空間中定義的字串來實現此目的。
 
 ### <a name="example"></a>範例
 
@@ -349,9 +349,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_version"></a> 擷取 Windows 版本
+## <a name="retrieve-the-windows-version"></a><a name="retrieve_version"></a>檢索 Windows 版本
 
-下列程式碼範例示範如何擷取目前的作業系統的平台和版本資訊。 這項資訊會儲存在<xref:System.Environment.OSVersion%2A?displayProperty=fullName>屬性和列舉型別描述廣義的 Windows 版本所組成，<xref:System.Environment.Version%2A>物件，其中包含作業系統的確切組建。
+以下代碼示例演示如何檢索當前操作系統的平臺和版本資訊。 此資訊儲存在 屬性中<xref:System.Environment.OSVersion%2A?displayProperty=fullName>, 由描述 Windows 廣泛版本的枚舉和包含<xref:System.Environment.Version%2A>作業系統精確構建 的物件組成。
 
 ### <a name="example"></a>範例
 
@@ -391,9 +391,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_time"></a> 自啟動後經過的擷取時間
+## <a name="retrieve-time-elapsed-since-startup"></a><a name="retrieve_time"></a>檢索自啟動以來已過的時間
 
-下列程式碼範例示範如何判斷滴答計數，或啟動的 Windows 以來所經過的毫秒數。 這個值會儲存在<xref:System.Environment.TickCount%2A?displayProperty=fullName>成員，因為它是 32 位元值時，會重設為零大約每隔 24.9 天。
+以下代碼示例演示如何確定刻度計數或自 Windows 啟動以來經過的毫秒數。 此值存儲在成員中<xref:System.Environment.TickCount%2A?displayProperty=fullName>,並且由於它是 32 位值,大約每 24.9 天重置為零。
 
 ### <a name="example"></a>範例
 
@@ -420,9 +420,9 @@ int main( )
 }
 ```
 
-## <a name="store_text"></a> 將文字儲存在剪貼簿
+## <a name="store-text-in-the-clipboard"></a><a name="store_text"></a>在剪貼簿中儲存文字
 
-下列程式碼範例會使用<xref:System.Windows.Forms.Clipboard>中所定義的物件<xref:System.Windows.Forms>命名空間來儲存字串。 這個物件提供兩個成員函式：<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>和<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>。 資料時，會儲存在剪貼簿上，藉由傳送任何物件衍生自<xref:System.Object>至<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>。
+以下代碼示例使用<xref:System.Windows.Forms.Clipboard><xref:System.Windows.Forms>命名空間中定義的物件來儲存字串。 此物件提供兩個成員函數:<xref:System.Windows.Forms.Clipboard.SetDataObject%2A><xref:System.Windows.Forms.Clipboard.GetDataObject%2A>和 。 通過發送派生自<xref:System.Object>的任何物件,<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>資料儲存在剪貼簿中。
 
 ### <a name="example"></a>範例
 
@@ -451,9 +451,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="write_data"></a> 將資料寫入至 Windows 登錄
+## <a name="write-data-to-the-windows-registry"></a><a name="write_data"></a>將資料寫入 Windows 註冊表
 
-下列程式碼範例會使用<xref:Microsoft.Win32.Registry.CurrentUser>要建立的可寫入執行個體索引鍵<xref:Microsoft.Win32.RegistryKey>類別對應至**軟體**索引鍵。 <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>方法則用來建立新的金鑰，並將新增至索引鍵/值組。
+以下代碼示例使用<xref:Microsoft.Win32.Registry.CurrentUser>鍵創建<xref:Microsoft.Win32.RegistryKey>與**軟體**密鑰對應的類的可寫實例。 然後<xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>,該方法用於創建新鍵並添加到鍵/值對。
 
 ### <a name="example"></a>範例
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>備註
 
-您可用來存取登錄中的以.NET Framework<xref:Microsoft.Win32.Registry>並<xref:Microsoft.Win32.RegistryKey>類別，這兩者都定義在<xref:Microsoft.Win32>命名空間。 **登錄**類別是靜態的執行個體的容器<xref:Microsoft.Win32.RegistryKey>類別。 每個執行個體表示的根登錄節點。 執行個體<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
+可以使用 .NET<xref:Microsoft.Win32.Registry>框架<xref:Microsoft.Win32.RegistryKey>使用和 類訪問註冊表,這兩個類都在<xref:Microsoft.Win32>命名空間中 定義。 **註冊表**類是類的靜態實例<xref:Microsoft.Win32.RegistryKey>的 容器。 每個實例表示一個根註冊表節點。 實體<xref:Microsoft.Win32.Registry.ClassesRoot><xref:Microsoft.Win32.Registry.CurrentConfig>是 、、、<xref:Microsoft.Win32.Registry.CurrentUser><xref:Microsoft.Win32.Registry.LocalMachine><xref:Microsoft.Win32.Registry.Users>與 。
 
 ## <a name="related-sections"></a>相關章節
 
@@ -511,4 +511,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[.NET 程式設計,帶C++/CLI(視覺C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

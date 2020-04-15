@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371358"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -32,17 +32,17 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="parameters"></a>參數
 
-*基底*<br/>
+*基地*<br/>
 基底類型。
 
-*衍生*<br/>
-在衍生的型別。
+*派生*<br/>
+派生類型。
 
 ## <a name="remarks"></a>備註
 
 測試某個類型是否為另一個類型的基底。
 
-第一個範本會測試是否為型別衍生自基底型別，可能會產生**真**或是**false**。 第二個範本會測試是否為型別衍生自本身，這一律會產生**false**。
+第一個樣本測試類型是否派生自基類型,該基類型可能產生**真**或**假**。 第二個樣本測試類型是否派生自自身,後者始終生成**false**。
 
 ## <a name="members"></a>成員
 
@@ -50,21 +50,21 @@ struct IsBaseOfStrict<Base, Base>;
 
 名稱                            | 描述
 ------------------------------- | --------------------------------------------------
-[IsBaseOfStrict::value](#value) | 指出是否會有一個類型的另一個基底。
+[是嚴格的基礎::值](#value) | 指示一種類型是否是另一種類型的基礎。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IsBaseOfStrict`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** internal.h
+**標題:** 內部.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="value"></a>IsBaseOfStrict::value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>是嚴格的基礎::值
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 static const bool value = __is_base_of(Base, Derived);
@@ -72,6 +72,6 @@ static const bool value = __is_base_of(Base, Derived);
 
 ### <a name="remarks"></a>備註
 
-指出是否會有一個類型的另一個基底。
+指示一種類型是否是另一種類型的基礎。
 
-`value` 是 **，則為 true**如果型別`Base`的基底類別型別的`Derived`，否則就是**false**。
+`value`如果類型`Base`是型`Derived`態的基項,則為**true,** 否則為**false**。

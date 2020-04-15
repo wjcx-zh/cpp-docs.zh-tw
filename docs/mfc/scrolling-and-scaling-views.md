@@ -8,44 +8,44 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 7064880c5ceef8e7dc3e35bb7ef5bc700b0842d2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 366f0e2953e5190f80a2877804bff2fc7dbbd520
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511225"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372781"
 ---
 # <a name="scrolling-and-scaling-views"></a>捲動和縮放檢視
 
-MFC 支援的視圖會自動調整為顯示它們的框架視窗大小的捲軸和視圖。 類別`CScrollView`支援這兩種類型的視圖。
+MFC 支援捲動的檢視和自動縮放到顯示這些檢視的幀視窗大小的檢視。 類`CScrollView`支援這兩種視圖。
 
-如需有關滾動和縮放的詳細資訊, 請參閱*MFC 參考*中的類別[CScrollView](../mfc/reference/cscrollview-class.md) 。 如需滾動範例, 請參閱「[塗抹」範例](../overview/visual-cpp-samples.md)。
+有關滾動和縮放的詳細資訊,請參閱*MFC 參考*中的[CScrollView](../mfc/reference/cscrollview-class.md)類。 有關滾動示例,請參閱[塗鴉範例](../overview/visual-cpp-samples.md)。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
+## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
-- 滾動視圖
+- 捲動檢視
 
-- 縮放視圖
+- 縮放檢視
 
-- [視圖座標](/windows/win32/gdi/window-coordinate-system)
+- [檢視座標](/windows/win32/gdi/window-coordinate-system)
 
-##  <a name="_core_scrolling_a_view"></a>滾動視圖
+## <a name="scrolling-a-view"></a><a name="_core_scrolling_a_view"></a>捲動檢視
 
-檔的大小經常大於其 view 可以顯示的大小。 發生這種情況的原因可能是檔的資料增加, 或是使用者縮小了框架的視窗。 在這種情況下, 此視圖必須支援滾動。
+通常,文檔的大小大於其檢視可以顯示的大小。 這可能是因為文件的數據增加或用戶收縮設置視圖的視窗。 在這種情況下,視圖必須支援滾動。
 
-任何視圖都可以處理其`OnHScroll`和`OnVScroll`成員函式中的捲軸訊息。 您可以在這些函式中執行捲軸訊息處理、自行執行所有工作, 或者您可以使用`CScrollView`類別來處理您的滾動。
+任何檢視都可以在其`OnHScroll`和`OnVScroll`成員函數中處理滾動條消息。 您可以在這些函數中實現滾動條消息處理,自己執行所有工作,也可以使用類`CScrollView`為您處理滾動。
 
 `CScrollView` 會執行下列動作：
 
-- 管理視窗和視口大小和對應模式
+- 視窗管理視窗與視埠大小與映射模式
 
-- 自動滾動以回應捲軸訊息
+- 自動捲動以回應捲動條訊息
 
-您可以指定要對「頁面」 (當使用者按一下捲軸軸時) 和「行」 (當使用者按一下滾動箭號時) 滾動的程度。 請規劃這些值, 以符合您的視圖本質。 例如, 您可能想要針對圖形視圖以1個圖元的增量滾動, 但根據文字檔中的行高, 以遞增。
+您可以指定「頁面」(當使用者在滾動條軸中按一下時)和「行」(當使用者在滾動箭頭中按一下時)的滾動量。 規劃這些值以適應視圖的性質。 例如,您可能希望以 1 圖元的增量滾動圖形檢視,但基於文本文檔中的行高度以增量滾動。
 
-##  <a name="_core_scaling_a_view"></a>縮放視圖
+## <a name="scaling-a-view"></a><a name="_core_scaling_a_view"></a>縮放檢視
 
-當您想要讓視圖自動調整其框架視窗的大小時, 您可以使用`CScrollView`進行縮放, 而不是捲軸。 邏輯視圖會伸展或縮小, 以完全符合視窗的工作區。 縮放的視圖沒有捲軸。
+當希望檢視自動適合其框架視窗的大小時,可以使用`CScrollView`縮放而不是滾動。 邏輯視圖將拉伸或收縮,以完全適合視窗的工作區。 縮放視圖沒有滾動條。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: ad8faa08a2c85e777cbc8721e5842e708b9e6cb1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42e8cc9a20c96e65ed3ddf73d562fe014bd9fa28
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181846"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349995"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial  (C++/CLI 和 C++/CX)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80181846"
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-對於有兩個部分定義的 ref 類別，**partial** 關鍵字會套用至第一個定義，而且這通常是由自動產生的程式碼完成，因此編碼人員並不常使用這個關鍵字。 如需類別的所有後續部分定義，請將 **partial** 修飾詞自 *class-key* 關鍵字和類別識別碼中省略。 當編譯器遇到先前定義的 ref 類別和類別識別碼，但沒有 **partial** 關鍵字時，它會在內部將 ref 類別定義的所有部分合併成一個定義。
+對於具有兩個部分定義的 ref 類,**部分**關鍵字應用於定義的第一次出現,這通常是透過自動生成的代碼完成的,以便人工編碼器不會經常使用該關鍵字。 如需類別的所有後續部分定義，請將 **partial** 修飾詞自 *class-key* 關鍵字和類別識別碼中省略。 當編譯器遇到先前定義的 ref 類別和類別識別碼，但沒有 **partial** 關鍵字時，它會在內部將 ref 類別定義的所有部分合併成一個定義。
 
 ### <a name="syntax"></a>語法
 
@@ -46,26 +46,26 @@ class-key identifier {
 *class-key*<br/>
 此關鍵字會宣告 Windows 執行階段支援的類別或結構。 任一 **ref class**、**value class**、**ref struct** 或 **value struct**。
 
-*identifier*<br/>
+*識別碼*<br/>
 已定義型別的名稱。
 
 ### <a name="remarks"></a>備註
 
 部分類別支援以下案例：您在一個檔案中修改一部分的類別定義，而自動產生程式碼的軟體 (例如 XAML 設計工具) 在另一個檔案中修改同一類別的程式碼。 您可以使用部分類別防止自動程式碼產生器覆寫您的程式碼。 在 Visual Studio 專案中，會對產生的檔案自動套用 **partial** 修飾詞。
 
-內容：有兩個例外狀況，部分類別定義可以包含完整類別定義在省略**部分**關鍵字時可能包含的任何內容。 不過，您無法指定類別存取範圍 (例如 `public partial class X { ... };`) 或 **declspec**。
+內容:除兩個例外外,如果省略**了部分**關鍵字,則部分類定義可以包含完全類定義可能包含的任何內容。 不過，您無法指定類別存取範圍 (例如 `public partial class X { ... };`) 或 **declspec**。
 
 *identifier* 的部分類別定義中所使用的存取規範，不會影響 *identifier* 的後續部分或完整類別定義中的預設存取範圍。 此外也允許靜態資料成員的內嵌定義。
 
-宣告：類別*識別碼*的部分定義只會引進名稱*識別碼*，但無法以需要類別定義的方式使用*識別碼*。 *identifier* 這個名稱無法用來取得 *identifier* 大小的資訊，也無法在編譯器遇到 *identifier* 的完整定義之前使用 *identifier* 的基底或成員。
+聲明:類*識別符*的部分定義僅引入名稱*標識符*,但*識別符*不能以需要類定義的方式使用。 *identifier* 這個名稱無法用來取得 *identifier* 大小的資訊，也無法在編譯器遇到 *identifier* 的完整定義之前使用 *identifier* 的基底或成員。
 
-數位和排序：*識別碼*可以有零個或多個部分類別定義。 *identifier* 的所有部分類別定義都必須在語彙上位於一個 *identifier* 完整定義前面 (如果有完整定義的話。否則，除非是在向前宣告的情況下，不然就無法使用該類別)，但是不需要在 *identifier* 的向前宣告之前。 所有的類別識別碼都必須相符。
+編號和排序:*標記可*有零個或多個部分類定義。 *identifier* 的所有部分類別定義都必須在語彙上位於一個 *identifier* 完整定義前面 (如果有完整定義的話。否則，除非是在向前宣告的情況下，不然就無法使用該類別)，但是不需要在 *identifier* 的向前宣告之前。 所有的類別識別碼都必須相符。
 
-完整定義：在類別*識別碼*的完整定義時，其行為會如同*識別碼*的定義已宣告所有基類、成員等，而且是以它們在部分類別中遇到和定義的順序來宣告。
+完整定義:在類*標識符*的完整定義點,行為與*標識符*的定義聲明所有基類、成員等相同,其順序是部分類中遇到和定義它們。
 
-範本：部分類別不可以是範本。
+範本:部分類不能是範本。
 
-泛型：如果完整定義可能是泛型，部分類別可以是泛型。 但每個部分和完整類別都必須有完全相同的泛型參數，包括型式參數名稱。
+泛型:如果完整定義可以是泛型,則部分類可以是泛型。 但每個部分和完整類別都必須有完全相同的泛型參數，包括型式參數名稱。
 
 如需如何使用 **partial** 關鍵字的詳細資訊，請參閱[部分類別 (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)。
 
@@ -79,4 +79,4 @@ class-key identifier {
 
 ## <a name="see-also"></a>另請參閱
 
-[部分類別 (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)
+[部分類別(C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)

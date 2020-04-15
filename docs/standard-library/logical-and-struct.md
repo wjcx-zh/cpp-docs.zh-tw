@@ -7,20 +7,20 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351694"
 ---
 # <a name="logical_and-struct"></a>logical_and 結構
 
-在其引數上執行邏輯結合運算（`operator&&`）的預先定義函式物件。
+對其參數執行邏輯連合操作`operator&&`( ) 的預定義函數物件。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -39,14 +39,14 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>參數
 
-*類型*、 *T*、 *U*\
+*型態*, *T*, *U*\
 支援 `operator&&` 的任何類型，其接受指定或推斷類型的運算元。
 
-*左方*\
-邏輯結合運算的左運算元。 未特製化的範本會採用類型*類型*的左值參考引數。 特殊化的範本會完美地轉送已推斷類型*T*的左值和右值參考引數。
+*離開*\
+邏輯結合運算的左運算元。 非專用範本採用*類型 Type*的 lvalue 引用參數。 專用範本對推斷型*T*的lvalue和rvalue引用參數進行了完美的轉發。
 
-*Right*\
-邏輯結合運算的右運算元。 未特製化的範本會採用類型*類型*的左值參考引數。 特製化範本會完美地轉送推斷類型*U*的左值和右值參考引數。
+*對*\
+邏輯結合運算的右運算元。 非專用範本採用*類型 Type*的 lvalue 引用參數。 專用範本對推斷型*U*的lvalue和rvalue引用參數進行了完美的轉發。
 
 ## <a name="return-value"></a>傳回值
 

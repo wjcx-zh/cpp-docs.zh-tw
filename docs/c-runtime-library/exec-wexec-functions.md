@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300297"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351669"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 函式
 
@@ -105,10 +105,10 @@ ms.locfileid: "75300297"
 將參數傳遞至新處理序，是透過提供一或多個指標給字元字串作為 `_exec` 呼叫中的參數。 這些字元字串會形成新處理序的參數清單。 繼承的環境設定，以及形成新處理序的參數清單的字串，兩者的合併長度不可超過 32 KB。 計數中不會包含每個字串的結束的 Null 字元 ('\0')，但會計算自動插入以區隔參數的空格字元。
 
 > [!NOTE]
->  字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_exec` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。
+> 字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_exec` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。
 
 > [!IMPORTANT]
->  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_exec`。 `_exec` 會導致呼叫 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
+> 請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_exec`。 `_exec` 會導致呼叫 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
 
 `_exec` 函式會驗證它們的參數。 若預期的參數是 Null 指標、空字串，或是已省略，則 `_exec` 函式會叫用無效參數處理常式，如[參數驗證](../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 -1。 沒有執行任何新處理序。
 
@@ -118,7 +118,7 @@ ms.locfileid: "75300297"
 
 當新處理序的參數數目為變數時，`_execv`、`_execve`、`_execvp` 和 `_execvpe` 呼叫就很實用。 參數的指標會作為陣列 `argv` 進行傳遞。 參數 `argv`[0] 通常是 `cmdname` 的指標。 參數 `argv`[1] 到 `argv`[`n`] 會指向形成新參數清單的字元字串。 參數 `argv`[`n`+1] 必須是 **NULL** 指標，以標記參數清單的結尾。
 
-執行 `_exec` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 `_execle`、`_execlpe`、`_execve` 和 `_execvpe` 呼叫可透過 `envp` 參數傳遞環境設定的清單，來改變新處理序的環境。 `envp` 是字元指標的陣列，其中每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 （請注意，`value` 不會以雙引號括住）。`envp` 陣列的最後一個元素應該是**Null**。 當 `envp` 本身是 **NULL** 時，新處理序會繼承呼叫處理序的環境設定。
+執行 `_exec` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 `_execle`、`_execlpe`、`_execve` 和 `_execvpe` 呼叫可透過 `envp` 參數傳遞環境設定的清單，來改變新處理序的環境。 `envp` 是字元指標的陣列，其中每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意,`value`未以雙引弧括起來。陣列的最後一`envp`個元素應為**NULL**。 當 `envp` 本身是 **NULL** 時，新處理序會繼承呼叫處理序的環境設定。
 
 使用其中一個 `_exec` 函式執行的程式會一律載入至記憶體中，正如同程式的 .exe 檔案標頭中的最大配置欄位是設為 0xFFFFH 的預設值。
 
@@ -236,9 +236,9 @@ int main( int ac, char* av[] )
 
 **標頭：** process.h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
+[處理序和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>

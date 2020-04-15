@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161619"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354387"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 類別
 
@@ -31,15 +31,15 @@ ref class UnorderedMapView sealed;
 *K*<br/>
 機碼值組中，機碼的類型。
 
-*V*<br/>
+*五*<br/>
 機碼值組中，值的型別。
 
 *C*<br/>
-可提供函式物件用來比較兩個機碼值是否相等的類型。 根據預設， [std:: equal_to\<K >](../standard-library/equal-to-struct.md)
+可提供函式物件用來比較兩個機碼值是否相等的類型。 預設情況下[,std::equal_to\<K>](../standard-library/equal-to-struct.md)
 
 ### <a name="remarks"></a>備註
 
-UnorderedMapView 是具體C++的實作[Windows::Foundation::Collections::IMapView\<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)應用程式二進位介面 (ABI) 之間傳遞的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+無序的 MapView 是[Windows::基礎:集合::iMapView\<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)介面 C++的具體實現,這些介面通過應用程式二進位介面 (ABI) 傳遞。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 
@@ -47,19 +47,19 @@ UnorderedMapView 是具體C++的實作[Windows::Foundation::Collections::IMapVie
 
 |名稱|描述|
 |----------|-----------------|
-|[UnorderedMapView::UnorderedMapView](#ctor)|初始化 UnorderedMapView 類別的新執行個體。|
+|[無序地圖檢視:無序地圖檢視](#ctor)|初始化 UnorderedMapView 類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[UnorderedMapView::First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|
-|[UnorderedMapView::HasKey](#haskey)|判斷目前 UnorderedMapView 是否包含指定的機碼。|
-|[UnorderedMapView::Lookup](#lookup)|取得目前 UnorderedMapView 物件中，所指定機碼處的項目。|
-|[UnorderedMapView::Size](#size)|傳回目前 UnorderedMapView 物件中的元素數目。|
-|[UnorderedMapView::Split](#split)|將原始 UnorderedMapView 物件分割為兩個 UnorderedMapView 物件。|
+|[無序的地圖檢視:第一](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|
+|[無序地圖檢視::哈斯鍵](#haskey)|判斷目前 UnorderedMapView 是否包含指定的機碼。|
+|[無序的地圖檢視::尋找](#lookup)|取得目前 UnorderedMapView 物件中，所指定機碼處的項目。|
+|[無序的地圖檢視:大小](#size)|傳回目前 UnorderedMapView 物件中的元素數目。|
+|[無序的地圖檢視:分割](#split)|將原始 UnorderedMapView 物件分割為兩個 UnorderedMapView 物件。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `UnorderedMapView`
 
@@ -69,9 +69,9 @@ UnorderedMapView 是具體C++的實作[Windows::Foundation::Collections::IMapVie
 
 **命名空間：** Platform::Collections
 
-## <a name="first"></a>  UnorderedMapView::First 方法
+## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>無序的 MapView:第一種方法
 
-傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) unorderedmap 中的項目。
+返回指定第一個[Windows::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)無序映射中的元素的反覆運算器。
 
 ### <a name="syntax"></a>語法
 
@@ -87,9 +87,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如， `auto x = myMapView->First();` 。
+保存 First() 傳回的反覆運算器的一個方便方法是將返回值分配給使用**自動**類型扣減關鍵字聲明的變數。 例如： `auto x = myMapView->First();` 。
 
-## <a name="haskey"></a>  UnorderedMapView::HasKey 方法
+## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a>無序的 MapView::有鍵方法
 
 判斷目前 UnorderedMap 是否包含指定的機碼。
 
@@ -101,14 +101,14 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-用來尋找元素的機碼。 型別`key`為 typename *K*。
+*關鍵*<br/>
+用來尋找元素的機碼。 的類型`key`是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
 
-**真**找到則為索引鍵是否**false**。
+如果找到金鑰,**則為 true;** 否則,**假**。
 
-## <a name="lookup"></a>  UnorderedMapView::Lookup 方法
+## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a>無序的 MapView:尋找方法
 
 取得與類型為 K 之指定機碼相關聯且類型為 V 的值。
 
@@ -120,16 +120,16 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-用來在 UnorderedMapView 中尋找元素的機碼。 型別`key`為 typename *K*。
+*關鍵*<br/>
+用來在 UnorderedMapView 中尋找元素的機碼。 的類型`key`是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
 
-與 `key` 配對的值。 傳回值的類型為 typename *V*。
+與 `key` 配對的值。 傳回值的型態為類型名稱*V*。
 
-## <a name="size"></a>  UnorderedMapView::Size 方法
+## <a name="unorderedmapviewsize-method"></a><a name="size"></a>沒有排列對應檢視:大小方法
 
-傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMapView 中的項目。
+返回"無序地圖視圖"中的視窗數[::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素。
 
 ### <a name="syntax"></a>語法
 
@@ -141,7 +141,7 @@ virtual property unsigned int Size;
 
 UnorderedMapView 中的元素數目。
 
-## <a name="split"></a>  UnorderedMapView::Split 方法
+## <a name="unorderedmapviewsplit-method"></a><a name="split"></a>無序映射檢視::拆分方法
 
 將目前 UnorderedMapView 物件分割為兩個 UnorderedMapView 物件。 這個方法無法操作。
 
@@ -157,17 +157,17 @@ void Split(
 
 ### <a name="parameters"></a>參數
 
-*firstPartition*<br/>
+*第一個分割區*<br/>
 原始 UnorderedMapView 物件的第一個部分。
 
-*secondPartition*<br/>
+*第二個分割區*<br/>
 原始 UnorderedMapView 物件的第二個部分。
 
 ### <a name="remarks"></a>備註
 
 這個方法無法操作，不會執行任何動作。
 
-## <a name="ctor"></a>  UnorderedMapView::UnorderedMapView 建構函式
+## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a>無序 MapView:無序的 MapView 構造函數
 
 初始化 UnorderedMapView 類別的新執行個體。
 
@@ -221,22 +221,22 @@ UnorderedMapView(
 *n*<br/>
 要為其預先配置空間的元素數目。
 
-*InIt*<br/>
+*Init*<br/>
 UnorderedMapView 的 typename。
 
 *H*<br/>
-可為機碼產生雜湊值的函式物件。 預設值為[std::hash\<K >](../standard-library/hash-class.md)類型的`std::hash`支援。
+可為機碼產生雜湊值的函式物件。 預設值為[std:::哈\<希 K>](../standard-library/hash-class.md)支援的類型`std::hash`。
 
 *P*<br/>
-可提供函式物件用來比較兩個機碼是否相等的類型。 預設值為[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。
+可提供函式物件用來比較兩個機碼是否相等的類型。 預設值為[:equal_to\<K>](../standard-library/equal-to-struct.md)。
 
-*m*<br/>
-參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: unordered_map](../standard-library/unordered-map-class.md)用來初始化 UnorderedMapView。
+*米*<br/>
+用於初始化無序 MapView 的[std::unordered_map](../standard-library/unordered-map-class.md)的引用或[Lvalue 和 Rvalue。](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
-*first*<br/>
+*第一*<br/>
 用來初始化 UnorderedMapView 的項目範圍中，第一個元素的輸入迭代器。
 
-*last*<br/>
+*最後*<br/>
 用來初始化 UnorderedMapView 的項目範圍以外第一個元素的輸入迭代器。
 
 ## <a name="see-also"></a>另請參閱

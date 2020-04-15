@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746939"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361014"
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全性功能
 
@@ -52,11 +52,11 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 1，便可以透過將 `strcpy` 呼叫變更為 `strcpy_s` 來排除警告，並進一步防止緩衝區溢位。 如需詳細資訊，請參閱 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)。
+將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 1，便可以透過將 `strcpy` 呼叫變更為 `strcpy_s` 來排除警告，並進一步防止緩衝區溢位。 如需詳細資訊，請參閱[安全範本多載](../c-runtime-library/secure-template-overloads.md)。
 
 對於那些沒有安全範本多載的已取代函式，您便應該考慮手動更新您的程式碼，以使用安全的版本。
 
-另一個與安全性無關的已取代警告來源是 POSIX 函式。 使用 POSIX 函式的標準對等版本來取代 POSIX 函式名稱 (例如，將 [access](../c-runtime-library/reference/access-crt.md) 變更為 [_access](../c-runtime-library/reference/access-waccess.md))，或透過定義 `_CRT_NONSTDC_NO_WARNINGS` 來停用 POSIX 相關的取代警告。 如需詳細資訊，請參閱 [相容性](compatibility.md)。
+另一個與安全性無關的已取代警告來源是 POSIX 函式。 使用 POSIX 函式的標準對等版本來取代 POSIX 函式名稱 (例如，將 [access](../c-runtime-library/reference/access-crt.md) 變更為 [_access](../c-runtime-library/reference/access-waccess.md))，或透過定義 `_CRT_NONSTDC_NO_WARNINGS` 來停用 POSIX 相關的取代警告。 如需詳細資訊，請參閱[相容性](compatibility.md)。
 
 ## <a name="additional-security-features"></a>其他的安全性功能
 
@@ -64,11 +64,11 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 - `Parameter Validation`. 在安全函式和許多現有的函式版本中，傳遞至 CRT 函式的參數會受到驗證。 這些驗證包括：
 
-   - 檢查傳遞至函式的 **NULL** 值。
+  - 檢查傳遞至函式的 **NULL** 值。
 
-   - 檢查列舉值的有效性。
+  - 檢查列舉值的有效性。
 
-   - 檢查整數值是否在有效範圍內。
+  - 檢查整數值是否在有效範圍內。
 
 - 如需詳細資訊，請參閱[參數驗證](../c-runtime-library/parameter-validation.md)。
 
@@ -89,5 +89,5 @@ strcpy(szBuf, "test"); // warning: deprecated
 ## <a name="see-also"></a>另請參閱
 
 [參數驗證](../c-runtime-library/parameter-validation.md)<br/>
-[安全範本多載](../c-runtime-library/secure-template-overloads.md)<br/>
-[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
+[安全範本重載](../c-runtime-library/secure-template-overloads.md)<br/>
+[CRT 函式庫功能](../c-runtime-library/crt-library-features.md)

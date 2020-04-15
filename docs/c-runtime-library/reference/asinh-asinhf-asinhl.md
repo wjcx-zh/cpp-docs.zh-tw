@@ -1,10 +1,13 @@
 ---
 title: asinh、asinhf、asinhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinh
 - asinhf
 - asinhl
+- _o_asinh
+- _o_asinhf
+- _o_asinhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939646"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350463"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -56,26 +60,28 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X.*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Asinh**函數會傳回*x*的反雙曲正弦（arc 雙曲正弦）。 此函式在浮點網域中有效。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
+**asinh**函數傳回*x*的反向催眠正則(弧形雙曲正子)。 此函式在浮點網域中有效。 如果*x*是安靜的 NaN、無限期或無窮大,則返回相同的值。
 
-|Input|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr**例外|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|none|none|
+|± QNAN、IND、INF|無|無|
 
 ## <a name="remarks"></a>備註
 
-當您使用C++時，您可以呼叫採用並傳回**float**或**long** **double**值之**asinh**的多載。 在 C 程式中， **asinh**一律採用並傳回**double**。
+使用 C++ 時,可以調用採用並返回**浮點**值或**長****雙精度**值的**asinh**重載。 在 C 程式中 **,asinh**無法取得並傳回**雙**。
+
+默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的 C 標頭|必要的 C++ 標頭|
+|函式|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|--------------|------------------|
-|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<h > 或\<math <|
+|**阿辛**,**阿辛夫**,**阿辛赫爾**|\<math.h>|\<數學>或\<數學<|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

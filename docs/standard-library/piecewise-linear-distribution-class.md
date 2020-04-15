@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 9221daa002f19c3f73e65a49efb8da9c6f96b258
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7d9e1f1b9af3002faa9e2d9b20b7ee76dce35aea
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455230"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372079"
 ---
-# <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 類別
+# <a name="piecewise_linear_distribution-class"></a>piecewise_linear_distribution 類別
 
 產生分段線性分佈，其中有不同寬度間隔，且每個間隔中有線性變化可能性。
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*\
-浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*真實類型*\
+浮點結果類型,預設值為**雙精度**值。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -98,7 +98,7 @@ public:
 
 屬性函式 `densities()` 會傳回 `vector<result_type>`，其中具有針對每個間隔設定所儲存的密度，這是根據建構函式參數中提供的加權所計算而得。
 
-屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
+屬性成員 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+有關分發類及其成員的詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
 
 ## <a name="example"></a>範例
 
@@ -219,7 +219,7 @@ Distribution for 100 samples:
 
 **命名空間：** std
 
-## <a name="piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution
+## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::p線性分佈
 
 建構分佈。
 
@@ -249,13 +249,13 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*firstI*\
+*第一I*\
 分佈範圍中第一個元素的輸入迭代器。
 
 *lastI*\
 分佈範圍中最後一個元素的輸入迭代器。
 
-*firstW*\
+*第一W*\
 加權範圍中第一個元素的輸入迭代器。
 
 *間隔*\
@@ -270,10 +270,10 @@ explicit piecewise_linear_distribution(const param_type& parm);
 *xmax*\
 分佈範圍中的最高值。 必須大於 *xmin*。
 
-*weightfunc*\
-表示分佈的可能性函式的物件。 參數和傳回值都必須可轉換為**double**。
+*重量豐茨*\
+表示分佈的可能性函式的物件。 參數和返回值都必須轉換為**雙精度**值。
 
-*parm*\
+*帕爾姆*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-在序列 [ `firstI`, `lastI`) 上使用反覆運算器的序列上來建立散發物件, 並從*firstW*開始對應的權數序列。
+建構一個分配物件,該物件來自反覆運算器在序列`firstI`*`lastI`上, 以及從第*一W*開始的匹配權重序列。
 
 初始設定式清單建構函式
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-以從函式*weightfunc*產生的初始化運算式清單*間隔*和權數的間隔, 來構造散發物件。
+建構一個分布物件,其間隔來自初始化器列表*間隔*和從函數*權重func*生成的權重。
 
 建構函式定義為
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-以一致的方式, 建立*計數*間隔分佈于 [ `xmin,xmax`] 的散發物件, 根據函數*weightfunc*指派每個間隔權數, 而*weightfunc*必須接受一個參數並傳回值, 這兩個都可以轉換`double`成。 **前置條件：** `xmin < xmax`。
+建構*計數間隔*`xmin,xmax`均勻 分配在 * 上的分布物件,根據函數*權重func*分配每個間隔權重,*並且 weightfunc*必須接受一個參數並具有返回值`double`,這兩個參數都可轉換為 。 **先決條件:**`xmin < xmax`.
 
 建構函式定義為
 
@@ -322,9 +322,9 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-使用*parm*做為預存參數結構來建立散發物件。
+使用*parm*作為存儲的參數結構建構分佈物件。
 
-## <a name="param_type"></a>  piecewise_linear_distribution::param_type
+## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a>piecewise_linear_distribution::p阿拉姆型
 
 儲存分佈的所有參數。
 
@@ -352,10 +352,10 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：** `xmin < xmax`
+**先決條件:**`xmin < xmax`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)
+[\<隨機>](../standard-library/random.md)

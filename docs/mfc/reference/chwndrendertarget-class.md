@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24cf4127c2f429f66143af3a0f49625f23a4e6ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372457"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 類別
 
-ID2D1HwndRenderTarget 包裝函式。
+ID2D1HwndRender目標包裝器。
 
 ## <a name="syntax"></a>語法
 
@@ -49,48 +49,48 @@ class CHwndRenderTarget : public CRenderTarget;
 
 |名稱|描述|
 |----------|-----------------|
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|建構 CHwndRenderTarget 物件從 HWND。|
+|[CHwndRender目標::CHwndRender目標](#chwndrendertarget)|從 HWND 構造 CHwndRenderTarget 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CHwndRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|指出是否要阻擋此呈現目標相關聯的 HWND。|
-|[CHwndRenderTarget::Create](#create)|建立與視窗相關聯的呈現目標|
-|[CHwndRenderTarget::Detach](#detach)|中斷連結物件的轉譯目標介面|
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|傳回與此相關的 HWND 呈現目標。|
-|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|傳回 ID2D1HwndRenderTarget 介面。|
-|[CHwndRenderTarget::ReCreate](#recreate)|重新建立與視窗相關聯的呈現目標|
-|[CHwndRenderTarget::Resize](#resize)|呈現目標的大小變更為指定的像素大小|
+|[CHwndRender目標::附加](#attach)|將現有渲染目標介面附加到物件|
+|[CHwndRender目標::檢查視窗狀態](#checkwindowstate)|指示是否已佔用與此渲染目標關聯的 HWND。|
+|[CHwndRender目標::創建](#create)|建立與視窗關聯的渲染目標|
+|[CHwndRenderTarget::D埃塔奇](#detach)|從物件分離成成目標介面|
+|[CHwndRender目標::GetHwnd](#gethwnd)|返回與此渲染目標關聯的 HWND。|
+|[CHwndRender目標::獲取HwndRender目標](#gethwndrendertarget)|返回 ID2D1HwndRenderTarget 介面。|
+|[CHwndRender目標::重新創建](#recreate)|重新建立與視窗關聯的渲染目標|
+|[CHwndRender目標::調整大小](#resize)|將成成目標的大小變更為指定的圖元大小|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|傳回 ID2D1HwndRenderTarget 介面。|
+|[CHwndRender目標::操作員 ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|返回 ID2D1HwndRenderTarget 介面。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|ID2D1HwndRenderTarget 物件的指標。|
+|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|指向 ID2D1HwndRenderTarget 物件的指標。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+[CRender 目標](../../mfc/reference/crendertarget-class.md)
 
-[CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)
+[CHwndRender目標](../../mfc/reference/chwndrendertarget-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="attach"></a>  CHwndRenderTarget::Attach
+## <a name="chwndrendertargetattach"></a><a name="attach"></a>CHwndRender目標::附加
 
-將現有的轉譯目標物件的介面
+將現有渲染目標介面附加到物件
 
 ```
 void Attach(ID2D1HwndRenderTarget* pTarget);
@@ -98,12 +98,12 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 
 ### <a name="parameters"></a>參數
 
-*pTarget*<br/>
-現有的轉譯目標介面。 不能是 NULL
+*p 目標*<br/>
+現有渲染目標介面。 無法為 NULL
 
-##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState
+## <a name="chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRender目標::檢查視窗狀態
 
-指出是否要阻擋此呈現目標相關聯的 HWND。
+指示是否已佔用與此渲染目標關聯的 HWND。
 
 ```
 D2D1_WINDOW_STATE CheckWindowState() const;
@@ -111,11 +111,11 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 
 ### <a name="return-value"></a>傳回值
 
-值，指出是否要與此相關的 HWND 轉譯目標會阻擋。
+指示是否鎖定與此渲染目標關聯的 HWND 的值。
 
-##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget
+## <a name="chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRender目標::CHwndRender目標
 
-建構 CHwndRenderTarget 物件從 HWND。
+從 HWND 構造 CHwndRenderTarget 物件。
 
 ```
 CHwndRenderTarget(HWND hwnd = NULL);
@@ -123,12 +123,12 @@ CHwndRenderTarget(HWND hwnd = NULL);
 
 ### <a name="parameters"></a>參數
 
-*hwnd*<br/>
-與此相關的 HWND 呈現目標
+*霍恩德*<br/>
+與此渲染目標關聯的 HWND
 
-##  <a name="create"></a>  CHwndRenderTarget::Create
+## <a name="chwndrendertargetcreate"></a><a name="create"></a>CHwndRender目標::創建
 
-建立與視窗相關聯的呈現目標
+建立與視窗關聯的渲染目標
 
 ```
 BOOL Create(HWND hWnd);
@@ -137,15 +137,15 @@ BOOL Create(HWND hWnd);
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-與此相關的 HWND 呈現目標
+與此渲染目標關聯的 HWND
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE
 
-##  <a name="detach"></a>  CHwndRenderTarget::Detach
+## <a name="chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::D埃塔奇
 
-中斷連結物件的轉譯目標介面
+從物件分離成成目標介面
 
 ```
 ID2D1HwndRenderTarget* Detach();
@@ -153,11 +153,11 @@ ID2D1HwndRenderTarget* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-卸離的指標轉譯目標的介面。
+指向分離的渲染目標介面的指標。
 
-##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd
+## <a name="chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRender目標::GetHwnd
 
-傳回與此相關的 HWND 呈現目標。
+返回與此渲染目標關聯的 HWND。
 
 ```
 HWND GetHwnd() const;
@@ -165,11 +165,11 @@ HWND GetHwnd() const;
 
 ### <a name="return-value"></a>傳回值
 
-與此相關的 HWND 呈現目標。
+與此渲染目標關聯的HWND。
 
-##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget
+## <a name="chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRender目標::獲取HwndRender目標
 
-傳回 ID2D1HwndRenderTarget 介面。
+返回 ID2D1HwndRenderTarget 介面。
 
 ```
 ID2D1HwndRenderTarget* GetHwndRenderTarget();
@@ -177,19 +177,19 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1HwndRenderTarget 介面的指標。
+如果物件尚未初始化,則指向 ID2D1HwndRenderTarget 介面或 NULL 的指標。
 
-##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget
+## <a name="chwndrendertargetm_phwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget
 
-ID2D1HwndRenderTarget 物件的指標。
+指向 ID2D1HwndRenderTarget 物件的指標。
 
 ```
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget*
+## <a name="chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRender目標::操作員 ID2D1HwndRenderTarget*
 
-傳回 ID2D1HwndRenderTarget 介面。
+返回 ID2D1HwndRenderTarget 介面。
 
 ```
 operator ID2D1HwndRenderTarget*();
@@ -197,11 +197,11 @@ operator ID2D1HwndRenderTarget*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1HwndRenderTarget 介面的指標。
+如果物件尚未初始化,則指向 ID2D1HwndRenderTarget 介面或 NULL 的指標。
 
-##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate
+## <a name="chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRender目標::重新創建
 
-重新建立與視窗相關聯的呈現目標
+重新建立與視窗關聯的渲染目標
 
 ```
 BOOL ReCreate(HWND hWnd);
@@ -210,15 +210,15 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-與此相關的 HWND 呈現目標
+與此渲染目標關聯的 HWND
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
-##  <a name="resize"></a>  CHwndRenderTarget::Resize
+## <a name="chwndrendertargetresize"></a><a name="resize"></a>CHwndRender目標::調整大小
 
-呈現目標的大小變更為指定的像素大小
+將成成目標的大小變更為指定的圖元大小
 
 ```
 BOOL Resize(const CD2DSizeU& size);
@@ -226,12 +226,12 @@ BOOL Resize(const CD2DSizeU& size);
 
 ### <a name="parameters"></a>參數
 
-*size*<br/>
-裝置的像素的呈現目標的新的大小
+*大小*<br/>
+以裝置像素為單位的渲染目標的新大小
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: 6e4defaf347f0d539ef023ee9c0e1e85dd2390db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2005ffed592fa1de278e0f6339d94687a20fd06
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395012"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377390"
 ---
 # <a name="active-document-containers"></a>主動式文件容器
 
-主動式文件的容器，例如 Microsoft Office Binder 或 Internet Explorer 中，可讓您能夠使用不同的應用程式類型 （而不是強迫您建立及使用多個應用程式的框架，每個在單一範圍內的多份文件文件類型）。
+活動文件容器(如 Microsoft Office Binder 或 Internet Explorer)允許您在單個框架中使用多個不同應用程式類型的文檔(而不是強制為每個文件類型創建和使用多個應用程式框架)。
 
-MFC 中的主動式文件容器提供完整支援`COleDocObjectItem`類別。 您可以使用 MFC 應用程式精靈建立主動式文件容器可以選取**主動式文件容器** 核取方塊**複合文件支援**MFC 應用程式精靈頁面。 如需詳細資訊，請參閱 <<c0> [ 建立作用中的文件容器應用程式](../mfc/creating-an-active-document-container-application.md)。
+MFC 為類`COleDocObjectItem`中的活動文檔容器提供完全支援。 您可以通過在 MFC 應用程式精靈的**複合文件支援**頁上選擇 **「活動文檔容器**」複選框,使用 MFC 應用程式精靈建立活動文件容器。 關於詳細資訊,請參閱[建立活動文件容器應用程式](../mfc/creating-an-active-document-container-application.md)。
 
-如需主動式文件容器的詳細資訊，請參閱：
+有關活動文件容器的詳細資訊,請參閱:
 
-- [容器需求](#container_requirements)
+- [集裝箱要求](#container_requirements)
 
-- [文件站台物件](#document_site_objects)
+- [文件網站物件](#document_site_objects)
 
-- [檢視站台物件](#view_site_objects)
+- [檢視網站物件](#view_site_objects)
 
 - [框架物件](#frame_object)
 
@@ -36,31 +36,31 @@ MFC 中的主動式文件容器提供完整支援`COleDocObjectItem`類別。 �
 
 - [命令目標](../mfc/message-handling-and-command-targets.md)
 
-##  <a name="container_requirements"></a> 容器需求
+## <a name="container-requirements"></a><a name="container_requirements"></a>集裝箱要求
 
-在使用中文件容器中的主動式文件支援表示只是多個介面實作： 您也必須使用包含物件之介面的知識。 這同樣適用於使用中文件副檔名，容器也必須知道如何使用這些延伸模組介面上的作用中的文件本身的位置。
+活動文檔容器中的活動文檔支援不僅僅意味著介面實現:它還需要使用包含物件的介面的知識。 這同樣適用於活動文檔擴展,其中容器還必須知道如何在活動文檔本身上使用這些擴展介面。
 
-整合的主動式文件的使用中文件容器必須：
+整合活動文件的活動文件容器必須:
 
-- 能夠處理透過物件儲存體`IPersistStorage`介面，也就是它必須提供`IStorage`每個使用中文件的執行個體。
+- 能夠透過`IPersistStorage`介面處理物件儲存,也就是說,它必須為每個活動文件提供實`IStorage`例 。
 
-- 支援 OLE 文件，需要 [站台] 物件 （一個針對每個文件或內嵌） 的基礎內嵌功能實作`IOleClientSite`和`IAdviseSink`。
+- 支援 OLE 文件的基本嵌入功能,`IOleClientSite`需要`IAdviseSink`實現和的「網站」物件(每個文檔或嵌入一個)。
 
-- 支援就地啟用的內嵌的物件或作用中的文件。 容器的站台物件必須實作`IOleInPlaceSite`而且必須提供容器的框架物件`IOleInPlaceFrame`。
+- 支援就地啟動嵌入物件或活動文檔。 容器的網站物件必須實現`IOleInPlaceSite`,容器的畫面物件必須提供`IOleInPlaceFrame`。
 
-- 藉由實作支援主動式文件的延伸模組`IOleDocumentSite`提供與文件容器的機制。 （選擇性） 容器可以實作主動式文件介面`IOleCommandTarget`和`IContinueCallback`挑選簡單的命令，例如列印或儲存。
+- 通過實現`IOleDocumentSite`為容器提供與文檔對話的機制,支援活動文檔的擴展。 或者,容器可以實現活動文檔`IOleCommandTarget`介面`IContinueCallback`,並拾取簡單的命令,如列印或保存。
 
-框架物件、 檢視物件和容器物件可以選擇性地實作`IOleCommandTarget`中所述，支援特定的命令，將分派[命令目標](../mfc/message-handling-and-command-targets.md)。 檢視和容器物件可以選擇性地實作`IPrint`並`IContinueCallback`，以支援以程式設計方式列印，如所述[以程式設計方式列印](../mfc/programmatic-printing.md)。
+框架物件、檢視物件和容器物件可以選擇實現`IOleCommandTarget`以支援某些命令的調度,如[命令目標](../mfc/message-handling-and-command-targets.md)中所述。 檢視和容器物件也可以選擇實現`IPrint`和`IContinueCallback`,以支援程式設計列印,如[程式設計列印](../mfc/programmatic-printing.md)中所述。
 
-下圖顯示容器和其元件 （左側），並使用中文件和自己的檢視 （右邊） 之間的概念的關聯性。 主動式文件管理儲存體和資料，並檢視顯示，或選擇性地列印該資料。 以粗體顯示的介面是所需的主動式文件參與;這些粗體和斜體是選擇性的。 需要的其他所有介面都。
+下圖顯示了容器及其元件(左圖)與活動文檔及其檢視(右側)之間的概念關係。 活動文件管理儲存和數據,檢視顯示或選擇性地列印該資料。 粗體介面是主動參與文檔所需的介面;這些粗體和斜體是可選的。 所有其他介面是必需的。
 
 ![主動式文件容器介面](../mfc/media/vc37gj1.gif "主動式文件容器介面")
 
-支援單一檢視的文件可以在單一的具象類別上實作檢視 」 和 「 文件的元件 （也就是其對應的介面）。 此外，只支援一個檢視，一次的容器站台可以結合是文件及檢視網站的單一實體站台的類別。 容器的框架物件，不過，必須有所區別，以及容器的文件元件只是這裡包含提供完整的架構;它不會受到使用中文件內含項目結構。
+僅支援單個檢視的文檔可以在單個具體類上實現檢視和文檔元件(即其相應的介面)。 此外,一次僅支援一個檢視的容器網站可以將文檔網站和視圖網站合併到單個具體網站類中。 但是,容器的幀物件必須保持不同,並且容器的文檔元件僅在此處包含,以便完整地反映體系結構;它不受活動文件包含體系結構的影響。
 
-##  <a name="document_site_objects"></a> 文件站台物件
+## <a name="document-site-objects"></a><a name="document_site_objects"></a>文件網站物件
 
-在使用中文件內含項目架構中，文件網站等同於用戶端站台物件中 OLE 文件加上`IOleDocument`介面：
+在活動文件包含架構結構中,文件站台與 OLE 文件中的用戶端網站物件相同,並`IOleDocument`添加介面:
 
 ```cpp
 interface IOleDocumentSite : IUnknown
@@ -69,19 +69,19 @@ interface IOleDocumentSite : IUnknown
 }
 ```
 
-文件站台就概念而言是一或多個 「 檢視站台 」 物件的容器。 每個檢視站台物件是由文件網站的文件的個別檢視物件與相關聯。 如果容器僅支援每個文件網站的單一檢視，然後就可以實作文件網站，檢視站台使用單一的具象類別。
+文件網站在概念上是一個或多個"查看網站"物件的容器。 每個檢視網站物件都與文檔網站管理的文檔的各個檢視對象相關聯。 如果容器僅支援每個文檔網站的單個檢視,則可以使用單個具體類實現文檔網站和視圖網站。
 
-##  <a name="view_site_objects"></a> 檢視站台物件
+## <a name="view-site-objects"></a><a name="view_site_objects"></a>檢視網站物件
 
-容器的檢視站台物件會管理文件的特定檢視的顯示空間。 除了支援標準`IOleInPlaceSite`介面，檢視站台也通常會實作`IContinueCallback`以程式設計方式列印控制項。 (請注意，永遠不會查詢檢視物件`IContinueCallback`讓它可以實際實作上的任何物件的容器需要。)
+容器的檢視站點物件管理文檔的特定檢視的顯示空間。 除了支持標準`IOleInPlaceSite`介面外,視圖網站通常還實現了`IContinueCallback`程式設計列印控制。 (請注意,視圖物件從不查詢`IContinueCallback`,因此它實際上可以在容器所需的任何對象上實現。
 
-支援多個檢視的容器必須能夠建立多個檢視的文件網站內的站台物件。 如此可提供每個檢視個別啟用和停用的服務提供透過`IOleInPlaceSite`。
+支援多個檢視的容器必須能夠在文件網站內創建多個檢視網站物件。 這為每個檢視提供了通過`IOleInPlaceSite`提供的單獨啟動和停用服務。
 
-##  <a name="frame_object"></a> 框架物件
+## <a name="frame-object"></a><a name="frame_object"></a>幀物件
 
-容器的框架物件是，大部分的情況下，也就是用於就地啟動 OLE 文件中，同一個框架，另一個則會處理功能表和工具列的交涉。 檢視物件可存取此框架物件，可透過`IOleInPlaceSite::GetWindowContext`，這也會提供容器物件，代表容器文件 （它可以處理層級 窗格的工具列交涉和所選的物件的列舉型別） 的存取權。
+容器的幀物件在大多數情況下與用於在 OLE 文檔中就地啟動的幀相同,即處理功能表和工具列協商的框架。 視圖物件可通過`IOleInPlaceSite::GetWindowContext`訪問此幀物件,該物件還提供對表示容器文件的容器物件的訪問(該物件可以處理窗格級工具列協商和包含的物件枚舉)。
 
-主動式文件容器可以藉由新增擴充框架`IOleCommandTarget`。 這可讓它能夠接收命令，在使用中文件的使用者介面中都是來自相同的方式，這個介面可以讓容器來傳送相同的命令 (例如**開新檔案**，**開啟**， **另存**，**列印**;**編輯複本**，**貼上**，**復原**，等等) 到作用中的文件。 如需詳細資訊，請參閱 <<c0> [ 命令目標](../mfc/message-handling-and-command-targets.md)。
+活動文檔容器可以`IOleCommandTarget`通過添加 來增強幀。 這允許它接收源自活動文件使用者介面的命令,就像此介面允許容器發送相同的命令(如**檔案新**、**打開**、**儲存為**、**列印**等命令) 一樣。**將複製**複製「、」**貼上**「、」**複製**檔案。 有關詳細資訊,請參閱[指令目標](../mfc/message-handling-and-command-targets.md)。
 
 ## <a name="see-also"></a>另請參閱
 

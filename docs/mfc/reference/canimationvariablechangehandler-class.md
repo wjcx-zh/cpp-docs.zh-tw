@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377090"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 類別
 
@@ -39,15 +39,15 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 |名稱|描述|
 |----------|-----------------|
-|`CAnimationVariableChangeHandler::CreateInstance`|建立的執行個體`CAnimationVariableChangeHandler`物件。|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|當動畫變數的值已變更時呼叫。 (覆寫 `CUIAnimationVariableChangeHandlerBase::OnValueChanged`。)|
-|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|儲存路由事件的動畫控制器的指標。|
+|`CAnimationVariableChangeHandler::CreateInstance`|創建`CAnimationVariableChangeHandler`物件的實例。|
+|[C 動畫可變更處理程式::在值轉換](#onvaluechanged)|當動畫變數的值已更改時調用。 (覆寫 `CUIAnimationVariableChangeHandlerBase::OnValueChanged`。)|
+|[動畫變數變更處理程式::設定動畫控制器](#setanimationcontroller)|存儲指向動畫控制器的指標以路由事件。|
 
 ## <a name="remarks"></a>備註
 
-建立並傳遞至這個事件處理常式`IUIAnimationVariable::SetVariableChangeHandler`方法中，當您呼叫`CAnimationVariable::EnableValueChangedEvent`或`CAnimationBaseObject::EnableValueChangedEvent`（這可讓此封裝在動畫物件的所有動畫變數的事件）。
+此事件處理程式在調用`IUIAnimationVariable::SetVariableChangeHandler``CAnimationVariable::EnableValueChangedEvent``CAnimationBaseObject::EnableValueChangedEvent`或 時創建並傳遞給方法(這啟用動畫物件中封裝的所有動畫變數的此事件)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CUIAnimationCallbackBase`
 
@@ -59,9 +59,9 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged
+## <a name="canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>C 動畫可變更處理程式::在值轉換
 
-當動畫變數的值已變更時呼叫。
+當動畫變數的值已更改時調用。
 
 ```
 IFACEMETHOD(OnValueChanged) (
@@ -73,25 +73,25 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>參數
 
-*storyboard*<br/>
-分鏡腳本，以動畫顯示的變數。
+*文稿*<br/>
+為變數設置動畫的情節提要。
 
-*variable*<br/>
-已更新動畫變數。
+*變動*<br/>
+已更新的動畫變數。
 
 *newValue*<br/>
-新值。
+新的值。
 
-*previousValue*<br/>
-先前的值。
+*前一個值*<br/>
+上一個值。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController
+## <a name="canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>動畫變數變更處理程式::設定動畫控制器
 
-儲存路由事件的動畫控制器的指標。
+存儲指向動畫控制器的指標以路由事件。
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -99,8 +99,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>參數
 
-*pAnimationController*<br/>
-動畫控制器，會收到的事件指標。
+*動畫控制器*<br/>
+指向動畫控制器的指標,該控制器將接收事件。
 
 ## <a name="see-also"></a>另請參閱
 

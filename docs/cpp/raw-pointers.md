@@ -1,21 +1,21 @@
 ---
-title: 原始指標（C++）
-description: 如何在中使用原始指標C++
+title: 原始指標 (C++)
+description: 如何使用原始指標C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374670"
 ---
-# <a name="raw-pointers-c"></a>原始指標（C++）
+# <a name="raw-pointers-c"></a>原始指標 (C++)
 
-指標是一種變數類型，可將物件的位址儲存在記憶體中，並用來存取該物件。 *原始指標*是一種指標，其存留期不是由封裝物件（例如[智慧型指標](smart-pointers-modern-cpp.md)）所控制。 原始指標可以被指派另一個非指標變數的位址，或者可以指派值[nullptr](nullptr.md)。 尚未指派值的指標包含亂數據。
+指標是一種變數類型,用於將物件的位址存儲在記憶體中,並用於訪問該物件。 *原始指標*是一個指標,其存留期不受封裝物件(如[智慧指標](smart-pointers-modern-cpp.md))控制的控制。 可以為原始指標分配另一個非指標變數的位址,也可以為其分配[nullptr](nullptr.md)的值。 尚未分配值的指標包含隨機數據。
 
-指標也*可以被取值*，以抓取它所指向之物件的值。 *成員存取運算子*可讓您存取物件的成員。
+也可以*取消引用*指標以檢索它指向的物件的值。 *成員訪問運算符*提供對物件成員的訪問。
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ ms.locfileid: "80077138"
 
 ```
 
-指標可以指向具類型的物件或**void**。 當程式在記憶體中的[堆積](https://wikipedia.org/wiki/Heap)上配置新的物件時，它會以指標的形式接收該物件的位址。 這類指標稱為「*擁有指標*」;當不再需要堆積配置的物件時，必須使用擁有指標（或其複本）明確地刪除該物件。 無法刪除記憶體會導致*記憶體*流失，並將該記憶體位置轉譯為電腦上的任何其他程式無法使用。 如需詳細資訊，請參閱[new 和 delete 運算子](new-and-delete-operators.md)。
+指標可以指向型態化物件或**void**。 當程式在記憶體中的[堆](https://wikipedia.org/wiki/Heap)上分配新物件時,它將以指標的形式接收該物件的位址。 此類指標稱為*擁有指標*;必須使用擁有指標(或其副本)在不再需要堆分配的物件時顯式刪除它。 未能刪除記憶體會導致*記憶體洩漏*,並使該記憶體位置對計算機上的任何其他程式不可用。 有關詳細資訊,請參閱[新的運算子和刪除運算子](new-and-delete-operators.md)。
 
 ```cpp
 
@@ -35,7 +35,7 @@ ms.locfileid: "80077138"
     delete mc; // delete object (please don't forget!)
 ```
 
-指標（如果未宣告為**const**）可以遞增或遞減，使其指向記憶體中的新位置。 這稱為*指標算術*，用於 C 樣式的程式設計中，以反復查看陣列或其他資料結構中的元素。 **Const**指標無法指向不同的記憶體位置，而且在這個意義上與[參考](references-cpp.md)非常類似。 如需詳細資訊，請參閱[const 和 volatile 指標](const-and-volatile-pointers.md)。
+指標(如果未聲明為**const)** 可以遞增或遞減,以便指向記憶體中的新位置。 這稱為*指標算術*,用於 C 樣式程式設計,用於反覆運算陣列或其他資料結構中的元素。 不能用**const**指標指向不同的記憶體位置,因此與[引用](references-cpp.md)非常相似。 有關詳細資訊,請參閱[const 和易失性指標](const-and-volatile-pointers.md)。
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ ms.locfileid: "80077138"
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-在64位作業系統上，指標的大小為64位;系統的指標大小會決定它可以有多少可定址的記憶體。 指標的所有複本都會指向相同的記憶體位置。 指標（連同參考）廣泛用於，以便在C++函式之間傳遞更大的物件，因為複製物件的64位位址通常會比複製整個物件更有效率。 定義函式時，除非您想要讓函數修改物件，否則請將指標參數指定為**const** 。 一般來說，除非物件的值可能是**nullptr**，否則**常數**參考是將物件傳遞至函式的慣用方式。
+在 64 位元作業系統上,指標的大小為 64 位元;系統的指標大小決定了它可以具有多少可定址記憶體。 指標的所有副本都指向同一記憶體位置。 指標(以及引用)在C++中廣泛使用,用於將較大的物件傳遞到函數,因為複製物件的64位位址通常比複製整個物件更有效。 定義函數時,將指標參數指定為**const,** 除非您打算讓函數修改物件。 通常 **,const**引用是將物件傳遞給函數的首選方法,除非物件的值可能是**nullptr。**
 
-函式的[指標](#pointers_to_functions)可讓函數傳遞至其他函數，並用於 C 樣式程式設計中的「回呼」。 基於C++此目的，新式使用[lambda 運算式](lambda-expressions-in-cpp.md)。
+[函數的指標](#pointers_to_functions)允許函數傳遞到其他函數,並用於 C 樣式程式設計中的「回檔」。 現代C++為此使用[lambda 運算式](lambda-expressions-in-cpp.md)。
 
-## <a name="initialization-and-member-access"></a>初始化和成員存取
+## <a name="initialization-and-member-access"></a>初始化與成員存取
 
-下列範例示範如何宣告原始指標，並使用在堆積上配置的物件加以初始化，以及如何使用它。 它也會顯示一些與原始指標相關聯的危險。 （請記住，這是 C 樣式的程式設計， C++而不是新式！）
+下面的示例演示如何聲明原始指標並使用在堆上分配的對象初始化它,以及如何使用它。 它還顯示了與原始指標相關的一些危險。 (請記住,這是 C 樣式程式設計,而不是現代C++!
 
 ```cpp
 #include <iostream>
@@ -135,12 +135,12 @@ int main()
 
 ## <a name="pointer-arithmetic-and-arrays"></a>指標算術和陣列
 
-指標與陣列密切相關。 當陣列以傳值方式傳遞至函式時，會將它當做第一個元素的指標傳遞。 下列範例示範指標和陣列的下列重要屬性：
+指標和數組密切相關。 當陣列通過值傳遞給函數時,它作為指向第一個元素的指標傳遞。 下面的範例展示式指標與陣列的以下重要屬性:
 
-- `sizeof` 運算子會傳回陣列的總大小（以位元組為單位）
-- 若要判斷元素的數目，請將總位元組除以一個元素的大小
-- 將陣列傳遞至函式時，會*decays*至指標類型
-- 套用至指標時的 `sizeof` 運算子會傳回指標大小、x86 上的4個位元組或 x64 上的8位元組
+- 運算元`sizeof`傳回陣列的總大小(以位元組為單位)
+- 確定元素數,將總位元組除以一個元素的大小
+- 當陣列傳遞給函數時,它將*衰減*為指標類型
+- 當`sizeof`應用於指標時,運算符返回指標大小,x86 上為 4 個字節,在 x64 上返回 8 個字節
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-某些算數運算可以在非 const 指標上執行，使其指向新的記憶體位置。 您可以使用 **++** 、 **+=** 、 **-=** 和 **--** 運算子來遞增和遞減指標。 這項技術可用於陣列中，特別適用于不具類型的資料緩衝區。 **Void\*** 以**char** （1位元組）的大小遞增。 具類型的指標會依其所指向之類型的大小遞增。
+可以對非 const 指標執行某些算術運算,使它們指向新的記憶體位置。 可以使用**++**、**+=****-=****--** 運算符遞增和遞減指標。 此技術可用於陣列,在未鍵入數據的緩衝區中特別有用。 **空隙\*** 以**字元**(1 位元組)的大小遞增。 類型化指標按其指向的類型的大小遞增。
 
-下列範例會示範如何使用指標算術來存取 Windows 點陣圖中的個別圖元。 請注意**new**和**delete**和取值運算子的用法。
+下面的範例展示如何使用指標算術存取 Windows 上的點陣圖中的單個圖元。 請注意**使用 new**和**delete**, 以及取消引用運算子。
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void * 指標
+## <a name="void-pointers"></a>空* 指標
 
-**Void**的指標只會指向原始記憶體位置。 有時候，必須使用**void\*** 指標，例如，在程式碼和 C C++函式之間傳遞時。
+指向**void**的指標僅指向原始記憶體位置。 有時需要使用**void\*** 指標,例如,在C++代碼和 C 函數之間傳遞時。
 
-當具類型的指標轉換成 void 指標時，記憶體位置的內容不會變更，但類型資訊會遺失，因此您無法執行遞增或遞減作業。 記憶體位置可以轉型，例如，從 MyClass * 到 void *，再轉換成 MyClass *。 這類作業原本就很容易發生錯誤，而且需要非常小心地避免錯誤。 除非C++絕對必要，新式不鼓勵使用 void 指標。
+當類型化指標被強制轉換為 void 指標時,記憶體位置的內容不會更改,但類型資訊將丟失,因此無法執行增量或遞減操作。 例如,可以將記憶體位置強制轉換,例如,從 MyClass® 到 void*,然後再次轉換回 MyClass*。 此類操作本質上是容易出錯的,需要非常小心以避免錯誤。 除非絕對必要,否則現代C++禁止使用無效指標。
 
 ```cpp
 
@@ -279,7 +279,8 @@ int main()
 
     // use operator new to allocate untyped memory block
     void* pvoid = operator new(1000);
-    for(char* c = static_cast<char*>(pvoid); pvoid < &pvoid + 1000; ++c)
+    char* pchar = static_cast<char*>(pvoid);
+    for(char* c = pchar; c < pchar + 1000; ++c)
     {
         *c = 0x00;
     }
@@ -290,11 +291,11 @@ int main()
 }
 ```
 
-## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>函式的指標
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>指向函數的指標
 
-在 C 樣式程式設計中，函式指標主要是用來將函式傳遞給其他函數。 在此案例中，呼叫端可以自訂函式的行為，而不需要修改函式。 在現代C++的中， [lambda 運算式](lambda-expressions-in-cpp.md)提供的功能具有更高的型別安全和其他優點。
+在 C 樣式編程中,函數指標主要用於將函數傳遞給其他函數。 在這種情況下,調用方可以自定義函數的行為,而無需對其進行修改。 在現代C++中[,lambda 運算式](lambda-expressions-in-cpp.md)提供了相同的功能,具有更大的類型安全性和其他優勢。
 
-函式指標宣告會指定所指向函數必須具有的簽章：
+函式指標宣告指定指向函數必須有的簽名:
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +311,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-下列範例顯示的函式 `combine` 會接受 `std::string` 的任何函式，並傳回 `std::string`。 視傳遞至 `combine` 的函式而定，它會在前面加上或附加字串。
+下面的範例顯示一個函數`combine`,該函數將`std::string`接受 和返回的任何函`std::string`數作為 參數。 根據傳遞給`combine`它的函數,將預置或追加字串。
 
 ```cpp
 #include <iostream>
@@ -344,7 +345,7 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[智慧型指標](smart-pointers-modern-cpp.md)
-[間接取值運算子： *](indirection-operator-star.md)<br/>
+[智慧指標](smart-pointers-modern-cpp.md)
+[方向運算符: |](indirection-operator-star.md)<br/>
 [傳址運算子：&](address-of-operator-amp.md)</br>
 [歡迎回到C++](welcome-back-to-cpp-modern-cpp.md)

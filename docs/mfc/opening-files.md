@@ -16,12 +16,12 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6119bf922b05c30a14d8421800e3931c4a038779
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375953"
 ---
 # <a name="opening-files"></a>開啟檔案
 
@@ -31,9 +31,9 @@ ms.locfileid: "62394477"
 
 1. 建立檔案物件，而不指定路徑或使用權限旗標。
 
-   您通常會藉由宣告建立的檔案物件[CFile](../mfc/reference/cfile-class.md)變數上的堆疊框架。
+   通常通過在堆疊幀上聲明[CFile](../mfc/reference/cfile-class.md)變數來創建檔物件。
 
-1. 呼叫[開啟](../mfc/reference/cfile-class.md#open)提供路徑和權限的旗標的 「 檔案 」 物件的成員函式。
+1. 呼叫檔案物件的[Open](../mfc/reference/cfile-class.md#open)成員函數,提供路徑和許可權標誌。
 
    如果已成功開啟檔案，`Open` 會傳回非零值，如果無法開啟指定的檔案則會傳回 0。 `Open` 成員函式的原型如下：
 
@@ -46,10 +46,10 @@ ms.locfileid: "62394477"
 [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
 
 > [!NOTE]
->  這個範例會建立並開啟檔案。 如果發生問題，則 `Open` 可能會在它的最後一個參數中傳回 `CFileException` 物件，如下所示。 TRACE 巨集可列印的檔案名稱和代碼，表示失敗的原因。 如果需要更詳細的錯誤報告，您可以呼叫 `AfxThrowFileException` 函式。
+> 這個範例會建立並開啟檔案。 如果發生問題，則 `Open` 可能會在它的最後一個參數中傳回 `CFileException` 物件，如下所示。 TRACE 宏同時列印檔名和指示失敗原因的代碼。 如果需要更詳細的錯誤報告，您可以呼叫 `AfxThrowFileException` 函式。
 
 ## <a name="see-also"></a>另請參閱
 
 [CFile 類別](../mfc/reference/cfile-class.md)<br/>
-[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
+[檔案檔案::開啟](../mfc/reference/cfile-class.md#open)<br/>
 [檔案](../mfc/files-in-mfc.md)

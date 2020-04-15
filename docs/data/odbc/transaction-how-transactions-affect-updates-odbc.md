@@ -1,5 +1,5 @@
 ---
-title: 異動：交易影響更新的方式（ODBC）
+title: 異動：異動如何影響更新 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - CommitTrans method
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-ms.openlocfilehash: d03ec3f71c38f7790d66fbf6f800b7647e080147
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 8a87176ecb20beaf46583e1190b0ad458d508b31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "70311924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376427"
 ---
-# <a name="transaction-how-transactions-affect-updates-odbc"></a>異動：交易影響更新的方式（ODBC）
+# <a name="transaction-how-transactions-affect-updates-odbc"></a>異動：異動如何影響更新 (ODBC)
 
-[資料來源](../../data/odbc/data-source-odbc.md)的更新會在交易期間透過使用編輯緩衝區（這是在交易外使用的相同方法）進行管理。 記錄集的欄位資料成員會共同做為編輯緩衝區，其中包含目前的記錄，而記錄集會在`AddNew`或`Edit`期間暫時備份。 `Delete`在作業期間，不會在交易內備份目前的記錄。 如需編輯緩衝區以及更新如何儲存目前記錄的詳細資訊，請參閱[記錄集：記錄集更新記錄的方式（](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)ODBC）。
+數據源[的更新在](../../data/odbc/data-source-odbc.md)事務期間使用編輯緩衝區(與事務之外使用的方法相同)進行管理。 記錄集的欄位資料成員集體用作包含當前記錄的編輯緩衝區,記錄集在`AddNew``Edit`或 期間暫時備份該記錄。 在`Delete`操作期間,當前記錄不會在事務中備份。 有關編輯緩衝區和更新如何存儲當前記錄的詳細資訊,請參閱[記錄集:記錄集如何更新記錄 (ODBC)。](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 > [!NOTE]
->  如果您已執行大量資料列提取，就無法`AddNew`呼叫`Edit`、或`Delete`。 您必須改為撰寫自己的函式，以對資料來源執行更新。 如需大量資料列擷取的詳細資訊，請參閱[資料錄集：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 如果已實現大量的批次提取,則無法呼叫`AddNew`或`Edit` `Delete` 。 相反,您必須編寫自己的函數才能對數據源執行更新。 有關批量行提取的詳細資訊,請參閱[記錄集:批量提取記錄 (ODBC)。](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-在交易期間`AddNew`， `Edit`可以認可`Delete`或回復、和作業。 `CommitTrans` 和`Rollback`的效果可能會導致目前的記錄不會還原至編輯緩衝區。 若要確定目前的記錄已正確還原，請務必瞭解`CommitTrans`的和`Rollback`成員`CDatabase`函式如何與的更新功能`CRecordset`搭配運作。
+在事務期間`AddNew`,`Edit`可以`Delete`提交 或回滾 和操作。 的效果`CommitTrans``Rollback`可能會導致當前記錄無法還原到編輯緩衝區。 為了確保正確還原當前記錄,請務必`CommitTrans`瞭解的`Rollback``CDatabase`和成員函數如何使用`CRecordset`的更新函數。
 
-##  <a name="_core_how_committrans_affects_updates"></a>CommitTrans 如何影響更新
+## <a name="how-committrans-affects-updates"></a><a name="_core_how_committrans_affects_updates"></a>提交轉換如何影響更新
 
-下表說明交易上的`CommitTrans`效果。
+下表解釋了`CommitTrans`對事務的影響。
 
-### <a name="how-committrans-affects-updates"></a>CommitTrans 如何影響更新
+### <a name="how-committrans-affects-updates"></a>提交轉換如何影響更新
 
-|運算|資料來源的狀態|
+|作業|資料來源的狀態|
 |---------------|---------------------------|
-|`AddNew`和`Update`，然後`CommitTrans`|新記錄會新增至資料來源。|
-|`AddNew`（不`Update`含），然後`CommitTrans`|新記錄已遺失。 記錄未新增至資料來源。|
-|`Edit`和`Update`，然後`CommitTrans`|已認可資料來源的編輯。|
-|`Edit`（不`Update`含），然後`CommitTrans`|記錄的編輯會遺失。 資料來源上的記錄保持不變。|
-|`Delete`請`CommitTrans`|已從資料來源刪除記錄。|
+|`AddNew`和`Update`,然後`CommitTrans`|新記錄將添加到資料源中。|
+|`AddNew`(沒有`Update`),然後`CommitTrans`|新記錄將丟失。 未添加到數據源的記錄。|
+|`Edit`和`Update`,然後`CommitTrans`|提交到數據源的編輯。|
+|`Edit`(沒有`Update`),然後`CommitTrans`|對記錄的編輯將丟失。 在數據源上記錄保持不變。|
+|`Delete`然後`CommitTrans`|從資料源中刪除的記錄。|
 
-##  <a name="_core_how_rollback_affects_updates"></a>復原如何影響交易
+## <a name="how-rollback-affects-transactions"></a><a name="_core_how_rollback_affects_updates"></a>回滾如何影響事務
 
-下表說明交易上的`Rollback`效果。
+下表解釋了`Rollback`對事務的影響。
 
-### <a name="how-rollback-affects-transactions"></a>復原如何影響交易
+### <a name="how-rollback-affects-transactions"></a>回滾如何影響事務
 
-|運算|目前記錄的狀態|您也必須|資料來源的狀態|
+|作業|目前紀錄的狀態|您必須|資料來源的狀態|
 |---------------|------------------------------|-------------------|---------------------------|
-|`AddNew`然後`Update`，`Rollback`|目前記錄的內容會暫時儲存，以騰出空間給新的記錄。 已在編輯緩衝區中輸入新記錄。 呼叫`Update`之後，目前的記錄會還原至編輯緩衝區。||除了所建立的`Update`資料來源之外，也會反轉。|
-|`AddNew`（不`Update`含），然後`Rollback`|目前記錄的內容會暫時儲存，以騰出空間給新的記錄。 編輯緩衝區包含新記錄。|再次`AddNew`呼叫，將編輯緩衝區還原為空白的新記錄。 或呼叫`Move`（0），將舊值還原至編輯緩衝區。|因為`Update`不會呼叫，所以不會對資料來源進行任何變更。|
-|`Edit`然後`Update`，`Rollback`|目前記錄的未編輯版本會暫時儲存。 編輯緩衝區的內容會進行編輯。 呼叫`Update`之後，仍會暫時儲存未編輯的記錄版本。|*動態集*：將目前的記錄回復，然後返回以將未編輯的記錄版本還原至編輯緩衝區。<br /><br /> *快照*集：呼叫`Requery`以重新整理資料來源中的記錄集。|對所做的`Update`資料來源所做的變更會反轉。|
-|`Edit`（不`Update`含），然後`Rollback`|目前記錄的未編輯版本會暫時儲存。 編輯緩衝區的內容會進行編輯。|再次`Edit`呼叫，將未編輯的記錄版本還原至編輯緩衝區。|因為`Update`不會呼叫，所以不會對資料來源進行任何變更。|
-|`Delete`請`Rollback`|刪除目前記錄的內容。|呼叫`Requery` ，以從資料來源還原目前記錄的內容。|從資料來源中刪除資料是相反的。|
+|`AddNew`和`Update`,然後`Rollback`|當前記錄的內容將暫時存儲,以便為新記錄騰出空間。 新記錄將輸入到編輯緩衝區中。 調用`Update`後,當前記錄將還原到編輯緩衝區。||對所`Update`做數據源的添加是反向的。|
+|`AddNew`(沒有`Update`),然後`Rollback`|當前記錄的內容將暫時存儲,以便為新記錄騰出空間。 編輯緩衝區包含新記錄。|再次`AddNew`調用以將編輯緩衝區還原到空的新記錄。 或調用`Move`(0) 將舊值還原到編輯緩衝區。|因為`Update`未調用,因此對數據源沒有進行任何更改。|
+|`Edit`和`Update`,然後`Rollback`|暫存儲存目前記錄的未經編輯的版本。 編輯對編輯緩衝區的內容進行編輯。 調用`Update`後,記錄的未編輯版本仍暫時存儲。|*動態集*:滾動當前記錄,然後返回以將未編輯的記錄版本還原到編輯緩衝區。<br /><br /> *快照*`Requery`: 呼叫從資料源刷新記錄集。|對數據源`Update`所做的更改將發生逆轉。|
+|`Edit`(沒有`Update`),然後`Rollback`|暫存儲存目前記錄的未經編輯的版本。 編輯對編輯緩衝區的內容進行編輯。|再次`Edit`調用以將未編輯的記錄版本還原到編輯緩衝區。|因為`Update`未調用,因此對數據源沒有進行任何更改。|
+|`Delete`然後`Rollback`|將刪除當前記錄的內容。|調用`Requery`從數據源還原當前記錄的內容。|從數據源中刪除數據將顛倒。|
 
 ## <a name="see-also"></a>另請參閱
 

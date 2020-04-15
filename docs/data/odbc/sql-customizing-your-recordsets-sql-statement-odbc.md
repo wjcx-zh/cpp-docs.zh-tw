@@ -1,5 +1,5 @@
 ---
-title: SQL:自訂資料錄集的 SQL 陳述式 (ODBC)
+title: SQL：自訂資料錄集的 SQL 陳述式 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, SQL statements
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 083d268d2b2f2eef072809b1afde9d6ea34f6996
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329929"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374510"
 ---
-# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL:自訂資料錄集的 SQL 陳述式 (ODBC)
+# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL：自訂資料錄集的 SQL 陳述式 (ODBC)
 
-本主題說明：
+本主題將說明：
 
-- 架構如何建構 SQL 陳述式
+- 框架如何建構 SQL 語句
 
-- 如何覆寫的 SQL 陳述式
+- 如何重寫 SQL 語句
 
 > [!NOTE]
->  這項資訊適用於 MFC ODBC 類別。 如果您使用 MFC DAO 類別時，請參閱 「 比較 Microsoft Jet 資料庫引擎 SQL 和 ANSI SQL"DAO [說明] 中的主題。
+> 此資訊適用於 MFC ODBC 類別。 如果您正在使用 MFC DAO 類,請參閱 DAO 説明中的主題「微軟噴氣資料庫引擎 SQL 和 ANSI SQL 的比較」。。
 
-## <a name="sql-statement-construction"></a>SQL 陳述式建構
+## <a name="sql-statement-construction"></a>SQL 語句建構
 
-資料錄集基底記錄的選取項目主要是根據 SQL**選取**陳述式。 當您宣告您的類別使用精靈時，它會寫入覆寫的新版`GetDefaultSQL`看起來像這樣的成員函式 (資料錄集類別稱為`CAuthors`)。
+記錄集主要基於 SQL **SELECT**語句選擇記錄。 使用嚮導聲明類時,它會編寫一個類似於這樣的`GetDefaultSQL`成員函數的重寫版本(對於`CAuthors`稱為的記錄集類)。
 
 ```cpp
 CString CAuthors::GetDefaultSQL()
@@ -39,35 +39,35 @@ CString CAuthors::GetDefaultSQL()
 }
 ```
 
-根據預設，此覆寫會傳回您指定使用精靈的資料表名稱。 在範例中，資料表名稱是 「 著作人 」。 當您稍後呼叫資料錄集的`Open`成員函式`Open`建構最終**選取**表單的陳述式：
+預設情況下,此覆蓋返回使用嚮導指定的表名稱。 在此示例中,表名稱為"問題"。 稍後呼叫紀錄集`Open`的成員函數時,`Open`建構窗體的最終**SELECT**語句:
 
 ```
 SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
        [ORDER BY m_strSort]
 ```
 
-其中`table-name`取得藉由呼叫`GetDefaultSQL`並`rfx-field-list`取自 RFX 函式呼叫`DoFieldExchange`。 這是您取得**選取**陳述式除非您版本取代它覆寫在執行階段，雖然您也可以修改預設的陳述式使用的參數或篩選。
+其中`table-name`通過調`GetDefaultSQL`用 獲得,`rfx-field-list`並`DoFieldExchange`從中的 RFX 函數調用獲得。 這是**選擇**語句的啟用,除非您在執行時將其替換為重寫版本,儘管您也可以使用參數或篩選器修改預設語句。
 
 > [!NOTE]
->  如果您指定的資料行名稱包含 （或可能包含） 空格，必須以方括號括住的名稱。 比方說，「 名字 」 的名稱應該是 「 [名字] 」。
+> 如果指定包含(或可能包含)空格的列名稱,則必須將名稱括在方括弧中。 例如,"名字"的名稱應為"[名字]。
 
-若要覆寫預設值**選取**陳述式，傳遞字串，包含完整**選取**當您呼叫的陳述式`Open`。 而不是建構它自己的預設字串，資料錄集，請使用您提供的字串。 如果您取代陳述式包含**何處**子句中，未指定篩選條件中的`m_strFilter`因為您會有兩個篩選條件陳述式。 同樣地，如果您取代陳述式包含**ORDER BY**子句中，未指定以排序`m_strSort`如此就不會有兩種排序陳述式。
+要重寫預設**SELECT**語句,請在`Open`呼叫 時傳遞包含完整**SELECT**語句的字串。 記錄集使用您提供的字串,而不是建構自己的預設字串。 如果替換語句包含**WHERE**子句,請不要指定篩選`m_strFilter`器, 因為您將有兩個篩選器語句。 同樣,如果替換語句包含 ORDER **BY**子句,則不要`m_strSort`指定 排序 ,這樣您就不會有兩個排序語句。
 
 > [!NOTE]
->  如果您使用您的篩選 （或其他部分的 SQL 陳述式） 中的常值字串，您可能必須 「 加上引號"（指定的分隔符號括住） 這類特定 DBMS 的常值前置詞和字串常值後置字元 （字元）。
+> 如果在篩選器(或 SQL 語句的其他部分)中使用文字字串,則可能需要使用特定於 DBMS 的文本前置碼和文字後綴字元(或字元)來「報價」(在指定的分隔符中)引用此類字串。
 
-也可能發生的作業，例如外部聯結中，特殊語法的需求視您的 DBMS 而定。 使用 ODBC 函數來取得這項資訊從您的驅動程式，針對 DBMS。 例如，呼叫`::SQLGetTypeInfo`特定的資料類型，例如`SQL_VARCHAR`、 要求的 LITERAL_PREFIX 和 LITERAL_SUFFIX 字元。 如果您要撰寫獨立資料庫的程式碼，請參閱[附錄 c:SQL 文法](/sql/odbc/reference/appendixes/appendix-c-sql-grammar)中[ODBC 程式設計人員參考](/sql/odbc/reference/odbc-programmer-s-reference)詳細的語法資訊。
+根據 DBMS,您可能還會遇到外部聯接等操作的特殊語法要求。 使用 ODBC 函數從 DBMS 的驅動程式獲取此資訊。 例如,調用`::SQLGetTypeInfo`特定數據類型(`SQL_VARCHAR`如 )以請求LITERAL_PREFIX和LITERAL_SUFFIX字元。 如果要編寫與資料庫無關的代碼,請參閱[ODBC 程式師參考](/sql/odbc/reference/odbc-programmer-s-reference)中的[附錄 C:SQL 語法](/sql/odbc/reference/appendixes/appendix-c-sql-grammar),瞭解詳細的語法資訊。
 
-資料錄集物件建構 SQL 陳述式，用來選取記錄，除非您傳遞自訂的 SQL 陳述式。 如何做到這點主要取決於您所傳遞的值*lpszSQL*參數`Open`成員函式。
+記錄集物件建構它用來選擇記錄的 SQL 語句,除非您傳遞自訂 SQL 語句。 如何做到這一點主要取決於您在`Open`成員函數的*lpszSQL*參數中傳遞的值。
 
-SQL 的一般形式**選取**陳述式：
+SQL **SELECT**語句的一般形式是:
 
 ```
 SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]
 ```
 
-其中一種方式新增**DISTINCT**關鍵字來資料錄集的 SQL 陳述式是內嵌在第一次的 RFX 函式呼叫中的關鍵字`DoFieldExchange`。 例如: 
+將**DISTINCT**關鍵字添加到記錄集的 SQL 語句的一種方法是在 中的第一個`DoFieldExchange`RFX 函數調用 中嵌入該關鍵字。 例如：
 
 ```
 ...
@@ -76,33 +76,33 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
 ```
 
 > [!NOTE]
->  這項技術只能用於以唯讀方式開啟資料錄集。
+> 僅此技術將打開為唯讀的記錄集使用。
 
-## <a name="overriding-the-sql-statement"></a>覆寫的 SQL 陳述式
+## <a name="overriding-the-sql-statement"></a>重寫 SQL 語句
 
-下表顯示作業的可能性*lpszSQL*參數來`Open`。 下表說明的案例資料表中。
+下表顯示了*lpszSQL*`Open`參數到 的可能性。 下表中的案例在表之後進行說明。
 
-**LpszSQL 參數和產生的 SQL 字串**
+**lpszSQL 參數與產生的 SQL 字串**
 
-|案例|您傳遞 lpszSQL|結果的 SELECT 陳述式|
+|案例|您在 lpszSQL 中傳遞的內容|產生的 SELECT 敘述|
 |----------|------------------------------|------------------------------------|
-|1|NULL|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> `CRecordset::Open` 呼叫`GetDefaultSQL`取得資料表名稱。 產生的字串是其中一個案例 2 到 5，依據`GetDefaultSQL`傳回。|
-|2|資料表名稱|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> 欄位清單取自 RFX 陳述式，在`DoFieldExchange`。 如果`m_strFilter`並`m_strSort`不是空的將**何處**和/或**ORDER BY**子句。|
-|3 \*|完整**選取 **陳述式但不含**何處**或是**ORDER BY**子句|為成功。 如果`m_strFilter`並`m_strSort`不是空的將**何處**和/或**ORDER BY**子句。|
-|4 \*|完整**選取 **陳述式搭配**所在**和/或**ORDER BY**子句|為成功。 `m_strFilter` 和/或`m_strSort`必須保持空白或兩個篩選及 （或) 排序陳述式所產生。|
-|5 \*|預存程序的呼叫|為成功。|
+|1|NULL|**從***表名***中選擇** *rfx 欄位清單*<br /><br /> `CRecordset::Open`調用`GetDefaultSQL`以獲取表名稱。 產生的字串是案例 2 到 5`GetDefaultSQL`之一, 具體取決於返回的內容。|
+|2|資料表名稱|**從***表名***中選擇** *rfx 欄位清單*<br /><br /> 欄位清單取自`DoFieldExchange`中的 RFX 語句。 如果`m_strFilter``m_strSort`和 不是空,則添加**WHERE**和/或**ORDER BY**子句。|
+|3\*|完整的**SELECT**語句,但沒有**WHERE**或**ORDER BY**子句|通過。 如果`m_strFilter``m_strSort`和 不是空,則添加**WHERE**和/或**ORDER BY**子句。|
+|4\*|帶有**WHERE**和/或 ORDER **BY**子句的完整**SELECT**語句|通過。 `m_strFilter`和/或`m_strSort`必須保持空,或生成兩個篩選器和/或排序語句。|
+|5\*|儲存程序的呼叫|通過。|
 
-\* `m_nFields` 必須是小於或等於指定之資料行的數目**選取**陳述式。 每個資料行內指定的資料型別**選取**陳述式必須是相對應的 RFX 輸出資料行的資料類型相同。
+\*`m_nFields`必須小於或等於**SELECT**語句中指定的列數。 **SELECT**語句中指定的每列的數據類型必須與相應 RFX 輸出列的數據類型相同。
 
-### <a name="case-1---lpszsql--null"></a>Case 1   lpszSQL = NULL
+### <a name="case-1---lpszsql--null"></a>案例 1 lpszSQL = NULL
 
-資料錄集選取範圍取決於什麼`GetDefaultSQL`時傳回`CRecordset::Open`呼叫它。 案例 2 至 5 說明可能的字串。
+記錄集選擇取決於調用時`GetDefaultSQL``CRecordset::Open`返回的內容。 案例 2 到 5 描述可能的字串。
 
-### <a name="case-2---lpszsql--a-table-name"></a>案例 2 lpszSQL = 資料表名稱
+### <a name="case-2---lpszsql--a-table-name"></a>案例 2 lpszSQL = 表名稱
 
-資料錄集使用資料錄欄位交換 (RFX) 來建置資料行名稱的資料行清單，提供在 RFX 函式呼叫中的資料錄集類別的覆寫`DoFieldExchange`。 如果您使用精靈來宣告您的資料錄集類別時，此情況下 （前提是您傳遞您在精靈中指定相同的資料表名稱），就會有與案例 1 相同的結果。 如果您不使用精靈來撰寫您的類別，則案例 2 會是最簡單的方式來建構 SQL 陳述式。
+紀錄集使用記錄欄位交換 (RFX) 從紀錄集類別重寫中的 RFX 函數呼叫中提供的欄`DoFieldExchange`位中的欄位中的欄位 。 如果使用嚮導聲明記錄集類,則此案例的結果與案例 1 相同(前提是傳遞您在嚮導中指定的表名)。 如果不使用嚮導編寫類,則案例 2 是構造 SQL 語句的最簡單方法。
 
-下列範例會建構從 MFC 資料庫應用程式中選取資料錄的 SQL 陳述式。 當架構會呼叫`GetDefaultSQL`成員函式，函式會傳回資料表，名稱`SECTION`。
+下面的示例構造一個 SQL 語句,該語句從 MFC 資料庫應用程式中選擇記錄。 當框架呼叫`GetDefaultSQL`成員函數時,該函數會傳回表`SECTION`的名稱 。
 
 ```cpp
 CString CEnrollSet::GetDefaultSQL()
@@ -111,7 +111,7 @@ CString CEnrollSet::GetDefaultSQL()
 }
 ```
 
-若要取得的資料行名稱為 SQL**選取 **陳述式中，這個架構會呼叫`DoFieldExchange`成員函式。
+要取得 SQL **SELECT**語句的列名稱,框架`DoFieldExchange`將調用 成員函數。
 
 ```cpp
 void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
@@ -125,40 +125,40 @@ void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-完成時，SQL 陳述式看起來像這樣：
+完成後,SQL 語句如下所示:
 
 ```sql
 SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
     FROM SECTION
 ```
 
-### <a name="case-3---lpszsql--a-selectfrom-statement"></a>Case 3   lpszSQL = a SELECT/FROM Statement
+### <a name="case-3---lpszsql--a-selectfrom-statement"></a>案例 3 lpszSQL = SELECT/FROM 語句
 
-而不是依賴自動建構 RFX 以手動方式指定資料行清單。 您可能想要執行時：
+您可以手動指定列清單,而不是依靠 RFX 自動構造它。 您可能需要在:
 
-- 您想要指定**DISTINCT**關鍵字後面**選取**。
+- 您希望在**SELECT**之後指定 **「指定**」關鍵字。
 
-   您的資料行清單應該符合的資料行名稱和類型相同的順序，因為它們會列在`DoFieldExchange`。
+   列清單應按與 在`DoFieldExchange`中 列出的列名稱和類型的順序匹配。
 
-- 您有理由要手動擷取資料行值使用 ODBC 函數`::SQLGetData`而不是依賴 RFX 繫結，並為您擷取資料行。
+- 您有理由使用 ODBC`::SQLGetData`函數 手動檢索列值,而不是依賴 RFX 為您綁定和檢索列。
 
-   您可能，比方說，要配合您的應用程式的客戶會加入至資料庫資料表之後已散發應用程式, 的新資料行。 您必須加入這些額外的欄位資料成員，在類別宣告使用精靈時所不知道。
+   例如,您可能希望容納應用程式客戶在應用程式分發後添加到資料庫表的新列。 您需要添加這些額外的欄位數據成員,這些成員在使用嚮導聲明類時並不知道。
 
-   您的資料行清單應該符合的資料行名稱和類型相同的順序，因為它們會列在`DoFieldExchange`，後面接著手動繫結的資料行的名稱。 如需詳細資訊，請參閱[資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+   列清單應按與`DoFieldExchange`列 名稱和類型的順序匹配,後跟手動綁定列的名稱。 有關詳細資訊,請參閱[記錄集:動態綁定數據列 (ODBC)。](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- 您想要藉由指定多個資料表中的聯結的資料表**FROM**子句。
+- 您希望透過在**FROM**子句中指定多個表來聯接表。
 
-   資訊和範例，請參閱[資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
+   有關資訊和示例,請參閱[記錄集:執行聯接 (ODBC)。](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>案例 4 lpszSQL = SELECT / 從加上其中和/或 ORDER BY
+### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>案例 4 lpszSQL = 選擇/從+WHERE 和/或 ORDER BY
 
-您指定的所有項目： 資料行清單 (根據 RFX 呼叫`DoFieldExchange`)，[資料表] 清單中，與內容**其中**及/或**ORDER BY**子句。 如果您指定您**何處**及/或**ORDER BY**子句如此一來，請勿使用`m_strFilter`及/或`m_strSort`。
+指定所有內容:列清單(基於中的`DoFieldExchange`RFX 調用),表清單以及**WHERE**和/或 ORDER **BY**子句的內容。 如果以這種方式指定**WHERE**和/或**ORDER BY**`m_strFilter`子句`m_strSort`,請不要 使用和 /或 。
 
-### <a name="case-5---lpszsql--a-stored-procedure-call"></a>案例 5 lpszSQL = 預存程序呼叫
+### <a name="case-5---lpszsql--a-stored-procedure-call"></a>案例 5 lpszSQL = 儲存過程呼叫
 
-如果您需要呼叫預先定義的查詢 （例如 Microsoft SQL Server 資料庫中的預存程序），您必須撰寫**呼叫**傳遞至字串中的陳述式*lpszSQL*。 精靈不支援宣告用於呼叫預先定義的查詢的資料錄集類別。 並非所有預先定義的查詢會傳回資料錄。
+如果需要調用預定義的查詢(如 Microsoft SQL Server 資料庫中的儲存過程),則必須在傳遞給*lpszSQL*的字串中編寫**CALL**語句。 嚮導不支援聲明用於調用預定義查詢的記錄集類。 並非所有預定義的查詢都返回記錄。
 
-如果預先定義的查詢不會傳回記錄，您可以使用`CDatabase`成員函式`ExecuteSQL`直接。 預先定義的查詢傳回的記錄，您必須一併手動撰寫呼叫 RFX`DoFieldExchange`程序會傳回任何資料行。 Rfx 必須位於相同的順序，並傳回相同的類型，預先定義的查詢。 如需詳細資訊，請參閱[資料錄集：預先定義的查詢 (ODBC) 宣告的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
+如果預定義的查詢不返回記錄,則可以直接使用`CDatabase`成員函數`ExecuteSQL`。 對於返回記錄的預定義查詢,還必須手動`DoFieldExchange`為過程返回的任何列寫入 RFX 調用。 RFX 調用必須按與預定義的查詢相同的順序返回相同的類型。 有關詳細資訊,請參閱[記錄集:為預先定義查詢 (ODBC) 宣告類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

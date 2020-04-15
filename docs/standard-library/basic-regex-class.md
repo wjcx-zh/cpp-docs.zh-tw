@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 45776754bd0854aeb85382eda95891a6832ca09e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 74a8684c619e2cfbd5417950aa6108ad93511bf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689970"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376752"
 ---
 # <a name="basic_regex-class"></a>basic_regex 類別
 
@@ -26,21 +26,21 @@ class basic_regex
 
 ## <a name="parameters"></a>參數
 
-*Elem* \
+*埃萊姆*\
 要符合之項目的類型。
 
-*RXtraits* \
+*RXtraits*\
 項目的 Traits 類別。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述包含正則運算式的物件。 這個類別樣板的物件可以傳遞至樣板函式[RegEx_match](../standard-library/regex-functions.md#regex_match)、 [RegEx_search](../standard-library/regex-functions.md#regex_search)和[RegEx_replace](../standard-library/regex-functions.md#regex_replace)，以及適當的文字字串引數，以搜尋符合正則運算式的文字。 這個類別樣板有兩個特製化，其中的類型定義[RegEx](../standard-library/regex-typedefs.md#regex)適用于**char**類型的元素，而[wRegEx](../standard-library/regex-typedefs.md#wregex)則是**wchar_t**類型的專案。
+類範本描述包含正則表達式的物件。 可以將此類範本的物件傳遞給[樣本函數regex_match、regex_search](../standard-library/regex-functions.md#regex_match)和[regex_search](../standard-library/regex-functions.md#regex_search)[regex_replace](../standard-library/regex-functions.md#regex_replace)以及適當的文本字串參數,以搜尋與正則運算式匹配的文本。 類範本有兩個專門化,類型定義[regex](../standard-library/regex-typedefs.md#regex)用於**字元**類型元素[,wregex](../standard-library/regex-typedefs.md#wregex)表示類型**wchar_t**的元素。
 
-樣板引數*RXtraits*會描述類別樣板支援之正則運算式語法的各種重要屬性。 指定這些正則運算式特性的類別，其外部介面必須與[Regex_traits 類別](../standard-library/regex-traits-class.md)類型的物件相同。
+範本參數*RXtraits*描述了類範本支援的正則運算式語法的各種重要屬性。 指定這些正則表達式特徵的類必須具有與類型[regex_traits的物件](../standard-library/regex-traits-class.md)相同的外部介面。
 
 有些函式會接受定義規則運算式的運算元序列。 您可以透過數種方法指定這類運算元序列：
 
-`ptr`--以 null 終止的序列（例如 C 字串，適用于類型為**char**的*Elem* ），其開頭為 `ptr` （不能是 null 指標），其中終止專案是 `value_type()` 的值，而不是運算元序列的一部分。
+`ptr`-- null 終止序列(如 C 字串,對於**字元**類型的`ptr`*Elem),* 從 (不得是空指標)開始`value_type()`,其中終止元素是值 ,不是操作函數序列的一部分
 
 `ptr`, `count` -- `count` 項目序列，開始位置在 `ptr` (這不可以是 null 指標)
 
@@ -50,23 +50,23 @@ class basic_regex
 
 `right` -- `basic_regex` 物件 `right`
 
-這些成員函式也會採用引數 `flags`，除了*RXtraits*類型所描述的內容之外，還會指定各種用來解讀正則運算式的選項。
+除了*RXtraits*類型`flags`中描述的選項外,這些成員函數還採用一個參數,指定解釋正則表達式的各種選項。
 
-### <a name="members"></a>Members
+### <a name="members"></a>成員
 
-|成員|預設值|
+|member|預設值|
 |-|-|
-|public static const flag_type icase|RegEx_constants::icase|
-|public static const flag_type nosubs|RegEx_constants::nosubs|
-|public static const flag_type optimize|RegEx_constants：： optimize|
-|public static const flag_type collate|RegEx_constants：： collate|
-|public static const flag_type ECMAScript|RegEx_constants：： ECMAScript|
-|public static const flag_type basic|RegEx_constants：： basic|
-|public static const flag_type extended|RegEx_constants：： extended|
-|public static const flag_type awk|RegEx_constants：： awk|
-|public static const flag_type grep|RegEx_constants：： grep|
-|public static const flag_type egrep|RegEx_constants：： egrep|
-|私用 RXtraits 特性||
+|公開靜態 const flag_type icase|regex_constants::伊凱斯|
+|公開靜態 const flag_type無子|regex_constants:無子|
+|公開靜態 const flag_type優化|regex_constants:優化|
+|公共靜態孔flag_type整理|regex_constants:整理|
+|公開靜態同flag_type ECMAScript|regex_constants:ECMAScript|
+|公共靜態 const flag_type基本|regex_constants:基本|
+|公開靜態 const flag_type擴充|regex_constants::擴展|
+|公開靜態 const flag_type awk|regex_constants::awk|
+|公開靜態const flag_type grep|regex_constants:grep|
+|公開靜態const flag_type|regex_constants:埃格裡普|
+|私人RXtraits特徵||
 
 ### <a name="constructors"></a>建構函式
 
@@ -74,7 +74,7 @@ class basic_regex
 |-|-|
 |[basic_regex](#basic_regex)|建構規則運算式物件|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
@@ -82,28 +82,28 @@ class basic_regex
 |[locale_type](#locale_type)|儲存的地區設定物件類型。|
 |[value_type](#value_type)|元素類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
-|[assign](#assign)|將值指派給規則運算式物件。|
-|[flags](#flags)|傳回語法選項旗標。|
-|[getloc](#getloc)|傳回儲存的地區設定物件。|
+|[配置](#assign)|將值指派給規則運算式物件。|
+|[標誌](#flags)|傳回語法選項旗標。|
+|[貝洛克](#getloc)|傳回儲存的地區設定物件。|
 |[imbue](#imbue)|修改儲存的地區設定物件。|
 |[mark_count](#mark_count)|傳回符合的子運算式數目。|
-|[swap](#swap)|交換兩個規則運算式物件。|
+|[交換](#swap)|交換兩個規則運算式物件。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
-|[operator=](#op_eq)|將值指派給規則運算式物件。|
+|[運算子*](#op_eq)|將值指派給規則運算式物件。|
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<regex>
 
-**命名空間:** std
+**命名空間：** std
 
 ## <a name="example"></a>範例
 
@@ -196,7 +196,7 @@ getloc == imbued == true
 match("abc") == true
 ```
 
-## <a name="assign"></a>  basic_regex::assign
+## <a name="basic_regexassign"></a><a name="assign"></a>basic_regex:分配
 
 將值指派給規則運算式物件。
 
@@ -230,44 +230,44 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>參數
 
-*STtraits* \
+*STtraits*\
 字串來源的 Traits 類別。
 
-*STalloc* \
+*薩塔洛克*\
 字串來源的 Allocator 類別。
 
-*InIt* \
+*Init*\
 輸入範圍來源的迭代器類型。
 
-*right* \
+*對*\
 要複製的 Regex 來源。
 
-*ptr* \
+*Ptr*\
 要複製之序列開頭的指標。
 
-*旗標*\
+*標誌*\
 要在複製時加入的語法選項旗標。
 
-*len/TD >* \
+*len/TD>*\
 要複製之序列的長度。
 
-*str* \
+*Str*\
 要複製的字串。
 
-*第一個*\
+*第一*\
 要複製之序列的開頭。
 
-*上次*\
+*最後*\
 要複製之序列的結尾。
 
-*IList* \
+*IList*\
 要複製的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
 成員函式會分別將 `*this` 所含的規則運算式取代為運算元序列所描述的規則運算式，然後傳回 `*this`。
 
-## <a name="basic_regex"></a>  basic_regex::basic_regex
+## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a>basic_regex:basic_regex
 
 建構規則運算式物件
 
@@ -304,37 +304,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>參數
 
-*STtraits* \
+*STtraits*\
 字串來源的 Traits 類別。
 
-*STalloc* \
+*薩塔洛克*\
 字串來源的 Allocator 類別。
 
-*InIt* \
+*Init*\
 輸入範圍來源的迭代器類型。
 
-*right* \
+*對*\
 要複製的 Regex 來源。
 
-*ptr* \
+*Ptr*\
 要複製之序列開頭的指標。
 
-*旗標*\
+*標誌*\
 要在複製時加入的語法選項旗標。
 
-*len/TD >* \
+*len/TD>*\
 要複製之序列的長度。
 
-*str* \
+*Str*\
 要複製的字串。
 
-*第一個*\
+*第一*\
 要複製之序列的開頭。
 
-*上次*\
+*最後*\
 要複製之序列的結尾。
 
-*IList* \
+*IList*\
 要複製的 initializer_list。
 
 ### <a name="remarks"></a>備註
@@ -343,9 +343,9 @@ explicit basic_regex(
 
 第一個建構函式會建構空的 `basic_regex` 物件。 其他建構函式會建構 `basic_regex` 物件，其保存運算元序列所描述的規則運算式。
 
-當傳遞至[RegEx_match](../standard-library/regex-functions.md#regex_match)、 [RegEx_search](../standard-library/regex-functions.md#regex_search)或[RegEx_replace](../standard-library/regex-functions.md#regex_replace)時，空的 `basic_regex` 物件不符合任何字元序列。
+當傳遞給`basic_regex`[regex_match、regex_search](../standard-library/regex-functions.md#regex_match)或[regex_replace](../standard-library/regex-functions.md#regex_replace)時,[regex_search](../standard-library/regex-functions.md#regex_search)空物件與任何 字串序列不匹配。
 
-## <a name="flag_type"></a>  basic_regex::flag_type
+## <a name="basic_regexflag_type"></a><a name="flag_type"></a>basic_regex:flag_type
 
 語法選項旗標類型。
 
@@ -355,9 +355,9 @@ typedef regex_constants::syntax_option_type flag_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type)的同義字。
+此類型與 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) 同義。
 
-## <a name="flags"></a>  basic_regex::flags
+## <a name="basic_regexflags"></a><a name="flags"></a>basic_regex:標誌
 
 傳回語法選項旗標。
 
@@ -369,7 +369,7 @@ flag_type flags() const;
 
 此成員函式會傳回 `flag_type` 引數的值，再將該值傳遞至 [basic_regex::assign](#assign) 成員函式之一的最新呼叫；如果沒有這類呼叫，則會將該值傳遞至建構函式。
 
-## <a name="getloc"></a>  basic_regex::getloc
+## <a name="basic_regexgetloc"></a><a name="getloc"></a>basic_regex:getloc
 
 傳回儲存的地區設定物件。
 
@@ -379,9 +379,9 @@ locale_type getloc() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`。
+成員函數傳`traits.`[回 regex_traits:getloc](../standard-library/regex-traits-class.md#getloc)`()`。
 
-## <a name="imbue"></a>  basic_regex::imbue
+## <a name="basic_regeximbue"></a><a name="imbue"></a>basic_regex::英布
 
 修改儲存的地區設定物件。
 
@@ -391,14 +391,14 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-*loc* \
+*loc*\
 要儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會清空 `*this` 並傳回 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`。
+成員函數`*this``traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`清空並返回。
 
-## <a name="locale_type"></a>  basic_regex::locale_type
+## <a name="basic_regexlocale_type"></a><a name="locale_type"></a>basic_regex:locale_type
 
 儲存的地區設定物件類型。
 
@@ -408,9 +408,9 @@ typedef typename RXtraits::locale_type locale_type;
 
 ### <a name="remarks"></a>備註
 
-這個類型與 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type)同義。
+此類型與 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type) 同義。
 
-## <a name="mark_count"></a>  basic_regex::mark_count
+## <a name="basic_regexmark_count"></a><a name="mark_count"></a>basic_regex::mark_count
 
 傳回符合的子運算式數目。
 
@@ -422,7 +422,7 @@ unsigned mark_count() const;
 
 成員函式會傳回規則運算式中的擷取群組數目。
 
-## <a name="op_eq"></a>  basic_regex::operator=
+## <a name="basic_regexoperator"></a><a name="op_eq"></a>basic_regex::操作員*
 
 將值指派給規則運算式物件。
 
@@ -437,23 +437,23 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>參數
 
-*STtraits* \
+*STtraits*\
 字串來源的 Traits 類別。
 
-*STalloc* \
+*薩塔洛克*\
 字串來源的 Allocator 類別。
 
-*right* \
+*對*\
 要複製的 Regex 來源。
 
-*str* \
+*Str*\
 要複製的字串。
 
 ### <a name="remarks"></a>備註
 
 這些運算子會分別將 `*this` 所含的規則運算式取代為運算元序列所描述的規則運算式，然後傳回 `*this`。
 
-## <a name="swap"></a>  basic_regex::swap
+## <a name="basic_regexswap"></a><a name="swap"></a>basic_regex:交換
 
 交換兩個規則運算式物件。
 
@@ -463,14 +463,14 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*對*\
 要交換的規則運算式物件。
 
 ### <a name="remarks"></a>備註
 
-成員函式會在 `*this` 和*right*之間交換正則運算式。 它會在固定時間執行但不會擲回任何例外狀況。
+成員函數交換*right*與`*this`之間的 正規表示式 。 它會在固定時間執行但不會擲回任何例外狀況。
 
-## <a name="value_type"></a>  basic_regex::value_type
+## <a name="basic_regexvalue_type"></a><a name="value_type"></a>basic_regex:value_type
 
 元素類型。
 
@@ -480,14 +480,14 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數*Elem*同義。
+類型是範本參數*Elem*的同義詞。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)\
-[RegEx_match](../standard-library/regex-functions.md#regex_match) \
-[RegEx_search](../standard-library/regex-functions.md#regex_search) \
-[RegEx_replace](../standard-library/regex-functions.md#regex_replace) \
-[regex](../standard-library/regex-typedefs.md#regex)\
-[wregex](../standard-library/regex-typedefs.md#wregex)\
+[\<正則>](../standard-library/regex.md)\
+[regex_match](../standard-library/regex-functions.md#regex_match)\
+[regex_search](../standard-library/regex-functions.md#regex_search)\
+[regex_replace](../standard-library/regex-functions.md#regex_replace)\
+[Regex](../standard-library/regex-typedefs.md#regex)\
+[韋雷格克斯](../standard-library/regex-typedefs.md#wregex)\
 [regex_traits 類別](../standard-library/regex-traits-class.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 190c9aa23493cea67bae44be93fd3fdbdecc4447
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e2a892525afbbad6d5b42d0b836fee096a70c297
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376811"
 ---
 # <a name="basic_iostream-class"></a>basic_iostream 類別
 
@@ -35,7 +35,7 @@ public:
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述一個物件，它會透過其基類[basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem`、`Tr` > 和提取，透過其基類[basic_istream](../standard-library/basic-istream-class.md) <  `Elem`，`Tr` > 來控制插入。 兩個物件共用通用的虛擬基底類別 [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>。 它們也會以 `Elem` 類型的項目 (其字元特性由類別 `Tr` 決定) 管理通用的資料流緩衝區。 此建構函式會藉由 `basic_istream`( **strbuf**) 和 `basic_ostream`( **strbuf**) 初始化其基底類別。
+類範本描述通過基類[basic_ostream、>](../standard-library/basic-ostream-class.md)< `Elem``Tr`和提取通過其基類[basic_istream>](../standard-library/basic-istream-class.md)< `Elem``Tr`控制插入的物件。 這兩個物件共用一個公共虛擬基類`Tr`[basic_ios,>。](../standard-library/basic-ios-class.md) <  `Elem` 它們也會以 `Elem` 類型的項目 (其字元特性由類別 `Tr` 決定) 管理通用的資料流緩衝區。 此建構函式會藉由 `basic_istream`( **strbuf**) 和 `basic_ostream`( **strbuf**) 初始化其基底類別。
 
 ### <a name="constructors"></a>建構函式
 
@@ -43,25 +43,25 @@ public:
 |-|-|
 |[basic_iostream](#basic_iostream)|建立 `basic_iostream` 物件。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
-|[swap](#swap)|將提供之 `basic_iostream` 物件的內容與此物件的內容交換。|
+|[交換](#swap)|將提供之 `basic_iostream` 物件的內容與此物件的內容交換。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
-|[operator=](#op_eq)|將指定的 `basic_iostream` 物件值指派給這個物件。 這是一個移動指派，涉及不會留下複本的 `rvalue`。|
+|[運算子*](#op_eq)|將指定的 `basic_iostream` 物件值指派給這個物件。 這是一個移動指派，涉及不會留下複本的 `rvalue`。|
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<istream>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="basic_iostream"></a>  basic_iostream::basic_iostream
+## <a name="basic_iostreambasic_iostream"></a><a name="basic_iostream"></a>basic_iostream::basic_iostream
 
 建立 `basic_iostream` 物件。
 
@@ -75,19 +75,19 @@ basic_iostream();
 
 ### <a name="parameters"></a>參數
 
-*strbuf* \
+*斯特布夫*\
 現有的 `basic_streambuf` 物件。
 
-*right* \
+*對*\
 現有的 `basic_iostream` 物件，用來建構新的 `basic_iostream`。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會藉由 `basic_istream(strbuf)` 和 `basic_ostream(strbuf)` 初始化基底物件。
 
-第二個函式會藉由呼叫 `move(right)` 來初始化基底物件。
+第二個構造函數通過調用`move(right)`初始化基物件。
 
-## <a name="op_eq"></a>  basic_iostream::operator=
+## <a name="basic_iostreamoperator"></a><a name="op_eq"></a>basic_iostream::操作員*
 
 將指定的 `basic_iostream` 物件值指派給這個物件。 這是一個移動指派，涉及不會留下複本的右值。
 
@@ -97,14 +97,14 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*對*\
 要指派之來源 `basic_iostream` 物件的 `rvalue` 參考。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會呼叫 `swap(right)`。
+成員運算子呼叫`swap(right)`。
 
-## <a name="swap"></a>  basic_iostream::swap
+## <a name="basic_iostreamswap"></a><a name="swap"></a>basic_iostream:交換
 
 將提供之 `basic_iostream` 物件的內容與此物件的內容交換。
 
@@ -114,15 +114,15 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*對*\
 要交換的 `basic_iostream` 物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 `swap(right)`。
+成員函數呼叫`swap(right)`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream 程式設計](../standard-library/iostream-programming.md)\
+[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[電流程式設計](../standard-library/iostream-programming.md)\
 [iostream 慣例](../standard-library/iostreams-conventions.md)

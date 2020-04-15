@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 9a4c169944d56b693efa681bf7089636477012ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373554"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 類別
 
@@ -29,14 +29,14 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>參數
 
-*基底*<br/>
-基底類別。
+*基地*<br/>
+基類。
 
 ## <a name="remarks"></a>備註
 
-基底類別必須提供預設建構函式。
+基類必須提供預設構造函數。
 
-下列程式碼範例示範如何使用`SimpleClassFactory`具有[ActivatableClassWithFactoryEx](activatableclass-macros.md)巨集。
+以下代碼示例演示如何與`SimpleClassFactory`[可啟動類與 FactoryEx](activatableclass-macros.md)宏一起使用。
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -46,9 +46,9 @@ class SimpleClassFactory : public ClassFactory<>;
 
 |名稱|描述|
 |----------|-----------------|
-|[SimpleClassFactory::CreateInstance 方法](#createinstance)|建立指定之介面的執行個體。|
+|[SimpleClassFactory::CreateInstance 方法](#createinstance)|建立指定介面的實例。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `I0`
 
@@ -74,13 +74,13 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標題:** 模組.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="createinstance"></a>Simpleclassfactory:: Createinstance 方法
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>簡單類工廠::創建實例方法
 
-建立指定之介面的執行個體。
+建立指定介面的實例。
 
 ```cpp
 STDMETHOD( CreateInstance )(
@@ -93,15 +93,15 @@ STDMETHOD( CreateInstance )(
 #### <a name="parameters"></a>參數
 
 *pUnkOuter*<br/>
-必須是`nullptr`; 否則傳回的值是 CLASS_E_NOAGGREGATION。
+必須是`nullptr`;否則,返回值CLASS_E_NOAGGREGATION。
 
-SimpleClassFactory 不支援彙總。 如果已支援彙總，但所建立的物件已是在彙總的一部分*pUnkOuter*會是指標，以控制`IUnknown`彙總的介面。
+簡單類工廠不支援聚合。 如果支援聚合,並且正在創建的對像是聚合的一部分,*則 pUnkOuter*將是指向`IUnknown`聚合控制 介面的指標。
 
 *riid*<br/>
-介面若要建立之物件的識別碼。
+要創建的物件的介面 ID。
 
 *ppvObject*<br/>
-這項作業完成時，所指定的物件執行個體的指標*riid*參數。
+此操作完成後,指標指向*riid*參數指定的物件的實例。
 
 ### <a name="return-value"></a>傳回值
 
@@ -109,4 +109,4 @@ SimpleClassFactory 不支援彙總。 如果已支援彙總，但所建立的物
 
 ### <a name="remarks"></a>備註
 
-如果`__WRL_STRICT__`是定義，判斷提示會發出錯誤如果類別範本參數中指定的基底類別不衍生自[RuntimeClass](runtimeclass-class.md)，或因未設定 ClassicCom 或 WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
+如果`__WRL_STRICT__`已定義,如果類範本參數中指定的基類不是從[運行時類](runtimeclass-class.md)派生,或者未配置 ClassicCom 或 WinRtClassicComMix[運行時類型](runtimeclasstype-enumeration.md)枚舉值,則將發出斷言錯誤。

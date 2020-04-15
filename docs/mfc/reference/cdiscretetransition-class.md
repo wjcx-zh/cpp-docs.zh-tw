@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: 7087dfa13972737f0a1244d2cc9a7088b23dc184
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a32ee7921e927e25a5196d38c8f5ae350ab2b8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506859"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375661"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 類別
 
@@ -37,43 +37,43 @@ class CDiscreteTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|會建立離散的轉換物件, 並初始化其參數。|
+|[離散轉換:C離散轉換](#cdiscretetransition)|構造離散過渡物件並初始化其參數。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDiscreteTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[離散轉換:建立](#create)|呼叫過渡庫以建立封裝的過渡 COM 物件。 ( 覆寫[CBase 轉換:建立](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|轉換結束時的動畫變數值。|
-|[CDiscreteTransition::m_delay](#m_delay)|要延遲瞬間切換為最終值的時間量。|
-|[CDiscreteTransition::m_hold](#m_hold)|將變數保留在其最終值的時間量。|
+|[離散轉換::m_dblFinalValue](#m_dblfinalvalue)|過渡結束時動畫變數的值。|
+|[離散轉換::m_delay](#m_delay)|將暫態開關延遲到最終值的時間量。|
+|[離散轉換::m_hold](#m_hold)|將變數保留在其最終值的時間量。|
 
 ## <a name="remarks"></a>備註
 
-在離散轉換期間, 動畫變數會保留在指定之延遲時間的初始值, 然後立即切換為指定的最後值, 並在指定的保存時間保留該值。 由於所有轉換都會自動清除, 因此建議您使用 operator new 加以配置。 封裝的 IUIAnimationTransition COM 物件是由 CAnimationController:: AnimateGroup 所建立, 直到它是 Null 為止。 在建立此 COM 物件之後變更成員變數不會有任何作用。
+在離散轉換期間,動畫變數在指定延遲時間保持初始值,然後即時切換到指定的最終值,並在給定的保持時間內保持該值。 由於所有轉換都將自動清除,因此建議使用運算符 new 分配。 封裝的 IUI動畫轉換 COM 物件由 C動畫控制器::AnimateGroup 創建,直到此為止,它才為 NULL。 建立此 COM 物件後更改成員變數不起作用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 轉換](../../mfc/reference/cbasetransition-class.md)
 
-[CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)
+[C 分離轉換](../../mfc/reference/cdiscretetransition-class.md)
 
 ## <a name="requirements"></a>需求
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="cdiscretetransition"></a>CDiscreteTransition:: CDiscreteTransition
+## <a name="cdiscretetransitioncdiscretetransition"></a><a name="cdiscretetransition"></a>離散轉換:C離散轉換
 
-會建立離散的轉換物件, 並初始化其參數。
+構造離散過渡物件並初始化其參數。
 
 ```
 CDiscreteTransition(
@@ -84,18 +84,18 @@ CDiscreteTransition(
 
 ### <a name="parameters"></a>參數
 
-*delay*<br/>
-要延遲瞬間切換為最終值的時間量。
+*延遲*<br/>
+將暫態開關延遲到最終值的時間量。
 
-*dblFinalValue*<br/>
-轉換結束時的動畫變數值。
+*dbl 最終值*<br/>
+過渡結束時動畫變數的值。
 
-*握*<br/>
+*保持*<br/>
 將變數保留在其最終值的時間量。
 
-##  <a name="create"></a>CDiscreteTransition:: Create
+## <a name="cdiscretetransitioncreate"></a><a name="create"></a>離散轉換:建立
 
-呼叫轉換程式庫來建立封裝的轉換 COM 物件。
+呼叫過渡庫以建立封裝的過渡 COM 物件。
 
 ```
 virtual BOOL Create(
@@ -103,30 +103,30 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```
 
-*pLibrary*<br/>
-[IUIAnimationTransitionLibrary 介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標, 它會定義標準轉換的程式庫。
+*p庫*<br/>
+指向[IUIAnimation 轉換庫介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標,該介面定義標準轉換庫。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立轉換, 則為 TRUE;否則為 FALSE。
+如果成功創建轉換,則為 TRUE;如果成功創建轉換,則為 TRUE。否則 FALSE。
 
-##  <a name="m_dblfinalvalue"></a>CDiscreteTransition:: m_dblFinalValue
+## <a name="cdiscretetransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>離散轉換::m_dblFinalValue
 
-轉換結束時的動畫變數值。
+過渡結束時動畫變數的值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_delay"></a>CDiscreteTransition:: m_delay
+## <a name="cdiscretetransitionm_delay"></a><a name="m_delay"></a>離散轉換::m_delay
 
-要延遲瞬間切換為最終值的時間量。
+將暫態開關延遲到最終值的時間量。
 
 ```
 UI_ANIMATION_SECONDS m_delay;
 ```
 
-##  <a name="m_hold"></a>CDiscreteTransition:: m_hold
+## <a name="cdiscretetransitionm_hold"></a><a name="m_hold"></a>離散轉換::m_hold
 
 將變數保留在其最終值的時間量。
 

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410089"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376181"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 類別
 
-`CMFCSpinButtonCtrl`類別支援繪製微調按鈕控制項的視覺管理員。
+類`CMFCSpinButtonCtrl`支援繪製旋轉按鈕控制項的可視化管理員。
 
 ## <a name="syntax"></a>語法
 
@@ -38,19 +38,19 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|會重新繪製目前的微調按鈕控制項。|
+|[CMFCSpinButtonCtrl::在畫上](#ondraw)|重新繪製當前旋轉按鈕控制項。|
 
 ## <a name="remarks"></a>備註
 
-若要使用的視覺管理員在您的應用程式中繪製微調按鈕控制項，取代的所有執行個體`CSpinButtonCtrl`類別搭配`CMFCSpinButtonCtrl`類別。
+要使用視覺化管理程式在應用程式中繪製旋轉按鈕控制項,請將`CSpinButtonCtrl`類的所有實例替換為`CMFCSpinButtonCtrl`類。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建立的物件`CMFCSpinButtonCtrl`類別，並且使用其`Create`方法。
+下面的範例展示如何創建`CMFCSpinButtonCtrl`類的物件並使用其`Create`方法。
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -64,11 +64,11 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxspinbuttonctrl.h
+**標題:** afxspinbuttonctrl.h
 
-##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::在畫上
 
-會重新繪製目前的微調按鈕控制項。
+重新繪製當前旋轉按鈕控制項。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -77,11 +77,11 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容指標。
+[在]指向設備上下文的指標。
 
 ### <a name="remarks"></a>備註
 
-這個架構會呼叫`CMFCSpinButtonCtrl::OnPaint`方法以處理[CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint)訊息，且該方法會呼叫這`CMFCSpinButtonCtrl::OnDraw`方法。 覆寫這個方法，以自訂架構繪製微調按鈕控制項的方式。
+框架呼叫`CMFCSpinButtonCtrl::OnPaint`方法來處理[CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint)訊息,該方法反過來呼`CMFCSpinButtonCtrl::OnDraw`叫此方法 。 重寫此方法以自定義框架繪製旋轉按鈕控制項的方式。
 
 ## <a name="see-also"></a>另請參閱
 

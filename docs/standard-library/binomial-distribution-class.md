@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: e3d2d02bc6781ed447d7583ce15a60e983251350
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: dc9bb1c3edf9187b1e5dc1e924298b9dbb02e2ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688377"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376718"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution 類別
 
@@ -71,24 +71,24 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType* \
-整數結果類型，預設為**int**。如需可能的類型，請參閱[\<random >](../standard-library/random.md)。
+*IntType*\
+整數結果類型,預設值為**int**。有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
 
-*URNG* \
-統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*烏爾格*\
+統一的隨機數生成器引擎。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述產生使用者指定之整數類型值的散發，或如果沒有提供，則為**int**類型，根據二項式分佈離散機率函數散發。 下表提供各個成員的文章連結。
+類範本描述生成使用者指定積分類型的值的分佈,或者如果沒有提供,則類型**int,** 根據二元分布離散概率函數進行分佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-屬性成員 `t()` 和 `p()` 會分別傳回目前儲存的散發參數值*t*和*p* 。
+屬性成員`t()``p()`並分別返回當前存儲的分布參數值*t*和*p。*
 
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。
+屬性成員 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。
 
@@ -96,7 +96,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+有關分發類及其成員的詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
 
 如需二項式分佈離散機率函式的詳細資訊，請參閱 Wolfram MathWorld 文章：[Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=398469) (二項式分佈)。
 
@@ -229,9 +229,9 @@ Histogram for 100 samples:
 
 **標頭：** \<random>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution:binomial_distribution
 
 建構分佈。
 
@@ -242,24 +242,24 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*t* \
+*t*\
 `t` 分佈參數。
 
-*p* \
+*P*\
 `p` 分佈參數。
 
-*parm* \
+*帕爾姆*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
 **前置條件：** `0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 
-第一個函式會建立一個物件，其儲存的*p*值保留*p*值，而其儲存的*t*值保留值*t*。
+第一個建構函式建構一個物件的儲存*p*值包含值*p,* 其儲存*t*值包含值*t*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="param_type"></a>  binomial_distribution::param_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::p阿拉姆型
 
 儲存分佈的所有參數。
 
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*t* \
+*t*\
 `t` 分佈參數。
 
-*p* \
+*P*\
 `p` 分佈參數。
 
-*right* \
+*對*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -292,6 +292,6 @@ struct param_type {
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)
+[\<隨機>](../standard-library/random.md)

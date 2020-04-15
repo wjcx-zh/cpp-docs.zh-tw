@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: f24d8fe99bc211e026172e42669cf5e430ad31e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 28399a1cd55407aadbc5d59e1e835892218ad0c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376602"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf 類別
 
-描述資料流程緩衝區, 其控制在**char**陣列物件中儲存的專案序列之間的元素傳輸。
+描述控制元素在**字元**陣列中儲存的序列中的元素的傳輸的流緩衝區。
 
 ## <a name="syntax"></a>語法
 
@@ -64,17 +64,17 @@ class strstreambuf : public streambuf
 |-|-|
 |[strstreambuf](#strstreambuf)|建構類型 `strstreambuf` 的物件。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
-|[freeze](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|
-|[overflow](#overflow)|受保護的虛擬函式，可在將新字元插入已滿的緩衝區時呼叫。|
+|[凍結](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|
+|[溢出](#overflow)|受保護的虛擬函式，可在將新字元插入已滿的緩衝區時呼叫。|
 |[pbackfail](#pbackfail)|嘗試將項目放回輸入資料流，然後將其設為目前項目 (由下一個指標指向) 的受保護虛擬成員函式。|
 |[pcount](#pcount)|傳回寫入至受控制序列的元素計數。|
 |[seekoff](#seekoff)|受保護虛擬成員函式嘗試改變受控制資料流目前的位置。|
 |[seekpos](#seekpos)|受保護虛擬成員函式嘗試改變受控制資料流目前的位置。|
-|[str](#str)|呼叫 [freeze](#freeze)，然後將指標傳回受控制序列的開頭。|
+|[Str](#str)|呼叫 [freeze](#freeze)，然後將指標傳回受控制序列的開頭。|
 |[underflow](#underflow)|要從輸入資料流擷取目前項目的受保護虛擬函式。|
 
 ## <a name="requirements"></a>需求
@@ -83,7 +83,7 @@ class strstreambuf : public streambuf
 
 **命名空間：** std
 
-## <a name="freeze"></a>  strstreambuf::freeze
+## <a name="strstreambuffreeze"></a><a name="freeze"></a>斯特蘭布夫:凍結
 
 導致資料流緩衝區無法在資料流緩衝區作業中使用。
 
@@ -94,11 +94,11 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>參數
 
 *_Freezeit*\
-**布林**值, 指出您是否要凍結資料流程。
+指示是否要凍結流的**布林**。
 
 ### <a name="remarks"></a>備註
 
-如果 *_Freezeit*為 true, 函式會改變預`strstreambuf`存模式, 使受控制的序列凍結。 否則，不會凍結受控制的序列。
+如果 *_Freezeit*為 true,則函數`strstreambuf`將更改儲存模式,使受控序列凍結。 否則，不會凍結受控制的序列。
 
 [str](#str) 表示 `freeze`。
 
@@ -171,7 +171,7 @@ after clearing stream: stream good
 test1test3
 ```
 
-## <a name="overflow"></a>  strstreambuf::overflow
+## <a name="strstreambufoverflow"></a><a name="overflow"></a>斯特蘭布夫:溢出
 
 受保護的虛擬函式，可在將新字元插入已滿的緩衝區時呼叫。
 
@@ -186,17 +186,17 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `EOF`。 否則, == 如果 *\_是 Meta* `EOF`, 它會傳回以外`EOF`的某個值。 否則, 它會 *\_傳回中繼*。
+如果函式不成功，則會傳回 `EOF`。 否則,如果*\_Meta* == `EOF`返回某些`EOF`值, 則傳回以外的一些值。 否則,它將傳回*\_Meta*。
 
 ### <a name="remarks"></a>備註
 
-`EOF`如果 *\_是 Meta* ! =, 受保護的虛擬成員函式會嘗試`(char)_Meta`將元素插入輸出緩衝區。 它可以透過下列各種方式來執行：
+如果*\_Meta* `EOF`!* ,受保護的虛擬成員函數`(char)_Meta`將嘗試將 元素插入到輸出緩衝區中。 它可以透過下列各種方式來執行：
 
 - 如果有寫入位置可供使用，它可以將項目儲存至寫入位置，並遞增輸出緩衝區的下一個指標。
 
 - 如果儲存的 strstreambuf 模式表示受控制的序列是可修改、可擴充且未凍結的，則函式可為輸出緩衝區配置新的指標，藉以使寫入位置可供使用。 以這種方式擴充輸出緩衝區時，也會擴充任何相關的輸入緩衝區。
 
-## <a name="pbackfail"></a>  strstreambuf::pbackfail
+## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a>斯特蘭布夫::p回擊失敗
 
 受保護的虛擬成員函式，會嘗試將項目放回輸入資料流，然後將其設成目前的項目 (由下一個指標指向)。
 
@@ -211,19 +211,19 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `EOF`。 否則, == 如果 *\_是 Meta* `EOF`, 它會傳回以外`EOF`的某個值。 否則, 它會 *\_傳回中繼*。
+如果函式不成功，則會傳回 `EOF`。 否則,如果*\_Meta* == `EOF`返回某些`EOF`值, 則傳回以外的一些值。 否則,它將傳回*\_Meta*。
 
 ### <a name="remarks"></a>備註
 
-此受保護的虛擬成員函式會嘗試將元素放回輸入緩衝區，然後將其設成目前的元素 (由下一個指標指向)。
+受保護的虛擬成員函式會嘗試將元素放回輸入緩衝區，然後將其設成目前的元素 (由下一個指標指向)。
 
-*如果\_是 Meta*  == ,要推回的元素實際上是已在資料流程中目前元素之前的專案。`EOF` 否則, 就會取代`ch = (char)_Meta`該元素。 函式可透過下列各種方式來放回項目：
+如果*\_Meta,* == `EOF`則要回滾的元素實際上是當前元素之前流中已有的元素。 否則,此元素會取代為`ch = (char)_Meta`。 函式可透過下列各種方式來放回項目：
 
-- 如果有 putback 位置可供使用, 而且儲存在其中的元素比較`ch`等於, 它可以遞減輸入緩衝區的下一個指標。
+- 如果重播位置可用,並且存儲在那裡的元素比較等於`ch`,則可以遞減輸入緩衝區的下一個指標。
 
-- 如果有 putback 位置可供使用, 而且如果 strstreambuf 模式指出受控制的序列可修改, 函式可以`ch`儲存在 putback 位置, 並遞減輸入緩衝區的下一個指標。
+- 如果回退位置可用,並且 strstreambuf 模式表示受控序列是可修改的,則函數`ch`可以存儲 到回退位置並遞減輸入緩衝區的下一個指標。
 
-## <a name="pcount"></a>  strstreambuf::pcount
+## <a name="strstreambufpcount"></a><a name="pcount"></a>斯特裡布夫::p計數
 
 傳回寫入至受控制序列的元素計數。
 
@@ -237,7 +237,7 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>備註
 
-具體來說，如果 [pptr](../standard-library/basic-streambuf-class.md#pptr) 是 null 指標，此函式會傳回零。 否則, 它會`pptr`  - 傳回[pbase](../standard-library/basic-streambuf-class.md#pbase)。
+具體來說，如果 [pptr](../standard-library/basic-streambuf-class.md#pptr) 是 null 指標，此函式會傳回零。 否則,它將返回`pptr` -  [pbase](../standard-library/basic-streambuf-class.md#pbase)。
 
 ### <a name="example"></a>範例
 
@@ -258,7 +258,7 @@ int main( )
 }
 ```
 
-## <a name="seekoff"></a>  strstreambuf::seekoff
+## <a name="strstreambufseekoff"></a><a name="seekoff"></a>斯特裡布夫:尋人
 
 受保護虛擬成員函式嘗試改變受控制資料流目前的位置。
 
@@ -271,7 +271,7 @@ virtual streampos seekoff(streamoff _Off,
 ### <a name="parameters"></a>參數
 
 *_Off*\
-要搜尋的相對於 *_Way*的位置。
+相對於 *_Way*尋求的位置。
 
 *_Way*\
 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
@@ -287,19 +287,19 @@ virtual streampos seekoff(streamoff _Off,
 
 受保護的虛擬成員函式會致力於改變受控制資料流的目前位置。 針對 strstreambuf 類別的物件，資料流位置完全是由資料流位移所組成。 位移零會指定受控制序列的第一個項目。
 
-新位置的判斷方式如下：
+新位置的判斷如下：
 
-- 如果`_Way == ios_base::beg`為, 則新位置是資料流程的開頭加上 *_Off*。
+- 如果`_Way == ios_base::beg`,新位置是流的開頭加 *_Off*。
 
-- 如果`_Way == ios_base::cur`為, 則新位置是目前的資料流程位置加上 *_Off*。
+- 如果`_Way == ios_base::cur`,新位置是目前流位置加上 *_Off*。
 
-- 如果`_Way == ios_base::end`為, 則新位置是資料流程的結尾加上 *_Off*。
+- 如果`_Way == ios_base::end`,新位置是流的末尾加上 *_Off*。
 
-如果`_Which & ios_base::in`為非零值, 且輸入緩衝區存在, 則函式會改變輸入緩衝區中要讀取的下一個位置。 如果`_Which & ios_base::out`也是非零`_Way != ios_base::cur`值, 且輸出緩衝區存在, 則函式也會設定下一個要寫入的位置, 以符合下一個要讀取的位置。
+如果`_Which & ios_base::in`為非零且存在輸入緩衝區,則函數將更改輸入緩衝區中要讀取的下一個位置。 如果`_Which & ios_base::out`也是非零`_Way != ios_base::cur`, 則和輸出緩衝區存在,則函數還會設置下一個位置以寫入以匹配要讀取的下一個位置。
 
-否則, 如果`_Which & ios_base::out`為非零值, 且輸出緩衝區存在, 則函式會改變要寫入輸出緩衝區的下一個位置。 否則，置放作業會失敗。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。
+否則，如果 `_Which & ios_base::out` 為非零值，且輸入緩衝區存在，函式就會改變輸出緩衝區中下一個要寫入的位置。 否則，置放作業會失敗。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。
 
-## <a name="seekpos"></a>  strstreambuf::seekpos
+## <a name="strstreambufseekpos"></a><a name="seekpos"></a>斯特裡布夫::尋求者
 
 受保護虛擬成員函式嘗試改變受控制資料流目前的位置。
 
@@ -321,13 +321,13 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會致力於改變受控制資料流的目前位置。 針對 strstreambuf 類別的物件，資料流位置完全是由資料流位移所組成。 位移零會指定受控制序列的第一個項目。 新位置是由 *_Sp*決定。
+受保護的虛擬成員函式會致力於改變受控制資料流的目前位置。 針對 strstreambuf 類別的物件，資料流位置完全是由資料流位移所組成。 位移零會指定受控制序列的第一個項目。 新職位由 *_Sp*決定。
 
 如果 `_Which` & **ios_base::in** 為非零值，且輸入緩衝區存在，函式就會改變輸入緩衝區中下一個要讀取的位置。 如果 `_Which` & `ios_base::out` 為非零值，且輸出緩衝區存在，則函式也會設定下一個要寫入的位置，以符合下一個要讀取的位置。 否則，如果 `_Which` & `ios_base::out` 為非零值，且輸入緩衝區存在，函式就會改變輸出緩衝區中下一個要寫入的位置。 否則，置放作業會失敗。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。
 
-## <a name="str"></a>  strstreambuf::str
+## <a name="strstreambufstr"></a><a name="str"></a>斯特蘭布夫:斯特
 
-呼叫 [freeze](#freeze)，然後傳回指向受控制序列開頭的指標。
+呼叫 [freeze](#freeze)，然後將指標傳回受控制序列的開頭。
 
 ```cpp
 char *str();
@@ -345,7 +345,7 @@ char *str();
 
 如需使用 **str** 的範例，請參閱 [strstreambuf::freeze](#freeze)。
 
-## <a name="strstreambuf"></a>  strstreambuf::strstreambuf
+## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a>斯特蘭布夫:斯特特蘭布夫
 
 建構類型 `strstreambuf` 的物件。
 
@@ -383,7 +383,7 @@ strstreambuf(const unsigned char* _Getptr,
 用於配置記憶體緩衝區的函式。
 
 *計數*\
-判斷 *_Getptr*所指向的緩衝區長度。 如果 *_Getptr*不是引數 (第一個函式形式), 則為緩衝區的建議配置大小。
+確定 *_Getptr*指向的緩衝區的長度。 如果 *_Getptr*不是參數(第一個構造函數形式),則為緩衝區建議的分配大小。
 
 *_Freefunc*\
 用於釋放記憶體緩衝區的函式。
@@ -396,9 +396,9 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會在控制輸入緩衝區、輸出緩衝區及 strstreambuf 配置的所有指標中儲存一個 null 指標。 它會設定儲存的 strstreambuf 模式，以使受控制的序列成為可修改且可擴充的。 它也接受*計數*做為建議的初始配置大小。
+第一個建構函式會在控制輸入緩衝區、輸出緩衝區及 strstreambuf 配置的所有指標中儲存一個 null 指標。 它會設定儲存的 strstreambuf 模式，以使受控制的序列成為可修改且可擴充的。 它還接受*計數*作為建議的初始分配大小。
 
-第二個函式的行為與第一個相同, 不同之處在于它會將 *\_Allocfunc*儲存為函式的指標, 以呼叫來配置儲存體和 *\_Freefunc* , 做為呼叫以釋放該儲存體的函式指標。
+第二個構造函數的構造函數與第一個構造函數類似,只不過它存儲*\_Allocfunc*作為調用以分配存儲的函數的指標,而*\_Freefunc*則作為指向函數的指標來調用釋放該存儲。
 
 這三個建構函式：
 
@@ -416,13 +416,13 @@ strstreambuf(unsigned char *_Getptr,
     unsigned char *putptr = 0);
 ```
 
-運作方式也會與第一個類似，不同之處在於 `_Getptr` 會指定用來保存受控制序列的陣列物件 (因此，它不能是 null 指標)。陣列中的項目數 *N* 的判斷方式如下：
+運作方式也會與第一個類似，不同之處在於 `_Getptr` 會指定用來保存受控制序列的陣列物件 (因此,它不得為空指標。陣列中的元素*N*數確定如下:
 
-- 如果為`count` (> 0), 則 N `count`為。
+- 如果`count`(> 0),則`count` *N*是 。
 
-- If (`count` = = 0), 則*N*為`strlen`(( **const** `char` *) `_Getptr` )。
+- 如果`count`( =`strlen`0)`_Getptr`則*N*( **_** `char` _ ) 。
 
-- 如果為`count` (< 0), 則*N*為**INT_MAX**。
+- 如果`count`(< 0),則*N* **INT_MAX**。
 
 如果 `_Putptr` 是 null 指標，函式就會執行下列程式碼，只建立輸入緩衝區：
 
@@ -466,7 +466,7 @@ streambuf((char *)_Getptr, count);
 
 但有個例外是，儲存的模式會使受控制的序列變成不可修改且不可擴充的。
 
-## <a name="underflow"></a>  strstreambuf::underflow
+## <a name="strstreambufunderflow"></a><a name="underflow"></a>斯特蘭布夫:
 
 要從輸入資料流擷取目前項目的受保護虛擬函式。
 
@@ -480,11 +480,11 @@ virtual int underflow();
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會致力`ch`于從輸入緩衝區解壓縮目前的專案, 然後將目前的資料流程位置前移, 並以 (`int`) (`unsigned char`) **ch**形式傳回元素。 它只能以一種方式執行: 如果有讀取位置可供使用, 它`ch`會將專案當做儲存在讀取位置中的元素, 並前進到輸入緩衝區的下一個指標。
+受保護的虛擬成員函數努力從輸入緩衝區`ch`中提取當前元素,然後推進當前流位置,並將該元素返回為 ()()ch`int``unsigned char`。 **ch** 它只能以一種方式做到這一點:如果讀取位置可用,它將作為`ch`存儲在讀取位置的元素,並推進輸入緩衝區的下一個指標。
 
 ## <a name="see-also"></a>另請參閱
 
-[streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream 程式設計](../standard-library/iostream-programming.md)\
+[溪流布夫](../standard-library/streambuf-typedefs.md#streambuf)\
+[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[電流程式設計](../standard-library/iostream-programming.md)\
 [iostream 慣例](../standard-library/iostreams-conventions.md)

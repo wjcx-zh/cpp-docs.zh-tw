@@ -457,7 +457,7 @@
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
         - name: 作法：修改目標 Framework 和平台工具組
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
-    - name: 逐步解說：建立和使用靜態程式庫 (C++)
+    - name: 逐步解說：建立及使用靜態程式庫 (C++)
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
     - name: 在 Visual Studio 中建置 C++ DLL
       expanded: false
@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: CRT 初始化
                   href: c-runtime-library/crt-initialization.md
+                - name: CRT 中的全域狀態
+                  href: c-runtime-library/global-state.md
             - name: 依分類排序的通用 C 執行階段常式
               expanded: false
               items:

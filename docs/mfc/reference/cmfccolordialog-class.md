@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: 987e4f1e5e89c3c56b58adaad76cfd23d5e26c52
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1d4bd31d5095f572ee80f0357a2d7526482f1caa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367711"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752552"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 
@@ -174,7 +174,7 @@ CPalette* GetPalette() const;
 
 從系統調色板派生調色板。
 
-```
+```cpp
 void RebuildPalette();
 ```
 
@@ -182,7 +182,7 @@ void RebuildPalette();
 
 設置對話框的當前顏色。
 
-```
+```cpp
 void SetCurrentColor(COLORREF rgb);
 ```
 
@@ -197,7 +197,7 @@ void SetCurrentColor(COLORREF rgb);
 
 將當前顏色設置為當前調色板中最相似的顏色。
 
-```
+```cpp
 void SetNewColor(COLORREF rgb);
 ```
 
@@ -212,7 +212,7 @@ void SetNewColor(COLORREF rgb);
 
 在顏色對話框的第一個屬性頁上顯式指定所選顏色的紅色、綠色和藍色分量。
 
-```
+```cpp
 void SetPageOne(
     BYTE R,
     BYTE G,
@@ -236,7 +236,7 @@ void SetPageOne(
 
 在顏色對話框的第二個屬性頁上顯式指定所選顏色的紅色、綠色和藍色分量。
 
-```
+```cpp
 void SetPageTwo(
     BYTE R,
     BYTE G,

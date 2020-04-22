@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 0b54324c3c5503182add15a3dd0a9ecd07c24b18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38fceed1cc42ca0aac2e6ddaf145db273c95771d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318119"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753126"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 類別
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |參數|描述|
 |---------------|-----------------|
 |*dwStyle*|[在]要應用於控制的樣式的位組合 (OR)。 有關詳細資訊,請參閱[按鍵樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|
-|*矩形*|[在]對包含控制項位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用。|
+|*矩形*|[在]對包含控制項位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用。|
 |*pparentwnd*|[在]指向作為控制項的父視窗的[CWnd](../../mfc/reference/cwnd-class.md)物件的非空指標。|
 |*nID*|[在]控件的識別碼。|
 
@@ -166,7 +166,7 @@ END_MESSAGE_MAP()
 
 設置用戶按下目前拆分按鈕控制的下拉箭頭時顯示的下拉選單。
 
-```
+```cpp
 void SetDropDownMenu(
     UINT nMenuId,
     UINT nSubMenuId);

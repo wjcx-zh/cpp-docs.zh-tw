@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 2631005fcedfb8d5db69667e22c375f585b4f044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4727f7b1799604001134ee2f4d2d2e1ce6db87fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369252"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754779"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 類別
 
@@ -131,7 +131,7 @@ virtual ~CD2DGeometry();
 
 將現有資源介面附加到物件
 
-```
+```cpp
 void Attach(ID2D1Geometry* pResource);
 ```
 
@@ -260,7 +260,7 @@ BOOL ComputeLength(
 *世界轉型*<br/>
 在計算幾何體的長度之前應用於幾何體的變換。
 
-*長度*<br/>
+*length*<br/>
 當此方法返回時,包含指向幾何長度的指標。 對於閉合幾何體,長度包括隱式閉合段。 您必須為此參數分配存儲。
 
 *扁平公差*<br/>
@@ -285,7 +285,7 @@ BOOL ComputePointAtLength(
 
 ### <a name="parameters"></a>參數
 
-*長度*<br/>
+*length*<br/>
 沿點的幾何體和要查找的切線的距離。 如果此距離小於 0,則此方法計算幾何體中的第一個點。 如果此距離大於幾何的長度,則此方法計算幾何體中的最後一個點。
 
 *世界轉型*<br/>

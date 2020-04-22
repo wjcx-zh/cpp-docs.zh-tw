@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373911"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755009"
 ---
 # <a name="cfile-class"></a>CFile 類別
 
@@ -751,7 +751,7 @@ UINT nFrom);
 
 將檔指標的值設置到檔的開頭。
 
-```
+```cpp
 void SeekToBegin();
 ```
 
@@ -843,7 +843,7 @@ static void PASCAL SetStatus(
 *lpszFile 名稱*<br/>
 是所需檔的路徑的字串。 路徑可以是相對的,也可以是絕對的,並且可以包含網路名稱。
 
-*狀態*<br/>
+*status*<br/>
 包含新狀態信息的緩衝區。 調用`GetStatus`成員函數以用當前值`CFileStatus`預 填結構,然後根據需要進行更改。 如果值為 0,則相應的狀態項不會更新。 有關`CFileStatus`結構的說明,請參閱[GetStatus](#getstatus)成員函數。
 
 *pTM*<br/>

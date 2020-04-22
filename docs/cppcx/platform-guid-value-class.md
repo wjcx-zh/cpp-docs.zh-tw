@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: f63b2bb4fd5f809861622a4f6b255ee3725564b6
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
-ms.translationtype: MT
+ms.openlocfilehash: 3849074f93424912b1dc5b93883482a6cb55892a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816584"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750664"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 
-代表 Windows 執行階段類型系統中的 [GUID](/previous-versions/cc317743(v%3dmsdn.10)) 類型。
+表示 Windows 執行時類型系統中的 [GUID](/視窗/win32/api/guiddef/ns-guiddef-guid-guid 類型)。
 
 ## <a name="syntax"></a>語法
 
@@ -24,33 +24,33 @@ ms.locfileid: "71816584"
 public value struct Guid
 ```
 
-### <a name="members"></a>Members
+### <a name="members"></a>成員
 
-`Platform::Guid` 具有衍生自[platform：： Object 類別](../cppcx/platform-object-class.md)的 `Equals()`、`GetHashCode()`和 `ToString()` 方法，以及衍生自[Platform：： Type 類別](../cppcx/platform-type-class.md)的 `GetTypeCode()` 方法。 `Platform::Guid` 也具有下列成員。
+`Platform::Guid`[Platform::Type Class](../cppcx/platform-type-class.md)`Equals()`具有 派生自平臺:物件類的方法,以及從平臺派生的方法::類型類 。 `GetHashCode()` `ToString()` [ ](../cppcx/platform-object-class.md) `GetTypeCode()` `Platform::Guid`也有以下成員。
 
-|成員|描述|
+|member|描述|
 |------------|-----------------|
 |[Guid](#ctor)|初始化 `Platform::Guid` 的新執行個體。|
-|[operator==](#operator-equality)|等於運算子。|
-|[operator!=](#operator-inequality)|不等於運算子。|
-|[operator&lt;](#operator-less)|小於運算子。|
-|[operator()](#operator-call)|將 `Platform::Guid` 轉換成 `GUID`。|
+|[運算子*](#operator-equality)|等於運算子。|
+|[操作員!](#operator-inequality)|不等於運算子。|
+|[算子&lt;](#operator-less)|小於運算子。|
+|[運算子()](#operator-call)|將 `Platform::Guid` 轉換成 `GUID`。|
 
 ### <a name="remarks"></a>備註
 
-若要產生新的 `Platform::Guid`，請使用[Windows：： Foundation：： GuidHelper：： CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)靜態方法。
+要生成新`Platform::Guid`,請使用[Windows::基礎::GuidHelper::創建新 Guid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)靜態方法。
 
 ### <a name="requirements"></a>需求
 
-**最低支援用戶端：** Windows 8
+**受支援的最小用戶端:** 視窗 8
 
-**最低支援伺服器：** Windows Server 2012
+**受支援的伺服器最少:** 視窗伺服器 2012
 
 **命名空間：** Platform
 
 **中繼資料：** platform.winmd
 
-## <a name="ctor"></a>Guid：： Guid 構造函式
+## <a name="guidguid-constructors"></a><a name="ctor"></a>吉德::吉德構造函數
 
 初始化 `Platform::Guid` 的新執行個體。
 
@@ -82,45 +82,45 @@ Guid(
 ### <a name="parameters"></a>參數
 
 *a*<br/>
-`GUID`的前4個位元組。
+的前 4`GUID`個字節 。
 
-*b*<br/>
-`GUID`的後2個位元組。
+*B*<br/>
+的下 2 個字`GUID`節。
 
 *C*<br/>
-`GUID`的後2個位元組。
+的下 2 個字`GUID`節。
 
 *d*<br/>
-`GUID`的下一個位元組。
+`GUID` 的下一個位元組。
 
 *e*<br/>
-`GUID`的下一個位元組。
+`GUID` 的下一個位元組。
 
-*f*<br/>
-`GUID`的下一個位元組。
+*F*<br/>
+`GUID` 的下一個位元組。
 
-*g*<br/>
-`GUID`的下一個位元組。
+*G*<br/>
+`GUID` 的下一個位元組。
 
-*h*<br/>
-`GUID`的下一個位元組。
+*H*<br/>
+`GUID` 的下一個位元組。
 
-*i*<br/>
-`GUID`的下一個位元組。
+*I.*<br/>
+`GUID` 的下一個位元組。
 
-*韓文*<br/>
-`GUID`的下一個位元組。
+*J*<br/>
+`GUID` 的下一個位元組。
 
-*k*<br/>
-`GUID`的下一個位元組。
+*K*<br/>
+`GUID` 的下一個位元組。
 
-*m*<br/>
-中的 `GUID`，其格式為[GUID 結構](/previous-versions/cc317743(v%3dmsdn.10))。
+*米*<br/>
+A`GUID`形式為[GUID 結構](/windows/win32/api/guiddef/ns-guiddef-guid)。
 
 *n*<br/>
-`GUID`剩餘的8個位元組。
+其餘 8 個字`GUID`節的 。
 
-## <a name="operator-equality"></a>Guid：： operator = = 運算子
+## <a name="guidoperator-operator"></a><a name="operator-equality"></a>吉德:::操作員=運算符
 
 比較兩個 `Platform::Guid` 執行個體是否相等。
 
@@ -132,23 +132,23 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="parameters"></a>參數
 
-*guid1*<br/>
+*吉德1*<br/>
 要比較的第一個 `Platform::Guid`。
 
-*guid2*<br/>
+*吉德2*<br/>
 要比較的第二個 `Platform::Guid`。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個 `Platform::Guid` 實例相等，則為 True。
+如果兩`Platform::Guid`個實例相等,則為 True。
 
 ### <a name="remarks"></a>備註
 
-偏好使用 `==` 運算子，而不是[Windows：： Foundation：： GuidHelper：： Equals](/uwp/api/windows.foundation.guidhelper.equals)靜態方法。
+更喜歡使用`==`運算符而不是[Windows:基礎::GuidHelper::等於](/uwp/api/windows.foundation.guidhelper.equals)靜態方法。
 
-## <a name="operator-inequality"></a>Guid：： operator！ = 運算子
+## <a name="guidoperator-operator"></a><a name="operator-inequality"></a>吉德::操作員!
 
-比較兩個 `Platform::Guid` 實例是否不相等。
+比較兩個 `Platform::Guid` 執行個體是否不相等。
 
 ### <a name="syntax"></a>語法
 
@@ -158,19 +158,19 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="parameters"></a>參數
 
-*guid1*<br/>
+*吉德1*<br/>
 要比較的第一個 `Platform::Guid`。
 
-*guid2*<br/>
+*吉德2*<br/>
 要比較的第二個 `Platform::Guid`。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個 `Platform::Guid` 實例不相等，則為 True。
+如果兩`Platform::Guid`個實例不相等,則為 True。
 
-## <a name="operator-less"></a>Guid：： operator&lt; 運算子
+## <a name="guidoperatorlt-operator"></a><a name="operator-less"></a>吉德::操作員&lt;
 
-比較兩個 `Platform::Guid` 實例以進行排序。
+比較兩`Platform::Guid`個排序實例。
 
 ### <a name="syntax"></a>語法
 
@@ -180,21 +180,21 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ### <a name="parameters"></a>參數
 
-*guid1*<br/>
+*吉德1*<br/>
 要比較的第一個 `Platform::Guid`。
 
-*guid2*<br/>
+*吉德2*<br/>
 要比較的第二個 `Platform::Guid`。
 
 ### <a name="return-value"></a>傳回值
 
-如果*guid1*在*guid2*之前排序，則為 True。 排序會在將每個 `Platform::Guid` 視為 4 32 位不帶正負號值的陣列之後詞典編纂。 這不是 SQL Server 或 .NET Framework 所使用的順序，也不是依字串表示以字典順序排序。
+如果*guid1*是在*guid2*之前訂購的,則為 True。 排序是字典,在將每個`Platform::Guid`值視為四個 32 位無符號值的陣列。 這不是 SQL Server 或 .NET 框架使用的順序,也不與字串表示法的字典排序相同。
 
-提供這個運算子的目的，是為了讓C++標準程式庫可以更輕鬆地使用 `Guid` 物件。
+提供此運算符,以便`Guid`C++標準庫可以更輕鬆地使用物件。
 
-## <a name="operator-call"></a>Guid：： operator （）運算子
+## <a name="guidoperator-operator"></a><a name="operator-call"></a>吉德::管理員() 運算子
 
-隱含地將 `Platform::Guid` 轉換為[GUID 結構](/previous-versions/cc317743(v%3dmsdn.10))。
+隱含轉換`Platform::Guid`為[GUID 結構](/windows/win32/api/guiddef/ns-guiddef-guid)。
 
 ### <a name="syntax"></a>語法
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>傳回值
 
-[GUID 結構](/previous-versions/cc317743(v%3dmsdn.10))。
+[GUID 結構](/windows/win32/api/guiddef/ns-guiddef-guid)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366074"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753888"
 ---
 # <a name="coledispatchdriver-class"></a>COle排程驅動程式類別
 
@@ -103,7 +103,7 @@ OLE 調度介面提供對物件方法和屬性的訪問。 `COleDispatchDriver`�
 
 呼叫 `AttachDispatch` 成員函式可將 `IDispatch` 指標附加至 `COleDispatchDriver` 物件。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ LPDISPATCH DetachDispatch();
 
 獲取*dwDispID*指定的物件屬性。
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ void GetProperty(
 
 在*wFlags*指定的上下文中呼叫*dwDispID*指定的物件方法或屬性。
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -283,7 +283,7 @@ void AFX_CDECL InvokeHelper(
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
 |VT_I4|**長**|
-|VT_R4|**浮動**|
+|VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
 |VT_DATE|**日期**|
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 釋放`IDispatch`連接。 有關詳細資訊,請參閱實現[IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ void ReleaseDispatch();
 
 設定*dwDispID*指定的 OLE 物件屬性。
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377368"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753410"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 類別
 
@@ -120,7 +120,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 將工具列按鈕插入到 **「命令」** 頁上的命令清單中。
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -187,7 +187,7 @@ BOOL AddMenu(UINT uiMenuResId);
 
 將項添加到 **「命令」** 頁中的命令清單中,以表示指定選單中的所有項。
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ virtual BOOL Create();
 
 使用 **「自訂」** 對話框啟用或關閉新的工具列。
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 
 使用`CComboBox`**「自訂」** 對話方塊中每個指令類別的名稱填充提供的物件。
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ void FillCategoriesComboBox(
 
 使用`CListBox`**「自訂」** 對話方塊中每個指令類別的名稱填充提供的物件。
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ BOOL RenameCategory(
 
 在 **「命令」** 頁上的命令列表框中取代工具列按鈕。
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);

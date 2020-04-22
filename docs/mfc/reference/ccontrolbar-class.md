@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: deb95d76e6d68ba5b9fad82bca1d88fd71c5a547
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2f8ea48bf9a1f015928650085b07198b152771a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369387"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754795"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -293,7 +293,7 @@ virtual void DrawGripper(
 
 調用此函數以啟用停靠控制欄。
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -450,7 +450,7 @@ virtual void OnUpdateCmdUI(
 
 調用此函數以設置控制件欄所需的**CBRS_** 樣式。
 
-```
+```cpp
 void SetBarStyle(DWORD dwStyle);
 ```
 
@@ -493,7 +493,7 @@ void SetBarStyle(DWORD dwStyle);
 
 呼叫此函數以設置控制欄邊框的大小。
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -530,7 +530,7 @@ void SetBorders(LPCRECT lpRect);
 
 更改控件欄的就地擁有者。
 
-```
+```cpp
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 

@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377121"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754669"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 
@@ -213,7 +213,7 @@ virtual void Append();
 
 調用此成員函數以啟動事務。
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ virtual void Close();
 
 呼叫此成員函數以提交事務 —保存一組編輯和更新到工作區中的一個或多個資料庫。
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ short GetDatabaseCount();
 
 調用此成員函數以獲取有關工作區中打開的資料庫的各種資訊。
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ short GetWorkspaceCount();
 
 調用此成員函數以獲取有關會話中打開的工作區的各種資訊。
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 
 調用此成員函數以結束當前事務,並在事務開始之前將工作區中的所有資料庫還原到其條件。
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 
 呼叫此成員函數以設定工作區的 DAO 隔離 ODBCTrans 屬性的值。
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 

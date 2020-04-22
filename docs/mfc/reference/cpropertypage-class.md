@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363993"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751097"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 類別
 
@@ -119,7 +119,7 @@ class CPropertyPage : public CDialog
 
 對模態屬性表頁面中的數據進行了不可恢復的更改後,請調用此函數。
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ void CancelToClose();
 
 呼叫此成員函數以建構物件`CPropertyPage`。
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ LRESULT QuerySiblings(
 
 調用此成員函數以啟用或禁用"立即應用"按鈕,具體取決於屬性頁中的設置是否應應用於相應的外部物件。
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

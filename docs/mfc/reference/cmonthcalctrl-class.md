@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319748"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752813"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 指定應用於月曆控制件的 Windows 樣式的組合。 有關樣式的詳細資訊,請參閱 Windows SDK 中的[月行事曆控制元件樣式](/windows/win32/Controls/month-calendar-control-styles)。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用。 包含月曆控制件的位置和大小。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用。 包含月曆控制件的位置和大小。
 
 *pt*<br/>
-對標識月曆控件位置的[POINT](/previous-versions/dd162805\(v=vs.85\))結構的引用。
+對標識月曆控件位置的[POINT](/windows/win32/api/windef/ns-windef-point)結構的引用。
 
 *pparentwnd*<br/>
 指向[CWnd](../../mfc/reference/cwnd-class.md)物件的指標,該物件是月曆控件的父視窗。 它不得為 NULL。
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>參數
 
 *普雷克*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,該結構將接收邊界矩形資訊。 此參數必須是有效位址,不能為 NULL。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,該結構將接收邊界矩形資訊。 此參數必須是有效位址,不能為 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -808,7 +808,7 @@ BOOL IsYearView() const;
 
 設置當前月日曆控件的邊框的寬度。
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ void SetCalendarBorder(int cxyBorder);
 
 設置當前月日曆控件邊框的預設寬度。
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -1219,7 +1219,7 @@ BOOL SetSelRange(
 
 設置當天的日曆控件。
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |參數|描述|
 |---------------|-----------------|
-|*lpRect*|[在]指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,該結構定義包含所需行事曆數的矩形。|
+|*lpRect*|[在]指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,該結構定義包含所需行事曆數的矩形。|
 
 ### <a name="return-value"></a>傳回值
 
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,該結構定義大小小於或等於*lpRect*參數定義的矩形的矩形。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,該結構定義大小小於或等於*lpRect*參數定義的矩形的矩形。
 
 ### <a name="remarks"></a>備註
 

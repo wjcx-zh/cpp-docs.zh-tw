@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377069"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753112"
 ---
 # <a name="carchive-class"></a>CArchive 類別
 
@@ -146,7 +146,7 @@ class CArchive
 
 調用此函數以關閉存檔,而不會引發異常。
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ CArchive(
 
 刷新緩衝區中剩餘的所有數據,關閉存檔,並將存檔與檔斷開連接。
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ void Close();
 
 強制將存檔緩衝區中剩餘的任何數據寫入檔。
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ BOOL IsStoring() const;
 
 調用此成員函數,將未真正序列化到檔的地圖中的物件放置,但可用於子物件引用的物件。
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 
 如果要存儲和載入基類的版本資訊,請調用此成員函數。
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 
 當您`SetLoadParams`要從存檔中讀取`CObject`大量 派生物件時調用。
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 
 呼叫此成員函數會儲存在存檔物件中的物件架構設定為*nSchema*。
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ void SetObjectSchema(UINT nSchema);
 
 在`SetStoreParams`存檔中存儲大量`CObject`派生物件時使用。
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 
 將指定數量的位元組寫入存檔。
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ void Write(const void* lpBuf, INT nMax);
 
 用於`WriteClass`在派生類的序列化期間存儲基類的版本和類資訊。
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 
 將指定的`CObject`內容儲存到存檔。
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ void WriteObject(const CObject* pOb);
 
 使用此成員函數將數據從緩衝區寫入與`CArchive`對象關聯的檔。
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 

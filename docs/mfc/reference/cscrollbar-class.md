@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 761d7e9db650c6d95e916c85bd7456d9b1c647c5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318525"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754410"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 類別
 
@@ -287,7 +287,7 @@ int GetScrollPos() const;
 
 將給定滾動條的當前最小和最大滾動條位置複製到*lpMinPos*和*lpMaxPos*指定的位置。
 
-```
+```cpp
 void GetScrollRange(
     LPINT lpMinPos,
     LPINT lpMaxPos) const;
@@ -375,7 +375,7 @@ int SetScrollPos(
 
 設定給定捲軸的最小和最大位置值。
 
-```
+```cpp
 void SetScrollRange(
     int nMinPos,
     int nMaxPos,
@@ -411,7 +411,7 @@ void SetScrollRange(
 
 顯示或隱藏滾動條。
 
-```
+```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
 ```
 

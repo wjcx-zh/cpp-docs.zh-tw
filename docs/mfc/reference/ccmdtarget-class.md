@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352281"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752721"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 
@@ -121,7 +121,7 @@ class CCmdTarget : public CObject
 
 調用此函數,當希望命令需要一個明顯的時間間隔執行時,將游標顯示為沙漏。
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ BOOL DoOleVerb(
 文件視窗的控制代碼，包含物件。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,該結構以像素為單位定義物件的邊界矩形,以*hwndParent*。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,該結構以像素為單位定義物件的邊界矩形,以*hwndParent*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -183,7 +183,7 @@ BOOL DoOleVerb(
 
 調用此函數以啟用物件的 OLE 自動化。
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ void EnableAutomation();
 
 啟用在連接點上觸發事件。
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ void EnableConnections();
 
 啟用物件的類型庫。
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ void EnableTypeLib();
 
 調用`BeginWaitCursor`成員函數後調用此函數,以便從沙漏游標返回到上一個游標。
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>參數
 
 *pIID*<br/>
-指向介面 ID [(GUID)](/previous-versions/cc317743(v%3dmsdn.10))的指標。
+指向介面 ID 的指標([GUID](/視窗/win32/api/guiddef/ns-guiddef-guid)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -349,8 +349,8 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 區域設定識別碼`LCID`( 。
 
-*Guid*<br/>
-類型描述的[GUID。](/previous-versions/cc317743(v%3dmsdn.10))
+*guid*<br/>
+類型描述的 [GUID](/視窗/win32/api/guiddef/ns-guiddef-guid。
 
 *ppTypeInfo*<br/>
 指向介面的`ITypeInfo`指標。
@@ -514,7 +514,7 @@ virtual void OnFinalRelease();
 
 呼叫此函數以在系統游標更改後(例如,在長時間操作期間打開消息框然後關閉後)還原相應的沙漏游標。
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

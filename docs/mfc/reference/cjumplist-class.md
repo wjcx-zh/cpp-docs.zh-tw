@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372326"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754943"
 ---
 # <a name="cjumplist-class"></a>CJumpList 類別
 
@@ -99,7 +99,7 @@ class CJumpList;
 
 在不提交的情況下中止清單生成事務。
 
-```
+```cpp
 void AbortList();
 ```
 
@@ -256,7 +256,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 
 刪除到目前為止已添加到當前實例`CJumpList`的所有任務和目標。
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -268,7 +268,7 @@ void ClearAll();
 
 刪除到目前為止已添加到 CJumpList 當前實例的所有目標。
 
-```
+```cpp
 void ClearAllDestinations();
 ```
 
@@ -350,7 +350,7 @@ BOOL InitializeList();
 
 為要生成的清單設置應用程式使用者模型 ID。
 
-```
+```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 

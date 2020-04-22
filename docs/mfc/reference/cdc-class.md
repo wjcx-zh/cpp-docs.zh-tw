@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375707"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753425"
 ---
 # <a name="cdc-class"></a>CDC 類別
 
@@ -835,7 +835,7 @@ BOOL AngleArc(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定圓中心的邏輯 x 座標。
 
 *Y*<br/>
@@ -1059,7 +1059,7 @@ BOOL BitBlt(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定目標矩形左上角的邏輯 x 座標。
 
 *Y*<br/>
@@ -1354,7 +1354,7 @@ Windows 設備上下文。
 
 將 HIMETRIC 大小轉換為 OLE 時,請使用此功能,將圖元轉換為 HIMETRIC。
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 
 將設備單元轉換為邏輯單位。
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ void DPtoLP(LPSIZE lpSize) const;
 
 調用此成員函數以繪製三維矩形。
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1428,7 +1428,7 @@ void Draw3dRect(
 *clrBottomRight*<br/>
 指定三維矩形底部和右側的顏色。
 
-*X.*<br/>
+*x*<br/>
 指定 3D 矩形左上角的邏輯 x 座標。
 
 *Y*<br/>
@@ -1452,7 +1452,7 @@ void Draw3dRect(
 
 重複調用此成員函數以重繪拖動矩形。
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1467,7 +1467,7 @@ void DrawDragRect(
 *lpRect*<br/>
 指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件,該物件指定矩形的邏輯座標 - 在這種情況下,要重繪的矩形的結束位置。
 
-*大小*<br/>
+*size*<br/>
 指定從外部邊框的左上角到矩形內邊框的左上角(即邊框的粗細)的位移。
 
 *lpRectLast*<br/>
@@ -1548,7 +1548,7 @@ int DrawEscape(
 
 在樣式中繪製矩形,用於指示矩形具有焦點。
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -1665,7 +1665,7 @@ BOOL DrawIcon(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定圖示左上角的邏輯 x 座標。
 
 *Y*<br/>
@@ -1767,7 +1767,7 @@ BOOL DrawState(
 *pt*<br/>
 指定圖像的位置。
 
-*大小*<br/>
+*size*<br/>
 指定圖像的大小。
 
 *hBitmap*<br/>
@@ -2232,7 +2232,7 @@ BOOL ExtFloodFill(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定填充開始點的邏輯 x 座標。
 
 *Y*<br/>
@@ -2287,7 +2287,7 @@ BOOL ExtTextOut(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定指定字串中第一個字元的字元儲存格的邏輯 x 座標。
 
 *Y*<br/>
@@ -2345,7 +2345,7 @@ BOOL FillPath();
 
 呼叫此成員函數以使用指定的畫筆填充給定的矩形。
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ BOOL FillRgn(
 
 呼叫此成員函數以使用指定的純色填充給定的矩形。
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2423,7 +2423,7 @@ void FillSolidRect(
 
 *clr*指定用於填充矩形的顏色。
 
-*X.*<br/>
+*x*<br/>
 指定矩形左上角的邏輯 x 座標。
 
 *Y*<br/>
@@ -2467,7 +2467,7 @@ BOOL FloodFill(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定填充開始點的邏輯 x 座標。
 
 *Y*<br/>
@@ -2492,7 +2492,7 @@ BOOL FloodFill(
 
 在*lpRect*指定的矩形周圍繪製邊框。
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2658,7 +2658,7 @@ UINT GetBoundsRect(
 *lpRectBounds*<br/>
 指向將接收當前邊界矩形的緩衝區。 矩形以邏輯座標返回。
 
-*標誌*<br/>
+*flags*<br/>
 指定在返回邊界矩形後是否清除邊界矩形。 此參數應為零或設定為以下值:
 
 - DCB_RESET 強制返回邊界矩形後清除該矩形。
@@ -3559,7 +3559,7 @@ COLORREF GetPixel(POINT point) const;
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要檢查的點的邏輯 x 座標。
 
 *Y*<br/>
@@ -4089,7 +4089,7 @@ virtual BOOL GrayString(
 *n( N) Count*<br/>
 指定要輸出的字元數。 如果此參數為 0,`GrayString`則計算字串的長度(假設*lpData*是指向字串的指標)。 如果*nCount*為 1,並且*lpfnOutput*指向的功能返回 0,則顯示圖像但不變暗。
 
-*X.*<br/>
+*x*<br/>
 指定包含字串的矩形起始位置的邏輯 x 座標。
 
 *Y*<br/>
@@ -4123,7 +4123,7 @@ virtual BOOL GrayString(
 
 將 HIMETRIC 大小從 OLE 轉換為圖元時,請使用此功能。
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 
 調用此函數可將 HIMETRIC 單元轉換為邏輯單位。
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI 夾夾所有後續輸出以適合新邊界。 寬度和高度不得超過 32
 
 反轉給定矩形的內容。
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4272,7 +4272,7 @@ BOOL LineTo(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定行的終結點的邏輯 x 座標。
 
 *Y*<br/>
@@ -4297,7 +4297,7 @@ BOOL LineTo(POINT point);
 
 將邏輯單位轉換為設備單元。
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ void LPtoDP(LPSIZE lpSize) const;
 
 調用此函數可將邏輯單位轉換為 HIMETRIC 單位。
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -4390,7 +4390,7 @@ BOOL MaskBlt(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定目標矩形左上角的邏輯 x 座標。
 
 *Y*<br/>
@@ -4479,7 +4479,7 @@ CPoint MoveTo(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定新位置的邏輯 x 座標。
 
 *Y*<br/>
@@ -4510,13 +4510,13 @@ int OffsetClipRgn(SIZE size);
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要向左或向右移動的邏輯單位數。
 
 *Y*<br/>
 指定要向上或向下移動的邏輯單位數。
 
-*大小*<br/>
+*size*<br/>
 指定要偏移的金額。
 
 ### <a name="return-value"></a>傳回值
@@ -4627,7 +4627,7 @@ BOOL PatBlt(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要接收圖案的矩形左上角的邏輯 x 座標。
 
 *Y*<br/>
@@ -5109,7 +5109,7 @@ BOOL PtVisible(POINT point) const;
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定點的邏輯 x 座標。
 
 *Y*<br/>
@@ -5865,7 +5865,7 @@ UINT SetBoundsRect(
 *lpRectBounds*<br/>
 指向用於設置`RECT`邊界矩`CRect`形的結構或物件。 矩形尺寸以邏輯座標給出。 此參數可以是 NULL。
 
-*標誌*<br/>
+*flags*<br/>
 指定新矩形與累積矩形的組合方式。 這裡可以是以下值的組合:
 
 - DCB_ACCUMULATE 將*lpRectBounds*指定的矩形添加到邊界矩形(使用矩形聯合操作)。
@@ -5902,7 +5902,7 @@ CPoint SetBrushOrg(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定新原點的 x 座標(以設備單位為單位)。 此值必須位於 0-7 範圍內。
 
 *Y*<br/>
@@ -6170,7 +6170,7 @@ COLORREF SetPixel(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要設定的點的邏輯 x 座標。
 
 *Y*<br/>
@@ -6209,7 +6209,7 @@ BOOL SetPixelV(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要設置的點的 x 座標(以邏輯單位表示)。
 
 *Y*<br/>
@@ -6493,7 +6493,7 @@ CSize SetViewportExt(SIZE size);
 *cy*<br/>
 指定視口的 y 範圍(以設備單位為單位)。
 
-*大小*<br/>
+*size*<br/>
 指定視口的 x 和 y 範圍(以設備單位為單位)。
 
 ### <a name="return-value"></a>傳回值
@@ -6531,7 +6531,7 @@ CPoint SetViewportOrg(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定視口原點的 x 座標(以設備單位為單位)。 該值必須在設備座標系的範圍內。
 
 *Y*<br/>
@@ -6574,7 +6574,7 @@ CSize SetWindowExt(SIZE size);
 *cy*<br/>
 指定視窗的 y 範圍(以邏輯單位為單位)。
 
-*大小*<br/>
+*size*<br/>
 指定視窗的 x 和 y 範圍(以邏輯單位表示)。
 
 ### <a name="return-value"></a>傳回值
@@ -6619,7 +6619,7 @@ CPoint SetWindowOrg(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定視窗新來源的邏輯 x 座標。
 
 *Y*<br/>
@@ -6744,7 +6744,7 @@ BOOL StretchBlt(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定目的地矩形左上角的 X 座標 (以邏輯單位表示)。
 
 *Y*<br/>
@@ -6881,7 +6881,7 @@ CSize TabbedTextOut(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定字串起始點的邏輯 x 座標。
 
 *Y*<br/>
@@ -6936,7 +6936,7 @@ BOOL TextOut(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定文字起點的邏輯 X 座標。
 
 *Y*<br/>
@@ -7029,7 +7029,7 @@ BOOL TransparentBlt(
 
 通過將工作區中的當前顏色逐圖元匹配到系統調色板,更新設備上下文的工作區。
 
-```
+```cpp
 void UpdateColors();
 ```
 

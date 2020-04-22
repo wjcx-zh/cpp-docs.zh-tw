@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318131"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753119"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 指定旋轉按鈕控制件的樣式。 將旋轉按鈕控制樣式的任意組合應用於控制項。 這些樣式在 Windows SDK 中的[「向上向下控制樣式」](/windows/win32/Controls/up-down-control-styles)中描述。
 
 *矩形*<br/>
-指定旋轉按鈕控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構
+指定旋轉按鈕控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構
 
 *pparentwnd*<br/>
 指向旋轉按鈕控制的父視窗(通常為的指標`CDialog`) 的指標。 它不得為 NULL。
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 指定旋轉按鈕控制件的樣式。 將旋轉按鈕控制樣式的任意組合應用於控制項。 這些樣式在 Windows SDK 中的[「向上向下控制樣式」](/windows/win32/Controls/up-down-control-styles)中描述。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -375,7 +375,7 @@ int SetPos32(int nPos);
 
 設置旋轉按鈕控制項的上限和下限(範圍)。
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

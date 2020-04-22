@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370110"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754589"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 類別
 
@@ -201,7 +201,7 @@ UINT GetHashTableSize() const;
 
 在*rNext 定位*處檢索地圖元素,然後更新*rNext 定位*以引用地圖中的下一個元素。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -329,7 +329,7 @@ UINT HashKey(LPCTSTR key) const;
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 要計算哈希值的鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -353,7 +353,7 @@ UINT HashKey(LPCTSTR key) const;
 
 初始化哈希表。
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -423,7 +423,7 @@ BOOL Lookup(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 指定識別要備份的元素的字串鍵。
 
 *rValue*<br/>
@@ -466,7 +466,7 @@ BOOL LookupKey(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 指定識別要備份的元素的字串鍵。
 
 *rKey*<br/>
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 從此映射中刪除所有元素並銷毀`CString`關鍵物件。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -571,7 +571,7 @@ BOOL RemoveKey(LPCTSTR key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 指定用於地圖搜尋的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 主要是指在地圖中插入元素。
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);
@@ -620,7 +620,7 @@ void SetAt(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 指定為新元素鍵的字串。
 
 *newValue*<br/>

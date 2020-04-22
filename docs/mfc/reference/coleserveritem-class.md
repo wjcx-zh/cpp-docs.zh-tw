@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376120"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753736"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 類別
 
@@ -175,7 +175,7 @@ class COleServerItem : public CDocItem
 
 呼叫此函數將 OLE 的表示格式和轉換格式放在`COleDataSource`指定 物件中。
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ COleServerItem(
 
 呼叫此函數以將 OLE 複製到剪貼簿。
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ DROPVALUE 枚舉中的值。 如果DROPEFFECT_MOVE,則應刪除原始數據。
 
 呼叫此函數以填充指定的[COleDataSource](../../mfc/reference/coledatasource-class.md)物件,其中包含將複製到剪貼簿的所有資料(如果您[CopyToClipboard](#copytoclipboard)呼叫[DoDragDrop,](#dodragdrop)也會傳輸相同的數據)。
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ COleServerDoc* GetDocument() const;
 
 調用此函數以獲取 OLE 項CF_EMBEDSOURCE數據。
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 
 調用此函數以獲取 OLE 項CF_OBJECTDESCRIPTOR數據。
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ CSize m_sizeExtent;
 
 更改連結項後調用此函數。
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -903,7 +903,7 @@ virtual BOOL OnSetExtent(
 
 - DVASPECT_DOCPRINT項表示,就好像它是使用「檔」功能表中的「列印」命令一樣。
 
-*大小*<br/>
+*size*<br/>
 指定 OLE 項新大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -982,7 +982,7 @@ virtual void OnUpdateItems();
 
 創建連結項以設置其名稱時調用此函數。
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 

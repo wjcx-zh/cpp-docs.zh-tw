@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 6ece239496def9fd65a95a622ac3c475fe5becea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a8e24b68f377235c1f1e21fbcd5618aebbe299a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373828"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755022"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog 類別
 
@@ -196,7 +196,7 @@ IDOK 和 IDCANCEL 是指示使用者選擇"確定"還是"取消"按鈕的常量�
 
 檢索選取的字型格式。
 
-```
+```cpp
 void GetCharFormat(CHARFORMAT& cf) const;
 ```
 
@@ -225,7 +225,7 @@ COLORREF GetColor() const;
 
 呼叫此功能將當前所選字體的特徵分配給[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員。
 
-```
+```cpp
 void GetCurrentFont(LPLOGFONT lplf);
 ```
 

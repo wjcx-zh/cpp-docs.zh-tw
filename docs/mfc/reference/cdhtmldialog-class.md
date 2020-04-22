@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753381"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 類別
 
@@ -348,7 +348,7 @@ virtual BOOL CreateControlSite(
 
 在 HTML 頁上的成員變數和 ActiveX 控制件的屬性值之間交換數據。
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -376,7 +376,7 @@ ActiveX 控制項的 HTML 原始物件標記的 ID 參數的值。
 *szProp名稱*<br/>
 屬性的名稱。
 
-*無 功*<br/>
+*var*<br/>
 類型[VARIANT 、 COlevariant](../../mfc/reference/colevariant-class.md)或[CComvariant](../../atl/reference/ccomvariant-class.md)的數據成員,用於保存與 ActiveX 控制件屬換的值。
 
 ### <a name="example"></a>範例
@@ -387,7 +387,7 @@ ActiveX 控制項的 HTML 原始物件標記的 ID 參數的值。
 
 在 HTML 頁上的成員變數和複選框之間交換數據。
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -402,7 +402,7 @@ void DDX_DHtml_CheckBox(
 *szId*<br/>
 為 HTML 控制項的 ID 參數指定的值。
 
-*值*<br/>
+*value*<br/>
 要交換的值。
 
 ### <a name="example"></a>範例
@@ -413,7 +413,7 @@ void DDX_DHtml_CheckBox(
 
 在成員變數和 HTML 頁上的任何 HTML 元素屬性之間交換數據。
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -468,14 +468,14 @@ void DDX_DHtml_ElementText(
 *dispId*<br/>
 要與其交換資料的 HTML 元素的調度 ID。
 
-*值*<br/>
+*value*<br/>
 要交換的值。
 
 ## <a name="cdhtmldialogddx_dhtml_radio"></a><a name="ddx_dhtml_radio"></a>CDHtml對話::DDX_DHtml_收音機
 
 在 HTML 頁上的成員變數和單選按鈕之間交換數據。
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -490,14 +490,14 @@ void DDX_DHtml_Radio(
 *szId*<br/>
 為 HTML 控制項的 ID 參數指定的值。
 
-*值*<br/>
+*value*<br/>
 要交換的值。
 
 ## <a name="cdhtmldialogddx_dhtml_selectindex"></a><a name="ddx_dhtml_selectindex"></a>CDHtml對話::DDX_DHtml_選擇索引
 
 獲取或設定 HTML 頁上的清單框的索引。
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -512,14 +512,14 @@ void DDX_DHtml_SelectIndex(
 *szId*<br/>
 為 HTML 控制`id`的參數指定的值。
 
-*值*<br/>
+*value*<br/>
 要交換的值。
 
 ## <a name="cdhtmldialogddx_dhtml_selectstring"></a><a name="ddx_dhtml_selectstring"></a>CDHtml對話::DDX_DHtml_選擇字串
 
 獲取或設定 HTML 頁上列表框條目的顯示文字(基於當前索引)。
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -534,14 +534,14 @@ void DDX_DHtml_SelectString(
 *szId*<br/>
 為 HTML 控制項的 ID 參數指定的值。
 
-*值*<br/>
+*value*<br/>
 要交換的值。
 
 ## <a name="cdhtmldialogddx_dhtml_selectvalue"></a><a name="ddx_dhtml_selectvalue"></a>CDHtml對話::DDX_DHtml_選擇值
 
 獲取或設定 HTML 頁上的清單方塊條目的值(基於當前索引)。
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -556,7 +556,7 @@ void DDX_DHtml_SelectValue(
 *szId*<br/>
 為 HTML 控制項的 ID 參數指定的值。
 
-*值*<br/>
+*value*<br/>
 要交換的值。
 
 ### <a name="example"></a>範例
@@ -567,7 +567,7 @@ void DDX_DHtml_SelectValue(
 
 從`CDHtmlDialog`物件分離無模式對話框並銷毀該物件。
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ ActiveX 控制件`IDispatch`的指標。
 
 檢索與當前文件關聯的統一資源定位器 (URL)。
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 導航到由*lpszURL*指定的 URL 標識的資源。
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ STDMETHOD(ResizeBorder)(
 
 將 ActiveX 控制件的屬性設置為新值。
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ ActiveX 控制項的 HTML ID。
 
 設定`innerHTML`HTML 元素的屬性。
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ HTML`IUnknown`元素的指標。
 
 設定 HTML 元素的屬性。
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ HTML 元素的識別碼。
 
 設定`innerText`HTML 元素的屬性。
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ HTML`IUnknown`元素的指標。
 
 設置主機的`IDispatch`介面。
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 
 設置主機 UI 標誌。
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 

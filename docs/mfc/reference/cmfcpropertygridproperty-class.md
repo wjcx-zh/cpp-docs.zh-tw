@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: a5ac8fec691a3bf8ba3725aa5be0ac9da5ef34b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08fd7f1ba11053358391e7f120eb5db80d764c87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361820"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754096"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 類別
 
@@ -400,7 +400,7 @@ virtual void AdjustInPlaceEditRect(
 
 使屬性可編輯或唯讀。
 
-```
+```cpp
 void AllowEdit(BOOL bAllow=TRUE);
 ```
 
@@ -539,7 +539,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 
 啟用或禁用屬性。
 
-```
+```cpp
 void Enable(BOOL bEnable=TRUE);
 ```
 
@@ -554,7 +554,7 @@ void Enable(BOOL bEnable=TRUE);
 
 啟用或禁用用於修改屬性值的旋轉按鈕控制項。
 
-```
+```cpp
 void EnableSpinControl(
     BOOL bEnable=TRUE,
     int nMin=0,
@@ -582,7 +582,7 @@ void EnableSpinControl(
 
 展開或摺疊包含子屬性的屬性。
 
-```
+```cpp
 void Expand(BOOL bExpand=TRUE);
 ```
 
@@ -912,7 +912,7 @@ CMFCPropertyGridProperty* HitTest(
 
 由框架調用以初始化屬性物件。
 
-```
+```cpp
 void Init();
 ```
 
@@ -1556,7 +1556,7 @@ virtual BOOL PushChar(UINT nChar);
 
 重繪屬性。
 
-```
+```cpp
 void Redraw();
 ```
 
@@ -1566,7 +1566,7 @@ void Redraw();
 
 從屬性中刪除所有選項(專案)。
 
-```
+```cpp
 void RemoveAllOptions();
 ```
 
@@ -1612,7 +1612,7 @@ virtual void ResetOriginalValue();
 
 將 DWORD 值與屬性關聯。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1629,7 +1629,7 @@ void SetData(DWORD_PTR dwData);
 
 指定描述目前的屬性的文字。
 
-```
+```cpp
 void SetDescription(const CString& strDescr);
 ```
 
@@ -1644,7 +1644,7 @@ void SetDescription(const CString& strDescr);
 
 設置屬性的名稱。
 
-```
+```cpp
 void SetName(
     LPCTSTR lpszName,
     BOOL bRedraw=TRUE);
@@ -1696,7 +1696,7 @@ virtual void SetValue(const _variant_t& varValue);
 
 顯示或隱藏屬性。
 
-```
+```cpp
 void Show(
     BOOL bShow=TRUE,
     BOOL bAdjustLayout=TRUE);

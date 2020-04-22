@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369011"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754749"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 類別
 
@@ -315,7 +315,7 @@ virtual void Create(
 
 調用此成員函數以建立資料庫中主表中的一個或多個字段與外表中的一個或多個字段(資料庫中的另一個表)之間的關係。
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 
 呼叫此成員函數從`CDaoDatabase`物件的 QueryDefs 集合中刪除指定的查詢def - 保存的查詢。
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 
 呼叫此成員函數從資料庫物件的"關係"集合中刪除現有關係。
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ void DeleteRelation(LPCTSTR lpszName);
 
 呼叫此成員函數從`CDaoDatabase`物件的 TableDefs 集合中刪除指定的表及其所有資料。
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ void DeleteTableDef(LPCTSTR lpszName);
 
 呼叫此成員函數以在資料庫上執行操作查詢或執行 SQL 語句。
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ short GetQueryDefCount();
 
 調用此成員函數以獲取有關資料庫中定義的查詢的各種資訊。
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ short GetRelationCount();
 
 呼叫此成員函數以獲取有關資料庫關係集合中指定關係的資訊。
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ short GetTableDefCount();
 
 調用此成員函數以獲取有關資料庫中定義的表的各種資訊。
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ virtual void Open(
 
 調用此成員函數以覆蓋預設秒數,以便在後續對連接的資料庫超時執行操作之前允許。
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 

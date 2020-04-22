@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367513"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752370"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 類別
 
@@ -129,7 +129,7 @@ hr = 塊。設置文件時間值(PKEY_ItemDate,英尺已修改);
 
 清除塊值。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -178,7 +178,7 @@ S_OK如果成功;否則是錯誤代碼。
 
 從其他值初始化此塊值。
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -327,7 +327,7 @@ HRESULT SetBoolValue(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -367,7 +367,7 @@ HRESULT SetChunk(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -411,7 +411,7 @@ HRESULT SetDwordValue(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -455,7 +455,7 @@ HRESULT SetFileTimeValue(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -499,7 +499,7 @@ HRESULT SetInt64Value(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -543,7 +543,7 @@ HRESULT SetIntValue(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -587,7 +587,7 @@ HRESULT SetLongValue(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -631,7 +631,7 @@ HRESULT SetSystemTimeValue(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>
@@ -675,7 +675,7 @@ HRESULT SetTextValue(
 *區塊類型*<br/>
 標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
-*現場*<br/>
+*locale*<br/>
 與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
 *cwcLen來源*<br/>

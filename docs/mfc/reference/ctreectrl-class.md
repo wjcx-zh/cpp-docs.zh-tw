@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373312"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752120"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 指定樹視圖控件的樣式。 應用[「創建視窗](/windows/win32/api/winuser/nf-winuser-createwindoww)」中描述的視窗樣式,以及 Windows SDK 中所述樹[檢視控制元件樣式](/windows/win32/Controls/tree-view-control-window-styles)的任何組合。
 
 *矩形*<br/>
-指定樹檢視控制的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+指定樹檢視控制的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *pparentwnd*<br/>
 指定樹狀圖控制的父視窗(通常為`CDialog`。 它不得為 NULL。
@@ -361,7 +361,7 @@ virtual BOOL CreateEx(
 指定樹視圖控件的樣式。 應用[「創建視窗](/windows/win32/api/winuser/nf-winuser-createwindoww)」中描述的視窗樣式,以及 Windows SDK 中所述樹[檢視控制元件樣式](/windows/win32/Controls/tree-view-control-window-styles)的任何組合。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[在]處理樹視圖控件項。|
 |*n部份*|[在]零件的標識碼。 必須設置為TVGIPR_BUTTON。|
-|*lpRect*|[出]指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。 如果此方法成功,則結構將接收*hItem*和*nPart*指定的零件的矩形座標。|
+|*lpRect*|[出]指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。 如果此方法成功,則結構將接收*hItem*和*nPart*指定的零件的矩形座標。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 樹視圖控件項的句柄。
 
 *lpRect*<br/>
-指向接收邊界矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。 坐標相對於樹視圖控件的左上角。
+指向接收邊界矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。 坐標相對於樹視圖控件的左上角。
 
 *只有文字*<br/>
 如果此參數是非零,則邊界矩形僅包括項的文本。 否則,它包括項在樹視圖控件中佔用的整行。
@@ -1833,7 +1833,7 @@ CImageList* SetImageList(
 
 調用此函數可設置樹視圖控制件的縮進寬度,並重繪控制項以反映新寬度。
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 在目前樹檢視控制項中顯示指定項的資訊提示。
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

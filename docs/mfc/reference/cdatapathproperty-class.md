@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: e96106dcd6f496c6cc99c9d72d86052547b6d06b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 479f5d47d9cff72d36dbd25e434182af1ba01ef4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376461"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754646"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 類別
 
@@ -193,7 +193,7 @@ virtual void ResetData();
 
 調用此成員函數將非同步 OLE 控制`CDataPathProperty`件與 物件關聯。
 
-```
+```cpp
 void SetControl(COleControl* pControl);
 ```
 
@@ -206,7 +206,7 @@ void SetControl(COleControl* pControl);
 
 調用此成員函數以設置屬性的路徑名稱。
 
-```
+```cpp
 void SetPath(LPCTSTR lpszPath);
 ```
 

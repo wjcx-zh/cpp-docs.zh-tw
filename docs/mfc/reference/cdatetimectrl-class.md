@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321906"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754619"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 關閉當前日期和時間選取器控制項。
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 指定日期時間控制樣式的組合。 關於日期與時間選取器樣式的詳細資訊,請參閱 Windows SDK 中的[日期與時間選取器控制項樣式](/windows/win32/Controls/date-and-time-picker-control-styles)。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,它是日期和時間選取器控制件的位置和大小。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,它是日期和時間選取器控制件的位置和大小。
 
 *pparentwnd*<br/>
 指向[CWnd](../../mfc/reference/cwnd-class.md)物件的指標,該物件是日期和時間選取器控制件的父視窗。 它不得為 NULL。
@@ -474,7 +474,7 @@ COLORREF 值,表示月份行事曆控制項指定部分的上一個顏色設置(
 
 設置日期和時間選取器控制件的子月日曆控制項將使用的字體。
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);

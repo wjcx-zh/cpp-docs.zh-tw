@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367518"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752384"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 類別
 
@@ -123,7 +123,7 @@ BOOL AddItem(
 
 將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ CSize GetMinSize();
 
 擷取視窗的目前用戶端區域的週框。
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ static MoveSettings MoveVertical(int nRatio);
 
 設定視窗大小下限，低於此值就不調整版面配置。
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 所需的大小下限，低於此值就不調整版面配置。
 
 ### <a name="remarks"></a>備註

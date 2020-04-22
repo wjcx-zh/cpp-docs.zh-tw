@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: 2f8ba8d0b35bd72efa8f8d63dbefd689e645d768
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d356ba6b6134221c2fc9595fc6d78f91961c5b7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374041"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753254"
 ---
 # <a name="cdocument-class"></a>CDocument 類別
 
@@ -260,7 +260,7 @@ class CDocument : public CCmdTarget
 
 調用此函數以將檢視附加到文檔。
 
-```
+```cpp
 void AddView(CView* pView);
 ```
 
@@ -372,10 +372,10 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>參數
 
-*Guid*<br/>
+*guid*<br/>
 指定要查找的塊的 GUID。
 
-*pid*<br/>
+*Pid*<br/>
 指定要尋找的塊的 PID。
 
 ### <a name="return-value"></a>傳回值
@@ -765,7 +765,7 @@ virtual void OnDrawThumbnail(
 
 通過駐留郵件主機(如果有)發送郵件,並將文檔作為附件。
 
-```
+```cpp
 void OnFileSendMail();
 ```
 
@@ -979,7 +979,7 @@ virtual void OnUnloadHandler();
 
 如果存在郵件支援 (MAPI),則啟用ID_FILE_SEND_MAIL命令。
 
-```
+```cpp
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
@@ -1082,7 +1082,7 @@ virtual void RemoveChunk(
 
 調用此函數以從文檔分離檢視。
 
-```
+```cpp
 void RemoveView(CView* pView);
 ```
 
@@ -1224,7 +1224,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 
 修改文件後調用此函數。
 
-```
+```cpp
 void UpdateAllViews(
     CView* pSender,
     LPARAM lHint = 0L,

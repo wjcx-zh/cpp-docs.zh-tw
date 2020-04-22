@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367437"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750629"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 類別
 
@@ -223,7 +223,7 @@ class CReBarCtrl : public CWnd
 
 實現 Win32 消息[RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag)的行為,如 Windows SDK 中所述。
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 指定應用於控制的鋼筋控件樣式的組合。 有關支援的樣式清單,請參閱 Windows SDK 中的[鋼筋控制樣式](/windows/win32/Controls/rebar-control-styles)。
 
 *矩形*<br/>
-對[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,即鋼筋控件的位置和大小。
+對[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,即鋼筋控件的位置和大小。
 
 *pparentwnd*<br/>
 指向[CWnd](../../mfc/reference/cwnd-class.md)物件的指標,該物件是鋼筋控件的父視窗。 它不得為 NULL。
@@ -303,7 +303,7 @@ virtual BOOL CreateEx(
 指定應用於控制的鋼筋控件樣式的組合。 有關支援的樣式清單,請參閱 Windows SDK 中的[鋼筋控制樣式](/windows/win32/Controls/rebar-control-styles)。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -356,7 +356,7 @@ BOOL DeleteBand(UINT uBand);
 
 實現 Win32 消息[的行為RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove),如 Windows SDK 中所述。
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 
 實現 Win32 消息[RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)的行為,如 Windows SDK 中所述。
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 實現 Win32 消息[RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders)的行為,如 Windows SDK 中所述。
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 將為其檢索邊框的帶的零基索引。
 
 *中國*<br/>
-指向將接收波段邊框的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。 如果鋼筋控件具有RBS_BANDBORDERS樣式,則此結構的每個成員將收到構成邊框的帶子側的像素數。 如果鋼筋控件沒有RBS_BANDBORDERS樣式,則只有此結構的左側成員才會接收有效資訊。 有關鋼筋控件樣式的說明,請參閱 Windows SDK 中的[鋼筋控制式樣式](/windows/win32/Controls/rebar-control-styles)。
+指向將接收波段邊框的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。 如果鋼筋控件具有RBS_BANDBORDERS樣式,則此結構的每個成員將收到構成邊框的帶子側的像素數。 如果鋼筋控件沒有RBS_BANDBORDERS樣式,則只有此結構的左側成員才會接收有效資訊。 有關鋼筋控件樣式的說明,請參閱 Windows SDK 中的[鋼筋控制式樣式](/windows/win32/Controls/rebar-control-styles)。
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount
 
@@ -429,7 +429,7 @@ BOOL GetBandInfo(
 
 檢索波段的邊距。
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 鋼筋控件中帶的零基索引。
 
 *中國*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,該結構將接收鋼筋帶的邊界。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,該結構將接收鋼筋帶的邊界。
 
 ### <a name="return-value"></a>傳回值
 
@@ -723,7 +723,7 @@ BOOL InsertBand(
 
 將鋼筋控件中的頻帶調整到其最大大小。
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ void MaximizeBand(UINT uBand);
 
 將鋼筋控件中的頻帶調整到其最小大小。
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ BOOL MoveBand(
 
 實現 Win32 消息[RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)的行為,如 Windows SDK 中所述。
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ void PushChevron(
 
 將鋼筋控件中的頻帶調整到其理想大小。
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 設置鋼筋控件上的按鈕的色彩配置。
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 將工具尖端控件與鋼筋控件關聯。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 

@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367371"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753459"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 顯示當前選項卡控制項的指定選項卡,並設置該選項卡上的焦點。
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 指定框架是否在選項卡控制項的使用者介面元素發生更改時調整所有選項卡控制項視窗的工作區大小。
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*風格*<br/>
+*style*<br/>
 [在]選項卡控件的樣式。 如需詳細資訊，請參閱＜備註＞。
 
 *矩形*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [在]選項卡控制項的識別碼。
 
-*位置*<br/>
+*location*<br/>
 [在]選項卡的位置。 默認值為LOCATION_BOTTOM。 如需詳細資訊，請參閱＜備註＞。
 
 *bCloseBtn*<br/>
@@ -381,7 +381,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 在作用選項卡上顯示或隱藏「 關閉」 按鈕 ( **X**)。
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 在使用兩個按鈕滾動視窗選項卡的用戶介面和顯示選項卡式窗口的彈出式功能表的界面之間切換。
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ CScrollBar* GetScrollBar();
 
 檢索選項卡控制項頂部或底部選項卡標籤區域的邊界矩形。
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 檢索當前選項卡控件的工作區的邊界。
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 在活動視窗中隱藏水準滾動條(如果有)。
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ void HideActiveWindowHorzScrollBar();
 
 指定框架是否顯示非活動選項卡控制項視窗。
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 如果沒有可見的選項卡,請啟用或禁用選項卡區域的繪圖。
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>參數
 
-*風格*<br/>
+*style*<br/>
 [在]指定選項卡控制式外觀的枚舉值之一。 有關詳細資訊,請參閱備註中的表。
 
 ### <a name="return-value"></a>傳回值
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 將選項卡控制項的當前選項卡集為多個文件介面選項卡組中的活動選項卡。
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ virtual BOOL SetActiveTab(int iTab);
 
 啟用或禁用在活動選項卡上使用粗體字型。
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 指定是否圍繞嵌入的條形繪製框架矩形。
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 指定在選項卡區域周圍繪製平面框架還是 3D 框架。
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 指定如何調整當前選項卡控制項的大小,然後重新顯示控制項。
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 指定選項卡式視窗中的最大選項卡寬度。
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 
 終止選項卡控制件上的當前調整大小操作。
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377157"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754676"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 類別
 
@@ -626,7 +626,7 @@ virtual void Edit();
 
 調用此成員函數以緩存記錄集中的指定數量的記錄。
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ short GetFieldCount();
 
 調用此成員函數以獲取有關記錄集中的欄位的資訊。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ short GetIndexCount();
 
 調用此成員函數以獲取有關在記錄集基礎基表中定義的索引的各種資訊。
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ virtual void Move(long lRows);
 
 調用此成員函數以使記錄集中的第一個記錄(如果有)成為當前記錄。
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ void MoveFirst();
 
 調用此成員函數,使記錄中的最後一條記錄(如果有)成為當前記錄。
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ void MoveLast();
 
 調用此成員函數以使記錄集中的下一條記錄成為當前記錄。
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ void MoveNext();
 
 調用此成員函數以使記錄中以前的記錄成為當前記錄。
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ BOOL Seek(
 
 設置記錄集物件當前記錄的相對記錄編號。
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ void SetAbsolutePosition(long lPosition);
 
 調用此成員函數將記錄集放置在包含指定書籤的記錄上。
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ void SetBookmark(COleVariant varBookmark);
 
 調用此成員函數以設置要快取的記錄數。
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ void SetCacheSize(long lSize);
 
 調用此成員函數以指定要緩存的記錄集中第一個記錄的書籤。
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Microsoft Jet 資料庫引擎從快取請求快取範圍內的記錄,並且請�
 
 調用此成員函數以在表類型記錄集上設置索引。
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 
 呼叫此成員函數將記錄集的欄位數據成員標記為已更改或未更改。
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ void SetFieldDirty(
 
 呼叫此成員函數將記錄集的欄位資料成員標記為 Null(具體沒有值)或非 Null。
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ void SetFieldValue(
 
 呼叫此成員函數將欄位設定為 Null 值。
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ C++ NULL 與 Null 不同,在資料庫術語中,Null 表示"沒有值"。
 
 調用此成員函數以設置記錄集的鎖定類型。
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 參數在查詢def的參數集合中的數值位置。
 
-*無 功*<br/>
+*var*<br/>
 要設置的值;請參閱備註。
 
 *lpsz名稱*<br/>
@@ -2458,7 +2458,7 @@ virtual void SetParamValue(
 
 呼叫此成員函數將參數設定為 Null 值。
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL 與 Null 不同,在資料庫術語中,Null 表示"沒有值"。
 
 調用此成員函數可設置一個值,該值根據記錄集中記錄中的記錄的百分比更改記錄集物件中當前記錄的大致位置。
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

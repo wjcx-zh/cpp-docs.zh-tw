@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376253"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753051"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 類別
 
@@ -271,7 +271,7 @@ UINT GetItemID(int nIndex) const;
 
 將*nIndex*指定的指標的座標複製到*lpRect*指向的結構中。
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 要檢索其矩形座標的指標的索引。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件,該物件將接收*nIndex*指定的指標的座標。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件,該物件將接收*nIndex*指定的指標的座標。
 
 ### <a name="remarks"></a>備註
 
@@ -293,7 +293,7 @@ void GetItemRect(
 
 將*nID* *、nStyle*和*cxWidth*設置到*nIndex*指定位置的指示器窗格的 ID、樣式和寬度。
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ BOOL SetIndicators(
 
 將指定的指示器窗格設置為新 ID、樣式和寬度。
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ void SetPaneInfo(
 
 調用此成員函數以設置狀態列窗格的樣式。
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370088"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754572"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 類別
 
@@ -207,7 +207,7 @@ CMDIFrameWnd* GetMDIFrame();
 
 調用此成員函數以獨立於 MDI 框架視窗啟動 MDI 子視窗。
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ void MDIActivate();
 
 調用此成員函數以銷毀 MDI 子視窗。
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ void MDIDestroy();
 
 調用此成員函數以最大化 MDI 子視窗。
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ void MDIMaximize();
 
 調用此成員函數以從最大大小或最小化大小還原 MDI 子視窗。
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 設置功能表和快捷鍵資源的句柄。
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);

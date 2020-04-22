@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 84f17896cc3c4f5cd6099a9ccf7e4e000f43b1f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3ea6ce13b8cca7e0130fe14459a832b476391b0c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369915"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751680"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 類別
 
@@ -122,7 +122,7 @@ class CMFCAutoHideButton : public CObject
 
 ## <a name="cmfcautohidebuttonbringtotop"></a><a name="bringtotop"></a>CMFC自動隱藏按鈕::帶上頂部
 
-```
+```cpp
 void BringToTop();
 ```
 
@@ -379,7 +379,7 @@ virtual void OnFillBackground(
 
 顯示或隱藏關聯的[可載窗格類別](../../mfc/reference/cdockablepane-class.md)。
 
-```
+```cpp
 void ShowAttachedWindow(BOOL bShow);
 ```
 
@@ -403,7 +403,7 @@ virtual void ShowButton(BOOL bShow);
 
 ## <a name="cmfcautohidebuttonmove"></a><a name="move"></a>CMFC 自動隱藏按鈕:移動
 
-```
+```cpp
 void Move(int nOffset);
 ```
 
@@ -415,7 +415,7 @@ void Move(int nOffset);
 
 ## <a name="cmfcautohidebuttonreplacepane"></a><a name="replacepane"></a>CMFC 自動隱藏按鈕::取代窗格
 
-```
+```cpp
 void ReplacePane(CDockablePane* pNewBar);
 ```
 

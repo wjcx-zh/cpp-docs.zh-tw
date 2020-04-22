@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365109"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752193"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ class CToolTipCtrl : public CWnd
 
 調用此函數以啟動或停用工具尖端控制項。
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ BOOL AddTool(
 包含工具文字的字串資源的識別碼。
 
 *lpRectTool*<br/>
-指向包含工具邊界矩形座標的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。 座標相對於*pWnd*標識的視窗的工作區的左上角。
+指向包含工具邊界矩形座標的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。 座標相對於*pWnd*標識的視窗的工作區的左上角。
 
 *nIDTool*<br/>
 工具的識別碼。
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>參數
 
 *利赫浦*<br/>
-指向保存工具提示視窗矩形或文本顯示矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。
+指向保存工具提示視窗矩形或文本顯示矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。
 
 *b 更大*<br/>
 如果為 TRUE,*則 lprc*用於指定文本顯示矩形,並接收相應的視窗矩形。 如果 FALSE,*則 lprc*用於指定視窗矩形,並且它接收相應的文本顯示矩形。
@@ -352,7 +352,7 @@ CToolTipCtrl();
 
 從工具尖端控制項支援的工具集合中刪除*pWnd*和*nIDTool*指定的工具。
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ int GetDelayTime(DWORD dwDuration) const;
 
 檢索為工具提示視窗設置的上邊、左、下和右邊距。
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>參數
 
 *利赫浦*<br/>
-將接收保證金`RECT`信息的結構的位址。 [RECT](/previous-versions/dd162897\(v=vs.85\))結構的成員不定義邊界矩形。 對於此消息,結構成員的解釋如下:
+將接收保證金`RECT`信息的結構的位址。 [RECT](/windows/win32/api/windef/ns-windef-rect)結構的成員不定義邊界矩形。 對於此消息,結構成員的解釋如下:
 
 |member|表示法|
 |------------|--------------------|
@@ -486,7 +486,7 @@ int GetMaxTipWidth() const;
 
 檢索工具尖端控制項為工具維護的文本。
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ COLORREF GetTipTextColor() const;
 
 檢索目前工具提示控件的標題。
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 從檢視中刪除顯示的工具提示視窗。
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ void Pop();
 
 使目前工具提示控制項顯示在最後一個滑鼠訊息的座標處。
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ void Popup();
 
 將滑鼠訊息傳遞到工具提示控制項進行處理。
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ void RelayEvent(LPMSG lpMsg);
 
 設置工具尖端控制的延遲時間。
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ void SetDelayTime(
 
 設置工具尖端視窗的上邊、左邊、下和右邊距。
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ int SetMaxTipWidth(int iWidth);
 
 在工具提示視窗中設定背景顏色。
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ void SetTipBkColor(COLORREF clr);
 
 在工具提示視窗中設定文字顏色。
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ BOOL SetTitle(
 
 設置工具提示為工具維護的資訊。
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 
 為工具設置新的邊界矩形。
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ void SetToolRect(
 工具的識別碼。
 
 *lpRect*<br/>
-指向指定新邊界矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。
+指向指定新邊界矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipctrl::設定視窗主題
 
@@ -894,7 +894,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 強制重繪當前工具。
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 更新此控制項工具的工具提示文字。
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

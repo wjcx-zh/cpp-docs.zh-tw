@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367640"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752454"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 設置新的動畫速度。
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,13 +408,13 @@ void SetAnimationSpeed(UINT nSpeed);
 
 設置動畫類型。
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*type*<br/>
 [在]指定動畫類型。
 
 ### <a name="remarks"></a>備註
@@ -435,7 +435,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 設置自動關閉超時。
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ void SetAutoCloseTime(int nTime);
 
 在小尺寸和常規大小字幕之間切換。
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 
 設置彈出視窗的透明度級別。
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 

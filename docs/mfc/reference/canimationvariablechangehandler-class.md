@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2dc8f2c03f9df34012fb9db1ed5e5b0bb448b17f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377090"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755036"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 類別
 
@@ -76,7 +76,7 @@ IFACEMETHOD(OnValueChanged) (
 *文稿*<br/>
 為變數設置動畫的情節提要。
 
-*變動*<br/>
+*變數*<br/>
 已更新的動畫變數。
 
 *newValue*<br/>
@@ -93,7 +93,7 @@ IFACEMETHOD(OnValueChanged) (
 
 存儲指向動畫控制器的指標以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 

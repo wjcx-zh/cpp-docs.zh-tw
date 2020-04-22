@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376122"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753783"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 類別
 
@@ -192,7 +192,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 啟動關聯的文件對象文件。
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ COleServerItem* GetEmbeddedItem();
 
 呼叫`GetItemClipRect`成員函數,獲取正在編輯的項目的裁剪矩形座標。
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 
 呼叫`GetItemPosition`成員函數,獲取正在編輯的項目的座標。
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ BOOL IsInPlaceActive() const;
 
 呼叫此函數以通知連接到文檔的所有連結項的文檔已更改。
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ void NotifyChanged();
 
 呼叫此函數以通知容器文件已關閉。
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ void NotifyClosed();
 
 在使用者重新命名伺服器文件後呼叫此功能。
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 
 在使用者保存伺服器文件後調用此功能。
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ virtual BOOL OnUpdateDocument();
 
 呼叫此成員函數,讓容器應用程式更改專案的位置。
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 
 呼叫此函數以告訴容器應用程式保存嵌入的物件。
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 
 呼叫此函數以通知連接到文檔的所有連結項的文檔已更改。
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,

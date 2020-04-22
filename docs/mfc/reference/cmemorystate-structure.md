@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369993"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752609"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 
@@ -79,7 +79,7 @@ struct CMemoryState
 
 獲取記憶體的快照摘要並將其存儲在此`CMemoryState`物件中。
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ BOOL Difference(
 
 調用自`Dump`上次[檢查點](#checkpoint)`CMemoryState`調用此`CObject`對象以來從類 派生(並且仍已分配)的類型的所有物件的函數。
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ void DumpAllObjectsSince() const;
 
 從由`CMemoryState`[差異](#difference)成員函數填充的物件列印簡明的記憶體統計資訊報表。
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 

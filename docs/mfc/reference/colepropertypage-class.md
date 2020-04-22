@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374885"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753799"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 類別
 
@@ -187,7 +187,7 @@ LPPROPERTYPAGESITE GetPageSite();
 
 確定哪些控制項不啟用"應用程式"按鈕。
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
@@ -326,7 +326,7 @@ BOOL SetControlStatus(
 
 設置屬性頁的對話方塊資源。
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
@@ -339,7 +339,7 @@ void SetDialogResource(HGLOBAL hDialog);
 
 指定工具提示資訊、幫助檔名和屬性頁的説明上下文。
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -361,7 +361,7 @@ void SetHelpInfo(
 
 指示使用者是否已修改屬性頁。
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -374,7 +374,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 設置屬性頁的名稱,屬性框架通常會顯示在頁面的選項卡上。
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370039"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754533"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 
@@ -296,7 +296,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 重新計算活動項的佈局。
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 
 將指定的窗格停靠到框架視窗。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 在全螢幕模式下顯示或隱藏主菜單。
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 為框架視窗啟用全屏模式。
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 啟用或禁用停靠狀態的載入。
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 啟用或關閉框架視窗的 MDI 選項卡式群組功能。
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ void EnableMDITabbedGroups(
 
 啟用或關閉 MDI 框架視窗的 MDI 選項卡功能。 啟用後,框架視窗將顯示每個 MDI 子視窗的選項卡。
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *bTab 關閉按鈕*<br/>
 指定是否顯示選項卡關閉按鈕。
 
-*風格*<br/>
+*style*<br/>
 指定選項卡的樣式。 對常規選項卡或 STYLE_3D_ONENOTE對 Microsoft OneNote 選項卡使用STYLE_3D_SCROLLED。
 
 *bTab 自訂工具提示*<br/>
@@ -746,7 +746,7 @@ void EnableMDITabs(
 
 指定在使用者關閉當前選項卡時是否應打開最後一個活動選項卡。
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 啟用或禁用自動建立和管理彈出式窗格功能表,該功能表顯示應用程式窗格的清單。
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ void EnablePaneMenu(
 
 插入其命令 ID 調用[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)對話方塊的選單項。
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 將活動選項卡從當前活動的選項卡式窗口移動到下一個或上一個選項卡式選項卡組。
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 建立具有單個視窗的新選項卡式組。
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 取消註冊窗格並從停靠管理器中刪除它。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 設置列印預覽框架視窗。
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 通過將虛擬項目替換為使用者定義的項來修改工具列物件。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 將主幀從常規模式切換到全屏模式。
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 顯示或隱藏指定的窗格。
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ void ShowPane(
 
 創建一個[CMFCWindowsManager對話框](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)並打開它。
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 由框架調用以更新視窗框架標題。
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 設置每個 MDI 選項卡式窗格的圖示。
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374917"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753827"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 類別
 
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 啟用並禁用忙對話框,該對話框在消息掛起的延遲過期時顯示(請參閱 OLE 調用期間的[SetRetryReply)。](#setretryreply)
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 
 啟用並禁用"未回應"對話框,如果 OLE 呼叫期間鍵盤或滑鼠訊息掛起且呼叫超時,則會顯示該對話方塊。
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ BOOL Register();
 
 復原以前由呼叫[註冊執行的註冊](#register)。
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ void Revoke();
 
 此函數設置應用程式的"忙答覆"。
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
 
 確定調用應用程式等待來自被調用應用程式的回應的時間,然後再執行進一步操作。
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 確定調用應用程式在收到來自被調用應用程式的繁忙回應時的操作。
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 

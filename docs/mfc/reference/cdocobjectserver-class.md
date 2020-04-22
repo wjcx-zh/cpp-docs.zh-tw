@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: ccd8ddc9f4981b3d9f7f4e1decdf6790cd05b98b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f415df35b13e50eee092f87eca0627e5cf143720
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375485"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753290"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 類別
 
@@ -81,7 +81,7 @@ DocObject 伺服器文件可以包含[CDocObjectServerItem 物件](../../mfc/ref
 
 呼叫此函數以啟動(但不顯示)文件物件伺服器。
 
-```
+```cpp
 void ActivateDocObject();
 ```
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366136"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753917"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 類別
 
@@ -92,7 +92,7 @@ class COleDataObject
 
 調用此函數將`COleDataObject`物件與 OLE 數據物件相關聯。
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ BOOL AttachClipboard();
 
 呼叫此函數以準備後續呼叫,`GetNextFormat`以便從項目索資料格式的清單。
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 要檢查給定格式的可用性,請致電[COleDataObject::IsData 可用](#isdataavailable)。
 
-有關詳細資訊,請參閱[IEnumXXXX::下一個](/previous-versions//ms695273\(v=vs.85\))在 Windows SDK 中。
+有關詳細資訊,請參閱[IEnumXXXX::下一個](/previous-versions/ms695273\(v=vs.85\))在 Windows SDK 中。
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleData物件:資料可用
 
@@ -328,7 +328,7 @@ BOOL IsDataAvailable(
 
 呼叫此函數以釋放以前與`COleDataObject`該物件關聯的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)物件的擁有權。
 
-```
+```cpp
 void Release();
 ```
 

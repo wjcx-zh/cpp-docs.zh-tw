@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 4749b043271518a40024d1da4f97b593ad882a78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74f161d68c3c58574d75ab64a1360fc7f571920d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375378"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751938"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 
@@ -375,7 +375,7 @@ MENUAREA_TYPE參數可以具有以下任意值之一。
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFC彈出選單::關閉選單
 
-```
+```cpp
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *pwnd 父級*<br/>
 [在]的`CMFCPopupMenu`父視窗。
 
-*X.*<br/>
+*x*<br/>
 [在]彈出選單位置的水平螢幕座標
 
 *Y*<br/>
@@ -488,7 +488,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 初始化彈出功能表的徽標。
 
-```
+```cpp
 void EnableMenuLogo(
     int iLogoSize,
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
@@ -527,7 +527,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ## <a name="cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFC彈出選單::啟用調整
 
-```
+```cpp
 void EnableResize(CSize sizeMinResize);
 ```
 
@@ -539,7 +539,7 @@ void EnableResize(CSize sizeMinResize);
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFC彈出選單::啟用滾動
 
-```
+```cpp
 void EnableScrolling(BOOL = TRUE);
 ```
 
@@ -551,7 +551,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFC彈出選單::啟用反轉調整
 
-```
+```cpp
 void EnableVertResize(int nMinResize);
 ```
 
@@ -1089,7 +1089,7 @@ BOOL IsShown() const;
 
 ## <a name="cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopup功能表::移動到
 
-```
+```cpp
 void MoveTo(const CPoint& pt);
 ```
 
@@ -1188,7 +1188,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 清除彈出功能表中的所有專案。
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1250,7 +1250,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*type*<br/>
 [在]指定動畫類型的枚舉數據類型。
 
 ### <a name="remarks"></a>備註
@@ -1259,7 +1259,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFC彈出選單::設定自動銷毀
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -1273,7 +1273,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 設置彈出式功能表的預設命令。
 
-```
+```cpp
 void SetDefaultItem(UINT uiCmd);
 ```
 
@@ -1324,7 +1324,7 @@ static void SetForceShadow(BOOL bValue);
 
 設置彈出式功能表的最大寬度。
 
-```
+```cpp
 void SetMaxWidth(int iMaxWidth);
 ```
 
@@ -1339,7 +1339,7 @@ void SetMaxWidth(int iMaxWidth);
 
 ## <a name="cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopup功能表::設定消息
 
-```
+```cpp
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
@@ -1351,7 +1351,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopup功能表::設定父功能區元素
 
-```
+```cpp
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -1363,7 +1363,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFC彈出選單::設定快速自定義類型
 
-```
+```cpp
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
@@ -1375,7 +1375,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFC彈出選單::設定快速模式
 
-```
+```cpp
 void SetQuickMode();
 ```
 
@@ -1385,7 +1385,7 @@ void SetQuickMode();
 
 設置彈出式功能表的功能表對齊方式。
 
-```
+```cpp
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
@@ -1419,7 +1419,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 
 強制彈出功能表顯示所有命令。
 
-```
+```cpp
 void ShowAllCommands();
 ```
 
@@ -1429,7 +1429,7 @@ void ShowAllCommands();
 
 ## <a name="cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFC彈出功能表::觸發調整
 
-```
+```cpp
 void TriggerResize();
 ```
 
@@ -1456,7 +1456,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 
 更新彈出式功能表的影子。
 
-```
+```cpp
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 

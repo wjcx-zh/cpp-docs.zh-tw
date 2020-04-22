@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a3288949bd4867115c32d2cbffd09cf4f7c6b40b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367801"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754883"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 類別
 
@@ -101,7 +101,7 @@ class CMFCBaseVisualManager: public CObject
 
 調用`CloseThemeData`在`UpdateSystemColors`中 獲取的所有句柄。
 
-```
+```cpp
 void CleanUpThemes();
 ```
 
@@ -400,7 +400,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 呼叫`OpenThemeData`以取得用於繪製各種控制的句柄:視窗、工具列、按鈕等。
 
-```
+```cpp
 void UpdateSystemColors();
 ```
 

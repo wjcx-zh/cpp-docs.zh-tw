@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375652"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753359"
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 
@@ -295,7 +295,7 @@ virtual INT_PTR DoModal();
 
 調用此成員函數以終止模式對話方塊。
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ DWORD GetDefID() const;
 
 將焦點移動到對話方塊中的指定控制項。
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ BOOL InitModalIndirect(
 
 調用以將矩形的對話框單位轉換為屏幕單位。
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ Windows`GetDialogBaseUnits`函數傳回系統字型的大小資訊,但如果在�
 
 將焦點移到對話方塊中的下一個控制項。
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ Virtual void OnSetFont(CFont* pFont);
 
 將焦點設置到對話框中以前的控制項。
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ void PrevDlgCtrl() const;
 
 更改對話框的預設按鈕控制項。
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ void SetDefID(UINT nID);
 
 為對話框設置上下文相關的幫助 ID。
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363940"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750967"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 
@@ -165,7 +165,7 @@ class CPropertySheet : public CWnd
 
 在屬性表中添加提供的最右側選項卡的頁面。
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ void AddPage(CPropertyPage* pPage);
 
 建構 `CPropertySheet` 物件。
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ IDOK 或 IDCANCEL(如果函數成功);否則為 0 或 -1。 如果屬性表已�
 
 指示是否將選項卡行堆疊在屬性工作表中。
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 終止屬性表。
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ CTabCtrl* GetTabControl() const;
 
 將矩形的對話框單位轉換為屏幕單位。
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向包含要轉換的對話方塊座標的[RECT](/previous-versions/dd162897\(v=vs.85\))結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
+指向包含要轉換的對話方塊座標的[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -641,7 +641,7 @@ virtual BOOL OnInitDialog();
 
 類比屬性表中指定按鈕的選擇。
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ nButton :標識要按下的按鈕。 這裡可以是以下值之一:
 
 從屬性工作表中刪除頁面並銷毀關聯的視窗。
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 在"完成"指令按鈕中設置文本。
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 指定屬性表的標題(框架視窗的標題列中顯示的文字)。
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ void SetTitle(
 
 啟用或禁用嚮導屬性表中的"後退"、"下一步"或"完成"按鈕。
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ A`CPropertySheet`有三個精靈屬性`CStylePage``CColorPage`頁`CShapePage`: �
 
 將屬性頁建立為嚮導。
 
-```
+```cpp
 void SetWizardMode();
 ```
 

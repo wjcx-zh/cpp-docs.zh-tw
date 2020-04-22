@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366827"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750680"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -377,7 +377,7 @@ class CWinApp : public CWinThread
 
 呼叫此成員函數將文件範本添加到應用程式維護的可用文件範本清單中。
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 在退出之前調用此成員函數關閉所有打開的文檔。
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ D2D 工廠的線程模型及其創建的資源。
 
 從`CWinApp`派生類的建構函數中呼叫此成員函數,以便使用 HTMLHelp 來幫助應用程式。
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 呼叫此函數(通常從`InitInstance`重寫)以使應用程式的使用者在從 Windows 檔管理器中雙擊檔時打開數據檔。
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ HKEY GetSectionKey(
 
 在關閉打開的文檔之前調用此成員函數以隱藏應用程式。
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 從[InitA 成員](#initinstance)函數中呼叫此成員函數,以啟用和載入最近使用 (MRU) 檔和上次預覽狀態的清單。
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ virtual CDocument* OpenDocumentFile(
 
 呼叫此成員函數來分析命令列,並將參數(一次一個)傳送到[CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)。
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>參數
 
-*代碼*<br/>
+*code*<br/>
 指定挂鉤代碼。 此成員函數使用代碼來確定如何處理*lpMsg。*
 
 *lpMsg*<br/>
@@ -1920,7 +1920,7 @@ virtual BOOL Register();
 
 呼叫此成員函數向 Windows 檔案管理員註冊應用程式的所有文件類型。
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ virtual BOOL SaveAllModified();
 
 調用此成員功能以選擇特定印表機,並釋放以前在「列印對話框」中選擇的印表機。
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ void SelectPrinter(
 
 設置應用程式的幫助類型。
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 導致應用程式設定存儲在註冊表中,而不是 INI 檔中。
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ virtual BOOL Unregister();
 
 呼叫此成員函數,以在 Windows 檔管理員中取消註冊應用程式的所有文件類型。
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ BOOL WriteProfileString(
 
 顯式設置應用程式的應用程式使用者模型 ID。 在向使用者顯示任何使用者介面之前,應調用此方法(最佳位置是應用程式構造函數)。
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 

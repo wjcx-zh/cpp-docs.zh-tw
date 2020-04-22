@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374022"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753233"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |參數|描述|
-|*大小*|[在]指示點陣圖大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)參數。|
+|*size*|[在]指示點陣圖大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)參數。|
 |*pBits*|[出]指向接收 DIB 位值位置的數據指標的指標。|
 |*點陣圖*|原始點陣圖的句柄|
 |*clr透明*|指定原始點陣圖的透明顏色的 RGB 值。|
@@ -174,7 +174,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 顯示具有透明或半透明圖元的位圖。
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ void DrawAlpha(
 
 使用提供的填充和邊框顏色繪製橢圓。
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ BOOL DrawGradientRing(
 
 畫一條線。
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ void DrawLineA(
 
 使用提供的填充和邊框顏色繪製矩形。
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ BOOL DrawShadow(
 
 用兩個顏色漸變填充矩形區域。
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ void Fill4ColorsGradient(
 
 使用指定的顏色漸變填充矩形區域。
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ void FillGradient(
 
 使用指定的顏色漸變填充矩形區域。
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -737,7 +737,7 @@ static BYTE __stdcall HueToRGB(
 
 翻轉矩形區域。
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -924,7 +924,7 @@ static void __stdcall SetAlphaPixel(
 *矩形*<br/>
 [在]應用程式中的矩形區域。 繪圖管理器在此區域的下方和右側繪製陰影。
 
-*X.*<br/>
+*x*<br/>
 [在]像素到顏色的水平座標。
 
 *Y*<br/>
@@ -970,7 +970,7 @@ static void __stdcall SetPixel(
 |*pBits*|[在]指向位圖的位值的指標。|
 |*殘雪*|[在]位圖的總寬度。|
 |*cy*|[在]位圖的總高度。|
-|*X.*|[在]要更改的點陣圖中像素的 x 座標。|
+|*x*|[在]要更改的點陣圖中像素的 x 座標。|
 |*Y*|[在]要更改的點陣圖中畫素的 y 座標。|
 |*顏色*|[在]由提供的座標標識的圖元的新顏色。|
 
@@ -1012,7 +1012,7 @@ static COLORREF __stdcall SmartMixColors(
 
 將給定矩形內的源 DC 內容旋轉 90 度。
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

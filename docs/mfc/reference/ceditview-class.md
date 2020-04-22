@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373974"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753193"
 ---
 # <a name="ceditview-class"></a>CEditView 類別
 
@@ -259,7 +259,7 @@ CFont* GetPrinterFont() const;
 
 呼叫`GetSelectedText`以將選取的文字複製`CString`到物件中,最多到所選內容的末尾或所選內容中第一個回車字元前面的字元。
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ UINT PrintInsideRect(
 
 呼叫`SerializeRaw`以`CArchive`讓 物件讀取或寫入`CEditView`物件中的文字到文字檔。
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ void SerializeRaw(CArchive& ar);
 
 呼叫`SetPrinterFont`以將印表機字型設定為*pFont*指定的字型。
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ void SetPrinterFont(CFont* pFont);
 
 呼叫此函數以設置用於顯示和列印的制表位。
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ void SetTabStops(int nTabStops);
 
 調用此成員函數以解鎖緩衝區。
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

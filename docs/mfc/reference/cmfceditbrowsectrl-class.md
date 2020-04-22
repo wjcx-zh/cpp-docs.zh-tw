@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367540"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752375"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 類別
 
@@ -133,7 +133,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 顯示或不在當前編輯流覽控制件上顯示流覽按鈕。
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ TRUE 顯示瀏覽按鈕;FALSE 不顯示瀏覽按鈕。 預設值為 TRUE。
 
 在當前編輯流覽控制件上顯示流覽按鈕,並將控制項置於*檔案流覽*模式。
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ void EnableFileBrowseButton(
 
 在當前編輯流覽控制件上顯示流覽按鈕,並將該控制件置於*資料夾流覽*模式。
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ virtual void OnDrawBrowseButton(
 
 在編輯流覽控制件的流覽按鈕上設置自定義圖像。
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);

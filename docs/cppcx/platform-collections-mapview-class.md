@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354432"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750608"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 類別
 
@@ -108,7 +108,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來尋找 MapView 項目的機碼。 *鍵*的類型是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -127,7 +127,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來在 MapView 中尋找元素的機碼。 的類型`key`是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -197,7 +197,7 @@ virtual property unsigned int Size;
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,

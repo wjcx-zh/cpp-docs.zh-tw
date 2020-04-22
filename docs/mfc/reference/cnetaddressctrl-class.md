@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f391966ef6657363e8f23e5666a57a935b08e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363292"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752782"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |參數|描述|
 |---------------|-----------------|
 |*dwStyle*|[在]要應用於控制的樣式的位組合。 有關詳細資訊,請參閱[編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|
-|*矩形*|[在]對包含控制項位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用。|
+|*矩形*|[在]對包含控制項位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用。|
 |*pparentwnd*|[在]指向作為控制項的父視窗的[CWnd](../../mfc/reference/cwnd-class.md)物件的非空指標。|
 |*nID*|[在]控件的識別碼。|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[在]要應用於控制項的擴展樣式的位組合 (OR)。 有關詳細資訊,請參閱[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函數的*dwExStyle*參數。|
 |*dwStyle*|[在]要應用於控制的樣式的位組合 (OR)。 有關詳細資訊,請參閱[編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|
-|*矩形*|[在]對包含控制項位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用。|
+|*矩形*|[在]對包含控制項位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用。|
 |*pparentwnd*|[在]指向作為控制項的父視窗的[CWnd](../../mfc/reference/cwnd-class.md)物件的非空指標。|
 |*nID*|[在]控件的識別碼。|
 

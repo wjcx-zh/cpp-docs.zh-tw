@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 8ca8d3b2cb4ce3c5b070d883e0a418ebec3665b1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0e80e80d61104a4d8cb5f1cfd4e26a64c42249
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352375"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752739"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 類別
 
@@ -209,7 +209,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 呼叫此函數以啟用或禁用檢查表框項。
 
-```
+```cpp
 void Enable(
     int nIndex,
     BOOL bEnabled = TRUE);
@@ -326,7 +326,7 @@ virtual CRect OnGetCheckPosition(
 
 設置指定複選框的狀態。
 
-```
+```cpp
 void SetCheck(
     int nIndex,
     int nCheck);
@@ -354,7 +354,7 @@ void SetCheck(
 
 調用此函數以在檢查表框中設置複選框的樣式。
 
-```
+```cpp
 void SetCheckStyle(UINT nStyle);
 ```
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372988"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751146"
 ---
 # <a name="property-pages-mfc"></a>屬性頁 (MFC)
 
@@ -49,7 +49,7 @@ ms.locfileid: "81372988"
 
 呼叫您屬性頁的 `DoDataExchange` 函式中的這個函式，來同步處理整數屬性的值與在屬性頁中下拉式方塊裡目前選取範圍的索引。
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ void AFXAPI DDP_CBIndex(
 
 在屬性頁的`DoDataExchange`函數中調用此函數,以將字串屬性的值與屬性頁上的組合框中的當前選擇同步。
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ void AFXAPI DDP_CBString(
 
 在屬性頁的`DoDataExchange`函數中調用此函數以同步與屬性頁上組合框中的當前選擇完全匹配的字串屬性的值。
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ void AFXAPI DDP_CBStringExact(
 
 在屬性頁的`DoDataExchange`函數中調用此函數,以將屬性的值與關聯的屬性頁複選框控制元件同步。
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ void AFXAPI DDP_Check(
 
 在屬性頁的`DoDataExchange`函數中調用此函數,以在屬性頁上的清單框中將整數屬性的值與當前選擇的索引同步。
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ void AFXAPI DDP_LBIndex(
 
 在屬性頁的`DoDataExchange`函數中調用此函數,以將字串屬性的值與屬性頁上的清單框中的當前選擇同步。
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ void AFXAPI DDP_LBString(
 
 在屬性頁的`DoDataExchange`函數中調用此函數以同步與屬性頁上列表框中的當前選擇完全匹配的字串屬性的值。
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ void AFXAPI DDP_LBStringExact(
 
 在屬性頁的`DoDataExchange`函數中調用此函數,以在保存屬性值時完成屬性值從屬性頁傳輸到控制項。
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 在控制項的`DoPropExchange`函數中調用此函數,以將屬性的值與關聯的屬性頁單選按鈕控制元件同步。
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ void AFXAPI DDP_Radio(
 
 在控制項的`DoDataExchange`函數中調用此函數以將屬性的值與關聯的屬性頁控制元件同步。
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,
@@ -429,7 +429,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 *class_name*<br/>
 為其指定屬性頁的屬性類的名稱。
 
-*count*<br/>
+*計數*<br/>
 控制項類使用的屬性頁數。
 
 ### <a name="remarks"></a>備註

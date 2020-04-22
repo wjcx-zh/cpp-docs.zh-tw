@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352973"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753007"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 類別
 
@@ -151,7 +151,7 @@ virtual void DockPane(
 
 在螢幕座標中檢索停靠網站的大小。
 
-```
+```cpp
 void GetAlignRect(CRect& rect) const;
 ```
 
@@ -182,7 +182,7 @@ static int m_nExtraSpace;
 
 設置停靠欄左側的邊距。
 
-```
+```cpp
 void SetOffsetLeft(int nOffset);
 ```
 
@@ -199,7 +199,7 @@ void SetOffsetLeft(int nOffset);
 
 設置停靠欄右側的邊距。
 
-```
+```cpp
 void SetOffsetRight(int nOffset);
 ```
 
@@ -235,7 +235,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 呼叫[CMFCAutoHideBar::取消設定停靠網站上的物件的自動隱藏模式](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode)。
 
-```
+```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 ```
 

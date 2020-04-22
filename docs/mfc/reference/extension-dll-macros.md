@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365696"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751594"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>管理 DLL 的巨集和函式
 
@@ -91,7 +91,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ MFC OLE DLL 是 MFC 擴展 DLL;為了使 MFC 擴展 DLL 連接到`CDynLinkLibrar
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -244,7 +244,7 @@ MFC 延伸 DLL`DllMain`需要在其 功能中執行兩項操作:
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,7 +279,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 

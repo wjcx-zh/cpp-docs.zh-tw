@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 247072d815b660fcd2cc6c2a1291b618aa6ce2ab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373910"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753146"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
@@ -409,7 +409,7 @@ HRESULT AddMenu(
 
 將資料夾添加到可供使用者打開或儲存專案的地方清單中。
 
-```
+```cpp
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
@@ -506,13 +506,13 @@ HRESULT AddText(
 
 根據`m_ofn`儲存在資料結構中的值更新[CFileDialog](../../mfc/reference/cfiledialog-class.md)的當前狀態。
 
-```
+```cpp
 void ApplyOFNToShellDialog();
 ```
 
 ### <a name="remarks"></a>備註
 
-在 Windows Vista 之前的 Windows 版本中,成員[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))數據結構與`CFileDialog`的狀態持續同步。 [對m_ofn](#m_ofn)成員變數的任何更改將立即反映在對話框的狀態中。 此外,對對話框狀態的任何更改都立即更新`m_ofn`成員變數。
+在 Windows Vista 之前的 Windows 版本中,成員[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)數據結構與`CFileDialog`的狀態持續同步。 [對m_ofn](#m_ofn)成員變數的任何更改將立即反映在對話框的狀態中。 此外,對對話框狀態的任何更改都立即更新`m_ofn`成員變數。
 
 在 Windows Vista 或更高`m_ofn`版本中, 成員變數`CFileDialog`中的值和 的狀態不保證同步。 此函數強制更新`CFileDialog`的狀態`m_ofn`以匹配 結構。 Windows 在[CFileDialog::Do 模式](#domodal)化 期間自動調用此功能。
 
@@ -1029,7 +1029,7 @@ POSITION GetStartPosition() const;
 
 呼叫此成員函數以在資源管理器樣式的"打開"或"保存為常見"對話框中隱藏指定的控制項。
 
-```
+```cpp
 void HideControl(int nID);
 ```
 
@@ -1465,7 +1465,7 @@ HRESULT SetControlState(
 
 呼叫此方法以在資源管理器樣式**的「打開**」或「**另存為」** 對話框中設定指定控制項的文字。
 
-```
+```cpp
 void SetControlText(
     int nID,
     LPCSTR lpsz);
@@ -1493,7 +1493,7 @@ void SetControlText(
 
 呼叫此函數可為資源管理器樣式的"打開"或"保存為常見"對話框設置預設檔名副檔名。
 
-```
+```cpp
 void SetDefExt(LPCSTR lpsz);
 ```
 
@@ -1565,7 +1565,7 @@ HRESULT SetSelectedControlItem(
 
 設置[CFileDialog](../../mfc/reference/cfiledialog-class.md)物件的對話方塊樣本。
 
-```
+```cpp
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
@@ -1620,13 +1620,13 @@ HRESULT StartVisualGroup(
 
 根據內部`m_ofn`物件的當前狀態更新[CFileDialog](../../mfc/reference/cfiledialog-class.md)的數據結構。
 
-```
+```cpp
 void UpdateOFNFromShellDialog();
 ```
 
 ### <a name="remarks"></a>備註
 
-在 Windows Vista 之前的 Windows 版本中,成員[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))數據結構與`CFileDialog`的狀態持續同步。 對[m_ofn](#m_ofn)成員變數的任何更改都直接影響對話框的狀態。 此外,對對話框狀態的任何更改都立即更新了m_ofn成員變數。
+在 Windows Vista 之前的 Windows 版本中,成員[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)數據結構與`CFileDialog`的狀態持續同步。 對[m_ofn](#m_ofn)成員變數的任何更改都直接影響對話框的狀態。 此外,對對話框狀態的任何更改都立即更新了m_ofn成員變數。
 
 在 Windows Vista 或`m_ofn`更高版本中,數據結構不會自動更新。 為了保證`m_ofn`成員變數中數據的準確性,應在訪問數據之前調用`UpdateOFNFromShellDialog`該函數。 Windows 在處理[IFileDialog 時自動呼叫此功能:onFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)。
 

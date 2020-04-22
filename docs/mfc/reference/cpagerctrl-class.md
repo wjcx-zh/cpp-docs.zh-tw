@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376970"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753697"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 類別
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |參數|描述|
 |---------------|-----------------|
 |*dwStyle*|[在]要應用於控制[項的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[尋呼器控制樣式](/windows/win32/Controls/pager-control-styles)的位組合 (OR)。|
-|*矩形*|[在]對包含客戶端座標中控制件的位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用。|
+|*矩形*|[在]對包含客戶端座標中控制件的位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用。|
 |*pparentwnd*|[在]指向[CWnd](../../mfc/reference/cwnd-class.md)物件的指標,該對像是控制項的父視窗。 此參數不可以是 NULL。|
 |*nID*|[在]控件的識別碼。|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[在]要應用於控制的擴充樣式的位組合。 有關詳細資訊,請參閱[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函數的*dwExStyle*參數。|
 |*dwStyle*|[在]要應用於控制[項的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[尋呼器控制樣式](/windows/win32/Controls/pager-control-styles)的位組合 (OR)。|
-|*矩形*|[在]對包含客戶端座標中控制件的位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用。|
+|*矩形*|[在]對包含客戶端座標中控制件的位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用。|
 |*pparentwnd*|[在]指向[CWnd](../../mfc/reference/cwnd-class.md)物件的指標,該對像是控制項的父視窗。 此參數不可以是 NULL。|
 |*nID*|[在]控件的識別碼。|
 
@@ -202,7 +202,7 @@ virtual BOOL CreateEx(
 
 啟用或禁用將[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)訊息轉發到當前尋呼器控制項中包含的視窗。
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
@@ -462,7 +462,7 @@ BOOL IsButtonNormal(int iButton) const;
 
 使目前尋呼機控制件重新計算包含的視窗的大小。
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -572,7 +572,7 @@ int SetButtonSize(int iButtonSize);
 
 設置當前尋呼機控制件的包含視窗。
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
@@ -598,7 +598,7 @@ void SetChild(HWND hwndChild);
 
 設置當前尋呼器控制件的滾動位置。
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 

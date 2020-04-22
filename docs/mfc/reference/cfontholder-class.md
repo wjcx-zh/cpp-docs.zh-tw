@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373819"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754992"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 類別
 
@@ -170,7 +170,7 @@ HFONT GetFontHandle(
 
 初始化 `CFontHolder` 物件。
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -204,7 +204,7 @@ LPFONT m_pFont;
 
 檢索`CFontHolder`物件表示的物理字體的資訊。
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -217,7 +217,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 
 此函數斷開`CFontHolder`物件`IFont`與其介面的連接。
 
-```
+```cpp
 void ReleaseFont();
 ```
 
@@ -255,7 +255,7 @@ CFont* Select(
 
 釋放任何現有字體並將`CFontHolder`物件連接`IFont`到介面。
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 

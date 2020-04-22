@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366858"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750915"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 指定標頭控制件的樣式。 有關標頭控制項樣式的說明,請參閱 Windows SDK 中的[標頭控制式樣式](/windows/win32/Controls/header-control-styles)。
 
 *矩形*<br/>
-指定標頭控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+指定標頭控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *pparentwnd*<br/>
 指定標頭控制的父視窗,通常為`CDialog`。 它不得為 NULL。
@@ -301,7 +301,7 @@ virtual BOOL CreateEx(
 標頭控件的樣式。 有關標頭控制項樣式的說明,請參閱 Windows SDK 中的[標頭控制式樣式](/windows/win32/Controls/header-control-styles)。 有關其他樣式的清單,請參閱[建立](#create)。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |參數|描述|
 |---------------|-----------------|
 |*iItem*|[在]其樣式為HDF_SPLITBUTTON的標頭項的從零為基礎的索引。 有關詳細資訊,請參閱`fmt`[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)結構的成員。|
-|*lpRect*|[出]指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構以接收邊界矩形資訊的指標。|
+|*lpRect*|[出]指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構以接收邊界矩形資訊的指標。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 標頭控件項的零基索引。
 
 *lpRect*<br/>
-指向接收邊界矩形資訊的[RECT](/previous-versions/dd162897\(v=vs.85\))結構位址的指標。
+指向接收邊界矩形資訊的[RECT](/windows/win32/api/windef/ns-windef-rect)結構位址的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*lpRect*|[出]指向接收邊界矩形資訊的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。|
+|*lpRect*|[出]指向接收邊界矩形資訊的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。|
 
 ### <a name="return-value"></a>傳回值
 

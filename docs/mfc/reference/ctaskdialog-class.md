@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366639"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752280"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -255,7 +255,7 @@ C 任務對話範例
 
 加入新的命令按鈕控制項。 `CTaskDialog`
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ void AddCommandControl(
 
 新增單選按鈕`CTaskDialog`。
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ static BOOL IsSupported();
 
 使用字串表中的數據添加命令按鈕控制項。
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ void LoadCommandControls(
 
 使用字串表中的數據添加單選按鈕控制項。
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 從中移除的所有指令按鍵控制器`CTaskDialog`。
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 從中移除的所有單選按鈕`CTaskDialog`。
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 更新 上的指令按鍵控制`CTaskDialog`器 。
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ void SetCommandControlOptions(
 
 更新要啟用的常用按鈕的子集,並要求 UAC 提升。
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ void SetCommonButtonOptions(
 
 將一般按鈕加入`CTaskDialog`。
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ void SetCommonButtons(
 
 更新`CTaskDialog`的內容 。
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ void SetContent(const CString& strContent);
 
 指定預設命令按鈕控制件。
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 指定預設單選按鈕。
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 調整的`CTaskDialog`寬度。
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ void SetDialogWidth(int nWidth = 0);
 
 更新的`CTaskDialog`擴展區域。
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ void SetExpansionArea(
 
 更新`CTaskDialog`頁 腳圖示。
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 更新 文上的`CTaskDialog`文字 。
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ void SetFooterText(const CString& strFooterText);
 
 更新的主`CTaskDialog`圖示。
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 更新的主要`CTaskDialog`指令。
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ void SetMainInstruction(const CString& strInstructions);
 
 設定的選項`CTaskDialog`。
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ void SetOptions(int nOptionFlag);
 
 為 配置`CTaskDialog`選框列並將其添加到對話方塊中。
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ void SetProgressBarMarquee(
 
 調整進度條的位置。
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 調整進度條的範圍。
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ void SetProgressBarRange(
 
 設定進度列號的狀態並將顯示在上`CTaskDialog`。
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 啟用或禁用單選按鈕。
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ void SetRadioButtonOptions(
 
 設置驗證複選框的選中狀態。
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 設置顯示在驗證複選框右側的文本。
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 設定的標題`CTaskDialog`。
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318220"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751270"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 
@@ -169,7 +169,7 @@ class CSliderCtrl : public CWnd
 
 清除滑塊控制項中的目前選擇。
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ void ClearSel(BOOL bRedraw = FALSE);
 
 從滑塊控制項中刪除目前的刻度線。
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 指定滑塊控制件的樣式。 將 Windows SDK 中描述的[滑塊控制項樣式](/windows/win32/Controls/trackbar-control-styles)的任意組合應用於控制項。
 
 *矩形*<br/>
-指定滑塊控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+指定滑塊控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *pparentwnd*<br/>
 指定滑動器的父視窗(通常為`CDialog`。 它不得為 NULL。
@@ -251,7 +251,7 @@ virtual BOOL CreateEx(
 指定滑塊控制件的樣式。 將 Windows SDK 中描述的[滑塊控制項樣式](/windows/win32/Controls/trackbar-control-styles)的任意組合應用於控制項。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -304,7 +304,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 
 檢索滑塊控制元件通道的邊界矩形的大小和位置。
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ int GetPos() const;
 
 檢索滑塊控制項中滑塊的最大和最小位置。
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ int GetRangeMin() const;
 
 在滑塊控制項中檢索當前選擇的起始位置和結束位置。
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ int GetThumbLength() const;
 
 檢索滑塊(拇指)滑塊(拇指)在滑塊控制項中的邊界矩形的大小和位置。
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ int SetPageSize(int nSize);
 
 設置滑塊控制器中的滑塊的目前位置。
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ void SetPos(int nPos);
 
 設置滑塊控制項中滑塊的範圍(最小位置和最大位置)。
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ void SetRange(
 
 設置滑塊控制項中滑塊的最大範圍。
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ void SetRangeMax(
 
 設置滑塊控制器中的滑塊的最小範圍。
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ void SetRangeMin(
 
 在滑塊控制項中設定當前選擇的起始位置和結束位置。
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ void SetSelection(
 
 設置當前軌道欄控件中的滑塊長度。
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ BOOL SetTic(int nTic);
 
 設置在滑塊中顯示刻度線的頻率。
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ int SetTipSide(int nLocation);
 
 將工具提示控制項分配給滑塊控制項。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

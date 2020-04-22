@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: a2f6f558d6b4452ca06429c7e3017b7c575c6676
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 527fd089962e05c44a7e47b1ae52345116da4470
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367554"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752436"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 類別
 
@@ -40,7 +40,7 @@ class CMFCDragFrameImpl
 
 ## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCDragFrameimpl::結束繪製拖動框架
 
-```
+```cpp
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```
 
@@ -52,7 +52,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 
 ## <a name="cmfcdragframeimplinit"></a><a name="init"></a>CMFCDragframeimpl::Init
 
-```
+```cpp
 void Init(CWnd* pDraggedWnd);
 ```
 
@@ -64,7 +64,7 @@ void Init(CWnd* pDraggedWnd);
 
 ## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCDragFrameimpl::移動拖動框架
 
-```
+```cpp
 void MoveDragFrame(BOOL bForceMove = FALSE);
 ```
 
@@ -76,7 +76,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCDragFrameimpl::PlaceTab預對接
 
-```
+```cpp
 void PlaceTabPreDocking(
     CBaseTabbedPane* pTabbedBar,
     BOOL bFirstTime);
@@ -96,7 +96,7 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCDragFrameimpl::刪除TabpreDocking
 
-```
+```cpp
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```
 
@@ -108,7 +108,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 
 ## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCDragFrameimpl::重置狀態
 
-```
+```cpp
 void ResetState();
 ```
 

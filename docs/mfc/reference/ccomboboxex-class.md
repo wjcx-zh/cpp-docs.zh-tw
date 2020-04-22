@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369465"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754819"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 類別
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 指定應用於組合框的組合框樣式的組合。 關於樣式的詳細資訊,請參閱下面的**備註**。
 
 *矩形*<br/>
-對[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,即組合框的位置和大小。
+對[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,即組合框的位置和大小。
 
 *pparentwnd*<br/>
 指向作為組合框的父視窗(通常為`CDialog`) 的[CWnd](../../mfc/reference/cwnd-class.md)物件的指標。 它不得為 NULL。
@@ -210,7 +210,7 @@ virtual BOOL CreateEx(
 組合框控件的樣式。 請參閱[創建](#create)樣式清單。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。

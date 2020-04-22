@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364013"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751132"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 - PBS_SMOOTH 在進度條控件中顯示逐漸、平滑的填充。 如果沒有此標誌,控件將填充塊。
 
 *矩形*<br/>
-指定進度條控制的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 由於控件必須是子視窗,因此指定的座標相對於*pParentWnd*的工作區。
+指定進度條控制的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。 由於控件必須是子視窗,因此指定的座標相對於*pParentWnd*的工作區。
 
 *pparentwnd*<br/>
 指定進度列件的父視窗,通常為`CDialog`。 它不得為 NULL。
@@ -191,7 +191,7 @@ virtual BOOL CreateEx(
 指定進度條控制項的樣式。 應用 Windows SDK 中[建立視窗](/windows/win32/api/winuser/nf-winuser-createwindoww)中描述的視窗樣式的任意組合。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -263,7 +263,7 @@ int GetPos();
 
 獲取進度條控制項的當前下限和上限或範圍。
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -495,7 +495,7 @@ int SetPos(int nPos);
 
 設置進度條控制項範圍的上限和下限,並重繪條形以反映新範圍。
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

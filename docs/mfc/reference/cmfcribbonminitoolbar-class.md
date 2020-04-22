@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 10b1d35c331df6563d09be0bea3c97c73e89acaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e5ac6c923640b7584d89a9c6f75d941deadddf3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375082"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754074"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 類別
 
@@ -86,7 +86,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 設定要顯示在工具列上的命令清單。
 
-```
+```cpp
 void SetCommands(
     CMFCRibbonBar* pRibbonBar,
     const CList<UINT,UINT>& lstCommands);
@@ -122,7 +122,7 @@ BOOL Show(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 [在]在螢幕座標中指定迷你工具列的水準位置。
 
 *Y*<br/>
@@ -146,7 +146,7 @@ BOOL ShowWithContextMenu(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 [在]指定螢幕座標中上下文選單的水準位置。
 
 *Y*<br/>

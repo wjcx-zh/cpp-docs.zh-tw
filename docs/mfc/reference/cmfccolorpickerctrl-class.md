@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367692"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752531"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 類別
 
@@ -184,7 +184,7 @@ COLORREF GetColor() const;
 
 檢索使用者選擇的顏色的色調、亮度和飽和度值。
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ double GetSaturation() const;
 
 將當前顏色設置為指定 RGB 顏色分量或指定儲存格六邊形定義的顏色。
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -272,7 +272,7 @@ BOOL SelectCellHexagon(
 *B*<br/>
 [在]藍色元件。
 
-*X.*<br/>
+*x*<br/>
 [在]游標的 x 座標,它指向單元格六邊形。
 
 *Y*<br/>
@@ -292,7 +292,7 @@ BOOL SelectCellHexagon(
 
 將當前顏色設置為指定的 RGB 顏色值。
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 將目前的顏色設定為指定的 HLS 顏色值。
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 更改當前選取顏色的色調。
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 更改目前選取的顏色的亮度。
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,7 +365,7 @@ void SetLuminance(double Luminance);
 
 設置顏色選取器控制項線亮度條的寬度。
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
@@ -382,7 +382,7 @@ void SetLuminanceBarWidth(int w);
 
 設置初始所選顏色。
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ void SetOriginalColor(COLORREF ref);
 
 設置當前調色板。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ void SetPalette(CPalette* pPalette);
 
 更改當前選取顏色的飽和度。
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 設置要顯示的顏色選取器控制項的類型。
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367763"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752567"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 類別
 
@@ -380,7 +380,7 @@ CMFCColorBar(
 
 計算包含顏色條控制元件上的按鈕所需的垂直和水平邊距,並調整這些按鈕的位置。
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ static BOOL CreatePalette(
 
 顯示或隱藏自動按鈕。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ void EnableAutomaticButton(
 
 啟用或禁用允許使用者選擇更多顏色的對話框的顯示。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 設置當前選擇的顏色。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ static void SetColorName(
 
 為顏色條控制項設定新的命令 ID。
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ void SetCommandID(UINT nCommandID);
 
 設定目前文件中使用的顏色清單。
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 設置水平邊距,即左側或右側顏色單元格與工作區邊界之間的空間。
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ void SetHorzMargin(int nHorzMargin);
 
 將`m_pWndPropList`受保護的資料成員設置到指向屬性網格控制項的指定指標。
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 設置垂直邊距,即頂部或底部顏色單元格和工作區邊界之間的空間。
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

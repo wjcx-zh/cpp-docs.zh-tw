@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 72ab4027880285a3c4cd24d586e163e1e01b98f2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84526eec8f4fd4b1935fa39bc7f4ed3c4d5dd71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368298"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754485"
 ---
 # <a name="crgn-class"></a>CRgn 類別
 
@@ -699,7 +699,7 @@ int OffsetRgn(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定向左或向右移動的單位數。
 
 *Y*<br/>
@@ -762,7 +762,7 @@ BOOL PtInRegion(POINT point) const;
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要測試的點的邏輯 x 座標。
 
 *Y*<br/>
@@ -805,7 +805,7 @@ typedef struct tagRECT {
 
 創建矩形區域。
 
-```
+```cpp
 void SetRectRgn(
     int x1,
     int y1,

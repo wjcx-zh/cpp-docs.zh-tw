@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366890"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750809"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
 指定熱鍵控件的樣式。 應用控件樣式的任意組合。 有關詳細資訊,請參閱 Windows SDK 中的[通用控制元件樣式](/windows/win32/Controls/common-control-styles)。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -254,7 +254,7 @@ static CString GetKeyName(
 
 設置熱鍵控件的鍵盤快捷方式。
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ void SetHotKey(
 
 調用此函數以定義熱鍵控制件的無效組合和預設修改器組合。
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);

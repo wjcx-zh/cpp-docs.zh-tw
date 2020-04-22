@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: d03fb6f398e18957f68fc18c78d8a397efc67506
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 536d84fe2c2f68d62490e1ce2b65085426762e87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369272"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754203"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 類別
 
@@ -107,7 +107,7 @@ virtual ~CD2DBrush();
 
 將現有資源介面附加到物件。
 
-```
+```cpp
 void Attach(ID2D1Brush* pResource);
 ```
 
@@ -186,7 +186,7 @@ FLOAT GetOpacity() const;
 
 取得成成一個目標的現層
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```
 
@@ -239,7 +239,7 @@ operator ID2D1Brush*();
 
 設定此筆刷的不恰當程度
 
-```
+```cpp
 void SetOpacity(FLOAT opacity);
 ```
 
@@ -252,7 +252,7 @@ void SetOpacity(FLOAT opacity);
 
 將指定的轉換應用於渲染目標,替換現有變換。 所有後續繪圖操作都發生在轉換的空間中。
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```
 

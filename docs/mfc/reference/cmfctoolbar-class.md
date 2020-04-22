@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375080"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754040"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 
@@ -652,7 +652,7 @@ virtual void AdjustLayout();
 
 重新計算工具列的大小。
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ static void CMFCToolBar::CleanUpImages();
 
 釋放為鎖定工具列圖像分配的系統資源。
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ virtual void DrawSeparator(
 
 啟用或禁用工具列上顯示的「自訂」按鈕。
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 
 啟用或禁用工具列按鈕上的大型圖示。
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 啟用或禁用命令反射。
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 啟用或禁用工具列按鈕圖像下的文本標籤。
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 
 在指定索引處返回按鈕的命令 ID、樣式和圖像索引。
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -3211,7 +3211,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 
 設置工具列按鈕的命令 ID、樣式和圖像 ID。
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 
 指定工具列上的不可用按鈕是否變暗,或者是否使用了按鈕不可用的圖像。
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 
 設置工具列的高度。
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 指定工具列按鈕是否熱跟蹤。
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ static void SetHotTextColor(COLORREF clrText);
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFC工具列:設定忽略集文字
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 
 設置工具列上鎖定按鈕和鎖定圖像的大小。
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ void SetLockedSizes(
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFC工具列:設定遮罩模式
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 
 將工具列及其同級放在同一行上。
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ void SetOneRowWithSibling();
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar::設置OrigButtons
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 指定使用者是否可以關閉工具列。
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ void SetPermament(BOOL bPermament=TRUE);
 
 指定父框架或擁有者是向工具列發送命令。
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ static void SetShowTooltips(BOOL bValue);
 
 指定工具列的同級。
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ static void __stdcall SetSizes(
 
 指定工具列上按鈕的屬性。
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ void SetToolBarBtnText(
 
 將工具列及其同級放在單獨的行上。
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 更新指定按鈕的狀態。
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: de28b308ec235e33e39aabd707677f4e75320b0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365287"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754218"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 類別
 
@@ -113,7 +113,7 @@ class CMFCMaskedEdit : public CEdit
 
 禁用驗證使用者輸入。
 
-```
+```cpp
 void DisableMask();
 ```
 
@@ -125,7 +125,7 @@ void DisableMask();
 
 指定`GetWindowText`方法是否僅檢索蒙版字元。
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -142,7 +142,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 初始化遮罩編輯控制件。
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -185,7 +185,7 @@ void EnableMask(
 
 指定遮罩編輯控制件是否允許使用者選擇特定的組輸入或所有輸入。
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
@@ -219,7 +219,7 @@ m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
 
 指定文本是僅針對蒙版字元驗證的,還是針對整個掩碼驗證的。
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -291,7 +291,7 @@ virtual BOOL IsMaskedChar(
 
 指定使用者可以輸入的有效字元字串。
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
@@ -321,7 +321,7 @@ m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindo
 
 在蒙版編輯控制項中顯示提示。
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 

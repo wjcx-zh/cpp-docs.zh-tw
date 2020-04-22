@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377130"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754697"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 類別
 
@@ -300,7 +300,7 @@ virtual void Create(
 
 調用此成員函數以向表添加欄位。
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 
 調用此函數以向表添加索引。
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 
 呼叫此成員函數以刪除欄位並使它無法訪問。
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ void DeleteField(int nIndex);
 
 呼叫此成員函數以刪除基礎表中的索引。
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ short GetFieldCount();
 
 呼叫此成員函數以獲取有關表def中定義的欄位的各種資訊。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ short GetIndexCount();
 
 調用此成員函數以獲取有關表def中定義的索引的各種資訊。
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ virtual void Open(LPCTSTR lpszName);
 
 調用此成員函數以更新附加表的連接資訊。
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ void RefreshLink();
 
 設置指示`CDaoTableDef`物件的一個或多個特徵的值。
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ void SetAttributes(long lAttributes);
 
 對於表示`CDaoTableDef`附加表的物件,字串物件由一個或兩個部分組成(資料庫類型指定器和資料庫路徑)。
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -894,7 +894,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 呼叫此成員函數以設置表的使用者定義的名稱。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ void SetName(LPCTSTR lpszName);
 
 呼叫此成員函數以指定附加表的名稱或`CDaoTableDef`物件所基於的基表的名稱,因為它存在於資料的原始源中。
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 
 調用此成員函數以設置表def的驗證規則。
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 
 呼叫此成員函數為具有 Microsoft Jet 資料庫引擎`CDaoTableDef`支援的基礎 基表的物件設定驗證規則的異常文本。
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 

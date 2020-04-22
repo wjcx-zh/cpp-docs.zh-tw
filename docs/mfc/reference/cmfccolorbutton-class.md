@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367726"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752556"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 類別
 
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 啟用或禁用顏色選取器控制項的"自動"按鈕,並設置自動(預設)顏色。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 啟用或禁用"其他"按鈕,該按鈕顯示在常規顏色按鈕下方。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,7 +335,7 @@ virtual void OnShowColorPopup();
 
 將`m_pPalette`受保護的數據成員初始化到指定的調色板或預設系統調色板。
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
@@ -349,7 +349,7 @@ void RebuildPalette(CPalette* pPal);
 
 指定按鈕的顏色。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -386,7 +386,7 @@ static void SetColorName(
 
 定義在使用者顏色選擇過程中向使用者顯示的顏色表中顯示的列數。
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ void SetColumnsNumber(int nColumns);
 
 指定一組顏色和集的名稱。 使用[CMFCColorBar 類](../../mfc/reference/cmfccolorbar-class.md)物件顯示顏色集。
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ void SetDocumentColors(
 
 指定要在彈出顏色列上顯示的標準顏色。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 

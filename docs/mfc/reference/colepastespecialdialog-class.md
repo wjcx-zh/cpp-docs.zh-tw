@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376980"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753823"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePaste 特殊對話類
 
@@ -105,7 +105,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 呼叫此函數以將新格式添加到應用程式在 Paste 特殊操作中可以支援的格式清單中。
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 如果在對話框中選擇此格式,則描述結果的字串。
 
-*標誌*<br/>
+*flags*<br/>
 可用於此格式的不同連結和嵌入選項。 此標誌是 OLEUIPASTEFLAG 枚舉類型中一個或多個不同值的位形組合。
 
 *cf*<br/>
@@ -178,7 +178,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 呼叫此函數會將剪貼簿格式加入應用程式在貼上特殊操作中可以支援的格式清單中:
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 

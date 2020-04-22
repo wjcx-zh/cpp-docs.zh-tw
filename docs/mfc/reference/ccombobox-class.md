@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369515"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754840"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 
@@ -308,7 +308,7 @@ CComboBox();
 
 刪除(清除)組合框的編輯控制項中的當前選擇(如果有)。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 以CF_TEXT格式將組合框的編輯控制項中的當前選擇(如果有)複製到剪貼簿。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 
 刪除(剪切)組合框編輯控制項中的當前選擇(如果有),以CF_TEXT格式將刪除的文本複製到剪貼簿中。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ int GetCurSel() const;
 
 調用`GetDroppedControlRect`成員函數以檢索下拉組合框的可見(下拉)列表框的螢幕座標。
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 檢索與指定群組框項目關聯的應用程式提供的 32 位值作為指標(**空**<strong>\*</strong>)。
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 將剪貼簿中的數據插入到當前游標位置組合框的編輯控制項中。
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ void Paste();
 
 從清單框中移除所有專案,並編輯組合框控制項。
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 設置以像素為單位的寬度,通過該寬度可以水準滾動組合框的列表框部分。
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ int SetTopIndex(int nIndex);
 
 顯示或隱藏具有[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式的組合框的清單框。
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

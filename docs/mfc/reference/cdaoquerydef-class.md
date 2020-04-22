@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368956"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754707"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 類別
 
@@ -410,7 +410,7 @@ short GetFieldCount();
 
 調用此成員函數以獲取有關查詢def中定義的欄位的各種資訊。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ short GetParameterCount();
 
 呼叫此成員函數以獲取有關查詢def中定義的參數的資訊。
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 呼叫此成員函數以設定查詢def物件的連接字串。
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 如果要更改不臨時的查詢def的名稱,請調用此成員函數。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ void SetName(LPCTSTR lpszName);
 
 調用此成員函數以在對 ODBC 數據源的查詢超時之前設置時間限制。
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ virtual void SetParamValue(
 
 調用此成員函數,作為將 SQL 傳遞查詢設置為外部資料庫的過程的一部分。
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 
 呼叫此成員函數以設定查詢def執行的 SQL 語句。
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

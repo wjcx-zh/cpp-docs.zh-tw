@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: ce7c48263ed511545757c94d61552e6206e74a00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3ae0d69c385ba89cf75d682ce12c6f1f4e5112f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352862"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752978"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 類別
 
@@ -306,7 +306,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 將內部選項卡順序還原為默認狀態。
 
-```
+```cpp
 void FillDefaultTabsOrderArray();
 ```
 
@@ -440,7 +440,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 [出]以`CSize`最小允許大小填充的物件。
 
 ### <a name="remarks"></a>備註
@@ -457,7 +457,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 [出]以`CSize`最小允許大小填充的物件。
 
 ### <a name="remarks"></a>備註
@@ -601,7 +601,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 確定 Tabbed 控制欄是否將自動銷毀。
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 

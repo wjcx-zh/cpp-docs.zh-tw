@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374828"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753717"
 ---
 # <a name="colevariant-class"></a>COleVariant 類別
 
@@ -93,7 +93,7 @@ class COleVariant : public tagVARIANT
 
 調用此函數以將給定[的 VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)`COleVariant`物件附加到 當前物件。
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ COleVariant(LPCITEMIDLIST pidl);
 
 轉換此`COleVariant`物件中的變體值的類型。
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 清除 `VARIANT`。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ VARIANT Detach();
 
 從現有變數組檢索位元陣列
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ friend CArchive& AFXAPI operator>>(
 
 將字串設定為特定類型。
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 

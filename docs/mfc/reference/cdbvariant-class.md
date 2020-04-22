@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 3c13c1a965014af271ce2911505742d9a50eedd7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9bb70acb43f2e73ade86b753ebbb7949759ce88d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376457"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754594"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 類別
 
@@ -119,7 +119,7 @@ CDBVariant();
 
 調用此成員函數以清除`CDBVariant`物件。
 
-```
+```cpp
 void Clear();
 ```
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365787"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751651"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 
@@ -124,7 +124,7 @@ pRichEdit->GetSelText(sz);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ MFC 用於在調試時轉儲物件狀態的內部函數。
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 這個函式會測試傳遞的 SCODE，以查看其是否為錯誤。
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ BOOL  AfxCheckMemory();
 
 在調試器中調用此函數,以在調試時轉儲對象的狀態。
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ void AfxDump(const CObject* pOb);
 
 此全域函數可用於生成當前堆疊的映射。
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ Microsoft 基礎類庫調試記憶體分配器可以調用使用者定義的挂�
 
 調用應用程式記憶體空間中所有可`CObject`序列化派生類的指定反覆運算函數。
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ AFXAPI AfxDoForAllClasses(
 
 為派生自`CObject`已使用**new**分配的所有物件執行指定的反覆運算函數。
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);

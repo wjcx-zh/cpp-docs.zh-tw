@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375575"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753320"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 類別
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>參數
 
-*info*<br/>
+*資訊*<br/>
 [在]對包含停靠窗格對齊的資訊結構的引用。
 
 *ppDockBar*<br/>
@@ -332,7 +332,7 @@ BOOL AddDockSite(
 
 將句柄添加到欄窗格到隱藏的 MDI 選項卡欄窗格清單中。
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ virtual BOOL AdjustRectToClientArea(
 
 在自動隱藏模式下調整停靠窗格的大小,以便它佔用幀的工作區的全寬或高度,並包圍停靠網站。
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ CMFCAutoHideToolBar* AutoHidePane(
 
 將具有指定對齊的停靠條帶到頂部。
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 將停靠窗格和工具列的名稱添加到功能表中。
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 計算停靠視窗的預期矩形。
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 啟用或禁用從註冊表載入停靠佈局。
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 將窗格停靠到另一個窗格或框架視窗。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 告訴庫顯示一個特殊的上下文菜單,該功能表具有應用程式工具列和停靠窗格的清單,當使用者單擊滑鼠右鍵並且庫正在處理WM_CONTEXTMENU消息時。
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ CRect GetOuterEdgeBounds() const;
 
 返回屬於停靠管理器的窗格清單。 這包括所有浮動窗格。
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 隱藏處於自動隱藏模式的窗格。
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>參數
 
-*info*<br/>
+*資訊*<br/>
 [在]包含有關停靠窗格的對齊資訊的結構。
 
 *dwalignto 插入後*<br/>
@@ -1221,7 +1221,7 @@ virtual BOOL LoadState(
 
 鎖定給定的視窗。
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 當框架生成包含窗格列表的功能表時,由框架調用。
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 釋放空窗格容器。
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 刪除指定的隱藏欄窗格。
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 取消註冊窗格並將其從停靠管理器中的清單中刪除。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ BOOL ReplacePane(
 
 在迷你幀清單中對幀進行設置。
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ BOOL SendMessageToMiniFrames(
 
 將停靠管理器寫入存檔。
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ void Serialize(CArchive& ar);
 
 設置控制列和指定窗格的大小、寬度和高度。
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 設置列印預覽中顯示的條形圖的列印預覽模式。
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 
 顯示或隱藏微型框架的視窗。
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 根據智慧對接管理器的對齊方式啟動指定窗口的智慧停靠。
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 停止智慧停靠。
 
-```
+```cpp
 void StopSDocking();
 ```
 

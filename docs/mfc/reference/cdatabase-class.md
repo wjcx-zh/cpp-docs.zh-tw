@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376484"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754636"
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
 
@@ -186,7 +186,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 調用此成員函數請求數據源取消正在進行的非同步操作或從第二個線程取消進程。
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ BOOL CommitTrans();
 
 當您需要直接執行 SQL 命令時,請調用此成員函數。
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ BOOL Rollback();
 
 調用此成員函數 (在呼`OpenEx`叫`Open`之前或—以覆寫資料源嘗試連接超時之前允許的預設秒數)。
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ void SetLoginTimeout(DWORD dwSeconds);
 
 調用此成員函數以覆蓋預設秒數,以便在後續對連接的數據源超時的操作之前允許。
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740939"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752902"
 ---
 # <a name="value-classes-and-structs-ccx"></a>實值類別與結構 (C++/CX)
 
-*值結構*或實*值類別*是 Windows 執行階段相容的 POD （「純舊資料結構」）。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。
+*值結構*或*值類*是 Windows 運行時相容 POD("普通舊資料結構")。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。
 
 下列範例示範如何宣告和初始化實值結構。
 
@@ -52,7 +52,7 @@ ms.locfileid: "70740939"
 
 「 *實值類別* 」(Value Class) 與 `value struct` 類似，差別在於其欄位必須明確指定為公用存取範圍。 其宣告可透過 `value class` 關鍵字來執行。
 
-值結構或實值類別只能包含基本數數值型別、列舉類別、 `Platform::String^`或[Platform：： IBox \<T > ^](../cppcx/platform-ibox-interface.md)的欄位，其中 t 是數數值型別或列舉類別或實值類別或結構。 `IBox<T>^` 欄位可以有 `nullptr`值，這是 C++ 實作「 *可為 Null 的實值類型*」(Nullable Value Type) 這個概念的方式。
+值結構或值類只能包含基本數值類型、`Platform::String^`枚舉類或[Platform:iBox \<T>=](../cppcx/platform-ibox-interface.md)其中 T 是數值類型或枚舉類或值類或結構。 `IBox<T>^` 欄位可以有 `nullptr`值，這是 C++ 實作「 *可為 Null 的實值類型*」(Nullable Value Type) 這個概念的方式。
 
 包含 `Platform::String^` 或 `IBox<T>^` 類型做為成員的實值類別或實值結構，不具備 `memcpy`功能。
 
@@ -68,13 +68,13 @@ ms.locfileid: "70740939"
 
 若要宣告依值傳遞實值類型的參數，請使用下列程式碼：
 
-```
+```cpp
 void Method1(MyValueType obj);
 ```
 
 若要宣告依參考傳遞實值類型的參數，請使用參考符號 (&)，如下所示：
 
-```
+```cpp
 void Method2(MyValueType& obj);
 ```
 
@@ -90,7 +90,7 @@ Method2(ref obj);
 
 ## <a name="nullable-value-types"></a>可為 Null 的實值型別
 
-如先前所述，實值類別或實值結構可以具有[Platform：：\<IBox T](../cppcx/platform-ibox-interface.md)類型的欄位 > ^ `IBox<int>^`，例如。 這類欄位可以有 `int` 類型的任何有效數值，也可以有 `nullptr`值。 您可以將可為 null 的欄位當做引數傳遞至其參數宣告為選擇性的方法，或傳遞至實值型別不需要有值的其他地方。
+如前所述,值類或值結構可以具有類型為[Platform::iBox\<T>=](../cppcx/platform-ibox-interface.md)的欄位,例如 。 `IBox<int>^` 這類欄位可以有 `int` 類型的任何有效數值，也可以有 `nullptr`值。 您可以將可為 null 的欄位當做引數傳遞至其參數宣告為選擇性的方法，或傳遞至實值型別不需要有值的其他地方。
 
 下列範例會示範如何初始化具有可為 Null 之欄位的結構。
 

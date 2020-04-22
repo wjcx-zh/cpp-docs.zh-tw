@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: e1ce6e13b9c6045881cc0bb4114a6e11d58365c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 86f12f78338d1c60e3dd13614ccedc2868f28d81
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368984"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754715"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 類別
 
@@ -136,7 +136,7 @@ DFX 機制執行的某些操作僅適用於可能欄位類型之一。 遵循現
 
 在`SetFieldType``CDaoRecordset`類的`DoFieldExchange`重寫中調用。
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 

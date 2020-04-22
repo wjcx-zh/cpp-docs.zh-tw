@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a814618d3bda27d5b4ace12209dd93343ef2eef9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369932"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751774"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 類別
 
@@ -88,7 +88,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 
 將 ACCEL 結構轉換為其關聯的字串值。
 
-```
+```cpp
 void Format(CString& str) const;
 ```
 
@@ -105,7 +105,7 @@ void Format(CString& str) const;
 
 設置[CMFC 加速器鍵](../../mfc/reference/cmfcacceleratorkey-class.md)物件的快速鍵。
 
-```
+```cpp
 void SetAccelerator(LPACCEL lpAccel);
 ```
 

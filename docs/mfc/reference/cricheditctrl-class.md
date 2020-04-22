@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368278"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754426"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 
@@ -377,7 +377,7 @@ int CharFromPos(CPoint pt) const;
 
 刪除(清除)富編輯控制項中的當前選擇(如果有)。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ void Clear();
 
 將富編輯控制件中的當前選擇(如果有)複製到剪貼簿。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ virtual BOOL CreateEx(
 指定編輯控制項樣式。 應用[「創建](#create)和[編輯控制件樣式](/windows/win32/Controls/edit-control-styles)**的備註**」部分中列出的視窗樣式的組合,在 Windows SDK 中介紹。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -525,7 +525,7 @@ CRichEditCtrl();
 
 刪除(剪切)富編輯控制項中的當前選擇(如果有),並將刪除的文本複製到剪貼簿。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 
 重置(清除)此富編輯控制件的撤消標誌。
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ BOOL GetPunctuation(
 
 檢索此`CRichEditCtrl`物件的格式矩形。
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ UNDONAMEID GetRedoName() const;
 
 檢索此`CRichEditCtrl`物件中當前選擇的邊界。
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ UINT GetWordWrapMode() const;
 
 更改所選內容的可見性。
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ void HideSelection(
 
 限制用戶可以在編輯控制項中輸入的文本長度。
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ int LineLength(int nLine = -1) const;
 
 捲動多行編輯控制項的文字。
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ void LineScroll(
 
 將剪輯簿中的資料插入`CRichEditCtrl`插入點(插入器的位置)
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ void Paste();
 
 將特定剪貼簿格式的數據貼上此`CRichEditCtrl`物件中。
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ BOOL Redo();
 
 將此`CRichEditCtrl`物件的目前選擇替換為指定的文本。
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ void ReplaceSel(
 
 強制此`CRichEditCtrl`物件向其父視窗發送EN_REQUESTRESIZE通知消息。
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 
 設置或清除編輯控制件的修改標誌。
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 
 設置此`CRichEditCtrl`物件的選項。
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 設定此`CRichEditCtrl`物件的格式矩形。
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ void SetRect(LPCRECT lpRect);
 
 在此`CRichEditCtrl`物件中設置選擇。
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 
 阻止控制項將其他鍵入操作收集到當前撤消操作中。
 
-```
+```cpp
 void StopGroupTyping();
 ```
 

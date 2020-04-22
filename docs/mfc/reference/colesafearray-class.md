@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374868"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753766"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 類別
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 檢索指向數組數據的指標。
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ void AccessData(void** ppvData);
 
 為安全數組分配記憶體。
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ void AllocData();
 
 為安全陣列的描述符分配記憶體。
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ void AllocDescriptor(DWORD dwDims);
 
 將現有`VARIANT`數位中的數據控制權授予`COleSafeArray`物件。
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ void Attach(VARIANT& varSrc);
 
 清除安全陣列。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ COleSafeArray(const COleVariant& varSrc);
 
 創建現有安全陣列的副本。
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ void Copy(LPSAFEARRAY* ppsa);
 
 分配和初始化陣列的數據。
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ void Create(
 
 創建新的一維`COleSafeArray`物件。
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ void CreateOneDim(
 
 銷毀現有陣列描述符和陣列中的所有數據。
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ void Destroy();
 
 銷毀安全陣列中的所有數據。
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ void DestroyData();
 
 銷毀安全陣列的描述符。
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ VARIANT Detach();
 
 將安全陣列的內容複製到中`CByteArray`。
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ DWORD GetDim();
 
 檢索安全數組的單個元素。
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ DWORD GetElemSize();
 
 返回`COleSafeArray`物件任何維度的下限。
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ DWORD GetOneDimSize();
 
 返回安全數組的任何維度的上限。
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ void GetUBound(
 
 增加陣列的鎖計數,並在數位描述符中放置指向數位數據的指標。
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 返回指向索引值指定的元素的指標。
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ void PtrOfIndex(
 
 將單一項目指派到陣列。
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ void PutElement(
 
 更改安全陣列的最小顯著(最右)綁定。
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ void Redim(SAFEARRAYBOUND* psaboundNew);
 
 更改一維`COleSafeArray`物件中的元素數。
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ void ResizeOneDim(DWORD dwElements);
 
 刪除陣列的鎖計數,使檢索到`AccessData`的指標無效。
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ void UnaccessData();
 
 對陣列的鎖計數進行縮減,以便可以釋放或調整大小。
 
-```
+```cpp
 void Unlock();
 ```
 

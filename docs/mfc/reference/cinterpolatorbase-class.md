@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e5294aabc42301e2f874d5b8328d648f4deeb3c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372359"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754954"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 類別
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>參數
 
-*時間*<br/>
+*duration*<br/>
 輸出。 轉換的持續時間,以秒為單位。
 
 ### <a name="return-value"></a>傳回值
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 輸出。 轉換結束時變數的最終值。
 
 ### <a name="return-value"></a>傳回值
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *位移*<br/>
 轉換開始時的偏移量。 偏移量始終大於或等於零,小於轉換的持續時間。 如果轉換的持續時間為零,則不調用此方法。
 
-*值*<br/>
+*value*<br/>
 輸出。 插值值。
 
 ### <a name="return-value"></a>傳回值
@@ -217,7 +217,7 @@ IFACEMETHOD(InterpolateVelocity)(
 
 存儲指向自定義插值器的指標,該指標將處理事件。
 
-```
+```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>參數
 
-*時間*<br/>
+*duration*<br/>
 轉換的持續時間。
 
 ### <a name="return-value"></a>傳回值

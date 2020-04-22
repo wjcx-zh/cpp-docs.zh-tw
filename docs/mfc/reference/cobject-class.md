@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: cea4d09a1c1a4680b095a40fa0619287959ff4ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66d76e0062d13b2bd5a16d9b07f99db9e989805a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360417"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753987"
 ---
 # <a name="cobject-class"></a>CObject 類別
 
@@ -275,7 +275,7 @@ BOOL IsSerializable() const;
 
 對於庫的發佈版本,運算符**刪除**釋放運算符**new**分配的記憶體。
 
-```
+```cpp
 void PASCAL operator delete(void* p);
 
 void PASCAL operator delete(
@@ -312,7 +312,7 @@ void PASCAL operator delete(
 
 對於函式庫的發行版本,運算子**new**以類似於的方式執行最佳`malloc`記憶體分配 。
 
-```
+```cpp
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
 

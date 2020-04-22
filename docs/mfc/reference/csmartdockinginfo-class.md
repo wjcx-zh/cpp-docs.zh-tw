@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: c0ccb9f728add37230cbfd88cc8f6c9b1696fa2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ebb5e75b5b298097cfce043bd83ec88ca0ab4030
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318232"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751302"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 類別
 
@@ -109,7 +109,7 @@ class CSmartDockingInfo : public CObject
 
 將當前智慧停靠參數複製到提供的[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)物件中。
 
-```
+```cpp
 void CopyTo(CSmartDockingInfo& params);
 ```
 

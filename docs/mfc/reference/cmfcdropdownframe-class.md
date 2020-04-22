@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: a5e95efe1880f1177490d55988ca1fe42c606b15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367545"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752423"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 類別
 
@@ -104,7 +104,7 @@ virtual BOOL Create(
 |-|-|
 |參數|描述|
 |*pwnd 父級*|[在]下拉框架的父視窗。|
-|*X.*|[在]下下幀位置的水平螢幕座標。|
+|*x*|[在]下下幀位置的水平螢幕座標。|
 |*Y*|[在]向下幀位置的垂直螢幕座標。|
 |*pWndOrigin工具列*|[在]具有此方法用於填充新下拉框架物件的下拉按鈕的工具列。|
 
@@ -173,7 +173,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 設置子下拉工具列視窗是否自動銷毀。
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 

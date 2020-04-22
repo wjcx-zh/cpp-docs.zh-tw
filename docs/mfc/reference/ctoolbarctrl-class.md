@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365084"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752218"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 
@@ -523,7 +523,7 @@ int AddStrings(LPCTSTR lpszStrings);
 
 調整整個工具列控制元件的大小。
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 指定工具列控制件的樣式。 工具欄必須始終具有WS_CHILD樣式。 此外,還可以指定工具列樣式和視窗樣式的任意組合,如**備註**項下所述。
 
 *矩形*<br/>
-可選地指定工具列控制的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+可選地指定工具列控制的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *pparentwnd*<br/>
 指定工具列控制的父視窗。 它不得為 NULL。
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 指定工具列控制件的樣式。 工具欄必須始終具有WS_CHILD樣式。 此外,還可以指定工具列樣式和視窗樣式的任意組合,如[「創建](#create)**」的備註**部分所述。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -713,7 +713,7 @@ CToolBarCtrl();
 
 顯示「自訂工具列」對話框。
 
-```
+```cpp
 void Customize();
 ```
 
@@ -1040,7 +1040,7 @@ CImageList* GetImageList() const;
 
 檢索工具列的當前插入標記。
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 用於檢索資訊的按鈕的零索引。
 
 *lpRect*<br/>
-接收邊界矩形座標的[RECT](/previous-versions/dd162897\(v=vs.85\))結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的位址。
+接收邊界矩形座標的[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1132,7 +1132,7 @@ int GetMaxTextRows() const;
 
 檢索`CToolBarCtrl`物件的指標。
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 按鈕識別碼。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,用於接收邊界矩形資訊。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,用於接收邊界矩形資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>參數
 
 *Ppt*<br/>
-指向[POINT](/previous-versions/dd162805\(v=vs.85\))結構的指標,該結構`x`包含成員中命中測試的 x`y`座標和 成員中命中測試的 y 座標。 坐標相對於工具列的工作區。
+指向[POINT](/windows/win32/api/windef/ns-windef-point)結構的指標,該結構`x`包含成員中命中測試的 x`y`座標和 成員中命中測試的 y 座標。 坐標相對於工具列的工作區。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>參數
 
 *Ppt*<br/>
-指向 POINT[結構的](/previous-versions/dd162805\(v=vs.85\))指標,該結構包含命中測試座標,相對於工具列的工作區區域。
+指向 POINT[結構的](/windows/win32/api/windef/ns-windef-point)指標,該結構包含命中測試座標,相對於工具列的工作區區域。
 
 *普比姆*<br/>
 指向接收插入標記資訊的[TB INSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)結構的指標。
@@ -1567,7 +1567,7 @@ BOOL IsButtonPressed(int nID) const;
 
 將點陣圖載入到工具列控制的影像清單中。
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1730,7 +1730,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 從參數指定的註冊表中的位置還原工具列控件的狀態。
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ void RestoreState(
 
 將工具列控制器的狀態保存在參數指定的註冊表中的位置。
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 位映射圖像的寬度和高度(以像素為單位)。
 
 ### <a name="return-value"></a>傳回值
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 按鈕的寬度和高度(以像素為單位)。
 
 ### <a name="return-value"></a>傳回值
@@ -1883,7 +1883,7 @@ BOOL SetButtonSize(CSize size);
 
 指定結構的大小`TBBUTTON`。
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,7 +1950,7 @@ BOOL SetCmdID(
 
 設置當前工具列控件的色彩配置。
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -2128,7 +2128,7 @@ BOOL SetIndent(int iIndent);
 
 設定工具列的目前插入標記。
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 
 設置`CToolBarCtrl`物件的指標。
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 
 設置工具列控制者的擁有者視窗。
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2279,7 +2279,7 @@ CImagelist* SetPressedImageList(
 
 要求工具列控件調整自身大小以調整為請求的行數。
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ void SetRows(
 如果工具列無法調整為請求的行數,則說明是使用更多行還是減少行。
 
 *lpRect*<br/>
-指向將接收工具列的新邊界矩形的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+指向將接收工具列的新邊界矩形的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 ### <a name="remarks"></a>備註
 
@@ -2341,7 +2341,7 @@ BOOL SetState(
 
 設置工具列控件的樣式。
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ void SetStyle(DWORD dwStyle);
 
 將工具尖端控制件與工具列控制件關聯。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 

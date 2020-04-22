@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 941f32dfadffd97210586edd7c2aa63c3c1708cd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352943"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752986"
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 
@@ -377,7 +377,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 向停靠管理器添加窗格。
 
-```
+```cpp
 void AddPane(CBasePane* pBar);
 ```
 
@@ -774,7 +774,7 @@ virtual BOOL DockPane(
 
 使用運行時類型資訊停靠窗格。
 
-```
+```cpp
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
@@ -1740,7 +1740,7 @@ virtual void RecalcLayout();
 
 取消註冊窗格並將其從停靠管理器中的清單中刪除。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pBar,
     BOOL bDestroy = TRUE,
@@ -1837,7 +1837,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 設置窗格的停靠模式。
 
-```
+```cpp
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 
@@ -1919,7 +1919,7 @@ virtual HDWP SetWindowPos(
 *pWndInsert 後*<br/>
 [在]標識`CWnd`Z 順序中`CWnd`在此 物件之前的物件。 有關詳細資訊,請參閱[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)。
 
-*X.*<br/>
+*x*<br/>
 [在]指定視窗左側的位置。
 
 *Y*<br/>

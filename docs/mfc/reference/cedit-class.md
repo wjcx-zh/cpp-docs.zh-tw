@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373977"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753228"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -299,7 +299,7 @@ int CharFromPos(CPoint pt) const;
 
 呼叫此函數以刪除(清除)編輯控制項中的當前選擇(如果有)。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ void Clear();
 
 呼叫此函數以CF_TEXT格式將編輯控制項中的當前選擇(如果有)與剪貼簿進行配合。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ virtual BOOL Create(
 
 呼叫此函數以刪除(剪切)編輯控制項中的當前選擇(如果有),並將刪除的文本以CF_TEXT格式複製到剪貼簿。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ void Cut();
 
 呼叫此函數以重置(清除)編輯控制項的撤消標誌。
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ TCHAR GetPasswordChar() const;
 
 呼叫此函數以獲取編輯控制項的格式矩形。
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ BOOL HideBalloonTip();
 
 呼叫此函數以限制使用者可以輸入到編輯控制項的文本長度。
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ int LineLength(int nLine = -1) const;
 
 呼叫此函數滾動多行編輯控制項的文字。
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ void LineScroll(
 
 呼叫此功能以將數據從剪貼簿插入到插入`CEdit`點。
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 呼叫此函數以將編輯控制項中的目前選擇替換為*lpszNewText*指定的文字。
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(
 
 呼叫此函數以將句柄設置為多行編輯控制件將使用的本地記憶體。
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ void SetHandle(HLOCAL hBuffer);
 
 突顯目前編輯控制項中顯示的文字範圍。
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ void SetHighlight(
 
 呼叫此成員函數以設定此`CEdit`物件的文本限制。
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ void SetLimitText(UINT nMax);
 
 呼叫此方法以設定此編輯控制項的左右邊距。
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ void SetMargins(
 
 呼叫此函數以設置或清除編輯控制項的修改標誌。
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ TRUE 的值表示文本已被修改,FALSE 值表示未修改。 默認情況下,
 
 呼叫此函數以設定或刪除使用者鍵入文本時在編輯控制項中顯示的密碼字元。
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 呼叫此函數以使用指定的座標設定矩形的尺寸。
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ void SetRect(LPCRECT lpRect);
 
 呼叫此函數以設定多行編輯控制項的格式矩形。
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ void SetRectNP(LPCRECT lpRect);
 
 呼叫此函數以選擇編輯控制件中的字元範圍。
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ void SetSel(
 
 呼叫此函數以在多行編輯控制項中設置製表位。
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

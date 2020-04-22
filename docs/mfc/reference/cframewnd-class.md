@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373793"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754971"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 
@@ -384,7 +384,7 @@ CWnd* CreateView(
 
 導致控制欄停靠到框架視窗。
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ void DockControlBar(
 
 呼叫此函數以在框架視窗中啟用可停靠的控制欄。
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 調用此函數可使控制欄不停靠到框架視窗。
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,7 +570,7 @@ CControlBar* GetControlBar(UINT nID);
 
 調用此成員函數以在`CDockState`物件中存儲有關幀視窗控制欄的狀態資訊。
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
@@ -675,7 +675,7 @@ CString GetTitle() const;
 
 使用`IntitialUpdateFrame``Create`建立新的幀後呼叫 。
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 
 調用此函數以還原幀窗口擁有的每個控制欄的設置。
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 調用此函數以存儲有關幀窗口擁有的每個控制欄的資訊。
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 
 將指定的檢視指定為「富預覽」的活動檢視。
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ void SetActivePreviewView(CView* pViewNew);
 
 調用此成員函數以設置活動檢視。
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,7 +1068,7 @@ void SetActiveView(
 
 調用此成員函數將存儲在物件中`CDockState`的狀態資訊應用於幀視窗的控制欄。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -1127,7 +1127,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 呼叫此函數以在 ID 為 0 的狀態列窗格中放置字串。
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ void SetMessageText(UINT nID);
 
 設定任務列上顯示的 Windows 7 進度列的目前位置。
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 設置任務列上顯示的 Windows 7 進度列的範圍。
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ void SetProgressBarRange(
 
 設置任務列按鈕上顯示的進度指示器的類型和狀態。
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ BOOL SetTaskbarOverlayIcon(
 
 設置視窗物件的標題。
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ void SetTitle(LPCTSTR lpszTitle);
 
 呼叫此成員函數以顯示或隱藏控制欄。
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ void ShowControlBar(
 
 呼叫此成員函數以顯示`CFrameWnd`物件後代的所有視窗。
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 

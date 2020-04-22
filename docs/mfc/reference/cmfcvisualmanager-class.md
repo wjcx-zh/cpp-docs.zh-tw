@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319994"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752843"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 類別
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFC視覺管理器::DoDrawHeader排序箭頭
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFC 視覺管理員::啟用工具列按鈕填充
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -5011,7 +5011,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 
 啟用或禁用禁用工具欄圖像的浮雕模式。
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 
 啟用或禁用功能表或工具列上非活動圖像的照明效果。
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 
 設置指示功能表按鈕是否顯示為平面的標誌。 否則,它們將顯示為三維。
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 
 設置功能表陰影的寬度和高度。
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ void SetMenuShadowDepth(int nDepth);
 
 設置一個標誌,指示[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)是否顯示突出顯示的圖像的陰影。
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 

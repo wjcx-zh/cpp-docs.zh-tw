@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367709"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752525"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 類別
 
@@ -193,7 +193,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 啟用並關閉位於常規顏色按鈕上方的自動按鈕。 ( 標準系統自動按鈕標記為**自動**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ void EnableAutomaticButton(
 
 啟用顯示文件特定顏色而不是系統顏色。
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ void EnableDocumentColors(
 
 啟用並禁用位於常規顏色按鈕下方的"其他"按鈕。 ( 標準系統' 其他按鈕標記為**更多顏色**。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 能夠撕下顏色窗格。
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -533,7 +533,7 @@ static void SetColorName(
 
 設定要在顏色選擇控制項[(CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)物件)中顯示的欄數。
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 

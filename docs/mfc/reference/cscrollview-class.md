@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318492"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754416"
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 
@@ -124,7 +124,7 @@ class CScrollView : public CView
 
 調用此成員函數以確定滾動檢視是否具有水準和垂直條。
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ CScrollView();
 
 調用`FillOutsideRect`以填充顯示在滾動區域外部的檢視區域。
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ CPoint GetDeviceScrollPosition() const;
 
 `GetDeviceScrollSizes`獲取可滾動檢視的當前映射模式、總大小以及行和頁面大小。
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ CSize GetTotalSize() const;
 
 呼叫`ResizeParentToFit`以讓檢視的大小決定其框架視窗的大小。
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 
 調用`ScrollToPosition`以滾動到視圖中的給定點。
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ void ScrollToPosition(POINT pt);
 
 如果要`SetScaleToFitSize`自動將視口大小縮放到當前視窗大小,請進行調用。
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 
 當`SetScrollSizes`視圖即將更新時調用。
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

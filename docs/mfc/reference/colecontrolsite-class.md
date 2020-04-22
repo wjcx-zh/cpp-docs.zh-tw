@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366158"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753953"
 ---
 # <a name="colecontrolsite-class"></a>COle 控制網站類別
 
@@ -454,7 +454,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 指定控制站點是處理還是忽略從控制項觸發的事件。
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ void FreezeEvents(BOOL bFreeze);
 
 檢索有關控件的鍵盤助記符和鍵盤行為的資訊。
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -953,7 +953,7 @@ virtual void MoveWindow(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 視窗左側的新位置。
 
 *Y*<br/>
@@ -1017,7 +1017,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 
 將控制項設定為預設按鈕。
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
@@ -1142,7 +1142,7 @@ virtual BOOL SetWindowPos(
 *pWndInsert 後*<br/>
 指向視窗的指標。
 
-*X.*<br/>
+*x*<br/>
 視窗左側的新位置。
 
 *Y*<br/>

@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366201"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753931"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 
@@ -781,7 +781,7 @@ BOOL AmbientUserMode();
 
 表示綁定屬性值已更改。
 
-```
+```cpp
 void BoundPropertyChanged(DISPID dispid);
 ```
 
@@ -878,7 +878,7 @@ COleControl();
 
 當控件支援的助記符集已更改時,調用此功能。
 
-```
+```cpp
 void ControlInfoChanged();
 ```
 
@@ -926,7 +926,7 @@ virtual void DisplayError(
 
 類比控制項滑鼠按一下操作。
 
-```
+```cpp
 void DoClick();
 ```
 
@@ -959,7 +959,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 重繪從 Windows 控制件中子分類的 OLE 控制件。
 
-```
+```cpp
 void DoSuperclassPaint(
     CDC* pDC,
     const CRect& rcBounds);
@@ -983,7 +983,7 @@ void DoSuperclassPaint(
 
 當需要更新控件的外觀時,由框架調用。
 
-```
+```cpp
 void DrawContent(
     CDC* pDC,
     CRect& rc);
@@ -1005,7 +1005,7 @@ void DrawContent(
 
 使用元文件設備上下文時由框架調用。
 
-```
+```cpp
 void DrawMetafile(
     CDC* pDC,
     CRect& rc);
@@ -1023,7 +1023,7 @@ void DrawMetafile(
 
 啟用 OLE 控制的簡單幀特性。
 
-```
+```cpp
 void EnableSimpleFrame();
 ```
 
@@ -1056,7 +1056,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 
 序列化或初始化控制件的庫存屬性的狀態。
 
-```
+```cpp
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
@@ -1105,7 +1105,7 @@ BOOL ExchangeVersion(
 
 當滑鼠按一下活動控制件時,由框架調用。
 
-```
+```cpp
 void FireClick();
 ```
 
@@ -1119,7 +1119,7 @@ void FireClick();
 
 當滑鼠在活動控件上按兩下時,由框架調用。
 
-```
+```cpp
 void FireDblClick();
 ```
 
@@ -1133,7 +1133,7 @@ void FireDblClick();
 
 觸發庫存錯誤事件。
 
-```
+```cpp
 void FireError(
     SCODE scode,
     LPCTSTR lpszDescription,
@@ -1165,7 +1165,7 @@ OLE 控制項的「庫存錯誤」事件的實現使用 SCODE 值。 如果您�
 
 使用任意數量的可選參數從控制項觸發使用者定義的事件。
 
-```
+```cpp
 void AFX_CDECL FireEvent(
     DISPID dispid,
     BYTE* pbParams,
@@ -1210,7 +1210,7 @@ void AFX_CDECL FireEvent(
 
 當控件處於活動狀態時按下鍵時,由框架調用。
 
-```
+```cpp
 void FireKeyDown(
     USHORT* pnChar,
     short nShiftState);
@@ -1240,7 +1240,7 @@ void FireKeyDown(
 
 當自定義控制件在容器中為UI活動時,框架調用該鍵並釋放該鍵。
 
-```
+```cpp
 void FireKeyPress(USHORT* pnChar);
 ```
 
@@ -1261,7 +1261,7 @@ void FireKeyPress(USHORT* pnChar);
 
 當自訂控制件在容器中為UI活動時釋放密鑰時,由框架調用。
 
-```
+```cpp
 void FireKeyUp(
     USHORT* pnChar,
     short nShiftState);
@@ -1291,7 +1291,7 @@ void FireKeyUp(
 
 當滑鼠按鈕按在活動自定義控制項上時,由框架調用。
 
-```
+```cpp
 void FireMouseDown(
     short nButton,
     short nShiftState,
@@ -1319,7 +1319,7 @@ void FireMouseDown(
 
 - ALT_MASK在操作過程中按下 ALT 鍵。
 
-*X.*<br/>
+*x*<br/>
 按下滑鼠按鈕時光標的 x 座標。 座標相對於控制視窗的左上角。
 
 *Y*<br/>
@@ -1335,7 +1335,7 @@ void FireMouseDown(
 
 當游標移動到活動自定義控制項時,由框架調用。
 
-```
+```cpp
 void FireMouseMove(
     short nButton,
     short nShiftState,
@@ -1363,7 +1363,7 @@ void FireMouseMove(
 
 - ALT_MASK在操作過程中按下 ALT 鍵。
 
-*X.*<br/>
+*x*<br/>
 游標的 x 座標。 座標相對於控制視窗的左上角。
 
 *Y*<br/>
@@ -1379,7 +1379,7 @@ void FireMouseMove(
 
 當滑鼠按鈕釋放到活動自定義控制項上時,由框架調用。
 
-```
+```cpp
 void FireMouseUp(
     short nButton,
     short nShiftState,
@@ -1407,7 +1407,7 @@ void FireMouseUp(
 
 - ALT_MASK在操作過程中按下 ALT 鍵。
 
-*X.*<br/>
+*x*<br/>
 釋放滑鼠按鈕時光標的 x 座標。 座標相對於控制視窗的左上角。
 
 *Y*<br/>
@@ -1423,7 +1423,7 @@ void FireMouseUp(
 
 使用就緒控制狀態的當前值觸發事件。
 
-```
+```cpp
 void FireReadyStateChange();
 ```
 
@@ -1696,7 +1696,7 @@ enum ControlFlags {
 
 檢索 OLE 控制視窗的大小。
 
-```
+```cpp
 void GetControlSize(
     int* pcx,
     int* pcy);
@@ -1814,7 +1814,7 @@ LPFONTDISP GetFont();
 
 測量控制項擁有的任何`CFontHolder`物件的文本指標。
 
-```
+```cpp
 void GetFontTextMetrics(
     LPTEXTMETRIC lptm,
     CFontHolder& fontHolder);
@@ -1884,7 +1884,7 @@ virtual void GetMessageString(
 
 防止使用者存取控制件的屬性值。
 
-```
+```cpp
 void GetNotSupported();
 ```
 
@@ -1941,7 +1941,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 測量控制的股票字型屬性的文字指標,可以使用[SelectStockFont](#selectstockfont)函數選擇該參數。
 
-```
+```cpp
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -1997,7 +1997,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 通知控項將使用的 IID 的基類。
 
-```
+```cpp
 void InitializeIIDs(
     const IID* piidPrimary,
     const IID* piidEvents);
@@ -2043,7 +2043,7 @@ const CString& InternalGetText();
 
 設置控件的就緒狀態。
 
-```
+```cpp
 void InternalSetReadyState(long lNewReadyState);
 ```
 
@@ -2068,7 +2068,7 @@ void InternalSetReadyState(long lNewReadyState);
 
 強制控件重新繪製自身。
 
-```
+```cpp
 void InvalidateControl(
     LPCRECT lpRect = NULL,
     BOOL bErase = TRUE);
@@ -2090,7 +2090,7 @@ void InvalidateControl(
 
 使給定區域內的容器視窗的工作區無效。
 
-```
+```cpp
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
@@ -2202,7 +2202,7 @@ virtual BOOL IsSubclassedControl();
 
 以非同步方式重置以前載入的任何資料,並啟動控制件的非同步屬性的新載入。
 
-```
+```cpp
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
@@ -2811,7 +2811,7 @@ DWORD 描述要顯示物件的表單或方面。 有效值取自枚舉[DVASPECT 
 - DVASPECT_TRANSPARENT矩形,覆蓋所有透明或不規則零件。
 
 *普雷克*<br/>
-指向指定在其中繪製物件的矩形的[RECTL](/previous-versions/dd162907\(v=vs.85\))結構。 此參數控制物件的定位和拉伸。
+指向指定在其中繪製物件的矩形的[RECTL](/windows/win32/api/windef/ns-windef-rectl)結構。 此參數控制物件的定位和拉伸。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2873,7 +2873,7 @@ virtual void OnInactiveMouseMove(
 *lprcBounds*<br/>
 包含視窗的用戶端座標中的物件邊界矩形。 收到WM_MOUSEMOVE消息時,告訴物件其在螢幕上的確切位置和大小。
 
-*X.*<br/>
+*x*<br/>
 包含視窗的客戶端座標中的滑鼠位置的 x 座標。
 
 *Y*<br/>
@@ -2904,7 +2904,7 @@ virtual BOOL OnInactiveSetCursor(
 *lprcBounds*<br/>
 包含視窗的用戶端座標中的物件邊界矩形。 收到WM_SETCURSOR消息時,告訴物件其在螢幕上的確切位置和大小。
 
-*X.*<br/>
+*x*<br/>
 包含視窗的客戶端座標中的滑鼠位置的 x 座標。
 
 *Y*<br/>
@@ -3513,7 +3513,7 @@ virtual UINT ParentToClient(
 
 通知容器模式對話框已關閉。
 
-```
+```cpp
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3530,7 +3530,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 
 通知容器即將顯示模式對話方塊。
 
-```
+```cpp
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3547,7 +3547,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 
 銷毀並重新建立控制項的視窗。
 
-```
+```cpp
 void RecreateControlWindow();
 ```
 
@@ -3559,7 +3559,7 @@ void RecreateControlWindow();
 
 強制重新繪製 OLE 控制項。
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -3630,7 +3630,7 @@ virtual void ReparentControlWindow(
 
 將`COleControl`股票屬性的狀態初始化到其預設值。
 
-```
+```cpp
 void ResetStockProps();
 ```
 
@@ -3648,7 +3648,7 @@ void ResetStockProps();
 
 將版本號初始化為指定值。
 
-```
+```cpp
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
@@ -3665,7 +3665,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 允許無視窗 OLE 物件在螢幕上滾動其就地活動圖像中的區域。
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -3730,7 +3730,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 序列化或初始化分配給控制項的顯示空間的狀態。
 
-```
+```cpp
 void SerializeExtent(CArchive& ar);
 ```
 
@@ -3751,7 +3751,7 @@ void SerializeExtent(CArchive& ar);
 
 序列化或初始化`COleControl`股票屬性的狀態:外觀、背面顏色、邊框樣式、標題、已啟用、字體、前顏色和文本。
 
-```
+```cpp
 void SerializeStockProps(CArchive& ar);
 ```
 
@@ -3800,7 +3800,7 @@ DWORD SerializeVersion(
 
 設置控制的庫存外觀屬性值。
 
-```
+```cpp
 void SetAppearance (short sAppearance);
 ```
 
@@ -3817,7 +3817,7 @@ void SetAppearance (short sAppearance);
 
 設置控制項庫存回顏色屬性值。
 
-```
+```cpp
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
@@ -3834,7 +3834,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 設置控制的庫存 BorderStyle 屬性值。
 
-```
+```cpp
 void SetBorderStyle(short sBorderStyle);
 ```
 
@@ -3893,7 +3893,7 @@ BOOL SetControlSize(int cx, int cy);
 
 設置控制項的「已啟用」屬性值。
 
-```
+```cpp
 void SetEnabled(BOOL bEnabled);
 ```
 
@@ -3928,7 +3928,7 @@ CWnd* SetFocus();
 
 設置控制的庫存字型屬性。
 
-```
+```cpp
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
@@ -3941,7 +3941,7 @@ void SetFont(LPFONTDISP pFontDisp);
 
 設置控制項庫存 ForeColor 屬性值。
 
-```
+```cpp
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
@@ -3970,7 +3970,7 @@ virtual void SetInitialDataFormats();
 
 設置首次顯示在容器中的 OLE 控制的大小。
 
-```
+```cpp
 void SetInitialSize(
     int cx,
     int cy);
@@ -3992,7 +3992,7 @@ OLE 控制項初始高度(以像素為單位)。
 
 更改控制項的已修改狀態。
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -4009,7 +4009,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 指示編輯請求失敗。
 
-```
+```cpp
 void SetNotPermitted();
 ```
 
@@ -4021,7 +4021,7 @@ void SetNotPermitted();
 
 防止使用者修改控制項的屬性值。
 
-```
+```cpp
 void SetNotSupported();
 ```
 
@@ -4054,7 +4054,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 設定控制項庫存或文字屬性的值。
 
-```
+```cpp
 void SetText(LPCTSTR pszText);
 ```
 
@@ -4071,7 +4071,7 @@ void SetText(LPCTSTR pszText);
 
 指示控件中出現錯誤。
 
-```
+```cpp
 void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
@@ -4105,7 +4105,7 @@ void ThrowError(
 
 變換 HIMETRIC 單位和容器的本機單位之間的座標值。
 
-```
+```cpp
 void TransformCoords(
     POINTL* lpptlHimetric,
     POINTF* lpptfContainer,
@@ -4120,7 +4120,7 @@ void TransformCoords(
 *lpptf 容器*<br/>
 指向`POINTF`容器單位大小中包含座標的結構的指標。
 
-*標誌*<br/>
+*flags*<br/>
 以下值的組合:
 
 - XFORMCOORDS_POSITION容器中的位置。
@@ -4190,7 +4190,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>參數
 
-*訊息*<br/>
+*message*<br/>
 指定要處理的 Windows 訊息。
 
 *wParam*<br/>

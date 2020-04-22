@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369416"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754813"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 類別
 
@@ -187,7 +187,7 @@ HMENU GetMenuByName(
 
 返回添加到[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)的功能表名稱清單。
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 控制[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)在顯示新的彈出式功能表時是否關閉活動彈出式功能表。
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
@@ -303,7 +303,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 *uiMenuResId*<br/>
 [在]此方法將顯示的功能表的資源 ID。
 
-*X.*<br/>
+*x*<br/>
 [在]用戶端座標中快捷功能表的水準偏移。
 
 *Y*<br/>
@@ -352,7 +352,7 @@ virtual UINT TrackPopupMenu(
 *赫梅努普*<br/>
 [在]此方法顯示的快捷功能表的句柄。
 
-*X.*<br/>
+*x*<br/>
 [在]用戶端座標中快捷功能表的水準偏移。
 
 *Y*<br/>

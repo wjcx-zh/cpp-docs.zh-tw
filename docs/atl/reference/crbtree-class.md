@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331239"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746573"
 ---
 # <a name="crbtree-class"></a>CRBTree 類別
 
@@ -159,7 +159,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 索引鍵值。
 
 ### <a name="return-value"></a>傳回值
@@ -185,10 +185,10 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *Pos*<br/>
 位置值。
 
-*關鍵*<br/>
+*key*<br/>
 接收金鑰的變數。
 
-*值*<br/>
+*value*<br/>
 接收值的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -276,7 +276,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 調用此方法獲取存儲在地圖中的元素的鍵和值,並將位置推進到下一個元素。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -288,10 +288,10 @@ void GetNextAssoc(
 *Pos*<br/>
 位置計數器,由以前對[CRBTree 方法的呼叫回:取得頭位置](#getheadposition)或[CRBTree::尋找第一鍵後](#findfirstkeyafter)。
 
-*關鍵*<br/>
+*key*<br/>
 指定樹鍵類型的範本參數。
 
-*值*<br/>
+*value*<br/>
 指定樹值類型的範本參數。
 
 ### <a name="remarks"></a>備註
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 呼叫此方法從`CRBTree`物件中刪除所有元素。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ void RemoveAll() throw();
 
 呼叫此方法以移除物件中給定位置的元素`CRBTree`。
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ void RemoveAt(POSITION pos) throw();
 
 呼叫此方法以變更儲存在物件中給定位置的值`CRBTree`。
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 
@@ -467,7 +467,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 *Pos*<br/>
 位置計數器,由以前對[CRBTree 方法的呼叫回:取得頭位置](#getheadposition)或[CRBTree::尋找第一鍵後](#findfirstkeyafter)。
 
-*值*<br/>
+*value*<br/>
 要新增到物件的值`CRBTree`。
 
 ### <a name="remarks"></a>備註

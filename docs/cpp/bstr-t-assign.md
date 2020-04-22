@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190638"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749718"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-將 `BSTR` 複製到 **_** `bstr_t`所包裝的 `BSTR`。
+將`BSTR`複製到`BSTR`由**的**`bstr_t`包裝中。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 void Assign(
    BSTR s
 );
@@ -34,7 +34,7 @@ void Assign(
 
 ## <a name="remarks"></a>備註
 
-**Assign**會執行二進位複製，這表示不論內容為何，都會複製整個 `BSTR` 長度。
+**分配**執行二進位副本,`BSTR`這意味著複製的整個長度,無論內容如何。
 
 ## <a name="example"></a>範例
 
@@ -109,7 +109,7 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**END Microsoft 特定的**
+**結束微軟的**
 
 ## <a name="see-also"></a>另請參閱
 

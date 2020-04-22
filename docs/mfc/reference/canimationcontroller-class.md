@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369759"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750186"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 類別
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 由框架調用,以在計劃動畫時清理組。
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -716,7 +716,7 @@ virtual void OnAnimationIntegerValueChanged(
 *pObject*<br/>
 指向動畫物件的指標,該物件包含其值已更改的動畫變數。
 
-*變動*<br/>
+*變數*<br/>
 指向動畫變數的指標。
 
 *newValue*<br/>
@@ -813,7 +813,7 @@ virtual void OnAnimationValueChanged(
 *pObject*<br/>
 指向動畫物件的指標,該物件包含其值已更改的動畫變數。
 
-*變動*<br/>
+*變數*<br/>
 指向動畫變數的指標。
 
 *newValue*<br/>
@@ -1010,7 +1010,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 
 從動畫控制器中刪除所有動畫組。
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ void RemoveAllAnimationGroups();
 
 從動畫控制器中刪除具有指定 ID 的動畫組。
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 
 從動畫控制器中刪除動畫物件。
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ void RemoveAnimationObject(
 
 從屬於指定組的動畫物件中刪除過渡。
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ BOOL ScheduleGroup(
 
 在動畫控制器和窗口之間建立關係。
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 

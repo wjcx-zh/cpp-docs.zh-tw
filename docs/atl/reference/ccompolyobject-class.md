@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: e30afef455db5f83afca8ff9e515f39f015c3b8a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c880d170a03196d0e15ea8741c786e560d90ddc4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327565"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747777"
 ---
 # <a name="ccompolyobject-class"></a>CComPoly 物件類別
 
@@ -179,7 +179,7 @@ HRESULT FinalConstruct();
 
 在物件銷毀期間調用此方法釋放[m_contained](#m_contained)數據成員。
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -212,7 +212,7 @@ HRESULT QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>參數
 
-*Q*<br/>
+*問*<br/>
 COM 介面。
 
 *Iid*<br/>

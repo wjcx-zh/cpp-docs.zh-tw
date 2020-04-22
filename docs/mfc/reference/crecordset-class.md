@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368369"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750499"
 ---
 # <a name="crecordset-class"></a>CRecordset 類別
 
@@ -331,7 +331,7 @@ BOOL CanBookmark() const;
 
 請求數據源取消正在進行的非同步操作或從第二個線程取消進程。
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ void Cancel();
 
 在調用[更新](#update)之前,取消由[編輯](#edit)或[AddNew](#addnew)操作引起的任何掛起更新。
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ BOOL FlushResultSet();
 
 獲取當前記錄的書籤值。
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ virtual CString GetDefaultSQL();
 
 檢索目前記錄中的欄位資料。
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ short GetODBCFieldCount() const;
 
 獲取有關記錄集中的欄位的資訊。
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ WORD GetRowStatus(WORD wRow) const;
 
 確定記錄集中當前記錄的索引以及是否看到最後一條記錄。
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ virtual void Move(
 
 使第一行中的第一個記錄成為當前記錄。
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ void MoveFirst();
 
 使最後一個完整行中的第一個記錄成為當前記錄。
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ void MoveLast();
 
 使下一行中的第一個記錄成為當前記錄。
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ void MoveNext();
 
 使上一行中的第一個記錄成為當前記錄。
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ virtual BOOL Open(
 
 更新當前行集中行的數據和狀態。
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ virtual BOOL Requery();
 
 將記錄集放在與指定記錄編號對應的記錄上。
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ void SetAbsolutePosition(long nRows);
 
 在包含指定書籤的記錄上定位記錄集。
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ void SetBookmark(const CDBVariant& varBookmark);
 
 將記錄集的欄位數據成員標記為已更改或未更改。
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 
 將記錄集的欄位資料成員標記為 Null(具體沒有值)或非 Null。
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 
 將鎖定模式設置為「樂觀」鎖定(預設)或「悲觀」鎖定。 確定如何鎖定記錄以進行更新。
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ void SetLockingMode(UINT nMode);
 
 將參數標記為 Null(具體沒有值)或非 Null。
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ void SetParamNull(
 
 將游標移動到當前行集中的行。
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 

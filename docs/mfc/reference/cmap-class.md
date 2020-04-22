@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbb34d4db41ef11cd01a6a8a7f20cafa0e737268
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370100"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749070"
 ---
 # <a name="cmap-class"></a>CMap 類別
 
@@ -211,7 +211,7 @@ UINT GetHashTableSize() const;
 
 在 中檢索地圖`rNextPosition`元素 ,`rNextPosition`然後更新 以引用地圖中的下一個元素。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     KEY& rKey,
@@ -289,7 +289,7 @@ POSITION GetStartPosition() const;
 
 初始化哈希表。
 
-```
+```cpp
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```
 
@@ -338,7 +338,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *ARG_KEY*<br/>
 指定*鍵*值類型的範本參數。
 
-*關鍵*<br/>
+*key*<br/>
 指定標識要備份的元素的鍵。
 
 *價值*<br/>
@@ -375,7 +375,7 @@ VALUE& operator[](arg_key key);
 *ARG_KEY*<br/>
 指定鍵值類型的範本參數。
 
-*關鍵*<br/>
+*key*<br/>
 用於從映射檢索值的鍵。
 
 ### <a name="remarks"></a>備註
@@ -447,7 +447,7 @@ CPair* PLookup(ARG_KEY key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 要搜索的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -466,7 +466,7 @@ CPair* PLookup(ARG_KEY key);
 
 通過調用全域説明器函數`DestructElements`從此映射中刪除所有值。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -491,7 +491,7 @@ BOOL RemoveKey(ARG_KEY key);
 *ARG_KEY*<br/>
 指定鍵類型的範本參數。
 
-*關鍵*<br/>
+*key*<br/>
 要刪除的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -510,7 +510,7 @@ BOOL RemoveKey(ARG_KEY key);
 
 主要是指在地圖中插入元素。
 
-```
+```cpp
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```
 
@@ -519,7 +519,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 *ARG_KEY*<br/>
 指定*鍵*參數類型的樣本參數。
 
-*關鍵*<br/>
+*key*<br/>
 指定新元素的鍵。
 
 *ARG_VALUE*<br/>

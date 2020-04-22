@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: ceb9aeca6b99e7fc9d08625e11cbdb182fb3dc9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330536"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747356"
 ---
 # <a name="ctokenprivileges-class"></a>CToken 特權類
 
@@ -166,7 +166,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 從`CTokenPrivileges`訪問權杖物件中刪除所有許可權。
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -178,7 +178,7 @@ void DeleteAll() throw();
 
 檢索訪問權杖物件中包含的特權的`CTokenPrivileges`顯示名稱。
 
-```
+```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
@@ -221,7 +221,7 @@ UINT GetLength() const throw();
 
 從`CTokenPrivileges`物件檢索本地唯一標識符 (LUID) 和屬性標誌。
 
-```
+```cpp
 void GetLuidsAndAttributes(
     CLUIDArray* pPrivileges,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -243,7 +243,7 @@ void GetLuidsAndAttributes(
 
 從`CTokenPrivileges`物件檢索名稱和屬性標誌。
 
-```
+```cpp
 void GetNamesAndAttributes(
     CNames* pNames,
     CAttributes* pAttributes = NULL) const throw(...);

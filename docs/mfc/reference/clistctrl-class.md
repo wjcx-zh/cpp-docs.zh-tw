@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 19939ce7dacc1b826e0a2f067c43fc65db328a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370157"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749145"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -584,7 +584,7 @@ BOOL Arrange(UINT nCode);
 
 取消項目文字編輯操作。
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 指定清單控制項樣式。 將清單控制樣式的任意組合應用於控制項。 有關這些樣式的完整清單,請參閱 Windows SDK 中的[清單檢視視窗樣式](/windows/win32/Controls/list-view-window-styles)。 使用[Set 擴充樣式](#setextendedstyle)設定特定於控制項的擴充樣式。
 
 *矩形*<br/>
-指定清單控制項大小和位置。 它可以是`CRect`物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+指定清單控制項大小和位置。 它可以是`CRect`物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *pparentwnd*<br/>
 指定清單控制檔的父視窗(通常為`CDialog`。 它不得為 NULL。
@@ -666,7 +666,7 @@ virtual BOOL CreateEx(
 指定清單控制項樣式。 將清單控制樣式的任意組合應用於控制項。 有關這些樣式的完整清單,請參閱 Windows SDK 中的[清單檢視視窗樣式](/windows/win32/Controls/list-view-window-styles)。
 
 *矩形*<br/>
-對[RECT](/previous-versions/dd162897\(v=vs.85\))結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
 *pparentwnd*<br/>
 指向控件的父視窗的指標。
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 要創建其拖動圖像清單的項索引。
 
 *lpPoint*<br/>
-在檢視座標中接收影像左上角的初始位置的[POINT](/previous-versions/dd162805\(v=vs.85\))結構的位址。
+在檢視座標中接收影像左上角的初始位置的[POINT](/windows/win32/api/windef/ns-windef-point)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1413,7 +1413,7 @@ public:
 
 檢索組的指標。
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |參數|描述|
 |---------------|-----------------|
 |*iGroupId*|[在]指定群組。|
-|*lpRect*|[進出]指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。 如果此方法成功,則結構將接收*iGroupId*指定的組的矩形座標。|
+|*lpRect*|[進出]指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。 如果此方法成功,則結構將接收*iGroupId*指定的組的矩形座標。|
 |*iCoords*|[在]指定要檢索的矩形座標。 使用以下值之一:<br /><br /> - LVGGR_GROUP - (預設)整個展開的組的座標。<br />- LVGGR_HEADER - 僅座標的標頭(摺疊組)。<br />- LVGGR_SUBSETLINK - 僅座標子集連結(標記子集)。|
 
 ### <a name="return-value"></a>傳回值
@@ -1451,7 +1451,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>備註
 
-調用方負責分配*pRect*參數指向的[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+調用方負責分配*pRect*參數指向的[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 此方法發送[LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect)消息,這在 Windows SDK 中介紹。
 
@@ -1791,7 +1791,7 @@ BOOL GetItemIndexRect(
 |*pItem索引*|[在]指向子項的父項的[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標。<br /><br /> 調用方負責分配和設置[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的成員。 此參數不可以是 NULL。|
 |*iColumn*|[在]控件中列的零基索引。|
 |*整流型態*|[在]檢索邊界矩形的列表檢視子項的一部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS - 返回整個子項的邊界矩形,包括圖示和標籤。<br /><br /> LVIR_ICON - 返回圖示的邊界矩形或子項的小圖示。<br /><br /> LVIR_LABEL - 返回子項文字的邊界矩形。|
-|*普雷克*|[出]指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標,該結構接收有關子項的邊界矩形的資訊。<br /><br /> 調用方負責分配[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 此參數不可以是 NULL。|
+|*普雷克*|[出]指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,該結構接收有關子項的邊界矩形的資訊。<br /><br /> 調用方負責分配[RECT](/windows/win32/api/windef/ns-windef-rect)結構。 此參數不可以是 NULL。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1845,7 +1845,7 @@ BOOL GetItemPosition(
 要檢索其位置的項的索引。
 
 *lpPoint*<br/>
-在檢視座標中接收專案左上角位置的[POINT](/previous-versions/dd162805\(v=vs.85\))結構的位址。
+在檢視座標中接收專案左上角位置的[POINT](/windows/win32/api/windef/ns-windef-point)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1884,7 +1884,7 @@ BOOL GetItemRect(
 要檢索其位置的項的索引。
 
 *lpRect*<br/>
-接收邊界矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))結構的位址。
+接收邊界矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的位址。
 
 *n代碼*<br/>
 要為其檢索邊界矩形的列表視圖項的一部分。 其可以是下列其中一個值：
@@ -2221,7 +2221,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-接收檢視來源的[POINT](/previous-versions/dd162805\(v=vs.85\))結構的位址。
+接收檢視來源的[POINT](/windows/win32/api/windef/ns-windef-point)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-[RECT](/previous-versions/dd162897\(v=vs.85\))結構的位址。
+[RECT](/windows/win32/api/windef/ns-windef-rect)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2546,7 +2546,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 檢索清單檢視控制項的當前工作區。
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2835,7 +2835,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>參數
 
 *pPoint*<br/>
-指向 POINT[結構的](/previous-versions/dd162805\(v=vs.85\))指標,該結構包含命中測試座標,相對於清單控制項的工作區區域。
+指向 POINT[結構的](/windows/win32/api/windef/ns-windef-point)指標,該結構包含命中測試座標,相對於清單控制項的工作區區域。
 
 *plvim*<br/>
 指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)結構的指標,用於指定最接近點參數定義的座標的插入點。
@@ -3008,7 +3008,7 @@ LRESULT MoveGroup(
 
 將指定的項移到指定的群組中。
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3059,7 +3059,7 @@ BOOL RedrawItems(
 
 從清單檢視控制項中移除所有組。
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
@@ -3098,7 +3098,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 指定`CSize`水平和垂直滾動量(以像素為單位)的物件。 大小`y`成員*size*除 以清單檢視控制項列的高度(以像素為單位),控制項按生成的行數滾動。
 
 ### <a name="return-value"></a>傳回值
@@ -3387,7 +3387,7 @@ int SetGroupInfo(
 
 設置清單檢視控制件的元件。
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
@@ -3497,7 +3497,7 @@ x 軸圖示之間的距離(以像素為單位)。
 *cy*<br/>
 y 軸圖示之間的距離(以像素為單位)。
 
-*大小*<br/>
+*size*<br/>
 指定`CSize`x 軸和 y 軸圖示之間的距離(以像素為單位)的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -3693,7 +3693,7 @@ BOOL SetItem(
 
 準備列表檢視控制項以添加大量項。
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
@@ -3855,7 +3855,7 @@ BOOL SetItemPosition(
 要設置其位置的項的索引。
 
 *pt*<br/>
-指定專案左上角的新位置(在檢視座標中)的[POINT](/previous-versions/dd162805\(v=vs.85\))結構。
+指定專案左上角的新位置(在檢視座標中)的[POINT](/windows/win32/api/windef/ns-windef-point)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4156,7 +4156,7 @@ DWORD SetView(int iView);
 
 設定圖示可以在清單檢視控制項中顯示的區域。
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330691"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747574"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>快照財產頁頁課
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 對模態屬性表頁面中的數據進行了不可恢復的更改後,請調用此函數。
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ BOOL OnApply();
 
 當使用者單擊屬性頁的 **「幫助**」按鈕時,將調用此成員函數。
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ BOOL OnQueryCancel();
 
 當使用者按下 **「取消」** 按鈕時,將調用此成員函數。
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 呼叫此成員函數以啟用或禁用 **「立即應用程式」** 按鈕,具體取決於屬性頁中的設定是否應應用於相應的外部物件。
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

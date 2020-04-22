@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 900a312c97d7b83eac93a372be39a006b3c4344d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5ab7293f73429a93c3fcab243c2e34d3c78f28a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327056"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747714"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImplclass
 
@@ -119,7 +119,7 @@ HWND Create(
 *hWnd 父母*<br/>
 [在]擁有者視窗的句柄。
 
-**RECT&** *rect* [in] 指定對話框大小和位置的[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+**RECT&** *rect* [in] 指定對話框大小和位置的[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *德維尼帕拉姆*<br/>
 [在]指定要傳遞給WM_INITDIALOG訊息的*lParam*參數中的對話框的值。

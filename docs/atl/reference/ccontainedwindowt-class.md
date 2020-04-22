@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: cde9c73a195303e57758cb4f27184b5136bdaf14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327208"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747755"
 ---
 # <a name="ccontainedwindowt-class"></a>包含視窗 T 類別
 
@@ -214,7 +214,7 @@ HWND Create(
 [在]父視窗或擁有者視窗的句柄。
 
 *矩形*<br/>
-[在]指定視窗位置的[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 `RECT`可以通過指標或參考傳遞 。
+[在]指定視窗位置的[RECT](/windows/win32/api/windef/ns-windef-rect)結構。 `RECT`可以通過指標或參考傳遞 。
 
 *szWindow名稱*<br/>
 [在]指定視窗的名稱。 預設值是 NULL。
@@ -390,7 +390,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 更改將用於處理包含的視窗的消息的消息。
 
-```
+```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
 ```
 

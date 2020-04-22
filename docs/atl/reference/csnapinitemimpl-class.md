@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330719"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746422"
 ---
 # <a name="csnapinitemimpl-class"></a>快照項目類別
 
@@ -131,7 +131,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW項可以插入工具列檢視功能表或結果窗格上下文菜單的「查看子功能表」。
 
-*型別*<br/>
+*type*<br/>
 [在]指定物件的類型。 其值可以是下列其中一個值：
 
 - CCT_SCOPE範圍窗格上下文的數據物件。
@@ -155,7 +155,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 *lCommandID*<br/>
 [在]指定選單的命令識別碼。
 
-*型別*<br/>
+*type*<br/>
 [在]指定物件的類型。 其值可以是下列其中一個值：
 
 - CCT_SCOPE範圍窗格上下文的數據物件。
@@ -189,7 +189,7 @@ CreatePropertyPages(
 *龐克*<br/>
 [在]指向物件上的`IExtendPropertySheet`介面的指標,該介面包含有關節點的上下文資訊。
 
-*型別*<br/>
+*type*<br/>
 [在]指定物件的類型。 其值可以是下列其中一個值：
 
 - CCT_SCOPE範圍窗格上下文的數據物件。
@@ -359,7 +359,7 @@ STDMETHOD(Notify)(
 *P 元件*<br/>
 [出]指向實現`IComponent`的物件的指標。 如果未從`IComponent::Notify`轉發通知,則此參數為 NULL。
 
-*型別*<br/>
+*type*<br/>
 [在]指定物件的類型。 其值可以是下列其中一個值：
 
 - CCT_SCOPE範圍窗格上下文的數據物件。
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 呼叫此函數以修改插入物件(由*p插入允許*)指定的選單插入標誌。
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ void SetMenuInsertionFlags(
 
 呼叫此函數以在創建工具列之前修改卡入物件的任何工具列按鈕樣式。
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 調用此函數以在菜單項插入到卡入物件的上下文菜單之前對其進行修改。
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
@@ -473,7 +473,7 @@ void UpdateMenuState(
 *普布夫*<br/>
 [在]要更新的功能表項的字串的指標。
 
-*標誌*<br/>
+*flags*<br/>
 [在]指定新的狀態標誌。 這可以是以下旗標的組合:
 
 - MF_POPUP指定這是上下文菜單中的子菜單。 功能表項、插入點和進一步子功能表可以使用其`lCommandID``IInsertionPointID`作為添加到此子功能表。

@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: b8650f36ac3d190207870616754dcd596cb7cc45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eed41c2250728d257b6d303e79c3afd36a543dbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330797"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747650"
 ---
 # <a name="csimplemap-class"></a>C簡單對應類別
 
@@ -114,7 +114,7 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 索引鍵。
 
 *瓦爾*<br/>
@@ -178,7 +178,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 要搜尋的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -266,7 +266,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -283,7 +283,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -294,7 +294,7 @@ BOOL Remove(const TKey& key);
 
 刪除所有鍵和值。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -346,7 +346,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 索引鍵。
 
 *瓦爾*<br/>
@@ -372,7 +372,7 @@ BOOL SetAtIndex(
 *nIndex*<br/>
 索引,引用要更改的鍵和值配對。
 
-*關鍵*<br/>
+*key*<br/>
 新索引鍵。
 
 *瓦爾*<br/>

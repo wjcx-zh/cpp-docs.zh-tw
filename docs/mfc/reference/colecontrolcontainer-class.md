@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: b1737b2ac114181a4245fff027b756ca30b64129
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366176"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749022"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 類別
 
@@ -359,7 +359,7 @@ BOOL CreateControl(
 
 創建 OLE 字型。
 
-```
+```cpp
 void CreateOleFont(CFont* pFont);
 ```
 
@@ -389,7 +389,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 
 確定容器是忽略來自附加控制網站的事件還是接受這些事件。
 
-```
+```cpp
 void FreezeAllEvents(BOOL bFreeze);
 ```
 
@@ -543,7 +543,7 @@ virtual BOOL HandleWindowlessMessage(
 
 ### <a name="parameters"></a>參數
 
-*訊息*<br/>
+*message*<br/>
 視窗消息的標識碼,由 Windows 提供。
 
 *wParam*<br/>
@@ -760,7 +760,7 @@ virtual LRESULT SendDlgItemMessage(
 *nID*<br/>
 指定接收訊息的控制項的識別碼。
 
-*訊息*<br/>
+*message*<br/>
 指定要發送的消息。
 
 *wParam*<br/>

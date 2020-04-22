@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317725"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747092"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 
 新增值到`x`與中`y``CPoint`。
 
-```
+```cpp
 void Offset(int xOffset, int yOffset) throw();
 void Offset(POINT point) throw();
 void Offset(SIZE size) throw();
@@ -156,7 +156,7 @@ void Offset(SIZE size) throw();
 *點*<br/>
 指定要偏移的`CPoint`量`CPoint`( [POINT](/windows/win32/api/windef/ns-windef-point)或 )。
 
-*大小*<br/>
+*size*<br/>
 指定要偏移的`CPoint`量[(SIZE](/windows/win32/api/windef/ns-windef-size)或["大小](../../atl-mfc-shared/reference/csize-class.md))。
 
 ### <a name="example"></a>範例
@@ -209,14 +209,14 @@ BOOL operator!=(POINT point) const throw();
 
 第一個重載到`CPoint`新增大小到 。
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 包含[SIZE](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *點*<br/>
@@ -238,14 +238,14 @@ void operator+=(POINT point) throw();
 
 第一個重載從 中減`CPoint`去 大小。
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 包含[SIZE](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *點*<br/>
@@ -275,7 +275,7 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 包含[SIZE](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *點*<br/>
@@ -314,7 +314,7 @@ CPoint operator-() const throw();
 *點*<br/>
 [POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
-*大小*<br/>
+*size*<br/>
 [大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *lpRect*<br/>

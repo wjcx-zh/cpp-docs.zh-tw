@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361432"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749746"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 類別
 
@@ -581,7 +581,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 
 將指定的功能區元素添加到功能區列的選項卡行。
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ BOOL CreateEx(
 
 關閉功能區欄上的所有鍵尖控件。
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 啟用或禁用功能區欄的鍵尖功能。
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 啟用或禁用**列印預覽**功能。
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 啟用或禁用功能區列上的工具提示和可選工具提示說明。
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 
 調整功能區列和父視窗中所有項的佈局,然後重繪整個視窗。
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 檢索指向具有特定命令 ID 的所有功能區元素的指標陣列。
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ DWORD GetHideFlags() const;
 
 檢索功能區列上指定功能區元素集合的命令指示。
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
 
 檢索快速訪問工具列上功能區元素的命令指示指示清單。
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ BOOL HideAllContextCategories();
 
 隱藏功能區列上的所有關鍵提示。
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ BOOL OnSysKeyUp(
 
 從檢視中刪除工具提示。
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ virtual void RecalcLayout();
 
 從功能區列中刪除所有功能區類別。
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ void RemoveAllCategories();
 
 從索引標籤區域中移除所有功能區項目。
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ BOOL SetActiveCategory(
 
 將屬於多文件介面 (MDI) 子視窗的功能區列上的系統按鈕關聯到指定的 MDI 子視窗。
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 將應用程式功能區按鈕指派給功能區列。
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ BOOL SetElementKeys(
 
 在使用者按下功能區列中包含的鍵提示時設置鍵盤導航級別。
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ void SetKeyboardNavigationLevel(
 
 當多文件介面 (MDI) 子視窗的視窗大小進入或離開最大化狀態時,調整功能區列。
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ void SetMaximizeMode(
 
 將一或多個功能區項目加入至快速存取工具列。
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,7 +1890,7 @@ void SetQuickAccessCommands(
 
 將快速存取工具列設置為預設狀態。
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
@@ -1913,7 +1913,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 將快速存取工具列定位在功能區列上方或下方。
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 設置功能區列的固定寬度的正尺寸和大尺寸工具提示固定寬度。
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ void SetTooltipFixedWidth(
 
 顯示或隱藏指定的功能區分類。
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 顯示或隱藏具有指定識別碼的內容分類。
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 在功能區列上顯示每個功能區元素的鍵提示。
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 在最小化和最大化狀態之間切換功能區列。
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 啟用或禁用功能區 Windows 7 外觀(小型矩形應用程式按鈕)。
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

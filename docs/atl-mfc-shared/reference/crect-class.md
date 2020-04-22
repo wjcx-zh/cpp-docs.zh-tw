@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: c59ed587e2c8e51f5c08a026a7ee0b9d0af25168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99eca7fe3a9c84f8b79ef3d694e27b6dd74dcd9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317709"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747063"
 ---
 # <a name="crect-class"></a>CRect 類別
 
@@ -242,7 +242,7 @@ void CMyDlg::OnPaint()
 
 將`lpSrcRect`矩形複製`CRect`到 中。
 
-```
+```cpp
 void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
@@ -294,7 +294,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *t*<br/>
 指定的頂部`CRect`。
 
-*R*<br/>
+*r*<br/>
 指定的正確位置`CRect`。
 
 *B*<br/>
@@ -309,7 +309,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *點*<br/>
 指定要建構的矩形的原點。 對應於左上角。
 
-*大小*<br/>
+*size*<br/>
 指定要建構的矩形從左上角到右下角的位移。
 
 *topLeft*<br/>
@@ -366,7 +366,7 @@ ASSERT(rect5 == rect4);
 
 `DeflateRect``CRect`通過移動其兩側向其中心。
 
-```
+```cpp
 void DeflateRect(int x, int y) throw();
 void DeflateRect(SIZE size) throw();
 void DeflateRect(LPCRECT lpRect) throw();
@@ -375,13 +375,13 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要放氣 的左側和右側的`CRect`單位 數。
 
 *Y*<br/>
 指定要放氣 的上部和下部的`CRect`單位 數。
 
-*大小*<br/>
+*size*<br/>
 指定要放放`CRect`的單位數[的大小或](/windows/win32/api/windef/ns-windef-size)[大小。](csize-class.md) 該`cx`值指定用於放氣左右兩側的單位數`cy`, 該值指定用於放氣頂部和底部的單位數。
 
 *lpRect*<br/>
@@ -393,7 +393,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
 *t*<br/>
 指定要放氣 頂部的`CRect`單位 數。
 
-*R*<br/>
+*r*<br/>
 指定要放氣 右側的`CRect`單位 數。
 
 *B*<br/>
@@ -492,7 +492,7 @@ ASSERT(nHt == 40);
 
 `InflateRect`通過將其側面`CRect`從中心移開而膨脹。
 
-```
+```cpp
 void InflateRect(int x, int y) throw();
 void InflateRect(SIZE size) throw();
 void InflateRect(LPCRECT lpRect) throw();
@@ -501,13 +501,13 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定要膨脹 的左側和右側的`CRect`單位 數。
 
 *Y*<br/>
 指定要膨脹 的上部和底部的`CRect`單位 數。
 
-*大小*<br/>
+*size*<br/>
 指定要膨脹的單位數的[SIZE](/windows/win32/api/windef/ns-windef-size)或`CRect`[CSize。](csize-class.md) 該`cx`值指定要膨脹左右兩側的單位數`cy`, 該值指定要膨脹頂部和底部的單位數。
 
 *lpRect*<br/>
@@ -519,7 +519,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *t*<br/>
 指定要膨脹 的`CRect`單位 數。
 
-*R*<br/>
+*r*<br/>
 指定要膨脹 的右側的`CRect`單位 數。
 
 *B*<br/>
@@ -647,13 +647,13 @@ ASSERT(!rectNotNull.IsRectNull());
 
 呼叫此函數以將矩形移動到*x*指定的絕對 x 座標。
 
-```
+```cpp
 void MoveToX(int x) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 矩形左上角的絕對 x 座標。
 
 ### <a name="example"></a>範例
@@ -670,14 +670,14 @@ ASSERT(rect == CRect(10, 0, 110, 100));
 
 呼叫此函數以將矩形移動到指定的絕對 x 座標和 y 座標。
 
-```
+```cpp
 void MoveToXY(int x, int y) throw();
 void MoveToXY(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 矩形左上角的絕對 x 座標。
 
 *Y*<br/>
@@ -699,7 +699,7 @@ ASSERT(rect == CRect(10, 10, 110, 110));
 
 呼叫此函數以將矩形移動到*y*指定的絕對 y 座標。
 
-```
+```cpp
 void MoveToY(int y) throw();
 ```
 
@@ -721,7 +721,7 @@ ASSERT(rect == CRect(0, 10, 100, 110));
 
 規範化`CRect`,以便高度和寬度均為正數。
 
-```
+```cpp
 void NormalizeRect() throw();
 ```
 
@@ -746,7 +746,7 @@ ASSERT(rect1 == rect2);
 
 按`CRect`指定的偏移量移動。
 
-```
+```cpp
 void OffsetRect(int x, int y) throw();
 void OffsetRect(POINT point) throw();
 void OffsetRect(SIZE size) throw();
@@ -754,7 +754,7 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 指定向左或向右移動的金額。 向左移動必須為負數。
 
 *Y*<br/>
@@ -763,7 +763,7 @@ void OffsetRect(SIZE size) throw();
 *點*<br/>
 包含[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件,指定要移動的兩個維度。
 
-*大小*<br/>
+*size*<br/>
 包含指定要移動的兩個維度[的 SIZE](/windows/win32/api/windef/ns-windef-size)結構或[CSize](csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
@@ -810,7 +810,7 @@ operator LPRECT() throw();
 
 將*srcRect*`CRect`分配給 。
 
-```
+```cpp
 void operator=(const RECT& srcRect) throw();
 ```
 
@@ -913,7 +913,7 @@ ASSERT(rect3 != test);
 
 前兩個重載按`CRect`指定的偏移量移動。
 
-```
+```cpp
 void operator+=(POINT point) throw();
 void operator+=(SIZE size) throw();
 void operator+=(LPCRECT lpRect) throw();
@@ -924,7 +924,7 @@ void operator+=(LPCRECT lpRect) throw();
 *點*<br/>
 指定要移動矩形的單位數的[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件。
 
-*大小*<br/>
+*size*<br/>
 指定要移動矩形的單位數的[SIZE](/windows/win32/api/windef/ns-windef-size)結構或[CSize](csize-class.md)物件。
 
 *lpRect*<br/>
@@ -951,7 +951,7 @@ ASSERT(rect1 == rect2);
 
 前兩個重載按`CRect`指定的偏移量移動。
 
-```
+```cpp
 void operator-=(POINT point) throw();
 void operator-=(SIZE size) throw();
 void operator-=(LPCRECT lpRect) throw();
@@ -962,7 +962,7 @@ void operator-=(LPCRECT lpRect) throw();
 *點*<br/>
 指定要移動矩形的單位數的[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件。
 
-*大小*<br/>
+*size*<br/>
 指定要移動矩形的單位數的[SIZE](/windows/win32/api/windef/ns-windef-size)結構或[CSize](csize-class.md)物件。
 
 *lpRect*<br/>
@@ -989,7 +989,7 @@ ASSERT(rect1 == rectResult);
 
 設置`CRect`等於和`rect`的`CRect`交集。
 
-```
+```cpp
 void operator&=(const RECT& rect) throw();
 ```
 
@@ -1013,7 +1013,7 @@ void operator&=(const RECT& rect) throw();
 
 集`CRect`等於和`rect`的`CRect`聯合。
 
-```
+```cpp
 void operator|=(const RECT& rect) throw();
 ```
 
@@ -1055,7 +1055,7 @@ CRect operator+(SIZE size) const throw();
 *點*<br/>
 指定要移動返回值的單位數的[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件。
 
-*大小*<br/>
+*size*<br/>
 指定要移動返回值的單位數的[SIZE](/windows/win32/api/windef/ns-windef-size)結構或[CSize](csize-class.md)物件。
 
 *lpRect*<br/>
@@ -1098,7 +1098,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 *點*<br/>
 指定[POINT](/windows/win32/api/windef/ns-windef-point)要移動`CPoint`返回 值的單位數的 POINT 結構或物件。
 
-*大小*<br/>
+*size*<br/>
 指定[SIZE](/windows/win32/api/windef/ns-windef-size)要移動`CSize`返回 值的單位數的 SIZE 結構或物件。
 
 *lpRect*<br/>
@@ -1255,7 +1255,7 @@ ASSERT(rect.PtInRect(pt));
 
 將`CRect`的尺寸設置到指定的座標。
 
-```
+```cpp
 void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
@@ -1285,7 +1285,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 
 通過將`CRect`所有座標設置為零,使矩形變為空矩形。
 
-```
+```cpp
 void SetRectEmpty() throw();
 ```
 

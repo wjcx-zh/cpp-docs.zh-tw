@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366583"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749438"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 轉換巨集
 
@@ -114,7 +114,7 @@ OLE2T   (LPCOLESTR) -> (LPCSTR)
 
 不要在緊密迴圈中使用巨集。 例如，不要撰寫以下類型的程式碼：
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 上述程式碼可能會根據字串 `lpsz` 的內容造成在堆疊上配置數 MB 的記憶體！ 這也需要時間轉換迴圈中每個反覆項目的字串。 相反地，請將這類常數轉換移至迴圈外：
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 如果字串不是常數，則請在函式中封裝呼叫的方法。 這將允許每一次都釋放轉換緩衝區。 例如：
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330300"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745992"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 類別
 
@@ -147,7 +147,7 @@ HWND Create(
 [在]父視窗或擁有者視窗的句柄。
 
 *矩形*<br/>
-[在]指定視窗位置的[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 `RECT`可以通過指標或參考傳遞 。
+[在]指定視窗位置的[RECT](/windows/win32/api/windef/ns-windef-rect)結構。 `RECT`可以通過指標或參考傳遞 。
 
 *szWindow名稱*<br/>
 [在]指定視窗的名稱。 預設值是 NULL。

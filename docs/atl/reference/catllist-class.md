@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318934"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748732"
 ---
 # <a name="catllist-class"></a>CAtlList 類別
 
@@ -153,7 +153,7 @@ POSITION AddHead(INARGTYPE element);
 
 呼叫此方法以將現有清單添加到列表的頭部。
 
-```
+```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -200,7 +200,7 @@ POSITION AddTail(INARGTYPE element);
 
 呼叫此方法以將現有清單添加到此清單的尾部。
 
-```
+```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -221,7 +221,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 呼叫此方法以確認清單有效。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -599,7 +599,7 @@ bool IsEmpty() const throw();
 
 呼叫此方法將指定元素移動到列表的頭部。
 
-```
+```cpp
 void MoveToHead(POSITION pos) throw();
 ```
 
@@ -620,7 +620,7 @@ void MoveToHead(POSITION pos) throw();
 
 呼叫此方法將指定元素移動到清單的尾部。
 
-```
+```cpp
 void MoveToTail(POSITION pos) throw();
 ```
 
@@ -641,7 +641,7 @@ void MoveToTail(POSITION pos) throw();
 
 呼叫此方法以從清單中刪除所有元素。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -657,7 +657,7 @@ void RemoveAll() throw();
 
 呼叫此方法從清單中刪除單個元素。
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -700,7 +700,7 @@ E RemoveHead();
 
 呼叫此方法以刪除清單頭的元素,而不返回值。
 
-```
+```cpp
 void RemoveHeadNoReturn() throw();
 ```
 
@@ -736,7 +736,7 @@ E RemoveTail();
 
 呼叫此方法以刪除清單尾部的元素,而不返回值。
 
-```
+```cpp
 void RemoveTailNoReturn() throw();
 ```
 
@@ -752,7 +752,7 @@ void RemoveTailNoReturn() throw();
 
 呼叫此方法以在清單中的給定位置設定元素的值。
 
-```
+```cpp
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
@@ -776,7 +776,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 呼叫此方法以交換清單中的元素。
 
-```
+```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 

@@ -1,91 +1,92 @@
 ---
 title: 建立 C++ 主控台應用程式專案
-description: 在 Visual C++ 中建立 Hello World 主控台應用程式
+description: 在可視化工作室中使用 Microsoft C++創建 Hello World 控制台應用程式。
 ms.custom: mvc
-ms.date: 04/02/2019
+ms.date: 04/20/2020
 ms.topic: tutorial
-ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07e88da9a8a3712e1d37e319c29fd25aebce8ea7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314868"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749305"
 ---
 # <a name="create-a-c-console-app-project"></a>建立 C++ 主控台應用程式專案
 
-通常 C++ 程式設計師的起點都是 "Hello, world!" 應用程式 (在命令列上執行)。 這是什麼在您將建立 Visual Studio 在此步驟。
+通常 C++ 程式設計師的起點都是 "Hello, world!" 應用程式 (在命令列上執行)。 這是您將在 Visual Studio 中創建的步驟。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 安裝 Visual Studio 和使用 C++ 進行桌面開發工作負載，並在您的電腦上執行。 若尚未安裝，請參閱 [Install C++ support in Visual Studio](vscpp-step-0-installation.md) (在 Visual Studio 中安裝 C++ 支援)。
 
 ## <a name="create-your-app-project"></a>建立您的應用程式專案
 
-Visual Studio 會使用「專案」來組織應用程式的程式碼，並使用「解決方案」來組織專案。 專案包含所有用來建置您應用程式的選項、組態及規則，並管理專案檔案及任何外部檔案間的關聯。 若要建立您的應用程式，首先，您會建立新的專案及解決方案。
+Visual Studio 會使用「專案」** 來組織應用程式的程式碼，並使用「解決方案」** 來組織專案。 專案包含用來建置您應用程式的所有選項、組態和規則。 它管理專案的所有檔和任何外部文件之間的關係。 若要建立您的應用程式，首先，您會建立新的專案及解決方案。
 
 ::: moniker range=">=vs-2019"
 
-1. 在 Visual Studio 中開啟**檔案**功能表，然後選擇**新增** > **專案**以開啟**建立新的專案**對話方塊。 選取 [**主控台應用程式**範本，然後選擇**下一步]**。
+1. 在可視化工作室中,打開 **「檔**」功能表並選擇 **「新建>專案**」以打開「**創建新專案」** 對話方塊。 選擇具有**C++、Windows**和**主控台**標記**Windows****的主控台應用**範本,然後選擇 **「下一步**」 。。
 
-   ![建立新的專案](media/vs2019-choose-console-app.png "開啟 建立新的 [專案] 對話方塊")
+   ![建立新專案](media/vs2019-choose-console-app.png "開啟「建立新項目」對話框")
 
-1. 在 [**設定新專案**] 對話方塊中，輸入*HelloWorld*中**專案名稱**編輯方塊。 選擇**建立**建立專案。
+1. 在「**設定新項目**」對話框中,在 **「專案名稱**編輯」框中輸入*HelloWorld。* 選擇 **「建立**」 以建立專案。
 
-   ![命名和建立新的專案](media/vs2019-configure-new-project-hello-world.png "名稱，並建立新的專案")
+   ![具建立新項目](media/vs2019-configure-new-project-hello-world.png "具建立新項目")
 
-   Visual Studio 會建立新的專案，可供您加入和編輯您的原始程式碼。 根據預設，程式碼中的"Hello World"應用程式與填滿的主控台應用程式範本：
+   可視化工作室創建一個新專案。 它可供您添加和編輯原始碼。 預設情況下,主控台應用範本使用「Hello World」應用填充源代碼:
 
-   ![在 IDE 中的 hello World 專案](media/vs2019-hello-world-code.png "在 IDE 中的 Hello World 專案")
+   ![你好世界專案在IDE](media/vs2019-hello-world-code.png "你好世界專案在IDE")
 
-   在編輯器中，程式碼看起來像這樣，您就可以繼續下一個步驟，並建置您的應用程式。
+   當編輯器中的代碼如下所示時,您可以繼續下一步並構建應用。
+
+[發生問題。](#create-your-app-project-issues)
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-1. 在 Visual Studio 中開啟**檔案**功能表，然後選擇**新增 > 專案**以開啟**新專案**對話方塊。
+1. 在可視化工作室中,打開 **「檔**」功能表並選擇 **「新專案>專案**以打開 **」新專案**「對話框。
 
    ![開啟 [新增專案] 對話方塊](media/vscpp-file-new-project.gif "開啟 [新增專案] 對話方塊")
 
-1. 在 **新的專案**對話方塊中，選取**已安裝**， **Visual C++** 如果它尚未選取，然後選擇 **空專案**範本。 在 **名稱**欄位中，輸入*HelloWorld*。 選擇**確定**建立專案。
+1. 在"**新項目"** 對話方塊中,選擇 **「 已安裝> 可視化 C++(** 如果尚未選中),然後選擇 **「空專案**」樣本。 在 **「名稱」** 欄位中,輸入*HelloWorld*。 選擇 **「確定」** 以建立專案。
 
-   ![命名和建立新的專案](media/vscpp-concierge-project-name-callouts.png "名稱，並建立新的專案")
+   ![具建立新項目](media/vscpp-concierge-project-name-callouts.png "具建立新項目")
 
-Visual Studio 會建立新的空白專案，可供您針對您想要建立並加入您的原始程式碼檔的應用程式的類型特製化。 您會執行下一步。
+可視化工作室創建一個新的空專案。 它可供您專門用於要創建的應用類型並添加原始程式碼檔。 您接下來將執行該作業。
 
 [發生問題。](#create-your-app-project-issues)
 
-## <a name="make-your-project-a-console-app"></a>主控台應用程式，使您的專案
+## <a name="make-your-project-a-console-app"></a>使項目成為主控台應用
 
-Visual Studio 可以為 Windows 和其他平台建立各式各樣的應用程式和元件。 **空專案**尚未有關何種應用程式，它會建立特定的範本。 若要建立*主控台應用程式*，下列其中一個執行主控台或命令提示字元 視窗中，您必須告訴 Visual Studio 建置您的應用程式使用 「 主控台 」 子系統。
+Visual Studio 可以為 Windows 和其他平台創建各種應用和元件。 **空專案**模板不特定於它創建的應用類型。 *控制台應用*是在主控台或命令提示視窗中運行的應用。 要建立一個,您必須告訴 Visual Studio 構建應用以使用主控台子系統。
 
-1. 在 Visual Studio 中開啟**專案**功能表，然後選擇**屬性**以開啟**HelloWorld 屬性頁**對話方塊。
+1. 在可視化工作室中,打開 **「專案」** 功能表並選擇 **「屬性**」以打開**HelloWorld 屬性頁**對話框。
 
-1. 在**屬性頁** 對話方塊底下**組態屬性**，選取**連結器**，**系統**，然後選擇 編輯 方塊旁**子系統**屬性。 在 顯示下拉式功能表中，選取**主控台 (/ /SUBSYSTEM: CONSOLE)**。 選取 [確定] 儲存您的變更。
+1. 在 **「屬性頁」** 對話方塊中,選擇 **「設定屬性> 連結器>系統**,然後選擇**子系統**屬性旁邊的編輯框。 在顯示的下拉菜單中,選擇**主控台(/SUBSYSTEM:CONSOLE)。** 選取 [確定]**** 儲存您的變更。
 
-   ![開啟 [屬性頁] 對話方塊](media/vscpp-properties-linker-subsystem.gif "開啟 [屬性頁] 對話方塊")
+   ![開啟屬性頁對話框](media/vscpp-properties-linker-subsystem.gif "開啟屬性頁對話框")
 
-Visual Studio 現在知道要建置您的專案，以在主控台視窗中執行。 接下來，您將加入原始程式碼檔，並輸入您的應用程式程式碼。
+Visual Studio 現在知道要構建要在主控台視窗中運行的專案。 接下來,您將添加一個原始程式碼檔,並輸入應用的代碼。
 
 [發生問題。](#make-your-project-a-console-app-issues)
 
-## <a name="add-a-source-code-file"></a>加入原始程式碼檔
+## <a name="add-a-source-code-file"></a>新增原始碼檔案
 
-1. 在 **方案總管 中**，選取 HelloWorld 專案。 在功能表列上選擇 **專案**，**加入新項目**以開啟**加入新項目**對話方塊。
+1. 在**解決方案資源管理器中**,選擇HelloWorld專案。 在選單列上,選擇 **「專案**」,**添加新專案**以打開「**新增新專案」** 對話方塊。
 
-1. 在 **加入新項目**對話方塊中，選取**Visual C++** 之下**已安裝**如果已選取。 在中央窗格中，選取**C++檔 (.cpp)**。 變更**名稱**要*HelloWorld.cpp*。 選擇**新增**關閉對話方塊並建立該檔案。
+1. 在「**添加新項目」** 對話方塊中,如果尚未選中「已安裝」,則在「**已安裝**」下選擇 **「可視C++」。** 在中心窗格中,選擇**C++檔 (.cpp)**。 將**名稱**變更為*HelloWorld.cpp*。 選擇 **「新增」** 以關閉對話框並建立檔案。
 
-   ![加入原始程式檔 HelloWorld.cpp](media/vscpp-add-new-item.gif "HelloWorld.cpp 加入原始程式檔")
+   ![為 HelloWorld.cpp 添加源檔](media/vscpp-add-new-item.gif "為 HelloWorld.cpp 添加源檔")
 
-Visual studio 會建立新的空白原始程式碼檔案，並在編輯器視窗，即可輸入您的程式碼中開啟。
+Visual Studio 會建立一個新的空源代碼檔,並在編輯器視窗中打開該檔,以便輸入原始碼。
 
 [發生問題。](#add-a-source-code-file-issues)
 
-## <a name="add-code-to-the-source-file"></a>將程式碼加入至原始程式檔
+## <a name="add-code-to-the-source-file"></a>新增程式碼到源碼
 
-1. 將此程式碼複製到 [HelloWorld.cpp 編輯器] 視窗中。
+1. 將此代碼複製到 HelloWorld.cpp 編輯器視窗中。
 
    ```cpp
    #include <iostream>
@@ -97,11 +98,11 @@ Visual studio 會建立新的空白原始程式碼檔案，並在編輯器視窗
    }
    ```
 
-   程式碼編輯器 視窗中應該看起來像這樣：
+   代碼應在編輯器視窗中如下所示:
 
-   ![Hello World 程式碼編輯器中的](media/vscpp-hello-world-editor.png "在編輯器中的 Hello World 程式碼")
+   ![你好世界代碼在編輯器](media/vscpp-hello-world-editor.png "你好世界代碼在編輯器")
 
-在編輯器中，程式碼看起來像這樣，您就可以繼續下一個步驟，並建置您的應用程式。
+當編輯器中的代碼如下所示時,您可以繼續下一步並構建應用。
 
 [發生問題。](#add-a-source-code-file-issues)
 
@@ -110,45 +111,61 @@ Visual studio 會建立新的空白原始程式碼檔案，並在編輯器視窗
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [建置並執行C++專案](vscpp-step-2-build.md)
-
-::: moniker range="<=vs-2017"
+> [產生並執行C++專案](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>疑難排解指南
 
-來這裡解決方案常見問題的解決當您建立您的第一個C++專案。
+創建第一個C++專案時,請在此處尋求常見問題的解決方案。
 
-### <a name="create-your-app-project-issues"></a>建立您的應用程式專案的問題
+### <a name="create-your-app-project-issues"></a>建立應用項目:問題
 
-如果**新的專案**不會顯示對話方塊**視覺化C++** 底下的項目**已安裝**，您的 Visual Studio 複本可能不會有**桌面使用開發C++** 安裝的工作負載。 您可以執行安裝程式，直接從**新的專案**對話方塊。 選擇**開啟的 Visual Studio 安裝程式**再次啟動安裝程式的連結。 如果**使用者帳戶控制**對話會要求權限，選擇**是**。 在安裝程式，請確定**使用的桌面開發C++** 工作負載已核取，然後選擇 **[確定]** 以更新您的 Visual Studio 安裝。
+::: moniker range="vs-2019"
 
-如果已經存在具有相同名稱的另一個專案，選擇您的專案，另一個名稱或刪除現有的專案並再試一次。 若要刪除現有的專案，請在檔案總管中刪除方案資料夾 （包含 helloworld.sln 檔案的資料夾）。
+"**新項目**"對話框應顯示具有**C++、Windows**和**C++****控制台標記的****控制台應用**範本。 如果您看不到它,則有兩個可能的原因。 它可能從清單中篩選出來,或者可能未安裝。 首先,檢查範本列表頂部的篩選器下拉清單。 將它們設定為**C++、Windows**和**Windows****主控台**。 應顯示C++**控制台應用**範本;否則,未安裝**具有C++工作負載的桌面開發**。
 
-[返回](#create-your-app-project)。
+要使用 C++ 安裝**桌面開發**,可以從 **「新專案」** 對話方塊中直接執行安裝程式。 在樣本清單底部選擇 **「安裝更多工具和功能**」連結以啟動安裝程式。 如果**使用者帳戶控制**對話方塊請求權限,請選擇 **「 是**」。 在安裝程式中,請確保選擇**中具有 C++工作負載的桌面開發**。 然後選擇 **「修改」** 以更新可視化工作室安裝。
 
-### <a name="make-your-project-a-console-app-issues"></a>主控台應用程式的問題使您的專案
+如果另一個具有相同名稱的專案已存在,請為項目選擇另一個名稱。 或者,刪除現有項目,然後重試。 要刪除現有專案,請刪除檔案資源管理器中的解決方案資料夾(包含*helloworld.sln*檔案的資料夾)。
 
-如果您沒有看到**連結器**下方**組態屬性**，選擇**取消**關閉**屬性頁**對話方塊，然後請確定**HelloWorld**中選取專案**方案總管 中**，不方案或另一個檔案或資料夾，才能再試一次。
+[回去](#create-your-app-project)吧。
 
-不會顯示下拉式清單控制項中，這是在**子系統**屬性編輯方塊中，直到您選取的屬性。 您可以使用指標，來選取它，或您可以按下 Tab 鍵循環的對話方塊控制項，直到**子系統**會反白顯示。 選擇下拉式清單控制項，或按 Alt + 向下鍵以開啟它。
+::: moniker-end
 
-[返回](#make-your-project-a-console-app)
+::: moniker range="vs-2017"
 
-### <a name="add-a-source-code-file-issues"></a>新增來源的程式碼檔案的問題
+如果 **「新項目」** 對話框未在 **「已安裝**」下顯示 **「視覺C++」** 項目,則 Visual Studio 的副本可能沒有安裝C++工作負載的**桌面開發**。 您可以直接從 **「新專案」** 對話框執行安裝程式。 選擇 **「打開視覺化工作室安裝程式」** 連結以重新啟動安裝程式。 如果**使用者帳戶控制**對話方塊請求權限,請選擇 **「 是**」。 如有必要,更新安裝程式。 在安裝程式中,請確保選中**具有C++工作負載的桌面開發**,然後選擇 **「確定」** 以更新 Visual Studio 安裝。
 
-如果您為來源的程式碼檔案不同的名稱，它沒有關係。 不過，請勿將新增多個原始程式碼檔，其中包含相同的程式碼到您的專案。
+::: moniker-end
 
-如果您將錯誤類型的檔案加入您的專案時，比方說，標頭檔，將它刪除並再試一次。 若要刪除檔案，請選取它在**方案總管 中**並按下 Delete 鍵。
+::: moniker range="<=vs-2017"
 
-[返回](#add-a-source-code-file)。
+如果另一個具有相同名稱的專案已存在,請為項目選擇另一個名稱。 或者,刪除現有項目,然後重試。 要刪除現有專案,請刪除檔案資源管理器中的解決方案資料夾(包含*helloworld.sln*檔案的資料夾)。
 
-### <a name="add-code-to-the-source-file-issues"></a>將程式碼新增至來源檔案的問題
+[回去](#create-your-app-project)吧。
 
-如果您不小心關閉來源的程式碼檔案編輯器視窗中，開啟一次，按兩下在 [HelloWorld.cpp**方案總管] 中**視窗。
+### <a name="make-your-project-a-console-app-issues"></a>使項目成為主控台應用:問題
 
-如果紅色的波浪線會顯示在原始碼程式碼編輯器中的任何項目之下，請檢查您的程式碼符合拼字、 標點符號及案例的範例。 案例中佔有相當大C++程式碼。
+如果未在**設定屬性**下列出**連結器**,請選擇 **「取消」** 以關閉**屬性頁**對話框。 在重試之前,請確保**HelloWorld**專案在**解決方案資源管理器**中被選中。 不要在**解決方案資源管理器**中選擇**HelloWorld**解決方案或其他專案。
 
-[返回](#add-code-to-the-source-file)。
+在選擇該屬性之前,下拉控制件不會顯示在**SubSystem**屬性編輯框中。 按一下編輯框以選擇它。 或者,您可以按**Tab**以循環瀏覽對話框控制項,直到**突顯子系統**。 選擇下拉控制件或按 **「向下」** 將其打開。
+
+[回去](#make-your-project-a-console-app)
+
+### <a name="add-a-source-code-file-issues"></a>新增原始碼檔:問題
+
+如果給原始碼檔指定不同的名稱,則沒關係。 但是,不要向專案添加多個包含相同代碼的檔。
+
+如果將錯誤的檔案類型添加到專案(如頭檔)中,請將其刪除,然後重試。 要刪除該檔,請在**解決方案資源管理員**中選擇該檔。 然後按 **「刪除**」鍵。
+
+[回去](#add-a-source-code-file)吧。
+
+### <a name="add-code-to-the-source-file-issues"></a>將代碼加入來源檔案:問題
+
+如果意外關閉了原始碼檔編輯器視窗,則可以輕鬆地再次打開它。 要打開它,請在**解決方案資源管理器**視窗中按兩下 HelloWorld.cpp。
+
+如果原始碼編輯器中的任何內容下出現紅色波浪,請檢查代碼是否與拼寫、標點符號和大小寫中的範例匹配。 案例在C++代碼中非常重要。
+
+[回去](#add-code-to-the-source-file)吧。
 
 ::: moniker-end
 

@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748661"
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 
@@ -159,7 +159,7 @@ class CAtlMap
 
 如果物件無效,`CAtlMap`呼叫此方法以導致 ASSERT。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ class CPair : public __POSITION
 
 調用此方法以禁用`CAtlMap`物件的自動重新哈希。
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ void DisableAutoRehash() throw();
 
 呼叫此方法以啟用`CAtlMap`物件的自動重新哈希。
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ void EnableAutoRehash() throw();
 
 呼叫此方法以在地圖中指定位置返回元素。
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -291,10 +291,10 @@ CPair* GetAt(POSITION& pos) throw();
 *Pos*<br/>
 位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
-*關鍵*<br/>
+*key*<br/>
 指定地圖鍵類型的範本參數。
 
-*值*<br/>
+*value*<br/>
 指定地圖值類型的範本參數。
 
 ### <a name="return-value"></a>傳回值
@@ -376,7 +376,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 獲取下一個反覆運算元素。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -388,10 +388,10 @@ void GetNextAssoc(
 *Pos*<br/>
 位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
-*關鍵*<br/>
+*key*<br/>
 指定地圖鍵類型的範本參數。
 
-*值*<br/>
+*value*<br/>
 指定地圖值類型的範本參數。
 
 ### <a name="remarks"></a>備註
@@ -558,10 +558,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 指定標識要備份的元素的鍵。
 
-*值*<br/>
+*value*<br/>
 接收上值的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -582,7 +582,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 要添加或替換的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -597,7 +597,7 @@ V& operator[](kinargtype key) throw();
 
 調用此方法以重新哈希`CAtlMap`物件。
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ void Rehash(UINT nBins = 0);
 
 呼叫此方法從`CAtlMap`物件中刪除所有元素。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ void RemoveAll() throw();
 
 呼叫此方法以移除物件中給定位置的元素`CAtlMap`。
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -649,7 +649,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 與要刪除的元素對對應的鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -672,10 +672,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 要添加到`CAtlMap`物件的鍵值。
 
-*值*<br/>
+*value*<br/>
 要新增到物件的值`CAtlMap`。
 
 ### <a name="return-value"></a>傳回值
@@ -690,7 +690,7 @@ POSITION SetAt(
 
 調用此方法以設置`CAtlMap`物件的最佳負載。
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ void SetOptimalLoad(
 
 呼叫此方法以變更儲存在物件中給定位置的值`CAtlMap`。
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);
@@ -731,7 +731,7 @@ void SetValueAt(
 *Pos*<br/>
 位置計數器,由之前呼叫[CAtlMap 傳回::取得NextAssoc](#getnextassoc)或[CAtlMap::取得起始位置](#getstartposition)。
 
-*值*<br/>
+*value*<br/>
 要新增到物件的值`CAtlMap`。
 
 ### <a name="remarks"></a>備註

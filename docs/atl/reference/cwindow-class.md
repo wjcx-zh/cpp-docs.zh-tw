@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330325"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746014"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 
@@ -394,7 +394,7 @@ UINT ArrangeIconicWindows() throw();
 
 將*hWndNew*標識的視窗`CWindow`附加到 物件。
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 請參考 Windows SDK 的[用戶端螢幕](/windows/win32/api/winuser/nf-winuser-clienttoscreen)。
 
-此方法的第二個版本允許您轉換[RECT](/previous-versions/dd162897\(v=vs.85\))結構的座標。
+此方法的第二個版本允許您轉換[RECT](/windows/win32/api/windef/ns-windef-rect)結構的座標。
 
 ## <a name="cwindowcreate"></a><a name="create"></a>CWindow::建立
 
@@ -771,7 +771,7 @@ BOOL DlgDirSelectComboBox(
 
 註冊視窗是否接受拖動的檔。
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 標記繪製的結束。
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ WORD GetWindowWord(int nIndex) const throw();
 
 將鍵盤焦點設置到對話方塊中的控制項。
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 
 使指定區域內的工作區無效。
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 請參考 Windows SDK 中的[地圖視窗點](/windows/win32/api/winuser/nf-winuser-mapwindowpoints)。
 
-此方法的第二個版本允許您轉換[RECT](/previous-versions/dd162897\(v=vs.85\))結構的座標。
+此方法的第二個版本允許您轉換[RECT](/windows/win32/api/windef/ns-windef-rect)結構的座標。
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>CWindow::訊息框
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 對於頂級視窗物件,x 和 y 參數相對於螢幕的左上角。 對於子視窗物件,它們相對於父視窗工作區的左上角。
 
-此方法的第二個版本使用[RECT](/previous-versions/dd162897\(v=vs.85\))結構來確定視窗的新位置、寬度和高度。
+此方法的第二個版本使用[RECT](/windows/win32/api/windef/ns-windef-rect)結構來確定視窗的新位置、寬度和高度。
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow::下一個DlgCtrl
 
 將鍵盤焦點設置到對話框中的下一個控制項。
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ BOOL PostMessage(
 
 將鍵盤焦點設置到對話框中的上一個控制項。
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ void PrevDlgCtrl() const throw();
 
 向視窗發送[WM_PRINT](/windows/win32/gdi/wm-print)訊息,請求它在指定的設備上下文中繪製自身。
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 向視窗發送[WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)訊息,請求它在指定的設備上下文中繪製其工作區。
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 請參考 Windows SDK 的[螢幕客戶端](/windows/win32/api/winuser/nf-winuser-screentoclient)。
 
-此方法的第二個版本允許您轉換[RECT](/previous-versions/dd162897\(v=vs.85\))結構的座標。
+此方法的第二個版本允許您轉換[RECT](/windows/win32/api/windef/ns-windef-rect)結構的座標。
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>CWindow::捲動視窗
 
@@ -2216,7 +2216,7 @@ static LRESULT SendMessage(
 
 將指定的消息發送到`CWindow`物件的所有直接子級。
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2226,7 +2226,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>參數
 
-*訊息*<br/>
+*message*<br/>
 [在]要發送的消息。
 
 *wParam*<br/>
@@ -2363,7 +2363,7 @@ HWND SetFocus() throw();
 
 通過向視窗發送[WM_SETFONT](/windows/win32/winmsg/wm-setfont)訊息來更改視窗的當前字型。
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 通過向視窗發送[WM_SETREDRAW](/windows/win32/gdi/wm-setredraw)訊息來設置或清除重繪標誌。
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 請參閱在 Windows SDK 中[設置視窗Pos。](/windows/win32/api/winuser/nf-winuser-setwindowpos)
 
-此方法的第二個版本使用[RECT](/previous-versions/dd162897\(v=vs.85\))結構來設置視窗的新位置、寬度和高度。
+此方法的第二個版本使用[RECT](/windows/win32/api/windef/ns-windef-rect)結構來設置視窗的新位置、寬度和高度。
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::設定視窗Rgn
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: aca9606271040e5c5c9aee81be0a08b64cf2bab7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369136"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750313"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 類別
 
@@ -123,7 +123,7 @@ virtual ~CD2DRadialGradientBrush();
 
 將現有資源介面附加到物件
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
@@ -303,7 +303,7 @@ operator ID2D1RadialGradientBrush*();
 
 指定筆標空間中漸變橢圓的中心
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
@@ -316,7 +316,7 @@ void SetCenter(CD2DPointF point);
 
 指定漸變原點的偏移量相對於漸變橢圓的中心
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
@@ -329,7 +329,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 
 在筆刷橢圓的 x 半徑
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
@@ -342,7 +342,7 @@ void SetRadiusX(FLOAT radiusX);
 
 在筆刷橢圓的 y 半徑
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 

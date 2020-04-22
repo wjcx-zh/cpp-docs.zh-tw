@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331479"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746591"
 ---
 # <a name="cpatht-class"></a>CPathT 類別
 
@@ -72,7 +72,7 @@ class CPathT
 
 #### <a name="parameters"></a>參數
 
-*字串型別*<br/>
+*StringType*<br/>
 用於路徑的 ATL/MFC 字串類(請參閱[CStringT)。](../../atl-mfc-shared/reference/cstringt-class.md)
 
 ## <a name="members"></a>成員
@@ -166,7 +166,7 @@ class CPathT
 
 呼叫此方法向字串的末尾添加反斜杠,以建立路徑的正確語法。 如果路徑已具有尾隨反斜杠,則不會添加反斜杠。
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ BOOL Append(PCXSTR pszMore);
 
 調用此方法從給定驅動器號創建根路徑。
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ void BuildRoot(int iDrive);
 
 調用此方法將路徑轉換為規範形式。
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ void Canonicalize();
 
 呼叫此方法將表示目錄名稱的字串和表示檔案路徑名稱的字串串聯到一個路徑中。
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -349,7 +349,7 @@ CPathT() throw();
 *pszPath*<br/>
 指向路徑字串的指標。
 
-*路徑*<br/>
+*path*<br/>
 路徑字串。
 
 ## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT:檔案存在
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 如果路徑包含任何空格,則調用此方法以引弧括上路徑。
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ BOOL RelativePathTo(
 
 呼叫此方法從路徑中刪除任何命令列參數。
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ void RemoveArgs();
 
 呼叫此方法以從路徑中刪除尾隨反斜杠。
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ void RemoveBackslash();
 
 呼叫此方法從路徑中刪除所有前導空格和尾隨空格。
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ void RemoveBlanks();
 
 呼叫此方法以從路徑中刪除檔案副檔名(如果有)。
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ int SkipRoot() const;
 
 呼叫此方法以刪除完全限定的路徑和檔名的路徑部分。
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ BOOL StripToRoot();
 
 呼叫此方法以從路徑的開頭和結尾刪除引號。
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

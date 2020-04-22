@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317593"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746705"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -306,7 +306,7 @@ BSTR AllocSysString() const;
 
 將此`CStringT`物件中的所有字元從 ANSI 字元集轉換為 OEM 字元集。
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ void AnsiToOem();
 
 將格式化的數據追加到現有`CStringT`物件。
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -696,7 +696,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 以sprintf_s將資料格式轉換為`CStringT`C 樣式字元[sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)陣列 的方式將格式化資料寫入 。
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -730,7 +730,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 設定消息字串的格式。
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -763,7 +763,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 使用變數參數清單設定訊息字串的格式。
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 使用變數參數清單設定訊息字串的格式。
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -1012,7 +1012,7 @@ CStringT Mid(int iFirst) const;
 
 將此`CStringT`物件中的所有字元從 OEM 字元集轉換為 ANSI 字元集。
 
-```
+```cpp
 void OemToAnsi();
 ```
 
@@ -1056,7 +1056,7 @@ CStringT& operator=(const VARIANT& var);
 *BaseType*<br/>
 字串基類型。
 
-*無 功*<br/>
+*var*<br/>
 要分配給此字串的變體物件。
 
 *ch*<br/>
@@ -1150,7 +1150,7 @@ CStringT& operator+=(const VARIANT& var);
 *BaseType*<br/>
 字串基類型。
 
-*無 功*<br/>
+*var*<br/>
 要串聯到此字串的變體物件。
 
 *ch*<br/>

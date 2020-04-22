@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: 49ef7850edb18cd51092f282644973376abd4c7c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317488"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746602"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 類別
 
@@ -39,7 +39,7 @@ __interface IAtlStringMgr
 |-|-|
 |[配置](#allocate)|呼叫此方法以分配新的字串資料結構。|
 |[複製](#clone)|呼叫此方法傳回指向新字串管理員的指標,以便與另一個實體一`CSimpleStringT`起使用 。|
-|[自由](#free)|呼叫此方法以釋放字串資料結構。|
+|[免費](#free)|呼叫此方法以釋放字串資料結構。|
 |[獲得尼爾斯特林](#getnilstring)|返回指向空字串`CStringData`物件使用的物件的指標。|
 |[重新分配](#reallocate)|呼叫此方法以重新分配字串資料結構。|
 
@@ -108,7 +108,7 @@ IAtlStringMgr* Clone() throw();
 
 釋放字串數據結構。
 
-```
+```cpp
 void Free(CStringData* pData) throw();
 ```
 

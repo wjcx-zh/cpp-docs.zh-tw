@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 09811b14ed805b1965015a32a25c0b67c947ff4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358298"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745315"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 類別
 
@@ -99,7 +99,7 @@ int GetTwipSize() const;
 
 使用給定字體的所有有效大小填充字體大小組合框。
 
-```
+```cpp
 void RebuildFontSizes(const CString& strFontName);
 ```
 
@@ -116,7 +116,7 @@ void RebuildFontSizes(const CString& strFontName);
 
 將指定大小(以 twips 為單位)捨入到最近的大小(以磅為單位),然後將組合框中的選定大小設置為該值。
 
-```
+```cpp
 void SetTwipSize(int nSize);
 ```
 

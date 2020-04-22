@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 652c5f078ddbaf8d3e333f7003d6515a94dd8f83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e30f847ff99a80ab19b880728472a339fd4cbe5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327765"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747937"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 
@@ -465,7 +465,7 @@ HRESULT RevokeClassObjects() throw();
 
 從 ATL 7.0`CComModule`起,已過時:有關詳細資訊,請參閱[ATL 模組類](../../atl/atl-module-classes.md)。
 
-```
+```cpp
 void Term() throw();
 ```
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 6cdb2e966ca1878377fd26a6d4b9075090d32c3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361797"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750067"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 類別
 
@@ -142,7 +142,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 將頁面新增至屬性工作表。
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -161,7 +161,7 @@ void AddPage(CPropertyPage* pPage);
 
 將新的屬性頁新增至樹狀目錄控制項。
 
-```
+```cpp
 void AddPageToTree(
     CMFCPropertySheetCategoryInfo* pCategory,
     CMFCPropertyPage* pPage,
@@ -261,7 +261,7 @@ CMFCPropertySheet(
 
 在每個頁面頂端保留空間以繪製自訂標頭。
 
-```
+```cpp
 void EnablePageHeader(int nHeaderHeight);
 ```
 
@@ -414,7 +414,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 從樹狀目錄控制項移除節點。
 
-```
+```cpp
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```
 
@@ -431,7 +431,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 
 從屬性工作表中移除屬性頁。
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -488,7 +488,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 指定屬性工作表的外觀。
 
-```
+```cpp
 void SetLook(
     PropSheetLook look,
     int nNavControlWidth=100);

@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368335"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747204"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 類別
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 將現有渲染目標介面附加到物件
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 
 在此渲染目標上啟動繪圖。
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 將繪圖區域清除為指定顏色。
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -314,7 +314,7 @@ BOOL CreateCompatibleRenderTarget(
 *所需的格式*<br/>
 新渲染目標(NULL)所需的圖元格式和 Alpha 模式。 如果圖元格式設置為DXGI_FORMAT_UNKNOWN,或者此參數為空,則新的渲染目標使用與原始渲染目標相同的圖元格式。 如果 alpha 模式為 D2D1_ALPHA_MODE_UNKNOWN 或此參數為 NULL,則新渲染目標的 Alpha 模式預設為 D2D1_ALPHA_MODE_PREMULTIPLIED。 有關支援的圖元格式的資訊,請參閱支援的圖元格式和 Alpha 模式。
 
-*選項*<br/>
+*options*<br/>
 指定新渲染目標是否與 GDI 相容的值。
 
 ### <a name="return-value"></a>傳回值
@@ -362,7 +362,7 @@ ID2D1RenderTarget* Detach ();
 
 繪製指定的 IDWriteTextLayout 物件描述的格式化文字。
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ void DrawBitmap(
 
 使用指定的描邊樣式繪製指定橢圓的輪廓。
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ void DrawEllipse(
 
 使用指定的描邊樣式繪製指定幾何體的輪廓。
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ void DrawGeometry(
 
 繪製指定的字形。
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ void DrawGlyphRun(
 
 使用指定的描邊樣式在指定點之間繪製一條線。
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ void DrawLine(
 
 繪製具有指定尺寸和描邊樣式的矩形的輪廓。
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ void DrawRectangle(
 
 使用指定的描邊樣式繪製指定圓角矩形的輪廓。
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ void DrawRoundedRectangle(
 
 使用 IDWriteTextFormat 物件提供的格式資訊繪製指定的文本。
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -576,7 +576,7 @@ void DrawText(
 *textFormat*<br/>
 描述要繪製的文字的格式設定詳細資訊的物件,如字體、字體大小和流方向。
 
-*選項*<br/>
+*options*<br/>
 指示是否應將文本捕捉到像素邊界以及是否應將文字剪切到佈局矩形的值。 默認值為D2D1_DRAW_TEXT_OPTIONS_NONE,表示文本應捕捉到像素邊界,不應將其剪切到佈局矩形。
 
 *測量模式*<br/>
@@ -586,7 +586,7 @@ void DrawText(
 
 繪製指定的 IDWriteTextLayout 物件描述的格式化文字。
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -605,7 +605,7 @@ void DrawTextLayout(
 *pBrush前景*<br/>
 用於在 textLayout 中繪製尚未將畫筆作為繪圖效果關聯的畫筆的筆刷筆(由 IDWriteTextLayout::Set 繪圖效果方法指定)。
 
-*選項*<br/>
+*options*<br/>
 指示是否應將文本捕捉到像素邊界以及是否應將文字剪切到佈局矩形的值。 默認值為D2D1_DRAW_TEXT_OPTIONS_NONE,表示文本應捕捉到像素邊界,不應將其剪切到佈局矩形。
 
 ## <a name="crendertargetenddraw"></a><a name="enddraw"></a>CRender 目標::結束繪製
@@ -624,7 +624,7 @@ HRESULT EndDraw();
 
 繪製指定橢圓的內部。
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ void FillEllipse(
 
 繪製指定幾何體的內部。
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ void FillGeometry(
 
 繪製指定網格的內部。
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ void FillMesh(
 
 將指定點陣圖描述的不平性蒙版應用於畫筆,並使用該畫筆繪製渲染目標的區域。
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -699,7 +699,7 @@ void FillOpacityMask(
 *pBrush*<br/>
 用於繪製目標矩形指定的渲染目標的區域的畫筆。
 
-*內容*<br/>
+*content*<br/>
 不一元蒙版包含的內容類型。 該值用於確定混合不相加性蒙版的顏色空間。
 
 *整流*<br/>
@@ -712,7 +712,7 @@ void FillOpacityMask(
 
 繪製指定矩形的內部。
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ void FillRectangle(
 
 繪製指定圓角矩形的內部。
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ void FillRoundedRectangle(
 
 執行所有掛起的圖形命令。
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ CD2DSizeF GetSize() const;
 
 獲取後續繪圖操作的標籤。
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 
 檢索渲染目標的當前文本呈現選項。
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 
 獲取渲染目標的當前變換。
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ operator ID2D1RenderTarget*();
 
 從渲染目標中刪除最後一個軸對齊的剪輯。 調用此方法后,剪輯不再應用於後續繪圖操作。
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 停止將繪圖操作重定向到上次 PushLayer 調用指定的圖層。
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 從渲染目標中刪除最後一個軸對齊的剪輯。 調用此方法后,剪輯不再應用於後續繪圖操作。
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ void PushAxisAlignedClip(
 
 將指定的圖層添加到渲染目標,以便它接收所有後續繪圖操作,直到調用 PopLayer。
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ void PushLayer(
 
 將渲染目標的繪製狀態設置為指定的 ID2D1 繪圖 StateBlock 的繪圖狀態。
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 
 將目前繪圖狀態保存到指定的 ID2D1 繪圖狀態區塊。
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 
 設置渲染目標的防鋸齒模式。 防鋸齒模式適用於所有後續繪圖操作,不包括文本和字形繪圖操作。
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 
 設置渲染目標每英寸 (DPI) 的點數。
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 
 指定後續繪圖操作的標籤。
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ void SetTags(
 
 指定用於後續文本和字形繪圖操作的防鋸齒模式。
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 
 指定要應用於所有後續文本和字形繪圖操作的文本呈現選項。
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 
 將指定的轉換應用於渲染目標,替換現有變換。 所有後續繪圖操作都發生在轉換的空間中。
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```

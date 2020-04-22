@@ -3,12 +3,12 @@ title: CRT 的全球狀態
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81379097"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745359"
 ---
 # <a name="global-state-in-the-crt"></a>CRT 的全球狀態
 
@@ -20,8 +20,8 @@ UCRT 的全域狀態不會在應用程式和作業系統之間共用。 例如,�
 
 在 UCRT 中,與全域狀態互動的函數具有「雙」函數,`_o_`以預綴於 。 例如：
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`影響特定於應用的全域狀態。
+- `_o_setlocale()`影響所有作業系統元件共用的全域狀態,但不會影響應用。
 
 這些「孿生」函數的唯一區別是,當他們讀取/寫入全域 CRT 狀態時,特定於作業系統的版本(即`_o_`以 開頭的版本)使用全域狀態的 OS 副本,而不是應用的全域狀態副本。
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: dce33289699b9e7b7484d1feb6335476f93dee9b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76d418c4f063d5787209ea72e7c681013eb37801
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317678"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747028"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 
@@ -133,7 +133,7 @@ class CSimpleStringT
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void Append(const CSimpleStringT& strSrc);
 void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
@@ -172,7 +172,7 @@ ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void AppendChar(XCHAR ch);
 ```
 
@@ -316,7 +316,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void Empty() throw();
 ```
 
@@ -339,7 +339,7 @@ ASSERT(s.IsEmpty());
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -895,7 +895,7 @@ typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void Preallocate( int nLength);
 ```
 
@@ -937,7 +937,7 @@ typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void ReleaseBuffer(int nNewLength = -1);
 ```
 
@@ -978,7 +978,7 @@ ASSERT(s.GetLength() == 3);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void ReleaseBufferSetLength(int nNewLength);
 ```
 
@@ -997,7 +997,7 @@ void ReleaseBufferSetLength(int nNewLength);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void SetAt(int iChar, XCHAR ch);
 ```
 
@@ -1029,7 +1029,7 @@ ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
 
@@ -1057,7 +1057,7 @@ s.SetManager(pCustomMgr);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
@@ -1130,7 +1130,7 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void Truncate(int nNewLength);
 ```
 
@@ -1165,7 +1165,7 @@ _tprintf_s(_T("Contents: %s\n"), str);
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 void UnlockBuffer() throw();
 ```
 

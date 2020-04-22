@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321565"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748787"
 ---
 # <a name="catlarray-class"></a>CAtlarray 類別
 
@@ -162,7 +162,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 調用此方法以確認陣列物件是否有效。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ CAtlArray() throw();
 
 呼叫此方法將一個陣列的元素複製到另一個陣列。
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 呼叫此方法從陣列中刪除任何空元素。
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 呼叫此方法將一個陣列插入到另一個陣列中。
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 調用此方法以將新元素(或元素的多個副本)插入陣列物件。
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 呼叫此方法從陣列物件中刪除所有元素。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ void RemoveAll() throw();
 
 呼叫此方法從陣列中刪除一個或多個元素。
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 呼叫此方法以設定陣列中元素的值。
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 調用此方法以設置陣列中元素的值,根據需要展開陣列。
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 

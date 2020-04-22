@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: a20a02a467d74a89e3cda176a6a15961be4ffd61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33edd8f2483bc21ea6cf8b68f80a2501c37d1a40
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318978"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748756"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT 類別
 
@@ -298,7 +298,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 此方法執行消息迴圈。
 
-```
+```cpp
 void RunMessageLoop() throw();
 ```
 

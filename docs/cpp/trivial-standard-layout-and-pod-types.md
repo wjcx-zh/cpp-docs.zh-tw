@@ -2,18 +2,18 @@
 title: Trivial、標準配置、POD 與常值類型
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: b31fefd31b32a5fc4aa3f655b90d39f60a524ca4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fe237386e63fcdd96621edabf2b0b66ce72e4f8
+ms.sourcegitcommit: 435133128b18cdd02d33d929b16c33e7ec40e9eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188060"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81664127"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial、標準配置、POD 與常值類型
 
-「配置」這個字詞，指的是類別、結構或等位型別的物件成員，在記憶體中如何安排。 在某些情況下，語言規格會完善地定義配置。 但是當類別或結構包含某些 C++ 語言特徵標記時 (例如虛擬基底類別、虛擬函式、存取控制不同的成員)，編譯器就可以自由選擇配置。 配置可能取決於執行的最佳化而有不同，在許多情況下，物件甚至可能不會佔用記憶體的連續區域。 例如，如果某個類別有虛擬函式，該類別的所有執行個體就可能共用單一虛擬函式表。 這樣的類型非常實用，但也有其限制。 由於配置未經定義，因此無法傳遞到以其他語言 (例如 C) 寫成的程式，而且也因為配置可能是不連續的，而無法透過快速的低階函式 (例如 `memcopy`) 確實複製，或透過網路序列化。
+「配置」** 這個字詞，指的是類別、結構或等位型別的物件成員，在記憶體中如何安排。 在某些情況下，語言規格會完善地定義配置。 但是當類別或結構包含某些 C++ 語言特徵標記時 (例如虛擬基底類別、虛擬函式、存取控制不同的成員)，編譯器就可以自由選擇配置。 配置可能取決於執行的最佳化而有不同，在許多情況下，物件甚至可能不會佔用記憶體的連續區域。 例如，如果某個類別有虛擬函式，該類別的所有執行個體就可能共用單一虛擬函式表。 這樣的類型非常實用，但也有其限制。 由於配置未經定義，因此無法傳遞到以其他語言 (例如 C) 寫成的程式，而且也因為配置可能是不連續的，而無法透過快速的低階函式 (例如 `memcopy`) 確實複製，或透過網路序列化。
 
-為了讓編譯器及 C++ 程式和中繼程式能夠依據特定記憶體配置，對為了作業而提供的任何類型評估合適性，C++14 帶來了三種類別的簡單分類與結構：*trivial*、標準配置 和 *POD* (即 Plain Old Data)。 標準程式庫有函式範本 `is_trivial<T>`、`is_standard_layout<T>` 及 `is_pod<T>`，能判斷提供的類型是否屬於提供的分類。
+為了讓編譯器及 C++ 程式和中繼程式能夠依據特定記憶體配置，對為了作業而提供的任何類型評估合適性，C++14 帶來了三種類別的簡單分類與結構：*trivial*、標準配置** 和 *POD* (即 Plain Old Data)。 標準程式庫有函式範本 `is_trivial<T>`、`is_standard_layout<T>` 及 `is_pod<T>`，能判斷提供的類型是否屬於提供的分類。
 
 ## <a name="trivial-types"></a>Trivial 類型
 
@@ -32,17 +32,17 @@ Trivial 類型有 Trivial 預設建構函式、Trivial 複製建構函式、Triv
 ```cpp
 struct Trivial
 {
-      int i;
+   int i;
 private:
    int j;
-   };
+};
 
 struct Trivial2
 {
    int i;
    Trivial2(int a, int b) : i(a), j(b) {}
    Trivial2() = default;
-   private:
+private:
    int j;   // Different access control
 };
 ```
@@ -96,7 +96,7 @@ struct Derived : public Base
 };
 ```
 
-在此範例中，因為 `Derived` 沒有非靜態的資料成員，所以 `Base` 具有標準配置：
+在此範例中，因為 `Base` 沒有非靜態的資料成員，所以 `Derived` 具有標準配置：
 
 ```cpp
 struct Base
@@ -137,15 +137,15 @@ protected:
 // Neither trivial nor standard-layout
 struct A : B
 {
-      int a;
+   int a;
    int b;
    void Foo() override {} // Virtual function
 };
 
 // Trivial but not standard-layout
 struct C
-   {
-      int a;
+{
+   int a;
 private:
    int b;   // Different access control
 };

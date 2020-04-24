@@ -2,12 +2,12 @@
 title: 介面 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366044"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032352"
 ---
 # <a name="interfaces-ccx"></a>介面 (C++/CX)
 
@@ -63,7 +63,7 @@ ms.locfileid: "81366044"
 
 ## <a name="generic-interfaces"></a>泛型介面
 
-在C++/CX`generic`中 ,關鍵字用於表示 Windows 運行時參數化類型。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 運行時定義了一些通用介面,例如[Windows::基礎::集合::iVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_)-但它不支援在C++/CX 中創建公共使用者定義的泛型介面。 不過，您可以建立私用泛型介面。
+在C++/CX`generic`中 ,關鍵字用於表示 Windows 運行時參數化類型。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 運行時定義了一些通用介面,例如[Windows::基礎::集合::iVector\<T>](/uwp/api/windows.foundation.collections.ivector-1)-但它不支援在C++/CX 中創建公共使用者定義的泛型介面。 不過，您可以建立私用泛型介面。
 
 以下是如何使用 Windows 執行時類型來創作通用介面:
 

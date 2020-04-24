@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372922"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032391"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式
 
@@ -418,7 +418,7 @@ MFC 中提供下列下拉式方塊樣式。 有關 Windows 中的組合框樣式
 |SS_BLACKRECT|指定矩形,該矩形填充用於繪製視窗框架的顏色。 預設為黑色。|
 |SS_CENTER|指定一個簡單的矩形,並顯示以矩形為中心的給定文本。 文字在顯示之前已設置格式。 延伸到行尾的單詞將自動換行到下一個中心行的開頭。|
 |SS_CENTERIMAGE|指定如果點陣圖或圖示小於靜態控件的工作區,則工作區的其餘部分將填充點陣圖或圖示左上角的圖元顏色。 如果靜態控制項包含一行文本,則文本在控制項的工作區中垂直居中。|
-|SS_ENDELLIPSIS|或SS_PATHELLIPSIS如有必要,將給定字串的一部分替換為橢圓,以便結果適合指定的矩形。 <br /><br />可以指定SS_END_ELLIPSIS替換字串末尾的字元,也可以SS_PATHELLIPSIS替換字串中間的字元。 如果字串包含反斜杠 (\\) 字元,SS_PATHELLIPSIS保留最後一個反斜杠後盡可能多的文本。|
+|SS_ENDELLIPSIS|或SS_PATHELLIPSIS如有必要,將給定字串的一部分替換為省略號,以便結果適合指定的矩形。 <br /><br />可以指定SS_END_ELLIPSIS替換字串末尾的字元,也可以SS_PATHELLIPSIS替換字串中間的字元。 如果字串包含反斜杠 (\\) 字元,SS_PATHELLIPSIS保留最後一個反斜杠後盡可能多的文本。|
 |SS_ENHMETAFILE|指定增強的元檔將顯示在靜態控制項中。 給定的文本是元檔的名稱。 增強的元文件靜態控件具有固定大小;元檔被縮放以適合靜態控件的工作區。|
 |SS_ETCHEDFRAME|使用EDGE_ETCHED邊樣式繪製靜態控件的框架。|
 |SS_ETCHEDHORZ|使用EDGE_ETCHED邊樣式繪製靜態控件的頂部和底部邊緣。|
@@ -439,7 +439,7 @@ MFC 中提供下列下拉式方塊樣式。 有關 Windows 中的組合框樣式
 |SS_USERITEM|指定使用者定義的項。|
 |SS_WHITEFRAME|指定繪製框架的框與視窗背景的顏色相同。 預設為白色。|
 |SS_WHITERECT|指定矩形,該矩形填充用於填充視窗背景的顏色。 預設為白色。|
-|SS_WORDELLIPSIS|截緊不適合的文本並添加橢圓。|
+|SS_WORDELLIPSIS|截緊不適合的文本並添加省略號。|
 
 ## <a name="window-styles"></a><a name="window-styles"></a>視窗樣式
 

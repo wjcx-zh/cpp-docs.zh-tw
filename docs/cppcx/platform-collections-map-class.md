@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354440"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032443"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
-代表 *Map*，這是機碼值組的集合。 在[Windows:基礎:集合::I 可觀察映射](/uwp/api/windows.foundation.collections.iobservablemap_k_v_)以幫助進行 XAML[資料繫結](/windows/uwp/data-binding/data-binding-in-depth)。
+代表 *Map*，這是機碼值組的集合。 在[Windows:基礎:集合::I 可觀察映射](/uwp/api/windows.foundation.collections.iobservablemap-2)以幫助進行 XAML[資料繫結](/windows/uwp/data-binding/data-binding-in-depth)。
 
 ## <a name="syntax"></a>語法
 
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - 公用列舉類別
 
-Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 C++ 它是[Windows::基礎:集合::iMap<Windows:基礎:集合::iKeyValuePair\<K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)和 I[可觀察映射](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)類型,這些類型通過公共 Windows 運行時介面傳遞。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::Map` 類型，則會引發編譯器錯誤 C3986。 您可以通過更改參數的類型或將值返回到[Windows::基礎:集合::IMap\<K,V>来](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)修復錯誤。
+Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 C++ 它是[Windows::基礎:集合::iMap<Windows:基礎:集合::iKeyValuePair\<K,V>>](/uwp/api/windows.foundation.collections.imap-2)和 I[可觀察映射](/uwp/api/windows.foundation.collections.iobservablemap-2)類型,這些類型通過公共 Windows 運行時介面傳遞。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::Map` 類型，則會引發編譯器錯誤 C3986。 您可以通過更改參數的類型或將值返回到[Windows::基礎:集合::IMap\<K,V>来](/uwp/api/windows.foundation.collections.imap-2)修復錯誤。
 
 有關詳細資訊,請參閱[集合](../cppcx/collections-c-cx.md)。
 
@@ -136,7 +136,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>映射::獲取檢視方法
 
-返回當前地圖的唯讀檢視;即[,平臺:集合::mapView 類](../cppcx/platform-collections-mapview-class.md),實現 [Windows::基礎:集合:集合::IMapView\<K,V>]/uwp/api/Windows.Foundation.集合.IMapView_K_V_)介面。
+返回當前地圖的唯讀檢視;即[:平臺:集合:mapView 類](../cppcx/platform-collections-mapview-class.md),實現[Windows::基礎:\<集合 ::IMapView K,V>](/uwp/api/windows.foundation.collections.imapview-2)介面。
 
 ### <a name="syntax"></a>語法
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來尋找 Map 項目的機碼。 *鍵*的類型是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -179,10 +179,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 機碼值組的機碼部分。 *鍵*的類型是類型名稱*K*。
 
-*值*<br/>
+*value*<br/>
 機碼值組的值部分。 *值*的類型是類型名稱*V*。
 
 ### <a name="return-value"></a>傳回值
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來在 Map 中尋找元素的機碼。 *鍵*的類型是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-[MapChangeEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler)其中包含有關引發事件的物件以及發生的更改類型的資訊。 另請參閱[IMapChangeEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)與[集合變更枚舉](/uwp/api/windows.foundation.collections.collectionchange)。
+[MapChangeEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2)其中包含有關引發事件的物件以及發生的更改類型的資訊。 另請參閱[IMapChangeEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1)與[集合變更枚舉](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 機碼值組的機碼部分。 *鍵*的類型是類型名稱*K*。
 
 ## <a name="mapsize-method"></a><a name="size"></a>對應:大小方法
 
-返回地圖中的[Windows::基礎:集合::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素。
+返回地圖中的[Windows::基礎:集合::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
 ### <a name="syntax"></a>語法
 

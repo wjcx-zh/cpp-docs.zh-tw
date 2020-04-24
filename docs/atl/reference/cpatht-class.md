@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746591"
+ms.locfileid: "82032130"
 ---
 # <a name="cpatht-class"></a>CPathT 類別
 
@@ -102,8 +102,8 @@ class CPathT
 |[CPathT:規範化](#canonicalize)|調用此方法將路徑轉換為規範形式。|
 |[CPathT::合併](#combine)|呼叫此方法將表示目錄名稱的字串和表示檔案路徑名稱的字串串聯到一個路徑中。|
 |[CPathT::通用首頭](#commonprefix)|呼叫此方法以確定指定的路徑是否與當前路徑共用公共首碼。|
-|[CPathT::緊湊路徑](#compactpath)|調用此方法可截取檔路徑,方法是將路徑元件替換為橢圓,以適合給定圖元寬度。|
-|[CPathT::壓縮路徑](#compactpathex)|呼叫此方法,通過將路徑元件替換為橢圓來截取檔路徑以適合給定數量的字元。|
+|[CPathT::緊湊路徑](#compactpath)|調用此方法可截取檔路徑,方法是將路徑元件替換為省略號,以適合給定圖元寬度。|
+|[CPathT::壓縮路徑](#compactpathex)|呼叫此方法,通過將路徑元件替換為省略號來截取檔路徑以適合給定數量的字元。|
 |[CPathT:檔案存在](#fileexists)|呼叫此方法以檢查此路徑名稱下的檔是否存在。|
 |[CPathT::尋找擴充](#findextension)|呼叫此方法以查找路徑中檔案副檔名的位置。|
 |[CPathT::尋找檔案名](#findfilename)|呼叫此方法以查找檔名在路徑中的位置。|
@@ -288,7 +288,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::緊湊路徑
 
-調用此方法可截取檔路徑,方法是將路徑元件替換為橢圓,以適合給定圖元寬度。
+調用此方法可截取檔路徑,方法是將路徑元件替換為省略號,以適合給定圖元寬度。
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::壓縮路徑
 
-呼叫此方法,通過將路徑元件替換為橢圓來截取檔路徑以適合給定數量的字元。
+呼叫此方法,通過將路徑元件替換為省略號來截取檔路徑以適合給定數量的字元。
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

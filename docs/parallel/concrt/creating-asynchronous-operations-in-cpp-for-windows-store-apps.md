@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8e1183464d3ecf9b12fabcc6fb4f1fd99b7b0083
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 635a8c95a3801c6e88feff1cefa3ed27727a8f88
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353399"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032183"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>為 UWP 應用在C++中建立非同步操作
 
@@ -54,13 +54,13 @@ Windows 執行時是一個程式設計介面,可用於創建僅在特殊作業�
 [Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 表示非同步動作。
 
-[視窗::基礎::具有進度\<的同步行動>](/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)<br/>
+[視窗::基礎::具有進度\<的同步行動>](/uwp/api/windows.foundation.iasyncactionwithprogress-1)<br/>
 表示報告進度的非同步動作。
 
-[視窗::基礎::IAsync\<操作結果>](/uwp/api/windows.foundation.iasyncoperation_tresult_)<br/>
+[視窗::基礎::IAsync\<操作結果>](/uwp/api/windows.foundation.iasyncoperation-1)<br/>
 表示傳回結果的非同步作業。
 
-[視窗::基礎::具有進度\<的同步操作結果、Tprogress>](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)<br/>
+[視窗::基礎::具有進度\<的同步操作結果、Tprogress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 表示傳回結果和報告進度的非同步作業。
 
 「 *動作* 」(Action) 的概念表示，非同步工作沒有產生值 (想像傳回 `void`的函式)。 「 *作業* 」(Operation) 的概念表示，非同步工作會產生值。 「 *進度* 」(Progress) 的概念表示，工作可以向呼叫端報告進度訊息。 JavaScript、.NET Framework 和 Visual C++ 各提供了自己建立這些介面執行個體的方式，以供跨 ABI 界限使用。 針對 Visual C++，PPL 提供了 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函式。 此函數創建表示工作的完成的 Windows 運行時異步操作或操作。 該`create_async`函數採用工作函數(通常是 lambda 運算式),`task`內部創建一個物件,並將該任務包裝在四個異步 Windows 運行時介面之一中。
@@ -92,7 +92,7 @@ Windows 執行時是一個程式設計介面,可用於創建僅在特殊作業�
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>範例:建立C++ Windows 執行時元件並從 C 使用它\#
 
-請考慮使用 XAML 和 C# 定義 UI 的應用,以及 C++ Windows 執行時元件來執行計算密集型操作。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明四個 Windows 執行時非同步任務介面之間的差異,在 Visual Studio 中開始建立**空白解決方案**並將其命名為`Primes`它。 然後在方案中新增 [Windows 執行階段元件] **** 專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 `public` 方法都會定義四個非同步介面的其中一個。 返回值的方法返回[Windows::基礎:集合::iVector\<int>](/uwp/api/Windows.Foundation.Collections.IVector_T_)物件。 報告進度的方法會產生 `double` 值，用以定義整體工作已完成的百分比。
+請考慮使用 XAML 和 C# 定義 UI 的應用,以及 C++ Windows 執行時元件來執行計算密集型操作。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明四個 Windows 執行時非同步任務介面之間的差異,在 Visual Studio 中開始建立**空白解決方案**並將其命名為`Primes`它。 然後在方案中新增 [Windows 執行階段元件] **** 專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 `public` 方法都會定義四個非同步介面的其中一個。 返回值的方法返回[Windows::基礎:集合::iVector\<int>](/uwp/api/windows.foundation.collections.ivector-1)物件。 報告進度的方法會產生 `double` 值，用以定義整體工作已完成的百分比。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 

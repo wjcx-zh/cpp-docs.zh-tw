@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354387"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031481"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 類別
 
@@ -39,7 +39,7 @@ ref class UnorderedMapView sealed;
 
 ### <a name="remarks"></a>備註
 
-無序的 MapView 是[Windows::基礎:集合::iMapView\<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)介面 C++的具體實現,這些介面通過應用程式二進位介面 (ABI) 傳遞。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+無序的 MapView 是[Windows::基礎:集合::iMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2)介面 C++的具體實現,這些介面通過應用程式二進位介面 (ABI) 傳遞。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>無序的 MapView:第一種方法
 
-返回指定第一個[Windows::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)無序映射中的元素的反覆運算器。
+返回指定第一個[Windows::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)無序映射中的元素的反覆運算器。
 
 ### <a name="syntax"></a>語法
 
@@ -101,7 +101,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來尋找元素的機碼。 的類型`key`是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -120,7 +120,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來在 UnorderedMapView 中尋找元素的機碼。 的類型`key`是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -129,7 +129,7 @@ V Lookup(K key);
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>沒有排列對應檢視:大小方法
 
-返回"無序地圖視圖"中的視窗數[::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素。
+返回"無序地圖視圖"中的視窗數[::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
 ### <a name="syntax"></a>語法
 
@@ -242,4 +242,4 @@ UnorderedMapView 的 typename。
 ## <a name="see-also"></a>另請參閱
 
 [Platform::Collections 命名空間](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

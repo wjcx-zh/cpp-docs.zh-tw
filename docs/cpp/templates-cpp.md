@@ -7,20 +7,20 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 5f8322d850084ca53e946dcff1b67dc81b493fe3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e47f00c7e387974c7d1756cf3ee3865f892e6951
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160771"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032339"
 ---
 # <a name="templates-c"></a>樣板 (C++)
 
-範本是中C++一般程式設計的基礎。 身為強型別語言， C++會要求所有變數都有特定的型別，不論是由程式設計人員明確宣告或由編譯器推算。 不過，許多資料結構和演算法的外觀都相同，不論它們是在哪種類型上運作。 範本可讓您定義類別或函數的作業，並讓使用者指定這些作業應使用的具體類型。
+範本是C++通用程式設計的基礎。 作為強類型語言,C++要求所有變數具有特定類型,要麼由程式師顯式聲明或由編譯器推斷。 但是,無論它們使用哪種類型,許多數據結構和演算法看起來都相同。 範本使您能夠定義類或函數的操作,並允許使用者指定這些操作應處理的具體類型。
 
-## <a name="defining-and-using-templates"></a>定義和使用範本
+## <a name="defining-and-using-templates"></a>定義與使用樣本
 
-範本是一種結構，它會在編譯時期根據使用者為範本參數所提供的引數來產生一般類型或函式。 例如，您可以定義如下的函數樣板：
+範本是一種構造,它基於使用者為範本參數提供的論點在編譯時生成普通類型或函數。 例如,您可以定義如下所示的函數範本:
 
 ```cpp
 template <typename T>
@@ -30,9 +30,9 @@ T minimum(const T& lhs, const T& rhs)
 }
 ```
 
-上述程式碼描述具有單一類型參數*T*之泛型函式的範本，其傳回值和呼叫參數（lhs 和 rhs）都是此類型。 您可以將類型參數命名為任何您喜歡的名稱，但依照慣例，最常使用單一大寫字母。 *T*是範本參數;**typename**關鍵字指出此參數是類型的預留位置。 呼叫函式時，編譯器會將每個 `T` 的實例取代為使用者所指定或由編譯器推算的具象類型引數。 編譯器從範本產生類別或函式的進程稱為樣板具現*化*;`minimum<int>` 是範本 `minimum<T>`的具現化。
+上述代碼描述了具有單類型參數*T*的泛型函數的範本,其返回值和調用參數(lhs 和 rhs)都是此類。 您可以命名任何你喜歡的類型參數,但按照慣例,最常用的是單個大寫字母。 *T*是範本參數;**類型名稱**關鍵字表示此參數是類型的占位元。 調用函數時,編譯器將用使用者指定或編譯器推導`T`的混凝土類型參數替換 其每個實例。 編譯器從範本生成類或函數的過程稱為*範本實例化*;`minimum<int>`是範本`minimum<T>`的實例化。
 
-在其他位置，使用者可以宣告專為 int 特殊化的範本實例。假設 get_a （）和 get_b （）是傳回 int 的函式：
+在其他地方,用戶可以聲明專用於 int 的樣本實例。假定 get_a()和 get_b()是返回 int 的函數:
 
 ```cpp
 int a = get_a();
@@ -40,13 +40,13 @@ int b = get_b();
 int i = minimum<int>(a, b);
 ```
 
-不過，因為這是函式樣板，而編譯器可以從引數*a*和*b*推算 `T` 的類型，所以您可以像一般函式一樣呼叫它：
+但是,由於這是一個函數範本,編譯器可以從參數`T`*a*和*b*推斷其類型,因此可以像普通函數一樣調用它:
 
 ```cpp
 int i = minimum(a, b);
 ```
 
-當編譯器遇到最後一個語句時，它會產生新的函式，其中範本中每個出現的*T*都會取代為**int**：
+當編譯器遇到最後一個語句時,它產生新函數,其中樣本中*T*的每一次發生都取代為**int**:
 
 ```cpp
 int minimum(const int& lhs, const int& rhs)
@@ -55,25 +55,25 @@ int minimum(const int& lhs, const int& rhs)
 }
 ```
 
-編譯器在函式樣板中執行類型推斷的規則是以一般函數的規則為基礎。 如需詳細資訊，請參閱[函數樣板呼叫的](../cpp/overload-resolution-of-function-template-calls.md)多載解析。
+編譯器如何在函數範本中執行類型演繹的規則基於普通函數的規則。 有關詳細資訊,請參閱[函數樣本呼叫的重載解析](../cpp/overload-resolution-of-function-template-calls.md)。
 
-## <a name="type-parameters"></a><a id="type_parameters"></a>型別參數
+## <a name="type-parameters"></a><a id="type_parameters"></a>型態參數
 
-在上述的 `minimum` 範本中，請注意類型參數*t*不會以任何方式限定，直到在函式呼叫參數中使用為止，其中會加入 const 和 reference 限定詞。
+在上面的`minimum`範本中,請注意,在函數調用參數中添加 const 和引用限定符之前,類型參數*T*不會以任何方式限定。
 
-型別參數的數目沒有實際的限制。 以逗號分隔多個參數：
+類型參數的數量沒有實際限制。 按逗號分隔多個參數:
 
 ```cpp
 template <typename T, typename U, typename V> class Foo{};
 ```
 
-關鍵字**類別**相當於此內容中的**typename** 。 您可以用下列方式表達先前的範例：
+關鍵字**類別**等效於此上下文中**的類型命名**。 您可以將前面的範例表示為:
 
 ```cpp
 template <class T, class U, class V> class Foo{};
 ```
 
-您可以使用省略號運算子（...）來定義接受任意數目零或多個型別參數的範本：
+可以使用橢圓運算子 (...) 定義具有任何數為零個或多個類型參數的樣本:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -83,7 +83,7 @@ vtclass<int> vtinstance2;
 vtclass<float, bool> vtinstance3;
 ```
 
-任何內建或使用者定義的類型都可以當做類型引數使用。 例如，您可以使用標準程式庫中的[std：： vector](../standard-library/vector-class.md)來儲存類型為**int**、 **double**、 [std：： string](../standard-library/basic-string-class.md)、`MyClass`、 **const** `MyClass`*、`MyClass&`等等的變數。 使用範本時的主要限制是，類型引數必須支援任何套用至類型參數的作業。 例如，如果我們使用 `MyClass` 來呼叫 `minimum`，如下列範例所示：
+任何內置類型或使用者定義類型都可以用作類型參數。 例如,您可以在標準庫中使用[std::vector](../standard-library/vector-class.md)來儲存**int**類型、**雙**[、std::字串](../standard-library/basic-string-class.md)`MyClass`**、const** `MyClass`*`MyClass&`等的變數。 使用範本時的主要限制是類型參數必須支援應用於類型參數的任何操作。 例如,如果我們調用`minimum`using,`MyClass`如在此範例中所示:
 
 ```cpp
 class MyClass
@@ -101,9 +101,9 @@ int main()
 }
 ```
 
-將會產生編譯器錯誤，因為 `MyClass` 未提供 **<** 運算子的多載。
+將生成編譯器錯誤,因為`MyClass`不為**<** 運算符提供重載。
 
-任何特定範本的類型引數都屬於相同的物件階層，並不會有任何固有的需求，雖然您可以定義可強制執行這類限制的範本。 您可以結合物件導向技術與範本;例如，您可以將衍生的 * 儲存在向量中，\<基底\*>。    請注意，引數必須是指標
+沒有任何固有要求,即任何特定範本的類型參數都屬於同一物件層次結構,儘管您可以定義強制實施此類限制的範本。 您可以將面向對象的技術與範本相結合;例如,可以將派生* 存儲在向\<量\*庫>。    請注意,參數必須是指針
 
 ```cpp
 vector<MyClass*> vec;
@@ -115,11 +115,11 @@ vector<MyClass*> vec;
    vec2.push_back(make_shared<MyDerived>());
 ```
 
-`std::vector` 和其他標準程式庫容器在 `T` 的元素上所施加的基本需求，就是 `T` 是可指派和複製可建構。
+`std::vector`和其他標準庫容器對的元素`T`施加的基本要求`T`是 可複製和可複製構造。
 
 ## <a name="non-type-parameters"></a>非類型參數
 
-不同于其他語言（例如C#和 JAVA）中的C++泛型型別，範本支援*非類型參數*，也稱為值參數。 例如，您可以提供常數整數值來指定陣列的長度，如同此範例，類似于標準程式庫中的[std：： array](../standard-library/array-class-stl.md)類別：
+與其他語言(如 C# 和 Java)中的泛型類型不同,C++範本支援*非類型參數*,也稱為值參數。 例如,可以提供常量整數值來指定陣列的長度,如本示例類似於標準庫中的[std::array](../standard-library/array-class-stl.md)類:
 
 ```cpp
 template<typename T, size_t L>
@@ -131,17 +131,17 @@ public:
 };
 ```
 
-請注意範本宣告中的語法。 `size_t` 值會在編譯時期當做樣板引數傳入，而且必須是**const**或**constexpr**運算式。 您可以使用它，如下所示：
+請注意範本聲明中的語法。 該`size_t`值在編譯時作為範本參數傳入,並且必須是**const**或**constexpr**運算式。 像這樣使用它:
 
 ```cpp
 MyArray<MyClass*, 10> arr;
 ```
 
-其他類型的值（包括指標和參考）可以當做非型別參數傳入。 例如，您可以將指標傳入函數或函式物件，以自訂範本程式碼內的某些作業。
+其他類型的值(包括指標和引用)可以作為非類型參數傳入。 例如,可以將指標傳遞到函數或函數物件以自定義範本代碼中的一些操作。
 
-### <a name="type-deduction-for-non-type-template-parameters"></a>非類型樣板參數的類型推斷
+### <a name="type-deduction-for-non-type-template-parameters"></a>非類型樣本參數的類型扣除
 
-在 Visual Studio 2017 和更新版本中，在 **/std： c + + 17**模式中，編譯器會會推算以**auto**宣告之非類型樣板引數的類型：
+在 Visual Studio 2017 及更高版本中,在 **/std:c++17**模式下,編譯器推匯出使用**auto**聲明的非類型範本參數的類型:
 
 ```cpp
 template <auto x> constexpr auto constant = x;
@@ -151,9 +151,9 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>範本做為範本參數
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>樣本作為樣本參數
 
-範本可以是範本參數。 在此範例中，MyClass2 有兩個範本參數： typename 參數*T*和樣板參數*Arr*：
+範本可以是範本參數。 這個樣本參數:MyClass2 有兩個樣本參數:類型名稱參數*T*與樣本參數*Arr*:
 
 ```cpp
 template<typename T, template<typename U, int I> class Arr>
@@ -165,7 +165,7 @@ class MyClass2
 };
 ```
 
-因為*Arr*參數本身沒有主體，所以不需要其參數名稱。 事實上，從 `MyClass2`的主體中參考*Arr*的 typename 或類別參數名稱是錯誤的。 基於這個理由，可以省略*Arr*的類型參數名稱，如下列範例所示：
+由於*Arr*參數本身沒有正文,因此不需要其參數名稱。 事實上,從正文中引用*Arr*的類型名稱或類別參數名稱是`MyClass2`錯誤的 。 因此,可以省略*Arr*的類型參數名稱,如以下範例所示:
 
 ```cpp
 template<typename T, template<typename, int> class Arr>
@@ -176,21 +176,21 @@ class MyClass2
 };
 ```
 
-## <a name="default-template-arguments"></a>預設範本引數
+## <a name="default-template-arguments"></a>預設樣本參數
 
-類別和函式範本可以有預設引數。 當範本具有預設引數時，您可以在使用它時將它保留為未指定。 例如，std：： vector 範本具有配置器的預設引數：
+類和函數範本可以具有預設參數。 當範本具有預設參數時,您可以在使用它時將其保留為未指定參數。 例如,std::vector 範本具有分配器的預設參數:
 
 ```cpp
 template <class T, class Allocator = allocator<T>> class vector;
 ```
 
-在大多數情況下，預設的 std：：配置器類別是可接受的，因此您可以使用如下的向量：
+在大多數情況下,預設 std::分配器類是可以接受的,因此您可以使用如下所示的向量:
 
 ```cpp
 vector<int> myInts;
 ```
 
-但如有需要，您可以指定自訂配置器，如下所示：
+但是,如有必要,您可以指定如下所示的自定義分配器:
 
 ```cpp
 vector<int, MyAllocator> ints;
@@ -198,7 +198,7 @@ vector<int, MyAllocator> ints;
 
 若有多個樣板引數，則第一個預設引數之後的所有引數都必須有預設引數。
 
-使用預設為所有參數的範本時，請使用空的角括弧：
+使用參數全部為預設的樣本時,請使用空角度括弧:
 
 ```cpp
 template<typename A = int, typename B = double>
@@ -215,7 +215,7 @@ int main()
 
 ## <a name="template-specialization"></a>範本特製化
 
-在某些情況下，範本無法針對任何類型定義完全相同的程式碼，這是不可能或理想的做法。 例如，您可能想要定義只有在類型引數是指標、std：： wstring 或衍生自特定基類的類型時，才要執行的程式碼路徑。  在這種情況下，您可以針對該特定類型定義範本的特製*化*。 當使用者具現化具有該類型的範本時，編譯器會使用特製化來產生類別，而對於所有其他類型，編譯器會選擇較一般的範本。 所有參數都特殊化的特製化就是*完整特殊化*。 如果只有部分參數是特製化的，則稱為「*部分特殊化*」。
+在某些情況下,範本不可能或不希望為任何類型的定義完全相同的代碼。 例如,您可能希望定義僅在類型參數是指針或 std::wstring 或派生自特定基類的類型時才能執行的代碼路徑。  在這種情況下,您可以為該特定類型定義樣本的*專門化*。 當使用者使用該類型實例化範本時,編譯器使用專門化生成類,對於所有其他類型,編譯器選擇更通用的範本。 所有參數都專用的專業化化是*完整的專業化化*。 如果只有某些參數是專門化的,則稱為*部分專業化化*。
 
 ```cpp
 template <typename K, typename V>
@@ -229,6 +229,6 @@ MyMap<int, MyClass> classes; // uses original template
 MyMap<string, MyClass> classes2; // uses the partial specialization
 ```
 
-只要每個特殊化型別參數都是唯一的，範本可以有任意數目的特製化。 只有類別樣板可以部分特製化。 範本的所有完整和部分特製化都必須在與原始範本相同的命名空間中宣告。
+只要每個專用類型參數是唯一的,範本就可以具有任意數量的專門化。 只有類範本可以部分專用。 範本的所有完整和部分專門化都必須在與原始範本相同的命名空間中聲明。
 
-如需詳細資訊，請參閱[範本特製化](../cpp/template-specialization-cpp.md)。
+有關詳細資訊,請參閱[樣本專業化 。](../cpp/template-specialization-cpp.md)

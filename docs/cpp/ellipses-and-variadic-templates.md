@@ -1,15 +1,15 @@
 ---
-title: 省略符號和 Variadic 範本
+title: 橢圓和瓦里亞迪奇範本
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366344"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031520"
 ---
-# <a name="ellipses-and-variadic-templates"></a>省略符號和 Variadic 範本
+# <a name="ellipsis-and-variadic-templates"></a>橢圓和瓦里亞迪奇範本
 
 本文演示如何將省略號 ()`...`與C++可變範本一起使用. 橢圓在C和C++中有許多用途。 其中包括函數的變數參數清單。 C`printf()`運行時庫中的函數是最廣為人知的示例之一。
 

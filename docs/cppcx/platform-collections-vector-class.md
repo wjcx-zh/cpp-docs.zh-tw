@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354378"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032118"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
-表示可依索引來個別存取的物件序列集合。 實[作 Windows:基礎:集合::I 可觀察Vector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)以幫助進行 XAML[資料繫結](/windows/uwp/data-binding/data-binding-in-depth)。
+表示可依索引來個別存取的物件序列集合。 實[作 Windows:基礎:集合::I 可觀察Vector](/uwp/api/windows.foundation.collections.iobservablevector-1)以幫助進行 XAML[資料繫結](/windows/uwp/data-binding/data-binding-in-depth)。
 
 ## <a name="syntax"></a>語法
 
@@ -61,9 +61,9 @@ Vector 物件中包含的元素型別。
 
 1. 公用列舉類別
 
-**Vector**類是[Windows::基礎:集合::iVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)介面C++具體實現。
+**Vector**類是[Windows::基礎:集合::iVector](/uwp/api/windows.foundation.collections.ivector-1)介面C++具體實現。
 
-如果嘗試在公共返回值或參數中使用**Vector**類型,則引發編譯器錯誤 C3986。 您可以將參數或傳回值類型變更為 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)來修正錯誤。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+如果嘗試在公共返回值或參數中使用**Vector**類型,則引發編譯器錯誤 C3986。 您可以將參數或傳回值類型變更為 [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)來修正錯誤。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 
@@ -96,7 +96,7 @@ Vector 物件中包含的元素型別。
 |||
 |-|-|
 |名稱|描述|
-|事件[視窗::基礎:集合:::向量更改\<事件 處理程式 T>= 向量更改](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector 變更時發生。|
+|事件[視窗::基礎:集合:::向量更改\<事件 處理程式 T>= 向量更改](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Vector 變更時發生。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要尋找的項目。
 
 *指數*<br/>
@@ -372,10 +372,10 @@ Vector(std::initializer_list<T> il);
 *N*<br/>
 用來初始化目前 Vector 之物件集合中的項目數。
 
-*大小*<br/>
+*size*<br/>
 Vector 中的項目數。
 
-*值*<br/>
+*value*<br/>
 用來初始化目前 Vector 中各個項目的值。
 
 *五*<br/>

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363797"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032222"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
 
@@ -40,7 +40,7 @@ template <typename T, typename E>
 
 ### <a name="remarks"></a>備註
 
-該`VectorView`類實現[Windows:基礎::集合::iVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)介面,並支援標準範本庫反覆運算器。
+該`VectorView`類實現[Windows:基礎::集合::iVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1)介面,並支援標準範本庫反覆運算器。
 
 ### <a name="members"></a>成員
 
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要尋找的項目。
 
 *指數*<br/>
@@ -250,10 +250,10 @@ VectorView(
 *N*<br/>
 用來初始化目前 VectorView 之物件集合中的項目數。
 
-*大小*<br/>
+*size*<br/>
 VectorView 中的項目數。
 
-*值*<br/>
+*value*<br/>
 用來初始化目前 VectorView 中各個項目的值。
 
 *五*<br/>

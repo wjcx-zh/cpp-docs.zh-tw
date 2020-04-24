@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ae581b1b3bea522f2c1557b8be44ee1f32eef1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365573"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032287"
 ---
 # <a name="sizeof-operator"></a>sizeof 運算子
 
 相對於**字元**類型的大小,生成其操作數的大小。
 
 > [!NOTE]
-> 有關運算子的資訊,`sizeof ...`請參考[圓和瓦里亞迪奇樣本](../cpp/ellipses-and-variadic-templates.md)。
+> 有關運算子的資訊,`sizeof ...`請參考[圓和可變樣本](../cpp/ellipses-and-variadic-templates.md)。
 
 ## <a name="syntax"></a>語法
 

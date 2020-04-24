@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354424"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031494"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 
@@ -52,7 +52,7 @@ ref class Map sealed;
 
 - 公用列舉類別
 
-**無序映射**基本上是用於支援存儲 Windows 運行時類型的[unordered_map](../standard-library/unordered-map-class.md)的包裝。 它是[Windows::基礎:集合::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)和[I 可觀察映射](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)類型的具體實現,它們通過公共 Windows 運行時介面傳遞。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::UnorderedMap` 類型，則會引發編譯器錯誤 C3986。 您可以將參數或傳回值的類型變更為 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)來修正錯誤。
+**無序映射**基本上是用於支援存儲 Windows 運行時類型的[unordered_map](../standard-library/unordered-map-class.md)的包裝。 它是[Windows::基礎:集合::IMap](/uwp/api/windows.foundation.collections.imap-2)和[I 可觀察映射](/uwp/api/windows.foundation.collections.iobservablemap-2)類型的具體實現,它們通過公共 Windows 運行時介面傳遞。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::UnorderedMap` 類型，則會引發編譯器錯誤 C3986。 您可以將參數或傳回值的類型變更為 [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)來修正錯誤。
 
 有關詳細資訊,請參閱[集合](../cppcx/collections-c-cx.md)。
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>無序映射::第一種方法
 
-返回指定第一個[Windows::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)無序映射中的元素的反覆運算器。
+返回指定第一個[Windows::基礎:集合::iKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)無序映射中的元素的反覆運算器。
 
 ### <a name="syntax"></a>語法
 
@@ -126,7 +126,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>沒有序映射:獲取查看方法
 
-返回當前無序地圖的唯讀檢視;即[,平臺:集合:::](../cppcx/platform-collections-unorderedmapview-class.md)實現 [Windows::基礎:集合:集合:iMapView::iMapView]/uwp/api/Windows.Foundation.集合.IMapView_K_V_)介面的無序 MapView 類。
+返回當前無序地圖的唯讀檢視;即[:平臺:集合::實現](../cppcx/platform-collections-unorderedmapview-class.md) [Windows:基礎:集合:iMapView](/uwp/api/windows.foundation.collections.imapview-2)介面的無序 MapView 類。
 
 ### <a name="syntax"></a>語法
 
@@ -152,7 +152,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來尋找 UnorderedMap 元素的機碼。 *鍵*的類型是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -174,10 +174,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 機碼值組的機碼部分。 *鍵*的類型是類型名稱*K*。
 
-*值*<br/>
+*value*<br/>
 機碼值組的值部分。 *值*的類型是類型名稱*V*。
 
 ### <a name="return-value"></a>傳回值
@@ -198,7 +198,7 @@ V Lookup(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 用來在 UnorderedMap 中尋找元素的機碼。 *鍵*的類型是類型名稱*K*。
 
 ### <a name="return-value"></a>傳回值
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-[MapChangeEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler)其中包含有關引發事件的物件以及發生的更改類型的資訊。 另請參閱[IMapChangeEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)與[集合變更枚舉](/uwp/api/windows.foundation.collections.collectionchange)。
+[MapChangeEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2)其中包含有關引發事件的物件以及發生的更改類型的資訊。 另請參閱[IMapChangeEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1)與[集合變更枚舉](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
@@ -236,12 +236,12 @@ virtual void Remove(
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
+*key*<br/>
 機碼值組的機碼部分。 *鍵*的類型是類型名稱*K*。
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>無序對應::大小方法
 
-返回"無序地圖"中[的視窗:::基礎:集合::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素。
+返回"無序地圖"中[的視窗:::基礎:集合::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
 ### <a name="syntax"></a>語法
 

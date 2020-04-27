@@ -22,23 +22,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 458f7cd50462a145d005f3f81d87cc06fc7e01b1
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3beef0fc6a75a952956f032d3e0e4cbe4faed86b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748781"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168445"
 ---
 # <a name="cacl-class"></a>CAcl 類別
 
-此類是`ACL`(訪問控制列表)結構的包裝器。
+這個類別是（存取控制清單`ACL` ）結構的包裝函式。
 
 > [!IMPORTANT]
-> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
+> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CAcl
 ```
 
@@ -48,103 +48,103 @@ class CAcl
 
 |名稱|描述|
 |----------|-----------------|
-|[CAcl:CAccessMaskarray](#caccessmaskarray)|ACCESS_MASKs陣列。|
-|[Acl:CAceFlagarray](#caceflagarray)|BYTEs 的陣列。|
-|[Acl:CAceTypearray](#cacetypearray)|BYTEs 的陣列。|
+|[CAcl::CAccessMaskArray](#caccessmaskarray)|ACCESS_MASKs 的陣列。|
+|[CAcl::CAceFlagArray](#caceflagarray)|位元組陣列。|
+|[CAcl::CAceTypeArray](#cacetypearray)|位元組陣列。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[Acl:CAcl](#cacl)|建構函式。|
-|[CAcl:_CAcl](#dtor)|解構函式。|
+|[CAcl::CAcl](#cacl)|建構函式。|
+|[CAcl：： ~ CAcl](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[Acl:取得AceCount](#getacecount)|返回訪問控制項目 (ACE) 物件的數量。|
-|[Acl:取得 Acl](#getaclentries)|從`CAcl`物件檢索存取控制清單 (ACL) 項目。|
-|[Acl:取得 Aclentry](#getaclentry)|檢索有關`CAcl`物件中條目的所有資訊。|
-|[Acl:取得長度](#getlength)|返回 ACL 的長度。|
-|[Acl:GetPACL](#getpacl)|返回 PACL(指向 ACL 的指標)。|
-|[Acl:為空](#isempty)|測試`CAcl`物件為條目。|
-|[Acl:IsNull](#isnull)|返回`CAcl`物件的狀態。|
-|[Acl:移除Ace](#removeace)|從`CAcl`物件中刪除特定的 ACE(訪問控制條目)。|
-|[Acl:移除 Ace](#removeaces)|從 中刪除應用於給`CAcl``CSid`定 的所有 ACE(訪問控制條目)。|
-|[Acl:設定空](#setempty)|將`CAcl`物件標記為空。|
-|[Acl:設定 Null](#setnull)|將`CAcl`物件標記為 NULL。|
+|[CAcl::GetAceCount](#getacecount)|傳回存取控制專案（ACE）物件的數目。|
+|[CAcl::GetAclEntries](#getaclentries)|從`CAcl`物件中抓取存取控制清單（ACL）專案。|
+|[CAcl::GetAclEntry](#getaclentry)|抓取`CAcl`物件中某個專案的所有相關資訊。|
+|[CAcl：： GetLength](#getlength)|傳回 ACL 的長度。|
+|[CAcl::GetPACL](#getpacl)|傳回 PACL （ACL 的指標）。|
+|[CAcl：： IsEmpty](#isempty)|測試專案`CAcl`的物件。|
+|[CAcl：： IsNull](#isnull)|傳回`CAcl`物件的狀態。|
+|[CAcl::RemoveAce](#removeace)|從`CAcl`物件中移除特定的 ACE （存取控制專案）。|
+|[CAcl::RemoveAces](#removeaces)|從適用于指定`CAcl` `CSid`的，移除所有的 ace （存取控制專案）。|
+|[CAcl::SetEmpty](#setempty)|將`CAcl`物件標示為空白。|
+|[CAcl：： SetNull](#setnull)|將`CAcl`物件標記為 Null。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[Acl::運算符配置 ACL |](#operator_const_acl__star)|將`CAcl`對象強制轉換`ACL`為結構。|
-|[CAcl::運算符 |](#operator_eq)|指派運算子。|
+|[CAcl：： operator const ACL *](#operator_const_acl__star)|將`CAcl`物件轉換成`ACL`結構。|
+|[CAcl：： operator =](#operator_eq)|指派運算子。|
 
 ## <a name="remarks"></a>備註
 
-結構`ACL`是 ACL(訪問控制清單)的標頭。 ACL 包括零個或多個[ACE(](/windows/win32/SecAuthZ/access-control-entries)存取控制條目)的順序表。 ACL 中的單個 ACEs 編號為 0 到*n-1,* 其中*n*是 ACL 中的 ACEs 數。 編輯 ACL 時,應用程式透過索引引用 ACL 中的存取控制項目 (ACE)。
+`ACL`結構是 ACL （存取控制清單）的標頭。 ACL 包含零個或多個[ace](/windows/win32/SecAuthZ/access-control-entries) （存取控制專案）的連續清單。 ACL 中的個別 Ace 會從0編號到*n-1*，其中*n*是 acl 中的 ace 數目。 編輯 ACL 時，應用程式會依其索引參考 ACL 中的存取控制專案（ACE）。
 
-有兩種 ACL 類型:
+有兩種 ACL 類型：
 
-- 酌情
+- 自
 
 - 系統
 
-可自由存取的 ACL 由物件的擁有者或授予WRITE_DAC存取該物件的任何人控制。 它指定特定使用者和組對對象的訪問。 例如,檔案的擁有者可以使用任意 ACL 來控制哪些使用者和組可以並且不能存取該檔。
+任意 ACL 是由物件的擁有者，或授與物件 WRITE_DAC 存取權的任何人所控制。 它會指定特定使用者和群組對物件的存取權。 例如，檔案的擁有者可以使用任意的 ACL 來控制哪些使用者和群組可以和無法存取該檔案。
 
-物件還可以以系統管理員控制的系統 ACL 的形式與其關聯系統級安全資訊。 系統 ACL 可以允許系統管理員審核任何訪問對象的嘗試。
+物件也可以有與其相關聯的系統層級安全性資訊，其形式為系統管理員所控制的系統 ACL。 系統 ACL 可以讓系統管理員在嘗試取得物件的存取權時，進行審核。
 
-有關詳細資訊,請參閱 Windows SDK 中的[ACL](/windows/win32/SecAuthZ/access-control-lists)討論。
+如需詳細資訊，請參閱 Windows SDK 中的[ACL](/windows/win32/SecAuthZ/access-control-lists)討論。
 
-有關 Windows 中存取控制模型的簡介,請參閱 Windows SDK[中的存取控制](/windows/win32/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介，請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
-**標題:** atlsecurity.h
+**標頭：** atlsecurity。h
 
-## <a name="caclcaccessmaskarray"></a><a name="caccessmaskarray"></a>CAcl:CAccessMaskarray
+## <a name="caclcaccessmaskarray"></a><a name="caccessmaskarray"></a>CAcl::CAccessMaskArray
 
-ACCESS_MASK對象的陣組。
+ACCESS_MASK 物件的陣列。
 
-```
+```cpp
 typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 ```
 
 ### <a name="remarks"></a>備註
 
-此 typedef 指定可用於儲存存取控制項目 (ACE) 中使用的存取權限的陣列類型。
+這個 typedef 會指定可用來儲存存取控制專案（Ace）中所使用之存取權限的陣列類型。
 
-## <a name="caclcaceflagarray"></a><a name="caceflagarray"></a>Acl:CAceFlagarray
+## <a name="caclcaceflagarray"></a><a name="caceflagarray"></a>CAcl::CAceFlagArray
 
-BYTEs 的陣列。
+位元組陣列。
 
-```
+```cpp
 typedef CAtlArray<BYTE> CAceFlagArray;
 ```
 
 ### <a name="remarks"></a>備註
 
-此 typedef 指定用於定義存取控制項目 (ACE) 類型特定的控制標誌的陣列類型。 有關可能的標誌的完整清單,請參閱[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定義。
+這個 typedef 會指定用來定義存取控制專案（ACE）類型特定控制項旗標的陣列類型。 如需可能旗標的完整清單，請參閱[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定義。
 
-## <a name="caclcacetypearray"></a><a name="cacetypearray"></a>Acl:CAceTypearray
+## <a name="caclcacetypearray"></a><a name="cacetypearray"></a>CAcl::CAceTypeArray
 
-BYTEs 的陣列。
+位元組陣列。
 
-```
+```cpp
 typedef CAtlArray<BYTE> CAceTypeArray;
 ```
 
 ### <a name="remarks"></a>備註
 
-此 typedef 指定用於定義存取控制項目 (ACE) 物件(如ACCESS_ALLOWED_ACE_TYPE或ACCESS_DENIED_ACE_TYPE)性質的陣列類型。 有關可能類型的完整清單,請參閱[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定義。
+這個 typedef 會指定用來定義存取控制專案（ACE）物件本質的陣列型別，例如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE。 如需可能類型的完整清單，請參閱[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定義。
 
-## <a name="caclcacl"></a><a name="cacl"></a>Acl:CAcl
+## <a name="caclcacl"></a><a name="cacl"></a>CAcl::CAcl
 
 建構函式。
 
-```
+```cpp
 CAcl() throw();
 CAcl(const CAcl& rhs) throw(...);
 ```
@@ -156,35 +156,35 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="remarks"></a>備註
 
-可以使用`CAcl`現有`CAcl`物件選擇創建該物件。
+可以`CAcl`選擇性地使用現有`CAcl`的物件建立物件。
 
-## <a name="caclcacl"></a><a name="dtor"></a>CAcl:_CAcl
+## <a name="caclcacl"></a><a name="dtor"></a>CAcl：： ~ CAcl
 
 解構函式。
 
-```
+```cpp
 virtual ~CAcl() throw();
 ```
 
 ### <a name="remarks"></a>備註
 
-析構函數釋放對象獲取的任何資源。
+此析構函式會釋放物件所取得的任何資源。
 
-## <a name="caclgetacecount"></a><a name="getacecount"></a>Acl:取得AceCount
+## <a name="caclgetacecount"></a><a name="getacecount"></a>CAcl::GetAceCount
 
-返回訪問控制項目 (ACE) 物件的數量。
+傳回存取控制專案（ACE）物件的數目。
 
-```
+```cpp
 virtual UINT GetAceCount() const throw() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-返回`CAcl`物件中的 ACE 條目數。
+傳回`CAcl`物件中的 ACE 專案數目。
 
-## <a name="caclgetaclentries"></a><a name="getaclentries"></a>Acl:取得 Acl
+## <a name="caclgetaclentries"></a><a name="getaclentries"></a>CAcl::GetAclEntries
 
-從`CAcl`物件檢索存取控制清單 (ACL) 項目。
+從`CAcl`物件中抓取存取控制清單（ACL）專案。
 
 ```cpp
 void GetAclEntries(
@@ -197,28 +197,28 @@ void GetAclEntries(
 ### <a name="parameters"></a>參數
 
 *pSids*<br/>
-指向[CSid](../../atl/reference/csid-class.md)物件陣列的指標。
+[CSid](../../atl/reference/csid-class.md)物件陣列的指標。
 
-*pAccess 遮罩*<br/>
-訪問掩碼。
+*pAccessMasks*<br/>
+存取遮罩。
 
-*pAce 類型*<br/>
-訪問控制項目 (ACE) 類型。
+*pAceTypes*<br/>
+存取控制專案（ACE）類型。
 
 *pAceFlags*<br/>
-ACE 標誌。
+ACE 旗標。
 
 ### <a name="remarks"></a>備註
 
-此方法使用`CAcl`物件中包含的每個ACE物件的詳細資訊填充陣列參數。 當不需要該特定陣列的詳細資訊時,請使用 NULL。
+這個方法會以`CAcl`物件中包含的每個 ACE 物件的詳細資料來填入陣列參數。 當不需要該特定陣列的詳細資料時，請使用 Null。
 
-每個陣列的內容彼此對應,即`CAccessMaskArray`陣列的第一個元素對應於`CSidArray`陣列中的第一個元素,等等。
+每個陣列的內容彼此對應，也就是說， `CAccessMaskArray`陣列的第一個元素會對應到`CSidArray`陣列中的第一個元素，依此類推。
 
-有關 ACE 類型和標誌的更多詳細資訊[,請參閱ACE_HEADER。](/windows/win32/api/winnt/ns-winnt-ace_header)
+如需 ACE 類型和旗標的詳細資訊，請參閱[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 。
 
-## <a name="caclgetaclentry"></a><a name="getaclentry"></a>Acl:取得 Aclentry
+## <a name="caclgetaclentry"></a><a name="getaclentry"></a>CAcl::GetAclEntry
 
-檢索有關存取控制清單 (ACL) 中條目的所有資訊。
+抓取存取控制清單（ACL）中某個專案的所有相關資訊。
 
 ```cpp
 void GetAclEntry(
@@ -234,112 +234,112 @@ void GetAclEntry(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-要檢索的 ACL 條目的索引。
+要取出的 ACL 專案索引。
 
 *pSid*<br/>
-ACL 項目應用於的[CSid](../../atl/reference/csid-class.md)物件。
+要套用 ACL 專案的[CSid](../../atl/reference/csid-class.md)物件。
 
 *pMask*<br/>
-指定授予或拒絕存取許可權的掩碼。
+遮罩，指定授與或拒絕存取權的許可權。
 
-*p 型態*<br/>
+*pType*<br/>
 ACE 類型。
 
 *pFlags*<br/>
-ACE 標誌。
+ACE 旗標。
 
-*pObject 類型*<br/>
-物件類型。 如果未在 ACE 中指定物件類型,或者 ACE 不是物件 ACE,則將設置為GUID_NULL。
+*pObjectType*<br/>
+物件類型。 如果 ACE 中未指定物件類型，或如果 ACE 不是物件 ACE，這會設定為 GUID_Null。
 
-*p 繼承物件類型*<br/>
-繼承的物件類型。 如果 ACE 中未指定繼承的物件類型,或者 ACE 不是物件 ACE,則將設置為GUID_NULL。
+*pInheritedObjectType*<br/>
+繼承的物件類型。 如果未在 ACE 中指定繼承的物件類型，或如果 ACE 不是物件 ACE，這會設定為 GUID_Null。
 
 ### <a name="remarks"></a>備註
 
-此方法將檢索有關單個 ACE 的所有資訊,提供比[僅提供 CAcl:getAcl 條目](#getaclentries)提供的資訊更多的資訊。
+這個方法會抓取個別 ACE 的所有相關資訊，並提供比[CAcl：： GetAclEntries](#getaclentries)單獨提供更多的資訊。
 
-有關 ACE 類型和標誌的更多詳細資訊[,請參閱ACE_HEADER。](/windows/win32/api/winnt/ns-winnt-ace_header)
+如需 ACE 類型和旗標的詳細資訊，請參閱[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 。
 
-## <a name="caclgetlength"></a><a name="getlength"></a>Acl:取得長度
+## <a name="caclgetlength"></a><a name="getlength"></a>CAcl：： GetLength
 
-返回訪問控制清單 (ACL) 的長度。
+傳回存取控制清單（ACL）的長度。
 
-```
+```cpp
 UINT GetLength() const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-返回保存`ACL`結構所需的長度(以位元組為單位)。
+傳回保存`ACL`結構所需的必要長度（以位元組為單位）。
 
-## <a name="caclgetpacl"></a><a name="getpacl"></a>Acl:GetPACL
+## <a name="caclgetpacl"></a><a name="getpacl"></a>CAcl::GetPACL
 
-返回指向存取控制清單 (ACL) 的指標。
+傳回存取控制清單（ACL）的指標。
 
-```
+```cpp
 const ACL* GetPACL() const throw(...);
 ```
 
 ### <a name="return-value"></a>傳回值
 
-返回指向結構的`ACL`指標。
+傳回結構的`ACL`指標。
 
-## <a name="caclisempty"></a><a name="isempty"></a>Acl:為空
+## <a name="caclisempty"></a><a name="isempty"></a>CAcl：： IsEmpty
 
-測試`CAcl`物件為條目。
+測試專案`CAcl`的物件。
 
-```
+```cpp
 bool IsEmpty() const throw();
 ```
 
 ### <a name="remarks"></a>備註
 
-如果`CAcl`物件不是 NULL,並且不包含任何條目,則返回 TRUE。 如果`CAcl`物件為 NULL 或至少包含一個條目,則返回 FALSE。
+如果`CAcl`物件不是 Null，且不包含任何專案，則傳回 TRUE。 如果`CAcl`物件為 Null，或包含至少一個專案，則傳回 FALSE。
 
-## <a name="caclisnull"></a><a name="isnull"></a>Acl:IsNull
+## <a name="caclisnull"></a><a name="isnull"></a>CAcl：： IsNull
 
-返回`CAcl`物件的狀態。
+傳回`CAcl`物件的狀態。
 
-```
+```cpp
 bool IsNull() const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-如果物件為`CAcl`NULL,則傳回 TRUE,否則返回 FALSE。
+如果`CAcl`物件為 Null，則傳回 TRUE，否則傳回 FALSE。
 
-## <a name="cacloperator-const-acl-"></a><a name="operator_const_acl__star"></a>Acl::運算符配置 ACL |
+## <a name="cacloperator-const-acl-"></a><a name="operator_const_acl__star"></a>CAcl：： operator const ACL *
 
-將`CAcl`物件強制轉換`ACL`為 (訪問控制列表)結構。
+將`CAcl`物件轉換為`ACL` （存取控制清單）結構。
 
-```
+```cpp
 operator const ACL *() const throw(...);
 ```
 
 ### <a name="remarks"></a>備註
 
-傳回結構的`ACL`位址 。
+傳回`ACL`結構的位址。
 
-## <a name="cacloperator-"></a><a name="operator_eq"></a>CAcl::運算符 |
+## <a name="cacloperator-"></a><a name="operator_eq"></a>CAcl：： operator =
 
 指派運算子。
 
-```
+```cpp
 CAcl& operator= (const CAcl& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-`CAcl`要分配給現有物件。
+要`CAcl`指派給現有物件的。
 
 ### <a name="return-value"></a>傳回值
 
-返回對更新`CAcl`物件的引用。
+傳回已更新`CAcl`物件的參考。
 
-## <a name="caclremoveace"></a><a name="removeace"></a>Acl:移除Ace
+## <a name="caclremoveace"></a><a name="removeace"></a>CAcl::RemoveAce
 
-從`CAcl`物件中刪除特定的 ACE(訪問控制條目)。
+從`CAcl`物件中移除特定的 ACE （存取控制專案）。
 
 ```cpp
 void RemoveAce(UINT nIndex) throw();
@@ -348,17 +348,17 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-要刪除的 ACE 條目的索引。
+要移除之 ACE 專案的索引。
 
 ### <a name="remarks"></a>備註
 
-此方法派生自[CAtlarray::removeAt。](../../atl/reference/catlarray-class.md#removeat)
+這個方法衍生自[CAtlArray：： RemoveAt](../../atl/reference/catlarray-class.md#removeat)。
 
-## <a name="caclremoveaces"></a><a name="removeaces"></a>Acl:移除 Ace
+## <a name="caclremoveaces"></a><a name="removeaces"></a>CAcl::RemoveAces
 
-從 中刪除應用於給`CAcl``CSid`定 的所有 ACE(訪問控制條目)。
+從適用于指定`CAcl` `CSid`的，移除的 alls ace （存取控制專案）。
 
-```
+```cpp
 bool RemoveAces(const CSid& rSid) throw(...)
 ```
 
@@ -367,9 +367,9 @@ bool RemoveAces(const CSid& rSid) throw(...)
 *rSid*<br/>
 `CSid` 物件的參考。
 
-## <a name="caclsetempty"></a><a name="setempty"></a>Acl:設定空
+## <a name="caclsetempty"></a><a name="setempty"></a>CAcl::SetEmpty
 
-將`CAcl`物件標記為空。
+將`CAcl`物件標示為空白。
 
 ```cpp
 void SetEmpty() throw();
@@ -377,11 +377,11 @@ void SetEmpty() throw();
 
 ### <a name="remarks"></a>備註
 
-`CAcl`可以設置為空或 NULL:兩種狀態是截然不同的。
+`CAcl`可以設定為空白或 Null：這兩個狀態是相異的。
 
-## <a name="caclsetnull"></a><a name="setnull"></a>Acl:設定 Null
+## <a name="caclsetnull"></a><a name="setnull"></a>CAcl：： SetNull
 
-將`CAcl`物件標記為 NULL。
+將`CAcl`物件標記為 Null。
 
 ```cpp
 void SetNull() throw();
@@ -389,9 +389,9 @@ void SetNull() throw();
 
 ### <a name="remarks"></a>備註
 
-`CAcl`可以設置為空或 NULL:兩種狀態是截然不同的。
+`CAcl`可以設定為空白或 Null：這兩個狀態是相異的。
 
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../../atl/atl-class-overview.md)<br/>
-[安全全域功能](../../atl/reference/security-global-functions.md)
+[安全性全域函式](../../atl/reference/security-global-functions.md)

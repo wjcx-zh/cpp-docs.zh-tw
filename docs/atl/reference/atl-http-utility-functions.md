@@ -2,12 +2,12 @@
 title: ATL HTTP 公用程式函式
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c95681503da0d661382e6da33bd33e8f2004838b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418178"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168601"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -28,7 +28,7 @@ ms.locfileid: "79418178"
 
 **標頭：** atlutil。h
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 呼叫此函式可規範化 URL，包括將 Unsafe 字元和空格轉換成逸出序列。
 
@@ -76,7 +76,7 @@ inline BOOL AtlCanonicalizeUrl(
 
 的行為就像是目前的[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)版本，但不需要安裝 WinInet 或 Internet Explorer。
 
-## <a name="atlcombineurl"></a>AtlCombineUrl
+## <a name="atlcombineurl"></a><a name="atlcombineurl"></a>AtlCombineUrl
 
 呼叫此函式可將基底 URL 和相對 URL 結合成單一、標準的 URL。
 
@@ -114,7 +114,7 @@ inline BOOL AtlCombineUrl(
 
 的行為就像是目前的[InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw)版本，但不需要安裝 WinInet 或 Internet Explorer。
 
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
 
 呼叫此函式會將所有 Unsafe 字元轉換成逸出序列。
 
@@ -155,11 +155,11 @@ DWORD 變數的指標。 如果函式成功， *pdwStrLen*會接收寫入緩衝�
 
 成功時傳回 TRUE，失敗時傳回 FALSE。
 
-## <a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
 
 呼叫此函式可取得與特定網際網路通訊協定或配置相關聯的預設通訊埠編號。
 
-```
+```cpp
 inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ```
 
@@ -172,11 +172,11 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 
 如果無法辨識配置，則為與指定之配置或 ATL_URL_INVALID_PORT_NUMBER 相關聯的[ATL_URL_PORT](atl-typedefs.md#atl_url_port) 。
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 呼叫此函式可了解在 URL 中使用某個字元是否安全。
 
-```
+```cpp
 inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```
 
@@ -193,7 +193,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 不應該在 Url 中使用的字元可以使用此函式進行測試，並使用[AtlCanonicalizeUrl](#atlcanonicalizeurl)進行轉換。
 
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
 
 呼叫此函式將逸出字元轉換回其原始值。
 
@@ -233,7 +233,7 @@ DWORD 變數的指標。 如果函式成功，變數會接收寫入緩衝區的�
 
 反轉[AtlEscapeUrl](#atlescapeurl)所套用的轉換程式。
 
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
 
 將[COLORREF](/windows/win32/gdi/colorref)值轉換為對應于該色彩值的 HTML 文字。
 
@@ -246,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>參數
 
-*顏色*<br/>
+*color*<br/>
 RGB 色彩值。
 
 *pbOut*<br/>
@@ -263,7 +263,7 @@ RGB 色彩值。
 
 HTML 色彩值是一個井字型大小，後面接著6位數的十六進位值，針對色彩的每個紅色、綠色和藍色元件使用2位數（例如，#FFFFFF 為白色）。
 
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 呼叫此函式將系統時間轉換成採用適合在 HTTP 標頭中使用之格式的字串。
 

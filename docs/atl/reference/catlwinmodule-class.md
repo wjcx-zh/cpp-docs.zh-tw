@@ -1,5 +1,5 @@
 ---
-title: CAtlWin 模組類
+title: CAtlWinModule 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlWinModule
@@ -10,23 +10,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: e131ca1b4eb6e320d533ad1292c23add6ffa46e5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5cdf13ebbb982ad8184a52dcf1a3e30d71e4e5b0
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748549"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167704"
 ---
-# <a name="catlwinmodule-class"></a>CAtlWin 模組類
+# <a name="catlwinmodule-class"></a>CAtlWinModule 類別
 
-此類支援 ATL 視窗元件。
+這個類別會提供 ATL 視窗化元件的支援。
 
 > [!IMPORTANT]
-> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
+> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
@@ -36,19 +36,19 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlWin 模組:CAtlWin 模組](#catlwinmodule)|建構函式。|
-|[CAtlWin 模組:*CAtlWin 模組](#dtor)|解構函式。|
+|[CAtlWinModule::CAtlWinModule](#catlwinmodule)|建構函式。|
+|[CAtlWinModule：： ~ CAtlWinModule](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlWin模組::添加創建WndData](#addcreatewnddata)|添加數據物件。|
-|[CAtlWin 模組::提取創建WndData](#extractcreatewnddata)|返回指向視窗模塊數據物件的指標。|
+|[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|加入資料物件。|
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|傳回 window 模組資料物件的指標。|
 
 ## <a name="remarks"></a>備註
 
-此類支援所有需要視窗功能的 ATL 類。
+這個類別可支援所有需要視窗化功能的 ATL 類別。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -58,11 +58,11 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ## <a name="requirements"></a>需求
 
-**標題:** atlbase.h
+**標頭：** atlbase.h。h
 
-## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWin模組::添加創建WndData
+## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
 
-此方法初始化和添加`_AtlCreateWndData`結構。
+這個方法會初始化並加入`_AtlCreateWndData`結構。
 
 ```cpp
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -71,42 +71,42 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="parameters"></a>參數
 
 *pData*<br/>
-指向要初始`_AtlCreateWndData`化並添加到當前模組的結構的指標。
+要初始化並`_AtlCreateWndData`加入至目前模組之結構的指標。
 
 *pObject*<br/>
-指向物件的**此**指標。
+指向物件**this**指標的指標。
 
 ### <a name="remarks"></a>備註
 
-此方法調用[AtlWinModuleAddCreatewnddata,該資料](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)初始化了[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構。 此結構將存儲**此**指標,用於在視窗過程中獲取類實例。
+這個方法會呼叫初始化[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構的[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) 。 這個結構會儲存**this**指標，用來取得視窗程式中的類別實例。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWin 模組:CAtlWin 模組
+## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
 建構函式。
 
-```
+```cpp
 CAtlWinModule();
 ```
 
 ### <a name="remarks"></a>備註
 
-如果初始化失敗,將引發**EXCEPTION_NONCONTINUABLE**異常。
+如果初始化失敗，則會引發**EXCEPTION_NONCONTINUABLE**例外狀況。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWin 模組:*CAtlWin 模組
+## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule：： ~ CAtlWinModule
 
 解構函式。
 
-```
+```cpp
 ~CAtlWinModule();
 ```
 
 ### <a name="remarks"></a>備註
 
-釋放所有分配的資源。
+釋放所有配置的資源。
 
-## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWin 模組::提取創建WndData
+## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
 
-此方法返回指向結構的`_AtlCreateWndData`指標。
+這個方法會傳回`_AtlCreateWndData`結構的指標。
 
 ```cpp
 void* ExtractCreateWndData();
@@ -114,10 +114,10 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>傳回值
 
-返回指向以前添加的`_AtlCreateWndData` [CAtlWinModule::addCreateWndData](#addcreatewnddata)()或 NULL(如果沒有可用物件)的結構的指標。
+傳回先前使用`_AtlCreateWndData` [CAtlWinModule：： AddCreateWndData](#addcreatewnddata)加入之結構的指標，如果沒有可用的物件，則傳回 Null。
 
 ## <a name="see-also"></a>另請參閱
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
-[模組類](../../atl/atl-module-classes.md)
+[模組類別](../../atl/atl-module-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: CAtlFile對應基質
+title: CAtlFileMappingBase 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMappingBase
@@ -16,23 +16,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 16eebfff4330a47888d1b60eaa993ee87d120f72
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 75177c195e83a4ab3ad2a6bd4d608d07f8c2234f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748290"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168081"
 ---
-# <a name="catlfilemappingbase-class"></a>CAtlFile對應基質
+# <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 類別
 
-此類表示記憶體映射的檔。
+此類別代表記憶體對應檔。
 
 > [!IMPORTANT]
-> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
+> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CAtlFileMappingBase
 ```
 
@@ -42,92 +42,92 @@ class CAtlFileMappingBase
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtl 檔案映射庫::CAtlFile映射庫](#catlfilemappingbase)|建構函式。|
-|[CAtl檔案對應庫::_CAtlFile映射庫](#dtor)|解構函式。|
+|[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|建構函式。|
+|[CAtlFileMappingBase：： ~ CAtlFileMappingBase](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlFile對應基礎::從](#copyfrom)|呼叫此方法從檔映射物件複製。|
-|[CAtlFile 對應基礎:抓取資料](#getdata)|呼叫此方法從檔映射對象獲取資料。|
-|[CAtlFile對應基礎::取得手柄](#gethandle)|調用此方法以返回檔句柄。|
-|[CAtlFile對應基礎::抓取對應大小](#getmappingsize)|呼叫此方法從檔映射對象獲取映射大小。|
-|[CAtlFile 對應基礎:地圖檔](#mapfile)|呼叫此方法以建立檔映射物件。|
-|[CAtlFile對應基礎::映射共用Mem](#mapsharedmem)|呼叫此方法以建立允許完全存取所有進程的檔映射物件。|
-|[CAtlFile對應基礎:開啟映射](#openmapping)|呼叫此方法以將句柄返回到檔映射物件。|
-|[CAtlFile對應基礎::取消映射](#unmap)|呼叫此方法以取消映射檔映射物件。|
+|[CAtlFileMappingBase：： CopyFrom](#copyfrom)|呼叫這個方法，從檔案對應物件複製。|
+|[CAtlFileMappingBase：：操作](#getdata)|呼叫這個方法，以從檔案對應物件取得資料。|
+|[CAtlFileMappingBase：： GetHandle](#gethandle)|呼叫這個方法，以傳回檔案控制代碼。|
+|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|呼叫這個方法，以從檔案對應物件取得對應大小。|
+|[CAtlFileMappingBase：：對應檔](#mapfile)|呼叫這個方法來建立檔案對應物件。|
+|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|呼叫這個方法來建立檔案對應物件，以允許所有進程的完整存取權。|
+|[CAtlFileMappingBase::OpenMapping](#openmapping)|呼叫這個方法，以傳回檔案對應物件的控制碼。|
+|[CAtlFileMappingBase：：取消對應](#unmap)|呼叫這個方法可取消對應檔案對應物件。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlFile映射基礎::運算符 |](#operator_eq)|將目前檔案對應物件設定到另一個檔對應物件。|
+|[CAtlFileMappingBase：： operator =](#operator_eq)|將目前的檔案對應物件設定為另一個檔案對應物件。|
 
 ## <a name="remarks"></a>備註
 
-檔案映射是檔內容與進程虛擬位址空間的一部分的關聯。 此類提供了創建檔映射物件的方法,允許程式輕鬆存取和共享資料。
+檔案對應是指檔案內容與進程的虛擬位址空間部分的關聯。 這個類別會提供建立檔案對應物件的方法，讓程式能夠輕鬆地存取及共用資料。
 
-有關詳細資訊,請參閱 Windows SDK[中的檔案映射](/windows/win32/Memory/file-mapping)。
+如需詳細資訊，請參閱 Windows SDK 中的檔案[對應](/windows/win32/Memory/file-mapping)。
 
 ## <a name="requirements"></a>需求
 
-**標題:** atlfile.h
+**標頭：** atlfile。h
 
-## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtl 檔案映射庫::CAtlFile映射庫
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase
 
 建構函式。
 
-```
+```cpp
 CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*奧裡格*<br/>
-要複製的原始檔映射物件以創建新物件。
+*orig*<br/>
+要複製的原始檔案對應物件，用來建立新的物件。
 
 ### <a name="remarks"></a>備註
 
-建立新的檔案映射物件,可以選擇使用現有物件。 仍需要調用[CAtlFileMappingBase:mapFile](#mapfile)來打開或創建特定檔的檔映射物件。
+建立新的檔案對應物件，並選擇性地使用現有的物件。 您仍然必須呼叫[CAtlFileMappingBase：：](#mapfile) mapping，才能開啟或建立特定檔案的檔案對應物件。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtl檔案對應庫::_CAtlFile映射庫
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase：： ~ CAtlFileMappingBase
 
 解構函式。
 
-```
+```cpp
 ~CAtlFileMappingBase() throw();
 ```
 
 ### <a name="remarks"></a>備註
 
-釋放類分配的任何資源,並調用[CAtlFileMappingBase::unmap](#unmap)方法。
+釋放類別所配置的任何資源，並呼叫[CAtlFileMappingBase：：](#unmap)取消對應方法。
 
-## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFile對應基礎::從
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase：： CopyFrom
 
-呼叫此方法從檔映射物件複製。
+呼叫這個方法，從檔案對應物件複製。
 
-```
+```cpp
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*奧裡格*<br/>
-要複製的原始檔映射物件。
+*orig*<br/>
+複製來源的原始檔案對應物件。
 
 ### <a name="return-value"></a>傳回值
 
-返回成功S_OK,或失敗時返回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFile 對應基礎:抓取資料
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase：：操作
 
-呼叫此方法從檔映射對象獲取資料。
+呼叫這個方法，以從檔案對應物件取得資料。
 
 ```cpp
 void* GetData() const throw();
@@ -135,41 +135,41 @@ void* GetData() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-返回指向數據的指標。
+傳回資料的指標。
 
-## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFile對應基礎::取得手柄
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase：： GetHandle
 
-呼叫此方法以將句柄返回到檔映射物件。
+呼叫這個方法，以傳回檔案對應物件的控制碼。
 
-```
+```cpp
 HANDLE GetHandle() throw ();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-返回檔映射物件的句柄。
+傳回檔案對應物件的控制碼。
 
-## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFile對應基礎::抓取對應大小
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize
 
-呼叫此方法從檔映射對象獲取映射大小。
+呼叫這個方法，以從檔案對應物件取得對應大小。
 
-```
+```cpp
 SIZE_T GetMappingSize() throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-返回映射大小。
+傳回對應大小。
 
 ### <a name="example"></a>範例
 
-請參考[CAtlFile 映射庫的範例:CAtlFile 映射庫](#catlfilemappingbase)。
+請參閱[CAtlFileMappingBase：： CAtlFileMappingBase](#catlfilemappingbase)的範例。
 
-## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFile 對應基礎:地圖檔
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase：：對應檔
 
-呼叫此方法以開啟或建立指定檔案的檔案映射物件。
+呼叫這個方法，為指定的檔案開啟或建立檔案對應物件。
 
-```
+```cpp
 HRESULT MapFile(
     HANDLE hFile,
     SIZE_T nMappingSize = 0,
@@ -181,37 +181,37 @@ HRESULT MapFile(
 ### <a name="parameters"></a>參數
 
 *hFile*<br/>
-處理從中創建映射物件的檔。 *hFile*必須有效且不能設置為INVALID_HANDLE_VALUE。
+用來建立對應物件之檔案的控制碼。 *hFile*必須是有效的，而且無法設定為 INVALID_HANDLE_VALUE。
 
-*n 對應大小*<br/>
-映射大小。 如果為 0,則檔映射物件的最大大小等於*hFile*標識的檔的當前大小。
+*nMappingSize*<br/>
+對應大小。 如果為0，則表示檔案對應物件的大小上限等於 HFile 所識別之檔案的目前大小 *。*
 
-*n位移*<br/>
-要開始映射的檔偏移量。 偏移值必須是系統記憶體分配粒度的倍數。
+*nOffset*<br/>
+要開始對應的檔案位移。 Offset 值必須是系統記憶體配置資料細微性的倍數。
 
-*dwMapping保護*<br/>
-映射檔時檔視圖所需的保護。 請參考 Windows SDK[建立檔案映射](/windows/win32/api/winbase/nf-winbase-createfilemappinga)中的*fl 保護*。
+*dwMappingProtection*<br/>
+檔案對應時，檔案視圖所需的保護。 請參閱 Windows SDK 中[CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)的*flProtect* 。
 
-*dwView 希望存取*<br/>
-指定存取檔案檢視的類型,因此,指定檔映射的頁面的保護。 在 Windows SDK 中的[MapViewFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)中查看*dwdAccess。*
+*dwViewDesiredAccess*<br/>
+指定檔案視圖的存取類型，並因此保護檔案所對應的頁面。 請參閱 Windows SDK 中[MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)的*dwDesiredAccess* 。
 
 ### <a name="return-value"></a>傳回值
 
-返回成功S_OK,或失敗時返回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-建立檔案映射物件後,檔的大小不得超過檔映射物件的大小;如果是,則並非所有文件的內容都可供共用。 有關詳細資訊,請參閱在 Windows SDK 中[創建檔映射](/windows/win32/api/winbase/nf-winbase-createfilemappinga)和[MapViewFileEx。](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)
+建立檔案對應物件之後，檔案的大小不能超過檔案對應物件的大小;如果有，則不是所有檔案的內容都可以共用。 如需詳細資訊，請參閱 Windows SDK 中的[CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)和[MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) 。
 
 ### <a name="example"></a>範例
 
-請參考[CAtlFile 映射庫的範例:CAtlFile 映射庫](#catlfilemappingbase)。
+請參閱[CAtlFileMappingBase：： CAtlFileMappingBase](#catlfilemappingbase)的範例。
 
-## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFile對應基礎::映射共用Mem
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem
 
-呼叫此方法以建立允許完全存取所有進程的檔映射物件。
+呼叫這個方法來建立檔案對應物件，以允許所有進程的完整存取權。
 
-```
+```cpp
 HRESULT MapSharedMem(
     SIZE_T nMappingSize,
     LPCTSTR szName,
@@ -223,37 +223,37 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>參數
 
-*n 對應大小*<br/>
-映射大小。 如果為 0,則檔映射物件的最大大小等於*szName*標識的檔映射物件的當前大小。
+*nMappingSize*<br/>
+對應大小。 如果為0，則表示檔案對應物件的大小上限等於*szName*所識別之檔案對應物件的目前大小。
 
 *szName*<br/>
-映射物件的名稱。
+對應物件的名稱。
 
-*pb 已存在*<br/>
-指向如果映射物件已存在,則設置為 TRUE 的 BOOL 值。
+*pbAlreadyExisted*<br/>
+如果對應物件已經存在，則指向設定為 TRUE 的 BOOL 值。
 
 *lpsa*<br/>
-指向結構的`SECURITY_ATTRIBUTES`指標,用於確定返回的句柄是否可以由子進程繼承。 請參考 Windows SDK[建立檔案映射](/windows/win32/api/winbase/nf-winbase-createfilemappinga)中的*lp 屬性*。
+`SECURITY_ATTRIBUTES`結構的指標，判斷子進程是否可以繼承傳回的控制碼。 請參閱 Windows SDK 中[CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)的*lpAttributes* 。
 
-*dwMapping保護*<br/>
-映射檔時檔視圖所需的保護。 請參閱*flProtect*Windows `CreateFileMapping` SDK 中的 fl 保護。
+*dwMappingProtection*<br/>
+檔案進行對應時，檔案視圖所需的保護。 請*flProtect*參閱 Windows SDK `CreateFileMapping`中的 flProtect。
 
-*dwView 希望存取*<br/>
-指定存取檔案檢視的類型,因此,指定檔映射的頁面的保護。 在 Windows SDK 中的[MapViewFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)中查看*dwdAccess。*
+*dwViewDesiredAccess*<br/>
+指定檔案視圖的存取類型，並因此保護檔案所對應的頁面。 請參閱 Windows SDK 中[MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)的*dwDesiredAccess* 。
 
 ### <a name="return-value"></a>傳回值
 
-返回成功S_OK,或失敗時返回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-`MapShareMem`允許在進程之間共用由[CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)創建的現有檔映射物件。
+`MapShareMem`允許在進程之間共用現有的檔案對應物件（由[CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)建立）。
 
-## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFile對應基礎:開啟映射
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
 
-呼叫此方法以開啟指定檔案的命名檔案映射物件。
+呼叫這個方法，為指定的檔案開啟命名的檔案對應物件。
 
-```
+```cpp
 HRESULT OpenMapping(
     LPCTSTR szName,
     SIZE_T nMappingSize,
@@ -264,59 +264,59 @@ HRESULT OpenMapping(
 ### <a name="parameters"></a>參數
 
 *szName*<br/>
-映射物件的名稱。 如果此名稱對檔映射物件有打開的句柄,並且映射物件上的安全描述符不與*dwView希望訪問*參數衝突,則打開操作將成功。
+對應物件的名稱。 如果這個名稱有檔案對應物件的開啟控制碼，而且對應物件上的安全描述項與*dwViewDesiredAccess*參數不衝突，則開啟的作業會成功。
 
-*n 對應大小*<br/>
-映射大小。 如果為 0,則檔映射物件的最大大小等於*szName*標識的檔映射物件的當前大小。
+*nMappingSize*<br/>
+對應大小。 如果為0，則表示檔案對應物件的大小上限等於*szName*所識別之檔案對應物件的目前大小。
 
-*n位移*<br/>
-要開始映射的檔偏移量。 偏移值必須是系統記憶體分配粒度的倍數。
+*nOffset*<br/>
+要開始對應的檔案位移。 Offset 值必須是系統記憶體配置資料細微性的倍數。
 
-*dwView 希望存取*<br/>
-指定存取檔案檢視的類型,因此,指定檔映射的頁面的保護。 在 Windows SDK 中的[MapViewFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)中查看*dwdAccess。*
+*dwViewDesiredAccess*<br/>
+指定檔案視圖的存取類型，並因此保護檔案所對應的頁面。 請參閱 Windows SDK 中[MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)的*dwDesiredAccess* 。
 
 ### <a name="return-value"></a>傳回值
 
-返回成功S_OK,或失敗時返回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-在調試生成中,如果輸入參數無效,將發生斷言錯誤。
+在「偵錯工具組建」中，如果輸入參數無效，就會發生判斷提示錯誤。
 
-## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFile映射基礎::運算符 |
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase：： operator =
 
-將目前檔案對應物件設定到另一個檔對應物件。
+將目前的檔案對應物件設定為另一個檔案對應物件。
 
-```
+```cpp
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```
 
 ### <a name="parameters"></a>參數
 
-*奧裡格*<br/>
-當前檔映射物件。
+*orig*<br/>
+目前的檔案對應物件。
 
 ### <a name="return-value"></a>傳回值
 
-返回對當前物件的引用。
+傳回目前物件的參考。
 
-## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFile對應基礎::取消映射
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase：：取消對應
 
-呼叫此方法以取消映射檔映射物件。
+呼叫這個方法可取消對應檔案對應物件。
 
-```
+```cpp
 HRESULT Unmap() throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-返回成功S_OK,或失敗時返回錯誤 HRESULT。
+會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-有關詳細資訊,請參閱 Windows SDK 中的[「取消映射查看檔](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile)」 。
+如需詳細資訊，請參閱 Windows SDK 中的[UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtl 檔案映射類別](../../atl/reference/catlfilemapping-class.md)<br/>
+[CAtlFileMapping 類別](../../atl/reference/catlfilemapping-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

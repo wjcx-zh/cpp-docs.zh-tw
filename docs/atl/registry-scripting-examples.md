@@ -1,5 +1,5 @@
 ---
-title: 註冊表文稿範例
+title: 登入指令檔範例
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scripting, examples
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: 7bcdb7076982e2f0bd08f4fd82bb45f21e61ef20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e225ce28309aa619fd9436d8f4b93e60544e86c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329332"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168744"
 ---
-# <a name="registry-scripting-examples"></a>註冊表文稿範例
+# <a name="registry-scripting-examples"></a>登入指令檔範例
 
-本主題中的文本範例展示如何向系統註冊表添加密鑰、註冊註冊商 COM 伺服器以及指定多個解析樹。
+本主題中的腳本範例示範如何將金鑰新增至系統登錄、註冊註冊機構 COM 伺服器，以及指定多個剖析樹狀目錄。
 
-## <a name="add-a-key-to-hkey_current_user"></a>新增金鑰以HKEY_CURRENT_USER
+## <a name="add-a-key-to-hkey_current_user"></a>將金鑰新增至 HKEY_CURRENT_USER
 
-以下分析樹說明瞭向系統註冊表添加單個密鑰的簡單腳本。 特別是,文稿將鍵`MyVeryOwnKey`新增`HKEY_CURRENT_USER`到 。 它還將`HowGoesIt`的 預設字串值分配給新鍵:
+下列剖析樹狀結構說明將單一按鍵新增至系統登錄的簡單腳本。 特別是，腳本會將索引鍵`MyVeryOwnKey`新增至。 `HKEY_CURRENT_USER` 它也會將的預設字串值`HowGoesIt`指派給新的索引鍵：
 
-```
+```rgs
 HKEY_CURRENT_USER
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```
 
-此腳本可以輕鬆擴展以定義多個子鍵,如下所示:
+您可以輕鬆地擴充此腳本，以定義多個子機碼，如下所示：
 
-```
+```rgs
 HKCU
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -45,13 +45,13 @@ HKCU
 }
 ```
 
-現在,文稿將子鍵`HasASubkey`加入`MyVeryOwnKey`。 到此子鍵,它同時`PrettyCool`添加子鍵(預設值`DWORD`為 55)`ANameValue`和 命名值(字串值`WithANamedValue`為 )。
+現在，腳本會將子`HasASubkey`機碼加入至`MyVeryOwnKey`。 在這個子機碼中，它`PrettyCool`會同時新增子機`DWORD`碼（預設值為 55 `ANameValue` ）和指定的值（具有的`WithANamedValue`字串值）。
 
-## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>註冊註冊商 COM 伺服器
+## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>註冊註冊機構 COM 伺服器
 
-以下文本註冊註冊商 COM 伺服器本身。
+下列腳本會註冊註冊機構 COM 伺服器本身。
 
-```
+```rgs
 HKCR
 {
     ATL.Registrar = s 'ATL Registrar Class'
@@ -72,31 +72,31 @@ HKCR
 }
 ```
 
-在執行時,此解析樹將`ATL.Registrar`鍵加入`HKEY_CLASSES_ROOT`。 到此新金鑰,它然後:
+在執行時間，這個剖析樹狀目錄會`ATL.Registrar`將索引`HKEY_CLASSES_ROOT`鍵新增至。 在這個新的機碼中，它會：
 
-- 指定`ATL Registrar Class`為鍵的預設字串值。
+- 指定`ATL Registrar Class`做為索引鍵的預設字串值。
 
-- 添加`CLSID`為子鍵。
+- 加入`CLSID`做為子機碼。
 
-- 指定`{44EC053A-400F-11D0-9DCD-00A0C90391D3}``CLSID`指定 。 (此值是註冊器的 CLSID,`CoCreateInstance`用於 .
+- 指定`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`的`CLSID`。 （此值是與`CoCreateInstance`搭配使用的註冊機構的 CLSID）。
 
-由於`CLSID`是共用的,因此不應在取消註冊模式下將其刪除。 `NoRemove CLSID`語句 ,`CLSID`通過指示 應在註冊模式下打開並在取消註冊模式下忽略來這樣做。
+由於`CLSID`是共用的，因此不應該在取消註冊模式中移除。 語句`NoRemove CLSID`會藉由指出`CLSID`應該在註冊模式中開啟，並在取消註冊模式中忽略，來執行這項工作。
 
-語句`ForceRemove`通過在重新創建密鑰之前刪除鍵及其所有子鍵來提供內務管理功能。 如果子鍵的名稱已更改,這非常有用。 在此文稿示例中,`ForceRemove`檢查是否存在`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。 如果是, `ForceRemove`
+`ForceRemove`語句會在重新建立金鑰之前，先移除索引鍵及其所有子機碼，以提供內務處理功能。 如果子機碼的名稱已變更，這會很有用。 在此腳本範例中`ForceRemove` ，會檢查是否`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`已存在。 如果有， `ForceRemove`：
 
-- 遞歸刪除`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`及其所有子鍵。
+- 遞迴刪除`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`及其所有子機碼。
 
 - 重新建立`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。
 
-- 新增`ATL Registrar Class`預設字串值`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。
+- 加入`ATL Registrar Class`做為的預設字串值`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。
 
-解析樹現在向`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`中添加了兩個新的子鍵。 第一個鍵`ProgID`獲取預設字串值,該值是 ProgID。 第二個鍵`InprocServer32`獲取預設字串值`%MODULE%`,這是本文"[使用可替換參數(註冊器的預處理器")](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)部分中解釋的預處理器值。 `InprocServer32`還取得命名值`ThreadingModel`, 字串值`Apartment`為 。
+剖析樹狀結構現在會在`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`中加入兩個新的子機碼。 第一個索引鍵`ProgID`會取得做為 ProgID 的預設字串值。 第二個索引`InprocServer32`鍵會取得預設字串值， `%MODULE%`這是本文中[使用可取代參數（註冊機構的預處理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)一節所說明的預處理器值。 `InprocServer32`也會取得名為的`ThreadingModel` `Apartment`值，其字串值為。
 
-## <a name="specify-multiple-parse-trees"></a>指定多個分析樹
+## <a name="specify-multiple-parse-trees"></a>指定多個剖析樹狀結構
 
-要在腳本中指定多個解析樹,只需將一個樹放在另一個樹的末尾即可。 例如,以下文稿會鍵`MyVeryOwnKey`, 加入與`HKEY_CLASSES_ROOT``HKEY_CURRENT_USER`的解析樹中:
+若要在腳本中指定一個以上的剖析樹狀結構，只要將一個樹狀結構放在另一個樹狀目錄的結尾。 例如，下列腳本會將索引鍵`MyVeryOwnKey`新增至`HKEY_CLASSES_ROOT`和`HKEY_CURRENT_USER`的剖析樹：
 
-```
+```rgs
 HKCR
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -108,8 +108,8 @@ HKEY_CURRENT_USER
 ```
 
 > [!NOTE]
-> 在註冊器腳本中,4K 是最大令牌大小。 (令牌是語法中的任何可識別元素。在前面的腳本`HKCR`示例中`HKEY_CURRENT_USER`,`'MyVeryOwnKey'``'HowGoesIt'`和 都是權杖。
+> 在註冊機構腳本中，4K 是 token 大小的上限。 （Token 是語法中任何可辨識的元素）。在先前的腳本範例中`HKCR`， `HKEY_CURRENT_USER`、 `'MyVeryOwnKey'`、和`'HowGoesIt'`都是所有權杖。
 
 ## <a name="see-also"></a>另請參閱
 
-[建立註冊器文稿](../atl/creating-registrar-scripts.md)
+[建立註冊機構腳本](../atl/creating-registrar-scripts.md)

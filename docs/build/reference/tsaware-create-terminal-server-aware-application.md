@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498192"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587378"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (建立終端伺服器感知應用程式)
 
@@ -28,21 +28,21 @@ ms.locfileid: "69498192"
 
 /TSAWARE 選項會在程式映射的選擇性標頭的 [IMAGE_OPTIONAL_HEADER DllCharacteristics] 欄位中設定旗標。 設定此旗標時，終端機伺服器將不會對應用程式進行某些變更。
 
-當應用程式不是終端機伺服器感知 (也稱為繼承應用程式) 時, 終端機伺服器會對繼承應用程式進行某些修改, 使其在多使用者環境中能夠正常運作。 例如, 終端機伺服器會建立虛擬 Windows 資料夾, 讓每個使用者取得 Windows 資料夾, 而不是取得系統的 Windows 目錄。 這可讓使用者存取自己的 INI 檔案。 此外, 終端機伺服器會對繼承應用程式的登錄進行一些調整。 這些修改會使終端機伺服器上繼承應用程式的載入速度變慢。
+當應用程式不是終端機伺服器感知（也稱為繼承應用程式）時，終端機伺服器會對繼承應用程式進行某些修改，使其在多使用者環境中能夠正常運作。 例如，終端機伺服器會建立虛擬 Windows 資料夾，讓每個使用者取得 Windows 資料夾，而不是取得系統的 Windows 目錄。 這可讓使用者存取自己的 INI 檔案。 此外，終端機伺服器會對繼承應用程式的登錄進行一些調整。 這些修改會使終端機伺服器上繼承應用程式的載入速度變慢。
 
-如果應用程式是終端機伺服器感知, 則在安裝期間, 它不能依賴 INI 檔案, 也不能寫入**HKEY_CURRENT_USER**登錄。
+如果應用程式是終端機伺服器感知，它就不能依賴 INI 檔案，也不能在安裝期間寫入**HKEY_CURRENT_USER**登錄。
 
-如果您使用/TSAWARE, 而您的應用程式仍然使用 INI 檔案, 則系統的所有使用者都會共用這些檔案。 如果這是可接受的, 您仍然可以使用/TSAWARE 連結應用程式;否則, 您必須使用/TSAWARE: NO。
+如果您使用/TSAWARE，而您的應用程式仍然使用 INI 檔案，則系統的所有使用者都會共用這些檔案。 如果這是可接受的，您仍然可以使用/TSAWARE 連結應用程式;否則，您必須使用/TSAWARE： NO。
 
-Windows 和主控台應用程式預設會啟用/TSAWARE 選項。 如需相關資訊, 請參閱[/SUBSYSTEM](subsystem-specify-subsystem.md)和[/VERSION](version-version-information.md) 。
+Windows 和主控台應用程式預設會啟用/TSAWARE 選項。 如需相關資訊，請參閱[/SUBSYSTEM](subsystem-specify-subsystem.md)和[/VERSION](version-version-information.md) 。
 
-/TSAWARE 對驅動程式、Vxd 或 Dll 無效。
+/TSAWARE 對驅動程式或 Dll 無效。
 
-如果應用程式已與/TSAWARE 連結, DUMPBIN [/HEADERS](headers.md)會顯示該效果的資訊。
+如果應用程式已與/TSAWARE 連結，DUMPBIN [/HEADERS](headers.md)會顯示該效果的資訊。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **Linker** 資料夾。
 
@@ -52,7 +52,7 @@ Windows 和主控台應用程式預設會啟用/TSAWARE 選項。 如需相關�
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>＞。
 
 ## <a name="see-also"></a>另請參閱
 

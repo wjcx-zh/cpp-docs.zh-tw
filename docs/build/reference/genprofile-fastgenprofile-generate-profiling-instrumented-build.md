@@ -10,65 +10,65 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: cf6327b175344f1e2914792eb47a4838e544ea24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ddf56d92cc2d8fbbfaf635c8e1602443e35b5b
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292207"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825780"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE、/FASTGENPROFILE (產生程式碼剖析檢測建置)
 
-指定連結器產生的 .pgd 檔，以支援特性指引最佳化 (PGO)。 **/GENPROFILE**並 **/FASTGENPROFILE**使用不同的預設參數。 使用 **/GENPROFILE**讓精確度優先於速度和記憶體使用量，程式碼剖析期間。 使用 **/FASTGENPROFILE**讓較小的記憶體使用量和速度優先於精確度。
+指定連結器產生的 .pgd 檔，以支援特性指引最佳化 (PGO)。 **/GENPROFILE**和 **/FASTGENPROFILE**使用不同的預設參數。 在分析期間，使用 **/GENPROFILE**來偏好速度和記憶體使用量的精確度。 使用 **/FASTGENPROFILE**來偏好較小的記憶體使用量，並加快精確度的速度。
 
 ## <a name="syntax"></a>語法
 
-> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [**精確**|**NOEXACT**] |**MEMMAX =**_#_|**MEMMIN =**_#_| [**路徑**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] |**PGD =**_filename_}]<br/>
-> **/ FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [**精確**|**NOEXACT**] |**MEMMAX =**_#_|**MEMMIN =**_#_| [**路徑**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] |**PGD =**_filename_}]
+> **/GENPROFILE**[**：**{[**COUNTER32**|**COUNTER64**] | [**EXACT**|**NOEXACT**] |**MEMMAX =**_#_|**MEMMIN =**_#_|[**PATH**|**NOPATH** ] |[**TRACKEH** |**NOTRACKEH** ] |**PGD =**_filename_}] \
+> **/FASTGENPROFILE**[**：**{[**COUNTER32**|**COUNTER64**] | [**EXACT**|**NOEXACT**] |**MEMMAX =**_#_|**MEMMIN =**_#_|[**PATH**|**NOPATH** ] |[**TRACKEH** |**NOTRACKEH** ] |**PGD =**_filename_}]
 
 ### <a name="arguments"></a>引數
 
-任何下列的引數來指定 **/GENPROFILE**或是 **/FASTGENPROFILE**。 此處所列的引數以管道分隔 (**|**) 是互斥的字元。 使用逗號 (**，**) 字元來分隔選項。
+下列任何一個引數可以指定為 **/GENPROFILE**或 **/FASTGENPROFILE**。 此處所列的引數會以**|** 分隔號（）字元隔開，而互斥。 使用逗號（**，**）字元來分隔選項。
 
 **COUNTER32** &#124; **COUNTER64**<br/>
-使用**COUNTER32**若要指定使用 32 位元的探查計數器，以及**COUNTER64**指定 64 位元的探查計數器。 當您指定 **/GENPROFILE**，預設值是**COUNTER64**。 當您指定 **/FASTGENPROFILE**，預設值是**COUNTER32**。
+使用**COUNTER32**來指定使用32位的探查計數器，並使用**COUNTER64**來指定64位的探查計數器。 當您指定 **/GENPROFILE**時，預設值為**COUNTER64**。 當您指定 **/FASTGENPROFILE**時，預設值為**COUNTER32**。
 
-**EXACT** &#124; **NOEXACT**<br/>
-使用**精確**指定探查的安全執行緒連鎖的遞增。 **NOEXACT**指定探查的受保護的遞增作業。 預設值是**NOEXACT**。
+**精確**&#124; **NOEXACT**<br/>
+使用**EXACT**來指定探查的安全線程連鎖增量。 **NOEXACT**會指定探查的未受保護增量作業。 預設值為**NOEXACT**。
 
 **MEMMAX**=*值*， **MEMMIN**=*值*<br/>
-使用**MEMMAX**並**MEMMIN**在記憶體中指定定型資料的最大和最小的保留大小。 值是以位元組為單位的要保留記憶體數量。 這些值預設由內部的啟發學習法決定。
+使用**MEMMAX**和**MEMMIN**來指定記憶體中定型資料的最大和最小保留大小。 值是以位元組為單位的要保留記憶體數量。 這些值預設由內部的啟發學習法決定。
 
-**PATH**  &#124; **NOPATH** <br/>
-使用**路徑**來指定一組個別的函式的每個唯一路徑的 PGO 計數器。 使用**NOPATH**指定只有一組計數器每個函式。 當您指定 **/GENPROFILE**，預設值是**路徑**。 當您指定 **/FASTGENPROFILE**，預設值是**NOPATH** 。
+**路徑**&#124; **NOPATH** <br/>
+使用**PATH**為函式的每個唯一路徑指定一組個別的 PGO 計數器。 使用**NOPATH**為每個函式只指定一組計數器。 當您指定 **/GENPROFILE**時，預設值是**PATH** 。 當您指定 **/FASTGENPROFILE**時，預設值為**NOPATH** 。
 
-**TRACKEH** &AMP;#124; **NOTRACKEH** <br/>
-指定在訓練期間擲回例外狀況時，是否使用額外的計數器來保持精確的計數。 使用**TRACKEH**來指定額外的計數器，確切的計數。 使用  **NOTRACKEH**指定單一計數器不會使用例外狀況的程式碼處理或不會碰到訓練情節中的例外狀況。  當您指定 **/GENPROFILE**，預設值是**TRACKEH** 。 當您指定 **/FASTGENPROFILE**，預設值是**NOTRACKEH** 。
+**TRACKEH** &#124; **NOTRACKEH** <br/>
+指定在訓練期間擲回例外狀況時，是否使用額外的計數器來保持精確的計數。 使用**TRACKEH**來指定確切計數的額外計數器。 使用**NOTRACKEH**為不使用例外狀況處理的程式碼，或不會在定型案例中遇到例外狀況的腳本，指定單一計數器。  當您指定 **/GENPROFILE**時，預設值為**TRACKEH** 。 當您指定 **/FASTGENPROFILE**時，預設值為**NOTRACKEH** 。
 
-**PGD**=*filename*<br/>
+**PGD**=*檔案名*<br/>
 指定 .pgd 檔的主檔名。 連結器預設使用副檔名為 .pgd 的可執行影像主檔名。
 
 ## <a name="remarks"></a>備註
 
-**/GENPROFILE**並 **/FASTGENPROFILE**選項會告訴連結器產生支援特性指引最佳化 (PGO) 的應用程式訓練所需的程式碼剖析檢測檔案。 這些選項是在 Visual Studio 2015 新功能。 偏好使用這些選項已被取代 **/ltcg: pginstrument**， **/PGD**並 **/POGOSAFEMODE**選項和**PogoSafeMode**， **VCPROFILE_ALLOC_SCALE**並**VCPROFILE_PATH**環境變數。 應用程式訓練所產生的程式碼剖析資訊用做輸入，在建置期間執行整個程式的最佳化。 您可以設定其他選項，在應用程式訓練和建置期間控制各種效能的程式碼剖析功能。 指定的預設選項 **/GENPROFILE**提供最精確的結果，特別是針對大型且複雜的多執行緒應用程式。 **/FASTGENPROFILE**選項使用不同的預設值的較低的記憶體耗用量和更快的效能，在訓練期間，但會犧牲精確度。
+**/GENPROFILE**和 **/FASTGENPROFILE**選項會告訴連結器產生支援特性指引優化（PGO）之應用程式訓練所需的分析檢測檔案。 這些選項是 Visual Studio 2015 中的新功能。 偏好使用這些選項至已被取代的 **/ltcg： PGINSTRUMENT**、 **/PGD**和 **/POGOSAFEMODE**選項，以及**POGOSAFEMODE**、 **VCPROFILE_ALLOC_SCALE**和**VCPROFILE_PATH**環境變數。 應用程式訓練所產生的程式碼剖析資訊用做輸入，在建置期間執行整個程式的最佳化。 您可以設定其他選項，在應用程式訓練和建置期間控制各種效能的程式碼剖析功能。 **/GENPROFILE**所指定的預設選項會提供最精確的結果，特別是針對大型、複雜的多執行緒應用程式。 在定型期間， **/FASTGENPROFILE**選項會使用不同的預設值來取得較低的記憶體使用量和更快的效能，代價是準確度。
 
-當您使用建置後，執行已檢測的應用程式程式碼剖析資訊擷取 **/GENPROFILE**的 **/FASTGENPROFILE**。 當您指定時，會擷取此資訊[/USEPROFILE](useprofile.md)連結器選項，來執行分析步驟，並接著可用來引導最佳化的建置步驟。 有關如何訓練您的應用程式的詳細資訊及收集的資料的詳細資訊，請參閱[特性指引最佳化](../profile-guided-optimizations.md)。
+當您使用 **/FASTGENPROFILE**的 **/GENPROFILE**建立之後，當您執行已檢測的應用程式時，就會捕捉分析資訊。 當您指定[/USEPROFILE](useprofile.md)連結器選項來執行程式碼剖析步驟，然後用來引導優化的組建步驟時，就會捕捉這項資訊。 如需如何訓練應用程式的詳細資訊，以及所收集資料的詳細資訊，請參閱特性[指引優化](../profile-guided-optimizations.md)。
 
-您也必須指定 **/LTCG**當您指定 **/GENPROFILE**或是 **/FASTGENPROFILE**。
+當您指定 **/GENPROFILE**或 **/FASTGENPROFILE**時，也必須指定 **/ltcg** 。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
+1. 選取 [設定] [**屬性** > ] [**連結器** > **命令列**] 屬性頁。
 
-1. 輸入 **/GENPROFILE**或是 **/FASTGENPROFILE**選項和引數**其他選項** 方塊中。 選取 [確定] 儲存您的變更。
+1. 在 [**其他選項**] 方塊中，輸入 **/GENPROFILE**或 **/FASTGENPROFILE**選項和引數。 選取 [確定]**** 儲存您的變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>＞。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [MSVC 連結器參考](linking.md)<br/>
 [MSVC 連結器選項](linker-options.md)<br/>

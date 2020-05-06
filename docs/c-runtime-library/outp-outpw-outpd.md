@@ -41,20 +41,20 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988380"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825924"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw、_outpd
 
-輸出、在埠、位元組（`outp`、`_outp`）、單字（`outpw`、`_outpw`）或雙字組（`_outpd`）。
+輸出，位於埠、`outp`位元組（， `_outp`）、單字（`outpw`， `_outpw`）或雙字組（`_outpd`）。
 
 > [!IMPORTANT]
-> 這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。  
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這些函式已被取代。 從 Visual Studio 2015 開始，它們無法在 CRT 中使用。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -75,8 +75,8 @@ unsigned long _outpd(
 
 ### <a name="parameters"></a>參數
 
-*埠*\
-連接埠編號。
+*移植*\
+連接埠號碼。
 
 *databyte、dataword*\
 輸出值。
@@ -87,11 +87,11 @@ unsigned long _outpd(
 
 ## <a name="remarks"></a>備註
 
-`_outp`、 `_outpw`及 `_outpd` 函式會個別寫入一個位元組、一個字組及雙字組到指定的輸出連接埠。 *port* 引數可以是介於 0 - 65,535 之間任何不帶正負號的整數；*databyte* 可以是介於 0 - 255 之間的任何整數；*dataword* 可以位於整數、不帶正負號之 short 整數，或不帶正負號之 long 整數範圍內的任何值。
+`_outp`、 `_outpw`及 `_outpd` 函式會個別寫入一個位元組、一個字組及雙字組到指定的輸出連接埠。 *Port*引數可以是範圍 0-65535; 中的任何不帶正負號的整數。*databyte*可以是範圍 0-255 中的任何整數。和*dataword*可以是整數範圍內的任何值、不帶正負號的短整數，以及不帶正負號的長整數。
 
 由於這些函式直接寫入 I/O 連接埠，因此無法用於使用者程式碼。 如需如何使用這些作業系統中之 I/O 連接埠的資訊，請前往 MSDN 搜尋 "Serial Communications in Win32"。
 
-`outp` 和 `outpw` 名稱是 `_outp` 和 `_outpw` 函式的舊名稱、已被取代的名稱。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+`outp`和`outpw`名稱是`_outp`和`_outpw`函式的舊版、已被取代的名稱。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 ## <a name="requirements"></a>需求
 
@@ -101,7 +101,7 @@ unsigned long _outpd(
 |`_outpw`|\<conio.h>|
 |`_outpd`|\<conio.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -109,5 +109,5 @@ unsigned long _outpd(
 
 ## <a name="see-also"></a>請參閱
 
-[主控台和連接埠 I/O](../c-runtime-library/console-and-port-i-o.md)\
+[主控台和埠 i/o](../c-runtime-library/console-and-port-i-o.md)\
 [sct.inp、inpw、_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)

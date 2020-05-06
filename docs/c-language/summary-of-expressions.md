@@ -3,112 +3,112 @@ title: 運算式的摘要
 ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
 ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157814"
 ---
 # <a name="summary-of-expressions"></a>運算式的摘要
 
-*primary-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*<br/>
+*主要-運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*標識*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*常數*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *expression*  **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*字串常值*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**（**  *運算式*  **）**
 
 *expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression*  **,**  *assignment-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*指派-運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*運算式*  **，**  *指派運算式*
 
-*constant-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
+*常數運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*條件運算式*
 
-*conditional-expression*：<br/>
+*條件運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **?**  *expression*  **：**  *conditional-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 OR 運算式*  **？**  *expression*  **：**  *條件運算式*
 
 *assignment-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*條件運算式*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
-*postfix-expression*：<br/>
+後置*運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **[**  *運算式*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **.**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **->**  *識別碼*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+&nbsp;&nbsp;&nbsp;&nbsp;後置*運算式***[***運算式***]**      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;後置*運算式***（***引數運算式清單*<sub>opt</sub> **）**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;後置*運算式***。**    *識別碼 (identifier)*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*後置運算式*  **->**  *識別碼*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*後置運算式*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*後置運算式*  **--**
 
 *argument-expression-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list*  **,**  *assignment-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*指派-運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*引數-運算式-清單*  **，**  *指派運算式*
 
-*unary-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**++**  *unary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**--**  *unary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-operator*<br/>
+*一元運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*後置運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**++**  *一元運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**--**  *一元運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*一元運算子*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof**  *unary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *type-name*  **)**
 
 *unary-operator*：下列其中一個<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&** **&#42;** **+** **-** **~** **!**
+&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+**&#42;**-** **!** ！ **~**
 
-*cast-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *type-name*  **)**  *cast-expression*
+*cast-運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*一元運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**（**  *類型名稱*  **）**  *cast 運算式*
 
-*multiplicative-expression*：<br/>
+*乘法運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **&#42;**  *cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **/**  *cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **%**  *cast-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*乘法運算式*  **/**  *轉換運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*乘法運算式*  **%**  *轉換運算式*
 
-*additive-expression*：<br/>
+*加法類運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*  **+**  *multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*  **-**  *multiplicative-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*加法運算式*  **+**  *乘法運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*加法運算式*  **-**  *乘法運算式*
 
-*shift-expression*：<br/>
+*移位-運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **\<\<**  *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **>>**  *additive-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*移位運算式***\<***加法運算式*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*移位運算式*  **>>**  *加法運算式*
 
-*relational-expression*：<br/>
+*關聯式運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **\<**  *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **>**  *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **\<=**  *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **>=**  *shift-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式*  **\<**  *移位運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式*  **>**  *移位運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式***\<***移位運算式*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式*  **>=**  *移位運算式*
 
 *equality-expression*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*  **==**  *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*相等運算式*  **==**  *關聯式運算式*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*  **!=**  *relational-expression*
 
 *AND-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*AND-expression*  **&**  *equality-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*等號比較運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*和-運算式*  **&**  *等號比較運算式*
 
 *exclusive-OR-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*AND-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*exclusive-OR-expression*  **^**  *AND-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*和-運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*互斥 OR 運算式*  **^**  *和運算式*
 
 *inclusive-OR-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*exclusive-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*互斥 OR 運算式*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*  **&#124;**  *exclusive-OR-expression*
 
-*logical-AND-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
+*邏輯 AND 運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*內含 OR 運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 AND 運算式*  **&&**  *包含 OR 運算式*
 
-*logical-OR-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
+*邏輯 OR 運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 AND 運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 OR 運算式*  **&#124;&#124;**  *的邏輯 AND 運算式*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [階段結構文法](../c-language/phrase-structure-grammar.md)
+- [片語結構文法](../c-language/phrase-structure-grammar.md)

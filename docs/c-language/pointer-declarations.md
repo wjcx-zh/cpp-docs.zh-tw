@@ -8,11 +8,11 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
 ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232148"
 ---
 # <a name="pointer-declarations"></a>指標宣告
 
@@ -20,27 +20,27 @@ ms.locfileid: "56151997"
 
 ## <a name="syntax"></a>語法
 
-*declarator*：<br/>
+宣告*子：*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**
+*direct-* 宣告子：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*標識*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**（** *declarator*宣告子 **）**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **[** *常數運算式*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **（** *參數-類型清單* **）**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **（** *識別碼清單*<sub>opt</sub> **）**
 
-*pointer*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *指標*
+*指標*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*類型-辨識符號-清單*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*類型-辨識符號-列出*<sub>opt</sub> *指標*
 
 *type-qualifier-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*類型-辨識符號*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*
 
 *type-specifier* 會為物件提供類型，它可以是任何基本、結構或等位類型。 指標變數也可以指向函式、陣列和其他指標  (如需宣告和解譯更複雜指標類型的詳細資訊，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md))。
 
-您可以將 *type-specifier* 設定為 **void**，以藉此延後指定指標參考的類型。 這類項目稱為「**void** 的指標」，書寫方式為 `void *`。 宣告為 *void* 指標的變數可用來指向任何類型的物件。 不過，若要在指標或指標所指向的物件上執行大部分作業，則必須為每項作業明確指定指標所指向的類型  (**char** <strong>\*</strong> 類型和 **void** <strong>\*</strong> 類型的變數可在不進行類型轉換的情況下與指派相容)。這類轉換可以利用類型轉換完成 (如需詳細資訊，請參閱[類型轉換](../c-language/type-cast-conversions.md))。
+您可以將 *type-specifier 設定為 * **void**，以藉此延後指定指標參考的類型。 這類項目稱為「**void** 的指標」，書寫方式為 `void *`。 宣告為 *void* 指標的變數可用來指向任何類型的物件。 不過，若要在指標或指標所指向的物件上執行大部分作業，則必須為每項作業明確指定指標所指向的類型  （ **Char** <strong>\*</strong>類型和**void** <strong>\*</strong>類型的變數在不進行類型轉換的情況下，是與指派相容的）。這類轉換可以透過類型轉換來完成（如需詳細資訊，請參閱[類型](../c-language/type-cast-conversions.md)轉換）。
 
 *type-qualifier* 可以是 **const** 或 **volatile**，或兩者都是。 這兩者會分別指定，指標不可由程式本身修改 (**const**)，或是指標可由非程式所控制的某個處理序合法修改 (**volatile**) (如需 **const** 和 **volatile** 的詳細資訊，請參閱[類型限定詞](../c-language/type-qualifiers.md))。
 
@@ -112,8 +112,8 @@ struct id
 } record;
 ```
 
-變數 *record* 具有結構類型 *id*。請注意，*pname* 會宣告為另一個名為 *name* 之結構類型的指標。 這個宣告可以在定義 *name* 類型之前出現。
+變數*記錄*具有結構類型*識別碼*。請注意， *pname*會宣告為另一個名為*name*之結構類型的指標。 這個宣告可以在定義 *name* 類型之前出現。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

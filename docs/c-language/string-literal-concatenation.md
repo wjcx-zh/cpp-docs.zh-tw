@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
 ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157784"
 ---
 # <a name="string-literal-concatenation"></a>字串常值串連
 
@@ -59,6 +59,6 @@ printf_s( "%s" , string ) ;
 
 在轉譯階段 6 中，由任何相鄰字串常值或相鄰寬字串常值的序列所指定的多位元組字元序列，會串連成單一多位元組字元序列。 因此，請勿將程式設計為允許執行時修改字串常值。 ANSI C 標準將修改字串的結果指定為未定義。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 字串常值](../c-language/c-string-literals.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - side effects in expression evaluation
 ms.assetid: d9b3004a-830e-43a0-bea5-8989d501d670
 ms.openlocfilehash: de5e398afd8b95cfe5596f487a36b6a2d27e3287
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158469"
 ---
 # <a name="side-effects"></a>副作用
 
@@ -31,6 +31,6 @@ x[i] = i++;
 
 由於 C 不會定義副作用的評估順序，因此以上所討論的兩種評估方法均正確，並且可以實作其中任何一種。 若要確定程式碼的可攜性和明確性，請避免使用依賴特定副作用評估順序的陳述式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [運算式評估](../c-language/expression-evaluation-c.md)

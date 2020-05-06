@@ -9,15 +9,15 @@ helpviewer_keywords:
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326283"
 ---
 # <a name="c-comments"></a>C 註解
 
-「註解」是一個以正斜線和星號組合 (<strong>/\*</strong>) 為開頭的字元序列，編譯器會將其視為一個空白字元或直接忽略。 註解可以包含可表示字元集的任何字元組合，其中包括新行字元，但不包括「結尾註解」分隔符號 (<strong>\*/</strong>)。 註解可佔用一行以上，但不可以是巢狀。
+「批註」是以正斜線/星號組合（<strong>/</strong>）為開頭的字元序列，編譯器會將其視為單一空白字元，否則會予以忽略。 批註可以包含可表示字元集的任何字元組合，包括分行符號，但不包括「結束批註」分隔符號（<strong>\*</strong>）。 註解可佔用一行以上，但不可以是巢狀。
 
 註解可以出現在任何允許顯示空白字元的位置。 由於編譯器會將註解視為一個空白字元，因此您無法在語彙基元中包含註解。 編譯器會忽略註解中的字元。
 
@@ -57,17 +57,17 @@ printf( "Hello\n" );  /* Comments can go here */
 
 會發生錯誤是因為編譯器將 `*/` 文字後的第一個 `Open file` 辨識為註解的結尾。 當它找到註解外的 `*/` 時，會嘗試處理其餘文字並產生錯誤。
 
-雖然您在測試時可以使用註解來呈現數行程式碼，使其無法作用，不過若要達成此目的，使用前置處理器指示詞 `#if` 和 `#endif` 和條件式編譯會更有用。 如需詳細資訊，請參閱《前置處理器參考》中的[前置處理器指示詞](../preprocessor/preprocessor-directives.md)。
+雖然您在測試時可以使用註解來呈現數行程式碼，使其無法作用，不過若要達成此目的，使用前置處理器指示詞 `#if` 和 `#endif` 和條件式編譯會更有用。 如需詳細資訊，請參閱《前置處理器參考》** 中的[前置處理器指示詞](../preprocessor/preprocessor-directives.md)。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-Microsoft 編譯器也支援使用兩個正斜線的單行註解 (__//__)。 如果您使用 /Za 編譯 (ANSI 標準)，這些註解會產生錯誤。 這些註解不可延伸到第二行。
+Microsoft 編譯器也支援以兩個正斜線（__//__）開頭的單行批註。 如果您使用 /Za 編譯 (ANSI 標準)，這些註解會產生錯誤。 這些註解不可延伸到第二行。
 
 ```C
 // This is a valid comment
 ```
 
-以兩個正斜線 (__//__) 做為開頭的註解，會以前方沒有逸出字元的下一個新行字元做為結束字元。 在下一個範例中，位於反斜線 (**\\**) 後方的新行字元會建立一個「逸出序列」。 此逸出序列會使編譯器將下一行視為上一行的一部分。 (如需詳細資訊，請參閱[逸出序列](../c-language/escape-sequences.md))。
+以兩個正斜線（__//__）開頭的批註，會由下一個分行符號結尾，而不是以換行字元為開頭。 在下一個範例中，分行符號的前面會加上反斜線**\\**（），並建立「escape sequence」。 此逸出序列會使編譯器將下一行視為上一行的一部分。 (如需詳細資訊，請參閱[逸出序列](../c-language/escape-sequences.md))。
 
 ```C
 // my comment \
@@ -78,8 +78,8 @@ Microsoft 編譯器也支援使用兩個正斜線的單行註解 (__//__)。 如
 
 Microsoft C 預設會啟用 Microsoft 擴充功能。 使用 /Za 可停用這些擴充功能。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 語彙基元](../c-language/c-tokens.md)

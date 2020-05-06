@@ -14,11 +14,11 @@ helpviewer_keywords:
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
 ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290660"
 ---
 # <a name="unary-arithmetic-operators"></a>一元算術運算子
 
@@ -57,6 +57,6 @@ if( !(x < y) )
 
 如果 `x` 的值大於或等於 `y` 的值，則運算式的結果為 1 (true)。 如果 `x` 小於 `y`，則結果為 0 (false)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)

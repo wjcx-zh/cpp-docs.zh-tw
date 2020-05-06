@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wide characters
 ms.assetid: 165c4a12-8ab9-45fb-9964-c55e9956194c
 ms.openlocfilehash: 868acf0abd26a1f4b5533bb997fb9ea09a27954b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290998"
 ---
 # <a name="wide-characters"></a>寬字元
 
@@ -19,6 +19,6 @@ ms.locfileid: "56151958"
 
 多位元組字元常數會如上述讀取，並使用 `mbtowc` 執行階段函式轉換為寬字元常數。 如果結果不是有效的寬字元常數，將發出錯誤。 在任何情況下，`mbtowc` 函式檢查的位元組數目都只限於 `MB_CUR_MAX` 的值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[字元](../c-language/characters.md)
+[長度](../c-language/characters.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
 ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344794"
 ---
 # <a name="type-qualifiers"></a>類型限定詞
 
@@ -55,7 +55,7 @@ int volatile vint;     /* Volatile integer        */
 
 這個清單將描述如何使用 **const** 與 `volatile`。
 
-- **const**關鍵字可用來修改任何基本或彙總類型，或任何類型物件的指標，或是 `typedef`。 如果項目僅使用 **const** 類型限定詞宣告，其類型將會視為 **const int**。**const** 變數可以初始化，也可以放在儲存區的唯讀區域中。 **const** 關鍵字對於宣告 **const** 的指標很有用，因為它會要求函式不得以任何方式變更指標。
+- **const**關鍵字可用來修改任何基本或彙總類型，或任何類型物件的指標，或是 `typedef`。 如果專案僅使用**const**類型限定詞宣告，其類型會被視為**const int**。**Const**變數可以初始化，也可以放在儲存區的唯讀區域中。 **const** 關鍵字對於宣告 **const** 的指標很有用，因為它會要求函式不得以任何方式變更指標。
 
 - 編譯器會假設，`volatile` 變數可在程式中的任何一點供使用或修改其值的未知處理序存取。 因此，不論在命令列上指定的最佳化為何，都必須為 `volatile` 變數的每個指派或參考產生程式碼 (即使它並沒有任何作用)。
 
@@ -63,6 +63,6 @@ int volatile vint;     /* Volatile integer        */
 
 - 項目可以同時是 **const** 與 `volatile`，在這種情況下，項目就無法由自己的程式合法修改，但是可以由某個非同步處理序進行修改。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312559"
 ---
 # <a name="compound-statement-c"></a>複合陳述式 (C)
 
@@ -18,15 +18,15 @@ ms.locfileid: "56152153"
 
 ## <a name="syntax"></a>語法
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*複合陳述式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{宣告** *-列出*<sub>opt</sub> *語句清單*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*清點*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *宣告*
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *陳述式*
 
 如果出現宣告，則必須位於任何陳述式前面。 在複合陳述式開頭宣告之每個識別項的範圍，都會從其宣告點延伸至區塊結尾。 除非內部區塊中存在相同識別項的宣告，否則都可在整個區塊中看見此範圍。
@@ -50,6 +50,6 @@ if ( i > 0 )
 
 在這個範例中，如果 `i` 大於 0，則複合陳述式內的所有陳述式會依序執行。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [陳述式](../c-language/statements-c.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - equal sign
 ms.assetid: e7140a0a-7104-4b3a-b293-7adcc1fdd52b
 ms.openlocfilehash: 77c61101e9540a0d9469e7176eb15992a73b4b09
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158276"
 ---
 # <a name="simple-assignment-c"></a>簡單指派 (C)
 
@@ -29,6 +29,6 @@ x = y;
 
 在此範例中，`y` 的值會轉換成類型 **double** 並指派給 `x`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 指派運算子](../c-language/c-assignment-operators.md)

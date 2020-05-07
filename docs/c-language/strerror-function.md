@@ -5,15 +5,15 @@ helpviewer_keywords:
 - strerror function
 ms.assetid: 9fb9366e-d9a8-47d4-ad51-d98774a0617f
 ms.openlocfilehash: e2bcfef0ad7c2c432b84efdff76c88a87f6f84c9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157834"
 ---
 # <a name="strerror-function"></a>strerror 函式
 
-**ANSI 4.11.6.2** `strerror` 函式傳回的錯誤訊息字串內容
+**ANSI 4.11.6.2**`strerror` 函式傳回的錯誤訊息字串內容
 
 `strerror` 函式會產生下列訊息：
 
@@ -57,6 +57,6 @@ ms.locfileid: "56147382"
 36  Resource deadlock would occur
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [程式庫函式](../c-language/library-functions.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - system function
 ms.assetid: 0786ccdc-20cd-4d96-b3d8-3230507c3066
 ms.openlocfilehash: e37de4e084de6727cf2858117945fd162f6b0d63
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345119"
 ---
 # <a name="system-function"></a>system 函式
 
@@ -21,6 +21,6 @@ ms.locfileid: "56151217"
 
 如需詳細資訊，請參閱 [system，_wsystem](../c-runtime-library/reference/system-wsystem.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [程式庫函式](../c-language/library-functions.md)

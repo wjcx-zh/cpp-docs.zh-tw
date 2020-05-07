@@ -32,6 +32,6 @@ ms.locfileid: "82032105"
 int average( int first, ...);
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式呼叫](../c-language/function-calls.md)

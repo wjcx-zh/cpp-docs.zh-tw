@@ -23,19 +23,19 @@ ms.locfileid: "74857004"
 
 ## <a name="syntax"></a>語法
 
-*function-definition*:<br/>
+*函式定義*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**屬性-seq*是 Microsoft 特定 \*/
+/\**屬性-seq*是 Microsoft 特有的\*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*storage-class-specifier*: /\* 用於函式定義 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**外部**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**靜態**
+*儲存類別規範*：/\*用於函式定義\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**靜止**
 
 如果函式定義未包含 *storage-class-specifier*，則儲存類別會預設為 `extern`。 您可以將函式明確宣告為 `extern`，但其實不需要。
 
@@ -45,13 +45,13 @@ ms.locfileid: "74857004"
 
 具有 **static** 儲存類別的函式，只有在本身定義所在的原始程式檔中才可見。 所有其他函式無論擁有明確或隱含指定的 `extern` 儲存類別，在程式的所有原始程式檔中都可見。 如果需要 **static** 儲存類別，則必須在第一個函式宣告 (如果有的話) 上宣告，以及在函式定義上宣告。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 已啟用 Microsoft 擴充功能時，如果函式定義位於相同的原始程式檔中且定義明確指定了 **static** 儲存類別，則會為原本宣告時沒有儲存類別 (或具有 `extern` 儲存類別) 的函式指定 **static** 儲存類別。
 
 使用 /Ze 編譯器選項進行編譯時，在區塊內使用 `extern` 關鍵字宣告的函式會具有全域可視性。 但使用 /Za 編譯時就不是這種情況。 如果將原始程式碼的可攜性納入考量，則不應倚賴這項功能。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>請參閱
 

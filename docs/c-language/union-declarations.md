@@ -7,11 +7,11 @@ helpviewer_keywords:
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
 ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291037"
 ---
 # <a name="union-declarations"></a>等位宣告
 
@@ -19,21 +19,21 @@ ms.locfileid: "56149254"
 
 ## <a name="syntax"></a>語法
 
-*struct-or-union-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+*struct 或 union-規範*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*結構或等位**識別碼*<sub>opt</sub> **{** *結構聲明-清單* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**結構**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**並**
 
 *struct-declaration-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*結構聲明*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
 
 等位的內容定義為
 
-*struct-declaration*：<br/>
+*結構聲明*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list*  **;**
 
 *specifier-qualifier-list*：<br/>
@@ -41,8 +41,8 @@ ms.locfileid: "56149254"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
 
 *struct-declarator-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*結構-宣告子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*結構宣告子清單***，***結構*宣告子    
 
 **union** 類型的變數會儲存該類型所定義的其中一個值。 相同規則可管理結構和等位宣告。 等位也可以具有位元欄位。
 
@@ -81,7 +81,7 @@ union               /* Defines a two-dimensional */
 
 `screen` 陣列包含 2,000 個元素。 陣列的每個元素都是具有兩個成員的個別等位：`window1` 和 `screenval`。 `window1` 成員是具有兩個位元欄位成員 `icon` 和 `color` 的結構。 `screenval` 成員為 `int`。 在任何特定時間，每個 union 元素都會保留 `int` 所表示的 `screenval`，或 `window1` 所表示的結構。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 巢狀等位可以用匿名方式宣告 (如果它們是另一個結構或等位的成員)。 這是無名稱等位的範例：
 
@@ -119,8 +119,8 @@ struct x
 
 如需參考等位的詳細資訊，請參閱[結構和等位成員](../c-language/structure-and-union-members.md)。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

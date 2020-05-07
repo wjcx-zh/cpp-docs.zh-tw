@@ -49,6 +49,6 @@ void funct1( int a, ... )
 
 下一節 ([C 函式定義](../c-language/c-function-definitions.md)) 中將顯示函式定義的語法，包括舊式語法。 在舊式語法中，參數清單的非終端項為 *identifier-list*。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[職能概述](../c-language/overview-of-functions.md)
+[函數總覽](../c-language/overview-of-functions.md)

@@ -17,9 +17,9 @@ ms.locfileid: "62273569"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>匯出 C 函式以用於 C 或 C++ 語言可執行檔
 
-如果您有 DLL 中的函式撰寫在 C 中，您想要從 C 語言存取或C++語言的模組，您應該使用 **__cplusplus**前置處理器巨集來判斷哪一種語言正在編譯，，，然後將這些宣告使用 C 連結函式，如果使用從C++語言的模組。 如果您使用這項技術，並提供您的 DLL 的標頭檔，這些函式可供 C 和C++且不會變更的使用者。
+如果您在以 C 撰寫的 DLL 中有函式，而您想要從 C 語言或 c + + 語言模組存取該函式，您應該使用 **__cplusplus**預處理器宏來判斷所編譯的語言，然後使用 c 連結宣告這些函式（如果從 c + + 語言模組使用）。 如果您使用這項技術並提供 DLL 的標頭檔，則 C 和 c + + 使用者可以使用這些函式，而不會有任何變更。
 
-下列程式碼會顯示可供 C 標頭檔和C++用戶端應用程式：
+下列程式碼顯示的標頭檔可供 C 和 c + + 用戶端應用程式使用：
 
 ```h
 // MyCFuncs.h
@@ -36,7 +36,7 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif
 ```
 
-如果您需要連結 C 函式，以您C++可執行檔和函式宣告的標頭檔不使用上述的技術，在C++原始程式檔，請執行下列命令以防止編譯器裝飾的 C 函式名稱：
+如果您需要將 C 函式連結至 c + + 可執行檔，而函式宣告標頭檔尚未使用上述技術，請在 c + + 原始程式檔中執行下列動作，以防止編譯器裝飾 C 函數名稱：
 
 ```cpp
 extern "C" {
@@ -44,13 +44,13 @@ extern "C" {
 }
 ```
 
-## <a name="what-do-you-want-to-do"></a>請您指定選項。
+## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [使用.def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
+- [使用 .def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport）從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [使用 AFX_EXT_CLASS 匯出和匯入](exporting-and-importing-using-afx-ext-class.md)
 
 - [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
@@ -60,10 +60,10 @@ extern "C" {
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [裝飾的名稱](reference/decorated-names.md)
+- [裝飾名稱](reference/decorated-names.md)
 
 - [使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [從 DLL 匯出](exporting-from-a-dll.md)

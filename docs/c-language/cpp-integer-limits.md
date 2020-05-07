@@ -1,5 +1,5 @@
 ---
-title: C 和C++整數限制
+title: C 和 c + + 整數限制
 ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
@@ -13,11 +13,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72778381"
 ---
-# <a name="c-and-c-integer-limits"></a>C 和C++整數限制
+# <a name="c-and-c-integer-limits"></a>C 和 c + + 整數限制
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-下表列出 C 和C++中整數類型的限制。 這些限制是在 C 標準標頭檔 `<limits.h>` 中定義。 C++標準程式庫標頭 `<limits>` 包括 `<climits>`，其中包括 `<limits.h>`。
+下表列出 C 和 c + + 中的整數類型限制。 這些限制會定義在 C 標準標頭檔`<limits.h>`中。 C + + 標準連結`<limits>`庫`<climits>`標頭包含`<limits.h>`，其中包含。
 
 Microsoft C 也允許宣告大小的整數變數，這是大小為 8-、16-、32或64位的整數類型。 如需有關 C 中大小整數的詳細資訊，請參閱重設[大小的整數類型](../c-language/c-sized-integer-types.md)。
 
@@ -47,7 +47,7 @@ Microsoft C 也允許宣告大小的整數變數，這是大小為 8-、16-、32
 
 如果值超過最大的整數表示，Microsoft 編譯器會產生錯誤。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>請參閱
 

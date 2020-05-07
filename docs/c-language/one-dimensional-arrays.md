@@ -19,7 +19,7 @@ ms.locfileid: "75299100"
 ---
 # <a name="one-dimensional-arrays"></a>一維陣列
 
-後置運算式 (postfix expression) 後面跟著以方括號 ( **[ ]** ) 括住的運算式，是以註標方式來表示的陣列物件元素。 當註標運算式如下表示時，代表 *expression* 於 *postfix-expression* 之外的所在位置位址值：
+後置運算式 (postfix expression) 後面跟著以方括號 (**[ ]**) 括住的運算式，是以註標方式來表示的陣列物件元素。 當註標運算式如下表示時，代表 *expression* 於 *postfix-expression* 之外的所在位置位址值：
 
 ```
 postfix-expression [ expression ]
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-註標運算式通常用來參考陣列元素，但是您可以將註標套用到任何指標。 無論值的順序為何，*expression* 都必須以方括號 ( **[ ]** ) 括住。
+註標運算式通常用來參考陣列元素，但是您可以將註標套用到任何指標。 無論值的順序為何，*expression* 都必須以方括號 (**[ ]**) 括住。
 
-評估註標運算式的方式是在指標值中加入整數值，然後將間接運算子 (<strong>\*</strong>) 套用到結果。 （如需間接運算子的討論，請參閱[間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)）。實際上，針對一維陣列，下列四個運算式是相等的，假設 `a` 是指標，而 `b` 是一個整數：
+注標運算式的評估方式是將整數值新增至指標值，然後將間接運算子（<strong>\*</strong>）套用至結果。 （如需間接運算子的討論，請參閱[間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)）。實際上，針對一維陣列，下列四個運算式是相等的，假設`a`是指標且`b`為整數：
 
 ```
 a[b]
@@ -51,9 +51,9 @@ b[a]
 
 例如，假設識別項 `line` 參考 `int` 值的陣列。 下列程序用於評估註標運算式 `line[ i ]`：
 
-1. 整數值 `i` 乘以定義為 `int` 項目長度的位元組數目。 `i` 的轉換值表示 `i` `int` 位置。
+1. 整數值 `i` 乘以定義為 `int` 項目長度的位元組數目。 的轉換值`i`表示`i` `int`位置。
 
-1. 這個轉換後的值會加入至原始指標值（`line`），以產生從 `line``int` 位置位移的位址 `i`。
+1. 這個轉換後的值會加入至原始指標值`line`（），以產生從到位移`i` `int`個`line`位置的位址。
 
 1. 將間接運算子套用至新的位址。 結果是在該位置之陣列元素 (憑直覺是 `line [ i ]`) 的值。
 
@@ -61,4 +61,4 @@ b[a]
 
 ## <a name="see-also"></a>請參閱
 
-[註標運算子：](../cpp/subscript-operator.md)
+[注標運算子：](../cpp/subscript-operator.md)

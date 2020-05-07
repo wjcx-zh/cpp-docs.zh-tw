@@ -26,17 +26,17 @@ ms.locfileid: "74857134"
 ## <a name="syntax"></a>語法
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*外部宣告* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
-*external-declaration*: /\* 只能於外部 (檔案) 範圍內 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告*
+*外部*宣告：/\*僅允許在外部（檔案）範圍\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*函式定義*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*清點*
 
-*function-definition*:<br/>
+*函式定義*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**屬性-seq*是 Microsoft 特定 \*/
+/\**屬性-seq*是 Microsoft 特有的\*/
 
 原型參數為：
 
@@ -46,25 +46,25 @@ ms.locfileid: "74857134"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*清點*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *宣告*
 
-*declarator*：<br/>
+宣告*子：*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* 函式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新樣式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 過時樣式宣告子 \*/
+*direct*宣告子：/\*函式宣告子\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **（***參數-類型清單***）**  / \*新樣式的宣告子      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*直接*宣告子 **（***識別碼清單*<sub>opt</sub> **）**  / \*過時樣式的宣告子    \*/
 
 定義中的參數清單會使用此語法：
 
-*parameter-type-list*: /\* 參數清單 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+*參數-類型-清單*：/\*參數清單\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數清單* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數清單* **，...**
 
-*parameter-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
+*參數清單*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數宣告*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數-清單* **、***參數*宣告  
 
 *parameter-declaration*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *宣告子*<br/>
@@ -72,18 +72,18 @@ ms.locfileid: "74857134"
 
 舊樣式函式定義中的參數清單會使用此語法：
 
-*identifier-list*: /\* 用於過時的樣式函式定義和宣告 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier-list* **,**  *識別碼*
+*identifier-list*：/\*用於過時樣式的函式定義和宣告\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*標識*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別碼-清單* **、**  *識別碼*
 
 函式主體的語法為：
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*複合陳述式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{宣告** *-列出*<sub>opt</sub> *語句清單*<sub>opt</sub> **}**
 
 唯一可以修改函式宣告的儲存類別指定名稱是 **struct** 與 **static**。 **extern** 指定名稱表示可從其他檔案參考該函式；也就是說，會將該函式名稱匯出至連結器。 **static** 指定名稱表示不可從其他檔案參考該函式；亦即，連結器不會匯出名稱。 如果函式定義中不會出現儲存類別，就會假設 **extern**。 在任何情況下，從定義點到檔案結尾都會顯示該函式。
 
-選擇性的 *declaration-specifiers* 和強制性的*宣告子*一起指定函式的傳回類型和名稱。 「宣告子」是為函式命名的識別項組合，函式名稱之後會加上括號。 選擇性的 *attribute-seq* 非終端項是[函式屬性](../c-language/function-attributes.md)中定義的 Microsoft 專有功能。
+選擇性的 *declaration-specifiers* 和強制性的*宣告子*一起指定函式的傳回類型和名稱。 「宣告子」** 是為函式命名的識別項組合，函式名稱之後會加上括號。 選擇性的 *attribute-seq* 非終端項是[函式屬性](../c-language/function-attributes.md)中定義的 Microsoft 專有功能。
 
 *direct-declarator* (在*宣告子*語法中) 指定將定義之函式的名稱與其參數的識別項。 如果 *direct-declarator* 包含 *parameter-type-list*，清單會指定所有參數的類型。 這類宣告子也可做為函式原型，以便稍後呼叫函式。
 

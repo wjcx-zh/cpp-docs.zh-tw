@@ -3,11 +3,11 @@ title: 右移位
 ms.date: 11/04/2016
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
 ms.openlocfilehash: c34373f69a41ad65031753cd352098dce7e98ef4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158355"
 ---
 # <a name="right-shifts"></a>右移位
 
@@ -19,6 +19,6 @@ ms.locfileid: "56149475"
 
 當不帶正負號的整數向右移位時，會清除最高有效位元。 例如，如果 0xF000 不帶正負號，結果是 0x7800。 `unsigned` 或正 `int` 向右移位 32 次會產生 0x00000000。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [整數](../c-language/integers.md)

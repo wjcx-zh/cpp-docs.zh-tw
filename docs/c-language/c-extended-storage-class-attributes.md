@@ -16,7 +16,7 @@ ms.locfileid: "74857147"
 ---
 # <a name="c-extended-storage-class-attributes"></a>C 擴充的儲存類別屬性
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 有關本主題的最新資訊可以在 [__declspec (C++ 參考)](../cpp/declspec.md) 中找到。
 
@@ -27,13 +27,13 @@ ms.locfileid: "74857147"
 ## <a name="syntax"></a>語法
 
 *storage-class-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec （** *擴充-extended-decl-modifier-seq-修飾詞-seq* **）**  /\* Microsoft 特定 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec （** *延伸 extended-decl-modifier-seq-修飾詞-seq* **）**  / \* Microsoft 專有\*/
 
-*擴充-extended-decl-modifier-seq-修飾詞-seq*：&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 特定 \*/<br/>
+*extended-extended-decl-modifier-seq-修飾詞-seq*：&nbsp; &nbsp; &nbsp; &nbsp; / \* Microsoft 專有\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*擴充-extended-decl-modifier-seq-修飾*詞：&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 特定 \*/<br/>
+*擴充-extended-decl-modifier-seq-修飾*詞&nbsp; &nbsp; &nbsp; &nbsp; / \* ： Microsoft 專有\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**執行緒**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
@@ -43,7 +43,7 @@ ms.locfileid: "74857147"
 
 thread、naked、dllimport 和 dllexport 儲存類別屬性 (Attribute) 是只屬於其套用所在資料或函式宣告的屬性 (Property)，這些屬性 (Attribute) 並不會重新定義函式本身的類別屬性 (Attribute)。 thread 屬性只會影響資料。 naked 屬性只會影響函式。 dllimport 和 dllexport 屬性會同時影響函式和資料。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>請參閱
 

@@ -18,9 +18,9 @@ ms.locfileid: "81334586"
 
 **Microsoft 特定的**
 
-在編寫自己的 prolog 和 epilog 代碼序列之前,瞭解堆疊幀的佈局非常重要。瞭解如何使用預定義常量 **__LOCAL_SIZE**也很有用。
+在撰寫您自己的初構和終解程式碼序列之前，請務必瞭解堆疊框架的配置方式。瞭解如何使用 **__LOCAL_SIZE**預先定義的常數也很有用。
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>CStack 框架配置
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>CStack 框架版面配置
 
 這個範例將示範可能出現在 32 位元函式中的標準初構程式碼：
 
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[裸功能](../c-language/naked-functions.md)
+[Naked 函數](../c-language/naked-functions.md)

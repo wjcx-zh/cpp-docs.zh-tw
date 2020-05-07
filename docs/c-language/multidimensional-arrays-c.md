@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62233359"
@@ -21,7 +21,7 @@ ms.locfileid: "62233359"
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-註標運算式的關聯是由左至右。 最左邊的下標運算式 *expression1* **[** *expression2* **]** 會最先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 除非最後一個指標值會定址陣列類型 (請參閱以下範例)，否則間接取值運算子 (<strong>\*</strong>) 會在評估最後一個註標運算式之後套用。
+註標運算式的關聯是由左至右。 最左邊的注標*運算式（運算式* **1 [** *運算式*2 **]**）會先進行評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 除非最後一個指標<strong>\*</strong>值會定址陣列類型（請參閱下面的範例），否則間接運算子（）會在評估最後一個下標運算式之後套用。
 
 具有多個註標的運算式會參考「多維陣列」的元素。 所謂的多維陣列是指其中所包含的元素也是一種陣列。 例如，三維陣列的第一個元素是具有兩個維度的陣列。
 
@@ -68,6 +68,6 @@ ipp = prop[2];
 
 同樣地，第二個陳述式 `prop[2]` 中 `ipp = prop[2];` 運算式的結果是定址二維陣列的指標值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[註標運算子：](../cpp/subscript-operator.md)
+[注標運算子：](../cpp/subscript-operator.md)

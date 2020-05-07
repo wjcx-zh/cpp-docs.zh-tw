@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 ms.openlocfilehash: 30c076bcaf80a0d51a7f8aefc9c1b1806a12e42f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233718"
 ---
 # <a name="expressions-and-assignments"></a>運算式和指派
 
@@ -30,14 +30,14 @@ ms.locfileid: "56147213"
 
 - [序列點](../c-language/c-sequence-points.md)
 
-- [運算子](../c-language/c-operators.md)
+- [操作員](../c-language/c-operators.md)
 
 - [運算子優先順序](../c-language/precedence-and-order-of-evaluation.md)
 
-- [型別轉換](../c-language/type-conversions-c.md)
+- [類型轉換](../c-language/type-conversions-c.md)
 
-- [型別轉換](../c-language/type-cast-conversions.md)
+- [類型轉換](../c-language/type-cast-conversions.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

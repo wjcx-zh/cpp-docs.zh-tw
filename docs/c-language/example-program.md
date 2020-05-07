@@ -3,11 +3,11 @@ title: 範例程式
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
 ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233931"
 ---
 # <a name="example-program"></a>範例程式
 
@@ -67,12 +67,12 @@ int max( int a, int b )          // Note formal parameters are
 
 FILE1.C 包含 `max` 函式的原型。 這類宣告有時稱為「向前宣告」，因為會在使用之前宣告。 `main` 函式的定義包括對 `max` 的呼叫。
 
-以 `#define` 開頭的行是前置處理器指示詞。 這些指示詞會指示前置處理器將 FILE1.C 中的 `ONE`、`TWO` 和 `THREE` 分別取代為 `1`、`2` 和 `3` 等識別項。 不過，指示詞不適用於 FILE2.C，後者會單獨編譯，然後與 FILE1.C 連結。 以 `#include` 開頭的行會指示編譯器包含 STDIO.H 檔案，該檔案包含 `printf` 函式的原型。 《前置處理器參考》中會說明[前置處理器指示詞](../preprocessor/preprocessor-directives.md)。
+以 `#define` 開頭的行是前置處理器指示詞。 這些指示詞會指示前置處理器將 FILE1.C 中的 `ONE`、`TWO` 和 `THREE` 分別取代為 `1`、`2` 和 `3` 等識別項。 不過，指示詞不適用於 FILE2.C，後者會單獨編譯，然後與 FILE1.C 連結。 以 `#include` 開頭的行會指示編譯器包含 STDIO.H 檔案，該檔案包含 `printf` 函式的原型。 《前置處理器參考》** 中會說明[前置處理器指示詞](../preprocessor/preprocessor-directives.md)。
 
 FILE1.C 會使用定義宣告來初始化全域變數 `a` 和 `b`。 會宣告區域變數 `c` 和 `d`，但不會初始化。 都會為這些變數配置儲存區。 靜態和外部變數 `u` 和 `v` 會自動初始化為 0。 因此，宣告時只有 `a`、`b`、`u` 和 `v` 包含有意義的值，因為它們會明確或隱含地初始化。 FILE2.C 包含 `max`的函式定義。 這個定義符合 FILE1.C 中對 `max` 的呼叫。
 
 [存留期、範圍、可視性和連結](../c-language/lifetime-scope-visibility-and-linkage.md)中會討論識別項的存留期和可視性。 如需函式的詳細資訊，請參閱[函式](../c-language/functions-c.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)

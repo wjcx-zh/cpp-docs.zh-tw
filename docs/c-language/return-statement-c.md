@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
 ms.openlocfilehash: c3975076ee65d267f3d278e20a7770e6750c06d3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158381"
 ---
 # <a name="return-statement-c"></a>return 陳述式 (C)
 
@@ -17,7 +17,7 @@ ms.locfileid: "56148981"
 
 ## <a name="syntax"></a>語法
 
-*jump-statement*：<br/>
+*跳躍語句*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
 *expression* 的值 (如果有) 會傳回至呼叫函式。 如果省略 *expression*，則函式的傳回值會是未定義。 此運算式 (如果有) 會先評估，再轉換為函式所傳回的類型。 如果函式是使用傳回型別 `void` 宣告，則包含運算式的 `return` 陳述式會產生警告，而且不會評估運算式。
@@ -67,6 +67,6 @@ void draw( int i, long long ll )
 i = 2147483647, ll = 4611686014132420609
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [陳述式](../c-language/statements-c.md)

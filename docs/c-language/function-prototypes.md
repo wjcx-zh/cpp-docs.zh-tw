@@ -21,10 +21,10 @@ ms.locfileid: "74857082"
 
 ## <a name="syntax"></a>語法
 
-*宣告*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+*declaration*宣告：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*宣告規範*屬性-seq*<sub>opt</sub> *init-宣告子-list*<sub>opt</sub> **;**
 
-/\**屬性-seq*<sub>opt</sub>是 Microsoft 特定 \*/
+/\**屬性-seq*<sub>opt</sub>是 Microsoft 特定的\*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -32,19 +32,19 @@ ms.locfileid: "74857082"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *init-declarator-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-宣告子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-宣告子-list***、***init-* 宣告子    
 
 *init-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子* **=** *初始設定式*
+&nbsp;&nbsp;&nbsp;&nbsp;*符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;宣告子*初始化運算式* *declarator* **=**
 
-*declarator*：<br/>
+宣告*子：*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* 函式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* 新樣式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 過時樣式宣告子 \*/
+*direct*宣告子：/\*函式宣告子\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **（***參數-類型清單***）**   / \*新樣式的宣告子      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*直接*宣告子 **（***識別碼清單*<sub>opt</sub> **）**  / \*過時樣式的宣告子    \*/
 
 原型的形式與函式定義的相同，但右括號後面加上分號即可終止原型，因此沒有主體。 在任何情況下，傳回類型必須與在函式定義中指定的傳回類型一致。
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
 ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233056"
 ---
 # <a name="if-statement-c"></a>if 陳述式 (C)
 
@@ -24,9 +24,9 @@ ms.locfileid: "56152608"
 
 ## <a name="syntax"></a>語法
 
-*selection-statement*: **if (**  *expression*  **)**  *statement*
+*selection 語句*： **if （**  *expression*  **）**  *語句*
 
-**if (**  *expression*  **)**  *statement*  **else**  *statement*
+**if （**  *expression*  **）**  *語句*  **else**  *語句*
 
 在兩種形式的 **if** 陳述式中，都會評估運算式 (可以有任何值，但結構除外)，包括所有副作用。
 
@@ -70,6 +70,6 @@ else
 
 在這個範例中，括住內部 **if** 陳述式的大括號會使 **else** 子句成為外部 **if** 陳述式的一部分。 如果 `i` 小於或等於 0，會將 `i` 指派給 `x`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [if-else 陳述式 (C++)](../cpp/if-else-statement-cpp.md)

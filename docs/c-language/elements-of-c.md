@@ -20,13 +20,13 @@ ms.locfileid: "72778451"
 
 我們將討論下列主題：
 
-- [語彙基元](../c-language/c-tokens.md)
+- [權杖](../c-language/c-tokens.md)
 
 - [註解](../c-language/c-comments.md)
 
 - [關鍵字](../c-language/c-keywords.md)
 
-- [識別項](../c-language/c-identifiers.md)
+- [識別碼](../c-language/c-identifiers.md)
 
 - [常數](../c-language/c-constants.md)
 
@@ -34,9 +34,9 @@ ms.locfileid: "72778451"
 
 - [標點符號和特殊字元](../c-language/punctuation-and-special-characters.md)
 
-此區段也包含[三並詞](../c-language/trigraphs.md)的參考資料表、[浮點常數的限制](../c-language/limits-on-floating-point-constants.md)、 [ C++ C 和整數限制](../c-language/cpp-integer-limits.md)，以及[Escape 序列](../c-language/escape-sequences.md)。
+此區段也包含[三並詞](../c-language/trigraphs.md)的參考資料表、[浮點常數的限制](../c-language/limits-on-floating-point-constants.md)、 [c 和 c + + 整數限制](../c-language/cpp-integer-limits.md)，以及[Escape 序列](../c-language/escape-sequences.md)。
 
-運算子是指定如何操作值的符號 (單一字元和字元組合)。 每個符號會解譯為單一單位，稱為語彙基元。 如需詳細資訊，請參閱[運算子](../c-language/c-operators.md)。
+運算子是指定如何操作值的符號 (單一字元和字元組合)。 每個符號會解譯為單一單位，稱為語彙基元。 如需詳細資訊，請參閱 [運算子](../c-language/c-operators.md)。
 
 ## <a name="see-also"></a>請參閱
 

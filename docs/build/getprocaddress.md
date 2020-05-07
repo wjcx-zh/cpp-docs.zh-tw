@@ -17,9 +17,9 @@ ms.locfileid: "69493256"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-程式會明確連結到 DLL 呼叫[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) , 以取得 dll 中匯出函式的位址。 您可以使用傳回的函式指標來呼叫 DLL 函式。 **GetProcAddress**會將 DLL 模組處理 (由**LoadLibrary**、 `AfxLoadLibrary`或**GetModuleHandle**傳回) 做為參數, 並採用您想要呼叫的函式名稱或函數的匯出序數。
+程式會明確連結到 DLL 呼叫[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) ，以取得 dll 中匯出函式的位址。 您可以使用傳回的函式指標來呼叫 DLL 函式。 **GetProcAddress**會將 DLL 模組處理（由**LoadLibrary**、 `AfxLoadLibrary`或**GetModuleHandle**傳回）做為參數，並採用您想要呼叫的函式名稱或函數的匯出序數。
 
-因為您是透過指標呼叫 DLL 函式, 而且沒有編譯時間類型檢查, 請確定函式的參數正確無誤, 這樣您才不會 overstep 堆疊上配置的記憶體, 並造成存取違規。 協助提供型別安全的方法之一, 就是查看匯出函式的函數原型, 並為函式指標建立符合的 typedef。 例如：
+因為您是透過指標呼叫 DLL 函式，而且沒有編譯時間類型檢查，請確定函式的參數正確無誤，這樣您才不會 overstep 堆疊上配置的記憶體，並造成存取違規。 協助提供型別安全的方法之一，就是查看匯出函式的函數原型，並為函式指標建立符合的 typedef。 例如：
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -49,11 +49,11 @@ if (hDLL != NULL)
 }
 ```
 
-當您呼叫**GetProcAddress**時, 如何指定所需的函式取決於 DLL 的建立方式。
+當您呼叫**GetProcAddress**時，如何指定所需的函式取決於 DLL 的建立方式。
 
-如果您要連結的 DLL 是以模組定義 (.def) 檔案建立的, 而且序數列在 DLL 的 .def 檔案的 [**匯出**] 區段中, 則您只能取得匯出序數。 如果 DLL 有許多匯出的函式, 則呼叫具有匯出序數的**GetProcAddress** (而不是函式名稱) 會稍微快一點, 因為匯出序數會作為 DLL 匯出資料表的索引。 使用匯出序數時, **GetProcAddress**可以直接尋找函式, 而不是將指定的名稱與 DLL 匯出資料表中的函式名稱進行比較。 不過, 只有在您可以控制將序數指派給 .def 檔中匯出的函式時, 才應該使用匯出序數來呼叫**GetProcAddress** 。
+如果您要連結的 DLL 是以模組定義（.def）檔案建立的，而且序數列在 DLL 的 .def 檔案的 [**匯出**] 區段中，則您只能取得匯出序數。 如果 DLL 有許多匯出的函式，則呼叫具有匯出序數的**GetProcAddress** （而不是函式名稱）會稍微快一點，因為匯出序數會作為 DLL 匯出資料表的索引。 使用匯出序數時， **GetProcAddress**可以直接尋找函式，而不是將指定的名稱與 DLL 匯出資料表中的函式名稱進行比較。 不過，只有在您可以控制將序數指派給 .def 檔中匯出的函式時，才應該使用匯出序數來呼叫**GetProcAddress** 。
 
-## <a name="what-do-you-want-to-do"></a>請您指定選項。
+## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
 - [將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
@@ -65,8 +65,8 @@ if (hDLL != NULL)
 
 - [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [使用 DEF 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
+- [使用 .DEF 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

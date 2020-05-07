@@ -14,68 +14,68 @@ ms.locfileid: "81328444"
 ---
 # <a name="optimization-best-practices"></a>最佳化最佳做法
 
-本文檔介紹了在 Visual Studio 中優化C++程式的一些最佳實踐。
+本檔說明在 Visual Studio 中優化 c + + 程式的一些最佳作法。
 
 ## <a name="compiler-and-linker-options"></a>編譯器和連結器選項
 
-### <a name="profile-guided-optimization"></a>設定檔案導向最佳化
+### <a name="profile-guided-optimization"></a>特性指引優化
 
-可視化工作室支援*配置檔導向優化*(PGO)。 此優化使用應用程式檢測版本的訓練執行中的設定檔數據來驅動應用程式以後的優化。 使用 PGO 可能非常耗時,因此可能不是每個開發人員都使用的內容,但我們確實建議在產品的最終版本生成中使用 PGO。 如需詳細資訊，請參閱[特性指引最佳化](profile-guided-optimizations.md)。
+Visual Studio 支援特性*指引優化*（PGO）。 這項優化會流量分析應用程式之檢測版本的定型執行中的設定檔資料，以提高應用程式的後續優化。 使用 PGO 可能相當耗時，因此不是每個開發人員所使用的專案，但我們建議在產品的最終發行組建中使用 PGO。 如需詳細資訊，請參閱[特性指引最佳化](profile-guided-optimizations.md)。
 
-此外,*整個程式優化*(也稱為連結時間代碼生成)和 **/O1**和 **/O2**優化也得到了改進。 通常,使用這些選項之一編譯的應用程式將比使用早期編譯器編譯的同一應用程式更快。
+此外，*整個程式優化*（也知道連結時間程式碼產生）和 **/O1**和 **/O2**優化都已經過改善。 一般來說，使用其中一個選項編譯的應用程式，將會比使用舊版編譯器編譯的應用程式更快。
 
-有關詳細資訊,請參閱[/GL(整個程式優化)](reference/gl-whole-program-optimization.md)和[/O1、/O2(最小化大小、最大化速度)](reference/o1-o2-minimize-size-maximize-speed.md)。
+如需詳細資訊，請參閱[/gl （整個程式優化）](reference/gl-whole-program-optimization.md)和[/O1、/O2 （最小大小、最快速度）](reference/o1-o2-minimize-size-maximize-speed.md)。
 
 ### <a name="which-level-of-optimization-to-use"></a>要使用的優化層級
 
-如果可能,最終版本版本應使用配置檔引導優化進行編譯。 如果無法使用 PGO 進行構建,無論是由於運行檢測生成的基礎結構不足,還是無法訪問方案,我們建議使用整個程式優化進行構建。
+如果可能的話，最後的發行組建應該使用特性指引優化來編譯。 如果無法使用 PGO 來建立，不論是因為沒有足夠的基礎結構來執行已檢測的組建，或是無法存取案例，我們建議您使用整個程式優化來建立。
 
-**/Gy**開關也非常有用。 它為每個函數生成單獨的 COMDAT,在刪除未引用的 COMDAT 和 COMDAT 摺疊時,鏈路器具有更大的靈活性。 使用 **/Gy**的唯一缺點是,在調試時可能會導致問題。 因此,通常建議使用它。 如需詳細資訊，請參閱 [/Gy (啟用函式階層連結)](reference/gy-enable-function-level-linking.md)。
+**/Gy**參數也非常有用。 它會為每個函式產生個別的 COMDAT，並在移除未參考的 Comdat 和 COMDAT 折迭時，讓連結器擁有更多的彈性。 使用 **/gy**的唯一缺點是，它可能會在進行偵錯工具時造成問題。 因此，通常建議使用它。 如需詳細資訊，請參閱 [/Gy (啟用函式階層連結)](reference/gy-enable-function-level-linking.md)。
 
-對於在 64 位元環境中的連結,建議使用 **/OPT:REF、ICF**連結器選項,並在 32 位元環境中建議**使用 /OPT:REF。** 有關詳細資訊,請參閱[/OPT (優化)](reference/opt-optimizations.md)。
+若要在64位環境中連結，建議您使用 **/opt： ref、ICF**連結器選項，並在32位環境中，使用 **/opt： ref** 。 如需詳細資訊，請參閱[/opt （優化）](reference/opt-optimizations.md)。
 
-強烈建議生成調試符號,即使使用優化的發佈版本也是如此。 它不會影響生成的代碼,如果需要,它使調試應用程式變得更加容易。
+即使使用優化的發行組建，也強烈建議您產生 debug 符號。 它不會影響所產生的程式碼，因此，如果需要，您可以更輕鬆地對應用程式進行 debug。
 
-### <a name="floating-point-switches"></a>浮點開關
+### <a name="floating-point-switches"></a>浮點參數
 
-已刪除 **/Op**編譯器選項,並新增了以下四個處理浮點優化的編譯器選項:
+已移除 **/Op**編譯器選項，並已新增下列四個處理浮點優化的編譯器選項：
 
 |||
 |-|-|
-|**/fp:精確**|這是默認建議,在大多數情況下應使用。|
-|**/fp:快速**|如果性能是最重要的,例如在遊戲中,則建議使用。 這將導致最快的性能。|
-|**/fp:嚴格**|如果需要精確的浮點異常和 IEEE 行為,則建議這樣做。 這將導致性能最慢。|
-|**/fp:除*-***|可與 **/fp:嚴格**或 **/fp:精確**,但不能與 **/fp:fast**結合使用。|
+|**/fp：精確**|這是預設建議，而且應該在大部分情況下使用。|
+|**/fp： fast**|如果效能是最重要的，例如在遊戲中，則建議使用。 這會產生最快的效能。|
+|**/fp： strict**|如果需要精確的浮點例外狀況和 IEEE 行為，則建議使用此選項。 這會導致最慢的效能。|
+|**/fp： except [-]**|可以與 **/fp： strict**或 **/fp：精確**，但不能搭配/fp： **fast**使用。|
 
 如需詳細資訊，請參閱 [/fp (指定浮點行為)](reference/fp-specify-floating-point-behavior.md)。
 
-## <a name="optimization-declspecs"></a>優化分點
+## <a name="optimization-declspecs"></a>優化 declspecs
 
-在本節中,我們將介紹兩個可用於程式以説明性能的分項:`__declspec(restrict)``__declspec(noalias)`和 。
+在本節中，我們將探討可在程式中用來協助效能的兩個 declspecs `__declspec(restrict)` ： `__declspec(noalias)`和。
 
-`restrict`宣告只能應用於返回指標的函數聲明,例如`__declspec(restrict) void *malloc(size_t size);`
+`restrict` Declspec 只能套用至傳回指標的函式宣告，例如`__declspec(restrict) void *malloc(size_t size);`
 
-delspec`restrict`用於返回未別名指標的函數。 此關鍵字用於 C-Runtime 函式`malloc`庫的實現, 因為它永遠不會傳回目前程式中已在使用的指標值(除非您正在執行非法的事情,例如在釋放記憶體後使用記憶體)。
+Declspec `restrict`用於傳回 unaliased 指標的函式。 這個關鍵字是用於的 C 執行時間程式庫的`malloc`執行，因為它永遠不會傳回目前程式中已在使用的指標值（除非您執行不合法的動作，例如在釋放記憶體之後使用它）。
 
-delspec`restrict`為編譯器提供了用於執行編譯器優化的詳細資訊。 編譯器最難確定的事情之一是哪些指標別名其他指標,使用此資訊對編譯器有很大説明。
+`restrict` Declspec 會提供編譯器執行編譯器優化的詳細資訊。 編譯器最難判斷的一件事，就是指標其他指標的別名，而使用這項資訊可説明編譯器。
 
-值得指出的是,這是編譯器的承諾,而不是編譯器將驗證的內容。 如果程式不適當地使用此`restrict`declspec,則程式可能有不正確的行為。
+值得一提的是，這是對編譯器的承諾，而不是編譯器將會驗證的專案。 如果您的程式不當`restrict`使用此 declspec，您的程式可能會有不正確的行為。
 
-有關詳細資訊,請參閱[限制](../cpp/restrict.md)。
+如需詳細資訊，請參閱[restrict](../cpp/restrict.md)。
 
-`noalias` delspec 也僅適用於函數,並指示函數是半純函數。 半純函數是僅引用或修改局部變數、參數和參數的第一級方向函數。 此 delspec 是編譯器的承諾,如果函數引用全域或指標參數的二級方向,則編譯器可能會生成破壞應用程式的代碼。
+`noalias` Declspec 也只適用于函式，並指出該函式是半純虛擬函數。 半純虛擬函式是指只參考或修改區域變數、引數和第一層間接取值的函數之一。 這個 declspec 是對編譯器的承諾，如果函式參考全域或第二層的指標引數間接取值，則編譯器可能會產生會中斷應用程式的程式碼。
 
 如需詳細資訊，請參閱 [noalias](../cpp/noalias.md)。
 
-## <a name="optimization-pragmas"></a>優化雜注
+## <a name="optimization-pragmas"></a>優化 pragma
 
-還有一些有用的實用主義者來幫助優化代碼。 我們將討論的第一個是`#pragma optimize`:
+另外還有數個實用的 pragma 可協助您優化程式碼。 我們將討論的第一個步驟`#pragma optimize`是：
 
 ```cpp
 #pragma optimize("{opt-list}", on | off)
 ```
 
-此雜注允許您在函數的基礎上設置給定的優化級別。 這是應用程式在編譯給定函數時通過優化編譯時崩潰的罕見場合的理想選擇。 您可以使用它關閉單個函數的優化:
+此 pragma 可讓您依函數逐一設定給定的優化層級。 當指定的函式是使用優化來編譯時，您的應用程式會當機的少數情況下，這非常適合。 您可以使用此功能來關閉單一函式的優化：
 
 ```cpp
 #pragma optimize("", off)
@@ -83,54 +83,54 @@ int myFunc() {...}
 #pragma optimize("", on)
 ```
 
-有關詳細資訊,請參閱[優化](../preprocessor/optimize.md)。
+如需詳細資訊，請參閱[optimize](../preprocessor/optimize.md)。
 
-內聯是編譯器執行的最重要優化之一,在這裡,我們討論幾個有助於修改此行為的雜注。
+內嵌是編譯器所執行的其中一個最重要的優化，這裡我們會討論一些可協助修改此行為的 pragma。
 
-`#pragma inline_recursion`用於指定是否希望應用程式能夠內聯遞歸調用。 默認情況下,它處於關閉狀態。 對於小函數的淺遞歸,您可以打開此功能。 有關詳細資訊,請參閱[inline_recursion](../preprocessor/inline-recursion.md)。
+`#pragma inline_recursion`適用于指定您是否要讓應用程式能夠內嵌遞迴呼叫。 預設為關閉。 針對小型函式的淺遞迴，您可以開啟此功能。 如需詳細資訊，請參閱[inline_recursion](../preprocessor/inline-recursion.md)。
 
-另一個有用的雜注,以限制內聯的深度是`#pragma inline_depth`。 這在嘗試限制程式或函數大小的情況下通常很有用。 有關詳細資訊,請參閱[inline_depth](../preprocessor/inline-depth.md)。
+限制內嵌深度的另一個有用的 pragma 是`#pragma inline_depth`。 當您嘗試限制程式或函式的大小時，這項功能通常很有用。 如需詳細資訊，請參閱[inline_depth](../preprocessor/inline-depth.md)。
 
-## <a name="__restrict-and-__assume"></a>__restrict和\__assume
+## <a name="__restrict-and-__assume"></a>__restrict 和\__assume
 
-Visual Studio 中有幾個關鍵字可以説明性能[:__restrict](../cpp/extension-restrict.md)和[__assume。](../intrinsics/assume.md)
+Visual Studio 中有幾個可協助效能的關鍵字： [__restrict](../cpp/extension-restrict.md)和[__assume](../intrinsics/assume.md)。
 
-首先,應該指出,`__restrict``__declspec(restrict)`這是兩碼事。 雖然它們有些相關,但它們的語義是不同的。 `__restrict`是類型限定符,如`const``volatile`或 ,但僅限於指標類型。
+首先，請注意，和`__restrict` `__declspec(restrict)`是兩個不同的專案。 雖然它們有點相關，但其語義並不相同。 `__restrict`是類型限定詞（例如`const`或`volatile`），但僅適用于指標類型。
 
-變更的`__restrict`指標稱為 *__restrict指標*。 __restrict指標是只能通過\__restrict指標訪問的指標。 換句話說,另一個指標不能用於訪問\__restrict指標指向的數據。
+使用`__restrict`修改的指標稱為 *__restrict 指標*。 __Restrict 指標是只能透過\__restrict 指標存取的指標。 換句話說，另一個指標無法用來存取\__restrict 指標所指向的資料。
 
-`__restrict`對於 Microsoft C++優化器來說,它可以是一個強大的工具,但使用時要非常小心。 如果使用不當,優化器可能會執行一個優化,這將破壞您的應用程式。
+`__restrict`可以是 Microsoft c + + 優化工具的強大工具，但非常小心地使用它。 如果未正確使用，優化工具可能會執行會中斷應用程式的優化。
 
-關鍵字`__restrict`將替換以前版本的 **/Oa**開關。
+`__restrict`關鍵字會取代先前版本的 **/Oa**參數。
 
-使用`__assume`,開發人員可以告訴編譯器對某個變數的值做出假設。
+有`__assume`了，開發人員可以告訴編譯器對某個變數的值進行假設。
 
-例如`__assume(a < 5);`,告訴優化器,在代碼行中,變數`a`小於 5。 這也是對編譯器的承諾。 如果`a`程式此時實際為 6,則編譯器優化後程序的行為可能不是您所期望的。 `__assume`在切換語句和/或條件表達式之前最有用。
+例如， `__assume(a < 5);`告訴優化工具該程式程式碼的變數`a`小於5。 同樣地，這是對編譯器的承諾。 如果`a`在程式中的這個時間點實際上是6，則編譯器在優化之後的行為可能不是您預期的結果。 `__assume`在 switch 語句和（或）條件運算式之前最有用。
 
-對有一些`__assume`限制。 首先,就像`__restrict`,它只是一個建議,所以編譯器可以自由地忽略它。 此外,`__assume`目前僅適用於針對常量的可變不等式。 它不傳播符號不等式,例如,假設(a<b)。
+有一些限制`__assume`。 首先，like `__restrict`，這只是建議，因此編譯器可以自由地忽略它。 此外， `__assume`目前僅適用于常數的變數到差異。 它不會傳播符號到差異，例如，假設為（a < b）。
 
-## <a name="intrinsic-support"></a>內支援
+## <a name="intrinsic-support"></a>內建支援
 
-內部函數是函數調用,其中編譯器對調用有內在知識,而不是在庫中調用函數,而是為該函數發出代碼。 標頭檔\<intrin.h>包含每个受支持的硬件平台的所有可用内部函数。
+內建函式呼叫編譯器具有關于呼叫的內部知識，而不是呼叫程式庫中的函式，而是發出該函式的程式碼。 標頭檔\<intrin.h> 包含每個受支援硬體平臺的所有可用內建函式。
 
-內部函數使程式員能夠深入代碼,而無需使用程式集。 使用內在功能有幾個好處:
+內建函式可讓程式設計人員不需要使用元件，就能深入流覽程式碼。 使用內建函式有幾個優點：
 
-- 您的代碼更加便攜。 多個內部函數可用於多個 CPU 體系結構。
+- 您的程式碼更具可攜性。 有數個內建函式可用於多個 CPU 架構。
 
-- 代碼更易於閱讀,因為代碼仍以 C/C++編寫。
+- 您的程式碼較容易閱讀，因為程式碼仍是以 C/c + + 撰寫。
 
-- 您的代碼受益於編譯器優化。 隨著編譯器的更好,內部函數的代碼生成也會得到改善。
+- 您的程式碼會獲得編譯器優化的優點。 當編譯器變得更好時，針對內建函式產生的程式碼也會改善。
 
-有關詳細資訊,請參閱[編譯器內部函數](../intrinsics/compiler-intrinsics.md)。
+如需詳細資訊，請參閱[編譯器內建函式](../intrinsics/compiler-intrinsics.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-使用異常會受到性能影響。 使用禁止編譯器執行某些優化的 try 塊時,會引入一些限制。 在 x86 平臺上,由於在代碼執行期間必須生成的其他狀態資訊,try 塊的性能會進一步下降。 在 64 位平臺上,try 塊不會降低性能,但一旦引發異常,查找處理程序和展開堆疊的過程可能非常昂貴。
+使用例外狀況時，會發生與效能的衝擊。 使用禁止編譯器執行特定優化的 try 區塊時，會引進一些限制。 在 x86 平臺上，由於必須在程式碼執行期間產生的其他狀態資訊，因此從 try 區塊得到額外的效能降低。 在64位平臺上，try 區塊不會影響效能，但是一旦擲回例外狀況，尋找處理常式並回溯堆疊的過程可能會很耗費資源。
 
-因此,建議避免在並不真正需要的代碼中引入 try/catch 塊。 如果必須使用異常,請使用同步異常(如果可能)。 如需詳細資訊，請參閱 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)。
+因此，建議您避免將 try/catch 區塊引入不需要的程式碼中。 如果您必須使用例外狀況，請盡可能使用同步例外狀況。 如需詳細資訊，請參閱 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)。
 
-最後,僅針對例外情況引發異常。 對常規控制流使用異常可能會使性能受到影響。
+最後，只會針對例外狀況擲回例外狀況。 使用一般控制流程的例外狀況可能會使效能降低。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [最佳化程式碼](optimizing-your-code.md)

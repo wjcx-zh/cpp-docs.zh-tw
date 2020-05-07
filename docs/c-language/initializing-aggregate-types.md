@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62326075"
 ---
 # <a name="initializing-aggregate-types"></a>初始化彙總類型
 
-「彙總」  類型是一種結構、等位或陣列類型。 如果彙總類型包含彙總類型的成員，則會以遞迴方式套用初始化規則。
+「彙總」** 類型是一種結構、等位或陣列類型。 如果彙總類型包含彙總類型的成員，則會以遞迴方式套用初始化規則。
 
 ## <a name="syntax"></a>語法
 
-*initializer*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 針對彙總初始設定式 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
+*初始化運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;用於匯總初始化的 **{***初始化運算式-list***}** /*    \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *初始化運算式-list*  **，}**
 
-*initializer-list*：<br/>
+*初始化運算式-list*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*初始設定式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list*  **,**  *初始設定式*
+&nbsp;&nbsp;&nbsp;&nbsp;*初始化運算式-list*  **、**  *初始化運算式*
 
 *initializer-list* 是以逗號分隔的初始設定式清單。 清單中的每個初始設定式不是常數運算式就是初始設定式清單。 因此，初始設定式清單可以是巢狀。 這個表單在初始化彙總類型的彙總成員時很有用，如本節中的範例所示。 不過，如果自動識別項的初始設定式是單一運算式，則它不一定要是常數運算式，只需要具有適當的類型可指派給識別項即可。
 
@@ -35,7 +35,7 @@ ms.locfileid: "62326075"
 
 如果 *initializer-list* 包含的值少於彙總類型，則彙總類型的其餘成員或元素都會初始化為 0。 未明確初始化的自動識別項初始值會是未定義。 如果 *initializer-list* 包含的值多於彙總類型，則會產生錯誤。 這些規則適用於每個內嵌的初始設定式清單，同時適用於整個彙總。
 
-結構的初始設定式會是相同類型的運算式，或是其成員以大括號 ( **{ }** ) 括住的初始設定式清單。 未命名的位元欄位成員不會初始化。
+結構的初始設定式會是相同類型的運算式，或是其成員以大括號 (**{ }**) 括住的初始設定式清單。 未命名的位元欄位成員不會初始化。
 
 初始化等位時，*initializer-list* 必須是單一常數運算式。 常數運算式的值會指派給等位的第一個成員。
 
@@ -49,11 +49,11 @@ int x[ ] = { 0, 1, 2 }
 
 如果您指定大小，但提供了不正確的初始設定式數目，編譯器就會產生錯誤。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 陣列的大小上限是由 **size_t** 所定義。 **size_t** 定義在標頭檔 STDDEF.H 中，是一個範圍從 0x00000000 到 0x7CFFFFFF 的 `unsigned int`。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="examples"></a>範例
 
@@ -150,6 +150,6 @@ union
 
 這個範例中的等位變數 `y` 會初始化。 等位的第一個項目是陣列，因此初始設定式是彙總初始設定式。 初始設定式清單 `{'1'}` 會將值指派給陣列的第一列。 由於清單中只有一個值，因此第一行中的元素會初始化為 `1` 字元，而根據預設，該列中的其餘兩個元素會初始化為 0 值。 同樣地，`x` 中第二列的第一個元素會初始化為 `4` 字元，該列中的其餘兩個元素則會初始化為 0 值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[初始化](../c-language/initialization.md)
+[初始](../c-language/initialization.md)

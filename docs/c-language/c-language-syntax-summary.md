@@ -21,6 +21,6 @@ ms.locfileid: "81335020"
 > [!NOTE]
 > 這個語法摘要不是 ANSI C 標準的一部分，包括在內僅供參考之用。 Microsoft 專有語法會在語法之後註解中註明。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

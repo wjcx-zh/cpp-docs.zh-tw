@@ -17,13 +17,13 @@ ms.locfileid: "80078686"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio 專案 - C++
 
-*Visual Studio 專案*是以 MSBuild 建置系統為基礎的專案。 MSBuild 是 Visual Studio 的原生組建系統，通常是用於 Windows 特定程式的最佳組建系統。 MSBuild 會與 Visual Studio 緊密整合，但您也可以從命令列使用它。 針對跨平臺專案或使用開放原始碼程式庫的專案，我們建議在 Visual Studio 2017 和更新版本的 Visual Studio 中使用[CMake 專案](cmake-projects-in-visual-studio.md)。 如需從舊版 Visual Studio 升級 MSBuild 專案的詳細資訊，請參閱[Microsoft C++移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)。
+*Visual Studio 專案*是以 MSBuild 建置系統為基礎的專案。 MSBuild 是 Visual Studio 的原生組建系統，通常是用於 Windows 特定程式的最佳組建系統。 MSBuild 會與 Visual Studio 緊密整合，但您也可以從命令列使用它。 針對跨平臺專案或使用開放原始碼程式庫的專案，我們建議在 Visual Studio 2017 和更新版本的 Visual Studio 中使用[CMake 專案](cmake-projects-in-visual-studio.md)。 如需從舊版 Visual Studio 升級 MSBuild 專案的詳細資訊，請參閱[Microsoft c + + 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)。
 
 ## <a name="create-a-project"></a>建立專案
 
 ::: moniker range="vs-2019"
 
-您可以藉由選擇 [檔案] > [新增] > [專案]，並將 [語言] 設為 C++，來建立 C++ 專案。 在結果清單中您會看到專案範本清單，而您可以藉由設定 [平台] 或 [專案類型] 並在搜尋方塊中輸入關鍵字，來篩選該清單。
+您可以藉**由選擇 [** > 檔案] [**新增** > **專案**]，然後將**語言**設定為 c + + 來建立 c + + 專案 在結果清單中您會看到專案範本清單，而您可以藉由設定 [平台]**** 或 [專案類型]**** 並在搜尋方塊中輸入關鍵字，來篩選該清單。
 
    ![Visual Studio 2019 專案範本](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 [新增專案] 對話方塊")
 
@@ -31,7 +31,7 @@ ms.locfileid: "80078686"
 
 ::: moniker range="vs-2017"
 
-您可以藉由選擇 [檔案] > [新增] > [專案]，並在左窗格中選擇 [Visual C++]，來建立 C++ 專案。 在中間窗格中，您會看到專案範本清單：
+您**可以選擇** > [檔案] [**新增** > **專案**]，然後選擇左窗格中的 [Visual C++] 來建立 c + + 專案。 在中間窗格中，您會看到專案範本清單：
 
    ![專案範本](../overview/media/vs2017-new-project.png "Visual Studio 2017 [新增專案] 對話方塊")
 
@@ -43,11 +43,11 @@ ms.locfileid: "80078686"
 
    ![方案總管](media/mathlibrary-solution-explorer-153.png)
 
-當您建立新的專案時，也會建立方案檔 (.sln)。 您可以在 [方案總管] 中以滑鼠右鍵按一下其他專案，將該專案新增至方案。 方案檔可在您有多個相關的專案時用來協調組建相依性，但其功能大概就是如此。 所有編譯器選項都會在專案層級設定。
+當您建立新的專案時，也會建立方案檔 (.sln)。 您可以在 [方案總管]**** 中以滑鼠右鍵按一下其他專案，將該專案新增至方案。 方案檔可在您有多個相關的專案時用來協調組建相依性，但其功能大概就是如此。 所有編譯器選項都會在專案層級設定。
 
 ## <a name="add-items"></a>新增項目
 
-在 [方案總管] 中以滑鼠右鍵按一下專案，然後選擇 [新增] > [新增] 或 [新增] > [現有的]，將原始程式碼檔案、圖示或任何其他項目新增至您的專案。
+在 [方案總管]**** 中以滑鼠右鍵按一下專案，然後選擇 [新增] > [新增]**** 或 [新增] > [現有的]****，將原始程式碼檔案、圖示或任何其他項目新增至您的專案。
 
 ## <a name="add-third-party-libraries"></a>新增第三方程式庫
 
@@ -55,7 +55,7 @@ ms.locfileid: "80078686"
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>設定編譯器選項和其他組建屬性
 
-若要設定專案的組建設定，請在 [方案總管] 中以滑鼠右鍵按一下專案，然後選擇 [屬性]。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)。
+若要設定專案的組建設定，請在 [方案總管]**** 中以滑鼠右鍵按一下專案，然後選擇 [屬性]****。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)。
 
 ## <a name="compile-and-run"></a>編譯和執行
 
@@ -84,7 +84,7 @@ ms.locfileid: "80078686"
 [從現有程式碼建立專案](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 如何從來源檔案的鬆散式集合建立新的 Visual Studio 專案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [專案和建置系統](projects-and-build-systems-cpp.md)<br>
-[Microsoft C++移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Microsoft c + + 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

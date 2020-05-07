@@ -1,5 +1,5 @@
 ---
-title: CppProperties.json 參考
+title: CppProperties json 參考
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
@@ -10,9 +10,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328723"
 ---
-# <a name="cpppropertiesjson-reference"></a>CppProperties.json 參考
+# <a name="cpppropertiesjson-reference"></a>CppProperties json 參考
 
-不使用 CMake 的「打開資料夾」專案可以在*CppProperties.json*檔案中儲存 IntelliSense 的專案設定設定。 (CMake 專案使用["CMakeSettings.json"](customize-cmake-settings.md)檔案。配置由名稱/值對組成,並定義#include路徑、編譯器開關和其他參數。 有關如何在打開資料夾專案中添加配置的詳細資訊,請參閱[打開資料夾專案C++。](open-folder-projects-cpp.md) 以下各節總結了各種設置。 有關架構的完整說明,請導航到*CppProperties_schema.json*,當*CppProperties.json*處於打開時,其完整路徑位於代碼編輯器的頂部。
+未使用 CMake 的開啟資料夾專案可以將 IntelliSense 的專案設定設定儲存在*CppProperties 的 json*檔案中。 （CMake projects 使用[CMakeSettings](customize-cmake-settings.md)檔案）。設定是由名稱/值組所組成，並定義 #include 路徑、編譯器參數和其他參數。 如需如何在開啟資料夾專案中加入設定的詳細資訊，請參閱[Open folder projects For c + +](open-folder-projects-cpp.md) 。 下列各節摘要說明各種設定。 如需架構的完整描述，請流覽至*CppProperties_schema. json*，其完整路徑會在*CppProperties*開啟時于程式碼編輯器的頂端提供。
 
 ## <a name="configuration-properties"></a>設定屬性
 
@@ -20,23 +20,23 @@ ms.locfileid: "81328723"
 
 |||
 |-|-|
-|`inheritEnvironments`| 指定適用於此配置的環境。|
-|`name`|在 C++設定下拉清單中顯示的設定名稱|
-|`includePath`|在包含路徑中指定的資料夾的逗號分隔清單(對於大多數編譯器映射到 /I)|
+|`inheritEnvironments`| 指定套用到此設定的環境。|
+|`name`|將出現在 [c + + 設定] 下拉式清單中的設定名稱|
+|`includePath`|應在 include 路徑中指定的資料夾清單（以逗號分隔）（大多數編譯器的對應至/I）|
 |`defines`|應定義的巨集清單 (對應到大多數編譯器的 /D)|
 |`compilerSwitches`|可能會影響 IntelliSense 行為的一或多個其他參數|
 |`forcedInclude`|要自動包含在每個編譯單位中的標頭 (MSVC 會對應至 /FI，clang 會對應至 -include)|
 |`undefines`|要使其成為未定義的巨集清單 (MSVC 會對應至 /U)|
-|`intelliSenseMode`|要使用的 IntelliSense 引擎。 您可以為 MSVC、gcc 或 Clang 指定預先定義的體系結構特定變體之一。|
-|`environments`|使用者定義的變數集,它們在命令提示符中類似於環境變數,並且使用 $_env 進行訪問。\<變數>] 宏。|
+|`intelliSenseMode`|要使用的 IntelliSense 引擎。 您可以為 MSVC、gcc 或 Clang 指定其中一個預先定義的架構特定變體。|
+|`environments`|使用者定義的變數集，其行為類似于命令提示字元中的環境變數，並使用 $ {env 來\<存取。變數>} 宏。|
 
-### <a name="intellisensemode-values"></a>內泰利感知模式值
+### <a name="intellisensemode-values"></a>intelliSenseMode 值
 
-開始鍵入時,程式碼編輯器顯示可用選項:
+當您開始輸入時，程式碼編輯器會顯示可用的選項：
 
-![開啟資料夾智慧感知](media/open-folder-intellisense-mode.png "開啟資料夾智慧感知")
+![開啟資料夾 IntelliSense](media/open-folder-intellisense-mode.png "開啟資料夾 IntelliSense")
 
-這些是支援的值:
+以下是支援的值：
 
 - windows-msvc-x86
 - windows-msvc-x64
@@ -56,13 +56,13 @@ ms.locfileid: "81328723"
 - windows-clang-arm64
 - linux-gcc-x86
 - linux-gcc-x64
-- linux-gcc 臂
+- linux-gcc-arm
 
-注意:`msvc-x86`值`msvc-x64`和 僅出於遺留原因受支援。 改用`windows-msvc-*`變體。
+注意：值`msvc-x86`和`msvc-x64`僅支援舊版原因。 請改用`windows-msvc-*` variant。
 
-## <a name="pre-defined-environments"></a>預先定義環境
+## <a name="pre-defined-environments"></a>預先定義的環境
 
-Visual Studio 為 Microsoft 提供了以下預先定義環境C++這些環境映射到相應的開發人員命令提示。 繼承這些環境之一時,可以通過使用此宏語法的全域屬性`env`來引用任何環境變數:$_env。\<可變>]。
+Visual Studio 提供下列適用于 Microsoft c + + 的預先定義環境，其會對應至相對應的開發人員命令提示字元。 當您繼承其中一個環境時，您可以使用全域屬性`env`搭配此宏語法來參考任何環境變數： $ {env。\<變數>}。
 
 |變數名稱|描述|
 |-----------|-----------------|
@@ -83,13 +83,13 @@ Visual Studio 為 Microsoft 提供了以下預先定義環境C++這些環境映�
 |linux_x64|從遠端鎖定 x64 Linux|
 |linux_arm|從遠端鎖定 ARM Linux|
 
-## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>使用者定義的環境
+## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>使用者定義環境
 
-您可以選擇使用`environments`屬性 在*CppProperties.json*中定義全域或每個配置中的變數集。 這些變數在打開資料夾專案的上下文中類似於環境變數,可以使用 $_env 進行訪問。\<變數>]語法從*任務.vs.json*和*啟動.vs.json*定義他們在這裡。 但是,在 Visual Studio 內部使用的任何命令提示中,它們不一定設置為實際環境變數。
+您可以選擇性地使用`environments`屬性，在*CppProperties*中定義全域或每個設定的變數集。 這些變數的行為就像是開啟資料夾專案內容中的環境變數，而且可以使用 $ {env 來存取\< 。來自工作的變數>} 語法，在這裡定義之後，與*json*和*啟動. 與 json*的比較。 不過，它們不一定會在任何 Visual Studio 在內部使用的命令提示字元中，設定為實際的環境變數。
 
-**Visual Studio 2019 版本 16.4 及更高版本:***在 CppProperties.json*中定義的特定於設定的變數由除錯目標與工作自動選取,而無需設定`inheritEnvironments`。 除錯目標使用您在*CppProperties.json*中指定的環境自動啟動。
+**Visual Studio 2019 16.4 版和更新版本：** 在*CppProperties*中定義的設定特定變數會由「debug 目標」和「工作」自動挑選，而不`inheritEnvironments`需要設定。 系統會使用您在*CppProperties*中指定的環境，自動啟動 Debug 目標。
 
-**Visual Studio 2019 版本 16.3 及更早版本:** 使用環境時,即使環境定義為同一配置的一部分,`inheritsEnvironments`也必須在 屬性中指定它;屬性`environment`指定環境的名稱。 下面的範例顯示了用於在 MSYS2 安裝中為 GCC 啟用 IntelliSense 的範例配置。 請注意配置如何定義和繼承`mingw_64`環境,`includePath`以及 屬性`INCLUDE`如何存取變數。
+**Visual Studio 2019 16.3 版和更早版本：** 當您使用環境時，您必須在`inheritsEnvironments`屬性中指定它，即使環境已定義為相同設定的一部分也一樣。`environment`屬性會指定環境的名稱。 下列範例顯示在 MSYS2 安裝中啟用適用于 GCC 的 IntelliSense 的範例設定。 請注意，設定會定義和繼承`mingw_64`環境，以及`includePath`屬性如何存取`INCLUDE`變數。
 
 ```json
 "configurations": [
@@ -119,21 +119,21 @@ Visual Studio 為 Microsoft 提供了以下預先定義環境C++這些環境映�
   ]
 ```
 
-在配置中定義**環境**屬性時,它將覆蓋任何同名的全域變數。
+當您在設定內定義**環境**屬性時，它會覆寫相同名稱的任何全域變數。
 
 ## <a name="built-in-macros"></a>內建宏
 
-您可以存*取 CppProperties.json*中的以下內建巨集:
+您可以在*CppProperties*中存取下列內建宏：
 
 |||
 |-|-|
 |`${workspaceRoot}`| 工作區資料夾的完整路徑|
-|`${projectRoot}`| 放置*CppProperties.json*的資料夾的完整路徑|
-|`${env.vsInstallDir}`| 安裝 Visual Studio 執行的實體的資料夾的完整路徑|
+|`${projectRoot}`| 放置*CppProperties*之資料夾的完整路徑|
+|`${env.vsInstallDir}`| 已安裝 Visual Studio 實例之資料夾的完整路徑|
 
 ### <a name="example"></a>範例
 
-如果專案具有包含資料夾,並且還包括 Windows SDK 中的*windows.h*和其他常見標頭,則可能需要更新*您的 CppProperties.json*設定檔,其中包括:
+如果您的專案具有 include 資料夾，而且也包含來自 Windows SDK 的*windows .h*和其他常見標頭，您可能會想要使用下列專案來更新*CppProperties*的設定檔：
 
 ```json
 {
@@ -160,10 +160,10 @@ Visual Studio 為 Microsoft 提供了以下預先定義環境C++這些環境映�
 
 ## <a name="troubleshoot-intellisense-errors"></a>針對 IntelliSense 錯誤進行疑難排解
 
-如果您沒有看到預期中的 IntelliSense,則可以通過存**取工具** > **選項** > **文字編輯器** > **C/C++** > **進階**和將**啟用日誌記錄**設置為**true**來進行故障排除。 首先,請嘗試將**日誌記錄級別**設置為 5,**並將篩選器**設置為 8。
+如果您看不到預期的 IntelliSense，可以移至 [**工具** > ] [**選項** > ] [**文字編輯器** > ] [**C/c + +** > ]**，並將**[**啟用記錄**] 設定為 [ **true**] 進行疑難排解。 若要開始，請嘗試將**記錄層級**設定為5，並將**篩選準則記錄**到8。
 
 ![診斷記錄](media/diagnostic-logging.png)
 
-輸出透過導管到**輸出視窗**,當您選擇 **「顯示輸出從:可視C++日誌**」時,輸出可見。 輸出包含 IntelliSense 嘗試使用的實際路徑清單。 如果路徑與*CppProperties.json*中的路徑不匹配,請嘗試關閉資料夾並刪除包含緩存流覽數據的 *.vs*子資料夾。
+輸出會以管道傳送至**輸出視窗**，並在您選擇 [**顯示輸出來源： Visual C++ 記錄**] 時顯示。 輸出中包含 IntelliSense 嘗試使用之實際 include 路徑的清單。 如果路徑不符合*CppProperties*中的路徑，請嘗試關閉資料夾，並刪除包含快取流覽資料的 *. vs*子資料夾。
 
 若要針對遺失 Include 路徑所造成的 IntelliSense 錯誤進行疑難排解，請開啟 [錯誤清單]****，並將其輸出篩選至「僅限 IntelliSense」和錯誤碼 E1696：「無法開啟原始程式檔…」。

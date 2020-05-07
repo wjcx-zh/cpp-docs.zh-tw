@@ -1,5 +1,5 @@
 ---
-title: 視覺化工作室 CMake 專案中的 Clang/LLVM 支援
+title: Visual Studio CMake 專案中的 Clang/LLVM 支援
 ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
@@ -11,77 +11,77 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323185"
 ---
-# <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>視覺化工作室 CMake 專案中的 Clang/LLVM 支援
+# <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Visual Studio CMake 專案中的 Clang/LLVM 支援
 
 ::: moniker range="<=vs-2017"
 
-Clang 支援可在 Visual Studio 2019 中提供。
+Visual Studio 2019 提供 Clang 支援。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-您可以將 Visual Studio 與 Clang 一起編輯和調試C++面向 Windows 或 Linux 的 CMake 專案。
+您可以使用 Visual Studio 搭配 Clang 來編輯和 debug 以 Windows 或 Linux 為目標的 c + + CMake 專案。
 
-**Windows**: Visual Studio 2019 版本 16.1 包括在面向 Windows 的 CMake 專案中使用 Clang/LLVM 進行編輯、構建和調試的支援。
+**Windows**： Visual Studio 2019 16.1 版包含在以 Windows 為目標的 CMake 專案中，對 CLANG/LLVM 進行編輯、建立和偵錯工具的支援。
 
-**Linux**:對於 Linux CMake 專案,不需要特殊的視覺工作室支援。 您可以使用發行版的包管理器安裝 Clang,並在 CMakelists.txt 檔中添加相應的命令。
+**Linux**：針對 linux CMake 專案，不需要任何特殊的 Visual Studio 支援。 您可以使用散發版本的套件管理員安裝 Clang，並在 Remote monitoring.h cmakelists.txt 檔案中新增適當的命令。
 
 ## <a name="install"></a>安裝
 
-為了在 Visual Studio 中獲得最佳 IDE 支援,我們建議使用 Windows 的最新 Clang 編譯器工具。 如果還沒有這些,則可以通過打開 Visual Studio 安裝程式和選擇桌面開發下的 Windows **C++ Clang 編譯器**來安裝它們 **,C++** 可選元件。 使用自訂 Clang 安裝時,請檢查**C++ Clang-cl 中的 v142 生成工具**元件。
+如需 Visual Studio 中的最佳 IDE 支援，我們建議使用適用于 Windows 的最新 Clang 編譯器工具。 如果您還沒有這些專案，可以在 [**使用 c + + 的桌面開發**] 選用元件中開啟 Visual Studio 安裝程式，然後選擇 [**適用于 Windows 的 c + + Clang 編譯器**] 來安裝它們。 使用自訂 Clang 安裝時，請檢查**c + + Clang-cl for 適用于 v142 build tools**元件。
 
 ![Clang 元件安裝](media/clang-install-vs2019.png)
 
-## <a name="create-a-new-configuration"></a>建立新設定
+## <a name="create-a-new-configuration"></a>建立新的設定
 
-要加入 CMake 專案加入新的 Clang 設定,:
+若要將新的 Clang 設定加入至 CMake 專案：
 
-1. 右鍵按下**解決方案資源管理員**中的 CMakelists.txt,然後選擇**項目的「CMake」設定**。
+1. 以滑鼠右鍵按一下**方案總管**中的 [remote monitoring.h cmakelists.txt]，然後選擇 [**專案的 CMake 設定**]。
 
-1. 在 **「設定」** 下,按 **「新增設定**」按鈕:
+1. 在 [設定]**下，按**[**新增**設定] 按鈕：
 
    ![新增設定](media/cmake-add-config-icon.png)
 
-1. 選擇所需的 Clang 設定(請注意,為 Windows 與 Linux 提供單獨的 Clang 設定),然後按 **「選擇**」 :
+1. 選擇所需的 Clang 設定（請注意，系統會針對 Windows 和 Linux 提供個別的 Clang 設定），然後按下 [**選取**]：
 
    ![CMake Clang 設定](media/cmake-clang-configuration.png)
 
-1. 要修改此設定,請使用 **「CMake 設定編輯器**」 。。 有關詳細資訊,請參閱[在可視化工作室中自定義 CMake 產生設定](customize-cmake-settings.md)。
+1. 若要對此設定進行修改，請使用 [ **CMake 設定編輯器**]。 如需詳細資訊，請參閱[在 Visual Studio 中自訂 CMake 組建設定](customize-cmake-settings.md)。
 
-## <a name="modify-an-existing-configuration-to-use-clang"></a>變更現有設定以使用 Clang
+## <a name="modify-an-existing-configuration-to-use-clang"></a>修改現有設定以使用 Clang
 
-要修改現有設定以使用 Clang,請按照以下步驟操作:
+若要修改現有設定以使用 Clang，請遵循下列步驟：
 
-1. 右鍵按下**解決方案資源管理員**中的 CMakelists.txt,然後選擇**項目的「CMake」設定**。
+1. 以滑鼠右鍵按一下**方案總管**中的 [remote monitoring.h cmakelists.txt]，然後選擇 [**專案的 CMake 設定**]。
 
-1. 在 **「一般」** 選擇 **「工具集**下拉」並選擇所需的 Clang 工具集:
+1. 在 **[一般**] 底下選取 [**工具**組] 下拉式清單，然後選擇所需的 Clang 工具組
 
-   ![CMake Clang 工具集](media/cmake-clang-toolset.png)
+   ![CMake Clang 工具組](media/cmake-clang-toolset.png)
 
 ## <a name="custom-clang-locations"></a>自訂 Clang 位置
 
-預設情況下,Visual Studio 在兩個位置查找 Clang:
+根據預設，Visual Studio 會在兩個位置中尋找 Clang：
 
-- (視窗)視覺工作室安裝程式附帶的 Clang/LLVM 的內部安裝副本。
-- (視窗和Linux)PATH 環境變數。
+- 時段Visual Studio 安裝程式隨附之 Clang/LLVM 的內部安裝複本。
+- （Windows 和 Linux）PATH 環境變數。
 
-您可以透過在 **「製作設定**」中設定**CMAKE_C_COMPILER**和**CMAKE_CXX_COMPILER** CMake 變數來指定其他位置:
+您可以藉由在**CMAKE 設定**中設定**CMAKE_C_COMPILER**和**CMAKE_CXX_COMPILER** CMAKE 變數來指定另一個位置：
 
-![CMake Clang 工具集](media/clang-location-cmake.png)
+![CMake Clang 工具組](media/clang-location-cmake.png)
 
 ## <a name="clang-compatibility-modes"></a>Clang 相容性模式
 
-對於 Windows 配置,CMake 預設情況下以[clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)模式調用 Clang,並與標準庫的 Microsoft 實現連結。 默認情況下 **,clang-cl.exe**位於`C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`中。
+對於 Windows 設定，CMake 預設會在[Clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)模式中叫用 Clang，並使用標準程式庫的 Microsoft 實作為連結。 根據預設， **clang-cl**位於`C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`。
 
-您可以在 **「CMake」變數和快取**下的 **「CMake 設定」** 中修改這些值。 按下 **「顯示進階變數**」 。 向下滾動以查找**CMAKE_CXX_COMPILER**,然後按**下 「流覽」** 按鈕以指定其他編譯器路徑。
+您可以在 [ **CMake 變數和**快取] 底下的 [ **CMake 設定**] 中修改這些值。 按一下 [**顯示先進的變數**]。 向下滾動以尋找**CMAKE_CXX_COMPILER**，然後按一下 [**流覽]** 按鈕來指定不同的編譯器路徑。
 
-## <a name="edit-build-and-debug"></a>編輯、產生及除錯
+## <a name="edit-build-and-debug"></a>編輯、組建和 debug
 
-設置 Clang 配置後,可以生成和調試專案。 Visual Studio 檢測到您正在使用 Clang 編譯器,並提供 IntelliSense、突出顯示、導航和其他編輯功能。 錯誤與警告顯示在**輸出視窗中**。
+設定 Clang 設定之後，您可以建立並對專案進行 debug。 Visual Studio 偵測到您使用 Clang 編譯器，並提供 IntelliSense、醒目提示、導覽和其他編輯功能。 錯誤和警告會顯示在**輸出視窗**中。
 
-調試時,可以使用斷點、記憶體和數據可視化以及大多數其他調試功能。 某些與編譯器相關的功能(如"編輯"和"繼續")不適用於 Clang 配置。
+在調試時，您可以使用中斷點、記憶體和資料視覺效果，以及大部分其他的調試功能。 某些與編譯器相關的功能（例如 [編輯後繼續]）不適用於 Clang 設定。
 
-![CMake Clang 除錯](media/clang-debug-visualize.png)
+![CMake Clang 的調試](media/clang-debug-visualize.png)
 
 ::: moniker-end

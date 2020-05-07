@@ -17,8 +17,8 @@ ms.locfileid: "81480869"
 
 **double** 類型包含 64 個位元：1 個位元表示正負號、11 個位元表示指數，52 個位元則表示尾數。 其範圍是 +/- 1.7E308，且具有至少 15 位數的整數位數。
 
-**長雙**類型是截然不同的,但與 Microsoft C 編譯器中的**雙**類型具有相同的表示形式。
+**Long double**類型是相異的，但在 Microsoft C 編譯器中的標記法與**double**類型相同。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [浮點數數學](../c-language/floating-point-math.md)

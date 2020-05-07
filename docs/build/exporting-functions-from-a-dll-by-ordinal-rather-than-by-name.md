@@ -16,17 +16,17 @@ ms.locfileid: "81328580"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>根據序數而不是名稱從 DLL 匯出函式
 
-從 DLL 匯出函數的最簡單方法是按名稱匯出它們。 例如,當您使用 **__declspec(dllexport)** 時,就會發生這種情況。 但是,您可以改為按元數匯出函數。 使用此技術,必須使用 .def 檔案而不是 **__declspec(dllexport)**。 要指定函數的元數值,請將其元數追加到 .def 檔中的函數名稱。 有關指定位數的資訊,請參閱[從 DLL 匯出使用 .def 檔案](exporting-from-a-dll-using-def-files.md)。
+從 DLL 匯出函式的最簡單方式是依名稱匯出函式。 例如，當您使用 **__declspec （dllexport）** 時，就會發生這種情況。 但是您可以改為依序數匯出函式。 使用這項技術時，您必須使用 .def 檔案，而不是 **__declspec （dllexport）**。 若要指定函式的序數值，請將其序數附加至 .def 檔案中的函數名稱。 如需指定序數的詳細資訊，請參閱[使用 .def 檔案從 DLL 匯出](exporting-from-a-dll-using-def-files.md)。
 
 > [!TIP]
-> 如果要優化 DLL 的檔案大小,請使用每個匯出函數上的**NONAME**屬性。 使用**NONAME**屬性時,這些表存儲在 DLL 的匯出表中,而不是函數名稱中。 如果您要匯出許多函數,這可以節省大量成本。
+> 如果您想要優化 DLL 的檔案大小，請在每個匯出的函數上使用**NONAME**屬性。 使用**NONAME**屬性時，序數會儲存在 DLL 的匯出資料表中，而不是函數名稱。 如果您要匯出許多函式，這可能會有相當大的節約。
 
 ## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [使用 .def 檔案,以便我可以透過 ddinal 匯出](exporting-from-a-dll-using-def-files.md)
+- [使用 .def 檔案，讓我可以依序數匯出](exporting-from-a-dll-using-def-files.md)
 
-- [使用__declspec(出口)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport）](exporting-from-a-dll-using-declspec-dllexport.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [從 DLL 匯出](exporting-from-a-dll.md)

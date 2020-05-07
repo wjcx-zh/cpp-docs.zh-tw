@@ -5,17 +5,17 @@ helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
 ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313333"
 ---
 # <a name="c-sequence-points"></a>C 序列點
 
 在連續「序列點」之間，只能以運算式修改物件的值一次。 C 語言定義下列序列點：
 
-- 邏輯 AND 運算子 (**&&**) 的左運算元。 繼續之前會完整評估邏輯 AND 運算子的左運算元，並且完成所有副作用。 如果左運算元判斷值為 false (0)，便不會評估另一個運算元。
+- 邏輯 AND 運算子（**&&**）的左運算元。 繼續之前會完整評估邏輯 AND 運算子的左運算元，並且完成所有副作用。 如果左運算元判斷值為 false (0)，便不會評估另一個運算元。
 
 - 邏輯 OR 運算子 (`||`) 的左運算元。 繼續之前會完整評估邏輯 OR 運算子的左運算元，並且完成所有副作用。 如果左運算元判斷值為 true (非零)，便不會評估另一個運算元。
 
@@ -27,7 +27,7 @@ ms.locfileid: "56152634"
 
 - 完整初始化運算式的結尾 (即不屬於另一個運算式的運算式，例如宣告陳述式中初始化的結尾)。
 
-- 運算陳述式中的運算式。 運算式陳述式包含選擇性運算式且後面加上分號 (**;**)。 會評估運算式的副作用，而且在此項評估之後會有一個序列點。
+- 運算陳述式中的運算式。 運算式語句包含選擇性運算式，後面加上分號（**;**）。 會評估運算式的副作用，而且在此項評估之後會有一個序列點。
 
 - 選取範圍 (**if** 或 `switch`) 陳述式中的控制運算式。 會完整評估運算式，並且其所有副作用會在執行與選取範圍相關的程式碼執行之前完成。
 
@@ -37,6 +37,6 @@ ms.locfileid: "56152634"
 
 - `return` 陳述式中的運算式。 會完整評估運算式，並且所有副作用會在控制項回到呼叫函式之前完成。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [運算式評估](../c-language/expression-evaluation-c.md)

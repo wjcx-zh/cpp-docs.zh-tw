@@ -44,11 +44,11 @@ ms.locfileid: "80168795"
 ## <a name="syntax"></a>語法
 
 *assignment-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*一元運算式* *指派-運算子* *指派運算式*
+&nbsp;&nbsp;&nbsp;&nbsp;*條件運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*：下列其中一個<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=%=+=** **-=\<** **\<=** **>>=** **>>=** **&=** **^=** **|=** **&=^=|=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 C 中的指派運算子可以在單一操作中轉換以及指派值。 C 會提供下列指派運算子：
 
@@ -68,6 +68,6 @@ C 中的指派運算子可以在單一操作中轉換以及指派值。 C 會提
 
 在指派之中，右方值的類型會轉換為左方值的類型，因此，在完成指派之後，值會儲存在左運算元中。 左運算元不可以是陣列、函式或常數。 特定的轉換路徑取決於轉換的兩個類型，並詳述於[類型轉換](../c-language/type-conversions-c.md)中。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [指派運算子](../cpp/assignment-operators.md)

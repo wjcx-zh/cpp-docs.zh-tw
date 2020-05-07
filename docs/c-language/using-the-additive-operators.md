@@ -6,11 +6,11 @@ helpviewer_keywords:
 - additive operators
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
 ms.openlocfilehash: 0e2d802a77c56b8f458b614b29e86e2e1d30a55e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344872"
 ---
 # <a name="using-the-additive-operators"></a>使用加法類運算子
 
@@ -37,6 +37,6 @@ j = &x[i] - &x[i-2];
 
 在此範例中，`x` 第三個元素的位址 (由 `x[i-2]` 指定) 是減去 `x` 第五個元素的位址 (由 `x[i]` 指定) 而得。 其差異值再除以 **float** 的長度，結果為整數值 2。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 加法類運算子](../c-language/c-additive-operators.md)

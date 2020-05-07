@@ -11,12 +11,12 @@ ms.locfileid: "81480898"
 ---
 # <a name="range-of-char-values"></a>char 值的範圍
 
-**ANSI 3.2.1.1**字**元**的值範圍是否與**簽名符號**或**未簽署的字元**具有相同的值範圍
+**ANSI 3.2.1.1**"單純"**字元**的值範圍是否與**帶正負**號的字元或不**帶正負**號的字元相同
 
 從 -128 到 127 的範圍中所有帶正負號的字元值。 從 0 到 255 的範圍中所有不帶正負號的字元值。
 
-編譯器[`/J`](../build/reference/j-default-char-type-is-unsigned.md)選項將**字元**的預設類型從**簽名名字符**變更為**未簽署的字元**。
+編譯器選項會將**char**的預設類型從**帶正負**號的字元變更為不帶正負號的**char。** [`/J`](../build/reference/j-default-char-type-is-unsigned.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[字元](../c-language/characters.md)
+[長度](../c-language/characters.md)

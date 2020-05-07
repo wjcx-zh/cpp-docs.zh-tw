@@ -48,8 +48,8 @@ ms.locfileid: "81349606"
 
 查看 [try-except 陳述式](../c-language/try-except-statement-c.md)的範例以了解 `try-finally` 陳述式的運作方式。
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [try-finally 陳述式](../cpp/try-finally-statement.md)

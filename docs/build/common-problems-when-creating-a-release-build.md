@@ -26,11 +26,11 @@ ms.locfileid: "81328858"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>建立發行組建時的常見問題
 
-在開發過程中,您通常會使用專案的調試生成生成和測試。 如果隨後為發佈生成構建應用程式,則可能會收到訪問衝突。
+在開發期間，您通常會使用專案的「偵錯工具」組建來建立和測試。 如果您接著建立發行組建的應用程式，您可能會收到存取違規。
 
-下面的清單顯示了調試和發佈(非調試)生成之間的主要區別。 還有其他差異,但以下是導致應用程式在調試生成中工作時在發佈版本中失敗的主要區別。
+下列清單顯示 debug 和 release （nondebug）組建之間的主要差異。 還有其他差異，但以下是在發行組建中運作時，會導致應用程式在版本建立中失敗的主要差異。
 
-- [堆佈局](#_core_heap_layout)
+- [堆積版面配置](#_core_heap_layout)
 
 - [編譯](#_core_compilation)
 
@@ -38,31 +38,31 @@ ms.locfileid: "81328858"
 
 - [最佳化](#_core_optimizations)
 
-有關如何捕獲調試生成中的發佈生成錯誤的資訊,請參閱[/GZ(調試生成中的捕獲發佈-生成錯誤)](reference/gz-enable-stack-frame-run-time-error-checking.md)編譯器選項。
+如需如何在 debug 組建中捕捉發行組建錯誤的詳細資訊，請參閱[/GZ （在 Debug build 中捕捉發行組建錯誤）](reference/gz-enable-stack-frame-run-time-error-checking.md)編譯器選項。
 
-## <a name="heap-layout"></a><a name="_core_heap_layout"></a>堆佈局
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a>堆積版面配置
 
-當應用程式在調試中工作時,堆佈局將是大約 90% 的明顯問題的原因,但不會釋放。
+當應用程式在 debug （但不是發行）中運作時，堆積配置會造成大約90% 的明顯問題。
 
-生成項目進行調試時,將使用調試記憶體分配器。 這意味著所有內存分配都位於它們周圍。 這些保護位元組檢測到記憶體覆蓋。 由於堆佈局在版本和調試版本之間不同,因此記憶體覆蓋可能不會在調試生成中造成任何問題,但在發佈版本中可能具有災難性影響。
+當您建立用於 debug 的專案時，您會使用「偵錯工具記憶體配置器」。 這表示所有記憶體配置都有防護位元組放在它們的周圍。 這些防護位元組會偵測到記憶體的覆寫。 因為發行和 debug 版本之間的堆積配置不同，所以記憶體覆寫可能不會在 debug 組建中建立任何問題，但可能會在發行組建中產生重大影響。
 
-有關詳細資訊,請參閱[檢查記憶體覆蓋](checking-for-memory-overwrites.md),並使用[除錯產生檢查記憶體覆蓋](using-the-debug-build-to-check-for-memory-overwrite.md)。
+如需詳細資訊，請參閱[檢查記憶體覆寫](checking-for-memory-overwrites.md)和[使用 Debug Build 來檢查記憶體是否覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)。
 
 ## <a name="compilation"></a><a name="_core_compilation"></a>編譯
 
-許多 MFC 宏和大部分 MFC 實現在生成以進行發佈時會發生變化。 特別是,ASSERT 宏在發佈版本中不計算任何內容,因此不會執行 ASSERT 中找到的代碼。 有關詳細資訊,請參閱檢查[ASSERT 語句](using-verify-instead-of-assert.md)。
+當您建立發行時，許多 MFC 宏和大部分的 MFC 執行都會變更。 特別是，ASSERT 宏在發行組建中會評估為任何內容，因此不會執行任何在判斷提示中找到的程式碼。 如需詳細資訊，請參閱[檢查 ASSERT 語句](using-verify-instead-of-assert.md)。
 
-某些函數內聯在版本版本中提高了速度。 優化通常在發佈版本中打開。 還使用了不同的記憶體分配器。
+某些函式會內嵌在發行組建中，以提高速度。 優化通常會在發行組建中開啟。 也會使用不同的記憶體配置器。
 
 ## <a name="pointer-support"></a><a name="_core_pointer_support"></a>指標支援
 
-缺少調試資訊會從應用程式中刪除填充。 在發佈版本中,雜散指標更有可能指向未初始化的記憶體,而不是指向調試資訊。
+缺少偵錯工具資訊會將填補從您的應用程式中移除。 在發行組建中，偏離的指標有更高的機會指向未初始化的記憶體，而不是指向 debug 資訊。
 
 ## <a name="optimizations"></a><a name="_core_optimizations"></a>優化
 
-根據某些代碼段的性質,優化編譯器可能會生成意外代碼。 這是發佈生成問題最不可能的原因,但確實偶爾會出現。 有關解決方案,請參閱[最佳資訊 。](optimizing-your-code.md)
+根據特定程式碼片段的本質而定，優化編譯器可能會產生非預期的程式碼。 這是發行組建問題的最不可能原因，但有時會發生這種情況。 如需解決方案，請參閱[優化您的程式碼](optimizing-your-code.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [發行組建](release-builds.md)<br/>
 [解決發行組建的問題](fixing-release-build-problems.md)

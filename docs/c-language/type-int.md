@@ -22,13 +22,13 @@ ms.locfileid: "81334440"
 
 **Microsoft 特定的**
 
-帶正負號的整數以二補數格式表示。 最高有效位元會保存此正負號：1 為負數，0 為正數及零。 值的範圍以[C 和 C++整數限制](../c-language/cpp-integer-limits.md)(取自H 頭檔。
+帶正負號的整數以二補數格式表示。 最高有效位元會保存此正負號：1 為負數，0 為正數及零。 值的範圍是以[c 和 c + + 整數限制](../c-language/cpp-integer-limits.md)提供，這是從限制中取得。H 標頭檔。
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
 > [!NOTE]
 > int 和 unsigned int 類型指定名稱廣泛使用在 C 程式中，因為它們允許特定電腦以該電腦的最有效的方法處理整數值。 不過，由於 int 和 unsigned int 類型的大小不同，取決於特定 int 大小的程式可能無法移植至其他電腦。 若要使程式更具有可移植性，您可以使用含 sizeof 運算子的運算式 (如 [sizeof 運算子](../c-language/sizeof-operator-c.md)中所述) 而不是硬式編碼的資料大小。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [基本類型的儲存空間](../c-language/storage-of-basic-types.md)

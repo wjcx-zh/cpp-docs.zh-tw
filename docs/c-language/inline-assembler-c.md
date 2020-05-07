@@ -6,15 +6,15 @@ helpviewer_keywords:
 - inline assembler [C]
 ms.assetid: 821acc77-60b1-434c-ba54-2ba930a25ab4
 ms.openlocfilehash: 8fb2a1dd3e87ef452083935e23048d80b4cdc8c3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233173"
 ---
 # <a name="inline-assembler-c"></a>內嵌組譯工具 (C)
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 內嵌組合語言可讓您直接在 C 原始程式中內嵌組合語言指令，而不需要額外的組合和連結步驟。 內嵌組合語言已內建於編譯器 — 您不需要個別的組譯工具，例如 Microsoft Macro Assembler (MASM)。
 
@@ -47,8 +47,8 @@ __asm sub  esp, __LOCAL_SIZE
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 ```
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式屬性](../c-language/function-attributes.md)

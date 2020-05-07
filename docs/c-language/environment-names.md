@@ -3,11 +3,11 @@ title: 環境名稱
 ms.date: 11/04/2016
 ms.assetid: 9af409a5-e724-465a-9a21-88d3586c2e92
 ms.openlocfilehash: 43e1254b4c1ee61a92fbb6499d9396e8b15a3047
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234123"
 ---
 # <a name="environment-names"></a>環境名稱
 
@@ -27,7 +27,7 @@ system( SET LIB = D:\LIBS );
 
 同樣地，`_putenv` 函式所做的變更只會保留到程式結束為止。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [程式庫函式](../c-language/library-functions.md)<br/>
 [_putenv、_wputenv](../c-runtime-library/reference/putenv-wputenv.md)<br/>

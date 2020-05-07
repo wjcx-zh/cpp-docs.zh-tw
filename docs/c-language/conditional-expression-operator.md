@@ -19,9 +19,9 @@ C 有一個三元運算子：條件運算式運算子 (**? :**)。
 
 ## <a name="syntax"></a>語法
 
-*條件運算式*:<br/>
+*條件運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *運算式*  **:**  *條件表示式*
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **：**  *條件運算式*
 
 *logical-OR-expression* 必須要有整數、浮點或指標類型。 其評估條件為全等於 0。 *logical-OR-expression* 後方會有一個序列點。 評估運算元的方式如下：
 
@@ -68,6 +68,6 @@ int y;
 
 在此範例中會宣告兩個函式 (`f1` 和 `f2`) 及兩個變數 (`x` 和 `y`)。 稍後在程式中，如果兩個變數具有相同的值，便會呼叫 `f1` 函式。 否則會呼叫 `f2`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [條件運算子：? :](../cpp/conditional-operator-q.md)

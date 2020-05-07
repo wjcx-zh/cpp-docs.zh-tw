@@ -29,7 +29,7 @@ ms.locfileid: "81349733"
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *運算*  **式 )**  *複合語句*
+**__except （**  *運算式*  **）**  *複合陳述式*
 
 `__try` 子句後面的複合陳述式是保護的區段。 `__except` 子句後面的複合陳述式則是例外狀況處理常式。 如果在執行保護區段時引發例外狀況，則處理常式會指定要採取的一組動作。 執行程序如下所示：
 
@@ -94,8 +94,8 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [try-except 陳述式](../cpp/try-except-statement.md)

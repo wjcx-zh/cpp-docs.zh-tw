@@ -20,21 +20,21 @@ ms.locfileid: "81334629"
 
 *語彙基元*：*關鍵字*
 
-*識別碼*
+*識別碼 (identifier)*
 
-*不斷*
+*常數*
 
-*字串文字*
+*字串常值*
 
-*算子*
+*操作*
 
 *標點符號*
 
 > [!NOTE]
-> 有關 ANSI 語法約定的說明,請參閱[C 語言語法摘要](../c-language/c-language-syntax-summary.md)的簡介。
+> 如需 ANSI 語法慣例的說明，請參閱[C 語言語法摘要](../c-language/c-language-syntax-summary.md)簡介。
 
 本節所述的關鍵字、識別項、常數、字串常值和運算子為語彙基元的範例。 標點符號字元如方括弧 (**[ ]**)、大括弧 (**{ }**)、圓括弧 ( **( )** ) 和逗號 (**,**) 也是語彙基元。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 的元素](../c-language/elements-of-c.md)

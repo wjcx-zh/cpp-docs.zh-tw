@@ -18,6 +18,6 @@ ms.locfileid: "81335075"
 > [!NOTE]
 > **警告** 由於鍵盤和主控台驅動程式可能會重新對應字元集，因此主要供國際發行的程式應該檢查國碼/區碼。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[字元](../c-language/characters.md)
+[長度](../c-language/characters.md)

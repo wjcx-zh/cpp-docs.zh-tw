@@ -1,5 +1,5 @@
 ---
-title: 動態連結至 MFC 的標準 MFC DLL 的模組狀態
+title: 動態連結至 MFC 之 MFC DLL 的模組狀態
 ms.date: 11/04/2016
 helpviewer_keywords:
 - regular MFC DLLs [C++], dynamically linked to MFC
@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
 ms.openlocfilehash: cedce676f5586369446c9856fd33e4d16c237b27
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220589"
 ---
-# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>動態連結至 MFC 的標準 MFC DLL 的模組狀態
+# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>動態連結至 MFC 之 MFC DLL 的模組狀態
 
-動態連結至 MFC DLL 的 一般 MFC DLL 的能力可讓一些非常複雜的組態。 比方說，MFC DLL，並使用它的可執行檔可以同時以動態方式連結到 MFC DLL 以及任何 MFC 擴充 Dll。
+將一般 MFC DLL 動態連結至 MFC DLL 的功能，可讓某些設定變得非常複雜。 例如，一般 MFC DLL 和使用它的可執行檔可以動態連結至 MFC DLL 和任何 MFC 擴充 Dll。
 
-這個組態會與 MFC 全域資料，例如目前的指標有關的問題`CWinApp`物件和控制代碼的對應。
+此設定會對 MFC 全域資料造成問題，例如目前`CWinApp`物件的指標，以及處理對應。
 
-MFC 4.0 版，此全域資料常駐於 MFC DLL 本身前後程序中所有模組所共用。 因為每個使用 Win32 DLL 的處理序都有它自己的 DLL 的資料複本，此配置會提供簡單的方法，來追蹤每個處理序的資料。 此外，因為 AFXDLL 模型假設，會有只有一個`CWinApp`物件和一組處理程序中的對應，MFC DLL 本身中可追蹤這些項目。
+在 MFC 版本4.0 之前，此全域資料會放在 MFC DLL 本身，並由進程中的所有模組共用。 由於每個使用 Win32 DLL 的進程都會取得自己的 DLL 資料複本，因此這個配置提供了一種簡單的方式來追蹤每個處理常式的資料。 此外，由於 AFXDLL 模型假設在進程中只會有一個`CWinApp`物件和一組控制碼對應，因此可以在 MFC DLL 本身追蹤這些專案。
 
-但若要動態連結至 MFC DLL 的 MFC DLL 的能力，現在可以有兩個或多個`CWinApp`處理序中的物件，和也兩個或多個集合的控制代碼對應。 如何沒有 MFC 追蹤的應該使用何者？
+但是能夠以動態方式將一般 MFC DLL 連結至 MFC DLL，現在可以在進程中有兩個或多`CWinApp`個物件，以及兩個或更多的控制碼對應集。 MFC 如何追蹤應該使用的專案？
 
-解決方法是為每個模組 （應用程式或 MFC DLL） 提供它自己的全域狀態資訊的複本。 因此，呼叫**AfxGetApp**在一般 MFC DLL 將指標傳回至`CWinApp`DLL，而不是可執行檔中的物件。 這個每個模組 MFC 通用資料複本就所謂的模組狀態及所述[MFC 技術提示 58](../mfc/tn058-mfc-module-state-implementation.md)。
+解決方案是提供每個模組（應用程式或一般 MFC DLL）自己的全域狀態資訊複本。 因此，在一般 MFC DLL 中呼叫**AfxGetApp** ，會傳回 DLL 中`CWinApp`物件的指標，而不是可執行檔中的。 每個模組的 MFC 全域資料複本稱為模組狀態，並在[MFC 技術提示 58](../mfc/tn058-mfc-module-state-implementation.md)中加以說明。
 
-MFC 通用的視窗程序會自動切換到正確的模組狀態，因此您不需要擔心它在您的標準 MFC DLL 中實作的任何訊息處理常式。 但當可執行檔呼叫 MFC 的標準 DLL 時，您需要明確地將目前的模組狀態設定為 dll。 若要這樣做，請使用**AFX_MANAGE_STATE**從 DLL 匯出的每個函式中的巨集。 這是藉由從 DLL 匯出的函式的開頭加入下列程式碼行：
+MFC 通用視窗程式會自動切換到正確的模組狀態，因此您不需要在一般 MFC DLL 中執行的任何訊息處理常式中擔心它。 但是當可執行檔呼叫一般 MFC DLL 時，您需要明確地將目前的模組狀態設定為 DLL 的狀態。 若要這麼做，請在從 DLL 匯出的每個函式中使用**AFX_MANAGE_STATE**宏。 將下列程式程式碼新增至從 DLL 匯出的函式開頭，即可完成這項作業：
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
@@ -37,10 +37,10 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 - [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [動態連結至 MFC 的標準 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 延伸模組 DLL](extension-dlls-overview.md)
+- [MFC 擴充 Dll](extension-dlls-overview.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

@@ -1,6 +1,6 @@
 ---
 title: 在 Visual Studio 中安裝 C++ 支援
-description: 安裝視覺工作室支援視覺C++
+description: 安裝 Visual C++ 的 Visual Studio 支援
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
@@ -15,7 +15,7 @@ ms.locfileid: "81335358"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 C++ 支援
 
-如果您尚未下載並安裝 Visual Studio 和視覺C++工具,請介紹如何入門。
+如果您尚未下載並安裝 Visual Studio 和 Visual C++ 工具，以下是開始使用的方法。
 
 ::: moniker range="vs-2019"
 
@@ -24,9 +24,9 @@ ms.locfileid: "81335358"
 歡迎使用 Visual Studio 2019！ 在此版本中，您可以輕鬆選擇並安裝需要的功能。 因為降低了磁碟使用量下限，所以安裝快速，且對系統影響更小。
 
 > [!NOTE]
-> 本主題適用於在 Windows 上安裝可視化工作室。 [Visual Studio Code](https://code.visualstudio.com/)是一種輕量級的跨平臺開發環境,在 Windows、Mac 和 Linux 系統上運行。 適用於 Visual Studio 代碼擴展的 Microsoft [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)支援 IntelliSense、調試、程式碼格式設置和自動完成。 適用於 Mac 的 Visual Studio 不支援微軟 C++,但支援 .NET 語言和跨平台開發。 有關安裝說明,請參閱[為 Mac 安裝視覺化工作室](/visualstudio/mac/installation/)。
+> 本主題適用于 Windows 上的 Visual Studio 安裝。 [Visual Studio Code](https://code.visualstudio.com/)是輕量、跨平臺的開發環境，可在 Windows、Mac 和 Linux 系統上執行。 適用于 Visual Studio Code 擴充功能的 Microsoft [C/c + +](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)支援 IntelliSense、偵錯工具、程式碼格式設定、自動完成。 Visual Studio for Mac 不支援 Microsoft c + +，但是支援 .NET 語言和跨平臺開發。 如需安裝指示，請參閱[Install Visual Studio for Mac](/visualstudio/mac/installation/)。
 
-是否想要深入了解此版本的其他新功能？ 請參閱可視化工作室[發行說明](/visualstudio/releases/2019/release-notes/)。
+是否想要深入了解此版本的其他新功能？ 請參閱 Visual Studio[版本](/visualstudio/releases/2019/release-notes/)資訊。
 
 準備要安裝了嗎？ 我們將逐步引導完成安裝。
 
@@ -67,46 +67,46 @@ ms.locfileid: "81335358"
 
 ### <a name="step-4---choose-workloads"></a>步驟 4 - 選擇工作負載
 
-安裝安裝程式後,可以通過選擇所需的*工作負載*、功能集來自定義安裝。 方法如下。
+安裝安裝程式之後，您可以藉由選取您想要的*工作負載*或功能集，使用它來自訂安裝。 方法如下。
 
 1. 在 [安裝 Visual Studio]**** 畫面中找到您想要的工作負載。
 
-   ![視覺化工作室 2019: 安裝工作負載](../get-started/media/vs-installer-workloads.png)
+   ![Visual Studio 2019：安裝工作負載](../get-started/media/vs-installer-workloads.png)
 
-   對於核心C++支援,請選擇"具有C++的桌面開發"工作負載。 它隨附預設核心編輯器，其中包括超過 20 種語言的基本程式碼編輯支援、能夠從任何資料夾開啟及編輯程式碼而不需要專案，以及整合的原始程式碼控制。
+   如需核心 c + + 支援，請選擇「使用 c + + 進行桌面開發」工作負載。 它隨附預設核心編輯器，其中包括超過 20 種語言的基本程式碼編輯支援、能夠從任何資料夾開啟及編輯程式碼而不需要專案，以及整合的原始程式碼控制。
 
-   其他工作負載支援其他類型的C++開發。 例如,選擇「通用 Windows 平台開發」工作負荷以創建使用 Microsoft 應用商店的 Windows 運行時的應用。 選擇「帶C++的遊戲開發」以創建使用 DirectX、虛幻和 Cocos2d 的遊戲。 選擇「帶有C++的Linux開發」來定位Linux平臺,包括物聯網開發。
+   其他工作負載支援其他類型的 c + + 開發。 例如，選擇 [通用 Windows 平臺開發] 工作負載，以建立使用 Microsoft Store Windows 執行階段的應用程式。 選擇 [使用 c + + 進行遊戲開發]，建立使用 DirectX、Unreal 和 Cocos2d 的遊戲。 選擇 [使用 c + + 進行 Linux 開發]，以 Linux 平臺為目標，包括 IoT 開發。
 
-   「**安裝詳細資訊**」 的表格列出了每個工作負荷安裝的包含元件和可選元件。 您可以在此清單中選擇或取消選擇可選元件。 例如,要使用 Visual Studio 2017 或 2015 編譯器工具集支援開發,請選擇 MSVC v141 或 MSVC v140 可選元件。 您可以添加對 MFC、實驗模組語言擴展、IncrediBuild 等的支援。
+   [**安裝詳細資料**] 窗格會列出每個工作負載所安裝的內含和選用元件。 您可以選取或取消選取此清單中的選擇性元件。 例如，若要使用 Visual Studio 2017 或2015編譯器工具組來支援開發，請選擇 [MSVC v141] 或 [MSVC v140 選擇性元件]。 您可以新增 MFC 的支援、實驗性模組語言擴充功能、IncrediBuild 等等。
 
-1. 選擇所需的工作負載和可選元件後,請選擇 **「安裝**」。
+1. 選擇您想要的工作負載和選用元件之後，請選擇 [**安裝**]。
 
    接著會出現狀態畫面，顯示 Visual Studio 的安裝進度。
 
 > [!TIP]
-> 您可以在安裝後，隨時安裝一開始未安裝的工作負載或元件。 如果打開了可視化工作室,則轉到 > **「工具獲取工具和功能...",** 打開可視化工作室安裝**Tools**程式。 或者，從 [開始] 功能表開啟 [Microsoft Visual Studio 安裝程式]****。 您可以在此選擇想要安裝的工作負載或元件。 然後，選擇 [修改]****。
+> 您可以在安裝後，隨時安裝一開始未安裝的工作負載或元件。 如果您已 Visual Studio 開啟，請移至 [**工具** > ] [**取得工具與功能 ...** ]，以開啟 [Visual Studio 安裝程式]。 或者，從 [開始] 功能表開啟 [Microsoft Visual Studio 安裝程式]****。 您可以在此選擇想要安裝的工作負載或元件。 然後，選擇 [修改]****。
 
 ### <a name="step-5---choose-individual-components-optional"></a>步驟 5：選取個別元件 (選擇性)
 
-如果您不想使用工作負載功能自定義 Visual Studio 安裝,或者希望添加比工作負載安裝更多的元件,則可以通過從 **「單個元件**」選項卡安裝或添加單個元件來執行此操作。
+如果您不想使用 [工作負載] 功能來自訂您的 Visual Studio 安裝，或想要新增比工作負載安裝更多的元件，您可以從 [**個別元件**] 索引標籤安裝或新增個別元件來執行此動作。選擇您想要的內容，然後依照提示進行。
 
-  ![視覺工作室 2019 - 安裝單個元件](../get-started/media/vs-installer-individual-components.png "安裝視覺化工作室各個元件")
+  ![Visual Studio 2019-安裝個別元件](../get-started/media/vs-installer-individual-components.png "安裝 Visual Studio 個別元件")
 
 ### <a name="step-6---install-language-packs-optional"></a>步驟 6：安裝語言套件 (選擇性)
 
 根據預設，安裝程式會在第一次執行時，嘗試比對作業系統的語言。 若要以您選擇的語言安裝 Visual Studio，請選擇 Visual Studio 安裝程式的 [語言套件]**** 索引標籤，然後遵循提示作業。
 
-  ![視覺工作室 2019 - 安裝語言包](../get-started/media/vs-installer-language-packs.png "安裝視覺化工作室語言包")
+  ![Visual Studio 2019-安裝語言套件](../get-started/media/vs-installer-language-packs.png "安裝 Visual Studio 語言套件")
 
 #### <a name="change-the-installer-language-from-the-command-line"></a>從命令列變更安裝程式語言
 
-另一個變更預設語言的方法，便是從命令列執行安裝程式。 例如，您可以使用下列命令來強制安裝程式以英文執行：`vs_installer.exe --locale en-US`。 安裝程式下次運行時將記住此設置。 安裝程式支援下列語言權杖：zh-cn、zh-tw、cs-cz、en-us、es-es、fr-fr、de-de、it-it、ja-jp、ko-kr、pl-pl、pt-br、ru-ru 和 tr-tr。
+另一個變更預設語言的方法，便是從命令列執行安裝程式。 例如，您可以使用下列命令來強制安裝程式以英文執行：`vs_installer.exe --locale en-US`。 安裝程式會在下一次執行時記住此設定。 安裝程式支援下列語言權杖：zh-cn、zh-tw、cs-cz、en-us、es-es、fr-fr、de-de、it-it、ja-jp、ko-kr、pl-pl、pt-br、ru-ru 和 tr-tr。
 
 ### <a name="step-7---change-the-installation-location-optional"></a>步驟 7 - 變更安裝位置 (選擇性)
 
 您可以減少系統磁碟機上的 Visual Studio 安裝磁碟使用量。 您可以選擇將快取、共用元件、SDK 和工具下載至不同的磁碟機，並將 Visual Studio 保留在以最快速度執行它的磁碟機上。
 
-  ![視覺工作室 2019 - 更改安裝位置](../get-started/media/vs-installer-installation-locations.png "變更安裝位置")
+  ![Visual Studio 2019-變更安裝位置](../get-started/media/vs-installer-installation-locations.png "變更安裝位置")
 
 > [!IMPORTANT]
 > 您只有在第一次安裝 Visual Studio 時才可以選取不同的磁碟機。 如已安裝 Visual Studio 並想要變更磁碟機，您必須解除安裝它，再重新安裝。
@@ -115,7 +115,7 @@ ms.locfileid: "81335358"
 
 1. 在完成 Visual Studio 安裝後，請選擇 [啟動]**** 按鈕以開始使用 Visual Studio 來進行開發。
 
-1. 在啟動視窗中,選擇 **「創建新專案**」。
+1. 在 [開始] 視窗中，選擇 [**建立新專案**]。
 
 1. 在搜尋方塊中，輸入您想要建立的應用程式類型，以查看可用的範本清單。 範本清單取決於您在安裝期間所選擇的工作負載。 若要查看不同的範本，請選擇不同的工作負載。
 
@@ -129,21 +129,21 @@ ms.locfileid: "81335358"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安裝
 
-在 Visual Studio 2017 中,只需選擇並安裝所需的功能即可。 因為降低了磁碟使用量下限，所以安裝快速，且對系統影響更小。
+在 Visual Studio 2017 中，很容易就能選擇並安裝所需的功能。 因為降低了磁碟使用量下限，所以安裝快速，且對系統影響更小。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>必要條件
 
-- 寬頻互聯網連接。 可視化工作室安裝程式可以下載幾千兆位元組的數據。
+- 寬頻網際網路連接。 Visual Studio 安裝程式可以下載數 gb 的資料。
 
-- 執行 Microsoft Windows 7 或更新版本的電腦。 建議使用 Windows 10 以獲得最佳開發體驗。 在安裝 Visual Studio 之前,請確保將最新的更新應用於您的系統。
+- 執行 Microsoft Windows 7 或更新版本的電腦。 建議使用 Windows 10 以獲得最佳開發體驗。 安裝 Visual Studio 之前，請確定已將最新的更新套用到您的系統。
 
-- 足夠的可用磁碟空間。 Visual Studio 至少需要 7 GB 的磁碟空間,如果安裝了許多常見選項,則可能需要 50 GB 或更多。 我們建議您將其安裝在 C: 驅動器上。
+- 足夠的可用磁碟空間。 Visual Studio 需要至少 7 GB 的磁碟空間，而且如果安裝了許多通用選項，可能需要 50 GB 或更多。 我們建議您將它安裝在 C：磁片磁碟機上。
 
-有關磁碟空間和作業系統要求的詳細資訊,請參閱[Visual Studio 產品系列系統要求](/visualstudio/productinfo/vs2017-system-requirements-vs)。 安裝程式報告您選擇的選項需要多少磁碟空間。
+如需磁碟空間和作業系統需求的詳細資訊，請參閱[Visual Studio 產品系列系統需求](/visualstudio/productinfo/vs2017-system-requirements-vs)。 安裝程式會報告您選取的選項需要多少磁碟空間。
 
 ### <a name="download-and-install"></a>下載並安裝
 
-1. 下載適用於 Windows 的最新 Visual Studio 2017 安裝程式。
+1. 下載適用于 Windows 的最新 Visual Studio 2017 安裝程式。
 
    > [!div class="nextstepaction"]
    > [安裝 Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
@@ -151,33 +151,33 @@ ms.locfileid: "81335358"
    >[!Tip]
    > Community Edition 是針對個別開發人員、課堂學習、學術研究和開放原始碼開發。 針對其他用途，請安裝 [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或 [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
-1. 尋找您下載的安裝程式檔並執行它。 它可能顯示在您的瀏覽器中,或者您可能會在"下載"資料夾中找到它。 安裝程式需要管理員許可權才能運行。 您可能會看到**使用者帳戶控制**對話方塊,要求您授予允許安裝程式對系統進行更改的許可權;選擇 **"是**"。 如果遇到問題,請在檔案資源管理器中找到下載的檔,右鍵單擊安裝程式圖示,然後從上下文菜單中選擇 **「以管理員身份運行**」。。
+1. 尋找您已下載並執行的安裝程式檔案。 它可能會顯示在您的瀏覽器中，或者您可能會在 [下載] 資料夾中找到。 安裝程式需要系統管理員許可權才能執行。 您可能會看到 [**使用者帳戶控制**] 對話方塊，要求您授與許可權，讓安裝程式對您的系統進行變更;選擇 [**是]**。 如果您遇到問題，請在檔案瀏覽器中尋找下載的檔案，在安裝程式圖示上按一下滑鼠右鍵，然後從內容功能表選擇 [以**系統管理員身分執行**]。
 
-   ![下載並安裝視覺化工作室安裝程式](media/vscpp-concierge-run-installer.gif "下載並安裝視覺化工作室安裝程式")
+   ![下載並安裝 Visual Studio 安裝程式](media/vscpp-concierge-run-installer.gif "下載並安裝 Visual Studio 安裝程式")
 
-1. 安裝程式會顯示一份工作負載清單，而工作負載是特定開發區域的相關選項群組。 對C++的支持現在是預設未安裝的可選工作負載的一部分。
+1. 安裝程式會顯示一份工作負載清單，而工作負載是特定開發區域的相關選項群組。 C + + 的支援現在是選擇性工作負載的一部分，預設不會安裝。
 
-   ![具有C++工作負載的桌面開發](media/desktop-development-with-cpp.png "使用 C++ 的桌面開發")
+   ![使用 c + + 的桌面開發工作負載](media/desktop-development-with-cpp.png "使用 C++ 的桌面開發")
 
-   對於C++,選擇**具有C++工作負載的桌面開發**,然後選擇 **「安裝**」。。
+   針對 c + +，選取 [**使用 c + + 進行桌面開發**] 工作負載，然後選擇 [**安裝**]
 
-   ![使用C++工作負載安裝桌面開發](media/vscpp-concierge-choose-workload.gif "使用C++工作負載安裝桌面開發")
+   ![安裝使用 c + + 的桌面開發工作負載](media/vscpp-concierge-choose-workload.gif "安裝使用 c + + 的桌面開發工作負載")
 
-1. 安裝完成後,選擇 **「啟動**」按鈕以啟動可視化工作室。
+1. 當安裝完成時，選擇 [**啟動**] 按鈕以啟動 Visual Studio。
 
-   首次運行 Visual Studio 時,系統會要求您使用 Microsoft 帳戶登錄。 如果您沒有組織，您可以免費建立一個。 您必須選擇主題。 別擔心,如果願意,你可以稍後更改它。
+   第一次執行 Visual Studio 時，系統會要求您使用 Microsoft 帳戶登入。 如果您沒有帳戶，可以免費建立一個。 您也必須選擇主題。 別擔心，如果您想要的話，可以稍後再變更。
 
-   視覺工作室可能需要幾分鐘時間才能在第一次運行時投入使用。 下面是快速延時時的樣子:
+   當您第一次執行時，可能需要 Visual Studio 幾分鐘的時間才能開始使用。 以下是快速時間的樣子：
 
-   ![視覺工作室 2017 登錄](media/vscpp-quickstart-first-run.gif "視覺工作室 2017 登錄")
+   ![Visual Studio 2017 登入](media/vscpp-quickstart-first-run.gif "Visual Studio 2017 登入")
 
-   當您再次運行時,可視化工作室的啟動速度要快得多。
+   當您再次執行時，Visual Studio 的啟動速度更快。
 
-1. 開啟 Visual Studio 時,請檢查標題列中的標誌圖示是否突出顯示:
+1. 當 Visual Studio 開啟時，請檢查標題列中的旗標圖示是否反白顯示：
 
-   ![視覺化工作室 2017 通知標誌](media/vscpp-first-start-page-flag.png "視覺化工作室 2017 通知標誌")
+   ![Visual Studio 2017 通知旗標](media/vscpp-first-start-page-flag.png "Visual Studio 2017 通知旗標")
 
-   如果突出顯示,請選擇它以打開 **「通知」** 視窗。 如果 Visual Studio 有任何可用的更新,我們建議您立即安裝它們。 安裝完成後,重新啟動可視化工作室。
+   如果反白顯示，請選取它以開啟 [**通知**] 視窗。 如果 Visual Studio 有任何可用的更新，建議您立即安裝。 安裝完成後，請重新開機 Visual Studio。
 
 ::: moniker-end
 
@@ -185,17 +185,17 @@ ms.locfileid: "81335358"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安裝
 
-若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]****，然後選擇 C++ 元件。 要向現有的 Visual Studio 2015 安裝添加C++支援,請按下「Windows 開始」按鈕並鍵入 **「添加刪除程式**」。 從結果清單中打開程式,然後在已安裝的程式清單中找到您的 Visual Studio 2015 安裝。 按兩下它,然後選擇 **「修改」** 並選擇要安裝的視覺化C++元件。
+若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]****，然後選擇 C++ 元件。 若要將 c + + 支援新增至現有的 Visual Studio 2015 安裝，請按一下 Windows [開始] 按鈕，然後輸入 [新增] [**移除程式**]。 從 [結果] 清單中開啟程式，然後在已安裝的程式清單中尋找您的 Visual Studio 2015 安裝。 按兩下該檔案，然後選擇 [**修改**]，然後選取要安裝的 Visual C++ 元件。
 
 一般來說，即使需要使用 Visual Studio 2015 編譯器，編譯您的程式碼，也都非常建議您使用 Visual Studio 2017。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](../porting/use-native-multi-targeting.md)。
 
 ::: moniker-end
 
-當 Visual Studio 執行時,您已準備好繼續執行下一步。
+當 Visual Studio 執行時，您就可以繼續進行下一個步驟。
 
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [建立C++專案](vscpp-step-1-create.md)
+> [建立 c + + 專案](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

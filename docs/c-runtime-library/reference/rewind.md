@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338097"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917760"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,25 +55,25 @@ void rewind(
 
 ## <a name="remarks"></a>備註
 
-**倒帶**函數將與*流*關聯的檔指標重新置放到檔的開頭。 **rewind** 呼叫類似
+倒轉函式**會將與** *stream*相關聯的檔案指標重新置放至檔案的開頭。 **rewind** 呼叫類似
 
-**(虛空) fseek (**_流_**, 0L, SEEK_SET );**
+**（void） fseek （** _stream_**，0L，SEEK_SET）;**
 
-但是,與[fseek](fseek-fseeki64.md)不同,**倒帶**清除流的誤差指示器以及檔結尾指示器。 此外,與[fseek](fseek-fseeki64.md)不同,**倒帶**不會返回值以指示指標是否已成功移動。
+不過，與[fseek](fseek-fseeki64.md)不同的是，倒轉會清除資料流程的錯誤**指標，以及**檔案結尾指示器。 此外，與[fseek](fseek-fseeki64.md)不同的是，倒轉並不會傳回**值，以**指出是否已成功移動指標。
 
-要清除鍵盤緩衝區,請使用與預設情況下與鍵盤關聯的流**stdin**的**倒帶**。
+若要清除鍵盤緩衝區，請**使用 [** 倒轉] 和 [串流**stdin**] （預設會與鍵盤相關聯）。
 
-如果流是**NULL**指標,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,則此函數將傳回 **,errno**設定為**EINVAL**。
+如果 stream 是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回，而且**errno**會設定為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**倒**|\<stdio.h>|
+|**倒轉**|\<stdio.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

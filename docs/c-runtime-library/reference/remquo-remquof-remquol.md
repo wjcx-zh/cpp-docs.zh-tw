@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332844"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917826"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -60,10 +60,10 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>參數
 
-*numer*<br/>
+*推*<br/>
 分子。
 
-*德諾姆*<br/>
+*denom*<br/>
 分母。
 
 *現狀*<br/>
@@ -71,21 +71,21 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>傳回值
 
-**remquo**傳回*x* / *y*的浮點餘數。 如果*y*的值為 0.0,**則重新quo**返回一個安靜的 NaN。 有關**printf**家族表示安靜 NaN 的資訊,請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**會傳回*x* / *y*的浮點餘數。 如果*y*的值是0.0，則**remquo**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**remquo**函數計算*x* / *y*的浮點餘數*f,* 以便*x* = *i* \* *y* + *f*(其中*i*是整數 *),f*與*x*具有相同的符號,並且*f*的絕對值小於*y*的絕對值。
+**Remquo**函數會計算*x* / *y*的浮點餘數*f* ，例如*x* = *i* \* *y* + *f*，其中*i*是整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
 
-C++允許重載,因此您可以呼叫重載重載,這些**重**載值來傳回**浮點**值或**長****雙精度值**。 在 C 程式中 **,remquo**始終採用兩**個雙**參數並傳回**一個雙**參數 。
+C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**值之**remquo**的多載。 在 C 程式中， **remquo**一律採用兩個**雙**精確度引數，並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------|-|
-|**再復,****再, 再, 再,****remquol**|\<math.h>|\<cmath> 或 \<math.h>|
+|**remquo**、 **remquof**、 **remquol**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 

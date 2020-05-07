@@ -13,7 +13,7 @@ api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CIatan intrinsic
 - _CIatan intrinsic
 ms.assetid: 3baa0429-fe46-4bab-8b00-868e2186dc8c
-ms.openlocfilehash: 5a501d8cf6d2e1dba87239337049d7e5ee0b953d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: c24e01fbb3ab2f8a78cb9cc3d1336476c29ffe1c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745836"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918139"
 ---
 # <a name="_ciatan"></a>_CIatan
 
@@ -48,11 +48,11 @@ void __cdecl _CIatan();
 
 產生的值會推入至堆疊的頂端。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-**平台:** x86
+**平臺：** x86
 
 ## <a name="see-also"></a>另請參閱
 

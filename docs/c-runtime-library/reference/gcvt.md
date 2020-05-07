@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345325"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919403"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -67,17 +67,17 @@ char *_gcvt(
 
 ## <a name="return-value"></a>傳回值
 
-**_gcvt**返回指向數字字串的指標。
+**_gcvt**會傳回數位字串的指標。
 
 ## <a name="remarks"></a>備註
 
-**_gcvt**函數將浮點*值*轉換為字串(包括小數點和可能符號位元組),並將字串存儲在*緩衝區*中。 *緩衝區*應足夠大,以容納轉換的值加上自動附加的終止空字元。 如果使用*數位*= 1 的緩衝區大小,則函數將覆蓋緩衝區的末尾。 這是因為已轉換的字串包含小數點，且可以包含符號和指數的資訊。 沒有提供溢位。 **_gcvt**嘗試以小數進位數字格式產生*數位*。 如果不能,它將以指數格式生成*數位*數位。 可能於轉換中隱藏尾端零。
+**_Gcvt**函式會將浮點*值*轉換為字元字串（其中包括小數點和可能的正負號位元組），並將字串儲存在*buffer*中。 *緩衝區*應該夠大，足以容納轉換的值加上會自動附加的終止 null 字元。 如果使用的緩衝區大小*為 + 1* ，則函式會覆寫緩衝區的結尾。 這是因為已轉換的字串包含小數點，且可以包含符號和指數的資訊。 沒有提供溢位。 **_gcvt**嘗試以十進位格式產生*位數*數位。 如果無法這麼做，則會產生指數格式的*數位*。 可能於轉換中隱藏尾端零。
 
-長度 **_CVTBUFSIZE***緩衝區*足以用於任何浮點值。
+長度 **_CVTBUFSIZE**的*緩衝區*足以滿足任何浮點值。
 
-這個函式會驗證它的參數。 如果*緩衝區*為**NULL,** 則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設定到**EINVAL**並傳回**NULL**。
+這個函式會驗證它的參數。 如果*buffer*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**Null**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

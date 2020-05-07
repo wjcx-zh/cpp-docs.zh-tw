@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-ms.openlocfilehash: d93de7f963a370810ed3b30af04d6d602abf6313
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3990d4b15c25cfd6c753c2b1d44c112971ff59af
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333655"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918792"
 ---
 # <a name="_callnewh"></a>_callnewh
 
@@ -47,7 +47,7 @@ int _callnewh(
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 [new 運算子](../../cpp/new-operator-cpp.md)嘗試配置的記憶體數量。
 
 ## <a name="return-value"></a>傳回值
@@ -65,7 +65,7 @@ int _callnewh(
 
 如果 [new 運算子](../../cpp/new-operator-cpp.md)無法成功地配置記憶體，則會呼叫「新的處理常式」**。 新的處理常式可能接著會起始一些適當動作，例如釋放記憶體，以讓後續配置成功。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

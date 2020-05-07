@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: 0c16150a6240068e1453ec90b396c87ab9ece5a4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b57a07dbe5c2c746e8af6b96f1864e4f4534849f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346916"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920355"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -52,18 +52,18 @@ int fgetpos(
 *資料流*<br/>
 目標資料流。
 
-*Pos*<br/>
+*採購*<br/>
 位置指標儲存區。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功 **,fgetpos**返回 0。 發生故障時,它返回一個非零值,並將**errno**設置到以下清單常量之一(在STDIO中定義)。H): **EBADF**, 這意味著指定的流不是有效的檔指標或不可存取, 或**EINVAL**, 這意味著*流*值或*值*的值是無效的, 例如,如果任一是空指標。 如果*流*或*pos*是**NULL**指標,則函數將呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+如果成功， **fgetpos**會傳回0。 失敗時，它會傳回非零值，並將**errno**設定為下列其中一個資訊清單常數（定義于 stdio.h 中。H）： **EBADF**，這表示指定的資料流程不是有效的檔案指標或無法存取，或是**EINVAL**，這表示*資料流程*值或*pos*的值無效，例如，如果其中一個為 null 指標。 如果*stream*或*pos*是**Null**指標，此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>備註
 
-**fgetpos**函數取得*串流*參數的檔案位置指示器的當前值,並將其儲存在*pos*指向的物件中。**fsetpos**函數以後可以使用儲存在*pos*中的資訊來重置*在*調用**fgetpos**時流參數指向其位置的指標。 *pos*值以內部格式存儲,僅供**fgetpos**和**fsetpos**使用。
+**Fgetpos**函式會取得*資料流程*引數之檔案位置指標的目前值，並將它儲存在*pos*所指向的物件中。**Fsetpos**函數稍後可以使用儲存在*pos*中的資訊，將*資料流程*引數的指標重設為呼叫**fgetpos**時的位置。 *Pos*值是以內部格式儲存，而且僅供**fgetpos**和**fsetpos**使用。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

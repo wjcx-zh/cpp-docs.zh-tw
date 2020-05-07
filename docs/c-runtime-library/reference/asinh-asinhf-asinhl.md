@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350463"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919613"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -60,28 +60,28 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**asinh**函數傳回*x*的反向催眠正則(弧形雙曲正子)。 此函式在浮點網域中有效。 如果*x*是安靜的 NaN、無限期或無窮大,則返回相同的值。
+**Asinh**函數會傳回*x*的反雙曲正弦（arc 雙曲正弦）。 此函式在浮點網域中有效。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
 
-|輸入|SEH 例外狀況|**_matherr**例外|
+|輸入|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|無|無|
 
 ## <a name="remarks"></a>備註
 
-使用 C++ 時,可以調用採用並返回**浮點**值或**長****雙精度**值的**asinh**重載。 在 C 程式中 **,asinh**無法取得並傳回**雙**。
+當您使用 c + + 時，可以呼叫採用並傳回**float**或**long** **double**值之**asinh**的多載。 在 C 程式中， **asinh**一律採用並傳回**double**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |函式|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|--------------|------------------|
-|**阿辛**,**阿辛夫**,**阿辛赫爾**|\<math.h>|\<數學>或\<數學<|
+|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<h> 或\<math<|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

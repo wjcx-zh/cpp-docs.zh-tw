@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 969b6d2dfd83a1a136fdfb3d17f8f843337b792c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345234"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919372"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -52,22 +52,22 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>參數
 
-*秒*<br/>
+*表示*<br/>
 日光節約時間的位移 (秒)。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功為零,則為**錯誤**值(如果發生錯誤)。
+如果成功，則為零; 如果發生錯誤，則為**errno**值。
 
 ## <a name="remarks"></a>備註
 
-**_get_dstbias**函數以整數檢索夏令時的秒數。 若日光節約時間已生效，則預設位移為 3600 秒，此為一小時的秒數 (但少數地區是遵循兩小時的位移)。
+**_Get_dstbias**函式會將日光節約時間中的秒數視為整數。 若日光節約時間已生效，則預設位移為 3600 秒，此為一小時的秒數 (但少數地區是遵循兩小時的位移)。
 
-如果*秒*為**NULL,** 則無效參數處理程式將呼叫[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,此函數將**errno**設定到**EINVAL**並傳回**EINVAL**。
+如果*秒數*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
-我們建議您使用此函數,而不是宏 **_dstbias**或棄用函數 **__dstbias**。
+建議您使用此函式，而不是使用宏 **_dstbias**或已被取代的函式 **__dstbias**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

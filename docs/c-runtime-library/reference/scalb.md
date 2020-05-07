@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: 6501fe53e67d0f277fa64c08e0edbff1d7eeb61a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332692"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918229"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb、_scalbf
 
@@ -58,7 +58,7 @@ float _scalbf(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 雙精確度浮點值。
 
 *exp*<br/>
@@ -66,21 +66,21 @@ float _scalbf(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回指數值。 在溢出時(取決於*x*的符號 **),_scalb**返回 +/- **HUGE_VAL**;**errno**變數設定為**ERANGE**。
+如果成功，則傳回指數值。 溢位（視*x*的正負號而定）， **_scalb**會傳回 +/- **HUGE_VAL**;**errno**變數會設定為**ERANGE**。
 
 如需此函式與其他傳回碼的詳細資訊，請參閱 [_doserrno, errno、_sys_errlist 及 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_scalb**函數計算*x* \* 2<sup>*exp*</sup>的值。
+**_Scalb**函數會計算*x* \* 2<sup>*exp*</sup>的值。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_scalb**, **_scalbf**|\<float.h>|
+|**_scalb**， **_scalbf**|\<float.h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

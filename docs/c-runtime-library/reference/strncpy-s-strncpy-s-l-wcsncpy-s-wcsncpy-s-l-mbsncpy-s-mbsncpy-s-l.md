@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,19 +54,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 81932aa3ca6af01ecc5f6ff353db76185d027838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364502"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919286"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
 將某個字串的字元複製到另一個字串。  這些版本的 [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsncpy_s**和 **_mbsncpy_s_l**不能在 Windows 執行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncpy_s**和 **_mbsncpy_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -153,39 +153,39 @@ errno_t _mbsncpy_s_l(
 
 ### <a name="parameters"></a>參數
 
-*斯特德斯特*<br/>
+*strDest*<br/>
 目的字串。
 
-*元素數*<br/>
+*numberOfElements*<br/>
 目的地字串的大小 (以字元計)。
 
 *strSource*<br/>
 來源字串。
 
-*count*<br/>
+*計數*<br/>
 要複製的字元數，或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功,則為零,如果發生截斷,**則為 STRUNCATE,** 否則為錯誤代碼。
+如果成功，則為零，如果發生截斷，則為**STRUNCATE** ，否則為錯誤碼。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*斯特德斯特*|*元素數*|*strSource*|傳回值|*最斯特裡特*的內容|
+|*strDest*|*numberOfElements*|*strSource*|傳回值|*StrDest*的內容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**空**|任意|任意|**埃因瓦爾**|未修改|
-|任意|任意|**空**|**埃因瓦爾**|*strDest*[0] 設定為 0|
-|任意|0|任意|**埃因瓦爾**|未修改|
-|非**NULL**|太小|任意|**ERANGE**|*strDest*[0] 設定為 0|
+|**Null**|任意|任意|**EINVAL**|未修改|
+|任意|任意|**Null**|**EINVAL**|*strDest*[0] 設定為0|
+|任意|0|任意|**EINVAL**|未修改|
+|非**Null**|太小|任意|**ERANGE**|*strDest*[0] 設定為0|
 
 ## <a name="remarks"></a>備註
 
-這些函數嘗試複製*strSource*的第一個*D*字元到*strD,* 其中*D*是*計數*的較小和*strSource*的長度。 如果這些*D*字元將適合*strDest(* 其大小作為*數量元素*給出),並且仍為空終止符留有餘地,則複製這些字元並附加終止空;否則 *,strDest*{0} 設置為空字元,並調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+這些函式會嘗試將*strSource*的前*D*個字元複製到*strDest*，其中*D*是*count*的較小者和*strSource*的長度。 如果這些*D*字元會放入*strDest*中（其大小已指定為*numberOfElements*），而且仍然留出空間給 null 結束字元，則會複製這些字元並附加終止的 null。否則， *strDest*[0] 會設定為 null 字元，且會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
-上述段落有一個例外狀況。 如果*計數***是_TRUNCATE,** 那麼盡可能多的*strSource*將適合*strD 最*被複製,同時仍然留有空間為始終附加的終止空。
+上述段落有一個例外狀況。 如果 **_TRUNCATE** *count* ，則會複製最符合*strDest*的*strSource* ，同時仍留出空間給一律會附加的終止 null。
 
 例如，
 
@@ -194,30 +194,30 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-意味著我們要求**strncpy_s**將五個字元複製到一個五位元組長的緩衝區中;這將不為空終止符留下任何空間,因此**strncpy_s**將字串歸零並調用無效的參數處理程式。
+表示我們要求**strncpy_s**將五個字元複製到五個位元組長的緩衝區;這不會留下任何空間給 null 結束字元，因此**strncpy_s**零出字串，並呼叫不正確參數處理常式。
 
-如果需要截斷行為,請使用 **_TRUNCATE**或 (*大小*- 1):
+如果需要截斷行為，請使用 **_TRUNCATE**或（*大小*-1）：
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-請注意,與**strncpy**不同,如果*計數*大於*strSource*的長度,則目標字串不會填充與長度計數到長度*計數*的空字元。
+請注意，不同于**strncpy**，如果*count*大於*strSource*的長度，則目的地字串不會以 null 字元填補，長度上限為 length*計數*。
 
-如果原始字串和目標字串重疊,則**strncpy_s**的行為未定義。
+如果來源和目的字串重迭，則不會定義**strncpy_s**的行為。
 
-如果*strDest*或*strSource*為**NULL**,或者*元素數*為 0,則呼叫無效的參數處理程式。 如果允許繼續執行,則函數將傳回**EINVAL**並將**errno**設定到**EINVAL**。
+如果*strDest*或*strSource*為**Null**，或*numberOfElements*為0，則會叫用不正確參數處理常式。 如果允許繼續執行，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
-**wcsncpy_s**和 **_mbsncpy_s**是**strncpy_s**的寬字元和多位元組位元版本。 **wcsncpy_s**和**mbsncpy_s**的參數和返回值確實會有所不同。 除此之外，這六個函式的行為相同。
+**wcsncpy_s**和 **_mbsncpy_s**是**strncpy_s**的寬字元和多位元組字元版本。 **Wcsncpy_s**和**mbsncpy_s**的引數和傳回值會隨之改變。 除此之外，這六個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -227,15 +227,15 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l、_wcsncpy_s_l**和 **_mbsncpy_s_l**沒有區域依賴性 **_wcsncpy_s_l**,僅供 **_tcsncpy_s_l,** 不直接調用。
+> **_strncpy_s_l**、 **_wcsncpy_s_l**和 **_mbsncpy_s_l**沒有地區設定相依性，而且僅供 **_tcsncpy_s_l**之用，不適合直接呼叫。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strncpy_s**, **_strncpy_s_l**|\<string.h>|
-|**wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
+|**strncpy_s**， **_strncpy_s_l**|\<string.h>|
+|**wcsncpy_s**， **_wcsncpy_s_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsncpy_s**， **_mbsncpy_s_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -412,8 +412,8 @@ After strncpy_s (with null-termination):
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 9ee085624be3c5613ac4b5e87965d47324727778
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347375"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920161"
 ---
 # <a name="feof"></a>feof
 
@@ -53,17 +53,17 @@ int feof(
 
 ## <a name="return-value"></a>傳回值
 
-如果讀取操作嘗試讀取檔末尾,**則 feof**函數傳回非零值;否則返回 0。 如果流指標為**NULL,** 則函數將呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則**errno**設置為**EINVAL,feof**返回 0。 **feof**
+如果讀取作業嘗試讀取超過檔案結尾，則**feof**函數會傳回非零值;否則會傳回0。 如果資料流程指標是**Null**，則函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而**feof**會傳回0。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**feof**例程(作為函數和宏實現)確定*流*的末尾是否已傳遞。 傳遞檔結尾時,讀取操作返回檔結尾指示器,直到關閉流或直到對它呼叫[回退](rewind.md)**、fsetpos、fseek**或**更清晰。** [fseek](fseek-fseeki64.md)
+**Feof**常式（實作為函式和宏）會判斷是否已傳遞*資料流程*的結尾。 當傳遞檔案結尾時，讀取作業會傳回檔案結尾指標，直到資料流程關閉或對其呼叫倒轉、 **fsetpos**、 [fseek](fseek-fseeki64.md)或**clearerr** [為止。](rewind.md)
 
-例如,如果檔包含 10 個字節,並且從檔中讀取 10 個字節 **,feof**將返回 0,因為即使檔指標位於檔末尾,您也沒有嘗試在結束之後讀取。 只有在嘗試讀取第 11 個字節後 **,feof**才會返回一個非零值。
+例如，如果檔案包含10個位元組，而您從檔案讀取10個位元組，則**feof**會傳回0，因為即使檔案指標位於檔案結尾，您也未嘗試讀取超過結尾。 只有在您嘗試讀取第11個位元組之後， **feof**才會傳回非零值。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

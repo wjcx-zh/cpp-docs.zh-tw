@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 45f93e370e11cf38fc17da3557b21c636fcbc623
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a265a37ba4c16dd15e6b50035dcc65bc8afbe7c7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341269"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919572"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy、_mbccpy_l
 
@@ -76,20 +76,20 @@ void _mbccpy_l(
 *src*<br/>
 要複製的多位元組字元。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="remarks"></a>備註
 
-**_mbccpy**函數會將多位元位元為*src*複製到*dest*。
+**_Mbccpy**函數會將一個多位元組字元從*src*複製到*dest*。
 
-這個函式會驗證它的參數。 如果 **_mbccpy**傳遞了*dest*或*src*的空指標,則調用無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,則**errno**設定為**EINVAL**。
+這個函式會驗證它的參數。 如果針對*dest*或*src*傳遞 null 指標給 **_mbccpy** ，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設定為**EINVAL**。
 
-**_mbccpy**對任何與區域設置相關的行為使用當前區域設置。 **_mbccpy_l**與 **_mbccpy**相同,只不過 **_mbccpy_l**使用傳入的任何區域設置相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbccpy**會針對任何與地區設定相關的行為使用目前的地區設定。 **_mbccpy_l**與 **_mbccpy**相同，不同之處在于 **_mbccpy_l**會使用傳入的地區設定來進行任何與地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 **安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -109,6 +109,6 @@ void _mbccpy_l(
 
 ## <a name="see-also"></a>另請參閱
 
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

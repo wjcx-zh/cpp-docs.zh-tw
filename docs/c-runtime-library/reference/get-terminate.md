@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: fff90037851b23f3525f514aba0f6f913f9dd776
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344926"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920404"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
-返回要由**終止**調用的終止例程。
+傳回**終止**所呼叫的終止常式。
 
 ## <a name="syntax"></a>語法
 
@@ -49,11 +49,11 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>傳回值
 
-將指標傳回由 [set_terminate](set-terminate-crt.md) 註冊的函式。 如果未設置任何函數,則返回值可用於還原默認行為;如果未設置任何函數,則返回值可用於還原默認行為。這個值可以是**NULL**。
+將指標傳回由 [set_terminate](set-terminate-crt.md) 註冊的函式。 如果未設定任何函式，則會使用傳回值來還原預設行為。這個值可以是**Null**。
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -69,4 +69,4 @@ terminate_function _get_terminate( void );
 [abort](abort.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [終止](terminate-crt.md)<br/>
-[意外](unexpected-crt.md)<br/>
+[意料](unexpected-crt.md)<br/>

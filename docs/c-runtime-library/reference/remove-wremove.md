@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338142"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917831"
 ---
 # <a name="remove-_wremove"></a>remove0、_wremove
 
@@ -60,20 +60,20 @@ int _wremove(
 
 ### <a name="parameters"></a>參數
 
-*路徑*<br/>
+*path*<br/>
 要移除之檔案的路徑。
 
 ## <a name="return-value"></a>傳回值
 
-如果已成功刪除檔案，這些函式每個都會傳回 0。 否則,它將返回 -1 並將**errno**設置為**EACCES**以指示路徑指定唯讀檔、指定目錄或檔處於打開狀態,**或者將**錯誤設定為指示找不到檔名或路徑。
+如果已成功刪除檔案，這些函式每個都會傳回 0。 否則，它會傳回-1，並將**errno**設定為**EACCES** ，以指出路徑指定唯讀檔案、指定目錄或檔案已開啟，或**ENOENT**以指出找不到檔案名或路徑。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是 **_remove**的寬字元版本;**_wremove的***路徑*參數是寬字元字串。 **_wremove**和 **_remove**行為相同。 必須先關閉檔案的所有處理常式，才能刪除它。
+**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是寬字元版本的 **_remove**;**_wremove**的*path*引數是寬字元字串。 相反地， **_wremove**和 **_remove**的行為相同。 必須先關閉檔案的所有處理常式，才能刪除它。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

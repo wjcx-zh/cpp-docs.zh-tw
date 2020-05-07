@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -64,19 +64,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 0e6fbc365d4e127d72df039b1351b1bfe91b1b74
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364202"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918143"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
 附加字串字元。 這些函式已有更安全的版本可供使用，請參閱 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncat**和 **_mbsncat_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncat**和 **_mbsncat_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -131,16 +131,16 @@ unsigned char *_mbsncat_l(
 
 ### <a name="parameters"></a>參數
 
-*斯特德斯特*<br/>
+*strDest*<br/>
 以 Null 終止的目的字串。
 
 *strSource*<br/>
 以 Null 結束的來源字串。
 
-*count*<br/>
+*計數*<br/>
 要附加的字元數。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -149,18 +149,18 @@ unsigned char *_mbsncat_l(
 
 ## <a name="remarks"></a>備註
 
-**strncat**函數最多附加*strSource*的第一*個計數*字元以*strD。* *strSource*的初始字元覆蓋*strDest*的終止空字元。 如果在追加*計數*字元之前在*strSource*中出現空字元,**則strncat**會將*strSource*的所有字元追加到null字元。 如果*計數*大於*strSource*的長度,則*使用 strSource*的長度代替*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**Strncat**函數最多可將*strSource*的第一個*計數*字元附加至*strDest*。 *StrSource*的初始字元會覆寫*strDest*的終止 null 字元。 如果在附加*計數*字元之前， *strSource*中出現 null 字元， **strncat**會將所有字元從*strSource*附加到 null 字元。 如果*count*大於*strSource*的長度，則會使用*strSource*的長度來取代*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> **strncat**不檢查*在斯特迪*的足夠空間;因此,它是緩衝區溢出的潛在原因。 請記住,*計數*會限制附加的字元數;它不是對*strDest*的大小的限制。 請參閱下方的範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> **strncat**不會檢查*strDest*中是否有足夠的空間;因此可能造成緩衝區溢位。 請記住， *count*會限制附加的字元數;這不是*strDest*大小的限制。 請參閱下方的範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-**wcsncat**和 **_mbsncat**是寬字元和多位元組位元版本的**strncat。** **wcsncat**的字串參數和返回值是寬字串字串;**_mbsncat**字串是多位元位元串。 除此之外，這三個函式的行為相同。
+**wcsncat**和 **_mbsncat**是**strncat**的寬字元和多位元組字元版本。 **Wcsncat**的字串引數和傳回值是寬字元字串;**_mbsncat**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，這些函式具有範本多載。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -170,7 +170,7 @@ unsigned char *_mbsncat_l(
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**和 **_wcsncat_l**沒有區域依賴性,並且不應直接調用。 它們由 **_tcsncat_l**提供供內部使用。
+> **_strncat_l**和 **_wcsncat_l**沒有地區設定相依性，因此不應該直接呼叫。 **_Tcsncat_l**提供這些方法供內部使用。
 
 ## <a name="requirements"></a>需求
 
@@ -230,11 +230,11 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-請注意 **,BadAppend**導致緩衝區溢出。
+請注意， **BadAppend**造成緩衝區溢位。
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
@@ -245,5 +245,5 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

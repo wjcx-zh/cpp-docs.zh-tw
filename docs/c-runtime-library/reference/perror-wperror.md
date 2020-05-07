@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338538"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919327"
 ---
 # <a name="perror-_wperror"></a>perror、_wperror
 
@@ -59,14 +59,14 @@ void _wperror(
 
 ### <a name="parameters"></a>參數
 
-*訊息*<br/>
+*message*<br/>
 要列印的字串訊息。
 
 ## <a name="remarks"></a>備註
 
-**perror**函數會將錯誤訊息列印到**穩重**。 **_wperror**是 **_perror**的寬字元版本;要 **_wperror***的消息*參數是寬字元字串。 **_wperror**和 **_perror**行為相同。
+**Perror**函數會將錯誤訊息列印到**stderr**。 **_wperror**是寬字元版本的 **_perror**;**_wperror**的*訊息*引數是寬字元字串。 相反地， **_wperror**和 **_perror**的行為相同。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -74,13 +74,13 @@ void _wperror(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*首先列印消息*,後先列印冒號,然後列印生成錯誤的最後一個庫調用的系統錯誤消息,最後由換行符列印。 如果*消息*是空指標或指向空字串的指標,則**perror**僅列印系統錯誤消息。
+*訊息*會先列印，後面接著冒號，然後是最後一次產生錯誤的程式庫呼叫的系統錯誤訊息，最後是分行符號。 如果*message*是 null 指標或 null 字串的指標， **perror**只會列印系統錯誤訊息。
 
-錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **perror**使用**errno**值作為索引來 **_sys_errlist**列印相應的錯誤消息。 變數[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定義為 **_sys_errlist**數位中元素的最大數量。
+錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **perror**會使用**errno**值做為 **_sys_errlist**的索引來列印適當的錯誤訊息。 變數[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值會定義為 **_sys_errlist**陣列中元素的最大數目。
 
-為獲得準確結果,在庫例程返回時立即調用**perror**並出現錯誤。 否則,後續調用可以覆蓋**errno**值。
+如需精確的結果，請在程式庫常式傳回但發生錯誤時立即呼叫**perror** 。 否則，後續呼叫可能會覆寫**errno**值。
 
-在 Windows 作業系統中,ERRNO 中列出了一些**錯誤**值。H 未使用。 這些值會保留供 UNIX 作業系統使用。 有關 Windows 作業系統使用的**errno**值的清單,請參閱[_doserrno、errno、_sys_errlist 和_sys_nerr。](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) **perror**列印這些平台未使用的任何**errno**值的空字串。
+在 Windows 作業系統中，某些**errno**值列在 errno 中。H 未使用。 這些值會保留供 UNIX 作業系統使用。 如需 Windows 作業系統所使用**errno**值的清單，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。 **perror**會針對這些平臺未使用的任何**errno**值，列印空字串。
 
 ## <a name="requirements"></a>需求
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: a5bd6da3c8d16189f7ff0db744901e03513acc21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab1e172374cd117b07cc62923d291fbd3972882e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345399"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919453"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -54,10 +54,10 @@ size_t fwrite(
 *緩衝區*<br/>
 要寫入之資料的指標。
 
-*大小*<br/>
+*size*<br/>
 項目大小 (位元組)。
 
-*count*<br/>
+*計數*<br/>
 要寫入之項目的最大數量。
 
 *資料流*<br/>
@@ -65,17 +65,17 @@ size_t fwrite(
 
 ## <a name="return-value"></a>傳回值
 
-**fwrite**傳回實際寫入的完整項目,如果發生錯誤,該項可能小於*計數*。 此外，若發生錯誤，也無法判斷檔案位置指標。 如果*流*或*緩衝區*是空指標,或者如果在 Unicode 模式下指定了奇數的位元組,則函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設置到**EINVAL**並返回0。
+**fwrite**會傳回實際寫入的完整專案數，如果發生錯誤，可能會小於*計數*。 此外，若發生錯誤，也無法判斷檔案位置指標。 如果*資料流程*或*緩衝區*是 null 指標，或者如果要寫入的奇數位節數目是以 Unicode 模式指定，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回0。
 
 ## <a name="remarks"></a>備註
 
-**fwrite**函數寫入*以計算*從*緩衝區*到輸出*流*的項,每個*項的大小*長度。 與*流*關聯的檔指標(如果有)將遞增為實際寫入的位元組數。 如果在文字模式下打開*流*,則每個換行符將替換為回車換行對。 這種取代不會對傳回值產生影響。
+**Fwrite**函式*會將每個專案的**大小*上限，從*緩衝區*寫入輸出*資料流程*。 與*資料流程*相關聯的檔案指標（如果有的話）會以實際寫入的位元組數遞增。 如果在文字模式中開啟*資料流程*，則會將每個換行字元換行一組。 這種取代不會對傳回值產生影響。
 
-在 Unicode 轉換模式下打開*流*時(例如,如果通過調用**fopen**並使用包含**ccs=UNICODE**ccs_UNICODE、ccs_UTF-16LE 或**ccs_UTF-8**的模式**ccs=UTF-16LE**參數)打開*流*,或者通過使用 **_setmode**和包含 **_O_WTEXT、_O_U16TEXT**或 **_O_U8TEXT***緩衝區*的模式參數將 **_O_U16TEXT**模式更改為包含 UTF-16 的**wchar_t**數位組的指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+以 Unicode 轉譯模式開啟*資料流程*時，例如如果已藉由呼叫**fopen**並使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數來開啟*資料流程*，或如果模式已使用 **_Setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式參數變更為 Unicode 轉譯模式，則會將*緩衝區*解讀為包含 utf-16 資料之**wchar_t**陣列的指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
-因為此函示會鎖定呼叫執行緒，這是安全執行緒。 有關非鎖定版本,請參閱 **_fwrite_nolock**。
+因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本，請參閱 **_fwrite_nolock**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

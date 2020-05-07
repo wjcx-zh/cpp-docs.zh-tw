@@ -21,12 +21,12 @@ ms.locfileid: "81328508"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>匯入和匯出內嵌函式
 
-導入的函數可以定義為內聯函數。 效果與內聯定義標準函數大致相同;對函數的調用將擴展到內聯代碼中,就像宏一樣。 這主要用作支援 DLL 中 C++類的方法,這些類可能會內聯其某些成員函數的效率。
+匯入的函式可以定義為內嵌。 效果大致上與定義標準函式內嵌相同;函式的呼叫會展開為內嵌程式碼，非常類似于宏。 這主要是用來在 DLL 中支援 c + + 類別的方法，其中可能會內嵌部分成員函式以提高效率。
 
-匯入的內聯函數的一個功能是,您可以在C++中獲取其位址。 編譯器返回駐留在 DLL 中的內聯函數副本的位址。 匯入的內聯函數的另一個功能是,您可以初始化導入函數的靜態本地數據,這與全域導入的數據不同。
+匯入的內嵌函式的其中一項功能是，您可以在 c + + 中採用其位址。 編譯器會傳回位於 DLL 中內嵌函式複本的位址。 匯入的內嵌函式的另一項功能是，您可以初始化匯入函式的靜態本機資料，不同于全域匯入的資料。
 
 > [!CAUTION]
-> 在提供導入的內聯函數時,應小心謹慎,因為它們可能會造成版本衝突。 內聯函數將擴展到應用程式代碼中;因此,如果以後重寫函數,則不會更新該函數,除非重新編譯應用程式本身。 (通常,DLL 函數可以更新,而無需重新生成使用它們的應用程式。
+> 在提供匯入的內嵌函式時，您應該小心，因為它們可能會產生版本衝突的可能性。 內嵌函式會展開為應用程式代碼;因此，如果您稍後重寫函式，除非重新編譯應用程式本身，否則不會更新該函式。 （一般來說，可以更新 DLL 函式，而不需要重建使用它們的應用程式）。
 
 ## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
@@ -34,16 +34,16 @@ ms.locfileid: "81328508"
 
 - [使用從 DLL 匯出。DEF 檔案](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec(出口)從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport）從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [使用AFX_EXT_CLASS匯出及匯入](exporting-and-importing-using-afx-ext-class.md)
+- [使用 AFX_EXT_CLASS 匯出和匯入](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出C++函數,用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 c + + 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [確定要使用的匯出方法](determining-which-exporting-method-to-use.md)
+- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
 - [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [匯入和匯出](importing-and-exporting.md)

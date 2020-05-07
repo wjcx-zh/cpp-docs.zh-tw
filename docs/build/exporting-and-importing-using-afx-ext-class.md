@@ -20,9 +20,9 @@ ms.locfileid: "81328602"
 ---
 # <a name="exporting-and-importing-using-afx_ext_class"></a>使用 AFX_EXT_CLASS 匯出和匯入
 
-[MFC 擴展 DLL](extension-dlls-overview.md)使用宏**AFX_EXT_CLASS**匯出類;連結到 MFC 擴展 DLL 的可執行檔使用巨集導入類。 使用**AFX_EXT_CLASS**宏時,用於建構 MFC 擴展名 DLL 的相同標頭檔可用於連結到 DLL 的可執行檔。
+[MFC 擴充 dll](extension-dlls-overview.md)使用宏**AFX_EXT_CLASS**來匯出類別;連結至 MFC 延伸模組 DLL 的可執行檔會使用宏來匯入類別。 使用**AFX_EXT_CLASS**宏，用來建立 MFC 延伸模組 DLL 的相同標頭檔，可以與連結至 DLL 的可執行檔搭配使用。
 
-在 DLL 的標頭檔中,將**AFX_EXT_CLASS**關鍵字添加到類的聲明中,如下所示:
+在您 DLL 的標頭檔中，將**AFX_EXT_CLASS**關鍵字新增至類別的宣告，如下所示：
 
 ```cpp
 class AFX_EXT_CLASS CMyClass : public CDocument
@@ -31,11 +31,11 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 };
 ```
 
-此宏由 MFC`__declspec(dllexport)`定義為 預`_AFXDLL`處理器`_AFXEXT`符號 和定義時。 但是宏定義為`__declspec(dllimport)``_AFXDLL`何時`_AFXEXT`定義, 並且未定義。 定義時,預處理器符號`_AFXDLL`指示目標可執行檔(DLL 或應用程式)正在使用 MFC 的共用版本。 當和`_AFXDLL``_AFXEXT`都定義時,這表示目標可執行檔是 MFC 擴展 DLL。
+這個宏是由 MFC 定義， `__declspec(dllexport)`如同預處理器符號`_AFXDLL`和`_AFXEXT`定義時一樣。 但巨集定義的定義是`__declspec(dllimport)`在定義`_AFXDLL`時，且`_AFXEXT`未定義。 當定義時，預處理器`_AFXDLL`符號會指出目標可執行檔（DLL 或應用程式）正在使用 MFC 的共用版本。 當`_AFXDLL`和`_AFXEXT`都已定義時，這表示目標可執行檔是 MFC 延伸 DLL。
 
-由於`AFX_EXT_CLASS`定義為`__declspec(dllexport)`從 MFC 擴展 DLL 匯出時,因此可以匯出整個類,而無需在 .def 檔中放置該類的所有符號的修飾名稱。
+因為`AFX_EXT_CLASS`在從 MFC `__declspec(dllexport)`延伸模組 DLL 匯出時定義為，所以您可以匯出整個類別，而不需要將該類別的所有符號裝飾名稱放在 .def 檔案中。
 
-儘管可以避免使用此方法創建 .def 檔案和類的所有修飾名稱,但創建 .def 檔案的效率更高,因為名稱可以通過 ddinal 匯出。 要使用 .def 檔案匯出方法,請將以下代碼放在標頭檔的開頭和結尾:
+雖然您可以避免使用這個方法來建立 .def 檔案和類別的所有裝飾名稱，但是建立 .def 檔案會更有效率，因為序數可以匯出名稱。 若要使用匯出的 .def 檔案方法，請將下列程式碼放在標頭檔的開頭和結尾處：
 
 ```cpp
 #undef AFX_DATA
@@ -46,11 +46,11 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 ```
 
 > [!CAUTION]
-> 匯出內聯函數時要小心,因為它們可能會造成版本衝突。 內聯函數將擴展到應用程式代碼中;因此,如果以後重寫函數,則不會更新該函數,除非重新編譯應用程式本身。 通常,DLL 函數可以更新,而無需重新生成使用它們的應用程式。
+> 匯出內嵌函式時請務必小心，因為它們可能會產生版本衝突的可能性。 內嵌函式會展開為應用程式代碼;因此，如果您稍後重寫函式，除非重新編譯應用程式本身，否則不會更新該函式。 一般來說，可以更新 DLL 函式，而不需要重建使用它們的應用程式。
 
-## <a name="exporting-individual-members-in-a-class"></a>匯出類別的單個成員
+## <a name="exporting-individual-members-in-a-class"></a>匯出類別中的個別成員
 
-有時,您可能希望匯出類的各個成員。 例如,如果要匯出`CDialog`派生類,可能只需要匯出構造函數`DoModal`和調用。 您可以在需要匯出`AFX_EXT_CLASS`的單個成員上使用。
+有時候，您可能會想要匯出類別的個別成員。 例如，如果您要匯出`CDialog`衍生的類別，您可能只需要匯出該函數和`DoModal`呼叫。 您可以在`AFX_EXT_CLASS`需要匯出的個別成員上使用。
 
 例如：
 
@@ -66,9 +66,9 @@ public:
 };
 ```
 
-由於您不再匯出類的所有成員,因此由於 MFC 宏的工作方式,可能會遇到其他問題。 MFC 的幾個幫助宏實際上聲明或定義了數據成員。 因此,這些數據成員也必須從 DLL 匯出。
+因為您不再匯出類別的所有成員，所以可能會因為 MFC 宏的運作方式而遇到額外的問題。 MFC 的幾個 helper 宏實際上會宣告或定義資料成員。 因此，這些資料成員也必須從您的 DLL 匯出。
 
-例如,在構建`DECLARE_DYNAMIC`MFC 擴展 DLL 時,宏的定義如下:
+例如，建立 MFC `DECLARE_DYNAMIC`延伸 DLL 時，宏的定義如下：
 
 ```cpp
 #define DECLARE_DYNAMIC(class_name) \
@@ -79,7 +79,7 @@ public: \
    virtual CRuntimeClass* GetRuntimeClass() const; \
 ```
 
-以靜態`AFX_DATA`開頭的行是在類內部聲明靜態物件。 要正確匯出此類並從用戶端可執行文件訪問運行時資訊,必須匯出此靜態物件。 由於靜態物件是使用修飾`AFX_DATA`符聲明的,因此在構建`AFX_DATA`DLL 時`__declspec(dllexport)`只需定義為 ,並將`__declspec(dllimport)`其定義為構建用戶端 可執行檔時。 因為`AFX_EXT_CLASS`以這種方式定義,你只需要重新`AFX_DATA`定義`AFX_EXT_CLASS`,與 類定義相同。
+以 static `AFX_DATA`開頭的那一行會在您的類別內宣告靜態物件。 若要正確匯出此類別，並從用戶端可執行檔存取執行時間資訊，您必須匯出這個靜態物件。 因為靜態`AFX_DATA`物件是使用修飾詞所宣告，所以您只需要在`AFX_DATA`建立 DLL `__declspec(dllexport)`時定義為，並在建立客戶`__declspec(dllimport)`端可執行檔時將它定義為。 由於`AFX_EXT_CLASS`已經以這種方式定義，因此您只需要重新`AFX_DATA`定義，就可以與`AFX_EXT_CLASS`您的類別定義大致相同。
 
 例如：
 
@@ -97,22 +97,22 @@ class CExampleView : public CView
 #define AFX_DATA
 ```
 
-由於 MFC`AFX_DATA`始終在其宏中定義的數據項上使用符號,因此此技術適用於所有此類方案。 例如,它適用於`DECLARE_MESSAGE_MAP`。
+因為 MFC 一律會在`AFX_DATA`其宏內定義的資料項目上使用符號，所以這項技術適用于所有這類情況。 例如，它適用于`DECLARE_MESSAGE_MAP`。
 
 > [!NOTE]
-> 如果要匯出整個類而不是類的選定成員,則會自動匯出靜態數據成員。
+> 如果您要匯出整個類別，而不是類別的選取成員，則會自動匯出靜態資料成員。
 
 ### <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [使用 .def 檔案從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
+- [使用 .def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec(出口)從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport）從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出C++函數,用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 c + + 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函數,用於 C 或 C++語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [確定要使用的匯出方法](determining-which-exporting-method-to-use.md)
+- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
 - [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -120,12 +120,12 @@ class CExampleView : public CView
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [修飾名稱](reference/decorated-names.md)
+- [裝飾名稱](reference/decorated-names.md)
 
 - [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [相互進口](mutual-imports.md)
+- [相互匯入](mutual-imports.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [從 DLL 匯出](exporting-from-a-dll.md)

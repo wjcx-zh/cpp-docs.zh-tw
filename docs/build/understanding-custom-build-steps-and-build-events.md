@@ -38,7 +38,7 @@ ms.locfileid: "70177320"
 
 自訂建置步驟或建置事件的輸出格式也可以增強工具的可用性。 如需詳細資訊，請參閱[格式化自訂建置步驟或建置事件的輸出](formatting-the-output-of-a-custom-build-step-or-build-event.md)。
 
-針對方案中的每個專案, 組建事件和自訂群組建步驟會依照下列順序和其他組建步驟執行:
+針對方案中的每個專案，組建事件和自訂群組建步驟會依照下列順序和其他組建步驟執行：
 
 1. 建置前事件
 
@@ -71,7 +71,7 @@ ms.locfileid: "70177320"
 [為組建自訂進行疑難排解](troubleshooting-build-customizations.md)<br/>
 [設定自訂建置步驟或建置事件的輸出格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Visual Studio 專案 - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [建置命令和屬性的一般巨集](reference/common-macros-for-build-commands-and-properties.md)

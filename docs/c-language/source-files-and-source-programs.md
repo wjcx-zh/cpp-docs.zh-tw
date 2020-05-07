@@ -21,12 +21,12 @@ ms.locfileid: "81349878"
 ## <a name="syntax"></a>語法
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*外部聲明* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*外部宣告* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*函式定義*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告*
+&nbsp;&nbsp;&nbsp;&nbsp;*清點*
 
 [宣告概觀](../c-language/overview-of-declarations.md)說明 `declaration` 非終端項的語法，而《前置處理器參考》** 則說明如何處理[轉譯單位](../preprocessor/phases-of-translation.md)。
 
@@ -39,6 +39,6 @@ C「原始程式」為指示詞、pragma、宣告、定義、陳述式區塊和�
 
 原始程式檔不需要包含可執行的陳述式。 例如，將變數的定義放在某個原始程式檔中，再於使用這些變數的其他原始程式檔中宣告這些變數的參考，可能會對您有幫助。 這項技術在必要時可讓您更容易尋找及更新定義。 基於相同原因，常數和巨集通常會組織為稱為「Include 檔」或「標頭檔」的檔案，這些檔案可在原始程式檔中視需要加以參考。 如需[巨集](../preprocessor/macros-c-cpp.md)和 [include 檔](../preprocessor/hash-include-directive-c-cpp.md)的詳細資訊，請參閱《前置處理器參考》**。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [程式結構](../c-language/program-structure.md)

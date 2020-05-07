@@ -11,12 +11,12 @@ no-loc:
 - case
 - default
 - break
-ms.openlocfilehash: 5858447602a28dcc5573aa3138e869d106b5aa23
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: eb18b6244318b595e67cc45f99dfcde314866f55
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587371"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825674"
 ---
 # <a name="switch-statement-c"></a>`switch`語句（C）
 
@@ -24,11 +24,11 @@ __`switch`__ 和__`case`__ 語句有助於控制複雜的條件式和分支作�
 
 ## <a name="syntax"></a>語法
 
-> *`selection-statement`*:<br/>
+> *`selection-statement`*:\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
 
-> *`labeled-statement`*:<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*<br/>
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>備註
@@ -122,6 +122,6 @@ Microsoft C 不會限制__`case`__ __`switch`__ 語句中的值數目。 此數�
 
 default適用于 microsoft C 的是已啟用 microsoft 擴充功能。 使用[/za](../build/reference/za-ze-disable-language-extensions.md)編譯器選項可停用這些擴充功能。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [switch語句（c + +）](../cpp/switch-statement-cpp.md)

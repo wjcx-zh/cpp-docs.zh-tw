@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
 ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346102"
 ---
 # <a name="typedef-declarations"></a>Typedef 宣告
 
@@ -21,33 +21,33 @@ typedef 宣告的解譯方式和變數或函式宣告相同，但識別項會變
 
 ## <a name="syntax"></a>語法
 
-*宣告*：<br/>
+*declaration*宣告：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers init-declarator-list*<sub>opt</sub> **;**
 
 *declaration-specifiers*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier declaration-specifiers*<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier declaration-specifiers*<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier declaration-specifiers*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*儲存類別指定名稱宣告-規範*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*類型規範宣告-* 指定名稱<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*類型-限定詞宣告-* 規範<sub>opt</sub>
 
 *storage-class-specifier*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**
 
 *type-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**空位**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**短缺**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**前提**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+&nbsp;&nbsp;&nbsp;&nbsp;**兩**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**簽署**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**經過**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct 或 union-規範*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*列舉規範*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-名稱*
 
-*typedef-name*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*
+*typedef-名稱*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*標識*
 
 請注意，typedef 宣告不會建立類型。 它會建立現有類型的同義字，或是可透過其他方式指定之類型的名稱。 將 typedef 名稱做為類型指定名稱時，它可以結合特定的類型指定名稱，但不能結合其他類型指定名稱。 可接受的修飾詞包含 **const** 與 `volatile`。
 
@@ -146,6 +146,6 @@ DRAWF box;
 void box( int, int );
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

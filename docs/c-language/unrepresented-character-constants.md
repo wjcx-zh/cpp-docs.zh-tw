@@ -3,11 +3,11 @@ title: 未表示的字元常數
 ms.date: 11/04/2016
 ms.assetid: 5a710a1c-dba1-49b4-a183-ed94a00a5358
 ms.openlocfilehash: 41275c226f80faffefd773ff8bb45cd8f2d390d3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151399"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343088"
 ---
 # <a name="unrepresented-character-constants"></a>未表示的字元常數
 
@@ -15,6 +15,6 @@ ms.locfileid: "56151399"
 
 所有字元常數或逸出序列都可以使用擴充字元集來表示。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[字元](../c-language/characters.md)
+[長度](../c-language/characters.md)

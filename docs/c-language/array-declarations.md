@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313541"
 ---
 # <a name="array-declarations"></a>陣列宣告
 
@@ -19,22 +19,22 @@ ms.locfileid: "56147772"
 
 ## <a name="syntax"></a>語法
 
-*宣告*：<br/>
+*declaration*宣告：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
 
 *init-declarator-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-宣告子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-宣告子-list***、***init-* 宣告子    
 
 *init-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子* **=** *初始設定式*
+&nbsp;&nbsp;&nbsp;&nbsp;*符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;宣告子*初始化運算式* *declarator* **=**
 
-*declarator*：<br/>
+宣告*子：*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* 函式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**
+*direct*宣告子：/\*函式宣告子\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **[***常數運算式*<sub>opt</sub> **]**    
 
 因為 *constant-expression* 是選擇性的，所以其語法有兩種形式：
 
@@ -48,7 +48,7 @@ ms.locfileid: "56147772"
 
 您可以宣告陣列的陣列 (「多維」陣列)，方法是以下列形式，在陣列宣告子後方使用括號括住常數運算式清單：
 
-> *type-specifier* *宣告子* **[** *constant-expression* **]** **[** *constant-expression* **]** ...
+> *類型規範*宣告子*declarator* **[** *常數運算式* **]** **[** *常數運算式* **]** .。。
 
 方括弧中的每個 *constant-expression* 都會定義指定維度的元素數目：二維陣列具有兩個以括弧括住的運算式、三維陣列有三個，依此類推。 只有在您先前已初始化陣列、將其宣告為參數，或已在程式的其他位置明確將其宣告為陣列的參考時，才可以忽略第一個常數運算式。
 
@@ -88,12 +88,12 @@ extern char *name[];
 
 這個陳述式會將陣列的類型和名稱宣告為 `char` 的指標。 `name` 的實際定義位於其他地方。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 保留陣列大小上限所需的整數類型為 **size_t** 的大小。 **size_t** 定義在標頭檔 STDDEF.H 中，是一個範圍從 0x00000000 到 0x7CFFFFFF 的 `unsigned int`。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

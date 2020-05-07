@@ -25,11 +25,11 @@ Visual Studio 包含 C++編譯器、連結器和其他工具，可用來建立�
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>使用 64 位元架構的開發人員命令提示字元捷徑
 
-若要在 Windows 10 上存取這些命令提示字元，請在 [開始] 功能表上開啟您的 Visual Studio 版本的資料夾 (例如 **Visual Studio 2019**)，然後選擇其中一個 x64 原生或跨平台工具開發人員命令提示字元。
+若要在 Windows 10 上存取這些命令提示字元，請在 [開始]**** 功能表上開啟您的 Visual Studio 版本的資料夾 (例如 **Visual Studio 2019**)，然後選擇其中一個 x64 原生或跨平台工具開發人員命令提示字元。
 
 ![x64 Native Tools 命令提示字元](media/x64-native-tools-command-prompt.png "[開始] 功能表中的 x64 原生工具")
 
-若要在 Windows 8 上存取這些命令提示字元，請開啟 [開始] 畫面上的 [所有應用程式]。 在已安裝的 Visual Studio 版本的標題下方，開啟 **Visual Studio** 資料夾 (在舊版的 Visual Studio 中，其名稱可能是 **Visual Studio Tools**)。 在舊版 Windows 上選擇 [開始]，展開 [所有程式]，然後開啟您的 **Visual Studio** 版本的資料夾 (在舊版的 Visual Studio 上為 **Visual Studio Tools**)。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](building-on-the-command-line.md#developer_command_prompt_shortcuts)。
+若要在 Windows 8 上存取這些命令提示字元，請開啟 [開始]**** 畫面上的 [所有應用程式]****。 在已安裝的 Visual Studio 版本的標題下方，開啟 **Visual Studio** 資料夾 (在舊版的 Visual Studio 中，其名稱可能是 **Visual Studio Tools**)。 在舊版 Windows 上選擇 [開始]****，展開 [所有程式]****，然後開啟您的 **Visual Studio** 版本的資料夾 (在舊版的 Visual Studio 上為 **Visual Studio Tools**)。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](building-on-the-command-line.md#developer_command_prompt_shortcuts)。
 
 ## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>使用 Vcvarsall.bat 設定 64 位元架構的組建架構
 
@@ -40,10 +40,10 @@ Visual Studio 包含 C++編譯器、連結器和其他工具，可用來建立�
 > [!NOTE]
 > 如需各個 Visual Studio 版本隨附之特定工具的相關資訊，請參閱 [Visual Studio 版本中的 Visual C++ 工具和功能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)。
 >
-> 如需如何使用 Visual Studio IDE 建立64位應用程式的詳細資訊，請參閱[如何：將C++視覺專案設定為以64位 X64 平臺為目標](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
+> 如需如何使用 Visual Studio IDE 建立64位應用程式的詳細資訊，請參閱[如何：將 Visual C++ 專案設定為以64位 X64 平臺為目標](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
 
 當您在 Visual Studio 安裝程式中安裝 C++ 工作負載時，一律會安裝 32 位元、x86 架構的原生和跨平台編譯器工具來建置 x86 和 x64 程式碼。 如果您納入通用 Windows 平台工作負載，則也會安裝 x86 架構的跨平台編譯器工具來建置 ARM 程式碼。 如果您在 64 位元、x64 處理器上安裝這些工作負載，您也將取得可建置 x86、x64 和 ARM 程式碼的 64 位元原生和跨平台編譯器工具。 32 位元和 64 位元工具會產生相同的程式碼，但是 64 位元工具對於先行編譯標頭符號和整個程式最佳化 ([/GL](reference/gl-whole-program-optimization.md) 和 [/LTCG](reference/ltcg-link-time-code-generation.md)) 選項可支援較多的記憶體。 如果在使用 32 位元工具時受限於記憶體限制，請嘗試使用 64 位元工具。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [設定適用於 64 位元、x64 目標的 C++ 專案](configuring-programs-for-64-bit-visual-cpp.md)<br/>

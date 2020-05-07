@@ -21,15 +21,15 @@ ms.locfileid: "80078498"
 
 ## <a name="language-features"></a>語言功能
 
-下列主題說明 C/C++ language 中的一些優化功能。
+下列主題將說明 C/c + + 語言中的一些優化功能。
 
-[優化 pragma 和關鍵字](optimization-pragmas-and-keywords.md) \
+[優化 Pragma 和關鍵字](optimization-pragmas-and-keywords.md) \
 您可以在程式碼中用來改善效能的關鍵字和 pragma 清單。
 
 [依分類列出的編譯器選項](reference/compiler-options-listed-by-category.md) \
 **/O**編譯器選項的清單，其會特別影響執行速度或程式碼大小。
 
-[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
+[右值參考宣告子：  &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
 右值參考支援*move 語義*的執行。 如果使用 move 語義來執行範本庫，使用這些範本的應用程式效能可能會大幅改善。
 
 ### <a name="the-optimize-pragma"></a>Optimize pragma
@@ -52,10 +52,10 @@ ms.locfileid: "80078498"
 
 下列主題將討論良好的程式設計作法。
 
-[改善時間關鍵程式碼 \ 的秘訣](tips-for-improving-time-critical-code.md)
+[改善時間關鍵程式碼的秘訣](tips-for-improving-time-critical-code.md) \
 較佳的程式碼撰寫技巧可以產生較佳的效能。 本主題建議的程式碼撰寫技巧，可協助您確保程式碼的時間緊迫部分執行得非常滿意。
 
-[優化最佳做法](optimization-best-practices.md) \
+[優化最佳作法](optimization-best-practices.md) \
 提供如何最佳地優化應用程式的一般指導方針。
 
 ## <a name="debugging-optimized-code"></a>優化程式碼的偵錯工具
@@ -66,13 +66,13 @@ ms.locfileid: "80078498"
 
 - [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
 
-- [如何：偵錯最佳化程式碼](/visualstudio/debugger/how-to-debug-optimized-code)
+- [如何：偵錯工具優化程式碼](/visualstudio/debugger/how-to-debug-optimized-code)
 
 - [浮點數會失去精確度的原因](why-floating-point-numbers-may-lose-precision.md)
 
 下列主題提供如何優化建立、載入和執行程式碼的相關資訊。
 
-- [改善編譯器輸送量](improving-compiler-throughput.md)
+- [改善編譯器處理量](improving-compiler-throughput.md)
 
 - [使用不帶 () 的函式名稱不會產生程式碼](using-function-name-without-parens-produces-no-code.md)
 
@@ -80,24 +80,24 @@ ms.locfileid: "80078498"
 
 - [指定 ATL 專案的編譯器最佳化](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [在載入時，我應該使用哪些優化技術來改善用戶端應用程式的效能？](../build/dll-frequently-asked-questions.md#mfc_optimization)
+- [載入時，我應該使用何項最佳化技術來改善用戶端應用程式的效能？](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="in-this-section"></a>本節內容
 
-[優化 pragma 和關鍵字](optimization-pragmas-and-keywords.md) \
+[優化 Pragma 和關鍵字](optimization-pragmas-and-keywords.md) \
 [改善編譯器輸送量](improving-compiler-throughput.md) \
-[為何浮點數可能會失去有效位數](why-floating-point-numbers-may-lose-precision.md) \
+[浮點數可能失去精確度的原因](why-floating-point-numbers-may-lose-precision.md) \
 [IEEE 浮點標記法](ieee-floating-point-representation.md) \
-[改善時間關鍵程式碼 \ 的秘訣](tips-for-improving-time-critical-code.md)
-[使用不含（）的函式名稱不會產生任何程式碼](using-function-name-without-parens-produces-no-code.md) \
-[優化最佳做法](optimization-best-practices.md) \
-特性[指引優化](profile-guided-optimizations.md) \
-特性[指引優化的環境變數](environment-variables-for-profile-guided-optimizations.md) \
+[改善時間關鍵程式碼的秘訣](tips-for-improving-time-critical-code.md) \
+[使用不含（）的函數名稱不會產生任何程式碼](using-function-name-without-parens-produces-no-code.md) \
+[優化最佳作法](optimization-best-practices.md) \
+[特性指引優化](profile-guided-optimizations.md) \
+[特性指引優化的環境變數](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \
 [如何：將多個 PGO 設定檔合併至單一設定檔](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C/C++ 建置參考](reference/c-cpp-building-reference.md)

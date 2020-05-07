@@ -15,11 +15,11 @@ helpviewer_keywords:
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346323"
 ---
 # <a name="type-float"></a>類型 float
 
@@ -31,7 +31,7 @@ ms.locfileid: "56151269"
 
 |類型|有效數字|位元組數|
 |----------|------------------------|---------------------|
-|float|6 - 7|4|
+|FLOAT|6 - 7|4|
 |double|15 - 16|8|
 
 浮點變數由尾數 (包含數字的值) 和指數 (包含數字範圍的順序) 表示。
@@ -42,7 +42,7 @@ ms.locfileid: "56151269"
 
 |類型|指數長度|尾數長度|
 |----------|---------------------|---------------------|
-|float|8 位元|23 位元|
+|FLOAT|8 位元|23 位元|
 |double|11 位元|52 位元|
 
 由於指數是以不帶正負號的形式儲存，因此指數被偏移了其最大值的一半。 若是 float 類型，其偏差是 127，若是 double 類型，則為 1023。 您可以從指數值減去偏差值，以計算實際的指數值。
@@ -57,7 +57,7 @@ ms.locfileid: "56151269"
 
 |類型|最小值|最大值|
 |----------|-------------------|-------------------|
-|浮動|1.175494351 E - 38|3.402823466 E + 38|
+|FLOAT|1.175494351 E - 38|3.402823466 E + 38|
 |double|2.2250738585072014 E - 308|1.7976931348623158 E + 308|
 
 如果儲存空間的重要性大於精確度，請考慮使用 float 類型的浮點變數。 相反地，如果精確度是最重要的準則，請使用 double 類型。
@@ -80,6 +80,6 @@ f_short = f_short * f_long;
 f_longer = f_short * f_short;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[基本類型的儲存體](../c-language/storage-of-basic-types.md)
+[基本類型的儲存空間](../c-language/storage-of-basic-types.md)

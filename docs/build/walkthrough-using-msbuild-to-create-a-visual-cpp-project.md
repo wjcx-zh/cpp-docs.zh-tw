@@ -86,7 +86,7 @@ MSBuild 專案檔是包含專案根項目 (`<Project>`) 的 XML 檔案。 在下
     </Project>
     ```
 
-1. 在 `<ProjectConfiguration>` 項目中新增下列兩個 `<ItemGroup>` 子項目。 子項目會指定適用於 32 位元 Windows 作業系統的偵錯和版本設定：
+1. 在 `<ItemGroup>` 項目中新增下列兩個 `<ProjectConfiguration>` 子項目。 子項目會指定適用於 32 位元 Windows 作業系統的偵錯和版本設定：
 
     ```xml
     <ItemGroup>
@@ -122,7 +122,7 @@ MSBuild 專案檔是包含專案根項目 (`<Project>`) 的 XML 檔案。 在下
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-1. 在 `<ClCompile>` 項目中新增下列 `<ItemGroup>` 子項目。 子項目會為要編譯的 C/C++ 來源檔案指定名稱：
+1. 在 `<ItemGroup>` 項目中新增下列 `<ClCompile>` 子項目。 子項目會為要編譯的 C/C++ 來源檔案指定名稱：
 
     ```xml
     <ItemGroup>
@@ -131,9 +131,9 @@ MSBuild 專案檔是包含專案根項目 (`<Project>`) 的 XML 檔案。 在下
     ```
 
    > [!NOTE]
-   > `<ClCompile>` 是「建置目標」，且定義於 **VCTargets** 目錄中。
+   > `<ClCompile>` 是「建置目標」**，且定義於 **VCTargets** 目錄中。
 
-1. 在 `<ClInclude>` 項目中新增下列 `<ItemGroup>` 子項目。 子項目會為 C/C++ 來源檔案的標頭檔指定名稱：
+1. 在 `<ItemGroup>` 項目中新增下列 `<ClInclude>` 子項目。 子項目會為 C/C++ 來源檔案的標頭檔指定名稱：
 
     ```xml
     <ItemGroup>
@@ -189,7 +189,7 @@ MSBuild 會建立輸出檔案的目錄，然後編譯並連結專案，以產生
 
 `myproject`
 
-應用程式應該會顯示 "Hello, from MSBuild!" 訊息。
+應用程式應該會顯示 "Hello, from MSBuild!" 。
 
 ## <a name="customizing-your-project"></a>自訂專案
 
@@ -207,7 +207,7 @@ MSBuild 可讓您執行預先定義的建置目標、套用使用者定義的屬
 
 ### <a name="using-msbuild-with-build-targets"></a>搭配使用 MSBuild 與建置目標
 
-「建置目標」是一組具名的預先定義或使用者定義命令，可以在建置期間執行。 使用目標命令列選項 (`/t`) 來指定建置目標。 針對 `myproject` 範例專案，預先定義的 **clean** 目標會刪除偵錯資料夾中的所有檔案，並且建立新的記錄檔。
+「建置目標」** 是一組具名的預先定義或使用者定義命令，可以在建置期間執行。 使用目標命令列選項 (`/t`) 來指定建置目標。 針對 `myproject` 範例專案，預先定義的 **clean** 目標會刪除偵錯資料夾中的所有檔案，並且建立新的記錄檔。
 
 在命令提示字元中輸入下列命令，即可清除 `myproject`。
 
@@ -233,7 +233,7 @@ MSBuild 可讓您執行預先定義的建置目標、套用使用者定義的屬
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>搭配使用 MSBuild 與 64 位元編譯器和工具
 
-如果您已在 64 位元 Windows 上安裝 Visual Studio，根據預設，64 位元的 x64 原生和交叉工具也會一併安裝。 您可以藉由設定 `PreferredToolArchitecture` 屬性，將 MSBuild 設定為使用 64 位元編譯器和工具來建置應用程式。 此屬性不會影響專案組態或平台屬性。 根據預設，系統會使用 32 位元版本的工具。 若要指定64位版本的編譯器和工具，請在 `Microsoft.Cpp.default.props` \<匯入/> 元素之後，將下列屬性群組元素新增至 Myproject. .vcxproj 專案檔：
+如果您已在 64 位元 Windows 上安裝 Visual Studio，根據預設，64 位元的 x64 原生和交叉工具也會一併安裝。 您可以藉由設定 `PreferredToolArchitecture` 屬性，將 MSBuild 設定為使用 64 位元編譯器和工具來建置應用程式。 此屬性不會影響專案組態或平台屬性。 根據預設，系統會使用 32 位元版本的工具。 若要指定64位版本的編譯器和工具，請在匯`Microsoft.Cpp.default.props` \<入/> 專案之後，將下列屬性群組元素新增至 Myproject. .vcxproj 專案檔：
 
 ```xml
 <PropertyGroup>
@@ -247,7 +247,7 @@ MSBuild 可讓您執行預先定義的建置目標、套用使用者定義的屬
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>搭配使用 MSBuild 與不同工具組
 
-如果您有安裝適用於其他 Visual C++ 版本的工具組與程式庫，MSBuild 可以針對目前的 Visual C++ 版本或其他已安裝的版本來建置應用程式。 例如，如果您已安裝 Visual Studio 2012，若要指定適用于C++ Windows XP 的 Visual 11.0 工具組，請在 `Microsoft.Cpp.props` \<匯入/> 元素之後，將下列屬性群組元素新增至 Myproject. .vcxproj 專案檔：
+如果您有安裝適用於其他 Visual C++ 版本的工具組與程式庫，MSBuild 可以針對目前的 Visual C++ 版本或其他已安裝的版本來建置應用程式。 例如，如果您已安裝 Visual Studio 2012，若要指定適用于 Windows XP 的 Visual C++ 11.0 工具組，請在匯`Microsoft.Cpp.props` \<入/> 元素後面，將下列屬性群組元素新增至 Myproject. .vcxproj 專案檔：
 
 ```xml
 <PropertyGroup>
@@ -263,7 +263,7 @@ MSBuild 可讓您執行預先定義的建置目標、套用使用者定義的屬
 
 MSBuild 會提供各種自訂建置流程的方式。 下列主題會示範如何將自訂建置步驟、工具和事件新增至您的 MSBuild 專案：
 
-- [如何：將自訂建置步驟新增至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [如何：將自訂建置步驟加入至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
 - [如何：將自訂建置工具新增至 MSBuild 專案](how-to-add-custom-build-tools-to-msbuild-projects.md)
 

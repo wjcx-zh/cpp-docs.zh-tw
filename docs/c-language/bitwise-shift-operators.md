@@ -8,22 +8,22 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326023"
 ---
 # <a name="bitwise-shift-operators"></a>位元移位運算子
 
-移位運算子會按照第二個運算元所指定的位置數目將其第一個運算元左移 (**&lt;&lt;**) 或右移 (**>>**)。
+移位運算子會依第二個運算元所**&lt;** 指定的位置數目**>>**，將其第一個運算元左移（）或右（）。
 
 ## <a name="syntax"></a>語法
 
-*shift-expression*：<br/>
+*移位-運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*移位運算式* ** &lt; ** *加法運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*移位運算式* **>>** *加法運算式*
 
 兩個運算元都必須是整數值。 這些運算子會執行一般算術轉換；結果類型是左運算元在轉換之後的類型。
 
@@ -60,6 +60,6 @@ z = ( x << 8 ) + ( y >> 8 );
 
 向右移位會保留正負號位元。 當帶正負號的整數向右移位時，最高有效位元會保持原位。 當不帶正負號的整數向右移位時，會清除最高有效位元。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [左移和右移運算子 (>> 和 <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

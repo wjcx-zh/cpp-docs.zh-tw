@@ -33,11 +33,11 @@ C 陳述式包含語彙基元、運算式和其他陳述式。 形成另一個�
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-語句](../c-language/try-except-statement-c.md)/* Microsoft 特定的 \*/
+[try-except-語句](../c-language/try-except-statement-c.md)/* Microsoft 專有\*/
 
-[try-catch-finally 語句](../c-language/try-finally-statement-c.md) /\* Microsoft 特定 \*/
+[try-catch-finally 語句](../c-language/try-finally-statement-c.md) / \* Microsoft 特有的\*/
 
-通常陳述式的主體為一種「複合陳述式」。 複合陳述式包含其中可能內含關鍵字的其他陳述式。 複合陳述式以大括號 ( **{ }** ) 分隔。 所有其他 C 陳述式以分號 ( **;** ) 結束。 分號是陳述式結束字元。
+通常陳述式的主體為一種「複合陳述式」。 複合陳述式包含其中可能內含關鍵字的其他陳述式。 複合陳述式以大括號 (**{ }**) 分隔。 所有其他 C 陳述式以分號 (**;**) 結束。 分號是陳述式結束字元。
 
 運算陳述式內含一個 C 運算式，該運算式可包含在[運算式和指派](../c-language/expressions-and-assignments.md)中說明的算術或邏輯運算子。 Null 陳述式是一個空的陳述式。
 

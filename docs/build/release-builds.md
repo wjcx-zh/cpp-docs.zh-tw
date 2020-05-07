@@ -1,5 +1,5 @@
 ---
-title: C++發行組建-Visual Studio
+title: C + + 發行組建-Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -22,11 +22,11 @@ ms.locfileid: "80168820"
 [建立發行組建時的常見問題](common-problems-when-creating-a-release-build.md)<br/>
 [解決發行組建的問題](fixing-release-build-problems.md)<br/>
 [使用 VERIFY 取代 ASSERT](using-verify-instead-of-assert.md)<br/>
-[使用偵錯組建檢查記憶體覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[如何：偵錯發行組建](how-to-debug-a-release-build.md)<br/>
+[使用偵錯版檢查記憶體覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
+[如何：偵錯發行的組建](how-to-debug-a-release-build.md)<br/>
 [檢查記憶體覆寫](checking-for-memory-overwrites.md)<br/>
 [最佳化程式碼](optimizing-your-code.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C/C++ 建置參考](reference/c-cpp-building-reference.md)

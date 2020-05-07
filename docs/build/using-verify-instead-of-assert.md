@@ -38,13 +38,13 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-這段程式碼會在 MFC 應用程式的 debug 版本中順利執行。 如果 `calloc( )` 的呼叫失敗，就會出現包含檔案和行號的診斷訊息。 不過，在 MFC 應用程式的零售組建中：
+這段程式碼會在 MFC 應用程式的 debug 版本中順利執行。 如果呼叫`calloc( )`失敗，則會顯示包含檔案和行號的診斷訊息。 不過，在 MFC 應用程式的零售組建中：
 
-- `calloc( )` 的呼叫永遠不會發生，讓 `buf` 未初始化，或
+- `calloc( )`永遠不會呼叫，而會`buf`保留未初始化，或
 
-- `strcpy_s( )` 會將「`Hello, World`」複製到隨機記憶體中，可能會使應用程式損毀或造成系統停止回應，或
+- `strcpy_s( )`將 "`Hello, World`" 複製到隨機的記憶體片段中，可能會使應用程式損毀或造成系統停止回應，或
 
-- `free()` 嘗試釋放從未配置的記憶體。
+- `free()`嘗試釋放從未配置的記憶體。
 
 若要正確使用 ASSERT，程式碼範例應變更為下列內容：
 
@@ -71,6 +71,6 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [解決發行組建的問題](fixing-release-build-problems.md)

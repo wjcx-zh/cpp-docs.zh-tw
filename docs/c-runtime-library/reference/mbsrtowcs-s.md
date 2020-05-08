@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-ms.openlocfilehash: 62ae534e8080b74ada49cca005811a049055cb65
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 72a20396b2f0f75d79baa64619deef8a0c1e00ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338906"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915491"
 ---
 # <a name="mbsrtowcs_s"></a>mbsrtowcs_s
 
@@ -60,73 +60,73 @@ errno_t mbsrtowcs_s(
 
 ### <a name="parameters"></a>參數
 
-*p 傳回值*<br/>
+*pReturnValue*<br/>
 已轉換的字元數。
 
-*wc斯特*<br/>
+*wcstr*<br/>
 緩衝區位址，要儲存產生的已轉換寬字元字串。
 
-*大小字內*<br/>
-單詞中*wcstr*的大小(寬字元)。
+*sizeInWords*<br/>
+*Wcstr*的大小（以單字（寬字元）為單位）。
 
-*姆布斯特*<br/>
+*mbstr*<br/>
 要轉換的多位元組字元字串位置的間接指標。
 
-*count*<br/>
-要儲存在*wcstr*緩衝區中的最大寬字元數,不包括終止 null 或[_TRUNCATE](../../c-runtime-library/truncate.md)。
+*計數*<br/>
+要儲存在*wcstr*緩衝區中的寬字元數目上限，不包括終止 null 或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *mbstate*<br/>
-指向**mbstate_t**轉換狀態物件的指標。 如果此值為 null 指標，會使用靜態內部轉換狀態物件。 由於內部**mbstate_t**物件不是線程安全的,因此我們建議您始終傳遞自己的*mbstate*參數。
+**Mbstate_t**轉換狀態物件的指標。 如果此值為 null 指標，會使用靜態內部轉換狀態物件。 由於內部**mbstate_t**物件不是安全線程，因此建議您一律傳遞自己的*mbstate*參數。
 
 ## <a name="return-value"></a>傳回值
 
 如果轉換成功為零，若失敗則為錯誤碼。
 
-|錯誤狀況|傳回值與**差錯**|
+|錯誤狀況|傳回值和**errno**|
 |---------------------|------------------------------|
-|*wcstr*是空指標,*大小 InWords* > 0|**埃因瓦爾**|
-|*mbstr*是空指標|**埃因瓦爾**|
-|*mbstr*間接指向的字串包含一個對當前區域設置無效的多位元組序列。|**EILSEQ**|
-|目標緩衝區太小,無法包含轉換後的字串(除非*計數***_TRUNCATE;** 有關詳細資訊,請參閱備註)|**ERANGE**|
+|*wcstr*是 null 指標，而*sizeInWords* > 0|**EINVAL**|
+|*mbstr*是 null 指標|**EINVAL**|
+|*Mbstr*間接指向的字串包含對目前地區設定不正確多位元組序列。|**EILSEQ**|
+|目的緩衝區太小，無法包含已轉換的字串（除非*count*是 **_TRUNCATE**; 如需詳細資訊，請參閱備註）|**ERANGE**|
 
-如果發生上述任何一種情況，則會叫用無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將返回錯誤代碼並設置表中指示的**errno。**
+如果發生上述任何一種情況，則會叫用無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回錯誤碼並設定**errno** ，如下表所示。
 
 ## <a name="remarks"></a>備註
 
-**mbsrtowcs_s**函數通過使用*mbstate*中包含的轉換狀態,將*mbstr*間接指向的多位元組位元字串轉換為存儲在*wcstr*指向的緩衝區中的寬字元。 除非遇到下列情況之一，否則會繼續為每個字元進行轉換：
+**Mbsrtowcs_s**函式會使用*mbstate*中包含的轉換狀態，將*mbstr*間接指向的多位元組字元字串，轉換成*wcstr*所指向的緩衝區中儲存的寬字元。 除非遇到下列情況之一，否則會繼續為每個字元進行轉換：
 
 - 遇到多位元組的 null 字元
 
 - 遇到無效的多位元組字元
 
-- 儲存在*wcstr*緩衝區的寬字元數等於*計數*。
+- 儲存在*wcstr*緩衝區中的寬字元數等於*count*。
 
-目標字串*wcstr*始終為 null 終止,即使在出現錯誤的情況下也是如此,除非*wcstr*是空指標。
+除非*wcstr*是 null 指標，否則目的地字串*wcstr*一律會以 null 結束，即使發生錯誤也一樣。
 
-如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)的特殊值 **,mbsrtowcs_s**轉換盡可能多的字串,以適應目標緩衝區,同時仍然留有空終止符的空間。
+如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)的特殊值，則**mbsrtowcs_s**會盡可能將字串轉換為符合目的地緩衝區的大小，同時仍留出空間給 null 結束字元。
 
-如果**mbsrtowcs_s**成功轉換源字串,它將大小以轉換後的字串和空終止符的寬字元形式放入 *&#42;pReturnValue,* 前提是*pReturnValue*不是空指標。 即使*wcstr*參數是空指標,並允許您確定所需的緩衝區大小,也會發生這種情況。 請注意,如果*wcstr*是空指標,則*忽略計數*。
+如果**mbsrtowcs_s**成功轉換來源字串，則會將已轉換字串的寬字元大小和 null 結束字元放入 *&#42;pReturnValue*中，但前提是*pReturnValue*不是 null 指標。 即使*wcstr*引數是 null 指標，而且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果*wcstr*是 null 指標，則會忽略*count* 。
 
-如果*wcstr*不是空指標,則如果由於達到終止空字元而停止轉換,則*mbstr*指向的指針對象將分配一個空指標。 否則會將超過已轉換之最後一個多位元組字元的位址指派給該物件 (如果有的話)。 這可讓後續的函式呼叫，從此呼叫的停止處重新啟動轉換。
+如果*wcstr*不是 null 指標，則會在轉換因為到達結束的 null 字元而停止時，將 null 指標指派給*mbstr*所指向的指標物件。 否則會將超過已轉換之最後一個多位元組字元的位址指派給該物件 (如果有的話)。 這可讓後續的函式呼叫，從此呼叫的停止處重新啟動轉換。
 
-如果*mbstate*是空指標,則使用庫內部**mbstate_t**轉換狀態靜態物件。 由於此內部靜態物件不是線程安全的,因此我們建議您傳遞自己的*mbstate*值。
+如果*mbstate*為 null 指標，則會使用程式庫內部**mbstate_t**轉換狀態靜態物件。 由於這個內部靜態物件不是安全線程，因此建議您傳遞自己的*mbstate*值。
 
-如果**mbsrtowcs_s**遇到在當前區域設定中無效的多位元組元,它將在 *&#42;pReturnValue*中放入 -1,將目標緩衝區*wcstr*設定為空字串,將**errno**設定到**EILSEQ,** 然後傳回**EILSEQ**。
+如果**mbsrtowcs_s**遇到目前地區設定中不正確多位元組字元，它會將-1 放在 *&#42;pReturnValue*中，將目的地緩衝區*wcstr*設為空字串，將**Errno**設定為**EILSEQ**，並傳回**EILSEQ**。
 
-如果*mbstr*和*wcstr*指向的序列重疊,則**mbsrtowcs_s**的行為未定義。 **mbsrtowcs_s**受當前區域設置的LC_TYPE類別的影響。
+如果*mbstr*和*wcstr*所指向的序列重迭， **mbsrtowcs_s**的行為會是未定義的。 **mbsrtowcs_s**會受到目前地區設定的 LC_TYPE 分類所影響。
 
 > [!IMPORTANT]
-> 確保*wcstr*和*mbstr*不重疊,並且*該計數*正確反映要轉換的多位元組位元元數。
+> 請確定*wcstr*和*mbstr*不會重迭，而且該*計數*會正確反映要轉換的多位元組字元數。
 
-**mbsrtowcs_s**功能不同於[mbstowcs_s,_mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)它的可重新啟動性。 轉換狀態以*mbstate*儲存,用於後續對相同或其他可重新啟動函數的調用。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如,如果使用後續對**mbsrtowcs_s**的調用而不是**mbstowcs_s**,則應用程式應使用**mbsrlen**而不是**mbslen。**
+**Mbsrtowcs_s**函式與[mbstowcs_s、_mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用**mbsrtowcs_s**的後續呼叫，而不是**mbstowcs_s**，應用程式應該使用**mbsrlen**而不是**mbslen**。
 
 C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以使用較新且安全的對應函式，來自動取代不安全的舊函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-如果當前線程調用**setlocale**中沒有函數,只要此函數正在執行並且*mbstate*參數不是空指標,則**mbsrtowcs_s**函數是多線程安全的。
+如果目前線程中沒有函數正在執行，而且*mbstate*引數不是 null 指標，則**mbsrtowcs_s**函**式為多**執行緒安全。
 
 ## <a name="requirements"></a>需求
 
@@ -137,7 +137,7 @@ C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷�
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: a1120529157801aac5cf1c4fd61f844fde443bed
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5c1d63eea6561af6ab7f51c147c92e184d3d11f8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346872"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912070"
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 
@@ -63,10 +63,10 @@ wchar_t *fgetws(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 資料的儲存位置。
 
-*納姆查理斯*<br/>
+*numChars*<br/>
 要讀取的字元數上限。
 
 *資料流*<br/>
@@ -74,19 +74,19 @@ wchar_t *fgetws(
 
 ## <a name="return-value"></a>傳回值
 
-每個函數都傳回*str*。 傳回**NULL**以指示錯誤或檔結尾條件。 使用**feof**或**ferror**確定是否發生了錯誤。 如果*str*或*stream*是空指標,或者*numChars*小於或等於零,則此函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行 **,errno**將設定為**EINVAL,** 並且函數傳回**NULL**。
+所有這些函式都會傳回*str*。 傳回**Null**表示錯誤或檔案結尾條件。 使用**feof**或**ferror**來判斷是否發生錯誤。 如果*str*或*資料流程*是 Null 指標，或*numChars*小於或等於零，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**fgets**函數從輸入*串流*參數讀取字串並將其存儲在*str*中。 **fgets**讀取從當前流位置到包括第一個換行符的字元,或直到讀取的字元數等於*numChars* - 1,以先到者為準。 存儲在*str*中的結果將附加為空字元。 讀取的新行字元包含在字串中。
+**Fgets**函式會從輸入*資料流程*引數讀取字串，並將其儲存在*str*中。 **fgets**會從目前的資料流程位置讀取字元，並將第一個分行符號加入至資料流程結尾，或直到讀取的字元數等於*numChars* -1 （以先發生者為准）。 以*str*儲存的結果會附加 null 字元。 讀取的新行字元包含在字串中。
 
-**fgetws**是一個寬字元版本的**fgets。**
+**fgetws**是**fgets**的寬字元版本。
 
-**fgetws**根據*串流是分別在*文字模式還是二進位模式下打開的,將寬字元參數*str*讀取為多位元組位元串或寬字元字串。 如需在 Unicode 和多位元組資料流 I/O 中使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
+**fgetws**會根據以文字模式還是二進位模式開啟*資料流程*，將寬字元引數*str*讀取為多位元組字元字串或寬字元字串。 如需在 Unicode 和多位元組資料流 I/O 中使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -145,5 +145,5 @@ Line one.
 
 [資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs、fputws](fputs-fputws.md)<br/>
-[得到,_getws](../../c-runtime-library/gets-getws.md)<br/>
+[取得，_getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts、_putws](puts-putws.md)<br/>

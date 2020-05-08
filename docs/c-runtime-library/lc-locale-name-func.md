@@ -12,7 +12,7 @@ api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: f38d4d9b11189a8313b26dd3313a5def800c2410
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c48041c6c01e22c7771c0b5449de2cc8df1a2df0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351119"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912976"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -49,7 +49,7 @@ wchar_t** ___lc_locale_name_func(void);
 
 內部 CRT 函式是特別針對實作，且會依每個版本而有所不同。 不建議將此函式用於您的程式碼中。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](global-state.md)。
 
 ## <a name="requirements"></a>需求
 

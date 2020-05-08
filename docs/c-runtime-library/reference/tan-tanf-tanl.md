@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362635"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912371"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
-計算切線。
+計算正切函數。
 
 ## <a name="syntax"></a>語法
 
@@ -63,29 +63,29 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 角度 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
-**棕褐色**函數返回*x*的切線。 如果*x*大於或等於 263,或小於或等於 -263,則結果中會發生顯著性損失。
+**Tan**函式會傳回*x*的正切函數。 如果*x*大於或等於263，或小於或等於-263，則會在結果中失去重要性。
 
-|輸入|SEH 例外狀況|**馬瑟爾**例外|
+|輸入|SEH 例外狀況|**Matherr**異常|
 |-----------|-------------------|-------------------------|
-|• QNAN,IND|無|_DOMAIN|
-|• INF|**無效**|_DOMAIN|
+|± QNAN，IND|無|_DOMAIN|
+|± INF|**無效**|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用帶和返回**浮點**值或**長****雙精度值**的**tan**重載。 在C程式中,**曬黑**總是採取與傳回**雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值的**tan**多載。 在 C 程式中， **tan**一律會採用並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
-|**譚**,**坦夫**,**坦格爾**|\<math.h>|\<cmath> 或 \<math.h>|
+|**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

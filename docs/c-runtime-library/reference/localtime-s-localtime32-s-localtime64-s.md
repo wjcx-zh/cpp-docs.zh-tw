@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3c5d194da85eb5d008dfc9cf19f222ebb575747d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342127"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911578"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s、_localtime32_s、_localtime64_s
 
-將**time_t**時間值轉換為**tm**結構,並更正本地時區。 這些是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強的 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md) 版本。
+將**time_t**時間值轉換成**tm**結構，並針對當地時區進行更正。 這些是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強的 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md) 版本。
 
 ## <a name="syntax"></a>語法
 
@@ -71,7 +71,7 @@ errno_t _localtime64_s(
 *tmDest*<br/>
 要填入之時間結構的指標。
 
-*來源時間*<br/>
+*sourceTime*<br/>
 預存時間的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -80,50 +80,50 @@ errno_t _localtime64_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*tmDest*|*來源時間*|傳回值|以*tmD 最大值*|叫用無效的參數處理常式|
+|*tmDest*|*sourceTime*|傳回值|*TmDest*中的值|叫用無效的參數處理常式|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**空**|任意|**埃因瓦爾**|未修改|是|
-|**非 NULL(** 指向有效記憶體 )|**空**|**埃因瓦爾**|所有的欄位設定為 -1|是|
-|**非 NULL(** 指向有效記憶體 )|小於 0 或大於 **_MAX__TIME64_T**|**埃因瓦爾**|所有的欄位設定為 -1|否|
+|**Null**|任意|**EINVAL**|未修改|是|
+|Not **Null** （指向有效的記憶體）|**Null**|**EINVAL**|所有的欄位設定為 -1|是|
+|Not **Null** （指向有效的記憶體）|小於0或大於 **_MAX__TIME64_T**|**EINVAL**|所有的欄位設定為 -1|否|
 
-在前兩個錯誤條件的情況下，叫用了無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將**errno**設定為**EINVAL**並傳回**EINVAL**。
+在前兩個錯誤條件的情況下，叫用了無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**localtime_s**函數轉換存儲為[time_t](../../c-runtime-library/standard-types.md)值的時間,並將結果存儲在[tm](../../c-runtime-library/standard-types.md)類型的結構中。 **time_t**值*源時間*表示自 1970 年 1 月 1 日(UTC)午夜 (00:00:00)起經過的秒數。 此值通常從[時間](time-time32-time64.md)函數獲得。
+**Localtime_s**函式會將儲存的時間轉換為[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在類型為[tm](../../c-runtime-library/standard-types.md)的結構中。 **Time_t**值*sourceTime*代表自1970年1月1日午夜（00:00:00）起經過的秒數（UTC）。 這個值通常是從[time](time-time32-time64.md)函數取得。
 
-**localtime_s**如果使用者首先設置全域環境變數**TZ,localtime_s**糾正本地時區。 設置**TZ**時,還會自動設置另外三個環境變數 **(_timezone、_daylight**和 **_tzname)。** **_daylight** 如果未設置**TZ**變數 **,localtime_s**嘗試使用控制面板中的日期/時間應用程式中指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是微軟的擴展,不是**本地時間的**ANSI 標準定義的一部分。
+如果使用者第一次設定全域環境變數**TZ**， **localtime_s**更正當地時區。 若設定了**TZ** ，則會自動設定三個其他環境變數（**_timezone**、 **_daylight**和 **_tzname**）。 如果未設定**TZ**變數， **localtime_s**會嘗試使用 [控制台] 的 [日期/時間] 應用程式中所指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是 Microsoft 擴充功能，不屬於**localtime**的 ANSI 標準定義。
 
 > [!NOTE]
 > 目標環境應該嘗試判斷日光節約時間是否生效。
 
-**_localtime64_s**()使用 **__time64_t**結構,允許日期在 3001 年 1 月 18 日 23:59:59(協調通用時間 (UTC) 之前表示,而 **_localtime32_s**表示日期為 2038 年 1 月 18 日 23:59:59,UTC。
+使用 **__time64_t**結構的 **_localtime64_s**可讓日期以23:59:59 年1月18日3001，國際標準時間（UTC）表示，而 **_localtime32_s**則代表日期到23:59:59 年1月18日到2038，UTC。
 
-**localtime_s**是一個內聯函數,它計算到 **_localtime64_s,time_t**等效於 **__time64_t。** **time_t** 如果需要強制編譯器將**time_t**解釋為舊的 32 位**time_t**,則可以定義 **_USE_32BIT_TIME_T**。 這樣做將導致**localtime_s**評估 **_localtime32_s。** 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+**localtime_s**是會評估為 **_localtime64_s**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**localtime_s**評估為 **_localtime32_s**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
-結構類型[tm](../../c-runtime-library/standard-types.md)的欄位儲存以下值,每個值都是**int**。
+結構類型[tm](../../c-runtime-library/standard-types.md)的欄位會儲存下列值，其中每一個都是**int**。
 
 |欄位|描述|
 |-|-|
-|**tm_sec**|一分鐘后秒 (0 - 59)。|
-|**tm_min**|一小時后幾分鐘 (0 - 59)。|
-|**tm_hour**|午夜起(0 - 23日)的上班時間。|
-|**tm_mday**|月日(1 - 31)。|
-|**tm_mon**|月 (0 - 11;1 月 = 0)。|
+|**tm_sec**|分鐘後的秒數（0-59）。|
+|**tm_min**|小時之後的分鐘（0-59）。|
+|**tm_hour**|午夜後的小時（0-23）。|
+|**tm_mday**|月中的日（1-31）。|
+|**tm_mon**|月份（0-11;1月 = 0）。|
 |**tm_year**|年份 (目前年份減去 1900)。|
-|**tm_wday**|星期一(0 - 6;周日 = 0)。|
-|**tm_yday**|一年中的日子(0 - 365;1 月 1 = 0)。|
+|**tm_wday**|周中的日（0-6;星期日 = 0）。|
+|**tm_yday**|年中的日（0-365;1月1日 = 0）。|
 |**tm_isdst**|若日光節約時間已生效則為正值；如果日光節約時間沒有作用則為 0。如果日光節約時間的狀態是未知，則為負值。|
 
-如果設置了**TZ**環境變數,C 運行時庫將假定適合美國的規則來實現夏令時 (DST) 的計算。
+如果已設定**TZ**環境變數，則 C 執行時間程式庫會假設適用于美國的規則，以執行日光節約時間（DST）的計算。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<ctime\<> 或時間.h>|
+|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime> 或\<time. h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

@@ -1,6 +1,6 @@
 ---
 title: _mbclen、mblen、_mblen_l、_mbclen_l
-description: 描述 Microsoft C 執行時庫 (CRT) _mbclen、mblen、_mblen_l 和_mbclen_l功能。
+description: 描述 Microsoft C 執行時間程式庫（CRT） _mbclen、mblen、_mblen_l 和 _mbclen_l 函數。
 ms.date: 4/2/2020
 api_name:
 - _mbclen
@@ -24,7 +24,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 76e8771898d8baa65f275304a9aefdcaeeb5b3bd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b004babc9e7c82d25cd52ec036c3061c99b5f367
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341114"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914363"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen、mblen、_mblen_l、_mbclen_l
 
@@ -85,35 +85,35 @@ int _mblen_l(
 
 ### <a name="parameters"></a>參數
 
-*C*\
+*c*\
 多位元組字元。
 
-*姆布斯特*\
+*mbstr*\
 多位元組字元位元組序列的位址。
 
 *計數*\
 要檢查的位元組數目。
 
-*現場*\
+*語言*\
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-**_mbclen**和 **_mbclen_l**返回 1 或 2,根據多位元組位元*符符 c*的長度。 無論*c*是否為多位元組,函數始終返回 1 表示 UTF-8。 **_mbclen**沒有錯誤返回。
+**_mbclen**和 **_mbclen_l**會根據多位元組字元*c*的長度傳回1或2。 函式一律會傳回1（針對 UTF-8），不論*c*是否為多位元組。 **_Mbclen**不會傳回錯誤。
 
-如果*mbstr*不是**NULL,****則 mblen**和 **_mblen_l**返回多位元組位元符元的長度(以位元組為單位)。 **mblen**和 **_mblen_l**函數在 UTF-8 上正常工作,並且可能返回介於 1 和 3 之間的值。 當*mbstr*為**NULL(** 或指向寬字元空字元)時 **,mblen**和 **_mblen_l**返回 0。 *mbstr*指向的物件必須在第一個*計數*字元中形成有效的多位元組字元,或**mblen**和 **_mblen_l**返回 -1。
+如果*mbstr*不是**Null**， **mblen**和 **_mblen_l**會傳回多位元組字元的長度（以位元組為單位）。 **Mblen**和 **_mblen_l**函式會在 utf-8 上正常運作，而且可能會傳回介於1到3之間的值。 當*mbstr*為**null**時（或指向寬字元的 Null 字元）， **mblen**和 **_mblen_l**會傳回0。 *Mbstr*指向的物件必須在第一個*計數*字元內形成有效的多位元組字元，否則**mblen**和 **_mblen_l**會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**_mbclen**函數返回多位元位元*元符元 c*的長度(以位元組為單位)。 如果*c*不指向多位位位位元元的引線位元組(由對[_ismbblead](ismbblead-ismbblead-l.md)的隱式呼叫確定,**則_mbclen**的結果是不可預知的。
+**_Mbclen**函數會傳回多位元組字元*c*的長度（以位元組為單位）。 如果*c*未指向多位元組字元的前導位元組（由[_ismbblead](ismbblead-ismbblead-l.md)的隱含呼叫所決定），則 **_mbclen**的結果會是無法預測的。
 
-**如果長度**為*mbstr,* 則返回長度(mbstr)。如果長度是有效的多位元組字元。 它還確定與代碼頁關聯的多位元組字元有效性。 **mblen**檢查*mbstr*中包含的*計數*或更少位元組,但不超過**MB_CUR_MAX**位元組。
+如果**mblen**是有效的多位元組字元，則會傳回*mbstr*的長度（以位元組為單位）。 它也會決定與字碼頁相關聯的多位元組字元有效性。 **mblen**會檢查*mbstr*中包含的*計數*或較少的位元組，但不超過**MB_CUR_MAX**個位元組。
 
-輸出值受區域設置**LC_CTYPE**類別設置的影響。 沒有 **_l**後綴的這些函數的版本使用此與區域設置相關的行為的當前區域設置。 **_l**後綴版本具有相同的行為,但它們使用傳入區域設置參數。 關於詳細資訊,請參考[設定區域設定](setlocale-wsetlocale.md)[與區域設定](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**類別設定影響。 這些沒有 **_l**尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定。 **_L**尾碼的版本行為相同，但卻改用傳入的地區設定參數。 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)和[地區](../../c-runtime-library/locale.md)設定。
 
-**_mbclen、_mblen_l**和 **_mbclen_l**是特定於 Microsoft 的,而不是標準 **_mblen_l**C 庫的一部分。 我們不建議您在需要便攜式代碼的地方使用它們。 對於標準 C 相容性,請使用**mblen**或**mbrlen。**
+**_mbclen**、 **_mblen_l**和 **_mbclen_l**是 Microsoft 特有的，而不是標準 C 程式庫的一部分。 我們不建議您在想要可攜的程式碼的地方使用它們。 針對標準 C 相容性，請改用**mblen**或**mbrlen** 。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -172,9 +172,9 @@ Length in bytes of NULL multibyte character 0: 0
 
 ## <a name="see-also"></a>另請參閱
 
-[字元類別](../../c-runtime-library/character-classification.md)\
-[現場](../../c-runtime-library/locale.md)\
-[多位元組字串序列的解釋](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
-[_mbccpy,_mbccpy_l](mbccpy-mbccpy-l.md)\
-[姆布倫](mbrlen.md)\
+[字元分類](../../c-runtime-library/character-classification.md)\
+[語言](../../c-runtime-library/locale.md)\
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy，_mbccpy_l](mbccpy-mbccpy-l.md)\
+[mbrlen](mbrlen.md)\
 [strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

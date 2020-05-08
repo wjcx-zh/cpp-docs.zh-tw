@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: bfe79610161a7f4032517d9f7eaa0de50be18e50
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 273ad4990f78355029770e19e7cdcf36d7ba39bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345619"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910069"
 ---
 # <a name="ftell-_ftelli64"></a>ftell、_ftelli64
 
@@ -58,25 +58,25 @@ __int64 _ftelli64(
 ### <a name="parameters"></a>參數
 
 *資料流*<br/>
-目標**檔案結構**。
+目標**檔案**結構。
 
 ## <a name="return-value"></a>傳回值
 
-**ftell**和 **_ftelli64**傳回目前的檔案位置。 **ftell**和 **_ftelli64**返回的值可能無法反映文本模式下打開的流的物理位元組偏移量,因為文本模式會導致回車換行轉換。 將**ftell**與[fseek](fseek-fseeki64.md)或 **_ftelli64**與[_fseeki64](fseek-fseeki64.md)正確返回到檔位置。 在錯誤時 **,ftell**和 **_ftelli64**呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將返回 -1L 並將**errno**設置為在ERRNO中定義的兩個常量之一。H。 **EBADF**常量表示*流*參數不是有效的檔指標值,或者不引用打開的檔。 **EINVAL**表示無效*的流*參數已傳遞到函數。 在無法查找的設備(如終端和印表機)上,或者當*流*不引用打開的檔時,返回值未定義。
+**ftell**和 **_ftelli64**會傳回目前的檔案位置。 **Ftell**和 **_ftelli64**所傳回的值可能不會反映在文字模式中開啟之資料流程的實體位元組位移，因為文字模式會導致換行字元的翻譯。 使用**ftell**搭配[fseek](fseek-fseeki64.md)或 **_ftelli64**搭配[_fseeki64](fseek-fseeki64.md) ，以正確地返回檔案位置。 發生錯誤時， **ftell**和 **_ftelli64**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1L，並將**errno**設定為 errno 中定義的兩個常數之一。H. **EBADF**常數表示*資料流程*引數不是有效的檔案指標值，或未參考開啟的檔案。 **EINVAL**表示傳遞給函數的*資料流程*引數無效。 在無法搜尋的裝置上（例如終端機和印表機），或當*stream*未參考到開啟的檔案時，傳回值為未定義。
 
-有關這些代碼和其他返回代碼的詳細資訊[,請參閱_doserrno、errno、_sys_errlist和_sys_nerr。](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>備註
 
-**ftell**和 **_ftelli64**函數檢索與*流*關聯的檔指標(如果有)的當前位置。 位置以相對於資料流開頭的位移表示。
+**Ftell**和 **_ftelli64**函式會抓取與*資料流程*相關聯的檔案指標（如果有的話）的目前位置。 位置以相對於資料流開頭的位移表示。
 
-請注意，檔案因為附加資料而開啟時，目前的檔案位置取決於最後一個 I/O 作業，而不是下一次寫入的位置。 例如，如果開啟檔案以供附加，而最後一個作業為讀取，該檔案的位置是下一個讀取作業會開始的位置，而不是下一次寫入的開始位置。 (打開檔案進行追加時,檔位置將移動到檔末尾,然後再進行任何寫入操作。如果打開用於追加的檔尚未發生 I/O 操作,則檔位置是檔的開頭。
+請注意，檔案因為附加資料而開啟時，目前的檔案位置取決於最後一個 I/O 作業，而不是下一次寫入的位置。 例如，如果開啟檔案以供附加，而最後一個作業為讀取，該檔案的位置是下一個讀取作業會開始的位置，而不是下一次寫入的開始位置。 （開啟檔案以供附加時，會先將檔案位置移至檔案結尾，再進行任何寫入作業）。如果開啟要附加的檔案上尚未發生任何 i/o 作業，檔案位置就是檔案的開頭。
 
-在文字模式中，Ctrl+Z 會在輸入時被解譯成檔案結尾字元。 在打開用於讀取/寫入的檔中 **,fopen**和所有相關例程檢查檔末尾的 CTRL_Z,並盡可能將其刪除。 這樣做是因為使用**ftell**和[fseek](fseek-fseeki64.md)或 **_ftelli64**和[_fseeki64](fseek-fseeki64.md)的組合,在以 CTRL_Z 結尾的檔內移動可能會導致**ftell**或 **_ftelli64**在檔末尾附近行為不當。
+在文字模式中，Ctrl+Z 會在輸入時被解譯成檔案結尾字元。 在為了讀取/寫入而開啟的檔案中， **fopen**和所有相關的常式會檢查檔案結尾是否有 CTRL + Z，並盡可能加以移除。 這是因為使用**ftell**和[fseek](fseek-fseeki64.md)或 **_ftelli64**和[_fseeki64](fseek-fseeki64.md)的組合，在以 CTRL + Z 結束的檔案內移動可能會造成**ftell**或 **_ftelli64**的行為不正確，接近檔案結尾。
 
-此函式執行期間會鎖定呼叫執行緒，因此為安全執行緒。 有關非鎖定版本,請參閱 **_ftell_nolock**。
+此函式執行期間會鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 **_ftell_nolock**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

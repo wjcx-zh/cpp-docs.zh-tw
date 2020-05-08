@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +48,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: 297d2fdf940ab81a3d636d4726e6e6a345ce5c02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35d3b37d5aadfbeae69de5ff00c349a2263e30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364485"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914198"
 ---
 # <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
 
-將字串指標前進為**n**個字元。
+將字串指標前移**n**個字元。
 
 > [!IMPORTANT]
-> **_mbsninc****和_mbsninc_l**不能在Windows運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsninc**和 **_mbsninc_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -86,24 +86,24 @@ unsigned char *_mbsninc(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 來源字串。
 
-*count*<br/>
+*計數*<br/>
 字串指標要遞增的字元數。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果提供的指標為**NULL,** 則每個例程在*str*以*計數*字元或**NULL**增量後傳回一個指向*str 的*指標。 如果*計數*大於或等於*str*中的字元數,則結果未定義。
+每一個常式會在*str*以*count*個字元遞增後傳回*str*的指標，如果提供的指標是**null**，則傳回**null** 。 如果*count*大於或等於*str*中的字元數，則結果會是未定義的。
 
 ## <a name="remarks"></a>備註
 
-**_mbsninc**函數按*計數*多位元位元元組 *。* **_mbsninc**根據當前使用的[多位元組代碼頁](../../c-runtime-library/code-pages.md)識別多位元組字串序列。
+**_Mbsninc**函式會藉由*計算*多位元組字元來遞增*str* 。 **_mbsninc**會根據目前使用中的[多位元組字碼頁](../../c-runtime-library/code-pages.md)，辨識多位元組字元序列。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -111,9 +111,9 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc**與 **_wcsninc**是單位元位元串和寬字元字串版本 **_mbsninc**。 **_wcsninc**和 **_strninc**僅為此映射提供,否則不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
+**_strninc**和 **_wcsninc**是 **_mbsninc**的單一位元組字元字串和寬字元字串版本。 僅針對此對應提供 **_wcsninc**和 **_strninc** ，否則不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsninc_l**是相同的,只是它使用傳入區域設置參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbsninc_l**是相同的，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -128,8 +128,8 @@ unsigned char *_mbsninc(
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec、_wcsdec、_mbsdec、_mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc、_wcsinc、_mbsinc、_mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

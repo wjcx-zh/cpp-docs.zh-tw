@@ -1,6 +1,6 @@
 ---
 title: _popen, _wpopen
-description: 對 Microsoft C 執行時 (CRT) 函_popen數_wpopen和的引用。
+description: Microsoft C runtime （CRT）程式庫函數_popen和_wpopen的參考。
 ms.date: 4/2/2020
 api_name:
 - _popen
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338507"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915282"
 ---
 # <a name="_popen-_wpopen"></a>_popen、_wpopen
 
@@ -81,32 +81,32 @@ FILE *_wpopen(
 *命令*\
 要執行的命令。
 
-*模式*\
+*下*\
 所傳回資料流的模式。
 
 ## <a name="return-value"></a>傳回值
 
-傳回與所建立管道的一端相關聯的資料流。 管道的另一端會與所繁衍命令的標準輸入或標準輸出相關聯。 發生錯誤時，函式會傳回 **NULL**。 如果錯誤是由不合法的參數,**則 errno**設定為**EINVAL**。 請參閱＜備註＞一節查看有效的模式。
+傳回與所建立管道的一端相關聯的資料流。 管道的另一端會與所繁衍命令的標準輸入或標準輸出相關聯。 發生錯誤時，函式會傳回 **NULL**。 如果錯誤是由不正確參數所造成，則**errno**會設定為**EINVAL**。 請參閱＜備註＞一節查看有效的模式。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_popen**函數創建管道。 然後,它非同步執行命令處理器的生成副本,並使用*命令*作為命令行。 字元字串 *mode* 會指定要求的存取類型，如下所示。
+**_Popen**函數會建立一個管道。 然後，它會以非同步方式執行命令處理器的產生複本，並使用*命令*做為命令列。 字元字串 *mode* 會指定要求的存取類型，如下所示。
 
 |存取模式|描述|
 |-|-|
-|**"r"**|呼叫處理序可使用傳回的資料流來讀取繁衍命令的標準輸出。|
-|**"w"**|呼叫處理序可使用傳回的資料流來寫入至繁衍命令的標準輸入。|
-|**"b"**|在二進位模式中開啟。|
-|**"t"**|在文字模式中開啟。|
+|**r**|呼叫處理序可使用傳回的資料流來讀取繁衍命令的標準輸出。|
+|**寬**|呼叫處理序可使用傳回的資料流來寫入至繁衍命令的標準輸入。|
+|**位元組**|在二進位模式中開啟。|
+|**而已**|在文字模式中開啟。|
 
 > [!NOTE]
-> 如果在 Windows 程式中使用 **,_popen**函數將返回一個無效的檔指標,導致該程式無限期停止回應。 **_popen**在主控台應用程式中正常工作。 要建立重定輸入與輸出的 Windows 應用程式,請參閱在 Windows SDK[中使用重定輸入與輸出建立子行程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
+> 如果在 Windows 程式中使用， **_popen**函式會傳回不正確檔案指標，使程式無限期地停止回應。 **_popen**在主控台應用程式中正常運作。 若要建立重新導向輸入和輸出的 Windows 應用程式，請參閱在 Windows SDK 中[使用重新導向的輸入和輸出建立子進程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
 
-**_wpopen**是 **_popen**的寬字元版本;**_wpopen**的*路徑*參數是寬字元字串。 **_wpopen**和 **_popen**行為相同。
+**_wpopen**是寬字元版本的 **_popen**;**_wpopen**的*path*引數是寬字元字串。 相反地， **_wpopen**和 **_popen**的行為相同。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -171,7 +171,7 @@ int main( void )
 }
 ```
 
-此輸出假定目前的目錄中只有一個`.c`檔案具有檔案名副檔名。
+此輸出假設目前目錄中只有一個檔案具有`.c`副檔名。
 
 ```Output
 Volume in drive C is CDRIVE
@@ -188,6 +188,6 @@ Process returned 0
 
 ## <a name="see-also"></a>另請參閱
 
-[程序與環境控制](../../c-runtime-library/process-and-environment-control.md)\
+[進程和環境控制](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

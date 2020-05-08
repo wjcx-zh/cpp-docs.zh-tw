@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341624"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911357"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -94,28 +94,28 @@ long long llroundl(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 要四捨五入的浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**lround**與**lround**函數會最接近**的長**或**長****long**整*數傳回*x 。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
+**Lround**和**llround**函式會將最接近的**長**整數或**長****長**整數傳回*x*。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|無|**_DOMAIN**|
+|± **QNAN**， **IND**|無|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用帶和返回**浮點**值和**長****雙**值的**lround**或**lround**的重載。 在C程式中 **,lround**和**lround**總是採取並傳回**一個雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**浮點**和**長****雙精度**值的**lround**或**llround**多載。 在 C 程式中， **lround**和**llround**一律會採用並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**lround,** **lroundf,** **lroundl,** **lround, lround,** **lroundf,** **lroundl, lroundl**|\<math.h>|
+|**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

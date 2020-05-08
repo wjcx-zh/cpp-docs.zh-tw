@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 3fb34a75a0281058a1d70ce41e1ce33b4b1bbb59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346140"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912721"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -53,13 +53,13 @@ size_t _fread_nolock_s(
 *緩衝區*<br/>
 資料的儲存位置。
 
-*緩衝區大小*<br/>
+*bufferSize*<br/>
 以位元組為單位的目的緩衝區大小。
 
-*元素大小*<br/>
+*elementSize*<br/>
 以位元組為單位的讀取項目大小。
 
-*元素計數*<br/>
+*elementCount*<br/>
 要讀取項目的最大數量。
 
 *資料流*<br/>
@@ -71,9 +71,9 @@ size_t _fread_nolock_s(
 
 ## <a name="remarks"></a>備註
 
-此函數是**fread_s**的非鎖定版本。 它與**fread_s**相同,只是它不受其他線程的干擾。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+此函式是**fread_s**的非鎖定版本。 它與**fread_s**相同，不同之處在于它不會受到保護，無法防止其他執行緒的干擾。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

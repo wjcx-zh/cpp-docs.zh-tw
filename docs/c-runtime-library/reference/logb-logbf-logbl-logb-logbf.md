@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341673"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911406"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -86,32 +86,32 @@ float _logbf(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**logb**將*x*的無偏指數值作為表示為浮點值的符號整數返回 x。
+**logb**會以浮點值表示的帶正負號整數，傳回*x*的非偏誤指數值。
 
 ## <a name="remarks"></a>備註
 
-**logb**函數提取浮點參數*x*的指數值,就像*x*以無限範圍表示一樣。 如果參數*x*非規範化,則將其視為規範化。
+**Logb**函式會將浮點引數*x*的指數值解壓縮，如同*x*是以無限範圍表示。 如果引數*x*反正規化，則會將它視為正規化。
 
-由於C++允許重載,因此可以調用獲取和返回**浮點**值或**長****雙精度值**的**logb**重載。 在 C 程式中 **,logb**始終取得並傳回**一個雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**logb**的多載。 在 C 程式中， **logb**一律會採用並傳回**雙精度浮點數**。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|• QNAN,IND|None|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|± QNAN，IND|無|_DOMAIN|
+|±0|ZERODIVIDE|_SING|
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
-|**紀錄**,**紀錄,****日誌**, **_logbf**|\<math.h>|
+|**logb**、 **logbf**、 **logbl**、 **_logbf**|\<math.h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

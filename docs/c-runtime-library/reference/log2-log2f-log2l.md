@@ -20,18 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341713"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911408"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -63,19 +63,19 @@ long double log2l(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 要用來判斷以 2 為底數之對數的值。
 
 ## <a name="return-value"></a>傳回值
 
-成功後,傳回回日誌 2 *x*。
+成功時，傳回 log2 *x*。
 
 否則，可能會傳回下列其中一個值：
 
 |問題|傳回|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* = |0|-INFINITY|
+|*x* = ±0|-INFINITY|
 |*x* = 1|+0|
 |+INFINITY|+INFINITY|
 |NaN|NaN|
@@ -86,15 +86,15 @@ long double log2l(
 
 ## <a name="remarks"></a>備註
 
-如果 x 是整數,則此函數實質上返回最重要的 1 位*x*的零基索引。
+如果 x 是整數，則此函式基本上會傳回最具重大1位*x*的以零為基底的索引。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**紀錄2**,**紀錄2f**, **log2l**|\<math.h>|\<cmath>|
+|**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

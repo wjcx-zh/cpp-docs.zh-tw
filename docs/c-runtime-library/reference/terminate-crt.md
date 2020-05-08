@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1aa95daeab424c933f10060fb4f87cb317aa188c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362548"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912215"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-呼叫[中止](abort.md)或使用**set_terminate**指定的函數。
+呼叫[abort](abort.md)或您使用**set_terminate**指定的函式。
 
 ## <a name="syntax"></a>語法
 
@@ -46,7 +46,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>備註
 
-**終止**函數用於C++異常處理,並在以下情況下調用:
+**Terminate**函式會與 c + + 例外狀況處理搭配使用，並在下列情況中呼叫：
 
 - 擲回的 C++ 例外狀況找不到相符的 catch 處理常式。
 
@@ -54,9 +54,9 @@ void terminate( void );
 
 - 堆疊在擲回例外狀況之後損毀。
 
-預設情況下**取消**呼叫[中止](abort.md)。 您可以通過編寫自己的終止函數並將函數**的名稱稱為參數**set_terminate來更改此預設值。 **終止**呼叫作為參數給出的最後一個函數**set_terminate**。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。
+依預設，**終止**呼叫會[中止](abort.md)。 您可以藉由撰寫自己的終止函式，並使用您的函式名稱做為其引數呼叫**set_terminate** ，來變更這個預設值。 **終止**會呼叫指定為引數的最後一個函式來**set_terminate**。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -119,4 +119,4 @@ term_func() was called by terminate().
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[意外](unexpected-crt.md)<br/>
+[意料](unexpected-crt.md)<br/>

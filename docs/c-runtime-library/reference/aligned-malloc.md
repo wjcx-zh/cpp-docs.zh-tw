@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3caf2e8a3160c5533dfdb5bb387b373daf16b6e7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350606"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912917"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -50,7 +50,7 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 要求的記憶體配置的大小。
 
 *對齊*<br/>
@@ -58,19 +58,19 @@ void * _aligned_malloc(
 
 ## <a name="return-value"></a>傳回值
 
-如果操作失敗,指向已分配的記憶體區塊的指標或 NULL。 指標是對齊的倍*數*。
+已配置之記憶體區塊的指標，如果作業失敗，則為 Null。 指標是*對齊*的倍數。
 
 ## <a name="remarks"></a>備註
 
-**_aligned_malloc**是基於[馬婁克](malloc.md)。
+**_aligned_malloc**是以[malloc](malloc.md)為基礎。
 
-**_aligned_malloc**標記`__declspec(noalias)`為`__declspec(restrict)`, 表示保證函數不修改全域變數,並且返回的指標不會別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+**_aligned_malloc**標示`__declspec(noalias)`為和`__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
 
-若記憶體配置失敗，或是要求的大小大於 `errno`，則此函式會將 `ENOMEM` 設為 `_HEAP_MAXREQ`。 如需 `errno` 的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外 **,_aligned_malloc**驗證其參數。 如果*對齊*不是 2 的功率或*大小*為零,則此函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,則此函數會傳回`errno`NULL 並`EINVAL`設定到 。
+若記憶體配置失敗，或是要求的大小大於 `errno`，則此函式會將 `ENOMEM` 設為 `_HEAP_MAXREQ`。 如需 `errno` 的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc**會驗證其參數。 如果*對齊*不是2的乘冪，或*大小*為零，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 Null，並`errno`將`EINVAL`設為。
 
-使用[_aligned_free](aligned-free.md)來解分配`_aligned_offset_malloc`**_aligned_malloc**和 獲得的記憶體。 不要使用`free`,這不能正確回收對齊的記憶體,並可能導致難以診斷的錯誤。
+使用[_aligned_free](aligned-free.md)來解除配置 **_aligned_malloc**和`_aligned_offset_malloc`所取得的記憶體。 請勿使用`free`，這不會正確地回收已對齊的記憶體，而且可能會導致難以診斷的錯誤。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

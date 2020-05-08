@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 2d2851a7e76a43501145b1e55e8028b72c2a8afb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348667"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913499"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -80,67 +80,67 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>參數
 
 *start_address*<br/>
-開始執行新執行緒之常式的起始位址。 對於 **_beginthread**,調用[約定__cdecl(](../../cpp/cdecl.md)對於本機代碼)或[__clrcall(](../../cpp/clrcall.md)對於託管代碼);對於 **_beginthreadex,**[它__stdcall(](../../cpp/stdcall.md)對於本機代碼)或[__clrcall(](../../cpp/clrcall.md)對於託管代碼)。
+開始執行新執行緒之常式的起始位址。 針對 **_beginthread**，呼叫慣例可能是[__cdecl](../../cpp/cdecl.md) （適用于機器碼）或[__clrcall](../../cpp/clrcall.md) （適用于 managed 程式碼）;針對 **_beginthreadex**，它可能是[__stdcall](../../cpp/stdcall.md) （適用于機器碼）或[__clrcall](../../cpp/clrcall.md) （適用于 managed 程式碼）。
 
 *stack_size*<br/>
 新執行緒堆疊大小或 0。
 
-*阿格列斯*<br/>
-要傳遞給新緒的參數清單或**NULL**。
+*arglist*<br/>
+要傳遞至新執行緒的引數清單，或為**Null**。
 
 *安全性*<br/>
-[SECURITY ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 結構的指標，這個結構會判斷子處理序是否可以繼承傳回的控制代碼。 如果*安全*為**NULL,** 則無法繼承該句柄。 對於 Windows 95 應用程式,必須**為 NULL。**
+[SECURITY ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 結構的指標，這個結構會判斷子處理序是否可以繼承傳回的控制代碼。 如果*Security*為**Null**，則無法繼承控制碼。 Windows 95 應用程式的必須是**Null** 。
 
 *initflag*<br/>
-控制新執行緒之初始狀態的旗標。 將*initflag*設置為 0 以立即運行,或**CREATE_SUSPENDED**以在掛起狀態下建立線程;使用[ResumeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread)執行線程。 將*initflag*設置為**STACK_SIZE_PARAM_IS_A_RESERVATION**標誌,以使用*stack_size*作為堆疊的初始保留大小(以位元組為單位);如果未指定此標誌 *,stack_size*指定提交大小。
+控制新執行緒之初始狀態的旗標。 將*initflag*設定為0以立即執行，或**CREATE_SUSPENDED**以建立暫停狀態的執行緒;使用[ResumeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread)來執行執行緒。 將*initflag*設定為**STACK_SIZE_PARAM_IS_A_RESER加值稅ION**旗標，以使用*stack_size*做為堆疊的初始保留大小（以位元組為單位）;如果未指定此旗標， *stack_size*會指定認可大小。
 
-*地addr*<br/>
-指向接收執行緒識別項的 32 位元變數。 如果是**NULL,** 則不使用。
+*thrdaddr*<br/>
+指向接收執行緒識別項的 32 位元變數。 如果是**Null**，則不會使用它。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功,這些函數中的每一個都會返回一個句柄到新創建的線程;如果成功,則每個函數都會向新創建的線程返回一個句柄。但是,如果新創建的線程退出速度過快 **,_beginthread**可能不會返回有效的句柄。 (請參閱備註部分的討論。在錯誤時 **,_beginthread**返回 -1L,如果線程太多,**則將 errno**設置為**EAGAIN;** 如果參數無效或堆疊大小不正確,則將錯誤設置為**EAGAIN;** 如果資源不足(如記憶體),則將錯誤設置為**EAGAIN。** 錯誤時 **,_beginthreadex**返回 0,並設置**errno**和 **_doserrno。**
+如果成功，所有這些函式都會將控制碼傳回至新建立的執行緒;不過，如果新建立的執行緒太快結束， **_beginthread**可能不會傳回有效的控制碼。 （請參閱「備註」一節中的討論）。發生錯誤時， **_Beginthread** 1L，而且如果有太多執行緒， **errno**會設定為**EAGAIN** ; 如果引數無效或堆疊大小不正確，則為**EINVAL** ，或如果資源不足（例如記憶體），則為**EACCES** 。 發生錯誤時， **_beginthreadex**會傳回0，並設定**errno**和 **_doserrno** 。
 
-如果*start_address*為**NULL,** 則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將**errno**設置為**EINVAL**並返回 -1。
+如果*start_address*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回-1。
 
-有關這些代碼和其他返回代碼的詳細資訊,請參閱[errno、_doserrno、_sys_errlist和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-有關**uintptr_t**的詳細資訊,請參閱[標準類型](../../c-runtime-library/standard-types.md)。
+如需**uintptr_t**的詳細資訊，請參閱[標準類型](../../c-runtime-library/standard-types.md)。
 
 ## <a name="remarks"></a>備註
 
-**_beginthread**函數創建一個線程,該線程開始在*start_address*處執行例程。 *start_address*的例程必須使用 **__cdecl(** 對於本機代碼)或 **__clrcall(** 對於託管代碼)調用約定,並且不應具有返回值。 執行緒從該常式返回時，就會自動終止。 如需執行緒的詳細資訊，請參閱[舊版程式碼的多執行緒支援 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
+**_Beginthread**函式會建立一個在*start_address*開始執行常式的執行緒。 *Start_address*的常式必須使用 **__cdecl** （適用于機器碼）或 **__clrcall** （適用于 managed 程式碼）呼叫慣例，而且不應該有傳回值。 執行緒從該常式返回時，就會自動終止。 如需執行緒的詳細資訊，請參閱[舊版程式碼的多執行緒支援 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
-**_beginthreadex**與 Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API 更類似於 **_beginthread。** **_beginthreadex**在以下方面不同於 **_beginthread:**
+**_beginthreadex**類似于 Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API，比 **_beginthread**更緊密。 **_beginthreadex**不同于 **_beginthread**的方式如下：
 
-- **_beginthreadex**有三個額外的參數 *:initflag,**安全和***執行緒 。** 新線程可以在具有指定安全性的掛起狀態下創建,並且可以使用*thrdaddr*(線程標識符)進行訪問。
+- **_beginthreadex**有三個額外的參數： *initflag*、 *Security*和**threadaddr**。 新執行緒可以使用指定的安全性在暫停狀態下建立，而且可以透過*thrdaddr*（也就是執行緒識別碼）來存取。
 
-- 傳遞給 *_beginthreadexstart_address*的例程必須使用 **__stdcall(** 對於本 **_beginthreadex**機代碼)或 **__clrcall(** 對於託管代碼)調用約定,並且必須返回線程退出代碼。
+- 傳遞至 **_beginthreadex**之*start_address*的常式必須使用 **__stdcall** （適用于機器碼）或 **__clrcall** （適用于 managed 程式碼）呼叫慣例，而且必須傳回執行緒結束代碼。
 
-- **_beginthreadex**在故障時返回 0,而不是 -1L。
+- **_beginthreadex**會在失敗時傳回0，而不是-1L。
 
-- 使用 **_beginthreadex**創建的線程由對[_endthreadex](endthread-endthreadex.md)的調用終止。
+- 使用 **_beginthreadex**建立的執行緒會藉由呼叫[_endthreadex](endthread-endthreadex.md)來終止。
 
-與 **_beginthread**相比 **,_beginthreadex**函數使您能夠對線程的創建方式進行更多的控制。 **_endthreadex**功能也更加靈活。 例如,使用 **_beginthreadex**,可以使用安全資訊、設置線程的初始狀態(運行或掛起),並獲取新創建的線程的線程標識符。 您還可以使用 **_beginthreadex**返回的線程句柄與同步 API 一起,而_beginthread無法執行該**操作。**
+**_Beginthreadex**函式可讓您更充分掌控執行緒的建立方式，而不是 **_beginthread**執行的工作。 **_Endthreadex**函數也更有彈性。 例如，使用 **_beginthreadex**，您可以使用安全性資訊、設定執行緒的初始狀態（執行中或已暫停），以及取得新建立執行緒的執行緒識別碼。 您也可以使用 **_beginthreadex**所傳回的執行緒控制碼搭配同步處理 api，而不能使用 **_beginthread**執行此動作。
 
-使用 **_beginthreadex**比 **_beginthread**更安全。 如果 **_beginthread**生成的線程快速退出,則返回給 **_beginthread**調用方的句柄可能無效或指向另一個線程。 但是 **,_beginthreadex**返回的句柄必須由 **_beginthreadex**的調用方關閉,因此,如果 **_beginthreadex**未返回錯誤,則保證該句柄是有效的句柄。
+使用 **_beginthreadex**比 **_beginthread**更安全。 如果 **_beginthread**產生的執行緒很快結束，傳回 **_beginthread**呼叫端的控制碼可能會無效，或指向另一個執行緒。 不過， **_beginthreadex**所傳回的控制碼必須由 **_beginthreadex**的呼叫端關閉，因此，如果 **_beginthreadex**未傳回錯誤，則保證會是有效的控制碼。
 
-您可以顯式調用[_endthread](endthread-endthreadex.md)或 **_endthreadex**以終止線程;否則,您可以顯式調用線程。但是,當線程從作為參數傳遞的例程返回時,將自動調用 **_endthread**或 **_endthreadex。** 終止調用 **_endthread**或 **_endthreadex**的線程有助於確保正確恢復分配給該線程的資源。
+您可以呼叫[_endthread](endthread-endthreadex.md)或明確地 **_endthreadex**以終止執行緒;不過，當執行緒從做為參數傳遞的常式返回時，會自動呼叫 **_endthread**或 **_endthreadex** 。 使用 **_endthread**或 **_endthreadex**的呼叫來終止執行緒，有助於確保正確復原配置給執行緒的資源。
 
-**_endthread**自動關閉線程句柄,而 **_endthreadex**則不關閉線程句柄。 因此,當您使用 **_beginthread**和 **_endthread**時,不要通過調用 Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API 顯式關閉線程句柄。 這個行為與 Win32 [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) 應用程式開發介面不同。
+**_endthread**會自動關閉執行緒控制碼，而 **_endthreadex**則不會。 因此，當您使用 **_beginthread**和 **_endthread**時，請不要藉由呼叫 Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API 來明確地關閉執行緒控制碼。 這個行為與 Win32 [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) 應用程式開發介面不同。
 
 > [!NOTE]
-> 對於與 Libcmt.lib 連結的可執行檔,不要調用 Win32 **ExitThread** API,以免阻止運行時系統回收已分配的資源。 **_endthread****和_endthreadex**回收分配的線程資源,然後呼叫**ExitThread**。
+> 對於與 Libcmt.lib 連結的可執行檔，請勿呼叫 Win32 **ExitThread** API，如此就不會防止執行時間系統回收配置的資源。 **_endthread**和 **_endthreadex**回收已配置的執行緒資源，然後呼叫**ExitThread**。
 
-調用 **_beginthread**或 **_beginthreadex**時,操作系統處理堆疊的分配;您不必將線程堆疊的位址傳遞給這些函數中的任何一個。 此外 *,stack_size*參數可以是 0,在這種情況下,操作系統使用的值與為主線程指定的堆疊相同的值。
+當呼叫 **_beginthread**或 **_beginthreadex**時，作業系統會處理堆疊的配置;您不需要將執行緒堆疊的位址傳遞給其中一個函式。 此外， *stack_size*引數可以是0，在此情況下，作業系統會使用與為主執行緒指定的堆疊相同的值。
 
-*arglist*是要傳遞給新創建的線程的參數。 這通常是資料項目的位址，例如字元字串。 如果不需要 *,arglist*可以是**NULL,****但必須**_beginthread和 **_beginthreadex**才能傳遞給新線程。 如果任何線程呼叫[中止](abort.md)、**退出****、_exit**或**退出進程**,則所有線程都終止。
+*arglist*是要傳遞給新建立執行緒的參數。 這通常是資料項目的位址，例如字元字串。 如果不需要， *arglist*可以是**Null** ，但 **_beginthread**和 **_beginthreadex**必須提供一些值，才能傳遞給新的執行緒。 如果任何執行緒呼叫[abort](abort.md)、 **exit**、 **_exit**或**ExitProcess**，則所有線程都會終止。
 
-使用每個進程全域當前區域設置資訊初始化新線程區域設置。 如果每個線程區域設置透過呼叫[_configthreadlocale(](configthreadlocale.md)全域或僅針對新線程)啟用,則執行緒可以透過調用**setlocale**或 **_wsetlocale**獨立於其他執行緒更改其區域設定。 沒有每個線程區域設置標誌集的線程可能會影響所有其他線程中區域設置資訊,這些線程也沒有設置每個線程區域設置標誌集,以及所有新創建的線程。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+新執行緒的地區設定會使用每個進程的全域目前地區設定資訊來初始化。 如果對[_configthreadlocale](configthreadlocale.md)的呼叫（全域或僅限新的執行緒）啟用個別執行緒地區設定，則執行緒可以藉由呼叫**setlocale**或 **_wsetlocale**，獨立變更其地區設定。 未設定每個執行緒地區設定旗標的執行緒，可能會影響所有其他執行緒中也不會設定每個執行緒地區設定旗標的地區設定資訊，以及所有新建立的執行緒。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-對於 **/clr**代碼 **,_beginthread**和 **_beginthreadex**各有兩個重載。 一個採用本機調用約定函數指標,另一個採用 **__clrcall**函數指標。 第一個多載版本不是應用程式定義域安全的，而且永遠不會是。 如果要編寫 **/clr**代碼,必須確保新線程在訪問託管資源之前輸入正確的應用程式域。 例如，您可以使用 [call_in_appdomain 函式](../../dotnet/call-in-appdomain-function.md)來達成這個目的。 第二個重載是應用程序域安全;新創建的線程將始終位於 **_beginthread**或 **_beginthreadex**調用方的應用程式域中。
+針對 **/clr**程式碼， **_beginthread**和 **_beginthreadex**都有兩個多載。 其中一個會採用原生呼叫慣例函式指標，另一個則會接受 **__clrcall**的函式指標。 第一個多載版本不是應用程式定義域安全的，而且永遠不會是。 如果您要撰寫 **/clr**程式碼，您必須先確定新的執行緒進入正確的應用程式域，然後才會存取受控資源。 例如，您可以使用 [call_in_appdomain 函式](../../dotnet/call-in-appdomain-function.md)來達成這個目的。 第二個多載是應用程式域安全的;新建立的執行緒一律會出現在 **_beginthread**或 **_beginthreadex**呼叫端的應用程式域中。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -155,11 +155,11 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 僅限 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md) 的多執行緒版本。
 
-要使用 **_beginthread**或 **_beginthreadex,** 應用程式必須與其中一個多線程 C 運行時庫連結。
+若要使用 **_beginthread**或 **_beginthreadex**，應用程式必須與其中一個多執行緒 C 執行時間程式庫連結。
 
 ## <a name="example"></a>範例
 
-下面的示例使用 **_beginthread**和 **_endthread。**
+下列範例會使用 **_beginthread**和 **_endthread**。
 
 ```C
 // crt_BEGTHRD.C
@@ -279,7 +279,7 @@ void Bounce( void * parg )
 
 ## <a name="example"></a>範例
 
-以下範例代碼展示如何使用 **_beginthreadex**與同步API [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject)一起返回的線程句柄。 主執行緒會等待第二個執行緒終止後，再繼續執行。 當第二個線程調用 **_endthreadex**,它會導致其線程對象進入信號狀態。 這樣可讓主執行緒繼續執行。 這不能用 **_beginthread**和 **_endthread,** 因為 **_endthread**調用**CloseHandle,** 這將線上程物件設置為信號狀態之前銷毀它。
+下列範例程式碼示範如何使用 **_beginthreadex**所傳回的執行緒控制碼與同步處理 API [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject)。 主執行緒會等待第二個執行緒終止後，再繼續執行。 當第二個執行緒呼叫 **_endthreadex**時，它會使其執行緒物件移至已發出信號的狀態。 這樣可讓主執行緒繼續執行。 這無法使用 **_beginthread**和 **_endthread**來完成，因為 **_endthread**會呼叫**CloseHandle**，這會先終結執行緒物件，然後才可以將它設定為已發出信號的狀態。
 
 ```cpp
 // crt_begthrdex.cpp

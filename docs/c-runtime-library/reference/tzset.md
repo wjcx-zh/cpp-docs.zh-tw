@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: b2537a3bbfd2b5cec6bdf149c520aac7e3344b1e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362190"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912139"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -50,41 +50,41 @@ void _tzset( void );
 
 ## <a name="remarks"></a>備註
 
-**_tzset**函數使用環境變數**TZ**的目前設定值分配給三個全域變數 **:_daylight、_timezone****_timezone**和 **_tzname**。 這些變數由[_ftime](ftime-ftime32-ftime64.md)和[本地時間](localtime-localtime32-localtime64.md)函數用於從協調的通用時間 (UTC) 到本地時間進行修正,以及根據系統時間計算 UTC[的時間](time-time32-time64.md)函數。 使用以下語法設定**TZ**環境變數:
+**_Tzset**函式會使用環境變數**TZ**的目前設定，將值指派給三個全域變數： **_daylight**、 **_timezone**和 **_tzname**。 [_Ftime](ftime-ftime32-ftime64.md)和[localtime](localtime-localtime32-localtime64.md)函式會使用這些變數來進行國際標準時間（UTC）到本地時間的更正，並由[time](time-time32-time64.md)函數用來計算系統時間的 UTC。 使用下列語法設定**TZ**環境變數：
 
-> **設定 TZ_** **-**_tzn_ \[ **+**&#124;=*hh*\[**:**_mm_\[**:**_ss_= =*dzn*|
+> **set TZ =**_tzn_ \[ **+**&#124;**-**]*hh*\[**：**_mm_\[**：**_ss_]] [*dzn*]
 
 |參數|描述|
 |-|-|
-| *茨恩* | 三個字母的時區名稱，例如 PST (太平洋標準時間)。 您必須指定從本地時間到 UTC 的正確位移。 |
+| *tzn* | 三個字母的時區名稱，例如 PST (太平洋標準時間)。 您必須指定從本地時間到 UTC 的正確位移。 |
 | *hh* | UTC 與本地時間之間的時間差異 (小時)。 正值可選用正號 (+)。 |
-| *公釐* | 分鐘。 由冒號 **()** 與*hh*分離 。 |
-| *ss* | 秒鐘。 由冒號 **()** 與*mm*分隔。 |
-| *德茲* | 三個字母的日光節約時區例如 PDT。 如果夏令時在局部地區從未有效,則設置**TZ**而不為*dzn*的值。 C 執行階段程式庫會在實作日光節約時間 (DST) 的計算時，假定使用美國的規則。 |
+| *mm* | 分鐘。 以冒號（**：**）分隔與*hh* 。 |
+| *ss* | 秒鐘。 *以冒號*（**：**）分隔。 |
+| *dzn* | 三個字母的日光節約時區例如 PDT。 如果日光節約時間永遠不會在位置生效，請設定**TZ** ，而不使用*dzn*的值。 C 執行階段程式庫會在實作日光節約時間 (DST) 的計算時，假定使用美國的規則。 |
 
 > [!NOTE]
 > 要特別小心運算時間差異的正負號。 因為時間差異是從本地時間到 UTC (而不是從 UTC 到本地時間) 的位移，正負號可能與您直覺的預期相反。 早於 UTC 的時區，時間差異為負數；晚於 UTC 的時區，時間差異為正數。
 
-例如,要將**TZ**環境變數設定為對應於德國的當前時區,請在命令列上輸入以下內容:
+例如，若要設定**TZ**環境變數以對應至德國目前的時區，請在命令列上輸入下列內容：
 
-> **設定 TZ=GST-1GDT**
+> **設定 TZ = GST-1GDT**
 
 此命令會使用 GST 表示德國標準時間，並假設 UTC 比德國晚一小時 (也就是說，德國比 UTC 快一個小時) 以及德國會遵守日光節約時間。
 
-如果未設置**TZ**值,**則_tzset**嘗試使用作業系統指定的時區資訊。 在 Windows 作業系統中，這項資訊是在 [控制台] 的 [日期/時間] 應用程式中指定。 如果 **_tzset**無法獲得此資訊,則默認情況下使用 PST8PDT,這表示太平洋時區。
+如果未設定**TZ**值， **_tzset**會嘗試使用作業系統所指定的時區資訊。 在 Windows 作業系統中，這項資訊是在 [控制台] 的 [日期/時間] 應用程式中指定。 如果 **_tzset**無法取得這項資訊，則預設會使用 PST8PDT，這表示太平洋時區。
 
-根據**TZ**環境變數值,當調用 **_tzset**時,將以下值分配給 **_daylight、_timezone**和 **_tzname**的全域變數: **_timezone**
+根據**TZ**環境變數值，當呼叫 **_tzset**時，會將下列值指派給全域變數 **_daylight**、 **_timezone**和 **_tzname** ：
 
 |全域變數|描述|預設值|
 |---------------------|-----------------|-------------------|
-|**_daylight**|如果在**TZ**設置中指定了夏令時區域,則非零值;否則,0。|1|
+|**_daylight**|如果在**TZ**設定中指定日光節約時區，則為非零值;否則為0。|1|
 |**_timezone**|傳回本地時間與 UTC 之間的時差 (秒)。|28800 (28800 秒等於 8 小時)|
-|**_tzname**[0]|**來自 TZ**環境變數的時區名稱的字串值;如果**TZ**尚未設置,則為空。|PST|
-|**_tzname**[1]|夏令時區域的字串值;如果**從 TZ**環境變數中省略夏令時區域,則為空。|PDT|
+|**_tzname**[0]|**TZ**環境變數中的時區名稱字串值;如果尚未設定**TZ** ，則為空白。|PST|
+|**_tzname**[1]|日光節約時區的字串值;若從**TZ**環境變數省略日光節約時區，則為空白。|PDT|
 
-上表中顯示**的_daylight**和 **_tzname**陣列的預設值對應於「PST8PDT」。。 如果從**TZ**環境變數中省略 DST 區域,**則_daylight**的值為 0,[並且 _ftime、gmtime](ftime-ftime32-ftime64.md)和[本地時間](localtime-localtime32-localtime64.md)函[gmtime](gmtime-gmtime32-gmtime64.md)數返回 0 的 DST 標誌。
+上表中顯示的 **_daylight**和 **_tzname**陣列的預設值會對應至 "PST8PDT"。 若從**TZ**環境變數省略了 DST 區域， **_daylight**的值為0，而[_ftime](ftime-ftime32-ftime64.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)和[localtime](localtime-localtime32-localtime64.md)函式會針對其 DST 旗標傳回0。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -92,7 +92,7 @@ void _tzset( void );
 |-------------|---------------------|
 |**_tzset**|\<time.h>|
 
-**_tzset**功能特定於 Microsoft。 如需詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+**_Tzset**函式是 Microsoft 特有的功能。 如需詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344325"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913761"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -52,11 +52,11 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>傳回值
 
-傳回目前的 (預設值) 磁碟機 (1 = A、2 = B，等等)。 返回值為零表示當前路徑不以字母驅動器名稱(如 UNC 路徑)開頭。 或者,這意味著內部緩衝區分配失敗。 若內部分配失敗,`errno`則設定為 ENOMEM。
+傳回目前的 (預設值) 磁碟機 (1 = A、2 = B，等等)。 傳回值為零表示目前路徑的開頭不是字母磁片磁碟機名稱，例如 UNC 路徑。 或者，這表示內部緩衝區配置失敗。 如果內部配置失敗， `errno`會設定為 ENOMEM。
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

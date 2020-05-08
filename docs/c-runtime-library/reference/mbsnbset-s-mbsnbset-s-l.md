@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 0ecfac1f9c0f1f9aeb8de85411b0b2f696b578e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81339015"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915540"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s、_mbsnbset_s_l
 
-將多位元組位元串的第一個**n**位元組設定為指定的字元。 這些是 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
+將多位元組字元字串的前**n**個位元組設為指定的字元。 這些是 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
 > 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
@@ -85,19 +85,19 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 待變更字串。
 
-*大小*<br/>
+*size*<br/>
 字串緩衝區的大小。
 
-*C*<br/>
+*c*<br/>
 單一位元組或多位元組字元的設定。
 
-*count*<br/>
+*計數*<br/>
 要設定的位元組數目。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -106,19 +106,19 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="remarks"></a>備註
 
-**_mbsnbset_s**和 **_mbsnbset_s_l**函數最多設置*str*到*c*的第一個*計數*位元組。 如果*計數*大於*str*的長度,則使用*str*的長度而不是*計數*。 如果*c*是多位元位元元,並且不能完全設定為由*count*指定的最後一個字節,則最後一個字節將填充一個空白字元。 **_mbsnbset_s**和 **_mbsnbset_s_l**不會在*str*的末尾放置終止 null。
+**_Mbsnbset_s**和 **_mbsnbset_s_l**函數最多可將*str*的第一個*計數*位元組設定為*c*。 如果*count*大於*str*的長度，則會使用*str*的長度，而不是*count*。 如果*c*是多位元組字元，而且無法完全設定為依*count*指定的最後一個位元組，則最後一個位元組會以空白字元填補。 **_mbsnbset_s**和 **_mbsnbset_s_l**不會在*str*結尾處放置終止的 null。
 
-**_mbsnbset_s**和 **_mbsnbset_s_l**類似於 **_mbsnset,** 只是它們設定*計數*位元組而不是*計算* *c*的字元。
+**_mbsnbset_s**和 **_mbsnbset_s_l**與 **_mbsnset**相似，不同之處在于它們會設定*count*個位元組，而非*c*的*計數*字元。
 
-如果*str*為**NULL**或*計數*為零,則此函數將生成無效參數異常,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行 **,errno**將設定為**EINVAL,** 並且函數傳回**NULL**。 此外,如果*c*不是有效的多位元位元,**則 errno**設置為**EINVAL,** 並改用空格。
+如果*str*為**Null**或*count*為零，則此函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。 此外，如果*c*不是有效的多位元組字元， **errno**會設為**EINVAL** ，而會改用空格。
 
-輸出值受區域設置**LC_CTYPE**類別設置的影響;有關詳細資訊[,請參閱集本地設置_wsetlocale。](setlocale-wsetlocale.md) 此函數**的_mbsnbset_s**版本使用此與區域設置相關的行為的當前區域設置;**_mbsnbset_s_l**版本相同,只是它使用傳入區域設置參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定之**LC_CTYPE**分類設定的影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函式的 **_mbsnbset_s**版本會針對此與地區設定相關的行為使用目前的地區設定;**_mbsnbset_s_l**版本相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，樣板多載簡化了這些函式的使用方式；此多載可自動推斷緩衝區長度，因此不須指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -162,7 +162,7 @@ After:  **** is a test
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

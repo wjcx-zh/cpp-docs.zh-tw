@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346561"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914945"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -84,13 +84,13 @@ long double fmal(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 要相乘的第一個值。
 
-*Y*<br/>
+*y*<br/>
 要相乘的第二個值。
 
-*Z*<br/>
+*z*<br/>
 要加入的值。
 
 ## <a name="return-value"></a>傳回值
@@ -101,28 +101,28 @@ long double fmal(
 
 |問題|傳回|
 |-----------|------------|
-|*x* = *INFINITY,y* = 0 或<br /><br /> *x* = *0,y* = INFINITY|NaN|
-|*x*或*y* = 精確 = *INFINITY,z* = 帶相反符號的 INFINITY|NaN|
+|*x* = 無限大、 *y* = 0 或<br /><br /> *x* = 0、 *y* = 無限大|NaN|
+|*x*或*y* = 精確的±無限大， *z* = 無限大且正負號相反|NaN|
 |*x*或*y* = NaN|NaN|
-|不 *(x* = *0,y*= 無限期)和*z* = NaN<br /><br /> 不 *(x*=不確定 *,y*=0)和*z* = NaN|NaN|
-|溢位範圍錯誤|[HUGE_VAL、HUGE_VALF 或 HUGE_VALL|
+|not （*x* = 0， *y*= 不定）和*z* = NaN<br /><br /> not （*x*= 不定， *y*= 0）和*z* = NaN|NaN|
+|溢位範圍錯誤|± HUGE_VAL、± HUGE_VALF 或± HUGE_VALL|
 |反向溢位範圍錯誤|四捨五入後的正確值。|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用獲取和返回**浮點**和**長****雙**類型的**fma**的重載。 在 C 程式中 **,fma**始終取得並傳回**一個雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**fma**的多載。 在 C 程式中， **fma**一律會採用並傳回**雙精度浮點數**。
 
 此函式會計算值，就像它採用無限精確度，然後將最終結果進行四捨五入。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**fma**、 **fmaf**、 **fmal**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

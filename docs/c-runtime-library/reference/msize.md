@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 7d5f62bd6111a305c18b0ee19bb6d3e90f2ddb49
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc8eef0d28f649340715edbf4b1ebdfea85c2ff2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338671"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914614"
 ---
 # <a name="_msize"></a>_msize
 
@@ -55,17 +55,17 @@ size_t _msize(
 
 ## <a name="return-value"></a>傳回值
 
-**_msize**將大小(以位元組為單位)作為無符號整數返回。
+**_msize**會傳回不帶正負號整數的大小（以位元組為單位）。
 
 ## <a name="remarks"></a>備註
 
-**_msize**函數返回調用 call call **call、malloc**或**calloc****realloc**分配的 記憶體塊的大小(以位元組為單位)。
+**_Msize**函式會傳回呼叫**calloc**、 **malloc**或**realloc**所配置之記憶體區塊的大小（以位元組為單位）。
 
-當應用程式連結到 C 執行時庫的除錯版本時 **,_msize**解析為[_msize_dbg](msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_msize**會解析成[_msize_dbg](msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-這個函式會驗證其參數。 如果*memblock*是空指標 **,_msize**呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理了錯誤,函數將**errno**設置到**EINVAL**並返回 -1。
+這個函式會驗證其參數。 如果*memblock*為 null 指標， **_msize**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤，函式會將**errno**設定為**EINVAL** ，並傳回-1。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

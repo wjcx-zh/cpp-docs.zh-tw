@@ -22,7 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: b0aaa670cb6aa5af9e6f8a28234ba5c442d2f633
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365049"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911148"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
@@ -120,39 +120,39 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 以 Null 終止的待搜尋字串。
 
-*C*<br/>
+*c*<br/>
 待找出的字元。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-傳回指向*str*中*c*的最後一個出現的指標,如果找不到*c,* 則傳回 NULL。
+傳回*str*中*c*的最後一次出現的指標，如果找不到*c*則傳回 Null。
 
 ## <a name="remarks"></a>備註
 
-函數`strrchr`在*str*中尋找*c(* 轉換為**字元**)的最後一次出現。 搜尋包含終止的 Null 字元。
+函式會在 str 中尋找*c* （轉換成**char**）的最後一次出現。 *str* `strrchr` 搜尋包含終止的 Null 字元。
 
 `wcsrchr` 和 `_mbsrchr` 是寬字元和多位元組字元版本的 `strrchr`。 `wcsrchr` 的引數和傳回值是寬字元字串；`_mbsrchr` 的引數則是多位元組字元字串。
 
-在 C 中,這些函數為第一個參數採用**const**指標。 在 C++ 中，可使用兩個多載。 帶指標到**const**的重載返回指向**const 的**指標。將指標指向非**const**的版本傳回指向非**const 的**指標。 如果這些函數的**const**版本和非**const**版本都可用,則定義宏_CRT_CONST_CORRECT_OVERLOADS。 如果兩C++重載都需要非**const**行為,請定義符號_CONST_RETURN。
+在 C 中，這些函式接受第一個引數的**const**指標。 在 C++ 中，可使用兩個多載。 採用**const**指標的多載會傳回**const**的指標。接受非**const**指標的版本會傳回非**const**的指標。 如果這些函式的**CONST**和非**const**版本都可以使用，則會定義宏 _CRT_CONST_CORRECT_OVERLOADS。 如果您需要這兩個 c + + 多載的非**const**行為，請定義符號 _CONST_RETURN。
 
-`_mbsrchr` 會驗證其參數。 如果*str*為 NULL,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,`errno`則設定為 EINVAL 並`_mbsrchr`傳回 0。 `strrchr` 和 `wcsrchr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
+`_mbsrchr` 會驗證其參數。 如果*str*為 Null，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， `errno`會設定為 EINVAL，並`_mbsrchr`傳回0。 `strrchr` 和 `wcsrchr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
 
-輸出值受區域設置LC_CTYPE類別設置的影響;有關詳細資訊,請參閱[設定區域設定](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定之 LC_CTYPE 分類設定的影響;如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
-|**不要適用**|**不要適用**|`_mbsrchr_l`|**不要適用**|
+|**n/a**|**n/a**|`_mbsrchr_l`|**n/a**|
 
 ## <a name="requirements"></a>需求
 
@@ -170,8 +170,8 @@ const unsigned char *_mbsrchr_l(
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

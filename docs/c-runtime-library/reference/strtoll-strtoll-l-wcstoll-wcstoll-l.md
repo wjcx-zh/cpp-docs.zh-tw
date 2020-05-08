@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - _tcstoll function
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
-ms.openlocfilehash: d5a0ce8cb2c1d5f88d5439b99047609b32c8d2ec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2cb8d47ce9f045d3652d1523d1f39c8be72f8997
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365183"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912447"
 ---
 # <a name="strtoll-_strtoll_l-wcstoll-_wcstoll_l"></a>strtoll、_strtoll_l、wcstoll、_wcstoll_l
 
-將字串轉換為**長****長**值。
+將字串轉換成**長****長**的值。
 
 ## <a name="syntax"></a>語法
 
@@ -85,61 +85,61 @@ long long _wcstoll_l(
 *strSource*<br/>
 以 Null 終止的待轉換字串。
 
-*端點*<br/>
+*endptr*<br/>
 停止掃描的字元指標。
 
 *base*<br/>
 要使用的數字基底。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-**strtoll**傳回字串*strSource*中表示的值,除非表示形式將導致溢出時, 在這種情況下,它將返回**LLONG_MAX**或**LLONG_MIN**。 如果沒有任何轉換可執行，函式會傳回 0。 **wcstoll**返回值類似於**strto。**
+**strtoll**會傳回字串*strSource*中所表示的值，但標記法會造成溢位（在此情況下，它會傳回**LLONG_MAX**或**LLONG_MIN**。 如果沒有任何轉換可執行，函式會傳回 0。 **wcstoll**會傳回類似至**strtoll**的值。
 
-**LLONG_MAX**和**LLONG_MIN**在「限制」中定義。H。
+**LLONG_MAX**和**LLONG_MIN**是以限制的方式定義。H.
 
-如果*strSource*為**NULL**或*基值*為非零,並且小於 2 或大於 36,**則 errno**設定為**EINVAL**。
+如果*strSource*為**Null** ，或是*基底*為非零且小於2或大於36，則**errno**會設定為**EINVAL**。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**strt函數**將*strSource*轉換為**長****長**。 這兩個函數停止讀取字串*strSource*的第一個字元,他們無法識別為數位的一部分。 這可能是終止空字元,或者它可能是大於或等於*基*的第一個數位字元。 **wcstoll**是一個寬字元版本的**Strtoll;** 其*strSource*參數是寬字元字串。 除此之外，這些函式的行為相同。
+**Strtoll**函數會將*strSource*轉換成**長****長**的時間。 這兩個函式會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 null 字元，或者它可能是大於或等於*base*的第一個數位字元。 **wcstoll**是寬字元版本的**strtoll**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstoll**|**斯特托爾**|**斯特托爾**|**wc斯托爾**|
+|**_tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
 |**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
-區域設置**LC_NUMERIC**類別設置決定了*strSource*中半徑字元的識別;有關詳細資訊,請參閱[設定區域設置,_wsetlocale](setlocale-wsetlocale.md)。 沒有 **_l**後綴的函數使用當前區域設置;但是,沒有_l後綴的函數使用當前區域設置。**_strtoll_l**和 **_wcstoll_l**與沒有後綴的相應函數相同,只不過它們使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+地區設定的**LC_NUMERIC**類別設定會決定*strSource*中的基底字元辨識;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 沒有 **_l**尾碼的函式會使用目前的地區設定;**_strtoll_l**和 **_wcstoll_l**與沒有尾碼的對應函式相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*端點*不是**NULL,** 則指向停止掃描的字元的指標儲存在*端點指向*的位置。 如果無法執行轉換(未找到有效數位或指定了無效的基),*則 strSource*的值儲存在*endptr*指向的位置。
+如果*endptr*不是**Null**，則停止掃描的字元指標會儲存在*endptr*所指向的位置。 如果無法執行任何轉換（找不到任何有效的數位或指定了不正確基底），則*strSource*的值會儲存在*endptr*所指向的位置。
 
-**strtoll**希望*strSource*指向以下形式的字串:
+**strtoll**預期*strSource*會指向下列格式的字串：
 
-> [*空白 ]*[**+** **-**&#124; ][**0** ] **x** &#124; **x** [*]* 數字&#124;*字母**
+> [*空格*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*數位*&#124;*字母*]
 
-*空格*可以由忽略的空格和制表符組成;*數位*是一個或多個十進位數位;*字母*是一個或多個字母"a"到"z"(或"A"到"Z")。 不符合此格式的第一個字元會停止掃描。 如果*基數*介於 2 和 36 之間,則用作數位的基數。 如果*基為*0,則*strSource*指向的字串的初始字元用於確定基。 如果第一個字元為 '0'，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如,如果*基為*0,掃描的第一個字元為"0",則假定八進位整數,並且「8」或「9」字元停止掃描。
+空白字元*可能是*由空格和定位字元所組成，這些字元會被忽略;*數位*是一或多個十進位數;*字母*是一個或多個字母 ' a ' 到 ' z ' （或 ' a ' 到 ' z '）。 不符合此格式的第一個字元會停止掃描。 如果*base*介於2到36之間，則會使用它做為數位的基底。 如果*base*為0，則會使用*strSource*所指向之字串的初始字元來判斷基底。 如果第一個字元為 '0'，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*base*為0，而第一個掃描的字元是 ' 0 '，則假設為八進位整數，而 ' 8 ' 或 ' 9 ' 字元會停止掃描。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**斯托爾 ,** **_strtoll_l**|\<stdlib.h>|
-|**_wcstoll_l** **_wcstoll_l**|\<stdlib.h> 或 \<wchar.h>|
+|**strtoll**， **_strtoll_l**|\<stdlib.h>|
+|**wcstoll**， **_wcstoll_l**|\<stdlib.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [字串轉換為數值函式](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

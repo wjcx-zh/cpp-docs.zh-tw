@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 061c5647b2c5a5e79b017cf93989f62ad19cfc0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338759"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919133"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s、_wmktemp_s
 
@@ -72,11 +72,11 @@ errno_t _wmktemp_s(
 
 ### <a name="parameters"></a>參數
 
-*名稱範本*<br/>
+*nameTemplate*<br/>
 檔案名稱模式。
 
-*大小在查理斯*<br/>
-**_mktemp_s**中以單位元位位元表示緩衝區的大小;**_wmktemp_s**中的寬字元,包括空終止符。
+*sizeInChars*<br/>
+緩衝區大小 **_mktemp_s**中的單一位元組字元;**_wmktemp_s**中的寬字元，包括 null 結束字元。
 
 ## <a name="return-value"></a>傳回值
 
@@ -84,21 +84,21 @@ errno_t _wmktemp_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*名稱範本*|*大小在查理斯*|傳回值|*名稱樣本*中的新值|
+|*nameTemplate*|*sizeInChars*|傳回值|*NameTemplate*中的新值|
 |----------------|-------------------|----------------------|-------------------------------|
-|**空**|任意|**埃因瓦爾**|**空**|
-|格式不正確(有關正確格式,請參閱備註部分)|任意|**埃因瓦爾**|空字串|
-|任意|<= X 的數目|**埃因瓦爾**|空字串|
+|**Null**|任意|**EINVAL**|**Null**|
+|不正確的格式（請參閱備註區段以取得正確的格式）|任意|**EINVAL**|空字串|
+|任意|<= X 的數目|**EINVAL**|空字串|
 
-如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續 **,errno**設定為**EINVAL,** 函數傳回**EINVAL**。
+如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_mktemp_s**函數透過修改*nameTemplate*參數建立唯一的檔名,以便在呼叫後 *,nameTemplate*指標指向包含新檔名的字串。 **_mktemp_s**根據需要自動處理多位元位元串參數,根據運行時系統當前使用的多位元組碼頁識別多位元組字串序列。 **_wmktemp_s**是 **_mktemp_s**的寬字元版本;**_wmktemp_s**的參數是寬字元字串。 **_wmktemp_s**和 **_mktemp_s**行為相同,除非 **_wmktemp_s**不處理多位元組位元串。
+**_Mktemp_s**函式會藉由修改*nameTemplate*引數來建立唯一的檔案名，因此在呼叫之後， *nameTemplate*指標會指向包含新檔案名的字串。 **_mktemp_s**會自動將多位元組字元字串引數處理為適當，並根據執行時間系統目前使用的多位元組字碼頁來辨識多位元組字元序列。 **_wmktemp_s**是寬字元版本的 **_mktemp_s**;**_wmktemp_s**的引數是寬字元字串。 **_wmktemp_s**和 **_mktemp_s**的行為完全相同，不同之處在于 **_wmktemp_s**不會處理多位元組字元字串。
 
-這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -106,17 +106,17 @@ errno_t _wmktemp_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-*nameTemplate*參數具有表單**檔案 baseXXXXXX,** 其中*base*是您提供的新檔案名的一部分,每個 X 是 **_mktemp_s**提供的字元的佔位元。 *名稱樣本*中的每個佔位元字元都必須是大寫**X,_mktemp_s**保留*基,* 並將第一個尾隨 X 替換為字母字元。 **_mktemp_s**將以下尾隨 X 替換為五位值;此值是標識調用過程的唯一編號,或在多線程程序中標識調用線程。
+*NameTemplate*引數的格式為**baseXXXXXX**，其中*base*是您所提供之新檔案名的一部分，而每個 X 是 **_mktemp_s**所提供之字元的預留位置。 *NameTemplate*中的每個預留位置字元都必須是大寫 x。 **_mktemp_s**會保留*基底*，並以字母字元取代第一個尾端 X。 **_mktemp_s**以五位數的值取代下列尾端 X：這個值是識別呼叫進程或多執行緒程式中呼叫執行緒的唯一數位。
 
-每次成功呼叫 **_mktemp_s**變更*名稱樣本*。 在來自具有相同*名稱Template*參數的同一進程或線程的每個後續調用中 **,_mktemp_s**檢查與 **_mktemp_s**在以前的調用中返回的名稱匹配的檔名。 如果給定名稱不存在檔 **,_mktemp_s**返回該名稱。 如果以前返回的所有名稱都有檔 **,_mktemp_s**通過將以前返回的名稱中使用的字母字元替換為下一個可用小寫字母(按順序從"a"到"z")來創建新名稱。 例如,如果*基為*:
+每次成功呼叫 **_mktemp_s**都會修改*nameTemplate*。 在每次來自具有相同*nameTemplate*引數之相同進程或執行緒的後續呼叫中， **_mktemp_s**會檢查符合先前呼叫中 **_mktemp_s**所傳回之名稱的檔案名。 如果指定名稱的檔案不存在， **_mktemp_s**會傳回該名稱。 如果所有先前傳回的名稱都有檔案， **_mktemp_s**會藉由使用下一個可用的小寫字母（依序從 ' a ' 到 ' z '）來取代先前傳回的名稱中所用的字母字元，以建立新的名稱。 例如，如果*base*為：
 
-> **Fn**
+> **fn**
 
-**_mktemp_s**提供的五位值為 12345,傳回的第一個名稱是:
+**_mktemp_s**所提供的五位數值為12345，則傳回的第一個名稱為：
 
 > **fna12345**
 
-如果此名稱用於建立檔案 FNA12345,並且此檔仍然存在,則從具有相同*名稱樣本**基礎*的同一行程或線程呼叫時傳回的下一個名稱是:
+如果這個名稱是用來建立檔案 FNA12345，而且這個檔案仍然存在，則從相同進程或具有相同*nameTemplate* *基底*之執行緒的呼叫傳回的下一個名稱為：
 
 > **fnb12345**
 
@@ -124,7 +124,7 @@ errno_t _wmktemp_s(
 
 > **fna12345**
 
-**_mktemp_s**最多可以為*基本*值和*nameTemplate*值的任意給定組合創建 26 個唯一檔名。 因此,FNZ12345 是最後一個唯一的檔名 **_mktemp_s**可以為本示例中使用*的基礎*和*名稱範本*值創建。
+**_mktemp_s**最多可為*基底*和*nameTemplate*值的任何指定組合建立26個唯一的檔案名。 因此，FNZ12345 是最後一個唯一的檔案名， **_mktemp_s**可以為此範例中使用的*基底*和*nameTemplate*值建立此名稱。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 

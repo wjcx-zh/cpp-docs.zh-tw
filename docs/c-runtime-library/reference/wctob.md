@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910480"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,20 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>參數
 
-*瓦查爾*<br/>
+*wchar*<br/>
 要轉譯的值。
 
 ## <a name="return-value"></a>傳回值
 
-如果**wctob**成功轉換寬字元,則僅當多位元位元元正好是一個字節長時,它才會返回其多位元組字元表示形式。 如果**wctob**遇到寬字元,它不能轉換為多位元組位元元,或者多位元組位元符不完全是一個字節長,它將返回 -1。
+如果**wctob**成功轉換寬字元，則只有在多位元組字元剛好是一個位元組長時，才會傳回其多位元組字元標記法。 如果**wctob**遇到無法轉換成多位元組字元的寬字元，或多位元組字元的長度不是正好一個位元組，則會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-如果多位元元元正好是一個字節長,**則 wctob**函數將*wchar*中包含的寬字元轉換為返回**int**值傳遞的相應多位元字元。
+**Wctob**函式會將*wchar*中包含的寬字元轉換成傳回**int**值所傳遞的對應多位元組字元（如果多位元組字元剛好是一個位元組長）。
 
-如果**wctob**不成功,並且未找到相應的多位元組位元,則函數將**errno**設置到**EILSEQ**並返回 -1。
+如果**wctob**不成功，而且找不到對應的多位元組字元，則函式會將**Errno**設定為**EILSEQ** ，並傳回-1。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -74,7 +74,7 @@ int wctob(
 
 ## <a name="example"></a>範例
 
-此程式說明瞭**wcstombs**函數的行為。
+此程式說明**wcstombs**函數的行為。
 
 ```C
 // crt_wctob.c
@@ -109,7 +109,7 @@ Determined the corresponding multibyte character to be "A".
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

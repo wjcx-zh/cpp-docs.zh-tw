@@ -28,7 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -66,19 +66,19 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: 315a86c5cf7e58219bad25f2b6633dd91275c09f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 786c2bd2738bb82b3edac5c811ccfd3f9f8bc854
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320463"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920001"
 ---
 # <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 
 執行字串的不區分大小寫比較。
 
 > [!IMPORTANT]
-> **_mbsicmp**和 **_mbsicmp_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsicmp**和 **_mbsicmp_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -114,44 +114,44 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>參數
 
-*字串1*,*字串2*<br/>
+*string1*、 *string2*<br/>
 以 Null 結束的待比較字串。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-返回值指示*string1*到*string2*的關係,如下所示。
+傳回值表示*string1*到*string2*的關聯，如下所示。
 
 |傳回值|描述|
 |------------------|-----------------|
-|< 0|*字串1*小於*字串2*|
-|0|*字串1*與*字串2*相同|
-|> 0|*字串1*大於*字串2*|
+|< 0|*string1*小於*string2*|
+|0|*string1*與*string2*相同|
+|> 0|*string1*大於*string2*|
 
-在錯誤時 **,_mbsicmp**返回 **_NLSCMPERROR**,該返回\<在\<string.h> 和 mbstring.h>中定义。
+發生錯誤時， **_mbsicmp**會傳回 **_NLSCMPERROR**，其定義在\<string. h> 和\<g.> 中。
 
 ## <a name="remarks"></a>備註
 
-**_stricmp**函數在將每個字元轉換為小寫后,將*string1*和*string2*進行二級比較,並返回指示其關係的值。 **_stricmp**不同於 **_stricoll,****因為_stricmp**比較只受LC_CTYPE的影響,而**LC_CTYPE**決定了哪些字元是大寫字母和小寫字母。 **_stricoll**函數根據區域設置**LC_CTYPE**和**LC_COLLATE**類別比較字串,其中包括大小寫和排序規則。 關於**LC_COLLATE**類別的詳細資訊,請參考[設定區域設定](setlocale-wsetlocale.md)[與區域設定類別](../../c-runtime-library/locale-categories.md)。 沒有 **_l**後綴的這些函數的版本使用當前區域設置進行與區域設置相關的行為。 具有字尾的版本也一樣，只不過它們改用傳入的地區設定。 如果尚未設定地區設定，會使用 C 地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_Stricmp**函數序數會在將每個字元轉換成小寫之後，比較*string1*和*string2* ，並傳回表示其關聯性的值。 **_stricmp**不同于 **_stricoll** ， **_stricmp**的比較只會受到**LC_CTYPE**的影響，這會決定哪些字元是大寫和小寫。 **_Stricoll**函式會根據地區設定的**LC_CTYPE**和**LC_COLLATE**分類來比較字串，其中包括大小寫和定序順序。 如需**LC_COLLATE**類別目錄的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)和[地區設定分類](../../c-runtime-library/locale-categories.md)。 這些沒有 **_l**尾碼的函式版本，會針對地區設定相關的行為使用目前的地區設定。 具有字尾的版本也一樣，只不過它們改用傳入的地區設定。 如果尚未設定地區設定，會使用 C 地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
-> **_stricmp**相當於 **_strcmpi。** 它們可以互換使用,但 **_stricmp**是首選標準。
+> **_stricmp**相當於 **_strcmpi**。 它們可以交換使用，但 **_stricmp**是慣用的標準。
 
-**_strcmpi**函數等效於 **_stricmp,** 並且僅針對向後相容性提供。
+**_Strcmpi**函式相當於 **_stricmp** ，而且僅為回溯相容性而提供。
 
-由於 **_stricmp**進行小寫比較,因此可能會導致意外行為。
+因為 **_stricmp**會進行小寫比較，所以可能會導致非預期的行為。
 
-要說明**大小寫**轉換_stricmp何時影響比較結果,假定您具有兩個字串 JOHNSTON 和JOHN_HENRY。 字串 JOHN_HENRY 會被視為少於 JOHNSTON，因為 "_" 的 ASCII 值比小寫 S 更低。事實上，所有 ASCII 值在 96 和 91 之間的任何字元都會被視為小於任何字母。
+為了說明 **_stricmp**的大小寫轉換會如何影響比較的結果，假設您有兩個字串為約翰，並 JOHN_HENRY。 字串 JOHN_HENRY 會被視為少於 JOHNSTON，因為 "_" 的 ASCII 值比小寫 S 更低。事實上，所有 ASCII 值在 96 和 91 之間的任何字元都會被視為小於任何字母。
 
-如果使用[strcmp](strcmp-wcscmp-mbscmp.md)函數而不是 **_stricmp,JOHN_HENRY**將大於約翰斯頓。
+如果使用[strcmp](strcmp-wcscmp-mbscmp.md)函式而不是 **_stricmp**，JOHN_HENRY 會大於約翰，
 
-**_wcsicmp**和 **_mbsicmp**是寬字元和多位元組字元版本的 **_stricmp。** **_wcsicmp**的參數和返回值是寬字元字串;**_mbsicmp**的字串是多位元位元串。 **_mbsicmp**根據當前多位元組代碼頁識別多位元組字序列,並在錯誤時返回 **_NLSCMPERROR。** 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 除此之外，這三個函式的行為相同。
+**_wcsicmp**和 **_mbsicmp**是 **_stricmp**的寬字元和多位元組字元版本。 **_Wcsicmp**的引數和傳回值是寬字元字串;**_mbsicmp**的是多位元組字元字串。 **_mbsicmp**會根據目前的多位元組字碼頁來辨識多位元組字元序列，並在發生錯誤時傳回 **_NLSCMPERROR** 。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 除此之外，這三個函式的行為相同。
 
-**_wcsicmp**和**wcscmp**行為相同,只是**wcscmp**在比較它們之前不會將其參數轉換為小寫。 **_mbsicmp**和 **_mbscmp**行為相同,只是 **_mbscmp**在比較它們之前不會將其參數轉換為小寫。
+**_wcsicmp**和**wcscmp**的行為相同，不同之處在于**wcscmp**不會先將其引數轉換成小寫，再進行比較。 **_mbsicmp**和 **_mbscmp**的行為相同，不同之處在于 **_mbscmp**不會先將其引數轉換成小寫，再進行比較。
 
-您需要呼叫[setlocale](setlocale-wsetlocale.md) **_wcsicmp**才能使用拉丁字元 1 個字元。 預設情況下,C 區域設置有效,因此,例如,_ 不會與 +進行比較。 調用**集區域設置**,在調用 **_wcsicmp**之前,除了 C 區域設置外的任何區域設置。 以下範例展示 **_wcsicmp**對區域設定的敏感性:
+您必須呼叫[setlocale](setlocale-wsetlocale.md) ， **_Wcsicmp**才能使用拉丁的1個字元。 根據預設，C 地區設定會生效，因此，ä不會比較等於Ä。 在 **_wcsicmp**的呼叫之前，使用 C 地區設定以外的任何地區設定來呼叫**setlocale** 。 下列範例示範 **_wcsicmp**如何區分地區設定：
 
 ```C
 // crt_stricmp_locale.c
@@ -169,9 +169,9 @@ int main() {
 }
 ```
 
-另一種方法是呼叫[_create_locale,_wcreate_locale](create-locale-wcreate-locale.md)並將傳回的區域設定物件作為參數傳遞給 **_wcsicmp_l**。
+替代方法是呼叫[_create_locale、_wcreate_locale，](create-locale-wcreate-locale.md)並將傳回的地區設定物件當做參數傳遞至 **_wcsicmp_l**。
 
-這些函式全都會驗證它們的參數。 如果*string1*或*string2*都是空指標,則調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將**傳回_NLSCMPERROR**並將**errno**設定為**EINVAL**。
+這些函式全都會驗證它們的參數。 如果*string1*或*string2*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -183,9 +183,9 @@ int main() {
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_stricmp**, **_stricmp_l**|\<string.h>|
-|**_wcsicmp**, **_wcsicmp_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsicmp**, **_mbsicmp_l**|\<mbstring.h>|
+|**_stricmp**， **_stricmp_l**|\<string.h>|
+|**_wcsicmp**， **_wcsicmp_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsicmp**， **_mbsicmp_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -240,7 +240,7 @@ Compare strings:
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp、wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp、_memicmp_l](memicmp-memicmp-l.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

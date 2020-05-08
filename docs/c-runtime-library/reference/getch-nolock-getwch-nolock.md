@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: 4ba88ad86b6db892a581b9d94cb36f5ab8240c10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81a3b49287902ac0aaa4d635553cbbaac81ac356
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344713"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920339"
 ---
 # <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock、_getwch_nolock
 
@@ -67,9 +67,9 @@ wint_t _getwch_nolock( void );
 
 ## <a name="remarks"></a>備註
 
-**_getch_nolock**和 **_getwch_nolock**與 **_getch**和 **_getchw**相同,只是它們不受其他線程的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+**_getch_nolock**和 **_getwch_nolock**與 **_getch**和 **_getchw**相同，不同之處在于它們不受保護，不會受到其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -124,7 +124,7 @@ Type 'Y' when finished typing keys: Y
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche、_getwche](getche-getwche.md)<br/>
 [_cgets、_cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc、getwc](getc-getwc.md)<br/>

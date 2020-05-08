@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 97f7ca80d4b458b952393a5b1f72bebe0bdb0d9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346130"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919456"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -53,13 +53,13 @@ size_t fread_s(
 *緩衝區*<br/>
 資料的儲存位置。
 
-*緩衝區大小*<br/>
+*bufferSize*<br/>
 以位元組為單位的目的緩衝區大小。
 
-*元素大小*<br/>
+*elementSize*<br/>
 以位元組為單位的讀取項目大小。
 
-*count*<br/>
+*計數*<br/>
 要讀取項目的最大數量。
 
 *資料流*<br/>
@@ -67,17 +67,17 @@ size_t fread_s(
 
 ## <a name="return-value"></a>傳回值
 
-**fread_s**回讀取到緩衝區中的(完整)項目,如果達到*計數*之前遇到讀取錯誤或檔案結尾,則該項可能小於*計數*。 使用**feof**或**ferror**函數來區分錯誤和檔結尾條件。 如果*大小*或*計數*為 0,**則fread_s**返回 0,緩衝區內容保持不變。 如果*流*或*緩衝區*是空指標 **,fread_s**調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設置到**EINVAL**並返回0。
+**fread_s**會傳回已讀取至緩衝區的（整個）專案數，如果讀取錯誤或在達到*計數*之前遇到檔案結尾，則可能小於*計數*。 使用**feof**或**ferror**函式來區分錯誤與檔案結尾條件。 如果*size*或*count*為0， **fread_s**會傳回0，而緩衝區內容則不會變更。 如果*stream*或*buffer*是 null 指標， **fread_s**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回0。
 
 如需錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**fread_s**函數最多讀取從輸入*流**中計算**元素大小*位元組項並將其存儲在*緩衝區*中。  與*流*關聯的檔指標(如果有)由實際讀取的位元組數增加。 如果在文本模式下打開給定流,則將回車返回行饋送對替換為單行饋送字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
+**Fread_s**函式會從輸入*資料流程*讀取*elementSize*位元組的*計數*專案，並將它們儲存在*buffer*中。  與*資料流程*相關聯的檔案指標（如果有的話）會隨著實際讀取的位元組數而增加。 如果在文字模式中開啟給定的資料流程，則會以單一換行字元取代換行字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
 
-此函式會鎖定其他執行緒。 如果需要非鎖定版本,請使用 **_fread_nolock**。
+此函式會鎖定其他執行緒。 如果您需要非鎖定版本，請使用 **_fread_nolock**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

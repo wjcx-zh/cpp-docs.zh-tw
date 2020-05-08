@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 8f9dd58abdf1d3225341e40661c14ae3a5013257
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362467"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919924"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -58,21 +58,21 @@ errno_t tmpfile_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*pFilePtr*|**返回值**|** ** *pFilePtr*的內容  |
+|*pFilePtr*|**傳回值**|*PFilePtr* **的內容**  |
 |----------------|----------------------|---------------------------------|
-|**空**|**埃因瓦爾**|未變更|
+|**Null**|**EINVAL**|未變更|
 
-如果發生上述參數驗證錯誤，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續 **,errno**設定為**EINVAL,** 傳回值為**EINVAL**。
+如果發生上述參數驗證錯誤，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而傳回值為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**tmpfile_s**函數創建一個暫存檔,並在*pFilePtr*參數中放置指向該流的指標。 暫存檔案建立於根目錄。 若要在非根目錄的目錄建立暫存檔案，請使用 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 搭配 [fopen](fopen-wfopen.md)。
+**Tmpfile_s**函式會建立暫存檔案，並將該資料流程的指標放在*pFilePtr*引數中。 暫存檔案建立於根目錄。 若要在非根目錄的目錄建立暫存檔案，請使用 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 搭配 [fopen](fopen-wfopen.md)。
 
-如果無法開啟該檔 **,tmpfile_s**將**NULL**寫入*pFilePtr*參數。 當檔案關閉、程式正常終止時或調用 **_rmtmp**時,假設當前工作目錄未更改,此暫存檔將自動刪除。 暫存檔以**w+b(** 二進制讀取/寫入)模式打開。
+如果無法開啟檔案， **tmpfile_s**會將**Null**寫入*pFilePtr*參數。 當檔案關閉、程式正常終止時，或呼叫 **_rmtmp**時（假設目前的工作目錄不會變更），就會自動刪除此暫存檔案。 暫存檔案會以**w + b** （二進位讀取/寫入）模式開啟。
 
-如果嘗試超過**TMP_MAX_S,** 可能會發生故障(請參閱 STDIO)。H) 呼叫**tmpfile_s**。
+如果您嘗試超過**TMP_MAX_S** （請參閱 stdio.h），可能會發生失敗。H）使用**tmpfile_s**的呼叫。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -85,7 +85,7 @@ errno_t tmpfile_s(
 ## <a name="example"></a>範例
 
 > [!NOTE]
-> 此示例可能需要管理許可權才能在 Windows 上運行。
+> 這個範例可能需要系統管理許可權才能在 Windows 上執行。
 
 ```C
 // crt_tmpfile_s.c

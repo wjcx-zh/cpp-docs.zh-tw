@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333331"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915411"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
@@ -64,13 +64,13 @@ errno_t wmemcpy_s(
 *dest*<br/>
 新的緩衝區。
 
-*放大縮小字型功能 放大縮小字型功能*<br/>
+*destSize*<br/>
 memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位元組為單位)。
 
 *src*<br/>
 要複製的緩衝區。
 
-*count*<br/>
+*計數*<br/>
 要複製的字元數目。
 
 ## <a name="return-value"></a>傳回值
@@ -79,20 +79,20 @@ memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位�
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*放大縮小字型功能 放大縮小字型功能*|*src*|*count*|傳回值|*dest*的內容|
+|*dest*|*destSize*|*src*|*計數*|傳回值|*Dest*的內容|
 |------------|----------------|-----------|---|------------------|------------------------|
 |任意|任意|任意|0|0|未修改|
-|**空**|任意|任意|非零|**埃因瓦爾**|未修改|
-|任意|任意|**空**|非零|**埃因瓦爾**|*dest*被歸零|
-|任意|< *計數*|任意|非零|**ERANGE**|*dest*被歸零|
+|**Null**|任意|任意|非零|**EINVAL**|未修改|
+|任意|任意|**Null**|非零|**EINVAL**|*dest*已歸零|
+|任意|< *計數*|任意|非零|**ERANGE**|*dest*已歸零|
 
 ## <a name="remarks"></a>備註
 
-**memcpy_s**副本*計數*位元組從*src*到*dest*;**wmemcpy_s**副本*計數*寬字元(兩個字節)。 如果源和目標重疊,則**memcpy_s**的行為未定義。 使用**memmove_s**來處理重疊區域。
+**memcpy_s**將*計數*位元組從*src*複製到*目的地*;**wmemcpy_s**會複製整個*計數*的寬字元（兩個位元組）。 如果來源和目的地重迭， **memcpy_s**的行為會是未定義的。 使用**memmove_s**來處理重迭的區域。
 
-這些函式會驗證它們的參數。 如果*計數*是非零,並且*dest*或*src*是空指標,或者*destSize*小於*計數*,則這些函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將返回**EINVAL**或**ERANGE,** 並將**errno**設置為返回值。
+這些函式會驗證它們的參數。 如果*count*不是零，而*dest*或*src*是 null 指標，或*destSize*小於*count*，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EINVAL**或**ERANGE** ，並將**errno**設定為傳回值。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

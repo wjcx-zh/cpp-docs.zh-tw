@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 3fc90747d336e7b101739c41980332ad0b6b763a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919635"
 ---
 # <a name="_getch-_getwch"></a>_getch、_getwch
 
@@ -62,11 +62,11 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>備註
 
-**_getch**和 **_getwch**函數從控制台讀取單個字元,而不與該字元回顯。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
+**_Getch**和 **_getwch**函式會從主控台讀取單一字元，而不會回顯該字元。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
 
 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getch_nolock、_getwch_nolock](getch-nolock-getwch-nolock.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -121,7 +121,7 @@ Type 'Y' when finished typing keys: Y
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche、_getwche](getche-getwche.md)<br/>
 [_cgets、_cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc、getwc](getc-getwc.md)<br/>

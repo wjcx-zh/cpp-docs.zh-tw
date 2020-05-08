@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: 4afd1c92930fe622eb03569913b264d6c285dcda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5fcae2a0e403d75383e2998b1ea127dd6f2ef89
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341018"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914274"
 ---
 # <a name="_mbctombb-_mbctombb_l"></a>_mbctombb、_mbctombb_l
 
@@ -62,25 +62,25 @@ unsigned int _mbctombb_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要轉換的多位元組字元。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功 **,_mbctombb**和 **_mbctombb_l**返回對應於*c*的單位元組位元。否則傳回*c*。
+如果成功， **_mbctombb**和 **_mbctombb_l**會傳回對應至*c*的單一位元組字元。否則會傳回*c*。
 
 ## <a name="remarks"></a>備註
 
-**_mbctombb**和 **_mbctombb_l**函數將給定的多位元組字元轉換為相應的單位元組多位元組位元。 字元必須對應於要轉換的範圍 0x20 - 0x7E 或 0xA1 - 0xDF 內的單位元組位元元。
+**_Mbctombb**和 **_mbctombb_l**函數會將指定的多位元組字元轉換成對應的單一位元組多位元組字元。 字元必須對應至0x7E 或 0xA1-0xDF 範圍內的單一位元組字元，才能進行轉換。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 沒有 **_l**後置碼的函數版本使用此與區域設置相關的行為的當前區域設置;具有 **_l**後綴的版本是相同的,只不過它使用傳入區域設置參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式的版本若沒有 **_l**尾碼，會針對此地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在以前的版本中 **,_mbctombb**稱為**禪宗。** 改用 **_mbctombb。**
+在先前的版本中， **_mbctombb**稱為**zentohan**。 請改用 **_mbctombb** 。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -27,7 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,19 +70,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 7c898fab606950824d6886757abd6389fd0180c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42333433277e1ac593bb2662967b73907ed13c92
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322970"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919960"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 
 使用目前的地區設定或傳入的地區設定物件，將字串轉換成小寫。 這些版本的 [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbslwr_s**和 **_mbslwr_s_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbslwr_s**和 **_mbslwr_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -145,32 +145,32 @@ errno_t _wcslwr_s_l(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 要轉換為小寫的以 Null 終止的字串。
 
-*元素數*<br/>
+*numberOfElements*<br/>
 緩衝區的大小。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
 如果成功，則傳回零；如果失敗，則傳回非零的錯誤碼。
 
-這些函式會驗證它們的參數。 如果*str*不是有效的 null 終止字串,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將傳回**EINVAL**並將**errno**設定為**EINVAL**。 如果*元素數*小於字串的長度,則函數也會傳回**EINVAL**並將**errno**設定為**EINVAL**。
+這些函式會驗證它們的參數。 如果*str*不是有效的以 null 終止的字串，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。 如果*numberOfElements*小於字串的長度，函數也會傳回**EINVAL** ，並將**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_strlwr_s**函數將*str*中的任何大寫字母轉換為小寫。 **_mbslwr_s**是 **_strlwr_s**的多位元位元版本。 **_wcslwr_s**是 **_strlwr_s**的寬字元版本。
+**_Strlwr_s**函式會就地將*str*中的任何大寫字母轉換成小寫字母。 **_mbslwr_s**是 **_strlwr_s**的多位元組字元版本。 **_wcslwr_s**是寬字元版本的 **_strlwr_s**。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -183,9 +183,9 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_strlwr_s**, **_strlwr_s_l**|\<string.h>|
-|**_mbslwr_s**, **_mbslwr_s_l**|\<mbstring.h>|
-|**_wcslwr_s**, **_wcslwr_s_l**|\<string.h> 或 \<wchar.h>|
+|**_strlwr_s**， **_strlwr_s_l**|\<string.h>|
+|**_mbslwr_s**， **_mbslwr_s_l**|\<mbstring.h>|
+|**_wcslwr_s**， **_wcslwr_s_l**|\<string.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -229,7 +229,7 @@ Upper: THE STRING TO END ALL STRINGS!
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)<br/>

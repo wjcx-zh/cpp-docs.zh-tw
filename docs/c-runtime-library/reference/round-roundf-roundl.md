@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337996"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916712"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -67,28 +67,28 @@ long double roundl(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 要四捨五入的浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**圓**函數傳回浮點值,該值表示*最接近的整*數 x 。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
+**Round**函數會傳回浮點值，表示最接近*x*的整數。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|無|**_DOMAIN**|
+|± **QNAN**， **IND**|無|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用帶和返回**浮點**值**和長****雙**值的**圓**重載。 在 C 程式中,**圓形**始終採用並傳**回一個雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**浮點**和**長****雙精度**值之**round**的多載。 在 C 程式中， **round**一律會採用並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**圓形**,**圓,****圓**形|\<math.h>|
+|**round**、 **roundf**、 **roundl**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

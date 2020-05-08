@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +43,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: 166d44c32a593ad9f32fcd19c56747bfaf4b5d0f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359182"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915260"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
 複製字串。 這些函式已有更安全的版本可用，請參閱 [strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
 > [!IMPORTANT]
-> **_mbscpy**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscpy**無法在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -91,7 +91,7 @@ unsigned char *_mbscpy(
 
 ### <a name="parameters"></a>參數
 
-*斯特雷特*<br/>
+*strDestination*<br/>
 目的字串。
 
 *strSource*<br/>
@@ -103,16 +103,16 @@ unsigned char *_mbscpy(
 
 ## <a name="remarks"></a>備註
 
-**strcpy**函數將*strSource(* 包括終止空字元)複製到*strDestination*指定的位置。 如果原始字串和目標字串重疊,**則 strcpy**的行為未定義。
+**Strcpy**函數會將*strSource*（包括終止的 null 字元）複製到*strDestination*所指定的位置。 如果來源和目的字串重迭，則**strcpy**的行為是未定義的。
 
 > [!IMPORTANT]
-> 由於**strcpy**在複製*strSource*之前不會檢查*strDestination*中是否有足夠的空間,因此這是緩衝區溢出的潛在原因。 因此，建議您改用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
+> 因為**strcpy**在複製*strSource*之前，不會在*strDestination*中檢查是否有足夠的空間，所以可能會造成緩衝區溢位。 因此，建議您改用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
-**_mbscpy**分別是寬字 **_mbscpy**元 和多位元位元版本的**strcpy。** **wcscpy**的參數和返回值是寬字元字串;**_mbscpy**字串是多位元位元串。 除此之外，這三個函式的行為相同。
+**wcscpy**和 **_mbscpy**分別為**strcpy**的寬字元和多位元組字元版本。 **Wcscpy**的引數和傳回值是寬字元字串;**_mbscpy**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -167,7 +167,7 @@ String = Hello world from strcpy and strcat!
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

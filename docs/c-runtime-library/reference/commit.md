@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: f8e13e7fc197c66395556d518ecbd1cd20ac1f77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348623"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918522"
 ---
 # <a name="_commit"></a>_commit
 
@@ -52,20 +52,20 @@ int _commit(
 
 ### <a name="parameters"></a>參數
 
-*Fd*<br/>
+*fd*<br/>
 參照已開啟之檔案的檔案描述元。
 
 ## <a name="return-value"></a>傳回值
 
-如果檔成功刷新到磁碟 **,_commit**返回 0。 返回值 -1 表示錯誤。
+如果成功將檔案排清到磁片， **_commit**會傳回0。 傳回值-1 表示發生錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_commit**功能強制作業系統寫入與*fd*到磁碟關聯的檔。 這個呼叫確保立即清除指定的檔案，而不是由作業系統自行決定。
+**_Commit**函式會強制作業系統將與*fd*相關聯的檔案寫入磁片。 這個呼叫確保立即清除指定的檔案，而不是由作業系統自行決定。
 
-如果*fd*無效的檔描述符,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,則函數傳回 **-1,errno**設定為**EBADF**。
+如果*fd*是不正確檔案描述項，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回-1，而**errno**會設定為**EBADF**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,12 +56,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: 6056ad8bac6561c0ce2902928364996b2be9ae92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7dc87f417db93f8ad0d90de1270c19997669fb7c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348241"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914830"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64
 
@@ -80,24 +80,24 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 
 ### <a name="parameters"></a>參數
 
-*來源時間*<br/>
-指標到存儲的時間轉換。
+*sourceTime*<br/>
+要轉換之預存時間的指標。
 
 ## <a name="return-value"></a>傳回值
 
-字元字串結果的指標。 **NULL**如果:
+字元字串結果的指標。 如果是下列情況，則會傳回**Null** ：
 
-- *sourceTime*表示 1970 年 1 月 1 日午夜之前的日期,UTC。
+- *sourceTime*代表1970年1月1日午夜之前的日期（UTC）。
 
-- 如果您使用 **_ctime32**或 **_wctime32,** 並且*sourceTime*表示 2038 年 1 月 18 日 23:59:59 之後的日期,UTC。
+- 如果您使用 **_ctime32**或 **_Wctime32** ，而*SourceTime*代表23:59:59 年1月 18 2038 日（UTC）之後的日期。
 
-- 如果您使用 **_ctime64**或 **_wctime64,** 並且*sourceTime*表示 23:59:59,3000 年 12 月 31 日 UTC 之後的日期。
+- 如果您使用 **_ctime64**或 **_Wctime64** ，而*SourceTime*代表23:59:59 年12月 3000 31 日（UTC）之後的日期。
 
-**ctime**是一個內聯函數,它計算到 **_ctime64,time_t**等效於 **__time64_t。** **_ctime64** 如果需要強制編譯器將**time_t**解釋為舊的 32 位**time_t**,則可以定義 **_USE_32BIT_TIME_T**。 這樣做將導致**ctime**評估**到_ctime32**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+**ctime**是一個會評估為 **_ctime64**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**ctime**評估為 **_ctime32**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
 ## <a name="remarks"></a>備註
 
-**ctime**函數將儲存為[time_t](../../c-runtime-library/standard-types.md)值的時間值轉換為字串。 *sourceTime*值通常從調用[時間](time-time32-time64.md)獲得,該調用返回自 1970 年 1 月 1 日午夜 (00:00:00:00) 起經過的秒數,協調通用時間 (UTC)。 傳回值字串剛好包含 26 個字元，且具有以下格式：
+**Ctime**函數會將儲存為[time_t](../../c-runtime-library/standard-types.md)值的時間值轉換成字元字串。 *SourceTime*值通常是從呼叫[時間](time-time32-time64.md)取得，這會傳回自00:00:00 年1月1日（1970，國際標準時間（UTC））以來經過的秒數。 傳回值字串剛好包含 26 個字元，且具有以下格式：
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -105,15 +105,15 @@ Wed Jan 02 02:03:55 1980\n\0
 
 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元 ('\n') 和 null 字元 ('\0') 佔用字串的最後兩個位置。
 
-已轉換的字元字串也會根據當地時區設定調整。 有關配置本地時間和[_tzset](tzset.md)函數的詳細資訊,請參閱[時間](time-time32-time64.md)[、_ftime](ftime-ftime32-ftime64.md)和[本地時間](localtime-localtime32-localtime64.md)函數。
+已轉換的字元字串也會根據當地時區設定調整。 如需有關設定當地時間和[_tzset](tzset.md)函數的詳細資訊，請參閱[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime](localtime-localtime32-localtime64.md)函式，以取得定義時區環境和全域變數的詳細資訊。
 
-對**ctime**的呼叫修改了**gmtime**和**本地時間**函數使用的單個靜態分配的緩衝區。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。 **ctime**共用具有**asctime**函數的靜態緩衝區。 因此,對**ctime**的調用會破壞以前對**asctime、****本地時間**或**gmtime**的任何調用的結果。
+對**ctime**的呼叫會修改**gmtime**和**localtime**函數所使用的單一靜態配置緩衝區。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。 **ctime**會與**asctime**函數共用靜態緩衝區。 因此，對**ctime**的呼叫會終結任何先前呼叫**asctime**、 **localtime**或**gmtime**的結果。
 
-**_wctime**和 **_wctime64**是**ctime**和 **_ctime64**的寬字元版本;返回指向寬字元字串的指標。 否則 **,_ctime64、_wctime**和 **_wctime64**行為與 **_wctime****ctime**相同。
+**_wctime**和 **_wctime64**是**ctime**和 **_ctime64**的寬字元版本;傳回寬字元字串的指標。 否則， **_ctime64**、 **_wctime**和 **_wctime64**的行為與**ctime**相同。
 
-這些函式會驗證它們的參數。 如果*sourceTime*是空指標,或者如果*sourceTime*值為負,則這些函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將傳回**NULL**並將**errno**設定為**EINVAL**。
+這些函式會驗證它們的參數。 如果*sourceTime*為 null 指標，或如果*sourceTime*值為負數，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

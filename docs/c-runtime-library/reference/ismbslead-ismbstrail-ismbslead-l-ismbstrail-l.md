@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342908"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919165"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
@@ -87,26 +87,26 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 指向字串開頭或先前已知的前導位元組之指標。
 
 *目前*<br/>
 在字串要進行測試的位置之指標。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果字元是潛在顧客位元組,**則_ismbslead**返回 -1;如果字元是跟蹤位元組,**則_ismbstrail**返回 -1。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果任一參數為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將傳回**NULL**並將**errno**設定為**EINVAL**。
+如果字元是前導位元組， **_ismbslead**會傳回-1; 如果字元是尾位元組， **_ismbstrail**會傳回-1。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果其中一個引數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_ismbslead**和 **_ismbstrail**比 **_ismbblead**和 **_ismbbtrail**版本慢,因為它們會考慮字串上下文。
+**_ismbslead**和 **_ismbstrail**的速度比 **_ismbblead**和 **_ismbbtrail**版本慢，因為它們會將字串內容納入考慮。
 
-具有 **_l**後綴的這些函數的版本是相同的,只不過對於它們與區域設置相關的行為,它們使用傳入區域設置而不是當前區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于其地區設定相關行為會使用傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -126,4 +126,4 @@ int _ismbstrail_l(
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 常式](../../c-runtime-library/ismbc-routines.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

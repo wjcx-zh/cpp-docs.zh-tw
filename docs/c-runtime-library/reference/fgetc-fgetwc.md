@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: c1589c64127b47f4dd2a1147f2b4d549601db4fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347015"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912872"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -65,21 +65,21 @@ wint_t fgetwc(
 
 ## <a name="return-value"></a>傳回值
 
-**fgetc**傳回讀取為**int**的字元或傳回**EOF**以指示檔錯誤或檔案結尾。 **fgetwc**返回,作為[wint_t](../../c-runtime-library/standard-types.md),對應於讀取的字元或返回**WEOF**以指示錯誤或檔結尾的寬字元。 對於這兩個函數,使用**fefe**或**ferror**來區分錯誤和檔結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*串*流為**NULL,fgetc****NULL**和**fgetwc**將呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將**errno**設定為**EINVAL**並傳回**EOF**。
+**fgetc**會傳回讀取為**int**的字元，或傳回**EOF**以表示錯誤或檔案結尾。 **fgetwc**會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應至讀取字元的寬字元，或傳回**WEOF**以表示錯誤或檔案結尾。 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*stream*為**Null**，則**fgetc**和**fgetwc**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
 
 ## <a name="remarks"></a>備註
 
-每個函數都從與*stream*關聯的檔的當前位置讀取一個字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
+這些函式中的每一個都會從與*stream*相關聯之檔案的目前位置讀取單一字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
 
-**fgetc**等效於**getc,** 但僅作為函數實現,而不是作為函數和宏實現。
+**fgetc**相當於**getc**，但僅實作為函式，而不是函式和宏。
 
-**fgetwc**是**fgetc**的寬字元版本;它根據*流*是在文本模式還是二進位模式下打開,將**c**讀為多位元組位元元或寬字元。
+**fgetwc**是**fgetc**的寬字元版本;它會根據以文字模式還是二進位模式開啟*資料流程*，將**c**當做多位元組字元或寬字元來讀取。
 
 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。
 
 如需在文字和二進位模式中處理寬字元和多位元組字元的詳細資訊，請參閱[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

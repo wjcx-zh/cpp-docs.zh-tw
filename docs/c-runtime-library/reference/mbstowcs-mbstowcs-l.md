@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 11ff6920ea5f1dad2925a8010c9202e012fad87a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338854"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915476"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs、_mbstowcs_l
 
@@ -74,38 +74,38 @@ size_t _mbstowcs_l(
 
 ### <a name="parameters"></a>參數
 
-*wc斯特*<br/>
+*wcstr*<br/>
 寬字元序列的位址。
 
-*姆布斯特*<br/>
+*mbstr*<br/>
 以 Null 結束之多位元組字元序列的位址。
 
-*count*<br/>
+*計數*<br/>
 要轉換的多位元組字元數上限。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果**mbstowcs**成功轉換原始碼字串,它將傳回轉換的多位元組位元數。 如果*wcstr*參數為**NULL,** 則函數將返回目標字串所需的大小(以寬字元表示)。 如果**mbstowcs**遇到無效的多位元組字元,它將返回 -1。 如果返回值為*計數*,則寬字元字串不是 null 終止的。
+如果**mbstowcs**成功轉換來源字串，則會傳回已轉換的多位元組字元數。 如果*wcstr*引數為**Null**，此函式會傳回目的字串所需的大小（以寬字元為單位）。 如果**mbstowcs**遇到不正確多位元組字元，則會傳回-1。 如果傳回值為*count*，則寬字元字串不會以 null 結束。
 
 > [!IMPORTANT]
-> 確保*wcstr*和*mbstr*不重疊,並且*該計數*正確反映要轉換的多位元組位元元數。
+> 請確定*wcstr*和*mbstr*不會重迭，而且該*計數*會正確反映要轉換的多位元組字元數。
 
 ## <a name="remarks"></a>備註
 
-**mbstowcs**函數將*mbstr*指向的最大*計數*多位元組位元元轉換為由當前區域設置確定的相應寬字元字串。 它將生成的寬字元字串存儲在*wcstr*表示的位址。 結果類似於對[mbtowc](mbtowc-mbtowc-l.md)的一系列調用。 如果**mbstowcs**在*計數*發生之前或發生計數時遇到單位元組空字元 (『\0』),它將空字元轉換為寬字元 null 字元 (L』_0')並停止。 因此,只有在轉換過程中遇到空字元時 *,wcstr*處的寬字元字串才為 null 終止。 如果*wcstr*和*mbstr*指向的序列重疊,則行為未定義。
+**Mbstowcs**函數會將*mbstr*所*指向的多位元組字元*數上限，轉換成由目前地區設定所決定的對應寬字元字串。 它會將產生的寬字元字串儲存在*wcstr*所代表的位址。 結果類似于一系列的[mbtowc](mbtowc-mbtowc-l.md)呼叫。 如果**mbstowcs**在發生 before 或*count*時遇到單一位元組的 null 字元（' \ 0 '），它會將 null 字元轉換為寬字元的 null 字元（L ' \ 0 '）並停止。 因此，只有在轉換期間遇到 null 字元時， *wcstr*的寬字元字串才會以 null 結束。 如果*wcstr*和*mbstr*所指向的序列重迭，則行為是未定義的。
 
-如果*wcstr*參數為**NULL,mbstowcs**將傳回轉換產生的寬字元數,不**NULL**包括空終止符。 來源字串必須以 Null 結束，才能傳回正確的值。 如果您需要產生的寬字元字串以 Null 結束，請將一個 Null 新增至傳回的值。
+如果*wcstr*引數為**Null**， **mbstowcs**會傳回轉換所產生的寬字元數目，不包括 Null 結束字元。 來源字串必須以 Null 結束，才能傳回正確的值。 如果您需要產生的寬字元字串以 Null 結束，請將一個 Null 新增至傳回的值。
 
-如果*mbstr*參數為**NULL,** 或者*計數***>INT_MAX,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則 errno 設置為**EINVAL,** 函數傳回 -1。
+如果*mbstr*引數為**Null**，或 > **INT_MAX** *count* ，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，errno 會設為**EINVAL** ，而函式會傳回-1。
 
-**mbstowcs**對任何與區域設置相關的行為使用當前區域設置;**_mbstowcs_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**mbstowcs**會針對任何與地區設定相關的行為使用目前的地區設定;**_mbstowcs_l**是相同的，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -214,7 +214,7 @@ Convert back to wide-character string:
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

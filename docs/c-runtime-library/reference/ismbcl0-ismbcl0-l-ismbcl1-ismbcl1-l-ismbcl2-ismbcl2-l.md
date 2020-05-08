@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343225"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919732"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
@@ -100,15 +100,15 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試字元。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* <= 255 並且存在相應的 **_ismbb**例程(例如 **,_ismbcalnum**對應於 **_ismbbalnum),** 則結果是相應的 **_ismbb**例程的返回值。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* <= 255，而且有對應的 **_ismbb**常式（例如， **_ismbcalnum**對應至 **_ismbbalnum**），則結果會是對應之 **_ismbb**常式的傳回值。
 
 ## <a name="remarks"></a>備註
 
@@ -118,18 +118,18 @@ int _ismbcl2_l(
 
 |常式傳回的值|測試條件 (限字碼頁 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS 非漢字: 0x8140<=*c*<±0x889E。|
-|**_ismbcl0_l**|JIS 非漢字: 0x8140<=*c*<±0x889E。|
-|**_ismbcl1**|JIS 級別 1:0x889F<=*c*<±0x9872。|
-|**_ismbcl1_l**|JIS 級別 1:0x889F<=*c*<±0x9872。|
-|**_ismbcl2**|JIS 級別 2:0x989F<=*c*<±0xEAA4。|
-|**_ismbcl2_l**|JIS 級別 2:0x989F<=*c*<±0xEAA4。|
+|**_ismbcl0**|JIS 非漢字： 0x8140<=*c*<= 0x889E。|
+|**_ismbcl0_l**|JIS 非漢字： 0x8140<=*c*<= 0x889E。|
+|**_ismbcl1**|JIS 層級-1： 0X889f<<=*c*<= 0x9872。|
+|**_ismbcl1_l**|JIS 層級-1： 0X889f<<=*c*<= 0x9872。|
+|**_ismbcl2**|JIS 層級-2： 0X989f<<=*c*<= 0xEAA4。|
+|**_ismbcl2_l**|JIS 層級-2： 0X989f<<=*c*<= 0xEAA4。|
 
-函數檢查指定的值*c*是否與上述測試條件匹配,但不檢查*c*是否有效多位元組位元符。 如果較低的位元組介於 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 的範圍內，這些函式會傳回非零值，指出字元符合測試條件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 來測試是否已定義多位元組字元。
+函式會檢查指定的值*c*是否符合前述測試條件，但不會檢查*c*是否為有效的多位元組字元。 如果較低的位元組介於 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 的範圍內，這些函式會傳回非零值，指出字元符合測試條件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 來測試是否已定義多位元組字元。
 
 **結束特定字碼頁 932**
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

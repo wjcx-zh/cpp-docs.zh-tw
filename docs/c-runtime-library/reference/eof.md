@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347927"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915048"
 ---
 # <a name="_eof"></a>_eof
 
@@ -52,18 +52,18 @@ int _eof(
 
 ### <a name="parameters"></a>參數
 
-*Fd*<br/>
+*fd*<br/>
 參照已開啟之檔案的檔案描述元。
 
 ## <a name="return-value"></a>傳回值
 
-如果當前位置是檔結尾 **,_eof**返回 1;如果不是,則返回 0。 返回值 -1 表示錯誤;如果返回值為 -1,則表示錯誤。在這種情況下,將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行 **,errno**將設置為**EBADF**,指示檔描述符無效。
+如果目前的位置是檔案結尾， **_eof**會傳回1，否則會傳回0。 傳回值-1 表示發生錯誤;在此情況下，會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設定為**EBADF**，這表示不正確檔案描述項。
 
 ## <a name="remarks"></a>備註
 
-**_eof**函數確定是否已達到與*fd*關聯的檔的末尾。
+**_Eof**函式會判斷是否已達到與*fd*相關聯之檔案的結尾。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344897"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918505"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -50,20 +50,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>參數
 
-*秒*<br/>
+*表示*<br/>
 UTC 與當地時間之間的時差，以秒為單位。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功為零,則為**錯誤**值(如果發生錯誤)。
+如果成功，則為零; 如果發生錯誤，則為**errno**值。
 
 ## <a name="remarks"></a>備註
 
-**_get_timezone**函數以整數檢索 UTC 和本地時間之間的差值(以秒為單位)。 對太平洋標準時間而言，預設值為 28,800 秒 (晚 UTC 八小時)。
+**_Get_timezone**函式會以秒為單位，抓取 UTC 與本地時間之間的時差。 對太平洋標準時間而言，預設值為 28,800 秒 (晚 UTC 八小時)。
 
-如果*秒*為**NULL,** 則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,此函數將**errno**設定到**EINVAL**並傳回**EINVAL**。
+如果*秒數*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 2334d7755a3eaf3fb973783db17ca398e6b7f0b5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340685"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911969"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp、_mbsnbcmp_l
 
-比較兩個多位元位位元串的前**n**個字節。
+比較兩個多位元組字元字串的前**n**個位元組。
 
 > [!IMPORTANT]
 > 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
@@ -69,38 +69,38 @@ int _mbsnbcmp_l(
 
 ### <a name="parameters"></a>參數
 
-*字串1*,*字串2*<br/>
+*string1*、 *string2*<br/>
 要比較的字串。
 
-*count*<br/>
+*計數*<br/>
 要比較的位元組數目。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-返回值指示*string1*和*string2*的子字串之間的形式關係。
+傳回值表示*string1*和*string2*的子字串之間的序數關聯性。
 
 |傳回值|描述|
 |------------------|-----------------|
-|< 0|*字串 1*子字串小於*string2*子字串。|
-|0|*字串1*子字串與*string2*子字串相同。|
-|> 0|*字串 1*子字串大於*string2*子字串。|
+|< 0|*string1* substring 小於*string2*子字串。|
+|0|*string1* substring 等同于*string2*子字串。|
+|> 0|*string1* substring 大於*string2*子字串。|
 
-在參數驗證錯誤時 **,_mbsnbcmp**和 **_mbsnbcmp_l**返回\<**_NLSCMPERROR**,該返回_NLSCMPERROR ,該返回在\<string.h>和 mbstring.h>中定义。
+在參數驗證錯誤上， **_mbsnbcmp**和 **_mbsnbcmp_l**會傳回 **_NLSCMPERROR**，其定義于\<string. h> 和\<g.> 中。
 
 ## <a name="remarks"></a>備註
 
-**_mbsnbcmp**函數最多比較*string1*和*string2*中的第一個*計數*位元組,並返回指示子字串之間關係的值。 **_mbsnbcmp**是 **_mbsnbicmp**區分大小寫的版本。 與 **_mbsnbcoll**不同 **,_mbsnbcmp**不受區域設置的排序順序的影響。 **_mbsnbcmp**根據當前多位[元組 代碼頁](../../c-runtime-library/code-pages.md)識別多位元組字串序列。
+**_Mbsnbcmp**函數最多可比較*string1*和*string2*中的第一個*計數*位元組，並傳回值，表示子字串之間的關聯性。 **_mbsnbcmp**是 **_mbsnbicmp**的區分大小寫版本。 不同于 **_mbsnbcoll**， **_mbsnbcmp**不會受到地區設定的定序順序影響。 **_mbsnbcmp**會根據目前的多位元組[字碼頁](../../c-runtime-library/code-pages.md)來辨識多位元組字元序列。
 
-**_mbsnbcmp**類似於 **_mbsncmp,** 只不過 **_mbsncmp**按字元而不是位元組比較字串。
+**_mbsnbcmp**類似 **_mbsncmp**，不同之處在于 **_mbsncmp**會依照字元來比較字串，而不是以位元組為單位。
 
-輸出值受區域設置**LC_CTYPE**類別設置的影響,該設定指定多位元組位元符元的引線位元組和尾隨位元組。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_mbsnbcmp**函數使用此與區域設置相關的行為的當前區域設置。 **_mbsnbcmp_l**函數是相同的,只是它改用*區域設置*參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 [ **LC_CTYPE** ] 分類設定影響，這會指定多位元組字元的前導位元組和尾端位元組。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcmp**函式會針對此地區設定相關的行為使用目前的地區設定。 **_Mbsnbcmp_l**函式相同，不同之處在于它會改為使用*地區*設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*string1*或*string2*是空指標,則這些函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數傳回 **_NLSCMPERROR,errno**設定為 **_NLSCMPERROR****EINVAL**。
+如果*string1*或*string2*是 null 指標，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回 **_NLSCMPERROR**而且**errno**會設定為**EINVAL**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -171,10 +171,10 @@ Result:   String 1 is equal to string 2
 
 ## <a name="see-also"></a>另請參閱
 
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbicmp、_mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

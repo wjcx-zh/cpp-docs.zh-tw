@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: f18b04cadfa80d7e0be193bbd552efe8486eeeda
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a06191791132784740fa85ca45e23e8aaa56279e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538609"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914905"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s、_wfopen_s
 
@@ -121,7 +121,7 @@ errno_t _wfopen_s(
 
 |ccs 旗標|沒有 BOM (或新檔案)|BOM：UTF-8|BOM：UTF-16|
 |----------------|----------------------------|-----------------|------------------|
-|**消除**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
+|**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
 |**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 
@@ -137,7 +137,7 @@ errno_t _wfopen_s(
 
 字元字串*模式*會指定針對檔案要求的存取類型，如下所示。
 
-|*mode*|存取權|
+|*mode*|存取|
 |-|-|
 | **r** | 開啟以讀取。 如果檔案不存在或找不到， **fopen_s**呼叫將會失敗。 |
 | **寬** | 開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。 |
@@ -156,7 +156,7 @@ errno_t _wfopen_s(
 
 |*模式*修飾詞|轉譯模式|
 |-|-|
-| **t** | 以文字 (已轉譯) 模式開啟。 |
+| **而已** | 以文字 (已轉譯) 模式開啟。 |
 | **位元組** | 以二進位（未轉譯）模式開啟;會隱藏涉及回車和換行字元的翻譯。 |
 
 在 [文字（已轉譯）] 模式中，CTRL + Z 會在輸入時被視為檔案結尾字元。 在以 **"a +"** 開啟以進行讀取/寫入的檔案中， **fopen_s**會在檔案結尾檢查是否有 CTRL + Z，並在可能的情況下將它移除。 這是因為使用[fseek](fseek-fseeki64.md)和**FTELL**在以 CTRL + Z 結尾的檔案內移動，可能會導致[fseek](fseek-fseeki64.md)在檔案結尾附近的行為不正確。
@@ -189,7 +189,7 @@ errno_t _wfopen_s(
 |**w**|**_O_WRONLY** （通常 **_O_WRONLY** &#124; **_O_CREAT** &#124; **_O_TRUNC**）|
 |**w +**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**位元組**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**而已**|**_O_TEXT**|
 |**c**|無|
 |**n**|無|
 |**今日**|**_O_SEQUENTIAL**|

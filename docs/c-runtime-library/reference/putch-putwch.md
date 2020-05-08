@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338414"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916182"
 ---
 # <a name="_putch-_putwch"></a>_putch、_putwch
 
@@ -63,20 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要輸出的字元。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則會傳回 *c*。 如果 **_putch**失敗,它將返回**EOF**;如果 **_putwch**失敗,它會傳回**WEOF**。
+如果成功，則會傳回 *c*。 如果 **_putch**失敗，則會傳回**EOF**;如果 **_putwch**失敗，則會傳回**WEOF**。
 
 ## <a name="remarks"></a>備註
 
-這些函數直接將字元*c*寫入主控台,無需緩衝。 在 Windows NT 中，**_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。
+這些函式會直接將字元*c*寫入主控台，而不需要緩衝處理。 在 Windows NT 中，**_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。
 
-具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 有關詳細資訊,請參閱 **_putch_nolock** **,_putwch_nolock**。
+具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 **_putch_nolock**、 **_putwch_nolock**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -103,6 +103,6 @@ wint_t _putwch(
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch、_getwch](getch-getwch.md)<br/>

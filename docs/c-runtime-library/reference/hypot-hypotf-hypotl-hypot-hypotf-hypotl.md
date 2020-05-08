@@ -23,7 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343949"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919836"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -86,28 +86,28 @@ long double _hypotl(
 
 ### <a name="parameters"></a>參數
 
-*x*, *y*<br/>
+*x*、 *y*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功,**假設**返回偽善的長度;在溢出時,**假設**傳回INF(無窮大 **),errno**變數設定為**ERANGE**。 您可以使用 **_matherr**修改錯誤處理。
+如果成功， **hypot**會傳回斜邊的長度;溢位時， **hypot**會傳回 INF （無限大），而**errno**變數會設定為**ERANGE**。 您可以使用 **_matherr**來修改錯誤處理。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**假設函數**計算直角三角形的斜用長度,給定兩側*x*和*y*的長度(換句話說 *,x*<sup>2</sup> + *y*<sup>2</sup>的平方根)。
+**Hypot**函數會計算直角三角形的斜邊長度，指定兩端*x*和*y*的長度（換言之， *x*<sup>2</sup> + *y*<sup>2</sup>的平方根）。
 
 具有前置底線的函式版本提供舊版標準的相容性。 其行為與不具有前置底線的版本完全相同。 建議針對新程式碼使用不具有前置底線的版本。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**下部**,**下,****低, 低,** **_hypot,** **_hypotf,** **_hypotl**|\<math.h>|
+|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

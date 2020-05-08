@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66940abc3f171b07f0816441709b1f4f9db88614
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344297"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913756"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -51,11 +51,11 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>傳回值
 
-如果此函式成功，則傳回值為代表目前可用之磁碟機的位元遮罩。 位元位置 0 (最小顯著性位元) 是磁碟機 A，位元位置 1 是磁碟機 B，位元位置 2 是 C 磁碟機，依此類推。 如果此函式失敗，則傳回值為零。 要取得延伸的錯誤資訊,請致電**GetLastError**。
+如果此函式成功，則傳回值為代表目前可用之磁碟機的位元遮罩。 位元位置 0 (最小顯著性位元) 是磁碟機 A，位元位置 1 是磁碟機 B，位元位置 2 是 C 磁碟機，依此類推。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫**GetLastError**。
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

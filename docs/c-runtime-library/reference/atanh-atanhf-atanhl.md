@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350125"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920056"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -60,29 +60,29 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**atanh**函數返回*x*的反向子宮切線(弧形雙曲切線)。 如果*x*大於 1 或小於 -1,**則 errno**設置為**EDOM,** 結果是一個安靜的 NaN。 如果*x*等於 1 或 -1,則分別返回正無窮大或負無窮大,並將**errno**設定為**ERANGE**。
+**Atanh**函式會傳回*x*的反雙曲正切函數（arc 雙曲正切）。 如果*x*大於1或小於-1， **errno**會設為**EDOM** ，且結果為無訊息 NaN。 如果*x*等於1或-1，則會分別傳回正或負無限大，而且**errno**會設定為**ERANGE**。
 
-|輸入|SEH 例外狀況|**馬瑟爾**例外|
+|輸入|SEH 例外狀況|**Matherr**異常|
 |-----------|-------------------|-------------------------|
-|• QNAN,IND|無|無|
-|*X* = 1;*x* = -1|無|無|
+|± QNAN，IND|無|無|
+|*X* ≥ 1;*x* ≤-1|無|無|
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用採用並返回**浮點**值或**長****雙**精度值的**atanh**重載。 在 C 程式中 **,atanh**始終取得並傳回**雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**atanh**的多載。 在 C 程式中， **atanh**一律採用並傳回**double**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**阿坦,****阿坦霍夫**,**阿坦赫**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

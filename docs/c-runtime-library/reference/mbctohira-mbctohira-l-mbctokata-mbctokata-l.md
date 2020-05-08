@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341097"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914384"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 
@@ -81,30 +81,30 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要轉換的多位元組字元。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果可能,每個函數都返回轉換後的字元*c*。a。 否則,它將返回字元*c*不變。
+所有這些函式都會傳回轉換的字元*c*（如果可能的話）。 否則，它會傳回未變更的字元*c* 。
 
 ## <a name="remarks"></a>備註
 
-**_mbctohira**和 **_mbctokata**函數測試字元*c,* 如果可能,請應用以下轉換之一。
+**_Mbctohira**和 **_mbctokata**函式會測試字元*c* ，並在可能的情況下套用下列其中一個轉換。
 
 |常式|轉換|
 |--------------|--------------|
-|**_mbctohira**, **_mbctohira_l**|多位元組片假名到多位元組平假名。|
-|**_mbctokata**, **_mbctokata_l**|多位元組平假名到多位元組片假名。|
+|**_mbctohira**， **_mbctohira_l**|多位元組片假名到多位元組平假名。|
+|**_mbctokata**， **_mbctokata_l**|多位元組平假名到多位元組片假名。|
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些函數的版本相同,只不過沒有 **_l**後綴的版本使用此區域設置來執行與區域設置相關的行為,而具有 **_l**後綴的函數則使用傳入區域設置參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些函式的版本完全相同，不同之處在于，沒有 **_l**尾碼的函式會針對此地區設定相關的行為使用目前的地區設定，而具有 **_l**後置詞的則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在早期版本中 **,_mbctohira**被命名為**jtohira,_mbctokata**被命名為 **_mbctokata****jtokata。** 對於新的程式碼，請使用新名稱。
+在舊版中， **_mbctohira**名為**jtohira** ，而 **_mbctokata**名為**jtokata**。 對於新的程式碼，請使用新名稱。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

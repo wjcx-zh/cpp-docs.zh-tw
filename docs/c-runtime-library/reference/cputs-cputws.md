@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348375"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917608"
 ---
 # <a name="_cputs-_cputws"></a>_cputs、_cputws
 
@@ -63,20 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 輸出字串。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功 **,_cputs**返回 0。 如果函式失敗，則會傳回非零值。
+如果成功， **_cputs**會傳回0。 如果函式失敗，則會傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-**_cputs**函數*透過直接*str 到主控台來寫入指向的 null 連接字串。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
+**_Cputs**函式會將*str*直接指向的以 null 結束的字串寫入主控台。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
 
-這個函式會驗證其參數。 如果*str*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則**errno**設置為**EINVAL,** 並返回 -1。
+這個函式會驗證其參數。 如果*str*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，並傳回-1。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -156,5 +156,5 @@ Hello world (courtesy of _cputws)!
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch、_putwch](putch-putwch.md)<br/>

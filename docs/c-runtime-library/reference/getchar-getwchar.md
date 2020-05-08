@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344619"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920334"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -53,15 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>傳回值
 
-傳回讀取的字元。 要指示讀取錯誤或檔結尾條件 **,getchar**傳回 EOF,getwchar**getwchar**傳回**EOF****WEOF**。 對於**getchar,** 使用**ferror**或**feof**檢查錯誤或檔結尾。
+傳回讀取的字元。 為了指出讀取錯誤或檔案結尾條件， **getchar**會傳回**EOF**，而**getwchar**會傳回**WEOF**。 若為**getchar**，請使用**ferror**或**feof**來檢查錯誤或檔案結尾。
 
 ## <a name="remarks"></a>備註
 
-每個例程從**stdin**讀取單個字元,並將關聯的檔指標增量到指向下一個字元。 **getchar**與[_fgetchar](fgetc-fgetwc.md)相同,但它是作為函數和宏實現的。
+每個常式都會從**stdin**讀取單一字元，並遞增相關聯的檔案指標，以指向下一個字元。 **getchar**與[_fgetchar](fgetc-fgetwc.md)相同，但它會實作為函式和宏。
 
 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -76,7 +76,7 @@ wint_t getwchar();
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平臺 (UWP) 應用中不支援該主控台。 在與主控台 **、stdin、stdout**和**stder**關聯的標準流句柄必須重定向,C 運行時函數才能在UWP應用中使用**stdout**它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺（UWP）應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

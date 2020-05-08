@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: c9611c2bd55ebc1602a73e4c71518716ea100420
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343908"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919775"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -48,20 +48,20 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>參數
 
-*Fd*<br/>
+*fd*<br/>
 參照至需要測試之裝置的檔案描述元。
 
 ## <a name="return-value"></a>傳回值
 
-如果描述元與字元設備關聯 **,_isatty**返回非零值。 否則 **,_isatty**返回 0。
+如果描述元與字元裝置相關聯， **_isatty**會傳回非零值。 否則， **_isatty**會傳回0。
 
 ## <a name="remarks"></a>備註
 
-**_isatty**功能確定*fd*是否與字元設備(終端、控制台、印表機或串行埠)相關聯。
+**_Isatty**函數會決定*fd*是否與字元裝置（終端機、主控台、印表機或序列埠）相關聯。
 
-此函數驗證*fd*參數。 如果*fd*是錯誤的檔指標,則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將傳回 0 並將**errno**設定到**EBADF**。
+此函式會驗證*fd*參數。 如果*fd*是錯誤的檔案指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回0，並將**errno**設為**EBADF**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

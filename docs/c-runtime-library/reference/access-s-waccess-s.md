@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349130"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916901"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
@@ -62,10 +62,10 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>參數
 
-*路徑*<br/>
+*path*<br/>
 檔案或目錄路徑。
 
-*模式*<br/>
+*mode*<br/>
 權限設定。
 
 ## <a name="return-value"></a>傳回值
@@ -82,7 +82,7 @@ errno_t _waccess_s(
 
 ## <a name="remarks"></a>備註
 
-當與檔一起使用時 **,_access_s**函數確定指定的檔是否存在,並且可以按*模式*的值指定進行訪問。 當與目錄一起使用時 **,_access_s**僅確定指定的目錄是否存在。 在 Windows 2000 和更高版本的作業系統中,所有目錄都具有讀取和寫入訪問許可權。
+搭配檔案使用時， **_access_s**函式會判斷指定的檔案是否存在，並可依*模式*值的指定來存取。 搭配目錄使用時， **_access_s**只會判斷指定的目錄是否存在。 在 Windows 2000 和更新版本的作業系統中，所有目錄都有讀取和寫入存取權。
 
 |模式值|檢查檔案|
 |----------------|---------------------|
@@ -91,13 +91,13 @@ errno_t _waccess_s(
 |04|讀取權限。|
 |06|讀取和寫入權限。|
 
-讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如,如果檔被另一個進程鎖定,即使 **_access_s**返回 0,它也可能無法訪問。
+讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案已由另一個進程鎖定，即使 **_access_s**傳回0，也可能無法存取。
 
-**_waccess_s**是 **_access_s**的寬字元版本 **,_waccess_s**的*路徑*參數是寬字元字串。 否則 **,_waccess_s**和 **_access_s**行為相同。
+**_waccess_s**是寬字元版本的 **_access_s**，其中 **_waccess_s**的*path*引數是寬字元字串。 否則， **_waccess_s**和 **_access_s**的行為完全相同。
 
-這些函式會驗證它們的參數。 如果*路徑*為 NULL 或*模式*未指定有效模式,則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
+這些函式會驗證它們的參數。 如果*path*為 Null，或*模式*未指定有效的模式，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -114,7 +114,7 @@ errno_t _waccess_s(
 
 ## <a name="example"></a>範例
 
-此示例使用 **_access_s**檢查名為 crt_access_s.c 的檔以查看是否存在,以及是否允許寫入。
+這個範例會使用 **_access_s**來檢查名為 crt_access_s 的檔案，以查看它是否存在，以及是否允許寫入。
 
 ```C
 // crt_access_s.c

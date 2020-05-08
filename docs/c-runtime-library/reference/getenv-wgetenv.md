@@ -1,6 +1,6 @@
 ---
 title: getenv, _wgetenv
-description: 描述 Microsoft Cgetenv_wgetenv運行時 庫和函數。
+description: 說明 Microsoft C 執行時間連結getenv庫_wgetenv和函式。
 ms.date: 4/2/2020
 api_name:
 - getenv
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,12 +56,12 @@ no-loc:
 - _tzset
 - _dupenv_s
 - _wdupenv_s
-ms.openlocfilehash: c9d7f7e1a2c5d6b15aee2f7f972a30cc0c90115c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea7fba1dd47123919dc0a01fd84bad65481b9db9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344259"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913658"
 ---
 # <a name="getenv-_wgetenv"></a>getenv、_wgetenv
 
@@ -83,34 +83,34 @@ wchar_t *_wgetenv(
 
 ### <a name="parameters"></a>參數
 
-*瓦爾名稱*<br/>
+*varname*<br/>
 環境變數名稱。
 
 ## <a name="return-value"></a>傳回值
 
-返回指向包含*varname*的環境表條目的指標。 使用傳回的指標修改環境變數的值並不安全。 使用[_putenv](putenv-wputenv.md)函數修改環境變數的值。 如果在環境表中找不到*varname,* 則傳回值為**NULL。**
+傳回包含*varname*之環境資料表專案的指標。 使用傳回的指標修改環境變數的值並不安全。 使用[_putenv](putenv-wputenv.md)函數來修改環境變數的值。 如果在環境資料表中找不到*varname* ，則傳回值會是**Null** 。
 
 ## <a name="remarks"></a>備註
 
-**getenv**函數搜尋變數環境變數的清單,以搜尋*varname*。 **getenv**在 Windows 作業系統中不區分大小寫。 **getenv**和 **_putenv**使用全域變數 **_environ**指向的環境的副本來訪問環境。 **getenv**僅在執行時庫可存取的數據結構上運行,而不是作業系統為進程創建的環境"段"上運行。 因此,使用*envp*參數到[主](../../cpp/main-function-command-line-args.md)或[wmain](../../cpp/main-function-command-line-args.md)的程式可能會檢索無效資訊。
+**Getenv**函數會搜尋環境變數清單中的*varname*。 **getenv**在 Windows 作業系統中不區分大小寫。 **getenv**和 **_putenv**使用全域變數 **_environ**所指向的環境複本來存取環境。 **getenv**只會在執行時間程式庫可存取的資料結構上運作，而不會在作業系統所建立的環境「區段」上操作。 因此，使用[main](../../cpp/main-function-command-line-args.md)或[wmain](../../cpp/main-function-command-line-args.md)的*envp*引數的程式可能會取得不正確資訊。
 
-如果*varname*為**NULL,** 則此函數將呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設定到**EINVAL**並傳回**NULL**。
+如果*varname*為**Null**，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**Null**。
 
-**_wgetenv**是**getenv**的寬字元版本;**_wgetenv**的參數和返回值是寬字元字串。 **_wenviron**全域變數是 **_environ**的寬字元版本。
+**_wgetenv**是寬字元版本的**getenv**;**_wgetenv**的引數和傳回值是寬字元字串。 **_Wenviron**全域變數是寬字元版本的 **_environ**。
 
-在 MBCS 程式中(例如,在 SBCS ASCII 程式中 **),_wenviron**最初為**NULL,** 因為環境由多位元位元串組成。 然後,在第一次調用[_wputenv](putenv-wputenv.md)時,或者在第一次調用 **_wgetenv**如果 (MBCS) 環境已經存在時,將建立相應的寬字元字串環境,然後由 **_wenviron**指向 。
+在 MBCS 程式中（例如，在 SBCS ASCII 程式中）， **_wenviron**一開始是**Null** ，因為此環境由多位元組字元字串所組成。 然後，在第一次呼叫[_wputenv](putenv-wputenv.md)，或在第一次呼叫時 **_WGETENV**如果（MBCS）環境已經存在，則會建立對應的寬字元字串環境，然後再由 **_wenviron**指向。
 
-同樣,在 Unicode (**_wmain**) 程式中 **,_environ**最初為**NULL,** 因為環境由寬字元字串組成。 然後,在第一次調用 **_putenv**時,或者在第一次調用**getenv**時(如果(Unicode) 環境已經存在,則創建相應的 MBCS 環境,然後由 **_environ**指向 。
+同樣地，在 Unicode （**_wmain**）程式中， **_environ**一開始是**Null** ，因為環境是由寬字元字串所組成。 然後，在第一次呼叫 **_putenv**，或在第一次呼叫**getenv** （如果有（Unicode）環境已經存在）時，會建立對應的 MBCS 環境，然後 **_environ**將其指向。
 
-當此環境的兩個複本 (MBCS 和 Unicode) 在此程式中同時存在時，這個執行階段系統必須同時維護兩份複本，造成執行時間較慢。 例如,每當調用 **_putenv**時,也會自動執行對 **_wputenv**的調用,以便兩個環境字串對應。
+當此環境的兩個複本 (MBCS 和 Unicode) 在此程式中同時存在時，這個執行階段系統必須同時維護兩份複本，造成執行時間較慢。 例如，每當您呼叫 **_putenv**， **_wputenv**的呼叫也會自動執行，讓兩個環境字串對應。
 
 > [!CAUTION]
 > 在罕見情況下，當這個執行階段系統正同時維護此環境的 Unicode 版本和多位元組版本時，這兩個環境版本可能無法完全對應。 這是因為雖然任何唯一的多位元組字元字串會對應到唯一的 Unicode 字串，但從唯一的 Unicode 字串對應到多位元組字元字串並不一定唯一。 如需詳細資訊，請參閱 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **函數的_putenv**和 **_getenv**系列不具有線程安全。 **_getenv**可以在 **_putenv**修改字串時返回字串指標,從而導致隨機失敗。 確定這些函式的呼叫已同步。
+> 函數的 **_putenv**和 **_getenv**系列不是安全線程。 當 **_putenv**正在修改字串時， **_getenv**可能會傳回字串指標，因而導致隨機失敗。 確定這些函式的呼叫已同步。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -118,7 +118,7 @@ wchar_t *_wgetenv(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
-要檢查或更改**TZ**環境變數的值,請根據需要使用**getenv、_putenv**和 **_putenv****_tzset。** 有關**TZ**的詳細資訊,請參閱[_tzset](tzset.md)和[_daylight、時區和_tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
+若要檢查或變更**TZ**環境變數的值，請視需要使用**getenv**、 **_putenv**和 **_tzset** 。 如需**TZ**的詳細資訊，請參閱[_tzset](tzset.md)和[_daylight、時區和 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -173,6 +173,6 @@ New LIB variable is: c:\mylib;c:\yourlib
 
 ## <a name="see-also"></a>另請參閱
 
-[程序與環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[進程和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>
 [環境常數](../../c-runtime-library/environmental-constants.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338334"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916075"
 ---
 # <a name="_putw"></a>_putw
 
@@ -59,15 +59,15 @@ int _putw(
 
 ## <a name="return-value"></a>傳回值
 
-傳回寫入的值。 **EOF**的返回值可能表示錯誤。 由於**EOF**也是一個合法的整數值,請使用**ferror**驗證錯誤。 如果*流*是空指標,則調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,此函數將**errno**設定到**EINVAL**並傳回**EOF**。
+傳回寫入的值。 **EOF**的傳回值可能表示發生錯誤。 因為**EOF**也是合法的整數值，所以請使用**ferror**來驗證錯誤。 如果*stream*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_putw**函數將**int**的二進位值寫入流的目前位置 *。* **_putw**不影響流中項的對齊,也不假定任何特殊對齊方式。 **_putw**主要是為了與以前的庫相容。 **_putw**可能會出現可移植性問題,因為**int**的大小和**int**中的位元組順序因系統而異。
+**_Putw**函式會將**int**類型的二進位值寫入資料流程的目前位置 *。* **_putw**不會影響資料流程中的專案對齊，也不會採用任何特殊對齊方式。 **_putw**主要是為了與先前的程式庫相容。 **_Putw**可能會發生可攜性問題，因為**int**的大小和**int**中的位元組順序在不同的系統之間有所不同。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

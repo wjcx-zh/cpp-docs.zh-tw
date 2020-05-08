@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333394"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917045"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir、_wchdir
 
@@ -67,21 +67,21 @@ int _wchdir(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，這些函式會傳回值 0。 返回值 -1 表示失敗。 找不到指定的路徑,**則 errno**設定為**ENOENT**。 如果*dirname*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則**errno**設置為**EINVAL,** 函數傳回 -1。
+如果成功，這些函式會傳回值 0。 傳回值-1 表示失敗。 如果找不到指定的路徑， **errno**會設定為**ENOENT**。 如果*dirname*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函式會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**_chdir**函數將當前工作目錄更改為*dirname*指定的目錄。 *dirname*參數必須引用現有目錄。 這個函式可以變更任何磁碟機上的目前工作目錄。 如果在*dirname*中指定了新的驅動器號,則預設驅動器號也已更改。 例如，如果 A 是預設磁碟機代號，而 \BIN 是目前工作目錄，下列呼叫會變更磁碟機 C 的目前工作目錄，並將 C 建立為新的預設磁碟機：
+**_Chdir**函式會將目前的工作目錄變更為*dirname*所指定的目錄。 *Dirname*參數必須參考現有的目錄。 這個函式可以變更任何磁碟機上的目前工作目錄。 如果在*dirname*中指定了新的磁碟機號，預設的磁碟機號也會變更。 例如，如果 A 是預設磁碟機代號，而 \BIN 是目前工作目錄，下列呼叫會變更磁碟機 C 的目前工作目錄，並將 C 建立為新的預設磁碟機：
 
 ```C
 _chdir("c:\temp");
 ```
 
-當您在路徑中使用可選的反斜杠字元 **(&#92;**) 時,必須在 C 字串文字中放置兩個反斜杠 **(&#92;&#92;**) 以表示單個反斜杠 (**&#92;**)。
+當您在路徑中使用選擇性反斜線字元（**&#92;**）時，您必須在 C 字串常值中放置兩個反斜線（**&#92;&#92;**），以表示單一反斜線（**&#92;**）。
 
-**_wchdir**是 **_chdir**的寬字元版本;**_wchdir***的 dirname*參數是寬字元字串。 **_wchdir**和 **_chdir**行為相同。
+**_wchdir**是寬字元版本的 **_chdir**;**_wchdir**的*dirname*引數是寬字元字串。 相反地， **_wchdir**和 **_chdir**的行為相同。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文字常式對應
 

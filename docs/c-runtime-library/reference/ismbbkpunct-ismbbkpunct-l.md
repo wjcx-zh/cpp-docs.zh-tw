@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 24e1676422d913bf406fc4cb5f114c1c025bdb97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf2d0d38466c370d0110b71a302471679e64657
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343593"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915686"
 ---
 # <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct、_ismbbkpunct_l
 
@@ -59,19 +59,19 @@ int _ismbbkpunct_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果整數*c*是非 ASCII 標點符號,**則_ismbbkpunct**返回非零值;如果不是,則返回 0。 例如，僅在字碼頁 932， **_ismbbkpunct** 會測試片假名標點符號。 **_ismbbkpunct**對任何與區域設置相關的字元設置使用當前區域設置。 **_ismbbkpunct_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果整數*c*是非 ASCII 標點符號， **_ismbbkpunct**會傳回非零值; 如果不是，則傳回0。 例如，僅在字碼頁 932， **_ismbbkpunct** 會測試片假名標點符號。 **_ismbbkpunct**會針對任何地區設定相關的字元設定使用目前的地區設定。 **_ismbbkpunct_l**是相同的，不同之處在于它會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -85,4 +85,4 @@ int _ismbbkpunct_l(
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

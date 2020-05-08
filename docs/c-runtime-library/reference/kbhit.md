@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342257"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916555"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -57,13 +57,13 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>傳回值
 
-如果按鍵 **,_kbhit**返回非零值。 否則，它會傳回 0。
+如果已按下按鍵， **_kbhit**會傳回非零值。 否則，它會傳回 0。
 
 ## <a name="remarks"></a>備註
 
-**_kbhit**功能檢查控制台中最近的擊鍵。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 然後,程式可以呼叫 **_getch**或 **_getche**以獲得擊鍵。
+**_Kbhit**函式會檢查主控台中是否有最新的按鍵。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 程式接著可以呼叫 **_getch**或 **_getche**來取得按鍵。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -111,4 +111,4 @@ Key struck was 'q'
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>

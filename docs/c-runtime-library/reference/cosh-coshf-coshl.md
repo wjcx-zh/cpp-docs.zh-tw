@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: d7d2050be406e7f2be66ca200d1e3cfd9c2960b0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348437"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917219"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
-計算雙曲性拋物。
+計算雙曲余弦值。
 
 ## <a name="syntax"></a>語法
 
@@ -59,37 +59,37 @@ long double cosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 角度 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
-*x*的雙曲性拋物素。
+*X*的雙曲余弦值。
 
-預設情況下,如果結果在**cosh、coshf**或**coshf** **coshl**呼叫中過大,則函數將返回**HUGE_VAL**並將**errno**設定到**ERANGE**。
+根據預設，如果**cosh**、 **coshf**或**coshl**呼叫中的結果太大，函式會傳回**HUGE_VAL**並將**errno**設定為**ERANGE**。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|無|**_DOMAIN**|
-|*x* = 7.104760e+002|**不準確的**+**溢出**|**溢出**|
+|± **QNAN**， **IND**|無|**_DOMAIN**|
+|*x* ≥ 7.104760 e + 002|**不精確**+的**溢**位|**溢出**|
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用獲取和返回**浮點**值或**長****雙**精度值的**cosh**重載。 在 C 程式中 **,cosh**總是取得並傳**回一個雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**cosh**的多載。 在 C 程式中， **cosh**一律會採用並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
-|**科斯夫**,**科斯爾**,**科斯爾**|\<math.h>|\<cmath> 或 \<math.h>|
+|**coshf**、 **cosl**、 **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-見[辛、辛夫、辛赫爾](sinh-sinhf-sinhl.md)中的例子。
+請參閱[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)中的範例。
 
 ## <a name="see-also"></a>另請參閱
 

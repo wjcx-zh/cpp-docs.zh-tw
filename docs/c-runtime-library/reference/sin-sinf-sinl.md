@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355006"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915775"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
-計算浮點值的子值。
+計算浮點值的正弦函數。
 
 ## <a name="syntax"></a>語法
 
@@ -62,31 +62,31 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 角度 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
-**子項**函數返回*x*的子次。 如果*x*大於或等於 263,或小於或等於 -263,則結果中會發生顯著性損失。
+**Sin**函式會傳回*x*的正弦函數。 如果*x*大於或等於263，或小於或等於-263，則會在結果中失去重要性。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|• QNAN,IND|None|_DOMAIN|
-|[ ( 辛, 鼻, 鼻 )|無效|_DOMAIN|
+|± QNAN，IND|無|_DOMAIN|
+|±∞（sin，sinf，sinl）|無效|_DOMAIN|
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用帶和返回**浮點**值或**長****雙**值的**重**載。 在 C 程式中,**辛**總是採取並傳回**雙**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**sin**的多載。 在 C 程式中， **sin**一律採用並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-|-|-|
-|**辛****夫**,**鼻**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

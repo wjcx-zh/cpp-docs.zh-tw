@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: b11a40dd9dc58964df77330767a55aa95a179319
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338196"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919534"
 ---
 # <a name="rand_s"></a>rand_s
 
-產生虛擬亂數。 這是函數[蘭特](rand.md)的更安全的版本,具有[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增強功能。
+產生虛擬亂數。 這是更安全的函數[rand](rand.md)版本，其中包含[CRT 中的安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述的安全性增強功能。
 
 ## <a name="syntax"></a>語法
 
@@ -51,18 +51,18 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>參數
 
-*隨機數值*<br/>
-指向整數的指標,用於保存生成的值。
+*randomValue*<br/>
+指向用來保存所產生值的整數指標。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功則為零，否則為錯誤碼。 如果輸入指標_隨機值_是空指標,則函數將調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將傳回**EINVAL**並將**errno**設定到**EINVAL**。 如果函數由於任何其他原因失敗,*_隨機值_設置為 0。
+如果成功則為零，否則為錯誤碼。 如果輸入指標_randomValue_是 null 指標，此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。 如果函式因為任何其他原因而失敗，則 *_randomValue_會設定為0。
 
 ## <a name="remarks"></a>備註
 
-**rand_s**函數在範圍 0 到**UINT_MAX**到輸入指標中寫入偽隨機整數。 **rand_s**函數使用操作系統生成加密安全的隨機數。 它不使用[srand](srand.md)函數生成的種子,也不影響[蘭特](rand.md)使用的隨機數序列。
+**Rand_s**函式會將範圍0中的隨機整數，寫入輸入指標的**UINT_MAX** 。 **Rand_s**函式會使用作業系統來產生密碼編譯安全的亂數字。 它不會使用[srand](srand.md)函數所產生的種子，也不會影響[rand](rand.md)所使用的亂數字序列。
 
-**rand_s**函數要求在要宣告函數的包含語句之前定義常量 **_CRT_RAND_S,** 如以下範例所示:
+**Rand_s**函數需要在要宣告之函式的包含語句之前定義常數 **_CRT_RAND_S** ，如下列範例所示：
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,7 +71,7 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s**取決於[RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API,該 API 僅在 Windows XP 和更高版本中可用。
+**rand_s**取決於[RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API，這僅適用于 Windows XP 和更新版本。
 
 ## <a name="requirements"></a>需求
 
@@ -160,5 +160,5 @@ int main( void )
 ## <a name="see-also"></a>另請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[蘭德](rand.md)<br/>
+[rand](rand.md)<br/>
 [srand](srand.md)<br/>

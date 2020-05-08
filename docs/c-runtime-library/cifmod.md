@@ -13,7 +13,7 @@ api_location:
 - msvcr120.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: 8dcae95fa260593adc434fcaba648972caccb692
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: bcfbabd260e17ac788ca3a3b83301b5f35be07eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745369"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917448"
 ---
 # <a name="_cifmod"></a>_CIfmod
 
@@ -48,11 +48,11 @@ void __cdecl _CIfmod();
 
 產生的值會推入至堆疊的頂端。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-**平台:** x86
+**平臺：** x86
 
 ## <a name="see-also"></a>另請參閱
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 9681373ccf338daf05be3120fbadd39ba471e86a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e581237c7b839af87df7bc88369f21751b855d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332965"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916101"
 ---
 # <a name="puts-_putws"></a>puts、_putws
 
@@ -60,24 +60,24 @@ int _putws(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 輸出字串。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回非負值。 如果**放量**失敗,它將返回**EOF**;如果 **_putws**失敗,它將傳回**WEOF**。 如果*str*是空指標,則調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數將**errno**設定為**EINVAL**並傳回**EOF**或**WEOF**。
+如果成功，則傳回非負值。 如果 put 失敗，**則會傳回** **EOF**;如果 **_putws**失敗，則會傳回**WEOF**。 如果*str*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函數會將**errno**設定為**EINVAL** ，並傳回**EOF**或**WEOF**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**put**函數將*str*寫入標準輸出流 **,** 在輸出流中用換行符 ('\n') 替換字串的終止空字元 ('\0')。
+Put 函式**會將** *str*寫入標準輸出資料流程**stdout**，將字串結尾的 null 字元（' \ 0 '）取代為輸出資料流程中的分行符號（' \n '）。
 
-**_putws**是**放的**寬字元版本;如果在 ANSI 模式下打開流,則這兩個函數的操作相同。 **當前**不支援將輸出放入 UNICODE 流。
+**_putws** **是的寬字元版本，** 如果資料流程是以 ANSI 模式開啟，則這兩個函式的行為相同。 put**目前不支援**輸出至 UNICODE 資料流程。
 
-**_putwch**使用當前 CONSOLE LOCALE 設定寫入 Unicode 字元。
+**_putwch**使用目前的主控台地區設定來寫入 Unicode 字元。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -92,7 +92,7 @@ int _putws(
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-通用 Windows 平臺 (UWP) 應用中不支援該主控台。 在與主控台 **、stdin、stdout**和**stder**關聯的標準流句柄必須重定向,C 運行時函數才能在UWP應用中使用**stdout**它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺（UWP）應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

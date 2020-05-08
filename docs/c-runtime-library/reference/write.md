@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: a616df570d266c335337d897da59a2a0ec69b40e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367386"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916700"
 ---
 # <a name="_write"></a>_write
 
@@ -51,32 +51,32 @@ int _write(
 
 ### <a name="parameters"></a>參數
 
-*Fd*<br/>
+*fd*<br/>
 資料要寫入至其中之檔案的檔案描述項。
 
 *緩衝區*<br/>
 要寫入的資料。
 
-*count*<br/>
+*計數*<br/>
 位元組數。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功 **,_write**返回寫入的位元組數。 如果磁碟上的剩餘實際空間小於函數嘗試寫入磁碟的緩衝區大小 **,_write**失敗,並且不會將緩衝區的任何內容刷新到磁碟。 返回值 -1 表示錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,則函數返回 **-1,errno**設置為三個值之一 **:EBADF,** 這意味著檔描述符無效或檔未打開以進行寫入;**ENOSPC**,這意味著設備上沒有足夠的空間用於操作;或**EINVAL**,這意味著*緩衝區*是空指標,或者*位元組的奇*數被傳遞到 Unicode 模式下的檔。
+如果成功， **_write**會傳回寫入的位元組數目。 如果磁片上剩餘的實際空間小於函數嘗試寫入磁片的緩衝區大小， **_write**會失敗，且不會將任何緩衝區的內容排清到磁片。 傳回值-1 表示發生錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並將**errno**設定為下列三個值的其中一個： **EBADF**，這表示檔案描述元無效或檔案未開啟以供寫入;**ENOSPC**，這表示裝置上沒有足夠的空間可進行操作;或**EINVAL**，這表示*緩衝區*是 null 指標，或者傳遞了奇數的位元組*計數*，以 Unicode 模式寫入檔案。
 
-有關這些代碼和其他返回代碼的詳細資訊,請參閱[errno、_doserrno、_sys_errlist和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果在文字模式下打開檔,則每個換行符將替換為輸出中的回車換行對。 替換不會影響返回值。
+如果檔案是在文字模式中開啟，則每個換行字元都會以輸出中的換行傳回分行符號來取代。 取代並不會影響傳回值。
 
-在 Unicode 轉換模式下打開檔時,例如, 如果使用 **_open**或 **_sopen**以及包含 **_O_WTEXT、_O_U16TEXT**或 **_O_U8TEXT**的模式參數打開 **_O_WTEXT** *fd,* 或者如果使用**fopen**和包含 ccs_UNICODE、ccs_UTF-16LE 或**ccs_UTF-8**的模式更改為 Unicode 轉換 **_setmode**模式的模式**ccs=UNICODE****ccs=UTF-16LE**,則*緩衝區*將解釋為指向包含**UTF-16** **wchar_t數位的**指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+當以 Unicode 轉譯模式開啟檔案時（例如，如果使用 **_open**或 **_sopen**開啟*fd* ，且包含 **_O_WTEXT**的模式參數） **_O_U16TEXT**] 或 [ **_O_U8TEXT**]，或者，如果是使用**fopen**和包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數來開啟，或如果使用 **_setmode**將模式變更為 Unicode 轉譯模式，則會將*buffer*解讀為包含**utf-16**資料之**wchar_t**陣列的指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_write**函數將*緩衝區的計數*位元*buffer*組寫入 與*fd*關聯的檔中。 寫入作業會從與指定檔案相關之檔案指標 (若有的話) 的目前位置開始。 若檔案是開啟為以供附加，則作業會在檔案的目前結尾開始。 寫入操作後,檔指標將因寫入的位元組數而增加。
+**_Write**函式會將*計數*位元組從*緩衝區*寫入與*fd*相關聯的檔案中。 寫入作業會從與指定檔案相關之檔案指標 (若有的話) 的目前位置開始。 若檔案是開啟為以供附加，則作業會在檔案的目前結尾開始。 在寫入作業之後，檔案指標會以寫入的位元組數來增加。
 
-寫入文字模式下打開的檔時 **,_write**將 CTRL_Z 字元視為檔的邏輯結尾。 寫入裝置時 **,_write**將緩衝區中的 CTRL_Z 字元視為輸出終止符。
+寫入以文字模式開啟的檔案時， **_write**會將 CTRL + Z 字元視為檔的邏輯尾。 寫入裝置時， **_write**會將緩衝區中的 CTRL + Z 字元視為輸出結束字元。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

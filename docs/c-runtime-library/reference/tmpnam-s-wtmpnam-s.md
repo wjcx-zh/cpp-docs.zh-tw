@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: e34fbe64d342205659a4b0bdaf703248e62ed733
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362406"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917479"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s、_wtmpnam_s
 
@@ -70,10 +70,10 @@ errno_t _wtmpnam_s(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 將保留所產生名稱的指標。
 
-*大小在查理斯*<br/>
+*sizeInChars*<br/>
 緩衝區的大小 (以字元為單位)。
 
 ## <a name="return-value"></a>傳回值
@@ -84,23 +84,23 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*Str*|*大小在查理斯*|**返回值**|** ** *str*的內容  |
-|**空**|任意|**埃因瓦爾**|未修改|
-|非**NULL(** 指向有效記憶體 )|太短|**ERANGE**|未修改|
+|*str*|*sizeInChars*|**傳回值**|*Str* **的內容**  |
+|**Null**|任意|**EINVAL**|未修改|
+|not **Null** （指向有效的記憶體）|太短|**ERANGE**|未修改|
 
-如果*str*為**NULL,** 則呼叫無效參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將**errno**設定為**EINVAL**並傳回**EINVAL**。
+如果*str*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-這些函式均會傳回目前不存在的檔案名稱。 **tmpnam_s**返回[GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)返回的指定 Windows 臨時目錄中的唯一名稱。 請注意，當檔案名稱前面附加反斜線且沒有路徑資訊時，例如 \fname21，這表示名稱對於目前工作目錄有效。
+這些函式均會傳回目前不存在的檔案名稱。 **tmpnam_s**會傳回[GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)所傳回之指定 Windows 臨時目錄中唯一的名稱。 請注意，當檔案名稱前面附加反斜線且沒有路徑資訊時，例如 \fname21，這表示名稱對於目前工作目錄有效。
 
-對於**tmpnam_s**,您可以將此生成的檔名存儲在*str*中。 **tmpnam_s**傳回的字串的最大長度**為 L_tmpnam_s,** 在 STDIO 中定義。H。 如果*str*為**NULL,** 則**tmpnam_s**將結果保留在內部靜態緩衝區中。 因此任何後續呼叫會終結這個值。 **tmpnam_s**生成的名稱由程式生成的檔名組成,並且在第一次調用**tmpnam_s**后,在 STDIO 中**TMP_MAX_S**時,在基 32(.1-.1vvvvvvvu)中,順序號碼的檔擴展名。H 是**INT_MAX**)。
+對於**tmpnam_s**，您可以將這個產生的檔案名儲存在*str*中。 **Tmpnam_s**所傳回之字串的最大長度是**L_tmpnam_s**（定義于 stdio.h 中）。H. 如果*str*是**Null**，則**tmpnam_s**會將結果保留在內部靜態緩衝區中。 因此任何後續呼叫會終結這個值。 **Tmpnam_s**所產生的名稱包含程式所產生的檔案名，以及在第一次呼叫**tmpnam_s**之後，在 stdio.h 中**TMP_MAX_S**時，是基底32（1vvvvvu）中序號的副檔名。H 為**INT_MAX**）。
 
-**tmpnam_s**根據需要自動處理多位元位元串參數,根據從作業系統獲取的 OEM 代碼頁識別多位元組字串序。 **_wtmpnam_s**是**tmpnam_s**的寬字元版本;**_wtmpnam_s**的參數和返回值是寬字元字串。 **_wtmpnam_s**和**tmpnam_s**行為相同,只是 **_wtmpnam_s**不處理多位元組位元串。
+**tmpnam_s**會自動將多位元組字元字串引數處理為適當的，並根據從作業系統取得的 OEM 字碼頁辨識多位元組字元序列。 **_wtmpnam_s**是寬字元版本的**tmpnam_s**;**_wtmpnam_s**的引數和傳回值是寬字元字串。 **_wtmpnam_s**和**tmpnam_s**的行為相同，不同之處在于 **_wtmpnam_s**不會處理多位元組字元字串。
 
 在 C++ 中，使用這些函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

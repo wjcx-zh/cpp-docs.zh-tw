@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342235"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916533"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
@@ -77,7 +77,7 @@ long double ldexpl(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 浮點值。
 
 *exp*<br/>
@@ -85,21 +85,21 @@ long double ldexpl(
 
 ## <a name="return-value"></a>傳回值
 
-**如果成功,ldexp**函數返回*x* \* 2<sup>*exp*</sup>的值。 在溢出時,並根據*x*的**符號傳回**+/- **HUGE_VAL**;**errno**值設定為**ERANGE**。
+如果成功， **ldexp**函數會傳回*x* \* 2<sup>*exp*</sup>的值。 在溢位時，根據*x*的正負號， **ldexp**會傳回 +/- **HUGE_VAL**;**errno**值會設定為**ERANGE**。
 
-有關**errno**與可能的錯誤傳回值的詳細資訊,請參閱[errno、_doserrno、_sys_errlist 和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需**errno**和可能的錯誤傳回值的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以調用採用**浮點**或**長****雙**類型**ldexp**的重載。 在 C 程式中 **,ldexp**始終採用**雙****和 int**並傳回**一個雙**。
+因為 c + + 允許多載，所以您可以呼叫採用**float**或**long** **double**類型之**ldexp**的多載。 在 C 程式中， **ldexp**一律採用**double**和**int** ，並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
 
 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 

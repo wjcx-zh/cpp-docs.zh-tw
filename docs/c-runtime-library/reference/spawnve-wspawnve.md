@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 0f546185039bb1503af40d5f690fd8d8c172a679
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f57d959e9aaefe1f86c110d3c3e945abf6d268da
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355864"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916045"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve、_wspawnve
 
@@ -69,27 +69,27 @@ intptr_t _wspawnve(
 
 ### <a name="parameters"></a>參數
 
-*模式*<br/>
+*mode*<br/>
 呼叫處理序的執行模式。
 
 *cmdname*<br/>
 待執行檔案的路徑。
 
 *argv*<br/>
-引數指標的陣列。 參數*argv*{0} 通常是指向實際模式下的路徑或受保護模式下的程式名稱的指標 *,argv*[1] 到*argv*=**n**= 是指向構成新參數清單的字串的指標。 參數*argv*=**n** [1] 必須是**NULL**指標,以標記參數清單的末尾。
+引數指標的陣列。 引數*argv*[0] 通常是真實模式中的路徑或受保護模式中程式名稱的指標，而*argv*[1] 透過*argv*[**n**] 則是形成新引數清單之字元字串的指標。 引數*argv*[**n** + 1] 必須是**Null**指標，以標記引數清單的結尾。
 
 *envp*<br/>
 環境設定的指標陣列。
 
 ## <a name="return-value"></a>傳回值
 
-來自同步 **_spawnve**或 **_wspawnve(_P_WAIT**為 **_wspawnve***模式*指定的)的返回值是新進程的退出狀態。 來自非同步 **_spawnve**或 **_wspawnve**的傳回值 **(_P_NOWAIT**或為*模式*指定的 **_P_NOWAITO** )是行程句柄。 如果處理序正常終止，結束狀態為 0。 如果生成的進程專門使用非零參數調用**退出**例程,則可以將退出狀態設置為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 返回值 -1 表示錯誤(未啟動新進程)。 在這種情況下 **,errno**設置為以下值之一。
+同步 **_spawnve**或 **_wspawnve** （**_P_WAIT**為*模式*指定）的傳回值是新進程的結束狀態。 非同步 **_spawnve**或 **_wspawnve** （為*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
 
 |||
 |-|-|
 | **E2BIG** | 引數清單超過 1024 個位元組。 |
-| **埃因瓦爾** | *模式*參數無效。 |
-| **埃諾恩特** | 找不到檔案或路徑。 |
+| **EINVAL** | *模式*引數無效。 |
+| **ENOENT** | 找不到檔案或路徑。 |
 | **ENOEXEC** | 指定的檔案無法執行或可執行檔格式無效。 |
 | **ENOMEM** | 可用記憶體不足，無法執行新處理序。 |
 
@@ -99,9 +99,9 @@ intptr_t _wspawnve(
 
 所有這些函式都會建立並執行新處理序，並將指標陣列傳遞至命令列引數，將指標陣列傳處至環境設定。
 
-這些函式會驗證它們的參數。 如果*cmdname*或*argv*是空指標,或者如果*argv*指向空指標,或者*argv*[0] 是空字串,則調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將**errno**設置為**EINVAL**,並返回 -1。 未繁衍任何新處理序。
+這些函式會驗證它們的參數。 如果*cmdname*或*argv*是 null 指標，或是*argv*指向 null 指標，或*argv*[0] 是空字串，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL**，並傳回-1。 未繁衍任何新處理序。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

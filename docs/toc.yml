@@ -4104,7 +4104,7 @@
                       href: cpp/types-of-expressions.md
                     - name: 主要運算式
                       href: cpp/primary-expressions.md
-                    - name: 省略符號和 Variadic 範本
+                    - name: 省略符號及可變參數範本
                       href: cpp/ellipses-and-variadic-templates.md
                     - name: 後置運算式
                       href: cpp/postfix-expressions.md
@@ -4245,7 +4245,7 @@
                   href: cpp/binary-operators.md
                 - name: 指派
                   href: cpp/assignment.md
-                - name: 函式呼叫
+                - name: '函式呼叫 '
                   href: cpp/function-call-cpp.md
                 - name: 下標
                   href: cpp/subscripting.md

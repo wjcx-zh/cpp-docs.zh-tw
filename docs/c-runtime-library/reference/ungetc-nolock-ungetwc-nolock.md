@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: fde5142d4c405fcf2dd61f642abe917d70b59b21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 397abcda60dc80f790fcdaba1e6eb0a390f68dc5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361309"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915991"
 ---
 # <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock、_ungetwc_nolock
 
@@ -64,7 +64,7 @@ wint_t _ungetwc_nolock(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要推送的字元。
 
 *資料流*<br/>
@@ -72,15 +72,15 @@ wint_t _ungetwc_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功,這些函數中的每一個都傳回字元參數*c*。 如果*c*無法推回或未讀取任何字元,則輸入流將保持不變 **,_ungetc_nolock**返回**EOF**;**_ungetwc_nolock**返回**WEOF。** 如果*串*流為**NULL,** 則傳回**EOF**或**WEOF,** 並將**errno**設定為**EINVAL**。
+如果成功，所有這些函式都會傳回字元引數*c*。 如果無法將*c*推送回來，或未讀取任何字元，則輸入資料流程不會變更， **_Ungetc_nolock**會傳回**EOF**;**_ungetwc_nolock**會傳回**WEOF**。 如果*stream*為**Null**，則會傳回**EOF**或**WEOF** ，並將**errno**設定為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-這些函數是非鎖定版本的**ungetc**和**ungetwc。** 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+這些函數是**ungetc**和**ungetwc**的非鎖定版本。 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

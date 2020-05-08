@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 492719a0cc0f8ac079b257ec8d7aa1014c5b2a86
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348915"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909115"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -86,17 +86,17 @@ double _wtof_l(
 
 ## <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 要轉換的字串。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-每個函數都返回通過將輸入字元解釋為數位而生成的**雙**精度值。 如果輸入無法轉換成該類型的值，則傳回值為 0.0。
+每個函式都會傳回將輸入字元解讀為數字所產生的**雙精度**值。 如果輸入無法轉換成該類型的值，則傳回值為 0.0。
 
-在所有範圍外的情況下 **,errno**設定為**ERANGE**。 如果傳入的參數為**NULL,** 則呼叫無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將**errno**設置為**EINVAL**並返回0。
+在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
 ## <a name="remarks"></a>備註
 
@@ -104,17 +104,17 @@ double _wtof_l(
 
 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
 
-**aof**與 **_wtof***的 str*參數具有以下形式:
+**Atof**和 **_wtof**的*str*引數具有下列格式：
 
-[*空白 ]*【*符號*】[*數字*][__.__*數位*|[**e** &#124; **E** ]*符號*=*數字*|
+[*空格*][*sign*][*數位*][__.__*數位*][{**e** &#124; **e** } [*sign*]*數位*]
 
-*空格*由忽略的空間或選項卡字元組成;*符號*是加(+)或減(-);*數位*是一個或多個十進位數位。 如果小數點前沒有數字，則在小數點後至少必須要有一個數字。 十進位數字可以跟一個指數,它由介紹性字母 **(e**或**E)** 和可選簽名的十進位整數組成。
+空白字元*包含空格*或定位字元，這些字元會被忽略;*sign*為加號（+）或減號（-）;和*數位*是一或多個小數位數。 如果小數點前沒有數字，則在小數點後至少必須要有一個數字。 十進位數後面可能接著一個指數，其中包含一個開頭字母（**e**或**e**）和一個選擇性帶正負號的十進位整數。
 
-這些函數的 UCRT 版本不支援轉換 Fortran 樣式 (**d**或**D**) 指數字母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
+這些函式的 UCRT 版本不支援轉換 Fortran 樣式（**d**或**d**）指數位母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
 
-具有 **_l**後綴的這些函數的版本是相同的,只是它們使用傳入*區域設置*參數而不是當前區域設置。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的*地區*設定參數，而不是目前的地區設定。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -127,12 +127,12 @@ double _wtof_l(
 
 |常式|必要的標頭|
 |------------------|---------------------|
-|**_atof_l** **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
-|**_wtof**, **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**atof**， **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
+|**_wtof**， **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>範例
 
-此程式展示如何使用**atof**和 **_atof_l**函數將儲存為字串的數位轉換為數值。
+此程式會顯示如何使用**atof**和 **_atof_l**函式，將儲存為字串的數位轉換為數值。
 
 ```C
 // crt_atof.c
@@ -185,7 +185,7 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

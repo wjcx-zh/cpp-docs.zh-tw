@@ -18,18 +18,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 819ea45bb9d5775bb59764b587a75e368fa0e80d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343752"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909528"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank、_ismbbblank_l
 
@@ -52,19 +52,19 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果*c*表示空格 (0x20) 字元、水準選項卡 (0x09) 字元或用於分隔占**空**的文本行中單詞的特定於區域設置的字元 **,_ismbbblank**返回非零值;否則,返回 0。 **_ismbbblank**對任何與區域設置相關的行為使用當前區域設置。 **_ismbbblank_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*c*代表一個空格（0x20）字元、一個水準索引標籤（0x09）字元，或地區設定特定的字元（用來分隔一行文字中的單字，其中**isspace**為 true）， **_ismbbblank**會傳回非零值;否則，會傳回0。 **_ismbbblank**會針對任何與地區設定相關的行為使用目前的地區設定。 **_ismbbblank_l**是相同的，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -78,4 +78,4 @@ int _ismbbblank_l(
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

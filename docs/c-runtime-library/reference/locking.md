@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 2c6ee763a1491a744b25cbb517886e9354ca6152
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1c211ffaa63a0e4711374b01b0530ed8db20dfb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342053"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911542"
 ---
 # <a name="_locking"></a>_locking
 
@@ -53,10 +53,10 @@ int _locking(
 
 ### <a name="parameters"></a>參數
 
-*Fd*<br/>
+*fd*<br/>
 檔案描述項。
 
-*模式*<br/>
+*mode*<br/>
 要執行的鎖定動作。
 
 *nbytes*<br/>
@@ -64,20 +64,20 @@ int _locking(
 
 ## <a name="return-value"></a>傳回值
 
-**如果成功_locking**返回 0。 返回值 -1 表示失敗,在這種情況下[,errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)設置為以下值之一。
+如果成功， **_locking**會傳回0。 傳回值-1 表示失敗，在此情況下， [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)會設定為下列其中一個值。
 
 |errno 值|條件|
 |-|-|
 | **EACCES** | 鎖定違規 (檔案已鎖定或解除鎖定)。 |
 | **EBADF** | 檔案描述項無效。 |
-| **EDEADLOCK** | 鎖定違規。 當指定 **_LK_LOCK**或 **_LK_RLCK**標誌時返回,並且檔在 10 次嘗試後無法鎖定。 |
-| **埃因瓦爾** | 給 **_locking**無效的論點。 |
+| **EDEADLOCK** | 鎖定違規。 在指定 **_LK_LOCK**或 **_LK_RLCK**旗標，且在嘗試10次後無法鎖定檔案時傳回。 |
+| **EINVAL** | 指定了不正確引數給 **_locking**。 |
 
 如果由於參數不正確而失敗 (例如檔案描述項無效)，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>備註
 
-**_locking**函數鎖定或解鎖*fd*指定的檔案的*nGB*位元組。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 所有鎖定或解除鎖定都會從檔案指標的目前位置開始，並接著繼續進行 *nbytes* 個位元組。 您可以鎖定超過檔案結尾的位元組。
+**_Locking**函式會鎖定或解除鎖定*fd*所指定之檔案的*nbytes*位元組。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 所有鎖定或解除鎖定都會從檔案指標的目前位置開始，並接著繼續進行 *nbytes* 個位元組。 您可以鎖定超過檔案結尾的位元組。
 
 *mode* 必須是定義於 Locking.h 中的下列其中一個資訊清單常數。
 
@@ -89,9 +89,9 @@ int _locking(
 | **_LK_RLCK** | 與 **_LK_LOCK**相同。 |
 | **_LK_UNLCK** | 解除鎖定指定的位元組，這些位元組之前必須已鎖定。 |
 
-可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不合併相鄰區域;_locking不會合併相鄰區域。如果兩個鎖定區域相鄰,則必須單獨解鎖每個區域。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
+可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不會合並相鄰區域;如果兩個鎖定的區域相鄰，則每個區域都必須分開解除鎖定。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

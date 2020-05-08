@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348666"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913468"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
 
@@ -86,7 +86,7 @@ double _yn(
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 浮點值。
 
 *n*<br/>
@@ -94,31 +94,31 @@ Bessel 函數的整數階數。
 
 ## <a name="return-value"></a>傳回值
 
-每個例程返回*x*的貝氏氏函數。 如果*x* **在_y0、_y1**或 **_yn**函數中為負數,則例程將**errno**設定到**EDOM,** 將 **_DOMAIN**錯誤訊息列印到**斯特,** 並**傳回_HUGE_VAL**。 **_y1** 您可以使用 **_matherr**修改錯誤處理。
+這些常式都會傳回*x*的貝賽耳函數。 如果 **_y0**、 **_y1**或 **_yn**函數中的*x*是負數，常式會將**errno**設定為**EDOM**、將 **_DOMAIN**錯誤訊息列印到**stderr**，然後傳回 **_HUGE_VAL**。 您可以使用 **_matherr**來修改錯誤處理。
 
 ## <a name="remarks"></a>備註
 
-**_j0、_j1**和 **_jn**例程返回第一類貝塞爾函數:順序分別為 0、1 **_j1**和 n。
+**_J0**、 **_j1**和 **_jn**常式會分別傳回第一種的貝賽耳函式：訂單0、1和 n。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|**無效**|**_DOMAIN**|
+|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
 
-**_y0、_y1**和 **_yn**例程返回第二類貝塞爾函數:順序 0、1 **_y1**和 n。
+**_Y0**、 **_y1**和 **_yn**常式會傳回第二種類型的貝賽耳函式：分別是訂單0、1和 n。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|**無效**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**無效**|**_DOMAIN**|
+|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
+|±0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0。0|**無效**|**_DOMAIN**|
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++)、\<math.h> (C、C++)|
+|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++)、\<math.h> (C、C++)|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

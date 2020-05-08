@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: 28e52c564bb554df1bd2228691034db5a13a2300
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60b8a974ab27878a379e3a9ad2596a23ed31757f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909503"
 ---
 # <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph、_ismbbgraph_l
 
@@ -59,10 +59,10 @@ int _ismbbgraph_l (
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -71,11 +71,11 @@ int _ismbbgraph_l (
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-*c*的非零,如果不是,則為 0。 **_ismbbgraph**將當前區域設置用於任何與區域設置相關的行為。 **_ismbbgraph_l**是相同的,只是它使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+*c*為非零值; 如果不是，則為0。 **_ismbbgraph**會針對任何與地區設定相關的行為使用目前的地區設定。 **_ismbbgraph_l**是相同的，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -93,4 +93,4 @@ int _ismbbgraph_l (
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

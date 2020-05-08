@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361314"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909300"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -84,20 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要推送的字元。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功,這兩個函數都會返回字元*c。* 如果出現錯誤 **,_ungetch**傳回**EOF**的值 **,_ungetwch**傳**回 WEOF**。
+如果成功，這兩個函數都會傳回*c*字元。 如果發生錯誤， **_ungetch**會傳回**EOF**的值，而 **_ungetwch**會傳回**WEOF**。
 
 ## <a name="remarks"></a>備註
 
-這些函數將字元*c*推回主控台,導致*c*是 **_getch**或 **_getche(** 或 **_getwch**或 **_getwche)** 讀取的下一個字元。 如果在下一次讀取之前多次調用它們,**則_ungetch****和_ungetwch**將失敗。 *c*參數可能不是**EOF** (或**WEOF)。**
+這些函式會將字元*c*推送回到主控台，使*c*成為 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**）所讀取的下一個字元。 如果在下一次讀取之前呼叫多次， **_ungetch**和 **_ungetwch**會失敗。 *C*引數不可以是**EOF** （或**WEOF**）。
 
 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -110,8 +110,8 @@ wint_t _ungetwch_nolock(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_ungetch**, **_ungetch_nolock**|\<conio.h>|
-|**_ungetwch**, **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
+|**_ungetch**， **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -159,6 +159,6 @@ Whitetoken = White
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和埠 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [_getch、_getwch](getch-getwch.md)<br/>

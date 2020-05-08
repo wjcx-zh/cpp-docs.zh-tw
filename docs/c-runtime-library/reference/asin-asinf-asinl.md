@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334134"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909272"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -60,32 +60,32 @@ long double asin( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 要計算的反正弦值。
 
 ## <a name="return-value"></a>傳回值
 
-**asin**函數傳回範圍 -+/2 到 +/2 弧度中的*x*的弧線(逆正因函數)。
+**Asin**函數會傳回介於-π/2 到π/2 弧度之間的*x*反正弦值（反正弦函數）。
 
-預設情況下,如果*x*小於 -1 或大於 1,**則 asin**返回無限期。
+根據預設，如果*x*小於-1 或大於1，則**asin**會傳回不定的。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± ∞|**無效**|**_DOMAIN**|
-|• **QNAN**, **IND**|無|**_DOMAIN**|
+|± **QNAN**， **IND**|無|**_DOMAIN**|
 |&#124;x&#124;>1|**無效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-由於C++允許重載,因此可以使用**浮點**和**長****雙**精度值調用**asin**的重載。 在 C 程式中 **,asin**始終採用並傳**回一個雙**。
+因為 c + + 允許多載，所以您可以使用**float**和**long** **double**值來呼叫**asin**的多載。 在 C 程式中， **asin**一律會採用並傳回**雙精度浮點數**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
-|**阿辛**,**阿辛夫**,**阿辛**|\<math.h>|\<cmath> 或 \<math.h>|
+|**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="example"></a>範例
 

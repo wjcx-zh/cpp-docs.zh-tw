@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: c66a749d6aeb74fdc677b2d6088e1b5093f3570b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338518"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910382"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -54,19 +54,19 @@ FILE *stream
 ### <a name="parameters"></a>參數
 
 *資料流*<br/>
-將上一個呼叫的值傳回 **_popen**。
+從先前呼叫 **_popen**傳回值。
 
 ## <a name="return-value"></a>傳回值
 
-返回終止命令處理器的退出狀態,如果發生錯誤,返回 -1。 返回值的格式與 **_cwait**的格式相同,但交換低階和高階位元組除外。 如果流為**NULL** **NULL,_pclose**將**errno**設置到**EINVAL**並返回 -1。
+傳回終止命令處理器的結束狀態，如果發生錯誤，則傳回-1。 傳回值的格式與 **_cwait**相同，不同之處在于會交換低序位和高序位的位元組。 如果 stream 為**Null**， **_pclose**會將**errno**設定為**EINVAL** ，並傳回-1。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_pclose**函數查找由關聯的 **_popen**調用啟動的命令處理器 (Cmd.exe) 的進程 ID,在新命令處理器上執行[_cwait](cwait.md)調用,並關閉關聯管道上的流。
+**_Pclose**函式會查閱關聯的 **_popen**呼叫啟動之命令處理器（CMD.EXE）的處理序識別碼，並在新的命令處理器上執行[_cwait](cwait.md)呼叫，然後關閉關聯管道上的資料流程。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -29,7 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 7b1416147ed000dd3dd9a13bd52e41a474a8e9d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338556"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909338"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -95,31 +95,31 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>參數
 
-*X.*<br/>
+*x*<br/>
 起始的浮點值。
 
-*Y*<br/>
+*y*<br/>
 要前往的浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-返回*x*之後返回類型的下一個可表示的浮點值,該值位於*y*方向。 如果*x*和*y*相等,則函數傳回*y*,轉換為返回類型,無異常觸發。 如果*x*不等於*y*,並且結果是非正常或零,則設置**FE_UNDERFLOW**和**FE_INEXACT**浮點異常狀態,並返回正確的結果。 如果*x*或*y*是 NAN,則返回值是輸入 NA 之一。 如果*x*是有限的,並且結果在類型中是無限的或不可表示的,則返回正確簽名的無窮大或 NAN,**則設定FE_OVERFLOW****和FE_INEXACT**浮點異常狀態,並將**errno**設定為**ERANGE**。
+以*y*的方向傳回*x*之後，傳回類型的下一個顯示浮點值。 如果*x*和*y*相等，函式會傳回*y*，轉換成傳回型別，而不會觸發例外狀況。 如果*x*不等於*y*，且結果為 denormal 或零，則會設定**FE_UNDERFLOW**和**FE_INEXACT**浮點例外狀況狀態，並傳回正確的結果。 如果*x*或*y*是 NAN，則傳回值是其中一個輸入 nan。 如果*x*是有限的，且結果在類型中為無限或無法顯示，則會傳回正確的無限大或 NAN，並設定**FE_OVERFLOW**和**FE_INEXACT**浮點例外狀況狀態，而且**errno**會設定為**ERANGE**。
 
 ## <a name="remarks"></a>備註
 
-**下一個**函數和**下一個**函數族是等效的,但*y*的參數類型除外。 如果*x*和*y*相等,則傳回的值為*y*轉換為傳回類型。
+除了*y*的參數類型之外， **nextafter**和**nexttoward**函數系列是相等的。 如果*x*和*y*相等，則傳回的值會*轉換為*傳回型別。
 
-由於C++允許重載,因此,如果\<包含 cmath>则可以调用**下一個**和**下**一個返回**浮點**和**長****雙**類型的重載。 在 C 程式中,**下一個**與**下**一個始終傳**回雙**。
+因為 c + + 允許多載， \<所以如果您包含 h> 您可以呼叫**nextafter**和**nexttoward**的多載，其會傳回**float**和**long** **double**類型。 在 C 程式中， **nextafter**和**nexttoward**一律會傳回**double**。
 
-**_nextafter**和 **_nextafterf**功能特定於Microsoft。 **_nextafterf**函數僅在編譯 x64 時可用。
+**_Nextafter**和 **_nextafterf**函式為 Microsoft 特有的功能。 只有在針對 x64 進行編譯時，才能使用 **_nextafterf**函數。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------------|-------------------------------|
-|**下一個**,**下一個,****下一個, 下一個,** **_nextafterf,****下一個**,**下一個**,**下一個**|\<math.h>|\<math.h> 或 \<cmath>|
+|**nextafter**、 **nextafterf**、 **nextafterl**、 **_nextafterf**、 **nexttoward**、 **nexttowardf**、 **nexttowardl**|\<math.h>|\<math.h> 或 \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> 或 \<cfloat>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。

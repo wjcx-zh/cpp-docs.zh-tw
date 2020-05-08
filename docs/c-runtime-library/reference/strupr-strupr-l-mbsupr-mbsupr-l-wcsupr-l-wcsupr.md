@@ -28,7 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,19 +70,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: 5127c6f0be6375585be3b321788ba04a91364e57
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c30aa9e1a73ba51931caff726837841f76922139
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362889"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912343"
 ---
 # <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 
 將字串轉換為大寫。 這些函式已有更安全的版本可供使用，請參閱 [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsupr****和_mbsupr_l**不能在 Windows 運行時中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsupr**和 **_mbsupr_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -139,10 +139,10 @@ unsigned char *_mbsupr_l(
 
 ### <a name="parameters"></a>參數
 
-*Str*<br/>
+*str*<br/>
 改為大寫的字串。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -151,15 +151,15 @@ unsigned char *_mbsupr_l(
 
 ## <a name="remarks"></a>備註
 
-**_strupr**函數將每個小寫字母以*str*轉換為大寫。 轉換由區域設置**LC_CTYPE**類別設置確定。 不會影響其他字元。 有關**LC_CTYPE**的詳細資訊,請參考[設定區域設定](setlocale-wsetlocale.md)。 沒有 **_l**後綴的這些函數的版本使用當前區域設置;具有 **_l**後綴的版本是相同的,只是它們使用傳入區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_Strupr**函式會就地將*str*中的每個小寫字母轉換成大寫。 轉換是由地區設定的 [ **LC_CTYPE**類別] 設定所決定。 不會影響其他字元。 如需**LC_CTYPE**的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本會使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**_wcsupr**和 **_mbsupr**是寬字元和多位元組字元版本的 **_strupr。** **_wcsupr**的參數和返回值是寬字元字串;**_mbsupr**的字串是多位元位元串。 除此之外，這三個函式的行為相同。
+**_wcsupr**和 **_mbsupr**是 **_strupr**的寬字元和多位元組字元版本。 **_Wcsupr**的引數和傳回值是寬字元字串;**_mbsupr**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
-如果*str*是空指標,則調用無效的參數處理程式,如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行,這些函數將傳回原始字串並將**errno**設定為**EINVAL**。
+如果*str*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回原始字串，並將**errno**設定為**EINVAL**。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -172,9 +172,9 @@ unsigned char *_mbsupr_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_strupr**, **_strupr_l**|\<string.h>|
-|**_wcsupr**, **_wcsupr_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsupr**, **_mbsupr_l**|\<mbstring.h>|
+|**_strupr**， **_strupr_l**|\<string.h>|
+|**_wcsupr**， **_wcsupr_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsupr**， **_mbsupr_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -184,6 +184,6 @@ unsigned char *_mbsupr_l(
 
 ## <a name="see-also"></a>另請參閱
 
-[地區設定](../../c-runtime-library/locale.md)<br/>
-[字串動作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)<br/>

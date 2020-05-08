@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343832"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909549"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
@@ -57,22 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 ## <a name="return-value"></a>傳回值
 
-如果參數滿足測試條件,**則 isleadbyte**返回一個非零值;如果參數滿足測試條件,則返回 0。" 在「C」區域設定和單位元組字元集 (SBCS) 區域設定中,**正代位元組**始終返回 0。
+如果引數符合測試條件， **isleadbyte**會傳回非零值，否則會傳回0。 在 "C" 地區設定和單位元組字元集（SBCS）地區設定中， **isleadbyte**一律會傳回0。
 
 ## <a name="remarks"></a>備註
 
-**如果 isleadbyte**宏的參數是多位元組位元元的第一個字節,則該宏將返回非零值。 對於從 -1 **(EOF**) 到**UCHAR_MAX** (0xFF) 的任何整數參數(包括 0xFF),**正數生成**有意義的結果。
+如果**isleadbyte**宏的引數是多位元組字元的第一個位元組，則會傳回非零值。 **isleadbyte**會針對任何從-1 （**EOF**）到**UCHAR_MAX** （0xff）（含）的整數引數產生有意義的結果。
 
-**isleadbyte**的預期參數類型是**int;** 如果傳遞了簽名字符,編譯器可以通過符號擴展將其轉換為整數,從而產生不可預知的結果。
+**Isleadbyte**的預期引數類型為**int**。如果傳遞帶正負號的字元，編譯器可能會將它轉換成整數（藉由符號延伸），因而產生無法預期的結果。
 
-具有 **_l**後綴的函數版本相同,只不過它使用傳入區域設置,而不是當前區域設置,使其與區域設置相關的行為。
+具有 **_l**尾碼的這個函式版本是一樣的，不同之處在于它會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -92,5 +92,5 @@ int _isleadbyte_l( int c );
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
-[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
+[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

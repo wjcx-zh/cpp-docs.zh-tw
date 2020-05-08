@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343667"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909510"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum、_ismbbkalnum_l
 
@@ -59,19 +59,19 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果整數*c*是非符號(標點符號以外的非 ASCII 文字符號)_ismbbkalnum**返回非**零值;如果不是,則返回 0。 **_ismbbkalnum**使用當前區域設置來進行與區域設置相關的字元資訊。 **_ismbbkalnum_l**與 **_ismbbkalnum**相同,只是它採用區域設置作為參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果整數*c*是標點符號以外的非 ASCII 文字元號， **_ismbbkalnum**會傳回非零值; 如果不是，則傳回0。 **_ismbbkalnum**會針對地區設定相關的字元資訊使用目前的地區設定。 **_ismbbkalnum_l**與 **_ismbbkalnum**相同，不同之處在于它會採用地區設定做為參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -85,4 +85,4 @@ int _ismbbkalnum_l(
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb例程](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

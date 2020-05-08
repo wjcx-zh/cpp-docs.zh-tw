@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: eda857b80404aebe46b090741e0b56d4fe692f34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328102"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910650"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -58,14 +58,14 @@ size_t wcrtomb(
 
 ### <a name="parameters"></a>參數
 
-*姆布查爾*<br/>
+*mbchar*<br/>
 產生的多位元組轉換字元。
 
-*瓦查爾*<br/>
+*wchar*<br/>
 要轉換的寬字元。
 
 *mbstate*<br/>
-指向**mbstate_t**物件的指標。
+**Mbstate_t**物件的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -73,19 +73,19 @@ size_t wcrtomb(
 
 ## <a name="remarks"></a>備註
 
-**wcrtomb**函數將寬字元(從*mbstate*中包含的指定轉換狀態開始)從*wchar*中包含的值轉換為*mbchar*表示的位址。 返回值是表示相應多位元位元元所需的位元組數,但不會返回超過**MB_CUR_MAX**位元組。
+**Wcrtomb**函式會將寬字元（從包含在*mbstate*中的指定轉換狀態開始，從*wchar*中包含的值）轉換成*mbchar*所代表的位址。 傳回值是表示對應的多位元組字元所需的位元組數目，但不會傳回超過**MB_CUR_MAX**個位元組。
 
-如果*mbstate*為 null,則使用包含*mbchar*轉換狀態的內部**mbstate_t**物件。 如果字元序列*wchar*沒有相應的多位元位元表示形式,則傳回 -1 並將**errno**設定為**EILSEQ**。
+如果*mbstate*為 null，則會使用包含*mbchar*轉換狀態的內部**mbstate_t**物件。 如果字元順序*wchar*沒有對應的多位元組字元標記法，則會傳回-1，並將**Errno**設定為**EILSEQ**。
 
-**wcrtomb**函數不同於[wctomb,_wctomb_l](wctomb-wctomb-l.md)其可重新啟動性。 轉換狀態以*mbstate*儲存,用於後續對相同或其他可重新啟動函數的調用。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如,如果使用隨後對**wcsrtombs**的調用而不是**wcstombs,** 則應用程式將使用**wcsrlen**而不是**wcsnlen。**
+**Wcrtomb**函式與 wctomb 不同，因為它可重新開機[，_wctomb_l](wctomb-wctomb-l.md) 。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了**wcsrtombs**的後續呼叫（而不是**wcstombs**），應用程式會使用**wcsrlen**而非**wcsnlen**。
 
 在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-**wcrtomb**函數是多線程安全的,只要此函數執行時當前線程呼叫中沒有函數**設置局部性**,並且*mbstate*為null。
+只要目前線程中的函式在執行中且*mbstate*為**null 時，** **wcrtomb**函式就是多執行緒安全。
 
 ## <a name="example"></a>範例
 
@@ -139,6 +139,6 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

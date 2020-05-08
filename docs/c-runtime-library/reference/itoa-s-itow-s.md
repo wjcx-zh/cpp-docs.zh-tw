@@ -1,5 +1,5 @@
 ---
-title: _itoa_s,_itow_s功能
+title: _itoa_s，_itow_s 函式
 ms.date: 4/2/2020
 api_name:
 - _itoa_s
@@ -35,7 +35,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -90,16 +90,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: f392bb1dbcafd1666d082163190c4e988c7f1ab1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5cc3706abd07e11c819d4b2d37ff89e9b9137a22
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342621"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916564"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、_itow_s、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s
 
-將整數轉換成字串。 這些是[_itoa的版本,_itow功能](itoa-itow.md)具有安全增強功能,如[CRT 中的安全功能中](../../c-runtime-library/security-features-in-the-crt.md)所述。
+將整數轉換成字串。 這些是 _itoa 的版本[，_itow](itoa-itow.md)的函式具有[CRT 中的安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述的安全性增強功能。
 
 ## <a name="syntax"></a>語法
 
@@ -152,11 +152,11 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 *緩衝區*<br/>
 保存轉換結果的輸出緩衝區。
 
-*大小*<br/>
-以字元或寬字元表示*緩衝區*的大小。
+*size*<br/>
+*緩衝區*大小（以字元或寬字元為單位）。
 
-*拉迪克斯*<br/>
-用於轉換值的半徑或數位基,該*值*必須在 2-36 範圍內。
+*基*<br/>
+要用來轉換*值*的基數或數值基底，其必須在範圍2-36。
 
 ## <a name="return-value"></a>傳回值
 
@@ -164,28 +164,28 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="error-conditions"></a>錯誤條件
 
-|value|緩衝區|size|radix|傳回|
+|value|緩衝區|大小|radix|傳回|
 |-----------|------------|----------------------|-----------|------------|
-|任意|**空**|任意|任意|**埃因瓦爾**|
-|任意|任意|<=0|任意|**埃因瓦爾**|
-|任意|任意|<= 需要的結果字串長度|任意|**埃因瓦爾**|
-|任意|任意|任意|*半徑*< 2 或*半徑*> 36|**埃因瓦爾**|
+|任意|**Null**|任意|任意|**EINVAL**|
+|任意|任意|<=0|任意|**EINVAL**|
+|任意|任意|<= 需要的結果字串長度|任意|**EINVAL**|
+|任意|任意|任意|*基數*< 2 或*基數*> 36|**EINVAL**|
 
 ### <a name="security-issues"></a>安全性問題
 
-如果*緩衝區*不指向有效記憶體且不是**NULL,** 或者緩衝區的長度不足以容納結果字串,則這些函數可能會生成訪問衝突。
+如果*緩衝區*未指向有效的記憶體且不是**Null**，或者緩衝區長度不夠長，無法容納結果字串，這些函式可能會產生存取違規。
 
 ## <a name="remarks"></a>備註
 
-除參數和返回值外 **,_itoa_s**和 **_itow_s**函數子具有與相應的不太安全 **_itoa**和 **_itow**版本相同的行為。
+除了參數和傳回值之外， **_itoa_s**和 **_itow_s**函數系列與對應的較不安全 **_itoa**和 **_itow**版本具有相同的行為。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函數的調試庫版本首先用 0xFE 填充緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-CRT 包括方便的宏,用於定義轉換多個通用基的每個整數類型(包括空終止符和符號字元)的最長可能值所需的緩衝區大小。 有關詳細資訊,請參閱[最大轉化計數宏](itoa-itow.md#maximum-conversion-count-macros)。
+CRT 包含方便的宏，可定義針對數個通用基底，轉換每個整數類型的最長可能值（包括 null 結束字元和正負號字元）所需的緩衝區大小。 如需相關資訊，請參閱[最大轉換計數宏](itoa-itow.md#maximum-conversion-count-macros)。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -201,14 +201,14 @@ CRT 包括方便的宏,用於定義轉換多個通用基的每個整數類型(�
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
-|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
+|**_itoa_s**、 **_ltoa_s**、 **_ultoa_s**、 **_i64toa_s**、 **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、 **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
 
-這些功能特定於Microsoft。 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+這些是 Microsoft 特有的功能。 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-此示例演示了一些整數轉換函數的使用。 請注意[,_countof](countof-macro.md)宏僅適用於在陣列聲明對編譯器可見時確定緩衝區大小,而不是用於已衰減到指標的參數。
+這個範例會示範幾個整數轉換函數的使用。 請注意， [_countof](countof-macro.md)宏僅適用于判斷編譯器可以看見陣列宣告時的緩衝區大小，而不是一旦產生蛻變至指標的參數。
 
 ```C
 // crt_itoa_s.c
@@ -279,4 +279,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa,_itow功能](itoa-itow.md)<br/>
+[_itoa，_itow 函式](itoa-itow.md)<br/>

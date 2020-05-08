@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348125"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914784"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime、_difftime32、_difftime64
 
@@ -59,27 +59,27 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ### <a name="parameters"></a>參數
 
-*時間結束*<br/>
+*timeEnd*<br/>
 結束時間。
 
-*時間開始*<br/>
+*timeStart*<br/>
 開始時間。
 
 ## <a name="return-value"></a>傳回值
 
-**差異時間**傳回經過的時間(秒為單位),從*時間開始*到*時間結束*。 傳回的值是雙精度浮點數。 傳回的值可能是 0，表示有錯誤。
+**difftime**會傳回從*timeStart*到*timeEnd*的經過時間（以秒為單位）。 傳回的值是雙精度浮點數。 傳回的值可能是 0，表示有錯誤。
 
 ## <a name="remarks"></a>備註
 
-**差異時間**函數計算兩個提供的時間值*時間開始*和*時間結束*之間的差異。
+**Difftime**函數會計算兩個提供的時間值之間的差異*timeStart*和*timeEnd*。
 
-提供的時間值必須適合**time_t**範圍內。 **time_t**是64位值。 因此，範圍的結束時間已從 2038 年 1 月 18 日 23:59:59 (UTC) 延長到 3000 年 12 月 31 日 23:59:59。 **time_t**的較低範圍仍然是1970年1月1日午夜。
+提供的時間值必須符合**time_t**的範圍內。 **time_t**是64位的值。 因此，範圍的結束時間已從 2038 年 1 月 18 日 23:59:59 (UTC) 延長到 3000 年 12 月 31 日 23:59:59。 **Time_t**的較低範圍仍然是1970年1月1日午夜。
 
-**差異時間是**一個內聯函數,根據是否定義 **_USE_32BIT_TIME_T,** 可計算為 **_difftime32**或 **_difftime64。** _difftime32 和 _difftime64 可用來直接強制使用特定大小的時間類型。
+**difftime**是一種內嵌函式，會根據是否定義 **_USE_32BIT_TIME_T**來評估 **_difftime32**或 **_difftime64** 。 _difftime32 和 _difftime64 可用來直接強制使用特定大小的時間類型。
 
-這些函式會驗證它們的參數。 如果任一參數為零或負數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許執行繼續,這些函數將傳回 0 並將**errno**設定為**EINVAL**。
+這些函式會驗證它們的參數。 如果任一參數為零或負數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回0，並將**errno**設為**EINVAL**。
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: c2f6e7956048a30313ba8eb9a11a37fccdc49197
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3aefa39d9fabb2b8a3124955f3ab0787e9e174f3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342748"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916590"
 ---
 # <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l
 
@@ -73,21 +73,21 @@ int _iswxdigit_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果*c*是十六進位數位的特定表示形式,則每個例程都返回非零。 如果*c*是十六進位數字(A - F、a - f 或 0 - 9),**則 isxDigit**傳回非零值。 如果*c*是對應於十六進位數字字元的寬字元,**則 iswxDigit**傳回非零值。 如果*c*不符合測試條件,則每個例程返回 0。
+如果*c*是十六進位數位的特定標記法，則每個常式都會傳回非零。 如果*c*是十六進位數位（a-f、a-f 或 0-9）， **isxdigit**會傳回非零值。 如果*c*是對應至十六進位數位字元的寬字元，則**iswxdigit**會傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-對於"C"區域設置 **,iswxdigit**函數不支援 Unicode 全寬十六進位元字元。
+對於 "C" 地區設定， **iswxdigit**函數不支援 Unicode 全形十六進位字元。
 
-具有 **_l**後綴的這些函數的版本使用傳入區域設置,而不是當前區域設置,用於其與區域設置相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本，會使用傳入的地區設定，而不是與地區設定相關行為的目前地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*c*不是 EOF 或範圍 0 到 0xFF(包括)時 **,isxdigit**和 **_isxdigit_l**的行為是未定義的。 當使用除錯 CRT 庫,*並且 c*不是這些值之一時,這些函數將引發斷言。
+如果*c*不是 EOF 或範圍0到0xff （含），則**isxdigit**和 **_isxdigit_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -97,7 +97,7 @@ int _iswxdigit_l(
 
 ## <a name="remarks"></a>備註
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -113,5 +113,5 @@ int _iswxdigit_l(
 ## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

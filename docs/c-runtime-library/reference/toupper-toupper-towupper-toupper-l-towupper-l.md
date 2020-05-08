@@ -25,7 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 85c218fdb3f5153e572e434bffbdb64510554d07
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362316"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913874"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper、_toupper、towupper、_toupper_l、_towupper_l
 
@@ -86,47 +86,47 @@ int _towupper_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要轉換的字元。
 
-*現場*<br/>
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果可能,每個例程都轉換*c*的副本,並返回結果。
+每一個常式都會轉換*c*的複本（如果可能的話），並傳回結果。
 
-如果*c*是一個寬字元,**其 iswwanda**是非零,並且有相應的寬字元,[其 iswupper](isupper-isupper-l-iswupper-iswupper-l.md)為非零,**則拖拉返回**相應的寬字元;否則,**拖把**返回*c*不變。
+如果*c*是寬字元，其中的**iswlower**為非零值，而且有對應的寬字元，而其[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)為非零值，則**towupper**會傳回對應的寬字元;否則， **towupper**會傳回未變更的*c* 。
 
 沒有表示錯誤的保留傳回值。
 
-為了使**toupper**給出預期結果[,__isascii](isascii-isascii-iswascii.md)和[islower](islower-iswlower-islower-l-iswlower-l.md)必須同時返回非零。
+為了讓**toupper**提供預期的結果， [__isascii](isascii-isascii-iswascii.md)和[islower](islower-iswlower-islower-l-iswlower-l.md)必須都傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-這些常式都會將指定的小寫字母轉換為大寫字母 (如果可能且適當的話)。 **拖風的**案例轉換特定於區域設置。 只有與目前地區設定相關字元的大小寫會變更。 沒有 **_l**後綴的函數使用當前設置區域設置。 具有 **_l**後綴的這些函數的版本將區域設置作為參數,並使用該參數而不是當前設置的區域設置。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些常式都會將指定的小寫字母轉換為大寫字母 (如果可能且適當的話)。 **Towupper**的大小寫轉換是地區設定特有的。 只有與目前地區設定相關字元的大小寫會變更。 沒有 **_l**尾碼的函式會使用目前設定的地區設定。 這些具有 **_l**後置字元的函式版本採用地區設定作為參數，並使用它，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-為了使**toupper**給出預期結果[,__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)都必須返回非零。
+為了讓**toupper**提供預期的結果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必須都傳回非零值。
 
 [資料轉換常式](../../c-runtime-library/data-conversion.md)
 
-默認情況下,此函數的全域狀態範圍為應用程式。 要改變此情況,請參閱[CRT 中的全域狀態](../global-state.md)。
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper**|**到上**|**_mbctoupper**|**towupper**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l**和 **_towupper_l**沒有區域依賴性,並且不應直接調用。 它們由 **_totupper_l**提供供內部使用。
+> **_toupper_l**和 **_towupper_l**沒有地區設定相依性，因此不應該直接呼叫。 **_Totupper_l**提供這些方法供內部使用。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**到上**|\<ctype.h>|
+|**toupper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h> 或 \<wchar.h>|
 
@@ -140,5 +140,5 @@ int _towupper_l(
 
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>
 [to 函式](../../c-runtime-library/to-functions.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

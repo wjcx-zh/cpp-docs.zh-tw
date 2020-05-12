@@ -1,7 +1,7 @@
 ---
-title: switch語句 (C++)
-description: 在 Microsoftswitch視覺 工作室 C++中引用標準 C++語句。
-ms.date: 04/15/2020
+title: switch語句（c + +）
+description: switchMicrosoft Visual Studio c + + 中標準 c + + 語句的參考。
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -16,43 +16,55 @@ no-loc:
 - default
 - break
 - while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 1f65d4699423d74be9c75a9be47e543a9a1256e2
-ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81480828"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204154"
 ---
-# <a name="opno-locswitch-statement-c"></a>switch語句 (C++)
+# <a name="switch-statement-c"></a>`switch`語句（c + +）
 
 根據整數運算式的值，允許在多個程式碼區段中選取範圍。
 
 ## <a name="syntax"></a>語法
 
-> **`switch (`**\[*初始化***`;`**=*運算式***`)`**\
-> **`{`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;**`case`***常量運算***`:`***statement*\
-> &nbsp;&nbsp;&nbsp;&nbsp;\[**`default :`***語句*|\
-> **`}`**
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub><sup>C + + 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>備註
 
-*表達式*必須具有積分類型,或者是具有明確轉換為積分類型的類類型。 積分提升如[標準轉換](standard-conversions.md)中所述。
+__`switch`__ 語句會 *`labeled-statement`* 根據的值，讓控制項在其語句主體中傳送至其中一個 *`condition`* 。
 
-語句**switch** 正文由一**case** 系列 標籤和**default** 可選 標籤組成。 總之,標籤后的聲明稱為*標記*語句。 標記的語句不是語法要求,但沒有這些語句則**switch** 毫無意義。 語句中的**case** 兩個常量運算式不能計算為同一值。 標籤**default** 只能顯示一次。 語句**default** 通常放在末尾,但它可以**switch** 出現在 語句正文的任意位置。 **case** 或**default** 標籤只能**switch** 出現在語句中。
+*`condition`* 必須有整數類型，或必須是明確轉換成整數類資料類型的類別類型。 整數升級會依照[標準轉換](standard-conversions.md)中的說明進行。
 
-每個**case** 標籤中的*常量運算式*將轉換為*運算式*的類型。 然後,它與相等*表達式*進行比較。 控制件傳遞給常**case***量表達式*與*運算式*的值匹配的語句。 產生的行為如下表所示。
+__`switch`__ 語句主體是由一系列 __`case`__ 標籤和選擇性 __`default`__ 標籤所組成。 *`labeled-statement`* 是下列其中一個標籤和後面的語句。 標記的語句不是語法需求，但是 __`switch`__ 語句沒有意義。 *`constant-expression`* 語句中的兩個值 __`case`__ 都不能評估為相同的值。 __`default`__ 標籤可能只會出現一次。 __`default`__ 語句通常會放在結尾，但它可以出現在語句主體中的任何位置 __`switch`__ 。 __`case`__ 或 __`default`__ 標籤只能出現在語句內 __`switch`__ 。
 
-### <a name="switch-statement-behavior"></a>切換敘述行為
+*`constant-expression`* 每個 __`case`__ 標籤中的會轉換成與相同類型的常數值 *`condition`* 。 然後，它會與 *`condition`* 相等進行比較。 控制權會傳遞給 __`case`__ *`constant-expression`* 符合值之值後面的第一個語句 *`condition`* 。 產生的行為如下表所示。
+
+### <a name="switch-statement-behavior"></a>`switch`語句行為
 
 | 條件 | 動作 |
 |--|--|
 | 轉換的值與升級之控制運算式的值相符。 | 控制權會轉移至標籤後面的陳述式。 |
-| 沒有任何常量與標籤中的**case** 常量匹配;存在**default** 標籤。 | 控件將轉移到標籤。 **default** |
-| 沒有任何常量與標籤中的**case** 常量匹配;不存在**default** 標籤。 | 控件在**switch** 語句后傳輸到語句。 |
+| 沒有任何常數符合標籤中的常數 __`case`__ ; __`default`__ 標籤存在。 | 控制項會傳送至 __`default`__ 標籤。 |
+| 沒有任何常數符合標籤中的常數 __`case`__ ; 不 __`default`__ 存在任何標籤。 | 控制權會傳送至語句之後的語句 __`switch`__ 。 |
 
-如果找到匹配的表達式,則執行可以繼續執行到以後**case****default** 或標籤。 語句[`break`](../cpp/break-statement-cpp.md)用於停止執行**switch** 並在 語句之後將控制權轉移到語句。 如果沒有語句**break**,則執行從**case** 匹配**switch** 標籤到 的末尾的每個語句**default**,包括 。 例如：
+如果找到相符的運算式，執行可以繼續到稍後 __`case`__ 或 __`default`__ 標籤。 [`break`](../cpp/break-statement-cpp.md)語句是用來停止執行，並將控制權轉移給語句後面的語句 __`switch`__ 。 如果沒有 __`break`__ 語句， __`case`__ 則會執行符合的標籤到結尾的每個語句 __`switch`__ （包括 __`default`__ ）。 例如：
 
 ```cpp
 // switch_statement1.cpp
@@ -83,9 +95,9 @@ int main() {
 }
 ```
 
-在上述範例中，如果 `uppercase_A` 是大寫 `c`，則遞增 `'A'`。 語句**break** 取消`uppercase_A++`**switch** 後 敘述的文句標章與控制器的**while** 執行會傳遞到迴圈 。 如果沒有語句**break**,執行將"通過"到下一個標記的語句,`lowercase_a`以便`other`並且 也將遞增。 宣告也提供**break** 類似的目的`case 'a'`。 如果`c`是小`'a'`寫`lowercase_a`, 則**break** 遞增,**switch** 語句終止 語句正文。 如果`c``'a'`不是`'A'`或**default**,則執行語句。
+在上述範例中，如果 `uppercase_A` 是大寫 `c`，則遞增 `'A'`。 __`break`__ 之後的語句會 `uppercase_A++` 終止 __`switch`__ 語句主體的執行，並將控制權傳遞給 __`while`__ 迴圈。 如果沒有 __`break`__ 語句，執行會「流經」到下一個加上標籤的語句，因此 `lowercase_a` 和 `other` 也會遞增。 的語句會提供類似的目的 __`break`__ `case 'a'` 。 如果 `c` 是小寫 `'a'` ， `lowercase_a` 會遞增，而 __`break`__ 語句會終止 __`switch`__ 語句主體。 如果 `c` 不是 `'a'` 或 `'A'` ，則 __`default`__ 會執行語句。
 
-**Visual Studio 2017 及更高版本:(** 可用於[/std:c_17)](../build/reference/std-specify-language-standard-version.md)屬性`[[fallthrough]]`在 C++17 標準中指定。 您可以在語句中**switch** 使用它。 這是向編譯器或讀取代碼的任何人的提示,即通過行為是有意的。 Microsoft C++編譯器當前不警告失敗行為,因此此屬性對編譯器行為沒有影響。 在此示例中,該屬性將應用於未終止標記語句中的空語句。 換句話說,分號是必要的。
+**Visual Studio 2017 和更新版本：** （適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)） `[[fallthrough]]` 屬性是以 c + + 17 標準指定。 您可以在語句中使用它 __`switch`__ 。 這是編譯器的提示，或讀取程式碼的任何人，都是故意的行為。 Microsoft c + + 編譯器目前不會警告 fallthrough 行為，因此這個屬性不會影響編譯器行為。 在此範例中，屬性會套用至未結束標記之語句內的空白語句。 換句話說，這是必要的分號。
 
 ```cpp
 int main()
@@ -113,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 版本 15.3 及更高版本**(隨[/std:c++17 提供](../build/reference/std-specify-language-standard-version.md))。 語句switch可能具有*初始化*子句。 它引入並初始化了一個變數,其範圍僅限於switch語句塊:
+**Visual Studio 2017 15.3 版和更新**版本（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）。 __`switch`__ 語句可能會有一個以 *`init-statement`* 分號結尾的子句。 它會引進並初始化變數，其範圍僅限於語句的區塊 __`switch`__ ：
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +138,7 @@ int main()
     };
 ```
 
-**switch** 語句的內部塊可以包含具有初始化的定義,只要它們*可到達*,也就是說,不會繞過所有可能的執行路徑。 使用這些宣告引入的名稱有區域範圍。 例如：
+語句的內部區塊 __`switch`__ 可以包含具有初始化運算式的定義，只要它們可連線*reachable*，也就是所有可能的執行路徑都不會略過。 使用這些宣告引入的名稱有區域範圍。 例如：
 
 ```cpp
 // switch_statement2.cpp
@@ -161,15 +173,13 @@ int main(int argc, char *argv[])
 }
 ```
 
-可以**switch** 嵌套語句。 巢狀時,**case****default** 或標籤與包含它們的最**switch** 接近 的語句相關聯。
+__`switch`__ 語句可以嵌套。 當加上 nested 時， __`case`__ 或 __`default`__ 標籤會與包圍它們的最接近語句產生關聯 __`switch`__ 。
 
-### <a name="microsoft-specific-behavior"></a>特定於微軟的行為
+### <a name="microsoft-specific-behavior"></a>Microsoft 特有的行為
 
-Microsoft C**case****switch** 不限制 語句中的值數。 此數目會受到可用記憶體的限制。 ANSI C 要求在語句**case** 中至少 允許**switch** 257 個標籤。
+Microsoft c + + 不會限制 __`case`__ 語句中的值數目 __`switch`__ 。 此數目會受到可用記憶體的限制。
 
-default對於 Microsoft C,微軟擴展已啟用。 使用[/Za](../build/reference/za-ze-disable-language-extensions.md)編譯器選項禁用這些擴展。
+## <a name="see-also"></a>請參閱
 
-## <a name="see-also"></a>另請參閱
-
-[選取範圍陳述式](../cpp/selection-statements-cpp.md)<br/>
+[選取範圍語句](../cpp/selection-statements-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

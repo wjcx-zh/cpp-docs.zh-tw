@@ -1,4 +1,4 @@
----
+﻿---
 title: 標題檔案 (C++)
 ms.date: 12/11/2019
 helpviewer_keywords:

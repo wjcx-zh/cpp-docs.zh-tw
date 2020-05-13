@@ -1,4 +1,4 @@
----
+﻿---
 title: _beginthread、_beginthreadex
 ms.date: 4/2/2020
 api_name:

@@ -1,0 +1,61 @@
+- name: MSVC 中的文字和字串
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Unicode 和 MBCS
+  expanded: false
+  items:
+    - name: Unicode 和 MBCS
+      href: ../text/unicode-and-mbcs.md
+    - name: 啟用國際化
+      href: ../text/international-enabling.md
+    - name: 國際化策略
+      href: ../text/internationalization-strategies.md
+    - name: 地區設定和字碼頁
+      href: ../text/locales-and-code-pages.md
+    - name: 字元集可攜性的優點
+      href: ../text/benefits-of-character-set-portability.md
+- name: Unicode 的支援
+  expanded: false
+  items:
+    - name: Unicode 的支援
+      href: ../text/support-for-unicode.md
+    - name: 使用 wmain 的支援
+      href: ../text/support-for-using-wmain.md
+    - name: Unicode 程式設計摘要
+      href: ../text/unicode-programming-summary.md
+- name: 多位元組字元集 (MBCS) 的支援
+  expanded: false
+  items:
+    - name: 多位元組字元集 (MBCS) 的支援
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: MSVC 中的 MBCS 支援
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: MBCS 程式設計提示
+      expanded: false
+      items:
+        - name: MBCS 程式設計提示
+          href: ../text/mbcs-programming-tips.md
+        - name: 一般 MBCS 程式設計的建議
+          href: ../text/general-mbcs-programming-advice.md
+        - name: 遞增和遞減指標
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: 位元組索引
+          href: ../text/byte-indices.md
+        - name: 字串中的最後一個字元
+          href: ../text/last-character-in-a-string.md
+        - name: 字元指派
+          href: ../text/character-assignment.md
+        - name: 字元比較
+          href: ../text/character-comparison.md
+        - name: 緩衝區溢位
+          href: ../text/buffer-overflow.md
+- name: 支援 ANSI
+  href: ../text/support-for-ansi.md
+- name: tchar.h 中的泛型文字對應
+  expanded: false
+  items:
+    - name: tchar.h 中的泛型文字對應
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: 搭配 _MBCS 使用 TCHAR.H 資料類型
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: 作法：在各種字串類型之間轉換
+  href: ../text/how-to-convert-between-various-string-types.md

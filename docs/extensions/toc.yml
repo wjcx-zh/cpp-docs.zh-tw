@@ -1,0 +1,125 @@
+- name: 適用於 .NET 與 UWP 的元件擴充功能
+  href: ../extensions/component-extensions-for-runtime-platforms.md
+- name: 追蹤參考運算子
+  href: ../extensions/tracking-reference-operator-cpp-component-extensions.md
+- name: 物件控制代碼運算子 (^)
+  href: ../extensions/handle-to-object-operator-hat-cpp-component-extensions.md
+- name: abstract
+  href: ../extensions/abstract-cpp-component-extensions.md
+- name: 陣列
+  href: ../extensions/arrays-cpp-component-extensions.md
+- name: Boxing
+  href: ../extensions/boxing-cpp-component-extensions.md
+- name: 類別和結構
+  href: ../extensions/classes-and-structs-cpp-component-extensions.md
+- name: 平台、預設與 cli 命名空間
+  href: ../extensions/platform-default-and-cli-namespaces-cpp-component-extensions.md
+- name: 類型特徵的編譯器支援
+  href: ../extensions/compiler-support-for-type-traits-cpp-component-extensions.md
+- name: 視內容而有所區別的關鍵字
+  href: ../extensions/context-sensitive-keywords-cpp-component-extensions.md
+- name: Delegate - 委派
+  href: ../extensions/delegate-cpp-component-extensions.md
+- name: enum 類別
+  href: ../extensions/enum-class-cpp-component-extensions.md
+- name: event
+  href: ../extensions/event-cpp-component-extensions.md
+- name: 例外狀況處理
+  href: ../extensions/exception-handling-cpp-component-extensions.md
+- name: 明確覆寫
+  href: ../extensions/explicit-overrides-cpp-component-extensions.md
+- name: ref new、gcnew
+  href: ../extensions/ref-new-gcnew-cpp-component-extensions.md
+- name: 泛型
+  expanded: false
+  items:
+    - name: 泛型
+      href: ../extensions/generics-cpp-component-extensions.md
+    - name: Visual C++ 中的泛型概觀
+      href: ../extensions/overview-of-generics-in-visual-cpp.md
+    - name: 泛型函式
+      href: ../extensions/generic-functions-cpp-cli.md
+    - name: 泛型類別
+      href: ../extensions/generic-classes-cpp-cli.md
+    - name: 泛型介面
+      href: ../extensions/generic-interfaces-visual-cpp.md
+    - name: 泛型委派
+      href: ../extensions/generic-delegates-visual-cpp.md
+    - name: 泛型型別參數的條件約束
+      href: ../extensions/constraints-on-generic-type-parameters-cpp-cli.md
+    - name: 取用泛型
+      href: ../extensions/consuming-generics-cpp-cli.md
+    - name: 泛型與範本
+      href: ../extensions/generics-and-templates-visual-cpp.md
+    - name: 作法：使用泛型改善效能
+      href: ../extensions/how-to-improve-performance-with-generics-visual-cpp.md
+- name: 介面類別
+  href: ../extensions/interface-class-cpp-component-extensions.md
+- name: 常值
+  href: ../extensions/literal-cpp-component-extensions.md
+- name: Windows 執行階段與受控範本
+  href: ../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md
+- name: new (vtable 中的新位置)
+  href: ../extensions/new-new-slot-in-vtable-cpp-component-extensions.md
+- name: nullptr
+  href: ../extensions/nullptr-cpp-component-extensions.md
+- name: 覆寫規範
+  href: ../extensions/override-specifiers-cpp-component-extensions.md
+- name: override
+  href: ../extensions/override-cpp-component-extensions.md
+- name: partial
+  href: ../extensions/partial-cpp-component-extensions.md
+- name: 屬性
+  href: ../extensions/property-cpp-component-extensions.md
+- name: safe_cast
+  href: ../extensions/safe-cast-cpp-component-extensions.md
+- name: String
+  href: ../extensions/string-cpp-component-extensions.md
+- name: sealed
+  href: ../extensions/sealed-cpp-component-extensions.md
+- name: typeid
+  href: ../extensions/typeid-cpp-component-extensions.md
+- name: 使用者定義屬性
+  expanded: false
+  items:
+    - name: 使用者定義屬性
+      href: ../extensions/user-defined-attributes-cpp-component-extensions.md
+    - name: 屬性參數類型
+      href: ../extensions/attribute-parameter-types-cpp-component-extensions.md
+    - name: 屬性目標
+      href: ../extensions/attribute-targets-cpp-component-extensions.md
+- name: C++/CLI 特定延伸模組
+  expanded: false
+  items:
+    - name: C++/CLI 特定延伸模組
+      href: ../extensions/extensions-that-are-specific-to-cpp-cli.md
+    - name: __identifier
+      href: ../extensions/identifier-cpp-cli.md
+    - name: 使用 -clr 進行 C 樣式轉換
+      href: ../extensions/c-style-casts-with-clr-cpp-cli.md
+    - name: interior_ptr
+      expanded: false
+      items:
+        - name: interior_ptr
+          href: ../extensions/interior-ptr-cpp-cli.md
+        - name: 作法：宣告及使用內部指標和受控陣列
+          href: ../extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
+        - name: 作法：使用 interior_ptr 關鍵字宣告實值型別
+          href: ../extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
+        - name: 作法：使用內部指標與原生指標多載函式
+          href: ../extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
+        - name: 作法：使用 const 關鍵字宣告內部指標
+          href: ../extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
+    - name: pin_ptr
+      expanded: false
+      items:
+        - name: pin_ptr
+          href: ../extensions/pin-ptr-cpp-cli.md
+        - name: 作法：固定指標和陣列
+          href: ../extensions/how-to-pin-pointers-and-arrays.md
+        - name: 作法：宣告固定指標和實值型別
+          href: ../extensions/how-to-declare-pinning-pointers-and-value-types.md
+    - name: 類型轉送
+      href: ../extensions/type-forwarding-cpp-cli.md
+    - name: 變數引數清單 (...)
+      href: ../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md

@@ -1,8 +1,9 @@
 ---
 title: _pclose
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pclose
+- _o__pclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,19 +29,19 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951089"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910382"
 ---
 # <a name="_pclose"></a>_pclose
 
 等候新的命令處理程式，然後關閉相關管道上的資料流。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -51,8 +53,8 @@ FILE *stream
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
-從先前呼叫 **_popen**的傳回值。
+*資料流*<br/>
+從先前呼叫 **_popen**傳回值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -62,7 +64,9 @@ FILE *stream
 
 ## <a name="remarks"></a>備註
 
-**_Pclose**函式會查閱相關聯的 **_popen**呼叫所啟動之命令處理器（CMD.EXE）的處理序識別碼、在新的命令處理器上執行[_cwait](cwait.md)呼叫，然後關閉關聯管道上的資料流程。
+**_Pclose**函式會查閱關聯的 **_popen**呼叫啟動之命令處理器（CMD.EXE）的處理序識別碼，並在新的命令處理器上執行[_cwait](cwait.md)呼叫，然後關閉關聯管道上的資料流程。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -70,7 +74,7 @@ FILE *stream
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -78,6 +82,6 @@ FILE *stream
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_pipe](pipe.md)<br/>
 [_popen、_wpopen](popen-wpopen.md)<br/>

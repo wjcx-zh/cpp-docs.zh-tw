@@ -6,17 +6,17 @@ helpviewer_keywords:
 - type casts, conversion
 ms.assetid: 30fbd974-8f5a-4b70-ac44-d3937b96b702
 ms.openlocfilehash: f9f2d73e57c576dcf8afed008a74e5e7dd9b9d6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312462"
 ---
 # <a name="conversions-from-other-types"></a>從其他類型轉換
 
 由於 **enum** 值在定義上為 **int** 值，因此在 **enum** 值之間來回轉換的方式與 **int** 類型相同。 對於 Microsoft C 編譯器，整數相當於 **long**。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 不允許在結構或等位型別之間進行轉換。
 
@@ -24,8 +24,8 @@ ms.locfileid: "50448655"
 
 **void** 類型在定義上不具任何值。 因此，其無法轉換成任何其他類型，而其他類型也不能藉由指派轉換成 **void**。 不過，您可以將值明確轉換為 **void** 類型，如[類型轉換中所述](../c-language/type-cast-conversions.md)。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指派轉換](../c-language/assignment-conversions.md)

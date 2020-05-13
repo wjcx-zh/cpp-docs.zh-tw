@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: 6c1c1da14d732b6aff6ae07f86ae7b9c1b690b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 438bc2a03239946dbfca53d5f2989c731b682ab0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168189"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375615"
 ---
 # <a name="cdocitem-class"></a>CDocItem 類別
 
@@ -33,16 +33,16 @@ class CDocItem : public CCmdTarget
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocItem::GetDocument](#getdocument)|傳回包含之項目的文件。|
-|[CDocItem::IsBlank](#isblank)|判斷項目是否包含任何資訊。|
+|[CDocItem:取得文件](#getdocument)|返回包含該項目的文檔。|
+|[CDocItem::是空白](#isblank)|確定該專案是否包含任何資訊。|
 
 ## <a name="remarks"></a>備註
 
-`CDocItem` 物件用來代表用戶端和伺服器的文件中的 OLE 項目。
+`CDocItem`物件用於表示客戶端和伺服器文件中的 OLE 項。
 
-如需詳細資訊，請參閱文章[容器：實作容器](../../mfc/containers-implementing-a-container.md)。
+有關詳細資訊,請參閱文章[「容器:實現容器](../../mfc/containers-implementing-a-container.md)」。。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -52,11 +52,11 @@ class CDocItem : public CCmdTarget
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxole.h
+**標題:** afxole.h
 
-##  <a name="getdocument"></a>  CDocItem::GetDocument
+## <a name="cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem:取得文件
 
-呼叫此函式可取得包含項目的文件。
+呼叫此函數以獲取包含項的文件。
 
 ```
 CDocument* GetDocument() const;
@@ -64,15 +64,15 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含項目; 的文件指標NULL，如果項目不是文件的一部分。
+指向包含項的文檔的指標;NULL,如果項不是文檔的一部分。
 
 ### <a name="remarks"></a>備註
 
-此函式會在衍生類別中覆寫[COleClientItem](../../mfc/reference/coleclientitem-class.md)並[COleServerItem](../../mfc/reference/coleserveritem-class.md)，將指標傳回至[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或有[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)物件。
+此函數在派生類[COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)中重寫,傳回指向[COleDocument、COle](../../mfc/reference/coledocument-class.md)[連結文件](../../mfc/reference/colelinkingdoc-class.md)或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)物件的指標。
 
-##  <a name="isblank"></a>  CDocItem::IsBlank
+## <a name="cdocitemisblank"></a><a name="isblank"></a>CDocItem::是空白
 
-預設的序列化發生時，由架構呼叫。
+當發生預設序列化時,由框架調用。
 
 ```
 virtual BOOL IsBlank() const;
@@ -80,13 +80,13 @@ virtual BOOL IsBlank() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果項目不包含任何資訊;否則為 0。
+如果專案不包含任何資訊,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-根據預設，`CDocItem`物件不是空白。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)物件是有時空白因為它們直接衍生自`CDocItem`。 不過， [COleServerItem](../../mfc/reference/coleserveritem-class.md)物件永遠為空白。 根據預設，OLE 應用程式包含`COleClientItem`沒有 x 或 y 的物件範圍會序列化。 這是藉由傳回 TRUE 的覆寫從`IsBlank`項目時有任何 x 或 y 的範圍。
+預設情況下,`CDocItem`物件不為空。 [COleClientItem 物件](../../mfc/reference/coleclientitem-class.md)有時為空,因為它們直接`CDocItem`派生 自 。 但是[,COleServerItem 對象](../../mfc/reference/coleserveritem-class.md)始終為空。 預設情況下,包含`COleClientItem`沒有 x 或 y 範圍物件的 OLE 應用程式將序列化。 這是通過從項目沒有 x`IsBlank`或 y 範圍時從重寫返回 TRUE 來實現的。
 
-如果您想要在序列化期間實作其他動作，請覆寫這個函式。
+如果要在序列化期間實現其他操作,則重寫此函數。
 
 ## <a name="see-also"></a>另請參閱
 

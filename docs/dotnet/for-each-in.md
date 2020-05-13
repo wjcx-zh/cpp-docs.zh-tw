@@ -10,23 +10,23 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5523eb22bd8a839da9b3f73dd6c3718b4fd63
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404451"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825785"
 ---
 # <a name="for-each-in"></a>for each, in
 
-逐一查看陣列或集合。 此非標準關鍵字在 C++/CLI 和原生 C++ 專案中皆可用。 但是，不建議使用。 請考慮使用標準[範圍架構 for 陳述式 (C++)](../cpp/range-based-for-statement-cpp.md)改為。
+逐一查看陣列或集合。 此非標準關鍵字在 C++/CLI 和原生 C++ 專案中皆可用。 但是，不建議使用。 請考慮改用以標準[範圍為基礎的 For 語句（c + +）](../cpp/range-based-for-statement-cpp.md) 。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
 ### <a name="syntax"></a>語法
 
-> **每個 (** *型別**識別碼***中***運算式* **) {**<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;*陳述式*<br/>
+> **針對每個（** *運算式***中**的*類型**識別碼* **） {**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*報表*\
 > **}**
 
 ### <a name="parameters"></a>參數
@@ -34,32 +34,32 @@ ms.locfileid: "62404451"
 *type*<br/>
 `identifier` 的類型。
 
-*identifier*<br/>
-表示集合項目的反覆項目變數。  當`identifier`已[追蹤參考運算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)，您可以修改項目。
+*識別碼 (identifier)*<br/>
+表示集合項目的反覆項目變數。  當`identifier`是[追蹤參考運算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)時，您可以修改元素。
 
 *expression*<br/>
 陣列運算式或集合。 集合項目必須如此，編譯器才能將其轉換為 `identifier` 類型。
 
-*statements*<br/>
+*報表*<br/>
 要執行的一個或多個陳述式。
 
 ### <a name="remarks"></a>備註
 
 `for each` 陳述式可用來逐一查看集合。 您可以修改集合中的項目，不過，您無法加入或刪除項目。
 
-*陳述式*會針對陣列或集合中的每個項目執行。 在完成集合中所有項目的反覆項目之後，程式控制權會轉移到 `for each` 區塊之後的下一個陳述式。
+系統會針對陣列或集合中的每個元素執行*語句*。 在完成集合中所有項目的反覆項目之後，程式控制權會轉移到 `for each` 區塊之後的下一個陳述式。
 
-`for each` 並`in`都[內容相關性關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。
+`for each`和`in`都是[內容相關的關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。
 
 如需詳細資訊：
 
 - [使用 for each 反覆查看 C++ 標準程式庫集合](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [如何：每個逐一查看陣列](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [如何：使用 for each 反覆查看陣列](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [如何：每個反覆查看泛型集合與](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [如何：使用 for each 反覆查看泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [如何：每個反覆查看使用者定義的集合，與](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [如何：使用 for each 反覆查看使用者定義的集合](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
@@ -109,12 +109,12 @@ Testing
 
 **備註**
 
-CLR 語法是相同**所有執行階段**語法中，除非，如下所示。
+CLR 語法與**所有運行**時間語法相同，但如下所示。
 
 *expression*<br/>
-Managed 陣列運算式或集合。 集合項目必須如此，編譯器可以將它從轉換<xref:System.Object>要*識別碼*型別。
+Managed 陣列運算式或集合。 集合元素必須是，編譯器才能將它從<xref:System.Object>轉換為*識別碼*類型。
 
-*運算式*評估為類型可實作<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定義的類型`GetEnumerator`方法會傳回型別實作<xref:System.Collections.IEnumerator>宣告所有中所定義的方法或`IEnumerator`.
+*運算式*會評估為可執行檔<xref:System.Collections.IEnumerable>類型<xref:System.Collections.Generic.IEnumerable%601>，或定義`GetEnumerator`方法的類型，而此方法會傳回可執行<xref:System.Collections.IEnumerator>或宣告中`IEnumerator`所定義之所有方法的類型。
 
 ### <a name="requirements"></a>需求
 
@@ -157,6 +157,6 @@ abcd
 Testing
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)

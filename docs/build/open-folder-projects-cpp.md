@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556683"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320966"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio 中 C++ 組建系統的開啟資料夾支援
 
@@ -25,7 +25,7 @@ ms.locfileid: "75556683"
 
 ## <a name="cmake-and-qt"></a>CMake 和 Qt
 
-CMake 會在 Visual Studio IDE 中整合成C++桌面工作負載的元件。 CMake 的工作流程與本文所述的工作流程並不相同。 如果您使用的是 CMake，請參閱[在 Visual Studio 中 CMake 專案](cmake-projects-in-visual-studio.md)。 您也可以使用 CMake 來建立 Qt 專案，也可以使用 Visual Studio 2015 或 Visual Studio 2017 的[Qt Visual Studio 延伸](https://download.qt.io/development_releases/vsaddin/)模組。
+CMake 已整合到 Visual Studio IDE 中，做為 c + + 桌面工作負載的元件。 CMake 的工作流程與本文所述的工作流程並不相同。 如果您使用的是 CMake，請參閱[在 Visual Studio 中 CMake 專案](cmake-projects-in-visual-studio.md)。 您也可以使用 CMake 來建立 Qt 專案，也可以使用 Visual Studio 2015 或 Visual Studio 2017 的[Qt Visual Studio 延伸](https://download.qt.io/development_releases/vsaddin/)模組。
 
 ## <a name="other-build-systems"></a>其他組建系統
 
@@ -34,8 +34,8 @@ CMake 會在 Visual Studio IDE 中整合成C++桌面工作負載的元件。 CMa
 | | |
 |-|-|
 |CppProperties.json|指定自訂組態資訊以供瀏覽。 如有需要，請在您的根專案資料夾中建立此檔案。 (不會在 CMake 專案中使用。)|
-|tasks.vs.json|指定自訂群組建命令。 存取方式為透過 [方案總管] 的操作功能表項目 [設定工作]。|
-|launch.vs.json|指定偵錯工具的命令列引數。 存取方式為透過 [方案總管] 的操作功能表項目 [偵錯並啟動設定]。|
+|tasks.vs.json|指定自訂群組建命令。 存取方式為透過 [方案總管]**** 的操作功能表項目 [設定工作]****。|
+|launch.vs.json|指定偵錯工具的命令列引數。 存取方式為透過 [方案總管]**** 的操作功能表項目 [偵錯並啟動設定]****。|
 
 ## <a name="configure-code-navigation-with-cpppropertiesjson"></a>使用 CppProperties 設定程式碼導覽
 
@@ -73,7 +73,7 @@ Visual Studio 提供下列預設設定：
 }
 ```
 
-此設定會繼承 Visual Studio [x64 開發人員命令提示字元](building-on-the-command-line.md)的環境變數。 其中一個變數是 `INCLUDE` 的，而您可以在這裡使用 `${env.INCLUDE}` 宏來參考它。 [`includePath`] 屬性會告訴 Visual Studio 在何處尋找 IntelliSense 所需的所有來源。 在此情況下，它會指出「查詢 INCLUDE 環境變數所指定的所有目錄，以及目前工作資料夾樹狀結構中的所有目錄」。 `name` 屬性是將出現在下拉式清單中的名稱，而且可以是任何您喜歡的專案。 `defines` 屬性會在遇到條件式編譯區塊時，提供 IntelliSense 的提示。 `intelliSenseMode` 屬性會根據編譯器類型提供一些額外的提示。 有數個選項可供 MSVC、GCC 和 Clang 使用。
+此設定會繼承 Visual Studio [x64 開發人員命令提示字元](building-on-the-command-line.md)的環境變數。 其中一個變數是`INCLUDE` ，您可以在這裡使用`${env.INCLUDE}`宏來參考它。 `includePath`屬性會告訴 Visual Studio 在何處尋找 IntelliSense 所需的所有來源。 在此情況下，它會指出「查詢 INCLUDE 環境變數所指定的所有目錄，以及目前工作資料夾樹狀結構中的所有目錄」。 `name`屬性是將出現在下拉式清單中的名稱，而且可以是任何您喜歡的專案。 `defines`屬性會在遇到條件式編譯區塊時，提供提示給 IntelliSense。 屬性`intelliSenseMode`會根據編譯器類型提供一些額外的提示。 有數個選項可供 MSVC、GCC 和 Clang 使用。
 
 > [!NOTE]
 > 如果 Visual Studio 似乎忽略*CppProperties*中的設定，請嘗試將例外狀況新增至 *.gitignore*檔案，如下所示： `!/CppProperties.json`。
@@ -109,9 +109,9 @@ Visual Studio 提供下列預設設定：
 }
 ```
 
-請注意 `environments` 區塊。 它會定義行為類似環境變數的屬性，而且不僅可在*CppProperties*檔案中使用，還會在其他設定檔工作中 *。 vs.* json 和*啟動。與 json*。 `Mingw64` 設定會繼承 `mingw_w64` 環境，並使用其 `INCLUDE` 屬性來指定 `includePath`的值。 您可以視需要將其他路徑新增至此陣列屬性。
+請注意`environments`區塊。 它會定義行為類似環境變數的屬性，而且不僅可在*CppProperties*檔案中使用，還會在其他設定檔工作中 *。 vs.* json 和*啟動。與 json*。 `Mingw64`設定會繼承`mingw_w64`環境，並使用其`INCLUDE`屬性來指定的值`includePath`。 您可以視需要將其他路徑新增至此陣列屬性。
 
-`intelliSenseMode` 屬性會設定為適用于 GCC 的值。 如需所有這些屬性的詳細資訊，請參閱[CppProperties 架構參考](cppproperties-schema-reference.md)。
+`intelliSenseMode`屬性會設定為適用于 GCC 的值。 如需所有這些屬性的詳細資訊，請參閱[CppProperties 架構參考](cppproperties-schema-reference.md)。
 
 當所有專案都正常運作時，您會在將滑鼠停留在類型上時，看到來自 GCC 標頭的 IntelliSense：
 
@@ -119,19 +119,19 @@ Visual Studio 提供下列預設設定：
 
 ## <a name="enable-intellisense-diagnostics"></a>啟用 IntelliSense 診斷
 
-如果您看不到預期的 IntelliSense，可以移至 [**工具**] [ > **選項**] [ > **文字編輯器**] > [  **C++ C/**  > **Advanced** ]，並將 [**啟用記錄**] 設定為 [ **true**] 進行疑難排解。 若要開始，請嘗試將**記錄層級**設定為5，並將**篩選準則記錄**到8。
+如果您看不到預期的 IntelliSense，可以移至 [**工具** > ] [**選項** > ] [**文字編輯器** > ] [**C/c + +** > ]**，並將**[**啟用記錄**] 設定為 [ **true**] 進行疑難排解。 若要開始，請嘗試將**記錄層級**設定為5，並將**篩選準則記錄**到8。
 
 ![診斷記錄](media/diagnostic-logging.png)
 
-輸出會輸送至**輸出視窗**，並在您選擇 [*顯示輸出來源：視覺C++效果記錄*] 時顯示。 輸出中包含 IntelliSense 嘗試使用之實際 include 路徑的清單。 如果路徑不符合*CppProperties*中的路徑，請嘗試關閉資料夾，並刪除包含快取流覽資料的 *. vs*子資料夾。
+輸出會以管道傳送至**輸出視窗**，並在您選擇 [*顯示輸出來源： Visual C++ 記錄*] 時顯示。 輸出中包含 IntelliSense 嘗試使用之實際 include 路徑的清單。 如果路徑不符合*CppProperties*中的路徑，請嘗試關閉資料夾，並刪除包含快取流覽資料的 *. vs*子資料夾。
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>使用 tasks.vs.json 定義建置工作
 
-您可以針對您目前在工作區中所擁有的檔案自動化建置指令碼或任何其他外部作業，方法是直接在 IDE 中以工作的形式執行它們。 您能以滑鼠右鍵按一下檔案或資料夾，並選取 [設定工作] 來設定新工作。
+您可以針對您目前在工作區中所擁有的檔案自動化建置指令碼或任何其他外部作業，方法是直接在 IDE 中以工作的形式執行它們。 您能以滑鼠右鍵按一下檔案或資料夾，並選取 [設定工作]**** 來設定新工作。
 
 ![開啟資料夾設定工作](media/configure-tasks.png)
 
-這會在. vs 資料夾中建立（或開啟）與 Visual Studio 在根專案資料夾中建立的*vs. 與 json*檔案。 您可以在此檔案中定義任意工作，然後從 [方案總管] 操作功能表叫用它。 為了繼續 GCC 範例，下列程式碼片段顯示一個完整的工作 *. vs. json*檔案，其具有做為單一工作，可叫用*g + + .exe*來建立專案。 假設專案包含名為*hello .cpp*的單一檔案。
+這會在. vs 資料夾中建立（或開啟）與 Visual Studio 在根專案資料夾中建立的*vs. 與 json*檔案。 您可以在此檔案中定義任意工作，然後從 [方案總管]**** 操作功能表叫用它。 為了繼續 GCC 範例，下列程式碼片段顯示一個完整的工作 *. vs. json*檔案，其具有做為單一工作，可叫用*g + + .exe*來建立專案。 假設專案包含名為*hello .cpp*的單一檔案。
 
 ```json
 {
@@ -156,7 +156,7 @@ Visual Studio 提供下列預設設定：
 
 JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按一下**方案總管**頂端的 [**顯示所有**檔案] 按鈕。 您可以用滑鼠右鍵按一下**方案總管**中的根節點，然後選擇 [**建立 hello**]，來執行這項工作。 當工作完成時，您應該會在**方案總管**中看到新的檔案*hello .exe* 。
 
-您可以定義許多類型的工作。 下列範例顯示定義單一工作的工作 *. vs. json*檔案。 `taskLabel` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 `command` 屬性會參考 COMSPEC 環境變數，以識別主控台的路徑（Windows 上的*cmd.exe* ）。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管] 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
+您可以定義許多類型的工作。 下列範例顯示定義單一工作的工作 *. vs. json*檔案。 `taskLabel` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 `command`屬性會參考 COMSPEC 環境變數，其可識別主控台的路徑（Windows 上的*cmd.exe* ）。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管]**** 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
 
 ```json
 {
@@ -179,7 +179,7 @@ JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按�
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>使用 launch.vs.json 設定偵錯參數
 
-若要自訂程式的命令列引數和偵錯工具指令，請在**方案總管**中的可執行檔上按一下滑鼠右鍵，然後選取 [ **Debug and 啟動設定**]。 這會開啟現有的*啟動檔案與 json*檔案，如果不存在，則會建立具有一組最小啟動設定的新檔案。 首先，您可以選擇要設定哪種類型的 debug 會話。 針對 MinGw-w64 專案的偵錯工具，我們選擇**CC++ /啟動 for MinGw/Cygwin （gdb）** 。 這會建立使用*gdb*的啟動設定，並對預設值有一些已接受的猜測。 其中一個預設值為 `MINGW_PREFIX`。 您可以替代常值路徑（如下所示），也可以在*CppProperties*中定義 `MINGW_PREFIX` 屬性：
+若要自訂程式的命令列引數和偵錯工具指令，請在**方案總管**中的可執行檔上按一下滑鼠右鍵，然後選取 [ **Debug and 啟動設定**]。 這會開啟現有的*啟動檔案與 json*檔案，如果不存在，則會建立具有一組最小啟動設定的新檔案。 首先，您可以選擇要設定哪種類型的 debug 會話。 針對 MinGw w64 專案的偵錯工具，我們選擇**C/c + + 啟動 For MinGw/Cygwin （gdb）**。 這會建立使用*gdb*的啟動設定，並對預設值有一些已接受的猜測。 其中一個預設值是`MINGW_PREFIX`。 您可以替代常值路徑（如下所示），也可以在`MINGW_PREFIX` *CppProperties*中定義屬性：
 
 ```json
 {
@@ -211,7 +211,7 @@ JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按�
 
 ## <a name="launching-other-executables"></a>啟動其他可執行檔
 
-您可以為電腦上的任何可執行檔定義啟動設定。 下列範例會啟動*7za* ，並指定其他引數，方法是將它們新增至 `args` 的 JSON 陣列：
+您可以為電腦上的任何可執行檔定義啟動設定。 下列範例會啟動*7za*並指定其他引數，方法是將它們`args`新增至 JSON 陣列：
 
 ```json
 {

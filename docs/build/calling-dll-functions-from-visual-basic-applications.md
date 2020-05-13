@@ -12,41 +12,41 @@ helpviewer_keywords:
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
 ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221191"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>從 Visual Basic 應用程式中呼叫 DLL 函式
 
-Visual Basic 應用程式 （或應用程式，以其他語言，例如 Pascal 或 Fortran） 呼叫中的 C 函式 /C++ DLL，必須使用正確的呼叫慣例，而不需要任何名稱裝飾，由編譯器匯出的函式
+若要讓 Visual Basic 應用程式（或 Pascal 或 Fortran 等其他語言的應用程式）呼叫 C/c + + DLL 中的函式，則必須使用正確的呼叫慣例來匯出函式，而編譯器不會執行任何名稱裝飾
 
-`__stdcall` 建立函式的正確呼叫慣例 （呼叫的函式會清除堆疊和由右至左傳遞參數），但以不同的方式來修飾函式名稱。 因此，當 **__declspec （dllexport)** 用在 DLL 中的匯出函式，會匯出裝飾的名稱。
+`__stdcall`為函式建立正確的呼叫慣例（被呼叫的函式會清除堆疊，而參數會從右至左傳遞），但會以不同的方式裝飾函式名稱。 因此，在 DLL 中的匯出函式上使用 **__declspec （dllexport）** 時，會匯出裝飾名稱。
 
-`__stdcall`名稱裝飾前置詞符號名稱以底線 ( **\_** )，並將附加的符號寬度 at 符號 (**\@**) 字元後面的數目引數清單 （所需的堆疊空間） 中的位元組。 如此一來，當宣告為函式：
+`__stdcall`名稱裝飾會在符號名稱前面加上底線（ **\_** ），並以 @ 符號（**\@**）字元附加符號，後面接著引數清單中的位元組數目（所需的堆疊空間）。 因此，當宣告為時，函式會：
 
 ```C
 int __stdcall func (int a, double b)
 ```
 
-就會裝飾成`_func@12`在輸出中。
+在輸出中`_func@12`會裝飾為。
 
-C 呼叫慣例 (`__cdecl`) 將做為名稱裝飾`_func`。
+C 呼叫慣例（`__cdecl`）會將名稱裝飾為`_func`。
 
-若要取得裝飾的名稱，請使用[/typedefs/ 對應](reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 會進行下列作業：
+若要取得裝飾名稱，請使用[/MAP](reference/map-generate-mapfile.md)。 使用 **__declspec （dllexport）** 會執行下列動作：
 
-- 如果以 C 呼叫慣例匯出函式 (`__cdecl`)，它會移除前置底線 ( **\_** ) 會匯出名稱。
+- 如果函式是以 C 呼叫慣例（`__cdecl`）匯出，則會在匯出名稱時去除**\_** 前置底線（）。
 
-- 如果要匯出的函式不使用 C 呼叫慣例 (例如`__stdcall`)，它會匯出裝飾的名稱。
+- 如果要匯出的函式不使用 C 呼叫慣例（例如`__stdcall`），它會匯出裝飾名稱。
 
-因為沒有任何方法來覆寫堆疊清除發生的位置，您必須使用`__stdcall`。 若要有名稱`__stdcall`，您必須在.def 檔的 EXPORTS 區段裡使用別名來指定它們。 這會為下列函式宣告，如下所示顯示：
+因為沒有任何方法可以覆寫堆疊清除發生的位置，所以您必須`__stdcall`使用。 若要使用`__stdcall`undecorate 名稱，您必須在 .def 檔的 [匯出] 區段中，使用別名來指定它們。 下列函式宣告如下所示：
 
 ```C
 int  __stdcall MyFunc (int a, double b);
 void __stdcall InitCode (void);
 ```
 
-在中。DEF 檔案：
+在。DEF 檔案：
 
 ```
 EXPORTS
@@ -54,22 +54,22 @@ EXPORTS
    INITCODE=_InitCode@0
 ```
 
-本主題所示的別名技術在 Visual Basic 中撰寫的程式所呼叫的 Dll，需要.def 檔案中。 如果別名是在 Visual Basic 程式中，就不需要使用.def 檔案中的別名。 也可以在 Visual Basic 程式中加入別名子句[Declare](/dotnet/visual-basic/language-reference/statements/declare-statement)陳述式。
+若要讓以 Visual Basic 撰寫的程式呼叫 Dll，請在 .def 檔案中使用本主題所顯示的別名技術。 如果別名是在 Visual Basic 程式中完成，則不需要在 .def 檔中使用「別名」。 您可以藉由將 alias 子句加入[Declare](/dotnet/visual-basic/language-reference/statements/declare-statement)語句中，在 Visual Basic 程式中完成此作業。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
 - [從 DLL 匯出](exporting-from-a-dll.md)
 
-- [匯出從 DLL 使用。DEF 檔](exporting-from-a-dll-using-def-files.md)
+- [使用從 DLL 匯出。DEF 檔案](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport）從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 C++ 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [裝飾的名稱](reference/decorated-names.md)
+- [裝飾名稱](reference/decorated-names.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInheritanceHelper structure
 - Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-ms.openlocfilehash: c37a0eb74fd65b3d349d5b8b7c792fbaf7d1ac9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3650cfb70ffc12572b3965534eff4e1f2ecb2cf5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398078"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374224"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -32,15 +32,15 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="parameters"></a>參數
 
-*I*<br/>
+*I.*<br/>
 類型。
 
-*基底*<br/>
-另一個型別。
+*基地*<br/>
+另一種類型。
 
 ## <a name="remarks"></a>備註
 
-測試是否有一個介面衍生自另一個介面。
+測試一個介面是否派生自另一個介面。
 
 ## <a name="members"></a>成員
 
@@ -48,21 +48,21 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 名稱                                       | 描述
 ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
-[VerifyInheritanceHelper::Verify](#verify) | 測試目前的範本參數所指定的兩個介面，並決定是否要將一個介面衍生自其他。
+[驗證繼承說明程式::驗證](#verify) | 測試當前範本參數指定的兩個介面,並確定一個介面是否派生自另一個介面。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `VerifyInheritanceHelper`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標題:** 實現.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="verify"></a>VerifyInheritanceHelper::Verify
+## <a name="verifyinheritancehelperverify"></a><a name="verify"></a>驗證繼承說明程式::驗證
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 static void Verify();
@@ -70,6 +70,6 @@ static void Verify();
 
 ### <a name="remarks"></a>備註
 
-測試目前的範本參數所指定的兩個介面，並決定是否要將一個介面衍生自其他。
+測試當前範本參數指定的兩個介面,並確定一個介面是否派生自另一個介面。
 
-如果有一個介面不衍生自其他，就會發出錯誤。
+如果一個介面不是從另一個介面派生的,則發出錯誤。

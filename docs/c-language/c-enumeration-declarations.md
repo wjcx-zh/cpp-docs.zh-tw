@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
 ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326010"
 ---
 # <a name="c-enumeration-declarations"></a>C 列舉宣告
 
@@ -27,8 +27,8 @@ ms.locfileid: "56149228"
 ## <a name="syntax"></a>語法
 
 *enum-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *識別碼*<sub>opt</sub> **{** *enumerator-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *識別碼*
+&nbsp;&nbsp;&nbsp;&nbsp;**列舉***識別碼*<sub>opt</sub> **{** *列舉值清單* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**列舉***識別碼*
 
 選擇性的 *identifier* 會為 *enumerator-list* 所定義的列舉類型命名。 這個識別項通常稱為清單所指定列舉的「標記」。 下列這種形式的類型規範
 
@@ -46,15 +46,15 @@ enum identifier
 ## <a name="syntax"></a>語法
 
 *enumerator-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*列舉程式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumerator-list* **,** *列舉程式*
+&nbsp;&nbsp;&nbsp;&nbsp;*列舉值*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*列舉值清單* **，** *列舉值*
 
-*列舉程式*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant* **=** *constant-expression*
+*列舉*值：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*列舉-常數*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*列舉常數* **=** *常數運算式*
 
-*enumeration-constant*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*
+*列舉常數*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*標識*
 
 *enumeration-list* 中的每個 *enumeration-constant*都會為列舉集合命名。 根據預設，第一個 *enumeration-constant* 會與值 0 相關聯。 清單中的下一個 *enumeration-constant* 會與 ( *constant-expression* + 1 ) 的值相關聯，除非您明確將它與另一個值產生關聯。 *enumeration-constant* 的名稱相當於其值。
 
@@ -144,6 +144,6 @@ if ( match_flag == false )
 enum { yes, no } response;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [列舉](../cpp/enumerations-cpp.md)

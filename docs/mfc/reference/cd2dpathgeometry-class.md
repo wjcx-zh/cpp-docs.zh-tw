@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91460e3435130530ecc57bdcc09d1c7301333a3b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396349"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753085"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 類別
 
-ID2D1PathGeometry 包裝函式。
+ID2D1Path幾何的包裝。
 
 ## <a name="syntax"></a>語法
 
@@ -49,57 +49,57 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|建構 CD2DPathGeometry 物件。|
+|[CD2D 路徑幾何:CD2D路徑幾何](#cd2dpathgeometry)|構造 CD2DPath 幾何物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DPathGeometry::Attach](#attach)|將現有的資源物件的介面|
-|[CD2DPathGeometry::Create](#create)|建立 CD2DPathGeometry。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|
-|[CD2DPathGeometry::Destroy](#destroy)|終結 CD2DPathGeometry 物件。 (覆寫[CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy)。)|
-|[CD2DPathGeometry::Detach](#detach)|中斷連結物件中的資源介面|
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|擷取路徑幾何中的圖形數目。|
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|擷取路徑幾何中的區段數目。|
-|[CD2DPathGeometry::Open](#open)|擷取用來填入 數據與區段之路徑幾何的幾何接收。|
-|[CD2DPathGeometry::Stream](#stream)|路徑幾何的內容複製到指定的 ID2D1GeometrySink。|
+|[CD2DPath幾何:附加](#attach)|將現有資源介面附加到物件|
+|[CD2DPath幾何:建立](#create)|創建 CD2DPath 幾何體。 (覆寫[CD2D 資源:建立](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DPath幾何::D](#destroy)|銷毀 CD2DPath 幾何物件。 (覆蓋[CD2D 幾何::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
+|[CD2DPath幾何::Detach](#detach)|從物件分離資源介面|
+|[CD2DPath幾何:取得圖計數](#getfigurecount)|檢索路徑幾何體中的圖形數。|
+|[CD2D路徑幾何:取得細分計數](#getsegmentcount)|檢索路徑幾何體中的線段數。|
+|[CD2DPath幾何:開啟](#open)|檢索用於用圖形和線段填充路徑幾何體的幾何接收器。|
+|[CD2DPath幾何:流](#stream)|將路徑幾何體的內容複製到指定的 ID2D1 幾何基克。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|ID2D1PathGeometry 指標。|
+|[CD2DPath幾何::m_pPathGeometry](#m_ppathgeometry)|指向 ID2D1 路徑幾何的指標。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)
+[CD2D 幾何](../../mfc/reference/cd2dgeometry-class.md)
 
 `CD2DPathGeometry`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="attach"></a>  CD2DPathGeometry::Attach
+## <a name="cd2dpathgeometryattach"></a><a name="attach"></a>CD2DPath幾何:附加
 
-將現有的資源物件的介面
+將現有資源介面附加到物件
 
-```
+```cpp
 void Attach(ID2D1PathGeometry* pResource);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pResource*<br/>
-現有的資源介面。 不能是 NULL
+*p資源*<br/>
+現有資源介面。 無法為 NULL
 
-##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry
+## <a name="cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>CD2D 路徑幾何:CD2D路徑幾何
 
-建構 CD2DPathGeometry 物件。
+構造 CD2DPath 幾何物件。
 
 ```
 CD2DPathGeometry(
@@ -109,15 +109,15 @@ CD2DPathGeometry(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
-##  <a name="create"></a>  CD2DPathGeometry::Create
+## <a name="cd2dpathgeometrycreate"></a><a name="create"></a>CD2DPath幾何:建立
 
-建立 CD2DPathGeometry。
+創建 CD2DPath 幾何體。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -125,24 +125,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>參數
 
-*pRenderTarget*<br/>
-到轉譯目標的指標。
+*pRender 目標*<br/>
+指向渲染目標的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="destroy"></a>  CD2DPathGeometry::Destroy
+## <a name="cd2dpathgeometrydestroy"></a><a name="destroy"></a>CD2DPath幾何::D
 
-終結 CD2DPathGeometry 物件。
+銷毀 CD2DPath 幾何物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DPathGeometry::Detach
+## <a name="cd2dpathgeometrydetach"></a><a name="detach"></a>CD2DPath幾何::Detach
 
-中斷連結物件中的資源介面
+從物件分離資源介面
 
 ```
 ID2D1PathGeometry* Detach();
@@ -150,11 +150,11 @@ ID2D1PathGeometry* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-中斷連結的資源介面指標。
+指向分離的資源介面的指標。
 
-##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount
+## <a name="cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>CD2DPath幾何:取得圖計數
 
-擷取路徑幾何中的圖形數目。
+檢索路徑幾何體中的圖形數。
 
 ```
 int GetFigureCount() const;
@@ -162,11 +162,11 @@ int GetFigureCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回路徑幾何中的圖形數目。
+返回路徑幾何體中的圖形數。
 
-##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount
+## <a name="cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>CD2D路徑幾何:取得細分計數
 
-擷取路徑幾何中的區段數目。
+檢索路徑幾何體中的線段數。
 
 ```
 int GetSegmentCount() const;
@@ -174,19 +174,19 @@ int GetSegmentCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回路徑幾何中的區段數目。
+返回路徑幾何體中的線段數。
 
-##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry
+## <a name="cd2dpathgeometrym_ppathgeometry"></a><a name="m_ppathgeometry"></a>CD2DPath幾何::m_pPathGeometry
 
-ID2D1PathGeometry 指標。
+指向 ID2D1 路徑幾何的指標。
 
 ```
 ID2D1PathGeometry* m_pPathGeometry;
 ```
 
-##  <a name="open"></a>  CD2DPathGeometry::Open
+## <a name="cd2dpathgeometryopen"></a><a name="open"></a>CD2DPath幾何:開啟
 
-擷取用來填入 數據與區段之路徑幾何的幾何接收。
+檢索用於用圖形和線段填充路徑幾何體的幾何接收器。
 
 ```
 ID2D1GeometrySink* Open();
@@ -194,11 +194,11 @@ ID2D1GeometrySink* Open();
 
 ### <a name="return-value"></a>傳回值
 
-用來填入 數據與區段之路徑幾何 ID2D1GeometrySink 指標。
+指向 ID2D1 Geometry Sink 的指標,用於用圖形和線段填充路徑幾何體。
 
-##  <a name="stream"></a>  CD2DPathGeometry::Stream
+## <a name="cd2dpathgeometrystream"></a><a name="stream"></a>CD2DPath幾何:流
 
-路徑幾何的內容複製到指定的 ID2D1GeometrySink。
+將路徑幾何體的內容複製到指定的 ID2D1 幾何基克。
 
 ```
 BOOL Stream(ID2D1GeometrySink* geometrySink);
@@ -206,12 +206,12 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 
 ### <a name="parameters"></a>參數
 
-*geometrySink*<br/>
-路徑幾何的內容複製到接收。 修改這個接收時，不會變更此路徑幾何的內容。
+*幾何結構*<br/>
+將路徑幾何體的內容複製到的接收器。 修改此接收器不會更改此路徑幾何體的內容。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果該方法成功,它將返回 TRUE。 否則,它將返回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

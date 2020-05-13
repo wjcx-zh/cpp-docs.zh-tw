@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tokens, evaluating
 ms.assetid: 28870b62-dff6-4644-8b75-d58f340b48d2
 ms.openlocfilehash: 15775ca9a7ada46aaf4e53ae952cd67e95bbf8d3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234019"
 ---
 # <a name="evaluation-of-tokens"></a>語彙基元評估
 
@@ -21,12 +21,12 @@ i+++j
 
 在這個範例中，編譯器會先從三個加號盡可能產生最長的運算子 (`++`)，然後將其餘加號當做加法運算子處理 (`+`)。 因此，運算式會解譯為 `(i++) + (j)`，而不是 `(i) + (++j)`。 在這類情況下，使用空白字元和括號可避免模稜兩可的情形，並確保正確求出運算式的值。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 C 編譯器會將 CTRL+Z 字元視為檔案結尾指標。 它會忽略 CTRL+Z 之後的任何文字。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 語彙基元](../c-language/c-tokens.md)

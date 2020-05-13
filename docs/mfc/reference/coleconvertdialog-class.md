@@ -22,16 +22,16 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-ms.openlocfilehash: ba57e756457fcffca806eeba7454ddf7bcf99d34
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6d6690b8d06df29ce9fcd323eb8724009ee3cca9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366170"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 類別
 
-如需詳細資訊, 請參閱 Windows SDK 中的[OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw)結構。
 
 ## <a name="syntax"></a>語法
 
@@ -43,35 +43,35 @@ class COleConvertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|建構 `COleConvertDialog` 物件。|
+|[COle 轉換對話框::COleConvert對話](#coleconvertdialog)|建構 `COleConvertDialog` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleConvertDialog::DoConvert](#doconvert)|執行對話方塊中所指定的轉換。|
-|[COleConvertDialog::DoModal](#domodal)|顯示 [OLE 變更專案] 對話方塊。|
-|[COleConvertDialog::GetClassID](#getclassid)|取得與所選項目相關聯的 CLSID。|
-|[COleConvertDialog::GetDrawAspect](#getdrawaspect)|指定是否要將專案繪製為圖示。|
-|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|取得與這個專案的 iconic 表單相關聯之中繼檔的控制碼。|
-|[COleConvertDialog::GetSelectionType](#getselectiontype)|取得所選選取範圍的類型。|
+|[COleConvert對話::DoConvert](#doconvert)|執行對話框中指定的轉換。|
+|[COleConvert對話::Do模態](#domodal)|顯示"OLE 更改項目"對話方塊。|
+|[COleConvert 對話:取得類別ID](#getclassid)|獲取與所選項關聯的 CLSID。|
+|[COleConvert對話::取得繪製方面](#getdrawaspect)|指定是否將項目繪製為圖示。|
+|[COleConvert 對話:取得圖示Meta檔案](#geticonicmetafile)|獲取與此項目的標誌性形式關聯的元檔的句柄。|
+|[COleConvert 對話:取得選擇類型](#getselectiontype)|獲取所選選擇的類型。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleConvertDialog::m_cv](#m_cv)|結構, 控制對話方塊的行為。|
+|[COleConvert對話::m_cv](#m_cv)|控制對話框行為的結構。|
 
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
->  應用程式精靈產生的容器程式碼會使用這個類別。
+> 應用程式精靈生成的容器代碼使用此類。
 
-如需有關 OLE 特定對話方塊的詳細資訊, 請參閱[ole 中](../../mfc/dialog-boxes-in-ole.md)的文章對話方塊。
+有關特定於 OLE 的對話方塊的詳細資訊,請參閱 OLE[中的「對話框](../../mfc/dialog-boxes-in-ole.md)」一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -89,11 +89,11 @@ class COleConvertDialog : public COleDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxodlgs。h
+**標題:** afxodlgs.h
 
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog
+## <a name="coleconvertdialogcoleconvertdialog"></a><a name="coleconvertdialog"></a>COle 轉換對話框::COleConvert對話
 
-只會構造`COleConvertDialog`物件。
+只建構物件`COleConvertDialog`。
 
 ```
 explicit COleConvertDialog (
@@ -106,36 +106,36 @@ explicit COleConvertDialog (
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-指向要轉換或啟用的專案。
+指向要轉換或啟動的專案。
 
 *dwFlags*<br/>
-建立旗標, 其中包含使用位 or 運算子結合的下列任何數目的值:
+建立標誌,其中包含使用位或運算子組合的以下任意數量的值:
 
-- CF_SELECTCONVERTTO 指定在呼叫對話方塊時, 一開始會選取 [轉換成] 選項按鈕。 這是預設值。
+- CF_SELECTCONVERTTO 指定在調用對話方塊時,最初將選擇"轉換為單選"按鈕。 這是預設值。
 
-- CF_SELECTACTI加值稅EAS 指定在呼叫對話方塊時, 一開始會選取 [啟動為] 選項按鈕。
+- CF_SELECTACTIVATEAS 指定在調用對話方塊時,最初將選擇"啟動為單選"按鈕。
 
-- CF_SETCONVERTDEFAULT 指定當選取 [轉換成] 選項按鈕時`clsidConvertDefault` , 由`m_cv`結構的成員指定其 CLSID 的類別會當做 [類別] 清單方塊中的預設選項使用。
+- CF_SETCONVERTDEFAULT 指定選擇"轉換為單選"按鈕時`clsidConvertDefault`,`m_cv`由結構成員指定的 CLSID 的類將作為類清單框中的預設選擇。
 
-- CF_SETACTI加值稅EDEFAULT 指定當選取 [啟動為] 選項按鈕時`clsidActivateDefault` , 由`m_cv`結構的成員指定其 CLSID 的類別會當做 [類別] 清單方塊中的預設選項使用。
+- CF_SETACTIVATEDEFAULT 指定選擇「啟動為單選」按鈕`clsidActivateDefault`時,`m_cv`由結構成員指定的 CLSID 的類將作為類清單框中的預設選擇。
 
-- CF_SHOWHELPBUTTON 指定對話方塊被呼叫時, 將會顯示 [說明] 按鈕。
+- CF_SHOWHELPBUTTON 指定在調用對話框時將顯示"説明"按鈕。
 
 *pClassID*<br/>
-指向要轉換或啟用之專案的 CLSID。 如果是 Null, 將會使用與*pItem*相關聯的 CLSID。
+指向要轉換或啟動的專案的 CLSID。 如果為 NULL,將使用與*pItem*關聯的 CLSID。
 
-*pParentWnd*<br/>
-指向對話方塊物件所屬的父系或擁有者視窗物件`CWnd`(類型為)。 如果它是 Null, 則對話方塊的父視窗會設定為主應用程式視窗。
+*pparentwnd*<br/>
+指向對話框物件所屬的父視窗或所有者視窗物件`CWnd`(類型)。 如果為 NULL,則對話方塊的父視窗將設置為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-若要顯示對話方塊, 請呼叫[DoModal](#domodal)函式。
+要顯示對話框,請調用[DoModal](#domodal)函數。
 
-如需詳細資訊, 請參閱[CLSID 金鑰](/windows/win32/com/clsid-key-hklm)和[OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw)結構。
+有關詳細資訊,請參閱[CLSID 密鑰](/windows/win32/com/clsid-key-hklm)和[OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw)結構。
 
-##  <a name="doconvert"></a>COleConvertDialog::D oConvert
+## <a name="coleconvertdialogdoconvert"></a><a name="doconvert"></a>COleConvert對話::DoConvert
 
-從[DoModal](#domodal)成功傳回之後呼叫此函式, 以轉換或啟動[COleClientItem](../../mfc/reference/coleclientitem-class.md)類型的物件。
+呼叫此函數,從[DoModal](#domodal)成功傳回後,以轉換或啟動[COleClientItem](../../mfc/reference/coleclientitem-class.md)類型的物件。
 
 ```
 BOOL DoConvert(COleClientItem* pItem);
@@ -144,7 +144,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-指向要轉換或啟用的專案。 不可以是 NULL。
+指向要轉換或啟動的專案。 不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -152,11 +152,11 @@ BOOL DoConvert(COleClientItem* pItem);
 
 ### <a name="remarks"></a>備註
 
-專案會根據使用者在 [轉換] 對話方塊中選取的資訊進行轉換或啟用。
+根據使用者在「轉換」對話框中選擇的資訊轉換或啟動該專案。
 
-##  <a name="domodal"></a>COleConvertDialog::D oModal
+## <a name="coleconvertdialogdomodal"></a><a name="domodal"></a>COleConvert對話::Do模態
 
-呼叫此函式以顯示 [OLE 轉換] 對話方塊。
+呼叫此函數以顯示"OLE 轉換"對話方塊。
 
 ```
 virtual INT_PTR DoModal();
@@ -164,23 +164,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-對話方塊的完成狀態。 下列其中一個值：
+對話框的完成狀態。 下列其中一個值：
 
-- 如果已成功顯示對話方塊, 則 IDOK。
+- 如果對話框已成功顯示,則 IDOK。
 
-- 如果使用者取消對話方塊, 則 IDCANCEL。
+- 如果使用者取消了對話框,則進行 IDCANCEL。
 
-- 如果發生錯誤, 則 IDABORT。 如果傳回 IDABORT, 請呼叫[COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式, 以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單, 請參閱 Windows SDK 中的[OleUIConvert](/windows/win32/api/oledlg/nf-oledlg-oleuiconvertw)函數。
+- 如果發生錯誤,則 IDABORT。 如果返回 IDABORT,請呼叫[COleDialog:getLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函數,以獲取有關所發生錯誤類型的詳細資訊。 有關可能錯誤的清單,請參閱 Windows SDK 中的[OleUIConvert](/windows/win32/api/oledlg/nf-oledlg-oleuiconvertw)函數。
 
 ### <a name="remarks"></a>備註
 
-如果您想要藉由設定[m_cv](#m_cv)結構的成員來初始化各種對話方塊控制項, 您應該在呼叫`DoModal`之前執行此動作, 但在構造對話方塊物件之後。
+如果要通過設置[m_cv](#m_cv)結構的成員來初始化各種對話框控件,則應在調用`DoModal`之前執行此操作,但在構造對話框物件之後。
 
-如果`DoModal`傳回 IDOK, 您可以呼叫其他成員函式, 以抓取使用者在對話方塊中輸入的設定或資訊。
+如果`DoModal`返回 IDOK,則可以調用其他成員函數來檢索使用者輸入到對話方塊中的設置或資訊。
 
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID
+## <a name="coleconvertdialoggetclassid"></a><a name="getclassid"></a>COleConvert 對話:取得類別ID
 
-呼叫此函式可取得與使用者在 [轉換] 對話方塊中選取之專案相關聯的 CLSID。
+呼叫此函數以取得與使用者在"轉換"對話框中選擇的項關聯的 CLSID。
 
 ```
 REFCLSID GetClassID() const;
@@ -188,17 +188,17 @@ REFCLSID GetClassID() const;
 
 ### <a name="return-value"></a>傳回值
 
-與 [轉換] 對話方塊中所選取之專案相關聯的 CLSID。
+與"轉換"對話框中選擇的項關聯的 CLSID。
 
 ### <a name="remarks"></a>備註
 
-只有在[DoModal](#domodal)傳回 IDOK 之後, 才呼叫此函式。
+僅在[DoModal](#domodal)傳回 IDOK 後呼叫此函數。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[CLSID 金鑰](/windows/win32/com/clsid-key-hklm)。
+關於詳細資訊,請參閱 Windows SDK 中的[CLSID 金鑰](/windows/win32/com/clsid-key-hklm)。
 
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect
+## <a name="coleconvertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleConvert對話::取得繪製方面
 
-呼叫此函式可判斷使用者是否選擇將選取的專案顯示為圖示。
+呼叫此函數以確定使用者是否選擇將選取項目顯示為圖示。
 
 ```
 DVASPECT GetDrawAspect() const;
@@ -208,19 +208,19 @@ DVASPECT GetDrawAspect() const;
 
 呈現物件所需的方法。
 
-- 如果未核取 [顯示為圖示] 核取方塊, 則會傳回 DVASPECT_CONTENT。
+- 如果未選中「顯示為圖示」複選框,則DVASPECT_CONTENT返回。
 
-- 如果已核取 [顯示為圖示] 核取方塊, 則會傳回 DVASPECT_ICON。
+- DVASPECT_ICON如果選中「顯示為圖示」複選框,則返回。
 
 ### <a name="remarks"></a>備註
 
-只有在[DoModal](#domodal)傳回 IDOK 之後, 才呼叫此函式。
+僅在[DoModal](#domodal)傳回 IDOK 後呼叫此函數。
 
-如需有關繪製外觀的詳細資訊, 請參閱 Windows SDK 中的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)資料結構。
+有關繪圖方面的詳細資訊,請參閱 Windows SDK 中的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)資料結構。
 
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile
+## <a name="coleconvertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleConvert 對話:取得圖示Meta檔案
 
-呼叫此函式可取得中繼檔的控制碼, 其中包含所選取專案的 iconic 層面。
+呼叫此函數以獲取包含所選項標誌性方面的元檔的句柄。
 
 ```
 HGLOBAL GetIconicMetafile() const;
@@ -228,11 +228,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含所選取專案之 iconic 層面的中繼檔控制碼, 如果在對話方塊關閉時, 選取 [確定], 就會核取 [顯示為圖示] 核取方塊。否則為 Null。
+包含選定項目標誌性方面的元檔的句柄,如果通過選擇「確定」在對話框被取消時選中「顯示為圖示」複選框;否則 NULL。
 
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType
+## <a name="coleconvertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleConvert 對話:取得選擇類型
 
-呼叫此函式可決定 [轉換] 對話方塊中所選取的轉換類型。
+呼叫此函數以確定在"轉換"對話框中選擇的轉換類型。
 
 ```
 UINT GetSelectionType() const;
@@ -240,11 +240,11 @@ UINT GetSelectionType() const;
 
 ### <a name="return-value"></a>傳回值
 
-所選取的類型。
+選擇的類型。
 
 ### <a name="remarks"></a>備註
 
-傳回型別值是由`Selection` `COleConvertDialog`類別中宣告的列舉型別所指定。
+返回類型值由類中聲明的`Selection``COleConvertDialog`枚舉類型指定。
 
 ```
 enum Selection {
@@ -254,17 +254,17 @@ enum Selection {
     };
 ```
 
-這些值的簡短說明如下:
+這些值的簡要說明如下:
 
-- `COleConvertDialog::noConversion`如果已取消對話方塊, 或使用者未選取任何轉換, 則傳回。 如果`COleConvertDialog::DoModal`傳回 IDOK, 則使用者可能選取了與先前所選取不同的圖示。
+- `COleConvertDialog::noConversion`如果對話框已取消或使用者未選擇轉換,則返回。 如果`COleConvertDialog::DoModal`返回 IDOK,則使用者可能選擇了與以前選擇的圖示不同的圖示。
 
-- `COleConvertDialog::convertItem`如果已核取 [轉換成] 選項按鈕, 則會傳回, 使用者選取不同的專案以`DoModal`轉換成, 並傳回 IDOK。
+- `COleConvertDialog::convertItem`如果選中「轉換為單選」按鈕,則返回該用戶選擇了要轉換為的不同專案,並`DoModal`返回 IDOK。
 
-- `COleConvertDialog::activateAs`如果已核取 [啟用為] 選項按鈕, 則會傳回, 使用者選取不同的專案`DoModal`來啟動, 並傳回 IDOK。
+- `COleConvertDialog::activateAs`如果選中"激活作為單選"按鈕,則返回該用戶選擇要啟動的不同專案,並`DoModal`返回 IDOK。
 
-##  <a name="m_cv"></a>  COleConvertDialog::m_cv
+## <a name="coleconvertdialogm_cv"></a><a name="m_cv"></a>COleConvert對話::m_cv
 
-OLEUICONVERT 類型的結構, 用來控制 [轉換] 對話方塊的行為。
+用於控制「轉換」對話框的行為的 OLEUICONVERT 類型的結構。
 
 ```
 OLEUICONVERT m_cv;
@@ -272,9 +272,9 @@ OLEUICONVERT m_cv;
 
 ### <a name="remarks"></a>備註
 
-這個結構的成員可以直接或透過成員函式來修改。
+此結構的成員可以直接或通過成員函數進行修改。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw)結構。
 
 ## <a name="see-also"></a>另請參閱
 

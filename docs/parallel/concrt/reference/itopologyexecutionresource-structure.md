@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140073"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368139"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 結構
 
@@ -32,24 +32,24 @@ struct ITopologyExecutionResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[ITopologyExecutionResource：： GetId](#getid)|傳回這個執行資源的資源管理員唯一識別項。|
-|[ITopologyExecutionResource：： GetNext](#getnext)|讓介面返回列舉順序中的下一個執行資源。|
+|[I拓撲執行資源:GetId](#getid)|傳回這個執行資源的資源管理員唯一識別項。|
+|[I拓撲執行資源:取得下一個](#getnext)|讓介面返回列舉順序中的下一個執行資源。|
 
 ## <a name="remarks"></a>備註
 
-此介面通常用來逐步引導系統的拓撲，如 Resource Manager 所觀察到的。
+此介面通常用於遍歷資源管理器觀察到的系統拓撲。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ITopologyExecutionResource`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="getid"></a>ITopologyExecutionResource：： GetId 方法
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>I拓撲執行資源:GetId 方法
 
 傳回這個執行資源的資源管理員唯一識別項。
 
@@ -61,7 +61,7 @@ virtual unsigned int GetId() const = 0;
 
 這個執行資源的資源管理員唯一識別項。
 
-## <a name="getnext"></a>ITopologyExecutionResource：： GetNext 方法
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>I拓撲執行資源::獲取下一個方法
 
 讓介面返回列舉順序中的下一個執行資源。
 

@@ -1,6 +1,6 @@
 ---
 title: _stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _stricmp_l
 - _mbsicmp
@@ -8,6 +8,12 @@ api_name:
 - _mbsicmp_l
 - _stricmp
 - _wcsicmp_l
+- _o__mbsicmp
+- _o__mbsicmp_l
+- _o__stricmp
+- _o__stricmp_l
+- _o__wcsicmp
+- _o__wcsicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,19 +66,19 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: 108a3c572174be5048d0bba48a4da0f4a735f458
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 786c2bd2738bb82b3edac5c811ccfd3f9f8bc854
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940684"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920001"
 ---
 # <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 
 執行字串的不區分大小寫比較。
 
 > [!IMPORTANT]
-> **_mbsicmp**和 **_mbsicmp_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsicmp**和 **_mbsicmp_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -117,37 +124,39 @@ int _mbsicmp_l(
 
 傳回值表示*string1*到*string2*的關聯，如下所示。
 
-|傳回值|說明|
+|傳回值|描述|
 |------------------|-----------------|
 |< 0|*string1*小於*string2*|
 |0|*string1*與*string2*相同|
 |> 0|*string1*大於*string2*|
 
-發生錯誤時， **_mbsicmp**會傳回 **_NLSCMPERROR**，其定義在\<string. h > 和\<g. > 中。
+發生錯誤時， **_mbsicmp**會傳回 **_NLSCMPERROR**，其定義在\<string. h> 和\<g.> 中。
 
 ## <a name="remarks"></a>備註
 
-**_Stricmp**函數序數會在將每個字元轉換成小寫之後，比較*string1*和*string2* ，並傳回指出其關聯性的值。 **_stricmp**與 **_stricoll**不同之處在于， **_stricmp**比較只受**LC_CTYPE**影響，這會決定哪些字元是大寫和小寫。 **_Stricoll**函數會根據地區設定的**LC_CTYPE**和**LC_COLLATE**分類來比較字串，其中包括大小寫和定序順序。 如需**LC_COLLATE**類別的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)和[地區設定類別](../../c-runtime-library/locale-categories.md)。 這些沒有 **_l**尾碼的函式版本，會針對與地區設定相關的行為使用目前的地區設定。 具有字尾的版本也一樣，只不過它們改用傳入的地區設定。 如果尚未設定地區設定，會使用 C 地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_Stricmp**函數序數會在將每個字元轉換成小寫之後，比較*string1*和*string2* ，並傳回表示其關聯性的值。 **_stricmp**不同于 **_stricoll** ， **_stricmp**的比較只會受到**LC_CTYPE**的影響，這會決定哪些字元是大寫和小寫。 **_Stricoll**函式會根據地區設定的**LC_CTYPE**和**LC_COLLATE**分類來比較字串，其中包括大小寫和定序順序。 如需**LC_COLLATE**類別目錄的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)和[地區設定分類](../../c-runtime-library/locale-categories.md)。 這些沒有 **_l**尾碼的函式版本，會針對地區設定相關的行為使用目前的地區設定。 具有字尾的版本也一樣，只不過它們改用傳入的地區設定。 如果尚未設定地區設定，會使用 C 地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > **_stricmp**相當於 **_strcmpi**。 它們可以交換使用，但 **_stricmp**是慣用的標準。
 
-**_Strcmpi**函式相當於 **_stricmp** ，而且是為了回溯相容性而提供。
+**_Strcmpi**函式相當於 **_stricmp** ，而且僅為回溯相容性而提供。
 
 因為 **_stricmp**會進行小寫比較，所以可能會導致非預期的行為。
 
-為了說明 **_stricmp**的大小寫轉換會如何影響比較的結果，假設您有兩個字串在約翰和 JOHN_HENRY。 字串 JOHN_HENRY 會被視為少於 JOHNSTON，因為 "_" 的 ASCII 值比小寫 S 更低。事實上，所有 ASCII 值在 96 和 91 之間的任何字元都會被視為小於任何字母。
+為了說明 **_stricmp**的大小寫轉換會如何影響比較的結果，假設您有兩個字串為約翰，並 JOHN_HENRY。 字串 JOHN_HENRY 會被視為少於 JOHNSTON，因為 "_" 的 ASCII 值比小寫 S 更低。事實上，所有 ASCII 值在 96 和 91 之間的任何字元都會被視為小於任何字母。
 
-如果使用[strcmp](strcmp-wcscmp-mbscmp.md)函式而不是 **_stricmp**，則 JOHN_HENRY 會大於約翰，
+如果使用[strcmp](strcmp-wcscmp-mbscmp.md)函式而不是 **_stricmp**，JOHN_HENRY 會大於約翰，
 
-**_wcsicmp**和 **_mbsicmp**是 **_stricmp**的寬字元和多位元組字元版本。 **_Wcsicmp**的引數和傳回值是寬字元字串; **_mbsicmp**的是多位元組字元字串。 **_mbsicmp**會根據目前的多位元組字碼頁來辨識多位元組字元序列，並在發生錯誤時傳回 **_NLSCMPERROR** 。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 除此之外，這三個函式的行為相同。
+**_wcsicmp**和 **_mbsicmp**是 **_stricmp**的寬字元和多位元組字元版本。 **_Wcsicmp**的引數和傳回值是寬字元字串;**_mbsicmp**的是多位元組字元字串。 **_mbsicmp**會根據目前的多位元組字碼頁來辨識多位元組字元序列，並在發生錯誤時傳回 **_NLSCMPERROR** 。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 除此之外，這三個函式的行為相同。
 
 **_wcsicmp**和**wcscmp**的行為相同，不同之處在于**wcscmp**不會先將其引數轉換成小寫，再進行比較。 **_mbsicmp**和 **_mbscmp**的行為相同，不同之處在于 **_mbscmp**不會先將其引數轉換成小寫，再進行比較。
 
-您必須呼叫[setlocale](setlocale-wsetlocale.md) ， **_Wcsicmp**才能使用拉丁的1個字元。 根據預設，C 地區設定會生效，因此，ä不會比較等於Ä。 在呼叫 **_wcsicmp**之前，使用 C 地區設定以外的任何地區設定來呼叫**setlocale** 。 下列範例示範 **_wcsicmp**如何區分地區設定：
+您必須呼叫[setlocale](setlocale-wsetlocale.md) ， **_Wcsicmp**才能使用拉丁的1個字元。 根據預設，C 地區設定會生效，因此，ä不會比較等於Ä。 在 **_wcsicmp**的呼叫之前，使用 C 地區設定以外的任何地區設定來呼叫**setlocale** 。 下列範例示範 **_wcsicmp**如何區分地區設定：
 
 ```C
 // crt_stricmp_locale.c
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <string.h>
 #include <stdio.h>
 #include <locale.h>
@@ -174,9 +183,9 @@ int main() {
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_stricmp**、 **_stricmp_l**|\<string.h>|
-|**_wcsicmp**、 **_wcsicmp_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsicmp**、 **_mbsicmp_l**|\<mbstring.h>|
+|**_stricmp**， **_stricmp_l**|\<string.h>|
+|**_wcsicmp**， **_wcsicmp_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsicmp**， **_mbsicmp_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -235,7 +244,7 @@ Compare strings:
 [memcmp、wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp、_memicmp_l](memicmp-memicmp-l.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>

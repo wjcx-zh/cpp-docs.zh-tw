@@ -28,11 +28,11 @@ C 提供了下列儲存類別指定名稱：
 
 *storage-class-specifier*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**自動**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**註冊**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**靜態**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**外部**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**參加**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**靜止**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec （** *擴充-extended-decl-modifier-seq-修飾詞-seq* **）**  /\* Microsoft 特定 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec （** *延伸 extended-decl-modifier-seq-修飾詞-seq* **）**  / \* Microsoft 專有\*/
 
 除了 `__declspec` 之外，您只能在宣告的 *declaration-specifier* 中使用一個 *storage-class-specifier*。 如果未指定儲存類別，則區塊內的宣告會建立自動物件。
 

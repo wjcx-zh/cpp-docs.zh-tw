@@ -26,16 +26,16 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f6a26c2724146f8723dee3ddce60ddce6995ec8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198196"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747145"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 類別
 
-代表相對的時間，時間範圍。
+表示相對時間、時間跨度。
 
 ## <a name="syntax"></a>語法
 
@@ -49,59 +49,59 @@ class COleDateTimeSpan
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|建構 `COleDateTimeSpan` 物件。|
+|[COleDate時間跨度:COleDatetimeSpan](#coledatetimespan)|建構 `COleDateTimeSpan` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDateTimeSpan::Format](#format)|產生的格式化的字串表示`COleDateTimeSpan`物件。|
-|[COleDateTimeSpan::GetDays](#getdays)|這會傳回範圍的日期部份`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::GetHours](#gethours)|這會傳回範圍的小時部分`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::GetMinutes](#getminutes)|這會傳回範圍的分鐘部分`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::GetSeconds](#getseconds)|這會傳回範圍的第二個部分`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::GetStatus](#getstatus)|取得這個狀態 （有效性）`COleDateTimeSpan`物件。|
-|[COleDateTimeSpan::GetTotalDays](#gettotaldays)|這會傳回天數`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::GetTotalHours](#gettotalhours)|傳回此數`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::GetTotalMinutes](#gettotalminutes)|這會傳回的分鐘數`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::GetTotalSeconds](#gettotalseconds)|這會傳回的秒數`COleDateTimeSpan`物件表示。|
-|[COleDateTimeSpan::SetDateTimeSpan](#setdatetimespan)|設定值，這個`COleDateTimeSpan`物件。|
-|[COleDateTimeSpan::SetStatus](#setstatus)|設定此狀態 （有效性）`COleDateTimeSpan`物件。|
+|[COleDate時間跨度::格式](#format)|生成`COleDateTimeSpan`物件的格式化字串表示形式。|
+|[COleDate時間跨度:取得天數](#getdays)|返回此`COleDateTimeSpan`物件表示的跨值的天部分。|
+|[COleDateTimeSpan:取得小時數](#gethours)|返回此`COleDateTimeSpan`物件表示的跨值的小時部分。|
+|[COleDateTimeSpan:取得分鐘數](#getminutes)|返回此`COleDateTimeSpan`物件表示的跨值的分鐘部分。|
+|[COleDate時間跨度:取得秒數](#getseconds)|返回此`COleDateTimeSpan`物件表示的跨範圍的第二部分。|
+|[COleDate 時間跨度:取得狀態](#getstatus)|獲取此`COleDateTimeSpan`物件的狀態(有效性)。|
+|[COleDate時間跨度:取得總天數](#gettotaldays)|返回此`COleDateTimeSpan`物件表示的天數。|
+|[COleDateTimeSpan:取得總小時數](#gettotalhours)|返回此`COleDateTimeSpan`物件表示的小時數。|
+|[COleDateTimeSpan:取得總分鐘數](#gettotalminutes)|返回此`COleDateTimeSpan`物件表示的分鐘數。|
+|[COleDate時間跨度::取得總秒數](#gettotalseconds)|返回此`COleDateTimeSpan`物件表示的秒數。|
+|[COleDate時間跨度::設定時間跨度](#setdatetimespan)|設置此`COleDateTimeSpan`物件的值。|
+|[COleDate 時間跨度::設定狀態](#setstatus)|設置此`COleDateTimeSpan`物件的狀態(有效性)。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |||
 |-|-|
-|[運算子 +、-](#operator_add_-)|新增、 subtract、 及變更符號`COleDateTimeSpan`值。|
-|[operator +=, -=](#operator_add_eq_-_eq)|加法和減法`COleDateTimeSpan`值從這個`COleDateTimeSpan`值。|
-|[operator =](#operator_eq)|複製`COleDateTimeSpan`值。|
-|[operator ==, <, <=](#coledatetimespan_relational_operators)|比較兩個`COleDateTimeSpan`值。|
-|[operator double](#operator_double)|這會將轉換`COleDateTimeSpan`值加入**double**。|
+|[運算符 +, -](#operator_add_-)|添加、減去和更改值的`COleDateTimeSpan`符號。|
+|[運算子 *, -]](#operator_add_eq_-_eq)|從此值`COleDateTimeSpan`中添加`COleDateTimeSpan`和減去值。|
+|[運算符 |](#operator_eq)|複製值`COleDateTimeSpan`。|
+|[運算符 =、<、<|](#coledatetimespan_relational_operators)|比較兩`COleDateTimeSpan`個值。|
+|[運算子 double](#operator_double)|將此值`COleDateTimeSpan`轉換為**雙精度**值。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDateTimeSpan::m_span](#m_span)|包含的基礎**雙**這個`COleDateTimeSpan`物件。|
-|[COleDateTimeSpan::m_status](#m_status)|包含這個狀態`COleDateTimeSpan`物件。|
+|[COleDate 時間跨度::m_span](#m_span)|包含此`COleDateTimeSpan`物件的基礎**雙精度值**。|
+|[COleDate時間跨度::m_status](#m_status)|包含此`COleDateTimeSpan`物件的狀態。|
 
 ## <a name="remarks"></a>備註
 
-`COleDateTimeSpan` 沒有基底類別。
+`COleDateTimeSpan`沒有基類。
 
-A`COleDateTimeSpan`持續時間，以天為單位。
+A`COleDateTimeSpan`以天保持時間。
 
-`COleDateTimeSpan` 搭配其附屬類別[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。 `COleDateTime` 封裝`DATE`OLE automation 資料類型。 `COleDateTime` 表示絕對時間值。 所有`COleDateTime`計算涉及`COleDateTimeSpan`值。 這些類別之間的關聯性相當於之間[CTime](../../atl-mfc-shared/reference/ctime-class.md)並[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。
+`COleDateTimeSpan`使用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。 `COleDateTime`封裝 OLE`DATE`自動化的數據類型。 `COleDateTime`表示絕對時間值。 所有`COleDateTime`計算都涉及`COleDateTimeSpan`值。 這些類別之間的關係類似於 CTime 和[CTimeSpan](../../atl-mfc-shared/reference/ctime-class.md)之間的關係[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。
 
-如需詳細資訊`COleDateTime`並`COleDateTimeSpan`類別，請參閱文章[日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有關`COleDateTime``COleDateTimeSpan`和類的詳細資訊,請參閱文章[「日期和時間:自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)」。。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ATLComTime.h
+**標題:** ATLComTime.h
 
-##  <a name="coledatetimespan_relational_operators"></a>  COleDateTimeSpan 關係運算子
+## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>COleDateTimeSpan關係運算子
 
-比較運算子。
+比較運算符。
 
 ```
 bool operator==(const COleDateTimeSpan& dateSpan) const throw();
@@ -114,17 +114,17 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>參數
 
-*dateSpan*<br/>
+*日期斯潘*<br/>
 要比較的 `COleDateTimeSpan`。
 
 ### <a name="return-value"></a>傳回值
 
-這些運算子比較兩個日期/時間範圍值並傳回 TRUE 的條件為 true; 如果否則為 FALSE。
+這些運算元比較兩個日期/時間跨度值,如果條件為 true,則返回 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  如果任一個運算元無效，會發生 ATLASSERT。
+> 如果任一操作數無效,將發生 ATLASSERT。
 
 ### <a name="example"></a>範例
 
@@ -132,7 +132,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]
 
-##  <a name="coledatetimespan"></a>  COleDateTimeSpan::COleDateTimeSpan
+## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>COleDate時間跨度:COleDatetimeSpan
 
 建構 `COleDateTimeSpan` 物件。
 
@@ -144,33 +144,33 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>參數
 
-*dblSpanSrc*<br/>
-若要複製到新的天數`COleDateTimeSpan`物件。
+*德布爾斯潘斯克*<br/>
+要複製到新`COleDateTimeSpan`物件的天數。
 
-*lDays*， *nHours*， *nMins*， *nSecs*<br/>
-表示要複製到新的日期和時間值`COleDateTimeSpan`物件。
+*l 天*, *nHours*, *nMins*, *nSecs*<br/>
+指示要複製到新`COleDateTimeSpan`物件的日時值。
 
 ### <a name="remarks"></a>備註
 
-這些建構函式的所有新建`COleDateTimeSpan`物件初始化為指定的值。 每個這些建構函式的簡短描述如下：
+所有這些構造函數都創建新`COleDateTimeSpan`的物件,初始化到指定值。 每個構造函數的簡要描述如下:
 
-- **COleDateTimeSpan （)** 建構`COleDateTimeSpan`物件初始化為 0。
+- **COleDateTimeSpan)** 建構初始化`COleDateTimeSpan`為 0 的物件。
 
-- **COleDateTimeSpan (** `dblSpanSrc` **)** 建構`COleDateTimeSpan`從浮點值的物件。
+- **COleDateTimeSpan)** `dblSpanSrc` **)** 從浮點`COleDateTimeSpan`值構造物件。
 
-- **COleDateTimeSpan (** `lDays` **，** `nHours` **，** `nMins` **，** `nSecs` **)** 建構`COleDateTimeSpan`物件初始化為指定的數值。
+- **COleDateTimeSpan(** `lDays` **,** `nHours` **,** `nMins` **,** `nSecs` **)** 建構初始化`COleDateTimeSpan`為指定數值的物件。
 
-新的狀態`COleDateTimeSpan`物件設定為有效。
+新`COleDateTimeSpan`物件的狀態設置為有效。
 
-如需有關的界限`COleDateTimeSpan`值，請參閱文章[日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有關`COleDateTimeSpan`值邊界的詳細資訊,請參閱文章[「日期和時間:自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)」。。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]
 
-##  <a name="format"></a>  COleDateTimeSpan::Format
+## <a name="coledatetimespanformat"></a><a name="format"></a>COleDate時間跨度::格式
 
-產生的格式化的字串表示`COleDateTimeSpan`物件。
+生成`COleDateTimeSpan`物件的格式化字串表示形式。
 
 ```
 CString Format(LPCTSTR pFormat) const;
@@ -179,47 +179,47 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>參數
 
-*pFormat*<br/>
-格式化字串類似於`printf`格式化字串。 格式化程式碼，加上百分比 (`%`) 登入，會取代對應`COleDateTimeSpan`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 值和格式化的程式碼的意義`Format`如下所示：
+*p格式*<br/>
+類似於格式字串的`printf`格式字串。 格式代碼(前面為百分比`%`( ) 符號`COleDateTimeSpan`,由相應的 元件替換。 格式字串中的其他字元將複製到傳回的字串。 下面列出格式化`Format`代碼的值與含義:
 
-- **%H**當天的時數
+- **%H**當天的小時數
 
-- **%M**目前小時的分鐘數
+- **%M**目前的小時內的分鐘數
 
-- **%S**中目前的分鐘的秒數
+- **%S**目前分鐘中的秒數
 
 - **%%** 百分比符號
 
-以上所列的四個格式化程式碼會接受格式的唯一代碼。
+上面列出的四個格式代碼是格式將接受的唯一代碼。
 
 -
 
 *nID*<br/>
-格式控制字串資源識別碼。
+格式控制字串的資源識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-A `CString` ，包含已格式化的日期/時間範圍值。
+包含`CString`格式化日期/時間跨度值的 。
 
 ### <a name="remarks"></a>備註
 
-呼叫這些函式來建立格式化的表示法的時間範圍值。 如果這個狀態`COleDateTimeSpan`物件為 null，則傳回的值為空字串。 如果狀態不正確，字串資源 IDS_INVALID_DATETIMESPAN 被指定傳回的字串。
+調用這些函數以創建時間跨度值的格式化表示形式。 如果此`COleDateTimeSpan`物件的狀態為 null,則傳回值為空字串。 如果狀態無效,則返回字串由字串資源IDS_INVALID_DATETIMESPAN指定。
 
-此函式之表單的簡短描述如下：
+此函數的表單的簡要說明如下:
 
-**Format(** *pFormat* **)**<br/>
-此表單會使用格式字串，其中包含特殊格式化的程式碼會加上百分比符號 （%），將值格式化中`printf`。 格式化的字串做為參數傳遞至函式。
+**格式(** *pFormat* **)**<br/>
+此表單使用格式字串設定值,該格式字串包含特殊格式碼,前面有百分比符號 (%),如中`printf`。 格式化字串作為參數傳遞給函數。
 
-**Format(** *nID* **)**<br/>
-此表單會使用格式字串，其中包含特殊格式化的程式碼會加上百分比符號 （%），將值格式化中`printf`。 格式化的字串是資源。 此字串資源的識別碼會當做參數傳遞。
+**格式***(nID)* **)**<br/>
+此表單使用格式字串設定值,該格式字串包含特殊格式碼,前面有百分比符號 (%),如中`printf`。 格式化字串是一個資源。 此字串資源的 ID 作為參數傳遞。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]
 
-##  <a name="getdays"></a>  COleDateTimeSpan::GetDays
+## <a name="coledatetimespangetdays"></a><a name="getdays"></a>COleDate時間跨度:取得天數
 
-擷取此日期/時間範圍值的日期部分。
+檢索此日期/時間跨度值的天部分。
 
 ```
 LONG GetDays() const throw();
@@ -227,35 +227,35 @@ LONG GetDays() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-此日期/時間範圍值的日期部份。
+此日期/時間跨度值的日部分。
 
 ### <a name="remarks"></a>備註
 
-傳回值在這個函式範圍中之間大約-3,615,000 和 3,615,000。
+此函數的返回值介於大約 - 3,615,000 和 3,615,000 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]
 
-##  <a name="gethours"></a>  COleDateTimeSpan::GetHours
+## <a name="coledatetimespangethours"></a><a name="gethours"></a>COleDateTimeSpan:取得小時數
 
-擷取此日期/時間範圍值的小時部分。
+檢索此日期/時間跨度值的小時部分。
 
 ```
 LONG GetHours() const throw();
@@ -263,35 +263,35 @@ LONG GetHours() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-此日期/時間範圍值的小時部分。
+此日期/時間跨度值的工時部分。
 
 ### <a name="remarks"></a>備註
 
-在這個函式範圍中-23 到 23 之間傳回的值。
+此函數的返回值範圍介於 - 23 和 23 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]
 
-##  <a name="getminutes"></a>  COleDateTimeSpan::GetMinutes
+## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a>COleDateTimeSpan:取得分鐘數
 
-擷取此日期/時間範圍值的分鐘部分。
+檢索此日期/時間跨度值的分鐘部分。
 
 ```
 LONG GetMinutes() const throw();
@@ -299,35 +299,35 @@ LONG GetMinutes() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-此日期/時間範圍值的分鐘部分。
+此日期/時間跨度值的分鐘部分。
 
 ### <a name="remarks"></a>備註
 
-從這個函式的範圍介於-59 到 59 之間的傳回值。
+此函數的返回值範圍介於 - 59 和 59 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]
 
-##  <a name="getseconds"></a>  COleDateTimeSpan::GetSeconds
+## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a>COleDate時間跨度:取得秒數
 
-擷取此日期/時間範圍值的第二個部分。
+檢索此日期/時間跨度值的第二部分。
 
 ```
 LONG GetSeconds() const throw();
@@ -335,35 +335,35 @@ LONG GetSeconds() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-此日期/時間範圍值的秒數部分。
+此日期/時間跨度值的秒部分。
 
 ### <a name="remarks"></a>備註
 
-從這個函式的範圍介於-59 到 59 之間的傳回值。
+此函數的返回值範圍介於 - 59 和 59 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]
 
-##  <a name="getstatus"></a>  COleDateTimeSpan::GetStatus
+## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a>COleDate 時間跨度:取得狀態
 
-取得這個狀態 （有效性）`COleDateTimeSpan`物件。
+獲取此`COleDateTimeSpan`物件的狀態(有效性)。
 
 ```
 DateTimeSpanStatus GetStatus() const throw();
@@ -371,11 +371,11 @@ DateTimeSpanStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-這個狀態`COleDateTimeSpan`值。
+此值`COleDateTimeSpan`的狀態。
 
 ### <a name="remarks"></a>備註
 
-傳回值由定義`DateTimeSpanStatus`列舉型別，其定義內`COleDateTimeSpan`類別。
+返回值由`DateTimeSpanStatus`枚舉類型定義,該類型在類`COleDateTimeSpan`中 定義。
 
 ```
 enum DateTimeSpanStatus{
@@ -385,29 +385,29 @@ enum DateTimeSpanStatus{
 };
 ```
 
-如這些狀態值的簡短描述，請參閱下列清單：
+有關這些狀態值的簡要說明,請參閱以下清單:
 
-- `COleDateTimeSpan::valid` 指出這個`COleDateTimeSpan`物件是否有效。
+- `COleDateTimeSpan::valid`指示此`COleDateTimeSpan`物件有效。
 
-- `COleDateTimeSpan::invalid` 指出這個`COleDateTimeSpan`物件無效，也就是它的值可能不正確。
+- `COleDateTimeSpan::invalid`指示此物件`COleDateTimeSpan`無效;如果表明此物件無效。也就是說,其值可能不正確。
 
-- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
+- `COleDateTimeSpan::null`指示此`COleDateTimeSpan`物件為 null,即未為此物件提供任何值。 (這是"無值"的資料庫意義上的"空",而不是C++ NULL。
 
-狀態`COleDateTimeSpan`在下列情況中的物件無效：
+在以下情況下,`COleDateTimeSpan`物件的狀態無效:
 
-- 如果這個物件發生溢位或反向溢位算術的指派作業期間，亦即`+=`或`-=`。
+- 如果此物件在算術賦值操作期間(即`+=``-=`或 ) 經歷了溢出或下溢。
 
-- 如果無效的值已指派給這個物件。
+- 如果為此物件分配了無效值。
 
-- 如果此物件的狀態已明確設定為無效的使用`SetStatus`。
+- 如果此物件的狀態被顯式設定為無效使用`SetStatus`。
 
-如需可能會將狀態設為無效的作業的詳細資訊，請參閱[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)並[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
+有關可能將狀態設定為無效的操作的詳細資訊,請參閱[COleDateTimeSpan::運算符 *,-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)和[COleDateTimeSpan::運算符 *,-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
 
-如需有關的界限`COleDateTimeSpan`值，請參閱文章[日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有關`COleDateTimeSpan`值邊界的詳細資訊,請參閱文章[「日期和時間:自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)」。。
 
-##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays
+## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a>COleDate時間跨度:取得總天數
 
-擷取以天為單位來表示此日期/時間範圍值。
+檢索以天表示的此日期/時間跨度值。
 
 ```
 double GetTotalDays() const throw();
@@ -415,35 +415,35 @@ double GetTotalDays() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-以天為單位來表示此日期/時間範圍值。 雖然此函式是原型才能傳回雙精度浮點數，但它一定會傳回整數值。
+此日期/時間跨度值以天表示。 儘管此函數是原型返回 double,但它始終將返回整數值。
 
 ### <a name="remarks"></a>備註
 
-此函式和之間的範圍大約-3.65e6 3.65e6 從傳回的值。
+此函數的返回值介於大約 - 3.65e6 和 3.65e6 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]
 
-##  <a name="gettotalhours"></a>  COleDateTimeSpan::GetTotalHours
+## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a>COleDateTimeSpan:取得總小時數
 
-擷取以小時為單位來表示此日期/時間範圍值。
+檢索以小時表示的此日期/時間跨度值。
 
 ```
 double GetTotalHours() const throw();
@@ -451,35 +451,35 @@ double GetTotalHours() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-以小時為單位來表示此日期/時間範圍值。 雖然此函式是原型才能傳回雙精度浮點數，但它一定會傳回整數值。
+此日期/時間跨度值以小時表示。 儘管此函數是原型返回 double,但它始終將返回整數值。
 
 ### <a name="remarks"></a>備註
 
-此函式和之間的範圍大約-8.77e7 8.77e7 從傳回的值。
+此函數的返回值介於大約 - 8.77e7 和 8.77e7 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
-範例，請參閱[GetTotalDays](#gettotaldays)。
+請參考[GetTotalDays 的範例](#gettotaldays)。
 
-##  <a name="gettotalminutes"></a>  COleDateTimeSpan::GetTotalMinutes
+## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>COleDateTimeSpan:取得總分鐘數
 
-擷取以分鐘為單位來表示此日期/時間範圍值。
+檢索以分鐘表示的此日期/時間跨度值。
 
 ```
 double GetTotalMinutes() const throw();
@@ -487,35 +487,35 @@ double GetTotalMinutes() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-以分鐘為單位來表示此日期/時間範圍值。 雖然此函式是原型才能傳回雙精度浮點數，但它一定會傳回整數值。
+此日期/時間跨度值以分鐘表示。 儘管此函數是原型返回 double,但它始終將返回整數值。
 
 ### <a name="remarks"></a>備註
 
-此函式和之間的範圍大約-5.26e9 5.26e9 從傳回的值。
+此函數的返回值介於大約 - 5.26e9 和 5.26e9 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
-範例，請參閱[GetTotalDays](#gettotaldays)。
+請參考[GetTotalDays 的範例](#gettotaldays)。
 
-##  <a name="gettotalseconds"></a>  COleDateTimeSpan::GetTotalSeconds
+## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>COleDate時間跨度::取得總秒數
 
-擷取此日期/時間範圍值，表示以秒為單位。
+檢索以秒表示的此日期/時間跨度值。
 
 ```
 double GetTotalSeconds() const throw();
@@ -523,35 +523,35 @@ double GetTotalSeconds() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-以秒為單位來表示此日期/時間範圍值。 雖然此函式是原型才能傳回雙精度浮點數，但它一定會傳回整數值。
+此日期/時間跨度值以秒為單位表示。 儘管此函數是原型返回 double,但它始終將返回整數值。
 
 ### <a name="remarks"></a>備註
 
-此函式的傳回值介於大約-3.16e11 至 3.16e11。
+此函數的返回值介於大約 - 3.16e11 到 3.16e11 之間。
 
-其他查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的其他函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
 ### <a name="example"></a>範例
 
-範例，請參閱[GetTotalDays](#gettotaldays)。
+請參考[GetTotalDays 的範例](#gettotaldays)。
 
-##  <a name="m_span"></a>  COleDateTimeSpan::m_span
+## <a name="coledatetimespanm_span"></a><a name="m_span"></a>COleDate 時間跨度::m_span
 
-基礎**雙**值，這個`COleDateTime`物件。
+此`COleDateTime`物件的基礎**雙精度值**。
 
 ```
 double m_span;
@@ -559,14 +559,14 @@ double m_span;
 
 ### <a name="remarks"></a>備註
 
-這個值表示日期/時間範圍以天為單位。
+此值表示日期/時間跨度(以天表示)。
 
 > [!CAUTION]
->  變更中的值**雙**資料成員，這個值將`COleDateTimeSpan`物件。 它不會變更這個狀態`COleDateTimeSpan`物件。
+> 更改**雙**資料成員中的值將`COleDateTimeSpan`更改此 物件的值。 它不會更改此`COleDateTimeSpan`物件的狀態。
 
-##  <a name="m_status"></a>  COleDateTimeSpan::m_status
+## <a name="coledatetimespanm_status"></a><a name="m_status"></a>COleDate時間跨度::m_status
 
-此資料成員的類型是列舉型別`DateTimeSpanStatus`，其定義內`COleDateTimeSpan`類別。
+此數據成員的類型是枚舉類型`DateTimeSpanStatus`,在類`COleDateTimeSpan`中 定義。
 
 ```
 DateTimeSpanStatus m_status;
@@ -582,32 +582,32 @@ enum DateTimeSpanStatus{
    };
 ```
 
-如這些狀態值的簡短描述，請參閱下列清單：
+有關這些狀態值的簡要說明,請參閱以下清單:
 
-- `COleDateTimeSpan::valid` 指出這個`COleDateTimeSpan`物件是否有效。
+- `COleDateTimeSpan::valid`指示此`COleDateTimeSpan`物件有效。
 
-- `COleDateTimeSpan::invalid` 指出這個`COleDateTimeSpan`物件無效，也就是它的值可能不正確。
+- `COleDateTimeSpan::invalid`指示此物件`COleDateTimeSpan`無效;如果表明此物件無效。也就是說,其值可能不正確。
 
-- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
+- `COleDateTimeSpan::null`指示此`COleDateTimeSpan`物件為 null,即未為此物件提供任何值。 (這是"無值"的資料庫意義上的"空",而不是C++ NULL。
 
-狀態`COleDateTimeSpan`在下列情況中的物件無效：
+在以下情況下,`COleDateTimeSpan`物件的狀態無效:
 
-- 如果這個物件發生溢位或反向溢位算術的指派作業期間，亦即`+=`或`-=`。
+- 如果此物件在算術賦值操作期間(即`+=``-=`或 ) 經歷了溢出或下溢。
 
-- 如果無效的值已指派給這個物件。
+- 如果為此物件分配了無效值。
 
-- 如果此物件的狀態已明確設定為無效的使用[SetStatus](#setstatus)。
+- 如果此物件的狀態被顯式設定為無效使用[SetStatus](#setstatus)。
 
-如需可能會將狀態設為無效的作業的詳細資訊，請參閱[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)並[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
+有關可能將狀態設定為無效的操作的詳細資訊,請參閱[COleDateTimeSpan::運算符 *,-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)和[COleDateTimeSpan::運算符 *,-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
 
 > [!CAUTION]
->  此資料成員是針對進階程式設計的情況。 您應該使用的內嵌成員函式[GetStatus](#getstatus)並[SetStatus](#setstatus)。 請參閱`SetStatus`的進一步注意事項，關於明確設定此資料成員。
+> 此數據成員適用於高級程式設計情況。 應使用內聯成員函數[「獲取狀態」](#getstatus)和[「設定狀態](#setstatus)」 。 有關`SetStatus`顯式設置此數據成員的進一步注意事項,請參閱。
 
-如需有關的界限`COleDateTimeSpan`值，請參閱文章[日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有關`COleDateTimeSpan`值邊界的詳細資訊,請參閱文章[「日期和時間:自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)」。。
 
-##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =
+## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a>COleDate時間跨度::運算符 |
 
-複製`COleDateTimeSpan`值。
+複製值`COleDateTimeSpan`。
 
 ```
 COleDateTimeSpan& operator=(double dblSpanSrc) throw();
@@ -615,11 +615,11 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 ### <a name="remarks"></a>備註
 
-此多載的指派運算子會將來源日期/時間範圍值複製到這個`COleDateTimeSpan`物件。
+此重載分配運算子將源日期/時間跨度值複製到此`COleDateTimeSpan`物件中。
 
-##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +, -
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a>COleDateTimeSpan::運算符 +, -
 
-新增、 subtract、 及變更符號`COleDateTimeSpan`值。
+添加、減去和更改值的`COleDateTimeSpan`符號。
 
 ```
 COleDateTimeSpan operator+(const COleDateTimeSpan& dateSpan) const throw();
@@ -629,21 +629,21 @@ COleDateTimeSpan operator-() const throw();
 
 ### <a name="remarks"></a>備註
 
-前兩個運算子可讓您加入和減去日期/時間範圍值。 第三個可讓您變更日期/時間範圍值的正負號。
+前兩個運算子允許您添加和減去日期/時間跨度值。 第三個允許您更改日期/時間跨度值的符號。
 
-如果任一個運算元是 null，結果狀態`COleDateTimeSpan`值是 null。
+如果任一操作數為空,則結果`COleDateTimeSpan`值的狀態為 null。
 
-如果任一運算元無效，而且其他不是 null，結果狀態`COleDateTimeSpan`值無效。
+如果任一操作數無效,另一個操作數不為空,則結果`COleDateTimeSpan`值的狀態無效。
 
-如需有關有效、 無效和 null 的狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。
+有關有效、無效和 null 狀態值的詳細資訊,請參閱[m_status](#m_status)成員變數。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, -=
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDate時間跨度::運算符 *,-*
 
-加法和減法`COleDateTimeSpan`值從這個`COleDateTimeSpan`值。
+從此值`COleDateTimeSpan`中添加`COleDateTimeSpan`和減去值。
 
 ```
 COleDateTimeSpan& operator+=(const COleDateTimeSpan dateSpan) throw();
@@ -652,19 +652,19 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 ### <a name="remarks"></a>備註
 
-這些運算子可讓您加入和減去日期/時間範圍值，從這個`COleDateTimeSpan`物件。 如果任一個運算元是 null，結果狀態`COleDateTimeSpan`值是 null。
+這些運算元允許您在此`COleDateTimeSpan`物件中添加和減去日期/時間跨度值。 如果任一操作數為空,則結果`COleDateTimeSpan`值的狀態為 null。
 
-如果任一運算元無效，而且其他不是 null，結果狀態`COleDateTimeSpan`值無效。
+如果任一操作數無效,另一個操作數不為空,則結果`COleDateTimeSpan`值的狀態無效。
 
-如需有關有效、 無效和 null 的狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。
+有關有效、無效和 null 狀態值的詳細資訊,請參閱[m_status](#m_status)成員變數。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]
 
-##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
+## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a>COleDate 時間跨度::運算元雙精度
 
-這會將轉換`COleDateTimeSpan`值加入**double**。
+將此值`COleDateTimeSpan`轉換為**雙精度**值。
 
 ```
 operator double() const throw();
@@ -672,61 +672,61 @@ operator double() const throw();
 
 ### <a name="remarks"></a>備註
 
-這個運算子會傳回值，這個`COleDateTimeSpan`天浮點數的值。
+此運算符將此值`COleDateTimeSpan`的值作為浮點天數返回。
 
-##  <a name="setdatetimespan"></a>  COleDateTimeSpan::SetDateTimeSpan
+## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>COleDate時間跨度::設定時間跨度
 
-設定此日期/時間範圍值的值。
+設置此日期/時間跨度值的值。
 
-```
+```cpp
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*lDays*， *nHours*， *nMins*， *nSecs*<br/>
-表示要複製到這個範圍內的日期和時間範圍值`COleDateTimeSpan`物件。
+*l 天*, *nHours*, *nMins*, *nSecs*<br/>
+指示要複製到此`COleDateTimeSpan`物件的日期跨度和時間跨度值。
 
 ### <a name="remarks"></a>備註
 
-查詢的值的函式`COleDateTimeSpan`物件，請參閱下列成員函式：
+對於查詢`COleDateTimeSpan`物件值的函數,請參閱以下成員函數:
 
-- [GetDays](#getdays)
+- [取得天數](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [取得分鐘](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [取得秒數](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [取得總天數](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [取得總小時數](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [取得總分鐘數](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [取得總秒數](#gettotalseconds)
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]
 
-##  <a name="setstatus"></a>  COleDateTimeSpan::SetStatus
+## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a>COleDate 時間跨度::設定狀態
 
-設定此狀態 （有效性）`COleDateTimeSpan`物件。
+設置此`COleDateTimeSpan`物件的狀態(有效性)。
 
-```
+```cpp
 void SetStatus(DateTimeSpanStatus status) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
 *status*<br/>
-這個新的狀態值`COleDateTimeSpan`物件。
+此`COleDateTimeSpan`物件的新狀態值。
 
 ### <a name="remarks"></a>備註
 
-*狀態*參數值由定義`DateTimeSpanStatus`列舉型別，其定義內`COleDateTimeSpan`類別。
+*狀態*參數值`DateTimeSpanStatus`由 枚舉類型定義,該類型在`COleDateTimeSpan`類中 定義。
 
 ```
 enum DateTimeSpanStatus{
@@ -736,16 +736,16 @@ enum DateTimeSpanStatus{
    };
 ```
 
-如這些狀態值的簡短描述，請參閱下列清單：
+有關這些狀態值的簡要說明,請參閱以下清單:
 
-- `COleDateTimeSpan::valid` 指出這個`COleDateTimeSpan`物件是否有效。
+- `COleDateTimeSpan::valid`指示此`COleDateTimeSpan`物件有效。
 
-- `COleDateTimeSpan::invalid` 指出這個`COleDateTimeSpan`物件無效，也就是它的值可能不正確。
+- `COleDateTimeSpan::invalid`指示此物件`COleDateTimeSpan`無效;如果表明此物件無效。也就是說,其值可能不正確。
 
-- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
+- `COleDateTimeSpan::null`指示此`COleDateTimeSpan`物件為 null,即未為此物件提供任何值。 (這是"無值"的資料庫意義上的"空",而不是C++ NULL。
 
    > [!CAUTION]
-   > 此函式是進階程式設計的情況。 此函式不會更改此物件中的資料。 它將最常使用的狀態設為**null**或是**無效**。 請注意，指派運算子 ([運算子 =](#operator_eq)) 和[SetDateTimeSpan](#setdatetimespan)沒有設定的基礎來源值的物件狀態。
+   > 此功能適用於高級程式設計情況。 此函數不會更改此物件中的數據。 它最常用於將狀態設定為**null**或**無效**。 請注意,賦值運算符 ([運算符 =](#operator_eq)) 和[SetDateTimeSpan](#setdatetimespan)確實根據來源值設定物件的狀態。
 
 ### <a name="example"></a>範例
 

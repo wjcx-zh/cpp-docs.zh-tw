@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcat_s、_mbsnbcat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
+- _o__mbsnbcat_s
+- _o__mbsnbcat_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: a148f4be503ee793e4e36855233edfc8fa8f165a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d731c94c879d0e4334dc3b57a19b94cc0378abaf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624346"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915637"
 ---
 # <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s、_mbsnbcat_s_l
 
 附加至多位元組字元字串，其中最多可有另一個多位元組字元字串的前**n**個位元組。 這些是 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -91,7 +94,7 @@ errno_t _mbsnbcat_s_l(
 *src*<br/>
 以 null 終止的多位元組字元來源字串。
 
-*count*<br/>
+*計數*<br/>
 從*src*附加至*dest*的位元組數目。
 
 *locale*<br/>
@@ -105,9 +108,9 @@ errno_t _mbsnbcat_s_l(
 
 |**Dest**|*sizeInBytes*|*src*|傳回值|
 |------------|-------------------|-----------|------------------|
-|**NULL**|任何|任何|**EINVAL**|
-|Any|<= 0|任何|**EINVAL**|
-|Any|任何|**NULL**|**EINVAL**|
+|**Null**|任意|任意|**EINVAL**|
+|任意|<= 0|任意|**EINVAL**|
+|任意|任意|**Null**|**EINVAL**|
 
 如果發生其中任何一種錯誤狀況，此函式會產生參數無效錯誤，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
@@ -120,6 +123,8 @@ errno_t _mbsnbcat_s_l(
 在 C++ 中，樣板多載簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以自動使用其較新且較安全的函式，藉此取代較舊且較不安全的函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -135,9 +140,9 @@ errno_t _mbsnbcat_s_l(
 |**_mbsnbcat_s**|\<mbstring.h>|
 |**_mbsnbcat_s_l**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp、_mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>

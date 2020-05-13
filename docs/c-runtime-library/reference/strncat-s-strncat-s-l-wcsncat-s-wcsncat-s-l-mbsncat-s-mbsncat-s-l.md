@@ -1,6 +1,6 @@
 ---
 title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsncat_s_l
 - wcsncat_s
@@ -8,6 +8,10 @@ api_name:
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
+- _o__mbsncat_s
+- _o__mbsncat_s_l
+- _o_strncat_s
+- _o_wcsncat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +56,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626175"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919340"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
@@ -159,7 +164,7 @@ errno_t _mbsncat_s_l(
 *strSource*<br/>
 以 Null 結束的來源字串。
 
-*count*<br/>
+*計數*<br/>
 要附加的字元數或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
@@ -173,17 +178,17 @@ errno_t _mbsncat_s_l(
 
 |*strDestination*|*numberOfElements*|*strSource*|傳回值|*StrDestination*的內容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**或未結束|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|未修改|
-|任何|0 或太小|任何|**ERANGE**|未修改|
+|**Null**或未結束|任意|任意|**EINVAL**|未修改|
+|任意|任意|**Null**|**EINVAL**|未修改|
+|任意|0 或太小|任意|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-這些函式會嘗試將*strSource*的前*D*個字元附加至*strDest*結尾，其中*D*是*count*的較小者，以及*strSource*的長度。 如果附加這些*D*字元會放入*strDest*中（其大小會指定為*numberOfElements*），而且仍留出空間給 null 結束字元，則會附加這些字元，從原始終止的*null 開始。strDest*，而且會附加新的終止 null;否則， *strDest*[0] 會設定為 null 字元，且會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+這些函式會嘗試將*strSource*的前*D*個字元附加至*strDest*結尾，其中*D*是*count*的較小者，以及*strSource*的長度。 如果附加這些*D*字元會放入*strDest*中（其大小會指定為*numberOfElements*），而且仍然留出空間給 null 結束字元，則會附加這些字元，從*strDest*的原始終止 null 開始，然後附加新的終止 null;否則， *strDest*[0] 會設定為 null 字元，且會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 上述段落有一個例外狀況。 如果[_TRUNCATE](../../c-runtime-library/truncate.md) *count* ，則會將符合的大部分*strSource*附加至*strDest* ，同時仍留出空間來附加終止的 null。
 
-例如，套用至物件的
+例如，
 
 ```C
 char dst[5];
@@ -209,13 +214,15 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 如果*strSource*或*strDest*為**Null**，或*numberOfElements*為零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回**EINVAL** ，而不會修改其參數。
 
-**wcsncat_s**和 **_mbsncat_s**是**strncat_s**的寬字元和多位元組字元版本。 **Wcsncat_s**的字串引數和傳回值是寬字元字串; **_mbsncat_s**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcsncat_s**和 **_mbsncat_s**是**strncat_s**的寬字元和多位元組字元版本。 **Wcsncat_s**的字串引數和傳回值是寬字元字串;**_mbsncat_s**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -234,7 +241,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**wcsncat_s**|\<string.h> 或 \<wchar.h>|
 |**_mbsncat_s**， **_mbsncat_s_l**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -373,10 +380,10 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>

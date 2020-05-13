@@ -5,22 +5,22 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416897"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364955"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 運算子
 
-這些是 &lt;配置器&gt;中定義的全域範本運算子函式。 如需類別成員運算子函式，請參閱類別檔。
+這些是分配器中&lt;定義的全域範本運算符函數。&gt; 有關類成員運算符函數,請參閱類文檔。
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[操作員!](#op_neq)|[運算子*](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>操作員!
 
 測試指定類別的配置器物件之間是否不等。
 
@@ -35,8 +35,8 @@ bool operator!=(
 
 |參數|描述|
 |---------------|-----------------|
-|*left*|要測試是否不相等的其中一個配置器物件。|
-|*right*|要測試是否不相等的其中一個配置器物件。|
+|*離開*|要測試是否不相等的其中一個配置器物件。|
+|*對*|要測試是否不相等的其中一個配置器物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -46,7 +46,7 @@ bool operator!=(
 
 範本運算子會傳回 `!(left == right)`。
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
 
 測試指定類別的配置器物件之間是否相等。
 
@@ -61,8 +61,8 @@ bool operator==(
 
 |參數|描述|
 |---------------|-----------------|
-|*left*|要測試是否相等的其中一個配置器物件。|
-|*right*|要測試是否相等的其中一個配置器物件。|
+|*離開*|要測試是否相等的其中一個配置器物件。|
+|*對*|要測試是否相等的其中一個配置器物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -74,4 +74,4 @@ bool operator==(
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<配置器>](../standard-library/allocators-header.md)

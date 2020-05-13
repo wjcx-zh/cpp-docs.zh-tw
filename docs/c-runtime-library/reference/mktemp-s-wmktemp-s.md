@@ -1,9 +1,11 @@
 ---
 title: _mktemp_s、_wmktemp_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mktemp_s
 - _wmktemp_s
+- _o__mktemp_s
+- _o__wmktemp_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624216"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919133"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s、_wmktemp_s
 
@@ -73,7 +76,7 @@ errno_t _wmktemp_s(
 檔案名稱模式。
 
 *sizeInChars*<br/>
-緩衝區大小 **_mktemp_s**中的單一位元組字元; **_wmktemp_s**中的寬字元，包括 null 結束字元。
+緩衝區大小 **_mktemp_s**中的單一位元組字元;**_wmktemp_s**中的寬字元，包括 null 結束字元。
 
 ## <a name="return-value"></a>傳回值
 
@@ -83,17 +86,19 @@ errno_t _wmktemp_s(
 
 |*nameTemplate*|*sizeInChars*|傳回值|*NameTemplate*中的新值|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|任何|**EINVAL**|**NULL**|
-|不正確的格式（請參閱備註區段以取得正確的格式）|任何|**EINVAL**|空字串|
-|任何|<= X 的數目|**EINVAL**|空字串|
+|**Null**|任意|**EINVAL**|**Null**|
+|不正確的格式（請參閱備註區段以取得正確的格式）|任意|**EINVAL**|空字串|
+|任意|<= X 的數目|**EINVAL**|空字串|
 
 如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Mktemp_s**函式會藉由修改*nameTemplate*引數來建立唯一的檔案名，因此在呼叫之後， *nameTemplate*指標會指向包含新檔案名的字串。 **_mktemp_s**會自動將多位元組字元字串引數處理為適當，並根據執行時間系統目前使用的多位元組字碼頁來辨識多位元組字元序列。 **_wmktemp_s**是寬字元版本的 **_mktemp_s**; **_wmktemp_s**的引數是寬字元字串。 **_wmktemp_s**和 **_mktemp_s**的行為完全相同，不同之處在于 **_wmktemp_s**不會處理多位元組字元字串。
+**_Mktemp_s**函式會藉由修改*nameTemplate*引數來建立唯一的檔案名，因此在呼叫之後， *nameTemplate*指標會指向包含新檔案名的字串。 **_mktemp_s**會自動將多位元組字元字串引數處理為適當，並根據執行時間系統目前使用的多位元組字碼頁來辨識多位元組字元序列。 **_wmktemp_s**是寬字元版本的 **_mktemp_s**;**_wmktemp_s**的引數是寬字元字串。 **_wmktemp_s**和 **_mktemp_s**的行為完全相同，不同之處在于 **_wmktemp_s**不會處理多位元組字元字串。
 
 這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -130,7 +135,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -186,7 +191,7 @@ Unique filename is fnd03188
 Unique filename is fne03188
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [檔案處理](../../c-runtime-library/file-handling.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>

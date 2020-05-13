@@ -1,5 +1,5 @@
 ---
-title: CRBMultiMap 類別
+title: CRB多對應類別
 ms.date: 11/04/2016
 f1_keywords:
 - CRBMultiMap
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e36bc267b3a539d2d1d4bf370b9cdc33828c760
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278133"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331426"
 ---
-# <a name="crbmultimap-class"></a>CRBMultiMap 類別
+# <a name="crbmultimap-class"></a>CRB多對應類別
 
-此類別代表可讓每個索引鍵可以是多個值，並使用紅黑二進位樹狀目錄相關聯的對應結構。
+此類表示一個映射結構,允許每個鍵可以使用紅黑二進位樹與多個值關聯。
 
 ## <a name="syntax"></a>語法
 
@@ -37,16 +37,16 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 #### <a name="parameters"></a>參數
 
 *K*<br/>
-索引鍵的項目類型。
+鍵元素類型。
 
-*V*<br/>
-值的項目型別。
+*五*<br/>
+值元素類型。
 
-*KTraits*<br/>
-程式碼，用來複製或移動索引鍵的項目。 請參閱[CElementTraits 類別](../../atl/reference/celementtraits-class.md)如需詳細資訊。
+*克瓦次克*<br/>
+複製或移動關鍵元素的代碼。 有關詳細資訊[,請參閱 CElementTraits 類別](../../atl/reference/celementtraits-class.md)。
 
 *VTraits*<br/>
-若要複製或移動值的項目所使用的程式碼。
+複製或移動值元素的代碼。
 
 ## <a name="members"></a>成員
 
@@ -54,34 +54,34 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 
 |名稱|描述|
 |----------|-----------------|
-|[CRBMultiMap::CRBMultiMap](#crbmultimap)|建構函式。|
-|[CRBMultiMap::~CRBMultiMap](#dtor)|解構函式。|
+|[CRB多對應:CRB多映射](#crbmultimap)|建構函式。|
+|[CRB多對應::*CRB多映射](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|呼叫這個方法的第一個元素的位置找不到指定的索引鍵。|
-|[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|呼叫這個方法來取得以指定的索引鍵相關聯的值，並更新位置值。|
-|[CRBMultiMap::GetNextWithKey](#getnextwithkey)|呼叫這個方法來取得與指定的索引鍵相關聯的項目，並更新位置值。|
-|[CRBMultiMap::Insert](#insert)|呼叫這個方法來插入對應中的項目配對。|
-|[CRBMultiMap::RemoveKey](#removekey)|呼叫這個方法來移除所有指定的索引鍵的索引鍵/值項目。|
+|[CRB多對應::尋找第一鍵](#findfirstwithkey)|調用此方法以查找具有給定鍵的第一個元素的位置。|
+|[CRB多對應:抓取下一個值與金鑰](#getnextvaluewithkey)|調用此方法獲取與給定鍵關聯的值,並更新位置值。|
+|[CRB多對應::取得下一個與金鑰](#getnextwithkey)|調用此方法獲取與給定鍵關聯的元素,並更新位置值。|
+|[CRB多對應:插入](#insert)|呼叫此方法以將元素對插入到地圖中。|
+|[CRB多對應::刪除鍵](#removekey)|呼叫此方法以刪除給定鍵的所有鍵/值元素。|
 
 ## <a name="remarks"></a>備註
 
-`CRBMultiMap` 支援任何指定的型別，在管理索引鍵的元素和值的已排序的陣列的對應陣列。 不同於[CRBMap](../../atl/reference/crbmap-class.md)類別，每個索引鍵可以與多個值產生關聯。
+`CRBMultiMap`支援任何給定類型的映射陣列,管理鍵元素和值的有序陣列。 與[CRBMap](../../atl/reference/crbmap-class.md)類不同,每個鍵可以與多個值相關聯。
 
-項目 （包含索引鍵和值） 會儲存在二進位樹狀目錄結構，使用[CRBMultiMap::Insert](#insert)方法。 可以使用來移除項目[CRBMultiMap::RemoveKey](#removekey)方法，這會刪除所有符合指定的索引鍵的項目。
+元素(由鍵和值組成)使用[CRBMultiMap::插入](#insert)方法存儲在二進位區塊結構中。 可以使用[CRBMultiMap::刪除Key](#removekey)方法刪除元素,該方法刪除與給定鍵匹配的所有元素。
 
-周遊樹狀結構可能.remove 方法，進行這類[CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition)， [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)，並[CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue)。 存取多個值可能每個索引鍵儘可能使用[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)， [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)，和[CRBMultiMap::GetNextWithKey](#getnextwithkey)方法。 範例，請參閱[CRBMultiMap::CRBMultiMap](#crbmultimap)解說這在實務上。
+使用[CRBTree::獲取頭位置](../../atl/reference/crbtree-class.md#getheadposition)[、CRBTree:getNext](../../atl/reference/crbtree-class.md#getnext)和[CRBTree:getNextValue](../../atl/reference/crbtree-class.md#getnextvalue)等方法可以遍歷樹。 可以使用[CRBMultiMap::尋找第一個金鑰](#findfirstwithkey)[、CRB 多映射:取得NextValue與金鑰](#getnextvaluewithkey)和[CRB 多映射:獲取NextNext與鍵](#getnextwithkey)方法,可以存取每個鍵的潛在多個值。 有關[CRBMultiMap 的範例:CRBMultiMap,](#crbmultimap)請參閱實際說明。
 
-*KTraits*並*VTraits*參數會包含任何複製或移動的項目所需的補充程式碼的 traits 類別。
+*KTraits*和*VTraits*參數是包含複製或移動元素所需的任何補充代碼的特徵類。
 
-`CRBMultiMap` 衍生自[CRBTree](../../atl/reference/crbtree-class.md)，它會實作使用紅黑演算法二進位樹狀目錄。 替代`CRBMultiMap`並`CRBMap`提供[CAtlMap](../../atl/reference/catlmap-class.md)類別。 當只有少數的項目都必須儲存時，請考慮使用[CSimpleMap](../../atl/reference/csimplemap-class.md)類別。
+`CRBMultiMap`派生自[CRBTree](../../atl/reference/crbtree-class.md),它使用紅黑演算法實現二進制樹。 `CRBMultiMap` [CAtlMap](../../atl/reference/catlmap-class.md)類別提供的替代`CRBMap`方法 。 當只需要存儲少量元素時,請考慮改用[CSimpleMap](../../atl/reference/csimplemap-class.md)類。
 
-不同的集合類別以及其功能和效能特性的更完整討論，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關各種集合類及其特性和性能特徵的更完整的討論,請參閱[ATL 集合類](../../atl/atl-collection-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CRBTree](../../atl/reference/crbtree-class.md)
 
@@ -89,9 +89,9 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap
+## <a name="crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRB多對應:CRB多映射
 
 建構函式。
 
@@ -106,15 +106,15 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>備註
 
-*NBlockSize*參數是配置新的項目時所需的記憶體數量的量值。 較大的區塊大小會減少記憶體配置常式，呼叫，但使用較多資源。 預設會針對 10 個項目配置空間一次。
+*nBlockSize*參數是需要新元素時分配的內存量的度量。 較大的塊大小減少了對記憶體分配例程的調用,但使用的資源更多。 默認值將一次為 10 個元素分配空間。
 
-請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需所提供的其他方法的詳細資訊。
+有關其他可用方法的資訊,請參閱基類[CRBTree](../../atl/reference/crbtree-class.md)的文檔。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap
+## <a name="crbmultimapcrbmultimap"></a><a name="dtor"></a>CRB多對應::*CRB多映射
 
 解構函式。
 
@@ -124,13 +124,13 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>備註
 
-會釋放所有配置的資源。
+釋放任何分配的資源。
 
-請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需所提供的其他方法的詳細資訊。
+有關其他可用方法的資訊,請參閱基類[CRBTree](../../atl/reference/crbtree-class.md)的文檔。
 
-##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey
+## <a name="crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRB多對應::尋找第一鍵
 
-呼叫這個方法的第一個元素的位置找不到指定的索引鍵。
+調用此方法以查找具有給定鍵的第一個元素的位置。
 
 ```
 POSITION FindFirstWithKey(KINARGTYPE key) const throw();
@@ -138,26 +138,26 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-指定的索引鍵，識別要找的項目。
+*關鍵*<br/>
+指定識別要找到的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
 
-如果找到索引鍵，NULL 否則會傳回第一個索引鍵/值項目的位置。
+如果找到鍵,則返回第一個鍵/值元素的位置,否則返回 NULL。
 
 ### <a name="remarks"></a>備註
 
-中的索引鍵`CRBMultiMap`可以有一或多個相關聯的值。 這個方法會提供該特定的索引鍵相關聯的第一個值 （這可能會事實上，是唯一的值） 的位置值。 傳回的位置值可以再搭配[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)或是[CRBMultiMap::GetNextWithKey](#getnextwithkey)取得值，並更新位置。
+中的鍵`CRBMultiMap`可以具有一個或多個關聯的值。 此方法將提供與該特定鍵關聯的第一個值(實際上可能是唯一的值)的位置值。 然後,返回的位置值可與[CRBMultiMap 一起使用::獲取 NextValue 與密鑰](#getnextvaluewithkey)或[CRBMultiMap::獲取 NextNext WithKey](#getnextwithkey)以獲取值並更新位置。
 
-請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需所提供的其他方法的詳細資訊。
+有關其他可用方法的資訊,請參閱基類[CRBTree](../../atl/reference/crbtree-class.md)的文檔。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CRBMultiMap::CRBMultiMap](#crbmultimap)。
+請參考[CRB 多映射的範例::CRB 多映射](#crbmultimap)。
 
-##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey
+## <a name="crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRB多對應:抓取下一個值與金鑰
 
-呼叫這個方法來取得與指定的索引鍵相關聯的值，並更新位置值。
+調用此方法獲取與給定鍵關聯的值並更新位置值。
 
 ```
 const V& GetNextValueWithKey(
@@ -170,29 +170,29 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-若要呼叫所取得的位置值[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)或是[CRBMultiMap::GetNextWithKey](#getnextwithkey)，或由先前呼叫`GetNextValueWithKey`。
+*Pos*<br/>
+位置值,透過呼叫[CRBMultiMap 取得:尋找第一與金鑰](#findfirstwithkey)或[CRB 多映射::取得NextNext WithKey,](#getnextwithkey)或以前呼叫`GetNextValueWithKey`。
 
-*key*<br/>
-指定的索引鍵，識別要找的項目。
+*關鍵*<br/>
+指定識別要找到的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
 
-傳回與指定的索引鍵相關聯的項目組。
+返回與給定鍵關聯的元素對。
 
 ### <a name="remarks"></a>備註
 
-位置值會更新以指向下一個索引鍵相關聯的值。 如果沒有更多的值存在，位置值是設為 NULL。
+位置值將更新以指向與鍵關聯的下一個值。 如果不存在更多值,則位置值設定為 NULL。
 
-請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需所提供的其他方法的詳細資訊。
+有關其他可用方法的資訊,請參閱基類[CRBTree](../../atl/reference/crbtree-class.md)的文檔。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CRBMultiMap::CRBMultiMap](#crbmultimap)。
+請參考[CRB 多映射的範例::CRB 多映射](#crbmultimap)。
 
-##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey
+## <a name="crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRB多對應::取得下一個與金鑰
 
-呼叫這個方法來取得與指定的索引鍵相關聯的項目，並更新位置值。
+呼叫此方法取得與給定鍵關聯的元素並更新位置值。
 
 ```
 const CPair* GetNextWithKey(
@@ -205,25 +205,25 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-若要呼叫所取得的位置值[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)或是[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)，或由先前呼叫`GetNextWithKey`。
+*Pos*<br/>
+位置值,透過呼叫[CRBMultiMap 取得:尋找第一與金鑰](#findfirstwithkey)或[CRB 多映射::取得NextValue與金鑰](#getnextvaluewithkey)`GetNextWithKey`,或以前呼叫 。
 
-*key*<br/>
-指定的索引鍵，識別要找的項目。
+*關鍵*<br/>
+指定識別要找到的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
 
-傳回下一步[CRBTree::CPair 類別](crbtree-class.md#cpair_class)與指定的索引鍵相關聯的項目。
+返回下一個[CRBTree::CPair 類](crbtree-class.md#cpair_class)元素與給定鍵關聯。
 
 ### <a name="remarks"></a>備註
 
-位置值會更新以指向下一個索引鍵相關聯的值。 如果沒有更多的值存在，位置值是設為 NULL。
+位置值將更新以指向與鍵關聯的下一個值。 如果不存在更多值,則位置值設定為 NULL。
 
-請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需所提供的其他方法的詳細資訊。
+有關其他可用方法的資訊,請參閱基類[CRBTree](../../atl/reference/crbtree-class.md)的文檔。
 
-##  <a name="insert"></a>  CRBMultiMap::Insert
+## <a name="crbmultimapinsert"></a><a name="insert"></a>CRB多對應:插入
 
-呼叫這個方法來插入對應中的項目配對。
+呼叫此方法以將元素對插入到地圖中。
 
 ```
 POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
@@ -231,27 +231,27 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-若要加入的索引鍵值`CRBMultiMap`物件。
+*關鍵*<br/>
+要添加到`CRBMultiMap`物件的鍵值。
 
-*value*<br/>
-要加入至值`CRBMultiMap`相關聯的物件*金鑰*。
+*值*<br/>
+要添加到物件的值`CRBMultiMap`,與*鍵*相關聯。
 
 ### <a name="return-value"></a>傳回值
 
-傳回的位置中的索引鍵/值項目組`CRBMultiMap`物件。
+返回鍵/值元素對在物件中`CRBMultiMap`的位置。
 
 ### <a name="remarks"></a>備註
 
-請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需所提供的其他方法的詳細資訊。
+有關其他可用方法的資訊,請參閱基類[CRBTree](../../atl/reference/crbtree-class.md)的文檔。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CRBMultiMap::CRBMultiMap](#crbmultimap)。
+請參考[CRB 多映射的範例::CRB 多映射](#crbmultimap)。
 
-##  <a name="removekey"></a>  CRBMultiMap::RemoveKey
+## <a name="crbmultimapremovekey"></a><a name="removekey"></a>CRB多對應::刪除鍵
 
-呼叫這個方法來移除所有指定的索引鍵的索引鍵/值項目。
+呼叫此方法以刪除給定鍵的所有鍵/值元素。
 
 ```
 size_t RemoveKey(KINARGTYPE key) throw();
@@ -259,22 +259,22 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-指定的索引鍵，識別要刪除的項目。
+*關鍵*<br/>
+指定識別要刪除的元素的鍵。
 
 ### <a name="return-value"></a>傳回值
 
-傳回與指定的索引鍵相關聯的值數目。
+返回與給定鍵關聯的值數。
 
 ### <a name="remarks"></a>備註
 
-`RemoveKey` 刪除所有具有相符的索引鍵的索引鍵/值項目*金鑰*。
+`RemoveKey`刪除具有匹配*鍵*的鍵/值元素的所有鍵/值元素。
 
-請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需所提供的其他方法的詳細資訊。
+有關其他可用方法的資訊,請參閱基類[CRBTree](../../atl/reference/crbtree-class.md)的文檔。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CRBMultiMap::CRBMultiMap](#crbmultimap)。
+請參考[CRB 多映射的範例::CRB 多映射](#crbmultimap)。
 
 ## <a name="see-also"></a>另請參閱
 

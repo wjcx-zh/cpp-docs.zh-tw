@@ -35,59 +35,59 @@ printf_s( "%hu\n", u );  // Prints 65533
 
 下表摘要說明從帶正負號整數類資料類型進行轉換。 它假設**char**類型預設為帶正負號。 如果您使用編譯時間選項，將**char**類型的預設值變更為不帶正負號，則會套用不帶**正負號 char**類型的不[帶正負號整數](../c-language/conversions-from-unsigned-integral-types.md)類型資料表轉換中所指定的轉換，而不是此資料表中的轉換。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 在 Microsoft 編譯器中， **int**和**long**是不同但對等的類型。 **Int**值的轉換會以與**long**轉換相同的方式繼續進行。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="table-of-conversions-from-signed-integral-types"></a>從帶正負號的整數類資料類型轉換的資料表
 
-|從|以|方法|
+|從|至|方法|
 |----------|--------|------------|
 |**char**<sup>1</sup>|**short**|正負號擴充|
-|**char**|**long**|正負號擴充|
+|**char**|**前提**|正負號擴充|
 |**char**|**long long**|正負號擴充|
 |**char**|**unsigned char**|保留模式，高序位位元會遺失，做為正負號位元使用|
 |**char**|**unsigned short**|對 **short** 進行正負號擴充，將 **short** 轉換為 **unsigned short**|
 |**char**|**unsigned long**|對 **long** 進行正負號擴充，將 **long** 轉換為 **unsigned long**|
-|**char**|**不帶正負號的長長**|帶正負號-延伸至**長時間**;將**long long**轉換成不**帶正負**號的 long long|
+|**char**|**unsigned long long**|帶正負號-延伸至**長時間**;將**long long**轉換成不**帶正負**號的 long long|
 |**char**|**float**|對 **long** 進行正負號擴充，將 **long** 轉換為 **float**|
 |**char**|**double**|對 **long** 進行正負號擴充，將 **long** 轉換為 **double**|
 |**char**|**long double**|對 **long** 進行正負號擴充，將 **long** 轉換為 **double**|
 |**short**|**char**|保留低序位位元組|
-|**short**|**long**|正負號擴充|
+|**short**|**前提**|正負號擴充|
 |**short**|**long long**|正負號擴充|
 |**short**|**unsigned char**|保留低序位位元組|
 |**short**|**unsigned short**|保留位元模式，高序位位元會遺失，做為正負號位元使用|
 |**short**|**unsigned long**|對 **long** 進行正負號擴充，將 **long** 轉換為 **unsigned long**|
-|**short**|**不帶正負號的長長**|帶正負號-延伸至**長時間**;將**long long**轉換成不**帶正負**號的 long long|
+|**short**|**unsigned long long**|帶正負號-延伸至**長時間**;將**long long**轉換成不**帶正負**號的 long long|
 |**short**|**float**|對 **long** 進行正負號擴充，將 **long** 轉換為 **float**|
 |**short**|**double**|對 **long** 進行正負號擴充，將 **long** 轉換為 **double**|
 |**short**|**long double**|對 **long** 進行正負號擴充，將 **long** 轉換為 **double**|
-|**long**|**char**|保留低序位位元組|
-|**long**|**short**|保留低序位字組|
-|**long**|**long long**|正負號擴充|
-|**long**|**unsigned char**|保留低序位位元組|
-|**long**|**unsigned short**|保留低序位字組|
-|**long**|**unsigned long**|保留位元模式，高序位位元會遺失，做為正負號位元使用|
-|**long**|**不帶正負號的長長**|帶正負號-延伸至**長時間**;將**long long**轉換成不**帶正負**號的 long long|
-|**long**|**float**|表示為 **float**。 如果無法完全表示**long** ，則會遺失一些精確度。|
-|**long**|**double**|表示為 **double**。 如果**long**無法完全表示為**double**，則會遺失一些精確度。|
-|**long**|**long double**|表示為 **double**。 如果**long**無法完全表示為**double**，則會遺失一些精確度。|
+|**前提**|**char**|保留低序位位元組|
+|**前提**|**short**|保留低序位字組|
+|**前提**|**long long**|正負號擴充|
+|**前提**|**unsigned char**|保留低序位位元組|
+|**前提**|**unsigned short**|保留低序位字組|
+|**前提**|**unsigned long**|保留位元模式，高序位位元會遺失，做為正負號位元使用|
+|**前提**|**unsigned long long**|帶正負號-延伸至**長時間**;將**long long**轉換成不**帶正負**號的 long long|
+|**前提**|**float**|表示為 **float**。 如果無法完全表示**long** ，則會遺失一些精確度。|
+|**前提**|**double**|表示為 **double**。 如果**long**無法完全表示為**double**，則會遺失一些精確度。|
+|**前提**|**long double**|表示為 **double**。 如果**long**無法完全表示為**double**，則會遺失一些精確度。|
 |**long long**|**char**|保留低序位位元組|
 |**long long**|**short**|保留低序位字組|
-|**long long**|**long**|保留低序位 dword|
+|**long long**|**前提**|保留低序位 dword|
 |**long long**|**unsigned char**|保留低序位位元組|
 |**long long**|**unsigned short**|保留低序位字組|
 |**long long**|**unsigned long**|保留低序位 dword|
-|**long long**|**不帶正負號的長長**|保留位元模式，高序位位元會遺失，做為正負號位元使用|
+|**long long**|**unsigned long long**|保留位元模式，高序位位元會遺失，做為正負號位元使用|
 |**long long**|**float**|表示為 **float**。 如果**long long**無法完全表示，則會遺失一些精確度。|
 |**long long**|**double**|表示為 **double**。 如果**long long**無法完全表示為**double**，則會遺失一些精確度。|
 |**long long**|**long double**|表示為 **double**。 如果**long long**無法完全表示為**double**，則會遺失一些精確度。|
 
 <sup>1</sup>所有**char**專案都會假設**char**類型預設為帶正負號。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指派轉換](../c-language/assignment-conversions.md)

@@ -11,24 +11,24 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c25d3fa66b5105ad2e1ff5a08ebdde90d1d156be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419515"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336638"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedef
 
 ||||
 |-|-|-|
-|[istringstream](#istringstream)|[ostringstream](#ostringstream)|[stringbuf](#stringbuf)|
-|[stringstream](#stringstream)|[wistringstream](#wistringstream)|[wostringstream](#wostringstream)|
-|[wstringbuf](#wstringbuf)|[wstringstream](#wstringstream)|
+|[istringstream](#istringstream)|[ostringstream](#ostringstream)|[弦布夫](#stringbuf)|
+|[字串流](#stringstream)|[溫斯特林流](#wistringstream)|[沃斯特林流](#wostringstream)|
+|[溫格布夫](#wstringbuf)|[wstringstream](#wstringstream)|
 
-## <a name="istringstream"></a>  istringstream
+## <a name="istringstream"></a><a name="istringstream"></a>伊弦流
 
-建立在**char**樣板參數上特製化 `basic_istringstream` 的類型。
+創建專用於`basic_istringstream`**字元**範本參數的類型。
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -36,11 +36,11 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_istringstream](../standard-library/basic-istringstream-class.md)的同義字，專門用於類型為**char**的元素。
+該類型是類範本[basic_istringstream](../standard-library/basic-istringstream-class.md)的同義詞,專用於**字元**類型的元素。
 
-## <a name="ostringstream"></a>  ostringstream
+## <a name="ostringstream"></a><a name="ostringstream"></a>奧弦流
 
-建立在**char**樣板參數上特製化 `basic_ostringstream` 的類型。
+創建專用於`basic_ostringstream`**字元**範本參數的類型。
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -48,11 +48,11 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_ostringstream](../standard-library/basic-ostringstream-class.md)的同義字，專門用於類型為**char**的元素。
+該類型是類範本[basic_ostringstream](../standard-library/basic-ostringstream-class.md)的同義詞,專用於**字元**類型的元素。
 
-## <a name="stringbuf"></a>  stringbuf
+## <a name="stringbuf"></a><a name="stringbuf"></a>弦布夫
 
-建立在**char**樣板參數上特製化 `basic_stringbuf` 的類型。
+創建專用於`basic_stringbuf`**字元**範本參數的類型。
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -60,11 +60,11 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_stringbuf](../standard-library/basic-stringbuf-class.md)的同義字，專門用於類型為**char**的元素。
+類型是類範本[basic_stringbuf](../standard-library/basic-stringbuf-class.md)的同義詞,專用於**字元**類型的元素。
 
-## <a name="stringstream"></a>  stringstream
+## <a name="stringstream"></a><a name="stringstream"></a>字串流
 
-建立在**char**樣板參數上特製化 `basic_stringstream` 的類型。
+創建專用於`basic_stringstream`**字元**範本參數的類型。
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -72,11 +72,11 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_stringstream](../standard-library/basic-stringstream-class.md)的同義字，專門用於類型為**char**的元素。
+該類型是類範本[basic_stringstream](../standard-library/basic-stringstream-class.md)的同義詞,專用於**字元**類型的元素。
 
-## <a name="wistringstream"></a>  wistringstream
+## <a name="wistringstream"></a><a name="wistringstream"></a>溫斯特林流
 
-建立**wchar_t**樣板參數上特製化 `basic_istringstream` 型別。
+創建專用於`basic_istringstream`**wchar_t**範本參數的類型。
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -84,11 +84,11 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_istringstream](../standard-library/basic-istringstream-class.md)的同義字，專門用於類型**wchar_t**的元素。
+該類型是類範本[basic_istringstream](../standard-library/basic-istringstream-class.md)的同義詞,專門用於**類型wchar_t**的元素。
 
-## <a name="wostringstream"></a>  wostringstream
+## <a name="wostringstream"></a><a name="wostringstream"></a>沃斯特林流
 
-建立**wchar_t**樣板參數上特製化 `basic_ostringstream` 型別。
+創建專用於`basic_ostringstream`**wchar_t**範本參數的類型。
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -96,11 +96,11 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_ostringstream](../standard-library/basic-ostringstream-class.md)的同義字，專門用於類型**wchar_t**的元素。
+該類型是類範本[basic_ostringstream](../standard-library/basic-ostringstream-class.md)的同義詞,專門用於**類型wchar_t**的元素。
 
-## <a name="wstringbuf"></a>  wstringbuf
+## <a name="wstringbuf"></a><a name="wstringbuf"></a>溫格布夫
 
-建立**wchar_t**樣板參數上特製化 `basic_stringbuf` 型別。
+創建專用於`basic_stringbuf`**wchar_t**範本參數的類型。
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -108,11 +108,11 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_stringbuf](../standard-library/basic-stringbuf-class.md)的同義字，專門用於類型**wchar_t**的元素。
+類型是類範本[basic_stringbuf](../standard-library/basic-stringbuf-class.md)的同義詞,專門用於**類型wchar_t**的元素。
 
-## <a name="wstringstream"></a>  wstringstream
+## <a name="wstringstream"></a><a name="wstringstream"></a>wstringstream
 
-建立**wchar_t**樣板參數上特製化 `basic_stringstream` 型別。
+創建專用於`basic_stringstream`**wchar_t**範本參數的類型。
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -120,8 +120,8 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>備註
 
-此類型是類別樣板[basic_stringstream](../standard-library/basic-stringstream-class.md)的同義字，專門用於類型**wchar_t**的元素。
+類型是類範本[basic_stringstream](../standard-library/basic-stringstream-class.md)的同義詞,專門用於**類型wchar_t**的元素。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<sstream>](../standard-library/sstream.md)
+[\<溪流>](../standard-library/sstream.md)

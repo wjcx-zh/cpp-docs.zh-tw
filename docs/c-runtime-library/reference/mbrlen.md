@@ -1,8 +1,9 @@
 ---
 title: mbrlen
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrlen
+- _o_mbrlen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952499"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920307"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -71,9 +73,11 @@ size_t mbrlen(
 
 **Mbrlen**函式會檢查最*多個*位元組（從*str*指向的位元組開始），以判斷完成下一個多位元組字元所需的位元組數目，包括任何移位序列。 它相當於呼叫`mbrtowc(NULL, str, count, &mbstate)` ，其中*mbstate*是使用者提供的**mbstate_t**物件，或程式庫所提供的靜態內建物件。
 
-**Mbrlen**函式會在*mbstate*參數中儲存並使用不完整多位元組字元的移位狀態。 這可讓**mbrlen**在多位元組字元中間重新開機的功能（如果需要的話），檢查最多*數*個位元組。 如果*mbstate*是 null 指標， **mbrlen**會使用內部的靜態**mbstate_t**物件來儲存移位狀態。 由於內部**mbstate_t**物件不是安全線程，因此建議您一律配置並傳遞您自己的*mbstate*參數。
+**Mbrlen**函式會在*mbstate*參數中儲存並使用不完整多位元組字元的移位狀態。 這可讓**mbrlen**在多位元組字元中間重新開機的功能（如果需要的話），檢查最多*數*個位元組。 如果*mbstate*是 null 指標， **mbrlen**會使用內部靜態**mbstate_t**物件來儲存移位狀態。 由於內部**mbstate_t**物件不是安全線程，因此建議您一律配置並傳遞您自己的*mbstate*參數。
 
-**Mbrlen**函數的重新開機能力與[_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)不同。 移位狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**wcsrtombs**的後續呼叫，而不是**wcstombs**，則應用程式應該使用**wcsrlen**而不是**wcslen** 。
+**Mbrlen**函式的重新開機能力與[_mbclen、mblen _mblen_l](mbclen-mblen-mblen-l.md)不同。 移位狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**wcsrtombs**的後續呼叫，而不是**wcstombs**，則應用程式應該使用**wcsrlen**而不是**wcslen** 。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -154,4 +158,4 @@ Character count: 25
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>

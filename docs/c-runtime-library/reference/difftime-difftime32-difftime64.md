@@ -1,10 +1,12 @@
 ---
 title: difftime、_difftime32、_difftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _difftime32
 - difftime
 - _difftime64
+- _o__difftime32
+- _o__difftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937637"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914784"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime、_difftime32、_difftime64
 
@@ -70,11 +73,13 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 **Difftime**函數會計算兩個提供的時間值之間的差異*timeStart*和*timeEnd*。
 
-提供的時間值必須符合**time_t**的範圍。 **time_t**是64位的值。 因此，範圍的結束時間已從 2038 年 1 月 18 日 23:59:59 (UTC) 延長到 3000 年 12 月 31 日 23:59:59。 較低的**time_t**範圍仍然是1970年1月1日午夜。
+提供的時間值必須符合**time_t**的範圍內。 **time_t**是64位的值。 因此，範圍的結束時間已從 2038 年 1 月 18 日 23:59:59 (UTC) 延長到 3000 年 12 月 31 日 23:59:59。 **Time_t**的較低範圍仍然是1970年1月1日午夜。
 
-**difftime**是一個內嵌函式，會根據是否已定義 **_USE_32BIT_TIME_T** ，評估為 **_difftime32**或 **_difftime64** 。 _difftime32 和 _difftime64 可用來直接強制使用特定大小的時間類型。
+**difftime**是一種內嵌函式，會根據是否定義 **_USE_32BIT_TIME_T**來評估 **_difftime32**或 **_difftime64** 。 _difftime32 和 _difftime64 可用來直接強制使用特定大小的時間類型。
 
 這些函式會驗證它們的參數。 如果任一參數為零或負數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回0，並將**errno**設為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

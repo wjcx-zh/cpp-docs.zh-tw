@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358335"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>物件控制代碼運算子 (^) (C++/CLI 和 C++/CX)
 
-「控制代碼宣告子」(`^`，唸成 "hat") 會修改型別[指定名稱](../cpp/overview-of-declarators.md)，以表示當系統判斷不再存取宣告的物件時，應自動刪除該物件。
+*句柄聲明符*(,`^`發音為"hat"),修改類型[指定器](../cpp/overview-of-declarators.md),表示在系統確定不再可存取物件時應自動刪除聲明的物件。
 
 ## <a name="accessing-the-declared-object"></a>存取宣告的物件
 
@@ -22,7 +22,7 @@ ms.locfileid: "65516693"
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-編譯器會使用 COM「參考計數」機制，來判斷物件是否不再使用且可刪除。 究其原因是，從 Windows 執行階段介面衍生的物件實際上是 COM 物件。 當物件建立或複製時參考計數遞增，當物件設定為 null 或超出範圍時則遞減。 如果參考計數歸零，物件會自動並立即刪除。
+編譯器會使用 COM「參考計數」** 機制，來判斷物件是否不再使用且可刪除。 究其原因是，從 Windows 執行階段介面衍生的物件實際上是 COM 物件。 當物件建立或複製時參考計數遞增，當物件設定為 null 或超出範圍時則遞減。 如果參考計數歸零，物件會自動並立即刪除。
 
 控制代碼宣告子的優點是，在 COM 中，必須明確地管理物件的參考計數 (這個程序相當繁瑣且易錯)， 也就是，若要遞增和遞減參考計數，必須呼叫物件的 AddRef() 和 Release() 方法。 不過，如果您利用控制代碼宣告子來宣告物件，編譯器就會產生可自動調整參考計數的程式碼。
 
@@ -34,11 +34,11 @@ ms.locfileid: "65516693"
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-系統會使用 CLR「記憶體回收行程」機制，來判斷物件是否不再使用且可刪除。 Common Language Runtime 會維持用以配置物件的堆積，並使用您程式中的 Managed 參考 (變數)，指出物件在堆積上的位置。 當物件不再使用時，物件在堆積上佔用的記憶體會被釋放。 記憶體回收行程會定期壓縮堆積，以更有效地利用釋放的記憶體。 壓縮堆積可以在堆積上移動物件，而使得受控參考所參考的位置無效。 然而，記憶體回收行程知道所有 Managed 參考的位置，而且會自動更新以指出物件在堆積上目前的位置。
+系統會使用 CLR「記憶體回收行程」** 機制，來判斷物件是否不再使用且可刪除。 Common Language Runtime 會維持用以配置物件的堆積，並使用您程式中的 Managed 參考 (變數)，指出物件在堆積上的位置。 當物件不再使用時，物件在堆積上佔用的記憶體會被釋放。 記憶體回收行程會定期壓縮堆積，以更有效地利用釋放的記憶體。 壓縮堆積可以在堆積上移動物件，而使得受控參考所參考的位置無效。 然而，記憶體回收行程知道所有 Managed 參考的位置，而且會自動更新以指出物件在堆積上目前的位置。
 
 因為原生 C++ 指標 (`*`) 和參考 (`&`) 不是 Managed 參考，所以記憶體回收行程無法自動更新它們所指的位址。 若要解決這個問題，請使用控制代碼宣告子，指定記憶體回收行程知道且會自動更新的變數。
 
-如需詳細資訊，請參閱[如何：以原生型別宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
+有關詳細資訊,請參閱[如何:在本機類型中聲明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 ### <a name="examples"></a>範例
 
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-這個範例示範原生參考 (`&`) 無法繫結到受控型別的 **int** 成員，因為 **int** 可能會儲存於記憶體回收堆積中，而原生參考不會追蹤受控堆積上的物件移動。 解決方法是使用區域變數，或將 `&` 變更為 `%`，使其成為追蹤參考。
+此示例顯示本機引用(`&`) 無法綁定到託管類型的**int**成員,因為**int**可能存儲在垃圾回收堆中,並且本機引用不跟蹤託管堆中的物件移動。 解決方法是使用區域變數，或將 `&` 變更為 `%`，使其成為追蹤參考。
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -223,5 +223,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)<br/>
+[.NET 和 UWP 的元件擴展](component-extensions-for-runtime-platforms.md)<br/>
 [追蹤參考運算子](tracking-reference-operator-cpp-component-extensions.md)

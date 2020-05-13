@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 861bc32382737bd6482a3d51eb8470bf834e8508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173375"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369222"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 類別
 
-CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 類別的基底類別。
+CD2D線性漸變畫筆和CD2DRadial 梯度畫筆類的基類。
 
 ## <a name="syntax"></a>語法
 
@@ -41,29 +41,29 @@ class CD2DGradientBrush : public CD2DBrush;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|建構 CD2DGradientBrush 物件。|
-|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|解構函式。 D2D 漸層筆刷物件正在被終結時呼叫。|
+|[CD2D 梯度畫筆::CD2D 梯度畫筆](#cd2dgradientbrush)|構造 CD2D 梯度畫筆物件。|
+|[CD2D 梯度畫筆:*CD2D 梯度畫筆](#_dtorcd2dgradientbrush)|解構函式。 銷毀 D2D 漸變畫筆物件時調用。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DGradientBrush::Destroy](#destroy)|終結 CD2DGradientBrush 物件。 (覆寫[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy)。)|
+|[CD2D梯度畫筆::D](#destroy)|銷毀 CD2D 梯度畫筆物件。 (覆蓋[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 結構的陣列。|
-|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|在色彩漸層停駐點之間的內插補點會執行空間。|
-|[CD2DGradientBrush::m_extendMode](#m_extendmode)|正規化 [0，1] 範圍之外的漸層的行為。|
-|[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|D2D1_GRADIENT_STOP 結構陣列的指標。|
+|[CD2D 梯度畫筆::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP結構的陣列。|
+|[CD2D 梯度畫筆::m_colorInterpolationGamma](#m_colorinterpolationgamma)|在漸變停止之間執行顏色插值的空間。|
+|[CD2D 梯度畫筆::m_extendMode](#m_extendmode)|漸變在 [0,1] 規範化範圍之外的行為。|
+|[CD2D 梯度畫筆::m_pGradientStops](#m_pgradientstops)|指向D2D1_GRADIENT_STOP結構陣列的指標。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
@@ -71,19 +71,19 @@ class CD2DGradientBrush : public CD2DBrush;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush
+## <a name="cd2dgradientbrushcd2dgradientbrush"></a><a name="_dtorcd2dgradientbrush"></a>CD2D 梯度畫筆:*CD2D 梯度畫筆
 
-解構函式。 D2D 漸層筆刷物件正在被終結時呼叫。
+解構函式。 銷毀 D2D 漸變畫筆物件時調用。
 
 ```
 virtual ~CD2DGradientBrush();
 ```
 
-##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush
+## <a name="cd2dgradientbrushcd2dgradientbrush"></a><a name="cd2dgradientbrush"></a>CD2D 梯度畫筆::CD2D 梯度畫筆
 
-建構 CD2DGradientBrush 物件。
+構造 CD2D 梯度畫筆物件。
 
 ```
 CD2DGradientBrush(
@@ -98,62 +98,62 @@ CD2DGradientBrush(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
-*gradientStops*<br/>
-D2D1_GRADIENT_STOP 結構陣列的指標。
+*梯度停止*<br/>
+指向D2D1_GRADIENT_STOP結構陣列的指標。
 
-*gradientStopsCount*<br/>
-值大於或等於 1，gradientStops 陣列中指定的漸層停駐點數目。
+*梯度停止計數*<br/>
+大於或等於 1 的值,用於指定漸變數組中的漸變停止數。
 
-*colorInterpolationGamma*<br/>
-在色彩漸層停駐點之間的內插補點會執行空間。
+*顏色插值伽馬*<br/>
+在漸變停止之間執行顏色插值的空間。
 
-*extendMode*<br/>
-正規化 [0，1] 範圍之外的漸層的行為。
+*擴充模式*<br/>
+漸變在 [0,1] 規範化範圍之外的行為。
 
-*pBrushProperties*<br/>
-不透明度和筆刷轉換指標。
+*pBrush 屬性*<br/>
+指向畫筆的不一用性和變換的指標。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
-##  <a name="destroy"></a>  CD2DGradientBrush::Destroy
+## <a name="cd2dgradientbrushdestroy"></a><a name="destroy"></a>CD2D梯度畫筆::D
 
-終結 CD2DGradientBrush 物件。
+銷毀 CD2D 梯度畫筆物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops
+## <a name="cd2dgradientbrushm_argradientstops"></a><a name="m_argradientstops"></a>CD2D 梯度畫筆::m_arGradientStops
 
-D2D1_GRADIENT_STOP 結構的陣列。
+D2D1_GRADIENT_STOP結構的陣列。
 
 ```
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;
 ```
 
-##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma
+## <a name="cd2dgradientbrushm_colorinterpolationgamma"></a><a name="m_colorinterpolationgamma"></a>CD2D 梯度畫筆::m_colorInterpolationGamma
 
-在色彩漸層停駐點之間的內插補點會執行空間。
+在漸變停止之間執行顏色插值的空間。
 
 ```
 D2D1_GAMMA m_colorInterpolationGamma;
 ```
 
-##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode
+## <a name="cd2dgradientbrushm_extendmode"></a><a name="m_extendmode"></a>CD2D 梯度畫筆::m_extendMode
 
-正規化 [0，1] 範圍之外的漸層的行為。
+漸變在 [0,1] 規範化範圍之外的行為。
 
 ```
 D2D1_EXTEND_MODE m_extendMode;
 ```
 
-##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops
+## <a name="cd2dgradientbrushm_pgradientstops"></a><a name="m_pgradientstops"></a>CD2D 梯度畫筆::m_pGradientStops
 
-D2D1_GRADIENT_STOP 結構陣列的指標。
+指向D2D1_GRADIENT_STOP結構陣列的指標。
 
 ```
 ID2D1GradientStopCollection* m_pGradientStops;

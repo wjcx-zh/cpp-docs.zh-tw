@@ -12,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 14080b624132979df533135bc1eef108dc793398
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417989"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318704"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 類別
 
-這個類別會提供方法來操作裝載 ActiveX 控制項的視窗，也支援裝載授權的 ActiveX 控制項。
+此類提供了用於操作承載 ActiveX 控制項的視窗的方法,並且還支援託管許可的 ActiveX 控制件。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -37,7 +37,7 @@ template <class TBase = CWindow>
 #### <a name="parameters"></a>參數
 
 *TBase*<br/>
-`CAxWindowT` 從中衍生的類別。
+衍生的類別`CAxWindowT`。
 
 ## <a name="members"></a>成員
 
@@ -51,31 +51,31 @@ template <class TBase = CWindow>
 
 |名稱|描述|
 |----------|-----------------|
-|[CAxWindow2T：： Create](#create)|建立主機視窗。|
-|[CAxWindow2T::CreateControlLic](#createcontrollic)|建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。|
-|[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|建立授權的 ActiveX 控制項、將它初始化、將它裝載于指定的視窗，以及從控制項抓取介面指標（或指標）。|
-|[CAxWindow2T::GetWndClassName](#getwndclassname)|可抓取視窗類別名稱的靜態方法。|
+|[CAxWindow2T::建立](#create)|創建主機視窗。|
+|[CAxWindow2T::建立控制](#createcontrollic)|建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。|
+|[CAxWindow2T::建立控制](#createcontrollicex)|創建許可的 ActiveX 控制件,初始化它,在指定的視窗中託管它,並從控制項中檢索介面指標(或指標)。|
+|[CAxWindow2T::獲取wndClass名稱](#getwndclassname)|檢索視窗類名稱的靜態方法。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CAxWindow2T：： operator =](#operator_eq)|將 HWND 指派給現有的 `CAxWindow2T` 物件。|
+|[CAxWindow2T::運算符 |](#operator_eq)|將 HWND 分配`CAxWindow2T`給現有 物件。|
 
 ## <a name="remarks"></a>備註
 
-`CAxWindow2T` 提供方法來操作裝載 ActiveX 控制項的視窗。 `CAxWindow2T` 也支援裝載授權的 ActiveX 控制項。 裝載是由 " **AtlAxWinLic80**" 所提供，它是由 `CAxWindow2T`所包裝。
+`CAxWindow2T`提供了用於操作承載 ActiveX 控制件的視窗的方法。 `CAxWindow2T`還支援託管許可的 ActiveX 控制件。 託管由 **「AtlAxWinLic80」** 提供,`CAxWindow2T`由包裝。
 
-類別 `CAxWindow2` 會實作為 `CAxWindow2T` 類別的特製化。 此特製化宣告為：
+類`CAxWindow2`作為`CAxWindow2T`類的專業化實現。 此專業化化聲明為:
 
 `typedef CAxWindow2T <CWindow> CAxWindow2;`
 
 > [!NOTE]
-> `CAxWindowT` 成員記載于[CAxWindow](../../atl/reference/caxwindow-class.md)之下。
+> `CAxWindowT`成員記錄在[CAxWindow](../../atl/reference/caxwindow-class.md)下。
 
-如需使用此類別成員的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有關使用此類成員的範例,請參閱[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)託管 ActiveX 控制件。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `TBase`
 
@@ -85,9 +85,9 @@ template <class TBase = CWindow>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h。h
+**標題:** atlwin.h
 
-##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T
+## <a name="caxwindow2tcaxwindow2t"></a><a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T
 
 建構 `CAxWindow2T` 物件。
 
@@ -98,11 +98,11 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-現有視窗的控制碼。
+現有視窗的句柄。
 
-##  <a name="create"></a>CAxWindow2T：： Create
+## <a name="caxwindow2tcreate"></a><a name="create"></a>CAxWindow2T::建立
 
-建立主機視窗。
+創建主機視窗。
 
 ```
 HWND Create(
@@ -117,17 +117,17 @@ HWND Create(
 
 ### <a name="remarks"></a>備註
 
-`CAxWindow2T::Create` 會呼叫[CWindow：： Create](../../atl/reference/cwindow-class.md#create) ，並將 LPCTSTR *lpstrWndClass*參數設定為提供控制項裝載（`AtlAxWinLic80`）的視窗類別。
+`CAxWindow2T::Create`呼叫[CWindow::](../../atl/reference/cwindow-class.md#create)使用 LPCTSTR *lpstrwndClass*參數創建到提供`AtlAxWinLic80`控制項宿主 ( ) 的視窗類。
 
-如需參數和傳回值的說明，請參閱 `CWindow::Create`。
+有關`CWindow::Create`參數和返回值的說明,請參閱。
 
-**注意**如果將0當做*MenuOrID*參數的值使用，則必須將其指定為0u （預設值），以避免編譯器錯誤。
+**注意**如果 0 用作*MenuOrID*參數的值,則必須將其指定為 0U(預設值),以避免編譯器錯誤。
 
 ### <a name="example"></a>範例
 
-如需使用 `CAxWindow2T::Create`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有關`CAxWindow2T::Create`使用的樣本,請參閱[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)託管 ActiveX 控制件。
 
-##  <a name="createcontrollic"></a>CAxWindow2T::CreateControlLic
+## <a name="caxwindow2tcreatecontrollic"></a><a name="createcontrollic"></a>CAxWindow2T::建立控制
 
 建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。
 
@@ -148,19 +148,19 @@ HRESULT CreateControlLic(
 ### <a name="parameters"></a>參數
 
 *bstrLicKey*<br/>
-控制項的授權金鑰;如果建立 nonlicensed 控制項，則為 Null。
+控制件的許可證金鑰;如果建立非許可控制項,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-如需其餘參數和傳回值的描述，請參閱[CAxWindow：： CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) 。
+有關剩餘參數和返回值的說明,請參閱[CAxWindow:CreateControl。](../../atl/reference/caxwindow-class.md#createcontrol)
 
 ### <a name="example"></a>範例
 
-如需使用 `CAxWindow2T::CreateControlLic`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有關`CAxWindow2T::CreateControlLic`使用的樣本,請參閱[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)託管 ActiveX 控制件。
 
-##  <a name="createcontrollicex"></a>CAxWindow2T::CreateControlLicEx
+## <a name="caxwindow2tcreatecontrollicex"></a><a name="createcontrollicex"></a>CAxWindow2T::建立控制
 
-建立授權的 ActiveX 控制項、將它初始化、將它裝載于指定的視窗，以及從控制項抓取介面指標（或指標）。
+創建許可的 ActiveX 控制件,初始化它,在指定的視窗中託管它,並從控制項中檢索介面指標(或指標)。
 
 ```
 HRESULT CreateControlLicEx(
@@ -185,19 +185,19 @@ HRESULT CreateControlLicEx(
 ### <a name="parameters"></a>參數
 
 *bstrLicKey*<br/>
-控制項的授權金鑰;如果建立 nonlicensed 控制項，則為 Null。
+控制件的許可證金鑰;如果建立非許可控制項,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-如需其餘參數和傳回值的描述，請參閱[CAxWindow：： CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) 。
+有關剩餘參數和返回值的說明,請參閱[CAxWindow:createControlEx。](../../atl/reference/caxwindow-class.md#createcontrolex)
 
 ### <a name="example"></a>範例
 
-如需使用 `CAxWindow2T::CreateControlLicEx`的範例，請參閱[使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有關`CAxWindow2T::CreateControlLicEx`使用的樣本,請參閱[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)託管 ActiveX 控制件。
 
-##  <a name="getwndclassname"></a>CAxWindow2T::GetWndClassName
+## <a name="caxwindow2tgetwndclassname"></a><a name="getwndclassname"></a>CAxWindow2T::獲取wndClass名稱
 
-抓取視窗類別的名稱。
+檢索視窗類的名稱。
 
 ```
 static LPCTSTR GetWndClassName();
@@ -205,11 +205,11 @@ static LPCTSTR GetWndClassName();
 
 ### <a name="return-value"></a>傳回值
 
-字串的指標，其中包含可裝載已授權和 nonlicensed 之 ActiveX 控制項的視窗類別名稱（`AtlAxWinLic80`）。
+指向包含視窗類`AtlAxWinLic80`( ) 名稱的字串的指標,該字串可以承載許可和非許可的 ActiveX 控制件。
 
-##  <a name="operator_eq"></a>CAxWindow2T：： operator =
+## <a name="caxwindow2toperator-"></a><a name="operator_eq"></a>CAxWindow2T::運算符 |
 
-將 HWND 指派給現有的 `CAxWindow2T` 物件。
+將 HWND 分配`CAxWindow2T`給現有 物件。
 
 ```
 CAxWindow2T<TBase>& operator= (HWND hWnd);
@@ -218,9 +218,9 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-現有視窗的控制碼。
+現有視窗的句柄。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)<br/>
-[控制項內含專案常見問題](../../atl/atl-control-containment-faq.md)
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[控制項內含項目常見問題集](../../atl/atl-control-containment-faq.md)

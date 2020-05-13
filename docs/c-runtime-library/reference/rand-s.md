@@ -1,8 +1,9 @@
 ---
 title: rand_s
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand_s
+- _o_rand_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 652521ab472736783ba1b4498ca7d7c3f297e7ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949649"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919534"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -58,11 +60,13 @@ errno_t rand_s(unsigned int* randomValue);
 
 ## <a name="remarks"></a>備註
 
-**Rand_s**函數會將0到**UINT_MAX**範圍內的隨機整數寫入輸入指標。 **Rand_s**函數會使用作業系統來產生密碼編譯安全的亂數字。 它不會使用[srand](srand.md)函數所產生的種子，也不會影響[rand](rand.md)所使用的亂數字序列。
+**Rand_s**函式會將範圍0中的隨機整數，寫入輸入指標的**UINT_MAX** 。 **Rand_s**函式會使用作業系統來產生密碼編譯安全的亂數字。 它不會使用[srand](srand.md)函數所產生的種子，也不會影響[rand](rand.md)所使用的亂數字序列。
 
 **Rand_s**函數需要在要宣告之函式的包含語句之前定義常數 **_CRT_RAND_S** ，如下列範例所示：
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
@@ -75,7 +79,7 @@ errno_t rand_s(unsigned int* randomValue);
 |-------------|---------------------|
 |**rand_s**|\<stdlib.h>|
 
-如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

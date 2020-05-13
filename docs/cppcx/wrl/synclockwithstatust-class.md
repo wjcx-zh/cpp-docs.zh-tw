@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: 1c9c0805834a59d10a559bfc2b6da0f10e2fe160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77bcb8336e4650de7ed01a067fa1bdd7ec0ba3e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374271"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 類別
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -35,14 +35,14 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="parameters"></a>參數
 
-*SyncTraits*<br/>
-一種類型，可以採取獨佔或共用資源的擁有權。
+*同步特徵*<br/>
+可以獲取資源的獨佔或共用擁有權的類型。
 
 ## <a name="remarks"></a>備註
 
-代表一種類型，可以採取獨佔或共用資源的擁有權。
+表示可以獲取資源的獨佔或共用擁有權的類型。
 
-`SyncLockWithStatusT`類別來實作[Mutex](mutex-class.md)並[號誌](semaphore-class.md)類別。
+該`SyncLockWithStatusT`類用於實現[Mutex](mutex-class.md)和[訊號量](semaphore-class.md)類。
 
 ## <a name="members"></a>成員
 
@@ -50,28 +50,28 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 名稱                                                             | 描述
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 類別的新執行個體。
+[與狀態同步鎖定::與狀態同步鎖定](#synclockwithstatust) | 將 `SyncLockWithStatusT` 類別的新執行個體初始化。
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
 名稱                                                             | 描述
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 類別的新執行個體。
+[與狀態同步鎖定::與狀態同步鎖定](#synclockwithstatust) | 將 `SyncLockWithStatusT` 類別的新執行個體初始化。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                         | 描述
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
-[SyncLockWithStatusT::GetStatus](#getstatus) | 擷取目前的等候狀態`SyncLockWithStatusT`物件。
-[SyncLockWithStatusT::IsLocked](#islocked)   | 指出是否目前`SyncLockWithStatusT`物件擁有資源，也就是，則`SyncLockWithStatusT`物件*鎖定*。
+[與狀態同步鎖定::取得狀態](#getstatus) | 檢索當前`SyncLockWithStatusT`物件的等待狀態。
+[與狀態同步鎖定::已鎖定](#islocked)   | 指示當前物件是否`SyncLockWithStatusT`擁有資源;如果當前物件是否擁有資源,則表明當前物件是否擁有資源。也就是說,`SyncLockWithStatusT`物件已*鎖定*。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 名稱                                    | 描述
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
-[SyncLockWithStatusT::status_](#status) | 根據目前的物件上的鎖定作業之後，保留基礎的等候作業的結果`SyncLockWithStatusT`物件。
+[與狀態同步鎖定::status_](#status) | 保存基於當前`SyncLockWithStatusT`對象的鎖定操作后基礎等待操作的結果。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `SyncLockT`
 
@@ -79,13 +79,13 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft::WRL::Wrappers::Details
+**命名空間:** 微軟::WRL:包裝::D
 
-## <a name="getstatus"></a>SyncLockWithStatusT::GetStatus
+## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a>與狀態同步鎖定::取得狀態
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 DWORD GetStatus() const;
@@ -93,17 +93,17 @@ DWORD GetStatus() const;
 
 ### <a name="return-value"></a>傳回值
 
-以物件為基礎的等候作業的結果`SyncLockWithStatusT`類別，例如[Mutex](mutex-class.md)或是[號誌](semaphore-class.md)。 零 (0) 表示等待作業傳回信號的狀態;否則，另一個狀態發生，例如逾時值過。
+基於`SyncLockWithStatusT`類的物件(如[Mutex](mutex-class.md)或[Semaphore)](semaphore-class.md)的等待操作的結果。 零 (0) 表示等待操作返回了信號狀態;否則,則發生另一種狀態,例如已經過的超時值。
 
 ### <a name="remarks"></a>備註
 
-擷取目前的等候狀態`SyncLockWithStatusT`物件。
+檢索當前`SyncLockWithStatusT`物件的等待狀態。
 
-GetStatus() 函式擷取值的基礎[status_](#status)資料成員。 當物件為基礎`SyncLockWithStatusT`類別執行鎖定作業，該物件先等候物件可以使用。 此等待作業的結果會儲存在`status_`資料成員。 可能值`status_`資料成員是等候作業的傳回值。 如需詳細資訊，請參閱的傳回值`WaitForSingleObjectEx()`MSDN Library 中的函式。
+GetStatus() 函數檢索基礎[status_](#status)資料成員的值。 當基於`SyncLockWithStatusT`類的物件執行鎖定操作時,該物件首先等待該物件變為可用。 等待操作的結果儲存在資料成員中`status_`。 `status_`數據成員的可能值是等待操作的返回值。 有關詳細資訊,請參閱 MSDN`WaitForSingleObjectEx()`庫中 函數的返回值。
 
-## <a name="islocked"></a>SyncLockWithStatusT::IsLocked
+## <a name="synclockwithstatustislocked"></a><a name="islocked"></a>與狀態同步鎖定::已鎖定
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 bool IsLocked() const;
@@ -111,15 +111,15 @@ bool IsLocked() const;
 
 ### <a name="remarks"></a>備註
 
-指出是否目前`SyncLockWithStatusT`物件擁有資源，也就是，則`SyncLockWithStatusT`物件*鎖定*。
+指示當前物件是否`SyncLockWithStatusT`擁有資源;如果當前物件是否擁有資源,則表明當前物件是否擁有資源。也就是說,`SyncLockWithStatusT`物件已*鎖定*。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果`SyncLockWithStatusT`物件已鎖定，否則**false**。
+如果物件已`SyncLockWithStatusT`鎖定,**則為 true;** 否則,**假**。
 
-## <a name="status"></a>SyncLockWithStatusT::status_
+## <a name="synclockwithstatuststatus_"></a><a name="status"></a>與狀態同步鎖定::status_
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 DWORD status_;
@@ -127,11 +127,11 @@ DWORD status_;
 
 ### <a name="remarks"></a>備註
 
-根據目前的物件上的鎖定作業之後，保留基礎的等候作業的結果`SyncLockWithStatusT`物件。
+保存基於當前`SyncLockWithStatusT`對象的鎖定操作后基礎等待操作的結果。
 
-## <a name="synclockwithstatust"></a>SyncLockWithStatusT::SyncLockWithStatusT
+## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a>與狀態同步鎖定::與狀態同步鎖定
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 SyncLockWithStatusT(
@@ -146,17 +146,17 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
-右值參考到另一個`SyncLockWithStatusT`物件。
+*其他*<br/>
+對另一個`SyncLockWithStatusT`物件的 rvalue 引用。
 
 *sync*<br/>
-另一個的參考`SyncLockWithStatusT`物件。
+對另一個`SyncLockWithStatusT`物件的引用。
 
-*status*<br/>
-值[status_](#status)資料成員*其他*參數或*同步*參數。
+*狀態*<br/>
+*另*一個參數或*同步*參數的數據成員[status_](#status)的值。
 
 ### <a name="remarks"></a>備註
 
-初始化 `SyncLockWithStatusT` 類別的新執行個體。
+將 `SyncLockWithStatusT` 類別的新執行個體初始化。
 
-第一個建構函式初始化目前`SyncLockWithStatusT`物件從另一個`SyncLockWithStatusT`參數所指定*其他*，然後則另`SyncLockWithStatusT`物件。 第二個建構函式`protected`，並初始化目前`SyncLockWithStatusT`為無效狀態的物件。
+第一個建構函數從參數*其他*`SyncLockWithStatusT`指定的`SyncLockWithStatusT`另一個 初始化當前物件,然後`SyncLockWithStatusT`使另一個 物件無效。 第二個構造函數`protected`是 ,`SyncLockWithStatusT`並將當前 物件初始化為無效狀態。

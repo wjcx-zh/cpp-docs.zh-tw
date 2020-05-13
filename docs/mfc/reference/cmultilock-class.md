@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: b2fe3ecf2197b8edb13e89600b16e550deff9af2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a051c6a510c53ac0c7c0a6efd8b4b5720080b264
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319718"
 ---
 # <a name="cmultilock-class"></a>CMultiLock 類別
 
@@ -37,37 +37,37 @@ class CMultiLock
 
 |名稱|描述|
 |----------|-----------------|
-|[CMultiLock::CMultiLock](#cmultilock)|建構 `CMultiLock` 物件。|
+|[C 多重鎖定:C 多重鎖](#cmultilock)|建構 `CMultiLock` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMultiLock::IsLocked](#islocked)|判斷陣列中的特定同步處理物件是否已鎖定。|
-|[CMultiLock::Lock](#lock)|等候同步處理物件的陣列。|
-|[CMultiLock::Unlock](#unlock)|釋放任何擁有的同步處理物件。|
+|[C 多重鎖定鎖定](#islocked)|確定陣列中的特定同步物件是否鎖定。|
+|[C 多重鎖定鎖定](#lock)|等待同步物件的陣列。|
+|[C 多重鎖定:解鎖](#unlock)|釋放任何擁有的同步物件。|
 
 ## <a name="remarks"></a>備註
 
 `CMultiLock`沒有基類。
 
-若要使用同步處理類別[CSemaphore](../../mfc/reference/csemaphore-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)和[CEvent](../../mfc/reference/cevent-class.md), `CMultiLock`您可以建立或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件, 以等待並釋放同步處理物件。 當`CMultiLock`有多個物件可供您在特定時間使用時, 請使用。 當`CSingleLock`您一次只需要等候一個物件時, 請使用。
+要使用同步類[CSemaphore、CMutex](../../mfc/reference/csemaphore-class.md)和[CEvent](../../mfc/reference/cevent-class.md),您`CMultiLock`可以建立一個或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件來[CMutex](../../mfc/reference/cmutex-class.md)等待並釋放同步物件。 `CMultiLock`當在特定時間可以使用多個物件時使用。 在`CSingleLock`一次只需等待一個物件時使用。
 
-若要使用`CMultiLock`物件, 請先建立您想要等候之同步處理物件的陣列。 接下來, 在`CMultiLock`受控制資源類別中的成員函式內呼叫物件的「函式」 (function)。 然後呼叫[Lock](#lock)成員函式, 以判斷是否有可用的資源 (信號)。 如果其中一個是, 請繼續進行成員函式的其餘部分。 如果沒有可用的資源, 請等候一段指定的時間來釋放資源, 或傳回失敗。 資源的使用完成後, 如果`CMultiLock`要再次使用物件`CMultiLock` , 請呼叫[Unlock](#unlock)函式, 或允許終結物件。
+要使用物件`CMultiLock`,請先建立要等待的同步物件的陣列。 接下來,在`CMultiLock`受控資源類中的成員函數內調用對象的構造函數。 然後調用[Lock](#lock)成員函數以確定資源是否可用(信號)。 如果是,請繼續執行成員函數的其餘部分。 如果沒有可用資源,請等待指定的時間釋放資源,或返回失敗。 資源使用完成後,如果要再次使用該物件,[Unlock](#unlock)`CMultiLock`則調用 Unlock 函數,或者`CMultiLock`允許銷毀 該物件。
 
-`CMultiLock`當執行緒具有可回應的大量`CEvent`物件時, 物件最有用。 建立包含所有指標的`CEvent`陣列, 並呼叫。 `Lock` 這會導致執行緒等待, 直到其中一個事件收到信號為止。
+`CMultiLock`當線程具有大量可以回應`CEvent`的物件時,物件最有用。 建立包含所有指標的`CEvent`陣列,並呼叫`Lock`。 這將導致線程等待,直到其中一個事件發出信號。
 
-如需如何使用`CMultiLock`物件的詳細資訊, 請參閱[多執行緒:如何使用同步處理類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有關如何使用`CMultiLock`物件的詳細資訊,請參閱"[多線程:如何使用同步類](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)「一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CMultiLock`
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxmt。h
+**標題:** afxmt.h
 
-##  <a name="cmultilock"></a>CMultiLock::CMultiLock
+## <a name="cmultilockcmultilock"></a><a name="cmultilock"></a>C 多重鎖定:C 多重鎖
 
 建構 `CMultiLock` 物件。
 
@@ -81,21 +81,21 @@ CMultiLock(
 ### <a name="parameters"></a>參數
 
 *ppObjects*<br/>
-要等候之同步處理物件的指標陣列。 不可以是 NULL。
+指向要等待的同步物件的指標陣列。 不能是 NULL。
 
-*dwCount*<br/>
-*PpObjects*中的物件數目。 必須大於 0。
+*dw( Dw) Count*<br/>
+*ppObjects*中的物件數。 必須大於 0。
 
-*bInitialLock*<br/>
-指定最初是否嘗試存取任何提供的物件。
+*b 初始鎖定*<br/>
+指定是否最初嘗試訪問任何提供的物件。
 
 ### <a name="remarks"></a>備註
 
-建立要等候的同步處理物件陣列之後, 會呼叫這個函式。 通常是從執行緒內呼叫, 必須等候其中一個同步處理物件變成可用。
+在創建要等待的同步物件陣列後調用此函數。 它通常從線程內調用,線程必須等待其中一個同步物件變為可用。
 
-##  <a name="islocked"></a>CMultiLock:: IsLocked
+## <a name="cmultilockislocked"></a><a name="islocked"></a>C 多重鎖定鎖定
 
-判斷指定的物件是否為未收到信號 (無法使用)。
+確定指定物件是否非信號(不可用)。
 
 ```
 BOOL IsLocked(DWORD dwItem);
@@ -104,15 +104,15 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="parameters"></a>參數
 
 *dwItem*<br/>
-物件陣列中的索引, 其對應至正在查詢其狀態的物件。
+與正在查詢其狀態的物件對應的物件陣列中的索引。
 
 ### <a name="return-value"></a>傳回值
 
-如果指定的物件已鎖定, 則為非零值;否則為0。
+如果指定對象被鎖定,則非零;否則 0。
 
-##  <a name="lock"></a>  CMultiLock::Lock
+## <a name="cmultilocklock"></a><a name="lock"></a>C 多重鎖定鎖定
 
-呼叫此函式可存取提供給`CMultiLock`此函式的同步處理物件所控制的一或多個資源。
+調用此函數以造訪由提供`CMultiLock`給建構函數的同步物件控制的一個或多個資源。
 
 ```
 DWORD Lock(
@@ -124,43 +124,43 @@ DWORD Lock(
 ### <a name="parameters"></a>參數
 
 *dwTimeOut*<br/>
-指定等候同步處理物件可用的時間量 (已發出信號)。 如果是無限`Lock` , 則會等到物件收到信號後才傳回。
+指定等待同步物件可用(信號)的時間量。 如果 INFINITE,`Lock`將等待物件發出信號後再返回。
 
-*bWaitForAll*<br/>
-指定在傳回之前, 是否所有等待的物件都必須在同一時間收到信號。 如果為 FALSE `Lock` , 則會在任何等待的物件收到信號時傳回。
+*bWaitForall*<br/>
+指定是否等待的所有物件必須同時發出信號才能返回。 如果 FALSE,`Lock`將在等待的任何物件發出信號時返回。
 
 *dwWakeMask*<br/>
-指定允許中止等候的其他條件。 如需此參數可用選項的完整清單, 請參閱 Windows SDK 中的[MsgWaitForMultipleObjects](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects) 。
+指定允許中止等待的其他條件。 有關此參數的可用選項的完整清單,請參閱 Windows SDK 中的[MsgWaitForMulti 物件](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects)。
 
 ### <a name="return-value"></a>傳回值
 
-如果`Lock`失敗, 則會傳回-1。 如果成功, 則會傳回下列其中一個值:
+如果`Lock`失敗,它將返回 - 1。 如果成功,它將返回以下值之一:
 
-- 介於 WAIT_OBJECT_0 和 WAIT_OBJECT_0 + (物件數目-1)
+- 介於WAIT_OBJECT_0和WAIT_OBJECT_0 + 之間(物件數 - 1)
 
-   如果*bWaitForAll*為 TRUE, 則所有物件都會收到信號 (可供使用)。 如果*bWaitForAll*為 FALSE, 則傳回值-WAIT_OBJECT_0 是已發出信號之物件的物件陣列中的索引 (可用)。
+   如果*bWaitForAll*為 TRUE,則所有物件都發出信號(可用)。 如果*bWaitForAll*為 FALSE,則返回值 - WAIT_OBJECT_0是發出信號(可用)的物件陣列中的索引。
 
-- WAIT_OBJECT_0 + (物件數目)
+- WAIT_OBJECT_0 = (物件數)
 
-   在*dwWakeMask*中指定的事件可以線上程的輸入佇列中取得。
+   在*dwWakeMask*中指定的事件線上程的輸入佇列中可用。
 
-- 介於 WAIT_ABANDONED_0 和 WAIT_ABANDONED_0 + (物件數目-1)
+- 介於WAIT_ABANDONED_0和WAIT_ABANDONED_0之間 = (物件數 - 1)
 
-   如果*bWaitForAll*為 TRUE, 則會發出所有物件的信號, 而且至少有一個物件是已放棄的 mutex 物件。 如果*bWaitForAll*為 FALSE, 則傳回值-WAIT_ABANDONED_0 是已放棄之 mutex 物件的物件陣列中, 滿足等候的索引。
+   如果*bWaitForAll*為 TRUE,則所有物件都發出信號,並且至少有一個對像是廢棄的互斥體。 如果*bWaitForAll*是 FALSE,則返回值 - WAIT_ABANDONED_0是滿足等待的廢棄互斥體物件陣列中的索引。
 
 - WAIT_TIMEOUT
 
-   在*dwTimeOut*中指定的逾時間隔已過期, 而沒有等候成功。
+   *在 dwTimeOut*中指定的超時間隔已過期,等待時間未成功。
 
 ### <a name="remarks"></a>備註
 
-如果*bWaitForAll*為 TRUE, `Lock`則會在所有同步處理物件都同時發出信號時, 立即傳回成功。 如果*bWaitForAll*為 FALSE, `Lock`則會在一或多個同步處理物件變成信號時立即傳回。
+如果*bWaitForAll*為`Lock`TRUE,則一旦所有同步物件同時發出信號,將立即成功返回。 如果*bWaitForAll*為`Lock`FALSE,則一旦一個或多個同步物件發出信號,將立即返回。
 
-如果`Lock`無法立即傳回, 它將會等候*dwTimeOut*參數中指定的毫秒數, 然後再傳回。 如果*dwTimeOut*是無限的`Lock` , 必須等到取得物件的存取權, 或符合*dwWakeMask*中指定的條件時, 才會返回。 否則, 如果`Lock`能夠取得同步處理物件, 則會成功傳回; 如果不是, 則會傳回失敗。
+如果`Lock`無法立即返回,它將等待不超過*dwTimeOut*參數中指定的毫秒數,然後再返回。 如果*dwTimeOut*是`Lock`INFINITE,則在獲得對物件的訪問許可權或滿足*dwWakeMask*中指定的條件之前,不會返回。 否則,如果`Lock`能夠獲取同步物件,它將成功返回;否則,它將成功返回。如果不是,它將返回失敗。
 
-##  <a name="unlock"></a>  CMultiLock::Unlock
+## <a name="cmultilockunlock"></a><a name="unlock"></a>C 多重鎖定:解鎖
 
-釋放所擁有`CMultiLock`的同步處理物件。
+釋放 擁有`CMultiLock`的同步物件。
 
 ```
 BOOL Unlock();
@@ -172,21 +172,21 @@ BOOL Unlock(
 
 ### <a name="parameters"></a>參數
 
-*lCount*<br/>
-要釋放的參考計數數目。 必須大於 0。 如果指定的數量會導致物件的計數超過其最大值, 則不會變更計數, 而且函數會傳回 FALSE。
+*l. Count*<br/>
+要釋放的引用計數數。 必須大於 0。 如果指定量將導致物件的計數超過其最大值,則計數不會更改,並且函數將返回 FALSE。
 
-*lPrevCount*<br/>
-指向變數, 以接收同步處理物件的先前計數。 如果是 Null, 則不會傳回先前的計數。
+*lPrev( A) Count*<br/>
+指向變數以接收同步物件的上一個計數。 如果為 NULL,則不返回以前的計數。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功, 則為非零;否則為0。
+如果函數成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這個函式是由`CMultiLock`的「析構函數」呼叫。
+此函數由`CMultiLock`析構函數調用。
 
-第一種`Unlock`形式會嘗試解除鎖定`CMultiLock`受管理的同步處理物件。 的第二種`Unlock`形式會嘗試解除`CSemaphore`鎖定所擁有`CMultiLock`的物件。 如果`CMultiLock`不擁有任何鎖定`CSemaphore`的物件, 此函式會傳回 FALSE, 否則會傳回 TRUE。 *lCount*和*lpPrevCount*與[CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)的參數完全相同。 的第二種`Unlock`形式很少適用于 multilock 情況。
+`Unlock`嘗試解鎖`CMultiLock`由管理的同步物件的第一種形式。 嘗試解鎖`Unlock``CSemaphore``CMultiLock`擁有的物件的第二種形式。 如果沒有`CMultiLock`任何`CSemaphore`鎖定的物件,函數將返回 FALSE;如果函數不具有"FALSE"功能。否則,它將返回 TRUE。 *lCount*和*lpPrevCount*與[CSingleLock 的參數完全相同::解鎖](../../mfc/reference/csinglelock-class.md#unlock)。 第二種形式`Unlock`很少適用於多鎖情況。
 
 ## <a name="see-also"></a>另請參閱
 

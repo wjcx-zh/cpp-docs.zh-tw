@@ -1,5 +1,5 @@
 ---
-title: CPrimitiveElementTraits 類別
+title: C原始元素類別
 ms.date: 11/04/2016
 f1_keywords:
 - CPrimitiveElementTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-ms.openlocfilehash: 53d039b15c9f4a79956bd86fbb93600854f90e5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b45d93420d1832091cc451a3e6eb309f61d07a3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331444"
 ---
-# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 類別
+# <a name="cprimitiveelementtraits-class"></a>C原始元素類別
 
-這個類別會提供預設方法，集合類別的函式是由基本資料類型所組成。
+此類為由基元數據類型組成的集合類提供預設方法和函數。
 
 ## <a name="syntax"></a>語法
 
@@ -30,7 +30,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-集合類別物件中儲存的資料型別。
+要存儲在集合類對象中的數據類型。
 
 ## <a name="members"></a>成員
 
@@ -38,42 +38,42 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 
 |名稱|描述|
 |----------|-----------------|
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|
+|[原始元素::INARGTYPE](#inargtype)|用於向集合類物件添加元素的數據類型。|
+|[原始元素::OUTARGTYPE](#outargtype)|用於從集合類物件檢索元素的數據類型。|
 
 ## <a name="remarks"></a>備註
 
-這個類別會提供預設的靜態函式和移動、 複製、 比較和雜湊儲存在集合類別物件的基本資料型別項目所用的方法。
+此類提供用於移動、複製、比較和哈希存儲在集合類物件中的原始數據類型元素的默認靜態函數和方法。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+[C 預設比較特徵](../../atl/reference/cdefaultcomparetraits-class.md)
 
 [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[元素庫](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefault 元素](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CPrimitiveElementTraits`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE
+## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>原始元素::INARGTYPE
 
-要用於將項目加入至集合的類別物件的資料類型。
+用於向集合類物件添加元素的數據類型。
 
 ```
 typedef T INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE
+## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>原始元素::OUTARGTYPE
 
-要用來擷取元素的集合類別物件的資料類型。
+用於從集合類物件檢索元素的數據類型。
 
 ```
 typedef T& OUTARGTYPE;
@@ -81,5 +81,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>另請參閱
 
-[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CDefaultElementtraits 類別](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

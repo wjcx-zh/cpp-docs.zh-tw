@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: 45b4698cc70487a6c3fe1470fe27f7b5c4f95402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e9b91161f4207f4d2215d8777beade93617ddfac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504594"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319811"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 
@@ -35,24 +35,24 @@ class CMiniFrameWnd : public CFrameWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|建構 `CMiniFrameWnd` 物件。|
+|[CMiniFramewnd::CMiniFramewnd](#cminiframewnd)|建構 `CMiniFrameWnd` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CMiniFrameWnd::Create](#create)|在結構之後建立物件。`CMiniFrameWnd`|
-|[CMiniFrameWnd::CreateEx](#createex)|在結構之後建立物件(包含其他選項)。`CMiniFrameWnd`|
+|[CMiniFramewnd::創建](#create)|在構造`CMiniFrameWnd`後創建物件。|
+|[CMiniFramewnd::創建Ex](#createex)|在建構`CMiniFrameWnd`後創建物件(具有附加選項)。|
 
 ## <a name="remarks"></a>備註
 
-這些迷你框架視窗的行為與一般框架視窗類似, 不同之處在于它們不會有最小化/最大化的按鈕或功能表, 而且您只需要按一下 [系統] 功能表即可關閉它們。
+這些微型框架視窗與普通框架視窗一樣,只是它們沒有最小化/最大化按鈕或功能表,您只需要單擊系統功能表即可將其關閉。
 
-若要使用`CMiniFrameWnd`物件, 請先定義物件。 然後呼叫[Create](#create)成員函式以顯示迷你框架視窗。
+要使用物件`CMiniFrameWnd`,請先定義該物件。 然後調用[「創建](#create)成員」函數以顯示微型框架視窗。
 
-如需如何使用`CMiniFrameWnd`物件的詳細資訊, 請參閱[銜接和浮動工具列](../../mfc/docking-and-floating-toolbars.md)一文。
+有關如何使用`CMiniFrameWnd`物件的詳細資訊,請參閱文章[「停靠」和「浮動工具列](../../mfc/docking-and-floating-toolbars.md)」。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -68,9 +68,9 @@ class CMiniFrameWnd : public CFrameWnd
 
 **標題:** afxwin.h
 
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd
+## <a name="cminiframewndcminiframewnd"></a><a name="cminiframewnd"></a>CMiniFramewnd::CMiniFramewnd
 
-會構造`CMiniFrameWnd`物件, 但不會建立視窗。
+建構`CMiniFrameWnd`物件,但不創建視窗。
 
 ```
 CMiniFrameWnd();
@@ -78,11 +78,11 @@ CMiniFrameWnd();
 
 ### <a name="remarks"></a>備註
 
-若要建立視窗, 請呼叫[CMiniFrameWnd:: create](#create)。
+要建立視窗,請致電[CMiniFramewnd::建立](#create)。
 
-##  <a name="create"></a>CMiniFrameWnd:: Create
+## <a name="cminiframewndcreate"></a><a name="create"></a>CMiniFramewnd::創建
 
-建立 Windows 迷你框架視窗, 並將其附加至`CMiniFrameWnd`物件。
+創建 Windows 迷你框架視窗並將其`CMiniFrameWnd`附加到 物件。
 
 ```
 virtual BOOL Create(
@@ -96,47 +96,47 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*lpClassName*<br/>
-指向以 null 結束的字元字串, 其命名為 Windows 類別。 類別名稱可以是任何以全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函數註冊的名稱。 如果是 Null, 則架構會為您註冊 window 類別。 MFC 會為預設類別提供下列樣式和屬性:
+*lpClass 名稱*<br/>
+指向命名 Windows 類的 null 連接字串。 類名稱可以是註冊到全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函數的任何名稱。 如果 NULL,則框架將為您註冊視窗類。 MFC 為預設類別提供以下樣式和屬性:
 
-- 設定樣式位 CS_DBLCLKS, 這會在使用者按兩下滑鼠時, 將按兩下訊息傳送至視窗程式。
+- 設置樣式位CS_DBLCLKS,當用戶按兩下滑鼠時,將按兩下消息發送到視窗過程。
 
-- 設定樣式位 CS_HREDRAW 和 CS_VREDRAW, 以指示當視窗變更大小時, 要重新繪製的工作區內容。
+- 設置樣式位CS_HREDRAW和CS_VREDRAW,引導工作區的內容在視窗更改大小時重繪。
 
-- 將類別游標設定為 Windows standard IDC_ARROW。
+- 將類游標設置到 Windows 標準IDC_ARROW。
 
-- 將類別背景筆刷設定為 Null, 讓視窗不會清除其背景。
+- 將類背景畫筆設定為 NULL,因此視窗不會擦除其背景。
 
-- 將類別圖示設定為標準的揮手旗標 Windows 標誌圖示。
+- 將類圖示設置為標準、揮舞標誌的 Windows 徽標圖示。
 
-- 將視窗設定為預設大小和位置 (如 Windows 所示)。
+- 將視窗設置為預設大小和位置,如 Windows 所示。
 
-*lpWindowName*<br/>
-指向以 null 結束的字元字串, 其中包含視窗名稱。
+*lpWindow 名稱*<br/>
+包含視窗名稱的 null 連接字串。
 
 *dwStyle*<br/>
-指定視窗樣式屬性。 這些可以包含標準的視窗樣式, 以及下列一或多個特殊樣式:
+指定視窗樣式屬性。 這些可以包括標準視窗樣式與一個或多個以下特殊樣式:
 
-- MFS_MOVEFRAME 可讓您藉由按一下視窗的任何邊緣, 而不只是標題, 來移動迷你框架視窗。
+- MFS_MOVEFRAME允許通過按一下視窗的任何邊緣(而不僅僅是標題)移動微型框架視窗。
 
-- MFS_4THICKFRAME 會停用迷你框架視窗的調整大小。
+- MFS_4THICKFRAME禁用小型框架視窗大小。
 
-- MFS_SYNCACTIVE 會同步處理迷你框架視窗的啟用, 使其成為其父視窗的啟用。
+- MFS_SYNCACTIVE將小型框架視窗的啟動同步到其父窗口的啟動。
 
-- MFS_THICKFRAME 可讓迷你框架視窗的大小與工作區允許的內容一樣小。
+- MFS_THICKFRAME 允許將微型框架視窗的大小調整為用戶端區域允許的大小。
 
-- MFS_BLOCKSYSMENU 會停用 [系統] 功能表和 [控制] 功能表的存取, 並將其轉換成標題的一部分 (標題列)。
+- MFS_BLOCKSYSMENU禁用對系統功能表和控制選單的訪問,並將其轉換為標題的一部分(標題列)。
 
-如需可能的視窗樣式值的描述, 請參閱[CWnd:: Create](../../mfc/reference/cwnd-class.md#create) 。 用於迷你框架視窗的一般組合是 WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU。
+請參閱[CWnd::創建](../../mfc/reference/cwnd-class.md#create)有關可能的視窗樣式值的說明。 用於微型框架視窗的典型組合WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU。
 
-*rect*<br/>
-`RECT`結構, 指定所需的視窗維度。
+*矩形*<br/>
+指定`RECT`視窗所需尺寸的結構。
 
-*pParentWnd*<br/>
-指向父視窗。 最上層視窗使用 Null。
+*pparentwnd*<br/>
+指向父視窗。 對頂級視窗使用 NULL。
 
 *nID*<br/>
-如果將迷你框架視窗建立為子視窗, 這就是子控制項的識別碼;否則為0。
+如果將小框架視窗創建為子視窗,則這是子控制件的標識符;如果將微型框架窗口創建為子視窗,則為子控制項的標識符。否則 0。
 
 ### <a name="return-value"></a>傳回值
 
@@ -144,9 +144,9 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-`Create`初始化視窗的類別名稱和視窗名稱, 並為其樣式和父系註冊預設值。
+`Create`初始化視窗的類名稱和視窗名稱,並註冊其樣式和父項的預設值。
 
-##  <a name="createex"></a>CMiniFrameWnd:: CreateEx
+## <a name="cminiframewndcreateex"></a><a name="createex"></a>CMiniFramewnd::創建Ex
 
 建立 `CMiniFrameWnd` 物件。
 
@@ -164,45 +164,45 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定要建立之的`CMiniFrameWnd`擴充樣式。 將任何[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)套用至視窗。
+指定正在建立的擴展`CMiniFrameWnd`樣式。 將任何[擴展的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)應用於視窗。
 
-*lpClassName*<br/>
-指向以 null 結束的字元字串, 其命名為 Windows 類別 ( [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)結構)。 類別名稱可以是任何以全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函數或任何預先定義的控制項類別名稱註冊的名稱。 不得為 Null。
+*lpClass 名稱*<br/>
+指向命名 Windows 類[(WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)結構)的 null 連接端接字串。 類名稱可以是註冊到全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函數或任何預定義的控制類名稱的名稱。 它不得為 NULL。
 
-*lpWindowName*<br/>
-指向以 null 結束的字元字串, 其中包含視窗名稱。
+*lpWindow 名稱*<br/>
+包含視窗名稱的 null 連接字串。
 
 *dwStyle*<br/>
-指定視窗樣式屬性。 如需可能值的描述, 請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[CWnd:: Create](../../mfc/reference/cwnd-class.md#create) 。
+指定視窗樣式屬性。 請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[CWnd::創建](../../mfc/reference/cwnd-class.md#create)可能的值的說明。
 
-*rect*<br/>
-視窗的大小和位置, 以*pParentWnd*的用戶端座標表示。
+*矩形*<br/>
+視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
-*pParentWnd*<br/>
+*pparentwnd*<br/>
 指向父視窗物件。
 
 *nID*<br/>
-子視窗的識別碼。
+子窗口的標識碼。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`CreateEx`參數會指定 WNDCLASS、視窗樣式, 以及 (選擇性) 視窗的初始位置和大小。 `CreateEx`同時指定視窗的父系 (如果有的話) 和識別碼。
+參數`CreateEx`指定視窗的 WNDCLASS、視窗樣式和(可選)視窗的初始位置和大小。 `CreateEx`還指定視窗的父級(如果有)和 ID。
 
-當`CreateEx`執行時, Windows 會將[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)和[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)訊息傳送至視窗。
+執行`CreateEx`時,Windows 會向視窗發送[WM_GETMINMAXINFO、WM_NCCREATE、WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccreate)和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)[WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)消息。
 
-若要擴充預設訊息處理, 請從`CMiniFrameWnd`衍生類別, 將訊息對應加入至新的類別, 並為上述訊息提供成員函式。 例如`OnCreate`, 覆寫以執行新類別所需的初始化。
+要擴展預設消息處理,請從`CMiniFrameWnd`派生類,向新類添加消息映射,併為上述消息提供成員函數。 例如`OnCreate`,重寫以執行新類所需的初始化。
 
-覆寫`On`進一步的*訊息*訊息處理常式, 以將進一步的功能加入至您的衍生類別。
+覆蓋其他`On`*消息消息*處理程式,以向派生類添加更多功能。
 
-如果指定了 WS_VISIBLE 樣式, Windows 就會傳送所有啟動和顯示視窗所需的訊息給視窗。 如果視窗樣式指定標題列, *lpszWindowName*參數所指向的視窗標題就會顯示在標題列中。
+如果提供了WS_VISIBLE樣式,Windows會向視窗發送激活和顯示視窗所需的所有消息。 如果視窗樣式指定標題列,*則 lpszWindowName*參數指向的視窗標題將顯示在標題列中。
 
-*DwStyle*參數可以是[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)的任意組合。
+*dwStyle*參數可以是[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)的任意組合。
 
-不再支援舊的樣式調色板 [工具箱] 視窗。 在舊版 Windows 上執行 MFC 應用程式時, 支援不具有 [X] [關閉] 按鈕的舊樣式, 但 Visual C++.net 已不再支援。 現在只支援新的 WS_EX_TOOLWINDOW 樣式;如需此樣式的說明, 請參閱[擴充的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。
+舊樣式調色板工具箱視窗不再受支援。 在以前版本的 Windows 上運行 MFC 應用程式時,支援舊樣式,該樣式沒有「X」關閉按鈕,但在 Visual C++.NET 中不再支援。 現在僅支援新的WS_EX_TOOLWINDOW樣式;有關此樣式的說明,請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。
 
 ## <a name="see-also"></a>另請參閱
 

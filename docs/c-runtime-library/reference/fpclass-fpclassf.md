@@ -1,9 +1,10 @@
 ---
 title: _fpclass、_fpclassf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fpclass
 - _fpclassf
+- _o__fpclass
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170211"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914853"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -82,9 +84,11 @@ int _fpclassf(
 
 **_Fpclass**和 **_fpclassf**函式為 Microsoft 特有的功能。 它們與 [fpclassify](fpclassify.md) 類似，但傳回引數的更多詳細資訊。 只有在針對 x64 平臺進行編譯時，才能使用 **_fpclassf**函數。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fpclass**， **_fpclassf**|\<float.h>|
 

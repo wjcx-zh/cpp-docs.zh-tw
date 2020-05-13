@@ -6,14 +6,14 @@ helpviewer_keywords:
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400517"
 ---
 # <a name="c-integer-constants"></a>C 整數常數
 
-「整數常數」  為代表整數值的十進位 (底數為 10)、八進位 (底數為 8) 或十六進位 (底數為 16) 數字。 使用整數常數來表示無法變更的整數值。
+*整數常數*是代表整數值的十進位（基底10）、八進位（基底8）或十六進位（基底16）數位。 使用整數常數來表示無法變更的整數值。
 
 ## <a name="syntax"></a>語法
 
@@ -23,7 +23,7 @@ ms.locfileid: "67400517"
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
 
 *decimal-constant*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*非零位數*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *octal-constant*：<br/>
@@ -35,7 +35,7 @@ ms.locfileid: "67400517"
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 *hexadecimal-prefix*：下列其中一個<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0x**
 
 *nonzero-digit*：下列其中一個<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
@@ -70,7 +70,7 @@ ms.locfileid: "67400517"
 
 **i64** 與 **I64** 均為 Microsoft 特定的尾碼。
 
-除非前面加上負號 ( **-** )，否則整數常數為正數。 負號會解譯為一元算術負運算子 (如需這個運算子的詳細資訊，請參閱[一元算術運算子](../c-language/unary-arithmetic-operators.md))。
+除非前面加上負號（**-**），否則整數常數為正數。 負號會解譯為一元算術負運算子  (如需這個運算子的詳細資訊，請參閱[一元算術運算子](../c-language/unary-arithmetic-operators.md))。
 
 如果整數常數的開頭是 **0x** 或 **0X** 開始，即為十六進位。 如果開頭是數字 **0**，即為八進位。 否則即假設為十進位。
 
@@ -116,6 +116,6 @@ ms.locfileid: "67400517"
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 常數](../c-language/c-constants.md)<br/>

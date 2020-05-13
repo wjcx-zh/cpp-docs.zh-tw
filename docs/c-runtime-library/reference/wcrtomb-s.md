@@ -1,8 +1,9 @@
 ---
 title: wcrtomb_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb_s
+- _o_wcrtomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 51985b008565cbe550065b85261b8beb53ed6f89
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945851"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915967"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -80,17 +82,19 @@ errno_t wcrtomb_s(
 
 ## <a name="remarks"></a>備註
 
-**Wcrtomb_s**函式會將寬字元（從包含在*mbstate*中的指定轉換狀態開始，從*wchar*中包含的值）轉換成*mbchar*所代表的位址。 *PReturnValue*值會是已轉換的位元組數，但不能超過**MB_CUR_MAX**個位元組，或如果發生錯誤，則為-1。
+**Wcrtomb_s**函式會將寬字元（從包含在*mbstate*中的指定轉換狀態開始，從包含在*wchar*中的值）轉換為*mbchar*所代表的位址。 *PReturnValue*值會是已轉換的位元組數，但不能超過**MB_CUR_MAX**個位元組，如果發生錯誤，則為-1。
 
 如果*mbstate*為 null，則會使用內部**mbstate_t**轉換狀態。 如果*wchar*中包含的字元沒有對應的多位元組字元， *pReturnValue*的值將會是-1，而函式會傳回**EILSEQ**的**errno**值。
 
-**Wcrtomb_s**函式與[wctomb_s、_wctomb_s_l](wctomb-s-wctomb-s-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了**wcsrtombs_s**的後續呼叫（而不是**wcstombs_s**），應用程式會使用**wcsrlen**而非**wcslen**。
+**Wcrtomb_s**函式與[wctomb_s、_wctomb_s_l](wctomb-s-wctomb-s-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了**wcsrtombs_s**的後續呼叫，而不是**wcstombs_s**，應用程式就會使用**wcsrlen**而非**wcslen**。
 
-C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-**Wcrtomb_s**函式是多執行緒安全，只要目前線程中的函式在執行此函式，而且*mbstate*為 null 時，就會呼叫**setlocale** 。
+只要在執行此函式時，目前線程中的函式不會呼叫**setlocale** ，而且*mbstate*為 null， **wcrtomb_s**函式就是多執行緒安全。
 
 ## <a name="example"></a>範例
 
@@ -145,6 +149,6 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

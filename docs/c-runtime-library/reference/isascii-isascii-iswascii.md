@@ -1,9 +1,10 @@
 ---
 title: isascii、__isascii、iswascii
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswascii
 - __isascii
+- _o_iswascii
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919780"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -74,7 +76,9 @@ int iswascii(
 
 除非已定義預處理器宏 _CTYPE_DISABLE_MACROS，否則 **__isascii**和**iswascii**都會實作為宏。
 
-為了回溯相容性，只有在[ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md)未定義或定義為0時， **isascii**才會實作為宏。否則，它會是未定義的。
+為了回溯相容性，只有在未定義[&#95;&#95;STDC&#95;&#95;](../../preprocessor/predefined-macros.md)或定義為0時， **isascii**才會實作為宏。否則，它會是未定義的。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -86,13 +90,13 @@ int iswascii(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**isascii**， **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> 或 \<ctype.h>|
+|**isascii**， **__isascii**|C: \<ctype.h><br /><br /> C++：\<cctype> 或 \<ctype.h>|
 |**iswascii**|C：\<wctype.h>、\<ctype.h>，或 \<wchar.h><br /><br /> C++：\<cwctype>、\<cctype >、\<wctype.h>、\<ctype.h> 或 \<wchar.h>|
 
-**Isascii**、 **__isascii**和**iswascii**函式是 Microsoft 特有的功能。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+**Isascii**、 **__isascii**和**iswascii**函式是 Microsoft 特有的功能。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

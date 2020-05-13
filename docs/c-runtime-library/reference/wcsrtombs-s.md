@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs_s
+- _o_wcsrtombs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: c804d232dbcce67b8d467eaa37ccf2b15282881a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518305"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910589"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -72,7 +74,7 @@ errno_t wcsrtombs_s(
 *wcstr*<br/>
 指向要轉換的寬字元字串。
 
-*count*<br/>
+*計數*<br/>
 要儲存在*mbstr*緩衝區中的最大位元組數目，或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *mbstate*<br/>
@@ -80,7 +82,7 @@ errno_t wcsrtombs_s(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，就是零，如果失敗，則為錯誤碼。
+如果成功，則為零，如果失敗，則為錯誤碼。
 
 |錯誤狀況|傳回值和**errno**|
 |---------------------|------------------------------|
@@ -88,7 +90,7 @@ errno_t wcsrtombs_s(
 |*wcstr*為**Null**|**EINVAL**|
 |目的緩衝區太小，無法包含已轉換的字串（除非*count*是 **_TRUNCATE**，請參閱下面的備註）|**ERANGE**|
 
-如果發生上述任何一種情況，則會叫用無效的參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回錯誤碼並設定**errno** ，如下表所示。
+如果發生上述任何一種情況，則會叫用無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回錯誤碼並設定**errno** ，如下表所示。
 
 ## <a name="remarks"></a>備註
 
@@ -106,7 +108,7 @@ errno_t wcsrtombs_s(
 
 如果**wcsrtombs_s**成功轉換來源字串，則會將已轉換字串的大小（包括 null 結束字元）放入 *&#42;pReturnValue* （提供的*pReturnValue*不是**null**）。 即使*mbstr*引數為**Null** ，也會提供方法來判斷所需的緩衝區大小。 請注意，如果*mbstr*為**Null**，則會忽略*count* 。
 
-如果**wcsrtombs_s**遇到無法轉換成多位元組字元的寬字元，會將-1 放在 *\*pReturnValue*中，將目的緩衝區設定為空字串，將**errno**設為**EILSEQ**，並傳回**EILSEQ**。
+如果**wcsrtombs_s**遇到無法轉換成多位元組字元的寬字元，會將-1 放在* \*pReturnValue*中，將目的緩衝區設定為空字串，將**errno**設為**EILSEQ**，並傳回**EILSEQ**。
 
 如果*wcstr*和*mbstr*所指向的序列重迭， **wcsrtombs_s**的行為會是未定義的。 **wcsrtombs_s**會受到目前地區設定的 LC_TYPE 分類所影響。
 
@@ -116,6 +118,8 @@ errno_t wcsrtombs_s(
 **Wcsrtombs_s**函式與[wcstombs_s、_wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了**wcsrtombs_s**的後續呼叫，而不是**wcstombs_s**，應用程式就會使用**wcsrlen**而非**wcslen**。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
@@ -174,10 +178,10 @@ The string was successfully converted.
 |-------------|---------------------|
 |**wcsrtombs_s**|\<wchar.h>|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

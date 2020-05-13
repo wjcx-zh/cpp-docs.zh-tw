@@ -1,5 +1,5 @@
 ---
-title: Win32ThreadTraits 類別
+title: 贏32線程特徵類
 ms.date: 11/04/2016
 f1_keywords:
 - Win32ThreadTraits
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: d086a42f5dcdf005d10c8853776da66b691a8e11
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 64f02293508894a70f36c29d5032c9ba8f250c38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495467"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325790"
 ---
-# <a name="win32threadtraits-class"></a>Win32ThreadTraits 類別
+# <a name="win32threadtraits-class"></a>贏32線程特徵類
 
-這個類別會提供 Windows 執行緒的建立函式。 如果執行緒不會使用 CRT 函式, 請使用這個類別。
+此類提供 Windows 線程的創建函數。 如果執行緒不使用 CRT 函數,請使用此類。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -36,27 +36,27 @@ class Win32ThreadTraits
 
 |名稱|描述|
 |----------|-----------------|
-|[Win32ThreadTraits::CreateThread](#createthread)|靜止呼叫此函式可建立不應使用 CRT 函式的執行緒。|
+|[贏32線程::建立線程](#createthread)|(靜態)呼叫此函數以建立不應使用 CRT 函數的線程。|
 
 ## <a name="remarks"></a>備註
 
-執行緒特性是針對特定的執行緒類型提供建立函式的類別。 建立函式的簽章和語義與 Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)函數相同。
+線程特徵是為特定類型的線程提供創建函數的類。 創建函數具有與 Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)函數相同的簽名和語義。
 
-執行緒特性由下列類別使用:
+執行緒特徵由以下類別使用:
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-如果執行緒將使用 CRT 函式, 請改用[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) 。
+如果執行緒將使用 CRT 函數,則改用[CRTThreadTraits。](../../atl/reference/crtthreadtraits-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlbase.h。h
+**標題:** atlbase.h
 
-##  <a name="createthread"></a>Win32ThreadTraits:: CreateThread
+## <a name="win32threadtraitscreatethread"></a><a name="createthread"></a>贏32線程::建立線程
 
-呼叫此函式可建立不應使用 CRT 函式的執行緒。
+呼叫此函數以建立不應使用 CRT 函數的線程。
 
 ```
 static HANDLE CreateThread(
@@ -71,33 +71,33 @@ static HANDLE CreateThread(
 ### <a name="parameters"></a>參數
 
 *lpsa*<br/>
-新執行緒的安全性屬性。
+新線程的安全屬性。
 
 *dwStackSize*<br/>
-新執行緒的堆疊大小。
+新線程的堆疊大小。
 
-*pfnThreadProc*<br/>
-新執行緒的執行緒程式。
+*普芬線程普羅克*<br/>
+新線程的線程過程。
 
 *pvParam*<br/>
-要傳遞至執行緒程式的參數。
+要傳遞給線程過程的參數。
 
-*dwCreationFlags*<br/>
-建立旗標 (0 或 CREATE_SUSPENDED)。
+*dw創造標誌*<br/>
+創建標誌(0 或CREATE_SUSPENDED)。
 
 *pdwThreadId*<br/>
-脫銷DWORD 變數的位址, 在成功時, 會接收新建立執行緒的執行緒識別碼。
+[出]DWORD 變數的位址,在成功時,接收新創建的線程的線程 ID。
 
 ### <a name="return-value"></a>傳回值
 
-將控制碼傳回至新建立的執行緒, 或在失敗時傳回 Null。 呼叫[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以取得擴充的錯誤資訊。
+將句柄傳回到新建立的線程或失敗時為 NULL。 調用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)獲取擴充的錯誤資訊。
 
 ### <a name="remarks"></a>備註
 
-如需此函式之參數的進一步資訊, 請參閱[CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 。
+有關此函數的參數的詳細資訊,請參閱[CreateThread。](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)
 
-這個函數會`CreateThread`呼叫來建立執行緒。
+此函數調用`CreateThread`以創建線程。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

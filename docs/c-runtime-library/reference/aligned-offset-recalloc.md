@@ -1,8 +1,9 @@
 ---
 title: _aligned_offset_recalloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_offset_recalloc
+- _o__aligned_offset_recalloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_offset_recalloc function
 - _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
-ms.openlocfilehash: ef8e68622c86e4504745a63cb0c2c3be4e916163
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4c71bc701beaabe179676656b331fcce966d1db1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944144"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917174"
 ---
 # <a name="_aligned_offset_recalloc"></a>_aligned_offset_recalloc
 
@@ -60,7 +62,7 @@ void * _aligned_offset_recalloc(
 *size*<br/>
 每個項目的長度 (位元組)。
 
-*alignment*<br/>
+*對齊*<br/>
 對齊值，必須是 2 的整數冪。
 
 *offset*<br/>
@@ -79,6 +81,8 @@ void * _aligned_offset_recalloc(
 **_aligned_offset_recalloc**是以**malloc**為基礎。 如需使用 **_aligned_offset_malloc**的詳細資訊，請參閱[malloc](malloc.md)。 如果*memblock*為**Null**，則函式會在內部呼叫 **_aligned_offset_malloc** 。
 
 如果記憶體配置失敗，或是要求的大小（*數位* * *大小*）大於 **_HEAP_MAXREQ**，則此函式會將**errno**設定為**ENOMEM** 。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_recalloc**會驗證其參數。 如果*對齊*不是2的乘冪，或*offset*大於或等於要求的大小及非零值，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

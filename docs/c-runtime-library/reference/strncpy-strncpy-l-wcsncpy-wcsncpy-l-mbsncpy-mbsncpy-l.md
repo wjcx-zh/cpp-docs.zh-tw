@@ -1,6 +1,6 @@
 ---
 title: strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncpy
 - _strncpy_l
@@ -8,6 +8,8 @@ api_name:
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
+- _o__mbsncpy
+- _o__mbsncpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -65,19 +68,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947215"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919285"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
 將一個字串的字元複製到另一個。 這些函式已有更安全的版本可供使用，請參閱 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncpy**和 **_mbsncpy_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncpy**和 **_mbsncpy_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -187,7 +190,9 @@ unsigned char *_mbsncpy_l(
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -197,7 +202,7 @@ unsigned char *_mbsncpy_l(
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**和 **_wcsncpy_l**沒有地區設定相依性;它們僅供 **_tcsncpy_l**之用，不適合直接呼叫。
+> **_strncpy_l**和 **_wcsncpy_l**沒有地區設定相依性;這些只是為了 **_tcsncpy_l**而提供，而不是直接呼叫。
 
 ## <a name="requirements"></a>需求
 
@@ -205,13 +210,13 @@ unsigned char *_mbsncpy_l(
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> 或 \<wchar.h>|
-|**_mbsncpy**、 **_mbsncpy_l**|\<mbstring.h>|
+|**_mbsncpy**， **_mbsncpy_l**|\<mbstring.h>|
 
 如需其他平台的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**strncpy** ，以及如何將其誤用以造成程式錯誤和安全性問題。 編譯器會針對**strncpy**的每個呼叫產生警告，類似**于 crt_strncpy_x86。 c （15）：警告 C4996： ' strncpy '：此函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
+下列範例示範如何使用**strncpy** ，以及如何將其誤用以造成程式錯誤和安全性問題。 編譯器會針對**strncpy**的每個呼叫產生警告，類似于**crt_strncpy_x86. c （15）：警告 C4996： ' Strncpy '：此函式或變數可能不安全。請考慮改為使用 strncpy_s。若要停用取代，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資訊，請參閱線上說明。**
 
 ```C
 // crt_strncpy_x86.c
@@ -265,7 +270,7 @@ int main() {
 }
 ```
 
-Output
+輸出
 
 ```Output
 ZZ
@@ -281,7 +286,7 @@ Buffer overrun: s = 'ars.' (should be 'test')
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>

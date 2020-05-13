@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 2668d35c24e9d95440a96c5b3eda1fab7bbf3891
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2594531df63bcd62cdaec44fbc3668ea68990922
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507990"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366903"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 
@@ -34,26 +34,26 @@ ms.locfileid: "69507990"
 您也可以使用[自動化](../mfc/automation.md)。
 
 > [!NOTE]
->  OLE 一詞表示與連結和內嵌相關的技術，包括 OLE 容器、OLE 伺服器、OLE 項目、就地啟用 (或視覺化編輯)、追蹤器、拖放和功能表合併。 「作用中」一詞適用於元件物件模型 (COM) 和 COM 架構的物件，例如 ActiveX 控制項。 OLE Automation 現在稱為 Automation。
+> OLE 一詞表示與連結和內嵌相關的技術，包括 OLE 容器、OLE 伺服器、OLE 項目、就地啟用 (或視覺化編輯)、追蹤器、拖放和功能表合併。 「作用中」一詞適用於元件物件模型 (COM) 和 COM 架構的物件，例如 ActiveX 控制項。 OLE Automation 現在稱為 Automation。
 
 ## <a name="in-this-section"></a>本節內容
 
 [OLE 背景](../mfc/ole-background.md)<br/>
 討論 OLE 並提供運作方式相關的概念資訊。
 
-[啟動](../mfc/activation-cpp.md)<br/>
+[啟用](../mfc/activation-cpp.md)<br/>
 說明編輯 OLE 項目時的角色啟用。
 
 [容器](../mfc/containers.md)<br/>
 提供在 OLE 中使用容器的連結。
 
-[資料物件和資料來源](../mfc/data-objects-and-data-sources-ole.md)<br/>
+[資料物件與資料來源](../mfc/data-objects-and-data-sources-ole.md)<br/>
 提供討論使用 `COleDataObject` 和 `COleDataSource` 類別的主題的連結。
 
 [拖放](../mfc/drag-and-drop-ole.md)<br/>
 討論使用 OLE 複製和貼上。
 
-[OLE 功能表和資源](../mfc/menus-and-resources-ole.md)<br/>
+[OLE 選單和資源](../mfc/menus-and-resources-ole.md)<br/>
 說明在 MFC OLE 文件應用程式中功能表和資源的使用。
 
 [註冊](../mfc/registration.md)<br/>

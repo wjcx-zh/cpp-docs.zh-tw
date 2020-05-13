@@ -1,6 +1,6 @@
 ---
 title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -8,6 +8,10 @@ api_name:
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947303"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914215"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
@@ -117,23 +122,25 @@ size_t _mbsnccnt_l(
 
 ## <a name="remarks"></a>備註
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**會計算*str*中多位元組字元的第一個*計數*中找到的位元組數目。 **_mbsnbcnt**和 **_mbsnbcnt_l**會取代**mtob** ，而且應該用來取代**mtob**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**會計算*str*中多位元組字元的第一個*計數*中找到的位元組數目。 **_mbsnbcnt**和 **_mbsnbcnt_l**取代**mtob** ，而且應該用來取代**mtob**。
 
-**_mbsnccnt**和 **_mbsnccnt_l**會計算*str*的第一個位元組*計數*中找到的字元數。 如果 **_mbsnccnt**和 **_mbsnccnt_l**在雙位元組字元的第二個位元組中遇到 null 字元，第一個位元組也會被視為 null，而且不會包含在傳回的 count 值中。 **_mbsnccnt**和 **_mbsnccnt_l**會取代**btom** ，而且應該用來取代**btom**。
+**_mbsnccnt**和 **_mbsnccnt_l**會計算*str*的第一個位元組*計數*中找到的字元數。 如果 **_mbsnccnt**和 **_mbsnccnt_l**在雙位元組字元的第二個位元組中遇到 null 字元，第一個位元組也會被視為 null，而且不會包含在傳回的 count 值中。 **_mbsnccnt**和 **_mbsnccnt_l**取代**btom** ，而且應該用來取代**btom**。
 
 如果*str*是**Null**指標，或*count*為0，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述， **errno**會設定為**EINVAL**，而函式會傳回0。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |常式傳回的值|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
-|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|N/A|
-|**_wcsncnt**|N/A|N/A|**_mbsnbcnt**|
-|**_wcsncnt**|N/A|N/A|**_mbsnccnt**|
-|N/A|N/A|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|n/a|
+|**_wcsncnt**|n/a|n/a|**_mbsnbcnt**|
+|**_wcsncnt**|n/a|n/a|**_mbsnccnt**|
+|n/a|n/a|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>需求
 
@@ -146,7 +153,7 @@ size_t _mbsnccnt_l(
 |**_strncnt**|\<tchar.h>|
 |**_wcsncnt**|\<tchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -169,7 +176,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 The first 10 characters are single-byte.
@@ -178,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: IPropertyNotifySinkCP 類別
+title: IPropertyNotifySinkCP 類
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyNotifySinkCP
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: 9838a48b078cbc59a5ae86669ad9f26792d9816e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c6d98bf5a6dfe5566839eb22bcd2bab2a9c28e4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495631"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329602"
 ---
-# <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 類別
+# <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 類
 
-這個類別會將[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)介面公開為可連線物件上的輸出介面。
+此類將[IProperty Notify Sink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)介面公開為可連接物件上的傳出介面。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,27 +34,27 @@ class IPropertyNotifySinkCP
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自`IPropertyNotifySinkCP`的類別。
+您的類,派生自`IPropertyNotifySinkCP`。
 
 *CDV*<br/>
-管理連接點與其接收之間連接的類別。 預設值為[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), 允許無限制的連接。 您也可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md), 它會指定固定的連線數目。
+管理連接點與其接收器之間的連接的類。 默認值為[CComDynamicUnkarray,](../../atl/reference/ccomdynamicunkarray-class.md)它允許無限制的連接。 您還可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md),它指定固定數量的連接。
 
 ## <a name="remarks"></a>備註
 
-`IPropertyNotifySinkCP`會透過其基類[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)繼承所有方法。
+`IPropertyNotifySinkCP`通過其基類[IConnectionPointImpl 繼承](../../atl/reference/iconnectionpointimpl-class.md)所有方法。
 
-[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)介面可讓接收物件收到有關屬性變更的通知。 類別`IPropertyNotifySinkCP`會將這個介面公開為可連線物件上的輸出介面。 用戶端必須在接收`IPropertyNotifySink`上執行方法。
+[IProperty NotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)介面允許接收器物件接收有關屬性更改的通知。 類`IPropertyNotifySinkCP`公開此介面作為可連接物件上的傳出介面。 客戶端必須在接收器上`IPropertyNotifySink`實現方法。
 
-當您想要`IPropertyNotifySinkCP`建立`IPropertyNotifySink`代表介面的連接點時, 請從衍生您的類別。
+從`IPropertyNotifySinkCP`要創建`IPropertyNotifySink`表示 介面的連接點時派生類。
 
-如需在 ATL 中使用連接點的詳細資訊, 請參閱[連接點](../../atl/atl-connection-points.md)一文。
+有關在 ATL 中使用連接點的詳細資訊,請參閱文章[連接點](../../atl/atl-connection-points.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlctl。h
+**標題:** atlctl.h
 
 ## <a name="see-also"></a>另請參閱
 
-[IConnectionPointImpl 類別](../../atl/reference/iconnectionpointimpl-class.md)<br/>
-[IConnectionPointContainerImpl 類別](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[IConnectionPointimpl 類別](../../atl/reference/iconnectionpointimpl-class.md)<br/>
+[IConnectionPoint容器Impl類](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)

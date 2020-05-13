@@ -1,8 +1,9 @@
 ---
 title: _fread_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fread_nolock
+- _o__fread_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 2d896e3809d22c0f2752ef67c89233652bdade19
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d18d32c25a3026e54742fb3d936ac52d80e7d2e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956864"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914107"
 ---
 # <a name="_fread_nolock"></a>_fread_nolock
 
@@ -53,7 +55,7 @@ size_t _fread_nolock(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 資料的儲存位置。
 
 *size*<br/>
@@ -62,7 +64,7 @@ size_t _fread_nolock(
 *計數*<br/>
 要讀取項目的最大數量。
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -73,13 +75,15 @@ size_t _fread_nolock(
 
 此函式是**fread**的非鎖定版本。 這與**fread**完全相同，不同之處在于它不會受到保護，無法防止其他執行緒的干擾。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fread_nolock**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684506"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367289"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution 類別
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType* \
-整數結果類型，預設為**int**。如需可能的類型，請參閱[\<random >](../standard-library/random.md)。
+*IntType*\
+整數結果類型,預設值為**int**。有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述內含包含的散發，此分佈會產生具有散發的使用者指定整數類型值，讓每個值都能有同樣的可能性。 下表提供各個成員的文章連結。
+類範本描述一個包含的分佈,該分散使用分散生成使用者指定的積分類型的值,以便每個值都同樣可能。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -85,7 +85,7 @@ public:
 
 屬性成員 `a()` 會傳回目前儲存的分佈下限，而 `b()` 會傳回目前儲存的上限。 對於此分佈類別，這些下限和上限值和一般屬性函式 `min()` 及 `max()` 所傳回的一樣。
 
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。
+屬性成員 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。
 
@@ -93,7 +93,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+有關分發類及其成員的詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
 
 ## <a name="example"></a>範例
 
@@ -177,9 +177,9 @@ Distribution for 200 samples:
 
 **標頭：** \<random>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:uniform_int_distribution
 
 建構分佈。
 
@@ -191,24 +191,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*\*
+*a*\
 隨機值的下限 (內含)。
 
-*b* \
+*B*\
 隨機值的上限 (內含)。
 
-*parm* \
+*帕爾姆*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：** `a ≤ b`
+**先決條件:**`a ≤ b`
 
-第一個函式會建立一個物件，其儲存*的*值保留值*a* ，而其預存*b*值保留值*b*。
+第一個建構函式建構*一個物件,* 其儲存的值包含值*a,**其儲存的 b*值包含值*b*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="param_type"></a>  uniform_int_distribution::param_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::param_類型
 
 儲存分佈的參數。
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*\*
+*a*\
 隨機值的下限 (內含)。
 
-*b* \
+*B*\
 隨機值的上限 (內含)。
 
-*right* \
+*對*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：** `a ≤ b`
+**先決條件:**`a ≤ b`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)
+[\<隨機>](../standard-library/random.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364976"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; 巨集
 
@@ -28,9 +28,9 @@ ms.locfileid: "79416925"
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a> ALLOCATOR_DECL
+## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-產生配置器類別範本。
+生成分配器類範本。
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ ms.locfileid: "79416925"
 
 ### <a name="remarks"></a>備註
 
-宏會產生樣板定義 `template <class Type> class name {.....}` 和特製化 `template <> class name<void> {.....}` 一起定義使用同步處理篩選的配置器類別樣板 `sync` 以及 `cache`類型的快取。
+`template <class Type> class name {.....}`巨集產生樣本定義和一個`template <> class name<void> {.....}`專門化,它們共同定義一個分配器類範本,`sync`該範本使用同步篩選器`cache`和類型的緩存。
 
 針對可以編譯重新繫結的編譯器，產生的範本定義看起來如下︰
 
@@ -68,7 +68,7 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a> CACHE_CHUNKLIST
+## <a name="cache_chunklist"></a><a name="cache_chunklist"></a>CACHE_CHUNKLIST
 
 產生 `stdext::allocators::cache_chunklist<sizeof(Type)>`。
 
@@ -78,7 +78,7 @@ public:
 
 ### <a name="remarks"></a>備註
 
-## <a name="cache_freelist"></a> CACHE_FREELIST
+## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
 產生 `stdext::allocators::cache_freelist<sizeof(Type), max>`。
 
@@ -88,7 +88,7 @@ public:
 
 ### <a name="remarks"></a>備註
 
-## <a name="cache_suballoc"></a> CACHE_SUBALLOC
+## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
 產生 `stdext::allocators::cache_suballoc<sizeof(Type)>`。
 
@@ -98,7 +98,7 @@ public:
 
 ### <a name="remarks"></a>備註
 
-## <a name="sync_default"></a> SYNC_DEFAULT
+## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
 產生同步處理篩選。
 
@@ -112,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<配置器>](../standard-library/allocators-header.md)

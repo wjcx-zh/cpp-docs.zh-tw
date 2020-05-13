@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151360"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825687"
 ---
 # <a name="structure-and-union-members"></a>結構和等位成員
 
 「成員選取運算式」(Member-selection Expression) 會參考結構和等位的成員。 這類運算式具有所選取成員的值和類型。
 
-> *postfix-expression* **.** *identifier*
-> *postfix-expression* **->** *identifier*
+> 後置*運算式* **。** *標識*\
+> 後置*運算式* **->** *識別碼*
 
 這個清單將描述兩種形式的成員選取運算式：
 
@@ -33,7 +33,7 @@ ms.locfileid: "56151360"
 
 這兩種形式的成員選取運算式會產生類似的效果。
 
-實際上，如果句號前的運算式是由套用至指標值的間接取值運算子 (<strong>\*</strong>) 所組成，則包含成員選取運算子 (**->**) 的運算式會是使用句號 (**.**) 之運算式的簡短版。 因此，
+事實上，如果期間的運算式是由套用至指標值**->** 的間接取值運算子（<strong>\*</strong>）所組成，則牽涉到成員選取運算子（）的運算式就是使用句號（**.**）之運算式的速記版本。 因此，
 
 ```cpp
 expression->identifier
@@ -49,7 +49,7 @@ expression->identifier
 
 ## <a name="examples"></a>範例
 
-下列範例會參考這個結構宣告。 如需這些範例中所使用間接取值運算子 (<strong>\*</strong>) 的詳細資訊，請參閱[間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)。
+下列範例會參考這個結構宣告。 如需這些範例中所使用<strong>\*</strong>間接取值運算子（）的相關資訊，請參閱[間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)。
 
 ```
 struct pair
@@ -72,7 +72,7 @@ item.sp = &item;
 (item.sp)->a = 24;
 ```
 
-在這個範例中，指標運算式 `item.sp` 會搭配成員選取運算子 (**->**) 用來將值指派給 `a` 成員。
+在此範例中，指標運算式`item.sp`會搭配成員選取運算子（**->**）使用，以將值指派給成員。 `a`
 
 ```
 list[8].b = 12;
@@ -80,6 +80,6 @@ list[8].b = 12;
 
 這個陳述式將說明如何從結構陣列選取個別結構成員。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [成員存取運算子：. 和 ->](../cpp/member-access-operators-dot-and.md)

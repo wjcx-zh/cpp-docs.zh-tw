@@ -1,11 +1,13 @@
 ---
 title: isblank、iswblank、_isblank_l、_iswblank_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
+- _o_isblank
+- _o_iswblank
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: 022eba0335facc597f0608d63cfb58e0146e0f23
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1c45319d7da48fad21af5375b0c310330d0f575a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954510"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918476"
 ---
 # <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank、iswblank、_isblank_l、_iswblank_l
 
@@ -62,7 +65,7 @@ int _iswblank_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -70,7 +73,7 @@ int _iswblank_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果*c*是特定的空格或水準索引標籤字元的標記法，則每個常式都會傳回非零，或者是用來分隔文字行內之單字的地區設定特定字元集之一。 如果*c*是空白字元（0x20）或水準定位字元（0x09）， **isblank**會傳回非零值。 **Isblank**函式測試條件的結果取決於地區設定的**LC_CTYPE**分類設定;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本，會針對任何與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*c*是特定的空格或水準索引標籤字元的標記法，則每個常式都會傳回非零，或者是用來分隔文字行內之單字的地區設定特定字元集之一。 如果*c*是空白字元（0x20）或水準定位字元（0x09）， **isblank**會傳回非零值。 **Isblank**函式測試條件的結果取決於地區設定的**LC_CTYPE**類別設定;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本，會針對任何與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 如果*c*是對應至標準空格或水準定位字元的寬字元，則**iswblank**會傳回非零值。
 
@@ -82,6 +85,10 @@ int _iswblank_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -97,5 +104,5 @@ int _iswblank_l(
 ## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

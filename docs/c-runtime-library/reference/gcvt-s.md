@@ -1,8 +1,9 @@
 ---
 title: _gcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt_s
+- _o__gcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625040"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919419"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -62,7 +64,7 @@ errno_t _gcvt_s(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 儲存轉換結果的緩衝區。
 
 *sizeInBytes*<br/>
@@ -71,7 +73,7 @@ errno_t _gcvt_s(
 *值*<br/>
 要轉換的值。
 
-*digits*<br/>
+*數字*<br/>
 儲存的重要數字的數目。
 
 ## <a name="return-value"></a>傳回值
@@ -80,11 +82,11 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*buffer*|*sizeInBytes*|*值*|*digits*|Return|*Buffer*中的值|
+|*緩衝區*|*sizeInBytes*|*值*|*數字*|傳回|*Buffer*中的值|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|任何|任何|任何|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|零|任何|任何|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|任何|任何|>= *sizeInBytes*|**EINVAL**|未修改。|
+|**Null**|任意|任意|任意|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|零|任意|任意|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|任意|任意|>= *sizeInBytes*|**EINVAL**|未修改。|
 
 **安全性問題**
 
@@ -98,13 +100,15 @@ errno_t _gcvt_s(
 
 此函式的 debug 版本會先使用0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -137,7 +141,7 @@ int main()
 Converted value: 1.2
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

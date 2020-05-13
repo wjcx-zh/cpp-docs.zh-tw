@@ -1,9 +1,11 @@
 ---
 title: _lseek、_lseeki64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lseeki64
 - _lseek
+- _o__lseek
+- _o__lseeki64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952979"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911312"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek、_lseeki64
 
@@ -61,12 +64,12 @@ __int64 _lseeki64(
 ### <a name="parameters"></a>參數
 
 *fd*<br/>
-參考已開啟檔案的檔案描述項。
+參照已開啟之檔案的檔案描述元。
 
 *offset*<br/>
 從 *origin* 位移的位元組數目。
 
-*origin*<br/>
+*來源*<br/>
 初始位置。
 
 ## <a name="return-value"></a>傳回值
@@ -77,7 +80,7 @@ __int64 _lseeki64(
 
 ## <a name="remarks"></a>備註
 
-**_Lseek**函式會將與*fd*相關聯的檔案指標移至從來源*位移*位元組的新位置。 對檔案的下一項作業會在新位置進行。 *origin* 引數必須是定義於 Stdio.h 中的下列其中一個常數。
+**_Lseek**函式會將與*fd*相關聯的檔案指標移至從來源*位移*位元組的*origin*新位置。 對檔案的下一項作業會在新位置進行。 *origin* 引數必須是定義於 Stdio.h 中的下列其中一個常數。
 
 |*原始*值||
 |-|-|
@@ -87,6 +90,8 @@ __int64 _lseeki64(
 
 您可以使用 **_lseek** ，將指標重新放置在檔案中的任何位置或超出檔案結尾。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
@@ -94,7 +99,7 @@ __int64 _lseeki64(
 |**_lseek**|\<io.h>|
 |**_lseeki64**|\<io.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -162,7 +167,7 @@ Line four.
 Line five.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Position for beginning of file seek = 0

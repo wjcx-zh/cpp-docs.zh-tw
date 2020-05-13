@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targets_ data member
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bb9151e55d133e3e5d8bf10baeb8448101ad6ce0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371532"
 ---
 # <a name="eventsource-class"></a>EventSource 類別
 
-表示非 agile 事件。 `EventSource` 成員函式會新增、移除及叫用事件處理常式。 針對 agile 事件，請使用[AgileEventSource](agileeventsource-class.md)。
+表示非敏捷事件。 `EventSource` 成員函式會新增、移除及叫用事件處理常式。 對於敏捷事件,請使用[敏捷事件源](agileeventsource-class.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -43,8 +43,8 @@ class EventSource;
 
 ### <a name="parameters"></a>參數
 
-*TDelegateInterface*<br/>
-委派的介面，表示事件處理常式。
+*T委託介面*<br/>
+表示事件處理程式的委託的介面。
 
 ## <a name="members"></a>成員
 
@@ -52,38 +52,38 @@ class EventSource;
 
 | 名稱                                     | 描述                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource：： EventSource](#eventsource) | 初始化 `EventSource` 類別的新執行個體。 |
+| [事件來源:事件來源](#eventsource) | 將 `EventSource` 類別的新執行個體初始化。 |
 
 ### <a name="public-methods"></a>公用方法
 
 | 名稱                                 | 描述                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource：： Add](#add)             | 將指定的委派介面所表示的事件處理常式附加至目前 `EventSource` 物件的事件處理常式集合。                     |
-| [EventSource：： GetSize](#getsize)     | 抓取與目前 `EventSource` 物件相關聯的事件處理常式數目。                                                                         |
-| [EventSource：： InvokeAll](#invokeall) | 使用指定的引數類型和引數，呼叫與目前 `EventSource` 物件相關聯的每個事件處理常式。                                      |
-| [EventSource：： Remove](#remove)       | 從與目前 `EventSource` 物件相關聯的事件處理常式集合中，刪除指定的事件註冊 token 所表示的事件處理常式。 |
+| [事件來源:新增](#add)             | 將指定委託介面表示的事件處理程式追加到當前`EventSource`物件的事件處理程式集。                     |
+| [事件來源:取得 Size](#getsize)     | 檢索與當前`EventSource`物件關聯的事件處理程式數。                                                                         |
+| [事件來源::全部呼叫](#invokeall) | 使用指定的參數類型和參數呼叫與`EventSource`當前物件關聯的每個事件處理程式。                                      |
+| [事件來源:刪除](#remove)       | 從與當前`EventSource`物件關聯的事件處理程式集中刪除指定事件註冊權杖表示的事件處理程式。 |
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 | 名稱                                                    | 描述                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource：： addRemoveLock_](#addremovelock)           | 加入、移除或叫用事件處理常式時，同步處理[targets_](#targets)陣列的存取權。                          |
-| [EventSource：： targets_](#targets)                       | 一或多個事件處理常式的陣列。                                                                                           |
-| [EventSource：： targetsPointerLock_](#targetspointerlock) | 即使加入、移除或叫用此 EventSource 的事件處理常式，也會同步處理內部資料成員的存取。 |
+| [活動來源:addRemoveLock_](#addremovelock)           | 在添加、刪除或調用事件處理程式時同步對[targets_](#targets)陣列的訪問。                          |
+| [活動來源::targets_](#targets)                       | 一個或多個事件處理程式的陣列。                                                                                           |
+| [活動來源:targetsPointerLock_](#targetspointerlock) | 同步對內部數據成員的訪問,即使正在添加、刪除或調用此事件源的事件處理程式也是如此。 |
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `EventSource`
 
 ## <a name="requirements"></a>需求
 
-**Header：** 事件。h
+**標題:** 事件.h
 
 **命名空間：** Microsoft::WRL
 
-## <a name="add"></a>EventSource：： Add
+## <a name="eventsourceadd"></a><a name="add"></a>事件來源:新增
 
-將指定的委派介面所表示的事件處理常式附加至目前 `EventSource` 物件的事件處理常式集合。
+將指定委託介面表示的事件處理程式追加到當前`EventSource`物件的事件處理程式集。
 
 ```cpp
 HRESULT Add(
@@ -94,35 +94,35 @@ HRESULT Add(
 
 ### <a name="parameters"></a>參數
 
-*delegateInterface*<br/>
-委派物件的介面，表示事件處理常式。
+*委託介面*<br/>
+委託物件的介面,該物件表示事件處理程式。
 
-*token*<br/>
-當此作業完成時，表示事件的控制碼。 使用此 token 做為[Remove （）](#remove)方法的參數，以捨棄事件處理常式。
+*權杖*<br/>
+此操作完成後,表示事件的句柄。 使用此令牌作為[Remove()](#remove)方法的參數來丟棄事件處理程式。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="addremovelock"></a>EventSource：： addRemoveLock_
+## <a name="eventsourceaddremovelock_"></a><a name="addremovelock"></a>活動來源:addRemoveLock_
 
-加入、移除或叫用事件處理常式時，同步處理[targets_](#targets)陣列的存取權。
+在添加、刪除或調用事件處理程式時同步對[targets_](#targets)陣列的訪問。
 
 ```cpp
 Wrappers::SRWLock addRemoveLock_;
 ```
 
-## <a name="eventsource"></a>EventSource：： EventSource
+## <a name="eventsourceeventsource"></a><a name="eventsource"></a>事件來源:事件來源
 
-初始化 `EventSource` 類別的新執行個體。
+將 `EventSource` 類別的新執行個體初始化。
 
 ```cpp
 EventSource();
 ```
 
-## <a name="getsize"></a>EventSource：： GetSize
+## <a name="eventsourcegetsize"></a><a name="getsize"></a>事件來源:取得 Size
 
-抓取與目前 `EventSource` 物件相關聯的事件處理常式數目。
+檢索與當前`EventSource`物件關聯的事件處理程式數。
 
 ```cpp
 size_t GetSize() const;
@@ -130,11 +130,11 @@ size_t GetSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-[Targets_](#targets)中的事件處理常式數目。
+[targets_](#targets)中的事件處理程式數。
 
-## <a name="invokeall"></a>EventSource：： InvokeAll
+## <a name="eventsourceinvokeall"></a><a name="invokeall"></a>事件來源::全部呼叫
 
-使用指定的引數類型和引數，呼叫與目前 `EventSource` 物件相關聯的每個事件處理常式。
+使用指定的參數類型和參數呼叫與`EventSource`當前物件關聯的每個事件處理程式。
 
 ```cpp
 void InvokeAll();
@@ -293,68 +293,68 @@ void InvokeAll(
 ### <a name="parameters"></a>參數
 
 *T0*<br/>
-預備事件處理常式引數的類型。
+第零事件處理程式參數的類型。
 
 *T1*<br/>
-第一個事件處理常式引數的類型。
+第一個事件處理程式參數的類型。
 
 *T2*<br/>
-第二個事件處理常式引數的類型。
+第二個事件處理程式參數的類型。
 
 *T3*<br/>
-第三個事件處理常式引數的類型。
+第三個事件處理程式參數的類型。
 
 *T4*<br/>
-第四個事件處理常式引數的類型。
+第四個事件處理程式參數的類型。
 
 *T5*<br/>
-第五個事件處理常式引數的類型。
+第五個事件處理程式參數的類型。
 
 *T6*<br/>
-第六個事件處理常式引數的類型。
+第六個事件處理程式參數的類型。
 
 *T7*<br/>
-第七個事件處理常式引數的類型。
+第七個事件處理程式參數的類型。
 
 *T8*<br/>
-第八個事件處理常式引數的類型。
+第八個事件處理程式參數的類型。
 
 *T9*<br/>
-第九個事件處理常式引數的類型。
+第九個事件處理程式參數的類型。
 
 *arg0*<br/>
-預備事件處理常式引數。
+第零事件處理程式參數。
 
 *arg1*<br/>
-第一個事件處理常式引數。
+第一個事件處理程式參數。
 
 *arg2*<br/>
-第二個事件處理常式引數。
+第二個事件處理程式參數。
 
 *arg3*<br/>
-第三個事件處理常式引數。
+第三個事件處理程式參數。
 
 *arg4*<br/>
-第四個事件處理常式引數。
+第四個事件處理程式參數。
 
 *arg5*<br/>
-第五個事件處理常式引數。
+第五個事件處理程式參數。
 
 *arg6*<br/>
-第六個事件處理常式引數。
+第六個事件處理程式參數。
 
 *arg7*<br/>
-第七個事件處理常式引數。
+第七個事件處理程式參數。
 
 *arg8*<br/>
-第八個事件處理常式引數。
+第八個事件處理程式參數。
 
 *arg9*<br/>
-第九個事件處理常式引數。
+第九個事件處理程式參數。
 
-## <a name="remove"></a>EventSource：： Remove
+## <a name="eventsourceremove"></a><a name="remove"></a>事件來源:刪除
 
-從與目前 `EventSource` 物件相關聯的事件處理常式集合中，刪除指定的事件註冊 token 所表示的事件處理常式。
+從與當前`EventSource`物件關聯的事件處理程式集中刪除指定事件註冊權杖表示的事件處理程式。
 
 ```cpp
 HRESULT Remove(
@@ -364,8 +364,8 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>參數
 
-*token*<br/>
-表示事件處理常式的控制碼。 當事件處理常式由[Add （）](#add)方法註冊時，就會傳回這個 token。
+*權杖*<br/>
+表示事件處理程式的句柄。 當[Add()](#add)方法註冊事件處理程式時,將返回此令牌。
 
 ### <a name="return-value"></a>傳回值
 
@@ -373,11 +373,11 @@ HRESULT Remove(
 
 ### <a name="remarks"></a>備註
 
-如需 `EventRegistrationToken` 結構的詳細資訊，請參閱**Windows 執行階段**參考檔中的**Windows：： Foundation：： EventRegistrationToken 結構**主題。
+有關`EventRegistrationToken`結構的詳細資訊,請參閱**Windows 運行時**參考文檔中的**Windows:基礎::事件註冊權杖結構**主題。
 
-## <a name="targets"></a>EventSource：： targets_
+## <a name="eventsourcetargets_"></a><a name="targets"></a>活動來源::targets_
 
-一或多個事件處理常式的陣列。
+一個或多個事件處理程式的陣列。
 
 ```cpp
 ComPtr<Details::EventTargetArray> targets_;
@@ -385,11 +385,11 @@ ComPtr<Details::EventTargetArray> targets_;
 
 ### <a name="remarks"></a>備註
 
-當目前的 `EventSource` 物件所代表的事件發生時，就會呼叫事件處理常式。
+當由當前`EventSource`物件表示的事件發生時,將調用事件處理程式。
 
-## <a name="targetspointerlock"></a>EventSource：： targetsPointerLock_
+## <a name="eventsourcetargetspointerlock_"></a><a name="targetspointerlock"></a>活動來源:targetsPointerLock_
 
-即使加入、移除或叫用此 `EventSource` 的事件處理常式，也會同步處理內部資料成員的存取。
+同步對內部數據成員的訪問,即使正在添加、刪除或調用`EventSource`此事件處理程式也是如此。
 
 ```cpp
 Wrappers::SRWLock targetsPointerLock_;

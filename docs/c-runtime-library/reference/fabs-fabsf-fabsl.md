@@ -1,10 +1,11 @@
 ---
 title: fabs、fabsf、fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941487"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920235"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -75,17 +77,19 @@ long double fabsl(
 
 **Fabs**函數會傳回引數*x*的絕對值。 不會傳回錯誤。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|none|_DOMAIN|
+|± QNAN，IND|無|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-C++允許多載，因此如果您包含\<h > 標頭，您可以呼叫**fabs**的多載。 在 C 程式中， **fabs**一律會採用並傳回**雙精度浮點數**。
+C + + 允許多載，因此如果您**fabs**包含\<h> 標頭，您可以呼叫 fabs 的多載。 在 C 程式中， **fabs**一律會採用並傳回**雙精度浮點數**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的 C 標頭|必要的 C++ 標頭|
+|函式|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|-----------------------|---------------------------|
 |**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
 

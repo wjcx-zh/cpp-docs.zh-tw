@@ -1,9 +1,11 @@
 ---
 title: _ismbbprint、_ismbbprint_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbprint_l
 - _ismbbprint
+- _o__ismbbprint
+- _o__ismbbprint_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: c40ddc931faa5f1dcff914d7c615207ed57d11cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63aa7d9af3b756bc7807cae55fe969d492ec43cf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954050"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918644"
 ---
 # <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint、_ismbbprint_l
 
@@ -56,7 +59,7 @@ int _ismbbprint_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -64,11 +67,15 @@ int _ismbbprint_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果運算式為，則 **_ismbbprint**會傳回非零值：
+如果運算式為， **_ismbbprint**會傳回非零值：
 
 `isprint(c) || _ismbbkprint(c)`
 
-*c*為非零值; 如果不是，則為0。 **_ismbbprint**會針對任何與地區設定相關的行為使用目前的地區設定。 **_ismbbprint_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+*c*為非零值; 如果不是，則為0。 **_ismbbprint**會針對任何與地區設定相關的行為使用目前的地區設定。 **_ismbbprint_l**是相同的，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -77,7 +84,7 @@ int _ismbbprint_l(
 |**_ismbbprint**|\<mbctype.h>|
 |**_ismbbprint_l**|\<mbctype.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

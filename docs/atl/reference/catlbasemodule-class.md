@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d382d1fe7d50a2fdeefc9b477625580792de7d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d57d6e631cb287496a4ff5516e97e65ec0152e30
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247148"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168289"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule 類別
 
-這個類別是在每個 ATL 專案中具現化。
+這個類別會在每個 ATL 專案中具現化。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CAtlBaseModule : public _ATL_BASE_MODULE
 ```
 
@@ -44,26 +44,26 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|將資源執行個體加入至預存的控制代碼清單。|
-|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|傳回指定的資源執行個體的控制代碼。|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|傳回從模組執行個體`CAtlBaseModule`物件。|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|傳回資源的執行個體從`CAtlBaseModule`物件。|
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|移除的預存的控制代碼清單中的資源執行個體。|
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|設定的資源執行個體`CAtlBaseModule`物件。|
+|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|將資源實例加入至預存控制碼清單。|
+|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|傳回指定之資源實例的控制碼。|
+|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|從`CAtlBaseModule`物件傳回模組實例。|
+|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|從`CAtlBaseModule`物件傳回資源實例。|
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|從預存控制碼清單中移除資源實例。|
+|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|設定`CAtlBaseModule`物件的資源實例。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|指出是否已經失敗。 模組初始化的變數。|
+|[CAtlBaseModule：： m_bInitFailed](#m_binitfailed)|指出模組初始化是否失敗的變數。|
 
 ## <a name="remarks"></a>備註
 
-執行個體`CAtlBaseModule`具名的 _AtlBaseModule 位於每個包含模組執行個體的控制代碼，包含資源 （根據預設，同一個），此模組並提供主要的模組控制代碼陣列的控制代碼的 ATL 專案資源。 `CAtlBaseModule` 可以安全地從多個執行緒存取。
+`CAtlBaseModule`名為 _AtlBaseModule 的實例存在於每個 ATL 專案中，其中包含模組實例的控制碼、包含資源之模組的控制碼（預設為一個和相同的），以及提供主要資源的模組控制碼陣列。 `CAtlBaseModule`可以安全地從多個執行緒存取。
 
-這個類別會取代過時[CComModule](../../atl/reference/ccommodule-class.md)用在舊版的 ATL 類別
+這個類別會取代舊版 ATL 中使用的過時[CComModule](../../atl/reference/ccommodule-class.md)類別。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)
 
@@ -71,30 +71,30 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcore.h
+**標頭：** atlcore。h
 
-##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance
 
-將資源執行個體加入至預存的控制代碼清單。
+將資源實例加入至預存控制碼清單。
 
-```
+```cpp
 bool AddResourceInstance(HINSTANCE hInst) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
 *hInst*<br/>
-要加入資源執行個體。
+要加入的資源實例。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 true，如果資源已成功新增，false 否則。
+如果成功新增資源，則傳回 true，否則傳回 false。
 
-##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule
 
 建構函式。
 
-```
+```cpp
 CAtlBaseModule() throw();
 ```
 
@@ -102,92 +102,92 @@ CAtlBaseModule() throw();
 
 建立 `CAtlBaseModule`。
 
-##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt
 
-傳回指定的資源執行個體的控制代碼。
+傳回指定之資源實例的控制碼。
 
-```
+```cpp
 HINSTANCE GetHInstanceAt(int i) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*i*<br/>
-資源執行個體數目。
+*怎樣*<br/>
+資源實例的編號。
 
 ### <a name="return-value"></a>傳回值
 
-如果沒有對應的資源執行個體存在，傳回的控制代碼資源的執行個體，或 NULL。
+傳回資源實例的控制碼，如果沒有對應的資源實例存在，則傳回 Null。
 
-##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance
 
-傳回從模組執行個體`CAtlBaseModule`物件。
+從`CAtlBaseModule`物件傳回模組實例。
 
-```
+```cpp
 HINSTANCE GetModuleInstance() throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-傳回模組執行個體。
+傳回模組實例。
 
-##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance
 
-傳回的資源執行個體。
+傳回資源實例。
 
-```
+```cpp
 HINSTANCE GetResourceInstance() throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-傳回的資源執行個體。
+傳回資源實例。
 
-##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule：： m_bInitFailed
 
-指出是否已經失敗。 模組初始化的變數。
+指出模組初始化是否失敗的變數。
 
-```
+```cpp
 static bool m_bInitFailed;
 ```
 
 ### <a name="remarks"></a>備註
 
-如果模組初始化，false 如果它無法初始化，則為 true。
+如果模組已初始化，則為 True，如果無法初始化，則為 false。
 
-##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance
 
-移除的預存的控制代碼清單中的資源執行個體。
+從預存控制碼清單中移除資源實例。
 
-```
+```cpp
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
 *hInst*<br/>
-若要移除資源執行個體。
+要移除的資源實例。
 
 ### <a name="return-value"></a>傳回值
 
-如果資源已成功移除，否則為 false 否則，就會傳回 true。
+如果已成功移除資源，則傳回 true，否則傳回 false。
 
-##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance
 
-設定的資源執行個體`CAtlBaseModule`物件。
+設定`CAtlBaseModule`物件的資源實例。
 
-```
+```cpp
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
 *hInst*<br/>
-新的資源執行個體。
+新的資源實例。
 
 ### <a name="return-value"></a>傳回值
 
-傳回更新的資源執行個體。
+傳回已更新的資源實例。
 
 ## <a name="see-also"></a>另請參閱
 

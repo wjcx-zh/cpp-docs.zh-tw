@@ -2,24 +2,24 @@
 title: Concurrency 命名空間運算子 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376298"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
-|[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
-|[operator==](#operator_eq_eq)|
+|[操作員!](#operator_neq)|[操作員百分比](#operator_mod)|[運算子*](#operator_star)|
+|[運算子*](#operator_add)|[操作員-](#operator-)|[操作員/](#operator_div)|
+|[運算子*](#operator_eq_eq)|
 
-## <a name="operator_eq_eq"></a> operator==
+## <a name="operator"></a><a name="operator_eq_eq"></a>運算子*
 
-判斷指定的引數是否相等。
+確定指定的參數是否相等。
 
 ```cpp
 template <
@@ -34,21 +34,21 @@ bool operator== (
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組引數的次序。
+元組參數的排名。
 
 *_Lhs*<br/>
-其中一個要比較的元組。
+要比較的元數之一。
 
 *_Rhs*<br/>
-其中一個要比較的元組。
+要比較的元數之一。
 
 ### <a name="return-value"></a>傳回值
 
-如果元組相等，則為**true** ;否則**為 false**。
+如果元數相等,**則為 true;** 否則,**假**。
 
-## <a name="operator_neq"></a> operator!=
+## <a name="operator"></a><a name="operator_neq"></a>操作員!
 
-判斷指定的引數是否不相等。
+確定指定的參數是否不相等。
 
 ```cpp
 template <
@@ -63,21 +63,21 @@ bool operator!= (
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組引數的次序。
+元組參數的排名。
 
 *_Lhs*<br/>
-其中一個要比較的元組。
+要比較的元數之一。
 
 *_Rhs*<br/>
-其中一個要比較的元組。
+要比較的元數之一。
 
 ### <a name="return-value"></a>傳回值
 
-如果元組不相等，則為**true** ;否則**為 false**。
+如果元結不相等,**則為 true;** 否則,**假**。
 
-## <a name="operator_add"></a>  operator+
+## <a name="operator"></a><a name="operator_add"></a>運算子*
 
-計算指定引數的元件成對總和。
+計算指定參數的元件級總和。
 
 ```cpp
 template <
@@ -108,21 +108,21 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組引數的次序。
+元組參數的排名。
 
 *_Lhs*<br/>
-要加入的其中一個引數。
+要添加的參數之一。
 
 *_Rhs*<br/>
-要加入的其中一個引數。
+要添加的參數之一。
 
 ### <a name="return-value"></a>傳回值
 
-指定引數的元件成對總和。
+指定參數的元件與
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a><a name="operator-"></a>操作員-
 
-計算指定引數之間的元件取向差異。
+計算指定參數之間的元件差異。
 
 ```cpp
 template <
@@ -153,21 +153,21 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組引數的次序。
+元組參數的排名。
 
 *_Lhs*<br/>
-要減去的引數。
+要從中減去的參數。
 
 *_Rhs*<br/>
-要減去的引數。
+要減去的參數。
 
 ### <a name="return-value"></a>傳回值
 
-指定引數之間的元件取向差異。
+指定參數之間的元件差異。
 
-## <a name="operator_star"></a>  operator*
+## <a name="operator"></a><a name="operator_star"></a>運算子*
 
-計算指定引數的元件產品。
+計算指定參數的元件級積。
 
 ```cpp
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組引數的次序。
+元組參數的排名。
 
 *_Lhs*<br/>
-要相乘的其中一個元組。
+要乘法的元數之一。
 
 *_Rhs*<br/>
-要相乘的其中一個元組。
+要乘法的元數之一。
 
 ### <a name="return-value"></a>傳回值
 
-指定引數的元件產品。
+指定參數的元件級積。
 
-## <a name="operator_div"></a>  operator/
+## <a name="operator"></a><a name="operator_div"></a>操作員/
 
-計算指定引數的元件的商。
+計算指定參數的按元件商。
 
 ```cpp
 template <
@@ -227,7 +227,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組引數的次序。
+元組參數的排名。
 
 *_Lhs*<br/>
 要分割的元組。
@@ -237,11 +237,11 @@ _Tuple_type<_Rank>   operator/(
 
 ### <a name="return-value"></a>傳回值
 
-指定引數的元件的商。
+指定參數的元件商。
 
-## <a name="operator_mod"></a>  operator%
+## <a name="operator"></a><a name="operator_mod"></a>操作員百分比
 
-以第二個指定的引數來計算第一個指定引數的模數。
+計算第二個指定參數的第一個指定參數的模數。
 
 ```cpp
 template <
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組引數的次序。
+元組參數的排名。
 
 *_Lhs*<br/>
-用來計算模數的元組。
+計算莫杜洛的元組。
 
 *_Rhs*<br/>
-要做為模數依據的元組。
+元組通過。
 
 ### <a name="return-value"></a>傳回值
 
-第一個指定引數的結果會模數第二個指定的引數。
+第一個指定參數的結果調製第二個指定的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[Concurrency 命名空間](concurrency-namespace-cpp-amp.md)
+[併發命名空間](concurrency-namespace-cpp-amp.md)

@@ -1,5 +1,5 @@
 ---
-title: IObjectSafetyImpl 類別
+title: IObjectSafetyimpl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - IObjectSafetyImpl
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6eee7585bc3c5587e106ab6b0cefb4b7129df59f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329655"
 ---
-# <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 類別
+# <a name="iobjectsafetyimpl-class"></a>IObjectSafetyimpl 類別
 
-這個類別提供的預設實作`IObjectSafety`介面，以允許用戶端會擷取和設定物件的安全性層級。
+此類提供介面的預設實現,`IObjectSafety`以允許用戶端檢索和設置物件的安全級別。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -37,14 +37,14 @@ class IObjectSafetyImpl
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IObjectSafetyImpl`。
+您的類,派生自`IObjectSafetyImpl`。
 
-*dwSupportedSafety*<br/>
-指定控制項的支援的安全性選項。 可為下列其中一個值：
+*dw支援安全*<br/>
+指定控制項的支援安全選項。 可以是下列其中一個值：
 
-- 所識別的介面 INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterfaceSafetyOptions](#setinterfacesafetyoptions)參數`riid`應在安全的。
+- INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterface 安全選項](#setinterfacesafetyoptions)參數`riid`標識的介面應使腳本編寫安全。
 
-- 所識別的介面 INTERFACESAFE_FOR_UNTRUSTED_DATA`SetInterfaceSafetyOptions`參數`riid`應在安全的未受信任的資料在初始化期間。
+- INTERFACESAFE_FOR_UNTRUSTED_DATA 參數標識`SetInterfaceSafetyOptions`的`riid`介面應在初始化期間對不受信任的數據提供安全。
 
 ## <a name="members"></a>成員
 
@@ -52,24 +52,24 @@ class IObjectSafetyImpl
 
 |名稱|描述|
 |----------|-----------------|
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|擷取物件所支援的安全性選項，以及設定物件的目前的安全性選項。|
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|使物件初始化 」 或 「 指令碼的安全。|
+|[IObjectSafetyimpl::取得介面安全選項](#getinterfacesafetyoptions)|檢索物件支援的安全選項以及當前為物件設置的安全選項。|
+|[IObjectSafetyimpl::設定介面安全選項](#setinterfacesafetyoptions)|使物件安全進行初始化或腳本化。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|儲存物件的目前安全性層級。|
+|[IObjectSafetyimpl::m_dwCurrentSafety](#m_dwcurrentsafety)|存儲物件的當前安全級別。|
 
 ## <a name="remarks"></a>備註
 
-類別`IObjectSafetyImpl`提供的預設實作`IObjectSafety`。 `IObjectSafety`介面允許用戶端會擷取和設定物件的安全性層級。 例如，網頁瀏覽器可以呼叫`IObjectSafety::SetInterfaceSafetyOptions`使控制項進行初始化安全或安全用於指令碼。
+類`IObjectSafetyImpl`提供`IObjectSafety`的默認實現。 該`IObjectSafety`介面允許用戶端檢索和設置物件的安全級別。 例如,Web 瀏覽器可以調`IObjectSafety::SetInterfaceSafetyOptions`用 以使控制項安全用於初始化或腳本編寫安全。
 
-請注意，使用[IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)巨集與 CATID_SafeForScripting 和 CATID_SafeForInitializing 元件類別提供指定的元件安全的替代方式。
+請注意,將[IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)宏與CATID_SafeForScripting和CATID_SafeForInitializing元件類別一起使用提供了指定元件安全的替代方法。
 
-**相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md), 建立[ATL 專案](../../atl/reference/creating-an-atl-project.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IObjectSafety`
 
@@ -77,11 +77,11 @@ class IObjectSafetyImpl
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlctl.h
+**標題:** atlctl.h
 
-##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplgetinterfacesafetyoptions"></a><a name="getinterfacesafetyoptions"></a>IObjectSafetyimpl::取得介面安全選項
 
-擷取物件所支援的安全性選項，以及設定物件的目前的安全性選項。
+檢索物件支援的安全選項以及當前為物件設置的安全選項。
 
 ```
 HRESULT GetInterfaceSafetyOptions(
@@ -92,24 +92,24 @@ HRESULT GetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>備註
 
-實作會傳回適當的值之物件的實作所支援的任何介面`IUnknown::QueryInterface`。
+實現返回物件實現 支援的任何介面的`IUnknown::QueryInterface`適當值。
 
 > [!IMPORTANT]
->  支援的任何物件`IObjectSafety`負責它自己的安全性，它會將委派的任何物件。 程式設計人員必須考慮到帳戶的問題所造成的使用者內容中執行程式碼、 跨網站指令碼和執行檢查適當的區域。
+> 支援`IObjectSafety`的任何物件都負責其自身的安全性及其委託的任何對象的安全性。 程序員必須考慮在使用者上下文中運行代碼、跨網站腳本和執行適當的區域檢查所產生的問題。
 
-請參閱[IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) Windows SDK 中。
+請參閱[IObject 安全:獲取](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\))Windows SDK 中的介面安全選項。
 
-##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
+## <a name="iobjectsafetyimplm_dwcurrentsafety"></a><a name="m_dwcurrentsafety"></a>IObjectSafetyimpl::m_dwCurrentSafety
 
-儲存物件的目前安全性層級。
+存儲物件的當前安全級別。
 
 ```
 DWORD m_dwCurrentSafety;
 ```
 
-##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplsetinterfacesafetyoptions"></a><a name="setinterfacesafetyoptions"></a>IObjectSafetyimpl::設定介面安全選項
 
-使物件初始化，或藉由設定指令碼的安全[m_dwCurrentSafety](#m_dwcurrentsafety)成員，才能適當的值。
+通過將[m_dwCurrentSafety](#m_dwcurrentsafety)成員設置為適當的值,使物件在初始化或腳本化方面安全。
 
 ```
 HRESULT SetInterfaceSafetyOptions(
@@ -120,14 +120,14 @@ HRESULT SetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>備註
 
-實作會傳回 E_NOINTERFACE 不支援的物件實作任何介面`IUnknown::QueryInterface`。
+對於物件實現 不支援的任何介面,實現`IUnknown::QueryInterface`返回E_NOINTERFACE。
 
 > [!IMPORTANT]
->  支援的任何物件`IObjectSafety`負責它自己的安全性，它會將委派的任何物件。 程式設計人員必須考慮到帳戶的問題所造成的使用者內容中執行程式碼、 跨網站指令碼和執行檢查適當的區域。
+> 支援`IObjectSafety`的任何物件都負責其自身的安全性及其委託的任何對象的安全性。 程序員必須考慮在使用者上下文中運行代碼、跨網站腳本和執行適當的區域檢查所產生的問題。
 
-請參閱[IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) Windows SDK 中。
+請參閱[IObject 安全:在](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\))Windows SDK 中設置介面安全選項。
 
 ## <a name="see-also"></a>另請參閱
 
-[IObjectSafety 介面](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
+[IObject 安全介面](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
 [類別概觀](../../atl/atl-class-overview.md)

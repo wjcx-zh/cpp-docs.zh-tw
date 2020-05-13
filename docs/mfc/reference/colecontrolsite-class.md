@@ -1,5 +1,5 @@
 ---
-title: COleControlSite 類別
+title: COle 控制網站類別
 ms.date: 11/04/2016
 f1_keywords:
 - COleControlSite
@@ -106,14 +106,14 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 9b9b68a001acdf4b08d9cfc01cc67c43217d9a57
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504309"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753953"
 ---
-# <a name="colecontrolsite-class"></a>COleControlSite 類別
+# <a name="colecontrolsite-class"></a>COle 控制網站類別
 
 提供自訂用戶端控制項介面的支援。
 
@@ -129,79 +129,79 @@ class COleControlSite : public CCmdTarget
 
 |名稱|描述|
 |----------|-----------------|
-|[COleControlSite::COleControlSite](#colecontrolsite)|建構 `COleControlSite` 物件。|
+|[COle 控制網站:COle 控制網站](#colecontrolsite)|建構 `COleControlSite` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleControlSite::BindDefaultProperty](#binddefaultproperty)|將主控控制項的預設屬性系結至資料來源。|
-|[COleControlSite::BindProperty](#bindproperty)|將主控控制項的屬性系結至資料來源。|
-|[COleControlSite::CreateControl](#createcontrol)|建立主控的 ActiveX 控制項。|
-|[COleControlSite::DestroyControl](#destroycontrol)|終結主控的控制項。|
-|[COleControlSite::DoVerb](#doverb)|執行主控控制項的特定動詞。|
-|[COleControlSite::EnableDSC](#enabledsc)|啟用控制網站的資料來源。|
-|[COleControlSite::EnableWindow](#enablewindow)|啟用控制網站。|
-|[COleControlSite::FreezeEvents](#freezeevents)|指定控制項網站是否接受事件。|
-|[COleControlSite::GetDefBtnCode](#getdefbtncode)|抓取主控控制項的預設按鈕程式碼。|
-|[COleControlSite::GetDlgCtrlID](#getdlgctrlid)|抓取控制項的識別碼。|
-|[COleControlSite::GetEventIID](#geteventiid)|抓取主控控制項之事件介面的識別碼。|
-|[COleControlSite::GetExStyle](#getexstyle)|抓取控制網站的延伸樣式。|
-|[COleControlSite::GetProperty](#getproperty)|抓取主控控制項的特定屬性。|
-|[COleControlSite::GetStyle](#getstyle)|抓取控制網站的樣式。|
-|[COleControlSite::GetWindowText](#getwindowtext)|抓取裝載控制項的文字。|
-|[COleControlSite::InvokeHelper](#invokehelper)|叫用主控控制項的特定方法。|
-|[COleControlSite::InvokeHelperV](#invokehelperv)|使用引數的可變清單, 叫用裝載控制項的特定方法。|
-|[COleControlSite::IsDefaultButton](#isdefaultbutton)|決定控制項是否為視窗中的預設按鈕。|
-|[COleControlSite::IsWindowEnabled](#iswindowenabled)|檢查控制項網站的可見狀態。|
-|[COleControlSite::ModifyStyle](#modifystyle)|修改控制網站的目前擴充樣式。|
-|[COleControlSite::ModifyStyleEx](#modifystyleex)|修改控制網站的目前樣式。|
-|[COleControlSite::MoveWindow](#movewindow)|變更控制網站的位置。|
-|[COleControlSite::QuickActivate](#quickactivate)|快速啟動主控的控制項。|
-|[COleControlSite::SafeSetProperty](#safesetproperty)|設定控制項的屬性或方法, 而不會擲回例外狀況。|
-|[COleControlSite::SetDefaultButton](#setdefaultbutton)|設定視窗中的預設按鈕。|
-|[COleControlSite::SetDlgCtrlID](#setdlgctrlid)|抓取控制項的識別碼。|
-|[COleControlSite::SetFocus](#setfocus)|將焦點設定為控制網站。|
-|[COleControlSite::SetProperty](#setproperty)|設定主控控制項的特定屬性。|
-|[COleControlSite::SetPropertyV](#setpropertyv)|使用引數清單來設定裝載控制項的特定屬性。|
-|[COleControlSite::SetWindowPos](#setwindowpos)|設定控制網站的位置。|
-|[COleControlSite::SetWindowText](#setwindowtext)|設定主控控制項的文字。|
-|[COleControlSite::ShowWindow](#showwindow)|顯示或隱藏控制網站。|
+|[COle 控制網站::結合預設屬性](#binddefaultproperty)|將托管控件的默認屬性綁定到數據源。|
+|[COle 控制網站:結合屬性](#bindproperty)|將托管控件的屬性綁定到數據源。|
+|[COle 控制網站:建立控制](#createcontrol)|創建託管的 ActiveX 控制件。|
+|[COleControlSite::D控制](#destroycontrol)|銷毀托管控件。|
+|[COleControlSite::DoVerb](#doverb)|執行託管控件的特定謂詞。|
+|[COle 控制網站:啟用DSC](#enabledsc)|支援控制網站的數據源。|
+|[COle 控制網站開啟視窗](#enablewindow)|啟用控制網站。|
+|[COle 控制網站:凍結事件](#freezeevents)|指定控制項網站是否接受事件。|
+|[COle 控制網站:取得DefBtn代碼](#getdefbtncode)|檢索托管控件的默認按鈕代碼。|
+|[COle 控制網站:取得DlgCtrlID](#getdlgctrlid)|檢索控件的標識碼。|
+|[COle 控制網站:取得事件Id](#geteventiid)|檢索托管控件的事件介面的 ID。|
+|[COle 控制網站:取得樣式](#getexstyle)|檢索控件網站的擴展樣式。|
+|[COle 控制網站:取得財產](#getproperty)|檢索托管控件的特定屬性。|
+|[COle 控制網站:取得樣式](#getstyle)|檢索控件網站的樣式。|
+|[COle 控制網站:抓取視窗文字](#getwindowtext)|檢索托管控件的文本。|
+|[COle 控制網站::呼叫説明者](#invokehelper)|調用托管控件的特定方法。|
+|[COle 控制網站::呼叫説明者V](#invokehelperv)|使用參數的變數清單調用托管控件的特定方法。|
+|[COle 控制網站:預設按鈕](#isdefaultbutton)|確定控制項是否為視窗中的預設按鈕。|
+|[COle 控制網站開啟視窗](#iswindowenabled)|檢查控制網站的可見狀態。|
+|[COle 控制網站:修改樣式](#modifystyle)|修改控制項網站的當前擴展樣式。|
+|[COle 控制網站:修改樣式](#modifystyleex)|修改控件網站的當前樣式。|
+|[COle 控制網站:移動視窗](#movewindow)|更改控制網站的位置。|
+|[COle 控制網站:快速啟動](#quickactivate)|快速啟動托管控件。|
+|[COle 控制網站:安全設定屬性](#safesetproperty)|設置控件的屬性或方法,而不會引發異常。|
+|[COle 控制網站:設定預設按鈕](#setdefaultbutton)|設置視窗中的預設按鈕。|
+|[COle 控制網站:SetDlgCtrlID](#setdlgctrlid)|檢索控件的標識碼。|
+|[COle 控制網站:設定焦點](#setfocus)|將焦點設置到控制網站。|
+|[COle 控制網站:設定屬性](#setproperty)|設置托管控件的特定屬性。|
+|[COle 控制網站:SetPropertyV](#setpropertyv)|使用參數的可變清單設置托管控件的特定屬性。|
+|[COle 控制網站:設定視窗位置](#setwindowpos)|設置控制網站的位置。|
+|[COle 控制網站:設定視窗文字](#setwindowtext)|設置托管控件的文本。|
+|[COle 控制網站:顯示視窗](#showwindow)|顯示或隱藏控制網站。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleControlSite::GetControlInfo](#getcontrolinfo)|抓取主控控制項的鍵盤資訊和助憶鍵。|
+|[COle 控制網站:取得控制資訊](#getcontrolinfo)|檢索托管控件的鍵盤資訊和助記符。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleControlSite::m_bIsWindowless](#m_biswindowless)|判斷主控控制項是否為無視窗控制項。|
-|[COleControlSite::m_ctlInfo](#m_ctlinfo)|包含控制項鍵盤處理的相關資訊。|
-|[COleControlSite::m_dwEventSink](#m_dweventsink)|控制項的連接點的 cookie。|
-|[COleControlSite::m_dwMiscStatus](#m_dwmiscstatus)|裝載控制項的其他狀態。|
-|[COleControlSite::m_dwPropNotifySink](#m_dwpropnotifysink)|控制項`IPropertyNotifySink`的 cookie。|
-|[COleControlSite::m_dwStyle](#m_dwstyle)|主控控制項的樣式。|
-|[COleControlSite::m_hWnd](#m_hwnd)|控制網站的控制碼。|
-|[COleControlSite::m_iidEvents](#m_iidevents)|裝載控制項之事件介面的識別碼。|
-|[COleControlSite::m_nID](#m_nid)|主控控制項的識別碼。|
-|[COleControlSite::m_pActiveObject](#m_pactiveobject)|主控控制項之`IOleInPlaceActiveObject`物件的指標。|
-|[COleControlSite::m_pCtrlCont](#m_pctrlcont)|主控控制項的容器。|
-|[COleControlSite::m_pInPlaceObject](#m_pinplaceobject)|主控控制項之`IOleInPlaceObject`物件的指標。|
-|[COleControlSite::m_pObject](#m_pobject)|控制項`IOleObjectInterface`介面的指標。|
-|[COleControlSite::m_pWindowlessObject](#m_pwindowlessobject)|控制項`IOleInPlaceObjectWindowless`介面的指標。|
-|[COleControlSite::m_pWndCtrl](#m_pwndctrl)|裝載控制項的視窗物件指標。|
-|[COleControlSite::m_rect](#m_rect)|控制網站的維度。|
+|[COle 控制網站:m_bIsWindowless](#m_biswindowless)|確定托管控件是否為無視窗控制項。|
+|[COle 控制網站:m_ctlInfo](#m_ctlinfo)|包含有關控制項的鍵盤處理的資訊。|
+|[COle 控制網站:m_dwEventSink](#m_dweventsink)|控件連接點的 Cookie。|
+|[COle 控制網站:m_dwMiscStatus](#m_dwmiscstatus)|托管控件的雜項狀態。|
+|[COle 控制網站:m_dwPropNotifySink](#m_dwpropnotifysink)|控件`IPropertyNotifySink`的 Cookie。|
+|[COle 控制網站:m_dwStyle](#m_dwstyle)|托管控件的樣式。|
+|[COle 控制網站:m_hWnd](#m_hwnd)|控制網站的句柄。|
+|[COle 控制網站:m_iidEvents](#m_iidevents)|托管控件的事件介面的 ID。|
+|[COle 控制網站:m_nID](#m_nid)|托管控件的 ID。|
+|[COle 控制網站:m_pActiveObject](#m_pactiveobject)|指向托管控件`IOleInPlaceActiveObject`物件的指標。|
+|[COle 控制網站:m_pCtrlCont](#m_pctrlcont)|托管控件的容器。|
+|[COle 控制網站:m_pInPlaceObject](#m_pinplaceobject)|指向托管控件`IOleInPlaceObject`物件的指標。|
+|[COle 控制網站:m_pObject](#m_pobject)|指向控件`IOleObjectInterface`介面的指標。|
+|[COle 控制網站:m_pWindowlessObject](#m_pwindowlessobject)|指向控件`IOleInPlaceObjectWindowless`介面的指標。|
+|[COle 控制網站:m_pWndCtrl](#m_pwndctrl)|指向托管控件的視窗物件的指標。|
+|[COle控制網站::m_rect](#m_rect)|控制網站的尺寸。|
 
 ## <a name="remarks"></a>備註
 
-這項支援是內嵌 ActiveX 控制項取得其顯示網站位置與範圍、其名字標記、其使用者介面、其環境屬性以及其容器所提供的其他資源之相關資訊的主要方式。 `COleControlSite`完整執行[IOleControlSite](/windows/win32/api/ocidl/nn-ocidl-iolecontrolsite)、 [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)、 [IOleClientSite](/windows/win32/api/oleidl/nn-oleidl-ioleclientsite)、 [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) `IBoundObjectSite`、、 `INotifyDBEvents`、 [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)介面。 此外, IDispatch 介面 (提供環境屬性和事件接收器的支援) 也會一併執行。
+此支援是嵌入式 ActiveX 控制項獲取有關其顯示網站的位置和範圍、其名字物件、使用者介面、其環境屬性及其容器提供的其他資源的主要方法。 `COleControlSite`全面實施[IOleControlSite,IOleInPlaceSite,IOleClientSite,IpropertynotifySink,、、IrowSetnotify](/windows/win32/api/ocidl/nn-ocidl-iolecontrolsite)[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)`IBoundObjectSite``INotifyDBEvents`[IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)[IOleClientSite](/windows/win32/api/oleidl/nn-oleidl-ioleclientsite)[介面](../../data/oledb/irowsetnotifyimpl-class.md)。 此外,還實現了 IDispatch 介面(支援環境屬性和事件接收器)。
 
-若要使用`COleControlSite`來建立 ActiveX 控制項網站, 請從`COleControlSite`衍生類別。 在容器的衍生類別中 (例如, 您的對話方塊) 會覆`CWnd::CreateControlSite`寫函數。 `CWnd`
+要使用`COleControlSite`創建 ActiveX 控制件網站,`COleControlSite`請派生 類。 在容器`CWnd`的派生類中(例如,對話框)將覆蓋該`CWnd::CreateControlSite`函數。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -211,11 +211,11 @@ class COleControlSite : public CCmdTarget
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxocc。h
+**標題:** afxocc.h
 
-##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty
+## <a name="colecontrolsitebinddefaultproperty"></a><a name="binddefaultproperty"></a>COle 控制網站::結合預設屬性
 
-將呼叫物件的預設簡單系結屬性 (如類型程式庫中所標記), 系結至資料來源控制項的 DataSource、使用者名稱、密碼和 SQL 屬性所定義的基礎資料指標。
+將調用物件的預設簡單綁定屬性(如類型庫中標記)綁定到數據源控制件的 DataSource、使用者名、密碼和 SQL 屬性定義的基礎游標。
 
 ```
 virtual void BindDefaultProperty(
@@ -228,24 +228,24 @@ virtual void BindDefaultProperty(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-在要系結至資料來源控制項的資料繫結控制項上, 指定 DISPID 的屬性。
+指定要綁定到資料來源控制件的資料綁定控制項上屬性的DISPID。
 
 *vtProp*<br/>
-指定要系結之屬性的類型, 例如 VT_BSTR、VT_VARIANT 等等。
+指定要綁定的屬性的類型,例如,VT_BSTR、VT_VARIANT等。
 
-*szFieldName*<br/>
-在資料來源控制項所提供的資料指標中, 指定要系結屬性的資料行名稱。
+*szfield名稱*<br/>
+指定列的名稱,在數據源控制件提供的游標中,該屬性將綁定到該列。
 
 *pDSCWnd*<br/>
-衍生物件的指標`CWnd`, 其裝載屬性將系結至的資料來源控制項。
+指向`CWnd`承載將屬性綁定到的數據源控件的派生物件的指標。
 
 ### <a name="remarks"></a>備註
 
-您`CWnd`呼叫這個函式的物件必須是資料繫結控制項。
+呼叫`CWnd`此函數的物件必須是數據綁定控制項。
 
-##  <a name="bindproperty"></a>  COleControlSite::BindProperty
+## <a name="colecontrolsitebindproperty"></a><a name="bindproperty"></a>COle 控制網站:結合屬性
 
-將呼叫物件的簡單系結屬性 (如類型程式庫中所標記) 系結至資料來源控制項的 DataSource、使用者名稱、密碼和 SQL 屬性所定義的基礎資料指標。
+將調用物件的簡單綁定屬性(如類型庫中標記)綁定到數據源控制項的 DataSource、使用者名、密碼和 SQL 屬性定義的基礎游標。
 
 ```
 virtual void BindProperty(
@@ -256,18 +256,18 @@ virtual void BindProperty(
 ### <a name="parameters"></a>參數
 
 *dwDispId*<br/>
-在要系結至資料來源控制項的資料繫結控制項上, 指定 DISPID 的屬性。
+指定要綁定到資料來源控制件的資料綁定控制項上屬性的DISPID。
 
 *pWndDSC*<br/>
-衍生物件的指標`CWnd`, 其裝載屬性將系結至的資料來源控制項。
+指向`CWnd`承載將屬性綁定到的數據源控件的派生物件的指標。
 
 ### <a name="remarks"></a>備註
 
-您`CWnd`呼叫這個函式的物件必須是資料繫結控制項。
+呼叫`CWnd`此函數的物件必須是數據綁定控制項。
 
-##  <a name="colecontrolsite"></a>  COleControlSite::COleControlSite
+## <a name="colecontrolsitecolecontrolsite"></a><a name="colecontrolsite"></a>COle 控制網站:COle 控制網站
 
-建立新`COleControlSite`的物件。
+建構新的 `COleControlSite` 物件。
 
 ```
 explicit COleControlSite(COleControlContainer* pCtrlCont);
@@ -276,15 +276,15 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ### <a name="parameters"></a>參數
 
 *pCtrlCont*<br/>
-控制項容器的指標 (表示裝載 AtiveX 控制項的視窗)。
+指向控制項容器的指標(表示承載 AtiveX 控制件的視窗)。
 
 ### <a name="remarks"></a>備註
 
-此函式是由[COccManager:: CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer)函數所呼叫。 如需自訂容器建立的詳細資訊, 請參閱[COccManager:: CreateSite](../../mfc/reference/coccmanager-class.md#createsite)。
+此函數由[COccManager:創建容器](../../mfc/reference/coccmanager-class.md#createcontainer)函數調用。 有關自訂容器創建的詳細資訊,請參閱[COccManager:::createSite](../../mfc/reference/coccmanager-class.md#createsite)。
 
-##  <a name="createcontrol"></a>COleControlSite:: CreateControl
+## <a name="colecontrolsitecreatecontrol"></a><a name="createcontrol"></a>COle 控制網站:建立控制
 
-建立由`COleControlSite`物件主控的 ActiveX 控制項。
+創建由物件託管的`COleControlSite`ActiveX 控制件。
 
 ```
 virtual HRESULT CreateControl(
@@ -314,61 +314,61 @@ virtual HRESULT CreateControl(
 ### <a name="parameters"></a>參數
 
 *pWndCtrl*<br/>
-代表控制項的視窗物件指標。
+指向表示控制項的視窗物件的指標。
 
-*clsid*<br/>
+*Clsid*<br/>
 控制項的唯一類別 ID。
 
-*lpszWindowName*<br/>
-要在控制項中顯示的文字指標。 設定 winodw 標題或文字屬性的值 (如果有的話)。
+*lpsz 視窗名稱*<br/>
+指向要在控制項中顯示的文本的指標。 設定 winodw 的標題或文本屬性(如果有)的值。
 
 *dwStyle*<br/>
-視窗樣式。 可用的樣式列在 [**備註**] 區段底下。
+視窗樣式。 可用樣式列在 **「備註」** 部分下。
 
-*rect*<br/>
-指定控制項的大小和位置。 它可以`CRect`是物件`RECT`或結構。
+*矩形*<br/>
+指定控制項的大小和位置。 它可以是`CRect`對`RECT`象或結構。
 
 *nID*<br/>
-指定控制項的子視窗識別碼。
+指定控制項的子視窗 ID。
 
-*pPersist*<br/>
-的指標, `CFile`其中包含控制項的持續狀態。 預設值為 Null, 表示控制項會自行初始化, 而不會從任何持續性儲存體還原其狀態。 如果不是 Null, 它應該是衍生物件的`CFile`指標, 其中包含控制項的持續性資料 (以資料流程或儲存體的形式)。 這項資料可能已儲存在用戶端先前的啟用中。 可以包含其他資料, 但在`CreateControl`呼叫時, 必須將其讀寫指標設定為持續性資料的第一個位元組。 `CFile`
+*p 堅持*<br/>
+指向`CFile`包含控制的持久狀態的指標。 默認值為 NULL,指示控制項在不從任何持久儲存還原其狀態的情況下初始化自身。 如果不是 NULL,它應該是指向包含控制項持久資料`CFile`的 派生物件的指標,其形式是流或存儲。 此數據可能已保存在用戶端的上次啟動中。 `CFile`可以包含其他數據,但必須將其讀寫指標設置為調用`CreateControl`時持久性數據的第一個字節。
 
-*bStorage*<br/>
-指出*pPersist*中的資料是否應解讀為`IStorage`或`IStream`資料。 如果*pPersist*中的資料是儲存體, 則*BSTORAGE*應為 TRUE。 如果*pPersist*中的資料是資料流程, *BSTORAGE*應該是 FALSE。 預設值為 FALSE。
+*b 儲存*<br/>
+指示是否應將*pPersist*中的數據`IStorage`解釋`IStream`為 或數據。 如果*pPersist*中的數據是儲存,*則 b 儲存*應為 TRUE。 如果*pPersist*中的數據是流,*則 b 儲存*應為 FALSE。 預設值為 FALSE。
 
 *bstrLicKey*<br/>
-選擇性的授權金鑰資料。 只有在建立需要執行時間授權金鑰的控制項時, 才需要此資料。 如果控制項支援授權, 您必須提供授權金鑰, 才能成功建立控制項。 預設值為 Null。
+可選的許可證金鑰資料。 僅創建需要運行時許可證密鑰的控制項才需要此資料。 如果控制項支援許可,則必須提供許可證金鑰才能成功建立控制項。 預設值是 NULL。
 
-*ppt*<br/>
-`POINT`結構的指標, 其中包含控制項的左上角。 控制項的大小取決於*psize*的值。 *Ppt*和*psize*值是選擇性的方法, 可指定控制項的 opf 大小和位置。
+*Ppt*<br/>
+指向包含控制項左`POINT`上角的結構的指標。 控制項大小由*size*的值決定。 *ppt*和*size 值*是指定控制項的大小和位置的選擇方法。
 
 *psize*<br/>
-`SIZE`結構的指標, 其中包含控制項的大小。 左上角是由*ppt*的值決定。 *Ppt*和*psize*值是選擇性的方法, 可指定控制項的 opf 大小和位置。
+指向包含控制大小的`SIZE`結構的指標。 左上角由*ppt*的值決定。 *ppt*和*size 值*是指定控制項的大小和位置的選擇方法。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-僅支援`CreateControl`部分的 Windows *dwStyle*旗標:
+只有 Windows *dwStyle*標誌的`CreateControl`子集受 支援:
 
-- WS_VISIBLE 會建立一開始顯示的視窗。 如果您想要立即顯示控制項 (例如一般視窗), 則為必要。
+- WS_VISIBLE 創建最初可見的視窗。 如果希望控件立即可見(如普通視窗),則需要。
 
-- WS_DISABLED 會建立一開始停用的視窗。 停用的視窗無法接收使用者的輸入。 如果控制項具有已啟用的屬性, 則可以設定。
+- WS_DISABLED 創建最初禁用的視窗。 禁用的視窗無法接收使用者輸入。 如果控件具有"已啟用"屬性,則可以進行設置。
 
-- WS_BORDER 會建立具有細線條框線的視窗。 如果控制項具有 BorderStyle 屬性, 則可以設定。
+- WS_BORDER 創建具有細線邊框的視窗。 如果控件具有 BorderStyle 屬性,則可以進行設置。
 
-- WS_GROUP 指定控制項群組的第一個控制項。 使用者可以使用方向鍵, 將鍵盤焦點從群組中的一個控制項變更為下一個。 在第一個控制項屬於相同群組之後, 以 WS_GROUP 樣式定義的所有控制項。 下一個具有 WS_GROUP 樣式的控制項會結束群組, 並啟動下一個群組。
+- WS_GROUP 指定一組控制件的第一個控制項。 用戶可以使用方向鍵將鍵盤焦點從組中的一個控制項更改為下一個控制項。 在第一個控制項之後使用WS_GROUP樣式定義的所有控制項都屬於同一組。 具有WS_GROUP樣式的下一個控制項將結束組並啟動下一個組。
 
-- WS_TABSTOP 指定當使用者按下 TAB 鍵時, 可接收鍵盤焦點的控制項。 按 TAB 鍵會將鍵盤焦點變更為 WS_TABSTOP 樣式的下一個控制項。
+- WS_TABSTOP 指定可在使用者按下 TAB 鍵時接收鍵盤焦點的控制項。 按下 TAB 鍵會將鍵盤焦點更改為WS_TABSTOP樣式的下一個控制項。
 
-使用第二個多載來建立預設大小的控制項。
+使用第二個重載創建預設大小的控制項。
 
-##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl
+## <a name="colecontrolsitedestroycontrol"></a><a name="destroycontrol"></a>COleControlSite::D控制
 
-`COleControlSite`終結物件。
+銷毀`COleControlSite`物件。
 
 ```
 virtual BOOL DestroyControl();
@@ -376,15 +376,15 @@ virtual BOOL DestroyControl();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則為非零, 否則為0。
+如果成功,則非零,否則為 0。
 
 ### <a name="remarks"></a>備註
 
-完成後, 物件會從記憶體釋放, 而且物件的任何指標都不再有效。
+完成後,對象將從記憶體中釋放,並且指向該物件的任何指標都不再有效。
 
-##  <a name="doverb"></a>  COleControlSite::DoVerb
+## <a name="colecontrolsitedoverb"></a><a name="doverb"></a>COleControlSite::DoVerb
 
-執行指定的動詞。
+執行指定的謂詞。
 
 ```
 virtual HRESULT DoVerb(
@@ -395,35 +395,35 @@ virtual HRESULT DoVerb(
 ### <a name="parameters"></a>參數
 
 *nVerb*<br/>
-指定要執行的指令動詞。 它可以包含下列其中一項:
+指定要執行的謂詞。 它可以包括以下之一:
 
 |值|意義|符號|
 |-----------|-------------|------------|
 |0|主動詞命令|OLEIVERB_PRIMARY|
 |-1|次要動詞|(無)|
 |1|顯示要編輯的物件。|OLEIVERB_SHOW|
-|-2|在個別視窗中編輯專案。|OLEIVERB_OPEN|
+|-2|在單獨的視窗中編輯專案。|OLEIVERB_OPEN|
 |-3|隱藏物件。|OLEIVERB_HIDE|
-|-4|就地啟用控制項。|OLEIVERB_UIACTIVATE|
-|-5|就地啟動控制項, 而不需要額外的使用者介面元素。|OLEIVERB_INPLACEACTIVATE|
-|-7|顯示控制項的屬性。|OLEIVERB_PROPERTIES|
+|-4|就地啟動控制件。|OLEIVERB_UIACTIVATE|
+|-5|就地啟動控制件,而無需其他用戶介面元素。|OLEIVERB_INPLACEACTIVATE|
+|-7|顯示控件的屬性。|OLEIVERB_PROPERTIES|
 
 *lpMsg*<br/>
-導致啟用專案之訊息的指標。
+指向導致專案被啟動的消息的指標。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-此函式會直接呼叫控制項的`IOleObject`介面, 以執行指定的動詞命令。 如果因此函式呼叫而擲回例外狀況, 則會傳回 HRESULT 錯誤碼。
+此函數直接通過控件的`IOleObject`介面調用以執行指定的謂詞。 如果由於此函數調用而引發異常,則返回 HRESULT 錯誤代碼。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 。
+有關詳細資訊,請參閱 Windows SDK 中的[IOleObject::DoVerb。](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb)
 
-##  <a name="enabledsc"></a>  COleControlSite::EnableDSC
+## <a name="colecontrolsiteenabledsc"></a><a name="enabledsc"></a>COle 控制網站:啟用DSC
 
-啟用控制網站的資料來源。
+支援控制網站的數據源。
 
 ```
 virtual void EnableDSC();
@@ -431,11 +431,11 @@ virtual void EnableDSC();
 
 ### <a name="remarks"></a>備註
 
-由架構呼叫, 以啟用及初始化控制網站的資料來源。 覆寫此函式以提供自訂的行為。
+由框架調用,以啟用和初始化控制網站的數據來源。 重寫此函數以提供自定義行為。
 
-##  <a name="enablewindow"></a>  COleControlSite::EnableWindow
+## <a name="colecontrolsiteenablewindow"></a><a name="enablewindow"></a>COle 控制網站開啟視窗
 
-啟用或停用控制網站的滑鼠和鍵盤輸入。
+啟用或禁用滑鼠和鍵盤輸入到控制網站。
 
 ```
 virtual BOOL EnableWindow(BOOL bEnable);
@@ -443,48 +443,48 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-指定是否要啟用或停用視窗:如果要啟用視窗輸入, 則為 TRUE, 否則為 FALSE。
+*b 啟用*<br/>
+指定是啟用還是禁用視窗:如果要啟用視窗輸入,則為 TRUE,否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果視窗先前已停用, 則為非零, 否則為0。
+如果視窗以前已禁用,則非零,否則為 0。
 
-##  <a name="freezeevents"></a>COleControlSite::FreezeEvents
+## <a name="colecontrolsitefreezeevents"></a><a name="freezeevents"></a>COle 控制網站:凍結事件
 
-指定控制項網站是否會處理或忽略從控制項引發的事件。
+指定控制站點是處理還是忽略從控制項觸發的事件。
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
 ### <a name="parameters"></a>參數
 
 *bFreeze*<br/>
-指定控制項站台是否想要停止接受事件。 如果控制項不接受事件則為非零;否則為零。
+指定控制項站台是否想要停止接受事件。 如果控件不接受事件,則非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
-如果*bFreeze*為 TRUE, 則控制網站會要求控制項停止帶入事件。 如果*bFreeze*為 FALSE, 則控制網站會要求控制項繼續引發事件。
+如果*bFreeze*為 TRUE,則控制網站請求控制項停止 fring 事件。 如果*bFreeze*為 FALSE,則控制網站請求控制件繼續觸發事件。
 
 > [!NOTE]
->  控制項不需要在控制網站要求時停止引發事件。 它可以繼續引發, 但控制網站會忽略所有後續事件。
+> 如果控制網站請求,則不需要該控件停止觸發事件。 它可以繼續觸發,但控制網站將忽略所有後續事件。
 
-##  <a name="getcontrolinfo"></a>  COleControlSite::GetControlInfo
+## <a name="colecontrolsitegetcontrolinfo"></a><a name="getcontrolinfo"></a>COle 控制網站:取得控制資訊
 
-抓取控制項的鍵盤助憶鍵和鍵盤行為的相關資訊。
+檢索有關控件的鍵盤助記符和鍵盤行為的資訊。
 
-```
+```cpp
 void GetControlInfo();
 ```
 
 ### <a name="remarks"></a>備註
 
-這項資訊會儲存在[COleControlSite:: m_ctlInfo](#m_ctlinfo)中。
+資訊儲存在[COleControlSite::m_ctlInfo](#m_ctlinfo)。
 
-##  <a name="getdefbtncode"></a>  COleControlSite::GetDefBtnCode
+## <a name="colecontrolsitegetdefbtncode"></a><a name="getdefbtncode"></a>COle 控制網站:取得DefBtn代碼
 
-決定控制項是否為預設的 [推送] 按鈕。
+確定控制項是否為預設按鈕。
 
 ```
 DWORD GetDefBtnCode();
@@ -492,17 +492,17 @@ DWORD GetDefBtnCode();
 
 ### <a name="return-value"></a>傳回值
 
-可為下列其中一個值：
+可以是下列其中一個值：
 
-- DLGC_DEFPUSHBUTTON 控制項是對話方塊中的預設按鈕。
+- DLGC_DEFPUSHBUTTON控制項是對話框中的預設按鈕。
 
-- DLGC_UNDEFPUSHBUTTON 控制項不是對話方塊中的預設按鈕。
+- DLGC_UNDEFPUSHBUTTON控制項不是對話框中的預設按鈕。
 
 - **0**控制項不是按鈕。
 
-##  <a name="getdlgctrlid"></a>  COleControlSite::GetDlgCtrlID
+## <a name="colecontrolsitegetdlgctrlid"></a><a name="getdlgctrlid"></a>COle 控制網站:取得DlgCtrlID
 
-抓取控制項的識別碼。
+檢索控件的標識碼。
 
 ```
 virtual int GetDlgCtrlID() const;
@@ -510,11 +510,11 @@ virtual int GetDlgCtrlID() const;
 
 ### <a name="return-value"></a>傳回值
 
-控制項的對話方塊專案識別碼。
+控制項的對話方塊項識別碼。
 
-##  <a name="geteventiid"></a>  COleControlSite::GetEventIID
+## <a name="colecontrolsitegeteventiid"></a><a name="geteventiid"></a>COle 控制網站:取得事件Id
 
-抓取控制項預設事件介面的指標。
+檢索指向控制項的預設事件介面的指標。
 
 ```
 BOOL GetEventIID(IID* piid);
@@ -522,16 +522,16 @@ BOOL GetEventIID(IID* piid);
 
 ### <a name="parameters"></a>參數
 
-*piid*<br/>
-介面識別碼的指標。
+*皮伊德*<br/>
+指向介面 ID 的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則為非零, 否則為0。 如果成功, *piid*會包含控制項預設事件介面的介面識別碼。
+如果成功,則非零,否則為 0。 如果成功 *,piid*包含控制項的預設事件介面的介面 ID。
 
-##  <a name="getexstyle"></a>  COleControlSite::GetExStyle
+## <a name="colecontrolsitegetexstyle"></a><a name="getexstyle"></a>COle 控制網站:取得樣式
 
-抓取視窗的延伸樣式。
+檢索窗口的擴展樣式。
 
 ```
 virtual DWORD GetExStyle() const;
@@ -539,15 +539,15 @@ virtual DWORD GetExStyle() const;
 
 ### <a name="return-value"></a>傳回值
 
-控制項視窗的延伸樣式。
+控制項視窗的擴充樣式。
 
 ### <a name="remarks"></a>備註
 
-若要取得一般樣式, 請呼叫[COleControlSite:: GetStyle](#getstyle)。
+要檢查一般樣式,請致電[COleControlSite::getStyle](#getstyle)。
 
-##  <a name="getproperty"></a>  COleControlSite::GetProperty
+## <a name="colecontrolsitegetproperty"></a><a name="getproperty"></a>COle 控制網站:取得財產
 
-取得*dwDispID*所指定的控制項屬性。
+獲取*dwDispID*指定的控制項屬性。
 
 ```
 virtual void GetProperty(
@@ -559,21 +559,21 @@ virtual void GetProperty(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-識別在控制項的預設`IDispatch`介面上所找到之屬性的分派識別碼。
+標識要檢索的控制項預設`IDispatch`介面上找到的屬性的調度 ID。
 
 *vtProp*<br/>
-指定要抓取的屬性型別。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
+指定要檢索的屬性的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvProp*<br/>
-將接收屬性值的變數位址。 它必須符合*vtProp*所指定的類型。
+將接收屬性值的變數的位址。 它必須匹配*vtProp*指定的類型。
 
 ### <a name="remarks"></a>備註
 
-此值會透過*pvProp*傳回。
+該值通過*pvProp*返回。
 
-##  <a name="getstyle"></a>  COleControlSite::GetStyle
+## <a name="colecontrolsitegetstyle"></a><a name="getstyle"></a>COle 控制網站:取得樣式
 
-抓取控制網站的樣式。
+檢索控件網站的樣式。
 
 ```
 virtual DWORD GetStyle() const;
@@ -585,11 +585,11 @@ virtual DWORD GetStyle() const;
 
 ### <a name="remarks"></a>備註
 
-如需可能值的清單, 請參閱[Windows 樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 若要取得控制網站的擴充樣式, 請呼叫[COleControlSite:: GetExStyle](#getexstyle)。
+有關可能值的清單,請參閱[Windows 樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 要檢索控制元件站台的擴充樣式,請致電[COleControlSite::GetExStyle](#getexstyle)。
 
-##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText
+## <a name="colecontrolsitegetwindowtext"></a><a name="getwindowtext"></a>COle 控制網站:抓取視窗文字
 
-抓取控制項的目前文字。
+檢索控件的當前文本。
 
 ```
 virtual void GetWindowText(CString& str) const;
@@ -597,16 +597,16 @@ virtual void GetWindowText(CString& str) const;
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-`CString`物件的參考, 其中包含控制項目前的文字。
+*Str*<br/>
+對包含控制項當前`CString`文字的物件的引用。
 
 ### <a name="remarks"></a>備註
 
-如果控制項支援 Caption stock 屬性, 則會傳回這個值。 如果不支援標題庫存屬性, 則會傳回 Text 屬性的值。
+如果控件支援標題股票屬性,則返回此值。 如果不支援"標題"股票屬性,則返回 Text 屬性的值。
 
-##  <a name="invokehelper"></a>COleControlSite:: InvokeHelper
+## <a name="colecontrolsiteinvokehelper"></a><a name="invokehelper"></a>COle 控制網站::呼叫説明者
 
-在*wFlags*所指定的內容中, 叫用*dwDispID*所指定的方法或屬性。
+在*wFlags*指定的上下文中呼叫*dwDispID*指定的方法或屬性。
 
 ```
 virtual void AFX_CDECL InvokeHelper(
@@ -620,32 +620,32 @@ virtual void AFX_CDECL InvokeHelper(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-識別要叫用的屬性或方法的分派識別碼 (可在控制項`IDispatch`的介面上找到)。
+標識要調用的屬性或方法的`IDispatch`調度 ID。
 
 *wFlags*<br/>
-描述對 IDispatch:: Invoke 呼叫之內容的旗標。 如需可能的*wFlags*值`IDispatch::Invoke` , 請參閱 Windows SDK 中的。
+描述要呼叫 IDispatch::Invoke 時之內容的旗標。 有關可能的*wFlags*值`IDispatch::Invoke`,請參閱 Windows SDK。
 
-*vtRet*<br/>
+*弗特雷特*<br/>
 指定傳回值的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvRet*<br/>
-要接收屬性值或傳回值之變數的位址。 它必須符合*vtRet*所指定的類型。
+要接收屬性值或傳回值之變數的位址。 它必須與*vtRet*指定的類型匹配。
 
 *pbParamInfo*<br/>
-以 null 結束的位元組字串指標, 指定*pbParamInfo*之後的參數類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
+指向 null 連接端的位元串的指標,指定*pbParamInfo*之後的參數類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *...*<br/>
-參數的變數清單, 屬於*pbParamInfo*中指定的類型。
+參數的變數清單,在*pbParamInfo*中指定的類型。
 
 ### <a name="remarks"></a>備註
 
-*PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 引數的變數清單會以 ...在語法宣告中。
+*pbParamInfo*參數指定傳遞給方法或屬性的參數的類型。 引數的變數清單會以 ... 語法宣告代表。
 
-此函式會將參數轉換為 VARIANTARG 值, 然後`IDispatch::Invoke`在控制項上叫用方法。 若呼叫 `IDispatch::Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回`IDispatch::Invoke`的狀態碼為`DISP_E_EXCEPTION` `COleDispatchException` , 則此函式會擲回物件, 否則`COleException`會擲回。
+此函數將參數轉換為 VARIANTARG 值,然後在控制項`IDispatch::Invoke`上調用 方法。 若呼叫 `IDispatch::Invoke` 失敗，此函式會擲回例外狀況。 `IDispatch::Invoke`行程代碼為`DISP_E_EXCEPTION`,則此函數`COleDispatchException`會引發一個物件,`COleException`否則將引發 。
 
-##  <a name="invokehelperv"></a>COleControlSite::InvokeHelperV
+## <a name="colecontrolsiteinvokehelperv"></a><a name="invokehelperv"></a>COle 控制網站::呼叫説明者V
 
-在*wFlags*所指定的內容中, 叫用*dwDispID*所指定的方法或屬性。
+在*wFlags*指定的上下文中呼叫*dwDispID*指定的方法或屬性。
 
 ```
 virtual void InvokeHelperV(
@@ -660,32 +660,32 @@ virtual void InvokeHelperV(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-識別要叫用的屬性或方法的分派識別碼 (可在控制項`IDispatch`的介面上找到)。
+標識要調用的屬性或方法的`IDispatch`調度 ID。
 
 *wFlags*<br/>
-描述對 IDispatch:: Invoke 呼叫之內容的旗標。
+描述要呼叫 IDispatch::Invoke 時之內容的旗標。
 
-*vtRet*<br/>
+*弗特雷特*<br/>
 指定傳回值的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvRet*<br/>
-要接收屬性值或傳回值之變數的位址。 它必須符合*vtRet*所指定的類型。
+要接收屬性值或傳回值之變數的位址。 它必須與*vtRet*指定的類型匹配。
 
 *pbParamInfo*<br/>
-以 null 結束的位元組字串指標, 指定*pbParamInfo*之後的參數類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
+指向 null 連接端的位元串的指標,指定*pbParamInfo*之後的參數類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
-*argList*<br/>
-變數引數清單的指標。
+*阿格列斯*<br/>
+指向變數參數清單的指標。
 
 ### <a name="remarks"></a>備註
 
-*PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 您可以使用*va_list*參數來傳遞所叫用之方法或屬性的額外參數。
+*pbParamInfo*參數指定傳遞給方法或屬性的參數的類型。 可以使用*va_list*參數傳遞所調用的方法或屬性的額外參數。
 
-通常, 會呼叫`COleControlSite::InvokeHelper`這個函式。
+通常,此函數由 呼`COleControlSite::InvokeHelper`叫 。
 
-##  <a name="isdefaultbutton"></a>  COleControlSite::IsDefaultButton
+## <a name="colecontrolsiteisdefaultbutton"></a><a name="isdefaultbutton"></a>COle 控制網站:預設按鈕
 
-決定控制項是否為預設按鈕。
+確定控制項是否為預設按鈕。
 
 ```
 BOOL IsDefaultButton();
@@ -693,11 +693,11 @@ BOOL IsDefaultButton();
 
 ### <a name="return-value"></a>傳回值
 
-如果控制項是視窗上的預設按鈕, 則為非零, 否則為零。
+如果控件是視窗上的預設按鈕,則為非零,否則為零。
 
-##  <a name="iswindowenabled"></a>  COleControlSite::IsWindowEnabled
+## <a name="colecontrolsiteiswindowenabled"></a><a name="iswindowenabled"></a>COle 控制網站開啟視窗
 
-決定是否啟用控制網站。
+確定控制網站是否啟用。
 
 ```
 virtual BOOL IsWindowEnabled() const;
@@ -705,15 +705,15 @@ virtual BOOL IsWindowEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用控制項, 則為非零, 否則為零。
+如果啟用了控件,則為非零,否則為零。
 
 ### <a name="remarks"></a>備註
 
-此值會從控制項的已啟用內建屬性中抓取。
+該值將從控制項的「已啟用」股票屬性中檢索。
 
-##  <a name="m_biswindowless"></a>  COleControlSite::m_bIsWindowless
+## <a name="colecontrolsitem_biswindowless"></a><a name="m_biswindowless"></a>COle 控制網站:m_bIsWindowless
 
-判斷物件是否為無視窗控制項。
+確定物件是否為無視窗控制項。
 
 ```
 BOOL m_bIsWindowless;
@@ -721,11 +721,11 @@ BOOL m_bIsWindowless;
 
 ### <a name="remarks"></a>備註
 
-如果控制項沒有視窗, 則為非零, 否則為零。
+如果控件沒有視窗,則非零,否則為零。
 
-##  <a name="m_ctlinfo"></a>  COleControlSite::m_ctlInfo
+## <a name="colecontrolsitem_ctlinfo"></a><a name="m_ctlinfo"></a>COle 控制網站:m_ctlInfo
 
-控制項如何處理鍵盤輸入的資訊。
+有關控件如何處理鍵盤輸入的資訊。
 
 ```
 CONTROLINFO m_ctlInfo;
@@ -733,19 +733,19 @@ CONTROLINFO m_ctlInfo;
 
 ### <a name="remarks"></a>備註
 
-這項資訊會儲存在[CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo)結構中。
+此資訊存儲在[CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo)結構中。
 
-##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink
+## <a name="colecontrolsitem_dweventsink"></a><a name="m_dweventsink"></a>COle 控制網站:m_dwEventSink
 
-包含來自控制項事件接收器的連接點 cookie。
+包含來自控制項事件接收器的連接點的 Cookie。
 
 ```
 DWORD m_dwEventSink;
 ```
 
-##  <a name="m_dwmiscstatus"></a>  COleControlSite::m_dwMiscStatus
+## <a name="colecontrolsitem_dwmiscstatus"></a><a name="m_dwmiscstatus"></a>COle 控制網站:m_dwMiscStatus
 
-包含控制項的其他資訊。
+包含有關控制項的雜項資訊。
 
 ```
 DWORD m_dwMiscStatus;
@@ -753,17 +753,17 @@ DWORD m_dwMiscStatus;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱 Windows SDK 中的[OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc)。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEMISC。](/windows/win32/api/oleidl/ne-oleidl-olemisc)
 
-##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink
+## <a name="colecontrolsitem_dwpropnotifysink"></a><a name="m_dwpropnotifysink"></a>COle 控制網站:m_dwPropNotifySink
 
-包含[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) cookie。
+包含[IProperty Notify Sink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) Cookie。
 
 ```
 DWORD m_dwPropNotifySink;
 ```
 
-##  <a name="m_dwstyle"></a>  COleControlSite::m_dwStyle
+## <a name="colecontrolsitem_dwstyle"></a><a name="m_dwstyle"></a>COle 控制網站:m_dwStyle
 
 包含控制項的視窗樣式。
 
@@ -771,31 +771,31 @@ DWORD m_dwPropNotifySink;
 DWORD m_dwStyle;
 ```
 
-##  <a name="m_hwnd"></a>  COleControlSite::m_hWnd
+## <a name="colecontrolsitem_hwnd"></a><a name="m_hwnd"></a>COle 控制網站:m_hWnd
 
-包含控制項的 HWND, 如果控制項為無視窗, 則為 Null。
+包含控制項的 HWND,如果控制項沒有視窗,則包含 NULL。
 
 ```
 HWND m_hWnd;
 ```
 
-##  <a name="m_iidevents"></a>  COleControlSite::m_iidEvents
+## <a name="colecontrolsitem_iidevents"></a><a name="m_iidevents"></a>COle 控制網站:m_iidEvents
 
-包含控制項預設事件接收介面的介面識別碼。
+包含控制項的預設事件接收器介面的介面 ID。
 
 ```
 IID m_iidEvents;
 ```
 
-##  <a name="m_nid"></a>  COleControlSite::m_nID
+## <a name="colecontrolsitem_nid"></a><a name="m_nid"></a>COle 控制網站:m_nID
 
-包含控制項的對話方塊專案識別碼。
+包含控制項的對話方塊項 ID。
 
 ```
 UINT m_nID;
 ```
 
-##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject
+## <a name="colecontrolsitem_pactiveobject"></a><a name="m_pactiveobject"></a>COle 控制網站:m_pActiveObject
 
 包含控制項的[IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject)介面。
 
@@ -803,57 +803,57 @@ UINT m_nID;
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;
 ```
 
-##  <a name="m_pctrlcont"></a>  COleControlSite::m_pCtrlCont
+## <a name="colecontrolsitem_pctrlcont"></a><a name="m_pctrlcont"></a>COle 控制網站:m_pCtrlCont
 
-包含控制項的容器 (代表表單)。
+包含控制的容器(表示表單)。
 
 ```
 COleControlContainer* m_pCtrlCont;
 ```
 
-##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject
+## <a name="colecontrolsitem_pinplaceobject"></a><a name="m_pinplaceobject"></a>COle 控制網站:m_pInPlaceObject
 
-包含控制項`IOleInPlaceObject`的[IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)介面。
+包含控制項的`IOleInPlaceObject` [IOleInPlace 物件](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)介面。
 
 ```
 LPOLEINPLACEOBJECT m_pInPlaceObject;
 ```
 
-##  <a name="m_pobject"></a>  COleControlSite::m_pObject
+## <a name="colecontrolsitem_pobject"></a><a name="m_pobject"></a>COle 控制網站:m_pObject
 
-包含控制項`IOleObjectInterface`的介面。
+包含控制`IOleObjectInterface`的介面。
 
 ```
 LPOLEOBJECT m_pObject;
 ```
 
-##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject
+## <a name="colecontrolsitem_pwindowlessobject"></a><a name="m_pwindowlessobject"></a>COle 控制網站:m_pWindowlessObject
 
-包含控制項`IOleInPlaceObjectWindowless`的[IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)介面。
+包含控制項的`IOleInPlaceObjectWindowless` [IOleInPlace 無視窗](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)介面。
 
 ```
 IOleInPlaceObjectWindowless* m_pWindowlessObject;
 ```
 
-##  <a name="m_pwndctrl"></a>  COleControlSite::m_pWndCtrl
+## <a name="colecontrolsitem_pwndctrl"></a><a name="m_pwndctrl"></a>COle 控制網站:m_pWndCtrl
 
-包含代表控制項本身之`CWnd`物件的指標。
+包含指向表示控件本身`CWnd`的對象的指標。
 
 ```
 CWnd* m_pWndCtrl;
 ```
 
-##  <a name="m_rect"></a>  COleControlSite::m_rect
+## <a name="colecontrolsitem_rect"></a><a name="m_rect"></a>COle控制網站::m_rect
 
-包含控制項的界限 (相對於容器的視窗)。
+包含控制件相對於容器視窗的邊界。
 
 ```
 CRect m_rect;
 ```
 
-##  <a name="modifystyle"></a>  COleControlSite::ModifyStyle
+## <a name="colecontrolsitemodifystyle"></a><a name="modifystyle"></a>COle 控制網站:修改樣式
 
-修改控制項的樣式。
+修改控件的樣式。
 
 ```
 virtual BOOL ModifyStyle(
@@ -865,39 +865,39 @@ virtual BOOL ModifyStyle(
 ### <a name="parameters"></a>參數
 
 *dwRemove*<br/>
-要從目前的視窗樣式中移除的樣式。
+要從當前視窗樣式中刪除的樣式。
 
 *dwAdd*<br/>
-要從目前視窗樣式新增的樣式。
+要從當前視窗樣式添加的樣式。
 
 *nFlags*<br/>
-視窗定位旗標。 如需可能值的清單, 請參閱 Windows SDK 中的[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)函數。
+視窗定位標誌。 有關可能值的清單,請參閱 Windows SDK 中的[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)函數。
 
 ### <a name="return-value"></a>傳回值
 
-如果樣式已變更, 則為非零, 否則為零。
+如果樣式已更改,則非零,否則為零。
 
 ### <a name="remarks"></a>備註
 
-控制項的已啟用庫存屬性將會修改, 以符合 WS_DISABLED 的設定。 控制項的內建框線樣式屬性將會修改, 以符合所要求的 WS_BORDER 設定。 所有其他樣式會直接套用至控制項的視窗控制碼 (如果有的話)。
+控制件的「已啟用」屬性將修改以匹配WS_DISABLED設定。 控制件的庫存邊框樣式屬性將修改以匹配 WS_BORDER請求的設置。 所有其他樣式將直接應用於控制項的視窗句柄(如果存在)。
 
-修改控制項的視窗樣式。 您可以使用位 OR ( &#124; ) 運算子來結合要加入或移除的樣式。 如需可用視窗樣式的詳細資訊, 請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)函數。
+修改控制項的視窗樣式。 要添加或刪除的樣式可以使用位或 ( &#124; ) 運算子進行組合。 有關可用視窗樣式的資訊,請參閱 Windows SDK 中的[「創建視窗](/windows/win32/api/winuser/nf-winuser-createwindoww)」功能。
 
-如果*nFlags*為非零`ModifyStyle`值, 會`SetWindowPos`呼叫 Win32 函式, 並將*nFlags*與下列四個旗標結合, 以重新繪製視窗:
+如果*nFlags*是`ModifyStyle`非零 ,請呼叫 Win32 函數`SetWindowPos`,並透過*nFlags*與以下四個標誌組合來重繪視窗:
 
-- SWP_NOSIZE 會保留目前的大小。
+- SWP_NOSIZE 保留當前大小。
 
-- SWP_NOMOVE 會保留目前的位置。
+- SWP_NOMOVE 保留當前位置。
 
-- SWP_NOZORDER 會保留目前的 Z 順序。
+- SWP_NOZORDER保留當前 Z 訂單。
 
-- SWP_NOACTI加值稅E 不會啟動視窗。
+- SWP_NOACTIVATE不激活視窗。
 
-若要修改視窗的延伸樣式, 請呼叫[ModifyStyleEx](#modifystyleex)。
+要修改視窗的延伸樣式,請呼叫[ModifyStyleEx](#modifystyleex)。
 
-##  <a name="modifystyleex"></a>  COleControlSite::ModifyStyleEx
+## <a name="colecontrolsitemodifystyleex"></a><a name="modifystyleex"></a>COle 控制網站:修改樣式
 
-修改控制項的延伸樣式。
+修改控件的擴展樣式。
 
 ```
 virtual BOOL ModifyStyleEx(
@@ -909,39 +909,39 @@ virtual BOOL ModifyStyleEx(
 ### <a name="parameters"></a>參數
 
 *dwRemove*<br/>
-要從目前視窗樣式中移除的擴充樣式。
+要從當前視窗樣式中刪除的擴展樣式。
 
 *dwAdd*<br/>
-要從目前視窗樣式新增的擴充樣式。
+要從當前視窗樣式添加的擴展樣式。
 
 *nFlags*<br/>
-視窗定位旗標。 如需可能值的清單, 請參閱 Windows SDK 中的[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)函數。
+視窗定位標誌。 有關可能值的清單,請參閱 Windows SDK 中的[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)函數。
 
 ### <a name="return-value"></a>傳回值
 
-如果樣式已變更, 則為非零, 否則為零。
+如果樣式已更改,則非零,否則為零。
 
 ### <a name="remarks"></a>備註
 
-控制項的「內建外觀」屬性將會修改, 以符合 WS_EX_CLIENTEDGE 的設定。 所有其他延伸視窗樣式會直接套用至控制項的視窗控制碼 (如果有的話)。
+控制項「外觀」屬性將修改以匹配WS_EX_CLIENTEDGE設定。 所有其他擴展視窗樣式將直接應用於控制項的視窗句柄(如果存在)。
 
-修改控制項網站物件的視窗擴充樣式。 您可以使用位 OR ( &#124; ) 運算子來結合要加入或移除的樣式。 如需可用視窗樣式的詳細資訊, 請參閱 Windows SDK 中的[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函數。
+修改控制項點物件的視窗擴展樣式。 要添加或刪除的樣式可以使用位或 ( &#124; ) 運算子進行組合。 有關可用視窗樣式的資訊,請參閱 Windows SDK 中的[「創建視窗Ex」](/windows/win32/api/winuser/nf-winuser-createwindowexw)功能。
 
-如果*nFlags*為非零`ModifyStyleEx`值, 會`SetWindowPos`呼叫 Win32 函式, 並將*nFlags*與下列四個旗標結合, 以重新繪製視窗:
+如果*nFlags*是`ModifyStyleEx`非零 ,請呼叫 Win32 函數`SetWindowPos`,並透過*nFlags*與以下四個標誌組合來重繪視窗:
 
-- SWP_NOSIZE 會保留目前的大小。
+- SWP_NOSIZE 保留當前大小。
 
-- SWP_NOMOVE 會保留目前的位置。
+- SWP_NOMOVE 保留當前位置。
 
-- SWP_NOZORDER 會保留目前的 Z 順序。
+- SWP_NOZORDER保留當前 Z 訂單。
 
-- SWP_NOACTI加值稅E 不會啟動視窗。
+- SWP_NOACTIVATE不激活視窗。
 
-若要修改視窗的延伸樣式, 請呼叫[ModifyStyle](#modifystyle)。
+要修改視窗的擴展樣式,請調用["修改樣式](#modifystyle)"。
 
-##  <a name="movewindow"></a>  COleControlSite::MoveWindow
+## <a name="colecontrolsitemovewindow"></a><a name="movewindow"></a>COle 控制網站:移動視窗
 
-變更控制項的位置。
+更改控制項的位置。
 
 ```
 virtual void MoveWindow(
@@ -956,18 +956,18 @@ virtual void MoveWindow(
 *x*<br/>
 視窗左側的新位置。
 
-*y*<br/>
-視窗頂端的新位置。
+*Y*<br/>
+視窗頂部的新位置。
 
-*nWidth*<br/>
+*n 寬度*<br/>
 視窗的新寬度
 
 *nHeight*<br/>
 視窗的新高度。
 
-##  <a name="quickactivate"></a>  COleControlSite::QuickActivate
+## <a name="colecontrolsitequickactivate"></a><a name="quickactivate"></a>COle 控制網站:快速啟動
 
-快速啟動包含的控制項。
+快速啟動包含的控制件。
 
 ```
 virtual BOOL QuickActivate();
@@ -975,17 +975,17 @@ virtual BOOL QuickActivate();
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用控制項網站, 則為非零, 否則為零。
+如果控制網站已啟動,則非零,否則為零。
 
 ### <a name="remarks"></a>備註
 
-只有當使用者正在覆寫控制項的建立進程時, 才應該呼叫這個函式。
+僅當使用者重寫控件的創建過程時,才應調用此函數。
 
-在快速`IPersist*::InitNew`啟動發生之後, 應該會呼叫和方法。`IPersist*::Load` 在快速啟用期間, 控制項應該會建立與容器接收器的連線。 不過, 在呼叫或`IPersist*::Load` `IPersist*::InitNew`之前, 這些連接都不會上線。
+發生`IPersist*::Load``IPersist*::InitNew`快速 啟動后應調用 和 方法。 在快速啟動期間,控件應建立與容器接收器的連接。 但是,這些連接在調用或`IPersist*::Load``IPersist*::InitNew`被調用之前不會活。
 
-##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty
+## <a name="colecontrolsitesafesetproperty"></a><a name="safesetproperty"></a>COle 控制網站:安全設定屬性
 
-設定*dwDispID*所指定的控制項屬性。
+設置*dwDispID*指定的控制項屬性。
 
 ```
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -996,13 +996,13 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-識別要設定之控制項`IDispatch`介面上所找到之屬性或方法的分派識別碼。
+標識要設置的屬性或方法的調度 ID,該 ID`IDispatch`位於控制項的介面上。
 
 *vtProp*<br/>
-指定要設定的屬性類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
+指定要設置的屬性的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *...*<br/>
-*VtProp*所指定之類型的單一參數。
+*vtProp*指定的類型的單個參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1011,29 +1011,29 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  與`SetProperty` 和`SetPropertyV`不同, 如果遇到錯誤 (例如嘗試設定不存在的屬性), 則不會擲回任何例外狀況。
+> 如果`SetProperty``SetPropertyV`遇到錯誤(例如嘗試設定不存在的屬性),則與 和不同,則不引發異常。
 
-##  <a name="setdefaultbutton"></a>  COleControlSite::SetDefaultButton
+## <a name="colecontrolsitesetdefaultbutton"></a><a name="setdefaultbutton"></a>COle 控制網站:設定預設按鈕
 
 將控制項設定為預設按鈕。
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bDefault*<br/>
-如果控制項應該成為預設按鈕, 則為非零。否則為零。
+*b預設*<br/>
+如果控件應成為默認按鈕,則非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  控制項必須設定 OLEMISC_ACTSLIKEBUTTON 狀態位。
+> 控件必須設置OLEMISC_ACTSLIKEBUTTON狀態位。
 
-##  <a name="setdlgctrlid"></a>  COleControlSite::SetDlgCtrlID
+## <a name="colecontrolsitesetdlgctrlid"></a><a name="setdlgctrlid"></a>COle 控制網站:SetDlgCtrlID
 
-變更控制項的對話方塊專案識別碼的值。
+更改控制項的對話方塊項識別碼的值。
 
 ```
 virtual int SetDlgCtrlID(int nID);
@@ -1042,17 +1042,17 @@ virtual int SetDlgCtrlID(int nID);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-新的識別碼值。
+新的標識碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則為視窗的先前對話方塊專案識別碼;否則為0。
+如果成功,視窗的上一個對話框項標識符;如果成功,則視窗的上一個對話框項標識符。否則 0。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setfocus"></a>  COleControlSite::SetFocus
+## <a name="colecontrolsitesetfocus"></a><a name="setfocus"></a>COle 控制網站:設定焦點
 
-將焦點設為控制項。
+將焦點設置到控制項。
 
 ```
 virtual CWnd* SetFocus();
@@ -1062,15 +1062,15 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>參數
 
 *lpmsg*<br/>
-[MSG 結構](/windows/win32/api/winuser/ns-winuser-msg)的指標。 這個結構包含的 Windows 訊息, 會`SetFocus`觸發目前控制網站中所含控制項的要求。
+指向[MSG 結構](/windows/win32/api/winuser/ns-winuser-msg)的指標。 此結構包含觸發目前控制件站點中包含的控制項`SetFocus`請求的 Windows 訊息。
 
 ### <a name="return-value"></a>傳回值
 
-先前具有焦點之視窗的指標。
+指向以前具有焦點的視窗的指標。
 
-##  <a name="setproperty"></a>  COleControlSite::SetProperty
+## <a name="colecontrolsitesetproperty"></a><a name="setproperty"></a>COle 控制網站:設定屬性
 
-設定*dwDispID*所指定的控制項屬性。
+設置*dwDispID*指定的控制項屬性。
 
 ```
 virtual void AFX_CDECL SetProperty(
@@ -1081,23 +1081,23 @@ virtual void AFX_CDECL SetProperty(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-識別要設定之控制項`IDispatch`介面上所找到之屬性或方法的分派識別碼。
+標識要設置的屬性或方法的調度 ID,該 ID`IDispatch`位於控制項的介面上。
 
 *vtProp*<br/>
-指定要設定的屬性類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
+指定要設置的屬性的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *...*<br/>
-*VtProp*所指定之類型的單一參數。
+*vtProp*指定的類型的單個參數。
 
 ### <a name="remarks"></a>備註
 
-如果`SetProperty`遇到錯誤, 則會擲回例外狀況。
+如果`SetProperty`遇到錯誤,將引發異常。
 
-例外狀況的類型取決於嘗試設定屬性或方法的傳回值。 如果傳回值為`DISP_E_EXCEPTION` `COleDispatchExcpetion` , `COleException`則會擲回, 否則為。
+異常的類型由嘗試設置屬性或方法的返回值確定。 如果傳回值`DISP_E_EXCEPTION`為`COleDispatchExcpetion`, 則引發否則為`COleException`。
 
-##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV
+## <a name="colecontrolsitesetpropertyv"></a><a name="setpropertyv"></a>COle 控制網站:SetPropertyV
 
-設定*dwDispID*所指定的控制項屬性。
+設置*dwDispID*指定的控制項屬性。
 
 ```
 virtual void SetPropertyV(
@@ -1109,23 +1109,23 @@ virtual void SetPropertyV(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-識別要設定之控制項`IDispatch`介面上所找到之屬性或方法的分派識別碼。
+標識要設置的屬性或方法的調度 ID,該 ID`IDispatch`位於控制項的介面上。
 
 *vtProp*<br/>
-指定要設定的屬性類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
+指定要設置的屬性的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
-*argList*<br/>
+*阿格列斯*<br/>
 引數清單的指標。
 
 ### <a name="remarks"></a>備註
 
-您可以使用*arg_list*參數來 passeed 所叫用之方法或屬性的額外參數。 如果`SetProperty`遇到錯誤, 則會擲回例外狀況。
+可以使用*arg_list*參數傳遞所調用的方法或屬性的額外參數。 如果`SetProperty`遇到錯誤,將引發異常。
 
-例外狀況的類型取決於嘗試設定屬性或方法的傳回值。 如果傳回值為`DISP_E_EXCEPTION` `COleDispatchExcpetion` , `COleException`則會擲回, 否則為。
+異常的類型由嘗試設置屬性或方法的返回值確定。 如果傳回值`DISP_E_EXCEPTION`為`COleDispatchExcpetion`, 則引發否則為`COleException`。
 
-##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos
+## <a name="colecontrolsitesetwindowpos"></a><a name="setwindowpos"></a>COle 控制網站:設定視窗位置
 
-設定控制網站的大小、位置和迭置順序。
+設置控制站點的大小、位置和 Z 順序。
 
 ```
 virtual BOOL SetWindowPos(
@@ -1139,31 +1139,31 @@ virtual BOOL SetWindowPos(
 
 ### <a name="parameters"></a>參數
 
-*pWndInsertAfter*<br/>
-視窗的指標。
+*pWndInsert 後*<br/>
+指向視窗的指標。
 
 *x*<br/>
 視窗左側的新位置。
 
-*y*<br/>
-視窗頂端的新位置。
+*Y*<br/>
+視窗頂部的新位置。
 
-*cx*<br/>
+*殘雪*<br/>
 視窗的新寬度
 
 *cy*<br/>
 視窗的新高度。
 
 *nFlags*<br/>
-指定視窗調整大小和定位旗標。 如需可能的值, 請參閱 Windows SDK 中[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)的「備註」一節。
+指定視窗大小調整和定位標誌。 有關可能的值,請參閱 Windows SDK 中[「設定視窗Pos」](/windows/win32/api/winuser/nf-winuser-setwindowpos)的備註部分。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則為非零, 否則為零。
+如果成功,則非零,否則為零。
 
-##  <a name="setwindowtext"></a>  COleControlSite::SetWindowText
+## <a name="colecontrolsitesetwindowtext"></a><a name="setwindowtext"></a>COle 控制網站:設定視窗文字
 
-設定控制項網站的文字。
+設定控制站點的文字。
 
 ```
 virtual void SetWindowText(LPCTSTR lpszString);
@@ -1172,15 +1172,15 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ### <a name="parameters"></a>參數
 
 *lpszString*<br/>
-要當做新標題或控制項文字使用之以 null 結束的字串指標。
+指向要用作新標題或控制項文字的 null 終止字串的指標。
 
 ### <a name="remarks"></a>備註
 
-此函式會先嘗試設定標題庫存屬性。 如果不支援標題庫存屬性, 則會改為設定 Text 屬性。
+此函數首先嘗試設置標題股票屬性。 如果不支援"標題"股票屬性,則改為設置 Text 屬性。
 
-##  <a name="showwindow"></a>COleControlSite:: ShowWindow
+## <a name="colecontrolsiteshowwindow"></a><a name="showwindow"></a>COle 控制網站:顯示視窗
 
-設定視窗的顯示狀態。
+設置視窗的顯示狀態。
 
 ```
 virtual BOOL ShowWindow(int nCmdShow);
@@ -1189,31 +1189,31 @@ virtual BOOL ShowWindow(int nCmdShow);
 ### <a name="parameters"></a>參數
 
 *nCmdShow*<br/>
-指定控制項網站的顯示方式。 它必須是下列其中一個值:
+指定如何顯示控制件網站。 它必須是以下值之一:
 
-- SW_HIDE 會隱藏此視窗, 並將啟用傳遞至另一個視窗。
+- SW_HIDE隱藏此視窗並將啟動傳遞到另一個視窗。
 
-- SW_MINIMIZE 會將視窗最小化, 並啟用系統清單中的最上層視窗。
+- SW_MINIMIZE最小化視窗並啟動系統清單中的頂級視窗。
 
-- SW_RESTORE 會啟用並顯示視窗。 如果視窗最小化或最大化, Windows 就會將它還原成原始大小和位置。
+- SW_RESTORE啟動並顯示視窗。 如果視窗最小化或最大化,Windows 會將其還原到其原始大小和位置。
 
-- SW_SHOW 會啟動視窗, 並以其目前的大小和位置顯示。
+- SW_SHOW啟動視窗,並將其以當前大小和位置顯示。
 
-- SW_SHOWMAXIMIZED 會啟用視窗, 並將它顯示為最大化的視窗。
+- SW_SHOWMAXIMIZED啟動視窗並將其顯示為最大化視窗。
 
-- SW_SHOWMINIMIZED 會啟用視窗, 並將它顯示為圖示。
+- SW_SHOWMINIMIZED啟動視窗並將其顯示為圖示。
 
-- SW_SHOWMINNOACTIVE 會將視窗顯示為圖示。 目前作用中的視窗仍為使用中狀態。
+- SW_SHOWMINNOACTIVE將窗口顯示為圖示。 當前處於活動狀態的視窗保持活動狀態。
 
-- SW_SHOWNA 會將視窗顯示為目前狀態。 目前作用中的視窗仍為使用中狀態。
+- SW_SHOWNA 顯示視窗當前狀態。 當前處於活動狀態的視窗保持活動狀態。
 
-- SW_SHOWNOACTI加值稅E 會將視窗顯示在其最新的大小和位置。 目前作用中的視窗仍為使用中狀態。
+- SW_SHOWNOACTIVATE 以最新的大小和位置顯示視窗。 當前處於活動狀態的視窗保持活動狀態。
 
-- SW_SHOWNORMAL 會啟用並顯示視窗。 如果視窗最小化或最大化, Windows 就會將它還原成原始大小和位置。
+- SW_SHOWNORMAL 啟動並顯示視窗。 如果視窗最小化或最大化,Windows 會將其還原到其原始大小和位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果視窗先前為可見, 則為非零;如果視窗先前已隱藏, 則為0。
+如果視窗以前可見,則非零;如果視窗以前已隱藏,則為 0。
 
 ## <a name="see-also"></a>另請參閱
 

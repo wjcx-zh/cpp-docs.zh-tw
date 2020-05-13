@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367939"
 ---
 # <a name="standard-types"></a>標準類型
 
@@ -189,7 +189,7 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |int_fast64_t、uint_fast64_t|long long、unsigned long long|
 |intmax_t、uintmax_t|long long、unsigned long long|
 
-|類型|說明|宣告於|
+|類型|描述|宣告於|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|儲存時間值，由[時鐘](../c-runtime-library/reference/clock.md)使用。|TIME.H|
 |`_complex` 結構|儲存複數的實數和虛數部分，由 [_cabs](../c-runtime-library/reference/cabs.md) 使用。|MATH.H|
@@ -198,7 +198,7 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`_CrtMemState` 結構|提供關於 C 執行階段偵錯堆積的目前狀態資訊。|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|將在 [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 被呼叫之回呼函式的類型定義。<br /><br /> 這個函式的參數是：來自回呼函式的報告類型、輸出訊息和傳回值。|CRTDBG.H|
 |`dev_t`、`_dev_t` 短的或不帶正負號的整數。|表示裝置控制代碼。|SYS\TYPES.H|
-|`_diskfree_t` 結構|包含磁碟機的詳細資訊。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)使用。 |DOS.H 和 DIRECT.H|
+|`_diskfree_t` 結構|包含磁碟機的詳細資訊。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)使用。****|DOS.H 和 DIRECT.H|
 |`div_t`、`ldiv_t` 和 `lldiv_t` 結構|將 [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 和 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) 所傳回的值分別儲存。|STDLIB.H|
 |`errno_t` 整數|用於處理 `errno`錯誤碼的函式傳回類型或參數。|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` 結構|儲存 [_matherr](../c-runtime-library/reference/matherr.md) 的錯誤資訊。|MATH.H|
@@ -217,7 +217,7 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`jmp_buf` 陣列|由 [setjmp](../c-runtime-library/reference/setjmp.md) 和 [longjmp](../c-runtime-library/reference/longjmp.md) 使用，可儲存和還原程式環境。|SETJMP.H|
 |`lconv` 結構|包含不同國家/地區的數值格式化規則。 由 [localeconv](../c-runtime-library/reference/localeconv.md) 使用。|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (長雙精度浮點數或不帶正負號的字元陣列)|用來表示長雙精度浮點數值。|STDLIB.H|
-|`_locale_t` 結構|儲存目前地區設定值，使用於所有地區設定特定的 C 執行階段程式庫。|CRTDEF.H|
+|`_locale_t` 結構|儲存目前地區設定值，使用於所有地區設定特定的 C 執行階段程式庫。|CRTDEFS.H|
 |`mbstate_t`|追蹤多位元組字元轉換的狀態。|WCHAR.H|
 |`off_t`, `_off_t` 長整數|表示檔案位移值。|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> `_onexit_m_t` 指標|由 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md) 傳回。|STDLIB.H|

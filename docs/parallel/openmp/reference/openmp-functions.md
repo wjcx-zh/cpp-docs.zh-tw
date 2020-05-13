@@ -50,64 +50,64 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 4508c683ff5d4bece290b7fef2bbd83ae8023eac
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0475a83ba259ed00bbcb9ddaba99a1556b35f613
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416995"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317128"
 ---
 # <a name="openmp-functions"></a>OpenMP 函式
 
-提供 OpenMP API 中使用之函式的連結。
+提供指向OpenMP API 中使用的函數的連結。
 
-OpenMP 標準C++的視覺化執行包含下列函數和資料類型。
+OpenMP 標準的可視化C++實現包括以下功能和數據類型。
 
-針對環境執行：
+對環境執行:
 
-|函數|描述|
+|函式|描述|
 |--------|-----------|
-|[omp_set_num_threads](#omp-set-num-threads)|設定近期平列區域中的執行緒數目，除非是由[num_threads](openmp-clauses.md#num-threads)子句覆寫。|
-|[omp_get_num_threads](#omp-get-num-threads)|傳回平列區域中的執行緒數目。|
-|[omp_get_max_threads](#omp-get-max-threads)|傳回大於或等於執行緒數目的整數，如果沒有[num_threads](openmp-clauses.md#num-threads)的平列區域定義于程式碼中的該點上，就可以使用。|
-|[omp_get_thread_num](#omp-get-thread-num)|傳回執行緒在其執行緒小組內執行的執行緒數目。|
-|[omp_get_num_procs](#omp-get-num-procs)|傳回呼叫函數時可用的處理器數目。|
-|[omp_in_parallel](#omp-in-parallel)|如果從平列區域內呼叫，則傳回非零。|
-|[omp_set_dynamic](#omp-set-dynamic)|表示可由執行時間調整即將到來的平列區域中可用的執行緒數目。|
-|[omp_get_dynamic](#omp-get-dynamic)|傳回值，指出即將推出的平列區域中可用的執行緒數目是否可以由執行時間調整。|
-|[omp_set_nested](#omp-set-nested)|啟用嵌套的平行處理原則。|
-|[omp_get_nested](#omp-get-nested)|傳回值，指出是否已啟用嵌套平行處理原則。|
+|[omp_set_num_threads](#omp-set-num-threads)|設置即將到來的並行區域中的線程數,除非被[num_threads](openmp-clauses.md#num-threads)子句覆蓋。|
+|[omp_get_num_threads](#omp-get-num-threads)|返回並行區域中的線程數。|
+|[omp_get_max_threads](#omp-get-max-threads)|返回等於或大於在代碼中未[num_threads](openmp-clauses.md#num-threads)的並行區域時可用的線程數的整數。|
+|[omp_get_thread_num](#omp-get-thread-num)|返回在其線程團隊中執行的線程的線程數。|
+|[omp_get_num_procs](#omp-get-num-procs)|返回調用函數時可用的處理器數。|
+|[omp_in_parallel](#omp-in-parallel)|如果從並行區域內調用,則返回非零。|
+|[omp_set_dynamic](#omp-set-dynamic)|指示可以按運行時調整即將顯示的並列區域中的可用線程數。|
+|[omp_get_dynamic](#omp-get-dynamic)|返回一個值,指示未來並行區域中可用的線程數是否可以按運行時進行調整。|
+|[omp_set_nested](#omp-set-nested)|啟用嵌套並行性。|
+|[omp_get_nested](#omp-get-nested)|返回指示是否啟用嵌套並行性的值。|
 
-針對鎖定：
+對於鎖:
 
-|函數|描述|
+|函式|描述|
 |--------|-----------|
-|[omp_init_lock](#omp-init-lock)|初始化簡單鎖定。|
-|[omp_init_nest_lock](#omp-init-nest-lock)|初始化鎖定。|
-|[omp_destroy_lock](#omp-destroy-lock)|取消初始化鎖定。|
-|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|取消初始化 nestable 鎖定。|
-|[omp_set_lock](#omp-set-lock)|封鎖執行緒執行，直到有可用的鎖定為止。|
-|[omp_set_nest_lock](#omp-set-nest-lock)|封鎖執行緒執行，直到有可用的鎖定為止。|
-|[omp_unset_lock](#omp-unset-lock)|釋放鎖定。|
-|[omp_unset_nest_lock](#omp-unset-nest-lock)|釋放 nestable 鎖定。|
-|[omp_test_lock](#omp-test-lock)|嘗試設定鎖定，但不會封鎖執行緒執行。|
-|[omp_test_nest_lock](#omp-test-nest-lock)|嘗試設定 nestable 鎖定，但不會封鎖執行緒執行。|
+|[omp_init_lock](#omp-init-lock)|初始化一個簡單的鎖。|
+|[omp_init_nest_lock](#omp-init-nest-lock)|初始化鎖。|
+|[omp_destroy_lock](#omp-destroy-lock)|取消初始化鎖。|
+|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|取消初始化可嵌套鎖。|
+|[omp_set_lock](#omp-set-lock)|阻止線程執行,直到鎖可用。|
+|[omp_set_nest_lock](#omp-set-nest-lock)|阻止線程執行,直到鎖可用。|
+|[omp_unset_lock](#omp-unset-lock)|釋放鎖。|
+|[omp_unset_nest_lock](#omp-unset-nest-lock)|釋放可嵌套鎖。|
+|[omp_test_lock](#omp-test-lock)|嘗試設置鎖,但不阻止線程執行。|
+|[omp_test_nest_lock](#omp-test-nest-lock)|嘗試設置可嵌套鎖,但不阻止線程執行。|
 
 |資料類型|描述|
 |---------|-----------|
-|`omp_lock_t`|一種類型，可保存鎖定的狀態、是否可以使用鎖定，或執行緒是否擁有鎖定。|
-|`omp_nest_lock_t`|一種類型，保存有關鎖定的下列其中一項資訊：是否可以使用鎖定，以及擁有鎖定的執行緒識別和嵌套計數。|
+|`omp_lock_t`|一種類型,用於保存鎖的狀態、鎖是否可用或線程是否擁有鎖。|
+|`omp_nest_lock_t`|一種類型,它保存有關鎖的以下資訊之一:鎖是否可用,以及擁有鎖和嵌套計數的線程的標識。|
 
-針對計時常式：
+對於計時例程:
 
-|函數|描述|
+|函式|描述|
 |--------|-----------|
-|[omp_get_wtime](#omp-get-wtime)|以秒為單位傳回某個時間點經過的值。|
-|[omp_get_wtick](#omp-get-wtick)|傳回處理器時鐘刻度之間的秒數。|
+|[omp_get_wtime](#omp-get-wtime)|返回從某個點開始的時間的秒數的值。|
+|[omp_get_wtick](#omp-get-wtick)|返回處理器時鐘刻度之間的秒數。|
 
-## <a name="omp-destroy-lock"></a>omp_destroy_lock
+## <a name="omp_destroy_lock"></a><a name="omp-destroy-lock"></a>omp_destroy_lock
 
-取消初始化鎖定。
+取消初始化鎖。
 
 ```cpp
 void omp_destroy_lock(
@@ -117,20 +117,20 @@ void omp_destroy_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_lock_t` 的類型變數，其已使用[omp_init_lock](#omp-init-lock)初始化。
+*鎖定*<br/>
+使用`omp_lock_t`omp_init_lock 初始化的類型變數[omp_init_lock](#omp-init-lock)。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函數](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.2omp_destroy_lock和omp_destroy_nest_lock函數](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_destroy_lock`的範例，請參閱[omp_init_lock](#omp-init-lock) 。
+有關使用`omp_destroy_lock`的示例,請參閱[omp_init_lock。](#omp-init-lock)
 
-## <a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock
+## <a name="omp_destroy_nest_lock"></a><a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock
 
-取消初始化 nestable 鎖定。
+取消初始化可嵌套鎖。
 
 ```cpp
 void omp_destroy_nest_lock(
@@ -140,20 +140,20 @@ void omp_destroy_nest_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_nest_lock_t` 的類型變數，其已使用[omp_init_nest_lock](#omp-init-nest-lock)初始化。
+*鎖定*<br/>
+使用`omp_nest_lock_t`omp_init_nest_lock初始化的類型變數。 [omp_init_nest_lock](#omp-init-nest-lock)
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函數](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.2omp_destroy_lock和omp_destroy_nest_lock函數](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_destroy_nest_lock`的範例，請參閱[omp_init_nest_lock](#omp-init-nest-lock) 。
+有關使用`omp_destroy_nest_lock`的示例,請參閱[omp_init_nest_lock。](#omp-init-nest-lock)
 
-## <a name="omp-get-dynamic"></a>omp_get_dynamic
+## <a name="omp_get_dynamic"></a><a name="omp-get-dynamic"></a>omp_get_dynamic
 
-傳回值，指出即將推出的平列區域中可用的執行緒數目是否可以由執行時間調整。
+返回一個值,指示未來並行區域中可用的線程數是否可以按運行時進行調整。
 
 ```cpp
 int omp_get_dynamic();
@@ -161,21 +161,21 @@ int omp_get_dynamic();
 
 ### <a name="return-value"></a>傳回值
 
-非零值表示執行緒會以動態方式調整。
+非零值表示線程將被動態調整。
 
 ### <a name="remarks"></a>備註
 
-執行緒的動態調整是以[omp_set_dynamic](#omp-set-dynamic)和[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)來指定。
+使用[omp_set_dynamic](#omp-set-dynamic)和[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)指定線程的動態調整。
 
-如需詳細資訊，請參閱[3.1.7 omp_set_dynamic 函數](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。
+有關詳細資訊,請參閱[3.1.7 omp_set_dynamic函數](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_get_dynamic`的範例，請參閱[omp_set_dynamic](#omp-set-dynamic) 。
+有關使用`omp_get_dynamic`的示例,請參閱[omp_set_dynamic。](#omp-set-dynamic)
 
-## <a name="omp-get-max-threads"></a>omp_get_max_threads
+## <a name="omp_get_max_threads"></a><a name="omp-get-max-threads"></a>omp_get_max_threads
 
-傳回大於或等於執行緒數目的整數，如果沒有[num_threads](openmp-clauses.md#num-threads)的平列區域定義于程式碼中的該點上，就可以使用。
+返回等於或大於在代碼中未[num_threads](openmp-clauses.md#num-threads)的並行區域時可用的線程數的整數。
 
 ```cpp
 int omp_get_max_threads( )
@@ -183,7 +183,7 @@ int omp_get_max_threads( )
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.1.3 omp_get_max_threads 函數](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)。
+有關詳細資訊,請參閱[3.1.3 omp_get_max_threads函數](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)。
 
 ### <a name="example"></a>範例
 
@@ -223,9 +223,9 @@ int main( )
 8
 ```
 
-## <a name="omp-get-nested"></a>omp_get_nested
+## <a name="omp_get_nested"></a><a name="omp-get-nested"></a>omp_get_nested
 
-傳回值，指出是否已啟用嵌套平行處理原則。
+返回指示是否啟用嵌套並行性的值。
 
 ```cpp
 int omp_get_nested( );
@@ -233,21 +233,21 @@ int omp_get_nested( );
 
 ### <a name="return-value"></a>傳回值
 
-非零值表示已啟用「嵌套平行處理原則」。
+非零值表示已啟用嵌套並行性。
 
 ### <a name="remarks"></a>備註
 
-使用[omp_set_nested](#omp-set-nested)和[OMP_NESTED](openmp-environment-variables.md#omp-nested)來指定嵌套的平行處理原則。
+嵌套並行[性指定omp_set_nested](#omp-set-nested)和[OMP_NESTED。](openmp-environment-variables.md#omp-nested)
 
-如需詳細資訊，請參閱[3.1.10 omp_get_nested 函數](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)。
+有關詳細資訊,請參閱[3.1.10 omp_get_nested函數](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_get_nested`的範例，請參閱[omp_set_nested](#omp-set-nested) 。
+有關使用`omp_get_nested`的示例,請參閱[omp_set_nested。](#omp-set-nested)
 
-## <a name="omp-get-num-procs"></a>omp_get_num_procs
+## <a name="omp_get_num_procs"></a><a name="omp-get-num-procs"></a>omp_get_num_procs
 
-傳回呼叫函數時可用的處理器數目。
+返回調用函數時可用的處理器數。
 
 ```cpp
 int omp_get_num_procs();
@@ -255,7 +255,7 @@ int omp_get_num_procs();
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.1.5 omp_get_num_procs](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)函式。
+有關詳細資訊,請參閱[3.1.5 omp_get_num_procs函數](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)。
 
 ### <a name="example"></a>範例
 
@@ -282,9 +282,9 @@ int main( )
 2
 ```
 
-## <a name="omp-get-num-threads"></a>omp_get_num_threads
+## <a name="omp_get_num_threads"></a><a name="omp-get-num-threads"></a>omp_get_num_threads
 
-傳回平列區域中的執行緒數目。
+返回並行區域中的線程數。
 
 ```cpp
 int omp_get_num_threads( );
@@ -292,7 +292,7 @@ int omp_get_num_threads( );
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.1.2 omp_get_num_threads 函數](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)。
+有關詳細資訊,請參閱[3.1.2 omp_get_num_threads函數](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)。
 
 ### <a name="example"></a>範例
 
@@ -332,9 +332,9 @@ int main()
 1
 ```
 
-## <a name="omp-get-thread-num"></a>omp_get_thread_num
+## <a name="omp_get_thread_num"></a><a name="omp-get-thread-num"></a>omp_get_thread_num
 
-傳回執行緒在其執行緒小組內執行的執行緒數目。
+返回在其線程團隊中執行的線程的線程數。
 
 ```cpp
 int omp_get_thread_num( );
@@ -342,15 +342,15 @@ int omp_get_thread_num( );
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.1.4 omp_get_thread_num 函數](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)。
+有關詳細資訊,請參閱[3.1.4 omp_get_thread_num函數](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_get_thread_num`的範例，請參閱[parallel](openmp-directives.md#parallel) 。
+有關[parallel](openmp-directives.md#parallel)`omp_get_thread_num`使用的示例,請參閱並行。
 
-## <a name="omp-get-wtick"></a>omp_get_wtick
+## <a name="omp_get_wtick"></a><a name="omp-get-wtick"></a>omp_get_wtick
 
-傳回處理器時鐘刻度之間的秒數。
+返回處理器時鐘刻度之間的秒數。
 
 ```cpp
 double omp_get_wtick( );
@@ -358,15 +358,15 @@ double omp_get_wtick( );
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.3.2 omp_get_wtick 函數](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md)。
+有關詳細資訊,請參閱[3.3.2 omp_get_wtick函數](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_get_wtick`的範例，請參閱[omp_get_wtime](#omp-get-wtime) 。
+有關使用`omp_get_wtick`的示例,請參閱[omp_get_wtime。](#omp-get-wtime)
 
-## <a name="omp-get-wtime"></a>omp_get_wtime
+## <a name="omp_get_wtime"></a><a name="omp-get-wtime"></a>omp_get_wtime
 
-以秒為單位傳回某個時間點經過的值。
+返回從某個點開始的時間的秒數的值。
 
 ```cpp
 double omp_get_wtime( );
@@ -374,13 +374,13 @@ double omp_get_wtime( );
 
 ### <a name="return-value"></a>傳回值
 
-傳回一個值，以秒為單位，從部分任意但一致的時間點開始算起。
+返回從任意但一致的點經過的時間數秒的值。
 
 ### <a name="remarks"></a>備註
 
-該點在程式執行期間會保持一致，因此可能會進行近期比較。
+在程序執行期間,該點將保持一致,從而可以進行後續比較。
 
-如需詳細資訊，請參閱[3.3.1 omp_get_wtime 函數](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)。
+有關詳細資訊,請參閱[3.3.1 omp_get_wtime函數](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)。
 
 ### <a name="example"></a>範例
 
@@ -413,9 +413,9 @@ wtick = 2.793651148400146e-007
 1/wtick = 3579545
 ```
 
-## <a name="omp-in-parallel"></a>omp_in_parallel
+## <a name="omp_in_parallel"></a><a name="omp-in-parallel"></a>omp_in_parallel
 
-如果從平列區域內呼叫，則傳回非零。
+如果從並行區域內調用,則返回非零。
 
 ```cpp
 int omp_in_parallel( );
@@ -423,7 +423,7 @@ int omp_in_parallel( );
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.1.6 omp_in_parallel 函數](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)。
+有關詳細資訊,請參閱[3.1.6 omp_in_parallel函數](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)。
 
 ### <a name="example"></a>範例
 
@@ -451,9 +451,9 @@ int main( )
 1
 ```
 
-## <a name="omp-init-lock"></a>omp_init_lock
+## <a name="omp_init_lock"></a><a name="omp-init-lock"></a>omp_init_lock
 
-初始化簡單鎖定。
+初始化一個簡單的鎖。
 
 ```cpp
 void omp_init_lock(
@@ -463,12 +463,12 @@ void omp_init_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
+*鎖定*<br/>
 類型為 `omp_lock_t` 的變數。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.1 omp_init_lock 和 omp_init_nest_lock 函數](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.1 omp_init_lock和omp_init_nest_lock函數](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
@@ -543,9 +543,9 @@ Thread 3 - starting locked region
 Thread 3 - ending locked region
 ```
 
-## <a name="omp-init-nest-lock"></a>omp_init_nest_lock
+## <a name="omp_init_nest_lock"></a><a name="omp-init-nest-lock"></a>omp_init_nest_lock
 
-初始化鎖定。
+初始化鎖。
 
 ```cpp
 void omp_init_nest_lock(
@@ -555,14 +555,14 @@ void omp_init_nest_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
+*鎖定*<br/>
 類型為 `omp_nest_lock_t` 的變數。
 
 ### <a name="remarks"></a>備註
 
-初始的嵌套計數為零。
+初始嵌套計數為零。
 
-如需詳細資訊，請參閱[3.2.1 omp_init_lock 和 omp_init_nest_lock 函數](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.1 omp_init_lock和omp_init_nest_lock函數](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
@@ -628,9 +628,9 @@ Thread 0 - starting nested locked region
 Thread 0 - ending nested locked region
 ```
 
-## <a name="omp-set-dynamic"></a>omp_set_dynamic
+## <a name="omp_set_dynamic"></a><a name="omp-set-dynamic"></a>omp_set_dynamic
 
-表示可由執行時間調整即將到來的平列區域中可用的執行緒數目。
+指示可以按運行時調整即將顯示的並列區域中的可用線程數。
 
 ```cpp
 void omp_set_dynamic(
@@ -640,18 +640,18 @@ void omp_set_dynamic(
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
-值，指出執行時間是否可以調整即將推出的平列區域中可用的執行緒數目。 如果是非零值，執行時間可以調整執行緒的數目，如果為零，執行時間就不會動態調整執行緒的數目。
+*瓦爾*<br/>
+指示即將推出的並行區域中的可用線程數是否可以由運行時調整的值。 如果為非零,運行時可以調整線程數(如果為零)運行時不會動態調整線程數。
 
 ### <a name="remarks"></a>備註
 
-執行緒的數目永遠不會超過[omp_set_num_threads](#omp-set-num-threads)或[OMP_NUM_THREADS](openmp-environment-variables.md#omp-num-threads)所設定的值。
+線程數永遠不會超過[omp_set_num_threads](#omp-set-num-threads)或[OMP_NUM_THREADS](openmp-environment-variables.md#omp-num-threads)設置的值。
 
-使用 [ [omp_get_dynamic](#omp-get-dynamic) ] 顯示目前的 `omp_set_dynamic`設定。
+使用[omp_get_dynamic](#omp-get-dynamic)顯示`omp_set_dynamic`的 當前設定。
 
-`omp_set_dynamic` 的設定將會覆寫[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)環境變數的設定。
+的`omp_set_dynamic`設置將覆蓋[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)環境變數的設置。
 
-如需詳細資訊，請參閱[3.1.7 omp_set_dynamic 函數](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。
+有關詳細資訊,請參閱[3.1.7 omp_set_dynamic函數](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。
 
 ### <a name="example"></a>範例
 
@@ -679,9 +679,9 @@ int main()
 1
 ```
 
-## <a name="omp-set-lock"></a>omp_set_lock
+## <a name="omp_set_lock"></a><a name="omp-set-lock"></a>omp_set_lock
 
-封鎖執行緒執行，直到有可用的鎖定為止。
+阻止線程執行,直到鎖可用。
 
 ```cpp
 void omp_set_lock(
@@ -691,20 +691,20 @@ void omp_set_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_lock_t` 的類型變數，其已使用[omp_init_lock](#omp-init-lock)初始化。
+*鎖定*<br/>
+使用`omp_lock_t`omp_init_lock 初始化的類型變數[omp_init_lock](#omp-init-lock)。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.3 omp_set_lock 和 omp_set_nest_lock 函數](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.3 omp_set_lock和omp_set_nest_lock函數](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)。
 
 ### <a name="examples"></a>範例
 
-如需使用 `omp_set_lock`的範例，請參閱[omp_init_lock](#omp-init-lock) 。
+有關使用`omp_set_lock`的示例,請參閱[omp_init_lock。](#omp-init-lock)
 
-## <a name="omp-set-nest-lock"></a>omp_set_nest_lock
+## <a name="omp_set_nest_lock"></a><a name="omp-set-nest-lock"></a>omp_set_nest_lock
 
-封鎖執行緒執行，直到有可用的鎖定為止。
+阻止線程執行,直到鎖可用。
 
 ```cpp
 void omp_set_nest_lock(
@@ -714,20 +714,20 @@ void omp_set_nest_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_nest_lock_t` 的類型變數，其已使用[omp_init_nest_lock](#omp-init-nest-lock)初始化。
+*鎖定*<br/>
+使用`omp_nest_lock_t`omp_init_nest_lock初始化的類型變數。 [omp_init_nest_lock](#omp-init-nest-lock)
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.3 omp_set_lock 和 omp_set_nest_lock 函數](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.3 omp_set_lock和omp_set_nest_lock函數](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)。
 
 ### <a name="examples"></a>範例
 
-如需使用 `omp_set_nest_lock`的範例，請參閱[omp_init_nest_lock](#omp-init-nest-lock) 。
+有關使用`omp_set_nest_lock`的示例,請參閱[omp_init_nest_lock。](#omp-init-nest-lock)
 
-## <a name="omp-set-nested"></a>omp_set_nested
+## <a name="omp_set_nested"></a><a name="omp-set-nested"></a>omp_set_nested
 
-啟用嵌套的平行處理原則。
+啟用嵌套並行性。
 
 ```cpp
 void omp_set_nested(
@@ -737,20 +737,20 @@ void omp_set_nested(
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
-非零值會啟用嵌套平行處理原則，而零則會停用嵌套平行處理原則。
+*瓦爾*<br/>
+非零值支援嵌套並行性,而零禁用嵌套並行性。
 
 ### <a name="remarks"></a>備註
 
-您可以使用 `omp_set_nested`或藉由設定[OMP_NESTED](openmp-environment-variables.md#omp-nested)環境變數，來開啟 OMP 的嵌套平行處理原則。
+可以使用 或`omp_set_nested`設定[OMP_NESTED](openmp-environment-variables.md#omp-nested)環境變數打開 OMP 嵌套並行性。
 
-`omp_set_nested` 的設定將會覆寫 `OMP_NESTED` 環境變數的設定。
+的`omp_set_nested`設置將覆蓋環境變數的`OMP_NESTED`設置。
 
-啟用環境變數可能會中斷另一個操作程式，因為當嵌套平列區域時，執行緒數目會以指數方式增加。 例如，recurses 六次且 OMP 執行緒數目設定為4的函式，需要4096（4到6個）執行緒的乘冪。 除了 i/o 系結的應用程式，應用程式的效能通常會隨著執行緒數目超過處理器而降低。
+啟用環境變數可能會破壞其他操作程式,因為嵌套並行區域時線程數呈指數級增長。 例如,將 OMP 線程數設置為 4 時重新詛咒六次的函數需要 4,096 個(4 到 6 個線程的功率)。 除了 I/O 綁定應用程式外,如果線程數多於處理器,則應用程式的性能通常會降低。
 
-使用 [ [omp_get_nested](#omp-get-nested) ] 顯示目前的 `omp_set_nested`設定。
+使用[omp_get_nested](#omp-get-nested)`omp_set_nested`顯示的 當前設定。
 
-如需詳細資訊，請參閱[3.1.9 omp_set_nested 函數](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)。
+有關詳細資訊,請參閱[3.1.9 omp_set_nested函數](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)。
 
 ### <a name="example"></a>範例
 
@@ -778,9 +778,9 @@ int main( )
 1
 ```
 
-## <a name="omp-set-num-threads"></a>omp_set_num_threads
+## <a name="omp_set_num_threads"></a><a name="omp-set-num-threads"></a>omp_set_num_threads
 
-設定近期平列區域中的執行緒數目，除非是由[num_threads](openmp-clauses.md#num-threads)子句覆寫。
+設置即將到來的並行區域中的線程數,除非被[num_threads](openmp-clauses.md#num-threads)子句覆蓋。
 
 ```cpp
 void omp_set_num_threads(
@@ -791,19 +791,19 @@ void omp_set_num_threads(
 ### <a name="parameters"></a>參數
 
 *num_threads*<br/>
-平列區域中的執行緒數目。
+並行區域中的線程數。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.1.1 omp_set_num_threads 函數](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)。
+有關詳細資訊,請參閱[3.1.1 omp_set_num_threads函數](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_set_num_threads`的範例，請參閱[omp_get_num_threads](#omp-get-num-threads) 。
+有關使用`omp_set_num_threads`的示例,請參閱[omp_get_num_threads。](#omp-get-num-threads)
 
-## <a name="omp-test-lock"></a>omp_test_lock
+## <a name="omp_test_lock"></a><a name="omp-test-lock"></a>omp_test_lock
 
-嘗試設定鎖定，但不會封鎖執行緒執行。
+嘗試設置鎖,但不阻止線程執行。
 
 ```cpp
 int omp_test_lock(
@@ -813,12 +813,12 @@ int omp_test_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_lock_t` 的類型變數，其已使用[omp_init_lock](#omp-init-lock)初始化。
+*鎖定*<br/>
+使用`omp_lock_t`omp_init_lock 初始化的類型變數[omp_init_lock](#omp-init-lock)。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.5 omp_test_lock 和 omp_test_nest_lock 函數](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.5 omp_test_lock和omp_test_nest_lock函數](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
@@ -874,9 +874,9 @@ Thread 3 - acquired simple_lock
 Thread 3 - released simple_lock
 ```
 
-## <a name="omp-test-nest-lock"></a>omp_test_nest_lock
+## <a name="omp_test_nest_lock"></a><a name="omp-test-nest-lock"></a>omp_test_nest_lock
 
-嘗試設定 nestable 鎖定，但不會封鎖執行緒執行。
+嘗試設置可嵌套鎖,但不阻止線程執行。
 
 ```cpp
 int omp_test_nest_lock(
@@ -886,12 +886,12 @@ int omp_test_nest_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_nest_lock_t` 的類型變數，其已使用[omp_init_nest_lock](#omp-init-nest-lock)初始化。
+*鎖定*<br/>
+使用`omp_nest_lock_t`omp_init_nest_lock初始化的類型變數。 [omp_init_nest_lock](#omp-init-nest-lock)
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.5 omp_test_lock 和 omp_test_nest_lock 函數](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.5 omp_test_lock和omp_test_nest_lock函數](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
@@ -965,9 +965,9 @@ Thread 2 - released nestable_lock
 Thread 2 - released nestable_lock
 ```
 
-## <a name="omp-unset-lock"></a>omp_unset_lock
+## <a name="omp_unset_lock"></a><a name="omp-unset-lock"></a>omp_unset_lock
 
-釋放鎖定。
+釋放鎖。
 
 ```cpp
 void omp_unset_lock(
@@ -977,20 +977,20 @@ void omp_unset_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_lock_t` 類型的變數，其使用由執行緒所擁有並在函式中執行的[omp_init_lock](#omp-init-lock)初始化。
+*鎖定*<br/>
+類型變數`omp_lock_t`,用[omp_init_lock](#omp-init-lock)初始化,由線程擁有並在函數中執行。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函數](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.4 omp_unset_lock和omp_unset_nest_lock函數](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_unset_lock`的範例，請參閱[omp_init_lock](#omp-init-lock) 。
+有關使用`omp_unset_lock`的示例,請參閱[omp_init_lock。](#omp-init-lock)
 
-## <a name="omp-unset-nest-lock"></a>omp_unset_nest_lock
+## <a name="omp_unset_nest_lock"></a><a name="omp-unset-nest-lock"></a>omp_unset_nest_lock
 
-釋放 nestable 鎖定。
+釋放可嵌套鎖。
 
 ```cpp
 void omp_unset_nest_lock(
@@ -1000,13 +1000,13 @@ void omp_unset_nest_lock(
 
 ### <a name="parameters"></a>參數
 
-*lock*<br/>
-`omp_nest_lock_t` 類型的變數，其使用由執行緒所擁有並在函式中執行的[omp_init_nest_lock](#omp-init-nest-lock)初始化。
+*鎖定*<br/>
+使用omp_init_nest_lock初始化`omp_nest_lock_t`的類型變數,由線程[omp_init_nest_lock](#omp-init-nest-lock)擁有並在函數中執行。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函數](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。
+有關詳細資訊,請參閱[3.2.4 omp_unset_lock和omp_unset_nest_lock函數](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
-如需使用 `omp_unset_nest_lock`的範例，請參閱[omp_init_nest_lock](#omp-init-nest-lock) 。
+有關使用`omp_unset_nest_lock`的示例,請參閱[omp_init_nest_lock。](#omp-init-nest-lock)

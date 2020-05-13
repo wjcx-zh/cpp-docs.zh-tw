@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbac56ea7efca98218133b23657f8508ea6bac28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182012"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752912"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 類別
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -80,17 +80,17 @@ class CGlobalUtils
 
 ## <a name="remarks"></a>備註
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CGlobalUtils](../../mfc/reference/cglobalutils-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxglobalutils.h
+**標題:** afxglobalutils.h
 
-##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea
+## <a name="cglobalutilsadjustrecttoworkarea"></a><a name="adjustrecttoworkarea"></a>CGlobalUtils::調整RecttoWork區域
 
-```
+```cpp
 void AdjustRectToworkArea(
     CRect& rect,
     CRect* pRectDelta = NULL);
@@ -98,14 +98,14 @@ void AdjustRectToworkArea(
 
 ### <a name="parameters"></a>參數
 
-[in、 out]*rect*<br/>
-[in] *pRectDelta*<br/>
+[進出]*rect*<br/>
+[在]*普雷克拉德爾塔*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
+## <a name="cglobalutilscalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CGlobalUtils::鈣化物多克
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CPaneContainerManager& barContainerManager,
     CWnd* pWndTodock,
@@ -117,21 +117,21 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>參數
 
-[in] *barContainerManager*<br/>
+[在]*酒吧容器管理員*<br/>
 
-[in] *pWndTodock*<br/>
+[在]*普恩德托多克*<br/>
 
-[in] *ptMouse*<br/>
+[在]*ptMouse*<br/>
 
-[out] *rectResult*<br/>
+[出]*rectResult*<br/>
 
-[out] *bDrawTab*<br/>
+[出]*bDrawTab*<br/>
 
-[out] *ppTargetBar*<br/>
+[出]*ppTargetBar*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
+## <a name="cglobalutilscanbeattached"></a><a name="canbeattached"></a>CGlobalUtils::可附加
 
 ```
 BOOL CanBeAttached(CWnd* pWnd) const;
@@ -139,13 +139,13 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
+## <a name="cglobalutilscanpanebeinfloatingmultipaneframewnd"></a><a name="canpanebeinfloatingmultipaneframewnd"></a>CGlobalUtils::坎帕內貝在漂浮的多窗格框架
 
 ```
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
@@ -153,13 +153,13 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
+## <a name="cglobalutilscheckalignment"></a><a name="checkalignment"></a>CGlobalUtils:檢查對齊
 
 ```
 BOOL CheckAlignment(
@@ -175,27 +175,27 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>參數
 
-[in] *point*<br/>
+[在]*點*<br/>
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
-[in] *nSensitivity*<br/>
+[在]*nSensitivity*<br/>
 
-[in] *pDockManager*<br/>
+[在]*pDock 管理員*<br/>
 
-[in] *bOuterEdge*<br/>
+[在]*bouterEdge*<br/>
 
-[out] *dwAlignment*<br/>
+[出]*dwalignment*<br/>
 
-[in] *dwEnabledDockBars*<br/>
+[在]*dwEnabledDockBars*<br/>
 
-[in] *lpRectBounds*<br/>
+[在]*lpRectBounds*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
+## <a name="cglobalutilscyfromstring"></a><a name="cyfromstring"></a>CGlobalUtils::CyFromString
 
 ```
 BOOL CyFromString(
@@ -205,15 +205,15 @@ BOOL CyFromString(
 
 ### <a name="parameters"></a>參數
 
-[out] *cy*<br/>
+[出]*cy*<br/>
 
-[in] *psz*<br/>
+[在]*psz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
+## <a name="cglobalutilsdecimalfromstring"></a><a name="decimalfromstring"></a>CGlobalUtils::D從弦
 
 ```
 BOOL DecimalFromString(
@@ -223,17 +223,17 @@ BOOL DecimalFromString(
 
 ### <a name="parameters"></a>參數
 
-[out] *decimal*<br/>
+[出]*十進位*<br/>
 
-[in] *psz*<br/>
+[在]*psz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
+## <a name="cglobalutilsfliprect"></a><a name="fliprect"></a>CGlobalUtils::翻轉
 
-```
+```cpp
 void FlipRect(
     CRect& rect,
     int nDegrees);
@@ -241,14 +241,14 @@ void FlipRect(
 
 ### <a name="parameters"></a>參數
 
-[in、 out]*rect*<br/>
-[in] *nDegrees*<br/>
+[進出]*rect*<br/>
+[在]*n 度*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
+## <a name="cglobalutilsforceadjustlayout"></a><a name="forceadjustlayout"></a>CGlobalUtils::強制調整佈局
 
-```
+```cpp
 void ForceAdjustLayout(
     CDockingManager* pDockManager,
     BOOL bForce = FALSE,
@@ -257,15 +257,15 @@ void ForceAdjustLayout(
 
 ### <a name="parameters"></a>參數
 
-[in, out] *pDockManager*<br/>
+[進出]*pDock 管理員*<br/>
 
-[in] *bForce*<br/>
+[在]*bForce*<br/>
 
-[in] *bForceInvisible*<br/>
+[在]*bForce 隱形*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
+## <a name="cglobalutilsgetdockingmanager"></a><a name="getdockingmanager"></a>CGlobalUtils::取得延伸管理員
 
 ```
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -273,13 +273,13 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
+## <a name="cglobalutilsgetoppositealignment"></a><a name="getoppositealignment"></a>CGlobalUtils:取得相反對齊
 
 ```
 DWORD GetOppositeAlignment(DWORD dwAlign);
@@ -287,13 +287,13 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 
 ### <a name="parameters"></a>參數
 
-[in] *dwAlign*<br/>
+[在]*dwalign*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
+## <a name="cglobalutilsgetpaneandalignfrompoint"></a><a name="getpaneandalignfrompoint"></a>CGlobalUtils::取得窗格和從點對齊
 
 ```
 BOOL GetPaneAndAlignFromPoint(
@@ -307,23 +307,23 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>參數
 
-[in] *barContainerManager*<br/>
+[在]*酒吧容器管理員*<br/>
 
-[in] *pt*<br/>
+[在]*pt*<br/>
 
-[out] *ppTargetControlBar*<br/>
+[出]*ppTarget 控制列*<br/>
 
-[out] *dwAlignment*<br/>
+[出]*dwalignment*<br/>
 
-[out] *bTabArea*<br/>
+[出]*bTabArea*<br/>
 
-[out] *bCaption*<br/>
+[出]*bCaption*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
+## <a name="cglobalutilsgetwndicon"></a><a name="getwndicon"></a>CGlobalUtils:取得WndIcon
 
 ```
 HICON GetWndIcon(CWnd* pWnd);
@@ -331,15 +331,15 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
+## <a name="cglobalutilssetnewparent"></a><a name="setnewparent"></a>CGlobalUtils::設置新家長
 
-```
+```cpp
 void SetNewParent(
     CObList& lstControlBars,
     CWnd* pNewParent,
@@ -348,15 +348,15 @@ void SetNewParent(
 
 ### <a name="parameters"></a>參數
 
-[in] *lstControlBars*<br/>
+[在]*lstControlBars*<br/>
 
-[in] *pNewParent*<br/>
+[在]*p 新家長*<br/>
 
-[in] *bCheckVisibility*<br/>
+[在]*b 檢查可見度*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
+## <a name="cglobalutilsstringfromcy"></a><a name="stringfromcy"></a>CGlobalUtils::弦從西
 
 ```
 BOOL StringFromCy(
@@ -366,15 +366,15 @@ BOOL StringFromCy(
 
 ### <a name="parameters"></a>參數
 
-[out] *str*<br/>
+[出]*斯特*<br/>
 
-[in] *cy*<br/>
+[在]*cy*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
+## <a name="cglobalutilsstringfromdecimal"></a><a name="stringfromdecimal"></a>CGlobalUtils:從十進位的字串
 
 ```
 BOOL StringFromDecimal(
@@ -384,9 +384,9 @@ BOOL StringFromDecimal(
 
 ### <a name="parameters"></a>參數
 
-[out] *str*<br/>
+[出]*斯特*<br/>
 
-[in] *decimal*<br/>
+[在]*十進位*<br/>
 
 ### <a name="return-value"></a>傳回值
 

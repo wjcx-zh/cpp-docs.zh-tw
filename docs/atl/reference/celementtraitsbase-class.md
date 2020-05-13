@@ -1,5 +1,5 @@
 ---
-title: CElementTraitsBase 類別
+title: 元素基礎類
 ms.date: 11/04/2016
 f1_keywords:
 - CElementTraitsBase
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-ms.openlocfilehash: 207207d26a2c43367a00b382f80761429159a7b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a29e8778cf2f3400df25b55574950a005bad995
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259114"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327011"
 ---
-# <a name="celementtraitsbase-class"></a>CElementTraitsBase 類別
+# <a name="celementtraitsbase-class"></a>元素基礎類
 
-這個類別會提供預設的複製，並移動集合類別的方法。
+此類為集合類提供預設複製和移動方法。
 
 ## <a name="syntax"></a>語法
 
@@ -32,7 +32,7 @@ class CElementTraitsBase
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-若要在集合中儲存的資料型別。
+要存儲在集合中的數據類型。
 
 ## <a name="members"></a>成員
 
@@ -40,29 +40,29 @@ class CElementTraitsBase
 
 |名稱|描述|
 |----------|-----------------|
-|[CElementTraitsBase::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|
+|[元素特徵庫::INARGTYPE](#inargtype)|用於向集合類物件添加元素的數據類型。|
+|[元素特徵庫::OUTARGTYPE](#outargtype)|用於從集合類物件檢索元素的數據類型。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CElementTraitsBase::CopyElements](#copyelements)|呼叫這個方法來複製集合類別物件中儲存的項目。|
-|[CElementTraitsBase::RelocateElements](#relocateelements)|呼叫這個方法來重新放置集合類別物件中儲存的項目。|
+|[元素庫基礎::複製元素](#copyelements)|呼叫此方法以複製儲存在集合類物件中的元素。|
+|[元素庫基礎::重新置放元素](#relocateelements)|呼叫此方法以重新定位儲存在集合類物件中的元素。|
 
 ## <a name="remarks"></a>備註
 
-這個基底類別會定義用於複製和重新定位項目中的集合類別的方法。 它會利用類別[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)， [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)，並[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。
+此基類定義用於複製和重新定位集合類中的元素的方法。 它被類[CDefault ElementTraits、CStringRef Element Traits](../../atl/reference/cstringrefelementtraits-class.md)和[CString Element TraitsI](../../atl/reference/cstringelementtraitsi-class.md)使用。 [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements
+## <a name="celementtraitsbasecopyelements"></a><a name="copyelements"></a>元素庫基礎::複製元素
 
-呼叫這個方法來複製集合類別物件中儲存的項目。
+呼叫此方法以複製儲存在集合類物件中的元素。
 
 ```
 static void CopyElements(
@@ -74,37 +74,37 @@ static void CopyElements(
 ### <a name="parameters"></a>參數
 
 *pDest*<br/>
-將接收複製的資料的第一個元素的指標。
+指向將接收複製數據的第一個元素的指標。
 
 *pSrc*<br/>
-若要複製的第一個元素的指標。
+指向要複製的第一個元素的指標。
 
-*nElements*<br/>
+*n 元素*<br/>
 要複製的項目數目。
 
 ### <a name="remarks"></a>備註
 
-不應該重疊的來源和目的地的項目。
+源元素和目標元素不應重疊。
 
-##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE
+## <a name="celementtraitsbaseinargtype"></a><a name="inargtype"></a>元素特徵庫::INARGTYPE
 
-要用於將項目加入至集合的資料類型。
+用於向集合中添加元素的數據類型。
 
 ```
 typedef const T& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE
+## <a name="celementtraitsbaseoutargtype"></a><a name="outargtype"></a>元素特徵庫::OUTARGTYPE
 
-要用來從集合擷取項目資料型別。
+用於從集合檢索元素的數據類型。
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements
+## <a name="celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>元素庫基礎::重新置放元素
 
-呼叫這個方法來重新放置集合類別物件中儲存的項目。
+呼叫此方法以重新定位儲存在集合類物件中的元素。
 
 ```
 static void RelocateElements(
@@ -116,17 +116,17 @@ static void RelocateElements(
 ### <a name="parameters"></a>參數
 
 *pDest*<br/>
-將會收到重新定位的資料的第一個元素的指標。
+指向將接收重新置放數據的第一個元素的指標。
 
 *pSrc*<br/>
-重新定位之第一個元素的指標。
+指向要重新置放的第一個元素的指標。
 
-*nElements*<br/>
-若要重新配置的元素數目。
+*n 元素*<br/>
+要重新置放的元素數。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大部分的資料類型。 如果要移動的物件包含其本身的成員的指標，這個方法必須覆寫。
+此方法調用[memmove](../../c-runtime-library/reference/memmove-wmemmove.md),對於大多數數據類型來說,這就足夠了。 如果要移動的物件包含指向其自己的成員的指標,則需要重寫此方法。
 
 ## <a name="see-also"></a>另請參閱
 

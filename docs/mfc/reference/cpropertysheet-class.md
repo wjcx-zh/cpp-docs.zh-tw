@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421006"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750967"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 
@@ -75,51 +75,51 @@ class CPropertySheet : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CPropertySheet：： CPropertySheet](#cpropertysheet)|建構 `CPropertySheet` 物件。|
+|[C 屬性表:C屬性表](#cpropertysheet)|建構 `CPropertySheet` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPropertySheet：： AddPage](#addpage)|將頁面新增至屬性工作表。|
-|[CPropertySheet：：結構](#construct)|建構 `CPropertySheet` 物件。|
-|[CPropertySheet：： Create](#create)|顯示非模式屬性工作表。|
-|[CPropertySheet：:D oModal](#domodal)|顯示模式屬性工作表。|
-|[CPropertySheet：： EnableStackedTabs](#enablestackedtabs)|指出屬性工作表是否使用堆疊或捲軸索引標籤。|
-|[CPropertySheet：： EndDialog](#enddialog)|終止屬性工作表。|
-|[CPropertySheet：： GetActiveIndex](#getactiveindex)|抓取屬性工作表之使用中頁面的索引。|
-|[CPropertySheet：： GetActivePage](#getactivepage)|傳回使用中的頁面物件。|
-|[CPropertySheet：： GetPage](#getpage)|抓取指定頁面的指標。|
-|[CPropertySheet：： GetPageCount](#getpagecount)|抓取屬性工作表中的頁面數目。|
-|[CPropertySheet：： GetPageIndex](#getpageindex)|抓取屬性工作表中指定之頁面的索引。|
-|[CPropertySheet：： GetTabControl](#gettabcontrol)|抓取索引標籤控制項的指標。|
-|[CPropertySheet：： MapDialogRect](#mapdialogrect)|將矩形的對話方塊單位轉換成螢幕單元。|
-|[CPropertySheet：： OnInitDialog](#oninitdialog)|覆寫以擴大屬性工作表初始化。|
-|[CPropertySheet：:P ressButton](#pressbutton)|模擬屬性工作表中指定之按鈕的選擇。|
-|[CPropertySheet：： RemovePage](#removepage)|從屬性工作表中移除頁面。|
-|[CPropertySheet：： SetActivePage](#setactivepage)|以程式設計方式設定使用中的頁面物件。|
-|[CPropertySheet：： SetFinishText](#setfinishtext)|設定 [完成] 按鈕的文字。|
-|[CPropertySheet：： SetTitle](#settitle)|設定屬性工作表的標題。|
-|[CPropertySheet：： SetWizardButtons](#setwizardbuttons)|啟用 wizard 按鈕。|
-|[CPropertySheet：： SetWizardMode](#setwizardmode)|啟用 wizard 模式。|
+|[C 屬性表::新增頁](#addpage)|將頁面新增至屬性工作表。|
+|[C 屬性表:建構](#construct)|建構 `CPropertySheet` 物件。|
+|[C 屬性表:建立](#create)|顯示無模式屬性表。|
+|[C屬性表::Do 模態](#domodal)|顯示模態屬性表。|
+|[C 屬性表::啟用堆疊選項卡](#enablestackedtabs)|指示屬性表是使用堆疊選項卡還是滾動選項卡。|
+|[C 屬性表:結束對話](#enddialog)|終止屬性表。|
+|[C 屬性表:抓取活動索引](#getactiveindex)|檢索屬性表的活動頁的索引。|
+|[C 屬性表:抓取活動頁面](#getactivepage)|返回活動頁物件。|
+|[C 屬性表:取得頁面](#getpage)|檢索指向指定頁面的指標。|
+|[C 屬性表:取得頁面計數](#getpagecount)|檢索屬性表中的頁數。|
+|[C 屬性表:取得頁面索引](#getpageindex)|檢索屬性表指定頁的索引。|
+|[C 屬性表:抓取Tab控制](#gettabcontrol)|檢索指向選項卡控件的指標。|
+|[C 屬性表:mapDialogrect](#mapdialogrect)|將矩形的對話框單位轉換為屏幕單位。|
+|[C屬性表:onInitDialog](#oninitdialog)|重寫以增強屬性表初始化。|
+|[C屬性表::PresButton](#pressbutton)|類比屬性表中指定按鈕的選擇。|
+|[C 屬性表:刪除頁](#removepage)|從屬性工作表中刪除頁面。|
+|[C 屬性表::設定活動頁](#setactivepage)|以程式設計方式設置活動頁面物件。|
+|[C 屬性表::設定完成文字](#setfinishtext)|設置"完成"按鈕的文字。|
+|[C 屬性表::設定標題](#settitle)|設置屬性表的標題。|
+|[C 屬性表::設定精靈按鈕](#setwizardbuttons)|啟用嚮導按鈕。|
+|[C 屬性表::設定精靈模式](#setwizardmode)|啟用嚮導模式。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CPropertySheet：： m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)結構。 提供基本屬性工作表參數的存取權。|
+|[C屬性表:m_psh](#m_psh)|Windows [PROPSHEETHEADER 結構](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)。 提供對基本屬性表參數的訪問。|
 
 ## <a name="remarks"></a>備註
 
-屬性工作表是由 `CPropertySheet` 物件和一或多個[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件所組成。 架構會將屬性工作表顯示為具有一組索引標籤索引的視窗，以及包含目前所選取頁面的區域。 使用者可以使用適當的索引標籤，流覽至特定的頁面。
+屬性表由物件`CPropertySheet`和一個或多個[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件組成。 框架將屬性表顯示為一個視窗,其中包含一組選項卡索引和包含當前選取頁面的區域。 使用者使用相應的選項卡導航到特定頁面。
 
-`CPropertySheet` 針對 Windows 98 和 Windows NT 2000 中引進的擴充[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)結構提供支援。 結構包含其他旗標和成員，可支援使用「浮水印」背景點陣圖。
+`CPropertySheet`支援 Windows 98 和 Windows NT 2000 中引入的擴展[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)結構。 該結構包含支援使用「水印」背景位圖的其他標誌和成員。
 
-若要在您的屬性工作表物件中自動顯示這些新影像，請在[CPropertySheet：：結構](#construct)或[CPropertySheet：： CPropertySheet](#cpropertysheet)的呼叫中傳遞點陣圖和調色板影像的有效值。
+要在屬性表物件中自動顯示這些新影像,請將呼叫[CPropertySheet::建構](#construct)或[CPropertySheet:CPropertySheet](#cpropertysheet)中的位圖和調色板影像的有效值傳遞給 。
 
-雖然 `CPropertySheet` 不是衍生自[CDialog](../../mfc/reference/cdialog-class.md)，但管理 `CPropertySheet` 物件就像是管理 `CDialog` 物件。 例如，建立屬性工作表需要兩個部分的結構：呼叫此函式，然後呼叫模式屬性工作表的[DoModal](#domodal) ，或針對非模式屬性工作表[建立](#create)。 `CPropertySheet` 有兩種類型的函式： [CPropertySheet：：結構](#construct)和[CPropertySheet：： CPropertySheet](#cpropertysheet)。
+即使`CPropertySheet`不是從[CDialog](../../mfc/reference/cdialog-class.md)`CPropertySheet`派生的 ,管理物件`CDialog`就像管理物件一 樣。 例如,建立屬性表需要兩個部分建構:呼叫式建構函數,然後呼叫樣式屬性表[DoModal](#domodal)或為無模式屬性表[建立](#create)。 `CPropertySheet`有兩種類型的建構函數[:C 屬性表:建構](#construct)與 C[屬性表::C 屬性表](#cpropertysheet)。
 
-當您建立 `CPropertySheet` 物件時，某些[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)可能會導致發生第一個可能的例外狀況。 這是系統在建立工作表之前，嘗試變更屬性工作表樣式所產生的結果。 若要避免這個例外狀況，請確定您在建立 `CPropertySheet`時，設定了下列樣式：
+構造`CPropertySheet`物件時,某些[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)可能會導致發生第一次異常。 這是系統嘗試在創建工作表之前更改屬性表樣式的結果。 為了避免此異常,請確保在建立`CPropertySheet`時 設定以下樣式:
 
 - DS_3DLOOK
 
@@ -129,7 +129,7 @@ class CPropertySheet : public CWnd
 
 - WS_TABSTOP
 
-下列樣式是選擇性的，而且不會造成第一個可能發生的例外狀況：
+以下樣式是可選的,不會導致第一次機會異常:
 
 - DS_SHELLFONT
 
@@ -137,17 +137,17 @@ class CPropertySheet : public CWnd
 
 - WS_CLIPCHILDREN
 
-禁止任何其他 `Window Styles`，而且您不應加以啟用。
+任何其他`Window Styles`是被禁止的,你不應該啟用他們。
 
-在 `CPropertySheet` 物件與外部物件之間交換資料，類似于使用 `CDialog` 物件交換資料。 重要的差異在於屬性工作表的設定通常是 `CPropertyPage` 物件的成員變數，而不是 `CPropertySheet` 物件本身。
+在`CPropertySheet`物件和外部對象之間交換數據類似`CDialog`於與 物件交換數據。 重要的區別是屬性表的設置通常是物件的成員變數,`CPropertyPage`而不是物件本身的成員`CPropertySheet`變數。
 
-您可以建立一個稱為「wizard」的 [索引標籤] 對話方塊，其中包含具有一系列屬性頁的屬性工作表，可引導使用者完成作業的步驟，例如設定裝置或建立電子報。 在 [wizard-類型] 索引標籤對話方塊中，屬性頁沒有索引標籤，而且一次只能顯示一個屬性頁。 此外，[wizard type] 索引標籤對話方塊也有 [**上一頁**] 按鈕、 **[下一步** **] 或 [完成**] 按鈕、[**取消**] 按鈕和 [說明 **] 按鈕，** 而不是有 **[確定**] 和 [**立即**套用] 按鈕。
+您可以創建稱為嚮導的選項卡對話框類型,該對話方塊由包含一系列屬性頁的屬性表組成,該屬性頁指導使用者完成操作的步驟,例如設置設備或創建新聞稿。 在嚮導類型選項卡對話方塊中,屬性頁沒有選項卡,並且一次只能看到一個屬性頁。 此外,精靈類型選項卡對話框沒有 **「確定**」和 **「立即應用」** 按鈕,而是具有 **「後退」** 按鈕 **、「下一步**」 或 **「完成」** 按鈕 **、」取消「 按鈕**和 **」説明**「 按鈕」。
 
-若要建立 [wizard 類型] 對話方塊，請遵循建立標準屬性工作表所遵循的相同步驟，但在呼叫[DoModal](#domodal)之前，請先呼叫[SetWizardMode](#setwizardmode) 。 若要啟用 wizard 按鈕，請呼叫[SetWizardButtons](#setwizardbuttons)，並使用旗標來自訂其功能和外觀。 若要啟用 [**完成]** 按鈕，請在使用者于 wizard 的最後一頁上採取動作之後，呼叫[SetFinishText](#setfinishtext) 。
+要創建嚮導類型對話框,請按照創建標準屬性表的步驟執行相同的步驟,但在調用[DoModal](#domodal)之前調用[SetWizardMode。](#setwizardmode) 要啟用精靈按鈕,請使用標誌調用[SetWizardButtons](#setwizardbuttons)來自定義其功能和外觀。 要啟用 **「完成」** 按鈕,請使用者在嚮導的最後一頁上執行操作後呼叫[SetFinishText。](#setfinishtext)
 
-如需如何使用 `CPropertySheet` 物件的詳細資訊，請參閱[屬性工作表和屬性頁](../../mfc/property-sheets-and-property-pages-in-mfc.md)一文。
+有關如何使用`CPropertySheet`物件的詳細資訊,請參閱文章[「屬性表」和「屬性頁](../../mfc/property-sheets-and-property-pages-in-mfc.md)」。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -159,42 +159,42 @@ class CPropertySheet : public CWnd
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdlgs。h
+**標題:** afxdlgs.h
 
-##  <a name="addpage"></a>CPropertySheet：： AddPage
+## <a name="cpropertysheetaddpage"></a><a name="addpage"></a>C 屬性表::新增頁
 
-加入提供的頁面，其中包含屬性工作表中最右邊的索引標籤。
+在屬性表中添加提供的最右側選項卡的頁面。
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
 ### <a name="parameters"></a>參數
 
 *pPage*<br/>
-指向要加入至屬性工作表的頁面。 不能是 NULL。
+指向要添加到屬性表的頁面。 不能是 NULL。
 
 ### <a name="remarks"></a>備註
 
-依您想要顯示的順序，將頁面加入至屬性工作表。
+按從左至右的順序將頁面添加到屬性工作表,您希望它們顯示。
 
-`AddPage` 會將[CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)物件新增至 `CPropertySheet` 物件的頁面清單，但實際上並不會建立該頁面的視窗。 架構會延遲建立頁面的視窗，直到使用者選取該頁面為止。
+`AddPage`將[CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)物件`CPropertySheet`添加到 物件的頁面清單中,但實際上不會為頁面創建視窗。 框架將推遲創建頁面的視窗,直到用戶選擇該頁面。
 
-當您使用 `AddPage`加入屬性頁時，`CPropertySheet` 是 `CPropertyPage`的父系。 若要從屬性頁取得屬性工作表的存取權，請呼叫[CWnd：： GetParent](../../mfc/reference/cwnd-class.md#getparent)。
+使用`AddPage`新增 屬性頁`CPropertySheet`時,`CPropertyPage`是的父頁。 要從屬性頁存取屬性表,請致電[CWnd::getParent](../../mfc/reference/cwnd-class.md#getparent)。
 
-您不需要等到建立屬性工作表視窗來呼叫 `AddPage`。 通常，您會在呼叫[DoModal](#domodal)或[Create](#create)之前呼叫 `AddPage`。
+不必建立屬性表視窗才能呼叫`AddPage`。 通常,您將在呼叫`AddPage` [DoModal](#domodal)或[建立](#create)之前呼叫 。
 
-如果您在顯示內容頁之後呼叫 `AddPage`，索引標籤列會反映新加入的頁面。
+如果在顯示屬性`AddPage`頁後調用,選項卡行將反映新添加的頁面。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]
 
-##  <a name="construct"></a>CPropertySheet：：結構
+## <a name="cpropertysheetconstruct"></a><a name="construct"></a>C 屬性表:建構
 
 建構 `CPropertySheet` 物件。
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -225,41 +225,41 @@ void Construct(
 ### <a name="parameters"></a>參數
 
 *nIDCaption*<br/>
-要用於屬性工作表的標題識別碼。
+用於屬性表的標題的 ID。
 
-*pParentWnd*<br/>
-屬性工作表之父視窗的指標。 如果是 Null，父視窗會是應用程式的主視窗。
+*pparentwnd*<br/>
+指向屬性表的父視窗。 如果為 NULL,則父視窗將是應用程式的主視窗。
 
 *iSelectPage*<br/>
-一開始會排在最上層的頁面索引。 預設值是新增至工作表的第一頁。
+最初位於頂部的頁面索引。 默認值是添加到工作表的第一頁。
 
 *pszCaption*<br/>
-字串的指標，其中包含要用於屬性工作表的標題。 不能是 NULL。
+指向包含要用於屬性表的標題的字串的指標。 不能是 NULL。
 
-*hbmWatermark*<br/>
-屬性頁浮水印點陣圖的控制碼。
+*hbm沃特馬克*<br/>
+處理屬性頁的水印位圖。
 
-*hpalWatermark*<br/>
-浮水印點陣圖和（或）標頭點陣圖之色板的控制碼。
+*赫帕爾沃特馬克*<br/>
+處理水印位圖和/或標題位圖的調色板。
 
 *hbmHeader*<br/>
-屬性頁標頭點陣圖的控制碼。
+處理屬性頁的頭點陣圖。
 
 ### <a name="remarks"></a>備註
 
-如果尚未呼叫其中一個類別的函式，請呼叫這個成員函式。 例如，當您宣告或配置 `CPropertySheet` 物件的陣列時，請呼叫 `Construct`。 如果是陣列，您必須針對陣列中的每個成員呼叫 `Construct`。
+如果尚未調用一個類構造函數,請調用此成員函數。 例如,在聲明`Construct`或`CPropertySheet`分配 物件陣列時調用。 對於陣列,必須調用`Construct`陣列中的每個成員。
 
-若要顯示內容表，請呼叫[DoModal](#domodal)或[建立](#create)。 第一個參數中所包含的字串將會放在屬性工作表的標題列中。
+要顯示屬性工作表,請呼叫[「使用模式」](#domodal)或[「建立](#create)」 。 第一個參數中包含的字串將放置在屬性表的標題欄中。
 
-如果您使用以上所列的第三或第四個 `Construct`原型，而且您傳遞*hbmWatermark*、 *hpalWatermark*和/或*hbmHeader*參數的有效值，您就可以自動顯示浮水印和/或標頭影像。
+如果使用上面列出的 第三個或第`Construct`四 個原型,並且傳遞*hbmWatermark、hpalWatermark*和/或*hbmHeader*參數的有效值*hpalWatermark*,則可以自動顯示浮浮水印和/或標題圖像。
 
 ### <a name="example"></a>範例
 
-下列範例會在您 `Construct`呼叫的情況下示範。
+下面的範例展示在什麼情況下調用`Construct`。
 
 [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]
 
-##  <a name="cpropertysheet"></a>CPropertySheet：： CPropertySheet
+## <a name="cpropertysheetcpropertysheet"></a><a name="cpropertysheet"></a>C 屬性表:C屬性表
 
 建構 `CPropertySheet` 物件。
 
@@ -296,41 +296,41 @@ CPropertySheet(
 ### <a name="parameters"></a>參數
 
 *nIDCaption*<br/>
-要用於屬性工作表的標題識別碼。
+用於屬性表的標題的 ID。
 
-*pParentWnd*<br/>
-指向屬性工作表的父視窗。 如果是 Null，父視窗會是應用程式的主視窗。
+*pparentwnd*<br/>
+指向屬性表的父視窗。 如果為 NULL,則父視窗將是應用程式的主視窗。
 
 *iSelectPage*<br/>
-一開始會排在最上層的頁面索引。 預設值是新增至工作表的第一頁。
+最初位於頂部的頁面索引。 默認值是添加到工作表的第一頁。
 
 *pszCaption*<br/>
-指向包含要用於屬性工作表之標題的字串。 不能是 NULL。
+指向包含要用於屬性表的標題的字串。 不能是 NULL。
 
-*hbmWatermark*<br/>
-屬性工作表之背景點陣圖的控制碼。
+*hbm沃特馬克*<br/>
+屬性表的背景位圖的句柄。
 
-*hpalWatermark*<br/>
-浮水印點陣圖和（或）標頭點陣圖之調色板的控制碼。
+*赫帕爾沃特馬克*<br/>
+水印位圖和/或頭位圖調色板的句柄。
 
 *hbmHeader*<br/>
-屬性頁之標頭點陣圖的控制碼。
+屬性頁頭點圖的句柄。
 
 ### <a name="remarks"></a>備註
 
-若要顯示內容表，請呼叫[DoModal](#domodal)或[建立](#create)。 第一個參數中所包含的字串將會放在屬性工作表的標題列中。
+要顯示屬性工作表,請呼叫[「使用模式」](#domodal)或[「建立](#create)」 。 第一個參數中包含的字串將放置在屬性表的標題欄中。
 
-如果您有多個參數（例如，如果您使用的是陣列），請使用 [[結構](#construct)]，而不是 [`CPropertySheet`]。
+如果有多個參數(例如,如果使用陣列),請使用[建構](#construct)而不是`CPropertySheet`。
 
-如果您使用上述 `CPropertySheet`的第三或第四個原型，而且您傳遞*hbmWatermark*、 *hpalWatermark*和/或*hbmHeader*參數的有效值，您就可以自動顯示浮水印和/或標頭影像。
+如果您使用上面的第三個或第四`CPropertySheet`個原型,並且傳遞*hbmWatermark、hpalWatermark*和/或*hbmHeader*參數的有效值*hpalWatermark*,則可以自動顯示水印和/或標題圖像。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]
 
-##  <a name="create"></a>CPropertySheet：： Create
+## <a name="cpropertysheetcreate"></a><a name="create"></a>C 屬性表:建立
 
-顯示非模式屬性工作表。
+顯示無模式屬性表。
 
 ```
 virtual BOOL Create(CWnd* pParentWnd = NULL,
@@ -340,30 +340,30 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>參數
 
-*pParentWnd*<br/>
-指向父視窗。 如果是 Null，父系就是桌面。
+*pparentwnd*<br/>
+指向父視窗。 如果為 NULL,則父級是桌面。
 
 *dwStyle*<br/>
-屬性工作表的視窗樣式。 如需可用樣式的完整清單，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
+屬性表的視窗樣式。 關於可用樣式的完整清單,請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *dwExStyle*<br/>
-屬性工作表的擴充視窗樣式。 如需可用樣式的完整清單，請參閱[擴充的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
+屬性表的擴展視窗樣式。 有關可用樣式的完整清單,請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立屬性工作表，則為非零;否則為0。
+成功創建屬性表時為非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-`Create` 的呼叫可以在此函式內，您也可以在叫用此函式之後呼叫它。
+調用`Create`可以位於構造函數內部,也可以在調用構造函數后調用它。
 
-預設樣式（以*dwStyle*傳遞-1 表示）實際上&#124;是 WS_SYSMENU WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE。 預設的擴充視窗樣式（以*dwExStyle*傳遞0表示）實際上是 WS_EX_DLGMODALFRAME。
+默認樣式,通過傳遞 -1 表示為*dwStyle,* 實際上是WS_SYSMENU&#124;&#124;WS_POPUP&#124;&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE。 默認擴展視窗樣式(通過將 0 表示為*dwExStyle)* 表示,實際上是WS_EX_DLGMODALFRAME。
 
-建立屬性工作表之後，`Create` 成員函式會立即傳回。 若要摧毀屬性工作表，請呼叫[CWnd：:D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow)。
+成員`Create`函數在創建屬性表後立即返回。 要銷毀屬性表,請致電[CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow)。
 
-`Create` 的呼叫所顯示的非強制回應屬性工作表沒有 [確定]、[取消]、[立即套用] 和 [說明] 按鈕，因為模式屬性工作表會執行。 所需的按鈕必須由使用者建立。
+與模式屬性表一樣,顯示的`Create`未模屬性表具有"確定"、"取消"、"立即應用"和"説明"按鈕。 所需的按鈕必須由用戶創建。
 
-若要顯示模式屬性工作表，請改為呼叫[DoModal](#domodal) 。
+要顯示模態屬性表,請改為調用[DoModal。](#domodal)
 
 ### <a name="example"></a>範例
 
@@ -371,9 +371,9 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]
 
-##  <a name="domodal"></a>CPropertySheet：:D oModal
+## <a name="cpropertysheetdomodal"></a><a name="domodal"></a>C屬性表::Do 模態
 
-顯示模式屬性工作表。
+顯示模態屬性表。
 
 ```
 virtual INT_PTR DoModal();
@@ -381,20 +381,20 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功，則為 IDOK 或 IDCANCEL;否則為0或-1。 如果已將屬性工作表建立為 wizard （請參閱[SetWizardMode](#setwizardmode)），`DoModal` 會傳回 ID_WIZFINISH 或 IDCANCEL。
+IDOK 或 IDCANCEL(如果函數成功);否則為 0 或 -1。 如果屬性表已設置為嚮導(請參閱[SetWizardMode),](#setwizardmode)`DoModal`則返回ID_WIZFINISH或 IDCANCEL。
 
 ### <a name="remarks"></a>備註
 
-傳回值會對應至關閉屬性工作表之控制項的識別碼。 此函式傳回之後，對應至屬性工作表和所有頁面的視窗都會被終結。 物件本身仍會存在。 通常，您會在 `DoModal` 傳回 IDOK 之後，從[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件中取出資料。
+返回值對應於關閉屬性表的控制項的 ID。 返回此函數後,與屬性表和所有頁面對應的視窗將被銷毀。 物件本身將仍然存在。 通常,您將在返回 IDOK`DoModal`後從[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件檢索數據。
 
-若要顯示非模式屬性工作表，請改為呼叫[Create](#create) 。
+要顯示無模式屬性表,請改為"[創建](#create)"。
 
-從對應的對話資源建立屬性頁時，可能會造成第一個可能發生的例外狀況。 從屬性頁產生的結果，會在建立頁面之前，將對話方塊資源的樣式變更為所需的樣式。 因為資源通常是唯讀的，所以這會造成例外狀況。 系統會處理例外狀況，並複製已修改的資源。 因此，可能會忽略第一個可能發生的例外狀況。
+當從相應的對話框資源創建屬性頁時,可能會導致第一次異常。 這源於屬性頁在創建頁面之前將對話框資源的樣式更改為所需的樣式。 由於資源通常是唯讀的,因此會導致異常。 系統處理異常,並創建修改後的資源的副本。 因此,可以忽略第一個異常。
 
 > [!NOTE]
->  如果您使用非同步例外狀況處理模型進行編譯，作業系統就必須處理這個例外狀況。 如需例外狀況處理模型的詳細資訊，請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md)。 在此情況下，請勿使用C++ try-catch 區塊來包裝 `CPropertySheet::DoModal` 的呼叫，其中 catch 會處理所有例外狀況，例如 `catch (...)`。 此區塊會處理適用于作業系統的例外狀況，並造成無法預期的行為。 不過，您可以安全地C++使用例外狀況處理，搭配特定的例外狀況類型或結構化例外狀況處理，其中的存取違規例外狀況會傳遞至作業系統。
+> 如果要使用非同步異常處理模型進行編譯,操作系統必須處理此異常。 有關異常處理模型的詳細資訊,請參閱[/EH(異常處理模型)。](../../build/reference/eh-exception-handling-model.md) 在這種情況下,不要`CPropertySheet::DoModal`用C++嘗試 catch 塊對 呼叫`catch (...)`進行包裝, 其中 catch 處理所有異常,例如 。 此塊將處理用於操作系統的異常,並導致不可預知的行為。 但是,在訪問衝突異常傳遞到操作系統時,可以使用具有特定異常類型或結構化異常處理C++異常處理。
 
-若要避免產生這個第一個可能發生的例外狀況，您可以手動保證屬性工作表具有正確的[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 您需要設定屬性工作表的下列樣式：
+為了避免產生此第一個異常,您可以手動保證屬性表具有正確的[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 您必須為屬性表設定以下樣式:
 
 - DS_3DLOOK
 
@@ -404,7 +404,7 @@ virtual INT_PTR DoModal();
 
 - WS_TABSTOP
 
-您可以使用下列選擇性樣式，而不會造成第一個可能發生的例外狀況：
+您可以使用以下可選樣式,而不會造成第一次異常:
 
 - DS_SHELLFONT
 
@@ -412,61 +412,61 @@ virtual INT_PTR DoModal();
 
 - WS_CLIPCHILDREN
 
-停用所有其他的 Windows 樣式，因為它們與屬性工作表不相容。 這段建議不適用於擴充樣式。 適當地設定這些標準樣式，可保證不需要修改屬性工作表，也會避免產生第一個可能發生的例外狀況。
+禁用所有其他 Windows 樣式,因為它們與屬性表不相容。 此建議不適用於擴展樣式。 適當地設置這些標準樣式將保證屬性表不必修改,並且將避免生成第一個異常。
 
 ### <a name="example"></a>範例
 
-請參閱[CPropertySheet：： AddPage](#addpage)的範例。
+請參考[CPropertySheet 的範例::新增頁](#addpage)。
 
-##  <a name="enablestackedtabs"></a>CPropertySheet：： EnableStackedTabs
+## <a name="cpropertysheetenablestackedtabs"></a><a name="enablestackedtabs"></a>C 屬性表::啟用堆疊選項卡
 
-指出是否要堆疊屬性工作表中的索引標籤列。
+指示是否將選項卡行堆疊在屬性工作表中。
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bStacked*<br/>
-指出屬性工作表中是否已啟用堆疊索引標籤。 將*bStacked*設定為 FALSE，以停用標記的堆疊資料列。
+*b 堆疊*<br/>
+指示在屬性表中是否啟用了堆疊選項卡。 通過將*bStacked*設置為 FALSE 來禁用堆疊的標記行。
 
 ### <a name="remarks"></a>備註
 
-根據預設，如果屬性工作表的索引標籤數目超過屬性工作表寬度的單一資料列，則索引標籤會堆疊在多個資料列中。 若要使用 [滾動索引標籤] 而非 [堆疊] 索引標籤，請在呼叫[DoModal](#domodal)或[Create](#create)之前，`EnableStackedTabs` 呼叫*bStacked*設定為 FALSE 的
+默認情況下,如果屬性工作表的選項卡數多於屬性工作表寬度中的一行,則選項卡將堆疊在多行中。 要使用捲軸選項卡而不是堆疊選項卡,請`EnableStackedTabs`呼叫*bStacked*設定為 FALSE,然後再呼叫[DoModal](#domodal)或[建立](#create)。
 
-當您建立模式或非模式屬性工作表時，必須呼叫 `EnableStackedTabs`。 若要將此樣式併入 `CPropertySheet`衍生的類別中，請撰寫 WM_CREATE 的訊息處理常式。 在覆寫版本的[CWnd：： OnCreate](../../mfc/reference/cwnd-class.md#oncreate)中，呼叫 `EnableStackedTabs( FALSE )`，然後再呼叫基類執行。
+創建模態`EnableStackedTabs`或無模式屬性表時必須調用。 要將此樣式合併到`CPropertySheet`派生類中,請為WM_CREATE編寫消息處理程式。 在重寫版本的[CWnd::onCreate](../../mfc/reference/cwnd-class.md#oncreate)中,`EnableStackedTabs( FALSE )`調用 基類實現之前調用。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]
 
-##  <a name="enddialog"></a>CPropertySheet：： EndDialog
+## <a name="cpropertysheetenddialog"></a><a name="enddialog"></a>C 屬性表:結束對話
 
-終止屬性工作表。
+終止屬性表。
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
 ### <a name="parameters"></a>參數
 
 *nEndID*<br/>
-要當做屬性工作表之傳回值使用的識別碼。
+用作屬性表的返回值的標識符。
 
 ### <a name="remarks"></a>備註
 
-當按下 [確定]、[取消] 或 [關閉] 按鈕時，架構會呼叫這個成員函式。 如果發生應關閉屬性工作表的事件，請呼叫這個成員函式。
+按下"確定"、"取消"或"關閉"按鈕時,框架將調用此成員函數。 如果發生應關閉屬性表的事件,請調用此成員函數。
 
-這個成員函式只會搭配強制回應對話方塊使用。
+此成員函數僅與模式對話框一起使用。
 
 ### <a name="example"></a>範例
 
-請參閱[CPropertySheet：:P ressbutton](#pressbutton)的範例。
+請參閱[CPropertySheet::PresButton](#pressbutton)"的範例。
 
-##  <a name="getactiveindex"></a>CPropertySheet：： GetActiveIndex
+## <a name="cpropertysheetgetactiveindex"></a><a name="getactiveindex"></a>C 屬性表:抓取活動索引
 
-取得屬性工作表視窗之作用中頁面的索引編號，然後使用傳回的索引編號做為 `GetPage`的參數。
+獲取屬性工作表視窗的活動頁的索引號,然後使用返回的索引號作為`GetPage`的參數。
 
 ```
 int GetActiveIndex() const;
@@ -474,15 +474,15 @@ int GetActiveIndex() const;
 
 ### <a name="return-value"></a>傳回值
 
-使用中頁面的索引編號。
+活動頁的索引號。
 
 ### <a name="example"></a>範例
 
-請參閱[CPropertySheet：： GetActivePage](#getactivepage)的範例。
+請參考[CPropertySheet 的範例:取得活動頁](#getactivepage)。
 
-##  <a name="getactivepage"></a>CPropertySheet：： GetActivePage
+## <a name="cpropertysheetgetactivepage"></a><a name="getactivepage"></a>C 屬性表:抓取活動頁面
 
-抓取屬性工作表視窗的現用頁面。
+檢索屬性工作表視窗的活動頁。
 
 ```
 CPropertyPage* GetActivePage() const;
@@ -490,19 +490,19 @@ CPropertyPage* GetActivePage() const;
 
 ### <a name="return-value"></a>傳回值
 
-使用中頁面的指標。
+指向活動頁的指標。
 
 ### <a name="remarks"></a>備註
 
-使用此成員函式，在作用中頁面上執行某些動作。
+使用此成員函數在活動頁上執行某些操作。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]
 
-##  <a name="getpage"></a>CPropertySheet：： GetPage
+## <a name="cpropertysheetgetpage"></a><a name="getpage"></a>C 屬性表:取得頁面
 
-傳回這個屬性工作表中指定之頁面的指標。
+返回指向此屬性表中指定頁面的指標。
 
 ```
 CPropertyPage* GetPage(int nPage) const;
@@ -511,19 +511,19 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="parameters"></a>參數
 
 *nPage*<br/>
-所需頁面的索引（從0開始）。 必須介於0到1（含）的屬性工作表中的頁面數之間。
+所需頁面的索引,從 0 開始。 必須小於屬性表中的頁數 0 和 1(包括)。
 
 ### <a name="return-value"></a>傳回值
 
-對應至*nPage*參數之頁面的指標。
+指向與*nPage*參數對應的頁面的指標。
 
 ### <a name="example"></a>範例
 
-請參閱[CPropertyPage：： OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)的範例。
+請參閱[CPropertyPage 的範例::在精靈完成](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。
 
-##  <a name="getpagecount"></a>CPropertySheet：： GetPageCount
+## <a name="cpropertysheetgetpagecount"></a><a name="getpagecount"></a>C 屬性表:取得頁面計數
 
-決定目前在屬性工作表中的頁面數目。
+確定屬性表中目前頁數。
 
 ```
 int GetPageCount() const;
@@ -531,15 +531,15 @@ int GetPageCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-屬性工作表中的頁面數目。
+屬性表中的頁數。
 
 ### <a name="example"></a>範例
 
-請參閱[CPropertyPage：： OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)的範例。
+請參閱[CPropertyPage 的範例::在精靈完成](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。
 
-##  <a name="getpageindex"></a>CPropertySheet：： GetPageIndex
+## <a name="cpropertysheetgetpageindex"></a><a name="getpageindex"></a>C 屬性表:取得頁面索引
 
-抓取屬性工作表中指定之頁面的索引編號。
+檢索屬性表中指定頁面的索引號。
 
 ```
 int GetPageIndex(CPropertyPage* pPage);
@@ -548,7 +548,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="parameters"></a>參數
 
 *pPage*<br/>
-指向具有要尋找之索引的頁面。 不能是 NULL。
+指向要找到的索引的頁面。 不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -556,15 +556,15 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="remarks"></a>備註
 
-例如，您可以使用 `GetPageIndex` 取得頁面索引，以便使用[SetActivePage](#setactivepage)或[GetPage](#getpage)。
+例如,您可以使用`GetPageIndex`取得頁面索引,以便使用[SetActivePage](#setactivepage)或[GetPage](#getpage)。
 
 ### <a name="example"></a>範例
 
-請參閱[CPropertySheet：： GetActivePage](#getactivepage)的範例。
+請參考[CPropertySheet 的範例:取得活動頁](#getactivepage)。
 
-##  <a name="gettabcontrol"></a>CPropertySheet：： GetTabControl
+## <a name="cpropertysheetgettabcontrol"></a><a name="gettabcontrol"></a>C 屬性表:抓取Tab控制
 
-抓取索引標籤控制項的指標，以執行索引標籤控制項的特定內容（也就是使用[CTabCtrl](../../mfc/reference/ctabctrl-class.md)中的任何 api）。
+檢索指向選項卡控制項的指標,以執行特定於選項卡控制項(即使用[CTabCtrl](../../mfc/reference/ctabctrl-class.md)中的任何 API)
 
 ```
 CTabCtrl* GetTabControl() const;
@@ -572,54 +572,54 @@ CTabCtrl* GetTabControl() const;
 
 ### <a name="return-value"></a>傳回值
 
-索引標籤控制項的指標。
+指向選項卡控件的指標。
 
 ### <a name="remarks"></a>備註
 
-例如，如果您想要在初始化期間將點陣圖新增至每個索引標籤，請呼叫這個成員函式。
+例如,如果要在初始化期間向每個選項卡添加位圖,請調用此成員函數。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]
 
-##  <a name="m_psh"></a>CPropertySheet：： m_psh
+## <a name="cpropertysheetm_psh"></a><a name="m_psh"></a>C屬性表:m_psh
 
-結構，其成員會儲存[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)的特性。
+其成員存儲[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)特徵的結構。
 
 ### <a name="remarks"></a>備註
 
-使用此結構來初始化屬性工作表在結構化後，但在它與[DoModal](#domodal)成員函式一起顯示之前的外觀。 例如，將 `m_psh` 的*dwSize*成員設定為您希望屬性工作表擁有的大小。
+使用此結構在建構屬性表後,但在使用[DoModal](#domodal)成員函數顯示屬性表之前初始化它的外觀。 例如,將的`m_psh` *dwSize*成員設置為您希望屬性表具有的大小。
 
-如需此結構的詳細資訊，包括其成員的清單，請參閱 Windows SDK 中的 PROPSHEETHEADER。
+有關此結構的詳細資訊(包括其成員的清單),請參閱 Windows SDK 中的 PROPSHEETHEADER。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]
 
-##  <a name="mapdialogrect"></a>CPropertySheet：： MapDialogRect
+## <a name="cpropertysheetmapdialogrect"></a><a name="mapdialogrect"></a>C 屬性表:mapDialogrect
 
-將矩形的對話方塊單位轉換成螢幕單元。
+將矩形的對話框單位轉換為屏幕單位。
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[矩形](/previous-versions/dd162897\(v=vs.85\))結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含要轉換的對話方塊座標。
+指向包含要轉換的對話方塊座標的[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-對話方塊單位是以目前的對話方塊基底單位（衍生自用於對話方塊文字之字型中的字元的平均寬度和高度）來陳述。 一個水準單位是對話方塊基底寬度單位的四分之一，而一個垂直單位是對話方塊基底高度單位的八分之一。
+對話框單位根據當前對話框基本單位表示,該單位派生自對話框文本字體中字元的平均寬度和高度。 一個水平單位是對話框基寬單位的四分之一,一個垂直單位是對話框基本高度單位的八分之一。
 
-[GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) Windows 函式會傳回系統字型的大小資訊，但如果您在資源定義檔中使用 DS_SETFONT 樣式，則可以為每個屬性工作表指定不同的字型。 Windows SDK 中所述的[MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) Windows 函數會針對此對話方塊使用適當的字型。
+[GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) Windows 函數傳回系統字型的大小資訊,但如果在資源定義檔中使用DS_SETFONT樣式,則可以為每個屬性表指定不同的字體。 Windows SDK 中描述的[MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) Windows 功能為此對話方塊使用相應的字型。
 
-`MapDialogRect` 成員函式會以螢幕單元（圖元）取代*lpRect*中的對話方塊單位，讓矩形可以用來建立對話方塊，或在方塊內放置控制項。
+成員`MapDialogRect`函數將*lpRect*中的對話框單元替換為螢幕單位(圖元),以便矩形可用於創建對話方塊或在框中放置控制項。
 
-##  <a name="oninitdialog"></a>CPropertySheet：： OnInitDialog
+## <a name="cpropertysheetoninitdialog"></a><a name="oninitdialog"></a>C屬性表:onInitDialog
 
-覆寫以擴大屬性工作表初始化。
+用於增強屬性表初始化的重寫。
 
 ```
 virtual BOOL OnInitDialog();
@@ -627,58 +627,58 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>傳回值
 
-指定應用程式是否已將輸入焦點設定為屬性工作表中的其中一個控制項。 如果 `OnInitDialog` 傳回非零值，Windows 會將輸入焦點設定為屬性工作表中的第一個控制項。 只有當應用程式已將輸入焦點明確設定為屬性工作表中的其中一個控制項時，才可以傳回0。
+指定應用程式是否已將輸入焦點設定為屬性表中的一個控制項。 如果`OnInitDialog`返回非零,Windows 會將輸入焦點設置到屬性表中的第一個控制項。 僅當應用程式顯示式將輸入焦點設定為屬性表中的一個控制項時,應用程式才能返回 0。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會在回應 WM_INITDIALOG 訊息時呼叫。 這則訊息會在[建立](#create)或[DoModal](#domodal)呼叫期間傳送至屬性工作表，這會在屬性工作表顯示之前立即發生。
+調用此成員函數以回應WM_INITDIALOG消息。 此消息在[創建](#create)或[DoModal](#domodal)調用期間發送到屬性表,這些調用在顯示屬性表之前發生。
 
-如果您需要在初始化屬性工作表時執行特殊處理，請覆寫這個成員函式。 在覆寫的版本中，先呼叫基類 `OnInitDialog`，但忽略其傳回值。 您通常會從覆寫的成員函式傳回 TRUE。
+如果在初始化屬性表時需要執行特殊處理,則重寫此成員函數。 在重寫版本中,首先調用基類`OnInitDialog`,但忽略其返回值。 您通常會從重寫的成員函數返回 TRUE。
 
-您不需要這個成員函式的訊息對應專案。
+不需要此成員函數的消息映射條目。
 
-##  <a name="pressbutton"></a>CPropertySheet：:P ressButton
+## <a name="cpropertysheetpressbutton"></a><a name="pressbutton"></a>C屬性表::PresButton
 
-模擬屬性工作表中指定之按鈕的選擇。
+類比屬性表中指定按鈕的選擇。
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
 ### <a name="parameters"></a>參數
 
 *nButton*<br/>
-nButton：識別要按下的按鈕。 這個參數可以是下列其中一個值：
+nButton :標識要按下的按鈕。 這裡可以是以下值之一:
 
-- PSBTN_BACK 選擇 [上一頁] 按鈕。
+- PSBTN_BACK選擇"後退"按鈕。
 
-- PSBTN_NEXT 選擇 [下一步] 按鈕。
+- PSBTN_NEXT選擇「下一步」 按鈕。
 
-- PSBTN_FINISH 選擇 [完成] 按鈕。
+- PSBTN_FINISH 選擇"完成"按鈕。
 
-- PSBTN_OK 選擇 [確定] 按鈕。
+- PSBTN_OK 選擇"確定"按鈕。
 
-- PSBTN_APPLYNOW 選擇 [立即套用] 按鈕。
+- PSBTN_APPLYNOW選擇「立即應用」按鈕。
 
-- PSBTN_CANCEL 選擇 [取消] 按鈕。
+- PSBTN_CANCEL選擇"取消"按鈕。
 
-- PSBTN_HELP 選擇 [說明] 按鈕。
+- PSBTN_HELP 選擇"説明"按鈕。
 
 ### <a name="remarks"></a>備註
 
-如需 Windows SDK Pressbutton 訊息的詳細資訊，請參閱[PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) 。
+有關 Windows SDK 按下按鈕消息的詳細資訊,請參閱[PSM_PRESSBUTTON。](/windows/win32/Controls/psm-pressbutton)
 
-`PressButton` 的呼叫不會將[PSN_APPLY](/windows/win32/Controls/psn-apply)通知從屬性頁傳送至架構。 若要傳送此通知，請呼叫[CPropertyPage：： OnOK](../../mfc/reference/cpropertypage-class.md#onok)。
+呼叫`PressButton`不會將[PSN_APPLY](/windows/win32/Controls/psn-apply)通知從屬性頁發送到框架。 要送出此通知,請致電[CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]
 
-##  <a name="removepage"></a>CPropertySheet：： RemovePage
+## <a name="cpropertysheetremovepage"></a><a name="removepage"></a>C 屬性表:刪除頁
 
-從屬性工作表中移除頁面，並終結關聯的視窗。
+從屬性工作表中刪除頁面並銷毀關聯的視窗。
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -686,18 +686,18 @@ void RemovePage(int nPage);
 ### <a name="parameters"></a>參數
 
 *pPage*<br/>
-指向要從屬性工作表中移除的頁面。 不能是 NULL。
+指向要從屬性表中刪除的頁面。 不能是 NULL。
 
 *nPage*<br/>
-要移除之頁面的索引。 必須介於0到1（含）的屬性工作表中的頁面數之間。
+要刪除的頁面的索引。 必須小於屬性表中的頁數 0 和 1(包括)。
 
 ### <a name="remarks"></a>備註
 
-[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件本身不會被終結，直到 `CPropertySheet` 視窗的擁有者關閉為止。
+在`CPropertySheet`關閉視窗的所有者之前,不會銷毀[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件本身。
 
-##  <a name="setactivepage"></a>CPropertySheet：： SetActivePage
+## <a name="cpropertysheetsetactivepage"></a><a name="setactivepage"></a>C 屬性表::設定活動頁
 
-變更使用中的頁面。
+更改活動頁。
 
 ```
 BOOL SetActivePage(int nPage);
@@ -707,49 +707,49 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="parameters"></a>參數
 
 *nPage*<br/>
-要設定之頁面的索引。 它必須介於0到1（含）之間的頁面數目之間。
+要設置的頁面的索引。 它必須小於屬性表中的頁數 0 和 1(包括)。
 
 *pPage*<br/>
-指向要在屬性工作表中設定的頁面。 它不能是 NULL。
+指向要在屬性表中設置的頁面。 它不可為 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功啟用屬性工作表，則為非零;否則為0。
+如果成功激活屬性表,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-例如，如果使用者在單一頁面上的動作，應該會導致另一個頁面變成使用中的頁面，請使用 `SetActivePage`。
+例如,如果使用者在`SetActivePage`一頁上的操作應導致另一個頁面成為活動頁,請使用。
 
 ### <a name="example"></a>範例
 
-請參閱[CPropertySheet：： GetActivePage](#getactivepage)的範例。
+請參考[CPropertySheet 的範例:取得活動頁](#getactivepage)。
 
-##  <a name="setfinishtext"></a>CPropertySheet：： SetFinishText
+## <a name="cpropertysheetsetfinishtext"></a><a name="setfinishtext"></a>C 屬性表::設定完成文字
 
-設定 [完成] 命令按鈕中的文字。
+在"完成"指令按鈕中設置文本。
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-指向要在 [完成] 命令按鈕上顯示的文字。
+指向要顯示在"完成"指令按鈕上的文字。
 
 ### <a name="remarks"></a>備註
 
-呼叫 `SetFinishText` 以顯示 [完成] 命令按鈕上的文字，並在使用者于 wizard 的最後一頁完成動作之後，隱藏 [下一步] 和 [上一頁] 按鈕。
+呼叫`SetFinishText`以在「完成」指令按鈕上顯示文本,並在使用者完成嚮導最後一頁上的操作後隱藏「下一步」 和「後退」 按鈕。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="settitle"></a>CPropertySheet：： SetTitle
+## <a name="cpropertysheetsettitle"></a><a name="settitle"></a>C 屬性表::設定標題
 
-指定屬性工作表的標題（在框架視窗的標題列中顯示的文字）。
+指定屬性表的標題(框架視窗的標題列中顯示的文字)。
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -758,49 +758,49 @@ void SetTitle(
 ### <a name="parameters"></a>參數
 
 *nStyle*<br/>
-指定屬性工作表標題的樣式。 樣式必須指定為0或 PSH_PROPTITLE。 如果樣式設定為 [PSH_PROPTITLE]，則 "Properties" 這個字會出現在指定為標題的文字後面。 例如，呼叫 `SetTitle`（"Simple"，PSH_PROPTITLE）將會產生「簡單屬性」的屬性工作表標題。
+指定屬性工作表標題的樣式。 樣式必須在 0 或 PSH_PROPTITLE時指定。 如果樣式設置為PSH_PROPTITLE,則單詞"屬性"將顯示在指定為標題的文本之後。 例如,調用`SetTitle`("簡單",PSH_PROPTITLE)將導致「簡單屬性」的屬性表標題。
 
 *lpszText*<br/>
-指向要用來做為屬性工作表標題列標題的文字。
+指向要用作屬性表標題列中標題的文本。
 
 ### <a name="remarks"></a>備註
 
-根據預設，屬性工作表會在屬性工作表的函式中使用 caption 參數。
+預設情況下,屬性表在屬性表構造函數中使用標題參數。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]
 
-##  <a name="setwizardbuttons"></a>CPropertySheet：： SetWizardButtons
+## <a name="cpropertysheetsetwizardbuttons"></a><a name="setwizardbuttons"></a>C 屬性表::設定精靈按鈕
 
-啟用或停用 wizard 屬性工作表中的 [上一步]、[下一步] 或 [完成] 按鈕。
+啟用或禁用嚮導屬性表中的"後退"、"下一步"或"完成"按鈕。
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
 ### <a name="parameters"></a>參數
 
 *dwFlags*<br/>
-一組旗標，可自訂嚮導按鈕的功能和外觀。 這個參數可以是下列值的組合：
+一組標誌,用於自定義嚮導按鈕的功能和外觀。 這裡可以是以下值的組合:
 
-- PSWIZB_BACK 上一頁 按鈕
+- PSWIZB_BACK「後退」按鈕
 
-- PSWIZB_NEXT 下一步 按鈕
+- PSWIZB_NEXT 下一個按鈕
 
-- PSWIZB_FINISH 完成 按鈕
+- PSWIZB_FINISH完成按鈕
 
-- PSWIZB_DISABLEDFINISH 停用的完成 按鈕
+- PSWIZB_DISABLEDFINISH關閉完成按鈕
 
 ### <a name="remarks"></a>備註
 
-只有在開啟對話方塊之後，才呼叫 `SetWizardButtons`;在呼叫[DoModal](#domodal)之前，您無法呼叫 `SetWizardButtons`。 一般來說，您應該從[CPropertyPage：： OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive)呼叫 `SetWizardButtons`。
+僅在`SetWizardButtons`對話框打開後調用;在致電[DoModal](#domodal)之前`SetWizardButtons`,你不能打電話。 通常,您應該從`SetWizardButtons`[CPropertyPage 呼叫:開啟活動](../../mfc/reference/cpropertypage-class.md#onsetactive)。
 
-如果您想要變更 [完成] 按鈕上的文字，或在使用者完成嚮導後隱藏 [下一步] 和 [上一頁] 按鈕，請呼叫[SetFinishText](#setfinishtext)。 請注意，相同的按鈕會針對 [完成] 和 [下一步] 共用。 您可以一次顯示 [完成] 或 [下一步] 按鈕，但不能同時顯示兩者。
+如果要更改「完成」按鈕上的文字,或在使用者完成精靈後隱藏「下一步」和「後退」按鈕,請呼叫[SetFinishText](#setfinishtext)。 請注意,為"完成"和"下一步"共用同一按鈕。 可以一次顯示"完成"或"下一步"按鈕,但不能同時顯示兩者。
 
 ### <a name="example"></a>範例
 
-`CPropertySheet` 有三個 wizard 屬性頁： `CStylePage`、`CColorPage`和 `CShapePage`。  下面的程式碼片段顯示如何啟用和停用 wizard 屬性頁上的 [**上一頁**] 和 **[下一步]** 按鈕。
+A`CPropertySheet`有三個精靈屬性`CStylePage``CColorPage`頁`CShapePage`: 與 。  下面的片段的示範如何啟用和關閉精靈屬性頁上的 **「後退**」和 **「下一步**」按鈕。
 
 [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]
 
@@ -808,21 +808,21 @@ void SetWizardButtons(DWORD dwFlags);
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="setwizardmode"></a>CPropertySheet：： SetWizardMode
+## <a name="cpropertysheetsetwizardmode"></a><a name="setwizardmode"></a>C 屬性表::設定精靈模式
 
-建立屬性頁作為 wizard。
+將屬性頁建立為嚮導。
 
-```
+```cpp
 void SetWizardMode();
 ```
 
 ### <a name="remarks"></a>備註
 
-Wizard 屬性頁的主要特性是使用者流覽的是使用 [下一步] 或 [完成]、[上一頁] 和 [取消] 按鈕，而不是 [定位字元]。
+嚮導屬性頁的一個關鍵特徵是使用者使用「下一步」或「完成」、「後退」 和「取消」按鈕而不是選項卡進行導航。
 
-在呼叫[DoModal](#domodal)之前，請先呼叫 `SetWizardMode`。 呼叫 `SetWizardMode`之後，`DoModal` 會傳回 ID_WIZFINISH （如果使用者以 [完成] 按鈕關閉）或 IDCANCEL。
+通話`SetWizardMode` [DoModal](#domodal)之前撥打電話 。 呼叫`SetWizardMode`後,`DoModal`將傳回ID_WIZFINISH(如果使用者關閉"完成"按鈕)或 IDCANCEL。
 
-`SetWizardMode` 設定 PSH_WIZARD 旗標。
+`SetWizardMode`設置PSH_WIZARD標誌。
 
 ### <a name="example"></a>範例
 
@@ -830,9 +830,9 @@ Wizard 屬性頁的主要特性是使用者流覽的是使用 [下一步] 或 [�
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

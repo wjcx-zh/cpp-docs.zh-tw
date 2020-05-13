@@ -28,20 +28,20 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403850"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754883"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 類別
 
-在衍生的視覺管理員與 Windows 佈景主題 API 之間的層。
+派生視覺管理器和 Windows 主題 API 之間的圖層。
 
-`CMFCBaseVisualManager` 如果有的話，載入 UxTheme.dll，，和管理 Windows 佈景主題 API 方法的存取權。
+`CMFCBaseVisualManager`載入 UxTheme.dll(如果可用)並管理對 Windows 主題 API 方法的訪問。
 
-這個類別是僅供內部使用。
+此類僅供內部使用。
 
 ## <a name="syntax"></a>語法
 
@@ -56,7 +56,7 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |名稱|描述|
-|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|建構並初始化 `CMFCBaseVisualManager` 物件。|
+|[CMFCBase視覺化管理員:CMFCBase視覺化管理員](#cmfcbasevisualmanager)|建構並初始化 `CMFCBaseVisualManager` 物件。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
@@ -64,44 +64,44 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |名稱|描述|
-|[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|使用目前的 Windows 佈景主題來繪製核取方塊控制項。|
-|[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|繪製使用目前的 Windows 佈景主題的下拉式方塊框線。|
-|[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|繪製使用目前的 Windows 佈景主題的下拉式方塊下拉式按鈕。|
-|[CMFCBaseVisualManager::DrawPushButton](#drawpushbutton)|繪製按鈕，使用目前的 Windows 佈景主題。|
-|[CMFCBaseVisualManager::DrawRadioButton](#drawradiobutton)|使用目前的 Windows 佈景主題來繪製選項按鈕控制項。|
-|[CMFCBaseVisualManager::DrawStatusBarProgress](#drawstatusbarprogress)|狀態列控制項上繪製一個進度列 ( [CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)) 使用目前的 Windows 佈景主題。|
-|[CMFCBaseVisualManager::FillReBarPane](#fillrebarpane)|使用目前的 Windows 佈景主題，填滿 rebar 控制項的背景。|
-|[CMFCBaseVisualManager::GetStandardWindowsTheme](#getstandardwindowstheme)|取得目前的 Windows 佈景主題。|
+|[CMFCBase視覺化管理員::D原始檢查盒](#drawcheckbox)|使用當前 Windows 主題繪製複選框控制元件。|
+|[CMFCBase可視化管理器::D原始孔博邊界](#drawcomboborder)|使用當前 Windows 主題繪製組合框邊框。|
+|[CMFCBase可視化管理員::D原始孔滴按鈕](#drawcombodropbutton)|使用當前 Windows 主題繪製組合框下拉按鈕。|
+|[CMFCBase可視化管理員::D原始按鈕](#drawpushbutton)|使用當前 Windows 主題繪製按鈕。|
+|[CMFCBase視覺化管理員::D原始無線按鈕](#drawradiobutton)|使用當前 Windows 主題繪製單選按鈕控制元件。|
+|[CMFCBase 視覺化管理員::D原始狀態列進度](#drawstatusbarprogress)|使用目前的 Windows 主題在狀態列控制[件 (CMFCStatusBar 類](../../mfc/reference/cmfcstatusbar-class.md)) 上繪製進度條。|
+|[CMFCBase可視化管理器::填充鋼筋](#fillrebarpane)|使用當前 Windows 主題填充鋼筋控制元件的背景。|
+|[CMFCBase 視覺化管理員:取得標準視窗主題](#getstandardwindowstheme)|獲取當前 Windows 主題。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |||
 |-|-|
 |名稱|描述|
-|[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|呼叫`CloseThemeData`中的所有控制代碼取得`UpdateSystemColors`。|
-|[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|呼叫`OpenThemeData`取得繪製各種控制項的控制代碼： windows、 工具列、 按鈕等等。|
+|[CMFCBase可視化管理員::清理主題](#cleanupthemes)|調用`CloseThemeData`在`UpdateSystemColors`中 獲取的所有句柄。|
+|[CMFCBase 視覺化管理員:更新系統顏色](#updatesystemcolors)|呼叫`OpenThemeData`以取得用於繪製各種控制的句柄:視窗、工具列、按鈕等。|
 
 ## <a name="remarks"></a>備註
 
-您不必直接執行個體化這個類別的物件。
+您不必直接實例化此類的物件。
 
-因為它是所有的視覺管理員的基底類別，您可以直接呼叫[CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance)，取得的指標至目前 Visual Manager，並存取的方法`CMFCBaseVisualManager`使用該指標。 不過，如果您有使用目前的 Windows 佈景主題中顯示控制項，最好是使用`CMFCVisualManagerWindows`介面。
+因為它是所有可視化管理器的基類,因此只需調用[CMFCVisualManager::getInstance,](../../mfc/reference/cmfcvisualmanager-class.md#getinstance)獲取指向當前可視化管理器的指標,並訪問使用`CMFCBaseVisualManager`該指標的方法。 但是,如果必須使用當前 Windows 主題顯示控制項,最好`CMFCVisualManagerWindows`使用該介面。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBase 視覺化管理員](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxvisualmanager.h
+**標題:** afxvisualmanager.h
 
-##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes
+## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBase可視化管理員::清理主題
 
-呼叫`CloseThemeData`中的所有控制代碼取得`UpdateSystemColors`。
+調用`CloseThemeData`在`UpdateSystemColors`中 獲取的所有句柄。
 
-```
+```cpp
 void CleanUpThemes();
 ```
 
@@ -109,7 +109,7 @@ void CleanUpThemes();
 
 僅供內部使用。
 
-##  <a name="cmfcbasevisualmanager"></a>  CMFCBaseVisualManager::CMFCBaseVisualManager
+## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBase視覺化管理員:CMFCBase視覺化管理員
 
 建構並初始化 `CMFCBaseVisualManager` 物件。
 
@@ -117,9 +117,9 @@ void CleanUpThemes();
 CMFCBaseVisualManager();
 ```
 
-##  <a name="drawcheckbox"></a>  CMFCBaseVisualManager::DrawCheckBox
+## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBase視覺化管理員::D原始檢查盒
 
-使用目前的 Windows 佈景主題來繪製核取方塊控制項。
+使用當前 Windows 主題繪製複選框控制元件。
 
 ```
 virtual BOOL DrawCheckBox(
@@ -136,42 +136,42 @@ virtual BOOL DrawCheckBox(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容的指標
+[在]指向裝置上下文的指標
 
-*rect*<br/>
-[in]核取方塊的週框。
+*矩形*<br/>
+[在]複選框的邊界矩形。
 
-*bHighlighted*<br/>
-[in]指定核取方塊會反白顯示。
+*突顯突顯*<br/>
+[在]指定此選項是否突出顯示。
 
-*nState*<br/>
-[in] 0 適用於已檢查的標準，未選取，1
+*n州*<br/>
+[in] 0 表示未選中,1 表示檢查正常,
 
-適用於混合的標準 2。
+2 表示混合正常。
 
-*bEnabled*<br/>
-[in]指定是否要啟用此核取方塊。
+*b 啟用*<br/>
+[在]指定是否啟用了複選方塊。
 
 *bPressed*<br/>
-[in]指定是否已按下核取方塊。
+[在]指定是否按下該複選方塊。
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。
+如果啟用了主題 API,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-值*nState*對應至下列的核取方塊樣式。
+*nState*的值對應於以下複選框樣式。
 
-|nState|核取方塊樣式|
+|n州|勾選方塊樣式|
 |------------|---------------------|
 |0|CBS_UNCHECKEDNORMAL|
 |1|CBS_CHECKEDNORMAL|
 |2|CBS_MIXEDNORMAL|
 
-##  <a name="drawcomboborder"></a>  CMFCBaseVisualManager::DrawComboBorder
+## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBase可視化管理器::D原始孔博邊界
 
-繪製使用目前的 Windows 佈景主題的下拉式方塊框線。
+使用當前 Windows 主題繪製組合框邊框。
 
 ```
 virtual BOOL DrawComboBorder(
@@ -185,27 +185,27 @@ virtual BOOL DrawComboBorder(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容指標。
+[在]指向設備上下文的指標。
 
-*rect*<br/>
-[in]下拉式方塊框線的週框。
+*矩形*<br/>
+[在]組合框邊框的邊界矩形。
 
-*bDisabled*<br/>
-[in]指定是否要停用下拉式方塊框線。
+*b 殘疾*<br/>
+[在]指定是否關閉組合框邊框。
 
-*bIsDropped*<br/>
-[in]指定是否要向下卸除下拉式方塊框線。
+*bIs放棄*<br/>
+[在]指定是否刪除組合框邊框。
 
-*bIsHighlighted*<br/>
-[in]指定下拉式方塊框線會反白顯示。
+*bIs 突顯*<br/>
+[在]指定組合框邊框是否突出顯示。
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。
+如果啟用了主題 API,則為 TRUE;否則 FALSE。
 
-##  <a name="drawcombodropbutton"></a>  CMFCBaseVisualManager::DrawComboDropButton
+## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBase可視化管理員::D原始孔滴按鈕
 
-繪製使用目前的 Windows 佈景主題的下拉式方塊下拉式按鈕。
+使用當前 Windows 主題繪製組合框下拉按鈕。
 
 ```
 virtual BOOL DrawComboDropButton(
@@ -220,19 +220,19 @@ virtual BOOL DrawComboDropButton(
 
 |參數|描述|
 |---------------|-----------------|
-|*pDC*|[in]裝置內容指標。|
-|*rect*|[in]下拉式方塊下拉式按鈕的週框。|
-|*bDisabled*|[in]指定是否要停用下拉式方塊下拉式按鈕。|
-|*bIsDropped*|[in]指定是否要向下卸除下拉式方塊下拉式按鈕。|
-|*bIsHighlighted*|[in]指定下拉式方塊下拉式按鈕已反白顯示。|
+|*pDC*|[在]指向設備上下文的指標。|
+|*矩形*|[在]組合框下拉按鈕的邊界矩形。|
+|*b 殘疾*|[在]指定是否關閉組合框下拉按鈕。|
+|*bIs放棄*|[在]指定組合框下拉按鈕是否下拉。|
+|*bIs 突顯*|[在]指定組合框下拉按鈕是否突出顯示。|
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。
+如果啟用了主題 API,則為 TRUE;否則 FALSE。
 
-##  <a name="drawpushbutton"></a>  CMFCBaseVisualManager::DrawPushButton
+## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBase可視化管理員::D原始按鈕
 
-繪製按鈕，使用目前的 Windows 佈景主題。
+使用當前 Windows 主題繪製按鈕。
 
 ```
 virtual BOOL DrawPushButton(
@@ -245,24 +245,24 @@ virtual BOOL DrawPushButton(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容指標。
+[在]指向設備上下文的指標。
 
-*rect*<br/>
-[in]週框的按鈕。
+*矩形*<br/>
+[在]按鈕的邊界矩形。
 
 *pButton*<br/>
-[in]指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)来繪製物件。
+[在]指向要繪製的[CMFCButton 類](../../mfc/reference/cmfcbutton-class.md)物件的指標。
 
 *uiState*<br/>
-[in]略過。 狀態取自*pButton*。
+[在]忽視。 狀態取自*pButton*。
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。
+如果啟用了主題 API,則為 TRUE;否則 FALSE。
 
-##  <a name="drawradiobutton"></a>  CMFCBaseVisualManager::DrawRadioButton
+## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBase視覺化管理員::D原始無線按鈕
 
-使用目前的 Windows 佈景主題來繪製選項按鈕控制項。
+使用當前 Windows 主題繪製單選按鈕控制元件。
 
 ```
 virtual BOOL DrawRadioButton(
@@ -277,30 +277,30 @@ virtual BOOL DrawRadioButton(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容指標。
+[在]指向設備上下文的指標。
 
-*rect*<br/>
-[in]選項按鈕的週框。
+*矩形*<br/>
+[在]單選按鈕的邊界矩形。
 
-*bHighlighted*<br/>
-[in]指定的選項按鈕已反白顯示。
+*突顯突顯*<br/>
+[在]指定單選按鈕是否突出顯示。
 
 *bChecked*<br/>
-[in]指定是否要檢查的選項按鈕。
+[在]指定是否選擇選單選按鈕。
 
-*bEnabled*<br/>
-[in]指定是否要啟用的選項按鈕。
+*b 啟用*<br/>
+[在]指定是否啟用單選按鈕。
 
 *bPressed*<br/>
-[in]指定是否已按下選項按鈕。
+[在]指定是否按下單選按鈕。
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。
+如果啟用了主題 API,則為 TRUE;否則 FALSE。
 
-##  <a name="drawstatusbarprogress"></a>  CMFCBaseVisualManager::DrawStatusBarProgress
+## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBase 視覺化管理員::D原始狀態列進度
 
-狀態列控制項上繪製進度列 ( [CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)) 使用目前的 Windows 佈景主題。
+使用目前的 Windows 主題在狀態列控制[件 (CMFCStatusBar 類](../../mfc/reference/cmfcstatusbar-class.md)) 上繪製進度條。
 
 ```
 virtual BOOL DrawStatusBarProgress(
@@ -318,39 +318,39 @@ virtual BOOL DrawStatusBarProgress(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容指標。
+[在]指向設備上下文的指標。
 
-*pStatusBar*<br/>
-[in]狀態列指標。 這個值會被忽略。
+*pStatusbar*<br/>
+[在]指向狀態列的指標。 這個值會被忽略。
 
 *rectProgress*<br/>
-[in]進度列中的週框矩形*pDC*座標。
+[在]*pDC*座標中進度條的邊界矩形。
 
 *nProgressTotal*<br/>
-[in]整體進度值。
+[在]總進度值。
 
 *nProgressCurr*<br/>
-[in]目前的進度值。
+[在]當前進度值。
 
 *clrBar*<br/>
-[in]開始色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。
+[在]起始顏色。 `CMFCBaseVisualManager`忽略這一點。 派生類可以將其用於顏色漸變。
 
 *clrProgressBarDest*<br/>
-[in]結束色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。
+[在]結束顏色。 `CMFCBaseVisualManager`忽略這一點。 派生類可以將其用於顏色漸變。
 
 *clrProgressText*<br/>
-[in]進度的文字色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 所定義的文字色彩`afxGlobalData.clrBtnText`。
+[在]進度文字顏色。 `CMFCBaseVisualManager`忽略這一點。 文字顏色由`afxGlobalData.clrBtnText`定義 。
 
 *bProgressText*<br/>
-[in]指定是否要顯示進度的文字。
+[在]指定是否顯示進度文本。
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。
+如果啟用了主題 API,則為 TRUE;否則 FALSE。
 
-##  <a name="fillrebarpane"></a>  CMFCBaseVisualManager::FillReBarPane
+## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBase可視化管理器::填充鋼筋
 
-使用目前的 Windows 佈景主題，填滿 rebar 控制項的背景。
+使用當前 Windows 主題填充鋼筋控制元件的背景。
 
 ```
 virtual void FillReBarPane(
@@ -362,21 +362,21 @@ virtual void FillReBarPane(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容指標。
+[在]指向設備上下文的指標。
 
 *pBar*<br/>
-[in]應該繪製其背景窗格指標。
+[在]指向應繪製其背景的窗格的指標。
 
 *rectClient*<br/>
-[in]要填滿區域的周框。
+[在]要填充的區域的邊界矩形。
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。
+如果啟用了主題 API,則為 TRUE;否則 FALSE。
 
-##  <a name="getstandardwindowstheme"></a>  CMFCBaseVisualManager::GetStandardWindowsTheme
+## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBase 視覺化管理員:取得標準視窗主題
 
-取得目前的 Windows 佈景主題。
+獲取當前 Windows 主題。
 
 ```
 virtual WinXpTheme GetStandardWindowsTheme();
@@ -384,23 +384,23 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 ### <a name="return-value"></a>傳回值
 
-目前選取的 Windows 佈景主題色彩。 可以是下列的列舉值之一：
+當前選取的 Windows 主題顏色。 可以是以下枚舉值之一:
 
-- `WinXpTheme_None` -沒有啟用任何佈景主題。
+- `WinXpTheme_None`- 未啟用主題。
 
-- `WinXpTheme_NonStandard` -非標準的佈景主題選取 （亦即已選取的佈景主題，但無從下方清單）。
+- `WinXpTheme_NonStandard`- 選擇非標準主題(表示選擇主題,但從下面的清單中沒有主題)。
 
-- `WinXpTheme_Blue` -藍色佈景主題 (Luna)。
+- `WinXpTheme_Blue`- 藍色主題(露娜)。
 
-- `WinXpTheme_Olive` -橄欖佈景主題。
+- `WinXpTheme_Olive`-橄欖主題
 
-- `WinXpTheme_Silver` -銀色佈景主題。
+- `WinXpTheme_Silver`-銀色主題
 
-##  <a name="updatesystemcolors"></a>  CMFCBaseVisualManager::UpdateSystemColors
+## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBase 視覺化管理員:更新系統顏色
 
-呼叫`OpenThemeData`取得繪製各種控制項的控制代碼： windows、 工具列、 按鈕等等。
+呼叫`OpenThemeData`以取得用於繪製各種控制的句柄:視窗、工具列、按鈕等。
 
-```
+```cpp
 void UpdateSystemColors();
 ```
 

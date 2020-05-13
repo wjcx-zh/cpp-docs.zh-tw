@@ -10,49 +10,50 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0bd8f3a96555cc29d06f74fb44a73bbed32889b
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292611"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825574"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (命名 EXE 檔案)
 
-指定的名稱和.exe 檔或 DLL 編譯器所建立的目錄。
+指定編譯器所建立的 .exe 檔案或 DLL 的名稱和目錄。
 
 ## <a name="syntax"></a>語法
 
-> **/Fe**[_pathname_] **/Fe:** _路徑名稱_
+> **/Fe**[_路徑名稱_] \
+> **/Fe：** _路徑名稱_
 
 ### <a name="arguments"></a>引數
 
 *pathname*<br/>
-相對或絕對路徑和基底檔案名稱或目錄或用於產生的可執行檔的基底檔案名稱上的相對或絕對路徑。
+相對或絕對路徑和基底檔案名，或目錄的相對或絕對路徑，或用於產生之可執行檔的基底檔案名。
 
 ## <a name="remarks"></a>備註
 
-**/Fe**選項可讓您指定的輸出目錄、 輸出可執行檔的名稱，或兩者，產生的可執行檔。 如果*pathname*路徑分隔符號結尾 (**&#92;**)，則會假設為指定輸出目錄。 否則的最後一個元件*pathname*做為輸出檔基底名稱，與其他*路徑名稱*指定的輸出目錄。 如果*pathname*並沒有任何路徑分隔符號，則會假設為目前目錄中指定輸出檔案名稱。 *Pathname*必須以雙引號括住 (**"**) 如果它包含不能在短的路徑，例如空格、 任何字元擴充字元或路徑元件超過八個字元長。
+**/Fe**選項可讓您針對產生的可執行檔，指定輸出目錄、輸出可執行檔名稱或兩者。 如果*pathname*以路徑分隔符號結尾（**&#92;**），則會假設為僅指定輸出目錄。 否則， *pathname*的最後一個元件會當做輸出檔案的基底名稱使用，而*pathname*的其餘部分則會指定輸出目錄。 如果*pathname*沒有任何路徑分隔符號，則會假設為在目前目錄中指定輸出檔名稱。 如果路徑*名稱*包含不能在短路徑中的任何字元（例如空格、擴充字元或路徑元件，長度超過八個字元），則必須以雙引號（**"**）括住。
 
-當 **/Fe**未指定選項，或在基底的檔案時未指定名稱*pathname*，該編譯器會產生輸出檔案使用指定的第一個來源或物件檔案的基底名稱的預設名稱在命令列和副檔名為.exe 或.dll 的內容。
+如果未指定 **/Fe**選項，或*路徑*名稱未指定檔案基底名稱，編譯器會使用在命令列上指定的第一個來源或物件檔案的基底名稱，以及副檔名 .exe 或 .dll，為輸出檔案提供預設名稱。
 
-如果您指定[/c （編譯而不連結）](c-compile-without-linking.md)選項時， **/Fe**沒有任何作用。
+如果您指定[/c （編譯而不連結）](c-compile-without-linking.md)選項， **/Fe**不會有任何作用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 開啟**組態屬性** > **連結器** > **一般**屬性頁。
+1. 開啟 [設定**屬性** > **連結器** > **一般**] 屬性頁。
 
-1. 修改**輸出檔**屬性。 選取 [確定] 儲存您的變更。
+1. 修改 [**輸出檔案**] 屬性。 選取 [確定]**** 儲存您的變更。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>＞。
 
 ## <a name="example"></a>範例
 
-下列命令列編譯並連結目前的目錄中的所有 C 原始程式檔。 產生的可執行檔為 PROCESS.exe，建立在 「 C:\Users\User Name\repos\My Project\bin"的目錄。
+下列命令列會編譯並連結目前目錄中的所有 C 原始程式檔。 產生的可執行檔會命名為 PROCESS .exe，並建立在目錄 "C:\Users\User Name\repos\My Project\bin" 中。
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
@@ -60,13 +61,13 @@ CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 
 ## <a name="example"></a>範例
 
-下列命令列建立可執行檔中的`C:\BIN`具有相同的基底名稱為第一個原始程式檔中目前的目錄：
+下列命令列會使用與目前目錄中的`C:\BIN`第一個原始程式檔相同的基底名稱，在中建立可執行檔：
 
 ```
 CL /FeC:\BIN\ *.C
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>

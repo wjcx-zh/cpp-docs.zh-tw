@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 2881d25434291aebff6a2d3a542044e58e0e81f2
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 89c09ede972f5bdd5da1dde810cad31733bdf338
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077882"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372645"
 ---
 # <a name="comptr-class"></a>ComPtr 類別
 
@@ -75,16 +75,16 @@ friend class ComPtr;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-`ComPtr` 所代表的介面。
+表示的`ComPtr`介面。
 
-*U*<br/>
-目前 `ComPtr` 為 friend 的類別。 (使用這個參數的範本會受到保護)。
+*美國*<br/>
+當前`ComPtr`是朋友的類。 (使用這個參數的範本會受到保護)。
 
 ## <a name="remarks"></a>備註
 
-`ComPtr<>` 宣告代表基礎介面指標的類型。 使用 `ComPtr<>` 來宣告變數，然後使用箭號成員存取運算子（`->`）來存取介面成員函式。
+`ComPtr<>`聲明表示基礎介面指標的類型。 用於`ComPtr<>`聲明變數,然後使用箭頭成員訪問運算符 ()`->`訪問介面成員函數。
 
-如需智慧型指標的詳細資訊，請參閱 MSDN Library 中[Com 編碼實務](/windows/win32/LearnWin32/com-coding-practices)主題的「Com 智慧型指標」子節。
+有關智慧指標的詳細資訊,請參閱 MSDN 庫中 COM 編碼實踐主題的[「COM](/windows/win32/LearnWin32/com-coding-practices)智慧指標」小節。
 
 ## <a name="members"></a>成員
 
@@ -92,56 +92,56 @@ friend class ComPtr;
 
 名稱            | 描述
 --------------- | ---------------------------------------------------------------
-`InterfaceType` | *T*範本參數所指定之類型的同義字。
+`InterfaceType` | *T*範本參數指定的類型的同義詞。
 
 ### <a name="public-constructors"></a>公用建構函式
 
 名稱                             | 描述
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr：： ComPtr](#comptr)        | 初始化 `ComPtr` 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。
-[ComPtr：： ~ ComPtr](#tilde-comptr) | 將 `ComPtr`的實例。
+[ComPtr:ComPtr](#comptr)        | 初始化 `ComPtr` 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。
+[ComPtr::*ComPtr](#tilde-comptr) | 取消初始化`ComPtr`的實例。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                      | 描述
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtr：： As](#as)                                         | 傳回 `ComPtr` 物件，表示指定之樣板參數所識別的介面。
-[ComPtr：： AsIID](#asiid)                                   | 傳回 `ComPtr` 物件，表示指定之介面識別碼所識別的介面。
-[ComPtr：： AsWeak](#asweak)                                 | 擷取目前物件的弱式參考。
-[ComPtr：： Attach](#attach)                                 | 將這個 `ComPtr` 與目前範本類型參數所指定的介面類別型產生關聯。
-[ComPtr：： CopyTo](#copyto)                                 | 將與這個 `ComPtr` 相關聯的目前或指定介面複製到指定的輸出指標。
-[ComPtr：:D etach](#detach)                                 | 將這個 `ComPtr` 與它所代表的介面解除。
-[ComPtr：： Get](#get)                                       | 抓取與此 `ComPtr`相關聯之介面的指標。
-[ComPtr：： GetAddressOf](#getaddressof)                     | 抓取[ptr_](#ptr)資料成員的位址，其中包含這個 `ComPtr`所表示之介面的指標。
-[ComPtr：： ReleaseAndGetAddressOf](#releaseandgetaddressof) | 釋放與這個 `ComPtr` 相關聯的介面，然後抓取[ptr_](#ptr)資料成員的位址，其中包含已釋放之介面的指標。
-[ComPtr::Reset](#reset)                                   | 釋放與這個 `ComPtr`相關聯之介面指標的所有參考。
-[ComPtr：： Swap](#swap)                                     | 使用由指定 `ComPtr`管理的介面，交換目前 `ComPtr` 所管理的介面。
+[ComPtr:如](#as)                                         | 返回表示`ComPtr`指定範本參數標識的介面的物件。
+[ComPtr::AsIID](#asiid)                                   | 返回表示`ComPtr`指定介面 ID 標識的介面的物件。
+[ComPtr::作為弱](#asweak)                                 | 擷取目前物件的弱式參考。
+[ComPtr::附加](#attach)                                 | 將這與`ComPtr`當前範本類型參數指定的介面類型關聯。
+[Comptr::複製到](#copyto)                                 | 將與此關聯的當前或指定介面`ComPtr`複製到指定的輸出指標。
+[康普特::D泰](#detach)                                 | 將其`ComPtr`與它所代表的介面分離。
+[ComPtr:取得](#get)                                       | 檢索指向與此關聯的介面的指標`ComPtr`。
+[Comptr:抓取位址](#getaddressof)                     | 檢索[ptr_](#ptr)資料成員的位址,其中包含`ComPtr`指向此 表示的介面的指標。
+[Comptr::釋放和取得位址](#releaseandgetaddressof) | 釋放與此關聯的介面,`ComPtr`然後檢索[ptr_](#ptr)資料成員的位址,該位址包含指向釋放的介面的指標。
+[ComPtr::Reset](#reset)                                   | 釋放指向與此`ComPtr`關聯的介面的指標的所有引用。
+[交流::交換](#swap)                                     | 將當前`ComPtr`管理的介面與指定的`ComPtr`的接換。
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>保護方法
 
 名稱                                        | 描述
 ------------------------------------------- | --------------------------------------------------------------------------------
-[ComPtr：： InternalAddRef](#internaladdref)   | 遞增與此 `ComPtr`相關聯之介面的參考計數。
-[ComPtr：： InternalRelease](#internalrelease) | 在與此 `ComPtr`相關聯的介面上執行 COM 發行作業。
+[ComPtr::內部AddRef](#internaladdref)   | 增加此關聯的介面的引言值`ComPtr`。
+[ComPtr::內部發佈](#internalrelease) | 對此關聯介面執行 COM 宣告操作`ComPtr`。
 
 ### <a name="public-operators"></a>公用運算子
 
 名稱                                                                                           | 描述
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
-[ComPtr：： operator &](#operator-ampersand)                                                       | 抓取目前 `ComPtr`的位址。
-[ComPtr：： operator->](#operator-arrow)                                                          | 擷取目前範本參數所指定之類型的指標。
-[ComPtr：： operator =](#operator-assign)                                                          | 將值指派給目前的 `ComPtr`。
-[ComPtr：： operator = =](#operator-equality)                                                       | 表示兩個 `ComPtr` 物件是否相等。
-[ComPtr：： operator！ =](#operator-inequality)                                                     | 表示兩個 `ComPtr` 物件是否不相等。
-[ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType](#operator-microsoft-wrl-details-booltype) | 指出 `ComPtr` 是否正在管理介面的物件存留期。
+[ComPtr::操作員&](#operator-ampersand)                                                       | 檢索當前`ComPtr`的位址。
+[ComPtr::操作員->](#operator-arrow)                                                          | 擷取目前範本參數所指定之類型的指標。
+[ComPtr::管理員*](#operator-assign)                                                          | 將值配置給目前的`ComPtr`。
+[通訊::操作員*](#operator-equality)                                                       | 表示兩個 `ComPtr` 物件是否相等。
+[ComPtr::操作員!](#operator-inequality)                                                     | 表示兩個 `ComPtr` 物件是否不相等。
+[ComPtr::操作者微軟::WRL::D尾::布爾類型](#operator-microsoft-wrl-details-booltype) | 指示是否`ComPtr`正在管理介面的物件存留期。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 名稱                 | 描述
 -------------------- | ------------------------------------------------------------------------------------------
-[ComPtr：:p tr_](#ptr) | 包含與此 `ComPtr`相關聯及管理之介面的指標。
+[ComPtr::ptr]](#ptr) | 包含指向與此關聯的介面並由 其管理的指標`ComPtr`。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ComPtr`
 
@@ -151,17 +151,17 @@ friend class ComPtr;
 
 **命名空間：** Microsoft::WRL
 
-## <a name="comptrcomptr"></a><a name="tilde-comptr"></a>ComPtr：： ~ ComPtr
+## <a name="comptrcomptr"></a><a name="tilde-comptr"></a>ComPtr::*ComPtr
 
-將 `ComPtr`的實例。
+取消初始化`ComPtr`的實例。
 
 ```cpp
 WRL_NOTHROW ~ComPtr();
 ```
 
-## <a name="comptras"></a><a name="as"></a>ComPtr：： As
+## <a name="comptras"></a><a name="as"></a>ComPtr:如
 
-傳回 `ComPtr` 物件，表示指定之樣板參數所識別的介面。
+返回表示`ComPtr`指定範本參數標識的介面的物件。
 
 ```cpp
 template<typename U>
@@ -177,11 +177,11 @@ HRESULT As(
 
 ### <a name="parameters"></a>參數
 
-*U*<br/>
-要由參數*p*表示的介面。
+*美國*<br/>
+參數*p*表示的介面。
 
-*p*<br/>
-`ComPtr` 物件，表示參數*U*所指定的介面。參數*p*不能參考目前的 `ComPtr` 物件。
+*P*<br/>
+表示`ComPtr`參數*U*指定的介面的物件。參數*p*不能`ComPtr`參考當前 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -191,9 +191,9 @@ HRESULT As(
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="comptrasiid"></a><a name="asiid"></a>ComPtr：： AsIID
+## <a name="comptrasiid"></a><a name="asiid"></a>ComPtr::AsIID
 
-傳回 `ComPtr` 物件，表示指定之介面識別碼所識別的介面。
+返回表示`ComPtr`指定介面 ID 標識的介面的物件。
 
 ```cpp
 WRL_NOTHROW HRESULT AsIID(
@@ -207,14 +207,14 @@ WRL_NOTHROW HRESULT AsIID(
 *riid*<br/>
 介面識別碼。
 
-*p*<br/>
-如果物件的識別碼等於*riid*的介面，則為*riid*參數所指定之介面的雙向間接指標;否則為 `IUnknown`的指標。
+*P*<br/>
+如果物件具有 ID 等於*riid*的介面,則指向*riid*參數指定的介面的雙間接指標;否則,指向`IUnknown`的指標。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="comptrasweak"></a><a name="asweak"></a>ComPtr：： AsWeak
+## <a name="comptrasweak"></a><a name="asweak"></a>ComPtr::作為弱
 
 擷取目前物件的弱式參考。
 
@@ -227,15 +227,15 @@ HRESULT AsWeak(
 ### <a name="parameters"></a>參數
 
 *pWeakRef*<br/>
-當此作業完成時，即為弱式參考物件的指標。
+此操作完成後,指向弱引用物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="comptrattach"></a><a name="attach"></a>ComPtr：： Attach
+## <a name="comptrattach"></a><a name="attach"></a>ComPtr::附加
 
-將這個 `ComPtr` 與目前範本類型參數所指定的介面類別型產生關聯。
+將這與`ComPtr`當前範本類型參數指定的介面類型關聯。
 
 ```cpp
 void Attach(
@@ -245,10 +245,10 @@ void Attach(
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
-介面類別型。
+*其他*<br/>
+介面類型。
 
-## <a name="comptrcomptr"></a><a name="comptr"></a>ComPtr：： ComPtr
+## <a name="comptrcomptr"></a><a name="comptr"></a>ComPtr:ComPtr
 
 初始化 `ComPtr` 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。
 
@@ -286,27 +286,27 @@ WRL_NOTHROW ComPtr(
 
 ### <a name="parameters"></a>參數
 
-*U*<br/>
-*另*一個參數的類型。
+*美國*<br/>
+*其他*參數的類型。
 
-*other*<br/>
-類型為*U*的物件。
+*其他*<br/>
+*U*型態的物件 。
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-第一個函式是預設的函式，隱含會建立空的物件。 第二個函式會指定[__nullptr](../../extensions/nullptr-cpp-component-extensions.md)，以明確建立空的物件。
+第一個構造函數是預設構造函數,它突然創建一個空物件。 第二個構造函數指定[__nullptr](../../extensions/nullptr-cpp-component-extensions.md),顯式創建空物件。
 
-第三個函式會從指標所指定的物件建立物件。 ComPtr 現在擁有指向的記憶體，並維護它的參考計數。
+第三個構造函數從指標指定的對象創建物件。 ComPtr 現在擁有指向的記憶體,並維護對它的引用計數。
 
-第四個和第五個是複製的函式。 第五個函式會複製物件（如果它可轉換成目前的類型）。
+第四個和第五個構造函數是複製構造函數。 如果物件可轉換為當前類型,則第五個構造函數將複製該物件。
 
-第六和第七個函式是移動的函式。 第七個函式會移動物件（如果它可轉換成目前的類型）。
+第六和第七構造函數是移動構造函數。 如果物件可轉換為當前類型,則第七個構造函數將對象移動。
 
-## <a name="comptrcopyto"></a><a name="copyto"></a>ComPtr：： CopyTo
+## <a name="comptrcopyto"></a><a name="copyto"></a>Comptr::複製到
 
-將與這個 `ComPtr` 相關聯的目前或指定的介面複製到指定的指標。
+將與此關聯的當前或指定介面`ComPtr`複製到指定的指標。
 
 ```cpp
 HRESULT CopyTo(
@@ -326,30 +326,30 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>參數
 
-*U*<br/>
+*美國*<br/>
 類型名稱。
 
-*ptr*<br/>
-當此作業完成時，為要求之介面的指標。
+*Ptr*<br/>
+此操作完成後,將指向請求的介面的指標。
 
 *riid*<br/>
 介面識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則 S_OK;否則，即為 HRESULT，指出隱含 `QueryInterface` 作業失敗的原因。
+S_OK如果成功;否則,指示隱式`QueryInterface`操作失敗原因的 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會傳回與這個 `ComPtr`相關聯之介面的指標複本。 此函式一律會傳回 S_OK。
+第一個函數返回指向與此`ComPtr`關聯的介面的指標的副本。 此函數始終返回S_OK。
 
-第二個函式會在與此 `ComPtr` 相關聯的介面上執行 `QueryInterface` 作業，以用於*riid*參數所指定的介面。
+第二個`QueryInterface`函`ComPtr`數 對*riid*參數指定的介面執行與此關聯的介面的操作。
 
-第三個函式會針對*U*參數的基礎介面，在與此 `ComPtr` 相關聯的介面上執行 `QueryInterface` 作業。
+第三個`QueryInterface`函`ComPtr`數 對*U*參數的基礎介面執行與此關聯的介面的操作。
 
-## <a name="comptrdetach"></a><a name="detach"></a>ComPtr：:D etach
+## <a name="comptrdetach"></a><a name="detach"></a>康普特::D泰
 
-將這個 `ComPtr` 物件與它所代表的介面解除交互。
+將此`ComPtr`物件與它所代表的介面分離。
 
 ```cpp
 T* Detach();
@@ -357,11 +357,11 @@ T* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-這個 `ComPtr` 物件所表示之介面的指標。
+指向此`ComPtr`物件表示的介面的指標。
 
-## <a name="comptrget"></a><a name="get"></a>ComPtr：： Get
+## <a name="comptrget"></a><a name="get"></a>ComPtr:取得
 
-抓取與此 `ComPtr`相關聯之介面的指標。
+檢索指向與此關聯的介面的指標`ComPtr`。
 
 ```cpp
 T* Get() const;
@@ -369,11 +369,11 @@ T* Get() const;
 
 ### <a name="return-value"></a>傳回值
 
-與這個 `ComPtr`相關聯之介面的指標。
+指向與此關聯的介面`ComPtr`的指標。
 
-## <a name="comptrgetaddressof"></a><a name="getaddressof"></a>ComPtr：： GetAddressOf
+## <a name="comptrgetaddressof"></a><a name="getaddressof"></a>Comptr:抓取位址
 
-抓取[ptr_](#ptr)資料成員的位址，其中包含這個 `ComPtr`所表示之介面的指標。
+檢索[ptr_](#ptr)資料成員的位址,其中包含`ComPtr`指向此 表示的介面的指標。
 
 ```cpp
 T* const* GetAddressOf() const;
@@ -384,9 +384,9 @@ T** GetAddressOf();
 
 變數的位址。
 
-## <a name="comptrinternaladdref"></a><a name="internaladdref"></a>ComPtr：： InternalAddRef
+## <a name="comptrinternaladdref"></a><a name="internaladdref"></a>ComPtr::內部AddRef
 
-遞增與此 `ComPtr`相關聯之介面的參考計數。
+增加此關聯的介面的引言值`ComPtr`。
 
 ```cpp
 void InternalAddRef() const;
@@ -394,11 +394,11 @@ void InternalAddRef() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法受到保護。
+此方法受到保護。
 
-## <a name="comptrinternalrelease"></a><a name="internalrelease"></a>ComPtr：： InternalRelease
+## <a name="comptrinternalrelease"></a><a name="internalrelease"></a>ComPtr::內部發佈
 
-在與此 `ComPtr`相關聯的介面上執行 COM 發行作業。
+對此關聯介面執行 COM 宣告操作`ComPtr`。
 
 ```cpp
 void InternalRelease();
@@ -406,11 +406,11 @@ void InternalRelease();
 
 ### <a name="remarks"></a>備註
 
-這個方法受到保護。
+此方法受到保護。
 
-## <a name="comptroperatoramp"></a><a name="operator-ampersand"></a>ComPtr：： operator&amp;
+## <a name="comptroperatoramp"></a><a name="operator-ampersand"></a>ComPtr::運算子&amp;
 
-釋放與這個 `ComPtr` 物件相關聯的介面，然後抓取 `ComPtr` 物件的位址。
+釋放與此`ComPtr`物件關聯的介面,然後檢`ComPtr`索 該對象的位址。
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&()
@@ -420,13 +420,13 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 
 ### <a name="return-value"></a>傳回值
 
-目前 `ComPtr`的弱式參考。
+對電流`ComPtr`的弱引用。
 
 ### <a name="remarks"></a>備註
 
-這個方法與[ComPtr：： GetAddressOf](#getaddressof)不同之處在于，這個方法會釋放介面指標的參考。 當您需要介面指標的位址，但不想釋放該介面時，請使用 `ComPtr::GetAddressOf`。
+此方法不同於[ComPtr::GetAddressof,](#getaddressof)因為此方法釋放對介面指標的引用。 當您`ComPtr::GetAddressOf`需要介面指標的位址,但不希望釋放該介面時使用。
 
-## <a name="comptroperator-gt"></a><a name="operator-arrow"></a>ComPtr：： operator-&gt;
+## <a name="comptroperator-gt"></a><a name="operator-arrow"></a>ComPtr::操作員-&gt;
 
 擷取目前範本參數所指定之類型的指標。
 
@@ -436,15 +436,15 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="return-value"></a>傳回值
 
-目前範本類型名稱所指定之類型的指標。
+指向當前範本類型名稱指定的類型。
 
 ### <a name="remarks"></a>備註
 
-此 helper 函式會移除使用 STDMETHOD 宏所造成的不必要額外負荷。 此函式會使 `IUnknown` 類型 `private`，而不是 `virtual`。
+此幫助程式函數消除了由於使用 STDMETHOD 宏而導致的不必要的開銷。 此函數使`IUnknown`型`private`態`virtual`而不是 。
 
-## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr：： operator =
+## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr::管理員*
 
-將值指派給目前的 `ComPtr`。
+將值配置給目前的`ComPtr`。
 
 ```cpp
 WRL_NOTHROW ComPtr& operator=(
@@ -475,33 +475,33 @@ WRL_NOTHROW ComPtr& operator=(
 
 ### <a name="parameters"></a>參數
 
-*U*<br/>
-類別。
+*美國*<br/>
+類。
 
-*other*<br/>
-類型或另一個 `ComPtr`的指標、參考或右值參考。
+*其他*<br/>
+對類型或其他的指標、引用或 rvalue`ComPtr`引用 。
 
 ### <a name="return-value"></a>傳回值
 
-目前 `ComPtr`的參考。
+對當前`ComPtr`的引用。
 
 ### <a name="remarks"></a>備註
 
-這個運算子的第一個版本會將空值指派給目前的 `ComPtr`。
+此運算子的第一個版本將空值分配給目前的`ComPtr`。
 
-在第二個版本中，如果指派介面指標與目前的 `ComPtr` 介面指標不同，則會將第二個介面指標指派給目前的 `ComPtr`。
+在第二版本中,如果分配介面指標與當前`ComPtr`介面指標不同,則第二個介面指標將分配給當前`ComPtr`。
 
-在第三個版本中，指派介面指標會指派給目前的 `ComPtr`。
+在第三個版本中,分配介面指標分配給目前的`ComPtr`。
 
-在第四個版本中，如果指派值的介面指標與目前的 `ComPtr` 介面指標不同，則會將第二個介面指標指派給目前的 `ComPtr`。
+在第四版本中,如果分配值的介面指標與當前`ComPtr`介面指標不同,則第二個介面指標將分配給當前`ComPtr`。
 
-第五個版本是複製運算子;`ComPtr` 的參考會指派給目前的 `ComPtr`。
+第五個版本是複製運算元;對的`ComPtr`參考分配給`ComPtr`目前的 。
 
-第六個版本是使用 move 語義的複製運算子;如果有任何類型為靜態轉換，然後指派給目前的 `ComPtr`，則為 `ComPtr` 的右值參考。
+第六個版本是使用移動語義的複製運算符;對的`ComPtr`rvalue 引用,如果任何類型都是靜態強制轉換`ComPtr`,然後配置給目前的 。
 
-第七個版本是使用 move 語義的複製運算子;類型*U*之 `ComPtr` 的右值參考是靜態轉換，並會指派給目前的 `ComPtr`。
+第七個版本是使用移動語義的複製運算符;對*類型 U*`ComPtr`的 rvalue 引用是靜態強制轉換`ComPtr`,然後分配給目前 。
 
-## <a name="comptroperator"></a><a name="operator-equality"></a>ComPtr：： operator = =
+## <a name="comptroperator"></a><a name="operator-equality"></a>通訊::操作員*
 
 表示兩個 `ComPtr` 物件是否相等。
 
@@ -527,16 +527,16 @@ bool operator==(
 *a*<br/>
 `ComPtr` 物件的參考。
 
-*b*<br/>
-另一個 `ComPtr` 物件的參考。
+*B*<br/>
+對另一個`ComPtr`物件的引用。
 
 ### <a name="return-value"></a>傳回值
 
-如果物件*a*等於物件*b*，第一個運算子會產生 `true`;否則，`false`。
+如果物件`true`*a*等於物件*b,* 則第一個運算符將生成。否則, `false`.
 
-第二個和第三個運算子會在物件*a*等於 `nullptr`時產生 `true`;否則，`false`。
+如果物件*a*等於 ,則`nullptr`第二個 與第三個運算`true`符屈服 。否則, `false`.
 
-## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr：： operator！ =
+## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr::操作員!
 
 表示兩個 `ComPtr` 物件是否不相等。
 
@@ -562,18 +562,18 @@ bool operator!=(
 *a*<br/>
 `ComPtr` 物件的參考。
 
-*b*<br/>
-另一個 `ComPtr` 物件的參考。
+*B*<br/>
+對另一個`ComPtr`物件的引用。
 
 ### <a name="return-value"></a>傳回值
 
-如果物件*a*不等於物件*b*，第一個運算子會產生 `true`;否則，`false`。
+如果物件`true`*a*不等於物件*b,* 則第一個運算符將生成。否則, `false`.
 
-第二個和第三個運算子會在物件*a*不等於 `nullptr`時產生 `true`;否則，`false`。
+如果物件*a*不等於 ,則`nullptr`第二個 和第三個運算`true`符屈服 。否則, `false`.
 
-## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType
+## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr::操作者微軟::WRL::D尾::布爾類型
 
-指出 `ComPtr` 是否正在管理介面的物件存留期。
+指示是否`ComPtr`正在管理介面的物件存留期。
 
 ```cpp
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
@@ -581,11 +581,11 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果介面與此 `ComPtr`相關聯，則為[BoolStruct：： Member](boolstruct-structure.md#member)資料成員的位址;否則，`nullptr`。
+如果介面與此關聯`ComPtr`,則[BoolStruct 的位址::成員](boolstruct-structure.md#member)數據成員;否則, `nullptr`.
 
-## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr：:p tr_
+## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::ptr]
 
-包含與此 `ComPtr`相關聯及管理之介面的指標。
+包含指向與此關聯的介面並由 其管理的指標`ComPtr`。
 
 ```cpp
 InterfaceType *ptr_;
@@ -593,11 +593,11 @@ InterfaceType *ptr_;
 
 ### <a name="remarks"></a>備註
 
-`ptr_` 是內部受保護的資料成員。
+`ptr_`是內部受保護的數據成員。
 
-## <a name="comptrreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtr：： ReleaseAndGetAddressOf
+## <a name="comptrreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>Comptr::釋放和取得位址
 
-釋放與這個 `ComPtr` 相關聯的介面，然後抓取[ptr_](#ptr)資料成員的位址，其中包含已釋放之介面的指標。
+釋放與此關聯的介面,`ComPtr`然後檢索[ptr_](#ptr)資料成員的位址,該位址包含指向釋放的介面的指標。
 
 ```cpp
 T** ReleaseAndGetAddressOf();
@@ -605,11 +605,11 @@ T** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>傳回值
 
-這個 `ComPtr`的[ptr_](#ptr)資料成員的位址。
+ptr_`ComPtr`[資料成員](#ptr)的位址。
 
-## <a name="comptrreset"></a><a name="reset"></a>ComPtr：： Reset
+## <a name="comptrreset"></a><a name="reset"></a>ComPtr:重置
 
-釋放與這個 `ComPtr`相關聯之介面指標的所有參考。
+釋放指向與此`ComPtr`關聯的介面的指標的所有引用。
 
 ```cpp
 unsigned long Reset();
@@ -619,9 +619,9 @@ unsigned long Reset();
 
 釋放的參考數目 (若有的話)。
 
-## <a name="comptrswap"></a><a name="swap"></a>ComPtr：： Swap
+## <a name="comptrswap"></a><a name="swap"></a>交流::交換
 
-使用由指定 `ComPtr`管理的介面，交換目前 `ComPtr` 所管理的介面。
+將當前`ComPtr`管理的介面與指定的`ComPtr`的接換。
 
 ```cpp
 void Swap(
@@ -635,5 +635,5 @@ void Swap(
 
 ### <a name="parameters"></a>參數
 
-*r*<br/>
+*R*<br/>
 `ComPtr`。

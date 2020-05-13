@@ -1,8 +1,9 @@
 ---
 title: _locking
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _locking
+- _o__locking
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1c211ffaa63a0e4711374b01b0530ed8db20dfb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953274"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911542"
 ---
 # <a name="_locking"></a>_locking
 
@@ -69,7 +71,7 @@ int _locking(
 | **EACCES** | 鎖定違規 (檔案已鎖定或解除鎖定)。 |
 | **EBADF** | 檔案描述項無效。 |
 | **EDEADLOCK** | 鎖定違規。 在指定 **_LK_LOCK**或 **_LK_RLCK**旗標，且在嘗試10次後無法鎖定檔案時傳回。 |
-| **EINVAL** | 提供了不正確引數給 **_locking**。 |
+| **EINVAL** | 指定了不正確引數給 **_locking**。 |
 
 如果由於參數不正確而失敗 (例如檔案描述項無效)，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
@@ -79,7 +81,7 @@ int _locking(
 
 *mode* 必須是定義於 Locking.h 中的下列其中一個資訊清單常數。
 
-|*模式*值|作用|
+|*模式*值|效果|
 |-|-|
 | **_LK_LOCK** | 鎖定指定的位元組。 如果無法鎖定位元組，程式會在 1 秒後立即重試。 如果嘗試 10 次之後還是無法鎖定位元組，常數會傳回錯誤。 |
 | **_LK_NBLCK** | 鎖定指定的位元組。 如果無法鎖定位元組，常數會傳回錯誤。 |
@@ -89,13 +91,15 @@ int _locking(
 
 可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不會合並相鄰區域;如果兩個鎖定的區域相鄰，則每個區域都必須分開解除鎖定。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h> 和 \<sys/locking.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

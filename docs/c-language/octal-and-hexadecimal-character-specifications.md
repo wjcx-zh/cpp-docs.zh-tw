@@ -6,15 +6,15 @@ helpviewer_keywords:
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
 ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148929"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343373"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八進位和十六進位字元規格
 
-**\\**<em>ooo</em> 的序列表示您可以將 ASCII 字元集中的任何字元指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。
+順序**\\** <em>ooo 序列</em>表示您可以將 ASCII 字元集中的任何字元指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。
 
 同樣地，**\x**<em>hhh</em> 的序列可讓您將任何 ASCII 字元指定為十六進位字元碼。 例如，您能以一般 C 逸出序列 (**\b**) 指定 ASCII 退格鍵字元，或是將它編碼為 **\010** (八進位) 或 **\x008** (十六進位)。
 
@@ -37,6 +37,6 @@ ms.locfileid: "56148929"
 "\xab" "c" /* two characters */
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 字元常數](../c-language/c-character-constants.md)

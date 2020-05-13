@@ -8,23 +8,23 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2050f59601755a93c73b743debacbf52ba9cec05
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318068"
 ---
 # <a name="inline-assembler"></a>內嵌組合語言
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 組合語言用於許多用途，例如改善程式速度、減少記憶體需求，以及控制硬體。 您可以使用內嵌組合語言，直接在 C 和 C++ 原始程式中內嵌組譯語言指令，而不需要額外的組譯和連結步驟。 內嵌組合語言已內建於編譯器，因此您不需要個別的組譯工具，例如 Microsoft Macro Assembler (MASM)。
 
 > [!NOTE]
->  包含內嵌組譯工具的程式無法完全移植到其他硬體平台。 如果您為可攜性設計，請避免使用內嵌組譯工具。
+> 包含內嵌組譯工具的程式無法完全移植到其他硬體平台。 如果您為可攜性設計，請避免使用內嵌組譯工具。
 
-ARM 和 x64 處理器上不支援內嵌組解碼。  下列主題說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言：
+ARM 和 x64 處理器不支援內聯程式集。  下列主題說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言：
 
 - [內嵌組合語言概觀](../../assembler/inline/inline-assembler-overview.md)
 
@@ -40,7 +40,7 @@ ARM 和 x64 處理器上不支援內嵌組解碼。  下列主題說明如何搭
 
 - [跳至內嵌組譯碼中的標籤](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)
 
-- [在內嵌組譯碼中呼叫 C 函式](../../assembler/inline/calling-c-functions-in-inline-assembly.md)
+- [在內聯程式集中呼叫 C 函式](../../assembler/inline/calling-c-functions-in-inline-assembly.md)
 
 - [在內嵌組譯碼中呼叫 C++ 函式](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)
 
@@ -48,9 +48,9 @@ ARM 和 x64 處理器上不支援內嵌組解碼。  下列主題說明如何搭
 
 - [最佳化內嵌組譯碼](../../assembler/inline/optimizing-inline-assembly.md)
 
-**END Microsoft 特定的**
+**結束微軟的**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建和組件語言](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
-[C++ 語言參考](../../cpp/cpp-language-reference.md)<br/>
+[編譯器內部函數和彙編語言](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
+[C++語言參考](../../cpp/cpp-language-reference.md)<br/>

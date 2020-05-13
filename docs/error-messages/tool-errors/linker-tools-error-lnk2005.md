@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-ms.openlocfilehash: 8b4f75b90254c702ecb2afb65108278a59df69ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6090478c3761c477250b6706a350e261b51f2a05
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299201"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353231"
 ---
 # <a name="linker-tools-error-lnk2005"></a>連結器工具錯誤 LNK2005
 
-> *符號*已定義於物件
+> *定義*物件定義的符號
 
-符號*符號*已定義一次以上。
+符號*已*多次定義。
 
-此錯誤後面是嚴重錯誤[LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md)。
+錯誤後跟致命錯誤[LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md)。
 
-### <a name="possible-causes-and-solutions"></a>可能原因和解決方案
+### <a name="possible-causes-and-solutions"></a>可能的原因和解決方案
 
-一般而言，此錯誤表示您中斷*一個定義規則*，可讓任何使用的範本、 函數、 類型或物件在指定的物件檔案中，只有一個定義，只有一個定義跨越整個可執行檔外部可見的物件或函式。
+通常,此錯誤意味著您已損壞*一個定義規則*,該定義規則只允許給定物件檔中任何已使用的範本、函數、類型或物件定義一個定義,並且在整個可執行檔中僅允許一個外部可見物件或函數的定義。
 
-以下是一些常見原因造成此錯誤。
+以下是此錯誤的一些常見原因。
 
-- 標頭檔中定義的變數時，會發生此錯誤。 例如，如果您在專案中，多個原始程式檔中包含此標頭檔，會發生錯誤：
+- 當標頭檔定義變數時,可能會發生此錯誤。 例如,如果將此標頭檔包含在專案中的多個源檔中,則會導致錯誤:
 
     ```h
     // LNK2005_global.h
@@ -36,13 +36,13 @@ ms.locfileid: "62299201"
 
    可能的解決方案包括：
 
-   - 將變數宣告`extern`標頭檔中： `extern int global_int;`，然後定義它，並選擇性地將它初始化只能有一個原始程式檔中： `int global_int = 17;`。 此變數現在是全域您可以使用任何原始程式檔中宣告它`extern`，例如，包含標頭檔。 我們建議的變數必須是全域的此解決方案，但良好的軟體工程實務降到最低的全域變數。
+  - 宣告標頭檔中`extern`的變數: `extern int global_int;`,然後定義它,並選擇性地在一個和只有一個源檔案中初始`int global_int = 17;`化 它: 。 此變數現在是一個全域變數,您可以通過聲明它`extern`(例如,包括標頭檔)在任何源檔中使用。 對於必須是全域的變數,我們建議使用此解決方案,但良好的軟體工程實踐可最大限度地減少全域變數。
 
-   - 將變數宣告[靜態](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`。 這會限制目前的物件檔中，以定義的範圍，並可讓多個目的檔，以便有自己的變數複本。 我們不建議您在標頭檔中定義靜態變數因為可能會發生與全域變數產生混淆。 想要將靜態變數的定義移到原始程式檔使用它們。
+  - 宣告變數[靜態](../../cpp/storage-classes-cpp.md#static) `static int static_int = 17;`: 這將定義的範圍限制為當前物件檔,並允許多個物件檔具有自己的變數副本。 我們不建議您在頭檔中定義靜態變數,因為可能會與全域變數混淆。 更喜歡將靜態變數定義移動到使用它們的源檔中。
 
-   - 將變數宣告[selectany](../../cpp/selectany.md): `__declspec(selectany) int global_int = 17;`。 這會告訴連結器的所有外部參考，挑選一個定義以供使用，並捨棄其餘部分。 有時候合併匯入程式庫時，此解決方案是很有用。 否則，我們不建議您這麼做來避免連結器錯誤。
+  - 宣告變數[selectany](../../cpp/selectany.md) `__declspec(selectany) int global_int = 17;`: . . 這告訴連結器選擇一個定義供所有外部引用使用,並丟棄其餘。 此解決方案有時在組合導入庫時很有用。 否則,我們不推薦它作為避免連結器錯誤的一種方式。
 
-- 標頭檔定義不是函式時，會發生此錯誤`inline`。 如果您在多個原始程式檔中包含此標頭檔，您會取得多個定義的函式可執行檔。
+- 當標頭檔定義不是`inline`的函數時,可能會發生此錯誤。 如果在此標頭檔包含多個源檔中,則可以在可執行檔中獲取該函數的多個定義。
 
     ```h
     // LNK2005_func.h
@@ -51,26 +51,26 @@ ms.locfileid: "62299201"
 
    可能的解決方案包括：
 
-   - 新增`inline`函式的關鍵字：
+  - 將`inline`關鍵字新增到函數:
 
-        ```h
-        // LNK2005_func_inline.h
-        inline int sample_function(int k) { return 42 * (k % 167); }
-        ```
+    ```h
+    // LNK2005_func_inline.h
+    inline int sample_function(int k) { return 42 * (k % 167); }
+    ```
 
-   - 移除標頭檔中的函式主體，並保留的宣告，然後實作函式中只能有一個原始程式檔：
+  - 從標頭檔中刪除函數正文,只保留聲明,然後在一個和只有一個源檔案中實現該函數:
 
-        ```h
-        // LNK2005_func_decl.h
-        int sample_function(int);
-        ```
+    ```h
+    // LNK2005_func_decl.h
+    int sample_function(int);
+    ```
 
-        ```cpp
-        // LNK2005_func_impl.cpp
-        int sample_function(int k) { return 42 * (k % 167); }
-        ```
+    ```cpp
+    // LNK2005_func_impl.cpp
+    int sample_function(int k) { return 42 * (k % 167); }
+    ```
 
-- 如果您的標頭檔中定義成員函式，在類別宣告之外，也會發生此錯誤：
+- 如果在標頭檔中的類聲明之外定義成員函數,也可能發生此錯誤:
 
     ```h
     // LNK2005_member_outside.h
@@ -81,7 +81,7 @@ ms.locfileid: "62299201"
     int Sample::sample_function(int k) { return 42 * (k % 167); }  // LNK2005
     ```
 
-   若要修正此問題，請移動類別內的成員函式定義。 在類別宣告內定義的成員函式會以隱含方式內嵌。
+   要解決此問題,在類中移動成員函數定義。 在類聲明中定義的成員函數隱式內聯。
 
     ```h
     // LNK2005_member_inline.h
@@ -91,23 +91,23 @@ ms.locfileid: "62299201"
     };
     ```
 
-- 如果您連結的 CRT 的標準程式庫的多個版本，就會發生此錯誤。 比方說，如果您嘗試同時零售和偵錯 CRT 程式庫，或連結程式庫中，靜態和動態版本或標準程式庫的兩個不同版本到可執行檔時，可能會報告此錯誤的次數。 若要修正此問題，請將所有保留一個複本的每個程式庫移除連結 命令。 我們不建議您混用零售和偵錯程式庫或不同版本，請在程式庫，在相同的可執行檔。
+- 如果連結了多個版本的標準庫或 CRT,則可能發生此錯誤。 例如,如果您嘗試將零售庫和調試CRT庫或庫的靜態和動態版本或標準庫的兩個不同版本連結到可執行檔,則此錯誤可能會報告多次。 要解決此問題,請從連結命令中刪除每個庫除一個副本外的所有副本。 我們不建議您將零售庫和調試庫或庫的不同版本混合在同一可執行檔中。
 
-   若要告訴連結器命令列使用程式庫以外的預設值，指定 使用，並使用程式庫[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)選項以停用的預設程式庫。 在 IDE 中，將參考加入至您的專案，以指定的程式庫，以使用此項目，然後再開啟**屬性頁**對話方塊，您的專案，然後在**連結器**，**輸入**屬性頁面上，設定**忽略所有預設程式庫**，或**忽略特定的預設程式庫**屬性，以停用的預設程式庫。
+   要告訴連結器在命令列上使用預設值以外的庫,請指定要使用的庫,並使用[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)選項禁用預設庫。 在 IDE 中,新增對專案的引用以指定要使用的庫,然後打開專案**的屬性頁**對話框,並在 **「連結器**、**輸入**屬性」頁中設定 **「忽略所有預設函式庫**」或 **「忽略特定預設函式庫」** 屬性以禁用預設庫。
 
-- 如果您混用靜態和動態程式庫的使用，當您使用時，會發生此錯誤[/clr](../../build/reference/clr-common-language-runtime-compilation.md)選項。 比方說，如果您使用的 DLL 在建置可執行檔靜態 CRT 中的連結，會發生此錯誤。 若要修正此問題，只有靜態程式庫或僅動態程式庫的可執行檔的整個和使用您建置使用可執行檔中的任何程式庫。
+- 如果在使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)選項時混合使用靜態和動態庫,則可能發生此錯誤。 例如,如果建構 DLL 以用於靜態 CRT 中的連結的可執行檔,則可能發生此錯誤。 要解決此問題,請使用靜態庫或僅對整個可執行檔以及生成要在可執行檔中使用的任何庫使用動態庫。
 
-- 如果符號為封裝函式，會發生此錯誤 (由編譯[/Gy](../../build/reference/gy-enable-function-level-linking.md)) 和它包含一個以上的檔案中，但編譯之間不同。 若要修正此問題，請重新編譯包含封裝的函式的所有檔案。
+- 如果符號是打包函數(通過編譯[創建)並且](../../build/reference/gy-enable-function-level-linking.md)它包含在多個檔中,但在編譯之間更改,則可能發生此錯誤。 要解決此問題,請重新編譯包含打包函數的所有檔。
 
-- 如果在不同的程式庫的兩個成員物件中以不同的方式定義符號，並用這兩個成員物件，會發生此錯誤。 若要修正此問題，以靜態方式連結程式庫時的一個方法是從只有一個程式庫，使用成員物件，並將該程式庫包含連結器命令列上的第一次。 若要使用這兩種符號，您必須建立方法來區別它們。 比方說，如果您可以建立從來源文件庫，您可以包裝在唯一的命名空間中的每個程式庫。 或者，您可以建立新的包裝函式程式庫，用以包裝至其中一個原始程式庫的參考，將新的程式庫連結至原始的程式庫，然後將可執行檔連結至您新的程式庫，而不是原始的程式庫的唯一名稱。
+- 如果符號在不同的庫中的兩個成員物件中定義不同,並且使用兩個成員物件,則可能發生此錯誤。 當庫以靜態連結時解決此問題的一種方法是僅從一個庫中使用成員物件,並首先在連結器命令行中包括該庫。 要使用這兩個符號,必須創建一種方法來區分它們。 例如,如果可以從源生成庫,則可以將每個庫包裝在一個唯一的命名空間中。 或者,您可以創建一個新的包裝庫,該庫使用唯一名稱來包裝對其中一個原始庫的引用,將新庫連結到原始庫,然後將可執行檔連結到新庫而不是原始庫。
 
-- 如果會發生此錯誤`extern const`變數定義了兩次，並在每個定義中有不同的值。 若要修正此問題，請定義常數的唯一一次，或使用命名空間或`enum class`來區別常數的定義。
+- 如果`extern const`變數定義兩次,並且每個定義中具有不同的值,則可能發生此錯誤。 要解決此問題,請僅定義一次常量,或使用命名空間或`enum class`定義來區分常量。
 
-- 如果您將 uuid.lib 與其他定義 Guid （例如 oledb.lib 和 adsiid.lib） 的.lib 檔案，就會發生此錯誤。 例如：
+- 如果將 uuid.lib 與其他定義 GUID 的檔(例如 oledb.lib 和 adiid.lib)結合使用,則可能發生此錯誤。 例如：
 
     ```Output
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject
     already defined in uuid.lib(go7.obj)
     ```
 
-   若要修正此問題，請新增[/force: multiple 都會](../../build/reference/force-force-file-output.md)連結器命令列選項，並確定 uuid.lib 是第一個參考的程式庫。
+   要解決此問題,請確保將[/FORCE:MULTI](../../build/reference/force-force-file-output.md)添加到連結器命令行選項,並確保 uuid.lib 是第一個引用的庫。

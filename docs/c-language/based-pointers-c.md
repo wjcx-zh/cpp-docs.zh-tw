@@ -8,21 +8,21 @@ helpviewer_keywords:
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
 ms.openlocfilehash: e5d8c529adfb92c9db1fdcc5a38f688853606d5d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327427"
 ---
 # <a name="based-pointers-c"></a>Based 指標 (C)
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 [__based (C++ 參考)](../cpp/based-pointers-cpp.md)
 
 對於 Microsoft 32 位元和 64 位元 C 編譯器，基底指標是來自 32 位元或 64 位元指標基底的 32 位元或 64 位元位移。 基底定址在精確控制配置物件的區段時很實用，可藉此縮減可執行檔的大小及加快執行速度。 一般而言，指定基底指標的形式為
 
-> *type* **__based(** *base* **)** *declarator*
+> *類型* **__based （** *基底* **）** *declarator*宣告子
 
 基底定址的「基底指標」變數可讓您將指標指定為基底。 然後基底指標就是進入記憶體區段內的位移，從做為基底之指標的開頭開始。 以指標位址為基礎的指標是 `__based` 關鍵字在 32 位元和 64 位元編譯中有效的唯一形式。 在這類編譯中，它們是從 32 位元或 64 位元基底的 32 位元或 64 位元位移。
 
@@ -42,8 +42,8 @@ struct llist_t
 
 為指標 `vpBuffer` 所指派的記憶體位址，會在程式稍後的位置中進行配置。 連結清單會重新配置相對於 `vpBuffer` 的值。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

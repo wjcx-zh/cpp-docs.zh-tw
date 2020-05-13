@@ -4,7 +4,7 @@ ms.date: 11/04/2016
 ms.assetid: ef21daa0-b4b4-4f1a-86f4-25904d83fc86
 ms.openlocfilehash: 64e83eb1932c3ee379b67351f0f283f1ea7c9836
 ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/22/2019
 ms.locfileid: "68375884"
@@ -24,12 +24,12 @@ ms.locfileid: "68375884"
 |&#92;f|換頁字元|12|
 |&#92;n|新行字元|10|
 |&#92;r|歸位字元|13|
-|&#92;t|水平 Tab|9|
-|&#92;v|垂直 Tab|11|
+|&#92;t|水平 Tab 鍵|9|
+|&#92;v|垂直 Tab 鍵|11|
 |&#92;"|雙引號|34|
 |&#92;'|單引號|39|
 |&#92;&#92;|反斜線|92|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[字元](../c-language/characters.md)<br/>
+[長度](../c-language/characters.md)<br/>

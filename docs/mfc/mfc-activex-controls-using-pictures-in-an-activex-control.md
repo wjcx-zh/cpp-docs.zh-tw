@@ -10,28 +10,28 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f78823f39417ff6928a1b915d83507bc1ac9526
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239288"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358287"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片
 
 本文說明常見圖片類型和如何在 ActiveX 控制項中實作。 主題包括：
 
-- [自訂圖片屬性的概觀](#_core_overview_of_custom_picture_properties)
+- [自訂圖片屬性概述](#_core_overview_of_custom_picture_properties)
 
 - [在 ActiveX 控制項中實作自訂圖片屬性](#_core_implementing_a_custom_picture_property_in_your_activex_control)
 
-- [於控制項專案中加入項目](#_core_additions_to_your_control_project)
+- [控制項項目的額外附加功能](#_core_additions_to_your_control_project)
 
-##  <a name="_core_overview_of_custom_picture_properties"></a> 自訂圖片屬性的概觀
+## <a name="overview-of-custom-picture-properties"></a><a name="_core_overview_of_custom_picture_properties"></a> 自訂圖片屬性的概觀
 
 圖片類型在某些 ActiveX 控制項群組中是很常見的一種類型。 圖片類型可以處理中繼檔、點陣圖或圖示，並且讓使用者指定要在 ActiveX 控制項中顯示的圖片。 自訂圖片屬性是以圖片物件和允許控制項使用者存取圖片屬性的 Get/Set 函式來進行實作。 控制項使用者可利用內建圖片屬性頁來存取自訂圖片屬性。
 
-除了標準圖片類型，尚可使用字型和色彩類型。 如需有關如何在 ActiveX 控制項中使用標準 Font 類型的詳細資訊，請參閱文章[MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)。
+除了標準圖片類型，尚可使用字型和色彩類型。 如需在 ActiveX 控制項中使用標準 Font 類型的詳細資訊，請參閱 [MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)一文。
 
 ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬性的元件。 這些元件包括：
 
@@ -41,13 +41,13 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 
 - 支援 **LPPICTUREDISP**類型屬性，此由 Get/Set 函式完成實作。
 
-   您可以使用 [類別檢視] 快速加入一個支援圖片類型的自訂屬性或屬性。 如需有關如何加入 ActiveX 控制項屬性，使用 類別檢視的詳細資訊，請參閱文章[MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)。
+   您可以使用 [類別檢視] 快速加入一個支援圖片類型的自訂屬性或屬性。 如需使用 [類別檢視] 加入 ActiveX 控制項屬性的詳細資訊，請參閱 [MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)一文。
 
 - 操作控制項圖片屬性的屬性頁。
 
-   這個屬性頁是 ActiveX 控制項可以使用的內建屬性頁的一部分。 如需 ActiveX 控制項屬性頁的詳細資訊，請參閱文章[MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   這個屬性頁是 ActiveX 控制項可以使用的內建屬性頁的一部分。 如需 ActiveX 控制項屬性頁的詳細資訊，請參閱 [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文。
 
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控制項中實作自訂圖片屬性
+## <a name="implementing-a-custom-picture-property-in-your-activex-control"></a><a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a>在 ActiveX 控制項中實現自訂圖片屬性
 
 當您完成本章節所列步驟之後，控制項便可以顯示由使用者所選定的圖片。 使用者可以在顯示目前圖片的屬性頁上更改已顯示的圖片，該屬性頁中也有一個瀏覽按鈕，以供使用者選取不同的圖片。
 
@@ -63,13 +63,13 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 
    這些修改主要是針對負責 ActiveX 控制項繪製的若干函式。
 
-##  <a name="_core_additions_to_your_control_project"></a> 於控制項專案中加入項目
+## <a name="additions-to-your-control-project"></a><a name="_core_additions_to_your_control_project"></a> 於控制項專案中加入項目
 
-若要加入屬性頁 ID 為標準圖片屬性頁，插入下行程式碼之後 BEGIN_PROPPAGEIDS 巨集，在控制項實作檔 (。CPP):
+若要添加標準 Picture 屬性頁的屬性頁 ID,請在控制項實現檔中的BEGIN_PROPPAGEIDS宏之後插入以下行 (。CPP):
 
 [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]
 
-您也必須逐一遞增 BEGIN_PROPPAGEIDS 巨集的計數參數。 下面這行程式碼可說明這點：
+您還必須將BEGIN_PROPPAGEIDS宏的計數參數增加一個。 下面這行程式碼可說明這點：
 
 [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]
 
@@ -77,7 +77,7 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 
 [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]
 
-您不需要將資料成員命名*m_pic*; 任何名稱就夠了。
+不必m_pic命名*您的數據成員;* 任何名稱就足夠了。
 
 接著，加入一個支援圖片類型的自訂屬性：
 
@@ -89,17 +89,17 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 
 1. 在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。
 
-1. 從捷徑功能表選擇 [加入]  ，然後選擇 [加入屬性] 。
+1. 從捷徑功能表選擇 [加入] **** ，然後選擇 [加入屬性] ****。
 
-1. 在 [屬性名稱]  方塊中，輸入屬性名稱。 為達示範目的，這個程序中將會使用 `ControlPicture` 。
+1. 在 [屬性名稱] **** 方塊中，輸入屬性名稱。 為達示範目的，這個程序中將會使用 `ControlPicture` 。
 
-1. 在 **屬性的型別**方塊中，選取**IPictureDisp** <strong>\*</strong>屬性型別。
+1. 在 **「屬性類型」** 框中,為屬性類型選擇 **「IPicture Disp」。。** <strong>\*</strong>
 
-1. 在 [實作類型] 中，按一下 [Get/Set 方法] 。
+1. 在 [實作類型] **** 中，按一下 [Get/Set 方法] ****。
 
 1. 為 Get 和 Set 函式輸入唯一名稱，或接受預設名稱 (在這個範例中，會使用預設名稱 `GetControlPicture` 和 `SetControlPicture` )。
 
-9. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
 [加入屬性精靈] 會在控制項標頭檔 (.H) 的分派對應註解之間加入下列這行程式碼：
 
@@ -114,11 +114,11 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]
 
 > [!NOTE]
->  控制項類別和函式名稱可能會與上述範例不同。
+> 控制項類別和函式名稱可能會與上述範例不同。
 
-###  <a name="_core_modifications_to_your_control_project"></a> 於控制項專案中修改項目
+### <a name="modifications-to-your-control-project"></a><a name="_core_modifications_to_your_control_project"></a>控制項目的變更
 
-當您已經在控制項專案中加入了必要的項目之後，您需要修改幾種會影響 ActiveX 控制項轉譯的函式。 這些函式，即 `OnResetState`、 `OnDraw`和自訂圖片屬性的 Get/Set 函式位於控制項實作檔中。 (請注意在此範例會呼叫控制項類別`CSampleCtrl`，則`CPictureHolder`資料成員稱為*m_pic*，而自訂圖片屬性名稱是`ControlPicture`。)
+當您已經在控制項專案中加入了必要的項目之後，您需要修改幾種會影響 ActiveX 控制項轉譯的函式。 這些函式，即 `OnResetState`、 `OnDraw`和自訂圖片屬性的 Get/Set 函式位於控制項實作檔中。 (請注意,在此範例中,`CSampleCtrl`控制項類別稱為`CPictureHolder`, 資料成員稱為*m_pic*,自`ControlPicture`定義圖片屬性名稱為 .)
 
 在 `OnResetState` 控制項函式中，將下列這行選擇性的程式碼加到 `COleControl::OnResetState`呼叫之後：
 
@@ -143,7 +143,7 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]
 
 > [!NOTE]
->  類別和函式名稱可能與上述範例中的不同。
+> 類別和函式名稱可能與上述範例中的不同。
 
 在您完成修改之後，請重建專案以納入自訂圖片屬性的新功能，並且使用測試容器來測試新屬性。 如需測試容器存取方法的詳細資訊，請參閱 [以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md) 。
 

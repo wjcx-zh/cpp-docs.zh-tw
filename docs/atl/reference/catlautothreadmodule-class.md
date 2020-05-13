@@ -7,38 +7,38 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-ms.openlocfilehash: 1ec66bf77d8dd705cb2e1e93f70a885ab96420a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4bd1071380bf3e31c69c593c5db81112fdf21de
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247288"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168302"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 類別
 
-這個類別會實作在執行緒集區的 apartment model COM 伺服器。
+這個類別會執行執行緒集區式的單元模型 COM 伺服器。
 
 > [!IMPORTANT]
-> 此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 ```
 
 ## <a name="remarks"></a>備註
 
-`CAtlAutoThreadModule` 衍生自[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)並實作在執行緒集區的 apartment model COM 伺服器。 `CAtlAutoThreadModule` 會使用[CComApartment](../../atl/reference/ccomapartment-class.md)管理模組中的每個執行緒的 apartment。
+`CAtlAutoThreadModule`衍生自[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) ，並執行執行緒集區的單元模型 COM 伺服器。 `CAtlAutoThreadModule`會使用[CComApartment](../../atl/reference/ccomapartment-class.md)來管理模組中每個執行緒的公寓。
 
-您必須使用[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)中指定的物件的類別定義的巨集[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)做為 class factory。 接著，您應該加入衍生自的類別的單一執行個體`CAtlAutoThreadModuleT`這類`CAtlAutoThreadModule`。 例如: 
+您必須在物件的類別定義中使用[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)宏，將[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)指定為 Class Factory。 接著，您應該加入衍生自`CAtlAutoThreadModuleT`的類別的單一實例，例如`CAtlAutoThreadModule`。 例如：
 
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
-> 這個類別會取代過時[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)類別。
+> 這個類別會取代過時的[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)類別。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IAtlAutoThreadModule`
 
@@ -48,7 +48,7 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標頭：** atlbase.h。h
 
 ## <a name="see-also"></a>另請參閱
 

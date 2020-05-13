@@ -1,6 +1,6 @@
 ---
-title: EventGroup 類別
-description: C++ BUILD Insights SDK EventGroup 類別參考。
+title: 事件組類
+description: C++生成見解 SDK 事件組類引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ac8ac70f3fc160714b86dd0c483808a4d06e7699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 596c18ca0e9b4d7b26c4ed5209b16871952c4af2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333430"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324993"
 ---
-# <a name="eventgroup-class"></a>EventGroup 類別
+# <a name="eventgroup-class"></a>事件組類
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`EventGroup` 類別範本是所有群組捕捉類別的基類。
+類`EventGroup`範本是所有組捕獲類的基類。
 
 ## <a name="syntax"></a>語法
 
@@ -47,20 +47,20 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*TActivity*包含在群組中的活動類型。
+*TActivity*組中包含的活動類型。
 
 ## <a name="members"></a>成員
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
-[Back](#back)
-[開始](#begin)
-[結束](#end)
-[Front](#front)
-[operator []](#subscript-operator)
-[大小](#size)
+[後](#back)
+[begin](#begin)
+[Front](#front)開始[operator[]](#subscript-operator)
+連接前
+運算子 * 大小
+[Size](#size)[end](#end)
 
-## <a name="back"></a>返回
+## <a name="back"></a><a name="back"></a>返回
 
 ```cpp
 const TActivity& Back() const;
@@ -68,9 +68,9 @@ const TActivity& Back() const;
 
 ### <a name="return-value"></a>傳回值
 
-群組中最後一個活動事件的參考。
+對組中最後一個活動事件的引用。
 
-## <a name="begin"></a>起點
+## <a name="begin"></a><a name="begin"></a>開始
 
 ```cpp
 std::deque<TActivity>::const_iterator begin() const;
@@ -78,9 +78,9 @@ std::deque<TActivity>::const_iterator begin() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向活動事件群組開頭的反覆運算器。
+指向活動事件組開頭的反覆運算器。
 
-## <a name="end"></a>成品
+## <a name="end"></a><a name="end"></a>結束
 
 ```cpp
 std::deque<TActivity>::const_iterator end() const;
@@ -88,9 +88,9 @@ std::deque<TActivity>::const_iterator end() const;
 
 ### <a name="return-value"></a>傳回值
 
-反覆運算器，指向活動事件群組結尾之後的一個位置。
+反覆運算器將一個位置指向活動事件組的末尾。
 
-## <a name="front"></a>前端
+## <a name="front"></a><a name="front"></a>前面
 
 ```cpp
 const TActivity& Front() const;
@@ -98,9 +98,9 @@ const TActivity& Front() const;
 
 ### <a name="return-value"></a>傳回值
 
-群組中第一個活動事件的參考。
+對組中第一個活動事件的引用。
 
-## <a name="subscript-operator"></a>operator []
+## <a name="operator"></a><a name="subscript-operator"></a>運算子*
 
 ```cpp
 const TActivity& operator[](size_t index) const;
@@ -108,14 +108,14 @@ const TActivity& operator[](size_t index) const;
 
 ### <a name="parameters"></a>參數
 
-*索引*\
-活動事件群組中要存取之元素的索引。
+*指數*\
+要在活動事件組中訪問的元素的索引。
 
 ### <a name="return-value"></a>傳回值
 
-事件堆疊中的事件，儲存于*索引*所指示的位置。
+存儲在*索引*指示的位置的事件堆疊中的事件。
 
-## <a name="size"></a>容量
+## <a name="size"></a><a name="size"></a> 大小
 
 ```cpp
 size_t Size() const;
@@ -123,6 +123,6 @@ size_t Size() const;
 
 ### <a name="return-value"></a>傳回值
 
-事件群組的大小。
+事件組的大小。
 
 ::: moniker-end

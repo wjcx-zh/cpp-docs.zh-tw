@@ -1,8 +1,9 @@
 ---
 title: _set_new_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_handler
+- _o__set_new_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948477"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913962"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -56,16 +58,18 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>備註
 
-C++如果**new**運算子無法配置記憶體， **_set_new_handler**函數會指定可取得控制權的例外狀況處理函式。 如果**new**失敗，則執行時間系統會自動呼叫以引數形式傳遞給 **_set_new_handler**的例外狀況處理函式。 **_PNH**（定義于 New .h）是函式的指標，該函式會傳回類型**int** ，並接受**size_t**類型的引數。 使用**size_t**來指定要配置的空間量。
+如果**new**運算子無法配置記憶體，c + + **_set_new_handler**函式會指定可取得控制權的例外狀況處理函數。 如果**new**失敗，則執行時間系統會自動呼叫當做引數傳遞至 **_set_new_handler**的例外狀況處理函式。 **_PNH**（定義于 New .h 中）是函式的指標，該函式會傳回類型**int**並接受類型為**size_t**的引數。 使用**size_t**來指定要配置的空間量。
 
 沒有預設處理常式。
 
 **_set_new_handler**基本上是垃圾收集配置。 每次函式傳回非零值時，執行階段系統都會重試配置，如果函式傳回 0 則失敗。
 
-程式中出現的 **_set_new_handler**函式會向執行時間系統註冊引數清單中所指定的例外狀況處理函式：
+在程式中出現的 **_set_new_handler**函式會向執行時間系統註冊引數清單中所指定的例外狀況處理函式：
 
 ```cpp
 // set_new_handler1.cpp
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <new.h>
 
 int handle_program_memory_depletion( size_t )
@@ -101,9 +105,9 @@ _set_new_mode(1);
 
 如果提供使用者定義`operator new` ，則不會在失敗時自動呼叫新的處理常式函數。
 
-如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。
+如需詳細資訊，請參閱《C++ 語言參考》** 中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。
 
-所有動態連結的 Dll 或可執行檔都有單一的 **_set_new_handler**處理常式;即使您呼叫 **_set_new_handler** ，您的處理常式可能會被另一個取代，或者您要取代另一個 DLL 或可執行檔所設定的處理常式。
+所有動態連結的 Dll 或可執行檔都有單一 **_set_new_handler**處理常式;即使您呼叫 **_set_new_handler**您的處理常式可能會被另一個取代，或者您要取代由另一個 DLL 或可執行檔所設定的處理常式。
 
 ## <a name="requirements"></a>需求
 
@@ -111,7 +115,7 @@ _set_new_mode(1);
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -167,5 +171,5 @@ Please contact the application's support team for more information.
 
 [記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[受](free.md)<br/>
 [realloc](realloc.md)<br/>

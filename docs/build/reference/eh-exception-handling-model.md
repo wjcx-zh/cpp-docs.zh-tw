@@ -1,6 +1,7 @@
 ---
 title: /EH (例外狀況處理模型)
-ms.date: 08/14/2018
+description: Visual Studio 中 Microsoft C++ /EH(異常處理模型)編譯器選項的參考指南。
+ms.date: 04/14/2020
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -11,49 +12,78 @@ helpviewer_keywords:
 - EH compiler option [C++]
 - -EH compiler option [C++]
 - /EH compiler option [C++]
+no-loc:
+- SEH
+- try
+- catch
+- throw
+- extern
+- finally
+- noexcept
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68d6af657e7c20c0f5e84674dd91803beb35fba0
+ms.sourcegitcommit: 0e4feb35b47c507947262d00349d4a893863a6d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271797"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81396286"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外狀況處理模型)
 
-指定編譯器所使用的例外狀況處理類型、何時要繼續最佳化例外狀況檢查，以及是否要終結因例外狀況而超出範圍的 C++ 物件。 如果 **/EH**未指定，編譯器可讓您的程式碼，以擷取這兩個非同步結構化例外狀況和C++例外狀況，但不會終結C++因非同步例外狀況而超出範圍的物件。
+指定編譯器生成的異常處理模型支援。 參數指定是否將語法應用於`catch(...)`結構化和標準C++異常、是否**extern假定"C"** 代碼throw為異常,以及是否優化**noexcept** 某些檢查。
 
 ## <a name="syntax"></a>語法
 
-> **/EH**{**s**|**a**}[**c**][**r**][**-**]
+> **`/EHa`**[**`-`**]\
+> **`/EHs`**[**`-`**]\
+> **`/EHc`**[**`-`**]\
+> **`/EHr`**[**`-`**]
 
 ## <a name="arguments"></a>引數
 
-**a**<br/>
-例外狀況處理模型同時攔截非同步 （結構化） 和同步 (C++) 藉由使用例外狀況C++`catch(...)`語法。
+**`a`**\
+啟用標準C++堆疊展開。 使用`catch(...)`語法時,捕獲結構化(非同步)和標準C++(同步)異常。 **`/EHa`** 重寫和**`/EHs`****`/EHc`** 參數。
 
-**s**<br/>
-同步所攔截的例外狀況處理模型 (C++) 僅例外狀況，並告知編譯器来假設函式宣告為**extern"C"** 可能會擲回例外狀況。
+**`s`**\
+啟用標準C++堆疊展開。 使用`catch(...)`語法時,僅捕獲標準C++異常。 除非**`/EHc`** 還指定,否則編譯器假定聲明為**extern「C」的**函throw數可能是 C++例外。
 
-**C**<br/>
-如果搭配**s** (**/EHsc**)，會攔截C++僅例外狀況，並告知編譯器假設宣告為函式**extern"C"** 絕不會擲回C++例外狀況。 **/EHca** 相當於 **/EHa**。
+**`c`**\
+當**`/EHs`** 與 中使用 時,編譯器假定聲明為**extern「C」的**函數永遠不會throw成為C++異常。 它與 (**`/EHa`****`/EHca`** 即等效**`/EHa`** 於 ) 一起使用時不起作用。 **`/EHc`** 如果**`/EHs`****`/EHa`** 或未指定,則忽略。
 
-**r**<br/>
-告知編譯器一律會產生執行階段終止檢查所有**noexcept**函式。 根據預設，執行階段會檢查**noexcept**可能會繼續最佳化如果編譯器判斷函式會呼叫只有非擲回函式。
+**`r`**\
+告訴編譯器始終為所有**noexcept** 函數生成運行時終止檢查。 默認情況下,如果編譯器確定函數僅**noexcept** 調用非引發函數,則可能會優化其運行時檢查。 此選項提供嚴格的C++符合性,但代價是一些額外的代碼。 **`/EHr`** 如果**`/EHs`****`/EHa`** 或未指定,則忽略。
+
+**`-`**\
+清除上一個選項參數。 例如,**`/EHsc-`** 被解釋**`/EHs /EHc-`** 為與等效**`/EHs`** 於 。
+
+**`/EH`** 參數可以按任何順序單獨指定或合併。 如果指定了同一參數的多個實例,則最後一個實例將覆蓋任何較早的實例。  **`/EHr- /EHc /EHs`** 例如,**`/EHscr-`** 與相同,**`/EHscr- /EHr`** 並且具有**`/EHscr`** 與的效果相同。
 
 ## <a name="remarks"></a>備註
 
-**/EHa** 編譯器選項可搭配原生 C++ `catch(...)` 子句，用來支援非同步結構化例外狀況處理 (SEH)。 若要實作 SEH 而不指定 **/EHa**，您可以使用 **__try**， **__except**，以及 **__finally**語法。 雖然 Windows 和 Visual C++ 支援 SEH，但強烈建議您使用 ISO 標準 C++ 例外狀況處理 (**/EHs** 或 **/EHsc**)，因為它可提升程式碼的可攜性和彈性。 不過，在現有的程式碼中，或針對特定類型的程式 — 例如，在編譯為支援 common language runtime 的程式碼 ([/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md))，您仍然必須使用 SEH。 如需詳細資訊，請參閱 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)。
+### <a name="default-exception-handling-behavior"></a>預設例外處理行為
 
-使用 **/EHa** 指定 `catch(...)` 並嘗試處理所有例外狀況可能並不安全。 在大部分情況下，非同步例外狀況無法復原，因此應視為嚴重。 攔截這些例外狀況並繼續執行可能造成處理序損毀，因而導致難以找出並修正的 Bug。
+編譯器始終產生支援非同步結構化異常處理的代碼SEH。 預設情況下(**`/EHsc`** 即,如果沒有**`/EHs`****`/EHa`**, 或指定選項),編SEH譯器支援 本`catch(...)`機 C++ 子句中的處理程式。 但是,它還生成僅部分支援C++異常的代碼。 默認異常展開代碼不會銷毀由於異常而超出範圍的[try](../../cpp/try-throw-and-catch-statements-cpp.md)塊之外的自動C++物件。 引發C++異常時,可能會導致資源洩漏和未定義的行為。
 
-如果您使用 **/EHs** 或 **/EHsc**，那麼您的 `catch(...)` 子句就不會攔截非同步結構化例外狀況。 存取違規和 Managed <xref:System.Exception?displayProperty=fullName> 例外狀況並不會遭到攔截，而產生非同步例外狀況時不會終結範圍內的物件，即使已處理非同步例外狀況也一樣。
+### <a name="standard-c-exception-handling"></a>標準C++異常處理
 
-如果您使用 **/EHa**，將映像可能較大且可能會執行效能不佳，因為編譯器不會最佳化**嘗試**積極地封鎖。 即使編譯器未發現任何可能擲回 C++ 例外狀況的程式碼，仍會在例外況狀中留下自動呼叫所有本機物件之解構函式的篩選。 這樣就能安全地回溯非同步例外狀況以及 C++ 例外狀況的堆疊。 當您使用 **/EHs**，則編譯器會假設例外狀況只能在**擲回**陳述式或在函式呼叫。 這樣編譯器就能夠消除追蹤許多無法回溯物件之存留期的程式碼，進而大幅縮小程式碼。
+對標準C++異常處理模型的完全編譯器支援,該模型安全展開堆疊物件**`/EHsc`** 需要(**`/EHs`** 建議**`/EHa`**)或 。
 
-我們建議您不連結使用編譯的物件 **/EHa**搭配使用所編譯的物件 **/EHs**或是 **/EHsc**在相同的可執行模組中。 如果您必須在模組中的任何位置使用 **/EHa** 處理非同步例外狀況，請使用 **/EHa** 編譯模組中的所有程式碼。 您可以使用結構化例外狀況處理來編譯的程式碼相同的模組中的語法 **/EHs**，但您不能混用 SEH 語法與**嘗試**，**擲回**，和**攔截**相同的函式中。
+如果使用**`/EHs`****`/EHsc`** 或 ,`catch(...)`則子catch句不會 非同步結構化異常。 任何訪問衝突和管理<xref:System.Exception?displayProperty=fullName>異常都未捕獲。 而且,發生異步異常時作用域中的物件不會銷毀,即使代碼處理異步異常也是如此。 此行為是使結構化異常未處理的參數。 相反,請考慮這些異常是致命的。
 
-使用 **/EHa**如果您想要攔截以外所引發的例外狀況**擲回**。 這個範例將會產生並攔截結構化例外狀況：
+使用**`/EHs`****`/EHsc`** 或 時,編譯器假定異常**throw** 只能在語句或函數調用中發生。 此假設允許編譯器消除用於跟蹤許多可展開物件的存留期的代碼,這可以顯著減小代碼大小。 如果使用**`/EHa`**,則可執行映射可能會更大、更慢,因為編譯器不會像那樣積極地**try** 優化 塊。 它還會在自動清理本地物件的異常篩選器中保留,即使編譯器看不到任何可以throwC++異常的代碼也是如此。
+
+### <a name="structured-and-standard-c-exception-handling"></a>結構化和標準化式C++異常處理
+
+編譯器**`/EHa`** 選項允許針對非同步異常和C++異常進行安全堆疊展開。 它支援使用本機C++`catch(...)`子句處理標準C++和結構化異常。 要實現SEH而不**`/EHa`** 指定 ,可以使用 **__try、__except****__except**和 **__finally**語法。 有關詳細資訊,請參閱[結構化異常處理](../../cpp/structured-exception-handling-c-cpp.md)。
+
+> [!IMPORTANT]
+> 使用**`/EHa`** 指定並嘗試處理所有`catch(...)`異常 可能很危險。 在大部分情況下，非同步例外狀況無法復原，因此應視為嚴重。 攔截這些例外狀況並繼續執行可能造成處理序損毀，因而導致難以找出並修正的 Bug。
+>
+> 即使 Windows 和SEHVisual C++ 支援,我們強烈建議您使用**`/EHsc`** ISO 標準 C++ 異常**`/EHs`** 處理 (或 )。 它使代碼更加便攜和靈活。 有時,您仍必須在舊代碼或特定SEH類型的程式中使用。 例如,在編譯的代碼中,它是必需的,以支援通用語言運行時[(/clr)。](clr-common-language-runtime-compilation.md) 有關詳細資訊,請參閱[結構化異常處理](../../cpp/structured-exception-handling-c-cpp.md)。
+>
+> 我們建議您切勿將使用編譯**`/EHa`** 的物件檔連結到**`/EHs`** 使用**`/EHsc`** 或 在同一可執行模組中編譯的物件檔。 如果必須使用**`/EHa`** 模組中的任意位置來處理非同步異常,請使用**`/EHa`** 編譯 模組中的所有代碼。 您可以在使用的相同模組中使用結構化異常處理語法,這些程式碼**`/EHs`** 使用 。 但是SEH,不能將語法與**try** C++**throw****catch** 和 在同一函數中混合。
+
+如果要**`/EHa`**catch使用 由以外的內容引發**throw** 的異常 ,請使用 。 這個範例將會產生並攔截結構化例外狀況：
 
 ```cpp
 // compiler_options_EHA.cpp
@@ -62,58 +92,70 @@ ms.locfileid: "62271797"
 #include <excpt.h>
 using namespace std;
 
-void fail() {   // generates SE and attempts to catch it using catch(...)
-   try {
-      int i = 0, j = 1;
-      j /= i;   // This will throw a SE (divide by zero).
-      printf("%d", j);
-   }
-   catch(...) {   // catch block will only be executed under /EHa
-      cout<<"Caught an exception in catch(...)."<<endl;
-   }
+void fail()
+{
+    // generates SE and attempts to catch it using catch(...)
+    try
+    {
+        int i = 0, j = 1;
+        j /= i;   // This will throw a SE (divide by zero).
+        printf("%d", j);
+    }
+    catch(...)
+    {
+        // catch block will only be executed under /EHa
+        cout << "Caught an exception in catch(...)." << endl;
+    }
 }
 
-int main() {
-   __try {
-      fail();
-   }
+int main()
+{
+    __try
+    {
+        fail();
+    }
 
-   // __except will only catch an exception here
-   __except(EXCEPTION_EXECUTE_HANDLER) {
-      // if the exception was not caught by the catch(...) inside fail()
-      cout << "An exception was caught in __except." << endl;
-   }
+    // __except will only catch an exception here
+    __except(EXCEPTION_EXECUTE_HANDLER)
+    {
+        // if the exception was not caught by the catch(...) inside fail()
+        cout << "An exception was caught in __except." << endl;
+    }
 }
 ```
 
-**/EHc** 選項要求必須指定 **/EHs** 或 **/EHa** 。 **/Clr**選項表示 **/EHa** (也就是 **/clr** **/EHa**是多餘的)。 編譯器會產生錯誤，如果 **/EHs**或是 **/EHsc**之後使用 **/clr**。 最佳化作業不會影響這種行為。 攔截到例外狀況時，編譯器會叫用類別解構函式，或是與例外狀況位於相同範圍中的一個或多個物件的解構函式。 如果未攔截到例外狀況，則不會執行這些解構函式。
+### <a name="exception-handling-under-clr"></a>/clr 下的異常處理
 
-如需 **/clr**下的例外狀況處理限制的相關資訊，請參閱 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)。
+該**`/clr`** 選項**`/EHa`** 表示**`/clr /EHa`**(即冗餘)。 如果在**`/EHs`** 中使用**`/EHsc`** 或 後使用,**`/clr`** 編譯器 將生成錯誤。 優化不會影響此行為。 捕獲異常時,編譯器會為與異常位於同一作用域內的任何物件調用類析構函數。 如果未捕獲異常,則不運行這些析構函數。
 
-使用 **-** 符號就可以清除選項。 例如， **/EHsc-** 會解譯為 **/EHs** **/EHc-** 而且相當於 **/EHs**。
+有關**`/clr`** 下 例外處理限制的資訊,請參閱[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)。
 
-**/EHr**編譯器選項會強制在所有具有函式的執行階段終止檢查**noexcept**屬性。 根據預設，如果編譯器後端判斷函式只會呼叫 *「非擲回」* (Non-throwing) 函式，則可能會繼續最佳化執行階段檢查。 非擲回函式是具有指定不會擲回任何例外狀況之屬性的任何函式。 這包括函式標示**noexcept**， `throw()`， `__declspec(nothrow)`，以及 **/EHc**指定，則**extern"C"** 函式。 非擲回函式也包含編譯器判定檢查不會擲回任何例外狀況的任何函式。 您可以使用 **/EHr-** 明確地設定預設值。
+### <a name="runtime-exception-checks"></a>執行時異常檢查
 
-不過，非擲回屬性並不保證函式不會擲回任何例外狀況。 與行為的不同**noexcept**函式，MSVC 編譯器會考慮使用宣告的函式所擲回例外狀況`throw()`， `__declspec(nothrow)`，或**extern"C"** 未定義的行為。 使用這三種宣告屬性的函式，不會對例外狀況強制執行執行階段終止檢查。 您可以使用 **/EHr**選項來協助您識別這個未定義的行為，方法是強制編譯器產生執行階段檢查，未處理的例外狀況逸出**noexcept**函式。
+該**`/EHr`** 選項強制在**noexcept** 具有 屬性的所有函數中檢查運行時終止。 默認情況下,如果編譯器後端確定函數僅調用*非引發*函數,則運行時檢查可能會被優化。 非擲回函式是具有指定不會擲回任何例外狀況之屬性的任何函式。 它們**noexcept** 包括標記為`throw()`的`__declspec(nothrow)`函**`/EHc`** 數 ,和 ,指定時**extern,"C"** 函數。 非擲回函式也包含編譯器判定檢查不會擲回任何例外狀況的任何函式。 可以使用 顯示式設定預設**`/EHr-`** 行為 。
+
+非引發屬性不能保證函數不能引發異常。 與**noexcept** 函數的行為不同,MSVC 編譯器將`throw()``__declspec(nothrow)`**extern** 使用 聲明的函數引發的異常視為未定義的行為。 使用這三個聲明屬性的函數不強制運行時終止檢查異常。 可以使用**`/EHr`** 該 選項通過強制編譯器為**noexcept** 轉義 函數的未處理異常生成運行時檢查來幫助標識此未定義的行為。
+
+## <a name="set-the-option-in-visual-studio-or-programmatically"></a>在可檢視化工作室中設定選項,或以程式設計方式設定選項
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **C /C++** > **程式碼產生**。
+1. 選擇**設定屬性** > **C/C++** > **程式碼產生**。
 
-1. 修改 [啟用 C++ 例外狀況]  屬性。
+1. 修改 [啟用 C++ 例外狀況] **** 屬性。
 
-   或者，將 [啟用 C++ 例外狀況]  設定為 [否] ，然後在 [命令列]  屬性頁的 [其他選項]  方塊中，加入編譯器選項。
+   或者，將 [啟用 C++ 例外狀況] **** 設定為 [否] ****，然後在 [命令列] **** 屬性頁的 [其他選項] **** 方塊中，加入編譯器選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExceptionHandling%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExceptionHandling%2A>＞。
 
 ## <a name="see-also"></a>另請參閱
 
-[MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
-[錯誤和例外狀況處理](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[例外狀況規格 (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[結構化例外狀況處理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)
+[MSVC 編譯器選項](compiler-options.md)\
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)\
+[錯誤與不正常處理](../../cpp/errors-and-exception-handling-modern-cpp.md)\
+[例外規格throw( )](../../cpp/exception-specifications-throw-cpp.md)\
+[Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322985"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 預先組建組態
 
@@ -21,7 +21,8 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 ::: moniker range=">=vs-2017"
 
-在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態] 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
+在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態]**** 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
+
 - x86 偵錯
 - x86 發行
 - x64 偵錯
@@ -355,7 +356,7 @@ You can use these optional settings for more control:
 
 ::: moniker range="vs-2019"
 
-在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態] 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
+在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態]**** 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態：
 
 - x86 偵錯
 - x86 Clang Debug
@@ -694,7 +695,8 @@ You can use these optional settings for more control:
 ```
 
 ::: moniker-end
-## <a name="see-also"></a>另請參閱
+
+## <a name="see-also"></a>請參閱
 
 [CMake Projects in Visual Studio](cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>
 [設定 Linux CMake 專案](../linux/cmake-linux-project.md)<br/>

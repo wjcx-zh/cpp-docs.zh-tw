@@ -8,21 +8,21 @@ helpviewer_keywords:
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
 ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336163"
 ---
 # <a name="storage-and-alignment-of-structures"></a>結構的儲存和對齊
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 結構成員會依其宣告的順序依序儲存：第一個成員具有最低的記憶體位址，最後一個成員則具有最高的記憶體位址。
 
 每個資料物件都有一個 *alignment-requirement*。 如果是結構，這個要求是其最大的成員。 每個物件都會配置一個 *offset*，因此
 
-*offset* `%` *alignment-requirement* `==` 0
+*位移* `%` *對齊-需求* `==` 0
 
 如果整數類資料類型的大小相同，而且下一個位元欄位符合目前配置單位，不需因為位元欄位的一般對齊需求而加上跨越界限，則相鄰的位元欄位會封裝為相同的 1 個、2 個或 4 個位元組配置單位。
 
@@ -38,8 +38,8 @@ min( n, sizeof( item ) )
 
 Microsoft C 編譯器的位元欄位預設大小為 **long**。 結構成員會對齊於類型的大小或 /Zp[*n*] 的大小，取兩者中較小者。 預設大小為 4。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [結構宣告](../c-language/structure-declarations.md)

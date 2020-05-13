@@ -8,11 +8,11 @@ helpviewer_keywords:
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
 ms.openlocfilehash: 75ffbeda8b120b9a1bb9f1bb28c570695ed2c8c8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234583"
 ---
 # <a name="declarations-and-types"></a>宣告和類型
 
@@ -20,7 +20,7 @@ ms.locfileid: "56150242"
 
 - [宣告概觀](../c-language/overview-of-declarations.md)
 
-- [儲存類別](../c-language/c-storage-classes.md)
+- [儲存體類別](../c-language/c-storage-classes.md)
 
 - [類型指定名稱](../c-language/c-type-specifiers.md)
 
@@ -30,9 +30,9 @@ ms.locfileid: "56150242"
 
 - [解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)
 
-- [初始化](../c-language/initialization.md)
+- [初始](../c-language/initialization.md)
 
-- [基本類型的儲存空間](../c-language/storage-of-basic-types.md)
+- [基本類型的儲存](../c-language/storage-of-basic-types.md)
 
 - [不完整的類型](../c-language/incomplete-types.md)
 
@@ -40,6 +40,6 @@ ms.locfileid: "56150242"
 
 - [擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

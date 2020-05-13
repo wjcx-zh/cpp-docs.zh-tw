@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: def0c55ff1faf12729226aa445c9614119c546c4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 587cf65543e24e586fb8b2336481d6e841473134
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502668"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368266"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 類別
 
-使用[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRICHEDITCNTRITEM](../../mfc/reference/cricheditcntritem-class.md), 在 MFC 的檔視圖架構內容中提供 rich edit 控制項的功能。
+使用[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEdit CntrItem,](../../mfc/reference/cricheditcntritem-class.md)在 MFC 的文檔視圖體系結構上下文中提供了豐富的編輯控制項的功能。
 
 ## <a name="syntax"></a>語法
 
@@ -37,27 +37,27 @@ class CRichEditDoc : public COleServerDoc
 
 |名稱|描述|
 |----------|-----------------|
-|[CRichEditDoc::CreateClientItem](#createclientitem)|呼叫以執行檔的清除。|
-|[CRichEditDoc::GetStreamFormat](#getstreamformat)|指出資料流程輸入和輸出是否應包含格式資訊。|
-|[CRichEditDoc::GetView](#getview)|抓取 asssociated [CRichEditView](../../mfc/reference/cricheditview-class.md)物件。|
+|[克里希編輯文件:建立用戶端項目](#createclientitem)|調用 以執行文檔的清理。|
+|[克里希編輯文件:取得串流格式](#getstreamformat)|指示流輸入和輸出是否應包含格式設定資訊。|
+|[克里希編輯文件:取得檢視](#getview)|檢索同化[CRichEditView](../../mfc/reference/cricheditview-class.md)物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CRichEditDoc::m_bRTF](#m_brtf)|指出資料流程 i/o 是否應包含格式。|
+|[克里希編輯文件:m_bRTF](#m_brtf)|指示流 I/O 是否應包含格式。|
 
 ## <a name="remarks"></a>備註
 
-「Rich edit 控制項」是一種視窗, 使用者可以在其中輸入和編輯文字。 文字可以被指派字元和段落格式, 而且可以包含內嵌的 OLE 物件。 Rich edit 控制項會提供用來格式化文字的程式設計介面。 然而，應用程式必須實作所有必要的使用者介面元件，讓使用者能夠執行格式化作業。
+"富編輯控制件"是使用者可以在其中輸入和編輯文本的視窗。 文本可以分配字元和段落格式,並可以包括嵌入的 OLE 物件。 豐富的編輯控制項為文字格式設定提供了程式設計介面。 然而，應用程式必須實作所有必要的使用者介面元件，讓使用者能夠執行格式化作業。
 
-`CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc`維護在此視圖中的用戶端專案清單。 `CRichEditCntrItem`提供 OLE 用戶端專案的容器端存取權。
+`CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc`維護檢視中的用戶端項的清單。 `CRichEditCntrItem`提供對 OLE 用戶端項的容器端訪問。
 
-這個 Windows 通用控制項 (因此也就是[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類別) 僅適用于在 windows 95/98 和 windows NT 3.51 版和更新版本下執行的程式。
+此 Windows 通用控件(因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類)僅適用於在 Windows 95/98 和 Windows NT 版本 3.51 及更高版本下運行的程式。
 
-如需在 MFC 應用程式中使用 rich edit 檔的範例, 請參閱[WORDPAD](../../overview/visual-cpp-samples.md)範例應用程式。
+有關在 MFC 應用程式中使用富編輯文檔的範例,請參閱[WORDPAD](../../overview/visual-cpp-samples.md)範例應用程式。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -75,11 +75,11 @@ class CRichEditDoc : public COleServerDoc
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxrich。h
+**標題:** afxrich.h
 
-##  <a name="createclientitem"></a>CRichEditDoc:: CreateClientItem
+## <a name="cricheditdoccreateclientitem"></a><a name="createclientitem"></a>克里希編輯文件:建立用戶端項目
 
-呼叫此函式以建立`CRichEditCntrItem`物件, 並將它新增至此檔。
+呼叫此函數以創建物件`CRichEditCntrItem`並將其添加到此文檔。
 
 ```
 virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
@@ -87,22 +87,22 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 
 ### <a name="parameters"></a>參數
 
-*preo*<br/>
-描述 OLE 專案之[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)結構的指標。 新`CRichEditCntrItem`的物件是以這個 OLE 專案為圍繞。 如果*preo*為 Null, 新的用戶端專案會是空的。
+*普雷奧*<br/>
+指向描述 OLE 項的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)結構的指標。 新`CRichEditCntrItem`物件圍繞此 OLE 項構造。 如果*Preo*為 NULL,則新用戶端項為空。
 
 ### <a name="return-value"></a>傳回值
 
-已加入此檔的新[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)物件的指標。
+指向已新增到文件的新[CRichEditCntrItem 物件](../../mfc/reference/cricheditcntritem-class.md)。
 
 ### <a name="remarks"></a>備註
 
-此函式不會執行任何 OLE 初始化。
+此功能不執行任何 OLE 初始化。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)結構。
 
-##  <a name="getstreamformat"></a>CRichEditDoc:: GetStreamFormat
+## <a name="cricheditdocgetstreamformat"></a><a name="getstreamformat"></a>克里希編輯文件:取得串流格式
 
-呼叫此函式可判斷用來串流豐富編輯內容的文字格式。
+呼叫此函數以確定流豐富的編輯內容的文本格式。
 
 ```
 int GetStreamFormat() const;
@@ -110,19 +110,19 @@ int GetStreamFormat() const;
 
 ### <a name="return-value"></a>傳回值
 
-下列其中一個旗標:
+以下標誌之一:
 
-- SF_TEXT 表示 rich edit 控制項不會維護格式資訊。
+- SF_TEXT 指示富編輯控件不維護格式設置資訊。
 
-- SF_RTF 表示 rich edit 控制項確實會維護格式資訊。
+- SF_RTF指示富編輯控件確實維護格式資訊。
 
 ### <a name="remarks"></a>備註
 
-傳回值是以[m_bRTF](#m_brtf)資料成員為基礎。 如果`m_bRTF`為 TRUE, 則此函式會傳回 SF_RTF, 否則會傳回 SF_TEXT。
+返回值基於[m_bRTF](#m_brtf)數據成員。 如果`m_bRTF`為 TRUE,則此函數將返回SF_RTF;否則,SF_TEXT。
 
-##  <a name="getview"></a>CRichEditDoc:: GetView
+## <a name="cricheditdocgetview"></a><a name="getview"></a>克里希編輯文件:取得檢視
 
-呼叫此函式可存取與這個`CRichEditDoc`物件相關聯的 [CRichEditView](../../mfc/reference/cricheditview-class.md) 物件。
+調用此函數以造訪與`CRichEditDoc`此 物件關聯的[CRichEditView](../../mfc/reference/cricheditview-class.md)物件。
 
 ```
 virtual CRichEditView* GetView() const;
@@ -130,15 +130,15 @@ virtual CRichEditView* GetView() const;
 
 ### <a name="return-value"></a>傳回值
 
-與檔相關`CRichEditView`聯之物件的指標。
+指向與文件`CRichEditView`關聯的物件的指標。
 
 ### <a name="remarks"></a>備註
 
-文字和格式設定資訊都包含在`CRichEditView`物件中。 `CRichEditDoc`物件會維護用於序列化的 OLE 專案。 每個`CRichEditView` `CRichEditDoc`只能有一個。
+文字與格式資訊包含在物件中`CRichEditView`。 物件`CRichEditDoc`維護用於序列化的 OLE 項。 每個`CRichEditDoc`應該只有一`CRichEditView`個 。
 
-##  <a name="m_brtf"></a>CRichEditDoc:: m_bRTF
+## <a name="cricheditdocm_brtf"></a><a name="m_brtf"></a>克里希編輯文件:m_bRTF
 
-當為 TRUE 時, 表示[CRichEditCtrl:: StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)和[CRichEditCtrl:: StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout)應儲存段落和字元格式特性。
+當 TRUE 時,指示[CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)和[CRichEditCtrl::Streamout](../../mfc/reference/cricheditctrl-class.md#streamout)應儲存段落和字元格式特徵。
 
 ```
 BOOL m_bRTF;
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc 類別](../../mfc/reference/coleserverdoc-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView 類別](../../mfc/reference/cricheditview-class.md)<br/>

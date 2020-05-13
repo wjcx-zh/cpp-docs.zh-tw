@@ -16,12 +16,12 @@ ms.locfileid: "62188750"
 ---
 # <a name="improving-compiler-throughput"></a>改善編譯器處理量
 
-若要更快速地建置您的專案中使用先行編譯標頭檔。 這很重要，如果您使用 ATL、 MFC 或 Windows SDK 標頭檔。
+使用先行編譯標頭檔，更快速地建立專案。 如果您使用 ATL、MFC 或 Windows SDK 標頭檔，這就很重要。
 
-請參閱[/Yc](reference/yc-create-precompiled-header-file.md)並[/Yu](reference/yu-use-precompiled-header-file.md)。
+請參閱[/yc](reference/yc-create-precompiled-header-file.md)和[/yu](reference/yu-use-precompiled-header-file.md)。
 
-如需有關先行編譯標頭的詳細資訊，請參閱[先行編譯標頭檔](creating-precompiled-header-files.md)。
+如需先行編譯標頭的詳細資訊，請參閱先行[編譯標頭檔](creating-precompiled-header-files.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [最佳化程式碼](optimizing-your-code.md)

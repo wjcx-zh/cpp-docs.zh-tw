@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-ms.openlocfilehash: 45625331d0c1be8ca7c663d12c53516dc7bd77c7
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: a5b87fe2ddd8fb32ddbbb2884c630952afdb079c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359298"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU 類別
 
-D2D1_SIZE_U 的包裝函式。
+D2D1_SIZE_U的包裝。
 
 ## <a name="syntax"></a>語法
 
@@ -33,21 +33,21 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|多載。 `CD2DSizeU` 從`D2D1_SIZE_U`物件結構建立物件。|
+|[CD2DSizeU:CD2DSizeU](#cd2dsizeu)|已多載。 從`CD2DSizeU``D2D1_SIZE_U`物件構造物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DSizeU::IsNull](#isnull)|傳回**布林**值, 指出運算式是否不包含有效的資料 (Null)。|
+|[CD2DSizeU:: IsNull](#isnull)|傳回**一個布林值**,指示運算式是否不包含有效資料 (NULL)。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DSizeU:: operator CSize](#operator_csize)|轉換`CD2DSizeU` 成`CSize`物件。|
+|[CD2DSizeU::運算元 CSize](#operator_csize)|轉換為`CD2DSizeU``CSize`物件。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `D2D1_SIZE_U`
 
@@ -55,11 +55,11 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxrendertarget。h
+**標題:** afxrendertarget.h
 
-##  <a name="cd2dsizeu"></a>CD2DSizeU:: CD2DSizeU
+## <a name="cd2dsizeucd2dsizeu"></a><a name="cd2dsizeu"></a>CD2DSizeU:CD2DSizeU
 
-從 CSize 物件中, 建立 CD2DSizeU 物件。
+從 CSize 物件建構 CD2DSizeU 物件。
 
 ```
 CD2DSizeU(const CSize& size);
@@ -73,18 +73,18 @@ CD2DSizeU(
 
 ### <a name="parameters"></a>參數
 
-*size*<br/>
+*大小*<br/>
 來源大小
 
-*cx*<br/>
-來源寬度
+*殘雪*<br/>
+源寬度
 
 *cy*<br/>
 來源高度
 
-##  <a name="isnull"></a>CD2DSizeU:: IsNull
+## <a name="cd2dsizeuisnull"></a><a name="isnull"></a>CD2DSizeU:: IsNull
 
-傳回布林值, 指出運算式是否不包含有效的資料 (Null)。
+返回一個布爾值,指示表達式是否不包含有效數據 (Null)。
 
 ```
 BOOL IsNull() const;
@@ -92,9 +92,9 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果 width 和 height 是空的, 則為 TRUE;否則為 FALSE。
+如果寬度和高度為空,則為 TRUE;否則 FALSE。
 
-##  <a name="operator_csize"></a>CD2DSizeU:: operator CSize
+## <a name="cd2dsizeuoperator-csize"></a><a name="operator_csize"></a>CD2DSizeU::運算元 CSize
 
 將 CD2DSizeU 轉換為 CSize 物件。
 
@@ -104,7 +104,7 @@ operator CSize();
 
 ### <a name="return-value"></a>傳回值
 
-D2D 大小的目前值。
+D2D 大小的當前值。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
 ms.openlocfilehash: f67fb9548601ac705ceda08d20d3049f0bf1e0a5
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221007"
 ---
 # <a name="active-technology-and-dlls"></a>Active 技術和 DLL
 
-Active 技術可讓物件伺服程式完全實作於 DLL 內。 此類型的伺服器稱為同處理序伺服器。 MFC 不完全支援同處理序伺服器的視覺化編輯的所有功能主要是因為 Active 技術不提供伺服器連結到容器的主要訊息迴圈的方式。 MFC 會需要存取容器應用程式的訊息迴圈來處理快速鍵和閒置時間處理。
+主動技術可讓物件服務器在 DLL 內完全實作為。 這種類型的伺服器稱為同進程伺服器。 MFC 並不完全支援所有視覺編輯功能的同進程伺服器，主要是因為使用中的技術並不提供方法讓伺服器連結至容器的主要訊息迴圈。 MFC 需要存取容器應用程式的訊息迴圈，以處理快速鍵和閒置時間處理。
 
-如果您正在撰寫 Automation 伺服程式，而且您的伺服器有沒有使用者介面，您可以讓 server 同處理序伺服器，並將它完全放入 DLL。
+如果您要撰寫 Automation 伺服器，而您的伺服器沒有使用者介面，您可以將伺服器設為內含式伺服器，並將它完全放入 DLL 中。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
 - [Automation 伺服程式](../mfc/automation-servers.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

@@ -1,35 +1,35 @@
 ---
-title: HOW TO：執行 DDX-DDV 資料繫結搭配 Windows Form
+title: 操作方式:使用 Windows 表單進行 DDX-DDV 資料繫結
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31629a4db2559112ba49f5c069b08de7abdfc2db
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754357"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>HOW TO：執行 DDX/DDV 資料繫結搭配 Windows Form
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows Form 執行 DDX/DDV 資料繫結
 
-[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)呼叫[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)建立控制項，比對資源的控制項 id。 如果您使用`DDX_ManagedControl`for`CWinFormsControl`控制項 （在精靈產生的程式碼），您不應該呼叫`CreateManagedControl`明確針對相同的控制項。
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)呼叫[CWinForms 控制::建立託管控制](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)以建立與資源控制 ID 符合的控制項。 如果用於`DDX_ManagedControl`控制項(在`CWinFormsControl`精靈生成的代碼中),則不應顯式調用`CreateManagedControl`同一控制件。
 
-呼叫`DDX_ManagedControl`中[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)建立控制項從 資源識別碼。 資料交換，您不需要使用 Windows Form 控制項使用 DDX/DDV 函式。 相反地，您可以在其中放置程式碼，以存取受管理之控制項的屬性`DoDataExchange`對話方塊 （或檢視表） 類別，如下列範例所示的方法。
+在`DDX_ManagedControl` [CWnd::DoDataExchange 中](../mfc/reference/cwnd-class.md#dodataexchange)調用,從資源 ID 創建控制項。 對於資料交換,您無需將 DDX/DDV 函數與 Windows 窗體控制項一起使用。 相反,您可以將代碼放在對話方塊(或視圖)`DoDataExchange`類的方法中訪問托管控件的屬性,如以下示例所示。
 
-下列範例示範如何繫結原生C++.NET 使用者控制項的字串。
+下面的範例展示如何將本機C++字串綁定到.NET 使用者控制項。
 
 ## <a name="example"></a>範例
 
-以下是範例 MFC 字串的 DDX/DDV 資料繫結`m_str`使用者定義`NameText`.NET 使用者控制項的屬性。
+下面是 MFC 字串的 DDX/DDV 資料綁定的`m_str`範例, 該字串具有 .NET 使用者`NameText`控制項的使用者定義 屬性。
 
-控制項時，會建立[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)呼叫`CMyDlg::DoDataExchange`第一次，因此任何程式碼，會參考`m_UserControl`必須緊跟在後`DDX_ManagedControl`呼叫。
+當[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)首次`CMyDlg::DoDataExchange`調用 時創建該控制項`m_UserControl`,因此引用的任何代碼`DDX_ManagedControl`都必須在調用後出現。
 
-您可以在您建立的 MFC01 應用程式中實作此程式碼[How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+您可以在「[如何:在對話框中創建使用者控制和主機」](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)中建立的 MFC01 應用程式中實現此代碼。
 
-下列程式碼置於 CMFC01Dlg 的宣告：
+在 CMFC01Dlg 的聲明中放入以下代碼:
 
 ```
 class CMFC01Dlg : public CDialog
@@ -41,9 +41,9 @@ class CMFC01Dlg : public CDialog
 
 ## <a name="example"></a>範例
 
-下列程式碼置於 CMFC01Dlg 的實作：
+在 CMFC01Dlg 的實現中放入以下代碼:
 
-```
+```cpp
 void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 {
    CDialog::DoDataExchange(pDX);
@@ -60,11 +60,11 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 
 ## <a name="example"></a>範例
 
-現在我們會新增處理常式方法，按一下 [確定] 按鈕。 按一下 [**資源檢視**] 索引標籤。在 [資源] 檢視中，按兩下`IDD_MFC01_DIALOG`。 對話方塊資源隨即出現在 資源編輯器。 然後按兩下 [確定] 按鈕...
+現在,我們將添加處理程式方法,按一下"確定"按鈕。 按下「**資源檢視」** 選項卡。在「資源檢視」中,按兩`IDD_MFC01_DIALOG`下 。 對話框資源將顯示在資源編輯器中。 然後按兩下「確定」 按鈕。
 
-會定義處理常式，如下所示。
+定義處理程式,如下所示。
 
-```
+```cpp
 void CMFC01Dlg::OnBnClickedOk()
 {
    AfxMessageBox(CString(m_MyControl.GetControl()->textBox1->Text));
@@ -74,13 +74,13 @@ void CMFC01Dlg::OnBnClickedOk()
 
 ## <a name="example"></a>範例
 
-並將下列這一行新增至 BOOL CMFC01Dlg::OnInitDialog() 的實作。
+並添加以下行的BOOL CMFC01Dlg實現::onInitDialog()。
 
 ```
 m_MyControl.GetControl()->textBox1->Text = "hello";
 ```
 
-您現在可以建置並執行應用程式。 請注意，在文字方塊中的任何文字將會顯示在快顯訊息方塊應用程式關閉時。
+您現在可以建置並執行應用程式。 請注意,當應用程式關閉時,文本框中的任何文本都將顯示在彈出消息框中。
 
 ## <a name="see-also"></a>另請參閱
 

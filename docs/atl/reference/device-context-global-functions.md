@@ -1,27 +1,27 @@
 ---
-title: 裝置內容全域函式
+title: 裝置內容文全域函數
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: d225bd0cd996fd908479b5a93aad81ea0428900b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e640f310a1976c29a39f0ab7c2575dfd1073c889
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330146"
 ---
-# <a name="device-context-global-functions"></a>裝置內容全域函式
+# <a name="device-context-global-functions"></a>裝置內容文全域函數
 
-此函式會為指定的裝置建立裝置內容。
+此功能為給定設備創建設備上下文。
 
 |||
 |-|-|
-|[AtlCreateTargetDC](#atlcreatetargetdc)|建立裝置內容。|
+|[AtlCreateTargetDC](#atlcreatetargetdc)|創建設備上下文。|
 
-##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC
+## <a name="atlcreatetargetdc"></a><a name="atlcreatetargetdc"></a>AtlCreate目標DC
 
-建立[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)結構中所指定裝置的裝置內容。
+為[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)結構中指定的設備創建設備上下文。
 
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -30,24 +30,24 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 ### <a name="parameters"></a>參數
 
 *hdc*<br/>
-在裝置內容的現有控制碼, 或 Null。
+[在]設備上下文的現有句柄,或 NULL。
 
 *ptd*<br/>
-在`DVTARGETDEVICE`結構的指標, 其中包含目標裝置的相關資訊。
+[在]指向包含有關目標設備`DVTARGETDEVICE`的資訊的指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回中`DVTARGETDEVICE`所指定裝置的裝置內容控制碼。 如果未指定任何裝置, 則會傳回預設顯示裝置的控制碼。
+將句柄傳回到 中指定的裝置的裝置`DVTARGETDEVICE`上下文 。 如果未指定設備,則將句柄返回到默認顯示設備。
 
 ### <a name="remarks"></a>備註
 
-如果結構是 Null, 而*hdc*是 null, 則會建立預設顯示裝置的裝置內容。
+如果結構為*NULL,hdc*為 NULL,則為預設顯示設備創建設備上下文。
 
-如果*hdc*不是 null, 而且*ptd*是 null, 則函數會傳回現有的*hdc*。
+如果*hdc*不是 NULL,並且*ptd*為 NULL,則函數將傳回現有的*hdc*。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlwin.h。h
+**標題:** atlwin.h
 
 ## <a name="see-also"></a>另請參閱
 

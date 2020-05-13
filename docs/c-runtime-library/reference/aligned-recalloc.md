@@ -1,8 +1,9 @@
 ---
 title: _aligned_recalloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_recalloc
+- _o__aligned_recalloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-ms.openlocfilehash: ef25769a04b27b02ccda16e86451a068ab0a0b84
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d425ff6c24cd7886c8d712b69e6e5d10da9dd6a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943772"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909800"
 ---
 # <a name="_aligned_recalloc"></a>_aligned_recalloc
 
@@ -54,12 +56,12 @@ void * _aligned_recalloc(
 目前記憶體區塊指標。
 
 *number*<br/>
-元素數。
+項目的數目。
 
 *size*<br/>
 每個項目的大小 (位元組)。
 
-*alignment*<br/>
+*對齊*<br/>
 對齊值，必須是 2 的整數冪。
 
 ## <a name="return-value"></a>傳回值
@@ -73,6 +75,8 @@ void * _aligned_recalloc(
 **_aligned_recalloc**是以**malloc**為基礎。 如需使用 **_aligned_offset_malloc**的詳細資訊，請參閱[malloc](malloc.md)。
 
 如果記憶體配置失敗，或是要求的大小大於 **_HEAP_MAXREQ**，則此函式會將**Errno**設定為**ENOMEM** 。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_recalloc**會驗證其參數。 如果*對齊*不是2的乘冪，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

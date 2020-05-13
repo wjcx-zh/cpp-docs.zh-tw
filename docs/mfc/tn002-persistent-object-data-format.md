@@ -8,24 +8,24 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-ms.openlocfilehash: 1880d5d43055966dea8ab16dc4f26bd4e4602ec5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f65a7b7afcf6bd832c9c23560bb29374038fae1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370447"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002：持續性物件資料格式
 
-此附注描述支援持續C++性物件的 MFC 常式，以及儲存在檔案中的物件資料格式。 這只適用于具有[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)宏的類別。
+本註釋介紹支援持久C++物件的MFC例程,以及對象數據存儲在檔中時的格式。 這僅適用於具有[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)宏的類。
 
 ## <a name="the-problem"></a>問題
 
-持續性資料的 MFC 執行會將許多物件的資料儲存在檔案的單一連續部分。 物件的 `Serialize` 方法會將物件的資料轉譯成壓縮二進位格式。
+持久數據的 MFC 實現將許多物件的數據存儲在檔的單個連續部分。 物件`Serialize`的方法將對象的數據轉換為緊湊的二進位格式。
 
-此實作為保證所有資料都是使用[CArchive 類別](../mfc/reference/carchive-class.md)，以相同的格式儲存。 它會使用 `CArchive` 物件做為翻譯工具。 在您呼叫[CArchive：： Close](../mfc/reference/carchive-class.md#close)之前，此物件會從其建立的時間繼續進行。 此方法可由程式設計人員明確地呼叫，或在程式結束包含 `CArchive`的範圍時由析構函式隱含呼叫。
+實現保證透過使用[CArchive 類](../mfc/reference/carchive-class.md)以相同的格式保存所有數據。 它使用`CArchive`物件作為轉換器。 此物件從建立時一直持續到呼叫[CArchive::關閉](../mfc/reference/carchive-class.md#close)。 當程式退出包含的範圍時,程式師可以顯式調用此方法,也可以由析構函數隱式調用`CArchive`此方法。
 
-此附注描述 `CArchive` 成員[CArchive：： ReadObject](../mfc/reference/carchive-class.md#readobject)和[CArchive：： WriteObject](../mfc/reference/carchive-class.md#writeobject)的執行。 您會在 Arcobj 中找到這些函式的程式碼，以及在 Arccore 中 `CArchive` 的主要執行。 使用者程式碼不會直接呼叫 `ReadObject` 和 `WriteObject`。 相反地，這些物件是由 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 宏自動產生的類別特定型別安全插入和抽取運算子所使用。 下列程式碼顯示如何隱含地呼叫 `WriteObject` 和 `ReadObject`：
+本說明描述了`CArchive`成員[CArchive::讀取物件](../mfc/reference/carchive-class.md#readobject)和[CArchive::WriteObject](../mfc/reference/carchive-class.md#writeobject)的實現。 您可以在 Arcobj.cpp 中找到這些函數的代碼,以及 Arccore.cpp`CArchive`中的主要實現。 用戶代碼不直接調用`ReadObject`和`WriteObject`調用。 相反,這些物件由特定於類的類型安全插入和提取運算符使用,這些運算符由DECLARE_SERIAL和IMPLEMENT_SERIAL宏自動生成。 以下代碼顯示如何`WriteObject``ReadObject`與隱式呼叫:
 
 ```
 class CMyObject : public CObject
@@ -42,68 +42,68 @@ ar <<pObj;        // calls ar.WriteObject(pObj)
 ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
 ```
 
-## <a name="saving-objects-to-the-store-carchivewriteobject"></a>將物件儲存到存放區（CArchive：： WriteObject）
+## <a name="saving-objects-to-the-store-carchivewriteobject"></a>儲存物件儲存到儲存(CArchive::寫入物件)
 
-方法 `CArchive::WriteObject` 會寫入用來重建物件的標頭資料。 這項資料是由兩個部分所組成：物件的類型和物件的狀態。 這個方法也會負責維護所寫出之物件的識別，因此不論該物件的指標數目（包括迴圈指標）為何，只會儲存一個複本。
+該方法`CArchive::WriteObject`寫入用於重建對象的標頭數據。 此數據由兩部分組成:對象的類型和物件的狀態。 此方法還負責維護正在寫入的對象的標識,以便只保存單個副本,而不考慮指向該物件的指標數(包括迴圈指標)。
 
-儲存（插入）和還原（解壓縮）物件需依賴數個「資訊清單常數」。 這些是以二進位儲存的值，並提供重要的資訊給封存（請注意，"w" 前置詞表示16位的數量）：
+保存(插入)和還原(提取)對象依賴於多個"清單常量"。 這些值以二進位方式存儲,並且向存檔提供重要資訊(請注意,"w"前綴表示 16 位元數量):
 
 |Tag|描述|
 |---------|-----------------|
-|wNullTag|用於 Null 物件指標（0）。|
-|wNewClassTag|表示此封存內容（-1）的新下面的類別描述。|
-|wOldClassTag|表示在此內容（0x8000）中看到正在讀取之物件的類別。|
+|wNullTag|用於 NULL 物件指標 (0)。|
+|wNewClassTag|指示後面的類描述是此存檔上下文 (-1) 的新增內容說明。|
+|wOldClassTag|指示在此上下文中 (0x8000) 已看到正在讀取的物件的類。|
 
-儲存物件時，封存會維護一個[CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md) （ *m_pStoreMap*），這是從預存物件到32位持續性識別碼（PID）的對應。 PID 會指派給每個唯一的物件，以及儲存在封存內容中的每個唯一類別名稱。 這些 Pid 會依序從1開始。 這些 Pid 在封存範圍外沒有任何重要性，特別是不會與記錄號碼或其他身分識別專案混淆。
+儲存物件時,存檔維護一個[CMapPtrToPtr(m_pStoreMap),](../mfc/reference/cmapptrtoptr-class.md)它是從儲存的物件映射到 32 位元持久標識碼*m_pStoreMap*(PID)。 PID 分配給保存在存檔上下文中的每個唯一物件和每個唯一類名稱。 這些 PID 從 1 開始按順序分發。 這些 PID 在存檔範圍之外沒有意義,尤其不應與記錄編號或其他標識項混淆。
 
-在 `CArchive` 類別中，Pid 是32位，但它們會寫成16位，除非它們大於0x7FFE。 大型 Pid 會寫成0x7FFF，後面接著32位 PID。 這會維持與舊版中所建立之專案的相容性。
+在類`CArchive`中,PID 是 32 位,但它們被寫成 16 位元,除非它們大於 0x7FFE。 大型 PID 編寫為 0x7FFF,後跟 32 位 PID。 這將保持與在早期版本中創建的專案的相容性。
 
-當提出要求將物件儲存至封存（通常是使用全域插入運算子）時，會檢查 Null [CObject](../mfc/reference/cobject-class.md)指標。 如果指標是 Null，則會將*wNullTag*插入封存資料流程中。
+當請求將物件保存到存檔時(通常使用全域插入運算子),將檢查 NULL [CObject](../mfc/reference/cobject-class.md)指標。 如果指標為 NULL,則*wNullTag*將插入到存檔流中。
 
-如果指標不是 Null，而且可以序列化（類別是 `DECLARE_SERIAL` 類別），則程式碼會檢查*m_pStoreMap*以查看是否已儲存物件。 如果有，程式碼就會將與該物件相關聯的32位 PID 插入封存資料流程中。
+如果指標不是 NULL 並且可以序列化(類`DECLARE_SERIAL`是 類),則代碼將檢查*m_pStoreMap*以查看物件是否已保存。 如果有,代碼將與該物件關聯的 32 位 PID 插入到存檔流中。
 
-如果之前尚未儲存物件，有兩種可能的考慮：物件和物件的確切型別（也就是類別）都是這個封存內容的新手，或者物件是已經看過的確切型別。 為了判斷是否已看到該類型，程式碼會查詢*m_pStoreMap* ，找出符合與所儲存物件相關聯之 `CRuntimeClass` 物件的[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)物件。 如果有相符的結果，`WriteObject` 會插入一個標記，這是*wOldClassTag*和此索引的位 `OR`。 如果 `CRuntimeClass` 是此封存內容的新手，`WriteObject` 會將新的 PID 指派給該類別，並將其插入封存中，並在前面加上*wNewClassTag*值。
+如果物件以前未保存,則有兩種可能性需要考慮:對象和對象的確切類型(即類)都是此存檔上下文的新類型,或者對像是已看到的確切類型。 要確定是否已看到該類型,代碼會查詢與要保存`CRuntimeClass`的物件關聯的物件的[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)物件的*m_pStoreMap。* 如果存在匹配項,則`WriteObject`插入*wOldClassTag*和此索引的`OR`位標記。 如果`CRuntimeClass`是此存檔上下文的新增`WriteObject`, 請向該類分配新的 PID 並將其插入到存檔中,前面是*wNewClassTag*值。
 
-然後，使用 `CRuntimeClass::Store` 方法，將此類別的描述項插入封存中。 `CRuntimeClass::Store` 插入類別的架構編號（請參閱下文）和類別的 ASCII 文字名稱。 請注意，使用 ASCII 文字名稱並不保證跨應用程式保存檔案的唯一性。 因此，您應該標記資料檔案，以避免損毀。 在插入類別資訊之後，封存會將物件放入*m_pStoreMap* ，然後呼叫 `Serialize` 方法來插入類別特定的資料。 在 `Serialize` 呼叫之前將物件放入*m_pStoreMap* ，可防止將物件的多個複本儲存到存放區。
+然後,使用方法`CRuntimeClass::Store`將此類的描述符插入到存檔中。 `CRuntimeClass::Store`插入類的架構編號(見下文)和類的 ASCII 文本名稱。 請注意,使用 ASCII 文本名稱並不保證整個應用程式存檔的唯一性。 因此,您應該標記數據檔以防止損壞。 插入類資訊後,存檔將物件放入*m_pStoreMap,* 然後`Serialize`調用 方法插入特定於類的數據。 在調用`Serialize`之前將物件放入*m_pStoreMap*可防止將物件的多個副本保存到存儲中。
 
-當返回初始呼叫端（通常是物件的網路的根）時，您必須呼叫[CArchive：： Close](../mfc/reference/carchive-class.md#close)。 如果您打算執行其他[CFile](../mfc/reference/cfile-class.md)作業，您必須呼叫 `CArchive` 方法[Flush](../mfc/reference/carchive-class.md#flush) ，以避免封存損毀。
+傳回到初始呼叫者(通常是物件網路的根),必須呼叫[CArchive::關閉](../mfc/reference/carchive-class.md#close)。 如果計劃執行其他[CFile](../mfc/reference/cfile-class.md)操作,則必須`CArchive`呼叫[「刷新」](../mfc/reference/carchive-class.md#flush)方法以防止存檔損壞。
 
 > [!NOTE]
->  針對每個封存內容，此實作為0x3FFFFFFE 索引的固定限制。 這個數位代表唯一物件和類別的最大數目，可以儲存在單一封存中，但是單一磁片檔案可以有不限數量的封存內容。
+> 此實現對每個存檔上下文的 0x3FFFFE 索引施加了硬限制。 此數位表示可保存在單個存檔中的最大唯一物件和類數,但單個磁碟檔可以具有無限數量的存檔上下文。
 
-## <a name="loading-objects-from-the-store-carchivereadobject"></a>從存放區載入物件（CArchive：： ReadObject）
+## <a name="loading-objects-from-the-store-carchivereadobject"></a>從儲存載入物件(CArchive::讀取物件)
 
-載入（解壓縮）物件會使用 `CArchive::ReadObject` 方法，而且是 `WriteObject`的反向。 如同 `WriteObject`，不會直接由使用者程式碼呼叫 `ReadObject`。使用者程式碼應呼叫型別安全的抽取運算子，以使用預期的 `CRuntimeClass`呼叫 `ReadObject`。 這會確保解壓縮作業的類型完整性。
+載入(擷取)物件使用`CArchive::ReadObject`方法 ,`WriteObject`與相反 。 與`WriteObject``ReadObject`一樣,用戶代碼不直接調用 ;使用者代碼應調用`ReadObject`使用預期`CRuntimeClass`的類型安全提取運算符。 這將確保數據提取操作的類型完整性。
 
-因為 `WriteObject` 的實值已指派增加的 Pid，從1開始（0已預先定義為 Null 物件），所以 `ReadObject` 執行可以使用陣列來維護封存內容的狀態。 從存放區讀取 PID 時，如果 PID 大於*m_pLoadArray*的目前上限，`ReadObject` 知道新的物件（或類別描述）如下所示。
+由於`WriteObject`分配的實現不斷增加 PID,從 1 開始(0 預定義為 NULL 物件),實現`ReadObject`可以使用陣列來維護存檔上下文的狀態。 從儲存中讀取 PID 時,如果 PID 大於`ReadObject`*m_pLoadArray*的當前上限, 則知道將遵循新物件(或類描述)。
 
 ## <a name="schema-numbers"></a>架構編號
 
-當遇到類別的 `IMPLEMENT_SERIAL` 方法時，會指派給類別的架構編號，是類別執行的「版本」。 架構是指類別的實值，而不是指定之物件的持續時間（通常稱為物件版本）。
+遇到類`IMPLEMENT_SERIAL`的方法時分配給類的架構編號是類實現的"版本"。 架構是指類的實現,而不是給定物件被持久化的次數(通常稱為物件版本)。
 
-如果您想要在一段時間內維護數個相同類別的不同實作為，當您修改物件的 `Serialize` 方法執行時，就會遞增架構，讓您可以撰寫程式碼，以便載入使用舊版執行所儲存的物件。
+如果打算隨著時間的推移維護同一類的幾個不同實現,則在修改物件`Serialize`的方法實現時增加架構將使您能夠編寫代碼,這些代碼可以使用舊版本的實現載入存儲的物件。
 
-當 `CArchive::ReadObject` 方法在持續性存放區中遇到與記憶體中類別描述的架構編號不同的架構編號時，將會擲回[CArchiveException](../mfc/reference/carchiveexception-class.md) 。 從這個例外狀況中復原並不容易。
+`CArchive::ReadObject`當該方法在持久存儲中遇到與記憶體中類描述的架構編號不同的架構編號時,將引發[CArchiveException。](../mfc/reference/carchiveexception-class.md) 要從此異常中恢復並不容易。
 
-您可以使用 `VERSIONABLE_SCHEMA` 結合（位**或**）您的架構版本，以防止擲回此例外狀況。 藉由使用 `VERSIONABLE_SCHEMA`，您的程式碼可以從[CArchive：： GetObjectSchema](../mfc/reference/carchive-class.md#getobjectschema)檢查傳回值，以在其 `Serialize` 函數中採取適當的動作。
+您可以使用`VERSIONABLE_SCHEMA`( 位**元或**) 架構版本來防止引發此異常。 通過使用`VERSIONABLE_SCHEMA`,您的代碼可以`Serialize`通過檢查[CArchive::getObjectSchema](../mfc/reference/carchive-class.md#getobjectschema)中的返回值來在其函數中採取適當的操作。
 
 ## <a name="calling-serialize-directly"></a>直接呼叫序列化
 
-在許多情況下，`WriteObject` 和 `ReadObject` 一般物件封存配置的負擔並不是必要的。 這是將資料序列化為[CDocument](../mfc/reference/cdocument-class.md)的常見案例。 在此情況下，會直接呼叫 `CDocument` 的 `Serialize` 方法，而不是使用「抽取」或「插入」運算子。 檔的內容可能會轉而使用較一般的物件封存配置。
+在許多情況下,一般物件存檔方案的開銷`WriteObject``ReadObject`是沒有必要的。 這是將數據序列化到[CDocument](../mfc/reference/cdocument-class.md)的常見情況。 在這種情況下,`Serialize`直接調用`CDocument`的方法 ,而不是使用提取或插入運算符調用。 文檔的內容可能反過來使用更通用的物件存檔方案。
 
-直接呼叫 `Serialize` 具有下列優點和缺點：
+直接`Serialize`調用有以下優點和缺點:
 
-- 在物件序列化之前或之後，不會將額外的位元組新增至封存。 這不僅可讓儲存的資料變小，還可讓您執行可處理任何檔案格式的 `Serialize` 常式。
+- 在物件序列化之前或之後,不會向存檔添加額外的位元組。 這不僅使保存的數據變小,還允許您實現`Serialize`可以處理任何檔案格式的例程。
 
-- MFC 經過微調，因此除非您需要更一般的物件封存配置以供其他用途，否則 `WriteObject` 和 `ReadObject` 的執行和相關的集合將不會連結到您的應用程式。
+- MFC 已調整,`WriteObject`因此`ReadObject`, 除非出於其他目的需要更通用的物件存檔方案,否則不會將和實現和相關集合連結到您的應用程式中。
 
-- 您的程式碼不需要從舊的架構編號復原。 這會讓您的檔序列化程式碼負責編碼架構數位、檔案格式版本號碼，或您在資料檔開頭使用的任何識別數位。
+- 您的代碼不必從舊的架構編號中恢復。 這使文件序列化代碼負責對架構碼、檔案格式版本號或數據檔開頭使用的任何標識編號進行編碼。
 
-- 任何以直接呼叫 `Serialize` 序列化的物件都不能使用 `CArchive::GetObjectSchema` 或必須處理傳回值（UINT）-1，表示版本不明。
+- 使用直接呼叫序列化的任何物件`Serialize`不得`CArchive::GetObjectSchema`使用 或必須處理 (UINT)-1 的返回值,指示版本未知。
 
-因為 `Serialize` 是直接在您的檔上呼叫，所以檔的子物件通常不可能將參考封存到其父檔。 這些物件必須明確地提供其容器檔案的指標，或者您必須使用[CArchive：： MapObject](../mfc/reference/carchive-class.md#mapobject)函式，將 `CDocument` 指標對應到 PID，才會封存這些後置指標。
+由於`Serialize`直接在文件上調用,因此文檔的子物件通常無法存檔對其父文檔的引用。 必須顯式為這些物件提供指向其容器文件的指標,否則您必須使用[CArchive:mapObject](../mfc/reference/carchive-class.md#mapobject)函數將`CDocument`這些指標映射到 PID,然後才能存檔這些回指標。
 
-如先前所述，當您直接呼叫 `Serialize` 時，您應該自行編碼版本和類別資訊，讓您稍後可以變更格式，同時仍維持與舊版檔案的回溯相容性。 在直接序列化物件之前或呼叫基類之前，可以明確呼叫 `CArchive::SerializeClass` 函數。
+如前所述,在直接調用`Serialize`時,應自行對版本和類資訊進行編碼,以便以後更改格式,同時仍與舊檔保持向後相容性。 可以直接`CArchive::SerializeClass`序列化物件之前或調用基類之前,可以顯式調用該函數。
 
 ## <a name="see-also"></a>另請參閱
 

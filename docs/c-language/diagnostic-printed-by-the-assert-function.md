@@ -3,11 +3,11 @@ title: assert 函式所列印的診斷
 ms.date: 11/04/2016
 ms.assetid: 78b64200-520d-40da-9a61-71553f411d4f
 ms.openlocfilehash: 666ba22d642b772fe8ad336f57ab1bdd82bd2e18
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234219"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>assert 函式所列印的診斷
 
@@ -19,6 +19,6 @@ ms.locfileid: "56150996"
 
 其中，*filename* 是來源檔案的名稱，而 *linenumber* 是來源檔案中發生失敗的判斷提示行號。 如果 *expression*為 true (非零)，則不會採取任何動作。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [程式庫函式](../c-language/library-functions.md)

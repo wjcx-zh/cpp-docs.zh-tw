@@ -17,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9c62cc912b3fea3ea68390882bdda37cbfb25a7e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417877"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747767"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 
-這個類別會使用以 COM 為基礎的記憶體常式來提供智慧型指標類別的基礎。
+此類為使用基於 COM 的記憶體例程的智慧指標提供了基礎。
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ class CComPtrBase
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-智慧型指標所要參考的物件類型。
+要由智慧指標引用的物件類型。
 
 ## <a name="members"></a>成員
 
@@ -46,51 +46,51 @@ class CComPtrBase
 
 |名稱|描述|
 |----------|-----------------|
-|[CComPtrBase：： ~ CComPtrBase](#dtor)|解構函式。|
+|[CComPtrBase:*CComPtrBase](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CComPtrBase：： Advise](#advise)|呼叫這個方法，以建立 `CComPtrBase`的連接點與用戶端接收之間的連接。|
-|[CComPtrBase：： Attach](#attach)|呼叫此方法以取得現有指標的擁有權。|
-|[CComPtrBase：： CoCreateInstance](#cocreateinstance)|呼叫這個方法，以建立與指定的類別識別碼或程式識別碼相關聯之類別的物件。|
-|[CComPtrBase：： CopyTo](#copyto)|呼叫這個方法，將 `CComPtrBase` 指標複製到另一個指標變數。|
-|[CComPtrBase：:D etach](#detach)|呼叫此方法以釋放指標的擁有權。|
-|[CComPtrBase::IsEqualObject](#isequalobject)|呼叫這個方法，以檢查指定的 `IUnknown` 是否指向與 `CComPtrBase` 物件相關聯的相同物件。|
-|[CComPtrBase：： QueryInterface](#queryinterface)|呼叫這個方法，以傳回指定介面的指標。|
-|[CComPtrBase：： Release](#release)|呼叫這個方法以釋放介面。|
-|[CComPtrBase：： SetSite](#setsite)|呼叫這個方法，將 `CComPtrBase` 物件的網站設定為父物件的 `IUnknown`。|
+|[CComPtrBase:建議](#advise)|呼叫此方法以在`CComPtrBase`連接點和用戶端的接收器之間創建連接。|
+|[CComPtrBase:附加](#attach)|調用此方法以獲取現有指標的擁有權。|
+|[CComPtrBase::共同建立實體](#cocreateinstance)|呼叫此方法以建立與指定的類 ID 或程式 ID 關聯的類的物件。|
+|[CComptrBase::複製到](#copyto)|調用此方法以將`CComPtrBase`指標複製到另一個指標變數。|
+|[CComPtrBase::D](#detach)|調用此方法以釋放指標的擁有權。|
+|[CComPtrBase:是等價物](#isequalobject)|呼叫此方法以檢查指定`IUnknown`點是否指向`CComPtrBase`與 物件關聯的同一物件。|
+|[CComPtrBase:查詢介面](#queryinterface)|呼叫此方法以返回指向指定介面的指標。|
+|[CComPtrBase:發佈](#release)|調用此方法以釋放介面。|
+|[CComPtrBase:設定網站](#setsite)|調用此方法將`CComPtrBase`物件的網站設置為`IUnknown`父物件的網站。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CComPtrBase：： operator T *](#operator_t_star)|Cast 運算子。|
-|[CComPtrBase：： operator！](#operator_not)|NOT 運算子。|
-|[CComPtrBase：： operator &](#operator_amp)|& 運算子。|
-|[CComPtrBase：： operator *](#operator_star)|\* 運算子。|
-|[CComPtrBase：： operator <](#ccomptrbase__operator lt)|小於運算子。|
-|[CComPtrBase：： operator = =](#operator_eq_eq)|等號比較運算子。|
-|[CComPtrBase：： operator->](#operator_ptr)|成員指標運算子。|
+|[CComPtrBase::運算子 T*](#operator_t_star)|強制轉換運算符。|
+|[CComPtrBase:操作員!](#operator_not)|NOT 運算符。|
+|[CComPtrBase::操作員&](#operator_amp)|& 運算子。|
+|[CComPtrBase:操作員 |](#operator_star)|\* 運算子。|
+|[CComPtrBase::操作員<](#ccomptrbase__operator lt)|小於運算符。|
+|[CComPtrBase:運算符 |](#operator_eq_eq)|相等運算符。|
+|[CComPtrBase:運算元 ->](#operator_ptr)|指向成員的指標運算符。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CComPtrBase：:p](#p)|指標資料成員變數。|
+|[CComPtrBase::p](#p)|指標數據成員變數。|
 
 ## <a name="remarks"></a>備註
 
-這個類別會提供其他使用 COM 記憶體管理常式（例如[CComQIPtr](../../atl/reference/ccomqiptr-class.md)和[CComPtr](../../atl/reference/ccomptr-class.md)）之智慧型指標的基礎。 衍生類別會加入自己的函式和運算子，但依賴 `CComPtrBase`所提供的方法。
+此類為使用 COM 記憶體管理例程的其他智慧指標(如[CComQIPtr](../../atl/reference/ccomqiptr-class.md)和[CComPtr)](../../atl/reference/ccomptr-class.md)提供了基礎。 派生類添加自己的構造函數和運算符,但依賴於提供`CComPtrBase`的方法。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcomcli.h。h
+**標題:** atlcomcli.h
 
-##  <a name="advise"></a>CComPtrBase：： Advise
+## <a name="ccomptrbaseadvise"></a><a name="advise"></a>CComPtrBase:建議
 
-呼叫這個方法，以建立 `CComPtrBase`的連接點與用戶端接收之間的連接。
+呼叫此方法以在`CComPtrBase`連接點和用戶端的接收器之間創建連接。
 
 ```
 HRESULT Advise(
@@ -101,41 +101,41 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>參數
 
-*pUnk*<br/>
-用戶端 `IUnknown`的指標。
+*龐克*<br/>
+指向用戶端的`IUnknown`指標。
 
-*iid*<br/>
-連接點的 GUID。 一般來說，這與連接點所管理的傳出介面相同。
+*Iid*<br/>
+連接點的 GUID。 通常,這與連接點管理的傳出介面相同。
 
 *pdw*<br/>
-可唯一識別連接之 cookie 的指標。
+指向唯一標識連接的 Cookie 的指標。
 
 ### <a name="return-value"></a>傳回值
 
-會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[AtlAdvise](connection-point-global-functions.md#atladvise) 。
+有關詳細資訊[,請參閱 Atl 建議](connection-point-global-functions.md#atladvise)。
 
-##  <a name="attach"></a>CComPtrBase：： Attach
+## <a name="ccomptrbaseattach"></a><a name="attach"></a>CComPtrBase:附加
 
-呼叫此方法以取得現有指標的擁有權。
+調用此方法以獲取現有指標的擁有權。
 
-```
+```cpp
 void Attach(T* p2) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*又*<br/>
-`CComPtrBase` 物件將取得此指標的擁有權。
+*p2*<br/>
+該`CComPtrBase`物件將取得此指標的擁有權。
 
 ### <a name="remarks"></a>備註
 
-`Attach` 會在現有的[CComPtrBase：:p](#p)成員變數上呼叫[CComPtrBase：： Release](#release) ，然後將*p2*指派給 `CComPtrBase::p`。 當 `CComPtrBase` 物件取得指標的擁有權時，它會自動在指標上呼叫 `Release`，如果物件上的參考計數到達0，則會刪除指標和任何已配置的資料。
+`Attach`呼叫[CComPtrBase::釋放](#release)現有[CComPtrBase::p](#p)成員變數,然後將*p2*分配給`CComPtrBase::p`。 當物件`CComPtrBase`取得指標的擁有權時,它將自動調`Release`用 指標,如果物件的引用計數變為 0,該指標將刪除指標和任何已分配的數據。
 
-##  <a name="dtor"></a>CComPtrBase：： ~ CComPtrBase
+## <a name="ccomptrbaseccomptrbase"></a><a name="dtor"></a>CComPtrBase:*CComPtrBase
 
 解構函式。
 
@@ -145,11 +145,11 @@ void Attach(T* p2) throw();
 
 ### <a name="remarks"></a>備註
 
-釋放 `CComPtrBase`指向的介面。
+釋放 所指向`CComPtrBase`的介面。
 
-##  <a name="cocreateinstance"></a>CComPtrBase：： CoCreateInstance
+## <a name="ccomptrbasecocreateinstance"></a><a name="cocreateinstance"></a>CComPtrBase::共同建立實體
 
-呼叫這個方法，以建立與指定的類別識別碼或程式識別碼相關聯之類別的物件。
+呼叫此方法以建立與指定的類 ID 或程式 ID 關聯的類的物件。
 
 ```
 HRESULT CoCreateInstance(
@@ -166,30 +166,30 @@ HRESULT CoCreateInstance(
 ### <a name="parameters"></a>參數
 
 *szProgID*<br/>
-ProgID 的指標，用來復原 CLSID。
+指向 ProgID 的指標,用於恢復 CLSID。
 
 *pUnkOuter*<br/>
-如果是 Null，則表示物件不會建立為匯總的一部分。 如果為非 Null，則為匯總物件之 `IUnknown` 介面的指標（控制 `IUnknown`）。
+如果 NULL,則指示物件不是作為聚合的一部分創建的。 如果非 NULL,則是指向聚合物件的介面(`IUnknown``IUnknown`控制 ) 的指標。
 
-*dwClsCoNtext*<br/>
-用來管理新建立之物件的程式碼會在其中執行的內容。
+*dwCls 上下文*<br/>
+管理新創建對象的代碼將在其中運行的上下文。
 
 *rclsid*<br/>
-與將用來建立物件的資料和程式碼相關聯的 CLSID。
+與將用於創建物件的數據和代碼關聯的 CLSID。
 
 ### <a name="return-value"></a>傳回值
 
-會在失敗時傳回 S_OK，或 REGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING 或 E_NOINTERFACE。 如需這些錯誤的說明，請參閱[CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)和[CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) 。
+返回S_OK成功,或REGDB_E_CLASSNOTREG,CLASS_E_NOAGGREGATION,CO_E_CLASSSTRING或E_NOINTERFACE失敗。 有關這些錯誤的說明,請參閱[CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)和[CLSID FromProgID。](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid)
 
 ### <a name="remarks"></a>備註
 
-如果呼叫方法的第一種形式，則會使用[CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid)來復原 CLSID。 這兩個表單都會呼叫[CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)。
+如果呼叫方法的第一種形式,[則 CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid)用於恢復 CLSID。 然後,兩個表單調用[CoCreateClassinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)。
 
-在 debug build 中，如果[CComPtrBase：:p](#p)不等於 Null，就會發生判斷提示錯誤。
+在除錯產生中,如果[CComPtrBase::p](#p)不等於 NULL,則會發生斷言錯誤。
 
-##  <a name="copyto"></a>CComPtrBase：： CopyTo
+## <a name="ccomptrbasecopyto"></a><a name="copyto"></a>CComptrBase::複製到
 
-呼叫這個方法，將 `CComPtrBase` 指標複製到另一個指標變數。
+調用此方法以將`CComPtrBase`指標複製到另一個指標變數。
 
 ```
 HRESULT CopyTo(T** ppT) throw();
@@ -197,22 +197,22 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>參數
 
-*ppT*<br/>
-將接收 `CComPtrBase` 指標之變數的位址。
+*Ppt*<br/>
+將接收指標的變數的位址`CComPtrBase`。
 
 ### <a name="return-value"></a>傳回值
 
-傳回成功時 S_OK，E_POINTER 失敗時傳回。
+返回S_OK成功,E_POINTER失敗。
 
 ### <a name="remarks"></a>備註
 
-將 `CComPtrBase` 指標複製到*ppT*。 [CComPtrBase：:p](#p)成員變數上的參考計數會遞增。
+將`CComPtrBase`指標複製到*ppT*。 [CComPtrBase::p](#p)成員變數上的引用計數遞增。
 
-如果*ppT*等於 Null，將會傳回錯誤 HRESULT。 在 debug 組建中，如果*ppT*等於 Null，就會發生判斷提示錯誤。
+如果*ppT*等於 NULL,則將傳回錯誤 HRESULT。 在除錯產生中,如果*ppT*等於NULL,則會發生斷言錯誤。
 
-##  <a name="detach"></a>CComPtrBase：:D etach
+## <a name="ccomptrbasedetach"></a><a name="detach"></a>CComPtrBase::D
 
-呼叫此方法以釋放指標的擁有權。
+調用此方法以釋放指標的擁有權。
 
 ```
 T* Detach() throw();
@@ -220,15 +220,15 @@ T* Detach() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回指標的複本。
+返回指標的副本。
 
 ### <a name="remarks"></a>備註
 
-釋放指標的擁有權，將[CComPtrBase：:p](#p)資料成員變數設定為 Null，並傳回指標的複本。
+釋放指標的擁有權,將[CComPtrBase::p](#p)數據成員變數設置為 NULL,並返回指標的副本。
 
-##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject
+## <a name="ccomptrbaseisequalobject"></a><a name="isequalobject"></a>CComPtrBase:是等價物
 
-呼叫這個方法，以檢查指定的 `IUnknown` 是否指向與 `CComPtrBase` 物件相關聯的相同物件。
+呼叫此方法以檢查指定`IUnknown`點是否指向`CComPtrBase`與 物件關聯的同一物件。
 
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
@@ -236,16 +236,16 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>參數
 
-*pOther*<br/>
+*p其他*<br/>
 要比較的 `IUnknown *`。
 
 ### <a name="return-value"></a>傳回值
 
-如果物件相同，則傳回 true，否則傳回 false。
+如果物件相同,則返回 true,否則為 false。
 
-##  <a name="operator_not"></a>CComPtrBase：： operator！
+## <a name="ccomptrbaseoperator-"></a><a name="operator_not"></a>CComPtrBase:操作員!
 
-NOT 運算子。
+NOT 運算符。
 
 ```
 bool operator!() const throw();
@@ -253,9 +253,9 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果 `CComHeapPtr` 指標等於 Null，則傳回 true，否則傳回 false。
+如果指標等於`CComHeapPtr`NULL,則傳回 true,否則為 false。
 
-##  <a name="operator_amp"></a>CComPtrBase：： operator &amp;
+## <a name="ccomptrbaseoperator-amp"></a><a name="operator_amp"></a>CComPtrBase::運算子&amp;
 
 & 運算子。
 
@@ -265,9 +265,9 @@ T** operator&() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 `CComPtrBase` 物件所指向之物件的位址。
+傳回物件指向的物件的`CComPtrBase`位址 。
 
-##  <a name="operator_star"></a>CComPtrBase：： operator \*
+## <a name="ccomptrbaseoperator-"></a><a name="operator_star"></a>CComPtrBase::運算子\*
 
 \* 運算子。
 
@@ -277,13 +277,13 @@ T& operator*() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回[CComPtrBase：:p](#p)的值。也就是 `CComPtrBase` 物件所參考的物件指標。
+返回[CComPtrBase::p](#p)的值。即指向物件引用的物件的`CComPtrBase`指標。
 
-如果是 debug 組建，如果[CComPtrBase：:p](#p)不等於 Null，就會發生判斷提示錯誤。
+如果除錯產生,如果[CComPtrBase::p](#p)不等於 NULL,則會發生斷言錯誤。
 
-##  <a name="operator_eq_eq"></a>CComPtrBase：： operator = =
+## <a name="ccomptrbaseoperator-"></a><a name="operator_eq_eq"></a>CComPtrBase:運算符 |
 
-等號比較運算子。
+相等運算符。
 
 ```
 bool operator== (T* pT) const throw();
@@ -291,16 +291,16 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pT*<br/>
-物件的指標。
+*鉑*<br/>
+指向物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果 `CComPtrBase` 和*pT*指向相同的物件，則傳回 true，否則傳回 false。
+如果`CComPtrBase`和*pT*指向同一物件,則返回 true,否則為 false。
 
-##  <a name="operator_ptr"></a>CComPtrBase：： operator-&gt;
+## <a name="ccomptrbaseoperator--gt"></a><a name="operator_ptr"></a>CComPtrBase:運算子 -&gt;
 
-成員指標運算子。
+指標到成員運算符。
 
 ```
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
@@ -308,15 +308,15 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回[CComPtrBase：:p](#p)資料成員變數的值。
+返回[CComPtrBase::p](#p)資料成員變數的值。
 
 ### <a name="remarks"></a>備註
 
-使用這個運算子，即可呼叫 `CComPtrBase` 物件所指向之類別中的方法。 在 [偵錯工具] 組建中，如果 `CComPtrBase` 資料成員指向 Null，就會發生判斷提示失敗。
+使用此運算符呼叫`CComPtrBase`物件指向的類中的方法。 在除錯產生中,如果資料成員指向 NULL,`CComPtrBase`則會發生斷言失敗。
 
-##  <a name="operator_lt"></a>CComPtrBase：： operator &lt;
+## <a name="ccomptrbaseoperator-lt"></a><a name="operator_lt"></a>CComPtrBase::運算子&lt;
 
-小於運算子。
+小於運算符。
 
 ```
 bool operator<(T* pT) const throw();
@@ -324,16 +324,16 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pT*<br/>
-物件的指標。
+*鉑*<br/>
+指向物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果目前物件所管理的指標小於正進行比較的指標，則傳回 true。
+如果當前物件管理的指標小於要比較它的指標,則返回 true。
 
-##  <a name="operator_t_star"></a>CComPtrBase：： operator T\*
+## <a name="ccomptrbaseoperator-t"></a><a name="operator_t_star"></a>CComPtrBase::運算子 T\*
 
-Cast 運算子。
+強制轉換運算符。
 
 ```
 operator T*() const throw();
@@ -341,11 +341,11 @@ operator T*() const throw();
 
 ### <a name="remarks"></a>備註
 
-傳回類別樣板中所定義之物件資料類型的指標。
+返回指向類範本中定義的對象數據類型的指標。
 
-##  <a name="p"></a>CComPtrBase：:p
+## <a name="ccomptrbasep"></a><a name="p"></a>CComPtrBase::p
 
-指標資料成員變數。
+指標數據成員變數。
 
 ```
 T* p;
@@ -353,11 +353,11 @@ T* p;
 
 ### <a name="remarks"></a>備註
 
-這個成員變數會保存指標資訊。
+此成員變數保存指標資訊。
 
-##  <a name="queryinterface"></a>CComPtrBase：： QueryInterface
+## <a name="ccomptrbasequeryinterface"></a><a name="queryinterface"></a>CComPtrBase:查詢介面
 
-呼叫這個方法，以傳回指定介面的指標。
+呼叫此方法以返回指向指定介面的指標。
 
 ```
 template <class Q> HRESULT QueryInterface(Q
@@ -366,37 +366,37 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>參數
 
-*Q*<br/>
-需要其介面指標的物件類型。
+*問*<br/>
+需要介面指標的物件類型。
 
-*換*<br/>
-接收所要求介面指標的輸出變數位址。
+*Pp*<br/>
+接收請求的介面指標的輸出變數的位址。
 
 ### <a name="return-value"></a>傳回值
 
-會在成功時傳回 S_OK，或在失敗時傳回 E_NOINTERFACE。
+返回S_OK成功,或E_NOINTERFACE失敗。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[IUnknown：： QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))。
+此方法呼叫[I 未知:查詢介面](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))。
 
-在 debug 組建中，如果*pp*不等於 Null，就會發生判斷提示錯誤。
+在除錯產生中,如果*pp*不等於NULL,則會發生斷言錯誤。
 
-##  <a name="release"></a>CComPtrBase：： Release
+## <a name="ccomptrbaserelease"></a><a name="release"></a>CComPtrBase:發佈
 
-呼叫這個方法以釋放介面。
+調用此方法以釋放介面。
 
-```
+```cpp
 void Release() throw();
 ```
 
 ### <a name="remarks"></a>備註
 
-介面已釋放，而且[CComPtrBase：:p](#p)設定為 Null。
+介面被釋放[,CComPtrBase::p](#p)設置為 NULL。
 
-##  <a name="setsite"></a>CComPtrBase：： SetSite
+## <a name="ccomptrbasesetsite"></a><a name="setsite"></a>CComPtrBase:設定網站
 
-呼叫這個方法，將 `CComPtrBase` 物件的網站設定為父物件的 `IUnknown`。
+調用此方法將`CComPtrBase`物件的網站設置為`IUnknown`父物件的網站。
 
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
@@ -404,17 +404,17 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>參數
 
-*punkParent*<br/>
-父系之 `IUnknown` 介面的指標。
+*朋克家長*<br/>
+指向父級`IUnknown`介面的指標。
 
 ### <a name="return-value"></a>傳回值
 
-會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite)。
+此方法呼叫[AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite)。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

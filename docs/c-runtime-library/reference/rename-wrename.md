@@ -1,9 +1,11 @@
 ---
 title: rename、_wrename
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rename
 - _wrename
+- _o__wrename
+- _o_rename
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949309"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917794"
 ---
 # <a name="rename-_wrename"></a>rename、_wrename
 
@@ -85,7 +88,9 @@ int _wrename(
 
 **rename** 函式會將由 *oldname* 指定的檔案或目錄重新命名為由 *newname* 指定的名稱。 舊名稱必須是現有的檔案或目錄的路徑。 新名稱不得是現有的檔案或目錄的名稱。 您可以使用 **rename** 將檔案從一個目錄或裝置移到另一個，方法是在 *newname* 引數中提供不同的路徑。 不過，您無法使用 **rename** 移動目錄。 目錄可以重新命名，但不能移動。
 
-**_wrename**是寬字元版本的 **_rename**; **_wrename**的引數是寬字元字串。 相反地， **_wrename**和 **_rename**的行為相同。
+**_wrename**是寬字元版本的 **_rename**;**_wrename**的引數是寬字元字串。 相反地， **_wrename**和 **_rename**的行為相同。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -132,7 +137,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'

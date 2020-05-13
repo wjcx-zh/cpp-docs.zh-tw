@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421090"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753799"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 類別
 
@@ -61,37 +61,37 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[COlePropertyPage：： COlePropertyPage](#colepropertypage)|建構 `COlePropertyPage` 物件。|
+|[COle 屬性頁:COle屬性頁](#colepropertypage)|建構 `COlePropertyPage` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COlePropertyPage：： GetControlStatus](#getcontrolstatus)|指出使用者是否已修改控制項中的值。|
-|[COlePropertyPage：： GetObjectArray](#getobjectarray)|傳回屬性頁正在編輯的物件陣列。|
-|[COlePropertyPage：： GetPageSite](#getpagesite)|傳回屬性頁之 `IPropertyPageSite` 介面的指標。|
-|[COlePropertyPage：： IgnoreApply](#ignoreapply)|決定哪些控制項未啟用 [套用] 按鈕。|
-|[COlePropertyPage：： IsModified](#ismodified)|指出使用者是否已修改屬性頁。|
-|[COlePropertyPage：： OnEditProperty](#oneditproperty)|當使用者編輯屬性時由架構呼叫。|
-|[COlePropertyPage：： OnHelp](#onhelp)|當使用者叫用說明時由架構呼叫。|
-|[COlePropertyPage：： OnInitDialog](#oninitdialog)|在初始化屬性頁時由架構呼叫。|
-|[COlePropertyPage：： OnObjectsChanged](#onobjectschanged)|當選擇另一個具有新屬性的 OLE 控制項時，由架構呼叫。|
-|[COlePropertyPage：： Onsetpagesite 中](#onsetpagesite)|當屬性框架提供頁面的網站時，由架構呼叫。|
-|[COlePropertyPage：： SetControlStatus](#setcontrolstatus)|設定旗標，指出使用者是否已修改控制項中的值。|
-|[COlePropertyPage：： SetDialogResource](#setdialogresource)|設定屬性頁的對話資源。|
-|[COlePropertyPage：：含有 sethelpinfo](#sethelpinfo)|設定屬性頁的簡短解說文字、其說明檔的名稱，以及其說明內容。|
-|[COlePropertyPage：： SetModifiedFlag](#setmodifiedflag)|設定旗標，指出使用者是否已修改屬性頁。|
-|[COlePropertyPage：： SetPageName](#setpagename)|設定屬性頁的名稱（標題）。|
+|[COle 屬性頁:取得控制狀態](#getcontrolstatus)|指示使用者是否已修改控制項中的值。|
+|[COle 屬性頁:取得物件陣列](#getobjectarray)|返回屬性頁正在編輯的物件陣列。|
+|[COle 屬性頁面:取得頁面網站](#getpagesite)|返回指向屬性頁介面的`IPropertyPageSite`指標。|
+|[COle 屬性頁:忽略應用程式](#ignoreapply)|確定哪些控制項不啟用"應用程式"按鈕。|
+|[COle 屬性頁:已修改](#ismodified)|指示使用者是否已修改屬性頁。|
+|[COle 屬性頁:編輯屬性](#oneditproperty)|當使用者編輯屬性時由框架調用。|
+|[COle 屬性頁面:上説明](#onhelp)|當用戶調用説明時由框架調用。|
+|[COle 屬性頁:onInitDialog](#oninitdialog)|在初始化屬性頁時由框架調用。|
+|[COle 屬性頁:開啟物件已變更](#onobjectschanged)|當選擇另一個 OLE 控制件(具有新屬性)時,由框架調用。|
+|[COle 屬性頁面:在設定頁面網站](#onsetpagesite)|當屬性框架提供頁面的網站時,由框架調用。|
+|[COle 屬性頁:設定控制狀態](#setcontrolstatus)|設置一個標誌,指示使用者是否已修改控制項中的值。|
+|[COle 屬性頁:設定對話資源](#setdialogresource)|設置屬性頁的對話方塊資源。|
+|[COle 屬性頁面:設定說明資訊](#sethelpinfo)|設置屬性頁的簡短説明文本、其幫助文件的名稱及其説明上下文。|
+|[COle 屬性頁::設定修改後的 Flag](#setmodifiedflag)|設置指示使用者是否修改了屬性頁的標誌。|
+|[COle 屬性頁::設定頁面名稱](#setpagename)|設置屬性頁的名稱(標題)。|
 
 ## <a name="remarks"></a>備註
 
-例如，屬性頁可能會包含編輯控制項，讓使用者可以查看和修改控制項的 caption 屬性。
+例如,屬性頁可能包含一個編輯控制項,允許使用者查看和修改控制項的標題屬性。
 
-每個自訂或內建控制項屬性都可以有一個對話方塊控制項，讓控制項的使用者能夠查看目前的屬性值，並在必要時修改該值。
+每個自定義控制項屬性都可以具有一個對話方塊控制項,該控制項允許使用者查看當前屬性值並根據需要修改該值。
 
-如需使用 `COlePropertyPage`的詳細資訊，請參閱[ActiveX 控制項：屬性頁](../../mfc/mfc-activex-controls-property-pages.md)一文。
+有關`COlePropertyPage`使用的詳細資訊,請參閱[「ActiveX 控件:屬性頁](../../mfc/mfc-activex-controls-property-pages.md)」一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -105,9 +105,9 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxctl.h。h
+**標題:** afxctl.h
 
-##  <a name="colepropertypage"></a>COlePropertyPage：： COlePropertyPage
+## <a name="colepropertypagecolepropertypage"></a><a name="colepropertypage"></a>COle 屬性頁:COle屬性頁
 
 建構 `COlePropertyPage` 物件。
 
@@ -120,18 +120,18 @@ COlePropertyPage(
 ### <a name="parameters"></a>參數
 
 *idDlg*<br/>
-對話方塊範本的資源識別碼。
+對話框範本的資源 ID。
 
 *idCaption*<br/>
 屬性頁標題的資源識別碼。
 
 ### <a name="remarks"></a>備註
 
-當您執行 `COlePropertyPage`的子類別時，您子類別的函式應該使用 `COlePropertyPage` 的「函數」來識別屬性頁所依據的對話方塊範本資源，以及包含其標題的字串資源。
+實現`COlePropertyPage`子 類的子類時,子類的構造函數`COlePropertyPage`應使用 建構函數來標識屬性頁所基於的對話方塊範本資源和包含其標題的字串資源。
 
-##  <a name="getcontrolstatus"></a>COlePropertyPage：： GetControlStatus
+## <a name="colepropertypagegetcontrolstatus"></a><a name="getcontrolstatus"></a>COle 屬性頁:取得控制狀態
 
-判斷使用者是否已使用指定的資源識別碼修改屬性頁控制項的值。
+確定使用者是否已使用指定的資源 ID 修改屬性頁控制項的值。
 
 ```
 BOOL GetControlStatus(UINT nID);
@@ -140,15 +140,15 @@ BOOL GetControlStatus(UINT nID);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-屬性頁控制項的資源識別碼。
+屬性頁控制件的資源 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果已修改控制項值，則為 TRUE;否則為 FALSE。
+如果控件值已被修改,則為 TRUE;否則 FALSE。
 
-##  <a name="getobjectarray"></a>COlePropertyPage：： GetObjectArray
+## <a name="colepropertypagegetobjectarray"></a><a name="getobjectarray"></a>COle 屬性頁:取得物件陣列
 
-傳回屬性頁正在編輯的物件陣列。
+返回屬性頁正在編輯的物件陣列。
 
 ```
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
@@ -156,20 +156,20 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 
 ### <a name="parameters"></a>參數
 
-*pnObjects*<br/>
-不帶正負號長整數的指標，將會收到頁面正在編輯的物件數目。
+*pn物件*<br/>
+指向未簽名的長整數的指標,該整數將接收頁面正在編輯的物件數。
 
 ### <a name="return-value"></a>傳回值
 
-`IDispatch` 指標陣列的指標，用來存取屬性頁上每個控制項的屬性。 呼叫端不能釋放這些介面指標。
+指向指標陣列的`IDispatch`指標,用於訪問屬性頁上每個控制件的屬性。 調用方不得釋放這些介面指標。
 
 ### <a name="remarks"></a>備註
 
-每個屬性頁物件都會維護由頁面編輯之物件 `IDispatch` 介面的指標陣列。 此函式會將其*pnObjects*引數設定為該陣列中的元素數目，並將指標傳回陣列的第一個元素。
+每個屬性頁物件都維護指向頁面正在編輯的物件`IDispatch`的介面的指標陣列。 此函數將其*pnObjects*參數設置為該陣列中的元素數,並返回指向陣列第一個元素的指標。
 
-##  <a name="getpagesite"></a>COlePropertyPage：： GetPageSite
+## <a name="colepropertypagegetpagesite"></a><a name="getpagesite"></a>COle 屬性頁面:取得頁面網站
 
-取得屬性頁之 `IPropertyPageSite` 介面的指標。
+獲取指向屬性頁介面的`IPropertyPageSite`指標。
 
 ```
 LPPROPERTYPAGESITE GetPageSite();
@@ -177,32 +177,32 @@ LPPROPERTYPAGESITE GetPageSite();
 
 ### <a name="return-value"></a>傳回值
 
-屬性頁之 `IPropertyPageSite` 介面的指標。
+指向屬性頁介面的`IPropertyPageSite`指標。
 
 ### <a name="remarks"></a>備註
 
-控制項和容器會共同合作，讓使用者可以流覽和編輯控制項屬性。 控制項提供屬性頁，每一個都是一個 OLE 物件，可讓使用者編輯一組相關的屬性。 容器會提供屬性框架，以顯示內容頁。 屬性框架會針對每個頁面提供支援 `IPropertyPageSite` 介面的頁面網站。
+控制件和容器相互配合,以便使用者可以流覽和編輯控制項屬性。 該控件提供屬性頁,每個屬性頁都是一個 OLE 物件,允許使用者編輯一組相關的屬性。 容器提供顯示屬性頁的屬性框架。 對於每個頁面,屬性框架提供一個頁面網站,該頁網站`IPropertyPageSite`支援該介面。
 
-##  <a name="ignoreapply"></a>COlePropertyPage：： IgnoreApply
+## <a name="colepropertypageignoreapply"></a><a name="ignoreapply"></a>COle 屬性頁:忽略應用程式
 
-決定哪些控制項未啟用 [套用] 按鈕。
+確定哪些控制項不啟用"應用程式"按鈕。
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要忽略之控制項的識別碼。
+要忽略的控制項的 ID。
 
 ### <a name="remarks"></a>備註
 
-只有當屬性頁控制項的值已變更時，才會啟用屬性頁的 [套用] 按鈕。 使用此函式可指定不會在其值變更時啟用 [套用] 按鈕的控制項。
+僅當更改屬性頁控件的值時,才啟用屬性頁的"應用"按鈕。 使用此函數可以指定在值更改時不會啟用"應用"按鈕的控制項。
 
-##  <a name="ismodified"></a>COlePropertyPage：： IsModified
+## <a name="colepropertypageismodified"></a><a name="ismodified"></a>COle 屬性頁:已修改
 
-判斷使用者是否已變更屬性頁上的任何值。
+確定使用者是否已更改屬性頁上的任何值。
 
 ```
 BOOL IsModified();
@@ -210,11 +210,11 @@ BOOL IsModified();
 
 ### <a name="return-value"></a>傳回值
 
-如果已修改屬性頁，則為 TRUE。
+如果屬性頁已被修改,則為 TRUE。
 
-##  <a name="oneditproperty"></a>COlePropertyPage：： OnEditProperty
+## <a name="colepropertypageoneditproperty"></a><a name="oneditproperty"></a>COle 屬性頁:編輯屬性
 
-當要編輯特定的屬性時，架構會呼叫這個函式。
+當要編輯特定屬性時,框架將調用此函數。
 
 ```
 virtual BOOL OnEditProperty(DISPID dispid);
@@ -222,20 +222,20 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>參數
 
-*dispid*<br/>
-正在編輯之屬性的分派識別碼。
+*不一部分*<br/>
+要編輯的屬性的調度 ID。
 
 ### <a name="return-value"></a>傳回值
 
-預設的實值會傳回 FALSE。 此函式的覆寫應該傳回 TRUE。
+預設實現返回 FALSE。 此函數的重寫應返回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-您可以覆寫它，將焦點設定在頁面上的適當控制項。 預設的執行不會執行任何操作，而且會傳回 FALSE。
+您可以重寫它,將焦點設定為頁面上的相應控制項。 默認實現不執行任何操作,並返回 FALSE。
 
-##  <a name="onhelp"></a>COlePropertyPage：： OnHelp
+## <a name="colepropertypageonhelp"></a><a name="onhelp"></a>COle 屬性頁面:上説明
 
-當使用者要求線上說明時，架構會呼叫這個函式。
+當使用者請求連線説明時,框架將調用此功能。
 
 ```
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
@@ -244,19 +244,19 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ### <a name="parameters"></a>參數
 
 *lpszHelpDir*<br/>
-包含屬性頁說明檔的目錄。
+包含屬性頁幫助檔的目錄。
 
 ### <a name="return-value"></a>傳回值
 
-預設的實值會傳回 FALSE。
+預設實現返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果您的屬性頁必須在使用者存取說明時執行任何特殊動作，請覆寫它。 預設的執行不會執行任何操作，而且會傳回 FALSE，指示架構呼叫 WinHelp。
+如果屬性頁必須在使用者訪問説明時執行任何特殊操作,請覆蓋它。 預設實現不執行任何操作,並返回 FALSE,它指示框架調用 WinHelp。
 
-##  <a name="oninitdialog"></a>COlePropertyPage：： OnInitDialog
+## <a name="colepropertypageoninitdialog"></a><a name="oninitdialog"></a>COle 屬性頁:onInitDialog
 
-當初始化屬性頁的對話方塊時，架構會呼叫這個函式。
+在初始化屬性頁的對話框時,框架將調用此函數。
 
 ```
 virtual BOOL OnInitDialog();
@@ -264,15 +264,15 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>傳回值
 
-預設的實值會傳回 FALSE。
+預設實現返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果在初始化對話方塊時需要任何特殊的動作，請覆寫它。 預設的實值 `CDialog::OnInitDialog` 會呼叫，並傳回 FALSE。
+如果對話框初始化時需要任何特殊操作,則覆蓋它。 默認實現調用`CDialog::OnInitDialog`並返回 FALSE。
 
-##  <a name="onobjectschanged"></a>COlePropertyPage：： OnObjectsChanged
+## <a name="colepropertypageonobjectschanged"></a><a name="onobjectschanged"></a>COle 屬性頁:開啟物件已變更
 
-當選擇另一個具有新屬性的 OLE 控制項時，由架構呼叫。
+當選擇另一個 OLE 控制件(具有新屬性)時,由框架調用。
 
 ```
 virtual void OnObjectsChanged();
@@ -280,13 +280,13 @@ virtual void OnObjectsChanged();
 
 ### <a name="remarks"></a>備註
 
-在開發人員環境中查看 OLE 控制項的屬性時，會使用非強制回應對話方塊來顯示其屬性頁。 如果選取另一個控制項，則必須針對新的屬性集顯示一組不同的屬性頁。 架構會呼叫這個函式來通知屬性頁變更。
+在開發人員環境中查看 OLE 控制的屬性時,將使用無模式對話框來顯示其屬性頁。 如果選擇了另一個控制項,則必須為新屬性集顯示一組不同的屬性頁。 框架呼叫此函數以通知更改的屬性頁。
 
-覆寫此函式以接收此動作的通知，並執行任何特殊動作。
+重寫此函數以接收此操作的通知並執行任何特殊操作。
 
-##  <a name="onsetpagesite"></a>COlePropertyPage：： Onsetpagesite 中
+## <a name="colepropertypageonsetpagesite"></a><a name="onsetpagesite"></a>COle 屬性頁面:在設定頁面網站
 
-當屬性框架提供屬性頁的頁面網站時，架構會呼叫這個函式。
+當屬性框架提供屬性頁的頁面網站時,框架將調用此函數。
 
 ```
 virtual void OnSetPageSite();
@@ -294,11 +294,11 @@ virtual void OnSetPageSite();
 
 ### <a name="remarks"></a>備註
 
-預設的執行會載入頁面的標題，並嘗試從對話資源判斷頁面的大小。 如果您的屬性頁需要任何進一步的動作，請覆寫此函式;您的覆寫應該呼叫基類執行。
+預設實現載入頁面的標題,並嘗試從對話方塊資源確定頁面的大小。 如果屬性頁需要任何進一步操作,請覆蓋此函數;重寫應調用基類實現。
 
-##  <a name="setcontrolstatus"></a>COlePropertyPage：： SetControlStatus
+## <a name="colepropertypagesetcontrolstatus"></a><a name="setcontrolstatus"></a>COle 屬性頁:設定控制狀態
 
-變更屬性頁控制項的狀態。
+更改屬性頁控件的狀態。
 
 ```
 BOOL SetControlStatus(
@@ -309,37 +309,37 @@ BOOL SetControlStatus(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-包含屬性頁面控制項的識別碼。
+包含屬性頁控制件的 ID。
 
 *bDirty*<br/>
-指定屬性頁的欄位是否已修改。 如果欄位已修改，則設定為 TRUE，如果尚未修改，則設為 FALSE。
+指定屬性頁的欄位是否已被修改。 如果欄位已被修改,則設置為 TRUE;如果未修改該欄位,則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-若已設定指定的控制項，則為 TRUE;否則為 FALSE。
+如果設置了指定的控制項,則為 TRUE;如果設置了指定的控制項。否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-當屬性頁已關閉或選擇 [套用] 按鈕時，如果屬性頁面控制項的狀態是 [已變更]，控制項的屬性會以適當的值更新。
+如果在關閉屬性頁或選擇"應用"按鈕時屬性頁控件的狀態為臟,則控件的屬性將使用相應的值進行更新。
 
-##  <a name="setdialogresource"></a>COlePropertyPage：： SetDialogResource
+## <a name="colepropertypagesetdialogresource"></a><a name="setdialogresource"></a>COle 屬性頁:設定對話資源
 
-設定屬性頁的對話資源。
+設置屬性頁的對話方塊資源。
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDialog*<br/>
-屬性頁之對話資源的控制碼。
+*h對話*<br/>
+處理屬性頁的對話方塊資源。
 
-##  <a name="sethelpinfo"></a>COlePropertyPage：：含有 sethelpinfo
+## <a name="colepropertypagesethelpinfo"></a><a name="sethelpinfo"></a>COle 屬性頁面:設定說明資訊
 
-指定屬性頁的工具提示資訊、說明文件名和說明內容。
+指定工具提示資訊、幫助檔名和屬性頁的説明上下文。
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -349,44 +349,44 @@ void SetHelpInfo(
 ### <a name="parameters"></a>參數
 
 *lpszDocString*<br/>
-字串，包含要在狀態列或其他位置顯示的簡短說明資訊。
+包含用於在狀態列或其他位置顯示的簡短説明資訊的字串。
 
-*lpszHelpFile*<br/>
-屬性頁說明檔的名稱。
+*lpszHelp 檔案*<br/>
+屬性頁幫助檔的名稱。
 
-*dwHelpCoNtext*<br/>
-屬性頁的說明內容。
+*dwHelpContext*<br/>
+屬性頁的説明上下文。
 
-##  <a name="setmodifiedflag"></a>COlePropertyPage：： SetModifiedFlag
+## <a name="colepropertypagesetmodifiedflag"></a><a name="setmodifiedflag"></a>COle 屬性頁::設定修改後的 Flag
 
-指出使用者是否已修改屬性頁。
+指示使用者是否已修改屬性頁。
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bModified*<br/>
-為屬性頁的已修改旗標指定新的值。
+*b 修改*<br/>
+指定屬性頁已修改標誌的新值。
 
-##  <a name="setpagename"></a>COlePropertyPage：： SetPageName
+## <a name="colepropertypagesetpagename"></a><a name="setpagename"></a>COle 屬性頁::設定頁面名稱
 
-設定屬性頁的名稱，屬性框架通常會顯示在頁面的索引標籤上。
+設置屬性頁的名稱,屬性框架通常會顯示在頁面的選項卡上。
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpszPageName*<br/>
-包含屬性頁名稱之字串的指標。
+*lpszPage 名稱*<br/>
+指向包含屬性頁名稱的字串的指標。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品測試](../../overview/visual-cpp-samples.md)<br/>
 [CDialog 類別](../../mfc/reference/cdialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CDialog 類別](../../mfc/reference/cdialog-class.md)

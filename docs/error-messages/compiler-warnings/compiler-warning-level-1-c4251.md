@@ -1,35 +1,41 @@
 ---
 title: 編譯器警告 (層級 1) C4251
-ms.date: 11/04/2016
+ms.date: 04/21/2020
 f1_keywords:
 - C4251
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-ms.openlocfilehash: 8a723b7ce7fc79fb6be9c9dd2b500631098622b0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9f261d3deb7f1cac8cd5c60b920e0be49bc8b7a6
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163215"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032326"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>編譯器警告 (層級 1) C4251
 
-' identifier '：類別 ' type ' 必須有 dll 介面，才能由 ' type2 ' 類別的用戶端使用
+> '*類型*' : 類別 '*類型 1*' 需要有 dll 介面,以便類別 '類型*2'* 的用戶端使用 dll 介面
 
-若要在使用[__declspec （dllexport）](../../cpp/dllexport-dllimport.md)匯出類別時，將資料損毀的可能性降到最低，請確定：
+## <a name="remarks"></a>備註
 
-- 您所有的靜態資料都可以透過從 DLL 匯出的函式來存取。
+為了在匯出聲明為[__declspec(dllexport)](../../cpp/dllexport-dllimport.md)的類時,將數據損壞的可能性降至最低,請確保:
 
-- 您類別的任何內嵌方法都不能修改靜態資料。
+- 所有靜態數據都通過從 DLL 匯出的函數進行訪問。
 
-- 您的類別中沒有任何內嵌方法使用 CRT 函式或其他程式庫函式使用靜態資料（如需詳細資訊，請參閱[跨 DLL 界限傳遞 CRT 物件的潛在錯誤](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)）。
+- 類的內聯方法無法修改靜態數據。
 
-- 您的類別沒有任何方法（不論內嵌為何）可以使用類型，其中 EXE 和 DLL 中的具現化具有靜態資料差異。
+- 類中聯方法不使用CRT函數或使用靜態數據的其他庫函數。 關於詳細資訊,請參閱透過[DLL 邊界傳遞 CRT 物件的潛在錯誤](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
-您可以藉由定義定義具有虛擬函式之類別的 DLL 來避免匯出類別，以及您可以呼叫來具現化和刪除型別物件的函式。  然後您就可以在型別上呼叫虛擬函式。
+- 類(無論是否內聯)的函數中任何方法都無法使用 EXE 和 DLL 中的實例化具有靜態數據差異的類型。
 
-如果您是從C++標準程式庫中的類型衍生、編譯 debug 版本（ **/MTd**），以及編譯器錯誤訊息參考 _Container_base，則可以忽略 C4251。
+在從 DLL 匯出類時,可以避免問題:將類定義為具有虛擬函數,以及實例化和刪除類型物件的函數。 然後,您可以調用類型的虛擬函數。
+
+如果類派生自標準庫中C++類型,編譯調試版本 **(/MTd),** 以及編譯器錯誤`_Container_base`消息引用 的位置,則可以忽略 C4251。
+
+## <a name="example"></a>範例
+
+此示例匯出派生自`VecWrapper``std::vector`的專用類。
 
 ```cpp
 // C4251.cpp
@@ -37,5 +43,5 @@ ms.locfileid: "80163215"
 #include <vector>
 using namespace std;
 class Node;
-class __declspec(dllimport) VecWrapper : vector<Node *> {};   // C4251
+class __declspec(dllexport) VecWrapper : vector<Node *> {};   // C4251
 ```

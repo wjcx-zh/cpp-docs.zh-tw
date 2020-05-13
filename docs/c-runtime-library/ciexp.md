@@ -1,8 +1,9 @@
 ---
 title: _CIexp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIexp
+- _o__CIexp
 api_location:
 - msvcr120.dll
 - msvcr80.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: c901442bc7874e75dc0be03c72953dbacb67add3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944707"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918049"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -36,7 +38,7 @@ ms.locfileid: "70944707"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 void __cdecl _CIexp();
 ```
 
@@ -46,9 +48,11 @@ void __cdecl _CIexp();
 
 產生的值會推入至堆疊的頂端。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-**平台：** x86
+**平臺：** x86
 
 ## <a name="see-also"></a>另請參閱
 

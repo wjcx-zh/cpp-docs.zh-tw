@@ -1,9 +1,11 @@
 ---
 title: _dupenv_s、_wdupenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dupenv_s
 - _wdupenv_s
+- _o__dupenv_s
+- _o__wdupenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +39,19 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942029"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915186"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s、_wdupenv_s
 
 從目前的環境取得值。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -67,7 +70,7 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 要儲存變數的值的緩衝區。
 
 *numberOfElements*<br/>
@@ -86,7 +89,7 @@ errno_t _wdupenv_s(
 
 ## <a name="remarks"></a>備註
 
-**_Dupenv_s**函數會搜尋環境變數清單中的*varname*。 如果找到變數， **_dupenv_s**會配置緩衝區，並將變數的值複製到緩衝區。 緩衝區的位址和長度會在*buffer*和*numberOfElements*中傳回。 藉由配置緩衝區本身， **_dupenv_s**提供更方便的[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)替代方式。
+**_Dupenv_s**函式會在環境變數清單中搜尋*varname*。 如果找到變數， **_dupenv_s**會配置緩衝區，並將變數的值複製到緩衝區。 緩衝區的位址和長度會在*buffer*和*numberOfElements*中傳回。 藉由配置緩衝區本身， **_dupenv_s**提供更方便的替代方式來[getenv_s _wgetenv_s](getenv-s-wgetenv-s.md)。
 
 > [!NOTE]
 > 呼叫程式會負責呼叫 [free](free.md) 以釋放記憶體。
@@ -95,11 +98,13 @@ errno_t _wdupenv_s(
 
 如果您對緩衝區的大小不感興趣，您可以針對*numberOfElements*傳遞**Null** 。
 
-**_dupenv_s**在 Windows 作業系統中不區分大小寫。 **_dupenv_s**會使用全域變數 **_environ**所指向的環境複本來存取環境。 如需 **_environ**的討論，請參閱[getenv_s、_Wgetenv_s](getenv-s-wgetenv-s.md)中的備註。
+**_dupenv_s**在 Windows 作業系統中不區分大小寫。 **_dupenv_s**會使用全域變數所指向的環境複本， **_environ**來存取環境。 如需 **_environ**的討論，請參閱[Getenv_s 中的備註，_wgetenv_s](getenv-s-wgetenv-s.md) 。
 
 *Buffer*中的值是環境變數值的複本。修改它對環境不會有任何影響。 使用 [_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 函式修改環境變數的值。
 
-**_wdupenv_s**是寬字元版本的 **_dupenv_s**; **_wdupenv_s**的引數是寬字元字串。 **_Wenviron**全域變數是寬字元版本的 **_environ**。 如需 **_wenviron**的詳細資訊，請參閱[getenv_s、_Wgetenv_s](getenv-s-wgetenv-s.md)中的備註。
+**_wdupenv_s**是寬字元版本的 **_dupenv_s**;**_wdupenv_s**的引數是寬字元字串。 **_Wenviron**全域變數是寬字元版本的 **_environ**。 如需 **_wenviron**的詳細資訊[_wgetenv_s，](getenv-s-wgetenv-s.md)請參閱 getenv_s 中的備註。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -144,7 +149,7 @@ nonexistentvariable = (null)
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [環境常數](../../c-runtime-library/environmental-constants.md)<br/>
 [_dupenv_s_dbg、_wdupenv_s_dbg](dupenv-s-dbg-wdupenv-s-dbg.md)<br/>
 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)<br/>

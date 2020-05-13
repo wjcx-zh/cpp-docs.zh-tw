@@ -1,10 +1,13 @@
 ---
 title: atanh、atanhf、atanhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atanhl
 - atanhf
 - atanh
+- _o_atanh
+- _o_atanhf
+- _o_atanhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939589"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920056"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -63,18 +67,20 @@ long double atanh( long double x );  // C++ only
 
 **Atanh**函式會傳回*x*的反雙曲正切函數（arc 雙曲正切）。 如果*x*大於1或小於-1， **errno**會設為**EDOM** ，且結果為無訊息 NaN。 如果*x*等於1或-1，則會分別傳回正或負無限大，而且**errno**會設定為**ERANGE**。
 
-|Input|SEH 例外狀況|**Matherr**異常|
+|輸入|SEH 例外狀況|**Matherr**異常|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|none|none|
-|*X* ≥ 1; *x* ≤ -1|none|none|
+|± QNAN，IND|無|無|
+|*X* ≥ 1;*x* ≤-1|無|無|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**atanh**的多載。 在 C 程式中， **atanh**一律採用並傳回**double**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**atanh**的多載。 在 C 程式中， **atanh**一律採用並傳回**double**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 

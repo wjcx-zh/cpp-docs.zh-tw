@@ -118,18 +118,19 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b630a588d6c7ec81a22a9665deb0fa7517f90dc8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420880"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750643"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 類別
 
-`CWinAppEx` 會處理應用程式狀態、將狀態儲存到登錄、從登錄載入狀態、初始化應用程式管理員，以及提供這些相同應用程式管理員的連結。
+`CWinAppEx`處理應用程式狀態,將狀態保存到註冊表,從註冊表載入狀態,初始化應用程式管理員,並提供指向這些相同的應用程式管理器的連結。
 
-   如需詳細資訊，請參閱位於**VC\\atlmfc\\src\\** Visual Studio 安裝的 mfc 資料夾中的原始程式碼。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
+
 ## <a name="syntax"></a>語法
 
 ```
@@ -142,89 +143,89 @@ class CWinAppEx : public CWinApp
 
 |名稱|描述|
 |----------|-----------------|
-|[CWinAppEx：： CWinAppEx](#cwinappex)|建構 `CWinAppEx` 物件。|
+|[CWinAppEx:CWinAppEx](#cwinappex)|建構 `CWinAppEx` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CWinAppEx：： CleanState](#cleanstate)|從 Windows 登錄移除應用程式的相關資訊。|
-|[CWinAppEx：： EnableLoadWindowPlacement](#enableloadwindowplacement)|指定應用程式是否要從登錄載入主框架視窗的初始大小和位置。|
-|[CWinAppEx：： EnableTearOffMenus](#enabletearoffmenus)|啟用應用程式的卸載功能表。|
-|[CWinAppEx：： EnableUserTools](#enableusertools)|可讓使用者在應用程式中建立自訂功能表命令。|
-|[CWinAppEx：： ExitInstance](#exitinstance)|由架構從 `Run` 成員函式中呼叫，以結束應用程式的這個實例。 （覆寫[CWinApp：： ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance)。）|
-|[CWinAppEx：： GetBinary](#getbinary)|讀取與指定的登錄值相關聯的二進位資料。|
-|[CWinAppEx：： GetCoNtextMenuManager](#getcontextmenumanager)|傳回全域[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件的指標。|
-|[CWinAppEx：： GetDataVersion](#getdataversion)||
-|[CWinAppEx：： GetDataVersionMajor](#getdataversionmajor)|傳回儲存在 Windows 登錄中之應用程式的主要版本。|
-|[CWinAppEx：： GetDataVersionMinor](#getdataversionminor)|傳回儲存在 Windows 登錄中之應用程式的次要版本。|
-|[CWinAppEx：： GetInt](#getint)|從登錄中讀取與指定值相關聯的數值資料。|
-|[CWinAppEx：： GetKeyboardManager](#getkeyboardmanager)|傳回全域[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)物件的指標。|
-|[CWinAppEx：： GetMouseManager](#getmousemanager)|傳回全域[CMouseManager](../../mfc/reference/cmousemanager-class.md)物件的指標。|
-|[CWinAppEx：： GetObject](#getobject)|從登錄中讀取與指定值相關聯的 `CObject`衍生資料。|
-|[CWinAppEx：： GetRegSectionPath](#getregsectionpath)|傳回做為登錄機碼路徑的字串。 這個路徑會串連提供的相對路徑與應用程式路徑。|
-|[CWinAppEx：： GetRegistryBase](#getregistrybase)|傳回應用程式的登錄路徑。|
-|[CWinAppEx：： GetSectionBinary](#getsectionbinary)|從登錄讀取與指定索引鍵和值相關聯的二進位資料。|
-|[CWinAppEx：： GetSectionInt](#getsectionint)|從登錄中讀取與指定索引鍵和值相關聯的數值資料。|
-|[CWinAppEx：： GetSectionObject](#getsectionobject)|從登錄讀取與指定索引鍵和值相關聯 `CObject` 資料。|
-|[CWinAppEx：： GetSectionString](#getsectionstring)|從登錄讀取與指定索引鍵和值相關聯的字串資料。|
-|[CWinAppEx：： GetShellManager](#getshellmanager)|傳回全域[CShellManager](../../mfc/reference/cshellmanager-class.md)物件的指標。|
-|[CWinAppEx：： GetString](#getstring)|從登錄讀取與指定值相關聯的字串資料。|
-|[CWinAppEx：： GetTooltipManager](#gettooltipmanager)|傳回全域[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)物件的指標。|
-|[CWinAppEx：： GetUserToolsManager](#getusertoolsmanager)|傳回全域[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)物件的指標。|
-|[CWinAppEx：： InitCoNtextMenuManager](#initcontextmenumanager)|初始化 `CContextMenuManager` 物件。|
-|[CWinAppEx：： InitKeyboardManager](#initkeyboardmanager)|初始化 `CKeyboardManager` 物件。|
-|[CWinAppEx：： InitMouseManager](#initmousemanager)|初始化 `CMouseManager` 物件。|
-|[CWinAppEx：： InitShellManager](#initshellmanager)|初始化 `CShellManager` 類別|
-|[CWinAppEx：： InitTooltipManager](#inittooltipmanager)|初始化 `CTooltipManager` 類別。|
-|[CWinAppEx：： IsResourceSmartUpdate](#isresourcesmartupdate)||
-|[CWinAppEx：： IsStateExists](#isstateexists)|指出指定的索引鍵是否在登錄中。|
-|[CWinAppEx：： LoadState](#loadstate)|從登錄載入應用程式狀態。|
-|[CWinAppEx：： OnAppCoNtextHelp](#onappcontexthelp)|當使用者要求**自訂**對話方塊的內容說明時，由架構呼叫。|
-|[CWinAppEx：： OnViewDoubleClick](#onviewdoubleclick)|當使用者按兩下應用程式中的任何位置時，會呼叫使用者定義的命令。|
-|[CWinAppEx：： OnWorkspaceIdle](#onworkspaceidle)||
-|[CWinAppEx：： SaveState](#savestate)|將應用程式架構的狀態寫入 Windows 登錄。|
-|[CWinAppEx：： SetRegistryBase](#setregistrybase)|設定預設登錄機碼的路徑。 這個金鑰會作為所有後續登錄呼叫的根目錄。|
-|[CWinAppEx：： ShowPopupMenu](#showpopupmenu)|顯示快顯功能表。|
-|[CWinAppEx：： WriteBinary](#writebinary)|將二進位資料寫入指定的登錄值。|
-|[CWinAppEx：： WriteInt](#writeint)|將數值資料寫入指定的登錄值。|
-|[CWinAppEx：： WriteObject](#writeobject)|將衍生自[CObject 類別](../../mfc/reference/cobject-class.md)的資料寫入指定的登錄值。|
-|[CWinAppEx：： WriteSectionBinary](#writesectionbinary)|將二進位資料寫入至指定之登錄機碼的值。|
-|[CWinAppEx：： WriteSectionInt](#writesectionint)|將數值資料寫入指定之登錄機碼的值。|
-|[CWinAppEx：： WriteSectionObject](#writesectionobject)|將衍生自 `CObject` 類別的資料寫入指定之登錄機碼的值。|
-|[CWinAppEx：： WriteSectionString](#writesectionstring)|將字串資料寫入指定之登錄機碼的值。|
-|[CWinAppEx：： WriteString](#writestring)|將字串資料寫入指定的登錄值。|
+|[CWinAppEx::清潔狀態](#cleanstate)|從 Windows 註冊表中刪除有關應用程式的資訊。|
+|[CWinAppEx:開啟載入視窗放置](#enableloadwindowplacement)|指定應用程式是否將從註冊表載入主框架視窗的初始大小和位置。|
+|[CWinAppEx::啟用"離開功能表"](#enabletearoffmenus)|為應用程式啟用分淚功能表。|
+|[CWinAppEx:啟用使用者工具](#enableusertools)|使用戶能夠在應用程式中創建自定義功能表命令。|
+|[CWinAppEx:退出實例](#exitinstance)|由框架從`Run`成員函數中調用以退出應用程式的此實例。 (覆蓋[CWinApp:退出實例](../../mfc/reference/cwinapp-class.md#exitinstance).)|
+|[CWinAppEx:取得 Binary](#getbinary)|讀取與指定註冊表值關聯的二進位數據。|
+|[CWinAppEx:抓取內容選單管理員](#getcontextmenumanager)|返回指向全域[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件的指標。|
+|[CWinAppEx:取得資料版本](#getdataversion)||
+|[CWinAppEx:取得資料版本主要](#getdataversionmajor)|返回保存在 Windows 註冊表中的應用程式的主要版本。|
+|[CWinAppEx:取得資料版本次要](#getdataversionminor)|返回保存在 Windows 註冊表中的應用程式的次要版本。|
+|[CWinAppEx:Getint](#getint)|從註冊表讀取與指定值關聯的數字數據。|
+|[CWinAppEx:取得鍵盤管理員](#getkeyboardmanager)|返回指向全域[鍵盤管理器](../../mfc/reference/ckeyboardmanager-class.md)物件的指標。|
+|[CWinAppEx:取得滑鼠管理員](#getmousemanager)|返回指向全域[CMouseManager](../../mfc/reference/cmousemanager-class.md)物件的指標。|
+|[CWinAppEx:取得物件](#getobject)|讀取`CObject`與註冊表中的指定值關聯的派生數據。|
+|[CWinAppEx:取得 RegSectionPath](#getregsectionpath)|返回作為註冊表項路徑的字串。 此路徑將所提供的相對路徑與應用程式路徑串聯。|
+|[CWinAppEx:取得註冊庫](#getregistrybase)|返回應用程式的註冊錶路徑。|
+|[CWinAppEx:獲取截面二進位](#getsectionbinary)|從註冊表讀取與指定密鑰和值關聯的二進位資料。|
+|[CWinAppEx:獲取科科因](#getsectionint)|從與指定鍵和值關聯的註冊表中讀取數位數據。|
+|[CWinAppEx:取得節點物件](#getsectionobject)|從`CObject`註冊表讀取與指定密鑰和值關聯的數據。|
+|[CWinAppEx:取得節串](#getsectionstring)|從註冊表讀取與指定鍵和值關聯的字串數據。|
+|[CWinAppEx:取得殼牌管理員](#getshellmanager)|返回指向全域[CShellManager](../../mfc/reference/cshellmanager-class.md)物件的指標。|
+|[CWinAppEx:GetString](#getstring)|從註冊表讀取與指定值關聯的字串數據。|
+|[CWinAppEx:抓取工具提示管理員](#gettooltipmanager)|返回指向全域[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)物件的指標。|
+|[CWinAppEx:取得使用者工具管理員](#getusertoolsmanager)|返回指向全域[CUserTools Manager](../../mfc/reference/cusertoolsmanager-class.md)物件的指標。|
+|[CWinAppEx::在it上下文選單管理器](#initcontextmenumanager)|初始化 `CContextMenuManager` 物件。|
+|[CWinAppEx::Init鍵盤管理員](#initkeyboardmanager)|初始化 `CKeyboardManager` 物件。|
+|[CWinAppEx::InitMouse管理員](#initmousemanager)|初始化 `CMouseManager` 物件。|
+|[CWinAppEx::InitShell管理員](#initshellmanager)|初始化類`CShellManager`|
+|[CWinAppEx::InitTooltip管理員](#inittooltipmanager)|初始化 `CTooltipManager` 類別。|
+|[CWinAppEx:是資源智慧更新](#isresourcesmartupdate)||
+|[CWinAppEx:是否存在](#isstateexists)|指示指定的密鑰是否位於註冊表中。|
+|[CWinAppEx::載入狀態](#loadstate)|從註冊表載入應用程式狀態。|
+|[CWinAppEx:應用上下文説明](#onappcontexthelp)|當使用者請求 **「自定義」** 對話方塊的上下文説明時,由框架調用。|
+|[CWinAppEx::OnView雙擊](#onviewdoubleclick)|當用戶雙擊應用程式中的任何位置時調用使用者定義的命令。|
+|[CWinAppEx:在工作空間上](#onworkspaceidle)||
+|[CWinAppEx::保存狀態](#savestate)|將應用程式框架的狀態寫入 Windows 註冊表。|
+|[CWinAppEx::設置註冊庫](#setregistrybase)|設置預設註冊表項的路徑。 此鍵將作為所有後續註冊表調用的根。|
+|[CWinAppEx::顯示彈出選單](#showpopupmenu)|顯示彈出式功能表。|
+|[CWinAppEx::寫入二進制](#writebinary)|將二進位數據寫入指定的註冊表值。|
+|[CWinAppEx::寫入](#writeint)|將數位數據寫入指定的註冊表值。|
+|[CWinAppEx:寫入物件](#writeobject)|將派生自[CObject 類別](../../mfc/reference/cobject-class.md)資料寫入指定的註冊表值。|
+|[CWinAppEx::寫節二進制](#writesectionbinary)|將二進位數據寫入指定註冊表項的值。|
+|[CWinAppEx::寫科因](#writesectionint)|將數位資料寫入指定註冊表項的值。|
+|[CWinAppEx:寫節物件](#writesectionobject)|將數據派生自類`CObject`寫入指定註冊表項的值。|
+|[CWinAppEx::寫節串](#writesectionstring)|將字串資料寫入指定註冊表項的值。|
+|[CWinAppEx::寫字串](#writestring)|將字串資料寫入指定的註冊表值。|
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CWinAppEx：： LoadCustomState](#loadcustomstate)|已載入應用程式狀態時由架構呼叫。|
-|[CWinAppEx：： LoadWindowPlacement](#loadwindowplacement)|從登錄載入應用程式的大小和位置時，由架構呼叫。 載入的資料包括應用程式上次關閉時的主框架大小和位置。|
-|[CWinAppEx：： OnClosingMainFrame](#onclosingmainframe)|當主框架視窗正在處理 WM_CLOSE 時，由架構呼叫。|
-|[CWinAppEx：:P reLoadState](#preloadstate)|在載入應用程式狀態之前，立即由架構呼叫。|
-|[CWinAppEx：:P reSaveState](#presavestate)|由架構在儲存應用程式狀態之前立即呼叫。|
-|[CWinAppEx：： ReloadWindowPlacement](#reloadwindowplacement)|從登錄重載所提供視窗的大小和位置|
-|[CWinAppEx：： SaveCustomState](#savecustomstate)|由架構在將應用程式狀態寫入登錄後呼叫。|
-|[CWinAppEx：： StoreWindowPlacement](#storewindowplacement)|由架構呼叫，以將主框架的大小和位置寫入登錄中。|
+|[CWinAppEx::載入自訂狀態](#loadcustomstate)|載入應用程式狀態時由框架調用。|
+|[CWinAppEx::載入視窗放置](#loadwindowplacement)|當框架從註冊表載入應用程式的大小和位置時,由它調用。 載入的資料包括應用程式上次關閉時主幀的大小和位置。|
+|[CWinAppEx::打開主框架](#onclosingmainframe)|當主框架視窗正在處理時,框架調用WM_CLOSE。|
+|[CWinAppEx::P重新載入狀態](#preloadstate)|在載入應用程式狀態之前由框架呼叫。|
+|[CWinAppEx::P重新儲存狀態](#presavestate)|在保存應用程式狀態之前由框架調用。|
+|[CWinAppEx::重新載入視窗放置](#reloadwindowplacement)|從註冊表重新載入的視窗大小和位置|
+|[CWinAppEx::保存自定義狀態](#savecustomstate)|框架在將應用程式狀態寫入註冊表后調用它。|
+|[CWinAppEx::商店視窗放置](#storewindowplacement)|由框架調用,將主框架的大小和位置寫入註冊錶。|
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CWinAppEx：： m_bForceImageReset](#m_bforceimagereset)|指定當載入包含工具列的框架視窗時，架構是否會重設所有工具列影像。|
+|[CWinAppEx:m_bForceImageReset](#m_bforceimagereset)|指定在載入包含工具列的框架視窗時,框架是否會重置所有工具列圖像。|
 
 ## <a name="remarks"></a>備註
 
-MFC 架構所提供的大部分功能都取決於 `CWinAppEx` 類別。 您可以透過下列兩種方式的其中一種，將 `CWinAppEx` 類別併入您的應用程式：
+MFC 框架提供的大部分功能取決於`CWinAppEx`類別 。 您可以透過以下兩種`CWinAppEx`方式 之一個類別的應用程式中:
 
-- 在主執行緒中，建立 `CWinAppEx` 類別。
+- 在主`CWinAppEx`線程中構造類。
 
-- 從 `CWinAppEx`衍生主要應用程式類別。
+- 從`CWinAppEx`派生主應用程式類。
 
-將 `CWinAppEx` 併入應用程式之後，您可以初始化任何一個應用程式管理員。 使用應用程式管理員之前，您必須呼叫適當的 initialize 方法將它初始化。 若要取得特定管理員的指標，請呼叫相關聯的 get 方法。 `CWinAppEx` 類別會管理下列應用程式管理員： [CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)、 [CCoNtextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)、 [CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)和[CMenuTearOffManager 類別](../../mfc/reference/cmenutearoffmanager-class.md)。
+合併`CWinAppEx`到應用程式中後,可以初始化任一個應用程式管理器。 在使用應用程式管理員之前,必須透過調用適當的初始化方法初始化它。 要獲取指向特定管理器的指標,請調用關聯的 get 方法。 這個`CWinAppEx`類別管理以下應用程式管理員[:CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)[、CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)類別[、C鍵盤管理員類別](../../mfc/reference/ckeyboardmanager-class.md)[、CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)和[CMenuTearoffManager 類別](../../mfc/reference/cmenutearoffmanager-class.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -238,11 +239,11 @@ MFC 架構所提供的大部分功能都取決於 `CWinAppEx` 類別。 您可�
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxwinappex。h
+**標題:** afxwinappex.h
 
-##  <a name="cleanstate"></a>CWinAppEx：： CleanState
+## <a name="cwinappexcleanstate"></a><a name="cleanstate"></a>CWinAppEx::清潔狀態
 
-從 Windows 登錄中移除應用程式的所有相關資訊。
+從 Windows 註冊表中刪除有關應用程式的所有資訊。
 
 ```
 virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
@@ -250,18 +251,18 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 
 ### <a name="parameters"></a>參數
 
-*lpszSectionName*<br/>
-在包含登錄機碼路徑的字串。
+*lpsz節名稱*<br/>
+[在]包含註冊表項路徑的字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為非零;否則為0。
+如果方法成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從登錄的特定區段中清除應用程式資料。 您可以使用參數*lpszSectionName*來指定要清除的區段。 如果*lpszSectionName*為 Null，這個方法將會使用儲存在 `CWinAppEx` 物件中的預設登錄路徑。 若要取得預設的登錄路徑，請使用[CWinAppEx：： GetRegistryBase](#getregistrybase)。
+此方法從註冊表的特定部分清除應用程序數據。 您可以使用參數*lpszSectionName*指定要清除的部分。 如果*lpszSectionName*為 NULL,則此方法將使用儲存`CWinAppEx`在物件中的 預設註冊錶路徑。 要取得預設註冊表路徑,請使用[CWinAppEx::取得註冊庫](#getregistrybase)。
 
-##  <a name="cwinappex"></a>CWinAppEx：： CWinAppEx
+## <a name="cwinappexcwinappex"></a><a name="cwinappex"></a>CWinAppEx:CWinAppEx
 
 建構 `CWinAppEx` 物件。
 
@@ -271,33 +272,33 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 
 ### <a name="parameters"></a>參數
 
-*bResourceSmartUpdate*<br/>
-在布林值參數，指定工作區物件是否應偵測並處理資源更新。
+*b 資源智慧更新*<br/>
+[在]一個布爾參數,用於指定工作區物件是否應檢測和處理資源更新。
 
 ### <a name="remarks"></a>備註
 
-`CWinAppEx` 類別具有初始化方法、提供將應用程式資訊儲存和載入至登錄的功能，以及控制全域應用程式設定。 它也可讓您使用全域管理員，例如[CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)和[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)。 每個應用程式只能有一個 `CWinAppEx` 類別的實例。
+該`CWinAppEx`類具有初始化方法,提供用於將應用程式資訊保存和載入到註冊表的功能,並控制全域應用程式設置。 它可以使用全域管理員,如[鍵盤管理員類別](../../mfc/reference/ckeyboardmanager-class.md)和[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)。 每個應用程式只能有`CWinAppEx`一個類的實例。
 
-##  <a name="enableloadwindowplacement"></a>CWinAppEx：： EnableLoadWindowPlacement
+## <a name="cwinappexenableloadwindowplacement"></a><a name="enableloadwindowplacement"></a>CWinAppEx:開啟載入視窗放置
 
-指定應用程式是否要從登錄載入主框架視窗的初始大小和位置。
+指定應用程式是否將從註冊表載入主框架視窗的初始大小和位置。
 
-```
+```cpp
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-在指定應用程式是否從登錄載入主框架視窗的初始大小和位置。
+*b 啟用*<br/>
+[在]指定應用程式是否從註冊表載入主框架視窗的初始大小和位置。
 
 ### <a name="remarks"></a>備註
 
-根據預設，主畫面格的大小和位置會與其他應用程式設定一起從登錄載入。 這會在[CWinAppEx：： LoadState](#loadstate)期間發生。 如果您不想要從登錄載入初始視窗位置，請呼叫這個方法，並將*bEnable*設為 FALSE。
+默認情況下,主幀的大小和位置與其他應用程式設置一起從註冊表載入。 這發生在[CWinAppEx::載入狀態](#loadstate)。 如果不想從註冊表載入初始視窗放置,請調用此方法,將*bEnable*設置為 FALSE。
 
-##  <a name="enabletearoffmenus"></a>CWinAppEx：： EnableTearOffMenus
+## <a name="cwinappexenabletearoffmenus"></a><a name="enabletearoffmenus"></a>CWinAppEx::啟用"離開功能表"
 
-建立並初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)物件。
+創建並初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)物件。
 
 ```
 BOOL EnableTearOffMenus(
@@ -309,25 +310,25 @@ BOOL EnableTearOffMenus(
 ### <a name="parameters"></a>參數
 
 *lpszRegEntry*<br/>
-在包含登錄機碼路徑的字串。 應用程式會使用這個登錄機碼來儲存卸載功能表的資訊。
+[在]包含註冊表項路徑的字串。 應用程式使用此註冊表項存儲拆解功能表的資訊。
 
 *uiCmdFirst*<br/>
-在第一個關閉的功能表識別碼。
+[在]第一個撕下功能表 ID。
 
 *uiCmdLast*<br/>
-在上次關閉功能表識別碼。
+[在]上次撕下功能表 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立並初始化 `CMenuTearOffManager`，則為 TRUE;如果發生錯誤或 `CMenuTearOffManager` 已經存在，則為 FALSE。
+如果成功創建`CMenuTearOffManager`和初始化,則為 TRUE;如果發生錯誤或已存在錯誤,`CMenuTearOffManager`則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用此函式可在您的應用程式中啟用卸載功能表。 您應該從 `InitInstance`呼叫此函式。
+使用此功能在應用程式中啟用分義功能表。 應從`InitInstance`調用此函數。
 
-##  <a name="enableusertools"></a>CWinAppEx：： EnableUserTools
+## <a name="cwinappexenableusertools"></a><a name="enableusertools"></a>CWinAppEx:啟用使用者工具
 
-可讓使用者建立自訂功能表命令，以減少應用程式中的按鍵。 這個方法會建立[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)物件。
+使用戶能夠創建自定義功能表命令,以減少應用程式中的擊鍵。 此方法創建一個[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)物件。
 
 ```
 BOOL EnableUserTools(
@@ -342,36 +343,36 @@ BOOL EnableUserTools(
 ### <a name="parameters"></a>參數
 
 *uiCmdToolsDummy*<br/>
-在不帶正負號的整數，架構會用來做為 [使用者工具] 功能表的命令 ID 預留位置。
+[在]框架用作使用者工具功能表的命令 ID 的占位符的無符號整數。
 
 *uiCmdFirst*<br/>
-在第一個使用者工具命令的命令識別碼。
+[在]第一個使用者工具命令的命令 ID。
 
 *uiCmdLast*<br/>
-在最後一個使用者工具命令的命令 ID。
+[在]最後一個使用者工具命令的命令 ID。
 
 *pToolRTC*<br/>
-在`CUserToolsManager` 物件用來建立新使用者工具的類別。
+[在]對象用於創建新`CUserToolsManager`使用者工具的類。
 
 *uArgMenuID*<br/>
-在引數功能表識別碼。
+[在]參數功能表ID。
 
-*uInitDirMenuID*<br/>
-在初始工具目錄的功能表識別碼。
+*烏伊尼特迪爾梅尼*<br/>
+[在]初始工具目錄的功能表 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法會建立並初始化 `CUserToolsManager` 物件，則為 TRUE;如果方法失敗或 `CUserToolsManager` 物件已經存在，則為 FALSE。
+如果方法創建並初始化物件,則為`CUserToolsManager`TRUE;如果方法創建並初始化物件,則為 TRUE。如果方法失敗或物件已存在,`CUserToolsManager`則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-當您啟用使用者定義的工具時，架構會自動支援可在自訂期間延伸的動態功能表。 架構會將每個新的專案與外部命令產生關聯。 當使用者從 [**工具**] 功能表選取適當的專案時，此架構會叫用這些命令。
+啟用使用者定義的工具時,框架將自動支援可在自定義期間擴展的動態功能表。 框架將每個新專案與外部命令關聯。 當使用者從 **「工具」** 選單中選擇適當的項時,框架將調用這些命令。
 
-每次使用者加入新專案時，架構都會建立新的物件。 新物件的類別類型是由*pToolRTC*所定義。 *PToolRTC*類別類型必須衍生自[CUserTool 類別](../../mfc/reference/cusertool-class.md)。
+每次使用者添加新項時,框架都會創建一個新物件。 新物件的類類型由*pToolRTC*定義。 *pToolRTC*類別必須將派生自[CUserTool 類別](../../mfc/reference/cusertool-class.md)。
 
-如需使用者工具以及如何將它們併入應用程式的詳細資訊，請參閱[使用者定義的工具](../../mfc/user-defined-tools.md)。
+有關使用者工具以及如何將它們合併到應用程式中的詳細資訊,請參閱[使用者定義的工具](../../mfc/user-defined-tools.md)。
 
-##  <a name="exitinstance"></a>CWinAppEx：： ExitInstance
+## <a name="cwinappexexitinstance"></a><a name="exitinstance"></a>CWinAppEx:退出實例
 
 ```
 virtual int ExitInstance();
@@ -381,9 +382,9 @@ virtual int ExitInstance();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getbinary"></a>CWinAppEx：： GetBinary
+## <a name="cwinappexgetbinary"></a><a name="getbinary"></a>CWinAppEx:取得 Binary
 
-從指定的登錄機碼讀取二進位資料。
+從指定的註冊表項讀取二進位數據。
 
 ```
 BOOL GetBinary(
@@ -395,27 +396,27 @@ BOOL GetBinary(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在包含登錄機碼名稱的字串。
+[在]包含註冊表項名稱的字串。
 
 *ppData*<br/>
-脫銷緩衝區的指標，此方法會以二進位資料填滿。
+[出]指向方法填充二進位數據的緩衝區的指標。
 
-*pBytes*<br/>
-脫銷不帶正負號整數的指標，此方法會用來寫入讀取的位元組數目。
+*p 位元組*<br/>
+[出]指向無符號整數的指標,該方法用於寫入讀取的位元組數。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUE;否則為 FALSE。
+如果成功,則為 TRUE;否則。
 
 ### <a name="remarks"></a>備註
 
-這個方法會讀取寫入登錄的二進位資料。 若要將資料寫入登錄，請使用[CWinAppEx：： WriteBinary](#writebinary)和[CWinAppEx：： WriteSectionBinary](#writesectionbinary)方法。
+此方法讀取寫入註冊表的二進位數據。 要將數據寫入註冊表,請使用[CWinAppEx::寫入 Binary](#writebinary)和[CWinAppEx::WriteCCBinary。](#writesectionbinary)
 
-*LpszEntry*參數是位於應用程式預設登錄機碼底下的登錄專案名稱。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszEntry*參數是位於應用程式的預設註冊表項下的註冊表項的名稱。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="getcontextmenumanager"></a>CWinAppEx：： GetCoNtextMenuManager
+## <a name="cwinappexgetcontextmenumanager"></a><a name="getcontextmenumanager"></a>CWinAppEx:抓取內容選單管理員
 
-傳回全域[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件的指標。
+返回指向全域[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件的指標。
 
 ```
 CContextMenuManager* GetContextMenuManager();
@@ -423,13 +424,13 @@ CContextMenuManager* GetContextMenuManager();
 
 ### <a name="return-value"></a>傳回值
 
-全域 `CContextMenuManager` 物件的指標。
+指向全域`CContextMenuManager`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-如果 CCoNtextMenuManager 物件未初始化，此函式會在傳回指標之前呼叫[CWinAppEx：： InitCoNtextMenuManager](#initcontextmenumanager) 。
+如果未初始化 CContextMenuManager 物件,則此函數在返回指標之前調用[CWinAppEx::initContext MenuManager。](#initcontextmenumanager)
 
-##  <a name="getdataversion"></a>CWinAppEx：： GetDataVersion
+## <a name="cwinappexgetdataversion"></a><a name="getdataversion"></a>CWinAppEx:取得資料版本
 
 ```
 int GetDataVersion() const;
@@ -439,9 +440,9 @@ int GetDataVersion() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdataversionmajor"></a>CWinAppEx：： GetDataVersionMajor
+## <a name="cwinappexgetdataversionmajor"></a><a name="getdataversionmajor"></a>CWinAppEx:取得資料版本主要
 
-當您呼叫[CWinAppEx：： SaveState](#savestate)時，傳回儲存在 Windows 登錄中的應用程式主要版本。
+返回調用[CWinAppEx:::保存狀態](#savestate)時保存在 Windows 註冊表中的應用程式的主要版本。
 
 ```
 int GetDataVersionMajor() const;
@@ -449,11 +450,11 @@ int GetDataVersionMajor() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含主要版本號碼的整數值。
+包含主要版本號的整數值。
 
-##  <a name="getdataversionminor"></a>CWinAppEx：： GetDataVersionMinor
+## <a name="cwinappexgetdataversionminor"></a><a name="getdataversionminor"></a>CWinAppEx:取得資料版本次要
 
-當您呼叫[CWinAppEx：： SaveState](#savestate)時，傳回儲存在 Windows 登錄中之應用程式的次要版本。
+返回調用[CWinAppEx:::保存狀態](#savestate)時保存在 Windows 註冊表中的應用程式的次要版本。
 
 ```
 int GetDataVersionMinor() const;
@@ -461,11 +462,11 @@ int GetDataVersionMinor() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含次要版本號碼的整數值。
+包含次要版本號的整數值。
 
-##  <a name="getint"></a>CWinAppEx：： GetInt
+## <a name="cwinappexgetint"></a><a name="getint"></a>CWinAppEx:Getint
 
-從指定的登錄機碼讀取整數資料。
+從指定的註冊表項讀取整數數據。
 
 ```
 int GetInt(
@@ -476,24 +477,24 @@ int GetInt(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在包含登錄專案名稱的字串。
+[在]包含註冊表項名稱的字串。
 
-*nDefault*<br/>
-在如果指定的登錄專案不存在，此方法會傳回的預設值。
+*n預設*<br/>
+[在]如果指定的註冊表項不存在,該方法返回的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為登錄資料;否則， *nDefault*。
+如果方法成功,則註冊表數據;否則*n 預設*。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從登錄讀取整數資料。 如果沒有與*lpszEntry*所指示之登錄機碼相關聯的整數資料，這個方法會傳回*nDefault*。 若要將資料寫入登錄，請使用[CWinAppEx：： WriteSectionInt](#writesectionint)和[CWinAppEx：： WriteInt](#writeint)方法。
+此方法從註冊表讀取整數數據。 如果沒有與*lpszEntry*指示的註冊表項關聯的整數資料,則此方法將傳回*nDefault*。 要將數據寫入註冊表,請使用[CWinAppEx::WriteSectionint](#writesectionint)和[CWinAppEx::WriteInt。](#writeint)
 
-*LpszEntry*參數是位於應用程式預設登錄機碼底下的登錄專案名稱。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszEntry*參數是位於應用程式的預設註冊表項下的註冊表項的名稱。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="getkeyboardmanager"></a>CWinAppEx：： GetKeyboardManager
+## <a name="cwinappexgetkeyboardmanager"></a><a name="getkeyboardmanager"></a>CWinAppEx:取得鍵盤管理員
 
-傳回全域[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)物件的指標。
+返回指向全域[鍵盤管理器](../../mfc/reference/ckeyboardmanager-class.md)物件的指標。
 
 ```
 CKeyboardManager* GetKeyboardManager();
@@ -501,15 +502,15 @@ CKeyboardManager* GetKeyboardManager();
 
 ### <a name="return-value"></a>傳回值
 
-全域 `CKeyboardManager` 物件的指標。
+指向全域`CKeyboardManager`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-如果鍵盤管理員未初始化，則此函式會先呼叫[CWinAppEx：： InitKeyboardManager](#initkeyboardmanager) ，然後再傳回指標。
+如果未初始化鍵盤管理員,則此函數在返回指標之前呼叫[CWinAppEx::Init 鍵盤管理員](#initkeyboardmanager)。
 
-##  <a name="getmousemanager"></a>CWinAppEx：： GetMouseManager
+## <a name="cwinappexgetmousemanager"></a><a name="getmousemanager"></a>CWinAppEx:取得滑鼠管理員
 
-傳回全域[CMouseManager](../../mfc/reference/cmousemanager-class.md)物件的指標。
+返回指向全域[CMouseManager](../../mfc/reference/cmousemanager-class.md)物件的指標。
 
 ```
 CMouseManager* GetMouseManager();
@@ -517,15 +518,15 @@ CMouseManager* GetMouseManager();
 
 ### <a name="return-value"></a>傳回值
 
-全域 `CMouseManager` 物件的指標。
+指向全域`CMouseManager`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-如果滑鼠管理員未初始化，則此函式會在傳回指標之前呼叫[CWinAppEx：： InitMouseManager](#initmousemanager) 。
+如果未初始化滑鼠管理器,則此函數在返回指標之前調用[CWinAppEx::InitMouseManager。](#initmousemanager)
 
-##  <a name="getobject"></a>CWinAppEx：： GetObject
+## <a name="cwinappexgetobject"></a><a name="getobject"></a>CWinAppEx:取得物件
 
-從登錄讀取[CObject](../../mfc/reference/cobject-class.md)dervied 資料。
+從註冊表讀取[CObject](../../mfc/reference/cobject-class.md)- dervied 資料。
 
 ```
 BOOL GetObject(
@@ -536,24 +537,24 @@ BOOL GetObject(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在字串，包含登錄專案的相對路徑。
+[在]包含註冊表項的相對路徑的字串。
 
 *obj*<br/>
-脫銷`CObject`的參考。 方法會使用此參考來儲存登錄資料。
+[出]對的`CObject`引用。 該方法使用此引用來存儲註冊表數據。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為非零;否則為0。
+如果方法成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從登錄中讀取衍生自 `CObject`的資料。 若要將 `CObject` 資料寫入登錄，請使用[CWinAppEx：： WriteObject](#writeobject)或[CWinAppEx：： WriteSectionObject](#writesectionobject)。
+此方法從 派生`CObject`自的註冊表讀取數據。 要將資料`CObject`寫入註冊表,請使用[CWinAppEx::writeObject](#writeobject)或[CWinAppEx::WriteSectionObject](#writesectionobject)。
 
-*LpszEntry*參數是位於應用程式預設登錄機碼底下的登錄專案名稱。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszEntry*參數是位於應用程式的預設註冊表項下的註冊表項的名稱。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="getregistrybase"></a>CWinAppEx：： GetRegistryBase
+## <a name="cwinappexgetregistrybase"></a><a name="getregistrybase"></a>CWinAppEx:取得註冊庫
 
-抓取應用程式的預設登錄路徑。
+檢索應用程式的預設註冊錶路徑。
 
 ```
 LPCTSTR GetRegistryBase();
@@ -561,15 +562,15 @@ LPCTSTR GetRegistryBase();
 
 ### <a name="return-value"></a>傳回值
 
-字串，包含預設登錄位置的路徑。
+包含預設註冊表位置的路徑的字串。
 
 ### <a name="remarks"></a>備註
 
-存取登錄之[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)的所有方法都會在預設位置啟動。 使用此方法來取出預設登錄位置的路徑。 請使用[CWinAppEx：： SetRegistryBase](#setregistrybase)來變更預設登錄位置。
+訪問註冊表的[CWinAppEx 類](../../mfc/reference/cwinappex-class.md)的所有方法都從預設位置開始。 使用此方法檢索預設註冊表位置的路徑。 使用[CWinAppEx::設置註冊庫](#setregistrybase)以更改預設註冊表位置。
 
-##  <a name="getregsectionpath"></a>CWinAppEx：： GetRegSectionPath
+## <a name="cwinappexgetregsectionpath"></a><a name="getregsectionpath"></a>CWinAppEx:取得 RegSectionPath
 
-建立並傳回登錄機碼的絕對路徑。
+創建並返回註冊表項的絕對路徑。
 
 ```
 CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
@@ -577,20 +578,20 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 
 ### <a name="parameters"></a>參數
 
-*szSectionAdd*<br/>
-在包含登錄機碼之相對路徑的字串。
+*sz節新增*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 ### <a name="return-value"></a>傳回值
 
-`CString`，其中包含登錄機碼的絕對路徑。
+包含`CString`註冊表項目的絕對路徑的 。
 
 ### <a name="remarks"></a>備註
 
-這個方法會藉由將*szSectionAdd*中的相對路徑附加至應用程式的預設登錄位置，來定義登錄機碼的絕對路徑。 若要取得預設的登錄機碼，請使用[CWinAppEx：： GetRegistryBase](#getregistrybase)方法。
+此方法通過將*szSectionAdd*中的相對路徑追加到應用程式的預設註冊表位置來定義註冊表項的絕對路徑。 要獲取預設註冊表項,請使用[CWinAppEx::getRegistryBase](#getregistrybase)的方法。
 
-##  <a name="getsectionbinary"></a>CWinAppEx：： GetSectionBinary
+## <a name="cwinappexgetsectionbinary"></a><a name="getsectionbinary"></a>CWinAppEx:獲取截面二進位
 
-讀取登錄中的二進位資料。
+從註冊表讀取二進位數據。
 
 ```
 BOOL GetSectionBinary(
@@ -602,17 +603,17 @@ BOOL GetSectionBinary(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz 子節*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 *lpszEntry*<br/>
-在字串，包含要讀取的值。
+[在]包含要讀取的值的字串。
 
 *ppData*<br/>
-脫銷方法用來儲存資料之緩衝區的指標。
+[出]指向方法存儲數據的緩衝區的指標。
 
-*pBytes*<br/>
-脫銷不帶正負號整數的指標。 方法會將*ppData*的大小寫入此參數。
+*p 位元組*<br/>
+[出]指向無符號整數的指標。 該方法將*ppData*的大小寫入此參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -620,13 +621,13 @@ BOOL GetSectionBinary(
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[CWinAppEx：： WriteBinary](#writebinary)和[CWinAppEx：： WriteSectionBinary](#writesectionbinary)方法，讀取寫入登錄的二進位資料。
+此方法使用[CWinAppEx::writeBinary](#writebinary)和[CWinAppEx::WriteCWinAppEx::WriteCCbinary)](#writesectionbinary)讀取寫入註冊表的二進位數據。
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是一個相對路徑,追加到應用程式的預設註冊表項的末尾。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="getsectionint"></a>CWinAppEx：： GetSectionInt
+## <a name="cwinappexgetsectionint"></a><a name="getsectionint"></a>CWinAppEx:獲取科科因
 
-從登錄讀取整數資料。
+從註冊表讀取整數數據。
 
 ```
 int GetSectionInt(
@@ -637,28 +638,28 @@ int GetSectionInt(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz 子節*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 *lpszEntry*<br/>
-在字串，包含要讀取的值。
+[在]包含要讀取的值的字串。
 
-*nDefault*<br/>
-在當指定的值不存在時，所要傳回的預設值。
+*n預設*<br/>
+[在]如果指定值不存在,則返回的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-儲存在指定登錄值中的整數資料。如果資料不存在，則*nDefault* 。
+存儲在指定註冊表值中的整數數據;n 如果資料不存在,*則預設為。*
 
 ### <a name="remarks"></a>備註
 
-使用[CWinAppEx：： WriteInt](#writeint)和[CWinAppEx：： WriteSectionInt](#writesectionint)方法，將整數資料寫入登錄。
+使用[CWinAppEx::WriteInt](#writeint)和[CWinAppEx:writeSectionint](#writesectionint)的方法將整數數據寫入註冊表。
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是新增至您應用程式的預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是添加到應用程式的預設註冊表項末尾的相對路徑。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="getsectionobject"></a>CWinAppEx：： GetSectionObject
+## <a name="cwinappexgetsectionobject"></a><a name="getsectionobject"></a>CWinAppEx:取得節點物件
 
-從登錄讀取[CObject](../../mfc/reference/cobject-class.md)登錄資料。
+從註冊表讀取[CObject](../../mfc/reference/cobject-class.md)註冊表數據。
 
 ```
 BOOL GetSectionObject(
@@ -669,14 +670,14 @@ BOOL GetSectionObject(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz 子節*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 *lpszEntry*<br/>
-在字串，包含要讀取的值。
+[在]包含要讀取的值的字串。
 
 *obj*<br/>
-脫銷`CObject`的參考。 方法會使用此 `CObject` 來儲存登錄資料。
+[出]對的`CObject`引用。 該方法使用它`CObject`來存儲註冊表數據。
 
 ### <a name="return-value"></a>傳回值
 
@@ -684,13 +685,13 @@ BOOL GetSectionObject(
 
 ### <a name="remarks"></a>備註
 
-這個方法會從登錄讀取資料。 讀取的資料為 `CObject` 資料，或衍生自 `CObject`的類別資料。 若要將 `CObject` 資料寫入登錄，請使用[CWinAppEx：： WriteObject](#writeobject)或[CWinAppEx：： WriteSectionObject](#writesectionobject)。
+此方法從註冊表讀取數據。 讀取的資料是`CObject`從 衍生的類別資料或`CObject`資料 。 要將資料`CObject`寫入註冊表,請使用[CWinAppEx::writeObject](#writeobject)或[CWinAppEx::WriteSectionObject](#writesectionobject)。
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是一個相對路徑,追加到應用程式的預設註冊表項的末尾。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="getsectionstring"></a>CWinAppEx：： GetSectionString
+## <a name="cwinappexgetsectionstring"></a><a name="getsectionstring"></a>CWinAppEx:取得節串
 
-從登錄讀取字串資料。
+從註冊表讀取字串資料。
 
 ```
 CString GetSectionString(
@@ -701,28 +702,28 @@ CString GetSectionString(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz 子節*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 *lpszEntry*<br/>
-在字串，包含要讀取的值。
+[在]包含要讀取的值的字串。
 
 *lpszDefault*<br/>
-在當指定的值不存在時，所要傳回的預設值。
+[在]如果指定值不存在,則返回的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-如果資料存在，則儲存在指定登錄值中的字串資料為;否則， *lpszDefault*。
+如果數據存在,則存儲在指定註冊表值中的字串數據;否則*lpszDefault*。
 
 ### <a name="remarks"></a>備註
 
-這個方法會讀取寫入登錄的字串資料。 請使用[CWinAppEx：： WriteString](#writestring)和[CWinAppEx：： WriteSectionString](#writesectionstring) ，將字串資料寫入登錄。
+此方法讀取寫入註冊表的字串資料。 使用[CWinAppEx::WriteString](#writestring)和[CWinAppEx:write 節位元串](#writesectionstring)寫入註冊表。
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是一個相對路徑,追加到應用程式的預設註冊表項的末尾。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="getshellmanager"></a>CWinAppEx：： GetShellManager
+## <a name="cwinappexgetshellmanager"></a><a name="getshellmanager"></a>CWinAppEx:取得殼牌管理員
 
-傳回全域[CShellManager](../../mfc/reference/cshellmanager-class.md)物件的指標。
+返回指向全域[CShellManager](../../mfc/reference/cshellmanager-class.md)物件的指標。
 
 ```
 CShellManager* GetShellManager();
@@ -730,15 +731,15 @@ CShellManager* GetShellManager();
 
 ### <a name="return-value"></a>傳回值
 
-全域 `CShellManager` 物件的指標。
+指向全域`CShellManager`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-如果未初始化 `CShellManager` 物件，此函式會先呼叫[CWinAppEx：： InitShellManager](#initshellmanager) ，然後再傳回指標。
+如果未初始`CShellManager`化物件,此函數在返回指標之前調用[CWinAppEx::InitShellManager。](#initshellmanager)
 
-##  <a name="getstring"></a>CWinAppEx：： GetString
+## <a name="cwinappexgetstring"></a><a name="getstring"></a>CWinAppEx:GetString
 
-從指定的登錄機碼讀取字串資料。
+從指定的註冊表項讀取字串資料。
 
 ```
 CString GetString(
@@ -749,24 +750,24 @@ CString GetString(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在包含登錄機碼名稱的字串
+[在]包含註冊表項目名稱的字串
 
 *lpzDefault*<br/>
-在如果指定的登錄專案不存在，此方法會傳回的預設值。
+[在]如果指定的註冊表項不存在,該方法返回的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-成功時儲存在登錄中的字串資料;否則， *lpszDefault* 。
+如果成功,存儲在註冊表中的字串數據;*否則,lpszDefault。*
 
 ### <a name="remarks"></a>備註
 
-這個方法會讀取寫入登錄的字串資料。 若要將資料寫入登錄，請使用[CWinAppEx：： WriteString](#writestring)或[CWinAppEx：： WriteSectionString](#writesectionstring)方法。
+此方法讀取寫入註冊表的字串資料。 要將資料寫入註冊表,請使用[CWinAppEx::WriteString](#writestring)或[CWinAppEx::Write 節字串](#writesectionstring)。
 
-*LpszEntry*參數是位於應用程式預設登錄機碼底下的登錄專案名稱。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszEntry*參數是位於應用程式的預設註冊表項下的註冊表項的名稱。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="gettooltipmanager"></a>CWinAppEx：： GetTooltipManager
+## <a name="cwinappexgettooltipmanager"></a><a name="gettooltipmanager"></a>CWinAppEx:抓取工具提示管理員
 
-傳回全域[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)物件的指標。
+返回指向全域[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)物件的指標。
 
 ```
 CTooltipManager* GetTooltipManager();
@@ -774,15 +775,15 @@ CTooltipManager* GetTooltipManager();
 
 ### <a name="return-value"></a>傳回值
 
-全域 `CTooltipManager` 物件的指標。
+指向全域`CTooltipManager`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-如果未初始化 `CTooltipManager` 物件，此函式會先呼叫[CWinAppEx：： InitTooltipManager](#inittooltipmanager) ，然後再傳回指標。
+如果未初始`CTooltipManager`化物件,此函數在返回指標之前調用[CWinAppEx::InitTooltipManager。](#inittooltipmanager)
 
-##  <a name="getusertoolsmanager"></a>CWinAppEx：： GetUserToolsManager
+## <a name="cwinappexgetusertoolsmanager"></a><a name="getusertoolsmanager"></a>CWinAppEx:取得使用者工具管理員
 
-傳回全域[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)物件的指標。
+返回指向全域[CUserTools Manager](../../mfc/reference/cusertoolsmanager-class.md)物件的指標。
 
 ```
 CUserToolsManager* GetUserToolsManager();
@@ -790,15 +791,15 @@ CUserToolsManager* GetUserToolsManager();
 
 ### <a name="return-value"></a>傳回值
 
-全域 `CUserToolsManager` 物件的指標;如果應用程式未啟用使用者工具管理，則為 Null。
+指向全域物件的指標;`CUserToolsManager`指向全域物件的指標如果未為應用程式啟用使用者工具管理,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-在您取得 `CUserToolsManager` 物件的指標之前，您必須呼叫[CWinAppEx：： EnableUserTools](#enableusertools)來初始化管理員。
+在檢索指向物件的`CUserToolsManager`指標之前,必須通過調用[CWinAppEx::啟用UserTools](#enableusertools)來初始化管理器。
 
-##  <a name="initcontextmenumanager"></a>CWinAppEx：： InitCoNtextMenuManager
+## <a name="cwinappexinitcontextmenumanager"></a><a name="initcontextmenumanager"></a>CWinAppEx::在it上下文選單管理器
 
-初始化[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。
+初始化[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。
 
 ```
 BOOL InitContextMenuManager();
@@ -806,17 +807,17 @@ BOOL InitContextMenuManager();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法會建立 CCoNtextMenuManager 物件，則為非零。如果 `CContextMenuManager` 物件已經存在，則為0。
+如果方法創建 CContextMenuManager 物件,則非零;如果物件已`CContextMenuManager`存在,則為 0。
 
 ### <a name="remarks"></a>備註
 
-如果您呼叫[CWinAppEx：： GetCoNtextMenuManager](#getcontextmenumanager)，該方法的預設實值會呼叫 `InitContextMenuManager`。
+如果您呼叫[CWinAppEx::取得ContextMenuManager,](#getcontextmenumanager)該方法的預設實現`InitContextMenuManager`呼叫 。
 
-如果您的應用程式已經有內容功能表管理員，而且您呼叫 `InitContextMenuManager`，您的應用程式將會發生判斷[提示失敗。](diagnostic-services.md#assert) 因此，如果您直接建立 `CContextMenuManager` 物件，則不應呼叫 `InitContextMenuManager`。 如果您不是使用自訂 `CContextMenuManager`，您應該使用 `GetContextMenuManager` 來建立 `CContextMenuManager` 物件。
+如果應用程式已具有上下文菜單管理器,並且調用`InitContextMenuManager`,則應用程式將出現[ASSERT](diagnostic-services.md#assert)失敗。 因此,如果直接創建物件`InitContextMenuManager`,`CContextMenuManager`則不應呼叫。 如果不使用自定義`CContextMenuManager`,則應`GetContextMenuManager`使用`CContextMenuManager`來創建 物件。
 
-##  <a name="initkeyboardmanager"></a>CWinAppEx：： InitKeyboardManager
+## <a name="cwinappexinitkeyboardmanager"></a><a name="initkeyboardmanager"></a>CWinAppEx::Init鍵盤管理員
 
-初始化[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)物件。
+初始化[鍵盤管理員](../../mfc/reference/ckeyboardmanager-class.md)物件。
 
 ```
 BOOL InitKeyboardManager();
@@ -824,15 +825,15 @@ BOOL InitKeyboardManager();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法建立 `CKeyboardManager` 物件，則為非零。如果 `CKeyboardManager` 物件已經存在，則為0。
+如果方法創建`CKeyboardManager`物件,則非零;如果物件已`CKeyboardManager`存在,則為 0。
 
 ### <a name="remarks"></a>備註
 
-如果您呼叫[CWinAppEx：： GetKeyboardManager](#getkeyboardmanager)，該方法的預設實值會呼叫 `InitKeyboardManager`。
+如果您呼叫[CWinAppEx::取得鍵盤管理員](#getkeyboardmanager),則該方法的預設實現`InitKeyboardManager`呼叫 。
 
-如果您的應用程式已經有鍵盤管理員，而且您呼叫 `InitKeyboardManager`，您的應用程式將會發生判斷[提示失敗。](diagnostic-services.md#assert) 因此，如果您直接建立 `CKeyboardManager` 物件，則不應呼叫 `InitKeyboardManager`。 如果您不是使用自訂 `CKeyboardManager`，您應該使用 `GetKeyboardManager` 來建立 `CKeyboardManager` 物件。
+如果應用程式已具有鍵盤管理器,並且調用`InitKeyboardManager`,則應用程式將出現[ASSERT](diagnostic-services.md#assert)失敗。 因此,如果直接創建物件`InitKeyboardManager`,`CKeyboardManager`則不應呼叫。 如果不使用自定義`CKeyboardManager`,則應`GetKeyboardManager`使用`CKeyboardManager`來創建 物件。
 
-##  <a name="initmousemanager"></a>CWinAppEx：： InitMouseManager
+## <a name="cwinappexinitmousemanager"></a><a name="initmousemanager"></a>CWinAppEx::InitMouse管理員
 
 初始化[CMouseManager](../../mfc/reference/cmousemanager-class.md)物件。
 
@@ -842,15 +843,15 @@ BOOL InitMouseManager();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法建立 `CMouseManager` 物件，則為非零。如果 `CMouseManager` 物件已經存在，則為0。
+如果方法創建`CMouseManager`物件,則非零;如果物件已`CMouseManager`存在,則為 0。
 
 ### <a name="remarks"></a>備註
 
-如果您呼叫[CWinAppEx：： GetMouseManager](#getmousemanager)，該方法的預設實值會呼叫 `InitMouseManager`。
+如果您呼叫[CWinAppEx::GetMouseManager,](#getmousemanager)該方法的預設實現`InitMouseManager`呼叫 。
 
-如果您的應用程式已經有滑鼠管理員，而且您呼叫 `InitMouseManager`，您的應用程式將會發生判斷[提示失敗。](diagnostic-services.md#assert) 因此，如果您直接建立 `CMouseManager` 物件，則不應呼叫 `InitMouseManager`。 如果您不是使用自訂 `CMouseManager`，您應該使用 `GetMouseManager` 來建立 `CMouseManager` 物件。
+如果應用程式已具有滑鼠管理器,並且呼叫`InitMouseManager`,則應用程式將出現[ASSERT](diagnostic-services.md#assert)失敗。 因此,如果直接創建`InitMouseManager`物件`CMouseManager`, 則不應呼叫。 如果不使用自定義`CMouseManager`,則應`GetMouseManager`使用`CMouseManager`來創建 物件。
 
-##  <a name="initshellmanager"></a>CWinAppEx：： InitShellManager
+## <a name="cwinappexinitshellmanager"></a><a name="initshellmanager"></a>CWinAppEx::InitShell管理員
 
 初始化[CShellManager](../../mfc/reference/cshellmanager-class.md)物件。
 
@@ -860,15 +861,15 @@ BOOL InitShellManager();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法建立 `CShellManager` 物件，則為非零。如果 `CShellManager` 物件已經存在，則為0。
+如果方法創建`CShellManager`物件,則非零;如果物件已`CShellManager`存在,則為 0。
 
 ### <a name="remarks"></a>備註
 
-如果您呼叫[CWinAppEx：： GetShellManager](#getshellmanager)，該方法的預設實值會呼叫 `InitShellManager`。
+如果您呼叫[CWinAppEx::getShellManager,](#getshellmanager)該方法的預設實現`InitShellManager`呼叫 。
 
-如果您的應用程式已經有 shell 管理員，而且您呼叫 `InitShellManager`，則您[的應用](diagnostic-services.md#assert)程式會引發判斷提示失敗。 因此，如果您直接建立 `CShellManager` 物件，請勿呼叫 `InitShellManager`。 如果您不是使用自訂 `CShellManager`，請使用 `GetShellManager` 來建立 `CShellManager` 物件。
+如果應用程式已具有 shell 管理器,並且`InitShellManager`呼叫 ,則應用程式將引發[ASSERT](diagnostic-services.md#assert)失敗。 因此,如果直接創建`InitShellManager`物件,`CShellManager`請不要呼叫。 如果不使用自定義`CShellManager`,請`GetShellManager`使用`CShellManager`創建 物件。
 
-##  <a name="inittooltipmanager"></a>CWinAppEx：： InitTooltipManager
+## <a name="cwinappexinittooltipmanager"></a><a name="inittooltipmanager"></a>CWinAppEx::InitTooltip管理員
 
 初始化[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)物件。
 
@@ -878,15 +879,15 @@ BOOL InitTooltipManager();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法建立 `CTooltipManager` 物件，則為非零。如果 `CTooltipManager` 物件已經存在，則為0。
+如果方法創建`CTooltipManager`物件,則非零;如果物件已`CTooltipManager`存在,則為 0。
 
 ### <a name="remarks"></a>備註
 
-如果您呼叫[CWinAppEx：： GetTooltipManager](#gettooltipmanager)，該方法的預設實值會呼叫 `InitTooltipManager`。
+如果您呼叫[CWinAppEx::getTooltipManager,](#gettooltipmanager)該方法的預設實現`InitTooltipManager`呼叫 。
 
-如果您的應用程式已經有工具提示管理員，而且您呼叫 `InitTooltipManager`，則您的應用程式將會發生[ASSERT](diagnostic-services.md#assert)失敗。 因此，如果您直接建立 `CTooltipManager` 物件，則不應呼叫 `InitTooltipManager`。 如果您不是使用自訂 `CTooltipManager`，您應該使用 `GetTooltipManager` 來建立 `CTooltipManager` 物件。
+如果應用程式已有工具提示管理員,並且您呼叫`InitTooltipManager`,則應用程式將出現[ASSERT](diagnostic-services.md#assert)失敗。 因此,如果直接創建物件`InitTooltipManager`,`CTooltipManager`則不應呼叫。 如果不使用自定義`CTooltipManager`,則應`GetTooltipManager`使用`CTooltipManager`來創建 物件。
 
-##  <a name="isresourcesmartupdate"></a>CWinAppEx：： IsResourceSmartUpdate
+## <a name="cwinappexisresourcesmartupdate"></a><a name="isresourcesmartupdate"></a>CWinAppEx:是資源智慧更新
 
 ```
 BOOL IsResourceSmartUpdate() const;
@@ -896,9 +897,9 @@ BOOL IsResourceSmartUpdate() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isstateexists"></a>CWinAppEx：： IsStateExists
+## <a name="cwinappexisstateexists"></a><a name="isstateexists"></a>CWinAppEx:是否存在
 
-指出指定的索引鍵是否在登錄中。
+指示指定的密鑰是否位於註冊表中。
 
 ```
 BOOL IsStateExists(LPCTSTR lpszSectionName);
@@ -906,16 +907,16 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 
 ### <a name="parameters"></a>參數
 
-*lpszSectionName*<br/>
-在包含登錄機碼路徑的字串。
+*lpsz節名稱*<br/>
+[在]包含註冊表項路徑的字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果機碼位於登錄中，則為非零值;否則為0。
+如果金鑰在註冊表中,則非零;否則 0。
 
-##  <a name="loadcustomstate"></a>CWinAppEx：： LoadCustomState
+## <a name="cwinappexloadcustomstate"></a><a name="loadcustomstate"></a>CWinAppEx::載入自訂狀態
 
-架構在從登錄載入應用程式的狀態之後，會呼叫這個方法。
+框架在從註冊表載入應用程式的狀態後調用此方法。
 
 ```
 virtual void LoadCustomState();
@@ -923,13 +924,13 @@ virtual void LoadCustomState();
 
 ### <a name="remarks"></a>備註
 
-如果您想要在應用程式從登錄載入狀態之後執行任何處理，請覆寫這個方法。 根據預設，這個方法不會執行任何操作。
+如果要在應用程式從註冊表載入狀態後執行任何處理,請重寫此方法。 默認情況下,此方法不執行任何操作。
 
-若要從登錄載入自訂狀態資訊，必須先使用[CWinAppEx：： SaveCustomState](#savecustomstate)儲存資訊。
+為了從註冊表載入自定義狀態資訊,必須首先使用[CWinAppEx:::保存自定義狀態保存](#savecustomstate)資訊。
 
-##  <a name="loadstate"></a>CWinAppEx：： LoadState
+## <a name="cwinappexloadstate"></a><a name="loadstate"></a>CWinAppEx::載入狀態
 
-從 Windows 登錄讀取應用程式狀態。
+從 Windows 註冊表讀取應用程式狀態。
 
 ```
 BOOL LoadState(
@@ -952,29 +953,29 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>參數
 
 *pFrame*<br/>
-在框架視窗物件的指標。 方法會將登錄中的狀態資訊套用到此框架視窗。
+[在]指向幀視窗物件的指標。 該方法將註冊表中的狀態資訊應用於此幀視窗。
 
-*lpszSectionName*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz節名稱*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 *pFrameImpl*<br/>
-在`CFrameImpl` 物件的指標。 方法會將登錄中的狀態資訊套用到此框架視窗。
+[在]指向`CFrameImpl`物件的指標。 該方法將註冊表中的狀態資訊應用於此幀視窗。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為非零;否則為0。
+如果成功,則非零;0 否則。
 
 ### <a name="remarks"></a>備註
 
-這個方法會載入應用程式的狀態，以及框架視窗的任何狀態資訊。 框架視窗的載入資訊會套用到提供的框架視窗。 如果您未提供框架視窗，則只會載入應用程式狀態資訊。 應用程式資訊包括[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)、 [CCoNtextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)和[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)的狀態。
+此方法載入應用程式的狀態和幀視窗的任何狀態資訊。 幀視窗的載入資訊應用於提供的幀視窗。 如果不提供幀視窗,則僅載入應用程式狀態資訊。 應用程式資訊包括[CMouseManager 類](../../mfc/reference/cmousemanager-class.md)[、CContextMenuManager 類](../../mfc/reference/ccontextmenumanager-class.md)[、C鍵盤管理員類](../../mfc/reference/ckeyboardmanager-class.md)和[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)的狀態。
 
-`CFrameImpl::OnLoadFrame` 呼叫的預設執行 `LoadState`。
+調用`CFrameImpl::OnLoadFrame``LoadState`的默認實現。
 
-*LpszSectionName*參數不是登錄專案的絕對路徑。 它是新增至您應用程式的預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSectionName*參數不是註冊表項的絕對路徑。 它是添加到應用程式的預設註冊表項末尾的相對路徑。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="loadwindowplacement"></a>CWinAppEx：： LoadWindowPlacement
+## <a name="cwinappexloadwindowplacement"></a><a name="loadwindowplacement"></a>CWinAppEx::載入視窗放置
 
-從登錄載入主框架視窗的大小和位置時，由架構呼叫。
+當框架從註冊表載入主框架視窗的大小和位置時,由框架調用。
 
 ```
 virtual BOOL LoadWindowPlacement(
@@ -985,28 +986,28 @@ virtual BOOL LoadWindowPlacement(
 
 ### <a name="parameters"></a>參數
 
-*rectNormalPosition*<br/>
-脫銷矩形，其中包含主要框架視窗在還原位置的座標。
+*rect 正常位置*<br/>
+[出]在主框架窗口處於還原位置時包含其座標的矩形。
 
 *nFlags*<br/>
-脫銷旗標可控制最小化視窗的位置，以及作業系統如何在最小化視窗和還原的視窗之間切換。
+[出]控制最小化視窗的位置以及作業系統在最小化視窗和還原視窗之間切換的方式的標誌。
 
 *nShowCmd*<br/>
-脫銷指定視窗顯示狀態的整數。 如需可能值的詳細資訊，請參閱[CWnd：： ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。
+[出]指定視窗的顯示狀態的整數。 有關可能值的詳細資訊,請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為非零;否則為0。
+如果成功,則非零;0 否則。
 
 ### <a name="remarks"></a>備註
 
-根據預設，MFC 會在應用程式啟動時，自動載入主框架視窗的先前位置和狀態。 如需有關如何將此資訊儲存在登錄中的詳細資訊，請參閱[CWinAppEx：： StoreWindowPlacement](#storewindowplacement)。
+默認情況下,MFC 在應用程式啟動時自動載入主框架視窗的上一個位置和狀態。 有關此資訊如何儲存在註冊表中的詳細資訊,請參閱[CWinAppEx::儲存視窗放置](#storewindowplacement)。
 
-如果您想要載入主框架視窗的其他相關資訊，請覆寫這個方法。
+如果要載入有關主框架視窗的其他資訊,則重寫此方法。
 
-##  <a name="m_bforceimagereset"></a>CWinAppEx：： m_bForceImageReset
+## <a name="cwinappexm_bforceimagereset"></a><a name="m_bforceimagereset"></a>CWinAppEx:m_bForceImageReset
 
-指定架構在重載包含工具列的框架視窗時，是否重設所有工具列影像。
+指定框架在重新載入包含工具列的框架視窗時是否重置所有工具列圖像。
 
 ```
 BOOL m_bForceImageReset;
@@ -1014,11 +1015,11 @@ BOOL m_bForceImageReset;
 
 ### <a name="remarks"></a>備註
 
-`m_bForceImageReset` 的資料成員是受保護的變數。
+數據`m_bForceImageReset`成員是受保護的變數。
 
-##  <a name="onappcontexthelp"></a>CWinAppEx：： OnAppCoNtextHelp
+## <a name="cwinappexonappcontexthelp"></a><a name="onappcontexthelp"></a>CWinAppEx:應用上下文説明
 
-當使用者要求 [**自訂**] 對話方塊的內容說明時，架構會呼叫這個方法。
+當使用者請求**自定義**對話方塊的上下文説明時,框架將調用此方法。
 
 ```
 virtual void OnAppContextHelp(
@@ -1029,18 +1030,18 @@ virtual void OnAppContextHelp(
 ### <a name="parameters"></a>參數
 
 *pWndControl*<br/>
-在使用者叫用內容說明之視窗物件的指標。
+[在]指向視窗物件的指標,使用者在調用上下文時説明該視窗物件。
 
-*dwHelpIDArray[]*<br/>
-在保留的值。
+*dwHelpIDArray]**<br/>
+[在]保留值。
 
 ### <a name="remarks"></a>備註
 
-這個方法目前保留供日後使用。 預設的執行不會執行任何操作，而且架構目前不會呼叫它。
+此方法當前保留以供將來使用。 預設實現不執行任何操作,並且框架當前不調用它。
 
-##  <a name="onclosingmainframe"></a>CWinAppEx：： OnClosingMainFrame
+## <a name="cwinappexonclosingmainframe"></a><a name="onclosingmainframe"></a>CWinAppEx::打開主框架
 
-當框架視窗正在處理 WM_CLOSE 時，架構會呼叫這個方法。
+當幀視窗正在處理WM_CLOSE時,框架調用此方法。
 
 ```
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
@@ -1049,15 +1050,15 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ### <a name="parameters"></a>參數
 
 *pFrameImpl*<br/>
-在`CFrameImpl` 物件的指標。
+[在]指向`CFrameImpl`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設執行會儲存*pFrameImpl*的狀態。
+此方法的預設實現保存*pFrameImpl*的狀態。
 
-##  <a name="onviewdoubleclick"></a>CWinAppEx：： OnViewDoubleClick
+## <a name="cwinappexonviewdoubleclick"></a><a name="onviewdoubleclick"></a>CWinAppEx::OnView雙擊
 
-當使用者按兩下該視圖內的任何位置時，會呼叫與視圖相關聯的使用者定義命令。
+呼叫使用者定義的指令,當使用者按兩下該檢視中的任意位置時,該命令與視圖關聯。
 
 ```
 virtual BOOL OnViewDoubleClick(
@@ -1067,21 +1068,21 @@ virtual BOOL OnViewDoubleClick(
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-在衍生自[CView 類別](../../mfc/reference/cview-class.md)之物件的指標。
+*pwnd*<br/>
+[在]指向從[CView 類](../../mfc/reference/cview-class.md)派生的物件的指標。
 
 *iViewId*<br/>
-在視圖識別碼。
+[在]視圖 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果架構找到命令，則為 TRUE;否則為 FALSE。
+如果框架找到命令,則為 TRUE;如果框架找到命令,則為 TRUE。否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-為了支援自訂滑鼠行為，當您處理 WM_LBUTTONDBLCLK 訊息時，必須呼叫此函式。 這個方法會執行與*iViewId*所提供之視圖識別碼相關聯的命令。 如需自訂滑鼠行為的詳細資訊，請參閱[鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)。
+為了支援自定義滑鼠行為,您必須在處理WM_LBUTTONDBLCLK消息時調用此函數。 此方法將執行與*iViewId*提供的檢視 ID 關聯的命令。 有關自訂滑鼠行為的詳細資訊,請參閱[鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)。
 
-##  <a name="onworkspaceidle"></a>CWinAppEx：： OnWorkspaceIdle
+## <a name="cwinappexonworkspaceidle"></a><a name="onworkspaceidle"></a>CWinAppEx:在工作空間上
 
 ```
 virtual BOOL OnWorkspaceIdle(CWnd*);
@@ -1089,15 +1090,15 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 
 ### <a name="parameters"></a>參數
 
-在*CWnd&#38;*<br/>
+[在]*CWnd&#38;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="preloadstate"></a>CWinAppEx：:P reLoadState
+## <a name="cwinappexpreloadstate"></a><a name="preloadstate"></a>CWinAppEx::P重新載入狀態
 
-架構會在從登錄載入應用程式的狀態之前，立即呼叫此方法。
+框架在從註冊表載入應用程式的狀態之前立即調用此方法。
 
 ```
 virtual void PreLoadState();
@@ -1105,11 +1106,11 @@ virtual void PreLoadState();
 
 ### <a name="remarks"></a>備註
 
-如果您想要在架構載入應用程式狀態之前立即進行任何處理，請覆寫這個方法。
+如果要在框架載入應用程式狀態之前立即執行任何處理,請重寫此方法。
 
-##  <a name="presavestate"></a>CWinAppEx：:P reSaveState
+## <a name="cwinappexpresavestate"></a><a name="presavestate"></a>CWinAppEx::P重新儲存狀態
 
-架構會在儲存應用程式狀態之前立即呼叫此方法。
+框架在保存應用程式狀態之前立即調用此方法。
 
 ```
 virtual void PreSaveState();
@@ -1117,11 +1118,11 @@ virtual void PreSaveState();
 
 ### <a name="remarks"></a>備註
 
-如果您想要在架構儲存應用程式狀態之前立即進行任何處理，請覆寫這個方法。
+如果要在框架保存應用程式狀態之前立即執行任何處理,請重寫此方法。
 
-##  <a name="reloadwindowplacement"></a>CWinAppEx：： ReloadWindowPlacement
+## <a name="cwinappexreloadwindowplacement"></a><a name="reloadwindowplacement"></a>CWinAppEx::重新載入視窗放置
 
-從登錄重載視窗的大小和位置。
+從註冊表重新載入視窗的大小和位置。
 
 ```
 virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
@@ -1130,19 +1131,19 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ### <a name="parameters"></a>參數
 
 *pFrame*<br/>
-在框架視窗的指標。
+[在]指向框架視窗的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為非零;如果載入失敗或沒有要載入的資料，則為0。
+如果方法成功,則非零;如果負載失敗或沒有要載入的數據,則為 0。
 
 ### <a name="remarks"></a>備註
 
-使用函數[CWinAppEx：： StoreWindowPlacement](#storewindowplacement) ，將視窗的大小和位置寫入登錄。
+使用函數[CWinAppEx::儲存視窗放置](#storewindowplacement)將視窗的大小和位置寫入註冊表。
 
-##  <a name="savecustomstate"></a>CWinAppEx：： SaveCustomState
+## <a name="cwinappexsavecustomstate"></a><a name="savecustomstate"></a>CWinAppEx::保存自定義狀態
 
-架構會在將應用程式的狀態儲存至登錄之後，呼叫這個方法。
+框架在將應用程式的狀態保存到註冊表后調用此方法。
 
 ```
 virtual void SaveCustomState();
@@ -1150,11 +1151,11 @@ virtual void SaveCustomState();
 
 ### <a name="remarks"></a>備註
 
-如果您想要在應用程式將狀態儲存至登錄之後執行任何處理，請覆寫這個方法。 根據預設，這個方法不會執行任何操作。
+如果要在應用程式將狀態保存到註冊表后執行任何處理,請重寫此方法。 默認情況下,此方法不執行任何操作。
 
-##  <a name="savestate"></a>CWinAppEx：： SaveState
+## <a name="cwinappexsavestate"></a><a name="savestate"></a>CWinAppEx::保存狀態
 
-將應用程式狀態寫入 Windows 登錄。
+將應用程式狀態寫入 Windows 註冊表。
 
 ```
 virtual BOOL SaveState(
@@ -1176,28 +1177,28 @@ BOOL SaveState(
 
 ### <a name="parameters"></a>參數
 
-*lpszSectionName*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz節名稱*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 *pFrameImpl*<br/>
-在`CFrameImpl` 物件的指標。 此框架會儲存至 Windows 登錄。
+[在]指向`CFrameImpl`物件的指標。 此框架將保存到 Windows 註冊表。
 
 *pFrame*<br/>
-在框架視窗物件的指標。 此框架會儲存至 Windows 登錄。
+[在]指向幀視窗物件的指標。 此框架將保存到 Windows 註冊表。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUE;否則為 FALSE。
+如果成功,則為 TRUE;否則。
 
 ### <a name="remarks"></a>備註
 
-這個方法會儲存應用程式的狀態，以及所提供框架視窗的任何狀態資訊。 如果您未提供框架視窗，此方法只會儲存應用程式狀態。 應用程式資訊包括[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)、 [CCoNtextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)和[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)的狀態。
+此方法保存應用程式的狀態和提供幀視窗的任何狀態資訊。 如果不提供幀視窗,該方法將僅保存應用程式狀態。 應用程式資訊包括[CMouseManager 類](../../mfc/reference/cmousemanager-class.md)[、CContextMenuManager 類](../../mfc/reference/ccontextmenumanager-class.md)[、C鍵盤管理員類](../../mfc/reference/ckeyboardmanager-class.md)和[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)的狀態。
 
-*LpszSectionName*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSectionName*參數不是註冊表項的絕對路徑。 它是一個相對路徑,追加到應用程式的預設註冊表項的末尾。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-##  <a name="setregistrybase"></a>CWinAppEx：： SetRegistryBase
+## <a name="cwinappexsetregistrybase"></a><a name="setregistrybase"></a>CWinAppEx::設置註冊庫
 
-設定應用程式的預設登錄路徑。
+設置應用程式的預設註冊錶路徑。
 
 ```
 LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
@@ -1205,20 +1206,20 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 
 ### <a name="parameters"></a>參數
 
-*lpszSectionName*<br/>
-在包含登錄機碼路徑的字串。
+*lpsz節名稱*<br/>
+[在]包含註冊表項路徑的字串。
 
 ### <a name="return-value"></a>傳回值
 
-字串，包含預設登錄位置的路徑。
+包含預設註冊表位置的路徑的字串。
 
 ### <a name="remarks"></a>備註
 
-存取登錄之[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)的所有方法都會在預設位置啟動。 使用此方法來變更該預設登錄位置。 請使用[CWinAppEx：： GetRegistryBase](#getregistrybase)來取出預設的登錄位置。
+訪問註冊表的[CWinAppEx 類](../../mfc/reference/cwinappex-class.md)的所有方法都從預設位置開始。 使用此方法更改該預設註冊表位置。 使用[CWinAppEx:獲取註冊庫](#getregistrybase)來檢索默認註冊表位置。
 
-##  <a name="showpopupmenu"></a>CWinAppEx：： ShowPopupMenu
+## <a name="cwinappexshowpopupmenu"></a><a name="showpopupmenu"></a>CWinAppEx::顯示彈出選單
 
-顯示快顯功能表。
+顯示彈出式功能表。
 
 ```
 virtual BOOL ShowPopupMenu(
@@ -1230,27 +1231,27 @@ virtual BOOL ShowPopupMenu(
 ### <a name="parameters"></a>參數
 
 *uiMenuResId*<br/>
-在功能表資源識別碼。
+[在]功能表資源識別碼。
 
-*此處*<br/>
-在[CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ，指定功能表在螢幕座標中的位置。
+*點*<br/>
+[在]指定選單在螢幕座標中位置的[CPoint。](../../atl-mfc-shared/reference/cpoint-class.md)
 
-*pWnd*<br/>
-在擁有快顯功能表之視窗的指標。
+*pwnd*<br/>
+[在]指向具有彈出功能表的視窗的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功顯示快捷方式功能表，則為非零;否則為0。
+如果彈出功能表成功顯示,則非零;0 否則。
 
 ### <a name="remarks"></a>備註
 
-這個方法會顯示與*uiMenuResId*相關聯的功能表。
+此方法顯示與*uiMenuResId*關聯的功能表。
 
-若要支援快顯功能表，您必須具有[CCoNtextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。 如果您尚未初始化 `CContextMenuManager` 物件，`ShowPopupMenu` 將會失敗。
+要支援彈出式功能表,您必須具有[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。 如果尚未初始化物件,`CContextMenuManager``ShowPopupMenu`將失敗。
 
-##  <a name="storewindowplacement"></a>CWinAppEx：： StoreWindowPlacement
+## <a name="cwinappexstorewindowplacement"></a><a name="storewindowplacement"></a>CWinAppEx::商店視窗放置
 
-由架構呼叫，以將主框架視窗的大小和位置寫入登錄中。
+由框架調用,將主框架視窗的大小和位置寫入註冊表。
 
 ```
 virtual BOOL StoreWindowPlacement(
@@ -1262,27 +1263,27 @@ virtual BOOL StoreWindowPlacement(
 ### <a name="parameters"></a>參數
 
 *nFlags*<br/>
-在旗標可控制最小化視窗的位置，以及作業系統如何在最小化視窗和還原的視窗之間切換。
+[在]控制最小化視窗的位置以及作業系統在最小化視窗和還原視窗之間切換的方式的標誌。
 
 *nShowCmd*<br/>
-在指定視窗顯示狀態的整數。 如需可能值的詳細資訊，請參閱[CWnd：： ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。
+[在]指定視窗的顯示狀態的整數。 有關可能值的詳細資訊,請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。
 
-*rectNormalPosition*<br/>
-在矩形，其中包含主要框架視窗在已還原狀態時的座標。
+*rect 正常位置*<br/>
+[在]在主框架視窗處於還原狀態時包含其座標的矩形。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為非零;否則為0。
+如果成功,則非零;0 否則。
 
 ### <a name="remarks"></a>備註
 
-根據預設，MFC 會在應用程式結束之前，自動儲存主框架視窗的位置和狀態。 這項資訊會儲存在 Windows 登錄中，位於應用程式預設登錄位置的 WindowPlacement 機碼底下。 如需有關應用程式預設登錄位置的詳細資訊，請參閱[CWinAppEx：： GetRegistryBase](#getregistrybase)。
+預設情況下,MFC 會在應用程式退出之前自動保存主框架視窗的位置和狀態。 此資訊儲存在應用程式的預設註冊表位置的「視窗放置」鍵下的 Windows 註冊表中。 有關應用程式的預設註冊表位置的詳細資訊,請參閱[CWinAppEx::取得註冊庫](#getregistrybase)。
 
-如果您想要儲存主框架視窗的其他相關資訊，請覆寫這個方法。
+如果要存儲有關主框架視窗的其他資訊,則重寫此方法。
 
-##  <a name="writebinary"></a>CWinAppEx：： WriteBinary
+## <a name="cwinappexwritebinary"></a><a name="writebinary"></a>CWinAppEx::寫入二進制
 
-將二進位資料寫入登錄。
+將二進位數據寫入註冊表。
 
 ```
 BOOL WriteBinary(
@@ -1294,27 +1295,27 @@ BOOL WriteBinary(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在包含登錄機碼名稱的字串。
+[在]包含註冊表項名稱的字串。
 
 *pData*<br/>
-在要儲存的資料。
+[在]要存儲的數據。
 
-*nBytes*<br/>
-在*PData*的大小（以位元組為單位）。
+*n 位元組*<br/>
+[在]*pData*的大小(以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*LpszEntry*參數是位於應用程式預設登錄機碼底下的登錄專案名稱。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszEntry*參數是位於應用程式的預設註冊表項下的註冊表項的名稱。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-如果*lpszEntry*所指定的機碼不存在，此方法將會建立它。
+如果*lpszentry*指定的鍵不存在,則此方法將創建它。
 
-##  <a name="writeint"></a>CWinAppEx：： WriteInt
+## <a name="cwinappexwriteint"></a><a name="writeint"></a>CWinAppEx::寫入
 
-將數值資料寫入登錄。
+將數位數據寫入註冊表。
 
 ```
 BOOL WriteInt(
@@ -1325,24 +1326,24 @@ BOOL WriteInt(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在包含登錄機碼名稱的字串。
+[在]包含註冊表項名稱的字串。
 
-*N 值*<br/>
-在要儲存的資料。
+*n值*<br/>
+[在]要存儲的數據。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*LpszEntry*參數是位於應用程式預設登錄機碼底下的登錄專案名稱。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszEntry*參數是位於應用程式的預設註冊表項下的註冊表項的名稱。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-如果*lpszEntry*所指定的機碼不存在，此方法將會建立它。
+如果*lpszentry*指定的鍵不存在,則此方法將創建它。
 
-##  <a name="writeobject"></a>CWinAppEx：： WriteObject
+## <a name="cwinappexwriteobject"></a><a name="writeobject"></a>CWinAppEx:寫入物件
 
-將衍生自[CObject 類別](../../mfc/reference/cobject-class.md)的資料寫入登錄。
+將派生自[CObject 類](../../mfc/reference/cobject-class.md)的數據寫入註冊表。
 
 ```
 BOOL WriteObject(
@@ -1353,22 +1354,22 @@ BOOL WriteObject(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在字串，包含要設定的值。
+[在]包含要設定的值的字串。
 
 *obj*<br/>
-在方法將儲存 `CObject` 資料的參考。
+[在]對`CObject`方法將存儲的數據的引用。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將*obj*資料寫入至預設登錄機碼下的指定值。 請使用[CWinAppEx：： GetRegistryBase](#getregistrybase)來判斷目前的登錄機碼。
+此方法將*obj*資料寫入預設註冊表項下的指定值。 使用[CWinAppEx:獲取註冊庫](#getregistrybase)以確定當前的註冊表項。
 
-##  <a name="writesectionbinary"></a>CWinAppEx：： WriteSectionBinary
+## <a name="cwinappexwritesectionbinary"></a><a name="writesectionbinary"></a>CWinAppEx::寫節二進制
 
-將二進位資料寫入登錄中的值。
+將二進位資料寫入註冊表中的值。
 
 ```
 BOOL WriteSectionBinary(
@@ -1380,31 +1381,31 @@ BOOL WriteSectionBinary(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼名稱的字串
+*lpsz 子節*<br/>
+[在]包含註冊表項目名稱的字串
 
 *lpszEntry*<br/>
-在字串，包含要設定的值。
+[在]包含要設定的值的字串。
 
 *pData*<br/>
-在要寫入登錄的資料。
+[在]要寫入註冊表的數據。
 
-*nBytes*<br/>
-在*PData*的大小（以位元組為單位）。
+*n 位元組*<br/>
+[在]*pData*的大小(以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是一個相對路徑,追加到應用程式的預設註冊表項的末尾。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-如果*lpszEntry*所指定的機碼不存在，此方法將會建立它。
+如果*lpszentry*指定的鍵不存在,則此方法將創建它。
 
-##  <a name="writesectionint"></a>CWinAppEx：： WriteSectionInt
+## <a name="cwinappexwritesectionint"></a><a name="writesectionint"></a>CWinAppEx::寫科因
 
-將數值資料寫入登錄。
+將數位數據寫入註冊表。
 
 ```
 BOOL WriteSectionInt(
@@ -1415,28 +1416,28 @@ BOOL WriteSectionInt(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼之相對路徑的字串。
+*lpsz 子節*<br/>
+[在]包含註冊表項的相對路徑的字串。
 
 *lpszEntry*<br/>
-在字串，包含要設定的值。
+[在]包含要設定的值的字串。
 
-*N 值*<br/>
-在要寫入登錄的資料。
+*n值*<br/>
+[在]要寫入註冊表的數據。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是附加到應用程式的預設註冊表項的相對路徑。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-如果*lpszEntry*所指定的機碼不存在，此方法將會建立它。
+如果*lpszentry*指定的鍵不存在,則此方法將創建它。
 
-##  <a name="writesectionobject"></a>CWinAppEx：： WriteSectionObject
+## <a name="cwinappexwritesectionobject"></a><a name="writesectionobject"></a>CWinAppEx:寫節物件
 
-將衍生自[CObject 類別](../../mfc/reference/cobject-class.md)的資料寫入至特定的登錄值。
+將派生自[CObject 類別](../../mfc/reference/cobject-class.md)資料寫入特定的註冊表值。
 
 ```
 BOOL WriteSectionObject(
@@ -1447,28 +1448,28 @@ BOOL WriteSectionObject(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼名稱的字串。
+*lpsz 子節*<br/>
+[在]包含註冊表項名稱的字串。
 
 *lpszEntry*<br/>
-在字串，包含要設定之值的名稱。
+[在]包含要設定的值的名稱的字串。
 
 *obj*<br/>
-在要儲存的資料。
+[在]要存儲的數據。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是一個相對路徑,追加到應用程式的預設註冊表項的末尾。 要獲取或設置預設註冊表項,請使用[CWinAppEx::獲取註冊庫](#getregistrybase)和[CWinAppEx::setRegistryBase](#setregistrybase)的方法。
 
-如果*lpszEntry*所指定的值不存在於*lpszSubSection*所指定的登錄機碼底下，此方法將會建立該值。
+如果*lpszEntry*指定的值在*lpszSubSection*指定的註冊表項下不存在,則此方法將創建該值。
 
-##  <a name="writesectionstring"></a>CWinAppEx：： WriteSectionString
+## <a name="cwinappexwritesectionstring"></a><a name="writesectionstring"></a>CWinAppEx::寫節串
 
-將字串資料寫入至登錄中的值。
+將字串資料寫入註冊表中的值。
 
 ```
 BOOL WriteSectionString(
@@ -1479,28 +1480,28 @@ BOOL WriteSectionString(
 
 ### <a name="parameters"></a>參數
 
-*lpszSubSection*<br/>
-在包含登錄機碼名稱的字串。
+*lpsz 子節*<br/>
+[在]包含註冊表項名稱的字串。
 
 *lpszEntry*<br/>
-在字串，包含要設定的值。
+[在]包含要設定的值的字串。
 
 *lpszValue*<br/>
-在要寫入登錄的字串資料。
+[在]要寫入註冊表的字串數據。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*LpszSubSection*參數不是登錄專案的絕對路徑。 它是附加至應用程式預設登錄機碼結尾的相對路徑。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszSubSection 參數*不是註冊表項的絕對路徑。 它是一個相對路徑,追加到應用程式的預設註冊表項的末尾。 要獲取或設置預設註冊表項,請使用[CWinAppEx::獲取註冊庫](#getregistrybase)和[CWinAppEx::setRegistryBase](#setregistrybase)的方法。
 
-如果*lpszEntry*所指定的值不存在於*lpszSubSection*之下，這個方法將會建立它。
+如果*lpszEntry*指定的值在*lpszSubSection*下不存在,則此方法將創建它。
 
-##  <a name="writestring"></a>CWinAppEx：： WriteString
+## <a name="cwinappexwritestring"></a><a name="writestring"></a>CWinAppEx::寫字串
 
-將字串資料寫入登錄。
+將字串資料寫入註冊表。
 
 ```
 BOOL WriteString(
@@ -1511,27 +1512,27 @@ BOOL WriteString(
 ### <a name="parameters"></a>參數
 
 *lpszEntry*<br/>
-在包含登錄機碼名稱的字串。
+[在]包含註冊表項名稱的字串。
 
 *lpszValue*<br/>
-在要儲存的資料。
+[在]要存儲的數據。
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*LpszEntry*參數是位於應用程式預設登錄機碼底下的登錄專案名稱。 若要取得或設定預設的登錄機碼，請分別使用[CWinAppEx：： GetRegistryBase](#getregistrybase)和[CWinAppEx：： SetRegistryBase](#setregistrybase)方法。
+*lpszEntry*參數是位於應用程式的預設註冊表項下的註冊表項的名稱。 要取得或設定預設註冊表項,請使用[CWinAppEx::取得註冊庫](#getregistrybase)和[CWinAppEx::設定註冊表項的方法](#setregistrybase)。
 
-如果*lspzEntry*所指定的機碼不存在，此方法將會建立它。
+如果*lspzentry*指定的鍵不存在,則此方法將創建它。
 
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CWinApp 類別](../../mfc/reference/cwinapp-class.md)<br/>
-[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)<br/>
+[滑鼠管理員類別](../../mfc/reference/cmousemanager-class.md)<br/>
 [CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)<br/>
 [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)<br/>
 [CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)

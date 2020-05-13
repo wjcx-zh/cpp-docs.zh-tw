@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: a6ed6062be02fddc111e4eda4d26226b7a7a0c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f09d9b2f46233cf356f5ade8a5b90e08a213d276
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260671"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168198"
 ---
 # <a name="catlexception-class"></a>CAtlException 類別
 
@@ -22,7 +22,7 @@ ms.locfileid: "62260671"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CAtlException
 ```
 
@@ -38,29 +38,29 @@ class CAtlException
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlException::operator HRESULT](#operator_hresult)|將轉換的 HRESULT 值目前的物件。|
+|[CAtlException：： operator HRESULT](#operator_hresult)|將目前的物件轉換為 HRESULT 值。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlException::m_hr](#m_hr)|物件所建立的 HRESULT，以及用來儲存錯誤狀況的類型的變數。|
+|[CAtlException：： m_hr](#m_hr)|由物件建立並用來儲存錯誤狀況之 HRESULT 類型的變數。|
 
 ## <a name="remarks"></a>備註
 
-A`CAtlException`物件都代表與 ATL 作業相關的例外狀況。 `CAtlException`類別包含儲存轉換運算子，可讓您將處理例外狀況，如同它是 HRESULT 的例外狀況原因的狀態碼的公用資料成員。
+`CAtlException`物件代表與 ATL 作業相關的例外狀況條件。 `CAtlException`類別包含的公用資料成員，會儲存指出例外狀況原因的狀態碼，以及可讓您將例外狀況視為 HRESULT 的轉換運算子。
 
-一般情況下，您會呼叫`AtlThrow`而不是建立`CAtlException`直接物件。
+一般來說，您會呼叫`AtlThrow` ，而不是直接`CAtlException`建立物件。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlexcept.h
+**標頭：** atlexcept。h
 
-##  <a name="catlexception"></a>  CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException
 
 建構函式。
 
-```
+```cpp
 CAtlException(HRESULT hr) throw();
 CAtlException() throw();
 ```
@@ -70,25 +70,25 @@ CAtlException() throw();
 *hr*<br/>
 HRESULT 錯誤碼。
 
-##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException：： operator HRESULT
 
-將轉換的 HRESULT 值目前的物件。
+將目前的物件轉換為 HRESULT 值。
 
-```
+```cpp
 operator HRESULT() const throw ();
 ```
 
-##  <a name="m_hr"></a>  CAtlException::m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException：： m_hr
 
 HRESULT 資料成員。
 
-```
+```cpp
 HRESULT m_hr;
 ```
 
 ### <a name="remarks"></a>備註
 
-儲存錯誤條件之資料成員。 HRESULT 值建構函式，設定[CAtlException::CAtlException](#catlexception)。
+儲存錯誤條件的資料成員。 HRESULT 值是由[CAtlException：： CAtlException](#catlexception)函數設定。
 
 ## <a name="see-also"></a>另請參閱
 

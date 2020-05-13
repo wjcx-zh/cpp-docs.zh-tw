@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8c411dbd29316219759351f1f1633b6e57b92e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207190"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377135"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView 類別
 
@@ -39,37 +39,37 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|建構 `CDaoRecordView` 物件。|
+|[CDao記錄檢視:CDaoRecordView](#cdaorecordview)|建構 `CDaoRecordView` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|傳回非零值，如果目前的記錄中相關聯的資料錄集的第一筆記錄。|
-|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|傳回非零值，如果目前的記錄相關聯的資料錄集中的最後一筆記錄。|
-|[CDaoRecordView::OnGetRecordset](#ongetrecordset)|傳回衍生自類別的物件的指標`CDaoRecordset`。 ClassWizard 覆寫這個函式，為您，並在必要時建立資料錄集。|
-|[CDaoRecordView::OnMove](#onmove)|如果目前資料錄已變更，更新資料來源上，則會移至指定的記錄 （下一步、 上一個，第一個或最後一個）。|
+|[CDaoRecord 檢視:Ison 第一記錄](#isonfirstrecord)|如果當前記錄是關聯記錄集中的第一個記錄,則返回非零。|
+|[CDaoRecord 檢視:IslastRecord](#isonlastrecord)|如果當前記錄是關聯記錄集中的最後一條記錄,則返回非零。|
+|[CDaoRecordView::OngetRecordset](#ongetrecordset)|返回指向 派生`CDaoRecordset`自的類對象的指標。 ClassWizard 會為您重寫此函數,並在必要時創建記錄集。|
+|[CDao記錄檢視:移動](#onmove)|如果當前記錄已更改,則在數據源上更新它,然後移動到指定的記錄(下一個、上一個、第一個或最後一個)。|
 
 ## <a name="remarks"></a>備註
 
-檢視是表單檢視，直接連線到`CDaoRecordset`物件。 檢視從對話方塊範本資源建立，並顯示的欄位`CDaoRecordset`對話方塊範本的控制項中的物件。 `CDaoRecordView`物件用來自動化的表單上的控制項和資料錄集的欄位之間的資料移動的對話方塊資料交換 (DDX) 和 DAO 資料錄欄位交換 (DFX)。 `CDaoRecordView` 也提供移動的預設實作第一筆、 下一步 上, 一個或最後一筆和更新目前在檢視中的記錄的介面。
+視圖是直接連接到`CDaoRecordset`物件的表單檢視。 視圖是從對話方塊樣本資源創建的,並在對話方塊範本的控制項中`CDaoRecordset`顯示 物件的欄位。 對`CDaoRecordView`象 使用對話框資料交換 (DDX) 和 DAO 記錄欄位交換 (DFX) 來自動在窗體上的控制項和記錄集的欄位之間行動資料。 `CDaoRecordView`還提供用於移動到第一個、下一個、上一個或最後一個記錄的預設實現,以及用於更新當前視圖中記錄的介面。
 
 > [!NOTE]
->  DAO 資料庫類別是開放式資料庫連接 (ODBC) 為基礎的 MFC 資料庫類別有所區別。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 您仍然可以使用 DAO 類別; 存取 ODBC 資料來源DAO 類別通常提供優異的功能，因為它們使用 Microsoft Jet 資料庫引擎。
+> DAO 資料庫類不同於基於開放資料庫連接 (ODBC) 的 MFC 資料庫類。 所有 DAO 資料庫類名稱都有「CDao」首碼。 您仍可以使用 DAO 類訪問 ODBC 資料來源;DAO 類通常提供卓越的功能,因為它們使用 Microsoft Jet 資料庫引擎。
 
-若要建立您的資料錄檢視的最常見方式是使用應用程式精靈。 應用程式精靈 建立資料錄檢視類別和其相關聯的資料錄集類別，做為您的基本架構的入門應用程式的一部分。
+創建記錄檢視的最常見方法是使用應用程式嚮導。 應用程式精靈將創建記錄檢視類及其關聯的記錄集類,作為骨架初學者應用程式的一部分。
 
-如果您只需要單一的表單時，應用程式精靈 的方法是更容易。 ClassWizard 可讓您決定使用資料錄檢視稍後在開發程序。 如果您未建立資料錄檢視類別與應用程式精靈，可以使用 ClassWizard 稍後建立它。 分別建立資料錄檢視和資料錄集，然後將它們連接至使用 ClassWizard 是最具彈性的方法，因為它讓您更能控制中命名的資料錄集類別和其。H /。CPP 檔案。 這種方法也可讓您有多個資料錄檢視上相同的資料錄集類別。
+如果您只需要一個表單,則應用程式嚮導方法會更容易。 ClassWizard允許您決定在開發過程的稍後時間使用記錄檢視。 如果不使用應用程式嚮導創建記錄視圖類,則可以稍後使用 ClassWizard 創建它。 使用 ClassWizard 分別建立記錄檢視和記錄集,然後連接它們是最靈活的方法,因為它為您提供了命名記錄集類及其的更多控制權。H/.CPP 檔。 此方法還允許您在同一記錄集類上具有多個記錄視圖。
 
-為了方便使用者記錄從移動資料錄檢視中，應用程式精靈會建立功能表 （及選擇性地工具列） 資源移動第一筆、 下一步 上, 一個或最後一筆記錄。 如果您建立資料錄檢視類別與 ClassWizard 時，您需要這些資源自行建立具有功能表和點陣圖編輯器。
+為了使最終使用者在記錄檢視中輕鬆從記錄移動到記錄,應用程式嚮導將創建功能表(和可選工具列)資源,以便移動到第一、下一個、上一個或最後一個記錄。 如果使用 ClassWizard 創建記錄檢視類,則需要使用菜單和位圖編輯器自行創建這些資源。
 
-移動記錄間的預設實作的相關資訊，請參閱`IsOnFirstRecord`並`IsOnLastRecord`和 發行項[使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)，這同時適用於`CRecordView`和`CDaoRecordView`。
+有關`IsOnFirstRecord`從紀錄移至紀錄的預設的資訊,請參閱`IsOnLastRecord`與 以及[文章「使用紀錄檢視](../../data/using-a-record-view-mfc-data-access.md)」,該檢視同時適用於`CRecordView`和`CDaoRecordView`。
 
-`CDaoRecordView` 會追蹤的資料錄集的使用者的位置，以便資料錄檢視可以更新使用者介面。 當使用者移至任一端的資料錄集時，資料錄檢視停用使用者介面物件，例如功能表項目或工具列按鈕 — 移動中相同的方向。
+`CDaoRecordView`追蹤使用者在記錄集中的位置,以便記錄檢視可以更新使用者介面。 當使用者移動到記錄集的任一端時,記錄檢視將禁用使用者介面物件(如功能表項或工具列按鈕)以向同一方向進一步移動。
 
-多個宣告和使用您的資料錄檢視和資料錄集類別的詳細資訊，請參閱 「 設計和建立資料錄檢視 >，文件中[資料錄檢視](../../data/record-views-mfc-data-access.md)。 如需有關資料錄檢視工作的方式，以及如何使用它們的詳細資訊，請參閱[使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。 先前所述的所有文章同時適都用於`CRecordView`和`CDaoRecordView`。
+有關聲明和使用記錄檢視和記錄集類的詳細資訊,請參閱文章[「記錄視圖](../../data/record-views-mfc-data-access.md)」中的「設計和創建記錄視圖」。 有關記錄檢視的工作原理以及如何使用它們的詳細資訊,請參閱[文章"使用記錄視圖](../../data/using-a-record-view-mfc-data-access.md)"。 所有條款均`CRecordView`適用於與`CDaoRecordView`。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -87,11 +87,11 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdao.h
+**標題:** afxdao.h
 
-##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView
+## <a name="cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDao記錄檢視:CDaoRecordView
 
-當您建立的物件型別的衍生自`CDaoRecordView`，呼叫建構函式來初始化檢視的物件，並識別對話方塊資源檢視所依據的任一形式。
+創建派生自`CDaoRecordView`的類型的物件時,調用構造函數的任一形式來初始化視圖物件並標識視圖所基於的對話框資源。
 
 ```
 explicit CDaoRecordView(LPCTSTR lpszTemplateName);
@@ -100,29 +100,29 @@ explicit CDaoRecordView(UINT nIDTemplate);
 
 ### <a name="parameters"></a>參數
 
-*lpszTemplateName*<br/>
-包含 null 結束的字串，這是對話方塊範本資源的名稱。
+*lpszTemplate 名稱*<br/>
+包含一個 null 連接端字串,該字串是對話方塊樣本資源的名稱。
 
 *nIDTemplate*<br/>
-包含對話方塊範本資源的識別碼。
+包含對話方塊樣本資源的 ID 號。
 
 ### <a name="remarks"></a>備註
 
-依名稱 (pass 字串做為引數的建構函式) 或其識別碼 (pass 不帶正負號的整數做為引數)，您可能可以識別資源。 資源識別碼，建議使用。
+您可以按名稱識別資源(將字串作為參數傳遞給建構函數)或通過其 ID(傳遞未簽名的整數作為參數)。 建議使用資源識別碼。
 
 > [!NOTE]
->  您的衍生的類別必須提供它自己的建構函式。 在衍生類別的建構函式，呼叫建構函式`CDaoRecordView::CDaoRecordView`資源名稱或識別碼做為引數。
+> 派生類必須提供其自己的構造函數。 在派生類的構造函數中,將資源名稱或`CDaoRecordView::CDaoRecordView`ID 的構造函數稱為參數。
 
-`CDaoRecordView::OnInitialUpdate` 呼叫`CWnd::UpdateData`，其會呼叫`CWnd::DoDataExchange`。 這次呼叫`DoDataExchange`連接`CDaoRecordView`（間接） 為控制`CDaoRecordset`欄位 ClassWizard 所建立的資料成員。 這些資料成員無法使用之前之後您呼叫的基底類別,`CFormView::OnInitialUpdate`成員函式。
+`CDaoRecordView::OnInitialUpdate`呼叫`CWnd::UpdateData`,呼`CWnd::DoDataExchange`叫 。 此初始調用將`DoDataExchange`控制`CDaoRecordView`件 (間接)`CDaoRecordset`連接到 ClassWizard 創建的欄位數據成員。 在調用基類`CFormView::OnInitialUpdate`成員函數之前,不能使用這些數據成員。
 
 > [!NOTE]
->  如果您使用 ClassWizard，精靈會定義**enum**值`CDaoRecordView::IDD`類別宣告和使用中的成員初始化清單建構函式中。
+> 如果使用 ClassWizard,嚮導將在類聲明中定義**枚舉**值`CDaoRecordView::IDD`,並在構造函數的成員初始化清單中使用它。
 
 [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]
 
-##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord
+## <a name="cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecord 檢視:Ison 第一記錄
 
-呼叫此成員函式，以判斷目前的記錄是否與此資料錄檢視相關聯之資料錄集物件中的第一筆記錄。
+調用此成員函數以確定當前記錄是否是與此記錄檢視關聯的記錄集物件中的第一個記錄。
 
 ```
 BOOL IsOnFirstRecord();
@@ -130,17 +130,17 @@ BOOL IsOnFirstRecord();
 
 ### <a name="return-value"></a>傳回值
 
-如果目前的記錄資料錄集; 第一筆記錄，非零值。否則為 0。
+如果當前記錄是記錄集中的第一個記錄,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-此函式可用於撰寫您自己的預設實作 ClassWizard 所撰寫的命令更新處理常式。
+此函數可用於編寫由 ClassWizard 編寫的預設命令更新處理程序的實現。
 
-如果使用者移至第一筆記錄，framework 會停用任何使用者介面物件 （例如功能表項目或工具列按鈕） 您可以將環境移至第一個或前一筆記錄。
+如果使用者移動到第一條記錄,框架將禁用移動到第一條或上一條記錄時具有的任何使用者介面物件(例如,功能表項或工具列按鈕)。
 
-##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord
+## <a name="cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecord 檢視:IslastRecord
 
-呼叫此成員函式，以判斷目前的記錄是否與此資料錄檢視相關聯之資料錄集物件中的最後一筆記錄。
+調用此成員函數以確定當前記錄是否是與此記錄檢視關聯的記錄集物件中的最後一條記錄。
 
 ```
 BOOL IsOnLastRecord();
@@ -148,18 +148,18 @@ BOOL IsOnLastRecord();
 
 ### <a name="return-value"></a>傳回值
 
-如果目前的記錄資料錄集; 最後一筆記錄，非零值。否則為 0。
+如果當前記錄是記錄集中的最後一條記錄,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-此函式可用於撰寫您自己的預設實作 ClassWizard 寫入移轉記錄間支援的使用者介面的命令更新處理常式。
+此函數可用於編寫 ClassWizard 編寫的預設命令更新處理程式的實現,以支援使用者介面從記錄移動到記錄。
 
 > [!CAUTION]
->  此函式的結果是可靠的不同之處在於檢視可能無法偵測到資料錄集的結尾，直到使用者已移動過。 使用者可能要超越資料錄檢視所見，它必須停用任何使用者介面物件，將環境移至下一個或最後一個記錄之前的最後一筆記錄。 如果使用者移至將最後一筆記錄，然後移回至最後一個記錄 （或之前），資料錄檢視可以追蹤使用者的資料錄集中的位置，並正確地停用使用者介面物件。
+> 此功能的結果是可靠的,只不過視圖可能無法檢測記錄集的末尾,直到用戶移動過它。 使用者可能必須超出最後一條記錄,然後記錄視圖才能判斷它必須禁用任何使用者介面物件才能移動到下一條或最後一條記錄。 如果使用者移動過去最後一條記錄,然後移回最後一條記錄(或之前),記錄視圖可以跟蹤使用者在記錄集中的位置並正確禁用使用者界面物件。
 
-##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset
+## <a name="cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView::OngetRecordset
 
-將指標傳回至`CDaoRecordset`-衍生的資料錄檢視相關聯的物件。
+返回指向與記錄視圖`CDaoRecordset`關聯的派生物件的指標。
 
 ```
 virtual CDaoRecordset* OnGetRecordset() = 0;
@@ -167,17 +167,17 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-指標`CDaoRecordset`-衍生物件，如果物件已成功建立，否則為 NULL 指標。
+如果成功創建了物件`CDaoRecordset`,則指向派生物件的指標;否則為 NULL 指標。
 
 ### <a name="remarks"></a>備註
 
-您必須覆寫此成員函式，來建構或取得資料錄集物件和傳回的指標。 如果您宣告您的資料錄檢視類別與 ClassWizard，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料錄集指標儲存在記錄檢視中，如果有的話。 您如果不是，它會建構類型的資料錄集物件指定 ClassWizard 並呼叫其`Open`成員函式以開啟資料表或執行查詢，並再傳回物件的指標。
+必須重寫此成員函數以構造或獲取記錄集物件,並返回指向它的指標。 如果使用 ClassWizard 聲明記錄檢視類,精靈將為您編寫預設覆蓋。 ClassWizard 的預設實現返回存儲在記錄視圖中的記錄集指標(如果存在)。 如果沒有,它將建構使用 ClassWizard 指定的類型的記錄集物件,並調用`Open`其成員 函數打開表或運行查詢,然後返回指向該物件的指標。
 
-如需詳細資訊和範例，請參閱文章[資料錄檢視：使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
+有關詳細資訊和範例,請參閱[文章記錄檢視:使用紀錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
 
-##  <a name="onmove"></a>  CDaoRecordView::OnMove
+## <a name="cdaorecordviewonmove"></a><a name="onmove"></a>CDao記錄檢視:移動
 
-呼叫此成員函式，將移至不同的記錄資料錄集，顯示其欄位的資料錄檢視控制項中。
+調用此成員函數以移動到記錄集中的不同記錄,並在記錄檢視的控制項中顯示其欄位。
 
 ```
 virtual BOOL OnMove(UINT nIDMoveCommand);
@@ -185,33 +185,33 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 
 ### <a name="parameters"></a>參數
 
-*nIDMoveCommand*<br/>
-其中一個下列的標準命令 ID 值：
+*nIDMove命令*<br/>
+以下標準命令 ID 值之一:
 
-- ID_RECORD_FIRST 將移至資料錄集的第一個記錄。
+- ID_RECORD_FIRST移動到記錄集中的第一個記錄。
 
-- ID_RECORD_LAST 將移至最後一筆記錄，在資料錄集。
+- ID_RECORD_LAST移動到記錄集中的最後一條記錄。
 
-- ID_RECORD_NEXT 將移至下一個資料錄集記錄。
+- ID_RECORD_NEXT移動到記錄集中的下一個記錄。
 
-- ID_RECORD_PREV 將移至前一筆記錄，在資料錄集。
+- ID_RECORD_PREV移動到記錄集中的上一條記錄。
 
 ### <a name="return-value"></a>傳回值
 
-如果移動不成功則為非零否則為 0，表示移動要求遭到拒絕。
+如果移動成功,則非零;否則 0 如果移動請求被拒絕。
 
 ### <a name="remarks"></a>備註
 
-預設實作會呼叫適當的移動成員函式的`CDaoRecordset`資料錄檢視相關聯的物件。
+預設實現調用與記錄檢視關聯的`CDaoRecordset`物件的相應 Move 成員函數。
 
-根據預設，`OnMove`更新資料來源上目前的記錄，如果使用者資料錄檢視中已變更。
+預設情況下,`OnMove`如果使用者在記錄檢視中更改了資料來源上的現記錄,則更新該紀錄。
 
-應用程式精靈 建立功能表資源的第一筆、 最後一筆記錄、 下一筆記錄和上一筆記錄的功能表項目。 如果您選取的初始工具列選項，應用程式精靈 也建立工具列按鈕對應至這些命令。
+"應用程式精靈"創建具有"第一條記錄"、"最後一條記錄"、"下一個記錄"和"上一個記錄"功能表項的功能表資源。 如果選擇「初始工具列」選項,則「應用程式精靈」還會創建一個工具列,其中按鈕對應於這些命令。
 
-如果您跳過資料錄集的最後一筆記錄時，[記錄] 檢視會繼續顯示最後一筆記錄。 如果您向後跳過第一筆記錄，[記錄] 檢視會繼續顯示第一筆記錄。
+如果移動超過記錄集中的最後一條記錄,記錄視圖將繼續顯示最後一條記錄。 如果向後移動超過第一條記錄,則記錄視圖將繼續顯示第一條記錄。
 
 > [!CAUTION]
->  呼叫`OnMove`擲回例外狀況，如果資料錄集不有任何記錄。 呼叫適當的使用者介面更新處理常式函式 — `OnUpdateRecordFirst`， `OnUpdateRecordLast`， `OnUpdateRecordNext`，或`OnUpdateRecordPrev`— 相對應的移動作業，以判斷資料錄集是否有任何記錄。
+> 如果`OnMove`記錄集沒有記錄,則調用將引發異常。 在相應的行動操作之前調用相應的使用者介面更新`OnUpdateRecordFirst`處理`OnUpdateRecordLast`程式`OnUpdateRecordNext`函`OnUpdateRecordPrev`數 *、、 或「以確定記錄集是否具有任何記錄。
 
 ## <a name="see-also"></a>另請參閱
 

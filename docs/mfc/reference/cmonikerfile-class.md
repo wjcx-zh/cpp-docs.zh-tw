@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: 56283b56a1c0832d34ce23c7db47c47d9480aec8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fc74ad2499fcde63faa2c5859a87fd9ffd2846eb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504573"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319778"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 類別
 
-表示由[IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)命名的資料流程 ( [IStream](/windows/win32/api/objidl/nn-objidl-istream))。
+表示由[IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)命名的資料串流( [IStream](/windows/win32/api/objidl/nn-objidl-istream))。
 
 ## <a name="syntax"></a>語法
 
@@ -39,52 +39,52 @@ class CMonikerFile : public COleStreamFile
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CMonikerFile:: CMonikerFile](#cmonikerfile)|建構 `CMonikerFile` 物件。|
+|[CMoniker 檔案:CMoniker 檔案](#cmonikerfile)|建構 `CMonikerFile` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMonikerFile::Close](#close)|卸離並釋放資料流程, 並釋放該名字標記。|
-|[CMonikerFile::Detach](#detach)|`IMoniker`從這個`CMonikerFile`物件卸離。|
-|[CMonikerFile::GetMoniker](#getmoniker)|傳回目前的標記。|
-|[CMonikerFile::Open](#open)|開啟指定的檔案以取得資料流程。|
+|[CMoniker 檔案:關閉](#close)|分離並釋放流並釋放名字物件。|
+|[CMoniker檔::D](#detach)|從`CMonikerFile`物件`IMoniker`分離 。|
+|[CMoniker 檔:取得莫尼克爾](#getmoniker)|返回當前名字物件。|
+|[CMoniker 檔::開啟](#open)|開啟指定的檔案以取得流。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMonikerFile::CreateBindContext](#createbindcontext)|取得系結內容, 或建立預設已初始化的系結內容。|
+|[CMoniker 檔案:建立連結中文](#createbindcontext)|獲取繫結上下文或創建預設初始化綁定上下文。|
 
 ## <a name="remarks"></a>備註
 
-標記包含的資訊與檔案的路徑名稱很相似。 如果您有指向標記物件`IMoniker`介面的指標, 您可以存取已識別的檔案, 而不需要任何其他有關檔案實際位置的特定資訊。
+名字物件包含的信息與檔的路徑名稱非常類似。 如果具有指向名字物件介面的`IMoniker`指標,則可以造訪已標識的檔,而無需提供有關文件實際位置的任何其他特定資訊。
 
-衍生自`COleStreamFile`, `CMonikerFile`接受一個名字標記或字串標記法, 它可以放入名字標記中, 並系結至標記為名稱的資料流程。 然後您就可以讀取和寫入該資料流程。 的實際用途`CMonikerFile`是提供對`IStream`所命名之的`IMoniker`簡單存取, 讓您不需要自行系結至資料流程, 但也有`CFile`資料流程的功能。
+派生自`COleStreamFile``CMonikerFile`,獲取可以將其轉換為名字物件並綁定到名字物件為名稱的流的字串表示形式。 然後,您可以讀取和寫入該流。 的真正目的是`CMonikerFile`提供對`IStream``IMoniker`s 命名的 s 的簡單存取,這樣您不必自己綁定到流`CFile`,而又對流具有功能。
 
-`CMonikerFile`不能用來系結至資料流程以外的任何專案。 如果您想要系結至儲存體或物件, 則必須直接使用`IMoniker`介面。
+`CMonikerFile`不能用於綁定到流以外的任何內容。 如果要結合到儲存或物件,必須直接使用介面`IMoniker`。
 
-如需有關資料流程和名字標記的詳細資訊, 請參閱[COleStreamFile](../../mfc/reference/colestreamfile-class.md) In The *MFC Reference*和[IStream](/windows/win32/api/objidl/nn-objidl-istream) and [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) in the Windows SDK。
+有關流和名字的詳細資訊,請參閱*MFC 參考*中的[COleStreamFile](../../mfc/reference/colestreamfile-class.md)以及 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream)和[IMoniker。](/windows/win32/api/objidl/nn-objidl-imoniker)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 [CFile](../../mfc/reference/cfile-class.md)
 
-[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
+[COleStream 檔案](../../mfc/reference/colestreamfile-class.md)
 
 `CMonikerFile`
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxole。h
+**標題:** afxole.h
 
-##  <a name="close"></a>CMonikerFile:: Close
+## <a name="cmonikerfileclose"></a><a name="close"></a>CMoniker 檔案:關閉
 
-呼叫此函式來卸離和釋放資料流程, 並釋放該名字。
+調用此函數以分離和釋放流並釋放名字物件。
 
 ```
 virtual void Close();
@@ -92,9 +92,9 @@ virtual void Close();
 
 ### <a name="remarks"></a>備註
 
-可以在未開啟或已關閉的資料流程上呼叫。
+可以在未打開或已關閉的流上調用。
 
-##  <a name="cmonikerfile"></a>CMonikerFile:: CMonikerFile
+## <a name="cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a>CMoniker 檔案:CMoniker 檔案
 
 建構 `CMonikerFile` 物件。
 
@@ -102,9 +102,9 @@ virtual void Close();
 CMonikerFile();
 ```
 
-##  <a name="createbindcontext"></a>CMonikerFile:: CreateBindCoNtext
+## <a name="cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a>CMoniker 檔案:建立連結中文
 
-呼叫此函式以建立預設的已初始化系結內容。
+呼叫此函數以創建預設初始化綁定上下文。
 
 ```
 IBindCtx* CreateBindContext(CFileException* pError);
@@ -113,19 +113,19 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="parameters"></a>參數
 
 *pError*<br/>
-檔案例外狀況的指標。 發生錯誤時, 會將其設定為原因。
+指向文件異常的指標。 如果出現錯誤,它將設置為原因。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 則為要系結之系結內容[IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx)的指標;否則為 Null。 如果實例是以`IBindHost`介面開啟, 則會`IBindHost`從抓取系結內容。 如果沒有`IBindHost`介面, 或介面無法傳回系結內容, 則會建立系結內容。 如需[IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\))介面的說明, 請參閱 Windows SDK。
+指向綁定上下文 IBindCtx 的指標,如果成功,則與綁定上下文[IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx)綁定;否則 NULL。 如果實體是使用介面開啟的`IBindHost`,則從中檢索繫結上下文`IBindHost`。 如果沒有`IBindHost`介面或介面無法返回綁定上下文,則創建綁定上下文。 有關[IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\))介面的說明,請參閱Windows SDK。
 
 ### <a name="remarks"></a>備註
 
-系結內容是一個物件, 它會儲存特定標記系結作業的相關資訊。 您可以覆寫此函式, 以提供自訂系結內容。
+綁定上下文是存儲有關特定名字綁定操作的資訊物件。 您可以重寫此函數以提供自定義綁定上下文。
 
-##  <a name="detach"></a>CMonikerFile::D etach
+## <a name="cmonikerfiledetach"></a><a name="detach"></a>CMoniker檔::D
 
-呼叫此函式以關閉資料流程。
+調用此函數以關閉流。
 
 ```
 BOOL Detach(CFileException* pError = NULL);
@@ -134,15 +134,15 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="parameters"></a>參數
 
 *pError*<br/>
-檔案例外狀況的指標。 發生錯誤時, 會將其設定為原因。
+指向文件異常的指標。 如果出現錯誤,它將設置為原因。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則為非零；否則為 0。
 
-##  <a name="getmoniker"></a>CMonikerFile:: GetMoniker
+## <a name="cmonikerfilegetmoniker"></a><a name="getmoniker"></a>CMoniker 檔:取得莫尼克爾
 
-呼叫此函式可取得目前標記的指標。
+呼叫此函數以檢索指向當前名字物件的指標。
 
 ```
 IMoniker* GetMoniker() const;
@@ -150,15 +150,15 @@ IMoniker* GetMoniker() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前標記介面的指標 ( [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker))。
+指向當前名字介面[(IMoniker) 的](/windows/win32/api/objidl/nn-objidl-imoniker)指標。
 
 ### <a name="remarks"></a>備註
 
-因為`CMonikerFile`不是介面, 所以傳回的指標不會遞增參考計數 (透過[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)), 而且會在釋放`CMonikerFile`物件時釋放該標記。 如果您想要保留到名字標記或自行發行, 您必須`AddRef`這麼做。
+由於`CMonikerFile`不是介面,返回的指標不會增加引用計數(通過[AddRef),](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)並且`CMonikerFile`在釋放 物件時釋放名字物件。 如果你想抓住名字或釋放它自己,你必須`AddRef`它。
 
-##  <a name="open"></a>CMonikerFile:: Open
+## <a name="cmonikerfileopen"></a><a name="open"></a>CMoniker 檔::開啟
 
-呼叫這個成員函式來開啟檔案或名字物件。
+呼叫此成員函數以打開檔案或名字物件。
 
 ```
 virtual BOOL Open(
@@ -173,13 +173,13 @@ virtual BOOL Open(
 ### <a name="parameters"></a>參數
 
 *lpszURL*<br/>
-要開啟之檔案的 URL 或檔案名。
+要打開的檔案的 URL 或檔名。
 
 *pError*<br/>
-檔案例外狀況的指標。 發生錯誤時, 會將其設定為原因。
+指向文件異常的指標。 如果出現錯誤,它將設置為原因。
 
-*pMoniker*<br/>
-要用來取得資料流程之`IMoniker`標記介面的指標。
+*普莫尼克爾*<br/>
+指向用於獲取流的名字介面`IMoniker`的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -187,13 +187,13 @@ virtual BOOL Open(
 
 ### <a name="remarks"></a>備註
 
-*LpszURL*參數不能用在 Macintosh 上。 在 Macintosh上只能使用`Open`的 pMoniker 形式。
+*lpszURL*參數不能在 Macintosh 上使用。 只有*pMoniker*的`Open`格式可以在 Macintosh 上使用。
 
-您可以使用 URL 或 filename 作為*lpszURL*參數。 例如：
+可以使用 URL 或檔名進行*lpszURL*參數。 例如：
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]
 
-\-或-
+\- 或 -
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]
 

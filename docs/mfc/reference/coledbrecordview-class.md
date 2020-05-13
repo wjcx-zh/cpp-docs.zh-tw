@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: de9c602cb747ee3d4449df479530e55ce907cb8a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366109"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 類別
 
@@ -35,29 +35,29 @@ class COleDBRecordView : public CFormView
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|建構 `COleDBRecordView` 物件。|
+|[COleDB記錄檢視:COleDB記錄檢視](#coledbrecordview)|建構 `COleDBRecordView` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|傳回標準的 HRESULT 值。|
-|[COleDBRecordView::OnMove](#onmove)|更新資料來源上目前的記錄 （如果已變更），然後再移到指定的記錄 （下一步、 上一個，第一個或最後一個）。|
+|[COleDB 記錄檢視::OnGetRowset](#ongetrowset)|返回標準 HRESULT 值。|
+|[COleDB 記錄檢視::移動](#onmove)|更新數據來源上的目前記錄(如果髒),然後移動到指定的記錄(下一個、上一個、第一個或最後一個)。|
 
 ## <a name="remarks"></a>備註
 
-檢視是表單檢視，直接連線到`CRowset`物件。 檢視從對話方塊範本資源建立，並顯示的欄位`CRowset`對話方塊範本的控制項中的物件。 `COleDBRecordView`物件會使用對話方塊資料交換 (DDX)，並瀏覽功能內建`CRowset`、 自動化的表單上的控制項和資料列集的欄位之間的資料移動。 `COleDBRecordView` 也提供移動的預設實作第一筆、 下一步 上, 一個或最後一筆和更新目前的檢視記錄的介面。
+視圖是直接連接到`CRowset`物件的表單檢視。 視圖是從對話方塊樣本資源創建的,並在對話方塊範本的控制項中`CRowset`顯示 物件的欄位。 對`COleDBRecordView`象 使用對話框資料交換 (DDX)`CRowset`和 內置 的導航功能來自動在窗體上的控制項和行集的欄位之間行動資料。 `COleDBRecordView`還提供用於移動到第一個、下一個、上一個或最後一個記錄的預設實現,以及用於更新當前查看的記錄的介面。
 
-您可以使用 DDX 函式與`COleDbRecordView`直接從資料庫資料錄集取得資料，並顯示在對話方塊控制項。 您應該使用`DDX_*`方法 (例如`DDX_Text`)，而非`DDX_Field*`函式 (例如`DDX_FieldText`) 與`COleDbRecordView`。 `DDX_FieldText` 不適用於`COleDbRecordView`因為`DDX_FieldText`採用其他引數的型別`CRecordset*`(如`CRecordView`) 或`CDaoRecordset*`(針對`CDaoRecordView`)。
+您可以使用 DDX`COleDbRecordView`函數 直接從資料庫記錄集中獲取數據,並將其顯示在對話方塊控制項中。 應使用`DDX_*``DDX_Text`方法(如 ),而不是`DDX_Field*``DDX_FieldText``COleDbRecordView`使用的函數(如 )。 `DDX_FieldText`將不起作用`COleDbRecordView`,`DDX_FieldText`因為需要鍵`CRecordset*``CRecordView`入 ()`CDaoRecordset*``CDaoRecordView`或 (的 ) 的其他參數。
 
 > [!NOTE]
->  如果您正在使用的資料存取物件 (DAO) 類別，而不是 OLE DB 消費者範本類別，使用類別[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)改。 如需詳細資訊，請參閱文章[概觀：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
+> 如果使用數據存取物件 (DAO) 類別而不是 OLE DB 使用者樣本類,請使用類[CDaoRecordView。](../../mfc/reference/cdaorecordview-class.md) 有關詳細資訊,請參閱文章[概述:資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
 
-`COleDBRecordView` 會追蹤的資料列集中的使用者的位置，以便資料錄檢視可以更新使用者介面。 當使用者移至任一端的資料列集時，資料錄檢視停用使用者介面物件，例如功能表項目或工具列按鈕 — 移動中相同的方向。
+`COleDBRecordView`追蹤使用者在行集中的位置,以便記錄檢視可以更新使用者介面。 當使用者移動到行集的任一端時,記錄檢視將禁用使用者介面物件(如功能表項或工具列按鈕)以向同一方向進一步移動。
 
-如需有關資料列集類別的詳細資訊，請參閱 <<c0> [ 使用 OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)文章。
+有關行集類的詳細資訊,請參閱[使用 OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -75,9 +75,9 @@ class COleDBRecordView : public CFormView
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxoledb.h
+**標題:** afxoledb.h
 
-##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView
+## <a name="coledbrecordviewcoledbrecordview"></a><a name="coledbrecordview"></a>COleDB記錄檢視:COleDB記錄檢視
 
 建構 `COleDBRecordView` 物件。
 
@@ -88,22 +88,22 @@ COleDBRecordView(UINT nIDTemplate);
 
 ### <a name="parameters"></a>參數
 
-*lpszTemplateName*<br/>
-包含以 null 結束的字串，這是對話方塊範本資源的名稱。
+*lpszTemplate 名稱*<br/>
+包含一個 null 連接端字串,該字串是對話方塊樣本資源的名稱。
 
 *nIDTemplate*<br/>
-包含對話方塊範本資源的識別碼。
+包含對話方塊樣本資源的 ID 號。
 
 ### <a name="remarks"></a>備註
 
-當您建立的物件型別的衍生自`COleDBRecordView`，叫用其中一個建構函式建立的檢視物件，並找出檢視所依據的對話方塊資源。 您可以依名稱 (pass 字串做為引數的建構函式) 或依識別碼 (pass 不帶正負號的整數做為引數) 來識別資源。
+創建派生自`COleDBRecordView`的類型的物件時,請調用其中一個構造函數來創建視圖物件並標識視圖所基於的對話框資源。 您可以按名稱(將字串作為參數傳遞給建構函數)或通過其 ID(傳遞未簽名的整數作為參數)標識資源。
 
 > [!NOTE]
->  您的衍生的類別*必須*提供它自己的建構函式。 建構函式，在叫用建構函式， `COleDBRecordView::COleDBRecordView`、 資源名稱或識別碼做為引數。
+> 派生類*必須*提供其自己的構造函數。 在建構函數中,調用建構函數,`COleDBRecordView::COleDBRecordView`將資源名稱或 ID 作為參數。
 
-##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset
+## <a name="coledbrecordviewongetrowset"></a><a name="ongetrowset"></a>COleDB 記錄檢視::OnGetRowset
 
-傳回之控制代碼**CRowset <>** 資料錄檢視相關聯的物件。
+返回與記錄檢視關聯的**CRowset<>** 物件的句柄。
 
 ```
 virtual CRowset<>* OnGetRowset() = 0;
@@ -111,24 +111,24 @@ virtual CRowset<>* OnGetRowset() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-您必須覆寫此成員函式，來建構或取得資料列集物件，並傳回給它的控制代碼。 如果您宣告您的資料錄檢視類別與 ClassWizard，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料列控制代碼儲存在記錄檢視中，如果有的話。 您如果不是，它會建構類型的資料列集物件指定 ClassWizard 並呼叫其`Open`成員函式以開啟資料表或執行查詢，並再傳回物件的控制代碼。
+必須重寫此成員函數以構造或獲取行集物件,並將句柄返回給該物件。 如果使用 ClassWizard 聲明記錄檢視類,精靈將為您編寫預設覆蓋。 ClassWizard 的預設實現返回存儲在記錄視圖中的行集句柄(如果存在)。 如果沒有,它將建構使用 ClassWizard 指定的類型的排集物件,並調用`Open`其成員 函數打開表或運行查詢,然後向該物件返回句柄。
 
 > [!NOTE]
->  上一步 MFC 7.0`OnGetRowset`傳回的指標`CRowset`。 如果您有呼叫的程式碼`OnGetRowset`，您需要將變更的範本化的類別的傳回型別**CRowset <>**。
+> 在 MFC 7.0`OnGetRowset``CRowset`之前,返回指向的指標。 如果代碼呼叫`OnGetRowset`,則需要將傳回類型變更為暫時化類別**CRowset<>**。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-如需詳細資訊和範例，請參閱文章[資料錄檢視：使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
+有關詳細資訊和範例,請參閱[文章記錄檢視:使用紀錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
 
-##  <a name="onmove"></a>  COleDBRecordView::OnMove
+## <a name="coledbrecordviewonmove"></a><a name="onmove"></a>COleDB 記錄檢視::移動
 
-移至不同的記錄中的資料列集和顯示其欄位中記錄的控制項檢視。
+移動到行集中中的不同記錄,並在記錄檢視的控制項中顯示其欄位。
 
 ```
 virtual BOOL OnMove(UINT nIDMoveCommand);
@@ -136,30 +136,30 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 
 ### <a name="parameters"></a>參數
 
-*nIDMoveCommand*<br/>
-其中一個下列的標準命令 ID 值：
+*nIDMove命令*<br/>
+以下標準命令 ID 值之一:
 
-- ID_RECORD_FIRST — 將移至資料錄集的第一個記錄。
+- ID_RECORD_FIRST = 移動到記錄集中的第一個記錄。
 
-- ID_RECORD_LAST — 移動中資料錄集的最後一筆記錄。
+- ID_RECORD_LAST = 移動到記錄集中的最後一個記錄。
 
-- ID_RECORD_NEXT — 將移至下一個資料錄集記錄。
+- ID_RECORD_NEXT = 移動到記錄集中的下一個記錄。
 
-- ID_RECORD_PREV — 將移至前一筆記錄，在資料錄集。
+- ID_RECORD_PREV = 移動到記錄集中的上一條記錄。
 
 ### <a name="return-value"></a>傳回值
 
-如果移動不成功則為非零否則為 0，表示移動要求遭到拒絕。
+如果移動成功,則非零;否則 0 如果移動請求被拒絕。
 
 ### <a name="remarks"></a>備註
 
-預設實作會呼叫適當`Move`成員函式`CRowset`資料錄檢視相關聯的物件。
+預設實現調用與記錄檢視`Move`關聯的`CRowset`物件的相應成員函數。
 
-根據預設，`OnMove`更新資料來源上目前的記錄，如果使用者資料錄檢視中已變更。
+預設情況下,`OnMove`如果使用者在記錄檢視中更改了資料來源上的現記錄,則更新該紀錄。
 
-應用程式精靈 建立功能表資源的第一筆、 最後一筆記錄、 下一筆記錄和上一筆記錄的功能表項目。 如果您選取可停駐工具列選項，應用程式精靈 也建立工具列按鈕對應至這些命令。
+"應用程式精靈"創建具有"第一條記錄"、"最後一條記錄"、"下一個記錄"和"上一個記錄"功能表項的功能表資源。 如果選擇「可停靠工具列」選項,「應用程式精靈」還會創建一個工具列,其中按鈕對應於這些命令。
 
-如果您跳過資料錄集的最後一筆記錄時，[記錄] 檢視會繼續顯示最後一筆記錄。 如果您向後跳過第一筆記錄，[記錄] 檢視會繼續顯示第一筆記錄。
+如果移動超過記錄集中的最後一條記錄,記錄視圖將繼續顯示最後一條記錄。 如果向後移動超過第一條記錄,則記錄視圖將繼續顯示第一條記錄。
 
 ## <a name="see-also"></a>另請參閱
 

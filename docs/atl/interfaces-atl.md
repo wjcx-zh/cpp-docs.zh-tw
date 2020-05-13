@@ -6,25 +6,25 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 2373351330982623ffa602fd81bec61d0bc257b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 56d5a010bc28257dce181ee33e0ddf74655ccd3c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319392"
 ---
 # <a name="interfaces-atl"></a>介面 (ATL)
 
-介面是物件將其功能公開給外部世界的方式。 在 COM 中, 「介面」 (interface) 是指物件C++所實函式的指標 (例如 vtable) 資料表。 資料表代表介面, 而它指向的函式是該介面的方法。 物件可以公開所選擇的介面數目。
+介面是物件向外部世界公開其功能的方式。 在 COM 中,介面是指向物件實現的函數的指標表(如 C++可 vtable)。 表表示介面,它指向的函數是該介面的方法。 物件可以公開任意選擇的介面數。
 
-每個介面都是以基本 COM 介面[IUnknown](../atl/iunknown.md)為基礎。 的方法`IUnknown`允許導覽至物件所公開的其他介面。
+每個介面都基於基本的COM介面[,I未知。](../atl/iunknown.md) `IUnknown`允許導航到物件公開的其他介面的方法。
 
-此外, 每個介面都具有唯一的介面識別碼 (IID)。 這種唯一性可讓您輕鬆地支援介面版本設定。 介面的新版本只是新的介面, 具有新的 IID。
+此外,每個介面都被授予一個唯一的介面 ID (IID)。 這種唯一性使得支援介面版本控制變得容易。 介面的新版本只是一個新的介面,帶有新的 IID。
 
 > [!NOTE]
->  標準 COM 和 OLE 介面的 Iid 是預先定義的。
+> 預先定義標準 COM 和 OLE 介面的 IID。
 
 ## <a name="see-also"></a>另請參閱
 
 [COM 簡介](../atl/introduction-to-com.md)<br/>
-[COM 物件和介面](/windows/win32/com/com-objects-and-interfaces)
+[COM 物件與介面](/windows/win32/com/com-objects-and-interfaces)

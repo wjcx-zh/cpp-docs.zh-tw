@@ -1,8 +1,9 @@
 ---
 title: _set_abort_behavior
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - _set_abort_behavior
+- _o__set_abort_behavior
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: a63d4e77a91dafa4500d5fef8e9b5e94ee28cfbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 06f72597a384cc5c90b2e345e62e13dee96c4dca
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948672"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913136"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
@@ -54,7 +56,7 @@ unsigned int _set_abort_behavior(
 *flags*<br/>
 [Abort](abort.md)旗標的新值。
 
-*mask*<br/>
+*遮罩*<br/>
 要設定之[中止](abort.md)旗標位的遮罩。
 
 ## <a name="return-value"></a>傳回值
@@ -63,7 +65,9 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>備註
 
-有兩個[中止](abort.md)旗標： **_WRITE_ABORT_MSG**和 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**決定當程式異常終止時，是否要列印有用的文字訊息。 訊息指出應用程式已呼叫[abort](abort.md)函數。 預設行為是列印訊息。 如果設定， **_CALL_REPORTFAULT**會指定在呼叫[Abort](abort.md)時產生 Watson 損毀傾印並回報。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
+有兩個[中止](abort.md)旗標： **_WRITE_ABORT_MSG**和 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**決定當程式異常終止時，是否要列印有用的文字訊息。 訊息指出應用程式已呼叫[abort](abort.md)函數。 預設行為是列印訊息。 **_CALL_REPORTFAULT**，如果設定，會指定在呼叫[Abort](abort.md)時產生 Watson 損毀傾印並回報。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -71,7 +75,7 @@ unsigned int _set_abort_behavior(
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

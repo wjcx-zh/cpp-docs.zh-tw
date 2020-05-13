@@ -15,22 +15,22 @@ ms.locfileid: "62188882"
 ---
 # <a name="importing-into-an-application"></a>匯入至應用程式
 
-您可以匯入函式應用程式使用兩種方法：
+您可以使用兩種方法將函數匯入應用程式：
 
-- 使用關鍵字 **__declspec （dllimport)** 主應用程式中的函式定義中
+- 在主要應用程式的函式定義中使用關鍵字 **__declspec （dllimport）**
 
-- 使用模組定義 (.def) 檔連同 **__declspec （dllimport)**
+- 使用模組定義（.def）檔案和 **__declspec （dllimport）**
 
-## <a name="what-do-you-want-to-do"></a>請您指定選項。
+## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [匯入使用 __declspec （dllimport） 的應用程式](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec （dllimport）匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
-- [使用 __declspec （dllimport） 匯入函式呼叫](importing-function-calls-using-declspec-dllimport.md)
+- [使用 __declspec （dllimport）匯入函式呼叫](importing-function-calls-using-declspec-dllimport.md)
 
-- [匯入使用 __declspec （資料 dllimport）](importing-data-using-declspec-dllimport.md)
+- [使用 __declspec （dllimport）匯入資料](importing-data-using-declspec-dllimport.md)
 
-- [使用 DEF 檔匯入](importing-using-def-files.md)
+- [使用 DEF 檔案匯入](importing-using-def-files.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [匯入和匯出](importing-and-exporting.md)

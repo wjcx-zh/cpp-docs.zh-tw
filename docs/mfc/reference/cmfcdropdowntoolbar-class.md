@@ -20,18 +20,19 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68dd976471b39d7f50c2f0378b2fce99ad3feeca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367594"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 
 當使用者按住最上層工具列按鈕時出現的工具列。
 
-   如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
+
 ## <a name="syntax"></a>語法
 
 ```
@@ -44,44 +45,44 @@ class CMFCDropDownToolBar : public CMFCToolBar
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCDropDownToolBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(覆寫 `CPane::AllowShowOnPaneMenu`。)|
-|[CMFCDropDownToolBar::LoadBitmap](#loadbitmap)|(覆寫[CMFCToolBar::LoadBitmap](../../mfc/reference/cmfctoolbar-class.md#loadbitmap)。)|
-|[CMFCDropDownToolBar::LoadToolBar](#loadtoolbar)|(覆寫[CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)。)|
-|[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||
-|[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||
-|[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(覆寫 `CMFCToolBar::OnSendCommand`。)|
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CMFCToolBar::OnUpdateCmdUI](cmfctoolbar-class.md)。|
+|[CMFC向下工具列::允許顯示帕內選單](#allowshowonpanemenu)|(覆寫 `CPane::AllowShowOnPaneMenu`。)|
+|[CMFC下拉工具列::載入點陣圖](#loadbitmap)|(覆蓋[CMFC 工具列::載入位圖](../../mfc/reference/cmfctoolbar-class.md#loadbitmap).)|
+|[CMFC下拉工具列::載入工具列](#loadtoolbar)|(覆寫[CMFC 工具列:LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar).)|
+|[CMFC下拉工具列::在LButtonup上](#onlbuttonup)||
+|[CMFC向下工具列::滑鼠移動](#onmousemove)||
+|[CMFC下拉工具列:打開傳送命令](#onsendcommand)|(覆寫 `CMFCToolBar::OnSendCommand`。)|
+|[CMFC下拉工具列::更新CmdUI](#onupdatecmdui)|(覆寫[CMFCTool 列:更新 CmdUI](cmfctoolbar-class.md)。|
 
 ### <a name="remarks"></a>備註
 
-A`CMFCDropDownToolBar`物件會結合行為的快顯功能表中的視覺外觀的工具列。 當使用者按住下拉式工具列按鈕 (請參閱[CMFCDropDownToolbarButton 類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)) 下拉式工具列隨即出現，且使用者可以向下捲動到它，然後放開滑鼠從下拉式清單 工具列中選取一個按鈕按鈕。 使用者選取下拉式清單 工具列中的按鈕之後，該按鈕會顯示為最上層工具列上的 目前 按鈕。
+物件`CMFCDropDownToolBar`將工具列的視覺外觀與彈出功能表的行為相結合。 當使用者按下並持有下拉工具列按鈕(請參閱[CMFCDropDownToolbarButton 類](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md))時,將顯示一個下拉工具列,使用者可以通過滾動到下拉工具列並釋放滑鼠按鈕來從下拉工具列中選擇一個按鈕。 用戶選擇下拉工具列中的按鈕后,該按鈕將顯示為頂部工具列上的當前按鈕。
 
-無法自訂或停駐之後，下拉式工具列，而且它並沒有分割的狀態。
+無法自定義或停靠下拉工具列,並且沒有拆解狀態。
 
-下圖顯示`CMFCDropDownToolBar`物件：
+下圖顯示了一個`CMFCDropDownToolBar`物件:
 
-![Cmfcdropdowntoolbar 範例](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdowntoolbar 範例")
+![CMFCDropDownToolbar 範例](../../mfc/reference/media/cmfcdropdown.png "CMFCDropDownToolbar 範例")
 
-您建立`CMFCDropDownToolBar`物件相同的方式，您建立一般的工具列 (請參閱 < [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md))。
+創建`CMFCDropDownToolBar`物件的方式與創建普通工具列的方式相同(請參閱[CMFCToolBar 類](../../mfc/reference/cmfctoolbar-class.md))。
 
-要插入為父工具列的下拉工具列：
+要將下拉工具列插入父工具列::
 
 1. 為父工具列資源的按鈕保留假的資源 ID。
 
-2. 建立`CMFCDropDownToolBarButton`物件，其中包含下拉式工具列 (如需詳細資訊，請參閱 < [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。
+2. 創建包含`CMFCDropDownToolBarButton`下拉工具列的物件(有關詳細資訊,請參閱[CMFCDrop 下拉工具列按鈕::CMFC下拉下工具列按鈕](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。
 
-3. 取代使用假的按鈕`CMFCDropDownToolBarButton`使用的物件[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。
+3. 使用 CMFCToolBar`CMFCDropDownToolBarButton`將虛擬按鈕取代為物件[::取代按鈕](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。
 
-如需有關工具列按鈕的詳細資訊，請參閱[逐步解說：將工具列上的控制項加入](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 例如下拉式工具列中，請參閱範例專案 VisualStudioDemo。
+有關工具列按鈕的詳細資訊,請參閱[演練:將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 有關下拉工具列的範例,請參閱範例專案 VisualStudioDemo。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用`Create`方法中的`CMFCDropDownToolBar`類別。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何在`Create``CMFCDropDownToolBar`類中使用 方法。 此代碼段是[可視化工作室演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -93,7 +94,7 @@ A`CMFCDropDownToolBar`物件會結合行為的快顯功能表中的視覺外觀�
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBase工具列](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
@@ -103,7 +104,7 @@ A`CMFCDropDownToolBar`物件會結合行為的快顯功能表中的視覺外觀�
 
 **標頭：** afxdropdowntoolbar.h
 
-##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu
+## <a name="cmfcdropdowntoolbarallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CMFC向下工具列::允許顯示帕內選單
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -113,7 +114,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap
+## <a name="cmfcdropdowntoolbarloadbitmap"></a><a name="loadbitmap"></a>CMFC下拉工具列::載入點陣圖
 
 從應用程式資源載入工具列影像。
 
@@ -130,22 +131,22 @@ virtual BOOL LoadBitmap(
 ### <a name="parameters"></a>參數
 
 *uiResID*<br/>
-[in]參考作用中工具列影像之點陣圖的資源識別碼。
+[在]引用熱工具列圖像的位圖的資源 ID。
 
-*uiColdResID*<br/>
-[in]參考非作用中工具列影像之點陣圖的資源識別碼。
+*烏伊庫德雷斯ID*<br/>
+[在]引用冷工具列圖像的位圖的資源 ID。
 
 *uiMenuResID*<br/>
-[in]參考標準功能表影像之點陣圖的資源識別碼。
+[在]引用常規功能表影像的位圖的資源 ID。
 
-*bLocked*<br/>
-[in]True 表示要鎖定工具列，否則為 FALSE。
+*封鎖*<br/>
+[在]鎖定工具列的 TRUE;否則 FALSE。
 
-*uiDisabledResID*<br/>
-[in]參考已停用的工具列影像之點陣圖的資源識別碼。
+*ui禁用雷斯代碼*<br/>
+[在]引用禁用工具列圖像的點陣圖的資源 ID。
 
-*uiMenuDisabledResID*<br/>
-[in]參考已停用的功能表影像之點陣圖的資源識別碼。
+*uiMenu 關閉雷斯代碼*<br/>
+[在]引用禁用功能表影像的點陣圖的資源 ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -157,7 +158,7 @@ virtual BOOL LoadBitmap(
 
 呼叫 `LoadBitmapEx` 方法可在建立工具列之後載入其他影像。
 
-##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar
+## <a name="cmfcdropdowntoolbarloadtoolbar"></a><a name="loadtoolbar"></a>CMFC下拉工具列::載入工具列
 
 ```
 virtual BOOL LoadToolBar(
@@ -172,25 +173,25 @@ virtual BOOL LoadToolBar(
 
 ### <a name="parameters"></a>參數
 
-[in] *uiResID*<br/>
+[在]*uiResID*<br/>
 
-[in] *uiColdResID*<br/>
+[在]*烏伊庫德雷斯ID*<br/>
 
-[in] *uiMenuResID*<br/>
+[在]*uiMenuResID*<br/>
 
-[in]*BOOL*<br/>
+[在]*波爾*<br/>
 
-[in] *uiDisabledResID*<br/>
+[在]*ui禁用雷斯代碼*<br/>
 
-[in] *uiMenuDisabledResID*<br/>
+[在]*uiMenu 關閉雷斯代碼*<br/>
 
-[in] *uiHotResID*<br/>
+[在]*烏霍特雷斯ID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp
+## <a name="cmfcdropdowntoolbaronlbuttonup"></a><a name="onlbuttonup"></a>CMFC下拉工具列::在LButtonup上
 
 ```
 afx_msg void OnLButtonUp(
@@ -200,13 +201,13 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>參數
 
-[in] *nFlags*<br/>
+[在]*nFlags*<br/>
 
-[in] *point*<br/>
+[在]*點*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove
+## <a name="cmfcdropdowntoolbaronmousemove"></a><a name="onmousemove"></a>CMFC向下工具列::滑鼠移動
 
 ```
 afx_msg void OnMouseMove(
@@ -216,13 +217,13 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>參數
 
-[in] *nFlags*<br/>
+[在]*nFlags*<br/>
 
-[in] *point*<br/>
+[在]*點*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand
+## <a name="cmfcdropdowntoolbaronsendcommand"></a><a name="onsendcommand"></a>CMFC下拉工具列:打開傳送命令
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -230,13 +231,13 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>參數
 
-[in] *pButton*<br/>
+[在]*pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI
+## <a name="cmfcdropdowntoolbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFC下拉工具列::更新CmdUI
 
 ```
 virtual void OnUpdateCmdUI(
@@ -246,9 +247,9 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>參數
 
-[in] *pTarget*<br/>
+[在]*p 目標*<br/>
 
-[in] *bDisableIfNoHndler*<br/>
+[在]*b 關閉IfNoHndler*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -257,7 +258,7 @@ virtual void OnUpdateCmdUI(
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
-[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
+[CMFC工具列:建立](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
+[CMFC工具列:更換按鈕](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton 類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
 [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)

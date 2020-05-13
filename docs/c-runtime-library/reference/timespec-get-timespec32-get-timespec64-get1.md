@@ -1,10 +1,12 @@
 ---
-title: timespec_get, _timespec32_get, _timespec64_get1
-ms.date: 11/04/2016
+title: timespec_get、_timespec32_get、_timespec64_get1
+ms.date: 4/2/2020
 api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
+- _o__timespec32_get
+- _o__timespec64_get
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957624"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911823"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -78,13 +81,15 @@ int _timespec64_get(
 
 ## <a name="remarks"></a>備註
 
-**Timespec_get**函數會在*time_spec*引數所指向的結構中設定目前的時間。 此結構的所有版本都有兩個成員： **tv_sec**和**tv_nsec**。 **Tv_sec**值會設定為整數秒數，而**tv_nsec**為整數個毫數，從*基底*指定的 epoch 開始，舍入到系統時鐘的解析。
+**Timespec_get**函式會設定*time_spec*引數所指向之結構中的目前時間。 此結構的所有版本都有兩個成員， **tv_sec**和**tv_nsec**。 **Tv_sec**值會設為整數秒數，並**tv_nsec**為整數個毫微秒數，從*base*指定的 epoch 開始，舍入到系統時鐘的解析度。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-這些函數只支援**TIME_UTC**作為*基底*值。 這會將*time_spec*值設定為自 epoch 啟動之後的秒數和毫微秒數（以1970年1月1日午夜，國際標準時間（UTC）為單位）。 在**結構** **_timespec32**中， **tv_sec**是 **__time32_t**值。 在**結構** **_timespec64**中， **tv_sec**是 **__time64_t**值。 在**結構** **timespec**中， **tv_sec**是**time_t**型別，其長度為32位或64位，視預處理器宏 _USE_32BIT_TIME_T 是否已定義而定。 **Timespec_get**函式是內嵌函數，會在定義 _USE_32BIT_TIME_T 時呼叫 **_timespec32_get** ;否則，它會呼叫 **_timespec64_get**。
+這些函式僅支援以**TIME_UTC**作為*基底*值。 這會將*time_spec*值設定為自 epoch 啟動之後的秒數和毫微秒數（1970年1月1日午夜，國際標準時間（UTC））。 在**結構** **_timespec32**中， **tv_sec**是 **__time32_t**值。 在**結構** **_timespec64**中， **tv_sec**是 **__time64_t**值。 在**結構** **timespec**中， **tv_sec**是**time_t**類型，其長度為32位或64位，視預處理器宏 _USE_32BIT_TIME_T 是否已定義而定。 **Timespec_get**函式是內嵌函數，會在定義 _USE_32BIT_TIME_T 時呼叫 **_timespec32_get** 。否則，它會呼叫 **_timespec64_get**。
 
 **結束 Microsoft 專有**
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

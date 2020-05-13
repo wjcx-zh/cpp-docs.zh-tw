@@ -1,35 +1,35 @@
 ---
-title: MSVC 實驗性預處理器總覽
-description: 正在更新 MSVC 預處理器以符合 C/C++標準。
+title: MSVC 實驗預處理器概述
+description: MSVC 預處理器正在更新,以便符合 C/C++ 標準。
 ms.date: 02/09/2020
 helpviewer_keywords:
 - preprocessor, experimental
-ms.openlocfilehash: eb861b18a8d42c73429f6d00a3f47b35c9b198ca
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 00c34ef75270e505d3781cf7eedf4d8aba95ee6e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090556"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337488"
 ---
-# <a name="msvc-experimental-preprocessor-overview"></a>MSVC 實驗性預處理器總覽
+# <a name="msvc-experimental-preprocessor-overview"></a>MSVC 實驗預處理器概述
 
 ::: moniker range="vs-2015"
 
-Visual Studio 2015 使用傳統預處理器，這不符合標準C++。 您可以使用[/experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數，在 Visual Studio 2017 和 Visual Studio 2019 中提供實驗性預處理器。 如需在 Visual Studio 2017 和 Visual Studio 2019 中使用新預處理器的詳細資訊，請閱讀。 若要查看它，請使用檔版本選取器來選取其中一個版本。
+Visual Studio 2015 使用傳統的預處理器,這不符合標準C++。 使用[/實驗前](../build/reference/experimental-preprocessor.md)處理器編譯器開關,在 Visual Studio 2017 和 Visual Studio 2019 中提供了一個實驗預處理器。 有關在 Visual Studio 2017 和 Visual Studio 2019 中使用新預處理器的詳細資訊,請造訪。 要查看您首選版本的 Visual Studio 的文件,請使用**版本**選擇器控制項。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-我們正在更新 Microsoft C++預處理器，以改善標準一致性、修正長期以來非常 bug，以及變更一些已正式定義的行為。 我們也加入了新的診斷，以警告巨集定義中的錯誤。
+我們正在更新 Microsoft C++預處理器,以提高標準一致性、修復長期存在的 Bug 並更改一些正式未定義的行為。 我們還添加了新的診斷程式來警告宏定義中的錯誤。
 
-您可以使用 Visual Studio 2017 或 Visual Studio 2019 中的[/experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數，來取得這些變更。 預設的預處理器行為與先前的版本相同。
+這些更改可透過在 Visual Studio 2017 或 Visual Studio 2019 中使用[/實驗前處理器](../build/reference/experimental-preprocessor.md)編譯器開關。 默認預處理器行為與早期版本相同。
 
-從 Visual Studio 2019 16.5 版開始，c + + 20 標準的實驗性預處理器支援已完成功能。
+從 Visual Studio 2019 版本 16.5 開始,C++20 標準的實驗預處理器支援已完成。
 
-## <a name="new-predefined-macro"></a>新增預先定義的宏
+## <a name="new-predefined-macro"></a>新的預先定義巨集
 
-您可以在編譯時期偵測正在使用的預處理器。 檢查預先定義宏的值[\_MSVC\_傳統](predefined-macros.md)，以判斷傳統預處理器是否正在使用中。 這個宏是由支援它的編譯器版本無條件設定，獨立于叫用的預處理器。 傳統預處理器的值為1。 它是0，適用于符合規範的預處理器。
+您可以檢測編譯時正在使用的預處理器。 檢查預定義的宏[\_MSVC\_傳統](predefined-macros.md)值,以判斷是否正在使用傳統的預處理器。 此宏由支援它的編譯器版本無條件設置,獨立於調用預處理器的版本。 其值對於傳統的預處理器為 1。 對於符合要求的預處理器,它是 0。
 
 ```cpp
 #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -39,13 +39,13 @@ Visual Studio 2015 使用傳統預處理器，這不符合標準C++。 您可以
 #endif
 ```
 
-## <a name="behavior-changes-in-the-experimental-preprocessor"></a>實驗性預處理器中的行為變更
+## <a name="behavior-changes-in-the-experimental-preprocessor"></a>實驗預處理器的行為變化
 
-實驗性預處理器的初始工作已著重于讓所有宏擴充都符合標準。 它可讓您使用 MSVC 編譯器，搭配目前傳統行為所封鎖的程式庫。 我們已在真實世界的專案上測試更新的預處理器。 以下是我們發現的一些較常見的重大變更：
+實驗預處理器的初步工作重點是使所有宏擴展都符合標準。 它允許您將 MSVC 編譯器與當前被傳統行為阻止的庫一起使用。 我們在真實項目中測試了更新的預處理器。 以下是我們發現的一些更常見的突發性更改:
 
-### <a name="macro-comments"></a>宏批註
+### <a name="macro-comments"></a>巨解
 
-傳統預處理器是以字元緩衝區為基礎，而不是預處理器標記。 它允許不尋常的行為，例如下列預處理器批註訣竅，這在符合規範的預處理器下無法運作：
+傳統的預處理器基於字元緩衝區,而不是預處理器令牌。 它允許異常行為,如以下前處理器註釋技巧,這在符合的預處理器下不起作用:
 
 ```cpp
 #if DISAPPEAR
@@ -58,7 +58,7 @@ Visual Studio 2015 使用傳統預處理器，這不符合標準C++。 您可以
 DISAPPEARING_TYPE myVal;
 ```
 
-符合標準的修正方法是在適當的 `#ifdef/#endif` 指示詞內宣告 `int myVal`：
+符合標準的修復程式是在相應的`int myVal``#ifdef/#endif`指令中聲明:
 
 ```cpp
 #define MYVAL 1
@@ -68,9 +68,9 @@ int myVal;
 #endif
 ```
 
-### <a name="lval"></a>L # val
+### <a name="lval"></a>L_val
 
-傳統預處理器不正確地將字串前置詞與[字串化運算子（#）](stringizing-operator-hash.md)運算子的結果結合：
+傳統的預處理器錯誤地將字串前置[字串( 字串) 運算元 (#)](stringizing-operator-hash.md)運算子的結果合併:
 
 ```cpp
  #define DEBUG_INFO(val) L"debug prefix:" L#val
@@ -80,7 +80,7 @@ int myVal;
 const wchar_t *info = DEBUG_INFO(hello world);
 ```
 
-在此情況下，`L` 前置詞是不必要的，因為連續的字串常值會在宏展開之後合併。 與舊版相容的修正程式是變更定義：
+在這種情況下,前置碼是`L`不必要的,因為相鄰的字串文本無論如何都在宏擴展後合併。 傳回時相容的修復程式是改變定義:
 
 ```cpp
 #define DEBUG_INFO(val) L"debug prefix:" #val
@@ -88,37 +88,37 @@ const wchar_t *info = DEBUG_INFO(hello world);
 //                                       no prefix
 ```
 
-同樣的問題也可以在方便性宏中找到，也就是「字串化」寬字元串常值的引數：
+在將參數「串」到寬字串文字的便利宏中也發現了同樣的問題:
 
 ```cpp
  // The traditional preprocessor creates a single wide string literal token
 #define STRING(str) L#str
 ```
 
-您可以透過各種方式來修正此問題：
+您可以通過多種方式解決此問題:
 
-- 使用 `L""` 和 `#str` 的字串串連來加入前置詞。 連續的字串常值會在宏展開之後合併：
+- 使用和`L""``#str`的字串串聯來添加首碼。 連續的字串文字在巨集延伸後合併:
 
    ```cpp
    #define STRING1(str) L""#str
    ```
 
-- 使用其他宏展開來 stringized `#str` 之後，新增前置詞
+- 使用其他巨集`#str`延伸字串化後加入前置文字
 
    ```cpp
    #define WIDE(str) L##str
    #define STRING2(str) WIDE(#str)
    ```
 
-- 使用串連運算子 `##` 來結合權杖。 `##` 和 `#` 的作業順序並未指定，但在此情況下，所有編譯器似乎都會評估 `#` `##` 運算子。
+- 使用串聯運算符`##`組合權杖。 `##`和的操作`#`順序未指定,儘管在這種情況下,所有編譯器似乎都在評估`#`運算符之前。 `##`
 
    ```cpp
    #define STRING3(str) L## #str
    ```
 
-### <a name="warning-on-invalid-"></a>\#不正確 \# 警告
+### <a name="warning-on-invalid-"></a>不合法警告\#\#
 
-當[標記貼入的運算子（# #）](token-pasting-operator-hash-hash.md)不會產生單一有效的前置處理 token 時，此行為是未定義的。 傳統預處理器會以無訊息模式合併標記。 新的預處理器會符合大部分其他編譯器的行為，併發出診斷。
+當[令牌粘貼運算符 (#)](token-pasting-operator-hash-hash.md)不產生單個有效的預處理令牌時,該行為未定義。 傳統的預處理器無法悄悄地組合權杖。 新的預處理器與大多數其他編譯器的行為匹配,併發出診斷。
 
 ```cpp
 // The ## is unnecessary and does not result in a single preprocessing token.
@@ -127,9 +127,9 @@ const wchar_t *info = DEBUG_INFO(hello world);
 ADD_STD(string) s;
 ```
 
-### <a name="comma-elision-in-variadic-macros"></a>Variadic 宏中的逗點 elision
+### <a name="comma-elision-in-variadic-macros"></a>變異巨集的逗號
 
-傳統的 MSVC 預處理器一律會在空白 `__VA_ARGS__` 取代之前移除逗號。 實驗性預處理器會更密切遵循其他熱門跨平臺編譯器的行為。 若要移除逗號，variadic 引數必須遺失（不只是空白），而且必須以 `##` 運算子標記。 請考慮下列範例：
+傳統的 MSVC 前處理器始終`__VA_ARGS__`在空 替換之前刪除逗號。 實驗前處理器更密切地遵循其他流行的跨平台編譯器的行為。 要刪除逗號,必須缺少可變參數(而不僅僅是空),並且必須用`##`運算符標記它。 請考慮下列範例：
 
 ```cpp
 void func(int, int = 2, int = 3);
@@ -149,7 +149,7 @@ int main()
 }
 ```
 
-在下列範例中，在所叫用的宏中遺漏 variadic 引數 `FUNC2(1)` 的呼叫。 在 `FUNC2(1, )` 的呼叫中，variadic 引數是空的，但不會遺失（請注意引數清單中的逗號）。
+在下面的示例中,在調用的宏中`FUNC2(1)`缺少對可變參數的調用。 在調用`FUNC2(1, )`變數參數時為空,但不丟失(請注意參數清單中的逗號)。
 
 ```cpp
 #define FUNC2(a, ...) func(a , ## __VA_ARGS__)
@@ -163,11 +163,11 @@ int main()
 }
 ```
 
-在未來的 c + + 20 標準中，已藉由新增 `__VA_OPT__`來解決此問題。 從 Visual Studio 2019 16.5 版開始，提供 `__VA_OPT__` 的實驗性預處理器支援。
+在即將出臺的C++20標準中,此問題已通過添加`__VA_OPT__`得到解決。 Visual Studio 2019 版本 16.5 中`__VA_OPT__`提供了實驗前處理器支援 。
 
-### <a name="c20-variadic-macro-extension"></a>C + + 20 variadic 宏擴充功能
+### <a name="c20-variadic-macro-extension"></a>C++20可變宏擴展
 
-實驗性預處理器支援 c + + 20 variadic 宏引數 elision：
+實驗前處理器支援C++20變幻宏參數消除:
 
 ```cpp
 #define FUNC(a, ...) __VA_ARGS__ + a
@@ -178,11 +178,11 @@ int main()
   }
 ```
 
-此程式碼在 c + + 20 標準之前不符合規範。 在 MSVC 中，實驗性預處理器會將此 c + + 20 行為延伸至較低的語言標準模式（ **`/std:c++14`** 、 **`/std:c++17`** ）。 此延伸模組符合其他主要跨平臺C++編譯器的行為。
+此代碼不符合 C++20 標準。 在 MSVC 中,實驗前處理器將此C++20 行為擴展到**`/std:c++14`** 較低**`/std:c++17`** 的語言 標準模式 (,)。 此擴展與其他主要跨平臺C++編譯器的行為匹配。
 
-### <a name="macro-arguments-are-unpacked"></a>宏引數為「已解壓縮」
+### <a name="macro-arguments-are-unpacked"></a>宏參數"解壓縮"
 
-在傳統預處理器中，如果宏將它的其中一個引數轉送至另一個相依宏，則引數在插入時不會出現「已解壓縮」。 此優化通常會被忽略，但可能會導致異常的行為：
+在傳統的預處理器中,如果宏將其參數之一轉發到另一個從屬宏,則在插入參數時不會"解壓縮"。 通常,這種優化被忽視,但它可能導致異常行為:
 
 ```cpp
 // Create a string out of the first argument, and the rest of the arguments.
@@ -197,11 +197,11 @@ const char* c[2] = { A(1, 2) };
 // const char c[2] = { "1, 2", };
 ```
 
-當擴充 `A()`時，傳統預處理器會將 `__VA_ARGS__` 封裝的所有引數轉送至 TWO_STRINGS 的第一個引數，這會保留 `TWO_STRINGS` 空白的 variadic 引數。 這會導致 `#first` 的結果為 "1，2" 而不只是 "1"。 如果您密切關注，那麼您可能會想知道傳統預處理器擴充中 `#__VA_ARGS__` 的結果發生了什麼事：如果 variadic 參數是空的，它應該會導致空的字串常值 `""`。 個別的問題會保留產生的空字串常值 token。
+擴展`A()`時,傳統的預處理器將所有打包的參數`__VA_ARGS__`轉發 到TWO_STRINGS的第一個參數,從而留下`TWO_STRINGS`空的可變參數。 這將導致結果`#first`為"1,2",而不僅僅是"1"。 如果你緊隨其後,那麼您可能想知道傳統前處理器擴展的結果`#__VA_ARGS__`發生了什麼:如果變數參數為空,則應該導致一個空字串文本。 `""` 另一個問題阻止生成空字串文本權杖。
 
-### <a name="rescanning-replacement-list-for-macros"></a>重新掃描宏的取代清單
+### <a name="rescanning-replacement-list-for-macros"></a>重新掃描巨集的替代清單
 
-取代宏之後，會重新掃描產生的權杖，以取代其他宏識別碼。 傳統預處理器執行重新掃描所使用的演算法不符合，如下列範例所示，以實際程式碼為基礎：
+替換宏後,將重新掃描生成的權杖以替換其他巨集識別碼。 傳統的預處理器用於進行再掃描的演演演算法不符合,如本示例中基於實際代碼所示:
 
 ```cpp
 #define CAT(a,b) a ## b
@@ -220,16 +220,16 @@ DO_THING(1, "World");
 // IMPL1 ( "Hello","World");
 ```
 
-雖然此範例看起來有點假設，但我們已在實際程式碼中看到它。 若要查看發生的狀況，我們可以從 `DO_THING`開始細分擴充：
+儘管此示例看起來有點精心設計,但我們在真實世界代碼中看到了它。 為了瞭解發生了什麼,我們可以從 以下開始分解`DO_THING`擴展 :
 
-1. `DO_THING(1, "World")` 擴充至 `CAT(IMPL, 1) ECHO(("Hello", "World"))`
-1. `CAT(IMPL, 1)` 展開為 `IMPL ## 1`，它會展開至 `IMPL1`
-1. 現在，權杖處於此狀態： `IMPL1 ECHO(("Hello", "World"))`
-1. 預處理器會尋找類似函數的宏識別碼 `IMPL1`。 由於後面沒有 `(`，因此不會被視為類似函式的宏調用。
-1. 預處理器會移至下列權杖。 它會尋找會叫用類似函式的宏 `ECHO`： `ECHO(("Hello", "World"))`，它會展開至 `("Hello", "World")`
-1. `IMPL1` 永遠不會被視為展開，因此擴充的完整結果為： `IMPL1("Hello", "World");`
+1. `DO_THING(1, "World")`延伸到`CAT(IMPL, 1) ECHO(("Hello", "World"))`
+1. `CAT(IMPL, 1)`延伸到`IMPL ## 1`, 延伸到`IMPL1`
+1. 現在權杖處於此狀態:`IMPL1 ECHO(("Hello", "World"))`
+1. 預處理器尋找類似函數的巨集識別碼`IMPL1`。 因為它沒有後跟`(`, 它不被視為類似於函數的宏調用。
+1. 預處理器將轉到以下令牌。 因為呼叫類似函數的巨集`ECHO`: `ECHO(("Hello", "World"))``("Hello", "World")`
+1. `IMPL1`永遠不會再考慮擴展,因此擴展的全部結果是:`IMPL1("Hello", "World");`
 
-若要修改宏，使其在實驗性預處理器和傳統預處理器中的行為方式相同，請新增另一層間接取值：
+要修改宏在實驗前處理器和傳統前處理器下的行為方式相同,請添加另一層間接:
 
 ```cpp
 #define CAT(a,b) a##b
@@ -245,12 +245,12 @@ DO_THING_FIXED(1, "World");
 // do_thing_one( "Hello", "World");
 ```
 
-## <a name="incomplete-features"></a>不完整的功能
+## <a name="incomplete-features"></a>功能不完整
 
-從 Visual Studio 2019 16.5 版開始，實驗性預處理器是 c + + 20 的功能完整。 在舊版的 Visual Studio 中，實驗性預處理器大部分都是完整的，雖然某些預處理器指示詞邏輯仍然會回到傳統的行為。 以下是16.5 之前 Visual Studio 版本中未完成功能的部分清單：
+從 Visual Studio 2019 版本 16.5 開始,實驗預處理器功能齊全,適用於 C++20。 在 Visual Studio 的早期版本中,實驗預處理器大部分完成,儘管某些預處理器指令邏輯仍可以追溯到傳統行為。 以下是 16.5 之前 Visual Studio 版本中不完整功能的部分清單:
 
 - 支援 `_Pragma`
-- C + + 20 功能
-- 提升封鎖 bug：預處理器常數運算式中的邏輯運算子在16.5 版之前，不會在新的預處理器中完全實作為。 在某些 `#if` 指示詞上，新的預處理器可以切換回傳統的預處理器。 只有當宏與傳統預處理器不相容時，才會有明顯的影響。 建立加速預處理器位置時，可能會發生此問題。
+- C++20 功能
+- 增強阻塞錯誤:在版本 16.5 之前,預處理器常量表達式中的邏輯運算符未在新的預處理器中完全實現。 在某些`#if`指令中,新的預處理器可以回落到傳統的前處理器。 只有當與傳統預處理器不相容的宏得到擴展時,效果才會明顯。 在構建 Boost 預處理器插槽時,可能會發生這種情況。
 
 ::: moniker-end

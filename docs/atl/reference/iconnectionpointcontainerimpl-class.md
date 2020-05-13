@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointContainerImpl 類別
+title: IConnectionPoint容器Impl類
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointContainerImpl
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-ms.openlocfilehash: 278ca6b1b9aac9539680d90b6fa0b18df22fc2f0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f6009a1341d6715d6d2f170d3ff2aa1aa4ffcb96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496016"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329871"
 ---
-# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl 類別
+# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPoint容器Impl類
 
-此類別會執行連接點容器, 以管理[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件的集合。
+此類實現連接點容器來管理[IConnectPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件的集合。
 
 ## <a name="syntax"></a>語法
 
@@ -33,7 +33,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自`IConnectionPointContainerImpl`的類別。
+您的類,派生自`IConnectionPointContainerImpl`。
 
 ## <a name="members"></a>成員
 
@@ -41,20 +41,20 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 
 |名稱|描述|
 |----------|-----------------|
-|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|建立列舉值, 以逐一查看可連線物件中支援的連接點。|
-|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|抓取支援指定之 IID 之連接點的介面指標。|
+|[IConnectionPoint 容器 impl::Enal](#enumconnectionpoints)|建立枚舉器以透過可連接物件中支援的連接點反覆運算。|
+|[IConnectionPoint 容器 impl::尋找連接點](#findconnectionpoint)|檢索指向支援指定 IID 的連接點的介面指標。|
 
 ## <a name="remarks"></a>備註
 
-`IConnectionPointContainerImpl`執行連接點容器來管理[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件的集合。 `IConnectionPointContainerImpl`提供兩種方法, 讓用戶端可以呼叫以取得可連線物件的詳細資訊:
+`IConnectionPointContainerImpl`實現連接點容器以管理[IConnectPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件的集合。 `IConnectionPointContainerImpl`提供了兩種方法,用戶端可以調用這些方法來檢索有關可連接對象的詳細資訊:
 
-- `EnumConnectionPoints`可讓用戶端判斷物件支援的傳出介面。
+- `EnumConnectionPoints`允許客戶端確定物件支援哪個傳出介面。
 
-- `FindConnectionPoint`可讓用戶端判斷物件是否支援特定的傳出介面。
+- `FindConnectionPoint`允許客戶端確定物件是否支援特定的傳出介面。
 
-如需在 ATL 中使用連接點的詳細資訊, 請參閱[連接點](../../atl/atl-connection-points.md)一文。
+有關在 ATL 中使用連接點的資訊,請參考文章[連接點](../../atl/atl-connection-points.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IConnectionPointContainer`
 
@@ -62,11 +62,11 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints
+## <a name="iconnectionpointcontainerimplenumconnectionpoints"></a><a name="enumconnectionpoints"></a>IConnectionPoint 容器 impl::Enal
 
-建立列舉值, 以逐一查看可連線物件中支援的連接點。
+建立枚舉器以透過可連接物件中支援的連接點反覆運算。
 
 ```
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
@@ -74,11 +74,11 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IConnectionPointContainer:: EnumConnectionPoints](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) 。
+請參考[IConnectPoint 容器:Windows SDK 中的 ens 的 Ens SDK 的 ens 。](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints)
 
-##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint
+## <a name="iconnectionpointcontainerimplfindconnectionpoint"></a><a name="findconnectionpoint"></a>IConnectionPoint 容器 impl::尋找連接點
 
-抓取支援指定之 IID 之連接點的介面指標。
+檢索指向支援指定 IID 的連接點的介面指標。
 
 ```
 STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
@@ -86,9 +86,9 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) 。
+請參閱[IConnectPoint 容器:在](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)Windows SDK 中尋找連接點。
 
 ## <a name="see-also"></a>另請參閱
 
-[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[IConnectionPoint 容器](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
+[類別概觀](../../atl/atl-class-overview.md)

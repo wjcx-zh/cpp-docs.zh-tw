@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 757309a10da3e6d1c9c053430cce2cf603380b1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c00f1e41e70e723be185959eeff176390def7647
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374718"
 ---
 # <a name="tile_barrier-class"></a>tile_barrier 類別
 
-使用 `wait` 方法，同步處理執行緒群組（磚）中執行的執行緒。 只有執行時間可以具現化此類別。
+使用`wait`方法同步線程組(磁貼)中正在運行的線程的執行。 只有運行時才能實例化此類。
 
 ## <a name="syntax"></a>語法
 
@@ -35,18 +35,18 @@ class tile_barrier;
 
 |名稱|描述|
 |----------|-----------------|
-|[tile_barrier 的構造函式](#ctor)|初始化 `tile_barrier` 類別的新執行個體。|
+|[tile_barrier建構函數](#ctor)|將 `tile_barrier` 類別的新執行個體初始化。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[等候](#wait)|指示執行緒群組（磚）中的所有線程停止執行，直到磚中的所有線程都完成等候為止。|
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|封鎖磚中所有線程的執行，直到所有記憶體存取都完成，而且磚中的所有線程都已達到此呼叫。|
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|封鎖磚中所有線程的執行，直到所有全域記憶體存取都完成，而且磚中的所有線程都已達到此呼叫。|
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|封鎖磚中所有線程的執行，直到所有 `tile_static` 記憶體存取都完成，而且磚中的所有線程都已達到此呼叫。|
+|[等](#wait)|指示線程組(磁貼)中的所有線程停止執行,直到磁貼中的所有線程都已完成等待。|
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|阻止執行磁貼中的所有線程,直到完成所有記憶體訪問並且磁貼中的所有線程都達到此調用。|
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|阻止執行磁貼中的所有線程,直到完成所有全域記憶體訪問並且磁貼中的所有線程都已達到此調用。|
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|阻止執行磁貼中的所有線程,直到完成所有`tile_static`記憶體訪問並且磁貼中的所有線程都達到此調用。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `tile_barrier`
 
@@ -56,9 +56,9 @@ class tile_barrier;
 
 **命名空間：** 並行
 
-## <a name="ctor"></a>tile_barrier 的構造函式
+## <a name="tile_barrier-constructor"></a><a name="ctor"></a>tile_barrier建構函數
 
-藉由複製現有的實例，初始化類別的新實例。
+通過複製現有類的新實例來初始化該類的新實例。
 
 ### <a name="syntax"></a>語法
 
@@ -74,7 +74,7 @@ tile_barrier(
 
 ## <a name="wait"></a>wait
 
-指示執行緒群組（磚）中的所有線程停止執行，直到磚中的所有線程都完成等候為止。
+指示線程組(切片)中的所有線程停止執行,直到磁貼中的所有線程都已完成等待。
 
 ### <a name="syntax"></a>語法
 
@@ -82,9 +82,9 @@ tile_barrier(
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence
+## <a name="wait_with_all_memory_fence"></a><a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence
 
-封鎖磚中所有線程的執行，直到磚中的所有線程都達到此呼叫為止。 這可確保執行緒磚中的其他執行緒都可以看到所有的記憶體存取，並已依照程式循序執行。
+阻止執行磁貼中的所有線程,直到磁貼中的所有線程都達到此調用。 這可確保線程磁貼中的其他線程對所有記憶體訪問都可見,並且已按程式順序執行。
 
 ### <a name="syntax"></a>語法
 
@@ -92,9 +92,9 @@ void wait() const restrict(amp);
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="a-namewait_with_global_memory_fence-wait_with_global_memory_fence"></a><a name="wait_with_global_memory_fence"> wait_with_global_memory_fence
+## <a name="a-namewait_with_global_memory_fence-wait_with_global_memory_fence"></a><a name="wait_with_global_memory_fence">wait_with_global_memory_fence
 
-封鎖磚中所有線程的執行，直到磚中的所有線程都達到此呼叫為止。 這可確保 [執行緒] 磚中的其他執行緒可以看見所有全域記憶體存取，而且已依照程式循序執行。
+阻止執行磁貼中的所有線程,直到磁貼中的所有線程都達到此調用。 這可確保線程磁貼中的其他線程對所有全域記憶體訪問都可見,並且已按程式順序執行。
 
 ### <a name="syntax"></a>語法
 
@@ -102,9 +102,9 @@ void wait_with_all_memory_fence() const restrict(amp);
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="a-namewait_with_tile_static_memory_fence-wait_with_tile_static_memory_fence"></a><a name="wait_with_tile_static_memory_fence"> wait_with_tile_static_memory_fence
+## <a name="a-namewait_with_tile_static_memory_fence-wait_with_tile_static_memory_fence"></a><a name="wait_with_tile_static_memory_fence">wait_with_tile_static_memory_fence
 
-封鎖磚中所有線程的執行，直到磚中的所有線程都達到此呼叫為止。 這可確保執行緒磚中的其他執行緒可以看到 `tile_static` 的記憶體存取，並已依照程式循序執行。
+阻止執行磁貼中的所有線程,直到磁貼中的所有線程都達到此調用。 這可確保`tile_static`記憶體訪問對線程磁貼中的其他線程可見,並且已按程式順序執行。
 
 ### <a name="syntax"></a>語法
 
@@ -114,4 +114,4 @@ void wait_with_tile_static_memory_fence() const restrict(amp);
 
 ## <a name="see-also"></a>另請參閱
 
-[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[併發命名空間(C++ AMP)](concurrency-namespace-cpp-amp.md)

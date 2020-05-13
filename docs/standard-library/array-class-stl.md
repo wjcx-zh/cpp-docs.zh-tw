@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
+ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422056"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643638"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -118,8 +118,8 @@ class array;
 
 |參數|描述|
 |-|-|
-|`Ty`|元素類型。|
-|`N`|元素數。|
+|`Ty`|項目的類型。|
+|`N`|項目的數目。|
 
 ## <a name="members"></a>成員
 
@@ -130,43 +130,43 @@ class array;
 |[const_reference](#const_reference)|項目的常數參考類型。|
 |[const_reverse_iterator](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|
 |[difference_type](#difference_type)|兩個項目之間帶正負號距離的類型。|
-|[iterator](#iterator)|受控制序列之迭代器的類型。|
-|[pointer](#pointer)|項目的指標類型。|
-|[reference](#reference)|項目的參考類型。|
+|[定位](#iterator)|受控制序列之迭代器的類型。|
+|[指標](#pointer)|項目的指標類型。|
+|[證明](#reference)|項目的參考類型。|
 |[reverse_iterator](#reverse_iterator)|受控制序列的反向迭代器類型。|
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
-|[value_type](#value_type)|元素類型。|
+|[value_type](#value_type)|項目的類型。|
 
 |成員函式|描述|
 |-|-|
-|[array](#array)|建構陣列物件。|
-|[assign](#assign)|過時. 使用 `fill`）。取代所有元素。|
+|[數列](#array)|建構陣列物件。|
+|[assign](#assign)|過時. 請`fill`使用）。取代所有元素。|
 |[at](#at)|存取指定位置的項目。|
-|[back](#back)|存取最後一個項目。|
-|[begin](#begin)|指定受控制序列的開頭。|
+|[返回](#back)|存取最後一個項目。|
+|[起點](#begin)|指定受控制序列的開頭。|
 |[cbegin](#cbegin)|將隨機存取常數迭代器傳回陣列中的第一個項目。|
 |[cend](#cend)|傳回隨機存取指向陣列結尾之後一個項目的常數迭代器。|
 |[crbegin](#crbegin)|將常數迭代器傳回反向陣列中的第一個項目。|
 |[crend](#crend)|將常數迭代器傳回反向陣列的結尾。|
-|[data](#data)|取得第一個項目的位址。|
+|[資料](#data)|取得第一個項目的位址。|
 |[empty](#empty)|測試項目是否存在。|
-|[end](#end)|指定受控制序列的結尾。|
-|[fill](#fill)|取代所有具有指定值的項目。|
-|[front](#front)|存取第一個項目。|
+|[成品](#end)|指定受控制序列的結尾。|
+|[填滿](#fill)|取代所有具有指定值的項目。|
+|[前端](#front)|存取第一個項目。|
 |[max_size](#max_size)|計算元素的數目。|
 |[rbegin](#rbegin)|指定反向受控制序列的開頭。|
 |[rend](#rend)|指定反向受控制序列的結尾。|
 |[size](#size)|計算元素的數目。|
-|[swap](#swap)|交換兩個容器的內容。|
+|[調換](#swap)|交換兩個容器的內容。|
 
 |運算子|描述|
 |-|-|
-|[array::operator=](#op_eq)|取代受控制的序列。|
+|[array：： operator =](#op_eq)|取代受控制的序列。|
 |[array：： operator\[\]](#op_at)|存取指定位置的項目。|
 
 ## <a name="remarks"></a>備註
 
-該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如：
+該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如，
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,11 +176,11 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>需求
 
-**Header：** \<陣列 >
+**標頭：** \<array>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="array"></a> array::array
+## <a name="arrayarray"></a><a name="array"></a>array：： array
 
 建構陣列物件。
 
@@ -192,14 +192,14 @@ array(const array& right);
 
 ### <a name="parameters"></a>參數
 
-*right*\
+*再*\
 要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
 
 預設建構函式 `array()` 會讓受控制序列處於未初始化狀態 (預設為初始化)。 您使用它來指定未初始化的受控制序列。
 
-複製建構函式 `array(const array& right)` 會使用序列 [*right*`.begin()`, *right*`.end()`) 來初始化受控制序列。 您使用它來指定初始受控制序列，這個初始受控制序列是陣列物件 *right* 所控制序列的複本。
+複製的函`array(const array& right)`式會使用順序 [*right*`.begin()`， *right*`.end()`）來初始化受控制的序列。 您使用它來指定初始受控制序列，這個初始受控制序列是陣列物件 *right* 所控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -239,11 +239,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="assign"></a> array::assign
+## <a name="arrayassign"></a><a name="assign"></a>array：： assign
 
 在 C++11 中已淘汰，已取代為 [fill](#fill)。 取代所有項目。
 
-## <a name="at"></a> array::at
+## <a name="arrayat"></a><a name="at"></a>array：： at
 
 存取指定位置的項目。
 
@@ -255,7 +255,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*關閉*\
+*停止*\
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -289,7 +289,7 @@ int main()
 }
 ```
 
-## <a name="back"></a> array::back
+## <a name="arrayback"></a><a name="back"></a>array：： back
 
 存取最後一個項目。
 
@@ -334,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="begin"></a> array::begin
+## <a name="arraybegin"></a><a name="begin"></a>array：： begin
 
 指定受控制序列的開頭。
 
@@ -379,7 +379,7 @@ int main()
 0
 ```
 
-## <a name="cbegin"></a> array::cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a>array：： cbegin
 
 傳回**常數**反覆運算器，定址範圍中的第一個元素。
 
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**常數**隨機存取反覆運算器，指向範圍的第一個專案，或指向空白範圍結尾之外的位置（針對空白範圍，`cbegin() == cend()`）。
+**常數**隨機存取反覆運算器，指向範圍的第一個元素，或指向空白範圍結尾（空白範圍`cbegin() == cend()`）之外的位置。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中， `Container`請將視為支援`begin()`和`cbegin()`的任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -405,7 +405,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> array::cend
+## <a name="arraycend"></a><a name="cend"></a>array：： cend
 
 傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
 
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中， `Container`請將視為支援`end()`和`cend()`的任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -433,7 +433,7 @@ auto i2 = Container.cend();
 
 `cend` 所傳回的值不應該取值。
 
-## <a name="const_iterator"></a> array::const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>array：： const_iterator
 
 用於受控制序列的常數迭代器類型。
 
@@ -481,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="const_pointer"></a> array::const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>array：： const_pointer
 
 項目的常數指標類型。
 
@@ -525,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="const_reference"></a> array::const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a>array：： const_reference
 
 項目的常數參考類型。
 
@@ -569,7 +569,7 @@ int main()
 0
 ```
 
-## <a name="const_reverse_iterator"></a> array::const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>array：： const_reverse_iterator
 
 用於受控制序列的常數反向迭代器類型。
 
@@ -613,7 +613,7 @@ int main()
 3
 ```
 
-## <a name="crbegin"></a> array::crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a>array：： crbegin
 
 將常數迭代器傳回反向陣列中的第一個項目。
 
@@ -657,7 +657,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="crend"></a> array::crend
+## <a name="arraycrend"></a><a name="crend"></a>array：： crend
 
 傳回 const 迭代器，其定址反轉陣列中最後一個元素的下一個位置。
 
@@ -701,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="data"></a> array::data
+## <a name="arraydata"></a><a name="data"></a>陣列：:d ata
 
 取得第一個項目的位址。
 
@@ -747,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="difference_type"></a> array::difference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a>array：:d ifference_type
 
 兩個項目之間帶正負號距離的類型。
 
@@ -791,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="empty"></a> array::empty
+## <a name="arrayempty"></a><a name="empty"></a>array：： empty
 
 測試項目是否不存在。
 
@@ -841,7 +841,7 @@ false
 true
 ```
 
-## <a name="end"></a> array::end
+## <a name="arrayend"></a><a name="end"></a>array：： end
 
 指定受控制序列的結尾。
 
@@ -887,7 +887,7 @@ int main()
 3
 ```
 
-## <a name="fill"></a> array::fill
+## <a name="arrayfill"></a><a name="fill"></a>array：： fill
 
 清除陣列，並將指定的項目複製到空陣列。
 
@@ -899,7 +899,7 @@ void fill(const Type& val);
 
 |參數|描述|
 |-|-|
-|*val*|插入陣列中之項目的值。|
+|*初始值*|插入陣列中之項目的值。|
 
 ### <a name="remarks"></a>備註
 
@@ -925,7 +925,7 @@ int main()
 
     v1.fill(3);
     cout << "v1 = ";
-    for (const auto& it : c0)
+    for (const auto& it : v1)
     {
         std::cout << " " << it;
     }
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="front"></a> array::front
+## <a name="arrayfront"></a><a name="front"></a>array：： front
 
 存取第一個項目。
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="iterator"></a> array::iterator
+## <a name="arrayiterator"></a><a name="iterator"></a>array：： iterator
 
 受控制序列之迭代器的類型。
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="max_size"></a> array::max_size
+## <a name="arraymax_size"></a><a name="max_size"></a>array：： max_size
 
 計算元素的數目。
 
@@ -1037,7 +1037,7 @@ constexpr size_type max_size() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `N`。
+成員函式會傳回 `N`。
 
 ### <a name="example"></a>範例
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="op_at"></a> array::operator[]
+## <a name="arrayoperator"></a><a name="op_at"></a>array：： operator []
 
 存取指定位置的項目。
 
@@ -1082,7 +1082,7 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*關閉*\
+*停止*\
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="op_eq"></a> array::operator=
+## <a name="arrayoperator"></a><a name="op_eq"></a>array：： operator =
 
 取代受控制的序列。
 
@@ -1133,12 +1133,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>參數
 
-*right*\
+*再*\
 要複製的容器。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會*將的每個元素*指派給受控制序列的對應元素，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會*將的每個元素*指派給受控制序列的對應元素，然後傳回`*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="pointer"></a> array::pointer
+## <a name="arraypointer"></a><a name="pointer"></a>array：:p ointer
 
 項目的指標類型。
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="rbegin"></a> array::rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a>array：： rbegin
 
 指定反向受控制序列的開頭。
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="reference"></a> array::reference
+## <a name="arrayreference"></a><a name="reference"></a>array：： reference
 
 項目的參考類型。
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="rend"></a> array::rend
+## <a name="arrayrend"></a><a name="rend"></a>array：： rend
 
 指定反向受控制序列的結尾。
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="reverse_iterator"></a> array::reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>array：： reverse_iterator
 
 受控制序列的反向迭代器類型。
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="size"></a> array::size
+## <a name="arraysize"></a><a name="size"></a>array：： size
 
 計算元素的數目。
 
@@ -1410,7 +1410,7 @@ constexpr size_type size() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `N`。
+成員函式會傳回 `N`。
 
 ### <a name="example"></a>範例
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="size_type"></a> array::size_type
+## <a name="arraysize_type"></a><a name="size_type"></a>array：： size_type
 
 兩個元素之間不帶正負號距離的類型。
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="swap"></a> array::swap
+## <a name="arrayswap"></a><a name="swap"></a>array：： swap
 
 將這個陣列的內容與另一個陣列交換。
 
@@ -1497,12 +1497,12 @@ void swap(array& right);
 
 ### <a name="parameters"></a>參數
 
-*right*\
+*再*\
 要與之交換內容的陣列。
 
 ### <a name="remarks"></a>備註
 
-成員函式會在 `*this` 和*右方*之間交換受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
+成員函式會在和*right*之間`*this`交換受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
 
 另外還有一個非成員[交換](array-functions.md#swap)函式，可用來交換兩個**陣列**實例。
 
@@ -1553,9 +1553,9 @@ int main()
 0 1 2 3
 ```
 
-## <a name="value_type"></a> array::value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a>array：： value_type
 
-元素類型。
+項目的類型。
 
 ```cpp
 typedef Ty value_type;
@@ -1563,7 +1563,7 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>備註
 
-這個類型與樣板參數 `Ty`同義。
+此類型是樣板參數 `Ty` 的同義字。
 
 ### <a name="example"></a>範例
 
@@ -1602,4 +1602,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[\<array>](../standard-library/array.md)
+[\<陣列>](../standard-library/array.md)

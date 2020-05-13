@@ -1,8 +1,9 @@
 ---
 title: _gcvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt
+- _o__gcvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956108"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919403"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -57,10 +59,10 @@ char *_gcvt(
 *值*<br/>
 要轉換的值。
 
-*digits*<br/>
+*數字*<br/>
 儲存的重要數字的數目。
 
-*buffer*<br/>
+*緩衝區*<br/>
 結果的儲存位置。
 
 ## <a name="return-value"></a>傳回值
@@ -69,11 +71,13 @@ char *_gcvt(
 
 ## <a name="remarks"></a>備註
 
-**_Gcvt**函式會將浮點*值*轉換為字元字串（其中包括小數點和可能的正負號位元組），並將字串儲存在*buffer*中。 *緩衝區*應該夠大，足以容納轉換的值加上會自動附加的終止 null 字元。 如果使用的緩衝區大小*為 + 1* ，則函式會覆寫緩衝區的結尾。 這是因為已轉換的字串包含小數點，且可以包含符號和指數的資訊。 沒有提供溢位。 **_gcvt**會嘗試以十進位格式來產生*位數*數位。 如果無法這麼做，則會產生指數格式的*數位*。 可能於轉換中隱藏尾端零。
+**_Gcvt**函式會將浮點*值*轉換為字元字串（其中包括小數點和可能的正負號位元組），並將字串儲存在*buffer*中。 *緩衝區*應該夠大，足以容納轉換的值加上會自動附加的終止 null 字元。 如果使用的緩衝區大小*為 + 1* ，則函式會覆寫緩衝區的結尾。 這是因為已轉換的字串包含小數點，且可以包含符號和指數的資訊。 沒有提供溢位。 **_gcvt**嘗試以十進位格式產生*位數*數位。 如果無法這麼做，則會產生指數格式的*數位*。 可能於轉換中隱藏尾端零。
 
 長度 **_CVTBUFSIZE**的*緩衝區*足以滿足任何浮點值。
 
 這個函式會驗證它的參數。 如果*buffer*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**Null**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -81,7 +85,7 @@ char *_gcvt(
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

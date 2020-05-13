@@ -1,9 +1,11 @@
 ---
 title: remove0、_wremove
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wremove
 - remove
+- _o__wremove
+- _o_remove
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 2ceedcf9d3cc2b26a8d91ca923f81f0ce539b64a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949427"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917831"
 ---
 # <a name="remove-_wremove"></a>remove0、_wremove
 
@@ -68,19 +71,21 @@ int _wremove(
 
 ## <a name="remarks"></a>備註
 
-**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是寬字元版本的（ **_** ）; **_wremove**的*path*引數是寬字元字串。 否則， **_wremove**和 **_** 的行為會相同。 必須先關閉檔案的所有處理常式，才能刪除它。
+**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是寬字元版本的 **_remove**;**_wremove**的*path*引數是寬字元字串。 相反地， **_wremove**和 **_remove**的行為相同。 必須先關閉檔案的所有處理常式，才能刪除它。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove**|**remove**|**remove**|**_wremove**|
+|**_tremove**|**移除**|**移除**|**_wremove**|
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**remove**|\<stdio.h> 或 \<io.h>|
+|**移除**|\<stdio.h> 或 \<io.h>|
 |**_wremove**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。

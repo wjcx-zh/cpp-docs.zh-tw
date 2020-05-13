@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointImpl 類別
+title: IConnectionPointimpl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointImpl
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-ms.openlocfilehash: bd88fd5d00df0347c0bd2161129b8cfa3ca35406
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c62ac3310a579379674674a7a9a517e3f2fd60e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496086"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329847"
 ---
-# <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl 類別
+# <a name="iconnectionpointimpl-class"></a>IConnectionPointimpl 類別
 
-這個類別會執行連接點。
+此類實現連接點。
 
 ## <a name="syntax"></a>語法
 
@@ -35,13 +35,13 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自`IConnectionPointImpl`的類別。
+您的類,派生自`IConnectionPointImpl`。
 
-*piid*<br/>
-連接點物件所代表之介面的 IID 指標。
+*皮伊德*<br/>
+指向連接點物件表示的介面 IID 的指標。
 
 *CDV*<br/>
-管理連接的類別。 預設值為[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), 允許無限制的連接。 您也可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md), 它會指定固定的連線數目。
+管理連接的類。 默認值為[CComDynamicUnkarray,](../../atl/reference/ccomdynamicunkarray-class.md)它允許無限制的連接。 您還可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md),它指定固定數量的連接。
 
 ## <a name="members"></a>成員
 
@@ -49,27 +49,27 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 
 |名稱|描述|
 |----------|-----------------|
-|[IConnectionPointImpl::Advise](#advise)|建立連接點與接收之間的連接。|
-|[IConnectionPointImpl::EnumConnections](#enumconnections)|建立列舉值, 以逐一查看連接點的連接。|
-|[IConnectionPointImpl::GetConnectionInterface](#getconnectioninterface)|抓取連接點所表示之介面的 IID。|
-|[IConnectionPointImpl::GetConnectionPointContainer](#getconnectionpointcontainer)|抓取可連線物件的介面指標。|
-|[IConnectionPointImpl::Unadvise](#unadvise)|終止先前透過`Advise`建立的連接。|
+|[IConnectionPointimpl::建議](#advise)|在連接點和接收器之間建立連接。|
+|[IConnectionPointimpl::Eners](#enumconnections)|建立枚舉器以迴圈透過連接點的連接。|
+|[IConnection點impl::取得連接介面](#getconnectioninterface)|檢索連接點表示的介面的IID。|
+|[IConnectionPointimpl::取得連接點容器](#getconnectionpointcontainer)|檢索指向可連接物件的介面指標。|
+|[IConnectionPointimpl::取消建議](#unadvise)|終止以前通過`Advise`建立的連接。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[IConnectionPointImpl::m_vec](#m_vec)|管理連接點的連接。|
+|[IConnectionPointimpl::m_vec](#m_vec)|管理連接點的連接。|
 
 ## <a name="remarks"></a>備註
 
-`IConnectionPointImpl`會執行連接點, 以允許物件將傳出介面公開給用戶端。 用戶端會在稱為接收的物件上, 執行此介面。
+`IConnectionPointImpl`實現一個連接點,它允許物件向用戶端公開傳出介面。 用戶端在稱為接收器的對象上實現此介面。
 
-ATL 會使用[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)來執行可連接的物件。 可連線物件內的每個連接點都代表*piid*所識別的輸出介面。 [類別*CDV* ] 會管理連接點與接收之間的連接。 每個連接都是由「cookie」唯一識別。
+ATL 使用[IConnectionPoint容器Impl](../../atl/reference/iconnectionpointcontainerimpl-class.md)來實現可連接物件。 可連接物件中的每個連接點表示一個傳出介面,由*piid*標識。 *CDV*類管理連接點和接收器之間的連接。 每個連接都由"cookie"唯一標識。
 
-如需在 ATL 中使用連接點的詳細資訊, 請參閱[連接點](../../atl/atl-connection-points.md)一文。
+有關在 ATL 中使用連接點的詳細資訊,請參閱文章[連接點](../../atl/atl-connection-points.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `_ICPLocator`
 
@@ -77,11 +77,11 @@ ATL 會使用[IConnectionPointContainerImpl](../../atl/reference/iconnectionpoin
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="advise"></a>IConnectionPointImpl:: Advise
+## <a name="iconnectionpointimpladvise"></a><a name="advise"></a>IConnectionPointimpl::建議
 
-建立連接點與接收之間的連接。
+在連接點和接收器之間建立連接。
 
 ```
 STDMETHOD(Advise)(
@@ -91,13 +91,13 @@ STDMETHOD(Advise)(
 
 ### <a name="remarks"></a>備註
 
-使用[Unadvise](#unadvise)來終止連接呼叫。
+使用[「不建議」](#unadvise)終止連接呼叫。
 
-請參閱 Windows SDK 中的[IConnectionPoint:: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) 。
+請參閱[IConnectionPoint::Windows](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) SDK 中的建議。
 
-##  <a name="enumconnections"></a>IConnectionPointImpl:: EnumConnections
+## <a name="iconnectionpointimplenumconnections"></a><a name="enumconnections"></a>IConnectionPointimpl::Eners
 
-建立列舉值, 以逐一查看連接點的連接。
+建立枚舉器以迴圈透過連接點的連接。
 
 ```
 STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
@@ -105,11 +105,11 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IConnectionPoint:: EnumConnections](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) 。
+請參閱[IConnectPoint:Windows](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) SDK 中的枚舉連接。
 
-##  <a name="getconnectioninterface"></a>IConnectionPointImpl:: GetConnectionInterface
+## <a name="iconnectionpointimplgetconnectioninterface"></a><a name="getconnectioninterface"></a>IConnection點impl::取得連接介面
 
-抓取連接點所表示之介面的 IID。
+檢索連接點表示的介面的IID。
 
 ```
 STDMETHOD(GetConnectionInterface)(IID* piid2);
@@ -117,11 +117,11 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IConnectionPoint:: GetConnectionInterface](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) 。
+請參閱[IConnectPoint:獲取](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface)Windows SDK 中的連接介面。
 
-##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl:: GetConnectionPointContainer
+## <a name="iconnectionpointimplgetconnectionpointcontainer"></a><a name="getconnectionpointcontainer"></a>IConnectionPointimpl::取得連接點容器
 
-抓取可連線物件的介面指標。
+檢索指向可連接物件的介面指標。
 
 ```
 STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
@@ -129,11 +129,11 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IConnectionPoint:: GetConnectionPointContainer](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) 。
+請參閱[IConnectPoint:獲取](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer)Windows SDK 中的連接點容器。
 
-##  <a name="m_vec"></a>IConnectionPointImpl:: m_vec
+## <a name="iconnectionpointimplm_vec"></a><a name="m_vec"></a>IConnectionPointimpl::m_vec
 
-管理連接點物件與接收之間的連接。
+管理連接點物件和接收器之間的連接。
 
 ```
 CDV m_vec;
@@ -141,11 +141,11 @@ CDV m_vec;
 
 ### <a name="remarks"></a>備註
 
-根據預設, `m_vec`的類型是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)。
+預設的項目`m_vec`, 是[CComDynamic Unkarray 類型](../../atl/reference/ccomdynamicunkarray-class.md)。
 
-##  <a name="unadvise"></a>IConnectionPointImpl:: Unadvise
+## <a name="iconnectionpointimplunadvise"></a><a name="unadvise"></a>IConnectionPointimpl::取消建議
 
-終止先前透過 [[通知](#advise)] 建立的連接。
+終止以前通過[通知](#advise)建立的連接。
 
 ```
 STDMETHOD(Unadvise)(DWORD dwCookie);
@@ -153,9 +153,9 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IConnectionPoint:: Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) 。
+請參閱[IConnectPoint::](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)在 Windows SDK 中取消建議。
 
 ## <a name="see-also"></a>另請參閱
 
 [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

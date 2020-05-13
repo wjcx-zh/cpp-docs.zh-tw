@@ -8,15 +8,15 @@ helpviewer_keywords:
 - epilog code
 ms.assetid: 2543c8af-00d4-4a2a-8a87-e746da1f9929
 ms.openlocfilehash: b752dd6fa378bc1275e8a7da90420aa2b8247e4e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232810"
 ---
 # <a name="naked-functions"></a>Naked 函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 `naked` 儲存類別屬性是 Microsoft 專有的 C 語言擴充功能。 針對以 `naked` 儲存類別屬性宣告的函式，編譯器會產生不具初構和終解程式碼的程式碼。 利用此功能就可以使用內嵌組合語言程式碼撰寫您自己的初構/終解程式碼序列。 naked 函式在撰寫虛擬裝置驅動程式方面特別實用。
 
@@ -56,8 +56,8 @@ __declspec( naked ) int func();   /* Error--naked attribute not */
                      /* permitted on function declarations.    */   \
 ```
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 函式定義](../c-language/c-function-definitions.md)

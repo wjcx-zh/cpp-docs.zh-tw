@@ -1,9 +1,11 @@
 ---
 title: asctime、_wasctime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime
 - asctime
+- _o__wasctime
+- _o_asctime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939664"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909431"
 ---
 # <a name="asctime-_wasctime"></a>asctime、_wasctime
 
@@ -62,7 +65,7 @@ wchar_t *_wasctime(
 
 ## <a name="return-value"></a>傳回值
 
-**asctime**會傳回字元字串結果的指標; **_wasctime**會傳回寬字元字串結果的指標。 沒有錯誤傳回值。
+**asctime**會傳回字元字串結果的指標;**_wasctime**會傳回寬字元字串結果的指標。 沒有錯誤傳回值。
 
 ## <a name="remarks"></a>備註
 
@@ -86,9 +89,11 @@ wchar_t *_wasctime(
 
 **Asctime**所產生的字串結果只包含26個字元，且的`Wed Jan 02 02:03:55 1980\n\0`格式為。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 **asctime**會使用以靜態方式配置的單一緩衝區來保存傳回字串。 每次呼叫此函式都會導致先前呼叫結果的終結。
 
-**_wasctime**是**asctime**的寬字元版本。 相反地， **_wasctime**和**asctime**的行為相同。
+**_wasctime**是**asctime**的寬字元版本。 **_wasctime**和**asctime**的行為相同。
 
 這些函式會驗證它們的參數。 如果*timeptr*為 null 指標，或包含超出範圍的值，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文字常式對應
 

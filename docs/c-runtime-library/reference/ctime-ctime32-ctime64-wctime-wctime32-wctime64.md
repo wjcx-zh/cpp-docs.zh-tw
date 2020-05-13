@@ -1,6 +1,6 @@
 ---
 title: ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ctime64
 - _wctime32
@@ -8,6 +8,8 @@ api_name:
 - _wctime64
 - _ctime32
 - _wctime
+- _o__wctime32
+- _o__wctime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,12 +56,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: ee802e9e6ddef839f08cf6dab6573f404328b2c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc87f417db93f8ad0d90de1270c19997669fb7c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937764"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914830"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64
 
@@ -86,11 +89,11 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 
 - *sourceTime*代表1970年1月1日午夜之前的日期（UTC）。
 
-- 如果您使用 **_ctime32**或 **_Wctime32** ，而*SourceTime*代表23:59:59 年1月 18 2038 日之後的日期，則為 UTC。
+- 如果您使用 **_ctime32**或 **_Wctime32** ，而*SourceTime*代表23:59:59 年1月 18 2038 日（UTC）之後的日期。
 
 - 如果您使用 **_ctime64**或 **_Wctime64** ，而*SourceTime*代表23:59:59 年12月 3000 31 日（UTC）之後的日期。
 
-**ctime**是一個會評估為 **_ctime64**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊版32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**ctime**評估為 **_ctime32**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+**ctime**是一個會評估為 **_ctime64**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**ctime**評估為 **_ctime32**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
 ## <a name="remarks"></a>備註
 
@@ -102,13 +105,15 @@ Wed Jan 02 02:03:55 1980\n\0
 
 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元 ('\n') 和 null 字元 ('\0') 佔用字串的最後兩個位置。
 
-已轉換的字元字串也會根據當地時區設定調整。 如需有關設定當地時間和[_tzset](tzset.md)函式的詳細資訊，請參閱[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime](localtime-localtime32-localtime64.md)函數，以取得定義時區環境和全域變數的詳細資訊。
+已轉換的字元字串也會根據當地時區設定調整。 如需有關設定當地時間和[_tzset](tzset.md)函數的詳細資訊，請參閱[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime](localtime-localtime32-localtime64.md)函式，以取得定義時區環境和全域變數的詳細資訊。
 
 對**ctime**的呼叫會修改**gmtime**和**localtime**函數所使用的單一靜態配置緩衝區。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。 **ctime**會與**asctime**函數共用靜態緩衝區。 因此，對**ctime**的呼叫會終結任何先前呼叫**asctime**、 **localtime**或**gmtime**的結果。
 
 **_wctime**和 **_wctime64**是**ctime**和 **_ctime64**的寬字元版本;傳回寬字元字串的指標。 否則， **_ctime64**、 **_wctime**和 **_wctime64**的行為與**ctime**相同。
 
 這些函式會驗證它們的參數。 如果*sourceTime*為 null 指標，或如果*sourceTime*值為負數，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -162,7 +167,7 @@ The time is Wed Feb 13 16:04:43 2002
 
 [時間管理](../../c-runtime-library/time-management.md)<br/>
 [asctime、_wasctime](asctime-wasctime.md)<br/>
-[_ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
+[ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>

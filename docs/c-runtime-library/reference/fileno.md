@@ -1,8 +1,9 @@
 ---
 title: _fileno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fileno
+- _o__fileno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957209"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919468"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -48,7 +50,7 @@ int _fileno(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -64,13 +66,15 @@ int _fileno(
 
 **_Fileno**常式會傳回目前與*資料流程*相關聯的檔案描述項。 此常式可當作函式和巨集來實作。 如需選擇其中一個實作的資訊，請參閱[選擇函式與巨集](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fileno**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -99,7 +103,7 @@ The file descriptor for stderr is 2
 ## <a name="see-also"></a>另請參閱
 
 [資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[_fdopen、wfdopen](fdopen-wfdopen.md)<br/>
+[_fdopen、_wfdopen](fdopen-wfdopen.md)<br/>
 [_filelength、_filelengthi64](filelength-filelengthi64.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
-f[reopen、_wfreopen](freopen-wfreopen.md)<br/>
+[freopen、_wfreopen](freopen-wfreopen.md)<br/>

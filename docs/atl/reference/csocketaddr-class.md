@@ -1,5 +1,5 @@
 ---
-title: CSocketAddr 類別
+title: 克塞底載入器類
 ms.date: 10/22/2018
 f1_keywords:
 - CSocketAddr
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 2a131323e64b1bf67f76ec92e7a3e4fcba899661
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 66d33d62212389a2b0f318250c1c16a99167c6eb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330686"
 ---
-# <a name="csocketaddr-class"></a>CSocketAddr 類別
+# <a name="csocketaddr-class"></a>克塞底載入器類
 
-此類別提供將主機名稱轉換成主機位址的方法, 同時支援 IPv4 和 IPV6 格式。
+此類提供了將主機名轉換為主機位址的方法,支援IPv4和IPV6格式。
 
 ## <a name="syntax"></a>語法
 
@@ -36,31 +36,31 @@ class CSocketAddr
 
 |名稱|描述|
 |----------|-----------------|
-|[CSocketAddr::CSocketAddr](#csocketaddr)|建構函式。|
+|[Socket::socket](#csocketaddr)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CSocketAddr::FindAddr](#findaddr)|呼叫這個方法, 將提供的主機名稱轉換成主機位址。|
-|[CSocketAddr::FindINET4Addr](#findinet4addr)|呼叫這個方法, 將 IPv4 主機名稱轉換成主機位址。|
-|[CSocketAddr::FindINET6Addr](#findinet6addr)|呼叫這個方法, 將 IPv6 主機名稱轉換成主機位址。|
-|[CSocketAddr::GetAddrInfo](#getaddrinfo)|呼叫這個方法, 以傳回`addrinfo`清單中特定元素的指標。|
-|[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|呼叫這個方法, 以傳回`addrinfo`清單的指標。|
+|[Socket::尋找新增器](#findaddr)|調用此方法可將提供的主機名轉換為主機位址。|
+|[Socket::尋找 INET4Addr](#findinet4addr)|調用此方法將 IPv4 主機名轉換為主機位址。|
+|[Socket::尋找 INET6Addr](#findinet6addr)|調用此方法將 IPv6 主機名轉換為主機位址。|
+|[CSocketAddr:取得AddrInfo](#getaddrinfo)|呼叫此方法以返回指向清單中特定元素的`addrinfo`指標。|
+|[Socket::取得AddrInfoList](#getaddrinfolist)|呼叫此方法以返回指向清單的`addrinfo`指標。|
 
 ## <a name="remarks"></a>備註
 
-此類別提供一種 IP 版本無關的方法, 用來查閱網路位址以用於程式庫中的 Windows 通訊端 API 函式和通訊端包裝函式。
+此類提供了一種與IP版本無關的方法,用於查找網路位址,以便與庫中的Windows套接字API函數和套接字包裝器配合使用。
 
-此類別用來查閱網路位址的成員會使用 WIN32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)。 系統會根據您的程式碼是否針對 ANSI 或 UNICODE 進行編譯, 來呼叫函式的 ANSI 或 UNICODE 版本。
+此成員用於尋找網路位址,使用 Win32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)。 根據代碼是為 ANSI 還是 UNICODE 編譯的,調用該函數的 ANSI 或 UNICODE 版本。
 
-此類別支援兩個 IPv4 andIPv6 網路位址。
+此類同時支援 IPv4 和 IPv6 網路位址。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlsocket。h
+**標題:** atlsocket.h
 
-##  <a name="csocketaddr"></a>  CSocketAddr::CSocketAddr
+## <a name="csocketaddrcsocketaddr"></a><a name="csocketaddr"></a>Socket::socket
 
 建構函式。
 
@@ -70,11 +70,11 @@ CSocketAddr();
 
 ### <a name="remarks"></a>備註
 
-建立新`CSocketAddr`的物件, 並初始化包含主機回應資訊的連結清單。
+建立新`CSocketAddr`物件並初始化包含有關主機的回應資訊的連結清單。
 
-##  <a name="findaddr"></a>  CSocketAddr::FindAddr
+## <a name="csocketaddrfindaddr"></a><a name="findaddr"></a>Socket::尋找新增器
 
-呼叫這個方法, 將提供的主機名稱轉換成主機位址。
+調用此方法可將提供的主機名轉換為主機位址。
 
 ```
 int FindAddr(
@@ -97,37 +97,37 @@ int FindAddr(
 ### <a name="parameters"></a>參數
 
 *szHost*<br/>
-主機名稱或點的 IP 位址。
+主機名或虛點 IP 位址。
 
-*szPortOrServiceName*<br/>
-主機上的服務埠編號或名稱。
+*szPortOr服務名稱*<br/>
+主機上的埠號或服務名稱。
 
-*nPortNo*<br/>
-埠號碼。
+*n波特諾*<br/>
+連接埠號碼。
 
-*flags*<br/>
-0或 AI_PASSIVE、AI_CANONNAME 或 AI_NUMERICHOST 的組合。
+*標誌*<br/>
+0 或AI_PASSIVE、AI_CANONNAME或AI_NUMERICHOST的組合。
 
 *addr_family*<br/>
-位址系列 (例如 PF_INET)。
+位址族(如PF_INET)。
 
 *sock_type*<br/>
-通訊端類型 (例如 SOCK_STREAM)。
+套接字類型(如SOCK_STREAM)。
 
 *ai_proto*<br/>
-通訊協定 (例如 IPPROTO_IP 或 IPPROTO_IPV6)。
+協定(如IPPROTO_IP或IPPROTO_IPV6)。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功計算位址, 則傳回零。 失敗時傳回非零的 Windows 通訊端錯誤碼。 如果成功, 則會將匯出的位址儲存在連結的清單中, 而且`CSocketAddr::GetAddrInfoList`可以`CSocketAddr::GetAddrInfo`使用和來參考。
+如果位址計算成功,則返回零。 在發生故障時返回非零 Windows 套接字錯誤代碼。 如果成功,計算的位址將存儲在連結`CSocketAddr::GetAddrInfoList`清單中,該清單可以使用`CSocketAddr::GetAddrInfo`和引用。
 
 ### <a name="remarks"></a>備註
 
-主機名稱參數可以是 IPv4 或 IPv6 格式。 這個方法會呼叫 WIN32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。
+主機名參數可能採用 IPv4 或 IPv6 格式。 此方法調用 Win32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。
 
-##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr
+## <a name="csocketaddrfindinet4addr"></a><a name="findinet4addr"></a>Socket::尋找 INET4Addr
 
-呼叫這個方法, 將 IPv4 主機名稱轉換成主機位址。
+調用此方法將 IPv4 主機名轉換為主機位址。
 
 ```
 int FindINET4Addr(
@@ -140,28 +140,28 @@ int FindINET4Addr(
 ### <a name="parameters"></a>參數
 
 *szHost*<br/>
-主機名稱或點的 IP 位址。
+主機名或虛點 IP 位址。
 
-*nPortNo*<br/>
-埠號碼。
+*n波特諾*<br/>
+連接埠號碼。
 
-*flags*<br/>
-0或 AI_PASSIVE、AI_CANONNAME 或 AI_NUMERICHOST 的組合。
+*標誌*<br/>
+0 或AI_PASSIVE、AI_CANONNAME或AI_NUMERICHOST的組合。
 
 *sock_type*<br/>
-通訊端類型 (例如 SOCK_STREAM)。
+套接字類型(如SOCK_STREAM)。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功計算位址, 則傳回零。 失敗時傳回非零的 Windows 通訊端錯誤碼。 如果成功, 則會將匯出的位址儲存在連結的清單中, 而且`CSocketAddr::GetAddrInfoList`可以`CSocketAddr::GetAddrInfo`使用和來參考。
+如果位址計算成功,則返回零。 在發生故障時返回非零 Windows 套接字錯誤代碼。 如果成功,計算的位址將存儲在連結`CSocketAddr::GetAddrInfoList`清單中,該清單可以使用`CSocketAddr::GetAddrInfo`和引用。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫 WIN32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。
+此方法調用 Win32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。
 
-##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr
+## <a name="csocketaddrfindinet6addr"></a><a name="findinet6addr"></a>Socket::尋找 INET6Addr
 
-呼叫這個方法, 將 IPv6 主機名稱轉換成主機位址。
+調用此方法將 IPv6 主機名轉換為主機位址。
 
 ```
 int FindINET6Addr(
@@ -174,28 +174,28 @@ int FindINET6Addr(
 ### <a name="parameters"></a>參數
 
 *szHost*<br/>
-主機名稱或點的 IP 位址。
+主機名或虛點 IP 位址。
 
-*nPortNo*<br/>
-埠號碼。
+*n波特諾*<br/>
+連接埠號碼。
 
-*flags*<br/>
-0或 AI_PASSIVE、AI_CANONNAME 或 AI_NUMERICHOST 的組合。
+*標誌*<br/>
+0 或AI_PASSIVE、AI_CANONNAME或AI_NUMERICHOST的組合。
 
 *sock_type*<br/>
-通訊端類型 (例如 SOCK_STREAM)。
+套接字類型(如SOCK_STREAM)。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功計算位址, 則傳回零。 失敗時傳回非零的 Windows 通訊端錯誤碼。 如果成功, 則會將匯出的位址儲存在連結的清單中, 而且`CSocketAddr::GetAddrInfoList`可以`CSocketAddr::GetAddrInfo`使用和來參考。
+如果位址計算成功,則返回零。 在發生故障時返回非零 Windows 套接字錯誤代碼。 如果成功,計算的位址將存儲在連結`CSocketAddr::GetAddrInfoList`清單中,該清單可以使用`CSocketAddr::GetAddrInfo`和引用。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫 WIN32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。
+此方法調用 Win32 API 函數[getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。
 
-##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo
+## <a name="csocketaddrgetaddrinfo"></a><a name="getaddrinfo"></a>CSocketAddr:取得AddrInfo
 
-呼叫這個方法, 以傳回`addrinfo`清單中特定元素的指標。
+呼叫此方法以返回指向清單中特定元素的`addrinfo`指標。
 
 ```
 addrinfo* const GetAddrInfo(int nIndex = 0) const;
@@ -204,15 +204,15 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[Addrinfo](/windows/win32/api/ws2def/ns-ws2def-addrinfow)清單中特定元素的參考。
+對[addrinfo](/windows/win32/api/ws2def/ns-ws2def-addrinfow)清單中特定元素的引用。
 
 ### <a name="return-value"></a>傳回值
 
-傳回連結清單中`addrinfo` *nIndex*所參考結構的指標, 其中包含主機的回應資訊。
+返回指向連結清單中`addrinfo`*nIndex*引用的結構的指標,其中包含有關主機的回應資訊。
 
-##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList
+## <a name="csocketaddrgetaddrinfolist"></a><a name="getaddrinfolist"></a>Socket::取得AddrInfoList
 
-呼叫這個方法, 以傳回`addrinfo`清單的指標。
+呼叫此方法以返回指向清單的`addrinfo`指標。
 
 ```
 addrinfo* const GetAddrInfoList() const;
@@ -220,8 +220,8 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含主機回應資訊的一或多個`addrinfo`結構之連結清單的指標。 如需詳細資訊, 請參閱[addrinfo 結構](/windows/win32/api/ws2def/ns-ws2def-addrinfow)。
+指向包含有關主機的回應資訊的一`addrinfo`個或多個結構的連結清單。 有關詳細資訊,請參閱[addrinfo 結構](/windows/win32/api/ws2def/ns-ws2def-addrinfow)。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

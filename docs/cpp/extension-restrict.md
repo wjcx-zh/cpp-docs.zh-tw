@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: cb340554bc20516175400c4d14a5d0dba934a313
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27ac76251456d9a0bf5908ad6d1fc2bee7534e9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188957"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360807"
 ---
 # <a name="__restrict"></a>__restrict
 
-如同 **__declspec （[限制](../cpp/restrict.md)）** 修飾詞， **__restrict**關鍵字指出符號在目前範圍中沒有別名。 **__Restrict**關鍵字與 `__declspec ( restrict )` 修飾詞有下列不同之處：
+與 **__declspec ([限制](../cpp/restrict.md))** 修飾符一樣 **,__restrict**關鍵字表示符號在當前作用域中未進行別名。 **__restrict**關鍵字`__declspec ( restrict )`與 修飾符在以下方面有所不同:
 
-- **__Restrict**關鍵字只在變數上有效，而 `__declspec ( restrict )` 只對函式宣告和定義有效。
+- **__restrict**關鍵字僅在變數上有效,`__declspec ( restrict )`並且僅在函數聲明和定義上有效。
 
-- **__restrict**類似于 C99 規格的**限制**，但 **__restrict**可以在或 C 程式中C++使用。
+- **__restrict**類似於 C99 規範**的限制**,但 **__restrict**可用於C++或 C 程式。
 
-- 使用 **__restrict**時，編譯器不會傳播變數的「無別名」屬性。 也就是說，如果您將 **__restrict**變數指派給非 **__restrict**變數，編譯器仍然會允許非 __restrict 變數的別名。 這與 C99 規格中的**restrict**關鍵字行為不同。
+- 使用 **__restrict**時,編譯器不會傳播變數的無別名屬性。 也就是說,如果將 **__restrict**變數分配給非 **__restrict**變數,編譯器仍將允許對非__restrict變數進行別名化。 這與 C99 規範中**限制**關鍵字的行為不同。
 
 一般而言，如果您要影響整個函式的行為，使用 `__declspec ( restrict )` 的效果會比使用關鍵字更好。
 
-為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_restrict**是 **__restrict**的同義字。
+為了與早期版本相容,**除非**指定編譯器選項[/Za\(禁用語言擴展,](../build/reference/za-ze-disable-language-extensions.md)否則_restrict是 **__restrict**的同義詞。
 
-在 Visual Studio 2015 和更新版本中， **__restrict**可以在C++參考上使用。
+在 Visual Studio 2015 及更高版本中 **,__restrict**可用於C++引用。
 
 > [!NOTE]
->  在也具有[volatile](../cpp/volatile-cpp.md)關鍵字的變數上使用時， **volatile**的優先順序會較高。
+> 當在也有[易失性](../cpp/volatile-cpp.md)關鍵字的變數上使用時,**揮發性**將優先。
 
 ## <a name="example"></a>範例
 

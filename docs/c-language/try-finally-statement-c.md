@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 82cc5ffa3f50196fc5f518b8bb5b2080ff14fd8d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151828"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349606"
 ---
 # <a name="try-finally-statement-c"></a>try-finally 陳述式 (C)
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 `try-finally` 陳述式是 C 語言的 Microsoft 擴充功能，可讓應用程式在執行程式碼的區塊遭到中斷時，保證會執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 `try-finally` 陳述式對於有多個地方要檢查可能會導致常式過早傳回的錯誤時會特別有用。
 
@@ -41,15 +41,15 @@ ms.locfileid: "56151828"
 如果處理序在執行 `try-finally` 陳述式時被刪除，則不會呼叫終止處理常式。
 
 > [!NOTE]
->  結構化例外狀況處理可搭配 C 和 C++ 原始程式檔使用。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理機制更有彈性，因為它可以處理任何類型的例外狀況。
+> 結構化例外狀況處理可搭配 C 和 C++ 原始程式檔使用。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理機制更有彈性，因為它可以處理任何類型的例外狀況。
 
 > [!NOTE]
->  針對 C++ 程式，應該使用 C++ 例外狀況處理，而不是結構化例外狀況處理。 如需詳細資訊，請參閱《C++ 語言參考》中的[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。
+> 針對 C++ 程式，應該使用 C++ 例外狀況處理，而不是結構化例外狀況處理。 如需詳細資訊，請參閱《C++ 語言參考》** 中的[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。
 
 查看 [try-except 陳述式](../c-language/try-except-statement-c.md)的範例以了解 `try-finally` 陳述式的運作方式。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [try-finally 陳述式](../cpp/try-finally-statement.md)

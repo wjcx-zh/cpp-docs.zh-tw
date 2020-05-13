@@ -1,11 +1,15 @@
 ---
 title: atof、_atof_l、_wtof、_wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939561"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909115"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -101,13 +106,15 @@ double _wtof_l(
 
 **Atof**和 **_wtof**的*str*引數具有下列格式：
 
-[*空格*][*sign*][*數位*][ __.__ *數位*][{**e** &#124; **e** } [*sign*]*數位*]
+[*空格*][*sign*][*數位*][__.__*數位*][{**e** &#124; **e** } [*sign*]*數位*]
 
 空白字元*包含空格*或定位字元，這些字元會被忽略;*sign*為加號（+）或減號（-）;和*數位*是一或多個小數位數。 如果小數點前沒有數字，則在小數點後至少必須要有一個數字。 十進位數後面可能接著一個指數，其中包含一個開頭字母（**e**或**e**）和一個選擇性帶正負號的十進位整數。
 
 這些函式的 UCRT 版本不支援轉換 Fortran 樣式（**d**或**d**）指數位母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的*地區*設定參數，而不是目前的地區設定。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -120,12 +127,12 @@ double _wtof_l(
 
 |常式|必要的標頭|
 |------------------|---------------------|
-|**atof**、 **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
-|**_wtof**、 **_wtof_l**|C:\<stdlib.h> 或 \<wchar.h> C++: \<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**atof**， **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
+|**_wtof**， **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>範例
 
-此程式會顯示如何使用**atof**和 **_atof_l**函數，將儲存為字串的數位轉換成數值。
+此程式會顯示如何使用**atof**和 **_atof_l**函式，將儲存為字串的數位轉換為數值。
 
 ```C
 // crt_atof.c
@@ -178,7 +185,7 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

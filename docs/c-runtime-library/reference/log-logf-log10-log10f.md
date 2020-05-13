@@ -1,6 +1,6 @@
 ---
-title: log、logf、記錄、log10、log10f、log10l
-ms.date: 04/05/2018
+title: log、logf、logl、log10、log10f、log10l
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953235"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911485"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、記錄、log10、log10f、log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
 計算對數。
 
@@ -81,17 +84,19 @@ long double log10( long double x );  // C++ only
 
 如果成功，則**記錄**函數會傳回*x*的自然對數（底數*e*）。 **Log10**函數會傳回以10為底數的對數。 如果*x*是負數，這些函式預設會傳回無限（IND）。 如果*x*為0，則會傳回無限大（INF）。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|none|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
-|*x* < 0|INVALID|_DOMAIN|
+|± QNAN，IND|無|_DOMAIN|
+|±0|ZERODIVIDE|_SING|
+|*x* < 0|無效|_DOMAIN|
 
 **記錄**和**log10**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C++允許多載，因此您可以呼叫採用並傳回**float**或**long double**值的**log**和**log10**多載。 在 C 程式中， **log**和**log10**一律會採用並傳回**雙精度浮點數**。
+C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long double**值的**log**和**log10**多載。 在 C 程式中， **log**和**log10**一律會採用並傳回**雙精度浮點數**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

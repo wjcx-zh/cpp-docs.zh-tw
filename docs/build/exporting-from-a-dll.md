@@ -19,29 +19,29 @@ ms.locfileid: "62196738"
 ---
 # <a name="exporting-from-a-dll"></a>從 DLL 匯出
 
-DLL 檔案具有.exe 檔，但有一個重要的差異非常類似的版面配置-DLL 檔案包含匯出表。 匯出資料表包含每個函式的 DLL 匯出到其他可執行檔的名稱。 這些函式是 DLL; 進入點匯出表中的函數可以存取其他可執行檔。 在 DLL 中的任何其他函式是私用 dll。 可以使用檢視的 dll 匯出表[DUMPBIN](reference/dumpbin-reference.md)工具搭配 /EXPORTS 選項。
+DLL 檔案的配置與 .exe 檔案非常類似，但有一項重要的差異，也就是 DLL 檔案包含匯出資料表。 匯出資料表包含 DLL 匯出至其他可執行檔的每個函數名稱。 這些函式是 DLL 中的進入點;只有匯出資料表中的函數可以由其他可執行檔存取。 DLL 中的任何其他函數都是 DLL 的私用。 您可以使用[DUMPBIN](reference/dumpbin-reference.md)工具搭配/EXPORTS 選項來查看 DLL 的匯出資料表。
 
 您可以使用兩種方法從 DLL 匯出函式：
 
-- 建立模組定義 (.def) 檔並建置 DLL 時，使用.def 檔。 如果您想要使用此方法[從您的 DLL 匯出函式，根據序數而不是名稱](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
+- 建立模組定義（.def）檔案，並在建立 DLL 時使用 .def 檔案。 如果您想要[依序數而不是依名稱從 DLL 匯出](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)函式，請使用此方法。
 
-- 使用關鍵字 **__declspec （dllexport)** 函式的定義中。
+- 在函數的定義中使用關鍵字 **__declspec （dllexport）** 。
 
-當匯出函式使用任一方法，請務必使用[__stdcall](../cpp/stdcall.md)呼叫慣例。
+使用任一種方法匯出函數時，請務必使用[__stdcall](../cpp/stdcall.md)呼叫慣例。
 
-## <a name="what-do-you-want-to-do"></a>請您指定選項。
+## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
-- [使用.def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
+- [使用 .def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport）從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [使用 AFX_EXT_CLASS 匯出和匯入](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 c + + 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式，以用於 C 或C++-語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [依序數，而不是依名稱從 DLL 匯出函式](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
+- [依序數而不是名稱從 DLL 匯出函式](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 
 - [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
@@ -51,12 +51,12 @@ DLL 檔案具有.exe 檔，但有一個重要的差異非常類似的版面配�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [匯入應用程式](importing-into-an-application.md)
+- [匯入至應用程式](importing-into-an-application.md)
 
 - [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [交互匯入](mutual-imports.md)
+- [相互匯入](mutual-imports.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [匯入和匯出](importing-and-exporting.md)

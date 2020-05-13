@@ -29,18 +29,18 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-ms.openlocfilehash: d45fe7c6d794f216da93ffbd95dbb7058d3336f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64b4124ba3c60fdcb53fc29c7b791c0f73a49579
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403187"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376227"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 類別
 
-表示繼承指定的介面，並提供指定的 Windows 執行階段、 傳統 COM 和弱式參考支援 WinRT 或 COM 類別。
+表示繼承指定介面並提供指定的 Windows 執行時、經典 COM 和弱引用支援的 WinRT 或 COM 類。
 
-這個類別會提供 WinRT 及 COM 的類別，提供的實作的未定案實作`QueryInterface`， `AddRef`，`Release`等等管理模組的參考計數，並支援提供的 class factory可啟動的物件。
+此類提供 WinRT 和 COM 類的樣`QueryInterface`板`AddRef`實現`Release`,提供的實現, 等,管理模組的引用計數,並支援為可啟動物件提供類工廠。
 
 ## <a name="syntax"></a>語法
 
@@ -51,59 +51,59 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>參數
 
-*classFlags*<br/>
-選擇性參數。 一或多個組合[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。 `__WRL_CONFIGURATION_LEGACY__`巨集可以定義變更 classFlags 專案中的所有執行階段類別的預設值。 如果定義，RuntimeClass 執行個體是非 agile 預設。 未定義，RuntimeClass 執行個體皆為敏捷式預設。 若要避免模稜兩可一律指定`Microsoft::WRL::FtmBase`中`TInterfaces`或`RuntimeClassType::InhibitFtmBase`。 請注意，如果 InhibitFtmBase 和 FtmBase 兩者都用物件將會是敏捷式軟體開發。
+*類別標誌*<br/>
+選擇性參數。 一個或多個[運行時類類型](runtimeclasstype-enumeration.md)枚舉值的組合。 可以`__WRL_CONFIGURATION_LEGACY__`定義宏來更改專案中所有運行時類的 classFlags 的預設值。 如果定義,運行時類實例默認情況下是非敏捷的。 如果未定義運行時類實例,默認情況下是敏捷的。 為了避免歧義,`Microsoft::WRL::FtmBase`請永遠`TInterfaces``RuntimeClassType::InhibitFtmBase`指定的或 。 請注意,如果使用 InhibitFtmBase 和 FtmBase,則物件將是敏捷的。
 
-*TInterfaces*<br/>
-介面清單物件會實作超越`IUnknown`，`IInspectable`或其他介面受到[RuntimeClassType](runtimeclasstype-enumeration.md)。 它也可能會列出其他類別以值得注意的是衍生自`Microsoft::WRL::FtmBase`使敏捷式軟體開發的物件，並將它實作`IMarshal`。
+*T 介面*<br/>
+物件實現超出`IUnknown`的介面清單,`IInspectable`或[由執行時ClassType](runtimeclasstype-enumeration.md)控制的其他介面。 它還可能列出要派生的其他類,特別是`Microsoft::WRL::FtmBase`使物件變得敏捷,並使其`IMarshal`實現 。
 
 ## <a name="members"></a>成員
 
 `RuntimeClassInitialize`<br/>
-用來初始化物件，如果函式`MakeAndInitialize`樣板函式用來建構物件。 如果初始化失敗，，傳回 S_OK，如果物件已成功初始化或 COM 錯誤碼。 COM 錯誤程式碼會傳播的傳回值為`MakeAndInitialize`。 請注意，`RuntimeClassInitialize`方法不會呼叫如果`Make`樣板函式用來建構物件。
+一個函數,用於構造物件時`MakeAndInitialize`初始化物件的函數。 如果物件成功初始化,它將返回S_OK;如果初始化失敗,則返回 COM 錯誤代碼。 COM 錯誤代碼作為的傳回`MakeAndInitialize`值傳播 。 請注意,如果使用`RuntimeClassInitialize`範本函數建構物件`Make`, 則不調用 該方法。
 
 ### <a name="public-constructors"></a>公用建構函式
 
 | 名稱                                               | 描述                                                     |
 | -------------------------------------------------- | --------------------------------------------------------------- |
-| [RuntimeClass::RuntimeClass](#runtimeclass)        | 初始化目前的執行個體`RuntimeClass`類別。   |
-| [RuntimeClass::~RuntimeClass](#tilde-runtimeclass) | 取消初始化目前的執行個體`RuntimeClass`類別。 |
+| [執行時類:執行時類](#runtimeclass)        | 初始化類的`RuntimeClass`當前實例。   |
+| [執行時類::=運行時類](#tilde-runtimeclass) | 取消初始化類的`RuntimeClass`當前實例。 |
 
 ### <a name="public-methods"></a>公用方法
 
 | 名稱                                                      | 描述                                                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [RuntimeClass::AddRef](#addref)                           | 遞增參考計數目前`RuntimeClass`物件。                              |
-| [RuntimeClass::DecrementReference](#decrementreference)   | 遞減參考計數目前`RuntimeClass`物件。                              |
-| [RuntimeClass::GetIids](#getiids)                         | 取得陣列，其中可包含的介面識別碼，藉由將目前`RuntimeClass`物件。 |
-| [RuntimeClass::GetRuntimeClassName](#getruntimeclassname) | 取得目前的執行階段類別名稱`RuntimeClass`物件。                                  |
-| [RuntimeClass::GetTrustLevel](#gettrustlevel)             | 取得目前的信任層級`RuntimeClass`物件。                                         |
-| [RuntimeClass::GetWeakReference](#getweakreference)       | 取得目前的弱式參考的物件指標`RuntimeClass`物件。                 |
-| [RuntimeClass::InternalAddRef](#internaladdref)           | 目前的參考計數遞增`RuntimeClass`物件。                               |
-| [RuntimeClass::QueryInterface](#queryinterface)           | 擷取指定的介面 ID 的指標                                                 |
-| [RuntimeClass::Release](#release)                         | 執行 COM 釋放作業對目前`RuntimeClass`物件。                             |
+| [執行時類::添加參考](#addref)                           | 增加當前`RuntimeClass`物件的引用計數。                              |
+| [執行時類::Decrement 參考](#decrementreference)   | 取消當前`RuntimeClass`物件的引用計數。                              |
+| [執行時類::取得 Iid](#getiids)                         | 獲取一個陣列,該陣列可以包含當前`RuntimeClass`物件實現的介面指示。 |
+| [執行時類::取得執行時類名稱](#getruntimeclassname) | 獲取當前`RuntimeClass`物件的運行時類名稱。                                  |
+| [執行時類::取得信任等級](#gettrustlevel)             | 獲取當前`RuntimeClass`物件的信任級別。                                         |
+| [執行時類::取得 Weak 引用](#getweakreference)       | 獲取指向當前`RuntimeClass`物件的弱引用對象的指標。                 |
+| [執行時類::內部AddRef](#internaladdref)           | 將引用計數遞增到當前`RuntimeClass`物件。                               |
+| [執行時類::查詢介面](#queryinterface)           | 檢索指向指定介面 ID 的指標。                                                 |
+| [運行時類::發佈](#release)                         | 對當前`RuntimeClass`物件執行 COM 釋放操作。                             |
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-這是實作詳細資料。
+這是實作的詳細資料。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標題:** 實現.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="tilde-runtimeclass"></a>RuntimeClass:: ~ RuntimeClass
+## <a name="runtimeclassruntimeclass"></a><a name="tilde-runtimeclass"></a>執行時類::=運行時類
 
-取消初始化目前的執行個體`RuntimeClass`類別。
+取消初始化類的`RuntimeClass`當前實例。
 
 ```cpp
 virtual ~RuntimeClass();
 ```
 
-## <a name="addref"></a>RuntimeClass::AddRef
+## <a name="runtimeclassaddref"></a><a name="addref"></a>執行時類::添加參考
 
-遞增參考計數目前`RuntimeClass`物件。
+增加當前`RuntimeClass`物件的引用計數。
 
 ```cpp
 STDMETHOD_(
@@ -116,9 +116,9 @@ STDMETHOD_(
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="decrementreference"></a>RuntimeClass::DecrementReference
+## <a name="runtimeclassdecrementreference"></a><a name="decrementreference"></a>執行時類::Decrement 參考
 
-遞減參考計數目前`RuntimeClass`物件。
+取消當前`RuntimeClass`物件的引用計數。
 
 ```cpp
 ULONG DecrementReference();
@@ -128,9 +128,9 @@ ULONG DecrementReference();
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="getiids"></a>RuntimeClass::GetIids
+## <a name="runtimeclassgetiids"></a><a name="getiids"></a>執行時類::取得 Iid
 
-取得陣列，其中可包含的介面識別碼，藉由將目前`RuntimeClass`物件。
+獲取一個陣列,該陣列可以包含當前`RuntimeClass`物件實現的介面指示。
 
 ```cpp
 STDMETHOD(
@@ -142,19 +142,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*iidCount*<br/>
-這項作業完成時，陣列中的元素總數*iid*。
+*iid( Iid) Count*<br/>
+此操作完成後,陣列*iid*中的元素總數。
 
-*iids*<br/>
-這項作業完成時，介面識別碼的陣列的指標。
+*伊德*<br/>
+此操作完成後,指向介面指示陣列的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，E_OUTOFMEMORY。
+S_OK如果成功;否則,E_OUTOFMEMORY。
 
-## <a name="getruntimeclassname"></a>RuntimeClass::GetRuntimeClassName
+## <a name="runtimeclassgetruntimeclassname"></a><a name="getruntimeclassname"></a>執行時類::取得執行時類名稱
 
-取得目前的執行階段類別名稱`RuntimeClass`物件。
+獲取當前`RuntimeClass`物件的運行時類名稱。
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -164,8 +164,8 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>參數
 
-*runtimeName*<br/>
-這項作業完成時，執行階段類別名稱。
+*執行時名稱*<br/>
+此操作完成後,運行時類名稱。
 
 ### <a name="return-value"></a>傳回值
 
@@ -173,11 +173,11 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="remarks"></a>備註
 
-如果，就會發出判斷提示時發生`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`未定義。
+如果`__WRL_STRICT__``__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`或 未定義,將發出斷言錯誤。
 
-## <a name="gettrustlevel"></a>RuntimeClass::GetTrustLevel
+## <a name="runtimeclassgettrustlevel"></a><a name="gettrustlevel"></a>執行時類::取得信任等級
 
-取得目前的信任層級`RuntimeClass`物件。
+獲取當前`RuntimeClass`物件的信任級別。
 
 ```cpp
 STDMETHOD(GetTrustLevel)(
@@ -187,20 +187,20 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>參數
 
-*trustLvl*<br/>
-這項作業完成時，目前的信任層級`RuntimeClass`物件。
+*信任呂爾*<br/>
+此操作完成後,當前`RuntimeClass`物件的信任級別。
 
 ### <a name="return-value"></a>傳回值
 
-一律傳回 S_OK。
+總是S_OK。
 
 ### <a name="remarks"></a>備註
 
-如果，就會發出判斷提示時發生`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`未定義。
+如果`__WRL_STRICT__``__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`或 未定義,將發出斷言錯誤。
 
-## <a name="getweakreference"></a>RuntimeClass::GetWeakReference
+## <a name="runtimeclassgetweakreference"></a><a name="getweakreference"></a>執行時類::取得 Weak 引用
 
-取得目前的弱式參考的物件指標`RuntimeClass`物件。
+獲取指向當前`RuntimeClass`物件的弱引用對象的指標。
 
 ```cpp
 STDMETHOD(
@@ -210,16 +210,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*weakReference*<br/>
-這項作業完成時，弱式參考物件的指標。
+*弱參考*<br/>
+此操作完成後,指向弱引用物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-一律傳回 S_OK。
+總是S_OK。
 
-## <a name="internaladdref"></a>RuntimeClass::InternalAddRef
+## <a name="runtimeclassinternaladdref"></a><a name="internaladdref"></a>執行時類::內部AddRef
 
-目前的參考計數遞增`RuntimeClass`物件。
+將引用計數遞增到當前`RuntimeClass`物件。
 
 ```cpp
 ULONG InternalAddRef();
@@ -227,11 +227,11 @@ ULONG InternalAddRef();
 
 ### <a name="return-value"></a>傳回值
 
-產生的參考計數。
+生成的引用計數。
 
-## <a name="queryinterface"></a>RuntimeClass::QueryInterface
+## <a name="runtimeclassqueryinterface"></a><a name="queryinterface"></a>執行時類::查詢介面
 
-擷取指定的介面 ID 的指標
+檢索指向指定介面 ID 的指標。
 
 ```cpp
 STDMETHOD(
@@ -247,15 +247,15 @@ STDMETHOD(
 介面識別碼。
 
 *ppvObject*<br/>
-此 opereation 完成時，所指定之介面的指標*riid*參數。
+完成此操作後,指向*riid*參數指定的介面的指標。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="release"></a>RuntimeClass::Release
+## <a name="runtimeclassrelease"></a><a name="release"></a>運行時類::發佈
 
-執行 COM 釋放作業對目前`RuntimeClass`物件。
+對當前`RuntimeClass`物件執行 COM 釋放操作。
 
 ```cpp
 STDMETHOD_(
@@ -270,11 +270,11 @@ STDMETHOD_(
 
 ### <a name="remarks"></a>備註
 
-如果參考計數變成零時，`RuntimeClass`刪除物件。
+如果引用計數變為零,則`RuntimeClass`刪除該物件。
 
-## <a name="runtimeclass"></a>RuntimeClass::RuntimeClass
+## <a name="runtimeclassruntimeclass"></a><a name="runtimeclass"></a>執行時類:執行時類
 
-初始化目前的執行個體`RuntimeClass`類別。
+初始化類的`RuntimeClass`當前實例。
 
 ```cpp
 RuntimeClass();

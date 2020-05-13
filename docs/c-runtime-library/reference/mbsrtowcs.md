@@ -1,8 +1,9 @@
 ---
 title: mbsrtowcs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbsrtowcs
+- _o_mbsrtowcs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: de7b25ea8a520dfe2c9cb26ec8989624b670dcb9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc9310a95165944b7f516c1f8c48d8d4d1e56117
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952042"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915485"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -73,11 +75,11 @@ size_t mbsrtowcs(
 
 ## <a name="remarks"></a>備註
 
-**Mbsrtowcs**函式會使用*mbstate*中包含的轉換狀態，將*mbstr*間接指向的多位元組字元字串轉換為*wcstr*所指向之緩衝區中儲存的寬字元。 每個字元的轉換會繼續進行，直到遇到終止的 null 多位元組字元、遇到未對應到目前地區設定中有效字元的多位元組序列，或直到*計數*字元已轉換. 如果**mbsrtowcs**在之前或發生*計數*時遇到多位元組 null 字元（' \ 0 '），則會將它轉換成16位終止的 null 字元，並停止。
+**Mbsrtowcs**函式會使用*mbstate*中包含的轉換狀態，將*mbstr*間接指向的多位元組字元字串轉換為*wcstr*所指向之緩衝區中儲存的寬字元。 每個字元的轉換會繼續進行，直到遇到終止的 null 多位元組字元、遇到未對應到目前地區設定中有效字元的多位元組序列，或直到*計數*字元轉換完畢為止。 如果**mbsrtowcs**在之前或發生*計數*時遇到多位元組 null 字元（' \ 0 '），則會將它轉換成16位終止的 null 字元，並停止。
 
 因此，只有在**mbsrtowcs**在轉換期間遇到多位元組的 null 字元時， *wcstr*的寬字元字串才會以 null 結束。 如果*mbstr*和*wcstr*所指向的序列重迭，則**mbsrtowcs**的行為會是未定義的。 **mbsrtowcs**會受到目前地區設定的 LC_TYPE 類別目錄所影響。
 
-**Mbsrtowcs**函式與[mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**mbsrtowcs**的後續呼叫，而不是**mbstowcs**，則應用程式應該使用**mbsrlen**而不是**mbslen**。
+**Mbsrtowcs**函式與 mbstowcs 不同，因為它可重新開機[，_mbstowcs_l](mbstowcs-mbstowcs-l.md) 。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**mbsrtowcs**的後續呼叫，而不是**mbstowcs**，則應用程式應該使用**mbsrlen**而不是**mbslen**。
 
 如果*wcstr*不是 null 指標，則會在轉換因為到達結束的 null 字元而停止時，將 null 指標指派給*mbstr*所指向的指標物件。 否則會將超過已轉換之最後一個多位元組字元的位址指派給該物件 (如果有的話)。 這可讓後續的函式呼叫，從此呼叫的停止處重新啟動轉換。
 
@@ -85,7 +87,9 @@ size_t mbsrtowcs(
 
 如果*mbstr* isa null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回-1。
 
-在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
@@ -100,7 +104,7 @@ size_t mbsrtowcs(
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

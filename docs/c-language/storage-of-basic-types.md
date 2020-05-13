@@ -34,7 +34,7 @@ ms.locfileid: "71998770"
 
 ## <a name="sizes-of-fundamental-types"></a>基本類型的大小
 
-|Type|儲存體|
+|類型|儲存體|
 |----------|-------------|
 |**char**、不**帶正負**號的 char、**帶正負**號的字元|1 個位元組|
 |**short**、**unsigned short**|2 個位元組|
@@ -47,6 +47,6 @@ ms.locfileid: "71998770"
 
 C 資料類型屬於一般分類。 *整數類資料類型*包括**int**、 **char**、 **short**、 **long**和**long long**。 這些型別可以使用**帶正負**號**或不帶正負**號的格式來限定，而且不帶**正負**號的會當做不**帶正負號 int**的速記列舉型別（**enum**）在大部分的用途中也會被視為整數型別。 *浮點類型*包括**float**、 **double**和**long double**。 *算術類型*包含所有浮點和整數類型。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

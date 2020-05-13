@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419627"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331954"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 命名空間
 
@@ -115,11 +115,11 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<RegEx >
+**標頭︰** \<regex>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="error_type"></a>  regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants:error_type
 
 規則運算式語法錯誤報告的旗標。
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` -- 運算式包含無效的反向參考
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
 
 規則運算式比對選項的旗標。
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` -- 只會搜尋第一個相符項目
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants:syntax_option_type
 
 用於選取語法選項的旗標。
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_error 類別](../standard-library/regex-error-class.md)\
-[\<RegEx > 函數](../standard-library/regex-functions.md)\
-[Regex_iterator 類別](../standard-library/regex-iterator-class.md)\
-[\<RegEx > 運算子](../standard-library/regex-operators.md)\
-[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
-[Regex_traits 類別](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<正則>](../standard-library/regex.md)\
+[regex_error類](../standard-library/regex-error-class.md)\
+[\<正規表示式>函數](../standard-library/regex-functions.md)\
+[regex_iterator類](../standard-library/regex-iterator-class.md)\
+[\<正則>運算子](../standard-library/regex-operators.md)\
+[regex_token_iterator類](../standard-library/regex-token-iterator-class.md)\
+[regex_traits類](../standard-library/regex-traits-class.md)\
+[\<正則>型態](../standard-library/regex-typedefs.md)

@@ -1,8 +1,9 @@
 ---
 title: rewind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rewind
+- _o_rewind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949280"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917760"
 ---
 # <a name="rewind"></a>rewind
 
@@ -48,14 +50,14 @@ void rewind(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
 ## <a name="remarks"></a>備註
 
 倒轉函式**會將與** *stream*相關聯的檔案指標重新置放至檔案的開頭。 **rewind** 呼叫類似
 
-**(void) fseek(** _stream_ **, 0L, SEEK_SET );**
+**（void） fseek （** _stream_**，0L，SEEK_SET）;**
 
 不過，與[fseek](fseek-fseeki64.md)不同的是，倒轉會清除資料流程的錯誤**指標，以及**檔案結尾指示器。 此外，與[fseek](fseek-fseeki64.md)不同的是，倒轉並不會傳回**值，以**指出是否已成功移動指標。
 
@@ -63,13 +65,15 @@ void rewind(
 
 如果 stream 是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回，而且**errno**會設定為**EINVAL**。
 
-如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**rewind**|\<stdio.h>|
+|**倒轉**|\<stdio.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -110,7 +114,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 The values written are: 1 and -37

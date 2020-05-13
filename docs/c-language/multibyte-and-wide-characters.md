@@ -15,11 +15,11 @@ helpviewer_keywords:
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
 ms.openlocfilehash: 0d573fac938f5e4d62c99c8cd6e676b96123a0c4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232913"
 ---
 # <a name="multibyte-and-wide-characters"></a>多位元組字元和寬字元
 
@@ -35,6 +35,6 @@ ms.locfileid: "56152010"
 
 Unicode 規格是寬字元的規格。 要在多位元組和寬字元之間轉換的執行階段程式庫常式包括 `mbstowcs`、`mbtowc`、`wcstombs` 和 `wctomb`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[C 識別項](../c-language/c-identifiers.md)
+[C 識別碼](../c-language/c-identifiers.md)

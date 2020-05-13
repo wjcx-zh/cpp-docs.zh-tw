@@ -6,27 +6,27 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-ms.openlocfilehash: 8cb5df605bef31e177e976798f975bb4ca14ced7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aaf54a3a1d616cde5742dad45955bd415f612d60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213155"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368693"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC 類別和執行緒
 
-從 MFC 4.2 開始，MFC ODBC 類別有多執行緒支援。 不過要注意的是，MFC 並不提供 DAO 類別的多執行緒支援。
+從 MFC 4.2 開始,MFC ODBC 類具有多線程支援。 但是請注意,MFC 不為 DAO 類提供多線程支援。
 
-ODBC 類別的多執行緒支援有一些限制。 因為這些類別會包裝 ODBC API，所以僅限於建立它們之元件的多執行緒支援。 例如，許多 ODBC 驅動程式都不是安全線程;因此，如果您搭配使用這些驅動程式的其中一個，則 MFC ODBC 類別不是安全線程。 您應該確認特定的驅動程式是否為安全線程。
+ODBC 類的多線程支援有一些限制。 由於這些類包裝了ODBC API,因此它們僅限於構建它們的元件的多線程支援。 例如,許多 ODBC 驅動程式不是線程安全的;因此,許多 ODBC 驅動程式並不安全。因此,如果將 MFC ODBC 類與其中一個驅動程式一起使用,則它們不是線程安全的。 您應該驗證您的特定驅動程式是否為線程安全。
 
-建立多執行緒應用程式時，您應該非常小心地使用多個執行緒來操作相同的物件。 例如，在兩個執行緒中使用相同的 `CRecordset` 物件，可能會在抓取資料時造成問題;一個執行緒中的提取作業可能會覆寫在另一個執行緒中提取的資料。 在不同的執行緒中，MFC ODBC 類別的較常見用法是跨執行緒共用開啟的 `CDatabase` 物件，以使用相同的 ODBC 連接，並在每個執行緒中使用個別的 `CRecordset` 物件。 請注意，您不應該將未打開的 `CDatabase` 物件傳遞至另一個執行緒中的 `CRecordset` 物件。
+創建多線程應用程式時,在使用多個線程操作同一物件時應非常小心。 例如,在兩個線程`CRecordset`中使用同一物件可能會導致檢索數據時出現問題;因此,在兩個線程中使用相同的物件可能會導致問題。一個線程中的提取操作可能會覆蓋另一個線程中獲取的數據。 在單獨的線程中,MFC ODBC 類更常見的用途是跨線`CDatabase`程共用 打開的物件,以使用相同的 ODBC 連接`CRecordset`,每個線程中 都有單獨的物件。 請注意,不應將未打開`CDatabase`的物件傳遞給另一`CRecordset`個 線程中的物件。
 
 > [!NOTE]
->  如果您必須有多個執行緒操作相同的物件，您應該執行適當的同步處理機制，例如重要區段。 請注意，某些作業（例如 `Open`）並未受到保護。 您應該確定不會從個別的執行緒同時呼叫這些作業。
+> 如果必須有多個線程操作同一物件,則應實現相應的同步機制,如關鍵部分。 請注意,某些操作(如`Open`)不受保護。 應確保這些操作不會同時從單獨的線程調用。
 
-如需有關建立多執行緒應用程式的詳細資訊，請參閱[多執行緒主題](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
+有關建立多線程式的詳細資訊,請參閱[多線程式主題](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[開放資料庫連線 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[資料存取程式設計(MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

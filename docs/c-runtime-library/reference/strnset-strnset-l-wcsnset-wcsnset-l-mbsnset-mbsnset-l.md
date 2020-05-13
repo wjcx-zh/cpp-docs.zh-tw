@@ -1,6 +1,6 @@
 ---
 title: _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset
 - _strnset
@@ -8,6 +8,9 @@ api_name:
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
+- _o__mbsnset
+- _o__mbsnset_l
+- _o__wcsnset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -69,19 +73,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946978"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911190"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
 將字串字元初始化為指定的字元。 這些函式有更安全的版本，請參閱 [_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsnset**和 **_mbsnset_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsnset**和 **_mbsnset_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -126,7 +130,7 @@ unsigned char *_mbsnset_l(
 *str*<br/>
 待變更字串。
 
-*C*<br/>
+*c*<br/>
 字元設定。
 
 *計數*<br/>
@@ -143,11 +147,13 @@ unsigned char *_mbsnset_l(
 
 **_Strnset**函數最多可將*str*的第一個*計數*字元設定為*c* （轉換成**char**）。 如果*count*大於*str*的長度，則會使用*str*的長度，而不是*count*。
 
-**_wcsnset**和 **_mbsnset**是 **_strnset**的寬字元和多位元組字元版本。 **_Wcsnset**的字串引數和傳回值是寬字元字串; **_mbsnset**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**_wcsnset**和 **_mbsnset**是 **_strnset**的寬字元和多位元組字元版本。 **_Wcsnset**的字串引數和傳回值是寬字元字串;**_mbsnset**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
-**_mbsnset**會驗證其參數;如果*str*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbsnset**會傳回**Null** ，並將**errno**設定為**EINVAL**。 **_strnset**和 **_wcsnset**不會驗證它們的參數。
+**_mbsnset**驗證其參數;如果*str*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbsnset**會傳回**Null** ，並將**errno**設定為**EINVAL**。 **_strnset**和 **_wcsnset**不會驗證其參數。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -164,7 +170,7 @@ unsigned char *_mbsnset_l(
 |**_strnset_l**|\<tchar.h>|
 |**_wcsnset**|\<string.h> 或 \<wchar.h>|
 |**_wcsnset_l**|\<tchar.h>|
-|**_mbsnset**、 **_mbsnset_l**|\<mbstring.h>|
+|**_mbsnset**， **_mbsnset_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -195,7 +201,7 @@ After:  **** is a test
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

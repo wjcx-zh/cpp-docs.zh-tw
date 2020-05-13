@@ -1,0 +1,1462 @@
+- name: 專案與建置系統
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Visual Studio 專案 - C++
+  expanded: false
+  items:
+    - name: Visual Studio 專案 - C++
+      href: ../build/creating-and-managing-visual-cpp-projects.md
+    - name: 在 Visual Studio 中設定 C ++ 編譯器和組建屬性
+      expanded: false
+      items:
+        - name: 在 Visual Studio 中設定 C ++ 編譯器和組建屬性
+          href: ../build/working-with-project-properties.md
+        - name: 共用或重複使用 Visual Studio 專案設定
+          href: ../build/create-reusable-property-configurations.md
+        - name: 專案屬性繼承
+          href: ../build/project-property-inheritance.md
+        - name: 修改屬性和目標而不變更專案檔
+          href: ../build/modify-project-properties-without-changing-project-file.md
+    - name: Visual Studio 專案中的 Clang/LLVM (MSBuild)
+      href: ../build/clang-support-msbuild.md
+    - name: 在建置階段參考程式庫和元件
+      href: ../build/adding-references-in-visual-cpp-projects.md
+    - name: 組織專案輸出檔案
+      href: ../build/how-to-organize-project-output-files-for-builds.md
+    - name: 自訂建置步驟和建置事件
+      expanded: false
+      items:
+        - name: 自訂建置步驟和建置事件
+          href: ../build/understanding-custom-build-steps-and-build-events.md
+        - name: 指定自訂建置事件
+          href: ../build/specifying-custom-build-tools.md
+        - name: 指定建置事件
+          href: ../build/specifying-build-events.md
+        - name: 針對組建自訂進行疑難排解
+          href: ../build/troubleshooting-build-customizations.md
+        - name: 設定自訂建置步驟或建置事件的輸出格式
+          href: ../build/formatting-the-output-of-a-custom-build-step-or-build-event.md
+    - name: 從現有程式碼建立專案
+      href: ../build/how-to-create-a-cpp-project-from-existing-code.md
+- name: C++ 的開啟資料夾專案
+  expanded: false
+  items:
+    - name: C++ 的開啟資料夾專案
+      href: ../build/open-folder-projects-cpp.md
+    - name: CppProperties.json 結構描述參考
+      href: ../build/cppproperties-schema-reference.md
+    - name: Tasks.vs.json 結構描述參考 (C++)
+      href: ../build/tasks-vs-json-schema-reference-cpp.md
+    - name: Launch.vs.json 結構描述參考 (C++)
+      href: ../build/launch-vs-schema-reference-cpp.md
+- name: CMake 專案
+  expanded: false
+  items:
+    - name: CMake 專案
+      href: ../build/cmake-projects-in-visual-studio.md
+    - name: 教學課程：在 Visual Studio 中建立 C++ 跨平台專案
+      href: ../build/get-started-linux-cmake.md
+    - name: CMake 專案中的 Clang/LLVM
+      href: ../build/clang-support-cmake.md
+    - name: 設定 Linux CMake 專案
+      href: ../build/../linux/cmake-linux-project.md
+    - name: 自訂 CMake 建置設定
+      href: ../build/customize-cmake-settings.md
+    - name: 設定 CMake 偵錯工作階段
+      href: ../build/configure-cmake-debugging-sessions.md
+    - name: CMakeSettings.json 參考
+      href: ../build/cmakesettings-reference.md
+    - name: CMake 預先定義的設定結構描述參考
+      href: ../build/cmake-predefined-configuration-reference.md
+- name: vcpkg：適用於 C++ 的套件管理員
+  href: ../build/vcpkg.md
+- name: C++ 組建見解
+  href: ../build-insights/get-started-with-cpp-build-insights.md
+- name: 先行編譯標頭檔
+  href: ../build/creating-precompiled-header-files.md
+- name: C++ 發行組建
+  expanded: false
+  items:
+    - name: C++ 發行組建
+      href: ../build/release-builds.md
+    - name: 作法：建立發行組建
+      href: ../build/how-to-create-a-release-build.md
+    - name: 建立發行組建時的常見問題
+      href: ../build/common-problems-when-creating-a-release-build.md
+    - name: 修正發行組建的問題
+      expanded: false
+      items:
+        - name: 修正發行組建的問題
+          href: ../build/fixing-release-build-problems.md
+        - name: 使用 VERIFY 取代 ASSERT
+          href: ../build/using-verify-instead-of-assert.md
+        - name: 使用偵錯組建來檢查記憶體覆寫
+          href: ../build/using-the-debug-build-to-check-for-memory-overwrite.md
+        - name: 作法：對發行組建進行偵錯
+          href: ../build/how-to-debug-a-release-build.md
+        - name: 檢查記憶體覆寫
+          href: ../build/checking-for-memory-overwrites.md
+    - name: 最佳化程式碼
+      expanded: false
+      items:
+        - name: 最佳化程式碼
+          href: ../build/optimizing-your-code.md
+        - name: 最佳化 Pragma 和關鍵字
+          href: ../build/optimization-pragmas-and-keywords.md
+        - name: 改善編譯器輸送量
+          href: ../build/improving-compiler-throughput.md
+        - name: 浮點數失去精確度的原因
+          href: ../build/why-floating-point-numbers-may-lose-precision.md
+        - name: IEEE 浮點表示
+          href: ../build/ieee-floating-point-representation.md
+        - name: 改善時間關鍵程式碼的祕訣
+          href: ../build/tips-for-improving-time-critical-code.md
+        - name: 使用不帶 () 的函式名稱不會產生程式碼
+          href: ../build/using-function-name-without-parens-produces-no-code.md
+        - name: 最佳化最佳做法
+          href: ../build/optimization-best-practices.md
+        - name: 特性指引最佳化
+          expanded: false
+          items:
+            - name: 特性指引最佳化
+              href: ../build/profile-guided-optimizations.md
+            - name: 特性指引最佳化的環境變數
+              href: ../build/environment-variables-for-profile-guided-optimizations.md
+            - name: PgoAutoSweep
+              href: ../build/pgoautosweep.md
+            - name: pgomgr
+              href: ../build/pgomgr.md
+            - name: pgosweep
+              href: ../build/pgosweep.md
+            - name: 作法：將多個 PGO 設定檔合併至單一設定檔
+              href: ../build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
+- name: 從命令列使用 MSVC 工具組
+  expanded: false
+  items:
+    - name: 從命令列使用 MSVC 工具組
+      href: ../build/building-on-the-command-line.md
+    - name: 逐步解說：在命令列編譯原生 C++ 程式
+      href: ../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+    - name: 逐步解說：在命令列編譯 C 程式
+      href: ../build/walkthrough-compile-a-c-program-on-the-command-line.md
+    - name: 逐步解說：在命令列編譯 C++/CLI 程式
+      href: ../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+    - name: 逐步解說：在命令列編譯 C++/CX 程式
+      href: ../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+    - name: 設定命令列組建的路徑及環境變數
+      href: ../build/setting-the-path-and-environment-variables-for-command-line-builds.md
+- name: 從命令列使用 MSBuild
+  expanded: false
+  items:
+    - name: 從命令列使用 MSBuild
+      href: ../build/msbuild-visual-cpp.md
+    - name: 逐步解說：使用 MSBuild 建立 C++ 專案
+      href: ../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
+    - name: 作法：在 MSBuild 專案中使用建置事件
+      href: ../build/how-to-use-build-events-in-msbuild-projects.md
+    - name: 作法：將自訂建置步驟新增至 MSBuild 專案
+      href: ../build/how-to-add-a-custom-build-step-to-msbuild-projects.md
+    - name: 作法：將自訂建置工具新增至MSBuild 專案
+      href: ../build/how-to-add-custom-build-tools-to-msbuild-projects.md
+    - name: 作法：將自訂工具整合至專案屬性中
+      href: ../build/how-to-integrate-custom-tools-into-the-project-properties.md
+    - name: 作法：修改目標 Framework 和平台工具組
+      href: ../build/how-to-modify-the-target-framework-and-platform-toolset.md
+- name: 逐步解說：建立及使用靜態程式庫 (C++)
+  href: ../build/walkthrough-creating-and-using-a-static-library-cpp.md
+- name: 在 Visual Studio 中建置 C++ DLL
+  expanded: false
+  items:
+    - name: 在 Visual Studio 中建置 C++ DLL
+      href: ../build/dlls-in-visual-cpp.md
+    - name: 逐步解說：建立和使用動態連結程式庫 (C++)
+      href: ../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+    - name: DLL 的類型
+      expanded: false
+      items:
+        - name: DLL 的類型
+          href: ../build/kinds-of-dlls.md
+        - name: 非 MFC DLL：總覽
+          href: ../build/non-mfc-dlls-overview.md
+        - name: 靜態連結至 MFC 的標準 MFC DLL
+          href: ../build/regular-dlls-statically-linked-to-mfc.md
+        - name: 動態連結至 MFC 的標準 MFC DLL
+          href: ../build/regular-dlls-dynamically-linked-to-mfc.md
+        - name: MFC 延伸模組 DLL：總覽
+          href: ../build/extension-dlls-overview.md
+    - name: MFC DLL 常見問題集
+      href: ../build/dll-frequently-asked-questions.md
+    - name: 將可執行檔連結至 DLL
+      href: ../build/linking-an-executable-to-a-dll.md
+    - name: DLL 和 MSVC 執行階段程式庫行為
+      href: ../build/run-time-library-behavior.md
+    - name: LoadLibrary 和 AfxLoadLibrary
+      href: ../build/loadlibrary-and-afxloadlibrary.md
+    - name: GetProcAddress
+      href: ../build/getprocaddress.md
+    - name: FreeLibrary 和 AfxFreeLibrary
+      href: ../build/freelibrary-and-afxfreelibrary.md
+    - name: 動態連結至 MFC 之 MFC DLL 的模組狀態
+      href: ../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md
+    - name: MFC 延伸模組 DLL
+      expanded: false
+      items:
+        - name: MFC 延伸模組 DLL
+          href: ../build/extension-dlls.md
+        - name: 在標準 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL
+          href: ../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md
+    - name: 建立僅含資源的 DLL
+      href: ../build/creating-a-resource-only-dll.md
+    - name: MFC 應用程式中的當地語系化資源：附屬 DLL
+      href: ../build/localized-resources-in-mfc-applications-satellite-dlls.md
+    - name: 匯入和匯出
+      expanded: false
+      items:
+        - name: 匯入和匯出
+          href: ../build/importing-and-exporting.md
+        - name: 匯入至應用程式
+          expanded: false
+          items:
+            - name: 匯入至應用程式
+              href: ../build/importing-into-an-application.md
+            - name: 使用 __declspec(dllimport) 匯入至應用程式
+              href: ../build/importing-into-an-application-using-declspec-dllimport.md
+            - name: 使用 __declspec(dllimport) 匯入函式呼叫
+              href: ../build/importing-function-calls-using-declspec-dllimport.md
+            - name: 使用 __declspec(dllimport) 匯入資料
+              href: ../build/importing-data-using-declspec-dllimport.md
+            - name: 使用 DEF 檔匯入
+              href: ../build/importing-using-def-files.md
+        - name: 從 DLL 匯出
+          expanded: false
+          items:
+            - name: 從 DLL 匯出
+              href: ../build/exporting-from-a-dll.md
+            - name: 使用 DEF 檔從 DLL 匯出
+              href: ../build/exporting-from-a-dll-using-def-files.md
+            - name: 使用 __declspec(dllexport) 從 DLL 匯出
+              href: ../build/exporting-from-a-dll-using-declspec-dllexport.md
+            - name: 使用 AFX_EXT_CLASS 匯出和匯入
+              href: ../build/exporting-and-importing-using-afx-ext-class.md
+            - name: 匯出 C++ 函式以用於 C 語言可執行檔
+              href: ../build/exporting-cpp-functions-for-use-in-c-language-executables.md
+            - name: 匯出 C 函式以用於 C 或 C++ 語言可執行檔
+              href: ../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md
+            - name: 決定要使用哪一個匯出方法
+              href: ../build/determining-which-exporting-method-to-use.md
+            - name: 根據序數而不是名稱從 DLL 匯出函式
+              href: ../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md
+        - name: 交互匯入
+          href: ../build/mutual-imports.md
+        - name: 匯入和匯出內嵌函式
+          href: ../build/importing-and-exporting-inline-functions.md
+    - name: Active 技術和 DLL
+      href: ../build/active-technology-and-dlls.md
+    - name: DLL 中的 Automation
+      href: ../build/automation-in-a-dll.md
+    - name: 從 Visual Basic 應用程式中呼叫 DLL 函式
+      href: ../build/calling-dll-functions-from-visual-basic-applications.md
+- name: 建置 C/C++ 隔離應用程式和並存組件
+  expanded: false
+  items:
+    - name: 建置 C/C++ 隔離應用程式和並存組件
+      href: ../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+    - name: 隔離應用程式和並存組件的概念
+      href: ../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md
+    - name: 建置 C/C++ 隔離應用程式
+      href: ../build/building-c-cpp-isolated-applications.md
+    - name: 建置 C/C++ 並存組件
+      href: ../build/building-c-cpp-side-by-side-assemblies.md
+    - name: 作法：建置免註冊的 COM 元件
+      href: ../build/how-to-build-registration-free-com-components.md
+    - name: 作法：建置隔離的應用程式以取用 COM 元件
+      href: ../build/how-to-build-isolated-applications-to-consume-com-components.md
+    - name: 了解 C/C++ 程式的資訊清單產生過程
+      expanded: false
+      items:
+        - name: 了解 C/C++ 程式的資訊清單產生過程
+          href: ../build/understanding-manifest-generation-for-c-cpp-programs.md
+        - name: 在 Visual Studio 中產生資訊清單
+          href: ../build/manifest-generation-in-visual-studio.md
+        - name: 命令列的資訊清單產生過程
+          href: ../build/manifest-generation-at-the-command-line.md
+        - name: 作法：在 C/C++ 應用程式中內嵌資訊清單
+          href: ../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
+    - name: 針對 C/C++ 隔離應用程式和並存組件進行疑難排解
+      href: ../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+- name: 針對 64 位元 x64 目標設定 MSVC
+  expanded: false
+  items:
+    - name: 針對 64 位元 x64 目標設定 MSVC
+      href: ../build/configuring-programs-for-64-bit-visual-cpp.md
+    - name: 作法：將 C++ 專案設定為以 64 位元 x64 平台為目標
+      href: ../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md
+    - name: 作法：在命令列上啟用 64 位元 MSVC 工具組
+      href: ../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md
+    - name: 常見 MSVC 64 位元移轉問題
+      href: ../build/common-visual-cpp-64-bit-migration-issues.md
+    - name: x64 軟體慣例
+      expanded: false
+      items:
+        - name: x64 軟體慣例
+          href: ../build/x64-software-conventions.md
+        - name: x64 呼叫慣例
+          href: ../build/x64-calling-convention.md
+        - name: x64 堆疊使用方式
+          href: ../build/stack-usage.md
+        - name: x64 初構和終解
+          href: ../build/prolog-and-epilog.md
+        - name: x64 例外狀況處理
+          href: ../build/exception-handling-x64.md
+- name: 針對 ARM 處理器設定 C++ 專案
+  expanded: false
+  items:
+    - name: 針對 ARM 處理器設定 C++ 專案
+      href: ../build/configuring-programs-for-arm-processors-visual-cpp.md
+    - name: 常見 MSVC ARM 移轉問題
+      href: ../build/common-visual-cpp-arm-migration-issues.md
+    - name: ARM ABI 慣例概觀
+      href: ../build/overview-of-arm-abi-conventions.md
+    - name: ARM64 ABI 慣例概觀
+      href: ../build/arm64-windows-abi-conventions.md
+    - name: ARM 例外狀況處理
+      href: ../build/arm-exception-handling.md
+    - name: ARM64 例外狀況處理
+      href: ../build/arm64-exception-handling.md
+- name: 為 Windows XP 設定程式
+  href: ../build/configuring-programs-for-windows-xp.md
+- name: C/C++ 的程式碼分析
+  href: ../code-quality/
+- name: 編譯器與建置工具參考
+  expanded: false
+  items:
+    - name: C/C++ 組建參考
+      href: ../build/reference/c-cpp-building-reference.md
+    - name: C++ 專案的 MSBuild 參考
+      expanded: false
+      items:
+        - name: C++ 專案的 MSBuild 參考
+          href: ../build/reference/msbuild-reference-cpp.md
+        - name: C++ 專案的 MSBuild 內部項目
+          href: ../build/reference/msbuild-visual-cpp-overview.md
+        - name: 建置命令和屬性的一般巨集
+          href: ../build/reference/common-macros-for-build-commands-and-properties.md
+        - name: C++ 專案中所使用的檔案類型
+          expanded: false
+          items:
+            - name: C++ 專案中所使用的檔案類型
+              href: ../build/reference/file-types-created-for-visual-cpp-projects.md
+            - name: 專案和解決方案檔
+              href: ../build/reference/project-and-solution-files.md
+            - name: C++ 專案範本
+              href: ../build/reference/visual-cpp-project-types.md
+            - name: C++ 新項目範本
+              href: ../build/reference/using-visual-cpp-add-new-item-templates.md
+            - name: 資源檔
+              href: ../build/reference/resource-files-cpp.md
+            - name: 為 CLR 專案建立的檔案
+              href: ../build/reference/files-created-for-clr-projects.md
+            - name: ATL 程式或控制項原始程式檔和標頭檔
+              href: ../build/reference/atl-program-or-control-source-and-header-files.md
+            - name: MFC 程式或控制項原始程式檔和標頭檔
+              href: ../build/reference/mfc-program-or-control-source-and-header-files.md
+            - name: HTML 說明檔
+              href: ../build/reference/help-files-html-help.md
+            - name: Winhelp 說明檔
+              href: ../build/reference/help-files-winhelp.md
+            - name: 適用於 Intellisense 的提示檔案
+              href: ../build/reference/hint-files.md
+            - name: 屬性頁面 XML 檔案
+              href: ../build/reference/property-page-xml-files.md
+            - name: .vcxproj 和.props 檔案結構
+              href: ../build/reference/vcxproj-file-structure.md
+            - name: 範例專案檔
+              href: ../build/reference/project-files.md
+            - name: .vcxproj.filters 檔案結構
+              href: ../build/reference/vcxproj-filters-files.md
+        - name: C++ 專案屬性頁
+          expanded: false
+          items:
+            - name: C++ 專案屬性參考
+              href: ../build/reference/property-pages-visual-cpp.md
+            - name: 一般屬性頁 (專案)
+              href: ../build/reference/general-property-page-project.md
+            - name: 一般屬性頁
+              href: ../build/reference/general-property-page-file.md
+            - name: 進階屬性頁面
+              href: ../build/reference/advanced-property-page.md
+            - name: 偵錯屬性頁
+              href: ../build/reference/debugging-prop-pages.md
+            - name: VC++ 目錄屬性頁
+              href: ../build/reference/vcpp-directories-property-page.md
+            - name: C/C++ 屬性頁
+              href: ../build/reference/c-cpp-prop-page.md
+            - name: 連結器屬性頁
+              href: ../build/reference/linker-property-pages.md
+            - name: 命令列屬性頁
+              href: ../build/reference/command-line-property-pages.md
+            - name: NMake 屬性頁
+              href: ../build/reference/nmake-property-page.md
+            - name: 資訊清單工具屬性頁
+              href: ../build/reference/manifest-tool-property-pages.md
+            - name: 資源屬性頁
+              href: ../build/reference/resources-property-pages.md
+            - name: 受控資源屬性頁
+              href: ../build/reference/managed-resources-property-page.md
+            - name: MIDL 屬性頁
+              href: ../build/reference/midl-property-pages.md
+            - name: Web 參考屬性頁
+              href: ../build/reference/web-references-property-page.md
+            - name: XML 資料產生器工具屬性頁
+              href: ../build/reference/xml-data-generator-tool-property-page.md
+            - name: XML 文件產生器工具屬性頁
+              href: ../build/reference/xml-document-generator-tool-property-pages.md
+            - name: 自訂建置步驟屬性頁：一般
+              href: ../build/reference/custom-build-step-property-page-general.md
+            - name: HLSL 屬性頁
+              href: ../build/reference/hlsl-property-pages.md
+    - name: MSVC 編譯器參考
+      expanded: false
+      items:
+        - name: MSVC 編譯器參考
+          href: ../build/reference/compiling-a-c-cpp-program.md
+        - name: MSVC 編譯器命令列語法
+          expanded: false
+          items:
+            - name: MSVC 編譯器命令列語法
+              href: ../build/reference/compiler-command-line-syntax.md
+            - name: CL 檔名語法
+              href: ../build/reference/cl-filename-syntax.md
+            - name: CL 選項的順序
+              href: ../build/reference/order-of-cl-options.md
+            - name: cl.exe 的傳回值
+              href: ../build/reference/return-value-of-cl-exe.md
+        - name: CL 環境變數
+          href: ../build/reference/cl-environment-variables.md
+        - name: CL 命令檔
+          href: ../build/reference/cl-command-files.md
+        - name: CL 叫用連結器
+          href: ../build/reference/cl-invokes-the-linker.md
+        - name: MSVC 編譯器選項
+          expanded: false
+          items:
+            - name: MSVC 編譯器選項
+              href: ../build/reference/compiler-options.md
+            - name: 依分類排列的編譯器選項
+              href: ../build/reference/compiler-options-listed-by-category.md
+            - name: 依字母順序排列的編譯器選項
+              expanded: false
+              items:
+                - name: 依字母順序排列的編譯器選項
+                  href: ../build/reference/compiler-options-listed-alphabetically.md
+                - name: '@ (指定編譯器回應檔)'
+                  href: ../build/reference/at-specify-a-compiler-response-file.md
+                - name: /AI (指定中繼資料目錄)
+                  href: ../build/reference/ai-specify-metadata-directories.md
+                - name: /analyze (程式碼分析)
+                  href: ../build/reference/analyze-code-analysis.md
+                - name: /arch (最小 CPU 架構)
+                  expanded: false
+                  items:
+                    - name: /arch (最小 CPU 架構)
+                      href: ../build/reference/arch-minimum-cpu-architecture.md
+                    - name: /arch (x86)
+                      href: ../build/reference/arch-x86.md
+                    - name: /arch (x64)
+                      href: ../build/reference/arch-x64.md
+                    - name: /arch (ARM)
+                      href: ../build/reference/arch-arm.md
+                - name: /await (啟用協同程式支援)
+                  href: ../build/reference/await-enable-coroutine-support.md
+                - name: /bigobj (增加 .Obj 檔中的區段數目)
+                  href: ../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md
+                - name: /C (前置處理時保留註解)
+                  href: ../build/reference/c-preserve-comments-during-preprocessing.md
+                - name: /c (編譯而不連結)
+                  href: ../build/reference/c-compile-without-linking.md
+                - name: /cgthreads (程式碼產生執行緒)
+                  href: ../build/reference/cgthreads-code-generation-threads.md
+                - name: /clr (通用語言執行平台編譯)
+                  expanded: false
+                  items:
+                    - name: /clr (通用語言執行平台編譯)
+                      href: ../build/reference/clr-common-language-runtime-compilation.md
+                    - name: /clr 限制
+                      href: ../build/reference/clr-restrictions.md
+                - name: /constexpr (控制 constexpr 評估)
+                  href: ../build/reference/constexpr-control-constexpr-evaluation.md
+                - name: /D (前置處理器定義)
+                  href: ../build/reference/d-preprocessor-definitions.md
+                - name: /diagnostics (編譯器診斷選項)
+                  href: ../build/reference/diagnostics-compiler-diagnostic-options.md
+                - name: /doc (處理文件註解) (C/C++)
+                  href: ../build/reference/doc-process-documentation-comments-c-cpp.md
+                - name: /E (前置處理至 stdout)
+                  href: ../build/reference/e-preprocess-to-stdout.md
+                - name: /EH (例外狀況處理模型)
+                  href: ../build/reference/eh-exception-handling-model.md
+                - name: '/EP (前置處理至 stdout 不加 #line 指示詞)'
+                  href: ../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md
+                - name: /errorReport (回報編譯器內部錯誤)
+                  href: ../build/reference/errorreport-report-internal-compiler-errors.md
+                - name: /execution/charset (設定執行字元集)
+                  href: ../build/reference/execution-charset-set-execution-character-set.md
+                - name: '/experimental:module'
+                  href: ../build/reference/experimental-module.md
+                - name: '/experimental:preprocessor'
+                  href: ../build/reference/experimental-preprocessor.md
+                - name: /F (設定堆疊大小)
+                  href: ../build/reference/f-set-stack-size.md
+                - name: 輸出檔案 (/F) 選項
+                  expanded: false
+                  items:
+                    - name: 輸出檔案 (/F) 選項
+                      href: ../build/reference/output-file-f-options.md
+                    - name: /FA、/Fa (清單檔)
+                      href: ../build/reference/fa-fa-listing-file.md
+                    - name: 指定路徑名稱
+                      href: ../build/reference/specifying-the-pathname.md
+                    - name: /FD (IDE 最少重建)
+                      href: ../build/reference/fd-ide-minimal-rebuild.md
+                    - name: /Fd (程式資料庫檔案名稱)
+                      href: ../build/reference/fd-program-database-file-name.md
+                    - name: /Fe (命名 EXE 檔案)
+                      href: ../build/reference/fe-name-exe-file.md
+                    - name: /Fi (前置處理輸出檔案名稱)
+                      href: ../build/reference/fi-preprocess-output-file-name.md
+                    - name: /FI (命名強制的 Include 檔)
+                      href: ../build/reference/fi-name-forced-include-file.md
+                    - name: /Fm (命名對應檔)
+                      href: ../build/reference/fm-name-mapfile.md
+                    - name: /Fo (目的檔名稱)
+                      href: ../build/reference/fo-object-file-name.md
+                    - name: /Fp (命名 .Pch 檔案)
+                      href: ../build/reference/fp-name-dot-pch-file.md
+                    - name: /FR、/Fr (建立 .Sbr 檔案)
+                      href: ../build/reference/fr-fr-create-dot-sbr-file.md
+                    - name: /FU (命名強制的
+                      href: ../build/reference/fu-name-forced-hash-using-file.md
+                    - name: /Fx (合併插入的程式碼)
+                      href: ../build/reference/fx-merge-injected-code.md
+                - name: /favor (針對架構特性最佳化)
+                  href: ../build/reference/favor-optimize-for-architecture-specifics.md
+                - name: /FC (診斷中原始程式碼檔的完整路徑)
+                  href: ../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md
+                - name: /fp (指定浮點數行為)
+                  href: ../build/reference/fp-specify-floating-point-behavior.md
+                - name: /FS (強制同步 PDB 寫入)
+                  href: ../build/reference/fs-force-synchronous-pdb-writes.md
+                - name: /GA (針對 Windows 應用程式最佳化)
+                  href: ../build/reference/ga-optimize-for-windows-application.md
+                - name: /Gd、/Gr、/Gv、/Gz (呼叫慣例)
+                  href: ../build/reference/gd-gr-gv-gz-calling-convention.md
+                - name: /Ge (啟用堆疊探查)
+                  href: ../build/reference/ge-enable-stack-probes.md
+                - name: /GF (消除重複字串)
+                  href: ../build/reference/gf-eliminate-duplicate-strings.md
+                - name: /GH (啟用 _pexit 攔截函式)
+                  href: ../build/reference/gh-enable-pexit-hook-function.md
+                - name: /Gh (啟用 _penter 攔截函式)
+                  href: ../build/reference/gh-enable-penter-hook-function.md
+                - name: /GL (整個程式最佳化)
+                  href: ../build/reference/gl-whole-program-optimization.md
+                - name: /Gm (啟用最少重建)
+                  href: ../build/reference/gm-enable-minimal-rebuild.md
+                - name: /GR (啟用執行階段類型資訊)
+                  href: ../build/reference/gr-enable-run-time-type-information.md
+                - name: /GS (緩衝區安全性檢查)
+                  href: ../build/reference/gs-buffer-security-check.md
+                - name: /Gs (控制堆疊檢查呼叫)
+                  href: ../build/reference/gs-control-stack-checking-calls.md
+                - name: /guard (啟用控制流程防護)
+                  href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: /GT (支援 Fiber-Safe 執行緒本機存放區)
+                  href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
+                - name: /Gw (將全域資料最佳化)
+                  href: ../build/reference/gw-optimize-global-data.md
+                - name: /GX (啟用例外狀況處理)
+                  href: ../build/reference/gx-enable-exception-handling.md
+                - name: /Gy (啟用函式層級連結)
+                  href: ../build/reference/gy-enable-function-level-linking.md
+                - name: /GZ (啟用堆疊框架執行階段錯誤檢查)
+                  href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
+                - name: /H (限制外部名稱的長度)
+                  href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /HELP (編譯器命令列說明)
+                  href: ../build/reference/help-compiler-command-line-help.md
+                - name: /homeparams (將暫存器參數複製到堆疊)
+                  href: ../build/reference/homeparams-copy-register-parameters-to-stack.md
+                - name: /hotpatch (建立可線上修補的映像)
+                  href: ../build/reference/hotpatch-create-hotpatchable-image.md
+                - name: /I (其他 Include 目錄)
+                  href: ../build/reference/i-additional-include-directories.md
+                - name: /J (預設 char 類型為 unsigned)
+                  href: ../build/reference/j-default-char-type-is-unsigned.md
+                - name: /JMC (Just My Code 偵錯)
+                  href: ../build/reference/jmc.md
+                - name: /kernel (建立核心模式二進位檔)
+                  href: ../build/reference/kernel-create-kernel-mode-binary.md
+                - name: /link (傳遞選項給連結器)
+                  href: ../build/reference/link-pass-options-to-linker.md
+                - name: /LN (建立 MSIL 模組)
+                  href: ../build/reference/ln-create-msil-module.md
+                - name: /MD、/MT、/LD (使用執行階段程式庫)
+                  href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: /MP (使用多處理序建置)
+                  href: ../build/reference/mp-build-with-multiple-processes.md
+                - name: /nologo (隱藏程式啟始資訊) (C/C++)
+                  href: ../build/reference/nologo-suppress-startup-banner-c-cpp.md
+                - name: /O 選項 (將程式碼最佳化)
+                  expanded: false
+                  items:
+                    - name: /O 選項 (將程式碼最佳化)
+                      href: ../build/reference/o-options-optimize-code.md
+                    - name: /O1、/O2 (最小大小、最快速度)
+                      href: ../build/reference/o1-o2-minimize-size-maximize-speed.md
+                    - name: /Ob (內嵌函式展開)
+                      href: ../build/reference/ob-inline-function-expansion.md
+                    - name: /Od (停用 (偵錯))
+                      href: ../build/reference/od-disable-debug.md
+                    - name: /Og (全域最佳化)
+                      href: ../build/reference/og-global-optimizations.md
+                    - name: /Oi (產生內建函式)
+                      href: ../build/reference/oi-generate-intrinsic-functions.md
+                    - name: /Os、/Ot (偏好小型程式碼、偏好快速程式碼)
+                      href: ../build/reference/os-ot-favor-small-code-favor-fast-code.md
+                    - name: /Ox (啟用大多數速度最佳化)
+                      href: ../build/reference/ox-full-optimization.md
+                    - name: /Oy (省略框架/指標)
+                      href: ../build/reference/oy-frame-pointer-omission.md
+                - name: /openmp (啟用 OpenMP 2.0 支援)
+                  href: ../build/reference/openmp-enable-openmp-2-0-support.md
+                - name: /P (前置處理至檔案)
+                  href: ../build/reference/p-preprocess-to-a-file.md
+                - name: /permissive- (標準一致性)
+                  href: ../build/reference/permissive-standards-conformance.md
+                - name: /Q 選項 (低階運算)
+                  expanded: false
+                  items:
+                    - name: /Q 選項 (低階運算)
+                      href: ../build/reference/q-options-low-level-operations.md
+                    - name: /Qfast_transcendentals (強制快速超越函式)
+                      href: ../build/reference/qfast-transcendentals-force-fast-transcendentals.md
+                    - name: /QIfist (抑制 _ftol)
+                      href: ../build/reference/qifist-suppress-ftol.md
+                    - name: /Qimprecise_fwaits (移除 Try 區塊內的 fwaits)
+                      href: ../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md
+                    - name: /QIntel-jcc-erratum
+                      href: ../build/reference/qintel-jcc-erratum.md
+                    - name: /Qpar (自動平行化工具)
+                      href: ../build/reference/qpar-auto-parallelizer.md
+                    - name: /Qpar-report (自動平行化工具報告層級)
+                      href: ../build/reference/qpar-report-auto-parallelizer-reporting-level.md
+                    - name: /Qsafe_fp_loads
+                      href: ../build/reference/qsafe-fp-loads.md
+                    - name: /Qspectre
+                      href: ../build/reference/qspectre.md
+                    - name: /Qspectre-load
+                      href: ../build/reference/qspectre-load.md
+                    - name: /Qspectre-load-cf
+                      href: ../build/reference/qspectre-load-cf.md
+                    - name: /Qvec-report (自動向量化工具報告層級)
+                      href: ../build/reference/qvec-report-auto-vectorizer-reporting-level.md
+                - name: /RTC (執行階段錯誤檢查)
+                  href: ../build/reference/rtc-run-time-error-checks.md
+                - name: /sdl (啟用其他安全性檢查)
+                  href: ../build/reference/sdl-enable-additional-security-checks.md
+                - name: /showIncludes (列示 Include 檔)
+                  href: ../build/reference/showincludes-list-include-files.md
+                - name: /source-charset (設定來源字元集)
+                  href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /std (指定語言標準版本)
+                  href: ../build/reference/std-specify-language-standard-version.md
+                - name: /Tc、/Tp、/TC、/TP (指定原始程式檔類型)
+                  href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: /U、/u (取消定義符號)
+                  href: ../build/reference/u-u-undefine-symbols.md
+                - name: /utf-8 (將來源和可執行檔字元集設定為 UTF-8)
+                  href: ../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md
+                - name: /V (版本號碼)
+                  href: ../build/reference/v-version-number.md
+                - name: /validate-charset (驗證字元是否相容)
+                  href: ../build/reference/validate-charset-validate-for-compatible-characters.md
+                - name: /vd (停用建構替代)
+                  href: ../build/reference/vd-disable-construction-displacements.md
+                - name: /vmb、/vmg (表示方法)
+                  href: ../build/reference/vmb-vmg-representation-method.md
+                - name: /vmm、/vms、/vmv (一般用途表示)
+                  href: ../build/reference/vmm-vms-vmv-general-purpose-representation.md
+                - name: /volatile (volatile 關鍵字轉譯)
+                  href: ../build/reference/volatile-volatile-keyword-interpretation.md
+                - name: /w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告層級)
+                  href: ../build/reference/compiler-option-warning-level.md
+                - name: /WL (啟用一行診斷)
+                  href: ../build/reference/wl-enable-one-line-diagnostics.md
+                - name: /Wp64 (偵測 64 位元可攜性問題)
+                  href: ../build/reference/wp64-detect-64-bit-portability-issues.md
+                - name: /X (忽略標準 Include 路徑)
+                  href: ../build/reference/x-ignore-standard-include-paths.md
+                - name: /Y (先行編譯標頭檔)
+                  expanded: false
+                  items:
+                    - name: /Y (先行編譯標頭檔)
+                      href: ../build/reference/y-precompiled-headers.md
+                    - name: /Y- (忽略先行編譯標頭檔選項)
+                      href: ../build/reference/y-ignore-precompiled-header-options.md
+                    - name: /Yc (建立先行編譯標頭檔)
+                      href: ../build/reference/yc-create-precompiled-header-file.md
+                    - name: /Yd (將偵錯資訊置入目的檔)
+                      href: ../build/reference/yd-place-debug-information-in-object-file.md
+                    - name: /Yl (插入偵錯程式庫的 PCH 參考)
+                      href: ../build/reference/yl-inject-pch-reference-for-debug-library.md
+                    - name: /Yu (使用先行編譯標頭檔)
+                      href: ../build/reference/yu-use-precompiled-header-file.md
+                - name: /Z7、/Zi、/ZI (偵錯資訊格式)
+                  href: ../build/reference/z7-zi-zi-debug-information-format.md
+                - name: /Za、/Ze (停用語言延伸模組)
+                  expanded: false
+                  items:
+                    - name: /Za、/Ze (停用語言延伸模組)
+                      href: ../build/reference/za-ze-disable-language-extensions.md
+                    - name: Microsoft 對 C 和 C++ 的延伸模組
+                      href: ../build/reference/microsoft-extensions-to-c-and-cpp.md
+                - name: /Zc (一致性)
+                  expanded: false
+                  items:
+                    - name: /Zc (一致性)
+                      href: ../build/reference/zc-conformance.md
+                    - name: '/Zc:alignedNew (C++17 溢出對齊配置)'
+                      href: ../build/reference/zc-alignednew.md
+                    - name: '/Zc:auto (推算變數類型)'
+                      href: ../build/reference/zc-auto-deduce-variable-type.md
+                    - name: '/Zc:__cplusplus (啟用已更新的 __cplusplus 巨集)'
+                      href: ../build/reference/zc-cplusplus.md
+                    - name: '/Zc:externConstexpr (啟用 extern constexpr 變數)'
+                      href: ../build/reference/zc-externconstexpr.md
+                    - name: '/Zc:forScope (強制 for 迴圈範圍中的一致性)'
+                      href: ../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md
+                    - name: '/Zc:implicitNoexcept (隱含的例外狀況規範)'
+                      href: ../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md
+                    - name: '/Zc:inline (移除未參考的 COMDAT)'
+                      href: ../build/reference/zc-inline-remove-unreferenced-comdat.md
+                    - name: '/Zc:noexceptTypes (C++17 noexcept 規則)'
+                      href: ../build/reference/zc-noexcepttypes.md
+                    - name: '/Zc:referenceBinding (強制執行參考繫結規則)'
+                      href: ../build/reference/zc-referencebinding-enforce-reference-binding-rules.md
+                    - name: '/Zc:rvalueCast (強制型別轉換規則)'
+                      href: ../build/reference/zc-rvaluecast-enforce-type-conversion-rules.md
+                    - name: '/Zc:sizedDealloc (啟用調整大小後的全域解除配置函式)'
+                      href: ../build/reference/zc-sizeddealloc-enable-global-sized-dealloc-functions.md
+                    - name: '/Zc:strictStrings (停用字串常值型別轉換)'
+                      href: ../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md
+                    - name: '/Zc:ternary (強制執行條件運算子規則)'
+                      href: ../build/reference/zc-ternary.md
+                    - name: '/Zc:threadSafeInit (安全執行緒本機靜態變數初始化)'
+                      href: ../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md
+                    - name: '/Zc:throwingNew (假設擲回運算子 new)'
+                      href: ../build/reference/zc-throwingnew-assume-operator-new-throws.md
+                    - name: '/Zc:trigraphs (三併詞替代)'
+                      href: ../build/reference/zc-trigraphs-trigraphs-substitution.md
+                    - name: '/Zc:twoPhase- (停用兩階段名稱查閱)'
+                      href: ../build/reference/zc-twophase.md
+                    - name: '/Zc:wchar_t (wchar_t 是原生類型)'
+                      href: ../build/reference/zc-wchar-t-wchar-t-is-native-type.md
+                - name: /Zf (PDB 產生速度加快)
+                  href: ../build/reference/zf.md
+                - name: /Zg (產生函式原型)
+                  href: ../build/reference/zg-generate-function-prototypes.md
+                - name: /ZH (偵錯資訊中總和檢查碼的雜湊演算法)
+                  href: ../build/reference/zh.md
+                - name: /Zl (省略預設程式庫名稱)
+                  href: ../build/reference/zl-omit-default-library-name.md
+                - name: /Zm (指定先行編譯標頭檔的記憶體配置限制)
+                  href: ../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md
+                - name: /Zo (增強最佳化的偵錯)
+                  href: ../build/reference/zo-enhance-optimized-debugging.md
+                - name: /Zp (結構成員對齊)
+                  href: ../build/reference/zp-struct-member-alignment.md
+                - name: /Zs (僅檢查語法)
+                  href: ../build/reference/zs-syntax-check-only.md
+                - name: /ZW (Windows 執行階段編譯)
+                  href: ../build/reference/zw-windows-runtime-compilation.md
+        - name: 編譯器和連結器中的 Unicode 支援
+          href: ../build/reference/unicode-support-in-the-compiler-and-linker.md
+    - name: MSVC 連結器參考
+      expanded: false
+      items:
+        - name: MSVC 連結器參考
+          href: ../build/reference/linking.md
+        - name: MSVC 連結器選項
+          expanded: false
+          items:
+            - name: MSVC 連結器選項
+              href: ../build/reference/linker-options.md
+            - name: 編譯器控制的 LINK 選項
+              href: ../build/reference/compiler-controlled-link-options.md
+            - name: LINK 輸入檔
+              expanded: false
+              items:
+                - name: LINK 輸入檔
+                  href: ../build/reference/link-input-files.md
+                - name: .Obj 檔作為連結器輸入
+                  href: ../build/reference/dot-obj-files-as-linker-input.md
+                - name: .netmodule 檔作為連結器輸入
+                  expanded: false
+                  items:
+                    - name: .netmodule 檔作為連結器輸入
+                      href: ../build/reference/netmodule-files-as-linker-input.md
+                    - name: 選擇 .netmodule 輸入檔的格式
+                      href: ../build/reference/choosing-the-format-of-netmodule-input-files.md
+                - name: .Lib 檔作為連結器輸入
+                  href: ../build/reference/dot-lib-files-as-linker-input.md
+                - name: .Exp 檔作為連結器輸入
+                  href: ../build/reference/dot-exp-files-as-linker-input.md
+                - name: .Def 檔作為連結器輸入
+                  href: ../build/reference/dot-def-files-as-linker-input.md
+                - name: .Pdb 檔作為連結器輸入
+                  href: ../build/reference/dot-pdb-files-as-linker-input.md
+                - name: .Res 檔作為連結器輸入
+                  href: ../build/reference/dot-res-files-as-linker-input.md
+                - name: .Exe 檔作為連結器輸入
+                  href: ../build/reference/dot-exe-files-as-linker-input.md
+                - name: .Txt 檔作為連結器輸入
+                  href: ../build/reference/dot-txt-files-as-linker-input.md
+                - name: .Ilk 檔作為連結器輸入
+                  href: ../build/reference/dot-ilk-files-as-linker-input.md
+            - name: LINK 輸出
+              href: ../build/reference/link-output.md
+            - name: 保留字
+              href: ../build/reference/reserved-words.md
+            - name: '@ (指定連結器回應檔)'
+              href: ../build/reference/at-specify-a-linker-response-file.md
+            - name: /ALIGN (區段對齊)
+              href: ../build/reference/align-section-alignment.md
+            - name: /ALLOWBIND (阻止 DLL 繫結)
+              href: ../build/reference/allowbind-prevent-dll-binding.md
+            - name: /ALLOWISOLATION (資訊清單查閱)
+              href: ../build/reference/allowisolation-manifest-lookup.md
+            - name: /APPCONTAINER (UWP/Microsoft Store 應用程式)
+              href: ../build/reference/appcontainer-windows-store-app.md
+            - name: /ASSEMBLYDEBUG (加入 DebuggableAttribute)
+              href: ../build/reference/assemblydebug-add-debuggableattribute.md
+            - name: /ASSEMBLYLINKRESOURCE (連結到 .NET Framework 資源)
+              href: ../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md
+            - name: /ASSEMBLYMODULE (將 MSIL 模組新增至組件)
+              href: ../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md
+            - name: /ASSEMBLYRESOURCE (內嵌受控資源)
+              href: ../build/reference/assemblyresource-embed-a-managed-resource.md
+            - name: /BASE (基底位址)
+              href: ../build/reference/base-base-address.md
+            - name: /CETCOMPAT (控制流程強制技術相容)
+              href: ../build/reference/cetcompat.md
+            - name: /CGTHREADS (編譯器執行緒)
+              href: ../build/reference/cgthreads-compiler-threads.md
+            - name: /CLRIMAGETYPE (指定 CLR 映像類型)
+              href: ../build/reference/clrimagetype-specify-type-of-clr-image.md
+            - name: /CLRSUPPORTLASTERROR (保留最後的 PInvoke 呼叫錯誤碼)
+              href: ../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md
+            - name: /CLRTHREADATTRIBUTE (設定 CLR 執行緒屬性)
+              href: ../build/reference/clrthreadattribute-set-clr-thread-attribute.md
+            - name: /CLRUNMANAGEDCODECHECK (移除 SuppressUnmanagedCodeSecurityAttribute)
+              href: ../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md
+            - name: /DEBUG (產生偵錯資訊)
+              href: ../build/reference/debug-generate-debug-info.md
+            - name: /DEBUGTYPE (偵錯資訊選項)
+              href: ../build/reference/debugtype-debug-info-options.md
+            - name: /DEF (指定模組定義檔)
+              href: ../build/reference/def-specify-module-definition-file.md
+            - name: /DEFAULTLIB (指定預設程式庫)
+              href: ../build/reference/defaultlib-specify-default-library.md
+            - name: /DELAY (延遲載入匯入設定)
+              href: ../build/reference/delay-delay-load-import-settings.md
+            - name: /DELAYLOAD (延遲載入匯入)
+              href: ../build/reference/delayload-delay-load-import.md
+            - name: /DELAYSIGN (部分簽署組件)
+              href: ../build/reference/delaysign-partially-sign-an-assembly.md
+            - name: /DEPENDENTLOADFLAG (設定預設相依負載旗標)
+              href: ../build/reference/dependentloadflag.md
+            - name: /DLL (建置 DLL)
+              href: ../build/reference/dll-build-a-dll.md
+            - name: /DRIVER (Windows NT 核心模式驅動程式)
+              href: ../build/reference/driver-windows-nt-kernel-mode-driver.md
+            - name: /DYNAMICBASE (使用位址空間隨機載入)
+              href: ../build/reference/dynamicbase-use-address-space-layout-randomization.md
+            - name: /ENTRY (進入點符號)
+              href: ../build/reference/entry-entry-point-symbol.md
+            - name: /ERRORREPORT (回報內部連結器錯誤)
+              href: ../build/reference/errorreport-report-internal-linker-errors.md
+            - name: /EXPORT (匯出函式)
+              href: ../build/reference/export-exports-a-function.md
+            - name: /FILEALIGN (對齊檔案中的區段)
+              href: ../build/reference/filealign.md
+            - name: /FIXED (固定基底位址)
+              href: ../build/reference/fixed-fixed-base-address.md
+            - name: /FORCE (強制檔案輸出)
+              href: ../build/reference/force-force-file-output.md
+            - name: /FUNCTIONPADMIN (建立可線上修補的映像)
+              href: ../build/reference/functionpadmin-create-hotpatchable-image.md
+            - name: /GENPROFILE、/FASTGENPROFILE (產生分析檢測組建)
+              href: ../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md
+            - name: /GUARD (啟用防護檢查)
+              href: ../build/reference/guard-enable-guard-checks.md
+            - name: /HEAP (設定堆積大小)
+              href: ../build/reference/heap-set-heap-size.md
+            - name: /HIGHENTROPYVA (支援 64 位元 ASLR)
+              href: ../build/reference/highentropyva-support-64-bit-aslr.md
+            - name: /IDLOUT (命名 MIDL 輸出檔案)
+              href: ../build/reference/idlout-name-midl-output-files.md
+            - name: /IGNORE (忽略特定的警告)
+              href: ../build/reference/ignore-ignore-specific-warnings.md
+            - name: /IGNOREIDL (不要將屬性處理至 MIDL 中)
+              href: ../build/reference/ignoreidl-don-t-process-attributes-into-midl.md
+            - name: /IMPLIB (命名匯入程式庫)
+              href: ../build/reference/implib-name-import-library.md
+            - name: /INCLUDE (強制符號參考)
+              href: ../build/reference/include-force-symbol-references.md
+            - name: /INCREMENTAL (以累加方式連結)
+              href: ../build/reference/incremental-link-incrementally.md
+            - name: /INTEGRITYCHECK (需要簽章檢查)
+              href: ../build/reference/integritycheck-require-signature-check.md
+            - name: /KEYCONTAINER (指定金鑰容器以簽署組件)
+              href: ../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md
+            - name: /KEYFILE (指定金鑰或金鑰組以簽署組件)
+              href: ../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md
+            - name: /LARGEADDRESSAWARE (處理大型位址)
+              href: ../build/reference/largeaddressaware-handle-large-addresses.md
+            - name: /LIBPATH (其他 Libpath)
+              href: ../build/reference/libpath-additional-libpath.md
+            - name: /LINKREPRO (連結存放庫目錄名稱)
+              href: ../build/reference/linkrepro.md
+            - name: /LINKREPROTARGET (連結存放庫檔案名稱)
+              href: ../build/reference/linkreprotarget.md
+            - name: /LTCG (連結時產生程式碼)
+              href: ../build/reference/ltcg-link-time-code-generation.md
+            - name: /MACHINE (指定目標平台)
+              href: ../build/reference/machine-specify-target-platform.md
+            - name: /MANIFEST (建立並存組件資訊清單)
+              href: ../build/reference/manifest-create-side-by-side-assembly-manifest.md
+            - name: /MANIFESTDEPENDENCY (指定資訊清單相依性)
+              href: ../build/reference/manifestdependency-specify-manifest-dependencies.md
+            - name: /MANIFESTFILE (命名資訊清單檔案)
+              href: ../build/reference/manifestfile-name-manifest-file.md
+            - name: /MANIFESTINPUT (指定資訊清單輸入)
+              href: ../build/reference/manifestinput-specify-manifest-input.md
+            - name: /MANIFESTUAC (將 UAC 資訊內嵌在資訊清單中)
+              href: ../build/reference/manifestuac-embeds-uac-information-in-manifest.md
+            - name: /MAP (產生對應檔)
+              href: ../build/reference/map-generate-mapfile.md
+            - name: /MAPINFO (將資訊包括在對應檔中)
+              href: ../build/reference/mapinfo-include-information-in-mapfile.md
+            - name: /MERGE (結合區段)
+              href: ../build/reference/merge-combine-sections.md
+            - name: /MIDL (指定 MIDL 命令列選項)
+              href: ../build/reference/midl-specify-midl-command-line-options.md
+            - name: /NATVIS (將 Natvis 新增至 PDB)
+              href: ../build/reference/natvis-add-natvis-to-pdb.md
+            - name: /NOASSEMBLY (建立 MSIL 模組)
+              href: ../build/reference/noassembly-create-a-msil-module.md
+            - name: /NODEFAULTLIB (忽略程式庫)
+              href: ../build/reference/nodefaultlib-ignore-libraries.md
+            - name: /NOENTRY (沒有進入點)
+              href: ../build/reference/noentry-no-entry-point.md
+            - name: /NOLOGO (隱藏程式啟始資訊) (連結器)
+              href: ../build/reference/nologo-suppress-startup-banner-linker.md
+            - name: /NXCOMPAT (與資料執行防止相容)
+              href: ../build/reference/nxcompat-compatible-with-data-execution-prevention.md
+            - name: /OPT (最佳化)
+              href: ../build/reference/opt-optimizations.md
+            - name: /ORDER (依順序置放函式)
+              href: ../build/reference/order-put-functions-in-order.md
+            - name: /OUT (輸出檔案名稱)
+              href: ../build/reference/out-output-file-name.md
+            - name: /PDB (使用程式資料庫)
+              href: ../build/reference/pdb-use-program-database.md
+            - name: /PDBALTPATH (使用替代 PDB 路徑)
+              href: ../build/reference/pdbaltpath-use-alternate-pdb-path.md
+            - name: /PDBSTRIPPED (移除專用符號)
+              href: ../build/reference/pdbstripped-strip-private-symbols.md
+            - name: /PGD (指定特性指引最佳化的資料庫)
+              href: ../build/reference/pgd-specify-database-for-profile-guided-optimizations.md
+            - name: /POGOSAFEMODE
+              href: ../build/reference/pogosafemode-linker-option.md
+            - name: /PROFILE (效能工具分析工具)
+              href: ../build/reference/profile-performance-tools-profiler.md
+            - name: /RELEASE (設定總和檢查碼)
+              href: ../build/reference/release-set-the-checksum.md
+            - name: /SAFESEH (映像擁有安全例外狀況處理常式)
+              href: ../build/reference/safeseh-image-has-safe-exception-handlers.md
+            - name: /SECTION (指定區段屬性)
+              href: ../build/reference/section-specify-section-attributes.md
+            - name: /SOURCELINK (在 PDB 中納入 Sourcelink 檔案)
+              href: ../build/reference/sourcelink.md
+            - name: /STACK (堆疊配置)
+              href: ../build/reference/stack-stack-allocations.md
+            - name: /STUB (MS-DOS Stub 檔案名稱)
+              href: ../build/reference/stub-ms-dos-stub-file-name.md
+            - name: /SUBSYSTEM (指定子系統)
+              href: ../build/reference/subsystem-specify-subsystem.md
+            - name: /SWAPRUN (將連結器輸出載入至交換檔)
+              href: ../build/reference/swaprun-load-linker-output-to-swap-file.md
+            - name: /TLBID (指定 TypeLib 的資源 ID)
+              href: ../build/reference/tlbid-specify-resource-id-for-typelib.md
+            - name: /TLBOUT (命名 .TLB 檔案)
+              href: ../build/reference/tlbout-name-dot-tlb-file.md
+            - name: /TSAWARE (建立終端伺服器感知應用程式)
+              href: ../build/reference/tsaware-create-terminal-server-aware-application.md
+            - name: /USEPROFILE
+              href: ../build/reference/useprofile.md
+            - name: /VERBOSE (列印進度訊息)
+              href: ../build/reference/verbose-print-progress-messages.md
+            - name: /VERSION (版本資訊)
+              href: ../build/reference/version-version-information.md
+            - name: /WHOLEARCHIVE (包括所有程式庫目的檔)
+              href: ../build/reference/wholearchive-include-all-library-object-files.md
+            - name: /WINMD (產生 Windows 中繼資料)
+              href: ../build/reference/winmd-generate-windows-metadata.md
+            - name: /WINMDFILE (指定 winmd 檔案)
+              href: ../build/reference/winmdfile-specify-winmd-file.md
+            - name: /WINMDKEYFILE (指定 winmd 金鑰檔)
+              href: ../build/reference/winmdkeyfile-specify-winmd-key-file.md
+            - name: /WINMDKEYCONTAINER (指定金鑰容器)
+              href: ../build/reference/winmdkeycontainer-specify-key-container.md
+            - name: /WINMDDELAYSIGN (部分簽署 winmd)
+              href: ../build/reference/winmddelaysign-partially-sign-a-winmd.md
+            - name: /WX (將連結器警告視為錯誤)
+              href: ../build/reference/wx-treat-linker-warnings-as-errors.md
+        - name: 裝飾名稱
+          href: ../build/reference/decorated-names.md
+        - name: 模組定義檔案 (.Def)
+          expanded: false
+          items:
+            - name: 模組定義檔案 (.Def)
+              href: ../build/reference/module-definition-dot-def-files.md
+            - name: 模組定義陳述式的規則
+              expanded: false
+              items:
+                - name: 模組定義陳述式的規則
+                  href: ../build/reference/rules-for-module-definition-statements.md
+                - name: EXPORTS
+                  href: ../build/reference/exports.md
+                - name: LIBRARY
+                  href: ../build/reference/library.md
+                - name: HEAPSIZE
+                  href: ../build/reference/heapsize.md
+                - name: NAME (C/C++)
+                  href: ../build/reference/name-c-cpp.md
+                - name: SECTIONS (C/C++)
+                  href: ../build/reference/sections-c-cpp.md
+                - name: STACKSIZE
+                  href: ../build/reference/stacksize.md
+                - name: STUB
+                  href: ../build/reference/stub.md
+                - name: VERSION (C/C++)
+                  href: ../build/reference/version-c-cpp.md
+        - name: 延遲載入 DLL 的連結器支援
+          expanded: false
+          items:
+            - name: 延遲載入 DLL 的連結器支援
+              href: ../build/reference/linker-support-for-delay-loaded-dlls.md
+            - name: 指定要延遲載入的 DLL
+              href: ../build/reference/specifying-dlls-to-delay-load.md
+            - name: 明確卸載延遲載入的 DLL
+              href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
+            - name: 繫結匯入
+              href: ../build/reference/binding-imports.md
+            - name: 載入延遲載入 DLL 的所有匯入
+              href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
+            - name: 錯誤處理和通知
+              expanded: false
+              items:
+                - name: 錯誤處理和通知
+                  href: ../build/reference/error-handling-and-notification.md
+                - name: 通知攔截
+                  href: ../build/reference/notification-hooks.md
+                - name: 失敗攔截
+                  href: ../build/reference/failure-hooks.md
+                - name: DLL 載入例外狀況代碼 (C/C++)
+                  href: ../build/reference/exceptions-c-cpp.md
+            - name: 傾印延遲載入的匯入
+              href: ../build/reference/dumping-delay-loaded-imports.md
+            - name: 延遲載入 DLL 的條件約束
+              href: ../build/reference/constraints-of-delay-loading-dlls.md
+            - name: 了解 Helper 函式
+              expanded: false
+              items:
+                - name: 了解 Helper 函式
+                  href: ../build/reference/understanding-the-helper-function.md
+                - name: Visual C++ 6.0 之後 DLL 延遲載入 Helper 函式的變更
+                  href: ../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md
+                - name: 呼叫慣例、參數和傳回型別
+                  href: ../build/reference/calling-conventions-parameters-and-return-type.md
+                - name: 結構和常數定義
+                  href: ../build/reference/structure-and-constant-definitions.md
+                - name: 計算需要的值
+                  href: ../build/reference/calculating-necessary-values.md
+                - name: 卸載延遲載入的 DLL
+                  href: ../build/reference/unloading-a-delay-loaded-dll.md
+            - name: 開發您自己的 Helper 函式
+              href: ../build/reference/developing-your-own-helper-function.md
+    - name: 其他 MSVC 建置工具
+      expanded: false
+      items:
+        - name: 其他 MSVC 建置工具
+          href: ../build/reference/c-cpp-build-tools.md
+        - name: NMAKE 參考
+          expanded: false
+          items:
+            - name: NMAKE 參考
+              href: ../build/reference/nmake-reference.md
+            - name: Visual Studio 中的 NMAKE 專案
+              href: ../build/reference/creating-a-makefile-project.md
+            - name: 執行 NMAKE
+              href: ../build/reference/running-nmake.md
+            - name: Makefile 內容
+              expanded: false
+              items:
+                - name: Makefile 內容
+                  href: ../build/reference/contents-of-a-makefile.md
+                - name: 萬用字元和 NMAKE
+                  href: ../build/reference/wildcards-and-nmake.md
+                - name: Makefile 中的長檔名
+                  href: ../build/reference/long-filenames-in-a-makefile.md
+                - name: Makefile 中的註解
+                  href: ../build/reference/comments-in-a-makefile.md
+                - name: Makefile 中的特殊字元
+                  href: ../build/reference/special-characters-in-a-makefile.md
+                - name: 範例 Makefile
+                  href: ../build/reference/sample-makefile.md
+            - name: 描述區塊
+              href: ../build/reference/description-blocks.md
+            - name: Makefile 中的命令
+              expanded: false
+              items:
+                - name: Makefile 中的命令
+                  href: ../build/reference/commands-in-a-makefile.md
+                - name: 命令修飾詞
+                  href: ../build/reference/command-modifiers.md
+                - name: 檔名部分語法
+                  href: ../build/reference/filename-parts-syntax.md
+                - name: Makefile 中的內嵌檔
+                  expanded: false
+                  items:
+                    - name: Makefile 中的內嵌檔
+                      href: ../build/reference/inline-files-in-a-makefile.md
+                    - name: 指定內嵌檔
+                      href: ../build/reference/specifying-an-inline-file.md
+                    - name: 建立內嵌檔文字
+                      href: ../build/reference/creating-inline-file-text.md
+                    - name: 重複使用內嵌檔
+                      href: ../build/reference/reusing-inline-files.md
+                    - name: 多個內嵌檔
+                      href: ../build/reference/multiple-inline-files.md
+            - name: 巨集和 NMAKE
+              expanded: false
+              items:
+                - name: 巨集和 NMAKE
+                  href: ../build/reference/macros-and-nmake.md
+                - name: 定義 NMAKE 巨集
+                  expanded: false
+                  items:
+                    - name: 定義 NMAKE 巨集
+                      href: ../build/reference/defining-an-nmake-macro.md
+                    - name: 巨集中的特殊字元
+                      href: ../build/reference/special-characters-in-macros.md
+                    - name: Null 和未定義的巨集
+                      href: ../build/reference/null-and-undefined-macros.md
+                    - name: 定義巨集的位置
+                      href: ../build/reference/where-to-define-macros.md
+                    - name: 巨集定義的優先順序
+                      href: ../build/reference/precedence-in-macro-definitions.md
+                - name: 使用 NMAKE 巨集
+                  expanded: false
+                  items:
+                    - name: 使用 NMAKE 巨集
+                      href: ../build/reference/using-an-nmake-macro.md
+                    - name: 巨集替代
+                      href: ../build/reference/macro-substitution.md
+                - name: 特殊的 NMAKE 巨集
+                  expanded: false
+                  items:
+                    - name: 特殊的 NMAKE 巨集
+                      href: ../build/reference/special-nmake-macros.md
+                    - name: 檔名巨集
+                      href: ../build/reference/filename-macros.md
+                    - name: 遞迴巨集
+                      href: ../build/reference/recursion-macros.md
+                    - name: 命令巨集和選項巨集
+                      href: ../build/reference/command-macros-and-options-macros.md
+                    - name: 環境變數巨集
+                      href: ../build/reference/environment-variable-macros.md
+            - name: 推斷規則
+              expanded: false
+              items:
+                - name: 推斷規則
+                  href: ../build/reference/inference-rules.md
+                - name: 定義規則
+                  expanded: false
+                  items:
+                    - name: 定義規則
+                      href: ../build/reference/defining-a-rule.md
+                    - name: 在規則中搜尋路徑
+                      href: ../build/reference/search-paths-in-rules.md
+                - name: 批次模式規則
+                  href: ../build/reference/batch-mode-rules.md
+                - name: 預先定義的規則
+                  href: ../build/reference/predefined-rules.md
+                - name: 推斷相依和規則
+                  href: ../build/reference/inferred-dependents-and-rules.md
+                - name: 推斷規則的優先順序
+                  href: ../build/reference/precedence-in-inference-rules.md
+            - name: 點指示詞
+              href: ../build/reference/dot-directives.md
+            - name: Makefile 前置處理
+              expanded: false
+              items:
+                - name: Makefile 前置處理
+                  href: ../build/reference/makefile-preprocessing.md
+                - name: Makefile 前置處理指示詞
+                  href: ../build/reference/makefile-preprocessing-directives.md
+                - name: Makefile 前置處理中的運算式
+                  expanded: false
+                  items:
+                    - name: Makefile 前置處理中的運算式
+                      href: ../build/reference/expressions-in-makefile-preprocessing.md
+                    - name: Makefile 前置處理運算子
+                      href: ../build/reference/makefile-preprocessing-operators.md
+                    - name: 在前置處理中執行程式
+                      href: ../build/reference/executing-a-program-in-preprocessing.md
+        - name: LIB 參考
+          expanded: false
+          items:
+            - name: LIB 參考
+              href: ../build/reference/lib-reference.md
+            - name: LIB 概觀
+              expanded: false
+              items:
+                - name: LIB 概觀
+                  href: ../build/reference/overview-of-lib.md
+                - name: 作法：在 Visual Studio 開發環境中設定 LIB.EXE 選項
+                  href: ../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md
+                - name: LIB 輸入檔
+                  href: ../build/reference/lib-input-files.md
+                - name: LIB 輸出檔案
+                  href: ../build/reference/lib-output-files.md
+                - name: 其他 LIB 輸出
+                  href: ../build/reference/other-lib-output.md
+                - name: 程式庫結構
+                  href: ../build/reference/structure-of-a-library.md
+            - name: 執行 LIB
+              href: ../build/reference/running-lib.md
+            - name: 管理程式庫
+              href: ../build/reference/managing-a-library.md
+            - name: 擷取程式庫成員
+              href: ../build/reference/extracting-a-library-member.md
+            - name: 與匯入程式庫和匯出檔案搭配使用
+              expanded: false
+              items:
+                - name: 與匯入程式庫和匯出檔案搭配使用
+                  href: ../build/reference/working-with-import-libraries-and-export-files.md
+                - name: 建置匯入程式庫和匯出檔案
+                  href: ../build/reference/building-an-import-library-and-export-file.md
+                - name: 使用匯入程式庫和匯出檔案
+                  href: ../build/reference/using-an-import-library-and-export-file.md
+        - name: EDITBIN 參考
+          expanded: false
+          items:
+            - name: EDITBIN 參考
+              href: ../build/reference/editbin-reference.md
+            - name: EDITBIN 命令列
+              href: ../build/reference/editbin-command-line.md
+            - name: EDITBIN 選項
+              expanded: false
+              items:
+                - name: EDITBIN 選項
+                  href: ../build/reference/editbin-options.md
+                - name: /ALLOWISOLATION
+                  href: ../build/reference/allowisolation.md
+                - name: /ALLOWBIND
+                  href: ../build/reference/allowbind.md
+                - name: /APPCONTAINER
+                  href: ../build/reference/appcontainer.md
+                - name: /BIND
+                  href: ../build/reference/bind.md
+                - name: /DYNAMICBASE
+                  href: ../build/reference/dynamicbase.md
+                - name: /ERRORREPORT (editbin.exe)
+                  href: ../build/reference/errorreport-editbin-exe.md
+                - name: /HEAP
+                  href: ../build/reference/heap.md
+                - name: /HIGHENTROPYVA
+                  href: ../build/reference/highentropyva.md
+                - name: /INTEGRITYCHECK
+                  href: ../build/reference/integritycheck.md
+                - name: /LARGEADDRESSAWARE
+                  href: ../build/reference/largeaddressaware.md
+                - name: /NOLOGO (EDITBIN)
+                  href: ../build/reference/nologo-editbin.md
+                - name: /NXCOMPAT
+                  href: ../build/reference/nxcompat.md
+                - name: /REBASE
+                  href: ../build/reference/rebase.md
+                - name: /RELEASE
+                  href: ../build/reference/release.md
+                - name: /SECTION (EDITBIN)
+                  href: ../build/reference/section-editbin.md
+                - name: /STACK
+                  href: ../build/reference/stack.md
+                - name: /SUBSYSTEM
+                  href: ../build/reference/subsystem.md
+                - name: /SWAPRUN
+                  href: ../build/reference/swaprun.md
+                - name: /TSAWARE
+                  href: ../build/reference/tsaware.md
+                - name: /VERSION
+                  href: ../build/reference/version.md
+        - name: DUMPBIN 參考
+          expanded: false
+          items:
+            - name: DUMPBIN 參考
+              href: ../build/reference/dumpbin-reference.md
+            - name: DUMPBIN 命令列
+              href: ../build/reference/dumpbin-command-line.md
+            - name: DUMPBIN 選項
+              expanded: false
+              items:
+                - name: DUMPBIN 選項
+                  href: ../build/reference/dumpbin-options.md
+                - name: /ALL
+                  href: ../build/reference/all.md
+                - name: /ARCHIVEMEMBERS
+                  href: ../build/reference/archivemembers.md
+                - name: /CLRHEADER
+                  href: ../build/reference/clrheader.md
+                - name: /DEPENDENTS
+                  href: ../build/reference/dependents.md
+                - name: /DIRECTIVES
+                  href: ../build/reference/directives.md
+                - name: /DISASM
+                  href: ../build/reference/disasm.md
+                - name: /ERRORREPORT (dumpbin.exe)
+                  href: ../build/reference/errorreport-dumpbin-exe.md
+                - name: /EXPORTS
+                  href: ../build/reference/dash-exports.md
+                - name: /FPO
+                  href: ../build/reference/fpo.md
+                - name: /HEADERS
+                  href: ../build/reference/headers.md
+                - name: /IMPORTS (DUMPBIN)
+                  href: ../build/reference/imports-dumpbin.md
+                - name: /LINENUMBERS
+                  href: ../build/reference/linenumbers.md
+                - name: /LINKERMEMBER
+                  href: ../build/reference/linkermember.md
+                - name: /LOADCONFIG
+                  href: ../build/reference/loadconfig.md
+                - name: /NOPDB
+                  href: ../build/reference/nopdb.md
+                - name: /OUT (DUMPBIN)
+                  href: ../build/reference/out-dumpbin.md
+                - name: /PDATA
+                  href: ../build/reference/pdata.md
+                - name: /PDBPATH
+                  href: ../build/reference/pdbpath.md
+                - name: /RANGE
+                  href: ../build/reference/range.md
+                - name: /RAWDATA
+                  href: ../build/reference/rawdata.md
+                - name: /RELOCATIONS
+                  href: ../build/reference/relocations.md
+                - name: /SECTION (DUMPBIN)
+                  href: ../build/reference/section-dumpbin.md
+                - name: /SUMMARY
+                  href: ../build/reference/summary.md
+                - name: /SYMBOLS
+                  href: ../build/reference/symbols.md
+                - name: /TLS
+                  href: ../build/reference/tls.md
+        - name: ERRLOOK 參考
+          expanded: false
+          items:
+            - name: ERRLOOK 參考
+              href: ../build/reference/errlook-reference.md
+            - name: 值編輯控制項
+              href: ../build/reference/value-edit-control.md
+            - name: 錯誤訊息編輯控制項
+              href: ../build/reference/error-message-edit-control.md
+            - name: 模組按鈕
+              href: ../build/reference/modules-button.md
+            - name: 查詢按鈕
+              href: ../build/reference/look-up-button.md
+        - name: XDCMake 參考
+          href: ../build/reference/xdcmake-reference.md
+        - name: BSCMAKE 參考
+          expanded: false
+          items:
+            - name: BSCMAKE 參考
+              href: ../build/reference/bscmake-reference.md
+            - name: 建置瀏覽資訊檔：總覽
+              href: ../build/reference/building-browse-information-files-overview.md
+            - name: 建置 .Bsc 檔
+              expanded: false
+              items:
+                - name: 建置 .Bsc 檔
+                  href: ../build/reference/building-a-dot-bsc-file.md
+                - name: 建立 .Sbr 檔
+                  href: ../build/reference/creating-an-dot-sbr-file.md
+                - name: BSCMAKE 如何建置 .Bsc 檔
+                  href: ../build/reference/how-bscmake-builds-a-dot-bsc-file.md
+            - name: BSCMAKE 命令列
+              href: ../build/reference/bscmake-command-line.md
+            - name: BSCMAKE 命令檔 (回應檔)
+              href: ../build/reference/bscmake-command-file-response-file.md
+            - name: BSCMAKE 選項
+              href: ../build/reference/bscmake-options.md
+            - name: BSCMAKE 結束代碼
+              href: ../build/reference/bscmake-exit-codes.md
+    - name: 編譯器與建置工具錯誤
+      href: ../error-messages/
+    - name: C++ 的 XML 文件
+      expanded: false
+      items:
+        - name: C++ 的 XML 文件
+          href: ../build/reference/xml-documentation-visual-cpp.md
+        - name: 建議使用的 C++ 文件註解標籤
+          expanded: false
+          items:
+            - name: 建議使用的 C++ 文件註解標籤
+              href: ../build/reference/recommended-tags-for-documentation-comments-visual-cpp.md
+            - name: <c>
+              href: ../build/reference/c-visual-cpp.md
+            - name: <code>
+              href: ../build/reference/code-visual-cpp.md
+            - name: <example>
+              href: ../build/reference/example-visual-cpp.md
+            - name: <exception>
+              href: ../build/reference/exception-visual-cpp.md
+            - name: <include>
+              href: ../build/reference/include-visual-cpp.md
+            - name: <list>
+              href: ../build/reference/list-visual-cpp.md
+            - name: <para>
+              href: ../build/reference/para-visual-cpp.md
+            - name: <param>
+              href: ../build/reference/param-visual-cpp.md
+            - name: <paramref>
+              href: ../build/reference/paramref-visual-cpp.md
+            - name: <permission>
+              href: ../build/reference/permission-visual-cpp.md
+            - name: <remarks>
+              href: ../build/reference/remarks-visual-cpp.md
+            - name: <returns>
+              href: ../build/reference/returns-visual-cpp.md
+            - name: <see>
+              href: ../build/reference/see-visual-cpp.md
+            - name: <seealso>
+              href: ../build/reference/seealso-visual-cpp.md
+            - name: <summary>
+              href: ../build/reference/summary-visual-cpp.md
+            - name: <value>
+              href: ../build/reference/value-visual-cpp.md
+        - name: .XML 檔案處理
+          href: ../build/reference/dot-xml-file-processing.md
+        - name: C++ 文件標記的分隔符號
+          href: ../build/reference/delimiters-for-visual-cpp-documentation-tags.md

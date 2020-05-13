@@ -1,51 +1,51 @@
 ---
-title: 實作雙重介面 (ATL)
+title: 實現雙介面 (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a85597adad045bee3edb5cc3ed63c72a22fa08fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262225"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319459"
 ---
-# <a name="implementing-a-dual-interface"></a>實作雙重介面
+# <a name="implementing-a-dual-interface"></a>實現雙介面
 
-您可以實作雙重介面，使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)類別，可提供的預設實作`IDispatch`雙重介面中的方法。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+您可以使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)類實現雙介面,該類提供雙`IDispatch`介面中 方法的預設實現。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
-若要使用此類別：
+要使用此類:
 
-- 類型程式庫中定義您的雙重介面。
+- 在類型庫中定義雙介面。
 
-- 衍生類別的特製化從`IDispatchImpl`（傳遞資訊相關的介面和型別程式庫做為範本引數）。
+- 從`IDispatchImpl`(傳遞有關介面的資訊和類型庫作為範本參數) 派生類。
 
-- 將項目 （或項目） 新增至公開雙重介面 COM 對應`QueryInterface`。
+- 向 COM 映射添加條目(或條目)`QueryInterface`以透過公開雙介面。
 
-- 在類別中實作之介面的 vtable 部分。
+- 在類中實現介面的可 v 可部分。
 
-- 請確定在執行階段包含介面定義的型別程式庫是可為您的物件。
+- 確保包含介面定義的類型庫在運行時對物件可用。
 
 ## <a name="atl-simple-object-wizard"></a>ATL 簡單物件精靈
 
-如果您想要建立新的介面和新的類別，來實作它，您可以使用[ATL 加入類別對話方塊](../ide/add-class-dialog-box.md)，然後[ATL 簡單物件精靈](../atl/reference/atl-simple-object-wizard.md)。
+如果要建立新介面和新類別來實現它,可以使用[ATL 添加類別對話框](../ide/add-class-dialog-box.md),然後使用[ATL 簡單物件精靈](../atl/reference/atl-simple-object-wizard.md)。
 
 ## <a name="implement-interface-wizard"></a>實作介面精靈
 
-如果您有現有的介面，您可以使用[實作介面精靈](../atl/reference/adding-a-new-interface-in-an-atl-project.md)將必要的基底類別、 COM 對應項目和基本架構的方法實作新增至現有的類別。
+如果您有現有介面,則可以使用[實現介面嚮導](../atl/reference/adding-a-new-interface-in-an-atl-project.md)將必要的基類、COM 映射條目和骨架方法實現添加到現有類。
 
 > [!NOTE]
->  您可能需要調整所產生的基底類別，以便做為範本引數傳遞的類型程式庫的主要和次要的版本號碼您`IDispatchImpl`基底類別。 實作介面精靈並不會為您檢查的型別程式庫版本號碼。
+> 您可能需要調整生成的基類,以便類型庫的主要版本號和次要版本號作為範本參數傳遞給`IDispatchImpl`基類。 實現介面嚮導不檢查類型庫版本號。
 
 ## <a name="implementing-idispatch"></a>實作 IDispatch
 
-您可以使用`IDispatchImpl`基底類別，以提供實作分配介面由 COM 對應中指定適當的項目 (使用[COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2)或[COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid)巨集)，只要您有描述相對應的雙重介面的型別程式庫。 它是相當常見實作`IDispatch`介面如此一來，例如。 ATL 簡單物件精靈] 及 [實作介面精靈同時假設您想要實作`IDispatch`如此一來，因此它們會將適當的項目加入對應。
+只要具有描述相應`IDispatchImpl`雙介面的類型庫,就可以使用基類通過在 COM 映射中指定適當的條目(使用[COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2)或[COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid)宏)來提供不相關介面的實現。 例如,`IDispatch`以這種方式實現介面很常見。 ATL 簡單物件嚮導和實現介面嚮導都假定您打算以這種方式`IDispatch`實現 ,因此它們將添加適當的條目到地圖中。
 
 > [!NOTE]
->  提供 ATL [IDispEventImpl](../atl/reference/idispeventimpl-class.md)並[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)類別可以幫助您實作分配介面，而不需要的類型程式庫，其中包含相容的雙重介面的定義。
+> ATL 提供[IDispEventImpl](../atl/reference/idispeventimpl-class.md)和[IDispEventSimple](../atl/reference/idispeventsimpleimpl-class.md)類,可説明您實現解介面,而無需包含相容雙介面定義的類型庫。
 
 ## <a name="see-also"></a>另請參閱
 
-[雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
+[雙介面與 ATL](../atl/dual-interfaces-and-atl.md)

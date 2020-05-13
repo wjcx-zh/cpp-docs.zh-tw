@@ -1,8 +1,9 @@
 ---
 title: _ecvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _ecvt_s
+- _o__ecvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: a37508c293ee72934a8580f822878f27031b864b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624376"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915145"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -90,10 +92,10 @@ errno_t _ecvt_s(
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|傳回值|*Buffer*中的值|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULL**|任何|任何|任何|任何|任何|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
-|任何|任何|任何|任何|**NULL**|任何|**EINVAL**|未修改。|
-|任何|任何|任何|任何|任何|**NULL**|**EINVAL**|未修改。|
+|**Null**|任意|任意|任意|任意|任意|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|<=0|任意|任意|任意|任意|**EINVAL**|未修改。|
+|任意|任意|任意|任意|**Null**|任意|**EINVAL**|未修改。|
+|任意|任意|任意|任意|任意|**Null**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全性問題
 
@@ -113,13 +115,15 @@ errno_t _ecvt_s(
 
 此函式的 debug 版本會先使用0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函式|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -153,7 +157,7 @@ int main( )
 Converted value: 12000
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

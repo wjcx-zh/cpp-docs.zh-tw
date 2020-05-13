@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: d1dc8ef6e801623aa96cb4b47936413cd17f24f0
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: b28d075c5fcc4313e1a62ae731b3fad8ef4d8a12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821249"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749938"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton 類別
 
@@ -33,24 +33,24 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|建構並初始化 `CMFCRibbonApplicationButton` 物件。|
+|[CMFC功能化應用按鈕::CMFC功能化應用按鈕](#cmfcribbonapplicationbutton)|建構並初始化 `CMFCRibbonApplicationButton` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
 |`CMFCRibbonApplicationButton::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
-|`CMFCRibbonApplicationButton::GetThisClass`|供架構用來取得與這個類別類型相關聯之[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|將影像指派給 [功能區應用程式] 按鈕。|
+|`CMFCRibbonApplicationButton::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
+|[CMFC功能化應用按鈕::設定影像](#setimage)|將圖像分配給功能區應用程式按鈕。|
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCRibbonApplicationButton` 類別中使用各種方法。 此範例示範如何將影像指派給應用程式按鈕, 以及如何設定其工具提示。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCRibbonApplicationButton` 類別中使用各種方法。 該示例演示如何將圖像分配給應用程式按鈕,以及如何設置其工具提示。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -62,11 +62,11 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxribbonbar.h。h
+**標題:** afxRibbonBar.h
 
-##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+## <a name="cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFC功能化應用按鈕::CMFC功能化應用按鈕
 
-建立[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)物件的結構並加以初始化。
+建構並初始化[CMFC 功能應用程式按鈕](../../mfc/reference/cmfcribbonapplicationbutton-class.md)物件。
 
 ```
 CMFCRibbonApplicationButton();
@@ -76,36 +76,36 @@ CMFCRibbonApplicationButton(HBITMAP hBmp);
 
 ### <a name="parameters"></a>參數
 
-*uiBmpResID*<br/>
-要在應用程式按鈕上顯示之影像的資源識別碼。
+*烏布佈雷斯ID*<br/>
+要在應用程式按鈕上顯示的圖像的資源 ID。
 
 *hBmp*<br/>
-要在應用程式按鈕上顯示之點陣圖的控制碼。
+要顯示在應用程式按鈕上的點陣圖的句柄。
 
 ### <a name="remarks"></a>備註
 
-[功能區應用程式] 按鈕是位於應用程式視窗左上角的特殊按鈕。 當使用者按一下此按鈕時, 應用程式會開啟一個功能表, 其中通常包含一般檔案命令, 例如**開啟**、**儲存**和結束。
+功能區應用程式按鈕是位於應用程式視窗左上角的特殊按鈕。 當使用者按下此按鈕時,應用程式將開啟一個選單,該選單通常包含常見的**檔案**命令,如**開啟**、**儲存**與**離開**。
 
-##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage
+## <a name="cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFC功能化應用按鈕::設定影像
 
-將影像指派給應用程式按鈕。
+將圖像分配給應用程式按鈕。
 
-```
+```cpp
 void SetImage(UINT uiBmpResID);
 void SetImage(HBITMAP hBmp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*uiBmpResID*<br/>
-在要在應用程式按鈕上顯示之影像的資源識別碼。
+*烏布佈雷斯ID*<br/>
+[在]要在應用程式按鈕上顯示的圖像的資源 ID。
 
 *hBmp*<br/>
-在要在應用程式按鈕上顯示之點陣圖的控制碼。
+[在]要顯示在應用程式按鈕上的點陣圖的句柄。
 
 ### <a name="remarks"></a>備註
 
-您可以使用這個方法, 在建立按鈕之後, 將新的影像指派給 [功能區應用程式] 按鈕。 [應用程式] 按鈕位於應用程式視窗的左上角。
+使用此方法在創建按鈕后將新映射分配給功能區應用程式按鈕。 應用程式按鈕位於應用程式視窗的左上角。
 
 ## <a name="see-also"></a>另請參閱
 

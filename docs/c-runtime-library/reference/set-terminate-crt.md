@@ -1,8 +1,9 @@
 ---
 title: set_terminate (CRT)
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - set_terminate
+- _o_set_terminate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948359"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914527"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -54,7 +56,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="remarks"></a>備註
 
-**Set_terminate**函數會將*termFunction*安裝為**終止**所呼叫的函式。 **set_terminate**會與C++例外狀況處理搭配使用，而且可以在擲回例外狀況之前，在程式中的任何時間點呼叫。 依預設，**終止**呼叫會[中止](abort.md)。 您可以變更此預設值，方法是撰寫自己的終止函式，並使用您的函式名稱做為其引數來呼叫**set_terminate** 。 **terminate**會呼叫指定為**set_terminate**引數的最後一個函式。 執行任何所需的清除工作之後， *termFunction*應該會結束程式。 如果未結束（如果它傳回至其呼叫端），則會呼叫[abort](abort.md) 。
+**Set_terminate**函式會將*termFunction*安裝為**終止**所呼叫的函式。 **set_terminate**會與 c + + 例外狀況處理搭配使用，而且可以在擲回例外狀況之前，在程式中的任何時間點呼叫。 依預設，**終止**呼叫會[中止](abort.md)。 您可以藉由撰寫自己的終止函式，並使用您的函式名稱做為其引數呼叫**set_terminate** ，來變更這個預設值。 **終止**會呼叫指定為引數的最後一個函式來**set_terminate**。 執行任何所需的清除工作之後， *termFunction*應該會結束程式。 如果未結束（如果它傳回至其呼叫端），則會呼叫[abort](abort.md) 。
 
 在多執行緒環境中，會分別維護每個執行緒的終止函式。 每個新執行緒都需要安裝它自己的終止函式。 因此，每個執行緒都會負責它自己的終止處理。
 
@@ -65,9 +67,11 @@ typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> **Set_terminate**函式僅適用于偵錯工具以外。
+> **Set_terminate**函式僅適用于偵錯工具以外的功能。
 
-所有動態連結的 Dll 或 Exe 都有單一的**set_terminate**處理常式;即使您呼叫**set_terminate** ，您的處理常式可能會被另一個取代，或者您可能會取代另一個 DLL 或 EXE 所設定的處理常式。
+所有動態連結的 Dll 或 Exe 都有一個**set_terminate**處理常式;即使您呼叫**set_terminate**您的處理常式可能會被另一個取代，或者您可能會取代另一個 DLL 或 EXE 所設定的處理常式。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -87,5 +91,5 @@ typedef void ( *terminate_function )( );
 [abort](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[終止](terminate-crt.md)<br/>
+[意料](unexpected-crt.md)<br/>

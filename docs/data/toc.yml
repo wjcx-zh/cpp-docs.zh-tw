@@ -1,0 +1,591 @@
+- name: Visual C++ 中的資料存取
+  href: ../data/data-access-in-cpp.md
+- name: 資料存取程式設計 (MFC-ATL)
+  expanded: false
+  items:
+    - name: 資料存取程式設計 (MFC-ATL)
+      href: ../data/data-access-programming-mfc-atl.md
+    - name: 安裝資料庫支援 (MFC-ATL)
+      href: ../data/installing-database-support-mfc-atl.md
+    - name: ATL 資料庫類別 (OLE DB 範本)
+      href: ../data/atl-database-classes-ole-db-templates.md
+    - name: MFC 資料庫類別
+      expanded: false
+      items:
+        - name: MFC 資料庫類別
+          href: ../data/mfc-database-classes-odbc-and-dao.md
+        - name: MFC：使用具有文件和檢視的資料庫類別
+          href: ../data/mfc-using-database-classes-with-documents-and-views.md
+        - name: MFC：使用不具文件和檢視的資料庫類別
+          href: ../data/mfc-using-database-classes-without-documents-and-views.md
+    - name: 資料錄 (MFC 資料存取)
+      href: ../data/record-mfc-data-access.md
+    - name: 結構描述 (MFC 資料存取)
+      href: ../data/schema-mfc-data-access.md
+    - name: 目錄資訊 (MFC 資料存取)
+      href: ../data/catalog-information-mfc-data-access.md
+    - name: 交易 (MFC 資料存取)
+      href: ../data/transactions-mfc-data-access.md
+    - name: 資料錄檢視 (MFC 資料存取)
+      expanded: false
+      items:
+        - name: 資料錄檢視 (MFC 資料存取)
+          href: ../data/record-views-mfc-data-access.md
+        - name: 資料錄檢視類別的功能 (MFC 資料存取)
+          href: ../data/features-of-record-view-classes-mfc-data-access.md
+        - name: 資料錄檢視的資料交換 (MFC 資料存取)
+          href: ../data/data-exchange-for-record-views-mfc-data-access.md
+        - name: 您在使用資料錄檢視上的角色 (MFC 資料存取)
+          href: ../data/your-role-in-working-with-a-record-view-mfc-data-access.md
+        - name: 設計和建立資料錄檢視 (MFC 資料存取)
+          href: ../data/designing-and-creating-a-record-view-mfc-data-access.md
+        - name: 支援資料錄檢視的導覽 (MFC 資料存取)
+          expanded: false
+          items:
+            - name: 支援資料錄檢視的導覽 (MFC 資料存取)
+              href: ../data/supporting-navigation-in-a-record-view-mfc-data-access.md
+            - name: 資料錄捲動的命令處理常式 (MFC 資料存取)
+              href: ../data/command-handlers-for-record-scrolling-mfc-data-access.md
+            - name: 資料錄檢視的使用者介面更新 (MFC 資料存取)
+              href: ../data/user-interface-updating-for-record-views-mfc-data-access.md
+        - name: 使用資料錄檢視 (MFC 資料存取)
+          expanded: false
+          items:
+            - name: 使用資料錄檢視 (MFC 資料存取)
+              href: ../data/using-a-record-view-mfc-data-access.md
+            - name: 應用程式精靈所建立的資料錄檢視程式碼 (MFC 資料存取)
+              href: ../data/record-view-code-created-by-application-wizard-mfc-data-access.md
+            - name: 您可能對預設程式碼所做的變更 (MFC 資料存取)
+              href: ../data/changes-you-might-make-to-the-default-code-mfc-data-access.md
+        - name: 以第二個資料錄集填入清單方塊 (MFC 資料存取)
+          href: ../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md
+- name: OLE DB 程式設計
+  expanded: false
+  items:
+    - name: OLE DB 程式設計
+      href: ../data/oledb/ole-db-programming.md
+    - name: OLE DB 程式設計概觀
+      expanded: false
+      items:
+        - name: OLE DB 程式設計概觀
+          href: ../data/oledb/ole-db-programming-overview.md
+        - name: OLE DB 消費者和提供者
+          href: ../data/oledb/ole-db-consumers-and-providers.md
+        - name: OLE DB 物件模型
+          href: ../data/oledb/ole-db-object-model.md
+        - name: OLE DB 範本、屬性和其他實作
+          href: ../data/oledb/ole-db-templates-attributes-and-other-implementations.md
+        - name: OLE DB 架構設計問題
+          href: ../data/oledb/ole-db-architectural-design-issues.md
+    - name: OLE DB 消費者範本 (C++)
+      expanded: false
+      items:
+        - name: OLE DB 消費者範本 (C++)
+          href: ../data/oledb/ole-db-consumer-templates-cpp.md
+        - name: 資料來源和工作階段
+          href: ../data/oledb/data-sources-and-sessions.md
+        - name: 存取子和資料列集
+          href: ../data/oledb/accessors-and-rowsets.md
+        - name: 命令和資料表
+          href: ../data/oledb/commands-and-tables.md
+        - name: 使用者資料錄
+          href: ../data/oledb/user-records.md
+        - name: 結構描述資料列集
+          href: ../data/oledb/schema-rowsets.md
+        - name: 建立 OLE DB 消費者
+          expanded: false
+          items:
+            - name: 建立 OLE DB 消費者
+              href: ../data/oledb/creating-an-ole-db-consumer.md
+            - name: 使用精靈建立 OLE DB 消費者
+              expanded: false
+              items:
+                - name: 使用精靈建立 OLE DB 消費者
+                  href: ../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md
+                - name: 建立簡單消費者
+                  href: ../data/oledb/creating-a-simple-consumer.md
+                - name: 實作簡單消費者
+                  href: ../data/oledb/implementing-a-simple-consumer.md
+                - name: 消費者精靈產生的類別
+                  href: ../data/oledb/consumer-wizard-generated-classes.md
+                - name: 消費者精靈產生的方法
+                  href: ../data/oledb/consumer-wizard-generated-methods.md
+            - name: 未使用精靈建立消費者
+              href: ../data/oledb/creating-a-consumer-without-using-a-wizard.md
+        - name: 使用 OLE DB 消費者範本
+          expanded: false
+          items:
+            - name: 使用 OLE DB 消費者範本
+              href: ../data/oledb/working-with-ole-db-consumer-templates.md
+            - name: 以資料庫屬性簡化資料存取
+              href: ../data/oledb/simplifying-data-access-with-database-attributes.md
+            - name: 精靈所產生存取子中的欄位狀態資料成員
+              href: ../data/oledb/field-status-data-members-in-wizard-generated-accessors.md
+            - name: 往返簡單資料列集
+              href: ../data/oledb/traversing-a-simple-rowset.md
+            - name: 發出參數型查詢
+              href: ../data/oledb/issuing-a-parameterized-query.md
+            - name: 擷取資料
+              href: ../data/oledb/fetching-data.md
+            - name: 更新資料列集
+              href: ../data/oledb/updating-rowsets.md
+            - name: 使用預存程序
+              expanded: false
+              items:
+                - name: 使用預存程序
+                  href: ../data/oledb/using-stored-procedures.md
+                - name: 定義預存程序
+                  href: ../data/oledb/defining-stored-procedures.md
+                - name: 輸出參數
+                  href: ../data/oledb/output-parameters.md
+                - name: 從一個預存程序使用多個結果集
+                  href: ../data/oledb/using-multiple-result-sets-from-one-stored-procedure.md
+            - name: 使用存取子
+              expanded: false
+              items:
+                - name: 使用存取子
+                  href: ../data/oledb/using-accessors.md
+                - name: 決定使用哪一種存取子
+                  href: ../data/oledb/determining-which-type-of-accessor-to-use.md
+                - name: 在資料列集上使用多個存取子
+                  href: ../data/oledb/using-multiple-accessors-on-a-rowset.md
+                - name: 使用動態存取子
+                  href: ../data/oledb/using-dynamic-accessors.md
+                - name: 覆寫動態存取子
+                  href: ../data/oledb/overriding-a-dynamic-accessor.md
+                - name: 使用手動存取子
+                  href: ../data/oledb/using-manual-accessors.md
+                - name: 存取 XML 資料
+                  href: ../data/oledb/accessing-xml-data.md
+            - name: 使用結構描述資料列集取得中繼資料
+              href: ../data/oledb/obtaining-metadata-with-schema-rowsets.md
+            - name: 支援 OLE DB 中的異動
+              href: ../data/oledb/supporting-transactions-in-ole-db.md
+            - name: 使用 OLE DB 資料錄檢視
+              href: ../data/oledb/using-ole-db-record-views.md
+            - name: 使用現有的 ADO 資料錄集
+              href: ../data/oledb/using-an-existing-ado-recordset.md
+            - name: 在其他資料表包含資料列參考時更新資料行
+              href: ../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md
+            - name: 使用書籤
+              href: ../data/oledb/using-bookmarks.md
+            - name: 擷取 BLOB
+              href: ../data/oledb/retrieving-a-blob.md
+            - name: 接收通知
+              href: ../data/oledb/receiving-notifications.md
+    - name: OLE DB 提供者範本 (C++)
+      expanded: false
+      items:
+        - name: OLE DB 提供者範本 (C++)
+          href: ../data/oledb/ole-db-provider-templates-cpp.md
+        - name: OLE DB 提供者範本架構
+          expanded: false
+          items:
+            - name: OLE DB 提供者範本架構
+              href: ../data/oledb/ole-db-provider-template-architecture.md
+            - name: 資料來源物件介面
+              href: ../data/oledb/data-source-object-interfaces.md
+            - name: 工作階段物件介面
+              href: ../data/oledb/session-object-interfaces.md
+            - name: 資料列集物件介面
+              href: ../data/oledb/rowset-object-interfaces.md
+            - name: 命令物件介面
+              href: ../data/oledb/command-object-interfaces.md
+            - name: 異動物件介面
+              href: ../data/oledb/transaction-object-interfaces.md
+            - name: 屬性對應
+              href: ../data/oledb/property-maps.md
+            - name: 使用者資料錄
+              href: ../data/oledb/user-record.md
+        - name: 建立 OLE DB 提供者
+          expanded: false
+          items:
+            - name: 建立 OLE DB 提供者
+              href: ../data/oledb/creating-an-ole-db-provider.md
+            - name: 為提供者建立專案
+              href: ../data/oledb/creating-a-project-for-the-provider.md
+            - name: 建立提供者
+              href: ../data/oledb/creating-the-provider.md
+            - name: 提供者精靈產生的檔案
+              expanded: false
+              items:
+                - name: 提供者精靈產生的檔案
+                  href: ../data/oledb/provider-wizard-generated-files.md
+                - name: CCustomSource (CustomDS.H)
+                  href: ../data/oledb/cmyprovidersource-myproviderds-h.md
+                - name: CCustomSession (CustomSess.H)
+                  href: ../data/oledb/cmyprovidersession-myprovidersess-h.md
+                - name: CCustomCommand (CustomRS.H)
+                  href: ../data/oledb/cmyprovidercommand-myproviderrs-h.md
+                - name: CCustomRowset (CustomRS.H)
+                  href: ../data/oledb/cmyproviderrowset-myproviderrs-h.md
+                - name: CCustomWindowsFile
+                  href: ../data/oledb/cmyproviderwindowsfile.md
+            - name: 建立簡單唯讀提供者
+              expanded: false
+              items:
+                - name: 建立簡單唯讀提供者
+                  href: ../data/oledb/creating-a-simple-read-only-provider.md
+                - name: 實作簡單唯讀提供者
+                  href: ../data/oledb/implementing-the-simple-read-only-provider.md
+                - name: 將字串儲存於 OLE DB 提供者內
+                  href: ../data/oledb/storing-strings-in-the-ole-db-provider.md
+                - name: 將字串讀入 OLE DB 提供者內
+                  href: ../data/oledb/reading-strings-into-the-ole-db-provider.md
+                - name: 增強簡單唯讀提供者
+                  href: ../data/oledb/enhancing-the-simple-read-only-provider.md
+                - name: 修改 RCustomRowset 的繼承
+                  href: ../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md
+                - name: 動態決定傳回給消費者的資料行
+                  href: ../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md
+                - name: 測試唯讀提供者
+                  href: ../data/oledb/testing-the-read-only-provider.md
+            - name: 建立可更新的提供者
+              href: ../data/oledb/creating-an-updatable-provider.md
+        - name: 使用 OLE DB 提供者範本
+          expanded: false
+          items:
+            - name: 使用 OLE DB 提供者範本
+              href: ../data/oledb/working-with-ole-db-provider-templates.md
+            - name: 將介面新增至提供者
+              href: ../data/oledb/adding-an-interface-to-your-provider.md
+            - name: 在提供者內參考屬性
+              href: ../data/oledb/referencing-a-property-in-your-provider.md
+            - name: 在提供者內設定屬性
+              href: ../data/oledb/setting-properties-in-your-provider.md
+            - name: 在提供者內動態繫結資料行
+              href: ../data/oledb/dynamically-binding-columns-in-your-provider.md
+            - name: 在提供者內支援無限制執行緒
+              href: ../data/oledb/supporting-free-threading-in-your-provider.md
+            - name: 測試提供者
+              href: ../data/oledb/testing-your-provider.md
+            - name: 對提供者進行偵錯
+              href: ../data/oledb/debugging-your-provider.md
+            - name: 轉換提供者不支援的資料
+              href: ../data/oledb/converting-data-not-supported-by-the-provider.md
+        - name: 進階的提供者技術
+          expanded: false
+          items:
+            - name: 進階的提供者技術
+              href: ../data/oledb/advanced-provider-techniques.md
+            - name: 支援通知
+              href: ../data/oledb/supporting-notifications.md
+            - name: 支援結構描述資料列集
+              href: ../data/oledb/supporting-schema-rowsets.md
+            - name: 提供者書籤支援
+              href: ../data/oledb/provider-support-for-bookmarks.md
+            - name: 通過 OLE DB 一致性測試
+              href: ../data/oledb/passing-ole-db-conformance-tests.md
+            - name: OLE DB 資源共用和服務
+              expanded: false
+              items:
+                - name: OLE DB 資源共用和服務
+                  href: ../data/oledb/ole-db-resource-pooling-and-services.md
+                - name: OLE DB 應用程式的資源共用
+                  href: ../data/oledb/resource-pooling-in-your-ole-db-application.md
+                - name: 啟用和停用 OLE DB 服務
+                  expanded: false
+                  items:
+                    - name: 啟用和停用 OLE DB 服務
+                      href: ../data/oledb/enabling-and-disabling-ole-db-services.md
+                    - name: 啟用和停用提供者的服務
+                      href: ../data/oledb/enabling-and-disabling-services-for-a-provider.md
+                    - name: 覆寫提供者服務預設值
+                      href: ../data/oledb/overriding-provider-service-defaults.md
+- name: OLE DB 範本
+  expanded: false
+  items:
+    - name: OLE DB 範本概觀
+      href: ../data/oledb/ole-db-templates.md
+    - name: OLE DB 消費者範本參考概觀
+      href: ../data/oledb/ole-db-consumer-templates-reference.md
+    - name: OLE DB 消費者範本參考
+      expanded: false
+      items:
+        - name: CAccessor 類別
+          href: ../data/oledb/caccessor-class.md
+        - name: CAccessorBase 類別
+          href: ../data/oledb/caccessorbase-class.md
+        - name: CAccessorRowset 類別
+          href: ../data/oledb/caccessorrowset-class.md
+        - name: CArrayRowset 類別
+          href: ../data/oledb/carrayrowset-class.md
+        - name: CBookmark 類別
+          href: ../data/oledb/cbookmark-class.md
+        - name: CBulkRowset 類別
+          href: ../data/oledb/cbulkrowset-class.md
+        - name: CColumnAccessor 類別
+          href: ../data/oledb/ccolumnaccessor-class.md
+        - name: CCommand 類別
+          href: ../data/oledb/ccommand-class.md
+        - name: CDataConnection 類別
+          href: ../data/oledb/cdataconnection-class.md
+        - name: CDataSource 類別
+          href: ../data/oledb/cdatasource-class.md
+        - name: CDBErrorInfo 類別
+          href: ../data/oledb/cdberrorinfo-class.md
+        - name: CDBPropIDSet 類別
+          href: ../data/oledb/cdbpropidset-class.md
+        - name: CDBPropSet 類別
+          href: ../data/oledb/cdbpropset-class.md
+        - name: CDynamicAccessor 類別
+          href: ../data/oledb/cdynamicaccessor-class.md
+        - name: CDynamicParameterAccessor 類別
+          href: ../data/oledb/cdynamicparameteraccessor-class.md
+        - name: CDynamicStringAccessor 類別
+          href: ../data/oledb/cdynamicstringaccessor-class.md
+        - name: CDynamicStringAccessorA 類別
+          href: ../data/oledb/cdynamicstringaccessora-class.md
+        - name: CDynamicStringAccessorW 類別
+          href: ../data/oledb/cdynamicstringaccessorw-class.md
+        - name: CEnumerator 類別
+          href: ../data/oledb/cenumerator-class.md
+        - name: CEnumeratorAccessor 類別
+          href: ../data/oledb/cenumeratoraccessor-class.md
+        - name: CManualAccessor 類別
+          href: ../data/oledb/cmanualaccessor-class.md
+        - name: CMultipleResults 類別
+          href: ../data/oledb/cmultipleresults-class.md
+        - name: CNoAccessor 類別
+          href: ../data/oledb/cnoaccessor-class.md
+        - name: CNoMultipleResults 類別
+          href: ../data/oledb/cnomultipleresults-class.md
+        - name: CNoRowset 類別
+          href: ../data/oledb/cnorowset-class.md
+        - name: CRestrictions 類別
+          href: ../data/oledb/crestrictions-class.md
+        - name: CRowset 類別
+          href: ../data/oledb/crowset-class.md
+        - name: CSession 類別
+          href: ../data/oledb/csession-class.md
+        - name: CStreamRowset 類別
+          href: ../data/oledb/cstreamrowset-class.md
+        - name: CTable 類別
+          href: ../data/oledb/ctable-class.md
+        - name: CXMLAccessor 類別
+          href: ../data/oledb/cxmlaccessor-class.md
+        - name: IRowsetNotifyImpl 類別
+          href: ../data/oledb/irowsetnotifyimpl-class.md
+        - name: 結構描述資料列集類別和 typedef 類別
+          href: ../data/oledb/schema-rowset-classes-and-typedef-classes.md
+        - name: OLE DB 消費者範本的巨集和全域函式
+          href: ../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md
+    - name: OLE DB 提供者範本參考概觀
+      href: ../data/oledb/ole-db-provider-templates-reference.md
+    - name: OLE DB 提供者範本參考
+      expanded: false
+      items:
+        - name: CRowsetImpl 類別
+          href: ../data/oledb/crowsetimpl-class.md
+        - name: CSimpleRow 類別
+          href: ../data/oledb/csimplerow-class.md
+        - name: CUtlProps 類別
+          href: ../data/oledb/cutlprops-class.md
+        - name: IAccessorImpl 類別
+          href: ../data/oledb/iaccessorimpl-class.md
+        - name: IColumnsInfoImpl 類別
+          href: ../data/oledb/icolumnsinfoimpl-class.md
+        - name: ICommandImpl 類別
+          href: ../data/oledb/icommandimpl-class.md
+        - name: ICommandPropertiesImpl 類別
+          href: ../data/oledb/icommandpropertiesimpl-class.md
+        - name: ICommandTextImpl 類別
+          href: ../data/oledb/icommandtextimpl-class.md
+        - name: IConvertTypeImpl 類別
+          href: ../data/oledb/iconverttypeimpl-class.md
+        - name: IDBCreateCommandImpl 類別
+          href: ../data/oledb/idbcreatecommandimpl-class.md
+        - name: IDBCreateSessionImpl 類別
+          href: ../data/oledb/idbcreatesessionimpl-class.md
+        - name: IDBInitializeImpl 類別
+          href: ../data/oledb/idbinitializeimpl-class.md
+        - name: IDBPropertiesImpl 類別
+          href: ../data/oledb/idbpropertiesimpl-class.md
+        - name: IDBSchemaRowsetImpl 類別
+          href: ../data/oledb/idbschemarowsetimpl-class.md
+        - name: IErrorRecordsImpl 類別
+          href: ../data/oledb/ierrorrecordsimpl-class.md
+        - name: IGetDataSourceImpl 類別
+          href: ../data/oledb/igetdatasourceimpl-class.md
+        - name: IOpenRowsetImpl 類別
+          href: ../data/oledb/iopenrowsetimpl-class.md
+        - name: IRowsetChangeImpl 類別
+          href: ../data/oledb/irowsetchangeimpl-class.md
+        - name: IRowsetCreatorImpl 類別
+          href: ../data/oledb/irowsetcreatorimpl-class.md
+        - name: IRowsetIdentityImpl 類別
+          href: ../data/oledb/irowsetidentityimpl-class.md
+        - name: IRowsetImpl 類別
+          href: ../data/oledb/irowsetimpl-class.md
+        - name: IRowsetInfoImpl 類別
+          href: ../data/oledb/irowsetinfoimpl-class.md
+        - name: IRowsetLocateImpl 類別
+          href: ../data/oledb/irowsetlocateimpl-class.md
+        - name: IRowsetNotifyCP 類別
+          href: ../data/oledb/irowsetnotifycp-class.md
+        - name: IRowsetUpdateImpl 類別
+          href: ../data/oledb/irowsetupdateimpl-class.md
+        - name: ISessionPropertiesImpl 類別
+          href: ../data/oledb/isessionpropertiesimpl-class.md
+        - name: OLE DB 提供者範本的巨集
+          href: ../data/oledb/macros-for-ole-db-provider-templates.md
+- name: 開放式資料庫連接 (ODBC)
+  expanded: false
+  items:
+    - name: 開放式資料庫連接 (ODBC)
+      href: ../data/odbc/open-database-connectivity-odbc.md
+    - name: 安裝和開始使用 ODBC
+      href: ../data/odbc/installing-and-getting-started-with-odbc.md
+    - name: 設計和建立 ODBC 資料庫應用程式
+      href: ../data/odbc/design-and-create-an-odbc-database-application.md
+    - name: 使用 ODBC 的資料庫表單 (資料錄檢視)
+      href: ../data/odbc/use-database-forms-record-views-with-odbc.md
+    - name: 與其他使用者共同使用 ODBC
+      href: ../data/odbc/use-odbc-to-work-with-other-users.md
+    - name: 使用 ODBC 資料庫連接
+      href: ../data/odbc/work-with-odbc-database-connections.md
+    - name: 使用 ODBC 和驅動程式
+      href: ../data/odbc/work-with-odbc-and-drivers.md
+    - name: 使用 ODBC 資料指標程式庫
+      href: ../data/odbc/use-the-odbc-cursor-library.md
+    - name: 使用 MFC ODBC 資料錄集
+      href: ../data/odbc/use-mfc-odbc-recordsets.md
+    - name: ODBC 的基本概念
+      expanded: false
+      items:
+        - name: ODBC 的基本概念
+          href: ../data/odbc/odbc-basics.md
+        - name: ODBC 和資料庫類別
+          href: ../data/odbc/odbc-and-the-database-classes.md
+        - name: 動態集的 ODBC 驅動程式需求
+          href: ../data/odbc/odbc-driver-requirements-for-dynasets.md
+        - name: 轉散發 ODBC 元件給您的客戶
+          href: ../data/odbc/redistributing-odbc-components-to-your-customers.md
+        - name: ODBC：ODBC 資料指標程式庫
+          href: ../data/odbc/odbc-the-odbc-cursor-library.md
+        - name: ODBC：設定 ODBC 資料來源
+          href: ../data/odbc/odbc-configuring-an-odbc-data-source.md
+        - name: ODBC：直接呼叫 ODBC API 函式
+          href: ../data/odbc/odbc-calling-odbc-api-functions-directly.md
+    - name: ODBC 和 MFC
+      expanded: false
+      items:
+        - name: ODBC 和 MFC
+          href: ../data/odbc/odbc-and-mfc.md
+        - name: 連線至資料來源
+          href: ../data/odbc/connecting-to-a-data-source.md
+        - name: 選取和操作資料錄
+          href: ../data/odbc/selecting-and-manipulating-records.md
+        - name: 顯示和操作表單中的資料
+          href: ../data/odbc/displaying-and-manipulating-data-in-a-form.md
+        - name: 使用文件和檢視
+          href: ../data/odbc/working-with-documents-and-views.md
+        - name: 存取 ODBC 和 SQL
+          href: ../data/odbc/access-to-odbc-and-sql.md
+        - name: 深入了解 MFC ODBC 類別
+          href: ../data/odbc/further-reading-about-the-mfc-odbc-classes.md
+    - name: ODBC 類別和執行緒
+      href: ../data/odbc/odbc-classes-and-threads.md
+    - name: ODBC 管理員
+      href: ../data/odbc/odbc-administrator.md
+    - name: ODBC 驅動程式清單
+      href: ../data/odbc/odbc-driver-list.md
+    - name: 資料來源 (ODBC)
+      expanded: false
+      items:
+        - name: 資料來源 (ODBC)
+          href: ../data/odbc/data-source-odbc.md
+        - name: 資料來源：管理連線 (ODBC)
+          href: ../data/odbc/data-source-managing-connections-odbc.md
+        - name: 資料來源：決定資料來源的結構描述 (ODBC)
+          href: ../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md
+        - name: 資料來源：以程式設計方式設定 ODBC 資料來源
+          href: ../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md
+        - name: 資料來源：以程式設計方式在 ODBC 資料來源中建立資料表
+          href: ../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md
+    - name: 動態集
+      href: ../data/odbc/dynaset.md
+    - name: 快照集
+      href: ../data/odbc/snapshot.md
+    - name: 資料錄欄位交換 (RFX)
+      expanded: false
+      items:
+        - name: 資料錄欄位交換 (RFX)
+          href: ../data/odbc/record-field-exchange-rfx.md
+        - name: 資料錄欄位交換：使用 RFX
+          href: ../data/odbc/record-field-exchange-using-rfx.md
+        - name: 資料錄欄位交換：使用精靈程式碼
+          href: ../data/odbc/record-field-exchange-working-with-the-wizard-code.md
+        - name: 資料錄欄位交換：使用 RFX 函式
+          href: ../data/odbc/record-field-exchange-using-the-rfx-functions.md
+        - name: 資料錄欄位交換：RFX 的運作方式
+          href: ../data/odbc/record-field-exchange-how-rfx-works.md
+    - name: 資料錄集 (ODBC)
+      expanded: false
+      items:
+        - name: 資料錄集 (ODBC)
+          href: ../data/odbc/recordset-odbc.md
+        - name: 資料錄集：架構 (ODBC)
+          href: ../data/odbc/recordset-architecture-odbc.md
+        - name: 資料錄集：宣告資料表的類別 (ODBC)
+          href: ../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md
+        - name: 資料錄集：建立和關閉資料錄集 (ODBC)
+          href: ../data/odbc/recordset-creating-and-closing-recordsets-odbc.md
+        - name: 資料錄集：捲動 (ODBC)
+          href: ../data/odbc/recordset-scrolling-odbc.md
+        - name: 資料錄集：書籤和絕對位置 (ODBC)
+          href: ../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md
+        - name: 資料錄集：篩選資料錄 (ODBC)
+          href: ../data/odbc/recordset-filtering-records-odbc.md
+        - name: 資料錄集：排序資料錄 (ODBC)
+          href: ../data/odbc/recordset-sorting-records-odbc.md
+        - name: 資料錄集：將資料錄集參數化 (ODBC)
+          href: ../data/odbc/recordset-parameterizing-a-recordset-odbc.md
+        - name: 資料錄集：新增、更新和刪除資料錄 (ODBC)
+          href: ../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md
+        - name: 資料錄集：新增大量資料錄 (ODBC)
+          href: ../data/odbc/recordset-adding-records-in-bulk-odbc.md
+        - name: 資料錄集：鎖定資料錄 (ODBC)
+          href: ../data/odbc/recordset-locking-records-odbc.md
+        - name: 資料錄集：執行聯結 (ODBC)
+          href: ../data/odbc/recordset-performing-a-join-odbc.md
+        - name: 資料錄集：宣告預先定義查詢的類別 (ODBC)
+          href: ../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md
+        - name: 資料錄集：重新查詢資料錄集 (ODBC)
+          href: ../data/odbc/recordset-requerying-a-recordset-odbc.md
+        - name: 資料錄集：動態繫結資料行 (ODBC)
+          href: ../data/odbc/recordset-dynamically-binding-data-columns-odbc.md
+        - name: 資料錄集：大量擷取資料錄 (ODBC)
+          href: ../data/odbc/recordset-fetching-records-in-bulk-odbc.md
+        - name: 資料錄集：使用大型的資料項目 (ODBC)
+          href: ../data/odbc/recordset-working-with-large-data-items-odbc.md
+        - name: 資料錄集：取得 SUM 和其他彙總結果 (ODBC)
+          href: ../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md
+        - name: 資料錄集：資料錄集選取資料錄的方式 (ODBC)
+          href: ../data/odbc/recordset-how-recordsets-select-records-odbc.md
+        - name: 資料錄集：資料錄集更新資料錄的方式 (ODBC)
+          href: ../data/odbc/recordset-how-recordsets-update-records-odbc.md
+        - name: 資料錄集：AddNew、Edit 和 Delete 的運作方式 (ODBC)
+          href: ../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md
+        - name: 資料錄集：更多有關更新的詳細資訊 (ODBC)
+          href: ../data/odbc/recordset-more-about-updates-odbc.md
+    - name: ODBC 中的 SQL
+      expanded: false
+      items:
+        - name: ODBC 中的 SQL
+          href: ../data/odbc/sql.md
+        - name: SQL：自訂資料錄集的 SQL 陳述式 (ODBC)
+          href: ../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md
+        - name: SQL：SQL 和 C++ 資料類型 (ODBC)
+          href: ../data/odbc/sql-sql-and-cpp-data-types-odbc.md
+        - name: SQL：進行直接的 SQL 呼叫 (ODBC)
+          href: ../data/odbc/sql-making-direct-sql-calls-odbc.md
+    - name: 異動 (ODBC)
+      expanded: false
+      items:
+        - name: 異動 (ODBC)
+          href: ../data/odbc/transaction-odbc.md
+        - name: 異動：在一個資料錄集內執行異動 (ODBC)
+          href: ../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md
+        - name: 異動：異動如何影響更新 (ODBC)
+          href: ../data/odbc/transaction-how-transactions-affect-updates-odbc.md

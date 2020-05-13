@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets:背景
+title: Windows Sockets：背景
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record-oriented data [MFC]
@@ -18,86 +18,86 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c4a6dc6740660d1097785578cdac355983cad18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217874"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360120"
 ---
-# <a name="windows-sockets-background"></a>Windows Sockets:背景
+# <a name="windows-sockets-background"></a>Windows Sockets：背景
 
-這篇文章說明的性質與用途的 Windows 通訊端。 本文也：
+本文介紹了 Windows 套接字的性質和用途。 本文還:
 
-- [定義詞彙 「 通訊端"](#_core_definition_of_a_socket)。
+- [定義術語"套接字"。](#_core_definition_of_a_socket)
 
-- [描述通訊端控制代碼的資料型別](#_core_the_socket_data_type)。
+- [描述 SOCKET 片態的資料型態](#_core_the_socket_data_type)。
 
-- [描述使用的通訊端](#_core_uses_for_sockets)。
+- [描述 socket 的用數](#_core_uses_for_sockets)。
 
-Windows Sockets 規格會定義 Microsoft Windows 的二進位相容網路程式設計介面。 Windows 通訊端會根據 UNIX 通訊端中實作 Berkeley Software Distribution (BSD 發行 4.3) 從加利福尼亞大學柏克萊在。 此規格包含 BSD 樣式通訊端常式和 Windows 的特定延伸模組。 使用 Windows 通訊端，可讓您能夠透過 Windows Sockets API 符合任何網路通訊的應用程式。 在 Win32，Windows Sockets 提供執行緒安全。
+Windows 套接字規範為 Microsoft Windows 定義了二進位兼容的網路程式設計介面。 Windows 套接字基於加州大學伯克利分校的「伯克利軟體分發」(BSD,版本 4.3)中的 UNIX 套接字實現。 該規格包括 BSD 樣式的套接字例程和特定於 Windows 的擴展。 使用 Windows 套接字允許應用程式跨任何符合 Windows 套接字 API 的網路進行通信。 在 Win32 上,Windows 插槽提供線程安全性。
 
-許多網路軟體廠商在包括傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)，Xerox 網路系統 (XNS) Digital Equipment Corporation 的 DECNet 通訊協定，Novell Corporation 網際網路的網路通訊協定支援 Windows 通訊端封包交換/循序封包交換 (IPX/SPX)，以及其他。 雖然存在的 Windows Sockets 規格定義 TCP/IP 通訊端抽象概念，任何網路通訊協定也會遵守 Windows 通訊端提供自己的版本會實作 Windows 通訊端的動態連結程式庫 (DLL)。 以 Windows 通訊端的商業應用程式的範例包括 X Windows 伺服器、 終端機模擬器，以及電子郵件系統。
+許多網路軟體供應商根據網路協定支援 Windows 套接字,包括傳輸控制協定/互聯網協定 (TCP/IP)、Xerox 網路系統 (XNS)、數位設備公司的 DECNet 協定、Novell 公司的互聯網數據包交換/序列打包交換 (IPX/SPX) 等。 儘管當前 Windows 套接字規範定義了 TCP/IP 的套接字抽象,但任何網路協定都可以通過提供實現 Windows 套接字的動態連結庫 (DLL) 自己的版本來符合 Windows 套接字。 使用 Windows 套接字編寫的商業應用程式的範例包括 X Windows 伺服器、終端模擬器和電子郵件系統。
 
 > [!NOTE]
->  Windows 通訊端的目的是抽離基礎網路，讓您不一定要了解該網路，因此您的應用程式可以在任何支援通訊端的網路上執行。 因此，這份文件不討論網路通訊協定的詳細的資料。
+> Windows 套接字的目的是抽象化基礎網路,這樣您就不必瞭解該網路,因此應用程式可以在支援套接字的任何網路上運行。 因此,本文檔不討論網路協定的詳細資訊。
 
-Microsoft Foundation Class 程式庫 (MFC) 提供兩個類別，以支援使用 Windows Sockets API 進行程式設計。 其中一個類別， `CSocket`，提供高層級的抽象概念，來簡化您的網路通訊程式設計。
+Microsoft 基礎類庫 (MFC) 通過提供兩個類支援使用 Windows 套接字 API 進行程式設計。 其中一個類`CSocket`提供了高級抽象,以簡化網路通信程式設計。
 
-Windows Sockets 規格後，Windows Sockets:網路運算下 Microsoft Windows，現在是在版本 1.1 中，開啟介面由個人及公司 TCP/IP 社群的一大群開發為一種開放式網路標準，而且可供使用免費。 通訊端目前程式模型支援一個 「 通訊網域 」，並透過網際網路通訊協定套件。 使用 Windows SDK 中的規格。
+Windows 套接字規範"Windows 套接字:微軟 Windows 下網路計算的開放介面"現已推出 1.1 版,由 TCP/IP 社區中的一大群個人和公司開發為開放網路標準,可免費使用。 套接字程式設計模型目前支援一個「通信域」,使用 Internet 協定套件。 該規範在 Windows SDK 中可用。
 
 > [!TIP]
->  通訊端會使用網際網路通訊協定套件，因為它們是慣用的路由支援 「 information highway。 」 的網際網路通訊的應用程式
+> 由於套接字使用 Internet 協定套件,因此它們是支援「資訊高速公路」上 Internet 通信的應用程式的首選路由。
 
-##  <a name="_core_definition_of_a_socket"></a> 通訊端的定義
+## <a name="definition-of-a-socket"></a><a name="_core_definition_of_a_socket"></a>Socket 定義
 
-通訊端是通訊的端點，透過 Windows Sockets 應用程式傳送或接收資料封包在網路上的物件。 通訊端類型，且執行中處理序，與相關聯，它可能會有名稱。 目前，通訊端通常會交換只能與相同 「 通訊網域中，「 使用網際網路通訊協定套件的其他通訊端的資料。
+套接字是通訊終結點, Windows 套接字應用程式透過網路發送或接收資料包的物件。 套接字具有類型,並且與正在運行的進程相關聯,並且可能具有名稱。 目前,套接字通常僅與同一"通信域"中的其他套接字交換數據,後者使用 Internet 協定套件。
 
-這兩種通訊端是雙向;它們是以同時告知兩個方向的資料流 （全雙工）。
+這兩種套接字都是雙向的;它們是可同時雙向通信的數據流(全雙工)。
 
-兩個通訊端類型可用：
+有兩種套接字型態可用:
 
-- Stream 通訊端
+- 資料流通訊端
 
-   Stream 通訊端提供不含記錄界限的資料流程： 位元組資料流。 資料流可保證傳遞和正確排序且不會重複。
+   流套接字提供沒有記錄邊界的數據流:位元組流。 保證流被傳遞,並正確排序和未重複。
 
 - 資料包通訊端
 
-   資料包通訊端支援記錄導向資料流不保證傳遞，且可能不會依傳送，或不重複。
+   Datagram 套接字支援不保證傳遞的面向記錄的數據流,並且可能無法按已發送或未重複的順序排序。
 
-「 循序 」 表示封包，傳遞傳送的順序。 「 不重複 」 表示一次取得一個特定封包。
+「排序」表示數據包按發送的順序傳遞。 "未重複"表示您只能獲取一次特定數據包。
 
 > [!NOTE]
->  在某些網路通訊協定，例如 XNS，資料流可以是導向，為資料流的記錄，而不是為位元組資料流的記錄。 不過，較常見的 TCP/IP 通訊協定，在資料流是位元組資料流。 Windows Sockets 提供一個基礎通訊協定無關的抽象層。
+> 在某些網路協定(如 XNS )可以面向記錄,作為記錄流而不是位元組流。 但是,在更常見的 TCP / IP 協定是位元組流。 Windows 套接字提供獨立於基礎協定的抽象級別。
 
-如需這些類型的詳細資訊，以及哪種通訊端在哪些情況下使用，請參閱[Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)和[Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)。
+有關這些類型的以及要在哪些情況下使用哪種套接字的資訊,請參閱[Windows 套接字:串流套接字](../mfc/windows-sockets-stream-sockets.md)和[Windows 通訊排接字:Datagram 通訊通訊 。](../mfc/windows-sockets-datagram-sockets.md)
 
-##  <a name="_core_the_socket_data_type"></a> 通訊端的資料類型
+## <a name="the-socket-data-type"></a><a name="_core_the_socket_data_type"></a>SOCKET 資料類型
 
-每個 MFC 通訊端物件會封裝 Windows 通訊端物件的控制代碼。 這個控制代碼的資料類型是**通訊端**。 A**通訊端**控制代碼是類似於`HWND`視窗。 MFC 通訊端類別會提供封裝的控制代碼上的作業。
+每個 MFC 套接字物件都封裝到 Windows 套接字物件的句柄。 這個句柄的資料型態是**SOCKET**。 **SOCKET**句柄類似於視窗的`HWND`。 MFC 套接字類提供對封裝句柄的操作。
 
-**通訊端**Windows SDK 中的詳細說明資料類型。 在 Windows 通訊端，請參閱 「 通訊端的資料類型和錯誤值 」。
+在 Windows SDK 中詳細介紹了**SOCKET**數據類型。 請參閱 Windows 套接字下的「套接字數據類型和錯誤值」。
 
-##  <a name="_core_uses_for_sockets"></a> 使用的通訊端
+## <a name="uses-for-sockets"></a><a name="_core_uses_for_sockets"></a>用於通訊端
 
-通訊端會在至少三個通訊內容中非常有用：
+套接字至少在三個通信上下文中非常有用:
 
 - 用戶端/伺服器模型。
 
-- 端對端案例，例如傳訊應用程式。
+- 對等方案,如消息傳遞應用程式。
 
-- 讓接收解譯訊息做為函式呼叫的應用程式進行遠端程序呼叫 (RPC)。
+- 通過讓接收應用程式將消息解釋為函數調用來進行遠端過程調用 (RPC)。
 
 > [!TIP]
->  使用 MFC 通訊端的理想案例是當您撰寫的通訊兩端： 在兩端使用 MFC。 如需有關本主題中，包括如何管理案例，您要與非 MFC 應用程式通訊時，請參閱[Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)。
+> 使用 MFC 套接字的理想情況是,當您寫入通信的兩端時:在兩端使用 MFC。 有關本主題的詳細資訊(包括如何在與非 MFC 應用程式通訊時如何管理案例),請參閱[Windows 套接字:位元組排序](../mfc/windows-sockets-byte-ordering.md)。
 
-如需詳細資訊，請參閱 Windows Sockets 規格： **ntohs**， **ntohl**， **htons**， **htonl**。 此外，請參閱下列主題：
+有關詳細資訊,請參閱 Windows 套接字規範:ntohs、ntohl、Htons、htonl 。 **ntohs** **ntohl** **htons** **htonl** 此外,請參閱以下主題:
 
-- [Windows Socket：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Socket：使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets：使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Socket：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>另請參閱
 

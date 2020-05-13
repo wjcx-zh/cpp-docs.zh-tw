@@ -16,48 +16,50 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-ms.openlocfilehash: d33fe6bceae09267fd3f79ffe3dc26864e87c764
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3daf5dd5f9912194fd5d8aaeb4c7a312be142b69
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320353"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825337"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1、/O2 (最小大小、最快速度)
 
-選取一組預先定義會影響大小的選項和產生的程式碼的速度。
+選取一組預先定義的選項，其會影響所產生程式碼的大小和速度。
 
 ## <a name="syntax"></a>語法
 
-> /O1 /O2
+> O1
+> /O2
 
 ## <a name="remarks"></a>備註
 
-**/O1**並 **/o2**編譯器選項會設定幾個特定的最佳化選項一次的快速方法。 **/O1**選項會設定個別的最佳化選項，在大部分的情況下建立最小的程式碼。 **/O2**選項會設定在大部分的情況下建立最快的程式碼的選項。 **/O2**選項是發行組建的預設值。 下表顯示特定選項所設定的 **/o1**並 **/o2**:
+**/O1**和 **/O2**編譯器選項是一次設定數個特定優化選項的快速方式。 **/O1**選項會設定個別的優化選項，以在大部分案例中建立最小的程式碼。 **/O2**選項會設定在大部分案例中建立最快速程式碼的選項。 [發行組建] 的預設值為 [ **/O2** ] 選項。 下表顯示 **/O1**和 **/O2**所設定的特定選項：
 
 |選項|相當於|
 |------------|-------------------|
-|**/ O1** （最小大小）|[/Og](og-global-optimizations.md) [/Os](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md) [/Gy](gy-enable-function-level-linking.md)|
-|**/ O2** （最快速度）|[/Og](og-global-optimizations.md) [/Oi](oi-generate-intrinsic-functions.md) [/Ot](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md) [/Gy](gy-enable-function-level-linking.md)|
+|**/O1** （最小大小）|[/Og](og-global-optimizations.md) [/Os](os-ot-favor-small-code-favor-fast-code.md) [/oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/gf](gf-eliminate-duplicate-strings.md) [/gy](gy-enable-function-level-linking.md)|
+|**/O2** （最大化速度）|[/Og](og-global-optimizations.md) [/Oi](oi-generate-intrinsic-functions.md) [/ot](os-ot-favor-small-code-favor-fast-code.md) [/oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/gf](gf-eliminate-duplicate-strings.md) [/gy](gy-enable-function-level-linking.md)|
 
-**/ O1**並 **/o2**互斥。
+**/O1**和 **/O2**是互斥的。
 
 > [!NOTE]
-> **x86 特定**這些選項會隱含使用框架指標省略 ([/Oy](oy-frame-pointer-omission.md)) 選項。
+> **x86 特定**\
+> 這些選項表示使用框架指標省略（[/oy](oy-frame-pointer-omission.md)）選項。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 底下**組態屬性**，開啟**C /C++**  ，然後選擇 [**最佳化**] 屬性頁。
+1. 在 [設定**屬性**] 下，開啟 [ **C/c + +** ]，然後選擇 [**優化**] 屬性頁。
 
-1. 修改**最佳化**屬性。
+1. 修改**優化**屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>＞。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [/O 選項 (最佳化程式碼)](o-options-optimize-code.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>

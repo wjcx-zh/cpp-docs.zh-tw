@@ -13,9 +13,9 @@ ms.locfileid: "74163439"
 
 檔集的這一節包含如何使用 MSVC build tools 以 ARM 硬體為目標的相關資訊。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
-[ARM ABI 慣例\ 的總覽](overview-of-arm-abi-conventions.md)
+[ARM ABI 慣例總覽](overview-of-arm-abi-conventions.md)\
 描述由 Windows on ARM 用於暫存器使用方式的應用程式二進位介面，呼叫慣例和例外狀況處理。
 
 [ARM64 ABI 慣例的總覽](arm64-windows-abi-conventions.md)\

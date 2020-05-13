@@ -17,7 +17,7 @@ ms.locfileid: "62273413"
 ---
 # <a name="importing-using-def-files"></a>使用 .DEF 檔匯入
 
-如果您選擇使用 **__declspec （dllimport)** .def 檔，以及您應該變更.def 檔，使用常數取代的資料來降低，正確撰寫程式碼將會導致問題的可能性：
+如果您選擇使用 **__declspec （dllimport）** 搭配 .def 檔案，您應該變更 .def 檔案以使用資料來取代常數，以降低不正確編碼的機率會造成問題的可能性：
 
 ```
 // project.def
@@ -28,14 +28,14 @@ EXPORTS
 
 下表顯示原因。
 
-|關鍵字|發出在匯入程式庫|匯出|
+|關鍵字|在匯入程式庫中發出|多餘|
 |-------------|---------------------------------|-------------|
-|`CONSTANT`|`_imp_ulDataInDll`、 `_ulDataInDll`|`_ulDataInDll`|
+|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-使用 **__declspec （dllimport)** 常數列出兩者`imp`版本和未裝飾的名稱.lib DLL 匯入已建立，以允許明確連結的程式庫。 使用 **__declspec （dllimport)** 和資料清單只`imp`版本的名稱。
+使用 **__declspec （dllimport）** 和常數會在建立`imp`來允許明確連結的 .LIB DLL 匯入程式庫中，列出版本和未裝飾名稱稱。 使用 **__declspec （dllimport）** 和資料只會列出`imp`名稱的版本。
 
-如果您使用常數時，下列程式碼建構其中一種方法可以用來存取`ulDataInDll`:
+如果您使用常數，可以使用下列其中一個程式碼結構來存取`ulDataInDll`：
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
@@ -49,7 +49,7 @@ ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-不過，如果您使用.def 檔案中的資料，只編譯使用下列定義的程式碼可以存取該變數`ulDataInDll`:
+不過，如果您使用 .def 檔案中的資料，則只有使用下列定義編譯的程式碼才能存取變數`ulDataInDll`：
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,10 +57,10 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-使用常數是風險較大，因為如果您忘記使用額外間接取值層，您可能會存取匯入位址表格的指標，此變數，不是變數本身。 因為匯入位址表格目前做唯讀的編譯器和連結器，則這種問題通常可以呈現為存取違規。
+使用常數會更有風險，因為如果您忘了使用額外的間接取值層級，您可能會存取匯入位址資料表的指標，而不是變數本身。 這種類型的問題通常會因為編譯器和連結器的匯入位址資料表是唯讀的，而視為存取違規。
 
-如果發現.def 檔案中的常數，帳戶在此情況下，目前的 MSVC 連結器會發出警告。 若要使用常數唯一真正的原因是如果您無法重新編譯的標頭檔未列出一些物件檔案 **__declspec （dllimport)** 原型上啟動。
+如果目前的 MSVC 連結器在 .def 檔案中看到常數，就會發出警告，以考慮這種情況。 唯一使用常數的真正原因是，如果您無法重新編譯某個檔案，其中標頭檔不會列出原型上的 **__declspec （dllimport）** 。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [匯入至應用程式](importing-into-an-application.md)

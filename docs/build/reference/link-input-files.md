@@ -12,23 +12,23 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: aec71d4622821618f377953d36a9676e2233eefc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439337"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328195"
 ---
 # <a name="link-input-files"></a>LINK 輸入檔
 
-您可以使用包含物件、匯入和標準程式庫、資源、模組定義和命令輸入的檔案來提供連結器。 連結不會使用副檔名來對檔案內容進行假設。 相反地，LINK 會檢查每個輸入檔，以判斷它是哪種檔案。
+向連結器提供包含物件、導入和標準庫、資源、模組定義和命令輸入的檔。 LINK 不使用檔案副檔名對文件內容進行假設。 相反,LINK 會檢查每個輸入檔,以確定該檔是哪一類檔。
 
-命令列上的物件檔會依照它們在命令列上出現的順序進行處理。 程式庫也會以命令列順序搜尋，但有下列警告：從程式庫中帶入物件檔案時，無法解析的符號會先在該程式庫中搜尋，然後從命令列和[/DEFAULTLIB （指定預設程式庫）](defaultlib-specify-default-library.md)指示詞，再到命令列開頭的任何程式庫。
+命令列上的物件檔按照它們在命令列上顯示的順序進行處理。 庫也按命令列順序進行搜索,並帶有以下警告:首先在庫中搜索未解析的符號,然後從命令行和[/DEFAULTLIB(指定預設庫)](defaultlib-specify-default-library.md)指令中搜索以下庫,然後搜索命令行開頭的任何庫。
 
 > [!NOTE]
->  連結不再接受分號（或任何其他字元）做為回應檔案和順序檔案中的批註開頭。 只有在模組定義檔案（.def）中的批註開始時，才會辨識分號。
+> LINK 不再接受分號(或任何其他字元)作為回應檔和訂單檔中註釋的開頭。 分號僅識別為模組定義檔 (.def) 中註釋的開始。
 
-連結會使用下列類型的輸入檔：
+LINK 使用以下型態的輸入檔案:
 
 - [.obj 檔案](dot-obj-files-as-linker-input.md)
 

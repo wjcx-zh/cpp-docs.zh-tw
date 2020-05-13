@@ -1,10 +1,11 @@
 ---
 title: asin、asinf、asinl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinf
 - asinl
 - asin
+- _o_asin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943654"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909272"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -67,15 +69,17 @@ long double asin( long double x );  // C++ only
 
 根據預設，如果*x*小於-1 或大於1，則**asin**會傳回不定的。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± ∞|**無效**|**_DOMAIN**|
-|± **QNAN**， **IND**|none|**_DOMAIN**|
+|± **QNAN**， **IND**|無|**_DOMAIN**|
 |&#124;x&#124;>1|**無效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以使用**float**和**long** **double**值來呼叫**asin**的多載。 在 C 程式中， **asin**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以使用**float**和**long** **double**值來呼叫**asin**的多載。 在 C 程式中， **asin**一律會採用並傳回**雙精度浮點數**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

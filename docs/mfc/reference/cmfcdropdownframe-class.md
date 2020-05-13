@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420327"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752423"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 類別
 
-提供下拉式框架視窗功能給下拉工具列和下拉式工具列按鈕。
+為下拉工具列和下拉工具列按鈕提供下拉框架視窗功能。
 
 ## <a name="syntax"></a>語法
 
@@ -48,27 +48,27 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |||
 |-|-|
 |名稱|描述|
-|[CMFCDropDownFrame：： Create](#create)|建立 `CMFCDropDownFrame` 物件。|
+|[CMFC 下線框架:建立](#create)|建立 `CMFCDropDownFrame` 物件。|
 |`CMFCDropDownFrame::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
-|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|抓取下拉式框架的父功能表列。|
-|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|抓取下拉式框架的父系快顯功能表。|
-|`CMFCDropDownFrame::GetThisClass`|供架構用來取得與這個類別類型相關聯之[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
-|[CMFCDropDownFrame：： RecalcLayout](#recalclayout)|重新置放下拉清單架。|
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|設定是否要自動終結子下拉式工具列視窗。|
+|[CMFC下拉框架:獲取父選單欄](#getparentmenubar)|檢索下拉框架的父功能表欄。|
+|[CMFC下線框架:獲取家長彈出功能表](#getparentpopupmenu)|檢索下拉框架的父彈出式功能表。|
+|`CMFCDropDownFrame::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
+|[CMFC向下幀:Recalclayout](#recalclayout)|重新置放下拉框架。|
+|[CMFC下拉幀::設置自動銷毀](#setautodestroy)|設置子下拉工具列視窗是否自動銷毀。|
 
 ### <a name="remarks"></a>備註
 
 這個類別並不適合直接從您的程式碼使用。
 
-架構會使用這個類別，將框架行為提供給 `CMFCDropDownToolbar` 和 `CMFCDropDownToolbarButton` 類別。 如需這些類別的詳細資訊，請參閱[CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)和[CMFCDropDownToolbarButton 類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)。
+框架使用此類向`CMFCDropDownToolbar``CMFCDropDownToolbarButton`和 類提供幀行為。 有關這些類別的詳細資訊,請參閱[CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)與[CMFCDropDown 下拉工具列按鈕類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何從 `CFrameWnd` 類別中取出 `CMFCDropDownFrame` 物件的指標，以及如何設定要自動終結的子下拉式工具列視窗。
+下面的示例演示如何從`CMFCDropDownFrame``CFrameWnd`類檢索指向物件的指標,以及如何將子下拉工具列窗口設置為自動銷毀。
 
 [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -80,13 +80,13 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
-[CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)
+[CMFC 下線框架](../../mfc/reference/cmfcdropdownframe-class.md)
 
 ## <a name="requirements"></a>需求
 
 **標頭：** afxdropdowntoolbar.h
 
-##  <a name="create"></a>CMFCDropDownFrame：： Create
+## <a name="cmfcdropdownframecreate"></a><a name="create"></a>CMFC 下線框架:建立
 
 建立 `CMFCDropDownFrame` 物件。
 
@@ -103,24 +103,24 @@ virtual BOOL Create(
 |||
 |-|-|
 |參數|描述|
-|*pWndParent*|在下拉式框架的父視窗。|
-|*x*|在向下框架位置的水準螢幕座標。|
-|*y*|在向下框架位置的垂直螢幕座標。|
-|*pWndOriginToolbar*|在具有下拉式按鈕的工具列，這個方法會用來填入新的下拉清單架物件。|
+|*pwnd 父級*|[在]下拉框架的父視窗。|
+|*x*|[在]下下幀位置的水平螢幕座標。|
+|*Y*|[在]向下幀位置的垂直螢幕座標。|
+|*pWndOrigin工具列*|[在]具有此方法用於填充新下拉框架物件的下拉按鈕的工具列。|
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立下拉式框架，則為 TRUE;否則為 FALSE。
+如果成功創建了下拉框架,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫基底[CMiniFrameWnd：： CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)方法，以 WS_POPUP 樣式建立下拉式框架視窗。 下拉式框架視窗會出現在指定的螢幕座標中。 如果[CMiniFrameWnd：： CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)方法傳回 FALSE，這個方法就會失敗。
+此方法調用基本[CMiniFrameWnd:createEx](../../mfc/reference/cminiframewnd-class.md#createex)方法,以創建具有WS_POPUP樣式的下拉框架視窗。 下拉框架視窗顯示在指定的螢幕座標處。 如果[CMiniFrameWnd:createEx](../../mfc/reference/cminiframewnd-class.md#createex)方法返回 FALSE,則此方法將失敗。
 
-`CMFCDropDownFrame` 類別會建立所提供 `CMFCDropDownToolBar` 參數的複本。 這個方法會從 `pWndOriginToolbar` 參數將按鈕影像和按鈕狀態複製到 `m_pWndOriginToolbar` 資料成員。
+類別`CMFCDropDownFrame`創建提供的`CMFCDropDownToolBar`參數的複本。 此方法將按鈕圖像和按鈕狀態從`pWndOriginToolbar`參數複製`m_pWndOriginToolbar`到資料成員。
 
-##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar
+## <a name="cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFC下拉框架:獲取父選單欄
 
-抓取下拉式框架的父功能表列。
+檢索下拉框架的父功能表欄。
 
 ```
 CMFCMenuBar* GetParentMenuBar() const;
@@ -128,15 +128,15 @@ CMFCMenuBar* GetParentMenuBar() const;
 
 ### <a name="return-value"></a>傳回值
 
-下拉式框架之父功能表列的指標，如果框架沒有父系則為 Null。
+指向下拉框架的父功能表欄的指標,如果框架沒有父菜單,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從父按鈕抓取父功能表列。 如果下拉式框架沒有父按鈕，或父按鈕沒有父功能表列，則這個方法會傳回 Null。
+此方法從父按鈕檢索父功能表欄。 如果下拉框架沒有父按鈕或父按鈕沒有父功能表欄,則此方法返回 NULL。
 
-##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu
+## <a name="cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFC下線框架:獲取家長彈出功能表
 
-抓取下拉式框架的父系快顯功能表。
+檢索下拉框架的父彈出式功能表。
 
 ```
 CMFCDropDownFrame* GetParentPopupMenu() const;
@@ -144,15 +144,15 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 
 ### <a name="return-value"></a>傳回值
 
-下拉式框架的父系下拉式功能表指標，如果框架沒有父代，則為 Null。
+指向下拉框架的父下拉菜單的指標,如果框架沒有父級,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從父按鈕抓取父功能表。 如果下拉式框架沒有父按鈕，或父按鈕沒有父功能表，則這個方法會傳回 Null。
+此方法從父按鈕檢索父功能表。 如果下拉框架沒有父按鈕或父按鈕沒有父功能表,則此方法將返回 NULL。
 
-##  <a name="recalclayout"></a>CMFCDropDownFrame：： RecalcLayout
+## <a name="cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFC向下幀:Recalclayout
 
-重新置放下拉清單架。
+重新置放下拉框架。
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -163,28 +163,28 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||
 |-|-|
 |參數|描述|
-|*bNotify*|在未使用.|
+|*b 通知*|[在]閑置。|
 
 ### <a name="remarks"></a>備註
 
-當建立下拉式框架或調整父視窗大小時，架構會呼叫這個方法。 這個方法會使用父視窗的位置和大小，來計算下拉式框架的位置和大小。
+創建下拉框架或調整父視窗大小時,框架將調用此方法。 此方法使用父視窗的位置和大小計算下拉框架的位置和大小。
 
-##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy
+## <a name="cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFC下拉幀::設置自動銷毀
 
-設定是否要自動終結子下拉式工具列視窗。
+設置子下拉工具列視窗是否自動銷毀。
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bAutoDestroy*<br/>
-在TRUE 表示自動終結相關聯的下拉式工具列視窗;否則為 FALSE。
+*bAuto銷毀*<br/>
+[在]TRUE 自動銷毀關聯的下拉工具列視窗;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果*bAutoDestroy*為 TRUE，則 `CMFCDropDownFrame` 的析構函式會終結相關聯的下拉式工具列視窗。 預設值為 TRUE。
+如果*bAuto 銷毀*`CMFCDropDownFrame`為 TRUE, 則析構函數將銷毀關聯的下拉工具列視窗。 預設值為 TRUE。
 
 ## <a name="see-also"></a>另請參閱
 

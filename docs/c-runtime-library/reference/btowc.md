@@ -1,8 +1,9 @@
 ---
 title: btowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - btowc
+- _o_btowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-ms.openlocfilehash: 1f03fce8686f919af85ee3751cb9a0a3fca1ede7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cbeff70674a257217c66d39475a2c809c9bd9559
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943460"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913370"
 ---
 # <a name="btowc"></a>btowc
 
@@ -45,12 +47,16 @@ wint_t btowc(
 
 ### <a name="parameters"></a>參數
 
-*character*<br/>
+*字母*<br/>
 待測試整數。
 
 ## <a name="return-value"></a>傳回值
 
 如果整數代表初始移位狀態中的有效單一位元組字元，則會傳回字元的寬字元表示法。 如果整數是 EOF，或不是初始移位狀態中的有效單一位元組字元，則會傳回 WEOF。 此函式的輸出會受到目前**LC_TYPE**地區設定的影響。
+
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

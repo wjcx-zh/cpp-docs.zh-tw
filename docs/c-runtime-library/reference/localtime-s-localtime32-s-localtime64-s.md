@@ -1,10 +1,12 @@
 ---
 title: localtime_s、_localtime32_s、_localtime64_s
-ms.date: 07/09/2019
+ms.date: 4/2/2020
 api_name:
 - _localtime64_s
 - _localtime32_s
 - localtime_s
+- _o__localtime32_s
+- _o__localtime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: c00a5d23441612d0e70bfafd571bcb25250edb09
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953331"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911578"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s、_localtime32_s、_localtime64_s
 
@@ -79,24 +82,24 @@ errno_t _localtime64_s(
 
 |*tmDest*|*sourceTime*|傳回值|*TmDest*中的值|叫用無效的參數處理常式|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NULL**|any|**EINVAL**|未修改|是|
-|Not **Null** （指向有效的記憶體）|**NULL**|**EINVAL**|所有的欄位設定為 -1|是|
+|**Null**|任意|**EINVAL**|未修改|是|
+|Not **Null** （指向有效的記憶體）|**Null**|**EINVAL**|所有的欄位設定為 -1|是|
 |Not **Null** （指向有效的記憶體）|小於0或大於 **_MAX__TIME64_T**|**EINVAL**|所有的欄位設定為 -1|否|
 
-在前兩個錯誤狀況的情況下，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回**EINVAL**。
+在前兩個錯誤條件的情況下，叫用了無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Localtime_s**函式會將儲存的時間轉換為[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在類型為[tm](../../c-runtime-library/standard-types.md)的結構中。 **Time_t**值*sourceTime*代表自1970年1月1日午夜（00:00:00）起算的秒數（UTC）。 這個值通常是從[time](time-time32-time64.md)函數取得。
+**Localtime_s**函式會將儲存的時間轉換為[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在類型為[tm](../../c-runtime-library/standard-types.md)的結構中。 **Time_t**值*sourceTime*代表自1970年1月1日午夜（00:00:00）起經過的秒數（UTC）。 這個值通常是從[time](time-time32-time64.md)函數取得。
 
-如果使用者第一次設定全域環境變數**TZ**，則**localtime_s**會更正當地時區。 若設定了**TZ** ，則也會自動設定其他三個環境變數（ **_timezone**、 **_daylight**和 **_tzname**）。 如果未設定**TZ**變數， **localtime_s**會嘗試使用 [控制台] 中的 [日期/時間] 應用程式所指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是 Microsoft 擴充功能，不屬於**localtime**的 ANSI 標準定義。
+如果使用者第一次設定全域環境變數**TZ**， **localtime_s**更正當地時區。 若設定了**TZ** ，則會自動設定三個其他環境變數（**_timezone**、 **_daylight**和 **_tzname**）。 如果未設定**TZ**變數， **localtime_s**會嘗試使用 [控制台] 的 [日期/時間] 應用程式中所指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是 Microsoft 擴充功能，不屬於**localtime**的 ANSI 標準定義。
 
 > [!NOTE]
 > 目標環境應該嘗試判斷日光節約時間是否生效。
 
-使用 **__time64_t**結構的 **_localtime64_s**可讓日期以23:59:59 年1月18日3001，國際標準時間（UTC）表示，而 **_Localtime32_s**代表日期到23:59:59 年1月18日2038，UTC。
+使用 **__time64_t**結構的 **_localtime64_s**可讓日期以23:59:59 年1月18日3001，國際標準時間（UTC）表示，而 **_localtime32_s**則代表日期到23:59:59 年1月18日到2038，UTC。
 
-**localtime_s**是評估為 **_localtime64_s**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊版32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**localtime_s**評估為 **_localtime32_s**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+**localtime_s**是會評估為 **_localtime64_s**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**localtime_s**評估為 **_localtime32_s**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
 結構類型[tm](../../c-runtime-library/standard-types.md)的欄位會儲存下列值，其中每一個都是**int**。
 
@@ -114,13 +117,15 @@ errno_t _localtime64_s(
 
 如果已設定**TZ**環境變數，則 C 執行時間程式庫會假設適用于美國的規則，以執行日光節約時間（DST）的計算。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime > 或\<time. h >|
+|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime> 或\<time. h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

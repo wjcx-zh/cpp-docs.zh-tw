@@ -1,5 +1,5 @@
 ---
-title: CComMultiThreadModelNoCS 類別
+title: CCom 多線程式程式
 ms.date: 11/04/2016
 f1_keywords:
 - CComMultiThreadModelNoCS
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 01c7f953b6b8916394ee4c2b5b27cf84af52b920
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4d41ffcfccbd7ef65ed86df79bffec1209a88cd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497090"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327657"
 ---
-# <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 類別
+# <a name="ccommultithreadmodelnocs-class"></a>CCom 多線程式程式
 
-`CComMultiThreadModelNoCS`提供安全線程的方法, 以遞增和遞減變數的值, 而不需要重要區段鎖定或解除鎖定功能。
+`CComMultiThreadModelNoCS`提供線程安全方法,用於遞增和遞減變數的值,而無需關鍵截面鎖定或解鎖功能。
 
 ## <a name="syntax"></a>語法
 
@@ -37,35 +37,35 @@ class CComMultiThreadModelNoCS
 
 |名稱|描述|
 |----------|-----------------|
-|[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。|
-|[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|References 類別`CComFakeCriticalSection`。|
-|[CComMultiThreadModelNoCS::ThreadModelNoCS](#threadmodelnocs)|References 類別`CComMultiThreadModelNoCS`。|
+|[CCom 多線程模型NoCS::自動臨界部分](#autocriticalsection)|引用類別[CComFake 的界節](../../atl/reference/ccomfakecriticalsection-class.md)。|
+|[CCom 多線程模型NoCS::關鍵部分](#criticalsection)|參考類別`CComFakeCriticalSection`。|
+|[CCom 多線程模型NoCS::執行緒模型NoCS](#threadmodelnocs)|參考類別`CComMultiThreadModelNoCS`。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CComMultiThreadModelNoCS::Decrement](#decrement)|靜止以執行緒安全的方式遞減指定變數的值。|
-|[CComMultiThreadModelNoCS::Increment](#increment)|靜止以執行緒安全的方式遞增指定變數的值。|
+|[CCom 多線程模型NoCS::D](#decrement)|(靜態)以線程安全的方式聲明指定變數的值。|
+|[CCom 多線程模型NoCS::增量](#increment)|(靜態)以線程安全的方式遞增指定變數的值。|
 
 ## <a name="remarks"></a>備註
 
-`CComMultiThreadModelNoCS`類似于[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) , 因為它提供安全線程方法來遞增和遞減變數。 不過, 當您透過`CComMultiThreadModelNoCS`參考重要的區段類別時, `Lock`和`Unlock`之類的方法將不會執行任何動作。
+`CComMultiThreadModelNoCS`與[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)類似,因為它提供了用於遞增和遞減變數的線程安全方法。 但是,當您通過`CComMultiThreadModelNoCS`引用關鍵節類時,方法如`Lock``Unlock`和將不執行任何操作。
 
-一般來說, 您會`CComMultiThreadModelNoCS` `ThreadModelNoCS`透過**typedef**名稱來使用。 這個**typedef**定義于、 `CComMultiThreadModelNoCS` `CComMultiThreadModel`和[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)中。
+通常,您可以`CComMultiThreadModelNoCS``ThreadModelNoCS`通過**typedef**名稱使用。 這個**型態def**在`CComMultiThreadModelNoCS`中`CComMultiThreadModel`定義, 與[CCom 單線程式 。](../../atl/reference/ccomsinglethreadmodel-class.md)
 
 > [!NOTE]
->  全域**typedef**名稱[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)和[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)不會參考`CComMultiThreadModelNoCS`。
+> 全域**型態定義**[名稱 CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)和[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)`CComMultiThreadModelNoCS`不引用 。
 
-除了之外`ThreadModelNoCS`, `CComMultiThreadModelNoCS`還會`AutoCriticalSection`定義`CriticalSection`和。 後面兩個**typedef**名稱會參考[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md), 它會提供與取得和釋放重要區段相關聯的空白方法。
+除了`ThreadModelNoCS`之外,`CComMultiThreadModelNoCS``AutoCriticalSection`定義`CriticalSection`與 。 后兩**個類型定義**名稱引用[CComFake 臨界節](../../atl/reference/ccomfakecriticalsection-class.md),它提供了與獲取和釋放關鍵部分相關的空方法。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlbase.h。h
+**標題:** atlbase.h
 
-##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection
+## <a name="ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CCom 多線程模型NoCS::自動臨界部分
 
-使用`CComMultiThreadModelNoCS`時, **typedef**名稱`AutoCriticalSection`會參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。
+使用`CComMultiThreadModelNoCS`時 **,typedef**`AutoCriticalSection`名稱引用類別[CComFake 的臨界節](../../atl/reference/ccomfakecriticalsection-class.md)。
 
 ```
 typedef CComFakeCriticalSection AutoCriticalSection;
@@ -73,25 +73,25 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 
 ### <a name="remarks"></a>備註
 
-因為`CComFakeCriticalSection`並未提供重要區段, 所以其方法不會執行任何動作。
+因為`CComFakeCriticalSection`不提供關鍵部分,因此其方法不執行任何操作。
 
-[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)也包含的`AutoCriticalSection`定義。 下表顯示執行緒模型類別與所參考`AutoCriticalSection`之 critical 區段類別之間的關聯性:
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CCom 單線程模型](../../atl/reference/ccomsinglethreadmodel-class.md)還包含`AutoCriticalSection`的定義。 下表顯示了線程模型類與`AutoCriticalSection`引用 的關鍵節類之間的關係:
 
-|類別定義于|參考的類別|
+|類別定義在|引用的類|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComAutoCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-除了之外`AutoCriticalSection`, 您還可以使用**typedef**名稱[CriticalSection](#criticalsection)。 如果您想要`AutoCriticalSection`排除 CRT 啟始程式碼, 則不應該在全域物件或靜態類別成員中指定。
+除`AutoCriticalSection`之外 ,還可以使用**typedef**名稱[「臨界節](#criticalsection)」。。 如果要消除 CRT 啟動代碼,不應在全域物件或靜態類別成員中`AutoCriticalSection`指定 。
 
 ### <a name="example"></a>範例
 
-請參閱[CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
+請參閱[CCom 多線程模型::自動臨界節](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
 
-##  <a name="criticalsection"></a>CComMultiThreadModelNoCS:: CriticalSection
+## <a name="ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CCom 多線程模型NoCS::關鍵部分
 
-使用`CComMultiThreadModelNoCS`時, **typedef**名稱`CriticalSection`會參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。
+使用`CComMultiThreadModelNoCS`時 **,typedef**`CriticalSection`名稱引用類別[CComFake 的臨界節](../../atl/reference/ccomfakecriticalsection-class.md)。
 
 ```
 typedef CComFakeCriticalSection CriticalSection;
@@ -99,25 +99,25 @@ typedef CComFakeCriticalSection CriticalSection;
 
 ### <a name="remarks"></a>備註
 
-因為`CComFakeCriticalSection`並未提供重要區段, 所以其方法不會執行任何動作。
+因為`CComFakeCriticalSection`不提供關鍵部分,因此其方法不執行任何操作。
 
-[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)也包含的`CriticalSection`定義。 下表顯示執行緒模型類別與所參考`CriticalSection`之 critical 區段類別之間的關聯性:
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CCom 單線程模型](../../atl/reference/ccomsinglethreadmodel-class.md)還包含`CriticalSection`的定義。 下表顯示了線程模型類與`CriticalSection`引用 的關鍵節類之間的關係:
 
-|類別定義于|參考的類別|
+|類別定義在|引用的類|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-除了之外`CriticalSection`, 您還可以使用**typedef**名稱`AutoCriticalSection`。 如果您想要`AutoCriticalSection`排除 CRT 啟始程式碼, 則不應該在全域物件或靜態類別成員中指定。
+除了之外`CriticalSection`,還可以使用**typedef**名稱`AutoCriticalSection`。 如果要消除 CRT 啟動代碼,不應在全域物件或靜態類別成員中`AutoCriticalSection`指定 。
 
 ### <a name="example"></a>範例
 
-請參閱[CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
+請參閱[CCom 多線程模型::自動臨界節](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
 
-##  <a name="decrement"></a>CComMultiThreadModelNoCS::D ecrement
+## <a name="ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CCom 多線程模型NoCS::D
 
-這個靜態函式會呼叫 Win32 函式[InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement), 以遞減*p*所指向之變數的值。
+此靜態函數調用 Win32 函數[互鎖聲明](/windows/win32/api/winnt/nf-winnt-interlockeddecrement),它遞減*p*指向的變數的值。
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -125,20 +125,20 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
-在要遞減之變數的指標。
+*P*<br/>
+[在]指向要遞減的變數的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果遞減的結果為 0, 則`Decrement`會傳回0。 如果遞減的結果不是零, 則傳回值也不是零, 但可能不等於遞減的結果。
+如果遞減的結果為 0,`Decrement`則返回 0。 如果遞減的結果為非零,則返回值也是非零,但可能不等於遞減的結果。
 
 ### <a name="remarks"></a>備註
 
-**InterlockedDecrement**可防止一個以上的執行緒同時使用此變數。
+**互鎖的"聲明"** 可防止多個線程同時使用此變數。
 
-##  <a name="increment"></a>CComMultiThreadModelNoCS:: 遞增值
+## <a name="ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CCom 多線程模型NoCS::增量
 
-這個靜態函式會呼叫 Win32 函式[InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement), 以遞增*p*所指向的變數值。
+此靜態函數調用 Win32 函數[互鎖增量](/windows/win32/api/winnt/nf-winnt-interlockedincrement),它遞增*p*指向的變數的值。
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();
@@ -146,20 +146,20 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
-在要遞增之變數的指標。
+*P*<br/>
+[在]指向要遞增的變數的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果增量的結果為 0, 則**增量**會傳回0。 如果增量的結果不是零, 則傳回值也是非零, 但可能不等於增量的結果。
+如果增量的結果為 0,則**增量**返回 0。 如果增量的結果是非零,則返回值也是非零,但可能不等於增量的結果。
 
 ### <a name="remarks"></a>備註
 
-**InterlockedIncrement**可防止一個以上的執行緒同時使用此變數。
+**互鎖增量**可防止多個線程同時使用此變數。
 
-##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS
+## <a name="ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>CCom 多線程模型NoCS::執行緒模型NoCS
 
-使用`CComMultiThreadModelNoCS`時, **typedef**名稱`ThreadModelNoCS`只會參考。 `CComMultiThreadModelNoCS`
+使用`CComMultiThreadModelNoCS`時 **,typedef** `ThreadModelNoCS``CComMultiThreadModelNoCS`名稱只有參考 。
 
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
@@ -167,24 +167,24 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="remarks"></a>備註
 
-[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)也包含的`ThreadModelNoCS`定義。 下表顯示執行緒模型類別與所參考`ThreadModelNoCS`之類別之間的關聯性:
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CCom 單線程模型](../../atl/reference/ccomsinglethreadmodel-class.md)還包含`ThreadModelNoCS`的定義。 下表顯示了線程模型類與 引用`ThreadModelNoCS`的 類之間的關係:
 
-|類別定義于|參考的類別|
+|類別定義在|引用的類|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComMultiThreadModelNoCS`|
 |`CComMultiThreadModel`|`CComMultiThreadModelNoCS`|
 |`CComSingleThreadModel`|`CComSingleThreadModel`|
 
-請注意, `ThreadModelNoCS`中`CComMultiThreadModelNoCS`的定義會提供與`CComMultiThreadModel`和`CComSingleThreadModel`的對稱。 例如, 假設中`CComMultiThreadModel::AutoCriticalSection`的範例程式碼宣告了下列**typedef**:
+請注意`ThreadModelNoCS`,`CComMultiThreadModelNoCS`中的定義提供了`CComMultiThreadModel``CComSingleThreadModel`與 和 的對稱性。 例如,假設聲明的以下`CComMultiThreadModel::AutoCriticalSection`**typedef**中的範例碼 :
 
 [!code-cpp[NVC_ATL_COM#37](../../atl/codesnippet/cpp/ccommultithreadmodelnocs-class_1.h)]
 
-不論為`ThreadModel`指定的類別為何 ( `CComMultiThreadModelNoCS`例如), `_ThreadModel`都會據以解決。
+無論為`ThreadModel`(`CComMultiThreadModelNoCS`如 )`_ThreadModel`指定的類 如何,都會相應地解析。
 
 ### <a name="example"></a>範例
 
-請參閱[CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
+請參閱[CCom 多線程模型::自動臨界節](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

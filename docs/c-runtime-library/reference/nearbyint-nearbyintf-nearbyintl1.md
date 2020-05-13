@@ -1,10 +1,13 @@
 ---
 title: nearbyint、nearbyintf、nearbyintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
+- _o_nearbyint
+- _o_nearbyintf
+- _o_nearbyintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951398"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914570"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -66,13 +70,13 @@ long double nearbyint( long double x ); //C++ only
 
 如果成功，會使用[fegetround](fegetround-fesetround2.md)所報告的目前舍入格式，將*x*四捨五入成最接近的整數。 否則，此函式可能會傳回下列其中一個值：
 
-|問題|Return|
+|問題|傳回|
 |-----------|------------|
-|*x* = ±INFINITY|±無限大，未修改|
+|*x* = ±無限大|±無限大，未修改|
 |*x* = ±0|±0，未修改|
 |*x* = NaN|NaN|
 
-錯誤不會透過[_matherr](matherr.md)報告;具體而言，此函數不會報告任何**FE_INEXACT**例外狀況。
+錯誤不會透過[_matherr](matherr.md)回報;具體而言，此函式不會報告任何**FE_INEXACT**的例外狀況。
 
 ## <a name="remarks"></a>備註
 
@@ -80,11 +84,13 @@ long double nearbyint( long double x ); //C++ only
 
 因為最大浮點值是精確的整數，所以此函式自身永遠不會溢位；相反地，根據您使用的函式版本，輸出可能會造成傳回值溢位。
 
-C++允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**參數的**nearbyint**多載。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數，並傳回雙精度值。
+C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**參數的**nearbyint**多載。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數，並傳回雙精度值。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**nearbyint**、 **nearbyintf**、 **nearbyintl**|\<math.h>|\<cmath> 或 \<math.h>|
 
@@ -93,4 +99,4 @@ C++允許多載，因此您可以呼叫採用並傳回**float**或**long** **dou
 ## <a name="see-also"></a>另請參閱
 
 [依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
-[數學和浮點支援](../floating-point-support.md)<br/>
+[數學與浮點支援](../floating-point-support.md)<br/>

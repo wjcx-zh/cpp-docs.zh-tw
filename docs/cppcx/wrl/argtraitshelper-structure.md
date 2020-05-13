@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraitsHelper structure
 - Microsoft::WRL::Details::ArgTraitsHelper::args constant
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-ms.openlocfilehash: fbba6d96106cc95910ccd9d0029cb3e9c254d7d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4acbd9fa660f29bbaf209282ff0e90f43621574d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360775"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -29,12 +29,12 @@ struct ArgTraitsHelper;
 
 ### <a name="parameters"></a>參數
 
-*TDelegateInterface*<br/>
-委派的介面。
+*T委託介面*<br/>
+委託介面。
 
 ## <a name="remarks"></a>備註
 
-可協助定義委派引數的一般的特性。
+幫助定義委託參數的常見特徵。
 
 ## <a name="members"></a>成員
 
@@ -49,21 +49,21 @@ struct ArgTraitsHelper;
 
 名稱                           | 描述
 ------------------------------ | ---------------------------------------------------------------------------------------------------------------------
-[ArgTraitsHelper::args](#args) | 可協助[argtraits:: Args](#args)上保留的參數數目的計數`Invoke`委派介面的方法。
+[阿格·格薩爾特説明者::阿格斯](#args) | 説明[ArgTraits::args](#args)在`Invoke`委託介面 的方法上保留參數數。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ArgTraitsHelper`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** event.h
+**標題:** 事件.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="args"></a>ArgTraitsHelper::args
+## <a name="argtraitshelperargs"></a><a name="args"></a>阿格·格薩爾特説明者::阿格斯
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 static const int args = Traits::args;
@@ -71,4 +71,4 @@ static const int args = Traits::args;
 
 ### <a name="remarks"></a>備註
 
-可協助`ArgTraitsHelper::args`保留的參數數目的計數上`Invoke`委派介面的方法。
+説明`ArgTraitsHelper::args`保留委託介面方法`Invoke`上的 參數數。

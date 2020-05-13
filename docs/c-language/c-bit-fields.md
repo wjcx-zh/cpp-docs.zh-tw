@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
 ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326491"
 ---
 # <a name="c-bit-fields"></a>C 位元欄位
 
@@ -18,11 +18,11 @@ ms.locfileid: "56150229"
 
 ## <a name="syntax"></a>語法
 
-*struct-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
+*結構聲明*子宣告子：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*類型規範* *declarator*宣告子<sub>opt</sub> **：** *常數運算式*
 
-*constant-expression* 會以位元指定欄位的寬度。 `declarator` 的 *type-specifier* 必須是 `unsigned int`、**signed int** 或 `int`，而且 *constant-expression* 必須是非負值的整數值。 若該值是零，宣告沒有 `declarator`。 不允許位元欄位陣列、位元欄位指標與傳回位元欄位的函式。 選擇性的 `declarator` 會為位元欄位命名。 位元欄位只能宣告為結構的一部分。 address-of 運算子 (**&**) 無法套用至位元欄位元件。
+*constant-expression* 會以位元指定欄位的寬度。 `declarator` 的 *type-specifier* 必須是 `unsigned int`、**signed int** 或 `int`，而且 *constant-expression* 必須是非負值的整數值。 若該值是零，宣告沒有 `declarator`。 不允許位元欄位陣列、位元欄位指標與傳回位元欄位的函式。 選擇性的 `declarator` 會為位元欄位命名。 位元欄位只能宣告為結構的一部分。 不能將通訊運算子（**&**）套用至位欄位元件。
 
 無法參考未具名位元欄位，而且其內容在執行階段無法預測。 它們可以當作「虛設」欄位使用，以用於對齊用途。 未具名的位元欄位寬度指定為 0 時，可保證 *struct-declaration-list* 中跟隨在其後的成員儲存區是以 `int` 界限開始。
 
@@ -49,9 +49,9 @@ struct
 
 位元欄位具有與整數類型相同的語意。 此表示位元欄位在運算式的使用方式，就像使用相同基底類型的變化一樣，而不論位元欄位中有多少位元。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-定義為 `int` 的位元欄位會被視為帶正負號。 Microsoft 的 ANSI C 標準延伸模組允許為位元欄位使用 `char` 與 **long** 類型 (「帶正負號」與 `unsigned`)。 具有基底類型 **long**、**short** 或 `char` (「帶正負號」或 `unsigned`) 的未具名位元欄位會強制對齊基底類型適用的界限。
+定義為 `int` 的位元欄位會被視為帶正負號。 Microsoft 的 ANSI C 標準延伸模組允許為位元欄位使用 `char` 與 **long** 類型 (「帶正負號」**** 與 `unsigned`)。 具有基底類型 **long**、**short** 或 `char` (「帶正負號」**** 或 `unsigned`) 的未具名位元欄位會強制對齊基底類型適用的界限。
 
 位元欄位是在整數內依最小顯著性到最高有效位元的順序配置。 在下列程式碼中
 
@@ -80,8 +80,8 @@ cccccccb bbbbaaaa
 
 因為 8086 系列處理器會先儲存整數值的低位元組，再儲存高位元組，上面的整數 `0x01F2` 將儲存到實體記憶體作為 `0xF2`，後面接著 `0x01`。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [結構宣告](../c-language/structure-declarations.md)

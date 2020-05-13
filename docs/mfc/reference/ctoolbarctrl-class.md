@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 6f15280943fce39bae4eebfb537f9a61d256d2e8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420915"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752218"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 
@@ -205,141 +205,141 @@ class CToolBarCtrl : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CToolBarCtrl：： CToolBarCtrl](#ctoolbarctrl)|建構 `CToolBarCtrl` 物件。|
+|[CToolBarCtrl:CToolBarCtrl](#ctoolbarctrl)|建構 `CToolBarCtrl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CToolBarCtrl：： AddBitmap](#addbitmap)|將一或多個點陣圖按鈕影像新增至工具列控制項可用的按鈕影像清單。|
-|[CToolBarCtrl：： AddButtons](#addbuttons)|在工具列控制項中加入一個或多個按鈕。|
-|[CToolBarCtrl：： AddString](#addstring)|將傳遞為資源識別碼的新字串加入至工具列的字串內部清單。|
-|[CToolBarCtrl：： AddStrings](#addstrings)|將新字串或字串（以以 null 分隔的字串的指標傳遞）新增至工具列的字串內部清單。|
-|[CToolBarCtrl：： AutoSize](#autosize)|調整工具列控制項的大小。|
-|[CToolBarCtrl：： ChangeBitmap](#changebitmap)|變更目前工具列控制項中按鈕的點陣圖。|
-|[CToolBarCtrl：： CheckButton](#checkbutton)|檢查或清除工具列控制項中的指定按鈕。|
-|[CToolBarCtrl：： CommandToIndex](#commandtoindex)|針對與指定的命令識別碼相關聯的按鈕，抓取以零為起始的索引。|
-|[CToolBarCtrl：： Create](#create)|建立 toolbar 控制項並將它附加至 `CToolBarCtrl` 物件。|
-|[CToolBarCtrl：： CreateEx](#createex)|建立具有指定之 Windows 擴充樣式的工具列控制項，並將它附加至 `CToolBarCtrl` 物件。|
-|[CToolBarCtrl：：自訂](#customize)|顯示 [自訂工具列] 對話方塊。|
-|[CToolBarCtrl：:D eleteButton](#deletebutton)|從工具列控制項中刪除按鈕。|
-|[CToolBarCtrl：： EnableButton](#enablebutton)|啟用或停用工具列控制項中指定的按鈕。|
-|[CToolBarCtrl：： GetAnchorHighlight](#getanchorhighlight)|抓取工具列的錨點醒目提示設定。|
-|[CToolBarCtrl：： GetBitmap](#getbitmap)|抓取與工具列中的按鈕相關聯之點陣圖的索引。|
-|[CToolBarCtrl：： GetBitmapFlags](#getbitmapflags)|取得與工具列點陣圖相關聯的旗標。|
-|[CToolBarCtrl：： GetButton](#getbutton)|抓取工具列控制項中指定之按鈕的相關資訊。|
-|[CToolBarCtrl：： GetButtonCount](#getbuttoncount)|抓取目前在工具列控制項中的按鈕計數。|
-|[CToolBarCtrl：： GetButtonInfo](#getbuttoninfo)|抓取工具列中按鈕的資訊。|
-|[CToolBarCtrl：： GetButtonSize](#getbuttonsize)|抓取工具列按鈕的目前寬度和高度（以圖元為單位）。|
-|[CToolBarCtrl：： GetColorScheme](#getcolorscheme)|抓取目前工具列控制項的色彩配置。|
-|[CToolBarCtrl：： GetDisabledImageList](#getdisabledimagelist)|抓取工具列控制項用來顯示已停用按鈕的影像清單。|
-|[CToolBarCtrl：： GetDropTarget](#getdroptarget)|抓取 toolbar 控制項的[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)介面。|
-|[CToolBarCtrl：： GetExtendedStyle](#getextendedstyle)|抓取工具列控制項的延伸樣式。|
-|[CToolBarCtrl：： GetHotImageList](#gethotimagelist)|抓取工具列控制項用來顯示「作用中」按鈕的影像清單。 當滑鼠指標位於其上方時，[作用中] 按鈕會反白顯示。|
-|[CToolBarCtrl：： GetHotItem](#gethotitem)|抓取工具列中的熱專案索引。|
-|[CToolBarCtrl：： GetImageList](#getimagelist)|抓取工具列控制項用來以預設狀態顯示按鈕的影像清單。|
-|[CToolBarCtrl：： GetInsertMark](#getinsertmark)|抓取工具列目前的插入標記。|
-|[CToolBarCtrl：： GetInsertMarkColor](#getinsertmarkcolor)|抓取用來繪製工具列插入標記的色彩。|
-|[CToolBarCtrl：： GetItemRect](#getitemrect)|抓取工具列控制項中按鈕的周框。|
-|[CToolBarCtrl：： GetMaxSize](#getmaxsize)|抓取工具列中所有可見按鈕和分隔符號的總大小。|
-|[CToolBarCtrl：： GetMaxTextRows](#getmaxtextrows)|抓取工具列按鈕上顯示的文字資料列數目上限。|
-|[CToolBarCtrl：： GetMetrics](#getmetrics)|抓取工具列控制項的計量。|
-|[CToolBarCtrl：： GetPadding](#getpadding)|抓取目前工具列控制項的水準和垂直填補。|
-|[CToolBarCtrl：： GetPressedImageList](#getpressedimagelist)|抓取目前工具列控制項用來代表按下狀態之按鈕的影像清單。|
-|[CToolBarCtrl：： GetRect](#getrect)|抓取指定之工具列按鈕的周框。|
-|[CToolBarCtrl：： GetRows](#getrows)|抓取工具列中目前顯示之按鈕的列數。|
-|[CToolBarCtrl：： GetState](#getstate)|抓取工具列控制項中指定按鈕的狀態相關資訊，例如是否啟用、按下或核取。|
-|[CToolBarCtrl：： GetString](#getstring)|抓取工具列字串。|
-|[CToolBarCtrl：： GetStyle](#getstyle)|抓取目前在工具列控制項中使用的樣式。|
-|[CToolBarCtrl：： GetToolTips](#gettooltips)|抓取與 toolbar 控制項相關聯的工具提示控制項的控制碼（如果有的話）。|
-|[CToolBarCtrl：： HideButton](#hidebutton)|隱藏或顯示工具列控制項中指定的按鈕。|
-|[CToolBarCtrl：： HitTest](#hittest)|決定點位於工具列控制項中的位置。|
-|[CToolBarCtrl：：不定](#indeterminate)|設定或清除工具列控制項中指定按鈕的不定（灰色）狀態。|
-|[CToolBarCtrl：： InsertButton](#insertbutton)|在工具列控制項中插入按鈕。|
-|[CToolBarCtrl：： InsertMarkHitTest](#insertmarkhittest)|抓取工具列中某個點的插入標記資訊。|
-|[CToolBarCtrl：： IsButtonChecked](#isbuttonchecked)|指出是否已檢查工具列控制項中指定的按鈕。|
-|[CToolBarCtrl：： IsButtonEnabled](#isbuttonenabled)|指出是否已啟用工具列控制項中指定的按鈕。|
-|[CToolBarCtrl：： IsButtonHidden](#isbuttonhidden)|指出工具列控制項中指定的按鈕是否隱藏。|
-|[CToolBarCtrl：： IsButtonHighlighted](#isbuttonhighlighted)|檢查工具列按鈕的反白顯示狀態。|
-|[CToolBarCtrl：： IsButtonIndeterminate](#isbuttonindeterminate)|告知工具列控制項中指定按鈕的狀態是否為不確定（灰色）。|
-|[CToolBarCtrl：： IsButtonPressed](#isbuttonpressed)|指出是否按下工具列控制項中指定的按鈕。|
-|[CToolBarCtrl：： LoadImages](#loadimages)|將點陣圖載入工具列控制項的影像清單。|
-|[CToolBarCtrl：： MapAccelerator](#mapaccelerator)|將快速鍵對應字元對應至工具列按鈕。|
-|[CToolBarCtrl：： MarkButton](#markbutton)|設定工具列控制項中指定按鈕的反白顯示狀態。|
-|[CToolBarCtrl：： MoveButton](#movebutton)|將按鈕從一個索引移至另一個。|
-|[CToolBarCtrl：:P ressButton](#pressbutton)|在工具列控制項中按下或放開指定的按鈕。|
-|[CToolBarCtrl：： ReplaceBitmap](#replacebitmap)|以新的點陣圖取代目前工具列控制項中的現有點陣圖。|
-|[CToolBarCtrl：： RestoreState](#restorestate)|還原工具列控制項的狀態。|
-|[CToolBarCtrl：： SaveState](#savestate)|儲存工具列控制項的狀態。|
-|[CToolBarCtrl：： SetAnchorHighlight](#setanchorhighlight)|設定工具列的錨點醒目提示設定。|
-|[CToolBarCtrl：： SetBitmapSize](#setbitmapsize)|設定要加入工具列控制項之點陣圖影像的大小。|
-|[CToolBarCtrl：： SetButtonInfo](#setbuttoninfo)|設定工具列中現有按鈕的資訊。|
-|[CToolBarCtrl：： SetButtonSize](#setbuttonsize)|設定要加入工具列控制項的按鈕大小。|
-|[CToolBarCtrl：： SetButtonStructSize](#setbuttonstructsize)|指定 `TBBUTTON` 結構的大小。|
-|[CToolBarCtrl：： SetButtonWidth](#setbuttonwidth)|設定工具列控制項中的最小和最大按鈕寬度。|
-|[CToolBarCtrl：： SetCmdID](#setcmdid)|設定當按下指定的按鈕時，要傳送至擁有者視窗的命令識別碼。|
-|[CToolBarCtrl：： SetColorScheme](#setcolorscheme)|設定目前工具列控制項的色彩配置。|
-|[CToolBarCtrl：： SetDisabledImageList](#setdisabledimagelist)|設定工具列控制項將用來顯示已停用按鈕的影像清單。|
-|[CToolBarCtrl：： SetDrawTextFlags](#setdrawtextflags)|設定 Win32 函數[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中的旗標，用來在指定的矩形中繪製文字，並根據旗標的設定方式進行格式化。|
-|[CToolBarCtrl：： SetExtendedStyle](#setextendedstyle)|設定工具列控制項的延伸樣式。|
-|[CToolBarCtrl：： SetHotImageList](#sethotimagelist)|設定工具列控制項將用來顯示「作用中」按鈕的影像清單。|
-|[CToolBarCtrl：： SetHotItem](#sethotitem)|設定工具列中的熱專案。|
-|[CToolBarCtrl：： SetImageList](#setimagelist)|設定工具列將用來顯示處於預設狀態之按鈕的影像清單。|
-|[CToolBarCtrl：： SetIndent](#setindent)|設定工具列控制項中第一個按鈕的縮排。|
-|[CToolBarCtrl：： SetInsertMark](#setinsertmark)|設定工具列的目前插入標記。|
-|[CToolBarCtrl：： SetInsertMarkColor](#setinsertmarkcolor)|設定用來繪製工具列插入標記的色彩。|
-|[CToolBarCtrl：： SetMaxTextRows](#setmaxtextrows)|設定工具列按鈕上顯示的文字資料列數目上限。|
-|[CToolBarCtrl：： SetMetrics](#setmetrics)|設定工具列控制項的計量。|
-|[CToolBarCtrl：： SetOwner](#setowner)|設定視窗以從工具列控制項接收通知訊息。|
-|[CToolBarCtrl：： SetPadding](#setpadding)|設定目前工具列控制項的水準和垂直填補。|
-|[CToolBarCtrl：： SetPressedImageList](#setpressedimagelist)|設定目前工具列控制項用來代表按下狀態之按鈕的影像清單。|
-|[CToolBarCtrl：： SetRows](#setrows)|設定在工具列中顯示之按鈕的列數。|
-|[CToolBarCtrl：： SetState](#setstate)|設定工具列控制項中指定之按鈕的狀態。|
-|[CToolBarCtrl：： SetStyle](#setstyle)|設定工具列控制項的樣式。|
-|[CToolBarCtrl：： SetToolTips](#settooltips)|將工具提示控制項與工具列控制項產生關聯。|
-|[CToolBarCtrl：： SetWindowTheme](#setwindowtheme)|設定工具列控制項的視覺化樣式。|
+|[CToolBarCtrl:: 新增位元圖](#addbitmap)|將一個或多個點陣圖按鈕圖像添加到可用於工具列控制件的按鈕圖像清單中。|
+|[CToolBarCtrl:: 新增按鈕](#addbuttons)|將一個或多個按鈕添加到工具列控制項。|
+|[CToolBarCtrl::添加String](#addstring)|將作為資源 ID 傳遞的新字串添加到工具列的內部字串清單中。|
+|[CToolBarCtrl:: 新增字串](#addstrings)|將新的字串或字串(作為指向空分隔字串的緩衝區的指標)傳遞到工具列的內部字串清單中。|
+|[CToolBarCtrl:自動調整](#autosize)|調整工具列控制的大小。|
+|[CToolBarCtrl::更改位圖](#changebitmap)|更改當前工具列控制項中按鈕的點陣圖。|
+|[CToolBarCtrl::檢查按鈕](#checkbutton)|檢查或清除工具列控制件中的給定按鈕。|
+|[CToolBarctrl::命令索引](#commandtoindex)|檢索與指定命令標識符關聯的按鈕的零基索引。|
+|[CToolBarCtrl::建立](#create)|創建工具列控制項並將其附加到`CToolBarCtrl`物件。|
+|[CToolBarCtrl::建立Ex](#createex)|使用指定的 Windows 擴充樣式創建工具列控制項,並將`CToolBarCtrl`其附加到 物件。|
+|[CToolBarCtrl:自訂](#customize)|顯示「自訂工具列」對話框。|
+|[CToolBarCtrl::DeleteButton](#deletebutton)|從工具列控制項中刪除按鈕。|
+|[CToolBarCtrl:開啟按鈕](#enablebutton)|啟用或禁用工具列控制件中的指定按鈕。|
+|[CToolBarCtrl::取得錨點突出顯示](#getanchorhighlight)|檢索工具列的錨點高光設置。|
+|[CToolBarCtrl::取得位元圖](#getbitmap)|檢索與工具列中的按鈕關聯的位圖的索引。|
+|[CToolBarCtrl::取得位式射標記](#getbitmapflags)|獲取與工具列位圖關聯的標誌。|
+|[CToolBarCtrl:取得按鈕](#getbutton)|檢索有關工具列控件中指定按鈕的資訊。|
+|[CToolBarCtrl::取得按鈕計數](#getbuttoncount)|檢索工具列控件中當前按鈕的計數。|
+|[CToolBarCtrl::取得按鈕資訊](#getbuttoninfo)|檢索工具列中按鈕的資訊。|
+|[CToolBarCtrl:取得按鈕大小](#getbuttonsize)|檢索工具列按鈕的當前寬度和高度(以像素為單位)。|
+|[CToolBarCtrl:取得顏色機制](#getcolorscheme)|檢索當前工具列控件的色彩配置。|
+|[CToolBarCtrl:取得關閉影像清單](#getdisabledimagelist)|檢索工具列控制項用於顯示禁用按鈕的圖像清單。|
+|[CToolBarCtrl::取得DropTarget](#getdroptarget)|檢索工具列控件的[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)介面。|
+|[CToolBarCtrl::取得式延伸樣式](#getextendedstyle)|檢索工具列控件的擴展樣式。|
+|[CToolBarCtrl:取得HotImage清單](#gethotimagelist)|檢索工具列控制項用於顯示「熱」按鈕的圖像清單。 當滑鼠指標位於上方時,將顯示一個熱按鈕。|
+|[CToolBarCtrl:取得Hot專案](#gethotitem)|檢索工具列中熱項的索引。|
+|[CToolBarCtrl:抓取圖片清單](#getimagelist)|檢索工具列控制項用於以預設狀態顯示按鈕的圖像清單。|
+|[CToolBarCtrl::取得插入標記](#getinsertmark)|檢索工具列的當前插入標記。|
+|[CToolBarCtrl::取得插入標記顏色](#getinsertmarkcolor)|檢索用於繪製工具列插入標記的顏色。|
+|[CToolBarCtrl::取得專案](#getitemrect)|檢索工具列控件中按鈕的邊界矩形。|
+|[CToolBarCtrl:取得最大尺寸](#getmaxsize)|檢索工具列中所有可見按鈕和分隔符的總大小。|
+|[CToolBarCtrl::取得最大文字列](#getmaxtextrows)|檢索工具列按鈕上顯示的最大文本行數。|
+|[CToolBarCtrl:取得指標](#getmetrics)|檢索工具列控件的指標。|
+|[CToolBarCtrl::取得填充](#getpadding)|檢索當前工具列控件的水準和垂直填充。|
+|[CToolBarCtrl:抓取被壓影像清單](#getpressedimagelist)|檢索當前工具列控制項用於表示處於按下狀態的按鈕的圖像清單。|
+|[CToolBarCtrl::取得Rect](#getrect)|檢索指定工具列按鈕的邊界矩形。|
+|[CToolBarCtrl::取得](#getrows)|檢索工具列中當前顯示的按鈕行數。|
+|[CToolBarCtrl:取得狀態](#getstate)|檢索有關工具列控件中指定按鈕的狀態的資訊,例如是啟用、按下還是選中該按鈕。|
+|[CToolBarCtrl::GetString](#getstring)|檢索工具列字串。|
+|[CToolBarCtrl::取得樣式](#getstyle)|檢索當前用於工具列控件的樣式。|
+|[CToolBarCtrl:抓取工具提示](#gettooltips)|檢索與工具列控件關聯的工具尖端控制項的句柄(如果有)。|
+|[CToolBarCtrl:隱藏按鈕](#hidebutton)|在工具列控制項中隱藏或顯示指定的按鈕。|
+|[CToolBarCtrl:hitTest](#hittest)|確定點位於工具列控件的位置。|
+|[CToolBarctrl::不確定](#indeterminate)|設置或清除工具列控制項中指定按鈕的不確定(灰色)狀態。|
+|[CToolBarCtrl::插入按鈕](#insertbutton)|在工具列控制項中插入按鈕。|
+|[CToolBarCtrl::插入標記命中測試](#insertmarkhittest)|檢索工具列中點的插入標記資訊。|
+|[CToolBarCtrl::是按鈕檢查](#isbuttonchecked)|告訴是否選擇的工具列控制檔中的指定按鈕。|
+|[CToolBarCtrl:即啟用按鈕](#isbuttonenabled)|告訴工具列控制件中的指定按鈕是否已啟用。|
+|[CToolBarCtrl::是按鈕隱藏](#isbuttonhidden)|告訴工具列控制件中的指定按鈕是否隱藏。|
+|[CToolBarCtrl::按鍵突出顯示](#isbuttonhighlighted)|檢查工具列按鈕的突出顯示狀態。|
+|[CToolBarctrl::是按鈕不確定](#isbuttonindeterminate)|告知工具列控件中指定按鈕的狀態是否不確定(灰色)。|
+|[CToolBarCtrl::按鍵](#isbuttonpressed)|告訴是否按下工具列控制件中的指定按鈕。|
+|[CToolBarCtrl::載入影像](#loadimages)|將點陣圖載入到工具列控制的影像清單中。|
+|[CToolBarCtrl::地圖加速器](#mapaccelerator)|將快捷鍵字元映射到工具列按鈕。|
+|[CToolBarCtrl::標記按鈕](#markbutton)|設置工具列控制項中給定按鈕的突出顯示狀態。|
+|[CToolBarCtrl:: 移動按鈕](#movebutton)|將按鈕從一個索引移動到另一個索引。|
+|[CToolBarCtrl::PresButton](#pressbutton)|按下或釋放工具列控制件中的指定按鈕。|
+|[CToolBarCtrl::取代位圖](#replacebitmap)|將當前工具列控制件中的現有點陣圖替換為新的點陣圖。|
+|[CToolBarCtrl::恢復狀態](#restorestate)|還原工具列控件的狀態。|
+|[CToolBarCtrl::儲存狀態](#savestate)|保存工具列控件的狀態。|
+|[CToolBarCtrl::設置錨點高光](#setanchorhighlight)|設置工具列的錨點高光設置。|
+|[CToolBarCtrl::設定點陣圖大小](#setbitmapsize)|設置要添加到工具列控制件的位映射影像的大小。|
+|[CToolBarCtrl::設定按鈕資訊](#setbuttoninfo)|設置工具列中現有按鈕的資訊。|
+|[CToolBarCtrl::設定按鈕大小](#setbuttonsize)|設置要添加到工具列控制件的按鈕的大小。|
+|[CToolBarctrl::設定按鈕的大小](#setbuttonstructsize)|指定結構的大小`TBBUTTON`。|
+|[CToolBarCtrl::設定按鈕寬度](#setbuttonwidth)|設置工具列控制件中的最小和最大按鈕寬度。|
+|[CToolBarCtrl::SetCmdID](#setcmdid)|設定在按下指定按鈕時要發送到所有者視窗的命令識別碼。|
+|[CToolBarCtrl::設定顏色機制](#setcolorscheme)|設置當前工具列控件的色彩配置。|
+|[CToolBarCtrl::設定關閉影像清單](#setdisabledimagelist)|設定工具列控制項將用於顯示禁用按鈕的圖像清單。|
+|[CToolBarCtrl::設定繪製文字標誌](#setdrawtextflags)|設定 Win32 函數[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中的標誌 ,用於在指定的矩形中繪製文本,根據標誌的設置方式進行格式化。|
+|[CToolBarCtrl::設定式延伸樣式](#setextendedstyle)|設置工具列控件的擴展樣式。|
+|[CToolBarCtrl::設定HotImage清單](#sethotimagelist)|設定工具列控制項將用於顯示「熱」按鈕的圖像清單。|
+|[CToolBarCtrl::設定Hot專案](#sethotitem)|在工具列中設置熱項。|
+|[CToolBarCtrl::設定影像清單](#setimagelist)|設定工具列用於顯示處於預設狀態的按鈕的圖像清單。|
+|[CToolBarctrl:setindent](#setindent)|設置工具列控制項中第一個按鈕的縮進。|
+|[CToolBarCtrl::設定插入標記](#setinsertmark)|設定工具列的目前插入標記。|
+|[CToolBarCtrl::設定插入標記顏色](#setinsertmarkcolor)|設置用於繪製工具列插入標記的顏色。|
+|[CToolBarCtrl::設定MaxTextRows](#setmaxtextrows)|設定工具列按鈕上顯示的最大文本行數。|
+|[CToolBarCtrl::設定指標](#setmetrics)|設置工具列控件的指標。|
+|[CToolBarCtrl::SetOwner](#setowner)|設置視窗以接收來自工具列控制項的通知訊息。|
+|[CToolBarCtrl::設定](#setpadding)|設置當前工具列控制件的水準和垂直填充。|
+|[CToolBarCtrl::設定被壓抑的影像清單](#setpressedimagelist)|設定當前工具列控制項用於表示處於按下狀態的按鈕的圖像清單。|
+|[CToolBarCtrl::SetRows](#setrows)|設定工具列中顯示的按鈕行數。|
+|[CToolBarCtrl::設定狀態](#setstate)|設定工具列控制項中指定按鈕的狀態。|
+|[CToolBarCtrl::設定樣式](#setstyle)|設置工具列控件的樣式。|
+|[CToolBarCtrl::設定工具提示](#settooltips)|將工具尖端控制件與工具列控制件關聯。|
+|[CToolBarctrl::設定視窗主題](#setwindowtheme)|設置工具列控件的可視樣式。|
 
 ## <a name="remarks"></a>備註
 
-這個控制項（因此 `CToolBarCtrl` 類別）僅適用于在 Windows 95/98 和 Windows NT 3.51 版和更新版本下執行的程式。
+此控制項(因此該`CToolBarCtrl`類別)僅適用於在 Windows 95/98 和 Windows NT 版本 3.51 及更高版本下運行的程式。
 
-Windows 工具列通用控制項是矩形子視窗，其中包含一或多個按鈕。 這些按鈕可以顯示點陣圖影像、字串或兩者。 當使用者選擇按鈕時，它會將命令訊息傳送至工具列的擁有者視窗。 一般而言，工具列中的按鈕會對應至應用程式功能表中的專案;它們提供更直接的方式讓使用者存取應用程式的命令。
+Windows 工具列公共控制項是包含一個或多個按鈕的矩形子視窗。 這些按鈕可以顯示位圖圖像、字串或兩者。 當用戶選擇一個按鈕時,它會向工具列的所有者視窗發送命令消息。 通常,工具列中的按鈕對應於應用程式功能表中的項;它們為使用者提供了一種更直接的方式來訪問應用程式的命令。
 
-`CToolBarCtrl` 物件包含幾個重要的內部資料結構：按鈕影像點陣圖或影像清單的清單、按鈕標籤字串的清單，以及一份 `TBBUTTON` 結構清單，這些架構會將影像和/或字串與按鈕的位置、樣式、狀態和命令識別碼產生關聯。 這些資料結構的每個元素都是以零為基底的索引來參考。 在您可以使用 `CToolBarCtrl` 物件之前，您必須先設定這些資料結構。 字串清單只能用於按鈕標籤;您無法從工具列抓取字串。
+`CToolBarCtrl`物件包含幾個重要的內部數據結構:按鈕圖像位圖或圖像清單的清單、按鈕標籤字串的清單以及將圖像和/或字串與按鈕的位置`TBBUTTON`、樣式、狀態和命令 ID 相關聯的結構清單。 這些數據結構的每個元素都用零基索引來引用。 在使用`CToolBarCtrl`物件之前,必須設置這些數據結構。 字串清單只能用於按鈕標籤;因此,字串清單只能用於按鈕標籤。無法從工具列檢索字串。
 
 若要使用 `CToolBarCtrl` 物件，您通常會執行下列步驟：
 
 1. 建構 `CToolBarCtrl` 物件。
 
-1. 呼叫[create](#create)以建立 Windows 工具列通用控制項，並將它附加至 `CToolBarCtrl` 物件。 使用樣式（例如透明工具列的 TBSTYLE_TRANSPARENT，或支援下拉式樣式按鈕之工具列的 TBSTYLE_DROPDOWN），表示工具列的樣式。
+1. 呼叫[「創建](#create)」以創建 Windows 工具列通用控制項並將`CToolBarCtrl`其附加到 物件。 使用樣式指示工具列的樣式,例如為透明工具列TBSTYLE_TRANSPARENT,或支援下拉樣式按鈕的工具列TBSTYLE_DROPDOWN。
 
-1. 識別您想要如何顯示工具列上的按鈕：
+1. 確定您希望工具列上的按鈕顯示方式:
 
-   - 若要使用按鈕的點陣圖影像，請呼叫[AddBitmap](#addbitmap)，將按鈕點陣圖新增至工具列。
+   - 要將點陣圖圖像用於按鈕,請透過調用[AddBitmap](#addbitmap)將按鈕點陣圖添加到工具列。
 
-   - 若要使用顯示自影像清單中按鈕的影像，請呼叫[SetImageList](#setimagelist)、 [SetHotImageList](#sethotimagelist)或[SetDisabledImageList](#setdisabledimagelist)來指定影像清單。
+   - 要使用從影像清單中顯示的圖像進行按鈕,請透過調用[SetImageList、SetHotImageList](#sethotimagelist)或[「設定禁用影像清單](#setdisabledimagelist)」來[SetImageList](#setimagelist)指定影像清單。
 
-   - 若要使用按鈕的字串標籤，請呼叫[AddString](#addstring)和/或[AddStrings](#addstrings)，將字串新增至工具列。
+   - 要對按鈕使用字串標籤,請使用調用[AddString](#addstring)和/或[AddString](#addstrings)將字串添加到工具列中。
 
-1. 藉由呼叫[AddButtons](#addbuttons)，將按鈕結構新增至工具列。
+1. 通過調用[AddButton](#addbuttons)向工具列添加按鈕結構。
 
-1. 如果您想要在不是 `CFrameWnd`的主控視窗中使用工具列按鈕的工具提示，您必須在工具列的 [擁有者] 視窗中處理 TTN_NEEDTEXT 訊息，如[處理工具提示通知](../../mfc/handling-tool-tip-notifications.md)中所述。 如果工具列的父視窗是衍生自 `CFrameWnd`，就會顯示工具提示，而不會有任何額外的麻煩，因為 `CFrameWnd` 提供預設的處理常式。
+1. 如果要在擁有者視窗中的工具列按鈕(不是`CFrameWnd`)中尋找工具提示,則需要處理工具列擁有者視窗中TTN_NEEDTEXT消息,如[「處理工具提示通知」](../../mfc/handling-tool-tip-notifications.md)中所述。 如果工具列的父視窗派生自`CFrameWnd`,則不會顯示工具提示,`CFrameWnd`因為提供了默認處理程式,因此無需進行任何額外工作。
 
-1. 如果您想要讓使用者能夠自訂工具列，請在擁有者視窗中處理自訂通知訊息，如[處理自訂通知](../../mfc/handling-customization-notifications.md)中所述。
+1. 如果希望用戶能夠自定義工具列,請在擁有者視窗中處理自定義通知消息,如[處理自定義通知](../../mfc/handling-customization-notifications.md)中所述。
 
-您可以使用[SaveState](#savestate) ，將工具列控制項的目前狀態儲存在登錄和[RestoreState](#restorestate)中，以根據先前儲存在登錄中的資訊來還原狀態。 除了在應用程式的使用方式之間儲存工具列狀態以外，應用程式通常會在使用者開始自訂工具列之前儲存狀態，以免使用者之後想要將工具列還原至其原始狀態。
+您可以使用[SaveState](#savestate)在註冊表和[RestoreState](#restorestate)中保存工具列控件的當前狀態,以便根據以前存儲在註冊表中的資訊還原狀態。 除了在應用程式使用之間保存工具列狀態外,應用程式通常在使用者開始自定義工具列之前存儲該狀態,以防用戶以後希望將工具列還原到其原始狀態。
 
-## <a name="support-for-internet-explorer-version-40-and-later"></a>支援 Internet Explorer 4.0 和更新版本
+## <a name="support-for-internet-explorer-version-40-and-later"></a>支援 IE 瀏覽器版本 4.0 及更高版本
 
-為了支援 Internet Explorer 4.0 和更新版本中引進的功能，MFC 為工具列控制項提供影像清單支援和透明和平面樣式。
+為了支援 Internet Explorer 版本 4.0 及更高版本中引入的功能,MFC 為工具列控制件提供圖像清單支援以及透明和平面樣式。
 
-透明工具列可讓工具列底下的用戶端顯示。 若要建立透明工具列，請同時使用 TBSTYLE_FLAT 和 TBSTYLE_TRANSPARENT 樣式。 透明工具列功能熱門追蹤;也就是說，當滑鼠指標移至工具列上的 [作用中] 按鈕上方時，按鈕的外觀就會變更。 只使用 TBSTYLE_FLAT 樣式建立的工具列，將包含不是透明的按鈕。
+透明工具列允許工具列下的用戶端顯示通過。 要創建透明工具列,請使用TBSTYLE_FLAT和TBSTYLE_TRANSPARENT樣式。 透明工具列具有熱跟蹤功能;也就是說,當滑鼠指標在工具列上的熱按鈕上移動時,按鈕的外觀會發生變化。 僅使用TBSTYLE_FLAT樣式創建的工具列將包含不透明的按鈕。
 
-影像清單支援可讓控制項對預設行為、熱映射和已停用的映射具有更大的彈性。 使用[GetImageList](#getimagelist)、 [GetHotImageList](#gethotimagelist)和[GetDisabledImageList](#getdisabledimagelist)搭配透明工具列，根據影像的狀態操作映射：
+圖像清單支援允許對預設行為、熱圖像和禁用圖像進行更大的靈活性。 使用[GetImageList、GetHotImageList](#gethotimagelist)和[「取得禁用影像清單](#getdisabledimagelist)」使用透明工具列根據其[GetImageList](#getimagelist)狀態操作影像:
 
-如需使用 `CToolBarCtrl`的詳細資訊，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CToolBarCtrl](../../mfc/using-ctoolbarctrl.md)。
+有關`CToolBarCtrl`使用的詳細資訊,請參閱[控制項](../../mfc/controls-mfc.md)[和使用 CToolBarCtrl](../../mfc/using-ctoolbarctrl.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -353,9 +353,9 @@ Windows 工具列通用控制項是矩形子視窗，其中包含一或多個按
 
 **標頭：** afxcmn.h
 
-##  <a name="addbitmap"></a>CToolBarCtrl：： AddBitmap
+## <a name="ctoolbarctrladdbitmap"></a><a name="addbitmap"></a>CToolBarCtrl:: 新增位元圖
 
-將一或多個按鈕影像新增至儲存在工具列控制項中的按鈕影像清單。
+將一個或多個按鈕圖像添加到工具列控制項中儲存的按鈕圖像清單中。
 
 ```
 int AddBitmap(
@@ -369,26 +369,26 @@ int AddBitmap(
 
 ### <a name="parameters"></a>參數
 
-*nNumButtons*<br/>
-點陣圖中的按鈕影像數目。
+*NNumButtons*<br/>
+點陣圖中的按鈕圖像數。
 
 *nBitmapID*<br/>
-包含要加入的按鈕影像或影像之點陣圖的資源識別碼。
+包含要添加的按鈕圖像或圖像的位圖的資源標識碼。
 
 *pBitmap*<br/>
-`CBitmap` 物件的指標，其中包含要加入的按鈕影像或影像。
+指向包含要`CBitmap`添加的按鈕圖像或圖像的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為第一個新影像以零為基底的索引;否則為-1。
+第一個新圖像的零基索引(如果成功);否則 - 1。
 
 ### <a name="remarks"></a>備註
 
-您可以使用 Windows API [CreateMappedBitmap](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap)來對應色彩，然後再將點陣圖新增至工具列。 如果您將指標傳遞給 `CBitMap` 物件，您必須確定點陣圖在終結工具列之後才會終結。
+在將點陣圖添加到工具列之前,可以使用 Windows API[創建映射位映射](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap)來映射顏色。 如果將指標傳遞給`CBitMap`物件,則必須確保在銷毀工具列之前不會銷毀位圖。
 
-##  <a name="addbuttons"></a>CToolBarCtrl：： AddButtons
+## <a name="ctoolbarctrladdbuttons"></a><a name="addbuttons"></a>CToolBarCtrl:: 新增按鈕
 
-在工具列控制項中加入一個或多個按鈕。
+將一個或多個按鈕添加到工具列控制項。
 
 ```
 BOOL AddButtons(
@@ -398,11 +398,11 @@ BOOL AddButtons(
 
 ### <a name="parameters"></a>參數
 
-*nNumButtons*<br/>
-要新增的按鈕數目。
+*NNumButtons*<br/>
+要添加的按鈕數。
 
 *lpButtons*<br/>
-`TBBUTTON` 結構陣列的位址，其中包含要加入之按鈕的相關資訊。 陣列中的元素數目必須與*nNumButtons*指定的按鈕相同。
+包含要添加的按鈕`TBBUTTON`的資訊的結構陣列的位址。 陣列中的元素數必須與*nNumButton 指定的*按鈕數量相同。
 
 ### <a name="return-value"></a>傳回值
 
@@ -410,7 +410,7 @@ BOOL AddButtons(
 
 ### <a name="remarks"></a>備註
 
-*LpButtons*指標指向 `TBBUTTON` 結構的陣列。 每個 `TBBUTTON` 結構都會將新增的按鈕與按鈕的樣式、影像和/或字串、命令識別碼、狀態和使用者定義的資料產生關聯：
+*lpButtons*指標指向結構陣列`TBBUTTON`。 每個`TBBUTTON`結構將新增的按鈕與按鈕的樣式、影像和/或字串、命令 ID、狀態和使用者定義的資料關聯:
 
 ```cpp
 typedef struct _TBBUTTON {
@@ -423,59 +423,59 @@ typedef struct _TBBUTTON {
 } TBBUTTON;
 ```
 
-成員如下所示：
+成員如下:
 
 - `iBitmap`
 
-   按鈕影像的以零為起始的索引，如果沒有此按鈕的影像，則為-1。
+   按鈕圖像的零索引,如果此按鈕沒有圖像,則為 -1。
 
 - `idCommand`
 
-   與按鈕相關聯的命令識別碼。 選擇按鈕時，會在 WM_COMMAND 訊息中傳送此識別碼。 如果 `fsStyle` 成員具有 TBSTYLE_SEP 值，則此成員必須為零。
+   與按鈕關聯的命令標識碼。 選擇按鈕時,該標識符以WM_COMMAND消息發送。 如果`fsStyle`成員具有TBSTYLE_SEP值,則此成員必須為零。
 
 - `fsState`
 
-   按鈕狀態旗標。 它可以是下列值的組合：
+   按鈕狀態標誌。 它可以是下面列出的值的組合:
 
-   - TBSTATE_CHECKED 按鈕具有 TBSTYLE_CHECKED 樣式，而且正在按下。
+  - TBSTATE_CHECKED 按鈕具有TBSTYLE_CHECKED樣式,正在按下。
 
-   - TBSTATE_ENABLED 按鈕會接受使用者輸入。 沒有此狀態的按鈕不接受使用者輸入，且呈現灰色。
+  - TBSTATE_ENABLED 該按鈕接受用戶輸入。 沒有此狀態的按鈕不接受使用者輸入,並且為灰色。
 
-   - TBSTATE_HIDDEN 看不到按鈕，也無法接收使用者輸入。
+  - TBSTATE_HIDDEN 該按鈕不可見,無法接收用戶輸入。
 
-   - TBSTATE_INDETERMINATE 按鈕會呈現灰色。
+  - TBSTATE_INDETERMINATE 該按鈕為灰色。
 
-   - TBSTATE_PRESSED 按下按鈕。
+  - TBSTATE_PRESSED 按下按鈕。
 
-   - TBSTATE_WRAP 分行符號會跟隨按鈕。 此按鈕也必須具有 [TBSTATE_ENABLED] 狀態。
+  - TBSTATE_WRAP按鈕後面的換行符。 該按鈕還必須具有TBSTATE_ENABLED狀態。
 
 - `fsStyle`
 
-   按鈕樣式。 它可以是下列值的組合：
+   按鈕樣式。 它可以是下面列出的值的組合:
 
-   - TBSTYLE_BUTTON 建立標準的 [推送] 按鈕。
+  - TBSTYLE_BUTTON 創建標準按鈕。
 
-   - TBSTYLE_CHECK 會建立一個按鈕，在每次使用者按一下時，都會在按下和 unpressed 狀態之間切換。 當按鈕處於已按下的狀態時，其背景色彩會不同。
+  - TBSTYLE_CHECK 創建一個按鈕,每次使用者按下狀態和未按下狀態時切換該按鈕。 當按鈕處於按下狀態時,其背景顏色不同。
 
-   - TBSTYLE_CHECKGROUP 會建立一個勾選的核取按鈕，直到按下群組中的另一個按鈕為止。
+  - TBSTYLE_CHECKGROUP 創建一個檢查按鈕,直到按下組中的另一個按鈕。
 
-   - TBSTYLE_GROUP 會建立一個持續按下的按鈕，直到按下群組中的另一個按鈕為止。
+  - TBSTYLE_GROUP 創建一個按鈕,直到按下組中的另一個按鈕。
 
-   - TBSTYLE_SEP 會建立一個分隔符號，在按鈕群組之間提供小間隙。 具有此樣式的按鈕不會接收使用者輸入。
+  - TBSTYLE_SEP 創建分隔符,在按鈕組之間提供一個小間隙。 具有此樣式的按鈕不會接收使用者輸入。
 
 - `dwData`
 
-   使用者定義的資料。
+   使用者定義的數據。
 
 - `iString`
 
-   以零為基底的字串索引，用來做為按鈕的標籤，如果沒有此按鈕的字串，則為-1。
+   字串的零索引用作按鈕的標籤,如果此按鈕沒有字串,則為 -1。
 
-您所提供的索引必須先前已使用[AddBitmap](#addbitmap)、 [AddString](#addstring)和/或[AddStrings](#addstrings)新增至工具列控制項清單的影像和/或字串。
+提供索引的圖像和/或字串以前必須使用[AddBitmap、AddString](#addbitmap)和/或[AddString](#addstrings)添加到工具[AddString](#addstring)列控制項 清單中。
 
-##  <a name="addstring"></a>CToolBarCtrl：： AddString
+## <a name="ctoolbarctrladdstring"></a><a name="addstring"></a>CToolBarCtrl::添加String
 
-將傳遞為資源識別碼的新字串加入至工具列的字串內部清單。
+將作為資源 ID 傳遞的新字串添加到工具列的內部字串清單中。
 
 ```
 int AddString(UINT nStringID);
@@ -483,16 +483,16 @@ int AddString(UINT nStringID);
 
 ### <a name="parameters"></a>參數
 
-*nStringID*<br/>
-要加入工具列控制項字串清單之字串資源的資源識別碼。
+*恩斯特林ID*<br/>
+要加入工具列控制的字串清單的字串資源的資源識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為第一個新增字串的以零為基底的索引;否則為-1。
+如果成功,則添加第一個新字串的零基索引;否則 -1。
 
-##  <a name="addstrings"></a>CToolBarCtrl：： AddStrings
+## <a name="ctoolbarctrladdstrings"></a><a name="addstrings"></a>CToolBarCtrl:: 新增字串
 
-將新的字串或字串加入工具列控制項可用的字串清單。
+將新字串或字串添加到可用於工具列控制件的字串清單中。
 
 ```
 int AddStrings(LPCTSTR lpszStrings);
@@ -500,40 +500,40 @@ int AddStrings(LPCTSTR lpszStrings);
 
 ### <a name="parameters"></a>參數
 
-*lpszStrings*<br/>
-緩衝區的位址，其中包含一或多個以 null 結束的字串，以加入至工具列的字串清單。 最後一個字串必須以兩個 null 字元結束。
+*lpsz字串*<br/>
+包含一個或多個要添加到工具列字串清單的空終止字串的緩衝區的位址。 最後一個字串必須用兩個空字元終止。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為第一個新增字串的以零為基底的索引;否則為-1。
+如果成功,則添加第一個新字串的零基索引;否則 -1。
 
 ### <a name="remarks"></a>備註
 
-緩衝區中的字串必須以 null 字元分隔。 您必須確定最後一個字串有兩個 null 結束字元。 若要適當地格式化常數位串，您可以將它寫成：
+緩衝區中的字串必須用空字元分隔。 必須確保最後一個字串具有兩個空終止符。 要正確格式化常量字串,可以將其編寫為:
 
 [!code-cpp[NVC_MFCControlLadenDialog#72](../../mfc/codesnippet/cpp/ctoolbarctrl-class_1.cpp)]
 
-或：
+或者：
 
 [!code-cpp[NVC_MFCControlLadenDialog#73](../../mfc/codesnippet/cpp/ctoolbarctrl-class_2.cpp)]
 
-您不應該將 `CString` 物件傳遞至此函式，因為 `CString`中不能有一個以上的 null 字元。
+不應將`CString`物件傳遞給此函數,因為不可能在`CString`中具有多個空字元。
 
-##  <a name="autosize"></a>CToolBarCtrl：： AutoSize
+## <a name="ctoolbarctrlautosize"></a><a name="autosize"></a>CToolBarCtrl:自動調整
 
-調整整個工具列控制項的大小。
+調整整個工具列控制元件的大小。
 
-```
+```cpp
 void AutoSize();
 ```
 
 ### <a name="remarks"></a>備註
 
-當父視窗的大小變更時，或工具列的大小變更時（例如當您設定按鈕或點陣圖大小，或加入字串時），您應該呼叫這個函式。
+當父視窗大小發生變化或工具列大小更改時(例如設置按鈕或位圖大小或添加字串時),應呼叫此函數。
 
-##  <a name="changebitmap"></a>CToolBarCtrl：： ChangeBitmap
+## <a name="ctoolbarctrlchangebitmap"></a><a name="changebitmap"></a>CToolBarCtrl::更改位圖
 
-變更目前工具列控制項中按鈕的點陣圖。
+更改當前工具列控制項中按鈕的點陣圖。
 
 ```
 BOOL ChangeBitmap(
@@ -545,28 +545,28 @@ BOOL ChangeBitmap(
 
 |參數|描述|
 |---------------|-----------------|
-|*idButton*|在用來接收新點陣圖之按鈕的命令識別碼。|
-|*iBitmap*|在目前工具列控制項之影像清單中影像以零為基底的索引。|
+|*idButton*|[在]要接收新點陣圖的按鈕的命令識別碼。|
+|*iBitmap*|[在]當前工具列控制件的圖像清單中圖像的基於零的索引。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果此方法成功，系統會在指定的按鈕中顯示指定的影像。
+如果此方法成功,系統將在指定的按鈕中顯示指定的圖像。
 
-這個方法會傳送[TB_CHANGEBITMAP](/windows/win32/Controls/tb-changebitmap)訊息，如 Windows SDK 所述。
+此方法發送[TB_CHANGEBITMAP](/windows/win32/Controls/tb-changebitmap)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會將 [檔案**儲存**] 按鈕的點陣圖變更為 [**關於**] 按鈕的點陣圖。
+以下代碼示例將 **「檔案儲存**」按鈕的位圖更改為 **「關於**」按鈕的點陣圖。
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_3.cpp)]
 
-##  <a name="checkbutton"></a>CToolBarCtrl：： CheckButton
+## <a name="ctoolbarctrlcheckbutton"></a><a name="checkbutton"></a>CToolBarCtrl::檢查按鈕
 
-檢查或清除工具列控制項中的指定按鈕。
+檢查或清除工具列控制件中的給定按鈕。
 
 ```
 BOOL CheckButton(
@@ -577,10 +577,10 @@ BOOL CheckButton(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要檢查或清除之按鈕的命令識別碼。
+要檢查或清除的按鈕的命令識別碼。
 
-*bCheck*<br/>
-TRUE 表示勾選按鈕，FALSE 則會清除。
+*b檢查*<br/>
+TRUE 檢查按鈕,FALSE 將其清除。
 
 ### <a name="return-value"></a>傳回值
 
@@ -588,11 +588,11 @@ TRUE 表示勾選按鈕，FALSE 則會清除。
 
 ### <a name="remarks"></a>備註
 
-當按鈕已核取時，會顯示為已按下。 如果您想要變更一個以上的按鈕狀態，請考慮改為呼叫[SetState](#setstate) 。
+選中按鈕后,該按鈕似乎已按下。 如果要更改多個按鈕狀態,請考慮改為調用[SetState。](#setstate)
 
-##  <a name="commandtoindex"></a>CToolBarCtrl：： CommandToIndex
+## <a name="ctoolbarctrlcommandtoindex"></a><a name="commandtoindex"></a>CToolBarctrl::命令索引
 
-針對與指定的命令識別碼相關聯的按鈕，抓取以零為起始的索引。
+檢索與指定命令標識符關聯的按鈕的零基索引。
 
 ```
 UINT CommandToIndex(UINT nID) const;
@@ -601,17 +601,17 @@ UINT CommandToIndex(UINT nID) const;
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-您想要尋找其按鈕索引的命令識別碼。
+要查找其按鈕索引的命令 ID。
 
 ### <a name="return-value"></a>傳回值
 
-與命令 ID 相關聯之按鈕的以零為起始的索引。
+與命令 ID 關聯的按鈕的零基索引。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="create"></a>CToolBarCtrl：： Create
+## <a name="ctoolbarctrlcreate"></a><a name="create"></a>CToolBarCtrl::建立
 
-建立 toolbar 控制項並將它附加至 `CToolBarCtrl` 物件。
+創建工具列控制項並將其附加到`CToolBarCtrl`物件。
 
 ```
 virtual BOOL Create(
@@ -624,13 +624,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定工具列控制項的樣式。 工具列必須一律具有 WS_CHILD 樣式。 此外，您可以指定工具列樣式和視窗樣式的任何組合，如 [**備註**] 底下所述。
+指定工具列控制件的樣式。 工具欄必須始終具有WS_CHILD樣式。 此外,還可以指定工具列樣式和視窗樣式的任意組合,如**備註**項下所述。
 
-*各種*<br/>
-選擇性地指定工具列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+*矩形*<br/>
+可選地指定工具列控制的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
-*pParentWnd*<br/>
-指定工具列控制項的父視窗。 它不得為 NULL。
+*pparentwnd*<br/>
+指定工具列控制的父視窗。 它不得為 NULL。
 
 *nID*<br/>
 指定工具列控制項的識別碼。
@@ -641,27 +641,27 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-您可以使用兩個步驟來建立 `CToolBarCtrl`。 首先，呼叫此函式，然後呼叫 `Create`，這會建立 toolbar 控制項並將其附加至 `CToolBarCtrl` 物件。 將下列視窗樣式套用到工具列控制項。
+在兩個步驟`CToolBarCtrl`中構造 一個。 首先調用構造函數,然後調用`Create`,這將創建工具列控件並將其附加`CToolBarCtrl`到 物件。 將以下視窗樣式應用於工具列控制件。
 
-- 一律 WS_CHILD
+- WS_CHILD始終
 
 - WS_VISIBLE 通常
 
-- WS_DISABLED 很少
+- WS_DISABLED很少
 
-如需視窗樣式的說明，請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
+有關視窗樣式的說明,請參閱 Windows SDK 中[建立視窗](/windows/win32/api/winuser/nf-winuser-createwindoww)。
 
-（選擇性）套用[通用控制項樣式](/windows/win32/Controls/common-control-styles)的組合，如 Windows SDK 中所述。
+或者,應用[通用控件樣式](/windows/win32/Controls/common-control-styles)的組合,如 Windows SDK 中所述。
 
-將工具列樣式的組合套用至控制項或按鈕本身。 樣式會在 Windows SDK 中的[工具列控制項和按鈕樣式](/windows/win32/Controls/toolbar-control-and-button-styles)中說明。
+將工具列樣式的組合應用於控制項或按鈕本身。 這些樣式在 Windows SDK 中的主題[工具列控件和按鈕樣式](/windows/win32/Controls/toolbar-control-and-button-styles)中介紹。
 
-若要使用擴充工具列樣式，請在呼叫 `Create`之後呼叫[SetExtendedStyle](#setextendedstyle) 。 若要建立具有延伸視窗樣式的工具列，請呼叫[CToolBarCtrl：： CreateEx](#createex) ，而不是 `Create`。
+要使用延伸工具列樣式,請呼叫`Create`後呼叫 Set[延伸樣式](#setextendedstyle)。 要建立式延伸視窗樣式的工具列,請致電[CToolBarCtrl::createEx](#createex)而不是`Create`。
 
-工具列控制項會自動設定工具列視窗的大小和位置。 高度是以工具列中按鈕的高度為基礎。 寬度與父視窗工作區的寬度相同。 [CCS_TOP] 和 [CCS_BOTTOM] 樣式會決定工具列是否沿著工作區的頂端或底部放置。 根據預設，工具列具有 CCS_TOP 樣式。
+工具列控制項會自動設定工具列視窗的大小和位置。 高度基於工具列中按鈕的高度。 寬度與父視窗工作區的寬度相同。 CCS_TOP和CCS_BOTTOM樣式確定工具列是沿工作區的頂部還是底部放置。 默認情況下,工具列具有CCS_TOP樣式。
 
-##  <a name="createex"></a>CToolBarCtrl：： CreateEx
+## <a name="ctoolbarctrlcreateex"></a><a name="createex"></a>CToolBarCtrl::建立Ex
 
-建立控制項（子視窗），並將它與 `CToolBarCtrl` 物件產生關聯。
+創建控制項(子視窗),並將其與`CToolBarCtrl`物件關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -675,19 +675,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定所要建立之控制項的延伸樣式。 如需擴充 Windows 樣式的清單，請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
+指定要創建的控制項的擴充樣式。 有關擴展 Windows 樣式的清單,請參閱 Windows SDK 中[創建 WindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-指定工具列控制項的樣式。 工具列必須一律具有 WS_CHILD 樣式。 此外，您可以指定工具列樣式和視窗樣式的任何組合，如[建立](#create)的 [**備註**] 區段中所述。
+指定工具列控制件的樣式。 工具欄必須始終具有WS_CHILD樣式。 此外,還可以指定工具列樣式和視窗樣式的任意組合,如[「創建](#create)**」的備註**部分所述。
 
-*各種*<br/>
-[矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考，描述要建立之視窗的大小和位置，以*pParentWnd*的用戶端座標表示。
+*矩形*<br/>
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
-*pParentWnd*<br/>
-做為控制項父系之視窗的指標。
+*pparentwnd*<br/>
+指向控件的父視窗的指標。
 
 *nID*<br/>
-控制項的子視窗識別碼。
+控制項的子視窗 ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -695,9 +695,9 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用 `CreateEx` 而非[Create](#create)來套用擴充的 windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。 `CreateEx` 會使用*dwExStyle*所指定的擴充 Windows 樣式來建立控制項。 使用[SetExtendedStyle](#setextendedstyle)設定控制項特定的擴充樣式。 例如，使用 `CreateEx` 將這類樣式設定為 WS_EX_CONTEXTHELP，但使用 `SetExtendedStyle` 將這類樣式設定為 TBSTYLE_EX_DRAWDDARROWS。 如需詳細資訊，請參閱 Windows SDK 中的[工具列擴充樣式](/windows/win32/Controls/toolbar-extended-styles)中所述的樣式。
+使用`CreateEx`而不是[「創建](#create)」來應用擴展的 Windows 樣式,該樣式由 Windows 擴充樣式前言**WS_EX_** 指定。 `CreateEx`使用*dwExStyle*指定的擴展 Windows 樣式創建控制項。 使用[Set 擴充樣式](#setextendedstyle)設定特定於控制項的擴充樣式。 例如,用於`CreateEx`將此類樣式設置為WS_EX_CONTEXTHELP,但用於`SetExtendedStyle`將此類樣式設置為TBSTYLE_EX_DRAWDDARROWS。 有關詳細資訊,請參閱 Windows SDK 中的[工具列擴充樣式中描述的樣式](/windows/win32/Controls/toolbar-extended-styles)。
 
-##  <a name="ctoolbarctrl"></a>CToolBarCtrl：： CToolBarCtrl
+## <a name="ctoolbarctrlctoolbarctrl"></a><a name="ctoolbarctrl"></a>CToolBarCtrl:CToolBarCtrl
 
 建構 `CToolBarCtrl` 物件。
 
@@ -707,21 +707,21 @@ CToolBarCtrl();
 
 ### <a name="remarks"></a>備註
 
-您必須呼叫[Create](#create) ，讓工具列可供使用。
+必須調用[Create](#create)以使工具列可用。
 
-##  <a name="customize"></a>CToolBarCtrl：：自訂
+## <a name="ctoolbarctrlcustomize"></a><a name="customize"></a>CToolBarCtrl:自訂
 
-顯示 [自訂工具列] 對話方塊。
+顯示「自訂工具列」對話框。
 
-```
+```cpp
 void Customize();
 ```
 
 ### <a name="remarks"></a>備註
 
-這個對話方塊可讓使用者藉由新增和刪除按鈕來自訂工具列。 若要支援自訂，工具列的父視窗必須處理自訂通知訊息，如[處理自訂通知](../../mfc/handling-customization-notifications.md)中所述。 您的工具列也必須以 CCS_ADJUSTABLE 樣式建立，如[CToolBarCtrl：： Create](#create)中所述。
+此對話框允許用戶透過添加和刪除按鈕來自定義工具列。 要支援自定義,工具列的父窗口必須處理自定義通知消息,如[處理自定義通知](../../mfc/handling-customization-notifications.md)中所述。 工具列也必須使用CCS_ADJUSTABLE樣式創建,如[CToolBarCtrl::create](#create)中所述。
 
-##  <a name="deletebutton"></a>CToolBarCtrl：:D eleteButton
+## <a name="ctoolbarctrldeletebutton"></a><a name="deletebutton"></a>CToolBarCtrl::DeleteButton
 
 從工具列控制項中刪除按鈕。
 
@@ -732,7 +732,7 @@ BOOL DeleteButton(int nIndex);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-要刪除的按鈕之以零為基底的索引。
+要刪除的按鈕的零索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -740,9 +740,9 @@ BOOL DeleteButton(int nIndex);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="enablebutton"></a>CToolBarCtrl：： EnableButton
+## <a name="ctoolbarctrlenablebutton"></a><a name="enablebutton"></a>CToolBarCtrl:開啟按鈕
 
-啟用或停用工具列控制項中指定的按鈕。
+啟用或禁用工具列控制件中的指定按鈕。
 
 ```
 BOOL EnableButton(
@@ -753,10 +753,10 @@ BOOL EnableButton(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要啟用或停用之按鈕的命令識別碼。
+要啟用或禁用按鈕的命令識別碼。
 
-*bEnable*<br/>
-TRUE 表示啟用按鈕;FALSE 表示停用按鈕。
+*b 啟用*<br/>
+TRUE 啟用按鈕;FALSE 以禁用按鈕。
 
 ### <a name="return-value"></a>傳回值
 
@@ -764,11 +764,11 @@ TRUE 表示啟用按鈕;FALSE 表示停用按鈕。
 
 ### <a name="remarks"></a>備註
 
-當按鈕已啟用時，可以按下並加以核取。 如果您想要變更一個以上的按鈕狀態，請考慮改為呼叫[SetState](#setstate) 。
+啟用按鈕后,可以按下並檢查該按鈕。 如果要更改多個按鈕狀態,請考慮改為調用[SetState。](#setstate)
 
-##  <a name="getanchorhighlight"></a>CToolBarCtrl：： GetAnchorHighlight
+## <a name="ctoolbarctrlgetanchorhighlight"></a><a name="getanchorhighlight"></a>CToolBarCtrl::取得錨點突出顯示
 
-抓取工具列的錨點醒目提示設定。
+檢索工具列的錨點高光設置。
 
 ```
 BOOL GetAnchorHighlight() const;
@@ -776,15 +776,15 @@ BOOL GetAnchorHighlight() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果是非零值，則會啟用錨點反白顯示。 如果為零，則會停用錨點反白顯示。
+如果未為零,則啟用錨點突出顯示。 如果為零,則禁用錨點突出顯示。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETANCHORHIGHLIGHT](/windows/win32/Controls/tb-getanchorhighlight)Win32 訊息的行為。
+此成員函數實現 Win32 消息[的行為TB_GETANCHORHIGHLIGHT](/windows/win32/Controls/tb-getanchorhighlight),如 Windows SDK 中所述。
 
-##  <a name="getbitmap"></a>CToolBarCtrl：： GetBitmap
+## <a name="ctoolbarctrlgetbitmap"></a><a name="getbitmap"></a>CToolBarCtrl::取得位元圖
 
-抓取與工具列中的按鈕相關聯之點陣圖的索引。
+檢索與工具列中的按鈕關聯的位圖的索引。
 
 ```
 int GetBitmap(int nID) const;
@@ -793,19 +793,19 @@ int GetBitmap(int nID) const;
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要抓取其點陣圖索引之按鈕的命令識別碼。
+要檢索其位圖索引的按鈕的命令標識碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回點陣圖的索引，否則為零。
+如果成功,則返回位圖的索引,否則返回零。
 
 ### <a name="remarks"></a>備註
 
-在 Windows SDK 中執行[TB_GETBITMAP](/windows/win32/Controls/tb-getbitmap)的功能。
+在 Windows SDK 中實現[TB_GETBITMAP](/windows/win32/Controls/tb-getbitmap)的功能。
 
-##  <a name="getbitmapflags"></a>CToolBarCtrl：： GetBitmapFlags
+## <a name="ctoolbarctrlgetbitmapflags"></a><a name="getbitmapflags"></a>CToolBarCtrl::取得位式射標記
 
-從工具列抓取點陣圖旗標。
+從工具列檢索位圖標誌。
 
 ```
 UINT GetBitmapFlags() const;
@@ -813,15 +813,15 @@ UINT GetBitmapFlags() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果顯示可以支援大型工具列點陣圖，則為已設定 TBBF_LARGE 旗標的 UINT，否則為清除。
+如果顯示螢幕可以支援大型工具列位圖,則具有TBBF_LARGE標誌集的 UINT,否則清除。
 
 ### <a name="remarks"></a>備註
 
-在建立工具列之後，以及將點陣圖新增至工具列之前，您應該呼叫它。 傳回值指出顯示器是否支援大型點陣圖。 如果顯示支援大型點陣圖，而且您選擇使用它們，請先呼叫[SetBitmapSize](#setbitmapsize)和[SetButtonSize](#setbuttonsize) ，然後再使用[AddBitmap](#addbitmap)新增您的大型點陣圖。
+應在創建工具列後,但在將位圖添加到工具列之前調用它。 返回值指示顯示器是否支援大點圖。 如果顯示支援大位圖,並且如果您選擇使用它們,請調用[SetBitmapSize 和](#setbitmapsize) [SetButtonSize,](#setbuttonsize)然後再使用[AddBitmap](#addbitmap)添加大點陣圖。
 
-##  <a name="getbutton"></a>CToolBarCtrl：： GetButton
+## <a name="ctoolbarctrlgetbutton"></a><a name="getbutton"></a>CToolBarCtrl:取得按鈕
 
-抓取工具列控制項中指定之按鈕的相關資訊。
+檢索有關工具列控件中指定按鈕的資訊。
 
 ```
 BOOL GetButton(
@@ -832,18 +832,18 @@ BOOL GetButton(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-要取得其資訊的按鈕之以零為起始的索引。
+用於檢索資訊的按鈕的零索引。
 
 *lpButton*<br/>
-要接收按鈕資訊複本之 `TBBUTTON` 結構的位址。 如需 `TBBUTTON` 結構的詳細資訊，請參閱[CToolBarCtrl：： AddButtons](#addbuttons) 。
+要接收按鈕`TBBUTTON`資訊複本的結構的位址。 有關結構的資訊`TBBUTTON`, 請參考[CToolBarCtrl: 新增按鈕](#addbuttons)。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則不為零，否則為 0。
 
-##  <a name="getbuttoncount"></a>CToolBarCtrl：： GetButtonCount
+## <a name="ctoolbarctrlgetbuttoncount"></a><a name="getbuttoncount"></a>CToolBarCtrl::取得按鈕計數
 
-抓取目前在工具列控制項中的按鈕計數。
+檢索工具列控件中當前按鈕的計數。
 
 ```
 int GetButtonCount() const;
@@ -853,9 +853,9 @@ int GetButtonCount() const;
 
 按鈕的計數。
 
-##  <a name="getbuttoninfo"></a>CToolBarCtrl：： GetButtonInfo
+## <a name="ctoolbarctrlgetbuttoninfo"></a><a name="getbuttoninfo"></a>CToolBarCtrl::取得按鈕資訊
 
-抓取工具列中按鈕的資訊。
+檢索工具列中按鈕的資訊。
 
 ```
 int GetButtonInfo(
@@ -868,20 +868,20 @@ int GetButtonInfo(
 *nID*<br/>
 按鈕識別碼。
 
-*ptbbi*<br/>
-接收按鈕資訊之[TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow)結構的指標。
+*普特比*<br/>
+指向接收按鈕資訊的[TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為按鈕以零為起始的索引;否則為-1。
+按鈕的零基索引(如果成功);否則 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETBUTTONINFO](/windows/win32/Controls/tb-getbuttoninfo)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETBUTTONINFO](/windows/win32/Controls/tb-getbuttoninfo)的行為,如 Windows SDK 中所述。
 
-##  <a name="getbuttonsize"></a>CToolBarCtrl：： GetButtonSize
+## <a name="ctoolbarctrlgetbuttonsize"></a><a name="getbuttonsize"></a>CToolBarCtrl:取得按鈕大小
 
-取得工具列按鈕的大小。
+獲取工具列按鈕的大小。
 
 ```
 DWORD GetButtonSize() const;
@@ -889,11 +889,11 @@ DWORD GetButtonSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-DWORD 值，分別包含 LOWORD 和 HIWORD 中的 width 和 height 值。
+分別包含 LOWORD 和 HIWORD 中的寬度和高度值的 DWORD 值。
 
-##  <a name="getbuttontext"></a>CToolBarCtrl：： GetButtonText
+## <a name="ctoolbarctrlgetbuttontext"></a><a name="getbuttontext"></a>CToolBarCtrl:取得按鈕文字
 
-抓取目前工具列控制項上指定按鈕的顯示文字。
+檢索目前工具列控制項上指定按鈕的顯示文本。
 
 ```
 CString GetButtonText(int idButton) const;
@@ -903,19 +903,19 @@ CString GetButtonText(int idButton) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*idButton*|在要取得其顯示文字之按鈕的識別碼。|
+|*idButton*|[在]其顯示文本檢索的按鈕的標識符。|
 
 ### <a name="return-value"></a>傳回值
 
-[CString](../../atl-mfc-shared/using-cstring.md) ，其中包含指定按鈕的顯示文字。
+包含指定按鈕的顯示文本的[CString。](../../atl-mfc-shared/using-cstring.md)
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TB_GETBUTTONTEXT](/windows/win32/Controls/tb-getbuttontext)訊息，如 Windows SDK 所述。
+此方法發送[TB_GETBUTTONTEXT](/windows/win32/Controls/tb-getbuttontext)訊息,這在 Windows SDK 中介紹。
 
-##  <a name="getcolorscheme"></a>CToolBarCtrl：： GetColorScheme
+## <a name="ctoolbarctrlgetcolorscheme"></a><a name="getcolorscheme"></a>CToolBarCtrl:取得顏色機制
 
-抓取目前工具列控制項的色彩配置。
+檢索當前工具列控件的色彩配置。
 
 ```
 BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
@@ -925,19 +925,19 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*lpColorScheme*|脫銷接收色彩配置資訊之[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)結構的指標。 當這個方法傳回時，結構會描述工具列控制項的反白顯示色彩和陰影色彩。|
+|*lpColor 計劃*|[出]指向接收顏色機制資訊的[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)結構的指標。 當此方法返回時,結構將描述工具列控件的高光顏色和陰影顏色。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TB_GETCOLORSCHEME](/windows/win32/Controls/tb-getcolorscheme)訊息，如 Windows SDK 所述。
+此方法發送[TB_GETCOLORSCHEME](/windows/win32/Controls/tb-getcolorscheme)消息,這在 Windows SDK 中介紹。
 
-##  <a name="getdisabledimagelist"></a>CToolBarCtrl：： GetDisabledImageList
+## <a name="ctoolbarctrlgetdisabledimagelist"></a><a name="getdisabledimagelist"></a>CToolBarCtrl:取得關閉影像清單
 
-抓取工具列控制項用來顯示已停用按鈕的影像清單。
+檢索工具列控制項用於顯示禁用按鈕的圖像清單。
 
 ```
 CImageList* GetDisabledImageList() const;
@@ -945,15 +945,15 @@ CImageList* GetDisabledImageList() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標，如果未設定任何已停用的影像清單，則為 Null。
+指向[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標,如果未設置禁用的圖像清單,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETDISABLEDIMAGELIST](/windows/win32/Controls/tb-getdisabledimagelist)Win32 訊息的行為。 `GetDisabledImageList` 的 MFC 執行會使用包含工具列控制項按鈕影像的 `CImageList` 物件，而不是影像清單的控制碼。
+此成員函數實現 Win32 消息[TB_GETDISABLEDIMAGELIST](/windows/win32/Controls/tb-getdisabledimagelist)的行為,如 Windows SDK 中所述。 的`GetDisabledImageList`MFC`CImageList`實現使用 包含工具列控制的按鈕影像的物件,而不是影像清單的句柄。
 
-##  <a name="getdroptarget"></a>CToolBarCtrl：： GetDropTarget
+## <a name="ctoolbarctrlgetdroptarget"></a><a name="getdroptarget"></a>CToolBarCtrl::取得DropTarget
 
-抓取 toolbar 控制項的[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)介面。
+檢索工具列控件的[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)介面。
 
 ```
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
@@ -961,20 +961,20 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 
 ### <a name="parameters"></a>參數
 
-*ppDropTarget*<br/>
-指向[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)介面指標的指標。 如果發生錯誤，則會將 Null 指標放在此位址中。
+*ppDrop目標*<br/>
+指向[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)介面指標的指標。 如果發生錯誤,則在此位址中放置 NULL 指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 HRESULT 值，指出作業成功或失敗。
+返回指示操作成功或失敗的 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETOBJECT](/windows/win32/Controls/tb-getobject)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETOBJECT](/windows/win32/Controls/tb-getobject)的行為,如 Windows SDK 中所述。
 
-##  <a name="getextendedstyle"></a>CToolBarCtrl：： GetExtendedStyle
+## <a name="ctoolbarctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CToolBarCtrl::取得式延伸樣式
 
-抓取工具列控制項的延伸樣式。
+檢索工具列控件的擴展樣式。
 
 ```
 DWORD GetExtendedStyle() const;
@@ -982,15 +982,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>傳回值
 
-DWORD，表示目前用於工具列控制項的擴充樣式。 如需樣式的清單，請參閱 Windows SDK 中的[工具列擴充樣式](/windows/win32/Controls/toolbar-extended-styles)。
+表示工具列控制項目前使用的擴充樣式的 DWORD。 有關樣式清單,請參閱 Windows SDK 中的[工具列擴充樣式](/windows/win32/Controls/toolbar-extended-styles)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETEXTENDEDSTYLE](/windows/win32/Controls/tb-getextendedstyle)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETEXTENDEDSTYLE](/windows/win32/Controls/tb-getextendedstyle)的行為,如 Windows SDK 中所述。
 
-##  <a name="gethotimagelist"></a>CToolBarCtrl：： GetHotImageList
+## <a name="ctoolbarctrlgethotimagelist"></a><a name="gethotimagelist"></a>CToolBarCtrl:取得HotImage清單
 
-抓取工具列控制項用來顯示「作用中」按鈕的影像清單。 當滑鼠指標位於其上方時，[作用中] 按鈕會反白顯示。
+檢索工具列控制項用於顯示「熱」按鈕的圖像清單。 當滑鼠指標位於上方時,將顯示一個熱按鈕。
 
 ```
 CImageList* GetHotImageList() const;
@@ -998,15 +998,15 @@ CImageList* GetHotImageList() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標，如果未設定任何已停用的影像清單，則為 Null。
+指向[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標,如果未設置禁用的圖像清單,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETHOTIMAGELIST](/windows/win32/Controls/tb-gethotimagelist)Win32 訊息的行為。 當滑鼠指標位於其上方時，[作用中] 按鈕會反白顯示。
+此成員函數實現 Win32 消息[的行為TB_GETHOTIMAGELIST](/windows/win32/Controls/tb-gethotimagelist),如 Windows SDK 中所述。 當滑鼠指標位於上方時,將顯示一個熱按鈕。
 
-##  <a name="gethotitem"></a>CToolBarCtrl：： GetHotItem
+## <a name="ctoolbarctrlgethotitem"></a><a name="gethotitem"></a>CToolBarCtrl:取得Hot專案
 
-抓取工具列中的熱專案索引。
+檢索工具列中熱項的索引。
 
 ```
 int GetHotItem() const;
@@ -1014,15 +1014,15 @@ int GetHotItem() const;
 
 ### <a name="return-value"></a>傳回值
 
-工具列中的作用中專案之以零為基底的索引。
+工具欄中熱項的零基索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETHOTITEM](/windows/win32/Controls/tb-gethotitem)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETHOTITEM](/windows/win32/Controls/tb-gethotitem)的行為,如 Windows SDK 中所述。
 
-##  <a name="getimagelist"></a>CToolBarCtrl：： GetImageList
+## <a name="ctoolbarctrlgetimagelist"></a><a name="getimagelist"></a>CToolBarCtrl:抓取圖片清單
 
-抓取工具列控制項用來以預設狀態顯示按鈕的影像清單。
+檢索工具列控制項用於以預設狀態顯示按鈕的圖像清單。
 
 ```
 CImageList* GetImageList() const;
@@ -1030,32 +1030,32 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標，如果未設定任何影像清單，則為 Null。
+指向[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標,如果未設置影像清單,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETIMAGELIST](/windows/win32/Controls/tb-getimagelist)Win32 訊息的行為。
+此成員函數實現 Win32 消息[的行為TB_GETIMAGELIST,](/windows/win32/Controls/tb-getimagelist)如 Windows SDK 中所述。
 
-##  <a name="getinsertmark"></a>CToolBarCtrl：： GetInsertMark
+## <a name="ctoolbarctrlgetinsertmark"></a><a name="getinsertmark"></a>CToolBarCtrl::取得插入標記
 
-抓取工具列目前的插入標記。
+檢索工具列的當前插入標記。
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*ptbim*<br/>
-接收插入標記之[TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)結構的指標。
+*普比姆*<br/>
+指向接收插入標記的[TB INSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)結構的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETINSERTMARK](/windows/win32/Controls/tb-getinsertmark)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETINSERTMARK](/windows/win32/Controls/tb-getinsertmark)的行為,如 Windows SDK 中所述。
 
-##  <a name="getinsertmarkcolor"></a>CToolBarCtrl：： GetInsertMarkColor
+## <a name="ctoolbarctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CToolBarCtrl::取得插入標記顏色
 
-抓取用來繪製工具列插入標記的色彩。
+檢索用於繪製工具列插入標記的顏色。
 
 ```
 COLORREF GetInsertMarkColor() const;
@@ -1063,15 +1063,15 @@ COLORREF GetInsertMarkColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含目前插入標記色彩的 COLORRE光圈值。
+包含目前插入標記顏色的 COLORREF 值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETINSERTMARKCOLOR](/windows/win32/Controls/tb-getinsertmarkcolor)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETINSERTMARKCOLOR](/windows/win32/Controls/tb-getinsertmarkcolor)的行為,如 Windows SDK 中所述。
 
-##  <a name="getitemrect"></a>CToolBarCtrl：： GetItemRect
+## <a name="ctoolbarctrlgetitemrect"></a><a name="getitemrect"></a>CToolBarCtrl::取得專案
 
-抓取工具列控制項中按鈕的周框。
+檢索工具列控件中按鈕的邊界矩形。
 
 ```
 BOOL GetItemRect(
@@ -1082,10 +1082,10 @@ BOOL GetItemRect(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-要取得其資訊的按鈕之以零為起始的索引。
+用於檢索資訊的按鈕的零索引。
 
 *lpRect*<br/>
-[矩形](/previous-versions/dd162897\(v=vs.85\))結構的位址，或接收周框座標的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
+接收邊界矩形座標的[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1093,11 +1093,11 @@ BOOL GetItemRect(
 
 ### <a name="remarks"></a>備註
 
-此函式不會針對其狀態設定為 TBSTATE_HIDDEN 的按鈕，抓取周框。
+此函數不檢索其狀態設置為TBSTATE_HIDDEN的按鈕的邊界矩形。
 
-##  <a name="getmaxsize"></a>CToolBarCtrl：： GetMaxSize
+## <a name="ctoolbarctrlgetmaxsize"></a><a name="getmaxsize"></a>CToolBarCtrl:取得最大尺寸
 
-抓取工具列中所有可見按鈕和分隔符號的總大小。
+檢索工具列中所有可見按鈕和分隔符的總大小。
 
 ```
 BOOL GetMaxSize(LPSIZE pSize) const;
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>參數
 
 *pSize*<br/>
-接收專案大小之[大小](/windows/win32/api/windef/ns-windef-size)結構的指標。
+指向接收項大小的[SIZE](/windows/win32/api/windef/ns-windef-size)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1114,11 +1114,11 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETMAXSIZE](/windows/win32/Controls/tb-getmaxsize)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETMAXSIZE](/windows/win32/Controls/tb-getmaxsize)的行為,如 Windows SDK 中所述。
 
-##  <a name="getmaxtextrows"></a>CToolBarCtrl：： GetMaxTextRows
+## <a name="ctoolbarctrlgetmaxtextrows"></a><a name="getmaxtextrows"></a>CToolBarCtrl::取得最大文字列
 
-抓取工具列按鈕上顯示的文字資料列數目上限。
+檢索工具列按鈕上顯示的最大文本行數。
 
 ```
 int GetMaxTextRows() const;
@@ -1126,28 +1126,28 @@ int GetMaxTextRows() const;
 
 ### <a name="return-value"></a>傳回值
 
-工具列按鈕上顯示的文字資料列數目上限。
+工具列按鈕上顯示的最大文本行數。
 
-##  <a name="getmetrics"></a>CToolBarCtrl：： GetMetrics
+## <a name="ctoolbarctrlgetmetrics"></a><a name="getmetrics"></a>CToolBarCtrl:取得指標
 
-抓取 `CToolBarCtrl` 物件的計量。
+檢索`CToolBarCtrl`物件的指標。
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
 ### <a name="parameters"></a>參數
 
 *ptbm*<br/>
-`CToolBarCtrl` 物件之[TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics)結構的指標。
+指向物件的[TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics)`CToolBarCtrl`結構的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[TB_GETMETRICS](/windows/win32/Controls/tb-getmetrics)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[TB_GETMETRICS](/windows/win32/Controls/tb-getmetrics)消息的功能,如 Windows SDK 中所述。
 
-##  <a name="getpadding"></a>CToolBarCtrl：： GetPadding
+## <a name="ctoolbarctrlgetpadding"></a><a name="getpadding"></a>CToolBarCtrl::取得填充
 
-抓取目前工具列控制項的水準和垂直填補。
+檢索當前工具列控件的水準和垂直填充。
 
 ```
 BOOL GetPadding(
@@ -1159,20 +1159,20 @@ BOOL GetPadding(
 
 |參數|描述|
 |---------------|-----------------|
-|*pnHorzPadding*|脫銷一個整數，可接收工具列控制項的水準填補（以圖元為單位）。|
-|*pnVertPadding*|脫銷一個整數，可接收工具列控制項的垂直填補（以圖元為單位）。|
+|*pnHorzPadding*|[出]以像素為單位接收工具列控件的水準填充的整數。|
+|*pnVertpadding*|[出]以像素為單位接收工具列控制件的垂直填充的整數。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TB_GETPADDING](/windows/win32/Controls/tb-getpadding)訊息，如 Windows SDK 所述。
+此方法發送[TB_GETPADDING](/windows/win32/Controls/tb-getpadding)消息,這在 Windows SDK 中介紹。
 
-##  <a name="getpressedimagelist"></a>CToolBarCtrl：： GetPressedImageList
+## <a name="ctoolbarctrlgetpressedimagelist"></a><a name="getpressedimagelist"></a>CToolBarCtrl:抓取被壓影像清單
 
-抓取目前工具列控制項用來代表按下狀態之按鈕的影像清單。
+檢索當前工具列控制項用於表示處於按下狀態的按鈕的圖像清單。
 
 ```
 CImageList* GetPressedImageList();
@@ -1180,15 +1180,15 @@ CImageList* GetPressedImageList();
 
 ### <a name="return-value"></a>傳回值
 
-[CImageList](../../mfc/reference/cimagelist-class.md)的指標，其中包含目前控制項的影像清單，如果沒有設定這類影像清單，則為 Null。
+指向包含當前控制項的影像清單的[CImageList 的](../../mfc/reference/cimagelist-class.md)指標,如果沒有設置此類影像清單,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TB_GETPRESSEDIMAGELIST](/windows/win32/Controls/tb-getpressedimagelist)訊息，如 Windows SDK 所述。
+此方法發送[TB_GETPRESSEDIMAGELIST](/windows/win32/Controls/tb-getpressedimagelist)消息,這在 Windows SDK 中介紹。
 
-##  <a name="getrect"></a>CToolBarCtrl：： GetRect
+## <a name="ctoolbarctrlgetrect"></a><a name="getrect"></a>CToolBarCtrl::取得Rect
 
-抓取指定之工具列按鈕的周框。
+檢索指定工具列按鈕的邊界矩形。
 
 ```
 BOOL GetRect(
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 按鈕識別碼。
 
 *lpRect*<br/>
-[矩形](/previous-versions/dd162897\(v=vs.85\))結構的指標，用來接收周框的資訊。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,用於接收邊界矩形資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1210,11 +1210,11 @@ BOOL GetRect(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETRECT](/windows/win32/Controls/tb-getrect)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETRECT](/windows/win32/Controls/tb-getrect)的行為,如 Windows SDK 中所述。
 
-##  <a name="getrows"></a>CToolBarCtrl：： GetRows
+## <a name="ctoolbarctrlgetrows"></a><a name="getrows"></a>CToolBarCtrl::取得
 
-抓取工具列控制項目前顯示之按鈕的列數。
+檢索工具列控制項目前顯示的按鈕行數。
 
 ```
 int GetRows() const;
@@ -1222,15 +1222,15 @@ int GetRows() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前顯示在工具列上之按鈕的列數。
+工具列上目前顯示的按鈕行數。
 
 ### <a name="remarks"></a>備註
 
-請注意，除非工具列是以 TBSTYLE_WRAPABLE 樣式建立的，否則資料列的數目一律為一個。
+請注意,除非使用TBSTYLE_WRAPABLE樣式創建工具列,否則行數將始終為 1。
 
-##  <a name="getstate"></a>CToolBarCtrl：： GetState
+## <a name="ctoolbarctrlgetstate"></a><a name="getstate"></a>CToolBarCtrl:取得狀態
 
-抓取工具列控制項中指定按鈕的狀態相關資訊，例如是否啟用、按下或核取。
+檢索有關工具列控件中指定按鈕的狀態的資訊,例如是啟用、按下還是選中該按鈕。
 
 ```
 int GetState(int nID) const;
@@ -1239,19 +1239,19 @@ int GetState(int nID) const;
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要取得其資訊之按鈕的命令識別碼。
+要為其檢索資訊的按鈕的命令標識符。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為按鈕狀態資訊，否則為-1。 按鈕狀態資訊可以是[CToolBarCtrl：： AddButtons](#addbuttons)中所列值的組合。
+如果成功或 - 1,按鈕狀態資訊。 按鈕狀態資訊可以是[CToolBarCtrl 中列出的值的組合::addButton。](#addbuttons)
 
 ### <a name="remarks"></a>備註
 
-如果您想要取出一個以上的按鈕狀態，此函式特別有用。 若只要取出一個狀態，請使用下列其中一個成員函式： [IsButtonEnabled](#isbuttonenabled)、 [IsButtonChecked](#isbuttonchecked)、 [IsButtonPressed](#isbuttonpressed)、 [IsButtonHidden](#isbuttonhidden)或[IsButtonIndeterminate](#isbuttonindeterminate)。 不過，`GetState` 成員函式是偵測 TBSTATE_WRAP 按鈕狀態的唯一方法。
+如果要檢索多個按鈕狀態,此功能特別方便。 要檢查一個狀態,請使用以下成員函數之一:[啟用「正在按鈕](#isbuttonenabled)」、「[IsButtonHidden](#isbuttonhidden)[已選擇」 的「不在](#isbuttonchecked)[「「IsButton 不確定」。](#isbuttonindeterminate) [IsButtonPressed](#isbuttonpressed) 但是,`GetState`成員函數是檢測TBSTATE_WRAP按鈕狀態的唯一方法。
 
-##  <a name="getstring"></a>CToolBarCtrl：： GetString
+## <a name="ctoolbarctrlgetstring"></a><a name="getstring"></a>CToolBarCtrl::GetString
 
-抓取工具列字串。
+檢索工具列字串。
 
 ```
 int GetString(
@@ -1270,25 +1270,25 @@ int GetString(
 字串的索引。
 
 *lpstrString*<br/>
-用來傳回字串之緩衝區的指標。
+指向用於返回字串的緩衝區的指標。
 
-*cchMaxLen*<br/>
-緩衝區的長度（以位元組為單位）。
+*chMaxLen*<br/>
+緩衝區的長度(以位元組為單位)。
 
-*str*<br/>
+*Str*<br/>
 字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為字串的長度，如果不是，則為-1。
+如果成功,字串的長度將 -1(如果不是)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_GETSTRING](/windows/win32/Controls/tb-getstring)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_GETSTRING](/windows/win32/Controls/tb-getstring)的行為,如 Windows SDK 中所述。
 
-##  <a name="getstyle"></a>CToolBarCtrl：： GetStyle
+## <a name="ctoolbarctrlgetstyle"></a><a name="getstyle"></a>CToolBarCtrl::取得樣式
 
-取得目前套用至工具列控制項的樣式。
+獲取當前應用於工具列控件的樣式。
 
 ```
 DWORD GetStyle() const;
@@ -1296,11 +1296,11 @@ DWORD GetStyle() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含[工具列控制項樣式](/windows/win32/Controls/toolbar-control-and-button-styles)組合的 DWORD，如 Windows SDK 中所述。
+包含[工具列控制樣式](/windows/win32/Controls/toolbar-control-and-button-styles)組合的 DWORD,如 Windows SDK 中所述。
 
-##  <a name="gettooltips"></a>CToolBarCtrl：： GetToolTips
+## <a name="ctoolbarctrlgettooltips"></a><a name="gettooltips"></a>CToolBarCtrl:抓取工具提示
 
-抓取與 toolbar 控制項相關聯的工具提示控制項的控制碼（如果有的話）。
+檢索與工具列控件關聯的工具尖端控制項的句柄(如果有)。
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -1308,15 +1308,15 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>傳回值
 
-與這個工具列相關聯之[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標，如果工具列沒有相關聯的工具提示控制項，則為 Null。
+如果工具列沒有關聯的工具提示控制項,則指向與此工具列關聯的[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標或 NULL。
 
 ### <a name="remarks"></a>備註
 
-由於 toolbar 控制項通常會建立並維護它自己的工具提示控制項，因此大部分的程式都不需要呼叫這個函式。
+由於工具列控件通常創建並維護其自己的工具提示控件,因此大多數程式不需要調用此函數。
 
-##  <a name="hittest"></a>CToolBarCtrl：： HitTest
+## <a name="ctoolbarctrlhittest"></a><a name="hittest"></a>CToolBarCtrl:hitTest
 
-決定點位於工具列控制項中的位置。
+確定點位於工具列控件的位置。
 
 ```
 int HitTest(LPPOINT ppt) const;
@@ -1324,22 +1324,22 @@ int HitTest(LPPOINT ppt) const;
 
 ### <a name="parameters"></a>參數
 
-*ppt*<br/>
-[POINT](/previous-versions/dd162805\(v=vs.85\))結構的指標，其中包含 `x` 成員中的點擊測試 x 座標，以及 `y` 成員中點擊測試的 y 座標。 座標相對於工具列的工作區。
+*Ppt*<br/>
+指向[POINT](/windows/win32/api/windef/ns-windef-point)結構的指標,該結構`x`包含成員中命中測試的 x`y`座標和 成員中命中測試的 y 座標。 坐標相對於工具列的工作區。
 
 ### <a name="return-value"></a>傳回值
 
-表示工具列上某個點位置的整數值。 如果值為零或正值，此傳回值就是點所在之 nonseparator 專案的以零為起始的索引。
+指示點在工具列上的位置的整數值。 如果該值為零或為正值,則此返回值是點所在的非分離器項的零基索引。
 
-如果傳回值為負數，則點不會位於按鈕內。 傳回值的絕對值是分隔符號專案的索引或最接近的 nonseparator 專案。
+如果返回值為負,則點不在按鈕內。 返回值的絕對值是分隔符項或最近的非分離項的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_HITTEST](/windows/win32/Controls/tb-hittest)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_HITTEST](/windows/win32/Controls/tb-hittest)的行為,如 Windows SDK 中所述。
 
-##  <a name="hidebutton"></a>CToolBarCtrl：： HideButton
+## <a name="ctoolbarctrlhidebutton"></a><a name="hidebutton"></a>CToolBarCtrl:隱藏按鈕
 
-隱藏或顯示工具列控制項中指定的按鈕。
+在工具列控制項中隱藏或顯示指定的按鈕。
 
 ```
 BOOL HideButton(
@@ -1350,10 +1350,10 @@ BOOL HideButton(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要隱藏或顯示之按鈕的命令識別碼。
+要隱藏或顯示的按鈕的命令識別碼。
 
 *bHide*<br/>
-TRUE 表示隱藏按鈕，FALSE 則會顯示。
+TRUE 隱藏按鈕,FALSE 顯示它。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1361,11 +1361,11 @@ TRUE 表示隱藏按鈕，FALSE 則會顯示。
 
 ### <a name="remarks"></a>備註
 
-如果您想要變更一個以上的按鈕狀態，請考慮改為呼叫[SetState](#setstate) 。
+如果要更改多個按鈕狀態,請考慮改為調用[SetState。](#setstate)
 
-##  <a name="indeterminate"></a>CToolBarCtrl：：不定
+## <a name="ctoolbarctrlindeterminate"></a><a name="indeterminate"></a>CToolBarctrl::不確定
 
-設定或清除工具列控制項中指定按鈕的不定狀態。
+設置或清除工具列控制項中指定按鈕的不確定狀態。
 
 ```
 BOOL Indeterminate(
@@ -1376,10 +1376,10 @@ BOOL Indeterminate(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要設定或清除其不定狀態之按鈕的命令識別碼。
+要設置或清除其不確定狀態的按鈕的命令識別碼。
 
-*bIndeterminate*<br/>
-TRUE 表示為指定的按鈕設定不定狀態，FALSE 則會將它清除。
+*b 不確定*<br/>
+TRUE 設置為指定按鈕的不確定狀態,FALSE 將其清除。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1387,9 +1387,9 @@ TRUE 表示為指定的按鈕設定不定狀態，FALSE 則會將它清除。
 
 ### <a name="remarks"></a>備註
 
-不確定的按鈕會顯示為灰色，例如，當選取的文字同時包含粗體和一般字元時，word 處理器工具列上的 [粗體] 按鈕的外觀。 如果您想要變更一個以上的按鈕狀態，請考慮改為呼叫[SetState](#setstate) 。
+不確定按鈕顯示為灰色,例如當所選文本同時包含粗體字元和常規字元時,字處理器工具列上的粗體按鈕的外觀。 如果要更改多個按鈕狀態,請考慮改為調用[SetState。](#setstate)
 
-##  <a name="insertbutton"></a>CToolBarCtrl：： InsertButton
+## <a name="ctoolbarctrlinsertbutton"></a><a name="insertbutton"></a>CToolBarCtrl::插入按鈕
 
 在工具列控制項中插入按鈕。
 
@@ -1402,10 +1402,10 @@ BOOL InsertButton(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-按鈕以零為基底的索引。 此函式會將 [新增] 按鈕插入此按鈕的左邊。
+按鈕的零索引。 此功能在此按鈕左側插入新按鈕。
 
 *lpButton*<br/>
-`TBBUTTON` 結構的位址，其中包含要插入之按鈕的相關資訊。 如需 `TBBUTTON` 結構的描述，請參閱[CToolBarCtrl：： AddButtons](#addbuttons) 。
+包含要插入`TBBUTTON`的按鈕資訊的結構的位址。 有關`TBBUTTON`結構的說明,請參閱[CToolBarCtrl:新增按鈕](#addbuttons)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1413,11 +1413,11 @@ BOOL InsertButton(
 
 ### <a name="remarks"></a>備註
 
-您所提供的索引必須先前已使用[AddBitmap](#addbitmap)、 [AddString](#addstring)和/或[AddStrings](#addstrings)新增至工具列控制項清單的影像和/或字串。
+提供索引的圖像和/或字串以前必須使用[AddBitmap、AddString](#addbitmap)和/或[AddString](#addstrings)添加到工具[AddString](#addstring)列控制項 清單中。
 
-##  <a name="insertmarkhittest"></a>CToolBarCtrl：： InsertMarkHitTest
+## <a name="ctoolbarctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CToolBarCtrl::插入標記命中測試
 
-抓取工具列中某個點的插入標記資訊。
+檢索工具列中點的插入標記資訊。
 
 ```
 BOOL InsertMarkHitTest(
@@ -1427,11 +1427,11 @@ BOOL InsertMarkHitTest(
 
 ### <a name="parameters"></a>參數
 
-*ppt*<br/>
-[點](/previous-versions/dd162805\(v=vs.85\))結構的指標，其中包含相對於工具列工作區的點擊測試座標。
+*Ppt*<br/>
+指向 POINT[結構的](/windows/win32/api/windef/ns-windef-point)指標,該結構包含命中測試座標,相對於工具列的工作區區域。
 
-*ptbim*<br/>
-接收插入標記資訊之[TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)結構的指標。
+*普比姆*<br/>
+指向接收插入標記資訊的[TB INSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1439,11 +1439,11 @@ BOOL InsertMarkHitTest(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_INSERTMARKHITTEST](/windows/win32/Controls/tb-insertmarkhittest)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_INSERTMARKHITTEST](/windows/win32/Controls/tb-insertmarkhittest)的行為,如 Windows SDK 中所述。
 
-##  <a name="isbuttonchecked"></a>CToolBarCtrl：： IsButtonChecked
+## <a name="ctoolbarctrlisbuttonchecked"></a><a name="isbuttonchecked"></a>CToolBarCtrl::是按鈕檢查
 
-決定是否選取工具列控制項中指定的按鈕。
+確定是否選擇的工具列控制檔中的指定按鈕。
 
 ```
 BOOL IsButtonChecked(int nID) const;
@@ -1456,15 +1456,15 @@ BOOL IsButtonChecked(int nID) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已核取此按鈕，則為非零值;否則為零。
+如果選中按鈕,則非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
-如果您想要取出一個以上的按鈕狀態，請考慮呼叫[GetState](#getstate) 。
+如果要檢索多個按鈕狀態,請考慮調用[GetState。](#getstate)
 
-##  <a name="isbuttonenabled"></a>CToolBarCtrl：： IsButtonEnabled
+## <a name="ctoolbarctrlisbuttonenabled"></a><a name="isbuttonenabled"></a>CToolBarCtrl:即啟用按鈕
 
-決定是否啟用工具列控制項中指定的按鈕。
+確定是否啟用了工具列控制件中的指定按鈕。
 
 ```
 BOOL IsButtonEnabled(int nID) const;
@@ -1477,15 +1477,15 @@ BOOL IsButtonEnabled(int nID) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用按鈕，則為非零值;否則為零。
+如果啟用了按鈕,則非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
-如果您想要取出一個以上的按鈕狀態，請考慮呼叫[GetState](#getstate) 。
+如果要檢索多個按鈕狀態,請考慮調用[GetState。](#getstate)
 
-##  <a name="isbuttonhidden"></a>CToolBarCtrl：： IsButtonHidden
+## <a name="ctoolbarctrlisbuttonhidden"></a><a name="isbuttonhidden"></a>CToolBarCtrl::是按鈕隱藏
 
-決定是否隱藏工具列控制項中指定的按鈕。
+確定工具列控制件中的指定按鈕是否隱藏。
 
 ```
 BOOL IsButtonHidden(int nID) const;
@@ -1498,15 +1498,15 @@ BOOL IsButtonHidden(int nID) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果隱藏按鈕，則為非零。否則為零。
+如果按鈕隱藏,則非零;否則為零。
 
 ### <a name="remarks"></a>備註
 
-如果您想要取出一個以上的按鈕狀態，請考慮呼叫[GetState](#getstate) 。
+如果要檢索多個按鈕狀態,請考慮調用[GetState。](#getstate)
 
-##  <a name="isbuttonhighlighted"></a>CToolBarCtrl：： IsButtonHighlighted
+## <a name="ctoolbarctrlisbuttonhighlighted"></a><a name="isbuttonhighlighted"></a>CToolBarCtrl::按鍵突出顯示
 
-檢查工具列按鈕的反白顯示狀態。
+檢查工具列按鈕的突出顯示狀態。
 
 ```
 BOOL IsButtonHighlighted(int nID) const;
@@ -1515,15 +1515,15 @@ BOOL IsButtonHighlighted(int nID) const;
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-在工具列按鈕的命令 ID。
+[在]工具列按鈕的命令 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果按鈕反白顯示，則為正整數，如果未反白顯示按鈕，則為 0; 如果發生錯誤，則為-1。
+如果按鈕高亮顯示,則為正整數;如果未突出顯示按鈕,則為 0;如果發生錯誤,則為 -1。
 
-##  <a name="isbuttonindeterminate"></a>CToolBarCtrl：： IsButtonIndeterminate
+## <a name="ctoolbarctrlisbuttonindeterminate"></a><a name="isbuttonindeterminate"></a>CToolBarctrl::是按鈕不確定
 
-判斷工具列控制項中指定的按鈕是否不確定。
+確定工具列控制項中的指定按鈕是否不確定。
 
 ```
 BOOL IsButtonIndeterminate(int nID) const;
@@ -1532,19 +1532,19 @@ BOOL IsButtonIndeterminate(int nID) const;
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-在工具列中按鈕的命令識別碼。
+[在]工具列中按鈕的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果按鈕不確定，則為正整數; 如果發生錯誤，則為-1。
+如果按鈕不確定,則為正整數;如果按鈕不確定為零;如果發生錯誤,為 -1。
 
 ### <a name="remarks"></a>備註
 
-不確定的按鈕會顯示為灰色，例如，當選取的文字同時包含粗體和一般字元時，文字處理器工具列上的粗體按鈕外觀。 如果您想要取出一個以上的按鈕狀態，請考慮呼叫[GetState](#getstate) 。
+不確定按鈕顯示為灰色,例如當所選文本同時包含粗體和常規字元時,字處理器工具列上的粗體按鈕的外觀。 如果要檢索多個按鈕狀態,請考慮調用[GetState。](#getstate)
 
-##  <a name="isbuttonpressed"></a>CToolBarCtrl：： IsButtonPressed
+## <a name="ctoolbarctrlisbuttonpressed"></a><a name="isbuttonpressed"></a>CToolBarCtrl::按鍵
 
-決定是否按下工具列控制項中指定的按鈕。
+確定是否按下工具列控制件中的指定按鈕。
 
 ```
 BOOL IsButtonPressed(int nID) const;
@@ -1557,17 +1557,17 @@ BOOL IsButtonPressed(int nID) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果按下按鈕則為非零，否則為零。
+如果按下按鈕,則非零,否則為零。
 
 ### <a name="remarks"></a>備註
 
-如果您想要取出一個以上的按鈕狀態，請考慮呼叫[GetState](#getstate) 。
+如果要檢索多個按鈕狀態,請考慮調用[GetState。](#getstate)
 
-##  <a name="loadimages"></a>CToolBarCtrl：： LoadImages
+## <a name="ctoolbarctrlloadimages"></a><a name="loadimages"></a>CToolBarCtrl::載入影像
 
-將點陣圖載入工具列控制項的影像清單。
+將點陣圖載入到工具列控制的影像清單中。
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1576,27 +1576,27 @@ void LoadImages(
 ### <a name="parameters"></a>參數
 
 *iBitmapID*<br/>
-包含要載入之影像的點陣圖識別碼。 若要指定您自己的點陣圖資源，請將此參數設定為點陣圖資源的識別碼，並將*hInst*設定為 Null。 您的點陣圖資源會以單一影像的形式新增至影像清單。 您可以藉由將*hinst*設定為 HINST_COMMCTRL，並將此參數設定為下列其中一個識別碼，來新增標準的系統定義點陣圖：
+包含要載入的影像的點陣圖的 ID。 要指定自己的位圖資源,請為此參數設置為位圖資源的 ID,並將*hInst*設置為 NULL。 您的點陣圖資源將作為單個圖像添加到圖像清單中。 使用*hinst*設定為HINST_COMMCTRL並將此參數設定為以下 ID 之一,可以新增標準、系統定義的位圖:
 
-|點陣圖識別碼|描述|
+|點陣圖代碼|描述|
 |---------------|-----------------|
-|IDB_HIST_LARGE_COLOR|大小龐大的 Explorer 點陣圖|
-|IDB_HIST_SMALL_COLOR|大小較小的 Explorer 點陣圖|
-|IDB_STD_LARGE_COLOR|大小較大的標準點陣圖|
-|IDB_STD_SMALL_COLOR|小型的標準點陣圖|
-|IDB_VIEW_LARGE_COLOR|以大容量查看點陣圖|
-|IDB_VIEW_SMALL_COLOR|以小型大小查看點陣圖|
+|IDB_HIST_LARGE_COLOR|大型資源管理員點陣圖|
+|IDB_HIST_SMALL_COLOR|資源管理員圖|
+|IDB_STD_LARGE_COLOR|大尺寸的標準點陣圖|
+|IDB_STD_SMALL_COLOR|小尺寸的標準點陣圖|
+|IDB_VIEW_LARGE_COLOR|檢視大尺寸點陣圖|
+|IDB_VIEW_SMALL_COLOR|檢視小尺寸點陣圖|
 
-*hinst*<br/>
-呼叫應用程式的程式實例控制碼。 這個參數可以 HINST_COMMCTRL 來載入標準影像清單。
+*欣斯特*<br/>
+對調用應用程式的程式實例句柄。 可以HINST_COMMCTRL此參數來載入標準映像清單。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_LOADIMAGES](/windows/win32/Controls/tb-loadimages)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_LOADIMAGES](/windows/win32/Controls/tb-loadimages)的行為,如 Windows SDK 中所述。
 
-##  <a name="mapaccelerator"></a>CToolBarCtrl：： MapAccelerator
+## <a name="ctoolbarctrlmapaccelerator"></a><a name="mapaccelerator"></a>CToolBarCtrl::地圖加速器
 
-將快速鍵對應字元對應至工具列按鈕。
+將快捷鍵字元映射到工具列按鈕。
 
 ```
 BOOL MapAccelerator(
@@ -1606,11 +1606,11 @@ BOOL MapAccelerator(
 
 ### <a name="parameters"></a>參數
 
-*chAccel*<br/>
-要對應的快速鍵字元。 這個字元與按鈕文字中加上底線的字元相同。
+*查克爾*<br/>
+要映射的加速器字元。 此字元與按鈕文本中帶下劃線字元的字元相同。
 
 *pIDBtn*<br/>
-UINT 的指標，接收對應于*chAccel*中所指定快速鍵的按鈕的命令識別碼。
+指向 UINT 的指標,該指標接收對應於*chAccel*中指定的加速器的按鈕的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1618,11 +1618,11 @@ UINT 的指標，接收對應于*chAccel*中所指定快速鍵的按鈕的命令
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_MAPACCELERATOR](/windows/win32/Controls/tb-mapaccelerator)Win32 訊息的行為。
+此成員函數實現 Win32 消息[的行為TB_MAPACCELERATOR](/windows/win32/Controls/tb-mapaccelerator),如 Windows SDK 中所述。
 
-##  <a name="markbutton"></a>CToolBarCtrl：： MarkButton
+## <a name="ctoolbarctrlmarkbutton"></a><a name="markbutton"></a>CToolBarCtrl::標記按鈕
 
-設定工具列控制項中指定按鈕的反白顯示狀態。
+設置工具列控制項中給定按鈕的突出顯示狀態。
 
 ```
 BOOL MarkButton(
@@ -1635,8 +1635,8 @@ BOOL MarkButton(
 *nID*<br/>
 按鈕識別碼。
 
-*fHighlight*<br/>
-指定要設定的反白顯示狀態。 預設為 TRUE。 如果設定為 FALSE，則按鈕會設定為其預設狀態。
+*f 突顯*<br/>
+指定要設置的高光狀態。 預設情況下,TRUE。 如果設置為 FALSE,則按鈕將設置為其預設狀態。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1644,11 +1644,11 @@ BOOL MarkButton(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_MARKBUTTON](/windows/win32/Controls/tb-markbutton)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_MARKBUTTON](/windows/win32/Controls/tb-markbutton)的行為,如 Windows SDK 中所述。
 
-##  <a name="movebutton"></a>CToolBarCtrl：： MoveButton
+## <a name="ctoolbarctrlmovebutton"></a><a name="movebutton"></a>CToolBarCtrl:: 移動按鈕
 
-將按鈕從一個索引移至另一個。
+將按鈕從一個索引移動到另一個索引。
 
 ```
 BOOL MoveButton(
@@ -1658,11 +1658,11 @@ BOOL MoveButton(
 
 ### <a name="parameters"></a>參數
 
-*nOldPos*<br/>
-要移動之按鈕的以零為起始的索引。
+*內奧德波斯*<br/>
+要移動的按鈕的零基索引。
 
-*nNewPos*<br/>
-按鈕的目的地之以零為基底的索引。
+*N 紐波斯*<br/>
+按鈕目標的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1670,11 +1670,11 @@ BOOL MoveButton(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_MOVEBUTTON](/windows/win32/Controls/tb-movebutton)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_MOVEBUTTON](/windows/win32/Controls/tb-movebutton)的行為,如 Windows SDK 中所述。
 
-##  <a name="pressbutton"></a>CToolBarCtrl：:P ressButton
+## <a name="ctoolbarctrlpressbutton"></a><a name="pressbutton"></a>CToolBarCtrl::PresButton
 
-在工具列控制項中按下或放開指定的按鈕。
+按下或釋放工具列控制件中的指定按鈕。
 
 ```
 BOOL PressButton(int nID, BOOL bPress = TRUE);
@@ -1683,24 +1683,24 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-在要按下或放開之按鈕的命令識別碼。
+[在]要按下或釋放按鈕的命令標識符。
 
 *bPress*<br/>
-在TRUE 表示按指定的按鈕;FALSE 表示釋放指定的按鈕。 預設值為 TRUE。
+[在]TRUE 以按指定的按鈕;FALSE 以釋放指定的按鈕。 預設值為 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE;否則為 FALSE。
+如果方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果您想要變更一個以上的按鈕狀態，請考慮改為呼叫[SetState](#setstate) 。
+如果要更改多個按鈕狀態,請考慮改為調用[SetState。](#setstate)
 
-這個方法會傳送[TB_PRESSBUTTON](/windows/win32/Controls/tb-pressbutton)訊息，如 Windows SDK 所述。
+此方法發送[TB_PRESSBUTTON](/windows/win32/Controls/tb-pressbutton)訊息,這在 Windows SDK 中介紹。
 
-##  <a name="replacebitmap"></a>CToolBarCtrl：： ReplaceBitmap
+## <a name="ctoolbarctrlreplacebitmap"></a><a name="replacebitmap"></a>CToolBarCtrl::取代位圖
 
-以新的點陣圖取代目前工具列控制項中的現有點陣圖。
+將當前工具列控制件中的現有點陣圖替換為新的點陣圖。
 
 ```
 BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
@@ -1710,27 +1710,27 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 |參數|描述|
 |---------------|-----------------|
-|*pReplaceBitmap*|在[TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap)結構的指標，描述要被取代的點陣圖和新的點陣圖。|
+|*p 取代點陣圖*|[在]指向[TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap)結構的指標,該結構描述要替換的位圖和新的位圖。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TB_REPLACEBITMAP](/windows/win32/Controls/tb-replacebitmap)訊息，如 Windows SDK 所述。
+此方法發送[TB_REPLACEBITMAP](/windows/win32/Controls/tb-replacebitmap)訊息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會以不同的點陣圖取代標準工具列的點陣圖。
+以下代碼示例將標準工具列的位圖替換為不同的位圖。
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_4.cpp)]
 
-##  <a name="restorestate"></a>CToolBarCtrl：： RestoreState
+## <a name="ctoolbarctrlrestorestate"></a><a name="restorestate"></a>CToolBarCtrl::恢復狀態
 
-從參數所指定之登錄中的位置還原工具列控制項的狀態。
+從參數指定的註冊表中的位置還原工具列控件的狀態。
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1740,7 +1740,7 @@ void RestoreState(
 ### <a name="parameters"></a>參數
 
 *hKeyRoot*<br/>
-識別登錄中目前開啟的機碼，或下列任何預先定義的保留控制碼值：
+識別註冊表中目前開啟的金鑰或以下任何預定義的保留句柄值:
 
 - HKEY_CLASSES_ROOT
 
@@ -1750,17 +1750,17 @@ void RestoreState(
 
 - HKEY_USERS
 
-*lpszSubKey*<br/>
-指向以 null 終止的字串，其中包含與值相關聯的子機碼名稱。 這個參數可以是 null 或空字串的指標。 如果參數是 Null，則會將值新增至*hKeyRoot*參數所識別的索引鍵。
+*lpszSubkey*<br/>
+包含與該值關聯的子鍵的名稱的 null 連接端接字串。 這裡可以是 null 或指向空字串的指標。 如果參數為 NULL,則該值將添加到*hKeyRoot*參數標識的鍵中。
 
-*lpszValueName*<br/>
-指向包含要取得之值名稱的字串。 如果具有此名稱的值尚未出現在索引鍵中，則函式會將它新增至索引鍵。
+*lpszValue名稱*<br/>
+指向包含要檢索的值的名稱的字串。 如果具有此名稱的值在鍵中不存在,則函數將其添加到鍵中。
 
-##  <a name="savestate"></a>CToolBarCtrl：： SaveState
+## <a name="ctoolbarctrlsavestate"></a><a name="savestate"></a>CToolBarCtrl::儲存狀態
 
-將工具列控制項的狀態儲存在參數所指定之登錄中的位置。
+將工具列控制器的狀態保存在參數指定的註冊表中的位置。
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1770,7 +1770,7 @@ void SaveState(
 ### <a name="parameters"></a>參數
 
 *hKeyRoot*<br/>
-識別登錄中目前開啟的機碼，或下列任何預先定義的保留控制碼值：
+識別註冊表中目前開啟的金鑰或以下任何預定義的保留句柄值:
 
 - HKEY_CLASSES_ROOT
 
@@ -1780,15 +1780,15 @@ void SaveState(
 
 - HKEY_USERS
 
-*lpszSubKey*<br/>
-指向以 null 終止的字串，其中包含與值相關聯的子機碼名稱。 這個參數可以是 null 或空字串的指標。 如果參數是 Null，則會將值新增至*hKeyRoot*參數所識別的索引鍵。
+*lpszSubkey*<br/>
+包含與該值關聯的子鍵的名稱的 null 連接端接字串。 這裡可以是 null 或指向空字串的指標。 如果參數為 NULL,則該值將添加到*hKeyRoot*參數標識的鍵中。
 
-*lpszValueName*<br/>
-指向包含要設定之值名稱的字串。 如果具有此名稱的值尚未出現在索引鍵中，則函式會將它新增至索引鍵。
+*lpszValue名稱*<br/>
+指向包含要設定的值名稱的字串。 如果具有此名稱的值在鍵中不存在,則函數將其添加到鍵中。
 
-##  <a name="setanchorhighlight"></a>CToolBarCtrl：： SetAnchorHighlight
+## <a name="ctoolbarctrlsetanchorhighlight"></a><a name="setanchorhighlight"></a>CToolBarCtrl::設置錨點高光
 
-設定工具列的錨點醒目提示設定。
+設置工具列的錨點高光設置。
 
 ```
 BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
@@ -1797,19 +1797,19 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ### <a name="parameters"></a>參數
 
 *fAnchor*<br/>
-在指定錨點反白顯示為啟用或停用。 如果此值為非零，則會啟用錨點醒目提示。 如果此值為零，將會停用錨點反白顯示
+[在]指定是啟用或禁用錨點突出顯示。 如果此值為非零,則將啟用錨點突出顯示。 如果此值為零,將禁用錨點突出顯示
 
 ### <a name="return-value"></a>傳回值
 
-先前的錨定設定。 如果已啟用反白顯示，則此值為非零。 如果未啟用反白顯示，則此值為零。
+上一個錨點設置。 如果啟用了突出顯示,則此值為非零。 如果未啟用突出顯示,則此值為零。
 
 ### <a name="remarks"></a>備註
 
-這個方法會執行 Win32 訊息[TB_SETANCHORHIGHLIGHT](/windows/win32/Controls/tb-setanchorhighlight)的行為，如 Windows SDK 中所述。
+此方法實現 Win32 消息[TB_SETANCHORHIGHLIGHT](/windows/win32/Controls/tb-setanchorhighlight)的行為,如 Windows SDK 中所述。
 
-##  <a name="setbitmapsize"></a>CToolBarCtrl：： SetBitmapSize
+## <a name="ctoolbarctrlsetbitmapsize"></a><a name="setbitmapsize"></a>CToolBarCtrl::設定點陣圖大小
 
-設定要加入工具列控制項的實際點陣圖影像大小。
+設置要添加到工具列控制件的實際位映射影像的大小。
 
 ```
 BOOL SetBitmapSize(CSize size);
@@ -1818,7 +1818,7 @@ BOOL SetBitmapSize(CSize size);
 ### <a name="parameters"></a>參數
 
 *size*<br/>
-點陣圖影像的寬度和高度（以圖元為單位）。
+位映射圖像的寬度和高度(以像素為單位)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1826,11 +1826,11 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="remarks"></a>備註
 
-只有在將任何點陣圖新增至工具列之前，才必須呼叫此函式。 如果應用程式未明確設定點陣圖大小，則預設為 16 x 15 圖元。
+只有在向工具列添加任何位圖之前,才能調用此功能。 如果應用程式未顯式設置位圖大小,則預設為 16 x 15 圖元。
 
-##  <a name="setbuttoninfo"></a>CToolBarCtrl：： SetButtonInfo
+## <a name="ctoolbarctrlsetbuttoninfo"></a><a name="setbuttoninfo"></a>CToolBarCtrl::設定按鈕資訊
 
-設定工具列中現有按鈕的資訊。
+設置工具列中現有按鈕的資訊。
 
 ```
 BOOL SetButtonInfo(
@@ -1843,8 +1843,8 @@ BOOL SetButtonInfo(
 *nID*<br/>
 按鈕識別碼。
 
-*ptbbi*<br/>
-接收按鈕資訊之[TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow)結構的指標。
+*普特比*<br/>
+指向接收按鈕資訊的[TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1852,11 +1852,11 @@ BOOL SetButtonInfo(
 
 ### <a name="remarks"></a>備註
 
-成員函式會依照 Windows SDK 中的說明，實作用[TB_SETBUTTONINFO](/windows/win32/Controls/tb-setbuttoninfo)Win32 訊息的行為。
+成員函數實現 Win32 消息[TB_SETBUTTONINFO](/windows/win32/Controls/tb-setbuttoninfo)的行為,如 Windows SDK 中所述。
 
-##  <a name="setbuttonsize"></a>CToolBarCtrl：： SetButtonSize
+## <a name="ctoolbarctrlsetbuttonsize"></a><a name="setbuttonsize"></a>CToolBarCtrl::設定按鈕大小
 
-設定工具列控制項中的按鈕大小。
+設置工具列控制項中按鈕的大小。
 
 ```
 BOOL SetButtonSize(CSize size);
@@ -1865,7 +1865,7 @@ BOOL SetButtonSize(CSize size);
 ### <a name="parameters"></a>參數
 
 *size*<br/>
-按鈕的寬度和高度（以圖元為單位）。
+按鈕的寬度和高度(以像素為單位)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1873,34 +1873,34 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="remarks"></a>備註
 
-按鈕大小一律必須至少與它所括住的點陣圖大小一樣大。 只有在將任何點陣圖新增至工具列之前，才必須呼叫此函式。 如果應用程式未明確設定按鈕大小，則預設為24乘以22圖元。
+按鈕大小必須始終至少與它所包含的位圖大小一樣大。 只有在向工具列添加任何位圖之前,才能調用此功能。 如果應用程式未顯式設置按鈕大小,則預設為 24 x 22 圖元。
 
 ### <a name="example"></a>範例
 
-  請參閱[CToolBar：： GetToolBarCtrl](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl)的範例。
+  請參閱[CToolBar 的範例:獲取工具列。](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl)
 
-##  <a name="setbuttonstructsize"></a>CToolBarCtrl：： SetButtonStructSize
+## <a name="ctoolbarctrlsetbuttonstructsize"></a><a name="setbuttonstructsize"></a>CToolBarctrl::設定按鈕的大小
 
-指定 `TBBUTTON` 結構的大小。
+指定結構的大小`TBBUTTON`。
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
 ### <a name="parameters"></a>參數
 
 *nSize*<br/>
-`TBBUTTON` 結構的大小（以位元組為單位）。
+`TBBUTTON`結構的大小(以位元組為單位)。
 
 ### <a name="remarks"></a>備註
 
-如果您想要在 `TBBUTTON` 結構中儲存額外的資料，您可以從 `TBBUTTON`衍生新的結構、加入所需的成員，或建立包含 `TBBUTTON` 結構做為其第一個成員的新結構。 您接著會呼叫這個函式，告訴工具列控制項新結構的大小。
+如果要在`TBBUTTON`結構中存儲額外的數據,可以從 中派生新`TBBUTTON`結構 ,添加所需的成員,或者創建一`TBBUTTON`個包含結構作為其第一個成員的新結構。 然後,您將調用此函數告訴工具列控制新結構的大小。
 
-如需 `TBBUTTON` 結構的詳細資訊，請參閱[CToolBarCtrl：： AddButtons](#addbuttons) 。
+有關`TBBUTTON`結構的詳細資訊,請參閱[CToolBarCtrl:新增按鈕](#addbuttons)。
 
-##  <a name="setbuttonwidth"></a>CToolBarCtrl：： SetButtonWidth
+## <a name="ctoolbarctrlsetbuttonwidth"></a><a name="setbuttonwidth"></a>CToolBarCtrl::設定按鈕寬度
 
-設定工具列控制項中的最小和最大按鈕寬度。
+設置工具列控制件中的最小和最大按鈕寬度。
 
 ```
 BOOL SetButtonWidth(
@@ -1911,10 +1911,10 @@ BOOL SetButtonWidth(
 ### <a name="parameters"></a>參數
 
 *cxMin*<br/>
-最小按鈕寬度（以圖元為單位）。 工具列按鈕絕對不會比這個值更窄。
+最小按鈕寬度(以像素為單位)。 工具列按鈕永遠不會比此值窄。
 
 *cxMax*<br/>
-最大按鈕寬度（以圖元為單位）。 如果按鈕文字太寬，控制項會以省略號點顯示。
+最大按鈕寬度(以像素為單位)。 如果按鈕文本太寬,控件將顯示它與省略點。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1922,11 +1922,11 @@ BOOL SetButtonWidth(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETBUTTONWIDTH](/windows/win32/Controls/tb-setbuttonwidth)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_SETBUTTONWIDTH](/windows/win32/Controls/tb-setbuttonwidth)的行為,如 Windows SDK 中所述。
 
-##  <a name="setcmdid"></a>CToolBarCtrl：： SetCmdID
+## <a name="ctoolbarctrlsetcmdid"></a><a name="setcmdid"></a>CToolBarCtrl::SetCmdID
 
-設定當按下指定的按鈕時，將傳送至擁有者視窗的命令識別碼。
+設定按下指定按鈕時將發送到所有者視窗的命令識別碼。
 
 ```
 BOOL SetCmdID(
@@ -1937,20 +1937,20 @@ BOOL SetCmdID(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-要設定其命令識別碼的按鈕之以零為起始的索引。
+要設置其命令 ID 的按鈕的零基索引。
 
 *nID*<br/>
-要將選取的按鈕設定為的命令識別碼。
+要將選擇按鈕設定為的命令 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回非零;否則為零。
+如果成功,則返回非零;否則為零。
 
-##  <a name="setcolorscheme"></a>CToolBarCtrl：： SetColorScheme
+## <a name="ctoolbarctrlsetcolorscheme"></a><a name="setcolorscheme"></a>CToolBarCtrl::設定顏色機制
 
-設定目前工具列控制項的色彩配置。
+設置當前工具列控件的色彩配置。
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -1958,23 +1958,23 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
 
 |參數|描述|
 |---------------|-----------------|
-|*lpColorScheme*|在[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)結構的指標，描述工具列控制項的反白顯示色彩和陰影色彩。|
+|*lpColor 計劃*|[在]指向描述工具列控制件的高光顏色和陰影顏色的[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)結構的指標。|
 
 ### <a name="remarks"></a>備註
 
-如果已設定 Windows Vista 視覺效果主題，這個方法不會有任何作用。
+如果設置了 Windows Vista 視覺主題,則此方法不起作用。
 
-這個方法會傳送[TB_SETCOLORSCHEME](/windows/win32/Controls/tb-setcolorscheme)訊息，如 Windows SDK 所述。
+此方法發送[TB_SETCOLORSCHEME](/windows/win32/Controls/tb-setcolorscheme)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會設定目前工具列控制項的色彩配置。 此程式碼範例會使每個工具的左邊和上邊緣變成紅色，右邊和下邊緣藍色。 當使用者按下按鈕時，按鈕的紅色邊緣會變成藍色，而其藍色邊緣則會變成紅色。
+以下代碼示例設置當前工具列控制項的色彩配置。 代碼示例使每個工具按鈕的左邊緣和上邊緣為紅色,右邊緣和下邊緣為藍色。 當使用者按下按鈕時,按鈕的紅色邊緣變為藍色,其藍色邊緣變為紅色。
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_5.cpp)]
 
-##  <a name="setdisabledimagelist"></a>CToolBarCtrl：： SetDisabledImageList
+## <a name="ctoolbarctrlsetdisabledimagelist"></a><a name="setdisabledimagelist"></a>CToolBarCtrl::設定關閉影像清單
 
-設定工具列控制項將用來顯示已停用按鈕的影像清單。
+設定工具列控制項將用於顯示禁用按鈕的圖像清單。
 
 ```
 CImageList* SetDisabledImageList(CImageList* pImageList);
@@ -1983,19 +1983,19 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 ### <a name="parameters"></a>參數
 
 *pImageList*<br/>
-`CImageList` 物件的指標，其中包含工具列控制項用來顯示已停用按鈕影像的影像。
+指向包含工具列控制件`CImageList`用於顯示禁用按鈕圖像的圖像的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-工具列控制項先前用來顯示已停用按鈕影像的[CImageList](../../mfc/reference/cimagelist-class.md)物件指標。
+指向以前由工具列控制件用於顯示禁用按鈕圖像的[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETDISABLEDIMAGELIST](/windows/win32/Controls/tb-setdisabledimagelist)Win32 訊息的行為。 `SetDisabledImageList` 的 MFC 執行會使用包含工具列控制項已停用按鈕影像的 `CImageList` 物件，而不是影像清單的控制碼。
+此成員函數實現 Win32 消息[的行為TB_SETDISABLEDIMAGELIST](/windows/win32/Controls/tb-setdisabledimagelist),如 Windows SDK 中所述。 的`SetDisabledImageList`MFC`CImageList`實現使用 包含工具列控制項關閉按鈕影像的物件,而不是影像清單的句柄。
 
-##  <a name="setdrawtextflags"></a>CToolBarCtrl：： SetDrawTextFlags
+## <a name="ctoolbarctrlsetdrawtextflags"></a><a name="setdrawtextflags"></a>CToolBarCtrl::設定繪製文字標誌
 
-設定 Win32 函數[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中的旗標，用來在指定的矩形中繪製文字，並根據旗標的設定方式進行格式化。
+設定 Win32 函數[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中的標誌 ,用於在指定的矩形中繪製文本,根據標誌的設置方式進行格式化。
 
 ```
 DWORD SetDrawTextFlags(
@@ -2006,22 +2006,22 @@ DWORD SetDrawTextFlags(
 ### <a name="parameters"></a>參數
 
 *dwMask*<br/>
-Win32 函式[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中指定的一或多個 DT_ 旗標的組合，表示繪製文字時將使用*dwDTFlags*中的位。
+Win32 函數[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中指定的一個或多個DT_標誌的組合,指示在繪製文本時將使用*dwDTFlags*中的哪些位。
 
 *dwDTFlags*<br/>
-在 Win32 函式 `DrawText`中指定的一或多個 DT_ 旗標的組合，表示將如何繪製按鈕文字。 繪製按鈕文字時，這個值會傳遞給 `DrawText`。
+Win32 函`DrawText`數 中指定的一個或多個DT_標誌的組合,指示按鈕文本的繪製方式。 繪製按鈕文字`DrawText`時,此值將傳遞給該值。
 
 ### <a name="return-value"></a>傳回值
 
-包含前一個文字繪製旗標的 DWORD。
+包含前一個文字繪圖標誌的 DWORD。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETDRAWTEXTFLAGS](/windows/win32/Controls/tb-setdrawtextflags)Win32 訊息的行為。 此成員函式會設定 Win32 函式中的旗標 `DrawText`，這會在指定的矩形中繪製文字，並根據旗標的設定方式進行格式化。
+此成員函數實現 Win32 消息[的行為TB_SETDRAWTEXTFLAGS](/windows/win32/Controls/tb-setdrawtextflags),如 Windows SDK 中所述。 此成員函數設置 Win32 函數`DrawText`中的標誌 ,該函數在指定的矩形中繪製文本,根據標誌的設置方式進行格式化。
 
-##  <a name="setextendedstyle"></a>CToolBarCtrl：： SetExtendedStyle
+## <a name="ctoolbarctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CToolBarCtrl::設定式延伸樣式
 
-設定工具列控制項的延伸樣式。
+設置工具列控件的擴展樣式。
 
 ```
 DWORD SetExtendedStyle(DWORD dwExStyle);
@@ -2030,19 +2030,19 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定新擴充樣式的值。 這個參數可以是工具列擴充樣式的組合。
+指定新擴展樣式的值。 此參數可以是工具列擴展樣式的組合。
 
 ### <a name="return-value"></a>傳回值
 
-表示先前擴充樣式的 DWORD。 如需樣式的清單，請參閱 Windows SDK 中的[工具列擴充樣式](/windows/win32/Controls/toolbar-extended-styles)。
+表示以前擴展樣式的 DWORD。 有關樣式清單,請參閱 Windows SDK 中的[工具列擴充樣式](/windows/win32/Controls/toolbar-extended-styles)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETEXTENDEDSTYLE](/windows/win32/Controls/tb-setextendedstyle)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_SETEXTENDEDSTYLE](/windows/win32/Controls/tb-setextendedstyle)的行為,如 Windows SDK 中所述。
 
-##  <a name="sethotimagelist"></a>CToolBarCtrl：： SetHotImageList
+## <a name="ctoolbarctrlsethotimagelist"></a><a name="sethotimagelist"></a>CToolBarCtrl::設定HotImage清單
 
-設定工具列控制項將用來顯示「作用中」按鈕的影像清單。
+設定工具列控制項將用於顯示「熱」按鈕的圖像清單。
 
 ```
 CImageList* SetHotImageList(CImageList* pImageList);
@@ -2051,21 +2051,21 @@ CImageList* SetHotImageList(CImageList* pImageList);
 ### <a name="parameters"></a>參數
 
 *pImageList*<br/>
-`CImageList` 物件的指標，其中包含工具列控制項用來顯示熱按鈕影像的影像。
+指向包含工具列控制件`CImageList`用於顯示熱按鈕圖像的圖像的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-工具列控制項先前用來顯示熱按鈕影像的[CImageList](../../mfc/reference/cimagelist-class.md)物件指標。
+指向以前由工具列控制件用於顯示熱按鈕圖像的[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETHOTIMAGELIST](/windows/win32/Controls/tb-sethotimagelist)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_SETHOTIMAGELIST](/windows/win32/Controls/tb-sethotimagelist)的行為,如 Windows SDK 中所述。
 
-`SetHotImageList` 的 MFC 執行會使用包含工具列控制項之熱按鈕影像的 `CImageList` 物件，而不是影像清單的控制碼。 當滑鼠指標位於其上方時，[作用中] 按鈕會反白顯示。
+的`SetHotImageList`MFC`CImageList`實現使用 包含工具列控制的熱按鈕影像的物件,而不是影像清單的句柄。 當指標位於其上方時,將顯示一個熱按鈕突出顯示。
 
-##  <a name="sethotitem"></a>CToolBarCtrl：： SetHotItem
+## <a name="ctoolbarctrlsethotitem"></a><a name="sethotitem"></a>CToolBarCtrl::設定Hot專案
 
-設定工具列中的熱專案。
+在工具列中設置熱項。
 
 ```
 int SetHotItem(int nHot);
@@ -2074,19 +2074,19 @@ int SetHotItem(int nHot);
 ### <a name="parameters"></a>參數
 
 *nHot*<br/>
-以零為基底的索引編號，這是將成為經常性存取的專案。 如果此值為-1，則不會有任何專案作用中。
+將變得熱的項的零基索引編號。 如果此值為 -1,則任何項都不會是熱的。
 
 ### <a name="return-value"></a>傳回值
 
-上一個熱專案的索引，如果沒有作用中專案，則為-1。
+上一個熱項的索引,如果沒有熱項,則為 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETHOTITEM](/windows/win32/Controls/tb-sethotitem)Win32 訊息的行為。
+此成員函數實現 win32 消息[TB_SETHOTITEM](/windows/win32/Controls/tb-sethotitem)的行為,如 Windows SDK 中所述。
 
-##  <a name="setimagelist"></a>CToolBarCtrl：： SetImageList
+## <a name="ctoolbarctrlsetimagelist"></a><a name="setimagelist"></a>CToolBarCtrl::設定影像清單
 
-設定工具列將用來顯示處於預設狀態之按鈕的影像清單。
+設定工具列用於顯示處於預設狀態的按鈕的圖像清單。
 
 ```
 CImageList* SetImageList(CImageList* pImageList);
@@ -2095,21 +2095,21 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>參數
 
 *pImageList*<br/>
-`CImageList` 物件的指標，其中包含工具列控制項用來以預設狀態顯示按鈕影像的影像。
+指向`CImageList`工具列控制項用於以顯示其預設狀態的按鈕圖像的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-工具列控制項先前用來以預設狀態顯示按鈕影像的[CImageList](../../mfc/reference/cimagelist-class.md)物件指標。
+指向[CImageList](../../mfc/reference/cimagelist-class.md)物件的指標,以前工具列控制項用於以顯示其預設狀態的按鈕影像。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETIMAGELIST](/windows/win32/Controls/tb-setimagelist)Win32 訊息的行為。
+此成員函數實現 Win32 消息[TB_SETIMAGELIST](/windows/win32/Controls/tb-setimagelist)的行為,如 Windows SDK 中所述。
 
-`SetImageList` 的 MFC 執行會使用包含工具列控制項按鈕影像的 `CImageList` 物件，而不是影像清單的控制碼。
+的`SetImageList`MFC`CImageList`實現使用 包含工具列控制的按鈕影像的物件,而不是影像清單的句柄。
 
-##  <a name="setindent"></a>CToolBarCtrl：： SetIndent
+## <a name="ctoolbarctrlsetindent"></a><a name="setindent"></a>CToolBarctrl:setindent
 
-設定工具列控制項中第一個按鈕的縮排。
+設置工具列控制項中第一個按鈕的縮進。
 
 ```
 BOOL SetIndent(int iIndent);
@@ -2117,33 +2117,33 @@ BOOL SetIndent(int iIndent);
 
 ### <a name="parameters"></a>參數
 
-*iIndent*<br/>
-指定縮排的值（以圖元為單位）。
+*iindent*<br/>
+指定縮進的值(以像素為單位)。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則不為零，否則為 0。
 
-##  <a name="setinsertmark"></a>CToolBarCtrl：： SetInsertMark
+## <a name="ctoolbarctrlsetinsertmark"></a><a name="setinsertmark"></a>CToolBarCtrl::設定插入標記
 
 設定工具列的目前插入標記。
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
 ### <a name="parameters"></a>參數
 
-*ptbim*<br/>
-包含插入標記之[TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)結構的指標。
+*普比姆*<br/>
+指向包含插入標記的[TB INSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)結構的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETINSERTMARK](/windows/win32/Controls/tb-setinsertmark)Win32 訊息的行為。
+此成員函數實現 Win32 消息[的行為TB_SETINSERTMARK,](/windows/win32/Controls/tb-setinsertmark)如 Windows SDK 中所述。
 
-##  <a name="setinsertmarkcolor"></a>CToolBarCtrl：： SetInsertMarkColor
+## <a name="ctoolbarctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CToolBarCtrl::設定插入標記顏色
 
-設定用來繪製工具列插入標記的色彩。
+設置用於繪製工具列插入標記的顏色。
 
 ```
 COLORREF SetInsertMarkColor(COLORREF clrNew);
@@ -2152,19 +2152,19 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="parameters"></a>參數
 
 *clrNew*<br/>
-包含新插入標記色彩的 COLORRE光圈值。
+包含新插入標記顏色的 COLORREF 值。
 
 ### <a name="return-value"></a>傳回值
 
-包含上一個插入標記色彩的 COLORRE光圈值。
+包含前一個插入標記顏色的 COLORREF 值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[TB_SETINSERTMARKCOLOR](/windows/win32/Controls/tb-setinsertmarkcolor)Win32 訊息的行為。
+此成員函數實現 Win32 消息[的行為TB_SETINSERTMARKCOLOR](/windows/win32/Controls/tb-setinsertmarkcolor),如 Windows SDK 中所述。
 
-##  <a name="setmaxtextrows"></a>CToolBarCtrl：： SetMaxTextRows
+## <a name="ctoolbarctrlsetmaxtextrows"></a><a name="setmaxtextrows"></a>CToolBarCtrl::設定MaxTextRows
 
-設定工具列按鈕上顯示的文字資料列數目上限。
+設定工具列按鈕上顯示的最大文本行數。
 
 ```
 BOOL SetMaxTextRows(int iMaxRows);
@@ -2173,49 +2173,49 @@ BOOL SetMaxTextRows(int iMaxRows);
 ### <a name="parameters"></a>參數
 
 *iMaxRows*<br/>
-要設定的最大資料列數目。
+要設置的最大行數。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則不為零，否則為 0。
 
-##  <a name="setmetrics"></a>CToolBarCtrl：： SetMetrics
+## <a name="ctoolbarctrlsetmetrics"></a><a name="setmetrics"></a>CToolBarCtrl::設定指標
 
-設定 `CToolBarCtrl` 物件的計量。
+設置`CToolBarCtrl`物件的指標。
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
 ### <a name="parameters"></a>參數
 
 *ptbm*<br/>
-`CToolBarCtrl` 物件之[TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics)結構的指標。
+指向物件的[TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics)`CToolBarCtrl`結構的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[TB_SETMETRICS](/windows/win32/Controls/tb-setmetrics)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[TB_SETMETRICS](/windows/win32/Controls/tb-setmetrics)消息的功能,如 Windows SDK 中所述。
 
-##  <a name="setowner"></a>CToolBarCtrl：： SetOwner
+## <a name="ctoolbarctrlsetowner"></a><a name="setowner"></a>CToolBarCtrl::SetOwner
 
-設定工具列控制項的主控視窗。
+設置工具列控制者的擁有者視窗。
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-`CWnd` 或 `CWnd`衍生物件的指標，該物件將成為工具列控制項的新擁有者視窗。
+*pwnd*<br/>
+指向`CWnd``CWnd`或 派生物件的指標,該物件將成為工具列控制件的新擁有者視窗。
 
 ### <a name="remarks"></a>備註
 
-[擁有者] 視窗是接收來自工具列之通知的視窗。
+擁有者視窗是從工具列接收通知的視窗。
 
-##  <a name="setpadding"></a>CToolBarCtrl：： SetPadding
+## <a name="ctoolbarctrlsetpadding"></a><a name="setpadding"></a>CToolBarCtrl::設定
 
-設定目前工具列控制項的水準和垂直填補。
+設置當前工具列控制件的水準和垂直填充。
 
 ```
 DWORD SetPadding(
@@ -2227,26 +2227,26 @@ DWORD SetPadding(
 
 |參數|描述|
 |---------------|-----------------|
-|*nHorzPadding*|在指定工具列控制項的水準填補（以圖元為單位）。|
-|*nVertPadding*|在指定工具列控制項的垂直填補（以圖元為單位）。|
+|*nHorzPadding*|[在]指定工具列控制項的水平填充(以像素為單位)。|
+|*nVertPadding*|[在]指定工具列控制元件的垂直填充(以像素為單位)。|
 
 ### <a name="return-value"></a>傳回值
 
-包含上一個水準填補值的 DWORD，其最高的字組會包含上一個垂直填補值。 填補值是以圖元為單位。
+低字包含上一個水準填充值的 DWORD,其高字包含以前的垂直填充值。 填充值以像素為單位進行測量。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TB_SETPADDING](/windows/win32/Controls/tb-setpadding)訊息，如 Windows SDK 所述。
+此方法發送[TB_SETPADDING](/windows/win32/Controls/tb-setpadding)訊息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會將目前工具列控制項的水準和垂直填補設定為20圖元。
+以下代碼示例將當前工具列控制件的水準和垂直填充集為 20 圖元。
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_6.cpp)]
 
-##  <a name="setpressedimagelist"></a>CToolBarCtrl：： SetPressedImageList
+## <a name="ctoolbarctrlsetpressedimagelist"></a><a name="setpressedimagelist"></a>CToolBarCtrl::設定被壓抑的影像清單
 
-設定目前工具列控制項用來代表按下狀態之按鈕的影像清單。
+設定當前工具列控制項用於表示處於按下狀態的按鈕的圖像清單。
 
 ```
 CImagelist* SetPressedImageList(
@@ -2258,28 +2258,28 @@ CImagelist* SetPressedImageList(
 
 |參數|描述|
 |---------------|-----------------|
-|*iImageID*|在影像清單之以零為起始的索引。 如果您只使用一個影像清單，請將此參數設定為零。|
-|*pImageList*|在包含新影像清單之[CImageList](../../mfc/reference/cimagelist-class.md)的指標。|
+|*iImageID*|[在]圖像清單的零基索引。 如果僅使用一個圖像清單,則此參數將設置為零。|
+|*pImageList*|[在]指向包含新圖像清單的[CImageList 的](../../mfc/reference/cimagelist-class.md)指標。|
 
 ### <a name="return-value"></a>傳回值
 
-[CImageList](../../mfc/reference/cimagelist-class.md)的指標，其中包含目前控制項的先前影像清單，如果未設定這類影像清單，則為 Null。
+指向包含當前控制項的上一個影像清單的[CImageList](../../mfc/reference/cimagelist-class.md)的指標,如果沒有設置此類影像清單,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TB_SETPRESSEDIMAGELIST](/windows/win32/Controls/tb-setpressedimagelist)訊息，如 Windows SDK 所述。
+此方法發送[TB_SETPRESSEDIMAGELIST](/windows/win32/Controls/tb-setpressedimagelist)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會將按下的影像清單設定為與預設影像清單相同。
+以下代碼示例將按下的圖像清單設置為與預設圖像清單相同的圖像清單。
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_7.cpp)]
 
-##  <a name="setrows"></a>CToolBarCtrl：： SetRows
+## <a name="ctoolbarctrlsetrows"></a><a name="setrows"></a>CToolBarCtrl::SetRows
 
-要求工具列控制項將其大小調整為所要求的資料列數目。
+要求工具列控件調整自身大小以調整為請求的行數。
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2289,31 +2289,31 @@ void SetRows(
 ### <a name="parameters"></a>參數
 
 *nRows*<br/>
-要求的資料列數目。
+請求的行數。
 
-*bLarger*<br/>
-如果工具列無法調整為所要求的資料列數目，則告訴您是否要使用更多的資料列或較少的資料列。
+*b 更大*<br/>
+如果工具列無法調整為請求的行數,則說明是使用更多行還是減少行。
 
 *lpRect*<br/>
-指向將會接收工具列新周框的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[矩形](/previous-versions/dd162897\(v=vs.85\))結構。
+指向將接收工具列的新邊界矩形的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 ### <a name="remarks"></a>備註
 
-如果工具列無法自行調整為所要求的數目或列，則會根據*bLarger*的值，將其本身重設為下一個較大或下一個較小的有效大小。 如果*bLarger*為 TRUE，新的資料列數目會大於所要求的數目。 如果*bLarger*為 FALSE，新的資料列數目將會小於要求的數目。
+如果工具列無法將自身大小調整到請求的數位或行,則根據*bLarger*的值,它將調整自身大小以下一個較大的或下一個較小的有效大小。 如果*b 大比較為*TRUE,則新行數將大於請求的行數。 如果*b 更大*為 FALSE,則新行數將小於請求的數量。
 
-如果按鈕可以排列，則給定的資料列數目對工具列有效，讓所有的資料列都有相同數目的按鈕（可能是最後一個資料列除外）。 例如，包含四個按鈕的工具列無法調整大小為三個數據列，因為最後兩個數據列必須較短。 如果您嘗試將其大小調整為三個數據列，當*bLarger*為 TRUE 時，如果*bLarger*為 FALSE，則會得到四個數據列。
+如果可以排列按鈕,使所有行具有相同的按鈕數(可能最後一行除外),則給定數量的行對工具列有效。 例如,包含四個按鈕的工具列不能調整為三行,因為最後兩行必須變短。 如果嘗試將其大小調整為三行,則如果*b大比較*為 TRUE,則獲得四行;如果*b"較大"* 為 FALSE,則獲取兩行。
 
-如果工具列中有分隔符號，當指定數目的資料列有效時，規則就會變得更複雜。 系統會計算配置，讓按鈕群組（群組中第一個和最後一個按鈕前面加上分隔符號的按鈕）永遠不會在數個數據列上中斷，除非群組無法放在一個資料列上。
+如果工具列中有分隔符,則給定行數有效時的規則會更加複雜。 計算佈局時,按鈕組(在組中第一個和最後一個按鈕之前帶有分隔符的按鈕)永遠不會在數行上分解,除非組不能容納一行。
 
-如果群組不適合一個數據列，則下一個群組會在下一個資料列開始，即使它符合大型群組結束的資料列也一樣。 此規則的目的是要讓大型群組之間的分隔更加明顯。 產生的垂直分隔符號會計算為數據列。
+如果組不適合一行,則下一個組將從下一行開始,即使它適合大型組結束的行。 此規則的目的是使大型組之間的分離更加明顯。 生成的垂直分隔符計為行。
 
-另請注意，`SetRows` 成員函式一律會選擇產生最小工具欄大小的版面配置。 建立具有 TBSTYLE_WRAPABLE 樣式的工具列，然後調整控制項大小，只需在控制項的寬度上套用上面所述的方法即可。
+另請注意,`SetRows`成員函數將始終選擇導致最小工具列大小的佈局。 使用TBSTYLE_WRAPABLE樣式創建工具列,然後調整控制件大小,只需應用上述方法,給定控制件的寬度。
 
-只有使用 TBSTYLE_WRAPABLE 樣式建立的工具列，才能呼叫此函式。
+只能為使用TBSTYLE_WRAPABLE樣式創建的工具列調用此功能。
 
-##  <a name="setstate"></a>CToolBarCtrl：： SetState
+## <a name="ctoolbarctrlsetstate"></a><a name="setstate"></a>CToolBarCtrl::設定狀態
 
-設定工具列控制項中指定之按鈕的狀態。
+設定工具列控制項中指定按鈕的狀態。
 
 ```
 BOOL SetState(
@@ -2326,8 +2326,8 @@ BOOL SetState(
 *nID*<br/>
 按鈕的命令識別碼。
 
-*nState*<br/>
-狀態旗標。 它可以是[CToolBarCtrl：： AddButtons](#addbuttons)中按鈕狀態所列的值組合。
+*n州*<br/>
+州標誌。 它可以是[CToolBarCtrl 中](#addbuttons)為按鈕狀態列出的值的組合::addButton。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2335,37 +2335,37 @@ BOOL SetState(
 
 ### <a name="remarks"></a>備註
 
-如果您想要設定一個以上的按鈕狀態，此功能特別有用。 若只要設定一個狀態，請使用下列其中一個成員函式： [EnableButton](#enablebutton)、 [CheckButton](#checkbutton)、 [HideButton](#hidebutton)、[不定](#indeterminate)或[PressButton](#pressbutton)。
+如果要設置多個按鈕狀態,此功能特別方便。 要設定一種狀態,請使用以下成員函數之一:[開啟按鈕](#enablebutton),[檢查按鈕](#checkbutton),[隱藏按鈕](#hidebutton),[不確定](#indeterminate)或[按按鈕](#pressbutton)。
 
-##  <a name="setstyle"></a>CToolBarCtrl：： SetStyle
+## <a name="ctoolbarctrlsetstyle"></a><a name="setstyle"></a>CToolBarCtrl::設定樣式
 
-設定工具列控制項的樣式。
+設置工具列控件的樣式。
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-包含[工具列控制項樣式](/windows/win32/Controls/toolbar-control-and-button-styles)組合的 DWORD，如 Windows SDK 中所述。
+包含[工具列控制樣式](/windows/win32/Controls/toolbar-control-and-button-styles)組合的 DWORD,如 Windows SDK 中所述。
 
-##  <a name="settooltips"></a>CToolBarCtrl：： SetToolTips
+## <a name="ctoolbarctrlsettooltips"></a><a name="settooltips"></a>CToolBarCtrl::設定工具提示
 
-將工具提示控制項與工具列控制項產生關聯。
+將工具尖端控制件與工具列控制件關聯。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 
 ### <a name="parameters"></a>參數
 
 *pTip*<br/>
-[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標。
+指向[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標。
 
-##  <a name="setwindowtheme"></a>CToolBarCtrl：： SetWindowTheme
+## <a name="ctoolbarctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolBarctrl::設定視窗主題
 
-設定 `CToolBarCtrl` 物件的視覺化樣式。
+設置`CToolBarCtrl`物件的可視樣式。
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -2373,20 +2373,20 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="parameters"></a>參數
 
-*pszSubAppName*<br/>
-Unicode 字串的指標，其中包含要設定的工具列視覺樣式。
+*pssSubApp 名稱*<br/>
+指向要設置的工具列視覺樣式的 Unicode 字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-不使用傳回值。
+不使用返回值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme)訊息的功能,如 Windows SDK 中所述。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC 範例 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>

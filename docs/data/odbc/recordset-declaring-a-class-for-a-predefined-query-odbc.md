@@ -8,43 +8,43 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9d19328fb82503519fd8eca083e0dd11e10883ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9618f25d738c092ab1818ef7c4ea52928e2ea60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212949"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367046"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>資料錄集：宣告預先定義查詢的類別 (ODBC)
 
 > [!NOTE]
-> Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
+> Visual Studio 2019 和更新版本中未提供「MFC ODBC 消費者」精靈。 您仍然可以手動建立消費者。
 
 本主題適用於 MFC ODBC 類別。
 
 本主題說明如何針對預先定義的查詢 (有時稱為預存程序，例如，在 Microsoft SQL Server 中)，建立資料錄集類別。
 
 > [!NOTE]
->  本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果實作大量資料列擷取，程序會非常類似。 若要瞭解會執行大量資料列提取的記錄集之間的差異，以及不會執行的記錄集，請參閱[記錄集：提取大量資料（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果實作大量資料列擷取，程序會非常類似。 要瞭解實現批量行提取的記錄集與不執行批量行提取的記錄集之間的差異,請參閱[記錄集:批量提取記錄 (ODBC)。](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 某些資料庫管理系統 (DBMS) 可讓您建立預先定義的查詢，並從您的應用程式呼叫它，例如函式。 查詢有名稱，可能會接受參數，而且可能會傳回資料錄。 本主題中的程序描述如何呼叫可傳回資料錄 (而且可能會接受參數) 的預先定義查詢。
 
 資料庫類別不支援更新預先定義的查詢。 快照集預先定義的查詢與動態集預先定義的查詢之間的差異不在於是否能夠更新，而是在於對其他使用者 (或您程式中的其他資料錄集) 所做的變更是否會顯示在資料錄集中。
 
 > [!TIP]
->  您不需要資料錄集，就可以呼叫不會傳回資料錄的預先定義查詢。 準備 SQL 陳述式，如下所述，但請藉由呼叫 `CDatabase` 成員函式 [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) 來執行它。
+> 您不需要資料錄集，就可以呼叫不會傳回資料錄的預先定義查詢。 準備 SQL 陳述式，如下所述，但請藉由呼叫 `CDatabase` 成員函式 [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) 來執行它。
 
 您可以建立單一資料錄集類別，以管理呼叫預先定義的查詢，但必須自己執行某些工作。 此精靈不支援特別針對這個用途建立一個類別。
 
 #### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>若要建立類別來呼叫預先定義的查詢 (預存程序)
 
-1. 使用 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md) 從 [加入類別] 為提供查詢所傳回的最多資料行的資料表建立資料錄集類別。 這為您提供了一個良好的開端。
+1. 使用 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md) 從 [加入類別]**** 為提供查詢所傳回的最多資料行的資料表建立資料錄集類別。 這為您提供了一個良好的開端。
 
 1. 針對查詢會傳回但精靈未為您建立的之任何資料表的任何資料行，手動新增欄位資料成員。
 
    例如，如果查詢所傳回的三個資料行中，每個都來自兩個額外的資料表，請將 (適當資料類型的) 六個欄位資料成員新增至類別。
 
-1. 在類別的 [DoFieldExchange](../../data/odbc/record-field-exchange-rfx.md) 成員函式中，手動新增 [RFX](../../mfc/reference/crecordset-class.md#dofieldexchange) 函式呼叫，其中一個會對應到每個新增的欄位資料成員的資料類型。
+1. 在類別的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成員函式中，手動新增 [RFX](../../data/odbc/record-field-exchange-rfx.md) 函式呼叫，其中一個會對應到每個新增的欄位資料成員的資料類型。
 
     ```cpp
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:
@@ -66,7 +66,7 @@ ms.locfileid: "80212949"
 
 1. 如果查詢接受參數，請為每個參數新增一個參數資料成員、為每個參數新增一個 RFX 函式呼叫，並為每個參數新增一個初始化。
 
-1. 您必須針對每個已新增的參數遞增 `m_nParams`，如同您為此程序的步驟 4 中新增的欄位遞增 `m_nFields` 一樣。 如需詳細資訊，請參閱[記錄集：參數化記錄集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+1. 您必須針對每個已新增的參數遞增 `m_nParams`，如同您為此程序的步驟 4 中新增的欄位遞增 `m_nFields` 一樣。 有關詳細資訊,請參閱[記錄集:參數化記錄集 (ODBC)。](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 1. 使用下列格式，手動撰寫 SQL 陳述式字串：
 
@@ -151,7 +151,7 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 此程式碼會建構一個快照集、為其傳遞一個稍早取自使用者的參數，然後呼叫預先定義的查詢。 當查詢執行時，它會針對指定的銷售地區傳回資料錄。 每一筆資料錄都包含帳戶號碼、客戶姓氏和客戶電話號碼的資料行。
 
 > [!TIP]
->  您可以從預存程序處理傳回值 (輸出參數)。 如需詳細資訊和範例，請參閱 [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。
+> 您可以從預存程序處理傳回值 (輸出參數)。 如需詳細資訊和範例，請參閱 [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。
 
 ## <a name="see-also"></a>另請參閱
 

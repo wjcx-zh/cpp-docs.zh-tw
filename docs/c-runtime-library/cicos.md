@@ -1,8 +1,9 @@
 ---
 title: _CIcos
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - _CIcos
+- _o__CIcos
 api_location:
 - msvcr90.dll
 - msvcrt.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: 5a57e948a73b8c4243ebe5a8a12f62cc55a40f3b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a9b18c2eb0a76885f3c3aad7bb1f03d7dea52c5c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940543"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918064"
 ---
 # <a name="_cicos"></a>_CIcos
 
@@ -46,9 +48,11 @@ void __cdecl _CIcos();
 
 產生的值會推入至浮點堆疊的頂端。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-**平台：** x86
+**平臺：** x86
 
 ## <a name="see-also"></a>另請參閱
 

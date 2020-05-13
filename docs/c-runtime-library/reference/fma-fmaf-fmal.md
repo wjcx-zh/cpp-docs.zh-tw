@@ -1,10 +1,13 @@
 ---
 title: fma、fmaf、fmal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fma
 - fmaf
 - fmal
+- _o_fma
+- _o_fmaf
+- _o_fmal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957098"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914945"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -95,7 +99,7 @@ long double fmal(
 
 否則，可能會傳回下列其中一個值：
 
-|問題|Return|
+|問題|傳回|
 |-----------|------------|
 |*x* = 無限大、 *y* = 0 或<br /><br /> *x* = 0、 *y* = 無限大|NaN|
 |*x*或*y* = 精確的±無限大， *z* = 無限大且正負號相反|NaN|
@@ -108,13 +112,15 @@ long double fmal(
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型的**fma**多載。 在 C 程式中， **fma**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**fma**的多載。 在 C 程式中， **fma**一律會採用並傳回**雙精度浮點數**。
 
 此函式會計算值，就像它採用無限精確度，然後將最終結果進行四捨五入。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**fma**、 **fmaf**、 **fmal**|\<math.h>|\<cmath>|
 

@@ -1,8 +1,9 @@
 ---
 title: tmpfile_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - tmpfile_s
+- _o_tmpfile_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946048"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919924"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -56,9 +58,9 @@ errno_t tmpfile_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*pFilePtr*|**傳回值**|**的內容**  *pFilePtr*|
+|*pFilePtr*|**傳回值**|*PFilePtr* **的內容**  |
 |----------------|----------------------|---------------------------------|
-|**NULL**|**EINVAL**|未變更|
+|**Null**|**EINVAL**|未變更|
 
 如果發生上述參數驗證錯誤，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而傳回值為**EINVAL**。
 
@@ -68,7 +70,9 @@ errno_t tmpfile_s(
 
 如果無法開啟檔案， **tmpfile_s**會將**Null**寫入*pFilePtr*參數。 當檔案關閉、程式正常終止時，或呼叫 **_rmtmp**時（假設目前的工作目錄不會變更），就會自動刪除此暫存檔案。 暫存檔案會以**w + b** （二進位讀取/寫入）模式開啟。
 
-如果您嘗試超過**TMP_MAX_S** ，可能會發生失敗（請參閱 stdio.h）。H）使用**tmpfile_s**呼叫。
+如果您嘗試超過**TMP_MAX_S** （請參閱 stdio.h），可能會發生失敗。H）使用**tmpfile_s**的呼叫。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -76,7 +80,7 @@ errno_t tmpfile_s(
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,12 +1,17 @@
 ---
 title: logb、logbf、logbl、_logb、_logbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - logb
 - _logb
 - _logbl
 - logbf
+- _logbf
 - logbl
+- _o__logb
+- _o_logb
+- _o_logbf
+- _o_logbl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953157"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911406"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -91,12 +97,14 @@ float _logbf(
 
 **Logb**函式會將浮點引數*x*的指數值解壓縮，如同*x*是以無限範圍表示。 如果引數*x*反正規化，則會將它視為正規化。
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**logb**的多載。 在 C 程式中， **logb**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**logb**的多載。 在 C 程式中， **logb**一律會採用並傳回**雙精度浮點數**。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± QNAN，IND|無|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|±0|ZERODIVIDE|_SING|
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -105,7 +113,7 @@ float _logbf(
 |**_logb**|\<float.h>|
 |**logb**、 **logbf**、 **logbl**、 **_logbf**|\<math.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

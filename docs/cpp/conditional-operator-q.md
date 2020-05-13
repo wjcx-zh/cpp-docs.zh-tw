@@ -1,5 +1,5 @@
 ---
-title: 條件運算子： &quest;：
+title: '條件運算子: &quest; :'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8c00db06ed5c0347cb9c720e35bd3e517df2a13c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4ba4c80d40450fd5975b047a1a4fca63146c5773
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337267"
 ---
-# <a name="conditional-operator-quest-"></a>條件運算子： &quest;：
+# <a name="conditional-operator-quest-"></a>條件運算子: &quest; :
 
 ## <a name="syntax"></a>語法
 
@@ -25,13 +25,13 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>備註
 
-條件運算子（ **？：** ）是一種三元運算子（它會採用三個運算元）。 條件運算子運作方式如下：
+條件運算子 (**? :**) 是三元運算符(它需要三個操作數)。 條件運算子運作方式如下：
 
-- 第一個運算元會隱含地轉換為**bool**。 接著會對它進行評估，並且完成所有副作用，再繼續執行。
+- 第一個操作數被隱式轉換為**布林**。 接著會對它進行評估，並且完成所有副作用，再繼續執行。
 
-- 如果第一個運算元評估為**true** （1），則會評估第二個運算元。
+- 如果第一個操作數計算為**true** (1),則計算第二個操作數。
 
-- 如果第一個運算元評估為**false** （0），則會評估第三個運算元。
+- 如果第一個操作數計算為**false** (0),則計算第三個操作數。
 
 條件運算子的結果會是所評估運算元 (也就是第二個或第三個運算元) 的結果。 在條件運算式中，只會評估後兩個運算元的其中一個。
 
@@ -39,7 +39,7 @@ expression ? expression : expression
 
 - 如果這兩個運算元屬於相同類型，則結果為該類型。
 
-- 如果兩個運算元都是算術或列舉類型，則會執行一般算術轉換（涵蓋在[標準轉換](standard-conversions.md)中），將它們轉換成一般類型。
+- 如果兩個操作數都是算術或枚舉類型,則執行通常的算術轉換(在[標準轉換](standard-conversions.md)中覆蓋),以將其轉換為公共類型。
 
 - 如果這兩個運算元都是指標類型，或者其中一個是指標類型，另一個是判斷值為 0 的常數運算式，則會進行指標轉換，將它們轉換成一般類型。
 
@@ -54,7 +54,7 @@ expression ? expression : expression
 未包含在上述清單中的任何第二個和第三個運算元組合都不合法。 結果的類型是一般類型，而如果第二個和第三個運算元屬於相同類型且都是左值，則結果也會是左值。
 
 > [!WARNING]
->  如果第二個運算元的類型與第三個運算元的類型不同，則會叫用依照 C++ 標準指定的複雜類型轉換規則。 這些轉換可能會導致非預期的行為，包括建構和解構暫存物件。 因此，強烈建議您 (1) 避免使用使用者定義類型做為搭配條件運算子的運算元，或者 (2) 如果您使用使用者定義類型，則明確地將每個運算元轉換成一般類型。
+> 如果第二個運算元的類型與第三個運算元的類型不同，則會叫用依照 C++ 標準指定的複雜類型轉換規則。 這些轉換可能會導致非預期的行為，包括建構和解構暫存物件。 因此，強烈建議您 (1) 避免使用使用者定義類型做為搭配條件運算子的運算元，或者 (2) 如果您使用使用者定義類型，則明確地將每個運算元轉換成一般類型。
 
 ## <a name="example"></a>範例
 
@@ -73,4 +73,4 @@ int main() {
 ## <a name="see-also"></a>另請參閱
 
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[條件運算式運算子](../c-language/conditional-expression-operator.md)
+[條件運算子運算子](../c-language/conditional-expression-operator.md)

@@ -1,10 +1,12 @@
 ---
 title: _ismbblead、_ismbblead_l
 description: 描述 Microsoft C 執行時間程式庫（CRT） _ismbblead 和 _ismbblead_l 函數。
-ms.date: 01/08/2020
+ms.date: 4/2/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
+- _o__ismbblead
+- _o__ismbblead_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 7680793b71c4535ed75433ac98167e52a39896ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755025"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918673"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead、_ismbblead_l
 
@@ -64,7 +67,7 @@ int _ismbblead_l(
 *c*\
 待測試整數。
 
-*地區*設定\
+*語言*\
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -80,6 +83,8 @@ int _ismbblead_l(
 當地區設定為 UTF-8 時， **_ismbblead**和 **_ismbblead_l**一律會傳回0（false），不論*c*是否為前導位元組。
 
 **_ismbblead**和 **_ismbblead_l**是 Microsoft 特有的，而不是標準 C 程式庫的一部分。 我們不建議您在想要可攜的程式碼的地方使用它們。 針對標準 C 相容性，請改用**mbrlen** 。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>泛型文字常式對應
 
@@ -98,7 +103,7 @@ int _ismbblead_l(
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)\
 [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)\

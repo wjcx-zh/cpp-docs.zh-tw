@@ -15,13 +15,13 @@ ms.locfileid: "80169795"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>最佳化 Pragma 和關鍵字
 
-您在 C 或C++程式碼中使用的數個關鍵字和 pragma 會影響優化：
+您在 C 或 c + + 程式碼中使用的數個關鍵字和 pragma 會影響優化：
 
 - [__asm](../assembler/inline/asm.md)
 
 - [__assume](../intrinsics/assume.md)
 
-- [內嵌、__inline 或 \__forceinline](../cpp/inline-functions-cpp.md)
+- [內嵌、__inline 或\__forceinline](../cpp/inline-functions-cpp.md)
 
 - [#pragma auto_inline](../preprocessor/auto-inline.md)
 
@@ -39,6 +39,6 @@ ms.locfileid: "80169795"
 
 - [register 關鍵字](../cpp/storage-classes-cpp.md#register)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [最佳化程式碼](optimizing-your-code.md)

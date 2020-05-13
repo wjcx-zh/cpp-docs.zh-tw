@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 31154a38f8bbcb879fd871f1eb1bf5a4b15af79b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371014"
 ---
 # <a name="match_results-class"></a>match_results 類別
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>參數
 
-*BidIt* \
+*比比*\
 子相符項目的迭代器類型。
 
-配置 \
+*Alloc*\
 管理儲存體的配置器類型。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述的物件，可控制由正則運算式搜尋所產生 `sub_match<BidIt>` 類型之專案的不可修改序列。 每個項目會指向符合對應至該項目之擷取群組的子序列。
+類範本描述一個物件,該物件控制由正則運算式搜索生成的不可修改的類型`sub_match<BidIt>`元素序列。 每個項目會指向符合對應至該項目之擷取群組的子序列。
 
 ### <a name="constructors"></a>建構函式
 
@@ -42,51 +42,51 @@ class match_results
 |-|-|
 |[match_results](#match_results)|建構物件。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|
-|[char_type](#char_type)|元素類型。|
+|[char_type](#char_type)|項目的類型。|
 |[const_iterator](#const_iterator)|子相符項目的 const 迭代器類型。|
 |[const_reference](#const_reference)|元素 const 參考的類型。|
 |[difference_type](#difference_type)|迭代器差值的類型。|
-|[iterator](#iterator)|子相符項目的迭代器類型。|
-|[reference](#reference)|元素參考的類型。|
+|[反覆運算](#iterator)|子相符項目的迭代器類型。|
+|[參考](#reference)|元素參考的類型。|
 |[size_type](#size_type)|子相符項目計數的類型。|
 |[string_type](#string_type)|字串的類型。|
-|[value_type](#value_type)|子相符項目的類型。|
+|[value_type](#value_type)|子對應的類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
-|[begin](#begin)|指定子相符項目序列的開頭。|
-|[empty](#empty)|測試是否沒有任何子相符項目。|
-|[end](#end)|指定子相符項目序列的結尾。|
+|[開始](#begin)|指定子相符項目序列的開頭。|
+|[空](#empty)|測試是否沒有任何子相符項目。|
+|[結束](#end)|指定子相符項目序列的結尾。|
 |[格式](#format)|格式子相符項目。|
 |[get_allocator](#get_allocator)|傳回已儲存的配置器。|
-|[length](#length)|傳回子相符項目的長度。|
+|[長度](#length)|傳回子相符項目的長度。|
 |[max_size](#max_size)|取得最大子相符項目數。|
-|[移動](#position)|取得子群組的起始位移。|
-|[前置詞](#prefix)|取得第一個子相符項目之前的序列。|
-|[size](#size)|計算子相符項目數。|
-|[str](#str)|傳回子相符項目。|
-|[尾碼](#suffix)|取得最後一個子相符項目之後的序列。|
-|[swap](#swap)|交換兩個 match_results 物件。|
+|[位置](#position)|取得子群組的起始位移。|
+|[prefix](#prefix)|取得第一個子相符項目之前的序列。|
+|[大小](#size)|計算子相符項目數。|
+|[Str](#str)|傳回子相符項目。|
+|[suffix](#suffix)|取得最後一個子相符項目之後的序列。|
+|[交換](#swap)|交換兩個 match_results 物件。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
-|[operator=](#op_eq)|複製 match_results 物件。|
-|[operator\[\]](#op_at)|存取子物件。|
+|[運算子*](#op_eq)|複製 match_results 物件。|
+|[算子\[\]](#op_at)|存取子物件。|
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<regex>
 
-**命名空間:** std
+**命名空間：** std
 
 ## <a name="example"></a>範例
 
@@ -188,7 +188,7 @@ next submatch: matched == false
 empty == false
 ```
 
-## <a name="allocator_type"></a>  match_results::allocator_type
+## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results::allocator_type
 
 管理儲存體的配置器類型。
 
@@ -198,9 +198,9 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>備註
 
-Typedef 是*範本引數*配置的同義字。
+類型def是範本參數*Alloc*的同義詞。
 
-## <a name="begin"></a>  match_results::begin
+## <a name="match_resultsbegin"></a><a name="begin"></a>match_results:開始
 
 指定子相符項目序列的開頭。
 
@@ -212,9 +212,9 @@ const_iterator begin() const;
 
 成員函式傳回的隨機存取迭代器，指向序列的第一個項目 (或空序列結尾以外的位置)。
 
-## <a name="char_type"></a>  match_results::char_type
+## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results:char_type
 
-元素類型。
+項目的類型。
 
 ```cpp
 typedef typename iterator_traits<BidIt>::value_type char_type;
@@ -224,7 +224,7 @@ typedef typename iterator_traits<BidIt>::value_type char_type;
 
 這個 typedef 與 `iterator_traits<BidIt>::value_type`類型同義，後者是搜尋到之字元序列的項目類型。
 
-## <a name="const_iterator"></a>  match_results::const_iterator
+## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results:const_iterator
 
 子相符項目的 const 迭代器類型。
 
@@ -236,7 +236,7 @@ typedef T0 const_iterator;
 
 此 typedef 所描述的物件可做為受控制序列的常數隨機存取迭代器。
 
-## <a name="const_reference"></a>  match_results::const_reference
+## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results:const_reference
 
 元素 const 參考的類型。
 
@@ -248,7 +248,7 @@ typedef const typename Alloc::const_reference const_reference;
 
 typedef 所說明的物件可作為受控制序列之元素的常數參考。
 
-## <a name="difference_type"></a>  match_results::difference_type
+## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::d)類型
 
 迭代器差值的類型。
 
@@ -260,7 +260,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 Typedef 是 `iterator_traits<BidIt>::difference_type`類型的同義字；它描述一個物件，可以代表指向受控制序列中項目之任何兩個迭代器間的差值。
 
-## <a name="empty"></a>  match_results::empty
+## <a name="match_resultsempty"></a><a name="empty"></a>match_results::空
 
 測試是否沒有任何子相符項目。
 
@@ -272,7 +272,7 @@ bool empty() const;
 
 只有在規則運算式搜尋失敗時，此成員函式才會傳回 true。
 
-## <a name="end"></a>  match_results::end
+## <a name="match_resultsend"></a><a name="end"></a>match_results:結束
 
 指定子相符項目序列的結尾。
 
@@ -284,7 +284,7 @@ const_iterator end() const;
 
 成員函式會傳回指向序列結尾之外的迭代器。
 
-## <a name="format"></a>  match_results::format
+## <a name="match_resultsformat"></a><a name="format"></a>match_results:格式
 
 格式子相符項目。
 
@@ -298,25 +298,25 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>參數
 
-*OutIt* \
+*出它*\
 輸出迭代器類型。
 
-*out*\
+*出*\
 要寫入的輸出資料流。
 
-*bcp.fmt* \
+*Fmt*\
 格式字串。
 
-*旗標*\
+*標誌*\
 格式旗標。
 
 ### <a name="remarks"></a>備註
 
-每個成員函式都會在*bcp.fmt*格式的控制項底下產生格式化的文字。 第一個成員函式會將格式化的文字寫入*其引數*所定義的序列，並傳回*out*。第二個成員函式會傳回字串物件，其中包含格式化文字的複本。
+每個成員函數在格式*fmt*的控制下生成格式化的文本。 第一個成員函數將格式化的文本寫入其參數*定義的*序列*並返回。* 第二個成員函數返回包含格式化文本副本的字串物件。
 
 若要產生格式化文字， 格式字串中的常值文字通常會複製到目標序列。 格式字串中的每個逸出序列由所代表的文字取代。 複製和取代的詳細資料受到傳遞至函式的格式旗標控制。
 
-## <a name="get_allocator"></a>  match_results::get_allocator
+## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results:get_allocator
 
 傳回已儲存的配置器。
 
@@ -328,7 +328,7 @@ allocator_type get_allocator() const;
 
 成員函式會傳回 `*this` 用來配置其 `sub_match` 的配置器物件複本。
 
-## <a name="iterator"></a>  match_results::iterator
+## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results:反覆運算器
 
 子相符項目的迭代器類型。
 
@@ -340,7 +340,7 @@ typedef const_iterator iterator;
 
 此類型說明可作為受控制序列之隨機存取迭代器的物件。
 
-## <a name="length"></a>  match_results::length
+## <a name="match_resultslength"></a><a name="length"></a>match_results:長度
 
 傳回子相符項目的長度。
 
@@ -355,9 +355,9 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `(*this)[sub].length()`。
+成員函式會傳回 `(*this)[sub].length()`。
 
-## <a name="match_results"></a>  match_results::match_results
+## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results:match_results
 
 建構物件。
 
@@ -369,17 +369,17 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>參數
 
-配置 \
+*異位*\
 要儲存的配置器物件。
 
-*right* \
+*對*\
 要複製的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構不含子相符項目的 `match_results` 物件。 第二個函式會建立屬於*right*複本的 `match_results` 物件。
+第一個建構函式會建構不含子相符項目的 `match_results` 物件。 第二個構造函數構造一`match_results`個物件,該物件是*右*的副本。
 
-## <a name="max_size"></a>  match_results::max_size
+## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results::max_size
 
 取得最大子相符項目數。
 
@@ -391,7 +391,7 @@ size_type max_size() const;
 
 成員函式會傳回物件可以控制的最長序列的長度。
 
-## <a name="op_eq"></a>  match_results::operator=
+## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results::操作員*
 
 複製 match_results 物件。
 
@@ -401,14 +401,14 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*對*\
 要複製的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將 `*this` 所控制的序列取代為*right*所控制之序列的複本。
+成員運算符用*右*控制的順序的副本替換`*this`由 它控制的序列。
 
-## <a name="op_at"></a>  match_results::operator[]
+## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results::操作員*
 
 存取子物件。
 
@@ -423,9 +423,9 @@ const_reference operator[](size_type n) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回受控制序列之元素*n*的參考，如果 `size() <= n` 或 capture group *n*不是相符專案的一部分，則傳回空 `sub_match` 物件的參考。
+成員函數返回對受控序列的元素*n*的引用,或者返回`sub_match`對空 物件的`size() <= n`引用,如果捕獲組*n*不是匹配的一部分。
 
-## <a name="position"></a>  match_results::position
+## <a name="match_resultsposition"></a><a name="position"></a>match_results::p
 
 取得子群組的起始位移。
 
@@ -442,7 +442,7 @@ difference_type position(size_type sub = 0) const;
 
 此成員函式會傳回 `std::distance(prefix().first, (*this)[sub].first)`，也就是從目標序列中的第一個字元，到受控制序列的 `n` 項目所指向的子相符項目中第一個字元之間的距離。
 
-## <a name="prefix"></a>  match_results::prefix
+## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::p重新修復
 
 取得第一個子相符項目之前的序列。
 
@@ -454,7 +454,7 @@ const_reference prefix() const;
 
 此成員函式會傳回 `sub_match<BidIt>` 類型物件的參考，以指向起始於目標序列開頭並結束於 `(*this)[0].first`的字元序列，也就是指向相符子序列之前的文字。
 
-## <a name="reference"></a>  match_results::reference
+## <a name="match_resultsreference"></a><a name="reference"></a>match_results:參考
 
 元素參考的類型。
 
@@ -466,7 +466,7 @@ typedef const_reference reference;
 
 這個類型與類型 `const_reference`同義。
 
-## <a name="size"></a>  match_results::size
+## <a name="match_resultssize"></a><a name="size"></a>match_results::大小
 
 計算子相符項目數。
 
@@ -478,7 +478,7 @@ size_type size() const;
 
 如果用於搜尋的數目超過規則運算式中的擷取群組數目，此成員函式會傳回 1；如果不進行搜尋，則會傳回 0。
 
-## <a name="size_type"></a>  match_results::size_type
+## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results:size_type
 
 子相符項目計數的類型。
 
@@ -490,7 +490,7 @@ typedef typename Alloc::size_type size_type;
 
 這個類型與類型 `Alloc::size_type`同義。
 
-## <a name="str"></a>  match_results::str
+## <a name="match_resultsstr"></a><a name="str"></a>match_results:斯特
 
 傳回子相符項目。
 
@@ -505,9 +505,9 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `string_type((*this)[sub])`。
+成員函式會傳回 `string_type((*this)[sub])`。
 
-## <a name="string_type"></a>  match_results::string_type
+## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results:string_type
 
 字串的類型。
 
@@ -519,7 +519,7 @@ typedef basic_string<char_type> string_type;
 
 這個類型與類型 `basic_string<char_type>`同義。
 
-## <a name="suffix"></a>  match_results::suffix
+## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results:後綴
 
 取得最後一個子相符項目之後的序列。
 
@@ -531,7 +531,7 @@ const_reference suffix() const;
 
 此成員函式會傳回 `sub_match<BidIt>` 類型物件的參考，以指向起始於 `(*this)[size() - 1].second` 並結束於目標序列結尾的字元序列，也就是指向相符子序列之後的文字。
 
-## <a name="swap"></a>  match_results::swap
+## <a name="match_resultsswap"></a><a name="swap"></a>match_results::交換
 
 交換兩個 match_results 物件。
 
@@ -541,16 +541,16 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*對*\
 要交換的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-成員函式會以常數時間交換 `*this` 的內容 *，而不*會擲回例外狀況。
+成員函數在恆定時間內交換`*this`和*的權利*的內容,不引發異常。
 
-## <a name="value_type"></a>  match_results::value_type
+## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results:value_type
 
-子相符項目的類型。
+子對應的類型。
 
 ```cpp
 typedef sub_match<BidIt> value_type;
@@ -560,6 +560,6 @@ typedef sub_match<BidIt> value_type;
 
 typedef 與類型 `sub_match<BidIt>`同義。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)
+[\<正則>](../standard-library/regex.md)

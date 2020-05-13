@@ -1,6 +1,6 @@
 ---
 title: IAnalyzer 類別
-description: C++ BUILD Insights SDK IAnalyzer 類別參考。
+description: C++生成見解 SDK IAnalyzer 類引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 53f7b36695bb24d96ccfe88afbb56ff717c94dc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: be9d80bb94450458c73fd6ce8d908985ba6f293d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332450"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329178"
 ---
 # <a name="ianalyzer-class"></a>IAnalyzer 類別
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`IAnalyzer` 類別提供分析 Windows 事件追蹤（ETW）追蹤的介面。 它會與[MakeDynamicAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)、 [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md)、 [MakeStaticAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)和[MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md)函數搭配使用。 使用 `IAnalyzer` 做為基類，以建立您自己的分析器，它可以是分析器或 relogger 群組的一部分。
+該`IAnalyzer`類提供了一個用於分析 Windows (ETW) 追蹤的事件跟蹤的介面。 它與[製作動態分析器組](../functions/make-dynamic-analyzer-group.md)、[使動態重新記錄組](../functions/make-dynamic-relogger-group.md)、[使靜態分析器組](../functions/make-dynamic-analyzer-group.md)和[使靜態重新記錄組](../functions/make-static-analyzer-group.md)功能一起使用。 用作`IAnalyzer`基類,創建自己的分析器,該分析器可以是分析器或重新記錄組的一部分。
 
 ## <a name="syntax"></a>語法
 
@@ -61,43 +61,43 @@ public:
 
 ## <a name="remarks"></a>備註
 
-衍生自 `IAnalyzer` 的類別可以同時當做分析器和 reloggers 使用。 當做 reloggers 使用時，relogger 特有的函式會重新導向至其分析器的對應項。 反向不是 true：衍生自 `IRelogger` 的類別無法當做分析器使用。 在 relogger 群組中流量分析器是常見的模式。 當放在 relogger 群組的早期位置時，分析器可以預先計算資訊，並使其可在稍後的位置 reloggers。
+派生自`IAnalyzer`的類可用作分析器和重新記錄器。 當用作重新記錄器時,重新記錄特定的函數重定向到其分析器等效項。 相反,情況並非如此:派生自`IRelogger`的類不能用作分析器。 在重新記錄組中使用分析器是一種常見的模式。 當放置在重新記錄組的早期位置時,分析儀可以預先計算資訊,並使其可用於以後位置的重新記錄。
 
-不會覆寫之所有函式的預設傳回值為 `AnalysisControl::CONTINUE`。 如需詳細資訊，請參閱[AnalysisControl](analysis-control-enum-class.md)。
+未重寫的所有函數的預設傳回值`AnalysisControl::CONTINUE`為 。 有關詳細資訊,請參閱[分析控制](analysis-control-enum-class.md)。
 
 ## <a name="members"></a>成員
 
-除了 `IRelogger` 介面的[OnTraceInfo](irelogger-class.md#on-trace-info)成員之外，`IAnalyzer` 類別還包含下列成員：
+除了`IRelogger`介面`IAnalyzer`中的[OnTraceInfo](irelogger-class.md#on-trace-info)成員外,該類還包含以下成員:
 
 ### <a name="destructor"></a>解構函式
 
-[~ IAnalyzer](#ianalyzer-destructor)
+[*IAnalyzer](#ianalyzer-destructor)
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函式
 
-[OnBeginAnalysis](#on-begin-analysis)\
-[OnBeginAnalysisPass](#on-begin-analysis-pass)\
-[OnBeginRelogging](#on-begin-relogging)\
-[OnBeginReloggingPass](#on-begin-relogging-pass)\
-[OnEndAnalysis](#on-end-analysis)\
-[OnEndAnalysisPass](#on-end-analysis-pass)\
-[OnEndRelogging](#on-end-relogging)\
-[OnEndReloggingPass](#on-end-relogging-pass)\
-[OnSimpleEvent](#on-simple-event)\
-[OnStartActivity](#on-start-activity)\
-[OnStopActivity](#on-stop-activity)
+[上開始分析](#on-begin-analysis)\
+[OnBegin 分析通行證](#on-begin-analysis-pass)\
+[開始重新記錄](#on-begin-relogging)\
+[在「開始記錄」Pass](#on-begin-relogging-pass)\
+[結束剖析](#on-end-analysis)\
+[上端分析通](#on-end-analysis-pass)\
+[結束重新記錄](#on-end-relogging)\
+[結束重新紀錄頻道](#on-end-relogging-pass)\
+[在Simple事件上](#on-simple-event)\
+[啟動活動](#on-start-activity)\
+[停止活動](#on-stop-activity)
 
-## <a name="ianalyzer-destructor"></a>~ IAnalyzer
+## <a name="ianalyzer"></a><a name="ianalyzer-destructor"></a>*IAnalyzer
 
-終結 IAnalyzer 類別。
+銷毀IAnalyzer類。
 
 ```cpp
 virtual ~IAnalyzer();
 ```
 
-## <a name="on-begin-analysis"></a>OnBeginAnalysis
+## <a name="onbeginanalysis"></a><a name="on-begin-analysis"></a>上開始分析
 
-對於分析器群組的分析器部分，會在第一次分析階段開始之前呼叫此函式。 對於 relogger 群組的分析器部分，會在 relogging 階段開始之前呼叫此函式。 針對相同 relogging 會話的分析器和 relogger 群組中的分析器，在第一次分析階段開始之前，會呼叫此函式兩次。
+對於分析器組一部分的分析器,在第一次分析傳遞開始之前調用此函數。 對於重新記錄組中的分析器部分,在重新記錄傳遞開始之前調用此功能。 對於同一重新記錄作業階段的分析器和重新記錄組部分的分析器,在第一次分析傳遞開始之前,將調用此函數兩次。
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysis();
@@ -105,11 +105,11 @@ virtual AnalysisControl OnBeginAnalysis();
 
 ### <a name="return-value"></a>傳回值
 
-描述接下來應該發生什麼情況的[AnalysisControl](analysis-control-enum-class.md)程式碼。
+分析[控制](analysis-control-enum-class.md)代碼,描述接下來會發生什麼。
 
-## <a name="on-begin-analysis-pass"></a>OnBeginAnalysisPass
+## <a name="onbeginanalysispass"></a><a name="on-begin-analysis-pass"></a>OnBegin 分析通行證
 
-對於分析器群組的分析器部分，會在每個分析階段開始時呼叫此函式。 對於 relogger 群組的分析器部分，此函式會在 relogger 階段開始時呼叫。 對於相同 relogging 會話的分析器和 relogger 群組中的分析器，此函式會在每次分析階段開始時，以及在 relogger 階段開始時呼叫。
+對於分析器組一部分的分析器,在每次分析傳遞開始時調用此函數。 對於重新記錄組中的分析器,此函數在重新記錄器傳遞的開頭調用。 對於同一重新記錄工作階段的分析器和重新記錄組部分的分析器,在每次分析通過開始時和重新記錄器傳遞開始時調用此功能。
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysisPass();
@@ -117,23 +117,23 @@ virtual AnalysisControl OnBeginAnalysisPass();
 
 ### <a name="return-value"></a>傳回值
 
-描述接下來應該發生什麼情況的[AnalysisControl](analysis-control-enum-class.md)程式碼。
+分析[控制](analysis-control-enum-class.md)代碼,描述接下來會發生什麼。
 
-## <a name="on-begin-relogging"></a>OnBeginRelogging
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>開始重新記錄
 
 ```cpp
 AnalysisControl OnBeginRelogging() final;
 ```
 
-無法覆寫此函數。 當分析器是 relogger 群組C++的一部分時，BUILD Insights SDK 會呼叫它。 此函式會將呼叫重新導向至[OnBeginAnalysis](#on-begin-analysis)。
+無法重寫此功能。 當分析器是重新記錄組的一部分時,C++生成見解 SDK 調用它。 此函數將呼叫重定到[OnBeginAnalysis](#on-begin-analysis)。
 
 ### <a name="return-value"></a>傳回值
 
-[OnBeginAnalysis](#on-begin-analysis)呼叫的結果。
+[OnBegin 分析](#on-begin-analysis)調用的結果。
 
-## <a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>在「開始記錄」Pass
 
-無法覆寫此函數。 當分析器是 relogger 群組C++的一部分時，BUILD Insights SDK 會呼叫它。 此函式會將呼叫重新導向至[OnBeginAnalysisPass](#on-begin-analysis-pass)。
+無法重寫此功能。 當分析器是重新記錄組的一部分時,C++生成見解 SDK 調用它。 此函數會呼叫重定到[OnBegin 分析 Pass](#on-begin-analysis-pass)。
 
 ```cpp
 AnalysisControl OnBeginReloggingPass() final;
@@ -141,14 +141,14 @@ AnalysisControl OnBeginReloggingPass() final;
 
 ### <a name="return-value"></a>傳回值
 
-[OnBeginAnalysisPass](#on-begin-analysis-pass)呼叫的結果。
+[OnBegin分析通](#on-begin-analysis-pass)電話的結果。
 
-## <a name="on-end-analysis"></a>OnEndAnalysis
+## <a name="onendanalysis"></a><a name="on-end-analysis"></a>結束剖析
 
-針對屬於分析器群組一部分的分析器，在最後一個分析行程結束之後，會呼叫此函式。 針對屬於 relogger 群組一部分的分析器，會在 relogging pass 結束後呼叫此函式。 對於同時屬於相同 relogging 會話之分析器和 relogger 群組的分析器，會呼叫此函式兩次：
+對於分析器組一部分的分析器,在最後一次分析傳遞結束後調用此功能。 對於作為重新記錄組一部分的分析儀,在重新記錄傳遞結束後調用此功能。 對於屬於同一重新紀錄紀錄工作階段的分析器和重新記錄組一部分的分析器,此函數呼叫兩次:
 
-1. 當所有分析通過結束之後，開始 relogging 階段之前，和
-1. relogging pass 結束之後。
+1. 所有分析通過結束后和重新記錄通過開始之前,
+1. 重新記錄通過結束後。
 
 ```cpp
 virtual AnalysisControl OnEndAnalysis();
@@ -156,11 +156,11 @@ virtual AnalysisControl OnEndAnalysis();
 
 ### <a name="return-value"></a>傳回值
 
-描述接下來應該發生什麼情況的[AnalysisControl](analysis-control-enum-class.md)程式碼。
+分析[控制](analysis-control-enum-class.md)代碼,描述接下來會發生什麼。
 
-## <a name="on-end-analysis-pass"></a>OnEndAnalysisPass
+## <a name="onendanalysispass"></a><a name="on-end-analysis-pass"></a>上端分析通
 
-對於分析器群組的分析器部分，會在每個分析階段結束時呼叫此函式。 對於 relogger 群組的分析器部分，此函式會在 relogger 階段結束時呼叫。 對於相同 relogging 會話的分析器和 relogger 群組中的分析器，此函式會在每次分析階段結束時呼叫，並在 relogger 階段結束時呼叫。
+對於分析器組一部分的分析器,每次分析傳遞結束時都會調用此函數。 對於重新記錄組中的分析器,此函數在重新記錄器通過結束時調用。 對於同一重新記錄工作階段的分析器和重新記錄組部分的分析器,在每次分析通過結束時和重新記錄器通過結束時調用此功能。
 
 ```cpp
 virtual AnalysisControl OnEndAnalysisPass();
@@ -168,11 +168,11 @@ virtual AnalysisControl OnEndAnalysisPass();
 
 ### <a name="return-value"></a>傳回值
 
-描述接下來應該發生什麼情況的[AnalysisControl](analysis-control-enum-class.md)程式碼。
+分析[控制](analysis-control-enum-class.md)代碼,描述接下來會發生什麼。
 
-## <a name="on-end-relogging"></a>OnEndRelogging
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a>結束重新記錄
 
-無法覆寫此函數。 當分析器是 relogger 群組C++的一部分時，BUILD Insights SDK 會呼叫它。 此函式會將呼叫重新導向至[OnEndAnalysis](#on-end-analysis)。
+無法重寫此功能。 當分析器是重新記錄組的一部分時,C++生成見解 SDK 調用它。 此函數會呼叫重定到[OnEndAnalysis](#on-end-analysis)。
 
 ```cpp
 AnalysisControl OnEndRelogging() final;
@@ -180,11 +180,11 @@ AnalysisControl OnEndRelogging() final;
 
 ### <a name="return-value"></a>傳回值
 
-[OnEndAnalysis](#on-end-analysis)呼叫的結果。
+[OnEnd 分析](#on-end-analysis)調用的結果。
 
-## <a name="on-end-relogging-pass"></a>OnEndReloggingPass
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>結束重新紀錄頻道
 
-無法覆寫此函數。 當分析器是 relogger 群組C++的一部分時，BUILD Insights SDK 會呼叫它。 此函式會將呼叫重新導向至[OnEndAnalysisPass](#on-end-analysis-pass)。
+無法重寫此功能。 當分析器是重新記錄組的一部分時,C++生成見解 SDK 調用它。 此函數會呼叫重定到[OnEndAnalysisPass](#on-end-analysis-pass)。
 
 ```cpp
 AnalysisControl OnEndReloggingPass() final;
@@ -192,11 +192,11 @@ AnalysisControl OnEndReloggingPass() final;
 
 ### <a name="return-value"></a>傳回值
 
-[OnEndAnalysisPass](#on-end-analysis-pass)呼叫的結果。
+[OnendAnalysisPass](#on-end-analysis-pass)調用的結果。
 
-## <a name="on-simple-event"></a>OnSimpleEvent
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a>在Simple事件上
 
-處理簡單事件時，會呼叫這個函式。 無法覆寫此函式的第二個版本。 當分析器是 relogger 群組C++的一部分時，BUILD Insights SDK 會呼叫它。 第2版的所有呼叫都會重新導向至第1版。
+正在處理簡單事件時調用此函數。 無法重寫此函數的第二個版本。 當分析器是重新記錄組的一部分時,C++生成見解 SDK 調用它。 對版本 2 的所有調用都重定向到版本 1。
 
 ### <a name="version-1"></a>第 1 版
 
@@ -213,19 +213,19 @@ AnalysisControl OnSimpleEvent(const EventStack& eventStack,
 
 ### <a name="parameters"></a>參數
 
-*eventStack*\
-這個簡單事件的事件堆疊。 如需事件堆疊的詳細資訊，請參閱[事件](../event-table.md)。
+*事件堆疊*\
+此簡單事件的事件堆疊。 有關事件堆疊的詳細資訊,請參閱[事件](../event-table.md)。
 
-*relogSession*\
+*重新登入工作階段*\
 不使用這個參數。
 
 ### <a name="return-value"></a>傳回值
 
-描述接下來應該發生什麼情況的[AnalysisControl](analysis-control-enum-class.md)程式碼。
+分析[控制](analysis-control-enum-class.md)代碼,描述接下來會發生什麼。
 
-## <a name="on-start-activity"></a>OnStartActivity
+## <a name="onstartactivity"></a><a name="on-start-activity"></a>啟動活動
 
-當處理活動啟動事件時，會呼叫這個函式。 無法覆寫此函式的第二個版本。 當分析器是 relogger 群組C++的一部分時，BUILD Insights SDK 會呼叫它。 第2版的所有呼叫都會重新導向至第1版。
+正在處理活動啟動事件時調用此函數。 無法重寫此函數的第二個版本。 當分析器是重新記錄組的一部分時,C++生成見解 SDK 調用它。 對版本 2 的所有調用都重定向到版本 1。
 
 ### <a name="version-1"></a>第 1 版
 
@@ -242,19 +242,19 @@ AnalysisControl OnStartActivity(const EventStack& eventStack,
 
 ### <a name="parameters"></a>參數
 
-*eventStack*\
-此活動開始事件的事件堆疊。 如需事件堆疊的詳細資訊，請參閱[事件](../event-table.md)。
+*事件堆疊*\
+此活動啟動事件的事件堆疊。 有關事件堆疊的詳細資訊,請參閱[事件](../event-table.md)。
 
-*relogSession*\
+*重新登入工作階段*\
 不使用這個參數。
 
 ### <a name="return-value"></a>傳回值
 
-描述接下來應該發生什麼情況的[AnalysisControl](analysis-control-enum-class.md)程式碼。
+分析[控制](analysis-control-enum-class.md)代碼,描述接下來會發生什麼。
 
-## <a name="on-stop-activity"></a>OnStopActivity
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a>停止活動
 
-當處理活動停止事件時，會呼叫這個函式。 無法覆寫此函式的第二個版本。 當分析器是 relogger 群組C++的一部分時，BUILD Insights SDK 會呼叫它。 第2版的所有呼叫都會重新導向至第1版。
+正在處理活動停止事件時調用此函數。 無法重寫此函數的第二個版本。 當分析器是重新記錄組的一部分時,C++生成見解 SDK 調用它。 對版本 2 的所有調用都重定向到版本 1。
 
 ### <a name="version-1"></a>第 1 版
 
@@ -271,14 +271,14 @@ AnalysisControl OnStopActivity(const EventStack& eventStack,
 
 ### <a name="parameters"></a>參數
 
-*eventStack*\
-此活動停止事件的事件堆疊。 如需事件堆疊的詳細資訊，請參閱[事件](../event-table.md)。
+*事件堆疊*\
+此活動停止事件的事件堆疊。 有關事件堆疊的詳細資訊,請參閱[事件](../event-table.md)。
 
-*relogSession*\
+*重新登入工作階段*\
 不使用這個參數。
 
 ### <a name="return-value"></a>傳回值
 
-描述接下來應該發生什麼情況的[AnalysisControl](analysis-control-enum-class.md)程式碼。
+分析[控制](analysis-control-enum-class.md)代碼,描述接下來會發生什麼。
 
 ::: moniker-end

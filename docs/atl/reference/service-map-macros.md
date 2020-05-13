@@ -7,31 +7,31 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: eb2fe41c79135a7ac2ced9bc3242b070170716b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417471"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325933"
 ---
 # <a name="service-map-macros"></a>服務對應宏
 
-這些宏會定義服務對應和專案。
+這些宏定義服務映射和條目。
 
 |||
 |-|-|
-|[BEGIN_SERVICE_MAP](#begin_service_map)|標記 ATL 服務對應的開頭。|
-|[END_SERVICE_MAP](#end_service_map)|標示 ATL 服務對應的結尾。|
-|[SERVICE_ENTRY](#service_entry)|表示物件支援特定的服務識別碼。|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl：： QueryService](#queryservice)連結至指定的物件。|
+|[BEGIN_SERVICE_MAP](#begin_service_map)|標記 ATL 服務映射的開頭。|
+|[END_SERVICE_MAP](#end_service_map)|標記 ATL 服務映射的末尾。|
+|[SERVICE_ENTRY](#service_entry)|指示物件支援特定的服務 ID。|
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl:query 服務](#queryservice)連結到指定的物件。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP
+## <a name="begin_service_map"></a><a name="begin_service_map"></a>BEGIN_SERVICE_MAP
 
-標記服務對應的開頭。
+標記服務映射的開頭。
 
 ```
 BEGIN_SERVICE_MAP(theClass)
@@ -39,24 +39,24 @@ BEGIN_SERVICE_MAP(theClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*<br/>
-在指定包含服務對應的類別。
+*類別*<br/>
+[在]指定包含服務對應的類。
 
 ### <a name="remarks"></a>備註
 
-使用服務對應，在您的 COM 物件上執行服務提供者功能。 首先，您必須從[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)衍生您的類別。 有兩種類型的專案：
+使用服務映射在 COM 物件上實現服務提供者功能。 首先,您必須從[IServiceProviderImpl 派生](../../atl/reference/iserviceproviderimpl-class.md)您的類。 有兩種類型的項目:
 
-- [SERVICE_ENTRY](#service_entry)  表示對指定服務識別碼（SID）的支援。
+- [SERVICE_ENTRY](#service_entry)  指示對指定服務 ID (SID) 的支援。
 
-- [SERVICE_ENTRY_CHAIN](#service_entry_chain)  指示[IServiceProviderImpl：： QueryService](#queryservice)連結至另一個指定的物件。
+- [SERVICE_ENTRY_CHAIN](#service_entry_chain)  指示[IServiceProviderImpl:query 服務](#queryservice)連結到另一個指定的物件。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]
 
-##  <a name="end_service_map"></a>END_SERVICE_MAP
+## <a name="end_service_map"></a><a name="end_service_map"></a>END_SERVICE_MAP
 
-標示服務對應的結尾。
+標記服務映射的末尾。
 
 ```
 END_SERVICE_MAP()
@@ -64,11 +64,11 @@ END_SERVICE_MAP()
 
 ### <a name="example"></a>範例
 
-請參閱[BEGIN_SERVICE_MAP](#begin_service_map)的範例。
+請參閱[BEGIN_SERVICE_MAP](#begin_service_map)的示例。
 
-##  <a name="service_entry"></a>SERVICE_ENTRY
+## <a name="service_entry"></a><a name="service_entry"></a>SERVICE_ENTRY
 
-表示物件支援*SID*所指定的服務識別碼。
+指示物件支援*SID*指定的服務 ID。
 
 ```
 SERVICE_ENTRY( SID )
@@ -76,16 +76,16 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>參數
 
-*SID*<br/>
-服務識別碼。
+*希*<br/>
+服務 ID。
 
 ### <a name="example"></a>範例
 
-請參閱[BEGIN_SERVICE_MAP](#begin_service_map)的範例。
+請參閱[BEGIN_SERVICE_MAP](#begin_service_map)的示例。
 
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN
+## <a name="service_entry_chain"></a><a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN
 
-指示[IServiceProviderImpl：： QueryService](#queryservice)連結至*punk*所指定的物件。
+指示[IServiceProviderImpl:query 服務](#queryservice)連結到*朋克*指定的物件。
 
 ```
 SERVICE_ENTRY_CHAIN( punk )
@@ -93,16 +93,16 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>參數
 
-*punk*<br/>
-要連結之**IUnknown**介面的指標。
+*龐克*<br/>
+指向要連結的**I 未知**介面的指標。
 
 ### <a name="example"></a>範例
 
-請參閱[BEGIN_SERVICE_MAP](#begin_service_map)的範例。
+請參閱[BEGIN_SERVICE_MAP](#begin_service_map)的示例。
 
-##  <a name="queryservice"></a>IServiceProviderImpl：： QueryService
+## <a name="iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderimpl:query服務
 
-建立或存取指定的服務，並將介面指標傳回給服務的指定介面。
+創建或訪問指定的服務,並返回指向服務指定介面的介面指標。
 
 ```
 STDMETHOD(QueryService)(
@@ -113,42 +113,42 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>參數
 
-*guidService*<br/>
-在服務識別碼（SID）的指標。
+*吉德服務*<br/>
+[在]指向服務標識碼 (SID) 的指標。
 
 *riid*<br/>
-在呼叫端要取得存取權的介面識別碼。
+[在]呼叫方要造訪的介面的標識符。
 
-*ppvObj*<br/>
-脫銷所要求介面的間接指標。
+*普夫奧比*<br/>
+[出]間接指標指向請求的介面。
 
 ### <a name="return-value"></a>傳回值
 
-傳回的 HRESULT 值是下列其中一項：
+傳回的 HRESULT 值為以下值之一:
 
 |傳回值|意義|
 |------------------|-------------|
-|S_OK|已成功建立或抓取服務。|
+|S_OK|已成功創建或檢索服務。|
 |E_INVALIDARG|一或多個引數無效。|
-|E_OUTOFMEMORY|記憶體不足，無法建立服務。|
-|E_UNEXPECTED|發生不明錯誤。|
-|E_NOINTERFACE|要求的介面不是此服務的一部分，或服務不明。|
+|E_OUTOFMEMORY|記憶體不足以創建服務。|
+|E_UNEXPECTED|發生未知的錯誤。|
+|E_NOINTERFACE|請求的介面不是此服務的一部分,或者服務未知。|
 
 ### <a name="remarks"></a>備註
 
-`QueryService` 會在指定的服務中傳回所要求介面的間接指標。 呼叫端會在不再需要時，負責釋放此指標。
+`QueryService`返回指向指定服務中請求的介面的間接指標。 調用方負責在不再需要此指標時釋放它。
 
-當您呼叫 `QueryService`時，您會同時傳遞服務識別碼（*guidService*）和介面識別碼（*riid*）。 *GuidService*會指定您要存取的服務，而*riid*會識別屬於服務一部分的介面。 在 return 中，您會收到介面的間接指標。
+呼叫`QueryService`時 ,將傳遞服務識別碼 *(guidService*) 和介面識別碼 *(riid)。* *guidService*指定要存取的服務 *,riid*識別屬於服務的介面。 作為回報,您將收到指向介面的間接指標。
 
-執行介面的物件可能也會實作為其他服務之一部分的介面。 請考慮下列：
+實現介面的物件還可能實現屬於其他服務的介面。 請考慮下列：
 
-- 其中一些介面可能是選擇性的。 並非服務描述中定義的所有介面都一定會出現在服務的每個執行或每個傳回的物件上。
+- 其中一些介面可能是可選的。 服務描述中定義的介面並非都一定存在於服務的每個實現或每個返回的物件上。
 
-- 不同于 `QueryInterface`的呼叫，傳遞不同的服務識別碼不一定表示傳回不同的元件物件模型（COM）物件。
+- 與調用`QueryInterface`不同,傳遞不同的服務標識符並不一定意味著返回不同的元件物件模型 (COM) 物件。
 
-- 傳回的物件可能會有不屬於服務定義一部分的其他介面。
+- 返回的物件可能具有不屬於服務定義的其他介面。
 
-兩個不同的服務（例如 SID_SMyService 和 SID_SYourService）都可以指定使用相同的介面，即使介面的執行可能在兩個服務之間沒有任何共同的功能。 這是可行的，因為 `QueryService` （SID_SMyService，IID_IDispatch）的呼叫可能會傳回與 `QueryService` （SID_SYourService，IID_IDispatch）不同的物件。 當您指定不同的服務識別碼時，不會假設物件身分識別。
+兩個不同的服務(如SID_SMyService和SID_SYourService)都可以指定同一介面的使用,即使該介面的實現在兩個服務之間可能沒有任何共同之處。 這工作正常,因為對`QueryService`(SID_SMyService、IID_IDispatch) 的調用可以`QueryService`返回與 (SID_SYourService、IID_IDispatch) 不同的物件。 指定其他服務標識碼時,不會假定對象標識。
 
 ## <a name="see-also"></a>另請參閱
 

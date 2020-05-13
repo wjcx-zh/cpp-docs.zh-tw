@@ -1,11 +1,15 @@
 ---
 title: atoll、_atoll_l、_wtoll、_wtoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
+- _o__atoll_l
+- _o__wtoll
+- _o__wtoll_l
+- _o_atoll
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939469"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913513"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-將字串轉換成**長** **長**整數。
+將字串轉換成**長****長**整數。
 
 ## <a name="syntax"></a>語法
 
@@ -76,7 +81,7 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式會傳回**長** **長**輸入的字元解譯為數字所產生的值。 如果輸入無法轉換成該類型的值，則**atoll**的傳回值為0。
+每個函式都會傳回將輸入字元解讀為數字所產生的**完整** **long**值。 如果輸入無法轉換成該類型的值，則**atoll**的傳回值為0。
 
 對於具有大型正整數值的溢位， **atoll**會傳回**LLONG_MAX**，而對於具有大型負整數值的溢位，則會傳回**LLONG_MIN**。
 
@@ -84,7 +89,7 @@ long long _wtoll_l(
 
 ## <a name="remarks"></a>備註
 
-這些函式將字元字串轉換到**長** **長**整數值。
+這些函式會將字元字串轉換成**長****長**整數值。
 
 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
 
@@ -98,6 +103,8 @@ long long _wtoll_l(
 
 這些具有 **_l**尾碼的函式版本與沒有它的版本相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
@@ -110,8 +117,8 @@ long long _wtoll_l(
 
 |常式|必要的標頭|
 |--------------|---------------------|
-|**atoll**、 **_atoll_l**|\<stdlib.h>|
-|**_wtoll**、 **_wtoll_l**|\<stdlib.h> 或 \<wchar.h>|
+|**atoll**， **_atoll_l**|\<stdlib.h>|
+|**_wtoll**， **_wtoll_l**|\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>範例
 
@@ -167,7 +174,7 @@ Overflow condition occurred.
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

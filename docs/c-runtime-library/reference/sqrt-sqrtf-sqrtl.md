@@ -1,10 +1,11 @@
 ---
 title: sqrt、sqrtf、sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958101"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913907"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -72,25 +74,27 @@ long double sqrtl(
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用**float**或**long** **double**類型的**sqrt**多載。 在 C 程式中， **sqrt**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用**float**或**long** **double**類型的**sqrt**多載。 在 C 程式中， **sqrt**一律會採用並傳回**雙精度浮點數**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="return-value"></a>傳回值
 
 **Sqrt**函數會傳回*x*的平方根。 根據預設，如果*x*是負數， **sqrt**會傳回不限的 NaN。
 
-|Input|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|± QNAN，IND|none|_DOMAIN|
-|- ∞|none|_DOMAIN|
-|x<0|none|_DOMAIN|
+|± QNAN，IND|無|_DOMAIN|
+|- ∞|無|_DOMAIN|
+|x<0|無|_DOMAIN|
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**sqrt**、 **sqrtf**、 **sqrtl**|\<math.h>|\<cmath>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

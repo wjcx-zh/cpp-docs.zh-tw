@@ -1,5 +1,5 @@
 ---
-title: ICollectionOnSTLImpl 類別
+title: ICollectiononSTLimpl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - ICollectionOnSTLImpl
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8ccab08b89da8c1b8ef56c8932e27a6c74e62aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329900"
 ---
-# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 類別
+# <a name="icollectiononstlimpl-class"></a>ICollectiononSTLimpl 類別
 
-這個類別提供的集合類別所使用的方法。
+此類提供集合類使用的方法。
 
 ## <a name="syntax"></a>語法
 
@@ -34,17 +34,17 @@ class ICollectionOnSTLImpl : public T
 *T*<br/>
 COM 集合介面。
 
-*CollType*<br/>
-C++標準程式庫容器類別。
+*拼貼*<br/>
+C++標準庫容器類。
 
 *ItemType*<br/>
-容器介面所公開的項目類型。
+容器介面公開的項的類型。
 
-*CopyItem*<br/>
-A[複製原則類別](../../atl/atl-copy-policy-classes.md)。
+*複製項目*<br/>
+[複製原則類別](../../atl/atl-copy-policy-classes.md)。
 
-*EnumType*<br/>
-A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-相容的列舉值類別。
+*列舉類型*<br/>
+[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)- 相容枚舉器類。
 
 ## <a name="members"></a>成員
 
@@ -52,36 +52,36 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-相容的列舉值
 
 |名稱|描述|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|傳回集合的列舉值物件。|
-|[ICollectionOnSTLImpl::getcount](#get_count)|傳回集合中的項目數目。|
-|[ICollectionOnSTLImpl::get_Item](#get_item)|從集合中傳回要求的項目。|
+|[ICollectiononSTLimpl::get__NewEnum](#newenum)|返回集合的枚舉物件。|
+|[ICollectiononSTLimpl::取得計數](#get_count)|返回集合中的元素數。|
+|[ICollectiononSTLimpl:get_Item](#get_item)|從集合返回請求的項。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::m_coll](#m_coll)|集合。|
+|[ICollectiononSTLimpl:m_coll](#m_coll)|集合。|
 
 ## <a name="remarks"></a>備註
 
-這個類別會提供三種方法的集合介面的實作： [getcount](#get_count)， [get_Item](#get_item)，並[get__NewEnum](#newenum)。
+此類為集合介面的三種方法提供實現[:getcount、get_Item](#get_count)和[get_Item](#get_item)[get__NewEnum](#newenum)。
 
-若要使用此類別：
+要使用此類:
 
-- 定義 （或借用） 您想要實作集合介面。
+- 定義(或借用)要實現的集合介面。
 
-- 衍生類別的特製化從`ICollectionOnSTLImpl`根據此集合介面。
+- 基於此集合介面的`ICollectionOnSTLImpl`專門化派生類。
 
-- 使用您的衍生的類別來實作任何方法，從集合介面並非由`ICollectionOnSTLImpl`。
+- 使用派生類實現來自 未`ICollectionOnSTLImpl`由 處理的集合介面的任何方法。
 
 > [!NOTE]
->  如果集合介面是雙重介面，衍生您的類別，從[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)，並傳遞`ICollectionOnSTLImpl`如果您想要提供的實作的 ATL 的第一個範本參數的特製化`IDispatch`方法。
+> 如果集合介面是雙介面,請從[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)派生類,`ICollectionOnSTLImpl`如果希望`IDispatch`ATL 提供方法的實現,則將專業化作為第一個範本參數傳遞。
 
-- 將項目加入[m_coll](#m_coll)来填入集合的成員。
+- 將項添加到[m_coll](#m_coll)成員以填充集合。
 
-如需詳細資訊和範例，請參閱 < [ATL 集合和列舉程式](../../atl/atl-collections-and-enumerators.md)。
+有關詳細資訊和範例,請參閱[ATL 集合和枚舉器](../../atl/atl-collections-and-enumerators.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `T`
 
@@ -89,11 +89,11 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-相容的列舉值
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標題:** atlcom.h
 
-##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount
+## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a>ICollectiononSTLimpl::取得計數
 
-這個方法會傳回集合中的項目數。
+此方法返回集合中的項數。
 
 ```
 STDMETHOD(getcount)(long* pcount);
@@ -102,15 +102,15 @@ STDMETHOD(getcount)(long* pcount);
 ### <a name="parameters"></a>參數
 
 *pcount*<br/>
-[out]集合中的項目數目。
+[出]集合中的元素數。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
-##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item
+## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a>ICollectiononSTLimpl:get_Item
 
-這個方法會傳回集合中指定的項目。
+此方法從集合中返回指定的項。
 
 ```
 STDMETHOD(get_Item)(long Index, ItemType* pvar);
@@ -118,23 +118,23 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>參數
 
-*Tuple*<br/>
-[in]集合中的項目 1 為基底的索引。
+*索引*<br/>
+[在]集合中項的基於 1 的索引。
 
-*pvar*<br/>
-[out]對應至的項目*Index*。
+*普瓦爾*<br/>
+[出]對應於*索引*的項目 。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-藉由複製的資料中指定的位置取得項目[m_coll](#m_coll)使用的複製方法[複製原則類別](../../atl/atl-copy-policy-classes.md)作為範本引數中傳遞`ICollectionOnSTLImpl`特製化。
+通過使用在`ICollectionOnSTLImpl`專門化中作為範本參數傳遞[的複製策略類](../../atl/atl-copy-policy-classes.md)的複製方法,在[m_coll](#m_coll)的指定位置複製數據,從而獲取該專案。
 
-##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum
+## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a>ICollectiononSTLimpl::get__NewEnum
 
-傳回集合的列舉值物件。
+返回集合的枚舉物件。
 
 ```
 STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
@@ -142,20 +142,20 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>參數
 
-*ppUnk*<br/>
-[out]**IUnknown**新建立列舉值物件的指標。
+*普恩克*<br/>
+[出]新創建的枚舉器物件的**I 未知**指標。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-新建立的列舉值會維持在原始集合中，迭代器`m_coll`（因此會不製作任何複本），以確保集合保持運作的雖然有未處理的列舉值的集合物件上保留的 COM 參考。
+新創建的枚舉器在原始集合上維護反覆運算器`m_coll`(因此不創建副本),並在集合物件上保留 COM 引用,以確保集合在存在未完成的枚舉器時保持活動狀態。
 
-##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll
+## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a>ICollectiononSTLimpl:m_coll
 
-此成員會包含集合所代表的項目。
+此成員保存集合表示的項。
 
 ```
 CollType m_coll;
@@ -163,5 +163,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLCollections 範例](../../overview/visual-cpp-samples.md)<br/>
+[ATL集合範例](../../overview/visual-cpp-samples.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -3,10 +3,10 @@ title: 連結器屬性 (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 ms.openlocfilehash: 934e639199d663cba391c9913b067f32e5e32165
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79441279"
 ---
 # <a name="linker-properties-linux-c"></a>連結器屬性 (Linux C++)
@@ -23,10 +23,10 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 | 屬性 | 描述 | Choices |
 |--|--|--|
-| 輸出檔 | 此選項會覆寫連結器所建立之程式的預設名稱和位置。 (-o) |
+| 輸出檔案 | 此選項會覆寫連結器所建立之程式的預設名稱和位置。 (-o) |
 | 顯示進度 | 列印連結器進度訊息。 |
 | 版本 | -version 選項會指示連結器將版本號碼置於可執行檔的標頭中。 |
-| 啟用詳細資訊輸出 | -verbose 選項會指示連結器輸出詳細訊息以供偵錯之用。 |
+| 啟用詳細資訊輸出 | -verbose 選項會指示連結器要輸出詳細訊息，以供偵錯之用。 |
 | 追蹤 | --trace 選項會指示連結器將輸入檔案，輸出為已處理的狀態。 |
 | 追蹤符號 | 列印出現符號的檔案清單。 (--trace-symbol=symbol) |
 | 列印地圖 | --print-map 選項會指示連結器輸出連結地圖。 |
@@ -52,7 +52,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 | 屬性 | 描述 | Choices |
 |--|--|--|
-| 偵錯工具符號資訊 | 來自輸出檔中的偵錯工具符號資訊。 | **包含全部**<br>**僅省略偵錯工具符號資訊**<br>**省略所有符號資訊**<br> |
+| 偵錯工具符號資訊 | 來自輸出檔中的偵錯工具符號資訊。 | **全部包含**<br>**僅省略偵錯工具符號資訊**<br>**省略所有符號資訊**<br> |
 | 對應檔案名稱 | Map 選項會指示連結器以使用者指定的名稱來建立對應檔案。 (-Map=) |
 
 ## <a name="advanced"></a>進階

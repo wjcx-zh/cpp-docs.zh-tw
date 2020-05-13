@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: ac92d9dfa5266227fb3bd4a3749ab50f425a2d90
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f9c864b66df86165090b7d6d6fc9c4fc51d65a5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078714"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328886"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 結構描述參考
 
@@ -21,23 +21,23 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 ::: moniker range=">=vs-2017"
 
-**CMakeSettings**會包含 Visual Studio 用於 IntelliSense 的資訊，以及用來*針對指定的*設定和編譯器*環境*，建立傳遞至 cmake 的命令列引數。 設定會指定適用于特定平臺和組建類型的屬性，例如 `x86-Debug` 或 `Linux-Release`。 每個設定都會指定一個環境，其中封裝了編譯器工具組的相關資訊，例如 MSVC、GCC 或 Clang。 CMake 會使用命令列引數來重新產生專案的根*cmakecache.txt .txt*檔案和其他專案檔案。 這些值可以在*remote monitoring.h cmakelists.txt 的 .txt*檔案中覆寫。
+**CMakeSettings**會包含 Visual Studio 用於 IntelliSense 的資訊，以及用來*針對指定的*設定和編譯器*環境*，建立傳遞至 cmake 的命令列引數。 設定會指定適用于特定平臺和組建類型的屬性，例如`x86-Debug`或。 `Linux-Release` 每個設定都會指定一個環境，其中封裝了編譯器工具組的相關資訊，例如 MSVC、GCC 或 Clang。 CMake 會使用命令列引數來重新產生專案的根*cmakecache.txt .txt*檔案和其他專案檔案。 這些值可以在*remote monitoring.h cmakelists.txt 的 .txt*檔案中覆寫。
 
 您可以在 IDE 中新增或移除設定，然後直接在 JSON 檔案中編輯它們，或使用 [ **CMake 設定編輯器**] （Visual Studio 2019 和更新版本）。 您可以在 IDE 中輕鬆地切換設定，以產生各種專案檔案。 如需詳細資訊，請參閱[在 Visual Studio 中自訂 CMake 組建設定](customize-cmake-settings.md)。
 
 ## <a name="configurations"></a>組態
 
-`configurations` 陣列包含 CMake 專案的所有設定。 如需預先定義設定的詳細資訊，請參閱[CMake 預先](cmake-predefined-configuration-reference.md)定義的設定參考。 您可以將任何數目的預先定義或自訂設定新增至檔案。
+`configurations`陣列包含 CMake 專案的所有設定。 如需預先定義設定的詳細資訊，請參閱[CMake 預先](cmake-predefined-configuration-reference.md)定義的設定參考。 您可以將任何數目的預先定義或自訂設定新增至檔案。
 
 `configuration` 有這些屬性：
 
-- `addressSanitizerEnabled`：如果 `true` 使用 Address Sanitizer （實驗性在 Windows 上）來編譯器。 在 Linux 上，請使用-fno-rtti-省略框架指標和編譯器優化層級-Os 或-Oo 進行編譯，以獲得最佳結果。
+- `addressSanitizerEnabled`：如果`true`使用 Address Sanitizer 編譯器（在 Windows 上為實驗）。 在 Linux 上，請使用-fno-rtti-省略框架指標和編譯器優化層級-Os 或-Oo 進行編譯，以獲得最佳結果。
 - `addressSanitizerRuntimeFlags`：透過 ASAN_OPTIONS 環境變數傳遞至 AddressSanitizer 的執行時間旗標。 格式：-1 = 值：標誌 2 = value2。
 - `buildCommandArgs`：指定在 --build -- 之後傳遞到 CMake 的原生組建參數。 例如，在使用 Ninja 產生器時傳遞 -v 會強制 Ninja 輸出命令列。 如需有關 Ninja 命令的詳細資訊，請參閱 [Ninja 命令列引數](#ninja)。
 - `buildRoot`：指定目錄，CMake 會在此產生所選產生器的組建指令碼。  對應至 **-DCMAKE_BINARY_DIR**參數，並指定*cmakecache.txt*的建立位置。 如果資料夾不存在，則會建立資料夾。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `cacheGenerationCommand`：指定命令列工具和引數，例如*gencache* ，以產生快取。 當使用者明確要求重新產生，或修改 Remote monitoring.h cmakelists.txt 或 CMakeSettings json 檔案時，會從指定環境中的 shell 執行命令以進行設定。
 - `cacheRoot`：指定 CMake 快取的路徑。 此目錄應包含現有的*cmakecache.txt*檔案。
-- `clangTidyChecks`：將會傳遞給 clang 的警告清單（以逗號分隔）;允許使用萬用字元，而 '-' 前置詞將會移除檢查。
+- `clangTidyChecks`：將傳遞給 clang 的警告清單（以逗號分隔）;允許使用萬用字元，而 '-' 前置詞將會移除檢查。
 - `cmakeCommandArgs`：指定在叫用以產生專案檔時，傳遞至 CMake 的其他命令列選項。
 - `cmakeToolchain`：指定工具鏈檔案。 這會使用 -DCMAKE_TOOLCHAIN_FILE 傳遞給 CMake。
 - `codeAnalysisRuleset`：指定執行程式碼分析時要使用的規則集。 這可以是完整的路徑，或是 Visual Studio 安裝之規則集檔案的檔案名稱。
@@ -73,9 +73,9 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 若要在 Visual Studio 2017 中指定 Visual Studio 產生器，請從主功能表中選擇 [CMake] 來開啟。 **變更 CMake 設定**。 刪除 "Ninja" 並輸入 "V"。 這會啟用 IntelliSense，讓您選擇想要的產生器。
 
-若要在 Visual Studio 2019 中指定 Visual Studio 產生器，請以滑鼠右鍵按一下**方案總管**中的*remote monitoring.h cmakelists.txt* ，然後選擇 [專案]**的 [CMake 設定**] > [ **Show Advanced settings** ] > **CMake**產生器。
+若要在 Visual Studio 2019 中指定 Visual Studio 產生器，請以滑鼠右鍵按一下**方案總管**中的*remote monitoring.h cmakelists.txt* ，然後選擇 [project > **Show Advanced settings** > **CMake**產生器]**的 [CMake 設定**]。
 
-當使用中的組態指定 Visual Studio 產生器時，根據預設，會使用 `-m -v:minimal` 引數叫用 MSBuild.exe。 若要在*CMakeSettings*中自訂群組建，您可以透過 `buildCommandArgs` 屬性來指定要傳遞至組建系統的其他[MSBuild 命令列引數](../build/reference/msbuild-visual-cpp-overview.md)：
+當使用中的組態指定 Visual Studio 產生器時，根據預設，會使用 `-m -v:minimal` 引數叫用 MSBuild.exe。 若要自訂群組建，您可以在*CMakeSettings json*檔案中，透過`buildCommandArgs`屬性指定要傳遞至組建系統的其他[MSBuild 命令列引數](../build/reference/msbuild-visual-cpp-overview.md)：
 
    ```json
    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -117,18 +117,18 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - `remoteCMakeListsRoot`：指定遠端電腦上包含 CMake 專案的目錄。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteBuildRoot`：指定遠端電腦上的目錄，CMake 會在此產生所選產生器的組建指令碼。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteInstallRoot`：指定遠端電腦上的目錄，CMake 會在此產生所選產生器的安裝目標。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`，其中 `VARIABLE` 是已在系統、使用者或工作階段層級定義的環境變數。
-- `remoteCopySources`：指定 Visual Studio 是否應該將來源檔案複製到遠端電腦的 `boolean`。 預設值是 true。 如果自行管理檔案同步處理，請設定為 false。
-- `remoteCopyBuildOutput`：指定是否要從遠端系統複製組建輸出的 `boolean`。
+- `remoteCopySources``boolean` ：指定 Visual Studio 是否應將來源檔案複製到遠端電腦的。 預設值是 true。 如果自行管理檔案同步處理，請設定為 false。
+- `remoteCopyBuildOutput``boolean` ：指定是否要從遠端系統複製組建輸出的。
 - `remoteCopyAdditionalIncludeDirectories`：要從遠端電腦複製以支援 IntelliSense 的其他 include 目錄。 格式為 "/path1;/path2..."。
 - `remoteCopyExcludeDirectories`：包含不會從遠端電腦複製的目錄。 格式為 "/path1;/path2..."。
 - `remoteCopyUseCompilerDefaults`：指定是否要使用編譯器的預設值來定義和包含 IntelliSense 的路徑。 只有在使用的編譯器不支援 gcc 樣式引數時，才應該為 false。
 - `rsyncCommandArgs`：指定一組傳遞給 rsync 的額外命令列選項。
-- `remoteCopySourcesExclusionList`：指定複製來源檔案時要排除的路徑清單的 `array`：路徑可以是檔案/目錄的名稱，或是複製之根目錄的相對路徑。 萬用字元 \\\"*\\\" 和 \\\"?\\\" 可以用於 Glob 模式比對。
+- `remoteCopySourcesExclusionList``array` ：指定複製來源檔案時要排除的路徑清單：路徑可以是檔案/目錄的名稱，或是複製之根目錄的相對路徑。 萬用字元 \\\"*\\\" 和 \\\"?\\\" 可以用於 Glob 模式比對。
 - `cmakeExecutable`：指定 CMake 程式可執行檔的完整路徑，包括檔案名稱與副檔名。
-- `remotePreGenerateCommand`：指定執行 CMake 以剖析*remote monitoring.h cmakelists.txt .txt*檔案之前，要執行的命令。
+- `remotePreGenerateCommand`：指定要在執行 CMake 以剖析*remote monitoring.h cmakelists.txt .txt*檔案之前執行的命令。
 - `remotePrebuildCommand`：指定建置之前必須對遠端電腦執行的命令。
 - `remotePostbuildCommand`：指定建置之後必須對遠端電腦執行的命令。
-- `variables`：包含 CMake 變數的名稱/值組，會以 **-D**  *_name_=_值_* 傳遞至 CMake。 如果您的 CMake 專案組建指示指定將任何變數直接新增至*cmakecache.txt* ，建議您改為在此加入。 下列範例會顯示如何指定 14.14.26428 MSVC 工具組的成對名稱和數值：
+- `variables`：包含成對的 CMake 變數名稱和值，會以 **-D** *_name_=_value_* 形式傳遞至 CMake。 如果您的 CMake 專案組建指示指定將任何變數直接新增至*cmakecache.txt* ，建議您改為在此加入。 下列範例會顯示如何指定 14.14.26428 MSVC 工具組的成對名稱和數值：
 
 ```json
 "variables": [
@@ -145,12 +145,13 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
   ]
 ```
 
-請注意，如果您未定義 `"type"`，預設會假設 `"STRING"` 類型。
-- `remoteCopyOptimizations`： **Visual Studio 2019 16.5 版或更新版本**的屬性，用來控制遠端目標的來源複本。 預設會啟用優化。 包含 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs` 與 `remoteCopySourcesMaxSmallChange`。
+請注意`"type"`，如果您未定義，則預設`"STRING"`會假設為類型。
+
+- `remoteCopyOptimizations`： **Visual Studio 2019 16.5 版或更新版本**的屬性，以控制將來源複製到遠端目標。 預設會啟用優化。 包含 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs` 與 `remoteCopySourcesMaxSmallChange`。
 
 ## <a name="environments"></a><a name="environments"></a>環境
 
-*環境*會封裝 Visual Studio 用來叫用 cmake 的進程中所設定的環境變數。 若為 MSVC 專案，變數就是在特定平臺的[開發人員命令提示](building-on-the-command-line.md)字元中設定的變數。 例如，`msvc_x64_x64` 環境與針對**vs 2017 執行開發人員命令提示字元**，或使用 **---a-i-host_arch = amd64**引數**執行 vs 2019 的開發人員命令提示字元**相同。 您可以使用*CMakeSettings*中的 `env.{<variable_name>}` 語法來參考個別的環境變數，例如，用來建立資料夾的路徑。  提供下列預先定義的環境：
+*環境*會封裝 Visual Studio 用來叫用 cmake 的進程中所設定的環境變數。 若為 MSVC 專案，變數就是在特定平臺的[開發人員命令提示](building-on-the-command-line.md)字元中設定的變數。 例如`msvc_x64_x64` ，環境與**執行 vs 2017 的開發人員命令提示字元**或**vs 2019 的開發人員命令提示字元**（搭配-a **= amd64-host_arch = amd64**引數）相同。 您可以使用`env.{<variable_name>}` *CMakeSettings*中的語法來參考個別的環境變數，例如，用來建立資料夾的路徑。  提供下列預先定義的環境：
 
 - linux_arm：從遠端鎖定 ARM Linux。
 - linux_x64：從遠端鎖定 x64 Linux。
@@ -166,13 +167,13 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 ### <a name="accessing-environment-variables-from-cmakeliststxt"></a>從 Remote monitoring.h cmakelists.txt 存取環境變數
 
-從 Remote monitoring.h cmakelists.txt 的檔案中，所有環境變數都是由語法 `$ENV{variable_name}`所參考。 若要查看環境的可用變數，請開啟對應的命令提示字元，然後輸入 `SET`。 環境變數中的某些資訊也可以透過 CMake 系統自我檢查變數取得，但您可能會發現使用環境變數會比較方便。 例如，您可以輕鬆地透過環境變數來抓取 MSVC 編譯器版本或 Windows SDK 版本。
+從 Remote monitoring.h cmakelists.txt 的檔案中，語法`$ENV{variable_name}`會參考所有環境變數。 若要查看環境的可用變數，請開啟對應的命令提示字元， `SET`然後輸入。 環境變數中的某些資訊也可以透過 CMake 系統自我檢查變數取得，但您可能會發現使用環境變數會比較方便。 例如，您可以輕鬆地透過環境變數來抓取 MSVC 編譯器版本或 Windows SDK 版本。
 
 ### <a name="custom-environment-variables"></a>自訂環境變數
 
-在 `CMakeSettings.json`中，您可以在全域或 `environments` 陣列中的每個設定定義自訂環境變數。 自訂環境是一種方便的方式，可將一組可用來取代預先定義環境的屬性，或擴充或修改預先定義的環境。 `environments` 陣列中的每個項目都包含：
+在`CMakeSettings.json`中，您可以在`environments`陣列中全域或依設定定義自訂環境變數。 自訂環境是一種方便的方式，可將一組可用來取代預先定義環境的屬性，或擴充或修改預先定義的環境。 `environments` 陣列中的每個項目都包含：
 
-- `namespace`：命名環境，以便從表單 `namespace.variable` 中的組態參考其變數。 預設的環境物件稱為 `env`，並會填入特定的系統內容變數，包括 `%USERPROFILE%`。
+- `namespace`：命名環境，以便從表單 `namespace.variable` 中的組態參考其變數。 預設的環境物件稱為`env` ，並填入特定的系統內容變數（包括`%USERPROFILE%`）。
 - `environment`：唯一識別此變數群組。 稍後在 `inheritEnvironments` 項目中允許繼承該群組。
 - `groupPriority`：整數，指定這些變數在評估時的優先順序。 先評估數值較高的項目。
 - `inheritEnvironments`：值的陣列，指定此群組所繼承的環境集合。 此功能可讓您繼承預設環境，以及建立自訂環境變數，以在執行時傳遞至 CMake.exe。
@@ -259,7 +260,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 下列宏可以在*CMakeSettings*中使用：
 
-- `${workspaceRoot}` –工作區資料夾的完整路徑
+- `${workspaceRoot}`–工作區資料夾的完整路徑
 - `${workspaceHash}` - 工作區位置的雜湊；適用於建立目前工作區的唯一識別碼 (例如用於資料夾路徑)
 - `${projectFile}` - 根 CMakeLists.txt 檔案的完整路徑
 - `${projectDir}` - 根 CMakeLists.txt 檔案資料夾的完整路徑

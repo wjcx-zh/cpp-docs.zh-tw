@@ -1,11 +1,15 @@
 ---
 title: strtod、_strtod_l、wcstod、_wcstod_l
-ms.date: 10/20/2017
+ms.date: 4/2/2020
 api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
+- _o__strtod_l
+- _o__wcstod_l
+- _o_strtod
+- _o_wcstod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 410d339789ef4a29a6760a4118f967b22f4f3a8c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946497"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910883"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -100,6 +105,8 @@ double wcstod_l(
 
 每個函式都會將輸入字串*strSource*轉換為**double**。 **Strtod**函數會將*strSource*轉換為雙精確度值。 **strtod**會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 Null 字元。 **wcstod**是寬字元版本的**strtod**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
@@ -107,13 +114,13 @@ double wcstod_l(
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-目前地區設定的 [ **LC_NUMERIC** ] 分類設定會決定*strSource*中的基數點字元辨識。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 沒有 **_l**尾碼的函式會使用目前的地區設定; **_strtod_l**與 **_strtod_l**相同，不同之處在于它們會改用傳入的*地區*設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+目前地區設定的 [ **LC_NUMERIC** ] 分類設定會決定*strSource*中的基數點字元辨識。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 沒有 **_l**尾碼的函式會使用目前的地區設定;**_strtod_l**與 **_strtod_l**相同，不同之處在于它們會改用傳入的*地區*設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 如果*endptr*不是**Null**，則停止掃描的字元指標會儲存在*endptr*所指向的位置。 如果無法執行任何轉換（找不到任何有效的數位或指定了不正確基底），則*strSource*的值會儲存在*endptr*所指向的位置。
 
 **strtod**預期*strSource*會指向下列其中一種格式的字串：
 
-[*空格*][*sign*]{*數位*[*基數* *數位*] &#124; *基數* *數位*}[{**e** &#124; **e**} [*sign*] *digits* *] [空白字元]* [*sign*] {**0x** &#124; **0x**} {*hexdigits* [*基數* *hexdigits*] &#124; *基數* *hexdigits*} [{**p** &#124; **p**} [*sign*] *hexdigits*] [*空白字元]* [*sign*] {**INF** &#124; **無限大**} [*空白字元]* [*sign*] **NAN** [*sequence*]
+[*空格*][*sign*]{*數位*[*基數**數位*] &#124;*基數**數位*}[{**e** &#124; **e**} [*sign*]*數位**] [空白字元]*[*sign*] {**0x** &#124; **0x**} {*hexdigits* [*基數* *hexdigits*] &#124;*基數* *hexdigits*} [{**p** &#124; **p**} [*sign*] *hexdigits**] [空白字元]*[*sign*] {**INF** &#124;**無限大***} [空白字元]*[*sign*] **NAN** [*sequence*]
 
 選擇性的前置空白字元可能是由空格和定位字元所組成，*它們會被*忽略;*sign*為加號（+）或減號（-）;*數位*是一或多個十進位數;*hexdigits*是一或多個十六進位數位;*基數*是基數點字元、預設 "C" 地區設定中的句號（.），或者，如果目前的地區設定不同或指定了*地區*設定，則為地區設定特定的值;*序列*是英數位元或底線字元的序列。 在 [十進位] 和 [十六進位數位] 表單中，如果在基數點字元前面沒有出現任何數位，則在基數點字元之後至少必須出現一個。 在十進位格式中，十進位數後面可以加上開頭字母（**e**或**e**）和選擇性帶正負號整數的指數。 在十六進位格式中，十六進位數位後面可以加上開頭字母（**p**或**p**）的指數，以及選擇性帶正負號的十六進位整數，表示指數為2的乘冪。 不論是哪一種形式，如果指數部分或基數點字元都未出現，則會假設使用基數的點字元來遵循字串中的最後一個數位。 **INF**和**NAN**形式都會忽略大小寫。 不符合其中一種形式的第一個字元會停止掃描。
 
@@ -123,8 +130,8 @@ double wcstod_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strtod**、 **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> 或 &lt;stdlib.h> |
-|**wcstod**、 **_wcstod_l**|C:&lt;stdlib.h> 或 &lt;wchar.h> C++: &lt;cstdlib>、&lt;stdlib.h> 或 &lt;wchar.h> |
+|**strtod**， **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> 或 &lt;stdlib.h> |
+|**wcstod**， **_wcstod_l**|C：&lt;stdlib.h> 或 &lt;wchar.h> C++：&lt;cstdlib>、&lt;stdlib.h> 或 &lt;wchar.h> |
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -198,7 +205,7 @@ string = 10110134932
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [字串轉換為數值函式](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

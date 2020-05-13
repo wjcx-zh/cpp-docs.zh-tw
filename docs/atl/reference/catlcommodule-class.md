@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4b8c98630b27c35ed6a7e32318c6ebad8a82a5c5
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418080"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168812"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 類別
 
@@ -25,7 +25,7 @@ ms.locfileid: "79418080"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CAtlComModule : public _ATL_COM_MODULE
 ```
 
@@ -49,11 +49,11 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ## <a name="remarks"></a>備註
 
-`CAtlComModule` 會執行 COM 伺服器模組，讓用戶端可以存取模組的元件。
+`CAtlComModule`會執行 COM 伺服器模組，讓用戶端可以存取模組的元件。
 
 這個類別會取代舊版 ATL 中使用的過時[CComModule](../../atl/reference/ccommodule-class.md)類別。 如需詳細資訊，請參閱[ATL 模組類別](../../atl/atl-module-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)
 
@@ -63,11 +63,11 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 **標頭：** atlbase.h。h
 
-##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule
 
 建構函式。
 
-```
+```cpp
 CAtlComModule() throw();
 ```
 
@@ -75,11 +75,11 @@ CAtlComModule() throw();
 
 初始化模組。
 
-##  <a name="dtor"></a>CAtlComModule：： ~ CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule：： ~ CAtlComModule
 
 解構函式。
 
-```
+```cpp
 ~CAtlComModule();
 ```
 
@@ -87,11 +87,11 @@ CAtlComModule() throw();
 
 釋放所有 class factory。
 
-##  <a name="registerserver"></a>CAtlComModule::RegisterServer
+## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer
 
 呼叫這個方法，以更新物件對應中每個物件的系統登錄。
 
-```
+```cpp
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```
 
@@ -111,11 +111,11 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 呼叫全域函式[AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)。
 
-##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
+## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
 
 呼叫這個方法來註冊類型程式庫。
 
-```
+```cpp
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
 ```
@@ -123,7 +123,7 @@ HRESULT RegisterTypeLib();
 ### <a name="parameters"></a>參數
 
 *lpszIndex*<br/>
-格式為 "\\\N" 的字串，其中 N 是 TYPELIB 資源的整數索引。
+格式為 "\\\n" 的字串，其中 N 是 TYPELIB 資源的整數索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -133,11 +133,11 @@ HRESULT RegisterTypeLib();
 
 將類型程式庫的相關資訊新增至系統登錄。 如果模組實例包含多個類型程式庫，請使用這個方法的第一個版本來指定應該使用的類型程式庫。
 
-##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer
+## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer
 
 呼叫這個方法，以取消註冊物件對應中的每個物件。
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
@@ -159,11 +159,11 @@ HRESULT UnregisterServer(
 
 呼叫全域函式[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)。
 
-##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
+## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
 
 呼叫此方法可取消註冊類型程式庫。
 
-```
+```cpp
 HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
 ```
@@ -171,7 +171,7 @@ HRESULT UnRegisterTypeLib();
 ### <a name="parameters"></a>參數
 
 *lpszIndex*<br/>
-格式為 "\\\N" 的字串，其中 N 是 TYPELIB 資源的整數索引。
+格式為 "\\\n" 的字串，其中 N 是 TYPELIB 資源的整數索引。
 
 ### <a name="remarks"></a>備註
 
@@ -184,4 +184,4 @@ HRESULT UnRegisterTypeLib();
 ## <a name="see-also"></a>另請參閱
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

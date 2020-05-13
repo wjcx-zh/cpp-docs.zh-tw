@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216969"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368191"
 ---
 # <a name="__assume"></a>__assume
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 傳遞提示給最佳化程式。
 
@@ -31,7 +31,7 @@ __assume(
 
 ### <a name="parameters"></a>參數
 
-*運算式*\
+*表達*\
 假設評估為 true 的任何運算式。
 
 ## <a name="remarks"></a>備註
@@ -41,21 +41,21 @@ __assume(
 如果 `__assume` 陳述式撰寫成矛盾 (一律評估為 false 的運算式)，則它永遠會被視為 `__assume(0)`。 如果您的程式碼未如預期般運作，請確認您定義的 `expression` 有效而且為 true，如先前所述。 如需預期的 `__assume(0)` 行為，請參閱稍後的備註。
 
 > [!WARNING]
->  程式不能在可到達的路徑上包含無效的 `__assume` 陳述式。 如果編譯器可以到達無效的 `__assume` 陳述式，程式可能會導致無法預期且有潛在危險的行為。
+> 程式不能在可到達的路徑上包含無效的 `__assume` 陳述式。 如果編譯器可以到達無效的 `__assume` 陳述式，程式可能會導致無法預期且有潛在危險的行為。
 
 `__assume` 不是真的內建函式。 它不需要宣告為函式，且不能用在 `#pragma intrinsic` 指示詞中。 雖然不會產生程式碼，但最佳化程式所產生的程式碼會受到影響。
 
-只有`__assume`在無法復原判斷提示時, 才在[assert](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)中使用。 請勿在有後續錯誤復原程式碼的 assert 中使用 `__assume`，因為編譯器可能會將錯誤處理程式碼最佳化掉。
+僅在`__assume`斷言不可恢復時在[ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)中使用。 請勿在有後續錯誤復原程式碼的 assert 中使用 `__assume`，因為編譯器可能會將錯誤處理程式碼最佳化掉。
 
 `__assume(0)` 陳述式是特殊的情況。 使用 `__assume(0)`，表示無法到達的程式碼路徑。 下列範例示範如何使用 `__assume(0)`，表示無法到達 switch 陳述式的 default case。 這會示範 `__assume(0)` 最常見的用法。
 
-為了與舊版相容, 除非指定了編譯器選項[ \(/za 停用語言擴充](../build/reference/za-ze-disable-language-extensions.md)功能, 否則 **_assume**是 **__assume**的同義字。
+為了與早期版本相容 **,_assume**是 **__assume**的同義詞,除非指定了編譯器選項[\(/Za 禁用語言擴展)。](../build/reference/za-ze-disable-language-extensions.md)
 
 ## <a name="requirements"></a>需求
 
 |內建|架構|
 |---------------|------------------|
-|`__assume`|x86、ARM、x64、ARM64|
+|`__assume`|x86, ARM, x64, ARM64|
 
 ## <a name="example"></a>範例
 
@@ -114,9 +114,9 @@ int main(int p)
       NODEFAULT;
 ```
 
-**結束 Microsoft 專屬**
+**結束微軟的**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
+[編譯器內部函數](../intrinsics/compiler-intrinsics.md)\
 [關鍵字](../cpp/keywords-cpp.md)

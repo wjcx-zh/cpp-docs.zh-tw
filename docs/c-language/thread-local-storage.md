@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
 ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69500276"
 ---
 # <a name="thread-local-storage"></a>執行緒區域儲存區
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 執行緒區域儲存區 (Thread Local Storage，TLS) 是一種機制，讓指定之多執行緒處理序中的每個執行緒用來配置儲存區，以儲存執行緒特定資料。 在標準多執行緒程式中，資料是在特定處理序的所有執行緒之間共用，而執行緒區域儲存區則是用於配置每個執行緒資料的機制。 如需執行緒的完整討論，請參閱 Windows SDK 中的[處理序與執行緒](/windows/win32/ProcThread/processes-and-threads)。
 
@@ -86,12 +86,12 @@ __declspec( thread ) int tls_i = 1;
 
    請注意，包含要初始化之變數的 sizeof 運算式並不會構成其本身的參考，因此可以使用。
 
-- 使用 **\_\_declspec(thread)** 可能會干擾 DLL 匯入的[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)。
+- ** \_使用\_declspec （thread）** 可能會干擾 DLL 匯入的[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)。
 
 如需使用 thread 屬性的詳細資訊，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

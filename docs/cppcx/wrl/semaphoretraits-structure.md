@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: e7bd2e5d0993c8e4be7223d98ffb1dbec14cbb74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403109"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360731"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 結構
 
-定義通用特性`Semaphore`物件。
+定義`Semaphore`物件的常見特徵。
 
 ## <a name="syntax"></a>語法
 
@@ -32,9 +32,9 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 名稱                               | 描述
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Unlock](#unlock) | 版本控制共用資源。
+[信號量:解鎖](#unlock) | 釋放對共享資源的控制。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `HANDLENullTraits`
 
@@ -42,13 +42,13 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空間:** 微軟::WRL:包裝::處理特徵
 
-## <a name="unlock"></a>SemaphoreTraits::Unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>信號量:解鎖
 
-版本控制共用資源。
+釋放對共享資源的控制。
 
 ```cpp
 inline static void Unlock(
@@ -58,9 +58,9 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-若要處理`Semaphore`物件。
+*H*<br/>
+處理`Semaphore`物件。
 
 ### <a name="remarks"></a>備註
 
-如果在解除鎖定作業不成功，`Unlock()`會發出錯誤，指出失敗的原因。
+如果解鎖操作不成功,`Unlock()`則發出指示故障原因的錯誤。

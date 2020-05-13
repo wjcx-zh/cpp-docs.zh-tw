@@ -1,49 +1,49 @@
 ---
 title: 開始使用 C++ 組建見解
-description: C++組建深入解析的高階總覽。
+description: C++生成見解的高級概述。
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a5799fecc885b96f4278e0f5077662ce5fd7c8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 3a75dfe3bf1263cce53d70b764607cad4eec86d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332003"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325721"
 ---
 # <a name="get-started-with-c-build-insights"></a>開始使用 C++ 組建見解
 
 ::: moniker range="<=vs-2017"
 
-Visual Studio C++ 2019 中提供 Build Insights 工具。 若要查看該版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2019。
+C++構建見解工具可在 Visual Studio 2019 中使用。 要查看該版本的文檔,請將本文的可視化工作室**版本**選擇器控制項設置為 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-C++Build Insights 是一組工具，可讓您更深入瞭解 Microsoft Visual C++ （MSVC）工具鏈。 工具會收集有關您C++組建的資料，並以可協助您回答常見問題的格式呈現，例如：
+C++構建見解是一個工具的集合,可提高對 Microsoft 可視化C++ (MSVC) 工具鏈的可見性。 這些工具收集有關C++生成的資料,並以可説明您回答常見問題的格式呈現資料,例如:
 
-- 我的組建是否充分平行化？
-- 我應該在預先編譯的標頭（PCH）中包含哪些內容？
-- 是否有特定的瓶頸需要專注于增加組建速度？
+- 我的生成是否足夠並行化?
+- 我應該在預編譯的標頭 (PCH) 中包括哪些內容?
+- 是否有特定的瓶頸我應該關注以提高我的生成速度?
 
-這項技術的主要元件如下：
+該技術的主要組成部分是:
 
-- *vcperf*，這是一種命令列公用程式，可讓您用來收集組建的追蹤、
-- Windows Performance Analyzer （WPA）延伸模組，可讓您在 WPA 中查看組建追蹤，以及
-- C++ BUILD insights SDK 是一種軟體發展工具組，可用於建立您自己的C++工具，以取用 Build Insights 資料。
+- *vcperf.exe,* 一個命令行實用程式,可用於收集生成的痕跡,
+- Windows 效能分析器 (WPA) 延伸,允許您在 WPA 中檢視產生追蹤,以及 WPA 中檢視產生追蹤,以及
+- C++構建見解 SDK,這是一個軟體開發工具組,用於創建使用C++生成見解資料的工具。
 
-按一下下列連結，即可快速開始使用這些元件：
+點選以下連結可快速啟動這些元件:
 
-[教學課程： vcperf 和 Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
-瞭解如何收集C++專案的組建追蹤，以及如何在 WPA 中進行查看。
+[教學:vcperf 與 Windows 效能分析器](tutorials/vcperf-and-wpa.md)\
+瞭解如何收集C++專案的生成跟蹤,以及如何在WPA中查看它們。
 
-[教學課程： Windows 效能基本概念](tutorials/wpa-basics.md)\
-探索有用的 WPA 秘訣來分析您的組建追蹤。
+[教學:Windows 性能基礎知識](tutorials/wpa-basics.md)\
+發現用於分析生成跟蹤的有用 WPA 提示。
 
-Build Insights SDK\ [ C++ ](reference/sdk/overview.md)
-C++ BUILD Insights SDK 的總覽。
+[C++建構](reference/sdk/overview.md)\
+C++生成見解 SDK 的概述。
 
 ::: moniker-end

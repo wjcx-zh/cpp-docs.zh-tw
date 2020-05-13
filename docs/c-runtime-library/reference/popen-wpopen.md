@@ -1,10 +1,12 @@
 ---
-title: _popen、 _wpopen
-description: Microsoft C runtime （CRT）程式庫函數的參考 _popen 和 _wpopen。
-ms.date: 01/28/2020
+title: _popen, _wpopen
+description: Microsoft C runtime （CRT）程式庫函數_popen和_wpopen的參考。
+ms.date: 4/2/2020
 api_name:
 - _popen
 - _wpopen
+- _o__popen
+- _o__wpopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894316"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915282"
 ---
 # <a name="_popen-_wpopen"></a>_popen、_wpopen
 
@@ -78,7 +81,7 @@ FILE *_wpopen(
 *命令*\
 要執行的命令。
 
-*模式*\
+*下*\
 所傳回資料流的模式。
 
 ## <a name="return-value"></a>傳回值
@@ -93,15 +96,17 @@ FILE *_wpopen(
 
 |存取模式|描述|
 |-|-|
-|**"r"**|呼叫處理序可使用傳回的資料流來讀取繁衍命令的標準輸出。|
-|**"w"**|呼叫處理序可使用傳回的資料流來寫入至繁衍命令的標準輸入。|
-|**"b"**|在二進位模式中開啟。|
-|**"t"**|在文字模式中開啟。|
+|**r**|呼叫處理序可使用傳回的資料流來讀取繁衍命令的標準輸出。|
+|**寬**|呼叫處理序可使用傳回的資料流來寫入至繁衍命令的標準輸入。|
+|**位元組**|在二進位模式中開啟。|
+|**而已**|在文字模式中開啟。|
 
 > [!NOTE]
 > 如果在 Windows 程式中使用， **_popen**函式會傳回不正確檔案指標，使程式無限期地停止回應。 **_popen**在主控台應用程式中正常運作。 若要建立重新導向輸入和輸出的 Windows 應用程式，請參閱在 Windows SDK 中[使用重新導向的輸入和輸出建立子進程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
 
-**_wpopen**是寬字元版本的 **_popen**; **_wpopen**的*path*引數是寬字元字串。 相反地， **_wpopen**和 **_popen**的行為相同。
+**_wpopen**是寬字元版本的 **_popen**;**_wpopen**的*path*引數是寬字元字串。 相反地， **_wpopen**和 **_popen**的行為相同。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -166,7 +171,7 @@ int main( void )
 }
 ```
 
-此輸出假設目前目錄中只有一個檔案具有 `.c` 的副檔名。
+此輸出假設目前目錄中只有一個檔案具有`.c`副檔名。
 
 ```Output
 Volume in drive C is CDRIVE
@@ -181,7 +186,7 @@ Directory of D:\proj\console\test1
 Process returned 0
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [進程和環境控制](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\

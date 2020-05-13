@@ -1,9 +1,10 @@
 ---
 title: perror、_wperror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wperror
 - perror
+- _o__wperror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951026"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919327"
 ---
 # <a name="perror-_wperror"></a>perror、_wperror
 
@@ -62,7 +64,9 @@ void _wperror(
 
 ## <a name="remarks"></a>備註
 
-**Perror**函數會將錯誤訊息列印到**stderr**。 **_wperror**是寬字元版本的 **_perror**; **_wperror**的*訊息*引數是寬字元字串。 相反地， **_wperror**和 **_perror**的行為相同。
+**Perror**函數會將錯誤訊息列印到**stderr**。 **_wperror**是寬字元版本的 **_perror**;**_wperror**的*訊息*引數是寬字元字串。 相反地， **_wperror**和 **_perror**的行為相同。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -72,11 +76,11 @@ void _wperror(
 
 *訊息*會先列印，後面接著冒號，然後是最後一次產生錯誤的程式庫呼叫的系統錯誤訊息，最後是分行符號。 如果*message*是 null 指標或 null 字串的指標， **perror**只會列印系統錯誤訊息。
 
-錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **perror**會使用**errno**值做為 **_sys_errlist**的索引，來列印適當的錯誤訊息。 變數[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定義為 **_sys_errlist**陣列中元素的最大數目。
+錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **perror**會使用**errno**值做為 **_sys_errlist**的索引來列印適當的錯誤訊息。 變數[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值會定義為 **_sys_errlist**陣列中元素的最大數目。
 
 如需精確的結果，請在程式庫常式傳回但發生錯誤時立即呼叫**perror** 。 否則，後續呼叫可能會覆寫**errno**值。
 
-在 Windows 作業系統中，某些**errno**值列在 errno 中。H 未使用。 這些值會保留供 UNIX 作業系統使用。 如需 Windows 作業系統所使用之**errno**值的清單，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。 **perror**會針對這些平臺未使用的任何**errno**值，列印空字串。
+在 Windows 作業系統中，某些**errno**值列在 errno 中。H 未使用。 這些值會保留供 UNIX 作業系統使用。 如需 Windows 作業系統所使用**errno**值的清單，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。 **perror**會針對這些平臺未使用的任何**errno**值，列印空字串。
 
 ## <a name="requirements"></a>需求
 
@@ -141,7 +145,7 @@ _strerror says open failed: No such file or directory
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
 [strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

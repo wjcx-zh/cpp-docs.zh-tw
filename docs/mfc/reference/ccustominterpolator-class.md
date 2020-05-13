@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00ce0661fa3fbde714a7299ecbbd54df7c9bcc36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164133"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749169"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
 
@@ -59,37 +59,37 @@ class CCustomInterpolator;
 
 |名稱|描述|
 |----------|-----------------|
-|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|多載。 建構自訂 interpolator 物件並初始化期間以及指定的值的速度。|
+|[海關組織::海關插值器](#ccustominterpolator)|已多載。 建構自訂插值器物件,並將持續時間和速度初始化到指定值。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CCustomInterpolator::GetDependencies](#getdependencies)|取得 interpolator 的相依性。|
-|[CCustomInterpolator::GetDuration](#getduration)|取得 interpolator 的持續時間。|
-|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|取得 interpolator 潛在客戶的最後一個值。|
-|[CCustomInterpolator::Init](#init)|初始化期間以及最終的值。|
-|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|進行插補在指定的位移值。|
-|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|指定位移處的速度進行插補|
-|[CCustomInterpolator::SetDuration](#setduration)|設定 interpolator 的持續時間。|
-|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Interpolator 的起始值和速度設定。|
+|[CCustom 插值器::取得相依性](#getdependencies)|獲取插值器的依賴項。|
+|[CCustom 插值器:取得持續時間](#getduration)|獲取插值器的持續時間。|
+|[CCustom 插值器::取得最終值](#getfinalvalue)|獲取插值器引由的最終值。|
+|[CCustom插值器::Init](#init)|初始化持續時間和最終值。|
+|[海關組織::刑警價值](#interpolatevalue)|插值在給定偏移處的值。|
+|[海關刑警::刑警組織](#interpolatevelocity)|在給定位移插入速度|
+|[C自訂設定器::設定持續時間](#setduration)|設置插值器的持續時間。|
+|[C自訂插值器::設定初始值和速度](#setinitialvalueandvelocity)|設置插值器的初始值和速度。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CCustomInterpolator::m_currentValue](#m_currentvalue)|插補的值。|
-|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|內插補點的速度。|
-|[CCustomInterpolator::m_duration](#m_duration)|轉換的持續時間。|
-|[CCustomInterpolator::m_finalValue](#m_finalvalue)|在轉換結束變數最終的值。|
-|[CCustomInterpolator::m_initialValue](#m_initialvalue)|在轉換開始變數的值。|
-|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|在轉換開始變數的速度。|
+|[海關組織::m_currentValue](#m_currentvalue)|插值值。|
+|[C自定義插值器::m_currentVelocity](#m_currentvelocity)|插值速度。|
+|[C自定義插值器::m_duration](#m_duration)|轉換的持續時間。|
+|[C自定義插值器::m_finalValue](#m_finalvalue)|轉換結束時變數的最終值。|
+|[C自定義插值器::m_initialValue](#m_initialvalue)|轉換開始時變數的值。|
+|[海關:m_initialVelocity](#m_initialvelocity)|轉換開始時變數的速度。|
 
 ## <a name="remarks"></a>備註
 
-CCustomInterpolator 從衍生類別並覆寫所有必要的方法，以便實作自訂內插補點演算法。 這個類別的指標應該做為參數傳遞至 CCustomTransition。
+從 CCustomInterpolator 派生一個類並重寫所有必要的方法,以實現自訂插值演演演算法。 指向此類的指標應作為參數傳遞給 CCustomTransition。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CCustomInterpolator`
 
@@ -97,9 +97,9 @@ CCustomInterpolator 從衍生類別並覆寫所有必要的方法，以便實作
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator
+## <a name="ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>海關組織::海關插值器
 
-建構自訂 interpolator 物件，並設定所有預設值為 0 的值。
+建構自定義插值器物件,並將所有值設置為預設 0。
 
 ```
 CCustomInterpolator();
@@ -114,15 +114,15 @@ CCustomInterpolator(
 *duration*<br/>
 轉換的持續時間。
 
-*finalValue*
+*最終價值*
 
 ### <a name="remarks"></a>備註
 
-您可以使用 CCustomInterpolator::Init 初始化期間以及最終的值，稍後在程式碼。
+使用 CCustomInterpolator::Init 在代碼的後面部分初始化持續時間和最終值。
 
-##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies
+## <a name="ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>CCustom 插值器::取得相依性
 
-取得 interpolator 的相依性。
+獲取插值器的依賴項。
 
 ```
 virtual BOOL GetDependencies(
@@ -133,22 +133,22 @@ virtual BOOL GetDependencies(
 
 ### <a name="parameters"></a>參數
 
-*initialValueDependencies*<br/>
-輸出。 層面 interpolator 相依於的初始值會傳遞至 SetInitialValueAndVelocity。
+*初始價值相依性*<br/>
+輸出。 插值器的一些方面,這些插值取決於傳遞給 Set初始值和Velocity 的初始值。
 
-*initialVelocityDependencies*<br/>
-輸出。 Interpolator 的初始速度而定的各個層面會傳遞至 SetInitialValueAndVelocity。
+*初始速度相依性*<br/>
+輸出。 插值器的方面,這些插值器取決於傳遞給 Set 初始值和Velocity的初始速度。
 
-*durationDependencies*<br/>
-輸出。 Interpolator 的持續時間而定的層面會傳遞至 SetDuration。
+*持續時間 相依*<br/>
+輸出。 插值器的一些方面,這些插值器取決於傳遞給 SetDuration 的持續時間。
 
 ### <a name="return-value"></a>傳回值
 
-基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+基本實現始終返回 TRUE。 如果要使事件失敗,則從重寫的實現返回 FALSE。
 
-##  <a name="getduration"></a>  CCustomInterpolator::GetDuration
+## <a name="ccustominterpolatorgetduration"></a><a name="getduration"></a>CCustom 插值器:取得持續時間
 
-取得 interpolator 的持續時間。
+獲取插值器的持續時間。
 
 ```
 virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
@@ -157,15 +157,15 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ### <a name="parameters"></a>參數
 
 *duration*<br/>
-輸出。 轉換，以秒為單位的持續時間。
+輸出。 轉換的持續時間,以秒為單位。
 
 ### <a name="return-value"></a>傳回值
 
-基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+基本實現始終返回 TRUE。 如果要使事件失敗,則從重寫的實現返回 FALSE。
 
-##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue
+## <a name="ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>CCustom 插值器::取得最終值
 
-取得 interpolator 潛在客戶的最後一個值。
+獲取插值器引由的最終值。
 
 ```
 virtual BOOL GetFinalValue(DOUBLE* value);
@@ -174,17 +174,17 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ### <a name="parameters"></a>參數
 
 *value*<br/>
-輸出。 在轉換結束變數最終的值。
+輸出。 轉換結束時變數的最終值。
 
 ### <a name="return-value"></a>傳回值
 
-基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+基本實現始終返回 TRUE。 如果要使事件失敗,則從重寫的實現返回 FALSE。
 
-##  <a name="init"></a>  CCustomInterpolator::Init
+## <a name="ccustominterpolatorinit"></a><a name="init"></a>CCustom插值器::Init
 
-初始化期間以及最終的值。
+初始化持續時間和最終值。
 
-```
+```cpp
 void Init(
     UI_ANIMATION_SECONDS duration,
     DOUBLE finalValue);
@@ -195,12 +195,12 @@ void Init(
 *duration*<br/>
 轉換的持續時間。
 
-*finalValue*<br/>
-在轉換結束變數最終的值。
+*最終價值*<br/>
+轉換結束時變數的最終值。
 
-##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue
+## <a name="ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>海關組織::刑警價值
 
-進行插補在指定的位移值。
+插值在給定偏移處的值。
 
 ```
 virtual BOOL InterpolateValue(
@@ -211,15 +211,15 @@ virtual BOOL InterpolateValue(
 ### <a name="parameters"></a>參數
 
 *value*<br/>
-輸出。 插補的值。
+輸出。 插值值。
 
 ### <a name="return-value"></a>傳回值
 
-基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+基本實現始終返回 TRUE。 如果要使事件失敗,則從重寫的實現返回 FALSE。
 
-##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity
+## <a name="ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>海關刑警::刑警組織
 
-指定位移處的速度進行插補
+在給定位移插入速度
 
 ```
 virtual BOOL InterpolateVelocity(
@@ -230,29 +230,29 @@ virtual BOOL InterpolateVelocity(
 ### <a name="parameters"></a>參數
 
 *velocity*<br/>
-輸出。 在位移變數的速度。
+輸出。 偏移處變數的速度。
 
 ### <a name="return-value"></a>傳回值
 
-基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+基本實現始終返回 TRUE。 如果要使事件失敗,則從重寫的實現返回 FALSE。
 
-##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue
+## <a name="ccustominterpolatorm_currentvalue"></a><a name="m_currentvalue"></a>海關組織::m_currentValue
 
-插補的值。
+插值值。
 
 ```
 DOUBLE m_currentValue;
 ```
 
-##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity
+## <a name="ccustominterpolatorm_currentvelocity"></a><a name="m_currentvelocity"></a>C自定義插值器::m_currentVelocity
 
-內插補點的速度。
+插值速度。
 
 ```
 DOUBLE m_currentVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCustomInterpolator::m_duration
+## <a name="ccustominterpolatorm_duration"></a><a name="m_duration"></a>C自定義插值器::m_duration
 
 轉換的持續時間。
 
@@ -260,33 +260,33 @@ DOUBLE m_currentVelocity;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue
+## <a name="ccustominterpolatorm_finalvalue"></a><a name="m_finalvalue"></a>C自定義插值器::m_finalValue
 
-在轉換結束變數最終的值。
+轉換結束時變數的最終值。
 
 ```
 DOUBLE m_finalValue;
 ```
 
-##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue
+## <a name="ccustominterpolatorm_initialvalue"></a><a name="m_initialvalue"></a>C自定義插值器::m_initialValue
 
-在轉換開始變數的值。
+轉換開始時變數的值。
 
 ```
 DOUBLE m_initialValue;
 ```
 
-##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity
+## <a name="ccustominterpolatorm_initialvelocity"></a><a name="m_initialvelocity"></a>海關:m_initialVelocity
 
-在轉換開始變數的速度。
+轉換開始時變數的速度。
 
 ```
 DOUBLE m_initialVelocity;
 ```
 
-##  <a name="setduration"></a>  CCustomInterpolator::SetDuration
+## <a name="ccustominterpolatorsetduration"></a><a name="setduration"></a>C自訂設定器::設定持續時間
 
-設定 interpolator 的持續時間。
+設置插值器的持續時間。
 
 ```
 virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
@@ -299,11 +299,11 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 
 ### <a name="return-value"></a>傳回值
 
-基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+基本實現始終返回 TRUE。 如果要使事件失敗,則從重寫的實現返回 FALSE。
 
-##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity
+## <a name="ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>C自訂插值器::設定初始值和速度
 
-Interpolator 的起始值和速度設定。
+設置插值器的初始值和速度。
 
 ```
 virtual BOOL SetInitialValueAndVelocity(
@@ -313,15 +313,15 @@ virtual BOOL SetInitialValueAndVelocity(
 
 ### <a name="parameters"></a>參數
 
-*initialValue*<br/>
-在轉換開始變數的值。
+*初始值*<br/>
+轉換開始時變數的值。
 
-*initialVelocity*<br/>
-在轉換開始變數的速度。
+*初始速度*<br/>
+轉換開始時變數的速度。
 
 ### <a name="return-value"></a>傳回值
 
-基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+基本實現始終返回 TRUE。 如果要使事件失敗,則從重寫的實現返回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

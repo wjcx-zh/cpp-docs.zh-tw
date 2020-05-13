@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 74a34ec169868d3e28f78f33da38dbda21ef23b3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c715ca1b8a2b647f89ada008f3c6606ca5e58783
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502605"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750385"
 ---
 # <a name="csharedfile-class"></a>CSharedFile 類別
 
-支援共用記憶體檔案的[CMemFile](../../mfc/reference/cmemfile-class.md)衍生類別。
+支援共用記憶體檔的[CMemFile](../../mfc/reference/cmemfile-class.md)派生類。
 
 ## <a name="syntax"></a>語法
 
@@ -35,30 +35,30 @@ class CSharedFile : public CMemFile
 
 |名稱|描述|
 |----------|-----------------|
-|[CSharedFile::CSharedFile](#csharedfile)|建構 `CSharedFile` 物件。|
+|[C 分享檔案:C 分享檔案](#csharedfile)|建構 `CSharedFile` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSharedFile::Detach](#detach)|關閉共用記憶體檔案, 並傳回其記憶體區塊的控制碼。|
-|[CSharedFile::SetHandle](#sethandle)|將共用記憶體檔案附加至記憶體區塊。|
+|[共用檔案::D](#detach)|關閉共用記憶體檔並返回其記憶體區塊的句柄。|
+|[C 分享檔案::設定句柄](#sethandle)|將共用記憶體檔附加到記憶體區塊。|
 
 ## <a name="remarks"></a>備註
 
-記憶體檔案的行為與磁片檔案相同。 差別在於, 記憶體檔案會儲存在 RAM 中, 而不是存放在磁片上。 記憶體檔案適用于快速暫存儲存, 或在獨立進程之間傳送未經處理的位元組或序列化物件。
+記憶體檔與磁碟檔一樣。 區別在於,記憶體檔存儲在 RAM 中,而不是存儲在磁碟上。 記憶體檔案可用於快速暫存記憶體,或用於在獨立進程之間傳輸原始位元組或序列化物件。
 
-共用記憶體檔案與其他記憶體檔案不同的是, 記憶體中的檔案是使用[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 函式配置的。 類別會將資料儲存在全域配置的記憶體區塊中 ( `GlobalAlloc`使用建立), 而這個記憶體區塊可以使用 DDE、剪貼簿或其他 OLE/COM 制式資料傳輸作業來共用, 例如使用`IDataObject`。 `CSharedFile`
+共用記憶體檔與其他記憶體檔不同,因為記憶體是使用[Global Alloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 函數分配的。 類`CSharedFile`將資料儲存在全域分配的記憶體區塊中(使用`GlobalAlloc`創建),並且此記憶體區塊可以使用 DDE、剪貼簿或其他 OLE/COM 統一資料傳輸操作(例如`IDataObject`,使用 )共用。
 
-`GlobalAlloc`傳回 HGLOBAL 控制碼, 而不是記憶體的指標, 例如[malloc](../../c-runtime-library/reference/malloc.md)傳回的指標。 某些應用程式中需要 HGLOBAL 控制碼。 例如, 若要將資料放在剪貼簿上, 您需要 HGLOBAL 控制碼。
+`GlobalAlloc`返回 HGLOBAL 句柄,而不是指向記憶體的指標,例如[malloc](../../c-runtime-library/reference/malloc.md)返回的指標。 某些應用程式需要 HGLOBAL 句柄。 例如,要將數據放在剪貼簿上,您需要一個 HGLOBAL 句柄。
 
-`CSharedFile`不會使用記憶體對應檔案, 而且不能直接在進程之間共用資料。
+`CSharedFile`不使用記憶體映射的文件,並且數據不能直接在進程之間共用。
 
-`CSharedFile`物件可以自動設定自己的記憶體。 或者, 您可以藉由呼叫`CSharedFile` [CSharedFile:: SetHandle](#sethandle), 將自己的記憶體區塊附加至物件。 不論是哪一種情況, 如果`nGrowBytes` `nGrowBytes`不是零, 就會以大小的增量配置記憶體來成長記憶體檔案。
+`CSharedFile`物件可以自動分配自己的記憶體。 或者,您可以通過調`CSharedFile`用[CSharedFile::setHandle](#sethandle)將您自己的記憶體塊附加到物件。 在這兩種情況下,自動增長記憶體檔的記憶體分配以`nGrowBytes`-大小增量(如果不是零)。 `nGrowBytes`
 
-如需詳細資訊, 請參閱《*執行時間程式庫參考*》中的在 MFC 和檔案[處理](../../c-runtime-library/file-handling.md)中的[檔](../../mfc/files-in-mfc.md)。
+有關詳細資訊,請參閱運行時*庫參考*[中的 MFC](../../mfc/files-in-mfc.md)和[檔處理](../../c-runtime-library/file-handling.md)中的文章檔。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -70,11 +70,11 @@ class CSharedFile : public CMemFile
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxadv。h
+**標題:** afxadv.h
 
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile
+## <a name="csharedfilecsharedfile"></a><a name="csharedfile"></a>C 分享檔案:C 分享檔案
 
-建立`CSharedFile`物件並為其配置記憶體。
+構造對`CSharedFile`象並為其分配記憶體。
 
 ```
 CSharedFile(
@@ -85,14 +85,14 @@ CSharedFile(
 ### <a name="parameters"></a>參數
 
 *nAllocFlags*<br/>
-表示如何配置記憶體的旗標。 如需有效旗標值的清單, 請參閱[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) 。
+指示如何分配記憶體的標誌。 有關有效標誌值的清單,請參閱[GlobalAlloc。](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
-*nGrowBytes*<br/>
-記憶體配置增量 (以位元組為單位)。
+*n 增長位元組*<br/>
+記憶體分配以位元組為單位遞增。
 
-##  <a name="detach"></a>CSharedFile::D etach
+## <a name="csharedfiledetach"></a><a name="detach"></a>共用檔案::D
 
-呼叫此函式以關閉記憶體檔案, 並將它與記憶體區塊卸離。
+調用此函數以關閉記憶體檔並將其從記憶體塊中分離。
 
 ```
 HGLOBAL Detach();
@@ -100,17 +100,17 @@ HGLOBAL Detach();
 
 ### <a name="return-value"></a>傳回值
 
-記憶體區塊的控制碼, 其中包含記憶體檔案的內容。
+包含記憶體檔內容的記憶體區塊的句柄。
 
 ### <a name="remarks"></a>備註
 
-您可以使用卸**離**所傳回的控制碼, 藉由呼叫[SetHandle](#sethandle)來重新開啟它。
+您可以使用**Detach**傳回的句柄呼叫[SetHandle](#sethandle)來重新開啟它。
 
-##  <a name="sethandle"></a>CSharedFile::SetHandle
+## <a name="csharedfilesethandle"></a><a name="sethandle"></a>C 分享檔案::設定句柄
 
-呼叫此函式可將全域記憶體區塊附加至`CSharedFile`物件。
+調用此函數以將全域記憶體塊附加到`CSharedFile`物件。
 
-```
+```cpp
 void SetHandle(
     HGLOBAL hGlobalMemory,
     BOOL bAllowGrow = TRUE);
@@ -118,15 +118,15 @@ void SetHandle(
 
 ### <a name="parameters"></a>參數
 
-*hGlobalMemory*<br/>
-要附加至`CSharedFile`的全域記憶體的控制碼。
+*h全球記憶體*<br/>
+處理要附加到的全域記憶體。 `CSharedFile`
 
-*bAllowGrow*<br/>
-指定是否允許記憶體區塊成長。
+*bAllow 增長*<br/>
+指定是否允許記憶體塊增長。
 
 ### <a name="remarks"></a>備註
 
-如果*bAllowGrow*為非零值, 則記憶體區塊的大小會視需要而增加, 例如, 如果您嘗試將比記憶體區塊大小還要多的位元組寫入檔案。
+如果*bAllowGrow*是非零,則記憶體區塊的大小會根據需要增加,例如,如果您嘗試向檔寫入比記憶體大小更多的字節。
 
 ## <a name="see-also"></a>另請參閱
 

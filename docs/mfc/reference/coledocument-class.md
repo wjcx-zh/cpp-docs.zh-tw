@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1500035cb8be3036678090918154829aace48d2f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421097"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753869"
 ---
 # <a name="coledocument-class"></a>COleDocument 類別
 
@@ -75,53 +75,53 @@ class COleDocument : public CDocument
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDocument：： COleDocument](#coledocument)|建構 `COleDocument` 物件。|
+|[COle 文件:COleDocument](#coledocument)|建構 `COleDocument` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDocument：： AddItem](#additem)|將專案加入至檔所維護的專案清單。|
-|[COleDocument：： ApplyPrintDevice](#applyprintdevice)|為檔中的所有用戶端專案設定列印目標裝置。|
-|[COleDocument：： EnableCompoundFile](#enablecompoundfile)|會使用 OLE 結構化儲存體檔案格式來儲存檔。|
-|[COleDocument：： GetInPlaceActiveItem](#getinplaceactiveitem)|傳回目前就地作用中的 OLE 專案。|
-|[COleDocument：： GetNextClientItem](#getnextclientitem)|取得用於反覆運算的下一個用戶端專案。|
-|[COleDocument：： GetNextItem](#getnextitem)|取得要逐一查看的下一個檔專案。|
-|[COleDocument：： GetNextServerItem](#getnextserveritem)|取得用於反覆運算的下一個伺服器專案。|
-|[COleDocument：： GetPrimarySelectedItem](#getprimaryselecteditem)|傳回檔中主要選取的 OLE 專案。|
-|[COleDocument：： GetStartPosition](#getstartposition)|取得開始反復專案的初始位置。|
-|[COleDocument：： HasBlankItems](#hasblankitems)|檢查檔中的空白專案。|
-|[COleDocument：： OnShowViews](#onshowviews)|當檔變成可見或不可見時呼叫。|
-|[COleDocument：： RemoveItem](#removeitem)|從檔所維護的專案清單中移除專案。|
-|[COleDocument：： UpdateModifiedFlag](#updatemodifiedflag)|如果已修改任何包含的 OLE 專案，則將檔標記為已修改。|
+|[COleDocument::新增專案](#additem)|將項添加到文檔維護的項清單中。|
+|[COle 文件::套用列印裝置](#applyprintdevice)|設置文檔中所有用戶端項的列印目標設備。|
+|[COle 文件:開啟複合檔案](#enablecompoundfile)|使用 OLE 結構化儲存檔案格式儲存文件。|
+|[COle 文件:抓取位置活動項目](#getinplaceactiveitem)|返回當前就地處於活動狀態的 OLE 項。|
+|[COle 文件:取得下一個客戶端項目](#getnextclientitem)|獲取用於反覆運算的下一個用戶端項。|
+|[COle 文件:抓取下一個項目](#getnextitem)|獲取下一個文檔項以進行反覆運算。|
+|[COle 文件:取得下一個伺服器項目](#getnextserveritem)|獲取用於反覆運算的下一個伺服器項。|
+|[COleDocument:取得主要選定項目](#getprimaryselecteditem)|返回文檔中主要選定的 OLE 項。|
+|[COle 文件:抓取起始位置](#getstartposition)|獲取開始反覆運算的初始位置。|
+|[COle 文件::有空白項目](#hasblankitems)|檢查文檔中的空白項。|
+|[COle 文件::在顯示檢視](#onshowviews)|當文檔變得可見或不可見時調用。|
+|[COle 文件:移除項目](#removeitem)|從文件維護的項清單中刪除項。|
+|[COle 文件::更新已修改的標記](#updatemodifiedflag)|如果包含的任何 OLE 項已被修改,則將文檔標記為已修改。|
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDocument：： OnEditChangeIcon](#oneditchangeicon)|處理變更圖示功能表命令中的事件。|
-|[COleDocument：： OnEditConvert](#oneditconvert)|處理從一個類型轉換成另一個類型的內嵌或連結化物件。|
-|[COleDocument：： OnEditLinks](#oneditlinks)|處理 [編輯] 功能表上 [連結] 命令中的事件。|
-|[COleDocument：： OnFileSendMail](#onfilesendmail)|傳送附有附加檔的郵件訊息。|
-|[COleDocument：： OnUpdateEditChangeIcon](#onupdateeditchangeicon)|由架構呼叫，以更新 [編輯]/[變更] 圖示功能表選項的命令 UI。|
-|[COleDocument：： OnUpdateEditLinksMenu](#onupdateeditlinksmenu)|由架構呼叫，以更新 [編輯/連結] 功能表選項的命令 UI。|
-|[COleDocument：： OnUpdateObjectVerbMenu](#onupdateobjectverbmenu)|由架構呼叫，以更新編輯/ *objectname*功能表選項的命令 UI，以及從編輯/ *Objectname*存取的動詞子功能表。|
-|[COleDocument：： OnUpdatePasteLinkMenu](#onupdatepastelinkmenu)|由架構呼叫，以更新 [貼上特殊功能表] 選項的命令 UI。|
-|[COleDocument：： OnUpdatePasteMenu](#onupdatepastemenu)|由架構呼叫，以更新 [貼上] 功能表選項的命令 UI。|
+|[COle 文件::編輯變更圖示](#oneditchangeicon)|在"更改圖示"功能表命令中處理事件。|
+|[COle 文件:開啟轉換](#oneditconvert)|處理嵌入或連結物件從一種類型轉換為另一種類型。|
+|[COleDocument::編輯連結](#oneditlinks)|在"編輯"選單上處理"連結"命令中的事件。|
+|[COle 文件::在檔案傳送郵件](#onfilesendmail)|發送附有文件的郵件。|
+|[COle 文件::更新編輯變更圖示](#onupdateeditchangeicon)|由框架呼叫以更新「編輯/更改圖示」功能表選項的命令 UI。|
+|[COle 文件::更新連結選單](#onupdateeditlinksmenu)|由框架呼叫以更新「編輯/連結」功能表選項的命令 UI。|
+|[COleDocument::更新物件Verbmenu](#onupdateobjectverbmenu)|由框架呼叫以更新"編輯/*物件名稱"* 選單選項的命令 UI,以及從"編輯/*物件名稱*"存取的 Verb 子選單。|
+|[COle 文件::更新貼上連結選單](#onupdatepastelinkmenu)|由框架呼叫以更新「貼貼特殊」功能表選項的命令 UI。|
+|[COle 文件::更新貼上選單](#onupdatepastemenu)|由框架呼叫以更新「貼貼」功能表選項的命令 UI。|
 
 ## <a name="remarks"></a>備註
 
-`COleDocument` 衍生自 `CDocument`，可讓您的 OLE 應用程式使用 MFC 程式庫所提供的檔/視圖架構。
+`COleDocument`派生自`CDocument`,它允許 OLE 應用程式使用 Microsoft 基礎類庫提供的文檔/視圖體系結構。
 
-`COleDocument` 會將檔視為[CDocItem](../../mfc/reference/cdocitem-class.md)物件的集合，以處理 OLE 專案。 容器和伺服器應用程式都需要這類架構，因為其檔必須能夠包含 OLE 專案。 [COleServerItem](../../mfc/reference/coleserveritem-class.md)和[COleClientItem](../../mfc/reference/coleclientitem-class.md)類別（兩者都是衍生自 `CDocItem`）會管理應用程式與 OLE 專案之間的互動。
+`COleDocument`將文件視為處理 OLE 項的[CDocItem](../../mfc/reference/cdocitem-class.md)物件的集合。 容器和伺服器應用程式都需要這樣的體系結構,因為它們的文檔必須能夠包含OLE項。 [COleServerItem](../../mfc/reference/coleserveritem-class.md)和[COleClientItem](../../mfc/reference/coleclientitem-class.md)類`CDocItem`都派生 自 ,管理應用程式和 OLE 項之間的交互。
 
-如果您要撰寫簡單的容器應用程式，請從 `COleDocument`衍生您的檔類別。 如果您要撰寫的容器應用程式支援連結至其檔所包含的內嵌專案，請從[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)衍生您的檔類別。 如果您要撰寫伺服器應用程式或組合容器/伺服器，請從[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)衍生您的檔類別。 `COleLinkingDoc` 和 `COleServerDoc` 衍生自 `COleDocument`，因此這些類別會繼承 `COleDocument` 和 `CDocument`中所有可用的服務。
+如果要編寫一個簡單的容器應用程式,請從`COleDocument`派生文檔類。 如果要編寫一個容器應用程式,該應用程式支援連結到其文檔中包含的嵌入項,請從[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)派生您的文檔類。 如果要編寫伺服器應用程式或組合容器/伺服器,請從[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)派生文檔類。 `COleLinkingDoc``COleServerDoc`派生`COleDocument`自 ,因此這些類`COleDocument``CDocument`繼承 和 中提供的所有服務。
 
-若要使用 `COleDocument`，請從它衍生類別並新增功能，以管理應用程式的非 OLE 資料，以及內嵌或連結的專案。 如果您定義 `CDocItem`衍生的類別來儲存應用程式的原生資料，則可以使用 `COleDocument` 所定義的預設實值來儲存您的 OLE 和非 OLE 資料。 您也可以設計自己的資料結構，以便與 OLE 專案分開儲存非 OLE 資料。 如需詳細資訊，請參閱[容器：複合檔案](../../mfc/containers-compound-files.md)。
+要使用`COleDocument`派生類,並添加用於管理應用程式的非 OLE 資料以及嵌入或連結項的功能。 如果定義`CDocItem`派生類以儲存應用程式的本機數據,則可以使用`COleDocument`定義的 預設實現來存儲 OLE 和非 OLE 資料。 您還可以設計自己的資料結構,以便將非 OLE 數據與 OLE 項分開儲存。 有關詳細資訊,請參閱文章[容器:複合檔](../../mfc/containers-compound-files.md).
 
-`CDocument` 支援透過 mail 傳送您的檔（若有郵件支援（MAPI））。 `COleDocument` 已更新[OnFileSendMail](#onfilesendmail) ，可正確處理複合檔案。 如需詳細資訊，請參閱 MFC 中的[mapi](../../mfc/mapi.md)和[mapi 支援](../../mfc/mapi-support-in-mfc.md)文章。
+`CDocument`支援通過郵件支援 (MAPI) 傳送文件。 `COleDocument`已更新[OnFileSendMail](#onfilesendmail)以正確處理複合文檔。 有關詳細資訊,請參閱 MFC 中的[MAPI](../../mfc/mapi.md)與[MAPI 支援](../../mfc/mapi-support-in-mfc.md)文章 。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -133,11 +133,11 @@ class COleDocument : public CDocument
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxole。h
+**標題:** afxole.h
 
-##  <a name="additem"></a>COleDocument：： AddItem
+## <a name="coledocumentadditem"></a><a name="additem"></a>COleDocument::新增專案
 
-呼叫此函式可將專案新增至檔。
+呼叫此函數以向文件添加項。
 
 ```
 virtual void AddItem(CDocItem* pItem);
@@ -146,15 +146,15 @@ virtual void AddItem(CDocItem* pItem);
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-要加入之檔專案的指標。
+指向要添加的文檔項的指標。
 
 ### <a name="remarks"></a>備註
 
-您不需要明確地呼叫此函式，因為它是由接受檔指標的 `COleClientItem` 或 `COleServerItem` 的程式調用。
+當 接受指向文檔的指標`COleClientItem`的`COleServerItem`或建構函數調用此函數時,不需要顯式調用它。
 
-##  <a name="applyprintdevice"></a>COleDocument：： ApplyPrintDevice
+## <a name="coledocumentapplyprintdevice"></a><a name="applyprintdevice"></a>COle 文件::套用列印裝置
 
-呼叫此函式可針對應用程式容器檔案中所有內嵌的[COleClientItem](../../mfc/reference/coleclientitem-class.md)專案變更列印目標裝置。
+呼叫此函數可更改應用程式容器文件中所有嵌入式[COleClientItem 專案的](../../mfc/reference/coleclientitem-class.md)列印目標設備。
 
 ```
 BOOL ApplyPrintDevice(const DVTARGETDEVICE* ptd);
@@ -164,26 +164,26 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="parameters"></a>參數
 
 *ptd*<br/>
-`DVTARGETDEVICE` 資料結構的指標，其中包含新列印目標裝置的相關資訊。 可以是 NULL。
+指向數據結構`DVTARGETDEVICE`的指標,其中包含有關新列印目標設備的資訊。 可以是 NULL。
 
-*ppd*<br/>
-`PRINTDLG` 資料結構的指標，其中包含新列印目標裝置的相關資訊。 可以是 NULL。
+*Ppd*<br/>
+指向數據結構`PRINTDLG`的指標,其中包含有關新列印目標設備的資訊。 可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功，則為非零;否則為0。
+如果函數成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-此函式會更新所有專案的列印目標裝置，但不會重新整理這些專案的呈現快取。 若要更新專案的呈現快取，請呼叫[COleClientItem：： UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)。
+此函數更新所有專案的列印目標設備,但不會刷新這些專案的演示文稿緩存。 要更新專案的簡報簡報快取,請致電[COleClientItem::更新連結](../../mfc/reference/coleclientitem-class.md#updatelink)。
 
-此函式的引數包含 OLE 用來識別目標裝置的資訊。 [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)結構包含 Windows 用來初始化一般 [列印] 對話方塊的資訊。 在使用者關閉對話方塊之後，Windows 會傳回此結構中使用者選取專案的相關資訊。 [CPrintDialog](../../mfc/reference/cprintdialog-class.md)物件的 `m_pd` 成員是 `PRINTDLG` 結構。
+此函數的參數包含 OLE 用於標識目標設備的資訊。 [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)結構包含 Windows 用於初始化公共列印對話框的資訊。 使用者關閉對話方塊後,Windows 將返回有關使用者在此結構中選擇的資訊。 `m_pd` [CPrintDialog](../../mfc/reference/cprintdialog-class.md)物件的成員是一`PRINTDLG`個結構。
 
-如需詳細資訊，請參閱 Windows SDK 中的[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)結構。
 
-如需詳細資訊，請參閱 Windows SDK 中的[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)結構。
 
-##  <a name="coledocument"></a>COleDocument：： COleDocument
+## <a name="coledocumentcoledocument"></a><a name="coledocument"></a>COle 文件:COleDocument
 
 建構 `COleDocument` 物件。
 
@@ -191,30 +191,30 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 COleDocument();
 ```
 
-##  <a name="enablecompoundfile"></a>COleDocument：： EnableCompoundFile
+## <a name="coledocumentenablecompoundfile"></a><a name="enablecompoundfile"></a>COle 文件:開啟複合檔案
 
-如果您想要使用複合檔案格式來儲存檔，請呼叫此函式。
+如果要使用複合檔案格式儲存文件,請呼叫此函數。
 
-```
+```cpp
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-指定複合檔案支援是否已啟用或停用。
+*b 啟用*<br/>
+指定是啟用還是禁用複合檔案支援。
 
 ### <a name="remarks"></a>備註
 
-這也稱為結構化儲存體。 您通常會從 `COleDocument`衍生類別的函式中呼叫這個函數。 如需複合檔案的詳細資訊，請參閱[容器：複合檔案](../../mfc/containers-compound-files.md)。
+這也稱為結構化存儲。 通常從`COleDocument`派生類的構造函數調用此函數。 有關複合文件的詳細資訊,請參閱文章[「容器:複合檔](../../mfc/containers-compound-files.md)」。
 
-如果您未呼叫此成員函式，檔將會以非結構化（「一般」）檔案格式儲存。
+如果不呼叫此成員函數,文件將以非結構化("平面")檔案格式儲存。
 
-啟用或停用檔的複合檔案支援之後，此設定不應在檔的存留期間變更。
+為文件啟用或禁用複合文件支援後,不應在文檔的生存期內更改設置。
 
-##  <a name="getinplaceactiveitem"></a>COleDocument：： GetInPlaceActiveItem
+## <a name="coledocumentgetinplaceactiveitem"></a><a name="getinplaceactiveitem"></a>COle 文件:抓取位置活動項目
 
-呼叫此函式，以在包含*pWnd*所識別之視圖的框架視窗中，取得目前已啟用的 OLE 專案。
+調用此函數,獲取當前在包含*pWnd*標識的檢視的幀視窗中當前啟動的 OLE 項。
 
 ```
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
@@ -222,16 +222,16 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-顯示容器檔案之視窗的指標。
+*pwnd*<br/>
+指向顯示容器文件的視窗的指標。
 
 ### <a name="return-value"></a>傳回值
 
-指向單一位置的現用 OLE 專案的指標;如果目前沒有任何 OLE 專案處於「就地作用中」狀態，則為 Null。
+指向單個、就地活動 OLE 項的指標;如果當前沒有 OLE 項處於"就地活動"狀態,則為 NULL。
 
-##  <a name="getnextclientitem"></a>COleDocument：： GetNextClientItem
+## <a name="coledocumentgetnextclientitem"></a><a name="getnextclientitem"></a>COle 文件:取得下一個客戶端項目
 
-重複呼叫此函式，以存取檔中的每個用戶端專案。
+重複呼叫此函數以造訪文件中的每個用戶端項。
 
 ```
 COleClientItem* GetNextClientItem(POSITION& pos) const;
@@ -239,24 +239,24 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫 `GetNextClientItem`所設定之位置值的參考。`GetStartPosition` 成員函式會傳回初始值。
+*Pos*<br/>
+對由上一個調用 為設置的`GetNextClientItem`定位 值的引用。成員函數返回`GetStartPosition`初始值。
 
 ### <a name="return-value"></a>傳回值
 
-檔中下一個用戶端專案的指標，如果沒有其他用戶端專案，則為 Null。
+指向文檔中下一個用戶端項的指標,如果沒有更多的用戶端項,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-在每次呼叫之後，會針對檔中的下一個專案設定*pos*的值，這可能是或可能不是用戶端專案。
+每次調用後,為文檔中的下一個項設置*pos*值,該項可能是用戶端項,也可能不是用戶端項。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]
 
-##  <a name="getnextitem"></a>COleDocument：： GetNextItem
+## <a name="coledocumentgetnextitem"></a><a name="getnextitem"></a>COle 文件:抓取下一個項目
 
-重複呼叫此函式，以存取檔中的每個專案。
+重複調用此函數以訪問文檔中的每個專案。
 
 ```
 virtual CDocItem* GetNextItem(POSITION& pos) const;
@@ -264,24 +264,24 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫 `GetNextItem`所設定之位置值的參考。`GetStartPosition` 成員函式會傳回初始值。
+*Pos*<br/>
+對由上一個調用 為設置的`GetNextItem`定位 值的引用。成員函數返回`GetStartPosition`初始值。
 
 ### <a name="return-value"></a>傳回值
 
-位於指定位置之檔專案的指標。
+指向指定位置的文檔項的指標。
 
 ### <a name="remarks"></a>備註
 
-在每次呼叫之後， *pos*的值會設定為檔中下一個專案的位置值。 如果所抓取的元素是檔中的最後一個元素，則*pos*的新值會是 Null。
+每次呼叫後 *,pos*值將設定為文件中下一項的「位置」 值。 如果檢索到的元素是文檔中的最後一個元素,則*pos*的新值為NULL。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]
 
-##  <a name="getnextserveritem"></a>COleDocument：： GetNextServerItem
+## <a name="coledocumentgetnextserveritem"></a><a name="getnextserveritem"></a>COle 文件:取得下一個伺服器項目
 
-重複呼叫此函式，以存取檔中的每個伺服器專案。
+重複呼叫此函數以造訪文件中的每個伺服器項。
 
 ```
 COleServerItem* GetNextServerItem(POSITION& pos) const;
@@ -289,24 +289,24 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫 `GetNextServerItem`所設定之位置值的參考。`GetStartPosition` 成員函式會傳回初始值。
+*Pos*<br/>
+對由上一個調用 為設置的`GetNextServerItem`定位 值的引用。成員函數返回`GetStartPosition`初始值。
 
 ### <a name="return-value"></a>傳回值
 
-檔中下一個伺服器專案的指標，如果沒有其他伺服器專案，則為 Null。
+指向文檔中下一個伺服器項的指標,如果沒有更多的伺服器項,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-在每次呼叫之後，會針對檔中的下一個專案設定*pos*的值，這可能是或可能不是伺服器專案。
+每次調用後,為文檔中的下一個項設置*pos*值,該項可能是伺服器項,也可能不是伺服器項。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]
 
-##  <a name="getprimaryselecteditem"></a>COleDocument：： GetPrimarySelectedItem
+## <a name="coledocumentgetprimaryselecteditem"></a><a name="getprimaryselecteditem"></a>COleDocument:取得主要選定項目
 
-由架構呼叫，以在指定的視圖中取出目前選取的 OLE 專案。
+由框架調用以檢索指定檢視中當前選定的 OLE 項。
 
 ```
 virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
@@ -315,19 +315,19 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ### <a name="parameters"></a>參數
 
 *pView*<br/>
-顯示檔之現用 view 物件的指標。
+指向顯示文件的活動視圖物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-單一選取之 OLE 專案的指標;如果未選取任何 OLE 專案，或選取了多個，則為 Null。
+指向單個所選 OLE 項的指標;如果未選擇 OLE 項或選擇多個 OLE 項,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-預設的實值會在包含的 OLE 專案清單中搜尋單一選取的專案，並傳回它的指標。 如果未選取任何專案，或如果選取了多個專案，此函數會傳回 Null。 您必須覆寫 view 類別中的 `CView::IsSelected` 成員函式，此函式才能正常運作。 如果您有自己儲存包含的 OLE 專案的方法，請覆寫此函式。
+預設實現搜索單個選定項包含的 OLE 項的清單,並返回指向它的指標。 如果沒有選擇任何項,或者有多個項目被選中,則函數將返回 NULL。 您必須重寫檢視類`CView::IsSelected`中的成員函數,才能工作。 如果您有自己的方法來存儲包含的 OLE 項,請重寫此函數。
 
-##  <a name="getstartposition"></a>COleDocument：： GetStartPosition
+## <a name="coledocumentgetstartposition"></a><a name="getstartposition"></a>COle 文件:抓取起始位置
 
-呼叫此函式可取得檔中第一個專案的位置。
+呼叫此函數以獲取文檔中第一個專案的位置。
 
 ```
 virtual POSITION GetStartPosition() const;
@@ -335,15 +335,15 @@ virtual POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>傳回值
 
-可用於開始逐一查看檔專案的位置值;如果檔沒有任何專案，則為 Null。
+可用於開始遍曆文檔項的「位置」值;如果文件沒有項目,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-傳遞傳回給 `GetNextItem`、`GetNextClientItem`或 `GetNextServerItem`的值。
+將傳回的值傳`GetNextItem`送`GetNextClientItem`或`GetNextServerItem`。
 
-##  <a name="hasblankitems"></a>COleDocument：： HasBlankItems
+## <a name="coledocumenthasblankitems"></a><a name="hasblankitems"></a>COle 文件::有空白項目
 
-呼叫此函式，以判斷檔是否包含任何空白專案。
+呼叫此函數以確定文件是否包含任何空白項。
 
 ```
 BOOL HasBlankItems() const;
@@ -351,15 +351,15 @@ BOOL HasBlankItems() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果檔包含任何空白專案，則為非零值;否則為0。
+如果文檔包含任何空白項,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-空白專案是其矩形是空的。
+空白項是其矩形為空的專案。
 
-##  <a name="oneditchangeicon"></a>COleDocument：： OnEditChangeIcon
+## <a name="coledocumentoneditchangeicon"></a><a name="oneditchangeicon"></a>COle 文件::編輯變更圖示
 
-顯示 [OLE 變更圖示] 對話方塊，並將代表目前選取之 OLE 專案的圖示，變更為使用者在對話方塊中選取的圖示。
+顯示 OLE 更改圖示對話方塊,並將表示當前選擇的 OLE 項的圖示更改為使用者在對話方塊中選擇的圖示。
 
 ```
 afx_msg void OnEditChangeIcon();
@@ -367,11 +367,11 @@ afx_msg void OnEditChangeIcon();
 
 ### <a name="remarks"></a>備註
 
-`OnEditChangeIcon` 建立並啟動 `COleChangeIconDialog` 的變更圖示 對話方塊。
+`OnEditChangeIcon`建立並啟動`COleChangeIconDialog`「更改圖示」對話框。
 
-##  <a name="oneditconvert"></a>COleDocument：： OnEditConvert
+## <a name="coledocumentoneditconvert"></a><a name="oneditconvert"></a>COle 文件:開啟轉換
 
-顯示 [OLE 轉換] 對話方塊，並根據對話方塊中的使用者選項，轉換或啟用目前選取的 OLE 專案。
+顯示 OLE 轉換對話方塊,並根據對話方塊中的使用者選擇轉換或啟動當前選取的 OLE 專案。
 
 ```
 afx_msg void OnEditConvert();
@@ -379,13 +379,13 @@ afx_msg void OnEditConvert();
 
 ### <a name="remarks"></a>備註
 
-`OnEditConvert` 建立並啟動 [`COleConvertDialog` 轉換] 對話方塊。
+`OnEditConvert`建立並啟動`COleConvertDialog`『轉換』對話方塊。
 
-轉換的範例是將 Microsoft Word 檔轉換成 WordPad 檔。
+轉換的一個範例是將Microsoft Word文檔轉換為WordPad文檔。
 
-##  <a name="oneditlinks"></a>COleDocument：： OnEditLinks
+## <a name="coledocumentoneditlinks"></a><a name="oneditlinks"></a>COleDocument::編輯連結
 
-顯示 [OLE 編輯/連結] 對話方塊。
+顯示"OLE 編輯/連結"對話框。
 
 ```
 afx_msg void OnEditLinks();
@@ -393,11 +393,11 @@ afx_msg void OnEditLinks();
 
 ### <a name="remarks"></a>備註
 
-`OnEditLinks` 建立並啟動 [`COleLinksDialog` 連結] 對話方塊，讓使用者可以變更連結的物件。
+`OnEditLinks`建立並啟動連結`COleLinksDialog`「對話框,該對話框允許使用者更改連結的物件。
 
-##  <a name="onfilesendmail"></a>COleDocument：： OnFileSendMail
+## <a name="coledocumentonfilesendmail"></a><a name="onfilesendmail"></a>COle 文件::在檔案傳送郵件
 
-透過常駐郵件主機（如果有的話）以附加檔的方式傳送訊息。
+通過駐留郵件主機(如果有)發送郵件,並將文檔作為附件。
 
 ```
 afx_msg void OnFileSendMail();
@@ -405,15 +405,15 @@ afx_msg void OnFileSendMail();
 
 ### <a name="remarks"></a>備註
 
-`OnFileSendMail` 會呼叫 `OnSaveDocument`，將未命名和修改的檔序列化（儲存）至暫存檔，然後透過電子郵件傳送該檔案。 如果檔尚未修改，則不需要暫存檔案;會傳送原始的。 `OnFileSendMail` 載入 MAPI32.DLL。DLL （如果尚未載入的話）。
+`OnFileSendMail`呼叫`OnSaveDocument`序列化(保存)無標題和修改的文件到暫存檔,然後透過電子郵件發送。 如果文檔尚未修改,則不需要臨時檔;因此,不需要臨時檔。原始檔已發送。 `OnFileSendMail`載入 MAPI32。尚未載入 DLL。
 
-不同于 `CDocument`的 `OnFileSendMail` 的執行，此函式會正確處理複合檔案。
+與`OnFileSendMail`的`CDocument`實現不同,此函數正確處理復合檔。
 
-如需詳細資訊，請參閱 MFC 文章中的[Mapi 主題](../../mfc/mapi.md)和[mapi 支援](../../mfc/mapi-support-in-mfc.md)。
+有關詳細資訊,請參閱 MFC 文章中的[MAPI 主題](../../mfc/mapi.md)與[MAPI 支援](../../mfc/mapi-support-in-mfc.md)。
 
-##  <a name="onshowviews"></a>COleDocument：： OnShowViews
+## <a name="coledocumentonshowviews"></a><a name="onshowviews"></a>COle 文件::在顯示檢視
 
-架構會在檔的可見度狀態變更後呼叫此函式。
+在文件的可見性狀態更改後,框架調用此函數。
 
 ```
 virtual void OnShowViews(BOOL bVisible);
@@ -421,16 +421,16 @@ virtual void OnShowViews(BOOL bVisible);
 
 ### <a name="parameters"></a>參數
 
-*bVisible*<br/>
-指出檔是否已成為可見或不可見。
+*b 可見*<br/>
+指示文檔是可見的還是不可見的。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設版本不會執行任何工作。 如果您的應用程式必須在檔的可見度變更時執行任何特殊處理，請覆寫它。
+此函數的預設版本不執行任何操作。 如果應用程式必須在文檔的可見性更改時執行任何特殊處理,請覆蓋它。
 
-##  <a name="onupdateeditchangeicon"></a>COleDocument：： OnUpdateEditChangeIcon
+## <a name="coledocumentonupdateeditchangeicon"></a><a name="onupdateeditchangeicon"></a>COle 文件::更新編輯變更圖示
 
-由架構呼叫，以更新 [編輯] 功能表上的 [變更圖示] 命令。
+由框架呼叫以更新"編輯"選單上的"更改圖示"命令。
 
 ```
 afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
@@ -439,15 +439,15 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>參數
 
 *pCmdUI*<br/>
-`CCmdUI` 結構的指標，表示產生 update 命令的功能表。 更新處理常式會透過*pCmdUI*呼叫 `CCmdUI` 結構的 `Enable` 成員函式，以更新使用者介面。
+指向表示生成更新`CCmdUI`命令的功能表的結構的指標。 更新處理程式透過`Enable`*pCmdUI*`CCmdUI`呼叫結構的成員函數以更新用戶介面。
 
 ### <a name="remarks"></a>備註
 
-`OnUpdateEditChangeIcon` 會根據檔中是否有有效的圖示來更新命令的使用者介面。 覆寫此函式以變更行為。
+`OnUpdateEditChangeIcon`更新命令的用戶介面,具體取決於文檔中是否存在有效的圖示。 重寫此函數以更改行為。
 
-##  <a name="onupdateeditlinksmenu"></a>COleDocument：： OnUpdateEditLinksMenu
+## <a name="coledocumentonupdateeditlinksmenu"></a><a name="onupdateeditlinksmenu"></a>COle 文件::更新連結選單
 
-由架構呼叫以更新 [編輯] 功能表上的 [連結] 命令。
+由框架呼叫以更新"編輯"選單上的"連結"命令。
 
 ```
 afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
@@ -456,15 +456,15 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>參數
 
 *pCmdUI*<br/>
-`CCmdUI` 結構的指標，表示產生 update 命令的功能表。 更新處理常式會透過*pCmdUI*呼叫 `CCmdUI` 結構的 `Enable` 成員函式，以更新使用者介面。
+指向表示生成更新`CCmdUI`命令的功能表的結構的指標。 更新處理程式透過`Enable`*pCmdUI*`CCmdUI`呼叫結構的成員函數以更新用戶介面。
 
 ### <a name="remarks"></a>備註
 
-從檔中的第一個 OLE 專案開始，`OnUpdateEditLinksMenu` 存取每個專案、測試專案是否為連結，如果它是連結，則會啟用 Links 命令。 覆寫此函式以變更行為。
+從文檔中的第一個 OLE`OnUpdateEditLinksMenu`項開始 ,訪問每個項,測試該項是否為連結,如果是連結,則啟用 Links 命令。 重寫此函數以更改行為。
 
-##  <a name="onupdateobjectverbmenu"></a>COleDocument：： OnUpdateObjectVerbMenu
+## <a name="coledocumentonupdateobjectverbmenu"></a><a name="onupdateobjectverbmenu"></a>COleDocument::更新物件Verbmenu
 
-由架構呼叫以更新 [編輯] 功能表上的 [ *objectname* ] 命令，以及從*ObjectName*命令存取的 [動詞] 子功能表，其中*objectname*是內嵌在檔中的 OLE 物件的名稱。
+由框架呼叫以更新「編輯」選單上*的 ObjectName*命令,以及從*ObjectName*命令存取的 Verb 子選單,其中*ObjectName*是嵌入在文件中的 OLE 物件的名稱。
 
 ```
 afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
@@ -473,15 +473,15 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>參數
 
 *pCmdUI*<br/>
-`CCmdUI` 結構的指標，表示產生 update 命令的功能表。 更新處理常式會透過*pCmdUI*呼叫 `CCmdUI` 結構的 `Enable` 成員函式，以更新使用者介面。
+指向表示生成更新`CCmdUI`命令的功能表的結構的指標。 更新處理程式透過`Enable`*pCmdUI*`CCmdUI`呼叫結構的成員函數以更新用戶介面。
 
 ### <a name="remarks"></a>備註
 
-`OnUpdateObjectVerbMenu` 會根據檔中是否有有效的物件，來更新*ObjectName*命令的使用者介面。 如果物件存在，則會啟用 [編輯] 功能表上的 [ *ObjectName* ] 命令。 選取此功能表命令時，會顯示 [動詞] 子功能表。 [動詞] 子功能表包含物件可用的所有動詞命令，例如 [編輯]、[屬性] 等等。 覆寫此函式以變更行為。
+`OnUpdateObjectVerbMenu`更新*ObjectName*命令的使用者介面,具體取決於文檔中是否存在有效物件。 如果存在物件,則啟用"編輯"功能表上的*物件名稱*命令。 選擇此功能表命令時,將顯示「動詞子功能表」。 "動詞"子功能表包含可用於物件的所有謂詞命令,如"編輯"、"屬性"等。 重寫此函數以更改行為。
 
-##  <a name="onupdatepastelinkmenu"></a>COleDocument：： OnUpdatePasteLinkMenu
+## <a name="coledocumentonupdatepastelinkmenu"></a><a name="onupdatepastelinkmenu"></a>COle 文件::更新貼上連結選單
 
-由架構呼叫，以判斷是否可以從剪貼簿貼入連結的 OLE 專案。
+由框架呼叫以確定是否可以從剪貼簿貼貼連結的 OLE 項。
 
 ```
 afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
@@ -490,15 +490,15 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>參數
 
 *pCmdUI*<br/>
-`CCmdUI` 結構的指標，表示產生 update 命令的功能表。 更新處理常式會透過*pCmdUI*呼叫 `CCmdUI` 結構的 `Enable` 成員函式，以更新使用者介面。
+指向表示生成更新`CCmdUI`命令的功能表的結構的指標。 更新處理程式透過`Enable`*pCmdUI*`CCmdUI`呼叫結構的成員函數以更新用戶介面。
 
 ### <a name="remarks"></a>備註
 
-[貼入特殊功能表] 命令會根據專案是否可以貼入檔而啟用或停用。
+根據專案是否可以貼上到文件中,啟用或禁用「貼貼特殊」選單命令。
 
-##  <a name="onupdatepastemenu"></a>COleDocument：： OnUpdatePasteMenu
+## <a name="coledocumentonupdatepastemenu"></a><a name="onupdatepastemenu"></a>COle 文件::更新貼上選單
 
-由架構呼叫，以判斷是否可以從剪貼簿貼上內嵌的 OLE 專案。
+由框架呼叫以確定是否可以從剪貼簿貼貼嵌入的 OLE 項。
 
 ```
 afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
@@ -507,15 +507,15 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>參數
 
 *pCmdUI*<br/>
-`CCmdUI` 結構的指標，表示產生 update 命令的功能表。 更新處理常式會透過*pCmdUI*呼叫 `CCmdUI` 結構的 `Enable` 成員函式，以更新使用者介面。
+指向表示生成更新`CCmdUI`命令的功能表的結構的指標。 更新處理程式透過`Enable`*pCmdUI*`CCmdUI`呼叫結構的成員函數以更新用戶介面。
 
 ### <a name="remarks"></a>備註
 
-[貼上] 功能表命令和按鈕已啟用或停用，視專案是否可以貼入檔而定。
+"粘貼"功能表命令和按鈕已啟用或禁用,具體取決於專案是否可以粘貼到文檔中。
 
-##  <a name="removeitem"></a>COleDocument：： RemoveItem
+## <a name="coledocumentremoveitem"></a><a name="removeitem"></a>COle 文件:移除項目
 
-呼叫此函式可從檔中移除專案。
+呼叫此函數從文件中刪除專案。
 
 ```
 virtual void RemoveItem(CDocItem* pItem);
@@ -524,15 +524,15 @@ virtual void RemoveItem(CDocItem* pItem);
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-要移除之檔專案的指標。
+指向要刪除的文檔項的指標。
 
 ### <a name="remarks"></a>備註
 
-您通常不需要明確呼叫此函式;`COleClientItem` 和 `COleServerItem`的析構函數會呼叫它。
+您通常不需要顯式調用此函數;因此,您不需要顯式調用此函數。它由`COleClientItem`和`COleServerItem`的析構函數調用。
 
-##  <a name="updatemodifiedflag"></a>COleDocument：： UpdateModifiedFlag
+## <a name="coledocumentupdatemodifiedflag"></a><a name="updatemodifiedflag"></a>COle 文件::更新已修改的標記
 
-呼叫此函式可在已修改任何包含的 OLE 專案時，將檔標記為已修改。
+如果包含的任何 OLE 項已被修改,請呼叫此函數將文件標記為已修改。
 
 ```
 virtual void UpdateModifiedFlag();
@@ -540,11 +540,11 @@ virtual void UpdateModifiedFlag();
 
 ### <a name="remarks"></a>備註
 
-這可讓架構在關閉之前提示使用者儲存檔，即使檔中的原生資料尚未修改也一樣。
+這允許框架提示使用者在關閉之前保存文檔,即使文檔中的本機數據尚未修改也是如此。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例容器](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品容器](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [CDocument 類別](../../mfc/reference/cdocument-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

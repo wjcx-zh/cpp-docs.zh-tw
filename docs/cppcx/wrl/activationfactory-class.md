@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ActivationFactory::QueryInterface method
 - Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-ms.openlocfilehash: 8e5132f4a8711f6420cd9b52751550a96d10d8fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0655caeb3f49a18e9c57c78f0008901aaaedda4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303886"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368698"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory 類別
 
@@ -57,23 +57,23 @@ class ActivationFactory :
 ### <a name="parameters"></a>參數
 
 *I0*<br/>
-第零個介面中。
+第零個介面。
 
 *I1*<br/>
 第一個介面。
 
 *I2*<br/>
-第二個介面中。
+第二個介面。
 
 ## <a name="remarks"></a>備註
 
-`ActivationFactory` 提供註冊方法和基本功能`IActivationFactory`介面。 `ActivationFactory` 也可讓您提供的自訂處理站實作。
+`ActivationFactory`提供了介面的`IActivationFactory`註冊方法和基本功能。 `ActivationFactory`還使您能夠提供自定義工廠實現。
 
-下列程式碼片段以符號形式會說明如何使用 ActivationFactory。
+以下代碼片段象徵性地說明了如何使用激活工廠。
 
 [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../codesnippet/CPP/activationfactory-class_1.cpp)]
 
-下列程式碼片段示範如何使用[實作](implements-structure.md)結構，以指定超過三個介面 Id。
+以下片段示範如何使用[實現](implements-structure.md)結構指定三個以上介面 ID。
 
 `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`
 
@@ -83,20 +83,20 @@ class ActivationFactory :
 
 名稱                                                       | 描述
 ---------------------------------------------------------- | ------------------------------------------
-[ActivationFactory::ActivationFactory](#activationfactory) | 初始化`ActivationFactory`類別。
+[啟動工廠::啟動工廠](#activationfactory) | 初始化 `ActivationFactory` 類別。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                           | 描述
 -------------------------------------------------------------- | --------------------------------------------------------------------------------------------
-[ActivationFactory::AddRef](#addref)                           | 目前的參考計數遞增`ActivationFactory`物件。
-[ActivationFactory::GetIids](#getiids)                         | 擷取實作的介面識別碼的陣列。
-[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | 取得物件的執行階段類別名稱目前`ActivationFactory`具現化。
-[ActivationFactory::GetTrustLevel](#gettrustlevel)             | 取得物件的信任層級，目前`ActivationFactory`具現化。
-[ActivationFactory::QueryInterface](#queryinterface)           | 擷取指定之介面的指標。
-[ActivationFactory::Release](#release)                         | 遞減參考計數目前的`ActivationFactory`物件。
+[啟動工廠::新增參考](#addref)                           | 增加當前`ActivationFactory`物件的引用計數。
+[啟動工廠::取得 Iid](#getiids)                         | 檢索實現的介面指示的陣組。
+[啟動工廠::取得執行時類別名稱](#getruntimeclassname) | 獲取當前`ActivationFactory`實例化物件的運行時類名稱。
+[啟用工廠:取得信任等級](#gettrustlevel)             | 獲取當前`ActivationFactory`實例化的物件的信任級別。
+[啟動工廠::查詢介面](#queryinterface)           | 檢索指向指定介面的指標。
+[啟動工廠::發佈](#release)                         | 取消當前`ActivationFactory`物件的引用計數。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `I0`
 
@@ -120,21 +120,21 @@ class ActivationFactory :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標題:** 模組.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="activationfactory"></a>ActivationFactory::ActivationFactory
+## <a name="activationfactoryactivationfactory"></a><a name="activationfactory"></a>啟動工廠::啟動工廠
 
-初始化`ActivationFactory`類別。
+初始化 `ActivationFactory` 類別。
 
 ```cpp
 ActivationFactory();
 ```
 
-## <a name="addref"></a>ActivationFactory::AddRef
+## <a name="activationfactoryaddref"></a><a name="addref"></a>啟動工廠::新增參考
 
-目前的參考計數遞增`ActivationFactory`物件。
+增加當前`ActivationFactory`物件的引用計數。
 
 ```cpp
 STDMETHOD_(
@@ -147,9 +147,9 @@ STDMETHOD_(
 
 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
 
-## <a name="getiids"></a>ActivationFactory::GetIids
+## <a name="activationfactorygetiids"></a><a name="getiids"></a>啟動工廠::取得 Iid
 
-擷取實作的介面識別碼的陣列。
+檢索實現的介面指示的陣組。
 
 ```cpp
 STDMETHOD(
@@ -159,19 +159,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*iidCount*<br/>
-這項作業完成時中的介面識別碼的數目*iid*陣列。
+*iid( Iid) Count*<br/>
+此操作完成後 *,iids*陣列中的 Interace ID 數。
 
-*iids*<br/>
-這項作業完成時，陣列就會實作的介面識別碼。
+*伊德*<br/>
+此操作完成後,將包含一系列已實現的介面指示。
 
 ### <a name="return-value"></a>傳回值
 
-若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 E_OUTOFMEMORY 是可能的失敗 HRESULT。
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 E_OUTOFMEMORY可能是故障 HRESULT。
 
-## <a name="getruntimeclassname"></a>ActivationFactory::GetRuntimeClassName
+## <a name="activationfactorygetruntimeclassname"></a><a name="getruntimeclassname"></a>啟動工廠::取得執行時類別名稱
 
-取得物件的執行階段類別名稱目前`ActivationFactory`具現化。
+獲取當前`ActivationFactory`實例化物件的運行時類名稱。
 
 ```cpp
 STDMETHOD(
@@ -181,16 +181,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*runtimeName*<br/>
-這項作業完成時，包含物件的執行階段類別名稱的字串的控制代碼的目前`ActivationFactory`具現化。
+*執行時名稱*<br/>
+此操作完成後,包含當前`ActivationFactory`實例化物件的運行時類名稱的字串的句柄。
 
 ### <a name="return-value"></a>傳回值
 
 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
 
-## <a name="gettrustlevel"></a>ActivationFactory::GetTrustLevel
+## <a name="activationfactorygettrustlevel"></a><a name="gettrustlevel"></a>啟用工廠:取得信任等級
 
-取得物件的信任層級，目前`ActivationFactory`具現化。
+獲取當前`ActivationFactory`實例化的物件的信任級別。
 
 ```cpp
 STDMETHOD(
@@ -200,16 +200,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*trustLvl*<br/>
-這項作業完成時，執行階段的信任層級類別`ActivationFactory`具現化。
+*信任呂爾*<br/>
+此操作完成後,`ActivationFactory`實體化執行時類別的信任等級。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，會發出判斷提示錯誤以及*trustLvl*設定為`FullTrust`。
+S_OK如果成功;否則,將發出斷言錯誤,並將*信任 Lvl*`FullTrust`設定為 。
 
-## <a name="queryinterface"></a>ActivationFactory::QueryInterface
+## <a name="activationfactoryqueryinterface"></a><a name="queryinterface"></a>啟動工廠::查詢介面
 
-擷取指定之介面的指標。
+檢索指向指定介面的指標。
 
 ```cpp
 STDMETHOD(
@@ -223,15 +223,15 @@ STDMETHOD(
 介面識別碼。
 
 *ppvObject*<br/>
-這項作業完成後，參數所指定之介面指標*riid*。
+此操作完成後,指向參數*riid*指定的介面的指標。
 
 ### <a name="return-value"></a>傳回值
 
 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
 
-## <a name="release"></a>ActivationFactory::Release
+## <a name="activationfactoryrelease"></a><a name="release"></a>啟動工廠::發佈
 
-遞減參考計數目前的`ActivationFactory`物件。
+取消當前`ActivationFactory`物件的引用計數。
 
 ```cpp
 STDMETHOD_(

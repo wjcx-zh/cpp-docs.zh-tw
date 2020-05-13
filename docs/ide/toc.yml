@@ -1,0 +1,73 @@
+- name: 在 Visual Studio 中讀取及撰寫 C++ 程式碼
+  expanded: true
+  items:
+    - name: 閱讀及了解 C++ 程式碼
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: 編輯及重構 C++ 程式碼
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: 瀏覽 C++ 程式碼
+      href: ../ide/navigate-code-cpp.md
+    - name: 設定 C++ 編碼喜好設定
+      href: ../ide/how-to-set-preferences.md
+    - name: 使用適用於 C++ 的 Live Share 共同作業
+      href: ../ide/live-share-cpp.md
+    - name: 變更簽章
+      href: ../ide/refactoring/change-signature.md
+    - name: 轉換為原始字串常值
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: 建立宣告/定義
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: 擷取函式
+      href: ../ide/refactoring/extract-function.md
+    - name: 實作純虛擬函式
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: 移動函式定義
+      href: ../ide/refactoring/move-definition-location.md
+    - name: 重新命名
+      href: ../ide/refactoring/rename.md
+- name: 使用 Visual Studio IDE 進行 C++ 桌面程式開發
+  expanded: true
+  items:
+    - name: 使用 Visual Studio IDE 進行 C++ 桌面程式開發
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: 逐步解說：使用專案和解決方案 (C++)
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: 逐步解說：建置專案 (C++)
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: 逐步解說：測試專案 (C++)
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: 逐步解說：對專案進行偵錯 (C++)
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: 逐步解說：部署程式 (C++)
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: 使用程式碼精靈新增功能
+  expanded: true
+  items:
+    - name: 使用程式碼精靈新增功能
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: 新增類別
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: 從 ActiveX 控制項新增類別
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: 新增泛型 C++ 類別
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: 新增成員函式
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: 新增成員變數
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: 新增方法
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: 新增屬性
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: 新增事件
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: 新增事件處理常式
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: 建立 COM 介面
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: 實作連接點
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: 實作介面
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: 覆寫虛擬函式
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md

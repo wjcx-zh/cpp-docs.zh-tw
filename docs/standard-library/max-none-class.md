@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c49ceec72be62d8ff3125f04d97bbb6952501677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626822"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370983"
 ---
 # <a name="max_none-class"></a>max_none 類別
 
@@ -38,16 +38,16 @@ class max_none
 
 |參數|描述|
 |---------------|-----------------|
-|*最大值*|max 類別，可決定要在 `freelist` 中儲存的元素數目上限。|
+|*麥克斯*|max 類別，可決定要在 `freelist` 中儲存的元素數目上限。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[allocated](#allocated)|遞增已配置的記憶體區塊計數。|
-|[deallocated](#deallocated)|遞減已配置的記憶體區塊計數。|
-|[full](#full)|傳回指定是否應該為可用清單新增更多記憶體區塊的值。|
-|[released](#released)|遞減可用清單上的記憶體區塊計數。|
+|[交易](#deallocated)|遞減已配置的記憶體區塊計數。|
+|[全](#full)|傳回指定是否應該為可用清單新增更多記憶體區塊的值。|
+|[釋放](#released)|遞減可用清單上的記憶體區塊計數。|
 |[saved](#saved)|遞增可用清單上的記憶體區塊計數。|
 
 ## <a name="requirements"></a>需求
@@ -56,7 +56,7 @@ class max_none
 
 **命名空間：** stdext
 
-## <a name="allocated"></a>  max_none::allocated
+## <a name="max_noneallocated"></a><a name="allocated"></a>max_none::已分配
 
 遞增已配置的記憶體區塊計數。
 
@@ -72,9 +72,9 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 每次成功呼叫之後都會呼叫它，方法是 `cache_freelist::allocate` to operator **new**。 引數 *_Nx*是 operator **new**所配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 它呼叫後,每次成功呼叫`cache_freelist::allocate`到運算子 **。** *參數_Nx*是運算符**new**分配區塊中的記憶體區塊數。
 
-## <a name="deallocated"></a>  max_none::deallocated
+## <a name="max_nonedeallocated"></a><a name="deallocated"></a>max_none::d分配
 
 遞減已配置的記憶體區塊計數。
 
@@ -90,9 +90,9 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 此成員函式會在每次呼叫之後，透過 `cache_freelist::deallocate` to operator **delete**來呼叫。 引數 *_Nx*是由 operator **delete**解除配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 此成員函數在每次呼叫後呼叫`cache_freelist::deallocate`運算子**刪除**後呼叫 。 *參數_Nx*是由運算符**刪除**處理塊中的記憶體區塊數。
 
-## <a name="full"></a>  max_none::full
+## <a name="max_nonefull"></a><a name="full"></a>max_none::完整
 
 傳回指定是否應該為可用清單新增更多記憶體區塊的值。
 
@@ -102,13 +102,13 @@ bool full();
 
 ### <a name="return-value"></a>傳回值
 
-這個成員函式一律會傳回**true**。
+此成員函數始終傳回**true**。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回**true**，`deallocate` 會將記憶體區塊放在可用的清單上;如果傳回**false**，`deallocate` 會呼叫 operator **delete**來解除配置區塊。
+此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳**回 true,** 則將記憶體區塊放在空閒清單中;如果呼叫`deallocate`回 true, 則將記憶體區塊放在可用清單中。如果它返回**false** `deallocate` ,則調用運算符**刪除**以取消分配塊。
 
-## <a name="released"></a>  max_none::released
+## <a name="max_nonereleased"></a><a name="released"></a>max_none::已發佈
 
 遞減可用清單上的記憶體區塊計數。
 
@@ -120,7 +120,7 @@ void released();
 
 此成員函式不會執行任何動作。 每當 `cache_freelist::allocate` 從可用清單中移除記憶體區塊時，都會呼叫目前 max 類別的 `released` 成員函式。
 
-## <a name="saved"></a>  max_none::saved
+## <a name="max_nonesaved"></a><a name="saved"></a>max_none::已儲存
 
 遞增可用清單上的記憶體區塊計數。
 
@@ -132,6 +132,6 @@ void saved();
 
 此成員函式不會執行任何動作。 每當 `cache_freelist::deallocate` 將記憶體區塊放到可用清單上時，都會呼叫它。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<配置器>](../standard-library/allocators-header.md)

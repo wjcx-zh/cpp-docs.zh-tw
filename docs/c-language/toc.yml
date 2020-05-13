@@ -1,0 +1,742 @@
+- name: C 語言參考
+  href: ../c-language/c-language-reference.md
+- name: C 語言參考的編排
+  expanded: false
+  items:
+    - name: C 語言參考的編排
+      href: ../c-language/organization-of-the-c-language-reference.md
+    - name: 本手冊的範圍
+      href: ../c-language/scope-of-this-manual.md
+    - name: ANSI 合規性
+      href: ../c-language/ansi-conformance.md
+- name: C 的元素
+  expanded: false
+  items:
+    - name: C 的元素
+      href: ../c-language/elements-of-c.md
+    - name: C 語彙基元
+      expanded: false
+      items:
+        - name: C 語彙基元
+          href: ../c-language/c-tokens.md
+        - name: 空白字元
+          href: ../c-language/white-space-characters.md
+        - name: C 註解
+          href: ../c-language/c-comments.md
+        - name: 語彙基元評估
+          href: ../c-language/evaluation-of-tokens.md
+    - name: C 關鍵字
+      href: ../c-language/c-keywords.md
+    - name: C 識別碼
+      expanded: false
+      items:
+        - name: C 識別碼
+          href: ../c-language/c-identifiers.md
+        - name: 多位元組字元和寬字元
+          href: ../c-language/multibyte-and-wide-characters.md
+        - name: 三併詞
+          href: ../c-language/trigraphs.md
+    - name: C 常數
+      expanded: false
+      items:
+        - name: C 常數
+          href: ../c-language/c-constants.md
+        - name: C 浮點常數
+          expanded: false
+          items:
+            - name: C 浮點常數
+              href: ../c-language/c-floating-point-constants.md
+            - name: 浮點常數的限制
+              href: ../c-language/limits-on-floating-point-constants.md
+        - name: C 整數常數
+          expanded: false
+          items:
+            - name: C 整數常數
+              href: ../c-language/c-integer-constants.md
+            - name: 整數類型
+              href: ../c-language/integer-types.md
+            - name: C 及 C++ 整數限制
+              href: ../c-language/cpp-integer-limits.md
+        - name: C 字元常數
+          expanded: false
+          items:
+            - name: C 字元常數
+              href: ../c-language/c-character-constants.md
+            - name: 字元類型
+              href: ../c-language/character-types.md
+            - name: 執行字元集
+              href: ../c-language/execution-character-set.md
+            - name: 逸出序列
+              href: ../c-language/escape-sequences.md
+            - name: 八進位和十六進位字元規格
+              href: ../c-language/octal-and-hexadecimal-character-specifications.md
+    - name: C 字串常值
+      expanded: false
+      items:
+        - name: C 字串常值
+          href: ../c-language/c-string-literals.md
+        - name: 字串常值的類型
+          href: ../c-language/type-for-string-literals.md
+        - name: 字串常值的儲存
+          href: ../c-language/storage-of-string-literals.md
+        - name: 字串常值串連
+          href: ../c-language/string-literal-concatenation.md
+        - name: 字串長度上限
+          href: ../c-language/maximum-string-length.md
+    - name: 標點符號和特殊字元
+      href: ../c-language/punctuation-and-special-characters.md
+- name: 程式結構
+  expanded: false
+  items:
+    - name: 程式結構
+      href: ../c-language/program-structure.md
+    - name: 原始程式檔和來源程式
+      expanded: false
+      items:
+        - name: 原始程式檔和來源程式
+          href: ../c-language/source-files-and-source-programs.md
+        - name: 前置處理器的指示詞
+          href: ../c-language/directives-to-the-preprocessor.md
+        - name: C Pragma
+          href: ../c-language/c-pragmas.md
+        - name: C 宣告和定義
+          href: ../c-language/c-declarations-and-definitions.md
+        - name: 函式宣告和定義
+          href: ../c-language/function-declarations-and-definitions.md
+        - name: 區塊
+          href: ../c-language/blocks.md
+        - name: 範例程式
+          href: ../c-language/example-program.md
+    - name: main 函式和程式執行
+      expanded: false
+      items:
+        - name: main 函式和程式執行
+          href: ../c-language/main-function-and-program-execution.md
+        - name: 使用 wmain
+          href: ../c-language/using-wmain.md
+        - name: 引數描述
+          href: ../c-language/argument-description.md
+        - name: 展開萬用字元引數
+          href: ../c-language/expanding-wildcard-arguments.md
+        - name: 剖析 C 命令列引數
+          href: ../c-language/parsing-c-command-line-arguments.md
+        - name: 自訂 C 命令列處理
+          href: ../c-language/customizing-c-command-line-processing.md
+    - name: 存留期、範圍、可見度和連結
+      expanded: false
+      items:
+        - name: 存留期、範圍、可見度和連結
+          href: ../c-language/lifetime-scope-visibility-and-linkage.md
+        - name: 存留期
+          href: ../c-language/lifetime.md
+        - name: 範圍和可見度
+          href: ../c-language/scope-and-visibility.md
+        - name: 存留期和可見度的摘要
+          href: ../c-language/summary-of-lifetime-and-visibility.md
+        - name: 連結
+          expanded: false
+          items:
+            - name: 連結
+              href: ../c-language/linkage.md
+            - name: 內部連結
+              href: ../c-language/internal-linkage.md
+            - name: 外部連結
+              href: ../c-language/external-linkage.md
+            - name: 無連結
+              href: ../c-language/no-linkage.md
+    - name: 命名空間
+      href: ../c-language/name-spaces.md
+- name: 宣告和類型
+  expanded: false
+  items:
+    - name: 宣告和類型
+      href: ../c-language/declarations-and-types.md
+    - name: 宣告概觀
+      href: ../c-language/overview-of-declarations.md
+    - name: C 儲存類別
+      expanded: false
+      items:
+        - name: C 儲存類別
+          href: ../c-language/c-storage-classes.md
+        - name: 外部層級宣告的儲存類別規範
+          href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
+        - name: 內部層級宣告的儲存類別規範
+          expanded: false
+          items:
+            - name: 內部層級宣告的儲存類別規範
+              href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
+            - name: auto 儲存類別規範
+              href: ../c-language/auto-storage-class-specifier.md
+            - name: register 儲存類別規範
+              href: ../c-language/register-storage-class-specifier.md
+            - name: static 儲存類別規範
+              href: ../c-language/static-storage-class-specifier.md
+            - name: extern 儲存類別規範
+              href: ../c-language/extern-storage-class-specifier.md
+        - name: 儲存類別規範與函式宣告
+          href: ../c-language/storage-class-specifiers-with-function-declarations.md
+    - name: C 類型規範
+      expanded: false
+      items:
+        - name: C 類型規範
+          href: ../c-language/c-type-specifiers.md
+        - name: 資料類型規範和對應項
+          href: ../c-language/data-type-specifiers-and-equivalents.md
+    - name: 類型限定詞
+      href: ../c-language/type-qualifiers.md
+    - name: 宣告子和變數宣告
+      expanded: false
+      items:
+        - name: 宣告子和變數宣告
+          href: ../c-language/declarators-and-variable-declarations.md
+        - name: 簡單變數宣告
+          href: ../c-language/simple-variable-declarations.md
+        - name: C 列舉宣告
+          href: ../c-language/c-enumeration-declarations.md
+        - name: 結構宣告
+          expanded: false
+          items:
+            - name: 結構宣告
+              href: ../c-language/structure-declarations.md
+            - name: C 位元欄位
+              href: ../c-language/c-bit-fields.md
+            - name: 結構的儲存和對齊
+              href: ../c-language/storage-and-alignment-of-structures.md
+        - name: 等位宣告
+          expanded: false
+          items:
+            - name: 等位宣告
+              href: ../c-language/union-declarations.md
+            - name: 等位的儲存
+              href: ../c-language/storage-of-unions.md
+        - name: 陣列宣告
+          expanded: false
+          items:
+            - name: 陣列宣告
+              href: ../c-language/array-declarations.md
+            - name: 陣列的儲存
+              href: ../c-language/storage-of-arrays.md
+        - name: 指標宣告
+          expanded: false
+          items:
+            - name: 指標宣告
+              href: ../c-language/pointer-declarations.md
+            - name: 位址的儲存
+              href: ../c-language/storage-of-addresses.md
+        - name: 基底指標 (C++)
+          href: ../c-language/based-pointers-c.md
+        - name: C 抽象宣告子
+          href: ../c-language/c-abstract-declarators.md
+    - name: 解譯更複雜的宣告子
+      href: ../c-language/interpreting-more-complex-declarators.md
+    - name: 初始化
+      expanded: false
+      items:
+        - name: 初始化
+          href: ../c-language/initialization.md
+        - name: 初始化純量類型
+          href: ../c-language/initializing-scalar-types.md
+        - name: 初始化彙總類型
+          href: ../c-language/initializing-aggregate-types.md
+        - name: 初始化字串
+          href: ../c-language/initializing-strings.md
+    - name: 基本類型的儲存
+      expanded: false
+      items:
+        - name: 基本類型的儲存
+          href: ../c-language/storage-of-basic-types.md
+        - name: 類型 char
+          href: ../c-language/type-char.md
+        - name: 類型 int
+          href: ../c-language/type-int.md
+        - name: C 大小的整數類型
+          href: ../c-language/c-sized-integer-types.md
+        - name: 類型 float
+          href: ../c-language/type-float.md
+        - name: 類型 double
+          href: ../c-language/type-double.md
+        - name: 類型 long double
+          href: ../c-language/type-long-double.md
+    - name: 不完整的類型
+      href: ../c-language/incomplete-types.md
+    - name: Typedef 宣告
+      href: ../c-language/typedef-declarations.md
+    - name: C 擴充的儲存類別屬性
+      expanded: false
+      items:
+        - name: C 擴充的儲存類別屬性
+          href: ../c-language/c-extended-storage-class-attributes.md
+        - name: DLL 匯入及匯出
+          href: ../c-language/dll-import-and-export.md
+        - name: Naked (C)
+          href: ../c-language/naked-c.md
+        - name: 執行緒本機儲存體
+          href: ../c-language/thread-local-storage.md
+- name: 運算式和指派
+  expanded: false
+  items:
+    - name: 運算式和指派
+      href: ../c-language/expressions-and-assignments.md
+    - name: 運算元和運算式
+      expanded: false
+      items:
+        - name: 運算元和運算式
+          href: ../c-language/operands-and-expressions.md
+        - name: C 主要運算式
+          expanded: false
+          items:
+            - name: C 主要運算式
+              href: ../c-language/c-primary-expressions.md
+            - name: 主要運算式中的識別碼
+              href: ../c-language/identifiers-in-primary-expressions.md
+            - name: 主要運算式中的常數
+              href: ../c-language/constants-in-primary-expressions.md
+            - name: 主要運算式中的字串常值
+              href: ../c-language/string-literals-in-primary-expressions.md
+            - name: 括弧內的運算式
+              href: ../c-language/expressions-in-parentheses.md
+        - name: 左值和右值運算式
+          href: ../c-language/l-value-and-r-value-expressions.md
+        - name: C 常數運算式
+          href: ../c-language/c-constant-expressions.md
+        - name: 運算式評估 (C)
+          expanded: false
+          items:
+            - name: 運算式評估 (C)
+              href: ../c-language/expression-evaluation-c.md
+            - name: 副作用
+              href: ../c-language/side-effects.md
+            - name: C 序列點
+              href: ../c-language/c-sequence-points.md
+    - name: C 運算子
+      expanded: false
+      items:
+        - name: C 運算子
+          href: ../c-language/c-operators.md
+        - name: 優先順序和評估順序
+          href: ../c-language/precedence-and-order-of-evaluation.md
+        - name: 一般算術轉換
+          href: ../c-language/usual-arithmetic-conversions.md
+        - name: 後置運算子
+          expanded: false
+          items:
+            - name: 後置運算子
+              href: ../c-language/postfix-operators.md
+            - name: 一維陣列
+              href: ../c-language/one-dimensional-arrays.md
+            - name: 多維陣列 (C)
+              href: ../c-language/multidimensional-arrays-c.md
+            - name: 函式呼叫 (C)
+              href: ../c-language/function-call-c.md
+            - name: 結構和等位成員
+              href: ../c-language/structure-and-union-members.md
+            - name: C 後置遞增和遞減運算子
+              href: ../c-language/c-postfix-increment-and-decrement-operators.md
+        - name: C 一元運算子
+          expanded: false
+          items:
+            - name: C 一元運算子
+              href: ../c-language/c-unary-operators.md
+            - name: 前置遞增和遞減運算子
+              href: ../c-language/prefix-increment-and-decrement-operators.md
+            - name: 間接和傳址運算子
+              href: ../c-language/indirection-and-address-of-operators.md
+            - name: 一元算術運算子
+              href: ../c-language/unary-arithmetic-operators.md
+            - name: sizeof 運算子 (C)
+              href: ../c-language/sizeof-operator-c.md
+        - name: 轉換運算子
+          href: ../c-language/cast-operators.md
+        - name: C 乘法類運算子
+          href: ../c-language/c-multiplicative-operators.md
+        - name: C 加法類運算子
+          expanded: false
+          items:
+            - name: C 加法類運算子
+              href: ../c-language/c-additive-operators.md
+            - name: 加法 (+)
+              href: ../c-language/addition-plus.md
+            - name: 減法 (-)
+              href: ../c-language/subtraction-minus.md
+            - name: 使用加法類運算子
+              href: ../c-language/using-the-additive-operators.md
+            - name: 指標算術
+              href: ../c-language/pointer-arithmetic.md
+        - name: 位元移位運算子
+          href: ../c-language/bitwise-shift-operators.md
+        - name: C 關係和等號比較運算子
+          href: ../c-language/c-relational-and-equality-operators.md
+        - name: C 位元運算子
+          href: ../c-language/c-bitwise-operators.md
+        - name: C 邏輯運算子
+          href: ../c-language/c-logical-operators.md
+        - name: 條件運算式運算子
+          href: ../c-language/conditional-expression-operator.md
+        - name: C 指派運算子
+          expanded: false
+          items:
+            - name: C 指派運算子
+              href: ../c-language/c-assignment-operators.md
+            - name: 簡單指派 (C)
+              href: ../c-language/simple-assignment-c.md
+            - name: C 複合指派
+              href: ../c-language/c-compound-assignment.md
+        - name: 循序求值運算子
+          href: ../c-language/sequential-evaluation-operator.md
+    - name: 類型轉換 (C)
+      expanded: false
+      items:
+        - name: 類型轉換 (C)
+          href: ../c-language/type-conversions-c.md
+        - name: 指派轉換
+          expanded: false
+          items:
+            - name: 指派轉換
+              href: ../c-language/assignment-conversions.md
+            - name: 從帶正負號整數型別的轉換
+              href: ../c-language/conversions-from-signed-integral-types.md
+            - name: 從不帶正負號整數型別的轉換
+              href: ../c-language/conversions-from-unsigned-integral-types.md
+            - name: 從浮點數類型的轉換
+              href: ../c-language/conversions-from-floating-point-types.md
+            - name: 指標類型的轉換
+              href: ../c-language/conversions-to-and-from-pointer-types.md
+            - name: 從其他類型轉換
+              href: ../c-language/conversions-from-other-types.md
+        - name: 類型轉換
+          href: ../c-language/type-cast-conversions.md
+        - name: 函式呼叫轉換
+          href: ../c-language/function-call-conversions.md
+- name: 陳述式 (C)
+  expanded: false
+  items:
+    - name: 陳述式 (C)
+      href: ../c-language/statements-c.md
+    - name: C 陳述式概觀
+      href: ../c-language/overview-of-c-statements.md
+    - name: break 陳述式 (C)
+      href: ../c-language/break-statement-c.md
+    - name: 複合陳述式 (C)
+      href: ../c-language/compound-statement-c.md
+    - name: continue 陳述式 (C)
+      href: ../c-language/continue-statement-c.md
+    - name: do-while 陳述式 (C)
+      href: ../c-language/do-while-statement-c.md
+    - name: 運算陳述式 (C)
+      href: ../c-language/expression-statement-c.md
+    - name: for 陳述式 (C)
+      href: ../c-language/for-statement-c.md
+    - name: goto 和標記陳述式 (C)
+      href: ../c-language/goto-and-labeled-statements-c.md
+    - name: if 陳述式 (C)
+      href: ../c-language/if-statement-c.md
+    - name: Null 陳述式 (C)
+      href: ../c-language/null-statement-c.md
+    - name: return 陳述式 (C)
+      href: ../c-language/return-statement-c.md
+    - name: switch 陳述式 (C)
+      href: ../c-language/switch-statement-c.md
+    - name: try-except 陳述式 (C)
+      href: ../c-language/try-except-statement-c.md
+    - name: try-finally 陳述式 (C)
+      href: ../c-language/try-finally-statement-c.md
+    - name: while 陳述式 (C)
+      href: ../c-language/while-statement-c.md
+- name: 函式 (C)
+  expanded: false
+  items:
+    - name: 函式 (C)
+      href: ../c-language/functions-c.md
+    - name: 函式概觀
+      expanded: false
+      items:
+        - name: 函式概觀
+          href: ../c-language/overview-of-functions.md
+        - name: 函式宣告和定義的淘汰形式
+          href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
+    - name: C 函式定義
+      expanded: false
+      items:
+        - name: C 函式定義
+          href: ../c-language/c-function-definitions.md
+        - name: 函式屬性
+          expanded: false
+          items:
+            - name: 函式屬性
+              href: ../c-language/function-attributes.md
+            - name: 指定呼叫慣例
+              href: ../c-language/specifying-calling-conventions.md
+            - name: 內嵌函式
+              href: ../c-language/inline-functions.md
+            - name: 內嵌組譯工具 (C)
+              href: ../c-language/inline-assembler-c.md
+        - name: DLL 匯入及匯出函式
+          expanded: false
+          items:
+            - name: DLL 匯入及匯出函式
+              href: ../c-language/dll-import-and-export-functions.md
+            - name: 定義和宣告 (C)
+              href: ../c-language/definitions-and-declarations-c.md
+            - name: 使用 dllexport 和 dllimport 定義內嵌 C 函式
+              href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
+            - name: dllimport/dllexport 的規則和限制
+              href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
+        - name: Naked 函式
+          expanded: false
+          items:
+            - name: Naked 函式
+              href: ../c-language/naked-functions.md
+            - name: 使用 Naked 函式的規則和限制
+              href: ../c-language/rules-and-limitations-for-using-naked-functions.md
+            - name: 撰寫初構/終解程式碼時的考量
+              href: ../c-language/considerations-when-writing-prolog-epilog-code.md
+        - name: 儲存類別
+          href: ../c-language/storage-class.md
+        - name: 傳回類型
+          href: ../c-language/return-type.md
+        - name: 參數
+          href: ../c-language/parameters.md
+        - name: 函式主體
+          href: ../c-language/function-body.md
+    - name: 函式原型
+      href: ../c-language/function-prototypes.md
+    - name: 函式呼叫
+      expanded: false
+      items:
+        - name: 函式呼叫
+          href: ../c-language/function-calls.md
+        - name: 引數
+          href: ../c-language/arguments.md
+        - name: 引數數目可變的呼叫
+          href: ../c-language/calls-with-a-variable-number-of-arguments.md
+        - name: 遞迴函式
+          href: ../c-language/recursive-functions.md
+- name: C 語言語法摘要
+  expanded: false
+  items:
+    - name: C 語言語法摘要
+      href: ../c-language/c-language-syntax-summary.md
+    - name: 定義和慣例
+      href: ../c-language/definitions-and-conventions.md
+    - name: 語彙文法
+      expanded: false
+      items:
+        - name: 語彙文法
+          href: ../c-language/lexical-grammar.md
+        - name: 語彙基元摘要
+          href: ../c-language/summary-of-tokens.md
+        - name: 關鍵字摘要
+          href: ../c-language/summary-of-keywords.md
+        - name: 識別碼摘要
+          href: ../c-language/summary-of-identifiers.md
+        - name: 常數摘要
+          href: ../c-language/summary-of-constants.md
+        - name: 字串常值摘要
+          href: ../c-language/summary-of-string-literals.md
+        - name: 運算子 (C)
+          href: ../c-language/operators-c.md
+        - name: 標點符號
+          href: ../c-language/punctuators.md
+    - name: 階段結構文法
+      expanded: false
+      items:
+        - name: 階段結構文法
+          href: ../c-language/phrase-structure-grammar.md
+        - name: 運算式摘要
+          href: ../c-language/summary-of-expressions.md
+        - name: 宣告摘要
+          href: ../c-language/summary-of-declarations.md
+        - name: 陳述式摘要
+          href: ../c-language/summary-of-statements.md
+        - name: 外部定義
+          href: ../c-language/external-definitions.md
+- name: 實作定義的行為
+  expanded: false
+  items:
+    - name: 實作定義的行為
+      href: ../c-language/implementation-defined-behavior.md
+    - name: 轉譯：診斷
+      href: ../c-language/translation-diagnostics.md
+    - name: 環境
+      expanded: false
+      items:
+        - name: 環境
+          href: ../c-language/environment.md
+        - name: main 的引數
+          href: ../c-language/arguments-to-main.md
+        - name: 互動裝置
+          href: ../c-language/interactive-devices.md
+    - name: 識別碼的行為
+      expanded: false
+      items:
+        - name: 識別碼的行為
+          href: ../c-language/behavior-of-identifiers.md
+        - name: 沒有外部連結的有效字元數
+          href: ../c-language/significant-characters-without-external-linkage.md
+        - name: 有外部連結的有效字元數
+          href: ../c-language/significant-characters-with-external-linkage.md
+        - name: 大寫和小寫
+          href: ../c-language/uppercase-and-lowercase.md
+    - name: 字元
+      expanded: false
+      items:
+        - name: 字元
+          href: ../c-language/characters.md
+        - name: ASCII 字元集
+          href: ../c-language/ascii-character-set.md
+        - name: 多位元組字元
+          href: ../c-language/multibyte-characters.md
+        - name: 每個字元位元數
+          href: ../c-language/bits-per-character.md
+        - name: 字元集1
+          href: ../c-language/character-sets1.md
+        - name: 未表示的字元常數
+          href: ../c-language/unrepresented-character-constants.md
+        - name: 寬字元
+          href: ../c-language/wide-characters.md
+        - name: 轉換多位元組字元
+          href: ../c-language/converting-multibyte-characters.md
+        - name: char 值的範圍
+          href: ../c-language/range-of-char-values.md
+    - name: 整數
+      expanded: false
+      items:
+        - name: 整數
+          href: ../c-language/integers.md
+        - name: 整數值的範圍
+          href: ../c-language/range-of-integer-values.md
+        - name: 整數降級
+          href: ../c-language/demotion-of-integers.md
+        - name: 帶正負號的位元運算
+          href: ../c-language/signed-bitwise-operations.md
+        - name: 餘數
+          href: ../c-language/remainders.md
+        - name: 右移
+          href: ../c-language/right-shifts.md
+    - name: 浮點數學
+      expanded: false
+      items:
+        - name: 浮點數學
+          href: ../c-language/floating-point-math.md
+        - name: 值
+          href: ../c-language/values.md
+        - name: 將整數轉換為浮點值
+          href: ../c-language/casting-integers-to-floating-point-values.md
+        - name: 浮點值截斷
+          href: ../c-language/truncation-of-floating-point-values.md
+    - name: 陣列和指標
+      expanded: false
+      items:
+        - name: 陣列和指標
+          href: ../c-language/arrays-and-pointers.md
+        - name: 陣列大小上限
+          href: ../c-language/largest-array-size.md
+        - name: 指標減法
+          href: ../c-language/pointer-subtraction.md
+    - name: 暫存器：暫存器的可用性
+      href: ../c-language/registers-availability-of-registers.md
+    - name: 結構、等位、列舉和位元欄位
+      expanded: false
+      items:
+        - name: 結構、等位、列舉和位元欄位
+          href: ../c-language/structures-unions-enumerations-and-bit-fields.md
+        - name: 不適當的等位存取
+          href: ../c-language/improper-access-to-a-union.md
+        - name: 結構成員的填補和對齊
+          href: ../c-language/padding-and-alignment-of-structure-members.md
+        - name: 位元欄位的正負號
+          href: ../c-language/sign-of-bit-fields.md
+        - name: 位元欄位的儲存
+          href: ../c-language/storage-of-bit-fields.md
+        - name: enum 類型
+          href: ../c-language/enum-type.md
+    - name: 限定詞：對揮發性物件的存取
+      href: ../c-language/qualifiers-access-to-volatile-objects.md
+    - name: 宣告子：最大數目
+      href: ../c-language/declarators-maximum-number.md
+    - name: 陳述式：Switch 陳述式的限制
+      href: ../c-language/statements-limits-on-switch-statements.md
+    - name: 前置處理指示詞
+      expanded: false
+      items:
+        - name: 前置處理指示詞
+          href: ../c-language/preprocessing-directives.md
+        - name: 字元常數和條件式包含
+          href: ../c-language/character-constants-and-conditional-inclusion.md
+        - name: 包含加括弧的檔案名稱
+          href: ../c-language/including-bracketed-filenames.md
+        - name: 包含加引號的檔案名稱
+          href: ../c-language/including-quoted-filenames.md
+        - name: 字元順序
+          href: ../c-language/character-sequences.md
+        - name: Pragma
+          href: ../c-language/pragmas.md
+        - name: 預設日期和時間
+          href: ../c-language/default-date-and-time.md
+    - name: 程式庫函式
+      expanded: false
+      items:
+        - name: 程式庫函式
+          href: ../c-language/library-functions.md
+        - name: NULL 巨集
+          href: ../c-language/null-macro.md
+        - name: assert 函式所列印的診斷
+          href: ../c-language/diagnostic-printed-by-the-assert-function.md
+        - name: 字元測試
+          href: ../c-language/character-testing.md
+        - name: 定義域錯誤
+          href: ../c-language/domain-errors.md
+        - name: 浮點值反向溢位
+          href: ../c-language/underflow-of-floating-point-values.md
+        - name: fmod 函式
+          href: ../c-language/fmod-function.md
+        - name: signal 函式 (C)
+          href: ../c-language/signal-function-c.md
+        - name: 預設訊號
+          href: ../c-language/default-signals.md
+        - name: 終止新行字元
+          href: ../c-language/terminating-newline-characters.md
+        - name: 空白行
+          href: ../c-language/blank-lines.md
+        - name: Null 字元
+          href: ../c-language/null-characters.md
+        - name: 附加模式的檔案位置
+          href: ../c-language/file-position-in-append-mode.md
+        - name: 文字檔截斷
+          href: ../c-language/truncation-of-text-files.md
+        - name: 檔案緩衝
+          href: ../c-language/file-buffering.md
+        - name: 零長度檔案
+          href: ../c-language/zero-length-files.md
+        - name: 檔案名稱
+          href: ../c-language/filenames.md
+        - name: 檔案存取限制
+          href: ../c-language/file-access-limits.md
+        - name: 刪除開啟檔案
+          href: ../c-language/deleting-open-files.md
+        - name: 以現有名稱重新命名
+          href: ../c-language/renaming-with-a-name-that-exists.md
+        - name: 讀取指標值
+          href: ../c-language/reading-pointer-values.md
+        - name: 讀取範圍
+          href: ../c-language/reading-ranges.md
+        - name: 檔案位置錯誤
+          href: ../c-language/file-position-errors.md
+        - name: perror 函式所產生的訊息
+          href: ../c-language/messages-generated-by-the-perror-function.md
+        - name: 配置零記憶體
+          href: ../c-language/allocating-zero-memory.md
+        - name: abort 函式 (C)
+          href: ../c-language/abort-function-c.md
+        - name: atexit 函式 (C)
+          href: ../c-language/atexit-function-c.md
+        - name: 環境名稱
+          href: ../c-language/environment-names.md
+        - name: system 函式
+          href: ../c-language/system-function.md
+        - name: strerror 函式
+          href: ../c-language/strerror-function.md
+        - name: 時區
+          href: ../c-language/time-zone.md
+        - name: clock 函式 (C)
+          href: ../c-language/clock-function-c.md

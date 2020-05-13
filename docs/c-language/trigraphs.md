@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345311"
 ---
 # <a name="trigraphs"></a>三併詞
 
@@ -48,7 +48,7 @@ Visual C++ 會繼續支援三併詞替代，但預設會停用此功能。 如�
 
 三併詞永遠視為單一來源字元。 三併詞的轉譯會發生在第一個[轉譯階段](../preprocessor/phases-of-translation.md)，接著再辦識字串常值和字元常數中的逸出字元。 其中只會辨認上述表格中顯示的九個三併詞。 其他字元序列會保留為未轉換狀態。
 
-字元逸出序列 **\\?** 可避免錯誤解譯類似三併詞的字元序列 (如需逸出序列的資訊，請參閱[逸出序列](../c-language/escape-sequences.md))。例如，如果您嘗試使用這個 `What??!` 陳述式列印字串 `printf`
+字元逸出序列（ ** \\？**）可防止對類似三並詞的字元序列進行解釋。 （如需有關 escape 序列的詳細資訊，請參閱[Escape 序列](../c-language/escape-sequences.md)）。例如，如果您嘗試使用這個`What??!` `printf`語句列印字串
 
 ```C
 printf( "What??!\n" );
@@ -62,7 +62,7 @@ printf( "What?\?!\n" );
 
 在這個 `printf` 陳述式中，第二個問號前面的反斜線逸出字元會使 `??!` 不會誤譯為三併詞。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [/Zc:trigraphs (三併詞替代)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
-[C 識別項](../c-language/c-identifiers.md)
+[C 識別碼](../c-language/c-identifiers.md)

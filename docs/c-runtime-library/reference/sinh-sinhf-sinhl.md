@@ -1,10 +1,12 @@
 ---
 title: sinh、sinhf、sinhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
+- sinh
 - sinhl
 - sinhf
 - sinhl
+- _o_sinh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948094"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909901"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
@@ -67,16 +70,18 @@ long double sinh(long double x);  // C++ only
 
 **Sinh**函數會傳回*x*的雙曲正弦值。 根據預設，如果結果太大， **sinh**會將**Errno**設定為**ERANGE** ，並傳回±**HUGE_VAL**。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|None|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
+|± QNAN，IND|無|_DOMAIN|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**sinh**的多載。 在 C 程式中， **sinh**一律採用並傳回**double**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**sinh**的多載。 在 C 程式中， **sinh**一律採用並傳回**double**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

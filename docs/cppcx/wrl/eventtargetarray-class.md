@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::EventTargetArray::Length method
 - Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
-ms.openlocfilehash: 1f3f8e299dba1f4b6ae5a5767f11989dc2fe8370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ea8800aa22a6b5cae0b3342cf337786fb53fc76
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398481"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371484"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray 類別
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -42,9 +42,9 @@ class EventTargetArray :
 
 ## <a name="remarks"></a>備註
 
-表示事件處理常式的陣列。
+表示事件處理程式的陣列。
 
-相關聯的事件處理常式[EventSource](eventsource-class.md)物件會儲存在受保護`EventTargetArray`資料成員。
+與[EventSource](eventsource-class.md)物件關聯的事件處理程式存儲在受`EventTargetArray`保護的 數據成員中。
 
 ## <a name="members"></a>成員
 
@@ -52,31 +52,31 @@ class EventTargetArray :
 
 名稱                                                           | 描述
 -------------------------------------------------------------- | -----------------------------------------------------------
-[EventTargetArray::EventTargetArray](#eventtargetarray)        | 初始化 `EventTargetArray` 類別的新執行個體。
-[EventTargetArray::~EventTargetArray](#tilde-eventtargetarray) | 取消初始化目前`EventTargetArray`類別。
+[事件目標陣列:事件目標陣列](#eventtargetarray)        | 將 `EventTargetArray` 類別的新執行個體初始化。
+[事件目標陣列:*事件目標陣列](#tilde-eventtargetarray) | 取消初始化當前`EventTargetArray`類。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                  | 描述
 ------------------------------------- | ---------------------------------------------------------------------------------------
-[EventTargetArray::AddTail](#addtail) | 將指定的事件處理常式附加至事件處理常式內部陣列的結尾。
-[EventTargetArray::Begin](#begin)     | 取得內部陣列中的事件處理常式的第一個元素的位址。
-[EventTargetArray::End](#end)         | 取得內部陣列中的事件處理常式的最後一個元素的位址。
-[EventTargetArray::Length](#length)   | 取得目前的元素數目內部陣列中的事件處理常式。
+[事件目標陣列::添加尾翼](#addtail) | 將指定的事件處理程式追加到事件處理程序的內部陣列的末尾。
+[事件目標陣列::開始](#begin)     | 獲取事件處理程序內部陣列中第一個元素的位址。
+[事件目標陣列:結束](#end)         | 獲取事件處理程序內部陣列中最後一個元素的位址。
+[事件目標陣列:長度](#length)   | 取得事件處理程式內部陣列中的目前元素數。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `EventTargetArray`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** event.h
+**標題:** 事件.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="tilde-eventtargetarray"></a>EventTargetArray::~EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a>事件目標陣列:*事件目標陣列
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ~EventTargetArray();
@@ -84,11 +84,11 @@ class EventTargetArray :
 
 ### <a name="remarks"></a>備註
 
-取消初始化目前`EventTargetArray`類別。
+取消初始化當前`EventTargetArray`類。
 
-## <a name="addtail"></a>EventTargetArray::AddTail
+## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a>事件目標陣列::添加尾翼
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 void AddTail(
@@ -98,18 +98,18 @@ void AddTail(
 
 ### <a name="parameters"></a>參數
 
-*element*<br/>
-要附加的事件處理常式的指標。
+*元素*<br/>
+指向要追加的事件處理程序的指標。
 
 ### <a name="remarks"></a>備註
 
-將指定的事件處理常式附加至事件處理常式內部陣列的結尾。
+將指定的事件處理程式追加到事件處理程序的內部陣列的末尾。
 
-`AddTail()` 要只可用於在內部`EventSource`類別。
+`AddTail()`打算僅由`EventSource`類在內部使用。
 
-## <a name="begin"></a>EventTargetArray::Begin
+## <a name="eventtargetarraybegin"></a><a name="begin"></a>事件目標陣列::開始
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ComPtr<IUnknown>* Begin();
@@ -117,15 +117,15 @@ ComPtr<IUnknown>* Begin();
 
 ### <a name="return-value"></a>傳回值
 
-內部陣列中的事件處理常式的第一個元素的位址。
+事件處理程式內部陣列中第一個元素的位址。
 
 ### <a name="remarks"></a>備註
 
-取得內部陣列中的事件處理常式的第一個元素的位址。
+獲取事件處理程序內部陣列中第一個元素的位址。
 
-## <a name="end"></a>EventTargetArray::End
+## <a name="eventtargetarrayend"></a><a name="end"></a>事件目標陣列:結束
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ComPtr<IUnknown>* End();
@@ -133,15 +133,15 @@ ComPtr<IUnknown>* End();
 
 ### <a name="return-value"></a>傳回值
 
-內部陣列中的事件處理常式的最後一個項目位址。
+事件處理程式內部數組中最後一個元素的位址。
 
 ### <a name="remarks"></a>備註
 
-取得內部陣列中的事件處理常式的最後一個元素的位址。
+獲取事件處理程序內部陣列中最後一個元素的位址。
 
-## <a name="eventtargetarray"></a>EventTargetArray::EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a>事件目標陣列:事件目標陣列
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 EventTargetArray(
@@ -152,30 +152,30 @@ EventTargetArray(
 
 ### <a name="parameters"></a>參數
 
-*hr*<br/>
-這個建構函式作業之後，參數*hr*表示配置陣列的成功或失敗。 下列清單顯示可能的值為*hr*。
+*人力資源*<br/>
+在此建構函數操作後,參數*hr*指示陣列的分配是成功還是失敗。 下面的清單顯示了*hr*的可能值。
 
-+   S_OK<br/>
-    作業成功。
+- S_OK<br/>
+  作業成功。
 
-+   E_OUTOFMEMORY<br/>
-    無法配置陣列的記憶體。
+- E_OUTOFMEMORY<br/>
+  無法為陣列分配記憶體。
 
-+   S_FALSE<br/>
-    參數*項目*小於或等於零。
+- S_FALSE<br/>
+  參數*項*小於或等於零。
 
-*items*<br/>
-若要配置的陣列元素數目。
+*專案*<br/>
+要分配的陣列元素的數量。
 
 ### <a name="remarks"></a>備註
 
-初始化 `EventTargetArray` 類別的新執行個體。
+將 `EventTargetArray` 類別的新執行個體初始化。
 
-`EventTargetArray` 用來保留陣列中的事件處理常式`EventSource`物件。
+`EventTargetArray`用於在`EventSource`物件中保留事件處理程式陣列。
 
-## <a name="length"></a>EventTargetArray::Length
+## <a name="eventtargetarraylength"></a><a name="length"></a>事件目標陣列:長度
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 size_t Length();
@@ -183,8 +183,8 @@ size_t Length();
 
 ### <a name="return-value"></a>傳回值
 
-目前的內部陣列中的事件處理常式的元素數目。
+事件處理程式的內部數組中的當前元素數。
 
 ### <a name="remarks"></a>備註
 
-取得目前的元素數目內部陣列中的事件處理常式。
+取得事件處理程式內部陣列中的目前元素數。

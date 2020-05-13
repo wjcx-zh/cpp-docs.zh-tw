@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 16c44d861ebbbc98fa1bffb62a00d1989c0c803c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821710"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377164"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 結構
 
-支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -129,64 +129,64 @@ struct ArgTraits<
 
 ### <a name="parameters"></a>參數
 
-*TMemberFunction*<br/>
-無法比對任何 `Invoke` 方法簽章之 ArgTraits 結構的 Typename 參數。
+*T成員功能*<br/>
+ArgTraits 結構的類型名稱參數,該結構無法與`Invoke`任何 方法簽名匹配。
 
-*TDelegateInterface*<br/>
-委派介面。
+*T委託介面*<br/>
+委託介面。
 
 *TArg1*<br/>
-`Invoke` 方法之第一個引數的型別。
+`Invoke`方法的第一個參數的類型。
 
 *TArg2*<br/>
-`Invoke` 方法的第二個引數的類型。
+`Invoke`方法的第二個參數的類型。
 
 *TArg3*<br/>
-`Invoke` 方法的第三個引數的類型。
+`Invoke`方法的第三個參數的類型。
 
 *TArg4*<br/>
-`Invoke` 方法的第四個引數的類型。
+`Invoke`方法的第四個參數的類型。
 
 *TArg5*<br/>
-`Invoke` 方法的第五個引數的類型。
+`Invoke`方法的第五個參數的類型。
 
 *TArg6*<br/>
-`Invoke` 方法的第六個引數的類型。
+`Invoke`方法的第六個參數的類型。
 
 *TArg7*<br/>
-`Invoke` 方法之第七個引數的類型。
+`Invoke`方法的第七個參數的類型。
 
 *TArg8*<br/>
-`Invoke` 方法的第八個引數的類型。
+`Invoke`方法的第八個參數的類型。
 
 *TArg9*<br/>
-`Invoke` 方法之第九個引數的類型。
+`Invoke`方法的第九個參數的類型。
 
 ## <a name="remarks"></a>備註
 
-`ArgTraits` 結構會宣告指定的委派介面，以及具有指定之參數數目的匿名成員函式。
+結構`ArgTraits`聲明指定的委託介面和具有指定數量的參數的匿名成員函數。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-Name       | 描述
+名稱       | 描述
 ---------- | ----------------------
-`Arg1Type` | TArg1 的 typedef。
-`Arg2Type` | TArg2 的 typedef。
-`Arg3Type` | TArg3 的 typedef。
-`Arg4Type` | TArg4 的 typedef。
-`Arg5Type` | TArg5 的 typedef。
-`Arg6Type` | TArg6 的 typedef。
-`Arg7Type` | TArg7 的 typedef。
-`Arg8Type` | TArg8 的 typedef。
-`Arg9Type` | TArg9 的 typedef。
+`Arg1Type` | TArg1 的類型def。
+`Arg2Type` | TArg2 的類型def。
+`Arg3Type` | TArg3 的類型def。
+`Arg4Type` | TArg4 的類型def。
+`Arg5Type` | TArg5 的類型def。
+`Arg6Type` | TArg6 的類型def。
+`Arg7Type` | TArg7 的類型def。
+`Arg8Type` | TArg8 的類型def。
+`Arg9Type` | TArg9 的類型def。
 
 ### <a name="public-constants"></a>公用常數
 
-Name                     | 描述
+名稱                     | 描述
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits：： args](#args) | 保留委派介面之 `Invoke` 方法上的參數數目計數。
+[阿格格茨:阿格茨](#args) | 在委託介面`Invoke`的方法上保留參數數。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -194,13 +194,13 @@ Name                     | 描述
 
 ## <a name="requirements"></a>需求
 
-**Header：** 事件。h
+**標題:** 事件.h
 
-**命名空間：** Microsoft：： WRL：:D etails
+**命名空間:** 微軟::WRL::D
 
-## <a name="args"></a>ArgTraits：： args
+## <a name="argtraitsargs"></a><a name="args"></a>阿格格茨:阿格茨
 
-支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 static const int args = -1;
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>備註
 
-保留委派介面之 `Invoke` 方法上的參數數目計數。 當 `args` 等於-1 時，不會有 `Invoke` 方法簽章的相符項。
+在委託介面`Invoke`的方法上保留參數數。 當`args`等於 -1`Invoke`時, 方法簽名不能匹配。

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cdddda8cf8894016ed80b9055fe106b1600f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398442"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371506"
 ---
 # <a name="ftmbase-class"></a>FtmBase 類別
 
@@ -48,7 +48,7 @@ class FtmBase :
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [RuntimeClass 類別](runtimeclass-class.md)。
+有關詳細資訊,請參閱[執行時類](runtimeclass-class.md)。
 
 ## <a name="members"></a>成員
 
@@ -56,39 +56,39 @@ class FtmBase :
 
 | 名稱                         | 描述                                        |
 | ---------------------------- | -------------------------------------------------- |
-| [FtmBase::FtmBase](#ftmbase) | 初始化 `FtmBase` 類別的新執行個體。 |
+| [FtmBase::FtmBase](#ftmbase) | 將 `FtmBase` 類別的新執行個體初始化。 |
 
 ### <a name="public-methods"></a>公用方法
 
 | 名稱                                                               | 描述                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | 建立全域介面表 (GIT)。                                                                                                                              |
-| [FtmBase::DisconnectObject](#disconnectobject)                     | 強制釋放物件的所有外部連線。 物件的伺服器會呼叫這個方法之前關閉物件的實作。                |
-| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | 取得指定的物件上指定的介面指標封送處理所需的位元組數目上限。                                                |
-| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | 取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 會載入此 DLL 來建立未初始化的執行個體的 proxy。 |
-| [FtmBase::MarshalInterface](#marshalinterface)                     | 寫入資料流來初始化 proxy 物件中某些用戶端處理序所需的資料。                                                                          |
-| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | 終結封送處理的資料封包。                                                                                                                                    |
-| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | 初始化新建立的 proxy，並將該 proxy 傳回的介面指標。                                                                                    |
+| [FtmBase::建立全域介面表](#createglobalinterfacetable) | 創建全域介面表 (GIT)。                                                                                                                              |
+| [FtmBase::D連線物件](#disconnectobject)                     | 強制釋放到物件的所有外部連接。 在關閉之前,對象的伺服器調用該物件的此方法的實現。                |
+| [FtmBase:獲取元帥SizeMax](#getmarshalsizemax)                   | 獲取在指定物件上封送指定介面指標所需的位元組數的上限。                                                |
+| [FtmBase:取得 Unmarshal 類](#getunmarshalclass)                   | 取得 COM 用於查找包含相應代理程式碼的 DLL 的 CLSID。 COM 載入此 DLL 以建立代理的未初始化實體。 |
+| [FtmBase::MarshalInterface](#marshalinterface)                     | 將在某些用戶端進程中初始化代理物件所需的數據寫入流中。                                                                          |
+| [FtmBase::釋放元帥數據](#releasemarshaldata)                 | 銷毀封送的數據包。                                                                                                                                    |
+| [FtmBase:取消封送介面](#unmarshalinterface)                 | 初始化新創建的代理並返回指向該代理的介面指標。                                                                                    |
 
 ### <a name="public-data-members"></a>公用資料成員
 
 | 名稱                                | 描述                                       |
 | ----------------------------------- | ------------------------------------------------- |
-| [FtmBase::marshaller_](#marshaller) | 保留無限制執行緒封送處理器的參考。 |
+| [FtmBase:marshaller_](#marshaller) | 保存對自由線程封送器的引用。 |
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `FtmBase`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ftm.h
+**標題:** ftm.h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase::建立全域介面表
 
-建立全域介面表 (GIT)。
+創建全域介面表 (GIT)。
 
 ```cpp
 static HRESULT CreateGlobalInterfaceTable(
@@ -98,8 +98,8 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>參數
 
-*git*<br/>
-這項作業完成時，全域介面表的指標。
+*Git*<br/>
+此操作完成後,將指標指向全域介面表。
 
 ### <a name="return-value"></a>傳回值
 
@@ -107,11 +107,11 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 <<c0> `IGlobalInterfaceTable` 中的主題`COM Interfaces`的子主題`COM Reference`MSDN Library 中的主題。
+有關詳細資訊,請參閱 MSDN`IGlobalInterfaceTable``COM Reference`庫`COM Interfaces`中 主題 子主題中的主題。
 
-## <a name="disconnectobject"></a>FtmBase::DisconnectObject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::D連線物件
 
-強制釋放物件的所有外部連線。 物件的伺服器會呼叫這個方法之前關閉物件的實作。
+強制釋放到物件的所有外部連接。 在關閉之前,對象的伺服器調用該物件的此方法的實現。
 
 ```cpp
 STDMETHODIMP DisconnectObject(
@@ -121,24 +121,24 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>參數
 
-*dwReserved*<br/>
+*dw 保留*<br/>
 保留以備將來之用；必須為零。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="ftmbase"></a>FtmBase::FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase::FtmBase
 
-初始化 `FtmBase` 類別的新執行個體。
+將 `FtmBase` 類別的新執行個體初始化。
 
 ```cpp
 FtmBase();
 ```
 
-## <a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase:獲取元帥SizeMax
 
-取得指定的物件上指定的介面指標封送處理所需的位元組數目上限。
+獲取在指定物件上封送指定介面指標所需的位元組數的上限。
 
 ```cpp
 STDMETHODIMP GetMarshalSizeMax(
@@ -154,34 +154,34 @@ STDMETHODIMP GetMarshalSizeMax(
 ### <a name="parameters"></a>參數
 
 *riid*<br/>
-要封送處理介面識別項參考。
+對要封送的介面的標識符的引用。
 
-*pv*<br/>
-要封送處理; 介面指標可以是 NULL。
+*光伏*<br/>
+要封送的介面指標;可以是 NULL。
 
-*dwDestContext*<br/>
-指定的介面所在解除封送處理的目的端內容。
+*dwDest 上下文*<br/>
+要取消封送指定介面的目標上下文。
 
-指定一或多個 MSHCTX 列舉值。
+指定一個或多個 MSHCTX 枚舉值。
 
-目前，解封送處理可能會發生在另一個 apartment，目前的處理序 (MSHCTX_INPROC) 或在目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序中。
+目前,取消封送可能發生在當前進程的另一個單元(MSHCTX_INPROC),也可以與當前進程 (MSHCTX_LOCAL) 在同一台計算機上的另一個進程中發生。
 
-*pvDestContext*<br/>
-保留供未來使用;必須是 NULL。
+*pvDest 上下文*<br/>
+保留供將來使用;必須為 NULL。
 
-*mshlflags*<br/>
-旗標，指出要封送處理的資料是否要傳送回用戶端程序 — 一般的情況下，或寫入全域的資料表，其中要擷取多個用戶端。 指定一或多個 MSHLFLAGS 列舉值。
+*毫秒旗標*<br/>
+指示要封送的數據是傳輸回用戶端進程(典型情況)還是寫入全域表(多個用戶端可以檢索)的標誌。 指定一個或多個 MSHLFLAGS 枚舉值。
 
 *pSize*<br/>
-這項作業完成時，指標要封送處理的資料流寫入的資料量上限。
+此操作完成後,指標指向要寫入封送流的數據量上的上限。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則 E_FAIL 或 E_NOINTERFACE。
+S_OK如果成功;否則,E_FAIL或E_NOINTERFACE。
 
-## <a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase:取得 Unmarshal 類
 
-取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 會載入此 DLL 來建立未初始化的執行個體的 proxy。
+取得 COM 用於查找包含相應代理程式碼的 DLL 的 CLSID。 COM 載入此 DLL 以建立代理的未初始化實體。
 
 ```cpp
 STDMETHODIMP GetUnmarshalClass(
@@ -197,33 +197,33 @@ STDMETHODIMP GetUnmarshalClass(
 ### <a name="parameters"></a>參數
 
 *riid*<br/>
-要封送處理介面識別項參考。
+對要封送的介面的標識符的引用。
 
-*pv*<br/>
-要封送處理; 介面指標如果呼叫端所需的介面沒有指標，則可以是 NULL。
+*光伏*<br/>
+指向要封送的介面的指標;如果呼叫方沒有指向所需介面的指標,則可以為 NULL。
 
-*dwDestContext*<br/>
-指定的介面所在解除封送處理的目的端內容。
+*dwDest 上下文*<br/>
+要取消封送指定介面的目標上下文。
 
-指定一或多個 MSHCTX 列舉值。
+指定一個或多個 MSHCTX 枚舉值。
 
-解封送處理，可能會發生在目前的處理序 (MSHCTX_INPROC) 的另一個 apartment，或在目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序。
+取消封送可以在當前進程的另一個單元(MSHCTX_INPROC)中,也可以與當前進程 (MSHCTX_LOCAL) 在同一台計算機上的另一個進程中發生解封送。
 
-*pvDestContext*<br/>
-保留供未來使用;必須是 NULL。
+*pvDest 上下文*<br/>
+保留供將來使用;必須為 NULL。
 
-*mshlflags*<br/>
-這項作業完成時，用來在用戶端處理序中建立 proxy 的 CLSID 指標。
+*毫秒旗標*<br/>
+此操作完成後,指向 CLSID 的指標將用於在用戶端進程中創建代理。
 
 *pCid*
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，S_FALSE。
+S_OK如果成功;否則,S_FALSE。
 
-## <a name="marshalinterface"></a>FtmBase::MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase::MarshalInterface
 
-寫入資料流來初始化 proxy 物件中某些用戶端處理序所需的資料。
+將在某些用戶端進程中初始化代理物件所需的數據寫入流中。
 
 ```cpp
 STDMETHODIMP MarshalInterface(
@@ -239,48 +239,48 @@ STDMETHODIMP MarshalInterface(
 ### <a name="parameters"></a>參數
 
 *pStm*<br/>
-要封送處理期間使用的資料流的指標。
+指向在封送過程中使用的流的指標。
 
 *riid*<br/>
-要封送處理介面識別項參考。 此介面必須衍生自`IUnknown`介面。
+對要封送的介面的標識符的引用。 此介面必須衍生自 `IUnknown` 介面。
 
-*pv*<br/>
-要封送處理; 之介面指標的指標如果呼叫端所需的介面沒有指標，則可以是 NULL。
+*光伏*<br/>
+指向要封送的介面指標;如果呼叫方沒有指向所需介面的指標,則可以為 NULL。
 
-*dwDestContext*<br/>
-指定的介面所在解除封送處理的目的端內容。
+*dwDest 上下文*<br/>
+要取消封送指定介面的目標上下文。
 
-指定一或多個 MSHCTX 列舉值。
+指定一個或多個 MSHCTX 枚舉值。
 
-解封送處理，可能會發生在目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序或目前的處理序 (MSHCTX_INPROC) 的另一個 apartment 中。
+取消封送可以發生在當前進程的另一個單元(MSHCTX_INPROC),也可以與當前進程 (MSHCTX_LOCAL) 在同一台計算機上的另一個進程中發生。
 
-*pvDestContext*<br/>
+*pvDest 上下文*<br/>
 保留以備將來之用；必須為零。
 
-*mshlflags*<br/>
-指定要封送處理的資料是否要傳送回用戶端程序 — 一般的情況下，或寫入全域的資料表，其中要擷取多個用戶端。
+*毫秒旗標*<br/>
+指定要封送的數據是要傳輸回用戶端進程(典型情況),還是寫入全域表,由多個用戶端檢索這些數據。
 
 ### <a name="return-value"></a>傳回值
 
-介面指標封送處理成功地傳回 S_OK。
+S_OK介面指標已成功封送。
 
-E_NOINTERFACE 不支援指定的介面。
+E_NOINTERFACE不支援指定的介面。
 
-STG_E_MEDIUMFULL 資料流已滿。
+STG_E_MEDIUMFULL流已滿。
 
-E_FAIL 作業失敗。
+E_FAIL 操作失敗。
 
-## <a name="marshaller"></a>FtmBase::marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase:marshaller_
 
-保留無限制執行緒封送處理器的參考。
+保存對自由線程封送器的引用。
 
 ```cpp
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase::釋放元帥數據
 
-終結封送處理的資料封包。
+銷毀封送的數據包。
 
 ```cpp
 STDMETHODIMP ReleaseMarshalData(
@@ -291,15 +291,15 @@ STDMETHODIMP ReleaseMarshalData(
 ### <a name="parameters"></a>參數
 
 *pStm*<br/>
-包含資料封包，也將被銷毀的資料流的指標。
+指向包含要銷毀的數據包的流的指標。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase:取消封送介面
 
-初始化新建立的 proxy，並將該 proxy 傳回的介面指標。
+初始化新創建的代理並返回指向該代理的介面指標。
 
 ```cpp
 STDMETHODIMP UnmarshalInterface(
@@ -312,14 +312,14 @@ STDMETHODIMP UnmarshalInterface(
 ### <a name="parameters"></a>參數
 
 *pStm*<br/>
-從中的介面指標是解除封送處理的資料流的指標。
+指向要取消封送介面指標的流。
 
 *riid*<br/>
-要解除封送處理介面識別項參考。
+引用要取消封送的介面的標識符。
 
-*ppv*<br/>
-這項作業完成時，接收所要求的介面指標的指標變數的位址*riid*。 如果這項作業成功，**ppv*包含要解除封送處理介面的要求的介面指標。
+*Ppv*<br/>
+此操作完成後,接收*riid*中請求的介面指標的指標變數的位址。 如果此操作成功,**ppv*包含要取消封解的介面的請求介面指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則 E_NOINTERFACE 或 E_FAIL。
+S_OK如果成功;否則,E_NOINTERFACE或E_FAIL。

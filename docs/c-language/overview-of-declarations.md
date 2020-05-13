@@ -18,8 +18,8 @@ ms.locfileid: "74857056"
 
 ## <a name="syntax"></a>語法
 
-*宣告*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+*declaration*宣告：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*宣告規範*屬性-seq*<sub>opt</sub> *init-宣告子-list*<sub>opt</sub>**;**
 
 /\**屬性-seq*<sub>opt</sub>是 Microsoft 特定的 */
 
@@ -29,12 +29,12 @@ ms.locfileid: "74857056"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *init-declarator-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-宣告子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-宣告子-list* **、** *init-* 宣告子
 
 *init-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子* **=** *初始設定式*
+&nbsp;&nbsp;&nbsp;&nbsp;*符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;宣告子*初始化運算式* *declarator* **=**
 
 > [!NOTE]
 > 下列各節將不再重複 *declaration* 的這個語法。 下列各節中的語法通常會以 *declarator* 非終端開頭。
@@ -43,15 +43,15 @@ ms.locfileid: "74857056"
 
 宣告可以包含 *attribute-seq* 中列出的一或數個選擇性屬性；*seq* 是 sequence (序列) 的縮寫。 這些 Microsoft 特定屬性可執行各種函式，本手冊中會有詳細的討論。
 
-在一般格式的變數宣告中，*type-specifier* 會提供變數的資料類型。 *type-specifier* 可以是複合式的，例如由 **const** 或 `volatile` 所修飾的類型。 `declarator` 會為變數命名，可能會修改變數以宣告陣列或指標類型。 例如，套用至物件的
+在一般格式的變數宣告中，*type-specifier* 會提供變數的資料類型。 *type-specifier* 可以是複合式的，例如由 **const** 或 `volatile` 所修飾的類型。 `declarator` 會為變數命名，可能會修改變數以宣告陣列或指標類型。 例如，
 
 ```C
 int const *fp;
 ```
 
-宣告名為 `fp` 的變數，做為無法修飾 (**const**) `int` 值的指標。 若要定義宣告中的多個變數，您可以使用多個宣告子，並以逗號分隔。
+宣告名`fp`為的變數，做為不可變（**const**） `int`值的指標。 若要定義宣告中的多個變數，您可以使用多個宣告子，並以逗號分隔。
 
-一個宣告至少要有一個宣告子，否則其類型規範必須宣告結構標記、等位標記或列舉的成員。 宣告子提供有關識別項的任何其餘資訊。 宣告子是一種識別項，可以用方括號 ( **[ ]** )、星號 (<strong>\*</strong>) 或括號 ( **( )** ) 來修飾，以分別宣告陣列、指標或函式類型。 當您宣告簡單變數 (例如字元、整數和浮點項目)，或是簡單變數的結構和等位時，`declarator` 就只是識別項。 如需宣告子的詳細資訊，請參閱[宣告子及變數宣告](../c-language/declarators-and-variable-declarations.md)。
+一個宣告至少要有一個宣告子，否則其類型規範必須宣告結構標記、等位標記或列舉的成員。 宣告子提供有關識別項的任何其餘資訊。 宣告子是一種識別項，可以用方括號 (**[ ]**)、星號 (<strong>\*</strong>) 或括號 (**( )**) 來修飾，以分別宣告陣列、指標或函式類型。 當您宣告簡單變數 (例如字元、整數和浮點項目)，或是簡單變數的結構和等位時，`declarator` 就只是識別項。 如需宣告子的詳細資訊，請參閱[宣告子及變數宣告](../c-language/declarators-and-variable-declarations.md)。
 
 所有定義都是隱含的宣告，但並非所有宣告都是定義。 例如，以 `extern` 儲存類別規範開頭的變數宣告是要「參考」而不是「定義」宣告。 如果在定義外部變數之前先加以參考，或是從使用外部變數的原始程式檔，將其定義在另一個原始程式檔中，則需要 `extern` 宣告。 儲存體不是藉由「參考」宣告來配置，也不能在宣告中初始化變數。
 
@@ -69,4 +69,4 @@ C 中定義的 *storage-class-specifier* 終端項包含 **auto**、`extern`、*
 
 [C 語言語法摘要](../c-language/c-language-syntax-summary.md)<br/>
 [宣告和類型](../c-language/declarations-and-types.md)<br/>
-[宣告摘要](../c-language/summary-of-declarations.md)
+[宣告的摘要](../c-language/summary-of-declarations.md)

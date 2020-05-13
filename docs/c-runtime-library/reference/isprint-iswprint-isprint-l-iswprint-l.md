@@ -1,11 +1,13 @@
 ---
 title: isprint、iswprint、_isprint_l、_iswprint_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswprint
 - isprint
 - _isprint_l
 - _iswprint_l
+- _o_isprint
+- _o_iswprint
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: 282b72fcec84f8096ce0d54cd114e756aeafbc85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9921164220bc5289a7ae4a211c88107b4dac8e9c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953751"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918511"
 ---
 # <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint、iswprint、_isprint_l、_iswprint_l
 
@@ -69,7 +72,7 @@ int _iswprint_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -89,6 +92,10 @@ int _iswprint_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_** **istprint**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
 
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
@@ -103,5 +110,5 @@ int _iswprint_l(
 ## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

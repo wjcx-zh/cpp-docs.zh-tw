@@ -13,62 +13,62 @@ ms.locfileid: "62195262"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>特性指引最佳化的環境變數
 
-有三個會影響在建立映像的測試案例的環境變數 **/ltcg: pgi**特性指引最佳化：
+有三個環境變數會影響以 **/ltcg： PGI**建立之影像上的測試案例，以進行特性指引優化：
 
-- **PogoSafeMode**指定是否要使用快速模式或 「 安全模式的應用程式程式碼剖析。
+- **PogoSafeMode**指定是否要使用快速模式或安全模式進行應用程式分析。
 
-- **VCPROFILE_ALLOC_SCALE**新增額外的記憶體，以供分析工具。
+- **VCPROFILE_ALLOC_SCALE**會新增額外的記憶體供 profiler 使用。
 
-- **VCPROFILE_PATH**可讓您指定所使用的.pgc 檔案的資料夾。
+- **VCPROFILE_PATH**可讓您指定用於 .pgc 檔的資料夾。
 
-**在 PogoSafeMode 和 VCPROFILE_ALLOC_SCALE 環境變數已被取代從 Visual Studio 2015 開始。** 連結器選項[/GENPROFILE 或 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)並[/USEPROFILE](reference/useprofile.md)為這些環境變數指定相同的連結器行為。
+**PogoSafeMode 和 VCPROFILE_ALLOC_SCALE 環境變數從 Visual Studio 2015 開始已淘汰。** 連結器選項[/GENPROFILE 或/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)和[/USEPROFILE](reference/useprofile.md)會指定與這些環境變數相同的連結器行為。
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-這個環境變數已被取代。 使用**精確**或**NOEXACT**引數 **/GENPROFILE**或是 **/FASTGENPROFILE**來控制這個行為。
+此環境變數已被取代。 請使用 **/GENPROFILE**或 **/FASTGENPROFILE**的**確切**或**NOEXACT**引數來控制此行為。
 
-清除或設**PogoSafeMode**環境變數，以指定是否要使用快速模式或 「 安全模式的應用程式程式碼剖析在 x86 系統。
+清除或設定**PogoSafeMode**環境變數，以指定是否要在 x86 系統上使用快速模式或安全模式進行應用程式分析。
 
-特性指引最佳化 (PGO) 的程式碼剖析工作階段有兩個可能的模式：*快速模式*並*安全模式*。 當程式碼剖析處於快速模式時，它會使用**INC**指令增加資料計數器。 **INC**指令更快，但不是安全執行緒。 當程式碼剖析處於安全模式時，它會使用**LOCK INC**指令增加資料計數器。 **LOCK INC**指令具有與相同的功能**INC** ，而且是安全執行緒，但它有低於**INC**指令。
+特性指引優化（PGO）在分析階段期間有兩種可能的模式：*快速模式*和*安全模式*。 當分析處於快速模式時，它會使用**inc.** 指示來增加資料計數器。 **INC**指令的速度較快，但不是安全線程。 當分析處於安全模式時，它會使用**LOCK inc.** 指示來增加資料計數器。 **LOCK inc.** 指令具有與**inc.** 指示相同的功能，而且是安全線程，但是速度比**inc**指示慢。
 
-根據預設，PGO 程式碼剖析以快速模式運作。 **PogoSafeMode**是如果您想要使用安全模式下，才需要。
+根據預設，PGO 分析會以快速模式運作。 只有當您想要使用安全模式時，才需要**PogoSafeMode** 。
 
-若要執行 PGO 程式碼剖析在安全模式中，您必須使用環境變數**PogoSafeMode**或 連結器參數 **/PogoSafeMode**，取決於系統。 如果您正在執行分析使用 x64 電腦，您必須使用連結器參數。 如果您正在執行 x86 程式碼剖析的電腦，您可以使用連結器設定或切換**PogoSafeMode**環境變數，以在開始最佳化程序之前的任何值。
+若要在安全模式中執行 PGO 分析，您必須使用環境變數**PogoSafeMode**或連結器切換 **/PogoSafeMode**（視系統而定）。 如果您是在 x64 電腦上執行程式碼剖析，就必須使用連結器參數。 如果您要在 x86 電腦上執行分析，您可以使用連結器參數，或在開始優化程式之前，將**PogoSafeMode**環境變數設定為任何值。
 
 ### <a name="pogosafemode-syntax"></a>PogoSafeMode 語法
 
-> **set PogoSafeMode**[**=**_value_]
+> **設定 PogoSafeMode**[**=**_值_]
 
-設定**PogoSafeMode**為任何值，以啟用安全模式。 設定此選項，而不會清除先前的值，並重新啟用 快速模式的值。
+將**PogoSafeMode**設定為任何值，以啟用安全模式。 設定而不使用值來清除先前的值，並重新啟用快速模式。
 
-## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+## <a name="vcprofile_alloc_scale"></a>VCPROFILE_ALLOC_SCALE
 
-這個環境變數已被取代。 使用**MEMMIN**並**MEMMAX**引數 **/GENPROFILE**或是 **/FASTGENPROFILE**來控制這個行為。
+此環境變數已被取代。 請使用 **/GENPROFILE**或 **/FASTGENPROFILE**的**MEMMIN**和**MEMMAX**引數來控制此行為。
 
-修改**VCPROFILE_ALLOC_SCALE**環境變數，以變更的記憶體數量配置來保留的設定檔資料。 在罕見的情況下，將不會有足夠的記憶體可支援執行測試案例時，收集分析資料。 在這些情況下，您可以藉由設定增加的記憶體數量**VCPROFILE_ALLOC_SCALE**。 如果您收到錯誤訊息，指出您是否有記憶體不足，無法在測試回合期間，較大值指派給**VCPROFILE_ALLOC_SCALE**，直到在測試執行完成，但沒有記憶體不足錯誤。
+修改**VCPROFILE_ALLOC_SCALE**環境變數，以變更配置用來保存設定檔資料的記憶體數量。 在罕見的情況下，在執行測試案例時，無法使用足夠的記憶體來支援收集分析資料。 在這些情況下，您可以藉由設定**VCPROFILE_ALLOC_SCALE**來增加記憶體數量。 如果您在測試回合期間收到錯誤訊息，指出您的記憶體不足，請將較大的值指派給**VCPROFILE_ALLOC_SCALE**，直到測試回合完成但沒有記憶體不足的錯誤為止。
 
-### <a name="vcprofileallocscale-syntax"></a>VCPROFILE_ALLOC_SCALE 語法
+### <a name="vcprofile_alloc_scale-syntax"></a>VCPROFILE_ALLOC_SCALE 語法
 
-> **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **設定 VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
 
-*Scale_value*參數是您想要執行測試案例的記憶體數量的縮放比例。  預設為 1。 比方說，這個命令列會將縮放比例設為 2:
+*Scale_value*參數是您想要用來執行測試案例之記憶體數量的縮放因數。  預設值是 1。 例如，此命令列會將比例因數設定為2：
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
-## <a name="vcprofilepath"></a>VCPROFILE_PATH
+## <a name="vcprofile_path"></a>VCPROFILE_PATH
 
-使用**VCPROFILE_PATH**環境變數，以指定要建立的.pgc 檔案的目錄。 根據預設，與所分析的二進位檔相同的目錄中建立的.pgc 檔案。 不過，如果二進位檔的絕對路徑不存在，因為可能的情況下，當您從建置二進位的其中一部電腦上執行設定檔案例時，您可以設定**VCPROFILE_PATH**存在於目標電腦上的路徑。
+使用**VCPROFILE_PATH**環境變數來指定要建立 .pgc 檔案的目錄。 根據預設，會在與所分析之二進位檔相同的目錄中建立 .pgc 檔案。 不過，如果二進位檔的絕對路徑不存在，可能是當您在建立二進位的不同電腦上執行設定檔案例時，您可以將**VCPROFILE_PATH**設定為存在於目的電腦上的路徑。
 
-### <a name="vcprofilepath-syntax"></a>VCPROFILE_PATH 語法
+### <a name="vcprofile_path-syntax"></a>VCPROFILE_PATH 語法
 
-> **set VCPROFILE_PATH**[**=**_path_]
+> **設定 VCPROFILE_PATH**[**=**_路徑_]
 
-設定*路徑*參數，以在其中新增的.pgc 檔案的目錄路徑。 比方說，這個命令列會將資料夾設定為 C:\profile:
+將*path*參數設定為要在其中加入 .pgc 檔案的目錄路徑。 例如，此命令列會將資料夾設定為 C:\profile：
 
 `set VCPROFILE_PATH=c:\profile`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [特性指引最佳化](profile-guided-optimizations.md)<br/>
-[/GENPROFILE 和 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE 和/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/USEPROFILE](reference/useprofile.md)<br/>

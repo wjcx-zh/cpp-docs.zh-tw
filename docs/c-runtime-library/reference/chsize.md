@@ -1,8 +1,9 @@
 ---
 title: _chsize
-ms.date: 03/29/2018
+ms.date: 4/2/2020
 api_name:
 - _chsize
+- _o__chsize
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 7fe07b2261396be491b833ff52186024edd0b919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942969"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917193"
 ---
 # <a name="_chsize"></a>_chsize
 
@@ -51,16 +53,16 @@ int _chsize(
 ### <a name="parameters"></a>參數
 
 *fd*<br/>
-參考已開啟檔案的檔案描述項。
+參照已開啟之檔案的檔案描述元。
 
 *size*<br/>
 檔案的新長度 (位元組)。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功變更檔案大小， **_chsize**會傳回0值。 傳回值-1 表示錯誤：如果指定的檔案是唯讀的，或指定的檔案已鎖定而無法存取，則會將**errno**設定為**EACCES** ; 如果描述元無效，則為**EBADF** ; 如果裝置上沒有空間，則為**ENOSPC** ，或如果*大小*小於零，則為**EINVAL** 。
+如果檔案大小已成功變更， **_chsize**會傳回值0。 傳回值-1 表示發生錯誤 **：如果指定**的檔案是唯讀的，或指定的檔案已鎖定而無法存取，則為 EBADF; 如果描述元無效，則為**EBADF** ; 如果裝置上沒有空間，則為**ENOSPC** ，如果**errno**的*大小*小於零，則為**EINVAL** 。
 
-如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需這些傳回碼和其他傳回碼的詳細資訊，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>備註
 
@@ -68,13 +70,15 @@ int _chsize(
 
 這個函式會驗證它的參數。 如果*size*小於零或*fd*是不正確的檔案描述項，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

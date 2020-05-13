@@ -51,16 +51,16 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3cabb00ded7dbc5f9c396a1de767058443a4436
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253938"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754215"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 類別
 
-ID2D1Bitmap 包裝函式。
+ID2D1Bitmap 的包裝器。
 
 ## <a name="syntax"></a>語法
 
@@ -74,93 +74,93 @@ class CD2DBitmap : public CD2DResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|多載。 建構 HBITMAP CD2DBitmap 物件。|
-|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|解構函式。 D2D 點陣圖物件正在被終結時呼叫。|
+|[CD2DBitmap:CD2DBitmap](#cd2dbitmap)|已多載。 從 HBITMAP 構造 CD2DBitmap 物件。|
+|[CD2DBitmap:*CD2DBitmap](#_dtorcd2dbitmap)|解構函式。 銷毀 D2D 位圖物件時調用。|
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|多載。 建構 CD2DBitmap 物件。|
+|[CD2DBitmap:CD2DBitmap](#cd2dbitmap)|已多載。 構造 CD2DBitmap 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBitmap::Attach](#attach)|將現有的資源物件的介面|
-|[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|將指定的區域從指定的點陣圖複製到目前的點陣圖|
-|[CD2DBitmap::CopyFromMemory](#copyfrommemory)|指定的區域複製到目前的點陣圖的記憶體|
-|[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|複製指定的區域，從指定呈現目標的目前點陣圖|
-|[CD2DBitmap::Create](#create)|建立 CD2DBitmap。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|
-|[CD2DBitmap::Destroy](#destroy)|終結 CD2DBitmap 物件。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|
-|[CD2DBitmap::Detach](#detach)|中斷連結物件中的資源介面|
-|[CD2DBitmap::Get](#get)|傳回 ID2D1Bitmap 介面|
-|[CD2DBitmap::GetDPI](#getdpi)|傳回的 dots per inch (DPI) 的點陣圖|
-|[CD2DBitmap::GetPixelFormat](#getpixelformat)|擷取點陣圖的像素格式和 alpha 模式|
-|[CD2DBitmap::GetPixelSize](#getpixelsize)|點陣圖的傳回大小，單位為裝置而異 （像素）|
-|[CD2DBitmap::GetSize](#getsize)|傳回點陣圖的大小，以裝置獨立畫素 (Dip)，|
-|[CD2DBitmap::IsValid](#isvalid)|檢查資源的有效性 (會覆寫[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
+|[CD2DBitmap::附加](#attach)|將現有資源介面附加到物件|
+|[CD2DBitmap::從位圖複製](#copyfrombitmap)|將指定區域從指定點陣圖複製到目前的點陣圖|
+|[CD2DBitmap::從記憶體複製](#copyfrommemory)|將指定區域從記憶體複製到目前的點陣圖|
+|[CD2DBitmap::從成成成目標](#copyfromrendertarget)|將指定區域從指定的渲染目標複製到目前的點陣圖|
+|[CD2DBitmap:建立](#create)|創建 CD2DBitmap。 (覆寫[CD2D 資源:建立](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DBitmap::D](#destroy)|銷毀 CD2DBitmap 物件。 (覆蓋[CD2D 資源::D)](../../mfc/reference/cd2dresource-class.md#destroy)|
+|[CD2DBitmap::Detach](#detach)|從物件分離資源介面|
+|[CD2DBitmap:取得](#get)|傳回 ID2D1 位元圖介面|
+|[CD2DBitmap:GetDPI](#getdpi)|傳回點陣圖每英吋 (DPI) 的點|
+|[CD2DBitmap::取得像素格式](#getpixelformat)|以索點圖的像素格式和 Alpha 模式|
+|[CD2DBitmap::取得圖元大小](#getpixelsize)|傳回點圖的大小(以與裝置相關的單位(像素)|
+|[CD2DBitmap:取得大小](#getsize)|傳回點陣圖大小(以與裝置無關的圖元 (DIP)|
+|[CD2DBitmap:有效](#isvalid)|檢查資源有效性(覆寫[CD2D 資源::有效](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBitmap::CommonInit](#commoninit)|初始化物件|
+|[CD2DBitmap::共同資訊](#commoninit)|初始化物件|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|傳回 ID2D1Bitmap 介面|
+|[CD2DBitmap::操作員 ID2D1 位圖*](#operator_id2d1bitmap_star)|傳回 ID2D1 位元圖介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|如果應終結 m_hBmpSrc;，則為 TRUE。否則為 FALSE。|
-|[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|來源點陣圖的控制代碼。|
-|[CD2DBitmap::m_lpszType](#m_lpsztype)|資源類型。|
-|[CD2DBitmap::m_pBitmap](#m_pbitmap)|儲存 ID2D1Bitmap 物件的指標。|
-|[CD2DBitmap::m_sizeDest](#m_sizedest)|點陣圖目的大小。|
-|[CD2DBitmap::m_strPath](#m_strpath)|Botmap 檔案路徑。|
-|[CD2DBitmap::m_uiResID](#m_uiresid)|點陣圖的資源識別碼。|
+|[CD2DBitmap:m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|如果m_hBmpSrc應銷毀,則為 TRUE;否則 FALSE。|
+|[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|源點陣圖句柄。|
+|[CD2DBitmap:m_lpszType](#m_lpsztype)|資源類型。|
+|[CD2DBitmap:m_pBitmap](#m_pbitmap)|存儲指向 ID2D1Bitmap 物件的指標。|
+|[CD2DBitmap:m_sizeDest](#m_sizedest)|位圖目標大小。|
+|[CD2DBitmap:m_strPath](#m_strpath)|機器人對應文件路徑。|
+|[CD2DBitmap:m_uiResID](#m_uiresid)|位圖資源識別碼。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DBitmap`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
+## <a name="cd2dbitmapcd2dbitmap"></a><a name="_dtorcd2dbitmap"></a>CD2DBitmap:*CD2DBitmap
 
-解構函式。 D2D 點陣圖物件正在被終結時呼叫。
+解構函式。 銷毀 D2D 位圖物件時調用。
 
 ```
 virtual ~CD2DBitmap();
 ```
 
-##  <a name="attach"></a>  CD2DBitmap::Attach
+## <a name="cd2dbitmapattach"></a><a name="attach"></a>CD2DBitmap::附加
 
-將現有的資源物件的介面。
+將現有資源介面附加到物件。
 
-```
+```cpp
 void Attach(ID2D1Bitmap* pResource);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pResource*<br/>
-現有的資源介面。 不可以是 NULL。
+*p資源*<br/>
+現有資源介面。 不能是 NULL。
 
-##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap
+## <a name="cd2dbitmapcd2dbitmap"></a><a name="cd2dbitmap"></a>CD2DBitmap:CD2DBitmap
 
-CD2DBitmap 從建構物件資源。
+從資源構造 CD2DBitmap 物件。
 
 ```
 CD2DBitmap(
@@ -189,38 +189,38 @@ CD2DBitmap(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
 *uiResID*<br/>
-資源的資源識別碼號碼。
+資源的資源識別碼。
 
 *lpszType*<br/>
-以 null 終止的字串，其中包含的資源類型的指標。
+指向包含資源類型的空端字串的指標。
 
-*sizeDest*<br/>
-點陣圖的目的大小。
+*大小 D 最大*<br/>
+位圖的目標大小。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
 *lpszPath*<br/>
-以 null 終止的字串，其中包含檔案名稱的指標。
+包含檔案名稱的 null 中斷字串的指標。
 
-*hbmpSrc*<br/>
-點陣圖的控制代碼。
+*赫布普斯克*<br/>
+處理點陣圖。
 
-##  <a name="commoninit"></a>  CD2DBitmap::CommonInit
+## <a name="cd2dbitmapcommoninit"></a><a name="commoninit"></a>CD2DBitmap::共同資訊
 
 初始化物件。
 
-```
+```cpp
 void CommonInit();
 ```
 
-##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap
+## <a name="cd2dbitmapcopyfrombitmap"></a><a name="copyfrombitmap"></a>CD2DBitmap::從位圖複製
 
-將指定的區域從指定的點陣圖複製到目前的點陣圖。
+將指定區域從指定的點陣圖複製到當前位圖中。
 
 ```
 HRESULT CopyFromBitmap(
@@ -235,18 +235,18 @@ HRESULT CopyFromBitmap(
 要複製的點陣圖。
 
 *destPoint*<br/>
-在目前的點陣圖，會複製的區域則是 srcRect 所指定的區域的左上角。
+在當前點陣圖中,複製 srcRect 指定的區域的左上角。
 
-*srcRect*<br/>
-若要複製的點陣圖的區域。
+*斯克拉特*<br/>
+要複製的點陣圖區域。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory
+## <a name="cd2dbitmapcopyfrommemory"></a><a name="copyfrommemory"></a>CD2DBitmap::從記憶體複製
 
-將指定的區域從記憶體中複製到目前的點陣圖。
+將指定區域從記憶體複製到當前位圖中。
 
 ```
 HRESULT CopyFromMemory(
@@ -260,19 +260,19 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 要複製的資料。
 
-*pitch*<br/>
-分散的音調、 儲存在 srcData 來源點陣圖。 分散是掃瞄線 （在記憶體中的像素為單位的一個資料列） 的位元組計數。 Stride 可以從下列公式計算： 像素寬度\*每像素 + 記憶體填補位元組。
+*瀝青*<br/>
+存儲在 srcData 中的來源點陣圖的步長或間距。 步長是掃描線的位元組計數(記憶體中的一行圖元)。 可以從以下公式計算步長:圖元寬\*度 位元組/圖元 = 記憶體填充。
 
 *destRect*<br/>
-在目前的點陣圖，會複製的區域則是 srcRect 所指定的區域的左上角。
+在當前點陣圖中,複製 srcRect 指定的區域的左上角。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget
+## <a name="cd2dbitmapcopyfromrendertarget"></a><a name="copyfromrendertarget"></a>CD2DBitmap::從成成成目標
 
-複製指定的區域，指定從呈現目標到目前的點陣圖。
+將指定的區域從指定的渲染目標複製到當前位圖中。
 
 ```
 HRESULT CopyFromRenderTarget(
@@ -283,22 +283,22 @@ HRESULT CopyFromRenderTarget(
 
 ### <a name="parameters"></a>參數
 
-*pRenderTarget*<br/>
-呈現目標，其中包含要複製的區域。
+*pRender 目標*<br/>
+包含要複製的區域的渲染目標。
 
 *destPoint*<br/>
-在目前的點陣圖，會複製的區域則是 srcRect 所指定的區域的左上角。
+在當前點陣圖中,複製 srcRect 指定的區域的左上角。
 
-*srcRect*<br/>
-若要複製的 renderTarget 區域。
+*斯克拉特*<br/>
+要複製的渲染目標區域。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="create"></a>  CD2DBitmap::Create
+## <a name="cd2dbitmapcreate"></a><a name="create"></a>CD2DBitmap:建立
 
-建立 CD2DBitmap。
+創建 CD2DBitmap。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -306,24 +306,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>參數
 
-*pRenderTarget*<br/>
-到轉譯目標的指標。
+*pRender 目標*<br/>
+指向渲染目標的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="destroy"></a>  CD2DBitmap::Destroy
+## <a name="cd2dbitmapdestroy"></a><a name="destroy"></a>CD2DBitmap::D
 
-終結 CD2DBitmap 物件。
+銷毀 CD2DBitmap 物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBitmap::Detach
+## <a name="cd2dbitmapdetach"></a><a name="detach"></a>CD2DBitmap::Detach
 
-中斷連結物件中的資源介面。
+從物件分離資源介面。
 
 ```
 ID2D1Bitmap* Detach();
@@ -331,11 +331,11 @@ ID2D1Bitmap* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-中斷連結的資源介面指標。
+指向分離的資源介面的指標。
 
-##  <a name="get"></a>  CD2DBitmap::Get
+## <a name="cd2dbitmapget"></a><a name="get"></a>CD2DBitmap:取得
 
-傳回 ID2D1Bitmap 介面。
+返回 ID2D1 位圖介面。
 
 ```
 ID2D1Bitmap* Get();
@@ -343,11 +343,11 @@ ID2D1Bitmap* Get();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1Bitmap 介面的指標。
+如果物件尚未初始化,則指向 ID2D1Bitmap 介面或 NULL 的指標。
 
-##  <a name="getdpi"></a>  CD2DBitmap::GetDPI
+## <a name="cd2dbitmapgetdpi"></a><a name="getdpi"></a>CD2DBitmap:GetDPI
 
-傳回的 dots per inch (DPI) 的點陣圖。
+返回點陣圖每英吋 (DPI) 的點。
 
 ```
 CD2DSizeF GetDPI() const;
@@ -355,11 +355,11 @@ CD2DSizeF GetDPI() const;
 
 ### <a name="return-value"></a>傳回值
 
-點陣圖的水平和垂直 DPI。
+位圖的水準和垂直 DPI。
 
-##  <a name="getpixelformat"></a>  CD2DBitmap::GetPixelFormat
+## <a name="cd2dbitmapgetpixelformat"></a><a name="getpixelformat"></a>CD2DBitmap::取得像素格式
 
-擷取點陣圖的像素格式和 alpha 模式
+以索點圖的像素格式和 Alpha 模式
 
 ```
 D2D1_PIXEL_FORMAT GetPixelFormat() const;
@@ -367,11 +367,11 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 
 ### <a name="return-value"></a>傳回值
 
-點陣圖的像素格式和 alpha 模式。
+點陣圖的圖元格式和 Alpha 模式。
 
-##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize
+## <a name="cd2dbitmapgetpixelsize"></a><a name="getpixelsize"></a>CD2DBitmap::取得圖元大小
 
-點陣圖的傳回大小，單位為裝置而異 （像素）。
+返回位圖的大小(以與設備相關的單位(圖元)。
 
 ```
 CD2DSizeU GetPixelSize() const;
@@ -379,11 +379,11 @@ CD2DSizeU GetPixelSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-單位為像素點陣圖的大小...
+位圖的大小(以像素為單位)。
 
-##  <a name="getsize"></a>  CD2DBitmap::GetSize
+## <a name="cd2dbitmapgetsize"></a><a name="getsize"></a>CD2DBitmap:取得大小
 
-傳回的大小，以裝置獨立畫素 (Dip)，點陣圖。
+返回點陣圖的大小(以與設備無關的圖元 (DIP)。
 
 ```
 CD2DSizeF GetSize() const;
@@ -391,11 +391,11 @@ CD2DSizeF GetSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-Dip，點陣圖的大小。
+位圖的大小(以 DIP 表示)。
 
-##  <a name="isvalid"></a>  CD2DBitmap::IsValid
+## <a name="cd2dbitmapisvalid"></a><a name="isvalid"></a>CD2DBitmap:有效
 
-檢查資源的有效性。
+檢查資源有效性。
 
 ```
 virtual BOOL IsValid() const;
@@ -403,25 +403,25 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資源無效，則為 TRUE否則為 FALSE。
+如果資源有效,則為 TRUE;否則 FALSE。
 
-##  <a name="m_bautodestroyhbmp"></a>  CD2DBitmap::m_bAutoDestroyHBMP
+## <a name="cd2dbitmapm_bautodestroyhbmp"></a><a name="m_bautodestroyhbmp"></a>CD2DBitmap:m_bAutoDestroyHBMP
 
-如果應終結 m_hBmpSrc;，則為 TRUE。否則為 FALSE。
+如果m_hBmpSrc應銷毀,則為 TRUE;否則 FALSE。
 
 ```
 BOOL m_bAutoDestroyHBMP;
 ```
 
-##  <a name="m_hbmpsrc"></a>  CD2DBitmap::m_hBmpSrc
+## <a name="cd2dbitmapm_hbmpsrc"></a><a name="m_hbmpsrc"></a>CD2DBitmap::m_hBmpSrc
 
-來源點陣圖的控制代碼。
+源點陣圖句柄。
 
 ```
 HBITMAP m_hBmpSrc;
 ```
 
-##  <a name="m_lpsztype"></a>  CD2DBitmap::m_lpszType
+## <a name="cd2dbitmapm_lpsztype"></a><a name="m_lpsztype"></a>CD2DBitmap:m_lpszType
 
 資源類型。
 
@@ -429,41 +429,41 @@ HBITMAP m_hBmpSrc;
 LPCTSTR m_lpszType;
 ```
 
-##  <a name="m_pbitmap"></a>  CD2DBitmap::m_pBitmap
+## <a name="cd2dbitmapm_pbitmap"></a><a name="m_pbitmap"></a>CD2DBitmap:m_pBitmap
 
-儲存 ID2D1Bitmap 物件的指標。
+存儲指向 ID2D1Bitmap 物件的指標。
 
 ```
 ID2D1Bitmap* m_pBitmap;
 ```
 
-##  <a name="m_sizedest"></a>  CD2DBitmap::m_sizeDest
+## <a name="cd2dbitmapm_sizedest"></a><a name="m_sizedest"></a>CD2DBitmap:m_sizeDest
 
-點陣圖目的大小。
+位圖目標大小。
 
 ```
 CD2DSizeU m_sizeDest;
 ```
 
-##  <a name="m_strpath"></a>  CD2DBitmap::m_strPath
+## <a name="cd2dbitmapm_strpath"></a><a name="m_strpath"></a>CD2DBitmap:m_strPath
 
-Botmap 檔案路徑。
+機器人對應文件路徑。
 
 ```
 CString m_strPath;
 ```
 
-##  <a name="m_uiresid"></a>  CD2DBitmap::m_uiResID
+## <a name="cd2dbitmapm_uiresid"></a><a name="m_uiresid"></a>CD2DBitmap:m_uiResID
 
-點陣圖的資源識別碼。
+位圖資源識別碼。
 
 ```
 UINT m_uiResID;
 ```
 
-##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap *
+## <a name="cd2dbitmapoperator-id2d1bitmap"></a><a name="operator_id2d1bitmap_star"></a>CD2DBitmap::操作員 ID2D1 位圖*
 
-傳回 ID2D1Bitmap 介面
+傳回 ID2D1 位元圖介面
 
 ```
 operator ID2D1Bitmap*();
@@ -471,7 +471,7 @@ operator ID2D1Bitmap*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1Bitmap 介面的指標。
+如果物件尚未初始化,則指向 ID2D1Bitmap 介面或 NULL 的指標。
 
 ## <a name="see-also"></a>另請參閱
 

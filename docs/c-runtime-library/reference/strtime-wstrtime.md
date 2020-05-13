@@ -1,9 +1,11 @@
 ---
 title: _strtime、_wstrtime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime
 - _strtime
+- _o__strtime
+- _o__wstrtime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910925"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime、_wstrtime
 
@@ -77,11 +80,13 @@ wchar_t *_wstrtime(
 
 ## <a name="remarks"></a>備註
 
-**_Strtime**函數會將目前的本機時間複製到*timestr*所指向的緩衝區。 時間格式為**hh： mm： ss** ，其中**hh**是以24小時標記法表示小時的兩位數， **mm**是代表該小時過去分鐘數的兩位數，而**ss**是代表秒數的兩位數。 例如，字串**18:23:44**代表23分鐘，過去 6 P.M. 的44秒 緩衝區長度至少必須是 9 個位元組。
+**_Strtime**函式會將目前的本機時間複製到*timestr*所指向的緩衝區。 時間格式為**hh： mm： ss** ，其中**hh**是以24小時標記法表示小時的兩位數， **mm**是代表該小時過去分鐘數的兩位數，而**ss**是代表秒數的兩位數。 例如，字串**18:23:44**代表23分鐘，過去 6 P.M. 的44秒 緩衝區長度至少必須是 9 個位元組。
 
-**_wstrtime**是寬字元版本的 **_strtime**; **_wstrtime**的引數和傳回值是寬字元字串。 除此之外，這些函式的行為相同。 如果*timestr*為**Null**指標，或如果*timestr*格式不正確，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**null** ，並將**Errno**設定為**EINVAL** （*如果* *ERANGE*的格式不正確） **，或將** **errno**設定為**timestr** 。
+**_wstrtime**是寬字元版本的 **_strtime**;**_wstrtime**的引數和傳回值是寬字元字串。 除此之外，這些函式的行為相同。 如果*timestr*為**Null**指標，或如果*timestr*格式不正確，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**null** ，並將**Errno**設定為**EINVAL** （*如果* *ERANGE*的格式不正確） **，或將** **errno**設定為**timestr** 。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

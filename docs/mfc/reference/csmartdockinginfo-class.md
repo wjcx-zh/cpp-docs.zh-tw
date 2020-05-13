@@ -1,5 +1,5 @@
 ---
-title: CSmartDockingInfo Class
+title: CSmartDockingInfo 類別
 ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: d5f918b591e1db9ff67288a8761f7554698fa761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebb5e75b5b298097cfce043bd83ec88ca0ab4030
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323992"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751302"
 ---
-# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
+# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 類別
 
 定義智慧停駐標記的外觀。
 
@@ -55,47 +55,47 @@ class CSmartDockingInfo : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CSmartDockingInfo::CopyTo](#copyto)|將目前的智慧停駐資訊參數複製到所提供[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)物件。|
+|[CSmartDocking資訊::複製到](#copyto)|將當前智慧停靠資訊參數複製到提供的[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)物件中。|
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定是否要使用目前的佈景主題色彩時，架構會顯示智慧停駐標記。|
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|指定智慧停駐標記的基底的背景色彩。|
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|指定取代的色彩`m_clrToneSrc`智慧停駐標記點陣圖中。|
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|指定的智慧停駐標記點陣圖的色彩。|
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|透明時，請指定智慧停駐標記點陣圖的色彩。|
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|指定從中央群組矩形界限的智慧停駐標記的中央群組的位移。|
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|指定群組中的所有智慧停駐標記的大小總計。|
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|定義的資源識別碼的架構會使用針對智慧停駐標記不反白顯示的點陣圖。|
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|定義的資源識別碼的架構會使用針對智慧停駐標記反白顯示的點陣圖。|
+|[CSmartDocking資訊:m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定在框架顯示智慧停靠標記時是否使用當前主題顏色。|
+|[CSmartDocking資訊::m_clrBaseBackground](#m_clrbasebackground)|指定智慧停靠標記的基本背景顏色。|
+|[CSmartDocking資訊:m_clrToneDest](#m_clrtonedest)|指定在智慧停靠標記點`m_clrToneSrc`圖中替換的顏色。|
+|[CSmartDocking資訊:m_clrToneSrc](#m_clrtonesrc)|指定智慧停靠標記位圖的顏色。|
+|[CSmartDocking資訊:m_clrTransparent](#m_clrtransparent)|指定智慧停靠標記點圖在透明時的顏色。|
+|[CSmartDocking資訊:m_nCentralGroupOffset](#m_ncentralgroupoffset)|指定智慧停靠標記的中心組與中心組矩形邊界的偏移量。|
+|[CSmartDocking資訊:m_sizeTotal](#m_sizetotal)|指定組中所有智慧停靠標記的總大小。|
+|[CSmartDocking資訊:m_uiMarkerBmpResID](#m_uimarkerbmpresid)|定義框架用於未突出顯示的智慧停靠標記的點陣圖的資源標識。|
+|[CSmartDocking資訊:m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|定義框架用於突出顯示的智慧停靠標記的位圖的資源標識。|
 
 ## <a name="remarks"></a>備註
 
-Framework 控點內部智慧停駐標記。 下圖顯示標準的智慧停駐標記：
+框架在內部處理智慧停靠標記。 下圖顯示了標準智慧停靠標記:
 
 ![智慧停駐的標準標記](../../mfc/reference/media/nextsdmarkers.png "智慧停駐的標準標記")
 
-在此圖中，在左側的映像會顯示沒有啟用索引標籤停駐集中的群組智慧停駐標記。 中間影像顯示右邊緣智慧停駐標記。 右側影像顯示停駐索引標籤啟用有中央群組智慧停駐標記。 中央群組智慧停駐標記有一個主要的點陣圖和五個智慧停駐標記的點陣圖。
+在此圖中,左側的圖像顯示未啟用與選項卡停靠的中心組智慧停靠標記。 中間的圖像顯示右邊緣智慧停靠標記。 右側的圖像顯示一個中央組智慧停靠標記,該標記已啟用了停靠選項卡。 中央組智慧停靠標記具有主位圖和五個智慧停靠標記位圖。
 
-您可以自訂智慧停駐標記的下列參數：
+您可以自訂智慧嵌入標記的以下參數:
 
-- 色彩。 例如，您可以將標記在圖中的藍色色彩取代任何使用者定義的色彩。
+- 色彩。 例如,您可以將圖形中標記的藍色替換為任何使用者定義的顏色。
 
-- 透明色彩。
+- 透明顏色。
 
-- 週框矩形框線從中央群組中的智慧停駐標記的位移。
+- 中心組中智慧停靠標記的偏移量與邊界矩形的邊框。
 
-- 主要點陣圖表示中央的群組。
+- 表示中心組的主位圖。
 
-- 代表規則和反白顯示的點陣圖智慧停駐標記。
+- 表示常規和突出顯示的智慧停靠標記的位圖。
 
-下圖顯示已自訂的智慧停駐標記的範例：
+下圖顯示了已自訂的智慧停靠標記的範例:
 
 ![智慧停駐的自訂標記](../../mfc/reference/media/nextsdmarkerscustom.png "智慧停駐的自訂標記")
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -103,24 +103,24 @@ Framework 控點內部智慧停駐標記。 下圖顯示標準的智慧停駐標
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxDockingManager.h
+**標題:** afxDockingManager.h
 
-##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo
+## <a name="csmartdockinginfocopyto"></a><a name="copyto"></a>CSmartDocking資訊::複製到
 
-將目前的智慧停駐參數複製到所提供[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)物件。
+將當前智慧停靠參數複製到提供的[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)物件中。
 
-```
+```cpp
 void CopyTo(CSmartDockingInfo& params);
 ```
 
 ### <a name="parameters"></a>參數
 
 *params*<br/>
-[out]型別的物件`CSmartDockingInfo`，並填入目前的智慧停駐參數。
+[出]使用當前智慧停靠`CSmartDockingInfo`參數填充的類型物件。
 
-##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading
+## <a name="csmartdockinginfom_busethemecolorinshading"></a><a name="m_busethemecolorinshading"></a>CSmartDocking資訊:m_bUseThemeColorInShading
 
-指定是否要使用目前的佈景主題色彩時，架構會顯示智慧停駐標記。
+指定在框架顯示智慧停靠標記時是否使用當前主題顏色。
 
 ```
 BOOL m_bUseThemeColorInShading;
@@ -128,21 +128,21 @@ BOOL m_bUseThemeColorInShading;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，會使用目前的佈景主題色彩; 繪製標記否則這些標記會繪製以淺藍色顯示。
+如果為 TRUE,則使用當前主題顏色繪製標記;如果為 TRUE,則使用當前主題顏色繪製標記。否則標記用淺藍色繪製。
 
 預設值為 FALSE。
 
-##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground
+## <a name="csmartdockinginfom_clrbasebackground"></a><a name="m_clrbasebackground"></a>CSmartDocking資訊::m_clrBaseBackground
 
-指定智慧停駐標記的基底的背景色彩。
+指定智慧停靠標記的基本背景顏色。
 
 ```
 COLORREF m_clrBaseBackground;
 ```
 
-##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest
+## <a name="csmartdockinginfom_clrtonedest"></a><a name="m_clrtonedest"></a>CSmartDocking資訊:m_clrToneDest
 
-指定將會取代的色彩`m_clrToneSrc`智慧停駐標記點陣圖中。
+指定將在智慧停靠標記點`m_clrToneSrc`圖中替換的顏色。
 
 ```
 COLORREF m_clrToneDest;
@@ -150,13 +150,13 @@ COLORREF m_clrToneDest;
 
 ### <a name="remarks"></a>備註
 
-設定此值，以程式設計方式變更標記點陣圖的色彩。 比方說，如果您想要變更架構所隨附的標準標記的色彩，此值設所需的色彩。 根據預設， [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)設為 61，123 (241） 的 RGB （藍色彩）。
+設定此值以以程式設計方式更改標記點圖的顏色。 例如,如果要更改框架中提供的標準標記的顏色,則將此值設置為所需的顏色。 默認情況下[,CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)設置為 RGB(61、123、241)(藍色)。
 
-若要變更自訂標記的色彩，您必須同時指定`m_clrToneDest`和`m_clrToneSrc`。
+要改變自訂標記的顏色,必須選擇`m_clrToneDest`與`m_clrToneSrc`。
 
-##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc
+## <a name="csmartdockinginfom_clrtonesrc"></a><a name="m_clrtonesrc"></a>CSmartDocking資訊:m_clrToneSrc
 
-指定的智慧停駐標記點陣圖的色彩。
+指定智慧停靠標記位圖的顏色。
 
 ```
 COLORREF m_clrToneSrc;
@@ -164,13 +164,13 @@ COLORREF m_clrToneSrc;
 
 ### <a name="remarks"></a>備註
 
-只有在您想要自訂點陣圖的色彩取代另一種色彩時，請設定此值。 您沒有設定此值，如果您要變更的色彩 （提供的架構） 的標準標記。
+僅當要將自定義位圖的顏色替換為其他顏色時,才設置此值。 如果要更改標準(提供的框架)標記的顏色,則不必設置此值。
 
-使用`(COLORREF)-1`保留空白智慧停駐群組的成員。
+用於`(COLORREF)-1`使智慧停靠組的成員為空。
 
-##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent
+## <a name="csmartdockinginfom_clrtransparent"></a><a name="m_clrtransparent"></a>CSmartDocking資訊:m_clrTransparent
 
-透明時，請指定智慧停駐標記點陣圖的色彩。
+指定智慧停靠標記點圖在透明時的顏色。
 
 ```
 COLORREF m_clrTransparent;
@@ -178,11 +178,11 @@ COLORREF m_clrTransparent;
 
 ### <a name="remarks"></a>備註
 
-當您在停駐的群組中顯示自訂標記和自訂點陣圖時，您必須設定此值。
+在停靠組中顯示自訂標記和自定義點陣圖時,必須設置此值。
 
-##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset
+## <a name="csmartdockinginfom_ncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a>CSmartDocking資訊:m_nCentralGroupOffset
 
-指定智慧停駐標記的中央的群組和中央群組矩形界限之間的位移。
+指定智慧停靠標記的中心組和中心組矩形的邊界之間的偏移量。
 
 ```
 int m_nCentralGroupOffset;
@@ -190,11 +190,11 @@ int m_nCentralGroupOffset;
 
 ### <a name="remarks"></a>備註
 
-指定此值，如果您想要變更自訂標記與智慧停駐標記的中央群組的界限之間的預設位移。 預設位移為 5 像素。
+如果要更改自定義標記和智慧停靠標記中央組的邊界之間的預設偏移量,請指定此值。 預設偏移量為 5 圖元。
 
-##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal
+## <a name="csmartdockinginfom_sizetotal"></a><a name="m_sizetotal"></a>CSmartDocking資訊:m_sizeTotal
 
-指定封入中央的群組中的所有智慧停駐標記的周框的大小總計。
+指定包含中心組中所有智慧停靠標記的邊界矩形的總大小。
 
 ```
 CSize m_sizeTotal;
@@ -202,11 +202,11 @@ CSize m_sizeTotal;
 
 ### <a name="remarks"></a>備註
 
-設定`m_sizeTotal`中央群組標記的週框矩形的大小。 您必須指定這個值，如果您使用自訂點陣圖的標記。
+設置為`m_sizeTotal`中心組標記的邊界矩形的大小。 如果要對標記使用自定義點陣圖,則需要指定此值。
 
-##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID
+## <a name="csmartdockinginfom_uimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a>CSmartDocking資訊:m_uiMarkerBmpResID
 
-定義的資源識別碼用於非反白顯示自訂智慧停駐標記的點陣圖。
+定義用於非突出顯示自定義智慧停靠標記的點陣圖的資源標識。
 
 ```
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
@@ -214,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 
 ### <a name="remarks"></a>備註
 
-這個陣列中填入的資源識別碼代表智慧停駐標記的點陣圖。 AFX_SD_MARKERS_NUM 目前定義為 5。 您填滿陣列，如下所示：
+用表示智慧停靠標記的位圖的資源標識填充此陣列。 AFX_SD_MARKERS_NUM當前定義為 5。 以如下方式填充陣列:
 
 ```cpp
 params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;
@@ -224,9 +224,9 @@ params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;
 params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;
 ```
 
-##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID
+## <a name="csmartdockinginfom_uimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a>CSmartDocking資訊:m_uiMarkerLightBmpResID
 
-定義的資源識別碼用於反白顯示自訂的智慧停駐標記的點陣圖。
+定義用於突出顯示的自定義智慧停靠標記的點陣圖的資源標識。
 
 ```
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
@@ -234,7 +234,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 
 ### <a name="remarks"></a>備註
 
-這個陣列中填入的資源識別碼代表反白顯示的智慧停駐標記的點陣圖。 AFX_SD_MARKERS_NUM 目前定義為 5。 您填滿陣列，如下所示：
+用表示突出顯示的智慧停靠標記的位圖的資源標識填充此陣列。 AFX_SD_MARKERS_NUM當前定義為 5。 以如下方式填充陣列:
 
 ```cpp
 params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;

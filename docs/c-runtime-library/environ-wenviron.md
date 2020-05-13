@@ -13,19 +13,19 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748919"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349372"
 ---
-# <a name="environ-wenviron"></a>_environ、_wenviron
+# <a name="_environ-_wenviron"></a>_environ、_wenviron
 
 `_environ` 變數是指標，指向多位元組字元字串之指標的陣列，而該字串構成此處理序環境。 這個全域變數已由更安全的版本 [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 和 [_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md) 所取代，這些應該用來取代全域變數。 `_environ` 在 Stdlib.h 中宣告。
 
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -56,7 +56,7 @@ extern wchar_t **_wenviron;
 當此環境的兩個複本 (MBCS 和 Unicode) 在此程式中同時存在時，這個執行階段系統必須同時維護兩份複本，造成執行時間較慢。 例如，每當您呼叫 `_putenv` 時，也會自動執行對 `_wputenv` 的呼叫，使得這兩個環境字串對應。
 
 > [!CAUTION]
->  在罕見情況下，當這個執行階段系統正同時維護此環境的 Unicode 版本和多位元組版本時，這兩個環境版本可能無法完全對應。 這是因為雖然任何唯一的多位元組字元字串會對應到唯一的 Unicode 字串，但從唯一的 Unicode 字串對應到多位元組字元字串並不一定唯一。 因此，兩個不同的 Unicode 字串可能對應至相同的多位元組字串。
+> 在罕見情況下，當這個執行階段系統正同時維護此環境的 Unicode 版本和多位元組版本時，這兩個環境版本可能無法完全對應。 這是因為雖然任何唯一的多位元組字元字串會對應到唯一的 Unicode 字串，但從唯一的 Unicode 字串對應到多位元組字元字串並不一定唯一。 因此，兩個不同的 Unicode 字串可能對應至相同的多位元組字串。
 
 當使用 [/MD](../build/reference/md-mt-ld-use-run-time-library.md) 或 `/MDd` 連結時，在 Unicode 內容中輪詢 `_environ` 是無意義的。 對於此 CRT DLL，該程式的類型 (寬或多位元組) 是未知的。 因為多位元組類型最可能的情節，所以只建立多位元組類型。
 

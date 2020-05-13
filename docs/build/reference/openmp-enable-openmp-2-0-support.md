@@ -1,5 +1,5 @@
 ---
-title: /openmp （啟用 OpenMP 支援）
+title: /開啟(開啟 OpenMP 支援)
 ms.date: 04/15/2019
 f1_keywords:
 - /openmp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: caa06d89c590abd2b3a74a5a6b118d6ba4acd910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3454650bfaaacd756e5cfc73df056441a39f5ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336198"
 ---
-# <a name="openmp-enable-openmp-support"></a>/openmp （啟用 OpenMP 支援）
+# <a name="openmp-enable-openmp-support"></a>/開啟(開啟 OpenMP 支援)
 
-可讓編譯器處理[ `#pragma omp` ](../../preprocessor/omp.md)支援 OpenMP 指示詞。
+使編譯器處理[`#pragma omp`](../../preprocessor/omp.md)指令以支援 OpenMP。
 
 ## <a name="syntax"></a>語法
 
 ::: moniker range=">= vs-2019"
 
-> **/openmp**\[**:**__experimental__]
+> **/openmp**\[**:**__實驗__|
 
 ::: moniker-end
 
@@ -35,47 +35,47 @@ ms.locfileid: "62320210"
 
 ## <a name="remarks"></a>備註
 
-`#pragma omp` 用來指定[指示詞](../../parallel/openmp/reference/openmp-directives.md)並[子句](../../parallel/openmp/reference/openmp-clauses.md)。 如果 **/openmp**未在編譯中，編譯器會忽略 OpenMP 子句和指示詞指定。 [OpenMP 函式](../../parallel/openmp/reference/openmp-functions.md)呼叫會處理編譯器即使 **/openmp**未指定。
+`#pragma omp`指定[指令](../../parallel/openmp/reference/openmp-directives.md)與[子語](../../parallel/openmp/reference/openmp-clauses.md)。 如果編譯中未指定 **/openmp,** 編譯器將忽略 OpenMP 子句和指令。 即使未指定 **/openmp,** 編譯器也會處理[openMP 函數](../../parallel/openmp/reference/openmp-functions.md)呼叫。
 
 ::: moniker range=">= vs-2019"
 
-C++編譯器目前支援 OpenMP 2.0 標準。 不過，Visual Studio 2019 現在也提供 SIMD 功能。 若要使用 SIMD，使用編譯 **/openmp： 實驗性**選項。 此選項可讓這兩個一般 OpenMP 功能，以及其他 OpenMP SIMD 功能無法使用時 **/openmp**切換。
+C++編譯器目前支援 OpenMP 2.0 標準。 然而,Visual Studio 2019 現在也提供 SIMD 功能。 要使用 SIMD,請使用 **/openmp:實驗**選項進行編譯。 此選項支援常用的 OpenMP 功能,以及使用 **/openmp**開關時不可用的其他 OpenMP SIMD 功能。
 
 ::: moniker-end
 
-藉由使用這兩個編譯的應用程式 **/openmp**並 **/clr**只能在單一應用程式網域的程序中執行。 不支援多個應用程式定義域。 也就是，當模組建構函式 (`.cctor`) 會執行，它會偵測處理程序會使用來編譯 **/openmp**，如果應用程式載入非預設的執行階段。 如需詳細資訊，請參閱 < [appdomain](../../cpp/appdomain.md)， [/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md)，並[初始化混合組件](../../dotnet/initialization-of-mixed-assemblies.md)。
+使用 **/openmp**和 **/clr**編譯的應用程式只能在單個應用程式域進程中運行。 不支援多個應用程式域。 也就是說,當運行模組建構函數 ()`.cctor`時,它會檢測進程是否使用 **/openmp**編譯,以及應用是否載入到非預設運行時。 有關詳細資訊,請參閱[應用程式網](../../cpp/appdomain.md)[域 /clr(通用語言執行時編譯)](clr-common-language-runtime-compilation.md)和[混合程式集的初始化](../../dotnet/initialization-of-mixed-assemblies.md)。
 
-如果您嘗試將編譯使用這兩個應用程式 **/openmp**並 **/clr**非預設應用程式定義域，<xref:System.TypeInitializationException>偵錯工具，之外擲回例外狀況和`OpenMPWithMultipleAppdomainsException`例外狀況在 偵錯工具會擲回。
+如果嘗試將使用 **/openmp**和 **/clr**編譯的應用載入非預設應用程式<xref:System.TypeInitializationException>域中, 則異常將引發調試器之外,除`OpenMPWithMultipleAppdomainsException`錯器中將引發異常。
 
-在下列情況下，可能也會引發這些例外狀況：
+在以下情況下也可以引發這些異常:
 
-- 如果您的應用程式會使用編譯 **/clr**而非 **/openmp**，且已載入的非預設應用程式定義域，其中的程序包括使用編譯的應用程式 **/openmp**.
+- 如果應用程式使用 **/clr**編譯,但使用 **/openmp**編譯,並且載入非預設應用程式域中,其中該過程包括使用 **/openmp**編譯的應用程式。
 
-- 如果您傳遞您 **/clr**應用程式至公用程式，例如[regasm.exe](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)，其目標組件載入至非預設應用程式定義域。
+- 如果將 **/clr**應用傳遞給實用程式,例如[regasm.exe,](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)該實用程式將其目標程式集載入到非預設應用程式域中。
 
-Common language runtime 的程式碼存取安全性並不適用於 OpenMP 區域。 如果您套用的 CLR 程式碼存取安全性 」 屬性，在平行區域之外，它不會處於作用中平行區域。
+通用語言運行時的代碼訪問安全性在OpenMP區域中不起作用。 如果在並行區域之外應用 CLR 代碼存取安全屬性,則該屬性在並行區域中無效。
 
-Microsoft 不建議您撰寫 **/openmp**應用程式，讓部分信任的呼叫端。 請勿使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>，或任何 CLR 程式碼存取安全性屬性。
+Microsoft 不建議您編寫允許部分受信任的調用方的 **/openmp**應用。 不要使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>或任何 CLR 代碼存取安全屬性。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 依序展開**組態屬性** > **C /C++** > **語言**屬性頁。
+1. 展開**配置屬性** > **C/C++** > **語言**屬性頁。
 
 1. 修改**OpenMP 支援**屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OpenMP%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OpenMP%2A>＞。
 
 ## <a name="example"></a>範例
 
-下列範例會示範一些與它在啟動之後，使用執行緒集區的執行緒集區啟動的影響。 假設 x64，單一核心，雙處理器，執行緒集區需要大約 16 毫秒啟動。 在那之後，那里是小小額外成本的執行緒集區。
+下面的示例顯示了線程池啟動與啟動后使用線程池的一些影響。 假設一個x64,單核,雙處理器,線程池需要大約16毫秒啟動。 之後,線程池的額外費用很小。
 
-當您編譯使用 **/openmp**，第二個呼叫 test2 絕對不會執行任何時間超過您使用編譯如果 **/openmp-**，因為沒有任何執行緒集區啟動。 百萬個反覆項目，在 **/openmp**版本的速度比 **/openmp-** test2 的第二個呼叫的版本。 在 25 的反覆項目，同時 **/openmp-** 並 **/openmp**版本註冊小於時鐘資料粒度。
+使用 **/openmp**編譯時,對 test2 的第二個調用永遠不會比使用 **/openmp-** 編譯時運行的時間長,因為沒有線程池啟動。 在一百萬次反覆運算中 **,/openmp**版本比第二個調用 test2 的 **/openmp 版本**快。 在 25 次反覆運算中 **,/openmp 和** **/openmp**版本註冊小於時鐘粒度。
 
-如果應用程式中有一個迴圈，而且它會在低於 15 毫秒 （調整您的電腦上的額外負荷），執行 **/openmp**可能不適當。 如果是更高版本，您可能要考慮使用 **/openmp**。
+如果應用程式中只有一個循環,並且運行在小於 15 ms(根據電腦上的大致開銷進行調整)中 **,/openmp**可能不合適。 如果它更高,您可能需要考慮使用 **/openmp**。
 
 ```cpp
 // cpp_compiler_options_openmp.cpp
@@ -124,5 +124,5 @@ int main(int argc, char* argv[]) {
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md) \
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md) \
-[在 MSVC 中的 OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md) \
+[MSVC 中的 OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)

@@ -1,17 +1,18 @@
 ---
 title: 檔案系統巡覽
-ms.date: 11/04/2016
+description: 如何使用C++標準庫文件系統 API 來導航檔案系統。
+ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368433"
 ---
 # <a name="file-system-navigation"></a>檔案系統巡覽
 
-\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 一律會在 Windows 上傳回**false** 。
+\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 因為它是跨平臺的,它包含與 Windows 系統無關的 API。 例如,`is_fifo(const path&)`始終在 Windows 上傳回**false。**
 
 ## <a name="overview"></a>概觀
 
@@ -23,7 +24,7 @@ ms.locfileid: "80076534"
 
 - 撰寫、分解以及比較路徑
 
-- 建立、複製以及刪除目錄
+- 建立、複製與移除目錄
 
 - 複製和刪除檔案
 
@@ -33,7 +34,7 @@ ms.locfileid: "80076534"
 
 ### <a name="constructing-and-composing-paths"></a>建構和組成路徑
 
-Windows (自從 XP 以來) 中的路徑會以 Unicode 原生儲存。 [path](../standard-library/path-class.md) 類別會自動執行所有必要的字串轉換。 除了接受寬字元陣列與窄字元陣列，也接受 UTF8 或 UTF16 格式的 `std::string` 及 `std::wstring` 類型。 `path` 類別也會自動正規化路徑分隔符號。 您可以使用單一正斜線做為建構函式引數中的目錄分隔符號。 這可讓您使用相同的字串儲存 Windows 和 UNIX 環境中的路徑：
+Windows (自從 XP 以來) 中的路徑會以 Unicode 原生儲存。 [路徑](../standard-library/path-class.md)類會自動執行所有必要的字串轉換。 它接受寬字元陣列和窄字元陣列的參數,`std::string``std::wstring`以及格式化為 UTF8 或 UTF16 的類型。 `path` 類別也會自動正規化路徑分隔符號。 您可以使用單一正斜線做為建構函式引數中的目錄分隔符號。 此分隔符允許您使用相同的字串在 Windows 和 UNIX 環境中儲存路徑:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -41,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-若要串連兩個路徑，可以使用多載的 `/` 及 `/=` 運算子。這兩個運算子類似於 `+` 及 `+=` 上的 `std::string` 和 `std::wstring` 運算子。 如果您沒有的話，`path` 物件可以方便地提供分隔符號。
+若要串連兩個路徑，可以使用多載的 `/` 及 `/=` 運算子。這兩個運算子類似於 `std::string` 及 `std::wstring` 上的 `+` 和 `+=` 運算子。 如果沒有`path`,物件將方便地提供分隔符。
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -50,18 +51,18 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>檢查路徑
 
-Path 類別有數個方法可傳回路徑本身各個部分的相關資訊，且不同於它所指的檔案系統實體。 您可以取得根、相對路徑、檔名、副檔名等等。 您可以反覆查看路徑物件，檢查階層中的所有資料夾。 下列範例將顯示如何反覆查看路徑 (而非它所指的目錄)，以及擷取其各部分的相關資訊。
+路徑類具有多種方法來返回有關路徑本身各個部分的資訊。 此資訊與它可能引用的檔案系統實體的資訊不同。 您可以取得根、相對路徑、檔名、副檔名等等。 您可以反覆查看路徑物件，檢查階層中的所有資料夾。 下面的範例演示如何在路徑物件上反覆運算。 以及如何檢索有關其部件的資訊。
 
 ```cpp
 // filesystem_path_example.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <sstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
 wstring DisplayPathInfo()
 {
@@ -88,7 +89,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -119,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>比較路徑
 
-`path` 類別會多載與 `std::string` 及 `std::wstring`相同的比較運算子。 當比較兩個路徑時，您是在正規化分隔符號之後執行字串比較。 如果找不到結尾的斜線 (或反斜線)，即代表沒有將其加入，並會影響比較。 下列範例將示範如何比較路徑值：
+`path` 類別會多載與 `std::string` 及 `std::wstring`相同的比較運算子。 比較兩條路徑時,在分隔符規範化後進行字串比較。 如果缺少尾隨斜杠(或反斜杠),則不會添加它,這會影響比較。 下列範例將示範如何比較路徑值：
 
 ```cpp
 wstring ComparePaths()
@@ -154,22 +155,22 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 
 ### <a name="converting-between-path-and-string-types"></a>在路徑和字串類型之間轉換
 
-`path` 物件隱含可以轉換成 `std::wstring` 或 `std::string`的能力。 這表示您可以將路徑傳遞至 [wofstream::open](../standard-library/basic-ofstream-class.md#open) 這類函式，如此範例中所示：
+`path` 物件隱含可以轉換成 `std::wstring` 或 `std::string`的能力。 這意味著您可以將路徑傳遞給函數,如[wofstream::open,](../standard-library/basic-ofstream-class.md#open)如本示例所示:
 
 ```cpp
 // filesystem_path_conversion.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
-int main(int argc, char* argv[])
+int main()
 {
-    wchar_t* p = L"C:/Users/Public/Documents";
+    const wchar_t* p{ L"C:/Users/Public/Documents" };
     path filePath(p);
 
     filePath /= L"NewFile.txt";
@@ -209,4 +210,4 @@ Press Enter to exit
 
 \<filesystem> 標頭提供 [directory_iterator](../standard-library/directory-iterator-class.md) 類型，可反覆查看單一目錄，並提供 [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) 類別，以遞迴方式反覆查看目錄及其子目錄。 當您藉由傳遞 `path` 來建構迭代器之後，迭代器會指向路徑中的第一個 directory_entry。 透過呼叫預設建構函式來建立結尾迭代器。
 
-當逐一查看目錄時，您可能會遇到幾種項目，包括但不限於目錄、檔案、符號連結和通訊端檔案。 `directory_iterator` 會以 [directory_entry](../standard-library/directory-entry-class.md) 物件形式傳回它的項目。
+在瀏覽目錄時,您可能會發現多種類型的專案。 這些專案包括目錄、檔、符號連結、套接字檔等。 `directory_iterator` 會以 [directory_entry](../standard-library/directory-entry-class.md) 物件形式傳回它的項目。

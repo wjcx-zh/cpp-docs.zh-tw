@@ -13,21 +13,21 @@ ms.locfileid: "64342246"
 ---
 # <a name="checking-for-memory-overwrites"></a>檢查記憶體覆寫
 
-如果您收到存取違規堆積操作函式的呼叫上時，很可能您的程式已損毀堆積。 這種情況的一般症狀會是：
+如果您對堆積操作函式的呼叫收到存取違規，可能是您的程式已損毀堆積。 這種情況的常見徵兆會是：
 
 ```
 Access Violation in _searchseg
 ```
 
-[_Heapchk](../c-runtime-library/reference/heapchk.md)函式是適用於這兩個偵錯和發行組建 (Windows NT) 來驗證執行的階段程式庫堆積的完整性。 您可以使用`_heapchk`在相同的方式為`AfxCheckMemory`函式來找出堆積覆寫時，例如：
+在 debug 和 release 組建（僅限 Windows NT）中都有提供[_heapchk](../c-runtime-library/reference/heapchk.md)函式，以驗證執行時間程式庫堆積的完整性。 您可以使用`_heapchk`與函式大致相同的方式`AfxCheckMemory`來隔離堆積覆寫，例如：
 
 ```
 if(_heapchk()!=_HEAPOK)
    DebugBreak();
 ```
 
-如果此函式發生問題時，您需要隔離此時堆積已損毀。
+如果此函式失敗，您需要找出堆積損毀的時間點。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [解決發行組建的問題](fixing-release-build-problems.md)

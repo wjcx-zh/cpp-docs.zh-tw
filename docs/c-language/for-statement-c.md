@@ -5,11 +5,11 @@ helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
 ms.openlocfilehash: df00bcab2f9f9e51a6f37e19670b6cd240fa5cc4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233640"
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C)
 
@@ -17,8 +17,8 @@ ms.locfileid: "56152829"
 
 ## <a name="syntax"></a>語法
 
-*iteration-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**for** **(** *init-expression*<sub>opt</sub> **;** *cond-expression*<sub>opt</sub> **;** *loop-expression*<sub>opt</sub> **)** *statement*
+*反復專案語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**for** **（** *init-運算式*<sub>opt</sub> **;** *導線運算式*<sub>opt</sub> **;** *迴圈運算式*<sub>opt</sub> **）** *語句*
 
 **for** 陳述式的執行如下所述：
 
@@ -78,6 +78,6 @@ Number of spaces: 4
 Number of tabs: 2
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [陳述式](../c-language/statements-c.md)

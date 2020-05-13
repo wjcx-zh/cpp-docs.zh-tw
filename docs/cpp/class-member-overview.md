@@ -7,40 +7,40 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: 7847de072b2c0d5b95597e88f9ebf7e2ad63e180
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cb978434707a9a7808b3388fc541ce4e0d996b0f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180949"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366682"
 ---
 # <a name="class-member-overview"></a>類別成員概觀
 
-類別或結構包含其成員。 類別所執行的工作是由其成員函式執行。 它所維護的狀態會儲存在其資料成員中。 成員的初始化是由「函式」完成，而清除工作（例如釋放記憶體和釋出資源）則由「析構函式」完成。 在 C++11 和更新版本中，可以 (且通常應該) 在宣告時初始化資料成員。
+類別或結構包含其成員。 類別所執行的工作是由其成員函式執行。 它所維護的狀態會儲存在其資料成員中。 成員的初始化由構造函數完成,清理工作(如釋放記憶體和資源釋放)由析構函數完成。 在 C++11 和更新版本中，可以 (且通常應該) 在宣告時初始化資料成員。
 
 ## <a name="kinds-of-class-members"></a>類別成員的類型
 
 成員分類的完整清單如下：
 
-- [特殊成員](special-member-functions.md)函式。
+- [特別會員職能](special-member-functions.md).
 
-- [成員函式的總覽](overview-of-member-functions.md)。
+- [成員職能概述](overview-of-member-functions.md)。
 
-- 包含內建類型和其他使用者定義類型的[資料成員](static-members-cpp.md)。
+- [數據成員](static-members-cpp.md),包括內置類型和其他使用者定義的類型。
 
 - 操作員
 
-- [嵌套類別](nested-class-declarations.md)宣告和。）
+- [嵌套類聲明](nested-class-declarations.md)和.
 
 - [等位](unions.md)
 
-- [Enumerations](../cpp/enumerations-cpp.md)列舉。
+- [Enten](../cpp/enumerations-cpp.md)
 
 - [位欄位](../cpp/cpp-bit-fields.md)。
 
 - [朋友](../cpp/friend-cpp.md)。
 
-- [別名和 typedef](../cpp/aliases-and-typedefs-cpp.md)。
+- [別名和類型化。](../cpp/aliases-and-typedefs-cpp.md)
 
     > [!NOTE]
     >  前述清單包含 Friend，是因為它們包含在類別宣告中。 不過，它們不是真正的類別成員，因為它們不在類別的範圍內。
@@ -92,11 +92,11 @@ int TestRun::_instances{ 0 };
 
 ## <a name="member-accessibility"></a>成員存取範圍
 
-成員清單中所宣告類別的成員。 類別的成員清單可以使用稱為存取規範的關鍵字，分割成任何數目的**私**用、**受保護**和**公用**區段。  冒號 **：** 必須遵循存取規範。  這些區段不需要是連續的，也就是說，這些關鍵字中任何一個都可以在成員清單中出現多次。  關鍵字會指定到下一個存取指定名稱，或右大括號之前所有成員的存取權限。 如需詳細資訊，請參閱[成員C++存取控制（）](../cpp/member-access-control-cpp.md)。
+成員清單中所宣告類別的成員。 類的成員清單可以使用稱為訪問指定器的關鍵字分為任意數量的**私有**、**受保護**和**公共**部分。  冒號 **:** 必須遵循訪問指定器。  這些區段不需要是連續的，也就是說，這些關鍵字中任何一個都可以在成員清單中出現多次。  關鍵字會指定到下一個存取指定名稱，或右大括號之前所有成員的存取權限。 有關詳細資訊,請參閱[成員存取控制 (C++)](../cpp/member-access-control-cpp.md)。
 
 ## <a name="static-members"></a>靜態成員
 
-資料成員可以宣告為靜態，這表示類別的所有物件都可以存取其相同複本。 成員函式可以宣告為靜態，在此情況下，它只能存取類別的靜態資料成員（而且沒有*此*指標）。 如需詳細資訊，請參閱[靜態資料成員](../cpp/static-members-cpp.md)。
+資料成員可以宣告為靜態，這表示類別的所有物件都可以存取其相同複本。 成員函數可以聲明為靜態函數,在這種情況下,它只能訪問類的靜態數據成員(並且沒有*此*指標)。 有關詳細資訊,請參閱[靜態資料成員](../cpp/static-members-cpp.md)。
 
 ## <a name="special-member-functions"></a>特殊成員函式
 
@@ -106,15 +106,15 @@ int TestRun::_instances{ 0 };
 
 1. 複製建構函式
 
-1. **（C + + 11）** 移動構造函式
+1. **(C++11)** 移動建構函式
 
 1. 複製指派運算子
 
-1. **（C + + 11）** 移動指派運算子
+1. **(C++11)** 移動配置運算子
 
 1. 解構函式
 
-如需詳細資訊，請參閱[特殊成員](../cpp/special-member-functions.md)函式。
+有關詳細資訊,請參閱[特殊成員函數](../cpp/special-member-functions.md)。
 
 ## <a name="memberwise-initialization"></a>成員方式初始化
 
@@ -142,7 +142,7 @@ int main()
 
 如果成員在建構函式中獲指派值，該值會覆寫用來在宣告時初始化成員的值。
 
-特定類別類型的所有物件只會有一個共用的靜態資料成員複本。 靜態資料成員必須以檔案範圍定義，而且可以依檔案範圍初始化 （如需靜態資料成員的詳細資訊，請參閱[靜態資料成員](../cpp/static-members-cpp.md)）。下列範例顯示如何執行這些初始化：
+特定類別類型的所有物件只會有一個共用的靜態資料成員複本。 靜態資料成員必須以檔案範圍定義，而且可以依檔案範圍初始化  (有關靜態資料成員的詳細資訊,請參閱[靜態資料成員](../cpp/static-members-cpp.md)。下面的範例展示如何執行這些初始化:
 
 ```cpp
 // class_members2.cpp
@@ -168,7 +168,7 @@ int CanInit2::j = i;
 ```
 
 > [!NOTE]
->  類別名稱 `CanInit2` 前面必須加上 `i`，才能將所要定義的 `i` 指定為 `CanInit2` 類別的成員。
+> 類別名稱 `CanInit2` 前面必須加上 `i`，才能將所要定義的 `i` 指定為 `CanInit2` 類別的成員。
 
 ## <a name="see-also"></a>另請參閱
 

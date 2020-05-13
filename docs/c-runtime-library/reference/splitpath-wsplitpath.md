@@ -1,9 +1,11 @@
 ---
 title: _splitpath、_wsplitpath
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsplitpath
 - _splitpath
+- _o__splitpath
+- _o__wsplitpath
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: a502977faf91d744868c4aef79b3a40ca240a90f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1d24565a912d74060e60024dcfd90b8018cae32d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958045"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920274"
 ---
 # <a name="_splitpath-_wsplitpath"></a>_splitpath、_wsplitpath
 
@@ -71,23 +74,25 @@ void _wsplitpath(
 *path*<br/>
 完整路徑。
 
-*drive*<br/>
-磁碟機號，後面接著冒號（ **：** ）。 如果您不需要磁碟機號，您可以為此參數傳遞**Null** 。
+*硬碟磁碟機*<br/>
+磁碟機號，後面接著冒號（**：**）。 如果您不需要磁碟機號，您可以為此參數傳遞**Null** 。
 
 *dir*<br/>
-目錄路徑，包括結尾斜線。 可以使用正 **/** 斜線（）、 **\\** 反斜線（）或兩者。 如果您不需要目錄路徑，您可以為此參數傳遞**Null** 。
+目錄路徑，包括結尾斜線。 可以使用正**/** 斜線（）、 **\\**反斜線（）或兩者。 如果您不需要目錄路徑，您可以為此參數傳遞**Null** 。
 
 *fname*<br/>
 基底檔名 (無副檔名)。 如果您不需要檔案名，可以針對這個參數傳遞**Null** 。
 
-*ext*<br/>
-副檔名，包括前置句點（ **.** ）。 如果您不需要副檔名，則可以傳遞此參數的**Null** 。
+*分機*<br/>
+副檔名，包括前置句點（**.**）。 如果您不需要副檔名，則可以傳遞此參數的**Null** 。
 
 ## <a name="remarks"></a>備註
 
-**_Splitpath**函式會將路徑分割成四個元件。 **_splitpath**會自動將多位元組字元字串引數處理為適當，並根據目前使用中的多位元組字碼頁來辨識多位元組字元序列。 **_wsplitpath**是寬字元版本的 **_splitpath**; **_wsplitpath**的引數是寬字元字串。 除此之外，這些函式的行為相同。
+**_Splitpath**函式會將路徑分割成四個元件。 **_splitpath**會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當的，並辨識多位元組字元序列。 **_wsplitpath**是寬字元版本的 **_splitpath**;**_wsplitpath**的引數是寬字元字串。 除此之外，這些函式的行為相同。
 
-**安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 這些函式已有更安全的版本可供使用，請參閱 [_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)。
+**安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 這些函式已有更安全的版本可供使用;請參閱[_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -108,7 +113,7 @@ void _wsplitpath(
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-如果完整路徑未包含元件（例如檔案名），則 **_splitpath**會將空字串指派給對應的緩衝區。
+如果完整路徑未包含元件（例如檔案名）， **_splitpath**會將空字串指派給對應的緩衝區。
 
 您可以針對不需要的*路徑*以外的任何參數，將**Null**傳遞給 **_splitpath** 。
 

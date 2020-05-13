@@ -1,8 +1,9 @@
 ---
 title: _cabs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cabs
+- _o__cabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 2c2bd6b3f097095514e47b757306b4d83a990e45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170337"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913345"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -57,15 +59,17 @@ double _cabs(
 
 ## <a name="remarks"></a>備註
 
-**_Cabs**函式會計算複數的絕對值，此數值必須是[_complex](../../c-runtime-library/standard-types.md)類型的結構。 結構*z*是由實陣列件*x*和虛陣列件*y*所組成。 **_Cabs**的呼叫會產生相當於運算式 `sqrt( z.x * z.x + z.y * z.y )`的值。
+**_Cabs**函式會計算複數的絕對值，此數值必須是[_complex](../../c-runtime-library/standard-types.md)類型的結構。 結構*z*是由實陣列件*x*和虛陣列件*y*所組成。 **_Cabs**的呼叫會產生相當於運算式`sqrt( z.x * z.x + z.y * z.y )`的值。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

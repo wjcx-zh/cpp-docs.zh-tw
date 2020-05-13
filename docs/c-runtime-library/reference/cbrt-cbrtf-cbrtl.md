@@ -1,10 +1,12 @@
 ---
 title: cbrt、cbrtf、cbrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cbrt
 - cbrtf
 - cbrtl
+- _o_cbrt
+- _o_cbrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939296"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912098"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -70,17 +73,19 @@ long double cbrtl(
 
 **Cbrt**函數會傳回*x*的 cube 根。
 
-|Input|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|±∞、QNAN、IND|none|none|
+|±∞、QNAN、IND|無|無|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用**float**或**long** **double**類型之**cbrt**的多載。 在 C 程式中， **cbrt**一律採用並傳回**double**。
+因為 c + + 允許多載，所以您可以呼叫採用**float**或**long** **double**類型之**cbrt**的多載。 在 C 程式中， **cbrt**一律採用並傳回**double**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**cbrt**、 **cbrtf**、 **cbrtl**|\<math.h>|\<cmath>|
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447445"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753072"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
 
@@ -95,91 +95,91 @@ class CSplitterWnd : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CSplitterWnd：： CSplitterWnd](#csplitterwnd)|呼叫來建立 `CSplitterWnd` 物件的結構。|
+|[CSplitterwnd:CSplitterwnd](#csplitterwnd)|呼叫以建構物件`CSplitterWnd`。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSplitterWnd：： ActivateNext](#activatenext)|執行下一個窗格或上一個窗格命令。|
-|[CSplitterWnd：： CanActivateNext](#canactivatenext)|檢查下一個窗格或上一個窗格命令目前是否可行。|
-|[CSplitterWnd：： Create](#create)|呼叫以建立動態分隔視窗，並將它附加至 `CSplitterWnd` 物件。|
-|[CSplitterWnd：： CreateScrollBarCtrl](#createscrollbarctrl)|建立共用的捲軸控制項。|
-|[CSplitterWnd：： CreateStatic](#createstatic)|呼叫以建立靜態分隔視窗，並將它附加至 `CSplitterWnd` 物件。|
-|[CSplitterWnd：： CreateView](#createview)|呼叫以在分隔器視窗中建立窗格。|
-|[CSplitterWnd：:D eleteColumn](#deletecolumn)|從分隔器視窗刪除資料行。|
-|[CSplitterWnd：:D eleteRow](#deleterow)|從分隔器視窗中刪除資料列。|
-|[CSplitterWnd：:D eleteView](#deleteview)|從分隔器視窗刪除視圖。|
-|[CSplitterWnd：:D oKeyboardSplit](#dokeyboardsplit)|執行鍵盤分割命令，通常是「視窗分割」。|
-|[CSplitterWnd：:D oScroll](#doscroll)|執行分割視窗的同步處理滾動。|
-|[CSplitterWnd：:D oScrollBy](#doscrollby)|依指定的圖元數來滾動分割視窗。|
-|[CSplitterWnd：： GetActivePane](#getactivepane)|從框架中的焦點或使用中的視圖判斷現用窗格。|
-|[CSplitterWnd：： GetColumnCount](#getcolumncount)|傳回目前的窗格資料行計數。|
-|[CSplitterWnd：： GetColumnInfo](#getcolumninfo)|傳回指定之資料行的資訊。|
-|[CSplitterWnd：： GetPane](#getpane)|傳回位於指定資料列和資料行的窗格。|
-|[CSplitterWnd：： GetRowCount](#getrowcount)|傳回目前的窗格資料列計數。|
-|[CSplitterWnd：： GetRowInfo](#getrowinfo)|傳回指定之資料列的資訊。|
-|[CSplitterWnd：： GetScrollStyle](#getscrollstyle)|傳回共用的捲軸樣式。|
-|[CSplitterWnd：： IdFromRowCol](#idfromrowcol)|傳回位於指定資料列和資料行之窗格的子視窗識別碼。|
-|[CSplitterWnd：： IsChildPane](#ischildpane)|呼叫以判斷視窗目前是否為此分隔視窗的子窗格。|
-|[CSplitterWnd：： IsTracking](#istracking)|判斷是否正在移動分隔器列。|
-|[CSplitterWnd：： RecalcLayout](#recalclayout)|呼叫以在調整資料列或資料行大小之後重新顯示分隔視窗。|
-|[CSplitterWnd：： SetActivePane](#setactivepane)|將窗格設定為框架中的現用。|
-|[CSplitterWnd：： SetColumnInfo](#setcolumninfo)|呼叫以設定指定的資料行資訊。|
-|[CSplitterWnd：： SetRowInfo](#setrowinfo)|呼叫以設定指定的資料列資訊。|
-|[CSplitterWnd：： SetScrollStyle](#setscrollstyle)|為分隔器視窗的共用捲軸支援指定新的捲軸樣式。|
-|[CSplitterWnd：： SplitColumn](#splitcolumn)|指示框架視窗垂直分割的位置。|
-|[CSplitterWnd：： SplitRow](#splitrow)|表示框架視窗水準分割的位置。|
+|[CSplitterwnd::啟動下一個](#activatenext)|執行「下一個窗格」或「上一個窗格」 命令。|
+|[CSplitterwnd::可以啟動下一個](#canactivatenext)|檢查「下一個窗格」或「上一個窗格」命令當前是否可行。|
+|[CSplitterwnd::創建](#create)|調用以創建一個動態拆分器視窗並將其附加到`CSplitterWnd`物件。|
+|[CSplitterwnd::創建ScrollBarCtrl](#createscrollbarctrl)|創建共用滾動條控制項。|
+|[CSplitterwnd::創建靜態](#createstatic)|調用以創建靜態拆分器視窗並將其附加到`CSplitterWnd`物件。|
+|[CSplitterwnd::創建檢視](#createview)|呼叫以在分割器視窗中創建窗格。|
+|[CSplitterwnd::DeleteColumn](#deletecolumn)|從分割器視窗中移除欄。|
+|[CSplitterwnd::DeleteRow](#deleterow)|從分割器視窗中移除行。|
+|[CSplitterwnd::Delete查看](#deleteview)|從分割器視窗中刪除檢視。|
+|[CSplitterwnd::Do鍵盤拆分](#dokeyboardsplit)|執行鍵盤拆分命令,通常為"視窗拆分"。|
+|[CSplitterwnd::DoScroll](#doscroll)|對分割視窗執行同步滾動。|
+|[CSplitterwnd::DoScrollBy](#doscrollby)|按給定像素數滾動拆分視窗。|
+|[CSplitterwnd::獲取活動窗格](#getactivepane)|從框架中的焦點檢視或活動檢視中確定活動窗格。|
+|[CSplitterwnd::獲取縱隊計數](#getcolumncount)|返回當前窗格列計數。|
+|[CSplitterwnd::獲取縱隊資訊](#getcolumninfo)|返回指定列上的資訊。|
+|[CSplitterwnd::GetPane](#getpane)|返回指定行和列處的窗格。|
+|[CSplitterwnd::獲取羅計數](#getrowcount)|返回當前窗格行計數。|
+|[CSplitterwnd::獲取羅資訊](#getrowinfo)|返回指定行上的資訊。|
+|[CSplitterwnd::獲取滾動樣式](#getscrollstyle)|返回共享滾動條樣式。|
+|[CSplitterwnd::IdFromRowCol](#idfromrowcol)|在指定的行和列上傳回窗格的子視窗 ID。|
+|[CSplitterwnd::IsChildPane](#ischildpane)|呼叫以確定視窗目前是否是此拆分器視窗的子窗格。|
+|[CSplitterwnd:正在追蹤](#istracking)|確定當前是否正在移動拆分條。|
+|[CSplitterwnd:recalclayout](#recalclayout)|在調整列或列大小後調用以重新顯示分割器視窗。|
+|[CSplitterwnd::設定活動窗格](#setactivepane)|將窗格設為框架中的活動窗格。|
+|[CSplitterwnd::SetColumninfo](#setcolumninfo)|調用以設置指定的列資訊。|
+|[CSplitterwnd::SetRowInfo](#setrowinfo)|調用以設置指定的行資訊。|
+|[CSplitterwnd::設置滾動樣式](#setscrollstyle)|為拆分器視窗的共用滾動條支援指定新的滾動條樣式。|
+|[CSplitterwnd::拆分柱](#splitcolumn)|指示框架視窗垂直拆分的位置。|
+|[CSplitterwnd::拆分行](#splitrow)|指示框架視窗水準拆分的位置。|
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSplitterWnd：： OnDraw](#ondraw)|由架構呼叫以繪製分隔器視窗。|
-|[CSplitterWnd：： OnDrawSplitter](#ondrawsplitter)|呈現分割視窗的影像。|
-|[CSplitterWnd：： OnInvertTracker](#oninverttracker)|呈現分割視窗的影像，使其與框架視窗具有相同的大小和形狀。|
+|[CSplitterwnd::OnDraw](#ondraw)|由框架調用以繪製拆分器視窗。|
+|[CSplitterwnd::在牽引器上](#ondrawsplitter)|渲染拆分視窗的圖像。|
+|[CSplitterwnd::上反轉追蹤器](#oninverttracker)|渲染拆分視窗的圖像的大小和形狀與框架視窗相同。|
 
 ## <a name="remarks"></a>備註
 
-窗格通常是衍生自[CView](../../mfc/reference/cview-class.md)的應用程式特定物件，但它可以是任何具有適當子視窗識別碼的[CWnd](../../mfc/reference/cwnd-class.md)物件。
+窗格通常是從[CView](../../mfc/reference/cview-class.md)派生的應用程式特定物件,但它可以是具有適當子視窗 ID 的任何[CWnd](../../mfc/reference/cwnd-class.md)物件。
 
-`CSplitterWnd` 物件通常內嵌于父[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)物件中。 使用下列步驟建立 `CSplitterWnd` 物件：
+物件`CSplitterWnd`通常嵌入在父[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIChildwnd](../../mfc/reference/cmdichildwnd-class.md)物件中。 使用以下步驟`CSplitterWnd`建立物件:
 
-1. 在父框架中內嵌 `CSplitterWnd` 成員變數。
+1. 在`CSplitterWnd`父幀中嵌入成員變數。
 
-2. 覆寫父框架的[CFrameWnd：： OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成員函式。
+2. 覆蓋父幀的[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成員函數。
 
-3. 從覆寫的 `OnCreateClient`中，呼叫 `CSplitterWnd`的[Create](#create)或[CreateStatic](#createstatic)成員函式。
+3. 從重寫`OnCreateClient`中,呼`CSplitterWnd`叫的[創建](#create)或[創建靜態](#createstatic)成員函數。
 
-呼叫 `Create` 成員函式來建立動態分隔器視窗。 動態分隔器視窗通常用來建立和滾動多個相同檔的個別窗格或 views。 架構會自動建立分隔器的初始窗格;然後，當使用者操作分隔視窗的控制項時，架構會建立、調整大小及處置其他窗格。
+調用`Create`成員函數以創建動態拆分器視窗。 動態拆分器視窗通常用於創建和滾動同一文檔的多個單個窗格或視圖。 框架會自動為分割器創建初始窗格;但是,框架會自動為分割器創建一個初始窗格。然後,當使用者操作拆分器視窗的控制項時,框架將創建、調整和釋放其他窗格。
 
-當您呼叫 `Create`時，您可以指定最小的資料列高度和資料行寬度，以判斷窗格何時太小而無法完整顯示。 呼叫 `Create`之後，您可以藉由呼叫[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函式來調整這些最低限制。
+呼叫`Create`時 ,指定最小行高度和列寬度,以確定窗格何時太小而無法完全顯示。 呼叫`Create`後,可以透過調用[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函數來調整這些最小值。
 
-也請使用 `SetColumnInfo` 和 `SetRowInfo` 成員函式來設定資料行的「理想」寬度和資料列的「理想」高度。 當架構顯示分隔視窗時，它會先顯示父框架，然後是分隔視窗。 然後，此架構會根據其理想的維度，在資料行和資料列中配置窗格，從左上到分隔視窗工作區的右下角工作。
+還使用`SetColumnInfo``SetRowInfo`和成員函數為列設置"理想"寬度,為行設置"理想"高度。 當框架顯示分割器視窗時,它首先顯示父框架,然後顯示拆分器視窗。 然後,框架根據它們的理想尺寸以列和行的形式排列窗格,從拆分視窗工作區的左上角到右下角工作。
 
-動態分隔器視窗中的所有窗格都必須屬於相同的類別。 熟悉的應用程式支援動態分隔視窗，包括 Microsoft Word 和 Microsoft Excel。
+動態拆分器視窗中的所有窗格必須屬於同一類。 支援動態拆分視窗的熟悉應用程式包括 Microsoft Word 和 Microsoft Excel。
 
-使用 `CreateStatic` 成員函式來建立靜態分隔視窗。 使用者只能變更靜態分隔器視窗中的窗格大小，而不是其數目或順序。
+使用`CreateStatic`成員函數創建靜態拆分器視窗。 使用者只能更改靜態拆分器視窗中窗格的大小,而不能更改其數量或順序。
 
-當您建立靜態分隔器時，必須特別建立所有靜態分隔器的窗格。 請確定您在父框架的 `OnCreateClient` 成員函式傳回之前建立了所有窗格，否則架構將不會正確顯示視窗。
+建立靜態拆分器時,必須專門創建所有靜態拆分器的窗格。 請確保在父框架`OnCreateClient`的成員函數返回之前創建所有窗格,否則框架將不能正確顯示視窗。
 
-`CreateStatic` 成員函式會自動將最小資料列高度和資料行寬度為0的靜態分割器初始化。 在您呼叫 `Create`之後，請呼叫[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函式來調整這些最低限制。 您也可以在呼叫 `CreateStatic` 以指出所需的理想窗格維度之後，使用 `SetColumnInfo` 和 `SetRowInfo`。
+成員`CreateStatic`函數自動初始化最小行高度和列寬度為 0 的靜態拆分器。 呼叫`Create`後,透過調用[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函數來調整這些最小值。 還使用`SetColumnInfo`和`SetRowInfo`調用`CreateStatic`後指示所需的理想窗格尺寸。
 
-靜態分隔器的個別窗格通常屬於不同的類別。 如需靜態分隔器視窗的範例，請參閱圖形編輯器和 Windows 檔案管理員。
+靜態拆分器的各個窗格通常屬於不同的類。 有關靜態拆分視窗的範例,請參閱圖形編輯器和 Windows 檔案管理器。
 
-分隔視窗支援特殊捲軸（除了窗格可能擁有的捲軸外）。 這些捲軸是 `CSplitterWnd` 物件的子系，而且會與窗格共用。
+拆分視窗支援特殊的滾動條(除了窗格可能具有的滾動條)。 這些滾動條是物件的子級`CSplitterWnd`,並與窗格共用。
 
-當您建立分隔器視窗時，會建立這些特殊的捲軸。 例如，具有一個資料列、兩個數據行和 WS_VSCROLL 樣式的 `CSplitterWnd` 將會顯示兩個窗格所共用的垂直捲動條。 當使用者移動捲軸時，WM_VSCROLL 的訊息會傳送至兩個窗格。 當窗格設定捲軸位置時，就會設定共用捲軸。
+建立分割視窗時,可以創建這些特殊的滾動條。 例如,具有一`CSplitterWnd`行、兩列和WS_VSCROLL樣式的將顯示由兩個窗格共用的垂直滾動條。 當使用者移動滾動條時,WM_VSCROLL消息發送到兩個窗格。 當窗格設置滾動條位置時,將設置共用滾動條。
 
-如需分隔視窗的進一步資訊，請參閱[技術提示 29](../../mfc/tn029-splitter-windows.md)。
+有關拆分視窗的詳細資訊,請參閱[技術說明 29](../../mfc/tn029-splitter-windows.md)。
 
-如需如何建立動態分隔視窗的詳細資訊，請參閱：
+有關如何創建動態拆分器視窗的詳細資訊,請參閱:
 
-- MFC 範例[自由曲線](../../overview/visual-cpp-samples.md)
+- MFC 樣品[塗鴉](../../overview/visual-cpp-samples.md)
 
-- MFC 範例[VIEWEX](../../overview/visual-cpp-samples.md)。
+- MFC 樣品[VIEWEX](../../overview/visual-cpp-samples.md).
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -191,11 +191,11 @@ class CSplitterWnd : public CWnd
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxext.h。h
+**標題:** afxext.h
 
-##  <a name="activatenext"></a>CSplitterWnd：： ActivateNext
+## <a name="csplitterwndactivatenext"></a><a name="activatenext"></a>CSplitterwnd::啟動下一個
 
-由架構呼叫以執行下一個窗格或上一個窗格命令。
+由框架呼叫以執行下一個窗格或「上一個窗格」 命令。
 
 ```
 virtual void ActivateNext(BOOL bPrev = FALSE);
@@ -204,15 +204,15 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="parameters"></a>參數
 
 *bPrev*<br/>
-指出要啟動的視窗。 若為上一個，則為**TRUE** ;[下一步] 為**FALSE** 。
+指示要啟動的視窗。 **以前的 TRUE;****下一個為 FALSE。**
 
 ### <a name="remarks"></a>備註
 
-此成員函式是一個高階命令，可供[CView](../../mfc/reference/cview-class.md)類別用來委派給 `CSplitterWnd` 的執行。
+此成員函數是[CView](../../mfc/reference/cview-class.md)類用來委派到實現`CSplitterWnd`的高級 命令。
 
-##  <a name="canactivatenext"></a>CSplitterWnd：： CanActivateNext
+## <a name="csplitterwndcanactivatenext"></a><a name="canactivatenext"></a>CSplitterwnd::可以啟動下一個
 
-由架構呼叫，以查看下一個窗格或上一個窗格命令目前是否可行。
+由框架呼叫以檢視目前是否可以使用「下一個窗格」或「上一個窗格」 命令。
 
 ```
 virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
@@ -221,7 +221,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="parameters"></a>參數
 
 *bPrev*<br/>
-指出要啟動的視窗。 若為上一個，則為**TRUE** ;[下一步] 為**FALSE** 。
+指示要啟動的視窗。 **以前的 TRUE;****下一個為 FALSE。**
 
 ### <a name="return-value"></a>傳回值
 
@@ -229,11 +229,11 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 
 ### <a name="remarks"></a>備註
 
-此成員函式是一個高階命令，可供[CView](../../mfc/reference/cview-class.md)類別用來委派給 `CSplitterWnd` 的執行。
+此成員函數是[CView](../../mfc/reference/cview-class.md)類用來委派到實現`CSplitterWnd`的高級 命令。
 
-##  <a name="create"></a>CSplitterWnd：： Create
+## <a name="csplitterwndcreate"></a><a name="create"></a>CSplitterwnd::創建
 
-若要建立動態分隔器視窗，請呼叫 `Create` 成員函式。
+要建立動態分割器視窗,`Create`請呼叫成員函數。
 
 ```
 virtual BOOL Create(
@@ -248,26 +248,26 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pParentWnd*<br/>
-分隔器視窗的父框架視窗。
+*pparentwnd*<br/>
+拆分器視窗的父框架視窗。
 
 *nMaxRows*<br/>
-分隔器視窗中的最大資料列數目。 此值不得超過2。
+分割器視窗中的最大行數。 此值不得超過 2。
 
 *nMaxCols*<br/>
-分隔器視窗中的最大資料行數目。 此值不得超過2。
+分割器視窗中的最大欄數。 此值不得超過 2。
 
-*sizeMin*<br/>
-指定可顯示窗格的大小下限。
+*大小明*<br/>
+指定窗格可以顯示的最小大小。
 
 *pContext*<br/>
-[CCreateCoNtext](../../mfc/reference/ccreatecontext-structure.md)結構的指標。 在大部分的情況下，這可以是傳遞至父框架視窗的*pCoNtext* 。
+指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構的指標。 在大多數情況下,這可以是傳遞給父幀視窗的*pContext。*
 
 *dwStyle*<br/>
 指定視窗樣式。
 
 *nID*<br/>
-視窗的子視窗識別碼。 除非分隔器視窗是嵌套在另一個分隔視窗內，否則識別碼可以 AFX_IDW_PANE_FIRST。
+視窗的子視窗 ID。 除非拆分器視窗嵌套在另一個拆分器視窗中,否則可以AFX_IDW_PANE_FIRST ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -275,27 +275,27 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-您可以採取下列步驟，在父[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)物件中內嵌 `CSplitterWnd`：
+您可以透過執行以下步驟`CSplitterWnd`將 嵌入父[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIChildwnd](../../mfc/reference/cmdichildwnd-class.md)物件:
 
-1. 在父框架中內嵌 `CSplitterWnd` 成員變數。
+1. 在`CSplitterWnd`父幀中嵌入成員變數。
 
-1. 覆寫父框架的[CFrameWnd：： OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成員函式。
+1. 覆蓋父幀的[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成員函數。
 
-1. 從覆寫的 `OnCreateClient`內呼叫 `Create` 成員函式。
+1. 從重寫`Create``OnCreateClient`中調用成員函數。
 
-當您從父框架內建立分隔器視窗時，請將父框架的*pCoNtext*參數傳遞至分隔器視窗。 否則，這個參數可以是 Null。
+從父幀內創建拆分視窗時,將父幀的*pContext*參數傳遞給拆分器視窗。 否則,此參數可以是 NULL。
 
-動態分隔器視窗的初始最小資料列高度和資料行寬度，是由*sizeMin*參數所設定。 這些最小的決定窗格是否太小而無法完整顯示，可以使用[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函式進行變更。
+動態拆分器視窗的初始最小行高度和列寬度由*sizeMin*參數設置。 這些最小值決定了窗格是否太小而無法完整顯示,可以使用[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函數進行更改。
 
-如需動態分隔器視窗的詳細資訊，請參閱[多個檔案類型、視圖和框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)、[技術提示 29](../../mfc/tn029-splitter-windows.md)和 `CSplitterWnd` 類別總覽一文中的「分隔視窗」。
+有關動態分割視窗的詳細資訊,請參閱文章[「多個文檔類型」、「視圖」和「框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)」、「[技術說明 29」](../../mfc/tn029-splitter-windows.md)和`CSplitterWnd`「類概述」中的「拆分視窗」。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]
 
-##  <a name="createscrollbarctrl"></a>CSplitterWnd：： CreateScrollBarCtrl
+## <a name="csplitterwndcreatescrollbarctrl"></a><a name="createscrollbarctrl"></a>CSplitterwnd::創建ScrollBarCtrl
 
-由架構呼叫以建立共用的捲軸控制項。
+由框架調用以創建共用滾動條控制項。
 
 ```
 virtual BOOL CreateScrollBarCtrl(
@@ -309,7 +309,7 @@ virtual BOOL CreateScrollBarCtrl(
 指定視窗樣式。
 
 *nID*<br/>
-視窗的子視窗識別碼。 除非分隔器視窗是嵌套在另一個分隔視窗內，否則識別碼可以 AFX_IDW_PANE_FIRST。
+視窗的子視窗 ID。 除非拆分器視窗嵌套在另一個拆分器視窗中,否則可以AFX_IDW_PANE_FIRST ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -317,11 +317,11 @@ virtual BOOL CreateScrollBarCtrl(
 
 ### <a name="remarks"></a>備註
 
-覆寫 `CreateScrollBarCtrl` 以在捲軸旁包含額外的控制項。 預設行為是建立一般的 Windows 捲軸控制項。
+覆蓋`CreateScrollBarCtrl`以在滾動條旁邊包含額外的控制項。 默認行為是創建正常的 Windows 滾動條控制項。
 
-##  <a name="createstatic"></a>CSplitterWnd：： CreateStatic
+## <a name="csplitterwndcreatestatic"></a><a name="createstatic"></a>CSplitterwnd::創建靜態
 
-若要建立靜態分隔視窗，請呼叫 `CreateStatic` 成員函式。
+要建立靜態分割器視窗,`CreateStatic`請呼叫成員函數。
 
 ```
 virtual BOOL CreateStatic(
@@ -334,20 +334,20 @@ virtual BOOL CreateStatic(
 
 ### <a name="parameters"></a>參數
 
-*pParentWnd*<br/>
-分隔器視窗的父框架視窗。
+*pparentwnd*<br/>
+拆分器視窗的父框架視窗。
 
 *nRows*<br/>
-資料列數目。 這個值不能超過16個。
+資料列數目。 此值不得超過 16。
 
-*nCols*<br/>
-資料行數目。 這個值不能超過16個。
+*n科爾斯*<br/>
+資料行數目。 此值不得超過 16。
 
 *dwStyle*<br/>
 指定視窗樣式。
 
 *nID*<br/>
-視窗的子視窗識別碼。 除非分隔器視窗是嵌套在另一個分隔視窗內，否則識別碼可以 AFX_IDW_PANE_FIRST。
+視窗的子視窗 ID。 除非拆分器視窗嵌套在另一個拆分器視窗中,否則可以AFX_IDW_PANE_FIRST ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -355,27 +355,27 @@ virtual BOOL CreateStatic(
 
 ### <a name="remarks"></a>備註
 
-`CSplitterWnd` 通常會藉由採取下列步驟，內嵌在父 `CFrameWnd` 或[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)物件中：
+通常`CSplitterWnd`透過執行以下步驟嵌入`CFrameWnd`父 物件或[CMDIChildwnd](../../mfc/reference/cmdichildwnd-class.md)物件中:
 
-1. 在父框架中內嵌 `CSplitterWnd` 成員變數。
+1. 在`CSplitterWnd`父幀中嵌入成員變數。
 
-1. 覆寫父框架的 `OnCreateClient` 成員函式。
+1. 覆蓋父幀的成員`OnCreateClient`函數。
 
-1. 從覆寫的[CFrameWnd：： OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)內呼叫 `CreateStatic` 成員函式。
+1. 從重寫`CreateStatic`的 CFrameWnd 中呼叫成員函數[::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)。
 
-靜態分隔視窗包含固定數目的窗格，通常來自不同的類別。
+靜態拆分器視窗包含固定數量的窗格,通常來自不同的類。
 
-當您建立靜態分隔視窗時，您必須同時建立其所有窗格。 [CreateView](#createview)成員函式通常用於此用途，但您也可以建立其他 nonview 類別。
+建立靜態拆分器視窗時,必須同時創建其所有窗格。 [CreateView](#createview)成員函數通常用於此目的,但您也可以創建其他非檢視類。
 
-靜態分隔器視窗的初始最小資料列高度和資料行寬度為0。 這些最小的限制是，可以使用[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函式來變更窗格何時太小而無法完整顯示。
+靜態拆分器視窗的初始最小行高度和列寬度為 0。 這些最小值決定了窗格何時太小而無法完整顯示,可以使用[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函數進行更改。
 
-若要將捲軸加入至靜態分隔視窗，請將 WS_HSCROLL 和 WS_VSCROLL 樣式加入至*dwStyle*。
+要將捲軸移至靜態分割器視窗,請將WS_HSCROLL和WS_VSCROLL樣式加入*到 dwStyle*。
 
-如需靜態分隔器視窗的詳細資訊，請參閱[多個檔案類型、視圖和框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)、[技術提示 29](../../mfc/tn029-splitter-windows.md)和 `CSplitterWnd` 類別總覽一文中的「分隔視窗」。
+有關靜態拆分器視窗的詳細資訊,請參閱文章"[多個文件類型、視圖和框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)、[技術說明 29"](../../mfc/tn029-splitter-windows.md)中的`CSplitterWnd`「拆分視窗」。
 
-##  <a name="createview"></a>CSplitterWnd：： CreateView
+## <a name="csplitterwndcreateview"></a><a name="createview"></a>CSplitterwnd::創建檢視
 
-建立靜態分隔器視窗的窗格。
+為靜態拆分器視窗創建窗格。
 
 ```
 virtual BOOL CreateView(
@@ -388,20 +388,20 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
-指定要在其中放置新視圖的分隔器視窗資料列。
+*列*<br/>
+指定放置新檢視的分割器視窗列。
 
 *col*<br/>
-指定要在其中放置新視圖的分隔器視窗資料行。
+指定放置新檢視的分割器視窗列。
 
-*pViewClass*<br/>
-指定新視圖的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 。
+*pView 類別*<br/>
+指定新檢視的[CRuntimeClass。](../../mfc/reference/cruntimeclass-structure.md)
 
-*sizeInit*<br/>
-指定新視圖的初始大小。
+*尺寸 Init*<br/>
+指定新檢視的初始大小。
 
 *pContext*<br/>
-用來建立視圖的建立內容指標（通常是傳遞至父框架的已覆寫[CFrameWnd：： OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成員函式的*pCoNtext* ，在其中建立分隔器視窗）。
+指向創建上下文的指標,用於創建檢視(通常*pContext*傳遞到父幀的重寫[CFrameWnd::onCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成員函數,其中正在創建分割器視窗)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -409,17 +409,17 @@ virtual BOOL CreateView(
 
 ### <a name="remarks"></a>備註
 
-您必須先建立靜態分隔器視窗的所有窗格，架構才會顯示分隔器。
+在框架顯示分割器之前,必須創建靜態拆分器視窗的所有窗格。
 
-當動態分隔器視窗的使用者分割窗格、資料列或資料行時，架構也會呼叫這個成員函式來建立新的窗格。
+當動態拆分器視窗的使用者拆分窗格、行或列時,框架還會調用此成員函數創建新窗格。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]
 
-##  <a name="csplitterwnd"></a>CSplitterWnd：： CSplitterWnd
+## <a name="csplitterwndcsplitterwnd"></a><a name="csplitterwnd"></a>CSplitterwnd:CSplitterwnd
 
-呼叫來建立 `CSplitterWnd` 物件的結構。
+呼叫以建構物件`CSplitterWnd`。
 
 ```
 CSplitterWnd();
@@ -427,11 +427,11 @@ CSplitterWnd();
 
 ### <a name="remarks"></a>備註
 
-以兩個步驟來建立 `CSplitterWnd` 物件。 首先，呼叫會建立 `CSplitterWnd` 物件的函式，然後呼叫[Create](#create)成員函式，該函式會建立分隔器視窗，並將它附加至 `CSplitterWnd` 物件。
+分兩`CSplitterWnd`步構造物件。 首先調用建構函數,該建構函數創建`CSplitterWnd`物件,然後調用[Create](#create)成員函數,該函數創建拆分器視窗並將`CSplitterWnd`其附加到 物件。
 
-##  <a name="deletecolumn"></a>CSplitterWnd：:D eleteColumn
+## <a name="csplitterwnddeletecolumn"></a><a name="deletecolumn"></a>CSplitterwnd::DeleteColumn
 
-從分隔器視窗刪除資料行。
+從分割器視窗中移除欄。
 
 ```
 virtual void DeleteColumn(int colDelete);
@@ -440,15 +440,15 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="parameters"></a>參數
 
 *colDelete*<br/>
-指定要刪除的資料行。
+指定要刪除的欄。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由架構呼叫，以執行動態分隔器視窗的邏輯（也就是，如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式）。 它可以自訂，以及虛擬函式[CreateView](#createview)，以執行更先進的動態分隔器。
+框架調用此成員函數以實現動態拆分器視窗的邏輯(即,如果拆分器視窗具有SPLS_DYNAMIC_SPLIT樣式)。 它可以與虛擬函數[CreateView](#createview)一起自定義,以實現更進階的動態拆分器。
 
-##  <a name="deleterow"></a>CSplitterWnd：:D eleteRow
+## <a name="csplitterwnddeleterow"></a><a name="deleterow"></a>CSplitterwnd::DeleteRow
 
-從分隔器視窗中刪除資料列。
+從分割器視窗中移除行。
 
 ```
 virtual void DeleteRow(int rowDelete);
@@ -456,16 +456,16 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>參數
 
-*rowDelete*<br/>
-指定要刪除的資料列。
+*列刪除*<br/>
+指定要刪除的行。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由架構呼叫，以執行動態分隔器視窗的邏輯（也就是，如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式）。 它可以自訂，以及虛擬函式[CreateView](#createview)，以執行更先進的動態分隔器。
+框架調用此成員函數以實現動態拆分器視窗的邏輯(即,如果拆分器視窗具有SPLS_DYNAMIC_SPLIT樣式)。 它可以與虛擬函數[CreateView](#createview)一起自定義,以實現更進階的動態拆分器。
 
-##  <a name="deleteview"></a>CSplitterWnd：:D eleteView
+## <a name="csplitterwnddeleteview"></a><a name="deleteview"></a>CSplitterwnd::Delete查看
 
-從分隔器視窗刪除視圖。
+從分割器視窗中刪除檢視。
 
 ```
 virtual void DeleteView(
@@ -475,21 +475,21 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
-指定要刪除其視圖的分隔器視窗資料列。
+*列*<br/>
+指定要刪除檢視的分割器視窗列。
 
 *col*<br/>
-指定要刪除其視圖的分隔器視窗資料行。
+指定要刪除檢視的分割器視窗列。
 
 ### <a name="remarks"></a>備註
 
-如果正在刪除即時檢視，下一個視圖將會變成作用中。 預設的執行會假設此視圖會在[PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy)中自動刪除。
+如果正在刪除活動檢視,則下一個檢視將變為活動狀態。 預設以顯示的檢視, 將在[PostNc 銷毀](../../mfc/reference/cwnd-class.md#postncdestroy)中自動刪除 。
 
-此成員函式會由架構呼叫，以執行動態分隔器視窗的邏輯（也就是，如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式）。 它可以自訂，以及虛擬函式[CreateView](#createview)，以執行更先進的動態分隔器。
+框架調用此成員函數以實現動態拆分器視窗的邏輯(即,如果拆分器視窗具有SPLS_DYNAMIC_SPLIT樣式)。 它可以與虛擬函數[CreateView](#createview)一起自定義,以實現更進階的動態拆分器。
 
-##  <a name="dokeyboardsplit"></a>CSplitterWnd：:D oKeyboardSplit
+## <a name="csplitterwnddokeyboardsplit"></a><a name="dokeyboardsplit"></a>CSplitterwnd::Do鍵盤拆分
 
-執行鍵盤分割命令，通常是「視窗分割」。
+執行鍵盤拆分命令,通常為"視窗拆分"。
 
 ```
 virtual BOOL DoKeyboardSplit();
@@ -501,11 +501,11 @@ virtual BOOL DoKeyboardSplit();
 
 ### <a name="remarks"></a>備註
 
-此成員函式是一個高階命令，可供[CView](../../mfc/reference/cview-class.md)類別用來委派給 `CSplitterWnd` 的執行。
+此成員函數是[CView](../../mfc/reference/cview-class.md)類用來委派到實現`CSplitterWnd`的高級 命令。
 
-##  <a name="doscroll"></a>CSplitterWnd：:D oScroll
+## <a name="csplitterwnddoscroll"></a><a name="doscroll"></a>CSplitterwnd::DoScroll
 
-執行分割視窗的同步處理滾動。
+對分割視窗執行同步滾動。
 
 ```
 virtual BOOL DoScroll(
@@ -516,38 +516,38 @@ virtual BOOL DoScroll(
 
 ### <a name="parameters"></a>參數
 
-*pViewFrom*<br/>
-要從中產生捲軸訊息之視圖的指標。
+*pView 從*<br/>
+指向滾動消息源自的視圖的指標。
 
 *nScrollCode*<br/>
-表示使用者的滾動要求的捲軸程式碼。 這個參數是由兩個部分組成：低序位位元組，可決定水準發生的滾動類型，而高序位位元組則會決定垂直發生的滾動類型：
+指示使用者滾動請求的滾動條代碼。 此參數由兩部分組成:一個低階位元組,它確定水準發生的滾動類型;高階位元組,確定垂直發生的滾動類型:
 
-- SB_BOTTOM 向下滾動。
+- SB_BOTTOM滾動到底部。
 
-- SB_LINEDOWN 向下滾動一行。
+- SB_LINEDOWN向下滾動一行。
 
-- SB_LINEUP 向上滾動一行。
+- SB_LINEUP向上滾動一行。
 
-- SB_PAGEDOWN 向下滾動一頁。
+- SB_PAGEDOWN向下滾動一頁。
 
-- SB_PAGEUP 向上滾動一頁。
+- SB_PAGEUP向上滾動一頁。
 
-- SB_TOP 滾動到頁首。
+- SB_TOP滾動到頂部。
 
-*bDoScroll*<br/>
-判斷是否發生指定的滾動動作。 如果*bDoScroll*為 TRUE （亦即，如果子視窗存在，而且分割視窗具有捲軸範圍），則會進行指定的滾動動作。如果*bDoScroll*為 FALSE （亦即，如果沒有子視窗存在，或分割視圖沒有捲軸範圍），則不會進行滾動。
+*b多卷*<br/>
+確定是否執行指定的滾動操作。 如果*bDoScroll*為 TRUE(即,如果存在子視窗,並且拆分視窗具有滾動範圍),則可以執行指定的滾動操作;如果存在子視窗,則可以執行指定的滾動操作。如果*bDoScroll*是 FALSE(即,如果不存在子視窗,或者拆分視圖沒有滾動範圍),則不會發生滾動。
 
 ### <a name="return-value"></a>傳回值
 
-如果發生同步處理的滾動則為非零值;否則為0。
+如果同步滾動發生,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由架構呼叫，以便在視圖收到捲軸訊息時，執行已同步處理的分割視窗滾動。 在允許同步處理的滾動之前，覆寫以要求使用者採取動作。
+框架將調用此成員函數,在視圖收到滾動消息時執行拆分視窗的同步滾動。 在允許同步滾動之前,需要用戶執行操作。
 
-##  <a name="doscrollby"></a>CSplitterWnd：:D oScrollBy
+## <a name="csplitterwnddoscrollby"></a><a name="doscrollby"></a>CSplitterwnd::DoScrollBy
 
-依指定的圖元數來滾動分割視窗。
+按給定像素數滾動拆分視窗。
 
 ```
 virtual BOOL DoScrollBy(
@@ -558,28 +558,28 @@ virtual BOOL DoScrollBy(
 
 ### <a name="parameters"></a>參數
 
-*pViewFrom*<br/>
-要從中產生捲軸訊息之視圖的指標。
+*pView 從*<br/>
+指向滾動消息源自的視圖的指標。
 
-*sizeScroll*<br/>
-水準和垂直捲動的圖元數。
+*大小捲動*<br/>
+要水準和垂直滾動的圖元數。
 
-*bDoScroll*<br/>
-判斷是否發生指定的滾動動作。 如果*bDoScroll*為 TRUE （亦即，如果子視窗存在，而且分割視窗具有捲軸範圍），則會進行指定的滾動動作。如果*bDoScroll*為 FALSE （亦即，如果沒有子視窗存在，或分割視圖沒有捲軸範圍），則不會進行滾動。
+*b多卷*<br/>
+確定是否執行指定的滾動操作。 如果*bDoScroll*為 TRUE(即,如果存在子視窗,並且拆分視窗具有滾動範圍),則可以執行指定的滾動操作;如果存在子視窗,則可以執行指定的滾動操作。如果*bDoScroll*是 FALSE(即,如果不存在子視窗,或者拆分視圖沒有滾動範圍),則不會發生滾動。
 
 ### <a name="return-value"></a>傳回值
 
-如果發生同步處理的滾動則為非零值;否則為0。
+如果同步滾動發生,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-架構會呼叫這個成員函式來回應捲軸訊息，以根據*sizeScroll*所表示的量（以圖元為單位）來執行分割視窗的同步滾動。 正數值表示向下和向右滾動;負數值表示向上和向左滾動。
+框架調用此成員函數以回應滾動訊息,以按*大小Scroll*指示的數量(以像素為單位)對拆分視窗執行同步滾動。 正值表示向下和向右滾動;負值表示向上和向左滾動。
 
-在允許 scroll 之前，覆寫以要求使用者採取動作。
+在允許滾動之前,重寫以需要用戶執行操作。
 
-##  <a name="getactivepane"></a>CSplitterWnd：： GetActivePane
+## <a name="csplitterwndgetactivepane"></a><a name="getactivepane"></a>CSplitterwnd::獲取活動窗格
 
-從框架中的焦點或使用中的視圖判斷現用窗格。
+從框架中的焦點檢視或活動檢視中確定活動窗格。
 
 ```
 virtual CWnd* GetActivePane(
@@ -590,22 +590,22 @@ virtual CWnd* GetActivePane(
 ### <a name="parameters"></a>參數
 
 *pRow*<br/>
-**Int**的指標，用來抓取現用窗格的資料列編號。
+指向**int**的指標,用於檢索活動窗格的行號。
 
 *pCol*<br/>
-**Int**的指標，用來抓取現用窗格的資料行編號。
+指向**int**的指標,用於檢索活動窗格的列號。
 
 ### <a name="return-value"></a>傳回值
 
-現用窗格的指標。 如果沒有作用中窗格存在，則為 Null。
+指向活動窗格的指標。 如果沒有活動窗格,則 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式是由架構呼叫，以判斷分隔器視窗中的使用中窗格。 在取得使用中窗格之前，覆寫以要求使用者採取動作。
+框架調用此成員函數以確定分割器視窗中的活動窗格。 在獲取活動窗格之前,重寫以需要使用者執行操作。
 
-##  <a name="getcolumncount"></a>CSplitterWnd：： GetColumnCount
+## <a name="csplitterwndgetcolumncount"></a><a name="getcolumncount"></a>CSplitterwnd::獲取縱隊計數
 
-傳回目前的窗格資料行計數。
+返回當前窗格列計數。
 
 ```
 int GetColumnCount() const;
@@ -613,13 +613,13 @@ int GetColumnCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回分割器中目前的資料行數目。 若為靜態分隔器，這也會是資料行的最大數目。
+返回分割器中的當前列數。 對於靜態拆分器,這也將是列的最大數量。
 
-##  <a name="getcolumninfo"></a>CSplitterWnd：： GetColumnInfo
+## <a name="csplitterwndgetcolumninfo"></a><a name="getcolumninfo"></a>CSplitterwnd::獲取縱隊資訊
 
-傳回指定之資料行的資訊。
+返回指定列上的資訊。
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -632,14 +632,14 @@ void GetColumnInfo(
 指定資料行。
 
 *cxCur*<br/>
-要設定為目前資料行寬度之**int**的參考。
+要設置為列的當前寬度的**int**的引用。
 
 *cxMin*<br/>
-要設定為目前資料行最小寬度之**int**的參考。
+要設置為列的當前最小寬度的**int**的引用。
 
-##  <a name="getpane"></a>CSplitterWnd：： GetPane
+## <a name="csplitterwndgetpane"></a><a name="getpane"></a>CSplitterwnd::GetPane
 
-傳回位於指定資料列和資料行的窗格。
+返回指定行和列處的窗格。
 
 ```
 CWnd* GetPane(
@@ -649,19 +649,19 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
-指定資料列。
+*列*<br/>
+指定行。
 
 *col*<br/>
 指定資料行。
 
 ### <a name="return-value"></a>傳回值
 
-傳回位於指定資料列和資料行的窗格。 傳回的窗格通常是[CView](../../mfc/reference/cview-class.md)衍生的類別。
+返回指定行和列處的窗格。 返回的窗格通常是[CView](../../mfc/reference/cview-class.md)派生類。
 
-##  <a name="getrowcount"></a>CSplitterWnd：： GetRowCount
+## <a name="csplitterwndgetrowcount"></a><a name="getrowcount"></a>CSplitterwnd::獲取羅計數
 
-傳回目前的窗格資料列計數。
+返回當前窗格行計數。
 
 ```
 int GetRowCount() const;
@@ -669,13 +669,13 @@ int GetRowCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回分隔器視窗中目前的資料列數目。 若為靜態分隔視窗，這也會是資料列的最大數目。
+返回分割器視窗中的當前行數。 對於靜態拆分器視窗,這也將是最大行數。
 
-##  <a name="getrowinfo"></a>CSplitterWnd：： GetRowInfo
+## <a name="csplitterwndgetrowinfo"></a><a name="getrowinfo"></a>CSplitterwnd::獲取羅資訊
 
-傳回指定之資料列的資訊。
+返回指定行上的資訊。
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -684,22 +684,22 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
-指定資料列。
+*列*<br/>
+指定行。
 
 *cyCur*<br/>
-要設定為目前資料列高度（以圖元為單位）的**int**參考。
+要設置為以像素為單位的行的當前高度的**int**的引用。
 
-*cyMin*<br/>
-要設定為數據列目前最小高度的**int**參考（以圖元為單位）。
+*賽明*<br/>
+要設置為以像素為單位的行的當前最小高度的**int**的引用。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個成員函式，以取得指定資料列的相關資訊。 *CyCur*參數會填入指定資料列的目前高度，而*cyMin*則會填入資料列的最小高度。
+調用此成員函數以獲取有關指定行的資訊。 *cyCur*參數用指定行的當前高度填充 *,cyMin*填充該行的最小高度。
 
-##  <a name="getscrollstyle"></a>CSplitterWnd：： GetScrollStyle
+## <a name="csplitterwndgetscrollstyle"></a><a name="getscrollstyle"></a>CSplitterwnd::獲取滾動樣式
 
-傳回分隔器視窗的共用捲軸樣式。
+返回拆分器視窗的共用滾動條樣式。
 
 ```
 DWORD GetScrollStyle() const;
@@ -707,17 +707,17 @@ DWORD GetScrollStyle() const;
 
 ### <a name="return-value"></a>傳回值
 
-下列一或多個 windows 樣式旗標（如果成功）：
+如果成功,則一個或多個以下視窗樣式標誌:
 
-- 如果分割器目前管理共用水準捲軸，WS_HSCROLL。
+- WS_HSCROLL 如果拆分器當前管理共用水平滾動條。
 
-- 如果分割器目前管理共用的垂直捲動條，則 WS_VSCROLL。
+- WS_VSCROLL 如果拆分器當前管理共用垂直滾動條。
 
-如果為零，則分隔器視窗目前不會管理任何共用的捲軸。
+如果為零,拆分器視窗當前不管理任何共用滾動條。
 
-##  <a name="idfromrowcol"></a>CSplitterWnd：： IdFromRowCol
+## <a name="csplitterwndidfromrowcol"></a><a name="idfromrowcol"></a>CSplitterwnd::IdFromRowCol
 
-取得位於指定資料列和資料行之窗格的子視窗識別碼。
+取得指定列和列窗格的子視窗 ID。
 
 ```
 int IdFromRowCol(
@@ -727,27 +727,27 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
-指定分隔器視窗的資料列。
+*列*<br/>
+指定分割器視窗列。
 
 *col*<br/>
-指定分隔器視窗資料行。
+指定分割器視窗列。
 
 ### <a name="return-value"></a>傳回值
 
-窗格的子視窗識別碼。
+窗格的子視窗 ID。
 
 ### <a name="remarks"></a>備註
 
-這個成員函式是用來建立 nonviews 作為窗格，而且可以在窗格存在之前呼叫。
+此成員函數用於將非檢視創建為窗格,並可能在窗格存在之前調用。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]
 
-##  <a name="ischildpane"></a>CSplitterWnd：： IsChildPane
+## <a name="csplitterwndischildpane"></a><a name="ischildpane"></a>CSplitterwnd::IsChildPane
 
-判斷*pWnd*目前是否為此分隔視窗的子窗格。
+確定*pWnd*目前是否是此拆分器視窗的子窗格。
 
 ```
 BOOL IsChildPane(
@@ -758,30 +758,30 @@ BOOL IsChildPane(
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-要測試之[CWnd](../../mfc/reference/cwnd-class.md)物件的指標。
+*pwnd*<br/>
+指向要測試的[CWnd](../../mfc/reference/cwnd-class.md)物件的指標。
 
 *pRow*<br/>
-要儲存資料列編號之**int**的指標。
+指向要在其中存儲行號的**int**的指標。
 
 *pCol*<br/>
-要儲存資料行編號之**int**的指標。
+指向用於存儲列編號的**int**的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果是非零值， *pWnd*目前是此分隔器視窗的子窗格，而*pRow*和*pCol*會填入窗格在分隔視窗中的位置。 如果*pWnd*不是此分隔器視窗的子窗格，則會傳回0。
+如果為非零 *,pWnd*當前是此拆分器視窗的子窗格 *,pRow*和*pCol*中填充了拆分器視窗中窗格的位置。 如果*pWnd*不是此拆分器視窗的子窗格,則返回 0。
 
 ### <a name="remarks"></a>備註
 
-在 6.0 C++之前的 Visual 版本中，此函式定義為
+在 6.0 之前的 Visual C++ 版本中,此函數定義為
 
 `BOOL IsChildPane(CWnd* pWnd, int& row, int& col);`
 
-此版本現在已過時，不應使用。
+此版本現已過時,不應使用。
 
-##  <a name="istracking"></a>CSplitterWnd：： IsTracking
+## <a name="csplitterwndistracking"></a><a name="istracking"></a>CSplitterwnd:正在追蹤
 
-呼叫這個成員函式，以判斷視窗中的分隔器列是否正在移動中。
+呼叫此成員函數以確定視窗中的拆分器條當前是否正在移動。
 
 ```
 BOOL IsTracking();
@@ -789,11 +789,11 @@ BOOL IsTracking();
 
 ### <a name="return-value"></a>傳回值
 
-如果分隔器作業正在進行中，則為非零;否則為0。
+如果拆分器操作正在進行,則非零;否則 0。
 
-##  <a name="ondrawsplitter"></a>CSplitterWnd：： OnDrawSplitter
+## <a name="csplitterwndondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterwnd::在牽引器上
 
-呈現分割視窗的影像。
+渲染拆分視窗的圖像。
 
 ```
 virtual void OnDrawSplitter(
@@ -805,31 +805,31 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-要在其中繪製之裝置內容的指標。 如果*pDC*是 Null，則會由架構呼叫[CWnd：： RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) ，而且不會繪製任何分割視窗。
+指向要繪製的設備上下文的指標。 如果*pDC*為 NULL,則框架將調用[CWnd::redrawWindow,](../../mfc/reference/cwnd-class.md#redrawwindow)並且不繪製拆分視窗。
 
 *nType*<br/>
-`enum ESplitType`的值，它可以是下列其中一項：
+的值`enum ESplitType`可以是以下值之一:
 
-- `splitBox` [分隔器] 拖曳框。
+- `splitBox`拆分器拖動框。
 
-- `splitBar` 出現在兩個分割視窗之間的橫條。
+- `splitBar`出現在兩個拆分視窗之間的條形。
 
-- `splitIntersection` 分割視窗的交集。 在 Windows 95/98 上執行時，將不會呼叫此元素。
+- `splitIntersection`拆分視窗的交點。 在 Windows 95/98 上運行時,不會調用此元素。
 
-- `splitBorder` 分割視窗框線。
+- `splitBorder`拆分視窗邊框。
 
-*各種*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的參考，指定分割視窗的大小和形狀。
+*矩形*<br/>
+對[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的引用,指定分割視窗的大小和形狀。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由架構呼叫，以繪製和指定分隔器視窗的確切特性。 針對分隔器視窗的各種圖形元件，覆寫影像自訂的 `OnDrawSplitter`。 預設影像類似于 Microsoft 適用于 Windows 或 Microsoft Windows 95/98 的分隔線，因為分隔器列的交集會混合在一起。
+框架調用此成員函數以繪製和指定拆分器視窗的確切特徵。 覆蓋`OnDrawSplitter`以進階自訂分割器視窗的各種圖形元件的圖像。 默認影像類似於適用於 Windows 的 Microsoft Works 或 Microsoft Windows 95/98 中的拆分器,因為拆分器條的交點混合在一起。
 
-如需動態分隔器視窗的詳細資訊，請參閱[多個檔案類型、視圖和框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)、[技術提示 29](../../mfc/tn029-splitter-windows.md)和 `CSplitterWnd` 類別總覽一文中的「分隔視窗」。
+有關動態分割視窗的詳細資訊,請參閱文章[「多個文檔類型」、「視圖」和「框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)」、「[技術說明 29」](../../mfc/tn029-splitter-windows.md)和`CSplitterWnd`「類概述」中的「拆分視窗」。
 
-##  <a name="oninverttracker"></a>CSplitterWnd：： OnInvertTracker
+## <a name="csplitterwndoninverttracker"></a><a name="oninverttracker"></a>CSplitterwnd::上反轉追蹤器
 
-呈現分割視窗的影像，使其與框架視窗具有相同的大小和形狀。
+渲染拆分視窗的圖像的大小和形狀與框架視窗相同。
 
 ```
 virtual void OnInvertTracker(const CRect& rect);
@@ -837,18 +837,18 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>參數
 
-*各種*<br/>
-指定追蹤矩形之 `CRect` 物件的參考。
+*矩形*<br/>
+引用指定追蹤`CRect`矩形的物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會在調整分隔器的大小時由架構呼叫。 覆寫分隔器視窗影像之自訂的 `OnInvertTracker`。 預設影像類似于 Microsoft 適用于 Windows 或 Microsoft Windows 95/98 的分隔線，因為分隔器列的交集會混合在一起。
+在調整拆分器大小時,框架將調用此成員函數。 覆蓋`OnInvertTracker`以先進自訂拆分器視窗的圖像。 默認影像類似於適用於 Windows 的 Microsoft Works 或 Microsoft Windows 95/98 中的拆分器,因為拆分器條的交點混合在一起。
 
-如需動態分隔器視窗的詳細資訊，請參閱[多個檔案類型、視圖和框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)、[技術提示 29](../../mfc/tn029-splitter-windows.md)和 `CSplitterWnd` 類別總覽一文中的「分隔視窗」。
+有關動態分割視窗的詳細資訊,請參閱文章[「多個文檔類型」、「視圖」和「框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)」、「[技術說明 29」](../../mfc/tn029-splitter-windows.md)和`CSplitterWnd`「類概述」中的「拆分視窗」。
 
-##  <a name="recalclayout"></a>CSplitterWnd：： RecalcLayout
+## <a name="csplitterwndrecalclayout"></a><a name="recalclayout"></a>CSplitterwnd:recalclayout
 
-呼叫以在調整資料列或資料行大小之後重新顯示分隔視窗。
+在調整列或列大小後調用以重新顯示分割器視窗。
 
 ```
 virtual void RecalcLayout();
@@ -856,17 +856,17 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>備註
 
-當您使用[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函式來調整資料列和資料行的大小時，請呼叫此成員函式以正確重新顯示分隔視窗。 如果您在建立程式的過程中變更資料列和資料行的大小，以顯示分隔視窗，則不需要呼叫這個成員函式。
+使用[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函數調整行和列大小後,呼叫此成員函數以正確重新顯示拆分器視窗。 如果在分割器視窗可見之前更改行和列大小作為創建過程的一部分,則不必呼叫此成員函數。
 
-每當使用者調整分隔器視窗的大小或移動分割時，架構就會呼叫這個成員函式。
+每當用戶調整分割視窗的大小或移動拆分時,框架都會調用此成員函數。
 
 ### <a name="example"></a>範例
 
-  請參閱[CSplitterWnd：： SetColumnInfo](#setcolumninfo)的範例。
+  請參閱[CSplitterWnd 的範例::SetColumnInfo](#setcolumninfo)。
 
-##  <a name="setactivepane"></a>CSplitterWnd：： SetActivePane
+## <a name="csplitterwndsetactivepane"></a><a name="setactivepane"></a>CSplitterwnd::設定活動窗格
 
-將窗格設定為框架中的現用。
+將窗格設為框架中的活動窗格。
 
 ```
 virtual void SetActivePane(
@@ -877,26 +877,26 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
-如果*pWnd*為 Null，則會在窗格中指定將使用的資料列。
+*列*<br/>
+如果*pWnd*為 NULL,則指定窗格中將處於活動狀態的行。
 
 *col*<br/>
-如果*pWnd*為 Null，則會在窗格中指定將使用的資料行。
+如果*pWnd*為 NULL,則指定窗格中將處於活動狀態的列。
 
-*pWnd*<br/>
-`CWnd` 物件的指標。 如果是 Null，*則會將*資料列和資料*行*所指定的窗格設定為使用中。 如果不是 Null，則指定設定為作用中的窗格。
+*pwnd*<br/>
+`CWnd` 物件的指標。 如果為 NULL,*則行*和*col*指定的窗格將設置為活動。 如果不是 NULL,則指定設定為活動的窗格。
 
 ### <a name="remarks"></a>備註
 
-當使用者將焦點變更為框架視窗內的窗格時，架構會呼叫這個成員函式將窗格設定為作用中。 您可以明確地呼叫 `SetActivePane`，將焦點變更為指定的 view。
+當使用者將焦點更改為框架視窗中的窗格時,框架將此成員函數設置為活動窗格。 您可以顯式調用`SetActivePane`以將焦點更改為指定的檢視。
 
-指定 [窗格]，方法是提供資料列和資料行，**或**提供*pWnd*。
+通過提供行和列 **,或通過**提供*pWnd*來指定窗格。
 
-##  <a name="setcolumninfo"></a>CSplitterWnd：： SetColumnInfo
+## <a name="csplitterwndsetcolumninfo"></a><a name="setcolumninfo"></a>CSplitterwnd::SetColumninfo
 
-呼叫以設定指定的資料行資訊。
+調用以設置指定的列資訊。
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -906,29 +906,29 @@ void SetColumnInfo(
 ### <a name="parameters"></a>參數
 
 *col*<br/>
-指定分隔器視窗資料行。
+指定分割器視窗列。
 
-*cxIdeal*<br/>
-指定分隔器視窗資料行的理想寬度（以圖元為單位）。
+*cx理想*<br/>
+指定以像素為單位的拆分視窗列的理想寬度。
 
 *cxMin*<br/>
-指定分隔器視窗資料行的最小寬度（以圖元為單位）。
+指定以像素為單位的拆分視窗列的最小寬度。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個成員函式，為數據行設定新的最小寬度和理想寬度。 [資料行最小值] 會決定資料行太小而無法完整顯示的時間。
+調用此成員函數以設置列的新最小寬度和理想寬度。 列最小值確定列何時太小而無法完全顯示。
 
-當架構顯示分隔器視窗時，它會根據其理想的維度來配置資料行和資料列中的窗格，而從左上角到分隔視窗工作區的右下角工作。
+當框架顯示分割器視窗時,它會根據它們的理想尺寸以列和行的形式排列窗格,從拆分視窗工作區的左上角到右下角工作。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]
 
-##  <a name="setrowinfo"></a>CSplitterWnd：： SetRowInfo
+## <a name="csplitterwndsetrowinfo"></a><a name="setrowinfo"></a>CSplitterwnd::SetRowInfo
 
-呼叫以設定指定的資料列資訊。
+調用以設置指定的行資訊。
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -937,45 +937,45 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
-指定分隔視窗的資料列。
+*列*<br/>
+指定分割視窗列。
 
-*cyIdeal*<br/>
-指定分隔器視窗資料列的理想高度（以圖元為單位）。
+*賽理想*<br/>
+指定以像素為單位的拆分視窗行的理想高度。
 
-*cyMin*<br/>
-指定分隔器視窗資料列的最小高度（以圖元為單位）。
+*賽明*<br/>
+指定以像素為單位的拆分視窗行的最小高度。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個成員函式，為數據列設定新的最小高度和理想高度。 [資料列最小值] 會決定資料列太小而無法完整顯示的時間。
+調用此成員函數以為行設置新的最小高度和理想高度。 行最小值確定行何時太小而無法完全顯示。
 
-當架構顯示分隔器視窗時，它會根據其理想的維度來配置資料行和資料列中的窗格，而從左上角到分隔視窗工作區的右下角工作。
+當框架顯示分割器視窗時,它會根據它們的理想尺寸以列和行的形式排列窗格,從拆分視窗工作區的左上角到右下角工作。
 
-##  <a name="setscrollstyle"></a>CSplitterWnd：： SetScrollStyle
+## <a name="csplitterwndsetscrollstyle"></a><a name="setscrollstyle"></a>CSplitterwnd::設置滾動樣式
 
-為分隔器視窗的共用捲軸支援指定新的滾動樣式。
+指定分割視窗的共用滾動條支援的新滾動樣式。
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-分隔器視窗的共用捲軸支援的新 scroll 樣式，可以是下列其中一個值：
+分割視窗的分享滾動條支援的新滾動樣式,可以是以下值之一:
 
-- WS_HSCROLL 建立/顯示水準共用捲軸。
+- WS_HSCROLL 創建/顯示水平共用滾動條。
 
-- WS_VSCROLL 建立/顯示垂直共用捲軸。
+- WS_VSCROLL 創建/顯示垂直共用滾動條。
 
 ### <a name="remarks"></a>備註
 
-建立捲軸之後，即使在沒有該樣式的情況下呼叫 `SetScrollStyle`，也不會損毀。而是隱藏那些捲軸。 這可讓捲軸保留其狀態，即使隱藏起來也一樣。 呼叫 `SetScrollStyle` 之後，必須呼叫[RecalcLayout](#recalclayout) ，所有變更才會生效。
+創建滾動條后,即使調用沒有該樣式`SetScrollStyle`,也不會銷毀它;相反,這些滾動條是隱藏的。 這允許滾動條保留其狀態,即使它們處於隱藏狀態。 呼叫`SetScrollStyle`後,必須調用[RecalcLayout,](#recalclayout)以便所有更改生效。
 
-##  <a name="splitcolumn"></a>CSplitterWnd：： SplitColumn
+## <a name="csplitterwndsplitcolumn"></a><a name="splitcolumn"></a>CSplitterwnd::拆分柱
 
-指示框架視窗垂直分割的位置。
+指示框架視窗垂直拆分的位置。
 
 ```
 virtual BOOL SplitColumn(int cxBefore);
@@ -983,8 +983,8 @@ virtual BOOL SplitColumn(int cxBefore);
 
 ### <a name="parameters"></a>參數
 
-*cxBefore*<br/>
-分割發生之前的位置（以圖元為單位）。
+*cx 之前*<br/>
+發生拆分的位置(以像素為單位)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -992,13 +992,13 @@ virtual BOOL SplitColumn(int cxBefore);
 
 ### <a name="remarks"></a>備註
 
-建立垂直分隔器視窗時，會呼叫這個成員函式。 `SplitColumn` 表示發生分割的預設位置。
+創建垂直拆分器視窗時,將調用此成員函數。 `SplitColumn`指示發生拆分的預設位置。
 
-`SplitColumn` 由架構呼叫，以執行動態分隔器視窗的邏輯（也就是，如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式）。 它可以自訂，以及虛擬函式[CreateView](#createview)，以執行更先進的動態分隔器。
+`SplitColumn`框架調用實現動態拆分器視窗的邏輯(即,如果拆分器視窗具有SPLS_DYNAMIC_SPLIT樣式)。 它可以與虛擬函數[CreateView](#createview)一起自定義,以實現更進階的動態拆分器。
 
-##  <a name="splitrow"></a>CSplitterWnd：： SplitRow
+## <a name="csplitterwndsplitrow"></a><a name="splitrow"></a>CSplitterwnd::拆分行
 
-表示框架視窗水準分割的位置。
+指示框架視窗水準拆分的位置。
 
 ```
 virtual BOOL SplitRow(int cyBefore);
@@ -1006,8 +1006,8 @@ virtual BOOL SplitRow(int cyBefore);
 
 ### <a name="parameters"></a>參數
 
-*cyBefore*<br/>
-分割發生之前的位置（以圖元為單位）。
+*cy 之前*<br/>
+發生拆分的位置(以像素為單位)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1015,13 +1015,13 @@ virtual BOOL SplitRow(int cyBefore);
 
 ### <a name="remarks"></a>備註
 
-建立水準分隔器視窗時，會呼叫這個成員函式。 `SplitRow` 表示發生分割的預設位置。
+創建水準拆分器視窗時,將調用此成員函數。 `SplitRow`指示發生拆分的預設位置。
 
-`SplitRow` 由架構呼叫，以執行動態分隔器視窗的邏輯（也就是，如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式）。 它可以自訂，以及虛擬函式[CreateView](#createview)，以執行更先進的動態分隔器。
+`SplitRow`框架調用實現動態拆分器視窗的邏輯(即,如果拆分器視窗具有SPLS_DYNAMIC_SPLIT樣式)。 它可以與虛擬函數[CreateView](#createview)一起自定義,以實現更進階的動態拆分器。
 
-##  <a name="ondraw"></a>CSplitterWnd：： OnDraw
+## <a name="csplitterwndondraw"></a><a name="ondraw"></a>CSplitterwnd::OnDraw
 
-由架構呼叫以繪製分隔器視窗。
+由框架調用以繪製拆分器視窗。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -1036,7 +1036,7 @@ virtual void OnDraw(CDC* pDC);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品檢視](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>

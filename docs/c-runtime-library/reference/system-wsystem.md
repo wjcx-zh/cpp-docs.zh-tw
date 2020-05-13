@@ -1,9 +1,11 @@
 ---
 title: system、_wsystem
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - system
 - _wsystem
+- _o__wsystem
+- _o_system
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,19 +35,19 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957670"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912383"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
 執行命令。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -59,7 +62,7 @@ int _wsystem(
 
 ### <a name="parameters"></a>參數
 
-*command*<br/>
+*命令*<br/>
 要執行的命令。
 
 ## <a name="return-value"></a>傳回值
@@ -81,19 +84,21 @@ int _wsystem(
 
 您必須先使用[fflush](fflush.md)或[_flushall](flushall.md)明確地排清，或在呼叫**system**之前關閉任何資料流程。
 
-**_wsystem**是**系統**的寬字元版本; **_wsystem**的*命令*引數是寬字元字串。 除此之外，這些函式的行為相同。
+**_wsystem**是**系統**的寬字元版本;**_wsystem**的*命令*引數是寬字元字串。 除此之外，這些函式的行為相同。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsystem**|**system**|**system**|**_wsystem**|
+|**_tsystem**|**系統**|**系統**|**_wsystem**|
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**system**|\<process.h> 或 \<stdlib.h>|
+|**系統**|\<process.h> 或 \<stdlib.h>|
 |**_wsystem**|\<process.h> 或 \<stdlib.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
@@ -120,7 +125,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Line one.
@@ -129,7 +134,7 @@ Line two.
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit、_Exit、_exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>

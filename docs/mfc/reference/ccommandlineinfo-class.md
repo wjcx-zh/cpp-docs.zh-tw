@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b4d5e5d253f2eb10388a69286d21e2190826eba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408143"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369452"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 類別
 
@@ -51,49 +51,49 @@ class CCommandLineInfo : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|建構預設`CCommandLineInfo`物件。|
+|[CCommandLine資訊:CCommandLineinfo](#ccommandlineinfo)|構造預設`CCommandLineInfo`物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CCommandLineInfo::ParseParam](#parseparam)|覆寫此剖析個別參數的回呼。|
+|[CCommandLineInfo::ParseParam](#parseparam)|重寫此回調以分析單個參數。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|表示命令列`/Automation`找不到選項。|
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|表示命令列`/Embedding`找不到選項。|
-|[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|指出是否應該顯示啟動顯示畫面。|
-|[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|表示要處理的 shell 命令。|
-|[CCommandLineInfo::m_strDriverName](#m_strdrivername)|表示驅動程式名稱如果 shell 命令會列印到;為空的。|
-|[CCommandLineInfo::m_strFileName](#m_strfilename)|指出要開啟或列印; 的檔案名稱新增] 或 [DDE shell 命令是否空白。|
-|[CCommandLineInfo::m_strPortName](#m_strportname)|指出的連接埠名稱如果 shell 命令會列印到;為空的。|
-|[CCommandLineInfo::m_strPrinterName](#m_strprintername)|表示印表機名稱如果 shell 命令會列印到;為空的。|
-|[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|如果重新啟動管理員重新啟動應用程式，請重新啟動管理員指出唯一的重新啟動識別項。|
+|[CCommandLine資訊:m_bRunAutomated](#m_brunautomated)|指示找到命令列`/Automation`選項。|
+|[CCommandLine資訊::m_bRunEmbedded](#m_brunembedded)|指示找到命令列`/Embedding`選項。|
+|[CCommandLine資訊:m_bShowSplash](#m_bshowsplash)|指示是否應顯示初始螢幕。|
+|[CCommandLine資訊:m_nShellCommand](#m_nshellcommand)|指示要處理的 shell 命令。|
+|[CCommandLine資訊::m_strDriverName](#m_strdrivername)|如果 shell 命令為「列印到」,則指示驅動程式名稱;否則為空。|
+|[CCommandLine資訊::m_strFileName](#m_strfilename)|指示要打開或列印的檔名;如果 shell 命令為"新建" 或"DDE" 則為空。|
+|[CCommandLine資訊::m_strPortName](#m_strportname)|如果 shell 命令是「列印到」,則指示埠名稱;否則為空。|
+|[CCommandLine資訊:m_strPrinterName](#m_strprintername)|如果 shell 命令為「列印到」,則指示印表機名稱;否則為空。|
+|[CCommandLine資訊:m_strRestartIdentifier](#m_strrestartidentifier)|指示重新啟動管理器重新啟動應用程式時重新啟動管理員的唯一重新啟動標識符。|
 
 ## <a name="remarks"></a>備註
 
-MFC 應用程式通常會建立這個類別中的本機執行個體[InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)其應用程式物件的函式。 這個物件接著傳遞給[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)，重複呼叫[ParseParam](#parseparam)填滿`CCommandLineInfo`物件。 `CCommandLineInfo`物件會傳遞至[CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)來處理命令列引數和旗標。
+MFC 應用程式通常會在其應用程式物件的[InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)函數中創建此類的本地實例。 然後,此物件將傳遞給[CWinApp::ParseCommandLine,該命令線](../../mfc/reference/cwinapp-class.md#parsecommandline)重複調用[ParseParam](#parseparam)來填充`CCommandLineInfo`該物件。 然後`CCommandLineInfo`,該物件將傳遞給[CWinApp::ProcessShellCommand,](../../mfc/reference/cwinapp-class.md#processshellcommand)以處理命令行參數和標誌。
 
-您可以使用這個物件封裝的下列命令列選項和參數：
+可以使用此物件封裝以下命令列選項與參數:
 
-|命令列引數|執行命令|
+|命令列引數|命令已執行|
 |----------------------------|----------------------|
-|*app*|新的檔案。|
-|*應用程式*檔名|開啟檔案。|
-|*app* `/p` filename|列印到預設印表機的檔案。|
-|*應用程式* `/pt` filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|
-|*app* `/dde`|啟動，並等候 DDE 命令。|
-|*app* `/Automation`|為 OLE automation 伺服器啟動。|
-|*app* `/Embedding`|啟動編輯內嵌的 OLE 項目。|
-|*app* `/Register`<br /><br /> *app* `/Regserver`|會通知應用程式執行任何註冊的工作。|
-|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|會通知應用程式執行任何取消註冊的工作。|
+|*app*|新檔。|
+|*套用*檔案名稱|打開檔。|
+|*套用*`/p`檔案名稱|將檔案列印到預設印表機。|
+|*應用程式*`/pt`檔案名稱印表機驅動程式連接埠|將檔案列印到指定的印表機。|
+|*app* `/dde`|啟動並等待 DDE 命令。|
+|*app* `/Automation`|啟動為 OLE 自動化伺服器。|
+|*app* `/Embedding`|啟動以編輯嵌入的 OLE 專案。|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|通知應用程式執行任何註冊任務。|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|通知應用程式執行任何取消註冊任務。|
 
-衍生新類別從`CCommandLineInfo`來處理其他旗標和參數值。 覆寫[ParseParam](#parseparam)來處理新的旗標。
+派生新`CCommandLineInfo`類以處理其他標誌和參數值。 覆蓋[ParseParam](#parseparam)以處理新標誌。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -103,9 +103,9 @@ MFC 應用程式通常會建立這個類別中的本機執行個體[InitInstance
 
 **標題:** afxwin.h
 
-##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo
+## <a name="ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLine資訊:CCommandLineinfo
 
-這個建構函式會建立`CCommandLineInfo`物件使用預設值。
+此建構函數創建具有`CCommandLineInfo`預設值的物件。
 
 ```
 CCommandLineInfo();
@@ -113,17 +113,17 @@ CCommandLineInfo();
 
 ### <a name="remarks"></a>備註
 
-預設值是要說明啟動顯示畫面 ( `m_bShowSplash=TRUE`)，並在 [檔案] 功能表上執行新的命令 ( `m_nShellCommand` **= NewFile**)。
+預設值是顯示初始螢幕`m_bShowSplash=TRUE`( ), 並在「檔」`m_nShellCommand`選單 ( **#NewFile**) 上執行「 新建」 命令。
 
-這個應用程式架構會呼叫[ParseParam](#parseparam)來填滿這個物件的資料成員。
+應用程式框架調用[ParseParam](#parseparam)來填充此物件的數據成員。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]
 
-##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated
+## <a name="ccommandlineinfom_brunautomated"></a><a name="m_brunautomated"></a>CCommandLine資訊:m_bRunAutomated
 
-表示`/Automation`命令列上找不到旗標。
+指示在`/Automation`命令行上找到標誌。
 
 ```
 BOOL m_bRunAutomated;
@@ -131,11 +131,11 @@ BOOL m_bRunAutomated;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，這表示為 OLE automation 伺服器啟動。
+如果為 TRUE,則意味著啟動為 OLE 自動化伺服器。
 
-##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded
+## <a name="ccommandlineinfom_brunembedded"></a><a name="m_brunembedded"></a>CCommandLine資訊::m_bRunEmbedded
 
-表示`/Embedding`命令列上找不到旗標。
+指示在`/Embedding`命令行上找到標誌。
 
 ```
 BOOL m_bRunEmbedded;
@@ -143,11 +143,11 @@ BOOL m_bRunEmbedded;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，這表示啟動編輯內嵌的 OLE 項目。
+如果為 TRUE,則意味著啟動以編輯嵌入的 OLE 專案。
 
-##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash
+## <a name="ccommandlineinfom_bshowsplash"></a><a name="m_bshowsplash"></a>CCommandLine資訊:m_bShowSplash
 
-表示應該顯示啟動顯示畫面。
+指示應顯示初始螢幕。
 
 ```
 BOOL m_bShowSplash;
@@ -155,11 +155,11 @@ BOOL m_bShowSplash;
 
 ### <a name="remarks"></a>備註
 
-如果為 TRUE，這表示應該在啟動時顯示此應用程式啟動顯示畫面。 預設實作[ParseParam](#parseparam)設定為 TRUE 的這個資料成員[m_nShellCommand](#m_nshellcommand)等於`CCommandLineInfo::FileNew`。
+如果為 TRUE,則意味著此應用程式的初始螢幕應在啟動期間顯示。 如果[m_nShellCommand](#m_nshellcommand)`CCommandLineInfo::FileNew`等於 ,[則 ParseParam](#parseparam)的預設實現將此資料成員設定為 TRUE。
 
-##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand
+## <a name="ccommandlineinfom_nshellcommand"></a><a name="m_nshellcommand"></a>CCommandLine資訊:m_nShellCommand
 
-指出這個執行個體的應用程式的殼層命令。
+指示應用程式此實例的 shell 命令。
 
 ```
 m_nShellCommand;
@@ -167,7 +167,7 @@ m_nShellCommand;
 
 ### <a name="remarks"></a>備註
 
-此資料成員的類型是下列的列舉的類型，其定義於`CCommandLineInfo`類別。
+此數據成員的類型為以下枚舉類型,該類型在類中`CCommandLineInfo`定義。
 
 ```
 enum {
@@ -183,33 +183,33 @@ enum {
     };
 ```
 
-這些值的簡短描述，請參閱下列的清單。
+有關這些值的簡要說明,請參閱以下清單。
 
-- `CCommandLineInfo::FileNew` 指出在命令列上，找到任何檔案名稱。
+- `CCommandLineInfo::FileNew`指示在命令行上未找到檔名。
 
-- `CCommandLineInfo::FileOpen` 表示命令列上，找到的檔案名稱，而且，任何下列旗標上找不到命令列： `/p`， `/pt`， `/dde`。
+- `CCommandLineInfo::FileOpen`指示在命令列上找到檔案名,並且在命令列上找不到以下標誌: `/p`, `/pt` `/dde`。
 
-- `CCommandLineInfo::FilePrint` 表示`/p`命令列上找不到旗標。
+- `CCommandLineInfo::FilePrint`指示在`/p`命令行上找到標誌。
 
-- `CCommandLineInfo::FilePrintTo` 表示`/pt`命令列上找不到旗標。
+- `CCommandLineInfo::FilePrintTo`指示在`/pt`命令行上找到標誌。
 
-- `CCommandLineInfo::FileDDE` 表示`/dde`命令列上找不到旗標。
+- `CCommandLineInfo::FileDDE`指示在`/dde`命令行上找到標誌。
 
-- `CCommandLineInfo::AppRegister` 指出`/Register`或`/Regserver`命令列上找不到旗標和應用程式已要求註冊。
+- `CCommandLineInfo::AppRegister`指示在`/Register`命令`/Regserver`列 上找到 或標誌,並要求應用程式註冊。
 
-- `CCommandLineInfo::AppUnregister` 指出`/Unregister`或`/Unregserver`應用程式已要求取消註冊。
+- `CCommandLineInfo::AppUnregister`指示已要求`/Unregister``/Unregserver`或應用程式取消註冊。
 
-- `CCommandLineInfo::RestartByRestartManager` 指出重新啟動管理員已重新啟動應用程式。
+- `CCommandLineInfo::RestartByRestartManager`指示重新啟動管理器重新啟動應用程式。
 
-- `CCommandLineInfo::FileNothing` 關閉在啟動新的 MDI 子視窗的顯示。 根據設計，應用程式精靈產生的 MDI 應用程式會顯示在啟動新的子視窗。 若要關閉這項功能，可以使用應用程式`CCommandLineInfo::FileNothing`shell 命令呼叫時作為[會發生於 ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)。 `ProcessShellCommand` 會呼叫`InitInstance( )`所有`CWinApp`衍生的類別。
+- `CCommandLineInfo::FileNothing`在啟動時關閉新 MDI 子視窗的顯示。 根據設計,應用程式精靈生成的 MDI 應用程式在啟動時顯示一個新的子視窗。 要關閉此功能,應用程式在調用`CCommandLineInfo::FileNothing`[ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)時可以使用它作為 shell 命令。 `ProcessShellCommand`由所有`CWinApp`派`InitInstance( )`生類的調用。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]
 
-##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName
+## <a name="ccommandlineinfom_strdrivername"></a><a name="m_strdrivername"></a>CCommandLine資訊::m_strDriverName
 
-在命令列上，會儲存第三個非旗標參數的值。
+將第三個非標誌參數的值存儲在命令行上。
 
 ```
 CString m_strDriverName;
@@ -217,11 +217,11 @@ CString m_strDriverName;
 
 ### <a name="remarks"></a>備註
 
-此參數通常是印表機驅動程式的名稱列印至殼層命令。 預設實作[ParseParam](#parseparam)設定這個資料成員只有當`/pt`命令列上找不到旗標。
+此參數通常是列印到 shell 命令的印表機驅動程式的名稱。 僅當在命令列上找到標誌時[,ParseParam](#parseparam)`/pt`的預設實現才會設置此數據成員。
 
-##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName
+## <a name="ccommandlineinfom_strfilename"></a><a name="m_strfilename"></a>CCommandLine資訊::m_strFileName
 
-在命令列上，會儲存第一個非旗標參數的值。
+將第一個非標誌參數的值存儲在命令行上。
 
 ```
 CString m_strFileName;
@@ -229,11 +229,11 @@ CString m_strFileName;
 
 ### <a name="remarks"></a>備註
 
-此參數通常是要開啟之檔案的名稱。
+此參數通常是要打開的文件的名稱。
 
-##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName
+## <a name="ccommandlineinfom_strportname"></a><a name="m_strportname"></a>CCommandLine資訊::m_strPortName
 
-在命令列上，會儲存第四個非旗標參數的值。
+將第四個非標誌參數的值存儲在命令行上。
 
 ```
 CString m_strPortName;
@@ -241,11 +241,11 @@ CString m_strPortName;
 
 ### <a name="remarks"></a>備註
 
-此參數通常是列印至殼層命令的印表機連接埠的名稱。 預設實作[ParseParam](#parseparam)設定這個資料成員只有當`/pt`命令列上找不到旗標。
+此參數通常是列印到 shell 命令的印表機埠的名稱。 僅當在命令列上找到標誌時[,ParseParam](#parseparam)`/pt`的預設實現才會設置此數據成員。
 
-##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName
+## <a name="ccommandlineinfom_strprintername"></a><a name="m_strprintername"></a>CCommandLine資訊:m_strPrinterName
 
-在命令列上，會儲存第二個非旗標參數的值。
+將第二個非標誌參數的值存儲在命令行上。
 
 ```
 CString m_strPrinterName;
@@ -253,11 +253,11 @@ CString m_strPrinterName;
 
 ### <a name="remarks"></a>備註
 
-此參數通常是印表機的名稱列印至殼層命令。 預設實作[ParseParam](#parseparam)設定這個資料成員只有當`/pt`命令列上找不到旗標。
+此參數通常是列印到 shell 命令的印表機名稱。 僅當在命令列上找到標誌時[,ParseParam](#parseparam)`/pt`的預設實現才會設置此數據成員。
 
-##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier
+## <a name="ccommandlineinfom_strrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLine資訊:m_strRestartIdentifier
 
-唯一的重新啟動命令列上的識別項。
+命令列上的唯一重新啟動標識符。
 
 ```
 CString m_strRestartIdentifier;
@@ -265,13 +265,13 @@ CString m_strRestartIdentifier;
 
 ### <a name="remarks"></a>備註
 
-重新啟動識別碼是唯一的應用程式的每個執行個體。
+重新啟動標識符對於應用程式的每個實例都是唯一的。
 
-如果重新啟動管理員會結束應用程式，而且已設定成將它重新啟動，則重新啟動管理員會執行重新啟動識別碼為命令列的應用程式作為選擇性參數。 當重新啟動管理員會使用重新啟動識別項時，應用程式可以重新開啟先前開啟的文件，並復原會檔案。
+如果重新啟動管理器退出應用程式並設定為重新啟動應用程式,重新啟動管理器將從命令列執行應用程式,並將重新啟動標識符作為可選參數。 當重新啟動管理器使用重新啟動標識符時,應用程式可以重新打開以前打開的文檔並恢復自動儲存的檔。
 
-##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam
+## <a name="ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLine資訊::P
 
-架構會呼叫此函式來剖析/解譯個別的參數，從命令列。 第二個版本不同於第一個只在 Unicode 專案中。
+框架呼叫此函數來分析/解釋命令列中的單個參數。 第二個版本與 Unicode 專案中的第一個版本不同。
 
 ```
 virtual void ParseParam(
@@ -288,43 +288,43 @@ virtual void ParseParam(
 ### <a name="parameters"></a>參數
 
 *pszParam*<br/>
-參數的旗標。
+參數或標誌。
 
 *bFlag*<br/>
-指出是否*pszParam*參數或是的旗標。
+指示*pszParam*是參數還是標誌。
 
-*bLast*<br/>
-指出這是否為最後一個參數或命令列上的旗標。
+*爆炸*<br/>
+指示這是命令行上的最後一個參數或標誌。
 
 ### <a name="remarks"></a>備註
 
-[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼叫`ParseParam`一次針對每個參數或命令列上的旗標，並傳遞的引數*pszParam*。 如果參數的第一個字元是 ' **-**' **/**'，則會移除它並*bFlag*設為 TRUE。 當剖析的最後一個參數*bLast*設為 TRUE。
+[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)`ParseParam`為 指令列中的每個參數或標誌呼叫一次,將參數傳遞給*pszParam*。 如果參數的第一個字元是''**-** 或'',**/** 則刪除它並將*bFlag*設置為 TRUE。 分析最終參數時 *,bLast*設置為 TRUE。
 
-此函式的預設實作會辨識下列旗標： `/p`， `/pt`， `/dde`， `/Automation`，和`/Embedding`下, 表所示：
+此函數的預設實現可識別以下`/p`標誌: `/pt` `/dde` `/Automation`、`/Embedding`、 、 和, 如下表所示:
 
-|命令列引數|執行命令|
+|命令列引數|命令已執行|
 |----------------------------|----------------------|
-|*app*|新的檔案。|
-|*應用程式*檔名|開啟檔案。|
-|*app* `/p` filename|列印到預設印表機的檔案。|
-|*應用程式* `/pt` filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|
-|*app* `/dde`|啟動，並等候 DDE 命令。|
-|*app* `/Automation`|為 OLE automation 伺服器啟動。|
-|*app* `/Embedding`|啟動編輯內嵌的 OLE 項目。|
-|*app* `/Register`<br /><br /> *app* `/Regserver`|會通知應用程式執行任何註冊的工作。|
-|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|會通知應用程式執行任何取消註冊的工作。|
+|*app*|新檔。|
+|*套用*檔案名稱|打開檔。|
+|*套用*`/p`檔案名稱|將檔案列印到預設印表機。|
+|*應用程式*`/pt`檔案名稱印表機驅動程式連接埠|將檔案列印到指定的印表機。|
+|*app* `/dde`|啟動並等待 DDE 命令。|
+|*app* `/Automation`|啟動為 OLE 自動化伺服器。|
+|*app* `/Embedding`|啟動以編輯嵌入的 OLE 專案。|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|通知應用程式執行任何註冊任務。|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|通知應用程式執行任何取消註冊任務。|
 
-這項資訊會儲存在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，並[m_nShellCommand](#m_nshellcommand)。 正斜線標記旗標的其中一個 ' **/**'或連字號' **-**'。
+此資訊存儲在[m_bRunAutomated、m_bRunEmbedded](#m_brunautomated)和[m_bRunEmbedded](#m_brunembedded)[m_nShellCommand](#m_nshellcommand)中。 標誌用前斜杠'**/** 或連字元'標記**-**。
 
-預設實作會將第一個非旗標參數插入[m_strFileName](#m_strfilename)。 若是`/pt`旗標的預設實作會將第二個，第三和第四個非旗標參數[m_strPrinterName](#m_strprintername)， [m_strDriverName](#m_strdrivername)，和[m_strPortName](#m_strportname)分別。
+預設實現第一個非旗標參數放入[m_strFileName](#m_strfilename)。 在`/pt`標誌的情況下,默認實現將第二個、第三個和第四個非標誌參數分別放入[m_strPrinterName、m_strDriverName](#m_strprintername)和[m_strDriverName](#m_strdrivername)[m_strPortName。](#m_strportname)
 
-預設實作也會設定[m_bShowSplash](#m_bshowsplash)到只在新檔案的情況下，則為 TRUE。 新的檔案，在使用者採取動作牽涉到應用程式本身。 在任何其他案例，包括開啟現有的檔案使用的殼層中的使用者動作直接涉及檔案。 在 文件中心的觀點來看，啟動顯示畫面不會不需要宣布啟動應用程式。
+預設實現還僅在新文件的情況下[將m_bShowSplash](#m_bshowsplash)設定為 TRUE。 在新文件的情況下,使用者已執行涉及應用程式本身的操作。 在任何其他情況下,包括使用 shell 打開現有檔案,使用者操作將直接涉及該檔。 在以文件為中心的立場中,初始螢幕不需要宣佈應用程式啟動。
 
-在衍生類別處理其他旗標和參數值中的此函式會覆寫。
+重寫派生類中的此函數以處理其他標誌和參數值。
 
 ## <a name="see-also"></a>另請參閱
 
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
-[CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
+[CWinApp::P](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
+[CWinApp::P羅塞斯舍爾命令](../../mfc/reference/cwinapp-class.md#processshellcommand)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 ms.assetid: 801d7df2-efa9-4924-a725-274a5654cfd4
 ms.openlocfilehash: 69d6fa2b17523f2bb4068cd05a11265d91750021
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157874"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>儲存類別指定名稱與函式宣告
 
 您可以在函式宣告中使用 **static** 或 `extern` 儲存類別指定名稱。 函式一定會具有全域存留期。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 內部層次的函式宣告與外部層次的函式宣告具有相同的意義。 這表示函式從其宣告的位置到轉譯單位的其餘部分皆可見，即使是在區域範圍宣告亦相同。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 函式的可視性規則與變數的規則稍有不同，如下所示：
 
@@ -34,12 +34,12 @@ ms.locfileid: "56152257"
 
 - 省略儲存類別規範的函式宣告會預設為 `extern`。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 Microsoft 允許將 `extern` 識別項重新定義為 **static**。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 儲存類別](../c-language/c-storage-classes.md)

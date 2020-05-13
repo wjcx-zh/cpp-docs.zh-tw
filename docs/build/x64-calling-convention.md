@@ -3,12 +3,12 @@ title: x64 呼叫慣例
 description: 預設 x64 ABI 呼叫慣例的詳細資料。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: caf22172ea5e9c20280bce8e508d72fd30c00c5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335136"
 ---
 # <a name="x64-calling-convention"></a>x64 呼叫慣例
 
@@ -18,11 +18,11 @@ ms.locfileid: "80078074"
 
 X64 應用程式二進位介面（ABI）預設會使用四個註冊的快速呼叫呼叫慣例。 在呼叫堆疊上配置空間做為被呼叫端的陰影存放區，以儲存這些暫存器。 函式呼叫的引數與用於這些引數的暫存器之間，有一個嚴格的一對一對應。 不符合8個位元組，或不是1、2、4或8個位元組的任何引數，都必須以傳址方式傳遞。 單一引數永遠不會散佈到多個暫存器中。 X87 暫存器堆疊未使用，可供被呼叫端使用，但必須在函式呼叫中被視為 volatile。 所有的浮點運算都是使用16個 XMM 暫存器來完成。 整數引數會在暫存器 RCX、RDX、R8 和 R9 中傳遞。 浮點引數會以 XMM0L、XMM1L、XMM2L 和 XMM3L 傳遞。 16位元組引數是以傳址方式傳遞。 參數傳遞中會詳細說明參數[傳遞。](#parameter-passing) 除了這些暫存器以外，RAX、R10、R11、XMM4 和 XMM5 都會被視為 volatile。 所有其他暫存器都是不可變動的。 註冊使用方式記載于[註冊使用方式](../build/x64-software-conventions.md#register-usage)和[呼叫者/被](#callercallee-saved-registers)呼叫端儲存的暫存器中。
 
-若為原型函式，所有引數都會先轉換成預期的被呼叫端類型，然後才傳遞。 呼叫端負責將參數的空間配置給被呼叫端，而且必須一律配置足夠的空間來儲存四個暫存器參數，即使被呼叫端不接受這許多參數也一樣。 此慣例可簡化沒有原型 C 語言函式和 vararg C/C++函數的支援。 對於 vararg 或沒有原型函數，任何浮點值都必須在對應的一般用途暫存器中重複。 在呼叫之前，在陰影存放區之後，必須將前四個以外的任何參數儲存在堆疊上。 Vararg 函數詳細資料可以在[Varargs](#varargs)中找到。 [沒有原型](#unprototyped-functions)函式中會詳細說明沒有原型函數資訊。
+若為原型函式，所有引數都會先轉換成預期的被呼叫端類型，然後才傳遞。 呼叫端負責將參數的空間配置給被呼叫端，而且必須一律配置足夠的空間來儲存四個暫存器參數，即使被呼叫端不接受這許多參數也一樣。 這種慣例可簡化沒有原型 C 語言函式和 vararg C/c + + 函數的支援。 對於 vararg 或沒有原型函數，任何浮點值都必須在對應的一般用途暫存器中重複。 在呼叫之前，在陰影存放區之後，必須將前四個以外的任何參數儲存在堆疊上。 Vararg 函數詳細資料可以在[Varargs](#varargs)中找到。 [沒有原型](#unprototyped-functions)函式中會詳細說明沒有原型函數資訊。
 
 ## <a name="alignment"></a>Alignment
 
-大部分的結構會對齊其自然對齊方式。 主要的例外狀況是堆疊指標和 `malloc` 或 `alloca` 記憶體，其會對齊16個位元組，以協助效能。 超過16個位元組的對齊必須手動完成，但由於 XMM 作業的一般對齊大小是16個位元組，所以這個值應該適用于大部分的程式碼。 如需結構配置和對齊的詳細資訊，請參閱[類型和儲存體](../build/x64-software-conventions.md#types-and-storage)。 如需堆疊版面配置的詳細資訊，請參閱[x64 stack 使用](../build/stack-usage.md)方式。
+大部分的結構會對齊其自然對齊方式。 主要的例外狀況是堆疊指標和`malloc`或`alloca`記憶體，其會對齊16個位元組，以協助效能。 超過16個位元組的對齊必須手動完成，但由於 XMM 作業的一般對齊大小是16個位元組，所以這個值應該適用于大部分的程式碼。 如需結構配置和對齊的詳細資訊，請參閱[類型和儲存體](../build/x64-software-conventions.md#types-and-storage)。 如需堆疊版面配置的詳細資訊，請參閱[x64 stack 使用](../build/stack-usage.md)方式。
 
 ## <a name="unwindability"></a>Unwindability
 
@@ -34,7 +34,7 @@ X64 應用程式二進位介面（ABI）預設會使用四個註冊的快速呼�
 
 前四個參數中的任何浮點和雙精確度引數會在 XMM0-XMM3 中傳遞，視位置而定。 除非在 varargs 引數的情況下，否則會忽略那些位置通常會使用的 RCX、RDX、R8 和 R9 的整數。 如需詳細資訊，請參閱[Varargs](#varargs)。 同樣地，當對應的引數是整數或指標類型時，會忽略 XMM0-XMM3 暫存器。
 
-立即的值永遠不會傳遞[__m128](../cpp/m128.md)類型、陣列和字串。 相反地，指標會傳遞至呼叫端所配置的記憶體。 大小8、16、32或64位的結構和聯集，以及 __m64 類型，會如同相同大小的整數一樣傳遞。 其他大小的結構或等位會以指標的形式傳遞給呼叫端所配置的記憶體。 針對當做指標傳遞的這些匯總類型（包括 \__m128），呼叫端配置的暫存記憶體必須是16個位元組的對齊。
+立即的值永遠不會傳遞[__m128](../cpp/m128.md)類型、陣列和字串。 相反地，指標會傳遞至呼叫端所配置的記憶體。 大小8、16、32或64位的結構和聯集，以及 __m64 類型，會如同相同大小的整數一樣傳遞。 其他大小的結構或等位會以指標的形式傳遞給呼叫端所配置的記憶體。 針對當做指標傳遞的這些匯總類型（包括\__m128），呼叫端配置的暫存記憶體必須是16個位元組的對齊。
 
 內建函式不會配置堆疊空間，也不會呼叫其他函式，有時會使用其他 volatile 暫存器來傳遞額外的暫存器引數。 編譯器與內建函式執行之間的緊密系結可以達成這項優化。
 
@@ -44,7 +44,7 @@ X64 應用程式二進位介面（ABI）預設會使用四個註冊的快速呼�
 
 |參數類型|傳遞方式|
 |--------------------|----------------|
-|浮點數|前4個參數-XMM0 至 XMM3。 堆疊上傳遞的其他專案。|
+|浮點|前4個參數-XMM0 至 XMM3。 堆疊上傳遞的其他專案。|
 |整數|前4個參數-RCX、RDX、R8、R9。 堆疊上傳遞的其他專案。|
 |匯總（8、16、32或64位）和 __m64|前4個參數-RCX、RDX、R8、R9。 堆疊上傳遞的其他專案。|
 |匯總（其他）|By 指標。 在 RCX、RDX、R8 和 R9 中傳遞為指標的前4個參數|
@@ -71,7 +71,7 @@ func3(int a, double b, int c, float d);
 // a in RCX, b in XMM1, c in R8, d in XMM3
 ```
 
-### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>傳遞 4 __m64、\__m128 和匯總之引數的範例
+### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>傳遞 4 __m64、 \__m128 和匯總的引數範例
 
 ```cpp
 func4(__m64 a, _m128 b, struct c, float d);
@@ -97,7 +97,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 可放入64位的純量傳回值會透過 RAX 傳回;這包括 __m64 類型。 包含浮點數、雙精確度和向量類型的非純量類型（例如[__m128](../cpp/m128.md)、 [__m128i](../cpp/m128i.md)、 [__m128d](../cpp/m128d.md)會在 XMM0 中傳回。 對於 RAX 或 XMM0 中傳回的值，其中未使用之位元的狀態尚未定義。
 
-使用者定義的類型可透過全域函式和靜態成員函式的值傳回。 若要在 RAX 中以傳值方式傳回使用者定義型別，它的長度必須是1、2、4、8、16、32或64位。 它也必須沒有使用者定義的函式、析構函數或複製指派運算子;沒有私用或受保護的非靜態資料成員;沒有參考型別的非靜態資料成員;沒有基類;沒有虛擬函式;而且沒有任何資料成員也不符合這些需求。 (這基本上是 C++03 POD 類型的定義。 因為 c + + 11 標準中的定義已變更，所以不建議在此測試中使用 `std::is_pod`）。否則，呼叫者會負責配置記憶體，並將傳回值的指標當做第一個引數來傳遞。 後續的引數將向右移一個引數。 在 RAX 中的被呼叫端必須傳回相同的指標。
+使用者定義的類型可透過全域函式和靜態成員函式的值傳回。 若要在 RAX 中以傳值方式傳回使用者定義型別，它的長度必須是1、2、4、8、16、32或64位。 它也必須沒有使用者定義的函式、析構函數或複製指派運算子;沒有私用或受保護的非靜態資料成員;沒有參考型別的非靜態資料成員;沒有基類;沒有虛擬函式;而且沒有任何資料成員也不符合這些需求。 (這基本上是 C++03 POD 類型的定義。 由於在 c + + 11 標準中的定義已變更，因此不`std::is_pod`建議在這項測試中使用。）否則，呼叫者會負責配置記憶體，並將傳回值的指標當做第一個引數來傳遞。 後續的引數將向右移一個引數。 在 RAX 中的被呼叫端必須傳回相同的指標。
 
 這些範例展示有指定之宣告的函式如何傳遞參數和傳回值：
 
@@ -178,7 +178,7 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="mxcsr"></a>MxCsr
 
-註冊狀態也包括 MxCsr。 呼叫慣例會將此暫存器分成一個 volatile 部分和一個非靜態部分。 Volatile 部分包含六個狀態旗標（在 MXCSR\[0:5] 中），而註冊 MXCSR\[6:15] 的其餘部分則視為非易失。
+註冊狀態也包括 MxCsr。 呼叫慣例會將此暫存器分成一個 volatile 部分和一個非靜態部分。 Volatile 部分包含六個狀態旗標（在 MXCSR\[0:5 中），而暫存器的其餘部分 MXCSR\[6:15] 則視為非易失。
 
 在程式執行開始時，非靜態部分會設定為下列標準值：
 
@@ -201,10 +201,10 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-當您包含 setjmpex.h 或 setjmp 時，所有對[setjmp](../c-runtime-library/reference/setjmp.md)或[longjmp](../c-runtime-library/reference/longjmp.md)的呼叫都會導致叫用析構函數和 `__finally` 呼叫的回溯。  這與 x86 不同，其中包括 setjmp. h 會導致 `__finally` 子句和不被叫用的析構函數。
+當您包含 setjmpex.h 或 setjmp 時，所有對[setjmp](../c-runtime-library/reference/setjmp.md)或[longjmp](../c-runtime-library/reference/longjmp.md)的呼叫都會導致叫用析構函數和`__finally`呼叫的回溯。  這與 x86 不同，其中包括不會叫用在`__finally`子句和析構函數中的 setjmp. h 結果。
 
-`setjmp` 的呼叫會保留目前的堆疊指標、非 volatile 暫存器和 MxCsr 暫存器。  呼叫 `longjmp` 會回到最近的 `setjmp` 呼叫網站，並將堆疊指標、非 volatile 暫存器和 MxCsr 暫存器重新設回最近 `setjmp` 呼叫所保留的狀態。
+的呼叫會`setjmp`保留目前的堆疊指標、非 volatile 暫存器和 MxCsr 暫存器。  呼叫以`longjmp`返回最新`setjmp`的呼叫位置，並將堆疊指標、非 Volatile 暫存器和 MxCsr 暫存器重設回最近一次`setjmp`呼叫所保留的狀態。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [x64 軟體慣例](../build/x64-software-conventions.md)

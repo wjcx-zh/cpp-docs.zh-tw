@@ -3,11 +3,11 @@ title: auto 儲存類別指定名稱
 ms.date: 11/04/2016
 ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
 ms.openlocfilehash: 6bd36fd534602a5a4df95047a830058e8c5ef163
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313463"
 ---
 # <a name="auto-storage-class-specifier"></a>auto 儲存類別指定名稱
 
@@ -15,6 +15,6 @@ ms.locfileid: "56147005"
 
 內部 **static** 變數 (具有區域或區塊範圍的靜態變數) 可以使用任何外部或 **static** 項目的位址初始化，但是無法使用另一個 **auto** 項目的位址初始化，因為 **auto** 項目的位址不是常數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [auto 關鍵字](../cpp/auto-keyword.md)

@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 536d84fe2c2f68d62490e1ce2b65085426762e87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391292"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754203"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 類別
 
-ID2D1Brush 包裝函式。
+ID2D1Brush 的包裝器。
 
 ## <a name="syntax"></a>語法
 
@@ -53,72 +53,72 @@ class CD2DBrush : public CD2DResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBrush::CD2DBrush](#cd2dbrush)|建構 CD2DBrush 物件。|
-|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|解構函式。 D2D 筆刷物件正在被終結時呼叫。|
+|[CD2DBrush:CD2DBrush](#cd2dbrush)|構造 CD2DBrush 物件。|
+|[CD2DBrush:*CD2DBrush](#_dtorcd2dbrush)|解構函式。 銷毀 D2D 畫筆物件時調用。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBrush::Attach](#attach)|將現有的資源物件的介面|
-|[CD2DBrush::Destroy](#destroy)|終結 CD2DBrush 物件。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|
-|[CD2DBrush::Detach](#detach)|中斷連結物件中的資源介面|
-|[CD2DBrush::Get](#get)|傳回 ID2D1Brush 介面|
-|[CD2DBrush::GetOpacity](#getopacity)|取得這個筆刷的不透明度|
-|[CD2DBrush::GetTransform](#gettransform)|取得目前的轉譯目標的轉換|
-|[CD2DBrush::IsValid](#isvalid)|檢查資源的有效性 (會覆寫[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
-|[CD2DBrush::SetOpacity](#setopacity)|設定這個筆刷的不透明度|
-|[CD2DBrush::SetTransform](#settransform)|指定的轉換套用到轉譯目標中，取代現有的轉換。 所有後續的繪圖作業發生在轉換後的空間|
+|[CD2DBrush:附加](#attach)|將現有資源介面附加到物件|
+|[CD2DBrush::D](#destroy)|銷毀 CD2DBrush 物件。 (覆蓋[CD2D 資源::D)](../../mfc/reference/cd2dresource-class.md#destroy)|
+|[CD2DBrush::D](#detach)|從物件分離資源介面|
+|[CD2DBrush:取得](#get)|傳回 ID2D1Brush 介面|
+|[CD2DBrush:取得機會](#getopacity)|取得此筆刷的不恰當程度|
+|[CD2DBrush:取得轉換](#gettransform)|取得成成一個目標的現層|
+|[CD2DBrush:有效](#isvalid)|檢查資源有效性(覆寫[CD2D 資源::有效](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
+|[CD2DBrush:SetOpaa](#setopacity)|設定此筆刷的不恰當程度|
+|[CD2DBrush::設定轉換](#settransform)|將指定的轉換應用於渲染目標,替換現有變換。 所有後續繪圖操作都發生在轉換的空間中|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBrush::operator ID2D1Brush *](#operator_id2d1brush_star)|傳回 ID2D1Brush 介面|
+|[CD2DBrush::操作員 ID2D1Brush*](#operator_id2d1brush_star)|傳回 ID2D1Brush 介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBrush::m_pBrush](#m_pbrush)|儲存 ID2D1Brush 物件的指標。|
-|[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|筆刷屬性。|
+|[CD2DBrush:m_pBrush](#m_pbrush)|存儲指向 ID2D1Brush 物件的指標。|
+|[CD2DBrush:m_pBrushProperties](#m_pbrushproperties)|畫筆屬性。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DBrush`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbrush"></a>  CD2DBrush:: ~ CD2DBrush
+## <a name="cd2dbrushcd2dbrush"></a><a name="_dtorcd2dbrush"></a>CD2DBrush:*CD2DBrush
 
-解構函式。 D2D 筆刷物件正在被終結時呼叫。
+解構函式。 銷毀 D2D 畫筆物件時調用。
 
 ```
 virtual ~CD2DBrush();
 ```
 
-##  <a name="attach"></a>  CD2DBrush::Attach
+## <a name="cd2dbrushattach"></a><a name="attach"></a>CD2DBrush:附加
 
-將現有的資源物件的介面。
+將現有資源介面附加到物件。
 
-```
+```cpp
 void Attach(ID2D1Brush* pResource);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pResource*<br/>
-現有的資源介面。 不可以是 NULL。
+*p資源*<br/>
+現有資源介面。 不能是 NULL。
 
-##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush
+## <a name="cd2dbrushcd2dbrush"></a><a name="cd2dbrush"></a>CD2DBrush:CD2DBrush
 
-建構 CD2DBrush 物件。
+構造 CD2DBrush 物件。
 
 ```
 CD2DBrush(
@@ -129,26 +129,26 @@ CD2DBrush(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
-*pBrushProperties*<br/>
-不透明度和筆刷轉換指標。
+*pBrush 屬性*<br/>
+指向畫筆的不一用性和變換的指標。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
-##  <a name="destroy"></a>  CD2DBrush::Destroy
+## <a name="cd2dbrushdestroy"></a><a name="destroy"></a>CD2DBrush::D
 
-終結 CD2DBrush 物件。
+銷毀 CD2DBrush 物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBrush::Detach
+## <a name="cd2dbrushdetach"></a><a name="detach"></a>CD2DBrush::D
 
-中斷連結物件中的資源介面。
+從物件分離資源介面。
 
 ```
 ID2D1Brush* Detach();
@@ -156,9 +156,9 @@ ID2D1Brush* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-中斷連結的資源介面指標。
+指向分離的資源介面的指標。
 
-##  <a name="get"></a>  CD2DBrush::Get
+## <a name="cd2dbrushget"></a><a name="get"></a>CD2DBrush:取得
 
 傳回 ID2D1Brush 介面
 
@@ -168,11 +168,11 @@ ID2D1Brush* Get();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1Brush 介面的指標。
+如果物件尚未初始化,則指向 ID2D1Brush 介面或 NULL 的指標。
 
-##  <a name="getopacity"></a>  CD2DBrush::GetOpacity
+## <a name="cd2dbrushgetopacity"></a><a name="getopacity"></a>CD2DBrush:取得機會
 
-取得這個筆刷的不透明度
+取得此筆刷的不恰當程度
 
 ```
 FLOAT GetOpacity() const;
@@ -180,24 +180,24 @@ FLOAT GetOpacity() const;
 
 ### <a name="return-value"></a>傳回值
 
-介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有填滿筆刷的像素的 alpha 值的常數倍數。 不透明度值會限制在 0 到 1 的範圍之前一起相乘。
+零和 1 之間的值,指示畫筆的不恰當性。 此值是一個常量乘數,它線性縮放畫筆填充的所有圖元的 alpha 值。 不一元值在乘以 0 到 1 的範圍內夾緊, 然後再相乘。
 
-##  <a name="gettransform"></a>  CD2DBrush::GetTransform
+## <a name="cd2dbrushgettransform"></a><a name="gettransform"></a>CD2DBrush:取得轉換
 
-取得目前的轉譯目標的轉換
+取得成成一個目標的現層
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*transform*<br/>
-這會傳回包含目前的轉譯目標的轉換。 這個參數會以未初始化的狀態傳遞。
+*變換*<br/>
+當返回時,包含渲染目標的當前變換。 此參數傳遞時未經初始化。
 
-##  <a name="isvalid"></a>  CD2DBrush::IsValid
+## <a name="cd2dbrushisvalid"></a><a name="isvalid"></a>CD2DBrush:有效
 
-檢查資源的有效性
+檢查資源有效性
 
 ```
 virtual BOOL IsValid() const;
@@ -205,25 +205,25 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資源無效，則為 TRUE否則為 FALSE。
+如果資源有效,則為 TRUE;否則 FALSE。
 
-##  <a name="m_pbrush"></a>  CD2DBrush::m_pBrush
+## <a name="cd2dbrushm_pbrush"></a><a name="m_pbrush"></a>CD2DBrush:m_pBrush
 
-儲存 ID2D1Brush 物件的指標。
+存儲指向 ID2D1Brush 物件的指標。
 
 ```
 ID2D1Brush* m_pBrush;
 ```
 
-##  <a name="m_pbrushproperties"></a>  CD2DBrush::m_pBrushProperties
+## <a name="cd2dbrushm_pbrushproperties"></a><a name="m_pbrushproperties"></a>CD2DBrush:m_pBrushProperties
 
-筆刷屬性。
+畫筆屬性。
 
 ```
 CD2DBrushProperties* m_pBrushProperties;
 ```
 
-##  <a name="operator_id2d1brush_star"></a>  CD2DBrush::operator ID2D1Brush *
+## <a name="cd2dbrushoperator-id2d1brush"></a><a name="operator_id2d1brush_star"></a>CD2DBrush::操作員 ID2D1Brush*
 
 傳回 ID2D1Brush 介面
 
@@ -233,33 +233,33 @@ operator ID2D1Brush*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1Brush 介面的指標。
+如果物件尚未初始化,則指向 ID2D1Brush 介面或 NULL 的指標。
 
-##  <a name="setopacity"></a>  CD2DBrush::SetOpacity
+## <a name="cd2dbrushsetopacity"></a><a name="setopacity"></a>CD2DBrush:SetOpaa
 
-設定這個筆刷的不透明度
+設定此筆刷的不恰當程度
 
-```
+```cpp
 void SetOpacity(FLOAT opacity);
 ```
 
 ### <a name="parameters"></a>參數
 
-*opacity*<br/>
-介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有填滿筆刷的像素的 alpha 值的常數倍數。 不透明度值會限制在 0 到 1 的範圍之前一起相乘。
+*透明度*<br/>
+零和 1 之間的值,指示畫筆的不恰當性。 此值是一個常量乘數,它線性縮放畫筆填充的所有圖元的 alpha 值。 不一元值在乘以 0 到 1 的範圍內夾緊, 然後再相乘。
 
-##  <a name="settransform"></a>  CD2DBrush::SetTransform
+## <a name="cd2dbrushsettransform"></a><a name="settransform"></a>CD2DBrush::設定轉換
 
-指定的轉換套用到轉譯目標中，取代現有的轉換。 所有後續的繪圖作業會在轉換後的空間發生。
+將指定的轉換應用於渲染目標,替換現有變換。 所有後續繪圖操作都發生在轉換的空間中。
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```
 
 ### <a name="parameters"></a>參數
 
-*transform*<br/>
-要套用到轉譯目標的轉換
+*變換*<br/>
+套用成成成成成目標轉換
 
 ## <a name="see-also"></a>另請參閱
 

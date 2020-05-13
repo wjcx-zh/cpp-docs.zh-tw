@@ -1,8 +1,9 @@
 ---
 title: _recalloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _recalloc
+- _o__recalloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: f06631fe4dd0abcb0b18895ccb04e5b52cda6a2c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 342228635e69d49e0b51196aef03a296c1f0e652
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949452"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917858"
 ---
 # <a name="_recalloc"></a>_recalloc
 
@@ -70,13 +72,13 @@ void *_recalloc(
 
 ## <a name="remarks"></a>備註
 
-**_Recalloc**函數會變更已配置記憶體區塊的大小。 *Memblock*引數會指向記憶體區塊的開頭。 如果*memblock*為**Null**， **_recalloc**的行為會與[calloc](calloc.md)相同，並會配置新的*數位* * *大小*位元組區塊。 每個元素都會初始化為 0。 如果*memblock*不是**Null**，它應該是先前對**calloc**、 [malloc](malloc.md)或[realloc](realloc.md)的呼叫所傳回的指標。
+**_Recalloc**函式會變更已配置記憶體區塊的大小。 *Memblock*引數會指向記憶體區塊的開頭。 如果*memblock*為**Null**， **_recalloc**的行為會與[calloc](calloc.md)相同，並會配置新的*數位* * *大小*位元組區塊。 每個項目都會初始化為 0。 如果*memblock*不是**Null**，它應該是先前對**calloc**、 [malloc](malloc.md)或[realloc](realloc.md)的呼叫所傳回的指標。
 
-由於新的區塊可以在新的記憶體位置中，因此 **_recalloc**所傳回的指標不一定是透過*memblock*引數傳遞的指標。
+因為新的區塊可以在新的記憶體位置中，所以 **_recalloc**傳回的指標不一定是透過*memblock*引數傳遞的指標。
 
-如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**，則 **_recalloc**會將**errno**設定為**ENOMEM** 。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+**_recalloc**將**Errno**設定為**ENOMEM** ，如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**recalloc**會呼叫**realloc** ，以便使用C++ [_set_new_mode](set-new-mode.md)函數來設定新的處理常式模式。 新的處理常式模式指出，在失敗時， **realloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **realloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當 **_recalloc**無法配置記憶體時， **realloc**會呼叫新的處理常式常式，就像**新**的運算子因為相同的原因而失敗。 若要覆寫預設值，請及早在程式中呼叫
+**recalloc**會呼叫**realloc** ，以便使用 c + + [_set_new_mode](set-new-mode.md)函數來設定新的處理常式模式。 新的處理常式模式指出，在失敗時， **realloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **realloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當 **_recalloc**無法配置記憶體時， **realloc**就會呼叫新的處理常式常式，就像**新**的運算子因為相同的原因而失敗時一樣。 若要覆寫預設值，請及早在程式中呼叫
 
 ```C
 _set_new_mode(1);
@@ -84,9 +86,11 @@ _set_new_mode(1);
 
 或與 NEWMODE.OBJ 連結。
 
-當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_recalloc**會解析為[_recalloc_dbg](recalloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_recalloc**會解析成[_recalloc_dbg](recalloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
 **_recalloc**標示`__declspec(noalias)`為和`__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -102,5 +106,5 @@ _set_new_mode(1);
 [_recalloc_dbg](recalloc-dbg.md)<br/>
 [_aligned_recalloc](aligned-recalloc.md)<br/>
 [_aligned_offset_recalloc](aligned-offset-recalloc.md)<br/>
-[free](free.md)<br/>
+[受](free.md)<br/>
 [連結選項](../../c-runtime-library/link-options.md)<br/>

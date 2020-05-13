@@ -1,11 +1,13 @@
 ---
 title: isalnum、iswalnum、_isalnum_l、_iswalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
+- _o_isalnum
+- _o_iswalnum
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954594"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919807"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 
@@ -62,7 +65,7 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -83,6 +86,10 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 |**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
 
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
@@ -97,5 +104,5 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 ## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

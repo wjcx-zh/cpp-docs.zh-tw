@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraitsI 類別
+title: 弦元素功能I類
 ms.date: 11/04/2016
 f1_keywords:
 - CStringElementTraitsI
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-ms.openlocfilehash: 77357aa2be326ebebaaf5a8614faaf88a0c3c06b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32980e19443cb17a3a688c85ff21195c60ed2124
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277431"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330595"
 ---
-# <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI 類別
+# <a name="cstringelementtraitsi-class"></a>弦元素功能I類
 
-這個類別提供靜態的函式與儲存在集合類別物件的字串。 類似於[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)，但是執行不區分大小寫的比較。
+此類提供與集合類物件中存儲的字串相關的靜態函數。 它類似於[CStringElementTraits,](../../atl/reference/cstringelementtraits-class.md)但執行不區分大小寫的比較。
 
 ## <a name="syntax"></a>語法
 
@@ -33,7 +33,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-若要在集合中儲存的資料型別。
+要存儲在集合中的數據類型。
 
 ## <a name="members"></a>成員
 
@@ -41,36 +41,36 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 
 |名稱|描述|
 |----------|-----------------|
-|[CStringElementTraitsI::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|
+|[弦元素特徵I::INARGTYPE](#inargtype)|用於向集合類物件添加元素的數據類型。|
+|[弦元素特徵I:OUTARGTYPE](#outargtype)|用於從集合類物件檢索元素的數據類型。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CStringElementTraitsI::CompareElements](#compareelements)|呼叫此靜態函式來比較兩個字串項目相等，忽略大小寫的不同。|
-|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|呼叫此靜態函式來比較兩個字串項目，並忽略大小寫的不同。|
-|[CStringElementTraitsI::Hash](#hash)|呼叫此靜態函式來計算雜湊值，指定的字串項目。|
+|[弦元素特徵I:比較元素](#compareelements)|呼叫此靜態函數以比較兩個字串元素以實現相等性,忽略情況下的差異。|
+|[弦元素特徵I::比較元素排序](#compareelementsordered)|呼叫此靜態函數以比較兩個字串元素,忽略情況下的差異。|
+|[弦樂元素:哈希](#hash)|呼叫此靜態函數以計算給定字串元素的哈希值。|
 
 ## <a name="remarks"></a>備註
 
-這個類別提供靜態函式，來比較字串，以及如何建立雜湊值。 使用集合類別來儲存字串為基礎的資料時，則這些函式會很有用。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)字串物件時使用處理做為參考。
+此類提供用於比較字串和創建哈希值的靜態函數。 當使用集合類存儲基於字串的數據時,這些函數非常有用。 當要處理字串物件作為引用處理時,請使用[CStringRefElementTraits。](../../atl/reference/cstringrefelementtraits-class.md)
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+有關詳細資訊,請參閱[ATL 收集類](../../atl/atl-collection-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[元素庫](../../atl/reference/celementtraitsbase-class.md)
 
 `CStringElementTraitsI`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements
+## <a name="cstringelementtraitsicompareelements"></a><a name="compareelements"></a>弦元素特徵I:比較元素
 
-呼叫此靜態函式來比較兩個字串項目相等，忽略大小寫的不同。
+呼叫此靜態函數以比較兩個字串元素以實現相等性,忽略情況下的差異。
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
@@ -79,22 +79,22 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個字串項目。
+第一個字串元素。
 
 *str2*<br/>
-第二個字串項目。
+第二個字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-如果項目相等，false 否則，就會傳回 true。
+如果元素相等,則返回 true,否則為 false。
 
 ### <a name="remarks"></a>備註
 
 比較不區分大小寫。
 
-##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered
+## <a name="cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>弦元素特徵I::比較元素排序
 
-呼叫此靜態函式來比較兩個字串項目，並忽略大小寫的不同。
+呼叫此靜態函數以比較兩個字串元素,忽略情況下的差異。
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -103,22 +103,22 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個字串項目。
+第一個字串元素。
 
 *str2*<br/>
-第二個字串項目。
+第二個字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-若字串相同的零，< 0 如果*str1*是小於*str2*，或 > 0 如果*str1*大於*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用來執行比較。
+如果字串相同,則為零,如果*str1*小於*str2,* 則< 0;如果*str1*大於*str2,* 則> 0。 [CStringT::比較](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用於執行比較。
 
 ### <a name="remarks"></a>備註
 
 比較不區分大小寫。
 
-##  <a name="hash"></a>  CStringElementTraitsI::Hash
+## <a name="cstringelementtraitsihash"></a><a name="hash"></a>弦樂元素:哈希
 
-呼叫此靜態函式來計算雜湊值，指定的字串項目。
+呼叫此靜態函數以計算給定字串元素的哈希值。
 
 ```
 static ULONG Hash(INARGTYPE str) throw();
@@ -126,24 +126,24 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-字串項目中。
+*Str*<br/>
+字串元素。
 
 ### <a name="return-value"></a>傳回值
 
-傳回使用字串的內容計算的雜湊值。
+傳回使用字串內容計算的哈希值。
 
-##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE
+## <a name="cstringelementtraitsiinargtype"></a><a name="inargtype"></a>弦元素特徵I::INARGTYPE
 
-要用於將項目加入至集合的類別物件的資料類型。
+用於向集合類物件添加元素的數據類型。
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE
+## <a name="cstringelementtraitsioutargtype"></a><a name="outargtype"></a>弦元素特徵I:OUTARGTYPE
 
-要用來擷取元素的集合類別物件的資料類型。
+用於從集合類物件檢索元素的數據類型。
 
 ```
 typedef T& OUTARGTYPE;
@@ -151,6 +151,6 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>另請參閱
 
-[CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)<br/>
+[元素基礎類](../../atl/reference/celementtraitsbase-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
-[CStringElementTraits 類別](../../atl/reference/cstringelementtraits-class.md)
+[CStringElementtraits 類別](../../atl/reference/cstringelementtraits-class.md)

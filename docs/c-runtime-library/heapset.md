@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351278"
 ---
 # <a name="_heapset"></a>_heapset
 
 檢查堆積是否達到基本的一致性，並將可用的項目設定為指定的值。
 
 > [!IMPORTANT]
->  此函式已被取代。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
+> 此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -49,7 +49,7 @@ int _heapset(
 
 #### <a name="parameters"></a>參數
 
-*fill*<br/>
+*填補*<br/>
 填滿字元。
 
 ## <a name="return-value"></a>傳回值
@@ -121,7 +121,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [記憶體配置](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>

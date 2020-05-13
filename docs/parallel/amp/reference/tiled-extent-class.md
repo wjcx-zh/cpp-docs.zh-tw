@@ -13,16 +13,16 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: e2248c770c7eedde59d1cb592f7d5d7c1bfbde9a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ce2710da1a745efedcd6e9e524355eda41e26de2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126418"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374716"
 ---
 # <a name="tiled_extent-class"></a>tiled_extent 類別
 
-`tiled_extent` 物件是一到三個維度的 `extent` 物件，可將範圍空間會細分成一、兩個或三維的磚。
+對`tiled_extent`像是一`extent`到三維的物件,將範圍空間細分為一維、二維或三維切片。
 
 ## <a name="syntax"></a>語法
 
@@ -49,13 +49,13 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ### <a name="parameters"></a>參數
 
 *_Dim0*<br/>
-最重要維度的長度。
+最重要的維度的長度。
 
 *_Dim1*<br/>
-下一個最重要維度的長度。
+第二個最重要的維度的長度。
 
 *_Dim2*<br/>
-最不重要維度的長度。
+最小尺寸的長度。
 
 ## <a name="members"></a>成員
 
@@ -63,37 +63,37 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 |名稱|描述|
 |----------|-----------------|
-|[tiled_extent 的構造函式](#ctor)|初始化 `tiled_extent` 類別的新執行個體。|
+|[tiled_extent建構函數](#ctor)|將 `tiled_extent` 類別的新執行個體初始化。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[get_tile_extent](#get_tile_extent)|傳回 `extent` 物件，它會捕獲 `tiled_extent` 樣板引數的值 `_Dim0`、`_Dim1`和 `_Dim2`。|
-|[pad](#pad)|傳回新的 `tiled_extent` 物件，其中的範圍已調整為要由磚維度平均地整除。|
-|[truncate](#truncate)|傳回新的 `tiled_extent` 物件，並將範圍向下調整，以供磚維度平均地整除。|
+|[get_tile_extent](#get_tile_extent)|傳`extent``tiled_extent`回捕捉樣本參數`_Dim0`的值的物件`_Dim1`,`_Dim2`與 。|
+|[墊](#pad)|返回一個新`tiled_extent`物件,其擴展的擴展區可被切片尺寸均勻整除。|
+|[truncate](#truncate)|返回一個新`tiled_extent`物件,其範圍向下調整,以被切片尺寸均勻整除。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[operator=](#operator_eq)|將指定 `tiled_index` 物件的內容複寫到這個。|
+|[運算子*](#operator_eq)|將指定`tiled_index`物件的內容複製到此物件中。|
 
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|[tile_dim0 常數](#tile_dim0)|儲存最重要維度的長度。|
-|[tile_dim1 常數](#tile_dim1)|儲存下一個最重要維度的長度。|
-|[tile_dim2 常數](#tile_dim2)|儲存最不重要維度的長度。|
+|[tile_dim0常量](#tile_dim0)|存儲最重要的維度的長度。|
+|[tile_dim1常量](#tile_dim1)|存儲第二個最重要的維度的長度。|
+|[tile_dim2常量](#tile_dim2)|存儲最小尺寸的長度。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|取得 `extent` 物件，其會捕獲 `tiled_extent` 樣板引數的值 `_Dim0`、`_Dim1`和 `_Dim2`。|
+|[tile_extent](#tile_extent)|取得`extent``tiled_extent`捕捉樣本參數`_Dim0`的值的物件`_Dim1`, 與`_Dim2`。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `extent`
 
@@ -105,9 +105,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 **命名空間：** 並行
 
-## <a name="ctor"></a> Tiled_extent 的構造函式
+## <a name="tiled_extent-constructor"></a><a name="ctor"> </a> tiled_extent建構函數
 
-初始化 `tiled_extent` 類別的新執行個體。
+將 `tiled_extent` 類別的新執行個體初始化。
 
 ### <a name="syntax"></a>語法
 
@@ -124,11 +124,11 @@ tiled_extent(
 ### <a name="parameters"></a>參數
 
 *_Other*<br/>
-要複製的 `extent` 或 `tiled_extent` 物件。
+要`extent``tiled_extent`複製的物件。
 
-## <a name="get_tile_extent"></a> get_tile_extent
+## <a name="get_tile_extent"></a><a name="get_tile_extent"> </a> get_tile_extent
 
-傳回 `extent` 物件，它會捕獲 `tiled_extent` 樣板引數的值 `_Dim0`、`_Dim1`和 `_Dim2`。
+傳`extent``tiled_extent`回捕捉樣本參數`_Dim0`的值的物件`_Dim1`,`_Dim2`與 。
 
 ### <a name="syntax"></a>語法
 
@@ -138,11 +138,11 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 
 ### <a name="return-value"></a>傳回值
 
-`extent` 物件，它會捕獲這個 `tiled_extent` 實例的維度。
+捕獲`extent``tiled_extent`此 實例維度的物件。
 
-## <a name="pad"></a> pad
+## <a name="pad"></a><a name="pad"> </a>墊
 
-傳回新的 `tiled_extent` 物件，其中的範圍已調整為要由磚維度平均地整除。
+返回一個新`tiled_extent`物件,其擴展的擴展區可被切片尺寸均勻整除。
 
 ### <a name="syntax"></a>語法
 
@@ -152,10 +152,11 @@ tiled_extent pad() const;
 
 ### <a name="return-value"></a>傳回值
 
-新的 `tiled_extent` 物件，以傳值方式。
-## <a name="truncate"></a>截斷
+新`tiled_extent`物件,按值。
 
-傳回新的 `tiled_extent` 物件，並將範圍向下調整，以供磚維度平均地整除。
+## <a name="truncate"></a><a name="truncate"> </a>截流
+
+返回一個新`tiled_extent`物件,其範圍向下調整,以被切片尺寸均勻整除。
 
 ### <a name="syntax"></a>語法
 
@@ -165,11 +166,11 @@ tiled_extent truncate() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回新的 `tiled_extent` 物件，並將範圍向下調整，以供磚維度平均地整除。
+返回一個新`tiled_extent`物件,其範圍向下調整,以被切片尺寸均勻整除。
 
-## <a name="operator_eq"></a> operator =
+## <a name="operator"></a><a name="operator_eq"> </a>運算子*
 
-將指定 `tiled_index` 物件的內容複寫到這個。
+將指定`tiled_index`物件的內容複製到此物件中。
 
 ### <a name="syntax"></a>語法
 
@@ -181,15 +182,15 @@ tiled_extent&  operator= (
 ### <a name="parameters"></a>參數
 
 *_Other*<br/>
-要複製的來源 `tiled_index` 物件。
+要`tiled_index`複製的物件。
 
 ### <a name="return-value"></a>傳回值
 
-這個 `tiled_index` 實例的參考。
+對此`tiled_index`實例的引用。
 
-## <a name="tile_dim0"></a> tile_dim0
+## <a name="tile_dim0"></a><a name="tile_dim0"> </a> tile_dim0
 
-儲存最重要維度的長度。
+存儲最重要的維度的長度。
 
 ### <a name="syntax"></a>語法
 
@@ -197,9 +198,9 @@ tiled_extent&  operator= (
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tile_dim1"></a> tile_dim1
+## <a name="tile_dim1"></a><a name="tile_dim1"> </a> tile_dim1
 
-儲存下一個最重要維度的長度。
+存儲第二個最重要的維度的長度。
 
 ### <a name="syntax"></a>語法
 
@@ -207,9 +208,9 @@ static const int tile_dim0 = _Dim0;
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tile_dim2"></a> tile_dim2
+## <a name="tile_dim2"></a><a name="tile_dim2"> </a> tile_dim2
 
-儲存最不重要維度的長度。
+存儲最小尺寸的長度。
 
 ### <a name="syntax"></a>語法
 
@@ -217,8 +218,9 @@ static const int tile_dim1 = _Dim1;
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tile_extent"></a> tile_extent
-  取得 `extent` 物件，其會捕獲 `tiled_extent` 樣板引數的值 `_Dim0`、`_Dim1`和 `_Dim2`。
+## <a name="tile_extent"></a><a name="tile_extent"> </a> tile_extent
+
+取得`extent``tiled_extent`捕捉樣本參數`_Dim0`的值的物件`_Dim1`, 與`_Dim2`。
 
 ### <a name="syntax"></a>語法
 
@@ -228,4 +230,4 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 
 ## <a name="see-also"></a>另請參閱
 
-[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[併發命名空間(C++ AMP)](concurrency-namespace-cpp-amp.md)

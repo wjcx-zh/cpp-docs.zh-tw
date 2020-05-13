@@ -4,10 +4,10 @@ ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "75791689"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
@@ -16,15 +16,15 @@ ms.locfileid: "75791689"
 
 ## <a name="samples"></a>範例
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[開發人員程式碼範例](https://code.msdn.microsoft.com/)|包含 Microsoft 和社群投稿的可下載範例程式碼。|
 
 ## <a name="product-documentation"></a>產品文件
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
-|[Visual Studio 中的 C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
+|[視覺工作室中的C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
 |[Windows 開發人員中心](https://developer.microsoft.com/windows/)|包含如何使用 C++ 和其他語言開發 Windows 10 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
 
 ### <a name="online-and-offline-documentation"></a>線上和離線文件
@@ -37,7 +37,7 @@ ms.locfileid: "75791689"
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)|包含 Visual C++ 產品小組專家發表的各種主題的文章。|
 |[Channel 9](https://channel9.msdn.com/)|包含訪談和演講影片。 請使用 Channel 9 首頁上的 [搜尋] 方塊尋找 C++ 內容。|

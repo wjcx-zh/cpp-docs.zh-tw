@@ -11,27 +11,27 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857121"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335003"
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法類運算子
 
-乘法類運算子會執行乘法 (<strong>\*</strong>)、除法 ( **/** ) 和餘數 ( **%** ) 運算。
+乘法類運算子會執行乘法<strong>\*</strong>（）、除法**/**（）和餘數（**%**）運算。
 
 ## <a name="syntax"></a>語法
 
-*multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
+*乘法運算式* &nbsp; &nbsp; &nbsp;： &nbsp; *cast-運算式* &nbsp; &nbsp; *multiplicative-expression* *cast-expression* &nbsp; *multiplicative-expression* &nbsp; &nbsp; *cast-expression* *cast-expression* *multiplicative-expression* **%** 乘法- <strong>\*</strong> &nbsp;運算式轉換-運算式&nbsp;乘法運算式**/** cast- &nbsp;運算式乘法-運算式 cast-運算式&nbsp; &nbsp; &nbsp; &nbsp;
 
-餘數運算子 ( **%** ) 的運算元必須為整數。 乘法 (<strong>\*</strong>) 和除法 ( **/** ) 運算子可以接受整數類資料類型或浮點數類型運算元，運算元的類型可以不同。
+餘數運算子（**%**）的運算元必須是整數。 乘法（<strong>\*</strong>）和除法（**/**）運算子可以接受整數類或浮點類型運算元;運算元的類型可以不同。
 
 乘法類運算子會對運算元執行一般算術轉換。 結果的類型是轉換後的運算元類型。
 
 > [!NOTE]
->  由於乘法類運算子所執行的轉換不提供溢位或反向溢位條件，因此，如果乘法類運算的結果無法以轉換後的運算元類型表示，則資訊可能會遺失。
+> 由於乘法類運算子所執行的轉換不提供溢位或反向溢位條件，因此，如果乘法類運算的結果無法以轉換後的運算元類型表示，則資訊可能會遺失。
 
 C 乘法類運算子描述如下：
 
@@ -76,7 +76,7 @@ n = i % j;
 
 當 10 除以 3 時，這個陳述式會指派整數餘數 1 給 `n`。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 餘數的正負號與被除數的正負號相同。 例如：
 
@@ -87,7 +87,7 @@ n = i % j;
 
 在每個案例中，`50` 和 `2` 具有相同的正負號。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>請參閱
 

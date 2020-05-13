@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811152"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913384"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -52,19 +54,19 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*擊鍵*\
 要搜尋之索引鍵的指標。
 
-*base*\
+*群體*\
 搜尋資料基底的指標。
 
-\*數目*
+*項數*\
 項目數。
 
 *寬度*\
 項目的寬度。
 
-*比較*\
+*何*\
 比較兩個項目的回呼函式。 第一個引數是*內容*指標。 第二個引數是搜尋索引*鍵*的指標。 第三個引數是要與索引*鍵*比較之陣列元素的指標。
 
 *內容*\
@@ -76,15 +78,15 @@ void *bsearch_s(
 
 如果將不正確參數傳遞至函式，它會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-### <a name="error-conditions"></a>錯誤狀況
+### <a name="error-conditions"></a>錯誤條件
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*項數*|*width*|**errno**|
-|**NULL**|任何|任何|任何|任何|**EINVAL**|
-|任何|**NULL**|任何|!= 0|任何|**EINVAL**|
-|任何|任何|任何|任何|= 0|**EINVAL**|
-|任何|任何|**NULL**|一個|任何|**EINVAL**|
+|*key*|*base*|*何*|*number*|*寬度*|**errno**|
+|**Null**|任意|任意|任意|任意|**EINVAL**|
+|任意|**Null**|任意|!= 0|任意|**EINVAL**|
+|任意|任意|任意|任意|= 0|**EINVAL**|
+|任意|任意|**Null**|an|任意|**EINVAL**|
 
 ## <a name="remarks"></a>備註
 
@@ -96,7 +98,9 @@ void *bsearch_s(
 |0|索引鍵等於陣列項目。|
 |> 0|索引鍵大於陣列項目。|
 
-如果搜尋的資料結構是物件的一部分，且比較函式需要存取物件的成員，則*內容*指標可能會很有用。 *Compare*函數可以將 void 指標轉換成適當的物件類型，並存取該物件的成員。 新增*內容*參數會讓**bsearch_s**更安全，因為可能會使用額外的內容來避免與使用靜態變數相關聯的重新進入 bug，讓資料可供*compare*函數使用。
+如果搜尋的資料結構是物件的一部分，且比較函式需要存取物件的成員，則*內容*指標可能會很有用。 *Compare*函數可以將 void 指標轉換成適當的物件類型，並存取該物件的成員。 新增*內容*參數會使**bsearch_s**更安全，因為可能會使用額外的內容來避免與使用靜態變數相關聯的重新進入 bug，讓資料可供*compare*函數使用。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -104,11 +108,11 @@ void *bsearch_s(
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> 和 \<search.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-這個程式會以 [qsort_s](qsort-s.md)來排序字串陣列，然後使用 bsearch_s 來尋找 cat 這個字。
+這個程式會以 [qsort_s](qsort-s.md) 來排序字串陣列，然後使用 bsearch_s 來尋找 "cat" 這個字。
 
 ```cpp
 // crt_bsearch_s.cpp
@@ -192,7 +196,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

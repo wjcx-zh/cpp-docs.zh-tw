@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952435"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919182"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -82,7 +84,9 @@ size_t mbrtowc(
 
 如果*mbchar*不是 null 指標，此函式會檢查來自*mbchar*的*count*個位元組，以判斷完成下一個多位元組字元所需的必要位元組數目。 如果下一個字元是有效的，則對應的多位元組字元會儲存在*wchar*中（如果不是 null 指標）。 如果字元是對應的寬 null 字元， *mbstate*的產生狀態就是初始轉換狀態。
 
-**解譯 mbrtowc**函式與[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**wcsrtombs**的後續呼叫，而不是**wcstombs**，則應用程式應該使用**wcsrlen**而不是**wcslen** 。
+**解譯 mbrtowc**函式與 mbtowc 不同，因為它可重新開機[，_mbtowc_l](mbtowc-mbtowc-l.md) 。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用**wcsrtombs**的後續呼叫，而不是**wcstombs**，則應用程式應該使用**wcsrlen**而不是**wcslen** 。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="example"></a>範例
 
@@ -212,5 +216,5 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -1,11 +1,13 @@
 ---
 title: isspace、iswspace、_isspace_l、_iswspace_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswspace
 - _isspace_l
 - _iswspace_l
 - isspace
+- _o_isspace
+- _o_iswspace
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: b01aaf29ff0cd3994c45433db9ff0b9f4ca7481c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3e03d97f2e6ca82671c74f551ab8c23a11af63c2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953650"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916609"
 ---
 # <a name="isspace-iswspace-_isspace_l-_iswspace_l"></a>isspace、iswspace、_isspace_l、_iswspace_l
 
@@ -69,7 +72,7 @@ int _iswspace_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -77,7 +80,7 @@ int _iswspace_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果*c*是空白字元的特定標記法，這些常式都會傳回非零。 如果*c*是空白字元（0X09-0x0D 或0x20）， **isspace**會傳回非零值。 **Isspace**函式測試條件的結果取決於地區設定的**LC_CTYPE**分類設定;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些沒有 **_l**尾碼的函式版本，會針對任何與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*c*是空白字元的特定標記法，這些常式都會傳回非零。 如果*c*是空白字元（0X09-0x0D 或0x20）， **isspace**會傳回非零值。 **Isspace**函式測試條件的結果取決於地區設定的**LC_CTYPE**類別設定;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些沒有 **_l**尾碼的函式版本，會針對任何與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 如果*c*是對應至標準空白字元的寬字元，則**iswspace**會傳回非零值。
 
@@ -88,6 +91,10 @@ int _iswspace_l(
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
+
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -103,5 +110,5 @@ int _iswspace_l(
 ## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

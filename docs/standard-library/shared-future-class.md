@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 65ea01a9ced1ca69cd1b1526e7594c4b54387553
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336787"
 ---
-# <a name="sharedfuture-class"></a>shared_future 類別
+# <a name="shared_future-class"></a>shared_future 類別
 
-描述「非同步傳回物件」。 相對於 [future](../standard-library/future-class.md) 物件，「非同步提供者」可以與任意數目的 `shared_future` 物件相關聯。
+描述「非同步傳回物件」**。 相對於 [future](../standard-library/future-class.md) 物件，「非同步提供者」** 可以與任意數目的 `shared_future` 物件相關聯。
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ class shared_future;
 
 ## <a name="remarks"></a>備註
 
-請勿在「空的」`shared_future` 物件上呼叫 `valid`、`operator=` 及建構函式以外的任何方法。
+請勿在「空的」**`shared_future` 物件上呼叫 `valid`、`operator=` 及建構函式以外的任何方法。
 
 `shared_future` 物件不會進行同步處理。 在來自多個執行緒的相同物件上呼叫方法會導致資料競爭的情形，因而產生無法預期的結果。
 
@@ -54,27 +54,27 @@ class shared_future;
 
 |名稱|描述|
 |----------|-----------------|
-|[get](#get)|擷取以「相關聯的非同步狀態」儲存的結果。|
-|[valid](#valid)|指定物件是否不是空的。|
-|[等候](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
-|[wait_for](#wait_for)|封鎖直到相關聯的非同步狀態就緒為止，或直到指定的時間已過為止。|
-|[wait_until](#wait_until)|封鎖直到相關聯的非同步狀態就緒為止，或直到到了指定的時間點為止。|
+|[get](#get)|擷取以「相關聯的非同步狀態」** 儲存的結果。|
+|[有效](#valid)|指定物件是否不是空的。|
+|[等](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
+|[wait_for](#wait_for)|封鎖直到相關的非同步狀態變成就緒為止，或直到指定的時間已過為止。|
+|[wait_until](#wait_until)|封鎖直到相關的非同步狀態變成就緒為止，或直到到了指定的時間點為止。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|指派新的相關聯非同步狀態。|
 
 ## <a name="requirements"></a>需求
 
-**標頭:** \<未來 >
+**標題:**\<未來>
 
 **命名空間：** std
 
-## <a name="get"></a>  shared_future::get
+## <a name="shared_futureget"></a><a name="get"></a>shared_future:取得
 
-擷取以「相關聯的非同步狀態」儲存的結果。
+擷取以「相關聯的非同步狀態」** 儲存的結果。
 
 ```cpp
 const Ty& get() const;
@@ -88,15 +88,15 @@ void get() const;
 
 如果結果是例外狀況，此方法就會重新擲回該例外狀況。 否則會傳回結果。
 
-在擷取結果之前，此方法會封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。
+在擷取結果之前，此方法會封鎖目前的執行緒，直到相關的非同步狀態變成就緒為止。
 
-就部分特製化 `shared_future<Ty&>` 而言，預存值實際上是對傳遞給「非同步提供者」作為傳回值之物件的參考。
+對於部分專業化化`shared_future<Ty&>`,存儲值實際上是對作為返回值傳遞給*非同步提供程式*的物件的引用。
 
-因為特製化`shared_future<void>`沒有已儲存的值, 所以此方法會傳回**void**。
+由於專門化`shared_future<void>`不存在存儲值,因此該方法返回**空**值。
 
-## <a name="op_eq"></a>  shared_future::operator=
+## <a name="shared_futureoperator"></a><a name="op_eq"></a>shared_future::操作員*
 
-從指定的物件轉移「相關聯的非同步狀態」。
+從指定物件傳輸*關聯的非同步狀態*。
 
 ```cpp
 shared_future& operator=(shared_future&& Right) noexcept;
@@ -105,8 +105,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
-          `shared_future` 物件。
+*對*\
+`shared_future` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -114,11 +114,11 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>備註
 
-針對第一個運算子, 在作業之後, *Right*不再具有相關聯的非同步狀態。
+對於第一個運算符 *,Right*在操作后不再具有關聯的異步狀態。
 
-針對第二個方法, *Right*會維護其相關聯的非同步狀態。
+對於第二種方法 *,Right*保持其關聯的異步狀態。
 
-## <a name="shared_future"></a>  shared_future::shared_future 建構函式
+## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a>shared_future:shared_future構造函數
 
 建構 `shared_future` 物件。
 
@@ -131,20 +131,20 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*對*\
 [future](../standard-library/future-class.md) 或 `shared_future` 物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構沒有「相關聯的非同步狀態」的 `shared_future` 物件。
+第一個構造函數構造一`shared_future`個沒有*關聯異步狀態*的物件。
 
-第二個和第三個`shared_future`函式會建立物件, 並從*右邊*傳輸相關聯的非同步狀態。 *Right*不再具有相關聯的非同步狀態。
+第二個和第三個構造函數構造`shared_future`一個物件並從*右*傳輸關聯的異步狀態。 *右*不再具有關聯的異步狀態。
 
-第四個函式`shared_future`會建立與*Right*具有相同相關聯非同步狀態的物件。
+第四個構造函數構造一`shared_future`個與*右*具有相同關聯異步狀態的物件。
 
-## <a name="valid"></a>  shared_future::valid
+## <a name="shared_futurevalid"></a><a name="valid"></a>shared_future:有效
 
-指定物件是否具有「相關聯的非同步狀態」。
+指定物件是否有*關聯的非同步狀態*。
 
 ```cpp
 bool valid() noexcept;
@@ -152,11 +152,11 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果物件具有相關聯的非同步狀態, 則為**true** ;否則**為 false**。
+如果物件具有關聯的異步狀態,**則為 true;** 否則,**假**。
 
-## <a name="wait"></a>shared_future:: wait
+## <a name="shared_futurewait"></a><a name="wait"></a>shared_future::等待
 
-封鎖目前的執行緒，直到「相關聯的非同步狀態」就緒為止。
+封鎖目前的線程,直到*關聯的非同步狀態**準備就緒*。
 
 ```cpp
 void wait() const;
@@ -164,11 +164,11 @@ void wait() const;
 
 ### <a name="remarks"></a>備註
 
-只有在非同步提供者儲存傳回值或儲存例外狀況後，相關聯的非同步狀態才會就緒。
+相關的非同步狀態只有在其非同步提供者已儲存傳回值或已儲存例外狀況時，才會變成就緒。
 
-## <a name="wait_for"></a>shared_future::wait_for
+## <a name="shared_futurewait_for"></a><a name="wait_for"></a>shared_future:wait_for
 
-封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」為止，或直到指定的時間已過為止。
+封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」** 為止，或直到指定的時間已過為止。
 
 ```cpp
 template <class Rep, class Period>
@@ -187,11 +187,11 @@ future_status wait_for(
 
 ### <a name="remarks"></a>備註
 
-只有在非同步提供者儲存了傳回值或儲存了例外狀況之後，相關聯的非同步狀態才會「就緒」。
+只當關聯的非同步提供程式儲存傳回值或儲存異常時,關聯的非同步狀態*才準備就緒*。
 
-## <a name="wait_until"></a>  shared_future::wait_until
+## <a name="shared_futurewait_until"></a><a name="wait_until"></a>shared_future:wait_until
 
-封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」為止，或直到指定的時間點過後為止。
+封鎖目前的執行緒，直到相關的非同步狀態變成「就緒」** 為止，或直到指定的時間點過後為止。
 
 ```cpp
 template <class Clock, class Duration>
@@ -210,9 +210,9 @@ future_status wait_until(
 
 ### <a name="remarks"></a>備註
 
-只有在非同步提供者儲存傳回值或儲存例外狀況後，相關聯的非同步狀態才會就緒。
+相關的非同步狀態只有在其非同步提供者已儲存傳回值或已儲存例外狀況時，才會變成就緒。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
-[\<future>](../standard-library/future.md)
+[標題檔案參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<未來>](../standard-library/future.md)

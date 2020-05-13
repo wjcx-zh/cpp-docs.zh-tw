@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3b9521fde1b5a03389bfc1ad3e35fa407d9d6ac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363031"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 運算子
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>算子&gt;&gt;
 
 從資料流中擷取字元和字串。
 
@@ -62,10 +62,10 @@ basic_istream<Elem, Tr>& operator>>(
 *Istr*\
 資料流。
 
-*str*\
+*Str*\
 字串。
 
-*val*\
+*瓦爾*\
 類型。
 
 ### <a name="return-value"></a>傳回值
@@ -76,7 +76,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 `basic_istream` 類別也會定義數個擷取運算子。 如需詳細資訊，請參閱 [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt)。
 
-函數範本：
+函數範本:
 
 ```cpp
 template <class Elem, class Tr>
@@ -84,11 +84,11 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-會解壓縮到 `N - 1` 的元素，並將它們儲存在以*str*起始的陣列中。 如果 `Istr.`[寬度](../standard-library/ios-base-class.md#width)大於零，則會 `Istr.width`*N* ;否則，它是可以宣告的最大 `Elem` 陣列的大小。 函式一律會將值儲存在所儲存的任何已解壓縮元素之後 `Elem()`。 解壓縮會在檔案結尾、值 `Elem(0)` 的字元（未解壓縮），或任何將由[ws](../standard-library/istream-functions.md#ws)捨棄的元素（未解壓縮）上及早停止。 如果函式未解壓縮任何元素，則會呼叫 `Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。 在任何情況下，它都會呼叫 `Istr.width(0)` 並傳回*Istr*。
+提取到`N - 1`元素,並將它們存儲在陣列中,從*str*開始。 如果`Istr.`[寬度](../standard-library/ios-base-class.md#width)大於零,則*N*`Istr.width`是 ;否則,它是可以聲明的最大`Elem`陣列的大小。 該函數始終在它存儲`Elem()`的任何提取元素后存儲該值。 提取在檔案末尾的早期停止,在值`Elem(0)`(未提取)的字元上,或 ws 將丟棄的任何元素(未提取)[ws](../standard-library/istream-functions.md#ws)上停止。 如果函數不提取任何元素,它將呼叫`Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。 在任何情況下,它呼叫`Istr.width(0)`並傳回*Istr*。
 
-**安全性注意事項**從輸入資料流程解壓縮的以 null 結束的字串不得超過目的緩衝區*str*的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
+**安全說明**從輸入流中提取的 null 連接端字串不得超過目標緩衝區*str*的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-函數範本：
+函數範本:
 
 ```cpp
 template <class Elem, class Tr>
@@ -96,9 +96,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-盡可能解壓縮專案，並將它儲存在*Ch*中。 否則，它會呼叫 `is.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。 在任何情況下，它會傳回*Istr*。
+提取元素(如果可能)並將其存儲在*Ch*中。 否則,它將呼叫`is.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。 在任何情況下,它傳回*Istr*。
 
-函數範本：
+函數範本:
 
 ```cpp
 template <class Tr>
@@ -108,7 +108,7 @@ basic_istream<char, Tr>& operator>>(
 
 傳回 `Istr >> ( char * ) str`。
 
-函數範本：
+函數範本:
 
 ```cpp
 template <class Tr>
@@ -118,7 +118,7 @@ basic_istream<char, Tr>& operator>>(
 
 傳回 `Istr >> ( char& ) Ch`。
 
-函數範本：
+函數範本:
 
 ```cpp
 template <class Tr>
@@ -128,7 +128,7 @@ basic_istream<char, Tr>& operator>>(
 
 傳回 `Istr >> ( char * ) str`。
 
-函數範本：
+函數範本:
 
 ```cpp
 template <class Tr>
@@ -138,7 +138,7 @@ basic_istream<char, Tr>& operator>>(
 
 傳回 `Istr >> ( char& ) Ch`。
 
-函數範本：
+函數範本:
 
 ```cpp
 template <class Elem, class Tr, class Type>
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-傳回 `Istr >> val` （並將右值參考轉換成進程中的左值） `Istr`。
+返回`Istr >> val`(並將 rvalue 引用`Istr`轉換為進程中的 lvalue)。
 
 ### <a name="example"></a>範例
 

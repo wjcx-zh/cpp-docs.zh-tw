@@ -1,11 +1,15 @@
 ---
 title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
+- _o__atoi64
+- _o__atoi64_l
+- _o__wtoi64
+- _o__wtoi64_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939490"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913574"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -89,9 +94,9 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式都會傳回將輸入字元解讀為數字所產生的 **__int64**值。 如果輸入無法轉換成該類型的值， **_atoi64**的傳回值會是0。
+每個函式都會傳回將輸入字元解讀為數字所產生的 **__int64**值。 如果輸入無法轉換成該類型的值，則 **_atoi64**的傳回值為0。
 
-如果溢位具有大型正整數值， **_atoi64**會在溢位的情況下傳回**I64_MAX**和**I64_MIN** ，並使用大的負整數值。
+如果溢位具有大型正整數值， **_atoi64**會在溢位的情況下，傳回具有大型負整數值的**I64_MAX**和**I64_MIN** 。
 
 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
@@ -111,6 +116,8 @@ __int64 _wtoi64_l(
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
@@ -122,12 +129,12 @@ __int64 _wtoi64_l(
 
 |常式|必要的標頭|
 |--------------|---------------------|
-|**_atoi64**、 **_atoi64_l**|\<stdlib.h>|
-|**_wtoi64**、 **_wtoi64_l**|\<stdlib.h> 或 \<wchar.h>|
+|**_atoi64**， **_atoi64_l**|\<stdlib.h>|
+|**_wtoi64**， **_wtoi64_l**|\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>範例
 
-此程式會顯示如何使用 **_atoi64**函數，將儲存為字串的數位轉換成數值。
+此程式會顯示如何使用 **_atoi64**函式將儲存為字串的數位轉換為數值。
 
 ```C
 // crt_atoi64.c
@@ -178,7 +185,7 @@ Overflow condition occurred.
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

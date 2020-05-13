@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181781"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368242"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>追蹤參考運算子 (C++/CLI 和 C++/CX)
 
-「追蹤參考」(`%`) 作用如同一般的 C++ 參考 (`&`)，不過，將物件指派給追蹤參考時，物件的參考計數就會遞增。
+*跟蹤引用*`%`( ) 與普通C++引用 (`&`) 一樣,只不過當物件分配給跟蹤引用時,物件的引用計數將遞增。
 
 ## <a name="all-platforms"></a>所有平台
 
 追蹤參考有下列特性：
 
-- 將物件指派給追蹤參考會導致物件的參考計數遞增。
+- 將物件分配給跟蹤引用會導致物件的引用計數增加。
 
 - 原生參考 (`&`) 是當您為 `*` 取值時的結果。 追蹤參考 (`%`) 是當您為 `^` 取值時的結果。 只要您有物件的 `%`，物件就會持續保留於記憶體中。
 

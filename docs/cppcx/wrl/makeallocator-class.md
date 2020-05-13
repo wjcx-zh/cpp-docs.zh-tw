@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::MakeAllocator, constructor
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-ms.openlocfilehash: 805f0c09b0490d8cec1a0be96dcb1fc99a051371
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0d83f2550646572a4eff2bec7850037c6dbf6a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371327"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator 類別
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -49,16 +49,16 @@ class MakeAllocator<T, true>;
 *T*<br/>
 類型名稱。
 
-*hasWeakReferenceSupport*<br/>
-**true**支援弱式參考的物件配置記憶體**false**不支援弱式參考的物件配置記憶體。
+*有弱參考支援*<br/>
+**為**支援弱引用的物件分配記憶體;為不支援弱引用的物件分配記憶體**為 false。**
 
 ## <a name="remarks"></a>備註
 
-配置記憶體可啟動類別，包含或不含弱式參考支援。
+為可啟動類分配記憶體,無論是否具有弱引用支援。
 
-覆寫`MakeAllocator`類別來實作使用者定義的記憶體配置模型。
+重寫類`MakeAllocator`以實現使用者定義的記憶體分配模型。
 
-`MakeAllocator` 通常用來防止記憶體流失，如果在建構期間擲回的物件。
+`MakeAllocator`通常用於防止在構造期間物件引發時記憶體洩漏。
 
 ## <a name="members"></a>成員
 
@@ -66,29 +66,29 @@ class MakeAllocator<T, true>;
 
 名稱                                                  | 描述
 ----------------------------------------------------- | ----------------------------------------------------------------
-[MakeAllocator::MakeAllocator](#makeallocator)        | 初始化 `MakeAllocator` 類別的新執行個體。
-[MakeAllocator::~MakeAllocator](#tilde-makeallocator) | 取消初始化目前的執行個體`MakeAllocator`類別。
+[製造定位器::製造定位器](#makeallocator)        | 將 `MakeAllocator` 類別的新執行個體初始化。
+[製造定位器::\製造定位器](#tilde-makeallocator) | 取消初始化類的`MakeAllocator`當前實例。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                 | 描述
 ------------------------------------ | -----------------------------------------------------------------------------------------------------------
-[MakeAllocator::Allocate](#allocate) | 配置記憶體，並將它與目前關聯`MakeAllocator`物件。
-[MakeAllocator::Detach](#detach)     | 解除配置的記憶體[Allocate](#allocate)方法，從目前`MakeAllocator`物件。
+[製造定位器::分配](#allocate) | 分配記憶體並將其與當前`MakeAllocator`物件關聯。
+[製造者::D埃塔奇](#detach)     | 將[配置](#allocate)方法分配的記憶體與當前`MakeAllocator`物件分離。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `MakeAllocator`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** implements.h
+**標題:** 實現.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="allocate"></a>MakeAllocator::Allocate
+## <a name="makeallocatorallocate"></a><a name="allocate"></a>製造定位器::分配
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 __forceinline void* Allocate();
@@ -96,19 +96,19 @@ __forceinline void* Allocate();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，已配置的記憶體; 指標否則， `nullptr`。
+如果成功,則指向分配的記憶體的指標;否則, `nullptr`.
 
 ### <a name="remarks"></a>備註
 
-配置記憶體，並將它與目前關聯`MakeAllocator`物件。
+分配記憶體並將其與當前`MakeAllocator`物件關聯。
 
-配置的記憶體大小是由目前指定之型別的大小`MakeAllocator`樣板參數。
+分配的記憶體的大小是當前`MakeAllocator`範本參數指定的類型的大小。
 
-開發人員必須覆寫只`Allocate()`方法，以實作不同的記憶體配置模型。
+開發人員只需重寫`Allocate()`該方法,以實現不同的記憶體分配模型。
 
-## <a name="detach"></a>MakeAllocator::Detach
+## <a name="makeallocatordetach"></a><a name="detach"></a>製造者::D埃塔奇
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 __forceinline void Detach();
@@ -116,13 +116,13 @@ __forceinline void Detach();
 
 ### <a name="remarks"></a>備註
 
-解除配置的記憶體[Allocate](#allocate)方法，從目前`MakeAllocator`物件。
+將[配置](#allocate)方法分配的記憶體與當前`MakeAllocator`物件分離。
 
-如果您呼叫`Detach()`，您必須負責刪除所提供的記憶體`Allocate`方法。
+如果調用`Detach()`,則負責`Allocate`刪除 方法提供的記憶體。
 
-## <a name="makeallocator"></a>MakeAllocator::MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a>製造定位器::製造定位器
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 MakeAllocator();
@@ -130,11 +130,11 @@ MakeAllocator();
 
 ### <a name="remarks"></a>備註
 
-初始化 `MakeAllocator` 類別的新執行個體。
+將 `MakeAllocator` 類別的新執行個體初始化。
 
-## <a name="tilde-makeallocator"></a>MakeAllocator:: ~ MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a>製造定位器::\製造定位器
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ~MakeAllocator();
@@ -142,6 +142,6 @@ MakeAllocator();
 
 ### <a name="remarks"></a>備註
 
-取消初始化目前的執行個體`MakeAllocator`類別。
+取消初始化類的`MakeAllocator`當前實例。
 
-如有必要，此解構函式也會刪除基礎配置的記憶體。
+如有必要,此析構函數還會刪除基礎分配的記憶體。

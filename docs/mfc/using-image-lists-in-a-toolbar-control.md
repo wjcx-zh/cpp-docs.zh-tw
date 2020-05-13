@@ -6,35 +6,35 @@ helpviewer_keywords:
 - image lists [MFC], toolbar controls
 - CToolBarCtrl class [MFC], image lists
 ms.assetid: ccbe8df4-4ed9-4b54-bb93-9a1dcb3b97eb
-ms.openlocfilehash: d027f7834c67ad0ed51d1b7fda5b2704972efe38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81468528c15300a7e9ace6b20fd9fb34818f1928
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411561"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366489"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>在工具列控制項中使用影像清單
 
-根據預設，在工具列控制項中的按鈕所使用的影像會儲存為單一的點陣圖。 不過，您也可以在一組映像清單中儲存按鈕的影像。 工具列控制項物件可以使用最多三個不同的映像清單：
+預設情況下,工具列控制項中按鈕使用的圖像將儲存為單個點陣圖。 但是,您還可以將按鈕圖像存儲在一組圖像清單中。 工具列控制件物件最多可以使用三個單獨的影像清單:
 
-- 啟用映像清單包含目前已啟用的工具列按鈕的影像。
+- 已啟用的影像清單 包含當前啟用的工具列按鈕的圖像。
 
-- 停用映像清單包含目前已停用的工具列按鈕的影像。
+- 關閉的影像清單 包含目前關閉的工具列按鈕的影像。
 
-- 反白顯示映像清單包含目前反白顯示的工具列按鈕的影像。 只有在工具列會使用 TBSTYLE_FLAT 樣式時，才使用此映像清單。
+- 突顯的影像清單 包含目前突顯的工具列按鈕的影像。 僅當工具列使用TBSTYLE_FLAT樣式時,才會使用此圖像清單。
 
-這些映像清單使用工具列控制項，當您建立關聯以`CToolBarCtrl`物件。 藉由呼叫來達成此種關聯[CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist)， [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist)，並[SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist)。
+當您將它們與`CToolBarCtrl`物件關聯時,工具列控制項會使用這些圖像清單。 此關聯是通過調用[CToolBarCtrl::設置圖像清單](../mfc/reference/ctoolbarctrl-class.md#setimagelist)、[設置禁用圖像清單](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist)和[SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist)來實現的。
 
-根據預設，MFC 會使用`CToolBar`類別來實作 MFC 應用程式工具列。 不過，`GetToolBarCtrl`成員函式可以用來擷取內嵌`CToolBarCtrl`物件。 您接著可以呼叫`CToolBarCtrl`成員函式使用傳回的物件。
+默認情況下,MFC`CToolBar`使用 該類來實現 MFC 應用程式工具列。 但是,`GetToolBarCtrl`成員函數可用於檢索嵌`CToolBarCtrl`入的物件。 然後,可以使用返回的對象`CToolBarCtrl`對成員函數進行調用。
 
-下列範例會示範這項技術，藉由指定啟用 (`m_ToolBarImages`) 和停用 (`m_ToolBarDisabledImages`) 的影像清單`CToolBarCtrl`物件 (`m_ToolBarCtrl`)。
+下面的範例透過將已啟用的`m_ToolBarImages`( ) 和關閉`m_ToolBarDisabledImages`( ) 映`CToolBarCtrl`像`m_ToolBarCtrl`清單分配給 物件 ( ) 展示此技術。
 
 [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/cpp/using-image-lists-in-a-toolbar-control_1.cpp)]
 
 > [!NOTE]
->  工具列物件所使用的映像清單必須是永久物件。 基於這個理由，它們通常是資料成員的 MFC 類別;在此範例中，主框架視窗類別。
+> 工具列物件使用的圖像清單必須是永久物件。 因此,它們通常是 MFC 類的數據成員;在此示例中,主框架視窗類。
 
-一旦影像清單相關聯`CToolBarCtrl`物件，此架構會自動顯示適當的按鈕影像。
+一旦圖像清單與`CToolBarCtrl`物件關聯,框架將自動顯示正確的按鈕圖像。
 
 ## <a name="see-also"></a>另請參閱
 

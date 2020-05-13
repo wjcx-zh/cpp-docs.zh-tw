@@ -1,11 +1,13 @@
 ---
 title: isupper、_isupper_l、iswupper、_iswupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isupper
 - iswupper
 - _iswupper_l
 - _isupper_l
+- _o_isupper
+- _o_iswupper
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-ms.openlocfilehash: 558373d845b88d8959651d0a76e24af80cb6fa5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49aab47a72e7065cbd90935a431f59ec74b562ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953615"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910394"
 ---
 # <a name="isupper-_isupper_l-iswupper-_iswupper_l"></a>isupper、_isupper_l、iswupper、_iswupper_l
 
@@ -69,7 +72,7 @@ int _iwsupper_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -77,7 +80,7 @@ int _iwsupper_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果*c*是大寫字母的特定標記法，則每個常式都會傳回非零。 如果*c*是大寫字元（a-z）， **isupper**會傳回非零值。 如果*c*是對應至大寫字母的寬字元，或如果*c*是其中一個執行定義的寬字元集合，但沒有**iswcntrl**、 **iswdigit**， **則 iswupper 會傳回非零值。iswpunct**，或**iswspace**不是零。 如果*c*不符合測試條件，這些常式都會傳回0。
+如果*c*是大寫字母的特定標記法，則每個常式都會傳回非零。 如果*c*是大寫字元（a-z）， **isupper**會傳回非零值。 如果*c*是對應至大寫字母的寬字元，或如果*c*是其中一個執行定義的寬字元集，但沒有**iswcntrl**、 **iswdigit**、 **iswpunct**或**iswspace**都是非零值，則**iswupper**會傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
 這些具有 **_l**尾碼的函式版本，會使用傳入的地區設定，而不是與地區設定相關行為的目前地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -89,6 +92,10 @@ int _iwsupper_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istupper**|**isupper**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper**|
 |**_istupper_l**|**_isupper_l**|[_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l**|
+
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -104,5 +111,5 @@ int _iwsupper_l(
 ## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

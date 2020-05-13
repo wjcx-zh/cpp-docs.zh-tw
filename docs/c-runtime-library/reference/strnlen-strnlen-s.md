@@ -1,6 +1,6 @@
 ---
 title: strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsnlen
 - strnlen_s
@@ -10,6 +10,10 @@ api_name:
 - strnlen
 - wcsnlen_s
 - _mbsnlen
+- _o__mbsnlen
+- _o__mbsnlen_l
+- _o__mbstrnlen
+- _o__mbstrnlen_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -61,12 +66,12 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: 6613c79bd9637b857dbf825eca2b37c71c154bec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be13a67d51b0296d91355c970e5e37ad227812ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947004"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919258"
 ---
 # <a name="strnlen-strnlen_s-wcsnlen-wcsnlen_s-_mbsnlen-_mbsnlen_l-_mbstrnlen-_mbstrnlen_l"></a>strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
 
@@ -129,20 +134,22 @@ size_t _mbstrnlen_l(
 
 這些函式會傳回字串中的字元數，但不包含結束的 Null 字元。 如果字串的第一個*numberOfElements*位元組內沒有 null 結束字元（或**wcsnlen**的寬字元），則會傳回*numberOfElements*來指出錯誤狀況。以 null 終止的字串長度必須小於*numberOfElements*。
 
-如果字串包含不正確多位元組字元， **_mbstrnlen**和 **_mbstrnlen_l**會傳回-1。
+**_mbstrnlen**和 **_mbstrnlen_l**如果字串包含不正確多位元組字元，則會傳回-1。
 
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
 > **strnlen**不是**strlen**的替代方案;**strnlen**只能用來計算已知大小緩衝區中傳入不受信任資料的大小（例如，網路封包）。 **strnlen**會計算長度，但如果字串未結束，則不會走到緩衝區結尾。 針對其他情況，請使用**strlen**。 （同樣適用于**wcsnlen**、 **_mbsnlen**和 **_mbstrnlen**）。
 
-所有這些函式都會傳回*str*中的字元數，不包括終止的 null 字元。 不過， **strnlen**和**strnlen_s**會將此字串解讀為單一位元組字元字串，因此，即使字串包含多位元組字元，傳回值一律等於位元組數目。 **wcsnlen**和**wcsnlen_s**分別是**strnlen**和**strnlen_s**的寬字元版本;**wcsnlen**和**wcsnlen_s**的引數是寬字元字串，且字元的計數是以寬字元為單位。 否則， **wcsnlen**和**strnlen**的行為會完全相同，如同**strnlen_s**和**wcsnlen_s**。
+所有這些函式都會傳回*str*中的字元數，不包括終止的 null 字元。 不過， **strnlen**和**strnlen_s**會將字串解讀為單一位元組字元字串，因此，即使字串包含多位元組字元，傳回值一律等於位元組數目。 **wcsnlen**和**wcsnlen_s**分別是**strnlen**和**strnlen_s**的寬字元版本;**wcsnlen**和**wcsnlen_s**的引數是寬字元字串，且字元的計數是以寬字元為單位。 否則， **wcsnlen**和**strnlen**的行為完全相同， **strnlen_s**和**wcsnlen_s**。
 
 **strnlen**、 **wcsnlen**和 **_mbsnlen**不會驗證其參數。 如果*str*為**Null**，就會發生存取違規。
 
-**strnlen_s**和**wcsnlen_s**會驗證其參數。 如果*str*為**Null**，則函數會傳回0。
+**strnlen_s**和**wcsnlen_s**驗證其參數。 如果*str*為**Null**，則函數會傳回0。
 
-**_mbstrnlen**也會驗證其參數。 如果*str*為**Null**，或如果*numberOfElements*大於**INT_MAX**，則 **_mbstrnlen**會產生不正確參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbstrnlen**會將**Errno**設定為**EINVAL** ，並傳回-1。
+**_mbstrnlen**也會驗證其參數。 如果*str*為**Null**，或如果*numberOfElements*大於**INT_MAX**， **_mbstrnlen**會產生不正確參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbstrnlen**會將**Errno**設定為**EINVAL** ，並傳回-1。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -152,18 +159,18 @@ size_t _mbstrnlen_l(
 |**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
 |**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
-**_mbsnlen**和 **_mbstrnlen**會傳回多位元組字元字串中的多位元組字元數。 **_mbsnlen**會根據目前使用中的多位元組字碼頁或根據傳入的地區設定，辨識多位元組字元序列;它不會測試多位元組字元的有效性。 **_mbstrnlen**會測試多位元組字元的有效性，並辨識多位元組字元序列。 如果傳遞至 **_mbstrnlen**的字串包含不正確多位元組字元， **errno**會設定為**EILSEQ**。
+**_mbsnlen**和 **_mbstrnlen**會傳回多位元組字元字串中的多位元組字元數。 **_mbsnlen**會根據目前使用中的多位元組字碼頁或根據傳入的地區設定來辨識多位元組字元序列;它不會測試多位元組字元的有效性。 **_mbstrnlen**測試多位元組字元的有效性，並辨識多位元組字元序列。 如果傳遞至 **_mbstrnlen**的字串包含不正確多位元組字元， **errno**會設定為**EILSEQ**。
 
-輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同，不同之處在于沒有 **_l**尾碼的函式會針對此地區設定相關的行為使用目前的地區設定，而具有 **_l**尾碼的版本則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定之**LC_CTYPE**分類設定的影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同，不同之處在于，沒有 **_l**尾碼的函式會針對此地區設定相關的行為使用目前的地區設定，而具有 **_l**尾碼的版本則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strnlen**、 **strnlen_s**|\<string.h>|
-|**wcsnlen**、 **wcsnlen_s**|\<string.h> 或 \<wchar.h>|
-|**_mbsnlen**、 **_mbsnlen_l**|\<mbstring.h>|
-|**_mbstrnlen**、 **_mbstrnlen_l**|\<stdlib.h>|
+|**strnlen**， **strnlen_s**|\<string.h>|
+|**wcsnlen**， **wcsnlen_s**|\<string.h> 或 \<wchar.h>|
+|**_mbsnlen**， **_mbsnlen_l**|\<mbstring.h>|
+|**_mbstrnlen**， **_mbstrnlen_l**|\<stdlib.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -208,12 +215,12 @@ Length: 100
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
-[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

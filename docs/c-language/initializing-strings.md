@@ -7,11 +7,11 @@ helpviewer_keywords:
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325997"
 ---
 # <a name="initializing-strings"></a>初始化字串
 
@@ -46,12 +46,12 @@ char s[]  = {'a', 'b', 'c', '\0'},
 
 如果字串比指定的陣列大小短，會將陣列的剩餘元素初始化為 0。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 在 Microsoft C 中，字串常值的長度最多可達 2048 個位元組。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[初始化](../c-language/initialization.md)
+[初始](../c-language/initialization.md)

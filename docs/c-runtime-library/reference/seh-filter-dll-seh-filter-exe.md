@@ -1,10 +1,12 @@
 ---
 title: _seh_filter_dll、_seh_filter_exe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _XcptFilter
 - _seh_filter_dll
 - _seh_filter_exe
+- _o__seh_filter_dll
+- _o__seh_filter_exe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-ms.openlocfilehash: c8c76a4a1d1a39e26f5e78869d3b107578d2085a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ddfab11b149fc6919fb0b8d461b914a0470d9dc9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948686"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913192"
 ---
 # <a name="_seh_filter_dll-_seh_filter_exe"></a>_seh_filter_dll、_seh_filter_exe
 
@@ -86,6 +89,8 @@ int __cdecl _seh_filter_exe(
 |STATUS_FLOAT_OVERFLOW|SIGFPE|
 |STATUS_FLOAT_STACK_CHECK|SIGFPE|
 |STATUS_FLOAT_UNDERFLOW|SIGFPE|
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

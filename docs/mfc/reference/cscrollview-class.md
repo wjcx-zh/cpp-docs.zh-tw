@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: b89daaae4bb578d328e1468cc29470825e19c670
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502597"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754416"
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 
-具有滾動功能的[CView](../../mfc/reference/cview-class.md) 。
+具有滾動功能的[CView。](../../mfc/reference/cview-class.md)
 
 ## <a name="syntax"></a>語法
 
@@ -51,60 +51,60 @@ class CScrollView : public CView
 
 |名稱|描述|
 |----------|-----------------|
-|[CScrollView::CScrollView](#cscrollview)|建構 `CScrollView` 物件。|
+|[CScroll 檢視:CScroll檢視](#cscrollview)|建構 `CScrollView` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CScrollView::CheckScrollBars](#checkscrollbars)|指出捲軸是否有水準和垂直捲動條。|
-|[CScrollView::FillOutsideRect](#filloutsiderect)|在捲動區域外填滿視圖的區域。|
-|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|取得裝置單位中目前的滾動位置。|
-|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|取得目前的對應模式、總大小, 以及可滾動視圖的行和頁面大小。 大小是以裝置為單位。|
-|[CScrollView::GetScrollPosition](#getscrollposition)|取得邏輯單元中的目前捲軸位置。|
-|[CScrollView::GetTotalSize](#gettotalsize)|以邏輯單元取得捲軸的總大小。|
-|[CScrollView::ResizeParentToFit](#resizeparenttofit)|使視圖的大小決定其框架的大小。|
-|[CScrollView::ScrollToPosition](#scrolltoposition)|將此視圖滾動到指定的時間點, 以邏輯單位表示。|
-|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|將捲軸放入縮放至適當模式。|
-|[CScrollView::SetScrollSizes](#setscrollsizes)|設定捲軸的對應模式、總大小, 以及水準和垂直捲動數量。|
+|[CScroll查看::檢查滾動條](#checkscrollbars)|指示滾動檢視是否具有水準和垂直滾動條。|
+|[CScroll 檢視::填充外部重新](#filloutsiderect)|填充滾動區域外的視圖區域。|
+|[CScroll 檢視:抓取裝置滾動位置](#getdevicescrollposition)|獲取設備單位的當前滾動位置。|
+|[CScroll 檢視::抓取裝置](#getdevicescrollsizes)|獲取可滾動檢視的當前映射模式、總大小以及行和頁面大小。 大小以設備單位為單位。|
+|[CScroll 檢視:抓取捲動位置](#getscrollposition)|獲取邏輯單位的當前滾動位置。|
+|[CScroll 檢視:抓取總計大小](#gettotalsize)|獲取邏輯單位滾動視圖的總大小。|
+|[CScrollView:調整父級](#resizeparenttofit)|使視圖的大小決定其幀的大小。|
+|[CScroll查看::滾動位置](#scrolltoposition)|將視圖滾動到給定點,以邏輯單位指定。|
+|[CScroll 檢視::設定比例調整大小](#setscaletofitsize)|將滾動視圖置於縮放到擬合模式。|
+|[CScroll 檢視::設定捲動大小](#setscrollsizes)|設置滾動檢視的映射模式、總大小以及水平和垂直滾動量。|
 
 ## <a name="remarks"></a>備註
 
-您可以藉由覆寫訊息對應`CView` [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)成員函式, 在衍生自的任何類別中處理標準的滾動。 但`CScrollView`會將下列功能加入其`CView`功能:
+您可以通過重寫消息映射的[OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和`CView`[OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)成員函數來處理從派生的任何類中的標準滾動。 但是`CScrollView`,將以下功能添加到`CView`其 功能中:
 
-- 它會管理視窗和視口大小和對應模式。
+- 它管理視窗和視口大小以及映射模式。
 
-- 它會自動滾動以回應捲軸訊息。
+- 它會自動滾動以回應滾動條消息。
 
-- 它會自動滾動, 以回應鍵盤、非滑鼠滾輪或智慧按鈕的訊息。
+- 它會自動滾動以回應來自鍵盤、非滾動滑鼠或 IntelliMouse 滾輪的消息。
 
-若要自動滾動以回應鍵盤上的訊息, 請新增 WM_KEYDOWN 訊息, 並測試 VK_DOWN、VK_PREV 和呼叫[SetScrollPos](/windows/win32/api/winuser/nf-winuser-setscrollpos)。
+要自動捲動以回應來自鍵盤的消息,請添加WM_KEYDOWN訊息,並測試VK_DOWN、VK_PREV和呼叫[SetScrollPos](/windows/win32/api/winuser/nf-winuser-setscrollpos)。
 
-您可以藉由覆寫訊息對應的[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)和[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成員函式, 自行處理滑鼠滾輪的滾動。 這些成員函式`CScrollView`是針對, 支援[WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel)的建議行為, 即滾輪旋轉訊息。
+您可以通過重寫消息映射的[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)和[On 註冊滑鼠滾輪](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成員功能來處理滑鼠滾輪。 由於它們的作用`CScrollView`,這些成員函數支援[WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel)的建議行為,即車輪旋轉消息。
 
-若要利用自動滾動, 請從`CScrollView`衍生您的 view 類別, 而不是 from。 `CView` 第一次建立視圖時, 如果您想要根據檔案大小來計算可滾動視圖的大小, 請從您的`SetScrollSizes` [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)或[cview:: OnUpdate](../../mfc/reference/cview-class.md#onupdate)的覆寫呼叫成員函式。 (您必須撰寫自己的程式碼來查詢檔的大小。 如需範例, 請參閱「[塗抹」範例](../../overview/visual-cpp-samples.md)。)
+要利用自動滾動,請從`CScrollView`派生視圖類,而不是`CView`從 派生。 首次創建檢視時,如果要根據文檔的大小計算可滾動檢視的大小,請從`SetScrollSizes`[CView::上初始更新](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::onUpdate](../../mfc/reference/cview-class.md#onupdate)的重寫調用成員函數。 (您必須編寫自己的代碼來查詢文件的大小。 例如,請參閱[塗鴉範例](../../overview/visual-cpp-samples.md)。
 
-`SetScrollSizes`成員函式的呼叫會設定視圖的對應模式、捲軸視圖的總維度, 以及水準和垂直捲動的數量。 所有大小都是以邏輯單位表示。 視圖的邏輯大小通常是從檔中儲存的資料計算而來的, 但在某些情況下, 您可能會想要指定固定大小。 如需這兩種方法的範例, 請參閱[CScrollView:: SetScrollSizes](#setscrollsizes)。
+對成員函數的`SetScrollSizes`調用設置檢視的映射模式、滾動檢視的總尺寸以及水準和垂直滾動的量。 所有大小均以邏輯單位為單位。 檢視的邏輯大小通常根據儲存在文件中的數據計算,但在某些情況下,您可能需要指定固定大小。 有關這兩種方法的範例,請參閱[CScrollView::設定 ScrollSizes](#setscrollsizes)。
 
-您可以指定在邏輯單元中水準和垂直捲動的數量。 根據預設, 如果使用者按一下捲動方塊外的捲軸軸, `CScrollView`則會滾動「頁面」。 如果使用者按一下捲軸任一結尾的滾動箭號, `CScrollView`則會將「行」捲軸。 根據預設, 頁面是視圖總大小的 1/10;線條是頁面大小的1/10。 藉由在`SetScrollSizes`成員函式中傳遞自訂大小來覆寫這些預設值。 例如, 您可以將水準大小設定為總大小寬度的某個分數, 並將垂直大小設為目前字型中線條的高度。
+指定以邏輯單位水準和垂直滾動的金額。 默認情況下,如果用戶單擊滾動框外的滾動條軸,則`CScrollView`滾動"頁面"。 如果用戶按下捲軸捲軸兩端的滾動箭頭`CScrollView`, 則滾動「行」。 默認情況下,頁面是視圖總大小的 1/10;如果頁面大小,則為 1/10。一行是頁面大小的 1/10。 通過在成員函數中傳遞自定義大小來`SetScrollSizes`覆蓋這些預設值。 例如,您可以將水準大小設置為總大小寬度的一部分,將垂直大小設置為當前字體中行的高度。
 
-不是滾動, `CScrollView`可以自動將視圖調整成目前的視窗大小。 在此模式中, 視圖沒有捲軸, 而邏輯視圖則會延展或縮小, 以完全符合視窗的工作區。 若要使用這種調整功能, 請呼叫[CScrollView:: SetScaleToFitSize](#setscaletofitsize)。 (請呼叫`SetScaleToFitSize`或`SetScrollSizes`, 但不能同時呼叫)。
+可以自動將檢視縮放`CScrollView`到當前視窗大小,而不是滾動。 在此模式下,視圖沒有滾動條,並且邏輯視圖將拉伸或收縮,以完全適合視窗的工作區。 要使用此「縮放到擬合」功能,請致電[CScrollView::設定ScaletoFitSize](#setscaletofitsize)。 (呼叫任`SetScaleToFitSize``SetScrollSizes`一 或 ,但不能同時呼叫兩者。
 
-呼叫衍生`OnDraw`視圖類別的成員函式之前, `CScrollView`會自動調整它所傳遞之`CPaintDC` `OnDraw`裝置內容物件的視口原點。
+在`OnDraw`呼叫派生檢視類的成員函數之前,`CScrollView`自動調整它傳遞`CPaintDC``OnDraw`給的裝置上下文物件的視點源。
 
-若要調整 [滾動視窗] 的 [視口`CScrollView` ] 原點, 會覆寫[CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。 此調整`CPaintDC`會針對`CScrollView`傳遞至`OnDraw`的裝置內容自動進行, 但您必須呼叫`CScrollView::OnPrepareDC`自己, `CClientDC`以取得您所使用的任何其他裝置內容, 例如。 您可以覆`CScrollView::OnPrepareDC`寫以設定畫筆、背景色彩和其他繪圖屬性, 但呼叫基類以進行調整。
+要調整捲動視窗的視口原點,`CScrollView`請覆[寫 CView::onPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。 此調整對於`CPaintDC`傳遞`CScrollView``OnDraw`給的裝置中文字是自動的,但您必須針對您`CScrollView::OnPrepareDC`使用的任何其他裝置上下文(`CClientDC`如 。 您可以重寫`CScrollView::OnPrepareDC`以設置筆、背景色和其他繪圖屬性,但調用基類執行縮放。
 
-捲軸可以顯示在與視圖相對的三個位置, 如下列情況所示:
+滾動條可以相對於視圖出現在三個位置,如以下情況所示:
 
-- 您可以使用 WS_HSCROLL 和 WS_VSCROLL[Windows 樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles), 為視圖設定標準的視窗樣式捲軸。
+- 可以使用 WS_HSCROLL 和 WS_VSCROLL[Windows 樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)為檢視設置標準視窗樣式滾動條。
 
-- 捲軸控制項也可以加入包含此視圖的框架中, 在此情況下, 架構會將 WM_HSCROLL 和 WM_VSCROLL 訊息從框架視窗轉送到目前現用的視圖。
+- 滾動條控件也可以添加到包含檢視的幀中,在這種情況下,框架會將WM_HSCROLL轉發,並將消息 WM_VSCROLL從框架窗口轉發到當前活動視圖。
 
-- 此架構也會將 scroll 訊息從`CSplitterWnd`分隔器控制項轉送至目前現用的分割器窗格 (視圖)。 當放在具有共用捲軸的[CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)中時`CScrollView` , 物件將會使用共用的, 而不是自行建立。
+- 框架還將滾動消息從`CSplitterWnd`拆分器控制件轉發到當前活動的拆分器窗格(視圖)。 當放置在帶有共用滾動條的[CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)中`CScrollView`,物件將使用共用滾動條,而不是創建自己的滾動條。
 
-如需使用`CScrollView`的詳細資訊, 請參閱 MFC 中提供的[檔/視圖架構](../../mfc/document-view-architecture.md)和[衍生視圖類別](../../mfc/derived-view-classes-available-in-mfc.md)。
+有關使用`CScrollView`的詳細資訊,請參閱[MFC 中可用的文件/ 檢視體系結構](../../mfc/document-view-architecture.md)與[衍生檢視類別](../../mfc/derived-view-classes-available-in-mfc.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -120,11 +120,11 @@ class CScrollView : public CView
 
 **標題:** afxwin.h
 
-##  <a name="checkscrollbars"></a>CScrollView:: CheckScrollBars
+## <a name="cscrollviewcheckscrollbars"></a><a name="checkscrollbars"></a>CScroll查看::檢查滾動條
 
-呼叫這個成員函式, 以判斷捲軸是否有水準和垂直橫條。
+調用此成員函數以確定滾動檢視是否具有水準和垂直條。
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -132,13 +132,13 @@ void CheckScrollBars(
 
 ### <a name="parameters"></a>參數
 
-*bHasHorzBar*<br/>
-表示應用程式有水準捲軸。
+*b哈斯霍茲酒吧*<br/>
+指示應用程式具有水準滾動條。
 
-*bHasVertBar*<br/>
-表示應用程式有垂直捲動條。
+*bHasvertbar*<br/>
+指示應用程式具有垂直滾動條。
 
-##  <a name="cscrollview"></a>CScrollView:: CScrollView
+## <a name="cscrollviewcscrollview"></a><a name="cscrollview"></a>CScroll 檢視:CScroll檢視
 
 建構 `CScrollView` 物件。
 
@@ -148,13 +148,13 @@ CScrollView();
 
 ### <a name="remarks"></a>備註
 
-您必須呼叫`SetScrollSizes`或`SetScaleToFitSize` , 才可以使用捲軸。
+您必須在滾動`SetScrollSizes`檢視可用`SetScaleToFitSize`之前呼叫。
 
-##  <a name="filloutsiderect"></a>CScrollView:: FillOutsideRect
+## <a name="cscrollviewfilloutsiderect"></a><a name="filloutsiderect"></a>CScroll 檢視::填充外部重新
 
-呼叫`FillOutsideRect`以填滿顯示在捲動區域外的視圖區域。
+調用`FillOutsideRect`以填充顯示在滾動區域外部的檢視區域。
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -163,22 +163,22 @@ void FillOutsideRect(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-要在其中完成填滿的裝置內容。
+要完成填充的設備上下文。
 
 *pBrush*<br/>
-要用來填滿區域的筆刷。
+要填充區域的刷子。
 
 ### <a name="remarks"></a>備註
 
-在`FillOutsideRect`您的捲軸處理`OnEraseBkgnd`函式中使用, 以避免過度的背景重新繪製。
+在`FillOutsideRect`滾動檢視的`OnEraseBkgnd`處理程式函數中使用,以防止過度重新繪製背景。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]
 
-##  <a name="getdevicescrollposition"></a>CScrollView:: GetDeviceScrollPosition
+## <a name="cscrollviewgetdevicescrollposition"></a><a name="getdevicescrollposition"></a>CScroll 檢視:抓取裝置滾動位置
 
-當`GetDeviceScrollPosition`您需要捲軸中捲動方塊的目前水準和垂直位置時, 請呼叫。
+當您`GetDeviceScrollPosition`需要滾動條中滾動框的當前水準和垂直位置時,請呼叫。
 
 ```
 CPoint GetDeviceScrollPosition() const;
@@ -186,19 +186,19 @@ CPoint GetDeviceScrollPosition() const;
 
 ### <a name="return-value"></a>傳回值
 
-做為`CPoint`物件之捲動方塊的水準和垂直位置 (以裝置單位表示)。
+滾動框作為`CPoint`物件的水準和垂直位置(以設備單位為單位)。
 
 ### <a name="remarks"></a>備註
 
-此座標配對會對應至視圖左上角已滾動到的檔位置。 這適用于將滑鼠裝置位置設為捲軸來顯示裝置位置。
+此座標對對應於文檔中已滾動檢視左上角的位置。 這對於抵消滑鼠設備位置以滾動查看設備位置非常有用。
 
-`GetDeviceScrollPosition`傳回裝置單位中的值。 如果您想要邏輯單元, `GetScrollPosition`請改用。
+`GetDeviceScrollPosition`返回以設備單位為單位的值。 如果需要邏輯單位,請使用`GetScrollPosition`。
 
-##  <a name="getdevicescrollsizes"></a>CScrollView:: GetDeviceScrollSizes
+## <a name="cscrollviewgetdevicescrollsizes"></a><a name="getdevicescrollsizes"></a>CScroll 檢視::抓取裝置
 
-`GetDeviceScrollSizes`取得目前的對應模式、總大小, 以及可滾動視圖的行和頁面大小。
+`GetDeviceScrollSizes`獲取可滾動檢視的當前映射模式、總大小以及行和頁面大小。
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -209,24 +209,24 @@ void GetDeviceScrollSizes(
 ### <a name="parameters"></a>參數
 
 *nMapMode*<br/>
-傳回此視圖的目前對應模式。 如需可能值的清單, 請`SetScrollSizes`參閱。
+返回此檢視的當前映射模式。 如需可能值的清單，請參閱 `SetScrollSizes`。
 
-*sizeTotal*<br/>
-傳回裝置單位中捲軸的目前大小總計。
+*大小總計*<br/>
+以設備單位返回滾動視圖的當前總大小。
 
-*sizePage*<br/>
-傳回目前的水準和垂直量, 以在每個方向上滾動以回應捲軸軸中的滑鼠按一下。 `cx`成員包含水準金額。 `cy`成員包含垂直量。
+*大小頁*<br/>
+返回當前水準和垂直量,以響應滾動條軸中的滑鼠按一下,在每個方向上滾動。 成員`cx`包含水準量。 成員`cy`包含垂直量。
 
-*sizeLine*<br/>
-傳回目前的水準和垂直量, 以在每個方向上滾動, 以回應捲動箭號中的滑鼠按一下。 `cx`成員包含水準金額。 `cy`成員包含垂直量。
+*大小線*<br/>
+返回當前水準和垂直量,以響應滾動箭頭中的滑鼠按一下,在每個方向上滾動。 成員`cx`包含水準量。 成員`cy`包含垂直量。
 
 ### <a name="remarks"></a>備註
 
-大小是以裝置為單位。 這個成員函式很少被呼叫。
+大小以設備單位為單位。 很少調用此成員函數。
 
-##  <a name="getscrollposition"></a>CScrollView:: GetScrollPosition
+## <a name="cscrollviewgetscrollposition"></a><a name="getscrollposition"></a>CScroll 檢視:抓取捲動位置
 
-當`GetScrollPosition`您需要捲軸中捲動方塊的目前水準和垂直位置時, 請呼叫。
+當您`GetScrollPosition`需要滾動條中滾動框的當前水準和垂直位置時,請呼叫。
 
 ```
 CPoint GetScrollPosition() const;
@@ -234,17 +234,17 @@ CPoint GetScrollPosition() const;
 
 ### <a name="return-value"></a>傳回值
 
-做為`CPoint`物件之捲動方塊的水準和垂直位置 (以邏輯單位表示)。
+滾動框作為`CPoint`物件的水準和垂直位置(以邏輯單位表示)。
 
 ### <a name="remarks"></a>備註
 
-此座標配對會對應至視圖左上角已滾動到的檔位置。
+此座標對對應於文檔中已滾動檢視左上角的位置。
 
-`GetScrollPosition`傳回邏輯單元中的值。 如果您想要裝置單位, `GetDeviceScrollPosition`請改用。
+`GetScrollPosition`返回邏輯單位中的值。 如果需要裝置儲存單元,請`GetDeviceScrollPosition`使用 。
 
-##  <a name="gettotalsize"></a>CScrollView:: GetTotalSize
+## <a name="cscrollviewgettotalsize"></a><a name="gettotalsize"></a>CScroll 檢視:抓取總計大小
 
-呼叫`GetTotalSize`以取得捲軸的目前水準和垂直大小。
+調用`GetTotalSize`以檢索滾動檢視的當前水準和垂直大小。
 
 ```
 CSize GetTotalSize() const;
@@ -252,76 +252,76 @@ CSize GetTotalSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-捲軸的總大小 (以邏輯單位表示)。 水準大小是在傳回值`cx`的成員`CSize`中。 垂直大小在`cy`成員中。
+以邏輯單位表示滾動視圖的總大小。 水準大小位於返回值`cx`的成員中。 `CSize` 垂直大小位於成員中`cy`。
 
-##  <a name="resizeparenttofit"></a>CScrollView:: ResizeParentToFit
+## <a name="cscrollviewresizeparenttofit"></a><a name="resizeparenttofit"></a>CScrollView:調整父級
 
-呼叫`ResizeParentToFit` , 讓您的視圖大小決定其框架視窗的大小。
+呼叫`ResizeParentToFit`以讓檢視的大小決定其框架視窗的大小。
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bShrinkOnly*<br/>
-要執行的調整大小類型。 預設值為 TRUE, 會在適當時縮小框架視窗。 大型視圖或小型框架視窗仍會顯示捲軸。 如果值為 FALSE, 則表示視圖一律會精確地調整框架視窗的大小。 這可能會有點危險, 因為框架視窗可能會變得太大, 而無法放入多重文件介面 (MDI) 框架視窗或螢幕中。
+*b收縮僅*<br/>
+要執行的調整大小。 默認值 TRUE 會收縮幀視窗(如果適用)。 對於大型檢視或小框架視窗,仍會出現滾動條。 FALSE 的值會導致視圖始終精確調整幀視窗的大小。 這可能有點危險,因為框架視窗可能變得太大,無法容納多個文檔介面 (MDI) 框架視窗或螢幕。
 
 ### <a name="remarks"></a>備註
 
-這只建議用於 MDI 子框架視窗中的 views。 在`ResizeParentToFit` `OnInitialUpdate`衍生類別`CScrollView`的處理常式函式中使用。 如需此成員函式的範例, 請參閱[CScrollView:: SetScrollSizes](#setscrollsizes)。
+這僅適用於 MDI 子框架視窗中的檢視。 `ResizeParentToFit`在`OnInitialUpdate`派`CScrollView`生類的處理程式函數中使用。 有關此成員函數的範例,請參閱[CScrollView::設定 ScrollSizes](#setscrollsizes)。
 
-`ResizeParentToFit`假設已設定視圖視窗的大小。 如果呼叫時`ResizeParentToFit`未設定視圖視窗大小, 您會收到判斷提示。 若要確保不會發生這種情況, 請在呼叫`ResizeParentToFit`之前進行下列呼叫:
+`ResizeParentToFit`假定檢視視窗的大小已設置。 如果在呼叫時`ResizeParentToFit`尚未設定檢視視窗大小,您將獲得斷言。 為確保不會發生這種情況,請先呼叫`ResizeParentToFit`:
 
 [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]
 
-##  <a name="scrolltoposition"></a>CScrollView:: ScrollToPosition
+## <a name="cscrollviewscrolltoposition"></a><a name="scrolltoposition"></a>CScroll查看::滾動位置
 
-呼叫`ScrollToPosition`以滾動至視圖中的指定點。
+調用`ScrollToPosition`以滾動到視圖中的給定點。
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-要在邏輯單元中滾動到的點。 `x`成員必須是正數值 (大於或等於 0, 最多可達視圖的總大小)。 當對應模式為 MM_TEXT 時`y` , 成員也是如此。 在`y` MM_TEXT 以外的對應模式中, 成員是負值。
+以邏輯單位滾動到的點。 成員`x`必須為正值(大於或等於 0,最多為視圖的總大小)。 當映射模式MM_TEXT時,`y`成員也是如此。 在`y`映射模式(MM_TEXT之外,成員為負值。
 
 ### <a name="remarks"></a>備註
 
-此視圖將會滾動, 讓這個點位於視窗的左上角。 如果要調整視圖的大小, 就不能呼叫這個成員函式。
+視圖將被滾動,以便此點位於視窗的左上角。 如果視圖已縮放為適合,則不得調用此成員函數。
 
-##  <a name="setscaletofitsize"></a>CScrollView:: SetScaleToFitSize
+## <a name="cscrollviewsetscaletofitsize"></a><a name="setscaletofitsize"></a>CScroll 檢視::設定比例調整大小
 
-當`SetScaleToFitSize`您想要自動將 [視口大小] 調整為目前的視窗大小時, 請呼叫。
+如果要`SetScaleToFitSize`自動將視口大小縮放到當前視窗大小,請進行調用。
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
 ### <a name="parameters"></a>參數
 
-*sizeTotal*<br/>
-要調整視圖的水準和垂直大小。 捲軸的大小會以邏輯單元來測量。 水準大小會包含在`cx`成員中。 垂直大小會包含在`cy`成員中。 `cx` 和`cy`都必須大於或等於0。
+*大小總計*<br/>
+要縮放檢視的水準和垂直大小。 滾動檢視的大小以邏輯單位度量。 水平大小包含在成員中`cx`。 垂直大小包含在成員中`cy`。 `cx`和`cy`必須大於或等於 0。
 
 ### <a name="remarks"></a>備註
 
-使用捲軸時, 可以隨時顯示邏輯視圖的一部分。 但是使用「調整為適當」功能時, 此視圖沒有捲軸, 而邏輯視圖則會延展或縮小, 以完全符合視窗的工作區。 調整視窗大小時, 視圖會根據視窗的大小, 以新的尺規繪製其資料。
+使用滾動條時,邏輯視圖的一部分可能隨時可見。 但是,使用"縮放到擬合"功能,視圖沒有滾動條,並且邏輯視圖會拉伸或收縮,以完全適合視窗的工作區。 調整視窗大小時,檢視將根據視窗的大小以新比例繪製其數據。
 
-您通常會將的呼叫`SetScaleToFitSize`放在您的`OnInitialUpdate`視圖成員函式的覆寫中。 如果您不想要自動調整, 請改`SetScrollSizes`為呼叫成員函式。
+通常,您將在覆蓋檢視`SetScaleToFitSize``OnInitialUpdate`的成員函數時將調用置於該函數的覆蓋位置。 如果不希望自動縮放,`SetScrollSizes`請改為呼叫成員函數。
 
-`SetScaleToFitSize`可以用來執行「縮放至適當」作業。 用`SetScrollSizes`來重新初始化捲軸。
+`SetScaleToFitSize`可用於實現「縮放到適合」 操作。 用於`SetScrollSizes`重新初始化滾動。
 
-`SetScaleToFitSize`假設已設定視圖視窗的大小。 如果呼叫時`SetScaleToFitSize`未設定視圖視窗大小, 您會收到判斷提示。 若要確保不會發生這種情況, 請在呼叫`SetScaleToFitSize`之前進行下列呼叫:
+`SetScaleToFitSize`假定檢視視窗的大小已設置。 如果在呼叫時`SetScaleToFitSize`尚未設定檢視視窗大小,您將獲得斷言。 為確保不會發生這種情況,請先呼叫`SetScaleToFitSize`:
 
 [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]
 
-##  <a name="setscrollsizes"></a>CScrollView:: SetScrollSizes
+## <a name="cscrollviewsetscrollsizes"></a><a name="setscrollsizes"></a>CScroll 檢視::設定捲動大小
 
-在`SetScrollSizes`即將更新視圖時呼叫。
+當`SetScrollSizes`視圖即將更新時調用。
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,
@@ -332,41 +332,41 @@ void SetScrollSizes(
 ### <a name="parameters"></a>參數
 
 *nMapMode*<br/>
-要為此視圖設定的對應模式。 可能的值包括：
+要為此檢視設置的映射模式。 可能的值包括：
 
-|對應模式|邏輯單元|正 y 軸延伸 。|
+|對應模式|邏輯單元|正 y 軸 延伸...|
 |------------------|------------------|---------------------------------|
-|MM_TEXT|1圖元|結點|
-|MM_HIMETRIC|0.01 mm|轉|
-|MM_TWIPS|1/1440 于|轉|
-|MM_HIENGLISH|0.001 于|轉|
-|MM_LOMETRIC|0.1 mm|轉|
-|MM_LOENGLISH|0.01 于|轉|
+|MM_TEXT|1 佹萺慒|向下|
+|MM_HIMETRIC|0.01 mm|向上|
+|MM_TWIPS|1/1440 in|向上|
+|MM_HIENGLISH|0.001 in|向上|
+|MM_LOMETRIC|0.1 mm|向上|
+|MM_LOENGLISH|0.01 in|向上|
 
-所有這些模式都是由 Windows 所定義。 不會使用`CScrollView`兩種標準對應模式 MM_ISOTROPIC 和 MM_ANISOTROPIC。 類別庫會提供`SetScaleToFitSize`成員函式, 以將 view 調整成視窗大小。 上表中的第三欄描述座標方向。
+所有這些模式都由 Windows 定義。 MM_ISOTROPIC與MM_ANISOTROPIC兩種標準對應模式不用於`CScrollView`。 類庫提供成員函數`SetScaleToFitSize`,用於將檢視縮放到視窗大小。 上表第三列描述了座標方向。
 
-*sizeTotal*<br/>
-捲軸的總大小。 `cx`成員包含水準範圍。 `cy`成員包含垂直範圍。 大小是以邏輯單位表示。 `cx` 和`cy`都必須大於或等於0。
+*大小總計*<br/>
+滾動檢視的總大小。 成員`cx`包含水準範圍。 成員`cy`包含垂直範圍。 大小以邏輯單位表示。 `cx`和`cy`必須大於或等於 0。
 
-*sizePage*<br/>
-要在每個方向中滾動的水準和垂直量, 以回應捲軸軸中的滑鼠按一下。 `cx`成員包含水準金額。 `cy`成員包含垂直量。
+*大小頁*<br/>
+水準和垂直量要在每個方向滾動,以響應滾動條軸中的滑鼠按一下。 成員`cx`包含水準量。 成員`cy`包含垂直量。
 
-*sizeLine*<br/>
-要在每個方向中滾動的水準和垂直量, 以回應滑鼠在捲動箭號中的按一下。 `cx`成員包含水準金額。 `cy`成員包含垂直量。
+*大小線*<br/>
+水準和垂直量要在每個方向滾動,以響應滾動箭頭中的滑鼠按一下。 成員`cx`包含水準量。 成員`cy`包含垂直量。
 
 ### <a name="remarks"></a>備註
 
-在`OnUpdate`成員函式的覆寫中呼叫它, 以便在檔一開始顯示或變更大小時, 調整滾動特性。
+在成員函數的`OnUpdate`重寫中調用它,以在最初顯示文檔或更改大小時調整滾動特徵。
 
-您通常會藉由呼叫您與衍生檔類別一起提供的檔成員函式 (可能稱為`GetMyDocSize`), 從視圖的相關檔中取得大小資訊。 下列程式碼顯示此方法:
+您通常會透過調用文件成員函數(可能稱為`GetMyDocSize`,與派生文件類一起提供)從檢視的關聯文檔中獲取大小資訊。 以下代碼顯示了此方法:
 
 [!code-cpp[NVC_MFCDocView#166](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]
 
-或者, 您有時可能需要設定固定的大小, 如下列程式碼所示:
+或者,有時您可能需要設定固定大小,如以下代碼:
 
 [!code-cpp[NVC_MFCDocView#167](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]
 
-您必須將對應模式設定為 MM_ISOTROPIC 或 MM_ANISOTROPIC 以外的任何 Windows 對應模式。 如果您想要使用不受限制的`SetScaleToFitSize` `SetScrollSizes`對應模式, 請呼叫成員函式, 而不是。
+您必須將映射模式設置為除MM_ISOTROPIC或MM_ANISOTROPIC以外的任何 Windows 映射模式。 如果要使用無限制映射模式,`SetScaleToFitSize`請呼叫成員函數`SetScrollSizes`而不是 。
 
 ### <a name="example"></a>範例
 
@@ -376,7 +376,7 @@ void SetScrollSizes(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>

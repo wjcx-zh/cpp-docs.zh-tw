@@ -12,28 +12,28 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f15e16b075b9a5327723a7f081100313f14ea77
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260158"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167717"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 類別
 
 此類別代表智慧型指標物件。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template <typename T>
 class CAutoPtr
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *T*<br/>
 指標類型。
@@ -45,78 +45,78 @@ class CAutoPtr
 |名稱|描述|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|建構函式。|
-|[CAutoPtr::~CAutoPtr](#dtor)|解構函式。|
+|[CAutoPtr：： ~ CAutoPtr](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAutoPtr::Attach](#attach)|呼叫這個方法來取得現有指標的擁有權。|
-|[CAutoPtr::Detach](#detach)|呼叫此方法，以釋放指標的擁有權。|
-|[CAutoPtr::Free](#free)|呼叫這個方法來刪除所指向的物件`CAutoPtr`。|
+|[CAutoPtr：： Attach](#attach)|呼叫此方法以取得現有指標的擁有權。|
+|[CAutoPtr：:D etach](#detach)|呼叫此方法以釋放指標的擁有權。|
+|[CAutoPtr：： Free](#free)|呼叫這個方法，以刪除所指向的物件`CAutoPtr`。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CAutoPtr::operator T*](#operator_t_star)|轉換運算子。|
-|[CAutoPtr::operator =](#operator_eq)|指派運算子。|
-|[CAutoPtr::operator ->](#operator_ptr)|成員指標運算子中。|
+|[CAutoPtr：： operator T *](#operator_t_star)|Cast 運算子。|
+|[CAutoPtr：： operator =](#operator_eq)|指派運算子。|
+|[CAutoPtr：： operator->](#operator_ptr)|成員指標運算子。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAutoPtr::m_p](#m_p)|指標的資料成員變數中。|
+|[CAutoPtr：： m_p](#m_p)|指標資料成員變數。|
 
 ## <a name="remarks"></a>備註
 
-這個類別提供方法來建立和管理智慧型指標，這有助於防止記憶體流失，自動在它超出範圍時釋出資源。
+此類別提供建立和管理智慧型指標的方法，其可在超出範圍時自動釋放資源，協助防止記憶體流失。
 
-此外，`CAutoPtr`的複製建構函式和指派運算子轉移擁有權的指標，請將與來源指標複製到目的地的指標，並設定與來源指標為 NULL。 因此不可能有兩個`CAutoPtr`物件每個儲存相同的指標，以及這會減少兩次刪除相同的指標的可能性。
+此外， `CAutoPtr`的複製的「程式」和「指派」運算子會轉移指標的擁有權，將來源指標複製到目的地指標，並將來源指標設定為 Null。 因此，不可能有兩`CAutoPtr`個物件儲存相同的指標，這可減少刪除相同指標兩次的可能性。
 
-`CAutoPtr` 也可以簡化建立集合的指標。 而不是衍生的集合類別，並覆寫解構函式，是讓集合的工作變得更容易`CAutoPtr`物件。 刪除集合時，`CAutoPtr`物件會超出範圍而自動刪除其本身。
+`CAutoPtr`也簡化了指標集合的建立。 除了衍生集合類別和覆寫析構函式，更容易建立`CAutoPtr`物件集合。 刪除集合時， `CAutoPtr`物件將會超出範圍，並自動予以刪除。
 
-[CHeapPtr](../../atl/reference/cheapptr-class.md)變體運作方式與`CAutoPtr`，差異在於它們配置和釋放記憶體使用不同的堆積函式，而不是C++**新**並**刪除**運算子。 [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)大致`CAutoPtr`、 唯一的差別在於它會使用**vector new []** 並**向量 delete []** 來配置和釋放記憶體。
+[CHeapPtr](../../atl/reference/cheapptr-class.md)和 variant 的運作方式與相同`CAutoPtr`，不同之處在于它們會使用不同的堆積函數來配置和釋放記憶體，而不是 c + + **new**和**delete**運算子。 [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)類似`CAutoPtr`，唯一的差別在於它使用**vector new []** 和**vector delete []** 來配置和釋放記憶體。
 
-另請參閱[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)並[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)陣列或清單的智慧型指標需要時。
+當需要陣列或智慧型指標清單時，另請參閱[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)和[CAutoPtrList](../../atl/reference/cautoptrlist-class.md) 。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標頭：** atlbase.h。h
 
 ## <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]
 
-##  <a name="attach"></a>  CAutoPtr::Attach
+## <a name="cautoptrattach"></a><a name="attach"></a>CAutoPtr：： Attach
 
-呼叫這個方法來取得現有指標的擁有權。
+呼叫此方法以取得現有指標的擁有權。
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
-`CAutoPtr`物件會取得這個指標的擁有權。
+*p&id*<br/>
+`CAutoPtr`物件將取得此指標的擁有權。
 
 ### <a name="remarks"></a>備註
 
-當`CAutoPtr`物件會採用指標的擁有權，則會自動刪除的指標和配置的任何資料時超出範圍。 如果[CAutoPtr::Detach](#detach)是呼叫，程式設計人員再次指定負責釋放任何配置的資源。
+當`CAutoPtr`物件取得指標的擁有權時，它會在超出範圍時，自動刪除指標和任何已配置的資料。 如果呼叫[CAutoPtr：:D etach](#detach) ，則程式設計人員會再次負責釋放任何已配置的資源。
 
-在偵錯組建中，如果，就會發生判斷提示失敗[CAutoPtr::m_p](#m_p)資料成員現在會指向現有的值; 也就是說，不等於 NULL。
+在 [偵錯工具] 組建中，如果[CAutoPtr：： m_p](#m_p)資料成員目前指向現有的值，就會發生判斷提示失敗;也就是，它不等於 Null。
 
 ### <a name="example"></a>範例
 
-請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
+請參閱[CAutoPtr 總覽](../../atl/reference/cautoptr-class.md)中的範例。
 
-##  <a name="cautoptr"></a>  CAutoPtr::CAutoPtr
+## <a name="cautoptrcautoptr"></a><a name="cautoptr"></a>CAutoPtr::CAutoPtr
 
 建構函式。
 
-```
+```cpp
 CAutoPtr() throw();
 explicit CAutoPtr(T* p) throw();
 
@@ -129,37 +129,37 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*p&id*<br/>
 現有的指標。
 
 *TSrc*<br/>
-由另一個型別`CAutoPtr`，用來初始化目前的物件。
+由另一個`CAutoPtr`管理的類型，用來初始化目前的物件。
 
 ### <a name="remarks"></a>備註
 
-`CAutoPtr`可以使用現有的指標建立物件，在此情況下傳送的是指標的擁有權。
+`CAutoPtr`物件可以使用現有的指標來建立，在此情況下，它會傳輸指標的擁有權。
 
 ### <a name="example"></a>範例
 
-請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
+請參閱[CAutoPtr 總覽](../../atl/reference/cautoptr-class.md)中的範例。
 
-##  <a name="dtor"></a>  CAutoPtr::~CAutoPtr
+## <a name="cautoptrcautoptr"></a><a name="dtor"></a>CAutoPtr：： ~ CAutoPtr
 
 解構函式。
 
-```
+```cpp
 ~CAutoPtr() throw();
 ```
 
 ### <a name="remarks"></a>備註
 
-會釋放所有配置的資源。 呼叫[CAutoPtr::Free](#free)。
+釋放任何已配置的資源。 呼叫[CAutoPtr：： Free](#free)。
 
-##  <a name="detach"></a>  CAutoPtr::Detach
+## <a name="cautoptrdetach"></a><a name="detach"></a>CAutoPtr：:D etach
 
-呼叫此方法，以釋放指標的擁有權。
+呼叫此方法以釋放指標的擁有權。
 
-```
+```cpp
 T* Detach() throw();
 ```
 
@@ -169,41 +169,41 @@ T* Detach() throw();
 
 ### <a name="remarks"></a>備註
 
-釋放指標的擁有權、 設定[CAutoPtr::m_p](#m_p)資料成員變數為 NULL，並傳回指標的複本。 之後呼叫`Detach`，它最多程式設計師可以釋放任何配置的資源，哪些`CAutoPtr`物件可能先前假設 reponsibility。
+釋放指標的擁有權，將[CAutoPtr：： m_p](#m_p)資料成員變數設定為 Null，並傳回指標的複本。 呼叫`Detach`之後，程式設計人員會自行釋放任何已配置的`CAutoPtr`資源，供物件先前假設為 reponsibility。
 
 ### <a name="example"></a>範例
 
-請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
+請參閱[CAutoPtr 總覽](../../atl/reference/cautoptr-class.md)中的範例。
 
-##  <a name="free"></a>  CAutoPtr::Free
+## <a name="cautoptrfree"></a><a name="free"></a>CAutoPtr：： Free
 
-呼叫這個方法來刪除所指向的物件`CAutoPtr`。
+呼叫這個方法，以刪除所指向的物件`CAutoPtr`。
 
-```
+```cpp
 void Free() throw();
 ```
 
 ### <a name="remarks"></a>備註
 
-指向的物件`CAutoPtr`釋出，而[CAutoPtr::m_p](#m_p)資料成員變數會設為 NULL。
+`CAutoPtr`會釋放所指向的物件，而且[CAutoPtr：： m_p](#m_p)資料成員變數會設定為 Null。
 
-##  <a name="m_p"></a>  CAutoPtr::m_p
+## <a name="cautoptrm_p"></a><a name="m_p"></a>CAutoPtr：： m_p
 
-指標的資料成員變數中。
+指標資料成員變數。
 
-```
+```cpp
 T* m_p;
 ```
 
 ### <a name="remarks"></a>備註
 
-此成員變數會保留指標資訊。
+這個成員變數會保存指標資訊。
 
-##  <a name="operator_eq"></a>  CAutoPtr::operator =
+## <a name="cautoptroperator-"></a><a name="operator_eq"></a>CAutoPtr：： operator =
 
 指派運算子。
 
-```
+```cpp
 template<>
 CAutoPtr<T>& operator= (CAutoPtr<T>& p);
 
@@ -213,59 +213,59 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
-變數的指標。
+*p&id*<br/>
+指標。
 
 *TSrc*<br/>
-類別型別。
+類別類型。
 
 ### <a name="return-value"></a>傳回值
 
-傳回的參考**CAutoPtr\< T >**。
+傳回**\< CAutoPtr T >** 的參考。
 
 ### <a name="remarks"></a>備註
 
-指派運算子會卸離`CAutoPtr`物件從目前的指標並附加新的指標*p*，在其位置。
+指派運算子會從任何`CAutoPtr`目前的指標卸離物件，並將新的指標（ *p*）附加至其位置。
 
 ### <a name="example"></a>範例
 
-請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
+請參閱[CAutoPtr 總覽](../../atl/reference/cautoptr-class.md)中的範例。
 
-##  <a name="operator_ptr"></a>  CAutoPtr::operator -&gt;
+## <a name="cautoptroperator--gt"></a><a name="operator_ptr"></a>CAutoPtr：： operator-&gt;
 
-成員指標運算子中。
+成員指標運算子。
 
-```
+```cpp
 T* operator->() const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-傳回的值[CAutoPtr::m_p](#m_p)資料成員變數。
+傳回[CAutoPtr：： m_p](#m_p)資料成員變數的值。
 
 ### <a name="remarks"></a>備註
 
-使用這個運算子所指的類別中呼叫方法`CAutoPtr`物件。 在偵錯組建中，如果，就會發生判斷提示失敗`CAutoPtr`指向 NULL。
+使用這個運算子，即可呼叫物件所`CAutoPtr`指向之類別中的方法。 在 [ `CAutoPtr`偵錯工具] 組建中，如果指向 Null，就會發生判斷提示失敗。
 
 ### <a name="example"></a>範例
 
-請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
+請參閱[CAutoPtr 總覽](../../atl/reference/cautoptr-class.md)中的範例。
 
-##  <a name="operator_t_star"></a>  CAutoPtr::operator T*
+## <a name="cautoptroperator-t"></a><a name="operator_t_star"></a>CAutoPtr：： operator T *
 
-轉換運算子。
+Cast 運算子。
 
-```
+```cpp
 operator T* () const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-傳回類別範本中定義的物件資料類型的指標。
+傳回類別樣板中所定義之物件資料類型的指標。
 
 ### <a name="example"></a>範例
 
-請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
+請參閱[CAutoPtr 總覽](../../atl/reference/cautoptr-class.md)中的範例。
 
 ## <a name="see-also"></a>另請參閱
 

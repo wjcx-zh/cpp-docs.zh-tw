@@ -1,9 +1,10 @@
 ---
 title: _swab
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _swab
 - stdlib/_swab
+- _o__swab
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946281"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912417"
 ---
 # <a name="_swab"></a>_swab
 
@@ -69,7 +71,9 @@ void _swab(
 
 ## <a name="remarks"></a>備註
 
-如果*n*是偶數，則 **_swab**函數會從*src*複製*n*個位元組，交換每一對連續的位元組，並將結果儲存在*dest*。 如果*n*是奇數，則 **_swab**會複製並交換*src*的前*n*-1 個位元組，而不會複製最後一個位元組。 **_Swab**函數通常用來準備要傳送至使用不同位元組順序之電腦的二進位資料。
+如果*n*是偶數， **_swab**函式會從*src*複製*n*個位元組，交換每一對連續的位元組，並將結果儲存在*dest*。 如果*n*是奇數， **_swab**會複製並交換*src*的前*n*-1 個位元組，而不會複製最後一個位元組。 **_Swab**函數通常用來準備要傳送至使用不同位元組順序之電腦的二進位資料。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

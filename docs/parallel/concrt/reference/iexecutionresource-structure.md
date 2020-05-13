@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4305948aa4e5da36023c1d4fe8b0b84aa4d59e23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377304"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 結構
 
@@ -34,28 +34,28 @@ struct IExecutionResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[IExecutionResource：： CurrentSubscriptionLevel](#currentsubscriptionlevel)|傳回目前與此執行資源所代表之基礎硬體執行緒相關聯的已啟動虛擬處理器根目錄和訂閱的外部執行緒數目。|
-|[IExecutionResource：： GetExecutionResourceId](#getexecutionresourceid)|傳回此執行資源所代表之硬體執行緒的唯一識別碼。|
-|[IExecutionResource：： GetNodeId](#getnodeid)|傳回此執行資源所屬之處理器節點的唯一識別碼。|
-|[IExecutionResource：： Remove](#remove)|將此執行資源傳回到 Resource Manager。|
+|[I 執行資源:目前訂閱等級](#currentsubscriptionlevel)|返回當前與此執行資源表示的基礎硬體線程關聯的已啟動的虛擬處理器根和已訂閱的外部線程的數量。|
+|[I 執行資源:抓取資源識別碼](#getexecutionresourceid)|返回此執行資源表示的硬體線程的唯一標識碼。|
+|[I 執行資源::取得NodeId](#getnodeid)|返回此執行資源所屬的處理器節點的唯一標識碼。|
+|[I 執行資源:刪除](#remove)|將此執行資源返回到資源管理員。|
 
 ## <a name="remarks"></a>備註
 
-執行資源可以是獨立或與虛擬處理器根相關聯。 當應用程式中的執行緒建立執行緒訂用帳戶時，就會建立獨立的執行資源。 方法[ISchedulerProxy：： SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)和[ISchedulerProxy：： RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)會建立執行緒訂閱，並傳回代表訂用帳戶的 `IExecutionResource` 介面。 建立執行緒訂閱是通知 Resource Manager 給定的執行緒將參與佇列至排程器的工作，以及虛擬處理器根 Resource Manager 指派給排程器的方法。 Resource Manager 會使用此資訊來避免傳承硬體執行緒。
+執行資源可以是獨立的或與虛擬處理器根關聯的。 當應用程式中的線程創建線程訂閱時,將創建獨立的執行資源。 方法[I計劃代理:訂閱線程](ischedulerproxy-structure.md#subscribecurrentthread)和[I 計劃代理:請求初始虛擬處理器](ischedulerproxy-structure.md#requestinitialvirtualprocessors)創建線程訂閱,`IExecutionResource`並返回表示訂閱的介面。 創建線程訂閱是通知資源管理器給定線程將參與排隊到計劃程式的工作以及分配給計劃程式的虛擬處理器根資源管理器的一種方式。 資源管理器使用這些資訊來避免在可以的地方過度訂閱硬體線程。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IExecutionResource`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="currentsubscriptionlevel"></a>IExecutionResource：： CurrentSubscriptionLevel 方法
+## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>I 執行資源::當前訂閱等級方法
 
-傳回目前與此執行資源所代表之基礎硬體執行緒相關聯的已啟動虛擬處理器根目錄和訂閱的外部執行緒數目。
+返回當前與此執行資源表示的基礎硬體線程關聯的已啟動的虛擬處理器根和已訂閱的外部線程的數量。
 
 ```cpp
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
@@ -63,21 +63,21 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-目前的訂用帳戶層級。
+當前訂閱級別。
 
 ### <a name="remarks"></a>備註
 
-訂用帳戶層級會告訴您有多少執行中的執行緒與硬體執行緒相關聯。 這只包括 Resource Manager 感知的執行緒，以及主動執行執行緒 proxy 的虛擬處理器根的形式。
+訂閱等級告訴您與硬體線程關聯的正在運行的線程數。 這僅包括資源管理器以訂閱線程的形式知道的線程,以及正在積極執行線程代理的虛擬處理器根。
 
-使用參數呼叫方法[ISchedulerProxy：： SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)或方法[ISchedulerProxy：： RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)時，`doSubscribeCurrentThread` 設定為**true，則**會將硬體執行緒的訂閱等級遞增一。 它們也會傳回表示訂用帳戶的 `IExecutionResource` 介面。 對[IExecutionResource：： Remove](#remove)的對應呼叫會將硬體執行緒的訂用帳戶層級減一。
+調用方法[I-計劃代理::訂閱CurrentThread](ischedulerproxy-structure.md#subscribecurrentthread),或方法[I-計劃代理:請求初始虛擬處理器](ischedulerproxy-structure.md#requestinitialvirtualprocessors),參數`doSubscribeCurrentThread`設置為值**true**將硬體線程的訂閱級別增加一個。 它們還會返回表示`IExecutionResource`訂閱的介面。 對[I執行資源::將](#remove)硬體線程的訂閱級別除以一次。
 
-使用方法[IVirtualProcessorRoot：： Activate 啟動](ivirtualprocessorroot-structure.md#activate)虛擬處理器根的動作，會遞增硬體執行緒的訂用帳戶層級一。 [IVirtualProcessorRoot：:D eactivate](ivirtualprocessorroot-structure.md#deactivate)或[IExecutionResource：： Remove](#remove)方法會在啟動的虛擬處理器根上叫用訂用帳戶層級時，遞減一個。
+使用[IVirtualProcessorRoot::啟動](ivirtualprocessorroot-structure.md#activate)虛擬處理器根的行為將硬體線程的訂閱級別增加一個。 當在啟動的虛擬處理器根目錄上調用時,方法[IVirtualProcessorRoot::Deeactivate,](ivirtualprocessorroot-structure.md#deactivate)[或 I執行資源:在](#remove)啟動的虛擬處理器根上調用時,將訂閱級別除以一。
 
-Resource Manager 會使用訂用帳戶層級資訊，做為判斷何時要在排程器之間移動資源的其中一種方式。
+資源管理器使用訂閱等級資訊作為確定何時在計劃程序之間移動資源的方法之一。
 
-## <a name="getexecutionresourceid"></a>IExecutionResource：： GetExecutionResourceId 方法
+## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>I 執行資源:抓取資源代碼
 
-傳回此執行資源所代表之硬體執行緒的唯一識別碼。
+返回此執行資源表示的硬體線程的唯一標識碼。
 
 ```cpp
 virtual unsigned int GetExecutionResourceId() const = 0;
@@ -85,15 +85,15 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-此執行資源基礎之硬體執行緒的唯一識別碼。
+此執行資源的基礎硬體線程的唯一標識碼。
 
 ### <a name="remarks"></a>備註
 
-並行執行階段會將唯一識別碼指派給每個硬體執行緒。 如果有多個執行資源與硬體執行緒相關聯，它們就會有相同的執行資源識別碼。
+每個硬體線程由併發運行時分配一個唯一標識符。 如果多個執行資源是關聯的硬體線程,則它們都將具有相同的執行資源標識符。
 
-## <a name="getnodeid"></a>IExecutionResource：： GetNodeId 方法
+## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>I 執行資源:getNodeId 方法
 
-傳回此執行資源所屬之處理器節點的唯一識別碼。
+返回此執行資源所屬的處理器節點的唯一標識碼。
 
 ```cpp
 virtual unsigned int GetNodeId() const = 0;
@@ -101,17 +101,17 @@ virtual unsigned int GetNodeId() const = 0;
 
 ### <a name="return-value"></a>傳回值
 
-處理器節點的唯一識別碼。
+處理器節點的唯一標識符。
 
 ### <a name="remarks"></a>備註
 
-並行執行階段代表處理器節點群組中系統上的硬體執行緒。 節點通常是從系統的硬體拓朴衍生而來。 例如，特定通訊端或特定 NUMA 節點上的所有處理器都可能屬於相同的處理器節點。 Resource Manager 會將唯一識別碼指派給這些節點，從 `0` 到，包括 `nodeCount - 1`，其中 `nodeCount` 代表系統上的處理器節點總數。
+併發運行時以處理器節點組表示系統上的硬體線程。 節點通常派生自系統的硬體拓撲。 例如,特定套接字或特定 NUMA 節點上的所有處理器可能屬於同一處理器節點。 資源管理器為這些節點分配唯一標識符,從`0`最多和`nodeCount - 1`包括 開始`nodeCount`,其中 表示系統上的處理器節點總數。
 
-您可以從函數[GetProcessorNodeCount](concurrency-namespace-functions.md)取得節點計數。
+節點計數可以從函數[GetProcessorNodeCount](concurrency-namespace-functions.md)獲得。
 
-## <a name="remove"></a>IExecutionResource：： Remove 方法
+## <a name="iexecutionresourceremove-method"></a><a name="remove"></a>I 執行資源::刪除方法
 
-將此執行資源傳回到 Resource Manager。
+將此執行資源返回到資源管理員。
 
 ```cpp
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
@@ -119,20 +119,20 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 
 ### <a name="parameters"></a>參數
 
-*pScheduler*<br/>
-建立排程器的介面，此排程器會提出移除此執行資源的要求。
+*p 時間*<br/>
+向計畫程式發出刪除此執行資源的請求的介面。
 
 ### <a name="remarks"></a>備註
 
-使用此方法可將獨立執行資源以及與虛擬處理器根關聯的執行資源傳回至 Resource Manager。
+使用此方法將獨立執行資源以及與虛擬處理器根關聯的執行資源返回到資源管理器。
 
-如果這是您從任一方法[ISchedulerProxy：： SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)或[ISchedulerProxy：： RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)收到的獨立執行資源，呼叫方法 `Remove` 將會結束建立資源所代表的執行緒訂閱。 在關閉排程器 proxy 之前，您必須結束所有的執行緒訂閱，而且必須從建立訂閱的執行緒呼叫 `Remove`。
+如果這是從其中一種方法[I-計劃代理::訂閱電流線程](ischedulerproxy-structure.md#subscribecurrentthread)或[I-計劃代理:請求初始虛擬處理器](ischedulerproxy-structure.md#requestinitialvirtualprocessors)接收的獨立執行資源,則`Remove`調用該方法 將結束創建資源表示的線程訂閱。 您需要在關閉計畫程式代理之前結束所有線程訂閱,並且必須從建立訂閱的線程呼叫`Remove`。
 
-虛擬處理器根同樣可以透過叫用 `Remove` 方法傳回至資源管理員，因為介面 `IVirtualProcessorRoot` 繼承自 `IExecutionResource` 介面。 針對[IScheduler：： RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors)方法的呼叫，或當您使用從[ISchedulerProxy：： CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber)方法取得的超額訂閱虛擬處理器根目錄時，您可能需要傳回虛擬處理器根目錄。 針對虛擬處理器根，不會限制哪些執行緒可以叫用 `Remove` 方法。
+虛擬處理器根同樣可以透過叫用 `Remove` 方法傳回至資源管理員，因為介面 `IVirtualProcessorRoot` 繼承自 `IExecutionResource` 介面。 您可能需要返回虛擬處理器根,以回應對[I-計劃器:::刪除虛擬處理器](ischeduler-structure.md#removevirtualprocessors)方法的呼叫,或者當您使用從[I-計劃代理代理:create 超額訂閱方法](ischedulerproxy-structure.md#createoversubscriber)獲取的超額訂閱虛擬處理器根時。 對於虛擬處理器根,沒有限制哪個線程可以呼叫該方法`Remove`。
 
-如果參數 `pScheduler` 設定為 `NULL`，則會擲回 `invalid_argument`。
+`invalid_argument`如果參數`pScheduler`設定`NULL`為 ,則引發 。
 
-如果參數 `pScheduler` 與建立此執行資源的排程器不同，或如果目前的執行緒與建立執行緒訂閱的執行緒不同，則會擲回 `invalid_operation`。
+`invalid_operation`如果參數`pScheduler`不同於為此執行資源創建的計畫程式,或者使用獨立執行資源(如果當前線程與創建線程訂閱的線程不同),則引發該參數。
 
 ## <a name="see-also"></a>另請參閱
 

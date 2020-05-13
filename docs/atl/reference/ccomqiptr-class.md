@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1d8b92fbc5e95a5061956bafc4922d249a6f18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258906"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327424"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr 類別
 
-用來管理 COM 介面指標的智慧型指標類別。
+用於管理 COM 介面指標的智慧指標類。
 
 ## <a name="syntax"></a>語法
 
@@ -29,10 +29,10 @@ class CComQIPtr: public CComPtr<T>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-COM 介面，用來指定要儲存的指標的類型。
+指定要儲存的指標類型的 COM 介面。
 
-*piid*<br/>
-指向 IID *T*。
+*皮伊德*<br/>
+指向*T*的 IID 的指標。
 
 ## <a name="members"></a>成員
 
@@ -40,19 +40,19 @@ COM 介面，用來指定要儲存的指標的類型。
 
 |名稱|描述|
 |----------|-----------------|
-|[CComQIPtr::CComQIPtr](#ccomqiptr)|建構函式。|
+|[CComQIPtr:CComQIPtr](#ccomqiptr)|建構函式。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CComQIPtr::operator =](#operator_eq)|將指標指派給成員的指標。|
+|[CComQIPtr::操作員 |](#operator_eq)|分配指向成員指標的指標。|
 
 ## <a name="remarks"></a>備註
 
-使用 ATL`CComQIPtr`並[CComPtr](../../atl/reference/ccomptr-class.md)若要管理 COM 介面指標，這兩者都衍生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)。 這兩個類別執行自動參考計數，透過呼叫`AddRef`和`Release`。 多載的運算子處理指標作業。
+ATL`CComQIPtr`使用與[CComPtr](../../atl/reference/ccomptr-class.md)來管理 COM 介面指標,這兩個指標都派生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)。 兩個類都通過調用`AddRef`和`Release`執行自動引用計數。 重載運算符處理指標操作。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CComPtrBase](../../atl/reference/ccomptrbase-class.md)
 
@@ -62,9 +62,9 @@ COM 介面，用來指定要儲存的指標的類型。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcomcli.h
+**標題:** atlcomcli.h
 
-##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr
+## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr:CComQIPtr
 
 建構函式。
 
@@ -78,17 +78,17 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 ### <a name="parameters"></a>參數
 
 *lp*<br/>
-用來初始化介面指標。
+用於初始化介面指標。
 
 *T*<br/>
 COM 介面。
 
-*piid*<br/>
-指向 IID *T*。
+*皮伊德*<br/>
+指向*T*的 IID 的指標。
 
-##  <a name="operator_eq"></a>  CComQIPtr::operator =
+## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::操作員 |
 
-指派運算子。
+分配運算符。
 
 ```
 T* operator= (T* lp) throw();
@@ -99,22 +99,22 @@ T* operator= (IUnknown* lp) throw();
 ### <a name="parameters"></a>參數
 
 *lp*<br/>
-用來初始化介面指標。
+用於初始化介面指標。
 
 *T*<br/>
 COM 介面。
 
-*piid*<br/>
-指向 IID *T*。
+*皮伊德*<br/>
+指向*T*的 IID 的指標。
 
 ### <a name="return-value"></a>傳回值
 
-讓指標回到更新`CComQIPtr`物件。
+返回指向更新`CComQIPtr`物件的指標。
 
 ## <a name="see-also"></a>另請參閱
 
-[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
-[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
+[CComPtr:CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr:CComQIPtr](#ccomqiptr)<br/>
 [CComPtrBase 類別](../../atl/reference/ccomptrbase-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
-[CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)
+[CComQIPtr 元素類別](../../atl/reference/ccomqiptrelementtraits-class.md)

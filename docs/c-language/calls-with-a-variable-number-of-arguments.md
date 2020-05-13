@@ -5,18 +5,18 @@ helpviewer_keywords:
 - arguments [C++], function
 - arguments [C++], variable number of
 - VARARGS.H
-- ellipses (...), variable number of arguments
+- ellipsis (...), variable number of arguments
 - STDARGS.H
 - function calls, arguments
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: f358d0a6d9369aed27dc7e3efa1ce88fbacee343
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150112"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032105"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>引數數目可變的呼叫
 
@@ -32,6 +32,6 @@ ms.locfileid: "56150112"
 int average( int first, ...);
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式呼叫](../c-language/function-calls.md)

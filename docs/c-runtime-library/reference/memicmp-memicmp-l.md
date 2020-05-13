@@ -1,9 +1,11 @@
 ---
 title: _memicmp、_memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 365b57dc300da5686895d66fa642e3870612c2ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951832"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915388"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
@@ -84,11 +87,13 @@ int _memicmp_l(
 
 ## <a name="remarks"></a>備註
 
-**_Memicmp**函數會比較兩個緩衝區的第一個*計數*字元*buffer1*和*buffer2* byte by byte。 這項比較不會區分大小寫。
+**_Memicmp**函式會比較兩個緩衝區的第一個*計數*字元*buffer1*和*buffer2* byte by byte。 這項比較不會區分大小寫。
 
 如果*buffer1*或*buffer2*是 null 指標，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。
 
-**_memicmp**會針對與地區設定相關的行為使用目前的地區設定; **_memicmp_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**會針對與地區設定相關的行為使用目前的地區設定;**_memicmp_l**是相同的，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -97,7 +102,7 @@ int _memicmp_l(
 |**_memicmp**|\<memory.h> 或 \<string.h>|
 |**_memicmp_l**|\<memory.h> 或 \<string.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

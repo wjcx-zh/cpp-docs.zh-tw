@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e247b4f488411ffdcde5d1d9016436c9c36fe793
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245604"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747689"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 類別
 
-這個類別會構成智慧堆積指標的數個類別的基礎。
+此類是多個智慧堆指標類的基礎。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -37,10 +37,10 @@ class CHeapPtrBase
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-要儲存在堆積上的物件類型。
+要存儲在堆上的物件類型。
 
-*Allocator*<br/>
-要使用的記憶體配置類別。 根據預設 CRT 常式用來配置和釋放記憶體。
+*配置器*<br/>
+要使用的記憶體分配類。 默認情況下,CRT 例程用於分配和釋放記憶體。
 
 ## <a name="members"></a>成員
 
@@ -48,43 +48,43 @@ class CHeapPtrBase
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtrBase:: ~ CHeapPtrBase](#dtor)|解構函式。|
+|[CHeapPtrBase:_CHeapPtrBase](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtrBase::AllocateBytes](#allocatebytes)|呼叫這個方法來配置記憶體。|
-|[CHeapPtrBase::Attach](#attach)|呼叫這個方法來取得現有指標的擁有權。|
-|[CHeapPtrBase::Detach](#detach)|呼叫此方法，以釋放指標的擁有權。|
-|[CHeapPtrBase::Free](#free)|呼叫這個方法來刪除所指向的物件`CHeapPtrBase`。|
-|[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|呼叫這個方法來重新配置記憶體。|
+|[CHeapPtrBase:配置位元組](#allocatebytes)|調用此方法以分配記憶體。|
+|[CHeapPtrBase:附加](#attach)|調用此方法以獲取現有指標的擁有權。|
+|[CHeapPtrBase::D](#detach)|調用此方法以釋放指標的擁有權。|
+|[CHeapPtrBase:免費](#free)|呼叫此方法以移除指向的物件`CHeapPtrBase`。|
+|[CHeapPtrBase::重新分配位元組](#reallocatebytes)|調用此方法重新分配記憶體。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtrBase::operator T *](#operator_t_star)|轉換運算子。|
-|[CHeapPtrBase::operator （& s)](#operator_amp)|& 運算子。|
-|[CHeapPtrBase::operator->](#operator_ptr)|成員指標運算子中。|
+|[CHeapPtrBase:運算符 T*](#operator_t_star)|強制轉換運算符。|
+|[CHeapPtrBase:運算符&](#operator_amp)|& 運算子。|
+|[CHeapPtrBase::運算符 ->](#operator_ptr)|指標到成員運算符。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtrBase::m_pData](#m_pdata)|指標的資料成員變數中。|
+|[CHeapPtrBase:m_pData](#m_pdata)|指標數據成員變數。|
 
 ## <a name="remarks"></a>備註
 
-這個類別會構成智慧堆積指標的數個類別的基礎。 在衍生的類別，例如[CHeapPtr](../../atl/reference/cheapptr-class.md)並[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，新增自己的建構函式和運算子。 請參閱這些類別，如需實作範例。
+此類是多個智慧堆指標類的基礎。 派生類(例如[CHeapPtr](../../atl/reference/cheapptr-class.md)和[CComHeapPtr)](../../atl/reference/ccomheapptr-class.md)添加自己的構造函數和運算符。 有關實現示例,請參閱這些類。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcore.h
+**標題:** atlcore.h
 
-##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes
+## <a name="cheapptrbaseallocatebytes"></a><a name="allocatebytes"></a>CHeapPtrBase:配置位元組
 
-呼叫這個方法來配置記憶體。
+調用此方法以分配記憶體。
 
 ```
 bool AllocateBytes(size_t nBytes) throw();
@@ -92,37 +92,37 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*<br/>
-要配置的記憶體的位元組數目。
+*n 位元組*<br/>
+要分配的記憶體位元組數。
 
 ### <a name="return-value"></a>傳回值
 
-如果記憶體已成功則傳回 true 配置，false 否則。
+如果已成功分配記憶體,則返回 true,否則為 false。
 
 ### <a name="remarks"></a>備註
 
-在偵錯組建中，如果，就會發生判斷提示失敗[CHeapPtrBase::m_pData](#m_pdata)成員變數現在會指向現有的值; 也就是說，不等於 NULL。
+在調試生成中,如果[CHeapPtrBase::m_pData](#m_pdata)成員變數當前指向現有值,則斷言失敗將發生;也就是說,它不等於 NULL。
 
-##  <a name="attach"></a>  CHeapPtrBase::Attach
+## <a name="cheapptrbaseattach"></a><a name="attach"></a>CHeapPtrBase:附加
 
-呼叫這個方法來取得現有指標的擁有權。
+調用此方法以獲取現有指標的擁有權。
 
-```
+```cpp
 void Attach(T* pData) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
 *pData*<br/>
-`CHeapPtrBase`物件會取得這個指標的擁有權。
+該`CHeapPtrBase`物件將取得此指標的擁有權。
 
 ### <a name="remarks"></a>備註
 
-當`CHeapPtrBase`物件會採用指標的擁有權，則會自動刪除的指標和配置的任何資料時超出範圍。
+當物件`CHeapPtrBase`取得指標的擁有權時,當它超出範圍時,它將自動刪除指標和任何已分配的數據。
 
-在偵錯組建中，如果，就會發生判斷提示失敗[CHeapPtrBase::m_pData](#m_pdata)成員變數現在會指向現有的值; 也就是說，不等於 NULL。
+在調試生成中,如果[CHeapPtrBase::m_pData](#m_pdata)成員變數當前指向現有值,則斷言失敗將發生;也就是說,它不等於 NULL。
 
-##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase
+## <a name="cheapptrbasecheapptrbase"></a><a name="dtor"></a>CHeapPtrBase:_CHeapPtrBase
 
 解構函式。
 
@@ -132,11 +132,11 @@ void Attach(T* pData) throw();
 
 ### <a name="remarks"></a>備註
 
-釋放所有配置的資源。
+釋放所有分配的資源。
 
-##  <a name="detach"></a>  CHeapPtrBase::Detach
+## <a name="cheapptrbasedetach"></a><a name="detach"></a>CHeapPtrBase::D
 
-呼叫此方法，以釋放指標的擁有權。
+調用此方法以釋放指標的擁有權。
 
 ```
 T* Detach() throw();
@@ -144,27 +144,27 @@ T* Detach() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回指標的複本。
+返回指標的副本。
 
 ### <a name="remarks"></a>備註
 
-釋放指標的擁有權、 設定[CHeapPtrBase::m_pData](#m_pdata)成員變數為 NULL，並傳回指標的複本。
+釋放指標的擁有權,將[CHeapPtrBase::m_pData](#m_pdata)成員變數設置為 NULL,並返回指標的副本。
 
-##  <a name="free"></a>  CHeapPtrBase::Free
+## <a name="cheapptrbasefree"></a><a name="free"></a>CHeapPtrBase:免費
 
-呼叫這個方法來刪除所指向的物件`CHeapPtrBase`。
+呼叫此方法以移除指向的物件`CHeapPtrBase`。
 
-```
+```cpp
 void Free() throw();
 ```
 
 ### <a name="remarks"></a>備註
 
-指向的物件`CHeapPtrBase`釋出，而[CHeapPtrBase::m_pData](#m_pdata)成員變數會設為 NULL。
+釋放`CHeapPtrBase`下 指向的物件[,CHeapPtrBase:m_pData](#m_pdata)成員變數設定為 NULL。
 
-##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData
+## <a name="cheapptrbasem_pdata"></a><a name="m_pdata"></a>CHeapPtrBase:m_pData
 
-指標的資料成員變數中。
+指標數據成員變數。
 
 ```
 T* m_pData;
@@ -172,9 +172,9 @@ T* m_pData;
 
 ### <a name="remarks"></a>備註
 
-此成員變數會保留指標資訊。
+此成員變數保存指標資訊。
 
-##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;
+## <a name="cheapptrbaseoperator-amp"></a><a name="operator_amp"></a>CHeapPtrBase::運算子&amp;
 
 & 運算子。
 
@@ -184,11 +184,11 @@ T** operator&() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回所指物件的位址`CHeapPtrBase`物件。
+傳回物件指向的物件的`CHeapPtrBase`位址 。
 
-##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;
+## <a name="cheapptrbaseoperator--gt"></a><a name="operator_ptr"></a>CHeapPtrBase:運算子 -&gt;
 
-成員指標運算子中。
+指標到成員運算符。
 
 ```
 T* operator->() const throw();
@@ -196,15 +196,15 @@ T* operator->() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回的值[CHeapPtrBase::m_pData](#m_pdata)成員變數。
+返回[CHeapPtrBase:m_pData](#m_pdata)成員變數的值。
 
 ### <a name="remarks"></a>備註
 
-使用這個運算子所指的類別中呼叫方法`CHeapPtrBase`物件。 在偵錯組建中，如果，就會發生判斷提示失敗`CHeapPtrBase`指向 NULL。
+使用此運算符呼叫`CHeapPtrBase`物件指向的類中的方法。 在除錯產生中,如果指向 NULL,`CHeapPtrBase`則會發生斷言失敗。
 
-##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *
+## <a name="cheapptrbaseoperator-t"></a><a name="operator_t_star"></a>CHeapPtrBase:運算符 T*
 
-轉換運算子。
+強制轉換運算符。
 
 ```
 operator T*() const throw();
@@ -212,11 +212,11 @@ operator T*() const throw();
 
 ### <a name="remarks"></a>備註
 
-傳回[CHeapPtrBase::m_pData](#m_pdata)。
+傳[回 CHeapPtrBase:m_pData](#m_pdata)。
 
-##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes
+## <a name="cheapptrbasereallocatebytes"></a><a name="reallocatebytes"></a>CHeapPtrBase::重新分配位元組
 
-呼叫這個方法來重新配置記憶體。
+調用此方法重新分配記憶體。
 
 ```
 bool ReallocateBytes(size_t nBytes) throw();
@@ -224,12 +224,12 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*<br/>
-新的配置，以位元組為單位的記憶體量。
+*n 位元組*<br/>
+要分配的新內存量(以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果記憶體已成功則傳回 true 配置，false 否則。
+如果已成功分配記憶體,則返回 true,否則為 false。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -4,12 +4,12 @@ ms.date: 08/30/2019
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 5bd90141cdc7646dce206e6b02a605b73d78de95
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8d7d7fec979d3e7b8f665e56094ee1c309e3b686
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078812"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323113"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio 專案中的 Clang/LLVM 支援
 
@@ -21,23 +21,23 @@ Visual Studio 2019 中提供 CMake 和 MSBuild 專案的 Clang 支援。
 
 ::: moniker range="vs-2019"
 
-您可以使用 Visual Studio 2019 16.2 版搭配 Clang 來編輯、建立和 debug C++以 Windows 或 Linux 為目標的 Visual Studio 專案（MSBuild）。
+您可以使用 Visual Studio 2019 16.2 版搭配 Clang 來編輯、建立和 debug 以 Windows 或 Linux 為目標的 c + + Visual Studio 專案（MSBuild）。
 
 ## <a name="install"></a>安裝
 
-如需 Visual Studio 中的最佳 IDE 支援，我們建議使用適用于 Windows 的最新 Clang 編譯器工具。 如果您還沒有這些專案，您可以開啟 Visual Studio 安裝程式，然後在 [**桌面開發C++**  ] 下選擇 [ **C++** 使用選用元件的 Clang 工具] 來安裝它們。 如果您想要在電腦上使用現有的 Clang 安裝，請選擇 **C++ Clang-cl for 適用于 v142 build tools。** 選擇性元件。 Microsoft C++標準程式庫目前至少需要 Clang 8.0.0;配套的 Clang 版本將會自動更新，以在標準程式庫的 Microsoft 實施中隨時更新。
+如需 Visual Studio 中的最佳 IDE 支援，我們建議使用適用于 Windows 的最新 Clang 編譯器工具。 如果您還沒有這些專案，您可以開啟 Visual Studio 安裝程式，然後在 [**桌面開發**] 下選擇 [**適用于 Windows 的 c + + Clang 工具**] 選擇性元件，即可進行安裝。 如果您想要在電腦上使用現有的 Clang 安裝，請選擇**c + + Clang-cl for 適用于 v142 build tools。** 選擇性元件。 Microsoft c + + 標準程式庫目前至少需要 Clang 8.0.0;配套的 Clang 版本將會自動更新，以在標準程式庫的 Microsoft 實施中隨時更新。
 
 ![Clang 元件安裝](media/clang-install-vs2019.png)
 
 ## <a name="configure-a-windows-project-to-use-clang-tools"></a>將 Windows 專案設定為使用 Clang 工具
 
-若要將 Visual Studio 專案設定為使用 Clang，請以滑鼠右鍵按一下**方案總管**中的專案節點，然後選擇 [**屬性**]。 一般來說，您應該先選擇對話方塊頂端的 [**所有**設定]。 然後，在 **[一般** > **平臺工具**組] 底下，選擇 [ **LLVM （clang-cl）** ]，然後選取 **[確定]** 。
+若要將 Visual Studio 專案設定為使用 Clang，請以滑鼠右鍵按一下**方案總管**中的專案節點，然後選擇 [**屬性**]。 一般來說，您應該先選擇對話方塊頂端的 [**所有**設定]。 然後，在 **[一般** > **平臺工具**組] 底下，依序選擇 [ **LLVM] （clang-cl）** 和 **[確定]**。
 
 ![Clang 元件安裝](media/clang-msbuild-prop-page.png)
 
-如果您使用 Visual Studio 隨附的 Clang 工具，則不需要任何額外的步驟。 對於 Windows 專案，Visual Studio 預設會在[Clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)模式中叫用 Clang，並以標準程式庫的 Microsoft 實作為連結。 根據預設， **clang-cl**位於 `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`。
+如果您使用 Visual Studio 隨附的 Clang 工具，則不需要任何額外的步驟。 對於 Windows 專案，Visual Studio 預設會在[Clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)模式中叫用 Clang，並以標準程式庫的 Microsoft 實作為連結。 根據預設， **clang-cl**位於`C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`。
 
-如果您使用自訂的 Clang 安裝，您可以將自訂 Clang 安裝根目錄新增為第一個目錄，或變更 [`LLVMInstallDir`] 屬性的值，以修改**專案** > **屬性** > **VC + + 目錄** > 設定**屬性** > **可執行檔目錄**。 如需詳細資訊，請參閱[設定自訂 LLVM 位置](#custom_llvm_location)。
+如果您使用自訂的 Clang 安裝，您可以修改**專案** > **屬性** > **VC + + 目錄** > **屬性** > **可執行檔目錄**，方法是新增自訂 Clang 安裝根目錄作為第一個目錄，或變更`LLVMInstallDir`屬性的值。 如需詳細資訊，請參閱[設定自訂 LLVM 位置](#custom_llvm_location)。
 
 ## <a name="configure-a-linux-project-to-use-clang-tools"></a>將 Linux 專案設定為使用 Clang 工具
 
@@ -47,12 +47,12 @@ Visual Studio 2019 中提供 CMake 和 MSBuild 專案的 Clang 支援。
 
 1. 以滑鼠右鍵按一下**方案總管**中的專案節點，然後選擇 [**屬性**]。
 1. 一般來說，您應該先選擇對話方塊頂端的 [**所有**設定]。
-1. 在 **[一般**>**平臺工具**組] 底下，如果您是使用適用于 Linux 的 Windows 子系統，請選擇 [ **WSL_Clang_1_0** ]，如果您使用遠端電腦或 VM，請選擇 [ **Remote_Clang_1_0** ]。
-1. 按 [確定]。
+1. 如果您使用適用于 Linux 的 Windows 子系統，請在 **[一般** > **平臺工具**組] 底下選擇 [ **WSL_Clang_1_0** ]，如果您使用的是遠端電腦或 VM，請選擇 [ **Remote_Clang_1_0** ]。
+1. 按下 **[確定]**。
 
 ![Clang 元件安裝](media/clang-msbuild-prop-page.png)
 
-在 Linux 上，Visual Studio 預設會使用它在 PATH 環境屬性中遇到的第一個 Clang 位置。 如果您使用的是自訂 Clang 安裝，則必須變更 `LLVMInstallDir` 屬性的值，否則請以 **專案** > **屬性** >  **VC + + 目錄** > 設定 **屬性** > **可執行檔目錄**來取代路徑。 如需詳細資訊，請參閱[設定自訂 LLVM 位置](#custom_llvm_location)。
+在 Linux 上，Visual Studio 預設會使用它在 PATH 環境屬性中遇到的第一個 Clang 位置。 如果您`LLVMInstallDir`使用自訂的 Clang 安裝，您必須變更屬性的值，或者替代**專案** > **屬性** > **VC + + 目錄** > 設定**屬性** > **可執行檔目錄**底下的路徑。 如需詳細資訊，請參閱[設定自訂 LLVM 位置](#custom_llvm_location)。
 
 ## <a name="set-a-custom-llvm-location"></a><a name="custom_llvm_location"></a>設定自訂 LLVM 位置
 
@@ -68,7 +68,7 @@ Visual Studio 2019 中提供 CMake 和 MSBuild 專案的 Clang 支援。
 
 ## <a name="set-additional-properties-edit-build-and-debug"></a>設定其他屬性、編輯、建立和 debug
 
-設定 Clang 設定之後，請在專案節點上按一下滑鼠右鍵，然後選擇 [**重載專案**]。 您現在可以使用 Clang 工具來建立和調試專案。 Visual Studio 偵測到您使用 Clang 編譯器，並提供 IntelliSense、醒目提示、導覽和其他編輯功能。 錯誤和警告會顯示在**輸出視窗**中。 Clang 設定的專案屬性頁與 MSVC 非常類似，雖然某些編譯器相依的功能（例如 [編輯後繼續]）不適用於 Clang 設定。 若要設定 [屬性頁] 中無法使用的 Clang 編譯器或連結器選項，您可以在 [設定**屬性**] 底下的 [屬性頁] 中手動將它新增 > **C/C++ （或連結器）**  > **命令列** > **其他選項**。
+設定 Clang 設定之後，請在專案節點上按一下滑鼠右鍵，然後選擇 [**重載專案**]。 您現在可以使用 Clang 工具來建立和調試專案。 Visual Studio 偵測到您使用 Clang 編譯器，並提供 IntelliSense、醒目提示、導覽和其他編輯功能。 錯誤和警告會顯示在**輸出視窗**中。 Clang 設定的專案屬性頁與 MSVC 非常類似，雖然某些編譯器相依的功能（例如 [編輯後繼續]）不適用於 Clang 設定。 若要設定屬性頁中無法使用的 Clang 編譯器或連結器選項，您可以在 [設定**屬性** > ] [**c/c + + （或連結器）** > ]**命令列** > **額外選項**的屬性頁中手動新增它。
 
 在調試時，您可以使用中斷點、記憶體和資料視覺效果，以及大部分其他的調試功能。  
 

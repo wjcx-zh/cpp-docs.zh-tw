@@ -1,9 +1,11 @@
 ---
 title: _ismbbalnum、_ismbbalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalnum
 - _ismbbalnum_l
+- _o__ismbbalnum
+- _o__ismbbalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: d817ea6875149f9342854b0c22b27b0c93d29636
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abbc664170c274929875ef2e4b7af70bc5812a94
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954289"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917547"
 ---
 # <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum、_ismbbalnum_l
 
@@ -55,7 +58,7 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -63,13 +66,17 @@ int _ismbbalnum_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果運算式為，則 **_ismbbalnum**會傳回非零值：
+如果運算式為， **_ismbbalnum**會傳回非零值：
 
 `isalnum(c) || _ismbbkalnum(c)`
 
 *c*為非零值; 如果不是，則為0。
 
-具有 **_l**後置字元的這個函式版本是一樣的，不同之處在于它會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。
+具有 **_l**尾碼的這個函式版本是一樣的，不同之處在于它會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。
+
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -78,7 +85,7 @@ int _ismbbalnum_l(
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

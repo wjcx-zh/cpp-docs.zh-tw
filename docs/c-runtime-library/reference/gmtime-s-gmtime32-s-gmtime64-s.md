@@ -1,10 +1,12 @@
 ---
 title: gmtime_s、_gmtime32_s、_gmtime64_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _gmtime32_s
 - gmtime_s
 - _gmtime64_s
+- _o__gmtime32_s
+- _o__gmtime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: bcfc512022393c6a3e8a9cd97efe96d03b4877ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916224"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
@@ -76,17 +79,17 @@ errno_t _gmtime64_s(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則為零。 如果失敗，傳回的值會是錯誤碼。 錯誤碼於 Errno.h 中定義；如需這些錯誤的清單，請參閱 [errno](../../c-runtime-library/errno-constants.md)。
+如果成功，則為零。 如果失敗，傳回的值會是錯誤碼。 錯誤碼定義于 Errno 中。如需這些錯誤的清單，請參閱[errno](../../c-runtime-library/errno-constants.md)。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*tmDest*|*sourceTime*|Return|*TmDest*中的值|
+|*tmDest*|*sourceTime*|傳回|*TmDest*中的值|
 |-----------|------------|------------|--------------------|
-|**NULL**|any|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|**NULL**|**EINVAL**|所有的欄位設定為 -1。|
+|**Null**|任意|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|**Null**|**EINVAL**|所有的欄位設定為 -1。|
 |非**Null**|< 0|**EINVAL**|所有的欄位設定為 -1。|
 
-在前兩個錯誤狀況的情況下，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回**EINVAL**。
+在前兩個錯誤條件的情況下，叫用了無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
@@ -107,19 +110,21 @@ errno_t _gmtime64_s(
 |**tm_year**|年份 (目前年份減去 1900)。|
 |**tm_wday**|周中的日（0-6;星期日 = 0）。|
 |**tm_yday**|年中的日（0-365;1月1日 = 0）。|
-|**tm_isdst**|**Gmtime_s**一律為0。|
+|**tm_isdst**|**Gmtime_s**的一律為0。|
 
-使用 **__time64_t**結構的 **_gmtime64_s**，可讓日期以23:59:59 年12月31日3000，UTC 表示。**gmtime32_s**只代表日期到23:59:59 年1月 18 2038 日，UTC。 1970 年 1 月 1 日午夜是所有這兩個函式的日期範圍下限。
+使用 **__time64_t**結構的 **_gmtime64_s**可讓日期以23:59:59 年12月31日3000，UTC 表示。而**gmtime32_s**只代表日期到23:59:59 年1月 18 2038 日，UTC。 1970 年 1 月 1 日午夜是所有這兩個函式的日期範圍下限。
 
-**gmtime_s**是評估為 **_gmtime64_s**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊版32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會使**gmtime_s**在 **_gmtime32_s**中。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+**gmtime_s**是會評估為 **_gmtime64_s**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會使**gmtime_s** **_gmtime32_s**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime > 或\<time. h >|
+|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime> 或\<time. h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

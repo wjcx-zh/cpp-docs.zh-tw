@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7cbddbd4fca8379562b762fadbb3d2bda44f166
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391110"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753539"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 類別
 
@@ -49,33 +49,33 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|建構並初始化 `CMFCRibbonProgressBar` 物件。|
+|[CMFC 剪彩進度列:CMFC 剪綵進度列](#cmfcribbonprogressbar)|建構並初始化 `CMFCRibbonProgressBar` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonProgressBar::GetPos](#getpos)|傳回目前的進度。|
-|[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|傳回目前範圍的最大值。|
-|[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|傳回目前範圍的最小值。|
-|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|傳回功能區項目的一般大小。 (覆寫[cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|
-|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|指定是否在無限模式工作的進度列。|
-|[CMFCRibbonProgressBar::OnDraw](#ondraw)|由架構呼叫以繪製功能區項目。 (覆寫[cmfcribbonbaseelement:: Ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|
-|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|設定進度列在無限的模式下運作。|
-|[CMFCRibbonProgressBar::SetPos](#setpos)|設定目前的進度。|
-|[CMFCRibbonProgressBar::SetRange](#setrange)|設定最小和最大值。|
+|[CMFC 功能放大縮小字型功能 放大縮小字型功能](#getpos)|返回當前進度。|
+|[CMFC功能進度列:取得山脈最大值](#getrangemax)|返回當前範圍的最大值。|
+|[CMFC功能進展列:獲取蘭格明](#getrangemin)|返回當前範圍的最小值。|
+|[CMFC 功能進度列:取得一般大小](#getregularsize)|傳回功能區項目的一般大小。 (覆寫[CMFC 功能基礎元素:取得一般大小](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFC功能收集進度列::無限模式](#isinfinitemode)|指定進度條是否以無限模式工作。|
+|[CMFC剪綵進度列:在畫上](#ondraw)|由架構呼叫以繪製功能區項目。 (覆寫[CMFC 功能基礎元素:onDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFC 功能進度列::設定無限模式](#setinfinitemode)|將進度條設置在無限模式下工作。|
+|[CMFC 功能進度列::設定Pos](#setpos)|設置當前進度。|
+|[CMFC 功能進度列::設定範圍](#setrange)|設置最小值和最大值。|
 
 ## <a name="remarks"></a>備註
 
-A`CMFCRibbonProgressBar`可以在兩個模式下操作： 一般和無限。 在一般的模式中，進度列填滿從左到右，並停止時它達到最大值。 在無限的模式中，進度列重複從填入的最小值的最大值。 您可以使用無限的模式，表示作業正在進行中，但是完成時間不明。
+A`CMFCRibbonProgressBar`可以在兩種模式下運行:常規模式和無限模式。 在常規模式下,進度條從左到右填充,並在達到最大值時停止。 在無限模式下,進度條從最小值重複填充到最大值。 您可以使用無限模式來指示操作正在進行,但完成時間未知。
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCRibbonProgressBar` 類別中使用各種方法。 設定進度列的最小和最大值，並設定進度列的目前位置，範例會示範如何設定要使用無限的模式 （其中一項作業的完成時間是未知） 中，進度列。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
+下例示範如何在 `CMFCRibbonProgressBar` 類別中使用各種方法。 該示例演示如何將進度條設置為以無限模式工作(操作的完成時間未知),設置進度條的最小值和最大值,並設置進度條的當前位置。 此代碼段是 MS [Office 2007 演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -85,9 +85,9 @@ A`CMFCRibbonProgressBar`可以在兩個模式下操作： 一般和無限。 在
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxRibbonProgressBar.h
+**標題:** afxRibbonProgressBar.h
 
-##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar
+## <a name="cmfcribbonprogressbarcmfcribbonprogressbar"></a><a name="cmfcribbonprogressbar"></a>CMFC 剪彩進度列:CMFC 剪綵進度列
 
 建構並初始化[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)物件。
 
@@ -103,17 +103,17 @@ CMFCRibbonProgressBar(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-[in]指定功能區的進度列的命令 ID。
+[在]指定功能區進度列的命令 ID。
 
-*nWidth*<br/>
-[in]指定寬度，單位為像素功能區的進度列。
+*n 寬度*<br/>
+[在]指定功能區進度條的寬度(以像素為單位)。
 
 *nHeight*<br/>
-[in]指定高度，單位為像素功能區的進度列。
+[在]指定功能區進度條的高度(以像素為單位)。
 
-##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos
+## <a name="cmfcribbonprogressbargetpos"></a><a name="getpos"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
-傳回目前的進度列位置。
+返回進度條的當前位置。
 
 ```
 int GetPos () const;
@@ -121,15 +121,15 @@ int GetPos () const;
 
 ### <a name="return-value"></a>傳回值
 
-值，表示目前的進度列位置。
+表示進度條的當前位置的值。
 
 ### <a name="remarks"></a>備註
 
-正在設定的範圍必須是所指定的範圍內[CMFCRibbonProgressBar::SetRange](#setrange)方法。
+正在設置的範圍必須在[CMFCRibbonProgressBar 指定的範圍內::setRange](#setrange)方法。
 
-##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax
+## <a name="cmfcribbonprogressbargetrangemax"></a><a name="getrangemax"></a>CMFC功能進度列:取得山脈最大值
 
-傳回目前進度列的最大值。
+返回進度條的當前最大值。
 
 ```
 int GetRangeMax() const;
@@ -137,13 +137,13 @@ int GetRangeMax() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前範圍的最大值。
+當前範圍的最大值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin
+## <a name="cmfcribbonprogressbargetrangemin"></a><a name="getrangemin"></a>CMFC功能進展列:獲取蘭格明
 
-傳回目前進度列的最小範圍值。
+返回進度條的當前最小範圍值。
 
 ```
 int GetRangeMin() const;
@@ -151,11 +151,11 @@ int GetRangeMin() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前範圍的最小值。
+當前範圍的最小值。
 
-##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize
+## <a name="cmfcribbonprogressbargetregularsize"></a><a name="getregularsize"></a>CMFC 功能進度列:取得一般大小
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -163,15 +163,15 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode
+## <a name="cmfcribbonprogressbarisinfinitemode"></a><a name="isinfinitemode"></a>CMFC功能收集進度列::無限模式
 
-指定是否在無限模式工作的進度列。
+指定進度條是否以無限模式工作。
 
 ```
 BOOL IsInfiniteMode() const;
@@ -179,15 +179,15 @@ BOOL IsInfiniteMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果進度列為無限的模式，則為 TRUE否則為 FALSE。
+如果進度條處於無限模式,則為 TRUE;如果進度條處於無限模式。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-在無限的模式中，進度列填滿重複從最小值的最大值。 您可以使用無限的模式，表示作業正在進行中，但是完成時間不明。
+在無限模式下,進度條從最小值重複填充到最大值。 您可以使用無限模式來指示操作正在進行,但完成時間未知。
 
-##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw
+## <a name="cmfcribbonprogressbarondraw"></a><a name="ondraw"></a>CMFC剪綵進度列:在畫上
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -195,32 +195,32 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode
+## <a name="cmfcribbonprogressbarsetinfinitemode"></a><a name="setinfinitemode"></a>CMFC 功能進度列::設定無限模式
 
-設定進度列在無限的模式下運作。
+將進度條設置在無限模式下工作。
 
-```
+```cpp
 void SetInfiniteMode(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
 *bSet*<br/>
-[in]若要指定進度列是無限的模式，則為 TRUE否則為 FALSE。
+[在]TRUE 指定進度條處於無限模式;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-通常，如果進度列是無限的模式，它在告訴使用者的作業正在進行，但完成時間不明。 因此，進度列填滿重複從最小值的最大值。
+通常,如果進度條處於無限模式,則告訴使用者操作正在進行,但完成時間未知。 因此,進度條從最小值重複填充到最大值。
 
-##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos
+## <a name="cmfcribbonprogressbarsetpos"></a><a name="setpos"></a>CMFC 功能進度列::設定Pos
 
-設定進度列目前位置。
+設置進度條的當前位置。
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw = TRUE);
@@ -229,20 +229,20 @@ void SetPos(
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-[in]指定設定的進度列的位置。
+[在]指定將進度條設置為的位置。
 
-*bRedraw*<br/>
-[in]指定是否應該重新繪製進度列。
+*bredraw*<br/>
+[在]指定是否應重繪進度條。
 
 ### <a name="remarks"></a>備註
 
-正在設定的範圍必須是所指定的範圍內[CMFCRibbonProgressBar::SetRange](#setrange)方法。
+正在設置的範圍必須在[CMFCRibbonProgressBar 指定的範圍內::setRange](#setrange)方法。
 
-##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange
+## <a name="cmfcribbonprogressbarsetrange"></a><a name="setrange"></a>CMFC 功能進度列::設定範圍
 
-設定進度列的最小和最大值。
+設置進度條的最小值和最大值。
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);
@@ -251,14 +251,14 @@ void SetRange(
 ### <a name="parameters"></a>參數
 
 *nMin*<br/>
-[in]指定範圍的最小值。
+[在]指定範圍的最小值。
 
 *nMax*<br/>
-[in]指定範圍的最大值。
+[在]指定範圍的最大值。
 
 ### <a name="remarks"></a>備註
 
-使用此方法來定義進度列範圍設定最小和最大值。
+使用此方法通過設置最小值和最大值來定義進度條的範圍。
 
 ## <a name="see-also"></a>另請參閱
 

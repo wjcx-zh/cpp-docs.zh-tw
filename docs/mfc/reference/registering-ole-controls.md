@@ -5,12 +5,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2f2d7872e8b9369b5eef283e5b52a54c29afd563
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420754"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372963"
 ---
 # <a name="registering-ole-controls"></a>註冊 OLE 控制項
 
@@ -30,9 +30,9 @@ OLE 控制項就像其他 OLE 伺服器物件，可以由其他 OLE 感知應用
 
 通常在控制項 DLL 實作 `AfxOleRegisterTypeLib` 時呼叫 `DllRegisterServer`。 同樣地，`AfxOleUnregisterTypeLib` 是由 `DllUnregisterServer` 呼叫。 通常 `AfxOleRegisterControlClass`、`AfxOleRegisterPropertyPageClass` 和 `AfxOleUnregisterClass` 是由控制項的 Class Factory 或屬性頁的 `UpdateRegistry` 成員函式呼叫。
 
-##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
+## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a>AfxOle 註冊控制類
 
-向 Windows 註冊資料庫註冊控制項類別。
+將控制類註冊到 Windows 註冊資料庫。
 
 ```
 BOOL AFXAPI AfxOleRegisterControlClass(
@@ -51,36 +51,36 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="parameters"></a>參數
 
 *hInstance*<br/>
-與控制項類別相關聯之模組的實例控制碼。
+與控制類關聯的模組的實例句柄。
 
-*clsid*<br/>
+*Clsid*<br/>
 控制項的唯一類別 ID。
 
 *pszProgID*<br/>
 控制項的唯一程式 ID。
 
-*idTypeName*<br/>
-字串的資源識別碼，包含控制項的使用者可讀取型別名稱。
+*idType 名稱*<br/>
+包含控制項的使用者可讀類型名稱的字串的資源 ID。
 
 *idBitmap*<br/>
-用來表示工具列或調色板中 OLE 控制項之點陣圖的資源識別碼。
+用於表示工具列或調色板中的 OLE 控制項的位圖的資源 ID。
 
 *nRegFlags*<br/>
-包含下列一個或多個旗標：
+包含以下一個或多個標誌:
 
-- `afxRegInsertable` 可讓控制項出現在 OLE 物件的 [插入物件] 對話方塊中。
+- `afxRegInsertable`允許控制項顯示在 OLE 物件的「插入物件」對話框中。
 
-- `afxRegApartmentThreading` 將登錄中的執行緒模型設定為 ThreadingModel = 公寓。
+- `afxRegApartmentThreading`將註冊表中的線程模型設置為線程模型_公寓。
 
-- `afxRegFreeThreading` 將登錄中的執行緒模型設定為 ThreadingModel = Free。
+- `afxRegFreeThreading`將註冊表中的線程模型設置為線程模型_自由。
 
-   您可以將這兩個旗標 `afxRegApartmentThreading` 和 `afxRegFreeThreading` 結合，以設定 ThreadingModel = 兩者。 如需執行緒模型註冊的詳細資訊，請參閱 Windows SDK 中的[InprocServer32](/windows/win32/com/inprocserver32) 。
+   可以組合兩個標誌`afxRegApartmentThreading``afxRegFreeThreading`並設置線程模型_兩者。 有關線程模型註冊的詳細資訊,請參閱 Windows SDK 中的[InprocServer32。](/windows/win32/com/inprocserver32)
 
 > [!NOTE]
->  在 MFC 4.2 之前的 MFC 版本中， **int** *NREGFLAGS*參數是布林值參數*bInsertable*，允許或禁止從 [插入物件] 對話方塊中插入控制項。
+> 在 MFC 4.2 之前的 MFC 版本中 **,int** *nRegFlags*參數是 BOOL 參數*bInsert,* 允許或不允許從「插入物件」對話框中插入控制項。
 
 *dwMiscStatus*<br/>
-包含下列一個或多個狀態旗標（如需旗標的描述，請參閱 Windows SDK 中的 OLEMISC 列舉）：
+包含以下一個或多個狀態標誌(有關標誌的說明,請參閱 Windows SDK 中的 OLEMISC 枚舉):
 
 - OLEMISC_RECOMPOSEONRESIZE
 
@@ -98,7 +98,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 - OLEMISC_INSIDEOUT
 
-- OLEMISC_ACTI加值稅EWHENVISIBLE
+- OLEMISC_ACTIVATEWHENVISIBLE
 
 - OLEMISC_RENDERINGISDEVICEINDEPENDENT
 
@@ -110,7 +110,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 - OLEMISC_ACTSLIKELABEL
 
-- OLEMISC_NOUIACTI加值稅E
+- OLEMISC_NOUIACTIVATE
 
 - OLEMISC_ALIGNABLE
 
@@ -121,39 +121,39 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 - OLEMISC_SETCLIENTSITEFIRST
 
 *tlid*<br/>
-控制項類別的唯一識別碼。
+控件類的唯一 ID。
 
 *wVerMajor*<br/>
-控制項類別的主要版本號碼。
+控件類的主要版本號。
 
 *wVerMinor*<br/>
-控制項類別的次要版本號碼。
+控件類的次要版本號。
 
 ### <a name="return-value"></a>傳回值
 
-如果已註冊控制項類別，則為非零。否則為0。
+如果已註冊控制類,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這可讓具有 OLE 控制項感知功能的容器使用控制項。 `AfxOleRegisterControlClass` 會以控制項的名稱和系統上的位置來更新登錄，同時也會設定控制項在登錄中支援的執行緒模型。 如需詳細資訊，請參閱[技術提示 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、OLE 控制項中的公寓模型執行緒，以及 Windows SDK 中的[進程和執行緒](/windows/win32/ProcThread/about-processes-and-threads)。
+這允許 OLE 控制感知的容器使用控制項。 `AfxOleRegisterControlClass`使用控制項名稱和位置在系統上更新註冊表,並設置控制件在註冊表中支援的線程模型。 有關詳細資訊,請參閱[技術說明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md),"OLE 控制件中的公寓-模型線程",以及有關 Windows SDK 中[的進程和線程](/windows/win32/ProcThread/about-processes-and-threads)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
-上述範例示範如何以可插入的旗標來呼叫 `AfxOleRegisterControlClass`，以及使用 ORed 來建立第六個參數的單元模型旗標：
+上面的範例展示如何`AfxOleRegisterControlClass`使用可插入標誌和儲存模式 ORed 的標誌一起呼叫以建立第六個參數:
 
 [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]
 
-控制項將會顯示在已啟用容器的 [插入物件] 對話方塊中，而且它將會是 [單元模型感知]。 單元模型感知控制項必須確保靜態類別資料受到鎖定保護，如此一來，當一個單元中的控制項存取靜態資料時，排程器就不會在完成前停用它，而且相同類別的另一個實例會開始使用相同的靜態資料。 對靜態資料的任何存取都會以重要區段程式碼括住。
+該控件將顯示在已啟用容器的「插入物件」對話框中,並且它將具有單元模型感知功能。 單元模型感知控件必須確保靜態類數據受鎖保護,因此,當一個單元中的控件訪問靜態數據時,計劃程式不會將其禁用,並且同一類的另一個實例開始使用相同的靜態數據。 對靜態數據的任何訪問都將被關鍵節代碼包圍。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxctl.h。h
+  **頭**afxctl.h
 
-##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass
+## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a>AfxOle 註冊屬性頁類
 
-向 Windows 註冊資料庫註冊屬性頁類別。
+將屬性頁類註冊到 Windows 註冊資料庫。
 
 ```
 BOOL AFXAPI AfxOleRegisterPropertyPageClass(
@@ -166,35 +166,35 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 ### <a name="parameters"></a>參數
 
 *hInstance*<br/>
-與屬性頁類別相關聯之模組的實例控制碼。
+與屬性頁類關聯的模組的實例句柄。
 
-*clsid*<br/>
-屬性頁的唯一類別 ID。
+*Clsid*<br/>
+屬性頁的唯一類 ID。
 
-*idTypeName*<br/>
-字串的資源識別碼，包含屬性頁使用者可讀取的名稱。
+*idType 名稱*<br/>
+包含屬性頁使用者可讀名稱的字串的資源 ID。
 
 *nRegFlags*<br/>
-可能包含旗標：
+可能包含標誌:
 
-- `afxRegApartmentThreading` 將登錄中的執行緒模型設定為 ThreadingModel = 公寓。
+- `afxRegApartmentThreading`將註冊表中的線程模型設置為線程模型 = 公寓。
 
 > [!NOTE]
->  在 MFC 4.2 之前的 MFC 版本中，無法使用**int** *nRegFlags*參數。 另請注意，`afxRegInsertable` 旗標不是屬性頁的有效選項，如果已設定，則會在 MFC 中產生判斷提示
+> 在 MFC 4.2 之前的 MFC 版本中 **,int** *nRegFlags*參數不可用。 另請注意,`afxRegInsertable`該旗標不是屬性頁的有效選項,如果設定了「已設定」,則會導致 MFC 中的 ASSERT
 
 ### <a name="return-value"></a>傳回值
 
-如果已註冊控制項類別，則為非零。否則為0。
+如果已註冊控制類,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這可讓具有 OLE 控制項感知功能的容器使用屬性頁。 `AfxOleRegisterPropertyPageClass` 會使用屬性頁名稱和其在系統上的位置來更新登錄，同時也會設定控制項在登錄中支援的執行緒模型。 如需詳細資訊，請參閱[技術提示 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、OLE 控制項中的公寓模型執行緒，以及 Windows SDK 中的[進程和執行緒](/windows/win32/ProcThread/about-processes-and-threads)。
+這允許具有 OLE 控制感知的容器使用屬性頁。 `AfxOleRegisterPropertyPageClass`使用屬性頁名稱及其在系統上的位置更新註冊表,並設置控制項在註冊表中支援的線程模型。 有關詳細資訊,請參閱[技術說明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md),"OLE 控制件中的公寓-模型線程",以及有關 Windows SDK 中[的進程和線程](/windows/win32/ProcThread/about-processes-and-threads)。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxctl.h。h
+  **頭**afxctl.h
 
-##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib
+## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a>AfxOle 註冊類型 Lib
 
 向 Windows 註冊資料庫註冊類型程式庫，並且允許其他 OLE 控制項感知的容器使用類型程式庫。
 
@@ -236,11 +236,11 @@ BOOL AfxOleRegisterTypeLib(
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h。h
+  **標題**afxdisp.h
 
-##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass
+## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a>AfxOleUn 寄存器類
 
-從 Windows 註冊資料庫移除控制項或屬性頁類別專案。
+從 Windows 註冊資料庫中刪除控制項或屬性頁類項目。
 
 ```
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
@@ -248,23 +248,23 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
 ### <a name="parameters"></a>參數
 
-*clsID*<br/>
-控制項或屬性頁的唯一類別 ID。
+*Clsid*<br/>
+控件或屬性頁的唯一類 ID。
 
 *pszProgID*<br/>
-控制項或屬性頁的唯一程式識別碼。
+控制項或屬性頁的唯一程式 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功取消註冊控制項或屬性頁類別，則為非零;否則為0。
+如果控件或屬性頁類已成功取消註冊,則非零;否則 0。
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxctl.h。h
+  **頭**afxctl.h
 
-##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib
+## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a>AfxOleUn寄存器類型Lib
 
-呼叫此函式可從 Windows 註冊資料庫中移除類型程式庫專案。
+呼叫此函數從 Windows 註冊資料庫中刪除類型庫條目。
 
 ```
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
@@ -277,7 +277,7 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 
 ### <a name="return-value"></a>傳回值
 
-如果類型程式庫已成功取消註冊，則為非零。否則為0。
+如果類型庫已成功取消註冊,則非零;否則 0。
 
 ### <a name="example"></a>範例
 
@@ -285,8 +285,8 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 
 ### <a name="requirements"></a>需求
 
-  **標頭**afxdisp.h。h
+  **標題**afxdisp.h
 
 ## <a name="see-also"></a>另請參閱
 
-[宏和全域](../../mfc/reference/mfc-macros-and-globals.md)
+[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)

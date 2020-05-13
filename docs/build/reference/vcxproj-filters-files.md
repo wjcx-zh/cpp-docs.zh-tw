@@ -1,32 +1,32 @@
 ---
-title: .Vcxproj 篩選檔案
+title: Vcxproj.過濾器檔案
 ms.date: 09/25/2019
-description: 使用 Visual Studio C++專案中的篩選檔案，為中的檔案定義自訂邏輯資料夾方案總管
+description: 使用 Visual Studio 的篩選器檔C++專案為解決方案資源管理員中的檔案定義自訂邏輯資料夾
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 57735246b543680243994b99b8c05c9ad1211f38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078270"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335938"
 ---
-# <a name="vcxprojfilters-files"></a>.Vcxproj 篩選檔案
+# <a name="vcxprojfilters-files"></a>vcxproj.過濾器檔案
 
-*篩選器*檔案（\*.vcxproj）是 MSBuild 格式的 XML 檔案，位於根專案資料夾中。 它會指定哪些檔案類型會進入**方案總管**中的哪一個邏輯資料夾。 在下圖中， *.cpp*檔案位於 [**來源**檔案] 節點底下。 *.h*檔案位於 [**標頭檔**] 節點底下， *.ico*和 *.rc*檔案則位於 [**資源檔**] 底下。 這個位置是由篩選檔案所控制。
+*篩選器*檔案 (.vcxproj.filters)\*是位於根項目資料夾中的 MSBuild 格式的 XML 檔。 它指定解決方案**資源管理員**中的邏輯資料夾中進入哪些檔案類型。 在下圖中 *,.cpp*檔案位於**源檔案**節點下。 *.h*檔案位於 **"標題檔案"** 節點下 *,.ico*和 *.rc*檔案位於**資源檔案**下。 此放置由篩選器檔控制。
 
-![方案總管中的邏輯資料夾](media/solution-explorer-filters.png)
+![解決方案資源管理員中的邏輯資料夾](media/solution-explorer-filters.png)
 
-## <a name="creating-a-custom-filters-file"></a>建立自訂篩選檔案
+## <a name="creating-a-custom-filters-file"></a>建立自訂篩選器檔案
 
-Visual Studio 會自動建立此檔案。 針對桌面應用程式，預先定義的邏輯資料夾（篩選器）為：**來源**檔案、**標頭檔**和**資源檔**。 其他專案類型（例如 UWP）可能會有一組不同的預設資料夾。 Visual Studio 會自動將已知的檔案類型指派給每個資料夾。 如果您想要使用自訂名稱或包含自訂檔案類型的篩選來建立篩選器，您可以在專案的根資料夾中，或在現有的篩選準則下建立自己的篩選檔案。 （**參考**和**外部**相依性是不會參與篩選的特殊資料夾）。
+可視化工作室會自動創建此檔。 此應用程式,預先定義的邏輯資料夾(篩選器)是:**源檔案**、**標題**檔案**與資源檔案**。 其他項目類型(如UWP)可能具有一組不同的預設資料夾。 Visual Studio 會自動為每個資料夾分配已知的文件類型。 如果要使用自定義名稱或包含自訂檔案類型的篩選器創建篩選器,則可以在專案的根資料夾中或現有篩選器下創建自己的篩選器檔。 (**引用**和**外部依賴項**是不參與篩選的特殊資料夾。
 
 ## <a name="example"></a>範例
 
-下列範例會顯示先前範例顯示的篩選檔案。 它有一個平面階層;換句話說，沒有任何嵌套的邏輯資料夾。 `UniqueIdentifier` 為選擇性節點。 它可讓 Visual Studio automation 介面尋找篩選準則。 `Extensions` 也是選擇性的。 將新檔案新增至專案時，會將它新增至具有相符副檔名的最上層篩選。 若要將檔案加入至特定篩選，請以滑鼠右鍵按一下篩選器，然後選擇 [**加入新專案**]。
+下面的範例顯示範例之前顯示的篩選器檔。 它有一個平面層次結構;換句話說,沒有嵌套的邏輯資料夾。 `UniqueIdentifier` 為選擇性節點。 它使 Visual Studio 自動化介面能夠找到篩選器。 `Extensions`也是可選的。 將新檔添加到專案時,該檔將添加到具有匹配檔擴展名的最頂層篩選器中。 要將檔案添加到特定篩選器,請右鍵按一下篩選器並選擇「**新增新專案**」。
 
-第一次啟動專案時，會建立包含 `ClInclude` 節點的 `ItemGroup`。 如果您要產生自己的 .vcxproj 檔案，請確定所有專案專案在篩選檔案中也有一個專案。 `ClInclude` 節點中的值會根據副檔名來覆寫預設篩選。 當您使用 Visual Studio 將新專案加入至專案時，IDE 會在篩選檔案中加入個別的檔案專案。 如果您變更檔案的副檔名，則不會自動重新指派篩選。
+在`ItemGroup`啟動項目時`ClInclude`建立包含節點的 。 如果要生成自己的 vcxproj 檔,請確保所有專案項在篩選器檔中也有條目。 節點中`ClInclude`的值將覆蓋基於檔副檔名的默認篩選。 當您使用 Visual Studio 向專案添加新項時,IDE 將在篩選器檔中添加單個檔項目。 如果更改檔的副檔名,則不會自動重新分配篩選器。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +91,7 @@ Visual Studio 會自動建立此檔案。 針對桌面應用程式，預先定�
 </Project>
 ```
 
-若要建立嵌套邏輯資料夾，請在 [篩選器] 中宣告所有節點，如下所示 `ItemGroup`。 每個子節點都必須宣告最上層父系的完整邏輯路徑。 在下列範例中，必須宣告空的 `ParentFilter`，因為在稍後的節點中會參考它。
+要創建嵌套邏輯資料夾,請聲明篩選器中的所有節點`ItemGroup`,如下所示。 每個子節點必須將完整的邏輯路徑聲明為最上面的父節點。 在下面的示例中,必須聲明空`ParentFilter`,因為它在後面的節點中引用。
 
 ```xml
   <ItemGroup>

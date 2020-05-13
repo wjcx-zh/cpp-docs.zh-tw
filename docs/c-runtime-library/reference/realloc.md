@@ -1,8 +1,9 @@
 ---
 title: realloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - realloc
+- _o_realloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 6197b7bca3ec9f416696e1ded8ea5ca813392616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 15c818ee6f70d02fb9b63f12deef6b1bf3698322
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949503"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917934"
 ---
 # <a name="realloc"></a>realloc
 
@@ -81,7 +83,7 @@ void *realloc(
 
 如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**，則**realloc**會將**errno**設定為**ENOMEM** 。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**realloc**會呼叫**malloc** ，以便使用C++ [_set_new_mode](set-new-mode.md)函數來設定新的處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**realloc**無法配置記憶體時， **malloc**會呼叫新的處理常式常式，就像**新**的運算子因為相同的原因而失敗時一樣。 若要覆寫預設值，請及早在程式中呼叫
+**realloc**會呼叫**malloc** ，以便使用 c + + [_set_new_mode](set-new-mode.md)函數來設定新的處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**realloc**無法配置記憶體時， **malloc**會呼叫新的處理常式常式，就像**新**的運算子因為相同的原因而失敗時一樣。 若要覆寫預設值，請及早在程式中呼叫
 
 ```C
 _set_new_mode(1);
@@ -92,6 +94,8 @@ _set_new_mode(1);
 當應用程式與 C 執行時間程式庫的 debug 版本連結時， **realloc**會解析為[_realloc_dbg](realloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
 **realloc**標示`__declspec(noalias)`為和`__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -152,5 +156,5 @@ Size of block after realloc of 1000 more longs: 8000
 
 [記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[受](free.md)<br/>
 [malloc](malloc.md)<br/>

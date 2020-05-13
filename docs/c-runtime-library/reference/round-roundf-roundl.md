@@ -1,10 +1,13 @@
 ---
 title: round、roundf、roundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - round
 - roundl
 - roundf
+- _o_round
+- _o_roundf
+- _o_roundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949111"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916712"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -68,15 +72,17 @@ long double roundl(
 
 ## <a name="return-value"></a>傳回值
 
-**Round**函數會傳回浮點值，表示最接近*x*的整數。 不論浮點四捨五入模式的設定為何，進行四捨五入時，中間值都會背離零。 不會傳回錯誤。
+**Round**函數會傳回浮點值，表示最接近*x*的整數。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|none|**_DOMAIN**|
+|± **QNAN**， **IND**|無|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**浮點**和**長** **雙精度**值之**round**的多載。 在 C 程式中， **round**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**浮點**和**長****雙精度**值之**round**的多載。 在 C 程式中， **round**一律會採用並傳回**雙精度浮點數**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

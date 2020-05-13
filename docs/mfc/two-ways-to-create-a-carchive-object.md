@@ -11,58 +11,58 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: 38642906b0973730149ed0de5381519f06d69fe5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71592584d4ecdd3169ad894861a97fa668c04ee8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370950"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>建立 CArchive 物件的兩種方式
 
 建立 `CArchive` 物件的方法有兩種：
 
-- [透過架構隱含建立 CArchive 物件](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
+- [以框架隱式建立 CArchive 物件](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
 
-- [CArchive 物件的明確建立](#_core_explicit_creation_of_a_carchive_object)
+- [明確建立 CArchive 物件](#_core_explicit_creation_of_a_carchive_object)
 
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>透過架構隱含建立 CArchive 物件
+## <a name="implicit-creation-of-a-carchive-object-via-the-framework"></a><a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>以框架隱式建立 CArchive 物件
 
-最常見且最簡單的方式是讓架構代表 [檔案] 功能表上的 [儲存]、[另存新檔] 和 [開啟] 命令，建立檔的 `CArchive` 物件。
+最常見和最簡單的方法是讓框架代表「檔」功能表上的「儲存`CArchive`」、「儲存為」和「打開」命令為文檔創建物件。
 
-以下是當您的應用程式使用者從 [檔案] 功能表發出 [另存新檔] 命令時，該架構的作用：
+下面是當應用程式的使用者從「檔」選單中發出「儲存為」命令時,框架的作用:
 
-1. 顯示 [**另存**新檔] 對話方塊，並取得使用者的檔案名。
+1. 顯示「**另存為」** 對話方塊並從使用者獲取檔名。
 
-1. 將使用者所命名的檔案以 `CFile` 物件的形式開啟。
+1. 開啟使用者命名的`CFile`物件檔。
 
-1. 建立指向這個 `CFile` 物件的 `CArchive` 物件。 在建立 `CArchive` 物件時，架構會將模式設定為「存放」（寫入、序列化），而不是「載入」（讀取、還原序列化）。
+1. 建立指向`CArchive``CFile`此物件的物件。 在創建物件`CArchive`時,框架將模式設置為"存儲"(寫入、序列化),而不是"載入"(讀取、反序列化)。
 
-1. 呼叫 `CDocument`衍生類別中定義的 `Serialize` 函式，並傳遞 `CArchive` 物件的參考。
+1. 調用派生`Serialize`類`CDocument`中 定義的函數,將其`CArchive`傳遞給 物件的引用。
 
-您的檔 `Serialize` 函式接著會將資料寫入 `CArchive` 物件，如稍後所述。 從您的 `Serialize` 函式傳回時，架構會先終結 `CArchive` 物件，然後再終結 `CFile` 物件。
+然後,文檔的`Serialize`功能 將數據`CArchive`寫入 物件,如稍後所述。 從函數`Serialize`返回后,框架將銷`CArchive`毀 物件,然後`CFile`銷毀 該物件。
 
-因此，如果您讓架構建立檔的 `CArchive` 物件，您只需要執行檔的 `Serialize` 函式，以便在封存中寫入和讀取。 您也必須針對檔的 `Serialize` 函式直接或間接序列化的任何 `CObject`衍生物件，執行 `Serialize`。
+因此,如果讓框架為文檔`CArchive`創建 物件,則所有要做的就是實現`Serialize`文檔的 函數,該函數在存檔中寫入和讀取。 您還必須`Serialize`實現`CObject``Serialize`文檔 函數反過來直接或間接序列化的任何派生物件。
 
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>CArchive 物件的明確建立
+## <a name="explicit-creation-of-a-carchive-object"></a><a name="_core_explicit_creation_of_a_carchive_object"></a>明確建立 CArchive 物件
 
-除了透過架構來序列化檔以外，還有其他的時候，您可能需要 `CArchive` 物件。 例如，您可能想要將資料從剪貼簿序列化，並以 `CSharedFile` 物件表示。 或者，您可能會想要使用使用者介面來儲存與架構所提供的檔案不同的檔案。 在此情況下，您可以明確地建立 `CArchive` 物件。 您可以使用下列程式，以與架構相同的方式來執行這項操作。
+除了通過框架序列化文檔外,還有其他可能`CArchive`需要 對象的情況。 例如,您可能希望序列化數據,並從剪貼簿(由`CSharedFile`物件表示)進行序列化。 或者,您可能希望使用使用者介面儲存與框架提供的檔案不同的檔案。 在這種情況下,您可以顯示式建立物件`CArchive`。 使用以下過程,使用框架相同的方式執行此操作。
 
 #### <a name="to-explicitly-create-a-carchive-object"></a>明確建立 CArchive 物件
 
-1. 建立 `CFile` 物件或衍生自 `CFile`的物件。
+1. 構造派生`CFile``CFile`自的物件或物件。
 
-1. 將 `CFile` 物件傳遞至 `CArchive`的函式，如下列範例所示：
+1. 將`CFile`物件傳遞給`CArchive`的 建構函數,如以下範例所示:
 
    [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-   `CArchive` 的函式的第二個引數是列舉值，指定是否要使用封存來儲存或從檔案載入資料。 物件的 `Serialize` 函式會藉由呼叫 archive 物件的 `IsStoring` 函數來檢查此狀態。
+   `CArchive`建構函數的第二個參數是枚舉值,該值指定存檔是否將用於存儲或載入資料到檔或從檔中載入資料。 物件的`Serialize`函數通過調用存檔物件`IsStoring`的 函數來檢查此狀態。
 
-當您完成在 `CArchive` 物件中儲存或載入資料時，請將其關閉。 雖然 `CArchive` （和 `CFile`）物件會自動關閉封存（和檔案），但最好是明確地這麼做，因為它可讓您更輕鬆地從錯誤復原。 如需有關錯誤處理的詳細資訊，請參閱[例外狀況：攔截及刪除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)狀況。
+完成儲存或載入資料到或從物件載入後,`CArchive`關閉它。 儘管`CArchive`(`CFile`和 ) 物件將自動關閉存檔(和檔),但最好顯式關閉存檔(和檔),因為它使從錯誤中恢復更容易。 有關錯誤處理的詳細資訊,請參閱文章[「例外:捕獲和刪除異常](../mfc/exceptions-catching-and-deleting-exceptions.md)」。
 
 #### <a name="to-close-the-carchive-object"></a>關閉 CArchive 物件
 
-1. 下列範例說明如何關閉 `CArchive` 物件：
+1. 下面的範例說明如何關閉`CArchive`物件:
 
    [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 

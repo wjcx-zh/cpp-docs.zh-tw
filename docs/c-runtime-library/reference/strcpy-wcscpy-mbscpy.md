@@ -1,10 +1,11 @@
 ---
 title: strcpy、wcscpy、_mbscpy
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strcpy
 - wcscpy
 - _mbscpy
+- _o_wcscpy
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +43,12 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958255"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915260"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
@@ -106,9 +108,11 @@ unsigned char *_mbscpy(
 > [!IMPORTANT]
 > 因為**strcpy**在複製*strSource*之前，不會在*strDestination*中檢查是否有足夠的空間，所以可能會造成緩衝區溢位。 因此，建議您改用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
-**wcscpy**和 **_mbscpy**分別是寬字元和多位元組字元版本的**strcpy**。 **Wcscpy**的引數和傳回值是寬字元字串; **_mbscpy**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcscpy**和 **_mbscpy**分別為**strcpy**的寬字元和多位元組字元版本。 **Wcscpy**的引數和傳回值是寬字元字串;**_mbscpy**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

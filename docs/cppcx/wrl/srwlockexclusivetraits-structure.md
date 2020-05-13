@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-ms.openlocfilehash: 25249b8823b8c182133e85aa4cd07d38f5874cf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb7b30915d6061e8470601df33fecec310d1bbca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393868"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374313"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 結構
 
-描述一般特性`SRWLock`獨佔的鎖定模式的類別。
+描述類在`SRWLock`獨佔鎖模式下的常見特徵。
 
 ## <a name="syntax"></a>語法
 
@@ -34,28 +34,28 @@ struct SRWLockExclusiveTraits;
 
 名稱   | 描述
 ------ | --------------------------------------------------------------------------
-`Type` | 指標的同義字[SRWLOCK](srwlock-class.md)類別。
+`Type` | 指向[SRWLOCK](srwlock-class.md)類的指標的同義詞。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                        | 描述
 ----------------------------------------------------------- | --------------------------------------------------------------------
-[SRWLockExclusiveTraits::GetInvalidValue](#getinvalidvalue) | 擷取`SRWLockExclusiveTraits`一律是無效的物件。
-[SRWLockExclusiveTraits::Unlock](#unlock)                   | 釋放指定獨佔控制`SRWLock`物件。
+[SRWLock 排他性特徵::獲取無效值](#getinvalidvalue) | 檢索始終無效`SRWLockExclusiveTraits`的物件。
+[SRWLock 排他性:解鎖](#unlock)                   | 釋放指定`SRWLock`對象的獨佔控制項。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `SRWLockExclusiveTraits`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers.h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空間:** 微軟::WRL:包裝::處理特徵
 
-## <a name="getinvalidvalue"></a>SRWLockExclusiveTraits::GetInvalidValue
+## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>SRWLock 排他性特徵::獲取無效值
 
-擷取`SRWLockExclusiveTraits`一律是無效的物件。
+檢索始終無效`SRWLockExclusiveTraits`的物件。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -65,9 +65,9 @@ inline static Type GetInvalidValue();
 
 空的 `SRWLockExclusiveTraits` 物件。
 
-## <a name="unlock"></a>SRWLockExclusiveTraits::Unlock
+## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a>SRWLock 排他性:解鎖
 
-釋放指定獨佔控制`SRWLock`物件。
+釋放指定`SRWLock`對象的獨佔控制項。
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +77,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>參數
 
-*srwlock*<br/>
-若要處理`SRWLock`物件。
+*斯沃洛克*<br/>
+處理`SRWLock`物件。

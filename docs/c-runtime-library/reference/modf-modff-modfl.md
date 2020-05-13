@@ -1,10 +1,11 @@
 ---
 title: modf、modff、modfl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - modff
 - modf
 - modfl
+- _o_modf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951545"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914630"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -76,7 +78,9 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 **modf**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C++允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**參數的**modf**多載。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數，並傳回雙精度值。
+C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**參數的**modf**多載。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數，並傳回雙精度值。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

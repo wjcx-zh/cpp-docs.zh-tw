@@ -10,110 +10,110 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c31d13e03483f8632f17a526da75ebe8e21bccbf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239943"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364573"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控制項：屬性頁
 
-屬性頁可讓使用者檢視和變更 ActiveX 控制項屬性的 ActiveX 控制項。 藉由叫用控制項屬性對話方塊，其中包含提供自訂的圖形化介面來檢視及編輯控制項屬性的一或多個屬性頁中存取這些屬性。
+屬性頁允許 ActiveX 控制件使用者查看和更改 ActiveX 控制件屬性。 這些屬性是透過調用控制項屬性對話框來存取的,該對話方塊包含一個或多個屬性頁,這些頁面提供用於查看和編輯控制項屬性的自訂圖形介面。
 
 >[!IMPORTANT]
-> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
+> ActiveX 是一種不應用於新開發的傳統技術。 有關取代 ActiveX 的現代技術的詳細資訊,請參閱[ActiveX 控制件](activex-controls.md)。
 
-ActiveX 控制項屬性頁會顯示在兩種方式：
+ActiveX 控制項屬性頁以兩種方式顯示:
 
-- 當控制項的屬性的動詞 (**OLEIVERB_PROPERTIES**) 會叫用，控制項便會開啟強制回應屬性對話方塊，其中包含控制項的屬性頁面。
+- 呼叫控制項的屬性「謂詞 **(OLEIVERB_PROPERTIES**)時,控制項將打開一個包含控制式屬性頁的模式屬性對話框。
 
-- 容器可以顯示自己會顯示選取之控制項的屬性頁的非強制回應對話方塊方塊。
+- 容器可以顯示其自己的無模式對話框,該對話框顯示所選控件的屬性頁。
 
-屬性 對話方塊中 （如下圖所示） 包含區域來顯示目前的屬性頁面上，索引標籤切換 屬性頁，以及執行常見工作，例如關閉 屬性頁 對話方塊中，按鈕的集合取消任何變更，或立即將變更套用至 ActiveX 控制項。
+屬性對話框(下圖所示)包括用於顯示當前屬性頁的區域、用於在屬性頁之間切換的選項卡以及執行常見任務的按鈕的集合,如關閉屬性頁對話框、取消所做的任何更改或立即對 ActiveX 控件應用任何更改。
 
-![Circ3 屬性對話方塊](../mfc/media/vc373i1.gif "Circ3 屬性對話方塊") <br/>
-內容 對話方塊
+![Circ3 的屬性對話方塊](../mfc/media/vc373i1.gif "Circ3 的屬性對話方塊") <br/>
+內容對話方塊
 
-本文章涵蓋使用 ActiveX 控制項中的 屬性頁的相關主題。 它們包括：
+本文介紹與在 ActiveX 控件中使用屬性頁相關的主題。 其中包括：
 
-- [實作 ActiveX 控制項的預設屬性頁面](#_core_implementing_the_default_property_page)
+- [將 ActiveX 控制檔的預設屬性頁](#_core_implementing_the_default_property_page)
 
-- [將控制項加入至屬性頁](#_core_adding_controls_to_a_property_page)
+- [新增控制檔到屬性頁](#_core_adding_controls_to_a_property_page)
 
-- [自訂 DoDataExchange 函式](#_core_customizing_the_dodataexchange_function)
+- [自訂 DoDataExchange 功能](#_core_customizing_the_dodataexchange_function)
 
-如需有關如何使用 ActiveX 控制項中的 屬性頁的詳細資訊，請參閱下列文章：
+有關在 ActiveX 控制件中使用屬性頁的詳細資訊,請參閱以下文章:
 
-- [MFC ActiveX 控制項：新增另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 - [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
-如需使用屬性工作表以外的 ActiveX 控制項的 MFC 應用程式中的資訊，請參閱[屬性工作表](../mfc/property-sheets-mfc.md)。
+有關在 MFC 應用程式中使用屬性表(而不是 ActiveX 控制件)的資訊,請參閱[屬性表](../mfc/property-sheets-mfc.md)。
 
-##  <a name="_core_implementing_the_default_property_page"></a> 實作 [預設] 屬性頁
+## <a name="implementing-the-default-property-page"></a><a name="_core_implementing_the_default_property_page"></a>設定預設屬性頁
 
-如果您使用 ActiveX 控制項精靈來建立您的控制項專案時，ActiveX 控制項精靈提供的預設屬性頁類別控制項衍生自[COlePropertyPage 類別](../mfc/reference/colepropertypage-class.md)。 一開始，此屬性頁面是空白的但您可以將任何對話方塊控制項或一組控制項新增至它。 由於 ActiveX 控制項精靈會建立只有一個屬性頁類別，根據預設，其他的屬性頁面類別 (也衍生自`COlePropertyPage`) 必須使用 類別檢視中建立。 如需有關此程序的詳細資訊，請參閱[MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)。
+如果使用 ActiveX 控件精靈建立控制項專案,則 ActiveX 控制項精靈為派生自[COlePropertyPage 類](../mfc/reference/colepropertypage-class.md)的控制項提供預設屬性頁類。 最初,此屬性頁為空,但您可以將任何對話方塊控制項或控制項集添加到其中。 由於 ActiveX 控制件精靈預設情況下只創建一個屬性頁類,因此必須使用 類視`COlePropertyPage`圖創建 其他屬性頁類(也派生自 )。 有關此過程的詳細資訊,請參閱[MFC ActiveX 控制件:新增另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)。
 
-實作的屬性頁面 （在此情況下，預設值） 是一個三步驟程序：
+設定屬性頁(本例為預設值)是一個三步過程:
 
-#### <a name="to-implement-a-property-page"></a>若要實作的屬性頁
+#### <a name="to-implement-a-property-page"></a>設定屬性頁
 
-1. 新增`COlePropertyPage`-衍生的控制項專案的類別。 如果已建立專案，使用 ActiveX 控制項精靈 （在此情況下中），預設屬性頁類別已經存在。
+1. 向控件`COlePropertyPage`專案添加派生類。 如果專案是使用 ActiveX 控制件精靈建立的(如本例),則預設屬性頁類已存在。
 
-1. 使用對話方塊編輯器，將任何控制項加入至屬性頁範本。
+1. 使用對話框編輯器將任何控制項添加到屬性頁範本。
 
-1. 來自訂`DoDataExchange`函式的`COlePropertyPage`-衍生的類別來交換屬性頁控制項和 ActiveX 控制項之間的值。
+1. `DoDataExchange`自定義`COlePropertyPage`派生類的功能以在屬性頁控件和 ActiveX 控制項之間交換值。
 
-例如下列程序的目的，使用簡單的控制項 （名為 「 範例 」）。 範例使用 ActiveX 控制項精靈所建立，並包含內建 Caption 屬性。
+例如,以下過程使用簡單的控制項(稱為"範例")。 範例是使用 ActiveX 控制件精靈建立的,並且僅包含庫存標題屬性。
 
-##  <a name="_core_adding_controls_to_a_property_page"></a> 將控制項加入至屬性頁
+## <a name="adding-controls-to-a-property-page"></a><a name="_core_adding_controls_to_a_property_page"></a>新增控制檔到屬性頁
 
-#### <a name="to-add-controls-to-a-property-page"></a>將控制項加入至屬性頁
+#### <a name="to-add-controls-to-a-property-page"></a>新增屬性頁加入控制項
 
-1. 您開啟的控制專案，開啟 [資源檢視]。
+1. 打開控制專案后,打開資源檢視。
 
-1. 按兩下 **對話方塊** directory 圖示。
+1. 按兩下 **「對話框**」目錄圖示。
 
-1. 開啟 [IDD_PROPPAGE_SAMPLE] 對話方塊。
+1. 打開IDD_PROPPAGE_SAMPLE對話方塊。
 
-   ActiveX 控制項精靈將專案的名稱附加至對話方塊 ID，在此情況下，範例的結尾。
+   ActiveX 控制精靈將專案的名稱追加到對話框 ID 的末尾,本例中為範例。
 
-1. 拖放選取的控制項從工具箱拖曳對話方塊區域。
+1. 將所選控制件從「工具箱」拖放到對話框區域。
 
-1. 此範例中，針對文字標籤控制項 」 標題: 「 和編輯方塊控制項 IDC_CAPTION 識別碼就已足夠。
+1. 此選項,文字標籤控制件標題與具有IDC_CAPTION識別碼的編輯框控制項就足夠了。
 
-1. 按一下 **儲存**工具列，以儲存您的變更。
+1. 按下「在工具列上**保存**」以儲存更改。
 
-既然已修改的使用者介面，您需要連結編輯方塊與 [標題] 屬性。 這是下一節中藉由編輯`CSamplePropPage::DoDataExchange`函式。
+現在使用者介面已被修改,您需要將編輯框與"標題"屬性連結。 這通過編輯`CSamplePropPage::DoDataExchange`函數在以下部分完成。
 
-##  <a name="_core_customizing_the_dodataexchange_function"></a> 自訂 DoDataExchange 函式
+## <a name="customizing-the-dodataexchange-function"></a><a name="_core_customizing_the_dodataexchange_function"></a>自訂 DoData 交換功能
 
-屬性頁[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)函式可讓您連結的內容控制項中的實際值屬性值。 若要建立連結，您必須對應適當的屬性頁面欄位至其個別的控制項屬性。
+屬性頁[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)函數允許您將屬性頁值與控制項中屬性的實際值連結。 要建立連結,必須將相應的屬性頁欄位映射到其各自的控制項屬性。
 
-這些對應會實作使用屬性頁**DDP_** 函式。 **DDP_** 函數的運作類似**DDX_** 使用標準 MFC 對話方塊中，有一個例外狀況的函式。 參考成員變數，除了**DDP_** 函式會採用控制項屬性的名稱。 以下是中的一般項目`DoDataExchange`屬性頁的函式。
+這些映射使用屬性頁**DDP_** 函數實現。 **DDP_** 函數的工作方式與標準 MFC 對話框中使用的**DDX_** 函數類似,但有一個例外。 除了對成員變數的引用外 **,DDP_** 函數採用控制項屬性的名稱。 以下是屬性頁函數中`DoDataExchange`的典型條目。
 
 [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]
 
-此函式產生關聯的屬性頁*m_caption*標題，成員變數使用`DDP_TEXT`函式。
+此函數使用`DDP_TEXT`函數將屬性頁的*m_caption*成員變數與標題關聯。
 
-插入屬性頁控制項之後，您需要建立屬性頁控制項、 IDC_CAPTION，與實際的控制項屬性之間的連結標題使用`DDP_Text`函式，如上面所述。
+插入屬性頁控制項後,需要使用上述`DDP_Text`函數在屬性頁控制件、IDC_CAPTION和實際控制項屬性"Caption"之間建立連結。
 
-[屬性頁](../mfc/reference/property-pages-mfc.md)可供其他對話方塊控制項類型，例如核取方塊、 選項按鈕和清單方塊。 下表列出的整組屬性頁**DDP_** 函式和其用途：
+[屬性頁](../mfc/reference/property-pages-mfc.md)可用於其他對話方塊控制項類型,如複選框、單選按鈕和清單框。 下表列出了函數**DDP_** 及其用途的整組屬性頁:
 
-### <a name="property-page-functions"></a>屬性頁面函式
+### <a name="property-page-functions"></a>屬性頁函數
 
 |函式名稱|使用此函式連結|
 |-------------------|-------------------------------|
-|`DDP_CBIndex`|與控制項屬性的下拉式方塊中選取的字串索引。|
-|`DDP_CBString`|與控制項屬性的下拉式方塊中選取的字串。 所選的字串可以開始使用的相同字母做為屬性的值，但需要完全符合它。|
-|`DDP_CBStringExact`|與控制項屬性的下拉式方塊中選取的字串。 選取的字串和屬性的字串值必須完全相符。|
-|`DDP_Check`|與控制項屬性的核取方塊。|
-|`DDP_LBIndex`|與控制項屬性的清單方塊中選取的字串索引。|
-|`DDP_LBString`|與控制項屬性的清單方塊中選取的字串。 所選的字串可以開始使用的相同字母做為屬性的值，但需要完全符合它。|
-|`DDP_LBStringExact`|與控制項屬性的清單方塊中選取的字串。 選取的字串和屬性的字串值必須完全相符。|
-|`DDP_Radio`|與控制項屬性的選項按鈕。|
-|`DDP_Text`|與控制項屬性的文字。|
+|`DDP_CBIndex`|組合框中所選字串的索引具有控制項屬性。|
+|`DDP_CBString`|組合框中的選定字串具有控制項屬性。 所選字串可以以與屬性值相同的字母開頭,但不必完全匹配它。|
+|`DDP_CBStringExact`|組合框中的選定字串具有控制項屬性。 所選字串和屬性的字串值必須完全匹配。|
+|`DDP_Check`|具有控制項屬性的複選框。|
+|`DDP_LBIndex`|具有控制項屬性的清單框中的選擇字串索引。|
+|`DDP_LBString`|具有控制項屬性的清單框中的選擇字串。 所選字串可以以與屬性值相同的字母開頭,但不必完全匹配它。|
+|`DDP_LBStringExact`|具有控制項屬性的清單框中的選擇字串。 所選字串和屬性的字串值必須完全匹配。|
+|`DDP_Radio`|具有控制屬性的單選按鈕。|
+|`DDP_Text`|具有控制項屬性的文字。|
 
 ## <a name="see-also"></a>另請參閱
 

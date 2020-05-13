@@ -1,10 +1,12 @@
 ---
 title: _strdup、_wcsdup、_mbsdup
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
+- _o__strdup
+- _o__wcsdup
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958185"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914464"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
@@ -84,9 +87,11 @@ unsigned char *_mbsdup(
 
 ## <a name="remarks"></a>備註
 
-**_Strdup**函數會呼叫[Malloc](malloc.md)來配置*strSource*複本的儲存空間，然後將*strSource*複製到已配置的空間。
+**_Strdup**函式會呼叫[Malloc](malloc.md)來配置*strSource*複本的儲存空間，然後將*strSource*複製到已配置的空間。
 
-**_wcsdup**和 **_mbsdup**是 **_strdup**的寬字元和多位元組字元版本。 **_Wcsdup**的引數和傳回值是寬字元字串; **_mbsdup**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**_wcsdup**和 **_mbsdup**是 **_strdup**的寬字元和多位元組字元版本。 **_Wcsdup**的引數和傳回值是寬字元字串;**_mbsdup**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -94,9 +99,9 @@ unsigned char *_mbsdup(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-由於 **_strdup**會呼叫**Malloc**來配置*strSource*複本的儲存空間，因此最好一律在呼叫 **_strdup**所傳回的指標上呼叫[free](free.md)常式來釋放這個記憶體。
+因為 **_strdup**會呼叫**Malloc**來配置*strSource*複本的儲存空間，所以一定要釋放這個記憶體，方法是在呼叫所傳回的指標上呼叫[free](free.md)常式，以 **_strdup**。
 
-如果已定義 **_debug**和 **_CRTDBG_MAP_ALLOC** ，則 **_strdup**和 **_wcsdup**會被呼叫 **_strdup_dbg**和 **_wcsdup_dbg**取代，以允許進行記憶體配置的偵測。 如需詳細資訊，請參閱 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
+如果已定義 **_DEBUG**和 **_CRTDBG_MAP_ALLOC** ， **_strdup**和 **_wcsdup**會被 **_strdup_dbg**和 **_wcsdup_dbg**的呼叫取代，以允許進行記憶體配置的偵錯工具。 如需詳細資訊，請參閱 [_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
 
 ## <a name="requirements"></a>需求
 

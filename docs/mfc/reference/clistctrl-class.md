@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749145"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -287,222 +287,222 @@ class CListCtrl : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CListCtrl：： CListCtrl](#clistctrl)|建構 `CListCtrl` 物件。|
+|[CListCtrl::CListCtrl](#clistctrl)|建構 `CListCtrl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CListCtrl：： ApproximateViewRect](#approximateviewrect)|決定顯示清單視圖控制項之專案所需的寬度和高度。|
-|[CListCtrl：：排列](#arrange)|對齊方格上的專案。|
-|[CListCtrl：： CancelEditLabel](#canceleditlabel)|取消專案文字編輯作業。|
-|[CListCtrl：： Create](#create)|建立清單控制項，並將它附加至 `CListCtrl` 物件。|
-|[CListCtrl：： CreateDragImage](#createdragimage)|為指定的專案建立拖曳影像清單。|
-|[CListCtrl：： CreateEx](#createex)|使用指定的 Windows 擴充樣式建立清單控制項，並將它附加至 `CListCtrl` 物件。|
-|[CListCtrl：:D eleteAllItems](#deleteallitems)|從控制項中刪除所有專案。|
-|[CListCtrl：:D eleteColumn](#deletecolumn)|刪除清單視圖控制項中的資料行。|
-|[CListCtrl：:D eleteItem](#deleteitem)|從控制項中刪除專案。|
-|[CListCtrl：:D rawItem](#drawitem)|當主控描繪控制項的視覺外觀變更時呼叫。|
-|[CListCtrl：： EditLabel](#editlabel)|開始就地編輯專案的文字。|
-|[CListCtrl：： EnableGroupView](#enablegroupview)|啟用或停用清單視圖控制項中的專案是否顯示為群組。|
-|[CListCtrl：： EnsureVisible](#ensurevisible)|確保專案可見。|
-|[CListCtrl：： FindItem](#finditem)|搜尋具有指定特性的清單視圖專案。|
-|[CListCtrl：： GetBkColor](#getbkcolor)|抓取清單視圖控制項的背景色彩。|
-|[CListCtrl：： GetBkImage](#getbkimage)|抓取清單視圖控制項的目前背景影像。|
-|[CListCtrl：： GetCallbackMask](#getcallbackmask)|抓取清單視圖控制項的回呼遮罩。|
-|[CListCtrl：： GetCheck](#getcheck)|抓取與專案相關聯之狀態影像的目前顯示狀態。|
-|[CListCtrl：： GetColumn](#getcolumn)|抓取控制項資料行的屬性。|
-|[CListCtrl：： GetColumnOrderArray](#getcolumnorderarray)|抓取清單視圖控制項的資料行順序（由左到右）。|
-|[CListCtrl：： GetColumnWidth](#getcolumnwidth)|抓取報表檢視或清單視圖中資料行的寬度。|
-|[CListCtrl：： GetCountPerPage](#getcountperpage)|計算清單視圖控制項中可以垂直調整的專案數。|
-|[CListCtrl：： GetEditControl](#geteditcontrol)|抓取編輯控制項的控制碼，用來編輯專案的文字。|
-|[CListCtrl：： GetEmptyText](#getemptytext)|如果目前的清單視圖控制項是空的，則抓取要顯示的字串。|
-|[CListCtrl：： GetExtendedStyle](#getextendedstyle)|抓取清單視圖控制項的目前擴充樣式。|
-|[CListCtrl：： GetFirstSelectedItemPosition](#getfirstselecteditemposition)|抓取清單視圖控制項中第一個選取清單視圖專案的位置。|
-|[CListCtrl：： GetFocusedGroup](#getfocusedgroup)|抓取目前清單視圖控制項中具有鍵盤焦點的群組。|
-|[CListCtrl：： GetGroupCount](#getgroupcount)|抓取目前清單視圖控制項中的群組數目。|
-|[CListCtrl：： GetGroupInfo](#getgroupinfo)|取得清單視圖控制項之指定群組的資訊。|
-|[CListCtrl：： GetGroupInfoByIndex](#getgroupinfobyindex)|抓取目前清單視圖控制項中指定之群組的相關資訊。|
-|[CListCtrl：： GetGroupMetrics](#getgroupmetrics)|抓取群組的計量。|
-|[CListCtrl：： GetGroupRect](#getgrouprect)|抓取目前清單視圖控制項中指定群組的周框。|
-|[CListCtrl：： GetGroupState](#getgroupstate)|抓取目前清單視圖控制項中指定群組的狀態。|
-|[CListCtrl：： GetHeaderCtrl](#getheaderctrl)|抓取清單視圖控制項的標頭控制項。|
-|[CListCtrl：： GetHotCursor](#gethotcursor)|當啟用清單視圖控制項的熱追蹤時，抓取使用的資料指標。|
-|[CListCtrl：： GetHotItem](#gethotitem)|抓取目前游標下的清單視圖專案。|
-|[CListCtrl：： GetHoverTime](#gethovertime)|抓取清單視圖控制項的目前停留時間。|
-|[CListCtrl：： GetImageList](#getimagelist)|抓取用於繪製清單視圖專案之影像清單的控制碼。|
-|[CListCtrl：： GetInsertMark](#getinsertmark)|抓取插入標記的目前位置。|
-|[CListCtrl：： GetInsertMarkColor](#getinsertmarkcolor)|抓取插入標記的目前色彩。|
-|[CListCtrl：： GetInsertMarkRect](#getinsertmarkrect)|抓取插入點的邊界矩形。|
-|[CListCtrl：： GetItem](#getitem)|抓取清單視圖專案的屬性。|
-|[CListCtrl：： GetItemCount](#getitemcount)|抓取清單視圖控制項中的專案數。|
-|[CListCtrl：： GetItemData](#getitemdata)|抓取與專案相關聯的應用程式特定值。|
-|[CListCtrl：： GetItemIndexRect](#getitemindexrect)|抓取目前清單視圖控制項中所有或部分子工作的周框。|
-|[CListCtrl：： GetItemPosition](#getitemposition)|抓取清單視圖專案的位置。|
-|[CListCtrl：： GetItemRect](#getitemrect)|抓取專案的周框。|
-|[CListCtrl：： GetItemSpacing](#getitemspacing)|計算目前清單視圖控制項中專案之間的間距。|
-|[CListCtrl：： GetItemState](#getitemstate)|抓取清單視圖專案的狀態。|
-|[CListCtrl：： GetItemText](#getitemtext)|抓取清單視圖專案或子項的文字。|
-|[CListCtrl：： GetNextItem](#getnextitem)|搜尋具有指定之屬性的清單視圖專案，以及與指定專案的指定關聯性。|
-|[CListCtrl：： GetNextItemIndex](#getnextitemindex)|抓取目前清單視圖控制項中，具有一組指定屬性的專案索引。|
-|[CListCtrl：： GetNextSelectedItem](#getnextselecteditem)|抓取清單視圖專案位置的索引，以及下一個選取之清單視圖專案的反覆運算位置。|
-|[CListCtrl：： GetNumberOfWorkAreas](#getnumberofworkareas)|抓取清單視圖控制項目前的工作區數目。|
-|[CListCtrl：： GetOrigin](#getorigin)|抓取清單視圖控制項的目前視圖原點。|
-|[CListCtrl：： GetOutlineColor](#getoutlinecolor)|抓取清單視圖控制項的框線色彩。|
-|[CListCtrl：： GetSelectedColumn](#getselectedcolumn)|抓取清單控制項中目前選取之資料行的索引。|
-|[CListCtrl：： GetSelectedCount](#getselectedcount)|抓取清單視圖控制項中選取的專案數。|
-|[CListCtrl：： GetSelectionMark](#getselectionmark)|抓取清單視圖控制項的選取專案標記。|
-|[CListCtrl：： GetStringWidth](#getstringwidth)|決定顯示所有指定字串所需的最小資料行寬度。|
-|[CListCtrl：： GetSubItemRect](#getsubitemrect)|抓取清單視圖控制項中專案的周框。|
-|[CListCtrl：： GetTextBkColor](#gettextbkcolor)|抓取清單視圖控制項的文字背景色彩。|
-|[CListCtrl：： GetTextColor](#gettextcolor)|抓取清單視圖控制項的文字色彩。|
-|[CListCtrl：： GetTileInfo](#gettileinfo)|在清單視圖控制項中抓取磚的相關資訊。|
-|[CListCtrl：： GetTileViewInfo](#gettileviewinfo)|在磚視圖中抓取清單視圖控制項的相關資訊。|
-|[CListCtrl：： GetToolTips](#gettooltips)|抓取清單視圖控制項用來顯示工具提示的工具提示控制項。|
-|[CListCtrl：： GetTopIndex](#gettopindex)|抓取最上方可見專案的索引。|
-|[CListCtrl：： GetView](#getview)|取得清單視圖控制項的視圖。|
-|[CListCtrl：： GetViewRect](#getviewrect)|抓取清單視圖控制項中所有專案的周框。|
-|[CListCtrl：： GetWorkAreas](#getworkareas)|抓取清單視圖控制項的目前工作區域。|
-|[CListCtrl：： HasGroup](#hasgroup)|判斷清單視圖控制項是否有指定的群組。|
-|[CListCtrl：： HitTest](#hittest)|判斷哪個清單視圖專案位於指定的位置。|
-|[CListCtrl：： InsertColumn](#insertcolumn)|在清單視圖控制項中插入新的資料行。|
-|[CListCtrl：： InsertGroup](#insertgroup)|將群組插入清單視圖控制項中。|
-|[CListCtrl：： InsertGroupSorted](#insertgroupsorted)|將指定的群組插入群組的已排序清單中。|
-|[CListCtrl：： InsertItem](#insertitem)|在清單視圖控制項中插入新專案。|
-|[CListCtrl：： InsertMarkHitTest](#insertmarkhittest)|抓取最接近指定點的插入點。|
-|[CListCtrl：： IsGroupViewEnabled](#isgroupviewenabled)|決定是否為清單視圖控制項啟用群組視圖。|
-|[CListCtrl：： IsItemVisible](#isitemvisible)|指出目前清單視圖控制項中的指定專案是否可見。|
-|[CListCtrl：： MapIDToIndex](#mapidtoindex)|將目前清單視圖控制項中專案的唯一識別碼對應至索引。|
-|[CListCtrl：： MapIndexToID](#mapindextoid)|將目前清單視圖控制項中專案的索引對應到唯一的識別碼。|
-|[CListCtrl：： MoveGroup](#movegroup)|移動指定的群組。|
-|[CListCtrl：： MoveItemToGroup](#moveitemtogroup)|將指定的群組移至清單視圖控制項的指定之以零為基底的索引。|
-|[CListCtrl：： RedrawItems](#redrawitems)|強制清單視圖控制項重新繪製某個範圍的專案。|
-|[CListCtrl：： RemoveAllGroups](#removeallgroups)|從清單視圖控制項移除所有群組。|
-|[CListCtrl：： RemoveGroup](#removegroup)|從清單視圖控制項中移除指定的群組。|
-|[CListCtrl：： Scroll](#scroll)|滾動清單視圖控制項的內容。|
-|[CListCtrl：： SetBkColor](#setbkcolor)|設定清單視圖控制項的背景色彩。|
-|[CListCtrl：： SetBkImage](#setbkimage)|設定清單視圖控制項的目前背景影像。|
-|[CListCtrl：： SetCallbackMask](#setcallbackmask)|設定清單視圖控制項的回呼遮罩。|
-|[CListCtrl：： SetCheck](#setcheck)|設定與專案相關聯之狀態影像的目前顯示狀態。|
-|[CListCtrl：： SetColumn](#setcolumn)|設定清單視圖資料行的屬性。|
-|[CListCtrl：： SetColumnOrderArray](#setcolumnorderarray)|設定清單視圖控制項的資料行順序（由左到右）。|
-|[CListCtrl：： SetColumnWidth](#setcolumnwidth)|在報表檢視或清單視圖中變更資料行的寬度。|
-|[CListCtrl：： SetExtendedStyle](#setextendedstyle)|設定清單視圖控制項的目前擴充樣式。|
-|[CListCtrl：： SetGroupInfo](#setgroupinfo)|設定清單視圖控制項之指定群組的資訊。|
-|[CListCtrl：： SetGroupMetrics](#setgroupmetrics)|設定清單視圖控制項的群組計量。|
-|[CListCtrl：： SetHotCursor](#sethotcursor)|設定針對清單視圖控制項啟用熱追蹤時所使用的資料指標。|
-|[CListCtrl：： SetHotItem](#sethotitem)|設定清單視圖控制項的目前作用中專案。|
-|[CListCtrl：： SetHoverTime](#sethovertime)|設定清單視圖控制項的目前停留時間。|
-|[CListCtrl：： SetIconSpacing](#seticonspacing)|設定清單視圖控制項中圖示之間的間距。|
-|[CListCtrl：： SetImageList](#setimagelist)|將影像清單指派給清單視圖控制項。|
-|[CListCtrl：： SetInfoTip](#setinfotip)|設定工具提示文字。|
-|[CListCtrl：： SetInsertMark](#setinsertmark)|將插入點設定為已定義的位置。|
-|[CListCtrl：： SetInsertMarkColor](#setinsertmarkcolor)|設定插入點的色彩。|
-|[CListCtrl：： SetItem](#setitem)|設定部分或所有清單視圖專案的屬性。|
-|[CListCtrl：： SetItemCount](#setitemcount)|準備清單視圖控制項以加入大量專案。|
-|[CListCtrl：： SetItemCountEx](#setitemcountex)|設定虛擬清單視圖控制項的專案計數。|
-|[CListCtrl：： SetItemData](#setitemdata)|設定專案的應用程式特定值。|
-|[CListCtrl：： SetItemIndexState](#setitemindexstate)|設定目前清單視圖控制項中專案的狀態。|
-|[CListCtrl：： SetItemPosition](#setitemposition)|將專案移至清單視圖控制項中的指定位置。|
-|[CListCtrl：： SetItemState](#setitemstate)|變更清單視圖控制項中專案的狀態。|
-|[CListCtrl：： SetItemText](#setitemtext)|變更清單視圖專案或子項的文字。|
-|[CListCtrl：： SetOutlineColor](#setoutlinecolor)|設定清單視圖控制項的框線色彩。|
-|[CListCtrl：： SetSelectedColumn](#setselectedcolumn)|設定清單視圖控制項的選取資料行。|
-|[CListCtrl：： SetSelectionMark](#setselectionmark)|設定清單視圖控制項的選取標記。|
-|[CListCtrl：： SetTextBkColor](#settextbkcolor)|設定清單視圖控制項中文字的背景色彩。|
-|[CListCtrl：： SetTextColor](#settextcolor)|設定清單視圖控制項的文字色彩。|
-|[CListCtrl：： SetTileInfo](#settileinfo)|設定清單視圖控制項磚的資訊。|
-|[CListCtrl：： SetTileViewInfo](#settileviewinfo)|設定清單視圖控制項在磚視圖中使用的資訊。|
-|[CListCtrl：： SetToolTips](#settooltips)|設定清單視圖控制項將用來顯示工具提示的工具提示控制項。|
-|[CListCtrl：： SetView](#setview)|設定清單視圖控制項的視圖。|
-|[CListCtrl：： SetWorkAreas](#setworkareas)|設定可以在清單視圖控制項中顯示圖示的區域。|
-|[CListCtrl：： SortGroups](#sortgroups)|使用使用者定義函數排序清單視圖控制項的群組。|
-|[CListCtrl：： SortItems](#sortitems)|使用應用程式定義的比較函數排序清單視圖專案。|
-|[CListCtrl：： SortItemsEx](#sortitemsex)|使用應用程式定義的比較函數排序清單視圖專案。|
-|[CListCtrl：： SubItemHitTest](#subitemhittest)|判斷哪個清單視圖專案（如果有的話）位於指定的位置。|
-|[CListCtrl：： Update](#update)|強制控制項重新繪製指定的專案。|
+|[CListCtrl::近似檢視重新](#approximateviewrect)|確定顯示列表檢視控制項項所需的寬度和高度。|
+|[CListCtrl:排列](#arrange)|對齊網格上的專案。|
+|[CListCtrl:: 取消編輯標籤](#canceleditlabel)|取消項目文字編輯操作。|
+|[CListCtrl:建立](#create)|創建清單控制項並將其附加到`CListCtrl`物件。|
+|[CListCtrl:: 建立拖動影像](#createdragimage)|為指定項目創建拖動影像清單。|
+|[CListCtrl::建立Ex](#createex)|使用指定的 Windows 擴充樣式創建清單控制項,並將`CListCtrl`其附加到 物件。|
+|[CListCtrl::DeleteAll專案](#deleteallitems)|從控制項中刪除所有項。|
+|[CListCtrl::DeleteColumn](#deletecolumn)|從清單檢視控制項中移除欄位。|
+|[CListCtrl::Delete專案](#deleteitem)|從控制項中刪除項。|
+|[CListCtrl::D原始專案](#drawitem)|當所有者繪製控件的可視方面發生更改時調用。|
+|[CListCtrl::編輯標籤](#editlabel)|開始就地編輯專案的文本。|
+|[CListCtrl::啟用群組檢視](#enablegroupview)|啟用或停用清單檢視控制項中的項目是否顯示為群組。|
+|[CListCtrl::確保可見](#ensurevisible)|確保項可見。|
+|[CListCtrl::尋找專案](#finditem)|搜尋具有指定特徵的列表檢視項。|
+|[CListCtrl:getBkColor](#getbkcolor)|檢索清單檢視控制項的背景顏色。|
+|[CListCtrl::GetBkImage](#getbkimage)|檢索清單檢視控制項的當前背景影像。|
+|[CListCtrl::取得回撥掩碼](#getcallbackmask)|檢索清單檢視控件的回調掩碼。|
+|[CListCtrl:抓取檢查](#getcheck)|檢索與項目關聯的狀態圖像的當前顯示狀態。|
+|[CListCtrl:取得欄位](#getcolumn)|檢索控件列的屬性。|
+|[CListCtrl::取得列柱順序陣列](#getcolumnorderarray)|檢索清單檢視控制件的列順序(從左至右)。|
+|[CListCtrl:取得縱桿寬度](#getcolumnwidth)|檢索報表檢視或清單檢視中列的寬度。|
+|[CListCtrl::取得計數Perpage](#getcountperpage)|計算可垂直適合清單檢視控制項的項目數。|
+|[CListCtrl:取得編輯控制](#geteditcontrol)|檢索用於編輯項目文本的編輯控制項的句柄。|
+|[CListCtrl:取得空文字](#getemptytext)|檢索要顯示的字串,如果當前列表視圖控制項為空。|
+|[CListCtrl::取得式延伸樣式](#getextendedstyle)|檢索清單檢視控制項的目前擴展樣式。|
+|[CListCtrl:取得第一選擇項目位置](#getfirstselecteditemposition)|檢索清單檢視控制項中第一個選定清單檢視項目的位置。|
+|[CListCtrl:取得焦點群組](#getfocusedgroup)|檢索目前清單檢視控制項中具有鍵盤焦點的組。|
+|[CListCtrl::取得群數](#getgroupcount)|檢索目前清單檢視控制項中的元件中的元件。|
+|[CListCtrl:取得群資訊](#getgroupinfo)|獲取清單檢視控制件的指定組的資訊。|
+|[CListCtrl:取得群資訊索引](#getgroupinfobyindex)|檢索目前清單檢視控制項中指定組的資訊。|
+|[CListCtrl:取得集團指標](#getgroupmetrics)|檢索組的指標。|
+|[CListCtrl::取得群組](#getgrouprect)|檢索目前清單檢視控制項中指定群組的邊界矩形。|
+|[CListCtrl::取得群組狀態](#getgroupstate)|檢索目前清單檢視控制項中指定組的狀態。|
+|[CListCtrl::取得頭Ctrl](#getheaderctrl)|檢索清單檢視控制項的標頭控制項。|
+|[CListCtrl:獲取霍伯庫伯](#gethotcursor)|檢索為清單檢視控制項啟用熱追蹤時使用的游標。|
+|[CListCtrl:取得 Hot 專案](#gethotitem)|檢索當前在游標下的列表視圖項。|
+|[CListCtrl::取得懸停時間](#gethovertime)|檢索清單檢視控制項的當前懸停時間。|
+|[CListCtrl:抓取圖片清單](#getimagelist)|檢索用於繪製清單檢視項的圖像清單的句柄。|
+|[CListCtrl::取得插入標記](#getinsertmark)|檢索插入標記的當前位置。|
+|[CListCtrl::取得插入標記顏色](#getinsertmarkcolor)|檢索插入標記的當前顏色。|
+|[CListCtrl::取得插入標記](#getinsertmarkrect)|檢索綁定插入點的矩形。|
+|[CListCtrl:取得項目](#getitem)|檢索清單檢視項的屬性。|
+|[CListCtrl::取得項目計數](#getitemcount)|檢索清單檢視控制項中的項目數。|
+|[CListCtrl:抓取項目資料](#getitemdata)|檢索與項關聯的特定於應用程式的值。|
+|[CListCtrl::取得項目索引重新完成](#getitemindexrect)|檢索當前清單檢視控制項中全部或部分子項的邊界矩形。|
+|[CListCtrl:取得項目位置](#getitemposition)|檢索清單檢視項的位置。|
+|[CListCtrl::取得項目重新完成](#getitemrect)|檢索項的邊界矩形。|
+|[CListCtrl:取得項目間距](#getitemspacing)|計算目前清單檢視控制項中的項目之間的間距。|
+|[CListCtrl::取得項目狀態](#getitemstate)|檢索清單檢視項的狀態。|
+|[CListCtrl::取得項目文字](#getitemtext)|檢索清單檢視項或子項的文字。|
+|[CListCtrl::取得下一個專案](#getnextitem)|搜尋具有指定屬性且與給定項具有指定關係的列表檢視項。|
+|[CListCtrl::取得下一個項目索引](#getnextitemindex)|檢索具有指定屬性集的當前列表檢視控制項中的項目的索引。|
+|[CListCtrl::取得下一個選定專案](#getnextselecteditem)|檢索清單檢視項位置的索引,以及下一個選定列表視圖項用於反覆運算的位置。|
+|[CListctrl:取得工作範圍](#getnumberofworkareas)|檢索清單檢視控制項的目前工作區數。|
+|[CListCtrl:取得原點](#getorigin)|檢索清單檢視控制項的目前檢視來源。|
+|[CListCtrl::取得大綱顏色](#getoutlinecolor)|檢索清單檢視控制項的邊框的顏色。|
+|[CListCtrl:取得精選欄位](#getselectedcolumn)|檢索清單控制項中目前選定列的索引。|
+|[CListCtrl:取得精選計數](#getselectedcount)|檢索清單檢視控制項中選定項數量。|
+|[CListCtrl:取得選擇標記](#getselectionmark)|檢索清單檢視控制項的選擇標記。|
+|[CListCtrl::取得字串寬度](#getstringwidth)|確定顯示所有給定字串所需的最小列寬度。|
+|[CListCtrl::抓取子項目重新完成](#getsubitemrect)|檢索清單檢視控制項中項的邊界矩形。|
+|[CListCtrl:取得文字BkColor](#gettextbkcolor)|檢索清單檢視控制項的文字背景顏色。|
+|[CListCtrl:取得文字顏色](#gettextcolor)|檢索清單檢視控制項的文字顏色。|
+|[CListCtrl::取得Tileinfo](#gettileinfo)|檢索有關清單檢視控制項中磁貼的資訊。|
+|[CListCtrl::取得TileViewInfo](#gettileviewinfo)|檢索有關磁貼檢視中的清單檢視控制項資訊。|
+|[CListCtrl:抓取工具提示](#gettooltips)|檢索清單檢視控制項用於顯示工具提示的工具提示控制項。|
+|[CListCtrl:取得Topindex](#gettopindex)|檢索最頂層可見項的索引。|
+|[CListCtrl:取得檢視](#getview)|獲取清單檢視控制件的檢視。|
+|[CListCtrl::取得檢視Rect](#getviewrect)|檢索清單檢視控制項中所有項的邊界矩形。|
+|[CListCtrl::取得工作領域](#getworkareas)|檢索清單檢視控制項的當前工作區。|
+|[CListCtrl::哈斯集團](#hasgroup)|確定清單檢視控制項是否具有指定的組。|
+|[CListCtrl:hitTest](#hittest)|確定哪個清單檢視項位於指定位置。|
+|[CListCtrl::插入欄位](#insertcolumn)|在清單檢視控制項中插入新欄。|
+|[CListCtrl::插入群組](#insertgroup)|將群組插入到清單檢視控制項中。|
+|[CListCtrl::插入群組排序](#insertgroupsorted)|將指定的群組插入有序的組清單中。|
+|[CListCtrl::插入項目](#insertitem)|在清單檢視控制項中插入新項。|
+|[CListCtrl::插入馬克希特測試](#insertmarkhittest)|檢索最接近指定點的插入點。|
+|[CListCtrl:是否啟用了群檢視](#isgroupviewenabled)|確定是否為清單檢視控制項啟用組檢視。|
+|[CListCtrl:是可分割的](#isitemvisible)|指示當前清單檢視控制項中的指定項是否可見。|
+|[CListctrl:mapIDToindex](#mapidtoindex)|將當前清單檢視控制項中項的唯一 ID 映射到索引。|
+|[CListctrl::映射索引TOID](#mapindextoid)|將當前清單檢視控制項中的項目索引映射到唯一 ID。|
+|[CListCtrl:: 移動群組](#movegroup)|移動指定的組。|
+|[CListctrl::移動專案群組](#moveitemtogroup)|將指定的組移到列表檢視控制項指定基於零的索引。|
+|[CListCtrl::重繪項目](#redrawitems)|強制清單檢視控制項重新繪製一系列項。|
+|[CListCtrl:: 刪除所有群組](#removeallgroups)|從清單檢視控制項中移除所有組。|
+|[CListCtrl::刪除群組](#removegroup)|從清單檢視控制項中移除指定的群組。|
+|[CListCtrl::滾動](#scroll)|滾動清單檢視控制件的內容。|
+|[CListCtrl::SetBkColor](#setbkcolor)|設定清單檢視控制項的背景顏色。|
+|[CListCtrl::SetBkImage](#setbkimage)|設置清單檢視控制項的當前背景影像。|
+|[CListCtrl::設定回撥遮罩](#setcallbackmask)|設置清單檢視控制件的回調掩碼。|
+|[CListCtrl::設定檢查](#setcheck)|設置與專案關聯的狀態圖像的當前顯示狀態。|
+|[CListCtrl::設定欄](#setcolumn)|設置清單檢視列的屬性。|
+|[CListCtrl::設定欄陣陣列](#setcolumnorderarray)|設置清單檢視控制件的列順序(從左至右)。|
+|[CListCtrl::設定欄寬](#setcolumnwidth)|更改報表檢視或清單檢視中列的寬度。|
+|[CListCtrl::設定延伸樣式](#setextendedstyle)|設置清單檢視控制項的目前擴展樣式。|
+|[CListCtrl::SetGroupInfo](#setgroupinfo)|設定清單檢視控制件的指定組的資訊。|
+|[CListCtrl::設定組指標](#setgroupmetrics)|設置清單檢視控制件的元件。|
+|[CListCtrl::設定HotCursor](#sethotcursor)|設置為清單檢視控制項啟用熱追蹤時使用的遊標。|
+|[CListCtrl::設定Hot專案](#sethotitem)|設置清單檢視控制件的當前熱項。|
+|[CListCtrl::設定懸停時間](#sethovertime)|設置清單檢視控制件的當前懸停時間。|
+|[CListCtrl::設定圖示](#seticonspacing)|設置清單檢視控制件中圖示之間的間距。|
+|[CListCtrl::設定影像清單](#setimagelist)|將影像清單分配給清單檢視控制項。|
+|[CListCtrl::設定資訊提示](#setinfotip)|設定工具提示文字。|
+|[CListCtrl::設定插入標記](#setinsertmark)|將插入點設置到定義的位置。|
+|[CListCtrl::設定插入標記顏色](#setinsertmarkcolor)|設置插入點的顏色。|
+|[CListCtrl:設定項目](#setitem)|設置清單檢視項的部分或全部屬性。|
+|[CListCtrl::設定項目計數](#setitemcount)|準備列表檢視控制項以添加大量項。|
+|[CListCtrl::設定項目計數Ex](#setitemcountex)|設定虛擬清單檢視控制項的項目計數。|
+|[CListCtrl::設定項目資料](#setitemdata)|設置項的應用程式特定值。|
+|[CListCtrl::設定項目索引狀態](#setitemindexstate)|設定當前清單檢視控制項中項的狀態。|
+|[CListCtrl::設定項目位置](#setitemposition)|將項目移至列表檢視控制檔中的指定位置。|
+|[CListCtrl::設定項目狀態](#setitemstate)|更改清單檢視控制項中項的狀態。|
+|[CListCtrl::設定項目文字](#setitemtext)|變更列表檢視項目或子項目的文字。|
+|[CListCtrl::設定大綱顏色](#setoutlinecolor)|設定清單檢視控制件的邊框顏色。|
+|[CListCtrl::設定選擇欄位](#setselectedcolumn)|設置清單檢視控制項的選定欄。|
+|[CListCtrl::設定選擇標記](#setselectionmark)|設置清單檢視控制件的選擇標記。|
+|[CListCtrl::設定文字BkColor](#settextbkcolor)|設定清單檢視控制項中文字的背景顏色。|
+|[CListCtrl::設定文字顏色](#settextcolor)|設定清單檢視控制項的文字顏色。|
+|[CListCtrl::SetTileInfo](#settileinfo)|設置清單檢視控制件的磁貼的資訊。|
+|[CListCtrl::SetTileViewInfo](#settileviewinfo)|設定清單檢視控制檔在磁貼檢視中使用的資訊。|
+|[CListCtrl::設定工具提示](#settooltips)|設定清單檢視控制項將用於顯示工具提示的工具提示控制項。|
+|[CListCtrl::SetView](#setview)|設置清單檢視控制件的檢視。|
+|[CListCtrl::設定工作區域](#setworkareas)|設定圖示可以在清單檢視控制項中顯示的區域。|
+|[CListCtrl::排序組](#sortgroups)|使用使用者定義的函數對列表檢視控制件的組進行排序。|
+|[CListCtrl::排序專案](#sortitems)|使用應用程式定義的比較函數對列表檢視項進行排序。|
+|[CListCtrl::排序專案Ex](#sortitemsex)|使用應用程式定義的比較函數對列表檢視項進行排序。|
+|[CListCtrl::子項目命中測試](#subitemhittest)|確定哪個清單檢視項(如果有)位於給定位置。|
+|[CListCtrl::更新](#update)|強制控件重新繪製指定的項。|
 
 ## <a name="remarks"></a>備註
 
-除了 [圖示] 和 [標籤] 之外，每個專案都可以在圖示和標籤右邊的資料行中顯示資訊。 這個控制項（因此 `CListCtrl` 類別）僅適用于在 Windows 95/98 和 Windows NT 3.51 版和更新版本下執行的程式。
+除了圖示和標籤之外,每個專案都可以在圖示和標籤右側的列中顯示資訊。 此控制項(因此該`CListCtrl`類別)僅適用於在 Windows 95/98 和 Windows NT 版本 3.51 及更高版本下運行的程式。
 
-以下是 `CListCtrl` 類別的簡要總覽。 如需詳細的概念性討論，請參閱[使用 CListCtrl](../../mfc/using-clistctrl.md)和[控制項](../../mfc/controls-mfc.md)。
+以下是`CListCtrl`該類的簡要概述。 有關詳細的概念討論,請參閱[使用 CListCtrl](../../mfc/using-clistctrl.md)和[控制項](../../mfc/controls-mfc.md)。
 
 ## <a name="views"></a>檢視
 
-清單視圖控制項可以用四種不同的方式來顯示其內容，稱為「views」。
+清單視圖控件可以通過四種不同的方式顯示其內容,稱為"視圖"。
 
-- 圖示視圖
+- 圖示檢視
 
-   每個專案都會顯示為完整大小的圖示（32 x 32 圖元），其下方會加上標籤。 使用者可以將專案拖曳至 [清單] 視圖視窗中的任何位置。
+   每個項目都顯示為全尺寸圖示(32 x 32 圖元),下方有一個標籤。 用戶可以將專案拖動到清單檢視視窗中的任何位置。
 
-- 小型圖示視圖
+- 小圖示檢視
 
-   每個專案都會顯示為小圖示（16 x 16 圖元），且標籤位於其右邊。 使用者可以將專案拖曳至 [清單] 視圖視窗中的任何位置。
+   每個項目都顯示為一個小圖示(16 x 16 像素),標籤在它的右側。 用戶可以將專案拖動到清單檢視視窗中的任何位置。
 
 - [清單] 檢視
 
-   每個專案都會顯示為一個小圖示，並在其右邊加上標籤。 專案會以資料行排列，而且無法拖曳至 [清單] 視圖視窗中的任何位置。
+   每個項目都顯示為一個小圖示,其右側有一個標籤。 專案以列方式排列,無法拖動到清單檢視視窗中的任何位置。
 
 - 報表檢視
 
-   每個專案都會出現在自己的行中，而其他資訊則會排列在右邊的欄位中。 最左邊的資料行包含小型圖示和標籤，而後續的資料行則包含應用程式所指定的子標題。 內嵌的標題控制項（類別[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)）會執行這些資料行。 如需報表檢視中標題控制項和資料行的詳細資訊，請參閱[使用 CListCtrl：將資料行加入至控制項（報表檢視）](../../mfc/adding-columns-to-the-control-report-view.md)。
+   每個專案都出現在自己的行上,其他資訊排列在右側的列中。 最左邊的列包含小圖示和標籤,後續列包含應用程式指定的子項。 嵌入的標頭控制件 (類[CHeaderCtrl)](../../mfc/reference/cheaderctrl-class.md)實現這些列。 有關報表檢視中的標頭控制件和列的詳細資訊,請參閱[使用 CListCtrl:向控制項添加列(報表檢視)。](../../mfc/adding-columns-to-the-control-report-view.md)
 
-控制項目前清單視圖的樣式會決定目前的視圖。 如需這些樣式和其使用方式的詳細資訊，請參閱[使用 CListCtrl：變更清單控制項樣式](../../mfc/changing-list-control-styles.md)。
+控制項目前清單檢視的樣式確定目前檢視。 有關這些樣式及其用法的詳細資訊,請參閱使用[CListCtrl:更改清單控制項樣式](../../mfc/changing-list-control-styles.md)。
 
-## <a name="extended-styles"></a>延伸樣式
+## <a name="extended-styles"></a>擴充樣式
 
-除了標準清單樣式以外，類別 `CListCtrl` 支援一組大型的擴充樣式，提供豐富的功能。 這項功能的一些範例包括：
+除了標準清單樣式外,類`CListCtrl`還支援大量擴展樣式,提供豐富的功能。 此功能的一些範例包括:
 
-- 暫留選取範圍
+- 暫停選擇
 
-   啟用時，可在游標停留在一段特定時間的專案上時，允許自動選取專案。
+   啟用後,當游標在專案上保留一段時間時,允許自動選擇項。
 
-- 虛擬清單視圖
+- 虛擬清單檢視
 
-   啟用時，可讓控制項支援最多 DWORD 專案。 藉由將管理專案資料的額外負荷放在應用程式上，即可達成此目的。 除了專案選取和焦點資訊以外，所有專案資訊都必須由應用程式管理。 如需詳細資訊，請參閱[使用 CListCtrl：虛擬清單控制項](../../mfc/virtual-list-controls.md)。
+   啟用後,允許控件最多支援 DWORD 項。 這可以通過將管理項數據的開銷放在應用程式上來。 除項目選擇和焦點資訊外,所有專案資訊必須由應用程式管理。 有關詳細資訊,請參閱使用[CListCtrl:虛擬清單控制件](../../mfc/virtual-list-controls.md)。
 
-- 單鍵啟用和按兩次啟動
+- 一鍵與雙擊啟動
 
-   啟用時，可讓您進行熱追蹤（專案文字的自動反白顯示），以及一或兩次按一下醒目提示專案的啟用。
+   啟用後,允許熱跟蹤(專案文本的自動突出顯示)和突出顯示項的一次或兩次單擊啟動。
 
-- 拖放資料行順序
+- 拖放列順序
 
-   啟用時，可讓您在清單視圖控制項中，資料行的拖放重新排列順序。 僅適用于報表檢視。
+   啟用後,允許在清單檢視控制項中拖放重新排序列。 僅在報表視圖中可用。
 
-如需使用這些新擴充樣式的詳細資訊，請參閱[使用 CListCtrl：變更清單控制項樣式](../../mfc/changing-list-control-styles.md)。
+有關使用這些新的擴充樣式的資訊,請參考[CListCtrl:變更清單控制元件樣式](../../mfc/changing-list-control-styles.md)。
 
-## <a name="items-and-subitems"></a>專案和子項
+## <a name="items-and-subitems"></a>專案與子項目
 
-清單視圖控制項中的每個專案都包含一個圖示（來自影像清單）、一個標籤、一個目前的狀態，以及一個應用程式定義的值（稱為「專案資料」）。 一個或多個子專案也可以與每個專案相關聯。 「子專案」是一種字串，在報表檢視中，可以顯示在專案圖示和標籤右邊的資料行中。 清單視圖控制項中的所有專案都必須有相同數目的子項。
+清單檢視控制件中的每個項都由圖示(從圖像清單中)、標籤、當前狀態和應用程式定義值(稱為"項數據")組成。 也可以與每個項目關聯一個或多個子項。 "子項"是一個字串,在報表視圖中,可以在項圖示和標籤右側的列中顯示。 清單檢視控制項中的所有項目必須具有相同的子項數。
 
-類別 `CListCtrl` 提供數個函式來插入、刪除、尋找和修改這些專案。 如需詳細資訊，請參閱[CListCtrl：： GetItem](#getitem)、 [CListCtrl：： InsertItem](#insertitem)和[CListCtrl：： FindItem](#finditem)、[將專案新增至控制項](../adding-items-to-the-control.md)，以及[在清單控制項中進行滾動、排列、排序和尋找](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。
+類別`CListCtrl`提供了多個用於插入、刪除、尋找和修改這些專案的功能。 有關詳細資訊,請參閱[CListCtrl::取得專案](#getitem)[、CListCtrl::插入專案](#insertitem),和[CListCtrl:尋找專案](#finditem),[將專案加入到控制項](../adding-items-to-the-control.md),並在[清單控制項中捲動、排列、排序和尋找](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。
 
-根據預設，清單視圖控制項會負責儲存專案的圖示和文字屬性。 不過，除了這些專案類型以外，類別 `CListCtrl` 支援「回呼專案」。 「回呼專案」是一種清單視圖專案，應用程式（而不是控制項）會儲存文字、圖示或兩者。 回呼遮罩是用來指定應用程式所提供的專案屬性（文字和/或圖示）。 如果應用程式使用回呼專案，它必須能夠視需要提供文字和/或圖示屬性。 當您的應用程式已經維護部分資訊時，回呼專案會很有説明。 如需詳細資訊，請參閱[使用 CListCtrl：回呼專案和回呼遮罩](../callback-items-and-the-callback-mask.md)。
+預設情況下,清單檢視控制項負責儲存項的圖示和文本屬性。 但是,除了這些項類型之外,類`CListCtrl`還支援"回調項"。 "回檔項"是應用程式(而不是控制項)儲存文本、圖示或兩者的清單視圖項。 回調遮罩遮罩用於指定應用程式提供的項目屬性(文本和/或圖示)。 如果應用程式使用回調項,它必須能夠按需提供文本和/或圖示屬性。 當應用程式已維護某些此資訊時,回調項非常有用。 有關詳細資訊,請參閱使用[CListCtrl:回檔項目和回檔遮罩](../callback-items-and-the-callback-mask.md)。
 
 ## <a name="image-lists"></a>影像清單
 
-清單視圖專案的圖示、標題專案影像和應用程式定義的狀態會包含在數個影像清單中（由類別[CImageList](cimagelist-class.md)實作為），您可以建立並指派給清單視圖控制項。 每個清單視圖控制項最多可以有四種不同類型的影像清單：
+清單檢視項的圖示、標題項圖像和應用程式定義狀態包含在多個影像清單中(由類[CImageList](cimagelist-class.md)實現),您創建這些列表檢視項並將其分配給清單檢視控制項。 每個清單檢視控制項最多可以有四種不同類型的影像清單:
 
 - 大圖示
 
-   用於完整大小圖示的圖示視圖中。
+   在全尺寸圖示的圖示檢視中使用。
 
 - 小圖示
 
-   用於圖示視圖中所用圖示較小版本的小型圖示、清單和報表檢視。
+   在圖示檢視中使用的較小版本的圖示的小圖示、清單和報表視圖中使用。
 
-- 應用程式定義的狀態
+- 應用程式定義狀態
 
-   包含狀態影像，會顯示在專案圖示旁，以指示應用程式定義的狀態。
+   包含狀態圖像,這些圖像顯示在項的圖示旁邊,以指示應用程式定義的狀態。
 
 - 標頭項目
 
-   用於報表檢視中，顯示在每個標題控制項專案中的小型影像。
+   在報表檢視中用於出現在每個標頭控制項中的小圖像。
 
-根據預設，清單視圖控制項會終結在終結時指派給它的影像清單;不過，開發人員可以自訂此行為，方法是在不再使用每個影像清單時予以終結，如同應用程式所決定。 如需詳細資訊，請參閱[使用 CListCtrl：清單專案和影像清單](../list-items-and-image-lists.md)。
+預設情況下,清單檢視控制項元件銷毀分配給它的圖像清單;因此,清單檢視控制項會銷毀分配給它的圖像清單。但是,開發人員可以通過在不再使用每個映射清單時(由應用程式確定)來自定義此行為。 有關詳細資訊,請參閱使用[CListCtrl:清單項目和影像清單](../list-items-and-image-lists.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](cobject-class.md)
 
@@ -516,9 +516,9 @@ class CListCtrl : public CWnd
 
 **標頭：** afxcmn.h
 
-## <a name="approximateviewrect"></a>CListCtrl：： ApproximateViewRect
+## <a name="clistctrlapproximateviewrect"></a><a name="approximateviewrect"></a>CListCtrl::近似檢視重新
 
-決定顯示清單視圖控制項之專案所需的寬度和高度。
+確定顯示列表檢視控制項項所需的寬度和高度。
 
 ```
 CSize ApproximateViewRect(
@@ -528,23 +528,23 @@ CSize ApproximateViewRect(
 
 ### <a name="parameters"></a>參數
 
-*sz*<br/>
-控制項的建議維度（以圖元為單位）。 如果未指定維度，架構會使用控制項目前的寬度或高度值。
+*深圳*<br/>
+控件的擬議尺寸(以像素為單位)。 如果未指定尺寸,則框架將使用控制項的當前寬度或高度值。
 
-*iCount*<br/>
-要顯示在控制項中的專案數。 如果此參數為-1，則架構會使用目前在控制項中的總專案數。
+*i. Count*<br/>
+要在控件中顯示的項數。 如果此參數為 -1,則框架將使用控制項中當前項的總數。
 
 ### <a name="return-value"></a>傳回值
 
-`CSize` 物件，其中包含顯示專案所需的大約寬度和高度（以圖元為單位）。
+包含`CSize`以像素為單位顯示專案所需的近似寬度和高度的物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_ApproximateViewRect](/windows/win32/api/commctrl/nf-commctrl-listview_approximateviewrect)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_ApproximateViewRect](/windows/win32/api/commctrl/nf-commctrl-listview_approximateviewrect)的行為,如 Windows SDK 中所述。
 
-## <a name="arrange"></a>CListCtrl：：排列
+## <a name="clistctrlarrange"></a><a name="arrange"></a>CListCtrl:排列
 
-重新置放圖示視圖中的專案，使其對齊方格。
+重新定位圖示檢視中的專案,使其在網格上對齊。
 
 ```
 BOOL Arrange(UINT nCode);
@@ -552,16 +552,16 @@ BOOL Arrange(UINT nCode);
 
 ### <a name="parameters"></a>參數
 
-*nCode*<br/>
-指定專案的對齊樣式。 它可能是下列其中一個值：
+*n代碼*<br/>
+指定項的對齊樣式。 它可能是下列其中一個值：
 
-- LVA_ALIGNLEFT 會沿著視窗的左邊緣對齊專案。
+- LVA_ALIGNLEFT沿視窗左邊緣對齊專案。
 
-- LVA_ALIGNTOP 會沿著視窗的上邊緣對齊專案。
+- LVA_ALIGNTOP沿視窗的上邊緣對齊專案。
 
-- LVA_DEFAULT 根據清單視圖的目前對齊樣式（預設值）對齊專案。
+- LVA_DEFAULT根據清單檢視的當前對齊樣式(預設值)對齊項。
 
-- LVA_SNAPTOGRID 將所有圖示貼齊最接近的格線位置。
+- LVA_SNAPTOGRID將所有圖示捕捉到最近的網格位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -569,7 +569,7 @@ BOOL Arrange(UINT nCode);
 
 ### <a name="remarks"></a>備註
 
-*NCode*參數會指定對齊樣式。
+*nCode*參數指定對齊樣式。
 
 ### <a name="example"></a>範例
 
@@ -580,19 +580,19 @@ BOOL Arrange(UINT nCode);
     m_myListCtrl.Arrange(LVA_ALIGNTOP);
 ```
 
-## <a name="canceleditlabel"></a>CListCtrl：： CancelEditLabel
+## <a name="clistctrlcanceleditlabel"></a><a name="canceleditlabel"></a>CListCtrl:: 取消編輯標籤
 
-取消專案文字編輯作業。
+取消項目文字編輯操作。
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_CANCELEDITLABEL](/windows/win32/Controls/lvm-canceleditlabel)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_CANCELEDITLABEL](/windows/win32/Controls/lvm-canceleditlabel)消息的功能,如 Windows SDK 中所述。
 
-## <a name="clistctrl"></a>CListCtrl：： CListCtrl
+## <a name="clistctrlclistctrl"></a><a name="clistctrl"></a>CListCtrl::CListCtrl
 
 建構 `CListCtrl` 物件。
 
@@ -600,9 +600,9 @@ void CancelEditLabel();
 CListCtrl();
 ```
 
-## <a name="create"></a>CListCtrl：： Create
+## <a name="clistctrlcreate"></a><a name="create"></a>CListCtrl:建立
 
-建立清單控制項，並將它附加至 `CListCtrl` 物件。
+創建清單控制項並將其附加到`CListCtrl`物件。
 
 ```
 virtual BOOL Create(
@@ -615,13 +615,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定清單控制項的樣式。 將清單控制項樣式的任何組合套用至控制項。 如需這些樣式的完整清單，請參閱 Windows SDK 中的[清單視圖視窗樣式](/windows/win32/Controls/list-view-window-styles)。 使用[SetExtendedStyle](#setextendedstyle)設定控制項特定的擴充樣式。
+指定清單控制項樣式。 將清單控制樣式的任意組合應用於控制項。 有關這些樣式的完整清單,請參閱 Windows SDK 中的[清單檢視視窗樣式](/windows/win32/Controls/list-view-window-styles)。 使用[Set 擴充樣式](#setextendedstyle)設定特定於控制項的擴充樣式。
 
-*各種*<br/>
-指定清單控制項的大小和位置。 它可以是 `CRect` 物件或[矩形](/previous-versions/dd162897\(v=vs.85\))結構。
+*矩形*<br/>
+指定清單控制項大小和位置。 它可以是`CRect`物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
-*pParentWnd*<br/>
-指定清單控制項的父視窗，通常是 `CDialog`。 它不得為 NULL。
+*pparentwnd*<br/>
+指定清單控制檔的父視窗(通常為`CDialog`。 它不得為 NULL。
 
 *nID*<br/>
 指定清單控制項的識別碼。
@@ -632,9 +632,9 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-您可以使用兩個步驟來建立 `CListCtrl`。 首先，呼叫此函式，然後呼叫 `Create`，這會建立清單視圖控制項並將其附加至 `CListCtrl` 物件。
+在兩個步驟`CListCtrl`中構造 一個。 首先調用構造函數,然後調用`Create`,這將創建列表檢視控制項並將其附加到`CListCtrl`物件。
 
-若要將擴充的 Windows 樣式套用至清單控制項物件，請呼叫[CreateEx](#createex) ，而不是 `Create`。
+要將延伸的 Windows 樣式應用於清單控制件物件,請`Create`呼叫[CreateEx](#createex)而不是 。
 
 ### <a name="example"></a>範例
 
@@ -644,9 +644,9 @@ virtual BOOL Create(
         CRect(10,10,400,200), pParentWnd, IDD_MYLISTCTRL);
 ```
 
-## <a name="createex"></a>CListCtrl：： CreateEx
+## <a name="clistctrlcreateex"></a><a name="createex"></a>CListCtrl::建立Ex
 
-建立控制項（子視窗），並將它與 `CListCtrl` 物件產生關聯。
+創建控制項(子視窗),並將其與`CListCtrl`物件關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -660,19 +660,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定所要建立之控制項的延伸樣式。 如需擴充 Windows 樣式的清單，請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
+指定要創建的控制項的擴充樣式。 有關擴展 Windows 樣式的清單,請參閱 Windows SDK 中[創建 WindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-指定清單控制項的樣式。 將清單控制項樣式的任何組合套用至控制項。 如需這些樣式的完整清單，請參閱 Windows SDK 中的[清單視圖視窗樣式](/windows/win32/Controls/list-view-window-styles)。
+指定清單控制項樣式。 將清單控制樣式的任意組合應用於控制項。 有關這些樣式的完整清單,請參閱 Windows SDK 中的[清單檢視視窗樣式](/windows/win32/Controls/list-view-window-styles)。
 
-*各種*<br/>
-[矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考，描述要建立之視窗的大小和位置，以*pParentWnd*的用戶端座標表示。
+*矩形*<br/>
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
-*pParentWnd*<br/>
-做為控制項父系之視窗的指標。
+*pparentwnd*<br/>
+指向控件的父視窗的指標。
 
 *nID*<br/>
-控制項的子視窗識別碼。
+控制項的子視窗 ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -680,13 +680,13 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用 `CreateEx` 而非[Create](#create)來套用擴充的 windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。
+使用`CreateEx`而不是[「創建](#create)」來應用擴展的 Windows 樣式,該樣式由 Windows 擴充樣式前言**WS_EX_** 指定。
 
-`CreateEx` 會使用*dwExStyle*所指定的擴充 Windows 樣式來建立控制項。 若要設定控制項特定的擴充樣式，請呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用 `CreateEx` 將這類樣式設定為 WS_EX_CONTEXTHELP，但使用 `SetExtendedStyle` 將這類樣式設定為 LVS_EX_FULLROWSELECT。 如需詳細資訊，請參閱 Windows SDK 中的[擴充清單視圖樣式](/windows/win32/Controls/extended-list-view-styles)一文中所述的樣式。
+`CreateEx`使用*dwExStyle*指定的擴展 Windows 樣式創建控制項。 要設定特定於控制器的擴充樣式,請呼叫[Set 延伸樣式](#setextendedstyle)。 例如,用於`CreateEx`將此類樣式設置為WS_EX_CONTEXTHELP,但用於`SetExtendedStyle`將此類樣式設置為LVS_EX_FULLROWSELECT。 有關詳細資訊,請參閱 Windows SDK 中的[「擴展列表檢視樣式](/windows/win32/Controls/extended-list-view-styles)」一文中描述的樣式。
 
-## <a name="createdragimage"></a>CListCtrl：： CreateDragImage
+## <a name="clistctrlcreatedragimage"></a><a name="createdragimage"></a>CListCtrl:: 建立拖動影像
 
-為*nItem*所指定的專案建立拖曳影像清單。
+為*nItem*指定的項目建立拖動影像清單。
 
 ```
 CImageList* CreateDragImage(
@@ -697,18 +697,18 @@ CImageList* CreateDragImage(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要建立其拖曳影像清單之專案的索引。
+要創建其拖動圖像清單的項索引。
 
 *lpPoint*<br/>
-[點](/previous-versions/dd162805\(v=vs.85\))結構的位址，會接收影像左上角的起始位置（以視圖座標表示）。
+在檢視座標中接收影像左上角的初始位置的[POINT](/windows/win32/api/windef/ns-windef-point)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為拖曳影像清單的指標;否則為 Null。
+如果成功,指向拖動圖像清單的指標;否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-`CImageList` 物件是永久的，您必須在完成時將它刪除。 例如：
+該`CImageList`對像是永久性的,您必須在完成該物件後將其刪除。 例如：
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -718,9 +718,9 @@ CImageList* CreateDragImage(
         delete pImageList;
 ```
 
-## <a name="deleteallitems"></a>CListCtrl：:D eleteAllItems
+## <a name="clistctrldeleteallitems"></a><a name="deleteallitems"></a>CListCtrl::DeleteAll專案
 
-刪除清單視圖控制項中的所有專案。
+從清單檢視控制項中刪除所有項。
 
 ```
 BOOL DeleteAllItems();
@@ -738,9 +738,9 @@ BOOL DeleteAllItems();
     ASSERT(m_myListCtrl.GetItemCount() == 0);
 ```
 
-## <a name="deletecolumn"></a>CListCtrl：:D eleteColumn
+## <a name="clistctrldeletecolumn"></a><a name="deletecolumn"></a>CListCtrl::DeleteColumn
 
-刪除清單視圖控制項中的資料行。
+從清單檢視控制項中移除欄位。
 
 ```
 BOOL DeleteColumn(int nCol);
@@ -749,7 +749,7 @@ BOOL DeleteColumn(int nCol);
 ### <a name="parameters"></a>參數
 
 *nCol*<br/>
-要刪除之資料行的索引。
+要刪除的列的索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -767,9 +767,9 @@ BOOL DeleteColumn(int nCol);
         }
 ```
 
-## <a name="deleteitem"></a>CListCtrl：:D eleteItem
+## <a name="clistctrldeleteitem"></a><a name="deleteitem"></a>CListCtrl::Delete專案
 
-從清單視圖控制項中刪除專案。
+從清單檢視控制項中刪除項。
 
 ```
 BOOL DeleteItem(int nItem);
@@ -778,7 +778,7 @@ BOOL DeleteItem(int nItem);
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-指定要刪除之專案的索引。
+指定要刪除的項目的索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -796,9 +796,9 @@ BOOL DeleteItem(int nItem);
         }
 ```
 
-## <a name="drawitem"></a>CListCtrl：:D rawItem
+## <a name="clistctrldrawitem"></a><a name="drawitem"></a>CListCtrl::D原始專案
 
-當主控描繪清單視圖控制項的視覺外觀變更時，由架構呼叫。
+當擁有者繪製列表檢視控制件的可視方面發生更改時,由框架調用。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -806,20 +806,20 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="parameters"></a>參數
 
-*lpDrawItemStruct*<br/>
-`DRAWITEMSTRUCT` 結構的長指標，其中包含所需繪圖類型的相關資訊。
+*lpDraw 專案已結*<br/>
+指向包含所需繪圖類型`DRAWITEMSTRUCT`資訊的結構的長指標。
 
 ### <a name="remarks"></a>備註
 
-[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)結構的 `itemAction` 成員會定義要執行的繪圖動作。
+`itemAction` [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)結構的成員定義要執行的繪圖操作。
 
-根據預設，此成員函式不會執行任何工作。 覆寫這個成員函式，以針對主控描繪 `CListCtrl` 物件來執行繪製。
+默認情況下,此成員函數不執行任何操作。 重寫此成員函數以擁有擁有者繪製物件的繪圖`CListCtrl`。
 
-在此成員函式終止之前，應用程式應該還原為*lpDrawItemStruct*中提供的顯示內容所選取的所有圖形裝置介面（GDI）物件。
+應用程式應還原在此成員函數終止之前為*lpDrawItemStruct*中提供的顯示上下文選擇的所有圖形設備介面 (GDI) 物件。
 
-## <a name="editlabel"></a>CListCtrl：： EditLabel
+## <a name="clistctrleditlabel"></a><a name="editlabel"></a>CListCtrl::編輯標籤
 
-開始就地編輯專案的文字。
+開始就地編輯專案的文本。
 
 ```
 CEdit* EditLabel(int nItem);
@@ -828,17 +828,17 @@ CEdit* EditLabel(int nItem);
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要編輯之清單視圖專案的索引。
+要編輯的清單檢視項的索引。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為用來編輯專案文字之 `CEdit` 物件的指標;否則為 Null。
+如果成功,則指向用於編輯`CEdit`專案文本的物件的指標;如果成功,則指向用於編輯專案文本的物件。否則 NULL。
 
 ### <a name="remarks"></a>備註
 
-具有 [LVS_EDITLABELS] 視窗樣式的清單視圖控制項可讓使用者就地編輯專案標籤。 使用者按一下具有焦點之專案的標籤，開始編輯。
+具有LVS_EDITLABELS視窗樣式的清單檢視控制項使用戶能夠就地編輯項目標籤。 用戶通過單擊具有焦點的項目的標籤開始編輯。
 
-使用此函式可開始就地編輯指定的清單視圖專案文字。
+使用此函數開始就地編輯指定的清單檢視項的文本。
 
 ### <a name="example"></a>範例
 
@@ -852,9 +852,9 @@ CEdit* EditLabel(int nItem);
         ASSERT(pmyEdit != NULL);
 ```
 
-## <a name="enablegroupview"></a>CListCtrl：： EnableGroupView
+## <a name="clistctrlenablegroupview"></a><a name="enablegroupview"></a>CListCtrl::啟用群組檢視
 
-啟用或停用清單視圖控制項中的專案是否顯示為群組。
+啟用或停用清單檢視控制項中的項目是否顯示為群組。
 
 ```
 LRESULT EnableGroupView(BOOL fEnable);
@@ -862,26 +862,26 @@ LRESULT EnableGroupView(BOOL fEnable);
 
 ### <a name="parameters"></a>參數
 
-*fEnable*<br/>
-指出是否要啟用 listview 控制項來分組顯示的專案。 TRUE 表示啟用群組;FALSE 表示停用它。
+*f 開啟*<br/>
+指示是否啟用清單檢視控制項對顯示的項目進行分組。 TRUE 以啟用分組;FALSE 禁用它。
 
 ### <a name="return-value"></a>傳回值
 
 傳回下列其中一值：
 
-- **0**將清單視圖專案顯示為群組的功能已啟用或停用。
+- **0**已啟用或禁用將列表檢視項顯示為組的能力。
 
-- **1**控制項的狀態已成功變更。
+- **1**控制項的狀態已成功更改。
 
-- **-1**作業失敗。
+- **-1**操作失敗。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_ENABLEGROUPVIEW](/windows/win32/Controls/lvm-enablegroupview)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_ENABLEGROUPVIEW](/windows/win32/Controls/lvm-enablegroupview)消息的功能,如 Windows SDK 中所述。
 
-## <a name="ensurevisible"></a>CListCtrl：： EnsureVisible
+## <a name="clistctrlensurevisible"></a><a name="ensurevisible"></a>CListCtrl::確保可見
 
-確保清單視圖專案至少是部分可見的。
+確保清單檢視項至少部分可見。
 
 ```
 BOOL EnsureVisible(
@@ -892,10 +892,10 @@ BOOL EnsureVisible(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要顯示之清單視圖專案的索引。
+要可見的清單檢視項的索引。
 
-*bPartialOK*<br/>
-指定是否可接受部分可見度。
+*b 部份OK*<br/>
+指定部分可見性是否可以接受。
 
 ### <a name="return-value"></a>傳回值
 
@@ -903,7 +903,7 @@ BOOL EnsureVisible(
 
 ### <a name="remarks"></a>備註
 
-必要時，會滾動清單視圖控制項。 如果*bPartialOK*參數不是零，則如果專案是部分可見的，就不會發生任何滾動。
+如有必要,將滾動清單視圖控件。 如果*bPartialOK*參數是非零,則如果專案部分可見,則不會發生滾動。
 
 ### <a name="example"></a>範例
 
@@ -914,9 +914,9 @@ BOOL EnsureVisible(
             m_myListCtrl.EnsureVisible(nCount-1, FALSE);
 ```
 
-## <a name="finditem"></a>CListCtrl：： FindItem
+## <a name="clistctrlfinditem"></a><a name="finditem"></a>CListCtrl::尋找專案
 
-搜尋具有指定特性的清單視圖專案。
+搜尋具有指定特徵的列表檢視項。
 
 ```
 int FindItem(
@@ -927,18 +927,18 @@ int FindItem(
 ### <a name="parameters"></a>參數
 
 *pFindInfo*<br/>
-[LVFINDINFO](/windows/win32/api/commctrl/ns-commctrl-lvfindinfow)結構的指標，其中包含要搜尋之專案的相關資訊。
+指向[LVFINDINFO](/windows/win32/api/commctrl/ns-commctrl-lvfindinfow)結構的指標,其中包含有關要搜索的項的資訊。
 
 *N 開始*<br/>
-要開始搜尋的專案索引，或-1 表示從開頭開始。 如果*n 開始*不等於-1， *n 開始*中的專案會從搜尋中排除。
+要開始搜索的項的索引,或從開頭開始的 -1。 如果*nStart*不等於 -1,則從搜索中排除*nStart*處的專案。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為專案的索引，否則為-1。
+如果成功或 -1,則項的索引。
 
 ### <a name="remarks"></a>備註
 
-*PFindInfo*參數會指向 `LVFINDINFO` 結構，其中包含用來搜尋清單視圖專案的資訊。
+*pFindInfo*參數指向一`LVFINDINFO`個 結構,該結構包含用於搜索列表檢視項的資訊。
 
 ### <a name="example"></a>範例
 
@@ -956,9 +956,9 @@ int FindItem(
         }
 ```
 
-## <a name="getbkcolor"></a>CListCtrl：： GetBkColor
+## <a name="clistctrlgetbkcolor"></a><a name="getbkcolor"></a>CListCtrl:getBkColor
 
-抓取清單視圖控制項的背景色彩。
+檢索清單檢視控制項的背景顏色。
 
 ```
 COLORREF GetBkColor() const;
@@ -966,15 +966,15 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-32位值，用來指定 RGB 色彩。
+用於指定 RGB 顏色的 32 位值。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： SetBkColor](#setbkcolor)的範例。
+請參考[CListCtrl 的範例:setBkColor](#setbkcolor)。
 
-## <a name="getbkimage"></a>CListCtrl：： GetBkImage
+## <a name="clistctrlgetbkimage"></a><a name="getbkimage"></a>CListCtrl::GetBkImage
 
-抓取清單視圖控制項的目前背景影像。
+檢索清單檢視控制項的當前背景影像。
 
 ```
 BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
@@ -982,16 +982,16 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 
 ### <a name="parameters"></a>參數
 
-*plvbkImage*<br/>
-`LVBKIMAGE` 結構的指標，其中包含清單視圖的目前背景影像。
+*plvbk影像*<br/>
+指向包含清單檢視`LVBKIMAGE`的當前背景圖像的結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回非零，否則會傳回零。
+如果成功,則返回非零,否則返回零。
 
 ### <a name="remarks"></a>備註
 
-這個方法會依照 Windows SDK 中的說明，執行 Win32 宏的行為[ListView_GetBkImage](/windows/win32/api/commctrl/nf-commctrl-listview_getbkimage)。
+此方法實現 Win32 宏[ListView_GetBkImage](/windows/win32/api/commctrl/nf-commctrl-listview_getbkimage)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -1008,9 +1008,9 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
         }
 ```
 
-## <a name="getcallbackmask"></a>CListCtrl：： GetCallbackMask
+## <a name="clistctrlgetcallbackmask"></a><a name="getcallbackmask"></a>CListCtrl::取得回撥掩碼
 
-抓取清單視圖控制項的回呼遮罩。
+檢索清單檢視控件的回調掩碼。
 
 ```
 UINT GetCallbackMask() const;
@@ -1018,19 +1018,19 @@ UINT GetCallbackMask() const;
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項的回呼遮罩。
+清單視圖控制件的回調掩碼。
 
 ### <a name="remarks"></a>備註
 
-「回呼專案」是一種清單視圖專案，應用程式（而不是控制項）會儲存文字、圖示或兩者。 雖然清單視圖控制項可以為您儲存這些屬性，但如果您的應用程式已經維護這部分資訊，您可能會想要使用回呼專案。 回呼遮罩會指定應用程式所維護的專案狀態位，而且它會套用至整個控制項，而不是特定專案。 回呼遮罩預設為零，表示控制項正在追蹤所有項目的狀態。 如果應用程式使用回呼專案，或指定非零的回呼遮罩，它必須能夠視需要提供清單視圖專案屬性。
+"回檔項"是應用程式(而不是控制項)儲存文本、圖示或兩者的清單視圖項。 儘管清單檢視控制項可以為您儲存這些屬性,但如果應用程式已維護某些此資訊,則可能需要使用回調項。 回調遮罩指定應用程式維護的項狀態位,它適用於整個控制項,而不是特定項。 回呼遮罩預設為零，表示控制項正在追蹤所有項目的狀態。 如果應用程式使用回調項或指定非零回調掩碼,則必須能夠按需提供列表視圖項屬性。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： SetCallbackMask](#setcallbackmask)的範例。
+請參考[CListCtrl 的範例::設定回撥遮罩](#setcallbackmask)。
 
-## <a name="getcheck"></a>CListCtrl：： GetCheck
+## <a name="clistctrlgetcheck"></a><a name="getcheck"></a>CListCtrl:抓取檢查
 
-抓取與專案相關聯之狀態影像的目前顯示狀態。
+檢索與項目關聯的狀態圖像的當前顯示狀態。
 
 ```
 BOOL GetCheck(int nItem) const;
@@ -1039,23 +1039,23 @@ BOOL GetCheck(int nItem) const;
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-清單控制項專案之以零為基底的索引。
+清單控制項項的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-如果已選取專案，則為非零，否則為0。
+如果選中專案,則非零,否則為 0。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetCheckState](/windows/win32/api/commctrl/nf-commctrl-listview_getcheckstate)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_GetCheckState](/windows/win32/api/commctrl/nf-commctrl-listview_getcheckstate)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： SetCheck](#setcheck)的範例。
+請參考[CListCtrl 的範例:SetCheck](#setcheck)。
 
-## <a name="getcolumn"></a>CListCtrl：： GetColumn
+## <a name="clistctrlgetcolumn"></a><a name="getcolumn"></a>CListCtrl:取得欄位
 
-抓取清單視圖控制項的資料行屬性。
+檢索清單檢視控制件列的屬性。
 
 ```
 BOOL GetColumn(
@@ -1066,10 +1066,10 @@ BOOL GetColumn(
 ### <a name="parameters"></a>參數
 
 *nCol*<br/>
-要抓取其屬性之資料行的索引。
+要檢索其屬性的列的索引。
 
 *pColumn*<br/>
-[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)結構的位址，指定用來抓取和接收資料行相關資訊的資訊。 `mask` 成員會指定要取得的資料行屬性。 如果 `mask` 成員指定 LVCF_TEXT 值，則 `pszText` 成員必須包含接收專案文字的緩衝區位址，而且 `cchTextMax` 成員必須指定緩衝區的大小。
+[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)結構的位址,用於指定要檢索和接收有關列的資訊的資訊。 成員`mask`指定要檢索的列屬性。 如果`mask`成員指定LVCF_TEXT值`pszText`, 則成員必須包含接收項文本的緩衝區的`cchTextMax`位址, 並且成員必須指定緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1077,7 +1077,7 @@ BOOL GetColumn(
 
 ### <a name="remarks"></a>備註
 
-`LVCOLUMN` 結構包含報表檢視中資料行的相關資訊。
+結構`LVCOLUMN`包含有關報表視圖中的列的資訊。
 
 ### <a name="example"></a>範例
 
@@ -1094,9 +1094,9 @@ BOOL GetColumn(
         }
 ```
 
-## <a name="getcolumnorderarray"></a>CListCtrl：： GetColumnOrderArray
+## <a name="clistctrlgetcolumnorderarray"></a><a name="getcolumnorderarray"></a>CListCtrl::取得列柱順序陣列
 
-抓取清單視圖控制項的資料行順序（由左到右）。
+檢索清單檢視控制件的列順序(從左至右)。
 
 ```
 BOOL GetColumnOrderArray(
@@ -1106,11 +1106,11 @@ BOOL GetColumnOrderArray(
 
 ### <a name="parameters"></a>參數
 
-*piArray*<br/>
-緩衝區的指標，將包含清單視圖控制項中資料行的索引值。 緩衝區必須夠大，才能包含清單視圖控制項中的總數據行數。
+*皮拉裡*<br/>
+指向緩衝區的指標,該緩衝區將包含列表檢視控制項中列的索引值。 緩衝區必須足夠大,以包含列表視圖控制件中的列總數。
 
-*iCount*<br/>
-清單視圖控制項中的資料行數目。 如果此參數為-1，則架構會自動抓取資料行數目。
+*i. Count*<br/>
+清單檢視控制項中的欄位。 如果此參數為 -1,則框架會自動檢索列數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1118,7 +1118,7 @@ BOOL GetColumnOrderArray(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_getcolumnorderarray)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_GetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_getcolumnorderarray)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -1148,9 +1148,9 @@ BOOL GetColumnOrderArray(
         }
 ```
 
-## <a name="getcolumnwidth"></a>CListCtrl：： GetColumnWidth
+## <a name="clistctrlgetcolumnwidth"></a><a name="getcolumnwidth"></a>CListCtrl:取得縱桿寬度
 
-抓取報表檢視或清單視圖中資料行的寬度。
+檢索報表檢視或清單檢視中列的寬度。
 
 ```
 int GetColumnWidth(int nCol) const;
@@ -1159,11 +1159,11 @@ int GetColumnWidth(int nCol) const;
 ### <a name="parameters"></a>參數
 
 *nCol*<br/>
-指定要抓取其寬度之資料行的索引。
+指定要檢索其寬度的列的索引。
 
 ### <a name="return-value"></a>傳回值
 
-*NCol*所指定之資料行的寬度（以圖元為單位）。
+*nCol*指定的列的寬度(以像素為單位)。
 
 ### <a name="example"></a>範例
 
@@ -1173,9 +1173,9 @@ int GetColumnWidth(int nCol) const;
         m_myListCtrl.SetColumnWidth(1, 20 + nWidth);
 ```
 
-## <a name="getcountperpage"></a>CListCtrl：： GetCountPerPage
+## <a name="clistctrlgetcountperpage"></a><a name="getcountperpage"></a>CListCtrl::取得計數Perpage
 
-計算在清單視圖或報表檢視中，清單視圖控制項的可見區域中可以垂直調整的專案數。
+計算在清單檢視或報表檢視中時可垂直適合清單檢視控制元件可見區域的項目。
 
 ```
 int GetCountPerPage() const;
@@ -1183,15 +1183,15 @@ int GetCountPerPage() const;
 
 ### <a name="return-value"></a>傳回值
 
-在清單視圖或報表檢視中，清單視圖控制項的可見區域中可垂直調整的專案數。
+在清單檢視或報表檢視中時,可以垂直適合列表檢視控制項的可見區域的項目。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetTopIndex](#gettopindex)的範例。
+請參考[CListCtrl 的範例::getTopIndex](#gettopindex)。
 
-## <a name="geteditcontrol"></a>CListCtrl：： GetEditControl
+## <a name="clistctrlgeteditcontrol"></a><a name="geteditcontrol"></a>CListCtrl:取得編輯控制
 
-抓取編輯控制項的控制碼，用來編輯清單視圖專案的文字。
+檢索用於編輯列表檢視項文字的編輯控制項的句柄。
 
 ```
 CEdit* GetEditControl() const;
@@ -1199,7 +1199,7 @@ CEdit* GetEditControl() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為用來編輯專案文字之[CEdit](cedit-class.md)物件的指標;否則為 Null。
+如果成功,則指向用於編輯專案文本的 CEdit 物件的指標;如果成功,則指向[CEdit](cedit-class.md)物件。否則 NULL。
 
 ### <a name="example"></a>範例
 
@@ -1216,9 +1216,9 @@ CEdit* GetEditControl() const;
         }
 ```
 
-## <a name="getemptytext"></a>CListCtrl：： GetEmptyText
+## <a name="clistctrlgetemptytext"></a><a name="getemptytext"></a>CListCtrl:取得空文字
 
-如果目前的清單視圖控制項是空的，則抓取要顯示的字串。
+檢索要顯示的字串,如果當前列表視圖控制項為空。
 
 ```
 CString GetEmptyText() const;
@@ -1226,15 +1226,15 @@ CString GetEmptyText() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CString](../../atl-mfc-shared/reference/cstringt-class.md) ，其中包含控制項是空的時要顯示的文字。
+包含控制項為空時要顯示的文本的[CString。](../../atl-mfc-shared/reference/cstringt-class.md)
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_GETEMPTYTEXT](/windows/win32/Controls/lvm-getemptytext)訊息，如 Windows SDK 所述。
+此方法發送[LVM_GETEMPTYTEXT](/windows/win32/Controls/lvm-getemptytext)訊息,這在 Windows SDK 中介紹。
 
-## <a name="getextendedstyle"></a>CListCtrl：： GetExtendedStyle
+## <a name="clistctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CListCtrl::取得式延伸樣式
 
-抓取清單視圖控制項的目前擴充樣式。
+檢索清單檢視控制項的目前擴展樣式。
 
 ```
 DWORD GetExtendedStyle();
@@ -1242,19 +1242,19 @@ DWORD GetExtendedStyle();
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項目前使用的擴充樣式組合。 如需這些擴充樣式的描述性清單，請參閱 Windows SDK 中的[擴充清單視圖樣式](/windows/win32/Controls/extended-list-view-styles)一文。
+清單檢視控制項目前正在使用的擴充樣式的組合。 有關這些擴展樣式的描述性清單,請參閱 Windows SDK 中的[擴展清單檢視樣式](/windows/win32/Controls/extended-list-view-styles)一文。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle)Win32 宏的行為。
+此成員函數實現 Win32 宏[的行為,ListView_GetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle),如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： SetExtendedStyle](#setextendedstyle)的範例。
+請參考[CListCtrl 的範例:設定延伸樣式](#setextendedstyle)。
 
-## <a name="getfirstselecteditemposition"></a>CListCtrl：： GetFirstSelectedItemPosition
+## <a name="clistctrlgetfirstselecteditemposition"></a><a name="getfirstselecteditemposition"></a>CListCtrl:取得第一選擇項目位置
 
-取得清單視圖控制項中第一個選取專案的位置。
+獲取清單檢視控制項中第一個選定項目的位置。
 
 ```
 POSITION GetFirstSelectedItemPosition() const;
@@ -1262,11 +1262,11 @@ POSITION GetFirstSelectedItemPosition() const;
 
 ### <a name="return-value"></a>傳回值
 
-可用於反復專案或物件指標抓取的位置值;如果未選取任何專案，則為 Null。
+可用於反覆運算或對象指標檢索的定位值;如果未選擇任何項目,則為 NULL。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例將示範此函式的使用方式。
+以下代碼示例演示了此函數的用法。
 
 ```cpp
         POSITION pos = m_myListCtrl.GetFirstSelectedItemPosition();
@@ -1285,9 +1285,9 @@ POSITION GetFirstSelectedItemPosition() const;
         }
 ```
 
-## <a name="getfocusedgroup"></a>CListCtrl：： GetFocusedGroup
+## <a name="clistctrlgetfocusedgroup"></a><a name="getfocusedgroup"></a>CListCtrl:取得焦點群組
 
-抓取目前清單視圖控制項中具有鍵盤焦點的群組。
+檢索目前清單檢視控制項中具有鍵盤焦點的組。
 
 ```
 int GetFocusedGroup() const;
@@ -1295,15 +1295,15 @@ int GetFocusedGroup() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果有這類群組，則為其狀態為 LVGS_FOCUSED 之群組的索引;否則為-1。
+其狀態為LVGS_FOCUSED的組的索引(如果有這樣的組);否則,-1。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup)訊息，如 Windows SDK 所述。 如需詳細資訊，請參閱[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構之 `state` 成員的 LVGS_FOCUSED 值。
+此方法發送[LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup)訊息,這在 Windows SDK 中介紹。 有關詳細資訊,請參閱`state`[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構成員LVGS_FOCUSED值。
 
-## <a name="getgroupcount"></a>CListCtrl：： GetGroupCount
+## <a name="clistctrlgetgroupcount"></a><a name="getgroupcount"></a>CListCtrl::取得群數
 
-抓取目前清單視圖控制項中的群組數目。
+檢索目前清單檢視控制項中的元件中的元件。
 
 ```
 int GetGroupCount()const;
@@ -1311,15 +1311,15 @@ int GetGroupCount()const;
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項中的群組數目。
+清單檢視控制件中的元件中陣。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount)訊息，如 Windows SDK--> 中所述。
+此方法發送[LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount)消息,這在 Windows SDK > 中描述。
 
-## <a name="getgroupinfo"></a>CListCtrl：： GetGroupInfo
+## <a name="clistctrlgetgroupinfo"></a><a name="getgroupinfo"></a>CListCtrl:取得群資訊
 
-取得清單視圖控制項之指定群組的資訊。
+獲取清單檢視控制件的指定組的資訊。
 
 ```
 int GetGroupInfo(
@@ -1330,22 +1330,22 @@ int GetGroupInfo(
 ### <a name="parameters"></a>參數
 
 *iGroupId*<br/>
-要抓取其資訊之群組的識別碼。
+要檢索其資訊的組的標識符。
 
 *pgrp*<br/>
-[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)的指標，其中包含指定之群組的資訊。
+指向[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)的指標,其中包含指定組的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回群組的識別碼，否則傳回-1。
+如果成功,則返回組的 ID,否則返回 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETGROUPINFO](/windows/win32/Controls/lvm-getgroupinfo)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETGROUPINFO](/windows/win32/Controls/lvm-getgroupinfo)消息的功能,如 Windows SDK 中所述。
 
-## <a name="getgroupinfobyindex"></a>CListCtrl：： GetGroupInfoByIndex
+## <a name="clistctrlgetgroupinfobyindex"></a><a name="getgroupinfobyindex"></a>CListCtrl:取得群資訊索引
 
-抓取目前清單視圖控制項中指定之群組的相關資訊。
+檢索目前清單檢視控制項中指定組的資訊。
 
 ```
 BOOL GetGroupInfoByIndex(
@@ -1357,20 +1357,20 @@ BOOL GetGroupInfoByIndex(
 
 |參數|描述|
 |---------------|-----------------|
-|*iIndex*|在以零為基底的群組索引。|
-|*pGroup*|脫銷[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的指標，接收*iIndex*參數所指定之群組的相關資訊。<br /><br /> 呼叫端負責初始化[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的成員。 將 `cbSize` 成員設定為結構的大小，以及 `mask` 成員的旗標，以指定要取得的資訊。|
+|*iIndex*|[在]組的零索引。|
+|*p組*|[出]指向接收*iIndex*參數指定的組資訊的[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的指標。<br /><br /> 調用者負責初始化[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的成員。 將`cbSize`成員設置為結構的大小,並將`mask`成員的標誌設置為指定要檢索的資訊。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex)訊息，如 Windows SDK--> 中所述。
+此方法發送[LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex)訊息,該消息在 Windows SDK 中描述 ,>。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前清單視圖控制項的變數 `m_listCtrl`。 下一個範例中會使用此變數。
+以下代碼範`m_listCtrl`例定義用於存取目前列表檢視 控制項的變數 。 下一個範例中會使用此變數。
 
 ```cpp
 public:
@@ -1380,7 +1380,7 @@ public:
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `GetGroupInfoByIndex` 方法。 在這個程式碼範例的先前章節中，我們建立了清單視圖控制項，它會在報表檢視中顯示兩個標題為 "ClientID" 和 "年級" 的資料行。 下列程式碼範例會抓取索引為0的群組相關資訊（如果有這類群組存在的話）。
+以下代碼範例展示該方法`GetGroupInfoByIndex`。 在此代碼示例的較早部分中,我們創建了一個列表視圖控件,該控件在報表視圖中顯示兩列標題為"ClientID"和"分級"。 以下代碼示例檢索有關索引為 0 的組的資訊(如果存在此類組)。
 
 ```cpp
     // GetGroupInfoByIndex
@@ -1409,26 +1409,26 @@ public:
     }
 ```
 
-## <a name="getgroupmetrics"></a>CListCtrl：： GetGroupMetrics
+## <a name="clistctrlgetgroupmetrics"></a><a name="getgroupmetrics"></a>CListCtrl:取得集團指標
 
-抓取群組的計量。
+檢索組的指標。
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*pGroupMetrics*<br/>
-包含群組計量資訊之[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)的指標。
+*P 組元指標*<br/>
+指向包含組指標資訊的[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETGROUPMETRICS](/windows/win32/Controls/lvm-getgroupmetrics)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETGROUPMETRICS](/windows/win32/Controls/lvm-getgroupmetrics)消息的功能,如 Windows SDK 中所述。
 
-## <a name="getgrouprect"></a>CListCtrl：： GetGroupRect
+## <a name="clistctrlgetgrouprect"></a><a name="getgrouprect"></a>CListCtrl::取得群組
 
-抓取目前清單視圖控制項中指定群組的周框。
+檢索目前清單檢視控制項中指定群組的邊界矩形。
 
 ```
 BOOL GetGroupRect(
@@ -1441,23 +1441,23 @@ BOOL GetGroupRect(
 
 |參數|描述|
 |---------------|-----------------|
-|*iGroupId*|在指定群組。|
-|*lpRect*|[in、out][RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標。 如果此方法成功，結構會接收*iGroupId*所指定之群組的矩形座標。|
-|*iCoords*|在指定要抓取的矩形座標。 使用下列其中一個值：<br /><br /> -LVGGR_GROUP-（預設值）整個展開群組的座標。<br />-LVGGR_HEADER-僅限標頭（折迭的群組）的座標。<br />-LVGGR_SUBSETLINK-僅限子集連結的座標（標記子集）。|
+|*iGroupId*|[在]指定群組。|
+|*lpRect*|[進出]指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。 如果此方法成功,則結構將接收*iGroupId*指定的組的矩形座標。|
+|*iCoords*|[在]指定要檢索的矩形座標。 使用以下值之一:<br /><br /> - LVGGR_GROUP - (預設)整個展開的組的座標。<br />- LVGGR_HEADER - 僅座標的標頭(摺疊組)。<br />- LVGGR_SUBSETLINK - 僅座標子集連結(標記子集)。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫端負責配置*pRect*參數所指向的[矩形](/previous-versions/dd162897\(v=vs.85\))結構。
+調用方負責分配*pRect*參數指向的[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
-這個方法會傳送[LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect)訊息，如 Windows SDK 所述。
+此方法發送[LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前清單視圖控制項的變數 `m_listCtrl`。 下一個範例中會使用此變數。
+以下代碼範`m_listCtrl`例定義用於存取目前列表檢視 控制項的變數 。 下一個範例中會使用此變數。
 
 ```cpp
 public:
@@ -1467,7 +1467,7 @@ public:
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `GetGroupRect` 方法。 在這個程式碼範例的先前章節中，我們建立了清單視圖控制項，它會在報表檢視中顯示兩個標題為 "ClientID" 和 "年級" 的資料行。 下列程式碼範例會在其索引為0的群組周圍繪製3D 矩形（如果有這類群組存在的話）。
+以下代碼範例展示該方法`GetGroupRect`。 在此代碼示例的較早部分中,我們創建了一個列表視圖控件,該控件在報表視圖中顯示兩列標題為"ClientID"和"分級"。 以下代碼示例圍繞索引為 0 的組(如果存在)繪製一個 3D 矩形。
 
 ```cpp
     // GetGroupRect
@@ -1484,9 +1484,9 @@ public:
     }
 ```
 
-## <a name="getgroupstate"></a>CListCtrl：： GetGroupState
+## <a name="clistctrlgetgroupstate"></a><a name="getgroupstate"></a>CListCtrl::取得群組狀態
 
-抓取目前清單視圖控制項中指定群組的狀態。
+檢索目前清單檢視控制項中指定組的狀態。
 
 ```
 UINT GetGroupState(
@@ -1498,22 +1498,22 @@ UINT GetGroupState(
 
 |參數|描述|
 |---------------|-----------------|
-|*iGroupId*|在以零為基底的群組索引。|
-|*dwMask*|在遮罩，指定要針對指定的群組抓取的狀態值。 如需詳細資訊，請參閱[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的 `mask` 成員。|
+|*iGroupId*|[在]組的零索引。|
+|*dwMask*|[在]指定要指定組檢索的狀態值的掩碼。 有關詳細資訊,`mask`請參閱[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的成員。|
 
 ### <a name="return-value"></a>傳回值
 
-指定群組的要求狀態，如果找不到群組，則為0。
+指定組的請求狀態,如果找不到組,則為 0。
 
 ### <a name="remarks"></a>備註
 
-傳回值是*dwMask*參數上位 and 運算的結果，以及代表目前清單視圖控制項的[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構之 `state` 成員的值。
+返回值是對*dwMask*參數的位和操作的結果,以及表示當前列表視圖控制`state`項的[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構成員的值。
 
-這個方法會傳送[LVM_GETGROUPSTATE](/windows/win32/Controls/lvm-getgroupstate)訊息，如 Windows SDK 所述。 如需詳細資訊，請參閱[ListView_GetGroupState](/windows/win32/api/commctrl/nf-commctrl-listview_getgroupstate)宏。
+此方法發送[LVM_GETGROUPSTATE](/windows/win32/Controls/lvm-getgroupstate)消息,這在 Windows SDK 中介紹。 有關詳細資訊,請參閱[ListView_GetGroupState](/windows/win32/api/commctrl/nf-commctrl-listview_getgroupstate)宏。
 
-## <a name="getheaderctrl"></a>CListCtrl：： GetHeaderCtrl
+## <a name="clistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CListCtrl::取得頭Ctrl
 
-抓取清單視圖控制項的標頭控制項。
+檢索清單檢視控制項的標頭控制項。
 
 ```
 CHeaderCtrl* GetHeaderCtrl();
@@ -1521,19 +1521,19 @@ CHeaderCtrl* GetHeaderCtrl();
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項所使用之標頭控制項的指標。
+指向標題控制項的指標,由清單檢視控制項使用。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetHeader](/windows/win32/api/commctrl/nf-commctrl-listview_getheader)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_GetHeader](/windows/win32/api/commctrl/nf-commctrl-listview_getheader)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetColumnOrderArray](#getcolumnorderarray)的範例。
+請參考[CListCtrl 的範例::抓取欄位順序](#getcolumnorderarray)。
 
-## <a name="gethotcursor"></a>CListCtrl：： GetHotCursor
+## <a name="clistctrlgethotcursor"></a><a name="gethotcursor"></a>CListCtrl:獲取霍伯庫伯
 
-當啟用清單視圖控制項的熱追蹤時，抓取使用的資料指標。
+檢索為清單檢視控制項啟用熱追蹤時使用的游標。
 
 ```
 HCURSOR GetHotCursor();
@@ -1541,11 +1541,11 @@ HCURSOR GetHotCursor();
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項正在使用之目前作用中資料指標資源的控制碼。
+清單檢視控制項正在使用的目前熱遊標資源的句柄。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_gethotcursor)Win32 宏的行為。 當游標通過任何清單視圖專案時，就會出現作用中游標，只有在啟用 [暫留選取] 時才會顯示。 藉由設定 LVS_EX_TRACKSELECT 擴充樣式來啟用暫留選取。
+此成員函數實現 Win32 宏[ListView_GetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_gethotcursor)的行為,如 Windows SDK 中所述。 僅當游標經過任何列表視圖項時,才會顯示熱游標,僅在啟用懸停選擇時才可見。 通過設置擴展樣式LVS_EX_TRACKSELECT啟用懸停選擇。
 
 ### <a name="example"></a>範例
 
@@ -1556,9 +1556,9 @@ HCURSOR GetHotCursor();
         ASSERT(m_myListCtrl.GetHotCursor() == hCursor);
 ```
 
-## <a name="gethotitem"></a>CListCtrl：： GetHotItem
+## <a name="clistctrlgethotitem"></a><a name="gethotitem"></a>CListCtrl:取得 Hot 專案
 
-抓取目前游標下的清單視圖專案。
+檢索當前在游標下的列表視圖項。
 
 ```
 int GetHotItem();
@@ -1566,13 +1566,13 @@ int GetHotItem();
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項的目前作用中專案的索引。
+清單檢視控制項的目前熱項的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_gethotitem)Win32 宏的行為。 當啟用熱追蹤（和暫留選取）時，熱專案會定義為目前選取的專案。
+此成員函數實現 Win32 宏[ListView_GetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_gethotitem)的行為,如 Windows SDK 中所述。 啟用熱跟蹤(和懸停選擇)時,熱項定義為當前選定的項。
 
-如果已啟用熱追蹤，當使用者在清單視圖專案上暫停時，專案標籤會自動反白顯示，而不使用滑鼠按鍵。
+如果啟用了熱跟蹤,當使用者暫停列表視圖項時,則項目標籤將自動突出顯示,而無需使用滑鼠按鈕。
 
 ### <a name="example"></a>範例
 
@@ -1583,9 +1583,9 @@ int GetHotItem();
         m_myListCtrl.SetHotItem(0);
 ```
 
-## <a name="gethovertime"></a>CListCtrl：： GetHoverTime
+## <a name="clistctrlgethovertime"></a><a name="gethovertime"></a>CListCtrl::取得懸停時間
 
-抓取清單視圖控制項的目前停留時間。
+檢索清單檢視控制項的當前懸停時間。
 
 ```
 DWORD GetHoverTime() const;
@@ -1593,11 +1593,11 @@ DWORD GetHoverTime() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回延遲（以毫秒為單位），滑鼠游標必須停留在專案上，才能選取它。 如果傳回值為-1，則暫留時間是預設的暫留時間。
+返回延遲(以毫秒為單位),滑鼠游標必須在選擇之前將延遲懸停在專案上。 如果返回值為 -1,則懸停時間是預設懸停時間。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_gethovertime)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_GetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_gethovertime)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -1608,9 +1608,9 @@ DWORD GetHoverTime() const;
             m_myListCtrl.SetHoverTime(1000);
 ```
 
-## <a name="getimagelist"></a>CListCtrl：： GetImageList
+## <a name="clistctrlgetimagelist"></a><a name="getimagelist"></a>CListCtrl:抓取圖片清單
 
-抓取用於繪製清單視圖專案之影像清單的控制碼。
+檢索用於繪製清單檢視項的圖像清單的句柄。
 
 ```
 CImageList* GetImageList(int nImageList) const;
@@ -1618,18 +1618,18 @@ CImageList* GetImageList(int nImageList) const;
 
 ### <a name="parameters"></a>參數
 
-*nImageList*<br/>
-值，指定要取出的影像清單。 其可以是下列其中一個值：
+*n 影像清單*<br/>
+指定要檢索的影像清單的值。 其可以是下列其中一個值：
 
-- 具有大型圖示的 LVSIL_NORMAL 影像清單。
+- LVSIL_NORMAL具有大圖示的圖像清單。
 
-- 具有小圖示的 LVSIL_SMALL 影像清單。
+- LVSIL_SMALL帶有小圖標的圖像清單。
 
-- 具有狀態影像的 LVSIL_STATE 影像清單。
+- LVSIL_STATE圖像清單與狀態圖像。
 
 ### <a name="return-value"></a>傳回值
 
-用於繪製清單視圖專案之影像清單的指標。
+指向用於繪製清單檢視項的圖像清單的指標。
 
 ### <a name="example"></a>範例
 
@@ -1639,9 +1639,9 @@ CImageList* GetImageList(int nImageList) const;
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
-## <a name="getinsertmark"></a>CListCtrl：： GetInsertMark
+## <a name="clistctrlgetinsertmark"></a><a name="getinsertmark"></a>CListCtrl::取得插入標記
 
-抓取插入標記的目前位置。
+檢索插入標記的當前位置。
 
 ```
 BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
@@ -1650,19 +1650,19 @@ BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ### <a name="parameters"></a>參數
 
 *plvim*<br/>
-[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)結構的指標，其中包含插入標記的資訊。
+指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)結構的指標,其中包含插入標記的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE，否則傳回 FALSE。 如果 `LVINSERTMARK` 結構之 `cbSize` 成員中的大小不等於結構的實際大小，則會傳回 FALSE。
+如果成功,則返回 TRUE,否則返回 FALSE。 如果`cbSize``LVINSERTMARK`結構成員中的大小不等於結構的實際大小,則返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETINSERTMARK](/windows/win32/Controls/lvm-getinsertmark)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETINSERTMARK](/windows/win32/Controls/lvm-getinsertmark)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="getinsertmarkcolor"></a>CListCtrl：： GetInsertMarkColor
+## <a name="clistctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CListCtrl::取得插入標記顏色
 
-抓取插入標記的目前色彩。
+檢索插入標記的當前顏色。
 
 ```
 COLORREF GetInsertMarkColor() const;
@@ -1670,15 +1670,15 @@ COLORREF GetInsertMarkColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回包含插入點色彩的[COLORREF](/windows/win32/gdi/colorref)結構。
+返回包含插入點顏色的[COLORREF](/windows/win32/gdi/colorref)結構。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETINSERTMARKCOLOR](/windows/win32/Controls/lvm-getinsertmarkcolor)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETINSERTMARKCOLOR](/windows/win32/Controls/lvm-getinsertmarkcolor)消息的功能,如 Windows SDK 中所述。
 
-## <a name="getinsertmarkrect"></a>CListCtrl：： GetInsertMarkRect
+## <a name="clistctrlgetinsertmarkrect"></a><a name="getinsertmarkrect"></a>CListCtrl::取得插入標記
 
-抓取插入點的邊界矩形。
+檢索綁定插入點的矩形。
 
 ```
 int GetInsertMarkRect(LPRECT pRect) const;
@@ -1686,24 +1686,24 @@ int GetInsertMarkRect(LPRECT pRect) const;
 
 ### <a name="parameters"></a>參數
 
-*pRect*<br/>
-`RECT` 結構的指標，其中包含限定插入點之矩形的座標。
+*普雷克*<br/>
+指向`RECT`包含綁定插入點的矩形座標的結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
 傳回下列其中一值：
 
-- **0**找不到插入點。
+- **0**未找到插入點。
 
-- 找到**1**個插入點。
+- **找到 1**插入點。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETINSERTMARKRECT](/windows/win32/Controls/lvm-getinsertmarkrect)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETINSERTMARKRECT](/windows/win32/Controls/lvm-getinsertmarkrect)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="getitem"></a>CListCtrl：： GetItem
+## <a name="clistctrlgetitem"></a><a name="getitem"></a>CListCtrl:取得項目
 
-抓取部分或所有清單視圖專案的屬性。
+檢索清單檢視項的部分或全部屬性。
 
 ```
 BOOL GetItem(LVITEM* pItem) const;
@@ -1712,7 +1712,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-接收專案屬性之[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的指標。
+指向接收項屬性的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1720,11 +1720,11 @@ BOOL GetItem(LVITEM* pItem) const;
 
 ### <a name="remarks"></a>備註
 
-`LVITEM` 結構會指定或接收清單視圖專案的屬性。
+結構`LVITEM`指定或接收清單檢視項的屬性。
 
-## <a name="getitemcount"></a>CListCtrl：： GetItemCount
+## <a name="clistctrlgetitemcount"></a><a name="getitemcount"></a>CListCtrl::取得項目計數
 
-抓取清單視圖控制項中的專案數。
+檢索清單檢視控制項中的項目數。
 
 ```
 int GetItemCount() const;
@@ -1732,15 +1732,15 @@ int GetItemCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項中的專案數。
+清單檢視控制項中的項目數。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：:D eleteitem](#deleteitem)的範例。
+請參閱[CListCtrl::Delete 專案](#deleteitem)的範例。
 
-## <a name="getitemdata"></a>CListCtrl：： GetItemData
+## <a name="clistctrlgetitemdata"></a><a name="getitemdata"></a>CListCtrl:抓取項目資料
 
-抓取與 `nItem`所指定之專案相關聯的32位應用程式特定值。
+檢索與 指定`nItem`的項關聯的 32 位元應用程式特定值。
 
 ```
 DWORD_PTR GetItemData(int nItem) const;
@@ -1749,15 +1749,15 @@ DWORD_PTR GetItemData(int nItem) const;
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要抓取其資料之清單專案的索引。
+要檢索其數據的清單項的索引。
 
 ### <a name="return-value"></a>傳回值
 
-與指定專案相關聯的32位應用程式特定值。
+與指定項關聯的 32 位元應用程式特定值。
 
 ### <a name="remarks"></a>備註
 
-這個值是[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的 `lParam` 成員，如 Windows SDK 所述。
+此值是`lParam` [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的成員,如 Windows SDK 中所述
 
 ### <a name="example"></a>範例
 
@@ -1772,9 +1772,9 @@ DWORD_PTR GetItemData(int nItem) const;
     }
 ```
 
-## <a name="getitemindexrect"></a>CListCtrl：： GetItemIndexRect
+## <a name="clistctrlgetitemindexrect"></a><a name="getitemindexrect"></a>CListCtrl::取得項目索引重新完成
 
-抓取目前清單視圖控制項中所有或部分子工作的周框。
+檢索當前清單檢視控制項中全部或部分子項的邊界矩形。
 
 ```
 BOOL GetItemIndexRect(
@@ -1788,22 +1788,22 @@ BOOL GetItemIndexRect(
 
 |參數|描述|
 |---------------|-----------------|
-|*pItemIndex*|在子專案父項之[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標。<br /><br /> 呼叫端負責配置和設定[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的成員。 此參數不可以是 NULL。|
-|*iColumn*|在控制項中資料行以零為基底的索引。|
-|*rectType*|在會抓取周框矩形的清單視圖子下拉式部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS-傳回整個子工作的周框，包括圖示和標籤。<br /><br /> LVIR_ICON-傳回子工作圖示或小圖示的周框。<br /><br /> LVIR_LABEL-傳回子項文字的周框。|
-|*pRect*|脫銷[RECT](/previous-versions/dd162897\(v=vs.85\))結構的指標，可接收子工作周框的相關資訊。<br /><br /> 呼叫端負責配置[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 此參數不可以是 NULL。|
+|*pItem索引*|[在]指向子項的父項的[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標。<br /><br /> 調用方負責分配和設置[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的成員。 此參數不可以是 NULL。|
+|*iColumn*|[在]控件中列的零基索引。|
+|*整流型態*|[在]檢索邊界矩形的列表檢視子項的一部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS - 返回整個子項的邊界矩形,包括圖示和標籤。<br /><br /> LVIR_ICON - 返回圖示的邊界矩形或子項的小圖示。<br /><br /> LVIR_LABEL - 返回子項文字的邊界矩形。|
+|*普雷克*|[出]指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標,該結構接收有關子項的邊界矩形的資訊。<br /><br /> 調用方負責分配[RECT](/windows/win32/api/windef/ns-windef-rect)結構。 此參數不可以是 NULL。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_GETITEMINDEXRECT](/windows/win32/Controls/lvm-getitemindexrect)訊息，如 Windows SDK 所述。 如需詳細資訊，請參閱[ListView_GetItemIndexRect 宏](/windows/win32/api/commctrl/nf-commctrl-listview_getitemindexrect)。
+此方法發送[LVM_GETITEMINDEXRECT](/windows/win32/Controls/lvm-getitemindexrect)消息,這在 Windows SDK 中介紹。 有關詳細資訊,請參閱[ListView_GetItemIndexRect宏](/windows/win32/api/commctrl/nf-commctrl-listview_getitemindexrect)。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前清單視圖控制項的變數 `m_listCtrl`。 下一個範例中會使用此變數。
+以下代碼範`m_listCtrl`例定義用於存取目前列表檢視 控制項的變數 。 下一個範例中會使用此變數。
 
 ```cpp
 public:
@@ -1813,7 +1813,7 @@ public:
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `GetGroupRect` 方法。 在輸入此程式碼範例之前，我們建立了一個清單視圖控制項，它會在報表檢視中顯示兩個標題為 "ClientID" 和 "年級" 的資料行。 下列程式碼範例會在兩個數據行中繪製第二個子項周圍的3D 矩形。
+以下代碼範例展示該方法`GetGroupRect`。 在輸入此代碼示例之前,我們創建了一個列表視圖控件,在報表視圖中顯示兩列標題為"用戶端ID"和"分級"。 以下代碼示例圍繞兩列中的第二個子項繪製一個 3D 矩形。
 
 ```cpp
     // GetItemIndexRect
@@ -1829,9 +1829,9 @@ public:
     m_listCtrl.GetDC()->Draw3dRect( &rect, RGB(255, 0, 0), RGB(255, 0, 0) );
 ```
 
-## <a name="getitemposition"></a>CListCtrl：： GetItemPosition
+## <a name="clistctrlgetitemposition"></a><a name="getitemposition"></a>CListCtrl:取得項目位置
 
-抓取清單視圖專案的位置。
+檢索清單檢視項的位置。
 
 ```
 BOOL GetItemPosition(
@@ -1842,10 +1842,10 @@ BOOL GetItemPosition(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要取出其位置之專案的索引。
+要檢索其位置的項的索引。
 
 *lpPoint*<br/>
-[點](/previous-versions/dd162805\(v=vs.85\))結構的位址，接收此專案左上角的位置，以視圖座標表示。
+在檢視座標中接收專案左上角位置的[POINT](/windows/win32/api/windef/ns-windef-point)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1867,9 +1867,9 @@ BOOL GetItemPosition(
         }
 ```
 
-## <a name="getitemrect"></a>CListCtrl：： GetItemRect
+## <a name="clistctrlgetitemrect"></a><a name="getitemrect"></a>CListCtrl::取得項目重新完成
 
-抓取目前視圖中所有或部分專案的周框。
+檢索當前檢視中全部或部分項的邊界矩形。
 
 ```
 BOOL GetItemRect(
@@ -1881,19 +1881,19 @@ BOOL GetItemRect(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要取出其位置之專案的索引。
+要檢索其位置的項的索引。
 
 *lpRect*<br/>
-接收周框之[RECT](/previous-versions/dd162897\(v=vs.85\))結構的位址。
+接收邊界矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)結構的位址。
 
-*nCode*<br/>
-要取出周框的清單視圖專案部分。 其可以是下列其中一個值：
+*n代碼*<br/>
+要為其檢索邊界矩形的列表視圖項的一部分。 其可以是下列其中一個值：
 
-- LVIR_BOUNDS 會傳回整個專案的周框，包括圖示和標籤。
+- LVIR_BOUNDS返回整個項目的邊界矩形,包括圖示和標籤。
 
-- LVIR_ICON 會傳回圖示或小圖示的周框。
+- LVIR_ICON返回圖示或小圖示的邊界矩形。
 
-- LVIR_LABEL 會傳回專案文字的周框。
+- LVIR_LABEL返回項目文本的邊界矩形。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1941,9 +1941,9 @@ void CListCtrlDlg::OnClick(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="getitemspacing"></a>CListCtrl：： GetItemSpacing
+## <a name="clistctrlgetitemspacing"></a><a name="getitemspacing"></a>CListCtrl:取得項目間距
 
-計算目前清單視圖控制項中專案之間的間距。
+計算目前清單檢視控制項中的項目之間的間距。
 
 ```
 BOOL GetItemSpacing(
@@ -1956,21 +1956,21 @@ BOOL GetItemSpacing(
 
 |參數|描述|
 |---------------|-----------------|
-|*fSmall*|在要取得其專案間距的視圖。 針對小型圖示視圖指定 TRUE，或針對圖示視圖指定 FALSE。|
-|*pnHorzSpacing*|脫銷包含專案之間的水準間距。|
-|*pnVertSpacing*|脫銷包含專案之間的垂直間距。|
+|*fSmall*|[在]查看要為其檢索專案間距的視圖。 為小圖示檢視指定 TRUE,為圖示檢視指定 FALSE。|
+|*pnHorzspacing*|[出]包含項之間的水準間距。|
+|*pnVertspacing*|[出]包含項之間的垂直間距。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_GETITEMSPACING](/windows/win32/Controls/lvm-getitemspacing)訊息，如 Windows SDK 所述。
+此方法發送[LVM_GETITEMSPACING](/windows/win32/Controls/lvm-getitemspacing)訊息,這在 Windows SDK 中介紹。
 
-## <a name="getitemstate"></a>CListCtrl：： GetItemState
+## <a name="clistctrlgetitemstate"></a><a name="getitemstate"></a>CListCtrl::取得項目狀態
 
-抓取清單視圖專案的狀態。
+檢索清單檢視項的狀態。
 
 ```
 UINT GetItemState(
@@ -1981,26 +1981,26 @@ UINT GetItemState(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要抓取其狀態之專案的索引。
+要檢索其狀態的項的索引。
 
 *nMask*<br/>
-遮罩，指定要傳回之專案的狀態旗標。
+蒙版指定要返回哪個項的狀態標誌。
 
 ### <a name="return-value"></a>傳回值
 
-指定之清單視圖專案的狀態旗標。
+指定清單檢視項目的狀態標誌。
 
 ### <a name="remarks"></a>備註
 
-專案的狀態是由[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的 `state` 成員指定，如 Windows SDK 所述。 當您指定或變更專案的狀態時，`stateMask` 成員會指定您想要變更的狀態位。
+專案的狀態由`state`[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的成員指定,如 Windows SDK 中所述。 指定或更改項目的狀態時,`stateMask`成員將指定要更改的狀態位。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetTopIndex](#gettopindex)的範例。
+請參考[CListCtrl 的範例::getTopIndex](#gettopindex)。
 
-## <a name="getitemtext"></a>CListCtrl：： GetItemText
+## <a name="clistctrlgetitemtext"></a><a name="getitemtext"></a>CListCtrl::取得項目文字
 
-抓取清單視圖專案或子項的文字。
+檢索清單檢視項或子項的文字。
 
 ```
 int GetItemText(
@@ -2017,30 +2017,30 @@ CString GetItemText(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要抓取其文字之專案的索引。
+要檢索其文本的項的索引。
 
-*nSubItem*<br/>
-指定要抓取其文字的子工作。
+*n 子項目*<br/>
+指定要檢索其文本的子項。
 
 *lpszText*<br/>
-要接收專案文字之字串的指標。
+指向要接收項文本的字串的指標。
 
 *nLen*<br/>
-*LpszText*所指向的緩衝區長度。
+*lpszText*指向的緩衝區的長度。
 
 ### <a name="return-value"></a>傳回值
 
-傳回的版本**int**會傳回抓取字串的長度。
+返回**int**的版本返回檢索的字串的長度。
 
-傳回 `CString` 的版本會傳回專案文字。
+返回的版本`CString`返回項文本。
 
 ### <a name="remarks"></a>備註
 
-如果*nSubItem*為零，則此函式會抓取專案標籤;如果*nSubItem*為非零值，則會抓取子工作的文字。 如需子引數的詳細資訊，請參閱 Windows SDK 中的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構討論。
+如果 nSubItem 為零,則此函數將檢索項標籤;如果*nSubItem*為零,則此函數將檢索物料標籤。如果*nSubItem*是非零,它將檢索子項的文本。 有關子項參數的詳細資訊,請參閱 Windows SDK 中有關[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的討論。
 
-## <a name="getnextitem"></a>CListCtrl：： GetNextItem
+## <a name="clistctrlgetnextitem"></a><a name="getnextitem"></a>CListCtrl::取得下一個專案
 
-搜尋具有指定之屬性的清單視圖專案，並將指定的關聯性帶給給定的專案。
+搜尋具有指定屬性且與給定項具有指定關係的列表檢視項。
 
 ```
 int GetNextItem(
@@ -2051,38 +2051,38 @@ int GetNextItem(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要開始搜尋的專案索引，或-1 以尋找符合指定旗標的第一個專案。 指定的專案本身已從搜尋中排除。
+要開始搜索的項的索引,或 -1 以查找與指定標誌匹配的第一個項。 指定的項本身從搜索中排除。
 
 *nFlags*<br/>
-所要求專案與指定專案的幾何關聯性，以及所要求專案的狀態。 幾何關係可以是下列其中一個值：
+請求項與指定項的幾何關係以及請求項的狀態。 幾何關係可以是以下值之一:
 
-- LVNI_ABOVE 搜尋位於指定專案上方的專案。
+- LVNI_ABOVE 搜索高於指定項的項。
 
-- LVNI_ALL 依索引搜尋後續專案（預設值）。
+- LVNI_ALL按索引(預設值)搜索後續項。
 
-- LVNI_BELOW 搜尋位於指定專案底下的專案。
+- LVNI_BELOW搜索指定項下方的項。
 
-- LVNI_TOLEFT 搜尋指定專案左側的專案。
+- LVNI_TOLEFT 在指定項的左側搜索項。
 
-- LVNI_TORIGHT 搜尋指定專案右邊的專案。
+- LVNI_TORIGHT 搜索指定項右側的項。
 
-此狀態可以是零，也可以是下列其中一個或多個值：
+狀態可以是零,也可以是以下一個或多個值:
 
-- LVNI_DROPHILITED 專案已設定 LVIS_DROPHILITED 狀態旗標。
+- LVNI_DROPHILITED 項已設置LVIS_DROPHILITED狀態標誌。
 
-- LVNI_FOCUSED 專案已設定 LVIS_FOCUSED 狀態旗標。
+- LVNI_FOCUSED 項已設置LVIS_FOCUSED狀態標誌。
 
-- LVNI_SELECTED 專案已設定 LVIS_SELECTED 狀態旗標。
+- LVNI_SELECTED 項已設置LVIS_SELECTED狀態標誌。
 
-如果專案未設定所有指定的狀態旗標，搜尋會繼續進行下一個專案。
+如果項未設置所有指定狀態標誌,則搜索將繼續執行下一個專案。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為下一個專案的索引，否則為-1。
+下一項的索引(如果成功)或 -1 否則。
 
-## <a name="getnextitemindex"></a>CListCtrl：： GetNextItemIndex
+## <a name="clistctrlgetnextitemindex"></a><a name="getnextitemindex"></a>CListCtrl::取得下一個項目索引
 
-抓取目前清單視圖控制項中，具有一組指定屬性的專案索引。
+檢索具有指定屬性集的當前列表檢視控制項中的項目的索引。
 
 ```
 BOOL GetNextItemIndex(
@@ -2094,22 +2094,22 @@ BOOL GetNextItemIndex(
 
 |參數|描述|
 |---------------|-----------------|
-|*pItemIndex*|[in、out][LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標，描述搜尋開始的專案，或-1，尋找符合*nFlags*參數中旗標的第一個專案。<br /><br /> 如果此方法成功，`LVITEMINDEX` 結構會描述搜尋找到的專案。|
-|*nFlags*|在旗標的位元組合（OR），指定如何執行搜尋。<br /><br /> 搜尋可以視目標專案的索引、狀態或外觀，或目標專案相對於*pItemIndex*參數所指定之專案的實體位置而定。 如需詳細資訊，請參閱[LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)訊息中的*flags*參數。|
+|*pItem索引*|[進出]指向描述搜尋開始項的[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標,或 -1 以尋找與*nFlags*參數中的標誌匹配的第一個項。<br /><br /> 如果此方法成功,則`LVITEMINDEX`結構將描述搜索找到的項。|
+|*nFlags*|[在]指定如何執行搜尋的標誌的位元群組 (OR)。<br /><br /> 搜索可以取決於目標項的索引、狀態或外觀,或者目標項相對於*pItemIndex*參數指定的項的物理位置。 有關詳細資訊,請參閱[LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)消息中*的標誌*參數。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫端負責配置和設定*pItemIndex*參數所指向之 `LVITEMINDEX` 結構的成員。
+呼叫者設定分配和設定*pItemIndex*參數`LVITEMINDEX`指向的結構成員。
 
-這個方法會傳送[LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)訊息，如 Windows SDK 所述。
+此方法發送[LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)消息,這在 Windows SDK 中介紹。
 
-## <a name="getnextselecteditem"></a>CListCtrl：： GetNextSelectedItem
+## <a name="clistctrlgetnextselecteditem"></a><a name="getnextselecteditem"></a>CListCtrl::取得下一個選定專案
 
-取得*pos*所識別之清單專案的索引，然後將*POS*設定為位置值。
+取得*pos*識別的清單項目的索引,然後將*位置*設定到「位置」 值。
 
 ```
 int GetNextSelectedItem(POSITION& pos) const;
@@ -2117,22 +2117,22 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>參數
 
-*pos*<br/>
-先前呼叫 `GetNextSelectedItem` 或 `GetFirstSelectedItemPosition`所傳回之位置值的參考。 這個呼叫會將值更新為下一個位置。
+*Pos*<br/>
+對以前調用`GetNextSelectedItem``GetFirstSelectedItemPosition`或返回的"位置"值的引用。 此調用將該值更新為下一個位置。
 
 ### <a name="return-value"></a>傳回值
 
-*Pos*所識別之清單專案的索引。
+*由 pos*標識的清單項的索引。
 
 ### <a name="remarks"></a>備註
 
-如果您在呼叫 `GetFirstSelectedItemPosition`時建立初始位置，可以在正向反復專案迴圈中使用 `GetNextSelectedItem`。
+如果使用`GetNextSelectedItem`調`GetFirstSelectedItemPosition`用 建立初始位置,則可以在轉發反覆運算迴圈中使用。
 
-您必須確定您的位置值有效。 如果無效，則 MFC 程式庫判斷提示的 Debug 版本。
+您必須確保您的「位置」 值有效。 如果無效,則Microsoft基礎類庫的調試版本斷言。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例將示範此函式的使用方式。
+以下代碼示例演示了此函數的用法。
 
 ```cpp
         POSITION pos = m_myListCtrl.GetFirstSelectedItemPosition();
@@ -2151,9 +2151,9 @@ int GetNextSelectedItem(POSITION& pos) const;
         }
 ```
 
-## <a name="getnumberofworkareas"></a>CListCtrl：： GetNumberOfWorkAreas
+## <a name="clistctrlgetnumberofworkareas"></a><a name="getnumberofworkareas"></a>CListctrl:取得工作範圍
 
-抓取清單視圖控制項目前的工作區數目。
+檢索清單檢視控制項的目前工作區數。
 
 ```
 UINT GetNumberOfWorkAreas() const;
@@ -2161,11 +2161,11 @@ UINT GetNumberOfWorkAreas() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前未使用。
+此時未使用。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetNumberOfWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getnumberofworkareas)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_GetNumberOfWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getnumberofworkareas)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -2194,9 +2194,9 @@ UINT GetNumberOfWorkAreas() const;
         }
 ```
 
-## <a name="getoutlinecolor"></a>CListCtrl：： GetOutlineColor
+## <a name="clistctrlgetoutlinecolor"></a><a name="getoutlinecolor"></a>CListCtrl::取得大綱顏色
 
-抓取清單視圖控制項的框線色彩。
+檢索清單檢視控制項的邊框的顏色。
 
 ```
 COLORREF GetOutlineColor() const;
@@ -2204,15 +2204,15 @@ COLORREF GetOutlineColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回包含外框色彩的[COLORREF](/windows/win32/gdi/colorref)結構。
+返回包含輪廓顏色的[COLORREF](/windows/win32/gdi/colorref)結構。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETOUTLINECOLOR](/windows/win32/Controls/lvm-getoutlinecolor)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETOUTLINECOLOR](/windows/win32/Controls/lvm-getoutlinecolor)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="getorigin"></a>CListCtrl：： GetOrigin
+## <a name="clistctrlgetorigin"></a><a name="getorigin"></a>CListCtrl:取得原點
 
-抓取清單視圖控制項的目前視圖原點。
+檢索清單檢視控制項的目前檢視來源。
 
 ```
 BOOL GetOrigin(LPPOINT lpPoint) const;
@@ -2221,15 +2221,15 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-接收視圖來源之[點](/previous-versions/dd162805\(v=vs.85\))結構的位址。
+接收檢視來源的[POINT](/windows/win32/api/windef/ns-windef-point)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則不為零，否則為 0。 不過，如果控制項位於報表檢視中，則傳回值一律為零。
+如果成功則不為零，否則為 0。 但是,如果控件位於報表視圖中,則返回值始終為零。
 
-## <a name="getselectedcolumn"></a>CListCtrl：： GetSelectedColumn
+## <a name="clistctrlgetselectedcolumn"></a><a name="getselectedcolumn"></a>CListCtrl:取得精選欄位
 
-抓取清單控制項中目前選取之資料行的索引。
+檢索清單控制項中目前選定列的索引。
 
 ```
 UINT GetSelectedColumn() const;
@@ -2237,15 +2237,15 @@ UINT GetSelectedColumn() const;
 
 ### <a name="return-value"></a>傳回值
 
-選取之資料行的索引。
+所選列的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETSELECTEDCOLUMN](/windows/win32/Controls/lvm-getselectedcolumn)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETSELECTEDCOLUMN](/windows/win32/Controls/lvm-getselectedcolumn)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="getselectedcount"></a>CListCtrl：： GetSelectedCount
+## <a name="clistctrlgetselectedcount"></a><a name="getselectedcount"></a>CListCtrl:取得精選計數
 
-抓取清單視圖控制項中選取的專案數。
+檢索清單檢視控制項中選定項數量。
 
 ```
 UINT GetSelectedCount() const;
@@ -2253,7 +2253,7 @@ UINT GetSelectedCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項中選取的專案數。
+清單檢視控制項中所選項的數量。
 
 ### <a name="example"></a>範例
 
@@ -2273,9 +2273,9 @@ UINT GetSelectedCount() const;
         }
 ```
 
-## <a name="getselectionmark"></a>CListCtrl：： GetSelectionMark
+## <a name="clistctrlgetselectionmark"></a><a name="getselectionmark"></a>CListCtrl:取得選擇標記
 
-抓取清單視圖控制項的選取專案標記。
+檢索清單檢視控制項的選擇標記。
 
 ```
 int GetSelectionMark();
@@ -2283,11 +2283,11 @@ int GetSelectionMark();
 
 ### <a name="return-value"></a>傳回值
 
-以零為基底的選擇標記，如果沒有選取標記，則為-1。
+零基選擇標記,如果沒有選擇標記,則為 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_getselectionmark)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_GetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_getselectionmark)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -2298,9 +2298,9 @@ int GetSelectionMark();
         m_myListCtrl.SetSelectionMark(0);
 ```
 
-## <a name="getstringwidth"></a>CListCtrl：： GetStringWidth
+## <a name="clistctrlgetstringwidth"></a><a name="getstringwidth"></a>CListCtrl::取得字串寬度
 
-決定顯示所有指定字串所需的最小資料行寬度。
+確定顯示所有給定字串所需的最小列寬度。
 
 ```
 int GetStringWidth(LPCTSTR lpsz) const;
@@ -2309,15 +2309,15 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ### <a name="parameters"></a>參數
 
 *lpsz*<br/>
-要判斷其寬度之以 null 終止之字串的位址。
+要確定寬度的 null 終止字串的位址。
 
 ### <a name="return-value"></a>傳回值
 
-*Lpsz*所指向之字串的寬度（以圖元為單位）。
+以*lpsz*指向的字串的寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-傳回的寬度會考慮控制項目前的字型和欄邊界，而不是小圖示的寬度。
+返回的寬度會考慮控件的當前字體和列邊距,但不考慮小圖示的寬度。
 
 ### <a name="example"></a>範例
 
@@ -2335,9 +2335,9 @@ int GetStringWidth(LPCTSTR lpsz) const;
         }
 ```
 
-## <a name="getsubitemrect"></a>CListCtrl：： GetSubItemRect
+## <a name="clistctrlgetsubitemrect"></a><a name="getsubitemrect"></a>CListCtrl::抓取子項目重新完成
 
-抓取清單視圖控制項中專案的周框。
+檢索清單檢視控制項中項的邊界矩形。
 
 ```
 BOOL GetSubItemRect(
@@ -2350,22 +2350,22 @@ BOOL GetSubItemRect(
 ### <a name="parameters"></a>參數
 
 *iItem*<br/>
-子專案的父項目索引。
+子項的父項的索引。
 
-*iSubItem*<br/>
-子工作的以一為基的索引。
+*i子項目*<br/>
+子項的一個基於的索引。
 
 *nArea*<br/>
-決定要抓取的周框（清單視圖子工作子項）部分。 將位 OR 運算子套用至下列一個或多個值，即可指定周框的部分（圖示、標籤或兩者）：
+確定要檢索的邊界矩形(清單視圖子項)的部分。 邊界矩形的部分(圖示、標籤或兩者)通過將位或運算符應用於以下一個或多個值來指定:
 
-- LVIR_BOUNDS 會傳回整個專案的周框，包括圖示和標籤。
+- LVIR_BOUNDS返回整個項目的邊界矩形,包括圖示和標籤。
 
-- LVIR_ICON 會傳回圖示或小圖示的周框。
+- LVIR_ICON返回圖示或小圖示的邊界矩形。
 
-- LVIR_LABEL 會傳回整個專案的周框，包括圖示和標籤。 這等同于 LVIR_BOUNDS。
+- LVIR_LABEL返回整個項目的邊界矩形,包括圖示和標籤。 這與LVIR_BOUNDS相同。
 
 *ref*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的參考，其中包含子工作周框的座標。
+對包含子項邊界矩形座標的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的引用。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2373,11 +2373,11 @@ BOOL GetSubItemRect(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect)的行為,如 Windows SDK 中所述。
 
-## <a name="gettextbkcolor"></a>CListCtrl：： GetTextBkColor
+## <a name="clistctrlgettextbkcolor"></a><a name="gettextbkcolor"></a>CListCtrl:取得文字BkColor
 
-抓取清單視圖控制項的文字背景色彩。
+檢索清單檢視控制項的文字背景顏色。
 
 ```
 COLORREF GetTextBkColor() const;
@@ -2385,15 +2385,15 @@ COLORREF GetTextBkColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-32位值，用來指定 RGB 色彩。
+用於指定 RGB 顏色的 32 位值。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： SetTextBkColor](#settextbkcolor)的範例。
+請參考[CListCtrl 的範例::設定文字BkColor](#settextbkcolor)。
 
-## <a name="gettextcolor"></a>CListCtrl：： GetTextColor
+## <a name="clistctrlgettextcolor"></a><a name="gettextcolor"></a>CListCtrl:取得文字顏色
 
-抓取清單視圖控制項的文字色彩。
+檢索清單檢視控制項的文字顏色。
 
 ```
 COLORREF GetTextColor() const;
@@ -2401,15 +2401,15 @@ COLORREF GetTextColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-32位值，用來指定 RGB 色彩。
+用於指定 RGB 顏色的 32 位值。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： SetTextColor](#settextcolor)的範例。
+請參考[CListCtrl 的範例::設定文字顏色](#settextcolor)。
 
-## <a name="gettileinfo"></a>CListCtrl：： GetTileInfo
+## <a name="clistctrlgettileinfo"></a><a name="gettileinfo"></a>CListCtrl::取得Tileinfo
 
-在清單視圖控制項中抓取磚的相關資訊。
+檢索有關清單檢視控制項中磁貼的資訊。
 
 ```
 BOOL GetTileInfo(PLVTILEINFO plvti) const;
@@ -2417,20 +2417,20 @@ BOOL GetTileInfo(PLVTILEINFO plvti) const;
 
 ### <a name="parameters"></a>參數
 
-*plvti*<br/>
-接收磚資訊之[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)結構的指標。
+*普夫蒂*<br/>
+指向接收切片資訊的[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-不使用傳回值。
+不使用返回值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETTILEINFO](/windows/win32/Controls/lvm-gettileinfo)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETTILEINFO](/windows/win32/Controls/lvm-gettileinfo)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="gettileviewinfo"></a>CListCtrl：： GetTileViewInfo
+## <a name="clistctrlgettileviewinfo"></a><a name="gettileviewinfo"></a>CListCtrl::取得TileViewInfo
 
-在磚視圖中抓取清單視圖控制項的相關資訊。
+檢索有關磁貼檢視中的清單檢視控制項資訊。
 
 ```
 BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
@@ -2438,20 +2438,20 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 
 ### <a name="parameters"></a>參數
 
-*ptvi*<br/>
-接收所抓取資訊之[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)結構的指標。
+*普特維*<br/>
+指向接收檢索資訊的[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-不使用傳回值。
+不使用返回值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETTILEVIEWINFO](/windows/win32/Controls/lvm-gettileviewinfo)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETTILEVIEWINFO](/windows/win32/Controls/lvm-gettileviewinfo)消息的功能,如 Windows SDK 中所述。
 
-## <a name="gettooltips"></a>CListCtrl：： GetToolTips
+## <a name="clistctrlgettooltips"></a><a name="gettooltips"></a>CListCtrl:抓取工具提示
 
-抓取清單視圖控制項用來顯示工具提示的工具提示控制項。
+檢索清單檢視控制項用於顯示工具提示的工具提示控制項。
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -2459,11 +2459,11 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>傳回值
 
-清單控制項所要使用之[CToolTipCtrl](ctooltipctrl-class.md)物件的指標。 如果[Create](#create)成員函式使用樣式 LVS_NOTOOLTIPS，則不會使用任何工具提示，而且會傳回 Null。
+指向清單控制項使用的[CToolTipCtrl](ctooltipctrl-class.md)物件的指標。 如果[「創建](#create)成員」函數使用樣式LVS_NOTOOLTIPS,則不使用工具提示,並且傳回 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips)Win32 訊息的行為。 的 MFC 執行 `GetToolTips` 會傳回清單控制項所使用的 `CToolTipCtrl` 物件，而不是工具提示控制項的控制碼。
+此成員函數實現 Win32 消息[LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips)的行為,如 Windows SDK 中所述。 的`GetToolTips`MFC`CToolTipCtrl`實現傳回 由清單控制件使用的物件,而不是工具提示控制項的句柄。
 
 ### <a name="example"></a>範例
 
@@ -2476,9 +2476,9 @@ CToolTipCtrl* GetToolTips() const;
         }
 ```
 
-## <a name="gettopindex"></a>CListCtrl：： GetTopIndex
+## <a name="clistctrlgettopindex"></a><a name="gettopindex"></a>CListCtrl:取得Topindex
 
-在清單視圖或報表檢視中時，抓取最頂端可見專案的索引。
+在清單檢視或報表檢視中檢視中檢視中檢視中圖表中的索引。
 
 ```
 int GetTopIndex() const;
@@ -2486,7 +2486,7 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>傳回值
 
-最上層可見專案的索引。
+最頂層可見項的索引。
 
 ### <a name="example"></a>範例
 
@@ -2505,9 +2505,9 @@ int GetTopIndex() const;
         }
 ```
 
-## <a name="getview"></a>CListCtrl：： GetView
+## <a name="clistctrlgetview"></a><a name="getview"></a>CListCtrl:取得檢視
 
-取得清單視圖控制項的視圖。
+獲取清單檢視控制件的檢視。
 
 ```
 DWORD GetView() const;
@@ -2515,15 +2515,15 @@ DWORD GetView() const;
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項的目前視圖。
+清單檢視控制項的目前檢視。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_GETVIEW](/windows/win32/Controls/lvm-getview)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_GETVIEW](/windows/win32/Controls/lvm-getview)消息的功能,如 Windows SDK 中所述。
 
-## <a name="getviewrect"></a>CListCtrl：： GetViewRect
+## <a name="clistctrlgetviewrect"></a><a name="getviewrect"></a>CListCtrl::取得檢視Rect
 
-抓取清單視圖控制項中所有專案的周框。
+檢索清單檢視控制項中所有項的邊界矩形。
 
 ```
 BOOL GetViewRect(LPRECT lpRect) const;
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-[RECT](/previous-versions/dd162897\(v=vs.85\))結構的位址。
+[RECT](/windows/win32/api/windef/ns-windef-rect)結構的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2540,13 +2540,13 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 ### <a name="remarks"></a>備註
 
-清單視圖必須在圖示視圖或小型圖示視圖中。
+清單檢視必須位於圖示檢視或小圖示檢視中。
 
-## <a name="getworkareas"></a>CListCtrl：： GetWorkAreas
+## <a name="clistctrlgetworkareas"></a><a name="getworkareas"></a>CListCtrl::取得工作領域
 
-抓取清單視圖控制項的目前工作區域。
+檢索清單檢視控制項的當前工作區。
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2554,23 +2554,23 @@ void GetWorkAreas(
 
 ### <a name="parameters"></a>參數
 
-*nWorkAreas*<br/>
-*PRect*陣列中包含的 `RECT` 結構數目。
+*n工作領域*<br/>
+`RECT` *pRect*陣列中包含的結構數。
 
-*pRect*<br/>
-`RECT` 結構（或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件）陣列的指標，可接收清單視圖控制項的工作區域。 這些結構中的值是在用戶端座標中。
+*普雷克*<br/>
+指向接收清單檢視控制項工作區`RECT`的結構(或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件)陣列的指標。 這些結構中的值位於客戶端座標中。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_GetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getworkareas)Win32 宏的行為。
+此成員函數實現 Win32 宏[的行為,ListView_GetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getworkareas),如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetNumberOfWorkAreas](#getnumberofworkareas)的範例。
+請參考[CListCtrl 的範例:抓取工作範圍的數量](#getnumberofworkareas)。
 
-## <a name="hasgroup"></a>CListCtrl：： HasGroup
+## <a name="clistctrlhasgroup"></a><a name="hasgroup"></a>CListCtrl::哈斯集團
 
-判斷清單視圖控制項是否有指定的群組。
+確定清單檢視控制項是否具有指定的組。
 
 ```
 BOOL HasGroup(int iGroupId) const;
@@ -2579,19 +2579,19 @@ BOOL HasGroup(int iGroupId) const;
 ### <a name="parameters"></a>參數
 
 *iGroupId*<br/>
-所要求之群組的識別碼。
+要請求的組的標識符。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_HASGROUP](/windows/win32/Controls/lvm-hasgroup)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_HASGROUP](/windows/win32/Controls/lvm-hasgroup)消息的功能,如 Windows SDK 中所述。
 
-## <a name="hittest"></a>CListCtrl：： HitTest
+## <a name="clistctrlhittest"></a><a name="hittest"></a>CListCtrl:hitTest
 
-判斷哪個清單視圖專案（如果有的話）位於指定的位置。
+確定哪個清單檢視項(如果有)位於指定位置。
 
 ```
 int HitTest(LVHITTESTINFO* pHitTestInfo) const;
@@ -2604,23 +2604,23 @@ int HitTest(
 ### <a name="parameters"></a>參數
 
 *pHitTestInfo*<br/>
-`LVHITTESTINFO` 結構的位址，其中包含要進行點擊測試的位置，並接收點擊測試結果的相關資訊。
+包含命中測試`LVHITTESTINFO`位置並接收命中測試結果資訊的結構的位址。
 
 *pt*<br/>
 要測試的點。
 
 *pFlags*<br/>
-整數的指標，可接收測試結果的相關資訊。 請參閱 Windows SDK 中[LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)結構之 `flags` 成員的說明。
+指向接收有關測試結果資訊的整數的指標。 請參閱 Windows SDK`flags`中[LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)結構成員的說明。
 
 ### <a name="return-value"></a>傳回值
 
-*PHitTestInfo*指定之位置的專案索引（如果有的話），否則為-1。
+*pHitTestInfo*指定位置的專案索引(如果有)或 -1。
 
 ### <a name="remarks"></a>備註
 
-您可以使用結構 `flag` 成員的 [LVHT_ABOVE]、[LVHT_BELOW]、[LVHT_TOLEFT] 和 [LVHT_TORIGHT] 值，來決定是否要滾動清單視圖控制項的內容。 其中有兩個旗標可以合併，例如，如果位置在工作區的上方和左側。
+您可以使用結構`flag`成員LVHT_ABOVE、LVHT_BELOW、LVHT_TOLEFT和LVHT_TORIGHT值來確定是否滾動清單視圖控件的內容。 例如,如果位置位於工作區的上方和左側,則可以組合其中兩個標誌。
 
-您可以測試結構的 `flag` 成員的 LVHT_ONITEM 值，以判斷指定的位置是否在清單視圖專案上。 這個值是結構 `flag` 成員的 LVHT_ONITEMICON、LVHT_ONITEMLABEL 和 LVHT_ONITEMSTATEICON 值的位 OR 運算。
+您可以測試結構`flag`成員LVHT_ONITEM值,以確定給定位置是否超過列表檢視項。 此值是對結構成員LVHT_ONITEMICON、LVHT_ONITEMLABEL和LVHT_ONITEMSTATEICON值的`flag`一點-OR 操作。
 
 ### <a name="example"></a>範例
 
@@ -2644,9 +2644,9 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="insertcolumn"></a>CListCtrl：： InsertColumn
+## <a name="clistctrlinsertcolumn"></a><a name="insertcolumn"></a>CListCtrl::插入欄位
 
-在清單視圖控制項中插入新的資料行。
+在清單檢視控制項中插入新欄。
 
 ```
 int InsertColumn(
@@ -2664,36 +2664,36 @@ int InsertColumn(
 ### <a name="parameters"></a>參數
 
 *nCol*<br/>
-新資料行的索引。
+新列的索引。
 
 *pColumn*<br/>
-包含新資料行之屬性的 `LVCOLUMN` 結構的位址。
+包含新列`LVCOLUMN`屬性的結構的位址。
 
-*lpszColumnHeading*<br/>
-包含資料行標題之字串的位址。
+*lpszColumnheading*<br/>
+包含欄位標題的字串的位址。
 
 *nFormat*<br/>
-指定資料行對齊方式的整數。 它可以是下列其中一個值： LVCFMT_LEFT、LVCFMT_RIGHT 或 LVCFMT_CENTER。
+指定列對齊的整數。 它可以是這些值之一:LVCFMT_LEFT、LVCFMT_RIGHT或LVCFMT_CENTER。
 
-*nWidth*<br/>
-資料行的寬度（以圖元為單位）。 如果此參數為-1，則不會設定資料行寬度。
+*n 寬度*<br/>
+列的寬度,以像素為單位。 如果此參數為 -1,則不設置列寬度。
 
-*nSubItem*<br/>
-與資料行相關聯之子項的索引。 如果此參數為-1，則不會有任何子項與資料行相關聯。
+*n 子項目*<br/>
+與列關聯的子項的索引。 如果此參數為 -1,則沒有子項與列關聯。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為新資料行的索引，否則為-1。
+如果成功或 -1,則新列的索引。
 
 ### <a name="remarks"></a>備註
 
-清單視圖控制項中最左邊的資料行必須靠左對齊。
+清單檢視控制項中最左側的列必須左對齊。
 
-[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)結構包含報表檢視中資料行的屬性。 它也會用來接收資料行的相關資訊。 Windows SDK 中會描述此結構。
+[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)結構包含報表檢視中列的屬性。 它還用於接收有關列的資訊。 此結構在 Windows SDK 中描述。
 
-## <a name="insertgroup"></a>CListCtrl：： InsertGroup
+## <a name="clistctrlinsertgroup"></a><a name="insertgroup"></a>CListCtrl::插入群組
 
-將群組插入清單視圖控制項中。
+將群組插入到清單檢視控制項中。
 
 ```
 LRESULT InsertGroup(
@@ -2703,23 +2703,23 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>參數
 
-*index*<br/>
-要插入群組之專案的索引。
+*指數*<br/>
+要插入組的項的索引。
 
 *pgrp*<br/>
-[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的指標，其中包含要加入的群組。
+指向[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的指標,其中包含要添加的組。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已加入群組之專案的索引，如果作業失敗，則傳回-1。
+返回組添加到的項的索引,如果操作失敗,則返回 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_INSERTGROUP](/windows/win32/Controls/lvm-insertgroup)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_INSERTGROUP](/windows/win32/Controls/lvm-insertgroup)消息的功能,如 Windows SDK 中所述。
 
-## <a name="insertgroupsorted"></a>CListCtrl：： InsertGroupSorted
+## <a name="clistctrlinsertgroupsorted"></a><a name="insertgroupsorted"></a>CListCtrl::插入群組排序
 
-將指定的群組插入群組的已排序清單中。
+將指定的群組插入有序的組清單中。
 
 ```
 LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
@@ -2728,19 +2728,19 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 ### <a name="parameters"></a>參數
 
 *pStructInsert*<br/>
-包含要插入之群組的[LVINSERTGROUPSORTED](/windows/win32/api/commctrl/ns-commctrl-lvinsertgroupsorted)結構的指標。
+指向包含要插入的組的[LVINSERTGROUPSORTED 結構](/windows/win32/api/commctrl/ns-commctrl-lvinsertgroupsorted)的指標。
 
 ### <a name="return-value"></a>傳回值
 
-不使用傳回值。
+不使用返回值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_INSERTGROUPSORTED](/windows/win32/Controls/lvm-insertgroupsorted)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_INSERTGROUPSORTED](/windows/win32/Controls/lvm-insertgroupsorted)消息的功能,如 Windows SDK 中所述。
 
-## <a name="insertitem"></a>CListCtrl：： InsertItem
+## <a name="clistctrlinsertitem"></a><a name="insertitem"></a>CListCtrl::插入項目
 
-將專案插入清單視圖控制項中。
+將項目插入到列表檢視控制項中。
 
 ```
 int InsertItem(const LVITEM* pItem);
@@ -2767,36 +2767,36 @@ int InsertItem(
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的指標，指定專案的屬性，如 Windows SDK 中所述。
+指向[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的指標,該結構指定專案的屬性,如 Windows SDK 中所述。
 
 *nItem*<br/>
-要插入之專案的索引。
+要插入的項的索引。
 
 *lpszItem*<br/>
-包含專案標籤之字串的位址，如果專案是回呼專案，則為 LPSTR_TEXTCALLBACK。 如需回呼專案的詳細資訊，請參閱[CListCtrl：： GetCallbackMask](#getcallbackmask)。
+包含項標籤的字串的位址,如果項是回調項,則LPSTR_TEXTCALLBACK。 有關回檔項目的資訊,請參閱[CListCtrl::取得回檔遮罩](#getcallbackmask)。
 
-*nImage*<br/>
-專案影像的索引，如果專案是回呼專案，則為 I_IMAGECALLBACK。 如需回呼專案的詳細資訊，請參閱[CListCtrl：： GetCallbackMask](#getcallbackmask)。
+*n 影像*<br/>
+如果項是回調項,則I_IMAGECALLBACK索引。 有關回檔項目的資訊,請參閱[CListCtrl::取得回檔遮罩](#getcallbackmask)。
 
 *nMask*<br/>
-*NMask*參數會指定做為參數傳遞的專案屬性是有效的。 它可以是 Windows SDK 的[LVITEM 結構](/windows/win32/api/commctrl/ns-commctrl-lvitemw)中所描述的一或多個 mask 值。 有效的值可以與位 OR 運算子結合。
+*nMask*參數指定作為參數傳遞的項屬性有效。 它可以是 Windows SDK 中的[LVITEM 結構](/windows/win32/api/commctrl/ns-commctrl-lvitemw)中描述的一個或多個掩碼值。 有效值可以與位或運算符組合。
 
-*nState*<br/>
-指出專案的狀態、狀態影像和重迭影像。 如需詳細資訊，請參閱 Windows SDK 主題[LVITEM 結構](/windows/win32/api/commctrl/ns-commctrl-lvitemw)和[清單視圖專案狀態](/windows/win32/Controls/list-view-item-states)，以取得有效旗標的清單。
+*n州*<br/>
+指示項目的狀態、狀態圖像和疊加圖像。 有關詳細資訊,請參閱 Windows SDK 主題[LVITEM 結構和](/windows/win32/api/commctrl/ns-commctrl-lvitemw)[列表查看項目狀態](/windows/win32/Controls/list-view-item-states),瞭解有效標誌的清單。
 
 *nStateMask*<br/>
-指出將抓取或修改的狀態成員的位。 如需詳細資訊，請參閱 Windows SDK 中的[LVITEM 結構](/windows/win32/api/commctrl/ns-commctrl-lvitemw)。
+指示將檢索或修改狀態成員的哪些位。 有關詳細資訊,請參閱 Windows SDK 中的[LVITEM 結構](/windows/win32/api/commctrl/ns-commctrl-lvitemw)。
 
 *lParam*<br/>
-與專案相關聯的32位應用程式特定值。 如果指定了這個參數，您就必須將*nMask*屬性設定 LVIF_PARAM。
+與項關聯的 32 位元應用程式特定值。 如果指定此參數,則必須將*nMask*屬性LVIF_PARAM。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為新專案的索引，否則為-1。
+如果成功或 -1,則新專案的索引。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法可能會導致 LVM_INSERTITEM 訊息傳送至您的控制項視窗。 控制項的相關訊息處理常式可能無法在某些條件下設定專案文字（例如，使用視窗樣式，例如 LVS_OWNERDRAW）。 如需有關這些條件的詳細資訊，請參閱 Windows SDK 中的[LVM_INSERTITEM](/windows/win32/Controls/lvm-insertitem) 。
+調用此方法可能會導致LVM_INSERTITEM消息發送到控制項視窗。 控制項的關聯訊息處理程式可能無法在某些情況下設定項文本(例如使用視窗樣式,如LVS_OWNERDRAW)。 有關這些條件的詳細資訊,請參閱 Windows SDK 中的[LVM_INSERTITEM。](/windows/win32/Controls/lvm-insertitem)
 
 ### <a name="example"></a>範例
 
@@ -2822,9 +2822,9 @@ int InsertItem(
         }
 ```
 
-## <a name="insertmarkhittest"></a>CListCtrl：： InsertMarkHitTest
+## <a name="clistctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CListCtrl::插入馬克希特測試
 
-抓取最接近指定點的插入點。
+檢索最接近指定點的插入點。
 
 ```
 int InsertMarkHitTest(
@@ -2835,10 +2835,10 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>參數
 
 *pPoint*<br/>
-[點](/previous-versions/dd162805\(v=vs.85\))結構的指標，其中包含相對於清單控制項工作區的點擊測試座標。
+指向 POINT[結構的](/windows/win32/api/windef/ns-windef-point)指標,該結構包含命中測試座標,相對於清單控制項的工作區區域。
 
 *plvim*<br/>
-[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)結構的指標，指定最接近 point 參數所定義之座標的插入點。
+指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)結構的指標,用於指定最接近點參數定義的座標的插入點。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2846,11 +2846,11 @@ int InsertMarkHitTest(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_INSERTMARKHITTEST](/windows/win32/Controls/lvm-insertmarkhittest)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_INSERTMARKHITTEST](/windows/win32/Controls/lvm-insertmarkhittest)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="isgroupviewenabled"></a>CListCtrl：： IsGroupViewEnabled
+## <a name="clistctrlisgroupviewenabled"></a><a name="isgroupviewenabled"></a>CListCtrl:是否啟用了群檢視
 
-決定是否為清單視圖控制項啟用群組視圖。
+確定是否為清單檢視控制項啟用組檢視。
 
 ```
 BOOL IsGroupViewEnabled() const;
@@ -2858,15 +2858,15 @@ BOOL IsGroupViewEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用群組視圖，則傳回 TRUE，否則傳回 FALSE。
+如果啟用了組視圖,則返回 TRUE,否則返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_ISGROUPVIEWENABLED](/windows/win32/Controls/lvm-isgroupviewenabled)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_ISGROUPVIEWENABLED](/windows/win32/Controls/lvm-isgroupviewenabled)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="isitemvisible"></a>CListCtrl：： IsItemVisible
+## <a name="clistctrlisitemvisible"></a><a name="isitemvisible"></a>CListCtrl:是可分割的
 
-指出目前清單視圖控制項中的指定專案是否可見。
+指示當前清單檢視控制項中的指定項是否可見。
 
 ```
 BOOL IsItemVisible(int index) const;
@@ -2876,19 +2876,19 @@ BOOL IsItemVisible(int index) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*index*|在目前清單視圖控制項中專案以零為基底的索引。|
+|*指數*|[在]當前清單檢視控制項中項的零基索引。|
 
 ### <a name="return-value"></a>傳回值
 
-如果指定的專案為可見，則為 TRUE;否則為 FALSE。
+如果指定的項可見,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible)訊息，如 Windows SDK 所述。
+此方法發送[LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible)訊息,這在 Windows SDK 中介紹。
 
-## <a name="mapidtoindex"></a>CListCtrl：： MapIDToIndex
+## <a name="clistctrlmapidtoindex"></a><a name="mapidtoindex"></a>CListctrl:mapIDToindex
 
-將目前清單視圖控制項中專案的唯一識別碼對應至索引。
+將當前清單檢視控制項中項的唯一 ID 映射到索引。
 
 ```
 UINT MapIDToIndex(UINT id) const;
@@ -2898,23 +2898,23 @@ UINT MapIDToIndex(UINT id) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*id*|在專案的唯一識別碼。|
+|*id*|[在]項的唯一 ID。|
 
 ### <a name="return-value"></a>傳回值
 
-指定之識別碼的目前索引。
+指定 ID 的目前索引。
 
 ### <a name="remarks"></a>備註
 
-清單視圖控制項會在內部依索引追蹤專案。 這可能會出現問題，因為索引可能會在控制項的存留期間變更。 當建立專案時，清單視圖控制項可以標記具有識別碼的專案，而您可以使用此識別碼來保證清單視圖控制項存留期間的唯一性。
+清單檢視控制項以索引在內部追蹤項。 這可能會帶來問題,因為索引可以在控件的生存期內更改。 清單檢視控制項可以在建立項時使用 ID 標籤項,並且您可以使用此 ID 來保證列表檢視控制項的生存期內的唯一性。
 
-請注意，在多執行緒環境中，索引只會在裝載清單視圖控制項的執行緒上保證，而不是在背景執行緒上。
+請注意,在多線程環境中,索引僅在承載清單視圖控件的線程上得到保證,而在後台線程上。
 
-這個方法會傳送[LVM_MAPIDTOINDEX](/windows/win32/controls/lvm-mapidtoindex)訊息，如 Windows SDK 所述。
+此方法發送[LVM_MAPIDTOINDEX](/windows/win32/controls/lvm-mapidtoindex)訊息,這在 Windows SDK 中介紹。
 
-## <a name="mapindextoid"></a>CListCtrl：： MapIndexToID
+## <a name="clistctrlmapindextoid"></a><a name="mapindextoid"></a>CListctrl::映射索引TOID
 
-將目前清單視圖控制項中專案的索引對應到唯一的識別碼。
+將當前清單檢視控制項中的項目索引映射到唯一 ID。
 
 ```
 UINT MapIndexToID(UINT index) const;
@@ -2924,23 +2924,23 @@ UINT MapIndexToID(UINT index) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*index*|在專案之以零為基底的索引。|
+|*指數*|[在]項的零基索引。|
 
 ### <a name="return-value"></a>傳回值
 
-指定之專案的唯一識別碼。
+指定項的唯一 ID。
 
 ### <a name="remarks"></a>備註
 
-清單視圖控制項會在內部依索引追蹤專案。 這可能會出現問題，因為索引可能會在控制項的存留期間變更。 建立專案時，清單視圖控制項可以標記具有識別碼的專案。 您可以使用此識別碼來存取清單視圖控制項存留期的特定專案。
+清單檢視控制項以索引在內部追蹤項。 這可能會帶來問題,因為索引可以在控件的生存期內更改。 建立項時,清單檢視控制項可以使用 ID 標籤項目。 可以使用此 ID 訪問列表檢視控制件生存期內的特定項。
 
-請注意，在多執行緒環境中，索引只會在裝載清單視圖控制項的執行緒上保證，而不是在背景執行緒上。
+請注意,在多線程環境中,索引僅在承載清單視圖控件的線程上得到保證,而在後台線程上。
 
-這個方法會傳送[LVM_MAPINDEXTOID](/windows/win32/Controls/lvm-mapindextoid)訊息，如 Windows SDK 所述。
+此方法發送[LVM_MAPINDEXTOID](/windows/win32/Controls/lvm-mapindextoid)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前清單視圖控制項的變數 `m_listCtrl`。 下一個範例中會使用此變數。
+以下代碼範`m_listCtrl`例定義用於存取目前列表檢視 控制項的變數 。 下一個範例中會使用此變數。
 
 ```cpp
 public:
@@ -2950,7 +2950,7 @@ public:
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `MapIndexToID` 方法。 在這個程式碼範例的先前章節中，我們建立了清單視圖控制項，它會在報表檢視中顯示兩個標題為 "ClientID" 和 "年級" 的資料行。 下列範例會將每個清單視圖專案的索引對應到識別碼，然後抓取每個識別碼的索引。 最後，此範例會報告是否已抓取原始索引。
+以下代碼範例展示該方法`MapIndexToID`。 在此代碼示例的較早部分中,我們創建了一個列表視圖控件,該控件在報表視圖中顯示兩列標題為"ClientID"和"分級"。 下面的範例將每個清單檢視項的索引映射到標識號,然後檢索每個標識號的索引。 最後,該示例報告是否檢索了原始索引。
 
 ```cpp
     // MapIndexToID
@@ -2978,9 +2978,9 @@ public:
         MB_ICONINFORMATION);
 ```
 
-## <a name="movegroup"></a>CListCtrl：： MoveGroup
+## <a name="clistctrlmovegroup"></a><a name="movegroup"></a>CListCtrl:: 移動群組
 
-將指定的群組移至清單視圖控制項的指定之以零為基底的索引。
+將指定的組移到列表檢視控制項指定基於零的索引。
 
 ```
 LRESULT MoveGroup(
@@ -2991,24 +2991,24 @@ LRESULT MoveGroup(
 ### <a name="parameters"></a>參數
 
 *iGroupId*<br/>
-要移動之群組的識別碼。
+要移動的組的標識符。
 
-*toIndex*<br/>
-以零為基底的索引，這是要移動群組的位置。
+*到索引*<br/>
+要移動組的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-不使用傳回值。
+不使用返回值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_MOVEGROUP](/windows/win32/Controls/lvm-movegroup)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_MOVEGROUP](/windows/win32/Controls/lvm-movegroup)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="moveitemtogroup"></a>CListCtrl：： MoveItemToGroup
+## <a name="clistctrlmoveitemtogroup"></a><a name="moveitemtogroup"></a>CListctrl::移動專案群組
 
-將指定的專案移到指定的群組中。
+將指定的項移到指定的群組中。
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3016,22 +3016,22 @@ void MoveItemToGroup(
 
 ### <a name="parameters"></a>參數
 
-*idItemFrom*<br/>
-在要移動之專案的索引。
+*idItem 來自*<br/>
+[在]要移動的項的索引。
 
-*idGroupTo*<br/>
-在要將專案移至其中之群組的識別碼。
+*idGroupto*<br/>
+[在]要移動到的組的標識符。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  這個方法目前未執行。
+> 此方法當前未實現。
 
-這個方法會模擬[LVM_MOVEITEMTOGROUP](/windows/win32/Controls/lvm-moveitemtogroup)訊息的功能，如 Windows SDK 所述。
+此方法類比[LVM_MOVEITEMTOGROUP](/windows/win32/Controls/lvm-moveitemtogroup)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="redrawitems"></a>CListCtrl：： RedrawItems
+## <a name="clistctrlredrawitems"></a><a name="redrawitems"></a>CListCtrl::重繪項目
 
-強制清單視圖控制項重新繪製某個範圍的專案。
+強制清單檢視控制項重新繪製一系列項。
 
 ```
 BOOL RedrawItems(
@@ -3041,11 +3041,11 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>參數
 
-*nFirst*<br/>
-要重新繪製之第一個專案的索引。
+*n第一*<br/>
+要重新繪製的第一個專案的索引。
 
-*nLast*<br/>
-要重新繪製之最後一個專案的索引。
+*n 上次*<br/>
+要重新繪製的最後一個專案的索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3053,23 +3053,23 @@ BOOL RedrawItems(
 
 ### <a name="remarks"></a>備註
 
-在清單視圖視窗收到 WM_PAINT 訊息之前，不會實際重新繪製指定的專案。 若要立即重新繪製，請在使用此函數之後呼叫 Windows [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow)函式。
+在清單檢視視窗收到WM_PAINT消息之前,實際上不會重新繪製指定的專案。 要立即重新繪製,請使用此功能後調用 Windows[更新視窗](/windows/win32/api/winuser/nf-winuser-updatewindow)功能。
 
-## <a name="removeallgroups"></a>CListCtrl：： RemoveAllGroups
+## <a name="clistctrlremoveallgroups"></a><a name="removeallgroups"></a>CListCtrl:: 刪除所有群組
 
-從清單視圖控制項移除所有群組。
+從清單檢視控制項中移除所有組。
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_REMOVEALLGROUPS](/windows/win32/Controls/lvm-removeallgroups)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_REMOVEALLGROUPS](/windows/win32/Controls/lvm-removeallgroups)消息的功能,如 Windows SDK 中所述。
 
-## <a name="removegroup"></a>CListCtrl：： RemoveGroup
+## <a name="clistctrlremovegroup"></a><a name="removegroup"></a>CListCtrl::刪除群組
 
-從清單視圖控制項中移除指定的群組。
+從清單檢視控制項中移除指定的群組。
 
 ```
 LRESULT RemoveGroup(int iGroupId);
@@ -3078,19 +3078,19 @@ LRESULT RemoveGroup(int iGroupId);
 ### <a name="parameters"></a>參數
 
 *iGroupId*<br/>
-要移除之群組的識別碼。
+要刪除的組的標識碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回群組的索引，否則為-1。
+如果成功,則返回組的索引,否則返回 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_REMOVEGROUP](/windows/win32/Controls/lvm-removegroup)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_REMOVEGROUP](/windows/win32/Controls/lvm-removegroup)消息的功能,如 Windows SDK 中所述。
 
-## <a name="scroll"></a>CListCtrl：： Scroll
+## <a name="clistctrlscroll"></a><a name="scroll"></a>CListCtrl::滾動
 
-滾動清單視圖控制項的內容。
+滾動清單檢視控制件的內容。
 
 ```
 BOOL Scroll(CSize size);
@@ -3099,15 +3099,15 @@ BOOL Scroll(CSize size);
 ### <a name="parameters"></a>參數
 
 *size*<br/>
-`CSize` 物件，指定水準和垂直捲動的數量（以圖元為單位）。 [`y`]*大小*的成員會除以清單視圖控制項的線條的高度（以圖元為單位），而控制項則是依產生的行數而滾動。
+指定`CSize`水平和垂直滾動量(以像素為單位)的物件。 大小`y`成員*size*除 以清單檢視控制項列的高度(以像素為單位),控制項按生成的行數滾動。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則不為零，否則為 0。
 
-## <a name="setbkcolor"></a>CListCtrl：： SetBkColor
+## <a name="clistctrlsetbkcolor"></a><a name="setbkcolor"></a>CListCtrl::SetBkColor
 
-設定清單視圖控制項的背景色彩。
+設定清單檢視控制項的背景顏色。
 
 ```
 BOOL SetBkColor(COLORREF cr);
@@ -3115,8 +3115,8 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>參數
 
-*符*<br/>
-要設定的背景色彩，或沒有背景色彩的 CLR_NONE 值。 具有背景色彩的清單視圖控制項，會明顯地比沒有背景色彩的控制項更快重繪。 如需相關資訊，請參閱 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
+*鉻*<br/>
+要設置的背景顏色,或無背景顏色的CLR_NONE值。 具有背景顏色的清單檢視控制項比沒有背景顏色的控制項重繪速度明顯快。 有關詳細資訊,請參閱 Windows SDK 中的[COLORREF。](/windows/win32/gdi/colorref)
 
 ### <a name="return-value"></a>傳回值
 
@@ -3131,9 +3131,9 @@ BOOL SetBkColor(COLORREF cr);
         ASSERT(m_myListCtrl.GetBkColor() == crBkColor);
 ```
 
-## <a name="setbkimage"></a>CListCtrl：： SetBkImage
+## <a name="clistctrlsetbkimage"></a><a name="setbkimage"></a>CListCtrl::SetBkImage
 
-設定清單視圖控制項的背景影像。
+設置清單檢視控制件的背景圖像。
 
 ```
 BOOL SetBkImage(LVBKIMAGE* plvbkImage);
@@ -3153,40 +3153,40 @@ BOOL SetBkImage(
 
 ### <a name="parameters"></a>參數
 
-*plvbkImage*<br/>
-`LVBKIMAGE` 結構的位址，其中包含新的背景影像資訊。
+*plvbk影像*<br/>
+`LVBKIMAGE`包含新背景圖像資訊的結構的位址。
 
 *hBitmap*<br/>
-點陣圖的控制碼。
+處理點陣圖。
 
 *pszUrl*<br/>
-以 Null 終止的字串，其中包含背景影像的 URL。
+包含背景影像網址的 NULL 終止字串。
 
 *fTile*<br/>
-如果影像要在清單視圖控制項的背景中並排顯示，則為非零。否則為0。
+如果要在列表視圖控件的後台平鋪圖像,則非零;否則 0。
 
-*xOffsetPercent*<br/>
-影像左邊緣的位移（以圖元為單位），來自清單視圖控制項的原點。
+*x 位移百分比*<br/>
+圖像左邊緣的偏移量(以像素為單位),與列表檢視控制項的原點。
 
-*yOffsetPercent*<br/>
-影像上邊緣的位移（以圖元為單位），來自清單視圖控制項的原點。
+*yOffset%*<br/>
+圖像上邊緣的偏移量(以像素為單位)來自列表檢視控制項的原點。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回非零，否則會傳回零。
+如果成功,則返回非零,否則返回零。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  由於 `CListCtrl::SetBkImage` 會使用 OLE COM 功能，因此必須先初始化 OLE 程式庫，才能使用 `SetBkImage`。 當應用程式初始化時，最好將 COM 程式庫初始化，並在應用程式終止時將程式庫解除初始化。 這會自動在利用 ActiveX 技術、OLE Automation、OLE 連結/內嵌或 ODBC/DAO 作業的 MFC 應用程式中執行。
+> 由於`CListCtrl::SetBkImage`使用 OLE COM 功能,`SetBkImage`因此在使用 之前必須初始化 OLE 庫。 最好在應用程式初始化時初始化 COM 庫,並在應用程式終止時取消初始化庫。 這可在使用 ActiveX 技術、OLE 自動化、OLE 連結/ 嵌入或 ODBC/DAO 操作的 MFC 應用程式中自動完成。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetBkImage](#getbkimage)的範例。
+請參考[CListCtrl 的範例:getBkImage](#getbkimage)。
 
-## <a name="setcallbackmask"></a>CListCtrl：： SetCallbackMask
+## <a name="clistctrlsetcallbackmask"></a><a name="setcallbackmask"></a>CListCtrl::設定回撥遮罩
 
-設定清單視圖控制項的回呼遮罩。
+設置清單檢視控制件的回調掩碼。
 
 ```
 BOOL SetCallbackMask(UINT nMask);
@@ -3195,7 +3195,7 @@ BOOL SetCallbackMask(UINT nMask);
 ### <a name="parameters"></a>參數
 
 *nMask*<br/>
-回呼遮罩的新值。
+回調掩碼的新值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3211,9 +3211,9 @@ BOOL SetCallbackMask(UINT nMask);
         (LVIS_SELECTED|LVIS_FOCUSED));
 ```
 
-## <a name="setcheck"></a>CListCtrl：： SetCheck
+## <a name="clistctrlsetcheck"></a><a name="setcheck"></a>CListCtrl::設定檢查
 
-決定清單控制項專案的狀態影像是否為可見。
+確定清單控制項項目的狀態影像是否可見。
 
 ```
 BOOL SetCheck(
@@ -3224,14 +3224,14 @@ BOOL SetCheck(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-清單控制項專案之以零為基底的索引。
+清單控制項項的零基索引。
 
-*來*<br/>
-指定是否應該顯示專案的狀態影像。 根據預設，*來*為 TRUE，且狀態影像為可見。 如果*來*為 FALSE，則不會顯示。
+*f檢查*<br/>
+指定項目的狀態圖像是否應可見。 預設情況下 *,fCheck*為 TRUE,狀態圖像可見。 如果*fCheck*是 FALSE,則它不可見。
 
 ### <a name="return-value"></a>傳回值
 
-如果已核取專案，則為非零，否則為0。
+如果選中專案,則非零,否則為 0。
 
 ### <a name="example"></a>範例
 
@@ -3250,9 +3250,9 @@ BOOL SetCheck(
         }
 ```
 
-## <a name="setcolumn"></a>CListCtrl：： SetColumn
+## <a name="clistctrlsetcolumn"></a><a name="setcolumn"></a>CListCtrl::設定欄
 
-設定清單視圖資料行的屬性。
+設置清單檢視列的屬性。
 
 ```
 BOOL SetColumn(
@@ -3263,10 +3263,10 @@ BOOL SetColumn(
 ### <a name="parameters"></a>參數
 
 *nCol*<br/>
-要設定其屬性的資料行索引。
+要設置其屬性的列的索引。
 
 *pColumn*<br/>
-[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)結構的位址，其中包含新的資料行屬性，如 Windows SDK 中所述。 結構的 `mask` 成員會指定要設定的資料行屬性。 如果 `mask` 成員指定 LVCF_TEXT 值，結構的 `pszText` 成員就是以 null 終止之字串的位址，而且會忽略結構的 `cchTextMax` 成員。
+包含新列屬性的[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)結構的位址,如 Windows SDK 中所述。 結構的成員`mask`指定要設置的列屬性。 如果`mask`成員指定LVCF_TEXT值,則結構的`pszText`成員 是 null 終止字串的位址,`cchTextMax`並且忽略結構的成員。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3274,11 +3274,11 @@ BOOL SetColumn(
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetColumn](#getcolumn)的範例。
+請參閱[CListCtrl 的範例::獲取列。](#getcolumn)
 
-## <a name="setcolumnorderarray"></a>CListCtrl：： SetColumnOrderArray
+## <a name="clistctrlsetcolumnorderarray"></a><a name="setcolumnorderarray"></a>CListCtrl::設定欄陣陣列
 
-設定清單視圖控制項的資料行順序（由左到右）。
+設置清單檢視控制件的列順序(從左至右)。
 
 ```
 BOOL SetColumnOrderArray(
@@ -3288,11 +3288,11 @@ BOOL SetColumnOrderArray(
 
 ### <a name="parameters"></a>參數
 
-*piArray*<br/>
-緩衝區的指標，其中包含清單視圖控制項中資料行的索引值（由左至右）。 緩衝區必須夠大，才能包含清單視圖控制項中的總數據行數。
+*皮拉裡*<br/>
+指向包含清單檢視控制項中列的索引值的緩衝區的指標(從左至右)。 緩衝區必須足夠大,以包含列表視圖控制件中的列總數。
 
-*iCount*<br/>
-清單視圖控制項中的資料行數目。
+*i. Count*<br/>
+清單檢視控制項中的欄位。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3300,15 +3300,15 @@ BOOL SetColumnOrderArray(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_setcolumnorderarray)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_SetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_setcolumnorderarray)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetColumnOrderArray](#getcolumnorderarray)的範例。
+請參考[CListCtrl 的範例::抓取欄位順序](#getcolumnorderarray)。
 
-## <a name="setcolumnwidth"></a>CListCtrl：： SetColumnWidth
+## <a name="clistctrlsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListCtrl::設定欄寬
 
-在報表檢視或清單視圖中變更資料行的寬度。
+更改報表檢視或清單檢視中列的寬度。
 
 ```
 BOOL SetColumnWidth(
@@ -3319,18 +3319,18 @@ BOOL SetColumnWidth(
 ### <a name="parameters"></a>參數
 
 *nCol*<br/>
-要設定其寬度之資料行的索引。 在清單視圖中，此參數必須是0。
+要為其設置寬度的列的索引。 在清單檢視中,此參數必須為 0。
 
-*cx*<br/>
-資料行的新寬度。 可以是 LVSCW_AUTOSIZE 或 LVSCW_AUTOSIZE_USEHEADER，如 Windows SDK 的[LVM_SETCOLUMNWIDTH](/windows/win32/Controls/lvm-setcolumnwidth)中所述。
+*殘雪*<br/>
+資料行的新寬度。 可以是LVSCW_AUTOSIZE也可以LVSCW_AUTOSIZE_USEHEADER,如 Windows SDK[中LVM_SETCOLUMNWIDTH](/windows/win32/Controls/lvm-setcolumnwidth)所述。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則不為零，否則為 0。
 
-## <a name="setextendedstyle"></a>CListCtrl：： SetExtendedStyle
+## <a name="clistctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CListCtrl::設定延伸樣式
 
-設定清單視圖控制項的目前擴充樣式。
+設置清單檢視控制項的目前擴展樣式。
 
 ```
 DWORD SetExtendedStyle(DWORD dwNewStyle);
@@ -3339,15 +3339,15 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ### <a name="parameters"></a>參數
 
 *dwNewStyle*<br/>
-清單視圖控制項所使用的擴充樣式組合。 如需這些樣式的描述性清單，請參閱 Windows SDK 中的[擴充清單視圖樣式](/windows/win32/Controls/extended-list-view-styles)主題。
+清單檢視控制項使用的擴充樣式的組合。 有關這些樣式的描述性清單,請參閱 Windows SDK 中的[擴展清單檢視樣式](/windows/win32/Controls/extended-list-view-styles)主題。
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項所使用之舊版延伸樣式的組合。
+清單檢視控制項使用以前的擴展樣式的組合。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_SetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -3357,9 +3357,9 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
         (m_myListCtrl.GetExtendedStyle()|LVS_EX_HEADERDRAGDROP);
 ```
 
-## <a name="setgroupinfo"></a>CListCtrl：： SetGroupInfo
+## <a name="clistctrlsetgroupinfo"></a><a name="setgroupinfo"></a>CListCtrl::SetGroupInfo
 
-設定描述目前清單視圖控制項之指定群組的資訊。
+設定描述當前清單檢視控制項的指定組的資訊。
 
 ```
 int SetGroupInfo(
@@ -3370,39 +3370,39 @@ int SetGroupInfo(
 ### <a name="parameters"></a>參數
 
 *iGroupId*<br/>
-已設定其資訊之群組的識別碼。
+其資訊集組的標識符。
 
 *pgrp*<br/>
-[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的指標，其中包含要設定的資訊。 呼叫端負責配置此結構並設定其成員。
+指向包含要設置的資訊的[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)結構的指標。 調用方負責分配此結構並設置其成員。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為群組的識別碼;否則為-1。
+如果方法成功,則組的 ID;否則,-1。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_SETGROUPINFO](/windows/win32/Controls/lvm-setgroupinfo)訊息，如 Windows SDK 所述。
+此方法發送[LVM_SETGROUPINFO](/windows/win32/Controls/lvm-setgroupinfo)消息,這在 Windows SDK 中介紹。
 
-## <a name="setgroupmetrics"></a>CListCtrl：： SetGroupMetrics
+## <a name="clistctrlsetgroupmetrics"></a><a name="setgroupmetrics"></a>CListCtrl::設定組指標
 
-設定清單視圖控制項的群組計量。
+設置清單檢視控制件的元件。
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pGroupMetrics*<br/>
-[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)結構的指標，其中包含要設定的群組計量資訊。
+*P 組元指標*<br/>
+指向[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)結構的指標,其中包含要設置的組指標資訊。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETGROUPMETRICS](/windows/win32/Controls/lvm-setgroupmetrics)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETGROUPMETRICS](/windows/win32/Controls/lvm-setgroupmetrics)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="sethotcursor"></a>CListCtrl：： SetHotCursor
+## <a name="clistctrlsethotcursor"></a><a name="sethotcursor"></a>CListCtrl::設定HotCursor
 
-設定針對清單視圖控制項啟用熱追蹤時所使用的資料指標。
+設置為清單檢視控制項啟用熱追蹤時使用的遊標。
 
 ```
 HCURSOR SetHotCursor(HCURSOR hc);
@@ -3410,26 +3410,26 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>參數
 
-*hc*<br/>
-資料指標資源的控制碼，用來表示熱資料指標。
+*Hc*<br/>
+游標資源的句柄,用於表示熱遊標。
 
 ### <a name="return-value"></a>傳回值
 
-清單視圖控制項所使用的先前作用中游標資源的控制碼。
+清單檢視控制項正在使用以前的熱遊標資源的句柄。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_sethotcursor)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_SetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_sethotcursor)的行為,如 Windows SDK 中所述。
 
-只有在啟用 [暫留選取] 時，才會顯示作用中游標，因為游標通過任何清單視圖專案。 藉由設定 LVS_EX_TRACKSELECT 擴充樣式來啟用暫留選取。
+熱游標(僅在啟用懸停選擇時可見)出現在游標經過任何列表視圖項時。 通過設置擴展樣式LVS_EX_TRACKSELECT啟用懸停選擇。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetHotCursor](#gethotcursor)的範例。
+請參考[CListCtrl 的範例::取得 HotCursor](#gethotcursor)。
 
-## <a name="sethotitem"></a>CListCtrl：： SetHotItem
+## <a name="clistctrlsethotitem"></a><a name="sethotitem"></a>CListCtrl::設定Hot專案
 
-設定清單視圖控制項的目前作用中專案。
+設置清單檢視控制件的當前熱項。
 
 ```
 int SetHotItem(int iIndex);
@@ -3438,23 +3438,23 @@ int SetHotItem(int iIndex);
 ### <a name="parameters"></a>參數
 
 *iIndex*<br/>
-要設定為熱專案之專案的以零為基底的索引。
+要設置為熱項的項的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-先前作用中專案之以零為起始的索引。
+以前熱項的零基索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_sethotitem)Win32 宏的行為。
+此成員函數實現 Win32 宏[的行為,ListView_SetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_sethotitem),如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetHotItem](#gethotitem)的範例。
+請參考[CListCtrl 的範例:取得 HotItem](#gethotitem)。
 
-## <a name="sethovertime"></a>CListCtrl：： SetHoverTime
+## <a name="clistctrlsethovertime"></a><a name="sethovertime"></a>CListCtrl::設定懸停時間
 
-設定清單視圖控制項的目前停留時間。
+設置清單檢視控制件的當前懸停時間。
 
 ```
 DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
@@ -3462,24 +3462,24 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 
 ### <a name="parameters"></a>參數
 
-*dwHoverTime*<br/>
-新的延遲（以毫秒為單位），滑鼠游標必須停留在專案上，才能選取它。 如果傳遞預設值，時間會設定為預設的暫留時間。
+*dwHover時間*<br/>
+新的延遲(以毫秒為單位),滑鼠游標必須在選擇專案之前將其懸停在專案上。 如果傳遞預設值,則時間設置為預設懸停時間。
 
 ### <a name="return-value"></a>傳回值
 
-先前的暫留時間（以毫秒為單位）。
+上一個懸停時間,以毫秒為單位。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_sethovertime)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_SetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_sethovertime)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetHoverTime](#gethovertime)的範例。
+請參考[CListCtrl 的範例::抓取時間 。](#gethovertime)
 
-## <a name="seticonspacing"></a>CListCtrl：： SetIconSpacing
+## <a name="clistctrlseticonspacing"></a><a name="seticonspacing"></a>CListCtrl::設定圖示
 
-設定清單視圖控制項中圖示之間的間距。
+設置清單檢視控制件中圖示之間的間距。
 
 ```
 CSize SetIconSpacing(
@@ -3491,22 +3491,22 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>參數
 
-*cx*<br/>
-X 軸上圖示之間的距離（以圖元為單位）。
+*殘雪*<br/>
+x 軸圖示之間的距離(以像素為單位)。
 
 *cy*<br/>
-Y 軸上圖示之間的距離（以圖元為單位）。
+y 軸圖示之間的距離(以像素為單位)。
 
 *size*<br/>
-`CSize` 物件，指定 x 和 y 軸上圖示之間的距離（以圖元為單位）。
+指定`CSize`x 軸和 y 軸圖示之間的距離(以像素為單位)的物件。
 
 ### <a name="return-value"></a>傳回值
 
-[CSize](../../atl-mfc-shared/reference/csize-class.md)物件，包含圖示間距的先前值。
+包含圖示間距的先前值的[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetIconSpacing](/windows/win32/api/commctrl/nf-commctrl-listview_seticonspacing)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_SetIconSpacing](/windows/win32/api/commctrl/nf-commctrl-listview_seticonspacing)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -3515,9 +3515,9 @@ Y 軸上圖示之間的距離（以圖元為單位）。
     m_myListCtrl.SetIconSpacing(CSize(100, 100));
 ```
 
-## <a name="setimagelist"></a>CListCtrl：： SetImageList
+## <a name="clistctrlsetimagelist"></a><a name="setimagelist"></a>CListCtrl::設定影像清單
 
-將影像清單指派給清單視圖控制項。
+將影像清單分配給清單檢視控制項。
 
 ```
 CImageList* SetImageList(
@@ -3528,26 +3528,26 @@ CImageList* SetImageList(
 ### <a name="parameters"></a>參數
 
 *pImageList*<br/>
-要指派之影像清單的指標。
+指向要分配的圖像清單的指標。
 
-*nImageListType*<br/>
-影像清單的類型。 其可以是下列其中一個值：
+*n 影像清單類型*<br/>
+圖像清單的類型。 其可以是下列其中一個值：
 
-- 具有大型圖示的 LVSIL_NORMAL 影像清單。
+- LVSIL_NORMAL具有大圖示的圖像清單。
 
-- 具有小圖示的 LVSIL_SMALL 影像清單。
+- LVSIL_SMALL帶有小圖標的圖像清單。
 
-- 具有狀態影像的 LVSIL_STATE 影像清單。
+- LVSIL_STATE圖像清單與狀態圖像。
 
 ### <a name="return-value"></a>傳回值
 
-上一個影像清單的指標。
+指向上一個圖像清單的指標。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetImageList](#getimagelist)的範例。
+請參考[CListCtrl 的範例::抓取影像清單](#getimagelist)。
 
-## <a name="setinfotip"></a>CListCtrl：： SetInfoTip
+## <a name="clistctrlsetinfotip"></a><a name="setinfotip"></a>CListCtrl::設定資訊提示
 
 設定工具提示文字。
 
@@ -3557,20 +3557,20 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 
 ### <a name="parameters"></a>參數
 
-*plvInfoTip*<br/>
-[LVFSETINFOTIP](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip)結構的指標，其中包含要設定的資訊。
+*PlvInfo提示*<br/>
+指向[LVFSETINFOTIP](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip)結構的指標,其中包含要設置的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip)消息的功能,如 Windows SDK 中所述。
 
-## <a name="setinsertmark"></a>CListCtrl：： SetInsertMark
+## <a name="clistctrlsetinsertmark"></a><a name="setinsertmark"></a>CListCtrl::設定插入標記
 
-將插入點設定為已定義的位置。
+將插入點設置到定義的位置。
 
 ```
 BOOL SetInsertMark(LPLVINSERTMARK plvim);
@@ -3579,19 +3579,19 @@ BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ### <a name="parameters"></a>參數
 
 *plvim*<br/>
-[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)結構的指標，指定要設定插入點的位置。
+指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)結構的指標,指定在何處設置插入點。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE，否則傳回 FALSE。 如果 `LVINSERTMARK` 結構之 `cbSize` 成員中的大小不等於結構的實際大小，或插入點不適用於目前的視圖，則會傳回 FALSE。
+如果成功,則返回 TRUE,否則返回 FALSE。 如果`cbSize``LVINSERTMARK`結構成員中的大小不等於結構的實際大小,或者插入點不應用於當前視圖中,則返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETINSERTMARK](/windows/win32/Controls/lvm-setinsertmark)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETINSERTMARK](/windows/win32/Controls/lvm-setinsertmark)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="setinsertmarkcolor"></a>CListCtrl：： SetInsertMarkColor
+## <a name="clistctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CListCtrl::設定插入標記顏色
 
-設定插入點的色彩。
+設置插入點的顏色。
 
 ```
 COLORREF SetInsertMarkColor(COLORREF color);
@@ -3600,19 +3600,19 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ### <a name="parameters"></a>參數
 
 *顏色*<br/>
-[COLORREF](/windows/win32/gdi/colorref)結構，指定要設定插入點的色彩。
+指定顏色以設定插入點的[COLORREF](/windows/win32/gdi/colorref)結構。
 
 ### <a name="return-value"></a>傳回值
 
-傳回包含上一個色彩的 `COLORREF` 結構。
+返回包含`COLORREF`前一種顏色的結構。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETINSERTMARKCOLOR](/windows/win32/Controls/lvm-setinsertmarkcolor)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETINSERTMARKCOLOR](/windows/win32/Controls/lvm-setinsertmarkcolor)消息的功能,如 Windows SDK 中所述。
 
-## <a name="setitem"></a>CListCtrl：： SetItem
+## <a name="clistctrlsetitem"></a><a name="setitem"></a>CListCtrl:設定項目
 
-設定部分或所有清單視圖專案的屬性。
+設置清單檢視項的部分或全部屬性。
 
 ```
 BOOL SetItem(const LVITEM* pItem);
@@ -3642,34 +3642,34 @@ BOOL SetItem(
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的位址，其中包含新的專案屬性，如 Windows SDK 中所述。 結構的 `iItem` 和 `iSubItem` 成員會識別專案或子項，而結構的 `mask` 成員會指定要設定的屬性。 如需 `mask` 成員的詳細資訊，請參閱**備註**。
+包含新項目屬性的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的位址,如 Windows SDK 中所述。 結構的成員`iItem``iSubItem`標識項或子項,`mask`結構的成員指定要設置的屬性。 有關成員的詳細資訊,`mask`請參考**備註**。
 
 *nItem*<br/>
-要設定其屬性之專案的索引。
+要設置其屬性的項的索引。
 
-*nSubItem*<br/>
-要設定其屬性之子工作的索引。
+*n 子項目*<br/>
+要設置其屬性的子項的索引。
 
 *nMask*<br/>
-指定要設定的屬性（請參閱備註）。
+指定要設置的屬性(請參閱備註)。
 
 *lpszItem*<br/>
-指定專案標籤之以 null 終止之字串的位址。
+指定項目標籤的 null 結束字串的位址。
 
-*nImage*<br/>
-影像清單中專案影像的索引。
+*n 影像*<br/>
+專案圖像在圖像清單中的索引。
 
-*nState*<br/>
-指定要變更之狀態的值（請參閱備註）。
+*n州*<br/>
+指定要更改狀態的值(請參閱備註)。
 
 *nStateMask*<br/>
-指定要變更的狀態（請參閱備註）。
+指定要更改哪些狀態(請參閱備註)。
 
 *lParam*<br/>
-要與專案相關聯的32位應用程式特定值。
+要與項關聯的 32 位應用程式特定值。
 
-*nIndent*<br/>
-縮排的寬度（以圖元為單位）。 如果*nIndent*小於系統定義的最小寬度，新的寬度會設定為系統定義的最小值
+*n 因登特*<br/>
+縮進的寬度(以像素為單位)。 如果*nIndent*小於系統定義的最小寬度,則新寬度將設定為系統定義的最小寬度
 
 ### <a name="return-value"></a>傳回值
 
@@ -3677,38 +3677,38 @@ BOOL SetItem(
 
 ### <a name="remarks"></a>備註
 
-`LVITEM` 結構和*nItem*和*nSubItem*參數的 `iItem` 和 `iSubItem` 成員，會識別要設定其屬性的專案和子項。
+`LVITEM`結構`iItem`的`iSubItem`和成員以及*nItem*和*nSubItem*參數標識要設置其屬性的項和子項。
 
-`LVITEM` 結構的 `mask` 成員和*nMask*參數會指定要設定的專案屬性：
+結構和`mask``LVITEM` *nMask*參數的成員指定要設定的項目屬性:
 
-- LVIF_TEXT `pszText` 成員，或*lpszItem*參數是以 null 終止之字串的位址;已忽略 `cchTextMax` 成員。
+- LVIF_TEXT`pszText`成員或*lpszItem*參數是 null 終止字串的位址;將`cchTextMax`忽略該成員。
 
-- LVIF_STATE `stateMask` member 或*nStateMask*參數指定要變更的專案狀態，而 `state` 成員或*nState*參數包含這些狀態的值。
+- LVIF_STATE`stateMask`成員或*nStateMask*參數指定要更改`state`的項狀態 ,並且成員或*nState*參數包含這些狀態的值。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： HitTest](#hittest)的範例。
+請參閱[CListCtrl 的範例::hitTest](#hittest)。
 
-## <a name="setitemcount"></a>CListCtrl：： SetItemCount
+## <a name="clistctrlsetitemcount"></a><a name="setitemcount"></a>CListCtrl::設定項目計數
 
-準備清單視圖控制項以加入大量專案。
+準備列表檢視控制項以添加大量項。
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nItems*<br/>
-控制項最後將包含的專案數。
+*n 專案*<br/>
+控件最終將包含的項數。
 
 ### <a name="remarks"></a>備註
 
-若要設定虛擬清單視圖控制項的專案計數，請參閱[CListCtrl：： SetItemCountEx](#setitemcountex)。
+要設定虛擬清單檢視控制的項目計數,請參閱[CListCtrl::setItemCountEx](#setitemcountex)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetItemCount](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcount)Win32 宏的行為。
+此成員函數實現 Win32 宏[的行為,ListView_SetItemCount](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcount),如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -3725,9 +3725,9 @@ void SetItemCount(int nItems);
         }
 ```
 
-## <a name="setitemcountex"></a>CListCtrl：： SetItemCountEx
+## <a name="clistctrlsetitemcountex"></a><a name="setitemcountex"></a>CListCtrl::設定項目計數Ex
 
-設定虛擬清單視圖控制項的專案計數。
+設定虛擬清單檢視控制項的項目計數。
 
 ```
 BOOL SetItemCountEx(
@@ -3737,15 +3737,15 @@ BOOL SetItemCountEx(
 
 ### <a name="parameters"></a>參數
 
-*iCount*<br/>
-控制項最後將包含的專案數。
+*i. Count*<br/>
+控件最終將包含的項數。
 
 *dwFlags*<br/>
-指定在重設專案計數之後，清單視圖控制項的行為。 此值可以是下列各項的組合：
+指定重置項目計數后列表檢視控制項的行為。 這個值可以是以下因素的組合:
 
-- 除非受影響的專案目前為 view，否則清單視圖控制項 LVSICF_NOINVALIDATEALL 不會重新繪製。 這是預設值。
+- LVSICF_NOINVALIDATEALL 除非受影響的項當前在視圖中,否則列表視圖控件不會重新繪製。 這是預設值。
 
-- LVSICF_NOSCROLL 當專案計數變更時，清單視圖控制項不會變更捲軸位置。
+- LVSICF_NOSCROLL 當項目計數更改時,列表檢視控制項不會更改滾動位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3753,7 +3753,7 @@ BOOL SetItemCountEx(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 宏的行為， [ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex)，如 Windows SDKand 中所述，只應針對虛擬清單視圖呼叫。
+此成員函數實現 Win32 宏[ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex)的行為,如 Windows SDKand 中所述,應僅調用虛擬清單視圖。
 
 ### <a name="example"></a>範例
 
@@ -3774,9 +3774,9 @@ BOOL SetItemCountEx(
         }
 ```
 
-## <a name="setitemdata"></a>CListCtrl：： SetItemData
+## <a name="clistctrlsetitemdata"></a><a name="setitemdata"></a>CListCtrl::設定項目資料
 
-設定與*nItem*所指定的專案相關聯的32位應用程式特定值。
+設置與*nItem*指定的項關聯的 32 位元應用程式特定值。
 
 ```
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
@@ -3785,10 +3785,10 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要設定其資料之清單專案的索引。
+要設置其數據的清單項的索引。
 
 *dwData*<br/>
-要與專案相關聯的32位值。
+要與項關聯的 32 位值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3796,7 +3796,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 
 ### <a name="remarks"></a>備註
 
-這個值是[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的 `lParam` 成員，如 Windows SDK 所述。
+此值是`lParam` [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的成員,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -3808,9 +3808,9 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
     }
 ```
 
-## <a name="setitemindexstate"></a>CListCtrl：： SetItemIndexState
+## <a name="clistctrlsetitemindexstate"></a><a name="setitemindexstate"></a>CListCtrl::設定項目索引狀態
 
-設定目前清單視圖控制項中專案的狀態。
+設定當前清單檢視控制項中項的狀態。
 
 ```
 BOOL SetItemIndexState(
@@ -3823,25 +3823,25 @@ BOOL SetItemIndexState(
 
 |參數|描述|
 |---------------|-----------------|
-|*pItemIndex*|在描述專案之[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標。 呼叫端負責配置此結構並設定其成員。|
-|*dwState*|在要設定專案的狀態，這是[清單視圖專案狀態](/windows/win32/Controls/list-view-item-states)的位元組合。 指定零以重設或設定一個狀態。|
-|*dwMask*|在*DwState*參數所指定之狀態有效位的遮罩。 指定[清單視圖專案狀態](/windows/win32/Controls/list-view-item-states)的位合（或）。|
+|*pItem索引*|[在]指向描述項的[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標。 調用方負責分配此結構並設置其成員。|
+|*德沃州*|[在]要設置項的狀態,這是[列表視圖項狀態](/windows/win32/Controls/list-view-item-states)的位組合。 指定要重置的零或要設置的狀態。|
+|*dwMask*|[在]*dwState*參數指定的狀態的有效位的掩碼。 指定[清單檢視項目狀態](/windows/win32/Controls/list-view-item-states)的位元群組 (OR)。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-如需*dwState*參數的詳細資訊，請參閱[清單視圖專案狀態](/windows/win32/Controls/list-view-item-states)。
+關於*dwState*參數的詳細資訊,請參考[清單檢視項目狀態](/windows/win32/Controls/list-view-item-states)。
 
-如需*dwMask*參數的詳細資訊，請參閱[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的*stateMask*成員。
+有關*dwMask*參數的詳細資訊,請參閱[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構*的狀態掩碼*成員。
 
-這個方法會傳送[LVM_SETITEMINDEXSTATE](/windows/win32/Controls/lvm-setitemindexstate)訊息，如 Windows SDK 所述。
+此方法發送[LVM_SETITEMINDEXSTATE](/windows/win32/Controls/lvm-setitemindexstate)消息,這在 Windows SDK 中介紹。
 
-## <a name="setitemposition"></a>CListCtrl：： SetItemPosition
+## <a name="clistctrlsetitemposition"></a><a name="setitemposition"></a>CListCtrl::設定項目位置
 
-將專案移至清單視圖控制項中的指定位置。
+將項目移至列表檢視控制檔中的指定位置。
 
 ```
 BOOL SetItemPosition(
@@ -3852,10 +3852,10 @@ BOOL SetItemPosition(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要設定其位置之專案的索引。
+要設置其位置的項的索引。
 
 *pt*<br/>
-[點](/previous-versions/dd162805\(v=vs.85\))結構，指定專案左上角的新位置（以視圖座標表示）。
+指定專案左上角的新位置(在檢視座標中)的[POINT](/windows/win32/api/windef/ns-windef-point)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3863,17 +3863,17 @@ BOOL SetItemPosition(
 
 ### <a name="remarks"></a>備註
 
-控制項必須在圖示或小圖示視圖中。
+控件必須位於圖示或小圖示檢視中。
 
-如果清單視圖控制項具有 LVS_AUTOARRANGE 樣式，則清單視圖會在設定專案的位置之後排列。
+如果清單檢視控制項具有LVS_AUTOARRANGE樣式,則清單檢視在設置專案位置後進行排列。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetItemPosition](#getitemposition)的範例。
+請參考[CListCtrl 的範例::抓取項目位置](#getitemposition)。
 
-## <a name="setitemstate"></a>CListCtrl：： SetItemState
+## <a name="clistctrlsetitemstate"></a><a name="setitemstate"></a>CListCtrl::設定項目狀態
 
-變更清單視圖控制項中專案的狀態。
+更改清單檢視控制項中項的狀態。
 
 ```
 BOOL SetItemState(
@@ -3889,16 +3889,16 @@ BOOL SetItemState(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要設定其狀態之專案的索引。
+要設置其狀態的項的索引。
 
 *pItem*<br/>
-[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的位址，如 Windows SDK 中所述。 結構的 `stateMask` 成員會指定要變更的狀態位，而結構的 `state` 成員則包含這些位的新值。 其他成員則會被忽略。
+[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的位址,如Windows SDK中所述。 結構的成員`stateMask`指定要更改的狀態位,並且結構的`state`成員 包含這些位的新值。 其他成員將被忽略。
 
-*nState*<br/>
-狀態位的新值。 如需可能值的清單，請參閱[CListCtrl：： GetNextItem](#getnextitem)和[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) state 成員。
+*n州*<br/>
+狀態位的新值。 有關可能值的清單,請參閱[CListCtrl:getNextItem](#getnextitem)和[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)狀態成員。
 
 *nMask*<br/>
-指定要變更之狀態位的遮罩。 這個值會對應至[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的 stateMask 成員。
+蒙版指定要更改的狀態位。 此值對應於[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的狀態掩碼成員。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3906,15 +3906,15 @@ BOOL SetItemState(
 
 ### <a name="remarks"></a>備註
 
-專案的「狀態」是指定專案可用性、表示使用者動作，或以其他方式反映專案狀態的值。 清單視圖控制項會變更一些狀態位，例如當使用者選取專案時。 應用程式可能會變更其他狀態位來停用或隱藏專案，或指定重迭影像或狀態影像。
+項的「狀態」是指定項的可用性、指示使用者操作或以其他方式反映項狀態的值。 清單檢視控制項會更改某些狀態位,例如當使用者選擇項時。 應用程式可能會更改其他狀態位以禁用或隱藏該專案,或指定疊加圖像或狀態圖像。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetTopIndex](#gettopindex)的範例。
+請參考[CListCtrl 的範例::getTopIndex](#gettopindex)。
 
-## <a name="setitemtext"></a>CListCtrl：： SetItemText
+## <a name="clistctrlsetitemtext"></a><a name="setitemtext"></a>CListCtrl::設定項目文字
 
-變更清單視圖專案或子項的文字。
+變更列表檢視項目或子項目的文字。
 
 ```
 BOOL SetItemText(
@@ -3926,13 +3926,13 @@ BOOL SetItemText(
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要設定其文字之專案的索引。
+要設置其文本的項的索引。
 
-*nSubItem*<br/>
-子專案的索引，或為零以設定專案標籤。
+*n 子項目*<br/>
+子項的索引,或用於設置項標籤的零。
 
 *lpszText*<br/>
-包含新專案文字之字串的指標。
+指向包含新項目文本的字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3940,15 +3940,15 @@ BOOL SetItemText(
 
 ### <a name="remarks"></a>備註
 
-這個方法不適合搭配包含 LVS_OWNERDATA 視窗樣式的控制項使用（事實上，這會造成在 Debug 組建中的判斷提示）。 如需這份清單控制項樣式的詳細資訊，請參閱[清單視圖控制項總覽](/windows/win32/Controls/list-view-controls-overview)。
+此方法不適用於包含LVS_OWNERDATA視窗樣式的控件(實際上,這將導致調試版本中的斷言)。 有關此清單控制項樣式的詳細資訊,請參考[清單檢視控制元件概述](/windows/win32/Controls/list-view-controls-overview)。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： InsertItem](#insertitem)的範例。
+請參考[CListCtrl 的範例:插入項目](#insertitem)。
 
-## <a name="setoutlinecolor"></a>CListCtrl：： SetOutlineColor
+## <a name="clistctrlsetoutlinecolor"></a><a name="setoutlinecolor"></a>CListCtrl::設定大綱顏色
 
-如果已設定 [ [LVS_EX_BORDERSELECT](/windows/win32/Controls/list-view-window-styles)擴充] 視窗樣式，則設定清單視圖控制項的框線色彩。
+如果設置了[LVS_EX_BORDERSELECT](/windows/win32/Controls/list-view-window-styles)擴展視窗樣式,則設置列表檢視控制項的邊框顏色。
 
 ```
 COLORREF SetOutlineColor(COLORREF color);
@@ -3957,19 +3957,19 @@ COLORREF SetOutlineColor(COLORREF color);
 ### <a name="parameters"></a>參數
 
 *顏色*<br/>
-包含外框色彩的新[COLORREF](/windows/win32/gdi/colorref)結構。
+包含輪廓顏色的新[COLORREF](/windows/win32/gdi/colorref)結構。
 
 ### <a name="return-value"></a>傳回值
 
-包含外框色彩的上一個 `COLORREF` 結構
+包含輪`COLORREF`廓顏色的前一個結構
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETOUTLINECOLOR](/windows/win32/Controls/lvm-setoutlinecolor)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETOUTLINECOLOR](/windows/win32/Controls/lvm-setoutlinecolor)消息的功能,如 Windows SDK 中所述。
 
-## <a name="setselectedcolumn"></a>CListCtrl：： SetSelectedColumn
+## <a name="clistctrlsetselectedcolumn"></a><a name="setselectedcolumn"></a>CListCtrl::設定選擇欄位
 
-設定清單視圖控制項的選取資料行。
+設置清單檢視控制項的選定欄。
 
 ```
 LRESULT SetSelectedColumn(int iCol);
@@ -3978,19 +3978,19 @@ LRESULT SetSelectedColumn(int iCol);
 ### <a name="parameters"></a>參數
 
 *iCol*<br/>
-要選取之資料行的索引。
+要選擇的列的索引。
 
 ### <a name="return-value"></a>傳回值
 
-不使用傳回值。
+不使用返回值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETSELECTEDCOLUMN](/windows/win32/Controls/lvm-setselectedcolumn)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETSELECTEDCOLUMN](/windows/win32/Controls/lvm-setselectedcolumn)消息的功能,如 Windows SDK 中所述。
 
-## <a name="setselectionmark"></a>CListCtrl：： SetSelectionMark
+## <a name="clistctrlsetselectionmark"></a><a name="setselectionmark"></a>CListCtrl::設定選擇標記
 
-設定清單視圖控制項的選取標記。
+設置清單檢視控制件的選擇標記。
 
 ```
 int SetSelectionMark(int iIndex);
@@ -3999,23 +3999,23 @@ int SetSelectionMark(int iIndex);
 ### <a name="parameters"></a>參數
 
 *iIndex*<br/>
-多重選取範圍中第一個專案之以零為基底的索引。
+多個選定中第一項的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-上一個選取標記，如果沒有選取標記，則為-1。
+上一個選擇標記,如果沒有選擇標記,則為 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_setselectionmark)Win32 宏的行為。
+此成員函數實現 Win32 宏[的行為,ListView_SetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_setselectionmark),如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetSelectionMark](#getselectionmark)的範例。
+請參考[CListCtrl 的範例::取得選擇標籤](#getselectionmark)。
 
-## <a name="settextbkcolor"></a>CListCtrl：： SetTextBkColor
+## <a name="clistctrlsettextbkcolor"></a><a name="settextbkcolor"></a>CListCtrl::設定文字BkColor
 
-設定清單視圖控制項中文字的背景色彩。
+設定清單檢視控制項中文字的背景顏色。
 
 ```
 BOOL SetTextBkColor(COLORREF cr);
@@ -4023,8 +4023,8 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>參數
 
-*符*<br/>
-COLORREF，指定新的文字背景色彩。 如需相關資訊，請參閱 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
+*鉻*<br/>
+指定新文字背景顏色的 COLORREF。 有關詳細資訊,請參閱 Windows SDK 中的[COLORREF。](/windows/win32/gdi/colorref)
 
 ### <a name="return-value"></a>傳回值
 
@@ -4039,9 +4039,9 @@ COLORREF，指定新的文字背景色彩。 如需相關資訊，請參閱 Wind
         ASSERT(m_myListCtrl.GetTextBkColor() == crBkColor);
 ```
 
-## <a name="settextcolor"></a>CListCtrl：： SetTextColor
+## <a name="clistctrlsettextcolor"></a><a name="settextcolor"></a>CListCtrl::設定文字顏色
 
-設定清單視圖控制項的文字色彩。
+設定清單檢視控制項的文字顏色。
 
 ```
 BOOL SetTextColor(COLORREF cr);
@@ -4049,8 +4049,8 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>參數
 
-*符*<br/>
-指定新文字色彩的 COLORREF。 如需相關資訊，請參閱 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
+*鉻*<br/>
+指定新文字顏色的 COLORREF。 有關詳細資訊,請參閱 Windows SDK 中的[COLORREF。](/windows/win32/gdi/colorref)
 
 ### <a name="return-value"></a>傳回值
 
@@ -4066,9 +4066,9 @@ BOOL SetTextColor(COLORREF cr);
     ASSERT(m_myListCtrl.GetTextColor() == crTextColor);
 ```
 
-## <a name="settileinfo"></a>CListCtrl：： SetTileInfo
+## <a name="clistctrlsettileinfo"></a><a name="settileinfo"></a>CListCtrl::SetTileInfo
 
-設定清單視圖控制項磚的資訊。
+設置清單檢視控制件的磁貼的資訊。
 
 ```
 BOOL SetTileInfo(PLVTILEINFO pTileInfo);
@@ -4077,19 +4077,19 @@ BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ### <a name="parameters"></a>參數
 
 *pTileInfo*<br/>
-[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)結構的指標，其中包含要設定的資訊。
+指向[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)結構的指標,其中包含要設置的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETTILEINFO](/windows/win32/Controls/lvm-settileinfo)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETTILEINFO](/windows/win32/Controls/lvm-settileinfo)消息的功能,如 Windows SDK 中所述。
 
-## <a name="settileviewinfo"></a>CListCtrl：： SetTileViewInfo
+## <a name="clistctrlsettileviewinfo"></a><a name="settileviewinfo"></a>CListCtrl::SetTileViewInfo
 
-設定清單視圖控制項在磚視圖中使用的資訊。
+設定清單檢視控制檔在磁貼檢視中使用的資訊。
 
 ```
 BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
@@ -4097,20 +4097,20 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 
 ### <a name="parameters"></a>參數
 
-*ptvi*<br/>
-[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)結構的指標，其中包含要設定的資訊。
+*普特維*<br/>
+指向[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)結構的指標,其中包含要設置的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETTILEVIEWINFO](/windows/win32/Controls/lvm-settileviewinfo)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETTILEVIEWINFO](/windows/win32/Controls/lvm-settileviewinfo)消息的功能,如 Windows SDK 中所述。
 
-## <a name="settooltips"></a>CListCtrl：： SetToolTips
+## <a name="clistctrlsettooltips"></a><a name="settooltips"></a>CListCtrl::設定工具提示
 
-設定清單視圖控制項將用來顯示工具提示的工具提示控制項。
+設定清單檢視控制項將用於顯示工具提示的工具提示控制項。
 
 ```
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
@@ -4118,22 +4118,22 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 ### <a name="parameters"></a>參數
 
-*pWndTip*<br/>
-清單控制項將使用之 `CToolTipCtrl` 物件的指標。
+*pwndTip*<br/>
+指向清單控制項將使用`CToolTipCtrl`的物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-[CToolTipCtrl](ctooltipctrl-class.md)物件的指標，其中包含控制項先前使用的工具提示，如果先前未使用任何工具提示，則為 Null。
+指向包含控制項以前使用的工具提示的[CToolTipCtrl](ctooltipctrl-class.md)物件的指標,如果以前未使用工具提示,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[LVM_SETTOOLTIPS](/windows/win32/Controls/lvm-settooltips)Win32 訊息的行為。
+此成員函數實現 Win32 消息[LVM_SETTOOLTIPS](/windows/win32/Controls/lvm-settooltips)的行為,如 Windows SDK 中所述。
 
-若不要使用工具提示，請在建立 `CListCtrl` 物件時指出 LVS_NOTOOLTIPS 樣式。
+要不使用工具提示,請指示創建`CListCtrl`物件時LVS_NOTOOLTIPS樣式。
 
-## <a name="setview"></a>CListCtrl：： SetView
+## <a name="clistctrlsetview"></a><a name="setview"></a>CListCtrl::SetView
 
-設定清單視圖控制項的視圖。
+設置清單檢視控制件的檢視。
 
 ```
 DWORD SetView(int iView);
@@ -4142,21 +4142,21 @@ DWORD SetView(int iView);
 ### <a name="parameters"></a>參數
 
 *iView*<br/>
-要選取的視圖。
+要選擇的視圖。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回1，否則傳回-1。 例如，如果此視圖無效，則會傳回-1。
+如果成功,則返回 1,否則返回 -1。 例如,如果檢視無效,則返回 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SETVIEW](/windows/win32/Controls/lvm-setview)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SETVIEW](/windows/win32/Controls/lvm-setview)消息的功能,如 Windows SDK 中所述。
 
-## <a name="setworkareas"></a>CListCtrl：： SetWorkAreas
+## <a name="clistctrlsetworkareas"></a><a name="setworkareas"></a>CListCtrl::設定工作區域
 
-設定可以在清單視圖控制項中顯示圖示的區域。
+設定圖示可以在清單檢視控制項中顯示的區域。
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);
@@ -4164,15 +4164,15 @@ void SetWorkAreas(
 
 ### <a name="parameters"></a>參數
 
-*nWorkAreas*<br/>
-*LpRect*所指向之陣列中的 `RECT` 結構（或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件）數目。
+*n工作領域*<br/>
+`RECT` *lpRect*指向的陣列中的結構(或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件)的數量。
 
 *lpRect*<br/>
-`RECT` 結構（或 `CRect` 物件）陣列的位址，指定清單視圖控制項的新工作區域。 這些區域必須在用戶端座標中指定。 如果此參數為 Null，則工作區域將會設定為控制項的工作區。
+指定清單檢視控制元件的新工作`RECT`區域的結構(`CRect`或物件)陣列的位址。 這些區域必須在用戶端座標中指定。 如果此參數為 NULL,則工作區將設置為控制項的工作區。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_setworkareas)Win32 宏的行為。
+此成員函數實現 Win32 宏[ListView_SetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_setworkareas)的行為,如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -4181,9 +4181,9 @@ void SetWorkAreas(
     m_myListCtrl.SetWorkAreas(0, NULL);
 ```
 
-## <a name="sortgroups"></a>CListCtrl：： SortGroups
+## <a name="clistctrlsortgroups"></a><a name="sortgroups"></a>CListCtrl::排序組
 
-使用應用程式定義的比較函式，依清單視圖控制項中的識別碼來排序群組。
+使用應用程式定義的比較函數按列表檢視控制項中的 ID 對組進行排序。
 
 ```
 BOOL SortGroups(
@@ -4194,22 +4194,22 @@ BOOL SortGroups(
 ### <a name="parameters"></a>參數
 
 *_pfnGroupCompare*<br/>
-群組比較函式的指標。
+指向組比較函數的指標。
 
 *_plv*<br/>
-Void 指標。
+虛空指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[LVM_SORTGROUPS](/windows/win32/Controls/lvm-sortgroups)訊息的功能，如 Windows SDK 中所述。
+此成員函數類比[LVM_SORTGROUPS](/windows/win32/Controls/lvm-sortgroups)訊息的功能,如 Windows SDK 中所述。
 
-## <a name="sortitems"></a>CListCtrl：： SortItems
+## <a name="clistctrlsortitems"></a><a name="sortitems"></a>CListCtrl::排序專案
 
-使用應用程式定義的比較函數排序清單視圖專案。
+使用應用程式定義的比較函數對列表檢視項進行排序。
 
 ```
 BOOL SortItems(
@@ -4219,23 +4219,23 @@ BOOL SortItems(
 
 ### <a name="parameters"></a>參數
 
-*pfnCompare*<br/>
-在應用程式定義的比較函數的位址。
+*普芬比較*<br/>
+[在]應用程式定義的比較函數的位址。
 
-排序作業會在每次需要判斷兩個清單專案的相對順序時，呼叫比較函數。 比較函式必須是類別的靜態成員，或是不是任何類別成員的獨立函數。
+每次需要確定兩個清單項的相對順序時,排序操作都會調用比較函數。 比較函數必須是類的靜態成員,或者不是任何類成員的獨立函數。
 
 *dwData*<br/>
-在應用程式定義的值，會傳遞給比較函數。
+[在]傳遞給比較函數的應用程式定義值。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE;否則為 FALSE。
+如果方法成功,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會變更每個專案的索引，以反映新的序列。
+此方法更改每個項的索引以反映新序列。
 
-比較函數*pfnCompare*具有下列格式：
+比較函數*pfn 比較*具有以下形式:
 
 ```
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -4243,15 +4243,15 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParamSort);
 ```
 
-如果第一個專案應該在第二個專案前面，則比較函式必須傳回負值，如果第一個專案應該在第二個專案後面，則為正值; 如果兩個專案相等，則為零。
+如果第一個項應位於第二個項之前,則比較函數必須返回負值;如果第一個項應遵循第二個項,則返回正值;如果兩個項相等,則比較函數必須返回負值。
 
-*LParam1*參數是與第一個比較的專案相關聯的32位值，而*lParam2*參數是與第二個專案相關聯的值。 這些值是在專案的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的*lParam*成員中，于插入清單時所指定的值。 *LParamSort*參數與*dwData*值相同。
+*lParam1*參數是與比較的第一個項關聯的 32 位值 *,lParam2*參數是與第二個項關聯的值。 這些是在專案[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)結構的*lParam*成員中指定的值,當這些值插入到清單中時。 *lParamSort*參數與*dwData*值相同。
 
-這個方法會傳送[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)訊息，如 Windows SDK 所述。
+此方法發送[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)訊息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-以下是簡單的比較函式，會導致專案依其*lParam*值排序。
+下面是一個簡單的比較函數,它會導致按其*lParam*值對項進行排序。
 
 ```cpp
 // Sort items by associated lParam
@@ -4271,9 +4271,9 @@ void CListCtrlDlg::Sort()
 }
 ```
 
-## <a name="sortitemsex"></a>CListCtrl：： SortItemsEx
+## <a name="clistctrlsortitemsex"></a><a name="sortitemsex"></a>CListCtrl::排序專案Ex
 
-使用應用程式定義的比較函數，排序目前清單視圖控制項的專案。
+使用應用程式定義的比較函數對當前列表檢視控制項的項進行排序。
 
 ```
 BOOL SortItemsEx(
@@ -4285,18 +4285,18 @@ BOOL SortItemsEx(
 
 |參數|描述|
 |---------------|-----------------|
-|*pfnCompare*|在應用程式定義的比較函數的位址。<br /><br /> 排序作業會在每次需要判斷兩個清單專案的相對順序時，呼叫比較函數。 比較函式必須是類別的靜態成員，或是不是任何類別成員的獨立函數。|
-|*dwData*|在傳遞至比較函數的應用程式定義值。|
+|*普芬比較*|[在]應用程式定義的比較函數的位址。<br /><br /> 每次需要確定兩個清單項的相對順序時,排序操作都會調用比較函數。 比較函數必須是類的靜態成員,或者不是任何類成員的獨立函數。|
+|*dwData*|[在]應用程式定義的值傳遞給比較函數。|
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會變更每個專案的索引，以反映新的序列。
+此方法更改每個項的索引以反映新序列。
 
-比較函數*pfnCompare*具有下列格式：
+比較函數*pfn 比較*具有以下形式:
 
 ```
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -4304,18 +4304,18 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParamSort);
 ```
 
-此訊息類似[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)，但傳遞至比較函數的資訊類型除外。 在[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)中， *lParam1*和*lParam2*是要比較之專案的值。 在[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)中， *lParam1*是要比較之第一個專案的目前索引，而*lParam2*是第二個專案的目前索引。 您可以傳送[LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)訊息來取得專案的詳細資訊。
+此消息類似於[LVM_SORTITEMS,](/windows/win32/Controls/lvm-sortitems)但傳遞給比較函數的資訊類型除外。 在[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)*LVM_SORTITEMS,lParam1*和*lParam2*是要比較的項目的值。 在[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)中 *,lParam1*是比較的第一個專案的當前索引,*而lParam2*是第二個專案的當前索引。 您可以發送[LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)訊息來檢索有關項目的詳細資訊。
 
-如果第一個專案應該在第二個專案前面，則比較函式必須傳回負值，如果第一個專案應該在第二個專案後面，則為正值; 如果兩個專案相等，則為零。
+如果第一個項應位於第二個項之前,則比較函數必須返回負值;如果第一個項應遵循第二個項,則返回正值;如果兩個項相等,則比較函數必須返回負值。
 
 > [!NOTE]
->  在排序過程中，清單視圖內容不穩定。 如果回呼函數將任何訊息傳送至[LVM_GETITEM](/windows/win32/Controls/lvm-getitem)以外的清單視圖控制項，則結果會是無法預測的。
+> 在排序過程中,清單視圖內容不穩定。 如果回調函數向清單檢視控制件發送[LVM_GETITEM以外的任何消息](/windows/win32/Controls/lvm-getitem),則結果不可預測。
 
-這個方法會傳送[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)訊息，如 Windows SDK 所述。
+此方法發送[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來存取目前清單視圖控制項的變數 `m_listCtrl`。 下一個範例中會使用此變數。
+以下代碼範`m_listCtrl`例定義用於存取目前列表檢視 控制項的變數 。 下一個範例中會使用此變數。
 
 ```cpp
 public:
@@ -4325,7 +4325,7 @@ public:
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範 `SortItemEx` 方法。 在這個程式碼範例的先前章節中，我們建立了清單視圖控制項，它會在報表檢視中顯示兩個標題為 "ClientID" 和 "年級" 的資料行。 下列程式碼範例會使用「等級」資料行中的值來排序資料表。
+以下代碼範例展示該方法`SortItemEx`。 在此代碼示例的較早部分中,我們創建了一個列表視圖控件,該控件在報表視圖中顯示兩列標題為"ClientID"和"分級"。 以下代碼示例使用「坡度」欄中的值對表進行排序。
 
 ```cpp
 // The ListCompareFunc() method is a global function used by SortItemEx().
@@ -4357,9 +4357,9 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 }
 ```
 
-## <a name="subitemhittest"></a>CListCtrl：： SubItemHitTest
+## <a name="clistctrlsubitemhittest"></a><a name="subitemhittest"></a>CListCtrl::子項目命中測試
 
-判斷哪個清單視圖專案（如果有的話）位於指定的位置。
+確定哪個清單檢視項(如果有)位於給定位置。
 
 ```
 int SubItemHitTest(LPLVHITTESTINFO pInfo);
@@ -4368,15 +4368,15 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ### <a name="parameters"></a>參數
 
 *pInfo*<br/>
-[LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)結構的指標。
+指向[LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-要測試之專案的以一為基的索引（如果有的話），否則為-1。
+正在測試的項或子項的基於一個索引(如果有),否則為 -1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會依照 Windows SDK 中的說明，實作用[ListView_SubItemHitTest](/windows/win32/api/commctrl/nf-commctrl-listview_subitemhittest)Win32 宏的行為。
+此成員函數實現 Win32 宏[的行為,ListView_SubItemHitTest](/windows/win32/api/commctrl/nf-commctrl-listview_subitemhittest),如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -4398,9 +4398,9 @@ void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="update"></a>CListCtrl：： Update
+## <a name="clistctrlupdate"></a><a name="update"></a>CListCtrl::更新
 
-強制清單視圖控制項重新繪製*nItem*所指定的專案。
+強制清單檢視控制項重新繪製*nItem*指定的項目。
 
 ```
 BOOL Update(int nItem);
@@ -4409,7 +4409,7 @@ BOOL Update(int nItem);
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-要更新之專案的索引。
+要更新的項的索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4417,15 +4417,15 @@ BOOL Update(int nItem);
 
 ### <a name="remarks"></a>備註
 
-如果清單視圖控制項具有 LVS_AUTOARRANGE 樣式，此函式也會進行排列。
+如果清單檢視控制項具有LVS_AUTOARRANGE樣式,則此功能還會排列清單檢視控制項。
 
 ### <a name="example"></a>範例
 
-請參閱[CListCtrl：： GetSelectedCount](#getselectedcount)的範例。
+請參考[CListCtrl 的範例:取得選擇計數](#getselectedcount)。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 ROWLIST](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](cwnd-class.md)<br/>
 [階層架構圖表](../hierarchy-chart.md)<br/>
 [CImageList 類別](cimagelist-class.md)

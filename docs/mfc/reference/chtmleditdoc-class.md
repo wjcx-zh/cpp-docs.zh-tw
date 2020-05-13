@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8b500f651da1a73040fdb0469f2f023babe25e85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346179"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352166"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc 類別
 
-具有[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)，提供 WebBrowser 編輯平台在 MFC 的文件檢視架構內容中的功能。
+使用[CHtmlEditView](../../mfc/reference/chtmleditview-class.md),在 MFC 文件檢視架構結構的上下文中提供 Web 瀏覽器編輯平臺的功能。
 
 ## <a name="syntax"></a>語法
 
@@ -37,17 +37,17 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 |名稱|描述|
 |----------|-----------------|
-|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|建構 `CHtmlEditDoc` 物件。|
+|[CHtml 編輯檔:CHtml編輯多克](#chtmleditdoc)|建構 `CHtmlEditDoc` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CHtmlEditDoc::GetView](#getview)|擷取`CHtmlEditView`物件附加至這份文件。|
-|[CHtmlEditDoc::IsModified](#ismodified)|傳回相關聯的檢視 WebBrowser 控制項是否包含已由使用者修改文件。|
-|[CHtmlEditDoc::OpenURL](#openurl)|開啟的 URL。|
+|[CHtml 編輯檔案:取得檢視](#getview)|檢索附加到此`CHtmlEditView`文件的物件。|
+|[CHtmlEditDoc:已修改](#ismodified)|返回關聯的檢視的 WebBrowser 控制件是否包含使用者已修改的文檔。|
+|[CHtml編輯檔::開啟 URL](#openurl)|打開 URL。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -61,7 +61,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 **Header:** afxhtml.h
 
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+## <a name="chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtml 編輯檔:CHtml編輯多克
 
 建構 `CHtmlEditDoc` 物件。
 
@@ -69,9 +69,9 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 CHtmlEditDoc();
 ```
 
-##  <a name="getview"></a>  CHtmlEditDoc::GetView
+## <a name="chtmleditdocgetview"></a><a name="getview"></a>CHtml 編輯檔案:取得檢視
 
-擷取[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)物件附加至這份文件。
+檢索附加到本文檔的[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)物件。
 
 ```
 virtual CHtmlEditView* GetView() const;
@@ -79,19 +79,19 @@ virtual CHtmlEditView* GetView() const;
 
 ### <a name="return-value"></a>傳回值
 
-讓指標回到文件的`CHtmlEditView`物件。
+返回指向文件`CHtmlEditView`物件的指標。
 
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+## <a name="chtmleditdocismodified"></a><a name="ismodified"></a>CHtmlEditDoc:已修改
 
-傳回相關聯的檢視 WebBrowser 控制項是否包含已由使用者修改文件。
+返回關聯的檢視的 WebBrowser 控制件是否包含使用者已修改的文檔。
 
 ```
 virtual BOOL IsModified();
 ```
 
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+## <a name="chtmleditdocopenurl"></a><a name="openurl"></a>CHtml編輯檔::開啟 URL
 
-開啟的 URL。
+打開 URL。
 
 ```
 virtual BOOL OpenURL(LPCTSTR lpszURL);
@@ -104,9 +104,9 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時返回 TRUE,在失敗時返回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 
-[HTMLEdit 範例](../../overview/visual-cpp-samples.md)<br/>
+[HTML編輯範例](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

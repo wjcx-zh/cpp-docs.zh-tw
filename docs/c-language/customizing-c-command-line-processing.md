@@ -13,11 +13,11 @@ helpviewer_keywords:
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290679"
 ---
 # <a name="customizing-c-command-line-processing"></a>自訂 C 命令列處理
 
@@ -27,6 +27,6 @@ ms.locfileid: "56147031"
 
 如果您的程式會在 C 執行階段程式庫中呼叫 **_spawn** 或 **_exec** 常式系列，則您不應該隱藏環境處理常式，因為此常式的作用是將環境從繁衍處理序傳遞到新的處理序。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [main 函式和程式執行](../c-language/main-function-and-program-execution.md)

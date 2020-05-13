@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::Release method
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-ms.openlocfilehash: 5fc1b8965bf8bf2f86dd30f2195fa825f85f6d7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f314d09c443d0d284e3a821b5c879bfb74baf812
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371280"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 類別
 
-釋放模組中的最後一個物件時，叫用事件處理常式。
+釋放模組中的最後一個物件時調用事件處理程式。
 
 ## <a name="syntax"></a>語法
 
@@ -38,53 +38,53 @@ class ReleaseNotifier;
 
 名稱                                                                                | 描述
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------
-[Module：： ReleaseNotifier：： ~ ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | 將 `Module::ReleaseNotifier` 類別的目前實例。
-[Module：： ReleaseNotifier：： ReleaseNotifier](#releasenotifier-releasenotifier)        | 初始化 `Module::ReleaseNotifier` 類別的新執行個體。
+[模組::釋放器::*釋放器](#releasenotifier-tilde-releasenotifier) | 取消初始化類的`Module::ReleaseNotifier`當前實例。
+[模組::釋放程式::釋放器](#releasenotifier-releasenotifier)        | 將 `Module::ReleaseNotifier` 類別的新執行個體初始化。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                         | 描述
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
-[Module：： ReleaseNotifier：： Invoke](#releasenotifier-invoke)   | 當執行時，會在釋放模組中的最後一個物件時呼叫事件處理常式。
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | 如果物件是以**true**的參數所建立，則刪除目前的 `Module::ReleaseNotifier` 物件。
+[模組::釋放程式::調用](#releasenotifier-invoke)   | 實現後,在釋放模組中的最後一個物件時調用事件處理程式。
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | 如果物件建構的`Module::ReleaseNotifier`參數為**true**,則刪除當前物件。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ReleaseNotifier`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module. h
+**標題:** 模組.h
 
 **命名空間：** Microsoft::WRL
 
-## <a name="releasenotifier-tilde-releasenotifier"></a>Module：： ReleaseNotifier：： ~ ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>模組::釋放器::*釋放器
 
-將 `Module::ReleaseNotifier` 類別的目前實例。
+取消初始化類的`Module::ReleaseNotifier`當前實例。
 
 ```cpp
 WRL_NOTHROW virtual ~ReleaseNotifier();
 ```
 
-## <a name="releasenotifier-invoke"></a>Module：： ReleaseNotifier：： Invoke
+## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>模組::釋放程式::調用
 
-當執行時，會在釋放模組中的最後一個物件時呼叫事件處理常式。
+實現後,在釋放模組中的最後一個物件時調用事件處理程式。
 
 ```cpp
 virtual void Invoke() = 0;
 ```
 
-## <a name="releasenotifier-release"></a>Module：： ReleaseNotifier：： Release
+## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>模組::發佈程式::發佈
 
-如果物件是以**true**的參數所建立，則刪除目前的 `Module::ReleaseNotifier` 物件。
+如果物件建構的`Module::ReleaseNotifier`參數為**true**,則刪除當前物件。
 
 ```cpp
 void Release() throw();
 ```
 
-## <a name="releasenotifier-releasenotifier"></a>Module：： ReleaseNotifier：： ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>模組::釋放程式::釋放器
 
-初始化 `Module::ReleaseNotifier` 類別的新執行個體。
+將 `Module::ReleaseNotifier` 類別的新執行個體初始化。
 
 ```cpp
 ReleaseNotifier(bool release) throw();
@@ -92,5 +92,5 @@ ReleaseNotifier(bool release) throw();
 
 ### <a name="parameters"></a>參數
 
-*release*<br/>
-`true` 在呼叫 `Release` 方法時刪除這個實例;`false` 不會刪除這個實例。
+*釋放*<br/>
+`true`在調用`Release`方法時刪除此實例;`false`不刪除此實例。

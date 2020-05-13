@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 146a0f7a7cc1402f7c28e6bf09fead1914c7c6be
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 110fe4abf7eb90b05e7feef563efa4882bed0fc6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332004"
 ---
 # <a name="marshal_context-class"></a>marshal_context 類別
 
@@ -27,9 +27,9 @@ class marshal_context
 
 ## <a name="remarks"></a>備註
 
-為需要內容的資料轉換使用 `marshal_context` 類別。 如需有關哪些轉換需要內容以及必須包含哪些封送處理檔案的詳細資訊，請參閱[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)。 在您使用內容時的封送處理結果的有效性只到 `marshal_context` 物件終結時。 若要保存結果，您必須複製資料。
+為需要內容的資料轉換使用 `marshal_context` 類別。 有關哪些轉換需要上下文以及必須包含哪些封送檔的詳細資訊,請參閱[C++ 中的封送概述](../dotnet/overview-of-marshaling-in-cpp.md)。 在您使用內容時的封送處理結果的有效性只到 `marshal_context` 物件終結時。 若要保存結果，您必須複製資料。
 
-相同的 `marshal_context` 可以用於許多資料轉換。 以這種方式重複使用內容，並不會影響先前封送處理呼叫的結果。
+這同樣`marshal_context`可用於許多數據轉換。 以這種方式重用上下文不會影響以前封送調用的結果。
 
 ## <a name="members"></a>成員
 
@@ -37,8 +37,8 @@ class marshal_context
 
 |名稱|描述|
 |---------|-----------|
-|[marshal_context::marshal_context](#marshal-context)|建立 `marshal_context` 物件，以用於 managed 和原生資料類型之間的資料轉換。|
-|[marshal_context::~marshal_context](#tilde-marshal-context)|終結 `marshal_context` 物件。|
+|[marshal_context::marshal_context](#marshal-context)|建構用於`marshal_context`託管數據類型和本機數據類型之間的資料轉換的物件。|
+|[marshal_context:*marshal_context](#tilde-marshal-context)|終結 `marshal_context` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -48,13 +48,13 @@ class marshal_context
 
 ## <a name="requirements"></a>需求
 
-**標頭檔：** \<msclr\marshal.h >、\<msclr \ marshal_windows .h >、\<msclr \ marshal_cppstd. h > 或 \<msclr \ marshal_atl >
+**標題檔**\<:msclr_marshal.h>、msclr_marshal_windows.h \< \<>、msclr_marshal_cppstd.h \<> 或 msclr_marshal_atl.h>
 
-**命名空間：** msclr：： interop
+**命名空間**:msclr::互通
 
-## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_coNtext：： marshal_coNtext
+## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context:marshal_context
 
-建立 `marshal_context` 物件，以用於 managed 和原生資料類型之間的資料轉換。
+建構用於`marshal_context`託管數據類型和本機數據類型之間的資料轉換的物件。
 
 ```cpp
 marshal_context();
@@ -62,13 +62,13 @@ marshal_context();
 
 ### <a name="remarks"></a>備註
 
-某些資料轉換需要封送處理內容。 如需有關哪些翻譯需要內容，以及哪些封送處理檔案必須包含在應用程式中的詳細資訊，請參閱[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)。
+某些資料轉換需要封送處理內容。 有關哪些翻譯需要上下文以及必須在應用程式中包括哪些封送檔的詳細資訊,請參閱[C++ 中的封送概述](../dotnet/overview-of-marshaling-in-cpp.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[marshal_coNtext：： marshal_as](../dotnet/marshal-context-marshal-as.md)的範例。
+請參閱[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)的範例。
 
-## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_coNtext：： ~ marshal_coNtext
+## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context:*marshal_context
 
 終結 `marshal_context` 物件。
 
@@ -78,11 +78,11 @@ marshal_context();
 
 ### <a name="remarks"></a>備註
 
-某些資料轉換需要封送處理內容。 如需有關哪些翻譯需要內容，以及哪些封送處理檔案必須包含在應用程式中的詳細資訊，請參閱[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)。
+某些資料轉換需要封送處理內容。 有關哪些轉換需要上下文以及哪些封送檔必須包含在應用程式中的詳細資訊,請參閱[C++中的封送概述](../dotnet/overview-of-marshaling-in-cpp.md)。
 
 刪除 `marshal_context` 物件將會使要由該內容轉換的資料失效。 如果想要在終結 `marshal_context` 物件之後保留資料，您必須手動將資料複製至會保存的變數。
 
-## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_coNtext：： marshal_as
+## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context:marshal_as
 
 在特定資料物件上執行封送處理，以便在 Managed 資料類型和原生資料類型之間進行轉換。
 
@@ -95,23 +95,23 @@ To_Type marshal_as<To_Type>(
 ### <a name="parameters"></a>參數
 
 *input*<br/>
-在要封送處理至 `To_Type` 變數的值。
+[在]要封送到`To_Type`變數的值。
 
 ### <a name="return-value"></a>傳回值
 
-`To_Type` 類型的變數，這是 `input`的轉換值。
+類型`To_Type`變數,是轉換的值`input`。
 
 ### <a name="remarks"></a>備註
 
-這個函式會在特定資料物件上執行封送處理。 只有在[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)中，才使用此函數搭配資料表所指示的轉換。
+這個函式會在特定資料物件上執行封送處理。 僅對C++ 中[封送概述](../dotnet/overview-of-marshaling-in-cpp.md)中的錶指示的轉換使用此功能。
 
-如果您嘗試封送處理一對不支援的資料類型，`marshal_as` 會在編譯時期產生錯誤[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 。 如需詳細資訊，請參閱此錯誤所提供的訊息。 不只是已被取代的函式，也可以產生 `C4996` 錯誤。 產生此錯誤的兩個條件是嘗試封送處理一對不支援的資料類型，並嘗試使用 `marshal_as` 進行需要內容的轉換。
+如果嘗試對不支援的資料類型進行封送`marshal_as`, 則在編譯時將生成錯誤[C4996。](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 有關詳細資訊,請閱讀此錯誤附帶的消息。 可以為`C4996`不僅僅是棄用函數生成錯誤。 生成此錯誤的兩個條件嘗試對不支援的數據類型進行封送,並嘗試用於`marshal_as`需要上下文的轉換。
 
-封送處理程式庫是由數個標頭檔所組成。 任何轉換只需要一個檔案，但如果您需要進行其他轉換，則可以包含其他檔案。 `Marshaling Overview in C++` 中的表格所指出的封送處理檔案應該包含在每次轉換中。
+封送庫由多個標頭文件組成。 任何轉換只需要一個檔,但如果需要其他轉換,可以包含其他檔。 `Marshaling Overview in C++` 中的表格所指出的封送處理檔案應該包含在每次轉換中。
 
 ### <a name="example"></a>範例
 
-這個範例會建立從 `System::String` 到 `const char *` 變數類型的封送處理的內容。 在刪除內容的那一行之後，轉換的資料將會無效。
+這個範例會建立從 `System::String` 到 `const char *` 變數類型的封送處理的內容。 轉換後的資料在刪除上下文的行後無效。
 
 ```cpp
 // marshal_context_test.cpp

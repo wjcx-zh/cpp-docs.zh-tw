@@ -1,6 +1,6 @@
 ---
 title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstat64
 - _stati64
@@ -14,6 +14,14 @@ api_name:
 - _stat64
 - _stat64i32
 - _wstat32i64
+- _o__stat32
+- _o__stat32i64
+- _o__stat64
+- _o__stat64i32
+- _o__wstat32
+- _o__wstat32i64
+- _o__wstat64
+- _o__wstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -109,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 5a6e78c0d98871e4becbb5e7411d9c819e9d0596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 607a7aff3acf923e0dd62e0dc332283f66b436b1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957953"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918314"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -178,44 +187,46 @@ int _wstat64i32(
 *path*<br/>
 包含現有檔案或目錄路徑的字串指標。
 
-*buffer*<br/>
+*緩衝區*<br/>
 儲存結果的結構指標。
 
 ## <a name="return-value"></a>傳回值
 
 上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值-1 表示發生錯誤，在此情況下， **errno**會設定為**ENOENT**，表示找不到檔案名或路徑。 **EINVAL**的傳回值表示不正確參數。在此情況下， **errno**也會設為**EINVAL** 。
 
-如需這個及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
+如需此和其他傳回碼的詳細資訊，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
-如果檔案的日期戳記晚于1970年1月1日午夜，而在23:59:59 年12月 31 3000 日（UTC）之前，則可以表示，除非您使用 **_stat32**或 **_wstat32**，或已定義 **_USE_32BIT_TIME_T**，在此情況下，日期可以是僅表示到23:59:59 年1月 18 2038 日，UTC。
+如果檔案的日期戳記晚于1970年1月1日午夜，而在23:59:59 年12月 31 3000 日（UTC）之前，則可以表示，除非您使用 **_stat32**或 **_wstat32**，或已定義 **_USE_32BIT_TIME_T**，在這種情況下，日期只能表示到23:59:59 年1月 18 2038 日，utc 為止。
 
 ## <a name="remarks"></a>備註
 
-**_Stat**函數會取得*path*所指定之檔案或目錄的相關資訊，並將它儲存在*buffer*所指向的結構中。 **_stat**會自動將多位元組字元字串引數處理為適當，並根據目前使用中的多位元組字碼頁來辨識多位元組字元序列。
+**_Stat**函式會取得*path*所指定之檔案或目錄的相關資訊，並將它儲存在*buffer*所指向的結構中。 **_stat**會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當的，並辨識多位元組字元序列。
 
-**_wstat**是寬字元版本的 **_stat**; **_wstat**的*path*引數是寬字元字串。 **_wstat**和 **_stat**的行為相同，不同之處在于 **_wstat**不會處理多位元組字元字串。
+**_wstat**是寬字元版本的 **_stat**;**_wstat**的*path*引數是寬字元字串。 **_wstat**和 **_stat**的行為相同，不同之處在于 **_wstat**不會處理多位元組字元字串。
 
 這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數位尾碼（**32**或**64**）表示所使用的時間類型大小;第二個尾碼為**i32**或**i64**，指出檔案大小是否以32位或64位整數表示。
 
-**_stat**相當於 **_stat64i32**，而**struct** **_stat**包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則這會是 true。 **_stat**使用32位時間，而**結構** **_stat**包含32位時間。 **_Stati64**也是如此。
+**_stat**相當於 **_stat64i32**，而**struct** **_stat**包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則為 true。**_stat**使用32位時間，而**結構** **_stat**包含32位時間。 **_Stati64**的情況也是如此。
 
 > [!NOTE]
-> **_wstat**無法用於 Windows Vista 符號連結。 在這些情況下， **_wstat**一律會報告檔案大小為0。 **_stat**可與符號連結正常搭配運作。
+> **_wstat**無法用於 Windows Vista 符號連結。 在這些情況下， **_wstat**一律會報告檔案大小為0。 **_stat**可搭配符號連結正常運作。
 
 這個函式會驗證它的參數。 如果*路徑*或*緩衝區*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>_stat 的時間類型和檔案長度類型版本
 
 |函式|是否已定義 _USE_32BIT_TIME_T？|時間類型|檔案長度類型|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat**、 **_wstat**|未定義|64 位元|32 位元|
-|**_stat**、 **_wstat**|已定義|32 位元|32 位元|
-|**_stat32**、 **_wstat32**|不會受到巨集定義的影響|32 位元|32 位元|
-|**_stat64**、 **_wstat64**|不會受到巨集定義的影響|64 位元|64 位元|
-|**_stati64**、 **_wstati64**|未定義|64 位元|64 位元|
-|**_stati64**、 **_wstati64**|已定義|32 位元|64 位元|
-|**_stat32i64**、 **_wstat32i64**|不會受到巨集定義的影響|32 位元|64 位元|
-|**_stat64i32**、 **_wstat64i32**|不會受到巨集定義的影響|64 位元|32 位元|
+|**_stat**， **_wstat**|未定義|64 位元|32 位元|
+|**_stat**， **_wstat**|已定義|32 位元|32 位元|
+|**_stat32**， **_wstat32**|不會受到巨集定義的影響|32 位元|32 位元|
+|**_stat64**， **_wstat64**|不會受到巨集定義的影響|64 位元|64 位元|
+|**_stati64**， **_wstati64**|未定義|64 位元|64 位元|
+|**_stati64**， **_wstati64**|已定義|32 位元|64 位元|
+|**_stat32i64**， **_wstat32i64**|不會受到巨集定義的影響|32 位元|64 位元|
+|**_stat64i32**， **_wstat64i32**|不會受到巨集定義的影響|64 位元|32 位元|
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -227,7 +238,7 @@ int _wstat64i32(
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-**_Stat**結構（定義于 SYS\STAT.）H，包含下欄欄位。
+**_Stat**結構，定義于 SYS\STAT。H，包含下欄欄位。
 
 |欄位||
 |-|-|
@@ -243,7 +254,7 @@ int _wstat64i32(
 | **st_size** | 檔案大小（以位元組為單位）;具有**i64**後置詞之變數的64位整數。 |
 | **st_uid** | 擁有檔案 (UNIX 特定) 之使用者的數值識別碼。 這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。 |
 
-如果*path*參考到裝置，則 **_stat**結構中的**st_size**、各種時間欄位、 **st_dev**和**st_rdev**欄位都沒有意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) ，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
+如果*path*參照裝置， **_stat**結構中的**st_size**、各種時間欄位、 **st_dev**和**st_rdev**欄位就沒有意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) 類型，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
 
 ## <a name="requirements"></a>需求
 

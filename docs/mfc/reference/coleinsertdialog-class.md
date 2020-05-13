@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: a884f946b60be0567f39477f434db8efe041e393
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b5de4ff5daa80e1d8727444a4cfd275597e18c08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374965"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 類別
 
@@ -47,38 +47,38 @@ class COleInsertDialog : public COleDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|建構 `COleInsertDialog` 物件。|
+|[COle 插入對話框::COle 插入對話框](#coleinsertdialog)|建構 `COleInsertDialog` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleInsertDialog：： CreateItem](#createitem)|建立在對話方塊中選取的專案。|
-|[COleInsertDialog：:D oModal](#domodal)|顯示 [OLE 插入物件] 對話方塊。|
-|[COleInsertDialog::GetClassID](#getclassid)|取得與所選項目相關聯的 CLSID。|
-|[COleInsertDialog::GetDrawAspect](#getdrawaspect)|告訴您是否要將專案繪製為圖示。|
-|[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|取得與這個專案的 iconic 表單相關聯之中繼檔的控制碼。|
-|[COleInsertDialog::GetPathName](#getpathname)|取得在對話方塊中所選擇之檔案的完整路徑。|
-|[COleInsertDialog::GetSelectionType](#getselectiontype)|取得選取之物件的類型。|
+|[COleInsert 對話::建立專案](#createitem)|建立對話框中選擇的專案。|
+|[COleInsertDialog::Do模態](#domodal)|顯示"OLE 插入物件"對話框。|
+|[COleInsert對話::取得類ID](#getclassid)|獲取與所選項關聯的 CLSID。|
+|[COleInsert對話::取得繪製方面](#getdrawaspect)|告訴是否將項目繪製為圖示。|
+|[COleInsert 對話::取得圖示Meta檔案](#geticonicmetafile)|獲取與此項目的標誌性形式關聯的元檔的句柄。|
+|[COleInsert 對話::獲取路徑名稱](#getpathname)|獲取對話框中選擇的檔的完整路徑。|
+|[COleInsert 對話::取得選擇類型](#getselectiontype)|獲取所選物件的類型。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[COleInsertDialog：： m_io](#m_io)|OLEUIINSERTOBJECT 類型的結構，可控制對話方塊的行為。|
+|[COleInsert對話::m_io](#m_io)|控制對話框行為的 OLEUIINSERTOBJECT 類型的結構。|
 
 ## <a name="remarks"></a>備註
 
-當您想要呼叫此對話方塊時，請建立類別 `COleInsertDialog` 的物件。 在結構化 `COleInsertDialog` 物件之後，您可以使用[m_io](#m_io)結構，在對話方塊中初始化控制項的值或狀態。 `m_io` 結構的類型是 OLEUIINSERTOBJECT。 如需使用此對話方塊類別的詳細資訊，請參閱[DoModal](#domodal)成員函式。
+要呼叫此對話方塊`COleInsertDialog`時 ,請創建類的物件。 建構`COleInsertDialog`物件后,可以使用[m_io](#m_io)結構在對話框中初始化控制件的值或狀態。 結構`m_io`為「奧萊伊插入對象」類型。 有關使用此對話方塊類的詳細資訊,請參閱[DoModal](#domodal)成員函數。
 
 > [!NOTE]
->  應用程式精靈產生的容器程式碼會使用這個類別。
+> 應用程式精靈生成的容器代碼使用此類。
 
-如需詳細資訊，請參閱 Windows SDK 中的[OLEUIINSERTOBJECT](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEUIINSERTOBJECT 結構](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)。
 
-如需有關 OLE 特定對話方塊的詳細資訊，請參閱[ole 中](../../mfc/dialog-boxes-in-ole.md)的文章對話方塊。
+有關特定於 OLE 的對話方塊的詳細資訊,請參閱 OLE[中的「對話框](../../mfc/dialog-boxes-in-ole.md)」一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -96,11 +96,11 @@ class COleInsertDialog : public COleDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxodlgs。h
+**標題:** afxodlgs.h
 
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog
+## <a name="coleinsertdialogcoleinsertdialog"></a><a name="coleinsertdialog"></a>COle 插入對話框::COle 插入對話框
 
-此函式只會對 `COleInsertDialog` 物件進行結構。
+此函數只建構物件`COleInsertDialog`。
 
 ```
 COleInsertDialog (
@@ -111,32 +111,32 @@ COleInsertDialog (
 ### <a name="parameters"></a>參數
 
 *dwFlags*<br/>
-建立旗標，其中包含要使用位 OR 運算子結合的下列任意數目的值：
+建立標誌,其中包含要使用位-OR 運算子組合的任意數量的以下值:
 
-- IOF_SHOWHELP 指定在呼叫對話方塊時，將會顯示 [說明] 按鈕。
+- IOF_SHOWHELP 指定在調用對話框時將顯示"説明"按鈕。
 
-- IOF_SELECTCREATENEW 指定在呼叫對話方塊時，一開始會選取 [建立新的] 選項按鈕。 這是預設值，無法與 IOF_SELECTCREATEFROMFILE 搭配使用。
+- IOF_SELECTCREATENEW 指定在調用對話方塊時,最初將選擇"創建新單選"按鈕。 這是預設值,不能與IOF_SELECTCREATEFROMFILE一起使用。
 
-- IOF_SELECTCREATEFROMFILE 指定在呼叫對話方塊時，一開始會選取 [從檔案建立] 選項按鈕。 不能與 IOF_SELECTCREATENEW 搭配使用。
+- IOF_SELECTCREATEFROMFILE 指定在調用對話方塊時,最初將選擇「從檔案創建單選」按鈕。 不能與IOF_SELECTCREATENEW一起使用。
 
-- IOF_CHECKLINK 指定在呼叫對話方塊時，一開始就會檢查連結核取方塊。
+- IOF_CHECKLINK 指定在調用對話方塊時,將首先選中「連結」複選框。
 
-- IOF_DISABLELINK 指定在呼叫對話方塊時，將會停用 [連結] 核取方塊。
+- IOF_DISABLELINK 指定在調用對話方塊時將禁用"連結"複選框。
 
-- IOF_CHECKDISPLAYASICON 指定一開始會核取 [顯示為圖示] 核取方塊，將會顯示目前的圖示，而且在呼叫對話方塊時，將會啟用 [變更圖示] 按鈕。
+- IOF_CHECKDISPLAYASICON 指定最初將選中"顯示為圖示"複選框,將顯示當前圖示,並在調用對話框時啟用"更改圖示"按鈕。
 
-- IOF_VERIFYSERVERSEXIST 指定對話方塊應該藉由確保註冊資料庫中指定的伺服器存在，然後才會顯示對話方塊，以驗證它新增至清單方塊的類別。 設定此旗標可能會大幅降低效能。
+- IOF_VERIFYSERVERSEXIST 指定對話框應通過確保在顯示對話方塊之前在註冊資料庫中指定的伺服器來驗證它添加到清單框中的類。 設置此標誌可能會顯著削弱性能。
 
-*pParentWnd*<br/>
-指向對話方塊物件所屬的父系或擁有者視窗物件（屬於 `CWnd`類型）。 如果它是 Null，則對話方塊物件的父視窗會設定為主應用程式視窗。
+*pparentwnd*<br/>
+指向對話框物件所屬的父視窗或所有者視窗物件`CWnd`(類型)。 如果為 NULL,則對話方塊物件的父視窗將設置為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-若要顯示對話方塊，請呼叫[DoModal](#domodal)函式。
+要顯示對話框,請調用[DoModal](#domodal)函數。
 
-##  <a name="createitem"></a>COleInsertDialog：： CreateItem
+## <a name="coleinsertdialogcreateitem"></a><a name="createitem"></a>COleInsert 對話::建立專案
 
-只有在[DoModal](#domodal)傳回 IDOK 時，才能呼叫此函式來建立類型為[COleClientItem](../../mfc/reference/coleclientitem-class.md)的物件。
+僅當[DoModal](#domodal)傳回 IDOK 時,才呼叫此函數以創建[COleClientItem](../../mfc/reference/coleclientitem-class.md)類型的物件。
 
 ```
 BOOL CreateItem(COleClientItem* pItem);
@@ -145,19 +145,19 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-指向要建立的專案。
+指向要創建的項。
 
 ### <a name="return-value"></a>傳回值
 
-如果已建立專案，則為非零值;否則為0。
+創建項時非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-您必須先配置 `COleClientItem` 物件，才能呼叫此函式。
+必須先分配物件,`COleClientItem`然後才能呼叫此函數。
 
-##  <a name="domodal"></a>COleInsertDialog：:D oModal
+## <a name="coleinsertdialogdomodal"></a><a name="domodal"></a>COleInsertDialog::Do模態
 
-呼叫此函式以顯示 [OLE 插入物件] 對話方塊。
+呼叫此函數以顯示"OLE 插入物件"對話框。
 
 ```
 virtual INT_PTR
@@ -172,31 +172,31 @@ INT_PTR
 *dwFlags*<br/>
 下列其中一個值：
 
-`COleInsertDialog::DocObjectsOnly` 只會插入 DocObjects。
+`COleInsertDialog::DocObjectsOnly`僅插入文件物件。
 
-`COleInsertDialog::ControlsOnly` 只會插入 ActiveX 控制項。
+`COleInsertDialog::ControlsOnly`僅插入 ActiveX 控件。
 
-零不會插入 DocObject 或 ActiveX 控制項。 這個值會產生與上面所列的第一個原型相同的執行。
+零既不插入文檔物件,也不插入 ActiveX 控制項。 此值導致與上面列出的第一個原型相同的實現。
 
 ### <a name="return-value"></a>傳回值
 
-對話方塊的完成狀態。 下列其中一個值：
+對話框的完成狀態。 下列其中一個值：
 
-- 如果已成功顯示對話方塊，則 IDOK。
+- 如果對話框已成功顯示,則 IDOK。
 
-- 如果使用者取消對話方塊，則 IDCANCEL。
+- 如果使用者取消了對話框,則進行 IDCANCEL。
 
-- 如果發生錯誤，則 IDABORT。 如果傳回 IDABORT，請呼叫[COleDialog：： GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式，以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單，請參閱 Windows SDK 中的[OleUIInsertObject](/windows/win32/api/oledlg/nf-oledlg-oleuiinsertobjectw)函數。
+- 如果發生錯誤,則 IDABORT。 如果返回 IDABORT,請呼叫[COleDialog:getLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函數,以獲取有關所發生錯誤類型的詳細資訊。 有關可能錯誤的清單,請參閱 Windows SDK 中的[OleUIInsertObject](/windows/win32/api/oledlg/nf-oledlg-oleuiinsertobjectw)函數。
 
 ### <a name="remarks"></a>備註
 
-如果您想要藉由設定[m_io](#m_io)結構的成員來初始化各種對話方塊控制項，您應該先執行此動作，再呼叫 `DoModal`，但在構造對話方塊物件之後。
+如果要通過設置[m_io](#m_io)結構的成員來初始化各種對話框控件,則應在調用`DoModal`之前執行此操作,但在構造對話框物件之後。
 
-如果 `DoModal` 傳回 IDOK，您可以呼叫其他成員函式，以抓取使用者在對話方塊中的設定或資訊輸入。
+如果`DoModal`返回 IDOK,則可以調用其他成員函數來檢索使用者輸入到對話方塊中的設置或資訊。
 
-##  <a name="getclassid"></a>COleInsertDialog::GetClassID
+## <a name="coleinsertdialoggetclassid"></a><a name="getclassid"></a>COleInsert對話::取得類ID
 
-只有在[DoModal](#domodal)傳回 IDOK，且選取類型為 `COleInsertDialog::createNewItem`時，才可呼叫此函式來取得與所選項目的關聯的 CLSID。
+僅當[DoModal](#domodal)傳回 IDOK`COleInsertDialog::createNewItem`並且選擇類型為 時,才調用此函數以獲取與選定項關聯的 CLSID。
 
 ```
 REFCLSID GetClassID() const;
@@ -204,15 +204,15 @@ REFCLSID GetClassID() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回與所選項目的關聯的 CLSID。
+返回與所選項關聯的 CLSID。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 Windows SDK 中的[CLSID 金鑰](/windows/win32/com/clsid-key-hklm)。
+關於詳細資訊,請參閱 Windows SDK 中的[CLSID 金鑰](/windows/win32/com/clsid-key-hklm)。
 
-##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect
+## <a name="coleinsertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleInsert對話::取得繪製方面
 
-呼叫此函式可判斷使用者是否選擇將選取的專案顯示為圖示。
+呼叫此函數以確定使用者是否選擇將選取項目顯示為圖示。
 
 ```
 DVASPECT GetDrawAspect() const;
@@ -222,19 +222,19 @@ DVASPECT GetDrawAspect() const;
 
 呈現物件所需的方法。
 
-- 如果未核取 [顯示為圖示] 核取方塊，則會傳回 DVASPECT_CONTENT。
+- 如果未選中「顯示為圖示」複選框,則DVASPECT_CONTENT返回。
 
-- 如果已核取 [顯示為圖示] 核取方塊，則會傳回 DVASPECT_ICON。
+- DVASPECT_ICON如果選中「顯示為圖示」複選框,則返回。
 
 ### <a name="remarks"></a>備註
 
-只有在[DoModal](#domodal)傳回 IDOK 時，才呼叫此函式。
+僅當[DoModal](#domodal)返回 IDOK 時才呼叫此函數。
 
-如需有關繪製外觀的詳細資訊，請參閱 Windows SDK 中的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)資料結構。
+有關繪圖方面的詳細資訊,請參閱 Windows SDK 中的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)資料結構。
 
-##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile
+## <a name="coleinsertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleInsert 對話::取得圖示Meta檔案
 
-呼叫此函式可取得中繼檔的控制碼，其中包含所選取專案的 iconic 層面。
+呼叫此函數以獲取包含所選項標誌性方面的元檔的句柄。
 
 ```
 HGLOBAL GetIconicMetafile() const;
@@ -242,11 +242,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含所選取專案之 iconic 層面的中繼檔控制碼，如果在對話方塊關閉時，選取 [**確定**]，就會核取 [顯示為圖示] 核取方塊。否則為 Null。
+包含選定項目標誌性方面的元檔的句柄,如果通過選擇 **「確定**」在對話框中取消對話框時選中「顯示為圖示」複選框。否則 NULL。
 
-##  <a name="getpathname"></a>COleInsertDialog::GetPathName
+## <a name="coleinsertdialoggetpathname"></a><a name="getpathname"></a>COleInsert 對話::獲取路徑名稱
 
-只有在[DoModal](#domodal)傳回 IDOK，而且未 `COleInsertDialog::createNewItem`選取類型時，才能呼叫此函式來取得選取之檔案的完整路徑。
+僅當[DoModal](#domodal)傳回 IDOK`COleInsertDialog::createNewItem`並且選擇類型不是 時,才調用此函數獲取所選檔的完整路徑。
 
 ```
 CString GetPathName() const;
@@ -254,11 +254,11 @@ CString GetPathName() const;
 
 ### <a name="return-value"></a>傳回值
 
-在對話方塊中選取之檔案的完整路徑。 如果選取類型為 `createNewItem`，此函式會在發行模式中傳回無意義的 `CString`，或在 debug 模式中造成判斷提示。
+對話框中選擇的檔的完整路徑。 如果選擇類型為`createNewItem`,則此函數在`CString`發佈 模式下返回無意義,或在調試模式下導致斷言。
 
-##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType
+## <a name="coleinsertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleInsert 對話::取得選擇類型
 
-選擇 [**確定]** 以在關閉 [插入物件] 對話方塊時，呼叫此函式以取得選擇的類型。
+呼叫此函數,在通過選擇 **「確定**」來取消「插入物件」對話框時選擇選擇類型。
 
 ```
 UINT GetSelectionType() const;
@@ -266,11 +266,11 @@ UINT GetSelectionType() const;
 
 ### <a name="return-value"></a>傳回值
 
-所選取的類型。
+選擇的類型。
 
 ### <a name="remarks"></a>備註
 
-傳回型別值是由 `COleInsertDialog` 類別中宣告的 `Selection` 列舉型別所指定。
+返回類型值由類中聲明的`Selection``COleInsertDialog`枚舉類型指定。
 
 ```
 enum Selection {
@@ -280,17 +280,17 @@ enum Selection {
     };
 ```
 
-這些值的簡短說明如下：
+這些值的簡要說明如下:
 
-- `COleInsertDialog::createNewItem` 已選取 [建立新的] 選項按鈕。
+- `COleInsertDialog::createNewItem`選擇了"創建新單選"按鈕。
 
-- `COleInsertDialog::insertFromFile` 已選取 [從檔案建立] 選項按鈕，且未核取 [連結] 核取方塊。
+- `COleInsertDialog::insertFromFile`選擇了「從檔案創建」單選按鈕,並且未選中「連結」複選框。
 
-- `COleInsertDialog::linkToFile` 已選取 [從檔案建立] 選項按鈕，並已核取 [連結] 核取方塊。
+- `COleInsertDialog::linkToFile`選擇了「從檔案創建」單選按鈕,並選中了「連結」複選框。
 
-##  <a name="m_io"></a>COleInsertDialog：： m_io
+## <a name="coleinsertdialogm_io"></a><a name="m_io"></a>COleInsert對話::m_io
 
-OLEUIINSERTOBJECT 類型的結構，用來控制 [插入物件] 對話方塊的行為。
+用於控制「插入物件」對話框的行為的 OLEUIINSERTOBJECT 類型的結構。
 
 ```
 OLEUIINSERTOBJECT m_io;
@@ -298,13 +298,13 @@ OLEUIINSERTOBJECT m_io;
 
 ### <a name="remarks"></a>備註
 
-這個結構的成員可以直接或透過成員函式來修改。
+此結構的成員可以直接或通過成員函數進行修改。
 
-如需詳細資訊，請參閱 Windows SDK 中的[OLEUIINSERTOBJECT](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEUIINSERTOBJECT 結構](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog 類別](../../mfc/reference/coledialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog 類別](../../mfc/reference/coledialog-class.md)

@@ -1,10 +1,13 @@
 ---
 title: tgamma、tgammaf、tgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - tgamma
 - tgammaf
 - tgammal
+- _o_tgamma
+- _o_tgammaf
+- _o_tgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946203"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912235"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -77,13 +81,13 @@ long double tgammal(
 
 如果成功，會傳回*x*的 gamma。
 
-如果*x*的大小對資料類型而言太大或太小，則可能會發生範圍錯誤。 如果*x* < = 0，可能會發生網域錯誤或範圍錯誤。
+如果*x*的大小對資料類型而言太大或太小，則可能會發生範圍錯誤。 如果*x* <= 0，可能會發生網域錯誤或範圍錯誤。
 
-|問題|Return|
+|問題|傳回|
 |-----------|------------|
 |x = ±0|±無限大|
 |x = 負整數|NaN|
-|x = -INFINITY|NaN|
+|x =-無限大|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |網域錯誤|NaN|
@@ -95,13 +99,15 @@ long double tgammal(
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**tgamma**的多載。 在 C 程式中， **tgamma**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**tgamma**的多載。 在 C 程式中， **tgamma**一律會採用並傳回**雙精度浮點數**。
 
 如果 x 為自然數，此函式會傳回 (x-1) 階乘。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**tgamma**、 **tgammaf**、 **tgammal**|\<math.h>|\<cmath>|
 

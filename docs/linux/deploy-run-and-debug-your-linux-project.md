@@ -4,10 +4,10 @@ description: 描述如何在 Visual Studio 中，從 Linux C++ 專案中在遠�
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "80077830"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
@@ -34,11 +34,11 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="debug-your-linux-project"></a>對 Linux 專案進行偵錯
 
-1. 在 [偵錯] 屬性頁面中選取偵錯模式。
+1. 在 [偵錯]**** 屬性頁面中選取偵錯模式。
 
    ::: moniker range="vs-2019"
 
-   GDB 用來偵錯在 Linux 上執行的應用程式。 在遠端系統 (而不是 WSL) 上進行偵錯時，GDB 可以透過兩種不同的模式執行，而您可以從專案 [偵錯] 屬性頁的 [偵錯模式] 選項中進行選取：
+   GDB 用來偵錯在 Linux 上執行的應用程式。 在遠端系統 (而不是 WSL) 上進行偵錯時，GDB 可以透過兩種不同的模式執行，而您可以從專案 [偵錯]**** 屬性頁的 [偵錯模式]**** 選項中進行選取：
 
    ![GDB 選項](media/vs2019-debugger-settings.png)
 
@@ -46,7 +46,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    ::: moniker range="vs-2017"
 
-   GDB 用來偵錯在 Linux 上執行的應用程式。 GDB 可以透過兩種不同的模式執行，而您可以從專案 [偵錯] 屬性頁的 [偵錯模式] 選項中進行選取：
+   GDB 用來偵錯在 Linux 上執行的應用程式。 GDB 可以透過兩種不同的模式執行，而您可以從專案 [偵錯]**** 屬性頁的 [偵錯模式]**** 選項中進行選取：
 
    ![GDB 選項](media/vs2017-debugger-settings.png)
 
@@ -59,7 +59,7 @@ Visual Studio 2017 及更新版本支援 Linux。
    > [!NOTE]
    > 若無法在 gdbserver 偵錯模式中叫用中斷電，請嘗試 gdb 模式。 必須先在遠端目標上[安裝](download-install-and-setup-the-linux-development-workload.md) gdb。
 
-1. 在 Visual Studio 中使用標準 [偵錯] 工具列選取遠端目標。
+1. 在 Visual Studio 中使用標準 [偵錯]**** 工具列選取遠端目標。
 
    當遠端目標可用時，該目標會以名稱或 IP 位址的形式列出。
 
@@ -73,17 +73,17 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    在您設定中斷點的程式碼上會顯示紅點。
 
-1. 按一下 **F5** (或 [偵錯] > [開始偵錯]) 以開始偵錯。
+1. 按一下 **F5** (或 [偵錯] > [開始偵錯]****) 以開始偵錯。
 
-   當您開始偵錯時，應用程式會在啟動前於遠端目標上編譯。 任何編譯錯誤都會顯示在 [錯誤清單] 視窗中。
+   當您開始偵錯時，應用程式會在啟動前於遠端目標上編譯。 任何編譯錯誤都會顯示在 [錯誤清單]**** 視窗中。
 
    如果沒有任何錯誤，應用程式就會啟動，而偵錯工具則會在中斷點暫停。
 
    ![叫用中斷點](media/hit_breakpoint.png)
 
-   您現在可以和目前狀態下的應用程式互動、檢視變數，以及按 **F10** 或 **F11** 等命令鍵逐步完成程式碼。
+   現在,您可以通過按鍵(如**F10**或**F11**)與處於當前狀態的應用程式進行交互、查看變數和單步執行代碼。
 
-1. 若想使用 Linux 主控台與應用程式互動，請選取 [偵錯] > [Linux 主控台]。
+1. 若想使用 Linux 主控台與應用程式互動，請選取 [偵錯] > [Linux 主控台]****。
 
    ![Linux 主控台功能表](media/consolemenu.png)
 
@@ -93,11 +93,11 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="configure-other-debugging-options-msbuild-based-projects"></a>設定其他偵錯選項 (MSBuild 型專案)
 
-- 使用專案 [偵錯] 屬性頁中的 [程式引數] 項目，即可將命令列引數傳遞至可執行檔。
+- 使用專案 [偵錯]**** 屬性頁中的 [程式引數]**** 項目，即可將命令列引數傳遞至可執行檔。
 
    ![程式引數](media/settings_programarguments.png)
 
-- 使用 [其他偵錯工具命令] 項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以將下列項目新增至 [其他偵錯工具命令] 項目 (如上所示)，以便使用 **handle** 命令達成此目的：
+- 使用 [其他偵錯工具命令]**** 項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以將下列項目新增至 [其他偵錯工具命令]**** 項目 (如上所示)，以便使用 **handle** 命令達成此目的：
 
    `handle SIGILL nostop noprint`
 
@@ -107,7 +107,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="debug-with-attach-to-process"></a>使用 [附加至處理序] 進行偵錯
 
-Visual Studio 專案的 [偵錯](prop-pages/debugging-linux.md) 屬性頁和 CMake 專案的 [Launch.vs.json] 設定，具有可讓您附加至執行中處理序的設定。 如果您需要這些設定所提供項目之外的其他控制項，您可以將名為 `Microsoft.MIEngine.Options.xml` 的檔案放在解決方案或工作區的根目錄中。 以下是一個簡單的範例：
+Visual Studio 專案的 [偵錯](prop-pages/debugging-linux.md) 屬性頁和 CMake 專案的 [Launch.vs.json]**** 設定，具有可讓您附加至執行中處理序的設定。 如果您需要這些設定所提供項目之外的其他控制項，您可以將名為 `Microsoft.MIEngine.Options.xml` 的檔案放在解決方案或工作區的根目錄中。 以下是一個簡單的範例：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -134,17 +134,17 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ### <a name="msbuild-based-projects"></a>MSBuild 型專案
 
-根據預設，遠端偵錯電腦與遠端組建電腦 ([組態屬性] > [一般] > [遠端組建電腦]) 相同。 若要指定新的遠端偵錯電腦，以滑鼠右鍵按一下 [方案總管] 中的專案，並移至 [組態屬性] > [偵錯] > [遠端偵錯電腦]。  
+預設情況下,遠端除錯電腦與遠端生成電腦相同(**設定屬性** > **常規** > **遠端生成電腦**)。 若要指定新的遠端偵錯電腦，以滑鼠右鍵按一下 [方案總管]**** 中的專案，並移至 [組態屬性]**** > [偵錯]**** > [遠端偵錯電腦]****。  
 
 ![Linux 遠端偵錯電腦](media/linux-remote-debug-machine.png)
 
-[遠端偵錯電腦] 的下拉式功能表會填入所有已建立的遠端連線。 若要新增遠端連線，請瀏覽至 [工具] > [選項] > [跨平台] > [連線管理員]，或在 [快速啟動] 中搜尋「連線管理員」。 您也可以在專案的 [屬性頁] 中指定新的遠端部署目錄 ([組態屬性] > [一般] > [遠端部署目錄])。
+[遠端偵錯電腦]**** 的下拉式功能表會填入所有已建立的遠端連線。 要添加新的遠端連接,可以導航到**工具** > **選項** > **跨平臺** > **連接管理器**或在**快速啟動**中搜索"連接管理器"。 您還可以在項目的屬性頁(**配置屬性** > **常規** > **遠端部署目錄**)中指定新的遠端部署目錄。
 
-根據預設，只有處理序偵錯所需的檔案會部署到遠端偵錯電腦。 您可以使用 [方案總管] 設定部署到遠端偵錯電腦的原始程式檔。 當您按一下原始程式檔時，您會看到 [方案總管] 正下方的 [檔案內容] 預覽。
+根據預設，只有處理序偵錯所需的檔案會部署到遠端偵錯電腦。 您可以使用 [方案總管]**** 設定部署到遠端偵錯電腦的原始程式檔。 當您按一下原始程式檔時，您會看到 [方案總管] 正下方的 [檔案內容] 預覽。
 
 ![Linux 可部署的檔案](media/linux-deployable-content.png)
 
-[內容] 屬性會指定是否將檔案部署到遠端偵錯電腦。 若要完全停用部署，請瀏覽至 [屬性頁] > [組態管理員]，然後針對所需的組態，取消核取 [部署]。
+[內容]**** 屬性會指定是否將檔案部署到遠端偵錯電腦。 您可以通過導航到**屬性頁** > **配置管理員**和取消選中**部署**所需的配置來完全禁用部署。
 
 在某些情況下，您可能需要更充分掌控您的專案部署。 例如，您想要部署的某些檔案可能是您的解決方案之外，或您想要針對每個檔案或目錄自訂您的遠端部署目錄。 在這些情況下，將下列程式碼區塊附加至 .vcxproj 檔案，並以實際的檔案名稱取代 "example.cpp"：
 
@@ -171,7 +171,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ![CMake 遠端偵錯電腦](media/cmake-remote-debug-machine.png)
 
-IntelliSense 將會建議所有已建立之遠端連線的所有清單。 若要新增遠端連線，請瀏覽至 [工具] > [選項] > [跨平台] > [連線管理員]，或在 [快速啟動] 中搜尋「連線管理員」。
+IntelliSense 將會建議所有已建立之遠端連線的所有清單。 您可以通過導航到**工具** > **選項** > **跨平台** > **連接管理員**或在**快速啟動**中搜索"連接管理器"來添加新的遠端連接。
 
 如果您想要完整控制部署，可以將下列程式碼區塊附加到 launch.vs.json 檔案。 請記得以實際的值取代預留位置值：
 

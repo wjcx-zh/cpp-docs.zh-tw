@@ -6,25 +6,25 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-ms.openlocfilehash: 43d385bea34ba885b9ae0f8efb6109e6959c2383
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aaa69fd7e0b2b592cd7d5c4eff92f51d0ce5f680
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213131"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367202"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC：設定 ODBC 資料來源
 
-若要將[資料來源](../../data/odbc/data-source-odbc.md)與您所開發的應用程式搭配使用，您必須使用 ODBC 管理員來設定它。 ODBC 系統管理員會在 Windows 登錄中持續追蹤可用的資料來源及其連接資訊。 使用 ODBC 管理員，在 [**資料來源**] 對話方塊中加入、修改和刪除資料來源，以及加入和刪除 ODBC 驅動程式。
+要將[資料源](../../data/odbc/data-source-odbc.md)與已開發的應用程式一起使用,必須使用ODBC管理員對其進行配置。 ODBC 管理員在 Windows 註冊表中追蹤可用數據源及其連接資訊。 使用 ODBC 管理員在 **「資料源」** 對話方塊中添加、修改和刪除數據來源,並添加和刪除 ODBC 驅動程式。
 
 > [!NOTE]
->  當您使用適用于 ODBC 存取的 MFC 資料存取物件（DAO）類別，以及使用 MFC ODBC 類別時，就會套用此資訊。
+> 當您使用 MFC 數據存取物件 (DAO) 類別進行 ODBC 存取時和使用 MFC ODBC 類時,此資訊將適用。
 
-ODBC 管理員會隨著 Microsoft Foundation class （MFC）程式庫資料庫的支援自動安裝。 如需 ODBC 系統管理員程式的詳細資訊，請參閱[Odbc 系統管理員](../../data/odbc/odbc-administrator.md)和線上 Odbc API 參考說明系統。
+ODBC 管理員將自動安裝 Microsoft 基礎類 (MFC) 庫資料庫支援。 有關 ODBC 管理員計劃的詳細資訊,請參閱[ODBC 管理員](../../data/odbc/odbc-administrator.md)和在線 ODBC API 參考幫助系統。
 
-如需有關如何撰寫 MFC 資料庫應用程式的 ODBC 安裝和管理程式的詳細資訊，請[注意技術提示 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md)。
+有關如何為 MFC 資料庫應用程式編寫 ODBC 設定和管理程式的資訊,[技術說明 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 基本概念](../../data/odbc/odbc-basics.md)<br/>
+[ODBC 基礎知識](../../data/odbc/odbc-basics.md)<br/>
 [ODBC：直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

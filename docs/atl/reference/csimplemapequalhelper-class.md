@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelper Class
+title: C 簡單映射平等説明者類
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d137a35a517ea93139f036f6e9a7a8de06d518a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277926"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330745"
 ---
-# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper Class
+# <a name="csimplemapequalhelper-class"></a>C 簡單映射平等説明者類
 
-這個類別是 helper [CSimpleMap](../../atl/reference/csimplemap-class.md)類別。
+此類是[CSimpleMap](../../atl/reference/csimplemap-class.md)類的幫助程式。
 
 ## <a name="syntax"></a>語法
 
@@ -30,10 +30,10 @@ class CSimpleMapEqualHelper
 #### <a name="parameters"></a>參數
 
 *TKey*<br/>
-索引鍵的項目。
+關鍵元素。
 
 *TVal*<br/>
-Value 元素中。
+值元素。
 
 ## <a name="members"></a>成員
 
@@ -41,20 +41,20 @@ Value 元素中。
 
 |名稱|描述|
 |----------|-----------------|
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|（靜態）測試兩個索引鍵相等。|
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|（靜態）測試兩個值相等。|
+|[CSimpleMap平等説明者::是平等密鑰](#isequalkey)|(靜態)測試兩個鍵的相等性。|
+|[CSimpleMap 等值説明者::等於值](#isequalvalue)|(靜態)測試兩個值的相等性。|
 
 ## <a name="remarks"></a>備註
 
-此特性類別是補充`CSimpleMap`類別。 它提供方法來比較兩個`CSimpleMap`物件是否相等的項目 （具體而言，索引鍵和值元件）。 根據預設，索引鍵和值的比較**operator**，但如果對應包含沒有自己的等號比較運算子的複雜資料型別，這個類別可以覆寫以提供額外的必要的功能。
+此特徵類是對`CSimpleMap`類的補充。 它提供了比較兩`CSimpleMap`個物件元素(特別是鍵和值元件)的相等性的方法。 預設情況下,使用**運算符 _()** 比較鍵和值,但如果地圖包含缺少其自身相等運算符的複雜數據類型,則可以重寫此類以提供所需的額外功能。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsimpcoll.h
+**標題:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMap平等説明者::是平等密鑰
 
-測試兩個索引鍵相等。
+測試兩個鍵的相等性。
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -63,18 +63,18 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="parameters"></a>參數
 
 *k1*<br/>
-第一個索引鍵。
+第一個鍵。
 
 *k2*<br/>
-第二個索引鍵。
+第二個鍵。
 
 ### <a name="return-value"></a>傳回值
 
-如果索引鍵相等，false 否則，就會傳回 true。
+如果鍵相等,則返回 true,否則為 false。
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMap 等值説明者::等於值
 
-測試兩個值相等。
+測試兩個值的相等性。
 
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -90,9 +90,9 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="return-value"></a>傳回值
 
-如果值相等，false 否則，就會傳回 true。
+如果值相等,則返回 true,否則為 false。
 
 ## <a name="see-also"></a>另請參閱
 
-[CSimpleMapEqualHelperFalse 類別](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
+[C 簡單映射平等説明者假類](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

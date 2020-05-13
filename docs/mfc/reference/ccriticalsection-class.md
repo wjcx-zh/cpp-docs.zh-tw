@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d79199a332f6930619e6b4995b04bc590b6ea580
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369369"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 類別
 
-代表 「 關鍵區段 」 — 允許一個執行緒存取資源或程式碼區段，一次同步處理物件。
+表示「關鍵部分」 - 一個同步物件,允許一次一個線程存取資源或代碼部分。
 
 ## <a name="syntax"></a>語法
 
@@ -37,47 +37,47 @@ class CCriticalSection : public CSyncObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CCriticalSection::CCriticalSection](#ccriticalsection)|建構 `CCriticalSection` 物件。|
+|[C關鍵部份:C關鍵節](#ccriticalsection)|建構 `CCriticalSection` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CCriticalSection::Lock](#lock)|用來存取`CCriticalSection`物件。|
-|[CCriticalSection::Unlock](#unlock)|釋出 `CCriticalSection` 物件。|
+|[C 關鍵部份:鎖定](#lock)|用於訪問`CCriticalSection`物件。|
+|[C關鍵部份:解鎖](#unlock)|釋出 `CCriticalSection` 物件。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CCriticalSection::operator CRITICAL_SECTION *](#operator_critical_section_star)|擷取內部的 CRITICAL_SECTION 物件的指標。|
+|[C關鍵部分::操作員CRITICAL_SECTION*](#operator_critical_section_star)|檢索指向內部CRITICAL_SECTION物件的指標。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CCriticalSection::m_sect](#m_sect)|CRITICAL_SECTION 物件。|
+|[C關鍵節::m_sect](#m_sect)|物件CRITICAL_SECTION。|
 
 ## <a name="remarks"></a>備註
 
-一次只有一個執行緒可以修改資料或其他一些受控制的資源時，則關鍵區段會很有用。 例如，將節點新增至連結的清單是應該只能由一個執行緒使用，一次的處理程序。 使用`CCriticalSection`控制連結的清單中，只有一次一個執行緒可以存取清單的物件。
+當一次只允許一個線程修改數據或其他受控資源時,關鍵部分非常有用。 例如,將節點添加到連結清單是一個一次只能由一個線程允許的過程。 通過使用`CCriticalSection`物件來控制連結清單,一次只能訪問一個線程。
 
 > [!NOTE]
->  功能`CCriticalSection`類別由實際的 Win32 CRITICAL_SECTION 物件提供。
+> `CCriticalSection`類的功能由實際的 Win32 CRITICAL_SECTION物件提供。
 
-Mutex 不會使用的重要區段 (請參閱[CMutex](../../mfc/reference/cmutex-class.md)) 時的速度非常重要，且資源將不會使用跨處理序界限。
+當速度至關重要且資源不會跨進程邊界使用時,將使用關鍵部分代替互斥(請參閱[CMutex)。](../../mfc/reference/cmutex-class.md)
 
-有兩種方法使用`CCriticalSection`物件： 獨立和內嵌類別中。
+使用`CCriticalSection`物件有兩種方法:獨立和嵌入類。
 
-- 獨立的方法，以使用獨立`CCriticalSection`物件，建構`CCriticalSection`物件時需要它。 之後從建構函式成功傳回時，明確地鎖定的物件呼叫[鎖定](#lock)。 呼叫[Unlock](#unlock)完成時存取重要區段。 此方法，並清楚給其他人讀取您的原始程式碼，是更容易發生錯誤，您必須記得鎖定和解除鎖定重要區段之前, 和之後存取。
+- 獨立方法 使用`CCriticalSection`獨立 物件,在需要時`CCriticalSection`構造 該物件。 從建構函數成功傳回後,顯示式鎖定物件,呼叫[鎖定](#lock)。 存取關鍵部份後,呼[叫解鎖](#unlock)。 此方法雖然對讀取原始程式碼的人更清晰,但更容易出錯,因為您必須記住在訪問前後鎖定和解鎖關鍵部分。
 
-   更適合的方法是使用[CSingleLock](../../mfc/reference/csinglelock-class.md)類別。 它也有`Lock`和`Unlock`方法，但您不需要擔心如何解除鎖定的資源，如果發生例外狀況。
+   更可取的方法是使用[CSingleLock](../../mfc/reference/csinglelock-class.md)類。 它還具有`Lock``Unlock`和方法,但如果發生異常,您不必擔心解鎖資源。
 
-- 內嵌方法，您也可以共用多個執行緒的類別，藉由新增`CCriticalSection`-類別和鎖定時所需的資料成員的型別資料成員。
+- 嵌入式方法 您還可以透過向類中`CCriticalSection`添加 -type 資料成員並在需要時鎖定數據成員,與多個線程共用類。
 
-如需有關使用`CCriticalSection`物件，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有關使用`CCriticalSection`物件的詳細資訊,請參閱"[多線程:如何使用同步類](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)「一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -87,9 +87,9 @@ Mutex 不會使用的重要區段 (請參閱[CMutex](../../mfc/reference/cmutex-
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxmt.h
+**標題:** afxmt.h
 
-##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection
+## <a name="ccriticalsectionccriticalsection"></a><a name="ccriticalsection"></a>C關鍵部份:C關鍵節
 
 建構 `CCriticalSection` 物件。
 
@@ -99,17 +99,17 @@ CCriticalSection();
 
 ### <a name="remarks"></a>備註
 
-存取或釋放`CCriticalSection`物件，建立[CSingleLock](../../mfc/reference/csinglelock-class.md)物件，然後呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)並[解除鎖定](../../mfc/reference/csinglelock-class.md#unlock)成員函式。 如果`CCriticalSection`物件正在使用獨立的工作，請呼叫其[Unlock](#unlock)釋放它的成員函式。
+要存`CCriticalSection`取 或釋放物件,請創建一個[CSingleLock](../../mfc/reference/csinglelock-class.md)物件,並調用其[鎖定](../../mfc/reference/csinglelock-class.md#lock)和[解鎖](../../mfc/reference/csinglelock-class.md#unlock)成員函數。 如果對`CCriticalSection`像是獨立使用的,請調用其[Unlock](#unlock)成員函數以釋放它。
 
-如果建構函式，就無法配置所需的系統記憶體，而記憶體的例外狀況 (型別的[CMemoryException](../../mfc/reference/cmemoryexception-class.md)) 會自動擲回。
+如果建構函數無法分配所需的系統記憶體,將自動引發記憶體異常[(CMemoryException](../../mfc/reference/cmemoryexception-class.md)類型)。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CCriticalSection::Lock](#lock)。
+  請參考[C 關鍵節的範例:鎖定](#lock)。
 
-##  <a name="lock"></a>  CCriticalSection::Lock
+## <a name="ccriticalsectionlock"></a><a name="lock"></a>C 關鍵部份:鎖定
 
-呼叫此成員函式，以取得重要區段物件的存取權。
+調用此成員函數以訪問關鍵部分物件。
 
 ```
 BOOL Lock();
@@ -119,37 +119,37 @@ BOOL Lock(DWORD dwTimeout);
 ### <a name="parameters"></a>參數
 
 *dwTimeout*<br/>
-`Lock` 會忽略此參數值。
+`Lock`忽略此參數值。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式時成功則為非零否則為 0。
+如果函數成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-`Lock` 是一個封鎖呼叫，直到收到信號的重要區段物件將不會傳回 （會變成可用）。
+`Lock`是阻塞調用,在關鍵截面物件發出信號(變為可用)之前不會返回。
 
-如果逾時的等待時間是必要的您可以使用[CMutex](../../mfc/reference/cmutex-class.md)物件，而不是`CCriticalSection`物件。
+如果需要時等待時間,可以使用[CMutex](../../mfc/reference/cmutex-class.md)`CCriticalSection`物件而不是 物件。
 
-如果`Lock`無法配置所需的系統記憶體，記憶體的例外狀況 (型別的[CMemoryException](../../mfc/reference/cmemoryexception-class.md)) 會自動擲回。
+如果`Lock`無法分配必要的系統記憶體,將自動引發記憶體異常[(CMemory Exception](../../mfc/reference/cmemoryexception-class.md)類型)。
 
 ### <a name="example"></a>範例
 
-此範例會示範巢狀的重要區段法藉由控制共用資源的存取權 (靜態`_strShared`物件) 使用共用`CCriticalSection`物件。 `SomeMethod`函式示範，如何以安全的方式更新共用的資源。
+此示例演示嵌套關鍵部分方法,方法是使用共用`_strShared``CCriticalSection`物件控制對共用資源(靜態物件)的訪問。 該`SomeMethod`函數演示以安全的方式更新共享資源。
 
 [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]
 
-##  <a name="m_sect"></a>  CCriticalSection::m_sect
+## <a name="ccriticalsectionm_sect"></a><a name="m_sect"></a>C關鍵節::m_sect
 
-包含所有使用的重要區段物件`CCriticalSection`方法。
+包含所有`CCriticalSection`方法使用的關鍵節物件。
 
 ```
 CRITICAL_SECTION m_sect;
 ```
 
-##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *
+## <a name="ccriticalsectionoperator-critical_section"></a><a name="operator_critical_section_star"></a>C關鍵部分::操作員CRITICAL_SECTION*
 
-擷取一個 CRITICAL_SECTION 物件。
+檢索CRITICAL_SECTION物件。
 
 ```
 operator CRITICAL_SECTION*();
@@ -157,11 +157,11 @@ operator CRITICAL_SECTION*();
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可擷取內部的 CRITICAL_SECTION 物件的指標。
+調用此函數以檢索指向內部CRITICAL_SECTION物件的指標。
 
-##  <a name="unlock"></a>  CCriticalSection::Unlock
+## <a name="ccriticalsectionunlock"></a><a name="unlock"></a>C關鍵部份:解鎖
 
-版本`CCriticalSection`以供另一個執行緒的物件。
+釋放`CCriticalSection`物件以供另一個線程使用。
 
 ```
 BOOL Unlock();
@@ -169,15 +169,15 @@ BOOL Unlock();
 
 ### <a name="return-value"></a>傳回值
 
-非零`CCriticalSection`物件由執行緒自己所擁有並發行已成功，否則為 0。
+如果`CCriticalSection`物件為線程所有且釋放成功,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果`CCriticalSection`正在使用獨立式、`Unlock`必須完成使用重要區段所控制的資源之後立即呼叫。 如果[CSingleLock](../../mfc/reference/csinglelock-class.md)正在使用物件，`CCriticalSection::Unlock`鎖定物件會呼叫`Unlock`成員函式。
+如果正在`CCriticalSection`獨立使用`Unlock`, 則必須在完成關鍵部分控制的資源的使用後立即調用。 如果使用[CSingleLock](../../mfc/reference/csinglelock-class.md)`CCriticalSection::Unlock`物件,`Unlock`則鎖定物件的成員函數將調用該物件。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CCriticalSection::Lock](#lock)。
+  請參考[C 關鍵節的範例:鎖定](#lock)。
 
 ## <a name="see-also"></a>另請參閱
 

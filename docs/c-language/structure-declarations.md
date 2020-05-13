@@ -9,11 +9,11 @@ helpviewer_keywords:
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157790"
 ---
 # <a name="structure-declarations"></a>結構宣告
 
@@ -21,19 +21,19 @@ ms.locfileid: "56152283"
 
 ## <a name="syntax"></a>語法
 
-*struct-or-union-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+*struct 或 union-規範*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*結構或等位**識別碼*<sub>opt</sub> **{** *結構聲明-清單* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**結構**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**並**
 
 *struct-declaration-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*結構聲明*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
 
-*struct-declaration*：<br/>
+*結構聲明*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
 
 *specifier-qualifier-list*：<br/>
@@ -41,11 +41,11 @@ ms.locfileid: "56152283"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
 
 *struct-declarator-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator* *struct-declarator-list* **,** *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*結構*宣告子結構-宣告子 *-list* **、** *struct-* 宣告子
 
-*struct-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
+*結構聲明*子宣告子：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*類型規範* *declarator*宣告子<sub>opt</sub> **：** *常數運算式*
 
 結構類型的宣告並沒有為結構預留空間。 它只是一個樣板，供稍後宣告結構變數時使用。
 
@@ -122,7 +122,7 @@ struct sample   /* Defines a structure named x */
 
 結構的前兩個成員為 `char` 變數和 **float** 值的指標。 第三個成員 `next` 宣告為所定義結構類型 (`sample`) 的指標。
 
-不需要標記名稱時，匿名結構會很有用。 當某個宣告會定義所有結構執行個體時，就會發生這種情況。 例如:
+不需要標記名稱時，匿名結構會很有用。 當某個宣告會定義所有結構執行個體時，就會發生這種情況。 例如：
 
 ```C
 struct
@@ -145,11 +145,11 @@ struct somestruct
 } w;
 ```
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 編譯器允許使用一個可變大小或大小為零的陣列，做為結構的最後一個成員。 在各種情況下使用時，如果常數陣列的大小不同，這會非常有幫助。 此類結構的宣告如下所示：
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**
+**結構***識別碼* **{** *集合*宣告*類型*<em>陣列-名稱</em>**\[];};**
 
 可變大小陣列只可以顯示為結構的最後一個成員。 只要未在任何封閉結構中宣告其他成員，包含可變大小陣列的宣告可以巢狀的方式放置於其他結構內。 不允許使用此類結構的陣列。 `sizeof` 運算子，套用至此類型的變數或類型本身時，會假設陣列的大小為 0。
 
@@ -173,8 +173,8 @@ p_s->b = 100;  /* A reference to a field in the s structure */
 
 如需結構參考的資訊，請參閱[結構和等位成員](../c-language/structure-and-union-members.md)。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

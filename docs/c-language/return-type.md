@@ -1,5 +1,5 @@
 ---
-title: 傳回型別
+title: 傳回類型
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function return types
@@ -17,16 +17,16 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857030"
 ---
-# <a name="return-type"></a>傳回型別
+# <a name="return-type"></a>傳回類型
 
 函式的傳回型別會建立函式傳回值的大小和類型，並且對應於下列語法中的類型規範：
 
 ## <a name="syntax"></a>語法
 
-*function-definition*:<br/>
+*函式定義*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**屬性-seq*是 Microsoft 特定 \*/
+/\**屬性-seq*是 Microsoft 特有的\*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -34,22 +34,22 @@ ms.locfileid: "74857030"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *type-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**空位**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**短缺**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft 特定 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft 特定 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft 特定 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft 特定 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8**  / __int8\* Microsoft 特定\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16**  / __int16\* Microsoft 特定\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32**  / __int32\* Microsoft 特定\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64**  / __int64\* Microsoft 特定\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**前提**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+&nbsp;&nbsp;&nbsp;&nbsp;**兩**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**簽署**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**經過**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct 或 union-規範*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*列舉規範*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-名稱*
 
 *type-specifier* 可以指定任何基本、結構或等位型別。 如果您未包含 *type-specifier*，則會假設為傳回型別 `int`。
 

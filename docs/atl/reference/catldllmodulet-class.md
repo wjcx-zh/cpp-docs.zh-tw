@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e0896a28c24877465213a71ac5207c537c731003
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418066"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168759"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT 類別
 
@@ -27,15 +27,15 @@ ms.locfileid: "79418066"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `CAtlDllModuleT`的類別。
+衍生自的`CAtlDllModuleT`類別。
 
 ## <a name="members"></a>成員
 
@@ -59,11 +59,11 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 
 ## <a name="remarks"></a>備註
 
-`CAtlDllModuleT` 代表動態連結程式庫（DLL）的模組，並提供所有 DLL 專案所使用的函式。 這項[CAtlModuleT](../../atl/reference/catlmodulet-class.md)類別的特製化包含註冊的支援。
+`CAtlDllModuleT`表示動態連結程式庫（DLL）的模組，並提供所有 DLL 專案所使用的函式。 這項[CAtlModuleT](../../atl/reference/catlmodulet-class.md)類別的特製化包含註冊的支援。
 
 如需 ATL 中模組的詳細資訊，請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
@@ -77,27 +77,27 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 
 **標頭：** atlbase.h。h
 
-##  <a name="catldllmodulet"></a>CAtlDllModuleT：： CAtlDllModuleT
+## <a name="catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a>CAtlDllModuleT：： CAtlDllModuleT
 
 建構函式。
 
-```
+```cpp
 CAtlDllModuleT() throw();
 ```
 
-##  <a name="dtor"></a>CAtlDllModuleT：： ~ CAtlDllModuleT
+## <a name="catldllmoduletcatldllmodulet"></a><a name="dtor"></a>CAtlDllModuleT：： ~ CAtlDllModuleT
 
 解構函式。
 
-```
+```cpp
 ~CAtlDllModuleT() throw();
 ```
 
-##  <a name="dllcanunloadnow"></a>CAtlDllModuleT：:D llCanUnloadNow
+## <a name="catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a>CAtlDllModuleT：:D llCanUnloadNow
 
 測試 DLL 是否可以卸載。
 
-```
+```cpp
 HRESULT DllCanUnloadNow() throw();
 ```
 
@@ -105,11 +105,11 @@ HRESULT DllCanUnloadNow() throw();
 
 如果 DLL 可以卸載，則傳回 S_OK，如果無法卸載，則傳回 S_FALSE。
 
-##  <a name="dllgetclassobject"></a>CAtlDllModuleT：:D llGetClassObject
+## <a name="catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a>CAtlDllModuleT：:D llGetClassObject
 
 傳回 Class Factory。
 
-```
+```cpp
 HRESULT DllGetClassObject(
     REFCLSID rclsid,
     REFIID riid,
@@ -131,11 +131,11 @@ HRESULT DllGetClassObject(
 
 會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="dllmain"></a>CAtlDllModuleT：:D llMain
+## <a name="catldllmoduletdllmain"></a><a name="dllmain"></a>CAtlDllModuleT：:D llMain
 
 動態連結程式庫（DLL）中的選擇性進入點。
 
-```
+```cpp
 BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ```
 
@@ -145,7 +145,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 如果設定為 DLL_PROCESS_ATTACH，就會停用 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知呼叫。
 
 *lpReserved*<br/>
-保留。
+已保留。
 
 ### <a name="return-value"></a>傳回值
 
@@ -155,11 +155,11 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 停用 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知呼叫對於具有許多 Dll、經常建立和刪除線程，而且其 Dll 不需要附件/表示中斷連結之執行緒層級通知的多執行緒應用程式而言，是很有用的優化。
 
-##  <a name="dllregisterserver"></a>CAtlDllModuleT：:D llRegisterServer
+## <a name="catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a>CAtlDllModuleT：:D llRegisterServer
 
 將專案新增至 DLL 中物件的系統登錄。
 
-```
+```cpp
 HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ```
 
@@ -172,11 +172,11 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="dllunregisterserver"></a>CAtlDllModuleT：:D llUnregisterServer
+## <a name="catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a>CAtlDllModuleT：:D llUnregisterServer
 
 針對 DLL 中的物件，移除系統登錄中的專案。
 
-```
+```cpp
 HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ```
 
@@ -189,11 +189,11 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="getclassobject"></a>CAtlDllModuleT：： GetClassObject
+## <a name="catldllmoduletgetclassobject"></a><a name="getclassobject"></a>CAtlDllModuleT：： GetClassObject
 
 建立指定之 CLSID 的物件。
 
-```
+```cpp
 HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
@@ -222,6 +222,6 @@ HRESULT GetClassObject(
 ## <a name="see-also"></a>另請參閱
 
 [CAtlModuleT 類別](../../atl/reference/catlmodulet-class.md)<br/>
-[CAtlDllModuleT 類別](../../atl/reference/catlexemodulet-class.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)<br/>
+[CAtlExeModuleT 類別](../../atl/reference/catlexemodulet-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)

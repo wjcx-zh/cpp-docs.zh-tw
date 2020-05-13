@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: d93eb3de87b50f337f0d3edad65f5dc3013e8327
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 324c4b7273f021b43c319fb0a494ac843856c78a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127453"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375016"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 類別
 
-允許將資料拖曳至放置目標。
+允許將數據拖動到放置目標。
 
 ## <a name="syntax"></a>語法
 
@@ -37,27 +37,27 @@ class COleDropSource : public CCmdTarget
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDropSource::COleDropSource](#coledropsource)|建構 `COleDropSource` 物件。|
+|[COleDrop 來源:COleDrop 來源](#coledropsource)|建構 `COleDropSource` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDropSource：： System.windows.dragdrop.givefeedback>](#givefeedback)|在拖放作業期間變更游標。|
-|[COleDropSource::OnBeginDrag](#onbegindrag)|在拖放作業期間處理滑鼠捕捉。|
-|[COleDropSource：： System.windows.dragdrop.querycontinuedrag>](#querycontinuedrag)|檢查是否應該繼續拖曳。|
+|[COleDrop 來源:給回饋](#givefeedback)|在拖放操作期間更改游標。|
+|[COleDrop 來源::在BeginDrag](#onbegindrag)|在拖放操作期間處理滑鼠捕獲。|
+|[COleDrop 來源::查詢繼續拖動](#querycontinuedrag)|檢查拖動是否應繼續。|
 
 ## <a name="remarks"></a>備註
 
-[COleDropTarget](../../mfc/reference/coledroptarget-class.md)類別會處理拖放作業的接收部分。 `COleDropSource` 物件負責判斷拖曳作業開始的時間、在拖曳作業期間提供意見反應，以及判斷拖曳作業結束的時間。
+[COleDropTarget](../../mfc/reference/coledroptarget-class.md)類處理拖放操作的接收部分。 對`COleDropSource`象 負責確定拖動操作何時開始,在拖動操作期間提供反饋,並確定拖動操作何時結束。
 
-若要使用 `COleDropSource` 物件，只要呼叫此函式即可。 這可簡化判斷哪些事件（例如按一下滑鼠），使用[COleDataSource：:D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop)、 [COleClientItem：:D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)或[COleServerItem：:D odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop)函數來開始拖曳作業的程式。 這些函式會為您建立 `COleDropSource` 物件。 您可能想要修改 `COleDropSource` 可覆寫函數的預設行為。 架構會在適當的時間呼叫這些成員函式。
+要使用`COleDropSource`物件,只需調用構造函數。 這簡化了確定哪些事件(如滑鼠按一下)使用[COleDataSource::DoDragDrop、COleClientItem::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop)[COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)或[COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop)函數開始拖動操作的過程。 這些函數將為您創建`COleDropSource`一個物件。 您可能希望修改可重寫函數的`COleDropSource`默認行為。 框架將在適當時間調用這些成員函數。
 
-如需有關使用 OLE 拖放作業的詳細資訊，請參閱[OLE 拖放](../../mfc/drag-and-drop-ole.md)文章。
+有關使用 OLE 拖放操作的詳細資訊,請參考文章[OLE 拖放](../../mfc/drag-and-drop-ole.md)。
 
-如需詳細資訊，請參閱 Windows SDK 中的[IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) 。
+有關詳細資訊,請參閱 Windows SDK 中的[IDropSource。](/windows/win32/api/oleidl/nn-oleidl-idropsource)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -67,9 +67,9 @@ class COleDropSource : public CCmdTarget
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxole。h
+**標題:** afxole.h
 
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource
+## <a name="coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDrop 來源:COleDrop 來源
 
 建構 `COleDropSource` 物件。
 
@@ -77,9 +77,9 @@ class COleDropSource : public CCmdTarget
 COleDropSource();
 ```
 
-##  <a name="givefeedback"></a>COleDropSource：： System.windows.dragdrop.givefeedback>
+## <a name="coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDrop 來源:給回饋
 
-在呼叫[COleDropTarget：： system.windows.uielement.ondragover](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget：:D ragenter](../../mfc/reference/coledroptarget-class.md#ondragenter)之後，由架構呼叫。
+呼叫 COleDropTarget 後由框架呼叫[::onDragover](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget::D拉格Enter](../../mfc/reference/coledroptarget-class.md#ondragenter)。
 
 ```
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
@@ -87,32 +87,32 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 
 ### <a name="parameters"></a>參數
 
-*dropEffect*<br/>
-您想要對使用者顯示的效果，通常會指出在此時間點發生含有選取的資料時，會發生什麼事。 一般來說，這是最新的[CView：： system.windows.uielement.ondragenter](../../mfc/reference/cview-class.md#ondragenter)或[Cview：： system.windows.uielement.ondragover](../../mfc/reference/cview-class.md#ondragover)呼叫所傳回的值。 它可以是下列一或多個：
+*滴效果*<br/>
+要向使用者顯示的效果,通常指示如果此時與所選數據發生丟棄會發生什麼情況。 通常,這是最近調用[CView 返回的值:OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)或[CView:onDragOver。](../../mfc/reference/cview-class.md#ondragover) 它可以是以下一個或多個:
 
-- DROPEFFECT_NONE 不允許使用 drop。
+- DROPEFFECT_NONE不允許掉下。
 
-- DROPEFFECT_COPY 會執行複製作業。
+- DROPEFFECT_COPY將執行複製操作。
 
-- DROPEFFECT_MOVE 會執行移動作業。
+- DROPEFFECT_MOVE將執行移動操作。
 
-- DROPEFFECT_LINK 會建立從已卸載資料到原始資料的連結。
+- DROPEFFECT_LINK將建立從刪除數據到原始數據的連結。
 
-- DROPEFFECT_SCROLL 拖曳捲軸操作即將發生或發生在目標中。
+- DROPEFFECT_SCROLL拖動滾動操作即將發生或發生在目標中。
 
 ### <a name="return-value"></a>傳回值
 
-如果拖曳正在進行中，則傳回 DRAGDROP_S_USEDEFAULTCURSORS，如果不是，則傳回 AAD-USERREADUSINGALTERNATIVESECURITYID-NOERROR。
+如果拖動正在進行,則返回DRAGDROP_S_USEDEFAULTCURSORS;如果沒有,則返回 NOERROR。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式，以向使用者提供意見反應，以瞭解此時是否會發生這種情況。 預設的執行會使用 OLE 預設資料指標。 如需有關使用 OLE 拖放作業的詳細資訊，請參閱[OLE 拖放](../../mfc/drag-and-drop-ole.md)文章。
+重寫此函數,向使用者提供有關此時發生丟棄時將會發生什麼情況的反饋。 預設實現使用 OLE 預設游標。 有關使用 OLE 拖放操作的詳細資訊,請參考文章[OLE 拖放](../../mfc/drag-and-drop-ole.md)。
 
-如需詳細資訊，請參閱 Windows SDK 中的[IDropSource：： system.windows.dragdrop.givefeedback>](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback)、 [IDropTarget：:D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)和[IDropTarget：:D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) 。
+有關詳細資訊,請參閱[IDropSource::給反饋](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback)[,IDropTarget::DragOver,](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)和[IDropTarget::D拉格Enter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter)在 Windows SDK 中。
 
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag
+## <a name="coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDrop 來源::在BeginDrag
 
-當發生可能開始拖曳作業的事件（例如按下滑鼠左鍵）時，由架構呼叫。
+當可能發生可能開始拖動操作的事件(如按下滑鼠左鍵)時,由框架調用。
 
 ```
 virtual BOOL OnBeginDrag(CWnd* pWnd);
@@ -120,20 +120,20 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-指向包含所選取資料的視窗。
+*pwnd*<br/>
+指向包含所選數據的視窗。
 
 ### <a name="return-value"></a>傳回值
 
-如果允許拖曳，則為非零，否則為0。
+如果允許拖動,則不為零,否則為 0。
 
 ### <a name="remarks"></a>備註
 
-如果您想要修改拖曳進程的啟動方式，請覆寫此函式。 預設的執行會捕捉滑鼠並停留在拖曳模式中，直到使用者按一下滑鼠左鍵或滑鼠右鍵，或按 ESC 鍵，此時會放開滑鼠。
+如果要修改拖動過程的啟動方式,請重寫此函數。 默認實現捕獲滑鼠並保持拖動模式,直到用戶按下滑鼠左鍵或右鍵或按一下 ESC,此時它會釋放滑鼠。
 
-##  <a name="querycontinuedrag"></a>COleDropSource：： System.windows.dragdrop.querycontinuedrag>
+## <a name="coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDrop 來源::查詢繼續拖動
 
-開始拖曳之後，架構會重複呼叫此函式，直到拖曳作業取消或完成為止。
+拖動開始后,框架會反覆調用此函數,直到拖動操作被取消或完成。
 
 ```
 virtual SCODE QueryContinueDrag(
@@ -143,27 +143,27 @@ virtual SCODE QueryContinueDrag(
 
 ### <a name="parameters"></a>參數
 
-*bEscapePressed*<br/>
-指出上次呼叫 `COleDropSource::QueryContinueDrag`之後，是否已按下 ESC 鍵。
+*bEscape壓榨*<br/>
+指出自上次調用`COleDropSource::QueryContinueDrag`以來是否按下了 ESC 密鑰。
 
-*dwKeyState*<br/>
-包含鍵盤上輔助按鍵的狀態。 這是下列任意數目的組合： MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
+*德基州*<br/>
+包含鍵盤上修改器鍵的狀態。 這是以下任意數量的組合:MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON和MK_RBUTTON。
 
 ### <a name="return-value"></a>傳回值
 
-DRAGDROP_S_CANCEL，如果按下 ESC 鍵或右鍵，或在拖曳開始前引發左按鈕。 DRAGDROP_S_DROP 是否應執行 DROP 作業。 否則 S_OK。
+DRAGDROP_S_CANCEL是否按下 ESC 鍵或右鍵,或者在拖動開始之前引發左鍵。 如果應執行放置操作,DRAGDROP_S_DROP。 否則S_OK。
 
 ### <a name="remarks"></a>備註
 
-如果您想要變更取消拖曳或卸載的時間點，請覆寫這個函式。
+如果要更改取消拖動或放置的點,請覆蓋此函數。
 
-預設的執行會起始 drop 或取消拖曳，如下所示。 當按下 ESC 鍵或滑鼠右鍵時，它會取消拖曳作業。 它會在拖曳開始後引發滑鼠左鍵時，起始 drop 作業。 否則，它會傳回 S_OK，而不會執行任何進一步的作業。
+默認實現啟動拖放或取消拖動,如下所示。 按下 ESC 鍵或滑鼠右鍵時,它取消拖動操作。 當滑鼠左鍵在拖動開始后啟動時,它將啟動放置操作。 否則,它將返回S_OK,並且不執行進一步的操作。
 
-因為此函式是經常呼叫的，所以應該盡可能優化。
+由於此函數是頻繁調用的,因此應盡可能對其進行優化。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

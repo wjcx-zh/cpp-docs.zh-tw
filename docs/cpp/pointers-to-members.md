@@ -1,5 +1,5 @@
 ---
-title: 成員指標
+title: 成員的指標
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, pointers
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 3238cd801763c72e96ccd93eee9640e672a5fbf5
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: adffacc3ddc08679d7db4e17e027d8a7dbe8a92b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320325"
 ---
-# <a name="pointers-to-members"></a>成員指標
+# <a name="pointers-to-members"></a>成員的指標
 
-成員指標宣告是特殊的指標宣告。  它們是使用下列順序來宣告：
+成員指標宣告是特殊的指標宣告。  它們使用以下順序聲明:
 
-> *儲存類別*指定名稱<sub>opt</sub> *cv 限定詞*<sub>opt</sub> *類型規範* *ms-修飾*<sub>詞 opt</sub> *限定名稱* **`::*`** *cv 限定詞*<sub>opt</sub> *識別碼* *pm-初始化運算式*<sub>opt</sub> **`;`**
+> *儲存類別指定程式*<sub>選擇</sub> *cv 修飾符*<sub>選擇</sub>*類型-規範器**ms-修飾符*選擇 修飾符<sub>選擇</sub>修飾符 選擇*修飾名稱***`::*`** *cv 修飾符*<sub>選擇</sub>*識別子*pm*初始化程式*<sub>選擇</sub>**`;`**
 
 1. 宣告規範：
 
    - 選擇性的儲存類別規範。
 
-   - 選擇性的**const**和**volatile**規範。
+   - 可選**的針和****揮發**性規格。
 
-   - 類型指定名稱：類型的名稱。 這是要指向的成員類型，而不是類別。
+   - 類型指定名稱：類型的名稱。 它是要指向的成員的類型,而不是類。
 
 1. 宣告子：
 
-   - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱[Microsoft 專有的](../cpp/microsoft-specific-modifiers.md)修飾詞。
+   - 選擇性的 Microsoft 專有修飾詞。 有關詳細資訊,請參閱特定於[Microsoft 的修飾符](../cpp/microsoft-specific-modifiers.md)。
 
    - 包含指向成員之類別的限定名稱。
 
-   - __`::`__ 運算子。
+   - __`::`__ 運算符。
 
-   - __`*`__ 運算子。
+   - __`*`__ 運算符。
 
-   - 選擇性的**const**和**volatile**規範。
+   - 可選**的針和****揮發**性規格。
 
    - 為成員指標命名的識別項。
 
-1. 選擇性的成員指標初始化運算式：
+1. 選擇式指標到成員初始化器:
 
-   - **`=`** 運算子。
+   - **`=`** 運算符。
 
-   - **`&`** 運算子。
+   - **`&`** 運算符。
 
    - 類別的限定名稱。
 
-   - __`::`__ 運算子。
+   - __`::`__ 運算符。
 
-   - 適當型別之類別的非靜態成員名稱。
+   - 相應類型的類的非靜態成員的名稱。
 
-一如往常，單一宣告允許使用多個宣告子 (和任何關聯的初始設定式)。 成員的指標可能不會指向類別的靜態成員、參考型別的成員或 **`void`** 。
+一如往常，單一宣告允許使用多個宣告子 (和任何關聯的初始設定式)。 指定成員的指標不能指向一個的靜態成員、引用類型的成員或**`void`**。
 
-類別成員的指標與一般指標不同：它具有成員類型的類型資訊，以及該成員所屬的類別。 一般指標只能識別記憶體中的單一物件 (能取得其位址)。 類別的成員指標可以在類別的任何執行個體中識別該成員。 下列範例宣告類別、`Window` 和某些成員資料指標。
+指向類成員的指標與普通指標不同:它同時具有成員類型和成員所屬的類的類型資訊。 一般指標只能識別記憶體中的單一物件 (能取得其位址)。 類別的成員指標可以在類別的任何執行個體中識別該成員。 下列範例宣告類別、`Window` 和某些成員資料指標。
 
 ```cpp
 // pointers_to_members1.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-在上述範例中，`pwCaption` 是 `Window` 類型為 `char*`的任何類別成員的指標。 `pwCaption` 的類型是 `char * Window::* `。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。
+在前面的範例中,`pwCaption`是指向`Window``char*`類的任何類型的成員的指標。 `pwCaption` 的類型是 `char * Window::*`。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -101,9 +101,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-**`.*`** 和 **`->*`** 運算子（成員指標運算子）之間的差異在於， **`.*`** 運算子會選取指定物件或物件參考的成員，而 **`->*`** 運算子會透過指標選取成員。 如需這些運算子的詳細資訊，請參閱[使用成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。
+**`.*`** 和**`->*`** 運算符(指標到成員運算符)之間的區別是**`.*`**,運算符選擇給定物件或物件引用的成員,而**`->*`** 運算符通過指標選擇成員。 有關這些運算子的詳細資訊,請參閱[具有指標到成員運算符的運算符號 。](../cpp/pointer-to-member-operators-dot-star-and-star.md)
 
-成員指標運算子的結果是成員的類型。 在此案例中，此名稱為 `char *`。
+指標到成員運算符的結果是成員的類型。 在此案例中，此名稱為 `char *`。
 
 下一個程式碼片段會使用成員指標叫用 `GetCaption` 和 `SetCaption` 成員函式：
 
@@ -124,13 +124,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>成員指標的限制
 
-靜態成員的位址不是成員的指標。 這是一個靜態成員實例的一般指標。 只有一個靜態成員的實例存在於指定類別的所有物件中。 這表示您可以使用一般的位址（ **&** ）和引用（<strong>\*</strong>）運算子。
+靜態成員的位址不是指向成員的指標。 它是指向靜態成員的一個實例的常規指標。 給定類的所有物件僅存在一個靜態成員的實例。 這意味著您可以使用**&**( )<strong>\*</strong>和取消引用 運算子的普通位址。
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>成員指標和虛擬函式
 
-透過成員指標函式叫用虛擬函式的運作方式，如同已直接呼叫函式一樣。 在 v 資料表中查閱正確的函式，並加以叫用。
+通過指標到成員函數調用虛擬函數的工作方式就像該函數被直接調用一樣。 在 v 表中抬起並調用了正確的函數。
 
-就如以往一般，虛擬函式運作的關鍵在於透過基底類別的指標叫用 （如需虛擬函式的詳細資訊，請參閱[虛擬](../cpp/virtual-functions.md)函式）。
+就如以往一般，虛擬函式運作的關鍵在於透過基底類別的指標叫用  (有關虛擬函數的詳細資訊,請參閱[虛擬函數](../cpp/virtual-functions.md)。
 
 下列程式碼將示範如何透過成員指標函式叫用虛擬函式：
 

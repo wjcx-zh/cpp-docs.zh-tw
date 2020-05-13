@@ -1,8 +1,9 @@
 ---
 title: _unlock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _unlock_file
+- _o__unlock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957482"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909209"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -49,12 +51,14 @@ void _unlock_file(
 
 ### <a name="parameters"></a>參數
 
-*file*<br/>
+*文字檔*<br/>
 檔案控制代碼。
 
 ## <a name="remarks"></a>備註
 
-**_Unlock_file**函數會解除鎖定檔案所指定*的檔案。* 解除鎖定檔案可讓其他處理序存取檔案。 除非先前已在*檔案指標上*呼叫 **_lock_file** ，否則不應呼叫此函式。 在未鎖定的檔案上呼叫 **_unlock_file**可能會導致鎖死。 如需範例，請參閱 [_lock_file](lock-file.md)。
+**_Unlock_file**函式會解除鎖定檔案所*指定的檔案。* 解除鎖定檔案可讓其他處理序存取檔案。 除非先前已在*檔案指標上*呼叫 **_lock_file** ，否則不應呼叫此函式。 在未鎖定的檔案上呼叫 **_unlock_file**可能會導致鎖死。 如需範例，請參閱 [_lock_file](lock-file.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

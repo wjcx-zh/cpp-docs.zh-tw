@@ -25,7 +25,7 @@ ms.locfileid: "75298710"
 
 為了解決此行為，大部分的程式設計人員都可以確保該值大於或小於所需的值，或取得並使用將會維持精確度的二進位編碼十進位（BCD）程式庫。
 
-浮點值的二進位標記法會影響浮點計算的精確度和精確度。 Microsoft Visual C++使用[IEEE 浮點格式](ieee-floating-point-representation.md)。
+浮點值的二進位標記法會影響浮點計算的精確度和精確度。 Microsoft Visual C++ 使用[IEEE 浮點格式](ieee-floating-point-representation.md)。
 
 ## <a name="example"></a>範例
 

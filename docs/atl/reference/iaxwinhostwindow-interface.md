@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindow 介面
+title: IAxWinHost 視窗介面
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindow
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebecc611660a788ce59bb11beb95bd60eacaf01b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329990"
 ---
-# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 介面
+# <a name="iaxwinhostwindow-interface"></a>IAxWinHost 視窗介面
 
-這個介面會提供方法來操作控制項和其主機物件。
+此介面提供操作控制件及其宿主物件的方法。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -39,29 +39,29 @@ interface IAxWinHostWindow : IUnknown
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|將現有的控制項附加到主機的物件。|
-|[CreateControl](#createcontrol)|建立控制項，並將它附加到主機的物件。|
-|[CreateControlEx](#createcontrolex)|建立控制項，將其附加到主機物件，並選擇性地設定的事件處理常式。|
-|[QueryControl](#querycontrol)|傳回裝載之控制項的介面指標。|
-|[SetExternalDispatch](#setexternaldispatch)|設定外部`IDispatch`介面。|
-|[SetExternalUIHandler](#setexternaluihandler)|設定外部`IDocHostUIHandlerDispatch`介面。|
+|[附加控制](#attachcontrol)|將現有控制件附加到主機物件。|
+|[CreateControl](#createcontrol)|創建控制項並將其附加到主機物件。|
+|[建立控制Ex](#createcontrolex)|創建控制項,將其附加到主機物件,並可以選擇設定事件處理程式。|
+|[查詢控制](#querycontrol)|返回指向托管控件的介面指標。|
+|[設定外部排程](#setexternaldispatch)|設置外部`IDispatch`介面。|
+|[設定外部 UIHandler](#setexternaluihandler)|設置外部`IDocHostUIHandlerDispatch`介面。|
 
 ## <a name="remarks"></a>備註
 
-這個介面會公開由裝載物件的 ATL 的 ActiveX 控制項。 建立及/或將控制項附加至主機的物件，從裝載控制項取得的介面，或裝載的網頁瀏覽器時，設定外部 dispinterface 或 UI 處理常式，使用此介面上呼叫的方法。
+此介面由 ATL 的 ActiveX 控制項託管物件公開。 呼叫此介面上的方法以建立和/或將控制項附加到主機物件、從托管控件獲取介面或設置外部介面或 UI 處理程式,以便託管 Web 瀏覽器時使用。
 
 ## <a name="requirements"></a>需求
 
-此介面的定義可從 IDL 或C++，如下所示。
+此介面的定義可作為 IDL 或C++,如下所示。
 
 |定義類型|檔案|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
-|C++|ATLIFace.h （也包含在 ATLBase.h）|
+|Idl|ATLIFace.idl|
+|C++|ATLIFace.h (也包含在 ATLBase.h 中)|
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
+## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHost 視窗::附加控制
 
-將現有的 （與先前初始化的） 的控制項附加至使用視窗所識別的主物件*hWnd*。
+使用*hWnd*標識的視窗將現有(以前初始化)控制件附加到主機物件。
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -70,18 +70,18 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="parameters"></a>參數
 
 *pUnkControl*<br/>
-[in]指標`IUnknown`要附加至主機的物件之控制項的介面。
+[在]指向要附加到主機`IUnknown`物件的控制埠介面的指標。
 
 *hWnd*<br/>
-[in]要用來裝載之視窗控制代碼。
+[在]用於託管的視窗的句柄。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
-##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
+## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHost 視窗:建立控制
 
-建立控制項，它初始化，並將它裝載在視窗中所識別*hWnd*。
+創建控制項,初始化它,並將其託管在*hWnd*識別的視窗中。
 
 ```
 STDMETHOD(CreateControl)(
@@ -93,29 +93,29 @@ STDMETHOD(CreateControl)(
 ### <a name="parameters"></a>參數
 
 *lpTricsData*<br/>
-[in]字串，識別要建立的控制項。 可以是 （必須包含在大括號） 的 CLSID、 ProgID、 URL 或原始 HTML (前面加上**MSHTML:**)。
+[在]識別要建立的控制項的字串。 可以是 CLSID(必須包括大括號)、ProgID、URL 或原始 HTML(由**MSHTML**預置: 。
 
 *hWnd*<br/>
-[in]要用來裝載之視窗控制代碼。
+[在]用於託管的視窗的句柄。
 
 *pStream*<br/>
-[in]包含控制項的初始化資料的資料流介面指標。 可以是 NULL。
+[在]包含控制程式初始化資料的流的介面指標。 可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-此視窗會公開這個介面，讓訊息可以反映至控制項和其他容器功能將可運作的主機物件的子類別化。
+此視窗將由公開此介面的主機物件進行子分類,以便消息可以反射到控制項,其他容器功能將起作用。
 
-呼叫這個方法就相當於呼叫[IAxWinHostWindow::CreateControlEx](#createcontrolex)。
+呼叫此方法等效於呼叫[IAxWinHostWindow::createControlEx](#createcontrolex)。
 
-若要建立授權的 ActiveX 控制項，請參閱[IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
+要建立授權的 ActiveX 控制件,請參閱[IAxWinHostWindowlic::建立控制項](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
 
-##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
+## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHost 視窗:建立控制Ex
 
-建立 ActiveX 控制項，它初始化，並將它裝載於指定的視窗，類似於[IAxWinHostWindow::CreateControl](#createcontrol)。
+建立一個 ActiveX 控制件,初始化它,並將其託管在指定的視窗中,類似於[IAxWinHostWindow::建立控制](#createcontrol)。
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -130,36 +130,36 @@ STDMETHOD(CreateControlEx)(
 ### <a name="parameters"></a>參數
 
 *lpTricsData*<br/>
-[in]字串，識別要建立的控制項。 可以是 （必須包含在大括號） 的 CLSID、 ProgID、 URL 或原始 HTML (前面加上**MSHTML:**)。
+[在]識別要建立的控制項的字串。 可以是 CLSID(必須包括大括號)、ProgID、URL 或原始 HTML(與**MSHTML**一起預置碼: 。
 
 *hWnd*<br/>
-[in]要用來裝載之視窗控制代碼。
+[在]用於託管的視窗的句柄。
 
 *pStream*<br/>
-[in]包含控制項的初始化資料的資料流介面指標。 可以是 NULL。
+[在]包含控制程式初始化資料的流的介面指標。 可以是 NULL。
 
-*ppUnk*<br/>
-[out]將會收到的指標位址`IUnknown`介面建立的控制項。 可以是 NULL。
+*普恩克*<br/>
+[出]將接收創建控制項介面`IUnknown`的指標的位址。 可以是 NULL。
 
-*riidAdvise*<br/>
-[in]在所包含的物件上的輸出介面的介面識別項。 可以是 IID_NULL。
+*里德建議*<br/>
+[在]包含物件上傳出介面的介面標識符。 可以IID_NULL。
 
-*punkAdvise*<br/>
-[in]指標`IUnknown`連接到包含的物件所指定的連接點的接收器物件的介面`iidSink`。
+*龐克建議*<br/>
+[在]指向要連接到`IUnknown`所指定包含物件的連接點的接收器物件的介面的`iidSink`指標。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-不同於`CreateControl`方法，`CreateControlEx`也可讓您接收新建立之控制項的介面指標，並設定要接收控制項所引發的事件的事件接收。
+與`CreateControl`方法不同`CreateControlEx`,還允許您接收指向新創建的控制項的介面指標,並設置事件接收器以接收控制項觸發的事件。
 
-若要建立授權的 ActiveX 控制項，請參閱[IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
+要建立授權的 ActiveX 控制件,請參閱[IAxWinHostWindowlic::建立控制項](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
 
-##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl
+## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHost 視窗::查詢控制
 
-傳回所裝載的控制項提供指定的介面指標。
+返回托管控件提供的指定介面指標。
 
 ```
 STDMETHOD(QueryControl)(
@@ -170,18 +170,18 @@ STDMETHOD(QueryControl)(
 ### <a name="parameters"></a>參數
 
 *riid*<br/>
-[in]所要求的控制項上的介面識別碼。
+[在]請求的控制項上的介面的 ID。
 
 *ppvObject*<br/>
-[out]將會收到建立控制項的指定的介面的指標位址。
+[出]將接收已創建控制項的指定介面的指標的位址。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
-##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch
+## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHost 視窗::設定外部排程
 
-設定外部 dispinterface，也就是可包含的控制項，透過[IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md)方法。
+設置外部介面,可透過[IDocHostUIHandlerDispatch:get 外部](../../atl/reference/idochostuihandlerdispatch-interface.md)方法包含控制項。
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -190,15 +190,15 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="parameters"></a>參數
 
 *pDisp*<br/>
-[in]指標`IDispatch`介面。
+[在]指向介面的`IDispatch`指標。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
-##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler
+## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHost 視窗::設定外部 UIHandler
 
-呼叫此函式來設定外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)介面`CAxWindow`物件。
+呼叫此函數以設定`CAxWindow`物件的外部[IDocHostUIHandlerDispatch 介面](../../atl/reference/idochostuihandlerdispatch-interface.md)。
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -207,18 +207,18 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="parameters"></a>參數
 
 *pDisp*<br/>
-[in]指標`IDocHostUIHandlerDispatch`介面。
+[在]指向介面的`IDocHostUIHandlerDispatch`指標。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-這個函數由控制項 （例如 Web 瀏覽器控制項），查詢主機的網站`IDocHostUIHandlerDispatch`介面。
+此函數由查詢主機網站的`IDocHostUIHandlerDispatch`介面的控制項(如Web瀏覽器控制項)使用。
 
 ## <a name="see-also"></a>另請參閱
 
-[IAxWinAmbientDispatch 介面](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
+[IAxWin 環境排程介面](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAx 視窗::查詢主機](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)

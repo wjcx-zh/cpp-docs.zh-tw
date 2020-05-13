@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_WIN_MODULE70 structure
 - ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
-ms.openlocfilehash: 0b636d328852daf821269230aae443cef084578b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e78e4ad87338528aa654f5ecaa08b45315846
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260749"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168549"
 ---
-# <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 結構
+# <a name="_atl_win_module70-structure"></a>_ATL_WIN_MODULE70 結構
 
-ATL 中的視窗化程式碼使用
+由 ATL 中的視窗化程式碼使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize;
     CRITICAL_SECTION m_csWindowCreate;
@@ -34,24 +34,24 @@ struct _ATL_WIN_MODULE70 {
 ## <a name="members"></a>成員
 
 `cbSize`<br/>
-結構，用來進行版本設定的大小。
+結構的大小，用於版本控制。
 
 `m_csWindowCreate`<br/>
-用來序列化存取視窗註冊碼。 供內部使用 ATL
+用來序列化對視窗註冊程式碼的存取。 由 ATL 在內部使用。
 
 `m_pCreateWndList`<br/>
-用來繫結至其物件的 windows。 供內部使用 ATL
+用來將視窗系結至其物件。 由 ATL 在內部使用。
 
 `m_rgWindowClassAtoms`<br/>
-用來追蹤視窗類別註冊，讓它們可以適當地取消註冊，在終止。 供內部使用 ATL
+用來追蹤視窗類別註冊，使其在終止時可以適當地取消註冊。 由 ATL 在內部使用。
 
 ## <a name="remarks"></a>備註
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)定義的 typedef 的`_ATL_WIN_MODULE70`。
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)定義為的`_ATL_WIN_MODULE70`typedef。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標頭：** atlbase.h。h
 
 ## <a name="see-also"></a>另請參閱
 

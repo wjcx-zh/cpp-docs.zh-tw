@@ -36,20 +36,20 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 48e0e58d2886c5a8bb90a86c81cb785d364666e8
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988708"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825825"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw、_inpd
 
-輸入、埠、位元組（`inp`、`_inp`）、單字（`inpw`、`_inpw`）或雙字組（`_inpd`）。
+輸入，從埠，`inp`位元組（， `_inp`），單字（`inpw`， `_inpw`）或雙字組（`_inpd`）。
 
 > [!IMPORTANT]
-> 這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。  
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這些函式已被取代。 從 Visual Studio 2015 開始，它們無法在 CRT 中使用。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -67,7 +67,7 @@ unsigned long _inpd(
 
 ### <a name="parameters"></a>參數
 
-*埠*\
+*移植*\
 I/O 連接埠號碼。
 
 ## <a name="return-value"></a>傳回值
@@ -80,7 +80,7 @@ I/O 連接埠號碼。
 
 由於這些函式直接從 I/O 連接埠讀取，因此無法用於使用者程式碼。
 
-`inp` 和 `inpw` 名稱是 `_inp` 和 `_inpw` 函式的舊名稱、已被取代的名稱。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+`inp`和`inpw`名稱是`_inp`和`_inpw`函式的舊版、已被取代的名稱。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 ## <a name="requirements"></a>需求
 
@@ -90,7 +90,7 @@ I/O 連接埠號碼。
 |`_inpw`|\<conio.h>|
 |`_inpd`|\<conio.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -98,5 +98,5 @@ I/O 連接埠號碼。
 
 ## <a name="see-also"></a>請參閱
 
-[主控台和連接埠 I/O](../c-runtime-library/console-and-port-i-o.md)\
+[主控台和埠 i/o](../c-runtime-library/console-and-port-i-o.md)\
 [outp、outpw、_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 730bea34354b008d641ecc28e7368f79efad12a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421167"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751162"
 ---
 # <a name="csocket-class"></a>CSocket 類別
 
-衍生自 `CAsyncSocket`，繼承其 Windows 通訊端 API 的封裝，並代表比 `CAsyncSocket` 物件更高的抽象層級。
+派生自`CAsyncSocket`繼承其 Windows 套接字 API 的封`CAsyncSocket`裝,並且表示比 物件更高的抽象級別。
 
 ## <a name="syntax"></a>語法
 
@@ -43,46 +43,46 @@ class CSocket : public CAsyncSocket
 
 |名稱|描述|
 |----------|-----------------|
-|[CSocket：： CSocket](#csocket)|建構 `CSocket` 物件。|
+|[Socket::socket](#csocket)|建構 `CSocket` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSocket：： Attach](#attach)|將通訊端控制碼附加至 `CSocket` 物件。|
-|[CSocket：： CancelBlockingCall](#cancelblockingcall)|取消目前正在進行中的封鎖呼叫。|
-|[CSocket：： Create](#create)|建立通訊端。|
-|[CSocket：： FromHandle](#fromhandle)|指定通訊端控制碼，傳回 `CSocket` 物件的指標。|
-|[CSocket：： IsBlocking](#isblocking)|判斷封鎖呼叫是否正在進行中。|
+|[Socket::連線](#attach)|將 SOCKET 句柄`CSocket`附加到 物件。|
+|[套接字::取消封鎖呼叫](#cancelblockingcall)|取消當前正在進行的阻塞呼叫。|
+|[Socket::建立](#create)|創建套接字。|
+|[套接字::從手柄](#fromhandle)|返回指向`CSocket`物件的指標,給定一個 SOCKET 句柄。|
+|[套接字::正在阻塞](#isblocking)|確定阻止呼叫是否正在進行。|
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSocket：： OnMessagePending](#onmessagepending)|呼叫以在等候封鎖呼叫完成時處理擱置中的訊息。|
+|[Socket::開啟訊息掛起](#onmessagepending)|在等待阻塞調用完成時調用以處理掛起的消息。|
 
 ## <a name="remarks"></a>備註
 
-`CSocket` 可以與 `CSocketFile` 和 `CArchive` 的類別搭配使用，以管理資料的傳送和接收。
+`CSocket`與類`CSocketFile`一起`CArchive`工作 ,並管理數據的發送和接收。
 
-`CSocket` 物件也會提供封鎖，這對 `CArchive`的同步作業而言是不可或缺的。 封鎖函式（例如 `Receive`、`Send`、`ReceiveFrom`、`SendTo`和 `Accept` （全都繼承自 `CAsyncSocket`）不會傳回 `WSAEWOULDBLOCK` 中的 `CSocket`錯誤。 相反地，這些函式會等到作業完成。 此外，如果在其中一個函式被封鎖時呼叫 `CancelBlockingCall`，則原始呼叫將會以錯誤 WSAEINTR 終止。
+物件`CSocket`還提供阻塞,這`CArchive`對於的同步操作至關重要。 `Receive`阻止函數,如`Send``ReceiveFrom`,`SendTo``Accept`、 和`CAsyncSocket`(全部繼承`WSAEWOULDBLOCK`自`CSocket`), 不會在 中返回錯誤。 相反,這些函數等待操作完成。 此外,如果`CancelBlockingCall`在這些函數之一處於阻塞時調用,則原始調用將終止與錯誤 WSAEINTR。
 
-若要使用 `CSocket` 物件，請呼叫此函式，然後呼叫 `Create` 以建立基礎通訊端控制碼（類型 SOCKET）。 `Create` 的預設參數會建立資料流程通訊端，但如果您不是使用具有 `CArchive` 物件的通訊端，您可以指定參數來建立資料包通訊端，或系結至特定埠以建立伺服器通訊端。 使用用戶端上的 `Connect` 連接到用戶端通訊端，並在伺服器端 `Accept`。 然後建立 `CSocketFile` 物件，並將它與 `CSocketFile` 的函式中的 `CSocket` 物件產生關聯。 接下來，建立一個用於傳送的 `CArchive` 物件，另一個用於接收資料（視需要），然後在 `CArchive` 的函式中將它們與 `CSocketFile` 物件建立關聯。 當通訊完成時，請終結 `CArchive`、`CSocketFile`和 `CSocket` 物件。 SOCKET 資料類型會在[Windows 通訊端：背景](../../mfc/windows-sockets-background.md)一文中說明。
+要使用`CSocket`物件,請調用建構函數,然後調`Create`用 以創建基礎 SOCKET 句柄(類型 SOCKET)。 建立流套接字`Create`的預設參數,但如果不將套接字`CArchive`與 物件一起使用,則可以指定一個參數來改為創建 datagram 套接字,或者綁定到特定埠以創建伺服器套接字。 使用`Connect`用戶端和`Accept`伺服器端連接到用戶端套接字。 然後創建一`CSocketFile`個物件並將其關聯到`CSocket`建構函數`CSocketFile`中的物件。 接下來,創建用於`CArchive`發送的物件和用於接收數據的物件(根據需要),然後將它們與`CSocketFile``CArchive`構造函數中的對象相關聯。 通信完成後,銷毀`CArchive`、`CSocketFile`物件`CSocket`。 在[Windows 套接字:背景](../../mfc/windows-sockets-background.md)) 一文中介紹了 SOCKET 數據類型。
 
-當您使用 `CArchive` 搭配 `CSocketFile` 和 `CSocket`時，您可能會遇到 `CSocket::Receive` 進入迴圈（藉由 `PumpMessages(FD_READ)`）等候要求的位元組數量的情況。 這是因為 Windows 通訊端在每個 FD_READ 通知中只允許一個接收呼叫，但是 `CSocketFile` 和 `CSocket` 允許每個 FD_READ 多個接收呼叫。 如果您在沒有可讀取的資料時收到 FD_READ，應用程式會停止回應。 如果您從未取得另一個 FD_READ，應用程式會停止透過通訊端進行通訊。
+使用`CArchive``CSocketFile``CSocket`和 時,`CSocket::Receive`可能會遇到 輸入`PumpMessages(FD_READ)`迴圈 (由 ) 等待請求的位元組數的情況。 這是因為 Windows 套接字僅允許每個FD_READ通知一個`CSocketFile``CSocket`recv 調用,並且允許每個FD_READ多個 recv 調用。 如果在沒有要讀取的數據時獲得FD_READ,應用程式將掛起。 如果您從未獲得另一個FD_READ,應用程式將停止通過套接字進行通信。
 
-您可以解決這個問題，如下所示。 在 socket 類別的 `OnReceive` 方法中，呼叫 `CAsyncSocket::IOCtl(FIONREAD, ...)`，然後在從通訊端讀取預期的資料超過一個 TCP 封包的大小（通常至少是1096個位元組）時呼叫 message 類別的 `Serialize` 方法。 如果可用資料的大小小於所需，請等候所有資料都被接收，然後才啟動讀取作業。
+您可以按照如下方式解決此問題。 在`OnReceive`套接字類中,當`CAsyncSocket::IOCtl(FIONREAD, ...)`從套接字讀`Serialize`取的預期數據超過一個 TCP 數據包(網路介質的最大傳輸單元,通常至少 1096 位元組)時,在調用消息類的方法之前調用。 如果可用數據的大小小於所需大小,請等待接收所有數據,然後僅啟動讀取操作。
 
-在下列範例中，`m_dwExpected` 是使用者預期接收的大約位元組數目。 假設您在程式碼中的其他位置宣告它。
+在下面的範例中,`m_dwExpected`是使用者希望接收的大約位元組數。 假定您在代碼的其他位置聲明它。
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocket-class_1.cpp)]
 
 > [!NOTE]
->  在靜態連結 MFC 應用程式的次要執行緒中使用 MFC 通訊端時，您必須在使用通訊端來初始化通訊端程式庫的每個執行緒中，呼叫 `AfxSocketInit`。 根據預設，只會在主要執行緒中呼叫 `AfxSocketInit`。
+> 在靜態連結的 MFC 應用程式中的輔助線程中使用 MFC`AfxSocketInit`套接字時,必須呼叫使用 socket 初始化套接字型檔的每個線程。 預設情況下,`AfxSocketInit`僅在主線程中呼叫。
 
-如需詳細資訊，請參閱[MFC 中的 Windows 通訊端](../../mfc/windows-sockets-in-mfc.md)、 [windows 通訊端：使用具有封存的通訊端](../../mfc/windows-sockets-using-sockets-with-archives.md)、 [windows Socket：具有封存的通訊端運作方式](../../mfc/windows-sockets-how-sockets-with-archives-work.md)、 [windows 套](../../mfc/windows-sockets-sequence-of-operations.md)接字：作業順序、 [Windows 通訊端：使用封存的通訊端範例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。
+有關詳細資訊,請參閱 MFC 中的[Windows 套接字](../../mfc/windows-sockets-in-mfc.md)[、Windows 套接字:使用帶存檔的套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)[、Windows 套接字:具有存檔的 socket 的工作原理](../../mfc/windows-sockets-how-sockets-with-archives-work.md)[、Windows 套接字:操作順序](../../mfc/windows-sockets-sequence-of-operations.md)[、Windows 套接字:使用存檔的套接字示例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -92,11 +92,11 @@ class CSocket : public CAsyncSocket
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxsock。h
+**標題:** afxsock.h
 
-##  <a name="attach"></a>CSocket：： Attach
+## <a name="csocketattach"></a><a name="attach"></a>Socket::連線
 
-呼叫這個成員函式，將 `hSocket` 控制碼附加至 `CSocket` 物件。
+調用此成員函數以將`hSocket`句柄附加到`CSocket`物件。
 
 ```
 BOOL Attach(SOCKET hSocket);
@@ -105,7 +105,7 @@ BOOL Attach(SOCKET hSocket);
 ### <a name="parameters"></a>參數
 
 *hSocket*<br/>
-包含通訊端的控制碼。
+包含套接字的句柄。
 
 ### <a name="return-value"></a>傳回值
 
@@ -113,9 +113,9 @@ BOOL Attach(SOCKET hSocket);
 
 ### <a name="remarks"></a>備註
 
-通訊端控制碼會儲存在物件的[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)資料成員中。
+SOCKET 句柄存儲在物件的[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)數據成員中。
 
-如需詳細資訊，請參閱[Windows socket：搭配使用通訊端與](../../mfc/windows-sockets-using-sockets-with-archives.md)封存。
+有關詳細資訊,請參閱[Windows 通訊卡字:使用帶存檔的通訊字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 ### <a name="example"></a>範例
 
@@ -125,27 +125,27 @@ BOOL Attach(SOCKET hSocket);
 
 [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]
 
-##  <a name="cancelblockingcall"></a>CSocket：： CancelBlockingCall
+## <a name="csocketcancelblockingcall"></a><a name="cancelblockingcall"></a>套接字::取消封鎖呼叫
 
-呼叫這個成員函式可取消目前正在進行中的封鎖呼叫。
+調用此成員函數以取消當前正在進行的阻塞呼叫。
 
-```
+```cpp
 void CancelBlockingCall();
 ```
 
 ### <a name="remarks"></a>備註
 
-此函式會取消此通訊端的任何未完成的封鎖作業。 原始的封鎖呼叫將會儘快終止，並會發生錯誤 WSAEINTR。
+此功能取消此套接字的任何未完成的阻塞操作。 原始阻塞調用將儘快終止與錯誤 WSAEINTR。
 
-在封鎖 `Connect` 作業的情況下，Windows 通訊端執行會儘快終止封鎖呼叫，但可能無法釋放通訊端資源，直到連接完成（然後重設）或計時為止。只有當應用程式立即嘗試開啟新的通訊端（如果沒有可用的通訊端），或連接到相同的對等時，這可能會很明顯。
+在阻塞`Connect`操作的情況下,Windows Sockets 實現將儘快終止阻塞調用,但在連接完成(然後重置)或超時之前,可能無法釋放套接字資源。僅當應用程式立即嘗試打開新套接字(如果沒有可用套接字)或連接到同一對等體時,這才可能明顯。
 
-取消 `Accept` 以外的任何作業都可以讓通訊端處於不定狀態。 如果應用程式取消通訊端上的封鎖作業，應用程式唯一能夠在通訊端上執行的作業就是 `Close`的呼叫，雖然其他操作可能適用于某些 Windows 通訊端程式。 如果您想要讓應用程式具有最大的可攜性，您必須小心不要相依于取消之後執行的作業。
+取消除任外的任何操作`Accept`都會使套接字處於不確定狀態。 如果應用程式取消對套接字的阻塞操作,則應用程式可以依賴於對套接字執行的唯一操作是調用`Close`,儘管其他操作可能在某些 Windows 套接字實現上工作。 如果希望應用程式具有最大可移植性,則必須小心不要依賴於取消後執行的操作。
 
-如需詳細資訊，請參閱[Windows socket：搭配使用通訊端與](../../mfc/windows-sockets-using-sockets-with-archives.md)封存。
+有關詳細資訊,請參閱[Windows 通訊卡字:使用帶存檔的通訊字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-##  <a name="create"></a>CSocket：： Create
+## <a name="csocketcreate"></a><a name="create"></a>Socket::建立
 
-在建立通訊端物件後呼叫**create**成員函式，以建立 Windows 通訊端並加以附加。
+在建構套接字物件後調用 **「創建**成員」函數以創建 Windows 套接字並附加它。
 
 ```
 BOOL Create(
@@ -156,33 +156,33 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*nSocketPort*<br/>
-要與通訊端搭配使用的特定埠，如果您想要讓 MFC 選取埠，則為0。
+*nSocket連接埠*<br/>
+要與套接字一起使用的特定埠,如果希望 MFC 選擇埠,則為 0。
 
-*nSocketType*<br/>
-SOCK_STREAM 或 SOCK_DGRAM。
+*nSocket 類型*<br/>
+SOCK_STREAM或SOCK_DGRAM。
 
-*lpszSocketAddress*<br/>
-字串的指標，其中包含已連接之通訊端的網路位址，這是一個點的數位，例如 "128.56.22.8"。 傳遞這個參數的 Null 字串，表示 `CSocket` 實例應該接聽所有網路介面上的用戶端活動。
+*lpszSocket位址*<br/>
+指向包含連接套接字的網路位址的字串的指標,虛線數位,如"128.56.22.8"。 傳遞此參數的 NULL 字串`CSocket`指示 實例應偵聽所有網路介面上的用戶端活動。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功，則為非零;否則，您可以藉由呼叫 `GetLastError`來抓取特定的錯誤碼。
+如果函數成功,則非零;否則 0,可以通過`GetLastError`調用 檢索特定的錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-`Create` 接著會呼叫 `Bind`，將通訊端系結至指定的位址。 支援的通訊端類型如下：
+`Create`然後調用`Bind`將套接字綁定到指定的位址。 支援以下通訊型態:
 
-- SOCK_STREAM 提供排序、可靠、雙向、以連接為基礎的位元組資料流程。 使用網際網路位址系列的傳輸控制通訊協定（TCP）。
+- SOCK_STREAM 提供序列化、可靠、雙向、基於連接的位元組流。 對互聯網位址系列使用傳輸控制協定 (TCP)。
 
-- SOCK_DGRAM 支援資料包，其為固定（通常是小型）最大長度的無連接、不可靠的緩衝區。 使用使用者資料包協定（UDP）作為網際網路位址系列。 若要使用此選項，您不得使用具有 `CArchive` 物件的通訊端。
+- SOCK_DGRAM支援數據圖,這是固定(通常較小)最大長度的無連接不可靠的緩衝區。 對 Internet 位址系列使用使用者數據圖協定 (UDP)。 要使用此選項,不得將套接字與物件一`CArchive`起使用。
 
     > [!NOTE]
-    >  `Accept` 成員函式會採用新的空白 `CSocket` 物件的參考做為其參數。 在呼叫 `Accept`之前，您必須先建立此物件。 請記住，如果此通訊端物件超出範圍，連接就會關閉。 請勿呼叫這個新通訊端物件的 `Create`。
+    >  成員`Accept`函數以引用新的`CSocket`空 物件作為其參數。 在調用`Accept`之前,必須構造此物件。 請記住,如果此套接字物件超出範圍,連接將關閉。 不要調用`Create`此新套接字物件。
 
-如需串流和資料包通訊端的詳細資訊，請參閱[Windows 通訊端：背景](../../mfc/windows-sockets-background.md)、 [windows 通訊端：埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows 通訊端：搭配使用通訊端與](../../mfc/windows-sockets-using-sockets-with-archives.md)封存的文章。
+有關串流和資料報 socket 的詳細資訊,請參閱[文章 Windows 套接字:背景](../../mfc/windows-sockets-background.md)[、Windows 通訊形字:連接埠和 socket 位址](../../mfc/windows-sockets-ports-and-socket-addresses.md),以及[Windows socket:使用帶存檔的 socket](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-##  <a name="csocket"></a>CSocket：： CSocket
+## <a name="csocketcsocket"></a><a name="csocket"></a>Socket::socket
 
 建構 `CSocket` 物件。
 
@@ -192,13 +192,13 @@ CSocket();
 
 ### <a name="remarks"></a>備註
 
-在結構之後，您必須呼叫 `Create` 成員函式。
+構造後,必須調用`Create`成員函數。
 
-如需詳細資訊，請參閱[Windows socket：搭配使用通訊端與](../../mfc/windows-sockets-using-sockets-with-archives.md)封存。
+有關詳細資訊,請參閱[Windows 通訊卡字:使用帶存檔的通訊字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-##  <a name="fromhandle"></a>CSocket：： FromHandle
+## <a name="csocketfromhandle"></a><a name="fromhandle"></a>套接字::從手柄
 
-傳回 `CSocket` 物件的指標。
+返回指向`CSocket`物件的指標。
 
 ```
 static CSocket* PASCAL FromHandle(SOCKET hSocket);
@@ -207,21 +207,21 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="parameters"></a>參數
 
 *hSocket*<br/>
-包含通訊端的控制碼。
+包含套接字的句柄。
 
 ### <a name="return-value"></a>傳回值
 
-`CSocket` 物件的指標，如果沒有任何 `CSocket` 物件附加至*hSocket*，則為 Null。
+指向`CSocket`物件的指標,如果沒有附加到`CSocket`*hSocket*的物件,則為 NULL。
 
 ### <a name="remarks"></a>備註
 
-當指定通訊端控制碼時，如果 `CSocket` 物件未附加至控制碼，則成員函式會傳回 Null，而且不會建立暫存物件。
+當給定一個 SOCKET`CSocket`句柄 時,如果物件未附加到句柄,成員函數將返回 NULL,並且不創建臨時物件。
 
-如需詳細資訊，請參閱[Windows socket：搭配使用通訊端與](../../mfc/windows-sockets-using-sockets-with-archives.md)封存。
+有關詳細資訊,請參閱[Windows 通訊卡字:使用帶存檔的通訊字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-##  <a name="isblocking"></a>CSocket：： IsBlocking
+## <a name="csocketisblocking"></a><a name="isblocking"></a>套接字::正在阻塞
 
-呼叫這個成員函式，以判斷封鎖呼叫是否正在進行中。
+調用此成員函數以確定阻止呼叫是否正在進行。
 
 ```
 BOOL IsBlocking();
@@ -229,15 +229,15 @@ BOOL IsBlocking();
 
 ### <a name="return-value"></a>傳回值
 
-如果通訊端正在封鎖，則為非零值;否則為0。
+如果套接字阻塞,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[Windows socket：搭配使用通訊端與](../../mfc/windows-sockets-using-sockets-with-archives.md)封存。
+有關詳細資訊,請參閱[Windows 通訊卡字:使用帶存檔的通訊字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-##  <a name="onmessagepending"></a>CSocket：： OnMessagePending
+## <a name="csocketonmessagepending"></a><a name="onmessagepending"></a>Socket::開啟訊息掛起
 
-覆寫此成員函式以尋找來自 Windows 的特定訊息，並在您的通訊端中回應它們。
+重寫此成員函數以查找 Windows 中的特定消息,並在套接字中回應它們。
 
 ```
 virtual BOOL OnMessagePending();
@@ -245,15 +245,15 @@ virtual BOOL OnMessagePending();
 
 ### <a name="return-value"></a>傳回值
 
-如果已處理訊息，則為非零。否則為0。
+處理消息時非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-這是一個先進的可覆寫。
+這是一個高級的可重寫。
 
-當通訊端提取 Windows 訊息時，架構會呼叫 `OnMessagePending`，讓您有機會處理您的應用程式感對的訊息。 如需如何使用 `OnMessagePending`的範例，請參閱[Windows socket：衍生自通訊端類別](../../mfc/windows-sockets-deriving-from-socket-classes.md)一文。
+框架在套`OnMessagePending`接字正在泵送 Windows 消息時調用,以便您有機會處理應用程式感興趣的消息。 有關如何使用`OnMessagePending`的示例,請參閱[Windows 套接字:從套接字類派生](../../mfc/windows-sockets-deriving-from-socket-classes.md)的文章。
 
-如需詳細資訊，請參閱[Windows socket：搭配使用通訊端與](../../mfc/windows-sockets-using-sockets-with-archives.md)封存。
+有關詳細資訊,請參閱[Windows 通訊卡字:使用帶存檔的通訊字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 ## <a name="see-also"></a>另請參閱
 

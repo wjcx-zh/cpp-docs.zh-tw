@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelperFalse Class
+title: C 簡單映射平等説明者假類
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-ms.openlocfilehash: 9c4241049ad323047f06c0b29f946521f2c02167
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6bf1d4e3be849004e13e593fb5f4b5cb87f8123
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277892"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330732"
 ---
-# <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse Class
+# <a name="csimplemapequalhelperfalse-class"></a>C 簡單映射平等説明者假類
 
-這個類別是 helper [CSimpleMap](../../atl/reference/csimplemap-class.md)類別。
+此類是[CSimpleMap](../../atl/reference/csimplemap-class.md)類的幫助程式。
 
 ## <a name="syntax"></a>語法
 
@@ -33,22 +33,22 @@ class CSimpleMapEqualHelperFalse
 
 |名稱|描述|
 |----------|-----------------|
-|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|（靜態）測試兩個索引鍵相等。|
-|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|（靜態）會傳回 false。|
+|[C 簡單映射平等説明者False::是平等密鑰](#isequalkey)|(靜態)測試兩個鍵的相等性。|
+|[C 簡單映射等值説明者False::等於值](#isequalvalue)|(靜態)返回 false。|
 
 ## <a name="remarks"></a>備註
 
-此特性類別是補充`CSimpleMap`類別。 它提供一種方法來比較兩個項目中包含`CSimpleMap`物件，特別是兩個值的項目或兩個索引鍵的項目。
+此特徵類是對`CSimpleMap`類的補充。 它提供了一種比較`CSimpleMap`物件中包含的兩個元素的方法,特別是兩個值元素或兩個鍵元素。
 
-值比較一律會傳回 false，並且另外，呼叫`ATLASSERT`是 false，如果曾被參考的引數。 在等號比較測試不充分定義所在的情況下，這個類別可讓對應，其包含索引鍵/值組，以正確運作，大多數的方法，但在定義完善的方式，例如取決於比較的方法中失敗[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。
+值比較將始終返回 false,此外,如果引用該`ATLASSERT`參數 ,則調用該參數為 false。 在相等性測試定義不充分的情況下,此類允許包含鍵/值對的映射在大多數方法中正常運行,但對於依賴於[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)等方法,以定義良好的方式失敗。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsimpcoll.h
+**標題:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey
+## <a name="csimplemapequalhelperfalseisequalkey"></a><a name="isequalkey"></a>C 簡單映射平等説明者False::是平等密鑰
 
-測試兩個索引鍵相等。
+測試兩個鍵的相等性。
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -57,20 +57,20 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="parameters"></a>參數
 
 *k1*<br/>
-第一個索引鍵。
+第一個鍵。
 
 *k2*<br/>
-第二個索引鍵。
+第二個鍵。
 
 ### <a name="return-value"></a>傳回值
 
-如果索引鍵相等，false 否則，就會傳回 true。
+如果鍵相等,則返回 true,否則為 false。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)。
+此方法呼叫[CSimplearray 平等說明器](../../atl/reference/csimplearrayequalhelper-class.md)。
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue
+## <a name="csimplemapequalhelperfalseisequalvalue"></a><a name="isequalvalue"></a>C 簡單映射等值説明者False::等於值
 
 傳回 false。
 
@@ -84,9 +84,9 @@ static bool IsEqualValue(const TVal&, const TVal&);
 
 ### <a name="remarks"></a>備註
 
-這個方法一律會傳回 false，而且會呼叫`ATLASSERT`是 false，如果曾被參考的引數。 目的`CSimpleMapEqualHelperFalse::IsEqualValue`是強制方法使用時有充分定義等號比較測試，以定義完善的方式失敗的比較。
+此方法始終返回 false,如果引用`ATLASSERT`它 ,則調用 false 參數。 目的是`CSimpleMapEqualHelperFalse::IsEqualValue`在未充分定義相等性測試時,強制使用比較的方法以定義明確的方式失敗。
 
 ## <a name="see-also"></a>另請參閱
 
-[CSimpleMapEqualHelper 類別](../../atl/reference/csimplemapequalhelper-class.md)<br/>
+[C 簡單映射平等説明者類](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

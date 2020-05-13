@@ -1,8 +1,9 @@
 ---
 title: terminate (CRT)
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - terminate
+- _o_terminate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946192"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912215"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
@@ -44,7 +46,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>備註
 
-**Terminate**函式用於C++例外狀況處理，而且會在下列情況中呼叫：
+**Terminate**函式會與 c + + 例外狀況處理搭配使用，並在下列情況中呼叫：
 
 - 擲回的 C++ 例外狀況找不到相符的 catch 處理常式。
 
@@ -52,13 +54,15 @@ void terminate( void );
 
 - 堆疊在擲回例外狀況之後損毀。
 
-依預設，**終止**呼叫會[中止](abort.md)。 您可以變更此預設值，方法是撰寫自己的終止函式，並使用您的函式名稱做為其引數來呼叫**set_terminate** 。 **terminate**會呼叫指定為**set_terminate**引數的最後一個函式。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。
+依預設，**終止**呼叫會[中止](abort.md)。 您可以藉由撰寫自己的終止函式，並使用您的函式名稱做為其引數呼叫**set_terminate** ，來變更這個預設值。 **終止**會呼叫指定為引數的最後一個函式來**set_terminate**。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**terminate**|\<eh.h>|
+|**終止**|\<eh.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -115,4 +119,4 @@ term_func() was called by terminate().
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[意料](unexpected-crt.md)<br/>

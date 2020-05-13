@@ -3,11 +3,11 @@ title: main 的引數
 ms.date: 11/04/2016
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
 ms.openlocfilehash: 918be9d281f1cb12c27c6c2f5dd834e4af137179
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313554"
 ---
 # <a name="arguments-to-main"></a>main 的引數
 
@@ -29,10 +29,10 @@ int main( int argc, char *argv[], char *envp[] )
 
 **argv** 陣列的所有項目都是字串指標。
 
-未使用命令列引數叫用的程式將收到值為 1 的 **argc**，而可執行檔的名稱會放入 **argv[0]** 中 (在 MS-DOS 3.0 以前的版本中，無法使用可執行檔名稱。 字母 "C" 會放在 **argv[0]** 中)。**argv[1]** 透過 **argv[argc - 1]** 所指向的字串代表程式參數。
+未使用命令列引數叫用的程式將收到值為 1 的 **argc**，而可執行檔的名稱會放入 **argv[0]** 中 (在 MS-DOS 3.0 以前的版本中，無法使用可執行檔名稱。 字母 "C" 會放在**argv [0]** 中）。**Argv [1]** 透過**argv [argc-1]** 所指向的字串代表程式參數。
 
 **argc** 和 **argv** 參數可修改，並且會保留在程式啟動和程式終止之間最後儲存的值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [環境](../c-language/environment.md)

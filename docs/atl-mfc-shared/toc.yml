@@ -1,0 +1,97 @@
+- name: ATL-MFC 共用類別
+  href: ../atl-mfc-shared/atl-mfc-shared-classes.md
+- name: ATL-MFC 概念
+  expanded: true
+  items:
+    - name: ATL-MFC 概念
+      href: ../atl-mfc-shared/atl-mfc-concepts.md
+    - name: 日期和時間
+      expanded: false
+      items:
+        - name: 日期和時間概觀
+          href: ../atl-mfc-shared/date-and-time.md
+        - name: DATE 類型
+          href: ../atl-mfc-shared/date-type.md
+    - name: 字串 (ATL-MFC)
+      expanded: false
+      items:
+        - name: 字串 (ATL-MFC)
+          href: ../atl-mfc-shared/strings-atl-mfc.md
+        - name: 使用 CStringT
+          expanded: false
+          items:
+            - name: 使用 CStringT
+              href: ../atl-mfc-shared/using-cstringt.md
+            - name: 使用 CStringT 管理記憶體
+              expanded: false
+              items:
+                - name: 使用 CStringT 管理記憶體
+                  href: ../atl-mfc-shared/memory-management-with-cstringt.md
+                - name: 自訂字串管理員實作 (基本方法)
+                  href: ../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md
+                - name: 避免堆積競爭
+                  href: ../atl-mfc-shared/avoidance-of-heap-contention.md
+                - name: 自訂字串管理員實作 (進階方法)
+                  href: ../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md
+                - name: CFixedStringT：自訂字串管理員範例
+                  href: ../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md
+            - name: 使用 CStringT 匯出字串類別
+              href: ../atl-mfc-shared/exporting-string-classes-using-cstringt.md
+        - name: 使用 CString
+          expanded: false
+          items:
+            - name: 使用 CString
+              href: ../atl-mfc-shared/using-cstring.md
+            - name: 基本 CString 作業
+              href: ../atl-mfc-shared/basic-cstring-operations.md
+            - name: 字串資料管理
+              href: ../atl-mfc-shared/string-data-management.md
+            - name: CString 語意
+              href: ../atl-mfc-shared/cstring-semantics.md
+            - name: 與 C 樣式字串相關的 CString 作業
+              href: ../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md
+            - name: 針對 BSTR 配置及釋放記憶體
+              href: ../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md
+            - name: CString 例外狀況清除
+              href: ../atl-mfc-shared/cstring-exception-cleanup.md
+            - name: CString 引數傳遞
+              href: ../atl-mfc-shared/cstring-argument-passing.md
+            - name: Unicode 及多位元組字元集 (MBCS) 支援
+              href: ../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
+- name: 參考資料
+  expanded: false
+  items:
+    - name: CSize 類別
+      href: ../atl-mfc-shared/reference/csize-class.md
+    - name: CTimeSpan 類別
+      href: ../atl-mfc-shared/reference/ctimespan-class.md
+    - name: COleDateTime 類別
+      href: ../atl-mfc-shared/reference/coledatetime-class.md
+    - name: CRect 類別
+      href: ../atl-mfc-shared/reference/crect-class.md
+    - name: MFC 和 ATL 共用的類別
+      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
+    - name: CPoint 類別
+      href: ../atl-mfc-shared/reference/cpoint-class.md
+    - name: CStringT 類別
+      href: ../atl-mfc-shared/reference/cstringt-class.md
+    - name: COleDateTimeSpan 類別
+      href: ../atl-mfc-shared/reference/coledatetimespan-class.md
+    - name: IAtlStringMgr 類別
+      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md
+    - name: CFixedStringT 類別
+      href: ../atl-mfc-shared/reference/cfixedstringt-class.md
+    - name: CStrBufT 類別
+      href: ../atl-mfc-shared/reference/cstrbuft-class.md
+    - name: CFileTimeSpan 類別
+      href: ../atl-mfc-shared/reference/cfiletimespan-class.md
+    - name: CImage 類別
+      href: ../atl-mfc-shared/reference/cimage-class.md
+    - name: CStringData 類別
+      href: ../atl-mfc-shared/reference/cstringdata-class.md
+    - name: CFileTime 類別
+      href: ../atl-mfc-shared/reference/cfiletime-class.md
+    - name: CSimpleStringT 類別
+      href: ../atl-mfc-shared/reference/csimplestringt-class.md
+    - name: CTime 類別
+      href: ../atl-mfc-shared/reference/ctime-class.md

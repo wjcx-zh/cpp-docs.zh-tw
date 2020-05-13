@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: dfcc4982e1b5f67b5a01d5a0d09d4fd9279deacf
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.openlocfilehash: 041f62bbbf5f7a2750960d21d1534cf6daf4b874
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934194"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335689"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (C++17 溢出對齊配置)
 
@@ -20,11 +20,11 @@ ms.locfileid: "65934194"
 
 ## <a name="syntax"></a>語法
 
-> **/Zc:alignedNew**\[-]
+> **/Zc:對齊新**\[-*
 
 ## <a name="remarks"></a>備註
 
-MSVC 編譯器與程式庫支援 C++17 標準溢出對齊的動態記憶體配置。 當指定了 **/Zc:alignedNew** 選項時，即使 *Example* 的對齊位置大於任何基礎類型要求的最大對齊位置 `max_align_t`，動態配置 (例如 `new Example;`) 也會遵循。 當配置類型的對齊位置不超過原始運算子 **new** 保證的對齊位置時 (以預先定義的巨集 **\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_\_** 值提供)，陳述式 `new Example;` 會如同在 C++14 中的行為，產生 `::operator new(size_t)` 的呼叫。 當對齊位置超過 **\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_\_** 時，實作會改使用 `::operator new(size_t, align_val_t)` 取得記憶體。 同樣地，刪除溢出對齊的類型會叫用 `::operator delete(void*, align_val_t)` 或有大小的 delete 特徵標記 `::operator delete(void*, size_t, align_val_t)`。
+MSVC 編譯器與程式庫支援 C++17 標準溢出對齊的動態記憶體配置。 指定 **/Zc:對齊New**選項時,動態分配(如`new Example;`如表示 *)表示"示例*"的對齊方式,`max_align_t`即使它大於 ,則表示任何基本類型所需的最大對齊方式。 當分配的類型的對齊不超過原始運算符**new**保證的對齊方式時,該語句作為預定義的宏**\_\_STDCPP\_DEFAULT\_NEW\_對齊\_** 的值可用,該語句`new Example;`會導致調用`::operator new(size_t)`,就像在 C++14 中所做的那樣。 當對齊大於**\_\_STDCPP\_DEFAULT\_新\_對齊\_時**,實現將改為使用`::operator new(size_t, align_val_t)`獲取記憶體。 同樣地，刪除溢出對齊的類型會叫用 `::operator delete(void*, align_val_t)` 或有大小的 delete 特徵標記 `::operator delete(void*, size_t, align_val_t)`。
 
 **/Zc:alignedNew** 選項只能在 [/std:c++17](std-specify-language-standard-version.md) 或 [/std:c++latest](std-specify-language-standard-version.md) 啟用時使用。 在 **/std:c++17** 或 **/std:c++latest** 下，根據預設，會啟用 **/Zc:alignedNew** 以遵循 ISO C++17 標準。 若您實作運算子 **new** 和 **delete** 的唯一理由是要支援溢出對齊的配置，在 C++17 模式中就不再需要這個程式碼。 若要在使用 **/std::c++17** 或 **/std:c++latest** 時關閉此選項，及還原 **new** 與 **delete** 的 C++14 行為，請指定 **/Zc:alignedNew-**。 若您在實作 **new** 和 **delete**，但還沒準備好實作具有 `align_val_t`參數的溢出對齊運算子 **new** 和 **delete** 多載，請使用 **/Zc:alignedNew-** 選項，避免編譯器和標準程式庫對溢出對齊多載產生呼叫。 [/permissive-](permissive-standards-conformance.md) 選項不會變更 **/Zc:alignedNew** 的預設設定。
 
@@ -99,11 +99,11 @@ aligned sized delete(009FE800, 256, 256)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [組態屬性] > [C/C++] > [命令列] 屬性頁。
+1. 選擇**配置屬性** > **C/C++** > **命令列**屬性頁。
 
-1. 修改 [其他選項] 屬性，使其包含 **/Zc:alignedNew** 或 **/Zc:alignedNew-**，然後選擇 [確定]。
+1. 修改 [其他選項]**** 屬性，使其包含 **/Zc:alignedNew** 或 **/Zc:alignedNew-**，然後選擇 [確定]****。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -4,25 +4,25 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-ms.openlocfilehash: 209ba04ea43116b39f28b0790b7a1e2b3fb5ccd7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: de81f79eecf3fc73c02894747f4b97cb107cf892
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439465"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328221"
 ---
 # <a name="lib-input-files"></a>LIB 輸入檔
 
-LIB 預期的輸入檔取決於使用它的模式，如下表所示。
+LIB 預期的輸入檔取決於使用它的模式,如下表所示。
 
 |[模式]|輸入|
 |----------|-----------|
-|預設值（建立或修改程式庫）|COFF 物件（.obj）檔案，COFF 程式庫（.lib），32位物件模型格式（OMF）物件（.obj）檔案|
-|使用/EXTRACT 解壓縮成員|COFF 程式庫（.lib）|
-|使用/DEF 建立匯出檔案和匯入程式庫|模組定義（.def）檔案，COFF 物件（.obj）檔案，COFF 程式庫（.lib），32位 OMF 物件（.obj）檔案|
+|預設值 (編譯或修改函式庫)|COFF 物件 (.obj) 檔案、COFF 函式庫 (.lib)、32 位物件模型格式 (OMF) 物件 (.obj) 檔案|
+|使用 /EXTRACT 提取成員|COFF 函式庫 (.lib)|
+|使用 /DEF 建譯匯出檔案及匯入庫|模組定義 (.def) 檔案、COFF 物件 (.obj) 檔案、COFF 函式庫 (.lib)、32 位元 OMF 物件 (.obj) 檔案|
 
 > [!NOTE]
->  由16位版本的 LIB 所建立的 OMF 程式庫，無法當做32位版本之 LIB 的輸入使用。
+> 由 16 位元版本的 LIB 創建的 OMF 庫不能用作對 32 位版本的 LIB 的輸入。
 
 ## <a name="see-also"></a>另請參閱
 

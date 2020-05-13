@@ -1,9 +1,11 @@
 ---
 title: fgetc、fgetwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fgetwc
 - fgetc
+- _o_fgetc
+- _o_fgetwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940898"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912872"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -57,12 +60,12 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
 
-**fgetc**會傳回讀取為**int**的字元，或傳回**EOF**以表示錯誤或檔案結尾。 **fgetwc**會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應至字元讀取或傳回**WEOF**的寬字元，以表示錯誤或檔案結尾。 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*stream*為**Null**，則**fgetc**和**fgetwc**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
+**fgetc**會傳回讀取為**int**的字元，或傳回**EOF**以表示錯誤或檔案結尾。 **fgetwc**會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應至讀取字元的寬字元，或傳回**WEOF**以表示錯誤或檔案結尾。 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*stream*為**Null**，則**fgetc**和**fgetwc**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
 
 ## <a name="remarks"></a>備註
 
@@ -76,6 +79,8 @@ wint_t fgetwc(
 
 如需在文字和二進位模式中處理寬字元和多位元組字元的詳細資訊，請參閱[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
@@ -84,7 +89,7 @@ wint_t fgetwc(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> 或 \<wchar.h>|
@@ -135,7 +140,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Line one.

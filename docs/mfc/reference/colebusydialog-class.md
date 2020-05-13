@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-ms.openlocfilehash: aa3f0d85bcbf34d325125187b22b38c4da01fb43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5be42463c08cacd83de84900fb4d98771774e897
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504398"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364247"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 類別
 
@@ -37,33 +37,33 @@ class COleBusyDialog : public COleDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[COleBusyDialog::COleBusyDialog](#colebusydialog)|建構 `COleBusyDialog` 物件。|
+|[COleBusy對話::COleBusy對話](#colebusydialog)|建構 `COleBusyDialog` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[COleBusyDialog::DoModal](#domodal)|顯示 [OLE Server Busy] 對話方塊。|
-|[COleBusyDialog::GetSelectionType](#getselectiontype)|決定在對話方塊中所做的選擇。|
+|[COleBusyDialog::Do模態](#domodal)|顯示"OLE 伺服器忙"對話框。|
+|[COleBusy 對話:取得選擇類型](#getselectiontype)|確定在對話框中所做的選擇。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[COleBusyDialog::m_bz](#m_bz)|OLEUIBUSY 類型的結構，可控制對話方塊的行為。|
+|[COleBusy對話::m_bz](#m_bz)|控制對話框行為的 OLEUIBUSY 類型的結構。|
 
 ## <a name="remarks"></a>備註
 
-當您想要呼叫`COleBusyDialog`這些對話方塊時，請建立類別的物件。 在結構化物件之後，您可以使用 [m_bz](#m_bz)結構，在對話方塊中初始化控制項的值或`COleBusyDialog`狀態。 `m_bz`結構的型別為 OLEUIBUSY。 如需使用此對話方塊類別的詳細資訊，請參閱[DoModal](#domodal)成員函式。
+如果要調用這些對話框,`COleBusyDialog`請建立類的物件。 建構`COleBusyDialog`物件后,可以使用[m_bz](#m_bz)結構在對話框中初始化控制件的值或狀態。 結構`m_bz`為奧萊布布。 有關使用此對話方塊類的詳細資訊,請參閱[DoModal](#domodal)成員函數。
 
 > [!NOTE]
->  應用程式精靈產生的容器程式碼會使用這個類別。
+> 應用程式精靈生成的容器代碼使用此類。
 
-如需詳細資訊，請參閱 Windows SDK 中的[OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)結構。
 
-如需有關 OLE 特定對話方塊的詳細資訊，請參閱[ole 中](../../mfc/dialog-boxes-in-ole.md)的文章對話方塊。
+有關特定於 OLE 的對話方塊的詳細資訊,請參閱 OLE[中的「對話框](../../mfc/dialog-boxes-in-ole.md)」一文。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -81,11 +81,11 @@ class COleBusyDialog : public COleDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxodlgs。h
+**標題:** afxodlgs.h
 
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog
+## <a name="colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>COleBusy對話::COleBusy對話
 
-此函式只會`COleBusyDialog`構造物件。
+此函數只建構物件`COleBusyDialog`。
 
 ```
 explicit COleBusyDialog(
@@ -98,32 +98,32 @@ explicit COleBusyDialog(
 ### <a name="parameters"></a>參數
 
 *htaskBusy*<br/>
-忙碌中伺服器工作的控制碼。
+處理忙的伺服器任務。
 
-*bNotResponding*<br/>
-若為 TRUE，請呼叫 [沒有回應] 對話方塊，而不是 [伺服器忙碌] 對話方塊。 [沒有回應] 對話方塊中的用語與 [伺服器忙碌] 對話方塊中的用語略有不同，而且 [取消] 按鈕已停用。
+*b 不回應*<br/>
+如果為 TRUE,則調用"不回應"對話框,而不是"伺服器忙"對話方塊。 "不回應"對話框中的措辭與"伺服器忙"對話框中的措詞略有不同,並且禁用"取消"按鈕。
 
 *dwFlags*<br/>
-建立旗標。 可以包含零或多個與位 OR 運算子結合的下列值：
+創建標誌。 可以包含與位-OR 運算子結合的以下零個或多個值:
 
-- BZ_DISABLECANCELBUTTON 在呼叫對話方塊時停用 [取消] 按鈕。
+- BZ_DISABLECANCELBUTTON調用對話方塊時禁用"取消"按鈕。
 
-- 呼叫對話方塊時，BZ_DISABLESWITCHTOBUTTON 停用切換至按鈕。
+- BZ_DISABLESWITCHTOBUTTON在調用對話方塊時禁用「切換到」按鈕。
 
-- BZ_DISABLERETRYBUTTON 在呼叫對話方塊時停用 [重試] 按鈕。
+- BZ_DISABLERETRYBUTTON調用對話方塊時禁用重試按鈕。
 
-*pParentWnd*<br/>
-指向對話方塊物件所屬的父系或擁有者視窗物件`CWnd`（類型為）。 如果它是 Null，則對話方塊物件的父視窗會設定為主應用程式視窗。
+*pparentwnd*<br/>
+指向對話框物件所屬的父視窗或所有者視窗物件`CWnd`(類型)。 如果為 NULL,則對話方塊物件的父視窗將設置為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-若要顯示對話方塊，請呼叫[DoModal](#domodal)。
+要顯示對話框,請呼叫[DoModal](#domodal)。
 
-如需詳細資訊，請參閱 Windows SDK 中的[OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)結構。
 
-##  <a name="domodal"></a>  COleBusyDialog::DoModal
+## <a name="colebusydialogdomodal"></a><a name="domodal"></a>COleBusyDialog::Do模態
 
-呼叫此函式以顯示 [OLE Server 忙碌或伺服器沒有回應] 對話方塊。
+呼叫此函數以顯示"OLE 伺服器忙"或"伺服器未回應"對話方塊。
 
 ```
 virtual INT_PTR DoModal();
@@ -131,23 +131,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-對話方塊的完成狀態。 下列其中一個值：
+對話框的完成狀態。 下列其中一個值：
 
-- 如果已成功顯示對話方塊，則 IDOK。
+- 如果對話框已成功顯示,則 IDOK。
 
-- 如果使用者取消對話方塊，則 IDCANCEL。
+- 如果使用者取消了對話框,則進行 IDCANCEL。
 
-- 如果發生錯誤，則 IDABORT。 如果傳回 IDABORT，請呼叫`COleDialog::GetLastError`成員函式，以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單，請參閱 Windows SDK 中的[OleUIBusy](/windows/win32/api/oledlg/nf-oledlg-oleuibusyw)函數。
+- 如果發生錯誤,則 IDABORT。 如果返回 IDABORT,請調`COleDialog::GetLastError`用 成員函數以獲取有關所發生錯誤類型的詳細資訊。 有關可能錯誤的清單,請參閱 Windows SDK 中的[OleUIBusy](/windows/win32/api/oledlg/nf-oledlg-oleuibusyw)函數。
 
 ### <a name="remarks"></a>備註
 
-如果您想要藉由設定[m_bz](#m_bz)結構的成員來初始化各種對話方塊控制項，您應該在呼叫`DoModal`之前執行此動作，但在構造對話方塊物件之後。
+如果要通過設置[m_bz](#m_bz)結構的成員來初始化各種對話框控件,則應在`DoModal`調用 之前執行此操作,但在構造對話框物件之後。
 
-如果`DoModal`傳回 IDOK，您可以呼叫其他成員函式，以抓取使用者在對話方塊中輸入的設定或資訊。
+如果`DoModal`返回 IDOK,則可以調用其他成員函數來檢索使用者輸入到對話方塊中的設置或資訊。
 
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType
+## <a name="colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>COleBusy 對話:取得選擇類型
 
-呼叫此函式可在 [伺服器忙碌] 對話方塊中，取得使用者所選擇的選擇類型。
+呼叫此函數以獲取使用者在「伺服器忙」對話框中選擇的選擇類型。
 
 ```
 UINT GetSelectionType() const;
@@ -155,11 +155,11 @@ UINT GetSelectionType() const;
 
 ### <a name="return-value"></a>傳回值
 
-所選取的類型。
+選擇的類型。
 
 ### <a name="remarks"></a>備註
 
-傳回型別值是由`Selection` `COleBusyDialog`類別中宣告的列舉型別所指定。
+返回類型值由類中聲明的`Selection``COleBusyDialog`枚舉類型指定。
 
 ```
 enum Selection {
@@ -169,17 +169,17 @@ enum Selection {
     };
 ```
 
-這些值的簡短說明如下：
+這些值的簡要說明如下:
 
-- `COleBusyDialog::switchTo`已按下 [切換至] 按鈕。
+- `COleBusyDialog::switchTo`按下「切換到」按鈕。
 
-- `COleBusyDialog::retry`按下 [重試] 按鈕。
+- `COleBusyDialog::retry`按下重試按鈕。
 
-- `COleBusyDialog::callUnblocked`啟動伺服器的呼叫現在已解除封鎖。
+- `COleBusyDialog::callUnblocked`現在,啟動伺服器的呼叫已解除阻止。
 
-##  <a name="m_bz"></a>  COleBusyDialog::m_bz
+## <a name="colebusydialogm_bz"></a><a name="m_bz"></a>COleBusy對話::m_bz
 
-OLEUIBUSY 類型的結構，用來控制 [伺服器忙碌] 對話方塊的行為。
+用於控制伺服器忙對話方塊的行為的 OLEUIBUSY 類型的結構。
 
 ```
 OLEUIBUSY m_bz;
@@ -187,9 +187,9 @@ OLEUIBUSY m_bz;
 
 ### <a name="remarks"></a>備註
 
-這個結構的成員可以直接修改，或透過成員函式來修改。
+此結構的成員可以直接或通過成員函數進行修改。
 
-如需詳細資訊，請參閱 Windows SDK 中的[OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)結構。
+有關詳細資訊,請參閱 Windows SDK 中的[OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)結構。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: cf9a2658807959108b3bb0af672d4c1835b58bc5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375667"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 類別
 
@@ -33,26 +33,26 @@ class CDialogBar : public CControlBar
 
 |名稱|描述|
 |----------|-----------------|
-|[CDialogBar：： CDialogBar](#cdialogbar)|建構 `CDialogBar` 物件。|
+|[C對話列:CDialog列](#cdialogbar)|建構 `CDialogBar` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDialogBar：： Create](#create)|建立 Windows 對話方塊列，並將它附加至 `CDialogBar` 物件。|
+|[CDialog列:建立](#create)|創建 Windows 對話方塊列並將`CDialogBar`其附加到 物件。|
 
 ## <a name="remarks"></a>備註
 
-對話方塊列類似于對話方塊，其中包含使用者可以在之間定位的標準 Windows 控制項。 另一個相似之處在于，您會建立對話方塊範本來代表對話方塊列。
+對話框列類似於對話框,因為它包含用戶可以在中間選項卡的標準 Windows 控制件。 另一個相似之處是創建一個對話框範本來表示對話方塊欄。
 
-建立和使用對話方塊列類似于建立和使用 `CFormView` 物件。 首先，使用[對話方塊編輯器](../../windows/dialog-editor.md)來定義具有樣式 WS_CHILD 的對話方塊範本，而不是其他樣式。 範本不能有 WS_VISIBLE 的樣式。 在您的應用程式程式碼中，呼叫函式來建立 `CDialogBar` 物件，然後呼叫 `Create` 以建立對話方塊視窗，並將它附加至 `CDialogBar` 物件。
+創建和使用對話方塊列類似於創建和`CFormView`使用 物件。 首先,使用[對話框編輯器](../../windows/dialog-editor.md)定義具有樣式WS_CHILD沒有其他樣式的對話框範本。 範本不能具有樣式WS_VISIBLE。 在應用程式代碼中,調用建構函數建構物件,`CDialogBar`然後呼`Create`叫以建立對話方塊列視窗並將其`CDialogBar`附加到 物件。
 
-如需 `CDialogBar`的詳細資訊，請參閱文章[對話方塊](../../mfc/dialog-bars.md)和[技術提示 31](../../mfc/tn031-control-bars.md)，控制列。
+有關的詳細資訊`CDialogBar`,請參閱文章[對話方塊條](../../mfc/dialog-bars.md)[和技術說明 31](../../mfc/tn031-control-bars.md),控制欄。
 
 > [!NOTE]
->  在目前的版本中，`CDialogBar` 物件無法裝載 Windows Forms 控制項。 如需有關在 Visual C++中 Windows Forms 控制項的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+> 在目前的版本中,`CDialogBar`物件無法承載 Windows 窗體控制件。 有關視覺化C++中的 Windows 表單元件的詳細資訊,請參閱[在 MFC 中使用 Windows 元件使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -60,15 +60,15 @@ class CDialogBar : public CControlBar
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[C控制列](../../mfc/reference/ccontrolbar-class.md)
 
 `CDialogBar`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxext.h。h
+**標題:** afxext.h
 
-##  <a name="cdialogbar"></a>CDialogBar：： CDialogBar
+## <a name="cdialogbarcdialogbar"></a><a name="cdialogbar"></a>C對話列:CDialog列
 
 建構 `CDialogBar` 物件。
 
@@ -76,9 +76,9 @@ class CDialogBar : public CControlBar
 CDialogBar();
 ```
 
-##  <a name="create"></a>CDialogBar：： Create
+## <a name="cdialogbarcreate"></a><a name="create"></a>CDialog列:建立
 
-載入 `lpszTemplateName` 或 `nIDTemplate`所指定的對話方塊資源範本、建立對話方塊視窗、設定其樣式，並將其與 `CDialogBar` 物件產生關聯。
+載入`lpszTemplateName``nIDTemplate`或 指定的對話方塊資源樣本,建立對話方塊列視窗,設定其樣式,`CDialogBar`並將其與 物件關聯。
 
 ```
 virtual BOOL Create(
@@ -96,38 +96,38 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pParentWnd*<br/>
-父 `CWnd` 物件的指標。
+*pparentwnd*<br/>
+指向父`CWnd`物件的指標。
 
-*lpszTemplateName*<br/>
-`CDialogBar` 物件之對話方塊資源範本名稱的指標。
+*lpszTemplate 名稱*<br/>
+指向`CDialogBar`物件的對話框資源範本名稱的指標。
 
 *nStyle*<br/>
-工具列樣式。 支援的其他工具列樣式包括：
+工具欄樣式。 支援的其他工具列樣式包括:
 
-- CBRS_TOP 控制列位於框架視窗的頂端。
+- CBRS_TOP控制欄位於框架視窗的頂部。
 
-- CBRS_BOTTOM 控制列位於框架視窗的底部。
+- CBRS_BOTTOM控制欄位於框架視窗的底部。
 
-- 當父代調整大小時，不會重新置放 CBRS_NOALIGN 控制列。
+- CBRS_NOALIGN調整父控件欄的大小時,不會重新置放。
 
-- CBRS_TOOLTIPS 控制列會顯示工具提示。
+- CBRS_TOOLTIPS控制列顯示工具提示。
 
-- CBRS_SIZE_DYNAMIC 控制列是動態的。
+- CBRS_SIZE_DYNAMIC控制欄是動態的。
 
-- 已修正 CBRS_SIZE_FIXED 控制列。
+- CBRS_SIZE_FIXED控制欄已固定。
 
-- CBRS_FLOATING 控制條是浮動的。
+- CBRS_FLOATING控制欄是浮動的。
 
-- CBRS_FLYBY 狀態列會顯示按鈕的相關資訊。
+- CBRS_FLYBY 狀態列顯示有關按鈕的資訊。
 
-- 不會對使用者顯示 CBRS_HIDE_INPLACE 控制列。
+- CBRS_HIDE_INPLACE控件欄不向用戶顯示。
 
 *nID*<br/>
-對話方塊列的控制項 ID。
+對話框列的控制 ID。
 
 *nIDTemplate*<br/>
-`CDialogBar` 物件之對話方塊範本的資源識別碼。
+`CDialogBar`對象的對話方塊樣本的資源 ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -135,7 +135,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-如果您指定 CBRS_TOP 或 CBRS_BOTTOM 對齊樣式，則對話方塊列的寬度會是框架視窗的寬度，而其高度則是*nIDTemplate*所指定的資源。 如果您指定 CBRS_LEFT 或 CBRS_RIGHT 對齊樣式，則對話方塊列的高度會是框架視窗的高度，而其寬度則是*nIDTemplate*所指定的資源。
+如果指定CBRS_TOP或CBRS_BOTTOM對齊樣式,則對話方塊欄的寬度是框架視窗的寬度,其高度是*nIDTemplate*指定的資源。 如果指定CBRS_LEFT或CBRS_RIGHT對齊樣式,則對話方塊列的高度是框架視窗的高度,其寬度是*nIDTemplate*指定的資源的高度。
 
 ### <a name="example"></a>範例
 
@@ -143,8 +143,8 @@ virtual BOOL Create(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
+[MFC 樣品 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CFormView 類別](../../mfc/reference/cformview-class.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)

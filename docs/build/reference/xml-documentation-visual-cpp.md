@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c25c54e81bb9c10fc871a2abc178f57e661ae4e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316336"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335724"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 文件 (Visual C++)
 
@@ -27,14 +27,14 @@ ms.locfileid: "62316336"
 1. 在型別宣告和實作位於相同標頭檔中的程式庫
 
 > [!NOTE]
->  在目前版本中，在範本或包含範本類型的任何項目上 (例如，以範本形式接受參數的函式) 不會處理程式碼註解。 新增這類的註解，將會導致未定義的行為。
+> 在目前版本中，在範本或包含範本類型的任何項目上 (例如，以範本形式接受參數的函式) 不會處理程式碼註解。 新增這類的註解，將會導致未定義的行為。
 
 如需建立具有文件註解 .xml 檔案的詳細資料，請參閱下列主題。
 
-|如需以下相關資訊|請參閱|
+|如需下列資訊|請參閱|
 |---------------------------|---------|
 |要使用的編譯器選項|[/doc](doc-process-documentation-comments-c-cpp.md)|
-|您可以用來在文件中提供常用功能的標記|[建議使用的文件註解標籤](recommended-tags-for-documentation-comments-visual-cpp.md)|
+|您可以用來在文件中提供常用功能的標記|[文件註解的推薦標記](recommended-tags-for-documentation-comments-visual-cpp.md)|
 |編譯器會產生以識別您程式碼中之建構的識別碼字串|[處理 .xml 檔案](dot-xml-file-processing.md)|
 |如何分隔文件標記|[Visual C++ 文件標記的分隔符號](delimiters-for-visual-cpp-documentation-tags.md)|
 |從一或多個 .xdc 檔產生 .xml 檔。|[XDCMake 參考](xdcmake-reference.md)|

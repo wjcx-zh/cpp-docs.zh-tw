@@ -1,34 +1,34 @@
 ---
-title: MFC ActiveX 控制項：新增自訂方法
+title: MFC ActiveX 控制項：加入自訂方法
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88d486248eab5d980463764db34bf40b05b830dc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160142"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364718"
 ---
-# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控制項：新增自訂方法
+# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控制項：加入自訂方法
 
-自訂方法與不同的內建方法透過未已經實作`COleControl`。 您必須提供每個您新增至您的控制項的自訂方法的實作。
+自定義方法與庫存方法不同,因為它們尚未由`COleControl`實現。 您必須為添加到控制項中的每個自定義方法提供實現。
 
 >[!IMPORTANT]
-> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
+> ActiveX 是一種不應用於新開發的傳統技術。 有關取代 ActiveX 的現代技術的詳細資訊,請參閱[ActiveX 控制件](activex-controls.md)。
 
-ActiveX 控制項使用者可以在任何時間執行的特定控制項的動作呼叫的自訂方法。 DISP_FUNCTION 是形式的自訂方法的分派對應項目。
+ActiveX 控制件用戶可以隨時呼叫自訂方法以執行特定於控制項的操作。 自定義方法的調度映射條目為窗體DISP_FUNCTION。
 
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a> 新增自訂方法加入方法精靈
+## <a name="adding-a-custom-method-with-the-add-method-wizard"></a><a name="_core_adding_a_custom_method_with_classwizard"></a>使用新增方法精靈加入自訂方法
 
-下列程序示範如何將 PtInCircle 自訂方法新增至 ActiveX 控制項的基本架構程式碼。 PtInCircle 判斷傳遞給控制項的座標是否內部或外部的圓形。 這個相同的程序也可用來新增其他自訂方法。 替代成您的自訂方法名稱和其 PtInCircle 方法名稱和參數的參數。
+下面的過程演示了將自定義方法 PtInCircle 添加到 ActiveX 控制項的骨架代碼中。 PtInCircle 確定傳遞給控制項的座標是圓內部還是外部。 此過程也可用於添加其他自定義方法。 將自訂方法名稱及其參數替換為 PtInCircle 方法名稱和參數。
 
 > [!NOTE]
->  這個範例會使用`InCircle`函式，從發行項的事件。 如需有關這個函式的詳細資訊，請參閱文章[MFC ActiveX 控制項：將自訂事件加入至 ActiveX 控制項](../mfc/mfc-activex-controls-adding-custom-events.md)。
+> 此範例使用文章事件`InCircle`中的函數。 有關此功能的詳細資訊,請參閱文章[MFC ActiveX 控制件:將自訂事件新增到 ActiveX 控制件](../mfc/mfc-activex-controls-adding-custom-events.md)。
 
-#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>若要加入使用加入方法精靈 PtInCircle 自訂方法
+#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>使用新增方法精靈加入 PtInCircle 自訂方法
 
 1. 載入控制項的專案。
 
@@ -36,47 +36,47 @@ ActiveX 控制項使用者可以在任何時間執行的特定控制項的動作
 
 1. 在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。
 
-1. 從快顯功能表中，按一下**新增**，然後按一下**加入方法**。
+1. 在快捷選單中,按一下「**添加**」,然後按下「**添加方法**」。
 
-   這會開啟 加入方法精靈。
+   這將打開"添加方法嚮導」。。
 
-1. 在 **方法名稱**方塊中，輸入*PtInCircle*。
+1. 在**方法名稱**框中,鍵入*PtinCircle*。
 
-1. 在 **內部名稱**方塊中，輸入方法的內部函式的名稱或使用預設值 (在此情況下， *PtInCircle*)。
+1. 在 **「內部名稱」** 框中,鍵入方法的內部函數的名稱或使用預設值(本例中為*PtInCircle)。*
 
-1. 在 **傳回型別**方塊中，按一下**VARIANT_BOOL**方法的傳回型別。
+1. 在 **「返回類型」** 框中,按一下方法傳回類型的**VARIANT_BOOL。**
 
-1. 使用**參數的型別**並**參數名稱**控制項，加入名為的參數*xCoord* (型別*OLE_XPOS_PIXELS*)。
+1. 使用**參數類型**和**參數名稱**控制項,添加名為*xCoord*的參數 *(OLE_XPOS_PIXELS*類型)。
 
-9. 使用**參數的型別**並**參數名稱**控制項，加入名為的參數*yCoord* (型別*OLE_YPOS_PIXELS*)。
+1. 使用**參數類型**和**參數名稱**控制項,添加名為*yCoord*的參數(類型*OLE_YPOS_PIXELS*)。
 
-10. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
-##  <a name="_core_classwizard_changes_for_custom_methods"></a> 加入方法精靈變更的自訂方法
+## <a name="add-method-wizard-changes-for-custom-methods"></a><a name="_core_classwizard_changes_for_custom_methods"></a>為自訂方法加入方法精靈變更
 
-當您新增的自訂方法時，加入方法精靈會進行一些變更控制項類別的標頭檔 (。H） 和實作 (。CPP) 檔案。 下面這一行新增至分派對應中的宣告，控制類別標頭 (。H） 檔案：
+新增自定義方法時,添加方法嚮導會對控制項類標頭 (.H) 和實施 (.CPP)檔。 以下行將添加到控制項類標頭 (中)中的調度映射聲明 (。H) 檔案:
 
 [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]
 
-此程式碼會宣告稱為分派方法處理常式`PtInCircle`。 可以呼叫此函式，控制使用者使用的外部名稱`PtInCircle`。
+此代碼聲明一個稱為`PtInCircle`的調度方法處理程式。 控制項使用者可以使用外部名稱`PtInCircle`調用此功能。
 
-下面這一行加入至控制項的。IDL 檔案：
+以下行將新增到控制項的 。IDL 檔案:
 
 [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]
 
-這一行會將指派`PtInCircle`方法特定的識別碼，加入方法精靈方法和屬性清單中的方法的位置。 加入方法精靈來加入自訂的方法，因為它的項目已自動新增至專案。IDL 檔案。
+此行為`PtInCircle`方法分配特定的 ID 號、該方法在"添加方法嚮導"方法和屬性清單中的位置。 由於 Add 方法精靈用於新增自訂方法,因此其項目將自動新增到專案的 。IDL 檔。
 
-此外，下列命令，位於實作 (。控制項類別的 CPP) 檔案會新增至控制項的分派對應：
+此外,以下行,位於實現 (。控制類的CPP)檔案,被新增到控制項的調度映射中:
 
 [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]
 
-DISP_FUNCTION 巨集對應方法`PtInCircle`控制項的處理常式函式，以`PtInCircle`，會宣告為傳回型別**VARIANT_BOOL**，並宣告兩個參數類型**VTS_XPOS_PIXELS**並**VTS_YPOSPIXELS**傳遞給`PtInCircle`。
+DISP_FUNCTION宏`PtInCircle`將該方法映射到控制項的處理程式函數`PtInCircle`, 聲明傳回類型為**VARIANT_BOOL,**`PtInCircle`並聲明要傳遞給的**VTS_XPOS_PIXELS****和VTS_YPOSPIXELS**的兩個參數。
 
-最後，加入方法精靈新增虛設常式的函式`CSampleCtrl::PtInCircle`控制項的實作的底部 (。CPP) 檔案。 針對`PtInCircle`運作如先前所述，您必須進行修改，如下所示：
+最後,添加方法嚮導將存根函數`CSampleCtrl::PtInCircle`添加到控制項的實現的底部 (。CPP)檔。 要`PtInCircle`按照前面所述運行,必須修改如下:
 
 [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_4.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
-[類別檢視和物件瀏覽器圖示](/visualstudio/ide/class-view-and-object-browser-icons)
+[類別檢視及物件瀏覽器圖示](/visualstudio/ide/class-view-and-object-browser-icons)

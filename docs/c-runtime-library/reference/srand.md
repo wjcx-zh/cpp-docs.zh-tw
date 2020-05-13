@@ -1,8 +1,9 @@
 ---
 title: srand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - srand
+- _o_srand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 03e2b87a37d1b520b6e2b32c2f756fea625eb9a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3f6f97ad9a3bd0d7e4e88ad1797d369f012bbe5e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958003"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913600"
 ---
 # <a name="srand"></a>srand
 
@@ -59,6 +61,8 @@ void srand(
 ## <a name="remarks"></a>備註
 
 **Srand**函式會設定起點，以便在目前的執行緒中產生一連串的隨機整數。 若要重新初始化產生器以建立相同的結果序列，請呼叫**srand**函數，然後再次使用相同的*種子*引數。 *種子*的任何其他值會將產生器設為隨機序列中的不同起點。 **rand**會抓取所產生的亂數。 在呼叫**srand**之前呼叫**rand** ，會產生與呼叫**srand**的順序相同的序列，其*種子*會傳遞為1。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

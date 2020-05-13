@@ -35,51 +35,51 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-ms.openlocfilehash: b15a303f69ce13cf3ba3b6c1c0739acdb8a33c7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f73c72830216679f8a91d0037d48c1e1b8e400c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309471"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372858"
 ---
 # <a name="variant-parameter-type-constants"></a>變異參數類型常數
 
-本主題會列出新的常數，表示設計為搭配 Microsoft Foundation 類別庫的 OLE 控制項類別的 variant 參數類型。
+本主題列出了新的常量,指示設計用於 Microsoft 基礎類庫的 OLE 控件類的變體參數類型。
 
-以下是類別的常數清單：
+以下是類別的清單:
 
-##  <a name="_mfc_variant_data_constants"></a> 變異資料常數
+## <a name="variant-data-constants"></a><a name="_mfc_variant_data_constants"></a>變體資料常量
 
-- VTS_COLOR 的 32 位元整數，用來表示的 RGB 色彩值。
+- VTS_COLOR 用於表示 RGB 顏色值的 32 位整數。
 
-- VTS_FONT A 指標`IFontDisp`OLE 字型物件介面。
+- VTS_FONT指向 OLE`IFontDisp`字體物件介面的指標。
 
-- VTS_HANDLE Windows 控制代碼值。
+- VTS_HANDLE Windows 句柄值。
 
-- VTS_PICTURE A 指標`IPictureDisp`OLE 圖片物件的介面。
+- VTS_PICTURE指向 OLE`IPictureDisp`圖片物件的介面的指標。
 
-- VTS_OPTEXCLUSIVE 的 16 位元值用於要使用的控制項，例如選項按鈕群組中的控制項。 此類型會告訴容器，是否群組中的一個控制項，則為 TRUE 的值，所有其他項目必須是 FALSE。
+- VTS_OPTEXCLUSIVE 用於用於一組控制件(如單選按鈕)中的控制項的 16 位元值。 此類型告訴容器,如果組中的一個控件具有 TRUE 值,則所有其他控制項都必須為 FALSE。
 
-- VTS_TRISTATE 的 16 位元帶正負號可以是下列三個可能的值 （選取、 清除、 無法使用），例如，核取方塊的內容所使用的整數。
+- VTS_TRISTATE 16 位元簽名整數,用於具有三種可能值之一的屬性(選中、清除、不可用),例如複選框。
 
-- VTS_XPOS_HIMETRIC 的 32 位元不帶正負號的整數來代表沿著 x 軸的位置以 himetric 為單位。
+- VTS_XPOS_HIMETRIC 32 位元無符號整數,用於表示在 HIMETRIC 單位中沿 x 軸的位置。
 
-- VTS_YPOS_HIMETRIC 的 32 位元不帶正負號的整數來代表沿著 y 軸的位置以 himetric 為單位。
+- VTS_YPOS_HIMETRIC 32 位元無符號整數,用於表示沿 y 軸的位置(以 HIMETRIC 為單位)。
 
-- VTS_XPOS_PIXELS 的 32 位元不帶正負號的整數來代表沿著 x 軸單位為像素的位置。
+- VTS_XPOS_PIXELS 32 位元無符號整數,用於表示 x 軸沿線的位置(以圖元為單位)。
 
-- VTS_YPOS_PIXELS 的 32 位元不帶正負號的整數來表示像素為單位沿著 y 軸位置。
+- VTS_YPOS_PIXELS 32 位元無符號整數,用於以圖元表示沿 y 軸的位置。
 
-- VTS_XSIZE_PIXELS 的 32 位元不帶正負號的整數來表示像素為單位的畫面物件的寬度。
+- VTS_XSIZE_PIXELS 32 位元無符號整數,用於以圖元表示螢幕物件的寬度。
 
-- VTS_YSIZE_PIXELS 的 32 位元不帶正負號的整數來代表像素為單位的畫面物件的高度。
+- VTS_YSIZE_PIXELS 32 位元無符號整數,用於以圖元表示螢幕物件的高度。
 
-- VTS_XSIZE_HIMETRIC 的 32 位元不帶正負號的整數來代表以 himetric 為單位的畫面物件的寬度。
+- VTS_XSIZE_HIMETRIC 用於表示 HIMETRIC 單位螢幕物件的寬度的 32 位無符號整數。
 
-- VTS_YSIZE_HIMETRIC 的 32 位元不帶正負號的整數來代表以 himetric 為單位的畫面物件的高度。
+- VTS_YSIZE_HIMETRIC 32 位元無符號整數,用於表示 HIMETRIC 單位中的螢幕物件的高度。
 
     > [!NOTE]
-    >  對於所有 variant 類型，除了 VTS_FONT 和 VTS_PICTURE，提供變異資料常數的指標，定義其他變數的常數。 這些常數會命名為使用 VTS_P`constantname`慣例。 比方說，VTS_PCOLOR 是 VTS_COLOR 常數的指標。
+    >  已為所有變數類型定義了其他變體常量,但提供指向變體數據常量的VTS_FONT和VTS_PICTURE除外。 這些常量使用VTS_P`constantname`約定命名。 例如,VTS_PCOLOR是指向VTS_COLOR常量的指標。
 
 ## <a name="requirements"></a>需求
 

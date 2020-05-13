@@ -1,9 +1,11 @@
 ---
 title: _chmod、_wchmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chmod
 - _wchmod
+- _o__chmod
+- _o__wchmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939197"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917000"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod、_wchmod
 
@@ -52,7 +55,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>參數
 
-*filename*<br/>
+*名稱*<br/>
 現有檔案的名稱。
 
 *pmode*<br/>
@@ -69,14 +72,16 @@ int _wchmod( const wchar_t *filename, int pmode );
 | *pmode* | 意義 |
 |-|-|
 | **\_S\_IREAD** | 只允許讀取。 |
-| **\_S\_IWRITE** | 允許寫入 (實際上允許讀取和寫入)。 |
-| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | 允許讀取和寫入。 |
+| **\_S\_IWRITE** | 允許寫入。 (實際上允許讀取和寫入)。 |
+| **\_S\_IREAD** &#124; ** \_s\_IWRITE** | 允許讀取和寫入。 |
 
-當指定兩個常數時，會使用位 or 運算子（ **\|** ）聯結。 若沒有指定寫入權限，則檔案為唯讀。 請注意，所有檔案皆為可讀取；不可能授與僅限寫入權限。 因此， **_S_IWRITE**和 **_S_IREAD** \| **_S_IWRITE**模式是相等的。
+當指定兩個常數時，會使用位 or 運算子（**\|**）聯結。 若沒有指定寫入權限，則檔案為唯讀。 請注意，所有檔案皆為可讀取；不可能授與僅限寫入權限。 因此， **_S_IWRITE**和 **_S_IREAD** \| **_S_IWRITE**的模式是相等的。
 
-**_wchmod**是寬字元版本的 **_chmod**; **_wchmod**的*filename*引數是寬字元字串。 相反地， **_wchmod**和 **_chmod**的行為相同。
+**_wchmod**是寬字元版本的 **_chmod**;**_wchmod**的*filename*引數是寬字元字串。 相反地， **_wchmod**和 **_chmod**的行為相同。
 
 這個函式會驗證它的參數。 如果*pmode*不是其中一個資訊清單常數的組合，或包含一組替代的常數，則函式會直接忽略它們。 如果*filename*是**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函式會傳回-1。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -91,7 +96,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 |**_chmod**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 |**_wchmod**|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

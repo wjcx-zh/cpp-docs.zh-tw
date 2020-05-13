@@ -1,5 +1,5 @@
 ---
-title: CAxDialogImpl 類別
+title: CAx 對話類
 ms.date: 11/04/2016
 f1_keywords:
 - CAxDialogImpl
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d8e60a817d197f67c14318a7d50ddf796e570142
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318733"
 ---
-# <a name="caxdialogimpl-class"></a>CAxDialogImpl 類別
+# <a name="caxdialogimpl-class"></a>CAx 對話類
 
-這個類別會執行裝載 ActiveX 控制項的對話方塊（強制回應或非強制回應）。
+此類實現承載 ActiveX 控件的對話框(模式或無模式)。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -41,10 +41,10 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `CAxDialogImpl`的類別。
+您的類,派生自`CAxDialogImpl`。
 
 *TBase*<br/>
-`CDialogImplBaseT`的基底視窗類別。
+的基本視窗類別`CDialogImplBaseT`。
 
 ## <a name="members"></a>成員
 
@@ -52,40 +52,40 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 
 |名稱|描述|
 |----------|-----------------|
-|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|呼叫這個方法，以建議或 unadvise 物件接收對應事件對應中的所有專案。|
-|[CAxDialogImpl：： Create](#create)|呼叫這個方法來建立非強制回應對話方塊。|
-|[CAxDialogImpl：:D estroyWindow](#destroywindow)|呼叫這個方法以終結非強制回應對話方塊。|
-|[CAxDialogImpl：:D oModal](#domodal)|呼叫這個方法來建立強制回應對話方塊。|
-|[CAxDialogImpl：： EndDialog](#enddialog)|呼叫這個方法以終結強制回應對話方塊。|
-|[CAxDialogImpl::GetDialogProc](#getdialogproc)|呼叫這個方法，以取得 `DialogProc` 回呼函數的指標。|
-|[CAxDialogImpl::GetIDD](#getidd)|呼叫此方法以取得對話方塊範本資源識別碼|
-|[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|呼叫這個方法來判斷訊息是否適用于此對話方塊，如果是，則處理訊息。|
+|[CAx對話::建議SinkMap](#advisesinkmap)|呼叫此方法可建議或取消通知物件接收器映射事件映射中的所有項目。|
+|[CAx 對話:建立](#create)|呼叫此方法以建立無模式對話方塊。|
+|[CAx對話::D](#destroywindow)|調用此方法以銷毀無模式對話方塊。|
+|[CAx對話::Do模態](#domodal)|調用此方法以創建模態對話方塊。|
+|[CAx對話::結束對話](#enddialog)|調用此方法以銷毀模式對話方塊。|
+|[CAx對話::取得對話Proc](#getdialogproc)|調用此方法以獲取指向回調函數的`DialogProc`指標。|
+|[CAx對話::取得IDD](#getidd)|呼叫此方法取得對話框樣本資源識別碼|
+|[CAx對話::對話訊息](#isdialogmessage)|呼叫此方法以確定訊息是否用於此對話方塊,如果是,則處理該消息。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAxDialogImpl：： m_bModal](#m_bmodal)|只存在於 debug 組建中的變數，如果對話方塊為強制回應，則設定為 true。|
+|[CAx對話::m_bModal](#m_bmodal)|僅在調試生成中存在的變數,如果對話框是模態的,則設置為 true。|
 
 ## <a name="remarks"></a>備註
 
-`CAxDialogImpl` 可讓您建立模式或非強制回應對話方塊。 `CAxDialogImpl` 提供對話方塊程式，它會使用預設的訊息對應，將訊息導向至適當的處理常式。
+`CAxDialogImpl`允許您創建模態或無模式對話方塊。 `CAxDialogImpl`提供對話框過程,該過程使用預設消息映射將消息定向到相應的處理程式。
 
-`CAxDialogImpl` 衍生自 `CDialogImplBaseT`，而後者又衍生自*TBase* （根據預設，`CWindow`）和 `CMessageMap`。
+`CAxDialogImpl`衍生`CDialogImplBaseT`, 它又派生自*TBase* (預設的`CWindow`狀況`CMessageMap`) 與 。
 
-您的類別必須定義指定對話方塊範本資源識別碼的 IDD 成員。 例如，使用 [**加入類別**] 對話方塊新增 ATL 對話方塊物件時，會自動在您的類別中新增下列程式程式碼：
+類別必須定義指定對話方塊樣本資源 ID 的 IDD 成員。 例如,使用 **「新增類」** 對話框新增 ATL 對話框會自動將以下行新增到類:
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/caxdialogimpl-class_1.h)]
 
-其中 `MyDialog` 是在 ATL 對話方塊嚮導中輸入的**簡短名稱**。
+ATL 對話框精靈中輸入`MyDialog`**的短名稱**的位置。
 
-如需詳細資訊，請參閱[執行對話方塊](../../atl/implementing-a-dialog-box.md)。
+有關詳細資訊[,請參閱實現對話框](../../atl/implementing-a-dialog-box.md)。
 
-請注意，使用 `CAxDialogImpl` 建立的強制回應對話方塊上的 ActiveX 控制項不會支援快速鍵。 若要在使用 `CAxDialogImpl`建立的對話方塊上支援快速鍵，請建立非強制回應對話方塊，並使用您自己的訊息迴圈，在從佇列取得訊息以處理快速鍵之後，使用[CAxDialogImpl：： IsDialogMessage](#isdialogmessage) 。
+請注意,使用模式`CAxDialogImpl`對話方塊創建的 ActiveX 控制項將不支援快速鍵。 要支援使用`CAxDialogImpl`創建的對話方塊上的快捷鍵,請建立一個無模式對話框,並使用您自己的消息迴圈,在從佇列中收到消息以處理快捷鍵後使用[CAxDialogImpl:isDialogMessage。](#isdialogmessage)
 
-如需 `CAxDialogImpl`的詳細資訊，請參閱[ATL 控制項](../../atl/atl-control-containment-faq.md)內含專案常見問題。
+有關的詳細資訊`CAxDialogImpl`,請參閱[ATL 控制控制控制常見問題 解答](../../atl/atl-control-containment-faq.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CMessageMap](../../atl/reference/cmessagemap-class.md)
 
@@ -99,11 +99,11 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h。h
+**標題:** atlwin.h
 
-##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap
+## <a name="caxdialogimpladvisesinkmap"></a><a name="advisesinkmap"></a>CAx對話::建議SinkMap
 
-呼叫這個方法，以建議或 unadvise 物件接收對應事件對應中的所有專案。
+呼叫此方法可建議或取消通知物件接收器映射事件映射中的所有項目。
 
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
@@ -111,16 +111,16 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>參數
 
-*bAdvise*<br/>
-如果要建議所有接收專案，請設定為 true;如果要 unadvised 所有接收專案，則為 false。
+*b 建議*<br/>
+如果建議所有接收器條目,則設置為 true;如果所有接收器條目都是未通知的,則為 false。
 
 ### <a name="return-value"></a>傳回值
 
-會在成功時傳回 S_OK，或在失敗時傳回錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
-##  <a name="create"></a>CAxDialogImpl：： Create
+## <a name="caxdialogimplcreate"></a><a name="create"></a>CAx 對話:建立
 
-呼叫這個方法來建立非強制回應對話方塊。
+呼叫此方法以建立無模式對話方塊。
 
 ```
 HWND Create(HWND hWndParent, LPARAM dwInitParam = NULL);
@@ -129,28 +129,28 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*<br/>
-在主控視窗的控制碼。
+*hWnd 父母*<br/>
+[在]擁有者視窗的句柄。
 
-*dwInitParam*<br/>
-在在 WM_INITDIALOG 訊息的*lParam*參數中，指定要傳遞至對話方塊的值。
+*德維尼帕拉姆*<br/>
+[在]指定要傳遞給WM_INITDIALOG訊息的*lParam*參數中的對話框的值。
 
-*RECT &*<br/>
-不使用這個參數。 這個參數是由 `CComControl`傳入。
+*reCT&*<br/>
+不使用這個參數。 此參數透過傳入`CComControl`。
 
 ### <a name="return-value"></a>傳回值
 
-新建立之對話方塊的控制碼。
+新創建的對話框的句柄。
 
 ### <a name="remarks"></a>備註
 
-這個對話方塊會自動附加至 `CAxDialogImpl` 物件。 若要建立強制回應對話方塊，請呼叫[DoModal](#domodal)。
+此對話框會自動附加到`CAxDialogImpl`物件。 要建立模態對話框,請呼叫[DoModal](#domodal)。
 
-只會提供第二個覆寫，讓對話方塊可與[CComControl](../../atl/reference/ccomcontrol-class.md)搭配使用。
+第二個重寫僅提供,因此對話方塊可以與[CComControl](../../atl/reference/ccomcontrol-class.md)一起使用。
 
-##  <a name="destroywindow"></a>CAxDialogImpl：:D estroyWindow
+## <a name="caxdialogimpldestroywindow"></a><a name="destroywindow"></a>CAx對話::D
 
-呼叫這個方法以終結非強制回應對話方塊。
+調用此方法以銷毀無模式對話方塊。
 
 ```
 BOOL DestroyWindow();
@@ -158,15 +158,15 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功終結視窗，則為 TRUE;否則為 FALSE。
+如果視窗已成功銷毀,則為 TRUE;否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-請勿呼叫 `DestroyWindow` 來摧毀強制回應對話方塊。 請改為呼叫[EndDialog](#enddialog) 。
+不要調用`DestroyWindow`以銷毀模式對話方塊。 請改為呼叫[結束對話](#enddialog)。
 
-##  <a name="domodal"></a>CAxDialogImpl：:D oModal
+## <a name="caxdialogimpldomodal"></a><a name="domodal"></a>CAx對話::Do模態
 
-呼叫這個方法來建立強制回應對話方塊。
+調用此方法以創建模態對話方塊。
 
 ```
 INT_PTR DoModal(
@@ -176,25 +176,25 @@ INT_PTR DoModal(
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*<br/>
-在主控視窗的控制碼。 預設值是[GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32 函數的傳回值。
+*hWnd 父母*<br/>
+[在]擁有者視窗的句柄。 默認值是[GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32 函數的返回值。
 
-*dwInitParam*<br/>
-在在 WM_INITDIALOG 訊息的*lParam*參數中，指定要傳遞至對話方塊的值。
+*德維尼帕拉姆*<br/>
+[在]指定要傳遞給WM_INITDIALOG訊息的*lParam*參數中的對話框的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為[EndDialog](#enddialog)呼叫中所指定的*nRetCode*參數值。否則為-1。
+如果成功,則調用[EndDialog](#enddialog)中指定的*nRetCode*參數的值。否則,-1。
 
 ### <a name="remarks"></a>備註
 
-這個對話方塊會自動附加至 `CAxDialogImpl` 物件。
+此對話框會自動附加到`CAxDialogImpl`物件。
 
-若要建立非強制回應對話方塊，請呼叫[create](#create)。
+要建立無模式對話框,請呼叫["創建](#create)"。
 
-##  <a name="enddialog"></a>CAxDialogImpl：： EndDialog
+## <a name="caxdialogimplenddialog"></a><a name="enddialog"></a>CAx對話::結束對話
 
-呼叫這個方法以終結強制回應對話方塊。
+調用此方法以銷毀模式對話方塊。
 
 ```
 BOOL EndDialog(int nRetCode);
@@ -203,22 +203,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>參數
 
 *nRetCode*<br/>
-在要由[DoModal](#domodal)傳回的值。
+[在][DoModal](#domodal)要返回的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果對話方塊已終結，則為 TRUE;否則為 FALSE。
+如果對話框已銷毀,則為 TRUE;如果對話框已銷毀,則為 TRUE。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-`EndDialog` 必須透過對話方塊程式來呼叫。 終結對話方塊之後，Windows 會使用*nRetCode*的值做為建立對話方塊之 `DoModal`的傳回值。
+`EndDialog`必須通過對話框過程調用。 銷毀對話框後,Windows 使用*nRetCode*的值作為`DoModal`創建對話框的返回值。
 
 > [!NOTE]
->  請勿呼叫 `EndDialog` 來摧毀非強制回應對話方塊。 請改為呼叫[DestroyWindow](#destroywindow) 。
+> 不要調用`EndDialog`以銷毀無模式對話方塊。 請改為呼叫[的視窗](#destroywindow)。
 
-##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc
+## <a name="caxdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CAx對話::取得對話Proc
 
-呼叫這個方法，以取得 `DialogProc` 回呼函數的指標。
+調用此方法以獲取指向回調函數的`DialogProc`指標。
 
 ```
 virtual DLGPROC GetDialogProc();
@@ -226,15 +226,15 @@ virtual DLGPROC GetDialogProc();
 
 ### <a name="return-value"></a>傳回值
 
-傳回 `DialogProc` 回呼函數的指標。
+返回指向回調函數的`DialogProc`指標。
 
 ### <a name="remarks"></a>備註
 
-`DialogProc` 函數是應用程式定義的回呼函式。
+該`DialogProc`函數是應用程式定義的回調函數。
 
-##  <a name="getidd"></a>CAxDialogImpl::GetIDD
+## <a name="caxdialogimplgetidd"></a><a name="getidd"></a>CAx對話::取得IDD
 
-呼叫此方法以取得對話方塊範本資源識別碼。
+呼叫此方法獲取對話方塊樣本資源 ID。
 
 ```
 int GetIDD();
@@ -242,11 +242,11 @@ int GetIDD();
 
 ### <a name="return-value"></a>傳回值
 
-傳回對話方塊範本資源識別碼。
+返回對話框範本資源 ID。
 
-##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage
+## <a name="caxdialogimplisdialogmessage"></a><a name="isdialogmessage"></a>CAx對話::對話訊息
 
-呼叫這個方法來判斷訊息是否適用于此對話方塊，如果是，則處理訊息。
+呼叫此方法以確定訊息是否用於此對話方塊,如果是,則處理該消息。
 
 ```
 BOOL IsDialogMessage(LPMSG pMsg);
@@ -255,19 +255,19 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-包含要檢查之訊息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構的指標。
+指向包含要檢查的消息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果訊息已處理，則傳回 TRUE，否則傳回 FALSE。
+如果消息已處理,則返回 TRUE,否則返回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法是要從訊息迴圈內呼叫。
+此方法旨在從消息循環中調用。
 
-##  <a name="m_bmodal"></a>CAxDialogImpl：： m_bModal
+## <a name="caxdialogimplm_bmodal"></a><a name="m_bmodal"></a>CAx對話::m_bModal
 
-只存在於 debug 組建中的變數，如果對話方塊為強制回應，則設定為 true。
+僅在調試生成中存在的變數,如果對話框是模態的,則設置為 true。
 
 ```
 bool m_bModal;
@@ -275,5 +275,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>另請參閱
 
-[CDialogImpl 類別](../../atl/reference/cdialogimpl-class.md)<br/>
-[類別總覽](../../atl/atl-class-overview.md)
+[CDialogImplclass](../../atl/reference/cdialogimpl-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)

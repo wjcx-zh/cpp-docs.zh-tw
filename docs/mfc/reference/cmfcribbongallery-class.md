@@ -78,21 +78,21 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: 5a723af1e32a7a2e78bfb099680dce3e9b710838
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: f1ef68cba0012ad5b5d0eb6d3322acc6a1c6555c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375157"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
 
 實作 Office 2007 樣式的功能區組件庫。
-如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class CMFCRibbonGallery : public CMFCRibbonButton
 ```
 
@@ -102,79 +102,79 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|建構並初始化 `CMFCRibbonGallery` 物件。|
+|[CMFC功能畫廊:CMFC剪綵畫廊](#cmfcribbongallery)|建構並初始化 `CMFCRibbonGallery` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonGallery::AddGroup](#addgroup)|將新群組新增至資源庫。|
-|[CMFCRibbonGallery::AddSubItem](#addsubitem)|將新的功能表項目加入至下拉式功能表。|
-|[CMFCRibbonGallery::Clear](#clear)|清除資源庫的內容。|
-|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|啟用或停用功能表面板的調整大小。|
-|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|啟用或停用快顯功能表左側的側條。|
-|[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(覆寫[CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)。)|
-|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(覆寫[CMFCRibbonBaseElement:: GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown)。)|
-|[CMFCRibbonGallery::GetGroupName](#getgroupname)|傳回位於指定之索引處的組名。|
-|[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||
-|[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|傳回功能區圖庫的資料列中的專案數。|
-|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|傳回與圖庫中的專案相關聯的工具提示文字。|
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|傳回資源庫中使用者選取的最後一個專案的索引。|
-|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|傳回目前圖庫的命令識別碼。|
-|[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(覆寫[CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize)。)|
-|[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||
-|[CMFCRibbonGallery::HasMenu](#hasmenu)|(覆寫[CMFCRibbonButton:: HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu)。)|
-|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|指定圖庫是否包含在圖庫按鈕中。|
-|[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|指定是否要啟用或停用功能表調整大小。|
-|[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||
-|[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|指定側條是否已啟用或停用。|
-|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(覆寫 `CMFCRibbonButton::OnAfterChangeRect`。)|
-|[CMFCRibbonGallery::OnDraw](#ondraw)|(覆寫[CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw)。)|
-|[CMFCRibbonGallery::OnEnable](#onenable)|(覆寫 `CMFCRibbonBaseElement::OnEnable`。)|
-|[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(覆寫[CMFCRibbonBaseElement:: OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged)。)|
-|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|重新繪製圖庫。|
-|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|將工具提示從資源庫中的所有專案移除。|
-|[CMFCRibbonGallery::SelectItem](#selectitem)||
-|[CMFCRibbonGallery::SetACCData](#setaccdata)|(覆寫[CMFCRibbonButton:: SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。)|
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|指定是否要將功能區圖庫顯示為下拉式按鈕, 或直接在功能區上顯示為調色板。|
-|[CMFCRibbonGallery::SetGroupName](#setgroupname)|設定群組的名稱。|
-|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|定義資源庫中每個資料列的專案數。|
-|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|設定資源庫中專案的工具提示文字。|
-|[CMFCRibbonGallery::SetPalette](#setpalette)|將色板附加至功能區圖庫。|
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|定義在選取圖庫專案時, 在 WM_COMMAND 訊息中傳送的命令識別碼。|
+|[CMFC功能庫:新增群組](#addgroup)|向庫添加新組。|
+|[CMFC 函式庫::新增子項](#addsubitem)|將新的功能表項添加到下拉選單。|
+|[CMFC 功能放大縮小字型功能 放大縮小字型功能](#clear)|清除庫的內容。|
+|[CMFC 函式庫::啟用選單重新大小](#enablemenuresize)|啟用或禁用調整功能表面板的大小。|
+|[CMFC功能庫:啟用選單邊欄](#enablemenusidebar)|啟用或禁用彈出功能表左側的側欄。|
+|[CMFC 函式庫:取得壓縮大小](#getcompactsize)|( 覆寫[CMFC 功能按鈕:取得壓縮大小](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[CMFC功能庫:取得向下](#getdroppeddown)|(覆寫[CMFC 功能基礎元素::取得向下](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown). )|
+|[CMFC 函式庫:取得群組名稱](#getgroupname)|返回位於指定索引的組的名稱。|
+|[CMFC 功能庫:獲取集團偏移](#getgroupoffset)||
+|[CMFC功能庫:取得圖示](#geticonsinrow)|返回功能區庫行中的項目數。|
+|[CMFC 函式庫::取得專案工具提示](#getitemtooltip)|傳回與庫中項目關聯的工具提示文本。|
+|[CMFC 函式庫:取得最後選擇項目](#getlastselecteditem)|返回用戶選擇的庫中最後一個專案的索引。|
+|[CMFC功能庫:取得PaletteID](#getpaletteid)|返回目前庫的命令 ID。|
+|[CMFC 函式庫:取得一般大小](#getregularsize)|(覆寫[CMFC 功能按鈕:取得一般大小](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[CMFC功能庫:取得選定專案](#getselecteditem)||
+|[CMFC功能庫:哈斯梅因](#hasmenu)|(覆蓋[CMFC 功能按鈕::哈斯梅因](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|
+|[CMFC功能庫::正按鈕模式](#isbuttonmode)|指定庫是否包含在庫按鈕中。|
+|[CMFC 函式庫:已啟用「已啟用」選單](#ismenuresizeenabled)|指定是啟用還是禁用功能表調整大小。|
+|[CMFC 功能庫::正選垂直](#ismenuresizevertical)||
+|[CMFC功能庫:isMenusideBar](#ismenusidebar)|指定側欄是啟用還是禁用。|
+|[CMFC 函式庫:在轉換後](#onafterchangerect)|(覆寫 `CMFCRibbonButton::OnAfterChangeRect`。)|
+|[CMFC功能畫廊:OnDraw](#ondraw)|(覆寫[CMFC 功能按鈕:onDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[CMFC功能庫:啟用](#onenable)|(覆寫 `CMFCRibbonBaseElement::OnEnable`。)|
+|[CMFC 函式庫::開啟](#onrtlchanged)|(覆寫[CMFC 功能基礎元素:OnRTL 已變更](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
+|[CMFC功能庫:重繪圖示](#redrawicons)|重繪圖庫。|
+|[CMFC 函式庫::刪除專案工具提示](#removeitemtooltips)|從庫中的所有項目中刪除工具提示。|
+|[CMFC 函式庫:選擇項目](#selectitem)||
+|[CMFC功能庫::設定ACC數據](#setaccdata)|( 覆寫[CMFC 功能按鈕:設定ACC資料](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|[CMFC 函式庫::設定按鈕模式](#setbuttonmode)|指定是將功能區庫顯示為下拉按鈕還是直接在功能區上作為調色板顯示。|
+|[CMFC 函式庫::組名](#setgroupname)|設置組的名稱。|
+|[CMFC功能庫:setIconsinrow](#seticonsinrow)|定義庫中每行的項目數。|
+|[CMFC 函式庫::設定專案工具提示](#setitemtooltip)|設定庫中專案的工具提示文本。|
+|[CMFC功能庫::設定調色板](#setpalette)|將調色板附加到功能區庫。|
+|[CMFC功能庫::設定調色板ID](#setpaletteid)|定義在選擇庫項時在WM_COMMAND消息中發送的命令 ID。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|繪製圖庫圖示時由架構呼叫。|
+|[CMFC功能庫:在DrawPaletteIcon](#ondrawpaletteicon)|繪製庫圖示時由框架調用。|
 
 ## <a name="remarks"></a>備註
 
-[資源庫] 按鈕的行為就像一般功能表按鈕一樣, 不同的是, 它會在使用者開啟圖庫時顯示資源庫。 當您選取資源庫中的專案時, 架構會連同按鈕的命令識別碼一起傳送 WM_COMMAND 訊息。 當您處理訊息時, 您應該呼叫[CMFCRibbonGallery:: GetLastSelectedItem](#getlastselecteditem)來判斷哪個專案已從資源庫中選取。
+庫按鈕的功能與常規功能表按鈕類似,只不過當用戶打開庫時,它將顯示它。 當您在庫中選擇專案時,框架會將WM_COMMAND消息與按鈕的命令 ID 一起發送。 處理郵件時,應調用[CMFCRibbonGallery:getLast 選擇專案](#getlastselecteditem),以確定從庫中選擇了哪個專案。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何在`CMFCRibbonGallery`類別中使用各種方法來`CMFCRibbonGallery`設定物件。 此範例說明如何指定資源庫中每個資料列的專案數、啟用功能表面板的調整大小、啟用快顯功能表左邊的側條, 以及直接在功能區列上將功能區圖庫顯示為調色板。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
+下面的範例展示如何在`CMFCRibbonGallery`類中使用各種方法來配置`CMFCRibbonGallery`物件。 該示例演示如何在庫中指定每行項目數、啟用功能表面板大小、啟用彈出式功能表左側的側欄以及直接在功能區列上作為調色板顯示功能區庫。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp; [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
+•&nbsp;[CMFC 功能基礎元素](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CMFC 功能按鈕](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CMFC剪綵畫廊](../../mfc/reference/cmfcribbongallery-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxribbonpalettegallery.h。h
+**標題:** afxRibbonPaletteGallery.h
 
-##  <a name="addgroup"></a>CMFCRibbonGallery:: AddGroup
+## <a name="cmfcribbongalleryaddgroup"></a><a name="addgroup"></a>CMFC功能庫:新增群組
 
-將新群組新增至資源庫。
+向庫添加新組。
 
-```
+```cpp
 void AddGroup(
     LPCTSTR lpszGroupName,
     UINT uiImagesPaletteResID,
@@ -191,30 +191,30 @@ void AddGroup(
 
 ### <a name="parameters"></a>參數
 
-*lpszGroupName*<br/>
-在指定群組的名稱。
+*lpszGroup 名稱*<br/>
+[在]指定群組的名稱。
 
 *uiImagesPaletteResID*<br/>
-在指定包含群組影像之影像清單的資源識別碼。
+[在]指定包含組圖像的影像清單的資源識別碼。
 
-*cxPaletteImage*<br/>
-在指定影像的寬度 (以圖元為單位)。
+*cxPalette影像*<br/>
+[在]指定圖像的寬度(以像素為單位)。
 
-*imagesGroup*<br/>
-在包含群組影像之影像清單的參考。
+*圖片組*<br/>
+[在]對包含組圖像的圖像清單的引用。
 
-*nIconsNum*<br/>
-在指定群組中的圖示數目。 此參數只應針對自訂 (主控描繪) 群組指定。
+*N 圖示Num*<br/>
+[在]指定群組中的圖示數。 此參數應僅為自定義(繪製的所有者)組指定。
 
 ### <a name="remarks"></a>備註
 
-您可以藉由呼叫這個方法, 將功能區資源庫中的專案分割成多個群組。 每個群組都可以有標題。
+通過調用此方法,可以將功能區庫中的項目劃分為多個組。 每個組可以有一個標題。
 
-##  <a name="addsubitem"></a>CMFCRibbonGallery:: AddSubItem
+## <a name="cmfcribbongalleryaddsubitem"></a><a name="addsubitem"></a>CMFC 函式庫::新增子項
 
-將新的功能表項目加入至下拉式功能表。
+將新的功能表項添加到下拉選單。
 
-```
+```cpp
 void AddSubItem(
     CMFCRibbonBaseElement* pSubItem,
     int nIndex=-1,
@@ -223,41 +223,41 @@ void AddSubItem(
 
 ### <a name="parameters"></a>參數
 
-*pSubItem*<br/>
-在要加入至功能表之專案的指標。
+*p 子項目*<br/>
+[在]要添加到菜單的項的指標。
 
 *nIndex*<br/>
-在指定要插入專案的位置之以零為基底的索引。
+[在]指定要插入專案的位置的零基索引。
 
-*bOnTop*<br/>
-在TRUE 表示要將專案插入功能區圖庫之前;否則為 FALSE。
+*蓬托普*<br/>
+[在]TRUE 指定應在功能區庫之前插入專案;如果為 TRUE,請指定專案應插入到功能區庫之前。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-您可以藉由呼叫這個方法, 將快顯視窗庫與快顯功能表專案結合。 功能表項目可以放在圖庫之前或之後。
+您可以通過調用此方法將彈出式圖庫與彈出式功能表項組合。 功能表項可以放置在庫之前或之後。
 
-若要在資源庫之前插入專案, 請將*bOnTop*設定為 TRUE。 將 [ *bOnTop* ] 設定為 [FALSE], 以將專案插入資源庫底下。
+若要在庫之前插入專案,請將*bonTop*設定為 TRUE。 將 *"bonTop"* 設定為 FALSE 以將專案插入庫下方。
 
 > [!NOTE]
->  參數*nIndex*會在資源庫頂端和圖庫底部指定插入索引。 例如, 如果您需要在資源庫的一個位置插入一個專案, 請將*nIndex*設定為 1, 並將*BONTOP*設為 TRUE。 同樣地, 如果您需要在資源庫底下的一個位置插入專案, 請將*nIndex*設定為 1, 並將*BONTOP*設為 FALSE。
+> 參數*nIndex*在庫頂部和庫底部指定插入索引。 例如,如果需要在庫之前插入專案 1 個位置,請將*nIndex*設置為*1,將 bonTop*設置為 TRUE。 同樣,如果需要在庫下方插入專案 1 個位置,請將*nIndex*設置為*1,將 bonTop*設置為 FALSE。
 
-##  <a name="clear"></a>CMFCRibbonGallery:: Clear
+## <a name="cmfcribbongalleryclear"></a><a name="clear"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
-清除資源庫的內容。
+清除庫的內容。
 
-```
+```cpp
 virtual void Clear();
 ```
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法可從功能區圖庫移除所有內容。 您必須先完成這項作業, 才能將新的功能區資源庫或群組集合附加至功能區資源庫。
+呼叫此方法從功能區庫中刪除所有內容。 在將新的功能區庫或組集附加到功能區庫之前,必須完成此操作。
 
-##  <a name="cmfcribbongallery"></a>CMFCRibbonGallery:: CMFCRibbonGallery
+## <a name="cmfcribbongallerycmfcribbongallery"></a><a name="cmfcribbongallery"></a>CMFC功能畫廊:CMFC剪綵畫廊
 
-建立[CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)物件的結構並加以初始化。
+構造並初始化[CMFC 功能區庫](../../mfc/reference/cmfcribbongallery-class.md)物件。
 
-```
+```cpp
 CMFCRibbonGallery (
     UINT nID,
     LPCTSTR lpszText,
@@ -286,42 +286,42 @@ CMFCRibbonGallery (
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-指定使用者按一下按鈕時要執行之命令的命令識別碼。
+指定在使用者按下按鈕時要執行的命令 ID。
 
 *lpszText*<br/>
 指定要顯示在按鈕上的文字。
 
-*nSmallImageIndex*<br/>
-要顯示在按鈕上的小型影像之以零為起始的索引。
+*n 小圖像索引*<br/>
+要顯示在按鈕上的小圖像的零基索引。
 
 *nLargeImageIndex*<br/>
-要顯示在按鈕上的大型影像之以零為起始的索引。
+要顯示在按鈕上的大圖像的零基索引。
 
-*imagesPalette*<br/>
-[CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md)物件的參考, 其中包含要顯示在資源庫中的影像。
+*影像調色盤*<br/>
+對包含要顯示在庫中的圖像的[CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md)物件的引用。
 
 *uiImagesPaletteResID*<br/>
-要顯示在圖庫上之影像清單的資源識別碼。
+要在庫中顯示的影像清單的資源識別碼。
 
-*cxPaletteImage*<br/>
-指定圖庫上影像的寬度 (以圖元為單位)。
+*cxPalette影像*<br/>
+指定庫中圖像的寬度(以像素為單位)。
 
-*sizeIcon*<br/>
-指定圖庫影像的大小 (以圖元為單位)。
+*大小圖示*<br/>
+指定庫圖像的大小(以像素為單位)。
 
-*nIconsNum*<br/>
-指定圖庫中的圖示數目。
+*N 圖示Num*<br/>
+指定庫中的圖示數。
 
-*bDefaultButtonStyle*<br/>
-指定是否要使用預設或主控描繪的按鈕樣式。
+*b預設按鈕樣式*<br/>
+指定是使用預設按鈕樣式還是擁有者繪製的按鈕樣式。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="enablemenuresize"></a>CMFCRibbonGallery:: EnableMenuResize
+## <a name="cmfcribbongalleryenablemenuresize"></a><a name="enablemenuresize"></a>CMFC 函式庫::啟用選單重新大小
 
-啟用或停用功能表面板的調整大小。
+啟用或禁用調整功能表面板的大小。
 
-```
+```cpp
 void EnableMenuResize(
     BOOL bEnable = TRUE,
     BOOL bVertcalOnly = FALSE);
@@ -329,50 +329,50 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-在TRUE 表示啟用調整功能表的大小;否則為 FALSE。
+*b 啟用*<br/>
+[在]TRUE 以啟用調整功能表大小;否則,FALSE。
 
-*bVertcalOnly*<br/>
-在TRUE 表示指定圖庫只能垂直調整大小;FALSE, 指定資源庫可以垂直和水準調整大小。
+*bVertcal*<br/>
+[在]TRUE 指定庫只能垂直調整大小;FALSE 指定庫可以垂直和水平調整大小。
 
 ### <a name="remarks"></a>備註
 
-使用此方法來啟用或停用調整功能區圖庫的大小。 啟用調整大小時, 功能區資源庫會顯示使用者可用於調整其大小的移駐夾。
+使用此方法啟用或禁用調整功能區庫大小。 啟用調整大小時,功能區庫將顯示一個抓手,用戶可以用它來調整其大小。
 
-##  <a name="enablemenusidebar"></a>CMFCRibbonGallery:: EnableMenuSideBar
+## <a name="cmfcribbongalleryenablemenusidebar"></a><a name="enablemenusidebar"></a>CMFC功能庫:啟用選單邊欄
 
-啟用或停用快顯功能表左側的側條。
+啟用或禁用彈出功能表左側的側欄。
 
-```
+```cpp
 void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-在TRUE 表示要啟用側條;否則為 FALSE。
+*b 啟用*<br/>
+[在]TRUE 以指定已啟用側欄;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法, 以啟用或停用功能表左側的 Office XP 樣式側條。
+調用此方法以啟用或禁用功能表左側的 Office XP 樣式側欄。
 
-##  <a name="getcompactsize"></a>CMFCRibbonGallery:: GetCompactSize
+## <a name="cmfcribbongallerygetcompactsize"></a><a name="getcompactsize"></a>CMFC 函式庫:取得壓縮大小
 
-```
+```cpp
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown
+## <a name="cmfcribbongallerygetdroppeddown"></a><a name="getdroppeddown"></a>CMFC功能庫:取得向下
 
-```
+```cpp
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```
 
@@ -380,28 +380,28 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getgroupname"></a>CMFCRibbonGallery:: GetGroupName
+## <a name="cmfcribbongallerygetgroupname"></a><a name="getgroupname"></a>CMFC 函式庫:取得群組名稱
 
-傳回位於指定之索引處的組名。
+返回位於指定索引的組的名稱。
 
-```
+```cpp
 LPCTSTR GetGroupName(int nGroupIndex) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*nGroupIndex*<br/>
-在針對您要取得其名稱的群組, 指定以零為基底的索引。
+*N組索引*<br/>
+[在]指定要檢索其名稱的組的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-位於指定索引處之群組的名稱。 傳遞不正確索引將會導致失敗的判斷提示。
+位於指定索引的組的名稱。 傳遞無效的索引將導致斷言失敗。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getgroupoffset"></a>CMFCRibbonGallery:: GetGroupOffset
+## <a name="cmfcribbongallerygetgroupoffset"></a><a name="getgroupoffset"></a>CMFC 功能庫:獲取集團偏移
 
-```
+```cpp
 virtual int GetGroupOffset() const;
 ```
 
@@ -409,89 +409,89 @@ virtual int GetGroupOffset() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="geticonsinrow"></a>CMFCRibbonGallery:: GetIconsInRow
+## <a name="cmfcribbongallerygeticonsinrow"></a><a name="geticonsinrow"></a>CMFC功能庫:取得圖示
 
-傳回功能區圖庫的資料列中的專案數。
+返回功能區庫行中的項目數。
 
-```
+```cpp
 int GetIconsInRow() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-資料列中的專案數。
+行中的項數。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getitemtooltip"></a>  CMFCRibbonGallery::GetItemToolTip
+## <a name="cmfcribbongallerygetitemtooltip"></a><a name="getitemtooltip"></a>CMFC 函式庫::取得專案工具提示
 
-傳回與圖庫中的專案相關聯的工具提示文字。
+傳回與庫中項目關聯的工具提示文本。
 
-```
+```cpp
 LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*nItemIndex*<br/>
-在指定要為其取得工具提示文字的專案之以零為起始的索引。
+*n 專案索引*<br/>
+[在]指定要為其檢索工具提示文本的項的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-指派給功能區圖庫中專案的工具提示字串指標。 如果未將任何工具提示指派給該專案, 則它可以是 Null。
+指向分配給功能區庫中專案的工具提示字串的指標。 如果未向該專案分配工具提示,則它可以為 NULL。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getlastselecteditem"></a>CMFCRibbonGallery:: GetLastSelectedItem
+## <a name="cmfcribbongallerygetlastselecteditem"></a><a name="getlastselecteditem"></a>CMFC 函式庫:取得最後選擇項目
 
-傳回使用者選取的功能區圖庫中, 最後一個專案的索引。
+返回用戶選擇的功能區庫中最後一個專案的索引。
 
-```
+```cpp
 static int GetLastSelectedItem(UINT uiCmdID);
 ```
 
 ### <a name="parameters"></a>參數
 
-*uiCmdID*<br/>
-[in]指定功能表項目，開啟功能區圖庫的命令識別碼。
+*烏伊CmdID*<br/>
+[在]指定開啟功能區庫的功能表項的命令 ID。
 
 ### <a name="return-value"></a>傳回值
 
-當使用者選取功能區圖庫中的任何專案時, 文件庫會傳送 WM_COMMAND 訊息, 以及開啟功能區圖庫之功能表按鈕的命令 ID。
+當使用者選擇功能區庫中的任何專案時,庫將發送WM_COMMAND消息以及打開功能區庫的功能表按鈕的命令 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpaletteid"></a>CMFCRibbonGallery:: GetPaletteID
+## <a name="cmfcribbongallerygetpaletteid"></a><a name="getpaletteid"></a>CMFC功能庫:取得PaletteID
 
-傳回目前調色板的命令識別碼。
+返回當前調色板的命令 ID。
 
-```
+```cpp
 int GetPaletteID() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-目前所選取之調色板的命令識別碼。
+當前所選調色板的命令 ID。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getregularsize"></a>CMFCRibbonGallery:: GetRegularSize
+## <a name="cmfcribbongallerygetregularsize"></a><a name="getregularsize"></a>CMFC 函式庫:取得一般大小
 
-```
+```cpp
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getselecteditem"></a>CMFCRibbonGallery:: GetSelectedItem
+## <a name="cmfcribbongallerygetselecteditem"></a><a name="getselecteditem"></a>CMFC功能庫:取得選定專案
 
-```
+```cpp
 int GetSelectedItem() const;
 ```
 
@@ -499,9 +499,9 @@ int GetSelectedItem() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hasmenu"></a>CMFCRibbonGallery:: HasMenu
+## <a name="cmfcribbongalleryhasmenu"></a><a name="hasmenu"></a>CMFC功能庫:哈斯梅因
 
-```
+```cpp
 virtual BOOL HasMenu() const;
 ```
 
@@ -509,37 +509,37 @@ virtual BOOL HasMenu() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isbuttonmode"></a>CMFCRibbonGallery:: IsButtonMode
+## <a name="cmfcribbongalleryisbuttonmode"></a><a name="isbuttonmode"></a>CMFC功能庫::正按鈕模式
 
-指定色板是否包含在圖庫按鈕中。
+指定調色板是否包含在庫按鈕中。
 
-```
+```cpp
 BOOL IsButtonMode() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-如果調色板顯示為下拉式功能表按鈕, 則為 TRUE;如果調色板直接顯示在功能區上, 則為 FALSE。
+如果調色板顯示為下拉菜單按鈕,則為 TRUE;如果調色板顯示為下拉菜單按鈕,則為 TRUE。如果調色板直接顯示在功能區上,則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismenuresizeenabled"></a>CMFCRibbonGallery:: IsMenuResizeEnabled
+## <a name="cmfcribbongalleryismenuresizeenabled"></a><a name="ismenuresizeenabled"></a>CMFC 函式庫:已啟用「已啟用」選單
 
-指定是否啟用 [調整功能表大小]。
+指定是否啟用了功能表調整大小。
 
-```
+```cpp
 BOOL IsMenuResizeEnabled() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-如果已啟用功能表調整大小, 則為 TRUE;否則為 FALSE。
+如果已啟用功能表調整大小,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismenuresizevertical"></a>CMFCRibbonGallery:: IsMenuResizeVertical
+## <a name="cmfcribbongalleryismenuresizevertical"></a><a name="ismenuresizevertical"></a>CMFC 功能庫::正選垂直
 
-```
+```cpp
 BOOL IsMenuResizeVertical() const;
 ```
 
@@ -547,49 +547,49 @@ BOOL IsMenuResizeVertical() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismenusidebar"></a>CMFCRibbonGallery:: IsMenuSideBar
+## <a name="cmfcribbongalleryismenusidebar"></a><a name="ismenusidebar"></a>CMFC功能庫:isMenusideBar
 
-指定側條是否已啟用或停用。
+指定側欄是啟用還是禁用。
 
-```
+```cpp
 BOOL IsMenuSideBar() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-如果 Office XP 樣式的側邊列是在快顯功能表的左邊繪製, 則為 TRUE;否則為 FALSE。
+如果 Office XP 風格的側欄在彈出式功能表的左側繪製,則為 TRUE;否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onafterchangerect"></a>CMFCRibbonGallery:: OnAfterChangeRect
+## <a name="cmfcribbongalleryonafterchangerect"></a><a name="onafterchangerect"></a>CMFC 函式庫:在轉換後
 
-```
+```cpp
 virtual void OnAfterChangeRect(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondraw"></a>CMFCRibbonGallery:: OnDraw
+## <a name="cmfcribbongalleryondraw"></a><a name="ondraw"></a>CMFC功能畫廊:OnDraw
 
-```
+```cpp
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon
+## <a name="cmfcribbongalleryondrawpaletteicon"></a><a name="ondrawpaletteicon"></a>CMFC功能庫:在DrawPaletteIcon
 
-繪製圖庫圖示時由架構呼叫。
+繪製庫圖示時由框架調用。
 
-```
+```cpp
 virtual void OnDrawPaletteIcon(
     CDC* pDC,
     CRect rectIcon,
@@ -601,87 +601,87 @@ virtual void OnDrawPaletteIcon(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-在用於繪製之裝置內容的指標。
+[在]指向用於繪圖的設備上下文的指標。
 
-*rectIcon*<br/>
-在指定要繪製之圖示的周框。
+*整形圖示*<br/>
+[在]指定要繪製的圖示的邊界矩形。
 
 *nIconIndex*<br/>
-在在要繪製的圖示圖庫圖示清單中, 指定以零為基底的索引。
+[在]指定要繪製的圖示的圖庫圖示的圖像清單中的零基索引。
 
 *pIcon*<br/>
-在所繪製圖示的指標。
+[在]指向正在繪製的圖示的指標。
 
 *clrText*<br/>
-在指定要繪製之專案文字的色彩。
+[在]指定要繪製的項目文字的顏色。
 
 ### <a name="remarks"></a>備註
 
-您可以在衍生類別中覆寫這個方法, 以自訂功能區圖庫的外觀。
+可以在派生類中重寫此方法,以自定義功能區庫的外觀。
 
-##  <a name="onenable"></a>CMFCRibbonGallery:: OnEnable
+## <a name="cmfcribbongalleryonenable"></a><a name="onenable"></a>CMFC功能庫:啟用
 
-```
+```cpp
 virtual void OnEnable(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>參數
 
-在*bEnable*<br/>
+[在]*b 啟用*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onrtlchanged"></a>CMFCRibbonGallery:: OnRTLChanged
+## <a name="cmfcribbongalleryonrtlchanged"></a><a name="onrtlchanged"></a>CMFC 函式庫::開啟
 
-```
+```cpp
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```
 
 ### <a name="parameters"></a>參數
 
-在*bIsRTL*<br/>
+[在]*比塞爾*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons
+## <a name="cmfcribbongalleryredrawicons"></a><a name="redrawicons"></a>CMFC功能庫:重繪圖示
 
-重新繪製圖庫。
+重繪圖庫。
 
-```
+```cpp
 void RedrawIcons();
 ```
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可重繪圖庫。 如果您已在執行時間變更圖庫的內容, 則必須呼叫此方法。
+調用此函數以重繪庫。 如果在運行時更改了庫的內容,則必須調用此方法。
 
-##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips
+## <a name="cmfcribbongalleryremoveitemtooltips"></a><a name="removeitemtooltips"></a>CMFC 函式庫::刪除專案工具提示
 
-將工具提示從資源庫中的所有專案移除。
+從庫中的所有項目中刪除工具提示。
 
-```
+```cpp
 void RemoveItemToolTips();
 ```
 
 ### <a name="remarks"></a>備註
 
-##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem
+## <a name="cmfcribbongalleryselectitem"></a><a name="selectitem"></a>CMFC 函式庫:選擇項目
 
-```
+```cpp
 void SelectItem(int nItemIndex);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in] *nItemIndex*<br/>
+[在]*n 專案索引*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setaccdata"></a>CMFCRibbonGallery:: SetACCData
+## <a name="cmfcribbongallerysetaccdata"></a><a name="setaccdata"></a>CMFC功能庫::設定ACC數據
 
 使用功能區圖庫中的協助工具資料填入指定的 `CAccessibilityData` 物件。
 
-```
+```cpp
 virtual BOOL SetACCData(
     CWnd* pParent,
     CAccessibilityData& data);
@@ -690,37 +690,37 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>參數
 
 *pParent*<br/>
-在功能區圖庫視窗的父視窗。
+[在]功能區庫視窗的父視窗。
 
-*data*<br/>
-脫銷`CAccessibilityData`物件, 可從功能區圖庫接收協助工具資料。
+*資料*<br/>
+[出]從`CAccessibilityData`功能區庫接收輔助功能數據的物件。
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-如果方法成功, 則為 TRUE;否則為 FALSE。
+如果方法成功,則為 TRUE;否則,FALSE。
 
-##  <a name="setbuttonmode"></a>CMFCRibbonGallery:: SetButtonMode
+## <a name="cmfcribbongallerysetbuttonmode"></a><a name="setbuttonmode"></a>CMFC 函式庫::設定按鈕模式
 
-決定是否要將功能區圖庫顯示為下拉式按鈕, 或直接在功能區上顯示為調色板。
+確定是將功能區庫顯示為下拉按鈕還是直接在功能區上作為調色板顯示。
 
-```
+```cpp
 void SetButtonMode(BOOL bSet=TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
 *bSet*<br/>
-在TRUE 表示將功能區圖庫顯示為下拉式功能表按鈕;FALSE 表示直接在功能區上顯示功能區圖庫的內容。
+[在]TRUE 將功能區庫顯示為下拉菜單按鈕;FALSE 直接顯示在功能區上功能區庫的內容。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setgroupname"></a>  CMFCRibbonGallery::SetGroupName
+## <a name="cmfcribbongallerysetgroupname"></a><a name="setgroupname"></a>CMFC 函式庫::組名
 
-設定群組的名稱。
+設置組的名稱。
 
-```
+```cpp
 void SetGroupName(
     int nGroupIndex,
     LPCTSTR lpszGroupName);
@@ -728,38 +728,38 @@ void SetGroupName(
 
 ### <a name="parameters"></a>參數
 
-*nGroupIndex*<br/>
-在針對要變更名稱的群組, 指定以零為基底的索引。
+*N組索引*<br/>
+[在]指定要為其更改名稱的組的從零開始索引。
 
-*lpszGroupName*<br/>
-在指定群組的新名稱。
+*lpszGroup 名稱*<br/>
+[在]指定組的新名稱。
 
 ### <a name="remarks"></a>備註
 
-必須使用[CMFCRibbonGallery:: AddGroup](#addgroup)方法加入其名稱已變更的群組。
+必須使用[CMFC 功能區庫::addGroup](#addgroup)方法添加其名稱的組。
 
-##  <a name="seticonsinrow"></a>CMFCRibbonGallery:: SetIconsInRow
+## <a name="cmfcribbongalleryseticonsinrow"></a><a name="seticonsinrow"></a>CMFC功能庫:setIconsinrow
 
-指定資源庫中每個資料列的專案數。
+指定庫中每行的項目數。
 
-```
+```cpp
 void SetIconsInRow(int nIconsInRow);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nIconsInRow*<br/>
-在指定要在資源庫的每個資料列中顯示的專案數。
+*內辛內羅*<br/>
+[在]指定要在庫的每一行中顯示的項目數。
 
 ### <a name="remarks"></a>備註
 
-使用此方法可指定功能區圖庫的寬度。
+使用此方法指定功能區庫的寬度。
 
-##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip
+## <a name="cmfcribbongallerysetitemtooltip"></a><a name="setitemtooltip"></a>CMFC 函式庫::設定專案工具提示
 
-設定資源庫中專案的工具提示文字。
+設定庫中專案的工具提示文本。
 
-```
+```cpp
 void SetItemToolTip(
     int nItemIndex,
     LPCTSTR lpszToolTip);
@@ -767,19 +767,19 @@ void SetItemToolTip(
 
 ### <a name="parameters"></a>參數
 
-*nItemIndex*<br/>
-在要與工具提示產生關聯之調色板專案的以零為基底的索引。
+*n 專案索引*<br/>
+[在]要與哪個選項關聯的調色板項的零基索引。
 
 *lpszToolTip*<br/>
-在要顯示在工具提示上的文字。
+[在]要顯示在工具提示上的文本。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpalette"></a>CMFCRibbonGallery:: SetPalette
+## <a name="cmfcribbongallerysetpalette"></a><a name="setpalette"></a>CMFC功能庫::設定調色板
 
-將色板附加至功能區圖庫。
+將調色板附加到功能區庫。
 
-```
+```cpp
 void SetPalette(CMFCToolBarImages& imagesPalette);
 
 void SetPalette(
@@ -789,33 +789,33 @@ void SetPalette(
 
 ### <a name="parameters"></a>參數
 
-*imagesPalette*<br/>
-在指定影像清單, 其中包含要顯示在資源庫中的圖示。
+*影像調色盤*<br/>
+[在]指定包含要顯示在庫中的圖示的影像清單。
 
 *uiImagesPaletteResID*<br/>
-在指定影像清單的資源識別碼, 其中包含要顯示在資源庫中的圖示。
+[在]指定包含要顯示在庫中的圖示的影像清單的資源 ID。
 
-*cxPaletteImage*<br/>
-在指定圖庫上影像的寬度 (以圖元為單位)。
+*cxPalette影像*<br/>
+[在]指定庫中圖像的寬度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpaletteid"></a>CMFCRibbonGallery:: SetPaletteID
+## <a name="cmfcribbongallerysetpaletteid"></a><a name="setpaletteid"></a>CMFC功能庫::設定調色板ID
 
-定義當使用者選取主機庫專案時, 在 WM_COMMAND 訊息中傳送的命令識別碼。
+定義使用者選擇庫項時在WM_COMMAND消息中發送的命令 ID。
 
-```
+```cpp
 void SetPaletteID(UINT nID);
 ```
 
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-在指定當使用者選取主機庫專案時, 在 WM_COMMAND 訊息中傳送的命令識別碼。
+[在]指定使用者選擇庫項時在WM_COMMAND訊息中發送的命令 ID。
 
 ### <a name="remarks"></a>備註
 
-若要判斷使用者從資源庫中選取的特定專案, 請呼叫[CMFCRibbonGallery:: GetLastSelectedItem](#getlastselecteditem)靜態方法。
+要確定使用者從庫中選擇的特定項,請調用[CMFC 功能區庫::GetLast選擇專案](#getlastselecteditem)靜態方法。
 
 ## <a name="see-also"></a>另請參閱
 

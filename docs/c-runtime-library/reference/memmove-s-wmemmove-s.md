@@ -1,9 +1,10 @@
 ---
 title: memmove_s、wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951786"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914088"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -78,15 +80,17 @@ errno_t wmemmove_s(
 
 |*dest*|*numberOfElements*|*src*|傳回值|*Dest*的內容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|未修改|
-|any|any|**NULL**|**EINVAL**|未修改|
-|any|< *計數*|any|**ERANGE**|未修改|
+|**Null**|任意|任意|**EINVAL**|未修改|
+|任意|任意|**Null**|**EINVAL**|未修改|
+|任意|< *計數*|任意|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-將字元的*計數*位元組從*src*複製到*dest*。 如果來源區域與目的地的某些區域重迭， **memmove_s**會確保重迭區域中的原始來源位元組會在覆寫之前複製。
+將字元的*計數*位元組從*src*複製到*dest*。 如果來源區域與目的地的某些區域重迭， **memmove_s**確保重迭區域中的原始來源位元組會在覆寫之前複製。
 
 如果*dest*或*src*是 null 指標，或如果目的字串太小，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -126,7 +130,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 Before: 0123456789

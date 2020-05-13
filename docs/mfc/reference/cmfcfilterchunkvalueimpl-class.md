@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237552"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752370"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 類別
 
-這是可簡化區塊和屬性值組邏輯的類別。
+這是一個簡化塊和屬性值對邏輯的類。
 
 ## <a name="syntax"></a>語法
 
@@ -69,73 +69,73 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs 物件。|
-|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|建構物件。|
+|[CMFC 過濾器區塊值 impl:_CMFC過濾器區塊值 impl](#_dtorcmfcfilterchunkvalueimpl)|析構物件。|
+|[CMFC 過濾器塊值 impl::CMFC 過濾器塊值](#cmfcfilterchunkvalueimpl)|建構物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::Clear](#clear)|清除 ChunkValue。|
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|會將此區塊複製到結構，描述區塊的特性。|
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|初始化此區塊值，與其他的值。|
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|擷取區塊的 GUID。|
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|擷取區塊 PID （內容識別碼）。|
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|取得區塊型別。|
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|擷取的字串值。|
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|擷取值來當做已配置的 propvariant。|
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|傳回非配置 （內部的數值） 值。|
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|會檢查這個屬性值是否為有效。|
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|多載。 將屬性設定為布林值的索引鍵。|
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|將屬性設定為 DWORD 的索引鍵。|
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|以 filetime 的索引鍵所設定的屬性。|
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|將屬性設定為 int64 索引鍵。|
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|設定屬性索引鍵為 int。|
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|改為長整數的索引鍵所設定的屬性。|
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|將屬性設定成 SystemTime 的索引鍵。|
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|將屬性設定為 Unicode 字串的索引鍵。|
+|[CMFC過濾器Chunkvalueimpl::清除](#clear)|清除塊值。|
+|[CMFC 過濾器塊值 impl::複製區塊](#copychunk)|將此塊複製到描述塊特徵的結構。|
+|[CMFC過濾器chunk值::從複製](#copyfrom)|從其他值初始化此塊值。|
+|[CMFC過濾器塊值::獲取塊狀](#getchunkguid)|檢索塊 GUID。|
+|[CMFC過濾器塊值::獲取塊狀PID](#getchunkpid)|檢索塊 PID(屬性 ID)。|
+|[CMFC 過濾器塊值::取得塊類型](#getchunktype)|獲取塊類型。|
+|[CMFC 過濾器區塊值::取得字串](#getstring)|檢索字串值。|
+|[CMFC過濾器Chunkvalueimpl:獲取價值](#getvalue)|檢索該值作為分配的道具變數。|
+|[CMFC過濾器Chunkvalueimpl::獲取ValueNoalloc](#getvaluenoalloc)|返回未分配(內部值)值。|
+|[CMFC過濾器chunk值::有效](#isvalid)|檢查此屬性值是否有效。|
+|[CMFC過濾器塊值::SetBoolValue](#setboolvalue)|已多載。 按鍵將屬性設置到布爾。|
+|[CMFC 過濾器塊值::設定Word值](#setdwordvalue)|按鍵將屬性設置到 DWORD。|
+|[CMFC 過濾器區塊值::設定檔案時間值](#setfiletimevalue)|按鍵將屬性設置到檔時間。|
+|[CMFC 過濾器塊值:setint64值](#setint64value)|按鍵將屬性設置到 int64。|
+|[CMFC 過濾器塊值::setintValue](#setintvalue)|按鍵將屬性設置到 int。|
+|[CMFC 過濾器塊值::設定長值](#setlongvalue)|按鍵將屬性設置為 LONG。|
+|[CMFC 過濾器區塊值::設定系統時間值](#setsystemtimevalue)|按鍵將屬性設置到系統時間。|
+|[CMFC 過濾器區塊值::設定文字值](#settextvalue)|按鍵將屬性設定到 Unicode 字串。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Helper 函式會設定區塊的通用屬性。|
+|[CMFC 過濾器塊值 impl::設定區塊](#setchunk)|設置塊公共屬性的説明器函數。|
 
 ## <a name="remarks"></a>備註
 
-若要使用，您只要建立正確類型的 CMFCFilterChunkValueImpl 類別
+使用時,只需建立一個 CMFCFilterChunkValueImpl 類,即可獲得正確的類型
 
 範例：
 
-CMFCFilterChunkValueImpl 區塊;
+CMFC過濾器塊值塊;
 
-hr = chunk.SetBoolValue(PKEY_IsAttachment, true);
+hr = 塊。SetBoolValue(PKEY_IsAttachment,真實);
 
 或
 
-hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
+hr = 塊。設置文件時間值(PKEY_ItemDate,英尺已修改);
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ATL::IFilterChunkValue`
 
-[CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
+[CMFC 過濾器區塊值](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
 
 ## <a name="requirements"></a>需求
 
 **標題:** afxwin.h
 
-##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear
+## <a name="cmfcfilterchunkvalueimplclear"></a><a name="clear"></a>CMFC過濾器Chunkvalueimpl::清除
 
-清除 ChunkValue。
+清除塊值。
 
-```
+```cpp
 void Clear();
 ```
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a>CMFC 過濾器塊值 impl::CMFC 過濾器塊值
 
 建構物件。
 
@@ -145,9 +145,9 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFC 過濾器區塊值 impl:_CMFC過濾器區塊值 impl
 
-Destructs 物件。
+析構物件。
 
 ```
 virtual ~CMFCFilterChunkValueImpl();
@@ -155,9 +155,9 @@ virtual ~CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk
+## <a name="cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a>CMFC 過濾器塊值 impl::複製區塊
 
-會將此區塊複製到結構，描述區塊的特性。
+將此塊複製到描述塊特徵的結構。
 
 ```
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
@@ -166,32 +166,32 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ### <a name="parameters"></a>參數
 
 *pStatChunk*<br/>
-描述區塊的特性的目的端值的指標。
+指向描述塊特徵的目標值的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom
+## <a name="cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a>CMFC過濾器chunk值::從複製
 
-初始化此區塊值，與其他的值。
+從其他值初始化此塊值。
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
 ### <a name="parameters"></a>參數
 
 *pValue*<br/>
-指定要複製的來源值。
+指定要從中複製的源值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID
+## <a name="cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a>CMFC過濾器塊值::獲取塊狀
 
-擷取區塊的 GUID。
+檢索塊 GUID。
 
 ```
 REFGUID GetChunkGUID() const;
@@ -199,13 +199,13 @@ REFGUID GetChunkGUID() const;
 
 ### <a name="return-value"></a>傳回值
 
-GUID，識別區塊的參考。
+對標識塊的 GUID 的引用。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID
+## <a name="cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a>CMFC過濾器塊值::獲取塊狀PID
 
-擷取區塊 PID （內容識別碼）。
+檢索塊 PID(屬性 ID)。
 
 ```
 DWORD GetChunkPID() const;
@@ -213,13 +213,13 @@ DWORD GetChunkPID() const;
 
 ### <a name="return-value"></a>傳回值
 
-DWORD 值，包含屬性識別碼。
+包含屬性 ID 的 DWORD 值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType
+## <a name="cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a>CMFC 過濾器塊值::取得塊類型
 
-擷取區塊型別。
+檢索塊類型。
 
 ```
 CHUNKSTATE GetChunkType() const;
@@ -227,13 +227,13 @@ CHUNKSTATE GetChunkType() const;
 
 ### <a name="return-value"></a>傳回值
 
-CHUNKSTATE 列舉值，指定目前區塊是否為文字類型的屬性或值類型屬性。
+一個 CHUNKSTATE 枚舉值,它指定當前塊是文本類型屬性還是值類型屬性。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString
+## <a name="cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a>CMFC 過濾器區塊值::取得字串
 
-擷取的字串值。
+檢索字串值。
 
 ```
 CString &GetString();
@@ -241,13 +241,13 @@ CString &GetString();
 
 ### <a name="return-value"></a>傳回值
 
-字串，包含區塊的值。
+包含塊值的字串。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue
+## <a name="cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a>CMFC過濾器Chunkvalueimpl:獲取價值
 
-擷取值來當做已配置的 propvariant。
+檢索該值作為分配的道具變數。
 
 ```
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
@@ -256,17 +256,17 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ### <a name="parameters"></a>參數
 
 *ppPropVariant*<br/>
-當函式傳回時，此參數會包含區塊的值。
+當函數返回時,此參數包含塊值。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功地配置 PROPVARIANT 和區塊值已成功複製到為 S_OK *ppPropVariant*; 否則為錯誤碼。
+S_OK如果 PROPVARIANT 已成功分配,並且塊值已成功複製到*ppPropvariant;* 否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc
+## <a name="cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a>CMFC過濾器Chunkvalueimpl::獲取ValueNoalloc
 
-傳回非配置 （內部） 值。
+返回未分配(內部值)值。
 
 ```
 PROPVARIANT GetValueNoAlloc ();
@@ -274,13 +274,13 @@ PROPVARIANT GetValueNoAlloc ();
 
 ### <a name="return-value"></a>傳回值
 
-傳回目前的區塊值。
+返回當前塊值。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid
+## <a name="cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a>CMFC過濾器chunk值::有效
 
-會檢查這個屬性值是否為有效。
+檢查此屬性值是否有效。
 
 ```
 BOOL IsValid() const;
@@ -288,13 +288,13 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果目前的區塊值有效，則為 TRUE。否則為 FALSE。
+如果當前塊值有效,則為 TRUE;如果當前塊值有效,則為 TRUE。否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue
+## <a name="cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a>CMFC過濾器塊值::SetBoolValue
 
-多載。 將屬性設定為布林值的索引鍵。
+已多載。 按鍵將屬性設置到布爾。
 
 ```
 HRESULT SetBoolValue(
@@ -318,36 +318,36 @@ HRESULT SetBoolValue(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
 *bVal*<br/>
-指定要設定的區塊值。
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk
+## <a name="cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a>CMFC 過濾器塊值 impl::設定區塊
 
-Helper 函式會設定區塊的通用屬性。
+設置塊公共屬性的説明器函數。
 
 ```
 HRESULT SetChunk(
@@ -361,33 +361,33 @@ HRESULT SetChunk(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue
+## <a name="cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a>CMFC 過濾器塊值::設定Word值
 
-設定為 DWORD 的索引鍵屬性。
+按鍵將屬性設置為 DWORD。
 
 ```
 HRESULT SetDwordValue(
@@ -402,36 +402,36 @@ HRESULT SetDwordValue(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
-*dwVal*<br/>
-指定要設定的區塊值。
+*德瓦爾*<br/>
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue
+## <a name="cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a>CMFC 過濾器區塊值::設定檔案時間值
 
-設定以 filetime 的索引鍵屬性。
+按鍵將屬性設置為文件時間。
 
 ```
 HRESULT SetFileTimeValue(
@@ -446,36 +446,36 @@ HRESULT SetFileTimeValue(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
-*dtVal*<br/>
-指定要設定的區塊值。
+*德瓦爾*<br/>
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value
+## <a name="cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a>CMFC 過濾器塊值:setint64值
 
-將屬性設定為 int64 索引鍵。
+按鍵將屬性設置為 int64。
 
 ```
 HRESULT SetInt64Value(
@@ -490,36 +490,36 @@ HRESULT SetInt64Value(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
-*nVal*<br/>
-指定要設定的區塊值。
+*恩瓦爾*<br/>
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue
+## <a name="cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a>CMFC 過濾器塊值::setintValue
 
-設定屬性索引鍵為 int。
+按鍵將屬性設置為 int。
 
 ```
 HRESULT SetIntValue(
@@ -534,36 +534,36 @@ HRESULT SetIntValue(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
-*nVal*<br/>
-指定要設定的區塊值。
+*恩瓦爾*<br/>
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue
+## <a name="cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a>CMFC 過濾器塊值::設定長值
 
-設定要長時間索引鍵屬性。
+按鍵將屬性設置為 LONG。
 
 ```
 HRESULT SetLongValue(
@@ -578,36 +578,36 @@ HRESULT SetLongValue(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
 *lVal*<br/>
-指定要設定的區塊值。
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue
+## <a name="cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a>CMFC 過濾器區塊值::設定系統時間值
 
-將屬性設定成 SystemTime 的索引鍵。
+按鍵將屬性設置到系統時間。
 
 ```
 HRESULT SetSystemTimeValue(
@@ -622,36 +622,36 @@ HRESULT SetSystemTimeValue(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
-*systemTime*<br/>
-指定要設定的區塊值。
+*系統時間*<br/>
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue
+## <a name="cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a>CMFC 過濾器區塊值::設定文字值
 
-將屬性設定為 Unicode 字串的索引鍵。
+按鍵將屬性設定到 Unicode 字串。
 
 ```
 HRESULT SetTextValue(
@@ -666,30 +666,30 @@ HRESULT SetTextValue(
 
 ### <a name="parameters"></a>參數
 
-*pkey*<br/>
-指定屬性的索引鍵。
+*皮基*<br/>
+指定屬性鍵。
 
 *pszValue*<br/>
-指定要設定的區塊值。
+指定要設置的塊值。
 
-*chunkType*<br/>
-旗標表示此區塊包含文字型別或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。
+*區塊類型*<br/>
+標誌指示此塊是否包含文本類型或值類型屬性。 標誌值取自 CHUNKSTATE 枚舉。
 
 *locale*<br/>
-文字區塊相關聯的子語言和語言。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊不是文字型別或實值型別具有 31、vt_array|vt_u1、 VT_LPSTR 或 VT_BSTR 的資料類型，則會忽略此欄位。
+與文本塊關聯的語言和子語言。 塊區域設置由文檔索引器用於執行正確的文本斷字。 如果塊既不是文本類型,也不是數據類型為VT_LPWSTR、VT_LPSTR 或VT_BSTR的值類型,則此欄位將被忽略。
 
-*cwcLenSource*<br/>
-從中衍生目前區塊的原始程式文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示沒有這種直接的對應存在。
+*cwcLen來源*<br/>
+衍生目前的區塊的來源文字的長度( 零值表示源文本和派生文本之間的字元對應。 非零值表示不存在此類直接對應關係。
 
-*cwcStartSource*<br/>
-從中衍生的區塊的來源文字來源區塊中的開始位移。
+*cwcStart 來源*<br/>
+派生塊的源文本從其開始的偏移量。
 
-*chunkBreakType*<br/>
-從目前區塊用來分隔前一個區塊的符號的類型。 值為 CHUNK_BREAKTYPE 列舉型別。
+*區斷型別*<br/>
+將前一個塊與當前塊分隔的中斷類型。 值來自CHUNK_BREAKTYPE枚舉。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則為錯誤碼。
+S_OK如果成功;否則是錯誤代碼。
 
 ### <a name="remarks"></a>備註
 

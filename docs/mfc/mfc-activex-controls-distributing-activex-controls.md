@@ -25,57 +25,57 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 409ace2197396cf7adbd330cfbd891745a23cf53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ada1c801b2d9d62f1cc4cd5bf72a2995225b3de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392696"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364618"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控制項：散發 ActiveX 控制項
 
-這篇文章會討論幾個有關轉散發 ActiveX 控制項問題：
+本文討論了與重新分發 ActiveX 控制項相關的幾個問題:
 
 - [ANSI 或 Unicode 控制版本](#_core_ansi_or_unicode_control_versions)
 
-- [安裝 ActiveX 控制項和可轉散發 Dll](#_core_installing_activex_controls_and_redistributable_dlls)
+- [安裝 ActiveX 控制及可再分轉的 DLL](#_core_installing_activex_controls_and_redistributable_dlls)
 
 - [註冊控制項](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
+> ActiveX 是一種不應用於新開發的傳統技術。 有關取代 ActiveX 的現代技術的詳細資訊,請參閱[ActiveX 控制件](activex-controls.md)。
 
-##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI 或 Unicode 控制版本
+## <a name="ansi-or-unicode-control-versions"></a><a name="_core_ansi_or_unicode_control_versions"></a>ANSI 或 Unicode 控制版本
 
-您必須決定是否要寄送該控制項，或兩者的 ANSI 或 Unicode 版本。 這項決策根據 ANSI 和 Unicode 字元集中固有的可攜性因素。
+您必須決定是提供控制項的 ANSI 或 Unicode 版本,還是同時發貨。 此決策基於 ANSI 和 Unicode 字元集中固有的可移植性因素。
 
-ANSI 控制項，可在所有的 Win32 作業系統上運作，允許各種 Win32 作業系統之間的最大可攜性。 Unicode 控制項運作，只有 Windows nt （版本 3.51 或更新版本），但不是能在 Windows 95 或 Windows 98。 如果您主要的考量，出貨 ANSI 控制項可攜性。 如果您的控制項將只能在 Windows NT 上執行，您可以將 Unicode 控制項。 您也可以選擇提供兩者，並讓您安裝最適合使用者的作業系統版本的應用程式。
+ANSI 控制項適用於所有 Win32 作業系統,允許在各種 Win32 作業系統之間實現最大的可移植性。 Unicode 控制項僅在 Windows NT(版本 3.51 或更高版本)上工作,但在 Windows 95 或 Windows 98 上不起作用。 如果可移植性是您最關心的問題,請提供 ANSI 控制件。 如果控制項僅在 Windows NT 上運行,則可以提供 Unicode 控制件。 您還可以選擇同時發貨,並讓應用程式安裝最適合使用者操作系統的版本。
 
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> 安裝 ActiveX 控制項和可轉散發 Dll
+## <a name="installing-activex-controls-and-redistributable-dlls"></a><a name="_core_installing_activex_controls_and_redistributable_dlls"></a>安裝 ActiveX 控制及可再分轉的 DLL
 
-您提供您的 ActiveX 控制項安裝程式應該建立特殊的 Windows 目錄的子目錄，並安裝控制項的。OCX 檔案。
+與 ActiveX 控制件一起提供的安裝程式應建立 Windows 目錄的特殊子目錄並安裝控制項的 。OCX 檔。
 
 > [!NOTE]
->  使用 Windows`GetWindowsDirectory`安裝程式中的 API 來取得 Windows 目錄的名稱。 若要從您的公司或產品的名稱衍生子目錄的名稱。
+> 使用安裝程式中的`GetWindowsDirectory`Windows API 獲取 Windows 目錄的名稱。 您可能希望從公司或產品的名稱派生子目錄名稱。
 
-Windows 系統目錄中，安裝程式必須安裝必要的可轉散發 DLL 檔案。 如果所有 Dll 已經存在於使用者的電腦上，安裝程式應該會比較其版本與您要安裝的版本。 只有當其版本號碼高於已安裝的檔案，請重新安裝檔案。
+安裝程式必須在 Windows 系統目錄中安裝必要的可再分發 DLL 檔。 如果用戶的電腦上已存在任何 DLL,安裝程式應將其版本與您正在安裝的版本進行比較。 僅當檔的版本號高於已安裝的檔時,才重新安裝該檔。
 
-ActiveX 控制項只能用於 OLE 容器應用程式，因為沒有任何需要傳遞完整的 OLE Dll 與控制。 您可以假設包含的應用程式 （或作業系統本身） 都具有標準 OLE 安裝 Dll。
+由於 ActiveX 控制件只能在 OLE 容器應用程式中使用,因此無需將完整的 OLE DLL 集與控制項一起分發。 可以假定包含的應用程式(或作業系統本身)安裝了標準 OLE DLL。
 
-##  <a name="_core_registering_controls"></a> 註冊控制項
+## <a name="registering-controls"></a><a name="_core_registering_controls"></a>註冊控制項
 
-控制可用之前，必須建立適當的項目，Windows 註冊資料庫中。 某些 ActiveX 控制項容器提供使用者註冊新的控制項的功能表項目，但這項功能可能無法使用所有容器中。 因此，您可以安裝程式將會在安裝時，註冊控制項。
+在使用控制項之前,必須在 Windows 註冊資料庫中為其創建適當的條目。 某些 ActiveX 控件容器為使用者提供了一個功能表項,供使用者註冊新的控制項,但此功能可能並非在所有容器中都可用。 因此,您可能希望安裝程式在安裝控制項時註冊它們。
 
-如果想要的話，您可以撰寫您的安裝程式，改為直接註冊控制項。
+如果您願意,可以編寫安裝程式以直接註冊控件。
 
-使用`LoadLibrary`載入控制項 DLL 的 Windows API。 接下來，使用`GetProcAddress`取得 「 DllRegisterServer"函式的位址。 最後，呼叫`DllRegisterServer`函式。 下列程式碼範例示範一個可行的方法，其中`hLib`儲存的控制項程式庫的控制代碼和`lpDllEntryPoint`儲存 「 DllRegisterServer"函式的位址。
+使用`LoadLibrary`Windows API 載入控制項 DLL。 接下來,使用`GetProcAddress`以獲取"DllRegisterServer"功能的位址。 最後,呼叫函數`DllRegisterServer`。 以下代碼範例展示一種可能的方法,`hLib`其中儲存控制項庫的句柄並`lpDllEntryPoint`儲存 DllRegisterServer"函數的位址。
 
 [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]
 
-直接註冊控制項的優點是，您不需要叫用，並載入不同的處理序 (也就是 「 REGSVR32 」) 來減少安裝時間。 此外，因為註冊的內部程序，安裝程式可以處理錯誤，而且發生未預期的情況下，優於外部處理序可以。
+直接註冊控件的優點是,您不需要調用和載入單獨的進程(即 REGSVR32),從而減少安裝時間。 此外,由於註冊是一個內部過程,安裝程式可以比外部進程更好地處理錯誤和不可預見的情況。
 
 > [!NOTE]
->  安裝程式會安裝 ActiveX 控制項之前，它應該呼叫`OleInitialize`。 安裝程式完成時，呼叫`OleUnitialize`。 這可確保 OLE 系統 Dll 位於註冊 ActiveX 控制項的適當狀態。
+> 安裝程式安裝 ActiveX 控制項之前,它應該呼`OleInitialize`叫 。 安裝程式完成後,呼叫`OleUnitialize`。 這可確保 OLE 系統 DLL 處於註冊 ActiveX 控制件的適當狀態。
 
 您應該註冊 MFCx0.DLL。
 

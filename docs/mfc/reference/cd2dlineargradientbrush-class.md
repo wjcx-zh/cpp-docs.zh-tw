@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d87cdae5c24eae391be8db2fcdd04f91d592e427
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348623"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753152"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 類別
 
-ID2D1LinearGradientBrush 包裝函式。
+ID2D1線性漸變筆的包裝器。
 
 ## <a name="syntax"></a>語法
 
@@ -53,76 +53,76 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|建構 CD2DLinearGradientBrush 物件。|
-|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|解構函式。 D2D 線性漸層筆刷物件正在被終結時呼叫。|
+|[CD2D線性梯度畫筆:CD2D線性梯度畫筆](#cd2dlineargradientbrush)|建構 CD2D 線性漸變畫筆物件。|
+|[CD2D線性梯度畫筆:*CD2D線性梯度畫筆](#_dtorcd2dlineargradientbrush)|解構函式。 銷毀 D2D 線性漸變畫筆物件時調用。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::Attach](#attach)|將現有的資源物件的介面|
-|[CD2DLinearGradientBrush::Create](#create)|建立 CD2DLinearGradientBrush。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|
-|[CD2DLinearGradientBrush::Destroy](#destroy)|終結 CD2DLinearGradientBrush 物件。 (覆寫[CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy)。)|
-|[CD2DLinearGradientBrush::Detach](#detach)|中斷連結物件中的資源介面|
-|[CD2DLinearGradientBrush::Get](#get)|傳回 ID2D1LinearGradientBrush 介面|
-|[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|擷取線性漸層的結束座標|
-|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|擷取線性漸層的起始座標|
-|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|筆刷的座標空間中設定線性漸層的結束座標|
-|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|線性漸層筆刷的座標空間中的起始座標設定|
+|[CD2D線性漸變筆刷:附加](#attach)|將現有資源介面附加到物件|
+|[CD2D 線性漸層刷筆刷:建立](#create)|創建 CD2D 線性漸變畫筆。 (覆寫[CD2D 資源:建立](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2D線性梯度畫筆::D](#destroy)|銷毀 CD2D 線性漸變畫筆物件。 (覆蓋[CD2D 梯度畫筆::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
+|[CD2D線性梯度畫筆::D](#detach)|從物件分離資源介面|
+|[CD2D 線性漸層刷筆刷:取得](#get)|傳回 ID2D1 線性漸層|
+|[CD2D線性梯度畫筆::取得端點](#getendpoint)|檢索線性漸變的結束座標|
+|[CD2D線性梯度畫筆::獲取起始點](#getstartpoint)|檢索線性漸層的起始座標|
+|[CD2D 線性漸變筆刷:設定結束點](#setendpoint)|設定筆標空間中線性漸變的結束座標|
+|[CD2D 線性漸變筆刷:設定起始點](#setstartpoint)|設定筆標空間中線性漸變的起始座標|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|傳回 ID2D1LinearGradientBrush 介面|
+|[CD2D線性漸變筆刷::操作員 ID2D1 線性漸變筆刷*](#operator_id2d1lineargradientbrush_star)|傳回 ID2D1 線性漸層|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|開始和結束點的漸層。|
-|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|ID2D1LinearGradientBrush 指標。|
+|[CD2D線性漸變畫筆::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|漸變的開始和結束點。|
+|[CD2D線性漸變畫筆::m_pLinearGradientBrush](#m_plineargradientbrush)|指向 ID2D1 線性漸變畫筆的指標。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
-[CD2DGradientBrush](../../mfc/reference/cd2dgradientbrush-class.md)
+[CD2D 梯度畫筆](../../mfc/reference/cd2dgradientbrush-class.md)
 
 `CD2DLinearGradientBrush`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="_dtorcd2dlineargradientbrush"></a>CD2D線性梯度畫筆:*CD2D線性梯度畫筆
 
-解構函式。 D2D 線性漸層筆刷物件正在被終結時呼叫。
+解構函式。 銷毀 D2D 線性漸變畫筆物件時調用。
 
 ```
 virtual ~CD2DLinearGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DLinearGradientBrush::Attach
+## <a name="cd2dlineargradientbrushattach"></a><a name="attach"></a>CD2D線性漸變筆刷:附加
 
-將現有的資源物件的介面
+將現有資源介面附加到物件
 
-```
+```cpp
 void Attach(ID2D1LinearGradientBrush* pResource);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pResource*<br/>
-現有的資源介面。 不能是 NULL
+*p資源*<br/>
+現有資源介面。 無法為 NULL
 
-##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="cd2dlineargradientbrush"></a>CD2D線性梯度畫筆:CD2D線性梯度畫筆
 
-建構 CD2DLinearGradientBrush 物件。
+建構 CD2D 線性漸變畫筆物件。
 
 ```
 CD2DLinearGradientBrush(
@@ -138,33 +138,33 @@ CD2DLinearGradientBrush(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
-*gradientStops*<br/>
-D2D1_GRADIENT_STOP 結構陣列的指標。
+*梯度停止*<br/>
+指向D2D1_GRADIENT_STOP結構陣列的指標。
 
-*gradientStopsCount*<br/>
-值大於或等於 1，gradientStops 陣列中指定的漸層停駐點數目。
+*梯度停止計數*<br/>
+大於或等於 1 的值,用於指定漸變數組中的漸變停止數。
 
-*LinearGradientBrushProperties*<br/>
-開始和結束點的漸層。
+*線性漸層式屬性*<br/>
+漸變的開始和結束點。
 
-*colorInterpolationGamma*<br/>
-在色彩漸層停駐點之間的內插補點會執行空間。
+*顏色插值伽馬*<br/>
+在漸變停止之間執行顏色插值的空間。
 
-*extendMode*<br/>
-正規化 [0，1] 範圍之外的漸層的行為。
+*擴充模式*<br/>
+漸變在 [0,1] 規範化範圍之外的行為。
 
-*pBrushProperties*<br/>
-不透明度和筆刷轉換指標。
+*pBrush 屬性*<br/>
+指向畫筆的不一用性和變換的指標。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
-##  <a name="create"></a>  CD2DLinearGradientBrush::Create
+## <a name="cd2dlineargradientbrushcreate"></a><a name="create"></a>CD2D 線性漸層刷筆刷:建立
 
-建立 CD2DLinearGradientBrush。
+創建 CD2D 線性漸變畫筆。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -172,24 +172,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>參數
 
-*pRenderTarget*<br/>
-到轉譯目標的指標。
+*pRender 目標*<br/>
+指向渲染目標的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="destroy"></a>  CD2DLinearGradientBrush::Destroy
+## <a name="cd2dlineargradientbrushdestroy"></a><a name="destroy"></a>CD2D線性梯度畫筆::D
 
-終結 CD2DLinearGradientBrush 物件。
+銷毀 CD2D 線性漸變畫筆物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLinearGradientBrush::Detach
+## <a name="cd2dlineargradientbrushdetach"></a><a name="detach"></a>CD2D線性梯度畫筆::D
 
-中斷連結物件中的資源介面
+從物件分離資源介面
 
 ```
 ID2D1LinearGradientBrush* Detach();
@@ -197,11 +197,11 @@ ID2D1LinearGradientBrush* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-中斷連結的資源介面指標。
+指向分離的資源介面的指標。
 
-##  <a name="get"></a>  CD2DLinearGradientBrush::Get
+## <a name="cd2dlineargradientbrushget"></a><a name="get"></a>CD2D 線性漸層刷筆刷:取得
 
-傳回 ID2D1LinearGradientBrush 介面
+傳回 ID2D1 線性漸層
 
 ```
 ID2D1LinearGradientBrush* Get();
@@ -209,11 +209,11 @@ ID2D1LinearGradientBrush* Get();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1LinearGradientBrush 介面的指標。
+如果物件尚未初始化,則指向 ID2D1線性漸變筆刷介面或 NULL 的指標。
 
-##  <a name="getendpoint"></a>  CD2DLinearGradientBrush::GetEndPoint
+## <a name="cd2dlineargradientbrushgetendpoint"></a><a name="getendpoint"></a>CD2D線性梯度畫筆::取得端點
 
-擷取線性漸層的結束座標
+檢索線性漸變的結束座標
 
 ```
 CD2DPointF GetEndPoint() const;
@@ -221,11 +221,11 @@ CD2DPointF GetEndPoint() const;
 
 ### <a name="return-value"></a>傳回值
 
-筆刷的座標空間中的線性漸層的結束二維座標
+畫筆座標空間中線性漸變的結束二維座標
 
-##  <a name="getstartpoint"></a>  CD2DLinearGradientBrush::GetStartPoint
+## <a name="cd2dlineargradientbrushgetstartpoint"></a><a name="getstartpoint"></a>CD2D線性梯度畫筆::獲取起始點
 
-擷取線性漸層的起始座標
+檢索線性漸層的起始座標
 
 ```
 CD2DPointF GetStartPoint() const;
@@ -233,27 +233,27 @@ CD2DPointF GetStartPoint() const;
 
 ### <a name="return-value"></a>傳回值
 
-線性漸層，筆刷的座標空間中的起始二維座標
+畫筆座標空間中線性漸變的起始二維座標
 
-##  <a name="m_lineargradientbrushproperties"></a>  CD2DLinearGradientBrush::m_LinearGradientBrushProperties
+## <a name="cd2dlineargradientbrushm_lineargradientbrushproperties"></a><a name="m_lineargradientbrushproperties"></a>CD2D線性漸變畫筆::m_LinearGradientBrushProperties
 
-開始和結束點的漸層。
+漸變的開始和結束點。
 
 ```
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;
 ```
 
-##  <a name="m_plineargradientbrush"></a>  CD2DLinearGradientBrush::m_pLinearGradientBrush
+## <a name="cd2dlineargradientbrushm_plineargradientbrush"></a><a name="m_plineargradientbrush"></a>CD2D線性漸變畫筆::m_pLinearGradientBrush
 
-ID2D1LinearGradientBrush 指標。
+指向 ID2D1 線性漸變畫筆的指標。
 
 ```
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
+## <a name="cd2dlineargradientbrushoperator-id2d1lineargradientbrush"></a><a name="operator_id2d1lineargradientbrush_star"></a>CD2D線性漸變筆刷::操作員 ID2D1 線性漸變筆刷*
 
-傳回 ID2D1LinearGradientBrush 介面
+傳回 ID2D1 線性漸層
 
 ```
 operator ID2D1LinearGradientBrush*();
@@ -261,33 +261,33 @@ operator ID2D1LinearGradientBrush*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1LinearGradientBrush 介面的指標。
+如果物件尚未初始化,則指向 ID2D1線性漸變筆刷介面或 NULL 的指標。
 
-##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint
+## <a name="cd2dlineargradientbrushsetendpoint"></a><a name="setendpoint"></a>CD2D 線性漸變筆刷:設定結束點
 
-筆刷的座標空間中設定線性漸層的結束座標
+設定筆標空間中線性漸變的結束座標
 
-```
+```cpp
 void SetEndPoint(CD2DPointF point);
 ```
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
-筆刷的座標空間中的線性漸層的結束二維座標
+*點*<br/>
+畫筆座標空間中線性漸變的結束二維座標
 
-##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
+## <a name="cd2dlineargradientbrushsetstartpoint"></a><a name="setstartpoint"></a>CD2D 線性漸變筆刷:設定起始點
 
-線性漸層筆刷的座標空間中的起始座標設定
+設定筆標空間中線性漸變的起始座標
 
-```
+```cpp
 void SetStartPoint(CD2DPointF point);
 ```
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
-線性漸層，筆刷的座標空間中的起始二維座標
+*點*<br/>
+畫筆座標空間中線性漸變的起始二維座標
 
 ## <a name="see-also"></a>另請參閱
 

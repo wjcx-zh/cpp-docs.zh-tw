@@ -1,9 +1,11 @@
 ---
 title: _searchenv、_wsearchenv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _searchenv
 - _wsearchenv
+- _o__searchenv
+- _o__wsearchenv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,19 +40,19 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948764"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913217"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv、_wsearchenv
 
 使用環境路徑來搜尋檔案。 這些函式已有更安全的版本可供使用，請參閱 [_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -80,7 +83,7 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>參數
 
-*filename*<br/>
+*名稱*<br/>
 要搜尋的檔案名稱。
 
 *varname*<br/>
@@ -91,11 +94,11 @@ void _wsearchenv(
 
 ## <a name="remarks"></a>備註
 
-**_Searchenv**常式會在指定的網域中搜尋目標檔案。 *Varname*變數可以是指定目錄路徑清單的任何環境或使用者自訂變數（例如**PATH**、 **LIB**或**INCLUDE**）。 由於 **_searchenv**區分大小寫，因此*varname*應符合環境變數的大小寫。
+**_Searchenv**常式會在指定的網域中搜尋目標檔案。 *Varname*變數可以是指定目錄路徑清單的任何環境或使用者自訂變數（例如**PATH**、 **LIB**或**INCLUDE**）。 因為 **_searchenv**區分大小寫，所以*varname*應符合環境變數的大小寫。
 
 此常式會先搜尋目前工作目錄中的檔案。 如果找不到此檔案，便會在環境變數指定的目錄中尋找。 如果目標檔案是在其中一個目錄中，新建立的路徑就會複製到*pathname*。 如果找不到*filename*檔案， *pathname*會包含空的以 null 結束的字串。
 
-*Pathname*緩衝區的長度至少應為 **_MAX_PATH**個字元，以容納結構化路徑名稱的完整長度。 否則， **_searchenv**可能會溢出*路徑名稱*緩衝區，並造成未預期的行為。
+*Pathname*緩衝區的長度至少應為 **_MAX_PATH**個字元，以容納所結構化路徑名稱的完整長度。 否則， **_searchenv**可能會溢出*路徑名稱*緩衝區，並造成未預期的行為。
 
 **_wsearchenv**是 **_searchenv**的寬字元版本，而 **_wsearchenv**的引數是寬字元字串。 相反地， **_wsearchenv**和 **_searchenv**的行為相同。
 
@@ -105,7 +108,9 @@ void _wsearchenv(
 
 如需**errno**和錯誤碼的詳細資訊，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
 
-在 C++ 中，這些函式具有多載樣板，可以叫用這些函式的更新、更安全之對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有多載樣板，可以叫用這些函式的更新、更安全之對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -120,7 +125,7 @@ void _wsearchenv(
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

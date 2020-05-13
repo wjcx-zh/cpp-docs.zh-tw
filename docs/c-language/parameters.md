@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parameters [C++], function
 - functions [C], parameters
 - function parameters, syntax
-- ellipses (...), parameters
+- ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: f2fd4b49e08149f8ea5ce8fa6af46da39907dcf9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 78ad91ea86d81a3b6d888335ba7b78399a1d2aea
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857043"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032066"
 ---
 # <a name="parameters"></a>參數
 
@@ -25,25 +25,25 @@ ms.locfileid: "74857043"
 
 ## <a name="syntax"></a>語法
 
-*function-definition*:<br/>
+*函式定義*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**屬性-seq*是 Microsoft 特定 \*/
+/\**屬性-seq*是 Microsoft 特有的\*/
 
-*declarator*：<br/>
+宣告*子：*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* 函式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新樣式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 過時樣式宣告子 \*/
+*direct*宣告子：/\*函式宣告子\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **（***參數-類型清單***）**  / \*新樣式的宣告子      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*直接*宣告子 **（***識別碼清單*<sub>opt</sub> **）**  / \*過時樣式的宣告子    \*/
 
-*parameter-type-list*: /\* 參數清單 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+*參數-類型-清單*：/\*參數清單\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數清單* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數清單* **，...**
 
-*parameter-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
+*參數清單*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數宣告*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*參數-清單* **、***參數*宣告  
 
 *parameter-declaration*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *宣告子*<br/>
@@ -66,7 +66,7 @@ void new( double x, double y, double z )
 }
 ```
 
-如果參數清單中至少有一個參數出現，則清單的結尾可以是逗號，後面接著三個句號（ **，...** ）。這個結構稱為「省略號標記法」，表示函式的引數數目不定。 （如需詳細資訊，請參閱[使用可變數目的引數呼叫](../c-language/calls-with-a-variable-number-of-arguments.md)）。不過，呼叫函式的引數必須至少與最後一個逗號前面的參數數目相同。
+如果參數清單中至少有一個參數出現，則清單的結尾可以是逗號，後面接著三個句號（**，...**）。這個結構稱為「省略號標記法」，表示函式的引數數目不定。 （如需詳細資訊，請參閱[使用可變數目的引數呼叫](../c-language/calls-with-a-variable-number-of-arguments.md)）。不過，呼叫函式的引數必須至少與最後一個逗號前面的參數數目相同。
 
 如果沒有要傳遞至函式的引數，則參數清單會以關鍵字 `void` 取代。 這種 `void` 用法與其做為類型指定名稱的用法不同。
 

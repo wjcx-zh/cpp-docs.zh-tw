@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0bdd6556df892e5e231919dbc4ae95d14a6f95fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419718"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373621"
 ---
 # <a name="numpunct-class"></a>numpunct 類別
 
-類別樣板，描述可以做為本機 facet 的物件，以描述用來表示數值和布林運算式格式和標點符號相關資訊 `CharType` 類型的序列。
+一個類範本,用於描述可用作局部面的物件,用於描述有關數位和布爾表達式的格式和`CharType`標點的資訊的類型序列。
 
 ## <a name="syntax"></a>語法
 
@@ -50,12 +50,12 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*字元類型*\
 程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
 
 ### <a name="constructors"></a>建構函式
 
@@ -76,22 +76,22 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|傳回地區設定特定項目以做為小數點。|
 |[do_decimal_point](#do_decimal_point)|受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。|
-|[do_falsename](#do_falsename)|受保護的虛擬成員函式，呼叫以傳回字串，做為**false**值的文字表示。|
+|[do_falsename](#do_falsename)|被呼叫以返回字串以用作值**false**的文本表示形式的保護虛擬成員函數。|
 |[do_grouping](#do_grouping)|受保護的虛擬成員函式，呼叫以傳回決定如何將數字群組在小數點左側的地區設定特定規則。|
 |[do_thousands_sep](#do_thousands_sep)|受保護的虛擬成員函式，呼叫以傳回要做為千位分隔符號的地區設定特定項目。|
 |[do_truename](#do_truename)|受保護的虛擬成員函式，呼叫以傳回要當做 **true** 值的文字表示的字串。|
 |[falsename](#falsename)|傳回字串，做為 **false** 值的文字表示。|
-|[grouping](#grouping)|傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。|
+|[群組](#grouping)|傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。|
 |[thousands_sep](#thousands_sep)|傳回地區設定特定項目以做為千位分隔符號。|
 |[truename](#truename)|傳回字串，做為 **true** 值的文字表示。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<地區設定 >
+**標頭︰** \<locale>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="char_type"></a>  numpunct::char_type
+## <a name="numpunctchar_type"></a><a name="char_type"></a>數位::char_type
 
 類型，用來描述由地區設定使用的字元。
 
@@ -101,9 +101,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **CharType** 同義。
+類型是範本參數**CharType**的同義詞。
 
-## <a name="decimal_point"></a>  numpunct::decimal_point
+## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a>數位::d次]點
 
 傳回地區設定特定項目以做為小數點。
 
@@ -146,7 +146,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="do_decimal_point"></a>  numpunct::do_decimal_point
+## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a>數位::d奧多數點
 
 受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。
 
@@ -160,9 +160,9 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="example"></a>範例
 
-請參閱 [decimal_point](#decimal_point) 的範例，其中 `decimal_point` 會呼叫虛擬成員函式。
+請參閱 [decimal_point](#decimal_point) 的範例，其中會由 `decimal_point` 呼叫此虛擬成員函式。
 
-## <a name="do_falsename"></a>  numpunct::do_falsename
+## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a>numpunct::do_假名
 
 受保護的虛擬成員函式，傳回當作 **false** 值的文字表示的序列。
 
@@ -182,7 +182,7 @@ virtual string_type do_falsename() const;
 
 請參閱 [falsename](#falsename) 的範例，其中 `falsename` 會呼叫虛擬成員函式。
 
-## <a name="do_grouping"></a>  numpunct::do_grouping
+## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a>數位::do_分組
 
 受保護的虛擬成員函式，呼叫以傳回決定如何將數字群組在小數點左側的地區設定特定規則。
 
@@ -200,9 +200,9 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-請參閱[群組](#grouping)的範例，其中 `grouping`會呼叫虛擬成員函式。
+請參閱[分組的示例](#grouping),其中虛擬成員函`grouping`數由 調用。
 
-## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
+## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>數位::do_千_sep
 
 受保護的虛擬成員函式，呼叫以傳回要做為千位分隔符號的地區設定特定項目。
 
@@ -216,13 +216,13 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會傳回 `CharType` 類型的地區設定特定元素，以做為任何小數點左邊的群組分隔符號。
+受保護的虛擬成員函數返回特定於區域設置的類型`CharType`元素,以用作任何小數點左側的組分隔符。
 
 ### <a name="example"></a>範例
 
-請參閱 [thousands_sep](#thousands_sep) 的範例，其中 `thousands_sep` 會呼叫虛擬成員函式。
+請參閱 [thousands_sep](#thousands_sep) 的範例，其中會由 `thousands_sep` 呼叫此虛擬成員函式。
 
-## <a name="do_truename"></a>  numpunct::do_truename
+## <a name="numpunctdo_truename"></a><a name="do_truename"></a>numpunct::do_truename
 
 受保護的虛擬成員函式，呼叫以傳回要當做 **true** 值的文字表示的字串。
 
@@ -240,7 +240,7 @@ virtual string_type do_truename() const;
 
 請參閱 [truename](#truename) 的範例，其中 `truename` 會呼叫虛擬成員函式。
 
-## <a name="falsename"></a>  numpunct::falsename
+## <a name="numpunctfalsename"></a><a name="falsename"></a>數位::假名
 
 傳回字串，做為 **false** 值的文字表示。
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>傳回值
 
-字串，包含要用來做為值**false**之文字表示的 `CharType`序列。
+包含用於用作值`CharType`**false**的文本表示表示的序列的字串。
 
 ### <a name="remarks"></a>備註
 
@@ -289,7 +289,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="grouping"></a>  numpunct::grouping
+## <a name="numpunctgrouping"></a><a name="grouping"></a>數字::群組
 
 傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。
 
@@ -335,7 +335,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunct"></a>  numpunct::numpunct
+## <a name="numpunctnumpunct"></a><a name="numpunct"></a>數字::numpunct
 
 `numpunct` 類型物件的建構函式。
 
@@ -350,19 +350,19 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數和其重要性的可能值為：
+*_Refs*參數的可能值及其顯著性為:
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
 - 1：物件的存留期必須以手動方式管理。
 
-- \> 1：未定義這些值。
+- \>1: 未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
-此函式會使用**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基底物件。
+建構函式用區域設定初始化其基本物件 **::**[分面](../standard-library/locale-class.md#facet_class)(`_Refs`。
 
-## <a name="string_type"></a>  numpunct::string_type
+## <a name="numpunctstring_type"></a><a name="string_type"></a>數位::string_type
 
 類型，描述包含 **CharType** 類型字元的字串。
 
@@ -372,9 +372,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)其物件可以儲存標點符號序列的複本。
+該類型描述了類範本的專門化[basic_string](../standard-library/basic-string-class.md)其物件可以存儲標點序列的副本。
 
-## <a name="thousands_sep"></a>  numpunct::thousands_sep
+## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a>數位::thousands_sep
 
 傳回地區設定特定項目以做為千位分隔符號。
 
@@ -417,7 +417,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="truename"></a>  numpunct::truename
+## <a name="numpuncttruename"></a><a name="truename"></a>數位::真名
 
 傳回字串，做為 **true** 值的文字表示。
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)\
-[facet 類別](../standard-library/locale-class.md#facet_class)\
+[\<區域設定>](../standard-library/locale.md)\
+[分面類](../standard-library/locale-class.md#facet_class)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

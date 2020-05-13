@@ -8,39 +8,39 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eca4d0357977bc7ef21063718c738ae5bd8e7431
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372741"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 
-這篇文章說明程式執行的序列化機制，提供在 Microsoft Foundation Class 程式庫 (MFC) 允許物件之間保存。
+本文介紹了 Microsoft 基礎類庫 (MFC) 中提供的序列化機制,該機制允許物件在程式運行之間保留。
 
-序列化是讀取或寫入的物件，或從永續性儲存體媒體，例如磁碟檔案的程序。 序列化是理想的情況下，它想要的地方來維護狀態的結構化資料 (例如C++類別或結構) 期間或之後執行程式。 使用 MFC 所提供的序列化物件，可讓此選項可在標準且一致的方式，減輕使用者需以手動方式執行檔案作業中發生。
+序列化是寫入或讀取物件到或從持久存儲媒體(如磁碟檔)寫入或讀取的過程。 序列化非常適合在程式執行期間或之後需要保持結構化數據的狀態(如C++類或結構)的情況。 使用 MFC 提供的序列化物件可以以標準和一致的方式執行此操作,從而免除使用者手動執行檔操作的需要。
 
-MFC 提供序列化的類別中的內建支援`CObject`。 因此，所有類別都衍生自`CObject`可以充分善用`CObject`的序列化通訊協定。
+MFC 為`CObject`類 中序列化提供內置支援。 因此,派生自`CObject`的所有類都可以利用`CObject`的序列化協定。
 
-序列化的基本概念是物件應該能夠撰寫其目前的狀態，通常由其成員變數，永續性儲存體的值。 稍後，您可以重新透過讀取或是還原序列化物件的狀態，從儲存體，建立物件。 序列化會處理物件指標和循環參考物件時序列化物件所使用的所有詳細的資料。 重點是物件本身會負責讀取和寫入自己的狀態。 因此，對於為可序列化的類別，就必須實作基本的序列化作業。 序列化系列文件所示，很容易將這項功能新增至類別。
+序列化的基本思想是,對象應該能夠將其當前狀態(通常由其成員變數的值指示)寫入持久存儲。 稍後,可以通過從存儲中讀取或反序列化對象的狀態來重新創建物件。 序列化處理物件指標和對物件序列化時使用的物件的迴圈引用的所有詳細資訊。 關鍵點是物件本身負責讀取和寫入自己的狀態。 因此,要對類進行序列化,必須實現基本的序列化操作。 如文章的序列化組所示,可以輕鬆地將此功能添加到類中。
 
-MFC 使用的物件`CArchive`做為媒介之間進行序列化的物件 」 和 「 儲存體中的類別。 這個物件會永遠與相關聯`CFile`物件，而取得必要的資訊進行序列化，包括檔案名稱，以及要求的作業是讀取或寫入。 執行序列化作業的物件可以使用`CArchive`物件而不是儲存媒體的本質。
+MFC`CArchive`使用 類的物件作為要序列化的物件和存儲介質之間的仲介。 此物件始終與`CFile`物件關聯,從該物件獲取序列化所需的資訊,包括檔名以及請求的操作是讀取還是寫入。 執行序列化操作的物件可以使用該物件,`CArchive`而不考慮儲存媒體的性質。
 
-A`CArchive`物件使用多載的插入 (**<\<**) 和擷取 (**>>**) 運算子，以執行寫入和讀取作業。 如需詳細資訊，請參閱 <<c0> [ 中儲存及載入 CObjects，透過封存](../mfc/storing-and-loading-cobjects-via-an-archive.md)序列化 」 文件中：序列化物件。
+物件`CArchive`使用重載插入**<**(**>>**) 和提取 ( ) 運算子來執行寫入和讀取操作。 有關詳細資訊,請參閱在"序列化:序列化"一文中[通過存檔存儲和載入 CObject。](../mfc/storing-and-loading-cobjects-via-an-archive.md)
 
 > [!NOTE]
->  請勿混淆`CArchive`類別與一般用途的 iostream 類別，適用於格式化的純文字。 `CArchive`類別適用於二進位格式序列化的物件。
+> 不要將`CArchive`類與通用 iostream 類混淆,這些類僅用於格式化文本。 該`CArchive`類適用於二進位格式的序列化物件。
 
-如果您想，您可以略過 MFC 序列化，以建立您自己的機制來儲存永續性資料。 您必須覆寫起始使用者的命令在序列化的類別成員函式。 請參閱中的討論[技術提示 22](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN、 ID_FILE_SAVE 和 ID_FILE_SAVE_AS 標準命令。
+如果需要,可以繞過 MFC 序列化,為持久數據存儲創建自己的機制。 您需要重寫在使用者命令下啟動序列化的類成員函數。 請參閱ID_FILE_OPEN、ID_FILE_SAVE和ID_FILE_SAVE_AS標準命令[的技術說明 22](../mfc/tn022-standard-commands-implementation.md)中的討論。
 
-下列文章涵蓋序列化所需的兩個主要工作：
+以下文章介紹序列化所需的兩項主要任務:
 
 - [序列化：建立可序列化的類別](../mfc/serialization-making-a-serializable-class.md)
 
 - [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
 
-發行項[序列化：序列化與資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化時已適當輸入/輸出的技術資料庫應用程式。
+文章[序列化:序列化與資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化是資料庫應用程式中適當的輸入/輸出技術。
 
 ## <a name="see-also"></a>另請參閱
 

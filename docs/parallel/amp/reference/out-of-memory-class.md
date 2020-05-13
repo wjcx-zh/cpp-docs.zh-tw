@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e716d4952bdb9634cc0d195285d3a65c5c06b0a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126444"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336810"
 ---
 # <a name="out_of_memory-class"></a>out_of_memory 類別
 
-當方法因為缺乏系統或裝置記憶體而失敗時，所擲回的例外狀況。
+當方法因缺少系統或設備記憶體而失敗時引發的異常。
 
 ## <a name="syntax"></a>語法
 
@@ -31,9 +31,9 @@ class out_of_memory : public runtime_exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[out_of_memory 的構造函式](#ctor)|初始化 `out_of_memory` 類別的新執行個體。|
+|[out_of_memory建構函數](#ctor)|將 `out_of_memory` 類別的新執行個體初始化。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `exception`
 
@@ -43,12 +43,13 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amprt。h
+**標題:** amprt.h
 
 **命名空間：** 並行
-## <a name="ctor"></a>out_of_memory
 
-初始化  類別的新執行個體。
+## <a name="out_of_memory"></a><a name="ctor"></a>out_of_memory
+
+初始化類別的新執行個體。
 
 ### <a name="syntax"></a>語法
 
@@ -70,4 +71,4 @@ out_of_memory () throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[併發命名空間(C++ AMP)](concurrency-namespace-cpp-amp.md)

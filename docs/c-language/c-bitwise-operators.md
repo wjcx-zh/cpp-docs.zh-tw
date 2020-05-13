@@ -21,15 +21,15 @@ ms.locfileid: "80168769"
 ---
 # <a name="c-bitwise-operators"></a>C 位元運算子
 
-位元運算子會執行位元 AND ( **&** )、位元互斥 OR ( **^** ) 與 bitwise-inclusive-OR ( **&#124;** ) 運算。
+位運算子會執行位 AND （**&**）、位互斥 or （**^**）和位包含 or （**&#124;**）運算。
 
 ## <a name="syntax"></a>語法
 
-*和-expression*： &nbsp;&nbsp;*等號比較運算式*&nbsp;&nbsp;*和-expression* **&** *等號比較運算式*
+*和-* expression： &nbsp; &nbsp;*等號運算式* &nbsp; &nbsp;*和運算式* **&** *等號*運算式
 
-*EXCLUSIVE 或-expression*： &nbsp;&nbsp;*和-expression* &nbsp;&nbsp;*exclusive 或運算式* **^** *和-運算式*
+*互斥 or*運算式： &nbsp; &nbsp;*和運算式* &nbsp; &nbsp;*互斥 or* **^** *運算式*
 
-*內含-或-運算式*： &nbsp;&nbsp;*獨佔或*運算式 &nbsp;&nbsp;*包含或運算式* &#124; *獨佔或運算式*
+*內含 or 運算式*： &nbsp; &nbsp;*獨佔* &nbsp; &nbsp;或運算式*內含*或運算式 &#124;*互斥或*運算式
 
 位元運算子的運算元必須是整數類型，但其類型可以不同。 這些運算子會執行一般算術轉換；結果類型是運算元在轉換之後的類型。
 
@@ -63,7 +63,7 @@ n = i ^ j;
 
 第二個範例中的位元包含 OR 會產生值 0xABCD (十六進位)，而第三個範例中的位元互斥 OR 產生 0xCD (十六進位)。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 在帶正負號的整數上執行位元運算的結果是根據 ANSI C 標準實作定義。 針對 Microsoft C 編譯器，帶正負號整數的位元運算運作方式，與不帶正負號整數的位元運算相同。 例如，`-16 & 99` 可以用二進位運算式表示為
 
@@ -76,10 +76,10 @@ n = i ^ j;
 
 位元 AND 的結果是 96 (十進位)。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [位元 AND 運算子：&](../cpp/bitwise-and-operator-amp.md)<br/>
-[位元互斥 OR 運算子：^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[位互斥 OR 運算子： ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
 [位元包含 OR 運算子：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

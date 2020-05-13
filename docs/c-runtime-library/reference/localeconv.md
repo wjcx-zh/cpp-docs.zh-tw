@@ -1,8 +1,9 @@
 ---
 title: localeconv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - localeconv
+- _o_localeconv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: ca7113903e1ed6e9ffb94bef79beba41e09bfb71
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953353"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916400"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -45,7 +47,7 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>傳回值
 
-**localeconv**會傳回[結構 lconv](../../c-runtime-library/standard-types.md)類型之實心物件的指標。 物件中包含的值會從執行緒區域儲存區中的地區設定複製，並可由後續呼叫**localeconv**來覆寫。 對這個物件中的值所做的變更不會修改地區設定。 呼叫具有**LC_ALL**、 **LC_MONETARY**或**LC_NUMERIC** *分類*值的[setlocale](setlocale-wsetlocale.md)會覆寫結構的內容。
+**localeconv**會傳回[結構 lconv](../../c-runtime-library/standard-types.md)類型之實心物件的指標。 物件中包含的值會從執行緒區域儲存區中的地區設定複製，並可由後續呼叫**localeconv**來覆寫。 對這個物件中的值所做的變更不會修改地區設定。 呼叫具有**LC_ALL**、 **LC_MONETARY**或**LC_NUMERIC** *分類*值的[setlocale](setlocale-wsetlocale.md) ，會覆寫結構的內容。
 
 ## <a name="remarks"></a>備註
 
@@ -53,16 +55,16 @@ struct lconv *localeconv( void );
 
 |欄位|意義|
 |-|-|
-decimal_point,<br/>_W_decimal_point|非貨幣數量的小數點字元指標。
-thousands_sep,<br/>_W_thousands_sep|字元的指標，用來分隔非貨幣數量的小數點左邊數位群組。
+decimal_point、<br/>_W_decimal_point|非貨幣數量的小數點字元指標。
+thousands_sep、<br/>_W_thousands_sep|字元的指標，用來分隔非貨幣數量的小數點左邊數位群組。
 群組|**Char**大小的整數指標，其中包含非貨幣數量中每個數位群組的大小。
-int_curr_symbol,<br/>_W_int_curr_symbol|目前地區設定的國際貨幣符號指標。 前三個字元依照「ISO 4217 貨幣和資金代碼」標準的定義，指定字母國際貨幣符號。 第四個字元 (緊接在 Null 字元之前) 會分隔國際貨幣符號與貨幣的數量。
-currency_symbol,<br/>_W_currency_symbol|目前地區設定的當地貨幣符號指標。
-mon_decimal_point,<br/>_W_mon_decimal_point|貨幣數量之小數點字元的指標。
-mon_thousands_sep,<br/>_W_mon_thousands_sep|貨幣數量中小數點左邊數位群組的分隔符號指標。
+int_curr_symbol、<br/>_W_int_curr_symbol|目前地區設定的國際貨幣符號指標。 前三個字元依照「ISO 4217 貨幣和資金代碼」** 標準的定義，指定字母國際貨幣符號。 第四個字元 (緊接在 Null 字元之前) 會分隔國際貨幣符號與貨幣的數量。
+currency_symbol、<br/>_W_currency_symbol|目前地區設定的當地貨幣符號指標。
+mon_decimal_point、<br/>_W_mon_decimal_point|貨幣數量之小數點字元的指標。
+mon_thousands_sep、<br/>_W_mon_thousands_sep|貨幣數量中小數點左邊數位群組的分隔符號指標。
 mon_grouping|**Char**大小的整數指標，其中包含貨幣數量中每個數位群組的大小。
-positive_sign,<br/>_W_positive_sign|表示非負值貨幣數量之正負號的字串。
-negative_sign,<br/>_W_negative_sign|表示負值貨幣數量之正負號的字串。
+positive_sign、<br/>_W_positive_sign|表示非負值貨幣數量之正負號的字串。
+negative_sign、<br/>_W_negative_sign|表示負值貨幣數量之正負號的字串。
 int_frac_digits|國際格式化貨幣數量之小數點右邊的數字數目。
 frac_digits|格式化貨幣數量之小數點右邊的數字數目。
 p_cs_precedes|如果貨幣符號在非負值格式化貨幣數量的值之前，請設定為 1。 如果符號在值之後，請設定為 0。
@@ -72,7 +74,7 @@ n_sep_by_space|如果貨幣符號與負值格式化貨幣數量之間以空格�
 p_sign_posn|非負值格式化貨幣數量的正號位置。
 n_sign_posn|負值的格式化貨幣數量的正號位置。
 
-除了指定以外，具有`char *`和`wchar_t *`版本之**lconv**結構的成員是指向字串的指標。 其中任何等於 **""** （或**wchar_t** <strong>\*</strong>的**L "** "）的任何都是零長度，或在目前的地區設定中不受支援。 請注意， **decimal_point**和 **_W_decimal_point**一律受支援且長度不為零。
+除了指定以外，具有`char *`和`wchar_t *`版本之**lconv**結構的成員是指向字串的指標。 上述任何一項都等於 **""** （或**wchar_t** <strong>\*</strong>的**L ""** ），其長度為零，或在目前的地區設定中不受支援。 請注意， **decimal_point**和 **_W_decimal_point**一律受支援且長度不為零。
 
 結構的**char**成員是小型非負數值，而不是字元。 任何一項若等於 **CHAR_MAX**，則其於目前地區設定中不受支援。
 
@@ -86,7 +88,7 @@ n_sign_posn|負值的格式化貨幣數量的正號位置。
 
 **int_curr_symbol** 的值會根據下列規則解釋：
 
-- 前三個字元依照「ISO 4217 貨幣和資金代碼」標準之定義，指定字母國際貨幣符號。
+- 前三個字元依照「ISO 4217 貨幣和資金代碼」** 標準之定義，指定字母國際貨幣符號。
 
 - 第四個字元 (緊接在 Null 字元之前) 會分隔國際貨幣符號與貨幣的數量。
 
@@ -114,6 +116,8 @@ n_sign_posn|負值的格式化貨幣數量的正號位置。
 
 - 4-符號字串緊接在貨幣符號之後。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
@@ -128,8 +132,8 @@ n_sign_posn|負值的格式化貨幣數量的正號位置。
 
 ## <a name="see-also"></a>另請參閱
 
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

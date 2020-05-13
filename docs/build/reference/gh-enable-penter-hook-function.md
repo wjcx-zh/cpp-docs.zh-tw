@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-ms.openlocfilehash: bf7734a7b81c9550c060d43c2eabf5cb05332407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87815b5f0e0450b84acbe3c35b7ef4f31216ec72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292577"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749288"
 ---
-# <a name="gh-enable-penter-hook-function"></a>/Gh (啟用 _penter 攔截函式)
+# <a name="gh-enable-_penter-hook-function"></a>/Gh (啟用 _penter 攔截函式)
 
-導致呼叫`_penter`開頭的每個方法或函式的函式。
+在每個方法或函數的`_penter`開頭對函數進行調用。
 
 ## <a name="syntax"></a>語法
 
@@ -28,33 +28,33 @@ ms.locfileid: "62292577"
 
 ## <a name="remarks"></a>備註
 
-`_penter`函式不是任何文件庫的一部分，且它可以決定是否要提供的定義`_penter`。
+該`_penter`函數不是任何庫的一部分,由您`_penter`提供的定義。
 
-除非您計劃會明確地呼叫`_penter`，您不需要提供原型。 如同它已有下列的原型，並必須推送的所有暫存器內容項目，並在結束 pop 未變更的內容，必須出現函式：
+除非您計劃顯式調用`_penter`,否則不需要提供原型。 該函數必須顯示為具有以下原型,並且必須在輸入時推送所有寄存器的內容,並在退出時彈出未更改的內容:
 
-```
+```cpp
 void __declspec(naked) __cdecl _penter( void );
 ```
 
-這個宣告不是適用於 64 位元專案。
+此聲明不適用於 64 位元專案。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 按一下 [C/C++] **** 資料夾。
 
-1. 按一下 [命令列]  屬性頁。
+1. 按一下 [命令列] **** 屬性頁。
 
-1. 在 [其他選項]  方塊中，輸入編譯器選項。
+1. 在 [其他選項] **** 方塊中，輸入編譯器選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>＞。
 
 ## <a name="example"></a>範例
 
-下列程式碼，以編譯時 **/Gh**，顯示如何`_penter`兩次; 呼叫一次輸入函式時`main`一次輸入函式時`x`。
+使用 **/Gh**編譯時,以下代碼顯示`_penter`了如何 調用兩次;一次,當`main`進入函數和一`x`次 當進入函數。
 
 ```cpp
 // Gh_compiler_option.cpp

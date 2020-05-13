@@ -7,12 +7,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372073"
 ---
 # <a name="plus-struct"></a>plus 結構
 
@@ -20,7 +20,7 @@ ms.locfileid: "68240499"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -39,14 +39,14 @@ struct plus<void>
 
 ### <a name="parameters"></a>參數
 
-*型別*， *T*， *U*\
+*型態*, *T*, *U*\
 支援二元 `operator+` (接受指定或推斷類型的運算元) 的類型。
 
-*左邊*\
-加法運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
+*離開*\
+加法運算的左運算元。 非專用範本採用*類型 Type*的 lvalue 引用參數。 專用範本對推斷型*T*的lvalue和rvalue引用參數進行了完美的轉發。
 
-*權限*\
-加法運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
+*對*\
+加法運算的右運算元。 非專用範本採用*類型 Type*的 lvalue 引用參數。 專用範本對推斷型*U*的lvalue和rvalue引用參數進行了完美的轉發。
 
 ## <a name="return-value"></a>傳回值
 

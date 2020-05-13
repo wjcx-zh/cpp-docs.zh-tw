@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: fb764dbd71d89ae3317816df3539c2881b9695b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322307"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751486"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和遞色點陣圖函式
 
@@ -40,11 +40,11 @@ MFC 也提供兩個函式將點陣圖的背景取代為遞色圖樣。
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|繪製遞色背景的點陣圖。|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|複製遞色背景的點陣圖。|
 
-##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDraw灰色位圖
 
 繪製點陣圖的灰色版本。
 
-```
+```cpp
 void AFXAPI AfxDrawGrayBitmap(
     CDC* pDC,
     int x,
@@ -61,13 +61,13 @@ void AFXAPI AfxDrawGrayBitmap(
 *x*<br/>
 目的地 x 座標。
 
-*y*<br/>
+*Y*<br/>
 目的地 y 座標。
 
 *rSrc*<br/>
 來源點陣圖。
 
-*crBackground*<br/>
+*cr 背景*<br/>
 新的背景色彩 (通常是灰色，例如 COLOR_MENU)。
 
 ### <a name="remarks"></a>備註
@@ -84,11 +84,11 @@ void AFXAPI AfxDrawGrayBitmap(
 
 **標題:** afxwin.h
 
-##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGet格雷比特圖
 
 複製點陣圖的灰色版本。
 
-```
+```cpp
 void AFXAPI AfxGetGrayBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -103,7 +103,7 @@ void AFXAPI AfxGetGrayBitmap(
 *pDest*<br/>
 目的點陣圖。
 
-*crBackground*<br/>
+*cr 背景*<br/>
 新的背景色彩 (通常是灰色，例如 COLOR_MENU)。
 
 ### <a name="remarks"></a>備註
@@ -120,11 +120,11 @@ void AFXAPI AfxGetGrayBitmap(
 
 **標題:** afxwin.h
 
-##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap
 
-繪製點陣圖，它的背景取代為遞色 （檢查程式） 模式。
+繪製點陣圖,將其背景替換為抖抖(跳棋)圖案。
 
-```
+```cpp
 void AFXAPI AfxDrawDitheredBitmap(
     CDC* pDC,
     int x,
@@ -142,7 +142,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 *x*<br/>
 目的地 x 座標。
 
-*y*<br/>
+*Y*<br/>
 目的地 y 座標。
 
 *rSrc*<br/>
@@ -156,7 +156,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 ### <a name="remarks"></a>備註
 
-含有兩個色彩的目的地 DC 上繪製的來源點陣圖 (*cr1*並*cr2*) 棋盤式的圖樣取代點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。
+源點陣圖在目標 DC 上繪製,其雙色 *(cr1*和*cr2)* 格格模式取代了位圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。
 
 ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "遞色和原本圖示版本的比較")
 
@@ -168,11 +168,11 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 **標題:** afxwin.h
 
-##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap
 
 複製點陣圖，以遞色 (檢查程式) 樣式取代它的背景。
 
-```
+```cpp
 void AFXAPI AfxGetDitheredBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -196,7 +196,7 @@ void AFXAPI AfxGetDitheredBitmap(
 
 ### <a name="remarks"></a>備註
 
-來源點陣圖複製到目的地點陣圖與兩個色彩 (*cr1*並*cr2*) 棋盤式的圖樣，取代來源點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。
+源點圖以雙色 *(cr1*和*cr2)* 的方格模式複製到目標位圖,取代來源位圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。
 
 ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
 

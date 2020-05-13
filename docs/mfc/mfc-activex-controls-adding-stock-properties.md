@@ -9,37 +9,37 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16bdfddf0c028bc6a312767844b38c58c942d56e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225339"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364667"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控制項：加入內建屬性
 
-內建屬性與不同的自訂屬性的類別已實作`COleControl`。 `COleControl` 包含支援控制項的通用屬性的預先定義的成員函式。 某些常見的屬性包含控制項的標題和前景和背景色彩。 如需其他內建的屬性資訊，請參閱[加入屬性精靈 所支援的內建屬性](#_core_stock_properties_supported_by_classwizard)本文稍後。 內建屬性一律會加 DISP_STOCKPROP 分派對應項目。
+股票屬性與自定義屬性不同,因為它們已由類`COleControl`實現。 `COleControl`包含支援控制項的通用屬性的預定義成員函數。 一些常見屬性包括控制項的標題以及前景和背景顏色。 有關其他股票屬性的資訊,請參閱本文後面的[添加屬性精靈支援的股票屬性](#_core_stock_properties_supported_by_classwizard)。 股票屬性的調度映射條目始終由DISP_STOCKPROP來預定。
 
-這篇文章描述如何將 ActiveX 控制項，使用 [新增屬性精靈] 中的內建的屬性 （在此案例中，標題），並說明產生的程式碼修改。 主題包括：
+本文介紹如何使用添加屬性嚮導將股票屬性(本例中為標題)添加到 ActiveX 控件,並解釋生成的代碼修改。 主題包括：
 
-- [使用 [新增屬性精靈] 將內建屬性](#_core_using_classwizard_to_add_a_stock_property)
+- [使用新增屬性精靈加入股票屬性](#_core_using_classwizard_to_add_a_stock_property)
 
-- [加入屬性精靈變更內建屬性](#_core_classwizard_changes_for_stock_properties)
+- [新增股票屬性的屬性精靈變更](#_core_classwizard_changes_for_stock_properties)
 
-- [加入屬性精靈 所支援的內建屬性](#_core_stock_properties_supported_by_classwizard)
+- [新增屬性精靈支援的股票屬性](#_core_stock_properties_supported_by_classwizard)
 
-- [內建屬性和通知](#_core_stock_properties_and_notification)
+- [庫存屬性和通知](#_core_stock_properties_and_notification)
 
 - [色彩屬性](#_core_color_properties)
 
     > [!NOTE]
-    >  Visual Basic 自訂控制項通常會有屬性，例如頂端、 左邊、 寬度、 高度、 Align、 標記、 名稱、 TabIndex、 定位點和父代。 ActiveX 控制項容器，不過，要負責實作這些控制項的屬性，因此 ActiveX 控制項應支援這些屬性。
+    >  可視化基本自定義控制項通常具有諸如「頂部」、「左側」、「寬度」、「高度」、「對齊」、「標記」、「名稱」、「TabIndex」、「TabStop」和「父級」等屬性。 但是,ActiveX 控制容器負責實現這些控制屬性,因此 ActiveX 控件不應支援這些屬性。
 
-##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> 使用加入屬性精靈來加入內建屬性
+## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a>使用「新增屬性精靈」新增股票屬性
 
-加入內建屬性必須比新增自訂屬性，因為較少程式碼支援的屬性會自動處理`COleControl`。 下列程序示範如何將庫存 Caption 屬性對 ActiveX 控制項架構，並也可用來新增其他內建的屬性。 取代標題為選取的內建屬性名稱。
+新增股票屬性需要的代碼比新增自訂屬性少,因為對屬性的支援由 自動`COleControl`處理 。 以下過程演示了將股票標題屬性添加到 ActiveX 控制件框架,還可用於添加其他股票屬性。 將所選股票屬性名稱替換為標題。
 
-#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>若要新增內建的 Caption 屬性使用 加入屬性精靈
+#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>使用新增屬性精靈加入股票標題屬性
 
 1. 載入控制項專案。
 
@@ -47,56 +47,56 @@ ms.locfileid: "62225339"
 
 1. 在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。
 
-1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
+1. 在快捷選單中,按一下「**添加**」,然後按下「**添加屬性**」 。。
 
-   這會開啟[加入屬性精靈](../ide/names-add-property-wizard.md)。
+   這會開啟[新增屬性精靈](../ide/names-add-property-wizard.md)。
 
-1. 在 **屬性名稱**方塊中，按一下**標題**。
+1. 在 **「屬性名稱」** 框中,按下 **「標題**」。
 
-1. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
-##  <a name="_core_classwizard_changes_for_stock_properties"></a> 加入屬性精靈針對變更內建屬性
+## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a>新增股票屬性的屬性精靈變更
 
-因為`COleControl`支援內建屬性，加入屬性精靈不會變更以任何方式在類別宣告，它將屬性新增至分派對應。 加入屬性精靈 將下面這一行加入至控制項，其位於實作的分派對應 (。CPP) 檔案：
+由於`COleControl`支援股票屬性,因此添加屬性嚮導不會以任何方式更改類聲明;因此,不會更改類聲明。它將屬性添加到調度映射。 "添加屬性精靈"將以下行添加到位於實現 (的控制件的調度映射中)。CPP) 檔案:
 
 [!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]
 
-下面這一行新增至您的控制項介面的描述 (。IDL) 檔：
+以下行將添加到控件的介面說明 (。IDL) 檔案:
 
 [!code-cpp[NVC_MFC_AxUI#23](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]
 
-這一行會指派 Caption 屬性特定的識別碼。 請注意，屬性是可繫結，而且會向資料庫要求的權限之前修改值。
+此行為標題屬性分配特定 ID。 請注意,該屬性是可綁定的,將在修改值之前從資料庫請求許可權。
 
-這會 Caption 屬性提供給控制項的使用者。 若要使用的內建屬性的值，可存取的成員變數或成員函式`COleControl`基底類別。 如需有關這些成員變數和成員函式的詳細資訊，請參閱下一步 區段中，加入屬性精靈 所支援的內建屬性。
+這使標題屬性可供控制項的使用者使用。 要使用 stock 屬性的值,`COleControl`請使用 基類的成員變數或成員函數。 有關這些成員變數和成員函數的詳細資訊,請參閱下一節"添加屬性嚮導支援的股票屬性"。
 
-##  <a name="_core_stock_properties_supported_by_classwizard"></a> 內建支援的屬性加入屬性精靈
+## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a>新增屬性精靈支援的股票屬性
 
-`COleControl`類別提供九個內建的屬性。 您可以新增想要使用 [新增屬性精靈] 的屬性。
+該`COleControl`類提供九個股票屬性。 您可以使用「添加屬性嚮導」 添加所需的屬性。
 
-|屬性|分派對應項目|如何存取值|
+|屬性|排程對應項目|如何存取值|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|值為可存取`m_sAppearance`。|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|值，藉由呼叫可存取`GetBackColor`。|
-|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|值為可存取`m_sBorderStyle`。|
-|`Caption`|DISP_STOCKPROP_CAPTION( )|值，藉由呼叫可存取`InternalGetText`。|
-|`Enabled`|DISP_STOCKPROP_ENABLED( )|值為可存取`m_bEnabled`。|
-|`Font`|DISP_STOCKPROP_FONT( )|請參閱文章[MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)使用量。|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|值，藉由呼叫可存取`GetForeColor`。|
-|`hWnd`|DISP_STOCKPROP_HWND （)|值為可存取`m_hWnd`。|
-|`Text`|DISP_STOCKPROP_TEXT( )|值，藉由呼叫可存取`InternalGetText`。 這個屬性等同於`Caption`，除了屬性的名稱。|
-|`ReadyState`|DISP_STOCKPROP_READYSTATE()|值為可存取`m_lReadyState`或 `GetReadyState`|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE)|值可存`m_sAppearance`取為 。|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR)|可通過調用`GetBackColor`訪問的值。|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE)|值可存`m_sBorderStyle`取為 。|
+|`Caption`|DISP_STOCKPROP_CAPTION)|可通過調用`InternalGetText`訪問的值。|
+|`Enabled`|DISP_STOCKPROP_ENABLED)|值可存`m_bEnabled`取為 。|
+|`Font`|DISP_STOCKPROP_FONT( )|請參閱文章[MFC ActiveX 控制件:使用字體](../mfc/mfc-activex-controls-using-fonts.md)進行使用。|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR)|可通過調用`GetForeColor`訪問的值。|
+|`hWnd`|DISP_STOCKPROP_HWND)|值可存`m_hWnd`取為 。|
+|`Text`|DISP_STOCKPROP_TEXT)|可通過調用`InternalGetText`訪問的值。 此屬性與`Caption`相同,屬性名稱除外。|
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|值可存`m_lReadyState`取或或`GetReadyState`|
 
-##  <a name="_core_stock_properties_and_notification"></a> 內建屬性和通知
+## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a>股票屬性和通知
 
-大部分的內建屬性具有可覆寫通知函式。 例如，每當`BackColor`屬性變更時，`OnBackColorChanged`呼叫函式 （控制項類別的成員函式）。 預設實作 (在`COleControl`) 呼叫`InvalidateControl`。 如果您想要以這種情況的回應採取其他動作，請覆寫這個函式。
+大多數股票屬性具有可以重寫的通知函數。 例如,每當更改`BackColor`屬性時,`OnBackColorChanged`都會調用函數(控件類的成員函數)。 預設實現 (`COleControl`在`InvalidateControl`) 呼叫 。 如果要針對此情況執行其他操作,請重寫此函數。
 
-##  <a name="_core_color_properties"></a> 色彩屬性
+## <a name="color-properties"></a><a name="_core_color_properties"></a>色彩屬性
 
-您可以使用股票`ForeColor`和`BackColor`屬性或您自己的自訂色彩屬性，繪製控制項時。 若要使用的色彩屬性，呼叫[COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor)成員函式。 此函式的參數是 color 屬性和選用的調色盤控制代碼的值。 傳回值是**COLORREF**值，可以傳遞至 GDI 函式，例如`SetTextColor`和`CreateSolidBrush`。
+繪製控制項時,可以使用`ForeColor`股票`BackColor`和屬性或您自己的自訂顏色屬性。 要使用顏色屬性,請調用[COleControl::翻譯顏色](../mfc/reference/colecontrol-class.md#translatecolor)成員函數。 此函數的參數是顏色屬性的值和可選的調色板句柄。 傳回值是一個**COLORREF**值,可以傳遞給 GDI 函數,`SetTextColor`如`CreateSolidBrush`與 。
 
-內建的色彩值`ForeColor`並`BackColor`藉由呼叫其中一個存取屬性`GetForeColor`或`GetBackColor`分別函式。
+`ForeColor`通過分別調用`BackColor``GetForeColor``GetBackColor`或 函數來存取股票和屬性的顏色值。
 
-下列範例示範如何使用這些兩個色彩屬性，繪製控制項時。 它會初始化暫存**COLORREF**變數並`CBrush`呼叫的物件`TranslateColor`： 另一種使用`ForeColor`屬性和其他使用`BackColor`屬性。 暫存`CBrush`物件會被用來繪製控制項的矩形，並使用設定的文字色彩`ForeColor`屬性。
+下面的示例演示了在繪製控件時使用這兩個顏色屬性。 它初始化暫時的**COLORREF**變數`CBrush`和一個物件`TranslateColor`, 其中一`ForeColor`個使用 屬性呼`BackColor`叫 ,另一個使用 屬性。 然後,`CBrush`暫時物件用於繪製控制的矩形,並使用`ForeColor`屬性設定文字顏色。
 
 [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]
 

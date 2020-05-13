@@ -1,49 +1,49 @@
 ---
-title: 使用可置換的參數 （ATL 登錄器）
+title: 使用可取代的參數（ATL 註冊機構）
 ms.date: 11/04/2016
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-ms.openlocfilehash: 1c772c0493b351d8452400a4fb1e3949ab6f28f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: debbccea5836fa63282b62ff87573160069fb169
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274140"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168679"
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>使用可置換的參數 (在註冊機構&#39;s 前置處理器)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>使用可取代的參數（註冊機構&#39;s 預處理器）
 
-可置換的參數允許註冊機構的用戶端，來指定執行階段資料。 若要這樣做，註冊機構會維護取代對應至其中進入您的指令碼可置換的參數相關聯的值。 在註冊機構會讓這些項目，在執行階段。
+可取代的參數允許註冊機構的用戶端指定執行時間資料。 為此，註冊機構會維護一個取代對應，在其中輸入與您的腳本中可取代參數相關聯的值。 註冊機構會在執行時間建立這些專案。
 
-##  <a name="_atl_using_.25.module.25"></a> 使用 %模組
+## <a name="using-module"></a><a name="_atl_using_.25.module.25"></a>使用% MODULE%
 
-[ATL 控制項精靈](../atl/reference/atl-control-wizard.md)會自動產生的指令碼使用`%MODULE%`。 ATL 會使用此可置換的參數，您的伺服器 DLL 或 EXE 的實際位置。
+[ATL 控制項嚮導](../atl/reference/atl-control-wizard.md)會自動產生使用`%MODULE%`的腳本。 ATL 會針對您伺服器的 DLL 或 EXE 的實際位置使用這個可取代的參數。
 
-## <a name="concatenating-run-time-data-with-script-data"></a>串連指令碼資料的執行階段的資料
+## <a name="concatenating-run-time-data-with-script-data"></a>使用腳本資料串連執行時間資料
 
-前置處理器的另一個用途是要串連的指令碼資料的執行階段資料。 例如，假設 需要的項目包含的模組，以字串的完整路徑"`, 1`"附加在結尾。 首先，定義下列的擴充：
+預處理器的另一種用法是將執行時間資料與腳本資料串連在一起。 例如，假設需要一個專案，其中包含在結尾附加字串 "`, 1`" 之模組的完整路徑。 首先，定義下列擴充：
 
-```
+```rgs
 'MySampleKey' = s '%MODULE%, 1'
 ```
 
-然後，之前呼叫其中一個處理方法中所列的指令碼[叫用指令碼](../atl/invoking-scripts.md)，新增至對應的替代項目：
+然後，在呼叫叫用[腳本](../atl/invoking-scripts.md)中所列的其中一個腳本處理方法之前，新增對應的取代：
 
 [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/cpp/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]
 
-在指令碼剖析，註冊機構會展開`'%MODULE%, 1'`至`c:\mycode\mydll.dll, 1`。
+在剖析腳本期間，註冊機構會展開`'%MODULE%, 1'`至。 `c:\mycode\mydll.dll, 1`
 
 > [!NOTE]
->  登錄器指令碼中 4k 是權杖的大小上限。 （語彙基元是任何可辨識的項目語法中）。這包括建立或由前置處理器展開的權杖。
+> 在註冊機構腳本中，4K 是 token 大小的上限。 （Token 是語法中任何可辨識的元素）。這包括預處理器所建立或擴充的權杖。
 
 > [!NOTE]
->  若要取代取代值，在執行階段，呼叫的指令碼中移除[DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource)或是[DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid)巨集。 相反地，它取代您自己`UpdateRegistry`呼叫的方法[CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced)或是[CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)，並傳遞您的 _ATL_REGMAP_ 的陣列項目結構。 _ATL_REGMAP_ENTRY 您陣列必須有至少一個項目設為 {NULL，NULL}，且此項目應永遠為最後一個項目。 否則，將會發生存取違規錯誤時產生`UpdateRegistryFromResource`呼叫。
+> 若要在執行時間取代取代值，請移除腳本中對[DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid)宏的呼叫。 相反地，請將它取代`UpdateRegistry`為您自己的方法，它會呼叫[CAtlModule：： UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced)或[CAtlModule：： UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)，並傳遞 _ATL_REGMAP_ENTRY 結構的陣列。 您的 _ATL_REGMAP_ENTRY 陣列至少必須有一個設定為 {Null，Null} 的專案，而此專案應一律為最後一個專案。 否則，當呼叫時`UpdateRegistryFromResource` ，將會產生存取違規錯誤。
 
 > [!NOTE]
->  ATL 建置專案時，會輸出可執行檔，會自動將建立在執行階段使用的路徑名稱周圍加上引號 **%模組 %** 登錄器指令碼參數。 如果您不想要加上引號的路徑名稱，使用新**MODULE_RAW %** 參數改。
+> 建立輸出可執行檔的專案時，ATL 會自動在執行時間使用 **% MODULE%** 註冊機構腳本參數建立的路徑名稱前後加上引號。 如果您不想要路徑名稱包含引號，請改用新的 **% MODULE_RAW%** 參數。
 >
->  建置專案時，將輸出 DLL，ATL 會不加上引號的路徑名稱若**模組 %** 或是**MODULE_RAW %** 用。
+> 建立輸出 DLL 的專案時，如果使用 **% MODULE%** 或 **% MODULE_RAW%** ，ATL 將不會在路徑名稱加上引號。
 
 ## <a name="see-also"></a>另請參閱
 
-[建立登錄器指令碼](../atl/creating-registrar-scripts.md)
+[建立註冊機構腳本](../atl/creating-registrar-scripts.md)

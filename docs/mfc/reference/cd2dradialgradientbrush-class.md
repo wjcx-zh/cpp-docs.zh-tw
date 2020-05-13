@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396323"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750313"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 類別
 
-ID2D1RadialGradientBrush 包裝函式。
+用於 ID2D1 Radial 梯度畫筆的包裝器。
 
 ## <a name="syntax"></a>語法
 
@@ -61,80 +61,80 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|建構 CD2DLinearGradientBrush 物件。|
-|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|解構函式。 D2D 放射狀漸層筆刷物件正在被終結時呼叫。|
+|[CD2D 徑梯度刷::CD2D 半徑梯度刷](#cd2dradialgradientbrush)|建構 CD2D 線性漸變畫筆物件。|
+|[CD2D 徑梯度刷:*CD2D半徑梯度刷](#_dtorcd2dradialgradientbrush)|解構函式。 銷毀 D2D 徑向漸變畫筆物件時調用。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::Attach](#attach)|將現有的資源物件的介面|
-|[CD2DRadialGradientBrush::Create](#create)|建立 CD2DRadialGradientBrush。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|
-|[CD2DRadialGradientBrush::Destroy](#destroy)|終結 CD2DRadialGradientBrush 物件。 (覆寫[CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy)。)|
-|[CD2DRadialGradientBrush::Detach](#detach)|中斷連結物件中的資源介面|
-|[CD2DRadialGradientBrush::Get](#get)|傳回 ID2D1RadialGradientBrush 介面|
-|[CD2DRadialGradientBrush::GetCenter](#getcenter)|擷取漸層停駐的橢圓形的中心|
-|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|擷取相對於漸層停駐的橢圓形中心漸層原點的位移|
-|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|擷取漸層停駐的橢圓形的 x 半徑|
-|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|擷取漸層停駐的橢圓形的 y 半徑|
-|[CD2DRadialGradientBrush::SetCenter](#setcenter)|指定的筆刷座標空間中的漸層停駐的橢圓形的中心|
-|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|指定相對於漸層停駐的橢圓形中心漸層原點的位移|
-|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|指定的筆刷座標空間中的漸層停駐的橢圓形 x 半徑|
-|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|指定的筆刷座標空間中的漸層停駐的橢圓形 y 半徑|
+|[CD2D 輻射梯度畫筆::附加](#attach)|將現有資源介面附加到物件|
+|[CD2D 半徑漸層筆:建立](#create)|創建 CD2DRadial 漸變畫筆。 (覆寫[CD2D 資源:建立](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DRadial梯度刷::D](#destroy)|銷毀 CD2DRadial 梯度畫筆物件。 (覆蓋[CD2D 梯度畫筆::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
+|[CD2DRadial 梯度畫筆::D](#detach)|從物件分離資源介面|
+|[CD2D 半徑梯度畫筆:取得](#get)|傳回 ID2D1 徑向漸層線|
+|[CD2D 半徑梯度畫筆::獲取中心](#getcenter)|檢索漸變橢圓的中心|
+|[CD2D 半徑梯度畫筆::獲取梯度原點偏移](#getgradientoriginoffset)|檢索漸變原點的偏移量相對於漸變橢圓的中心|
+|[CD2D 半徑梯度畫筆::取得 RadiusX](#getradiusx)|檢索漸變橢圓的 x 半徑|
+|[CD2D 半徑梯度畫筆::獲取半徑](#getradiusy)|檢索漸變橢圓的 y 半徑|
+|[CD2D 半徑梯度畫筆::設置中心](#setcenter)|指定筆標空間中漸變橢圓的中心|
+|[CD2D 半徑梯度畫筆::設定漸變原點偏移](#setgradientoriginoffset)|指定漸變原點的偏移量相對於漸變橢圓的中心|
+|[CD2D 半徑梯度畫筆::SetRadiusX](#setradiusx)|在筆刷橢圓的 x 半徑|
+|[CD2D 半徑梯度畫筆::SetRadiusY](#setradiusy)|在筆刷橢圓的 y 半徑|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*](#operator_id2d1radialgradientbrush_star)|傳回 ID2D1RadialGradientBrush 介面|
+|[CD2D 輻射梯度畫筆::操作員 ID2D1 輻射梯度畫筆*](#operator_id2d1radialgradientbrush_star)|傳回 ID2D1 徑向漸層線|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|ID2D1RadialGradientBrush 指標。|
-|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Center、 漸層原點位移和 x 半徑和 y 半徑的筆刷的漸層停駐項目。|
+|[CD2D 輻射梯度畫筆::m_pRadialGradientBrush](#m_pradialgradientbrush)|指向 ID2D1 Radial 梯度畫筆的指標。|
+|[CD2D半徑梯度畫筆::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|畫筆漸變的中心、漸變原點偏移以及 x 半徑和 y 半徑。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 資源](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
-[CD2DGradientBrush](../../mfc/reference/cd2dgradientbrush-class.md)
+[CD2D 梯度畫筆](../../mfc/reference/cd2dgradientbrush-class.md)
 
 `CD2DRadialGradientBrush`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a>CD2D 徑梯度刷:*CD2D半徑梯度刷
 
-解構函式。 D2D 放射狀漸層筆刷物件正在被終結時呼叫。
+解構函式。 銷毀 D2D 徑向漸變畫筆物件時調用。
 
 ```
 virtual ~CD2DRadialGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach
+## <a name="cd2dradialgradientbrushattach"></a><a name="attach"></a>CD2D 輻射梯度畫筆::附加
 
-將現有的資源物件的介面
+將現有資源介面附加到物件
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pResource*<br/>
-現有的資源介面。 不能是 NULL
+*p資源*<br/>
+現有資源介面。 無法為 NULL
 
-##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a>CD2D 徑梯度刷::CD2D 半徑梯度刷
 
-建構 CD2DLinearGradientBrush 物件。
+建構 CD2D 線性漸變畫筆物件。
 
 ```
 CD2DRadialGradientBrush(
@@ -150,33 +150,33 @@ CD2DRadialGradientBrush(
 
 ### <a name="parameters"></a>參數
 
-*pParentTarget*<br/>
-到轉譯目標的指標。
+*p 父目標*<br/>
+指向渲染目標的指標。
 
-*gradientStops*<br/>
-D2D1_GRADIENT_STOP 結構陣列的指標。
+*梯度停止*<br/>
+指向D2D1_GRADIENT_STOP結構陣列的指標。
 
-*gradientStopsCount*<br/>
-值大於或等於 1，gradientStops 陣列中指定的漸層停駐點數目。
+*梯度停止計數*<br/>
+大於或等於 1 的值,用於指定漸變數組中的漸變停止數。
 
-*RadialGradientBrushProperties*<br/>
-Center、 漸層原點位移和 x 半徑和 y 半徑的筆刷的漸層停駐項目。
+*把漸層筆屬性*<br/>
+畫筆漸變的中心、漸變原點偏移以及 x 半徑和 y 半徑。
 
-*colorInterpolationGamma*<br/>
-在色彩漸層停駐點之間的內插補點會執行空間。
+*顏色插值伽馬*<br/>
+在漸變停止之間執行顏色插值的空間。
 
-*extendMode*<br/>
-正規化 [0，1] 範圍之外的漸層的行為。
+*擴充模式*<br/>
+漸變在 [0,1] 規範化範圍之外的行為。
 
-*pBrushProperties*<br/>
-不透明度和筆刷轉換指標。
+*pBrush 屬性*<br/>
+指向畫筆的不一用性和變換的指標。
 
-*bAutoDestroy*<br/>
-表示擁有者 (pParentTarget) 將會終結物件。
+*bAuto銷毀*<br/>
+指示物件將被擁有者(pParentTarget)銷毀。
 
-##  <a name="create"></a>  CD2DRadialGradientBrush::Create
+## <a name="cd2dradialgradientbrushcreate"></a><a name="create"></a>CD2D 半徑漸層筆:建立
 
-建立 CD2DRadialGradientBrush。
+創建 CD2DRadial 漸變畫筆。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -184,24 +184,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>參數
 
-*pRenderTarget*<br/>
-到轉譯目標的指標。
+*pRender 目標*<br/>
+指向渲染目標的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="destroy"></a>  CD2DRadialGradientBrush::Destroy
+## <a name="cd2dradialgradientbrushdestroy"></a><a name="destroy"></a>CD2DRadial梯度刷::D
 
-終結 CD2DRadialGradientBrush 物件。
+銷毀 CD2DRadial 梯度畫筆物件。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DRadialGradientBrush::Detach
+## <a name="cd2dradialgradientbrushdetach"></a><a name="detach"></a>CD2DRadial 梯度畫筆::D
 
-中斷連結物件中的資源介面
+從物件分離資源介面
 
 ```
 ID2D1RadialGradientBrush* Detach();
@@ -209,11 +209,11 @@ ID2D1RadialGradientBrush* Detach();
 
 ### <a name="return-value"></a>傳回值
 
-中斷連結的資源介面指標。
+指向分離的資源介面的指標。
 
-##  <a name="get"></a>  CD2DRadialGradientBrush::Get
+## <a name="cd2dradialgradientbrushget"></a><a name="get"></a>CD2D 半徑梯度畫筆:取得
 
-傳回 ID2D1RadialGradientBrush 介面
+傳回 ID2D1 徑向漸層線
 
 ```
 ID2D1RadialGradientBrush* Get();
@@ -221,11 +221,11 @@ ID2D1RadialGradientBrush* Get();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1RadialGradientBrush 介面的指標。
+如果物件尚未初始化,則指向 ID2D1Radial 梯度畫筆介面或 NULL 的指標。
 
-##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter
+## <a name="cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a>CD2D 半徑梯度畫筆::獲取中心
 
-擷取漸層停駐的橢圓形的中心
+檢索漸變橢圓的中心
 
 ```
 CD2DPointF GetCenter() const;
@@ -233,11 +233,11 @@ CD2DPointF GetCenter() const;
 
 ### <a name="return-value"></a>傳回值
 
-漸層停駐的橢圓形的中心。 這個值被表示的筆刷座標空間中
+漸變橢圓的中心。 此值在畫筆的座標空間中表示
 
-##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset
+## <a name="cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a>CD2D 半徑梯度畫筆::獲取梯度原點偏移
 
-擷取相對於漸層停駐的橢圓形中心漸層原點的位移
+檢索漸變原點的偏移量相對於漸變橢圓的中心
 
 ```
 CD2DPointF GetGradientOriginOffset() const;
@@ -245,11 +245,11 @@ CD2DPointF GetGradientOriginOffset() const;
 
 ### <a name="return-value"></a>傳回值
 
-從漸層停駐的橢圓形的中心漸層原點的位移。 這個值被表示的筆刷座標空間中
+漸變原點的偏移量來自漸變橢圓的中心。 此值在畫筆的座標空間中表示
 
-##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX
+## <a name="cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a>CD2D 半徑梯度畫筆::取得 RadiusX
 
-擷取漸層停駐的橢圓形的 x 半徑
+檢索漸變橢圓的 x 半徑
 
 ```
 FLOAT GetRadiusX() const;
@@ -257,11 +257,11 @@ FLOAT GetRadiusX() const;
 
 ### <a name="return-value"></a>傳回值
 
-漸層停駐的橢圓形 x 半徑。 這個值被表示的筆刷座標空間中
+漸變橢圓的 x 半徑。 此值在畫筆的座標空間中表示
 
-##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY
+## <a name="cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a>CD2D 半徑梯度畫筆::獲取半徑
 
-擷取漸層停駐的橢圓形的 y 半徑
+檢索漸變橢圓的 y 半徑
 
 ```
 FLOAT GetRadiusY() const;
@@ -269,27 +269,27 @@ FLOAT GetRadiusY() const;
 
 ### <a name="return-value"></a>傳回值
 
-漸層停駐的橢圓形 y 半徑。 這個值被表示的筆刷座標空間中
+漸變橢圓的 y 半徑。 此值在畫筆的座標空間中表示
 
-##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush
+## <a name="cd2dradialgradientbrushm_pradialgradientbrush"></a><a name="m_pradialgradientbrush"></a>CD2D 輻射梯度畫筆::m_pRadialGradientBrush
 
-ID2D1RadialGradientBrush 指標。
+指向 ID2D1 Radial 梯度畫筆的指標。
 
 ```
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;
 ```
 
-##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties
+## <a name="cd2dradialgradientbrushm_radialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a>CD2D半徑梯度畫筆::m_RadialGradientBrushProperties
 
-Center、 漸層原點位移和 x 半徑和 y 半徑的筆刷的漸層停駐項目。
+畫筆漸變的中心、漸變原點偏移以及 x 半徑和 y 半徑。
 
 ```
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;
 ```
 
-##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*
+## <a name="cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a>CD2D 輻射梯度畫筆::操作員 ID2D1 輻射梯度畫筆*
 
-傳回 ID2D1RadialGradientBrush 介面
+傳回 ID2D1 徑向漸層線
 
 ```
 operator ID2D1RadialGradientBrush*();
@@ -297,59 +297,59 @@ operator ID2D1RadialGradientBrush*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1RadialGradientBrush 介面的指標。
+如果物件尚未初始化,則指向 ID2D1Radial 梯度畫筆介面或 NULL 的指標。
 
-##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter
+## <a name="cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a>CD2D 半徑梯度畫筆::設置中心
 
-指定的筆刷座標空間中的漸層停駐的橢圓形的中心
+指定筆標空間中漸變橢圓的中心
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
-漸層停駐橢圓形，筆刷的座標空間中的中心
+*點*<br/>
+漸變橢圓的中心,位於畫筆的座標空間中
 
-##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset
+## <a name="cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a>CD2D 半徑梯度畫筆::設定漸變原點偏移
 
-指定相對於漸層停駐的橢圓形中心漸層原點的位移
+指定漸變原點的偏移量相對於漸變橢圓的中心
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
 ### <a name="parameters"></a>參數
 
-*gradientOriginOffset*<br/>
-從漸層停駐的橢圓形的中心漸層原點的位移
+*梯度原點偏移*<br/>
+漸變原點的偏移量來自漸變橢圓的中心
 
-##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX
+## <a name="cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a>CD2D 半徑梯度畫筆::SetRadiusX
 
-指定的筆刷座標空間中的漸層停駐的橢圓形 x 半徑
+在筆刷橢圓的 x 半徑
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
 ### <a name="parameters"></a>參數
 
-*radiusX*<br/>
-漸層停駐的橢圓形 x 半徑。 這個值是筆刷的座標空間中
+*半徑X*<br/>
+漸變橢圓的 x 半徑。 這個值位於畫筆的座標空間中
 
-##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY
+## <a name="cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a>CD2D 半徑梯度畫筆::SetRadiusY
 
-指定的筆刷座標空間中的漸層停駐的橢圓形 y 半徑
+在筆刷橢圓的 y 半徑
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 
 ### <a name="parameters"></a>參數
 
-*radiusY*<br/>
-漸層停駐的橢圓形 y 半徑。 這個值是筆刷的座標空間中
+*半徑Y*<br/>
+漸變橢圓的 y 半徑。 這個值位於畫筆的座標空間中
 
 ## <a name="see-also"></a>另請參閱
 

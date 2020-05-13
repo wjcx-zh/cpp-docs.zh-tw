@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: e5e6b0a22d438f9c26318129e2d04df96d386cda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1653e50fef03deb8eb23dd9a989d1ca2a529dd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391331"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755100"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 類別
 
@@ -39,17 +39,17 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationTimerEventHandler::CreateInstance](#createinstance)|建立的執行個體`CAnimationTimerEventHandler`回呼。|
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|處理動畫更新完成之後，會發生的事件。 (覆寫 `CUIAnimationTimerEventHandlerBase::OnPostUpdate`。)|
-|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|處理動畫更新開始之前發生的事件。 (覆寫 `CUIAnimationTimerEventHandlerBase::OnPreUpdate`。)|
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|處理動畫轉譯畫面播放速率低於最小的理想畫面播放速率時，會發生的事件。 (覆寫 `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`。)|
-|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|儲存路由事件的動畫控制器的指標。|
+|[動畫計時器事件處理程式::建立實體](#createinstance)|建立回檔實體`CAnimationTimerEventHandler`。|
+|[動畫計時器事件處理程式::在發佈更新](#onpostupdate)|處理動畫更新完成後發生的事件。 (覆寫 `CUIAnimationTimerEventHandlerBase::OnPostUpdate`。)|
+|[動畫計時器事件處理程式::打開預更新](#onpreupdate)|處理動畫更新開始之前發生的事件。 (覆寫 `CUIAnimationTimerEventHandlerBase::OnPreUpdate`。)|
+|[動畫計時器事件處理程式::開啟渲染速度](#onrenderingtooslow)|處理動畫渲染幀速率低於最低理想幀速率時發生的事件。 (覆寫 `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`。)|
+|[動畫計時器事件處理程式::設定動畫控制器](#setanimationcontroller)|存儲指向動畫控制器的指標以路由事件。|
 
 ## <a name="remarks"></a>備註
 
-建立並傳遞至 IUIAnimationTimer::SetTimerEventHandler，當您呼叫 CAnimationController::EnableAnimationTimerEventHandler 這個事件處理常式。
+此事件處理程式被建立並傳遞給 IUIAnimationTimer::當您調用 C動畫控制器::啟用動畫TimerEventHandler時,設置TimerEventHandler。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CUIAnimationCallbackBase`
 
@@ -61,9 +61,9 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance
+## <a name="canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>動畫計時器事件處理程式::建立實體
 
-建立 CAnimationTimerEventHandler 回呼的執行個體。
+創建 CAnimationTimer 事件處理程式回調的實體。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -73,18 +73,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>參數
 
-*pAnimationController*<br/>
-動畫控制器，會收到的事件指標。
+*動畫控制器*<br/>
+指向動畫控制器的指標,該控制器將接收事件。
 
 *ppTimerEventHandler*
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
+如果方法成功，它會傳回 S_OK。 否則,它將返回一個HRESULT錯誤代碼。
 
-##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate
+## <a name="canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>動畫計時器事件處理程式::在發佈更新
 
-處理動畫更新完成之後，會發生的事件。
+處理動畫更新完成後發生的事件。
 
 ```
 IFACEMETHOD(OnPostUpdate)();
@@ -92,9 +92,9 @@ IFACEMETHOD(OnPostUpdate)();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 S_OK否則 E_FAIL。
+如果方法成功,S_OK;否則E_FAIL。
 
-##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate
+## <a name="canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>動畫計時器事件處理程式::打開預更新
 
 處理動畫更新開始之前發生的事件。
 
@@ -104,11 +104,11 @@ IFACEMETHOD(OnPreUpdate)();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 S_OK否則 E_FAIL。
+如果方法成功,S_OK;否則E_FAIL。
 
-##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow
+## <a name="canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>動畫計時器事件處理程式::開啟渲染速度
 
-處理動畫轉譯畫面播放速率低於最小的理想畫面播放速率時，會發生的事件。
+處理動畫渲染幀速率低於最低理想幀速率時發生的事件。
 
 ```
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
@@ -116,24 +116,24 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 
 ### <a name="parameters"></a>參數
 
-*fps*
+*Fps*
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 S_OK否則 E_FAIL。
+如果方法成功,S_OK;否則E_FAIL。
 
-##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController
+## <a name="canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>動畫計時器事件處理程式::設定動畫控制器
 
-儲存路由事件的動畫控制器的指標。
+存儲指向動畫控制器的指標以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pAnimationController*<br/>
-動畫控制器，會收到的事件指標。
+*動畫控制器*<br/>
+指向動畫控制器的指標,該控制器將接收事件。
 
 ## <a name="see-also"></a>另請參閱
 

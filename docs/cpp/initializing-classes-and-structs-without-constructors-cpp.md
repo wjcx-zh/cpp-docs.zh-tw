@@ -1,14 +1,14 @@
 ---
-title: 類別、結構和等位的括弧初始化
-description: 對任何C++類別、結構或等位使用括弧初始化
+title: 為類別、結構和聯合進行初始化
+description: 將大括弧初始化與任何C++類、結構或聯合
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075886"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374067"
 ---
 # <a name="brace-initialization"></a>大括弧初始化
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-請注意，當類別或結構沒有任何函式時，您會以類別中宣告成員的順序提供清單元素。 如果類別有一個函式，請以參數的順序提供元素。 如果類型具有隱含或明確宣告的預設的處理常式，您可以使用預設的大括弧初始化（含空的大括弧）。 例如，您可以使用預設和非預設的大括弧初始化來初始化下列類別：
+請注意,當類或結構沒有構造函數時,您按在類中聲明成員的順序提供列表元素。 如果類具有構造函數,請按參數的順序提供元素。 如果類型具有預設構造函數(隱式或顯式聲明),則可以使用預設大括弧初始化(使用空大括弧)。 例如,可以使用預設和非預設大括弧初始化初始化以下類:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-如果類別具有非預設的處理常式，則類別成員在大括弧初始化運算式中出現的順序，就是對應參數出現在函式中的順序，而不是宣告成員的順序（如同上一個範例中的 `class_a`）。 否則，如果類型沒有宣告的函式，成員在大括弧初始化運算式中出現的順序會與宣告的順序相同。在此情況下，您可以視需要初始化多個公用成員，但不能略過任何成員。 下列範例顯示沒有宣告的函式時，在大括弧初始化中使用的順序：
+如果類具有非預設構造函數,則類成員在大括弧初始化器中顯示的順序是相應參數在構造函數中顯示的順序,而不是成員聲明的順序(如`class_a`上例所示)。 否則,如果類型沒有聲明構造函數,則成員在大括弧初始化器中出現的順序與聲明它們的順序相同;在這種情況下,您可以根據需要初始化任意數量的公共成員,但不能跳過任何成員。 下面的範例顯示了在沒有聲明建構函數時大括弧初始化中使用的順序:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-如果預設的函式已明確宣告，但標示為已刪除，則無法使用預設的大括弧初始化：
+若顯式宣告預設建構函數但標記為已刪除,則無法使用預設大括弧初始化:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-您可以在一般執行初始化的任何地方使用括弧初始化，例如，做為函式參數或傳回值，或使用**new**關鍵字：
+您可以在通常執行初始化的任意位置使用大括弧初始化,例如,作為函數參數或返回值,或者使用**新**關鍵字:
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,20 +136,20 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-在 **/std： c + + 17**模式中，空白大括弧初始化的規則會略有限制。 請參閱[衍生的函數和擴充的匯總初始化](constructors-cpp.md#extended_aggregate)。
+在 **/std:c++17**模式下,空大括弧初始化的規則稍微限制一些。 請參考[派生建構函數與延伸的聚合初始化](constructors-cpp.md#extended_aggregate)。
 
-## <a name="initializer_list-constructors"></a>initializer_list 的構造函式
+## <a name="initializer_list-constructors"></a>initializer_list建構函數
 
-[Initializer_list 類別](../standard-library/initializer-list-class.md)代表指定類型的物件清單，可用於函數和其他內容中。 您可以使用大括弧初始化來建立 initializer_list：
+[initializer_list類](../standard-library/initializer-list-class.md)表示可在建構函數和其他上下文中使用的指定類型的物件的清單。 可以使用大括弧初始化構造initializer_list:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  若要使用這個類別，您必須包含[\<initializer_list >](../standard-library/initializer-list.md)標頭。
+> 要使用此類,必須包括[\<initializer_list>](../standard-library/initializer-list.md)標頭。
 
-可以複製 `initializer_list`。 在此情況下，新清單的成員會參考原始清單的成員：
+可以`initializer_list`複製 。 在這種情況下,新列表的成員是原始清單成員的引用:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -158,7 +158,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-標準程式庫容器類別，同時 `string`、`wstring`和 `regex`都具有 `initializer_list` 的函式。 下列範例示範如何使用這些函式進行括弧初始化：
+標準庫容器類和`string`,`wstring``regex`和,`initializer_list`具有建構函數。 以下範例展示如何使用這些建構函數執行大括弧初始化:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };

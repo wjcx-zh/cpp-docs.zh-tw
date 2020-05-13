@@ -17,19 +17,19 @@ ms.locfileid: "62195282"
 ---
 # <a name="fixing-release-build-problems"></a>解決發行組建的問題
 
-如果您的程式碼會產生編譯錯誤，偵錯至發行組建的組建從切換之後，有一些您應該檢查的區域。
+如果您的程式碼在從 debug build 切換至發行組建之後產生編譯錯誤，您應該檢查一些區域。
 
-您可能未收到期間偵錯組建最佳化 （發行） 建置期間會收到編譯器警告。
+您可能會在未于偵錯工具組建期間收到的優化（發行）組建期間收到編譯器警告。
 
-- [檢查 ASSERT 陳述式](using-verify-instead-of-assert.md)
+- [檢查 ASSERT 語句](using-verify-instead-of-assert.md)
 
-- [使用偵錯組建檢查記憶體覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [使用 Debug 組建來檢查記憶體覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)
 
-- [開啟 產生偵錯資訊，針對發行組建](how-to-debug-a-release-build.md)
+- [開啟發行組建的偵錯工具資訊產生](how-to-debug-a-release-build.md)
 
 - [檢查記憶體覆寫](checking-for-memory-overwrites.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [發行組建](release-builds.md)<br/>
 [建立發行組建時的常見問題](common-problems-when-creating-a-release-build.md)<br/>

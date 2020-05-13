@@ -20,10 +20,10 @@ ms.locfileid: "73965472"
 |||||
 |-|-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[data_seg](../preprocessor/data-seg.md)|[include_alias](../preprocessor/include-alias.md)|[setlocale](../preprocessor/setlocale.md)|
-|[auto_inline](../preprocessor/auto-inline.md)|[function](../preprocessor/function-c-cpp.md)|[intrinsic](../preprocessor/intrinsic.md)|[warning](../preprocessor/warning.md)|
+|[auto_inline](../preprocessor/auto-inline.md)|[函數](../preprocessor/function-c-cpp.md)|[特有](../preprocessor/intrinsic.md)|[warning](../preprocessor/warning.md)|
 |[check_stack](../preprocessor/check-stack.md)|[hdrstop](../preprocessor/hdrstop.md)|[message](../preprocessor/message.md)||
-|[code_seg](../preprocessor/code-seg.md)|[inline_depth](../preprocessor/inline-depth.md)|[optimize](../preprocessor/optimize.md)||
-|[comment](../preprocessor/comment-c-cpp.md)|[inline_recursion](../preprocessor/inline-recursion.md)|[pack](../preprocessor/pack.md)||
+|[code_seg](../preprocessor/code-seg.md)|[inline_depth](../preprocessor/inline-depth.md)|[最優化](../preprocessor/optimize.md)||
+|[加以](../preprocessor/comment-c-cpp.md)|[inline_recursion](../preprocessor/inline-recursion.md)|[指示燈](../preprocessor/pack.md)||
 
 ## <a name="see-also"></a>請參閱
 

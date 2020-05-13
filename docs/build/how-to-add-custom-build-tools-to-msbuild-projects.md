@@ -1,29 +1,29 @@
 ---
-title: HOW TO：新增自訂建置工具至 MSBuild 專案
+title: 如何：將自訂建置工具加入至 MSBuild 專案
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
 ms.openlocfilehash: 812932d9e668ab5ee0eb75eadbf75be3d791cddb
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220714"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>HOW TO：新增自訂建置工具至 MSBuild 專案
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>如何：將自訂建置工具加入至 MSBuild 專案
 
-自訂建置工具是與特定的檔案相關聯的使用者定義的命令列工具。
+自訂群組建工具是與特定檔案相關聯的使用者定義命令列工具。
 
-針對特定的檔案中，指定專案檔 (.vcxproj) 命令列執行，任何額外的輸入或輸出檔案和要顯示的訊息。 如果**MSBuild**判斷您的輸出檔案已過期的關於您的輸入檔案，它會顯示訊息，並執行命令列工具。
+針對特定檔案，請在專案檔（. .vcxproj）中指定要執行的命令列、任何額外的輸入或輸出檔，以及要顯示的訊息。 如果**MSBuild**判斷出您的輸入檔案已過期，則會顯示訊息，並執行命令列工具。
 
-若要指定自訂建置工具在執行時，使用其中一個或多個`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`專案檔中的 XML 項目。 例如，您可以指定自訂建置工具執行之後 MIDL 編譯器和 C 之前 /C++編譯器。 指定`CustomBuildBeforeTargets`要執行此工具，才可以執行特定的目標; 項目`CustomBuildAfterTargets`後要執行此工具特定的目標; 的項目或執行此工具執行兩個目標之間的兩個項目。 如果指定兩項目，則您的自訂建置工具會執行在其預設位置，也就是之前**MIDL**目標。
+若要指定自訂群組建工具的執行時間，請使用專案檔`CustomBuildBeforeTargets`中`CustomBuildAfterTargets`的一或兩個和 XML 元素。 例如，您可以指定自訂群組建工具在 MIDL 編譯器之後和 C/c + + 編譯器之前執行。 指定要`CustomBuildBeforeTargets`在特定目標執行之前執行工具的元素;要`CustomBuildAfterTargets`在特定目標之後執行工具的元素;或這兩個專案都可以在執行兩個目標之間執行此工具。 如果未指定任何專案，則您的自訂群組建工具會在其預設位置（位於**MIDL**目標之前）執行。
 
-自訂建置步驟和自訂建置工具共用指定的資訊`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`XML 項目。 在您的專案檔中指定這些目標一次。
+自訂群組建步驟和自訂群組建工具會共用`CustomBuildBeforeTargets`和`CustomBuildAfterTargets` XML 元素中指定的資訊。 在您的專案檔中指定這些目標一次。
 
-### <a name="to-add-a-custom-build-tool"></a>若要加入自訂建置工具
+### <a name="to-add-a-custom-build-tool"></a>若要新增自訂群組建工具
 
-1. 將項目群組加入至專案檔，並將每個輸入檔案項目。 為項目中繼資料，指定命令、 其他輸入、 輸出和訊息，如下所示。 這個範例假設 「 faq.txt"檔案位於與專案相同的目錄。
+1. 將專案群組新增至專案檔，並為每個輸入檔案加入專案。 將命令、額外的輸入、輸出和訊息指定為專案中繼資料，如下所示。 這個範例假設 "faq" 檔案存在於與專案相同的目錄中。
 
     ```
     <ItemGroup>
@@ -35,9 +35,9 @@ ms.locfileid: "65220714"
     </ItemGroup>
     ```
 
-### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>若要定義組建中的自訂建置工具會執行的位置
+### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>定義自訂群組建工具將在組建中的何處執行
 
-1. 下列的屬性群組加入至專案檔。 您必須指定至少其中一個目標，但如果您只想要讓您的建置步驟之前 （或之後） 執行省略其他特定的目標。 此範例會在編譯之後，但連結之前，執行自訂步驟。
+1. 將下列屬性群組新增至專案檔。 您必須指定至少一個目標，但如果您只想要在特定目標之前（或之後）執行組建步驟，則可以省略另一個目標。 這個範例會在編譯後但在連結之前執行自訂步驟。
 
     ```
     <PropertyGroup>
@@ -46,8 +46,8 @@ ms.locfileid: "65220714"
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[逐步解說：使用 MSBuild 建立 C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[逐步解說：使用 MSBuild 建立 c + + 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [如何：在 MSBuild 專案中使用建置事件](how-to-use-build-events-in-msbuild-projects.md)<br/>
-[如何：將自訂建置步驟新增至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)
+[如何：將自訂建置步驟加入至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)

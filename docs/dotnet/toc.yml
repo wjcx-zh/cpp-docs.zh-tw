@@ -1,0 +1,366 @@
+- name: 以 C++/CLI 進行 .NET 程式設計
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 逐步解說：編譯以 CLR 為目標的 C++/CLI 程式
+  href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+- name: C++/CLI 工作
+  expanded: false
+  items:
+    - name: C++/CLI 工作
+      href: ../dotnet/cpp-cli-tasks.md
+    - name: 作法：建立 CLR 空專案
+      href: ../dotnet/how-to-create-clr-empty-projects.md
+    - name: 作法：建立 CLR 主控台應用程式
+      href: ../dotnet/how-to-create-clr-console-applications-cpp-cli.md
+    - name: 作法：在 C++/CLI 中使用追蹤參考
+      href: ../dotnet/how-to-use-tracking-references-in-cpp-cli.md
+    - name: 作法：在 C++/CLI 中使用陣列
+      href: ../dotnet/how-to-use-arrays-in-cpp-cli.md
+    - name: 作法：定義與使用類別和結構
+      href: ../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
+    - name: 參考型別的 C++ 堆疊語意
+      href: ../dotnet/cpp-stack-semantics-for-reference-types.md
+    - name: 使用者定義的運算子
+      href: ../dotnet/user-defined-operators-cpp-cli.md
+    - name: 使用者定義轉換
+      href: ../dotnet/user-defined-conversions-cpp-cli.md
+    - name: initonly
+      href: ../dotnet/initonly-cpp-cli.md
+    - name: 作法：定義和使用委派
+      href: ../dotnet/how-to-define-and-use-delegates-cpp-cli.md
+    - name: 作法：在 C++/CLI 中定義和使用列舉
+      href: ../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
+    - name: 作法：在 C++/CLI 中使用事件
+      href: ../dotnet/how-to-use-events-in-cpp-cli.md
+    - name: 作法：定義介面靜態建構函式
+      href: ../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
+    - name: 作法：在原生編譯中宣告覆寫規範
+      href: ../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
+    - name: 作法：在 C++/CLI 中使用屬性
+      href: ../dotnet/how-to-use-properties-in-cpp-cli.md
+    - name: 作法：在 C++/CLI 中使用 safe_cast
+      href: ../dotnet/how-to-use-safe-cast-in-cpp-cli.md
+    - name: 規則運算式
+      href: ../dotnet/regular-expressions-cpp-cli.md
+    - name: 檔案處理和 I/O
+      href: ../dotnet/file-handling-and-i-o-cpp-cli.md
+    - name: 圖形作業
+      href: ../dotnet/graphics-operations-cpp-cli.md
+    - name: Windows 作業
+      href: ../dotnet/windows-operations-cpp-cli.md
+    - name: 使用 ADO.NET 進行資料存取
+      href: ../dotnet/data-access-using-adonet-cpp-cli.md
+- name: 原生和 .NET 互通性
+  expanded: false
+  items:
+    - name: 原生和 .NET 互通性
+      href: ../dotnet/native-and-dotnet-interoperability.md
+    - name: 與其他 .NET 語言間的互通性
+      href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
+    - name: 混合 (原生和受控) 組件
+      expanded: false
+      items:
+        - name: 混合 (原生和受控) 組件
+          href: ../dotnet/mixed-native-and-managed-assemblies.md
+        - name: 作法：移轉至 -clr
+          href: ../dotnet/how-to-migrate-to-clr.md
+        - name: 作法：使用 -clr 編譯 MFC 和 ATL 程式碼
+          href: ../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
+        - name: 混合組件的初始化
+          href: ../dotnet/initialization-of-mixed-assemblies.md
+        - name: 混合組件的程式庫支援
+          href: ../dotnet/library-support-for-mixed-assemblies.md
+        - name: Interop 的效能考量 (C++)
+          href: ../dotnet/performance-considerations-for-interop-cpp.md
+        - name: 應用程式定義域和 Visual C++
+          href: ../dotnet/application-domains-and-visual-cpp.md
+        - name: Double Thunking (C++)
+          href: ../dotnet/double-thunking-cpp.md
+        - name: 當使用以 /clr 所建置 COM 物件時防止 CLR 關閉的例外狀況
+          href: ../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
+        - name: 作法：移除對 CRT 程式庫 DLL 的相依性以建立部分信任應用程式
+          href: ../dotnet/create-a-partially-trusted-application.md
+    - name: 在 MFC 中使用 Windows Form 使用者控制項
+      expanded: false
+      items:
+        - name: 在 MFC 中使用 Windows Form 使用者控制項
+          href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
+        - name: Windows Forms/MFC 程式設計的差異
+          href: ../dotnet/windows-forms-mfc-programming-differences.md
+        - name: 將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
+          expanded: false
+          items:
+            - name: 將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
+              href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
+            - name: 作法：建立使用者控制項並裝載至對話方塊中
+              href: ../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
+            - name: 作法：使用 Windows Forms 執行 DDX/DDV 資料繫結
+              href: ../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
+            - name: 作法：從原生 C++ 類別接收 Windows Forms 事件
+              href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
+        - name: 將 Windows Form 使用者控制項裝載為 MFC 檢視
+          expanded: false
+          items:
+            - name: 將 Windows Form 使用者控制項裝載為 MFC 檢視
+              href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
+            - name: 作法：建立使用者控制項並裝載 MDI 檢視
+              href: ../dotnet/how-to-create-the-user-control-and-host-mdi-view.md
+            - name: 作法：新增命令傳送至 Windows Forms 控制項
+              href: ../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
+            - name: 作法：呼叫 Windows Forms 控制項的屬性和方法
+              href: ../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
+        - name: 將 Windows Form 使用者控制項裝載成 MFC 對話方塊
+          href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
+    - name: 從受控碼呼叫原生函式
+      expanded: false
+      items:
+        - name: 從受控碼呼叫原生函式
+          href: ../dotnet/calling-native-functions-from-managed-code.md
+        - name: 在 C++ 中使用明確的 PInvoke (DllImport 屬性)
+          expanded: false
+          items:
+            - name: 在 C++ 中使用明確的 PInvoke (DllImport 屬性)
+              href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
+            - name: 作法：使用 PInvoke 從受控碼呼叫原生 DLL
+              href: ../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
+            - name: 作法：使用 PInvoke 封送處理字串
+              href: ../dotnet/how-to-marshal-strings-using-pinvoke.md
+            - name: 作法：使用 PInvoke 封送處理結構
+              href: ../dotnet/how-to-marshal-structures-using-pinvoke.md
+            - name: 作法：使用 PInvoke 封送處理陣列
+              href: ../dotnet/how-to-marshal-arrays-using-pinvoke.md
+            - name: 作法：使用 PInvoke 封送處理函式指標
+              href: ../dotnet/how-to-marshal-function-pointers-using-pinvoke.md
+            - name: 作法：使用 PInvoke 封送處理內嵌指標
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
+        - name: 使用 C++ Interop (隱含 PInvoke)
+          expanded: false
+          items:
+            - name: 使用 C++ Interop (隱含 PInvoke)
+              href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
+            - name: 作法：使用 C++ Interop 封送處理 ANSI 字串
+              href: ../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
+            - name: 作法：使用 C++ Interop 封送處理 Unicode 字串
+              href: ../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
+            - name: 作法：使用 C++ Interop 封送處理 COM 字串
+              href: ../dotnet/how-to-marshal-com-strings-using-cpp-interop.md
+            - name: 作法：使用 C++ Interop 封送處理結構
+              href: ../dotnet/how-to-marshal-structures-using-cpp-interop.md
+            - name: 作法：使用 C++ Interop 封送處理陣列
+              href: ../dotnet/how-to-marshal-arrays-using-cpp-interop.md
+            - name: 作法：使用 C++ Interop 封送處理回呼和委派
+              href: ../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
+            - name: 作法：使用 C++ Interop 封送處理內嵌指標
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
+            - name: 作法：擴充封送處理程式庫
+              href: ../dotnet/how-to-extend-the-marshaling-library.md
+            - name: '作法：存取 System::String 中的字元'
+              href: ../dotnet/how-to-access-characters-in-a-system-string.md
+            - name: '作法：將 char * 字串轉換為 System::Byte 陣列'
+              href: ../dotnet/how-to-convert-char-star-string-to-system-byte-array.md
+            - name: '作法：將 System::String 轉換為 wchar_t* 或 char*'
+              href: ../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
+            - name: '作法：將 System::String 轉換為標準字串'
+              href: ../dotnet/how-to-convert-system-string-to-standard-string.md
+            - name: '作法：將標準字串轉換為 System::String'
+              href: ../dotnet/how-to-convert-standard-string-to-system-string.md
+            - name: 作法：取得位元組陣列的指標
+              href: ../dotnet/how-to-obtain-a-pointer-to-byte-array.md
+            - name: 作法：將非受控資源載入至位元組陣列
+              href: ../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
+            - name: 作法：修改原生函式中的參考類別
+              href: ../dotnet/how-to-modify-reference-class-in-a-native-function.md
+            - name: 作法：判斷映像為原生或 CLR
+              href: ../dotnet/how-to-determine-if-an-image-is-native-or-clr.md
+            - name: 作法：將原生 DLL 新增至全域組件快取
+              href: ../dotnet/how-to-add-native-dll-to-global-assembly-cache.md
+            - name: 作法：以原生類型存放實值型別的參考
+              href: ../dotnet/how-to-hold-reference-to-value-type-in-native-type.md
+            - name: 作法：在非受控記憶體中存放物件參考
+              href: ../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
+            - name: 作法：偵測 -clr 編譯
+              href: ../dotnet/how-to-detect-clr-compilation.md
+            - name: '作法：在 System::Guid 和 _GUID 之間轉換'
+              href: ../dotnet/how-to-convert-between-system-guid-and-guid.md
+            - name: 作法：指定 out 參數
+              href: ../dotnet/how-to-specify-an-out-parameter.md
+            - name: 作法：在 -clr 編譯中使用原生類型
+              href: ../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
+            - name: 作法：以原生類型宣告控制代碼
+              href: ../dotnet/how-to-declare-handles-in-native-types.md
+            - name: '作法：包裝原生類別以供 C# 使用'
+              href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
+- name: 純粹和可驗證的程式碼
+  expanded: false
+  items:
+    - name: 純粹和可驗證的程式碼
+      href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
+    - name: 作法：建立可驗證的 C++ 專案
+      href: ../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
+    - name: 搭配 SQL Server 使用可驗證的組件
+      href: ../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
+    - name: 將專案從混合模式轉換為純中繼語言
+      href: ../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md
+- name: 序列化
+  href: ../dotnet/serialization-cpp-cli.md
+- name: 'Friend 組件 (C#)'
+  href: ../dotnet/friend-assemblies-cpp.md
+- name: 受控類型
+  href: ../dotnet/managed-types-cpp-cli.md
+- name: 反射
+  href: ../dotnet/reflection-cpp-cli.md
+- name: 強式名稱組件 (組件簽署)
+  href: ../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
+- name: 偵錯類別
+  href: ../dotnet/debug-class-cpp-cli.md
+- name: STL/CLR 程式庫參考
+  expanded: false
+  items:
+    - name: STL/CLR 程式庫參考
+      href: ../dotnet/stl-clr-library-reference.md
+    - name: cliext 命名空間
+      href: ../dotnet/cliext-namespace.md
+    - name: STL/CLR 容器
+      href: ../dotnet/stl-clr-containers.md
+    - name: STL/CLR 容器項目的需求
+      href: ../dotnet/requirements-for-stl-clr-container-elements.md
+    - name: 作法：從 .NET 集合轉換為 STL/CLR 容器
+      href: ../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
+    - name: 作法：從 STL/CLR 容器轉換為 .NET 集合
+      href: ../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
+    - name: 作法：從組件公開 STL/CLR 容器
+      href: ../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
+    - name: 'for each, in'
+      href: ../dotnet/for-each-in.md
+    - name: adapter (STL/CLR)
+      href: ../dotnet/adapter-stl-clr.md
+    - name: algorithm (STL/CLR)
+      href: ../dotnet/algorithm-stl-clr.md
+    - name: deque (STL/CLR)
+      href: ../dotnet/deque-stl-clr.md
+    - name: functional (STL/CLR)
+      href: ../dotnet/functional-stl-clr.md
+    - name: hash_map (STL/CLR)
+      href: ../dotnet/hash-map-stl-clr.md
+    - name: hash_multimap (STL/CLR)
+      href: ../dotnet/hash-multimap-stl-clr.md
+    - name: hash_multiset (STL/CLR)
+      href: ../dotnet/hash-multiset-stl-clr.md
+    - name: hash_set (STL/CLR)
+      href: ../dotnet/hash-set-stl-clr.md
+    - name: list (STL/CLR)
+      href: ../dotnet/list-stl-clr.md
+    - name: map (STL/CLR)
+      href: ../dotnet/map-stl-clr.md
+    - name: multimap (STL/CLR)
+      href: ../dotnet/multimap-stl-clr.md
+    - name: multiset (STL/CLR)
+      href: ../dotnet/multiset-stl-clr.md
+    - name: numeric (STL/CLR)
+      href: ../dotnet/numeric-stl-clr.md
+    - name: priority_queue (STL/CLR)
+      href: ../dotnet/priority-queue-stl-clr.md
+    - name: queue (STL/CLR)
+      href: ../dotnet/queue-stl-clr.md
+    - name: set (STL/CLR)
+      href: ../dotnet/set-stl-clr.md
+    - name: stack (STL/CLR)
+      href: ../dotnet/stack-stl-clr.md
+    - name: utility (STL/CLR)
+      href: ../dotnet/utility-stl-clr.md
+    - name: vector (STL/CLR)
+      href: ../dotnet/vector-stl-clr.md
+- name: C++ 支援程式庫
+  expanded: false
+  items:
+    - name: C++ 支援程式庫
+      href: ../dotnet/cpp-support-library.md
+    - name: C++ 中的封送處理概觀
+      expanded: false
+      items:
+        - name: C++ 中的封送處理概觀
+          href: ../dotnet/overview-of-marshaling-in-cpp.md
+        - name: marshal_as
+          href: ../dotnet/marshal-as.md
+        - name: marshal_context 類別
+          href: ../dotnet/marshal-context-class.md
+    - name: msclr 命名空間
+      href: ../dotnet/msclr-namespace.md
+    - name: 資源管理類別
+      expanded: false
+      items:
+        - name: 資源管理類別
+          href: ../dotnet/resource-management-classes.md
+        - name: auto_gcroot
+          expanded: false
+          items:
+            - name: auto_gcroot
+              href: ../dotnet/auto-gcroot.md
+            - name: auto_gcroot 類別
+              href: ../dotnet/auto-gcroot-class.md
+            - name: swap 函式 (auto_gcroot)
+              href: ../dotnet/swap-function-auto-gcroot.md
+        - name: auto_handle
+          href: ../dotnet/auto-handle.md
+          items:
+            - name: auto_handle
+              href: ../dotnet/auto-handle.md
+            - name: auto_handle 類別
+              href: ../dotnet/auto-handle-class.md
+            - name: swap 函式 (auto_handle)
+              href: ../dotnet/swap-function-auto-handle.md
+    - name: 同步處理 (lock 類別)
+      expanded: false
+      items:
+        - name: 同步處理 (lock 類別)
+          href: ../dotnet/synchronization-lock-class.md
+        - name: 鎖定
+          expanded: false
+          items:
+            - name: 鎖定
+              href: ../dotnet/lock.md
+            - name: lock 類別
+              href: ../dotnet/lock-class.md
+            - name: lock_when 列舉
+              href: ../dotnet/lock-when-enum.md
+    - name: 呼叫特定應用程式定義域的函式
+      expanded: false
+      items:
+        - name: 呼叫特定應用程式定義域的函式
+          href: ../dotnet/calling-functions-in-a-specific-application-domain.md
+        - name: call_in_appdomain 函式
+          href: ../dotnet/call-in-appdomain-function.md
+    - name: 'com::ptr'
+      expanded: false
+      items:
+        - name: 'com::ptr'
+          href: ../dotnet/com-ptr.md
+        - name: 'com::ptr 類別'
+          href: ../dotnet/com-ptr-class.md
+- name: C++/CLI 中的例外狀況
+  expanded: false
+  items:
+    - name: C++/CLI 中的例外狀況
+      href: ../dotnet/exceptions-in-cpp-cli.md
+    - name: 使用受控例外狀況的基本概念
+      href: ../dotnet/basic-concepts-in-using-managed-exceptions.md
+    - name: 在 /clr 之下例外狀況處理行為的差異
+      href: ../dotnet/differences-in-exception-handling-behavior-under-clr.md
+    - name: finally
+      href: ../dotnet/finally.md
+    - name: 作法：攔截 MSIL 所擲回機器碼的例外狀況
+      href: ../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
+    - name: 作法：定義與安裝全域例外狀況處理常式
+      href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
+- name: Boxing
+  expanded: false
+  items:
+    - name: Boxing
+      href: ../dotnet/boxing-cpp-cli.md
+    - name: 作法：明確要求 Boxing
+      href: ../dotnet/how-to-explicitly-request-boxing.md
+    - name: 作法：使用 gcnew 建立實值型別及使用隱含 Boxing
+      href: ../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
+    - name: 作法：Unbox
+      href: ../dotnet/how-to-unbox.md
+    - name: 標準轉換和隱含 Boxing
+      href: ../dotnet/standard-conversions-and-implicit-boxing.md

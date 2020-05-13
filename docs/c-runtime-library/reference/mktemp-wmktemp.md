@@ -1,9 +1,11 @@
 ---
 title: _mktemp、_wmktemp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmktemp
 - _mktemp
+- _o__mktemp
+- _o__wmktemp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 7cfca04d4f0df2673a2221f00a1263f73e8516ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 536a63841c6e29fa003eb8b99c896f6d1cf5519f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951572"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919093"
 ---
 # <a name="_mktemp-_wmktemp"></a>_mktemp、_wmktemp
 
@@ -77,7 +80,9 @@ wchar_t *_wmktemp(
 
 ## <a name="remarks"></a>備註
 
-**_Mktemp**函數會藉由修改*nameTemplate*引數來建立唯一的檔案名。 **_mktemp**會自動將多位元組字元字串引數處理為適當的，並根據執行時間系統目前使用的多位元組字碼頁來辨識多位元組字元序列。 **_wmktemp**是寬字元版本的 **_mktemp**; **_wmktemp**的引數和傳回值是寬字元字串。 相反地， **_wmktemp**和 **_mktemp**的行為相同，不同之處在于 **_wmktemp**不會處理多位元組字元字串。
+**_Mktemp**函式會藉由修改*nameTemplate*引數來建立唯一的檔案名。 **_mktemp**會自動將多位元組字元字串引數處理為適當，並根據執行時間系統目前使用的多位元組字碼頁來辨識多位元組字元序列。 **_wmktemp**是寬字元版本的 **_mktemp**;**_wmktemp**的引數和傳回值是寬字元字串。 **_wmktemp**和 **_mktemp**的行為完全相同，不同之處在于 **_wmktemp**不會處理多位元組字元字串。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -85,13 +90,13 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*引數的格式為*base*XXXXXX，其中*base*是您所提供之新檔案名的一部分，而每個 X 是 **_mktemp**所提供之字元的預留位置。 *NameTemplate*中的每個預留位置字元都必須是大寫的 x。 **_mktemp**會保留*基底*，並以字母字元取代第一個尾端 X。 **_mktemp**會以五位數的值取代下列尾端 X：這個值是識別呼叫進程或多執行緒程式中呼叫執行緒的唯一數位。
+*NameTemplate*引數的格式為*base*XXXXXX，其中*base*是您所提供之新檔案名的一部分，而每個 X 是 **_mktemp**所提供之字元的預留位置。 *NameTemplate*中的每個預留位置字元都必須是大寫 x。 **_mktemp**會保留*基底*，並以字母字元取代第一個尾端 X。 **_mktemp**以五位數的值取代下列尾端 X：這個值是識別呼叫進程或多執行緒程式中呼叫執行緒的唯一數位。
 
-每次成功呼叫 **_mktemp**都會修改*nameTemplate*。 在每次來自具有相同*nameTemplate*引數的相同進程或執行緒的後續呼叫中， **_mktemp**會檢查符合先前呼叫中 **_mktemp**所傳回之名稱的檔案名。 如果指定名稱的檔案不存在， **_mktemp**會傳回該名稱。 如果所有先前傳回的名稱都有檔案， **_mktemp**會藉由將先前傳回名稱中使用的字母字元取代為下一個可用的小寫字母（依序），從 ' a ' 到 ' z ' 來建立新名稱。 例如，如果*base*為：
+每次成功呼叫 **_mktemp**都會修改*nameTemplate*。 在每次來自具有相同*nameTemplate*引數之相同進程或執行緒的後續呼叫中， **_mktemp**會檢查符合先前呼叫中 **_mktemp**所傳回之名稱的檔案名。 如果指定名稱的檔案不存在， **_mktemp**會傳回該名稱。 如果所有先前傳回的名稱都有檔案， **_mktemp**會藉由使用下一個可用的小寫字母（依序從 ' a ' 到 ' z '）來取代先前傳回的名稱中所用的字母字元，以建立新的名稱。 例如，如果*base*為：
 
 > **fn**
 
-**_mktemp**所提供的五位數值是12345，傳回的第一個名稱是：
+**_mktemp**所提供的五位數值為12345，則傳回的第一個名稱為：
 
 > **fna12345**
 
@@ -103,11 +108,11 @@ wchar_t *_wmktemp(
 
 > **fna12345**
 
-針對任何指定的*base*和*nameTemplate*值組合， **_mktemp**最多可以建立26個唯一的檔案名。 因此，FNZ12345 是最後一個唯一檔案名 **_mktemp**可以針對此範例中使用的*基底*和*nameTemplate*值來建立的名稱。
+**_mktemp**最多可為*基底*和*nameTemplate*值的任何指定組合建立26個唯一的檔案名。 因此，FNZ12345 是最後一個唯一的檔案名， **_mktemp**可以為此範例中使用的*基底*和*nameTemplate*值建立此名稱。
 
-失敗時，會設定**errno** 。 如果*nameTemplate*的格式無效（例如，少於 6 X）， **errno**會設定為**EINVAL**。 如果 **_mktemp**無法建立唯一的名稱，因為所有26個可能的檔案名已經存在， **_Mktemp**會將 nameTemplate 設為空字串，並傳回**EEXIST**。
+失敗時，會設定**errno** 。 如果*nameTemplate*的格式無效（例如，少於 6 X）， **errno**會設定為**EINVAL**。 如果 **_mktemp**無法建立唯一的名稱，因為所有26個可能的檔案名已經存在， **_mktemp**將 nameTemplate 設定為空字串，並傳回**EEXIST**。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -116,7 +121,7 @@ wchar_t *_wmktemp(
 |**_mktemp**|\<io.h>|
 |**_wmktemp**|\<io.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

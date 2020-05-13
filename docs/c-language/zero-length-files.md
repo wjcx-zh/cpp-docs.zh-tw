@@ -6,11 +6,11 @@ helpviewer_keywords:
 - zero-length files
 ms.assetid: f0725a4e-7a39-4b1e-ba23-58171250919e
 ms.openlocfilehash: fc4b0c8c850a8f45d3ca1e0191b79fc7f0d1ef22
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290647"
 ---
 # <a name="zero-length-files"></a>零長度檔案
 
@@ -18,6 +18,6 @@ ms.locfileid: "56151984"
 
 允許長度為零的檔案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [程式庫函式](../c-language/library-functions.md)

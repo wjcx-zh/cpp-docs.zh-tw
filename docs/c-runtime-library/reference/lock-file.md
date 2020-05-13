@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953307"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911532"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-鎖定檔案**物件，** 以確保同時存取檔案物件的執行緒一致。
+鎖定檔案**物件，** 以確保同時存取檔案物件的**FILE**執行緒一致。
 
 ## <a name="syntax"></a>語法
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>參數
 
-*file*<br/>
+*文字檔*<br/>
 檔案控制代碼。
 
 ## <a name="remarks"></a>備註
 
 **_Lock_file**函式會鎖定*file*所指定的**檔案物件。** **_Lock_file**不會鎖定基礎檔案。 使用 [_unlock_file](unlock-file.md) 解除檔案鎖定。 **_Lock_file**和 **_unlock_file**的呼叫必須線上程中相符。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -59,7 +63,7 @@ void _lock_file( FILE* file );
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

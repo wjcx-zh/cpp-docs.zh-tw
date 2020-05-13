@@ -8,15 +8,15 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
 ms.openlocfilehash: 2e43f01b495a03e4f50295de42afa9b6c6b38173
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234414"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>使用 dllexport 和 dllimport 定義內嵌 C 函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 您可以將具有 `dllexport` 屬性的函式定義為內嵌。 在這種情況下，無論程式中是否有任何模組參考函式，函式都一定會具現化並匯出。 函式會假定為由其他程式匯入。
 
@@ -26,8 +26,8 @@ ms.locfileid: "56151152"
 
 提供匯入的內嵌函式時務必特別小心。 例如，如果您更新 DLL，請不要假設用戶端將會使用變更後的 DLL 版本。 若要確保載入正確的 DLL 版本，請一併重建 DLL 的用戶端。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [DLL 匯入及匯出函式](../c-language/dll-import-and-export-functions.md)

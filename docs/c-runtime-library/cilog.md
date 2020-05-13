@@ -1,8 +1,9 @@
 ---
 title: _CIlog
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIlog
+- _o__CIlog
 api_location:
 - msvcr90.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: edc096680522da50910eb42a95a481b83be8791d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 405af59eab918498578c2d62c66be1017ecf156f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944803"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918051"
 ---
 # <a name="_cilog"></a>_CIlog
 
@@ -36,7 +38,7 @@ ms.locfileid: "70944803"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 void __cdecl _CIlog();
 ```
 
@@ -46,9 +48,11 @@ void __cdecl _CIlog();
 
 產生的值會推入至堆疊的頂端。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-**平台：** x86
+**平臺：** x86
 
 ## <a name="see-also"></a>另請參閱
 

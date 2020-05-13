@@ -11,11 +11,11 @@ ms.locfileid: "70740091"
 ---
 # <a name="character-testing"></a>字元測試
 
-**ANSI 4.3.1**：以 `isalnum`、`isalpha`、`iscntrl`、`islower`、`isprint` 和 `isupper` 函式測試的字元集
+**ANSI 4.3.1**`isalnum`由`isalpha`、 `iscntrl`、 `islower`、、 `isprint`和`isupper`函式測試的字元集
 
 下表將描述這些函式，因為它們會由 Microsoft C 編譯器實作。
 
-|函數|測試項目|
+|函式|測試項目|
 |--------------|---------------|
 |`isalnum`|字元 0-9、A-Z、a-z ASCII 48-57、65-90、97-122|
 |`isalpha`|字元 A-Z、a-z ASCII 65-90、97-122|
@@ -24,6 +24,6 @@ ms.locfileid: "70740091"
 |`isprint`|字元 A-Z、a–z、0-9、標點符號、空格 ASCII 32-126|
 |`isupper`|字元 A-Z ASCII 65-90|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [程式庫函式](../c-language/library-functions.md)

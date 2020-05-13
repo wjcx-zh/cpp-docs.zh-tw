@@ -1,9 +1,11 @@
 ---
 title: _cgets_s、_cgetws_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cgetws_s
 - _cgets_s
+- _o__cgets_s
+- _o__cgetws_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624774"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917089"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s、_cgetws_s
 
 從主控台取得字元字串。 這些版本的 [_cgets 和 _cgetws](../../c-runtime-library/cgets-cgetws.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -74,7 +77,7 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 資料的儲存位置。
 
 *numberOfElements*<br/>
@@ -89,11 +92,11 @@ errno_t _cgetws_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Return|*緩衝區*的內容|
+|*緩衝區*|*numberOfElements*|*pSizeRead*|傳回|*緩衝區*的內容|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|任何|任何|**EINVAL**|N/A|
-|非**Null**|零|任何|**EINVAL**|未修改|
-|非**Null**|任何|**NULL**|**EINVAL**|零長度字串|
+|**Null**|任意|任意|**EINVAL**|n/a|
+|非**Null**|零|任意|**EINVAL**|未修改|
+|非**Null**|任意|**Null**|**EINVAL**|零長度字串|
 
 ## <a name="remarks"></a>備註
 
@@ -104,6 +107,8 @@ errno_t _cgetws_s(
 在 C++ 中，樣板多載簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以自動將較舊且較不安全的函式取代成其較新且較安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -118,9 +123,9 @@ errno_t _cgetws_s(
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch、_getwch](getch-getwch.md)<br/>

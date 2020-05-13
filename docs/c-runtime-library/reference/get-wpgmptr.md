@@ -1,8 +1,9 @@
 ---
 title: _get_wpgmptr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_wpgmptr
+- _o__get_wpgmptr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-ms.openlocfilehash: 0cd2dc9c2f82d3dc49a17dc438157233c50b3261
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec21e4967d123c988886fa2e6ab996aad83ef206
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955563"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919671"
 ---
 # <a name="_get_wpgmptr"></a>_get_wpgmptr
 
@@ -58,7 +60,9 @@ errno_t _get_wpgmptr(
 
 ## <a name="remarks"></a>備註
 
-只有在您的程式具有寬進入點（例如**wmain （）** 或**wWinMain （））** 時，才呼叫 **_get_wpgmptr** 。 **_Wpgmptr** global 變數包含與進程相關聯之可執行檔的完整路徑，做為寬字元字串。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
+只有在您的程式具有寬進入點（例如**wmain （）** 或**wWinMain （））** 時，才呼叫 **_get_wpgmptr** 。 **_Wpgmptr**全域變數包含與進程相關聯之可執行檔的完整路徑，做為寬字元字串。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -66,7 +70,7 @@ errno_t _get_wpgmptr(
 |-------------|---------------------|
 |**_get_wpgmptr**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

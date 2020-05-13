@@ -1,8 +1,9 @@
 ---
 title: _CIsqrt
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIsqrt
+- _o__CIsqrt
 api_location:
 - msvcr90.dll
 - msvcr80.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: b914ac73fcaeb924832852294af1535bc87c1119
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: baedb0541e16c28d18d0062fa5498fb8e2c8dea8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940486"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918358"
 ---
 # <a name="_cisqrt"></a>_CIsqrt
 
@@ -36,7 +38,7 @@ ms.locfileid: "70940486"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 void __cdecl _CIsqrt();
 ```
 
@@ -46,9 +48,11 @@ void __cdecl _CIsqrt();
 
 產生的值會推入至堆疊的頂端。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-**平台：** x86
+**平臺：** x86
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: _U_MENUorID 類別
+title: _U_MENUorID類
 ms.date: 11/04/2016
 f1_keywords:
 - ATL._U_MENUorID
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-ms.openlocfilehash: 9388ca1751ee27fb25d6751c961d23e5243f2918
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 419c9e79178db12efe278838ec8630e04ac3c461
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325829"
 ---
-# <a name="_u_menuorid-class"></a>_U_MENUorID 類別
+# <a name="_u_menuorid-class"></a>_U_MENUorID類
 
-這個類別會提供和`CreateWindow` `CreateWindowEx`的包裝函式。
+此類為`CreateWindow`和`CreateWindowEx`提供包裝。
 
 > [!IMPORTANT]
->  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -33,39 +33,39 @@ class _U_MENUorID
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[_U_MENUorID::_U_MENUorID](#_u_menuorid___u_menuorid)|建構函式。|
+|[_U_MENUorID:_U_MENUorID](#_u_menuorid___u_menuorid)|建構函式。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|功能表的控制碼。|
+|[_U_MENUorID:m_hMenu](#_u_menuorid__m_hmenu)|功能表的句柄。|
 
 ## <a name="remarks"></a>備註
 
-這個引數介面卡類別允許將識別碼 (UINTs) 或功能表控制碼 (HMENUs) 傳遞至函式, 而不需要在呼叫端的部分進行明確轉換。
+此參數適配器類允許將 ID (UINTs) 或功能表句柄 (HMENUs) 傳遞給函數,而無需調用方的顯式強制轉換。
 
-這個類別是設計用來對 Windows API 執行包裝函式, 特別是[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)和[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函式, 兩者都接受可能是子視窗識別碼 (UINT) 而非功能表控制碼的 HMENU 引數。 例如, 您可以看到此類別做為[CWindowImpl:: Create](cwindowimpl-class.md#create)的參數使用。
+此類旨在實現 Windows API 的包裝,尤其是[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)和[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函數,這兩個函數都接受可能是子窗口識別碼 (UINT) 而不是功能表句柄的 HMENU 參數。 例如,您可以看到此類正在用作[CWindowImpl:::create](cwindowimpl-class.md#create)的參數。
 
-類別會定義兩個函式多載: 一個會接受 UINT 引數, 另一個則接受 HMENU 引數。 UINT 引數只會轉換成函式中的 HMENU, 並將結果儲存在類別的單一資料成員[m_hMenu](#_u_menuorid__m_hmenu)中。 HMENU 函式的引數會直接儲存而不進行轉換。
+類定義兩個構造函數重載:一個接受 UINT 參數,另一個接受 HMENU 參數。 UINT 參數只是強制轉換為建構函數中的 HMENU,並將結果存儲在類的單個數據成員[m_hMenu](#_u_menuorid__m_hmenu)中。 HMENU 建構函數的參數直接存儲而不轉換。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlwin.h。h
+**標題:** atlwin.h
 
-##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu
+## <a name="_u_menuoridm_hmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID:m_hMenu
 
-類別會保存傳遞至其任何一個函式做為公用 HMENU 資料成員的值。
+類保存作為公共 HMENU 數據成員傳遞給其任一構造函數的值。
 
 ```
 HMENU m_hMenu;
 ```
 
-##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID
+## <a name="_u_menuorid_u_menuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID:_U_MENUorID
 
-UINT 引數只會轉換成函式中的 HMENU, 並將結果儲存在類別的單一資料成員[m_hMenu](#_u_menuorid__m_hmenu)中。
+UINT 參數只是強制轉換為建構函數中的 HMENU,並將結果存儲在類的單個數據成員[m_hMenu](#_u_menuorid__m_hmenu)中。
 
 ```
 _U_MENUorID(UINT nID);
@@ -75,15 +75,15 @@ _U_MENUorID(HMENU hMenu);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-子視窗識別碼。
+子窗口識別碼。
 
 *hMenu*<br/>
-功能表控制碼。
+功能表句柄。
 
 ### <a name="remarks"></a>備註
 
-HMENU 函式的引數會直接儲存而不進行轉換。
+HMENU 建構函數的參數直接存儲而不轉換。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

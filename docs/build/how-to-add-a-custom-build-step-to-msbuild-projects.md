@@ -17,15 +17,15 @@ ms.locfileid: "72444912"
 
 在專案檔（. .vcxproj）中指定自訂的組建步驟。 此步驟可以指定要執行的命令列、任何額外的輸入或輸出檔，以及要顯示的訊息。 如果**MSBuild**判斷出您的輸入檔案已過期，則會顯示訊息，並執行命令。
 
-若要在組建目標的順序中指定自訂群組建步驟的位置，請在專案檔中使用其中一個或兩個 `CustomBuildAfterTargets` 和 `CustomBuildBeforeTargets` XML 元素。 例如，您可以指定自訂群組建步驟在連結工具目標和資訊清單工具目標之前執行。 實際的可用目標集取決於您的特定組建。
+若要在組建目標的順序中指定自訂群組建步驟的位置，請在專案檔中使用`CustomBuildAfterTargets`一`CustomBuildBeforeTargets`或兩個和 XML 元素。 例如，您可以指定自訂群組建步驟在連結工具目標和資訊清單工具目標之前執行。 實際的可用目標集取決於您的特定組建。
 
-指定要在特定目標執行之前執行自訂群組建步驟的 `CustomBuildBeforeTargets` 專案、在特定目標執行後執行步驟的 `CustomBuildAfterTargets` 專案，或這兩個元素，以執行兩個相鄰目標之間的步驟。 如果未指定任何專案，則您的自訂群組建工具會在其預設位置（位於**連結**目標之後）執行。
+指定在`CustomBuildBeforeTargets`特定目標執行之前執行自訂群組建步驟的元素、在特定`CustomBuildAfterTargets`目標執行之後執行步驟的元素，或兩個專案都要執行兩個相鄰目標的步驟。 如果未指定任何專案，則您的自訂群組建工具會在其預設位置（位於**連結**目標之後）執行。
 
-自訂群組建步驟和自訂群組建工具會共用在 `CustomBuildBeforeTargets` 中指定的資訊，以及 `CustomBuildAfterTargets` XML 元素。 因此，請只在專案檔中指定這些目標一次。
+自訂群組建步驟和自訂群組建工具會共用`CustomBuildBeforeTargets`和`CustomBuildAfterTargets` XML 元素中指定的資訊。 因此，請只在專案檔中指定這些目標一次。
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>若要定義自訂群組建步驟所執行的內容
 
-1. 將屬性群組新增至專案檔。 在此屬性群組中，指定命令、其輸入和輸出，以及訊息，如下列範例所示。 這個範例會從您在[逐步解說：使用C++ MSBuild 建立專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)中建立的主要 .cpp 檔案建立 .cab 檔案。
+1. 將屬性群組新增至專案檔。 在此屬性群組中，指定命令、其輸入和輸出，以及訊息，如下列範例所示。 這個範例會從您在[逐步解說：使用 MSBuild 建立 c + + 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)中建立的主要 .cpp 檔案建立 .cab 檔案。
 
     ```
     <ItemDefinitionGroup>
@@ -48,8 +48,8 @@ ms.locfileid: "72444912"
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[逐步解說：使用 MSBuild 建立C++專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[逐步解說：使用 MSBuild 建立 c + + 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [如何：在 MSBuild 專案中使用建置事件](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [如何：將自訂建置工具新增至 MSBuild 專案](how-to-add-custom-build-tools-to-msbuild-projects.md)

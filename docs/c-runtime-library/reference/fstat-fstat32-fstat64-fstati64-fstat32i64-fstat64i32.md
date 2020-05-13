@@ -1,6 +1,6 @@
 ---
 title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fstat32
 - _fstat64
@@ -8,6 +8,10 @@ api_name:
 - _fstat
 - _fstat64i32
 - _fstat32i64
+- _o__fstat32
+- _o__fstat32i64
+- _o__fstat64
+- _o__fstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 1ab71071fdf5578295cfcd72f79930787e634d5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 81c272187c681010e7b8560d43f2fad87e1e0fdc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956468"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910129"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -97,7 +102,7 @@ int _fstat64i32(
 *fd*<br/>
 已開啟之檔案的檔案描述項。
 
-*buffer*<br/>
+*緩衝區*<br/>
 儲存結果的結構指標。
 
 ## <a name="return-value"></a>傳回值
@@ -119,7 +124,7 @@ int _fstat64i32(
 | **st_rdev** | 如果裝置， *fd*;否則為0。 |
 | **st_size** | 檔案大小，以位元組為單位。 |
 
-如果*fd*參考到裝置， **st_atime**、 **st_ctime**、 **st_mtime**和**st_size**欄位就沒有意義。
+如果*fd*參考到裝置，[ **st_atime**]、[ **st_ctime**]、[ **st_mtime**] 和 [ **st_size** ] 欄位就沒有意義。
 
 因為 Stat.h 使用在 Types.h 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) 類型，所以您必須在程式碼中的 Stat.h 之前包含 Types.h。
 
@@ -127,7 +132,9 @@ int _fstat64i32(
 
 這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數位尾碼（**32**或**64**）表示所使用的時間類型大小;第二個尾碼為**i32**或**i64**，指出檔案大小是否以32位或64位整數表示。
 
-**_fstat**相當於 **_fstat64i32**，而**struct** **_stat**包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則這會是 true。 **_fstat**使用32位時間，而**結構** **_stat**包含32位時間。 **_Fstati64**也是如此。
+**_fstat**相當於 **_fstat64i32**，而**struct** **_stat**包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則為 true。**_fstat**使用32位時間，而**結構** **_stat**包含32位時間。 **_Fstati64**的情況也是如此。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>_stat 的時間類型和檔案長度類型版本
 
@@ -144,7 +151,7 @@ int _fstat64i32(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fstat**|\<sys/stat.h> 和 \<sys/types.h>|
 |**_fstat32**|\<sys/stat.h> 和 \<sys/types.h>|
@@ -153,7 +160,7 @@ int _fstat64i32(
 |**_fstat32i64**|\<sys/stat.h> 和 \<sys/types.h>|
 |**_fstat64i32**|\<sys/stat.h> 和 \<sys/types.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

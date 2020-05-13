@@ -18,7 +18,7 @@ ms.locfileid: "71998710"
 
 轉換成整數類資料類型的浮點值，會先捨棄任何小數值來截斷。 如果在結果型別中可顯示這個截斷的值，則結果必須是該值。 當無法顯示時，會產生未定義的結果值。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 Microsoft 編譯器會針對**float**值使用 IEEE-754 binary32 標記法，並將**long double**和**double**的 binary64 標記法。 因為**long double**和**double**使用相同的標記法，所以它們具有相同的範圍和精確度。
 
@@ -34,40 +34,40 @@ Microsoft 編譯器會針對**float**值使用 IEEE-754 binary32 標記法，並
 
 - 若要轉換成不**帶正負**號的長整數或不**帶正負號的 long long**，轉換超出範圍值的結果可能是最高或最低可顯示值以外的值。 結果是 sentinel 或飽和值，而不是取決於編譯器選項和目標架構。 未來的編譯器版本可能會改為傳回飽和或 sentinel 值。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 下表摘要說明從浮點類型進行轉換。
 
 ## <a name="table-of-conversions-from-floating-point-types"></a>從浮點類型轉換的資料表
 
-|從|以|方法|
+|從|至|方法|
 |----------|--------|------------|
 |**float**|**char**|轉換成 **long**；將 **long** 轉換成 **char**|
 |**float**|**short**|轉換為 **long**，將 **long** 轉換為 **short**|
 |**float**|**int**|於小數點截斷。 如果結果太大，而無法以**int**表示，則結果會是未定義的。|
-|**float**|**long**|於小數點截斷。 如果結果太大而無法以 **long** 表示，則結果會是未定義。|
+|**float**|**前提**|於小數點截斷。 如果結果太大而無法以 **long** 表示，則結果會是未定義。|
 |**float**|**long long**|於小數點截斷。 如果結果太大而無法以**long**表示，則結果會是未定義的。|
 |**float**|**unsigned char**|轉換成**long**;將**long**轉換成不**帶正負**號的字元|
 |**float**|**unsigned short**|轉換為 **long**，將 **long** 轉換為 **unsigned short**|
 |**float**|**unsigned**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負**號，則結果為未定義。|
 |**float**|**unsigned long**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負號的長整數**，則會產生未定義的結果。|
-|**float**|**不帶正負號的長長**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負號的長長**整數，則會產生未定義的結果。|
+|**float**|**unsigned long long**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負號的長長**整數，則會產生未定義的結果。|
 |**float**|**double**|表示為**雙精度浮點數**。|
 |**float**|**long double**|表示為**長雙精度浮點數**。|
 |**double**|**char**|轉換成 **float**；將 **float** 轉換成 **char**|
 |**double**|**short**|轉換為 **float**，將 **float** 轉換為 **short**|
 |**double**|**int**|於小數點截斷。 如果結果太大，而無法以**int**表示，則結果會是未定義的。|
-|**double**|**long**|於小數點截斷。 如果結果太大而無法以 **long** 表示，則結果會是未定義。|
+|**double**|**前提**|於小數點截斷。 如果結果太大而無法以 **long** 表示，則結果會是未定義。|
 |**double**|**unsigned char**|轉換成**long**;將**long**轉換成不**帶正負**號的字元|
 |**double**|**unsigned short**|轉換為 **long**，將 **long** 轉換為 **unsigned short**|
 |**double**|**unsigned**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負**號，則結果為未定義。|
 |**double**|**unsigned long**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負號的長整數**，則會產生未定義的結果。|
-|**double**|**不帶正負號的長長**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負號的長長**整數，則會產生未定義的結果。|
+|**double**|**unsigned long long**|於小數點截斷。 如果結果太大，而無法表示為不**帶正負號的長長**整數，則會產生未定義的結果。|
 |**double**|**float**|表示為 **float**。 如果**double**值無法完全表示為**float**，則會遺失有效位數。 如果值太大而無法以 **float** 表示，則結果會是未定義。|
 |**double**|**long double**|**long double** 值會被視為 **double**。|
 
 **Long double**的轉換會遵循與**double**轉換相同的方法。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指派轉換](../c-language/assignment-conversions.md)

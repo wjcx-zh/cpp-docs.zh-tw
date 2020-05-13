@@ -9,21 +9,21 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: 使用匯入和匯出宣告來存取和，以發行指定模組中所定義的類型和函數。
-ms.openlocfilehash: 7406bf75595bef20775ee1b67c27bd62bff1a932
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+description: 使用導入和匯出聲明訪問並發佈指定模組中定義的類型和函數。
+ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374107"
 ---
 # <a name="module-import-export"></a>模組、匯入、匯出
 
-**模組**、匯**入**和**匯出**宣告可在 c + + 20 中使用，而且需要[/experimental： module](../build/reference/experimental-module.md)編譯器參數和[/std： C + + 最新版本](../build/reference/std-specify-language-standard-version.md)。 如需詳細資訊，請參閱[中C++的模組總覽](modules-cpp.md)。
+**模組**、**匯入**與**匯出**宣告在 C++20 中可用,並且需要[/實驗:模組](../build/reference/experimental-module.md)編譯器開關以及[/std:c_最新](../build/reference/std-specify-language-standard-version.md)。 有關詳細資訊,請參閱[C++ 中的模組概述](modules-cpp.md)。
 
-## <a name="module"></a>name
+## <a name="module"></a>module
 
-將**模組**宣告放在模組執行檔案的開頭，以指定檔案內容屬於命名模組。
+將**模組**聲明放在模組實現檔的開頭,以指定檔案內容屬於命名模組。
 
 ```cpp
 module ModuleA;
@@ -31,13 +31,13 @@ module ModuleA;
 
 ## <a name="export"></a>匯出
 
-針對模組的主要介面檔案使用**匯出模組**宣告，其副檔名必須是**ixx**：
+設定模組的主介面檔使用**匯出模組**聲明,該檔案必須具有延伸**名 .ixx**:
 
 ```cpp
 export module ModuleA;
 ```
 
-在介面檔案中，針對要做為公用介面一部分的名稱使用**export**修飾詞：
+在介面檔中,對打算成為公共介面一部分的名稱使用**匯出**修改器:
 
 ```cpp
 // ModuleA.ixx
@@ -52,7 +52,7 @@ namespace Bar
 }
 ```
 
-匯入模組的程式碼看不到非匯出的名稱：
+匯入模組的代碼看不到非匯出的名稱:
 
 ```cpp
 //MyProgram.cpp
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-**Export**關鍵字可能不會出現在模組執行檔案中。 當**匯出**套用至命名空間名稱時，會匯出命名空間中的所有名稱。
+**匯出**關鍵字可能不會顯示在模組實現檔中。 當**匯出**應用於命名空間名稱時,將匯出命名空間中的所有名稱。
 
-## <a name="import"></a>匯入
+## <a name="import"></a>入口
 
-使用匯**入**宣告，讓模組的名稱可在您的程式中顯示。 匯入宣告必須出現在模組宣告之後，以及任何 #include 指示詞之後，但在檔案中的任何宣告之前。
+使用**導入**聲明使模組的名稱在程式中可見。 導入聲明必須出現在模組聲明之後和任何#include指令之後,但在檔中的任何聲明之前。
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>備註
 
-匯**入**和**模組**只有在邏輯行開頭出現時，才會被視為關鍵字：
+**匯入**與**模組**只在邏輯行的開頭出現時被視為關鍵字:
 
 ```cpp
 
@@ -110,9 +110,9 @@ export import module-name
 int i; module ;
 ```
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-在 Microsoft C++中，權杖匯**入**和**模組**一律是識別碼，而絕不會使用關鍵字做為宏的引數。
+在 Microsoft C++中,**導入**的權杖和**模組**在用作巨集的參數時始終是識別碼,從不為關鍵字。
 
 ### <a name="example"></a>範例
 
@@ -125,6 +125,6 @@ import // Always an identifier, never a keyword
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[中的模組總覽C++](modules-cpp.md)
+[C++ 中的模組概觀](modules-cpp.md)

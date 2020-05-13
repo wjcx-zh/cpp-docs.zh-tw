@@ -64,84 +64,84 @@ f1_keywords:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-ms.openlocfilehash: 5caf40fc757e2c5c90c06e1698ce4c15d1ed6240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4ed86c11d3c5b5f1ce38e3146533109f3a6b00d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363589"
 ---
 # <a name="afx-messages"></a>AFX 訊息
 
-MFC 中，會使用這些訊息。
+這些消息在 MFC 中使用。
 
 ## <a name="messages"></a>訊息
 
-下表列出 MFC 程式庫中所使用的訊息：
+下表列出了在 MFC 庫中使用的消息:
 
 ||||||
 |-|-|-|-|-|
-|訊息|描述|[in] *wParam*|*lParam* （所有參數都是 [in] 除非另有指明）。|傳回值|
+|訊息|描述|[在]*wParam*|*lParam* (除非另有說明,否則所有參數均處於[in]。|傳回值|
 |AFX_WM_ACCGETOBJECT|未使用。|未使用。|不適用。|不適用。|
-|AFX_WM_ACCGETSTATE|用於協助工具支援。 傳送此訊息可`CMFCPopupMenu`或`CMFCRibbonPanelMenu`擷取目前項目的狀態。|可能是功能表按鈕或分隔符號項目的索引。|未使用。|項目狀態。 如果索引是無效的則為-1 0，表示功能表按鈕沒有任何特殊的屬性。 否則就是下列旗標的組合：<br /><br /> TBBS_DISABLED： 項目已停用<br /><br /> TBBS_CHECKED： 檢查項目<br /><br /> TBBS_BUTTON-項目是標準的按鈕<br /><br /> TBBS_PRESSED： 按鈕已按下<br /><br /> TBBS_INDETERMINATE： 未定義的狀態<br /><br /> TBBS_SEPARATOR-而不是功能表按鈕，其他功能表項目之間的區隔的此項目表單|
-|AFX_WM_CHANGE_ACTIVE_TAB|架構會將此訊息傳送至可調整大小的控制列控制項。 處理此訊息以接收來自通知`CMFCTabCtrl`物件，當使用者變更作用中的索引標籤。|索引標籤的索引。|未使用。|非零值。|
-|AFX_WM_CHANGE_CURRENT_FOLDER|架構會將此訊息傳送至的父系`CMFCShellListCtrl`時，使用者已變更目前的資料夾。|未使用。|未使用。|未使用。|
-|AFX_WM_CHANGEVISUALMANAGER|架構會將此訊息傳送給所有框架視窗中，當使用者變更目前的視覺化管理員。 為了回應此訊息，框架視窗會重新計算其區域，並視需要調整其他參數。 如果您要收到此事件的通知，您可以在您的應用程式中處理 AFX_WM_CHANGEVISUALMANAGER 訊息。 您必須呼叫基底類別處理常式 (`OnChangeVisualManager`) 以確保架構的內部處理此事件會發生。|未使用。|未使用。|未使用。|
-|AFX_WM_CHANGING_ACTIVE_TAB|傳送至父代`CMFCTabCtrl`物件。  處理此訊息，如果您想要接收通知`CMFCTabCtrl`物件時使用者重設 索引標籤。|正在啟動索引標籤的索引。|未使用。|非零值。|
+|AFX_WM_ACCGETSTATE|用於輔助功能支援。 將此訊息發送到`CMFCPopupMenu``CMFCRibbonPanelMenu`或檢索當前元素的狀態。|元素的索引,可以是菜單按鈕或分隔符。|未使用。|元素狀態。 如果索引無效,則為 -1;如果功能表按鈕沒有特殊屬性,則為 0。 否則,它是以下標誌的組合:<br /><br /> 關閉TBBS_DISABLED = 項目<br /><br /> TBBS_CHECKED = 專案已選取<br /><br /> TBBS_BUTTON = 該項目是標準按鈕<br /><br /> 按下TBBS_PRESSED = 按鈕<br /><br /> TBBS_INDETERMINATE = 未定義狀態<br /><br /> TBBS_SEPARATOR - 而不是選單按鈕,此元素形成其他選單項之間的分隔|
+|AFX_WM_CHANGE_ACTIVE_TAB|框架將此訊息發送到可調整大小的控制欄控制項。 處理此消息以在使用者更改活動`CMFCTabCtrl`選項卡時接收來自物件的通知。|選項卡的索引。|未使用。|零。|
+|AFX_WM_CHANGE_CURRENT_FOLDER|當使用者更改當前資料夾`CMFCShellListCtrl`時,框架會將此消息發送到 父級。|未使用。|未使用。|未使用。|
+|AFX_WM_CHANGEVISUALMANAGER|當使用者更改當前可視化管理器時,框架會將此消息發送到所有框架視窗。 為了回應此消息,幀視窗重新計算其區域並根據需要調整其他參數。 如果需要有關此事件的通知,可以在應用程式中處理AFX_WM_CHANGEVISUALMANAGER消息。 您必須呼叫基類別處理程式`OnChangeVisualManager`( 以確保框架對此事件的內部處理發生。|未使用。|未使用。|未使用。|
+|AFX_WM_CHANGING_ACTIVE_TAB|傳送到物件的父`CMFCTabCtrl`層 。  如果要在使用者重置選項卡時接收來自`CMFCTabCtrl`物件的通知,請處理此消息。|正在啟動的選項卡的索引。|未使用。|零。|
 |AFX_WM_CHECKEMPTYMINIFRAME|僅供內部使用。|不適用。|不適用。|不適用。|
-|AFX_WM_CREATETOOLBAR|從傳送`CMFCToolBarsListPropertyPage`當使用者自訂程序期間建立新的工具列。 您可以處理此訊息可具現化自訂 CMFCToolBar 衍生的物件。 如果您處理此訊息，並建立您自己的工具列，請省略的預設處理常式的呼叫。|未使用。|包含的工具列名稱的字串指標。|新建立的工具列指標。 NULL 表示工具列建立已取消。|
-|AFX_WM_CUSTOMIZEHELP|從自訂屬性工作表傳送到主框架視窗`CMFCToolbarCustomize Dialog`當使用者按下**協助**按鈕或 F1 鍵。|指定使用的自訂屬性工作表中的頁面。|`CMFCToolbarCustomize Dialog` 物件的指標。|為零。|
-|AFX_WM_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize Dialog`傳送此訊息，通知使用者在建立新的工具列的父框架。|自訂啟動時，FALSE 完成自訂後，則為 TRUE。|未使用。|為零。|
-|AFX_WM_DELETETOOLBAR|當使用者即將刪除自訂模式中的工具列，請傳送到主框架視窗。<br /><br /> 處理此訊息採取其他動作，當使用者刪除自訂模式中的工具列。 您也應該呼叫預設處理常式 (`OnToolbarDelete`)，此 cmdlet 會刪除工具列。 預設處理常式會傳回值，指出是否可以刪除工具列。|未使用。|指標`CMFCToolBar`来刪除的物件。|無法刪除工具列; 如果為非零否則為 0。|
-|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` 將此訊息傳送至主框架視窗，以擷取文件色彩。|未使用。|[in、 out]指標`CList<COLORREF, COLORREF>`物件。|為零。|
+|AFX_WM_CREATETOOLBAR|在`CMFCToolBarsListPropertyPage`自定義過程中用戶創建新工具列時發送。 您可以處理此消息以實例化自定義 CMFCToolBar 派生的物件。 如果處理此消息並創建自己的工具列,請省略對預設處理程式的調用。|未使用。|指向包含工具列名稱的字串的指標。|指向新創建的工具列的指標。 NULL 表示工具列創建已取消。|
+|AFX_WM_CUSTOMIZEHELP|當使用者按下 **「説明」** 按鈕或`CMFCToolbarCustomize Dialog`F1 鍵時,從自定義屬性工作表發送到主框架視窗。|指定自定義屬性表的活動頁。|`CMFCToolbarCustomize Dialog` 物件的指標。|零個。|
+|AFX_WM_CUSTOMIZETOOLBAR|發送`CMFCToolbarCustomize Dialog`此消息以通知父幀使用者正在創建新工具列。|當自定義啟動時為 TRUE,自定義完成後 FALSE。|未使用。|零個。|
+|AFX_WM_DELETETOOLBAR|當使用者要在自定義模式下刪除工具列時,發送到主框架視窗。<br /><br /> 處理此消息,當使用者在自定義模式下刪除工具列時執行其他操作。 還應呼叫預設處理程式`OnToolbarDelete`( , 刪除工具列。 預設處理程式返回一個值,指示是否可以刪除工具列。|未使用。|指向要刪除`CMFCToolBar`的物件的指標。|如果無法刪除工具列,則非零;否則 0。|
+|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton`將此訊息發送到主框架視窗以檢索文件顏色。|未使用。|[進出]指向物件的指標`CList<COLORREF, COLORREF>`。|零個。|
 |AFX_WM_GETDRAGBOUNDS|僅供內部使用。|不適用。|不適用。|不適用。|
-|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|使用者會反白顯示功能區的清單項目時傳送到主框架視窗。|反白顯示的項目索引|指標 `CMFCBaseRibbonElement`|未使用。|
-|AFX_WM_ON_AFTER_SHELL_COMMAND|傳送至父代`CMFCShellListCtrl`或`CMFCShellTreeCtrl`控制當使用者在完成執行 shell 命令。|使用者執行命令的識別碼|未使用。|如果應用程式會處理此訊息，它應會傳回零。|
-|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|架構會將此訊息傳送至功能區的父系中之前它會顯示快顯功能表。 您可以處理此訊息，並隨時修改快顯功能表。|未使用。|指標 `CMFCBaseRibbonElement`|未使用。|
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|當使用者突出顯示功能區清單項時發送到主框架視窗。|突顯項目的索引|指向`CMFCBaseRibbonElement`|未使用。|
+|AFX_WM_ON_AFTER_SHELL_COMMAND|當使用者完成執行 shell`CMFCShellListCtrl``CMFCShellTreeCtrl`命令時,已發送到或控制項的父項。|使用者執行的指令的識別碼|未使用。|如果應用程式處理此消息,則應返回零。|
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|框架在顯示彈出功能表之前,會將此消息發送給功能區父級。 您可以隨時處理此消息並修改彈出式功能表。|未使用。|指向`CMFCBaseRibbonElement`|未使用。|
 |AFX_WM_ON_CANCELTABMOVE|僅供內部使用。|不適用。|不適用。||
-|AFX_WM_ON_CHANGE_RIBBON_CATEGORY|此架構會將此訊息傳送回主框架中，當使用者變更作用中的 [功能區控制項] 類別。|未使用。|指標`CMFCRibbonBar`分類已變更。|未使用。|
-|AFX_WM_ON_CLOSEPOPUPWINDOW|此架構會傳送此訊息，通知的擁有者`CMFCDesktopAlertWnd`視窗即將關閉。|未使用。|指標`CMFCDesktopAlertWnd`物件。|未使用。|
+|AFX_WM_ON_CHANGE_RIBBON_CATEGORY|當使用者更改活動功能區控制類別時,框架會將此消息發送到主框架。|未使用。|指向其類別已更改`CMFCRibbonBar`的的指標。|未使用。|
+|AFX_WM_ON_CLOSEPOPUPWINDOW|框架發送此消息以通知所有者`CMFCDesktopAlertWnd`視窗即將關閉。|未使用。|指向`CMFCDesktopAlertWnd`物件的指標。|未使用。|
 |AFX_WM_ON_DRAGCOMPLETE|僅供內部使用。|不適用。|不適用。|不適用。|
-|AFX_WM_ON_GET_TAB_TOOLTIP|索引標籤視窗即將顯示工具提示的索引標籤中，如果您啟用自訂的工具提示時，傳送到主框架視窗。|未使用。|指標`CMFCTabToolTipInfo`結構。|未使用。|
-|AFX_WM_ON_HSCROLL|傳送至可調整大小的控制列控制項。 處理此訊息以接收來自通知`CMFCTabCtrl`物件索引標籤式的小工具水平捲軸的捲動事件發生時。|低序位文字指定捲軸值，指出使用者的捲動要求。  如需詳細資訊，請參閱這個主題稍後的資料表。|未使用。|非零值。|
-|AFX_WM_ON_MOVE_TAB|當使用者將索引標籤拖曳到新的位置傳送到索引標籤式視窗的父代。|在其原始位置 索引標籤的以零為起始的索引。|[out]其新位置中的索引標籤的以零為起始的索引。|為零。|
+|AFX_WM_ON_GET_TAB_TOOLTIP|如果啟用了自定義工具提示,則當選項卡視窗要顯示選項卡的工具提示時,發送到主框架視窗。|未使用。|指向結構的`CMFCTabToolTipInfo`指標。|未使用。|
+|AFX_WM_ON_HSCROLL|發送到可調整大小的控制欄控制項。 處理此消息,在選項卡式小`CMFCTabCtrl`部件水平滾動欄中發生滾動事件時接收來自物件的通知。|低階單詞指定指示使用者滾動請求的滾動條值。  如需詳細資訊，請參閱這個主題稍後的資料表。|未使用。|零。|
+|AFX_WM_ON_MOVE_TAB|當使用者將選項卡拖動到新位置時,已發送到選項卡視窗的父級。|選項卡的原始位置的零基索引。|[出]選項卡的新位置的零基索引。|零個。|
 |AFX_WM_ON_MOVETABCOMPLETE|僅供內部使用。|不適用。|不適用。|不適用。|
-|AFX_WM_ON_MOVETOTABGROUP|當使用者從一個索引標籤式群組的 MDI 子視窗移到另一個時，請傳送至主框架視窗。|索引標籤式視窗的控制代碼 (`CMFCTabCtrl`) 從已移除的 MDI 子視窗它。|[out]索引標籤式視窗的控制代碼 (`CMFCTabCtrl`) 的 MDI 子視窗有已插入。|忽略。|
-|AFX_WM_ON_PRESS_CLOSE_BUTTON|傳送至父代`CDockablePane`當使用者按下**關閉**標題的控制列上的按鈕。|未使用。|使用者所按的可停駐窗格的指標**關閉** 按鈕。|如果無法關閉窗格;，則為 TRUE。否則為 FALSE。|
-|AFX_WM_ON_RENAME_TAB|之後使用者已重新命名可編輯的索引標籤，請傳送至索引標籤式視窗的父代。|已重新命名的索引標籤的以零為起始的索引。|[out]包含新的索引標籤名稱的字串指標。|非零值，如果應用程式會處理此訊息;架構會抑制呼叫`CMFCBaseTabCtrl::SetTabLabel`。  如果傳回的零，然後`CMFCBaseTabCtrl::SetTabLabel`由架構呼叫。|
-|AFX_WM_ON_RIBBON_CUSTOMIZE|當使用者開始自訂傳送到父框架。 如果您想要顯示您自己的自訂對話方塊中，該資料，請處理此訊息。|未使用。|若要自訂功能區控制項指標。|如果應用程式會處理此訊息，並顯示它自己的自訂對話方塊中，非零值。 如果應用程式會傳回零，則架構會顯示內建的自訂對話方塊。|
+|AFX_WM_ON_MOVETOTABGROUP|當使用者將 MDI 子視窗從一個選項卡式組移動到另一個選項卡式組時,已發送到主框架視窗。|選項卡式視窗`CMFCTabCtrl`( ) 的句柄,從中刪除 MDI 子視窗。|[出]已插入 MDI`CMFCTabCtrl`子 視窗的選項卡式視窗的句柄。|忽略。|
+|AFX_WM_ON_PRESS_CLOSE_BUTTON|將使用者按一下控制`CDockablePane`欄標題上的 **「關閉**」按鈕時發送到父級。|未使用。|指向可停靠窗格的指標,用戶按下**其關閉「** 按鈕。|如果窗格無法關閉,則為 TRUE;如果窗格無法關閉,則為 TRUE。否則 FALSE。|
+|AFX_WM_ON_RENAME_TAB|在使用者重新命名可編輯選項卡後,發送到選項卡式視窗的父級。|重命名選項卡的零基索引。|[出]指向包含新選項卡名稱的字串的指標。|如果應用程式處理此消息,則非零;框架將禁止對`CMFCBaseTabCtrl::SetTabLabel`的調用。  如果返回零,則`CMFCBaseTabCtrl::SetTabLabel`由框架調用。|
+|AFX_WM_ON_RIBBON_CUSTOMIZE|當用戶開始自定義時發送到父框架。 如果要顯示自己的自定義對話框,請處理此消息。|未使用。|指向要自定義的功能區控件的指標。|如果應用程式處理此消息並顯示其自己的自定義對話框,則為非零。 如果應用程式返回零,框架將顯示內置自定義對話方塊。|
 |AFX_WM_ON_TABGROUPMOUSEMOVE|僅供內部使用。|不適用。|不適用。|不適用。|
-|AFX_WM_POSTSETPREVIEWFRAME|傳送至通知使用者已變更的預覽列印模式的主要畫面格|TRUE 表示已設定 預覽列印模式。 FALSE 表示該預覽列印模式關閉。|未使用。|未使用。|
-|AFX_WM_PROPERTY_CHANGED|傳送至的屬性方格控制項擁有者 (`CMFCPropertyGridCtrl`) 的使用者變更所選屬性的值時。|屬性清單的控制項識別碼。|屬性的指標 (`CMFCPropertyGridProperty`) 已變更。|未使用。|
-|AFX_WM_RESETCONTEXTMENU|當使用者重設進行自訂時的操作功能表時，傳送到主框架視窗。|內容功能表中的資源識別碼。|目前的操作功能表中，指標`CMFCPopupMenu`。|未使用。|
-|AFX_WM_RESETKEYBOARD|此架構會將此訊息傳送到主框架視窗中，當使用者重設所有的鍵盤快速鍵，在自訂期間。|未使用。|未使用。|未使用。|
-|AFX_WM_RESETMENU|架構會將此訊息傳送到功能表的擁有者 （框架視窗） 當使用者重設應用程式框架功能表進行自訂|功能表資源識別碼。|未使用。|未使用。|
-|AFX_WM_RESETPROMPT|當使用者重設，從工具列的工具列的自訂對話方塊時，架構就會傳送此訊息。 預設處理常式會顯示訊息方塊，詢問使用者是否要重設工具列。|未使用。|未使用。|未使用。|
-|AFX_WM_RESETTOOLBAR|A`CMFCToolBar`工具列會還原到其原始狀態，也就是從資源載入時，物件會傳送此訊息。 處理這個訊息，以便重新插入其類別衍生自的工具列按鈕`CMFCToolbarButton`。 如需詳細資訊，請參閱`CMFCToolbarComboBoxButton`。|工具列，其狀態已還原的資源識別碼。|未使用。|為零。|
-|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton` 物件會將此訊息傳送到其擁有者中，當使用者按一下一般功能表按鈕。 處理此訊息，供您每次`CMFCToolbarMenuButton`使用者按一下按鈕時顯示快顯功能表。|傳送訊息 按鈕的命令識別碼。|資料指標的螢幕座標。 的低序位字組指定的 x 座標。 高序位字組指定的 y 座標。|未使用。|
-|AFX_WM_TOOLBARMENU|當使用者放開滑鼠右按鈕，在用戶端或非工作區 窗格的滑鼠指標時，傳送到主框架視窗。|未使用。|滑鼠指標的螢幕座標。 的低序位字組指定的 x 座標。 高序位字組指定的 y 座標。|如果應用程式會處理此訊息，則為零否則，非零值。|
-|AFX_WM_UPDATETOOLTIPS|表示應該重新建立其工具提示控制項傳送給所有的工具提示擁有者。|應該處理此訊息的控制項型別。 請參閱稍後本主題的可能值的清單。|未使用。|未使用。|
-|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` 將此訊息傳送至父框架中，當使用者按一下**幫助**按鈕，或按一下 輸入說明模式**協助**標題按鈕或 F1 鍵。|未使用。|執行個體的指標`CMFCWindowsManagerDialog`。|未使用。|
+|AFX_WM_POSTSETPREVIEWFRAME|已送出以通知主框架使用者更改列印預覽模式|TRUE 表示已設置列印預覽模式。 FALSE 表示列印預覽模式已關閉。|未使用。|未使用。|
+|AFX_WM_PROPERTY_CHANGED|當使用者更改所選屬性的值時,將發送到屬性`CMFCPropertyGridCtrl`網格控件 ( ) 的擁有者。|屬性清單的控制 ID。|指定屬性的`CMFCPropertyGridProperty`指標 。|未使用。|
+|AFX_WM_RESETCONTEXTMENU|當使用者在自定義期間重置上下文功能表時發送到主框架視窗。|上下文菜單的資源 ID。|在目前內容選單的指標`CMFCPopupMenu`。|未使用。|
+|AFX_WM_RESETKEYBOARD|當使用者在自定義期間重置所有鍵盤快速鍵時,框架會將此消息發送到主框架視窗。|未使用。|未使用。|未使用。|
+|AFX_WM_RESETMENU|當使用者在自訂期間重置應用程式框架選單時,框架會將此訊息發送給選單擁有者(框架視窗)|功能表資源識別碼。|未使用。|未使用。|
+|AFX_WM_RESETPROMPT|當使用者從工具列自定義對話框重置工具列時,框架將發送此消息。 預設處理程式顯示一個訊息框,詢問使用者是否要重置工具列。|未使用。|未使用。|未使用。|
+|AFX_WM_RESETTOOLBAR|當`CMFCToolBar`工具列還原到其原始狀態(即從資源載入)時,物件將發送此消息。 處理此消息以重新插入其類派生自`CMFCToolbarButton`的工具列按鈕。 如需詳細資訊，請參閱 `CMFCToolbarComboBoxButton`。|已還原狀態的工具列的資源 ID。|未使用。|零個。|
+|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton`當用戶單擊常規功能表按鈕時,物件會向其擁有者發送此消息。 每次用戶按下按鈕時,您都`CMFCToolbarMenuButton`用於顯示彈出功能表時處理此消息。|發送消息的按鈕的命令 ID。|游標的螢幕座標。 低階單詞指定 x 座標。 高階單詞指定 y 座標。|未使用。|
+|AFX_WM_TOOLBARMENU|當使用者釋放滑鼠的右鍵時,當滑鼠指標位於窗格的用戶端或非用戶端區域時,發送到主框架視窗。|未使用。|滑鼠指標的螢幕座標。 低階單詞指定 x 座標。 高階單詞指定 y 座標。|如果應用程式處理此消息,則為零;如果應用程式處理此消息,則為零。否則,非零。|
+|AFX_WM_UPDATETOOLTIPS|發送給所有工具提示擁有者,以指示應重新創建其工具提示控制項。|應處理此消息的控件的類型。 有關可能值的清單,請參閱本主題後面的表。|未使用。|未使用。|
+|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`當使用者按下 **「説明」** 按鈕時,將此消息發送到父幀,或者通過按一下 **「幫助**標題」按鈕或 F1 鍵進入説明模式。|未使用。|指向 的實例`CMFCWindowsManagerDialog`的指標。|未使用。|
 
-下表顯示的值低序位文字*lParam* AFX_WM_HSCROLL 方法的參數：
+下表顯示AFX_WM_HSCROLL方法的*lParam*參數的低字的值:
 
 |||
 |-|-|
 |值|意義|
-|SB_ENDSCROLL|使用者結束捲軸。|
-|SB_LEFT|在使用者捲動至左上角。|
-|SB_RIGHT|在使用者捲動至右下角。|
-|SB_LINELEFT|在使用者捲動左一個單位。|
-|SB_LINERIGHT|在使用者捲動一個單位的權限。|
-|SB_PAGELEFT|在使用者捲動左旋轉視窗的寬度。|
-|SB_PAGERIGHT|使用者會向右捲動視窗的寬度。|
-|SB_THUMBPOSITION|使用者有拖曳捲動方塊 （捲動方塊），並放開滑鼠按鈕。 高序位文字表示在拖曳作業結尾處的捲動方塊的位置。|
-|SB_THUMBTRACK|使用者正在拖曳捲軸方塊。 使用此值，直到使用者放開滑鼠按鈕 AFX_WM_ON_HSCROLL 訊息會重複傳送。 高序位文字指出已拖曳捲動方塊的位置。|
+|SB_ENDSCROLL|用戶結束滾動。|
+|SB_LEFT|使用者滾動到左上角。|
+|SB_RIGHT|使用者滾動到右下角。|
+|SB_LINELEFT|用戶滾動由一個單位左。|
+|SB_LINERIGHT|使用者按一個單位向右滾動。|
+|SB_PAGELEFT|使用者按視窗的寬度向左滾動。|
+|SB_PAGERIGHT|使用者按視窗的寬度向右滾動。|
+|SB_THUMBPOSITION|使用者已拖動滾動框(拇指)並釋放滑鼠按鈕。 高階單詞指示滾動框在拖動操作結束時的位置。|
+|SB_THUMBTRACK|使用者正在拖曳捲軸方塊。 在使用者釋放滑鼠按鈕之前,使用此值重複發送AFX_WM_ON_HSCROLL消息。 高階單詞指示滾動框已拖動到的位置。|
 
 > [!NOTE]
->  高序位文字*lParam* SB_THUMBPOSITION 或 SB_THUMBTRACK 低序位字組時，參數會指定捲動方塊的目前位置; 否則不會使用這個字。
+> 如果低階詞SB_THUMBPOSITION或SB_THUMBTRACK,*則 lParam*參數的高階字指定滾動框的當前位置;否則,不使用這個詞。
 
-下表列出的旗標值*lParam* AFX_WM_UPDATETOOLTIPS 訊息參數：
+下表列出了 AFX_WM_UPDATETOOLTIPS訊息的*lParam*參數的標誌值:
 
 |||
 |-|-|

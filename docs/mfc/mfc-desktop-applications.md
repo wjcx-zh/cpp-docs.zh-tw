@@ -8,16 +8,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3811fdcf278129ee72872ea489b42f8389957761
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178453"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359346"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面應用程式
 
-Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程式開發介面的物件導向包裝函式。 雖然這個程式庫可以用來建立非常簡單的桌面應用程式，但還是在您需要開發包含多個控制項的較複雜使用者介面時最有用。 您可以使用 MFC 來建立 Office 樣式使用者介面的應用程式。 如需 Windows 平臺本身的相關檔，請參閱[windows 檔](/windows/index)。 如需在中C++建立 Windows 應用程式的詳細資訊，請參閱[使用 WIN32 API 建立桌面 windows 應用](/windows/win32/index)程式。
+Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程式開發介面的物件導向包裝函式。 雖然這個程式庫可以用來建立非常簡單的桌面應用程式，但還是在您需要開發包含多個控制項的較複雜使用者介面時最有用。 您可以使用 MFC 來建立 Office 樣式使用者介面的應用程式。 有關 Windows 平臺本身的文件,請參閱[Windows 文件](/windows/index)。 有關在沒有 MFC 的情況下在 C++中建構 Windows 應用程式的資訊,請參閱[使用 Win32 API 構建桌面 Windows 應用程式](/windows/win32/index)。
 
 《MFC 參考》涵蓋構成 MFC 程式庫的類別、全域函式、全域變數和巨集。
 
@@ -28,9 +28,9 @@ Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程�
 公用和受保護類別成員僅在其是以一般方式使用於應用程式或衍生類別時，才會有文件的相關記載。 如需類別成員的完整清單，請參閱類別標頭檔。
 
 > [!IMPORTANT]
->  MFC 類別及其成員無法在 Windows 執行階段環境中執行的應用程式中使用。
+> MFC 類及其成員不能在Windows運行時環境中執行的應用程式中使用。
 >
->  多位元組字元編碼的 (MBCS) MFC 程式庫 (DLL) 不再隨附於 Visual Studio，但是可以當做 Visual Studio 附加元件。 如需詳細資訊，請參閱[MFC MBCS DLL 附加](mfc-mbcs-dll-add-on.md)元件。
+> 多位元組字元編碼的 (MBCS) MFC 程式庫 (DLL) 不再隨附於 Visual Studio，但是可以當做 Visual Studio 附加元件。 有關詳細資訊,請參閱[MFC MBCS DLL 載入項目](mfc-mbcs-dll-add-on.md)。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -40,13 +40,13 @@ MFC 主題的概念性文章。
 [階層架構圖表](hierarchy-chart.md)<br/>
 以視覺化方式詳細列出類別庫中的類別關聯性。
 
-[類別總覽](class-library-overview.md)<br/>
+[類別概觀](class-library-overview.md)<br/>
 依據分類列出 MFC 程式庫中的類別。
 
 [逐步解說](walkthroughs-mfc.md)<br/>
 包含逐步解說各種與 MFC 程式庫功能相關聯之工作的文件。
 
-[技術提示](mfc-technical-notes.md)<br/>
+[技術說明](mfc-technical-notes.md)<br/>
 提供 MFC 開發小組所撰寫有關類別庫之特定主題的連結。
 
 [MFC 自訂](customization-for-mfc.md)<br/>
@@ -58,7 +58,7 @@ MFC 主題的概念性文章。
 [內部類別](reference/internal-classes.md)<br/>
 MFC 內部使用。 為求完整起見，本節會說明這些內部類別，但是它們並不適合直接在您的程式碼中使用。
 
-[宏和全域](reference/mfc-macros-and-globals.md)<br/>
+[巨集和全域](reference/mfc-macros-and-globals.md)<br/>
 提供 MFC 程式庫中巨集與全域函式的連結。
 
 [結構、樣式、回呼和訊息對應](reference/structures-styles-callbacks-and-message-maps.md)<br/>
@@ -78,7 +78,7 @@ Visual Studio 中用於建立 MFC 應用程式之功能的指南。
 [ATL/MFC 共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 提供 MFC 和 ATL 之間共用的類別的連結。
 
-[MFC 範例](../overview/visual-cpp-samples.md#mfc-samples)<br/>
+[MFC 樣品](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 提供示範如何使用 MFC 之範例的連結。
 
 [Visual C++ 程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -89,4 +89,4 @@ Visual Studio 中用於建立 MFC 應用程式之功能的指南。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 和 ATL](mfc-and-atl.md)
+[MFC 與 ATL](mfc-and-atl.md)

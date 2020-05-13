@@ -54,6 +54,6 @@ if (*ulDataInDll == 0L)
 __declspec(dllexport) ULONG ulDataInDLL;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [匯入至應用程式](importing-into-an-application.md)

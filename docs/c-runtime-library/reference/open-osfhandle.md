@@ -1,8 +1,9 @@
 ---
 title: _open_osfhandle
-ms.date: 05/21/2019
+ms.date: 4/2/2020
 api_name:
 - _open_osfhandle
+- _o__open_osfhandle
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 2fa2d8190082967d14dd780aa9be7286996b1f9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fbe4a4079fcbb8414e09d0f7dd814a3957e0822
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951210"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910678"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -57,7 +59,7 @@ int _open_osfhandle (
 
 ## <a name="return-value"></a>傳回值
 
-若成功， **_open_osfhandle** 會傳回 C 執行階段檔案描述項。 否則，它會傳回 -1。
+若成功，**_open_osfhandle** 會傳回 C 執行階段檔案描述項。 否則，它會傳回 -1。
 
 ## <a name="remarks"></a>備註
 
@@ -67,12 +69,14 @@ int _open_osfhandle (
 
 |||
 |-|-|
-| **\_O\_APPEND** | 在每次寫入作業之前，將檔案指標置放到檔案的結尾。 |
+| **\_O\_附加** | 在每次寫入作業之前，將檔案指標置放到檔案的結尾。 |
 | **\_O\_RDONLY** | 開啟檔案為僅供讀取。 |
-| **\_O\_TEXT** | 以文字 (已轉譯) 模式開啟檔案。 |
+| **\_O\_文字** | 以文字 (已轉譯) 模式開啟檔案。 |
 | **\_O\_WTEXT** | 以 Unicode (已轉譯 UTF-16) 模式開啟檔案。 |
 
-**_open_osfhandle** 呼叫會將 Win32 檔案控制代碼的擁有權轉送給檔案描述項。 或要使用 **_open_osfhandle** 關閉開啟的檔案，請呼叫 [\_close](close.md)。 呼叫 **_close** 也會關閉基礎 OS 檔案控制代碼。 請不要在原始控點上呼叫 **CloseHandle** Win32 函式。 如果檔案描述元是由 **&#42;檔案資料流程所**擁有，則呼叫[fclose](fclose-fcloseall.md)會關閉檔案描述項和基礎控制碼。 在此情況下，請不要在檔案描述項上呼叫 **_close**，或是在原始控點上呼叫 **CloseHandle**。
+**_open_osfhandle** 呼叫會將 Win32 檔案控制代碼的擁有權轉送給檔案描述項。 或要使用 **_open_osfhandle** 關閉開啟的檔案，請呼叫 [\_close](close.md)。 呼叫 **_close** 也會關閉基礎 OS 檔案控制代碼。 請不要在原始控點上呼叫 **CloseHandle** Win32 函式。 如果檔案描述元是由檔案 **&#42;** 資料流程所擁有，則呼叫[fclose](fclose-fcloseall.md)會關閉檔案描述項和基礎控制碼。 在此情況下，請不要在檔案描述項上呼叫 **_close**，或是在原始控點上呼叫 **CloseHandle**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -80,7 +84,7 @@ int _open_osfhandle (
 |-------------|---------------------|
 |**_open_osfhandle**|\<io.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: IObjectWithSiteImpl 類別
+title: IObject 與 Siteimpl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - IObjectWithSiteImpl
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-ms.openlocfilehash: e857f739e3ff7235c473e99abbef6aab0d3f4205
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 034e5dd42f6e10286520bb2a08effc40b0aca71a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329649"
 ---
-# <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 類別
+# <a name="iobjectwithsiteimpl-class"></a>IObject 與 Siteimpl 類別
 
-這個類別提供的方法可讓物件與網站進行通訊。
+此類提供允許物件與其網站通信的方法。
 
 ## <a name="syntax"></a>語法
 
@@ -33,7 +33,7 @@ template <class T>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自`IObjectWithSiteImpl`的類別。
+您的類,派生自`IObjectWithSiteImpl`。
 
 ## <a name="members"></a>成員
 
@@ -41,25 +41,25 @@ template <class T>
 
 |名稱|描述|
 |----------|-----------------|
-|[IObjectWithSiteImpl::GetSite](#getsite)|查詢網站中的介面指標。|
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|提供具有網站`IUnknown`指標的物件。|
-|[IObjectWithSiteImpl::SetSite](#setsite)|提供具有網站`IUnknown`指標的物件。|
+|[IObject 與網站impl::取得網站](#getsite)|查詢介面指標的網站。|
+|[IObject 與網站impl::設定兒童網站](#setchildsite)|使用網站的`IUnknown`指標向物件提供。|
+|[IObject 與網站impl::設定網站](#setsite)|使用網站的`IUnknown`指標向物件提供。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|管理網站的`IUnknown`指標。|
+|[IObject 與 Siteimpl::m_spUnkSite](#m_spunksite)|管理網站的`IUnknown`指標。|
 
 ## <a name="remarks"></a>備註
 
-[IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)介面可讓物件與其網站進行通訊。 類別`IObjectWithSiteImpl`提供此介面的預設執行, 並藉`IUnknown`由將資訊傳送至偵錯工具組建中的傾印裝置來實現。
+[IObject WithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)介面允許物件與其網站通信。 類`IObjectWithSiteImpl`通過在調試生成中向轉儲設備`IUnknown`發送 資訊來提供此介面的默認實現和實現。
 
-`IObjectWithSiteImpl`指定兩個方法。 用戶端會先`SetSite`呼叫, 並傳遞網站`IUnknown`的指標。 這個指標會儲存在物件中, 稍後可透過對的呼叫來`GetSite`抓取。
+`IObjectWithSiteImpl`指定兩種方法。 用戶端首先調用`SetSite`,傳遞網站的`IUnknown`指標。 此指標存儲在物件中,以後可以通過調用`GetSite`來檢索。
 
-一般而言, 當您建立非控制項`IObjectWithSiteImpl`的物件時, 會從衍生您的類別。 針對控制項, 從[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)衍生您的類別, 這也會提供網站指標。 請勿從`IObjectWithSiteImpl`和`IOleObjectImpl`衍生您的類別。
+通常,在創建不是控制項的物件`IObjectWithSiteImpl`時,派生類。 對於控件,從[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)派生類 ,該函數還提供網站指標。 不要從`IObjectWithSiteImpl`和`IOleObjectImpl`派生類。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IObjectWithSite`
 
@@ -67,11 +67,11 @@ template <class T>
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlcom.h。h
+**標題:** atlcom.h
 
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite
+## <a name="iobjectwithsiteimplgetsite"></a><a name="getsite"></a>IObject 與網站impl::取得網站
 
-查詢網站以取得所識別`riid`之介面的指標。
+查詢網站的指向 標識的介面的`riid`指標。
 
 ```
 STDMETHOD(GetSite)(
@@ -81,11 +81,11 @@ STDMETHOD(GetSite)(
 
 ### <a name="remarks"></a>備註
 
-如果網站支援此介面, 則會透過傳回`ppvSite`指標。 否則, `ppvSite`會設定為 Null。
+如果網站支援此介面,則通過`ppvSite`返回指標。 否則,`ppvSite`設定為 NULL。
 
-請參閱 Windows SDK 中的[IObjectWithSite:: GetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) 。
+請參閱[IObject 與網站::在](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite)Windows SDK 中獲取網站。
 
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite
+## <a name="iobjectwithsiteimplm_spunksite"></a><a name="m_spunksite"></a>IObject 與 Siteimpl::m_spUnkSite
 
 管理網站的`IUnknown`指標。
 
@@ -95,11 +95,11 @@ CComPtr<IUnknown> m_spUnkSite;
 
 ### <a name="remarks"></a>備註
 
-`m_spUnkSite`一開始會透過呼叫[SetSite](#setsite)來接收此指標。
+`m_spUnkSite`最初通過調用[SetSite](#setsite)接收此指標。
 
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite
+## <a name="iobjectwithsiteimplsetchildsite"></a><a name="setchildsite"></a>IObject 與網站impl::設定兒童網站
 
-提供具有網站`IUnknown`指標的物件。
+使用網站的`IUnknown`指標向物件提供。
 
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -108,15 +108,15 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="parameters"></a>參數
 
 *pUnkSite*<br/>
-在管理此物件之網站介面指標的指標。`IUnknown` 如果是 Null, 物件應該在`IUnknown::Release`任何現有的網站上呼叫, 而物件不會再知道其網站。
+[在]指向管理此`IUnknown`物件的網站的介面指標。 如果 NULL,則物件`IUnknown::Release`應 呼叫物件不再知道其網站的任何現有網站。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK。
+返回S_OK。
 
-##  <a name="setsite"></a>IObjectWithSiteImpl:: SetSite
+## <a name="iobjectwithsiteimplsetsite"></a><a name="setsite"></a>IObject 與網站impl::設定網站
 
-提供具有網站`IUnknown`指標的物件。
+使用網站的`IUnknown`指標向物件提供。
 
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
@@ -124,8 +124,8 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK 中的[IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) 。
+請參閱[IObject 與網站::在](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)Windows SDK 中設置網站。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別總覽](../../atl/atl-class-overview.md)
+[類別概觀](../../atl/atl-class-overview.md)

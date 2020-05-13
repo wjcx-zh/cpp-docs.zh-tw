@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322154"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 實值類別
 
@@ -26,21 +26,21 @@ public ref class SizeT sealed : ValueType
 
 ### <a name="members"></a>成員
 
-|成員|描述|
+|member|描述|
 |------------|-----------------|
 |[SizeT::SizeT 建構函式](#ctor)|使用指定的值，初始化類別的新執行個體。|
 
 ### <a name="requirements"></a>需求
 
-**最低支援用戶端：** Windows 8
+**受支援的最小用戶端:** 視窗 8
 
-**最低支援伺服器：** Windows Server 2012
+**受支援的伺服器最少:** 視窗伺服器 2012
 
 **命名空間：** Platform
 
 **中繼資料：** platform.winmd
 
-## <a name="ctor"></a>  Sizet:: Sizet 建構函式
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a>大小T::SizeT建構函數
 
 使用指定的值來初始化 SizeT 的新執行個體。
 
@@ -52,10 +52,10 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
 
 ### <a name="parameters"></a>參數
 
-*value1*<br/>
+*值1*<br/>
 32 位元不帶正負號的值。
 
-*value2*<br/>
+*值2*<br/>
 32 位元不帶正負號之值的指標。
 
 ## <a name="see-also"></a>另請參閱

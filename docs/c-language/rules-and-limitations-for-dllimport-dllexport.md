@@ -7,15 +7,15 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
 ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158419"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport 的規則和限制
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 - 如果您宣告未具有 **dllimport** 或 `dllexport` 屬性的函式，則不會將此函式視為 DLL 介面的一部分。 因此，函式的定義必須存在該模組中，或是相同程式的另一個模組中。 若要讓函式成為 DLL 介面的一部分，您必須在另一個模組中將函式的定義宣告為 `dllexport`。 否則，在建置用戶端時會產生連結器錯誤。
 
@@ -94,8 +94,8 @@ ms.locfileid: "56150554"
 
     ```
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [DLL 匯入及匯出函式](../c-language/dll-import-and-export-functions.md)

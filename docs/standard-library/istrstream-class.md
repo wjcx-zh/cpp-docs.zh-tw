@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d548a8c2c47a5a345be725afdedb47524344f720
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448080"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337531"
 ---
 # <a name="istrstream-class"></a>istrstream 類別
 
@@ -33,16 +33,16 @@ class istrstream : public istream
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[istrstream](#istrstream)|建構類型 `istrstream` 的物件。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[rdbuf](#rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|
-|[str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。|
+|[Str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。|
 
 ## <a name="requirements"></a>需求
 
@@ -50,7 +50,7 @@ class istrstream : public istream
 
 **命名空間：** std
 
-## <a name="istrstream"></a>  istrstream::istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a>分流:istrstream
 
 建構類型 `istrstream` 的物件。
 
@@ -75,14 +75,14 @@ istrstream(
 *計數*\
 緩衝區的長度 (*ptr*)。
 
-*指標*\
+*Ptr*\
 用來將緩衝區初始化的內容。
 
 ### <a name="remarks"></a>備註
 
-所有的函式都會呼叫[istream](../standard-library/istream-typedefs.md#istream)(**sb**) 來初始化基類, 其中`sb`是[strstreambuf](../standard-library/strstreambuf-class.md)類別的預存物件。 前兩個函式也`sb`會藉`strstreambuf`由呼叫 (( `ptr` **const** `char` \*), 0) 進行初始化。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
+所有構造函數通過調用[istream](../standard-library/istream-typedefs.md#istream)**(sb**)`sb`初始化基類 ,其中是類[strstreambuf](../standard-library/strstreambuf-class.md)的存儲物件。 前兩個`sb`建構函數也通過調用`strstreambuf`((const) **const** `char` \* `ptr`0 來初始化。 其餘兩個建構`strstreambuf`函數改為呼**const**`char`叫 ((const `count` `ptr`+) 。
 
-## <a name="rdbuf"></a>  istrstream::rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>是斯特朗::rdbuf
 
 傳回指向資料流相關 strstreambuf 物件的指標。
 
@@ -102,9 +102,9 @@ strstreambuf *rdbuf() const
 
 如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="str"></a>  istrstream::str
+## <a name="istrstreamstr"></a><a name="str"></a>是斯特朗:斯特
 
-呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。
+呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。
 
 ```cpp
 char *str();
@@ -116,15 +116,15 @@ char *str();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。
+成員函數傳回[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。
 
 ### <a name="example"></a>範例
 
-如需使用`str`的範例, 請參閱[strstream:: str](../standard-library/strstreambuf-class.md#str) 。
+有關`str`使用的示例,請參閱[strstream::str。](../standard-library/strstreambuf-class.md#str)
 
 ## <a name="see-also"></a>另請參閱
 
-[istream](../standard-library/istream-typedefs.md#istream)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream 程式設計](../standard-library/iostream-programming.md)\
+[伊流](../standard-library/istream-typedefs.md#istream)\
+[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[電流程式設計](../standard-library/iostream-programming.md)\
 [iostream 慣例](../standard-library/iostreams-conventions.md)

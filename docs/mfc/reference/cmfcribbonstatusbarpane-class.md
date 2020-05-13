@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410072"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753510"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 類別
 
-`CMFCRibbonStatusBarPane`類別會實作可以加入功能區狀態列的功能區項目。
+類別`CMFCRibbonStatusBarPane`實現功能區元素,您可以將其添加到功能區狀態列中。
 
 ## <a name="syntax"></a>語法
 
@@ -55,37 +55,37 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|建構並初始化 `CMFCRibbonStatusBarPane` 物件。|
+|[CMFC 功能狀態列::CMFC 功能狀態列窗格](#cmfcribbonstatusbarpane)|建構並初始化 `CMFCRibbonStatusBarPane` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|傳回定義最長可以顯示在窗格中，而不會截斷的文字字串的字串。|
-|[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|傳回目前的文字對齊方式的設定。|
-|[CMFCRibbonStatusBarPane::IsAnimation](#isanimation)|決定動畫是否正在進行中。|
-|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|決定是否要將窗格位於功能區狀態列擴充區域中。|
-|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(覆寫[CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder)。)|
-|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(覆寫[CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground)。)|
-|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|定義可顯示在窗格中，而不會截斷的最長的文字字串。|
-|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|將影像清單可以用於動畫指派窗格中。|
-|[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|設定文字對齊方式。|
-|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|開始指派給窗格的動畫。|
-|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|指派給窗格動畫就會停止。 。|
+|[CMFC 功能狀態列::獲取幾乎大文字](#getalmostlargetext)|傳回定義在窗格中顯示的最長文字字串而不截斷的字串。|
+|[CMFC 狀態列::取得文字對齊](#gettextalign)|返回文本對齊的當前設置。|
+|[CMFC 功能狀態列::動畫](#isanimation)|確定動畫是否正在進行。|
+|[CMFC 功能狀態列:擴展](#isextended)|確定窗格是否位於功能區狀態列的擴展區域。|
+|[CMFC 功能狀態列::繪製邊框](#ondrawborder)|(覆寫[CMFC 功能按鈕:OnDraw 邊框](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|
+|[CMFC 功能狀態列::在填充背景](#onfillbackground)|( 覆[寫 CMFC 功能按鈕:: 在填充背景](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground)。|
+|[CMFC 功能狀態列::設置幾乎大文字](#setalmostlargetext)|定義可在窗格中顯示的最長文字字串,而不會截斷。|
+|[CMFC 功能狀態列::設定動畫清單](#setanimationlist)|為窗格分配可用於動畫的圖像清單。|
+|[CMFC 狀態列窗格::設定文字對齊](#settextalign)|設置文本對齊方式。|
+|[CMFC 功能狀態列::啟動動畫](#startanimation)|啟動分配給窗格的動畫。|
+|[CMFC 功能狀態列::停止動畫](#stopanimation)|停止分配給窗格的動畫。 .|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|指派給窗格動畫停止時由架構呼叫。|
+|[CMFC 功能狀態列::完成動畫](#onfinishanimation)|當分配給窗格的動畫停止時,由框架調用。|
 
 ## <a name="example"></a>範例
 
-下列範例示範如何在 `CMFCRibbonStatusBarPane` 類別中使用各種方法。 此範例示範如何建構`CMFCRibbonStatusBarPane`物件，設定狀態列窗格的標籤文字對齊方式，定義可顯示在 [狀態] 列窗格，而不會截斷、 附加至狀態列窗格可用於影像清單的最長文字nimation，並開始動畫。
+下列範例示範如何在 `CMFCRibbonStatusBarPane` 類別中使用各種方法。 該範例展示如何建構`CMFCRibbonStatusBarPane`物件、設定狀態列窗格標籤的文本對齊方式、定義可在狀態列窗格中顯示的最長文本而不截斷、將可用於動畫的圖像清單附加到狀態列窗格以及啟動動畫。
 
 [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -97,11 +97,11 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxribbonstatusbarpane.h
+**標題:** afxribbon 狀態列列.h
 
-##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
+## <a name="cmfcribbonstatusbarpanecmfcribbonstatusbarpane"></a><a name="cmfcribbonstatusbarpane"></a>CMFC 功能狀態列::CMFC 功能狀態列窗格
 
-建構在狀態列中的窗格物件。
+在狀態列中構造窗格物件。
 
 ```
 CMFCRibbonStatusBarPane(
@@ -133,35 +133,35 @@ CMFCRibbonStatusBarPane(
 ### <a name="parameters"></a>參數
 
 *nCmdID*<br/>
-[in]指定命令 ID 的窗格。
+[在]指定窗格的命令代碼。
 
 *lpszText*<br/>
-[in]指定要在窗格中顯示的文字字串。
+[在]指定要顯示在窗格中的文字字串。
 
-*bIsStatic*<br/>
-[in]如果為 TRUE，無法反白顯示 [狀態] 窗格，或可以按一下它選取。
+*bIs靜態*<br/>
+[在]如果為 TRUE,則無法通過按一下狀態窗格突出顯示或選擇狀態窗格。
 
 *hIcon*<br/>
-[in]指定要在窗格中顯示圖示的控制代碼。
+[在]指定要顯示在窗格上的圖示的句柄。
 
-*lpszAlmostLargeText*<br/>
-[in]指定可以窗格所顯示的最長的文字字串。
+*lpsz 幾乎大文字*<br/>
+[在]指定窗格可以顯示的最長文字字串。
 
-*hBmpAnimationList*<br/>
-[in]指定用於動畫影像清單的控制代碼。
+*hBmp動畫清單*<br/>
+[在]指定用於動畫的圖像清單的句柄。
 
-*cxAnimation*<br/>
-[in]指定寬度，單位為像素的影像清單，其中用於動畫中的圖示。
+*cx 動畫*<br/>
+[在]指定用於動畫的圖像清單中圖示的寬度(以像素為單位)。
 
-*clrTrnsp*<br/>
-[in]用於動畫的影像清單內指定影像的透明色彩。
+*克拉特恩普*<br/>
+[在]指定用於動畫的影像清單中圖像的透明顏色。
 
-*uiAnimationListResID*<br/>
-[in]指定用於動畫影像清單的資源識別碼。
+*ui 動畫清單重新ID*<br/>
+[在]指定用於動畫的圖像清單的資源識別碼。
 
-##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanegetalmostlargetext"></a><a name="getalmostlargetext"></a>CMFC 功能狀態列::獲取幾乎大文字
 
-取得狀態列窗格可以顯示的最長的文字字串。
+取得狀態列窗格可以顯示的最長文字字串。
 
 ```
 LPCTSTR GetAlmostLargeText() const;
@@ -169,11 +169,11 @@ LPCTSTR GetAlmostLargeText() const;
 
 ### <a name="return-value"></a>傳回值
 
-狀態列窗格可以顯示的最長的文字字串。
+狀態列窗格可以顯示的最長文字字串。
 
-##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign
+## <a name="cmfcribbonstatusbarpanegettextalign"></a><a name="gettextalign"></a>CMFC 狀態列::取得文字對齊
 
-取得目前的標籤的狀態列窗格的文字對齊方式的設定。
+獲取狀態列窗格標籤的文本對齊的當前設置。
 
 ```
 int GetTextAlign() const;
@@ -181,17 +181,17 @@ int GetTextAlign() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前的文字對齊方式可以是下列其中之一：
+目前文字對齊方式可以是以下方式之一:
 
 - TA_LEFT
 
 - TA_CENTER
 
-- TA_RIGHT。
+- TA_RIGHT
 
-##  <a name="isanimation"></a>  CMFCRibbonStatusBarPane::IsAnimation
+## <a name="cmfcribbonstatusbarpaneisanimation"></a><a name="isanimation"></a>CMFC 功能狀態列::動畫
 
-決定動畫是否正在進行中。
+確定動畫是否正在進行。
 
 ```
 BOOL IsAnimation() const;
@@ -199,11 +199,11 @@ BOOL IsAnimation() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果動畫正在進行則為 TRUEFALSE 否則。
+如果動畫正在進行,則為 TRUE;否則。
 
-##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended
+## <a name="cmfcribbonstatusbarpaneisextended"></a><a name="isextended"></a>CMFC 功能狀態列:擴展
 
-決定是否要將窗格位於功能區狀態列擴充區域中。
+確定窗格是否位於功能區狀態列的擴展區域。
 
 ```
 BOOL IsExtended() const;
@@ -211,11 +211,11 @@ BOOL IsExtended() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格上狀態列擴充區域，則為 TRUE。 FALSE 否則。
+如果窗格位於狀態列擴展區域上,則為 TRUE。 否則為 FALSE。
 
-##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder
+## <a name="cmfcribbonstatusbarpaneondrawborder"></a><a name="ondrawborder"></a>CMFC 功能狀態列::繪製邊框
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual void OnDrawBorder(CDC*);
@@ -223,13 +223,13 @@ virtual void OnDrawBorder(CDC*);
 
 ### <a name="parameters"></a>參數
 
-[in] *CDC&#42;*<br/>
+[在]*CDC&#42;*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground
+## <a name="cmfcribbonstatusbarpaneonfillbackground"></a><a name="onfillbackground"></a>CMFC 功能狀態列::在填充背景
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -237,15 +237,15 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation
+## <a name="cmfcribbonstatusbarpaneonfinishanimation"></a><a name="onfinishanimation"></a>CMFC 功能狀態列::完成動畫
 
-指派給窗格動畫結束時，架構會呼叫這個方法。
+當分配給窗格的動畫結束時,框架將調用此方法。
 
 ```
 virtual void OnFinishAnimation();
@@ -253,30 +253,30 @@ virtual void OnFinishAnimation();
 
 ### <a name="remarks"></a>備註
 
-`StopAnimation` 方法呼叫`OnFinishAnimation`方法，您可以使用動畫結束時清除資料。
+`StopAnimation`方法調用`OnFinishAnimation`方法,可用於在動畫結束時清理數據。
 
-##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanesetalmostlargetext"></a><a name="setalmostlargetext"></a>CMFC 功能狀態列::設置幾乎大文字
 
-定義可顯示在 [狀態] 列窗格，而不會截斷的最長文字。
+定義可在狀態列窗格中顯示的最長文本,而不會截斷。
 
-```
+```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpszAlmostLargeText*<br/>
-[in]指定可以顯示在 [狀態] 列窗格，而不會截斷的最長字串。
+*lpsz 幾乎大文字*<br/>
+[在]指定可在狀態列窗格上顯示的最長字串,而不會截斷。
 
 ### <a name="remarks"></a>備註
 
-程式庫計算文字的大小， *lpszAlmostLargeText*指定，並據以調整大小的窗格。 如果它仍不適合在窗格中，文字會被截斷。
+庫計算*lpszAlmostLargeText*指定的文字大小,並相應地調整窗格的大小。 如果文本仍不適合窗格,則文本將被截斷。
 
-##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList
+## <a name="cmfcribbonstatusbarpanesetanimationlist"></a><a name="setanimationlist"></a>CMFC 功能狀態列::設定動畫清單
 
-附加至影像清單可以用於動畫狀態列窗格。
+附加到狀態列窗格的圖像清單,可用於動畫。
 
-```
+```cpp
 void SetAnimationList(
     HBITMAP hBmpAnimationList,
     int cxAnimation=16,
@@ -290,50 +290,50 @@ BOOL SetAnimationList(
 
 ### <a name="parameters"></a>參數
 
-*hBmpAnimationList*<br/>
-[in]指定影像清單的控制代碼。
+*hBmp動畫清單*<br/>
+[在]指定影像清單的句柄。
 
-*cxAnimation*<br/>
-[in]指定寬度，單位為像素的影像清單中的框架。
+*cx 動畫*<br/>
+[在]指定圖像清單中幀的寬度(以像素為單位)。
 
 *clrTransp*<br/>
-[in]指定影像清單的透明色彩。
+[在]指定影像清單的透明顏色。
 
-*uiAnimationListResID*<br/>
-[in]指定影像清單的資源識別碼。
+*ui 動畫清單重新ID*<br/>
+[在]指定映像清單的資源代碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果影像清單已成功連結至狀態列窗格;，則為 TRUE。FALSE 否則。
+如果影像清單已成功附加到狀態列窗格,則為 TRUE;如果圖像清單已成功附加到狀態列窗格。否則。
 
-##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign
+## <a name="cmfcribbonstatusbarpanesettextalign"></a><a name="settextalign"></a>CMFC 狀態列窗格::設定文字對齊
 
-設定標籤的狀態列窗格的文字對齊方式。
+設置狀態列窗格標籤的文本對齊方式。
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nAlign*<br/>
-[in]指定文字的對齊方式。
+*N 對齊*<br/>
+[在]指定文字對齊方式。
 
 ### <a name="remarks"></a>備註
 
-*nAlign*可以有下列值之一：
+*nAlign*可以具有以下值之一:
 
-- TA_LEFT： 靠左的對齊
+- TA_LEFT:左對齊
 
-- TA_CENTER： 置中對齊
+- TA_CENTER:中心對齊
 
-- TA_RIGHT： 靠右對齊
+- TA_RIGHT:正確對齊
 
-##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation
+## <a name="cmfcribbonstatusbarpanestartanimation"></a><a name="startanimation"></a>CMFC 功能狀態列::啟動動畫
 
-開始動畫，您將指派給 窗格。
+啟動分配給窗格的動畫。
 
-```
+```cpp
 void StartAnimation(
     UINT nFrameDelay=500,
     UINT nDuration=-1);
@@ -341,21 +341,21 @@ void StartAnimation(
 
 ### <a name="parameters"></a>參數
 
-*nFrameDelay*<br/>
-[in]指定動畫畫面播放速率，以毫秒為單位。
+*n 幀延遲*<br/>
+[在]指定動畫幀速率(以毫秒為單位)。
 
 *nDuration*<br/>
-[in]指定要播放的動畫，以毫秒為單位的時間。 使用-1 為無限迴圈。
+[在]指定以毫秒為單位播放動畫的時間。 將 -1 用於無限迴圈。
 
 ### <a name="remarks"></a>備註
 
-您必須指定影像清單的控制代碼，然後再呼叫`StartAnimation`使用`SetAnimationList`。
+在使用`StartAnimation``SetAnimationList`呼叫之前,必須指定影像清單的句柄。
 
-##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation
+## <a name="cmfcribbonstatusbarpanestopanimation"></a><a name="stopanimation"></a>CMFC 功能狀態列::停止動畫
 
-停止動畫，您指派給狀態列窗格。
+停止分配給狀態列窗格的動畫。
 
-```
+```cpp
 void StopAnimation();
 ```
 

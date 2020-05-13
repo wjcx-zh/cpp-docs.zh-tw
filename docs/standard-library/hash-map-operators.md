@@ -5,24 +5,24 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: 50a6c2784b4c861f7cf3bbb4d1e1c8ebd0eea72d
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: ed143349f3afc7a27ad565c1cc929c6ecb5f6ad8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150741"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375453"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 運算子
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
-|[operator==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
+|[操作員!](#op_neq)|[運算子!* (多映射)](#op_neq_mm)|
+|[運算子*](#op_eq_eq)|[運算子* (多映射)](#op_eq_eq_mm)|
 
-## <a name="operator"></a><a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>操作員!
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
 
 測試運算子左邊的 hash_map 物件是否不等於右邊的 hash_map 物件。
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 `hash_map` 類型的物件。
 
-*right*\
+*對*\
 `hash_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -46,7 +46,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 hash_map 物件之間的比較是以其元素的成對比較為基礎。 兩個 hash_map 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。
 
-< 的成員[hash_map >](hash-map.md)和[< Hash_set](hash-set.md) [stdext 命名空間](stdext-namespace.md)中的標頭檔。
+[<的成员hash_map>](hash-map.md)與[<hash_set>](hash-set.md)標頭[檔在stdext命名空間](stdext-namespace.md)。
 
 ### <a name="example"></a>範例
 
@@ -88,10 +88,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
 
 測試運算子左邊的 hash_map 物件是否等於右邊的 hash_map 物件。
 
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 `hash_map` 類型的物件。
 
-*right*\
+*對*\
 `hash_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -155,10 +155,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator！ = （hash_multimap）
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>操作員!* (hash_multimap)
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
 
 測試運算子左邊的 hash_multimap 物件是否不等於右邊的 hash_multimap 物件。
 
@@ -168,10 +168,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 `hash_multimap` 類型的物件。
 
-*right*\
+*對*\
 `hash_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -222,10 +222,10 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operator = = （hash_multimap）
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>運算子* (hash_multimap)
 
 > [!NOTE]
-> 這個應用程式開發介面已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
+> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
 
 測試運算子左邊的 hash_multimap 物件是否等於右邊的 hash_multimap 物件。
 
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*離開*\
 `hash_multimap` 類型的物件。
 
-*right*\
+*對*\
 `hash_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值

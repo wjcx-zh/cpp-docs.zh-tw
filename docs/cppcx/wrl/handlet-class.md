@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: f66fbe23c305be15e09928242175dfa7ce8c141b
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: bde7d7f1bd6730d96cb0f7a0d191a32eb8ed3e8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821814"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371457"
 ---
 # <a name="handlet-class"></a>HandleT 類別
 
-表示物件的控制碼。
+表示物件的句柄。
 
 ## <a name="syntax"></a>語法
 
@@ -47,51 +47,51 @@ class HandleT;
 
 ### <a name="parameters"></a>參數
 
-*HandleTraits*<br/>
-定義控制碼之一般特性的[HandleTraits](handletraits-structure.md)結構實例。
+*處理特徵*<br/>
+定義句柄的常見特徵的[HandleTraits](handletraits-structure.md)結構的實例。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-Name     | 描述
+名稱     | 描述
 -------- | -----------------------------
 `Traits` | `HandleTraits` 的同義字。
 
 ### <a name="public-constructors"></a>公用建構函式
 
-Name                                | 描述
+名稱                                | 描述
 ----------------------------------- | --------------------------------------------------
-[HandleT：： HandleT](#handlet)        | 初始化 `HandleT` 類別的新執行個體。
-[HandleT：： ~ HandleT](#tilde-handlet) | 將 `HandleT` 類別的實例。
+[手柄T::手柄T](#handlet)        | 將 `HandleT` 類別的新執行個體初始化。
+[手柄T:=手柄T](#tilde-handlet) | 取消初始化類的`HandleT`實例。
 
 ### <a name="public-methods"></a>公用方法
 
-Name                         | 描述
+名稱                         | 描述
 ---------------------------- | ----------------------------------------------------------------------
-[HandleT：： Attach](#attach)   | 將指定的控制碼與目前的 `HandleT` 物件產生關聯。
-[HandleT：： Close](#close)     | 關閉目前的 `HandleT` 物件。
-[HandleT：:D etach](#detach)   | 解除目前 `HandleT` 物件與其基礎控制碼的的對應。
-[HandleT：： Get](#get)         | 取得基礎控制碼的值。
-[HandleT：： IsValid](#isvalid) | 指出目前的 `HandleT` 物件是否代表控制碼。
+[句柄T::附加](#attach)   | 將指定的句柄與當前`HandleT`物件關聯。
+[手柄T:關閉](#close)     | 關閉目前的 `HandleT` 物件。
+[手柄T::D埃塔奇](#detach)   | 將當前`HandleT`物件與其基礎句柄分離。
+[句柄T:取得](#get)         | 獲取基礎句柄的值。
+[句柄T:有效](#isvalid) | 指示當前`HandleT`物件是否表示句柄。
 
 ### <a name="protected-methods"></a>保護方法
 
-Name                                     | 描述
+名稱                                     | 描述
 ---------------------------------------- | ------------------------------------
-[HandleT：： InternalClose](#internalclose) | 關閉目前的 `HandleT` 物件。
+[句柄T::內部關閉](#internalclose) | 關閉目前的 `HandleT` 物件。
 
 ### <a name="public-operators"></a>公用運算子
 
-Name                                   | 描述
+名稱                                   | 描述
 -------------------------------------- | ----------------------------------------------------------------------------------
-[HandleT：： operator =](#operator-assign) | 將指定之 `HandleT` 物件的值移至目前的 `HandleT` 物件。
+[手柄::運算符*](#operator-assign) | 將指定`HandleT`物件的值移動到`HandleT`當前 物件。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-Name                        | 描述
+名稱                        | 描述
 --------------------------- | ----------------------------------------------------------------
-[HandleT：： handle_](#handle) | 包含由 `HandleT` 物件表示的控制碼。
+[手柄::handle_](#handle) | 包含由物件表示的`HandleT`句柄。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -99,21 +99,21 @@ Name                        | 描述
 
 ## <a name="requirements"></a>需求
 
-**標頭：** corewrappers。h
+**標題:** 核心包裝.h
 
-**命名空間：** Microsoft：： WRL：：包裝函式
+**命名空間:** 微軟::WRL:包裝
 
-## <a name="tilde-handlet"></a>HandleT：： ~ HandleT
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a>手柄T:=手柄T
 
-將 `HandleT` 類別的實例。
+取消初始化類的`HandleT`實例。
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="attach"></a>HandleT：： Attach
+## <a name="handletattach"></a><a name="attach"></a>句柄T::附加
 
-將指定的控制碼與目前的 `HandleT` 物件產生關聯。
+將指定的句柄與當前`HandleT`物件關聯。
 
 ```cpp
 void Attach(
@@ -123,10 +123,10 @@ void Attach(
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-控制碼。
+*H*<br/>
+控制代碼。
 
-## <a name="close"></a>HandleT：： Close
+## <a name="handletclose"></a><a name="close"></a>手柄T:關閉
 
 關閉目前的 `HandleT` 物件。
 
@@ -136,13 +136,13 @@ void Close();
 
 ### <a name="remarks"></a>備註
 
-目前 `HandleT` 的基礎控制碼已關閉，而且 `HandleT` 設定為不正確狀態。
+目前的基礎句柄`HandleT`已關閉`HandleT`, 並且設定為無效狀態。
 
-如果控制碼未正確關閉，則會在呼叫執行緒中引發例外狀況。
+如果句柄未正確關閉,則調用線程中會引發異常。
 
-## <a name="detach"></a>HandleT：:D etach
+## <a name="handletdetach"></a><a name="detach"></a>手柄T::D埃塔奇
 
-解除目前 `HandleT` 物件與其基礎控制碼的的對應。
+將當前`HandleT`物件與其基礎句柄分離。
 
 ```cpp
 typename HandleTraits::Type Detach();
@@ -150,15 +150,15 @@ typename HandleTraits::Type Detach();
 
 ### <a name="return-value"></a>傳回值
 
-基礎控制碼。
+基礎句柄。
 
 ### <a name="remarks"></a>備註
 
-當此作業完成時，目前的 `HandleT` 會設定為不正確狀態。
+此操作完成後,電流`HandleT`將設置為無效狀態。
 
-## <a name="get"></a>HandleT：： Get
+## <a name="handletget"></a><a name="get"></a>句柄T:取得
 
-取得基礎控制碼的值。
+獲取基礎句柄的值。
 
 ```cpp
 typename HandleTraits::Type Get() const;
@@ -166,19 +166,19 @@ typename HandleTraits::Type Get() const;
 
 ### <a name="return-value"></a>傳回值
 
-控制碼。
+控制代碼。
 
-## <a name="handle"></a>HandleT：： handle_
+## <a name="handlethandle_"></a><a name="handle"></a>手柄::handle_
 
-包含由 `HandleT` 物件表示的控制碼。
+包含由物件表示的`HandleT`句柄。
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlet"></a>HandleT：： HandleT
+## <a name="handlethandlet"></a><a name="handlet"></a>手柄T::手柄T
 
-初始化 `HandleT` 類別的新執行個體。
+將 `HandleT` 類別的新執行個體初始化。
 
 ```cpp
 explicit HandleT(
@@ -193,14 +193,14 @@ HandleT(
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-控制碼。
+*H*<br/>
+控制代碼。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會初始化不是物件之有效控制碼的 `HandleT` 物件。 第二個函式會從參數*h*建立新的 `HandleT` 物件。
+第一個`HandleT`建構函數初始化不是物件的有效句柄的物件。 第二個建構函數從參數`HandleT` *h*創建一個新物件。
 
-## <a name="internalclose"></a>HandleT：： InternalClose
+## <a name="handletinternalclose"></a><a name="internalclose"></a>句柄T::內部關閉
 
 關閉目前的 `HandleT` 物件。
 
@@ -210,15 +210,15 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>傳回值
 
-如果目前 `HandleT` 成功關閉，**則為 true** ;否則**為 false**。
+**如果**`HandleT`目前 成功關閉,為 true;否則,**假**。
 
 ### <a name="remarks"></a>備註
 
 `InternalClose()` 為 `protected`。
 
-## <a name="isvalid"></a>HandleT：： IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a>句柄T:有效
 
-指出目前的 `HandleT` 物件是否代表控制碼。
+指示當前`HandleT`物件是否表示句柄。
 
 ```cpp
 bool IsValid() const;
@@ -226,11 +226,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果 `HandleT` 代表控制碼，則**為 true** ;否則**為 false**。
+如果`HandleT`表示句柄,**則為 true;** 否則,**假**。
 
-## <a name="operator-assign"></a>HandleT：： operator =
+## <a name="handletoperator"></a><a name="operator-assign"></a>手柄::運算符*
 
-將指定之 `HandleT` 物件的值移至目前的 `HandleT` 物件。
+將指定`HandleT`物件的值移動到`HandleT`當前 物件。
 
 ```cpp
 HandleT& operator=(
@@ -240,13 +240,13 @@ HandleT& operator=(
 
 ### <a name="parameters"></a>參數
 
-*h*<br/>
-控制碼的右值參考。
+*H*<br/>
+對句柄的 rvalue 引用。
 
 ### <a name="return-value"></a>傳回值
 
-目前 `HandleT` 物件的參考。
+對當前`HandleT`物件的引用。
 
 ### <a name="remarks"></a>備註
 
-此操作會使參數*h*指定的 `HandleT` 物件失效。
+此操作使參數*h*`HandleT`指定的物件無效。

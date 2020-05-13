@@ -58,16 +58,16 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 4c594b1ddfc1464417506557bb8743c4979be677
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74304293"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754749"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 類別
 
-表示使用資料存取物件（DAO）的 Access 資料庫連接。 DAO 受到 Office 2013 的支援。 DAO 3.6 是最後的版本，被視為已淘汰。
+表示使用數據存取物件 (DAO) 訪問資料庫的連接。 通過 Office 2013 支援 DAO。 DAO 3.6 是最終版本,它被視為過時版本。
 
 ## <a name="syntax"></a>語法
 
@@ -75,83 +75,83 @@ ms.locfileid: "74304293"
 class CDaoDatabase : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoDatabase：： CDaoDatabase](#cdaodatabase)|建構 `CDaoDatabase` 物件。 呼叫 `Open` 以將物件連接到資料庫。|
+|[道資料庫::CDao資料庫](#cdaodatabase)|建構 `CDaoDatabase` 物件。 調用`Open`以將對象連接到資料庫。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoDatabase：： CanTransact](#cantransact)|如果資料庫支援交易，則傳回非零。|
-|[CDaoDatabase：： CanUpdate](#canupdate)|如果 `CDaoDatabase` 物件是可更新的（非唯讀），則傳回非零。|
-|[CDaoDatabase：： Close](#close)|關閉資料庫連接。|
-|[CDaoDatabase：： Create](#create)|建立基礎 DAO 資料庫物件，並初始化 `CDaoDatabase` 物件。|
-|[CDaoDatabase：： CreateRelation](#createrelation)|定義資料庫中資料表之間的新關聯性。|
-|[CDaoDatabase：:D eleteQueryDef](#deletequerydef)|刪除儲存在資料庫 QueryDefs 集合中的 querydef 物件。|
-|[CDaoDatabase：:D eleteRelation](#deleterelation)|刪除資料庫中資料表之間的現有關聯。|
-|[CDaoDatabase：:D eleteTableDef](#deletetabledef)|刪除資料庫中資料表的定義。 這會刪除實際的資料表及其所有資料。|
-|[CDaoDatabase：： Execute](#execute)|執行動作查詢。 針對傳回結果的查詢呼叫 `Execute` 會擲回例外狀況。|
-|[CDaoDatabase：： GetConnect](#getconnect)|傳回用來將 `CDaoDatabase` 物件連接至資料庫的連接字串。 用於 ODBC。|
-|[CDaoDatabase：： GetName](#getname)|傳回目前使用中的資料庫名稱。|
-|[CDaoDatabase：： GetQueryDefCount](#getquerydefcount)|傳回針對資料庫定義的查詢數目。|
-|[CDaoDatabase：： GetQueryDefInfo](#getquerydefinfo)|傳回資料庫中所定義之指定查詢的相關資訊。|
-|[CDaoDatabase：： GetQueryTimeout](#getquerytimeout)|傳回資料庫查詢作業將會超時的秒數。會影響 ODBC 資料來源上的所有後續開啟、加入新的、更新和編輯作業和其他作業（僅限 `Execute` 呼叫）。|
-|[CDaoDatabase：： GetRecordsAffected](#getrecordsaffected)|傳回受上次更新、編輯或加入作業影響，或呼叫 `Execute`的記錄數目。|
-|[CDaoDatabase：： GetRelationCount](#getrelationcount)|傳回在資料庫中的資料表之間定義的關聯性數目。|
-|[CDaoDatabase：： GetRelationInfo](#getrelationinfo)|傳回在資料庫的資料表之間定義之指定關聯的相關資訊。|
-|[CDaoDatabase：： GetTableDefCount](#gettabledefcount)|傳回資料庫中定義的資料表數目。|
-|[CDaoDatabase：： GetTableDefInfo](#gettabledefinfo)|傳回資料庫中指定之資料表的相關資訊。|
-|[CDaoDatabase：： GetVersion](#getversion)|傳回與資料庫相關聯的資料庫引擎版本。|
-|[CDaoDatabase：： IsOpen](#isopen)|如果 `CDaoDatabase` 物件目前連接到資料庫，則傳回非零。|
-|[CDaoDatabase：： Open](#open)|建立資料庫的連接。|
-|[CDaoDatabase：： SetQueryTimeout](#setquerytimeout)|設定資料庫查詢作業（僅限 ODBC 資料來源）將會超時的秒數。會影響所有後續的開啟、新增、更新和刪除作業。|
+|[CDao資料庫::可以](#cantransact)|如果資料庫支援事務,則返回非零。|
+|[CDao 資料庫::可以更新](#canupdate)|如果`CDaoDatabase`對像是可向上的(不只讀的),則返回非零。|
+|[CDao 資料庫:關閉](#close)|關閉資料庫連接。|
+|[CDao 資料庫:建立](#create)|創建基礎 DAO 資料庫物件並初始`CDaoDatabase`化該 物件。|
+|[CDao 資料庫::建立關係](#createrelation)|在資料庫中的表之間定義一個新關係。|
+|[CDao資料庫::DeleteQueryDef](#deletequerydef)|刪除儲存在資料庫的 QueryDefs 集合中的查詢def物件。|
+|[CDao資料庫::Delete關係](#deleterelation)|刪除資料庫中表之間的現有關係。|
+|[CDao資料庫::DeleteTableDef](#deletetabledef)|刪除資料庫中表的定義。 這將刪除實際表及其所有數據。|
+|[CDao 資料庫:執行](#execute)|執行操作查詢。 調用`Execute`返回結果的查詢將引發異常。|
+|[CDao 資料庫:抓取連線](#getconnect)|傳回用於`CDaoDatabase`將 物件連接到資料庫的連接字串。 用於ODBC。|
+|[CDaoDatabase::GetName](#getname)|返回目前正在使用的資料庫的名稱。|
+|[CDao 資料庫::取得查詢定義](#getquerydefcount)|返回為資料庫定義的查詢數。|
+|[CDao 資料庫::獲取查詢資訊](#getquerydefinfo)|返回有關資料庫中定義的指定查詢的資訊。|
+|[CDao 資料庫:取得查詢逾時](#getquerytimeout)|返回資料庫查詢操作超時後的秒數。影響對 ODBC 資料來源(僅)的所有後續打開、添加新、更新和編輯操作以及其他操作`Execute`,如調用。|
+|[CDao 資料庫:取得受影響的記錄](#getrecordsaffected)|返回受上次更新、編輯或添加操作或調用`Execute`的影響的記錄數。|
+|[CDao 資料庫:取得關聯數](#getrelationcount)|返回資料庫中表之間定義的關係數。|
+|[CDao 資料庫:抓取關係資訊](#getrelationinfo)|返回有關資料庫中表之間定義的指定關係的資訊。|
+|[CDao 資料庫:取得TableDef( C)](#gettabledefcount)|返回資料庫中定義的表數。|
+|[CDao 資料庫:抓取桌面資訊](#gettabledefinfo)|返回有關資料庫中指定表的資訊。|
+|[CDao 資料庫:抓取版本](#getversion)|返回與資料庫關聯的資料庫引擎的版本。|
+|[CDao 資料庫::是開啟的](#isopen)|如果物件當前連接到資料庫`CDaoDatabase`,則返回非零。|
+|[CDao 資料庫::開啟](#open)|建立與資料庫的連接。|
+|[CDao 資料庫::設定查詢逾時](#setquerytimeout)|設定資料庫查詢操作(僅在ODBC數據源上)超時後的秒數。影響所有後續打開、添加新操作、更新和刪除操作。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CDaoDatabase：： m_pDAODatabase](#m_pdaodatabase)|基礎 DAO 資料庫物件的指標。|
-|[CDaoDatabase：： m_pWorkspace](#m_pworkspace)|[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件的指標，其中包含資料庫並定義其交易空間。|
+|[CDao資料庫::m_pDAODatabase](#m_pdaodatabase)|指向基礎 DAO 資料庫物件的指標。|
+|[CDao資料庫:m_pWorkspace](#m_pworkspace)|指向包含資料庫並定義其事務空間的[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件的指標。|
 
 ## <a name="remarks"></a>備註
 
-如需所支援資料庫格式的詳細資訊，請參閱[GetName](../../mfc/reference/cdaoworkspace-class.md#getname)成員函式。 在指定的「工作區」中，您可以一次使用一個或多個 `CDaoDatabase` 物件，其以[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件表示。 工作區會維護一個開放式資料庫物件的集合，稱為「資料庫集合」。
+有關支援的資料庫格式的資訊,請參閱[GetName](../../mfc/reference/cdaoworkspace-class.md#getname)成員函數。 您可以在給定的「工作區」`CDaoDatabase`中同時啟動一個或多個物件,該物件由[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件表示。 工作區維護打開的資料庫物件的集合,稱為資料庫集合。
 
-## <a name="usage"></a>使用方式
+## <a name="usage"></a>使用量
 
-當您建立記錄集物件時，可以隱含地建立資料庫物件。 但是您也可以明確地建立資料庫物件。 若要使用現有的資料庫明確搭配 `CDaoDatabase`，請執行下列其中一項動作：
+在創建記錄集物件時,可以隱式創建資料庫物件。 但是,您也可以顯式創建資料庫物件。 要將現有資料庫的使用,`CDaoDatabase`請執行以下任一個操作:
 
-- 建立 `CDaoDatabase` 物件，並將指標傳遞至開啟的[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件。
+- 建構`CDaoDatabase`物件,將指標傳遞給打開的[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件。
 
-- 或在不指定工作區的情況下，建立 `CDaoDatabase` 物件（MFC 會建立暫存工作區物件）。
+- 或者在不指定`CDaoDatabase`工作區的情況下建構物件(MFC 創建臨時工作區物件)。
 
-建立新的 Microsoft Jet （。MDB）資料庫，請建立 `CDaoDatabase` 物件，並呼叫它的[Create](#create)成員函式。 請*不要*在 `Create`後呼叫 `Open`。
+新增 Microsoft Jet (.MDB) 資料庫,建`CDaoDatabase`構 物件並調用其[創建](#create)成員函數。 *不要*在`Open`之後`Create`打電話。
 
-若要開啟現有的資料庫，請建立 `CDaoDatabase` 物件，並呼叫其[open](#open)成員函式。
+要打開現有資料庫,請建構物件`CDaoDatabase`並呼叫其[Open](#open)成員函數。
 
-其中任何一項技術會將 DAO 資料庫物件附加至工作區的資料庫集合，並開啟與資料的連接。 當您接著建立[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)、 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)物件來操作已連接的資料庫時，請傳遞這些物件的函式給您 `CDaoDatabase` 物件的指標。 當您使用連接完成時，請呼叫[Close](#close)成員函式，並終結 `CDaoDatabase` 物件。 `Close` 關閉先前尚未關閉的任何記錄集。
+這些技術中的任何一種都將 DAO 資料庫物件追加到工作區的資料庫集合,並打開與數據的連接。 然後建構用於在連線的資料庫上操作的[CDaoRecordsetset、CDaoTableDef](../../mfc/reference/cdaorecordset-class.md)或[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)物件時,將這些物件的建構函`CDaoDatabase`數[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)傳遞給物件 。 使用完連接後,調用[Close](#close)成員函數並`CDaoDatabase`銷毀 物件。 `Close`關閉以前未關閉的任何記錄集。
 
 ## <a name="transactions"></a>交易
 
-資料庫交易處理是在工作區層級提供的，請參閱[BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans)、 [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans)和 class `CDaoWorkspace`的[Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback)成員函式。
+資料庫事務`CDaoWorkspace`處理在工作區等級提供 - 請參閱類的[BeginTrans、CommitTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans)和[CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans)[回滾](../../mfc/reference/cdaoworkspace-class.md#rollback)成員函數。
 
 ## <a name="odbc-connections"></a>ODBC 連接
 
-使用 ODBC 資料來源的建議方式是將外部資料表附加至 Microsoft Jet （。MDB）資料庫。
+使用 ODBC 資料來源的建議方法是將外部表附加到 Microsoft Jet (。MDB)資料庫。
 
 ## <a name="collections"></a>集合
 
-每個資料庫都會維護它自己的 tabledef、querydef、recordset 和關聯性物件集合。 類別 `CDaoDatabase` 提供用來操作這些物件的成員函式。
+每個資料庫都維護自己的表def、查詢def、記錄集和關係對象的集合。 類`CDaoDatabase`提供用於操作這些對象的成員函數。
 
 > [!NOTE]
->  物件會儲存在 DAO 中，而不是在 MFC 資料庫物件中。 MFC 提供 tabledef、querydef 和 recordset 物件的類別，但不適用於關聯物件。
+> 物件存儲在 DAO 中,而不是存儲在 MFC 資料庫物件中。 MFC 為表def、查詢def和記錄集物件提供類,但不為關係物件提供類。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -159,11 +159,11 @@ class CDaoDatabase : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdao。h
+**標題:** afxdao.h
 
-##  <a name="cantransact"></a>CDaoDatabase：： CanTransact
+## <a name="cdaodatabasecantransact"></a><a name="cantransact"></a>CDao資料庫::可以
 
-呼叫這個成員函式，以判斷資料庫是否允許交易。
+調用此成員函數以確定資料庫是否允許事務。
 
 ```
 BOOL CanTransact();
@@ -171,15 +171,15 @@ BOOL CanTransact();
 
 ### <a name="return-value"></a>傳回值
 
-如果資料庫支援交易，則為非零值;否則為0。
+如果資料庫支援事務,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-交易是在資料庫的工作區中進行管理。
+事務在資料庫的工作區中管理。
 
-##  <a name="canupdate"></a>CDaoDatabase：： CanUpdate
+## <a name="cdaodatabasecanupdate"></a><a name="canupdate"></a>CDao 資料庫::可以更新
 
-呼叫這個成員函式，以判斷 `CDaoDatabase` 物件是否允許更新。
+調用此成員函數以確定`CDaoDatabase`物件是否允許更新。
 
 ```
 BOOL CanUpdate();
@@ -187,13 +187,13 @@ BOOL CanUpdate();
 
 ### <a name="return-value"></a>傳回值
 
-如果 `CDaoDatabase` 物件允許更新，則為非零值;否則為0，表示當您開啟 `CDaoDatabase` 物件或資料庫本身為唯讀時，您是在*bReadOnly*中傳遞 TRUE。 請參閱[Open](#open)成員函式。
+如果物件允許更新`CDaoDatabase`,則非零;否則 0,指示在`CDaoDatabase`打開 物件時在*bReadOnly*中傳遞 TRUE,或者資料庫本身是唯讀的。 請參閱[打開](#open)成員函數。
 
 ### <a name="remarks"></a>備註
 
-如需資料庫可更新性的詳細資訊，請參閱 DAO 說明中的「可更新屬性」主題。
+有關資料庫可備份性的資訊,請參閱 DAO 説明中的主題"可建立屬性"
 
-##  <a name="cdaodatabase"></a>CDaoDatabase：： CDaoDatabase
+## <a name="cdaodatabasecdaodatabase"></a><a name="cdaodatabase"></a>道資料庫::CDao資料庫
 
 建構 `CDaoDatabase` 物件。
 
@@ -203,23 +203,23 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 
 ### <a name="parameters"></a>參數
 
-*pWorkspace*<br/>
-將包含新資料庫物件之 `CDaoWorkspace` 物件的指標。 如果您接受預設值 Null，則此函式會建立一個使用預設 DAO 工作區的暫時 `CDaoWorkspace` 物件。 您可以透過[m_pWorkspace](#m_pworkspace)資料成員取得工作區物件的指標。
+*p 工作空間*<br/>
+指向將包含新`CDaoWorkspace`資料庫物件的物件的指標。 如果接受 NULL 的預設值,建構函數將創建一`CDaoWorkspace`個使用 預設 DAO 工作區的臨時物件。 您可以通過[m_pWorkspace](#m_pworkspace)資料成員獲取指向工作區物件的指標。
 
 ### <a name="remarks"></a>備註
 
-在建立物件之後，如果您要建立新的 Microsoft Jet （。MDB）資料庫，請呼叫物件的[Create](#create)成員函式。 如果您改為開啟現有的資料庫，請呼叫物件的[Open](#open)成員函式。
+建構物件後,如果要創建新的 Microsoft Jet (。MDB) 資料庫,呼叫物件的[「創建](#create)成員」函數。 相反,如果您正在打開現有資料庫,請呼叫物件的[Open](#open)成員函數。
 
-當您完成物件時，您應該呼叫它的[Close](#close)成員函式，然後終結 `CDaoDatabase` 物件。
+完成該物件后,應調用其[Close](#close)成員函數,然後銷`CDaoDatabase`毀該 物件。
 
-您可能會發現，將 `CDaoDatabase` 物件內嵌在檔類別中是很方便的。
+您可能會發現將`CDaoDatabase`物件嵌入到文檔類中很方便。
 
 > [!NOTE]
->  如果您開啟[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件，但未傳遞現有 `CDaoDatabase` 物件的指標，則也會隱含地建立 `CDaoDatabase` 物件。 當您關閉記錄集物件時，這個資料庫物件會關閉。
+> 如果`CDaoDatabase`打開[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件而不將指標傳遞到`CDaoDatabase`現有 物件,則也會隱式創建物件。 關閉記錄集物件時,此資料庫物件將關閉。
 
-##  <a name="close"></a>CDaoDatabase：： Close
+## <a name="cdaodatabaseclose"></a><a name="close"></a>CDao 資料庫:關閉
 
-呼叫這個成員函式以中斷與資料庫的連接，並關閉與資料庫相關聯的任何開啟的記錄集、tabledefs 和 querydefs。
+調用此成員函數以斷開與資料庫的連接,並關閉與資料庫關聯的任何打開的記錄集、表def和查詢def。
 
 ```
 virtual void Close();
@@ -227,19 +227,19 @@ virtual void Close();
 
 ### <a name="remarks"></a>備註
 
-在您呼叫這個成員函式之前，請先關閉這些物件，這是很好的作法。 關閉 `CDaoDatabase` 物件，會將它從相關[工作區](../../mfc/reference/cdaoworkspace-class.md)的資料庫集合中移除。 因為 `Close` 不會摧毀 `CDaoDatabase` 物件，所以您可以藉由開啟相同的資料庫或不同的資料庫來重複使用物件。
+最好在調用此成員函數之前自行關閉這些物件。 關閉`CDaoDatabase`物件會將其從關聯的[工作區](../../mfc/reference/cdaoworkspace-class.md)中的"資料庫"集合中刪除。 因為`Close`不會破壞`CDaoDatabase`物件,因此可以通過打開同一資料庫或其他資料庫來重用該物件。
 
 > [!CAUTION]
->  在您關閉資料庫之前，請先呼叫[Update](../../mfc/reference/cdaorecordset-class.md#update)成員函式（如果有暫止的編輯）和所有開啟的記錄集物件上的 `Close` 成員函式。 如果您結束的函式會在堆疊[上宣告 ](../../mfc/reference/cdaorecordset-class.md)CDaoRecordset`CDaoDatabase` 或物件，則資料庫會關閉，任何未儲存的變更都會遺失，所有暫止的交易都會回復，而且任何暫止的資料編輯都會遺失。
+> 在關閉資料庫之前,調用[Update](../../mfc/reference/cdaorecordset-class.md#update)成員函數(如果有掛`Close`起的 編輯)和所有打開的記錄集物件上的成員函數。 如果您結束的函式會在堆疊`CDaoDatabase`上宣告 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 或物件，則資料庫會關閉，任何未儲存的變更都會遺失，所有暫止的交易都會回復，而且任何暫止的資料編輯都會遺失。
 
 > [!CAUTION]
->  如果您嘗試在任何記錄集物件開啟時關閉資料庫物件，或如果您嘗試在任何屬於該特定工作區的資料庫物件開啟時關閉工作區物件，這些記錄集物件將會關閉，而且任何暫止的更新或編輯都會是已回復。 如果您嘗試在任何屬於它的資料庫物件開啟時關閉工作區物件，此作業會關閉屬於該特定工作區物件的所有資料庫物件，這可能會導致關閉的記錄集物件無法使用。 如果您未關閉資料庫物件，MFC 會在 debug build 中報告判斷提示失敗。
+> 如果在打開任何記錄集物件時嘗試關閉資料庫物件,或者嘗試關閉工作區物件,而屬於該特定工作區的任何資料庫物件處於打開狀態,則這些記錄集物件將關閉,任何掛起的更新或編輯都將回滾。 如果嘗試在屬於工作區物件的任何資料庫物件打開時關閉工作區物件,則操作將關閉屬於該特定工作區物件的所有資料庫物件,這可能會導致關閉未關閉的記錄集物件。 如果不關閉資料庫物件,MFC 將報告調試生成中的斷言失敗。
 
-如果資料庫物件定義在函式的範圍之外，而且您在未關閉函數的情況下結束它，則資料庫物件會保持開啟狀態，直到明確關閉或其定義所在的模組超出範圍。
+如果資料庫物件是在函數範圍之外定義的,並且在不關閉該函數的情況下退出該函數,則資料庫物件將保持打開狀態,直到顯式關閉或定義該物件的模組超出範圍。
 
-##  <a name="create"></a>CDaoDatabase：： Create
+## <a name="cdaodatabasecreate"></a><a name="create"></a>CDao 資料庫:建立
 
-建立新的 Microsoft Jet （。MDB）資料庫，在您建立 `CDaoDatabase` 物件之後，請呼叫這個成員函式。
+新增 Microsoft Jet (.MDB) 資料庫,在建`CDaoDatabase`構 物件後調用此成員函數。
 
 ```
 virtual void Create(
@@ -250,72 +250,72 @@ virtual void Create(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-字串運算式，這是您要建立之資料庫檔案的名稱。 它可以是完整路徑和檔案名，例如 "C：\\\MYDB。MDB」。 您必須提供名稱。 如果您未提供副檔名，則為。已附加 MDB。 如果您的網路支援統一命名慣例（UNC），您也可以指定網路路徑，例如 "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB"。 僅限 Microsoft Jet （。MDB）可以使用這個成員函式建立資料庫檔案。 （字串常值中必須有兩個反斜線，因為 " C++\\" 是 escape 字元）。
+*lpsz名稱*<br/>
+字串表示式,它是要創建的資料庫檔案的名稱。 它可以是完整的路徑和檔名,如"C:\MYDB"。\\MDB"。 您必須提供名稱。 如果不提供檔案名副檔名, .MDB被追加。 如果您的網路支援統一的命名約定 (UNC),您還可以指定網路路徑,例如\\\\\\\\"_MYSERVER\\\\_MYSHARE _MYDIR _MYDB"。 只有微軟噴氣機 (.可以使用此成員函數創建 MDB 資料庫檔案。 (字串文字中需要雙背斜杠,因為""\\是C++轉義字元。
 
 *lpszLocale*<br/>
-用來指定建立資料庫之排序次序的字串運算式。 預設值是 `dbLangGeneral`。 可能的值為：
+用於指定用於創建資料庫的整理順序的字串運算式。 預設值是 `dbLangGeneral`。 可能的值包括：
 
-- `dbLangGeneral` 英文、德文、法文、葡萄牙文、義大利文和新式西班牙文
+- `dbLangGeneral`英語、德語、法語、葡萄牙文、義大利文和現代西班牙文
 
-- `dbLangArabic` 阿拉伯文
+- `dbLangArabic`阿拉伯文
 
-- `dbLangCyrillic` 俄文
+- `dbLangCyrillic`俄語
 
-- `dbLangCzech` 捷克文
+- `dbLangCzech`捷克文
 
-- `dbLangDutch` 荷蘭文
+- `dbLangDutch`荷蘭文
 
-- `dbLangGreek` 希臘文
+- `dbLangGreek`希臘文
 
-- `dbLangHebrew` 希伯來文
+- `dbLangHebrew`希伯來文
 
-- `dbLangHungarian` 匈牙利文
+- `dbLangHungarian`匈牙利文
 
-- `dbLangIcelandic` 冰島文
+- `dbLangIcelandic`冰島文
 
-- `dbLangNordic` 北歐語言（僅限 Microsoft Jet database engine 1.0 版）
+- `dbLangNordic`北歐語言 (僅限 Microsoft Jet 資料庫引擎版本 1.0)
 
-- `dbLangNorwdan` 挪威文和丹麥文
+- `dbLangNorwdan`挪威文和丹麥文
 
-- `dbLangPolish` 波蘭文
+- `dbLangPolish`波蘭文
 
-- `dbLangSpanish` 傳統西班牙文
+- `dbLangSpanish`傳統西班牙文
 
-- `dbLangSwedfin` 瑞典文和芬蘭文
+- `dbLangSwedfin`瑞典文和芬蘭文
 
-- `dbLangTurkish` 土耳其文
+- `dbLangTurkish`土耳其文
 
 *dwOptions*<br/>
-表示一或多個選項的整數。 可能的值為：
+指示一個或多個選項的整數。 可能的值包括：
 
-- `dbEncrypt` 建立加密的資料庫。
+- `dbEncrypt`創建加密資料庫。
 
-- `dbVersion10` 使用 Microsoft Jet 資料庫版本1.0 建立資料庫。
+- `dbVersion10`使用 Microsoft Jet 資料庫版本 1.0 創建資料庫。
 
-- `dbVersion11` 使用 Microsoft Jet 資料庫版本1.1 建立資料庫。
+- `dbVersion11`使用 Microsoft Jet 資料庫版本 1.1 創建資料庫。
 
-- `dbVersion20` 使用 Microsoft Jet 資料庫版本2.0 建立資料庫。
+- `dbVersion20`使用 Microsoft Jet 資料庫版本 2.0 創建資料庫。
 
-- `dbVersion30` 使用 Microsoft Jet 資料庫版本3.0 建立資料庫。
+- `dbVersion30`使用 Microsoft Jet 資料庫版本 3.0 創建資料庫。
 
-如果您省略加密常數，則會建立未加密的資料庫。 您只能指定一個版本常數。 如果您省略版本常數，則會建立使用 Microsoft Jet 資料庫3.0 版的資料庫。
+如果省略加密常量,將創建未加密的資料庫。 只能指定一個版本常量。 如果省略版本常量,將創建使用 Microsoft Jet 資料庫版本 3.0 的資料庫。
 
 > [!CAUTION]
->  如果資料庫未加密，即使您執行使用者/密碼安全性，也可能會直接讀取構成資料庫的二進位磁片檔案。
+> 如果資料庫未加密,即使您實現了使用者/密碼安全性,也可以直接讀取構成資料庫的二進位磁碟檔。
 
 ### <a name="remarks"></a>備註
 
-`Create` 會建立資料庫檔案和基礎 DAO 資料庫物件，並初始化C++物件。 物件會附加到相關聯的工作區資料庫集合。 資料庫物件處於開啟狀態;請不要在 `Create`後呼叫 `Open*`。
+`Create`創建資料庫檔和基礎DAO資料庫物件並初始化C++物件。 該物件將追加到關聯的工作區的「資料庫」集合中。 資料庫對象處於打開狀態;不要在`Open*``Create`之後 呼叫 。
 
 > [!NOTE]
->  使用 `Create`，您只可以建立 Microsoft Jet （）。MDB）資料庫。 您不能建立 ISAM 資料庫或 ODBC 資料庫。
+> 使用`Create`時,只能創建 Microsoft Jet (。MDB)資料庫。 您不能建立 ISAM 資料庫或 ODBC 資料庫。
 
-##  <a name="createrelation"></a>CDaoDatabase：： CreateRelation
+## <a name="cdaodatabasecreaterelation"></a><a name="createrelation"></a>CDao 資料庫::建立關係
 
-呼叫這個成員函式，以建立資料庫中主資料表的一個或多個欄位之間的關聯性，以及外部資料表中的一或多個欄位（資料庫中的另一個資料表）。
+調用此成員函數以建立資料庫中主表中的一個或多個字段與外表中的一個或多個字段(資料庫中的另一個表)之間的關係。
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -329,118 +329,118 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-關聯性物件的唯一名稱。 名稱必須以字母開頭，且最多可包含40個字元。 它可以包含數位和底線字元，但不能包含標點符號或空格。
+*lpsz名稱*<br/>
+關係物件的唯一名稱。 名稱必須以字母開頭,最多只能包含 40 個字元。 它可以包括數位和下劃線字元,但不能包括標點符號或空格。
 
 *lpszTable*<br/>
-關聯性中的主資料表名稱。 如果資料表不存在，則 MFC 會擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的例外狀況。
+關係中主表的名稱。 如果表不存在,MFC將引發[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的異常。
 
-*lpszForeignTable*<br/>
-關聯性中的外部資料表名稱。 如果資料表不存在，則 MFC 會擲回 `CDaoException`類型的例外狀況。
+*lpsz 外表*<br/>
+關係中的外表的名稱。 如果表不存在,MFC將引發類型`CDaoException`異常。
 
-*lAttributes*<br/>
-包含關聯性類型相關資訊的長數值。 您可以使用這個值來強制執行參考完整性，還有其他專案。 您可以使用位 OR 運算子（ **&#124;** ）來結合下列任何值（只要組合合理）：
+*l 屬性*<br/>
+包含有關關係類型的資訊的長值。 除其他事項外,可以使用此值強制實施引用完整性。 您可以使用位-OR 運算子 **(&#124;**) 組合以下任一值(只要組合有意義):
 
-- `dbRelationUnique` 關聯性為一對一。
+- `dbRelationUnique`關係是一對一的。
 
-- 不會強制執行 `dbRelationDontEnforce` 關聯性（沒有參考完整性）。
+- `dbRelationDontEnforce`不強制執行關係(沒有引用完整性)。
 
-- `dbRelationInherited` 關聯性存在於包含兩個附加資料表的 noncurrent 資料庫中。
+- `dbRelationInherited`關係存在於包含兩個附加表的非當前資料庫中。
 
-- `dbRelationUpdateCascade` 更新會重迭（如需有關 cascade 的詳細資訊，請參閱備註）。
+- `dbRelationUpdateCascade`更新將級聯(有關級聯的詳細資訊,請參閱備註)。
 
-- `dbRelationDeleteCascade` 刪除會重迭。
+- `dbRelationDeleteCascade`刪除將級聯。
 
 *lpszField*<br/>
-以 null 終止的字串指標，其中包含主表中的功能變數名稱（由*lpszTable*命名）。
+指向 null 連接字串的指標,其中包含主錶中欄位的名稱(由*lpszTable*命名)。
 
-*lpszForeignField*<br/>
-以 null 終止的字串指標，其中包含外部資料表中的功能變數名稱（由*lpszForeignTable*命名）。
+*lpsz外國場*<br/>
+指向空端結束的字串的指標,其中包含外表中欄位的名稱(由*lpsz外表*命名)。
 
-*relinfo*<br/>
-[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)物件的參考，其中包含您想要建立之關聯性的相關資訊。
+*雷利福*<br/>
+對包含要建立關係的資訊的[CDao 關係資訊](../../mfc/reference/cdaorelationinfo-structure.md)物件的引用。
 
 ### <a name="remarks"></a>備註
 
-關聯性不能牽涉到來自外部資料庫的查詢或附加資料表。
+關係不能涉及來自外部資料庫的查詢或附加表。
 
-當關聯牽涉到這兩個數據表中的每一個欄位時，請使用函式的第一個版本。 當關聯牽涉到多個欄位時，請使用第二個版本。 關聯中的欄位數目上限為14。
+當關係涉及兩個表中每個表中的一個字段時,請使用函數的第一個版本。 當關係涉及多個字段時,請使用第二個版本。 關係中的最大欄位數為14。
 
-此動作會建立基礎 DAO 關聯性物件，但這是 MFC 的執行詳細資料，因為 MFC 的關聯物件封裝包含在類別 `CDaoDatabase`內。 MFC 不提供關聯的類別。
+此操作創建一個基礎 DAO 關係物件,但這是 MFC 實現的詳細資訊,因為 MFC 對關係對`CDaoDatabase`象的封裝包含在類 中。 MFC 不為關係提供類。
 
-如果您設定關聯性物件的屬性來啟動 cascade 作業，則資料庫引擎會在對相關主鍵資料表進行變更時，自動更新或刪除一個或多個其他資料表中的記錄。
+如果將關係物件的屬性設置為啟動級聯操作,則資料庫引擎在更改相關主鍵表時會自動更新或刪除一個或多個其他表中的記錄。
 
-例如，假設您在 Customers 資料表與 Orders 資料表之間建立串聯刪除關聯性。 當您刪除 Customers 資料表中的記錄時，也會一併刪除與該客戶相關的 Orders 資料表中的記錄。 此外，如果您在 Orders 資料表與其他資料表之間建立串聯刪除關聯性，當您刪除 Customers 資料表中的記錄時，就會自動刪除這些資料表中的記錄。
+例如,假設您在客戶表和訂單表之間建立級聯刪除關係。 從"客戶"表中刪除記錄時,"訂單"表中與該客戶相關的記錄也會被刪除。 此外,如果在「訂單」表和其他表之間建立級聯刪除關係,則當您從「客戶」表中刪除記錄時,將自動刪除這些表中的記錄。
 
-如需相關資訊，請參閱 DAO 說明中的「CreateRelation 方法」主題。
+有關相關信息,請參閱 DAO 説明中的主題"創建關係方法」。
 
-##  <a name="deletequerydef"></a>CDaoDatabase：:D eleteQueryDef
+## <a name="cdaodatabasedeletequerydef"></a><a name="deletequerydef"></a>CDao資料庫::DeleteQueryDef
 
-呼叫這個成員函式，從 `CDaoDatabase` 物件的 QueryDefs 集合中刪除指定的 querydef （已儲存的查詢）。
+呼叫此成員函數從`CDaoDatabase`物件的 QueryDefs 集合中刪除指定的查詢def - 保存的查詢。
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-要刪除之已儲存查詢的名稱。
+*lpsz名稱*<br/>
+要刪除的已保存查詢的名稱。
 
 ### <a name="remarks"></a>備註
 
-之後，該查詢就不會再定義于資料庫中。
+之後,不再在資料庫中定義該查詢。
 
-如需建立 querydef 物件的詳細資訊，請參閱類別[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 當您建立 `CDaoQueryDef` 物件時，會將 querydef 物件與特定 `CDaoDatabase` 物件產生關聯，並將指標傳遞至資料庫物件。
+有關建立查詢定義物件的資訊,請參閱類[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 建構物件時,查詢def物件將變為`CDaoDatabase`與特定物件關聯`CDaoQueryDef`, 將該物件傳遞給資料庫物件的指標。
 
-##  <a name="deleterelation"></a>CDaoDatabase：:D eleteRelation
+## <a name="cdaodatabasedeleterelation"></a><a name="deleterelation"></a>CDao資料庫::Delete關係
 
-呼叫這個成員函式，從資料庫物件的關聯集合中刪除現有的關聯性。
+呼叫此成員函數從資料庫物件的"關係"集合中刪除現有關係。
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-要刪除之關聯性的名稱。
+*lpsz名稱*<br/>
+要刪除的關係的名稱。
 
 ### <a name="remarks"></a>備註
 
-之後，關聯就不再存在。
+之後,關係不再存在。
 
-如需相關資訊，請參閱 DAO 說明中的「刪除方法」主題。
+有關相關信息,請參閱 DAO 説明中的主題"刪除方法"。
 
-##  <a name="deletetabledef"></a>CDaoDatabase：:D eleteTableDef
+## <a name="cdaodatabasedeletetabledef"></a><a name="deletetabledef"></a>CDao資料庫::DeleteTableDef
 
-呼叫這個成員函式，從 `CDaoDatabase` 物件的 TableDefs 集合中刪除指定的資料表及其所有資料。
+呼叫此成員函數從`CDaoDatabase`物件的 TableDefs 集合中刪除指定的表及其所有資料。
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-要刪除之 tabledef 的名稱。
+*lpsz名稱*<br/>
+要刪除的表def的名稱。
 
 ### <a name="remarks"></a>備註
 
-之後，該資料表就不會再定義于資料庫中。
+之後,該表不再在資料庫中定義。
 
 > [!NOTE]
->  請務必小心，不要刪除系統資料表。
+> 非常小心不要刪除系統表。
 
-如需建立 tabledef 物件的詳細資訊，請參閱類別[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)。 當您建立 `CDaoTableDef` 物件時，tabledef 物件會與特定 `CDaoDatabase` 物件產生關聯，並將指標傳遞至資料庫物件。
+有關建立表def物件的資訊,請參閱類[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)。 當您建構物件,將指向資料庫物件的指標`CDaoDatabase`傳遞給該物件時,`CDaoTableDef`表def物件將變為與特定對象關聯。
 
-如需相關資訊，請參閱 DAO 說明中的「刪除方法」主題。
+有關相關信息,請參閱 DAO 説明中的主題"刪除方法"。
 
-##  <a name="execute"></a>CDaoDatabase：： Execute
+## <a name="cdaodatabaseexecute"></a><a name="execute"></a>CDao 資料庫:執行
 
-呼叫這個成員函式以執行動作查詢，或在資料庫上執行 SQL 語句。
+呼叫此成員函數以在資料庫上執行操作查詢或執行 SQL 語句。
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -449,42 +449,42 @@ void Execute(
 ### <a name="parameters"></a>參數
 
 *lpszSQL*<br/>
-以 null 終止的字串指標，其中包含要執行的有效 SQL 命令。
+包含要執行的有效 SQL 指令的 null 連接端接字串的指標。
 
-*nOptions*<br/>
-整數，指定與查詢完整性相關的選項。 您可以使用位 OR 運算子（ **&#124;** ）來結合下列任何常數（假設組合合理，例如，您不會將 `dbInconsistent` 結合 `dbConsistent`）：
+*n 選項*<br/>
+指定與查詢完整性相關的選項的整數。 您可以使用位OR運算子 **(&#124;**) 組合以下任一常數(前提是組合有意義 - 例如`dbInconsistent``dbConsistent`,您不會與組合使用 。
 
-- `dbDenyWrite` 拒絕其他使用者的寫入權限。
+- `dbDenyWrite`拒絕其他使用者的寫入許可權。
 
-- `dbInconsistent` （預設值）不一致的更新。
+- `dbInconsistent`( 預設 )更新不一致。
 
-- `dbConsistent` 一致的更新。
+- `dbConsistent`一致的更新。
 
-- `dbSQLPassThrough` SQL 傳遞。 導致將 SQL 語句傳遞至 ODBC 資料來源進行處理。
+- `dbSQLPassThrough`SQL 傳遞。 使 SQL 語句傳遞到 ODBC 數據源進行處理。
 
-- 如果發生錯誤，`dbFailOnError` 復原更新。
+- `dbFailOnError`如果發生錯誤,回滾更新。
 
-- 如果另一位使用者正在變更您正在編輯的資料，`dbSeeChanges` 會產生執行階段錯誤。
+- `dbSeeChanges`如果其他使用者正在更改正在編輯的數據,則生成運行時錯誤。
 
 > [!NOTE]
->  如果同時包含 `dbInconsistent` 和 `dbConsistent`，或兩者都未包含，則結果會是預設值。 如需這些常數的說明，請參閱 DAO [說明] 中的「執行方法」主題。
+> 如果兩`dbInconsistent``dbConsistent`者 都包括在內,或者兩者都包括在內,則結果為預設值。 有關這些常量的說明,請參閱DAO説明中的主題"執行方法"。
 
 ### <a name="remarks"></a>備註
 
-`Execute` 僅適用于動作查詢或不會傳回結果的 SQL 傳遞查詢。 它不適用於傳回記錄的 select 查詢。
+`Execute`僅適用於不返回結果的操作查詢或 SQL 傳遞查詢。 它不適用於返回記錄的選定查詢。
 
-如需動作查詢的定義和資訊，請參閱 DAO 說明中的「動作查詢」和「執行方法」主題。
+有關操作查詢的定義和資訊,請參閱 DAO 説明中的「操作查詢」和「執行方法」主題。
 
 > [!TIP]
->  假設語法正確的 SQL 語句和適當的許可權，即使不是可以修改或刪除的單一資料列，`Execute` 成員函式也不會失敗。 因此，當使用 `Execute` 成員函式來執行 update 或 delete 查詢時，請一律使用 `dbFailOnError` 選項。 此選項會使 MFC 擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的例外狀況，並在任何受影響的記錄已鎖定且無法更新或刪除時，回復所有成功的變更。 請注意，您一律可以呼叫 `GetRecordsAffected`，以查看有多少記錄受到影響。
+> 給定語法上正確的 SQL 語句和適當的許可權`Execute`,即使 無法修改或刪除單個行,成員函數也不會失敗。 因此,在使用成員`dbFailOnError`函數運行更新或`Execute`刪除 查詢時,始終使用 選項。 此選項會導致 MFC 引發[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的異常,並在任何受影響的記錄被鎖定且無法更新或刪除時回滾所有成功更改。 請注意,您可以隨時調用`GetRecordsAffected`以查看受影響的記錄數。
 
-呼叫 database 物件的[GetRecordsAffected](#getrecordsaffected)成員函式，以判斷受最近 `Execute` 呼叫影響的記錄數目。 例如，`GetRecordsAffected` 會傳回執行動作查詢時，刪除、更新或插入之記錄數目的相關資訊。 當串聯更新或刪除作用中時，傳回的計數不會反映相關資料表中的變更。
+調用資料庫物件的[GetRecords 受影響的](#getrecordsaffected)成員函數,以`Execute`確定受最近 調用影響的記錄數。 例如,`GetRecordsAffected`傳回有關在執行作業查詢時刪除、更新或插入的記錄數的資訊。 當級聯更新或刪除生效時,返回的計數不會反映相關表中的更改。
 
-`Execute` 不會傳回記錄集。 在選取記錄的查詢上使用 `Execute`，會導致 MFC 擲回類型 `CDaoException`的例外狀況。 （沒有類似于 `CDatabase::ExecuteSQL`的 `ExecuteSQL` 成員函式）。
+`Execute`不返回記錄集。 在`Execute`選擇記錄的查詢上使用會導致 MFC`CDaoException`引發類型異常。 (沒有`ExecuteSQL`類似於`CDatabase::ExecuteSQL`的成員函數。
 
-##  <a name="getconnect"></a>CDaoDatabase：： GetConnect
+## <a name="cdaodatabasegetconnect"></a><a name="getconnect"></a>CDao 資料庫:抓取連線
 
-呼叫這個成員函式，以取出用來將 `CDaoDatabase` 物件連接到 ODBC 或 ISAM 資料庫的連接字串。
+呼叫此成員函數以檢索用於將`CDaoDatabase`物件連接到 ODBC 或 ISAM 資料庫的連接字串。
 
 ```
 CString GetConnect();
@@ -492,23 +492,23 @@ CString GetConnect();
 
 ### <a name="return-value"></a>傳回值
 
-如果已在 ODBC 資料來源上成功呼叫[Open](#open) ，則為連接字串;否則為空字串。 適用于 Microsoft Jet （。MDB）資料庫，除非您將它設定為與用於[執行](#execute)成員函式的 `dbSQLPassThrough` 選項搭配使用，或是用來開啟記錄集，否則字串一律是空的。
+如果在 ODBC 資料來源上成功呼叫 Open 的連接字串;如果已在 ODBC 資料來源上成功呼叫[Open,](#open)則連接字串。否則,一個空字串。 對於微軟噴氣式飛機 (.MDB) 資料庫,字串始終為空,除非您將其設置為與[執行](#execute)成員函`dbSQLPassThrough`數 一起使用或用於打開記錄集的選項。
 
 ### <a name="remarks"></a>備註
 
-此字串提供有關已開啟資料庫的來源，或用於傳遞查詢之資料庫的資訊。 連接字串是由資料庫類型規範和零或多個以分號分隔的參數所組成。
+該字串提供有關在傳遞查詢中使用的開放資料庫或資料庫的來源的資訊。 連接字串由資料庫類型指定器和零個或多個參數組成,這些參數由分號分隔。
 
 > [!NOTE]
->  使用 MFC DAO 類別透過 ODBC 連接到資料來源，會比透過附加資料表連接的效率更低。
+> 使用 MFC DAO 類透過 ODBC 連接到資料來源的效率低於透過附加表進行連接的效率。
 
 > [!NOTE]
->  連接字串是用來視需要將其他資訊傳遞至 ODBC 和特定的 ISAM 驅動程式。 它不會用於。MDB 資料庫。 對於 Microsoft Jet 資料庫基表而言，連接字串是空字串（""），除非您將它用於 SQL 傳遞查詢，如上述的傳回值中所述。
+> 連接字串用於根據需要將其他資訊傳遞給 ODBC 和某些 ISAM 驅動程式。 它不用於 。MDB 資料庫。 對於 Microsoft Jet 資料庫基錶,連接字串是一個空字串 (""),除非將其用於 SQL 傳遞查詢,如上面的返回值所述。
 
-如需如何建立連接字串的說明，請參閱[Open](#open)成員函式。 在 `Open` 呼叫中設定連接字串之後，您稍後可以使用它來檢查設定，以決定資料庫的類型、路徑、使用者識別碼、密碼或 ODBC 資料來源。
+有關如何創建連接字串的說明,請參閱[Open](#open)成員函數。 在`Open`呼叫中設定連接字串後,以後可以使用它檢查設定以確定資料庫的類型、路徑、使用者 ID、密碼或 ODBC 資料來源。
 
-##  <a name="getname"></a>CDaoDatabase：： GetName
+## <a name="cdaodatabasegetname"></a><a name="getname"></a>CDao 資料庫:取得名稱
 
-呼叫這個成員函式來抓取目前開啟之資料庫的名稱，這是現有資料庫檔案的名稱或已註冊之 ODBC 資料來源的名稱。
+呼叫此成員函數以檢索目前打開的資料庫的名稱,該資料庫是現有資料庫檔的名稱或已註冊的 ODBC 資料來源的名稱。
 
 ```
 CString GetName();
@@ -516,32 +516,32 @@ CString GetName();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為資料庫的完整路徑和檔案名;否則為空白[CString](../../atl-mfc-shared/reference/cstringt-class.md)。
+資料庫的完整路徑和檔名(如果成功);否則,空[的 CString](../../atl-mfc-shared/reference/cstringt-class.md)。
 
 ### <a name="remarks"></a>備註
 
-如果您的網路支援統一命名慣例（UNC），您也可以指定網路路徑，例如 "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB」。 （字串常值中必須有兩個反斜線，因為 " C++\\" 是 escape 字元）。
+如果您的網络支援統一的命名約定 (UNC),您\\\\\\還可以 指定網络路徑,例如,"[MYSERVER\\]MYSHARE\\\\\MYDIR _MYDB。MDB"。 (字串文字中需要雙背斜杠,因為""\\是C++轉義字元。
 
-例如，您可能想要在標題中顯示此名稱。 如果在抓取名稱時發生錯誤，MFC 會擲回類型[CDaoException](../../mfc/reference/cdaoexception-class.md)的例外狀況。
+例如,您可能希望在標題中顯示此名稱。 如果在檢索名稱時發生錯誤,MFC 將引發[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的異常。
 
 > [!NOTE]
->  若要在存取外部資料庫時獲得更好的效能，建議您將外部資料庫資料表附加至 Microsoft Jet 資料庫（。MDB），而不是直接連接到資料來源。
+> 為了在訪問外部資料庫時獲得更好的性能,我們建議您將外部資料庫表附加到 Microsoft Jet 資料庫 (。MDB),而不是直接連接到數據源。
 
-資料庫類型是由路徑所指向的檔案或目錄所表示，如下所示：
+資料庫類型由路徑指向的檔或目錄指示,如下所示:
 
-|Pathname 指向.。|資料庫類型|
+|路徑名稱指向.|資料庫類型|
 |--------------------------|-------------------|
-|.MDB 檔|Microsoft Jet 資料庫（Microsoft Access）|
+|.MDB 檔案|微軟噴氣資料庫(微軟存取)|
 |包含的目錄。DBF 檔案|dBASE 資料庫|
-|包含的目錄。XLS 檔案|Microsoft Excel 資料庫|
-|包含的目錄。PDX 檔案|Paradox 資料庫|
-|包含適當格式之文字資料庫檔案的目錄|文字格式資料庫|
+|包含的目錄。XLS 檔案|微軟Excel資料庫|
+|包含的目錄。PDX 檔案|悖論資料庫|
+|包含適當格式的文字資料庫檔案的目錄|文字格式資料庫|
 
-若為 ODBC 資料庫（例如 SQL Server 和 Oracle），資料庫的連接字串會識別 ODBC 所註冊的資料來源名稱（DSN）。
+對於 ODBC 資料庫(如 SQL Server 和 Oracle),資料庫的連接字串識別由 ODBC 註冊的數據來源名稱 (DSN)。
 
-##  <a name="getquerydefcount"></a>CDaoDatabase：： GetQueryDefCount
+## <a name="cdaodatabasegetquerydefcount"></a><a name="getquerydefcount"></a>CDao 資料庫::取得查詢定義
 
-呼叫這個成員函式，以抓取資料庫的 QueryDefs 集合中所定義的查詢數目。
+呼叫此成員函數以檢索資料庫的 QueryDefs 集合中定義的查詢數。
 
 ```
 short GetQueryDefCount();
@@ -549,17 +549,17 @@ short GetQueryDefCount();
 
 ### <a name="return-value"></a>傳回值
 
-資料庫中定義的查詢數目。
+資料庫中定義的查詢數。
 
 ### <a name="remarks"></a>備註
 
-如果您需要對 QueryDefs 集合中的所有 querydefs 執行迴圈，`GetQueryDefCount` 會很有用。 若要取得集合中指定查詢的相關資訊，請參閱[GetQueryDefInfo](#getquerydefinfo)。
+`GetQueryDefCount`如果需要循環瀏覽查詢Defs 集合中的所有查詢def,則非常有用。 要取得有關集合中給定查詢的資訊,請參閱[GetQueryDefInfo](#getquerydefinfo)。
 
-##  <a name="getquerydefinfo"></a>CDaoDatabase：： GetQueryDefInfo
+## <a name="cdaodatabasegetquerydefinfo"></a><a name="getquerydefinfo"></a>CDao 資料庫::獲取查詢資訊
 
-呼叫這個成員函式可取得有關資料庫中所定義之查詢的各種資訊類型。
+調用此成員函數以獲取有關資料庫中定義的查詢的各種資訊。
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -574,32 +574,32 @@ void GetQueryDefInfo(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-資料庫的 QueryDefs 集合中預先定義之查詢的索引，用於依索引查閱。
+資料庫的 QueryDefs 集合中預定義查詢的索引,用於按索引查找。
 
-*querydefinfo*<br/>
-傳回所要求之資訊的[CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)物件參考。
+*查詢definfo*<br/>
+對返回請求的資訊的[CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)物件的引用。
 
 *dwInfoOptions*<br/>
-指定要取得之記錄集相關資訊的選項。 這裡列出可用的選項，以及它們會讓函式傳回記錄集的相關資訊：
+指定有關要檢索的記錄集的資訊的選項。 此處列出可用選項以及它們導致函數傳回紀錄集的原因:
 
-- AFX_DAO_PRIMARY_INFO （預設）名稱，輸入
+- AFX_DAO_PRIMARY_INFO(預設)名稱、類型
 
-- AFX_DAO_SECONDARY_INFO 主要資訊加上：建立日期、上次更新日期、傳回記錄、可更新
+- AFX_DAO_SECONDARY_INFO主要資訊加上:建立日期、上次更新日期、傳回記錄、可升級
 
-- AFX_DAO_ALL_INFO 主要和次要資訊，加上： SQL、Connect、ODBCTimeout
+- AFX_DAO_ALL_INFO主要和輔助資訊加上:SQL、連接、ODBCTimeout
 
-*lpszName*<br/>
-包含資料庫中所定義之查詢名稱的字串，用於依名稱查閱。
+*lpsz名稱*<br/>
+包含資料庫中定義的查詢名稱的字串,用於按名稱查找。
 
 ### <a name="remarks"></a>備註
 
-系統會提供兩個版本的函式，讓您可以依據資料庫的 QueryDefs 集合或查詢的名稱來選取查詢。
+提供了函數的兩個版本,以便可以通過資料庫的 QueryDefs 集合中的索引或查詢的名稱來選擇查詢。
 
-如需*querydefinfo*中所傳回信息的描述，請參閱[CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)結構。 此結構的成員會對應至*dwInfoOptions*的描述中所列的資訊專案。 如果您要求一層資訊，您也可以取得任何先前的資訊層級。
+有關*查詢中*返回的信息的說明,請參閱[CDaoQueryDefinfo](../../mfc/reference/cdaoquerydefinfo-structure.md)結構。 此結構的成員對應於*dwInfoOptions*描述中列出的資訊項。 如果您請求一級資訊,您也會得到任何以前的資訊級別。
 
-##  <a name="getquerytimeout"></a>CDaoDatabase：： GetQueryTimeout
+## <a name="cdaodatabasegetquerytimeout"></a><a name="getquerytimeout"></a>CDao 資料庫:取得查詢逾時
 
-呼叫這個成員函式，以取得在連接的資料庫上的後續作業超時之前允許的目前秒數。
+調用此成員函數以檢索當前秒數,以便在連接的資料庫上的後續操作超時之前允許。
 
 ```
 short GetQueryTimeout();
@@ -607,19 +607,19 @@ short GetQueryTimeout();
 
 ### <a name="return-value"></a>傳回值
 
-包含超時值（以秒為單位）的短整數。
+包含超時值(以秒為單位)的短整數。
 
 ### <a name="remarks"></a>備註
 
-作業可能會因為網路存取問題、過多的查詢處理時間等等而超時。 當設定生效時，它會影響與此 `CDaoDatabase` 物件相關聯之任何記錄集上的所有開啟、新增、更新和刪除作業。 您可以藉由呼叫[SetQueryTimeout](#setquerytimeout)來變更目前的超時設定。 在開啟後變更記錄集的查詢超時值，並不會變更記錄集的值。 例如，後續的[移動](../../mfc/reference/cdaorecordset-class.md#move)作業不會使用新的值。 初始化資料庫引擎時，一開始會設定預設值。
+操作可能會由於網路訪問問題、查詢處理時間過長等原因而超時。 當該設置生效時,它會影響與此`CDaoDatabase`物件關聯的任何記錄集上的所有打開、添加新、更新和刪除操作。 您可以通過調用[SetQueryTimeout](#setquerytimeout)來更改當前超時設置。 打開後更改記錄集的查詢超時值不會更改記錄集的值。 例如,後續[移動](../../mfc/reference/cdaorecordset-class.md#move)操作不使用新值。 初始化資料庫引擎時,最初會設置預設值。
 
-查詢超時的預設值是取自 Windows 登錄。 如果沒有登錄設定，預設值為60秒。 並非所有資料庫都支援設定查詢超時值的能力。 如果您將查詢超時值設定為0，就不會發生任何超時;而且與資料庫的通訊可能會停止回應。 這種行為在開發期間可能會很有用。 如果呼叫失敗，MFC 會擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的例外狀況。
+查詢超時的預設值取自 Windows 註冊表。 如果沒有註冊表設置,則預設值為 60 秒。 並非所有資料庫都支援設置查詢超時值的能力。 如果將查詢超時值設置為 0,則不執行超時;如果將超時設置為 0,則不執行超時。與資料庫的通信可能會停止回應。 此行為在開發期間可能很有用。 如果調用失敗,MFC 將引發[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的異常。
 
-如需相關資訊，請參閱 DAO 說明中的「QueryTimeout 屬性」主題。
+有關相關信息,請參閱 DAO 説明中的"查詢超時屬性"主題。
 
-##  <a name="getrecordsaffected"></a>CDaoDatabase：： GetRecordsAffected
+## <a name="cdaodatabasegetrecordsaffected"></a><a name="getrecordsaffected"></a>CDao 資料庫:取得受影響的記錄
 
-呼叫這個成員函式，以判斷受最新的[Execute](#execute)成員函式呼叫所影響的記錄數目。
+調用此成員函數以確定受[Execute](#execute)成員函數最近調用影響的記錄數。
 
 ```
 long GetRecordsAffected();
@@ -627,17 +627,17 @@ long GetRecordsAffected();
 
 ### <a name="return-value"></a>傳回值
 
-長整數，其中包含受影響的記錄數目。
+包含受影響的記錄數的長整數。
 
 ### <a name="remarks"></a>備註
 
-傳回的值包括以 `Execute`執行的動作查詢所刪除、更新或插入的記錄數目。 當串聯更新或刪除作用中時，傳回的計數不會反映相關資料表中的變更。
+傳回的值包括`Execute`使用 執行的操作查詢刪除、更新或插入的記錄數。 當級聯更新或刪除生效時,返回的計數不會反映相關表中的更改。
 
-如需相關資訊，請參閱 DAO 說明中的「RecordsAffected 屬性」主題。
+有關相關信息,請參閱 DAO 説明中的主題「記錄受影響的屬性」。
 
-##  <a name="getrelationcount"></a>CDaoDatabase：： GetRelationCount
+## <a name="cdaodatabasegetrelationcount"></a><a name="getrelationcount"></a>CDao 資料庫:取得關聯數
 
-呼叫這個成員函式，以取得在資料庫中的資料表之間定義的關聯性數目。
+調用此成員函數以獲取資料庫中表之間定義的關係數。
 
 ```
 short GetRelationCount();
@@ -645,19 +645,19 @@ short GetRelationCount();
 
 ### <a name="return-value"></a>傳回值
 
-在資料庫中的資料表之間定義的關聯性數目。
+資料庫中表之間定義的關係數。
 
 ### <a name="remarks"></a>備註
 
-如果您需要對資料庫的關聯集合中所有已定義的關聯執行迴圈，`GetRelationCount` 會很有用。 若要取得集合中指定關聯的相關資訊，請參閱[GetRelationInfo](#getrelationinfo)。
+`GetRelationCount`如果需要迴圈訪問資料庫關係集合中的所有已定義關係,則非常有用。 要取得有關集合中給定關係的資訊,請參閱[GetRelationInfo](#getrelationinfo)。
 
-若要說明關聯性的概念，請考慮供應商資料表和 Products 資料表，這可能會有一對多關聯性。 在此關聯性中，一個供應商可以提供多項產品。 其他關係為一對一和多對多關聯性。
+為了說明關係的概念,請考慮供應商表和產品表,它們可能具有一對多關係。 在此關係中,一個供應商可以提供多個產品。 其他關係是一對一和多對多。
 
-##  <a name="getrelationinfo"></a>CDaoDatabase：： GetRelationInfo
+## <a name="cdaodatabasegetrelationinfo"></a><a name="getrelationinfo"></a>CDao 資料庫:抓取關係資訊
 
-呼叫這個成員函式，以取得有關資料庫關聯性集合中指定之關聯性的資訊。
+呼叫此成員函數以獲取有關資料庫關係集合中指定關係的資訊。
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -672,33 +672,33 @@ void GetRelationInfo(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-在資料庫的關聯集合中，用於依索引查閱的關係物件索引。
+關係物件在資料庫的關係集合中的索引,用於按索引查找。
 
-*relinfo*<br/>
-傳回所要求之資訊的[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)物件參考。
+*雷利福*<br/>
+對返回請求的資訊的[CDao 關係資訊](../../mfc/reference/cdaorelationinfo-structure.md)物件的引用。
 
 *dwInfoOptions*<br/>
-指定要取得之關聯性資訊的選項。 這裡列出可用的選項，以及它們會讓函式傳回關聯的相關資訊：
+指定有關要檢索的關係的資訊的選項。 此處列出了可用選項以及它們導致函數傳回的關係的原因:
 
-- AFX_DAO_PRIMARY_INFO （預設）名稱、資料表、外部資料表
+- AFX_DAO_PRIMARY_INFO(預設)名稱、表、外表
 
-- AFX_DAO_SECONDARY_INFO 屬性，欄位資訊
+- AFX_DAO_SECONDARY_INFO屬性、欄位資訊
 
-欄位資訊是一個[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)物件，其中包含與關聯之主資料表中的欄位。
+欄位資訊是包含關係中涉及的主表中的欄位的[CDao 關係 FieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)物件。
 
-*lpszName*<br/>
-包含關聯性物件名稱的字串，用於依名稱查閱。
+*lpsz名稱*<br/>
+包含關係物件名稱的字串,用於按名稱查找。
 
 ### <a name="remarks"></a>備註
 
-此函式的兩個版本可依索引或名稱提供存取權。 如需*relinfo*中所傳回信息的描述，請參閱[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)結構。 此結構的成員會對應至*dwInfoOptions*的描述中所列的資訊專案。 如果您要求某一層級的資訊，您也可以取得任何先前層級的資訊。
+此函數的兩個版本提供索引或名稱的訪問。 有關*在 relinfo*中傳回的說明,請參閱[CDao 關係資訊](../../mfc/reference/cdaorelationinfo-structure.md)結構。 此結構的成員對應於*dwInfoOptions*描述中列出的資訊項。 如果您在一個級別請求資訊,您還會在任何以前的級別上獲取資訊。
 
 > [!NOTE]
->  如果您設定關聯性物件的屬性來啟動 cascade 作業（`dbRelationUpdateCascades` 或 `dbRelationDeleteCascades`），Microsoft Jet 資料庫引擎會在對相關主鍵資料表進行變更時，自動更新或刪除一個或多個其他資料表中的記錄。 例如，假設您在 Customers 資料表與 Orders 資料表之間建立串聯刪除關聯性。 當您刪除 Customers 資料表中的記錄時，也會一併刪除與該客戶相關的 Orders 資料表中的記錄。 此外，如果您在 Orders 資料表與其他資料表之間建立串聯刪除關聯性，當您刪除 Customers 資料表中的記錄時，就會自動刪除這些資料表中的記錄。
+> 如果將關係物件的屬性設置為啟動級聯操作`dbRelationUpdateCascades`(`dbRelationDeleteCascades`或 ),則當對相關主鍵表進行更改時,Microsoft Jet 資料庫引擎會自動更新或刪除一個或多個其他表中的記錄。 例如,假設您在客戶表和訂單表之間建立級聯刪除關係。 從"客戶"表中刪除記錄時,"訂單"表中與該客戶相關的記錄也會被刪除。 此外,如果在「訂單」表和其他表之間建立級聯刪除關係,則當您從「客戶」表中刪除記錄時,將自動刪除這些表中的記錄。
 
-##  <a name="gettabledefcount"></a>CDaoDatabase：： GetTableDefCount
+## <a name="cdaodatabasegettabledefcount"></a><a name="gettabledefcount"></a>CDao 資料庫:取得TableDef( C)
 
-呼叫這個成員函式，以抓取資料庫中所定義的資料表數目。
+調用此成員函數以檢索資料庫中定義的表數。
 
 ```
 short GetTableDefCount();
@@ -706,17 +706,17 @@ short GetTableDefCount();
 
 ### <a name="return-value"></a>傳回值
 
-資料庫中定義的 tabledefs 數目。
+資料庫中定義的表defs數。
 
 ### <a name="remarks"></a>備註
 
-如果您需要對資料庫 TableDefs 集合中的所有 tabledefs 執行迴圈，`GetTableDefCount` 會很有用。 若要取得集合中特定資料表的相關資訊，請參閱[GetTableDefInfo](#gettabledefinfo)。
+`GetTableDefCount`如果需要循環訪問資料庫的 TableDefs 集合中的所有表def,則非常有用。 要取得有關集合中給定表的資訊,請參閱[GetTableDefInfo](#gettabledefinfo)。
 
-##  <a name="gettabledefinfo"></a>CDaoDatabase：： GetTableDefInfo
+## <a name="cdaodatabasegettabledefinfo"></a><a name="gettabledefinfo"></a>CDao 資料庫:抓取桌面資訊
 
-呼叫這個成員函式可取得有關資料庫中所定義之資料表的各種資訊。
+調用此成員函數以獲取有關資料庫中定義的表的各種資訊。
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -731,35 +731,35 @@ void GetTableDefInfo(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-資料庫 TableDefs 集合中 tabledef 物件的索引，用於依索引查閱。
+資料庫的 TableDefs 集合中的表def物件的索引,用於按索引查找。
 
-*tabledefinfo*<br/>
-傳回所要求之資訊的[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)物件參考。
+*表德福*<br/>
+傳回請求的資訊的[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)物件的參考。
 
 *dwInfoOptions*<br/>
-指定要取得之資料表相關資訊的選項。 這裡列出可用的選項，以及它們會讓函式傳回關聯的相關資訊：
+指定要檢索的表的選項。 此處列出了可用選項以及它們導致函數傳回的關係的原因:
 
-- AFX_DAO_PRIMARY_INFO （預設）名稱、可更新、屬性
+- AFX_DAO_PRIMARY_INFO(預設)名稱、可上可、屬性
 
-- AFX_DAO_SECONDARY_INFO 的主要資訊，加上：建立日期、上次更新日期、來源資料表名稱、連接
+- AFX_DAO_SECONDARY_INFO主要資訊加上:建立日期、上次更新日期、源表名稱、連接
 
-- AFX_DAO_ALL_INFO 主要和次要資訊，加上：驗證規則、驗證文字、記錄計數
+- AFX_DAO_ALL_INFO主要和輔助資訊加上:驗證規則、驗證文本、記錄計數
 
-*lpszName*<br/>
-Tabledef 物件的名稱，用於依名稱查閱。
+*lpsz名稱*<br/>
+表def物件的名稱,用於按名稱查找。
 
 ### <a name="remarks"></a>備註
 
-系統會提供兩個版本的函式，因此您可以依資料庫的 TableDefs 集合中的索引或資料表的名稱來選取資料表。
+提供了函數的兩個版本,以便您可以通過資料庫的 TableDefs 集合中的索引或表的名稱來選擇表。
 
-如需*tabledefinfo*中所傳回信息的描述，請參閱[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)結構。 此結構的成員會對應至*dwInfoOptions*的描述中所列的資訊專案。 如果您要求某一層級的資訊，您也可以取得任何先前層級的資訊。
+有關*表中*返回的資訊的說明,請參閱[CDaoTable Definfo](../../mfc/reference/cdaotabledefinfo-structure.md)結構。 此結構的成員對應於*dwInfoOptions*描述中列出的資訊項。 如果您在一個級別請求資訊,則也獲取任何以前級別的資訊。
 
 > [!NOTE]
->  AFX_DAO_ALL_INFO 選項會提供可能變慢的資訊。 在此情況下，如果有許多記錄，計算資料表中的記錄可能會很耗時。
+> AFX_DAO_ALL_INFO選項提供的資訊可能獲取速度很慢。 在這種情況下,如果有許多記錄,計算表中的記錄可能非常耗時。
 
-##  <a name="getversion"></a>CDaoDatabase：： GetVersion
+## <a name="cdaodatabasegetversion"></a><a name="getversion"></a>CDao 資料庫:抓取版本
 
-呼叫這個成員函式，以判斷 Microsoft Jet 資料庫檔案的版本。
+呼叫此成員函數以確定 Microsoft Jet 資料庫檔的版本。
 
 ```
 CString GetVersion();
@@ -767,17 +767,17 @@ CString GetVersion();
 
 ### <a name="return-value"></a>傳回值
 
-[CString](../../atl-mfc-shared/reference/cstringt-class.md) ，表示與物件相關聯的資料庫檔案版本。
+指示與物件關聯的資料庫檔的版本的[CString。](../../atl-mfc-shared/reference/cstringt-class.md)
 
 ### <a name="remarks"></a>備註
 
-傳回的值代表「主要. 次要」格式的版本號碼;例如，"3.0"。 產品版本號碼（例如3.0）包含版本號碼（3）、句點和版本號碼（0）。 至今的版本為1.0、1.1、2.0 和3.0。
+返回的值表示窗體「主要.minor」中的版本號;例如,"3.0"。 產品版本號(例如 3.0)由版本號 (3)、句點和發行號 (0) 組成。 到目前為止的版本是 1.0、1.1、2.0 和 3.0。
 
-如需相關資訊，請參閱 DAO 說明中的「版本屬性」主題。
+有關相關信息,請參閱 DAO 説明中的主題"版本屬性」。。
 
-##  <a name="isopen"></a>CDaoDatabase：： IsOpen
+## <a name="cdaodatabaseisopen"></a><a name="isopen"></a>CDao 資料庫::是開啟的
 
-呼叫這個成員函式，以判斷目前是否在資料庫上開啟 `CDaoDatabase` 物件。
+調用此成員函數以確定物件`CDaoDatabase`當前是否在資料庫上打開。
 
 ```
 BOOL IsOpen() const;
@@ -785,31 +785,31 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果 `CDaoDatabase` 物件目前為開啟，則為非零。否則為0。
+如果物件當前處於`CDaoDatabase`打開狀態,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_pdaodatabase"></a>CDaoDatabase：： m_pDAODatabase
+## <a name="cdaodatabasem_pdaodatabase"></a><a name="m_pdaodatabase"></a>CDao資料庫::m_pDAODatabase
 
-包含 `CDaoDatabase` 物件基礎之 DAO 資料庫物件的 OLE 介面的指標。
-
-### <a name="remarks"></a>備註
-
-如果您需要直接存取 DAO 介面，請使用此指標。
-
-如需直接呼叫 DAO 的相關資訊，請參閱[技術附注 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
-
-##  <a name="m_pworkspace"></a>CDaoDatabase：： m_pWorkspace
-
-包含[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件的指標，其中包含資料庫物件。
+包含指向物件基礎的 DAO 資料庫物件的 OLE 介面的`CDaoDatabase`指標。
 
 ### <a name="remarks"></a>備註
 
-如果您需要直接存取工作區，請使用此指標，例如，若要取得工作區資料庫集合中其他資料庫物件的指標。
+如果需要直接訪問 DAO 介面,請使用此指標。
 
-##  <a name="open"></a>CDaoDatabase：： Open
+有關直接呼叫 DAO 的資訊,請參閱[技術說明 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
 
-您必須呼叫這個成員函式，以初始化新建立的 `CDaoDatabase` 物件，以代表現有的資料庫。
+## <a name="cdaodatabasem_pworkspace"></a><a name="m_pworkspace"></a>CDao資料庫:m_pWorkspace
+
+包含指向包含資料庫物件的[CDao 工作區](../../mfc/reference/cdaoworkspace-class.md)物件的指標。
+
+### <a name="remarks"></a>備註
+
+如果需要直接訪問工作區,請使用此指標,例如,獲取指向工作區資料庫集合中其他資料庫物件的指標。
+
+## <a name="cdaodatabaseopen"></a><a name="open"></a>CDao 資料庫::開啟
+
+必須調用此成員函數來初始化表示現有資料庫的新`CDaoDatabase`構造物件。
 
 ```
 virtual void Open(
@@ -821,74 +821,74 @@ virtual void Open(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-字串運算式，這是現有 Microsoft Jet （的名稱。MDB）資料庫檔案。 如果檔案名具有副檔名，則為必要。 如果您的網路支援統一命名慣例（UNC），您也可以指定網路路徑，例如 "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB」。 （字串常值中必須有兩個反斜線，因為 " C++\\" 是 escape 字元）。
+*lpsz名稱*<br/>
+為現有 Microsoft Jet () 名稱的字串表示式 。MDB)資料庫檔案。 如果檔名具有副檔名,則需要它。 如果您的網路支援統一的命名約定 (UNC),您還可以指定網路路徑,例如\\\\\\\\"_MYSERVER\\\\_MYSHARE \MYDIR _MYDB"。MDB"。 (字串文字中需要雙背斜杠,因為""\\是C++轉義字元。
 
-使用*lpszName*時，有一些考慮適用。 如果是：
+使用*lpszName*時,需要考慮一些注意事項。 如果是:
 
-- 參考已開放給另一個使用者獨佔存取的資料庫，MFC 會擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的例外狀況。 攔截該例外狀況，讓您的使用者知道資料庫無法使用。
+- 指已開放供其他用戶獨佔訪問的資料庫,MFC 將引發[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的異常。 捕獲該異常,讓使用者知道資料庫不可用。
 
-- 是空字串（""），而*lpszConnect*是 "ODBC;"，會顯示一個對話方塊，其中會列出所有已註冊的 ODBC 資料來源名稱，讓使用者可以選取資料庫。 您應該避免直接連接到 ODBC 資料來源;請改用附加的資料表。
+- 是空字串 ("")和*lpszConnect*是"ODBC;;",顯示一個對話框,列出所有已註冊的ODBC資料原始碼名稱,以便使用者可以選擇資料庫。 應避免直接連接到 ODBC 資料源;改用附加的表。
 
-- 否則，不會參考現有的資料庫或有效的 ODBC 資料來源名稱，MFC 會擲回 `CDaoException`類型的例外狀況。
+- 否則不引用現有資料庫或有效的ODBC數據來源名稱,MFC將引發類型`CDaoException`異常。
 
 > [!NOTE]
->  如需 DAO 錯誤碼的詳細資訊，請參閱 DAOERR。H 檔案。 如需相關資訊，請參閱 DAO 說明中的「可捕獲的資料存取錯誤」主題。
+> 有關DAO錯誤代碼的詳細資訊,請參閱DAOERR。H 檔。 有關相關信息,請參閱 DAO 説明中的主題"可捕獲的數據訪問錯誤」。。
 
-*bExclusive*<br/>
-布林值，如果資料庫要針對獨佔（非共用）存取開啟，則為 TRUE，如果要針對共用存取開啟資料庫，則為 FALSE。 如果您省略這個引數，則會開啟資料庫以供共用存取。
+*b 獨家*<br/>
+如果資料庫要打開以進行獨佔(非共用)訪問,則為 TRUE 的布爾值,如果要打開資料庫以進行共享訪問,則為 FALSE。 如果省略此參數,資料庫將打開以進行共享訪問。
 
-*bReadOnly*<br/>
-布林值，如果資料庫要針對唯讀存取開啟，則為 TRUE，如果要開啟資料庫進行讀取/寫入存取，則為 FALSE。 如果您省略這個引數，則會開啟資料庫以供讀取/寫入存取。 所有相依記錄集都會繼承這個屬性。
+*b 唯讀*<br/>
+如果資料庫要打開以進行唯讀訪問,則為 TRUE 的布林值,如果要打開資料庫以進行讀/寫存取,則為 FALSE。 如果省略此參數,資料庫將打開以進行讀取/寫入訪問。 所有從屬記錄集都繼承此屬性。
 
 *lpszConnect*<br/>
-用來開啟資料庫的字串運算式。 此字串構成 ODBC connect 引數。 您必須提供專有和唯讀引數，才能提供來源字串。 如果資料庫是 Microsoft Jet 資料庫（。MDB），這個字串是空的（""）。 預設值（ **_T**（""）的語法-提供 Unicode 的可攜性，以及應用程式的 ANSI 組建。
+用於打開資料庫的字串運算式。 此字串構成 ODBC 連接參數。 您必須提供獨佔和唯讀參數才能提供原始字串。 如果資料庫是Microsoft Jet資料庫 (。MDB),此字串為空(")。 默認值的語法 [ **_T**(") - 為 Unicode 以及應用程式的 ANSI 生成提供了可移植性。
 
 ### <a name="remarks"></a>備註
 
-`Open` 會使資料庫與基礎 DAO 物件產生關聯。 在初始化之前，您無法使用資料庫物件來建立記錄集、tabledef 或 querydef 物件。 `Open` 會將資料庫物件附加至相關工作區的資料庫集合。
+`Open`將資料庫與基礎DAO物件關聯。 在初始化記錄物件之前,不能使用資料庫物件構造記錄集、表def 或 querydef 物件。 `Open`將資料庫物件追加到關聯的工作區的資料庫集合。
 
-使用參數，如下所示：
+使用參數如下:
 
-- 如果您要開啟 Microsoft Jet （。MDB）資料庫，請使用*lpszName*參數並為*lpszConnect*參數傳遞空字串，或傳遞格式為 "; 的密碼字串。PWD = password "如果資料庫受到密碼保護（。僅 MDB 資料庫）。
+- 如果您要打開微軟噴氣機 (。MDB) 資料庫,使用*lpszName*參數並傳遞*lpszConnect*參數的空字串或傳遞窗體的密碼字串";如果資料庫受密碼保護(,則PWD_密碼)。僅限 MDB 資料庫)。
 
-- 如果您要開啟 ODBC 資料來源，請在*lpszConnect*中傳遞有效的 ODBC 連接字串和*lpszName*中的空字串。
+- 如果要打開 ODBC 資料來源,請傳遞*lpszConnect*中的有效 ODBC 連接字串和*lpszName*中的空字串。
 
-如需相關資訊，請參閱 DAO 說明中的「OpenDatabase 方法」主題。
+有關相關信息,請參閱 DAO 説明中的主題"打開資料庫方法」。
 
 > [!NOTE]
->  若要在存取外部資料庫（包括 ISAM 資料庫和 ODBC 資料來源）時獲得更好的效能，建議您將外部資料庫資料表附加至 Microsoft Jet engine 資料庫（。MDB），而不是直接連接到資料來源。
+> 為了在存取外部資料庫(包括 ISAM 資料庫和 ODBC 資料來源)時性能更好,建議您將外部資料庫表附加到 Microsoft Jet 引擎資料庫 ()。MDB),而不是直接連接到數據源。
 
-例如，如果 DBMS 主機無法使用，連接嘗試可能會超時。 如果連接嘗試失敗，`Open` 會擲回[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的例外狀況。
+例如,如果 DBMS 主機不可用,連接嘗試可能會超時。 如果連線嘗試失敗,`Open`將引發[CDaoException](../../mfc/reference/cdaoexception-class.md)類型的異常。
 
-其餘的備註僅適用于 ODBC 資料庫：
+其餘註解僅適用於 ODBC 資料庫:
 
-如果資料庫是 ODBC 資料庫，而您 `Open` 呼叫中的參數未包含足夠的資訊來進行連接，則 ODBC 驅動程式會開啟一個對話方塊，以取得使用者所需的資訊。 當您呼叫 `Open`時，您的連接字串*lpszConnect*會私下儲存，而且可以藉由呼叫[GetConnect](#getconnect)成員函式來取得。
+如果資料庫是 ODBC 資料庫`Open`,並且呼叫中的參數不包含足夠的資訊來建立連接,則 ODBC 驅動程式將打開一個對話框,從使用者處獲取必要的資訊。 呼叫`Open`時 ,連接字串*lpszConnect*將私下存儲,可透過呼叫[GetConnect](#getconnect)成員函數獲得。
 
-如有需要，您可以在呼叫 `Open` 以取得使用者的資訊（例如密碼），然後將該資訊新增至您傳遞給 `Open`的連接字串中，以開啟您自己的對話方塊。 或者，您可能想要儲存您傳遞的連接字串（可能是在 Windows 登錄中），以便下次應用程式呼叫 `CDaoDatabase` 物件上的 `Open` 時，可以重複使用它。
+如果需要,可以在調用`Open`之前打開自己的對話框,以便從使用者獲取資訊(如密碼),然後將該資訊添加到傳遞給的連接字串`Open`中。 或者,您可能希望保存傳遞的連接字串(可能位於 Windows 註冊表中),以便在應用程式下次調`Open``CDaoDatabase`用 物件時重用它。
 
-您也可以針對多個登入授權層級（分別用於不同的 `CDaoDatabase` 物件）使用連接字串，或傳達其他資料庫特定資訊。
+您還可以使用連接字串進行多個級別的登錄授權(每個級別用於其他`CDaoDatabase`物件),或傳輸其他特定於資料庫的資訊。
 
-##  <a name="setquerytimeout"></a>CDaoDatabase：： SetQueryTimeout
+## <a name="cdaodatabasesetquerytimeout"></a><a name="setquerytimeout"></a>CDao 資料庫::設定查詢逾時
 
-呼叫這個成員函式，以覆寫連接的資料庫在後續作業超時之前允許的預設秒數。
+調用此成員函數以覆蓋預設秒數,以便在後續對連接的資料庫超時執行操作之前允許。
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nSeconds*<br/>
-查詢嘗試超時之前允許的秒數。
+*n 秒*<br/>
+查詢嘗試超時之前要允許的秒數。
 
 ### <a name="remarks"></a>備註
 
-作業可能會因為網路存取問題、過多的查詢處理時間等等而超時。 在開啟記錄集之前，或在通話記錄集的[AddNew](../../mfc/reference/cdaorecordset-class.md#addnew)、 [Update](../../mfc/reference/cdaorecordset-class.md#update)或[Delete](../../mfc/reference/cdaorecordset-class.md#delete)成員函式時，如果您想要變更查詢超時值，請先呼叫 `SetQueryTimeout`。 此設定會影響與此 `CDaoDatabase` 物件相關聯之任何記錄集的所有後續[開啟](../../mfc/reference/cdaorecordset-class.md#open)、`AddNew`、`Update`和 `Delete` 呼叫。 在開啟後變更記錄集的查詢超時值，並不會變更記錄集的值。 例如，後續的[移動](../../mfc/reference/cdaorecordset-class.md#move)作業不會使用新的值。
+操作可能會由於網路訪問問題、查詢處理時間過長等而超時。 如果要`SetQueryTimeout`更改查詢超時值,請先打開記錄集之前或調用記錄集的[AddNew、Update](../../mfc/reference/cdaorecordset-class.md#addnew)或[刪除](../../mfc/reference/cdaorecordset-class.md#delete)成員函數。 [Update](../../mfc/reference/cdaorecordset-class.md#update) 該設置影響所有後續[的](../../mfc/reference/cdaorecordset-class.md#open)`AddNew` `Update`Open`Delete`、 和`CDaoDatabase`對與此 物件關聯的任何記錄集的調用。 打開後更改記錄集的查詢超時值不會更改記錄集的值。 例如,後續[移動](../../mfc/reference/cdaorecordset-class.md#move)操作不使用新值。
 
-查詢超時的預設值為60秒。 並非所有資料庫都支援設定查詢超時值的能力。 如果您將查詢超時值設定為0，就不會發生任何超時;與資料庫的通訊可能會停止回應。 這種行為在開發期間可能會很有用。
+查詢超時的預設值為60秒。 並非所有資料庫都支援設置查詢超時值的能力。 如果將查詢超時值設置為 0,則不執行超時;如果將超時設置為 0,則不執行超時。與資料庫的通信可能會停止回應。 此行為在開發期間可能很有用。
 
-如需相關資訊，請參閱 DAO 說明中的「QueryTimeout 屬性」主題。
+有關相關信息,請參閱 DAO 説明中的"查詢超時屬性"主題。
 
 ## <a name="see-also"></a>另請參閱
 

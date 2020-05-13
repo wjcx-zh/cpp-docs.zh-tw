@@ -1,6 +1,6 @@
 ---
-title: AnalyzeA
-description: C++ BUILD Insights SDK AnalyzeA 函數參考。
+title: 分析A
+description: C++生成見解 SDK 分析函數引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9f5a7b91bf0cd6fd45f97880a99e1f56a85d74ed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 7c7602c49ab5f3ce67693424019e253727563293
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332912"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324131"
 ---
-# <a name="analyzea"></a>AnalyzeA
+# <a name="analyzea"></a>分析A
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio 版本選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。
+C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`AnalyzeA` 函數可用來分析從 Windows 事件追蹤（ETW）追蹤讀取的 MSVC 事件。
+該`AnalyzeA`函數用於分析從 Windows (ETW) 追蹤的輸入事件追蹤讀取的 MSVC 事件。
 
 ## <a name="syntax"></a>語法
 
@@ -37,14 +37,14 @@ enum RESULT_CODE AnalyzeA(
 
 ### <a name="parameters"></a>參數
 
-*inputLogFile*\
-您想要從中讀取事件的輸入 ETW 追蹤。
+*輸入紀錄檔*\
+要從中讀取事件的輸入 ETW 跟蹤。
 
-*analysisDescriptor*\
-[ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)物件的指標。 使用此物件來設定分析。
+*剖析描述子*\
+指向[ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)物件的指標。 使用此物件配置分析。
 
 ### <a name="return-value"></a>傳回值
 
-來自[RESULT_CODE](../other-types/result-code-enum.md)列舉的結果碼。
+來自[RESULT_CODE](../other-types/result-code-enum.md)枚舉的結果代碼。
 
 ::: moniker-end

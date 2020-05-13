@@ -1,11 +1,13 @@
 ---
 title: _mkgmtime、_mkgmtime32、_mkgmtime64
 description: 描述 _mkgmtime、_mkgmtime32 和 _mkgmtime64 C 執行時間程式庫函數，並提供如何使用它們的範例。
-ms.date: 12/04/2019
+ms.date: 4/2/2020
 api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
+- _o__mkgmtime32
+- _o__mkgmtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857732"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914646"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
@@ -85,6 +88,8 @@ __time64_t _mkgmtime64(
 **_Mkgmtime32**函式的範圍是從1970年1月1日午夜，utc 到23:59:59 年1月 18 2038 日（utc）。 **_Mkgmtime64**的範圍是從1970年1月1日午夜，utc 到23:59:59 年12月 31 3000 日（utc）。 超出範圍的日期會產生-1 的傳回值。 **_Mkgmtime**的範圍取決於是否已定義 **_USE_32BIT_TIME_T** 。 如果未定義（這是預設值），則範圍會與 **_mkgmtime64**相同。 否則，範圍會限制為32位的 **_mkgmtime32**範圍。
 
 **Gmtime**和**localtime**都使用一般靜態緩衝區來進行轉換。 如果您將此緩衝區提供給 **_mkgmtime**，則會終結先前的內容。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="examples"></a>範例
 
@@ -177,11 +182,11 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 t.tm_yday = 42
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [時間管理](../../c-runtime-library/time-management.md)\
-[asctime、_wasctime](asctime-wasctime.md)\
-[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)\
+[asctime，_wasctime](asctime-wasctime.md)\
+[asctime_s，_wasctime_s](asctime-s-wasctime-s.md)\
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)\
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
 ms.openlocfilehash: 35b0fda1f501755640123f5181454a5c36b7e986
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233732"
 ---
 # <a name="external-linkage"></a>外部連結
 
@@ -21,6 +21,6 @@ ms.locfileid: "56148773"
 
 具有外部連結的識別項名稱所指定的函式或資料物件，會與任何其他具有外部連結的相同名稱宣告所指定的函式或資料物件相同。 這兩種宣告可以位於相同轉譯單位或不同轉譯單位中。 如果物件或函式同時具有全域存留期，則物件或函式會由整個程式共用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)

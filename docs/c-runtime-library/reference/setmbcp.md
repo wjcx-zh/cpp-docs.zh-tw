@@ -1,8 +1,9 @@
 ---
 title: _setmbcp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _setmbcp
+- _o__setmbcp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: a3408f04eb60a33a84c628c989ebc9c4c4a261df
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473870"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918820"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -48,7 +50,7 @@ int _setmbcp(
 
 ### <a name="parameters"></a>參數
 
-*codepage*<br/>
+*頁*<br/>
 與地區設定無關之多位元組常式的新字碼頁設定。
 
 ## <a name="return-value"></a>傳回值
@@ -83,13 +85,15 @@ int _setmbcp(
 
 - 任何其他有效的字碼頁值，不論值是否為 ANSI、OEM 或其他作業系統支援的字碼頁（不支援的 UTF-7 除外）。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

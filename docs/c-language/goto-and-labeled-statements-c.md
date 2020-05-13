@@ -21,15 +21,15 @@ ms.locfileid: "75299113"
 
 ## <a name="syntax"></a>語法
 
-*statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
+*語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*加上標籤的語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*跳躍語句*
 
-*jump-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto***識別碼* **;**
+*跳躍語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *識別碼*  **;**
 
-*labeled-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier* **：** *語句*
+加上*標籤的語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **：**  *語句*
 
 陳述式標籤只對 `goto` 陳述式有意義，在任何其他內容中，加上標籤的陳述式都會執行，而不考慮標籤。
 

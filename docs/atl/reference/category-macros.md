@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418129"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168432"
 ---
 # <a name="category-macros"></a>類別宏
 
@@ -29,11 +29,11 @@ ms.locfileid: "79418129"
 
 **標頭：** atlcom.h。h
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 標記分類對應的開頭。
 
-```
+```cpp
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
@@ -51,7 +51,7 @@ BEGIN_CATEGORY_MAP(theClass)
 如果類別具有相關聯的[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)，則在註冊模組時，會自動註冊對應中所列的元件類別。
 
 > [!NOTE]
->  ATL 會使用標準元件分類管理員來註冊元件類別目錄。 如果在註冊模組時，系統上沒有管理員，註冊就會成功，但不會為該類別註冊元件類別目錄。
+> ATL 會使用標準元件分類管理員來註冊元件類別目錄。 如果在註冊模組時，系統上沒有管理員，註冊就會成功，但不會為該類別註冊元件類別目錄。
 
 如需元件類別的詳細資訊，請參閱[什麼是元件類別，以及它們](/windows/win32/com/component-categories-and-how-they-work)在 Windows SDK 中的使用方式。
 
@@ -59,11 +59,11 @@ BEGIN_CATEGORY_MAP(theClass)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
 
 標示分類對應的結尾。
 
-```
+```cpp
 END_CATEGORY_MAP()
 ```
 
@@ -71,11 +71,11 @@ END_CATEGORY_MAP()
 
 請參閱[BEGIN_CATEGORY_MAP](#begin_category_map)的範例。
 
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
 將 IMPLEMENTED_CATEGORY 宏新增至元件的[分類對應](#begin_category_map)，以指定應將其註冊為執行由*catID*參數所識別的類別。
 
-```
+```cpp
 IMPLEMENTED_CATEGORY(catID)
 ```
 
@@ -108,11 +108,11 @@ IMPLEMENTED_CATEGORY(catID)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
 
 將 REQUIRED_CATEGORY 宏新增至元件的[分類對應](#begin_category_map)，以指定應將其註冊為需要由*catID*參數所識別的類別。
 
-```
+```cpp
 REQUIRED_CATEGORY( catID )
 ```
 

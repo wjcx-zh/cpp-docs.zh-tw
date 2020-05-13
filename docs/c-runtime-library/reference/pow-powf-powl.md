@@ -1,10 +1,12 @@
 ---
 title: pow、powf、powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950293"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916801"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
@@ -66,7 +69,7 @@ long double pow( long double x, int y );  // C++ only
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-底數。
+Base：
 
 *y*<br/>
 指數。
@@ -87,9 +90,11 @@ long double pow( long double x, int y );  // C++ only
 
 **pow**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因為C++允許多載，所以您可以呼叫**pow**的任何不同多載。 在 C 程式中， **pow**一律會採用兩個**雙精度浮點數**，並傳回**雙精度**值。
+因為 c + + 允許多載，所以您可以呼叫**pow**的任何不同多載。 在 C 程式中， **pow**一律會採用兩個**雙精度浮點數**，並傳回**雙精度**值。
 
 `pow(int, int)` 已無法使用。 如果您使用這個多載，編譯器可能會發出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免這個問題，請將第一個參數轉換為**double**、 **float**或**long** **double**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

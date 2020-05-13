@@ -1,10 +1,11 @@
 ---
 title: cosh、coshf、coshl
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - cosh
 - coshf
 - coshl
+- _o_cosh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938988"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917219"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
@@ -64,16 +66,18 @@ long double cosh( long double x );  // C++ only
 
 *X*的雙曲余弦值。
 
-根據預設，如果**cosh**、 **coshf**或**coshl**呼叫中的結果太大，函式會傳回**HUGE_VAL** ，並將**errno**設定為**ERANGE**。
+根據預設，如果**cosh**、 **coshf**或**coshl**呼叫中的結果太大，函式會傳回**HUGE_VAL**並將**errno**設定為**ERANGE**。
 
-|Input|SEH 例外狀況|Matherr 例外狀況|
+|輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|none|**_DOMAIN**|
-|*x* ≥ 7.104760e+002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
+|± **QNAN**， **IND**|無|**_DOMAIN**|
+|*x* ≥ 7.104760 e + 002|**不精確**+的**溢**位|**溢出**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**cosh**的多載。 在 C 程式中， **cosh**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**cosh**的多載。 在 C 程式中， **cosh**一律會採用並傳回**雙精度浮點數**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

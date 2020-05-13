@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 5ca791af658ee719b2e6d6ea78f82e23a66edc98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2db720fd09c62f8b86baecea9229d946f3892333
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253721"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754179"
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties 類別
 
@@ -33,15 +33,15 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|多載。 建立`CD2D_BRUSH_PROPERTIES`結構|
+|[CD2DBrush 屬性:CD2DBrush 屬性](#cd2dbrushproperties)|已多載。 建立`CD2D_BRUSH_PROPERTIES`結構|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DBrushProperties::CommonInit](#commoninit)|初始化物件|
+|[CD2DBrush 屬性::通用](#commoninit)|初始化物件|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `D2D1_BRUSH_PROPERTIES`
 
@@ -49,11 +49,11 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>CD2DBrush 屬性:CD2DBrush 屬性
 
-建立 CD2D_BRUSH_PROPERTIES 結構
+建立CD2D_BRUSH_PROPERTIES結構
 
 ```
 CD2DBrushProperties();
@@ -67,16 +67,16 @@ CD2DBrushProperties(
 ### <a name="parameters"></a>參數
 
 *_opacity*<br/>
-筆刷的基底的不透明度。 預設值為 1.0。
+畫筆的基本不一性。 預設值為 1.0。
 
 *_transform*<br/>
-要套用到筆刷的轉換
+套用成筆刷的轉換
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>CD2DBrush 屬性::通用
 
 初始化物件
 
-```
+```cpp
 void CommonInit();
 ```
 

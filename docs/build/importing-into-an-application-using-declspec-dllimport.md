@@ -50,6 +50,6 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 - [相互匯入](mutual-imports.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [匯入至應用程式](importing-into-an-application.md)

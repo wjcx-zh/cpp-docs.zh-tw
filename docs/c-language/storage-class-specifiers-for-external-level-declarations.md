@@ -17,11 +17,11 @@ helpviewer_keywords:
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157951"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部層級宣告的儲存類別指定名稱
 
@@ -125,6 +125,6 @@ int x = 0;
 
 如果變數 `i` 尚未初始化，則會自動設為 0。 在這種情況下會列印值 1、2 和 3。 如需變數初始化的詳細資訊，請參閱[初始化](../c-language/initialization.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 儲存類別](../c-language/c-storage-classes.md)

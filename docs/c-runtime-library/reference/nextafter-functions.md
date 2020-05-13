@@ -1,6 +1,6 @@
 ---
 title: nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nextafterf
 - _nextafterf
@@ -10,6 +10,13 @@ api_name:
 - nexttoward
 - nexttowardf
 - nexttowardl
+- _o__nextafter
+- _o_nextafter
+- _o_nextafterf
+- _o_nextafterl
+- _o_nexttoward
+- _o_nexttowardf
+- _o_nexttowardl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857719"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909338"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -101,9 +109,11 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 除了*y*的參數類型之外， **nextafter**和**nexttoward**函數系列是相等的。 如果*x*和*y*相等，則傳回的值會*轉換為*傳回型別。
 
-因為C++允許多載，所以如果您包含 \<h > 您可以呼叫傳回**float**和**long** **double**類型的**nextafter**和**nexttoward**的多載。 在 C 程式中， **nextafter**和**nexttoward**一律會傳回**double**。
+因為 c + + 允許多載， \<所以如果您包含 h> 您可以呼叫**nextafter**和**nexttoward**的多載，其會傳回**float**和**long** **double**類型。 在 C 程式中， **nextafter**和**nexttoward**一律會傳回**double**。
 
 **_Nextafter**和 **_nextafterf**函式為 Microsoft 特有的功能。 只有在針對 x64 進行編譯時，才能使用 **_nextafterf**函數。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -112,9 +122,9 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 |**nextafter**、 **nextafterf**、 **nextafterl**、 **_nextafterf**、 **nexttoward**、 **nexttowardf**、 **nexttowardl**|\<math.h>|\<math.h> 或 \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> 或 \<cfloat>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

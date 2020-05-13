@@ -1,8 +1,9 @@
 ---
 title: _fcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fcvt_s
+- _o__fcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623839"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920197"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -62,7 +64,7 @@ errno_t _fcvt_s(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 保留轉換結果之提供的緩衝區。
 
 *sizeInBytes*<br/>
@@ -71,13 +73,13 @@ errno_t _fcvt_s(
 *值*<br/>
 要轉換的數字。
 
-*count*<br/>
+*計數*<br/>
 小數點後的小數位數。
 
-*dec*<br/>
+*十進位*<br/>
 預存小數點位置的指標。
 
-*簽署*<br/>
+*簽訂*<br/>
 預存正負號指標的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -88,12 +90,12 @@ errno_t _fcvt_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*buffer*|*sizeInBytes*|value|count|dec|Sign|Return|*Buffer*中的值|
+|*緩衝區*|*sizeInBytes*|value|count|dec|簽署|傳回|*Buffer*中的值|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|任何|任何|任何|任何|任何|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
-|任何|任何|任何|任何|**NULL**|任何|**EINVAL**|未修改。|
-|任何|任何|任何|任何|任何|**NULL**|**EINVAL**|未修改。|
+|**Null**|任意|任意|任意|任意|任意|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|<=0|任意|任意|任意|任意|**EINVAL**|未修改。|
+|任意|任意|任意|任意|**Null**|任意|**EINVAL**|未修改。|
+|任意|任意|任意|任意|任意|**Null**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全性問題
 
@@ -113,13 +115,15 @@ errno_t _fcvt_s(
 
 此函式的 debug 版本會先使用0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函式|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 **程式庫︰** 所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
@@ -155,7 +159,7 @@ int main()
 Converted value: 120000
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

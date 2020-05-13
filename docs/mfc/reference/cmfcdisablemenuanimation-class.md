@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345600"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752413"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 類別
 
-停用快顯功能表的動畫。
+禁用彈出式功能表動畫。
 
 ## <a name="syntax"></a>語法
 
@@ -40,48 +40,48 @@ class CMFCDisableMenuAnimation
 |||
 |-|-|
 |名稱|描述|
-|[CMFCDisableMenuAnimation::Restore](#restore)|還原前一個動畫架構用來顯示快顯功能表。|
+|[CMFC禁用功能表動畫::恢復](#restore)|還原框架用於顯示彈出式功能表的上一個動畫。|
 
 ### <a name="data-members"></a>資料成員
 
 |||
 |-|-|
 |名稱|描述|
-|`CMFCDisableMenuAnimation::m_animType`|會儲存先前的快顯功能表動畫類型。|
+|`CMFCDisableMenuAnimation::m_animType`|存儲以前的彈出式功能表動畫類型。|
 
 ### <a name="remarks"></a>備註
 
-您可以使用這個 helper 類別，暫時停用快顯功能表動畫，（例如，當您處理滑鼠或鍵盤命令）。
+使用此幫助器類可暫時禁用彈出式功能表動畫(例如,處理滑鼠或鍵盤命令時)。
 
-A`CMFCDisableMenuAnimation`物件停用快顯功能表動畫在其存留期間。 建構函式會儲存在目前的快顯功能表動畫類型`m_animType`欄位和目前的動畫類型的集合`CMFCPopupMenu::NO_ANIMATION`。 解構函式會還原先前的動畫類型。
+對`CMFCDisableMenuAnimation`象 在其生存期內禁用彈出式功能表動畫。 建構函數將目前彈出式選單動畫型態儲存在欄位中`m_animType`, 並將目前的動畫類型`CMFCPopupMenu::NO_ANIMATION`設定為 。 析構函數還原以前的動畫類型。
 
-您可以建立`CMFCDisableMenuAnimation`停用快顯功能表動畫，單一函式在堆疊上的物件。 如果您想要停用快顯功能表動畫，函式之間，建立`CMFCDisableMenuAnimation`物件在堆積上，然後再將之刪除當您想要還原的快顯功能表的動畫。
+您可以在堆疊上`CMFCDisableMenuAnimation`創建物件,以在整個單個函數中禁用彈出功能表動畫。 如果要在函數之間禁用彈出功能表動畫,請在堆上創建`CMFCDisableMenuAnimation`一個物件,然後在要還原彈出菜單動畫時將其刪除。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用堆疊暫時停用功能表動畫。
+下面的示例演示如何使用堆疊臨時禁用功能表動畫。
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)
+[CMFC禁用選單動畫](../../mfc/reference/cmfcdisablemenuanimation-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxpopupmenu.h
+**標題:** afxpopupmenu.h
 
-##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFC禁用功能表動畫::恢復
 
-還原前一個動畫架構用來顯示快顯功能表。
+還原框架用於顯示彈出式功能表的上一個動畫。
 
-```
+```cpp
 void Restore ();
 ```
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫`CMFCDisableMenuAnimation`還原架構用來顯示快顯功能表的上一個動畫的解構函式。
+`CMFCDisableMenuAnimation`析構函數調用此方法以還原框架用於顯示彈出式功能表的上一個動畫。
 
 ## <a name="see-also"></a>另請參閱
 

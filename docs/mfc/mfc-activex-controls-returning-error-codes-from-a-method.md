@@ -10,27 +10,27 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5314545a3a903158362dbfa65c4a9a1b2143e86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324268"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364547"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX 控制項：從方法傳回錯誤碼
 
 本文說明如何從 ActiveX 控制項方法傳回錯誤碼。
 
-若要指出方法內，已發生錯誤，您應該使用[colecontrol:: Throwerror](../mfc/reference/colecontrol-class.md#throwerror)成員函式，其採用 SCODE （狀態碼） 做為參數。 您可以使用預先定義的 SCODE 或定義您自己的其中一個。
+要指示方法內發生錯誤,應使用[COleControl:throwError](../mfc/reference/colecontrol-class.md#throwerror)成員函數,該函數以 SCODE(狀態代碼)為參數。 您可以使用預定義的 SCODE 或定義您自己的 SCODE。
 
 > [!NOTE]
->  `ThrowError` 原本只用來做為從屬性的 Get 或 Set 函式內或 Automation 方法傳回錯誤的方法。 這些只適用於適當的例外狀況處理常式會出現在堆疊上的時候。
+> `ThrowError` 原本只用來做為從屬性的 Get 或 Set 函式內或 Automation 方法傳回錯誤的方法。 這些只適用於適當的例外狀況處理常式會出現在堆疊上的時候。
 
-Helper 函式存在的最常見預先定義的 SCODEs，例如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[colecontrol:: Setnotpermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+說明器函數存在於最常見的預定義的 SCOD 中,例如[COleControl:設定不受支援](../mfc/reference/colecontrol-class.md#setnotsupported)[、COleControl::未受支援](../mfc/reference/colecontrol-class.md#getnotsupported),以及[COleControl:設定不允許](../mfc/reference/colecontrol-class.md#setnotpermitted)。
 
-如需預先定義的 SCODEs 以及定義自訂 SCODEs 的指示，請參閱[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX 控制項中：進階的主題。
+有關預定義的 SCOD 列表和有關定義自訂 SCOD 的說明,請參閱[ActiveX 控件中的 ActiveX 控制件中的「處理錯誤](../mfc/mfc-activex-controls-advanced-topics.md)」部分:進階主題。
 
-如需報告其他區域中的例外狀況，您的程式碼的詳細資訊，請參閱[colecontrol:: Fireerror](../mfc/reference/colecontrol-class.md#fireerror)和 [] 區段[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX 控制項中：進階的主題。
+有關在代碼的其他區域中報告異常的詳細資訊,請參閱[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和[ActiveX 控制件中「處理活動X」控件中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)部分:高級主題。
 
 ## <a name="see-also"></a>另請參閱
 

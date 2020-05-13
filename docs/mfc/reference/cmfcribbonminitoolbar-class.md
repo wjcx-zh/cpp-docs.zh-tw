@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 394182aa0f9c967524ed0db510d0b9cc0739118e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e5ac6c923640b7584d89a9c6f75d941deadddf3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151886"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754074"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 類別
 
@@ -47,7 +47,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |名稱|描述|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
-|`CMFCRibbonMiniToolBar::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|
+|`CMFCRibbonMiniToolBar::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(覆寫 `CMFCPopupMenu::IsRibbonMiniToolBar`。)|
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|設定要顯示在工具列上的命令清單。|
@@ -60,7 +60,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 當滑鼠指標超出迷你工具列的範圍時，迷你工具列會變成透明。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -80,13 +80,13 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxRibbonMiniToolBar.h
+**標題:** afxRibbonMiniToolBar.h
 
-##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands
+## <a name="cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFC 功能迷你工具列:設定指令
 
 設定要顯示在工具列上的命令清單。
 
-```
+```cpp
 void SetCommands(
     CMFCRibbonBar* pRibbonBar,
     const CList<UINT,UINT>& lstCommands);
@@ -94,23 +94,23 @@ void SetCommands(
 
 ### <a name="parameters"></a>參數
 
-*pRibbonBar*<br/>
-[in]要顯示的按鈕搜尋迷你工具列功能區列。
+*pRibbonbar*<br/>
+[在]迷你工具列搜索要顯示的按鈕的功能區列。
 
 *lstCommands*<br/>
-[in]若要顯示在迷你工具列上的命令清單。 所有的功能區分類會搜尋以尋找相關聯的按鈕。
+[在]要顯示在迷你工具列上的命令清單。 將搜索所有功能區類別以查找關聯的按鈕。
 
 ### <a name="remarks"></a>備註
 
-此函式可用於設定要顯示在迷你工具列中的命令清單。
+使用此函數可以設置要顯示在迷你工具列中的命令清單。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`SetCommands`方法的`CMFCRibbonMiniToolBar`類別。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用`SetCommands``CMFCRibbonMiniToolBar`類的方法。 此代碼段是 MS [Office 2007 演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]
 
-##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show
+## <a name="cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFC功能迷你工具列:顯示
 
 顯示位於指定的螢幕座標的迷你工具列。
 
@@ -123,16 +123,16 @@ BOOL Show(
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-[in]螢幕座標中指定迷你工具列的水平的位置。
+[在]在螢幕座標中指定迷你工具列的水準位置。
 
-*y*<br/>
-[in]螢幕座標中指定迷你工具列的垂直的位置。
+*Y*<br/>
+[在]在螢幕座標中指定迷你工具列的垂直位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功; 顯示迷你工具列，則為 TRUE。否則為 FALSE。
+如果迷你工具列已成功顯示,則為 TRUE;否則,FALSE。
 
-##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu
+## <a name="cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFC 功能迷你工具列::顯示與上下文選單
 
 顯示迷你工具列以及內容功能表。
 
@@ -147,28 +147,28 @@ BOOL ShowWithContextMenu(
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-[in]螢幕座標中指定的內容功能表的水平位置。
+[在]指定螢幕座標中上下文選單的水準位置。
 
-*y*<br/>
-[in]螢幕座標中指定的內容功能表的垂直位置。
+*Y*<br/>
+[在]指定螢幕座標中上下文選單的垂直位置。
 
 *uiMenuResID*<br/>
-[in]指定要顯示內容功能表中的資源 ID。
+[在]指定要顯示的上下文選單的資源 ID。
 
-*pWndOwner*<br/>
-[in]識別從內容功能表中接收訊息的視窗。
+*pwndOwner*<br/>
+[在]標識從上下文菜單接收消息的視窗。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功; 顯示內容功能表，則為 TRUE。否則為 FALSE。
+如果上下文菜單成功顯示,則為 TRUE;如果上下文菜單已成功顯示,則為 TRUE。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-您可以使用此函式，顯示具有操作功能表的迷你工具列。 操作功能表是迷你工具列下方的定位 15 像素。
+使用此功能可顯示具有上下文菜單的迷你工具列。 上下文菜單位於迷你工具列下方 15 圖元。
 
-##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode
+## <a name="cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFC 功能放大縮小字型功能 放大縮小字型功能
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 BOOL IsContextMenuMode() const;
@@ -178,9 +178,9 @@ BOOL IsContextMenuMode() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+## <a name="cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFC 功能迷你工具列:是帶狀迷你工具列
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
 
 ```
 virtual BOOL IsRibbonMiniToolBar() const;

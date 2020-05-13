@@ -16,16 +16,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::CreatorMap::factoryCreator data member
 - Microsoft::WRL::Details::CreatorMap::serverName data member
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-ms.openlocfilehash: 44d06f317661059bea92d8c6f27955606a964bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1527f81694d1d809d585f3f6504c0e6433a2c26b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372606"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 結構
 
-支援 Windows 執行階段C++樣板程式庫的基礎結構，不適合直接從您的程式碼使用。
+支援 Windows 運行時 C++範本庫基礎結構,並且不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -35,15 +35,15 @@ struct CreatorMap;
 
 ## <a name="remarks"></a>備註
 
-包含如何初始化、 註冊和取消註冊物件的相關資訊。
+包含有關如何初始化、註冊和取消註冊物件的資訊。
 
 `CreatorMap`包含下列資訊：
 
-- 如何初始化、 註冊和取消註冊的物件。
+- 如何初始化、註冊和取消註冊物件。
 
-- 比較傳統的 COM 或 Windows 執行階段 factory 根據啟用資料的方式。
+- 如何根據經典 COM 或 Windows 運行時工廠比較啟動數據。
 
-- 介面的處理站快取和伺服器名稱的相關資訊。
+- 有關介面的工廠緩存和伺服器名稱的資訊。
 
 ## <a name="members"></a>成員
 
@@ -51,24 +51,24 @@ struct CreatorMap;
 
 名稱                                          | 描述
 --------------------------------------------- | ------------------------------------------------------------------------------------------------------
-[CreatorMap::activationId](#activationid)     | 表示透過傳統的 COM 類別識別碼或 Windows 執行階段名稱識別的物件識別碼。
-[CreatorMap::factoryCache](#factorycache)     | 儲存的處理站快取指標`CreatorMap`。
-[CreatorMap::factoryCreator](#factorycreator) | 建立指定的 factory `CreatorMap`。
-[CreatorMap::serverName](#servername)         | 儲存的伺服器名稱`CreatorMap`。
+[建立者對應::啟用 Id](#activationid)     | 表示由經典 COM 類 ID 或 Windows 執行時名稱識別的物件 ID。
+[建立者對應:工廠快取](#factorycache)     | 儲存到工廠快取的指標`CreatorMap`。
+[創作者地圖::工廠創造者](#factorycreator) | 為指定的`CreatorMap`創建工廠。
+[建立者對應:伺服器名稱](#servername)         | 存儲的`CreatorMap`伺服器名稱。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CreatorMap`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** module.h
+**標題:** 模組.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="activationid"></a>CreatorMap::activationId
+## <a name="creatormapactivationid"></a><a name="activationid"></a>建立者對應::啟用 Id
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 union {
@@ -79,19 +79,19 @@ union {
 
 ### <a name="parameters"></a>參數
 
-*clsid*<br/>
+*Clsid*<br/>
 介面識別碼。
 
-*getRuntimeName*<br/>
-擷取函式的 Windows 執行階段物件的名稱。
+*取得 Runtime 名稱*<br/>
+檢索物件的 Windows 運行時名稱的函數。
 
 ### <a name="remarks"></a>備註
 
-表示透過傳統的 COM 類別識別碼或 Windows 執行階段名稱識別的物件識別碼。
+表示由經典 COM 類 ID 或 Windows 執行時名稱識別的物件 ID。
 
-## <a name="factorycache"></a>CreatorMap::factoryCache
+## <a name="creatormapfactorycache"></a><a name="factorycache"></a>建立者對應:工廠快取
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 FactoryCache* factoryCache;
@@ -99,11 +99,11 @@ FactoryCache* factoryCache;
 
 ### <a name="remarks"></a>備註
 
-儲存的處理站快取指標`CreatorMap`。
+儲存到工廠快取的指標`CreatorMap`。
 
-## <a name="factorycreator"></a>CreatorMap::factoryCreator
+## <a name="creatormapfactorycreator"></a><a name="factorycreator"></a>創作者地圖::工廠創造者
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 HRESULT (*factoryCreator)(
@@ -115,17 +115,17 @@ IUnknown** factory);
 
 ### <a name="parameters"></a>參數
 
-*currentflags*<br/>
-其中一個[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
+*電流標誌*<br/>
+[運行時類類型](runtimeclasstype-enumeration.md)枚舉器之一。
 
-*entry*<br/>
-CreatorMap。
+*進入*<br/>
+建立者地圖。
 
-*iidClassFactory*<br/>
-Class factory 介面識別碼。
+*iidClass 工廠*<br/>
+類工廠的介面 ID。
 
-*factory*<br/>
-作業完成時，class factory 的位址。
+*工廠*<br/>
+操作完成後,類工廠的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -133,11 +133,11 @@ Class factory 介面識別碼。
 
 ### <a name="remarks"></a>備註
 
-建立指定 CreatorMap factory。
+為指定的建立者映射創建工廠。
 
-## <a name="servername"></a>CreatorMap::serverName
+## <a name="creatormapservername"></a><a name="servername"></a>建立者對應:伺服器名稱
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 const wchar_t* serverName;
@@ -145,4 +145,4 @@ const wchar_t* serverName;
 
 ### <a name="remarks"></a>備註
 
-儲存 CreatorMap 的伺服器名稱。
+儲存建立者映射的伺服器名稱。

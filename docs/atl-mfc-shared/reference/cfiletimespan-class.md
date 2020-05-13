@@ -1,6 +1,6 @@
 ---
 title: CFileTimeSpan 類別
-description: Active Template Library （ATL）和 Microsoft Foundation class （MFC） CFileTimeSpan 類別會以 FILETIME 單位來管理時間間隔。
+description: 活動範本庫 (ATL) 和 Microsoft 基礎類 (MFC) CFileTimeSpan 類以 FILETIME 單位為單位管理時間間隔。
 ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
-ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
+ms.openlocfilehash: 87737ea1c778660a68510b484bcdfa3a4670e8ab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75914385"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317859"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 類別
 
-這個類別會提供方法來管理與檔案相關聯的相對日期和時間值。
+此類提供用於管理與檔關聯的相對日期和時間值的方法。
 
 ## <a name="syntax"></a>語法
 
@@ -29,50 +29,50 @@ ms.locfileid: "75914385"
 class CFileTimeSpan
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
-|[CFileTimeSpan::CFileTimeSpan](#cfiletimespan)|建構函式。|
+|[檔案時間跨度::檔案時間跨度](#cfiletimespan)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
-|[CFileTimeSpan::GetTimeSpan](#gettimespan)|呼叫這個方法，以從 `CFileTimeSpan` 物件中取出時間範圍。|
-|[CFileTimeSpan::SetTimeSpan](#settimespan)|呼叫這個方法來設定 `CFileTimeSpan` 物件的時間範圍。|
+|[檔案時間跨度:取得時間跨度](#gettimespan)|調用此方法以從`CFileTimeSpan`物件檢索時間跨度。|
+|[檔案時間跨度::設定時間跨度](#settimespan)|調用此方法以設置`CFileTimeSpan`物件的時間跨度。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共運營商
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
-|[CFileTimeSpan：： operator-](#operator_-)|在 `CFileTimeSpan` 物件上執行減法運算。|
-|[CFileTimeSpan：： operator！ =](#operator_neq)|比較兩個 `CFileTimeSpan` 物件是否不相等。|
-|[CFileTimeSpan：： operator +](#operator_add)|在 `CFileTimeSpan` 物件上執行加法。|
-|[CFileTimeSpan：： operator + =](#operator_add_eq)|在 `CFileTimeSpan` 物件上執行加法，並將結果指派給目前的物件。|
-|[CFileTimeSpan：： operator &lt;](#operator_lt)|比較兩個 `CFileTimeSpan` 的物件，以判斷較小者。|
-|[CFileTimeSpan：： operator &lt;=](#operator_lt_eq)|比較兩個 `CFileTimeSpan` 的物件，以判斷是否相等或較小。|
-|[CFileTimeSpan：： operator =](#operator_eq)|指派運算子。|
-|[CFileTimeSpan：： operator-=](#operator_-_eq)|在 `CFileTimeSpan` 物件上執行減法運算，並將結果指派給目前的物件。|
-|[CFileTimeSpan：： operator = =](#operator_eq_eq)|比較兩個 `CFileTimeSpan` 物件是否相等。|
-|[CFileTimeSpan：： operator &gt;](#operator_gt)|比較兩個 `CFileTimeSpan` 的物件，以判斷較大的。|
-|[CFileTimeSpan：： operator &gt;=](#operator_gt_eq)|比較兩個 `CFileTimeSpan` 的物件，以判斷是否相等或較大。|
+|[檔案時間跨度::運算子 -](#operator_-)|對`CFileTimeSpan`物件執行減法。|
+|[時間跨度::操作員!*](#operator_neq)|比較兩個 `CFileTimeSpan` 物件是否不相等。|
+|[時間跨度::操作員 |](#operator_add)|對`CFileTimeSpan`物件執行添加。|
+|[時間跨度::操作員 |](#operator_add_eq)|對`CFileTimeSpan`物件執行添加,並將結果分配給當前物件。|
+|[檔案時間跨度::運算子&lt;](#operator_lt)|比較兩`CFileTimeSpan`個物件以確定較小的物件。|
+|[檔案時間跨度::運算子&lt;=](#operator_lt_eq)|比較兩`CFileTimeSpan`個物件以確定相等性或較小的物件。|
+|[時間跨度::運算符 |](#operator_eq)|分配運算符。|
+|[檔案時間跨度::運算符 -*](#operator_-_eq)|對`CFileTimeSpan`物件執行減法,並將結果分配給當前物件。|
+|[時間跨度::運算符 |](#operator_eq_eq)|比較兩個 `CFileTimeSpan` 物件是否相等。|
+|[檔案時間跨度::運算子&gt;](#operator_gt)|比較兩`CFileTimeSpan`個物件以確定較大的物件。|
+|[檔案時間跨度::運算子&gt;=](#operator_gt_eq)|比較兩`CFileTimeSpan`個物件以確定相等性或較大。|
 
 ## <a name="remarks"></a>備註
 
-`CFileTimeSpan` 類別提供方法來處理檔案系統使用之單位的相對時間週期。 這些單位通常用於檔案作業，例如建立檔案、上次存取或上次修改檔案的時間。 這個類別的方法經常與[CFileTime 類別](../../atl-mfc-shared/reference/cfiletime-class.md)物件搭配使用。
+該`CFileTimeSpan`類提供了處理檔系統使用單位中相對時間段的方法。 這些單元通常用於檔操作,例如創建檔、上次訪問或上次修改文件的時間。 此類的方法經常與[CFileTime 類](../../atl-mfc-shared/reference/cfiletime-class.md)物件結合使用。
 
 ## <a name="example"></a>範例
 
-請參閱[CFileTime：：毫秒](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond)的範例。
+請參考[CFileTime::毫秒的範例](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atltime。h
+**標題:** atltime.h
 
-## <a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan
+## <a name="cfiletimespancfiletimespan"></a><a name="cfiletimespan"></a>檔案時間跨度::檔案時間跨度
 
 建構函式。
 
@@ -84,19 +84,19 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 現有的 `CFileTimeSpan` 物件。
 
-*nSpan*\
-以 FILETIME 單位表示的一段時間。
+*恩斯潘*\
+以 FILETIME 單位為單位的時間段。
 
 ### <a name="remarks"></a>備註
 
-`CFileTimeSpan` 物件可以使用現有的 `CFileTimeSpan` 物件來建立，或以 100-毫微秒 FILETIME 單位中的64位值表示。 如需詳細資訊，請參閱[CFileTime](cfiletime-class.md)。 預設的函式會將時間範圍設定為0。
+可以使用`CFileTimeSpan`現有`CFileTimeSpan`物件創建物件,或以 100 納秒的 FILETIME 單位表示為 64 位元值。 有關詳細資訊,請參閱[CFileTime](cfiletime-class.md)。 默認構造函數將時間跨度設置為 0。
 
-## <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan
+## <a name="cfiletimespangettimespan"></a><a name="gettimespan"></a>檔案時間跨度:取得時間跨度
 
-呼叫這個方法，以從 `CFileTimeSpan` 物件中取出時間範圍。
+調用此方法以從`CFileTimeSpan`物件檢索時間跨度。
 
 ```cpp
 LONGLONG GetTimeSpan() const throw();
@@ -104,11 +104,11 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-以 100-毫微秒的 FILETIME 單位傳回時間範圍。 如需詳細資訊，請參閱[CFileTime](cfiletime-class.md)。
+返回以 100 納秒 FILETIME 單位為單位的時間跨度。 有關詳細資訊,請參閱[CFileTime](cfiletime-class.md)。
 
-## <a name="operator_-"></a>CFileTimeSpan：： operator-
+## <a name="cfiletimespanoperator--"></a><a name="operator_-"></a>檔案時間跨度::運算子 -
 
-在 `CFileTimeSpan` 物件上執行減法運算。
+對`CFileTimeSpan`物件執行減法。
 
 ```cpp
 CFileTimeSpan operator-(CFileTimeSpan span) const throw();
@@ -116,14 +116,14 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 `CFileTimeSpan` 物件，代表兩個時間範圍間差異的結果。
+返回表示`CFileTimeSpan`兩個時間跨度之間差值結果的物件。
 
-## <a name="operator_neq"></a>CFileTimeSpan：： operator！ =
+## <a name="cfiletimespanoperator-"></a><a name="operator_neq"></a>時間跨度::操作員!*
 
 比較兩個 `CFileTimeSpan` 物件是否不相等。
 
@@ -133,16 +133,16 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果要比較的專案不等於 `CFileTimeSpan` 物件，則傳回 TRUE;否則為 FALSE。
+如果要比較的項不等於物件,`CFileTimeSpan`則返回 TRUE;否則 FALSE。
 
-## <a name="operator_add"></a>CFileTimeSpan：： operator +
+## <a name="cfiletimespanoperator-"></a><a name="operator_add"></a>時間跨度::操作員 |
 
-在 `CFileTimeSpan` 物件上執行加法。
+對`CFileTimeSpan`物件執行添加。
 
 ```cpp
 CFileTimeSpan operator+(CFileTimeSpan span) const throw();
@@ -150,16 +150,16 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回包含兩個時間範圍總和的 `CFileTimeSpan` 物件。
+返回包含`CFileTimeSpan`兩個時間跨度總和的物件。
 
-## <a name="operator_add_eq"></a>CFileTimeSpan：： operator + =
+## <a name="cfiletimespanoperator-"></a><a name="operator_add_eq"></a>時間跨度::操作員 |
 
-在 `CFileTimeSpan` 物件上執行加法，並將結果指派給目前的物件。
+對`CFileTimeSpan`物件執行添加,並將結果分配給當前物件。
 
 ```cpp
 CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
@@ -167,16 +167,16 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新的 `CFileTimeSpan` 物件，其中包含兩個時間範圍的總和。
+返回包含兩`CFileTimeSpan`個時間跨度總和的更新物件。
 
-## <a name="operator_lt"></a>CFileTimeSpan：： operator &lt;
+## <a name="cfiletimespanoperator-lt"></a><a name="operator_lt"></a>檔案時間跨度::運算子&lt;
 
-比較兩個 `CFileTimeSpan` 的物件，以判斷較小者。
+比較兩`CFileTimeSpan`個物件以確定較小的物件。
 
 ```cpp
 bool operator<(CFileTimeSpan span) const throw();
@@ -184,16 +184,16 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果第一個物件小於第二個，則傳回 TRUE，否則傳回 FALSE。
+如果第一個物件小於第二個物件(即表示較短的時間段),則返回 TRUE,否則為 FALSE。
 
-## <a name="operator_lt_eq"></a>CFileTimeSpan：： operator &lt;=
+## <a name="cfiletimespanoperator-lt"></a><a name="operator_lt_eq"></a>檔案時間跨度::運算子&lt;=
 
-比較兩個 `CFileTimeSpan` 的物件，以判斷是否相等或較小。
+比較兩`CFileTimeSpan`個物件以確定相等性或較小的物件。
 
 ```cpp
 bool operator<=(CFileTimeSpan span) const throw();
@@ -201,16 +201,16 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果第一個物件小於（也就是代表較短的時間週期）或等於第二個物件，則傳回 TRUE，否則傳回 FALSE。
+如果第一個物件小於(即表示較短的時間段)或等於第二個物件,否則為 FALSE,則返回 TRUE。
 
-## <a name="operator_eq"></a>CFileTimeSpan：： operator =
+## <a name="cfiletimespanoperator-"></a><a name="operator_eq"></a>時間跨度::運算符 |
 
-指派運算子。
+分配運算符。
 
 ```cpp
 CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
@@ -218,16 +218,16 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新的 `CFileTimeSpan` 物件。
+返回更新`CFileTimeSpan`的物件。
 
-## <a name="operator_-_eq"></a>CFileTimeSpan：： operator-=
+## <a name="cfiletimespanoperator--"></a><a name="operator_-_eq"></a>檔案時間跨度::運算符 -*
 
-在 `CFileTimeSpan` 物件上執行減法運算，並將結果指派給目前的物件。
+對`CFileTimeSpan`物件執行減法,並將結果分配給當前物件。
 
 ```cpp
 CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
@@ -235,14 +235,14 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新的 `CFileTimeSpan` 物件。
+返回更新`CFileTimeSpan`的物件。
 
-## <a name="operator_eq_eq"></a>CFileTimeSpan：： operator = =
+## <a name="cfiletimespanoperator-"></a><a name="operator_eq_eq"></a>時間跨度::運算符 |
 
 比較兩個 `CFileTimeSpan` 物件是否相等。
 
@@ -252,16 +252,16 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果物件相等，則傳回 TRUE，否則傳回 FALSE。
+如果物件相等,則返回 TRUE,否則為 FALSE。
 
-## <a name="operator_gt"></a>CFileTimeSpan：： operator &gt;
+## <a name="cfiletimespanoperator-gt"></a><a name="operator_gt"></a>檔案時間跨度::運算子&gt;
 
-比較兩個 `CFileTimeSpan` 的物件，以判斷較大的。
+比較兩`CFileTimeSpan`個物件以確定較大的物件。
 
 ```cpp
 bool operator>(CFileTimeSpan span) const throw();
@@ -269,16 +269,16 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果第一個物件大於（也就是表示較長的時間週期），則傳回 TRUE，否則傳回 FALSE。
+如果第一個物件大於(即表示較長的時間段)大於第二個對象(否則 FALSE),則返回 TRUE。
 
-## <a name="operator_gt_eq"></a>CFileTimeSpan：： operator &gt;=
+## <a name="cfiletimespanoperator-gt"></a><a name="operator_gt_eq"></a>檔案時間跨度::運算子&gt;=
 
-比較兩個 `CFileTimeSpan` 的物件，以判斷是否相等或較大。
+比較兩`CFileTimeSpan`個物件以確定相等性或較大。
 
 ```cpp
 bool operator>=(CFileTimeSpan span) const throw();
@@ -286,16 +286,16 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*span*\
+*跨度*\
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果第一個物件大於（也就是代表較長的時間週期）或等於第二個物件，則傳回 TRUE，否則傳回 FALSE。
+如果第一個物件大於(即表示較長的時間段)或等於第二個物件,否則為 FALSE,則返回 TRUE。
 
-## <a name="settimespan"></a>CFileTimeSpan::SetTimeSpan
+## <a name="cfiletimespansettimespan"></a><a name="settimespan"></a>檔案時間跨度::設定時間跨度
 
-呼叫這個方法來設定 `CFileTimeSpan` 物件的時間範圍。
+調用此方法以設置`CFileTimeSpan`物件的時間跨度。
 
 ```cpp
 void SetTimeSpan(LONGLONG nSpan) throw();
@@ -303,12 +303,12 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>參數
 
-*nSpan*\
-時間範圍的新值，以 100-毫微秒的 FILETIME 單位表示。 如需詳細資訊，請參閱[CFileTime](cfiletime-class.md)。
+*恩斯潘*\
+時間跨度的新值(以100納秒的FILETIME單位為單位)。 有關詳細資訊,請參閱[CFileTime](cfiletime-class.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)\
-[CFileTime 類別](cfiletime-class.md)\
-階層架構[圖表](../../mfc/hierarchy-chart.md)\
-[ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[檔案時間](/windows/win32/api/minwinbase/ns-minwinbase-filetime)\
+[檔案時間類別](cfiletime-class.md)\
+[層次結構圖表](../../mfc/hierarchy-chart.md)\
+[ATL/MFC 共用類](../../atl-mfc-shared/atl-mfc-shared-classes.md)

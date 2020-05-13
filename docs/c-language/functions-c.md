@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C, functions
 ms.assetid: 31839f65-49f4-43e1-85ec-8769924ffa96
 ms.openlocfilehash: 50b03b6eb155b9f64803faccd65bce156455bc41
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233124"
 ---
 # <a name="functions-c"></a>函式 (C)
 
@@ -18,11 +18,11 @@ ms.locfileid: "56148149"
 
 - [函式概觀](../c-language/overview-of-functions.md)
 
-- [函式屬性](../c-language/function-attributes.md)
+- [函數屬性](../c-language/function-attributes.md)
 
 - [指定呼叫慣例](../c-language/specifying-calling-conventions.md)
 
-- [內嵌函式](../c-language/inline-functions.md)
+- [內嵌函數](../c-language/inline-functions.md)
 
 - [DLL 匯出和匯入函式](../c-language/dll-import-and-export-functions.md)
 
@@ -36,6 +36,6 @@ ms.locfileid: "56148149"
 
 - [參數](../c-language/parameters.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

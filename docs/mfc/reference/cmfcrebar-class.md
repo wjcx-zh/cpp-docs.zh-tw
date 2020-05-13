@@ -28,17 +28,18 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 409c97aba64c97ecf0443d14a70848cc298a44ba
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505448"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749996"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 類別
 
-`CMFCReBar`物件是一種控制列, 可提供 Rebar 控制項的版面配置、持續性和狀態資訊。
-如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
+對`CMFCReBar`像是一個控件欄,它為鋼筋控件提供佈局、持久性和狀態資訊。
+有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
+
 ## <a name="syntax"></a>語法
 
 ```
@@ -51,47 +52,47 @@ class CMFCReBar : public CPane
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCReBar::AddBar](#addbar)|將寬線加入至 Rebar。|
-|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(覆寫[CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|
-|[CMFCReBar::CanFloat](#canfloat)|(覆寫[CBasePane:: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)。)|
-|[CMFCReBar::Create](#create)|建立 Rebar 控制項並將其附加至`CMFCReBar`物件。|
-|[CMFCReBar::EnableDocking](#enabledocking)|(覆寫[CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。)|
-|[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||
-|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|提供基礎[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)通用控制項的直接存取權。|
-|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(覆寫[CPane:: OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu)。)|
-|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(覆寫[CWnd:: OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest)。)|
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CBasePane:: OnUpdateCmdUI](cbasepane-class.md)。)|
-|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(覆寫[CBasePane:: SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment)。)|
+|[CMFCReBar:addBar](#addbar)|將帶添加到鋼筋。|
+|[CMFCReBar::鈣固定佈局](#calcfixedlayout)|(覆蓋[CBasePane::CalcFixed 佈局](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CMFCReBar:可以浮動](#canfloat)|(覆蓋[CBasePane::可以浮動](../../mfc/reference/cbasepane-class.md#canfloat). )|
+|[CMFCReBar:建立](#create)|創建鋼筋控件並將其附加到`CMFCReBar`物件。|
+|[CMFCReBar:啟用停靠](#enabledocking)|(覆蓋[CBasePane:啟用停靠](../../mfc/reference/cbasepane-class.md#enabledocking).)|
+|[CMFCReBar:取得雷巴班德資訊大小](#getrebarbandinfosize)||
+|[CMFCReBar:GetReBarCtrl](#getrebarctrl)|提供對基礎[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)公共控制項的直接存取。|
+|[CMFCReBar:在顯示控制列選單](#onshowcontrolbarmenu)|(覆蓋[CPane:在顯示控制欄選單](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|
+|[CMFCRebar::在工具命中測試](#ontoolhittest)|(覆蓋[Cwnd:onToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest))|
+|[CMFCReBar:關於更新CmdUI](#onupdatecmdui)|(覆蓋[CBasePane::更新 CmdUI](cbasepane-class.md).)|
+|[CMFCReBar::設定窗格對齊](#setpanealignment)|(覆蓋[CBasePane:設定窗格對齊](../../mfc/reference/cbasepane-class.md#setpanealignment).)|
 
 ## <a name="remarks"></a>備註
 
-`CMFCReBar`物件可以包含各種不同的子視窗。 這包括編輯方塊、工具列和清單方塊。 您可以透過程式設計的方式調整 Rebar 的大小, 或者使用者可以拖曳其移駐列來手動調整 Rebar 大小。 您也可以將 Rebar 物件的背景設定為您所選擇的點陣圖。
+物件`CMFCReBar`可以包含各種子視窗。 這包括編輯框、工具列和列表框。 您可以以程式設計方式調整鋼筋的大小,或者使用者可以通過拖動鋼筋來手動調整鋼筋的大小。 您還可以將鋼筋物件的背景設置為您選擇的點陣圖。
 
-Rebar 物件的行為類似工具列物件。 Rebar 控制項可以包含一個或多個群組, 而且每個寬線都可以包含移駐夾列、點陣圖、文字標籤和子視窗。
+鋼筋對象的行為與工具欄對象類似。 鋼筋控件可以包含一個或多個波段,每個波段可以包含夾持條、位圖、文本標籤和子視窗。
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCReBar` 類別中使用各種方法。 這個範例會示範如何建立 Rebar 控制項, 並在其中加入一個寬線。 寬頻功能會當做內部工具列。 此程式碼片段是[Rebar 測試範例](../../overview/visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCReBar` 類別中使用各種方法。 該示例演示如何創建鋼筋控件並將其添加帶。 波段用作內部工具列。 此代碼段是[鋼筋測試示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp; [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CBasePane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CPane](../../mfc/reference/cpane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)
+•&nbsp;[CMD目標](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[Cwnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CMFCReBar](../../mfc/reference/cmfcrebar-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxRebar。h
+**標題:** afxRebar.h
 
-##  <a name="addbar"></a>CMFCReBar::AddBar
+## <a name="cmfcrebaraddbar"></a><a name="addbar"></a>CMFCReBar:addBar
 
-將寬線加入至 Rebar。
+將帶添加到鋼筋。
 
 ```
 BOOL AddBar(
@@ -111,30 +112,30 @@ BOOL AddBar(
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[in、out]要插入至 Rebar 之子視窗的指標。 參考的物件必須具有**WS_CHILD**視窗樣式。
+[進出]指向要插入鋼筋的子視窗的指標。 引用的物件必須具有**WS_CHILD**視窗樣式。
 
 *pszText*<br/>
-在指定要出現在 Rebar 上的文字。 文字不是子視窗的一部分。 相反地, 它會顯示在 Rebar 本身。
+[在]指定要顯示在鋼筋上的文本。 文字不是子視窗的一部分。 相反,它顯示在鋼筋本身。
 
 *pbmp*<br/>
-[in、out]指定要在 Rebar 背景上顯示的點陣圖。
+[進出]指定要顯示在鋼筋背景上的點陣圖。
 
 *dwStyle*<br/>
-在包含要套用至寬線的樣式。 如需頻外樣式的完整清單, 請參閱 Windows SDK `fStyle`檔中[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)結構的描述。
+[在]包含要應用於波段的樣式。 有關波段樣式的完整清單,請參閱 Windows SDK`fStyle`文件中的[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)結構中的說明。
 
 *clrFore*<br/>
-在代表 Rebar 的前景色彩。
+[在]表示鋼筋的前景顏色。
 
 *clrBack*<br/>
-在代表 Rebar 的背景色彩。
+[在]表示鋼筋的背景顏色。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功將寬線加入至 Rebar, 則為 TRUE;否則為 FALSE。
+如果頻帶已成功添加到鋼筋中,則為 TRUE;否則,FALSE。
 
-##  <a name="create"></a>CMFCReBar:: Create
+## <a name="cmfcrebarcreate"></a><a name="create"></a>CMFCReBar:建立
 
-建立 Rebar 控制項, 並將它附加至[CMFCReBar](../../mfc/reference/cmfcrebar-class.md)物件。
+創建鋼筋控制程式並將其附加到[CMFCReBar](../../mfc/reference/cmfcrebar-class.md)物件。
 
 ```
 BOOL Create(
@@ -146,27 +147,27 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pParentWnd*<br/>
-[in、out]這個 Rebar 控制項的父視窗指標。
+*pparentwnd*<br/>
+[進出]指向此鋼筋控件的父窗口的指標。
 
-*dwCtrlStyle*<br/>
-在指定 Rebar 控制項的樣式。 預設的樣式值為**RBS_BANDBORDERS**, 它會顯示窄行來分隔 Rebar 控制項上的相鄰群組。 如需有效樣式的清單, 請參閱 Windows SDK 檔中的[Rebar 控制項樣式](/windows/win32/Controls/rebar-control-styles)。
+*dwCtrl風格*<br/>
+[在]指定鋼筋控件的樣式。 默認樣式值為**RBS_BANDBORDERS**,它顯示窄線以分隔鋼筋控件上的相鄰波段。 有關有效樣式的清單,請參閱 Windows SDK 文件中的[鋼筋控制樣式](/windows/win32/Controls/rebar-control-styles)。
 
 *dwStyle*<br/>
-在Rebar 控制項的視窗樣式。 如需有效樣式的清單, 請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
+[在]鋼筋控件的視窗樣式。 關於有效樣式的清單,請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *nID*<br/>
-在Rebar 的子視窗識別碼。
+[在]鋼筋的子窗口 ID。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立 Rebar, 則為 TRUE;否則為 FALSE。
+如果成功創建鋼筋,則為 TRUE;如果鋼筋已成功創建,則為 TRUE。否則,FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrebarctrl"></a>CMFCReBar:: GetReBarCtrl
+## <a name="cmfcrebargetrebarctrl"></a><a name="getrebarctrl"></a>CMFCReBar:GetReBarCtrl
 
-提供`CMFCReBar`物件之基礎`CReBarCtrl`通用控制項的直接存取權。
+提供對`CReBarCtrl`物件基礎公共控件的`CMFCReBar`直接訪問。
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -174,13 +175,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>傳回值
 
-基礎`CReBarCtrl`物件的參考。
+對基礎`CReBarCtrl`物件的引用。
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法可在自訂 Rebar 時, 利用 Windows Rebar 通用控制項功能。
+調用此方法以在自定義鋼筋時利用 Windows 鋼筋通用控制功能。
 
-##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout
+## <a name="cmfcrebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCReBar::鈣固定佈局
 
 ```
 virtual CSize CalcFixedLayout(
@@ -190,14 +191,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-在*bStretch*<br/>
-[in] *bHorz*<br/>
+[在]*b 伸*<br/>
+[在]*布霍茲*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="canfloat"></a>CMFCReBar::CanFloat
+## <a name="cmfcrebarcanfloat"></a><a name="canfloat"></a>CMFCReBar:可以浮動
 
 ```
 virtual BOOL CanFloat() const;
@@ -207,19 +208,19 @@ virtual BOOL CanFloat() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="enabledocking"></a>CMFCReBar:: EnableDocking
+## <a name="cmfcrebarenabledocking"></a><a name="enabledocking"></a>CMFCReBar:啟用停靠
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in] *dwDockStyle*<br/>
+[在]*dwDock 風格*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize
+## <a name="cmfcrebargetrebarbandinfosize"></a><a name="getrebarbandinfosize"></a>CMFCReBar:取得雷巴班德資訊大小
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -229,7 +230,7 @@ UINT GetReBarBandInfoSize() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu
+## <a name="cmfcrebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCReBar:在顯示控制列選單
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -237,13 +238,13 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>參數
 
-在*CPoint*<br/>
+[在]*CPoint*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ontoolhittest"></a>CMFCReBar:: OnToolHitTest
+## <a name="cmfcrebarontoolhittest"></a><a name="ontoolhittest"></a>CMFCRebar::在工具命中測試
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -253,14 +254,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>參數
 
-在*點*<br/>
-[in] *pTI*<br/>
+[在]*點*<br/>
+[在]*pTI*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onupdatecmdui"></a>CMFCReBar:: OnUpdateCmdUI
+## <a name="cmfcrebaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCReBar:關於更新CmdUI
 
 ```
 virtual void OnUpdateCmdUI(
@@ -270,12 +271,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>參數
 
-[in] *pTarget*<br/>
-[in] *bDisableIfNoHndler*<br/>
+[在]*p 目標*<br/>
+[在]*b 關閉IfNoHndler*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment
+## <a name="cmfcrebarsetpanealignment"></a><a name="setpanealignment"></a>CMFCReBar::設定窗格對齊
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -283,7 +284,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>參數
 
-在*dwAlignment*<br/>
+[在]*dwalignment*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -292,4 +293,4 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CReBarCtrl 類別](../../mfc/reference/crebarctrl-class.md)<br/>
-[CPane 類別](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: 02382ef4606a6e73804fcbd5ce7735ecf2f0dcc7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c388cc98aedbd35b2d0e00a4653a85a47abcb838
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368113"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList 結構
 
@@ -31,25 +31,25 @@ struct IUMSCompletionList;
 
 |名稱|描述|
 |----------|-----------------|
-|[IUMSCompletionList：： GetUnblockNotifications](#getunblocknotifications)|抓取 `IUMSUnblockNotification` 介面的鏈，表示在上次叫用此方法之後，相關聯的執行緒 proxy 已解除封鎖的執行內容。|
+|[IUMS 完成清單::獲取取消阻止通知](#getunblocknotifications)|檢索表示執行上下文的`IUMSUnblockNotification`介面鏈,自上次調用此方法以來,其關聯的線程代理已解除阻止。|
 
 ## <a name="remarks"></a>備註
 
-在利用此介面將完成清單中的專案清除佇列之後，排程器必須非常小心地瞭解哪些動作會執行。 這些專案應該放在排程器的可執行內容清單上，而且通常會儘快加以存取。 其中一個已清除佇列的專案，完全有可能被授與任意鎖定的擁有權。 排程器可能不會在呼叫清除佇列專案時封鎖任意函式呼叫，以及在可從排程器中一般存取的清單上放置這些專案。
+計劃程式必須格外小心,利用此介面從完成清單中取消專案排隊後執行哪些操作。 這些專案應放在計劃程式的可運行上下文清單中,並且通常可以儘快訪問。 完全有可能,其中一個取消排隊的專案已被授予任意鎖的擁有權。 計劃程式不能進行任意的函數調用,這些調用在取消排隊項的調用和這些項放置在通常可以從計劃程式內訪問的清單中之間。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IUMSCompletionList`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h。h
+**標題:** concrtrm.h
 
-**命名空間：** concurrency
+**命名空間:** 併發
 
-## <a name="getunblocknotifications"></a>IUMSCompletionList：： GetUnblockNotifications 方法
+## <a name="iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>IUMS 完成清單::獲取取消阻止通知方法
 
-抓取 `IUMSUnblockNotification` 介面的鏈，表示在上次叫用此方法之後，相關聯的執行緒 proxy 已解除封鎖的執行內容。
+檢索表示執行上下文的`IUMSUnblockNotification`介面鏈,自上次調用此方法以來,其關聯的線程代理已解除阻止。
 
 ```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
@@ -57,11 +57,11 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-`IUMSUnblockNotification` 介面的鏈。
+介面鏈`IUMSUnblockNotification`。
 
 ### <a name="remarks"></a>備註
 
-重新排定執行內容之後，傳回的通知會無效。
+重新計劃執行上下文後,返回的通知將無效。
 
 ## <a name="see-also"></a>另請參閱
 

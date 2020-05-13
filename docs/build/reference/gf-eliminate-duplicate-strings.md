@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: e0d23004c7b710f51065db52410fbb15b7cca040
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320497"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (消除重複字串)
 
-可讓編譯器在執行期間在程式映像和記憶體中建立一份完全相同的字串。 這是呼叫最佳化*字串共用*，可以建立較小的程式。
+使編譯器能夠在執行期間在程式映射和記憶體中創建相同字串的單個副本。 這是一種稱為*字串池的*優化,可以創建較小的程式。
 
 ## <a name="syntax"></a>語法
 
@@ -33,11 +33,11 @@ ms.locfileid: "66449539"
 
 ## <a name="remarks"></a>備註
 
-如果您使用 **/GF**，作業系統不會交換記憶體的字串部分，並可以讀取字串後，從映像檔。
+如果使用 **/GF**,操作系統不會交換記憶體的字串部分,並且可以從映射檔讀取字串。
 
-**/GF**集區為唯讀的字串。 如果您嘗試修改字串底下 **/GF**，應用程式錯誤，就會發生。
+**/GF**將字串池為唯讀字串。 如果嘗試修改 **/GF**下的字串,則會發生應用程式錯誤。
 
-字串共用，可讓項目做為多個緩衝區的多個指標是多個單一緩衝區的指標。 下列程式碼中，`s`和`t`以相同的字串初始化。 字串共用，使其指向相同的記憶體：
+字串池允許用作多個緩衝區的多個指標作為指向單個緩衝區的多個指標。 在以下代碼中,`s`使用相同`t`的字串進行初始化。 字串池導致它們指向相同的記憶體:
 
 ```
 char *s = "This is a character buffer";
@@ -45,26 +45,26 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/ZI](z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續，會自動設定 **/GF**選項。
+> 用於編輯和繼續的[/ZI](z7-zi-zi-debug-information-format.md)選項會自動設置 **/GF**選項。
 
 > [!NOTE]
->  **/GF**編譯器選項會建立每個唯一字串的可定址區段。 而根據預設，物件檔案可以包含最多 65,536 個可定址的區段。 如果您的程式包含超過 65536 的字串，使用[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)編譯器選項，來建立更多區段。
+> **/GF**編譯器選項為每個唯一字串創建一個可定址部分。 默認情況下,物件檔最多可以包含 65,536 個可定址部分。 如果程式包含超過 65,536 個字串,請使用[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)編譯器選項創建更多節。
 
-**/GF**是何時生效[/o1](o1-o2-minimize-size-maximize-speed.md)或是[/o2](o1-o2-minimize-size-maximize-speed.md)用。
+**/GF**在使用[/O1](o1-o2-minimize-size-maximize-speed.md)或[/O2](o1-o2-minimize-size-maximize-speed.md)時生效。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 按一下 [C/C++] **** 資料夾。
 
-1. 按一下 **程式碼產生**屬性頁。
+1. 單擊 **「代碼產生」** 屬性頁。
 
-1. 修改**啟用字串共用**屬性。
+1. 修改**啟用字串池**屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>＞。
 
 ## <a name="see-also"></a>另請參閱
 

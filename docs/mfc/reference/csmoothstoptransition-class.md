@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_dblFinalValue
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
-ms.openlocfilehash: 89496c1b867d6fbb498f56271de7b45afef7edc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ba550b4a0b9443d0681e17195687fb94c207ace
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323878"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318199"
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 類別
 
@@ -37,40 +37,40 @@ class CSmoothStopTransition : public CBaseTransition;
 
 |名稱|描述|
 |----------|-----------------|
-|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|建構平滑停止轉換，並初始化其最大持續期限和最終值。|
+|[C"平滑停止轉換"::C"平滑停止轉換"](#csmoothstoptransition)|構造平穩停止過渡並初始化其最大持續時間和最終值。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSmoothStopTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[C平滑停止轉換::建立](#create)|呼叫過渡庫以建立封裝的過渡 COM 物件。 ( 覆寫[CBase 轉換:建立](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|
-|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|轉換的最大持續時間。|
+|[C「平滑停止轉換::m_dblFinalValue](#m_dblfinalvalue)|過渡結束時動畫變數的值。|
+|[C「平滑停止轉換::m_maximumDuration](#m_maximumduration)|轉換的最大持續時間。|
 
 ## <a name="remarks"></a>備註
 
-平滑停止轉換會減慢接近特定的最後一個值，並達到與速度為零。 轉換的持續時間取決於初始速度，也就是初始和最終值，與指定的最大持續期限之間的差異。 如果沒有單一的拋物線弧線所組成的解決方案，此方法會建立三次方的轉換。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。
+平穩停止過渡在接近給定的最終值時變慢,並且以零的速度到達它。 轉換的持續時間由初始速度、初始值和最終值之間的差異以及指定的最長持續時間決定。 如果沒有由單個拋物線弧組成的解,則此方法將創建立方過渡。 由於所有轉換都將自動清除,因此建議使用運算符 new 分配。 封裝的 IUI動畫轉換 COM 物件由 C動畫控制器::AnimateGroup 創建,直到此為止,它才為 NULL。 建立此 COM 物件後更改成員變數不起作用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 轉換](../../mfc/reference/cbasetransition-class.md)
 
-[CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)
+[C平滑停止轉換](../../mfc/reference/csmoothstoptransition-class.md)
 
 ## <a name="requirements"></a>需求
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSmoothStopTransition::Create
+## <a name="csmoothstoptransitioncreate"></a><a name="create"></a>C平滑停止轉換::建立
 
-呼叫轉換程式庫來建立封裝的轉換 COM 物件。
+呼叫過渡庫以建立封裝的過渡 COM 物件。
 
 ```
 virtual BOOL Create(
@@ -80,16 +80,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pLibrary*<br/>
-轉換程式庫，也就是負責建立的標準轉換指標。
+*p庫*<br/>
+指向過渡庫的指標,它負責創建標準轉換。
 
 ### <a name="return-value"></a>傳回值
 
-如果轉換成功; 建立，則為 TRUE。否則為 FALSE。
+如果成功創建轉換,則為 TRUE;如果成功創建轉換,則為 TRUE。否則 FALSE。
 
-##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition
+## <a name="csmoothstoptransitioncsmoothstoptransition"></a><a name="csmoothstoptransition"></a>C"平滑停止轉換"::C"平滑停止轉換"
 
-建構平滑停止轉換，並初始化其最大持續期限和最終值。
+構造平穩停止過渡並初始化其最大持續時間和最終值。
 
 ```
 CSmoothStopTransition(
@@ -99,21 +99,21 @@ CSmoothStopTransition(
 
 ### <a name="parameters"></a>參數
 
-*maximumDuration*<br/>
+*最大持續時間*<br/>
 轉換的最大持續時間。
 
-*dblFinalValue*<br/>
-結尾的轉換動畫變數的值。
+*dbl 最終值*<br/>
+過渡結束時動畫變數的值。
 
-##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue
+## <a name="csmoothstoptransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>C「平滑停止轉換::m_dblFinalValue
 
-結尾的轉換動畫變數的值。
+過渡結束時動畫變數的值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration
+## <a name="csmoothstoptransitionm_maximumduration"></a><a name="m_maximumduration"></a>C「平滑停止轉換::m_maximumDuration
 
 轉換的最大持續時間。
 

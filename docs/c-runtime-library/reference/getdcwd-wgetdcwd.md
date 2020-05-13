@@ -1,9 +1,11 @@
 ---
 title: _getdcwd、_wgetdcwd
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdcwd
 - _wgetdcwd
+- _o__getdcwd
+- _o__wgetdcwd
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 3b67e04e914baf85545fcde63cf27c86bc15fac1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956018"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919209"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -65,18 +68,18 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>參數
 
-*drive*<br/>
+*硬碟磁碟機*<br/>
 指定磁碟機的非負整數 (0 = 預設磁碟機、1 = A、2 = B，依此類推)。
 
 如果指定的磁片磁碟機無法使用，或是無法判斷磁片磁碟機類型（例如，可移動、固定、CD-ROM、RAM 磁碟或網路磁碟機機），則會叫用無效參數處理常式。 如需詳細資訊，請參閱[參數驗證](../../c-runtime-library/parameter-validation.md)。
 
-*buffer*<br/>
+*緩衝區*<br/>
 路徑的儲存位置，或 **NULL**。
 
-如果指定了**Null** ，此函式會使用**malloc**來配置至少*maxlen*大小的緩衝區，而 **_getdcwd**的傳回值則是所配置緩衝區的指標。 您可以呼叫**free**來釋放緩衝區，並將指標傳遞給它。
+如果指定了**Null** ，此函式會使用**malloc**來配置至少*maxlen*大小的緩衝區，而 **_getdcwd**的傳回值就是所配置緩衝區的指標。 您可以呼叫**free**來釋放緩衝區，並將指標傳遞給它。
 
 *maxlen*<br/>
-指定路徑最大長度的非零正整數（以字元為單位）： **char**代表 **_getdcwd** ，而**wchar_t**代表 **_wgetdcwd**。
+指定路徑最大長度的非零正整數（以**字元為單位**）， **_getdcwd**為 **_wgetdcwd**的**wchar_t** 。
 
 如果*maxlen*小於或等於零，則會叫用不正確參數處理常式。 如需詳細資訊，請參閱[參數驗證](../../c-runtime-library/parameter-validation.md)。
 
@@ -88,15 +91,17 @@ wchar_t *_wgetdcwd(
 
 ## <a name="remarks"></a>備註
 
-**_Getdcwd**函數會取得指定磁片磁碟機上目前工作目錄的完整路徑，並將其儲存在*buffer*。 如果目前的工作目錄設定為根目錄，字串會以反斜線 (\\) 結尾。 如果目前的工作目錄設定為根目錄以外的目錄，字串會以目錄名稱結尾，而不是反斜線。
+**_Getdcwd**函式會取得指定磁片磁碟機上目前工作目錄的完整路徑，並將其儲存在*buffer*。 如果目前的工作目錄設定為根目錄，字串會以反斜線 (\\) 結尾。 如果目前的工作目錄設定為根目錄以外的目錄，字串會以目錄名稱結尾，而不是反斜線。
 
-**_wgetdcwd**是 **_getdcwd**的寬字元版本，其*緩衝區*參數和傳回值是寬字元字串。 否則， **_wgetdcwd**和 **_getdcwd**的行為會相同。
+**_wgetdcwd**是 **_getdcwd**的寬字元版本，而且其*緩衝區*參數和傳回值是寬字元字串。 否則， **_wgetdcwd**和 **_getdcwd**的行為完全相同。
 
 這個函式即使相依於本身不是安全執行緒的 **GetFullPathName**，仍是安全執行緒。 不過，如果多執行緒應用程式同時呼叫這個函式和 [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew)，您可能會違反執行緒安全。
 
-具有 **_nolock**後置字元的這個函式版本與此函式的行為相同，不同之處在于它不是安全線程，而且不受保護而無法防止其他執行緒的干擾。 如需詳細資訊，請參閱 [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)。
+具有 **_nolock**尾碼的這個函式版本與此函式的行為相同，不同之處在于它不是安全線程，而且不受保護而無法防止其他執行緒的干擾。 如需詳細資訊，請參閱 [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)。
 
-當定義了 **_debug**和 **_CRTDBG_MAP_ALLOC**時，對 **_getdcwd**和 **_wgetdcwd**的呼叫會被 **_getdcwd_dbg**和 **_wgetdcwd_dbg**的呼叫所取代，讓您可以進行記憶體配置的偵錯工具。 如需詳細資訊，請參閱[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)。
+定義 **_DEBUG**和 **_CRTDBG_MAP_ALLOC**時，對 **_getdcwd**和 **_wgetdcwd**的呼叫會被 **_getdcwd_dbg**和 **_wgetdcwd_dbg**的呼叫取代，讓您可以進行記憶體配置的偵錯工具。 如需詳細資訊，請參閱[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -111,7 +116,7 @@ wchar_t *_wgetdcwd(
 |**_getdcwd**|\<direct.h>|
 |**_wgetdcwd**|\<direct.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,8 +1,9 @@
 ---
 title: _aligned_offset_malloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_offset_malloc
+- _o__aligned_offset_malloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 3e8d6f839f3c675b7543ff14f3f633b0c7d5151f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0a0dca94ec03286c92b3cbf1a51df59a1ca7af0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943862"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919481"
 ---
 # <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
@@ -52,7 +54,7 @@ void * _aligned_offset_malloc(
 *size*<br/>
 要求的記憶體配置的大小。
 
-*alignment*<br/>
+*對齊*<br/>
 對齊值，必須是 2 的整數冪。
 
 *offset*<br/>
@@ -64,13 +66,15 @@ void * _aligned_offset_malloc(
 
 ## <a name="remarks"></a>備註
 
-當嵌套元素需要對齊時， **_aligned_offset_malloc**會很有用;例如，如果在嵌套類別上需要對齊。
+**_aligned_offset_malloc**在需要在 nested 元素上對齊的情況下很有用;例如，如果在嵌套類別上需要對齊。
 
 **_aligned_offset_malloc**是以**malloc**為基礎;如需詳細資訊，請參閱[malloc](malloc.md)。
 
 **_aligned_offset_malloc**標示`__declspec(noalias)`為和`__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
 
 如果記憶體配置失敗，或是要求的大小大於 **_HEAP_MAXREQ**，則此函式會將**Errno**設定為**ENOMEM** 。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**會驗證其參數。 如果*對齊*不是2的乘冪，或*offset*大於或等於 size 和非零*值*，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -2,84 +2,84 @@
 title: 逐步解說：矩陣乘法
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f30f8dc235bf0e76c342bea26a35bcbb36cfa237
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075713"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366804"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
 
-此逐步解說示範如何使用C++ AMP 來加速矩陣乘法的執行。 呈現兩種演算法，其中一個不會並排顯示，另一種則是平鋪。
+此分步演練演示了如何使用C++ AMP加速執行矩陣乘法。 提出了兩種演演演算法,一種不平鋪,一種不平鋪。
 
 ## <a name="prerequisites"></a>Prerequisites
 
 開始之前：
 
-- 閱讀[ C++ AMP 總覽](../../parallel/amp/cpp-amp-overview.md)。
+- 閱讀[C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
 
-- [使用磚](../../parallel/amp/using-tiles.md)閱讀。
+- [使用磁貼](../../parallel/amp/using-tiles.md)讀取 。
 
-- 請確定您至少執行 Windows 7 或 Windows Server 2008 R2。
+- 請確保您至少運行的是 Windows 7 或 Windows 伺服器 2008 R2。
 
 ### <a name="to-create-the-project"></a>若要建立專案
 
-建立新專案的指示會根據您已安裝的 Visual Studio 版本而有所不同。 請確定您在左上角將版本選取器設定為正確的版本。
+創建新項目的說明因已安裝的 Visual Studio 版本而異。 要查看您首選版本的 Visual Studio 的文件,請使用**版本**選擇器控制項。 它位於此頁面的目錄頂部。
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-the-project-in-visual-studio-2019"></a>若要在 Visual Studio 2019 中建立專案
+### <a name="to-create-the-project-in-visual-studio-2019"></a>在視覺工作室 2019 中建立專案
 
-1. 在功能表列上 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**建立新的專案**] 對話方塊。
+1. 在功能表列上，選擇 [檔案]** [新增]** > ** [專案]** > ****，以開啟 [建立新專案]**** 對話方塊。
 
-1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。
+1. 在對話方塊頂端，將 [語言]**** 設定為 **C++**，將 [平台]**** 設定為 **Windows**，並將 [專案類型]**** 設定為**主控台**。
 
-1. 從篩選過的專案類型清單中，選擇 [**空白專案**]，然後選擇 **[下一步]** 。 在下一個頁面的 [**名稱**] 方塊中，輸入*MatrixMultiply*以指定專案的名稱，並視需要指定專案位置。
+1. 從篩選的項目類型清單中,選擇 **「空專案」,** 然後選擇 **「下一步**」 。 在下一頁中,在 **「名稱」** 框中輸入*MatrixMultiply*以指定專案的名稱,並根據需要指定專案位置。
 
    ![新的主控台應用程式](../../build/media/mathclient-project-name-2019.png "新的主控台應用程式")
 
-1. 選擇 [建立] 按鈕以建立用戶端專案。
+1. 選擇 [建立]**** 按鈕以建立用戶端專案。
 
-1. 在**方案總管**中，開啟 [**原始**程式檔] 的快捷方式功能表，然後選擇 [**加入**>**新專案**]。
+1. 在**解決方案資源管理員**中,打開**源檔案的**快捷方式功能表,然後選擇**Add**>「**添加新項**」。
 
-1. 在 [**加入新專案**] 對話方塊中，選取 **C++ [檔案（.cpp）** ]，在 [**名稱**] 方塊中輸入*MatrixMultiply* ，然後選擇 [**新增**] 按鈕。
+1. 在「**新增新項目」** 對話框中,選擇**C++檔 (.cpp)**,在 **「名稱」** 框中輸入*Matrixmultiply.cpp,* 然後選擇 **「 添加**」按鈕。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>若要在 Visual Studio 2017 或2015中建立專案
+### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>在 Visual Studio 2017 或 2015 建立專案
 
-1. 在 Visual Studio 的功能表列上 **，選擇 [** 檔案] [檔案] [>**新增**>**專案**]。
+1. 在 Visual Studio 的選單欄上,選擇 **「檔案**>**新專案**>**」 。**
 
-1. 在 [**已安裝**] 的 [範本] 窗格中，選取 [ **Visual C++** ]。
+1. 在樣本窗格中 **「安裝」** 下,選擇 **「可視C++**」。。
 
-1. 選取 [**空專案**]，在 [**名稱**] 方塊中輸入*MatrixMultiply* ，然後選擇 [**確定]** 按鈕。
+1. 選擇 **"空專案**",在 **"名稱"** 框中輸入*矩陣乘法*,然後選擇 **"確定**"按鈕。
 
-1. 選擇 [下一步] 按鈕。
+1. 選擇 [下一步]**** 按鈕。
 
-1. 在**方案總管**中，開啟 [**原始**程式檔] 的快捷方式功能表，然後選擇 [**加入**>**新專案**]。
+1. 在**解決方案資源管理員**中,打開**源檔案的**快捷方式功能表,然後選擇**Add**>「**添加新項**」。
 
-1. 在 [**加入新專案**] 對話方塊中，選取 **C++ [檔案（.cpp）** ]，在 [**名稱**] 方塊中輸入*MatrixMultiply* ，然後選擇 [**新增**] 按鈕。
+1. 在「**新增新項目」** 對話框中,選擇**C++檔 (.cpp)**,在 **「名稱」** 框中輸入*Matrixmultiply.cpp,* 然後選擇 **「 添加**」按鈕。
 
 ::: moniker-end
 
-## <a name="multiplication-without-tiling"></a>不並排的乘法
+## <a name="multiplication-without-tiling"></a>不平鋪的乘法
 
-在本節中，請考慮兩個矩陣 A 和 B 的乘法，其定義如下：
+在本節中,請考慮兩個矩陣 A 和 B 的乘法,它們的定義如下:
 
-![3&#45;x&#45;2 矩陣 A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;x&#45;2 矩陣 A")
+![3&#45;由&#45;2 矩陣 A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;由&#45;2 矩陣 A")
 
-![2&#45;x&#45;3 矩陣 B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;x&#45;3 矩陣 B")
+![2&#45;矩阵 B&#45;](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;矩阵 B&#45;")
 
-是 3 x 2 的矩陣，而 B 是 2 x 3 的矩陣。 將 A 乘以 B 的乘積為下列3到3個矩陣。 產品的計算方式是將的資料列乘以元素的 B 元素的資料行。
+A 是 3×2 矩陣,B 為 2×3 矩陣。 將 A 乘以 B 的乘積為以下 3×3 矩陣。 通過乘以 A 元素的列來計算產品。
 
-![3&#45;x&#45;3 產品矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;x&#45;3 產品矩陣")
+![3&#45;3 個產品矩陣&#45;](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;3 個產品矩陣&#45;")
 
-### <a name="to-multiply-without-using-c-amp"></a>若要相乘而C++不使用 AMP
+### <a name="to-multiply-without-using-c-amp"></a>不使用C++ AMP 相乘
 
-1. 開啟 MatrixMultiply，並使用下列程式碼來取代現有的程式碼。
+1. 打開矩陣乘法.cpp 並使用以下代碼替換現有代碼。
 
    ```cpp
    #include <iostream>
@@ -107,17 +107,17 @@ ms.locfileid: "80075713"
    }
    ```
 
-   演算法是矩陣乘法定義的直接執行。 它不會使用任何平行或執行緒演算法來減少計算時間。
+   該演演演算法是矩陣乘法定義的一個直接實現。 它不使用任何並行或線程演演演算法來減少計算時間。
 
-1. 在功能表列上，依序選擇 [檔案] > [全部儲存]。
+1. 在選單列上,選擇 **「全部儲存檔** > **Save All**」。
 
-1. 選擇**F5**鍵盤快速鍵以開始進行偵錯工具，並確認輸出正確。
+1. 選擇**F5**鍵盤快捷鍵以開始除錯並驗證輸出是否正確。
 
-1. 選擇**Enter**以結束應用程式。
+1. 選擇 **「輸入」** 以離開應用程式。
 
-### <a name="to-multiply-by-using-c-amp"></a>使用C++ AMP 乘以
+### <a name="to-multiply-by-using-c-amp"></a>使用C++ AMP 相乘
 
-1. 在 MatrixMultiply 中，將下列程式碼加入 `main` 方法前面。
+1. 在 Matrixmultiply.cpp 中`main`,在方法之前添加以下代碼。
 
    ```cpp
    void MultiplyWithAMP() {
@@ -152,16 +152,16 @@ ms.locfileid: "80075713"
    }
    ```
 
-   AMP 程式碼類似于非 AMP 程式碼。 對 `parallel_for_each` 的呼叫會針對 `product.extent`中的每個元素啟動一個執行緒，並取代資料列和資料行的 `for` 迴圈。 資料列和資料行的資料格值可在 `idx`中取得。 您可以使用 `[]` 運算子和索引變數，或是 `()` 運算子和資料列和資料行變數，來存取 `array_view` 物件的元素。 此範例會示範這兩種方法。 `array_view::synchronize` 方法會將 `product` 變數的值複製回 `productMatrix` 變數。
+   AMP 代碼類似於非 AMP 代碼。 呼叫`parallel_for_each`為`product.extent`中的每個元素啟動一個線程,並替換`for`行 和列的迴圈。 行和列中的儲存格的值在中`idx`可用。 可以使用`[]`運算子和索引變數或`()`運算子`array_view`以及行和列變數訪問物件的元素。 該示例演示了這兩種方法。 此方法`array_view::synchronize``product`將變數的值複製回變數`productMatrix`。
 
-1. 在 MatrixMultiply 的頂端新增下列 `include` 和 `using` 語句。
+1. 在 Matrixmultiply.cpp 的頂部添加`include`以下`using`內容和語句。
 
    ```cpp
    #include <amp.h>
    using namespace concurrency;
    ```
 
-1. 修改 `main` 方法以呼叫 `MultiplyWithAMP` 方法。
+1. 變更方法`main`以呼叫`MultiplyWithAMP`方法 。
 
    ```cpp
    int main() {
@@ -171,53 +171,53 @@ ms.locfileid: "80075713"
    }
    ```
 
-1. 按下**Ctrl**+**F5**鍵盤快速鍵，以開始進行偵錯工具，並驗證輸出是否正確。
+1. 按**Ctrl**+**F5**鍵盤快速鍵開始調試並驗證輸出是否正確。
 
-1. 按**空格鍵**結束應用程式。
+1. 按**空格鍵**退出應用程式。
 
-## <a name="multiplication-with-tiling"></a>與並排平相乘
+## <a name="multiplication-with-tiling"></a>平鋪乘法
 
-「並排顯示」是一種將資料分割成相等大小子集的技術，也就是所謂的磚。 當您使用並排時，三件事會改變。
+平鋪是一種將數據劃分為大小相等的子集(稱為切片)的技術。 使用平鋪時,有三件事會改變。
 
-- 您可以建立 `tile_static` 變數。 存取 `tile_static` 空間中的資料，速度可能會比存取全域空間中的資料快許多倍。 系統會為每個磚建立 `tile_static` 變數的實例，而磚中的所有線程都可以存取該變數。 並排的主要優點是因為 `tile_static` 存取而提升效能。
+- 您可以創建`tile_static`變數。 在空間中`tile_static`訪問數據的速度可能比訪問全域空間中的數據快很多倍。 為每個磁貼創建`tile_static`變數的實例,並且磁貼中的所有線程都有權訪問該變數。 平鋪的主要好處是由於訪問而`tile_static`獲得性能。
 
-- 您可以呼叫[tile_barrier：： wait](reference/tile-barrier-class.md#wait)方法，在指定的程式程式碼停止一個磚中的所有線程。 您無法保證執行緒執行的順序，只有一個磚中的所有線程都會在 `tile_barrier::wait` 的呼叫停止，然後再繼續執行。
+- 您可以調用[tile_barrier::wait](reference/tile-barrier-class.md#wait)方法,以在指定的代碼行上停止一個磁貼中的所有線程。 您無法保證線程將運行的順序,只有一個磁貼中的所有線程在繼續執行之前在調用`tile_barrier::wait`時停止。
 
-- 您可以存取相對於整個 `array_view` 物件的執行緒索引，以及相對於磚的索引。 藉由使用本機索引，您可以讓程式碼更容易讀取和 debug。
+- 您可以存取線程相對於`array_view`整個 物件的索引和相對於磁貼的索引。 通過使用本地索引,可以使代碼更易於讀取和調試。
 
-若要利用矩陣乘法的並排顯示，演算法必須將矩陣分割成磚，然後將磚資料複製到 `tile_static` 變數中，以加快存取的速度。 在此範例中，矩陣會分割成大小相同的 submatrices。 藉由將 submatrices 乘以來找到產品。 此範例中的兩個矩陣和其產品如下：
+為了利用矩陣乘法中的平鋪,演演演算法必須將矩陣分區到切片中,然後將切片數據複製到`tile_static`變數中 ,以便更快地訪問。 在此示例中,矩陣被劃分為大小相等的子矩陣。 通過乘以子矩陣找到產品。 此範例中的兩個矩陣及其產品是:
 
-![4&#45;x&#45;4 矩陣 A](../../parallel/amp/media/campmatrixatiled.png "4&#45;x&#45;4 矩陣 A")
+![4&#45;由&#45;4 矩陣 A](../../parallel/amp/media/campmatrixatiled.png "4&#45;由&#45;4 矩陣 A")
 
-![4&#45;x&#45;4 矩陣 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;x&#45;4 矩陣 B")
+![4&#45;由&#45;4 矩陣 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;由&#45;4 矩陣 B")
 
-![4&#45;x&#45;4 產品矩陣](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;x&#45;4 產品矩陣")
+![4&#45;由&#45;4 個產品矩陣](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;由&#45;4 個產品矩陣")
 
-矩陣會分割成四個2x2 矩陣，其定義如下：
+矩陣被劃分為四個 2x2 矩陣,定義如下:
 
-![4&#45;x&#45;4 矩陣，分割成&#45;&#45;2 個子矩陣&#45;](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;x&#45;4 矩陣，分割成&#45;&#45;2 個子矩陣&#45;")
+![4&#45;由&#45;4 矩陣 A 分區為 2&#45;由&#45;子&#45;矩阵](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;由&#45;4 矩陣 A 分區為 2&#45;由&#45;子&#45;矩阵")
 
-![4&#45;x&#45;4 矩陣 B 分割成&#45;&#45;2 個子矩陣&#45;](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;x&#45;4 矩陣 B 分割成&#45;&#45;2 個子矩陣&#45;")
+![4&#45;由&#45;4 矩陣 B 分區為 2&#45;,由&#45;2 子&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;由&#45;4 矩陣 B 分區為 2&#45;,由&#45;2 子&#45;矩陣")
 
-A 和 B 的產品現在可以撰寫和計算，如下所示：
+A 和 B 的積數現在可以編寫和計算如下:
 
-![4&#45;x&#45;4 矩陣 A B 分割成&#45;&#45;2 個子矩陣&#45;](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;x&#45;4 矩陣 A B 分割成&#45;&#45;2 個子矩陣&#45;")
+![4&#45;由&#45;4 矩陣 A B 分區為 2&#45;由&#45;2 子&#45;矩阵](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;由&#45;4 矩陣 A B 分區為 2&#45;由&#45;2 子&#45;矩阵")
 
-因為矩陣 `a` 至 `h` 是2x2 矩陣，所以所有產品和其總和也都是2x2 矩陣。 此外，A 和 B 的乘積也會如預期般出現4x4 矩陣。 若要快速檢查演算法，請在產品的第一個資料列、第一個資料行中計算元素的值。 在此範例中，這會是第一個資料列中的元素值，以及 `ae + bg`的第一個資料行。 您只需要計算第一個資料行、`ae` 的第一個資料列，以及每個詞彙的 `bg`。 `ae` 的該值 `(1 * 1) + (2 * 5) = 11`。 `bg` 的值為 `(3 * 1) + (4 * 5) = 23`。 最終的值是 `11 + 23 = 34`，這是正確的。
+由於矩陣`a``h`為 2x2 矩陣,因此所有產品和總和也是 2x2 矩陣。 因此,A 和 B 的乘積是 4x4 矩陣,正如預期的那樣。 要快速檢查演演演算法,請計算第一行中元素的值,在產品中的第一列。 在此範例中,這將是元素在的第一行和第一列中`ae + bg`的元素的值。 您只需要計算每個術語的第一列、第一行`ae``bg`與 。 值為`ae``(1 * 1) + (2 * 5) = 11`。 `bg` 的值為 `(3 * 1) + (4 * 5) = 23`。 最終值為`11 + 23 = 34`,這是正確的。
 
-若要執行此演算法，程式碼：
+要實現此演算法,代碼:
 
-- 使用 `tiled_extent` 物件，而不是 `parallel_for_each` 呼叫中的 `extent` 物件。
+- 使用`tiled_extent`物件而不是調用中`extent``parallel_for_each`的物件。
 
-- 使用 `tiled_index` 物件，而不是 `parallel_for_each` 呼叫中的 `index` 物件。
+- 使用`tiled_index`物件而不是調用中`index``parallel_for_each`的物件。
 
-- 建立 `tile_static` 變數來保存 submatrices。
+- 建立`tile_static`變數以保存子矩陣。
 
-- 使用 `tile_barrier::wait` 方法來停止執行緒，以計算 submatrices 的產品。
+- 使用`tile_barrier::wait`方法停止用於計算子矩陣的產品的線程。
 
-### <a name="to-multiply-by-using-amp-and-tiling"></a>使用 AMP 和並排的方式乘以
+### <a name="to-multiply-by-using-amp-and-tiling"></a>使用 AMP 和平鋪進行乘以
 
-1. 在 MatrixMultiply 中，將下列程式碼加入 `main` 方法前面。
+1. 在 Matrixmultiply.cpp 中`main`,在方法之前添加以下代碼。
 
    ```cpp
    void MultiplyWithTiling() {
@@ -288,24 +288,24 @@ A 和 B 的產品現在可以撰寫和計算，如下所示：
    }
    ```
 
-   這個範例與不進行並排的範例截然不同。 程式碼會使用這些概念步驟：
-   1. 將圖格 [0，0] 的 `a` 的元素複製到 `locA`。 將圖格 [0，0] 的 `b` 的元素複製到 `locB`。 請注意，`product` 已並排顯示，而不是 `a` 和 `b`。 因此，您可以使用全域索引來存取 `a, b`，並 `product`。 `tile_barrier::wait` 的呼叫是必要的。 它會停止磚中的所有線程，直到 `locA` 和 `locB` 都填滿為止。
+   此示例與不平鋪的範例明顯不同。 程式碼使用以下概念步驟:
+   1. 將 的磁貼`a`[0,0]`locA`的元素 複製到 中。 將 的磁貼`b`[0,0]`locB`的元素 複製到 中。 請注意,`product`請注意已平鋪`a``b`, 而不是與 。 因此,您可以使用全域索引來存取`a, b`與`product`。 調用`tile_barrier::wait`至關重要。 它停止磁貼中的所有線程,直到填充`locA``locB`和填充。
 
-   1. 將 `locA` 和 `locB` 相乘，並將結果放在 `product`中。
+   1. 乘`locA``locB`以並將結果`product`放入 中。
 
-   1. 將圖格 [0，1] 的 `a` 的元素複製到 `locA`。 將圖格 [1，0] 的 `b` 的元素複製到 `locB`。
+   1. 將 的磁貼[0,1]`a`的元素`locA`複製到 中。 將 的磁貼`b`[1,0]`locB`的元素 複製到 中。
 
-   1. 將 `locA` 和 `locB` 相乘，並將它們加入至已在 `product`中的結果。
+   1. 相`locA`乘`locB`並新增它們到 中`product`已有的結果 。
 
-   1. 磚 [0，0] 的乘法已完成。
+   1. 切片[0,0] 的乘法已完成。
 
-   1. 針對其他四個磚重複上述步驟。 沒有特別針對磚的編制索引，而且執行緒可以依任何循序執行。 當每個執行緒執行時，會適當地為每個磚建立 `tile_static` 變數，而呼叫 `tile_barrier::wait` 會控制程式流程。
+   1. 對其他四個磁貼重複上述步驟。 沒有專門針對切片的索引,線程可以按任何順序執行。 當每個線程執行時,`tile_static`將為每個磁貼適當地創建變數,並相應地呼叫控制`tile_barrier::wait`程式流。
 
-   1. 當您仔細檢查演算法時，請注意每個 submatrix 都會載入到 `tile_static` 記憶體兩次。 該資料傳輸需要一些時間。 不過，一旦資料位於 `tile_static` 記憶體中，存取資料的速度就會更快。 因為計算產品需要重複存取 submatrices 中的值，所以會有整體的效能提升。 針對每個演算法，需要進行實驗以找出最佳的演算法和磚大小。
+   1. 仔細檢查演演演算法時,請注意每個子矩陣都載入到`tile_static`記憶體中 兩次。 數據傳輸確實需要時間。 但是,一旦數據進入記憶體`tile_static`中,對數據的訪問就會更快。 由於計算產品需要重複存取子矩陣中的值,因此性能會提高。 對於每個演演演算法,需要實驗才能找到最佳演演演算法和切片大小。
 
-   在非 AMP 和非磚範例中，會從全域記憶體存取 A 和 B 的每個元素四次，以計算產品。 在圖格範例中，每個專案都會從全域記憶體存取兩次，而從 `tile_static` 記憶體取四次。 這不是顯著的效能提升。 不過，如果 A 和 B 是1024x1024 矩陣，而磚大小是16，則會有顯著的效能提升。 在此情況下，每個元素只會複製到 `tile_static` 記憶體16次，並從 `tile_static` 記憶體1024次存取。
+   在非 AMP 和非切片範例中,A 和 B 的每個元素從全域記憶體中訪問四次以計算產品。 在磁貼示例中,每個元素從全域記憶體訪問兩次,從`tile_static`記憶體訪問四次。 這不是顯著的性能提升。 但是,如果 A 和 B 是 1024x1024 矩陣,並且切片大小為 16,則性能會顯著提高。 在這種情況下,每個元素將只複製到`tile_static`記憶體 16 次,`tile_static`並從 記憶體訪問 1024 次。
 
-1. 修改 main 方法以呼叫 `MultiplyWithTiling` 方法，如下所示。
+1. 修改主方法以調用`MultiplyWithTiling`方法,如圖所示。
 
    ```cpp
    int main() {
@@ -316,9 +316,9 @@ A 和 B 的產品現在可以撰寫和計算，如下所示：
    }
    ```
 
-1. 按下**Ctrl**+**F5**鍵盤快速鍵，以開始進行偵錯工具，並驗證輸出是否正確。
+1. 按**Ctrl**+**F5**鍵盤快速鍵開始調試並驗證輸出是否正確。
 
-1. 按**空格鍵**以結束應用程式。
+1. 按**空格**鍵退出應用程式。
 
 ## <a name="see-also"></a>另請參閱
 

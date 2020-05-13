@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: a5b53ced4e20c920aab8e7ebcda3e3f6f8798ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164094"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753203"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 類別
 
@@ -41,59 +41,59 @@ class CDumpContext
 
 |名稱|描述|
 |----------|-----------------|
-|[CDumpContext::CDumpContext](#cdumpcontext)|建構 `CDumpContext` 物件。|
+|[C 轉儲上下文::C 轉儲上下文](#cdumpcontext)|建構 `CDumpContext` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDumpContext::DumpAsHex](#dumpashex)|傾印以十六進位格式的指定項目。|
-|[CDumpContext::Flush](#flush)|排清的傾印內容緩衝區中的任何資料。|
-|[CDumpContext::GetDepth](#getdepth)|取得對應至傾印的深度的整數。|
-|[CDumpContext::HexDump](#hexdump)|傾印以十六進位格式將陣列中包含的位元組。|
-|[CDumpContext::SetDepth](#setdepth)|設定傾印的深度。|
+|[CDumpContext::D](#dumpashex)|以十六進位格式轉儲指示的項。|
+|[CDumpContext:沖洗](#flush)|刷新轉儲上下文緩衝區中的任何數據。|
+|[CDumpContext:取得深度](#getdepth)|獲取與轉儲深度對應的整數。|
+|[CDump 上下文:十六進位轉儲](#hexdump)|以十六進位格式轉儲陣列中包含的位元組。|
+|[CDump 上下文::設定深度](#setdepth)|設置轉儲的深度。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|插入傾印內容的變數和物件。|
+|[CDumpContext::運算子&lt;&lt;](#operator_lt_lt)|將變數和對象插入轉儲上下文。|
 
 ## <a name="remarks"></a>備註
 
-`CDumpContext` 沒有基底類別。
+`CDumpContext`沒有基類。
 
-您可以使用[afxDump](diagnostic-services.md#afxdump)，預先宣告`CDumpContext`物件，大部分您傾印。 `afxDump`物件是只能在 Microsoft Foundation 類別庫的偵錯版本。
+對於大多數轉儲,您可以使用[afxDump,](diagnostic-services.md#afxdump)一個`CDumpContext`預申報 的物件。 該`afxDump`物件僅在Microsoft基礎類庫的調試版本中可用。
 
-數個記憶體[診斷服務](../../mfc/reference/diagnostic-services.md)使用`afxDump`其輸出。
+多個記憶體[診斷服務](../../mfc/reference/diagnostic-services.md)用於`afxDump`輸出。
 
-在 Windows 環境中，從預先定義的輸出`afxDump`物件，在概念上類似於`cerr`串流，會路由傳送至偵錯工具，透過 Windows 函式`OutputDebugString`。
+在 Windows 環境下,`afxDump`預先定義物件的輸出在概`cerr`念上與流類似,透過`OutputDebugString`Windows 函數路由到調試器。
 
-`CDumpContext`類別具有多載的插入 ( **<<**) 運算子`CObject`傾印物件的資料的指標。 如果您需要自訂的傾印格式的衍生物件時，會覆寫[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大部分的 Microsoft Foundation classes 會實作覆寫`Dump`成員函式。
+類別`CDumpContext`有傾印物件資料的**<<**`CObject`指標的重載插入( ) 運算子。 如果需要派生物件的自訂轉印格式,則重寫[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大多數Microsoft 基礎類實現重`Dump`寫的成員函數。
 
-不從衍生的類別`CObject`，這類`CString`， `CTime`，以及`CTimeSpan`，有自己的多載`CDumpContext`插入運算子，為執行常用的結構，例如`CFileStatus`， `CPoint`，和`CRect`.
+不派生於`CObject`的類(`CString`如`CTime`、`CTimeSpan`和)具有自己的重`CDumpContext`載插入 運算符,通常使用的結構`CFileStatus`(`CPoint`如`CRect`、 和)也具有重載。
 
-如果您使用[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)或是[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)巨集的實作中您的類別，然後`CObject::Dump`會列印名稱您`CObject`-衍生的類別。 否則，它只會列印`CObject`。
+如果在類的實現中使用[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)或[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏,則`CObject::Dump`將列印`CObject`派生類的名稱。 否則,它會列印`CObject`。
 
-`CDumpContext`類別可用於偵錯和發行版本的程式庫，但`Dump`成員函式只會定義在偵錯版本。 使用 **#ifdef _DEBUG**  /  `#endif`陳述式來括住您的診斷程式碼，包括您的自訂`Dump`成員函式。
+類`CDumpContext`同時可用於庫的調試版本和發佈版本,`Dump`但成員函數僅在調試版本中定義。 使用 **#ifdef_DEBUG** / `#endif`語句來對診斷代碼(包括自`Dump`定義 成員函數)進行括弧。
 
-在您建立您自己之前`CDumpContext`物件，您必須建立`CFile`物件做為傾印目的地。
+在創建自己的`CDumpContext`物件之前,必須創建用作轉儲`CFile`目標的物件。
 
-如需詳細資訊`CDumpContext`，請參閱 <<c2> [ 偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。
+關於詳細資訊,`CDumpContext`請參考[除錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。
 
-**#define _DEBUG**
+**#define_DEBUG**
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CDumpContext`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afx.h
+**標題:** afx.h
 
-##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>C 轉儲上下文::C 轉儲上下文
 
-建構的物件類別`CDumpContext`。
+建構類別`CDumpContext`的物件 。
 
 ```
 CDumpContext(CFile* pFile = NULL);
@@ -102,21 +102,21 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="parameters"></a>參數
 
 *pFile*<br/>
-指標`CFile`傾印目的地的物件。
+指向作為轉儲目標`CFile`的物件的指標。
 
 ### <a name="remarks"></a>備註
 
-`afxDump`自動建構物件。
+物件`afxDump`將自動構造。
 
-不要寫入至基礎`CFile`傾印內容是使用中; 否則您會干擾傾印。 在 Windows 環境中，輸出會路由傳送至偵錯工具，透過 Windows 函式`OutputDebugString`。
+轉儲上下文處於活動狀態時,不要`CFile`寫入基礎;否則,您將干擾轉儲。 在 Windows 環境中,輸出通過 Windows 函數`OutputDebugString`路由到調試器。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::D
 
-傾印格式化為十六進位數字指定的型別。
+轉儲格式化為十六進位數字的指定類型。
 
 ```
 CDumpContext& DumpAsHex(BYTE b);
@@ -131,21 +131,21 @@ CDumpContext& DumpAsHex(WORD w);
 
 ### <a name="return-value"></a>傳回值
 
-對 `CDumpContext` 物件的參考。
+`CDumpContext` 物件的參考。
 
 ### <a name="remarks"></a>備註
 
-呼叫此成員函式以傾印指定的型別為十六進位的數字的項目。 若要傾印陣列，呼叫[CDumpContext::HexDump](#hexdump)。
+調用此成員函數將指定類型的項轉儲為十六進位數位。 要轉印數組,請呼叫[CDumpContext::十六進位傾印](#hexdump)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-##  <a name="flush"></a>  CDumpContext::Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext:沖洗
 
-強制執行任何剩餘的緩衝區寫入檔案中的資料附加至傾印內容。
+強制將緩衝區中剩餘的任何數據寫入附加到轉儲上下文的檔。
 
-```
+```cpp
 void Flush();
 ```
 
@@ -153,9 +153,9 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-##  <a name="getdepth"></a>  CDumpContext::GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext:取得深度
 
-判斷是否在程序中的深層或淺層傾印。
+確定深度轉儲還是淺轉儲正在進行中。
 
 ```
 int GetDepth() const;
@@ -163,17 +163,17 @@ int GetDepth() const;
 
 ### <a name="return-value"></a>傳回值
 
-所設定的傾印的深度`SetDepth`。
+由 設定的傾印的`SetDepth`深度 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[SetDepth](#setdepth)。
+  請參閱[SetDepth](#setdepth)的範例。
 
-##  <a name="hexdump"></a>  CDumpContext::HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDump 上下文:十六進位轉儲
 
-傾印格式化為十六進位數字的位元組陣列。
+轉儲格式化為十六進位數位的位元組。
 
-```
+```cpp
 void HexDump(
     LPCTSTR lpszLine,
     BYTE* pby,
@@ -184,28 +184,28 @@ void HexDump(
 ### <a name="parameters"></a>參數
 
 *lpszLine*<br/>
-要輸出的新行開頭的字串。
+要在新行開始時輸出的字串。
 
-*pby*<br/>
-包含要傾印的位元組之緩衝區的指標。
+*皮比*<br/>
+指向包含要轉儲的位元組的緩衝區的指標。
 
-*nBytes*<br/>
-要傾印的位元組數目。
+*n 位元組*<br/>
+要轉儲的位元組數。
 
-*nWidth*<br/>
-每一行 （無法輸出行寬度），傾印的位元組數目上限。
+*n 寬度*<br/>
+每行轉儲的最大位元組數(不是輸出線的寬度)。
 
 ### <a name="remarks"></a>備註
 
-若要傾印的十六進位數字的單一特定項目類型，呼叫[CDumpContext::DumpAsHex](#dumpashex)。
+要將單個特定項類型轉印為十六進位號,請呼叫[CDumpContext::DumpAsHex](#dumpashex)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::運算子&lt;&lt;
 
-將輸出傾印內容至指定的資料。
+將指定的數據輸出到轉儲上下文。
 
 ```
 CDumpContext& operator<<(const CObject* pOb);
@@ -233,37 +233,37 @@ CDumpContext& operator<<(HFONT h);
 
 ### <a name="return-value"></a>傳回值
 
-A`CDumpContext`參考。 使用傳回的值，您可以在單一原始程式碼行上撰寫多個插入。
+`CDumpContext` 參考。 使用返回值,可以在一行原始碼上寫入多個插入。
 
 ### <a name="remarks"></a>備註
 
-針對多載插入運算子`CObject`指標以及大多數的基本型別。 字元的指標會產生的字串內容; 傾印。指標**void**導致只有位址的十六進位傾印。 LONGLONG 產生在 64 位元帶正負號的整數; 傾印ULONGLONG 產生的傾印的 64 位元不帶正負號的整數。
+對於`CObject`指標以及大多數基元類型,插入運算符過載。 指向字元的指標會導致字串內容轉儲;指向**void 的**指標僅會導致位址的十六進位轉儲。 LONGLONG 會導致 64 位簽名整數的轉儲;ULONGLONG 會導致64位無符號整數的轉儲。
 
-如果您使用您的類別或 IMPLEMENT_SERIAL 巨集，在您的類別，然後插入運算子的實作中透過`CObject::Dump`，將會列印名稱您`CObject`-衍生的類別。 否則，它只會列印`CObject`。 如果您覆寫`Dump`函式的類別，則您可以提供之物件的內容，而不是十六進位傾印更有意義的輸出。
+如果在類的實現中使用IMPLEMENT_DYNAMIC或IMPLEMENT_SERIAL宏,則插入運算符 通過`CObject::Dump`將`CObject`列印 派生類的名稱。 否則,它會列印`CObject`。 如果重寫類`Dump`的函數,則可以提供物件內容的更有意義的輸出,而不是十六進位轉儲。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-##  <a name="setdepth"></a>  CDumpContext::SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDump 上下文::設定深度
 
-設定傾印的深度。
+設置轉儲的深度。
 
-```
+```cpp
 void SetDepth(int nNewDepth);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nNewDepth*<br/>
+*N 紐裡*<br/>
 新的深度值。
 
 ### <a name="remarks"></a>備註
 
-如果您傾印的基本型別或簡單`CObject`，未不包含任何其他物件的指標，則值為 0 就已足夠。 值大於 0 指定所在的所有物件的深層傾印傾印以遞迴方式。 比方說，集合的深層傾印會傾印集合的所有項目。 在衍生類別中，您可以使用其他特定的深度值。
+如果要轉儲不包含指向其他對象的指標的基`CObject`元類型或簡單,則值 0 就足夠了。 大於 0 的值指定一個深轉儲,其中所有物件都遞歸地轉儲。 例如,集合的深層轉儲將轉儲集合的所有元素。 您可以在派生類中使用其他特定深度值。
 
 > [!NOTE]
->  深入的傾印中未偵測到循環參考，而且可能會導致無限迴圈。
+> 在深轉儲中未檢測到迴圈引用,並可能導致無限迴圈。
 
 ### <a name="example"></a>範例
 

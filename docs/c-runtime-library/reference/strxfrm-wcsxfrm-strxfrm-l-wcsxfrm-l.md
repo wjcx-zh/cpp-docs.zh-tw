@@ -1,11 +1,13 @@
 ---
 title: strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strxfrm
 - _wcsxfrm_l
 - _strxfrm_l
 - wcsxfrm
+- _o__strxfrm_l
+- _o__wcsxfrm_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 411fe3a5a6f66614f0a22e0f623b73685a6e0844
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3ab3f978d4162f968f518272612c18767247f2fb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957612"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912345"
 ---
 # <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
@@ -96,13 +99,15 @@ size_t wcsxfrm_l(
 
 ## <a name="remarks"></a>備註
 
-**Strxfrm**函式會將*strSource*所指向的字串轉換成儲存在*strDest*中的新分頁格式。 不超過*計數*字元（包含 null 字元）會轉換並放入結果字串中。 轉換是使用地區設定的**LC_COLLATE**類別設定進行。 如需**LC_COLLATE**的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 **strxfrm**會針對其地區設定相關的行為使用目前的地區設定; **_strxfrm_l**是相同的，不同之處在于它會使用傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**Strxfrm**函式會將*strSource*所指向的字串轉換成儲存在*strDest*中的新分頁格式。 不超過*計數*字元（包含 null 字元）會轉換並放入結果字串中。 轉換是使用地區設定的**LC_COLLATE**類別設定進行。 如需**LC_COLLATE**的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 **strxfrm**會針對其地區設定相關的行為使用目前的地區設定;**_strxfrm_l**是相同的，不同之處在于它會使用傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 轉換之後，使用兩個已轉換字串呼叫**strcmp** ，會產生與套用至原始兩個字串的**strcoll**呼叫相同的結果。 如同**strcoll**和**stricoll**， **strxfrm**會視需要自動處理多位元組字元字串。
 
-**wcsxfrm**是寬字元版本的**strxfrm**;**wcsxfrm**的字串引數是寬字元指標。 針對**wcsxfrm**，在字串轉換之後，以兩個已轉換字串呼叫**wcscmp** ，會產生與套用至原始兩個字串的**wcscoll**呼叫相同的結果。 相反地， **wcsxfrm**和**strxfrm**的行為相同。 **wcsxfrm**會針對其地區設定相關的行為使用目前的地區設定; **_wcsxfrm_l**會使用傳入的地區設定，而不是目前的地區設定。
+**wcsxfrm**是寬字元版本的**strxfrm**;**wcsxfrm**的字串引數是寬字元指標。 針對**wcsxfrm**，在字串轉換之後，以兩個已轉換字串呼叫**wcscmp** ，會產生與套用至原始兩個字串的**wcscoll**呼叫相同的結果。 相反地， **wcsxfrm**和**strxfrm**的行為相同。 **wcsxfrm**會針對其地區設定相關的行為使用目前的地區設定;**_wcsxfrm_l**使用傳入的地區設定，而不是目前的地區設定。
 
 這些函式會驗證它們的參數。 如果*strSource*為 null 指標，或*strDest*為**null**指標（除非 count 為零），或如果*count*大於**INT_MAX**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**INT_MAX**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -113,9 +118,9 @@ size_t wcsxfrm_l(
 
 在 "C" 地區設定中，字元集 (ASCII 字元集) 的字元順序與字元的詞典編纂順序相同。 不過，其他地區設定中，字元集的字元順序可能與詞典編纂字元順序不同。 例如，在某些歐洲地區設定中，字元 ' a ' （值0x61）在字元 ' &\#x00E4; ' 之前（值0xE4）在字元集中，但字元 ' ä ' 在字元 ' a ' 詞典編纂之前。
 
-在字元集和詞典編纂字元順序不同的地區設定中，對原始字串使用**strxfrm** ，然後在產生的字串上**strcmp** ，以根據目前地區設定來產生詞典編纂字串比較**LC_COLLATE**類別設定。 因此，若要比較上述地區設定中詞典編纂的兩個字串，請在原始字串上使用**strxfrm** ，然後在產生的字串上**strcmp** 。 或者，您可以在原始字串上使用**strcoll** ，而不是**strcmp** 。
+在字元集和詞典編纂字元順序不同的地區設定中，對原始字串使用**strxfrm** ，然後在產生的字串上**strcmp** ，以根據目前地區設定的**LC_COLLATE**類別設定來產生詞典編纂字串比較。 因此，若要比較上述地區設定中詞典編纂的兩個字串，請在原始字串上使用**strxfrm** ，然後在產生的字串上**strcmp** 。 或者，您可以在原始字串上使用**strcoll** ，而不是**strcmp** 。
 
-**strxfrm**基本上是使用**LCMAP_SORTKEY** [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw)的包裝函式。
+**strxfrm**基本上是使用**LCMAP_SORTKEY**之[LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw)的包裝函式。
 
 下列運算式的值是保存來源字串之**strxfrm**轉換所需的陣列大小：
 
@@ -144,8 +149,8 @@ return( strlen( _string1 ) );
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

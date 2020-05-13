@@ -1,5 +1,5 @@
 ---
-title: TN031:控制列
+title: TN031：控制列
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c3a15c281018260e65508dee3799ab0011dbfe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370298"
 ---
-# <a name="tn031-control-bars"></a>TN031:控制列
+# <a name="tn031-control-bars"></a>TN031：控制列
 
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
+> 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-本提示描述 MFC 中的控制列類別︰ 一般[CControlBar](#_mfcnotes_ccontrolbar)， [CStatusBar](#_mfcnotes_cstatusbar)， [CToolBar](#_mfcnotes_ctoolbar)， [CDialogBar](#_mfcnotes_cdialogbar)，以及`CDockBar`.
+這個說明描述了 MFC 中的控制`CDockBar`欄位 :一般 CControlBar、CStatusBar、CToolbar、CDialogBar 和 。 [CControlBar](#_mfcnotes_ccontrolbar) [CStatusBar](#_mfcnotes_cstatusbar) [CToolBar](#_mfcnotes_ctoolbar) [CDialogBar](#_mfcnotes_cdialogbar)
 
-## <a name="_mfcnotes_ccontrolbar"></a> CControlBar
+## <a name="ccontrolbar"></a><a name="_mfcnotes_ccontrolbar"></a> CControlBar
 
-A`ControlBar`是`CWnd`-衍生的類別：
+A`ControlBar``CWnd`是 派生類,用於:
 
 - 對齊框架視窗的頂端或底部。
 
@@ -38,11 +38,11 @@ A`ControlBar`是`CWnd`-衍生的類別：
 
 控制列支援其他樣式︰
 
-- CBRS_TOP （預設值） 釘選到頂端控制列。
+- CBRS_TOP(預設值)將控制欄固定到頂部。
 
-- CBRS_BOTTOM Pin 底部將控制列。
+- CBRS_BOTTOM將控制桿固定到底部。
 
-- CBRS_NOALIGN 不會調整位置控制列的父代調整大小時。
+- CBRS_NOALIGN當父控件調整大小時,請勿重新置放控制欄。
 
 衍生自 `CControlBar` 的類別提供更有趣的實作︰
 
@@ -52,9 +52,9 @@ A`ControlBar`是`CWnd`-衍生的類別：
 
 - `CDialogBar` 類似工具列的框架，其中包含標準 Windows 控制項 (從對話方塊範本資源建立)。
 
-- `CDockBar` 其他一般停駐區域`CControlBar`衍生物件。 此類別中可用的特定成員函式和變數在未來版本中可能會有所變更。
+- `CDockBar`其他`CControlBar`派生物件的通用停靠區域。 此類別中可用的特定成員函式和變數在未來版本中可能會有所變更。
 
-所有控制列物件/視窗都是某些父框架視窗的子視窗。 它們通常會加入框架 (例如 MDI 用戶端或檢視) 的工作區成為同層級。 控制列的子視窗識別碼很重要。 控制列的預設配置僅適用於控制要 AFX_IDW_CONTROLBAR_LAST 範圍 AFX_IDW_CONTROLBAR_FIRST 中的識別碼。 請注意，即使有 256 個控制列識別碼的範圍，前 32 個控制列識別碼由於受到預覽列印架構直接支援，因此是特殊的。
+所有控制列物件/視窗都是某些父框架視窗的子視窗。 它們通常會加入框架 (例如 MDI 用戶端或檢視) 的工作區成為同層級。 控制列的子視窗識別碼很重要。 控制列的預設配置僅適用於其識別碼在 AFX_IDW_CONTROLBAR_FIRST 到 AFX_IDW_CONTROLBAR_LAST 範圍內的控制列。 請注意，即使有 256 個控制列識別碼的範圍，前 32 個控制列識別碼由於受到預覽列印架構直接支援，因此是特殊的。
 
 `CControlBar` 類別為下列項目提供標準實作︰
 
@@ -67,7 +67,7 @@ A`ControlBar`是`CWnd`-衍生的類別：
 C++ 控制列物件通常會內嵌為 `CFrameWnd` 衍生類別的成員，而且會在終結父 `HWND` 和物件時遭到清除。 如果您需要將控制列物件配置到堆積上，您可以直接將 *m_bAutoDestruct* 成員設定為 **TRUE** ，讓控制列在終結**時「** 刪除此物件 `HWND` 」。
 
 > [!NOTE]
->  如果您建立您自己`CControlBar`-衍生類別，而不是使用其中一個 MFC 的衍生類別，例如`CStatusBar`， `CToolBar`，或`CDialogBar`，您必須設定*m_dwStyle*資料成員。 這可以覆寫中完成`Create`:
+> 如果`CControlBar`創建自己的派生類,而不是使用 MFC 的派生類之`CStatusBar`一`CToolBar`,`CDialogBar`例如 , 或, 則需要設置*m_dwStyle*數據成員。 這可以在重寫 中`Create`完成 :
 
 ```
 // CMyControlBar is derived from CControlBar
@@ -89,9 +89,9 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
 
 如需詳細資訊，請參閱 `CWnd::RepositionBars` 和 `CFrameWnd::RecalcLayout` 。
 
-MFC 私人 Windows 訊息，包括 WM_SIZEPARENT，都記載於[技術提示 24](../mfc/tn024-mfc-defined-messages-and-resources.md)。
+MFC 專用 Windows 消息(包括WM_SIZEPARENT)記錄在[技術說明 24](../mfc/tn024-mfc-defined-messages-and-resources.md)中。
 
-## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar
+## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a>CStatusbar
 
 狀態列是具有一列文字輸出窗格的控制列。 文字輸出窗格有兩種常見的用法：
 
@@ -107,7 +107,7 @@ MFC 私人 Windows 訊息，包括 WM_SIZEPARENT，都記載於[技術提示 24]
 
 狀態列中使用的色彩也會與《Windows 介面應用程式設計指南》的建議一致。 這些色彩未經過硬式編碼，而且會動態變更以便回應使用者在 [控制台] 中的自訂。
 
-|項目|Windows 色彩值|預設 RGB|
+|Item|Windows 色彩值|預設 RGB|
 |----------|-------------------------|-----------------|
 |狀態列背景|COLOR_BTNFACE|RGB(192, 192, 192)|
 |狀態列文字|COLOR_BTNTEXT|RGB(000, 000, 000)|
@@ -116,21 +116,21 @@ MFC 私人 Windows 訊息，包括 WM_SIZEPARENT，都記載於[技術提示 24]
 
 **CStatusBar 的 CCmdUI 支援**
 
-指標通常會更新的方式是透過 ON_UPDATE_COMMAND_UI 機制。 在閒置時，狀態列會呼叫 ON_UPDATE_COMMAND_UI 處理常式，使用 [指標] 窗格中的字串識別碼。
+指標通常更新的方式是通過ON_UPDATE_COMMAND_UI機制。 在空閒時間,狀態列將調用帶有指示器窗格的字串 ID 的ON_UPDATE_COMMAND_UI處理程式。
 
-ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
+ON_UPDATE_COMMAND_UI處理程式可以呼叫:
 
-- `Enable`：若要啟用或停用窗格。 停用的窗格看起來與啟用的窗格完全相同，但會隱藏文字 (亦即關閉文字指標)。
+- `Enable`:啟用或禁用窗格。 停用的窗格看起來與啟用的窗格完全相同，但會隱藏文字 (亦即關閉文字指標)。
 
-- `SetText`：若要變更的文字。 如果使用此選項，請務必小心，因為窗格不會自動調整大小。
+- `SetText`:更改文字。 如果使用此選項，請務必小心，因為窗格不會自動調整大小。
 
 如需 [建立和自訂 API 的詳細資訊，請參閱＜類別庫參考＞](../mfc/reference/cstatusbar-class.md)*中的* CStatusBar `CStatusBar` 類別。 狀態列的大部分自訂應該在初始顯示狀態列之前完成。
 
 狀態列只支援一個壓縮窗格，通常是第一個窗格。 該窗格的大小其實是大小下限。 如果狀態列大於所有窗格的大小下限，任何額外的寬度都會指定給此壓縮窗格。 具有狀態列的預設應用程式，由於其第一個窗格已壓縮，因此 CAP、NUM 和 SCRL 指標會靠右對齊。
 
-## <a name="_mfcnotes_ctoolbar"></a>  CToolBar
+## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a>CToolBar
 
-工具列是具有一列點陣圖按鈕 (可能包含分隔符號) 的控制列。 支援兩種按鈕樣式︰按鈕和核取方塊按鈕。 可以使用核取方塊按鈕和 ON_UPDATE_COMMAND_UI 中建置選項按鈕群組功能。
+工具列是具有一列點陣圖按鈕 (可能包含分隔符號) 的控制列。 支援兩種按鈕樣式︰按鈕和核取方塊按鈕。 可以使用複選框按鈕構建無線電組功能,並ON_UPDATE_COMMAND_UI。
 
 工具列中的所有點陣圖按鈕都是取自一個點陣圖。 此點陣圖必須包含每個按鈕的一個圖像或字符。 一般而言，點陣圖中的圖像/字符順序與在螢幕上繪製的順序相同 (您可以使用自訂 API 對此進行變更)。
 
@@ -140,7 +140,7 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 工具列中使用的色彩也會與《Windows 介面應用程式設計指南》的建議一致。 這些色彩未經過硬式編碼，而且會動態變更以便回應使用者在 [控制台] 中的自訂。
 
-|項目|Windows 色彩值|預設 RGB|
+|Item|Windows 色彩值|預設 RGB|
 |----------|-------------------------|-----------------|
 |工具列背景|COLOR_BTNFACE|RGB(192,192,192)|
 |工具列按鈕上/左邊緣|COLOR_BTNHIGHLIGHT|RGB(255,255,255)|
@@ -161,47 +161,47 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 ## <a name="ccmdui-support-for-ctoolbar"></a>CToolBar 的 CCmdUI 支援
 
-工具列按鈕，一定會更新的方式是透過 ON_UPDATE_COMMAND_UI 機制。 在閒置時，工具列會呼叫該按鈕的命令 ID 的 ON_UPDATE_COMMAND_UI 處理常式。 ON_UPDATE_COMMAND_UI 沒有針對分隔符號呼叫，但它會針對按鈕和核取方塊按鈕呼叫。
+工具欄按鈕始終更新的方式是通過ON_UPDATE_COMMAND_UI機制。 在空閒時間,工具列將調用帶有該按鈕的命令 ID 的ON_UPDATE_COMMAND_UI處理程式。 ON_UPDATE_COMMAND_UI不調用分隔符,但稱為按鈕和複選框按鈕。
 
-ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
+ON_UPDATE_COMMAND_UI處理程式可以呼叫:
 
-- `Enable`：若要啟用或停用按鈕。 這對按鈕和核取方塊按鈕的作用相同。
+- `Enable`:啟用或禁用按鈕。 這對按鈕和核取方塊按鈕的作用相同。
 
-- `SetCheck`：若要設定按鈕的核取狀態。 為工具列按鈕呼叫此選項會將其轉換成核取方塊按鈕。 `SetCheck` 接受參數為 0 (未選取)、1 (已選取) 或 2 (不定)
+- `SetCheck`：若要設定按鈕的選取狀態。 為工具列按鈕呼叫此選項會將其轉換成核取方塊按鈕。 `SetCheck` 接受參數為 0 (未選取)、1 (已選取) 或 2 (不定)
 
-- `SetRadio`：速記`SetCheck`。
+- `SetRadio`︰ `SetCheck`的速記。
 
 核取方塊按鈕是「自動」核取方塊按鈕；也就是說，當使用者按下按鈕時，這些按鈕會立即變更狀態。 「已選取」是向下或壓下的狀態。 沒有內建使用者介面方法可將按鈕變更為「不定」狀態，您必須透過程式碼來完成。
 
-自訂 Api 可讓您變更指定的工具列按鈕的狀態，最好是您應該變更這些命令工具列按鈕所代表的 ON_UPDATE_COMMAND_UI 處理常式中的狀態。 請記住，閒置處理會將狀態變更工具列按鈕與 ON_UPDATE_COMMAND_UI 處理常式，以便在下一步 之後，任何透過 SetButtonStyle 這些狀態的變更可能會遺失閒置。
+自定義 API 將允許您更改給定工具列按鈕的狀態,最好在工具列按鈕表示的命令ON_UPDATE_COMMAND_UI處理程式中更改這些狀態。 請記住,空閒處理將更改工具列按鈕的狀態與ON_UPDATE_COMMAND_UI處理程式,因此,通過 SetButtonStyle 對這些狀態所做的任何更改可能會在下一個空閒後丟失。
 
-工具列按鈕會傳送 WM_COMMAND 訊息，例如一般按鈕或功能表項目，和通常會由提供 ON_UPDATE_COMMAND_UI 處理常式的相同類別中的 ON_COMMAND 處理常式。
+工具列按鈕將發送WM_COMMAND消息(如普通按鈕或功能表項),通常由提供ON_UPDATE_COMMAND_UI處理程式的同一類中的ON_COMMAND處理程序處理。
 
 用於顯示狀態的工具列按鈕樣式 (TBBS_ 值) 有四種︰
 
-- TBBS_CHECKED: （下） 目前已核取方塊。
+- TBBS_CHECKED：核取方塊目前為按下 (向下)。
 
-- TBBS_INDETERMINATE: 核取方塊目前為不定。
+- TBBS_INDETERMINATE：核取方塊目前為不定。
 
-- TBBS_DISABLED: 目前已停用按鈕。
+- TBBS_DISABLED：按鈕目前為停用。
 
-- TBBS_PRESSED: 目前為按下按鈕。
+- TBBS_PRESSED：按鈕目前為按下。
 
 官方《Windows 介面應用程式設計指南》的六個按鈕樣式分別以下列 TBBS 值來表示︰
 
 - 向上 = 0
 
-- 滑鼠向下 = TBBS_PRESSED (&#124;的任何其他樣式)
+- 滑鼠向下 = TBBS_PRESSED(&#124;任何其他样式)
 
 - 停用 = TBBS_DISABLED
 
 - 向下 = TBBS_CHECKED
 
-- Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED
+- 已禁用 TBBS_CHECKED&#124;TBBS_DISABLED
 
 - 不定 = TBBS_INDETERMINATE
 
-##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar
+## <a name="cdialogbar"></a><a name="_mfcnotes_cdialogbar"></a>CDialog 列
 
 對話方塊列是包含標準 Windows 控制項的控制列。 它就像是一個包含控制項，並支援在這些控制項之間使用 Tab 鍵的對話方塊。 它也像是一個使用對話方塊範本來代表該列的對話方塊。
 
@@ -213,9 +213,9 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 ## <a name="ccmdui-support-for-cdialogbar"></a>CDialogBar 的 CCmdUI 支援
 
-對話方塊列按鈕應該透過 ON_UPDATE_COMMAND_UI 處理常式機制進行更新。 在閒置時，對話方塊列會呼叫 ON_UPDATE_COMMAND_UI 處理常式有 ID 的所有按鈕的命令識別碼 > = 0x8000 (亦即，範圍內的命令 Id)。
+對話框欄按鈕應通過ON_UPDATE_COMMAND_UI處理程序機制進行更新。 在空閒時,對話方塊列將呼叫ON_UPDATE_COMMAND_UI處理程式,其中包含 ID >= 0x8000(即命令 ID 範圍內)的所有按鈕的命令 ID。
 
-ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
+ON_UPDATE_COMMAND_UI處理程式可以呼叫:
 
 - Enable：若要啟用或停用按鈕。
 

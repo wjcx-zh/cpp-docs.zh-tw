@@ -1,8 +1,9 @@
 ---
 title: raise
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - raise
+- _o_raise
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: bed377bb46abac252381344f0b1cf4339815a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 81b92404603820948a384b6ad33421251a27c13c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949661"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919554"
 ---
 # <a name="raise"></a>raise
 
@@ -61,7 +63,7 @@ int raise(
 
 **raise** 函式傳送 *sig* 給執行中的程式。 如果先前的 **signal** 呼叫已安裝 *sig* 的訊號處理函式，則 **raise** 會執行該函式。 如果尚未安裝任何處理常式函式，會採取與訊號值 *sig* 相關聯的預設動作，如下所示。
 
-|訊號|意義|預設|
+|訊號|意義|預設值|
 |------------|-------------|-------------|
 |**SIGABRT**|異常終止|結束呼叫程式，結束代碼 3|
 |**SIGFPE**|浮點錯誤|結束呼叫程式|
@@ -71,6 +73,8 @@ int raise(
 |**SIGTERM**|終止傳送給程式的要求|忽略訊號|
 
 如果引數不是有效的訊號，如上述所指定，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果未處理，函式會將**errno**設定為**EINVAL** ，並傳回非零值。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -82,6 +86,6 @@ int raise(
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>
 [signal](signal.md)<br/>

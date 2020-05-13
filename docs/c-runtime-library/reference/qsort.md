@@ -1,8 +1,9 @@
 ---
 title: qsort
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort
+- _o_qsort
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949703"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913263"
 ---
 # <a name="qsort"></a>qsort
 
@@ -59,10 +61,10 @@ void qsort(
 *number*<br/>
 陣列大小 (以項目計)。
 
-*width*<br/>
-項目大小 (以位元組計)。
+*寬度*<br/>
+元素大小 (以位元組為單位)。
 
-*compare*<br/>
+*何*<br/>
 使用者提供之常式的指標，該常式比較兩個陣列元素，然後傳回一個指定其關聯性的值。
 
 ## <a name="remarks"></a>備註
@@ -77,7 +79,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 常式會比較這些項目，然後傳回下列其中一個值。
 
-|比較函式傳回值|說明|
+|比較函式傳回值|描述|
 |-----------------------------------|-----------------|
 |< 0|**elem1**小於**elem2**|
 |0|**elem1**相當於**elem2**|
@@ -86,6 +88,8 @@ compare( (void *) & elem1, (void *) & elem2 );
 陣列是以比較函式所定義的遞增順序排序。 若要以遞減順序排序陣列，請將比較函式中的「大於」和「小於」意義反轉。
 
 這個函式會驗證它的參數。 如果*compare*或*number*為**Null**，或*base*為**null** ，而*number*為非零，或*width*小於零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回，而**errno**會設定為**EINVAL**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 

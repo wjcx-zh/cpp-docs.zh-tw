@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 75a6d7ea2b4f3ab229d7e3f4d411711261bb1b82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c91f50be1ea30efac81ff67c43633bedd7b0ca03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502187"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377184"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 類別
 
@@ -34,8 +34,8 @@ class CWinFormsControl : public CWnd
 
 #### <a name="parameters"></a>參數
 
-*TManagedControl*<br/>
-要在 MFC 應用程式中顯示的 .NET Framework Windows Forms 控制項。
+*T託管控制*<br/>
+要在 MFC 應用程式中顯示的 .NET 框架 Windows 窗體控制件。
 
 ## <a name="members"></a>成員
 
@@ -43,41 +43,41 @@ class CWinFormsControl : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|構造 MFC Windows Forms 控制項包裝函式物件。|
+|[CWinForms控制:CwinForms控制](#cwinformscontrol)|構造 MFC Windows 表單控制件包裝物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|在 MFC 容器中建立 Windows Forms 控制項。|
-|[CWinFormsControl::GetControl](#getcontrol)|抓取 Windows Forms 控制項的指標。|
-|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|抓取 Windows Forms 控制項的控制碼。|
+|[CWinForms控制:建立託管控制](#createmanagedcontrol)|在 MFC 容器中創建 Windows 表單控制元件。|
+|[CWinForms控制:取得控制](#getcontrol)|檢索指向 Windows 表單控制件的指標。|
+|[CWinForms控制:取得控制句柄](#getcontrolhandle)|檢索 Windows 窗體控件的句柄。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CWinFormsControl:: operator-&gt;](#operator_-_gt)|取代運算式中的[CWinFormsControl:: GetControl](#getcontrol) 。|
-|[CWinFormsControl:: operator TManagedControl ^](#operator_tmanagedcontrol)|將類型轉換為 Windows Forms 控制項的指標。|
+|[CWinForms控制::運算符 -&gt;](#operator_-_gt)|替換[CWinForms 控制:獲取](#getcontrol)運算式中的控制。|
+|[CWinForms控制::操作員 T 託管控制*](#operator_tmanagedcontrol)|將類型轉換為指向 Windows 表單控制件的指標。|
 
 ## <a name="remarks"></a>備註
 
-`CWinFormsControl`類別提供裝載 Windows Forms 控制項的基本功能。
+該`CWinFormsControl`類提供用於託管 Windows 表單控制項的基本功能。
 
-如需使用 Windows Forms 的詳細資訊, 請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+有關使用 Windows 表單的詳細資訊,請參閱[在 MFC 中使用 Windows 元件使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-您的 MFC 程式碼不應該快取視窗控制碼`m_hWnd`(通常儲存在中)。 某些 Windows Forms 控制項屬性需要使用`Window` `DestroyWindow`和`CreateWindow`來終結並重新建立基礎 Win32。 MFC Windows Forms 的執行會處理`Destroy`控制項`Create`的和事件, 以更新`m_hWnd`成員。
+MFC 代碼不應緩存視窗句柄(通常存儲在`m_hWnd`中)。 某些 Windows 表單元件屬性要求`Window``DestroyWindow`使用和銷毀和重新建立`CreateWindow`基礎 Win32。 MFC Windows 窗體`Destroy`實現`Create`處理`m_hWnd`要更新 成員的控制項的和事件。
 
 > [!NOTE]
->  MFC Windows Forms 整合只適用于與 MFC 動態連結的專案 (其中定義了 AFXDLL)。
+> MFC Windows 窗體整合僅適用於與 MFC 動態連結的專案(其中定義了 AFXDLL)。
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxwinforms。h
+**標題:** afxwinforms.h
 
-##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl
+## <a name="cwinformscontrolcreatemanagedcontrol"></a><a name="createmanagedcontrol"></a>CWinForms控制:建立託管控制
 
-在 MFC 容器中建立 Windows Forms 控制項。
+在 MFC 容器中創建 Windows 表單控制元件。
 
 ```
 inline BOOL CreateManagedControl(
@@ -107,48 +107,48 @@ inline BOOL CreateManagedControl(
 
 ### <a name="parameters"></a>參數
 
-*pType*<br/>
-要建立之控制項的資料類型。 必須是[類型](/dotnet/api/system.type)資料類型。
+*p 型態*<br/>
+要創建的控制項的數據類型。 必須為[類型](/dotnet/api/system.type)資料類型。
 
 *dwStyle*<br/>
-要套用至控制項的視窗樣式。 指定[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)的組合。 目前僅支援下列樣式:WS_TABSTOP、WS_VISIBLE、WS_DISABLED 和 WS_GROUP。
+要應用於控制件的視窗樣式。 指定[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)的組合。 目前,僅支援以下樣式:WS_TABSTOP、WS_VISIBLE、WS_DISABLED和WS_GROUP。
 
-*rect*<br/>
-[矩形結構](/windows/win32/api/windef/ns-windef-rect), 定義控制項左上角和右下角的座標 (僅限第一個多載)。
+*矩形*<br/>
+定義控制器左上角與右下角座標(僅首次過載)的[RECT 結構](/windows/win32/api/windef/ns-windef-rect)。
 
 *nPlaceHolderID*<br/>
-放在資源編輯器中的靜態預留位置控制項的控制碼。 新建立的 Windows Forms 控制項會取代靜態控制項, 假設其位置、迭置順序和樣式 (僅限第二個多載)。
+放置在資源編輯器中的靜態占位符控件的句柄。 新創建的 Windows 窗體控制項將取代靜態控制項,假設其位置、z 順序和樣式(僅第二次重載)。
 
-*pParentWnd*<br/>
-父視窗的指標。
+*pparentwnd*<br/>
+指向父視窗的指標。
 
 *nID*<br/>
-要指派給新建立之控制項的資源識別碼 編號。
+要分配給新創建的控制項的資源ID號。
 
 *pControl*<br/>
-要與[CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md)物件相關聯之 Windows Forms 控制項的實例 (僅限第四個多載)。
+要與[CWinFormsControl 控制](../../mfc/reference/cwinformscontrol-class.md)物件關聯的 Windows 窗體控件的實例(僅限第四次重載)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功, 會傳回非零值。 如果失敗, 則傳回零。
+如果成功,則返回一個非零值。 如果不成功,則返回零。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將 MFC 容器中的 .NET Framework Windows Forms 控制項具現化。
+此方法實例化 MFC 容器中的 .NET 框架 Windows 窗體控件。
 
-方法的第一個多載會接受 .NET Framework 的資料類型*pType* , 讓 MFC 可以具現化這個類型的新物件。 *pType*必須是[類型](/dotnet/api/system.type)資料類型。
+方法的第一個重載接受 .NET 框架數據類型*pType,* 以便 MFC 可以實例化此類型的新物件。 *pType*必須是[類型](/dotnet/api/system.type)資料類型。
 
-方法的第二個多載會根據`TManagedControl` `CWinFormsControl`類別的範本參數建立 Windows Forms 控制項。 控制項的大小和位置是以傳遞至方法的`RECT`結構為基礎。 只有*dwStyle*對樣式很重要。
+方法的第二個重載基於`TManagedControl``CWinFormsControl`類的範本參數創建 Windows 窗體控件。 控制項大小和位置以傳遞給方法`RECT`的結構。 只有*dwStyle*才對樣式很重要。
 
-方法的第三個多載會建立一個 Windows Forms 控制項, 以取代靜態控制項、將其終結, 並假設其位置、迭置順序和樣式。 靜態控制項僅作為 Windows Forms 控制項的預留位置。 建立控制項時, 這個多載會將*dwStyle*的樣式與靜態控制項的資源樣式結合。
+方法的第三個重載將創建一個 Windows 窗體控件,該控件將替換靜態控制項,將其破壞並假定其位置、z 順序和樣式。 靜態控制項僅用作 Windows 表單控制件的占位符。 創建控制項時,此重載將*dwStyle*中的樣式與靜態控制件的資源樣式合併。
 
-方法的第四個多載可讓您傳入已具現化的 Windows Forms 控制項, 而 MFC 將會包裝。 它必須與`TManagedControl` `CWinFormsControl`類別的範本參數屬於相同的類型。
+方法的第四個重載允許您傳遞 MFC 將包裝的已實例化 Windows 窗體控件*pControl。* 它必須與`TManagedControl``CWinFormsControl`類的範本參數類型相同。
 
-如需使用 Windows Form 控制項的範例, 請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+有關使用 Windows 表單元件的範例[,請參閱在 MFC 中使用 Windows 元件使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl
+## <a name="cwinformscontrolcwinformscontrol"></a><a name="cwinformscontrol"></a>CWinForms控制:CwinForms控制
 
-構造 MFC Windows Forms 控制項包裝函式物件。
+構造 MFC Windows 表單控制件包裝物件。
 
 ```
 CWinFormsControl();
@@ -156,11 +156,11 @@ CWinFormsControl();
 
 ### <a name="remarks"></a>備註
 
-當您呼叫[CWinFormsControl:: CreateManagedControl](#createmanagedcontrol)時, 會具現化 Windows Forms 控制項。
+當您調用[CWinFormsControl::建立託管控制](#createmanagedcontrol)時,Windows 窗體控制項將實例化。
 
-##  <a name="getcontrol"></a>CWinFormsControl:: GetControl
+## <a name="cwinformscontrolgetcontrol"></a><a name="getcontrol"></a>CWinForms控制:取得控制
 
-抓取 Windows Forms 控制項的指標。
+檢索指向 Windows 表單控制件的指標。
 
 ```
 inline TManagedControl^ GetControl() const;
@@ -168,15 +168,15 @@ inline TManagedControl^ GetControl() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回 Windows Forms 控制項的指標。
+返回指向 Windows 窗體控件的指標。
 
 ### <a name="example"></a>範例
 
-  請參閱[CWinFormsControl:: CreateManagedControl](#createmanagedcontrol)。
+  請參考[CWinForms 控制:建立託管控制](#createmanagedcontrol)。
 
-##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle
+## <a name="cwinformscontrolgetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinForms控制:取得控制句柄
 
-抓取 Windows Forms 控制項的控制碼。
+檢索 Windows 窗體控件的句柄。
 
 ```
 inline HWND GetControlHandle() const;
@@ -184,15 +184,15 @@ inline HWND GetControlHandle() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回 Windows Forms 控制項的控制碼。
+將句柄返回到 Windows 表單控制元件。
 
 ### <a name="remarks"></a>備註
 
-`GetControlHandle`是 helper 方法, 會傳回儲存在 .NET Framework 控制項屬性中的視窗控制碼。 視窗控制碼值會在呼叫[cwnd:: Attach](../../mfc/reference/cwnd-class.md#attach)期間複製到[Cwnd:: m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) 。
+`GetControlHandle`是返回存儲在 .NET Framework 控制項屬性中的視窗句柄的幫助器方法。 在調用[CWnd::附加](../../mfc/reference/cwnd-class.md#attach)期間,視窗句柄值將複製到[CWnd::m_hWnd。](../../mfc/reference/cwnd-class.md#m_hwnd)
 
-##  <a name="operator_-_gt"></a>CWinFormsControl:: operator-&gt;
+## <a name="cwinformscontroloperator--gt"></a><a name="operator_-_gt"></a>CWinForms控制::運算符 -&gt;
 
-取代運算式中的[CWinFormsControl:: GetControl](#getcontrol) 。
+替換[CWinForms 控制:獲取](#getcontrol)運算式中的控制。
 
 ```
 inline TManagedControl^  operator->() const;
@@ -200,13 +200,13 @@ inline TManagedControl^  operator->() const;
 
 ### <a name="remarks"></a>備註
 
-這個運算子會提供可在運算式中`GetControl`取代的方便語法。
+此運算元提供了一個方便的語法,`GetControl`在運算式中替換。
 
-如需 Windows Forms 的詳細資訊, 請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+有關 Windows 表單的詳細資訊,請參閱[在 MFC 中使用 Windows 元件使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl:: operator TManagedControl ^
+## <a name="cwinformscontroloperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol"></a>CWinForms控制::操作員 T 託管控制*
 
-將類型轉換為 Windows Forms 控制項的指標。
+將類型轉換為指向 Windows 表單控制件的指標。
 
 ```
 inline operator TManagedControl^() const;
@@ -214,7 +214,7 @@ inline operator TManagedControl^() const;
 
 ### <a name="remarks"></a>備註
 
-這個運算子會`CWinFormsControl<TManagedControl>`傳遞至接受 Windows Forms 控制項之指標的函式。
+此運算符傳遞給`CWinFormsControl<TManagedControl>`接受指向 Windows 窗體控件的指標的函數。
 
 ## <a name="see-also"></a>另請參閱
 

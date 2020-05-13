@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: ec4198c283700daa2e02e2507b9874eaf02858e9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6d28471bdc44d5d75a9eeac2327f92a8e2e265c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212806"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360651"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>資料錄集：參數化資料錄集 (ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "80212806"
 
 - [如何在執行階段將參數資訊傳遞至資料錄集物件](#_core_passing_parameter_values_at_run_time)。
 
-##  <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> 參數化的資料錄集
+## <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> 參數化的資料錄集
 
 參數化的資料錄集可讓您在執行階段傳遞參數資訊。 這能提供兩個重要的效果：
 
@@ -40,13 +40,13 @@ ms.locfileid: "80212806"
 
 當您呼叫 `Open` 來執行查詢時，資料錄集會使用參數資訊來完成其 **SQL SELECT** 陳述式。 您可以參數化任何資料錄集。
 
-##  <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> 使用參數的時機
+## <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> 使用參數的時機
 
 參數的典型用途包括：
 
 - 將執行階段引數傳遞至預先定義的查詢。
 
-   若要將參數傳遞至預存程序，您必須在呼叫 `Open` 時指定完整的自訂 ODBC **CALL** 陳述式 (搭配參數預留位置)，並覆寫資料錄集的預設 SQL 陳述式。 如需詳細資訊，請參閱《類別程式庫參考》中的 [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) 及 [SQL：自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) 和[資料錄集：宣告預先定義查詢的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
+   若要將參數傳遞至預存程序，您必須在呼叫 `Open` 時指定完整的自訂 ODBC **CALL** 陳述式 (搭配參數預留位置)，並覆寫資料錄集的預設 SQL 陳述式。 有關詳細資訊,請參閱[CRecordset::在](../../mfc/reference/crecordset-class.md#open)*類別庫參考*和 SQL 中開啟[:自訂記錄集的 SQL 語句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)和[記錄集:聲明預先定義查詢 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
 
 - 搭配不同的參數資訊有效執行數個重新查詢。
 
@@ -75,28 +75,28 @@ ms.locfileid: "80212806"
                                        // for some drivers
     ```
 
-   如需針對篩選字串正確使用引號的討論，請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+   有關如何正確使用引號對篩選器字串的討論,請參閱[記錄集:篩選記錄 (ODBC)。](../../data/odbc/recordset-filtering-records-odbc.md)
 
    每當您針對新的學生識別碼重新查詢資料錄集時，參數值都會不同。
 
    > [!TIP]
    > 使用參數比起單純使用篩選還要更有效率。 針對參數化的資料錄集，資料庫只能單次處理 SQL **SELECT** 陳述式。 針對沒有參數的已篩選資料錄集，在您每次搭配新的篩選值進行 `Requery` 時，都必須處理 **SELECT** 陳述式。
 
-如需篩選的詳細資訊，請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+有關篩選器的詳細資訊,請參閱[記錄集:篩選記錄 (ODBC)。](../../data/odbc/recordset-filtering-records-odbc.md)
 
-##  <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> 參數化您的資料錄集類別
+## <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> 參數化您的資料錄集類別
 
 > [!NOTE]
-> 本節適用於衍生自 `CRecordset` 的物件，其中尚未實作大量資料列擷取。 如果您正在使用大量資料列擷取，其實作參數的程序也相當類似。 如需詳細資訊，請參閱[資料錄集：大量擷取記錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本節適用於衍生自 `CRecordset` 的物件，其中尚未實作大量資料列擷取。 如果您正在使用大量資料列擷取，其實作參數的程序也相當類似。 有關詳細資訊,請參閱[記錄集:批量提取記錄 (ODBC)。](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 在您建立資料錄集類別之前，請先判斷所需的參數、其資料類型，以及資料錄集使用它們的方式。
 
 #### <a name="to-parameterize-a-recordset-class"></a>參數化資料錄集類別
 
 > [!NOTE]
-> Visual Studio 2019 和更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立此功能。
+> Visual Studio 2019 和更新版本中未提供「MFC ODBC 消費者」精靈。 您仍然可以手動建立此功能。
 
-1. 從 [新增類別] 執行 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)來建立該類別。
+1. 從 [新增類別]**** 執行 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)來建立該類別。
 
 1. 針對資料錄集的資料行指定欄位資料成員。
 
@@ -117,7 +117,7 @@ ms.locfileid: "80212806"
 
    將您的參數資料成員加入至由精靈產生之欄位資料成員的後方。 慣例是將文字 "Param" 附加至每個使用者定義的參數名稱。
 
-1. 修改 .cpp 檔案中的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成員函式定義。 針對每個您加入類別的參數資料成員加入 RFX 函式呼叫。 如需撰寫 RFX 函式的相關資訊，請參閱[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 在進行對參數的 RFX 呼叫之前，先針對下列項目進行單一呼叫：
+1. 修改 .cpp 檔案中的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成員函式定義。 針對每個您加入類別的參數資料成員加入 RFX 函式呼叫。 有關編寫 RFX 函數的資訊,請參閱[記錄欄位交換:RFX 的工作原理](../../data/odbc/record-field-exchange-how-rfx-works.md)。 在進行對參數的 RFX 呼叫之前，先針對下列項目進行單一呼叫：
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -126,7 +126,7 @@ ms.locfileid: "80212806"
 
 1. 在您資料錄集類別的建構函式中累加參數的計數，`m_nParams`。
 
-   如需詳細資訊，請參閱[資料錄欄位交換：使用精靈程式碼](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)。
+   有關詳細資訊,請參閱[記錄欄位交換:使用精靈代碼](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)。
 
 1. 當您撰寫會建立此類別之資料錄集物件的程式碼時，請在 SQL 陳述式字串中會取代參數的每個位置放置 "?" (問號) 符號。
 
@@ -138,7 +138,7 @@ ms.locfileid: "80212806"
 > [!TIP]
 > 最可能搭配使用的字串，是您針對類別的 [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) 資料成員所指定的字串 (若有的話)，但某些 ODBC 驅動程式可能會允許其他 SQL 子句中的參數。
 
-##  <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> 在執行階段傳遞參數值
+## <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> 在執行階段傳遞參數值
 
 您必須在呼叫 `Open` (針對新的資料錄集物件) 或 `Requery` (針對現有資料錄集物件) 之前指定參數值。
 
@@ -174,7 +174,7 @@ if( !rsStudents.Requery( ) )
 資料錄集包含其記錄符合由篩選所指定條件之學生的記錄，該篩選是根據執行階段參數所建構。 在此情況下，資料錄集會包含所有高年級學生的記錄。
 
 > [!NOTE]
->  若有需要，您可以使用 [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull) 將參數資料成員的值設為 Null。 您也可以使用 [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) 來檢查是否有參數資料成員為 Null。
+> 若有需要，您可以使用 [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull) 將參數資料成員的值設為 Null。 您也可以使用 [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) 來檢查是否有參數資料成員為 Null。
 
 ## <a name="see-also"></a>另請參閱
 

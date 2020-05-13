@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-ms.openlocfilehash: ace8dbb174bd6585e61bd941a60dad28296af72a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78cadfff9a278cf080393ab919f3891b201c91aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327768"
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr 類別
 
-用來管理堆積指標的智慧型指標類別。
+用於管理堆指標的智慧指標類。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-要儲存在堆積上的物件類型。
+要存儲在堆上的物件類型。
 
 ## <a name="members"></a>成員
 
@@ -37,13 +37,13 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 
 |名稱|描述|
 |----------|-----------------|
-|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|建構函式。|
+|[CComHeapPtr:CComHeapPtr](#ccomheapptr)|建構函式。|
 
 ## <a name="remarks"></a>備註
 
-`CComHeapPtr` 衍生自`CHeapPtr`，但會使用[CComAllocator](../../atl/reference/ccomallocator-class.md)配置使用 COM 常式的記憶體。 請參閱[CHeapPtr](../../atl/reference/cheapptr-class.md)並[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)可用的方法。
+`CComHeapPtr`派生自`CHeapPtr`,但使用[CComAllocator 器](../../atl/reference/ccomallocator-class.md)使用 COM 例程分配記憶體。 有關可用方法,請參閱[CHeapPtr](../../atl/reference/cheapptr-class.md)和[CHeapPtrBase。](../../atl/reference/cheapptrbase-class.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
 
@@ -53,9 +53,9 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標題:** atlbase.h
 
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+## <a name="ccomheapptrccomheapptr"></a><a name="ccomheapptr"></a>CComHeapPtr:CComHeapPtr
 
 建構函式。
 
@@ -71,11 +71,11 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="remarks"></a>備註
 
-堆積指標可以選擇性地建立使用現有`CComHeapPtr`物件。 如果是的話，新`CComHeapPtr`物件負責管理資源與新的指標。
+可以使用現有`CComHeapPtr`物件選擇創建堆指標。 如果是這樣,新`CComHeapPtr`對象將負責管理新的指標和資源。
 
 ## <a name="see-also"></a>另請參閱
 
 [CHeapPtr 類別](../../atl/reference/cheapptr-class.md)<br/>
 [CHeapPtrBase 類別](../../atl/reference/cheapptrbase-class.md)<br/>
-[CComAllocator 類別](../../atl/reference/ccomallocator-class.md)<br/>
+[CComallocator 類別](../../atl/reference/ccomallocator-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: ODBC:直接呼叫 ODBC API 函式
+title: ODBC：直接呼叫 ODBC API 函式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC API functions [C++], calling
@@ -12,36 +12,36 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-ms.openlocfilehash: 435df301ad54c7ff5b2f0e46190e3dad7e9c07f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208749438f40eef746a638dd12373397c426d454
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395803"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368660"
 ---
-# <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC:直接呼叫 ODBC API 函式
+# <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 
-資料庫類別提供更簡單的介面，以[資料來源](../../data/odbc/data-source-odbc.md)比 ODBC。 如此一來，類別不會封裝所有的 ODBC API。 任何超出之類別的執行能力的功能，您必須直接呼叫 ODBC API 函式。 例如，您必須呼叫 ODBC 目錄函數 (`::SQLColumns`， `::SQLProcedures`， `::SQLTables`，和其他人) 直接。
+與 ODBC 相比,資料庫類為[數據源](../../data/odbc/data-source-odbc.md)提供了更簡單的介面。 因此,類不封裝所有ODBC API。 對於任何超出類功能的功能,必須直接調用 ODBC API 函數。 例如,必須直接調用ODBC目錄函數(、、、`::SQLColumns``::SQLProcedures``::SQLTables`等函數)。
 
 > [!NOTE]
->  ODBC 資料來源是透過 MFC ODBC 類別，如本主題中所述，或透過 MFC 資料存取物件 (DAO) 類別存取。
+> ODBC 資料來源可透過 MFC ODBC 類別(如本主題所述)或透過 MFC 資料存取物件 (DAO) 類別存取。
 
-直接呼叫 ODBC API 函式，您必須採取相同的步驟，您可以採取若您正在進行的呼叫不含在 framework。 其步驟如下：
+要直接調用 ODBC API 函數,必須執行與在沒有框架的情況下進行調用時相同的步驟。 它們的步驟是:
 
-- 配置的儲存體的呼叫會傳回任何結果。
+- 為呼叫返回的任何結果分配存儲。
 
-- 傳遞 ODBC`HDBC`或`HSTMT`處理，根據函式的參數簽章。 使用[AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv)巨集來擷取 ODBC 控制代碼。
+- 傳遞 ODBC`HDBC``HSTMT`或句柄,具體取決於函數的參數簽名。 使用[AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv)宏檢索 ODBC 句柄。
 
-   成員變數`CDatabase::m_hdbc`和`CRecordset::m_hstmt`便可使用，因此您不需要配置並初始化這些自己。
+   成員變數`CDatabase::m_hdbc`,`CRecordset::m_hstmt`並且可用,因此您無需自己分配和初始化這些變數。
 
-- 可能是呼叫其他的 ODBC 函式，來準備或待處理的主要呼叫。
+- 可能調用其他 ODBC 功能來準備或跟進主呼叫。
 
-- 當您完成時，取消配置儲存區。
+- 完成後取消分配存儲。
 
-如需有關這些步驟的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN 文件中的 SDK。
+有關這些步驟的詳細資訊,請參閱 MSDN 文件中[的開放資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
 
-除了這些步驟中，您需要採取額外步驟以檢查函式傳回值，請確定您的程式不等候非同步呼叫完成，然後依此類推。 您可以使用 AFX_SQL_ASYNC 和 AFX_SQL_SYNC 巨集，以簡化最後一個步驟執行。 如需詳細資訊，請參閱 <<c0> [ 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 參考 》*。
+除了這些步驟之外,還需要執行額外的步驟來檢查函數返回值,確保程式不等待非同步調用完成,等等。 可以使用AFX_SQL_ASYNC和AFX_SQL_SYNC宏來簡化最後的步驟。 有關詳細資訊,請參閱*MFC 參考*中的[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 基本概念](../../data/odbc/odbc-basics.md)
+[ODBC 基礎知識](../../data/odbc/odbc-basics.md)

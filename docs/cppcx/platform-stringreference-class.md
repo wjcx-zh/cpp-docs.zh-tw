@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182986"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374654"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 類別
 
@@ -34,35 +34,35 @@ class StringReference
 
 |名稱|描述|
 |----------|-----------------|
-|[StringReference::StringReference](#ctor)|用來建立 `StringReference`執行個體的兩個建構函式。|
+|[字串引用::字串引用](#ctor)|用來建立 `StringReference`執行個體的兩個建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[StringReference::Data](#data)|傳回字串資料當做 char16 值的陣列。|
-|[StringReference::Length](#length)|傳回字串中的字元數。|
-|[StringReference::GetHSTRING](#gethstring)|傳回字串資料當做 HSTRING。|
-|[StringReference::GetString](#getstring)|傳回字串資料當做 `Platform::String^`。|
+|[字串參考::D](#data)|傳回字串資料當做 char16 值的陣列。|
+|[字串參考:長度](#length)|傳回字串中的字元數。|
+|[字串參考::獲取HSTRING](#gethstring)|傳回字串資料當做 HSTRING。|
+|[字串引用::取得String](#getstring)|傳回字串資料當做 `Platform::String^`。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[StringReference::operator=](#operator-assign)|將 `StringReference` 指定給新的 `StringReference` 執行個體。|
-|[StringReference::operator()](#operator-call)|將 `StringReference` 轉換成 `Platform::String^`。|
+|[字串參考::運算元*](#operator-assign)|將 `StringReference` 指定給新的 `StringReference` 執行個體。|
+|[字串引用::運算子()](#operator-call)|將 `StringReference` 轉換成 `Platform::String^`。|
 
 ### <a name="requirements"></a>需求
 
-**最低支援用戶端：** Windows 8
+**受支援的最小用戶端:** 視窗 8
 
-**最低支援伺服器：** Windows Server 2012
+**受支援的伺服器最少:** 視窗伺服器 2012
 
 **命名空間：** Platform
 
 **標頭：** vccorlib.h
 
-## <a name="data"></a>  Stringreference:: Data 方法
+## <a name="stringreferencedata-method"></a><a name="data"></a>字串參考::Data 方法
 
 傳回這個 `StringReference` 的內容作為 char16 值的陣列。
 
@@ -76,7 +76,7 @@ const ::default::char16 * Data() const;
 
 char16 UNICODE 文字字元陣列。
 
-## <a name="gethstring"></a>  Stringreference:: Gethstring 方法
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>字串引用:getHSTRING 方法
 
 傳回 `__abi_HSTRING` 形式的字串內容。
 
@@ -92,7 +92,7 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="remarks"></a>備註
 
-## <a name="getstring"></a>  Stringreference:: Getstring 方法
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>字串引用::取得字串方法
 
 傳回 `Platform::String^` 形式的字串內容。
 
@@ -107,7 +107,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 包含字串資料的 `Platform::String^`。
 
-## <a name="length"></a>  Stringreference:: Length 方法
+## <a name="stringreferencelength-method"></a><a name="length"></a>字串引用:長度方法
 
 傳回字串中的字元數。
 
@@ -123,7 +123,7 @@ unsigned int Length() const;
 
 ### <a name="remarks"></a>備註
 
-## <a name="operator-assign"></a>  Stringreference:: Operator = 運算子
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>字串參考:::運算元= 運算子
 
 將指定的物件指定給目前的 `StringReference` 物件。
 
@@ -148,9 +148,9 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="remarks"></a>備註
 
-因為`StringReference`是一種標準C++類別，而且不是 ref 類別，它不會顯示在**物件瀏覽器**。
+因為它是`StringReference`標準C++類,而不是 ref 類,所以它不出現在**對象瀏覽器**中。
 
-## <a name="operator-call"></a>  Stringreference 運算子
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>字串參考::運算子() 運算子
 
 將 `StringReference` 物件轉換成 `Platform::String^` 物件。
 
@@ -165,9 +165,9 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 `Platform::String` 類型之物件的控制代碼。
 
-## <a name="ctor"></a>  StringReference::StringReference 建構函式
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>字串引用::字串引用建構函式
 
-初始化 `StringReference` 類別的新執行個體。
+將 `StringReference` 類別的新執行個體初始化。
 
 ### <a name="syntax"></a>語法
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 05f87cbb6061e205f9731d2a903ce52a2482b214
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79094840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336710"
 ---
 # <a name="slice-class"></a>slice 類別
 
@@ -25,7 +25,7 @@ valarray 的一個公用程式類別，用來定義父代 valarray 的一維子�
 
 ## <a name="remarks"></a>備註
 
-此類別會儲存用來描述類型 [slice_array](../standard-library/slice-array-class.md) 之物件特性的參數。當類別 slice 的物件顯示為類別 [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** 之物件的引數時，將會間接建構 valarray 的子集。 會指定從父 valarray 選取之子集的預存值包括：
+此類別會儲存用來描述類型 [slice_array](../standard-library/slice-array-class.md) 之物件特性的參數。當類別 slice 的物件顯示為類別 [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** 之物件的引數時，將會間接建構 valarray 的子集。 會指定從父 valarray 選取之子集的預存值包括：
 
 - valarray 中的起始索引。
 
@@ -41,23 +41,23 @@ valarray 的一個公用程式類別，用來定義父代 valarray 的一維子�
 
 |建構函式|描述|
 |-|-|
-|[slice](#slice)|定義 `valarray` 的子集，其中包含等距且在指定項目開始的一些項目。|
+|[片](#slice)|定義 `valarray` 的子集，其中包含等距且在指定項目開始的一些項目。|
 
 ### <a name="member-functions"></a>成員函數
 
 |成員函數|描述|
 |-|-|
-|[size](#size)|尋找 `valarray` 之配量中的項目數。|
-|[start](#start)|尋找 `valarray` 之配量的起始索引。|
-|[stride](#stride)|尋找 `valarray` 之配量的元素之間的距離。|
+|[大小](#size)|尋找 `valarray` 之配量中的項目數。|
+|[開始](#start)|尋找 `valarray` 之配量的起始索引。|
+|[大步](#stride)|尋找 `valarray` 之配量的元素之間的距離。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<valarray >
+**標頭：** \<valarray>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="size"></a>  slice::size
+## <a name="slicesize"></a><a name="size"></a>切片::大小
 
 尋找 valarray 之配量中的項目數。
 
@@ -121,7 +121,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.
 ```
 
-## <a name="slice"></a>  slice::slice
+## <a name="sliceslice"></a><a name="slice"></a>切片::切片
 
 定義 valarray 的子集，其中包含等距且以指定項目開始的一些項目。
 
@@ -137,17 +137,17 @@ slice(
 ### <a name="parameters"></a>參數
 
 *_StartIndex*\
-子集中第一個元素的 valarray 索引。
+子集中第一個項目的 valarray 索引。
 
 *_Len*\
 子集中的項目數。
 
-*stride*\
+*大步*\
 子集中項目之間的距離。
 
 ### <a name="return-value"></a>傳回值
 
-預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個函式會儲存起始索引的 *_StartIndex* 、 *_Len*的總長度，以及 stride 的*stride* 。
+預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個建構函數儲存*起始索引的_StartIndex、* 總長度 *_Len*和步*長步長*。
 
 ### <a name="remarks"></a>備註
 
@@ -194,7 +194,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```
 
-## <a name="start"></a>  slice::start
+## <a name="slicestart"></a><a name="start"></a>切片::開始
 
 尋找 valarray 之配量的起始索引。
 
@@ -252,7 +252,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.
 ```
 
-## <a name="stride"></a>  slice::stride
+## <a name="slicestride"></a><a name="stride"></a>切片::步幅
 
 尋找 valarray 之配量中項目之間的距離。
 

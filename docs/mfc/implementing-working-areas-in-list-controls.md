@@ -5,35 +5,35 @@ helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: 01b166243c9032a113d46ff297b9f6e53429da21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91577203163247bd230fecb083cf1c50e2875b98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297212"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377217"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>在清單控制項中實作工作區域
 
-根據預設，清單控制項排列標準格線樣式中的所有項目。 不過，另一個支援方法，工作區，將清單項目排列成矩形的群組。 實作工作區域的清單控制項的映像，請參閱 Windows SDK 中使用清單檢視控制項。
+預設情況下,清單控制項以標準網格方式排列所有專案。 但是,支援另一種方法,工作區,將列表項排列到矩形組中。 有關實現工作區的清單控制件的圖像,請參閱在 Windows SDK 中使用清單視圖控制件。
 
 > [!NOTE]
->  只有當清單控制項處於圖示或小圖示模式時，會顯示工作區域。 不過，如果檢視切換到 報表 或 清單模式，會保留任何目前的工作區域。
+> 僅當清單控制者處於圖示或小圖示模式時,工作區才可見。 但是,如果檢視切換到報表或清單模式,則維護任何當前工作區。
 
-若要顯示空的框線 （位於左側、 上方和/或項目右邊），或導致時通常不會有一個要顯示水平捲軸可用工作區域。 另一個常見用法是建立多個工作區的項目可以移動或卸除。 使用此方法，您可以建立具有不同的意義的單一檢視中的區域。 然後，使用者無法分類的項目，將它們放在不同的區域。 這個範例是一個檔案系統，具有讀取/寫入檔案的區域和唯讀檔案的另一個區域的檢視。 如果檔案項目已移至 [唯讀] 區域中，它會自動變成唯讀狀態。 將檔案從唯讀區域移到讀取/寫入區域，會使檔案讀取/寫入。
+工作區可用於顯示空邊框(在項目的左側、頂部和/或右側),或在通常不存在水準滾動條時導致顯示水準滾動條。 另一個常見用法是創建多個工作區,以便可以移動或刪除專案。 使用此方法,您可以在單個檢視中創建具有不同含義的區域。 然後,使用者可以通過將專案放置在其他區域來對專案進行分類。 例如,檔案系統的檢視具有讀取/寫入檔的區域和另一個唯讀檔案區域。 如果將檔項移動到唯讀區域,它將自動變為唯讀。 將檔從唯讀區域移到讀/寫區域將使檔案被讀/寫。
 
-`CListCtrl` 提供數個成員函式來建立及管理您的清單控制項中的工作區域。 [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas)並[SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas)擷取和設定的陣列`CRect`物件 (或`RECT`結構)，其中儲存您的清單控制項的目前實作的工作區域。 颾魤 ㄛ [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas)擷取您的清單控制項的工作區域的目前數目 （根據預設，零）。
+`CListCtrl`提供了多個成員函數,用於在清單控制項中創建和管理工作區。 [GetWork區域](../mfc/reference/clistctrl-class.md#getworkareas)和[SetWork區域](../mfc/reference/clistctrl-class.md#setworkareas)檢`CRect`索和設置 物件`RECT`(或結構) 陣列,這些物件(或結構)儲存當前實現的工作區域,以便進行清單控制。 此外[,GetNumberOfWork區域](../mfc/reference/clistctrl-class.md#getnumberofworkareas)會檢索清單控制項的當前工作區數(預設情況下為零)。
 
-## <a name="items-and-working-areas"></a>項目和工作區
+## <a name="items-and-working-areas"></a>專案與工作區域
 
-建立工作區時，工作區域內的項目就會成為它的成員。 同樣地，如果項目移到工作區，它會成為它已移動的工作區的成員。 如果項目不在其內的任何工作區域，它會自動變成第一個 （索引 0） 工作區的成員。 如果您想要建立項目，並將它放在特定的工作區域內，您必須建立項目，然後將它移到所需的工作區域，藉由呼叫[SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition)。 下列第二個範例會示範這項技巧。
+創建工作區時,位於工作區內的項將成為工作區的成員。 同樣,如果項目移動到工作區,它將成為移動到工作區的成員。 如果專案不位於任何工作區中,它將自動成為第一個 (索引 0) 工作區的成員。 如果要建立項並將其放置在特定工作區中,則需要建立該項,然後將其移至所需的工作區中,並呼叫[SetItemMove](../mfc/reference/clistctrl-class.md#setitemposition)。 下面的第二個示例演示了此技術。
 
-下列範例會實作四個工作區 (`rcWorkAreas`)，具有 10 像素寬的框線，針對每個工作的領域，清單控制項中的相同大小的 (`m_WorkAreaListCtrl`)。
+下面的示例在每個工作區周圍實現四個`rcWorkAreas`大小相等的工作區域 (),每個工作區周圍都有 10 像素寬的邊框,`m_WorkAreaListCtrl`在清單控件 () 中。
 
 [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]
 
-若要在呼叫[ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect)對整個區域顯示在一個區域中的所有項目所需的估計。 這項估計然後分成四個區域，並填滿 5 像素寬的框線。
+調用[近似檢視Rect](../mfc/reference/clistctrl-class.md#approximateviewrect)是為了獲得顯示一個區域中所有專案所需的總面積的估計值。 然後,此估計值分為四個區域,並填充了5像素寬的邊框。
 
-下一個範例會將現有的清單項目指派給每個群組 (`rcWorkAreas`)，並重新整理的控制項檢視 (`m_WorkAreaListCtrl`) 完成的效果。
+下一個範例將現有清單項分配給每個組`rcWorkAreas`( ), 並刷新控制`m_WorkAreaListCtrl`項檢視 ( ) 以完成效果。
 
 [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]
 

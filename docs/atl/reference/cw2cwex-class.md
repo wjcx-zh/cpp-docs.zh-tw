@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-ms.openlocfilehash: d1f960f8ec94b8e573490d4e708d4240b894b5ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07dd0319586054403d8ed0c8efc813b4061e355a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330439"
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX 類別
 
-這個類別會使用字串轉換巨集 CW2CTEX CT2CWEX 和 typedef CW2W。
+此類由字串轉換宏 CW2CTEX 和 CT2CWEX 以及類型 def CW2W 使用。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -33,7 +33,7 @@ class CW2CWEX
 #### <a name="parameters"></a>參數
 
 *t_nBufferLength*<br/>
-轉譯程序中使用的緩衝區大小。 預設長度為 128 位元組。
+翻譯過程中使用的緩衝區的大小。 默認長度為 128 位元組。
 
 ## <a name="members"></a>成員
 
@@ -41,48 +41,48 @@ class CW2CWEX
 
 |名稱|描述|
 |----------|-----------------|
-|[CW2CWEX::CW2CWEX](#cw2cwex)|建構函式。|
-|[CW2CWEX::~CW2CWEX](#dtor)|解構函式。|
+|[CW2CWEX:CW2CWEX](#cw2cwex)|建構函式。|
+|[CW2CWEX:*CW2CWEX](#dtor)|解構函式。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|轉換運算子。|
+|[CW2CWEX::運營商LPCWSTR](#operator_lpcwstr)|轉換運算符。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CW2CWEX::m_psz](#m_psz)|儲存在來源字串資料成員。|
+|[CW2CWEX::m_psz](#m_psz)|存儲原始碼字串的資料成員。|
 
 ## <a name="remarks"></a>備註
 
-除非需要額外的功能，使用 CW2CTEX、 CT2CWEX 或 CW2W 程式碼中。
+除非需要額外的功能,否則請使用代碼中的 CW2CTEX、CT2CWEX 或 CW2W。
 
-這個類別能夠安全地在迴圈中使用，而且不會堆疊溢位。 根據預設，ATL 轉換類別和巨集會使用目前的執行緒 ANSI 字碼頁轉換。
+此類在迴圈中使用是安全的,並且不會溢出堆疊。 默認情況下,ATL 轉換類和宏使用當前線程的 ANSI 代碼頁進行轉換。
 
-下列巨集根據此類別：
+以下巨集基於此類:
 
 - CW2CTEX
 
 - CT2CWEX
 
-下列的 typedef 根據此類別：
+以下類型def基於此類:
 
 - CW2W
 
-如需這些文字轉換巨集的討論，請參閱 < [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。
+有關這些文字轉換巨集的討論,請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。
 
 ## <a name="example"></a>範例
 
-請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。
+有關使用這些字串轉換巨集的範例,請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlconv.h
+**標題:** atlconv.h
 
-##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX:CW2CWEX
 
 建構函式。
 
@@ -96,14 +96,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 *psz*<br/>
 要轉換的文字字串。
 
-*nCodePage*<br/>
-字碼頁。 不使用這個類別中。
+*n代碼頁*<br/>
+字碼頁。 此類中未使用。
 
 ### <a name="remarks"></a>備註
 
-配置轉譯程序中使用的緩衝區。
+分配翻譯過程中使用的緩衝區。
 
-##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX:*CW2CWEX
 
 解構函式。
 
@@ -113,19 +113,19 @@ CW2CWEX(LPCWSTR psz) throw(...);
 
 ### <a name="remarks"></a>備註
 
-釋放配置的緩衝區。
+釋放分配的緩衝區。
 
-##  <a name="m_psz"></a>  CW2CWEX::m_psz
+## <a name="cw2cwexm_psz"></a><a name="m_psz"></a>CW2CWEX::m_psz
 
-儲存在來源字串資料成員。
+存儲原始碼字串的資料成員。
 
 ```
 LPCWSTR m_psz;
 ```
 
-##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator LPCWSTR
+## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::運營商LPCWSTR
 
-轉換運算子。
+轉換運算符。
 
 ```
 operator LPCWSTR() const throw();
@@ -133,7 +133,7 @@ operator LPCWSTR() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-當輸入 LPCWSTR，傳回文字字串。
+將文字字串返回為 LPCWSTR 類型。
 
 ## <a name="see-also"></a>另請參閱
 

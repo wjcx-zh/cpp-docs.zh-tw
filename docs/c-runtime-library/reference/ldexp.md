@@ -1,11 +1,12 @@
 ---
 title: ldexp、ldexpf、ldexpl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
+- _o_ldexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953496"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916533"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
@@ -83,13 +85,15 @@ long double ldexpl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **ldexp**函數會傳回*x* \* 2<sup>*exp*</sup>的值。 溢位時，根據*x*的正負號， **ldexp**會傳回 +/- **HUGE_VAL**;**errno**值會設定為**ERANGE**。
+如果成功， **ldexp**函數會傳回*x* \* 2<sup>*exp*</sup>的值。 在溢位時，根據*x*的正負號， **ldexp**會傳回 +/- **HUGE_VAL**;**errno**值會設定為**ERANGE**。
 
 如需**errno**和可能的錯誤傳回值的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用**float**或**long** **double**類型之**ldexp**的多載。 在 C 程式中， **ldexp**一律採用**double**和**int** ，並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用**float**或**long** **double**類型之**ldexp**的多載。 在 C 程式中， **ldexp**一律採用**double**和**int** ，並傳回**雙精度浮點數**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -97,7 +101,7 @@ long double ldexpl(
 |-------------|--------------|------------------|
 |**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -117,7 +121,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 4.0 times two to the power of 3 is 32.0

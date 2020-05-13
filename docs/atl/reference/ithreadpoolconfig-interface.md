@@ -1,5 +1,5 @@
 ---
-title: IThreadPoolConfig Interface
+title: IThreadPool 設定介面
 ms.date: 11/04/2016
 f1_keywords:
 - IThreadPoolConfig
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-ms.openlocfilehash: b3757f0e90479962273a8295e055c91fb02260f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4b90534fa89ef2aeffe4cd682d92efc16452487
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198183"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326349"
 ---
-# <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig Interface
+# <a name="ithreadpoolconfig-interface"></a>IThreadPool 設定介面
 
-這個介面會提供方法，以設定執行緒集區。
+此介面提供了配置線程池的方法。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -38,22 +38,22 @@ __interface
 
 |||
 |-|-|
-|[GetSize](#getsize)|呼叫這個方法來取得集區中的執行緒數目。|
-|[GetTimeout](#gettimeout)|呼叫這個方法，以取得最長的時間，以毫秒為單位，執行緒集區會等待關閉執行緒。|
-|[SetSize](#setsize)|呼叫此方法以設定集區中的執行緒數目。|
-|[SetTimeout](#settimeout)|呼叫這個方法來設定以毫秒為單位，執行緒集區會等待執行緒關閉的時間上限。|
+|[GetSize](#getsize)|調用此方法獲取池中的線程數。|
+|[取得逾時](#gettimeout)|調用此方法,獲取線程池將等待線程關閉的最大時間(以毫秒為單位)。|
+|[設定大小](#setsize)|調用此方法以設置池中的線程數。|
+|[設定逾時](#settimeout)|調用此方法以設置線程池將等待線程關閉的最大時間(以毫秒為單位)。|
 
 ## <a name="remarks"></a>備註
 
-此介面由實作[CThreadPool](../../atl/reference/cthreadpool-class.md)。
+此介面由[CThreadPool](../../atl/reference/cthreadpool-class.md)實現。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlutil.h
+**標題:** atlutil.h
 
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
+## <a name="ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPool 配置::取得 Size
 
-呼叫這個方法來取得集區中的執行緒數目。
+調用此方法獲取池中的線程數。
 
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
@@ -62,19 +62,19 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="parameters"></a>參數
 
 *pnNumThreads*<br/>
-[out]成功時，執行緒數目的集區中接收變數的位址。
+[出]變數的位址,在成功時,接收池中的線程數。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]
 
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
+## <a name="ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPool 配置::獲取超時
 
-呼叫這個方法，以取得最長的時間，以毫秒為單位，執行緒集區會等待關閉執行緒。
+調用此方法,獲取線程池將等待線程關閉的最大時間(以毫秒為單位)。
 
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
@@ -83,19 +83,19 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="parameters"></a>參數
 
 *pdwMaxWait*<br/>
-[out]變數的位址，成功時，收到的最長時間的執行緒集區會關閉執行緒等候的毫秒數。
+[出]變數的位址,在成功時,接收線程池將等待線程關閉的最大時間(以毫秒為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="example"></a>範例
 
-請參閱[IThreadPoolConfig::GetSize](#getsize)。
+請參閱[IThreadPool 設定::取得 Size](#getsize)。
 
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
+## <a name="ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPool 設定::設定大小
 
-呼叫此方法以設定集區中的執行緒數目。
+調用此方法以設置池中的線程數。
 
 ```
 STDMETHOD(SetSize)int nNumThreads);
@@ -104,23 +104,23 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="parameters"></a>參數
 
 *nNumThreads*<br/>
-執行緒集區中的要求的數目。
+池中請求的線程數。
 
-如果*nNumThreads*是負數，其絕對值將會乘以中取得的執行緒總數機器的處理器數目。
+如果*nNumThreads*為負值,則其絕對值將乘以電腦中的處理器數,以獲得線程總數。
 
-如果*nNumThreads*為零，若要取得的執行緒總數機器中的處理器數目將會乘以 ATLS_DEFAULT_THREADSPERPROC。
+如果*nNumThreads*為零,ATLS_DEFAULT_THREADSPERPROC將乘以計算機中的處理器數,以獲得線程總數。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="example"></a>範例
 
-請參閱[IThreadPoolConfig::GetSize](#getsize)。
+請參閱[IThreadPool 設定::取得 Size](#getsize)。
 
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
+## <a name="ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPool 配置::設置超時
 
-呼叫這個方法來設定以毫秒為單位，執行緒集區會等待執行緒關閉的時間上限。
+調用此方法以設置線程池將等待線程關閉的最大時間(以毫秒為單位)。
 
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
@@ -129,15 +129,15 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ### <a name="parameters"></a>參數
 
 *dwMaxWait*<br/>
-以毫秒為單位，執行緒集區會等待關閉執行緒要求的最大時間。
+請求的最大時間(以毫秒為單位)用於線程池將等待線程關閉。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+返回成功S_OK,或失敗時返回錯誤 HRESULT。
 
 ### <a name="example"></a>範例
 
-請參閱[IThreadPoolConfig::GetSize](#getsize)。
+請參閱[IThreadPool 設定::取得 Size](#getsize)。
 
 ## <a name="see-also"></a>另請參閱
 

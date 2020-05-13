@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
 ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400522"
@@ -21,16 +21,16 @@ ms.locfileid: "67400522"
 
 **語法**
 
-*relational-expression*：<br/>
+*關聯式運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式* **&lt;** *移位運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式* **>** *移位運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式* ** &lt; ** *移位運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*關聯式運算式* **>=** *移位運算式*
 
 *equality-expression*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*相等運算式* **==** *關聯式運算式*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 關係運算式和相等運算子會測試下列關聯性：
@@ -48,7 +48,7 @@ ms.locfileid: "67400522"
 
 運算元的類型可能是整數類型、浮點類型或指標類型。 運算元的類型可以不同。 關係運算子會對整數和浮點類型運算元執行一般算術轉換。 此外，您可以使用下列運算元類型組合搭配關係運算子和相等運算子：
 
-- 任何關係運算子或相等運算子的運算元都可以是相同類型的指標。 針對相等運算子 (`==`) 和不等運算子 (`!=`)，比較結果會指出兩種指標是否定址相同的記憶體位置。 針對其他關係運算子 ( **\<** 、 **>** 、 **\<** = 與 **>** =)，比較結果則會指出物件的兩個記憶體位址所指向的相對位置。 關係運算子只會比較位移。
+- 任何關係運算子或相等運算子的運算元都可以是相同類型的指標。 針對相等運算子 (`==`) 和不等運算子 (`!=`)，比較結果會指出兩種指標是否定址相同的記憶體位置。 針對其他關係運算子**\<**（、 **>**、 **\<**= 和**>**=），比較的結果會指出所指向物件的兩個記憶體位址的相對位置。 關係運算子只會比較位移。
 
    指標比較的定義僅適用於同一物件的部分。 如果指標參考陣列的成員，比較就相當於對應註標的比較。 第一個陣列元素的位址「小於」最後一個元素的位址。 以結構來說，之後宣告的結構成員指標「大於」之前在結構中宣告的成員指標。 相等位的成員指標是相等的。
 
@@ -90,7 +90,7 @@ enum color { red, white, green } col;
 
 這些陳述式會宣告名為 `col` 且有 `color` 標記的列舉變數。 無論何時，此變數可能包含整數值 0、1 或 2，代表其中一個列舉元素會設定 `color`：分別為紅色、白色或綠色。 如果 `col` 在執行 **if** 陳述式時包含 0，會執行所有與 **if** 相依的陳述式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[關係運算子：\<、>、\<= 和 >=](../cpp/relational-operators-equal-and-equal.md)<br/>
-[等號比較運算子：== 和 !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)
+[關係運算子： \<、>、 \<= 和 >=](../cpp/relational-operators-equal-and-equal.md)<br/>
+[等號比較運算子： = = 和！ =](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

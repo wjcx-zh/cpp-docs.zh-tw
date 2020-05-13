@@ -1,8 +1,9 @@
 ---
 title: _get_tzname
-ms.date: 10/22/2018
+ms.date: 4/2/2020
 api_name:
 - _get_tzname
+- _o__get_tzname
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 9f86a4997c328e86597e3bad8a7f7a3a5f5f50b6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955618"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919688"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -60,10 +62,10 @@ errno_t _get_tzname(
 *sizeInBytes*<br/>
 *TimeZoneName*字元字串的大小（以位元組為單位）。
 
-*index*<br/>
+*指數*<br/>
 要擷取的兩個時區名稱中，其中一個時區名稱的索引。
 
-|*index*|*TimeZoneName*的內容|*timeZoneName*預設值|
+|*指數*|*TimeZoneName*的內容|*timeZoneName*預設值|
 |-|-|-|
 |0|時區名稱|"PST"|
 |1|日光節約標準時區名稱|"PDT"|
@@ -79,17 +81,19 @@ errno_t _get_tzname(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|傳回值|*TimeZoneName*的內容|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*指數*|傳回值|*TimeZoneName*的內容|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|時區名稱的大小|**NULL**|0|0 或 1|0|未修改|
-|時區名稱的大小|any|> 0|0 或 1|0|時區名稱|
-|未修改|**NULL**|> 0|any|**EINVAL**|未修改|
-|未修改|any|零|any|**EINVAL**|未修改|
-|未修改|any|> 0|> 1|**EINVAL**|未修改|
+|時區名稱的大小|**Null**|0|0 或 1|0|未修改|
+|時區名稱的大小|任意|> 0|0 或 1|0|時區名稱|
+|未修改|**Null**|> 0|任意|**EINVAL**|未修改|
+|未修改|任意|零|任意|**EINVAL**|未修改|
+|未修改|任意|> 0|> 1|**EINVAL**|未修改|
 
 ## <a name="remarks"></a>備註
 
-**_Get_tzname**函式會根據索引值，將目前時區名稱或日游標準時區名稱（DST）的字元字串表示，捕獲到*timeZoneName*的位址，以及中的字串大小。*pReturnValue*。 如果*timeZoneName*為**Null** ，而*sizeInBytes*為零，則在*pReturnValue*中會傳回用來保存指定時區和終止 Null （以位元組為單位）的字串大小。 標準時區的索引值必須是0或日光節約標準時區的1。*索引*的任何其他值都有未確定的結果。
+**_Get_tzname**函式會根據索引值，將目前時區名稱或日游標準時區名稱（DST）的字元字串表示，連同*pReturnValue*中的字串大小，抓取至*timeZoneName*的位址。 如果*timeZoneName*為**Null** ，而*sizeInBytes*為零，則在*pReturnValue*中會傳回用來保存指定時區和終止 Null （以位元組為單位）的字串大小。 標準時區的索引值必須是0或日光節約標準時區的1。*索引*的任何其他值都有未確定的結果。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="example"></a>範例
 
@@ -129,7 +133,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 The current Daylight standard time zone name is PDT.
@@ -141,12 +145,12 @@ The current Daylight standard time zone name is PDT.
 |-------------|---------------------|
 |**_get_tzname**|\<time.h>|
 
-如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [時間管理](../../c-runtime-library/time-management.md)<br/>
-[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist，和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>

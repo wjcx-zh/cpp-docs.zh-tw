@@ -1,5 +1,5 @@
 ---
-title: CPrivateObjectSecurityDesc 類別
+title: C私有物件安全德斯類
 ms.date: 11/04/2016
 f1_keywords:
 - CPrivateObjectSecurityDesc
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2fcfdfecab649b571047613ec0889b02d2c7a7a0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496574"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331408"
 ---
-# <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
+# <a name="cprivateobjectsecuritydesc-class"></a>C私有物件安全德斯類
 
-此類別代表私用物件安全描述項物件。
+此類表示私有物件安全描述符物件。
 
 ## <a name="syntax"></a>語法
 
@@ -35,31 +35,31 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 |名稱|描述|
 |----------|-----------------|
-|[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|建構函式。|
-|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|解構函式。|
+|[C私有物件安全資料::C私有物件安全數據](#cprivateobjectsecuritydesc)|建構函式。|
+|[C 私有物件安全資料:*C 私有物件安全資料c](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|呼叫這個方法, 將安全描述項和其存取控制清單 (Acl) 轉換成支援自動傳播可繼承存取控制專案 (Ace) 的格式。|
-|[CPrivateObjectSecurityDesc::Create](#create)|呼叫這個方法, 為呼叫資源管理員所建立的私用物件配置及初始化自我關聯的安全描述項。|
-|[CPrivateObjectSecurityDesc::Get](#get)|呼叫這個方法, 以從私用物件的安全描述項取得資訊。|
-|[CPrivateObjectSecurityDesc::Set](#set)|呼叫這個方法來修改私用物件的安全描述項。|
+|[C私有物件安全資料::轉換為自動繼承](#converttoautoinherit)|呼叫此方法可將安全描述符及其存取控制列表 (ACL) 轉換為支援自動傳播可繼承的存取控制項目 (ACEs) 的格式。|
+|[C 私有物件安全::建立](#create)|呼叫此方法以為調用資源管理器創建的私有物件分配和初始化自我相關安全描述符。|
+|[C 私有物件安全:取得](#get)|呼叫此方法從私有物件的安全描述符中檢索資訊。|
+|[C 私有物件安全::設定](#set)|呼叫此方法以修改私有物件的安全描述符。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
-|[operator =](#operator_eq)|指派運算子。|
+|[運算符 |](#operator_eq)|指派運算子。|
 
 ## <a name="remarks"></a>備註
 
-這個類別衍生自[CSecurityDesc](../../atl/reference/csecuritydesc-class.md), 提供建立和管理私用物件安全描述項的方法。
+此類派生自[CSecurityDesc,](../../atl/reference/csecuritydesc-class.md)它提供了建立和管理私有物件的安全描述符的方法。
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
+有關 Windows 中存取控制模型的簡介,請參閱 Windows SDK[中的存取控制](/windows/win32/SecAuthZ/access-control)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)
 
@@ -67,11 +67,11 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 ## <a name="requirements"></a>需求
 
-**標頭:** atlsecurity。h
+**標題:** atlsecurity.h
 
-##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit
+## <a name="cprivateobjectsecuritydescconverttoautoinherit"></a><a name="converttoautoinherit"></a>C私有物件安全資料::轉換為自動繼承
 
-呼叫這個方法, 將安全描述項和其存取控制清單 (Acl) 轉換成支援自動傳播可繼承存取控制專案 (Ace) 的格式。
+呼叫此方法可將安全描述符及其存取控制列表 (ACL) 轉換為支援自動傳播可繼承的存取控制項目 (ACEs) 的格式。
 
 ```
 bool ConvertToAutoInherit(
@@ -84,16 +84,16 @@ bool ConvertToAutoInherit(
 ### <a name="parameters"></a>參數
 
 *pParent*<br/>
-參考物件之父容器的[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件指標。 如果沒有父容器, 則此參數為 Null。
+指向引用該物件的父容器的[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標。 如果沒有父容器,則此參數為 NULL。
 
 *ObjectType*<br/>
-`GUID`結構的指標, 識別與目前物件相關聯的物件類型。 如果物件沒有 GUID, 請將*ObjectType*設定為 Null。
+指向標識與`GUID`當前物件關聯的物件類型的結構的指標。 如果物件沒有 GUID,則將*物件類型*設定為 NULL。
 
-*bIsDirectoryObject*<br/>
-指定新的物件是否可以包含其他物件。 值為 true 時, 表示新的物件是容器。 值為 false 時, 表示新的物件不是容器。
+*bIsDirectory 物件*<br/>
+指定新物件是否可以包含其他物件。 值為 true 表示新對像是容器。 false 值表示新物件不是容器。
 
-*GenericMapping*<br/>
-[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
+*通用對應*<br/>
+指向[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標,該結構指定從每個泛型許可權映射到物件的特定許可權。
 
 ### <a name="return-value"></a>傳回值
 
@@ -101,9 +101,9 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>備註
 
-這個方法會嘗試判斷目前安全描述項的任意存取控制清單 (DACL) 和系統存取控制清單 (SACL) 中的 Ace 是否繼承自父系安全描述項。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)函數。
+此方法嘗試確定當前安全描述符的可自由存取控制列表 (DACL) 和系統存取控制列表 (SACL) 中的 ACE 是否從父安全描述符繼承。 它調用[Convert 到自動繼承私有物件安全](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)功能。
 
-##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
+## <a name="cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="cprivateobjectsecuritydesc"></a>C私有物件安全資料::C私有物件安全數據
 
 建構函式。
 
@@ -115,7 +115,7 @@ CPrivateObjectSecurityDesc() throw();
 
 初始化 `CPrivateObjectSecurityDesc` 物件。
 
-##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc
+## <a name="cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="dtor"></a>C 私有物件安全資料:*C 私有物件安全資料c
 
 解構函式。
 
@@ -125,11 +125,11 @@ CPrivateObjectSecurityDesc() throw();
 
 ### <a name="remarks"></a>備註
 
-此析構函式會釋放所有配置的資源, 並刪除私用物件的安全描述項。
+析構函數釋放所有分配的資源,並刪除私有物件的安全描述符。
 
-##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create
+## <a name="cprivateobjectsecuritydesccreate"></a><a name="create"></a>C 私有物件安全::建立
 
-呼叫這個方法, 為呼叫資源管理員所建立的私用物件配置及初始化自我關聯的安全描述項。
+呼叫此方法以為調用資源管理器創建的私有物件分配和初始化自我相關安全描述符。
 
 ```
 bool Create(
@@ -152,28 +152,28 @@ bool Create(
 ### <a name="parameters"></a>參數
 
 *pParent*<br/>
-參考要在其中建立新物件之父目錄的[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件指標。 如果沒有上層目錄, 則設定為 Null。
+指向引用正在其中創建新物件的父目錄的[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標。 如果沒有父目錄,則設置為 NULL。
 
 *pCreator*<br/>
-物件的建立者所提供之安全描述項的指標。 如果物件的建立者未明確地傳遞新物件的安全性資訊, 請將此參數設定為 Null。
+指向物件創建者提供的安全描述符的指標。 如果物件的建立者未顯式傳遞新物件的安全資訊,則將此參數設置為 NULL。
 
-*bIsDirectoryObject*<br/>
-指定新的物件是否可以包含其他物件。 值為 true 時, 表示新的物件是容器。 值為 false 時, 表示新的物件不是容器。
+*bIsDirectory 物件*<br/>
+指定新物件是否可以包含其他物件。 值為 true 表示新對像是容器。 false 值表示新物件不是容器。
 
 *權杖*<br/>
-代表建立物件之用戶端進程的[CAccessToken](../../atl/reference/caccesstoken-class.md)物件參考。
+引用為其創建該物件的用戶端進程的[CAccessToken](../../atl/reference/caccesstoken-class.md)物件。
 
-*GenericMapping*<br/>
-[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
+*通用對應*<br/>
+指向[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標,該結構指定從每個泛型許可權映射到物件的特定許可權。
 
 *ObjectType*<br/>
-`GUID`結構的指標, 識別與目前物件相關聯的物件類型。 如果物件沒有 GUID, 請將*ObjectType*設定為 Null。
+指向標識與`GUID`當前物件關聯的物件類型的結構的指標。 如果物件沒有 GUID,則將*物件類型*設定為 NULL。
 
-*bIsContainerObject*<br/>
-指定新的物件是否可以包含其他物件。 值為 true 時, 表示新的物件是容器。 值為 false 時, 表示新的物件不是容器。
+*bIs容器物件*<br/>
+指定新物件是否可以包含其他物件。 值為 true 表示新對像是容器。 false 值表示新物件不是容器。
 
-*AutoInheritFlags*<br/>
-一組位旗標, 控制如何從*pParent*繼承存取控制專案 (ace)。 如需詳細資訊, 請參閱[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+*自動繼承標誌*<br/>
+一組位標誌,用於控制如何從*pParent*繼承存取控制項目 (ACE)。 有關詳細資訊[,請參閱創建私有物件安全Ex。](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)
 
 ### <a name="return-value"></a>傳回值
 
@@ -181,16 +181,16 @@ bool Create(
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
+此方法呼叫[建立私有物件異常或](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)[建立私有物件安全Ex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
 
-第二種方法允許指定新物件的物件類型 GUID, 或控制 Ace 的繼承方式。
+第二種方法允許指定新物件的物件類型 GUID 或控制 AES 的繼承方式。
 
 > [!NOTE]
->  自我關聯安全描述項是一個安全描述項, 可將其所有安全性資訊儲存在連續的記憶體區塊中。
+> 自我相對安全描述符是一種安全描述符,用於將其所有安全資訊存儲在連續記憶體塊中。
 
-##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get
+## <a name="cprivateobjectsecuritydescget"></a><a name="get"></a>C 私有物件安全:取得
 
-呼叫這個方法, 以從私用物件的安全描述項取得資訊。
+呼叫此方法從私有物件的安全描述符中檢索資訊。
 
 ```
 bool Get(
@@ -201,10 +201,10 @@ bool Get(
 ### <a name="parameters"></a>參數
 
 *si*<br/>
-一組位旗標, 指出要取得的安全描述項部分。 這個值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位旗標的組合。
+一組位標誌,指示要檢索的安全描述符的各個部分。 此值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位標誌的組合。
 
 *pResult*<br/>
-[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標, 它會從指定的安全描述項接收要求的資訊複本。
+指向從指定安全描述符接收請求資訊副本的[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -212,9 +212,9 @@ bool Get(
 
 ### <a name="remarks"></a>備註
 
-安全描述項是一個結構和相關聯的資料, 其中包含安全物件的安全性資訊。
+安全描述符是一個結構和關聯數據,其中包含可保護物件的安全資訊。
 
-##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =
+## <a name="cprivateobjectsecuritydescoperator-"></a><a name="operator_eq"></a>C 私有物件安全數據::運算符 |
 
 指派運算子。
 
@@ -225,15 +225,15 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-要`CPrivateObjectSecurityDesc`指派給目前物件的物件。
+要指派給目前物件的 `CPrivateObjectSecurityDesc` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新`CPrivateObjectSecurityDesc`的物件。
+返回更新`CPrivateObjectSecurityDesc`的物件。
 
-##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set
+## <a name="cprivateobjectsecuritydescset"></a><a name="set"></a>C 私有物件安全::設定
 
-呼叫這個方法來修改私用物件的安全描述項。
+呼叫此方法以修改私有物件的安全描述符。
 
 ```
 bool Set(
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>參數
 
 *si*<br/>
-一組位旗標, 指出要設定的安全描述項的各個部分。 這個值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位旗標的組合。
+一組位標誌,指示要設置的安全描述符的各個部分。 此值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位標誌的組合。
 
-*他人*<br/>
-[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標。 *Si*參數所指示的此安全描述項的部分會套用至物件的安全描述項。
+*修改*<br/>
+指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標。 *si*參數指示的安全描述符部分將應用於物件的安全描述符。
 
-*GenericMapping*<br/>
-[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
+*通用對應*<br/>
+指向[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標,該結構指定從每個泛型許可權映射到物件的特定許可權。
 
 *權杖*<br/>
-代表建立物件之用戶端進程的[CAccessToken](../../atl/reference/caccesstoken-class.md)物件參考。
+引用為其創建該物件的用戶端進程的[CAccessToken](../../atl/reference/caccesstoken-class.md)物件。
 
-*AutoInheritFlags*<br/>
-一組位旗標, 控制如何從*pParent*繼承存取控制專案 (ace)。 如需詳細資訊, 請參閱[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+*自動繼承標誌*<br/>
+一組位標誌,用於控制如何從*pParent*繼承存取控制項目 (ACE)。 有關詳細資訊[,請參閱創建私有物件安全Ex。](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)
 
 ### <a name="return-value"></a>傳回值
 
@@ -273,11 +273,11 @@ bool Set(
 
 ### <a name="remarks"></a>備註
 
-第二種方法允許指定物件的物件類型 GUID, 或控制 Ace 的繼承方式。
+第二種方法允許指定物件的物件類型 GUID 或控制 AES 的繼承方式。
 
 ## <a name="see-also"></a>另請參閱
 
 [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
-[類別總覽](../../atl/atl-class-overview.md)<br/>
-[安全性全域函式](../../atl/reference/security-global-functions.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[安全全域功能](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc 類別](../../atl/reference/csecuritydesc-class.md)

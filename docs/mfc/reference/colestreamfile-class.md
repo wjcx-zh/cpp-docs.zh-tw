@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 96e8fee71f02ea750fd8b33f41fd2fd517e9081e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 202f8381361881ce3b8b62f81da5bfb81a1f952d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503693"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753752"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 類別
 
@@ -43,30 +43,30 @@ class COleStreamFile : public CFile
 
 |名稱|描述|
 |----------|-----------------|
-|[COleStreamFile:: COleStreamFile](#colestreamfile)|建構 `COleStreamFile` 物件。|
+|[COleStream 檔案:COleStream 檔案](#colestreamfile)|建構 `COleStreamFile` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[COleStreamFile::Attach](#attach)|將資料流程與物件產生關聯。|
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|從全域記憶體建立資料流程, 並將它與物件產生關聯。|
-|[COleStreamFile::CreateStream](#createstream)|建立資料流程, 並將它與物件產生關聯。|
-|[COleStreamFile::Detach](#detach)|解除資料流程與物件的的比對。|
-|[COleStreamFile::GetStream](#getstream)|傳回目前的資料流程。|
-|[COleStreamFile::OpenStream](#openstream)|安全地開啟資料流程, 並將它與物件產生關聯。|
+|[COleStream 檔案:附加](#attach)|將流與對象關聯。|
+|[COleStream 檔案:建立記憶體](#creatememorystream)|從全域記憶體創建流並將其與對象關聯。|
+|[COleStream 檔案:建立串流](#createstream)|創建流並將其與對象關聯。|
+|[COleStream檔::D](#detach)|斷開流與物件分離。|
+|[COleStream 檔案:取得串流](#getstream)|返回當前流。|
+|[COleStream 檔案::開啟串流](#openstream)|安全地打開流並將其與對象關聯。|
 
 ## <a name="remarks"></a>備註
 
-`IStorage`物件必須存在, 才能開啟或建立資料流程, 除非它是記憶體資料流程。
+必須先`IStorage`存在一個物件,然後才能打開或創建流,除非它是記憶體流。
 
-`COleStreamFile`物件的操作方式與[CFile](../../mfc/reference/cfile-class.md)物件完全相同。
+`COleStreamFile`物件的操作與[CFile](../../mfc/reference/cfile-class.md)物件完全一樣。
 
-如需運算元據流和儲存體的詳細資訊, 請參閱[容器:複合檔案](../../mfc/containers-compound-files.md)。
+有關操作流和存儲的詳細資訊,請參閱文章[「容器:複合檔](../../mfc/containers-compound-files.md)」。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream)和[IStorage](/windows/win32/api/objidl/nn-objidl-istorage) 。
+有關詳細資訊,請參閱 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream)和[IStorage。](/windows/win32/api/objidl/nn-objidl-istorage)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -76,28 +76,28 @@ class COleStreamFile : public CFile
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxole。h
+**標題:** afxole.h
 
-##  <a name="attach"></a>COleStreamFile:: Attach
+## <a name="colestreamfileattach"></a><a name="attach"></a>COleStream 檔案:附加
 
-將提供的 OLE 資料流程與`COleStreamFile`物件產生關聯。
+將提供的 OLE`COleStreamFile`串流與物件關聯。
 
-```
+```cpp
 void Attach(LPSTREAM lpStream);
 ```
 
 ### <a name="parameters"></a>參數
 
 *lpStream*<br/>
-指向要與物件相關聯`IStream`的 OLE 資料流程 ()。 不可以是 NULL。
+指向要與物件關聯的`IStream`OLE 串流 ( )。 不能是 NULL。
 
 ### <a name="remarks"></a>備註
 
-物件必須尚未與 OLE 資料流程相關聯。
+物件必須尚未與 OLE 流關聯。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream) 。
+有關詳細資訊,請參閱 Windows SDK 中的[IStream。](/windows/win32/api/objidl/nn-objidl-istream)
 
-##  <a name="colestreamfile"></a>COleStreamFile:: COleStreamFile
+## <a name="colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStream 檔案:COleStream 檔案
 
 建立 `COleStreamFile` 物件。
 
@@ -108,17 +108,17 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="parameters"></a>參數
 
 *lpStream*<br/>
-要與物件相關聯之 OLE 資料流程的指標。
+指向要與物件關聯的 OLE 流的指標。
 
 ### <a name="remarks"></a>備註
 
-如果*lpStream*為 Null, 則物件不會與 ole 資料流程相關聯, 否則物件會與提供的 ole 資料流程相關聯。
+如果*lpStream*為 NULL,則該物件不與 OLE 流關聯,否則,該物件與提供的 OLE 串流相關聯。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream) 。
+有關詳細資訊,請參閱 Windows SDK 中的[IStream。](/windows/win32/api/objidl/nn-objidl-istream)
 
-##  <a name="creatememorystream"></a>COleStreamFile:: CreateMemoryStream
+## <a name="colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStream 檔案:建立記憶體
 
-安全地從全域共用記憶體建立新的資料流程, 其中失敗是正常且預期的狀況。
+安全地從全域共用記憶體中創建新流,其中故障是正常的預期條件。
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -127,21 +127,21 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="parameters"></a>參數
 
 *pError*<br/>
-指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或 Null, 表示建立作業的完成狀態。 如果您想要監視嘗試建立資料流程所產生的可能例外狀況, 請提供此參數。
+指向指示創建操作的完成狀態的[CFileException](../../mfc/reference/cfileexception-class.md)物件或 NULL。 如果要監視嘗試創建流生成的可能異常,請提供此參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立資料流程, 則為非零;否則為0。
+如果成功創建流,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-記憶體是由 OLE 子系統配置。
+記憶體由 OLE 子系統分配。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) 。
+有關詳細資訊,請參閱在 Windows SDK 中[創建 StreamOnHGlobal。](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal)
 
-##  <a name="createstream"></a>COleStreamFile:: CreateStream
+## <a name="colestreamfilecreatestream"></a><a name="createstream"></a>COleStream 檔案:建立串流
 
-在提供的儲存物件中安全地建立新的資料流程, 其中失敗是正常的預期狀況。
+在提供的存儲物件中安全地創建新流,其中故障是正常的預期條件。
 
 ```
 BOOL CreateStream(
@@ -153,31 +153,31 @@ BOOL CreateStream(
 
 ### <a name="parameters"></a>參數
 
-*lpStorage*<br/>
-指向包含要建立之資料流程的 OLE 儲存物件。 不可以是 NULL。
+*lp 儲存*<br/>
+指向包含要建立的流的 OLE 儲存物件。 不能是 NULL。
 
-*lpszStreamName*<br/>
-要建立之資料流程的名稱。 不可以是 NULL。
+*lpszStream名稱*<br/>
+要創建的流的名稱。 不能是 NULL。
 
 *nOpenFlags*<br/>
-開啟資料流程時要使用的存取模式。 預設會使用 [獨佔]、[讀取/寫入] 和 [建立] 模式。 如需可用模式的完整清單, 請參閱[CFile:: CFile](../../mfc/reference/cfile-class.md#cfile)。
+打開流時要使用的訪問模式。 預設情況下使用獨佔模式、讀/寫模式和創建模式。 有關可用模式的完整清單,請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。
 
 *pError*<br/>
-指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或 Null。 如果您想要監視嘗試建立資料流程所產生的可能例外狀況, 請提供此參數。
+指向[檔案檔案例外](../../mfc/reference/cfileexception-class.md)物件或 NULL。 如果要監視嘗試創建流生成的可能異常,請提供此參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立資料流程, 則為非零;否則為0。
+如果成功創建流,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果 open 失敗且*pError*不是 Null, 則會擲回檔案例外狀況。
+如果打開失敗,並且*pError*不是 NULL,則將引發文件異常。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IStorage:: CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) 。
+有關詳細資訊,請參閱[IStorage::](/windows/win32/api/objidl/nf-objidl-istorage-createstream)在 Windows SDK 中創建流。
 
-##  <a name="detach"></a>COleStreamFile::D etach
+## <a name="colestreamfiledetach"></a><a name="detach"></a>COleStream檔::D
 
-解除資料流程與物件的比對, 而不關閉資料流程。
+在不關閉流的情況下,斷開流與對象分離。
 
 ```
 LPSTREAM Detach();
@@ -185,17 +185,17 @@ LPSTREAM Detach();
 
 ### <a name="return-value"></a>傳回值
 
-與物件相關聯之資料流程`IStream`() 的指標。
+指向與物件關聯的流的指標`IStream`。
 
 ### <a name="remarks"></a>備註
 
-在程式終止之前, 必須以其他方式關閉資料流程。
+在程序終止之前,必須以其他方式關閉流。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream) 。
+有關詳細資訊,請參閱 Windows SDK 中的[IStream。](/windows/win32/api/objidl/nn-objidl-istream)
 
-##  <a name="getstream"></a>COleStreamFile:: GetStream
+## <a name="colestreamfilegetstream"></a><a name="getstream"></a>COleStream 檔案:取得串流
 
-呼叫此函式可傳回目前資料流程的指標。
+調用此函數以返回指向當前流的指標。
 
 ```
 IStream* GetStream() const;
@@ -203,11 +203,11 @@ IStream* GetStream() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前資料流程介面 ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) 的指標。
+指向當前流介面[(IStream)](/windows/win32/api/objidl/nn-objidl-istream)的指標。
 
-##  <a name="openstream"></a>COleStreamFile:: OpenStream
+## <a name="colestreamfileopenstream"></a><a name="openstream"></a>COleStream 檔案::開啟串流
 
-開啟現有的資料流程。
+打開現有流。
 
 ```
 BOOL OpenStream(
@@ -219,27 +219,27 @@ BOOL OpenStream(
 
 ### <a name="parameters"></a>參數
 
-*lpStorage*<br/>
-指向包含要開啟之資料流程的 OLE 儲存物件。 不可以是 NULL。
+*lp 儲存*<br/>
+指向包含要打開的流的 OLE 儲存物件。 不能是 NULL。
 
-*lpszStreamName*<br/>
-要開啟的資料流程名稱。 不可以是 NULL。
+*lpszStream名稱*<br/>
+要打開的流的名稱。 不能是 NULL。
 
 *nOpenFlags*<br/>
-開啟資料流程時要使用的存取模式。 預設會使用獨佔和讀取/寫入模式。 如需可用模式的完整清單, 請參閱[CFile:: CFile](../../mfc/reference/cfile-class.md#cfile)。
+打開流時要使用的訪問模式。 默認情況下使用獨佔和讀/寫模式。 有關可用模式的完整清單,請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。
 
 *pError*<br/>
-指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或 Null。 如果您想要監視嘗試開啟資料流程而產生的可能例外狀況, 請提供此參數。
+指向[檔案檔案例外](../../mfc/reference/cfileexception-class.md)物件或 NULL。 如果要監視嘗試打開流生成的可能異常,則提供此參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功開啟資料流程, 則為非零;否則為0。
+如果已成功打開流,則非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-如果 open 失敗且*pError*不是 Null, 則會擲回檔案例外狀況。
+如果打開失敗,並且*pError*不是 NULL,則將引發文件異常。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) 。
+有關詳細資訊,請參閱[IStorage::在](/windows/win32/api/objidl/nf-objidl-istorage-openstream)Windows SDK 中打開流。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: a27606b494b13cd7b50f01b38fa95a918bacc7aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6e87971e2afefc9cf1574abe951920c254dcd2ae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505267"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367487"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 類別
 
-`CMFCFontInfo`類別會描述字型的名稱和其他屬性。
+類別`CMFCFontInfo`描述字型的名稱和其他屬性。
 
 ## <a name="syntax"></a>語法
 
@@ -39,41 +39,41 @@ class CMFCFontInfo : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |`CMFCFontInfo`|建構 `CMFCFontInfo` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CMFCFontInfo::GetFullName](#getfullname)|抓取字型和其字元集 (腳本) 的串連名稱。|
+|[CMFC方資訊:取得全名](#getfullname)|檢索字體及其字元集(腳本)的串聯名稱。|
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCFontInfo::m_nCharSet](#m_ncharset)|值, 指定與字型相關聯的字元集 (腳本)。|
-|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|值, 指定字型的音調和系列。|
-|[CMFCFontInfo::m_nType](#m_ntype)|指定字型類型的值。|
-|[CMFCFontInfo::m_strName](#m_strname)|字型的名稱;例如, **Arial**。|
-|[CMFCFontInfo::m_strScript](#m_strscript)|與字型相關聯之字元集 (腳本) 的名稱。|
+|[CMFC方資訊::m_nCharSet](#m_ncharset)|指定與字型關聯的字元集(文稿)的值。|
+|[CMFC方資訊:m_nPitchAndFamily](#m_npitchandfamily)|指定字體的間距和族的值。|
+|[CMFC方資訊:m_nType](#m_ntype)|指定字型類型的值。|
+|[CMFC方資訊:m_strName](#m_strname)|字體的名稱;例如 **,Arial**。|
+|[CMFC方資訊::m_strScript](#m_strscript)|與字體關聯的字元集(文稿)的名稱。|
 
 ## <a name="remarks"></a>備註
 
-您可以將`CMFCFontInfo`物件附加至[CMFCToolBarFontComboBox 類別](../../mfc/reference/cmfctoolbarfontcombobox-class.md)類別的專案。 呼叫[CMFCToolBarFontComboBox:: GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc)方法, 以取得`CMFCFontInfo`物件的指標。
+您可以將`CMFCFontInfo`物件附加到[CMFCToolBarFontCombox 類](../../mfc/reference/cmfctoolbarfontcombobox-class.md)的項。 調用[CMFCToolBarFontCombox:getFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc)方法以檢`CMFCFontInfo`索指向 物件的指標。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用`CMFCFontInfo`類別的各種成員。 這個範例會示範如何`CMFCFontInfo` `CMFCRibbonFontComboBox`從取得物件, 以及如何存取它的本機變數。 這個範例是[MSOffice 2007 示範範例](../../overview/visual-cpp-samples.md)的一部分。
+下面的範例示範如何使用`CMFCFontInfo`類的各個成員。 該示例演示如何從`CMFCFontInfo``CMFCRibbonFontComboBox`獲取 物件以及如何訪問其局部變數。 此示例是[MSOffice 2007演示範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 
 ## <a name="requirements"></a>需求
 
-**標頭:** afxtoolbarfontcombobox。h
+**標題:** afxtoolbarfontcombox.h
 
-##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo
+## <a name="cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>CMFC方資訊:CMFC方資訊
 
 建構 `CMFCFontInfo` 物件。
 
@@ -90,33 +90,33 @@ CMFCFontInfo(const CMFCFontInfo& src);
 
 ### <a name="parameters"></a>參數
 
-*lpszName*<br/>
-在字型的名稱。 如需詳細資訊, 請`lfFaceName`參閱[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員。
+*lpsz名稱*<br/>
+[在]字型的名稱。 有關詳細資訊,請參閱`lfFaceName`[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員。
 
 *lpszScript*<br/>
-在字型的腳本名稱 (字元集)。
+[在]字型的文稿(字元集)的名稱。
 
 *nCharSet*<br/>
-在值, 指定字型的字元集 (腳本)。 如需詳細資訊, 請`lfCharSet`參閱[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員。
+[在]指定字型的字元集(文稿)的值。 有關詳細資訊,請參閱`lfCharSet`[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員。
 
-*nPitchAndFamily*<br/>
-在值, 指定字型的音調和系列。 如需詳細資訊, 請`lfPitchAndFamily`參閱[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員。
+*n 皮奇和家庭*<br/>
+[在]指定字體的間距和族的值。 有關詳細資訊,請參閱`lfPitchAndFamily`[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員。
 
 *nType*<br/>
-在指定字型類型的值。 這個參數可以是 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的位元組合 (OR)。
+[在]指定字型類型的值。 此參數可以是DEVICE_FONTTYPE、RASTER_FONTTYPE和TRUETYPE_FONTTYPE的位組合 (OR)。
 
 *src*<br/>
-在現有`CMFCFontInfo`的物件, 其成員會用來建立`CMFCFontInfo`此物件。
+[在]其成員用於`CMFCFontInfo`建構此`CMFCFontInfo`物件的現有物件。
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-本檔會使用詞彙*組*和*腳本*交換。 *腳本*(也稱為寫入系統) 是一組字元和規則的集合, 可用於以一或多個語言撰寫這些字元。 字元集合包含該腳本中使用的字母和標點符號。 例如, 在美國說出來的英文時, 會使用拉丁腳本, 而其字母包含從 A 到 Z 的字元。[LOGFONT 結構](/windows/win32/api/wingdi/ns-wingdi-logfontw)的成員會指定`lfCharSet`字元集。 例如, 值 ANSI_CHARSET 會指定 ANSI 字元集, 其中包含拉丁腳本的字母。
+此文件可相互換使用字*元集*與*文稿*。 *文本*(也稱為書寫系統)是用一種或多種語言書寫這些字元的字元和規則的集合。 字元的集合包括該腳本中使用的字母表和標點符號。 例如,拉丁語腳本用於英語,因為它在美國使用,其字母表包括從A到Z的字元。`lfCharSet` [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的成員指定字元集。 例如,值ANSI_CHARSET指定 ANSI 字元集,其中包括拉丁文本的字母表。
 
-##  <a name="getfullname"></a>CMFCFontInfo:: 問題
+## <a name="cmfcfontinfogetfullname"></a><a name="getfullname"></a>CMFC方資訊:取得全名
 
-抓取字型和其字元集 (腳本) 的串連名稱。
+檢索字體及其字元集(腳本)的串聯名稱。
 
 ```
 CString GetFullName() const;
@@ -124,15 +124,15 @@ CString GetFullName() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含字型名稱和腳本的字串。
+包含字型名稱和文稿的字串。
 
 ### <a name="remarks"></a>備註
 
-使用此方法可取得字型的完整名稱。 例如, 如果字型名稱是**Arial** , 而字型腳本是**斯拉夫**, 則此方法會傳回「arial (斯拉夫)」。
+使用此方法獲取字體的全名。 例如,如果字體名稱為**Arial,** 並且字體腳本為**西里爾,** 則此方法返回"Arial(西里爾)"。
 
-##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet
+## <a name="cmfcfontinfom_ncharset"></a><a name="m_ncharset"></a>CMFC方資訊::m_nCharSet
 
-值, 指定與字型相關聯的字元集 (腳本)。
+指定與字型關聯的字元集(文稿)的值。
 
 ```
 const BYTE m_nCharSet;
@@ -140,11 +140,11 @@ const BYTE m_nCharSet;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱[CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo)函數的*nCharSet*參數。
+有關詳細資訊,請參閱 CMFCFontInfo 的*nCharSet*參數[::CMFCFontInfo](#cmfcfontinfo)構造函數。
 
-##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily
+## <a name="cmfcfontinfom_npitchandfamily"></a><a name="m_npitchandfamily"></a>CMFC方資訊:m_nPitchAndFamily
 
-值, 指定字型的間距 (點大小) 和系列 (例如, serif、sans-serif 和等寬)。
+指定字體的間距(點大小)和族(例如,襯線、無襯線和單一空間)的值。
 
 ```
 const BYTE m_nPitchAndFamily;
@@ -152,9 +152,9 @@ const BYTE m_nPitchAndFamily;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱[CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo)函數的*nPitchAndFamily*參數。
+有關詳細資訊,請參閱 CMFCFontInfo 的*nPitch 和系列*參數[::CMFCFontInfo](#cmfcfontinfo)構造函數。
 
-##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType
+## <a name="cmfcfontinfom_ntype"></a><a name="m_ntype"></a>CMFC方資訊:m_nType
 
 指定字型類型的值。
 
@@ -164,11 +164,11 @@ const int m_nType;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱[CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo)函數的*nType*參數。
+有關詳細資訊,請參閱 CMFCFontInfo 的*nType*參數[::CMFCFontInfo](#cmfcfontinfo)構造函數。
 
-##  <a name="m_strname"></a>  CMFCFontInfo::m_strName
+## <a name="cmfcfontinfom_strname"></a><a name="m_strname"></a>CMFC方資訊:m_strName
 
-字型的名稱: 例如, **Arial**。
+字型名稱:例如 **,Arial**。
 
 ```
 const CString m_strName;
@@ -176,11 +176,11 @@ const CString m_strName;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱[CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo)函數的*lpszName*參數。
+有關詳細資訊,請參閱 CMFCFontInfo 的*lpszName*參數[::CMFCFontInfo](#cmfcfontinfo)構造函數。
 
-##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript
+## <a name="cmfcfontinfom_strscript"></a><a name="m_strscript"></a>CMFC方資訊::m_strScript
 
-與字型相關聯之字元集 (腳本) 的名稱。
+與字體關聯的字元集(文稿)的名稱。
 
 ```
 const CString m_strScript;
@@ -188,7 +188,7 @@ const CString m_strScript;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱[CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo)函數的*lpszScript*參數。
+有關詳細資訊,請參閱 CMFCFontInfo 的*lpszScript*參數[::CMFCFontInfo](#cmfcfontinfo)構造函數。
 
 ## <a name="see-also"></a>另請參閱
 

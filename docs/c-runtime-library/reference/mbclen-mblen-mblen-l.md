@@ -1,12 +1,16 @@
 ---
 title: _mbclen、mblen、_mblen_l、_mbclen_l
 description: 描述 Microsoft C 執行時間程式庫（CRT） _mbclen、mblen、_mblen_l 和 _mbclen_l 函數。
-ms.date: 01/08/2020
+ms.date: 4/2/2020
 api_name:
 - _mbclen
 - mblen
 - _mblen_l
 - _mbclen_l
+- _o__mbclen
+- _o__mbclen_l
+- _o__mblen_l
+- _o_mblen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +48,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: b004babc9e7c82d25cd52ec036c3061c99b5f367
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755075"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914363"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen、mblen、_mblen_l、_mbclen_l
 
@@ -89,7 +94,7 @@ int _mblen_l(
 *計數*\
 要檢查的位元組數目。
 
-*地區*設定\
+*語言*\
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -107,6 +112,8 @@ int _mblen_l(
 輸出值會受到地區設定的**LC_CTYPE**類別設定影響。 這些沒有 **_l**尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定。 **_L**尾碼的版本行為相同，但卻改用傳入的地區設定參數。 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)和[地區](../../c-runtime-library/locale.md)設定。
 
 **_mbclen**、 **_mblen_l**和 **_mbclen_l**是 Microsoft 特有的，而不是標準 C 程式庫的一部分。 我們不建議您在想要可攜的程式碼的地方使用它們。 針對標準 C 相容性，請改用**mblen**或**mbrlen** 。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -163,11 +170,11 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)\
-[Locale](../../c-runtime-library/locale.md)\
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
-[_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md)\
+[語言](../../c-runtime-library/locale.md)\
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy，_mbccpy_l](mbccpy-mbccpy-l.md)\
 [mbrlen](mbrlen.md)\
 [strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

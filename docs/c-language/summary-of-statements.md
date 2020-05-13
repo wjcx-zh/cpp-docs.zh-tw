@@ -11,57 +11,57 @@ ms.locfileid: "74856991"
 ---
 # <a name="summary-of-statements"></a>陳述式摘要
 
-*statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*compound-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-語句* /\* Microsoft 專有 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-語句* /\* Microsoft 特定 \*/
+*語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*加上標籤的語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*複合陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression 語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*選取範圍-語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*反復專案語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*跳躍語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-語句* / \* -Microsoft 專有\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-catch-finally 語句* / \* Microsoft 特有的\*/
 
-*jump-statement*：<br/>
+*跳躍語句*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**goto**  *識別碼*  **;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**繼續 ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**中斷 ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**return** *運算式*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**持續**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**崩潰**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*複合陳述式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{宣告** *-列出*<sub>opt</sub> *語句清單*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣告*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*清點*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *宣告*
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *陳述式*
 
-*expression-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*運算式*<sub>opt</sub> **;**
+*運算式語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
 
-*iteration-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *運算式*  **)**  *陳述式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**do**  *陳述式*  **while (**  *運算式*  **) ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**for (**  *運算式*<sub>opt</sub> **;** *運算式*<sub>opt</sub> **;** *運算式*<sub>opt</sub> **)** *陳述式*
+*反復專案語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**while （**  *運算式*  **）**  *語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**do**  *語句*  **while （**  *運算式*  **）;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**for （**  *expression*<sub>opt</sub> **;** *運算式*<sub>opt</sub> **;** *運算式*<sub>opt</sub> **）** *語句*
 
-*selection-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *運算式*  **)**  *陳述式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *運算式*  **)**  *陳述式*  **else**  *陳述式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (**  *運算式*  **)**  *陳述式*
+*選取範圍-語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if （**  *expression*  **）**  *語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if （**  *expression*  **）**  *語句*  **else**  *語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**switch （**  *expression*  **）**  *語句*
 
-*labeled-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*  **:**  *陳述式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *陳述式*<br/>
+加上*標籤的語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **：**  *語句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**case**  *常數運算式*  **：**  *語句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**預設 :**  *陳述式*
 
-*try-except-語句*：/\* Microsoft 特定 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *陳述式*  **)**  *compound-statement*
+*try-except-語句*：/\* Microsoft 專有\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *複合陳述式* **__except （**  *expression*  **）**  *複合陳述式*
 
-*try-finally-語句*：/\* Microsoft 特定的 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
+*try-catch-finally 語句*：/\* Microsoft 專有\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *複合陳述式* **__finally**  *複合陳述式*
 
 ## <a name="see-also"></a>請參閱
 
-[階段結構文法](../c-language/phrase-structure-grammar.md)
+[片語結構文法](../c-language/phrase-structure-grammar.md)

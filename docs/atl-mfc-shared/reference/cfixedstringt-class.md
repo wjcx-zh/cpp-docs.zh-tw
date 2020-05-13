@@ -9,16 +9,16 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-ms.openlocfilehash: 6c7649b7131e3b1620112acf89867d0731d7265d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe096185f6f0b71ad45757cd0b75ab13c41e5f5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317832"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 類別
 
-此類別代表固定的字元緩衝區的字串物件。
+此類表示具有固定字元緩衝區的字串物件。
 
 ## <a name="syntax"></a>語法
 
@@ -29,11 +29,11 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>參數
 
-*StringType*<br/>
-用於固定的字串物件的基底類別，而且可以是任何`CStringT`-基底類型。 部分範例包括`CString`， `CStringA`，和`CStringW`。
+*字串型別*<br/>
+用作固定字串物件的基類,可以是任何`CStringT`基於的類型。 一些範例`CString``CStringA`包括`CStringW`與 。
 
 *t_nChars*<br/>
-儲存在緩衝區中的字元數。
+緩衝區中存儲的字元數。
 
 ## <a name="members"></a>成員
 
@@ -41,27 +41,27 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 |名稱|描述|
 |----------|-----------------|
-|[CFixedStringT::CFixedStringT](#cfixedstringt)|字串物件的建構函式。|
+|[CFixedStringT:CFixedStringT](#cfixedstringt)|字串對象的構造函數。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CFixedStringT::operator =](#operator_eq)|指派新值到`CFixedStringT`物件。|
+|[CFixedStringT::運算符 |](#operator_eq)|為`CFixedStringT`物件分配新值。|
 
 ## <a name="remarks"></a>備註
 
-此類別為基礎的自訂字串類別的範例`CStringT`。 雖然相似，但這兩個類別有不同的實作。 之間的主要差異`CFixedStringT`和`CStringT`是：
+預設字串類別的樣本`CStringT`。 雖然相似,但兩個類在實現上有所不同。 和`CFixedStringT``CStringT`之間的 主要區別是:
 
-- 初始字元的緩衝區配置物件的一部分，而且大小*t_nChars*。 這可讓`CFixedString`佔用連續記憶體區塊，基於效能用途的物件。 不過，如果內容`CFixedStringT`超過下列大小時物件*t_nChars*，緩衝區會以動態方式配置。
+- 初始字元緩衝區作為物件的一部份分配,並且具有*大小t_nChars*。 這允許`CFixedString`物件出於性能目的佔用連續記憶體塊。 但是,如果`CFixedStringT`物件的內容增長到*超出t_nChars,* 則緩衝區將動態分配。
 
-- 字元緩衝區`CFixedStringT`物件永遠都是相同的長度 ( *t_nChars*)。 上的緩衝區大小沒有限制`CStringT`物件。
+- `CFixedStringT`物件的字元緩衝區的長度始終相同 *(t_nChars*)。 `CStringT`對象的緩衝區大小沒有限制。
 
-- Memory manager`CFixedStringT`使共用的自訂[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)之間兩個或多個物件`CFixedStringT`不允許的物件。 `CStringT` 物件不需要這項限制。
+- 的`CFixedStringT`記憶體管理員是自定義的,因此不允許在兩個或多個`CFixedStringT`對象之間共用[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)物件。 `CStringT`對象沒有此限制。
 
-如需有關自訂`CFixedStringT`和字串物件的記憶體管理一般情況下，請參閱 <<c2> [ 記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+有關字串物件的自訂`CFixedStringT`與記憶體管理的詳細資訊,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `IAtlStringMgr`
 
@@ -73,9 +73,9 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 ## <a name="requirements"></a>需求
 
-**標頭：** cstringt.h
+**標題:** cstringt.h
 
-##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT
+## <a name="cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringT:CFixedStringT
 
 建構 `CFixedStringT` 物件。
 
@@ -91,22 +91,22 @@ explicit CFixedStringT(const unsigned char* pszSrc);
 
 ### <a name="parameters"></a>參數
 
-*pszSrc*<br/>
-要複製到這個 null 結尾字串`CFixedStringT`物件。
+*皮茨斯爾克*<br/>
+要複製到此`CFixedStringT`物件的 null 中止字串。
 
-*strSrc*<br/>
-將現有`CFixedStringT`要複製到這個物件`CFixedStringT`物件。
+*斯特斯爾克*<br/>
+要複製到`CFixedStringT``CFixedStringT`此物件的現有物件。
 
-*pStringMgr*<br/>
-指向的記憶體管理員的`CFixedStringT`物件。 如需詳細資訊`IAtlStringMgr`和 記憶體管理`CFixedStringT`，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+*普斯特林姆格*<br/>
+指向物件的記憶體管理器的`CFixedStringT`指標。 有關 的詳細`IAtlStringMgr`資訊 和記憶體`CFixedStringT`管理 ,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ### <a name="remarks"></a>備註
 
-因為建構函式會將輸入的資料複製到新配置的儲存體，您應該注意可能會造成例外狀況，該記憶體。 部分這些建構函式做為轉換函式。
+由於建構函數將輸入資料複製到新的分配存儲中,因此您應該注意可能會出現記憶體異常。 其中一些構造函數充當轉換函數。
 
-##  <a name="operator_eq"></a>  CFixedStringT::operator =
+## <a name="cfixedstringtoperator-"></a><a name="operator_eq"></a>CFixedStringT::運算符 |
 
-重新初始化現有`CFixedStringT`物件的新資料。
+使用新資料重新初始化`CFixedStringT`現有物件。
 
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
@@ -119,15 +119,15 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& strSrc);
 
 ### <a name="parameters"></a>參數
 
-*pszSrc*<br/>
-要複製到這個 null 結尾字串`CFixedStringT`物件。
+*皮茨斯爾克*<br/>
+要複製到此`CFixedStringT`物件的 null 中止字串。
 
-*strSrc*<br/>
-將現有`CFixedStringT`複製到這個`CFixedStringT`物件。
+*斯特斯爾克*<br/>
+要複製到`CFixedStringT`此`CFixedStringT`物件的現有。
 
 ### <a name="remarks"></a>備註
 
-您應該注意可能會發生例外狀況，每當您使用指派運算子，因為新的儲存體通常配置來保存所產生的記憶體`CFixedStringT`物件。
+您應該注意,每當使用賦值運算符時,都可能發生記憶體異常,因為通常分配新存儲來保存生成的`CFixedStringT`物件。
 
 ## <a name="see-also"></a>另請參閱
 

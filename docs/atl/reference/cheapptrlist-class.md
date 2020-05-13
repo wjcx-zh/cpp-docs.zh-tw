@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0500ab8f76049aeaf1c89355ea5450a93243b734
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245643"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326865"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList 類別
 
-建構一份堆積指標時，這個類別會提供有用的方法。
+此類提供構造堆指標清單時有用的方法。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,10 +34,10 @@ class CHeapPtrList
 #### <a name="parameters"></a>參數
 
 *E*<br/>
-要儲存在集合類別的物件類型。
+要存儲在集合類中的物件類型。
 
-*Allocator*<br/>
-要使用的記憶體配置類別。 預設值是[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)。
+*配置器*<br/>
+要使用的記憶體分配類。 預設值為[CCRT 分配器](../../atl/reference/ccrtallocator-class.md)。
 
 ## <a name="members"></a>成員
 
@@ -45,13 +45,13 @@ class CHeapPtrList
 
 |名稱|描述|
 |----------|-----------------|
-|[CHeapPtrList::CHeapPtrList](#cheapptrlist)|建構函式。|
+|[CHeapPtr 清單:CHeapPtrList](#cheapptrlist)|建構函式。|
 
 ## <a name="remarks"></a>備註
 
-這個類別提供建構函式，並衍生方法從[CAtlList](../../atl/reference/catllist-class.md)並[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)協助儲存堆積指標集合類別物件的建立。
+此類提供一個構造函數,並從[CAtlList](../../atl/reference/catllist-class.md)和[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)派生方法,以幫助創建記憶體指標的集合類物件。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CAtlList](../../atl/reference/catllist-class.md)
 
@@ -59,9 +59,9 @@ class CHeapPtrList
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標題:** atlcoll.h
 
-##  <a name="cheapptrlist"></a>  CHeapPtrList::CHeapPtrList
+## <a name="cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtr 清單:CHeapPtrList
 
 建構函式。
 
@@ -76,11 +76,11 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>備註
 
-區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小會減少記憶體配置常式，呼叫，但使用較多資源。
+塊大小是需要新元素時分配的記憶體量的度量。 較大的塊大小減少了對記憶體分配例程的調用,但使用的資源更多。
 
 ## <a name="see-also"></a>另請參閱
 
 [CAtlList 類別](../../atl/reference/catllist-class.md)<br/>
 [CHeapPtr 類別](../../atl/reference/cheapptr-class.md)<br/>
-[CHeapPtrElementTraits 類別](../../atl/reference/cheapptrelementtraits-class.md)<br/>
+[CHeapPtr 元素類別](../../atl/reference/cheapptrelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

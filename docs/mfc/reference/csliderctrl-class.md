@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 8fffdfc002b25fdcd72dcbbf53e7e6c321f55296
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502511"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751270"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 
@@ -95,7 +95,7 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|建構 `CSliderCtrl` 物件。|
 
@@ -103,55 +103,55 @@ class CSliderCtrl : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CSliderCtrl::ClearSel](#clearsel)|清除滑杆控制項中目前的選取範圍。|
-|[CSliderCtrl::ClearTics](#cleartics)|從滑杆控制項中移除目前的刻度。|
-|[CSliderCtrl::Create](#create)|建立滑杆控制項並將其附加至`CSliderCtrl`物件。|
-|[CSliderCtrl::CreateEx](#createex)|建立具有指定之 Windows 擴充樣式的滑杆控制項，並將其附加`CSliderCtrl`至物件。|
-|[CSliderCtrl::GetBuddy](#getbuddy)|抓取位於指定位置之滑杆控制項好友視窗的控制碼。|
-|[CSliderCtrl::GetChannelRect](#getchannelrect)|抓取滑杆控制項的通道大小。|
-|[CSliderCtrl::GetLineSize](#getlinesize)|抓取滑杆控制項的線條大小。|
-|[CSliderCtrl::GetNumTics](#getnumtics)|抓取滑杆控制項中的刻度數。|
-|[CSliderCtrl::GetPageSize](#getpagesize)|抓取滑杆控制項的頁面大小。|
-|[CSliderCtrl::GetPos](#getpos)|抓取滑杆的目前位置。|
-|[CSliderCtrl::GetRange](#getrange)|抓取滑杆的最小和最大位置。|
-|[CSliderCtrl::GetRangeMax](#getrangemax)|抓取滑杆的最大位置。|
-|[CSliderCtrl::GetRangeMin](#getrangemin)|抓取滑杆的最小位置。|
-|[CSliderCtrl::GetSelection](#getselection)|抓取目前選取範圍的範圍。|
-|[CSliderCtrl::GetThumbLength](#getthumblength)|抓取目前的  跟蹤 控制項中滑杆的長度。|
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|抓取滑杆控制項捲動方塊的大小。|
-|[CSliderCtrl::GetTic](#gettic)|抓取指定之刻度的位置。|
-|[CSliderCtrl::GetTicArray](#getticarray)|抓取滑杆控制項之刻度標記位置的陣列。|
-|[CSliderCtrl::GetTicPos](#getticpos)|在用戶端座標中，捕獲指定之刻度的位置。|
-|[CSliderCtrl::GetToolTips](#gettooltips)|抓取指派給滑杆控制項的工具提示控制項的控制碼（如果有的話）。|
-|[CSliderCtrl::SetBuddy](#setbuddy)|將視窗指派為滑杆控制項的合作者視窗。|
-|[CSliderCtrl::SetLineSize](#setlinesize)|設定滑杆控制項的線條大小。|
-|[CSliderCtrl::SetPageSize](#setpagesize)|設定滑杆控制項的頁面大小。|
-|[CSliderCtrl::SetPos](#setpos)|設定滑杆的目前位置。|
-|[CSliderCtrl::SetRange](#setrange)|設定滑杆的最小和最大位置。|
-|[CSliderCtrl::SetRangeMax](#setrangemax)|設定滑杆的最大位置。|
-|[CSliderCtrl::SetRangeMin](#setrangemin)|設定滑杆的最小位置。|
-|[CSliderCtrl::SetSelection](#setselection)|設定目前選取範圍。|
-|[CSliderCtrl::SetThumbLength](#setthumblength)|設定目前的 在|
-|[CSliderCtrl::SetTic](#settic)|設定指定之刻度的位置。|
-|[CSliderCtrl::SetTicFreq](#setticfreq)|設定每個滑杆控制項增量的刻度頻率。|
-|[CSliderCtrl::SetTipSide](#settipside)|放置 [並排] 控制項所使用的工具提示控制項。|
-|[CSliderCtrl::SetToolTips](#settooltips)|將工具提示控制項指派給滑杆控制項。|
+|[CSliderCtrl::清除塞爾](#clearsel)|清除滑塊控制項中的目前選擇。|
+|[CSliderCtrl::清除](#cleartics)|從滑塊控制項中刪除目前的刻度線。|
+|[CSliderCtrl::建立](#create)|創建滑塊控制項並將其附加到`CSliderCtrl`物件。|
+|[CSliderCtrl::創建Ex](#createex)|使用指定的 Windows 擴充樣式創建滑塊控制項並將`CSliderCtrl`其附加到 物件。|
+|[CSliderCtrl:GetBuddy](#getbuddy)|將句柄檢索到給定位置的滑塊控制項夥伴視窗。|
+|[CSliderCtrl::取得通道Rect](#getchannelrect)|檢索滑塊控制件通道的大小。|
+|[CSliderCtrl::取得線尺寸](#getlinesize)|檢索滑塊控制件的行大小。|
+|[CSliderCtrl:getNumTics](#getnumtics)|檢索滑塊控制項中的刻度線數。|
+|[CSliderCtrl::取得頁面大小](#getpagesize)|檢索滑塊控制件的頁面大小。|
+|[CSliderCtrl:GetPos](#getpos)|檢索滑塊的當前位置。|
+|[CSliderCtrl:取得範圍](#getrange)|檢索滑塊的最小和最大位置。|
+|[CSliderCtrl::取得山脈最大值](#getrangemax)|檢索滑塊的最大位置。|
+|[CSliderCtrl::取得蘭格明](#getrangemin)|檢索滑塊的最小位置。|
+|[CSliderCtrl:取得選擇](#getselection)|檢索當前選擇的範圍。|
+|[CSliderCtrl::獲取拇指長度](#getthumblength)|檢索當前軌道欄控件中的滑塊長度。|
+|[CSliderCtrl::取得Thumbrect](#getthumbrect)|檢索滑塊控件的拇指的大小。|
+|[CSliderCtrl:GetTic](#gettic)|檢索指定刻度線的位置。|
+|[CSliderCtrl::取得蒂卡雷](#getticarray)|檢索滑塊控制項的刻度線位置陣列。|
+|[CSliderCtrl::取得蒂波](#getticpos)|在用戶端座標中檢索指定刻度線的位置。|
+|[CSliderCtrl:抓取工具提示](#gettooltips)|檢索分配給滑塊控制項的工具提示控件的句柄(如果有)。|
+|[CSliderCtrl::SetBuddy](#setbuddy)|將視窗指定為滑塊控制件的好友視窗。|
+|[CSliderCtrl::設定線大小](#setlinesize)|設置滑塊控制元件的線大小。|
+|[CSliderCtrl::設定頁面大小](#setpagesize)|設置滑塊控制件的頁面大小。|
+|[CSliderCtrl::SetPos](#setpos)|設置滑塊的當前位置。|
+|[CSliderCtrl::設定範圍](#setrange)|設置滑塊的最小和最大位置。|
+|[CSliderCtrl::SetRangeMax](#setrangemax)|設置滑塊的最大位置。|
+|[CSliderCtrl::SetRangeMin](#setrangemin)|設置滑塊的最小位置。|
+|[CSliderCtrl::設定選擇](#setselection)|設置當前選擇的範圍。|
+|[CSliderCtrl::設置拇指長度](#setthumblength)|設置當前軌道欄控件中的滑塊長度。|
+|[CSliderCtrl::SetTic](#settic)|設置指定刻度線的位置。|
+|[CSliderCtrl::SetTicFreq](#setticfreq)|設置每個滑塊控制的刻度標記頻率。|
+|[CSliderCtrl::SetTipside](#settipside)|定位軌道桿控件使用的工具提示控制項。|
+|[CSliderCtrl::設定工具提示](#settooltips)|將工具提示控制項分配給滑塊控制項。|
 
 ## <a name="remarks"></a>備註
 
-「滑杆控制項」（也稱為「捲軸」）是一個視窗，其中包含滑杆和選擇性的刻度標記。 當使用者使用滑鼠或方向鍵移動滑杆時，控制項會傳送通知訊息來表示變更。
+"滑塊控制件"(也稱為軌道列)是包含滑塊和可選刻度線的視窗。 當使用者使用滑鼠或方向鍵移動滑塊時,控件會發送通知消息以指示更改。
 
 當您想要使用者選取一個不連續的值或一組範圍內的連續值時，滑桿控制項就很有用。 例如，您可以使用滑桿控制項允許使用者透過移動滑桿至指定的刻度標記，設定鍵盤的重複率。
 
-這個控制項（因此`CSliderCtrl`類別）僅適用于在 windows 95/98 和 windows NT 3.51 版和更新版本下執行的程式。
+此控制項(因此該`CSliderCtrl`類別)僅適用於在 Windows 95/98 和 Windows NT 版本 3.51 及更高版本下運行的程式。
 
-滑杆會以您在建立時所指定的增量移動。 例如，如果您指定滑杆的範圍應為五個，則滑杆只能佔用六個位置：滑杆控制項左邊的位置，以及範圍內每個增量的一個位置。 一般來說，這些位置的每一個都以刻度標記來識別。
+滑塊以創建滑塊時指定的增量移動。 例如,如果指定滑塊應具有 5 個範圍,則滑塊只能佔據六個位置:滑塊控制件左側的位置和範圍中每個增量的一個位置。 一般來說，這些位置的每一個都以刻度標記來識別。
 
-您可以使用的函式和`Create`成員`CSliderCtrl`函式來建立滑杆。 建立滑杆控制項之後，您可以使用中`CSliderCtrl`的成員函式來變更其許多屬性。 您可以進行的變更包括設定滑桿的最小和最大位置、繪製刻度標記、設定選取範圍，以及重新調整滑桿定位。
+通過使用建構函數和`Create``CSliderCtrl`的成員函數創建滑塊。 創建滑塊控制項後,可以使用中`CSliderCtrl`的成員函數來更改其許多屬性。 您可以進行的變更包括設定滑桿的最小和最大位置、繪製刻度標記、設定選取範圍，以及重新調整滑桿定位。
 
-如需使用`CSliderCtrl`的詳細資訊，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。
+有關`CSliderCtrl`使用的詳細資訊,請參閱[控制項](../../mfc/controls-mfc.md)[與使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -165,35 +165,35 @@ class CSliderCtrl : public CWnd
 
 **標頭：** afxcmn.h
 
-##  <a name="clearsel"></a>CSliderCtrl：： ClearSel
+## <a name="csliderctrlclearsel"></a><a name="clearsel"></a>CSliderCtrl::清除塞爾
 
-清除滑杆控制項中目前的選取範圍。
+清除滑塊控制項中的目前選擇。
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bRedraw*<br/>
-重繪旗標。 如果此參數為 TRUE，則會在清除選取範圍之後重新繪製滑杆;否則滑杆不會重新繪製。
+*bredraw*<br/>
+重繪標誌。 如果此參數為 TRUE,則在清除所選內容後重繪滑塊;如果此參數為 TRUE,則在清除所選內容後重新繪製滑塊。否則,不會重繪滑塊。
 
-##  <a name="cleartics"></a>  CSliderCtrl::ClearTics
+## <a name="csliderctrlcleartics"></a><a name="cleartics"></a>CSliderCtrl::清除
 
-從滑杆控制項中移除目前的刻度。
+從滑塊控制項中刪除目前的刻度線。
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bRedraw*<br/>
-重繪旗標。 如果此參數為 TRUE，則會在清除刻度之後重新繪製滑杆;否則滑杆不會重新繪製。
+*bredraw*<br/>
+重繪標誌。 如果此參數為 TRUE,則在清除刻度線後重繪滑塊;如果此參數為 TRUE,則在清除刻度線後重新繪製滑塊。否則,不會重繪滑塊。
 
-##  <a name="create"></a>CSliderCtrl：： Create
+## <a name="csliderctrlcreate"></a><a name="create"></a>CSliderCtrl::建立
 
-建立滑杆控制項並將其附加至`CSliderCtrl`物件。
+創建滑塊控制項並將其附加到`CSliderCtrl`物件。
 
 ```
 virtual BOOL Create(
@@ -206,32 +206,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定滑杆控制項的樣式。 將[滑杆控制項樣式](/windows/win32/Controls/trackbar-control-styles)的任意組合（如 Windows SDK 中所述）套用至控制項。
+指定滑塊控制件的樣式。 將 Windows SDK 中描述的[滑塊控制項樣式](/windows/win32/Controls/trackbar-control-styles)的任意組合應用於控制項。
 
-*rect*<br/>
-指定滑杆控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+*矩形*<br/>
+指定滑塊控制項大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
-*pParentWnd*<br/>
-指定滑杆控制項的父視窗，通常是`CDialog`。 不得為 Null。
+*pparentwnd*<br/>
+指定滑動器的父視窗(通常為`CDialog`。 它不得為 NULL。
 
 *nID*<br/>
-指定滑杆控制項的識別碼。
+指定滑塊控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果初始化成功，則為非零;否則為0。
+初始化成功時非零;否則 0。
 
 ### <a name="remarks"></a>備註
 
-您可以使用`CSliderCtrl`兩個步驟來建立。 首先，呼叫此函式，然後呼叫`Create`，它會建立滑杆控制項並將其附加`CSliderCtrl`至物件。
+在兩個步驟`CSliderCtrl`中構造 一個。 首先調用構造函數,然後調用`Create`,這將創建滑塊控制項並將其附加`CSliderCtrl`到 物件。
 
-根據為*dwStyle*所設定的值而定，滑杆控制項可以是垂直或水準方向。 它可以在兩側、兩邊或兩者都有刻度標記。 它也可以用來指定連續值的範圍。
+根據為*dwStyle*設置的值,滑塊控制項可以具有垂直或水準方向。 它可以有兩側,雙方,或兩者沒有刻度線。 它還可用於指定連續值的範圍。
 
-若要將擴充的視窗樣式套用至滑杆控制項，請呼叫[CreateEx](#createex)，而不是`Create`。
+要將延伸視窗樣式套用於滑動項控制,請呼叫[CreateEx](#createex)`Create`而不是 。
 
-##  <a name="createex"></a>CSliderCtrl：： CreateEx
+## <a name="csliderctrlcreateex"></a><a name="createex"></a>CSliderCtrl::創建Ex
 
-建立控制項（子視窗），並將它與`CSliderCtrl`物件產生關聯。
+創建控制項(子視窗),並將其與`CSliderCtrl`物件關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -245,19 +245,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定所要建立之控制項的延伸樣式。 如需擴充 Windows 樣式的清單，請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
+指定要創建的控制項的擴充樣式。 有關擴展 Windows 樣式的清單,請參閱 Windows SDK 中[創建 WindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-指定滑杆控制項的樣式。 將[滑杆控制項樣式](/windows/win32/Controls/trackbar-control-styles)的任意組合（如 Windows SDK 中所述）套用至控制項。
+指定滑塊控制件的樣式。 將 Windows SDK 中描述的[滑塊控制項樣式](/windows/win32/Controls/trackbar-control-styles)的任意組合應用於控制項。
 
-*rect*<br/>
-[矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考，描述要建立之視窗的大小和位置，以*pParentWnd*的用戶端座標表示。
+*矩形*<br/>
+對[RECT](/windows/win32/api/windef/ns-windef-rect)結構的引用,描述要創建的視窗的大小和位置,在*pParentWnd*的用戶端座標中。
 
-*pParentWnd*<br/>
-做為控制項父系之視窗的指標。
+*pparentwnd*<br/>
+指向控件的父視窗的指標。
 
 *nID*<br/>
-控制項的子視窗識別碼。
+控制項的子視窗 ID。
 
 ### <a name="return-value"></a>傳回值
 
@@ -265,9 +265,9 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx` ，而不是[Create](#create)來套用擴充的 windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。
+使用`CreateEx`而不是[「創建](#create)」來應用擴展的 Windows 樣式,該樣式由 Windows 擴充樣式前言**WS_EX_** 指定。
 
-##  <a name="csliderctrl"></a>CSliderCtrl：： CSliderCtrl
+## <a name="csliderctrlcsliderctrl"></a><a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl
 
 建構 `CSliderCtrl` 物件。
 
@@ -275,9 +275,9 @@ virtual BOOL CreateEx(
 CSliderCtrl();
 ```
 
-##  <a name="getbuddy"></a>CSliderCtrl：： GetBuddy
+## <a name="csliderctrlgetbuddy"></a><a name="getbuddy"></a>CSliderCtrl:GetBuddy
 
-抓取位於指定位置之滑杆控制項好友視窗的控制碼。
+將句柄檢索到給定位置的滑塊控制項夥伴視窗。
 
 ```
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;
@@ -286,40 +286,40 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="parameters"></a>參數
 
 *fLocation*<br/>
-布林值，指出要抓取的兩個合作者視窗控制碼中的哪一個。 可為下列其中一個值：
+一個布爾值,指示要檢索的兩個好友視窗句柄之一。 可以是下列其中一個值：
 
-- TRUE 會抓取滑杆左邊的好友控制碼。 如果滑杆控制項使用 TBS_VERT 樣式，訊息將會抓取滑杆上方的好友。
+- TRUE 檢索滑塊左側好友的句柄。 如果滑塊控件使用TBS_VERT樣式,則消息將在滑塊上方檢索好友。
 
-- FALSE 會抓取滑杆右邊的合作者控制碼。 如果滑杆控制項使用 TBS_VERT 樣式，訊息將會抓取滑杆下方的好友。
+- FALSE 檢索滑塊右側好友的句柄。 如果滑塊控件使用TBS_VERT樣式,則消息將檢索滑塊下方的好友。
 
 ### <a name="return-value"></a>傳回值
 
-[CWnd](../../mfc/reference/cwnd-class.md)物件的指標，這是*fLocation*所指定位置的合作者視窗，如果該位置沒有任何合作者視窗，則為 Null。
+指向[CWnd](../../mfc/reference/cwnd-class.md)物件的指標,該物件位於*fLocation*指定的位置的好友視窗,如果該位置不存在好友視窗,則指向 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy)的行為，如 Windows SDK 中所述。 如需滑杆控制項樣式的說明，請參閱 Windows SDK 中的 [敘述][控制項樣式](/windows/win32/Controls/trackbar-control-styles)。
+此成員函數實現 Win32 消息[TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy)的行為,如 Windows SDK 中所述。 有關滑塊控制項樣式的說明,請參閱 Windows SDK 中的[「追蹤欄控制件樣式](/windows/win32/Controls/trackbar-control-styles)」。
 
-##  <a name="getchannelrect"></a>CSliderCtrl：： GetChannelRect
+## <a name="csliderctrlgetchannelrect"></a><a name="getchannelrect"></a>CSliderCtrl::取得通道Rect
 
-抓取滑杆控制項通道的周框大小和位置。
+檢索滑塊控制元件通道的邊界矩形的大小和位置。
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*lprc*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標，其中包含函式傳回時，通道周框的大小和位置。
+*利赫浦*<br/>
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標,該物件在函數傳回時包含通道邊界矩形的大小和位置。
 
 ### <a name="remarks"></a>備註
 
-通道是滑杆移動的區域，其中包含選取範圍時的反白顯示。
+通道是滑塊移動的區域,在選擇範圍時包含高光。
 
-##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize
+## <a name="csliderctrlgetlinesize"></a><a name="getlinesize"></a>CSliderCtrl::取得線尺寸
 
-抓取滑杆控制項的線條大小。
+檢索滑塊控制件的行大小。
 
 ```
 int GetLineSize() const;
@@ -327,15 +327,15 @@ int GetLineSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-滑杆控制項的線條大小。
+滑塊控制的線條大小。
 
 ### <a name="remarks"></a>備註
 
-線條大小會影響滑杆針對 TB_LINEUP 和 TB_LINEDOWN 通知移動的程度。 線條大小的預設設定為1。
+行大小會影響滑塊為TB_LINEUP和TB_LINEDOWN通知移動的幅度。 行大小的預設設置為 1。
 
-##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics
+## <a name="csliderctrlgetnumtics"></a><a name="getnumtics"></a>CSliderCtrl:getNumTics
 
-抓取滑杆控制項中的刻度數。
+檢索滑塊控制項中的刻度線數。
 
 ```
 UINT GetNumTics() const;
@@ -343,11 +343,11 @@ UINT GetNumTics() const;
 
 ### <a name="return-value"></a>傳回值
 
-滑杆控制項中的刻度數。
+滑塊控制項中的刻度線數。
 
-##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize
+## <a name="csliderctrlgetpagesize"></a><a name="getpagesize"></a>CSliderCtrl::取得頁面大小
 
-抓取滑杆控制項的頁面大小。
+檢索滑塊控制件的頁面大小。
 
 ```
 int GetPageSize() const;
@@ -355,15 +355,15 @@ int GetPageSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-滑杆控制項的頁面大小。
+滑塊控制項的頁面大小。
 
 ### <a name="remarks"></a>備註
 
-頁面大小會影響 TB_PAGEUP 和 TB_PAGEDOWN 通知的滑杆移動量。
+頁面大小會影響滑塊為TB_PAGEUP移動和TB_PAGEDOWN通知的移動量。
 
-##  <a name="getpos"></a>CSliderCtrl：： GetPos
+## <a name="csliderctrlgetpos"></a><a name="getpos"></a>CSliderCtrl:GetPos
 
-抓取滑杆控制項中滑杆的目前位置。
+檢索滑塊控制項中的滑塊的當前位置。
 
 ```
 int GetPos() const;
@@ -373,11 +373,11 @@ int GetPos() const;
 
 目前位置。
 
-##  <a name="getrange"></a>CSliderCtrl：： GetRange
+## <a name="csliderctrlgetrange"></a><a name="getrange"></a>CSliderCtrl:取得範圍
 
-抓取滑杆控制項中滑杆的最大和最小位置。
+檢索滑塊控制項中滑塊的最大和最小位置。
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -386,18 +386,18 @@ void GetRange(
 ### <a name="parameters"></a>參數
 
 *nMin*<br/>
-參考接收最小位置的整數。
+引用接收最小位置的整數。
 
 *nMax*<br/>
-參考接收最大位置的整數。
+對接收最大位置的整數的引用。
 
 ### <a name="remarks"></a>備註
 
-此函式會將值複製到*n 每天下限*和*n 上限*所參考的整數中。
+此函數將值複製到*nMin*和*nMax*引用的整數中。
 
-##  <a name="getrangemax"></a>CSliderCtrl：： GetRangeMax
+## <a name="csliderctrlgetrangemax"></a><a name="getrangemax"></a>CSliderCtrl::取得山脈最大值
 
-抓取滑杆控制項中滑杆的最大位置。
+檢索滑塊控制項中滑塊的最大位置。
 
 ```
 int GetRangeMax() const;
@@ -407,9 +407,9 @@ int GetRangeMax() const;
 
 控制項的最大位置。
 
-##  <a name="getrangemin"></a>CSliderCtrl：： GetRangeMin
+## <a name="csliderctrlgetrangemin"></a><a name="getrangemin"></a>CSliderCtrl::取得蘭格明
 
-抓取滑杆控制項中滑杆的最小位置。
+檢索滑塊控制件中的滑塊的最小位置。
 
 ```
 int GetRangeMin() const;
@@ -417,13 +417,13 @@ int GetRangeMin() const;
 
 ### <a name="return-value"></a>傳回值
 
-控制項的最小位置。
+控制項最小位置。
 
-##  <a name="getselection"></a>CSliderCtrl：： GetSelection
+## <a name="csliderctrlgetselection"></a><a name="getselection"></a>CSliderCtrl:取得選擇
 
-抓取滑杆控制項中目前選取範圍的開始和結束位置。
+在滑塊控制項中檢索當前選擇的起始位置和結束位置。
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -432,14 +432,14 @@ void GetSelection(
 ### <a name="parameters"></a>參數
 
 *nMin*<br/>
-參考接收目前選取範圍之開始位置的整數。
+引用接收當前選擇的起始位置的整數。
 
 *nMax*<br/>
-參考接收目前選取範圍結束位置的整數。
+引用接收當前所選內容的結束位置的整數。
 
-##  <a name="getthumblength"></a>CSliderCtrl：： GetThumbLength
+## <a name="csliderctrlgetthumblength"></a><a name="getthumblength"></a>CSliderCtrl::獲取拇指長度
 
-抓取目前的  跟蹤 控制項中滑杆的長度。
+檢索當前軌道欄控件中的滑塊長度。
 
 ```
 int GetThumbLength() const;
@@ -447,28 +447,28 @@ int GetThumbLength() const;
 
 ### <a name="return-value"></a>傳回值
 
-滑杆的長度（以圖元為單位）。
+滑塊的長度(以像素為單位)。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TBM_GETTHUMBLENGTH](/windows/win32/Controls/tbm-getthumblength)訊息，如 Windows SDK 中所述。
+此方法發送[TBM_GETTHUMBLENGTH](/windows/win32/Controls/tbm-getthumblength)消息,這在 Windows SDK 中介紹。
 
-##  <a name="getthumbrect"></a>CSliderCtrl：： GetThumbRect
+## <a name="csliderctrlgetthumbrect"></a><a name="getthumbrect"></a>CSliderCtrl::取得Thumbrect
 
-抓取滑杆控制項中滑杆（捲軸）的周框大小和位置。
+檢索滑塊(拇指)滑塊(拇指)在滑塊控制項中的邊界矩形的大小和位置。
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*lprc*<br/>
-`CRect`物件的指標，其中包含函式傳回時滑杆的周框。
+*利赫浦*<br/>
+當函數返回時`CRect`,指向包含滑塊邊界矩形的物件的指標。
 
-##  <a name="gettic"></a>CSliderCtrl：： GetTic
+## <a name="csliderctrlgettic"></a><a name="gettic"></a>CSliderCtrl:GetTic
 
-抓取滑杆控制項中刻度的位置。
+檢索滑塊控件中刻度線的位置。
 
 ```
 int GetTic(int nTic) const;
@@ -477,15 +477,15 @@ int GetTic(int nTic) const;
 ### <a name="parameters"></a>參數
 
 *nTic*<br/>
-以零為基底的索引，識別刻度。
+識別刻度線的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-指定之刻度的位置，如果*nTic*未指定有效的索引，則為-1。
+指定的刻度線或 - 1 的位置(如果*nTic*未指定有效的索引)。
 
-##  <a name="getticarray"></a>CSliderCtrl：： GetTicArray
+## <a name="csliderctrlgetticarray"></a><a name="getticarray"></a>CSliderCtrl::取得蒂卡雷
 
-抓取陣列的位址，其中包含滑杆控制項之刻度的位置。
+檢索包含滑塊控制項的刻度線位置的陣列的位址。
 
 ```
 DWORD* GetTicArray() const;
@@ -493,11 +493,11 @@ DWORD* GetTicArray() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含滑杆控制項刻度標記位置之陣列的位址。
+包含滑塊控制的刻度線位置的陣列的位址。
 
-##  <a name="getticpos"></a>CSliderCtrl：： GetTicPos
+## <a name="csliderctrlgetticpos"></a><a name="getticpos"></a>CSliderCtrl::取得蒂波
 
-抓取滑杆控制項中刻度的目前實體位置。
+檢索滑塊控制項中刻度線當前的物理位置。
 
 ```
 int GetTicPos(int nTic) const;
@@ -506,15 +506,15 @@ int GetTicPos(int nTic) const;
 ### <a name="parameters"></a>參數
 
 *nTic*<br/>
-以零為基底的索引，識別刻度。
+識別刻度線的零基索引。
 
 ### <a name="return-value"></a>傳回值
 
-指定之刻度的實體位置（以工作區座標表示）; 如果*nTic*未指定有效的索引，則為-1。
+在客戶端座標中,如果*nTic*未指定有效的索引,則指定刻度線或 - 1 的物理位置。
 
-##  <a name="gettooltips"></a>CSliderCtrl：： GetToolTips
+## <a name="csliderctrlgettooltips"></a><a name="gettooltips"></a>CSliderCtrl:抓取工具提示
 
-抓取指派給滑杆控制項的工具提示控制項的控制碼（如果有的話）。
+檢索分配給滑塊控制項的工具提示控件的句柄(如果有)。
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -522,17 +522,17 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>傳回值
 
-[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標，如果工具提示不在使用中，則為 Null。 如果滑杆控制項不使用 TBS_TOOLTIPS 樣式，則傳回值會是 Null。
+指向[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標,如果工具提示未使用,則為 NULL。 如果滑塊控制項不使用TBS_TOOLTIPS樣式,則傳回值為 NULL。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips)的行為，如 Windows SDK 中所述。 請注意，此成員`CToolTipCtrl`函式會傳回物件，而不是控制項的控制碼。
+此成員函數實現 Win32 消息[TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips)的行為,如 Windows SDK 中所述。 請注意,此成員函數將`CToolTipCtrl`物件而不是句柄返回到控制件。
 
-如需滑杆控制項樣式的說明，請參閱 Windows SDK 中的 [敘述][控制項樣式](/windows/win32/Controls/trackbar-control-styles)。
+有關滑塊控制項樣式的說明,請參閱 Windows SDK 中的[「追蹤欄控制件樣式](/windows/win32/Controls/trackbar-control-styles)」。
 
-##  <a name="setbuddy"></a>CSliderCtrl：： SetBuddy
+## <a name="csliderctrlsetbuddy"></a><a name="setbuddy"></a>CSliderCtrl::SetBuddy
 
-將視窗指派為滑杆控制項的合作者視窗。
+將視窗指定為滑塊控制件的好友視窗。
 
 ```
 CWnd* SetBuddy(
@@ -542,29 +542,29 @@ CWnd* SetBuddy(
 
 ### <a name="parameters"></a>參數
 
-*pWndBuddy*<br/>
-`CWnd`物件的指標，將設定為滑杆控制項的好友。
+*普恩德布迪*<br/>
+指向物件的`CWnd`指標,該指標將設置為滑塊控制件的好友。
 
 *fLocation*<br/>
-值，指定要顯示好友視窗的位置。 此值可以是下列其中一項：
+指定顯示好友視窗的位置的值。 這個值可以是下列其中一個值：
 
-- 如果 [列數] 控制項使用 TBS_HORZ 樣式，則 [好友] 會出現在 [顯示] 的左側。 如果您使用 TBS_VERT 樣式，則該好友會顯示在 [在 []] 控制項上方。
+- 如果軌道欄控件使用TBS_HORZ樣式,好友將顯示在軌道欄的左側。 如果軌道列使用TBS_VERT樣式,好友將顯示在軌道欄控件的上方。
 
-- 錯誤如果 [跟蹤] 控制項使用 TBS_HORZ 樣式，則好友會出現在 [顯示] 的右側。 如果您使用 TBS_VERT 樣式，則該好友會出現在 [顯示在] 控制項下方。
+- 如果軌道欄控件使用TBS_HORZ樣式,好友將顯示在軌道欄的右側。 如果軌道列使用TBS_VERT樣式,好友將顯示在軌道欄控件下方。
 
 ### <a name="return-value"></a>傳回值
 
-[CWnd](../../mfc/reference/cwnd-class.md)物件的指標，先前已指派給該位置的滑杆控制項。
+指向以前分配給該位置的滑塊控件的[CWnd](../../mfc/reference/cwnd-class.md)物件的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TBM_SETBUDDY](/windows/win32/Controls/tbm-setbuddy)的行為，如 Windows SDK 中所述。 請注意，此成員函式會`CWnd`使用物件的指標，而不是其傳回值和參數的視窗控制碼。
+此成員函數實現 Win32 消息[的行為TBM_SETBUDDY](/windows/win32/Controls/tbm-setbuddy),如 Windows SDK 中所述。 請注意,此成員函數使用指向`CWnd`物件的指標,而不是對其返回值和參數的視窗句柄。
 
-如需滑杆控制項樣式的說明，請參閱 Windows SDK 中的 [敘述][控制項樣式](/windows/win32/Controls/trackbar-control-styles)。
+有關滑塊控制項樣式的說明,請參閱 Windows SDK 中的[「追蹤欄控制件樣式](/windows/win32/Controls/trackbar-control-styles)」。
 
-##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize
+## <a name="csliderctrlsetlinesize"></a><a name="setlinesize"></a>CSliderCtrl::設定線大小
 
-設定滑杆控制項的線條大小。
+設置滑塊控制元件的線條大小。
 
 ```
 int SetLineSize(int nSize);
@@ -573,19 +573,19 @@ int SetLineSize(int nSize);
 ### <a name="parameters"></a>參數
 
 *nSize*<br/>
-滑杆控制項的新行大小。
+滑塊控制元件的新線大小。
 
 ### <a name="return-value"></a>傳回值
 
-先前的行大小。
+上一行大小。
 
 ### <a name="remarks"></a>備註
 
-線條大小會影響滑杆針對 TB_LINEUP 和 TB_LINEDOWN 通知移動的程度。
+行大小會影響滑塊為TB_LINEUP和TB_LINEDOWN通知移動的幅度。
 
-##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize
+## <a name="csliderctrlsetpagesize"></a><a name="setpagesize"></a>CSliderCtrl::設定頁面大小
 
-設定滑杆控制項的頁面大小。
+設置滑塊控制件的頁面大小。
 
 ```
 int SetPageSize(int nSize);
@@ -594,34 +594,34 @@ int SetPageSize(int nSize);
 ### <a name="parameters"></a>參數
 
 *nSize*<br/>
-滑杆控制項的新頁面大小。
+滑塊控制項的新頁面大小。
 
 ### <a name="return-value"></a>傳回值
 
-先前的頁面大小。
+上一頁大小。
 
 ### <a name="remarks"></a>備註
 
-頁面大小會影響 TB_PAGEUP 和 TB_PAGEDOWN 通知的滑杆移動量。
+頁面大小會影響滑塊為TB_PAGEUP移動和TB_PAGEDOWN通知的移動量。
 
-##  <a name="setpos"></a>CSliderCtrl：： SetPos
+## <a name="csliderctrlsetpos"></a><a name="setpos"></a>CSliderCtrl::SetPos
 
-設定滑杆控制項中滑杆的目前位置。
+設置滑塊控制器中的滑塊的目前位置。
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-指定蜪鎏 彸。
+指定新的滑塊位置。
 
-##  <a name="setrange"></a>CSliderCtrl：： SetRange
+## <a name="csliderctrlsetrange"></a><a name="setrange"></a>CSliderCtrl::設定範圍
 
-設定滑杆控制項中滑杆的範圍（最小和最大位置）。
+設置滑塊控制項中滑塊的範圍(最小位置和最大位置)。
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -631,19 +631,19 @@ void SetRange(
 ### <a name="parameters"></a>參數
 
 *nMin*<br/>
-滑杆的最小位置。
+滑塊的最小位置。
 
 *nMax*<br/>
-滑杆的最大位置。
+滑塊的最大位置。
 
-*bRedraw*<br/>
-重繪旗標。 如果此參數為 TRUE，則會在設定範圍之後重新繪製滑杆;否則滑杆不會重新繪製。
+*bredraw*<br/>
+重繪標誌。 如果此參數為 TRUE,則在設置範圍後重繪滑塊;如果此參數為 TRUE,則在設置範圍後重新繪製滑塊。否則,不會重繪滑塊。
 
-##  <a name="setrangemax"></a>CSliderCtrl：： SetRangeMax
+## <a name="csliderctrlsetrangemax"></a><a name="setrangemax"></a>CSliderCtrl::SetRangeMax
 
-設定滑杆控制項中滑杆的最大範圍。
+設置滑塊控制項中滑塊的最大範圍。
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -652,16 +652,16 @@ void SetRangeMax(
 ### <a name="parameters"></a>參數
 
 *nMax*<br/>
-滑杆的最大位置。
+滑塊的最大位置。
 
-*bRedraw*<br/>
-重繪旗標。 如果此參數為 TRUE，則會在設定範圍之後重新繪製滑杆;否則滑杆不會重新繪製。
+*bredraw*<br/>
+重繪標誌。 如果此參數為 TRUE,則在設置範圍後重繪滑塊;如果此參數為 TRUE,則在設置範圍後重新繪製滑塊。否則,不會重繪滑塊。
 
-##  <a name="setrangemin"></a>CSliderCtrl：： SetRangeMin
+## <a name="csliderctrlsetrangemin"></a><a name="setrangemin"></a>CSliderCtrl::SetRangeMin
 
-設定滑杆控制項中滑杆的最小範圍。
+設置滑塊控制器中的滑塊的最小範圍。
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -670,16 +670,16 @@ void SetRangeMin(
 ### <a name="parameters"></a>參數
 
 *nMin*<br/>
-滑杆的最小位置。
+滑塊的最小位置。
 
-*bRedraw*<br/>
-重繪旗標。 如果此參數為 TRUE，則會在設定範圍之後重新繪製滑杆;否則滑杆不會重新繪製。
+*bredraw*<br/>
+重繪標誌。 如果此參數為 TRUE,則在設置範圍後重繪滑塊;如果此參數為 TRUE,則在設置範圍後重新繪製滑塊。否則,不會重繪滑塊。
 
-##  <a name="setselection"></a>CSliderCtrl：： SetSelection
+## <a name="csliderctrlsetselection"></a><a name="setselection"></a>CSliderCtrl::設定選擇
 
-設定滑杆控制項中目前選取範圍的開始和結束位置。
+在滑塊控制項中設定當前選擇的起始位置和結束位置。
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -688,46 +688,46 @@ void SetSelection(
 ### <a name="parameters"></a>參數
 
 *nMin*<br/>
-滑杆的開始位置。
+滑塊的起始位置。
 
 *nMax*<br/>
-滑杆的結束位置。
+滑塊的結束位置。
 
-##  <a name="setthumblength"></a>CSliderCtrl：： SetThumbLength
+## <a name="csliderctrlsetthumblength"></a><a name="setthumblength"></a>CSliderCtrl::設置拇指長度
 
-設定目前的 在
+設置當前軌道欄控件中的滑塊長度。
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*nLength*|在滑杆的長度（以圖元為單位）。|
+|*N 長度*|[在]滑塊的長度(以像素為單位)。|
 
 ### <a name="remarks"></a>備註
 
-這個方法需要將 [設置] 控制項設定為[TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles)樣式。
+此方法要求將軌道欄控件設置為[TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles)樣式。
 
-這個方法會傳送[TBM_SETTHUMBLENGTH](/windows/win32/Controls/tbm-setthumblength)訊息，如 Windows SDK 中所述。
+此方法發送[TBM_SETTHUMBLENGTH](/windows/win32/Controls/tbm-setthumblength)消息,這在 Windows SDK 中介紹。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_sliderCtrl`存取目前的 [動作] 控制項的變數。 此範例也會定義一個變數`thumbLength`，用來儲存 [捲軸] 控制項的 [thumb] 元件的預設長度。 下一個範例會使用這些變數。
+以下代碼範例定義用於存取目前追蹤`m_sliderCtrl`列 控制項的變數 。 該示例還定義了一個變數`thumbLength`,用於存儲軌道欄控件的拇指元件的預設長度。 這些變數在下一個示例中使用。
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會將 [動作] 控制項的 [thumb] 元件設定為預設長度的兩倍。
+以下代碼示例將軌道欄控件的拇指元件設置為其預設長度的兩倍。
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]
 
-##  <a name="settic"></a>  CSliderCtrl::SetTic
+## <a name="csliderctrlsettic"></a><a name="settic"></a>CSliderCtrl::SetTic
 
-設定滑杆控制項中刻度的位置。
+設置滑塊控制項中刻度線的位置。
 
 ```
 BOOL SetTic(int nTic);
@@ -736,34 +736,34 @@ BOOL SetTic(int nTic);
 ### <a name="parameters"></a>參數
 
 *nTic*<br/>
-刻度的位置。 這個參數必須指定正數值。
+刻度線的位置。 此參數必須指定正值。
 
 ### <a name="return-value"></a>傳回值
 
-如果已設定刻度，則為非零值;否則為0。
+設置刻度線時非零;否則 0。
 
-##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq
+## <a name="csliderctrlsetticfreq"></a><a name="setticfreq"></a>CSliderCtrl::SetTicFreq
 
-設定用來在滑杆中顯示刻度的頻率。
+設置在滑塊中顯示刻度線的頻率。
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nFreq*<br/>
-刻度的頻率。
+*恩弗雷克*<br/>
+刻度線的頻率。
 
 ### <a name="remarks"></a>備註
 
-例如，如果 frequency 設定為2，滑杆範圍內的每個其他增量都會顯示刻度標記。 頻率的預設值為1（也就是，範圍中的每個增量都會與刻度相關聯）。
+例如,如果頻率設置為 2,則滑塊範圍內的其他增量將顯示一個刻度線。 頻率的預設設置為 1(即,範圍中的每個增量都與刻度線相關聯)。
 
-您必須建立具有 TBS_AUTOTICKS 樣式的控制項，才能使用此函數。 如需詳細資訊，請參閱[CSliderCtrl：： Create](#create)。
+您必須使用TBS_AUTOTICKS樣式創建控制項才能使用此函數。 有關詳細資訊,請參閱[CSliderCtrl::建立](#create)。
 
-##  <a name="settipside"></a>CSliderCtrl：： SetTipSide
+## <a name="csliderctrlsettipside"></a><a name="settipside"></a>CSliderCtrl::SetTipside
 
-放置 [並排] 控制項所使用的工具提示控制項。
+定位軌道桿控件使用的工具提示控制項。
 
 ```
 int SetTipSide(int nLocation);
@@ -771,37 +771,37 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>參數
 
-*nLocation*<br/>
-值，表示要顯示工具提示控制項的位置。 如需可能值的清單，請參閱 Win32 message [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside)，如 Windows SDK 中所述。
+*n位置*<br/>
+表示要顯示工具提示控件的位置的值。 有關可能值的清單,請參閱 win32 消息[TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside),如 Windows SDK 中所述。
 
 ### <a name="return-value"></a>傳回值
 
-值，表示工具提示控制項的先前位置。 傳回值等於*n 位置*的其中一個可能值。
+表示工具提示控件的上一位置的值。 返回值等於*nLocation*的可能值之一。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message TBM_SETTIPSIDE 的行為，如 Windows SDK 中所述。 使用 TBS_TOOLTIPS 樣式的滑杆控制項會顯示工具提示。 如需滑杆控制項樣式的說明，請參閱 Windows SDK 中的 [敘述][控制項樣式](/windows/win32/Controls/trackbar-control-styles)。
+此成員函數實現 win32 消息TBM_SETTIPSIDE的行為,如Windows SDK中所述。 使用TBS_TOOLTIPS樣式顯示工具提示的滑塊控制項。 有關滑塊控制項樣式的說明,請參閱 Windows SDK 中的[「追蹤欄控制件樣式](/windows/win32/Controls/trackbar-control-styles)」。
 
-##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips
+## <a name="csliderctrlsettooltips"></a><a name="settooltips"></a>CSliderCtrl::設定工具提示
 
-將工具提示控制項指派給滑杆控制項。
+將工具提示控制項分配給滑塊控制項。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pWndTip*<br/>
-[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標，其中包含要與滑杆控制項搭配使用的工具提示。
+*pwndTip*<br/>
+指向[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件的指標,其中包含要與滑塊控制項一起使用的工具提示。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips)的行為，如 Windows SDK 中所述。 當使用 TBS_TOOLTIPS 樣式建立滑杆控制項時，它會建立一個預設的工具提示控制項，它會顯示在滑杆的旁邊，並顯示滑杆的目前位置。 如需滑杆控制項樣式的說明，請參閱 Windows SDK 中的 [敘述][控制項樣式](/windows/win32/Controls/trackbar-control-styles)。
+此成員函數實現 Win32 消息[TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips)的行為,如 Windows SDK 中所述。 使用TBS_TOOLTIPS樣式創建滑塊控制項時,它會創建顯示在滑塊旁邊的預設工具提示控制項,顯示滑塊的當前位置。 有關滑塊控制項樣式的說明,請參閱 Windows SDK 中的[「追蹤欄控制件樣式](/windows/win32/Controls/trackbar-control-styles)」。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CProgressCtrl 類別](../../mfc/reference/cprogressctrl-class.md)

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: cea2f09837e5efc6969e4ab305d106b9c9728412
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fbc4351297ab8a3cc90a2a77fa31c3b134f10eab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447209"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370986"
 ---
-# <a name="maxunbounded-class"></a>max_unbounded 類別
+# <a name="max_unbounded-class"></a>max_unbounded 類別
 
 描述 [max 類別](../standard-library/allocators-header.md)物件，此物件不會限制 [freelist](../standard-library/freelist-class.md) 物件的長度上限。
 
@@ -33,14 +33,14 @@ ms.locfileid: "68447209"
 class max_unbounded
 ```
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|說明|
+|成員函數|描述|
 |-|-|
 |[allocated](#allocated)|遞增已配置的記憶體區塊計數。|
-|[deallocated](#deallocated)|遞減已配置的記憶體區塊計數。|
-|[full](#full)|傳回指定是否應該為可用清單新增更多記憶體區塊的值。|
-|[released](#released)|遞減可用清單上的記憶體區塊計數。|
+|[交易](#deallocated)|遞減已配置的記憶體區塊計數。|
+|[全](#full)|傳回指定是否應該為可用清單新增更多記憶體區塊的值。|
+|[釋放](#released)|遞減可用清單上的記憶體區塊計數。|
 |[saved](#saved)|遞增可用清單上的記憶體區塊計數。|
 
 ## <a name="requirements"></a>需求
@@ -49,7 +49,7 @@ class max_unbounded
 
 **命名空間：** stdext
 
-## <a name="allocated"></a>  max_unbounded::allocated
+## <a name="max_unboundedallocated"></a><a name="allocated"></a>max_unbounded::已分配
 
 遞增已配置的記憶體區塊計數。
 
@@ -65,9 +65,9 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 這會在每次成功呼叫`cache_freelist::allocate`至 operator **new**之後被呼叫。 引數 *_Nx*是由 operator **new**所配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 它呼叫後,每次成功呼叫`cache_freelist::allocate`到運算子 **。** *參數_Nx*是運算符**new**分配區塊中的記憶體區塊數。
 
-## <a name="deallocated"></a>  max_unbounded::deallocated
+## <a name="max_unboundeddeallocated"></a><a name="deallocated"></a>max_unbounded::d分配
 
 遞減已配置的記憶體區塊計數。
 
@@ -83,9 +83,9 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 每次呼叫`cache_freelist::deallocate`運算子**delete**之後, 會呼叫這個成員函式。 引數 *_Nx*是由 operator **delete**解除配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 此成員函數在每次呼叫後呼叫`cache_freelist::deallocate`運算子**刪除**後呼叫 。 *參數_Nx*是由運算符**刪除**處理塊中的記憶體區塊數。
 
-## <a name="full"></a>  max_unbounded::full
+## <a name="max_unboundedfull"></a><a name="full"></a>max_unbounded::已滿
 
 傳回指定是否應該為可用清單新增更多記憶體區塊的值。
 
@@ -95,13 +95,13 @@ bool full();
 
 ### <a name="return-value"></a>傳回值
 
-成員函式一律會傳回**false**。
+成員函數始終傳回**false**。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回**true** `deallocate` , 則會將記憶體區塊放在可用的清單上; 如果傳回 false `deallocate` , 則呼叫 operator **delete**來解除配置區塊。
+此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳**回 true,** 則將記憶體區塊放在空閒清單中;如果呼叫`deallocate`回 true, 則將記憶體區塊放在可用清單中。如果返回 false,`deallocate`則呼叫運算符**刪除**以取消分配區塊。
 
-## <a name="released"></a>  max_unbounded::released
+## <a name="max_unboundedreleased"></a><a name="released"></a>max_unbounded::已發佈
 
 遞減可用清單上的記憶體區塊計數。
 
@@ -113,7 +113,7 @@ void released();
 
 此成員函式不會執行任何動作。 每當 `cache_freelist::allocate` 從可用清單中移除記憶體區塊時，都會呼叫目前 max 類別的 `released` 成員函式。
 
-## <a name="saved"></a>  max_unbounded::saved
+## <a name="max_unboundedsaved"></a><a name="saved"></a>max_unbounded::已儲存
 
 遞增可用清單上的記憶體區塊計數。
 
@@ -127,4 +127,4 @@ void saved();
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<配置器>](../standard-library/allocators-header.md)

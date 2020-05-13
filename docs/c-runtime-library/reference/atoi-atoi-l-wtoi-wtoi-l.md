@@ -1,11 +1,15 @@
 ---
 title: atoi、_atoi_l、_wtoi、_wtoi_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wtoi
 - _wtoi_l
 - atoi
 - _atoi_l
+- _o__atoi_l
+- _o__wtoi
+- _o__wtoi_l
+- _o_atoi
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +23,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: 8d66a219aea1451e745e32f7affbfb59b73ff796
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943742"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919870"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
@@ -86,7 +91,7 @@ int _wtoi_l(
 
 每個函式都會傳回將輸入字元解讀為數字所產生的**int**值。 如果輸入無法轉換成該類型的值， **atoi**和 **_wtoi**的傳回值會是0。
 
-如果溢位具有大型負整數值，則會傳回**LONG_MIN** 。 在這些情況中， **atoi**和 **_Wtoi**會傳回**INT_MAX**和**INT_MIN** 。 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
+如果溢位具有大型負整數值，則會傳回**LONG_MIN** 。 **atoi**和 **_wtoi**會傳回**INT_MAX** ，並**INT_MIN**這些條件。 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
 ## <a name="remarks"></a>備註
 
@@ -99,6 +104,8 @@ int _wtoi_l(
 空白字元*包含空格*或定位字元，這些字元會被忽略;*sign*為加號（+）或減號（-）;和*數位*是一或多個數位。
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -166,7 +173,7 @@ Overflow condition occurred.
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

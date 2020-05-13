@@ -1,8 +1,9 @@
 ---
 title: _free_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _free_locale
+- _o__free_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 31a8e3191c5e370acb00aaf12e21f0c712c51dd1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956752"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920442"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -57,7 +59,9 @@ void _free_locale(
 
 **_Free_locale**函數是用來釋放從呼叫 **_get_current_locale**或 **_create_locale**取得的地區設定物件。
 
-此函式的先前名稱 **__free_locale** （含有兩個前置底線）已被取代。
+此函式的舊名稱（含兩個前置底線） **__free_locale**已被取代。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -65,7 +69,7 @@ void _free_locale(
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

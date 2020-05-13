@@ -2,12 +2,12 @@
 title: 移植指南：COM Spy
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
-ms.translationtype: HT
+ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451180"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368451"
 ---
 # <a name="porting-guide-com-spy"></a>移植指南：COM Spy
 
@@ -17,16 +17,18 @@ ms.locfileid: "66451180"
 
 COMSpy 是用來監視和記錄電腦上之 Serviced 元件活動的程式。 Serviced 元件是指在系統上執行，並且可供相同網路上的電腦使用的 COM+ 元件。 這些元件是由 Windows 控制台中的 [元件服務] 功能所管理。
 
-### <a name="step-1-converting-the-project-file"></a>步驟 1： 轉換專案檔。
+### <a name="step-1-converting-the-project-file"></a>步驟 1： 轉換項目檔案
+
 專案檔的轉換很容易，而且會產生移轉報告。 報告中的幾個項目提供可能需要處理之問題的相關資訊。 以下是回報的一個問題 (請注意，在本主題中，有時會縮短錯誤訊息以利閱讀，例如移除完整路徑)：
 
 ```Output
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-升級專案的其中一個常見問題是，專案屬性對話方塊中的**連結器 OutputFile** 設定可能需要檢閱。 對於 Visual Studio 2010 之前的專案而言，當 OutputFile 設定為非標準值時，就會造成自動轉換精靈的問題。 在這種情況下，輸出檔案的路徑會設定為非標準資料夾 XP32_DEBUG。 為了深入了解這個錯誤，我們查閱了與 Visual Studio 2010 專案升級相關的[部落格文章](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)，這個升級涉及一項重大的變更，那就是從 vcbuild 變更為 msbuild。 根據這項資訊，當您建立新專案時，**輸出檔案**設定的預設值為 `$(OutDir)$(TargetName)$(TargetExt)`，但由於轉換的專案無法確認一切正確，因此不會在轉換期間進行這項設定。 不過，讓我們試放在 OutputFile 中，看看是否可行。  結果可行，因此我們可以繼續進行。 如果沒有特別原因需要使用非標準輸出資料夾，建議使用標準位置。 在本例中，我們選擇在移植和升級過程中保留非標準輸出位置；`$(OutDir)` 在**偵錯**組態中會解析成 XP32_DEBUG 資料夾，在**發行**組態中會解析成 ReleaseU 資料夾。
+升級專案時經常出現的問題之一是可能需要查看專案屬性對話方塊中的**Linker 輸出檔**設置。 對於 Visual Studio 2010 之前的專案而言，當 OutputFile 設定為非標準值時，就會造成自動轉換精靈的問題。 在這種情況下，輸出檔案的路徑會設定為非標準資料夾 XP32_DEBUG。 為了深入了解這個錯誤，我們查閱了與 Visual Studio 2010 專案升級相關的[部落格文章](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)，這個升級涉及一項重大的變更，那就是從 vcbuild 變更為 msbuild。 根據這項資訊，當您建立新專案時，**輸出檔案**設定的預設值為 `$(OutDir)$(TargetName)$(TargetExt)`，但由於轉換的專案無法確認一切正確，因此不會在轉換期間進行這項設定。 不過，讓我們試放在 OutputFile 中，看看是否可行。  結果可行，因此我們可以繼續進行。 如果沒有特別原因需要使用非標準輸出資料夾，建議使用標準位置。 在本例中，我們選擇在移植和升級過程中保留非標準輸出位置；`$(OutDir)` 在**偵錯**組態中會解析成 XP32_DEBUG 資料夾，在**發行**組態中會解析成 ReleaseU 資料夾。
 
 ### <a name="step-2-getting-it-to-build"></a>步驟 2： 建置專案
+
 建置已移植的專案時，會發生一些錯誤和警告。
 
 `ComSpyCtl` 由於下列編譯器錯誤而不會進行編譯：
@@ -64,16 +66,17 @@ HRESULT IPersistStreamInit_Load(LPSTREAM pStm, const ATL_PROPMAP_ENTRY* pMap);
 error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\ComSpyCtl\.\XP32_DEBUG\ComSpyCtl.lib"error MSB3073: echo regsvr32 exec. time > ".\XP32_DEBUG\regsvr32.trg"error MSB3073:error MSB3073: :VCEnd" exited with code 3.
 ```
 
-我們不再需要這個建置後註冊命令。 相反地，我們會直接移除自訂建置命令，並在**連結器**設定中指定要註冊輸出。
+我們不再需要這個建置後註冊命令。 相反,我們只需刪除自定義生成命令,並在**Linker**設置中指定以註冊輸出。
 
 ### <a name="dealing-with-warnings"></a>處理警告
+
 這個專案會產生下列連結器警告。
 
 ```Output
 warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
 ```
 
-`/SAFESEH` 編譯器選項不適用於偵錯模式，`/EDITANDCONTINUE` 才適用，因此修正方法是只對**偵錯**組態停用 `/SAFESEH`。 若要在屬性對話方塊中執行這項作業，請開啟產生這個錯誤的專案屬性對話方塊，先將**組態**設定為**偵錯** (實際上是**對 Unicode 偵錯**)，然後在 [連結器進階]  區段中，將 [映像有安全例外狀況處理常式]  重設為 [否]  (`/SAFESEH:NO`)。
+`/SAFESEH` 編譯器選項不適用於偵錯模式，`/EDITANDCONTINUE` 才適用，因此修正方法是只對**偵錯**組態停用 `/SAFESEH`。 若要在屬性對話方塊中執行這項作業，請開啟產生這個錯誤的專案屬性對話方塊，先將**組態**設定為**偵錯** (實際上是**對 Unicode 偵錯**)，然後在 [連結器進階]**** 區段中，將 [映像有安全例外狀況處理常式]**** 重設為 [否]**** (`/SAFESEH:NO`)。
 
 編譯器會警告我們，`PROP_ENTRY_EX` 即將淘汰。 這並不安全，建議改用 `PROP_ENTRY_TYPE_EX`。
 
@@ -112,7 +115,7 @@ for (i=0;i<lCount;i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-問題在於 `i` 宣告為 `UINT`，而 `lCount` 宣告為 **long**，因此 signed/unsigned 不相符。 要將 `lCount` 的類型變更為 `UINT` 相當不易，這是因為取得其值的來源 `IMtsEventInfo::get_Count` 使用 **long** 類型，而且不在使用者程式碼中。 因此我們在程式碼中加入一個轉換。 C-Style 轉換可執行類似本例的數值轉換，但建議使用 **static_cast** 樣式。
+問題在於 `i` 宣告為 `UINT`，而 `lCount` 宣告為 **long**，因此 signed/unsigned 不相符。 要將 `lCount` 的類型變更為 `UINT` 相當不易，這是因為取得其值的來源 `IMtsEventInfo::get_Count` 使用 **long** 類型，而且不在使用者程式碼中。 因此我們在程式碼中加入一個轉換。 C 樣式的強制轉換可以用於此類數字強制轉換,但**static_cast**是推薦的樣式。
 
 ```cpp
 for (i=0;i<static_cast<UINT>(lCount);i++)
@@ -122,6 +125,7 @@ for (i=0;i<static_cast<UINT>(lCount);i++)
 當變數宣告所在的函式具有相同名稱的參數，而導致可能使人混淆的程式碼時，就會發生這些警告。 藉由變更區域變數的名稱，已修正這個問題。
 
 ### <a name="step-3-testing-and-debugging"></a>步驟 3： 測試和偵錯
+
 測試應用程式時，請先執行各種功能表和命令，然後再關閉應用程式。 唯一需要注意的問題是關閉應用程式時的偵錯判斷提示。 這個問題出現在應用程式的主要 COM 元件：`CWindowImpl` (`CSpyCon` 物件的基底類別) 的解構函式。 atlwin.h 中的下列程式碼發生判斷提示失敗。
 
 ```cpp
@@ -139,7 +143,7 @@ virtual ~CWindowImplRoot()
 
 `hWnd` 通常在 `WindowProc` 函式中會設定為零，但這卻沒有發生，因為關閉視窗的 Windows 訊息 (WM_SYSCOMMAND) 呼叫了自訂處理常式，而不是預設的 `WindowProc`。 而自訂處理常式並未將 `hWnd` 設定為零。 請查看 MFC `CWnd` 類別中的類似程式碼，該程式碼顯示在終結視窗時，會呼叫 `OnNcDestroy`；至於在 MFC，文件則建議在覆寫 `CWnd::OnNcDestroy` 時，應該呼叫基底 `NcDestroy`，以確保進行正確的清除作業，包括將視窗控制代碼與視窗分隔，也就是將 `hWnd` 設定為零。 範例的原始版本中可能也觸發了這個判斷提示，因為舊版 atlwin.h 中已有相同的判斷提示程式碼。
 
-為了測試應用程式的功能，我們使用 ATL 專案範本建立 **Serviced 元件**，並選擇在 ATL 專案精靈中新增 COM+ 支援。 如果您之前沒有使用過 Serviced 元件，建立並註冊一個元件，以供系統或網路上的其他應用程式使用，其實並不困難。 COM Spy 應用程式的設計是為了當做診斷輔助工具，來監視 Serviced 元件的活動。
+為了測試應用的功能,我們使用 ATL 專案範本建立了**服務元件**,選擇在 ATL 專案嚮導中添加 COM+ 支援。 如果您以前沒有使用過服務元件,則創建一個元件並在系統或網路上註冊並可供其他應用使用並不困難。 COM Spy 應用程式的設計是為了當做診斷輔助工具，來監視 Serviced 元件的活動。
 
 然後，我們新增類別、選擇 ATL 物件，並將物件名稱指定為 `Dog`。 再於 dog.h 和 dog.cpp 中加入實作。
 
@@ -152,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-接著，我們建立及註冊元件 (您必須以系統管理員身分執行 Visual Studio)，然後在 Windows 控制台使用 **Serviced 元件**應用程式加以啟動。 我們建立 C# Windows Form 專案，從工具箱拖曳一個按鈕到表單，然後按兩下以開啟 Click 事件處理常式。 我們新增下列程式碼來將 `Dog` 元件具現化。
+接下來,我們構建並註冊它(您需要將 Visual Studio 運行為管理員),並使用 Windows 控制面板中的**服務元件**應用程式啟動它。 我們建立 C# Windows Form 專案，從工具箱拖曳一個按鈕到表單，然後按兩下以開啟 Click 事件處理常式。 我們新增下列程式碼來將 `Dog` 元件具現化。
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)
@@ -168,4 +172,4 @@ private void button1_Click(object sender, EventArgs e)
 
 [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一個範例：Spy++](../porting/porting-guide-spy-increment.md)<br/>
-[前一個範例：MFC Scribble](../porting/porting-guide-mfc-scribble.md)
+[上一個範例︰MFC Scribble](../porting/porting-guide-mfc-scribble.md)

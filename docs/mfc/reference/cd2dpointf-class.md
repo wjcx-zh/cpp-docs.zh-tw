@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-ms.openlocfilehash: b8fe808c3147fa52c5041e2988822ace0ba60896
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d66c31289f9e17df99df4681cff1d5cf6a0ec86
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396336"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369164"
 ---
 # <a name="cd2dpointf-class"></a>CD2DPointF 類別
 
@@ -31,15 +31,15 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DPointF::CD2DPointF](#cd2dpointf)|多載。 建構`CD2DPointF`物件從`D2D1_POINT_2F`物件。|
+|[CD2DPointF:CD2DPointF](#cd2dpointf)|已多載。 從`CD2DPointF``D2D1_POINT_2F`物件構造物件。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DPointF::operator CPoint](#operator_cpoint)|將轉換`CD2DPointF`至`CPoint`物件。|
+|[CD2DPointF::運算符 CPoint](#operator_cpoint)|轉換為`CD2DPointF``CPoint`物件。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `D2D1_POINT_2F`
 
@@ -47,11 +47,11 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標題:** afxrendertarget.h
 
-##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF
+## <a name="cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a>CD2DPointF:CD2DPointF
 
-建構 CD2DPointF 物件從 CPoint 物件。
+從 CPoint 物件構造 CD2DPointF 物件。
 
 ```
 CD2DPointF(const CPoint& pt);
@@ -63,17 +63,17 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-來源點
+源點
 
-*fX*<br/>
+*外匯*<br/>
 來源 X
 
 *fY*<br/>
-source Y
+源 Y
 
-##  <a name="operator_cpoint"></a>  CD2DPointF::operator CPoint
+## <a name="cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointF::運算符 CPoint
 
-將 CD2DPointF 轉換 CPoint 物件。
+將 CD2DPointF 轉換為 CPoint 物件。
 
 ```
 operator CPoint();
@@ -81,7 +81,7 @@ operator CPoint();
 
 ### <a name="return-value"></a>傳回值
 
-目前的 D2D 點值。
+D2D 點的當前值。
 
 ## <a name="see-also"></a>另請參閱
 

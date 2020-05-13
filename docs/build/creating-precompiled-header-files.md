@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 158301ec3caacced1663892071b17ef2b8f8e741
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078590"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328663"
 ---
 # <a name="precompiled-header-files"></a>先行編譯標頭檔
 
-當您在 Visual Studio 中建立新專案時，會將名為*pch*的先行*編譯標頭檔*新增至專案。 （在 Visual Studio 2017 和更早版本中，檔案稱為*stdafx.h*）。檔案的目的是加速組建程式。 所有穩定的標頭檔（例如，如 `<vector>`的標準程式庫標頭）都應該包含在此處。 只有在已修改先行編譯標頭檔或其中包含的任何檔案時，才會進行編譯。 如果您只在專案原始程式碼中進行變更，則組建會略過先行編譯標頭檔的編譯。
+當您在 Visual Studio 中建立新專案時，會將名為*pch*的先行*編譯標頭檔*新增至專案。 （在 Visual Studio 2017 和更早版本中，檔案稱為*stdafx.h*）。檔案的目的是加速組建程式。 所有穩定的標頭檔（例如標準程式庫標頭`<vector>`）都應該包含在此處。 只有在已修改先行編譯標頭檔或其中包含的任何檔案時，才會進行編譯。 如果您只在專案原始程式碼中進行變更，則組建會略過先行編譯標頭檔的編譯。
 
-先行編譯標頭的編譯器選項為[/y](reference/y-precompiled-headers.md)。 在專案屬性頁中，選項位於 [設定**屬性] > [C/C++ > 先行編譯頭**檔]。 您可以選擇不使用先行編譯的標頭，而且可以指定標頭檔名稱以及輸出檔案的名稱和路徑。
+先行編譯標頭的編譯器選項為[/y](reference/y-precompiled-headers.md)。 在專案屬性頁中，選項位於 [設定**屬性] > C/c + + > 先行編譯頭**檔。 您可以選擇不使用先行編譯的標頭，而且可以指定標頭檔名稱以及輸出檔案的名稱和路徑。
 
 ## <a name="custom-precompiled-code"></a>自訂先行編譯的程式碼
 
@@ -34,14 +34,14 @@ ms.locfileid: "80078590"
 
 第一次編譯（建立先行編譯標頭檔（PCH）檔案）所花的時間比後續編譯的還要多。 藉由包含先行編譯的程式碼，可以更快速地進行後續的編譯。
 
-您可以先行編譯 C 和C++程式。 在C++程式設計中，將類別介面資訊分隔成標頭檔是常見的作法。 這些標頭檔之後可以包含在使用類別的程式中。 藉由先行編譯這些標頭，您可以減少程式編譯所需的時間。
+您可以先行編譯 C 和 c + + 程式。 在 c + + 程式設計中，常見的作法是將類別介面資訊分隔成標頭檔。 這些標頭檔之後可以包含在使用類別的程式中。 藉由先行編譯這些標頭，您可以減少程式編譯所需的時間。
 
 > [!NOTE]
 > 雖然每個來源檔案只能使用一個先行編譯標頭檔（.pch）檔案，但是您可以在專案中使用多個 .pch 檔案。
 
 ## <a name="two-choices-for-precompiling-code"></a>先行編譯程式碼的兩個選擇
 
-您可以先行編譯任何 C C++或程式碼;您不限於僅先行編譯標頭檔。
+您可以先行編譯任何 C 或 c + + 程式碼;您不限於僅先行編譯標頭檔。
 
 先行編譯需要規劃，但如果您先行編譯的程式碼不是簡單的標頭檔，它提供的編譯速度會大幅提升。
 
@@ -87,7 +87,7 @@ PCH 檔案不包含建立時已生效之 include 路徑的相關資訊。 當您
 
 ### <a name="pragma-consistency"></a>Pragma 一致性
 
-在建立 PCH 檔案期間處理的 pragma，通常會影響後續使用 PCH 檔案的檔案。 `comment` 和 `message` pragma 不會影響編譯的其餘部分。
+在建立 PCH 檔案期間處理的 pragma，通常會影響後續使用 PCH 檔案的檔案。 `comment`和`message` pragma 不會影響編譯的其餘部分。
 
 這些 pragma 只會影響 PCH 檔案中的程式碼;它們不會影響後續使用 PCH 檔案的程式碼：
 
@@ -125,7 +125,7 @@ PCH 檔案不包含建立時已生效之 include 路徑的相關資訊。 當您
 |/ZI|產生完整的調試資訊|如果在建立先行編譯標頭檔時此選項作用中，則使用先行編譯的後續編譯可以使用該偵錯工具資訊。 如果在建立先行編譯標頭檔時，/Zi 不會生效，則使用先行編譯的後續編譯和/Zi 選項會觸發警告。 偵錯工具資訊會放在目前的物件檔案中，而且在先行編譯標頭檔中定義的區域符號無法供偵錯工具使用。|
 
 > [!NOTE]
->  先行編譯標頭檔僅供 C 和C++原始程式檔使用。
+> 先行編譯標頭檔僅適用于 C 和 c + + 原始程式檔。
 
 ## <a name="using-precompiled-headers-in-a-project"></a>在專案中使用先行編譯的標頭
 
@@ -135,7 +135,7 @@ PCH 檔案不包含建立時已生效之 include 路徑的相關資訊。 當您
 
 ## <a name="pch-files-in-the-build-process"></a>建置程序中的 PCH 檔
 
-軟體專案的程式碼基底通常包含在多個 C 或C++來源檔案、物件檔案、程式庫和標頭檔中。 通常，makefile 會將這些元素的組合協調成可執行檔。 下圖顯示使用先行編譯標頭檔的 makefile 結構。 此圖表中的 NMAKE 宏名稱和檔案名，[與 pch 的](#example-code-for-pch)範例 Makefile 中找到的範例[程式](#sample-makefile-for-pch)代碼中所述的相同。
+軟體專案的程式碼基底通常包含在多個 C 或 c + + 來源檔案、物件檔案、程式庫和標頭檔中。 通常，makefile 會將這些元素的組合協調成可執行檔。 下圖顯示使用先行編譯標頭檔的 makefile 結構。 此圖表中的 NMAKE 宏名稱和檔案名，[與 pch 的](#example-code-for-pch)範例 Makefile 中找到的範例[程式](#sample-makefile-for-pch)代碼中所述的相同。
 
 此圖使用三個圖表裝置來顯示組建程式的流程。 命名的矩形代表每個檔案或宏;這三個宏代表一或多個檔案。 陰影區域代表每個編譯或連結動作。 箭號顯示在編譯或連結程式期間結合的檔案和宏。
 
@@ -148,7 +148,7 @@ PCH 檔案不包含建立時已生效之 include 路徑的相關資訊。 當您
 
 只有當先行編譯標頭檔（穩定的）不存在，或您對這兩個宏中所列的檔案進行變更時，才會發生此情況。 不論是哪一種情況，先行編譯標頭檔都只會包含 STABLEHDRS 宏中所列檔案中的程式碼。 在 BOUNDRY 宏中，列出您要先行編譯的最後一個檔案。
 
-您在這些宏中列出的檔案可以是標頭檔或 C 或C++來源檔案。 （單一 PCH 檔案不能同時用於 C 和C++模組）。請注意，您可以使用**hdrstop**宏在 BOUNDRY 檔案中的某個時間點停止先行編譯。 如需詳細資訊，請參閱[hdrstop](../preprocessor/hdrstop.md) 。
+您在這些宏中列出的檔案可以是標頭檔或 C 或 c + + 原始檔。 （單一 PCH 檔案無法同時用於 C 和 c + + 模組）。請注意，您可以使用**hdrstop**宏在 BOUNDRY 檔案中的某個時間點停止先行編譯。 如需詳細資訊，請參閱[hdrstop](../preprocessor/hdrstop.md) 。
 
 繼續圖表時，APPLIB 代表您最終應用程式中所使用的支援程式碼。 它是從 APPLIB、UNSTABLEHDRS 宏中列出的檔案，以及先行編譯標頭檔中的先行編譯器代碼所建立。
 
@@ -306,7 +306,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C/C++ 建置參考](reference/c-cpp-building-reference.md)<br/>
 [MSVC 編譯器選項](reference/compiler-options.md)

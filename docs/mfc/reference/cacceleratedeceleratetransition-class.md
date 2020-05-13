@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-ms.openlocfilehash: 1e55e81b4d9b5c324f86bfd141b74d9faa362d94
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 356ba30e6d9a638672d2c356676735ebfaed8f3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507747"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371154"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 類別
 
@@ -28,34 +28,34 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|構造轉換物件。|
+|[C加速減速轉換::C加速減速轉換](#cacceleratedeceleratetransition)|構造過渡物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[C加速減速轉換:建立](#create)|呼叫過渡庫以建立封裝的過渡 COM 物件。 ( 覆寫[CBase 轉換:建立](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|花費在加速到持續時間的時間比例。|
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|花費在減速期間的時間比例。|
-|[CAccelerateDecelerateTransition::m_duration](#m_duration)|轉換的持續時間。|
-|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|轉換結束時的動畫變數值。|
+|[C加速減速轉換::m_accelerationRatio](#m_accelerationratio)|加速時間與持續時間的比率。|
+|[C加速減速轉換::m_decelerationRatio](#m_decelerationratio)|減速時間與持續時間的比率。|
+|[C加速減速轉換::m_duration](#m_duration)|轉換的持續時間。|
+|[C加速減速轉換::m_finalValue](#m_finalvalue)|過渡結束時動畫變數的值。|
 
 ## <a name="remarks"></a>備註
 
-在加速減速轉換期間, 動畫變數會加速, 然後在轉換期間 (以指定的值結束) 進行減速。 您可以藉由指定不同的加速和減速比例, 分別控制變數加速和減速的速度。 當初始速度為零時, 加速比率是變數將花費在加速的持續時間的分數;同樣地, 與減速比率相同。 如果初始速度不是零, 則是速度達到零和轉換結束之間的時間分數。 加速比率和減速比率應加上最大值1.0。 由於所有轉換都會自動清除, 因此建議您使用 operator new 加以配置。 封裝的 IUIAnimationTransition COM 物件是由 CAnimationController:: AnimateGroup 所建立, 直到它是 Null 為止。 在建立此 COM 物件之後變更成員變數不會有任何作用。
+在加速減速轉換期間,動畫變數會加速,然後在轉換期間減慢速度,以指定值結束。 通過指定不同的加速和減速比,您可以控制變數獨立加速和減速的速度。 當初始速度為零時,加速度比是變數將加速花費的持續時間的一小部分;同樣與減速率。 如果初始速度是非零,則它是速度達到零和過渡結束之間的時間分數。 加速度比和減速率應總和為最大 1.0。 由於所有轉換都將自動清除,因此建議使用運算符 new 分配。 封裝的 IUI動畫轉換 COM 物件由 C動畫控制器::AnimateGroup 創建,直到此為止,它才為 NULL。 建立此 COM 物件後更改成員變數不起作用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 轉換](../../mfc/reference/cbasetransition-class.md)
 
 `CAccelerateDecelerateTransition`
 
@@ -63,9 +63,9 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
+## <a name="cacceleratedeceleratetransitioncacceleratedeceleratetransition"></a><a name="cacceleratedeceleratetransition"></a>C加速減速轉換::C加速減速轉換
 
-構造轉換物件。
+構造過渡物件。
 
 ```
 CAccelerateDecelerateTransition(
@@ -77,21 +77,21 @@ CAccelerateDecelerateTransition(
 
 ### <a name="parameters"></a>參數
 
-*duration*<br/>
+*時間*<br/>
 轉換的持續時間。
 
-*finalValue*<br/>
-轉換結束時的動畫變數值。
+*最終價值*<br/>
+過渡結束時動畫變數的值。
 
-*accelerationRatio*<br/>
-花費在加速到持續時間的時間比例。
+*加速度比*<br/>
+加速時間與持續時間的比率。
 
-*decelerationRatio*<br/>
-花費在減速期間的時間比例。
+*減速比*<br/>
+減速時間與持續時間的比率。
 
-##  <a name="create"></a>  CAccelerateDecelerateTransition::Create
+## <a name="cacceleratedeceleratetransitioncreate"></a><a name="create"></a>C加速減速轉換:建立
 
-呼叫轉換程式庫來建立封裝的轉換 COM 物件。
+呼叫過渡庫以建立封裝的過渡 COM 物件。
 
 ```
 virtual BOOL Create(
@@ -101,30 +101,30 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pLibrary*<br/>
-[IUIAnimationTransitionLibrary 介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標, 它會定義標準轉換的程式庫。
+*p庫*<br/>
+指向[IUIAnimation 轉換庫介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標,該介面定義標準轉換庫。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立轉換, 則為 TRUE;否則為 FALSE。
+如果成功創建轉換,則為 TRUE;如果成功創建轉換,則為 TRUE。否則 FALSE。
 
-##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio
+## <a name="cacceleratedeceleratetransitionm_accelerationratio"></a><a name="m_accelerationratio"></a>C加速減速轉換::m_accelerationRatio
 
-花費在加速到持續時間的時間比例。
+加速時間與持續時間的比率。
 
 ```
 DOUBLE m_accelerationRatio;
 ```
 
-##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio
+## <a name="cacceleratedeceleratetransitionm_decelerationratio"></a><a name="m_decelerationratio"></a>C加速減速轉換::m_decelerationRatio
 
-花費在減速期間的時間比例。
+減速時間與持續時間的比率。
 
 ```
 DOUBLE m_decelerationRatio;
 ```
 
-##  <a name="m_duration"></a>  CAccelerateDecelerateTransition::m_duration
+## <a name="cacceleratedeceleratetransitionm_duration"></a><a name="m_duration"></a>C加速減速轉換::m_duration
 
 轉換的持續時間。
 
@@ -132,9 +132,9 @@ DOUBLE m_decelerationRatio;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>CAccelerateDecelerateTransition::m_finalValue
+## <a name="cacceleratedeceleratetransitionm_finalvalue"></a><a name="m_finalvalue"></a>C加速減速轉換::m_finalValue
 
-轉換結束時的動畫變數值。
+過渡結束時動畫變數的值。
 
 ```
 DOUBLE m_finalValue;

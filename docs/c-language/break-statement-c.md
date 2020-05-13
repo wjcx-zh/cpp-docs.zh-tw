@@ -7,11 +7,11 @@ helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
 ms.openlocfilehash: b38ff6c535c142bd15ea09a4d7c80010c3fff31f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313359"
 ---
 # <a name="break-statement-c"></a>break 陳述式 (C)
 
@@ -19,8 +19,8 @@ ms.locfileid: "56149813"
 
 ## <a name="syntax"></a>語法
 
-*jump-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**中斷 ;**
+*跳躍語句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**崩潰**
 
 `break` 陳述式通常用來終止處理 `switch` 陳述式內的特定案例。 若缺少封閉迴圈，`switch` 陳述式會產生錯誤。
 
@@ -43,6 +43,6 @@ int main() {
 } // Loop exits only when 'Q' is pressed
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[break 陳述式](../cpp/break-statement-cpp.md)
+[break 語句](../cpp/break-statement-cpp.md)

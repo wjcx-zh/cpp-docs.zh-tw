@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913373"
 ---
 # <a name="bsearch"></a>bsearch
 
-對已排序陣列執行二進位搜尋。 目前有比這個函式更安全的版本；請參閱 [bsearch_s](bsearch-s.md)。
+對已排序陣列執行二進位搜尋。 這個函式已有更安全的版本可用；請參閱 [bsearch_s](bsearch-s.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -51,19 +53,19 @@ void *bsearch(
 
 ### <a name="parameters"></a>參數
 
-*金鑰*\
+*擊鍵*\
 要搜尋之索引鍵的指標。
 
-*base*\
+*群體*\
 搜尋資料基底的指標。
 
-\*數目*
+*項數*\
 項目數。
 
 *寬度*\
 項目的寬度。
 
-*比較*\
+*何*\
 比較兩個項目的回呼函式。 第一個是搜尋索引鍵的指標，而第二個是要與索引鍵比較之陣列元素的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -80,7 +82,9 @@ void *bsearch(
 |0|索引鍵等於陣列項目。|
 |> 0|索引鍵大於陣列項目。|
 
-這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*width*為零，則函式會叫用不正確參數處理常式，如參數中所述[驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行， **errno**會設為 `EINVAL`，而函式會傳回**Null**。
+這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*width*為零，則函數會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為`EINVAL` ，且函式會傳回**Null**。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -88,7 +92,7 @@ void *bsearch(
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> 和 \<search.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -135,7 +139,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

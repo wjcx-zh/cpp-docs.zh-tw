@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150619"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749189"
 ---
 # <a name="conditional-expression-operator"></a>條件運算式運算子
 
@@ -19,9 +19,9 @@ C 有一個三元運算子：條件運算式運算子 (**? :**)。
 
 ## <a name="syntax"></a>語法
 
-*conditional-expression*：<br/>
+*條件運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **：**  *conditional-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **：**  *條件運算式*
 
 *logical-OR-expression* 必須要有整數、浮點或指標類型。 其評估條件為全等於 0。 *logical-OR-expression* 後方會有一個序列點。 評估運算元的方式如下：
 
@@ -43,7 +43,7 @@ C 有一個三元運算子：條件運算式運算子 (**? :**)。
 
 - 如果 *expression* 或 *conditional-expression* 是指標，且另一個運算元是值為 0 的常數運算式，結果的類型會是指標類型。
 
-在指標的類型比較中，指標指向之類型的任何類型限定詞 (**const`volatile` 或** ) 都不具意義，但結果類型會繼承條件式之兩個元件的限定詞。
+在指標的類型比較中，指標指向之類型的任何類型限定詞 (**const`volatile` 或 **) 都不具意義，但結果類型會繼承條件式之兩個元件的限定詞。
 
 ## <a name="examples"></a>範例
 
@@ -55,7 +55,7 @@ j = ( i < 0 ) ? ( -i ) : ( i );
 
 這個範例會將 `i` 的絕對值指派為 `j`。 如果 `i` 小於 0，會將 `-i` 指派至 `j`。 如果 `i` 大於或等於 0，則會將 `i` 指派至 `j`。
 
-```
+```cpp
 void f1( void );
 void f2( void );
 int x;
@@ -68,6 +68,6 @@ int y;
 
 在此範例中會宣告兩個函式 (`f1` 和 `f2`) 及兩個變數 (`x` 和 `y`)。 稍後在程式中，如果兩個變數具有相同的值，便會呼叫 `f1` 函式。 否則會呼叫 `f2`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [條件運算子：? :](../cpp/conditional-operator-q.md)

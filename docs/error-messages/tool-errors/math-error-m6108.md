@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - M6108
 ms.assetid: 054893b4-49bc-45d9-882f-7cb50ba387c0
-ms.openlocfilehash: 68e6ae823613d87eb01c443b564b46746259cd7b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c6bd403437ee5e55eaf4add288995d0e4aa76c3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173721"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361964"
 ---
 # <a name="math-error-m6108"></a>運算錯誤 M6108
 
 平方根
 
-平方根運算中的運算元為負數。
+平方根操作中的操作數為負數。
 
-程式終止，結束代碼為136。
+程序終止與退出代碼 136。
 
 > [!NOTE]
->  C 執行時間程式庫和 FORTRAN 內建函式**SQRT**中的 `sqrt` 函式不會產生此錯誤。 C `sqrt` 函式會先檢查引數，再執行作業，如果運算元為負數，則會傳回錯誤值。 FORTRAN **SQRT**函數會產生網域錯誤[M6201](../../error-messages/tool-errors/math-error-m6201.md) ，而不是這個錯誤。
+> C`sqrt`執行時庫中的函數和 FORTRAN 內部函數**SQRT**不會生成此錯誤。 在執行操作`sqrt`之前,C 函數會檢查參數,如果操作數為負數,則返回錯誤值。 FORTRAN **SQRT**函數生成域錯誤[M6201](../../error-messages/tool-errors/math-error-m6201.md)而不是此錯誤。

@@ -20,14 +20,14 @@ ms.locfileid: "71998700"
 
 - [不帶正負號整數類資料類型的轉換](../c-language/conversions-from-unsigned-integral-types.md)
 
-- [從浮點類型轉換](../c-language/conversions-from-floating-point-types.md)
+- [從浮點數類型的轉換](../c-language/conversions-from-floating-point-types.md)
 
-- [指標類型的來回轉換](../c-language/conversions-to-and-from-pointer-types.md)
+- [指標類型的轉換](../c-language/conversions-to-and-from-pointer-types.md)
 
 - [其他類型的轉換](../c-language/conversions-from-other-types.md)
 
 類型限定詞不會影響轉換的允許值，雖然 **const** 左值不可以在指派的左邊使用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[型別轉換](../c-language/type-conversions-c.md)
+[類型轉換](../c-language/type-conversions-c.md)

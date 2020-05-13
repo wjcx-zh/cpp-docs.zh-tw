@@ -45,28 +45,28 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: bd5df2917d377e7bc119d1aa85a32c4d5149c305
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5dfb0e858bb412daf159ee9efc7dcc13be690886
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686440"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336731"
 ---
-# <a name="ltshared_mutex"></a>&lt;shared_mutex >
+# <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
-@No__t_0shared_mutex > 標頭會提供同步處理原始物件，以保護可由多個執行緒存取的共用資料。 除了 mutex 類別所提供的獨佔存取權控制，共用的 mutex 類別也允許由多個執行緒共用擁有權以進行非獨佔存取。 共用的 mutex 可用來控制可供數個執行緒讀取，而不會造成競爭情形，但必須由單一執行緒獨佔寫入的資源。
+shared_mutex>&lt;標頭提供同步基元,用於保護可由多個線程訪問的共用數據。 除了 mutex 類別所提供的獨佔存取權控制，共用的 mutex 類別也允許由多個執行緒共用擁有權以進行非獨佔存取。 共用的 mutex 可用來控制可供數個執行緒讀取，而不會造成競爭情形，但必須由單一執行緒獨佔寫入的資源。
 
-標頭 &lt;shared_mutex > 會定義 `shared_mutex` 和 `shared_timed_mutex` 的類別、類別樣板 `shared_lock`，以及用於共用 mutex 支援的範本函數 `swap`。
+&lt;標頭shared_mutex>定義類`shared_mutex``shared_timed_mutex`和 ,類`shared_lock`範本 和共用互斥器支援`swap`的範本 函數。
 
 |類別|描述|
 |-------------|-----------------|
-|[shared_mutex 類別](#class_shared_mutex)|共用的 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
+|[shared_mutex類](#class_shared_mutex)|共用的 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
 |[shared_timed_mutex 類別](#class_shared_timed_mutex)|共用的計時 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
-|[shared_lock 類別](#class_shared_lock)|包裝共用 mutex 以支援多個代理程式之計時鎖定作業和非獨佔共用的類別範本。|
+|[shared_lock 類別](#class_shared_lock)|包裝共用互斥器以支援多個代理的時時鎖定操作和非獨佔共用的類範本。|
 
 |函式|描述|
 |---------------|-----------------|
-|[swap](#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|
+|[交換](#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|
 
 ## <a name="syntax"></a>語法
 
@@ -83,7 +83,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="remarks"></a>備註
 
-`shared_mutex` 類別的執行個體是「共用的 mutex 類型」，此類型可控制某個範圍內 mutex 的共用擁有權。 共用的 mutex 類型符合 mutex 類型以及成員的所有需求，以支援共用的非獨佔擁有權。
+`shared_mutex` 類別的執行個體是「共用的 mutex 類型」**，此類型可控制某個範圍內 mutex 的共用擁有權。 共用的 mutex 類型符合 mutex 類型以及成員的所有需求，以支援共用的非獨佔擁有權。
 
 共用的 mutex 類型支援 `lock_shared`、`unlock_shared` 和 `try_lock_shared` 等其他方法：
 
@@ -91,24 +91,24 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 - `unlock_shared` 方法會釋放呼叫執行緒所持有之 mutex 的共用擁有權。
 
-- `try_lock_shared` 方法會嘗試在不造成封鎖的情況下取得 mutex 的共用擁有權。 其傳回型別可以轉換成**bool** ，如果方法取得擁有權，則為**true** ，否則為**false**。
+- `try_lock_shared` 方法會嘗試在不造成封鎖的情況下取得 mutex 的共用擁有權。 指定類型轉換為**bool,** 如果方法取得所有權,則**為 true,** 但否則為**false**。
 
-`shared_timed_mutex` 類別是「共用的計時 mutex 類型」，此類型符合共用 mutex 類型和計時 mutex 類型的需求。
+`shared_timed_mutex` 類別是「共用的計時 mutex 類型」**，此類型符合共用 mutex 類型和計時 mutex 類型的需求。
 
 共用的計時 mutex 類型支援 `try_lock_shared_for` 和 `try_lock_shared_until` 等其他方法：
 
-- `try_lock_shared_for` 方法會嘗試取得 mutex 的共用擁有權，直到經過了參數所指定的持續時間為止。 如果持續時間不是正數，此方法就相當於 `try_lock_shared`。 除非取得了共用擁有權，否則此方法不會在指定的持續期間內傳回。 如果方法取得擁有權，則其傳回值為**true** ，否則為**false**。
+- `try_lock_shared_for` 方法會嘗試取得 mutex 的共用擁有權，直到經過了參數所指定的持續時間為止。 如果持續時間不是正數，此方法就相當於 `try_lock_shared`。 除非取得了共用擁有權，否則此方法不會在指定的持續期間內傳回。 如果方法取得所有權,但其傳回值**為 true,** 但否則為**false**。
 
-- `try_lock_shared_until` 方法會嘗試取得 mutex 的共用擁有權，直到經過了指定的絕對時間為止。 如果已經過了指定的時間，此方法就相當於 `try_lock_shared`。 除非取得了共用擁有權，否則此方法不會在指定的時間之前傳回。 如果方法取得擁有權，則其傳回值為**true** ，否則為**false**。
+- `try_lock_shared_until` 方法會嘗試取得 mutex 的共用擁有權，直到經過了指定的絕對時間為止。 如果已經過了指定的時間，此方法就相當於 `try_lock_shared`。 除非取得了共用擁有權，否則此方法不會在指定的時間之前傳回。 如果方法取得所有權,但其傳回值**為 true,** 但否則為**false**。
 
-@No__t_0 類別樣板延伸了計時鎖定的支援，並將擁有權轉移到共用的 mutex。 擁有權可在建構期間或完成之後取得，並可轉移到另一個 `shared_lock` 物件。 `shared_lock` 類型的物件可以移動，但無法複製。
+類`shared_lock`模板擴展了對時時鎖定和所有權轉移到共用互斥體的支援。 擁有權可在建構期間或完成之後取得，並可轉移到另一個 `shared_lock` 物件。 `shared_lock` 類型的物件可以移動，但無法複製。
 
 > [!WARNING]
-> 從 Visual Studio 2015 開始， C++標準程式庫同步處理類型是以 Windows 同步處理原始物件為基礎，且不再使用 ConcRT （除非目標平臺是 windows XP）。 @No__t_0shared_mutex > 中定義的類型不應該與任何 ConcRT 類型或函式搭配使用。
+> 從 Visual Studio 2015 開始,C++標準庫同步類型基於 Windows 同步基元,不再使用 ConcRT(目標平臺為 Windows XP 的除外)。 shared_mutex>中&lt;定義的類型不應與任何 ConcRT 類型或函數一起使用。
 
 ## <a name="classes"></a>類別
 
-###  <a name="class_shared_mutex"></a> shared_mutex 類別
+### <a name="shared_mutex-class"></a><a name="class_shared_mutex"></a> shared_mutex 類別
 
 `shared_mutex` 類別會利用共用擁有權語意來實作非遞迴的 mutex。
 
@@ -135,7 +135,7 @@ public:
    };
 ```
 
-###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex 類別
+### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a>shared_timed_mutex類
 
 `shared_timed_mutex` 類別會利用符合計時 mutex 類型需求的共用擁有權語意，來實作非遞迴的 mutex。
 
@@ -167,9 +167,9 @@ public:
    };
 ```
 
-###  <a name="class_shared_lock"></a> shared_lock 類別
+### <a name="shared_lock-class"></a><a name="class_shared_lock"></a> shared_lock 類別
 
-類別範本 `shared_lock` 控制範圍內共用 mutex 物件的共用擁有權。 樣板參數必須是共用的 mutex 類型。
+類範本`shared_lock`控制作用域中共用互斥物件的共用擁有權。 樣板參數必須是共用的 mutex 類型。
 
 ```cpp
 class shared_lock {
@@ -215,7 +215,7 @@ private:
 
 ## <a name="functions"></a>函式
 
-###  <a name="function_swap"></a>調換
+### <a name="swap"></a><a name="function_swap"></a>交換
 
 交換 `shared_lock` 物件。
 
@@ -230,9 +230,9 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 **標頭︰** &lt;shared_mutex >
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
-[&lt;mutex>](../standard-library/mutex.md)
+[標題檔案參考](../standard-library/cpp-standard-library-header-files.md)\
+[&lt;互斥>](../standard-library/mutex.md)

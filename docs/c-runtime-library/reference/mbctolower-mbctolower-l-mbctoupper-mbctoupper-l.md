@@ -1,11 +1,15 @@
 ---
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +50,19 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952545"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914281"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
 測試並轉換多位元組字元的大小寫。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -80,7 +85,7 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要轉換的多位元組字元。
 
 *locale*<br/>
@@ -96,12 +101,14 @@ unsigned int _mbctoupper_l(
 
 |常式|轉換|
 |--------------|--------------|
-|**_mbctolower**、 **_mbctolower_l**|將大寫字元轉換為小寫字元。|
-|**_mbctoupper**、 **_mbctoupper_l**|將小寫字元轉換為大寫字元。|
+|**_mbctolower**， **_mbctolower_l**|將大寫字元轉換為小寫字元。|
+|**_mbctoupper**， **_mbctoupper_l**|將小寫字元轉換為大寫字元。|
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式的版本若沒有 **_l**尾碼，會針對此地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在先前版本中， **_mbctolower**稱為**jtolower**，而 **_mbctoupper**稱為**jtoupper**。 對於新的程式碼，請改用新名稱。
+在先前的版本中， **_mbctolower**稱為**jtolower**， **_mbctoupper**稱為**jtoupper**。 對於新的程式碼，請改用新名稱。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -116,10 +123,10 @@ unsigned int _mbctoupper_l(
 
 |常式|必要的標頭|
 |--------------|---------------------|
-|**_mbctolower**、 **_mbctolower_l**|\<mbstring.h>|
-|**_mbctoupper**、 **_mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower**， **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**， **_mbctoupper_l**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

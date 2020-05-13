@@ -1,11 +1,15 @@
 ---
 title: strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
+- _o__mbscat_s
+- _o__mbscat_s_l
+- _o_strcat_s
+- _o_wcscat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +43,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f7d890a753638112c4a1bb56cf6093a9510dbee2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625785"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910654"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 
@@ -121,9 +126,9 @@ errno_t _mbscat_s_l(
 
 |*strDestination*|*numberOfElements*|*strSource*|傳回值|*StrDestination*的內容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**或未結束|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|*strDestination*[0] 設定為0|
-|任何|0 或太小|任何|**ERANGE**|*strDestination*[0] 設定為0|
+|**Null**或未結束|任意|任意|**EINVAL**|未修改|
+|任意|任意|**Null**|**EINVAL**|*strDestination*[0] 設定為0|
+|任意|0 或太小|任意|**ERANGE**|*strDestination*[0] 設定為0|
 
 ## <a name="remarks"></a>備註
 
@@ -138,7 +143,7 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s**和 **_mbscat_s**是**strcat_s**的寬字元和多位元組字元版本。 **Wcscat_s**的引數和傳回值是寬字元字串; **_mbscat_s**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcscat_s**和 **_mbscat_s**是**strcat_s**的寬字元和多位元組字元版本。 **Wcscat_s**的引數和傳回值是寬字元字串;**_mbscat_s**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 如果*strDestination*是 null 指標，或不是以 null 結束，或如果*strSource*是**null**指標，或如果目的字串太小，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
@@ -147,6 +152,8 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -162,13 +169,13 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**wcscat_s**|\<string.h> 或 \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
 請參閱 [strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) 中的程式碼範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

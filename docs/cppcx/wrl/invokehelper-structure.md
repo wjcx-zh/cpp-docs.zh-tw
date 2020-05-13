@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386131"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371378"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 結構
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -103,18 +103,18 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 
 ### <a name="parameters"></a>參數
 
-*TDelegateInterface*<br/>
-委派的介面型別。
+*T委託介面*<br/>
+委託介面類型。
 
-*TCallback*<br/>
-事件處理常式函式的類型。
+*回撥*<br/>
+事件處理程式函數的類型。
 
-*argCount*<br/>
-中的引數數目`InvokeHelper`特製化。
+*arg( A) Counts*<br/>
+`InvokeHelper`專門化中的參數數。
 
 ## <a name="remarks"></a>備註
 
-提供實作`Invoke()`方法根據指定的數目和類型的引數。
+根據指定的參數數和`Invoke()`類型提供方法的實現。
 
 ## <a name="members"></a>成員
 
@@ -122,39 +122,39 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 
 名稱     | 描述
 -------- | -----------------------------------------------------------------------------
-`Traits` | 類別定義的每個事件處理常式的引數類型同義。
+`Traits` | 定義每個事件處理程式參數類型的類的同義詞。
 
 ### <a name="public-constructors"></a>公用建構函式
 
 名稱                                        | 描述
 ------------------------------------------- | -------------------------------------------------------
-[InvokeHelper::InvokeHelper](#invokehelper) | 初始化 `InvokeHelper` 類別的新執行個體。
+[呼叫説明者::呼叫說明程式](#invokehelper) | 將 `InvokeHelper` 類別的新執行個體初始化。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                            | 描述
 ------------------------------- | -----------------------------------------------------------------------------------
-[InvokeHelper::Invoke](#invoke) | 會呼叫其簽章包含指定的引數的事件處理常式。
+[呼叫輔助器::呼叫](#invoke) | 呼叫其簽署包含指定參數數的事件處理程式。
 
 ### <a name="public-data-members"></a>公用資料成員
 
 名稱                                 | 描述
 ------------------------------------ | ----------------------------------------------------------
-[InvokeHelper::callback_](#callback) | 表示事件發生時要呼叫的事件處理常式。
+[呼叫説明者::callback_](#callback) | 表示事件發生時要調用的事件處理程式。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `InvokeHelper`
 
 ## <a name="requirements"></a>需求
 
-**標頭：** event.h
+**標題:** 事件.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="callback"></a>Invokehelper:: Callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a>呼叫説明者::callback_
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 TCallback callback_;
@@ -162,13 +162,13 @@ TCallback callback_;
 
 ### <a name="remarks"></a>備註
 
-表示事件發生時要呼叫的事件處理常式。
+表示事件發生時要調用的事件處理程式。
 
-`TCallback`範本參數會指定事件處理常式的類型。
+樣本`TCallback`參數指定事件處理程式的類型。
 
-## <a name="invoke"></a>InvokeHelper::Invoke
+## <a name="invokehelperinvoke"></a><a name="invoke"></a>呼叫輔助器::呼叫
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 STDMETHOD(
@@ -206,43 +206,43 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *arg1*<br/>
-引數 1。
+參數 1.
 
 *arg2*<br/>
-引數 2。
+參數 2.
 
 *arg3*<br/>
-引數 3。
+參數 3.
 
 *arg4*<br/>
-引數 4。
+參數 4.
 
 *arg5*<br/>
-引數 5。
+參數 5.
 
 *arg6*<br/>
-引數 6。
+參數 6.
 
 *arg7*<br/>
-引數 7。
+參數 7.
 
 *arg8*<br/>
-引數 8。
+參數 8.
 
 *arg9*<br/>
-引數 9。
+參數 9.
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為 S_OK否則，會描述錯誤的 HRESULT。
+S_OK如果成功;否則,描述錯誤的 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-會呼叫其簽章包含指定的引數的事件處理常式。
+呼叫其簽署包含指定參數數的事件處理程式。
 
-## <a name="invokehelper"></a>InvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>呼叫説明者::呼叫說明程式
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 explicit InvokeHelper(
@@ -252,11 +252,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>參數
 
-*callback*<br/>
+*回撥*<br/>
 事件處理常式。
 
 ### <a name="remarks"></a>備註
 
-初始化 `InvokeHelper` 類別的新執行個體。
+將 `InvokeHelper` 類別的新執行個體初始化。
 
-`TCallback`範本參數會指定事件處理常式的類型。
+樣本`TCallback`參數指定事件處理程式的類型。

@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246807"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167656"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 類別
 
-建構的智慧型指標陣列時，這個類別會提供有用的方法。
+這個類別會在建立智慧型指標的陣列時提供有用的方法。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*E*<br/>
+*版*<br/>
 指標類型。
 
 ## <a name="members"></a>成員
@@ -46,11 +46,11 @@ class CAutoPtrArray : public CAtlArray<
 
 ## <a name="remarks"></a>備註
 
-這個類別提供建構函式，並衍生方法從[CAtlArray](../../atl/reference/catlarray-class.md)並[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)協助儲存智慧型指標的集合類別物件的建立。
+這個類別會提供一個函式，並從[CAtlArray](../../atl/reference/catlarray-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)衍生方法，協助建立可儲存智慧型指標的集合類別物件。
 
-如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CAtlArray`
 
@@ -58,13 +58,13 @@ class CAutoPtrArray : public CAtlArray<
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcoll.h
+**標頭：** atlcoll。h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 建構函式。
 
-```
+```cpp
 CAutoPtrArray() throw();
 ```
 

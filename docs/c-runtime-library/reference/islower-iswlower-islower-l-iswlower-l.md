@@ -1,11 +1,13 @@
 ---
 title: islower、iswlower、_islower_l、_iswlower_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswlower
 - _islower_l
 - islower
 - _iswlower_l
+- _o_islower
+- _o_iswlower
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-ms.openlocfilehash: 957bae12c718b0466c8e9f6d39dd57d7c0ccca7d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4add576b9abe2bedda227d76cf3fc57890cfcbc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954314"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917557"
 ---
 # <a name="islower-iswlower-_islower_l-_iswlower_l"></a>islower、iswlower、_islower_l、_iswlower_l
 
@@ -77,7 +80,7 @@ int _iswlower_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 *locale*<br/>
@@ -85,7 +88,7 @@ int _iswlower_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果*c*是小寫字元的特定標記法，則每個常式都會傳回非零。 如果*c*是小寫字元（a-z）， **islower**會傳回非零值。 如果*c*是對應至小寫字母的寬字元，或如果*c*是其中一個執行定義的寬字元集合，但沒有**iswcntrl**、 **iswdigit**、iswpunct，則**iswlower**會傳回非零值。、或**iswspace**為非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
+如果*c*是小寫字元的特定標記法，則每個常式都會傳回非零。 如果*c*是小寫字元（a-z）， **islower**會傳回非零值。 如果*c*是對應至小寫字母的寬字元，或如果*c*是其中一個執行定義的寬字元集合，但沒有**iswcntrl**、 **iswdigit**、 **iswpunct**或**iswspace**為非零值，則**iswlower**會傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
 這些具有 **_l**尾碼的函式版本，會使用傳入的地區設定，而不是與地區設定相關行為的目前地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -97,6 +100,10 @@ int _iswlower_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istlower**|**islower**|[_ismbclower](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswlower**|
 |**_istlower_l**|`_islower _l`|[_ismbclower_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_liswlower_l**|
+
+## <a name="remarks"></a>備註
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -112,5 +119,5 @@ int _iswlower_l(
 ## <a name="see-also"></a>另請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

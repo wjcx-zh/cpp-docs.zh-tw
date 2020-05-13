@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0612a4b365b928d3c9be6d76168a76b4ee1caa85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324021"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318262"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange 類別
 
@@ -43,43 +43,43 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 
 |名稱|描述|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|建構轉換物件。|
+|[從範圍轉換的CSinusoid轉換:從範圍轉換的CSinusoid](#csinusoidaltransitionfromrange)|構造過渡物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CSinusoid 從範圍轉換:建立](#create)|呼叫過渡庫以建立封裝的過渡 COM 物件。 ( 覆寫[CBase 轉換:建立](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|尖峰的正弦曲線 wave 動畫變數的值。|
-|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|正弦曲線 wave 透過動畫變數的值。|
-|[CSinusoidalTransitionFromRange::m_duration](#m_duration)|轉換的持續時間。|
-|[CSinusoidalTransitionFromRange::m_period](#m_period)|以秒為單位的正弦曲線 wave 振動期間。|
-|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|在開始轉換的斜率。|
+|[CSinusoid 從範圍轉換::m_dblMaximumValue](#m_dblmaximumvalue)|正弦波峰值處動畫變數的值。|
+|[CSinusoid 從範圍轉換::m_dblMinimumValue](#m_dblminimumvalue)|正弦波槽處動畫變數的值。|
+|[CSinusoid 從範圍轉換::m_duration](#m_duration)|轉換的持續時間。|
+|[CSinusoid 從範圍轉換::m_period](#m_period)|正弦波的振蕩週期(以秒為單位)。|
+|[CSinusoid 從範圍轉換::m_slope](#m_slope)|過渡開始時的斜率。|
 
 ## <a name="remarks"></a>備註
 
-動畫變數的值半數的正弦曲線範圍轉換的整個持續期間內以指定最小和最大值。 斜率參數用來區分兩個可能與其他參數所指定的正弦波。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。
+動畫變數的值在正弦範圍轉換的整個持續時間內在指定的最小值和最大值之間波動。 坡度參數用於消除其他參數指定的兩個可能的正子波之間的歧義。 由於所有轉換都將自動清除,因此建議使用運算符 new 分配。 封裝的 IUI動畫轉換 COM 物件由 C動畫控制器::AnimateGroup 創建,直到此為止,它才為 NULL。 建立此 COM 物件後更改成員變數不起作用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 轉換](../../mfc/reference/cbasetransition-class.md)
 
-[CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
+[從範圍轉換的 CSinusoid](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
 
 ## <a name="requirements"></a>需求
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create
+## <a name="csinusoidaltransitionfromrangecreate"></a><a name="create"></a>CSinusoid 從範圍轉換:建立
 
-呼叫轉換程式庫來建立封裝的轉換 COM 物件。
+呼叫過渡庫以建立封裝的過渡 COM 物件。
 
 ```
 virtual BOOL Create(
@@ -89,16 +89,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pLibrary*<br/>
-轉換程式庫，也就是負責建立的標準轉換指標。
+*p庫*<br/>
+指向過渡庫的指標,它負責創建標準轉換。
 
 ### <a name="return-value"></a>傳回值
 
-如果轉換成功; 建立，則為 TRUE。否則為 FALSE。
+如果成功創建轉換,則為 TRUE;如果成功創建轉換,則為 TRUE。否則 FALSE。
 
-##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+## <a name="csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>從範圍轉換的CSinusoid轉換:從範圍轉換的CSinusoid
 
-建構轉換物件。
+構造過渡物件。
 
 ```
 CSinusoidalTransitionFromRange(
@@ -111,38 +111,38 @@ CSinusoidalTransitionFromRange(
 
 ### <a name="parameters"></a>參數
 
-*duration*<br/>
+*時間*<br/>
 轉換的持續時間。
 
-*dblMinimumValue*<br/>
-正弦曲線 wave 透過動畫變數的值。
+*最小值*<br/>
+正弦波槽處動畫變數的值。
 
-*dblMaximumValue*<br/>
-尖峰的正弦曲線 wave 動畫變數的值。
+*最大值*<br/>
+正弦波峰值處動畫變數的值。
 
-*period*<br/>
-以秒為單位的正弦曲線 wave 振動期間。
+*時期*<br/>
+正弦波的振蕩週期(以秒為單位)。
 
 *slope*<br/>
-在開始轉換的斜率。
+過渡開始時的斜率。
 
-##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue
+## <a name="csinusoidaltransitionfromrangem_dblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>CSinusoid 從範圍轉換::m_dblMaximumValue
 
-尖峰的正弦曲線 wave 動畫變數的值。
+正弦波峰值處動畫變數的值。
 
 ```
 DOUBLE m_dblMaximumValue;
 ```
 
-##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue
+## <a name="csinusoidaltransitionfromrangem_dblminimumvalue"></a><a name="m_dblminimumvalue"></a>CSinusoid 從範圍轉換::m_dblMinimumValue
 
-正弦曲線 wave 透過動畫變數的值。
+正弦波槽處動畫變數的值。
 
 ```
 DOUBLE m_dblMinimumValue;
 ```
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration
+## <a name="csinusoidaltransitionfromrangem_duration"></a><a name="m_duration"></a>CSinusoid 從範圍轉換::m_duration
 
 轉換的持續時間。
 
@@ -150,17 +150,17 @@ DOUBLE m_dblMinimumValue;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period
+## <a name="csinusoidaltransitionfromrangem_period"></a><a name="m_period"></a>CSinusoid 從範圍轉換::m_period
 
-以秒為單位的正弦曲線 wave 振動期間。
+正弦波的振蕩週期(以秒為單位)。
 
 ```
 UI_ANIMATION_SECONDS m_period;
 ```
 
-##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope
+## <a name="csinusoidaltransitionfromrangem_slope"></a><a name="m_slope"></a>CSinusoid 從範圍轉換::m_slope
 
-在開始轉換的斜率。
+過渡開始時的斜率。
 
 ```
 UI_ANIMATION_SLOPE m_slope;

@@ -6,101 +6,101 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionManager program
 ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "77258029"
 ---
 # <a name="connectionmanager-reference"></a>ConnectionManager 參考
 
 ::: moniker range="<=vs-2017"
 
-Visual Studio 2019 16.5 版和更新版本中提供了 ConnectionManager .exe。
+ConnectManager.exe 在 Visual Studio 2019 版 16.5 及更高版本中提供。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-ConnectionManager 是一個命令列公用程式，可管理 Visual Studio 外部的遠端開發連接。 這適用于布建新開發電腦的工作。 或者，用它來設定持續整合的 Visual Studio。 您可以在開發人員命令提示字元視窗中使用它。 如需開發人員命令提示字元的詳細資訊，請參閱[從命令C++行使用 Microsoft 工具](../build/building-on-the-command-line.md)組。
+ConnectManager.exe 是一個命令列實用程式,用於管理 Visual Studio 外部的遠端開發連接。 它對於預配新開發計算機等任務很有用。 或者,使用它設置 Visual Studio 進行持續整合。您可以在開發人員命令提示視窗中使用它。 有關開發人員指令提示的詳細資訊,請參閱[使用命令列中的 Microsoft C++工具集](../build/building-on-the-command-line.md)。
 
-Visual Studio 2019 16.5 版和更新版本中提供了 ConnectionManager .exe。 這是在 Visual Studio 安裝程式中**使用C++** 工作負載進行 Linux 開發的一部分。 當您在安裝程式中選擇**連接管理員**元件時，也會自動安裝它。 它會安裝在 *% VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager*。
+ConnectManager.exe 在 Visual Studio 2019 版 16.5 及更高版本中提供。 它是**Linux 開發**中的一部分,在可視化工作室安裝程式中C++工作負載。 當您在安裝程式中選擇**連接管理器**元件時,它也會自動安裝。 在 *%VCIDE 安裝中,其\\\\\\%Linux\\bin 連線管理員管理員.exe*.
 
-Visual Studio 也提供 ConnectionManager 的功能。 若要在 IDE 中管理遠端開發連接，請在功能表列上選擇 [**工具**] [ > **選項**] 以開啟 [選項] 對話方塊。 在 [選項] 對話方塊中，選取 [**跨平臺** > **連線管理員**]。
+ConnectManager.exe 的功能也可在視覺工作室中提供。 要在"IDE"中管理遠端開發連接,在功能表欄上,請選擇 **「工具** > **選項**」以打開「選項」對話方塊。 在選項「對話框中,選擇**跨平台** > **連線管理員**。
 
 ## <a name="syntax"></a>語法
 
-> **ConnectionManager .exe** *命令*\[*引數*] \[*選項*]
+> **連線管理員.exe***指令*\[*參數*\[=*選項*|
 
-### <a name="commands-and-arguments"></a>命令和引數
+### <a name="commands-and-arguments"></a>指令與參數
 
-- **新增***使用者\@主機*\[ **--通訊埠** *]* \[ **--密碼***密碼*] \[ **--privatekey** *privatekey_file*]
+- **新增***\@使用者 主機*\[ **--***連接埠*= \[ **--密碼***密碼*= \[ **--私密金鑰***privatekey_file*]
 
-  驗證並加入新的連接。 根據預設，它會使用埠22和密碼驗證。 （系統會提示您輸入密碼。）同時使用 **--password**和 **--privatekey**來指定私密金鑰的密碼。
+  驗證並添加新連接。 默認情況下,它使用埠 22 和密碼身份驗證。 (系統將提示您輸入密碼。使用 **--密碼**和 **-私密金鑰**為私密金鑰指定密碼。
 
-- **移除**\[*connection_id* \|*使用者\@主機*\[ **--埠***埠*]]
+- **remove**\[刪除*connection_id*\|connection_id*使用者\@* 主機\[ **--連接埠***port**
 
-  移除連接。 如果未指定任何引數，系統會提示您指定要移除的連接。
+  刪除連接。 如果未指定參數,系統將提示您指定要刪除的連接。
 
-- **全部移除**
+- **全部刪除**
 
-  移除所有儲存的連接。
+  刪除所有存儲的連接。
 
 - list
 
-  顯示所有預存連接的資訊和識別碼。
+  顯示所有存儲連接的資訊和指示。
 
-- **help**
+- **說明**
 
-  顯示 [說明] 畫面。
+  顯示幫助螢幕。
 
 - **version**
 
   顯示版本資訊。
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
-- **-q**、 **--quiet**
+- **-q** **, - 安靜**
 
-  防止輸出 `stdout` 或 `stderr`。
+  防止輸出到`stdout``stderr`或 。
 
-- **--no-提示**
+- **--無提示**
 
-  當適用時，會失敗而不是提示。
+  在適當的時候失敗而不是提示。
 
-- **--no-驗證**
+- **--no-verify**
 
-  新增或修改未驗證的連接。
+  添加或修改連接,無需身份驗證。
 
-- **--file** *filename*
+- **--檔案***名稱*
 
   從提供的*檔案名*讀取連接資訊。
 
-- **--無-遙測**
+- **--無遙測**
 
-  停用將使用量資料傳送回 Microsoft。 除非傳遞 **--no 遙測**旗標，否則會收集使用量資料，並將其傳送回給 Microsoft。  
+  禁用將使用方式數據發送回 Microsoft。 除非傳遞**了 --無遙測**標誌,否則將收集使用方式數據並將其發送回 Microsoft。  
 
-- **-n**， **--試執行**
+- **-n** **, -- 幹運行**
 
-  執行命令的試執行。
+  執行命令的幹運行。
 
 - **-p**
 
-  與 **--password**相同。
+  與 **-密碼**相同。
 
 - **-i**
 
-  與 **--privatekey**相同。
+  與**私鑰**相同。
 
 ## <a name="examples"></a>範例
 
-此命令會為 localhost 上名為 "user" 的使用者新增連接。 連接會使用金鑰檔進行驗證，在 *% USERPROFILE%\.ssh \ id_rsa*中找到。
+此命令為本地主機上名為"使用者"的使用者添加連接。 連線使用金鑰檔進行身份驗證,在*\.%USERPROFILE% ssh_id_rsa*中找到。
 
 ```cmd
 ConnectionManager.exe add user@127.0.0.1 --privatekey "%USERPROFILE%\.ssh\id_rsa"
 ```
 
-此命令會從連線清單中移除識別碼為1975957870的連接。
+此命令從連接清單中刪除 ID 1975957870 的連接。
 
 ```cmd
 ConnectionManager.exe remove 1975957870
@@ -108,6 +108,6 @@ ConnectionManager.exe remove 1975957870
 
 ## <a name="see-also"></a>另請參閱
 
-[連接到您在 Visual Studio 中的目標 Linux 系統](connect-to-your-remote-linux-computer.md)
+[連線至 Visual Studio 中的目標 Linux 系統](connect-to-your-remote-linux-computer.md)
 
 ::: moniker-end

@@ -7,33 +7,33 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-ms.openlocfilehash: 60cc527493e2a68751c201b998ab171c564d6c1f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 371f1944fae655556bbc9f89d7ffcce7cc326e5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510573"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365241"
 ---
 # <a name="working-with-the-toolbar-control"></a>使用工具列控制項
 
-本文說明如何存取[CToolBar](../mfc/reference/ctoolbar-class.md)基礎的[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件, 以更充分掌控您的工具列。 這是一個先進的主題。
+本文介紹如何存[取 CToolBar](../mfc/reference/ctoolbar-class.md)基礎的[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件,以便更好地控制工具列。 這是一個高級主題。
 
 ## <a name="procedures"></a>程序
 
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>存取 CToolBar 物件基礎的工具列通用控制項
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>存取 CToolBar 物件基礎的工具列公共控制項
 
-1. 呼叫[CToolBar:: GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)。
+1. 呼叫[CToolBar:抓取工具列](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)。
 
-`GetToolBarCtrl`傳回[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件的參考。 您可以使用參考來呼叫 toolbar 控制項類別的成員函式。
+`GetToolBarCtrl`返回對[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件的引用。 可以使用引用調用工具列控制類類的成員函數。
 
 > [!CAUTION]
->  雖然呼叫`CToolBarCtrl` **Get**函式是安全的, 但如果您呼叫**Set**函式, 請謹慎使用。 這是一個先進的主題。 通常您不需要存取基礎工具列控制項。
+> 雖然調用`CToolBarCtrl` **Get**函數是安全的,但如果您調用**Set**函數,請謹慎。 這是一個高級主題。 通常,您不需要訪問基礎工具列控制件。
 
-### <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
+### <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
-- [控制項 (Windows 通用控制項)](../mfc/controls-mfc.md)
+- [控制項(Windows 常見控制項)](../mfc/controls-mfc.md)
 
-- [工具列基本概念](../mfc/toolbar-fundamentals.md)
+- [工具列基礎知識](../mfc/toolbar-fundamentals.md)
 
 - [停駐和浮動工具列](../mfc/docking-and-floating-toolbars.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "69510573"
 
 - [工具列工具提示](../mfc/toolbar-tool-tips.md)
 
-- [Flyby 狀態列更新](../mfc/toolbar-tool-tips.md)
+- [飛天狀態列更新](../mfc/toolbar-tool-tips.md)
 
 - [處理工具提示通知](../mfc/handling-tool-tip-notifications.md)
 
@@ -51,11 +51,11 @@ ms.locfileid: "69510573"
 
 - [多個工具列](../mfc/toolbar-fundamentals.md)
 
-- [使用舊的工具列](../mfc/using-your-old-toolbars.md)
+- [使用舊工具列](../mfc/using-your-old-toolbars.md)
 
-- [控制列](../mfc/control-bars.md)
+- [控制條](../mfc/control-bars.md)
 
-如需使用 Windows 通用控制項的一般資訊, 請參閱[通用控制項](/windows/win32/Controls/common-controls-intro)。
+有關使用 Windows 常見控制項的一般資訊,請參閱[常見控制件](/windows/win32/Controls/common-controls-intro)。
 
 ## <a name="see-also"></a>另請參閱
 

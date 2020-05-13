@@ -14,7 +14,7 @@ ms.locfileid: "67552249"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` 將目前的設定檔計數器資訊儲存至檔案，並再重設計數器。 在訓練，以從執行中的程式來撰寫設定檔的所有資料的特性指引最佳化期間使用函式`.pgc`供稍後使用最佳化組建中的檔案。
+`PgoAutoSweep`將目前的設定檔計數器資訊儲存至檔案，然後重設計數器。 在特性指引優化訓練期間使用函式，以將執行中程式`.pgc`的所有設定檔資料寫入檔案，以供稍後在優化組建中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -26,31 +26,31 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>參數
 
 *name*<br/>
-已儲存的識別字串`.pgc`檔案。
+已儲存`.pgc`盤案的識別字串。
 
 ## <a name="remarks"></a>備註
 
-您可以呼叫`PgoAutoSweep`從您的應用程式，以儲存並在應用程式執行期間重設的設定檔資料，在任何時間點。 在已檢測的組建中，`PgoAutoSweep`擷取目前的程式碼剖析資料、 將它儲存在檔案中，及重設的設定檔的計數器。 它相當於呼叫[pgosweep](pgosweep.md)命令可執行檔中的特定點。 在最佳化組建中，`PgoAutoSweep`不會執行任何作業。
+您可以從`PgoAutoSweep`應用程式呼叫，以在應用程式執行期間的任何時間點儲存和重設設定檔資料。 在檢測的組建中`PgoAutoSweep` ，會捕捉目前的分析資料、將它儲存在檔案中，然後重設設定檔計數器。 這相當於在您的可執行檔中的特定點呼叫[pgosweep](pgosweep.md)命令。 在優化的組建中`PgoAutoSweep` ，是一個無 op。
 
-已儲存的設定檔計數器資料放在名為*base_name*-*名稱*！*值*.pgc，其中*base_name*是可執行檔的主檔名*名稱*參數傳遞至`PgoAutoSweep`，並*值*是唯一的值，通常是單純遞增數字，以防止檔案名稱衝突。
+儲存的設定檔計數器資料會放在名為*base_name*-*名稱*的檔案中！*值*.pgc，其中*base_name*是可執行檔的基底名稱， *name*是傳遞至`PgoAutoSweep`的參數，而*value*是唯一值，通常是單純遞增的數位，以避免檔案名衝突。
 
-`.pgc`所建立的檔案`PgoAutoSweep`必須合併到`.pgd`用來建立最佳化的可執行檔的檔案。 您可以使用[pgomgr](pgomgr.md)命令來進行合併。
+所`.pgc`建立的檔案`PgoAutoSweep`必須合併到`.pgd`檔案中，以用來建立優化的可執行檔。 您可以使用[pgomgr](pgomgr.md)命令來執行合併。
 
-您可以傳遞的合併名稱`.pgd`檔案，以最佳化在建置期間，使用連結器**PGD =** _filename_引數[/USEPROFILE](reference/useprofile.md)連結器選項，或使用已被取代 **/PGD**連結器選項。 如果您合併`.pgc`到名為檔案的檔案*base_name*.pgd，您不需要在命令列上指定檔名，因為依預設，連結器會挑選出這個檔案名稱。
+您可以使用[/USEPROFILE](reference/useprofile.md)連結器選項的`.pgd` **PGD =**_filename_引數，或使用已被取代的 **/PGD**連結器選項，在優化組建期間將合併的檔案名稱傳遞至連結器。 如果您將檔案`.pgc`合併到名為*base_name*.pgd 的檔案中，則不需要在命令列上指定檔案名，因為連結器預設會挑選此檔案名。
 
-`PgoAutoSweep`函式可讓您維護的執行緒安全的設定建立時指定的已檢測的組建。 如果您使用預設設定，或指定**NOEXACT**引數[/GENPROFILE 或 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)連結器選項，呼叫`PgoAutoSweep`不具備執行緒安全。 **精確**引數會建立執行緒安全且更精確，但速度較慢、 已檢測的可執行檔。
+`PgoAutoSweep`函式會維護已建立檢測的組建時所指定的執行緒安全性設定。 如果您使用預設設定，或指定[/GENPROFILE 或/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)連結器選項的`PgoAutoSweep` **NOEXACT**引數，則對的呼叫不是安全線程。 **確切**的引數會建立安全線程、更精確但較緩慢的已檢測可執行檔。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|`PgoAutoSweep`|\<pgobootrun.h>|
+|`PgoAutoSweep`|\<pgobootrun. h>|
 
-可執行檔必須包含 pgobootrun.lib 檔中連結的程式庫。 此檔案包含在您的 Visual Studio 安裝，每個支援的架構的 VC 程式庫目錄中。
+可執行檔必須在程式庫中包含 pgobootrun。 此檔案包含在您的 Visual Studio 安裝中，在每個支援的架構的 VC 程式庫目錄中。
 
 ## <a name="example"></a>範例
 
-以下範例使用`PgoAutoSweep`建立兩個`.pgc`檔案在執行期間不同時間點。 第一個包含描述執行階段行為，直到資料`count`等於 3，而第二個包含之前終止應用程式的這個時間點之後所收集的資料。
+下列範例會使用`PgoAutoSweep` ，在執行`.pgc`期間于不同的點建立兩個檔案。 第一個包含描述執行時間行為的資料， `count`直到等於3為止，而第二個包含在此時間點之後所收集的資料，直到應用程式終止之前為止。
 
 ```cpp
 // pgoautosweep.cpp
@@ -97,15 +97,15 @@ int main()
 }
 ```
 
-在開發人員命令提示字元中，編譯物件檔案的程式碼使用下列命令：
+在開發人員命令提示字元中，使用下列命令將程式碼編譯成物件檔案：
 
 `cl /c /GL /W4 /EHsc /O2 pgoautosweep.cpp`
 
-使用此命令，然後產生經過檢的組建進行訓練：
+然後，使用下列命令產生定型的已檢測組建：
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-執行已檢測的可執行檔擷取定型資料。 若要呼叫的資料輸出`PgoAutoSweep`會儲存在檔名為 pgoautosweep func1 ！ 1.pgc 和 pgoautosweep func2 ！ 1.pgc。 執行程式的輸出應該看起來像這樣：
+執行已檢測的可執行檔來捕獲定型資料。 呼叫所輸出的資料`PgoAutoSweep`會儲存在名為 pgoautosweep-func1！ 1. .pgc 和 pgoautosweep-func2！1的檔案中。 程式的輸出看起來應該像這樣：
 
 ```Output
 hello from func1 9
@@ -120,11 +120,11 @@ hello from func2 1
 hello from func2 0
 ```
 
-合併設定檔訓練資料庫中的已儲存的資料，藉由執行**pgomgr**命令：
+藉由執行**pgomgr**命令，將儲存的資料合併到設定檔訓練資料庫中：
 
 `pgoautosweep-func1!1.pgc pgoautosweep-func2!1.pgc`
 
-此命令的輸出看起來像這樣：
+此命令的輸出看起來會像這樣：
 
 ```Output
 Microsoft (R) Profile Guided Optimization Manager 14.13.26128.0
@@ -136,7 +136,7 @@ Merging pgoautosweep-func2!1.pgc
 pgoautosweep-func2!1.pgc: Used  3.8% (22424 / 589824) of total space reserved.  0.0% of the counts were dropped due to overflow.
 ```
 
-現在您可以使用這項訓練資料來產生最佳化的組建。 若要建置最佳化的可執行檔中使用下列命令：
+現在您可以使用這種訓練資料來產生優化的組建。 使用此命令來建立優化的可執行檔：
 
 `link /LTCG /useprofile pgobootrun.lib pgoautosweep.obj`
 
@@ -158,7 +158,7 @@ Generating code
 Finished generating code
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [特性指引最佳化](profile-guided-optimizations.md)<br/>
 [pgosweep](pgosweep.md)<br/>

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
 ms.openlocfilehash: e60a7935cdddc116848b64461b064c5fd5cdd00a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313512"
 ---
 # <a name="arguments"></a>引數
 
 函式呼叫中的引數具有以下格式：
 
-> *expression* **(** *expression-list*<SUB>opt</SUB> **)**  /* Function call */
+> *運算式* **（** *運算式清單*<SUB>opt</SUB> **）** /* 函式呼叫 */
 
 在函式呼叫中，*expression-list* 是運算式的清單 (以逗號分隔)。 這些後方運算式的值為傳遞至函式的引數。 如果函式不接受引數，*expression-list* 應該包含關鍵字 `void`。
 
@@ -77,6 +77,6 @@ swap( &x, &y )
 
 由於 `swap` 原型包含每個參數的引數類型，因此編譯器會對 `swap` 的引數執行類型檢查。 原型和定義括號的內容識別項可能相同或不同。 引數類型與原型和定義中的參數清單都相符是很重要的。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式呼叫](../c-language/function-calls.md)

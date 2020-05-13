@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218534"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755148"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 類別
 
@@ -49,48 +49,48 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationPoint::CAnimationPoint](#canimationpoint)|多載。 建構 CAnimationPoint 物件。|
+|[動畫點:動畫點](#canimationpoint)|已多載。 建構 CAnimationPoint 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationPoint::AddTransition](#addtransition)|將轉換的 X 和 Y 座標。|
-|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|傳回的預設值的 X 和 Y 座標。|
-|[CAnimationPoint::GetValue](#getvalue)|傳回目前的值。|
-|[CAnimationPoint::GetX](#getx)|提供存取 CAnimationVariable 的 X 座標。|
-|[CAnimationPoint::GetY](#gety)|CAnimationVariable 可存取的 Y 座標。|
-|[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|設定預設值。|
+|[動畫點::新增轉換](#addtransition)|添加 X 和 Y 座標的過渡。|
+|[動畫點:取得預設值](#getdefaultvalue)|傳回 X 和 Y 座標的預設值。|
+|[動畫點:取得價值](#getvalue)|返回當前值。|
+|[動畫點:GetX](#getx)|提供 X 座標對 CAnimation 變數的訪問。|
+|[動畫點:取得 Y](#gety)|提供對 Y 座標的 CAnimation 變數的訪問。|
+|[動畫點::設定預設值](#setdefaultvalue)|設置預設值。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|將封裝的動畫變數放入清單中。 (覆寫[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|
+|[動畫點::取得動畫變數清單](#getanimationvariablelist)|將封裝的動畫變數放入清單中。 ( 覆[寫動畫基礎物件:抓取動畫變數列表](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationPoint::operator CPoint](#operator_cpoint)|將 CPoint CAnimationPoint。|
-|[CAnimationPoint::operator=](#operator_eq)|給 CAnimationPoint ptSrc。|
+|[動畫點::運算符 CPoint](#operator_cpoint)|將 C動畫點轉換為 CPoint。|
+|[動畫點::操作員*](#operator_eq)|將 ptSrc 分配給 C 動畫點。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationPoint::m_xValue](#m_xvalue)|表示 X 之封裝的動畫變數的動畫點座標。|
-|[CAnimationPoint::m_yValue](#m_yvalue)|封裝的動畫變數，表示動畫點的 Y 座標。|
+|[動畫點:m_xValue](#m_xvalue)|表示動畫點的 X 座標的封裝動畫變數。|
+|[動畫點:m_yValue](#m_yvalue)|表示動畫點的 Y 座標的封裝動畫變數。|
 
 ## <a name="remarks"></a>備註
 
-CAnimationPoint 類別包含兩個 CAnimationVariable 物件，並可以代表應用程式中點。 例如，您可以使用這個類別以動畫顯示的位置 （例如文字字串、 圓形、 點等等），螢幕上的任何物件。 若要在應用程式中使用這個類別，只要具現化這個類別的物件、 將它新增至使用 CAnimationController::AddAnimationObject 的動畫控制器，並呼叫 AddTransition 針對每個轉換套用到 X 及/或 Y 座標。
+CAnimationPoint 類封裝了兩個 CAnimationvariable 物件,可以在應用程式中表示一個點。 例如,可以使用此類為螢幕上任何物件的位置(如文本字串、圓圈、點等)設置動畫。 要在應用程式中使用此類,只需實例化此類的物件,請使用 CAnimationController::addAnimationObject 將其添加到動畫控制器,並調用 AddTransition,以便應用於 X 和/或 Y 座標的每個轉換。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
+[動畫基礎物件](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationPoint`
 
@@ -98,11 +98,11 @@ CAnimationPoint 類別包含兩個 CAnimationVariable 物件，並可以代表�
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationPoint::AddTransition
+## <a name="canimationpointaddtransition"></a><a name="addtransition"></a>動畫點::新增轉換
 
-將轉換的 X 和 Y 座標。
+添加 X 和 Y 座標的過渡。
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -110,17 +110,17 @@ void AddTransition(
 
 ### <a name="parameters"></a>參數
 
-*pXTransition*<br/>
-要轉換的 X 座標指標。
+*pX 轉換*<br/>
+X 座標的轉換指標。
 
-*pYTransition*<br/>
-指標轉換的 Y 座標。
+*pY 轉換*<br/>
+Y 座標的轉換指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式，將指定的轉換加入內部清單的轉換套用至動畫變數 x 和 Y 座標。 當您新增轉換時，它們就會不立即套用，並儲存在內部清單。 轉換會套用 （加入至特定值如分鏡腳本） 當您呼叫 CAnimationController::AnimateGroup。 如果您不需要將轉換套用到其中一個座標，您可以傳遞 NULL。
+呼叫此函數以將指定的過渡添加到要應用於 X 和 Y 座標的動畫變數的內部過渡清單中。 添加轉換時,不會立即應用這些轉換並存儲在內部清單中。 當您調用 CAnimationController::AnimateGroup 時,將應用轉換(添加到特定值的情節提要中)。 如果不需要將轉換應用於其中一個座標,則可以傳遞 NULL。
 
-##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint
+## <a name="canimationpointcanimationpoint"></a><a name="canimationpoint"></a>動畫點:動畫點
 
 建構 CAnimationPoint 物件。
 
@@ -139,20 +139,20 @@ CAnimationPoint(
 *ptDefault*<br/>
 指定預設點座標。
 
-*nGroupID*<br/>
-指定群組識別碼。
+*n集團ID*<br/>
+指定組識別碼。
 
 *nObjectID*<br/>
 指定物件識別碼。
 
 *dwUserData*<br/>
-指定使用者定義的資料。
+指定使用者定義的數據。
 
 ### <a name="remarks"></a>備註
 
-建構具有預設屬性的 CAnimationPoint 物件： 預設點座標，群組識別碼和物件識別碼會設定為 0。
+建構具有預設屬性的 CAnimationPoint 物件:預設點座標、組 ID 和物件 ID 設置為 0。
 
-##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList
+## <a name="canimationpointgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>動畫點::取得動畫變數清單
 
 將封裝的動畫變數放入清單中。
 
@@ -162,12 +162,12 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 
 ### <a name="parameters"></a>參數
 
-*lst*<br/>
-當函式傳回時，它會包含代表 X 和 Y 座標的兩個 CAnimationVariable 物件的指標。
+*Lst*<br/>
+當函數返回時,它包含指向表示 X 和 Y 座標的兩個 CAnimation 變數物件的指標。
 
-##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue
+## <a name="canimationpointgetdefaultvalue"></a><a name="getdefaultvalue"></a>動畫點:取得預設值
 
-傳回的預設值的 X 和 Y 座標。
+傳回 X 和 Y 座標的預設值。
 
 ```
 CPoint GetDefaultValue();
@@ -175,15 +175,15 @@ CPoint GetDefaultValue();
 
 ### <a name="return-value"></a>傳回值
 
-點包含預設值。
+包含預設值的點。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可擷取預設值，也就先前設定的建構函式或 SetDefaultValue。
+調用此函數以檢索以前由建構函數或 SetDefaultValue 設置的預設值。
 
-##  <a name="getvalue"></a>  CAnimationPoint::GetValue
+## <a name="canimationpointgetvalue"></a><a name="getvalue"></a>動畫點:取得價值
 
-傳回目前的值。
+返回當前值。
 
 ```
 BOOL GetValue(CPoint& ptValue);
@@ -192,19 +192,19 @@ BOOL GetValue(CPoint& ptValue);
 ### <a name="parameters"></a>參數
 
 *ptValue*<br/>
-輸出。 這個方法傳回時，包含目前的值。
+輸出。 當此方法返回時,包含當前值。
 
 ### <a name="return-value"></a>傳回值
 
-為 TRUE，如果已成功擷取目前的值;否則為 FALSE。
+TRUE,如果成功檢索當前值;如果成功檢索當前值,則為 TRUE。否則 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式以擷取動畫點的目前值。 如果此方法失敗或基礎 COM 物件 x 和 Y 座標尚未初始化，ptValue 會包含在建構函式或 SetDefaultValue 先前設定的預設值。
+調用此函數以檢索動畫點的當前值。 如果此方法失敗或 X 和 Y 座標的基礎 COM 物件尚未初始化,則 ptValue 包含預設值,該值以前在建構函數或 SetDefaultValue 中設置。
 
-##  <a name="getx"></a>  CAnimationPoint::GetX
+## <a name="canimationpointgetx"></a><a name="getx"></a>動畫點:GetX
 
-提供存取 CAnimationVariable 的 X 座標。
+提供 X 座標對 CAnimation 變數的訪問。
 
 ```
 CAnimationVariable& GetX();
@@ -212,15 +212,15 @@ CAnimationVariable& GetX();
 
 ### <a name="return-value"></a>傳回值
 
-參考封裝 CAnimationVariable 代表 X 座標。
+表示 X 座標的封裝 CAnimation 變數的引用。
 
 ### <a name="remarks"></a>備註
 
-您可以呼叫此方法以直接存取基礎 CAnimationVariable 代表 X 座標。
+可以調用此方法以直接訪問表示 X 座標的基礎 C動畫變數。
 
-##  <a name="gety"></a>  CAnimationPoint::GetY
+## <a name="canimationpointgety"></a><a name="gety"></a>動畫點:取得 Y
 
-CAnimationVariable 可存取的 Y 座標。
+提供對 Y 座標的 CAnimation 變數的訪問。
 
 ```
 CAnimationVariable& GetY();
@@ -228,31 +228,31 @@ CAnimationVariable& GetY();
 
 ### <a name="return-value"></a>傳回值
 
-表示 Y 座標的 CAnimationVariable 封裝參考。
+表示 Y 座標的封裝 CAnimation 變數的引用。
 
 ### <a name="remarks"></a>備註
 
-您可以呼叫此方法以直接存取基礎 CAnimationVariable 表示 Y 座標。
+可以調用此方法以直接訪問表示 Y 座標的基礎 C動畫變數。
 
-##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue
+## <a name="canimationpointm_xvalue"></a><a name="m_xvalue"></a>動畫點:m_xValue
 
-表示 X 之封裝的動畫變數的動畫點座標。
+表示動畫點的 X 座標的封裝動畫變數。
 
 ```
 CAnimationVariable m_xValue;
 ```
 
-##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue
+## <a name="canimationpointm_yvalue"></a><a name="m_yvalue"></a>動畫點:m_yValue
 
-封裝的動畫變數，表示動畫點的 Y 座標。
+表示動畫點的 Y 座標的封裝動畫變數。
 
 ```
 CAnimationVariable m_yValue;
 ```
 
-##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint
+## <a name="canimationpointoperator-cpoint"></a><a name="operator_cpoint"></a>動畫點::運算符 CPoint
 
-將 CPoint CAnimationPoint。
+將 C動畫點轉換為 CPoint。
 
 ```
 operator CPoint();
@@ -260,34 +260,34 @@ operator CPoint();
 
 ### <a name="return-value"></a>傳回值
 
-CAnimationPoint CPoint 為目前值。
+CAnimationPoint 作為 CPoint 的當前值。
 
 ### <a name="remarks"></a>備註
 
-此函式會在內部呼叫 GetValue。 如果基於某些原因的 GetValue 失敗，傳回的點將會包含預設值 x 和 Y 座標。
+此功能在內部調用 GetValue。 如果由於某種原因 GetValue 失敗,則返回的點將包含 X 和 Y 座標的預設值。
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator=
+## <a name="canimationpointoperator"></a><a name="operator_eq"></a>動畫點::操作員*
 
-給 CAnimationPoint ptSrc。
+將 ptSrc 分配給 C 動畫點。
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
 ### <a name="parameters"></a>參數
 
 *ptSrc*<br/>
-是指 CPoint 或點。
+指 CPoint 或 POINT。
 
 ### <a name="remarks"></a>備註
 
-給 CAnimationPoint ptSrc。 建議您執行的動畫開始之前此運算子會呼叫 SetDefaultValue，因為這會重新建立基礎 COM 物件 X 和 Y 座標如果尚未建立。 如果您訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。
+將 ptSrc 分配給 C 動畫點。 建議在動畫啟動之前執行此操作,因為此運算符呼叫 SetDefaultValue,如果已建立 X 和 Y 座標,則重新建立 X 和 Y 座標的基礎 COM 物件。 如果將此動畫物件訂閱到事件(Value已更改或整數值更改),則需要重新啟用這些事件。
 
-##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue
+## <a name="canimationpointsetdefaultvalue"></a><a name="setdefaultvalue"></a>動畫點::設定預設值
 
-設定預設值。
+設置預設值。
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 
@@ -298,7 +298,7 @@ void SetDefaultValue(const POINT& ptDefault);
 
 ### <a name="remarks"></a>備註
 
-此函式可用於設定動畫物件的預設值。 這個方法會指派預設值的動畫點的 X 和 Y 座標。 如果尚未建立，它也會重建基礎 COM 物件。 如果您訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。
+使用此函數可為動畫物件設置預設值。 此方法將預設值分配給動畫點的 X 和 Y 座標。 它還會重新創建基礎 COM 物件(如果已創建)。 如果將此動畫物件訂閱到事件(Value已更改或整數值更改),則需要重新啟用這些事件。
 
 ## <a name="see-also"></a>另請參閱
 

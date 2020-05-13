@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9b897c661731878f0bf78c9d04ae7c4ba28cd42
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373806"
 ---
 # <a name="cformview-class"></a>CFormView 類別
 
@@ -43,15 +43,15 @@ class CFormView : public CScrollView
 
 ## <a name="remarks"></a>備註
 
-表單檢視基本上是包含控制項的檢視。 這些控制項根據對話方塊範本資源而佈置。 如果您想要應用程式中有表單，請使用 `CFormView`。 這些檢視支援捲動，如有需要使用[CScrollView](../../mfc/reference/cscrollview-class.md)功能。
+表單檢視基本上是包含控制項的檢視。 這些控制項根據對話方塊範本資源而佈置。 如果您想要應用程式中有表單，請使用 `CFormView`。 這些檢視支援根據需要使用[CScrollView](../../mfc/reference/cscrollview-class.md)功能進行滾動。
 
-當您準備[建立表單架構應用程式](../../mfc/reference/creating-a-forms-based-mfc-application.md)，您可以根據其檢視類別`CFormView`，讓表單為基礎的應用程式。
+創建[基於表單的應用程式](../../mfc/reference/creating-a-forms-based-mfc-application.md)時,可以將其檢視類`CFormView`基於,使其成為基於窗體的應用程式。
 
-您也可以新增插入[表單主題](../../mfc/form-views-mfc.md)到文件檢視架構的應用程式。 即使您的應用程式一開始不支援表單，Visual C++ 也會在您插入新表單時加入這項支援。
+您還可以將新的[「表單主題」](../../mfc/form-views-mfc.md)插入到基於文檔檢視的應用程式中。 即使您的應用程式一開始不支援表單，Visual C++ 也會在您插入新表單時加入這項支援。
 
-MFC 應用程式精靈和 [加入類別] 命令是建立表單架構應用程式的慣用方法。 如果您需要建立表單架構應用程式，而不需使用這些方法，請參閱[建立表單架構應用程式](../../mfc/reference/creating-a-forms-based-mfc-application.md)。
+MFC 應用程式精靈和 [加入類別] 命令是建立表單架構應用程式的慣用方法。 如果需要建立式裝置的應用程式而不使用這些方法,請參閱[建立新應用程式 。](../../mfc/reference/creating-a-forms-based-mfc-application.md)
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -67,9 +67,9 @@ MFC 應用程式精靈和 [加入類別] 命令是建立表單架構應用程式
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxext.h
+**標題:** afxext.h
 
-##  <a name="cformview"></a>  CFormView::CFormView
+## <a name="cformviewcformview"></a><a name="cformview"></a>CForm查看:CForm檢視
 
 建構 `CFormView` 物件。
 
@@ -80,20 +80,20 @@ CFormView(UINT nIDTemplate);
 
 ### <a name="parameters"></a>參數
 
-*lpszTemplateName*<br/>
-包含以 null 結束的字串，這是對話方塊範本資源的名稱。
+*lpszTemplate 名稱*<br/>
+包含一個 null 連接端字串,該字串是對話方塊樣本資源的名稱。
 
 *nIDTemplate*<br/>
-包含對話方塊範本資源的識別碼。
+包含對話方塊樣本資源的 ID 號。
 
 ### <a name="remarks"></a>備註
 
-當您建立的物件型別的衍生自`CFormView`，叫用其中一個建構函式建立的檢視物件，並找出檢視所依據的對話方塊資源。 您可以依名稱 (pass 字串做為引數的建構函式) 或依識別碼 (pass 不帶正負號的整數做為引數) 來識別資源。
+創建派生自`CFormView`的類型的物件時,請調用其中一個構造函數來創建視圖物件並標識視圖所基於的對話框資源。 您可以按名稱(將字串作為參數傳遞給建構函數)或通過其 ID(傳遞未簽名的整數作為參數)標識資源。
 
-表單檢視 視窗和子控制項不會建立直到`CWnd::Create`呼叫。 `CWnd::Create` 由文件和檢視建立程序的一部分，其中的文件範本由架構呼叫。
+在調用表單視窗和子控制項之前`CWnd::Create`,不會創建窗體檢視視窗和子控制件。 `CWnd::Create`框架呼叫該框架作為文件和檢視創建過程的一部分,該過程由文檔範本驅動。
 
 > [!NOTE]
->  您的衍生的類別*必須*提供它自己的建構函式。 建構函式，在叫用建構函式， `CFormView::CFormView`、 資源名稱或識別碼做為引數，如上述的類別概觀中所示。
+> 派生類*必須*提供其自己的構造函數。 在建構函數中,調用建構函數,`CFormView::CFormView`將資源名稱或 ID 作為參數,如前面的類概述所示。
 
 ### <a name="example"></a>範例
 
@@ -101,7 +101,7 @@ CFormView(UINT nIDTemplate);
 
 [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]
 
-##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted
+## <a name="cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a>CFormView:IsinitDlg 完成
 
 MFC 用來確保完成初始化後再執行其他作業。
 
@@ -115,8 +115,8 @@ BOOL IsInitDlgCompleted() const;
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 樣品檢視](../../overview/visual-cpp-samples.md)<br/>
 [CScrollView 類別](../../mfc/reference/cscrollview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CDialog 類別](../../mfc/reference/cdialog-class.md)<br/>

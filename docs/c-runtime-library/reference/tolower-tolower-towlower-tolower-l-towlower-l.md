@@ -1,12 +1,17 @@
 ---
 title: tolower、_tolower、towlower、_tolower_l、_towlower_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
+- _o__tolower
+- _o__tolower_l
+- _o__towlower_l
+- _o_tolower
+- _o_towlower
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +26,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c8b27c4cc618d34d9da9b5884c6db2f525fd2388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957459"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910017"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
 
@@ -81,7 +87,7 @@ int _towlower_l(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 要轉換的字元。
 
 *locale*<br/>
@@ -97,6 +103,8 @@ int _towlower_l(
 
 為了讓 **_tolower**提供預期的結果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)都必須傳回非零值。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
@@ -105,7 +113,7 @@ int _towlower_l(
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l**和 **_towlower_l**沒有地區設定相依性，因此不應該直接呼叫。 其提供供 **_totlower_l**內部使用。
+> **_tolower_l**和 **_towlower_l**沒有地區設定相依性，因此不應該直接呼叫。 **_Totlower_l**提供這些方法供內部使用。
 
 ## <a name="requirements"></a>需求
 
@@ -126,5 +134,5 @@ int _towlower_l(
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>
 [to 函式](../../c-runtime-library/to-functions.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

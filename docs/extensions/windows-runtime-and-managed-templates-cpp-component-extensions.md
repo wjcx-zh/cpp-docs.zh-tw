@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171823"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376311"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows 執行階段和受控範本 (C++/CLI 和 C++/CX)
 
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-雖然您無法存取使用 C++/CLI 語言語法的參考組件中定義的範本，但是可以使用反映。 如果範本未具現化，就不會在中繼資料中發出。 如果範本已具現化，則只有參考的成員函式會出現在中繼資料中。
+雖然您無法存取使用 C++/CLI 語言語法的參考組件中定義的範本，但是可以使用反映。 如果未實例化範本,則不會在元數據中發出範本。 如果範本已具現化，則只有參考的成員函式會出現在中繼資料中。
 
 ```cpp
 // managed_templates_3.cpp
@@ -132,4 +132,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[.NET 和 UWP 的元件擴展](component-extensions-for-runtime-platforms.md)

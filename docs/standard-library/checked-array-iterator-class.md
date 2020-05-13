@@ -13,14 +13,14 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 68ee602c44a8515e1d41f04a4bd0fbb7edc924b7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f177a45e700ab15852cd9c6d947873d247cf3828
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363869"
 ---
-# <a name="checkedarrayiterator-class"></a>checked_array_iterator 類別
+# <a name="checked_array_iterator-class"></a>checked_array_iterator 類別
 
 `checked_array_iterator` 類別可讓您將陣列或指標轉換為已檢查的迭代器。 使用這個類別作為原始指標或陣列的包裝函式 (使用 [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator) 函式)，作為提供檢查以及管理未檢查指標警告的目標方式，而非全域的關閉這些警告訊息。 如果需要，您可以使用這個類別的未檢查版本 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。
 
@@ -50,7 +50,7 @@ class checked_array_iterator;
 copy(a, a + 5, checked_array_iterator<int*>(b, 5));
 ```
 
-與
+to
 
 ```cpp
 copy(a, a + 5, checked_array_iterator<int*>(b, 4));
@@ -141,7 +141,7 @@ int main()
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[checked_array_iterator](#checked_array_iterator)|從基底迭代器建構預設的 `checked_array_iterator` 或 `checked_array_iterator`。|
 
@@ -150,33 +150,33 @@ int main()
 |類型名稱|描述|
 |-|-|
 |[difference_type](#difference_type)|類型，提供兩個參考同一容器內項目的 `checked_array_iterator` 之間的差異。|
-|[pointer](#pointer)|類型，提供指向 `checked_array_iterator` 定址的項目之指標。|
-|[reference](#reference)|類型，提供指向 `checked_array_iterator` 定址的項目之參考。|
+|[指標](#pointer)|類型，提供指向 `checked_array_iterator` 定址的項目之指標。|
+|[參考](#reference)|類型，提供指向 `checked_array_iterator` 定址的項目之參考。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[base](#base)|從其 `checked_array_iterator` 復原基礎迭代器。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
-|[operator==](#op_eq_eq)|測試兩個 `checked_array_iterator` 是否相等。|
-|[operator!=](#op_neq)|測試兩個 `checked_array_iterator` 是否不等。|
-|[operator<](#op_lt)|測試運算子左邊的 `checked_array_iterator` 是否小於右邊的 `checked_array_iterator`。|
-|[operator>](#op_gt)|測試運算子左邊的 `checked_array_iterator` 是否大於右邊的 `checked_array_iterator`。|
-|[operator<=](#op_lt_eq)|測試運算子左邊的 `checked_array_iterator` 是否小於或等於右邊的 `checked_array_iterator`。|
-|[operator>=](#op_gt_eq)|測試運算子左邊的 `checked_array_iterator` 是否大於或等於右邊的 `checked_array_iterator`。|
-|[operator*](#op_star)|傳回 `checked_array_iterator` 定址的項目。|
-|[operator->](#op_arrow)|傳回由 `checked_array_iterator` 定址的項目之指標。|
-|[operator++](#op_add_add)|遞增 `checked_array_iterator` 至下一個項目。|
-|[operator--](#operator--)|遞減 `checked_array_iterator` 至上一個項目。|
-|[operator+=](#op_add_eq)|加入指定位移至 `checked_array_iterator`。|
-|[operator+](#op_add)|將位移新增至迭代器，並傳回新的 `checked_array_iterator`，定址在新的位移位置中插入的項目。|
-|[operator-=](#operator-_eq)|從 `checked_array_iterator` 減去指定的位移。|
-|[operator-](#operator-)|從迭代器中遞減位移，並傳回新的 `checked_array_iterator`，其將插入的項目定址在新的位移位置中。|
+|[運算子*](#op_eq_eq)|測試兩個 `checked_array_iterator` 是否相等。|
+|[操作員!](#op_neq)|測試兩個 `checked_array_iterator` 是否不等。|
+|[運算子<](#op_lt)|測試運算子左邊的 `checked_array_iterator` 是否小於右邊的 `checked_array_iterator`。|
+|[運算子>](#op_gt)|測試運算子左邊的 `checked_array_iterator` 是否大於右邊的 `checked_array_iterator`。|
+|[操作員<|](#op_lt_eq)|測試運算子左邊的 `checked_array_iterator` 是否小於或等於右邊的 `checked_array_iterator`。|
+|[操作員>|](#op_gt_eq)|測試運算子左邊的 `checked_array_iterator` 是否大於或等於右邊的 `checked_array_iterator`。|
+|[運算子*](#op_star)|傳回 `checked_array_iterator` 定址的項目。|
+|[運算子>](#op_arrow)|傳回由 `checked_array_iterator` 定址的項目之指標。|
+|[運算子*](#op_add_add)|遞增 `checked_array_iterator` 至下一個項目。|
+|[運算子--](#operator--)|遞減 `checked_array_iterator` 至上一個項目。|
+|[運算子*](#op_add_eq)|加入指定位移至 `checked_array_iterator`。|
+|[運算子*](#op_add)|將位移新增至迭代器，並傳回新的 `checked_array_iterator`，定址在新的位移位置中插入的項目。|
+|[運算子-*](#operator-_eq)|從 `checked_array_iterator` 減去指定的位移。|
+|[操作員-](#operator-)|從迭代器中遞減位移，並傳回新的 `checked_array_iterator`，其將插入的項目定址在新的位移位置中。|
 |[operator&#91;&#93;](#op_at)|以指定的位置數目，從 `checked_array_iterator` 定址的項目傳回項目位移的參考。|
 
 ## <a name="requirements"></a>需求
@@ -185,7 +185,7 @@ int main()
 
 **命名空間：** stdext
 
-## <a name="base"></a>  checked_array_iterator::base
+## <a name="checked_array_iteratorbase"></a><a name="base"></a>checked_array_iterator:基數
 
 從其 `checked_array_iterator` 復原基礎迭代器。
 
@@ -195,7 +195,7 @@ _Iterator base() const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -228,7 +228,7 @@ The iterator underlying rpos is bpos & it points to: 1.
 */
 ```
 
-## <a name="checked_array_iterator"></a>  checked_array_iterator::checked_array_iterator
+## <a name="checked_array_iteratorchecked_array_iterator"></a><a name="checked_array_iterator"></a>checked_array_iterator::checked_array_iterator
 
 從基底迭代器建構預設的 `checked_array_iterator` 或 `checked_array _iterator`。
 
@@ -243,10 +243,10 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*Ptr*\
 陣列的指標。
 
-*容量*\
+*大小*\
 陣列的大小。
 
 *指數*\
@@ -254,7 +254,7 @@ checked_array_iterator(
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -292,7 +292,7 @@ int main() {
 */
 ```
 
-## <a name="difference_type"></a>  checked_array_iterator::difference_type
+## <a name="checked_array_iteratordifference_type"></a><a name="difference_type"></a>checked_array_iterator::d)類型
 
 類型，提供兩個參考同一容器內項目的 `checked_array_iterator` 之間的差異。
 
@@ -304,11 +304,11 @@ typedef typename iterator_traits<_Iterator>::difference_type difference_type;
 
 `checked_array_iterator` 差異類型與迭代器差異類型相同。
 
-如需程式碼範例，請參閱 [checked_array_iterator::operator[]](#op_at)。
+有關代碼示例[,請參閱checked_array_iterator::運算符*。](#op_at)
 
 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
-## <a name="op_eq_eq"></a>  checked_array_iterator::operator==
+## <a name="checked_array_iteratoroperator"></a><a name="op_eq_eq"></a>checked_array_iterator::操作員*
 
 測試兩個 `checked_array_iterator` 是否相等。
 
@@ -318,12 +318,12 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*對*\
 要對其檢查是否相等的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -364,7 +364,7 @@ checked_array_iterators are not equal
 */
 ```
 
-## <a name="op_neq"></a>  checked_array_iterator::operator!=
+## <a name="checked_array_iteratoroperator"></a><a name="op_neq"></a>checked_array_iterator:操作員!
 
 測試兩個 `checked_array_iterator` 是否不等。
 
@@ -374,12 +374,12 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*對*\
 要對其檢查是否不相等的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -420,7 +420,7 @@ checked_array_iterators are not equal
 */
 ```
 
-## <a name="op_lt"></a>  checked_array_iterator::operator&lt;
+## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt"></a>checked_array_iterator::操作員&lt;
 
 測試運算子左邊的 `checked_array_iterator` 是否小於右邊的 `checked_array_iterator`。
 
@@ -430,12 +430,12 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*對*\
 要對其檢查是否不相等的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -476,7 +476,7 @@ checked_output_iterator2 is less than checked_output_iterator
 */
 ```
 
-## <a name="op_gt"></a>  checked_array_iterator::operator&gt;
+## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt"></a>checked_array_iterator::操作員&gt;
 
 測試運算子左邊的 `checked_array_iterator` 是否大於右邊的 `checked_array_iterator`。
 
@@ -486,16 +486,16 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*對*\
 要比較的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>備註
 
-如需程式碼範例，請參閱 [checked_array_iterator::operator&lt;](#op_lt)。
+有關代碼範例,請參閱[checked_array_iterator::運算子&lt;](#op_lt)。
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
-## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt_eq"></a>checked_array_iterator::操作員&lt;=
 
 測試運算子左邊的 `checked_array_iterator` 是否小於或等於右邊的 `checked_array_iterator`。
 
@@ -505,16 +505,16 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*對*\
 要比較的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>備註
 
-如需程式碼範例，請參閱 [checked_array_iterator::operator&gt;=](#op_gt_eq)。
+有關代碼範例,請參閱[checked_array_iterator::運算子&gt;](#op_gt_eq)。
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
-## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt_eq"></a>checked_array_iterator::操作員&gt;=
 
 測試運算子左邊的 `checked_array_iterator` 是否大於或等於右邊的 `checked_array_iterator`。
 
@@ -524,12 +524,12 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*對*\
 要比較的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -570,7 +570,7 @@ checked_output_iterator2 is less than checked_output_iterator
 */
 ```
 
-## <a name="op_star"></a>  checked_array_iterator::operator*
+## <a name="checked_array_iteratoroperator"></a><a name="op_star"></a>checked_array_iterator::操作員*
 
 傳回 `checked_array_iterator` 定址的項目。
 
@@ -584,7 +584,7 @@ reference operator*() const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -631,7 +631,7 @@ c[0].first = 10
 */
 ```
 
-## <a name="op_arrow"></a>  checked_array_iterator::operator-&gt;
+## <a name="checked_array_iteratoroperator-gt"></a><a name="op_arrow"></a>checked_array_iterator:操作員-&gt;
 
 傳回由 `checked_array_iterator` 定址的項目之指標。
 
@@ -647,9 +647,9 @@ pointer operator->() const;
 
 如需程式碼範例，請參閱 [checked_array_iterator::pointer](#pointer)。
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
-## <a name="op_add_add"></a>  checked_array_iterator::operator++
+## <a name="checked_array_iteratoroperator"></a><a name="op_add_add"></a>checked_array_iterator::操作員*
 
 遞增 `checked_array_iterator` 至下一個項目。
 
@@ -665,7 +665,7 @@ checked_array_iterator<_Iterator> operator++(int);
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="operator--"></a>  checked_array_iterator::operator--
+## <a name="checked_array_iteratoroperator--"></a><a name="operator--"></a>checked_array_iterator:運算子 --
 
 遞減 `checked_array_iterator` 至上一個項目。
 
@@ -713,7 +713,7 @@ checked_array_iterator<_Iterator> operator--(int);
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -745,7 +745,7 @@ int main() {
 */
 ```
 
-## <a name="op_add_eq"></a>  checked_array_iterator::operator+=
+## <a name="checked_array_iteratoroperator"></a><a name="op_add_eq"></a>checked_array_iterator::操作員*
 
 加入指定位移至 `checked_array_iterator`。
 
@@ -760,11 +760,11 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="return-value"></a>傳回值
 
-由 `checked_array_iterator` 定址之元素的參考。
+由 `checked_array_iterator` 定址之項目的參考。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -793,7 +793,7 @@ int main() {
 */
 ```
 
-## <a name="op_add"></a>  checked_array_iterator::operator+
+## <a name="checked_array_iteratoroperator"></a><a name="op_add"></a>checked_array_iterator::操作員*
 
 將位移新增至迭代器，並傳回新的 `checked_array_iterator`，定址在新的位移位置中插入的項目。
 
@@ -812,7 +812,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="checked_array_iteratoroperator-"></a><a name="operator-_eq"></a>checked_array_iterator::操作員*
 
 從 `checked_array_iterator` 減去指定的位移。
 
@@ -856,11 +856,11 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="return-value"></a>傳回值
 
-由 `checked_array_iterator` 定址之元素的參考。
+由 `checked_array_iterator` 定址之項目的參考。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="operator-"></a>  checked_array_iterator::operator-
+## <a name="checked_array_iteratoroperator-"></a><a name="operator-"></a>checked_array_iterator:操作員-
 
 從迭代器中遞減位移，並傳回新的 `checked_array_iterator`，其將插入的項目定址在新的位移位置中。
 
@@ -911,9 +911,9 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
-## <a name="op_at"></a>  checked_array_iterator::operator[]
+## <a name="checked_array_iteratoroperator"></a><a name="op_at"></a>checked_array_iterator::操作員*
 
 以指定的位置數目，從 `checked_array_iterator` 定址的項目傳回項目位移的參考。
 
@@ -932,7 +932,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -963,7 +963,7 @@ int main() {
 */
 ```
 
-## <a name="pointer"></a>  checked_array_iterator::pointer
+## <a name="checked_array_iteratorpointer"></a><a name="pointer"></a>checked_array_iterator::p奧米特
 
 類型，提供指向 `checked_array_iterator` 定址的項目之指標。
 
@@ -973,11 +973,11 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-如需程式碼範例，請參閱 [checked_array_iterator::operator*](#op_star)。
+有關代碼示例[,請參閱checked_array_iterator::運算符*。](#op_star)
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
-## <a name="reference"></a>  checked_array_iterator::reference
+## <a name="checked_array_iteratorreference"></a><a name="reference"></a>checked_array_iterator:參考
 
 類型，提供指向 `checked_array_iterator` 定址的項目之參考。
 
@@ -987,11 +987,11 @@ typedef typename iterator_traits<_Iterator>::reference reference;
 
 ### <a name="remarks"></a>備註
 
-如需程式碼範例，請參閱 [checked_array_iterator::operator[]](#op_at)。
+有關代碼示例[,請參閱checked_array_iterator::運算符*。](#op_at)
 
-如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[\<反覆運算器>](../standard-library/iterator.md)\
+[C++標準函式庫參考](../standard-library/cpp-standard-library-reference.md)

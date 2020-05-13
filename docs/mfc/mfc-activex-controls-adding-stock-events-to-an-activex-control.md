@@ -42,67 +42,67 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79cd4fc572e55c67cc5a2cfe3a00e04f2a4a7850
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392722"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364693"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控制項：將內建事件加入至 ActiveX 控制項
 
-內建事件與不同的自訂事件類別會自動引發[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含引發事件所產生的一般動作的預先定義的成員函式。 一些常見的動作，藉由將`COleControl`納入單一-和按兩下-clicks 控制項、 鍵盤事件和變更滑鼠按鍵的狀態。 事件對應股票 EVENT_STOCK 前置詞一律置於事件的項目。
+股票事件與自定義事件不同,因為它們由[COleControl](../mfc/reference/colecontrol-class.md)類自動觸發。 `COleControl`包含預定義的成員函數,這些函數觸發由常見操作引起的事件。 通過實現`COleControl`的某些常見操作包括對控制項的單次單擊和按兩下、鍵盤事件以及更改滑鼠按鈕的狀態。 股票事件的事件映射條目始終前面有EVENT_STOCK首碼。
 
-##  <a name="_core_stock_events_supported_by_classwizard"></a> 內建支援的事件加入事件精靈
+## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a>新增事件精靈支援的股票事件
 
-`COleControl`類別會提供十個內建的事件，如下表所示。 您可以指定您想要在控制項中使用的事件[加入事件精靈](../ide/add-event-wizard.md)。
+該`COleControl`類提供十個股票事件,列在下表中。 您可以使用[「新增事件精靈](../ide/add-event-wizard.md)」在控制項中指定所需的事件。
 
-### <a name="stock-events"></a>內建事件
+### <a name="stock-events"></a>股票事件
 
-|Event - 事件|引發函式|註解|
+|事件|點火功能|註解|
 |-----------|---------------------|--------------|
-|按一下|**void FireClick( )**|發生於控制項捕捉滑鼠，任何**BUTTONUP**收到 （左、 置中 或右） 的訊息，並在控制項上方且放開按鈕。 MouseDown 股票圖和 MouseUp 事件會發生此事件之前。<br /><br /> 事件對應項目：**EVENT_STOCK_CLICK( )**|
-|DblClick|**void FireDblClick( )**|按一下 類似但引發的時機**BUTTONDBLCLK**接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_DBLCLICK( )**|
-|錯誤|**void FireError( SCODE**  *scode* **, LPCSTR**  `lpszDescription` **, UINT**  `nHelpID`  **= 0 )**|當您的 ActiveX 控制項之外的方法呼叫或屬性存取範圍內發生錯誤時引發。<br /><br /> 事件對應項目：**EVENT_STOCK_ERROREVENT( )**|
-|KeyDown|**void FireKeyDown( short**  `nChar` **, short**  `nShiftState`  **)**|引發的時機`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_KEYDOWN( )**|
-|KeyPress|**void FireKeyPress( short** <strong>\*</strong>  `pnChar`  **)**|時引發`WM_CHAR`接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_KEYPRESS( )**|
-|KeyUp|**void FireKeyUp (簡短**`nChar` **，short**`nShiftState` **)**|引發的時機`WM_SYSKEYUP`或`WM_KEYUP`接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_KEYUP( )**|
-|MouseDown|**void FireMouseDown (簡短**`nButton` **，short** `nShiftState` **，float** *x* **，float** *y* **)**|引發如果有的話**BUTTONDOWN**收到 （左邊、 中間或右邊）。 將滑鼠擷取之前引發此事件。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEDOWN( )**|
-|MouseMove|**void FireMouseMove (簡短**`nButton` **，short** `nShiftState` **，float** *x* **，float** *y* **)**|當收到 WM_MOUSEMOVE 訊息時引發。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**void FireMouseUp (簡短**`nButton` **，short** `nShiftState` **，float** *x* **，float** *y* **)**|引發如果有的話**BUTTONUP**收到 （左邊、 中間或右邊）。 此事件引發之前，會釋出滑鼠捕捉。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEUP( )**|
-|ReadyStateChange|**void FireReadyStateChange( )**|當控制項轉換成下一個就緒狀態，因為收到的資料量時引發。<br /><br /> 事件對應項目：**EVENT_STOCK_READYSTATECHANGE( )**|
+|按一下 |**空火點擊( )**|當控制器擷取滑鼠時觸發,收到任何**BUTTONUP(** 左、中或右)消息,並在控制項上釋放按鈕。 庫存滑鼠向下和滑鼠Up事件在此事件之前發生。<br /><br /> 事件地圖項目: **EVENT_STOCK_CLICK( )**|
+|DblClick|**空火點點擊( )**|類似於單擊,但在收到**BUTTONDBLCLK**消息時觸發。<br /><br /> 事件地圖項目: **EVENT_STOCK_DBLCLICK( )**|
+|錯誤|**空火錯誤(SCODE***碼***, LPCSTR,** `lpszDescription` **UINT**`nHelpID`= 0 **)**        |當在方法調用或屬性訪問範圍之外的 ActiveX 控件中發生錯誤時觸發。<br /><br /> 事件地圖項目: **EVENT_STOCK_ERROREVENT( )**|
+|KeyDown|**空火鍵下(短**`nChar`**, 短**`nShiftState`**)**      |收到`WM_SYSKEYDOWN``WM_KEYDOWN`或消息時觸發。<br /><br /> 事件地圖項目: **EVENT_STOCK_KEYDOWN( )**|
+|鍵新聞|**空火鍵新聞(短**<strong>\*</strong>`pnChar`**)**    |收到`WM_CHAR`消息時觸發。<br /><br /> 事件地圖項目: **EVENT_STOCK_KEYPRESS( )**|
+|KeyUp|**空火鑰匙(短**`nChar`**,短**`nShiftState`**)**      |收到`WM_SYSKEYUP``WM_KEYUP`或消息時觸發。<br /><br /> 事件地圖項目: **EVENT_STOCK_KEYUP( )**|
+|滑鼠向下|**空火滑鼠向下(短**`nButton`**, 短**`nShiftState`**, 浮點***x,* **浮點***y)* ** **          |如果收到任何**BUTTONDOWN(** 左、中或右),則觸發。 在觸發此事件之前,將立即捕獲滑鼠。<br /><br /> 事件地圖項目: **EVENT_STOCK_MOUSEDOWN( )**|
+|滑鼠移動|**空火滑鼠移動(短**`nButton`**,短**`nShiftState`**,浮點***x,***浮點***y)* ** **          |收到WM_MOUSEMOVE消息時觸發。<br /><br /> 事件地圖項目: **EVENT_STOCK_MOUSEMOVE ( )**|
+|滑鼠向上|**空火滑鼠(短**`nButton`**,短**`nShiftState`**,浮點***x,***浮點***y)* ** **          |如果收到任何**BUTTONUP(** 左、中或右),則觸發。 在觸發此事件之前釋放滑鼠捕獲。<br /><br /> 事件地圖項目: **EVENT_STOCK_MOUSEUP( )**|
+|就緒狀態變更|**空火準備狀態轉換( )**|當控件由於接收的數據量而轉換到下一個就緒狀態時觸發。<br /><br /> 事件地圖項目: **EVENT_STOCK_READYSTATECHANGE( )**|
 
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a> 新增使用內建事件加入事件精靈
+## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a>使用新增事件精靈加入股票事件
 
-新增內建事件需要較少的工作比新增自訂事件，因為實際事件的引發基底類別，會自動處理`COleControl`。 下列程序會將內建事件加入至使用所開發的控制項[MFC ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)。 當按下按鍵，而且控制項是作用中時，就會引發事件，稱為 KeyPress。 此程序也可用來新增其他內建的事件。 使用按鍵動作選取的內建事件名稱。
+新增股票事件所需的工作比新增自訂事件少,因為實際事件的觸發由基類自動處理`COleControl`。 以下過程將庫存事件添加到使用[MFC ActiveX 控制嚮導](../mfc/reference/mfc-activex-control-wizard.md)開發的控制項。 當按鍵且控件處於活動狀態時,該事件稱為 KeyPress。 此過程還可用於添加其他庫存事件。 將所選股票事件名稱替換為 KeyPress。
 
-#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>若要新增該 KeyPress 內建事件加入事件精靈
+#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>使用「新增事件精靈」新增 KeyPress 股票事件
 
 1. 載入控制項專案。
 
-1. 類別檢視 中以滑鼠右鍵按一下您的 ActiveX 控制項類別，若要開啟快顯功能表。
+1. 在類檢視中,右鍵單擊 ActiveX 控件類以打開快捷功能表。
 
-1. 從快顯功能表中，按一下**新增**，然後按一下**新增事件**。
+1. 在快捷選單中,按一下「**添加」,** 然後按下「**添加事件**」。
 
-   這會開啟 [新增事件精靈]。
+   這將打開「添加事件嚮導」。
 
-1. 在 **事件名稱**下拉式清單中，選取`KeyPress`。
+1. 在 **「事件名稱**」 下拉清單`KeyPress`中, 選擇 。
 
-1. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
-##  <a name="_core_classwizard_changes_for_stock_events"></a> 針對內建事件加入事件精靈的變更
+## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a>新增股票事件的事件精靈變更
 
-因為內建事件會由控制項的基底類別，加入事件精靈不會變更您的類別宣告，以任何方式。 它將事件加入至控制項的事件對應並且中的項目其。IDL 檔案。 下面這一行加入至控制項的事件對應，位於控制項類別實作 (。CPP) 檔案：
+由於股票事件由控件的基類處理,因此添加事件嚮導不會以任何方式更改類聲明。 它將事件添加到控制項的事件映射,並在其中進行條目。IDL 檔。 下一行將添加到位於控制項類實現 (的控制項的事件映射中。CPP) 檔案:
 
 [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]
 
-加入此程式碼，就會引發 KeyPress 事件時收到 WM_CHAR 訊息，而且控制項是使用中。 可以在其他時間引發 KeyPress 事件，藉由呼叫其引發函式 (例如`FireKeyPress`) 從控制項程式碼中。
+當收到WM_CHAR消息且控件處於活動狀態時,添加此代碼將觸發 KeyPress 事件。 KeyPress 事件可以透過在控制代碼中呼叫其觸發函數(例如`FireKeyPress`), 在其他時間觸發。
 
-加入事件精靈會將下列程式碼行加入至控制項。IDL 檔案：
+新增事件精靈將以下代碼行到控制項的 。IDL 檔案:
 
 [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]
 
-這行關聯其標準的分派識別碼的按鍵事件，並可讓容器預期按鍵事件。
+此行將 KeyPress 事件與其標準調度 ID 關聯,並允許容器預測 KeyPress 事件。
 
 ## <a name="see-also"></a>另請參閱
 

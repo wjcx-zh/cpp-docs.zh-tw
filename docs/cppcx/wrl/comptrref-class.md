@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-ms.openlocfilehash: 281e02d85e70a84530e6980d31669a73091448d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df9ded817227547493c04035e0abc3d948e24495
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398663"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372627"
 ---
 # <a name="comptrref-class"></a>ComPtrRef 類別
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -46,11 +46,11 @@ class ComPtrRef : public ComPtrRefBase<T>;
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-A [ComPtr\<T >](comptr-class.md)型別或型別衍生它，不只是將所代表之介面`ComPtr`。
+[ComPtr\<T>](comptr-class.md)類型或從它派生的類型,而不僅僅是`ComPtr`由 表示的介面。
 
 ## <a name="remarks"></a>備註
 
-表示型別的物件的參考`ComPtr<T>`。
+表示對類型`ComPtr<T>`物件的引用。
 
 ## <a name="members"></a>成員
 
@@ -58,27 +58,27 @@ A [ComPtr\<T >](comptr-class.md)型別或型別衍生它，不只是將所代表
 
 名稱                               | 描述
 ---------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ComPtrRef::ComPtrRef](#comptrref) | 初始化的新執行個體`ComPtrRef`到另一個指定的指標類別`ComPtrRef`物件。
+[ComPtrRef:ComPtrRef](#comptrref) | 從指定的指標初始化`ComPtrRef`類的新實例到另一個`ComPtrRef`物件。
 
 ### <a name="public-methods"></a>公用方法
 
 名稱                                                         | 描述
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef::GetAddressOf](#getaddressof)                     | 擷取目前所代表之介面的指標位址`ComPtrRef`物件。
-[ComPtrRef::ReleaseAndGetAddressOf](#releaseandgetaddressof) | 刪除目前`ComPtrRef`物件，並傳回已所代表之介面的指標-到-a-指標`ComPtrRef`物件。
+[ComPtrRef:取得位址](#getaddressof)                     | 檢索指向當前`ComPtrRef`物件表示的介面的指標的位址。
+[Comptrref::發佈和取得位址](#releaseandgetaddressof) | 刪除當前`ComPtrRef`物件,並返回指向物件表示的介面`ComPtrRef`的指標指向指標。
 
 ### <a name="public-operators"></a>公用運算子
 
 名稱                                                                     | 描述
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Comptrref:: Operator InterfaceType * *](#operator-interfacetype-star-star) | 刪除目前`ComPtrRef`物件，並傳回已所代表之介面的指標-到-a-指標`ComPtrRef`物件。
-[Comptrref:: Operator T *](#operator-t-star)                               | 傳回的值[ptr_](comptrrefbase-class.md#ptr)目前的 ComPtrRef 物件資料成員。
-[Comptrref:: Operator void * *](#operator-void-star-star)                   | 刪除目前`ComPtrRef`物件，轉換已由介面指標`ComPtrRef`物件做為指標至-指標-對`void`，然後傳回型別轉換指標。
-[ComPtrRef::operator*](#operator-star)                                   | 擷取目前所代表之介面指標`ComPtrRef`物件。
-[ComPtrRef::operator==](#operator-equality)                              | 表示兩個 `ComPtrRef` 物件是否相等。
-[ComPtrRef::operator!=](#operator-inequality)                            | 表示兩個 `ComPtrRef` 物件是否不相等。
+[ComPtrRef::操作員介面類型*](#operator-interfacetype-star-star) | 刪除當前`ComPtrRef`物件,並返回指向物件表示的介面`ComPtrRef`的指標指向指標。
+[ComPtrRef::運算子 T*](#operator-t-star)                               | 傳回目前的 ComPtrRef 物件的[ptr_](comptrrefbase-class.md#ptr)資料成員的值。
+[ComPtrRef::操作員空隙*](#operator-void-star-star)                   | 刪除當前`ComPtrRef`物件,將`ComPtrRef`指向 該物件表示的介面的指標轉換為指標到`void`指標到,然後返回強制轉換指標。
+[ComPtrRef:管理員*](#operator-star)                                   | 檢索指向當前`ComPtrRef`物件表示的介面的指標。
+[ComPtrRef::運算符 *](#operator-equality)                              | 表示兩個 `ComPtrRef` 物件是否相等。
+[ComPtrRef:操作員!](#operator-inequality)                            | 表示兩個 `ComPtrRef` 物件是否不相等。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `ComPtrRefBase`
 
@@ -88,11 +88,11 @@ A [ComPtr\<T >](comptr-class.md)型別或型別衍生它，不只是將所代表
 
 **標頭：** client.h
 
-**命名空間：** Microsoft::WRL::Details
+**命名空間:** 微軟::WRL::D
 
-## <a name="comptrref"></a>ComPtrRef::ComPtrRef
+## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef:ComPtrRef
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 ComPtrRef(
@@ -102,16 +102,16 @@ ComPtrRef(
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
-另一個的基礎值`ComPtrRef`物件。
+*Ptr*<br/>
+另一個`ComPtrRef`物件的基礎值。
 
 ### <a name="remarks"></a>備註
 
-初始化的新執行個體`ComPtrRef`到另一個指定的指標類別`ComPtrRef`物件。
+從指定的指標初始化`ComPtrRef`類的新實例到另一個`ComPtrRef`物件。
 
-## <a name="getaddressof"></a>ComPtrRef::GetAddressOf
+## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef:取得位址
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 InterfaceType* const * GetAddressOf() const;
@@ -119,15 +119,15 @@ InterfaceType* const * GetAddressOf() const;
 
 ### <a name="return-value"></a>傳回值
 
-代表由目前之介面的指標位址`ComPtrRef`物件。
+指向當前`ComPtrRef`物件表示的介面的指標的位址。
 
 ### <a name="remarks"></a>備註
 
-擷取目前所代表之介面的指標位址`ComPtrRef`物件。
+檢索指向當前`ComPtrRef`物件表示的介面的指標的位址。
 
-## <a name="operator-equality"></a>Comptrref:: Operator = =
+## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef::運算符 *
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 bool operator==(
@@ -159,26 +159,26 @@ bool operator==(
 ### <a name="parameters"></a>參數
 
 *a*<br/>
-對 `ComPtrRef` 物件的參考。
+`ComPtrRef` 物件的參考。
 
-*b*<br/>
-另一個的參考`ComPtrRef`物件或匿名類型的指標 (`void*`)。
+*B*<br/>
+另一個`ComPtrRef`物件的參考,或指向匿名類型的指標 (`void*`。
 
 ### <a name="return-value"></a>傳回值
 
-第一個運算子會產生 **，則為 true**如果物件是否等於物件*b*否則**false**。
+如果物件*a*等於物件*b,* 則第一個運算符將生成**為 true。** 否則,**假**。
 
-第二個和第三個運算子會產生 **，則為 true**如果物件等於**nullptr**，則為**false**。
+**如果物件** *a*等於**nullptr,** 則第二個和第三個運算元將 true。否則,**假**。
 
-第四個和第五個運算子會產生 **，則為 true**如果物件是否等於物件*b*，則為**false**。
+**如果物件**a 等於物件*b,* 則*b*第四和第 五運算元將 true;否則,**假**。
 
 ### <a name="remarks"></a>備註
 
 表示兩個 `ComPtrRef` 物件是否相等。
 
-## <a name="operator-inequality"></a>ComPtrRef::operator!=
+## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef:操作員!
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 bool operator!=(
@@ -210,26 +210,26 @@ bool operator!=(
 ### <a name="parameters"></a>參數
 
 *a*<br/>
-對 `ComPtrRef` 物件的參考。
+`ComPtrRef` 物件的參考。
 
-*b*<br/>
-另一個的參考`ComPtrRef`物件或匿名物件的指標 (`void*`)。
+*B*<br/>
+另一`ComPtrRef`個物件的參考或指向匿名物件的指標 (`void*`。
 
 ### <a name="return-value"></a>傳回值
 
-第一個運算子會產生 **，則為 true**如果物件是否不等於物件*b*否則**false**。
+如果物件 a 不等於物件*b,* 則第*b*一個運算符將生成**為 true。** 否則,**假**。
 
-第二個和第三個運算子會產生 **，則為 true**如果物件是否不等於**nullptr**，則為**false**。
+**如果物件** *a*不等於**nullptr,** 則第二個和第三個運算符將 true。否則,**假**。
 
-第四個和第五個運算子會產生 **，則為 true**如果物件是否不等於物件*b*，則為**false**。
+**如果物件**a 不等於物件*b,* 則*b*第四和第 五運算符將 true。否則,**假**。
 
 ### <a name="remarks"></a>備註
 
 表示兩個 `ComPtrRef` 物件是否不相等。
 
-## <a name="operator-interfacetype-star-star"></a>Comptrref:: Operator InterfaceType * *
+## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef::操作員介面類型*
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 operator InterfaceType**();
@@ -237,11 +237,11 @@ operator InterfaceType**();
 
 ### <a name="remarks"></a>備註
 
-刪除目前`ComPtrRef`物件，並傳回已所代表之介面的指標-到-a-指標`ComPtrRef`物件。
+刪除當前`ComPtrRef`物件,並返回指向物件表示的介面`ComPtrRef`的指標指向指標。
 
-## <a name="operator-star"></a>ComPtrRef::operator*
+## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef:管理員*
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 InterfaceType* operator *();
@@ -249,15 +249,15 @@ InterfaceType* operator *();
 
 ### <a name="return-value"></a>傳回值
 
-目前所代表之介面指標`ComPtrRef`物件。
+指向當前`ComPtrRef`物件表示的介面的指標。
 
 ### <a name="remarks"></a>備註
 
-擷取目前所代表之介面指標`ComPtrRef`物件。
+檢索指向當前`ComPtrRef`物件表示的介面的指標。
 
-## <a name="operator-t-star"></a>Comptrref:: Operator T *
+## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef::運算子 T*
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 operator T*();
@@ -265,11 +265,11 @@ operator T*();
 
 ### <a name="remarks"></a>備註
 
-傳回的值[ptr_](comptrrefbase-class.md#ptr)目前的資料成員`ComPtrRef`物件。
+返回當前`ComPtrRef`物件的[ptr_](comptrrefbase-class.md#ptr)數據成員的值。
 
-## <a name="operator-void-star-star"></a>Comptrref:: Operator void\*\*
+## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef::操作員空隙\*\*
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 operator void**() const;
@@ -277,11 +277,11 @@ operator void**() const;
 
 ### <a name="remarks"></a>備註
 
-刪除目前`ComPtrRef`物件，轉換已由介面指標`ComPtrRef`物件做為指標至-指標-對`void`，然後傳回型別轉換指標。
+刪除當前`ComPtrRef`物件,將`ComPtrRef`指向 該物件表示的介面的指標轉換為指標到`void`指標到,然後返回強制轉換指標。
 
-## <a name="releaseandgetaddressof"></a>ComPtrRef::ReleaseAndGetAddressOf
+## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>Comptrref::發佈和取得位址
 
-支援 WRL 結構，而且不是直接從您的程式碼使用。
+支援 WRL 基礎結構,不打算直接從代碼中使用。
 
 ```cpp
 InterfaceType** ReleaseAndGetAddressOf();
@@ -289,8 +289,8 @@ InterfaceType** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>傳回值
 
-已呈現之介面指標的已刪除`ComPtrRef`物件。
+指向已刪除`ComPtrRef`物件表示的介面的指標。
 
 ### <a name="remarks"></a>備註
 
-刪除目前`ComPtrRef`物件，並傳回已所代表之介面的指標-到-a-指標`ComPtrRef`物件。
+刪除當前`ComPtrRef`物件,並返回指向物件表示的介面`ComPtrRef`的指標指向指標。

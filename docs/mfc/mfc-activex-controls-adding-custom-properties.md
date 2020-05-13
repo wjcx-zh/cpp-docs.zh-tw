@@ -5,48 +5,48 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00f7a879582bca562ce626fe224206094fd19bc7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392774"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364694"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 
-自訂屬性與不同的內建屬性的自訂屬性尚未已實作的`COleControl`類別。 自訂屬性用來公開 （expose） 的特定狀態或 ActiveX 控制項的程式設計人員使用控制項的外觀。
+自定義屬性與股票屬性不同,因為類尚未實現`COleControl`自定義屬性。 自定義屬性用於向使用 該控制項的程式師公開 ActiveX 控制件的特定狀態或外觀。
 
-這篇文章描述如何將自訂屬性加入至 ActiveX 控制項，使用 [新增屬性精靈]，並說明產生的程式碼修改。 主題包括：
+本文介紹如何使用"添加屬性嚮導"向 ActiveX 控制件添加自定義屬性,並解釋生成的代碼修改。 主題包括：
 
-- [使用 [新增屬性精靈] 來新增自訂屬性](#_core_using_classwizard_to_add_a_custom_property)
+- [使用「新增屬性精靈」新增自訂屬性](#_core_using_classwizard_to_add_a_custom_property)
 
-- [加入自訂屬性的屬性精靈變更](#_core_classwizard_changes_for_custom_properties)
+- [為自訂屬性加入屬性精靈變更](#_core_classwizard_changes_for_custom_properties)
 
-自訂屬性可分成四個不同的實作：成員變數，以通知，Get/Set 方法的成員變數和參數化。
+自定義屬性有四種實現類型:成員變數、帶有通知的成員變數、獲取/設置方法和參數化。
 
-- 成員變數的實作
+- 成員變數實現
 
-   這項實作以控制項類別中的成員變數，表示此屬性的狀態。 當您不一定要知道當屬性值變更時，請使用成員變數的實作。 三種類型，此實作會建立最少的支援屬性的程式碼。 分派對應項目巨集的成員變數的實作就[DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property)。
+   此實現表示屬性的狀態作為控件類中的成員變數。 當不知道屬性值何時更改並不重要時,請使用成員變數實現。 在三種類型中,此實現為屬性創建的支持代碼最少。 成員變數實現的調度映射條目宏[DISP_PROPERTY。](../mfc/reference/dispatch-maps.md#disp_property)
 
-- 與通知實作的成員變數
+- 具通知實作的成員變數
 
-   此實作是由成員變數，以及加入屬性精靈所建立的通知函式所組成。 通知函式會自動由架構呼叫的屬性值變更之後。 使用成員變數通知實作時您需要的屬性值變更後收到通知。 此實作會需要更多時間，因為它需要函式呼叫。 分派對應項目巨集，此實作就[DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify)。
+   此實現由成員變數和由添加屬性嚮導創建的通知函數組成。 屬性值更改後,框架會自動調用通知函數。 在屬性值更改後需要通知時,將「成員變數」與通知實現一起使用。 此實現需要更多時間,因為它需要函數調用。 此實現的排程對應項目巨集[DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify)。
 
-- 取得或設定方法的實作
+- 取得/設定方法
 
-   此實作是由一組控制項類別中的成員函式所組成。 Get/Set 方法實作會自動呼叫 Get 成員函式控制項的使用者要求此屬性的目前值時，Set 成員函式控制項的使用者要求變更的屬性時。 當您需要在執行期間，計算屬性的值驗證控制項的使用者才能變更實際的屬性，傳遞的值或實作讀取-或唯寫的屬性型別，請使用這項實作。 分派對應項目巨集，此實作就[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)。 下一節[使用 [新增屬性精靈] 來新增自訂屬性](#_core_using_classwizard_to_add_a_custom_property)，來示範這項實作會使用 CircleOffset 自訂屬性。
+   此實現由控制類中的一對成員函數組成。 當控件的使用者請求屬性的當前值和"設置成員"函數時,當控件的使用者請求更改該屬性時,"獲取/設置方法"實現會自動調用 Get 成員函數。 當您需要在運行時計算屬性的值、在更改實際屬性之前驗證控制件使用者傳遞的值或實現唯讀或只寫屬性類型時,請使用此實現。 此實作的排程對應的資料巨集[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)。 以下部分使用[添加屬性嚮導添加自定義屬性](#_core_using_classwizard_to_add_a_custom_property)「使用 CircleOffset 自訂屬性來演示此實現。
 
-- 參數化的實作
+- 參數化實現
 
-   加入屬性精靈 支援參數化的實作。 參數化的屬性 （有時稱為屬性的陣列） 可用來透過您控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是 DISP_PROPERTY_PARAM。 如需有關如何實作這種類型的詳細資訊，請參閱 <<c0> [ 實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX 控制項 」 文件中：進階的主題。
+   添加屬性嚮導支援參數化實現。 參數化屬性(有時稱為屬性陣列)可用於通過控制項的單個屬性存取一組值。 此實現的調度映射條目宏DISP_PROPERTY_PARAM。 有關實現此類型的詳細資訊,請參閱在「ActiveX 控制件:進階主題」一文中[實現參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)。
 
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用加入屬性精靈來加入自訂屬性
+## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a>使用「新增屬性精靈」新增自訂屬性
 
-下列程序示範如何將自訂屬性，CircleOffset，使用 Get/Set 方法的實作。 CircleOffset 自訂屬性可讓控制項的使用者從控制項的週框矩形的中心圓的位移。 新增非 Get/Set 方法的實作的自訂屬性的程序是非常類似。
+以下過程演示了添加自定義屬性 CircleOffset,它使用獲取/設置方法實現。 CircleOffset 自定義屬性允許控制項的使用者從控制項的邊界矩形的中心偏移圓。 使用獲取/設置方法以外的實現添加自定義屬性的過程非常相似。
 
-這個相同的程序也可用來新增其他您想要的自訂屬性。 替換成您的自訂屬性名稱 CircleOffset 屬性名稱和參數。
+此過程還可用於添加所需的其他自定義屬性。 將自訂屬性名稱替換為 CircleOffset 屬性名稱和參數。
 
-#### <a name="to-add-the-circleoffset-custom-property-using-the-add-property-wizard"></a>若要加入使用 加入屬性精靈 CircleOffset 自訂屬性
+#### <a name="to-add-the-circleoffset-custom-property-using-the-add-property-wizard"></a>使用「新增屬性精靈」新增「圈位移」自訂屬性
 
 1. 載入控制項專案。
 
@@ -54,43 +54,43 @@ ms.locfileid: "62392774"
 
 1. 在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。
 
-1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
+1. 在快捷選單中,按一下「**添加**」,然後按下「**添加屬性**」 。。
 
-   這會開啟[加入屬性精靈](../ide/names-add-property-wizard.md)。
+   這會開啟[新增屬性精靈](../ide/names-add-property-wizard.md)。
 
-1. 在 **屬性名稱**方塊中，輸入*CircleOffset*。
+1. 在**屬性名稱**框中,鍵入 *「圓偏移*」。。
 
-1. 在 [實作類型] 中，按一下 [Get/Set 方法] 。
+1. 在 [實作類型] **** 中，按一下 [Get/Set 方法] ****。
 
-1. 在 **屬性的型別**方塊中，選取**簡短**。
+1. 在 **「屬性類型」** 框中,選擇 **「短**」。。
 
-1. 輸入為 Get 和 Set 函式的唯一名稱，或接受預設名稱。
+1. 為獲取和設置函數鍵入唯一名稱,或接受預設名稱。
 
-9. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
-##  <a name="_core_classwizard_changes_for_custom_properties"></a> 加入屬性精靈變更自訂屬性
+## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a>為自訂屬性加入屬性精靈變更
 
-當您新增 CircleOffset 自訂屬性時，加入屬性精靈 會變更標頭檔 (。H） 和實作 (。控制項類別的 CPP) 檔案。
+添加"圈偏移"自定義屬性時,"添加屬性嚮導"會更改標頭 (。H) 和實現 (.控制類的 CPP)檔。
 
-加入下列幾行。H 檔案中宣告兩個呼叫的函式`GetCircleOffset`和`SetCircleOffset`:
+以下行將新增到 。H 檔宣告兩個函`GetCircleOffset`數`SetCircleOffset`, 稱為與 :
 
 [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_1.h)]
 
-下面這一行加入至您的控制項。IDL 檔案：
+以下行將新增到控制項的 。IDL 檔案:
 
 [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_2.idl)]
 
-這一行會將資料區間指派 CircleOffset 屬性特定的 ID 編號，取自方法和屬性清單中的 [新增屬性精靈] 的方法的位置。
+此行為 CircleOffset 屬性分配一個特定的 ID 號,該 ID 號取自該方法在添加屬性嚮導的方法和屬性清單中的位置。
 
-此外下, 面這一行加入分派對應 (在中。控制項類別的 CPP 檔案） 的 CircleOffset 屬性對應至控制項的兩個處理常式函式：
+此外,以下行將添加到調度映射(在中)。控制項類別的 CPP 檔)將 CircleOffset 屬性映射到控制項的兩個處理程式函數:
 
 [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_3.cpp)]
 
-最後，實作`GetCircleOffset`和`SetCircleOffset`函數會加入至控制項的結尾。CPP 檔案。 在大部分情況下，您將修改 Get 函式來傳回屬性的值。 Set 函式通常會包含之前或之後的屬性變更應該執行的程式碼。
+最後,將`GetCircleOffset`和`SetCircleOffset`函數的實現添加到控制項的末尾。CPP 檔。 在大多數情況下,您將修改 Get 函數以返回屬性的值。 Set 函數通常包含應在屬性更改之前或之後執行的代碼。
 
 [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_4.cpp)]
 
-請注意，加入屬性精靈 會自動將呼叫中，加入[SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag)，Set 函式的主體。 呼叫此函式會將控制項標示為已修改。 如果控制項已被修改，則在儲存容器時，將會儲存成新的狀態。 每當另存為控制項的永續性狀態，一部分的屬性值變更時，應該呼叫此函式。
+請注意,添加屬性嚮導會自動將呼叫設定[修改Flag'](../mfc/reference/colecontrol-class.md#setmodifiedflag)添加到Set函數的正文中。 調用此函數將控件標記為已修改。 如果控件已被修改,則在保存容器時將保存其新狀態。 每當作為控制項持久狀態的一部分保存的屬性更改值時,都應調用此函數。
 
 ## <a name="see-also"></a>另請參閱
 

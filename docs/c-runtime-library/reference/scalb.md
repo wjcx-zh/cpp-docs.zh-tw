@@ -1,9 +1,10 @@
 ---
-title: _scalb, _scalbf
-ms.date: 04/05/2018
+title: _scalb、_scalbf
+ms.date: 4/2/2020
 api_name:
 - _scalb
 - _scalbf
+- _o__scalb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,14 +32,14 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: 630a5e3db2c39cb40d31c71e6a6dfa214ed91e34
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948889"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918229"
 ---
-# <a name="_scalb-_scalbf"></a>_scalb, _scalbf
+# <a name="_scalb-_scalbf"></a>_scalb、_scalbf
 
 將引數依 2 的乘冪進位。
 
@@ -64,7 +66,7 @@ float _scalbf(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回指數值。 溢位時（視*x*的正負號而定）， **_scalb**會傳回 +/- **HUGE_VAL**;**errno**變數會設定為**ERANGE**。
+如果成功，則傳回指數值。 溢位（視*x*的正負號而定）， **_scalb**會傳回 +/- **HUGE_VAL**;**errno**變數會設定為**ERANGE**。
 
 如需此函式與其他傳回碼的詳細資訊，請參閱 [_doserrno, errno、_sys_errlist 及 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -72,13 +74,15 @@ float _scalbf(
 
 **_Scalb**函數會計算*x* \* 2<sup>*exp*</sup>的值。
 
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_scalb**、 **_scalbf**|\<float.h>|
+|**_scalb**， **_scalbf**|\<float.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

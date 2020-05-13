@@ -1,6 +1,6 @@
 ---
 title: _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _atoldbl
 - _atoldbl_l
@@ -8,6 +8,12 @@ api_name:
 - _atoflt
 - _atoflt_l
 - _atodbl_l
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920052"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 
-將字串轉換為雙精度浮點數（ **_atodbl**）、long double （ **_atoldbl**）或 float （ **_atoflt**）。
+將字串轉換為雙精度浮點數（**_atodbl**）、long double （**_atoldbl**）或 float （**_atoflt**）。
 
 ## <a name="syntax"></a>語法
 
@@ -87,7 +94,7 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回 0。 可能的錯誤碼為 **_UNDERFLOW**或 **_OVERFLOW**，其定義于標頭檔\<math. h >。
+若成功，即傳回 0。 可能的錯誤碼為 **_UNDERFLOW**或 **_OVERFLOW**，其定義于標頭檔\<math. h> 中。
 
 ## <a name="remarks"></a>備註
 
@@ -96,6 +103,8 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 如果字串沒有有效的轉譯作為浮點值，則*值*會設定為零，且傳回值為零。
 
 這些具有 **_l**尾碼的函式版本與沒有尾碼的版本相同，不同之處在于它們會使用傳入的*地區*設定參數，而不是目前的執行緒地區設定。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -163,5 +172,5 @@ Return value: 3
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

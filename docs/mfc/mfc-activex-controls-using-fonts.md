@@ -19,32 +19,32 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c336ec6c29b5478655ca8f19f71378a2b446ac64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239483"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358264"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控制項：使用字型
 
-如果您的 ActiveX 控制項顯示文字，您可以允許控制項使用者藉由變更 font 屬性變更的文字外觀。 字型屬性會實作為字型物件，而且可以是下列其中一種： 內建或自訂。 內建字型屬性是您可以使用 [新增屬性精靈] 新增的預先實作的字型屬性。 自訂的字型屬性是不預先實作並控制項開發人員判斷屬性的行為和使用方式。
+如果 ActiveX 控制件顯示文本,則可以允許控制項使用者透過更改字體屬性來更改文本外觀。 字體屬性作為字體對象實現,可以是兩種類型之一:股票或自定義。 "庫存字型"屬性是預先實現的字體屬性,您可以使用"添加屬性嚮導"添加這些屬性。 自定義字體屬性未預先實現,控制件開發人員確定屬性的行為和使用方式。
 
 本文章涵蓋下列主題：
 
-- [使用內建字型屬性](#_core_using_the_stock_font_property)
+- [使用「庫存字型」 屬性](#_core_using_the_stock_font_property)
 
-- [在您的控制項中使用自訂的字型屬性](#_core_implementing_a_custom_font_property)
+- [用自訂字型屬性](#_core_implementing_a_custom_font_property)
 
-##  <a name="_core_using_the_stock_font_property"></a> 使用內建字型屬性
+## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a>使用股票字型屬性
 
-內建字型屬性會預先實作由類別[COleControl](../mfc/reference/colecontrol-class.md)。 此外，標準的字型屬性頁也會提供，可讓使用者變更各種字型物件，例如其名稱、 大小和樣式屬性。
+股票字體屬性由類[COleControl](../mfc/reference/colecontrol-class.md)預先實現。 此外,還提供標準 Font 屬性頁,允許使用者更改字體物件的各種屬性,如其名稱、大小和樣式。
 
-存取字型物件，可透過[GetFont](../mfc/reference/colecontrol-class.md#getfont)， [SetFont](../mfc/reference/colecontrol-class.md#setfont)，並[InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont)函式的`COleControl`。 控制使用者會存取字型物件，透過`GetFont`和`SetFont`函式中任何其他的 Get/Set 屬性相同的方式。 從控制項內需要字型物件的存取權時，使用`InternalGetFont`函式。
+通過[GetFont、SetFont](../mfc/reference/colecontrol-class.md#getfont)和[SetFont](../mfc/reference/colecontrol-class.md#setfont)[的內部 GetFont](../mfc/reference/colecontrol-class.md#internalgetfont)函`COleControl`數訪問字體 物件。 控制項使用者將透過`GetFont`和`SetFont`函數以與任何其他 Get/Set 屬性相同的方式存取字型物件。 當需要從控制項中存取字型物件時,請`InternalGetFont`使用函數。
 
-中所述[MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)，將新增內建屬性是讓您輕鬆[加入屬性精靈](../ide/names-add-property-wizard.md)。 選擇 字型 屬性中，並加入屬性精靈 會自動插入控制項的分派對應內建字型項目。
+如[MFC ActiveX 控制件:屬性中](../mfc/mfc-activex-controls-properties.md)所述,[添加屬性精靈](../ide/names-add-property-wizard.md)很容易添加股票屬性。 選擇"字型"屬性,添加屬性嚮導會自動將"股票字體"條目插入到控制項的調度映射中。
 
-#### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>若要加入使用 [新增屬性精靈] 的內建字型屬性
+#### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>使用「新增屬性精靈」新增股票字型屬性
 
 1. 載入控制項專案。
 
@@ -52,25 +52,25 @@ ms.locfileid: "62239483"
 
 1. 在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。
 
-1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
+1. 在快捷選單中,按一下「**添加**」,然後按下「**添加屬性**」 。。
 
-   這會開啟 [新增屬性精靈]。
+   這將打開「添加屬性嚮導」。
 
-1. 在 **屬性名稱**方塊中，按一下**字型**。
+1. 在 **「屬性名稱」** 框中,按下 **「字型**」 。。
 
-1. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
-加入屬性精靈 會將控制項的分派對應，位於控制項類別實作檔中的下面這一行：
+新增屬性精靈將以下行新增到位於控制項類別實用檔案中的控制項調度對應中:
 
 [!code-cpp[NVC_MFC_AxFont#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_1.cpp)]
 
-此外，加入屬性精靈 會將下面這一行加入至控制項。IDL 檔案：
+此外,「新增屬性精靈」將以下行添加到控制項 。IDL 檔案:
 
 [!code-cpp[NVC_MFC_AxFont#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_2.idl)]
 
-內建的 [標題] 屬性是可以使用內建的字型屬性資訊來繪製的文字屬性的範例。 加入至控制項的內建 Caption 屬性會使用步驟類似於所使用的內建字型屬性。
+股票標題屬性是可以使用股票字體屬性資訊繪製的文本屬性的範例。 將股票標題屬性添加到控制項使用的步驟類似於用於股票字體屬性的步驟。
 
-#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>若要新增內建的 Caption 屬性使用 加入屬性精靈
+#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>使用新增屬性精靈加入股票標題屬性
 
 1. 載入控制項專案。
 
@@ -78,41 +78,41 @@ ms.locfileid: "62239483"
 
 1. 在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。
 
-1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
+1. 在快捷選單中,按一下「**添加**」,然後按下「**添加屬性**」 。。
 
-   這會開啟 [新增屬性精靈]。
+   這將打開「添加屬性嚮導」。
 
-1. 在 **屬性名稱**方塊中，按一下**標題**。
+1. 在 **「屬性名稱」** 框中,按下 **「標題**」。
 
-1. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
-加入屬性精靈 會將控制項的分派對應，位於控制項類別實作檔中的下面這一行：
+新增屬性精靈將以下行新增到位於控制項類別實用檔案中的控制項調度對應中:
 
 [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]
 
-##  <a name="_core_modifying_the_ondraw_function"></a> 修改 OnDraw 函式
+## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a>修改 OnDraw 函數
 
-預設實作`OnDraw`使用 Windows 系統字型的所有控制項中顯示的文字。 這表示您必須修改`OnDraw`選取字型物件放入裝置內容的程式碼。 若要這樣做，請呼叫[COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont)並傳遞控制的裝置內容，如下列範例所示：
+的`OnDraw`預設實現對控制項中顯示的所有文本使用 Windows 系統字型。 這意味著您必須通過在設備上下文中選擇字體`OnDraw`物件來修改代碼。 為此,請致電[COleControl:選擇StockFont](../mfc/reference/colecontrol-class.md#selectstockfont)並傳遞控制項的裝置上下文,如以下範例所示:
 
 [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]
 
-之後`OnDraw`函式已修改成使用字型物件，在控制項內的任何文字會顯示從控制項的內建字型屬性的特性。
+修改該`OnDraw`函數以使用字體物件後,控制項中的任何文本都顯示具有控制項的「字體」屬性的特徵。
 
-##  <a name="_core_using_custom_font_properties_in_your_control"></a> 在您的控制項中使用自訂的字型屬性
+## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a>用自訂字型屬性
 
-除了內建的字型屬性，ActiveX 控制項有自訂的字型屬性。 若要新增自訂的字型屬性，您必須：
+除了股票字體屬性外,ActiveX 控件還可以具有自定義字體屬性。 要新增自訂字型屬性,您必須:
 
-- 使用 [新增屬性精靈] 來實作自訂的字型屬性。
+- 使用「添加屬性嚮導」實現自訂字體屬性。
 
 - [處理字型通知](#_core_processing_font_notifications)。
 
-- [實作新的字型通知介面](#_core_implementing_a_new_font_notification_interface)。
+- [完整新的字型通知介面](#_core_implementing_a_new_font_notification_interface)。
 
-###  <a name="_core_implementing_a_custom_font_property"></a> 實作自訂的字型屬性
+### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a>實現自訂字型屬性
 
-若要實作自訂的字型屬性中,，您可以使用加入屬性精靈 來新增屬性，然後再進行一些修改的程式碼。 下列各節說明如何新增自訂`HeadingFont`範例控制項的屬性。
+要實現自定義 Font 屬性,請使用「添加屬性嚮導」添加該屬性,然後對代碼進行一些修改。 以下各節介紹如何將自定義`HeadingFont`屬性添加到範例控制項。
 
-##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>若要加入自訂的字型屬性使用加入屬性精靈
+##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>使用「新增屬性精靈」新增自訂字型屬性
 
 1. 載入控制項專案。
 
@@ -120,118 +120,118 @@ ms.locfileid: "62239483"
 
 1. 在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。
 
-1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
+1. 在快捷選單中,按一下「**添加**」,然後按下「**添加屬性**」 。。
 
-   這會開啟 [新增屬性精靈]。
+   這將打開「添加屬性嚮導」。
 
-1. 在 **屬性名稱**方塊中，輸入屬性的名稱。 此範例中，使用**HeadingFont**。
+1. 在 **「屬性名稱」** 框中,鍵入屬性的名稱。 這個選項, 請使用**標題字型**。
 
-1. 在 [實作類型] 中，按一下 [Get/Set 方法] 。
+1. 在 [實作類型] **** 中，按一下 [Get/Set 方法] ****。
 
-1. 在 **屬性型別**方塊中，選取**IDispatch** <strong>\*</strong>屬性的類型。
+1. 在 **「屬性類型」** 框中,為屬性的類型選擇**IDispatch。** <strong>\*</strong>
 
-1. 按一下 [ **完成**]。
+1. 按一下 [完成] 。
 
-加入屬性精靈 建立程式碼來新增`HeadingFont`自訂屬性來`CSampleCtrl`類別和範例。IDL 檔案。 因為`HeadingFont`是 Get/Set 屬性類型，加入屬性精靈修改`CSampleCtrl`類別的分派對應，以包含 DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)巨集項目：
+"新增屬性精靈"創建代碼以將`HeadingFont`自定義屬性添加到`CSampleCtrl`類和 SAMPLE。IDL 檔。 由於`HeadingFont`是 Get/Set 屬性類型,因此「新增屬性`CSampleCtrl`精靈」 修改類別的調度映射以包含[DISP_PROPERTY_EX_IDDISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)宏條目:
 
 [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]
 
-DISP_PROPERTY_EX 巨集產生關聯`HeadingFont`與其對應的屬性名稱`CSampleCtrl`類別 Get 和 Set 方法`GetHeadingFont`和`SetHeadingFont`。 同時指定屬性值的型別;在此情況下，VT_FONT。
+DISP_PROPERTY_EX`HeadingFont`巨集設定名稱`CSampleCtrl`與其相應的類別的取得與設定方法關聯,`GetHeadingFont``SetHeadingFont`以及 。 屬性值的類型也指定;因此,屬性值的類型也指定為屬性值。在這種情況下,VT_FONT。
 
-加入屬性精靈也會宣告在控制項標頭檔 (。H） 針對`GetHeadingFont`和`SetHeadingFont`函式，並在控制項實作檔中將其函式樣板 (。CPP):
+添加屬性精靈還會在控制項標頭檔 (中添加聲明。H)`GetHeadingFont``SetHeadingFont`的和 函數,並在控制項實現檔 (中添加其函數範本 (。CPP):
 
 [!code-cpp[NVC_MFC_AxFont#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_6.cpp)]
 
-最後，加入屬性精靈修改控制項。IDL 檔案中新增的項目`HeadingFont`屬性：
+最後,「添加屬性嚮導」修改控件。以新增`HeadingFont`屬性的項目來提交 IDL 檔:
 
 [!code-cpp[NVC_MFC_AxFont#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_7.idl)]
 
-### <a name="modifications-to-the-control-code"></a>修改控制項的程式碼
+### <a name="modifications-to-the-control-code"></a>控制程式碼的變更
 
-既然您已新增`HeadingFont`至控制項的屬性，您必須進行一些變更以控制標頭和實作檔案，以完整支援新的屬性。
+現在,您已將`HeadingFont`該屬性添加到控制項中,您必須對控制項標頭和實現檔進行一些更改,以完全支援新屬性。
 
-在控制項標頭檔 (。H） 中，新增下列受保護的成員變數的宣告：
+在控制項檔 (.H),添加受保護成員變數的以下聲明:
 
 [!code-cpp[NVC_MFC_AxFont#8](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_8.h)]
 
-在控制項實作檔 (。CPP)，執行下列動作：
+在控制項實現檔案中 (.CPP),執行以下操作:
 
-- 初始化*m_fontHeading*控制建構函式中。
+- 初始化控制項構造函數中的*m_fontHeading。*
 
    [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
-- 宣告靜態的 FONTDESC 結構，包含字型的預設屬性。
+- 聲明包含字體預設屬性的靜態 FONTDESC 結構。
 
    [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
-- 控制項中`DoPropExchange`成員函式中，將呼叫加入`PX_Font`函式。 這會提供初始設定和持續性自訂的字型屬性。
+- 在控件`DoPropExchange`成員函數中,向函`PX_Font`數 添加調用。 這為自訂「字體」屬性提供了初始化和持久性。
 
    [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
-- 完成實作控制項`GetHeadingFont`成員函式。
+- 完成實現控制`GetHeadingFont`成員函數。
 
    [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
-- 完成實作控制項`SetHeadingFont`成員函式。
+- 完成實現控制`SetHeadingFont`成員函數。
 
    [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
-- 修改控制項`OnDraw`成員函式來定義一個變數來保存先前選取的字型。
+- 修改控制項`OnDraw`成員函數以定義變數以儲存以前選定的字體。
 
    [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
-- 修改控制項`OnDraw`放入裝置內容選取自訂的字型，藉由新增下面這行每當字型時要使用的成員函式。
+- 修改控制項`OnDraw`成員函數,透過在使用字型的任意位置添加下一行,將自訂字型添加到設備上下文中。
 
    [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
-- 修改控制項`OnDraw`成員函式，來選取回裝置內容的上一個字型字型用完之後，加入下列這一行。
+- 修改控件`OnDraw`成員函數,在使用字體後添加下一行,將以前的字體重新選擇回設備上下文。
 
    [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
-在實作自訂的字型屬性之後，應該被實作標準的 [字型] 屬性頁面允許控制項使用者變更控制項的目前字型。 若要加入屬性頁 ID，標準的字型屬性頁，請 BEGIN_PROPPAGEIDS 巨集之後插入下面這一行：
+實現自定義 Font 屬性後,應實現標準字體屬性頁,允許控制件使用者更改控制項的當前字型。 要新增標準 Font 屬性頁的屬性頁 ID,請在BEGIN_PROPPAGEIDS宏後插入以下行:
 
 [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]
 
-您也必須逐一遞增 BEGIN_PROPPAGEIDS 巨集的計數參數。 下面這行程式碼可說明這點：
+您還必須將BEGIN_PROPPAGEIDS宏的計數參數增加一個。 下面這行程式碼可說明這點：
 
 [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]
 
-在進行這些變更之後，重建整個專案以加入其他功能。
+進行這些更改後,重建整個專案以合併其他功能。
 
-###  <a name="_core_processing_font_notifications"></a> 處理字型通知
+### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a>處理字型通知
 
-在大部分情況下控制項需要知道何時已修改字型物件的特性。 每個字型物件可以藉由呼叫成員函式的變更時提供通知`IFontNotification`所實作的介面`COleControl`。
+在大多數情況下,控件需要知道字體對象的特徵何時被修改。 每個字體物件都能夠通過在更改時通過調用由 實現`IFontNotification``COleControl`的介面的成員函數來提供通知。
 
-如果控制項使用內建字型屬性，其通知則由`OnFontChanged`成員函式`COleControl`。 當您新增自訂的字型屬性時，您可以讓它們使用相同的實作。 在上一節範例中，這透過傳遞 &*m_xFontNotification*初始化時*m_fontHeading*成員變數。
+如果控件使用股票字體屬性,則其通知由`OnFontChanged`的成員`COleControl`函數處理。 添加自定義字體屬性時,可以讓它們使用相同的實現。 在上一節中的示例中,通過在初始化*m_fontHeading*成員變數時傳遞 *&m_xFontNotification*來實現這一點。
 
 ![實作多個字型物件介面](../mfc/media/vc373q1.gif "實作多個字型物件介面") <br/>
-實作多個字型物件介面
+實現多個字型物件介面
 
-在上圖中的實心線條顯示這兩個字型物件所使用的相同實作`IFontNotification`。 如果您想要區別哪些字型變更，這可能會造成問題。
+上圖中的實體顯示兩個字型物件都使用相同的實作`IFontNotification`。 如果要區分更改的字體,可能會導致問題。
 
-若要建立的個別實作方法之一來區分控制項的字型物件通知是`IFontNotification`控制項中每個字型物件介面。 這項技術可讓您最佳化您的繪圖程式碼，藉由更新僅字串或字串，使用最近已修改的字型。 下列各節示範如何實作第二個的字型屬性的個別通知介面所需的步驟。 第二個字型屬性會假設為`HeadingFont`上一節中所新增的屬性。
+區分控制項的字型物件通知的一種方法是為控制項中的每個字體對象`IFontNotification`創建介面的單獨實現。 此技術允許您僅更新使用最近修改的字型的字串或字串來優化繪圖代碼。 以下各節演示了為第二個 Font 屬性實現單獨的通知介面所需的步驟。 第二個字體屬性假定為上一`HeadingFont`節中添加的屬性。
 
-###  <a name="_core_implementing_a_new_font_notification_interface"></a> 實作新的字型通知介面
+### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a>實現新的字型通知介面
 
-若要區別兩個或多個字型的通知，新的通知介面必須實作的每個控制項中所使用的字型。 下列各節說明如何藉由修改控制項標頭和實作檔案中實作新的字型告知介面。
+要區分兩種或兩種以上字體的通知,必須為控制項中使用的每個字體實現一個新的通知介面。 以下各節介紹如何通過修改控制項標頭和實現文件來實現新的字體通知介面。
 
-### <a name="additions-to-the-header-file"></a>新增標頭檔的項目
+### <a name="additions-to-the-header-file"></a>標題檔案新增
 
-在控制項標頭檔 (。H），在類別宣告中加入下列幾行：
+在控制項檔 (.H),向類聲明添加以下行:
 
 [!code-cpp[NVC_MFC_AxFont#19](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_19.h)]
 
-這會建立實作`IPropertyNotifySink`介面呼叫`HeadingFontNotify`。 這個新的介面包含呼叫的方法`OnChanged`。
+這將創建稱為`IPropertyNotifySink``HeadingFontNotify`的介面的實現。 此新介面包含一個稱為`OnChanged`的方法。
 
-### <a name="additions-to-the-implementation-file"></a>實作檔案新增項目
+### <a name="additions-to-the-implementation-file"></a>新增檔案新增
 
-在初始化 （以控制建構函式） 的標題字型的程式碼，變更 &*m_xFontNotification*要 &*m_xHeadingFontNotify*。 然後新增下列程式碼：
+在初始化標題字型的代碼(在控制項建構函數中),將 *&m_xFontNotification*變更為 *&m_xHeadingFontNotify*。 然後，新增下列程式碼：
 
 [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]
 
-`AddRef`並`Release`中的方法`IPropertyNotifySink`追蹤的介面的 ActiveX 控制項物件的參考計數。 當控制項取得存取權的介面指標時，控制項便會呼叫`AddRef`来遞增參考計數。 當控制項完成的指標時，它會呼叫`Release`，在大致相同方式來`GlobalFree`可能呼叫以釋放全域記憶體區塊。 此介面的參考計數歸零時，就可以釋放介面實作。 在此範例中，`QueryInterface`函式會傳回的指標`IPropertyNotifySink`特定物件上的介面。 此函式可讓查詢的物件，以判斷哪個介面支援 ActiveX 控制項。
+介面`AddRef`中的`Release``IPropertyNotifySink`和方法跟蹤 ActiveX 控制件物件的引用計數。 當控件獲得對介面指標的訪問時,控件調用`AddRef`以增加引用計數。 當控件使用指標完成時,它將調用`Release`,其方式與調用以釋放全域`GlobalFree`記憶體的方式大致相同。 當此介面的引用計數為零時,可以釋放介面實現。 在此範例中,`QueryInterface`函數傳回指向特定`IPropertyNotifySink`物件上的 介面的指標。 此函數允許 ActiveX 控制件查詢物件以確定它支援哪些介面。
 
-這些變更已對您的專案之後，重建專案，並使用測試容器測試該介面。 如需測試容器存取方法的詳細資訊，請參閱 [以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md) 。
+對專案進行這些更改後,重新生成專案並使用測試容器測試介面。 如需測試容器存取方法的詳細資訊，請參閱 [以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

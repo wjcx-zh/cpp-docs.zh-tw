@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 87ac87019f127d3956caf959a28fc889fdecad50
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aaa60e26d0a9bf99076f29124097b0629ce6f5d0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450816"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754325"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 類別
 
@@ -33,35 +33,35 @@ class CWaitCursor
 
 |名稱|描述|
 |----------|-----------------|
-|[CWaitCursor::CWaitCursor](#cwaitcursor)|建構`CWaitCursor`物件，並顯示等待游標。|
+|[CWaitCursor:CWaitCursor](#cwaitcursor)|構造`CWaitCursor`對象並顯示等待游標。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CWaitCursor::Restore](#restore)|已變更之後，請還原將等待游標。|
+|[CWaitCursor::恢復](#restore)|更改等待游標后還原它。|
 
 ## <a name="remarks"></a>備註
 
-`CWaitCursor` 沒有基底類別。
+`CWaitCursor`沒有基類。
 
-良好的 Windows 程式設計做法需要您顯示等待游標，每當您執行的作業採用可觀的時間。
+良好的 Windows 程式設計實踐要求,每當執行需要明顯時間的操作時,都會顯示等待游標。
 
-若要顯示等待游標，只需定義`CWaitCursor`變數之前執行長時間作業的程式碼。 物件的建構函式會自動讓顯示將等待游標。
+要顯示等待游標,只需在執行長時間`CWaitCursor`操作的代碼之前定義變數。 對象的建構函數會自動顯示等待游標。
 
-當物件超出範圍 (所在的區塊結尾`CWaitCursor`宣告物件)，其解構函式會將資料指標設定為先前的資料指標。 換句話說，該物件會自動執行必要清除。
-
-> [!NOTE]
->  其建構函式和解構函式的運作方式，因為`CWaitCursor`物件一律會宣告為區域變數 — 它們永遠不會宣告為全域變數，也不會使用這些配置**新**。
-
-如果您執行的作業可能會造成的變更，例如顯示訊息方塊或對話方塊中，呼叫游標[還原](#restore)成員函式來還原將等待游標。 可以呼叫`Restore`甚至等待游標目前顯示時。
-
-若要顯示等待游標的另一個方法是使用的組合[CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)， [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)，也可能[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). 不過，`CWaitCursor`使用，因為您不需要將游標設定至先前的資料指標，當您完成時與長時間作業的工作變得更容易。
+當物件超出範圍(在聲明`CWaitCursor`物件的塊的末尾)時,其析構函數將游標設置到前面的游標。 換句話說,對象會自動執行必要的清理。
 
 > [!NOTE]
->  設定，並還原資料指標使用 MFC [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)虛擬函式。 您可以覆寫這個函式來提供自訂行為。
+> 由於其建構函數和析構函數的工作方式,`CWaitCursor`對象始終聲明為局部變數 - 它們永遠不會聲明為全域變數,也不會使用**new**分配。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+如果執行可能導致游標更改的操作(如顯示消息框或對話方塊),請調用[還原](#restore)成員函數以還原等待游標。 即使當前顯示等待游標`Restore`,也可以調用。
+
+顯示等待游標的另一種方法是使用[CCmdTarget:::開始等待游標](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)[,CmdTarget::結束等待游標](../../mfc/reference/ccmdtarget-class.md#endwaitcursor),也許[CMdTarget::還原等待游標](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。 但是,`CWaitCursor`使用起來更容易,因為完成冗長的操作后,不需要將游標設置為上一個游標。
+
+> [!NOTE]
+> MFC 使用[CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)虛擬函數設置和恢復游標。 您可以重寫此函數以提供自定義行為。
+
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `CWaitCursor`
 
@@ -73,9 +73,9 @@ class CWaitCursor
 
 [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]
 
-##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor
+## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor:CWaitCursor
 
-若要顯示等待游標，只是宣告`CWaitCursor`之前執行長時間作業的程式碼的物件。
+要顯示等待游標,只需在執行長時間`CWaitCursor`操作的代碼之前聲明物件。
 
 ```
 CWaitCursor();
@@ -83,32 +83,32 @@ CWaitCursor();
 
 ### <a name="remarks"></a>備註
 
-建構函式會自動讓顯示將等待游標。
+建構函數會自動顯示等待游標。
 
-當物件超出範圍 (所在的區塊結尾`CWaitCursor`宣告物件)，其解構函式會將資料指標設定為先前的資料指標。 換句話說，該物件會自動執行必要清除。
+當物件超出範圍(在聲明`CWaitCursor`物件的塊的末尾)時,其析構函數將游標設置到前面的游標。 換句話說,對象會自動執行必要的清理。
 
-您可以利用解構函式呼叫 （這可能是函式結束前） 的區塊的結尾，若要讓將等待游標的作用，您的函式的組件中的事實。 這項技術是由下列第二個範例所示。
+可以利用在塊末尾調用析構函數(可能在函數末尾)這一事實,使等待游標僅在函數的一部分中處於活動狀態。 此技術如下第二個示例所示。
 
 > [!NOTE]
->  其建構函式和解構函式的運作方式，因為`CWaitCursor`物件一律會宣告為區域變數 — 它們永遠不會宣告為全域變數，也不會使用這些配置**新**。
+> 由於其建構函數與析構函式的工作方式,`CWaitCursor`物件始終表示, 但部份變數 ──永遠不會聲明為全域變數,也不會使用**新**分配 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]
 
-##  <a name="restore"></a>  CWaitCursor::Restore
+## <a name="cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor::恢復
 
-若要還原將等待游標，請在執行的作業，例如顯示訊息方塊或對話方塊中，可能會將等待游標變更為另一個資料指標之後呼叫此函式。
+要還原等待游標,請在執行操作(如顯示消息框或對話框)後調用此函數,這可能會將等待游標更改為另一個游標。
 
-```
+```cpp
 void Restore();
 ```
 
 ### <a name="remarks"></a>備註
 
-還是可以呼叫`Restore`甚至將等待游標目前顯示時。
+即使當前顯示等待游標`Restore`,也可以調用。
 
-如果您要還原不在其中一個函式中的將等待游標`CWaitCursor`宣告物件，您可以呼叫[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。
+如果在聲明`CWaitCursor`物件的函數以外的函數中需要還原等待游標,可以調用[CCmdTarget:::還原WaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。
 
 ### <a name="example"></a>範例
 
@@ -117,8 +117,8 @@ void Restore();
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>
-[CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
-[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
-[CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[How Do i:Microsoft Foundation 類別應用程式中的將滑鼠游標變更](https://go.microsoft.com/fwlink/p/?linkid=128044)
+[CMD目標::開始等待游標](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>
+[CmD目標::結束等待游標](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
+[Cmd目標::恢復等待游標](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
+[CWinApp::Do等待游標](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
+[如何操作:更改 Microsoft 基礎類別應用程式中的滑鼠游標](https://go.microsoft.com/fwlink/p/?linkid=128044)

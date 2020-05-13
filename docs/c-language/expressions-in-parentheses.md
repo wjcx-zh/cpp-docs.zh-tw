@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
 ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233737"
 ---
 # <a name="expressions-in-parentheses"></a>括號內的運算式
 
@@ -22,7 +22,7 @@ ms.locfileid: "56149345"
 ( 10 + 5 ) / 5
 ```
 
-`10 + 5` 前後的括號表示 `10 + 5` 的值會先評估，而且它會變成除法 (**/**) 運算子的左運算元。 `( 10 + 5 ) / 5` 的結果會是 3。 若沒有括號，`10 + 5 / 5` 會評估為 11。
+前後`10 + 5`的括弧表示的值`10 + 5`會先評估，而且它會變成除法（**/**）運算子的左運算元。 `( 10 + 5 ) / 5` 的結果會是 3。 若沒有括號，`10 + 5 / 5` 會評估為 11。
 
 雖然括號會影響運算式中運算元分組的方式，但是無法保證所有情況下的特定評估順序。 例如，下列運算式中的括號和由左至右群組都無法保證 `i` 在任一子運算式中的值為何：
 
@@ -39,6 +39,6 @@ ms.locfileid: "56149345"
 
 副作用所造成的例外狀況將在[副作用](../c-language/side-effects.md)中討論。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 主要運算式](../c-language/c-primary-expressions.md)

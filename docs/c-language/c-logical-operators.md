@@ -12,25 +12,25 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326582"
 ---
 # <a name="c-logical-operators"></a>C 邏輯運算子
 
-邏輯運算子會執行邏輯 AND (**&&**) 與邏輯 OR (**||**) 運算。
+邏輯運算子會執行邏輯 AND （**&&**）與邏輯 OR （**||**）運算。
 
 ## <a name="syntax"></a>語法
 
-*logical-AND-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
+*邏輯 AND 運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*內含 OR 運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 AND 運算式*  **&&**  *包含 OR 運算式*
 
-*logical-OR-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
+*邏輯 OR 運算式*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 AND 運算式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 OR 運算式*  **&#124;&#124;**  *的邏輯 AND 運算式*
 
 ## <a name="remarks"></a>備註
 
@@ -62,9 +62,9 @@ if ( x < y && y < z )
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-在此範例中，如果 `x` 等於 `w`、`y` 或 `z`，則 **printf** 函式的第二個引數判斷值為 true，並且列印值 1。 否則，它的判斷值為 false，並且印出值 0。 只要其中一個條件的判斷值為 true，求值就會停止。
+在此範例中，如果 `x` 等於 `w`、`y` 或 `z`，則 **printf** 函式的第二個引數判斷值為 true，並且列印值 1。 否則，它的判斷值為 false，並且印出值 0。 只要其中一項條件的判斷值為 true，求值就會停止。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [邏輯 AND 運算子：&&](../cpp/logical-and-operator-amp-amp.md)
 - [邏輯 OR 運算子：&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

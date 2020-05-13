@@ -1,9 +1,11 @@
 ---
 title: mbtowc、_mbtowc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbtowc
 - _mbtowc_l
+- _o__mbtowc_l
+- _o_mbtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952001"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915419"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
@@ -59,7 +62,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>參數
 
 *wchar*<br/>
-寬字元（ **wchar_t**類型）的位址。
+寬字元的位址（類型**wchar_t**）。
 
 *mbchar*<br/>
 位元組序列 (多位元組字元) 的位址。
@@ -76,7 +79,9 @@ int _mbtowc_l(
 
 ## <a name="remarks"></a>備註
 
-如果*mbchar*不是**Null**，則**mbtowc**函式會將*mbchar*所指向的*count*或較少位元組轉換成對應的寬字元。 如果*wchar*不是**Null**， **mbtowc**會將產生的寬字元儲存在*wchar* 。 **mbtowc**不會檢查超過**MB_CUR_MAX**個位元組。 **mbtowc**會針對與地區設定相關的行為使用目前的地區設定; **_mbtowc_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*mbchar*不是**Null**，則**mbtowc**函式會將*mbchar*所指向的*count*或較少位元組轉換成對應的寬字元。 如果*wchar*不是**Null**， **mbtowc**會將產生的寬字元儲存在*wchar* 。 **mbtowc**不會檢查超過**MB_CUR_MAX**個位元組。 **mbtowc**會針對與地區設定相關的行為使用目前的地區設定;**_mbtowc_l**是相同的，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -151,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[語言](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>

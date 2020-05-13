@@ -16,23 +16,23 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 5a8fb7bf07ec631869075c5977dcec468143ad56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366280"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 網際網路程式設計基本概念
 
-Microsoft 提供許多 Api 用戶端和伺服器應用程式的程式設計。 許多新的應用程式正在寫入的網際網路功能，並為技術、 瀏覽器能力和安全性選項會變更，將寫入新類型的應用程式。 瀏覽器執行用戶端電腦，提供全球資訊網存取，並顯示包含文字、 圖形、 ActiveX 控制項及文件的 HTML 網頁上。 伺服器提供 FTP、 HTTP 和 gopher 服務，並執行使用 CGI 的伺服器擴充功能應用程式。 自訂應用程式可以擷取資訊，並提供在網際網路上的資料。
+Microsoft 提供了許多 API 來程式設計用戶端和伺服器應用程式。 許多新應用程式正在為 Internet 編寫,隨著技術、瀏覽器功能和安全選項的變化,將編寫新型應用程式。 瀏覽器在用戶端計算機上運行,提供對萬維網的訪問,並顯示包含文本、圖形、ActiveX 控制項和文件的 HTML 頁面。 伺服器提供 FTP、HTTP 和 gopher 服務,並使用 CGI 運行伺服器擴展應用程式。 自定義應用程式可以檢索資訊並在 Internet 上提供數據。
 
 >[!IMPORTANT]
-> ActiveX 是舊版的技術，不應用於新的開發。 如需詳細資訊，請參閱 < [ActiveX 控制項](activex-controls.md)。
+> ActiveX 是一種不應用於新開發的傳統技術。 有關詳細資訊,請參閱[ActiveX 控制件](activex-controls.md)。
 
 ![用戶端和伺服器應用程式](../mfc/media/vc38bq1.gif "用戶端和伺服器應用程式")
 
-MFC 提供支援網際網路程式設計的類別。 您可以使用[COleControl](../mfc/reference/colecontrol-class.md)並[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)和相關的 MFC 類別來撰寫 ActiveX 控制項和主動式文件。 您可以使用 MFC 類別，例如[CInternetSession](../mfc/reference/cinternetsession-class.md)， [CFtpConnection](../mfc/reference/cftpconnection-class.md)，並[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)來擷取檔案和使用 FTP，例如網際網路通訊協定的資訊HTTP 和 gopher。
+MFC 提供支援 Internet 程式設計的類。 您可以使用[COleControl](../mfc/reference/colecontrol-class.md)和[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)以及相關的 MFC 類來編寫 ActiveX 控制件和活動文件。 您可以使用 MFC 類別(如[CInternetSession、CFtpConnect](../mfc/reference/cftpconnection-class.md)和[CAsyncMonikerFile)](../mfc/reference/casyncmonikerfile-class.md)使用 Internet 協定(如 FTP、HTTP 和[CInternetSession](../mfc/reference/cinternetsession-class.md)gopher)檢索檔和資訊。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -54,7 +54,7 @@ MFC 提供支援網際網路程式設計的類別。 您可以使用[COleControl
 
 - [網際網路上的非同步 Moniker](../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Win32 網際網路延伸模組 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+- [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 
 - [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)
 
@@ -68,14 +68,14 @@ MFC 提供支援網際網路程式設計的類別。 您可以使用[COleControl
 
 - [DHTML 控制項的 ATL 支援](../atl/atl-support-for-dhtml-controls.md)
 
-##  <a name="_core_web_sites_for_more_information"></a> 如需詳細資訊的網站
+## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>網站瞭解更多資訊
 
-如需 Microsoft 網際網路技術的詳細資訊，請參閱[Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322)網站。 （恕不另行通知可能會變更連結）。
+有關Microsoft網路技術的其他資訊,請參閱[Microsoft開發人員網路 (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322)網站。 (連結可能會更改,恕不另行通知。
 
-適用於開發人員這個網站包含有關使用 Microsoft 開發工具和技術，以及最新和近期會議的頭條報導。 從這個頁面上，您可以跳到許多相關的開發人員網站，包括.NET 和 XML 開發人員中心。 您也可以下載 beta 版 Sdk 與範例。
+此開發人員網站包含有關使用 Microsoft 開發工具和技術的資訊,以及有關最近和即將舉辦的會議的頭條新聞。 從此頁面中,您可以跳轉到許多相關的開發人員網站,包括 .NET 和 XML 開發人員中心。 您還可以下載測試版 SDK 和範例。
 
-[World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125)發行 HTML、 HTTP、 CGI，和其他全球資訊網的技術規格。
+[萬維網聯盟 (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125)發布 HTML、HTTP、CGI 和其他萬維網技術的規範。
 
-##  <a name="_core_more_internet_help"></a> 更多的網際網路協助
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>更多網際網路說明
 
-Windows SDK 的 OLE 部分包含 OLE 程式設計的其他資訊。 這項資訊提供有關使用 Win32 WinInet 函式，直接管理，而不是透過 MFC 類別的詳細資料。 它也包含網際網路技術的概觀資訊。
+Windows SDK 的 OLE 部分包含有關 OLE 程式設計的其他資訊。 此資訊提供有關直接使用 Win32 WinInet 函數的詳細資訊,而不是透過 MFC 類。 它還包含有關互聯網技術的概述資訊。

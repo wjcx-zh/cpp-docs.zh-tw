@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: 1a6348d1afd0117683bd31af61324b14e16f710c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d3bc50255dae93bfa80e8212c2349db66db4eb6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505735"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372284"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition 類別
 
@@ -37,40 +37,40 @@ class CLinearTransition : public CBaseTransition;
 
 |名稱|描述|
 |----------|-----------------|
-|[CLinearTransition:: CLinearTransition](#clineartransition)|會建立線性轉換物件, 並以持續時間和最終值進行初始化。|
+|[C 線性轉換:C線性轉換](#clineartransition)|構造線性過渡物件,並初始化其持續時間和最終值。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CLinearTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[C 線性轉換:建立](#create)|呼叫過渡庫以建立封裝的過渡 COM 物件。 ( 覆寫[CBase 轉換:建立](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|轉換結束時的動畫變數值。|
-|[CLinearTransition::m_duration](#m_duration)|轉換的持續時間。|
+|[C線性轉換:m_dblFinalValue](#m_dblfinalvalue)|過渡結束時動畫變數的值。|
+|[C線性轉換:m_duration](#m_duration)|轉換的持續時間。|
 
 ## <a name="remarks"></a>備註
 
-線上性轉換期間, 動畫變數的值會從其初始值以線性方式轉換成指定的最終值。 由於所有轉換都會自動清除, 因此建議您使用 operator new 加以配置。 封裝的 IUIAnimationTransition COM 物件是由 CAnimationController:: AnimateGroup 所建立, 直到它是 Null 為止。 在建立此 COM 物件之後變更成員變數不會有任何作用。
+在線性轉換期間,動畫變數的值從初始值線性轉換為指定的最終值。 由於所有轉換都將自動清除,因此建議使用運算符 new 分配。 封裝的 IUI動畫轉換 COM 物件由 C動畫控制器::AnimateGroup 創建,直到此為止,它才為 NULL。 建立此 COM 物件後更改成員變數不起作用。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 轉換](../../mfc/reference/cbasetransition-class.md)
 
-[CLinearTransition](../../mfc/reference/clineartransition-class.md)
+[C 線性轉換](../../mfc/reference/clineartransition-class.md)
 
 ## <a name="requirements"></a>需求
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="clineartransition"></a>CLinearTransition:: CLinearTransition
+## <a name="clineartransitionclineartransition"></a><a name="clineartransition"></a>C 線性轉換:C線性轉換
 
-會建立線性轉換物件, 並以持續時間和最終值進行初始化。
+構造線性過渡物件,並初始化其持續時間和最終值。
 
 ```
 CLinearTransition(
@@ -80,15 +80,15 @@ CLinearTransition(
 
 ### <a name="parameters"></a>參數
 
-*duration*<br/>
+*時間*<br/>
 轉換的持續時間。
 
-*dblFinalValue*<br/>
-轉換結束時的動畫變數值。
+*dbl 最終值*<br/>
+過渡結束時動畫變數的值。
 
-##  <a name="create"></a>CLinearTransition:: Create
+## <a name="clineartransitioncreate"></a><a name="create"></a>C 線性轉換:建立
 
-呼叫轉換程式庫來建立封裝的轉換 COM 物件。
+呼叫過渡庫以建立封裝的過渡 COM 物件。
 
 ```
 virtual BOOL Create(
@@ -98,22 +98,22 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pLibrary*<br/>
-[IUIAnimationTransitionLibrary 介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標, 它會定義標準轉換的程式庫。
+*p庫*<br/>
+指向[IUIAnimation 轉換庫介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標,該介面定義標準轉換庫。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立轉換, 則為 TRUE;否則為 FALSE。
+如果成功創建轉換,則為 TRUE;如果成功創建轉換,則為 TRUE。否則 FALSE。
 
-##  <a name="m_dblfinalvalue"></a>CLinearTransition:: m_dblFinalValue
+## <a name="clineartransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>C線性轉換:m_dblFinalValue
 
-轉換結束時的動畫變數值。
+過渡結束時動畫變數的值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_duration"></a>CLinearTransition:: m_duration
+## <a name="clineartransitionm_duration"></a><a name="m_duration"></a>C線性轉換:m_duration
 
 轉換的持續時間。
 

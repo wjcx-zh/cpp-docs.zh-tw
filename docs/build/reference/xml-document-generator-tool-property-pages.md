@@ -8,19 +8,19 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335773"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>XML 文件產生器工具屬性頁
 
 XML 文件產生器工具屬性頁會公開 xdcmake.exe 的功能。 當您的原始程式碼包含文件註解並指定 [/doc (處理文件註解) (C/C++)](doc-process-documentation-comments-c-cpp.md) 時，xdcmake.exe 會將多個 .xdc 檔案合併成一個 .xml 檔案。 如需將文件註解新增至原始程式碼的資訊，請參閱[建議使用的文件註解標籤](recommended-tags-for-documentation-comments-visual-cpp.md)。
 
 > [!NOTE]
->  開發環境 (屬性頁) 中的 xdcmake.exe 選項與用於命令列中的 xdcmake.exe 選項不同。 如需在命令列使用 xdcmake.exe 的資訊，請參閱 [XDCMake 參考](xdcmake-reference.md)。
+> 開發環境 (屬性頁) 中的 xdcmake.exe 選項與用於命令列中的 xdcmake.exe 選項不同。 如需在命令列使用 xdcmake.exe 的資訊，請參閱 [XDCMake 參考](xdcmake-reference.md)。
 
 ## <a name="uielement-list"></a>UIElement 清單
 
@@ -34,7 +34,7 @@ XML 文件產生器工具屬性頁會公開 xdcmake.exe 的功能。 當您的�
 
 - **輸出文件檔**
 
-   .xml 輸出檔的名稱和目錄位置。 如需使用宏來指定目錄位置的相關資訊，請參閱[組建命令和屬性的一般宏](common-macros-for-build-commands-and-properties.md)。
+   .xml 輸出檔的名稱和目錄位置。 有關使用巨集指定目錄位置的資訊,請參閱[產生指令和屬性的通用巨集](common-macros-for-build-commands-and-properties.md)。
 
 - **文件庫相依性**
 

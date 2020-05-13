@@ -1,0 +1,128 @@
+- name: Visual Studio 中的 C++
+  expanded: false
+  items:
+    - name: Visual Studio 中的 C++
+      href: ../overview/visual-cpp-in-visual-studio.md
+    - name: 在 Visual Studio 中進行 C++ 開發的概觀
+      href: ../overview/overview-of-cpp-development.md
+    - name: Visual Studio 中 C++ 的新功能
+      href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Visual Studio 中的 C++ 一致性改善
+      href: ../overview/cpp-conformance-improvements.md
+    - name: Microsoft C++ 語言一致性
+      href: ../overview/visual-cpp-language-conformance.md
+    - name: 支援的目標平台
+      href: ../overview/supported-platforms-visual-cpp.md
+    - name: Visual Studio 版本中的 C++ 工具和功能
+      href: ../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md
+    - name: 範例
+      href: ../overview/visual-cpp-samples.md
+    - name: 說明與社群
+      href: ../overview/visual-cpp-help-and-community.md
+    - name: 如何回報 Visual C++ 工具組問題
+      href: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- name: Visual Studio C++ 教學課程
+  expanded: false
+  items:
+    - name: 在 Visual Studio 中安裝 C++ 支援
+      href: ../build/vscpp-step-0-installation.md
+    - name: 建立及編輯 C++ 主控台應用程式專案
+      href: ../build/vscpp-step-1-create.md
+    - name: 建置並執行 C++ 主控台應用程式專案
+      href: ../build/vscpp-step-2-build.md
+    - name: 建立您的第二個 C++ 應用程式
+      href: ../get-started/tutorial-console-cpp.md
+    - name: 建立 UWP 應用程式
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: 建立 Windows Desktop 應用程式
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: 建立 DirectX 遊戲
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+- name: 專案與建置系統
+  href: ../build/projects-and-build-systems-cpp.md
+- name: 在 Visual Studio 中讀取及撰寫 C++ 程式碼
+  href: ../ide/read-and-understand-code-cpp.md
+- name: Windows 桌面開發
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: UWP 開發
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: 遊戲開發
+  href: ../overview/game-development-cpp.md
+- name: Linux 開發
+  href: ../linux/
+- name: 跨平台行動裝置程式開發
+  href: ../cross-platform/
+- name: 使用 C++/CLI 進行 .NET 開發
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 雲端與 Web 程式設計
+  href: ../cloud/cloud-and-web-programming-in-visual-cpp.md
+- name: 移植及升級 C++ 程式碼
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: C + + 的安全性最佳做法
+  expanded: false
+  items:
+    - name: C + + 的安全性最佳做法
+      href: ../security/security-best-practices-for-cpp.md
+    - name: 以使用者群組成員身分執行
+      href: ../security/running-as-a-member-of-the-users-group.md
+    - name: 使用者帳戶控制 (UAC) 如何影響您的應用程式
+      href: ../security/how-user-account-control-uac-affects-your-application.md
+    - name: 理論式執行旁路的 C++ 開發人員指導方針
+      href: ../security/developer-guidance-speculative-execution.md
+- name: 參考資料
+  expanded: false
+  items:
+    - name: C/C++ 語言和標準程式庫
+      href: ../cpp/c-cpp-language-and-standard-libraries.md
+    - name: 語言參考
+      expanded: false
+      items:
+        - name: 語言
+          href: ../overview/languages-cpp.md
+        - name: C 語言參考
+          href: ../c-language/c-language-reference.md
+        - name: C++ 語言參考
+          href: ../cpp/cpp-language-reference.md
+        - name: C/C++ 前置處理器參考
+          href: ../preprocessor/c-cpp-preprocessor-reference.md
+        - name: 編譯器內建與組件語言
+          href: ../intrinsics/compiler-intrinsics-and-assembly-language.md
+        - name: 編譯器內建函式
+          href: ../intrinsics/compiler-intrinsics.md
+        - name: ARM 組譯工具參考
+          href: ../assembler/arm/arm-assembler-reference.md
+        - name: MSVC 中的內嵌組譯碼
+          href: ../assembler/inline/inline-assembler.md
+        - name: Microsoft 巨集組譯工具 (MASM) 參考
+          href: ../assembler/masm/microsoft-macro-assembler-reference.md
+        - name: 適用於.NET 與 UWP 的元件延伸模組
+          href: ../extensions/component-extensions-for-runtime-platforms.md
+        - name: 適用於 COM 和 .NET 的 C++ 屬性
+          href: ../windows/attributes/cpp-attributes-com-net.md
+    - name: 程式庫參考
+      expanded: false
+      items:
+        - name: 程式庫
+          href: ../overview/libraries-cpp.md
+        - name: C 執行階段程式庫 (CRT) 參考
+          href: ../c-runtime-library/
+        - name: C++ 標準程式庫參考
+          href: ../standard-library/
+        - name: SafeInt 程式庫
+          expanded: false
+          items:
+            - name: SafeInt 程式庫
+              href: ../safeint/safeint-library.md
+            - name: SafeInt 類別
+              href: ../safeint/safeint-class.md
+            - name: SafeInt 函式
+              href: ../safeint/safeint-functions.md
+            - name: SafeIntException 類別
+              href: ../safeint/safeintexception-class.md
+        - name: MFC/ATL
+          href: ../mfc/mfc-and-atl.md
+        - name: 平行程式庫
+          href: ../parallel/
+          items: null
+        - name: 資料存取程式庫
+          href: ../data/

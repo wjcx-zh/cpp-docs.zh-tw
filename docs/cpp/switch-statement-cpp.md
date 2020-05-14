@@ -22,8 +22,8 @@ ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
 ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204154"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389697"
 ---
 # <a name="switch-statement-c"></a>`switch`語句（c + +）
 
@@ -181,5 +181,5 @@ Microsoft c + + 不會限制 __`case`__ 語句中的值數目 __`switch`__ 。 �
 
 ## <a name="see-also"></a>請參閱
 
-[選取範圍語句](../cpp/selection-statements-cpp.md)<br/>
+[選取範圍陳述式](../cpp/selection-statements-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

@@ -1,21 +1,21 @@
 ---
-title: 在 Visual Studio 中安裝 C++ 支援
+title: 在 Visual Studio 中安裝 C 和 c + + 支援
 description: 安裝 Visual C++ 的 Visual Studio 支援
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: d3018bef9254a8eab557057c035cde84310a2452
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335358"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550806"
 ---
-# <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 C++ 支援
+# <a name="install-c-and-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 C 和 c + + 支援
 
-如果您尚未下載並安裝 Visual Studio 和 Visual C++ 工具，以下是開始使用的方法。
+如果您尚未下載並安裝 Visual Studio 和 Microsoft C/c + + 工具，以下是開始使用的方法。
 
 ::: moniker range="vs-2019"
 
@@ -73,9 +73,9 @@ ms.locfileid: "81335358"
 
    ![Visual Studio 2019：安裝工作負載](../get-started/media/vs-installer-workloads.png)
 
-   如需核心 c + + 支援，請選擇「使用 c + + 進行桌面開發」工作負載。 它隨附預設核心編輯器，其中包括超過 20 種語言的基本程式碼編輯支援、能夠從任何資料夾開啟及編輯程式碼而不需要專案，以及整合的原始程式碼控制。
+   如需核心 C 和 c + + 支援，請選擇「使用 c + + 進行桌面開發」工作負載。 它隨附預設核心編輯器，其中包括超過 20 種語言的基本程式碼編輯支援、能夠從任何資料夾開啟及編輯程式碼而不需要專案，以及整合的原始程式碼控制。
 
-   其他工作負載支援其他類型的 c + + 開發。 例如，選擇 [通用 Windows 平臺開發] 工作負載，以建立使用 Microsoft Store Windows 執行階段的應用程式。 選擇 [使用 c + + 進行遊戲開發]，建立使用 DirectX、Unreal 和 Cocos2d 的遊戲。 選擇 [使用 c + + 進行 Linux 開發]，以 Linux 平臺為目標，包括 IoT 開發。
+   其他工作負載支援其他種類的開發。 例如，選擇 [通用 Windows 平臺開發] 工作負載，以建立使用 Microsoft Store Windows 執行階段的應用程式。 選擇 [使用 c + + 進行遊戲開發]，建立使用 DirectX、Unreal 和 Cocos2d 的遊戲。 選擇 [使用 c + + 進行 Linux 開發]，以 Linux 平臺為目標，包括 IoT 開發。
 
    [**安裝詳細資料**] 窗格會列出每個工作負載所安裝的內含和選用元件。 您可以選取或取消選取此清單中的選擇性元件。 例如，若要使用 Visual Studio 2017 或2015編譯器工具組來支援開發，請選擇 [MSVC v141] 或 [MSVC v140 選擇性元件]。 您可以新增 MFC 的支援、實驗性模組語言擴充功能、IncrediBuild 等等。
 
@@ -84,7 +84,7 @@ ms.locfileid: "81335358"
    接著會出現狀態畫面，顯示 Visual Studio 的安裝進度。
 
 > [!TIP]
-> 您可以在安裝後，隨時安裝一開始未安裝的工作負載或元件。 如果您已 Visual Studio 開啟，請移至 [**工具** > ] [**取得工具與功能 ...** ]，以開啟 [Visual Studio 安裝程式]。 或者，從 [開始] 功能表開啟 [Microsoft Visual Studio 安裝程式]****。 您可以在此選擇想要安裝的工作負載或元件。 然後，選擇 [修改]****。
+> 您可以在安裝後，隨時安裝一開始未安裝的工作負載或元件。 如果您已 Visual Studio 開啟，請移至 [**工具**] [  >  **取得工具與功能 ...** ]，以開啟 [Visual Studio 安裝程式]。 或者，從 [開始] 功能表開啟 [Microsoft Visual Studio 安裝程式]****。 您可以在此選擇想要安裝的工作負載或元件。 然後，選擇 [修改]****。
 
 ### <a name="step-5---choose-individual-components-optional"></a>步驟 5：選取個別元件 (選擇性)
 
@@ -125,13 +125,13 @@ ms.locfileid: "81335358"
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="vs-2017"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安裝
 
 在 Visual Studio 2017 中，很容易就能選擇並安裝所需的功能。 因為降低了磁碟使用量下限，所以安裝快速，且對系統影響更小。
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>Prerequisites
 
 - 寬頻網際網路連接。 Visual Studio 安裝程式可以下載數 gb 的資料。
 
@@ -157,9 +157,9 @@ ms.locfileid: "81335358"
 
 1. 安裝程式會顯示一份工作負載清單，而工作負載是特定開發區域的相關選項群組。 C + + 的支援現在是選擇性工作負載的一部分，預設不會安裝。
 
-   ![使用 c + + 的桌面開發工作負載](media/desktop-development-with-cpp.png "使用 C++ 的桌面開發")
+   ![使用 c + + 的桌面開發工作負載](media/desktop-development-with-cpp.png "使用 C++ 的傳統型開發")
 
-   針對 c + +，選取 [**使用 c + + 進行桌面開發**] 工作負載，然後選擇 [**安裝**]
+   針對 C 和 c + +，選取 [**使用 c + + 進行桌面開發**] 工作負載，然後選擇 [**安裝**]。
 
    ![安裝使用 c + + 的桌面開發工作負載](media/vscpp-concierge-choose-workload.gif "安裝使用 c + + 的桌面開發工作負載")
 
@@ -185,9 +185,9 @@ ms.locfileid: "81335358"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安裝
 
-若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]****，然後選擇 C++ 元件。 若要將 c + + 支援新增至現有的 Visual Studio 2015 安裝，請按一下 Windows [開始] 按鈕，然後輸入 [新增] [**移除程式**]。 從 [結果] 清單中開啟程式，然後在已安裝的程式清單中尋找您的 Visual Studio 2015 安裝。 按兩下該檔案，然後選擇 [**修改**]，然後選取要安裝的 Visual C++ 元件。
+若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]****，然後選擇 C++ 元件。 若要將 C 和 c + + 支援新增至現有的 Visual Studio 2015 安裝，請按一下 Windows [開始] 按鈕，然後輸入 [新增] [**移除程式**]。 從 [結果] 清單中開啟程式，然後在已安裝的程式清單中尋找您的 Visual Studio 2015 安裝。 按兩下該檔案，然後選擇 [**修改**]，然後選取要安裝的 Visual C++ 元件。
 
-一般來說，即使需要使用 Visual Studio 2015 編譯器，編譯您的程式碼，也都非常建議您使用 Visual Studio 2017。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](../porting/use-native-multi-targeting.md)。
+一般來說，我們強烈建議您使用最新版的 Visual Studio，即使您需要使用 Visual Studio 2015 編譯器來編譯器代碼也一樣。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](../porting/use-native-multi-targeting.md)。
 
 ::: moniker-end
 

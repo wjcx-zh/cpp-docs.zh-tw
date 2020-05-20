@@ -129,6 +129,6 @@ Block-scoped i has the value: 5
 Global-scoped i has the value: 7
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [基本概念](../cpp/basic-concepts-cpp.md)

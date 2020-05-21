@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950197"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759234"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -77,7 +77,7 @@ int _wprintf_l(
 
 ### <a name="parameters"></a>參數
 
-*格式*<br/>
+*format*<br/>
 控制項格式。
 
 *引數*<br/>
@@ -119,7 +119,7 @@ Line one
         Line two
 ```
 
-[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一律以百分比符號（ **%** ）開頭，並由左至右讀取。 當**printf**遇到第一個格式規格（如果有的話）時，它會將第一個引數的值轉換成*格式*，並據以輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
+[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一律以百分比符號（）開頭 **%** ，並由左至右讀取。 當**printf**遇到第一個格式規格（如果有的話）時，它會將第一個引數的值轉換成*格式*，並據以輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
@@ -131,14 +131,14 @@ Line one
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 |**_tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**printf**、 **_printf_l**|\<stdio.h>|
-|**wprintf**、 **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**wprintf**， **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺（UWP）應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -228,12 +228,13 @@ Address as:   0012FF3C
 
 ## <a name="see-also"></a>另請參閱
 
+[格式規格語法： printf 和 wprintf 函式](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vprintf 函式](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>

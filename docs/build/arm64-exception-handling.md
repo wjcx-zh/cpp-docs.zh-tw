@@ -2,12 +2,12 @@
 title: ARM64 例外狀況處理
 description: 描述 ARM64 上 windows 所使用的例外狀況處理慣例和資料。
 ms.date: 11/19/2018
-ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
-ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
+ms.openlocfilehash: abc77aa683e73a2740c71ffbd7ddead07f91ff7d
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504489"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854823"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外狀況處理
 
@@ -55,9 +55,9 @@ Windows on ARM64 會針對非同步硬體產生的例外狀況和同步軟體產
 
 ![堆疊框架版面配置](media/arm64-exception-handling-stack-frame.png "堆疊框架配置")
 
-針對框架連結的函式，可以在本機變數區域中的任何位置儲存 fp 和 lr 配對，視優化考慮而定。 目標是要最大化可透過框架指標（x29）或堆疊指標（sp）的單一指令來達到的區域變數數目。 不過，針對`alloca`函式，它必須是連鎖的，而且 x29 必須指向堆疊的底部。 為了允許更好的暫存器成對定址模式涵蓋範圍，非靜態暫存器儲存區域會放在本機區域堆疊的頂端。 以下範例說明數個最有效率的初構序列。 為了清楚且更佳的快取區域，在所有標準初構中儲存被呼叫端儲存的暫存器的順序，都是「成長中」的順序。 `#framesz`以下代表整個堆疊的大小（不包括 alloca 區域）。 `#localsz`和`#outsz`分別代表區域大小（包括\<x29、lr> 組的儲存區域，以及輸出參數大小）。
+針對框架連結的函式，可以在本機變數區域中的任何位置儲存 fp 和 lr 配對，視優化考慮而定。 目標是要最大化可透過框架指標（x29）或堆疊指標（sp）的單一指令來達到的區域變數數目。 不過，針對函式 `alloca` ，它必須是連鎖的，而且 x29 必須指向堆疊的底部。 為了允許更好的暫存器成對定址模式涵蓋範圍，非靜態暫存器儲存區域會放在本機區域堆疊的頂端。 以下範例說明數個最有效率的初構序列。 為了清楚且更佳的快取區域，在所有標準初構中儲存被呼叫端儲存的暫存器的順序，都是「成長中」的順序。 `#framesz`以下代表整個堆疊的大小（不包括 alloca 區域）。 `#localsz`和 `#outsz` 分別代表區域大小（包括 \< x29、lr> 組的儲存區域，以及輸出參數大小）。
 
-1. 連鎖，#localsz \<= 512
+1. 連鎖，#localsz \< = 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -96,7 +96,7 @@ Windows on ARM64 會針對非同步硬體產生的例外狀況和同步軟體產
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   所有區域變數都是根據 SP 來存取。 \<x29，lr> 指向上一個畫面。 針對框架大小\<= 512，"sub sp，..."如果 regs 儲存的區域移至堆疊底部，可以將其優化。 缺點是它與上述的其他版面配置不一致，而且儲存的 regs 會納入 regs 的範圍，以及前置和後置索引的位移定址模式。
+   所有區域變數都是根據 SP 來存取。 \<x29，lr> 指向上一個畫面。 針對框架大小 \< = 512，"sub sp，..."如果 regs 儲存的區域移至堆疊底部，可以將其優化。 缺點是它與上述的其他版面配置不一致，而且儲存的 regs 會納入 regs 的範圍，以及前置和後置索引的位移定址模式。
 
 1. Unchained，非分葉函式（lr 會儲存在 Int 儲存的區域中）
 
@@ -132,7 +132,7 @@ Windows on ARM64 會針對非同步硬體產生的例外狀況和同步軟體產
 
    所有區域變數都是根據 SP 來存取。 \<x29> 指向上一個畫面格。
 
-1. 連鎖，#framesz \<= 512，#outsz = 0
+1. 連鎖，#framesz \< = 512，#outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -286,33 +286,28 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 |回溯程式碼|位和轉譯|
 |-|-|
-|`alloc_s`|000xxxxx：配置大小\<為512（2 ^ 5 * 16）的小型堆疊。|
-|`save_r19r20_x`|    001zzzzz：儲存\<x19，x20> 組`[sp-#Z*8]!`，預先索引的位移 >=-248 |
-|`save_fplr`|        01zzzzzz：儲存\<x29，lr> 配對`[sp+#Z*8]`，位移\<= 504。 |
-|`save_fplr_x`|        10zzzzzz：儲存\<x29，lr> 組`[sp-(#Z+1)*8]!`，預先索引的位移 >=-512 |
-|`alloc_m`|        11000xxx'xxxxxxxx：配置大小\<為16k 的大型堆疊（2 ^ 11 * 16）。 |
-|`save_regp`|        110010xx'xxzzzzzz：儲存 x （19 + #X）組`[sp+#Z*8]`，位移\<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz：儲存配對 x （19 + #X） `[sp-(#Z+1)*8]!`，預先索引的位移 >=-512 |
-|`save_reg`|        110100xx'xxzzzzzz：將 reg x （19 + #X）儲存`[sp+#Z*8]`在， \<offset = 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz：將 reg x （19 + #X）儲存`[sp-(#Z+1)*8]!`于，預先索引的位移 >=-256 |
-|`save_lrpair`|         1101011x'xxzzzzzz：儲存配對\<x （19 + 2 * #X），lr> 于`[sp+#Z*8]`，位移\<= 504 |
-|`save_fregp`|        1101100x'xxzzzzzz：儲存配對 d （8 + #X） `[sp+#Z*8]`，位移\<= 504 |
-|`save_fregp_x`|        1101101x'xxzzzzzz： save d （8 + #X）、at `[sp-(#Z+1)*8]!`、預先索引的位移 >=-512 |
-|`save_freg`|        1101110x'xxzzzzzz：將 reg d （8 + #X）儲存`[sp+#Z*8]`在， \<offset = 504 |
-|`save_freg_x`|        11011110 ' xxxzzzzz： save reg d （8 + #X） `[sp-(#Z+1)*8]!`，預先索引的位移 >=-256 |
-|`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx：配置大小\<為256M 的大型堆疊（2 ^ 24 * 16） |
+|`alloc_s`|000xxxxx：配置大小為 \< 512 （2 ^ 5 * 16）的小型堆疊。|
+|`save_r19r20_x`|    001zzzzz：儲存 \< x19，x20> 組 `[sp-#Z*8]!` ，預先索引的位移 >=-248 |
+|`save_fplr`|        01zzzzzz：儲存 \< x29，lr> 配對 `[sp+#Z*8]` ，位移 \< = 504。 |
+|`save_fplr_x`|        10zzzzzz：儲存 \< x29，lr> 組 `[sp-(#Z+1)*8]!` ，預先索引的位移 >=-512 |
+|`alloc_m`|        11000xxx'xxxxxxxx：配置大小為16k 的大型堆疊 \< （2 ^ 11 * 16）。 |
+|`save_regp`|        110010xx'xxzzzzzz：儲存 x （19 + #X）組 `[sp+#Z*8]` ，位移 \< = 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz：儲存配對 x （19 + #X） `[sp-(#Z+1)*8]!` ，預先索引的位移 >=-512 |
+|`save_reg`|        110100xx'xxzzzzzz：將 reg x （19 + #X）儲存在 `[sp+#Z*8]` ，offset \< = 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz：將 reg x （19 + #X）儲存于 `[sp-(#Z+1)*8]!` ，預先索引的位移 >=-256 |
+|`save_lrpair`|         1101011x'xxzzzzzz：儲存配對 \< x （19 + 2 * #X），lr> 于 `[sp+#Z*8]` ，位移 \< = 504 |
+|`save_fregp`|        1101100x'xxzzzzzz：儲存配對 d （8 + #X） `[sp+#Z*8]` ，位移 \< = 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz： save d （8 + #X）、at `[sp-(#Z+1)*8]!` 、預先索引的位移 >=-512 |
+|`save_freg`|        1101110x'xxzzzzzz：將 reg d （8 + #X）儲存在 `[sp+#Z*8]` ，offset \< = 504 |
+|`save_freg_x`|        11011110 ' xxxzzzzz： save reg d （8 + #X） `[sp-(#Z+1)*8]!` ，預先索引的位移 >=-256 |
+|`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx：配置大小為256M 的大型堆疊 \< （2 ^ 24 * 16） |
 |`set_fp`|        11100001：使用下列方式設定 x29：`mov x29,sp` |
 |`add_fp`|        11100010 ' xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx：使用下列方式設定 x29：`add x29,sp,#x*8` |
 |`nop`|            11100011：不需要回溯作業。 |
 |`end`|            11100100：回溯程式碼結束。 意指在終解中的 ret。 |
 |`end_c`|        11100101：目前連結範圍中的回溯程式碼結束。 |
 |`save_next`|        11100110：儲存下一個非 volatile Int 或 FP 暫存器配對。 |
-|`arithmetic(add)`|    11100111 ' 000zxxxx：將 cookie reg （z）新增至 lr （0 = x28，1 = sp）;`add lr, lr, reg(z)` |
-|`arithmetic(sub)`|    11100111 ' 001zxxxx：來自 lr 的 sub cookie reg （z）（0 = x28，1 = sp）;`sub lr, lr, reg(z)` |
-|`arithmetic(eor)`|    11100111 ' 010zxxxx： eor lr with cookie reg （z）（0 = x28，1 = sp）;`eor lr, lr, reg(z)` |
-|`arithmetic(rol)`|    11100111 ' 0110xxxx：具有 cookie reg 的 lr 模擬 rol （x28）;xip0 = neg x28;`ror lr, xip0` |
-|`arithmetic(ror)`|    11100111 ' 100zxxxx： ror lr with cookie reg （z）（0 = x28，1 = sp）;`ror lr, lr, reg(z)` |
-| |            11100111： xxxz----：----保留 |
+| |            11100111：已保留 |
 | |              11101xxx：只為 asm 常式產生的自訂堆疊案例保留 |
 | |              11101000： MSFT_OP_TRAP_FRAME 的自訂堆疊 |
 | |              11101001： MSFT_OP_MACHINE_FRAME 的自訂堆疊 |
@@ -322,13 +317,13 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 在涵蓋多個位元組的大型值指示中，會先儲存最重要的位。 這項設計可讓您藉由只查閱程式碼的第一個位元組，來找出回溯程式碼的總大小（以位元組為單位）。 由於每個回溯程式碼都會與初構或終解中的指令完全對應，因此您可以計算初構或終解的大小。 您可以從序列開頭到結尾處進行，並使用查閱資料表或類似的裝置來判斷對應的 opcode 的時間長度。
 
-在初構中不允許使用後置索引位移定址。 所有位移範圍（#Z）都符合 STP/STR 定址的編碼方式`save_r19r20_x`，但在這種情況下，248對所有儲存區域都已足夠（10個 Int 暫存器 + 8 FP 暫存器 + 8 個輸入暫存器）。
+在初構中不允許使用後置索引位移定址。 所有位移範圍（#Z）都符合 STP/STR 定址的編碼方式 `save_r19r20_x` ，但在這種情況下，248對所有儲存區域都已足夠（10個 Int 暫存器 + 8 FP 暫存器 + 8 個輸入暫存器）。
 
-`save_next`必須遵循 Int 或 FP volatile 暫存器配對的儲存： `save_regp`、 `save_regp_x`、 `save_fregp`、 `save_fregp_x`、 `save_r19r20_x`或其他`save_next`。 它會在接下來的16個位元組插槽中，將下一個暫存器配對儲存在「成長」的順序中。 當`save_next`它遵循`save-next`代表最後一個 Int 暫存器配對的時，是指第一個 FP 暫存器配對。
+`save_next`必須遵循 Int 或 FP volatile 暫存器配對的儲存： `save_regp` 、 `save_regp_x` 、 `save_fregp` 、 `save_fregp_x` 、 `save_r19r20_x` 或其他 `save_next` 。 它會在接下來的16個位元組插槽中，將下一個暫存器配對儲存在「成長」的順序中。 `save_next`當它遵循 `save-next` 代表最後一個 Int 暫存器配對的時，是指第一個 FP 暫存器配對。
 
-由於一般傳回和跳躍指示的大小相同，因此不需要針對尾呼叫案例使用分隔`end`的回溯程式碼。
+由於一般傳回和跳躍指示的大小相同，因此不需要 `end` 針對尾呼叫案例使用分隔的回溯程式碼。
 
-`end_c`的設計目的是為了因應優化而處理非連續函數片段。 `end_c` ，表示目前範圍中回溯程式碼的結尾後面必須接著以 real `end`結束的另一系列回溯程式碼。 和`end_c` `end`之間的回溯代碼代表父區域（"虛設" 初構）中的初構作業。  如需更多詳細資料和範例，請參閱下一節。
+`end_c`的設計目的是為了因應優化而處理非連續函數片段。 `end_c`，表示目前範圍中回溯程式碼的結尾後面必須接著以 real 結束的另一系列回溯程式碼 `end` 。 和之間的回溯 `end_c` 代碼 `end` 代表父區域（"虛設" 初構）中的初構作業。  如需更多詳細資料和範例，請參閱下一節。
 
 ### <a name="packed-unwind-data"></a>封裝的回溯資料
 
@@ -349,15 +344,15 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - **函數長度**是一個11位欄位，提供整個函式的長度（以位元組為單位），除以4。 如果函數大於8k，則必須改用完整的 .xdata 記錄。
 - **畫面格大小**是9位欄位，指出配置給此函式的堆疊位元組數（除以16）。 配置大於（8k-16）個位元組之堆疊的函數必須使用完整的 .xdata 記錄。 其中包含本機變數區域、傳出參數區域、被呼叫者儲存的 Int 和 FP 區域，以及 home 參數區域，但會排除動態配置區域。
 - **CR**是2位旗標，指出函式是否包含設定框架鏈和傳回連結的額外指示：
-  - 00 = unchained 函式\<、x29、lr> 配對不會儲存在堆疊中。
-  - 01 = unchained 函數， \<lr> 儲存在堆疊中
+  - 00 = unchained 函式、 \< x29、lr> 配對不會儲存在堆疊中。
+  - 01 = unchained 函數， \< lr> 儲存在堆疊中
   - 10 = 保留;
-  - 11 = 連鎖函式，存放/負載配對指令用於初構/終解\<x29，lr>
+  - 11 = 連鎖函式，存放/負載配對指令用於初構/終解 \< x29，lr>
 - **H**是1位旗標，指出函式在函式的開頭是否會將它儲存在函式的最開頭，以註冊（x0-7）函數。 （0 = 不是 home 暫存器，1 = 家庭暫存器）。
 - **RegI**是4位欄位，指出標準堆疊位置中儲存的非 volatile INT 暫存器（x19-x28）數目。
 - **RegF**是3位欄位，指出標準堆疊位置中儲存的非 volatile FP 暫存器（d8-d15）數目。 （RegF = 0：未儲存 FP 暫存器;RegF>0： RegF + 1 FP 暫存器已儲存）。 封裝的回溯資料無法用於只儲存一個 FP 暫存器的函式。
 
-屬於類別1、2（不含傳出參數區域）、3和4的標準初構會以封裝的回溯格式來表示。  標準函式的 epilogs 會遵循類似的格式，但**H**不會有任何`set_fp`作用、省略指示，以及每個步驟中的指令順序會在終止時反轉。 .Xdata 的演算法會遵循下列步驟，如下表所述：
+屬於類別1、2（不含傳出參數區域）、3和4的標準初構會以封裝的回溯格式來表示。  標準函式的 epilogs 會遵循類似的格式，但**H**不會有任何作用、 `set_fp` 省略指示，以及每個步驟中的指令順序會在終止時反轉。 .Xdata 的演算法會遵循下列步驟，如下表所述：
 
 步驟0：預先計算每個區域的大小。
 
@@ -369,7 +364,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 步驟4：將輸入引數儲存在 home 參數區域中。
 
-步驟5：配置剩餘的堆疊，包括本機區域\<、x29、lr> 組和傳出參數區域。 5a 對應至標準類型1。 5b 和5c 適用于標準類型2。 5d 和5e 適用于類型3和類型4。
+步驟5：配置剩餘的堆疊，包括本機區域、 \< x29、lr> 組和傳出參數區域。 5a 對應至標準類型1。 5b 和5c 適用于標準類型2。 5d 和5e 適用于類型3和類型4。
 
 步驟 #|旗標值|指示數目|OpCode|回溯程式碼
 -|-|-|-|-
@@ -381,14 +376,14 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 5a|**CR** = = 11 &&  # locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5c|**CR** = = 11 &&  # locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|（**CR** = = 00 \| \| **CR**= = 01）  &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|（**CR** = = 00 \| \| **CR**= = 01）  &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5d|（**CR** = = 00 \| \|**CR**= = 01）  &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|（**CR** = = 00 \| \|**CR**= = 01）  &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \*如果**CR** = = 01 且**RegI**是奇數，則步驟1中的步驟2和最後一個 save_rep 會合並成一個 save_regp。
 
-\*\*如果**RegI** == **CR** = = 0，而**RegF** ！ = 0，則浮點的第一個 stp 會執行前置遞減。
+\*\*如果**RegI**  ==  **CR** = = 0，而**RegF** ！ = 0，則浮點的第一個 stp 會執行前置遞減。
 
-\*\*\*終中沒有對應`mov x29,sp`至的指示。 如果函數需要從 x29 還原 sp，則無法使用封裝的回溯資料。
+\*\*\*終中沒有對應至的指示 `mov x29,sp` 。 如果函數需要從 x29 還原 sp，則無法使用封裝的回溯資料。
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>回溯部分初構和 epilogs
 
@@ -476,17 +471,17 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
    僅必須描述初構。 這不能以 pdata 格式表示。 在 .xdata 的案例中，可以藉由設定終計數 = 0 來表示。 請參閱上述範例中的區域1。
 
-   回溯代碼： `set_fp`、 `save_regp 0,240`、 `save_fplr_x_256`、 `end`。
+   回溯代碼： `set_fp` 、 `save_regp 0,240` 、 `save_fplr_x_256` 、 `end` 。
 
 1. 僅限 Epilogs （區域2：初構位於主機區域）
 
-   這是假設，當時間控制項跳入此區域時，就會執行所有初構程式碼。 部分回溯可能會在 epilogs 中發生，方式與一般函式相同。 此類型的區域無法以 pdata 表示。 在完整的 .xdata 記錄中，可以使用「虛設」初構來編碼，並以和`end_c` `end`回溯程式碼配對來括住。  前置`end_c`表示初構的大小為零。 將單一終解點的開始索引到`set_fp`。
+   這是假設，當時間控制項跳入此區域時，就會執行所有初構程式碼。 部分回溯可能會在 epilogs 中發生，方式與一般函式相同。 此類型的區域無法以 pdata 表示。 在完整的 .xdata 記錄中，可以使用「虛設」初構來編碼，並以和回溯程式 `end_c` 代碼配對來括住 `end` 。  前置表示初構的 `end_c` 大小為零。 將單一終解點的開始索引到 `set_fp` 。
 
-   區域2的回溯程式碼`end_c`： `set_fp`、 `save_regp 0,240`、 `save_fplr_x_256`、 `end`、。
+   區域2的回溯程式碼： `end_c` 、 `set_fp` 、 `save_regp 0,240` 、 `save_fplr_x_256` 、 `end` 。
 
 1. 沒有初構或 epilogs （區域3：初構和所有 epilogs 都在其他片段中）：
 
-   Pdata 格式可以透過設定旗標 = 10 來套用。 具有完整的 .xdata 記錄，終計數 = 1。 回溯程式碼與上述區域2的程式碼相同，但終的開始索引也會指向`end_c`。 部分回溯永遠不會發生在此程式碼區域中。
+   Pdata 格式可以透過設定旗標 = 10 來套用。 具有完整的 .xdata 記錄，終計數 = 1。 回溯程式碼與上述區域2的程式碼相同，但終的開始索引也會指向 `end_c` 。 部分回溯永遠不會發生在此程式碼區域中。
 
 另一個更複雜的函數片段案例是「壓縮包裝」。 編譯器可能會選擇延遲儲存一些被呼叫端儲存的暫存器，直到函式進入初構的外部。
 
@@ -521,9 +516,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 在區域1的初構中，會預先配置堆疊空間。 您可以看到區域2會有相同的回溯程式碼，即使它已移出其主機函式也一樣。
 
-區域1： `set_fp`、 `save_regp 0,240`、 `save_fplr_x_256`， `end`具有終的開始索引點`set_fp`為往常。
+區域1： `set_fp` 、 `save_regp 0,240` 、 `save_fplr_x_256` ， `end` 具有終的開始索引點為 `set_fp` 往常。
 
-區域2： `save_regp 2, 224`、 `end_c`、 `set_fp`、 `save_regp 0,240`、 `save_fplr_x_256`、 `end`。 終解開始索引點到第一個`save_regp 2, 224`回溯程式碼。
+區域2： `save_regp 2, 224` 、 `end_c` 、 `set_fp` 、 `save_regp 0,240` 、 `save_fplr_x_256` 、 `end` 。 終解開始索引點到第一個回溯程式碼 `save_regp 2, 224` 。
 
 ### <a name="large-functions"></a>大型函式
 
@@ -628,7 +623,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 終解開始索引 [4] 指向初構回溯程式碼的中間（部分重複使用的回溯陣列）。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[ARM64 ABI 慣例的總覽](arm64-windows-abi-conventions.md)<br/>
+[ARM64 ABI 慣例概觀](arm64-windows-abi-conventions.md)<br/>
 [ARM 例外狀況處理](arm-exception-handling.md)

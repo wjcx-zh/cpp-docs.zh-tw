@@ -1,959 +1,907 @@
+- name: C++ 語言文件
+  href: ../cpp/index.yml
 - name: C++ 語言參考
-  href: ../cpp/cpp-language-reference.md
-- name: 歡迎回到 C++ (新式 C++)
-  href: ../cpp/welcome-back-to-cpp-modern-cpp.md
-- name: 語彙慣例
-  expanded: false
+  expanded: true
   items:
+    - name: C++ 語言參考
+      href: ../cpp/cpp-language-reference.md
+    - name: 歡迎回到 C++ (新式 C++)
+      href: ../cpp/welcome-back-to-cpp-modern-cpp.md
     - name: 語彙慣例
-      href: ../cpp/lexical-conventions.md
-    - name: 語彙基元和字元集
-      href: ../cpp/character-sets.md
-    - name: 註解
-      href: ../cpp/comments-cpp.md
-    - name: 識別項
-      href: ../cpp/identifiers-cpp.md
-    - name: 關鍵字
-      href: ../cpp/keywords-cpp.md
-    - name: 標點符號
-      href: ../cpp/punctuators-cpp.md
-    - name: 數值、布林值和指標常值
-      href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
-    - name: 字串和字元常值
-      href: ../cpp/string-and-character-literals-cpp.md
-    - name: 使用者定義常值
-      href: ../cpp/user-defined-literals-cpp.md
-- name: 基本概念
-  expanded: false
-  items:
+      items:
+        - name: 語彙慣例
+          href: ../cpp/lexical-conventions.md
+        - name: 語彙基元和字元集
+          href: ../cpp/character-sets.md
+        - name: 註解
+          href: ../cpp/comments-cpp.md
+        - name: 識別項
+          href: ../cpp/identifiers-cpp.md
+        - name: 關鍵字
+          href: ../cpp/keywords-cpp.md
+        - name: 標點符號
+          href: ../cpp/punctuators-cpp.md
+        - name: 數值、布林值和指標常值
+          href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
+        - name: 字串和字元常值
+          href: ../cpp/string-and-character-literals-cpp.md
+        - name: 使用者定義常值
+          href: ../cpp/user-defined-literals-cpp.md
     - name: 基本概念
-      href: ../cpp/basic-concepts-cpp.md
-    - name: C++ 類型系統
-      href: ../cpp/cpp-type-system-modern-cpp.md
-    - name: 範圍
-      href: ../cpp/scope-visual-cpp.md
-    - name: 標頭檔
-      href: ../cpp/header-files-cpp.md
-    - name: 編譯單位和連結
-      href: ../cpp/program-and-linkage-cpp.md
-    - name: main 函式和命令列引數
-      href: ../cpp/main-function-command-line-args.md
-    - name: 程式終止
-      href: ../cpp/program-termination.md
-    - name: Lvalues 和 Rvalues
-      href: ../cpp/lvalues-and-rvalues-visual-cpp.md
-    - name: 暫存物件
-      href: ../cpp/temporary-objects.md
-    - name: 對齊
-      href: ../cpp/alignment-cpp-declarations.md
-    - name: Trivial、標準配置和 POD 類型
-      href: ../cpp/trivial-standard-layout-and-pod-types.md
-    - name: 值類型
-      href: ../cpp/value-types-modern-cpp.md
-    - name: 類型轉換與類型安全
-      href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
-    - name: 標準轉換
-      href: ../cpp/standard-conversions.md
-- name: 內建類型
-  expanded: false
-  items:
+      items:
+        - name: 基本概念
+          href: ../cpp/basic-concepts-cpp.md
+        - name: C++ 類型系統
+          href: ../cpp/cpp-type-system-modern-cpp.md
+        - name: 範圍
+          href: ../cpp/scope-visual-cpp.md
+        - name: 標頭檔
+          href: ../cpp/header-files-cpp.md
+        - name: 編譯單位和連結
+          href: ../cpp/program-and-linkage-cpp.md
+        - name: main 函式和命令列引數
+          href: ../cpp/main-function-command-line-args.md
+        - name: 程式終止
+          href: ../cpp/program-termination.md
+        - name: Lvalues 和 Rvalues
+          href: ../cpp/lvalues-and-rvalues-visual-cpp.md
+        - name: 暫存物件
+          href: ../cpp/temporary-objects.md
+        - name: 對齊
+          href: ../cpp/alignment-cpp-declarations.md
+        - name: Trivial、標準配置和 POD 類型
+          href: ../cpp/trivial-standard-layout-and-pod-types.md
+        - name: 值類型
+          href: ../cpp/value-types-modern-cpp.md
+        - name: 類型轉換與類型安全
+          href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
+        - name: 標準轉換
+          href: ../cpp/standard-conversions.md
     - name: 內建類型
-      href: ../cpp/fundamental-types-cpp.md
-    - name: 資料類型範圍
-      href: ../cpp/data-type-ranges.md
-    - name: nullptr
-      href: ../cpp/nullptr.md
-    - name: void
-      href: ../cpp/void-cpp.md
-    - name: bool
-      href: ../cpp/bool-cpp.md
-    - name: false
-      href: ../cpp/false-cpp.md
-    - name: true
-      href: ../cpp/true-cpp.md
-    - name: char、wchar_t、char16_t、char32_t
-      href: ../cpp/char-wchar-t-char16-t-char32-t.md
-    - name: __int8、__int16、__int32、__int64
-      href: ../cpp/int8-int16-int32-int64.md
-    - name: __m64
-      href: ../cpp/m64.md
-    - name: __m128
-      href: ../cpp/m128.md
-    - name: __m128d
-      href: ../cpp/m128d.md
-    - name: __m128i
-      href: ../cpp/m128i.md
-    - name: __ptr32、__ptr64
-      href: ../cpp/ptr32-ptr64.md
-    - name: 數值限制
-      expanded: false
       items:
+        - name: 內建類型
+          href: ../cpp/fundamental-types-cpp.md
+        - name: 資料類型範圍
+          href: ../cpp/data-type-ranges.md
+        - name: nullptr
+          href: ../cpp/nullptr.md
+        - name: void
+          href: ../cpp/void-cpp.md
+        - name: bool
+          href: ../cpp/bool-cpp.md
+        - name: false
+          href: ../cpp/false-cpp.md
+        - name: true
+          href: ../cpp/true-cpp.md
+        - name: char、wchar_t、char16_t、char32_t
+          href: ../cpp/char-wchar-t-char16-t-char32-t.md
+        - name: __int8、__int16、__int32、__int64
+          href: ../cpp/int8-int16-int32-int64.md
+        - name: __m64
+          href: ../cpp/m64.md
+        - name: __m128
+          href: ../cpp/m128.md
+        - name: __m128d
+          href: ../cpp/m128d.md
+        - name: __m128i
+          href: ../cpp/m128i.md
+        - name: __ptr32、__ptr64
+          href: ../cpp/ptr32-ptr64.md
         - name: 數值限制
-          href: ../cpp/numerical-limits-cpp.md
-        - name: 整數限制
-          href: ../cpp/integer-limits.md
-        - name: 浮點數限制
-          href: ../cpp/floating-limits.md
-- name: 宣告和定義
-  expanded: false
-  items:
+          items:
+            - name: 數值限制
+              href: ../cpp/numerical-limits-cpp.md
+            - name: 整數限制
+              href: ../cpp/integer-limits.md
+            - name: 浮點數限制
+              href: ../cpp/floating-limits.md
     - name: 宣告和定義
-      href: ../cpp/declarations-and-definitions-cpp.md
-    - name: 儲存類別
-      href: ../cpp/storage-classes-cpp.md
-    - name: auto
-      href: ../cpp/auto-cpp.md
-    - name: const
-      href: ../cpp/const-cpp.md
-    - name: constexpr
-      href: ../cpp/constexpr-cpp.md
-    - name: extern
-      href: ../cpp/extern-cpp.md
-    - name: 初始設定式
-      href: ../cpp/initializers.md
-    - name: 別名和 typedef
-      href: ../cpp/aliases-and-typedefs-cpp.md
-    - name: using 宣告
-      href: ../cpp/using-declaration.md
-    - name: volatile
-      href: ../cpp/volatile-cpp.md
-    - name: decltype
-      href: ../cpp/decltype-cpp.md
-    - name: 屬性
-      href: ../cpp/attributes.md
-- name: 內建運算子、優先順序和關聯性
-  expanded: false
-  items:
-    - name: 內建運算子、優先順序和關聯性
-      href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
-    - name: __alignof 運算子
-      href: ../cpp/alignof-operator.md
-    - name: __uuidof 運算子
-      href: ../cpp/uuidof-operator.md
-    - name: 加法類運算子：+ 和 -
-      href: ../cpp/additive-operators-plus-and.md
-    - name: 傳址運算子：&
-      href: ../cpp/address-of-operator-amp.md
-    - name: 指派運算子
-      href: ../cpp/assignment-operators.md
-    - name: 位元 AND 運算子：&
-      href: ../cpp/bitwise-and-operator-amp.md
-    - name: 位元互斥 OR 運算子：^
-      href: ../cpp/bitwise-exclusive-or-operator-hat.md
-    - name: 位元非互斥 OR 運算子：|
-      href: ../cpp/bitwise-inclusive-or-operator-pipe.md
-    - name: 轉換運算子：()
-      href: ../cpp/cast-operator-parens.md
-    - name: '逗號運算子：,'
-      href: ../cpp/comma-operator.md
-    - name: '條件運算子：? :'
-      href: ../cpp/conditional-operator-q.md
-    - name: delete 運算子
-      href: ../cpp/delete-operator-cpp.md
-    - name: 等號比較運算子：== 和 !=
-      href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
-    - name: 明確類型轉換運算子：()
-      href: ../cpp/explicit-type-conversion-operator-parens.md
-    - name: 函式呼叫運算子：()
-      href: ../cpp/function-call-operator-parens.md
-    - name: 間接取值運算子：*
-      href: ../cpp/indirection-operator-star.md
-    - name: 左移和右移運算子 (>> 和 <<)
-      href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
-    - name: 邏輯 AND 運算子：&&
-      href: ../cpp/logical-and-operator-amp-amp.md
-    - name: 邏輯否定運算子：!
-      href: ../cpp/logical-negation-operator-exclpt.md
-    - name: 邏輯 OR 運算子：||
-      href: ../cpp/logical-or-operator-pipe-pipe.md
-    - name: 成員存取運算子：. 和 ->
-      href: ../cpp/member-access-operators-dot-and.md
-    - name: 乘法類運算子和模數運算子
-      href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
-    - name: new 運算子
-      href: ../cpp/new-operator-cpp.md
-    - name: 一補數運算子：~
-      href: ../cpp/one-s-complement-operator-tilde.md
-    - name: 成員指標運算子：.* 和 ->*
-      href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
-    - name: 後置遞增和遞減運算子：++ 和 --
-      href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: 前置遞增和遞減運算子：++ 和 --
-      href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: 關係運算子：<、>、<= 和 >=
-      href: ../cpp/relational-operators-equal-and-equal.md
-    - name: '範圍解析運算子：::'
-      href: ../cpp/scope-resolution-operator.md
-    - name: sizeof 運算子
-      href: ../cpp/sizeof-operator.md
-    - name: 下標運算子：
-      href: ../cpp/subscript-operator.md
-    - name: typeid 運算子
-      href: ../cpp/typeid-operator.md
-    - name: 一元正和負運算子：+ 和 -
-      href: ../cpp/unary-plus-and-negation-operators-plus-and.md
-- name: 運算式
-  expanded: false
-  items:
-    - name: 運算式
-      href: ../cpp/expressions-cpp.md
-    - name: 運算式的類型
-      expanded: false
       items:
-        - name: 運算式的類型
-          href: ../cpp/types-of-expressions.md
-        - name: 主要運算式
-          href: ../cpp/primary-expressions.md
-        - name: 省略符號及可變參數範本
-          href: ../cpp/ellipses-and-variadic-templates.md
-        - name: 後置運算式
-          href: ../cpp/postfix-expressions.md
-        - name: 具有一元運算子的運算式
-          href: ../cpp/expressions-with-unary-operators.md
-        - name: 具有二元運算子的運算式
-          href: ../cpp/expressions-with-binary-operators.md
-        - name: 常數運算式
-          href: ../cpp/cpp-constant-expressions.md
-    - name: 運算式的語意
-      href: ../cpp/semantics-of-expressions.md
-    - name: 轉型
-      expanded: false
-      items:
-        - name: 轉型
-          href: ../cpp/casting.md
-        - name: 轉換運算子
-          expanded: false
-          items:
-            - name: 轉換運算子
-              href: ../cpp/casting-operators.md
-            - name: dynamic_cast 運算子
-              href: ../cpp/dynamic-cast-operator.md
-            - name: bad_cast 例外狀況
-              href: ../cpp/bad-cast-exception.md
-            - name: static_cast 運算子
-              href: ../cpp/static-cast-operator.md
-            - name: const_cast 運算子
-              href: ../cpp/const-cast-operator.md
-            - name: reinterpret_cast 運算子
-              href: ../cpp/reinterpret-cast-operator.md
-        - name: 執行階段類型資訊 (RTTI)
-          expanded: false
-          items:
-            - name: 執行階段類型資訊 (RTTI)
-              href: ../cpp/run-time-type-information.md
-            - name: bad_typeid 例外狀況
-              href: ../cpp/bad-typeid-exception.md
-            - name: type_info 類別
-              href: ../cpp/type-info-class.md
-- name: 陳述式
-  expanded: false
-  items:
-    - name: 陳述式
-      href: ../cpp/statements-cpp.md
-    - name: C++ 陳述式概觀
-      href: ../cpp/overview-of-cpp-statements.md
-    - name: 標記陳述式
-      href: ../cpp/labeled-statements.md
-    - name: 運算陳述式
-      expanded: false
-      items:
-        - name: 運算陳述式
-          href: ../cpp/expression-statement.md
-        - name: Null 陳述式
-          href: ../cpp/null-statement.md
-    - name: 複合陳述式 (區塊)
-      href: ../cpp/compound-statements-blocks.md
-    - name: 選取範圍陳述式
-      expanded: false
-      items:
-        - name: 選取範圍陳述式
-          href: ../cpp/selection-statements-cpp.md
-        - name: if-else 陳述式
-          href: ../cpp/if-else-statement-cpp.md
-        - name: __if_exists 陳述式
-          href: ../cpp/if-exists-statement.md
-        - name: __if_not_exists 陳述式
-          href: ../cpp/if-not-exists-statement.md
-        - name: switch 陳述式
-          href: ../cpp/switch-statement-cpp.md
-    - name: 反覆運算陳述式
-      expanded: false
-      items:
-        - name: 反覆運算陳述式
-          href: ../cpp/iteration-statements-cpp.md
-        - name: while 陳述式
-          href: ../cpp/while-statement-cpp.md
-        - name: do-while 陳述式
-          href: ../cpp/do-while-statement-cpp.md
-        - name: for 陳述式
-          href: ../cpp/for-statement-cpp.md
-        - name: 以範圍為基礎的 for 陳述式
-          href: ../cpp/range-based-for-statement-cpp.md
-    - name: 跳躍陳述式
-      expanded: false
-      items:
-        - name: 跳躍陳述式
-          href: ../cpp/jump-statements-cpp.md
-        - name: break 陳述式
-          href: ../cpp/break-statement-cpp.md
-        - name: continue 陳述式
-          href: ../cpp/continue-statement-cpp.md
-        - name: return 陳述式
-          href: ../cpp/return-statement-cpp.md
-        - name: goTo 陳述式
-          href: ../cpp/goto-statement-cpp.md
-        - name: 控制權轉移
-          href: ../cpp/transfers-of-control.md
-- name: 命名空間
-  href: ../cpp/namespaces-cpp.md
-- name: 列舉
-  href: ../cpp/enumerations-cpp.md
-- name: 等位
-  href: ../cpp/unions.md
-- name: 函式
-  expanded: false
-  items:
-    - name: 函式
-      href: ../cpp/functions-cpp.md
-    - name: 具有變數引數清單的函式
-      href: ../cpp/functions-with-variable-argument-lists-cpp.md
-    - name: 函式多載
-      href: ../cpp/function-overloading.md
-    - name: 明確的預設和已刪除函式
-      href: ../cpp/explicitly-defaulted-and-deleted-functions.md
-    - name: 函式上的引數相依名稱 (Koenig) 查閱
-      href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
-    - name: 預設引數
-      href: ../cpp/default-arguments.md
-    - name: 內嵌函式
-      href: ../cpp/inline-functions-cpp.md
-- name: 運算子多載
-  expanded: false
-  items:
-    - name: 運算子多載
-      href: ../cpp/operator-overloading.md
-    - name: 運算子多載的一般規則
-      href: ../cpp/general-rules-for-operator-overloading.md
-    - name: 多載一元運算子
-      expanded: false
-      items:
-        - name: 多載一元運算子
-          href: ../cpp/overloading-unary-operators.md
-        - name: 遞增和遞減運算子多載
-          href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
-    - name: 二元運算子
-      href: ../cpp/binary-operators.md
-    - name: 指派
-      href: ../cpp/assignment.md
-    - name: 函式呼叫
-      href: ../cpp/function-call-cpp.md
-    - name: 下標
-      href: ../cpp/subscripting.md
-    - name: 成員存取
-      href: ../cpp/member-access.md
-- name: 類別和結構
-  expanded: false
-  items:
-    - name: 類別和結構
-      href: ../cpp/classes-and-structs-cpp.md
-    - name: Class - 類別
-      href: ../cpp/class-cpp.md
-    - name: struct
-      href: ../cpp/struct-cpp.md
-    - name: 類別成員概觀
-      href: ../cpp/class-member-overview.md
-    - name: 成員存取控制
-      expanded: false
-      items:
-        - name: 成員存取控制
-          href: ../cpp/member-access-control-cpp.md
-        - name: friend
-          href: ../cpp/friend-cpp.md
-        - name: private
-          href: ../cpp/private-cpp.md
-        - name: protected
-          href: ../cpp/protected-cpp.md
-        - name: public
-          href: ../cpp/public-cpp.md
-    - name: 大括弧初始化
-      href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
-    - name: 物件存留期及資源管理 (RAII)
-      href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
-    - name: 適用於編譯時間封裝的 Pimpl 慣用語
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-    - name: 在 ABI 界限的可攜性
-      href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
-    - name: 建構函式
-      expanded: false
-      items:
-        - name: 建構函式
-          href: ../cpp/constructors-cpp.md
-        - name: 複製建構函式和複製指派運算子
-          href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
-        - name: 移動建構函式和移動指派運算子
-          href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
-        - name: 委派建構函式
-          href: ../cpp/delegating-constructors.md
-    - name: 解構函式
-      href: ../cpp/destructors-cpp.md
-    - name: 成員函式概觀
-      expanded: false
-      items:
-        - name: 成員函式概觀
-          href: ../cpp/overview-of-member-functions.md
-        - name: virtual 規範
-          href: ../cpp/virtual-specifier.md
-        - name: override 規範
-          href: ../cpp/override-specifier.md
-        - name: final 規範
-          href: ../cpp/final-specifier.md
-    - name: 繼承
-      expanded: false
-      items:
-        - name: 繼承
-          href: ../cpp/inheritance-cpp.md
-        - name: 虛擬函式
-          href: ../cpp/virtual-functions.md
-        - name: 單一繼承
-          href: ../cpp/single-inheritance.md
-        - name: 基底類別
-          href: ../cpp/base-classes.md
-        - name: 多個基底類別
-          href: ../cpp/multiple-base-classes.md
-        - name: 明確覆寫
-          href: ../cpp/explicit-overrides-cpp.md
-        - name: 抽象類別
-          href: ../cpp/abstract-classes-cpp.md
-        - name: 範圍規則摘要
-          href: ../cpp/summary-of-scope-rules.md
-        - name: 繼承關鍵字
-          href: ../cpp/inheritance-keywords.md
-        - name: virtual
-          href: ../cpp/virtual-cpp.md
-        - name: __super
-          href: ../cpp/super.md
-        - name: __interface
-          href: ../cpp/interface.md
-    - name: 特殊成員函式
-      href: ../cpp/special-member-functions.md
-    - name: 靜態成員
-      href: ../cpp/static-members-cpp.md
-    - name: 用為實值型別的 C++ 類別
-      href: ../cpp/value-types-modern-cpp.md
-    - name: 使用者定義類型轉換
-      href: ../cpp/user-defined-type-conversions-cpp.md
-    - name: 可變動的資料成員
-      href: ../cpp/mutable-data-members-cpp.md
-    - name: 巢狀類別宣告
-      href: ../cpp/nested-class-declarations.md
-    - name: 匿名類別類型
-      href: ../cpp/anonymous-class-types.md
-    - name: 成員的指標
-      href: ../cpp/pointers-to-members.md
-    - name: this 指標
-      href: ../cpp/this-pointer.md
-    - name: 位元欄位
-      href: ../cpp/cpp-bit-fields.md
-- name: C++ 中的 Lambda 運算式
-  expanded: false
-  items:
-    - name: C++ 中的 Lambda 運算式
-      href: ../cpp/lambda-expressions-in-cpp.md
-    - name: Lambda 運算式語法
-      href: ../cpp/lambda-expression-syntax.md
-    - name: Lambda 運算式的範例
-      href: ../cpp/examples-of-lambda-expressions.md
-    - name: constexpr Lambda 運算式
-      href: ../cpp/lambda-expressions-constexpr.md
-- name: 陣列
-  href: ../cpp/arrays-cpp.md
-- name: reference
-  expanded: false
-  items:
-    - name: reference
-      href: ../cpp/references-cpp.md
-    - name: 左值參考宣告子：&
-      href: ../cpp/lvalue-reference-declarator-amp.md
-    - name: 右值參考宣告子：&&
-      href: ../cpp/rvalue-reference-declarator-amp-amp.md
-    - name: 參考型別函式引數
-      href: ../cpp/reference-type-function-arguments.md
-    - name: 參考型別函式傳回
-      href: ../cpp/reference-type-function-returns.md
-    - name: 指標的參考
-      href: ../cpp/references-to-pointers.md
-- name: 指標
-  expanded: false
-  items:
-    - name: 指標
-      href: ../cpp/pointers-cpp.md
-    - name: 原始指標
-      href: ../cpp/raw-pointers.md
-    - name: const 和 volatile 指標
-      href: ../cpp/const-and-volatile-pointers.md
-    - name: new 和 delete 運算子
-      href: ../cpp/new-and-delete-operators.md
-    - name: 智慧指標
-      href: ../cpp/smart-pointers-modern-cpp.md
-    - name: 作法：建立和使用 unique_ptr 執行個體
-      href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
-    - name: 作法：建立和使用 shared_ptr 執行個體
-      href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
-    - name: 作法：建立和使用 weak_ptr 執行個體
-      href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
-    - name: 作法：建立和使用 CComPtr 與 CComQIPtr 執行個體
-      href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-    - name: 編譯時間封裝的 Pimpl
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-- name: C++ 中的例外狀況處理
-  expanded: false
-  items:
-    - name: C++ 中的例外狀況處理
-      href: ../cpp/exception-handling-in-visual-cpp.md
-    - name: 新型 C++ 的最佳做法
-      href: ../cpp/errors-and-exception-handling-modern-cpp.md
-    - name: 如何設計例外狀況的安全
-      href: ../cpp/how-to-design-for-exception-safety.md
-    - name: 如何連結例外狀況與非例外狀況代碼
-      href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
-    - name: try、throw 和 catch 陳述式
-      href: ../cpp/try-throw-and-catch-statements-cpp.md
-    - name: Catch 區塊的評估方式
-      href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
-    - name: 例外狀況與堆疊回溯
-      href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
-    - name: 例外狀況規格 (throw)
-      href: ../cpp/exception-specifications-throw-cpp.md
-    - name: noexcept
-      href: ../cpp/noexcept-cpp.md
-    - name: 未處理的 C++ 例外狀況
-      href: ../cpp/unhandled-cpp-exceptions.md
-    - name: 混合 C (結構化) 和 C++ 例外狀況
-      expanded: false
-      items:
-        - name: 混合 C (結構化) 和 C++ 例外狀況
-          href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
-        - name: 使用 setjmp-longjmp
-          href: ../cpp/using-setjmp-longjmp.md
-        - name: 使用 C++ 處理結構化例外狀況
-          href: ../cpp/exception-handling-differences.md
-    - name: 結構化例外狀況處理 (SEH) (C/C++)
-      expanded: false
-      items:
-        - name: 結構化例外狀況處理 (SEH) (C/C++)
-          href: ../cpp/structured-exception-handling-c-cpp.md
-        - name: 撰寫例外狀況處理常式
-          expanded: false
-          items:
-            - name: 撰寫例外狀況處理常式
-              href: ../cpp/writing-an-exception-handler.md
-            - name: try-except 陳述式
-              href: ../cpp/try-except-statement.md
-            - name: 撰寫例外狀況篩選條件
-              href: ../cpp/writing-an-exception-filter.md
-            - name: 引發軟體例外狀況
-              href: ../cpp/raising-software-exceptions.md
-            - name: 硬體例外狀況
-              href: ../cpp/hardware-exceptions.md
-            - name: 例外狀況處理常式的限制
-              href: ../cpp/restrictions-on-exception-handlers.md
-        - name: 撰寫終止處理常式
-          expanded: false
-          items:
-            - name: 撰寫終止處理常式
-              href: ../cpp/writing-a-termination-handler.md
-            - name: try-finally 陳述式
-              href: ../cpp/try-finally-statement.md
-            - name: 清除資源
-              href: ../cpp/cleaning-up-resources.md
-            - name: 例外狀況處理的時機：摘要
-              href: ../cpp/timing-of-exception-handling-a-summary.md
-            - name: 終止處理常式的限制
-              href: ../cpp/restrictions-on-termination-handlers.md
-    - name: 在執行緒之間傳輸例外狀況
-      href: ../cpp/transporting-exceptions-between-threads.md
-- name: 判斷提示和使用者提供的訊息
-  expanded: false
-  items:
-    - name: 判斷提示和使用者提供的訊息
-      href: ../cpp/assertion-and-user-supplied-messages-cpp.md
-    - name: static_assert
-      href: ../cpp/static-assert.md
-- name: 模組
-  expanded: false
-  items:
-    - name: C++ 中的模組概觀
-      href: ../cpp/modules-cpp.md
-    - name: 模組、匯入、匯出
-      href: ../cpp/import-export-module.md
-- name: 範本
-  expanded: false
-  items:
-    - name: 範本
-      href: ../cpp/templates-cpp.md
-    - name: typename
-      href: ../cpp/typename.md
-    - name: 類別範本
-      href: ../cpp/class-templates.md
-    - name: 函式範本
-      expanded: false
-      items:
-        - name: 函式範本
-          href: ../cpp/function-templates.md
-        - name: 函式範本具現化
-          href: ../cpp/function-template-instantiation.md
-        - name: 明確初始化
-          href: ../cpp/explicit-instantiation.md
-        - name: 函式範本的明確特製化
-          href: ../cpp/explicit-specialization-of-function-templates.md
-        - name: 函式範本的部分排序
-          href: ../cpp/partial-ordering-of-function-templates-cpp.md
-        - name: 成員函式範本
-          href: ../cpp/member-function-templates.md
-    - name: 範本特製化
-      href: ../cpp/template-specialization-cpp.md
-    - name: 範本和名稱解析
-      expanded: false
-      items:
-        - name: 範本和名稱解析
-          href: ../cpp/templates-and-name-resolution.md
-        - name: 相依類型的名稱解析
-          href: ../cpp/name-resolution-for-dependent-types.md
-        - name: 區域宣告名稱的名稱解析
-          href: ../cpp/name-resolution-for-locally-declared-names.md
-        - name: 函式範本呼叫的多載解析
-          href: ../cpp/overload-resolution-of-function-template-calls.md
-    - name: 原始程式碼組織 (C++ 範本)
-      href: ../cpp/source-code-organization-cpp-templates.md
-- name: 事件處理
-  expanded: false
-  items:
-    - name: 事件處理
-      href: ../cpp/event-handling.md
-    - name: __event
-      href: ../cpp/event.md
-    - name: __hook
-      href: ../cpp/hook.md
-    - name: __raise
-      href: ../cpp/raise.md
-    - name: __unhook
-      href: ../cpp/unhook.md
-    - name: 原生 C++ 中的事件處理
-      href: ../cpp/event-handling-in-native-cpp.md
-    - name: COM 中的事件處理
-      href: ../cpp/event-handling-in-com.md
-- name: Microsoft 特定修飾詞
-  expanded: false
-  items:
-    - name: Microsoft 特定修飾詞
-      href: ../cpp/microsoft-specific-modifiers.md
-    - name: 基底定址
-      expanded: false
-      items:
-        - name: 基底定址
-          href: ../cpp/based-addressing.md
-        - name: __based 文法
-          href: ../cpp/based-grammar.md
-        - name: 基底指標
-          href: ../cpp/based-pointers-cpp.md
-    - name: 呼叫慣例
-      expanded: false
-      items:
-        - name: 呼叫慣例
-          href: ../cpp/calling-conventions.md
-        - name: 引數傳遞和命名慣例
-          expanded: false
-          items:
-            - name: 引數傳遞和命名慣例
-              href: ../cpp/argument-passing-and-naming-conventions.md
-            - name: __cdecl
-              href: ../cpp/cdecl.md
-            - name: __clrcall
-              href: ../cpp/clrcall.md
-            - name: __stdcall
-              href: ../cpp/stdcall.md
-            - name: __fastcall
-              href: ../cpp/fastcall.md
-            - name: __thiscall
-              href: ../cpp/thiscall.md
-            - name: __vectorcall
-              href: ../cpp/vectorcall.md
-        - name: 呼叫範例：函式原型和呼叫
-          expanded: false
-          items:
-            - name: 呼叫範例：函式原型和呼叫
-              href: ../cpp/calling-example-function-prototype-and-call.md
-            - name: 呼叫範例的結果
-              href: ../cpp/results-of-calling-example.md
-        - name: Naked 函式呼叫
-          expanded: false
-          items:
-            - name: Naked 函式呼叫
-              href: ../cpp/naked-function-calls.md
-            - name: Naked 函式的規則和限制
-              href: ../cpp/rules-and-limitations-for-naked-functions.md
-            - name: 撰寫初構/終解程式碼的考量
-              href: ../cpp/considerations-for-writing-prolog-epilog-code.md
-        - name: 浮點數副處理器和呼叫慣例
-          href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
-        - name: 淘汰呼叫慣例
-          href: ../cpp/obsolete-calling-conventions.md
-    - name: restrict (C++ AMP)
-      href: ../cpp/restrict-cpp-amp.md
-    - name: tile_static 關鍵字
-      href: ../cpp/tile-static-keyword.md
-    - name: __declspec
-      expanded: false
-      items:
-        - name: __declspec
-          href: ../cpp/declspec.md
-        - name: align
-          href: ../cpp/align-cpp.md
-        - name: allocate
-          href: ../cpp/allocate.md
-        - name: allocator
-          href: ../cpp/allocator.md
-        - name: appdomain
-          href: ../cpp/appdomain.md
-        - name: code_seg (__declspec)
-          href: ../cpp/code-seg-declspec.md
-        - name: deprecated
-          href: ../cpp/deprecated-cpp.md
-        - name: dllexport、dllimport
-          expanded: false
-          items:
-            - name: dllexport、dllimport
-              href: ../cpp/dllexport-dllimport.md
-            - name: 定義和宣告
-              href: ../cpp/definitions-and-declarations-cpp.md
-            - name: 使用 dllexport 和 dllimport 定義內嵌 C++ 函式
-              href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
-            - name: 一般規則和限制
-              href: ../cpp/general-rules-and-limitations.md
-            - name: 在 C++ 類別中使用 dllimport 和 dllexport
-              href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
-        - name: jitintrinsic
-          href: ../cpp/jitintrinsic.md
-        - name: naked
-          href: ../cpp/naked-cpp.md
-        - name: noalias
-          href: ../cpp/noalias.md
-        - name: noinline
-          href: ../cpp/noinline.md
-        - name: noreturn
-          href: ../cpp/noreturn.md
-        - name: nothrow
-          href: ../cpp/nothrow-cpp.md
-        - name: novtable
-          href: ../cpp/novtable.md
-        - name: 處理序
-          href: ../cpp/process.md
+        - name: 宣告和定義
+          href: ../cpp/declarations-and-definitions-cpp.md
+        - name: 儲存類別
+          href: ../cpp/storage-classes-cpp.md
+        - name: auto
+          href: ../cpp/auto-cpp.md
+        - name: const
+          href: ../cpp/const-cpp.md
+        - name: constexpr
+          href: ../cpp/constexpr-cpp.md
+        - name: extern
+          href: ../cpp/extern-cpp.md
+        - name: 初始設定式
+          href: ../cpp/initializers.md
+        - name: 別名和 typedef
+          href: ../cpp/aliases-and-typedefs-cpp.md
+        - name: using 宣告
+          href: ../cpp/using-declaration.md
+        - name: volatile
+          href: ../cpp/volatile-cpp.md
+        - name: decltype
+          href: ../cpp/decltype-cpp.md
         - name: 屬性
-          href: ../cpp/property-cpp.md
-        - name: restrict
-          href: ../cpp/restrict.md
-        - name: safebuffers
-          href: ../cpp/safebuffers.md
-        - name: selectany
-          href: ../cpp/selectany.md
-        - name: spectre
-          href: ../cpp/spectre.md
-        - name: 執行緒
-          href: ../cpp/thread.md
-        - name: uuid
-          href: ../cpp/uuid-cpp.md
-    - name: __restrict
-      href: ../cpp/extension-restrict.md
-    - name: __sptr、__uptr
-      href: ../cpp/sptr-uptr.md
-    - name: __unaligned
-      href: ../cpp/unaligned.md
-    - name: __w64
-      href: ../cpp/w64.md
-    - name: __func__
-      href: ../cpp/func.md
-- name: 編譯器 COM 支援
-  expanded: false
-  items:
+          href: ../cpp/attributes.md
+    - name: 內建運算子、優先順序和關聯性
+      items:
+        - name: 內建運算子、優先順序和關聯性
+          href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+        - name: __alignof 運算子
+          href: ../cpp/alignof-operator.md
+        - name: __uuidof 運算子
+          href: ../cpp/uuidof-operator.md
+        - name: 加法類運算子：+ 和 -
+          href: ../cpp/additive-operators-plus-and.md
+        - name: 傳址運算子：&
+          href: ../cpp/address-of-operator-amp.md
+        - name: 指派運算子
+          href: ../cpp/assignment-operators.md
+        - name: 位元 AND 運算子：&
+          href: ../cpp/bitwise-and-operator-amp.md
+        - name: 位元互斥 OR 運算子：^
+          href: ../cpp/bitwise-exclusive-or-operator-hat.md
+        - name: 位元非互斥 OR 運算子：|
+          href: ../cpp/bitwise-inclusive-or-operator-pipe.md
+        - name: 轉換運算子：()
+          href: ../cpp/cast-operator-parens.md
+        - name: '逗號運算子：,'
+          href: ../cpp/comma-operator.md
+        - name: '條件運算子：? :'
+          href: ../cpp/conditional-operator-q.md
+        - name: delete 運算子
+          href: ../cpp/delete-operator-cpp.md
+        - name: 等號比較運算子：== 和 !=
+          href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
+        - name: 明確類型轉換運算子：()
+          href: ../cpp/explicit-type-conversion-operator-parens.md
+        - name: 函式呼叫運算子：()
+          href: ../cpp/function-call-operator-parens.md
+        - name: 間接取值運算子：*
+          href: ../cpp/indirection-operator-star.md
+        - name: 左移和右移運算子 (>> 和 <<)
+          href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
+        - name: 邏輯 AND 運算子：&&
+          href: ../cpp/logical-and-operator-amp-amp.md
+        - name: 邏輯否定運算子：!
+          href: ../cpp/logical-negation-operator-exclpt.md
+        - name: 邏輯 OR 運算子：||
+          href: ../cpp/logical-or-operator-pipe-pipe.md
+        - name: 成員存取運算子：. 和 ->
+          href: ../cpp/member-access-operators-dot-and.md
+        - name: 乘法類運算子和模數運算子
+          href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
+        - name: new 運算子
+          href: ../cpp/new-operator-cpp.md
+        - name: 一補數運算子：~
+          href: ../cpp/one-s-complement-operator-tilde.md
+        - name: 成員指標運算子：.* 和 ->*
+          href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
+        - name: 後置遞增和遞減運算子：++ 和 --
+          href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: 前置遞增和遞減運算子：++ 和 --
+          href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: 關係運算子：<、>、<= 和 >=
+          href: ../cpp/relational-operators-equal-and-equal.md
+        - name: '範圍解析運算子：::'
+          href: ../cpp/scope-resolution-operator.md
+        - name: sizeof 運算子
+          href: ../cpp/sizeof-operator.md
+        - name: 下標運算子：
+          href: ../cpp/subscript-operator.md
+        - name: typeid 運算子
+          href: ../cpp/typeid-operator.md
+        - name: 一元正和負運算子：+ 和 -
+          href: ../cpp/unary-plus-and-negation-operators-plus-and.md
+    - name: 運算式
+      items:
+        - name: 運算式
+          href: ../cpp/expressions-cpp.md
+        - name: 運算式的類型
+          items:
+            - name: 運算式的類型
+              href: ../cpp/types-of-expressions.md
+            - name: 主要運算式
+              href: ../cpp/primary-expressions.md
+            - name: 省略符號及可變參數範本
+              href: ../cpp/ellipses-and-variadic-templates.md
+            - name: 後置運算式
+              href: ../cpp/postfix-expressions.md
+            - name: 具有一元運算子的運算式
+              href: ../cpp/expressions-with-unary-operators.md
+            - name: 具有二元運算子的運算式
+              href: ../cpp/expressions-with-binary-operators.md
+            - name: 常數運算式
+              href: ../cpp/cpp-constant-expressions.md
+        - name: 運算式的語意
+          href: ../cpp/semantics-of-expressions.md
+        - name: 轉型
+          items:
+            - name: 轉型
+              href: ../cpp/casting.md
+            - name: 轉換運算子
+              items:
+                - name: 轉換運算子
+                  href: ../cpp/casting-operators.md
+                - name: dynamic_cast 運算子
+                  href: ../cpp/dynamic-cast-operator.md
+                - name: bad_cast 例外狀況
+                  href: ../cpp/bad-cast-exception.md
+                - name: static_cast 運算子
+                  href: ../cpp/static-cast-operator.md
+                - name: const_cast 運算子
+                  href: ../cpp/const-cast-operator.md
+                - name: reinterpret_cast 運算子
+                  href: ../cpp/reinterpret-cast-operator.md
+            - name: 執行階段類型資訊 (RTTI)
+              items:
+                - name: 執行階段類型資訊 (RTTI)
+                  href: ../cpp/run-time-type-information.md
+                - name: bad_typeid 例外狀況
+                  href: ../cpp/bad-typeid-exception.md
+                - name: type_info 類別
+                  href: ../cpp/type-info-class.md
+    - name: 陳述式
+      items:
+        - name: 陳述式
+          href: ../cpp/statements-cpp.md
+        - name: C++ 陳述式概觀
+          href: ../cpp/overview-of-cpp-statements.md
+        - name: 標記陳述式
+          href: ../cpp/labeled-statements.md
+        - name: 運算陳述式
+          items:
+            - name: 運算陳述式
+              href: ../cpp/expression-statement.md
+            - name: Null 陳述式
+              href: ../cpp/null-statement.md
+        - name: 複合陳述式 (區塊)
+          href: ../cpp/compound-statements-blocks.md
+        - name: 選取範圍陳述式
+          items:
+            - name: 選取範圍陳述式
+              href: ../cpp/selection-statements-cpp.md
+            - name: if-else 陳述式
+              href: ../cpp/if-else-statement-cpp.md
+            - name: __if_exists 陳述式
+              href: ../cpp/if-exists-statement.md
+            - name: __if_not_exists 陳述式
+              href: ../cpp/if-not-exists-statement.md
+            - name: switch 陳述式
+              href: ../cpp/switch-statement-cpp.md
+        - name: 反覆運算陳述式
+          items:
+            - name: 反覆運算陳述式
+              href: ../cpp/iteration-statements-cpp.md
+            - name: while 陳述式
+              href: ../cpp/while-statement-cpp.md
+            - name: do-while 陳述式
+              href: ../cpp/do-while-statement-cpp.md
+            - name: for 陳述式
+              href: ../cpp/for-statement-cpp.md
+            - name: 以範圍為基礎的 for 陳述式
+              href: ../cpp/range-based-for-statement-cpp.md
+        - name: 跳躍陳述式
+          items:
+            - name: 跳躍陳述式
+              href: ../cpp/jump-statements-cpp.md
+            - name: break 陳述式
+              href: ../cpp/break-statement-cpp.md
+            - name: continue 陳述式
+              href: ../cpp/continue-statement-cpp.md
+            - name: return 陳述式
+              href: ../cpp/return-statement-cpp.md
+            - name: goTo 陳述式
+              href: ../cpp/goto-statement-cpp.md
+            - name: 控制權轉移
+              href: ../cpp/transfers-of-control.md
+    - name: 命名空間
+      href: ../cpp/namespaces-cpp.md
+    - name: 列舉
+      href: ../cpp/enumerations-cpp.md
+    - name: 等位
+      href: ../cpp/unions.md
+    - name: 函式
+      items:
+        - name: 函式
+          href: ../cpp/functions-cpp.md
+        - name: 具有變數引數清單的函式
+          href: ../cpp/functions-with-variable-argument-lists-cpp.md
+        - name: 函式多載
+          href: ../cpp/function-overloading.md
+        - name: 明確的預設和已刪除函式
+          href: ../cpp/explicitly-defaulted-and-deleted-functions.md
+        - name: 函式上的引數相依名稱 (Koenig) 查閱
+          href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
+        - name: 預設引數
+          href: ../cpp/default-arguments.md
+        - name: 內嵌函式
+          href: ../cpp/inline-functions-cpp.md
+    - name: 運算子多載
+      items:
+        - name: 運算子多載
+          href: ../cpp/operator-overloading.md
+        - name: 運算子多載的一般規則
+          href: ../cpp/general-rules-for-operator-overloading.md
+        - name: 多載一元運算子
+          items:
+            - name: 多載一元運算子
+              href: ../cpp/overloading-unary-operators.md
+            - name: 遞增和遞減運算子多載
+              href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
+        - name: 二元運算子
+          href: ../cpp/binary-operators.md
+        - name: 指派
+          href: ../cpp/assignment.md
+        - name: 函式呼叫
+          href: ../cpp/function-call-cpp.md
+        - name: 下標
+          href: ../cpp/subscripting.md
+        - name: 成員存取
+          href: ../cpp/member-access.md
+    - name: 類別和結構
+      items:
+        - name: 類別和結構
+          href: ../cpp/classes-and-structs-cpp.md
+        - name: Class - 類別
+          href: ../cpp/class-cpp.md
+        - name: struct
+          href: ../cpp/struct-cpp.md
+        - name: 類別成員概觀
+          href: ../cpp/class-member-overview.md
+        - name: 成員存取控制
+          items:
+            - name: 成員存取控制
+              href: ../cpp/member-access-control-cpp.md
+            - name: friend
+              href: ../cpp/friend-cpp.md
+            - name: private
+              href: ../cpp/private-cpp.md
+            - name: protected
+              href: ../cpp/protected-cpp.md
+            - name: public
+              href: ../cpp/public-cpp.md
+        - name: 大括弧初始化
+          href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
+        - name: 物件存留期及資源管理 (RAII)
+          href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
+        - name: 適用於編譯時間封裝的 Pimpl 慣用語
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+        - name: 在 ABI 界限的可攜性
+          href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
+        - name: 建構函式
+          items:
+            - name: 建構函式
+              href: ../cpp/constructors-cpp.md
+            - name: 複製建構函式和複製指派運算子
+              href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
+            - name: 移動建構函式和移動指派運算子
+              href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
+            - name: 委派建構函式
+              href: ../cpp/delegating-constructors.md
+        - name: 解構函式
+          href: ../cpp/destructors-cpp.md
+        - name: 成員函式概觀
+          items:
+            - name: 成員函式概觀
+              href: ../cpp/overview-of-member-functions.md
+            - name: virtual 規範
+              href: ../cpp/virtual-specifier.md
+            - name: override 規範
+              href: ../cpp/override-specifier.md
+            - name: final 規範
+              href: ../cpp/final-specifier.md
+        - name: 繼承
+          items:
+            - name: 繼承
+              href: ../cpp/inheritance-cpp.md
+            - name: 虛擬函式
+              href: ../cpp/virtual-functions.md
+            - name: 單一繼承
+              href: ../cpp/single-inheritance.md
+            - name: 基底類別
+              href: ../cpp/base-classes.md
+            - name: 多個基底類別
+              href: ../cpp/multiple-base-classes.md
+            - name: 明確覆寫
+              href: ../cpp/explicit-overrides-cpp.md
+            - name: 抽象類別
+              href: ../cpp/abstract-classes-cpp.md
+            - name: 範圍規則摘要
+              href: ../cpp/summary-of-scope-rules.md
+            - name: 繼承關鍵字
+              href: ../cpp/inheritance-keywords.md
+            - name: virtual
+              href: ../cpp/virtual-cpp.md
+            - name: __super
+              href: ../cpp/super.md
+            - name: __interface
+              href: ../cpp/interface.md
+        - name: 特殊成員函式
+          href: ../cpp/special-member-functions.md
+        - name: 靜態成員
+          href: ../cpp/static-members-cpp.md
+        - name: 用為實值型別的 C++ 類別
+          href: ../cpp/value-types-modern-cpp.md
+        - name: 使用者定義類型轉換
+          href: ../cpp/user-defined-type-conversions-cpp.md
+        - name: 可變動的資料成員
+          href: ../cpp/mutable-data-members-cpp.md
+        - name: 巢狀類別宣告
+          href: ../cpp/nested-class-declarations.md
+        - name: 匿名類別類型
+          href: ../cpp/anonymous-class-types.md
+        - name: 成員的指標
+          href: ../cpp/pointers-to-members.md
+        - name: this 指標
+          href: ../cpp/this-pointer.md
+        - name: 位元欄位
+          href: ../cpp/cpp-bit-fields.md
+    - name: C++ 中的 Lambda 運算式
+      items:
+        - name: C++ 中的 Lambda 運算式
+          href: ../cpp/lambda-expressions-in-cpp.md
+        - name: Lambda 運算式語法
+          href: ../cpp/lambda-expression-syntax.md
+        - name: Lambda 運算式的範例
+          href: ../cpp/examples-of-lambda-expressions.md
+        - name: constexpr Lambda 運算式
+          href: ../cpp/lambda-expressions-constexpr.md
+    - name: 陣列
+      href: ../cpp/arrays-cpp.md
+    - name: reference
+      items:
+        - name: reference
+          href: ../cpp/references-cpp.md
+        - name: 左值參考宣告子：&
+          href: ../cpp/lvalue-reference-declarator-amp.md
+        - name: 右值參考宣告子：&&
+          href: ../cpp/rvalue-reference-declarator-amp-amp.md
+        - name: 參考型別函式引數
+          href: ../cpp/reference-type-function-arguments.md
+        - name: 參考型別函式傳回
+          href: ../cpp/reference-type-function-returns.md
+        - name: 指標的參考
+          href: ../cpp/references-to-pointers.md
+    - name: 指標
+      items:
+        - name: 指標
+          href: ../cpp/pointers-cpp.md
+        - name: 原始指標
+          href: ../cpp/raw-pointers.md
+        - name: const 和 volatile 指標
+          href: ../cpp/const-and-volatile-pointers.md
+        - name: new 和 delete 運算子
+          href: ../cpp/new-and-delete-operators.md
+        - name: 智慧指標
+          href: ../cpp/smart-pointers-modern-cpp.md
+        - name: 作法：建立和使用 unique_ptr 執行個體
+          href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
+        - name: 作法：建立和使用 shared_ptr 執行個體
+          href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
+        - name: 作法：建立和使用 weak_ptr 執行個體
+          href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
+        - name: 作法：建立和使用 CComPtr 與 CComQIPtr 執行個體
+          href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+        - name: 編譯時間封裝的 Pimpl
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+    - name: C++ 中的例外狀況處理
+      items:
+        - name: C++ 中的例外狀況處理
+          href: ../cpp/exception-handling-in-visual-cpp.md
+        - name: 新型 C++ 的最佳做法
+          href: ../cpp/errors-and-exception-handling-modern-cpp.md
+        - name: 如何設計例外狀況的安全
+          href: ../cpp/how-to-design-for-exception-safety.md
+        - name: 如何連結例外狀況與非例外狀況代碼
+          href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+        - name: try、throw 和 catch 陳述式
+          href: ../cpp/try-throw-and-catch-statements-cpp.md
+        - name: Catch 區塊的評估方式
+          href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
+        - name: 例外狀況與堆疊回溯
+          href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
+        - name: 例外狀況規格 (throw)
+          href: ../cpp/exception-specifications-throw-cpp.md
+        - name: noexcept
+          href: ../cpp/noexcept-cpp.md
+        - name: 未處理的 C++ 例外狀況
+          href: ../cpp/unhandled-cpp-exceptions.md
+        - name: 混合 C (結構化) 和 C++ 例外狀況
+          items:
+            - name: 混合 C (結構化) 和 C++ 例外狀況
+              href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
+            - name: 使用 setjmp-longjmp
+              href: ../cpp/using-setjmp-longjmp.md
+            - name: 使用 C++ 處理結構化例外狀況
+              href: ../cpp/exception-handling-differences.md
+        - name: 結構化例外狀況處理 (SEH) (C/C++)
+          items:
+            - name: 結構化例外狀況處理 (SEH) (C/C++)
+              href: ../cpp/structured-exception-handling-c-cpp.md
+            - name: 撰寫例外狀況處理常式
+              items:
+                - name: 撰寫例外狀況處理常式
+                  href: ../cpp/writing-an-exception-handler.md
+                - name: try-except 陳述式
+                  href: ../cpp/try-except-statement.md
+                - name: 撰寫例外狀況篩選條件
+                  href: ../cpp/writing-an-exception-filter.md
+                - name: 引發軟體例外狀況
+                  href: ../cpp/raising-software-exceptions.md
+                - name: 硬體例外狀況
+                  href: ../cpp/hardware-exceptions.md
+                - name: 例外狀況處理常式的限制
+                  href: ../cpp/restrictions-on-exception-handlers.md
+            - name: 撰寫終止處理常式
+              items:
+                - name: 撰寫終止處理常式
+                  href: ../cpp/writing-a-termination-handler.md
+                - name: try-finally 陳述式
+                  href: ../cpp/try-finally-statement.md
+                - name: 清除資源
+                  href: ../cpp/cleaning-up-resources.md
+                - name: 例外狀況處理的時機：摘要
+                  href: ../cpp/timing-of-exception-handling-a-summary.md
+                - name: 終止處理常式的限制
+                  href: ../cpp/restrictions-on-termination-handlers.md
+        - name: 在執行緒之間傳輸例外狀況
+          href: ../cpp/transporting-exceptions-between-threads.md
+    - name: 判斷提示和使用者提供的訊息
+      items:
+        - name: 判斷提示和使用者提供的訊息
+          href: ../cpp/assertion-and-user-supplied-messages-cpp.md
+        - name: static_assert
+          href: ../cpp/static-assert.md
+    - name: 模組
+      items:
+        - name: C++ 中的模組概觀
+          href: ../cpp/modules-cpp.md
+        - name: 模組、匯入、匯出
+          href: ../cpp/import-export-module.md
+    - name: 範本
+      items:
+        - name: 範本
+          href: ../cpp/templates-cpp.md
+        - name: typename
+          href: ../cpp/typename.md
+        - name: 類別範本
+          href: ../cpp/class-templates.md
+        - name: 函式範本
+          items:
+            - name: 函式範本
+              href: ../cpp/function-templates.md
+            - name: 函式範本具現化
+              href: ../cpp/function-template-instantiation.md
+            - name: 明確初始化
+              href: ../cpp/explicit-instantiation.md
+            - name: 函式範本的明確特製化
+              href: ../cpp/explicit-specialization-of-function-templates.md
+            - name: 函式範本的部分排序
+              href: ../cpp/partial-ordering-of-function-templates-cpp.md
+            - name: 成員函式範本
+              href: ../cpp/member-function-templates.md
+        - name: 範本特製化
+          href: ../cpp/template-specialization-cpp.md
+        - name: 範本和名稱解析
+          items:
+            - name: 範本和名稱解析
+              href: ../cpp/templates-and-name-resolution.md
+            - name: 相依類型的名稱解析
+              href: ../cpp/name-resolution-for-dependent-types.md
+            - name: 區域宣告名稱的名稱解析
+              href: ../cpp/name-resolution-for-locally-declared-names.md
+            - name: 函式範本呼叫的多載解析
+              href: ../cpp/overload-resolution-of-function-template-calls.md
+        - name: 原始程式碼組織 (C++ 範本)
+          href: ../cpp/source-code-organization-cpp-templates.md
+    - name: 事件處理
+      items:
+        - name: 事件處理
+          href: ../cpp/event-handling.md
+        - name: __event
+          href: ../cpp/event.md
+        - name: __hook
+          href: ../cpp/hook.md
+        - name: __raise
+          href: ../cpp/raise.md
+        - name: __unhook
+          href: ../cpp/unhook.md
+        - name: 原生 C++ 中的事件處理
+          href: ../cpp/event-handling-in-native-cpp.md
+        - name: COM 中的事件處理
+          href: ../cpp/event-handling-in-com.md
+    - name: Microsoft 特定修飾詞
+      items:
+        - name: Microsoft 特定修飾詞
+          href: ../cpp/microsoft-specific-modifiers.md
+        - name: 基底定址
+          items:
+            - name: 基底定址
+              href: ../cpp/based-addressing.md
+            - name: __based 文法
+              href: ../cpp/based-grammar.md
+            - name: 基底指標
+              href: ../cpp/based-pointers-cpp.md
+        - name: 呼叫慣例
+          items:
+            - name: 呼叫慣例
+              href: ../cpp/calling-conventions.md
+            - name: 引數傳遞和命名慣例
+              items:
+                - name: 引數傳遞和命名慣例
+                  href: ../cpp/argument-passing-and-naming-conventions.md
+                - name: __cdecl
+                  href: ../cpp/cdecl.md
+                - name: __clrcall
+                  href: ../cpp/clrcall.md
+                - name: __stdcall
+                  href: ../cpp/stdcall.md
+                - name: __fastcall
+                  href: ../cpp/fastcall.md
+                - name: __thiscall
+                  href: ../cpp/thiscall.md
+                - name: __vectorcall
+                  href: ../cpp/vectorcall.md
+            - name: 呼叫範例：函式原型和呼叫
+              items:
+                - name: 呼叫範例：函式原型和呼叫
+                  href: ../cpp/calling-example-function-prototype-and-call.md
+                - name: 呼叫範例的結果
+                  href: ../cpp/results-of-calling-example.md
+            - name: Naked 函式呼叫
+              items:
+                - name: Naked 函式呼叫
+                  href: ../cpp/naked-function-calls.md
+                - name: Naked 函式的規則和限制
+                  href: ../cpp/rules-and-limitations-for-naked-functions.md
+                - name: 撰寫初構/終解程式碼的考量
+                  href: ../cpp/considerations-for-writing-prolog-epilog-code.md
+            - name: 浮點數副處理器和呼叫慣例
+              href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
+            - name: 淘汰呼叫慣例
+              href: ../cpp/obsolete-calling-conventions.md
+        - name: restrict (C++ AMP)
+          href: ../cpp/restrict-cpp-amp.md
+        - name: tile_static 關鍵字
+          href: ../cpp/tile-static-keyword.md
+        - name: __declspec
+          items:
+            - name: __declspec
+              href: ../cpp/declspec.md
+            - name: align
+              href: ../cpp/align-cpp.md
+            - name: allocate
+              href: ../cpp/allocate.md
+            - name: allocator
+              href: ../cpp/allocator.md
+            - name: appdomain
+              href: ../cpp/appdomain.md
+            - name: code_seg (__declspec)
+              href: ../cpp/code-seg-declspec.md
+            - name: deprecated
+              href: ../cpp/deprecated-cpp.md
+            - name: dllexport、dllimport
+              items:
+                - name: dllexport、dllimport
+                  href: ../cpp/dllexport-dllimport.md
+                - name: 定義和宣告
+                  href: ../cpp/definitions-and-declarations-cpp.md
+                - name: 使用 dllexport 和 dllimport 定義內嵌 C++ 函式
+                  href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
+                - name: 一般規則和限制
+                  href: ../cpp/general-rules-and-limitations.md
+                - name: 在 C++ 類別中使用 dllimport 和 dllexport
+                  href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
+            - name: jitintrinsic
+              href: ../cpp/jitintrinsic.md
+            - name: naked
+              href: ../cpp/naked-cpp.md
+            - name: noalias
+              href: ../cpp/noalias.md
+            - name: noinline
+              href: ../cpp/noinline.md
+            - name: noreturn
+              href: ../cpp/noreturn.md
+            - name: nothrow
+              href: ../cpp/nothrow-cpp.md
+            - name: novtable
+              href: ../cpp/novtable.md
+            - name: 處理序
+              href: ../cpp/process.md
+            - name: 屬性
+              href: ../cpp/property-cpp.md
+            - name: restrict
+              href: ../cpp/restrict.md
+            - name: safebuffers
+              href: ../cpp/safebuffers.md
+            - name: selectany
+              href: ../cpp/selectany.md
+            - name: spectre
+              href: ../cpp/spectre.md
+            - name: 執行緒
+              href: ../cpp/thread.md
+            - name: uuid
+              href: ../cpp/uuid-cpp.md
+        - name: __restrict
+          href: ../cpp/extension-restrict.md
+        - name: __sptr、__uptr
+          href: ../cpp/sptr-uptr.md
+        - name: __unaligned
+          href: ../cpp/unaligned.md
+        - name: __w64
+          href: ../cpp/w64.md
+        - name: __func__
+          href: ../cpp/func.md
     - name: 編譯器 COM 支援
-      href: ../cpp/compiler-com-support.md
-    - name: 編譯器 COM 全域函式
-      expanded: false
       items:
+        - name: 編譯器 COM 支援
+          href: ../cpp/compiler-com-support.md
         - name: 編譯器 COM 全域函式
-          href: ../cpp/compiler-com-global-functions.md
-        - name: _com_raise_error
-          href: ../cpp/com-raise-error.md
-        - name: ConvertStringToBSTR
-          href: ../cpp/convertstringtobstr.md
-        - name: ConvertBSTRToString
-          href: ../cpp/convertbstrtostring.md
-        - name: _set_com_error_handler
-          href: ../cpp/set-com-error-handler.md
-    - name: 編譯器 COM 支援類別
-      expanded: false
-      items:
+          items:
+            - name: 編譯器 COM 全域函式
+              href: ../cpp/compiler-com-global-functions.md
+            - name: _com_raise_error
+              href: ../cpp/com-raise-error.md
+            - name: ConvertStringToBSTR
+              href: ../cpp/convertstringtobstr.md
+            - name: ConvertBSTRToString
+              href: ../cpp/convertbstrtostring.md
+            - name: _set_com_error_handler
+              href: ../cpp/set-com-error-handler.md
         - name: 編譯器 COM 支援類別
-          href: ../cpp/compiler-com-support-classes.md
-        - name: _bstr_t 類別
-          expanded: false
           items:
+            - name: 編譯器 COM 支援類別
+              href: ../cpp/compiler-com-support-classes.md
             - name: _bstr_t 類別
-              href: ../cpp/bstr-t-class.md
-            - name: _bstr_t 成員函式
-              expanded: false
               items:
+                - name: _bstr_t 類別
+                  href: ../cpp/bstr-t-class.md
                 - name: _bstr_t 成員函式
-                  href: ../cpp/bstr-t-member-functions.md
-                - name: '_bstr_t::Assign'
-                  href: ../cpp/bstr-t-assign.md
-                - name: '_bstr_t::Attach'
-                  href: ../cpp/bstr-t-attach.md
-                - name: '_bstr_t::_bstr_t'
-                  href: ../cpp/bstr-t-bstr-t.md
-                - name: '_bstr_t::copy'
-                  href: ../cpp/bstr-t-copy.md
-                - name: '_bstr_t::Detach'
-                  href: ../cpp/bstr-t-detach.md
-                - name: '_bstr_t::GetAddress'
-                  href: ../cpp/bstr-t-getaddress.md
-                - name: '_bstr_t::GetBSTR'
-                  href: ../cpp/bstr-t-getbstr.md
-                - name: '_bstr_t::length'
-                  href: ../cpp/bstr-t-length.md
-            - name: _bstr_t 運算子
-              expanded: false
-              items:
+                  items:
+                    - name: _bstr_t 成員函式
+                      href: ../cpp/bstr-t-member-functions.md
+                    - name: '_bstr_t::Assign'
+                      href: ../cpp/bstr-t-assign.md
+                    - name: '_bstr_t::Attach'
+                      href: ../cpp/bstr-t-attach.md
+                    - name: '_bstr_t::_bstr_t'
+                      href: ../cpp/bstr-t-bstr-t.md
+                    - name: '_bstr_t::copy'
+                      href: ../cpp/bstr-t-copy.md
+                    - name: '_bstr_t::Detach'
+                      href: ../cpp/bstr-t-detach.md
+                    - name: '_bstr_t::GetAddress'
+                      href: ../cpp/bstr-t-getaddress.md
+                    - name: '_bstr_t::GetBSTR'
+                      href: ../cpp/bstr-t-getbstr.md
+                    - name: '_bstr_t::length'
+                      href: ../cpp/bstr-t-length.md
                 - name: _bstr_t 運算子
-                  href: ../cpp/bstr-t-operators.md
-                - name: '_bstr_t::operator ='
-                  href: ../cpp/bstr-t-operator-equal.md
-                - name: '_bstr_t::operator +=、+'
-                  href: ../cpp/bstr-t-operator-add-equal-plus.md
-                - name: '_bstr_t::operator !'
-                  href: ../cpp/bstr-t-operator-logical-not.md
-                - name: _bstr_t 關係運算子
-                  href: ../cpp/bstr-t-relational-operators.md
-                - name: '_bstr_t::wchar_t *、_bstr_t::char*'
-                  href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
-        - name: _com_error 類別
-          expanded: false
-          items:
+                  items:
+                    - name: _bstr_t 運算子
+                      href: ../cpp/bstr-t-operators.md
+                    - name: '_bstr_t::operator ='
+                      href: ../cpp/bstr-t-operator-equal.md
+                    - name: '_bstr_t::operator +=、+'
+                      href: ../cpp/bstr-t-operator-add-equal-plus.md
+                    - name: '_bstr_t::operator !'
+                      href: ../cpp/bstr-t-operator-logical-not.md
+                    - name: _bstr_t 關係運算子
+                      href: ../cpp/bstr-t-relational-operators.md
+                    - name: '_bstr_t::wchar_t *、_bstr_t::char*'
+                      href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
             - name: _com_error 類別
-              href: ../cpp/com-error-class.md
-            - name: _com_error 成員函式
-              expanded: false
               items:
+                - name: _com_error 類別
+                  href: ../cpp/com-error-class.md
                 - name: _com_error 成員函式
-                  href: ../cpp/com-error-member-functions.md
-                - name: '_com_error::_com_error'
-                  href: ../cpp/com-error-com-error.md
-                - name: '_com_error::Description'
-                  href: ../cpp/com-error-description.md
-                - name: '_com_error::Error'
-                  href: ../cpp/com-error-error.md
-                - name: '_com_error::ErrorInfo'
-                  href: ../cpp/com-error-errorinfo.md
-                - name: '_com_error::ErrorMessage'
-                  href: ../cpp/com-error-errormessage.md
-                - name: '_com_error::GUID'
-                  href: ../cpp/com-error-guid.md
-                - name: '_com_error::HelpContext'
-                  href: ../cpp/com-error-helpcontext.md
-                - name: '_com_error::HelpFile'
-                  href: ../cpp/com-error-helpfile.md
-                - name: '_com_error::HRESULTToWCode'
-                  href: ../cpp/com-error-hresulttowcode.md
-                - name: '_com_error::Source'
-                  href: ../cpp/com-error-source.md
-                - name: '_com_error::WCode'
-                  href: ../cpp/com-error-wcode.md
-                - name: '_com_error::WCodeToHRESULT'
-                  href: ../cpp/com-error-wcodetohresult.md
-            - name: _com_error 運算子
-              expanded: false
-              items:
+                  items:
+                    - name: _com_error 成員函式
+                      href: ../cpp/com-error-member-functions.md
+                    - name: '_com_error::_com_error'
+                      href: ../cpp/com-error-com-error.md
+                    - name: '_com_error::Description'
+                      href: ../cpp/com-error-description.md
+                    - name: '_com_error::Error'
+                      href: ../cpp/com-error-error.md
+                    - name: '_com_error::ErrorInfo'
+                      href: ../cpp/com-error-errorinfo.md
+                    - name: '_com_error::ErrorMessage'
+                      href: ../cpp/com-error-errormessage.md
+                    - name: '_com_error::GUID'
+                      href: ../cpp/com-error-guid.md
+                    - name: '_com_error::HelpContext'
+                      href: ../cpp/com-error-helpcontext.md
+                    - name: '_com_error::HelpFile'
+                      href: ../cpp/com-error-helpfile.md
+                    - name: '_com_error::HRESULTToWCode'
+                      href: ../cpp/com-error-hresulttowcode.md
+                    - name: '_com_error::Source'
+                      href: ../cpp/com-error-source.md
+                    - name: '_com_error::WCode'
+                      href: ../cpp/com-error-wcode.md
+                    - name: '_com_error::WCodeToHRESULT'
+                      href: ../cpp/com-error-wcodetohresult.md
                 - name: _com_error 運算子
-                  href: ../cpp/com-error-operators.md
-                - name: '_com_error::operator ='
-                  href: ../cpp/com-error-operator-equal.md
-        - name: _com_ptr_t 類別
-          expanded: false
-          items:
+                  items:
+                    - name: _com_error 運算子
+                      href: ../cpp/com-error-operators.md
+                    - name: '_com_error::operator ='
+                      href: ../cpp/com-error-operator-equal.md
             - name: _com_ptr_t 類別
-              href: ../cpp/com-ptr-t-class.md
-            - name: _com_ptr_t 成員函式
-              expanded: false
               items:
+                - name: _com_ptr_t 類別
+                  href: ../cpp/com-ptr-t-class.md
                 - name: _com_ptr_t 成員函式
-                  href: ../cpp/com-ptr-t-member-functions.md
-                - name: '_com_ptr_t::_com_ptr_t'
-                  href: ../cpp/com-ptr-t-com-ptr-t.md
-                - name: '_com_ptr_t::AddRef'
-                  href: ../cpp/com-ptr-t-addref.md
-                - name: '_com_ptr_t::Attach'
-                  href: ../cpp/com-ptr-t-attach.md
-                - name: '_com_ptr_t::CreateInstance'
-                  href: ../cpp/com-ptr-t-createinstance.md
-                - name: '_com_ptr_t::Detach'
-                  href: ../cpp/com-ptr-t-detach.md
-                - name: '_com_ptr_t::GetActiveObject'
-                  href: ../cpp/com-ptr-t-getactiveobject.md
-                - name: '_com_ptr_t::GetInterfacePtr'
-                  href: ../cpp/com-ptr-t-getinterfaceptr.md
-                - name: '_com_ptr_t::QueryInterface'
-                  href: ../cpp/com-ptr-t-queryinterface.md
-                - name: '_com_ptr_t::Release'
-                  href: ../cpp/com-ptr-t-release.md
-            - name: _com_ptr_t 運算子
-              expanded: false
-              items:
+                  items:
+                    - name: _com_ptr_t 成員函式
+                      href: ../cpp/com-ptr-t-member-functions.md
+                    - name: '_com_ptr_t::_com_ptr_t'
+                      href: ../cpp/com-ptr-t-com-ptr-t.md
+                    - name: '_com_ptr_t::AddRef'
+                      href: ../cpp/com-ptr-t-addref.md
+                    - name: '_com_ptr_t::Attach'
+                      href: ../cpp/com-ptr-t-attach.md
+                    - name: '_com_ptr_t::CreateInstance'
+                      href: ../cpp/com-ptr-t-createinstance.md
+                    - name: '_com_ptr_t::Detach'
+                      href: ../cpp/com-ptr-t-detach.md
+                    - name: '_com_ptr_t::GetActiveObject'
+                      href: ../cpp/com-ptr-t-getactiveobject.md
+                    - name: '_com_ptr_t::GetInterfacePtr'
+                      href: ../cpp/com-ptr-t-getinterfaceptr.md
+                    - name: '_com_ptr_t::QueryInterface'
+                      href: ../cpp/com-ptr-t-queryinterface.md
+                    - name: '_com_ptr_t::Release'
+                      href: ../cpp/com-ptr-t-release.md
                 - name: _com_ptr_t 運算子
-                  href: ../cpp/com-ptr-t-operators.md
-                - name: '_com_ptr_t::operator ='
-                  href: ../cpp/com-ptr-t-operator-equal.md
-                - name: _com_ptr_t 關係運算子
-                  href: ../cpp/com-ptr-t-relational-operators.md
-                - name: _com_ptr_t 擷取器
-                  href: ../cpp/com-ptr-t-extractors.md
-            - name: 關係函式範本
-              href: ../cpp/relational-function-templates.md
-        - name: _variant_t 類別
-          expanded: false
-          items:
+                  items:
+                    - name: _com_ptr_t 運算子
+                      href: ../cpp/com-ptr-t-operators.md
+                    - name: '_com_ptr_t::operator ='
+                      href: ../cpp/com-ptr-t-operator-equal.md
+                    - name: _com_ptr_t 關係運算子
+                      href: ../cpp/com-ptr-t-relational-operators.md
+                    - name: _com_ptr_t 擷取器
+                      href: ../cpp/com-ptr-t-extractors.md
+                - name: 關係函式範本
+                  href: ../cpp/relational-function-templates.md
             - name: _variant_t 類別
-              href: ../cpp/variant-t-class.md
-            - name: _variant_t 成員函式
-              expanded: false
               items:
+                - name: _variant_t 類別
+                  href: ../cpp/variant-t-class.md
                 - name: _variant_t 成員函式
-                  href: ../cpp/variant-t-member-functions.md
-                - name: '_variant_t::_variant_t'
-                  href: ../cpp/variant-t-variant-t.md
-                - name: '_variant_t::Attach'
-                  href: ../cpp/variant-t-attach.md
-                - name: '_variant_t::Clear'
-                  href: ../cpp/variant-t-clear.md
-                - name: '_variant_t::ChangeType'
-                  href: ../cpp/variant-t-changetype.md
-                - name: '_variant_t::Detach'
-                  href: ../cpp/variant-t-detach.md
-                - name: '_variant_t::SetString'
-                  href: ../cpp/variant-t-setstring.md
-            - name: _variant_t 運算子
-              expanded: false
-              items:
+                  items:
+                    - name: _variant_t 成員函式
+                      href: ../cpp/variant-t-member-functions.md
+                    - name: '_variant_t::_variant_t'
+                      href: ../cpp/variant-t-variant-t.md
+                    - name: '_variant_t::Attach'
+                      href: ../cpp/variant-t-attach.md
+                    - name: '_variant_t::Clear'
+                      href: ../cpp/variant-t-clear.md
+                    - name: '_variant_t::ChangeType'
+                      href: ../cpp/variant-t-changetype.md
+                    - name: '_variant_t::Detach'
+                      href: ../cpp/variant-t-detach.md
+                    - name: '_variant_t::SetString'
+                      href: ../cpp/variant-t-setstring.md
                 - name: _variant_t 運算子
-                  href: ../cpp/variant-t-operators.md
-                - name: '_variant_t::operator ='
-                  href: ../cpp/variant-t-operator-equal.md
-                - name: _variant_t 關係運算子
-                  href: ../cpp/variant-t-relational-operators.md
-                - name: _variant_t 擷取器
-                  href: ../cpp/variant-t-extractors.md
-- name: Microsoft 延伸模組
-  href: ../cpp/microsoft-extensions.md
-- name: 非標準行為
-  href: ../cpp/nonstandard-behavior.md
-- name: 編譯器限制
-  href: ../cpp/compiler-limits.md
+                  items:
+                    - name: _variant_t 運算子
+                      href: ../cpp/variant-t-operators.md
+                    - name: '_variant_t::operator ='
+                      href: ../cpp/variant-t-operator-equal.md
+                    - name: _variant_t 關係運算子
+                      href: ../cpp/variant-t-relational-operators.md
+                    - name: _variant_t 擷取器
+                      href: ../cpp/variant-t-extractors.md
+    - name: Microsoft 延伸模組
+      href: ../cpp/microsoft-extensions.md
+    - name: 非標準行為
+      href: ../cpp/nonstandard-behavior.md
+    - name: 編譯器限制
+      href: ../cpp/compiler-limits.md
+- name: C/C++ 前置處理器參考
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: C++ 標準程式庫參考
+  href: ../standard-library/cpp-standard-library-reference.md

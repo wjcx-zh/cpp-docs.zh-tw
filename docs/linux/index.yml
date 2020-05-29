@@ -1,0 +1,55 @@
+### YamlMime:Landing
+title: 使用 C++ 的 Linux 開發 | 建立與偵錯適用於 Linux 的應用程式
+summary: 使用 Visual Studio 2017 及更新版本中 C++ 建立及偵錯適用於 Linux 的應用程式。
+metadata:
+  title: 使用 C++ 的 Linux 程式開發
+  description: 了解如何使用 Visual Studio 2017 及更新版本中 C++ 來建立及偵錯適用於 Linux 的應用程式。
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 04/26/2020
+  ms.openlocfilehash: ac705ae3ae457d804ed2ca884143c8c6cb5a4758
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108638"
+landingContent:
+- title: 在 Visual Studio 中建立 Linux C++ 應用程式
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 下載、安裝和設定 Linux 工作負載
+      url: download-install-and-setup-the-linux-development-workload.md
+  - linkListType: how-to-guide
+    links:
+    - text: 連線至目標 Linux 系統
+      url: connect-to-your-remote-linux-computer.md
+  - linkListType: reference
+    links:
+    - text: ConnectionManager 參考
+      url: connectionmanager-reference.md
+- title: 在 Visual Studio 中建置 Linux 專案
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 建立新的 Linux 專案
+      url: create-a-new-linux-project.md
+    - text: 設定 Linux 專案
+      url: configure-a-linux-project.md
+    - text: 部署、執行和偵錯 Linux 專案
+      url: deploy-run-and-debug-your-linux-project.md
+  - linkListType: reference
+    links:
+    - text: Linux 專案屬性頁參考
+      url: prop-pages-linux.md
+- title: 在 Visual Studio 中建置 Linux CMake 專案
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 建立及設定 Linux CMake 專案
+      url: cmake-linux-project.md
+  - linkListType: tutorial
+    links:
+    - text: 在 Visual Studio 中建立 C++ 跨平台專案
+      url: /cpp/build/get-started-linux-cmake

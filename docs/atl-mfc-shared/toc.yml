@@ -6,7 +6,6 @@
     - name: ATL-MFC 概念
       href: ../atl-mfc-shared/atl-mfc-concepts.md
     - name: 日期和時間
-      expanded: false
       items:
         - name: 日期和時間概觀
           href: ../atl-mfc-shared/date-and-time.md
@@ -18,12 +17,10 @@
         - name: 字串 (ATL-MFC)
           href: ../atl-mfc-shared/strings-atl-mfc.md
         - name: 使用 CStringT
-          expanded: false
           items:
             - name: 使用 CStringT
               href: ../atl-mfc-shared/using-cstringt.md
             - name: 使用 CStringT 管理記憶體
-              expanded: false
               items:
                 - name: 使用 CStringT 管理記憶體
                   href: ../atl-mfc-shared/memory-management-with-cstringt.md
@@ -38,7 +35,6 @@
             - name: 使用 CStringT 匯出字串類別
               href: ../atl-mfc-shared/exporting-string-classes-using-cstringt.md
         - name: 使用 CString
-          expanded: false
           items:
             - name: 使用 CString
               href: ../atl-mfc-shared/using-cstring.md
@@ -59,8 +55,9 @@
             - name: Unicode 及多位元組字元集 (MBCS) 支援
               href: ../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
 - name: 參考資料
-  expanded: false
   items:
+    - name: MFC 和 ATL 共用的類別
+      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
     - name: CSize 類別
       href: ../atl-mfc-shared/reference/csize-class.md
     - name: CTimeSpan 類別
@@ -69,16 +66,12 @@
       href: ../atl-mfc-shared/reference/coledatetime-class.md
     - name: CRect 類別
       href: ../atl-mfc-shared/reference/crect-class.md
-    - name: MFC 和 ATL 共用的類別
-      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
     - name: CPoint 類別
       href: ../atl-mfc-shared/reference/cpoint-class.md
     - name: CStringT 類別
       href: ../atl-mfc-shared/reference/cstringt-class.md
     - name: COleDateTimeSpan 類別
       href: ../atl-mfc-shared/reference/coledatetimespan-class.md
-    - name: IAtlStringMgr 類別
-      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md
     - name: CFixedStringT 類別
       href: ../atl-mfc-shared/reference/cfixedstringt-class.md
     - name: CStrBufT 類別
@@ -95,3 +88,5 @@
       href: ../atl-mfc-shared/reference/csimplestringt-class.md
     - name: CTime 類別
       href: ../atl-mfc-shared/reference/ctime-class.md
+    - name: IAtlStringMgr 類別
+      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md

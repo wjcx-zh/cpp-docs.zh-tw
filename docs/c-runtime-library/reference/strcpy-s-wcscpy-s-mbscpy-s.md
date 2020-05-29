@@ -1,6 +1,6 @@
 ---
 title: strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
-ms.date: 4/2/2020
+ms.date: 5/28/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
+ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911837"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206189"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 目的地字串緩衝區的位置。
 
 *dest_size*<br/>
-用於窄和多位元組函式**char**的目的字串緩衝區大小，以及寬函數的**wchar_t**單位。 這個值必須大於零，且不能大於**RSIZE_MAX**。
+用於窄和多位元組函式**char**的目的字串緩衝區大小，以及寬函數的**wchar_t**單位。 這個值必須大於零，且不能大於**RSIZE_MAX**。 請確定此大小的帳戶會在 `NULL` 字串之後終止。
 
 *src*<br/>
 以 null 結束的來源字串緩衝區。
@@ -132,8 +132,8 @@ errno_t _mbscpy_s_l(
 
 |*dest*|*dest_size*|*src*|傳回值|*Dest*的內容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**|任意|任意|**EINVAL**|未修改|
-|任意|任意|**Null**|**EINVAL**|*dest*[0] 設定為0|
+|**NULL**|任意|任意|**EINVAL**|未修改|
+|任意|任意|**NULL**|**EINVAL**|*dest*[0] 設定為0|
 |任意|0 或太小|任意|**ERANGE**|*dest*[0] 設定為0|
 
 ## <a name="remarks"></a>備註
@@ -158,7 +158,7 @@ errno_t _mbscpy_s_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

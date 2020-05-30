@@ -1,0 +1,87 @@
+### YamlMime:Landing
+title: C 語言文件
+summary: 了解如何使用 C 與 C 執行階段程式庫。
+metadata:
+  title: C 文件 - 入門、教學課程、參考。
+  description: 適合 Microsoft C/C++ 與 Visual Studio 使用者的 C 程式設計參考。
+  ms.topic: landing-page
+  ms.date: 05/28/2020
+  ms.openlocfilehash: 74e65a2cb4e65bbbaaa51a9b1bdd358b96dff4eb
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153516"
+landingContent:
+- title: Visual Studio 中的 C 使用者入門
+  linkLists:
+  - linkListType: download
+    links:
+    - text: 下載 Visual Studio for Windows
+      url: https://visualstudio.microsoft.com/downloads
+    - text: 在 Visual Studio 中安裝 C/C++ 支援
+      url: ../build/vscpp-step-0-installation.md
+    - text: 僅下載命令列建置工具
+      url: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019
+  - linkListType: tutorial
+    links:
+    - text: 在命令列編譯 C 程式
+      url: ../build/walkthrough-compile-a-c-program-on-the-command-line.md
+- title: 使用編譯器和工具
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C/C++ 組建參考
+      url: ../build/reference/c-cpp-building-reference.md
+    - text: 專案與建置系統
+      url: ../build/projects-and-build-systems-cpp.md
+    - text: 編譯器參考
+      url: ../build/reference/compiling-a-c-cpp-program.md
+    - text: 連結器參考
+      url: ../build/reference/linking.md
+    - text: 其他建置工具
+      url: ../build/reference/c-cpp-build-tools.md
+    - text: 錯誤和警告
+      url: ../error-messages/compiler-errors-1/c-cpp-build-errors.md
+- title: C 語言
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C 語言參考
+      url: ../c-language/c-language-reference.md
+    - text: C 的元素
+      url: ../c-language/elements-of-c.md
+    - text: 程式結構
+      url: ../c-language/program-structure.md
+    - text: 宣告和類型
+      url: ../c-language/declarations-and-types.md
+    - text: 運算式和指派
+      url: ../c-language/expressions-and-assignments.md
+    - text: 陳述式
+      url: ../c-language/statements-c.md
+    - text: 函式
+      url: ../c-language/functions-c.md
+    - text: C 語言語法摘要
+      url: ../c-language/c-language-syntax-summary.md
+    - text: 實作定義的行為
+      url: ../c-language/implementation-defined-behavior.md
+    - text: C/C++ 前置處理器參考
+      url: ../preprocessor/c-cpp-preprocessor-reference.md
+- title: C 執行階段程式庫 (CRT)
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: CRT 程式庫功能
+      url: ../c-runtime-library/crt-library-features.md
+    - text: 依字母順序排列的函式參考
+      url: ../c-runtime-library/reference/crt-alphabetical-function-reference.md
+    - text: 依類別區分的執行階段常式
+      url: ../c-runtime-library/run-time-routines-by-category.md
+    - text: 全域變數和標準類型
+      url: ../c-runtime-library/global-variables-and-standard-types.md
+    - text: 全域常數
+      url: ../c-runtime-library/global-constants.md
+    - text: 全域狀態
+      url: ../c-runtime-library/global-state.md
+    - text: 泛型文字對應
+      url: ../c-runtime-library/generic-text-mappings.md

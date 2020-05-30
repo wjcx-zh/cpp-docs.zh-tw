@@ -3,7 +3,6 @@
 - name: 逐步解說：編譯以 CLR 為目標的 C++/CLI 程式
   href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
 - name: C++/CLI 工作
-  expanded: false
   items:
     - name: C++/CLI 工作
       href: ../dotnet/cpp-cli-tasks.md
@@ -50,14 +49,12 @@
     - name: 使用 ADO.NET 進行資料存取
       href: ../dotnet/data-access-using-adonet-cpp-cli.md
 - name: 原生和 .NET 互通性
-  expanded: false
   items:
     - name: 原生和 .NET 互通性
       href: ../dotnet/native-and-dotnet-interoperability.md
     - name: 與其他 .NET 語言間的互通性
       href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
     - name: 混合 (原生和受控) 組件
-      expanded: false
       items:
         - name: 混合 (原生和受控) 組件
           href: ../dotnet/mixed-native-and-managed-assemblies.md
@@ -80,14 +77,12 @@
         - name: 作法：移除對 CRT 程式庫 DLL 的相依性以建立部分信任應用程式
           href: ../dotnet/create-a-partially-trusted-application.md
     - name: 在 MFC 中使用 Windows Form 使用者控制項
-      expanded: false
       items:
         - name: 在 MFC 中使用 Windows Form 使用者控制項
           href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
         - name: Windows Forms/MFC 程式設計的差異
           href: ../dotnet/windows-forms-mfc-programming-differences.md
         - name: 將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
-          expanded: false
           items:
             - name: 將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
               href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
@@ -98,7 +93,6 @@
             - name: 作法：從原生 C++ 類別接收 Windows Forms 事件
               href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
         - name: 將 Windows Form 使用者控制項裝載為 MFC 檢視
-          expanded: false
           items:
             - name: 將 Windows Form 使用者控制項裝載為 MFC 檢視
               href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
@@ -111,12 +105,10 @@
         - name: 將 Windows Form 使用者控制項裝載成 MFC 對話方塊
           href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
     - name: 從受控碼呼叫原生函式
-      expanded: false
       items:
         - name: 從受控碼呼叫原生函式
           href: ../dotnet/calling-native-functions-from-managed-code.md
         - name: 在 C++ 中使用明確的 PInvoke (DllImport 屬性)
-          expanded: false
           items:
             - name: 在 C++ 中使用明確的 PInvoke (DllImport 屬性)
               href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
@@ -133,7 +125,6 @@
             - name: 作法：使用 PInvoke 封送處理內嵌指標
               href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
         - name: 使用 C++ Interop (隱含 PInvoke)
-          expanded: false
           items:
             - name: 使用 C++ Interop (隱含 PInvoke)
               href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
@@ -190,7 +181,6 @@
             - name: '作法：包裝原生類別以供 C# 使用'
               href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
 - name: 純粹和可驗證的程式碼
-  expanded: false
   items:
     - name: 純粹和可驗證的程式碼
       href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
@@ -213,7 +203,6 @@
 - name: 偵錯類別
   href: ../dotnet/debug-class-cpp-cli.md
 - name: STL/CLR 程式庫參考
-  expanded: false
   items:
     - name: STL/CLR 程式庫參考
       href: ../dotnet/stl-clr-library-reference.md
@@ -270,12 +259,10 @@
     - name: vector (STL/CLR)
       href: ../dotnet/vector-stl-clr.md
 - name: C++ 支援程式庫
-  expanded: false
   items:
     - name: C++ 支援程式庫
       href: ../dotnet/cpp-support-library.md
     - name: C++ 中的封送處理概觀
-      expanded: false
       items:
         - name: C++ 中的封送處理概觀
           href: ../dotnet/overview-of-marshaling-in-cpp.md
@@ -286,12 +273,10 @@
     - name: msclr 命名空間
       href: ../dotnet/msclr-namespace.md
     - name: 資源管理類別
-      expanded: false
       items:
         - name: 資源管理類別
           href: ../dotnet/resource-management-classes.md
         - name: auto_gcroot
-          expanded: false
           items:
             - name: auto_gcroot
               href: ../dotnet/auto-gcroot.md
@@ -300,7 +285,6 @@
             - name: swap 函式 (auto_gcroot)
               href: ../dotnet/swap-function-auto-gcroot.md
         - name: auto_handle
-          href: ../dotnet/auto-handle.md
           items:
             - name: auto_handle
               href: ../dotnet/auto-handle.md
@@ -309,12 +293,10 @@
             - name: swap 函式 (auto_handle)
               href: ../dotnet/swap-function-auto-handle.md
     - name: 同步處理 (lock 類別)
-      expanded: false
       items:
         - name: 同步處理 (lock 類別)
           href: ../dotnet/synchronization-lock-class.md
         - name: 鎖定
-          expanded: false
           items:
             - name: 鎖定
               href: ../dotnet/lock.md
@@ -323,21 +305,18 @@
             - name: lock_when 列舉
               href: ../dotnet/lock-when-enum.md
     - name: 呼叫特定應用程式定義域的函式
-      expanded: false
       items:
         - name: 呼叫特定應用程式定義域的函式
           href: ../dotnet/calling-functions-in-a-specific-application-domain.md
         - name: call_in_appdomain 函式
           href: ../dotnet/call-in-appdomain-function.md
     - name: 'com::ptr'
-      expanded: false
       items:
         - name: 'com::ptr'
           href: ../dotnet/com-ptr.md
         - name: 'com::ptr 類別'
           href: ../dotnet/com-ptr-class.md
 - name: C++/CLI 中的例外狀況
-  expanded: false
   items:
     - name: C++/CLI 中的例外狀況
       href: ../dotnet/exceptions-in-cpp-cli.md
@@ -352,7 +331,6 @@
     - name: 作法：定義與安裝全域例外狀況處理常式
       href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
 - name: Boxing
-  expanded: false
   items:
     - name: Boxing
       href: ../dotnet/boxing-cpp-cli.md

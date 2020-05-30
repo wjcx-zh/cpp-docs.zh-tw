@@ -1,0 +1,49 @@
+### YamlMime:Landing
+title: 使用 C 進行行動裝置應用程式開發 | Windows UWP、Android 與 iOS
+summary: 使用 Visual Studio 建立適用於 iOS、Android 和 Windows 裝置的原生 C++ 應用程式。
+metadata:
+  title: 使用 C++ 進行行動裝置開發文件
+  description: 使用 Visual Studio 建立適用於 iOS、Android 和 Windows 裝置的原生 C++ 應用程式。
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 7a858d9f26c106988156813b3f1f6bbe995e620a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153526"
+landingContent:
+- title: 了解如何建置跨平台行動裝置應用程式
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 安裝 C++ 的跨平台行動裝置應用程式開發
+      url: install-visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: overview
+    links:
+    - text: 使用 C++ 進行跨平台行動裝置應用程式開發的概觀
+      url: visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: tutorial
+    links:
+    - text: 在 Android 和 iOS 上建置 OpenGL ES 應用程式
+      url: build-an-opengl-es-application-on-android-and-ios.md
+    - text: 建立 Android Native Activity 應用程式
+      url: create-an-android-native-activity-app.md
+  - linkListType: learn
+    links:
+    - text: 跨平台行動裝置開發範例
+      url: cross-platform-mobile-development-examples.md
+- title: 跨平台參考
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 跨平台屬性頁參考
+      url: cross-platform-prop-pages.md
+    - text: 通用 Windows 平台 (UWP) 文件
+      url: /cpp/cppcx/universal-windows-apps-cpp
+    - text: iOS API 文件
+      url: https://developer.apple.com/reference
+    - text: Android API 文件
+      url: https://developer.android.com/guide/index.html

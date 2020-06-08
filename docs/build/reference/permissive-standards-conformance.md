@@ -1,7 +1,7 @@
 ---
 title: /permissive- (標準一致性)
-description: 微軟C++/允許(標準一致性)編譯器選項的參考指南。
-ms.date: 04/14/2020
+description: Microsoft c + +/permissive-（標準一致性）編譯器選項的參考指南。
+ms.date: 06/04/2020
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -11,53 +11,53 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 695f84e64f07128ac7744dc99e736f2a71ab3e79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337408"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507023"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (標準一致性)
 
-指定與編譯器的標準一致性模式。 使用此選項可説明您識別和修復代碼中的一致性問題,使其更加正確和可移植。
+指定編譯器的標準一致性模式。 使用此選項可協助您找出並修正程式碼中的一致性問題，使其更正確且更具可攜性。
 
 ## <a name="syntax"></a>語法
 
-> **/允許-**
+> **`/permissive-`**
 
 ## <a name="remarks"></a>備註
 
-Visual Studio 2017 及更高版本支援此選項。
+Visual Studio 2017 和更新版本支援此選項。
 
-可以使用 **/允許編譯器**選項指定符合標準的編譯器行為。 此選項禁用允許行為,並設置[/Zc](zc-conformance.md)編譯器選項以嚴格一致性。 在 IDE 中,此選項還使 IntelliSense 引擎對不符合的代碼進行下劃線。
+您可以使用 **`/permissive-`** 編譯器選項來指定符合標準的編譯器行為。 這個選項會停用寬鬆的行為，並設定 [**`/Zc`**](zc-conformance.md) 嚴格符合性的編譯器選項。 在 IDE 中，此選項也會讓 IntelliSense 引擎為不符合規範的程式碼加上底線。
 
-默認情況下 **,/允許選項**設置在 Visual Studio 2017 版本 15.5 和更高版本創建的新專案中。 默認情況下,它未在早期版本中設置。 設置該選項后,當在代碼中檢測到非標準語言構造(包括 C++11 代碼前的某些常見錯誤)時,編譯器將生成診斷錯誤或警告。
+根據預設， **`/permissive-`** 選項會在 Visual Studio 2017 15.5 版和更新版本所建立的新專案中設定。 在舊版中，預設不會設定此版本。 設定選項時，編譯器會在您的程式碼中偵測到非標準語言結構時，產生診斷錯誤或警告。 這些結構包括 C + + 11 程式碼中的一些常見 bug。
 
-**/允許-** 選項與最新的 Windows 工具套件(如軟體開發工具組 (SDK) 或 Windows 驅動程式工具組 (WDK))中的幾乎所有標頭檔相容,這些配置檔從 Windows 秋季創建器 SDK (10.0.16299.0) 開始。 由於各種原始碼一致性的原因,舊版本的 SDK 可能無法在 **/允許下**編譯。 編譯器和 SDK 在不同的發佈時間線上提供,因此存在一些剩餘問題。 有關特定的標頭檔問題,請參閱下面的[Windows 標頭問題](#windows-header-issues)。
+此 **`/permissive-`** 選項可與最新 Windows 套件（例如軟體發展工具組（SDK）或 Windows 驅動程式套件（WDK））中幾乎所有的標頭檔相容，從 Windows 秋季建立者 SDK （10.0.16299.0）開始。 較舊版本的 SDK 可能會 **`/permissive-`** 因為各種原始程式碼一致性原因而無法編譯。 編譯器和 Sdk 隨附于不同的版本時間軸，因此有一些剩餘的問題。 如需特定的標頭檔問題，請參閱下面的[Windows 標頭問題](#windows-header-issues)。
 
-**/允許-** 選項將[/Zc:引用綁定](zc-referencebinding-enforce-reference-binding-rules.md)[、/Zc:嚴格字串](zc-strictstrings-disable-string-literal-type-conversion.md)和[/Zc:rvalueCast](zc-rvaluecast-enforce-type-conversion-rules.md)選項設置為符合行為。 這些選項預設為不符合項行為。 您可以在命令列 **/允許**後傳遞特定的 **/Zc**選項以覆蓋此行為。
+**`/permissive-`** 選項會將 [**`/Zc:referenceBinding`**](zc-referencebinding-enforce-reference-binding-rules.md) 、 [**`/Zc:strictStrings`**](zc-strictstrings-disable-string-literal-type-conversion.md) 和選項設定 [**`/Zc:rvalueCast`**](zc-rvaluecast-enforce-type-conversion-rules.md) 為符合的行為。 這些選項預設為不符合規範的行為。 您可以在 **`/Zc`** 命令列之後傳遞特定選項 **`/permissive-`** ，以覆寫此行為。
 
-在 Visual Studio 2017 版本 15.3 中開始的編譯器版本中 **,/允許-** 選項設置[/Zc:三元](zc-ternary.md)選項。 編譯器還實現了兩階段名稱查找的更多要求。 設置 **/允許選項**時,編譯器將分析函數和類範本定義,並標識範本中使用的從屬和非從屬名稱。 在此版本中,僅執行名稱依賴項分析。
+從 Visual Studio 2017 版15.3 開始的編譯器版本中，選項會 **`/permissive-`** 設定 [**`/Zc:ternary`**](zc-ternary.md) 選項。 編譯器也會執行兩階段名稱查閱的更多需求。 **`/permissive-`** 設定選項時，編譯器會剖析函式和類別樣板定義，並識別範本中使用的相依和非相依名稱。 在此版本中，只會執行名稱相依性分析。
 
-特定於環境的擴展和語言區域,標準留給實施不受 **/允許 -** 的影響。 例如,特定於 Microsoft`__declspec`的調用約定和結構化異常處理關鍵字以及編譯器特定的雜註指令或屬性不由編譯器在 **/允許模式下**標記。
+環境專屬的擴充功能和標準在執行上的語言區域不會受到的影響 **`/permissive-`** 。 例如，Microsoft 專有的 `__declspec` 呼叫慣例和結構化例外狀況處理關鍵字，以及編譯器專屬的 pragma 指示詞或屬性，在模式中不會標示為編譯器 **`/permissive-`** 。
 
-**/允許-** 選項使用目前編譯器版本中的一致性支援來確定哪些語言構造不符合。 該選項不確定代碼是否符合C++標準的特定版本。 要啟用對最新標準草案的所有已實現編譯器支援,請使用[/std:最新](std-specify-language-standard-version.md)選項。 要將編譯器支援限制為當前實現的 C++17 標準,請使用[/std:c++17](std-specify-language-standard-version.md)選項。 要將編譯器支援限制為更緊密地匹配 C++14 標準,請使用[/std:c++14](std-specify-language-standard-version.md)選項,這是默認值。
+**`/permissive-`** 選項會使用目前編譯器版本中的一致性支援來判斷哪些語言結構不符合規範。 選項不會判斷您的程式碼是否符合 c + + standard 的特定版本。 若要針對最新的草稿標準啟用所有已實現的編譯器支援，請使用 [**`/std:c++latest`**](std-specify-language-standard-version.md) 選項。 若要將編譯器支援限制為目前所實行的 c + + 17 標準，請使用 [**`/std:c++17`**](std-specify-language-standard-version.md) 選項。 若要限制編譯器支援，使其更符合 c + + 14 標準，請使用 [**`/std:c++14`**](std-specify-language-standard-version.md) 選項，這是預設值。
 
-並非所有 C++11、C++14 或 C++17 標準符合的代碼都受 Visual Studio 2017 所有版本中的 MSVC 編譯器的支援。 根據 Visual Studio 的版本 **,/允許-** 選項可能無法檢測有關兩階段名稱查找的某些方面的問題,將對臨時名稱查找的非引用綁定為直接 init,允許在初始化中允許多個使用者定義的轉換,或邏輯運算符的替代權杖以及其他不支援的符合性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 要充分利用 **/允許-**,請將 Visual Studio 更新到最新版本。
+所有版本的 Visual Studio 2017 中的 MSVC 編譯器都不支援所有 c + + 11、c + + 14 或 c + + 17 標準一致的程式碼。 視 Visual Studio 版本而 **`/permissive-`** 定，選項可能無法偵測兩階段名稱查閱的某些層面中的問題、將非 const 參考系結至暫時的、將複製 init 視為直接 init、允許在初始化中使用多個使用者定義的轉換，或針對邏輯運算子使用替代的標記，以及其他不支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要充分利用 **`/permissive-`** ，請將 Visual Studio 更新為最新版本。
 
-### <a name="how-to-fix-your-code"></a>如何修復代碼
+### <a name="how-to-fix-your-code"></a>如何修正程式碼
 
-下面是一些在使用 **/允許時**檢測到不符合要求的代碼示例,以及修復問題的建議方法。
+以下是當您使用時，偵測為不符合規範的一些程式碼範例 **`/permissive-`** ，以及修正問題的建議方法。
 
-#### <a name="use-default-as-an-identifier-in-native-code"></a>使用預設值作為識別碼
+#### <a name="use-default-as-an-identifier-in-native-code"></a>使用預設值做為機器碼中的識別碼
 
 ```cpp
 void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="look-up-members-in-dependent-base"></a>尋找從屬基中的成員
+#### <a name="look-up-members-in-dependent-base"></a>查詢相依基底中的成員
 
 ```cpp
 template <typename T>
@@ -85,7 +85,7 @@ void h() {
 }
 ```
 
-#### <a name="use-of-qualified-names-in-member-declarations"></a>在成員宣告中使用合格名稱
+#### <a name="use-of-qualified-names-in-member-declarations"></a>在成員宣告中使用限定名稱
 
 ```cpp
 struct A {
@@ -95,7 +95,7 @@ struct A {
 };
 ```
 
-#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>在成員初始化器中初始化多個工會成員
+#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>初始化成員初始化運算式中的多個聯集成員
 
 ```cpp
 union U
@@ -110,7 +110,7 @@ union U
 };
 ```
 
-#### <a name="hidden-friend-name-lookup-rules"></a>隱藏好友名稱尋找規則
+#### <a name="hidden-friend-name-lookup-rules"></a>隱藏的 friend 名稱查閱規則
 
 ```cpp
 // Example 1
@@ -138,7 +138,7 @@ void g() {
 }
 ```
 
-#### <a name="use-scoped-enums-in-array-bounds"></a>在陣列邊界中使用作用網域
+#### <a name="use-scoped-enums-in-array-bounds"></a>在陣列界限中使用範圍列舉
 
 ```cpp
 enum class Color {
@@ -150,7 +150,7 @@ int data[Color::Blue]; // error C3411: 'Color' is not valid as the size
                        // Cast to type size_t or int to fix.
 ```
 
-#### <a name="use-for-each-in-native-code"></a>在本機代碼中為每個使用
+#### <a name="use-for-each-in-native-code"></a>針對原生程式碼中的每個使用
 
 ```cpp
 void func() {
@@ -165,7 +165,7 @@ void func() {
 }
 ```
 
-#### <a name="use-of-atl-attributes"></a>使用 ATL 屬性
+#### <a name="use-of-atl-attributes"></a>ATL 屬性的使用
 
 ```cpp
 // Example 1
@@ -234,21 +234,21 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 };
 ```
 
-#### <a name="ambiguous-conditional-operator-arguments"></a>模糊的條件運算符參數
+#### <a name="ambiguous-conditional-operator-arguments"></a>不明確的條件運算子引數
 
-在 Visual Studio 2017 版本 15.3 之前編譯器的版本中,編譯器接受條件運算符(或三`?:`元運算符) 的參數,該參數被標準認為不明確。 在 **/允許模式下**,編譯器現在在在早期版本中編譯時沒有診斷的情況下發出一個或多個診斷。
+在 Visual Studio 2017 15.3 版之前的編譯器版本中，編譯器接受標準運算子（或三元運算子）的引數， `?:` 這會被視為不明確的。 在 **`/permissive-`** 模式中，編譯器現在會發出一或多個診斷，以在較早版本中未診斷的情況下進行編譯。
 
-此變更可能導致的常見錯誤包括:
+這種變更可能造成的常見錯誤包括：
 
-- 錯誤 C2593:" "操作員?" 模棱兩可
+- **`error C2593`**`: 'operator ?' is ambiguous`
 
-- 錯誤 C2679: 二進位 '?': 找不到使用「B」類型右側操作數的運算符(或沒有可接受的轉換)
+- **`error C2679`**`: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
 
-- 錯誤 C2678: 二進位 '?': 找不到類型為「A」的左側操作數的運算符(或沒有可接受的轉換)
+- **`error C2678`**`: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
 
-- 錯誤 C2446:':':沒有從"B"轉換為"A"
+- **`error C2446`**`: ':': no conversion from 'B' to 'A'`
 
-可能導致此問題的典型代碼模式是,某些類 C 同時提供另一種類型的 T 的非顯式構造函數和類型 T 的非顯式轉換運算符。在這種情況下,將第二個參數轉換為第三個參數的類型以及將第三個參數轉換為第二個參數的類型都是有效的轉換。 由於兩者都有效,因此根據標準,它不明確。
+當某些類別 C 同時提供來自另一個類型 T 的非明確函式，以及非明確的轉換運算子來輸入 T 時，可能會造成此問題的一般程式碼模式。在此情況下，第二個引數轉換成第三個引數的類型，而第三個引數轉換成第二個引數的類型是有效的轉換。 因為這兩者都是有效的，所以根據標準並不明確。
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -268,7 +268,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-當 T 表示 null 終止字串類型之一`const char *`(`const char16_t *`例如, 、`?:`、 等) 和實際 參數為相應類型的字串文本時,此常見模式有一個重要例外。 C++17 的語義從 C++14 進行了更改。 因此,在 **/std:c++14**下接受示例 2 中的代碼,並在**使用 /Zc:terna**或 **/允許時**在 **/std:c++17**下拒絕。
+當 T 代表其中一個以 null 結束的字串類型（例如，、 `const char *` `const char16_t *` 等），且的實際引數 `?:` 是對應類型的字串常值時，這個常見的模式會有一個重要的例外狀況。 C + + 17 已變更 c + + 14 的語義。 因此，在中，會接受範例2中的程式碼， **`/std:c++14`** 並 **`/std:c++17`** 在 **`/Zc:ternary`** 使用或時拒絕 **`/permissive-`** 。
 
 ```cpp
 // Example 2: exception from the above
@@ -289,7 +289,7 @@ auto x = cond ? "A" : s;
 auto y = cond ? "A" : static_cast<const char*>(s);
 ```
 
-另一個可能看到錯誤的情況是條件運算符中,其中有一個`void`類型的參數。 這種情況在類似 ASSERT 的宏中可能很常見。
+另一個您可能會看到錯誤的情況是在條件運算子中，其中有一個類型為的引數 **`void`** 。 這種情況在類似 ASSERT 的宏中可能很常見。
 
 ```cpp
 // Example 3: void arguments
@@ -300,7 +300,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-您可能還會在範本元程式設計中看到錯誤,其中條件運算元結果類型可能在 **/Zc:terna**和 **/允許 -** 下更改。 解決此問題的一種方法是在生成的類型上使用[std::remove_reference。](../../standard-library/remove-reference-class.md)
+您也可能會在範本元使用者中看到錯誤，其中條件運算子結果類型可能會在和之下變更 **`/Zc:ternary`** **`/permissive-`** 。 解決此問題的其中一種方法是 [`std::remove_reference`](../../standard-library/remove-reference-class.md) 在產生的類型上使用。
 
 ```cpp
 // Example 4: different result types
@@ -312,9 +312,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>兩階段名稱尋找
+#### <a name="two-phase-name-look-up"></a>兩階段名稱查閱
 
-設置 **/允許選項**時,編譯器將分析函數和類範本定義,根據兩階段名稱查找所需的身份標識範本中使用的從屬名稱和非從屬名稱。 在 Visual Studio 2017 版本 15.3 中,將執行名稱依賴項分析。 特別是,未在範本定義上下文中聲明的非依賴名稱會導致 ISO C++標準所要求的診斷消息。 在 Visual Studio 2017 版本 15.7 中,還綁定了需要在定義上下文中尋找與參數相關的名稱。
+設定此 **`/permissive-`** 選項時，編譯器會剖析函式和類別樣板定義，並根據兩階段名稱查閱的需求，識別範本中使用的相依和非相依名稱。 在 Visual Studio 2017 15.3 版中，會執行名稱相依性分析。 特別的是，未在範本定義內容中宣告的非相依名稱，會造成 ISO c + + 標準所需的診斷訊息。 在 Visual Studio 2017 15.7 版中，也會針對需要在定義內容中與引數相依的查詢進行系結的非相依名稱進行系結。
 
 ```cpp
 // dependent base
@@ -340,17 +340,17 @@ int main()
 }
 ```
 
-如果希望對兩階段查找具有舊行為,但希望 **/允許行為**,則添加 **/Zc:雙相選項**。
+如果您想要讓兩階段查閱的舊版行為，但還是想要的 **`/permissive-`** 行為，請新增 **`/Zc:twoPhase-`** 選項。
 
 ### <a name="windows-header-issues"></a>Windows 標頭問題
 
-**/允許-** 選項對於 Windows 秋季建立者更新 SDK (10.0.16299.0) 或 Windows 驅動程式工具組 (WDK) 版本 1709 之前的 Windows 工具套件版本太嚴格。 我們建議您更新到最新版本的 Windows 工具組,以便在 Windows 或設備驅動程式代碼中使用 **/允許。**
+在 **`/permissive-`** Windows 秋季建立者更新 SDK （10.0.16299.0）或 Windows 驅動程式套件（WDK）1709版之前，選項對 Windows 套件版本而言太嚴格。 建議您更新至 windows 套件的最新版本，以便 **`/permissive-`** 在 windows 或設備磁碟機程式碼中使用。
 
-Windows 2018 年 4 月更新 SDK (10.0.17134.0)、Windows 秋季建立者更新 SDK (10.0.16299.0) 或 Windows 驅動程式工具組 (WDK) 1709 中的某些標題檔仍然存在問題,使它們與**使用 /允許 -** 不相容。 為了解決這些問題,我們建議您將這些標頭的使用限制為僅需要它們的原始程式碼檔案,並在編譯這些特定的原始程式碼檔時刪除 **/允許選項**。
+Windows 2018 年4月更新 SDK （10.0.17134.0）、Windows 秋季建立者更新 SDK （10.0.16299.0）或 Windows 驅動程式套件（WDK）1709中的特定標頭檔，仍然會有問題，使其與使用不相容 **`/permissive-`** 。 若要解決這些問題，我們建議您只將這些標頭的使用限制在需要它們的原始程式碼檔案，並 **`/permissive-`** 在編譯這些特定的原始程式碼檔案時移除選項。
 
-在 Windows 2018 年 4 月更新 SDK (10.0.17134.0) 中發布的這些 WinRT WRL 標頭與 **/允許 -** 不幹凈。 要解決這些問題,請使用 **/允許 -** 或使用 **/Zc:兩階段** **-** 當您使用這些標頭時:
+Windows 2018 年4月更新 SDK （10.0.17134.0）中發行的這些 WinRT WRL 標頭並不會使用進行清除 **`/permissive-`** 。 若要解決這些問題，請不要使用 **`/permissive-`** ，或在 **`/permissive-`** **`/Zc:twoPhase-`** 您使用這些標頭時使用搭配：
 
-- winrt/wrl/非同步中的問題
+- Winrt/wrl/async 中的問題
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
@@ -359,15 +359,15 @@ Windows 2018 年 4 月更新 SDK (10.0.17134.0)、Windows 秋季建立者更新 
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
    ```
 
-- 在 winrt/wrl/機具中發出問題。
+- Winrt/wrl/implements 中的問題
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
    ```
 
-在 Windows 2018 更新 SDK (10.0.17134.0) 中發布的這些使用者模式標頭與 **/允許 -** 不乾淨。 要解決這些問題,在使用這些標頭時,不要使用 **/允許**:
+Windows 2018 年4月更新 SDK （10.0.17134.0）中發行的這些使用者模式標頭並不會使用進行清除 **`/permissive-`** 。 若要解決這些問題，請 **`/permissive-`** 在使用這些標頭時不要使用：
 
-- 問題在 um/Tune.h
+- 在 um/微調 .h 中的問題
 
    ```Output
    C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
@@ -376,13 +376,13 @@ Windows 2018 年 4 月更新 SDK (10.0.17134.0)、Windows 秋季建立者更新 
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
    ```
 
-- 問題在嗯/spddkhlp.h
+- Um/spddkhlp 中的問題
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
    ```
 
-- 問題在嗯/refptrco.h
+- Um/refptrco 中的問題
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
@@ -390,11 +390,11 @@ Windows 2018 年 4 月更新 SDK (10.0.17134.0)、Windows 秋季建立者更新 
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
    ```
 
-這些問題特定於 Windows 秋季建立者更新 SDK (10.0.16299.0) 中的使用者模式標頭:
+這些問題專屬於 Windows 秋季建立者更新 SDK （10.0.16299.0）中的使用者模式標頭：
 
-- 在 um/Query.h 中發生問題
+- 在 um/查詢 .h 中的問題
 
-   使用 **/允許 -** 編譯器開`tagRESTRICTION`關時, 結構不會編譯,因為 case(RTOr) 成員"或"。
+   使用 **`/permissive-`** 編譯器參數時， `tagRESTRICTION` 結構不會因為 Case （RTOr）成員 ' or ' 而編譯。
 
    ```cpp
    struct tagRESTRICTION
@@ -416,21 +416,21 @@ Windows 2018 年 4 月更新 SDK (10.0.17134.0)、Windows 秋季建立者更新 
    };
    ```
 
-   要解決此問題,請編譯包含 Query.h 的檔案,而不使用 **/允許選項**。
+   若要解決此問題，請編譯包含 Query. h 但不含選項的檔案 **`/permissive-`** 。
 
-- 問題在嗯/cellularapi_oem.h
+- 在 um/cellularapi_oem 中的問題
 
-   使用 **/允許 -** 編譯器開關`enum UICCDATASTOREACCESSMODE`時,轉發 此錯誤會導致警告:
+   使用 **`/permissive-`** 編譯器參數時，的向前宣告 `enum UICCDATASTOREACCESSMODE` 會造成警告：
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   未示影的枚舉的正向聲明是 Microsoft 擴展。 要解決此問題,請編譯包含 cellularapi_oem.h 的檔,而不使用 **/允許選項**,或使用[/wd](compiler-option-warning-level.md)選項來靜音警告 C4471。
+   不限範圍列舉的向前宣告是 Microsoft 擴充功能。 若要解決此問題，請編譯包含 cellularapi_oem，但不含 **`/permissive-`** 選項的檔案，或使用 [**`/wd`**](compiler-option-warning-level.md) 選項來無聲警告 C4471。
 
-- 問題在 um/omscript.h
+- Um/omscript 中的問題
 
-   在 C++03 中,從字串文字轉換為 BSTR(即 typedef 轉換為"wchar_t +")被棄用,但允許。 在 C++11 中,不再允許轉換。
+   在 c + + 03 中，從字串常值轉換成 BSTR （也就是 ' wchar_t * ' 的 typedef）已被取代，但允許使用。 在 c + + 11 中，已不再允許轉換。
 
    ```cpp
    virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
@@ -439,25 +439,25 @@ Windows 2018 年 4 月更新 SDK (10.0.17134.0)、Windows 秋季建立者更新 
        /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
    ```
 
-   要解決此問題,請編譯包含 omscript.h 的檔案,而不使用 **/允許選項**,或者使用 **/Zc:嚴格字串-**
+   若要解決此問題，請編譯包含 omscript 但不含選項的檔案 **`/permissive-`** ，或改用 **`/Zc:strictStrings-`** 。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-在 Visual Studio 2017 版本 15.5 和更高版本中,使用以下步驟:
+在 Visual Studio 2017 15.5 版和更新版本中，請使用此程式：
 
-1. 打開項目**的屬性頁**對話方塊。
+1. 開啟專案的 [**屬性頁**] 對話方塊。
 
-1. 選擇**配置屬性** > **C/C++** > **語言**屬性頁。
+1. 選取 [設定**屬性**] [  >  **c/c + +**  >  **語言**] 屬性頁。
 
-1. 將 **「一致性模式**」 屬性值改變為 **「是」(/允許-)**。 選擇 **「確定」** 或 **「應用」** 以儲存變更。
+1. 將 [**一致性模式]** 屬性值變更為 **[是（/permissive-）]**。 選擇 **[確定]** **或 [** 套用] 以儲存變更。
 
-在 Visual Studio 2017 版本 15.5 之前的版本中,使用以下步驟:
+在 Visual Studio 2017 15.5 版之前的版本中，請使用此程式：
 
-1. 打開項目**的屬性頁**對話方塊。
+1. 開啟專案的 [**屬性頁**] 對話方塊。
 
-1. 選擇**配置屬性** > **C/C++** > **命令列**屬性頁。
+1. 選取 [設定**屬性**] [  >  **c/c + +**  >  **命令列**] 屬性頁。
 
-1. 在 **'附加選項**'框中輸入 **/允許-** 編譯器選項。 選擇 **「確定」** 或 **「應用」** 以儲存變更。
+1. 在 [**其他選項**] 方塊中，輸入 **/permissive-** 編譯器選項。 選擇 **[確定]** **或 [** 套用] 以儲存變更。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

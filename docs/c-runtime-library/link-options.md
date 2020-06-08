@@ -30,12 +30,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: ea71faab639a8c0a09d6e332618dd7e09159a4e5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351106"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506854"
 ---
 # <a name="link-options"></a>連結選項
 
@@ -43,7 +43,7 @@ CRT lib 目錄包含多個小型物件檔案，不需要變更任何程式碼即
 
 這些物件的純粹 CLR 模式版本在 Visual Studio 2015 中已被取代，而在 Visual Studio 2017 中已不受支援。 請使用機器碼與 /clr 程式碼的一般版本。
 
-|原生和 /clr|純的模式|描述|
+|原生和 /clr|純的模式|說明|
 |----------------------|---------------|-----------------|
 |binmode.obj|pbinmode.obj|將預設檔案轉譯模式設為二進位。 請參閱 [_fmode](../c-runtime-library/fmode.md)。|
 |chkstk.obj|n/a|不使用 CRT 時提供堆疊檢查和 alloca 支援。|
@@ -51,7 +51,7 @@ CRT lib 目錄包含多個小型物件檔案，不需要變更任何程式碼即
 |exe_initialize_mta.lib|n/a|在 EXE 啟動期間將 MTA Apartment 初始化，以允許在全域智慧指標中使用 COM 物件。 因為此選項會在關機期間流失 MTA Apartment 參考，所以請勿將其用於 DLL。 連結至此項目相當於包含 combase.h 及定義 _EXE_INITIALIZE_MTA。 |
 |fp10.obj|n/a|將預設的精確度控制變更為 64 位元。 請參閱[浮點支援](../c-runtime-library/floating-point-support.md)。|
 |invalidcontinue.obj|pinvalidcontinue.obj|設定不做任何動作的預設無效的參數處理常式，表示傳遞至 CRT 函式的無效參數只會設定 errno 並傳回錯誤結果。|
-|legacy_stdio_float_rounding.obj|n/a|使用 Windows 10 19041 通用 C 執行時列印浮點值(例如,使用[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)時)已修復。 它現在正確地舍入了完全可表示的浮點數位,並尊重[fesetenv](../c-runtime-library/reference/fesetenv1.md)要求的浮點舍入。 此行為更新在 Visual Studio 2019 版本 16.2 及更高版本中提供。 舊行為用於早期版本的 Visual Studio,或透過提供此連結選項。|
+|legacy_stdio_float_rounding .obj|n/a|已修正與 Windows 10 19041 通用 C 執行時間一起列印的浮點值（例如，使用[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)時）。 它現在會正確地舍入完全可以顯示的浮點數，並遵循[fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)所要求的浮點舍入。 此行為更新適用于 Visual Studio 2019 16.2 版和更新版本。 舊版的行為會用於舊版的 Visual Studio，或藉由提供此連結選項。|
 |loosefpmath.obj|n/a|確保浮點程式碼容許異常值。|
 |newmode.obj|pnewmode.obj|使 [malloc](../c-runtime-library/reference/malloc.md) 在失敗時呼叫新的處理常式。 請參閱 [_set_new_mode](../c-runtime-library/reference/set-new-mode.md)、[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)、[calloc](../c-runtime-library/reference/calloc.md) 和 [realloc](../c-runtime-library/reference/realloc.md)。|
 |noarg.obj|pnoarg.obj|停用所有的 argc 和 argv 處理。|
@@ -64,4 +64,4 @@ CRT lib 目錄包含多個小型物件檔案，不需要變更任何程式碼即
 
 ## <a name="see-also"></a>另請參閱
 
-- [CRT 函式庫功能](../c-runtime-library/crt-library-features.md)
+- [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

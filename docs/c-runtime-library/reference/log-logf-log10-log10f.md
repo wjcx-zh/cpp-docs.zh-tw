@@ -1,6 +1,6 @@
 ---
 title: log、logf、logl、log10、log10f、log10l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - log10f
 - logf
@@ -10,6 +10,8 @@ api_name:
 - logl
 - _o_log
 - _o_log10
+- _o_log10f
+- _o_logf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -46,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507036"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -98,7 +100,7 @@ C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long doub
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

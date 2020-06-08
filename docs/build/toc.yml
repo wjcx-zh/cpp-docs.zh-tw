@@ -567,8 +567,10 @@
                   href: ../build/reference/gs-buffer-security-check.md
                 - name: /Gs (控制堆疊檢查呼叫)
                   href: ../build/reference/gs-control-stack-checking-calls.md
-                - name: /guard (啟用控制流程防護)
+                - name: '/guard:cf (啟用控制流程防護)'
                   href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/guard:ehcont (啟用 EH 接續中繼資料)'
+                  href: ../build/reference/guard-enable-eh-continuation-metadata.md
                 - name: /GT (支援 Fiber-Safe 執行緒本機存放區)
                   href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
                 - name: /Gw (將全域資料最佳化)

@@ -1,11 +1,12 @@
 ---
 title: cos、cosf、cosl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - cos
 - cosf
 - cosl
 - _o_cos
+- _o_cosf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 1aae123de5ef03af8bcaf8480a84327f88c457c5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917235"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506893"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -80,7 +81,7 @@ long double cos( long double x );  // C++ only
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|

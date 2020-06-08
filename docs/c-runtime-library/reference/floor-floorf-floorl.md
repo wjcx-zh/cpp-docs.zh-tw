@@ -1,11 +1,12 @@
 ---
 title: floor、floorf、floorl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - floorf
 - floorl
 - floor
 - _o_floor
+- _o_floorf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911641"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506997"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -86,7 +87,7 @@ C + + 允許多載，因此您可以呼叫採用並傳回**浮點**和**長****�
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |函式|必要的標頭|
 |--------------|---------------------|

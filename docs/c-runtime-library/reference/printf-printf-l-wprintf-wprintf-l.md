@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 431c27a26fb549705abde28b08654ce47498e239
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: 73de90667479fff647e399068f9b97453819d27c
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421321"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507049"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -141,7 +141,7 @@ Line one
 通用 Windows 平臺（UWP）應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 > [!IMPORTANT]
-> 從 Windows 10 版本2004（組建19041）開始，系列的函式會 `printf` 根據用於進位的 IEEE 754 規則，列印出完全可顯示的浮點數。 在舊版的 Windows 中，精確顯示以 ' 5 ' 結尾的浮點數，一律會向上舍入。 IEEE 754 指出它們必須四捨五入到最接近的偶數（也稱為「四進位」）。 例如，1.5 和2.5 都應該四捨五入為2。 先前1.5 會四捨五入為2，2.5 會四捨五入為3。 這種變更只會影響確切的數位。 例如，2.35 （在記憶體中表示時較接近2.35000000000000008）會繼續進位至2.4。 這些函式所完成的舍入，現在也會遵循[fesetenv](fesetenv1.md)所設定的浮點舍入模式。 先前，舍入一律會選擇 FE_TONEAREST 的行為。 這種變更只會影響使用 Visual Studio 2019 16.2 版和更新版本所建立的程式。 若要使用舊版浮點舍入行為，請連結[legacy_stdio_float_rounding .obj](../link-options.md)。
+> 從 Windows 10 版本2004（組建19041）開始，系列的函式會 `printf` 根據用於進位的 IEEE 754 規則，列印出完全可顯示的浮點數。 在舊版的 Windows 中，精確顯示以 ' 5 ' 結尾的浮點數，一律會向上舍入。 IEEE 754 指出它們必須四捨五入到最接近的偶數（也稱為「四進位」）。 例如，1.5 和2.5 都應該四捨五入為2。 先前1.5 會四捨五入為2，2.5 會四捨五入為3。 這種變更只會影響確切的數位。 例如，2.35 （在記憶體中表示時較接近2.35000000000000008）會繼續進位至2.4。 這些函式所完成的舍入，現在也會遵循[fesetround](fegetround-fesetround2.md)所設定的浮點舍入模式。 先前，舍入一律會選擇 FE_TONEAREST 的行為。 這種變更只會影響使用 Visual Studio 2019 16.2 版和更新版本所建立的程式。 若要使用舊版浮點舍入行為，請連結[legacy_stdio_float_rounding .obj](../link-options.md)。
 
 ## <a name="example"></a>範例
 

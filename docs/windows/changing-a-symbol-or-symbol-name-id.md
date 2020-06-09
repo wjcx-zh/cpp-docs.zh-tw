@@ -35,29 +35,29 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 845834679bca274f1f2ca7a363b8a0681fb8f328
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215189"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623071"
 ---
 # <a name="how-to-manage-symbols"></a>如何：管理符號
 
-當您建立新的資源或資源物件時，開發環境會為其指派預設的符號名稱，例如 `IDD_DIALOG1`。 您可以使用[屬性視窗](/visualstudio/ide/reference/properties-window)來變更預設的符號名稱，或變更已與資源相關聯之任何符號的名稱。
+當您建立新的資源或資源物件時，開發環境會為其指派預設的符號名稱，例如 `IDD_DIALOG1` 。 您可以使用[屬性視窗](/visualstudio/ide/reference/properties-window)來變更預設的符號名稱，或變更已與資源相關聯之任何符號的名稱。
 
 對於與單一資源相關聯的符號，您也可以使用 [**屬性**] 視窗來變更符號值。 您可以使用 [[資源符號] 對話方塊](../windows/resource-symbols-dialog-box.md)來變更目前未指派給資源的符號值。
 
-一般來說，所有符號定義都會儲存在 `Resource.h`中。 不過，您可能需要變更這 Include 檔案名稱，好讓您可以，比方說在相同目錄中處理多個資源檔。
+一般來說，所有符號定義都會儲存在中 `Resource.h` 。 不過，您可能需要變更這 Include 檔案名稱，好讓您可以，比方說在相同目錄中處理多個資源檔。
 
 > [!NOTE]
-> 如果您的專案尚未包含 .rc 檔，請參閱[如何：建立資源](../windows/how-to-create-a-resource-script-file.md)。
+> 如果您的專案尚未包含 .rc 檔，請參閱[如何：建立資源](how-to-create-a-resource-script-file.md)。
 
 ## <a name="symbol-name-restrictions"></a>符號名稱限制
 
 符號名稱限制如下所示：
 
-- 所有[符號](../windows/symbols-resource-identifiers.md)在應用程式的範圍內都必須是唯一的，以避免標頭檔中有衝突的符號定義。
+- 所有[符號](symbols-resource-identifiers.md)在應用程式的範圍內都必須是唯一的，以避免標頭檔中有衝突的符號定義。
 
 - 符號名稱的有效字元包括 A-Z、a-z、0-9 和底線 ( _ )。
 
@@ -70,7 +70,7 @@ ms.locfileid: "80215189"
    定義符號的標頭檔是由資源編譯器/編輯器和 C++ 程式用來參考資源檔中定義的資源。 對於只有大小寫不同的兩個符號名稱，C++ 程式會將其視為兩個不同的符號，而資源編譯器/編輯器則會將這兩個名稱視為參考到單一符號。
 
 > [!NOTE]
-> 如果您未遵循下面所述的標準符號名稱配置（ID * _ [關鍵字]），而且您的符號名稱與資源腳本編譯器已知的關鍵字相同，則嘗試建立資源腳本檔會導致看似隨機的錯誤產生這很容易診斷。 若要避免這個問題，請遵守標準命名配置。
+> 如果您未遵循下面所述的標準符號名稱配置（ID * _ [關鍵字]），而且您的符號名稱與資源腳本編譯器已知的關鍵字相同，則嘗試建立資源腳本檔會導致看似隨機的錯誤產生，而很容易診斷。 若要避免這個問題，請遵守標準命名配置。
 
 符號名稱具有描述性前置詞，指出它們所代表的資源或物件種類。 這些描述性前置詞的開頭為文字組合識別碼。 Microsoft Foundation Class （MFC）程式庫會使用下表所示的符號命名慣例：
 
@@ -85,7 +85,7 @@ ms.locfileid: "80215189"
 
 ### <a name="to-change-a-symbol-name-id"></a>變更符號名稱（ID）
 
-1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中，選取資源。
+1. 在 [[資源檢視](how-to-create-a-resource-script-file.md#create-resources)中，選取資源。
 
 1. 在 [**屬性**] 視窗中，輸入新的符號名稱，或從 [**識別碼**] 方塊中的現有符號清單中選取。
 
@@ -96,7 +96,7 @@ ms.locfileid: "80215189"
 
 ## <a name="symbol-value-restrictions"></a>符號值限制
 
-符號值可以是以一般方式表示 `#define` 預處理器指示詞的任何整數。 以下是符號值的一些範例：
+符號值可以是以正常方式表示的任何整數，用於 `#define` 預處理器指示詞。 以下是符號值的一些範例：
 
 ```
 18
@@ -119,7 +119,7 @@ ms.locfileid: "80215189"
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- 您無法使用具有引數的預處理器宏做為值定義。 下列範例不是有效的運算式，不論 `ID` 在編譯時期評估為什麼：
+- 您無法使用具有引數的預處理器宏做為值定義。 下列範例不是有效的運算式，不論何時會 `ID` 在編譯時期評估為：
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
@@ -129,7 +129,7 @@ ms.locfileid: "80215189"
 
 ### <a name="to-change-a-symbol-value"></a>若要變更符號值
 
-1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中，選取資源。
+1. 在 [[資源檢視](how-to-create-a-resource-script-file.md#create-resources)中，選取資源。
 
 1. 在 [**屬性**] 視窗中，于 [**識別碼**] 方塊中輸入符號名稱，後面接著等號和整數，例如：
 
@@ -189,7 +189,7 @@ ms.locfileid: "80215189"
 
 1. 在 [**唯讀符號**指示詞] 方塊中，使用 `#include` 編譯器指示詞來指定您想要保留唯讀符號的檔案。
 
-   請勿呼叫檔案 `Resource.h`，因為這是主要符號標頭檔一般使用的檔案名。
+   不要呼叫檔案 `Resource.h` ，因為這是主要符號標頭檔通常會使用的檔案名。
 
    > [!NOTE]
    > 您在 [**唯讀符號**指示詞] 方塊中輸入的內容，會與您在資源檔中輸入的完全相同。 請確定您輸入的內容不包含任何拼字或語法錯誤。
@@ -208,12 +208,12 @@ ms.locfileid: "80215189"
 
 1. 在 [**符號標頭檔**] 方塊中，輸入 include 檔案的新名稱。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>
-[如何：建立符號](../windows/creating-new-symbols.md)<br/>
-[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>
+[資源識別碼（符號）](symbols-resource-identifiers.md)<br/>
+[如何：建立符號](creating-new-symbols.md)<br/>
+[預先定義的符號 Id](predefined-symbol-ids.md)<br/>

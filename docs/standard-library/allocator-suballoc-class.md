@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 3e5b69ef3f47a173ef768283bbae4f6e3b5f5190
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 01d282585133d55ee3f7ec96c212705c2afca9d1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458136"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617430"
 ---
-# <a name="allocatorsuballoc-class"></a>allocator_suballoc 類別
+# <a name="allocator_suballoc-class"></a>allocator_suballoc 類別
 
-描述一個物件, 它會使用[cache_suballoc](../standard-library/cache-suballoc-class.md)類型的快取來管理類型*類型*物件的儲存空間配置和釋放。
+描述一個物件，它會使用[cache_suballoc](cache-suballoc-class.md)類型的快取來管理類型*類型*物件的儲存空間配置和釋放。
 
 ## <a name="syntax"></a>語法
 
@@ -33,14 +33,14 @@ class allocator_suballoc;
 
 ## <a name="remarks"></a>備註
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)宏會傳遞此類別作為下列語句中的*name*參數:`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏會傳遞此類別做為下列語句中的*name*參數：`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭︰** \<allocators>
+**標頭：**\<allocators>
 
 **命名空間：** stdext
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

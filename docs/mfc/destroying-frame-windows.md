@@ -15,25 +15,25 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: b64298bd2b0f14c30c824d78947a17628adec8b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bc7945ecd9aee9021ce97fa3ea05f512c58fe20
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394633"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621926"
 ---
 # <a name="destroying-frame-windows"></a>終結框架視窗
 
-MFC 架構會處理視窗解構，以及建立這些 framework 文件和檢視表相關聯的視窗。 如果您建立其他的 windows 時，您必須負責破壞它們。
+MFC 架構會管理視窗的銷毀，以及與架構檔和視圖相關聯之視窗的建立。 如果您建立其他視窗，您必須負責終結它們。
 
-在架構中，當使用者關閉框架視窗時，視窗的預設[OnClose](../mfc/reference/cwnd-class.md#onclose)處理常式會呼叫[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)。 當 Windows 視窗終結時呼叫之最後一個成員函式[OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)，它會執行某些清除工作，會呼叫[預設](../mfc/reference/cwnd-class.md#default)成員函式以執行 Windows 清除，最後再呼叫虛擬成員函式[PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)。 [CFrameWnd](../mfc/reference/cframewnd-class.md)實作`PostNcDestroy`刪除C++視窗物件。 您應該永遠不會使用C++**刪除**框架視窗上的運算子。 請改用 `DestroyWindow`。
+在架構中，當使用者關閉框架視窗時，視窗的預設[OnClose](reference/cwnd-class.md#onclose)處理常式會呼叫[DestroyWindow](reference/cwnd-class.md#destroywindow)。 當 Windows 視窗終結時所呼叫的最後一個成員函式是[OnNcDestroy](reference/cwnd-class.md#onncdestroy)，它會進行一些清除，呼叫[預設](reference/cwnd-class.md#default)成員函式來執行 Windows 清除，最後再呼叫虛擬成員函式[PostNcDestroy](reference/cwnd-class.md#postncdestroy)。 的[CFrameWnd](reference/cframewnd-class.md)執行會 `PostNcDestroy` 刪除 c + + 視窗物件。 您絕對不應該在框架視窗上使用 c + + **delete**運算子。 請改用 `DestroyWindow`。
 
-當主視窗關閉時，應用程式就會關閉。 如果那里修改過但未儲存的文件，架構會顯示訊息方塊，詢問是否應該儲存文件，並可確保必要時，會儲存適當的文件。
+主視窗關閉時，應用程式會關閉。 如果有已修改的未儲存檔，此架構會顯示訊息方塊，詢問是否應儲存檔，並確保在必要時儲存適當的檔。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [建立文件框架視窗](../mfc/creating-document-frame-windows.md)
+- [建立檔框架視窗](creating-document-frame-windows.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用框架視窗](../mfc/using-frame-windows.md)
+[使用框架視窗](using-frame-windows.md)

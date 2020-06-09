@@ -7,16 +7,16 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 391cb2f6ff5673296f40e21113e3a6510f71d475
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4c2ef77e20b7dccfa8cd6830c090111601331642
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370830"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619410"
 ---
 # <a name="automation-servers"></a>Automation 伺服程式
 
-Automation 可讓您的應用程式操作另一個應用程式中實作的物件，或者公開物件，以便可以操作該物件。 自動化伺服器是一個應用程式,它向其他應用程式(稱為[自動化用戶端](../mfc/automation-clients.md))公開可程式設計物件(稱為自動化物件)。 Automation 伺服器有時稱為 Automation 元件。
+Automation 可讓您的應用程式操作另一個應用程式中實作的物件，或者公開物件，以便可以操作該物件。 Automation 伺服器是一個應用程式，會將可程式化物件（稱為 Automation 物件）公開給其他應用程式（稱為[automation 用戶端](automation-clients.md)）。 Automation 伺服器有時稱為 Automation 元件。
 
 公開 Automation 物件可讓用戶端直接存取物件以自動化某些程序以及伺服器所提供的某些功能。 以這種方式公開物件在應用程式為其他應用程式提供很有用的功能時會很有幫助。 例如，文書處理器可能會公開其拼字檢查功能，讓其他程式可以使用它。 公開物件可讓廠商使用其他應用程式的現成功能，以改善其應用程式的功能。
 
@@ -27,31 +27,31 @@ Automation 可讓您的應用程式操作另一個應用程式中實作的物件
 
 透過共用、明確定義的介面來公開應用程式功能，使得 Automation 可以在如 Microsoft Visual Basic 的單一一般程式語言中建置應用程式，而不是在不同的應用程式專屬巨集語言中進行存取。
 
-## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a>支援自動化伺服器
+## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a>Automation 伺服器的支援
 
 Visual C++ 和 MFC 架構為 Automation 伺服器提供廣泛的支援。 其中處理了許多建立 Automation 伺服器的額外工作，因此，您可以專注在應用程式的功能上。
 
 架構支援 Automation 的主要機制是分派對應，一組展開成宣告及呼叫所需 OLE 公開方法和屬性的巨集。 典型的分派對應如下所示：
 
-[!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]
+[!code-cpp[NVC_MFCAutomation#1](codesnippet/cpp/automation-servers_1.cpp)]
 
-[類嚮導](reference/mfc-class-wizard.md)和類視圖有助於維護調度映射。 向類添加新方法或屬性時,Visual Studio 會添加一`DISP_FUNCTION`個`DISP_PROPERTY`相應的或宏,其中參數指示類名稱、方法或屬性的外部和內部名稱以及數據類型。
+[類別 Wizard](reference/mfc-class-wizard.md)和類別檢視協助維護分派對應。 當您將新的方法或屬性加入至類別時，Visual Studio 會加入對應的 `DISP_FUNCTION` 或 `DISP_PROPERTY` 宏，其中包含表示類別名稱、方法或屬性的外部和內部名稱，以及資料類型的參數。
 
-**"添加類"** 對話框還簡化了自動化類的聲明及其屬性和操作的管理。 當您使用 [加入類別] 對話方塊將類別加入至專案時，您會指定它的基底類別。 如果基底類別允許 Automation，[加入類別] 對話方塊會顯示一些控制項，可供您用來指定新的類別是否應支援 Automation、它是否「可建立 OLE」(即是否可在 COM 用戶端的要求上建立類別的物件)，以及要使用的 COM 用戶端的外部名稱。
+[**加入類別**] 對話方塊也會簡化 Automation 類別的宣告，以及其屬性和作業的管理。 當您使用 [加入類別] 對話方塊將類別加入至專案時，您會指定它的基底類別。 如果基底類別允許 Automation，[加入類別] 對話方塊會顯示一些控制項，可供您用來指定新的類別是否應支援 Automation、它是否「可建立 OLE」(即是否可在 COM 用戶端的要求上建立類別的物件)，以及要使用的 COM 用戶端的外部名稱。
 
-然後,「**添加類」** 對話框將創建類聲明,包括指定 OLE 功能的相應宏。 它也會加入類別成員函式實作的基本架構程式碼。
+[**加入類別**] 對話方塊接著會建立一個類別宣告，包括您指定之 OLE 功能的適當宏。 它也會加入類別成員函式實作的基本架構程式碼。
 
-[MFC 應用程式精靈] 簡化了取得您的 Automation 伺服器應用程式所需的步驟。 如果從 **「進階功能」**`InitInstance`頁面中選擇 **「自動化**」複選框,則 MFC 應用程式精靈會向應用程式的功能添加註冊自動化物件並將應用程式作為自動化伺服器運行所需的調用。
+[MFC 應用程式精靈] 簡化了取得您的 Automation 伺服器應用程式所需的步驟。 如果您從 [ **Advanced Features** ] 頁面選取 [ **Automation** ] 核取方塊，[MFC 應用程式精靈] 會將呼叫所需的呼叫加入至應用程式的函 `InitInstance` 式，以註冊您的 Automation 物件，並以 Automation 伺服器的形式執行應用程式。
 
-### <a name="what-do-you-want-to-do"></a>你想做什麼
+### <a name="what-do-you-want-to-do"></a>您想要做什麼
 
-- [了解 Automation 用戶端](../mfc/automation-clients.md)
+- [了解 Automation 用戶端](automation-clients.md)
 
-- [進一步了解 CCmdTarget 類別](../mfc/reference/ccmdtarget-class.md)
+- [進一步了解 CCmdTarget 類別](reference/ccmdtarget-class.md)
 
-- [進一步了解 COleDispatchDriver 類別](../mfc/reference/coledispatchdriver-class.md)
+- [進一步了解 COleDispatchDriver 類別](reference/coledispatchdriver-class.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[自動化](../mfc/automation.md)<br/>
-[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
+[自動化](automation.md)<br/>
+[MFC 應用程式精靈](reference/mfc-application-wizard.md)

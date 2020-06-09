@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246542"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620918"
 ---
-# <a name="1-object"></a>_1 物件
+# <a name="_1-object"></a>_1 物件
 
 可取代引數的預留位置。
 
@@ -29,7 +29,7 @@ namespace placeholders {
 
 ## <a name="remarks"></a>備註
 
-物件`_1, _2, ... _M`會指定第一次，第二個、...、 第 m 個引數，分別在函式呼叫所傳回的物件預留位置[繫結](../standard-library/functional-functions.md#bind)。 您可以使用 `_N` 來指定在評估繫結運算式時，應該插入第 N 個引數的位置。
+這些物件 `_1, _2, ... _M` 是預留位置，分別用來指定系結所傳回之物件的函式呼叫中的第一個、第二個、 [ ](functional-functions.md#bind)...、Mth 引數。 您可以使用 `_N` 來指定在評估繫結運算式時，應該插入第 N 個引數的位置。
 
 在此實作中，`M` 的值為 20。
 

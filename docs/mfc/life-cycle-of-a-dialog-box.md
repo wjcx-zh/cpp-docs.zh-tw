@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: ad15250cf9a8dd663072cf9423263260bbb40a0e
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d365be21ef19a6779df649e9368fdc0cda4851df
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685722"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621440"
 ---
 # <a name="working-with-dialog-boxes-in-mfc"></a>在 MFC 中使用對話方塊
 
@@ -25,30 +25,30 @@ ms.locfileid: "71685722"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [建立和顯示對話方塊](../mfc/creating-and-displaying-dialog-boxes.md)
+- [建立和顯示對話方塊](creating-and-displaying-dialog-boxes.md)
 
-- [建立強制回應對話方塊](../mfc/creating-modal-dialog-boxes.md)
+- [建立強制回應對話方塊](creating-modal-dialog-boxes.md)
 
-- [建立非強制回應對話方塊](../mfc/creating-modeless-dialog-boxes.md)
+- [建立非強制回應對話方塊](creating-modeless-dialog-boxes.md)
 
-- [使用記憶體中的對話方塊範本](../mfc/using-a-dialog-template-in-memory.md)
+- [使用記憶體中的對話方塊範本](using-a-dialog-template-in-memory.md)
 
-- [設定對話方塊的背景色彩](../mfc/setting-the-dialog-boxs-background-color.md)
+- [設定對話方塊的背景色彩](setting-the-dialog-boxs-background-color.md)
 
-- [初始化對話方塊](../mfc/initializing-the-dialog-box.md)
+- [初始化對話方塊](initializing-the-dialog-box.md)
 
-- [處理對話方塊中的 Windows 訊息](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [處理對話方塊中的 Windows 訊息](handling-windows-messages-in-your-dialog-box.md)
 
-- [正在從 dialog 物件中抓取資料](../mfc/retrieving-data-from-the-dialog-object.md)
+- [正在從 dialog 物件中抓取資料](retrieving-data-from-the-dialog-object.md)
 
-- [關閉對話方塊](../mfc/closing-the-dialog-box.md)
+- [關閉對話方塊](closing-the-dialog-box.md)
 
-- [終結對話方塊](../mfc/destroying-the-dialog-box.md)
+- [終結對話方塊](destroying-the-dialog-box.md)
 
-- [對話方塊資料交換（DDX）和驗證（DDV）](../mfc/dialog-data-exchange-and-validation.md)
+- [對話方塊資料交換（DDX）和驗證（DDV）](dialog-data-exchange-and-validation.md)
 
-- [屬性工作表對話方塊](../mfc/property-sheets-and-property-pages-mfc.md)
+- [屬性工作表對話方塊](property-sheets-and-property-pages-mfc.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊](../mfc/dialog-boxes.md)
+[對話方塊](dialog-boxes.md)

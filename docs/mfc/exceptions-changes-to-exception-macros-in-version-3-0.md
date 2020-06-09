@@ -7,59 +7,59 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 82320b0c7ccd6766e016f0437633339f8f8f61d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25095257096efd869e237383c5cd202ae4e602c2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365499"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620175"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外狀況：3.0 版例外狀況巨集的變更
 
-這是一個高級主題。
+這是一個先進的主題。
 
-在 MFC 版本 3.0 及更高版本中,異常處理宏已更改為使用C++異常。 本文介紹這些更改如何影響使用宏的現有代碼的行為。
+在 MFC 版本3.0 和更新版本中，例外狀況處理宏已變更為使用 c + + 例外狀況。 本文說明這些變更會如何影響使用宏之現有程式碼的行為。
 
 本文章涵蓋下列主題：
 
-- [例外類型和 CATCH 宏](#_core_exception_types_and_the_catch_macro)
+- [例外狀況類型和 CATCH 宏](#_core_exception_types_and_the_catch_macro)
 
-- [重新引發異常](#_core_re.2d.throwing_exceptions)
+- [重新擲回例外狀況](#_core_re.2d.throwing_exceptions)
 
-## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>例外類型和 CATCH 宏
+## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>例外狀況類型和 CATCH 宏
 
-在早期版本的 MFC 中 **,CATCH**宏使用 MFC 運行時類型資訊來確定異常的類型;異常的類型在捕獲網站確定,換句話說。 但是,對於C++異常,異常的類型始終由引發的異常對象的類型在引發網站中確定。 在極少數情況下,指向引發物件的指標類型與引發物件的類型不同,這將導致不相容。
+在舊版的 MFC 中， **CATCH**宏會使用 MFC 執行時間類型資訊來判斷例外狀況的類型。例外狀況的型別是在 catch 網站上決定，換句話說， 不過，使用 c + + 例外狀況時，例外狀況的型別一律是由擲回之例外狀況物件的型別來決定。 這會造成不相容的情況，也就是擲回之物件的指標類型與擲回之物件的類型不同。
 
-下面的範例說明了 MFC 版本 3.0 和早期版本之間的這種差異的後果:
+下列範例說明 MFC 3.0 版和更早版本之間這項差異的結果：
 
-[!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#1](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-此代碼在版本 3.0 中的行為不同,因為控件始終通過匹配的異常聲明傳遞到第一個**catch**塊。 引發表示式的結果
+此程式碼在版本3.0 中的行為不同，因為控制項一律會傳遞至具有相符例外狀況宣告的第一個**catch**區塊。 Throw 運算式的結果
 
-[!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
+[!code-cpp[NVC_MFCExceptions#19](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
-被拋出為`CException*`,即使它建構為`CCustomException`。 MFC 版本 2.5 和更`CObject::IsKindOf`早版本的**CATCH**宏用於在運行時測試類型。 因為運算式
+會擲回為 `CException*` ，即使它被視為 `CCustomException` 。 MFC 版本2.5 和舊版中的**CATCH**宏會使用 `CObject::IsKindOf` ，在執行時間測試類型。 因為運算式
 
-[!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#20](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
-為 true,第一個 catch 塊捕獲異常。 在版本 3.0 中,使用C++個異常來實現許多異常處理宏,第二個 catch`CException`塊與引發的操作匹配 。
+為 true，第一個 catch 區塊會捕捉例外狀況。 在3.0 版中，使用 c + + 例外狀況來執行許多例外狀況處理宏，第二個 catch 區塊符合擲回的 `CException` 。
 
-像這樣的代碼並不常見。 當異常物件傳遞給接受泛型`CException*`的另一個函數,執行"預引發"處理,最後引發異常時,通常會出現異常。
+這類程式碼很罕見。 當例外狀況物件傳遞至另一個接受泛型的函式時，通常會出現此情況 `CException*` ，並執行「預先擲回」處理，最後會擲回例外狀況。
 
-要解決此問題,請將 throw 表達式從函數移動到調用代碼,並引發編譯器在生成異常時已知的實際類型的異常。
+若要解決這個問題，請將擲回運算式從函式移至呼叫程式碼，並在產生例外狀況時擲回編譯器已知的實際類型例外狀況。
 
-## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>重新引發異常
+## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>重新擲回例外狀況
 
-catch 塊無法引發捕獲的異常指標。
+Catch 區塊無法擲回它所攔截到的相同例外狀況指標。
 
-例如,此代碼在以前的版本中有效,但在版本 3.0 中會有意外的結果:
+例如，此程式碼在舊版中是有效的，但在3.0 版中將會有非預期的結果：
 
-[!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
+[!code-cpp[NVC_MFCExceptions#2](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
 
-在 catch 塊中使用**THROW**`e`會導致刪除指標,以便外部捕獲網站將接收無效的指標。 使用**THROW_LAST**重新`e`引發 。
+在 catch 區塊中使用**THROW**會導致 `e` 刪除指標，因此外部 catch 網站會收到不正確指標。 請使用**THROW_LAST**來重新擲回 `e` 。
 
-有關詳細資訊,請參閱[異常:捕獲和刪除異常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+如需詳細資訊，請參閱[例外狀況：攔截及刪除例外](exceptions-catching-and-deleting-exceptions.md)狀況。
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況處理](../mfc/exception-handling-in-mfc.md)
+[例外狀況處理](exception-handling-in-mfc.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet classes
 ms.assetid: e50c6b39-4b65-4b8a-8101-8934d0780723
-ms.openlocfilehash: dd8e85d236f451c2d6e5e03ed3495cf02f5f3ba7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c784e9ae98e2fb51a31521511967b1755c3ea12
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389420"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621628"
 ---
 # <a name="internet-related-mfc-classes"></a>網際網路相關的 MFC 類別
 
-網際網路相關的類別和函式的相關資訊，請參閱：
+如需有關網際網路相關類別和功能的詳細資訊，請參閱：
 
 ## <a name="global-functions"></a>全域函式
 
@@ -23,48 +23,48 @@ ms.locfileid: "62389420"
 
 ## <a name="activex-control-classes"></a>ActiveX 控制項類別
 
-- [COleControl](../mfc/reference/colecontrol-class.md)
+- [COleControl](reference/colecontrol-class.md)
 
 ## <a name="active-document-classes"></a>主動式文件類別
 
-- [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)
+- [CDocObjectServer](reference/cdocobjectserver-class.md)
 
-- [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)
+- [CDocObjectServerItem](reference/cdocobjectserveritem-class.md)
 
-## <a name="asynchronous-moniker-classes"></a>非同步 moniker 類別
+## <a name="asynchronous-moniker-classes"></a>非同步標記類別
 
-- [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)
+- [CAsyncMonikerFile](reference/casyncmonikerfile-class.md)
 
-- [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)
+- [CDataPathProperty](reference/cdatapathproperty-class.md)
 
 ## <a name="wininet-classes"></a>WinInet 類別
 
-- [CInternetSession](../mfc/reference/cinternetsession-class.md)
+- [CInternetSession](reference/cinternetsession-class.md)
 
-- [CInternetConnection](../mfc/reference/cinternetconnection-class.md)
+- [CInternetConnection](reference/cinternetconnection-class.md)
 
-- [CFtpConnection](../mfc/reference/cftpconnection-class.md)
+- [CFtpConnection](reference/cftpconnection-class.md)
 
-- [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
+- [CGopherConnection](reference/cgopherconnection-class.md)
 
-- [CHttpConnection](../mfc/reference/chttpconnection-class.md)
+- [CHttpConnection](reference/chttpconnection-class.md)
 
-- [CInternetFile](../mfc/reference/cinternetfile-class.md)
+- [CInternetFile](reference/cinternetfile-class.md)
 
-- [CGopherFile](../mfc/reference/cgopherfile-class.md)
+- [CGopherFile](reference/cgopherfile-class.md)
 
-- [CHttpFile](../mfc/reference/chttpfile-class.md)
+- [CHttpFile](reference/chttpfile-class.md)
 
-- [CFileFind](../mfc/reference/cfilefind-class.md)
+- [CFileFind](reference/cfilefind-class.md)
 
-- [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
+- [CFtpFileFind](reference/cftpfilefind-class.md)
 
-- [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
+- [CGopherFileFind](reference/cgopherfilefind-class.md)
 
-- [CGopherLocator](../mfc/reference/cgopherlocator-class.md)
+- [CGopherLocator](reference/cgopherlocator-class.md)
 
-- [CInternetException](../mfc/reference/cinternetexception-class.md)
+- [CInternetException](reference/cinternetexception-class.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
+[MFC 網際網路程式設計基本概念](mfc-internet-programming-basics.md)

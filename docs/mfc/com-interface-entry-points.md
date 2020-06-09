@@ -9,22 +9,22 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 132dd7394119081dcaeb098c2088782ff5d40ae4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619333"
 ---
 # <a name="com-interface-entry-points"></a>COM 介面進入點
 
-COM 介面的成員函式，使用`METHOD_PROLOGUE`巨集維護適當的全域狀態，當呼叫匯出介面的方法。
+若為 COM 介面的成員函式，請在 `METHOD_PROLOGUE` 呼叫匯出介面的方法時，使用宏來維護適當的全域狀態。
 
-通常 `CCmdTarget` 衍生物件所實作介面的成員函式，已使用此巨集來提供 `pThis` 指標的自動初始化。 例如: 
+通常 `CCmdTarget` 衍生物件所實作介面的成員函式，已使用此巨集來提供 `pThis` 指標的自動初始化。 例如：
 
-[!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#5](codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
-如需詳細資訊，請參閱[技術提示 38](../mfc/tn038-mfc-ole-iunknown-implementation.md)關於 MFC/OLE`IUnknown`實作。
+如需其他資訊，請參閱 MFC/OLE 執行[技術提示 38](tn038-mfc-ole-iunknown-implementation.md) `IUnknown` 。
 
 `METHOD_PROLOGUE` 巨集定義如下：
 
@@ -39,8 +39,8 @@ COM 介面的成員函式，使用`METHOD_PROLOGUE`巨集維護適當的全域�
 
 `AFX_MANAGE_STATE( pThis->m_pModuleState )`
 
-在此運算式中， *m_pModuleState*假設為與包含物件的成員變數。 將物件具現話化時，運算式會由 `CCmdTarget` 基底類別實作，並且由 `COleObjectFactory` 初始化為適當的值。
+在此運算式中，會假設*m_pModuleState*是包含物件的成員變數。 將物件具現話化時，運算式會由 `CCmdTarget` 基底類別實作，並且由 `COleObjectFactory` 初始化為適當的值。
 
 ## <a name="see-also"></a>另請參閱
 
-[管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
+[管理 MFC 模組的狀態資料](managing-the-state-data-of-mfc-modules.md)

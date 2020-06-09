@@ -7,39 +7,39 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c34f6fccd06635dfb686e6eb1f2cf895bb86989
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254358"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626074"
 ---
 # <a name="automation-clients"></a>Automation 用戶端
 
-Automation 可讓您的應用程式操作另一個應用程式中實作的物件，或者公開物件，以便可以操作該物件。 Automation 用戶端是可以操作公開的物件屬於另一個應用程式的應用程式。 會將物件公開的應用程式稱為 Automation 伺服程式。 用戶端存取這些物件的屬性和函式操控伺服器應用程式的物件。
+Automation 可讓您的應用程式操作另一個應用程式中實作的物件，或者公開物件，以便可以操作該物件。 Automation 用戶端是一種應用程式，可以操控屬於另一個應用程式的公開物件。 公開物件的應用程式稱為 Automation 伺服器。 用戶端會藉由存取這些物件的屬性和函式來操作伺服器應用程式的物件。
 
-### <a name="types-of-automation-clients"></a>Automation 用戶端的類型
+### <a name="types-of-automation-clients"></a>自動化用戶端的類型
 
-有兩種類型的 Automation 用戶端：
+自動化用戶端有兩種類型：
 
-- 用戶端，以動態方式 （在執行階段） 中取得的屬性和作業之伺服器的相關資訊。
+- 以動態方式（在執行時間）取得伺服器屬性和作業相關資訊的用戶端。
 
-- 擁有靜態資訊 （在編譯時期提供），指定的屬性和作業之伺服器的用戶端。
+- 擁有指定伺服器屬性和作業之靜態資訊（在編譯時期提供）的用戶端。
 
-第一類的用戶端取得有關伺服器的方法和屬性的資訊，藉由查詢 OLE 系統`IDispatch`機制。 雖然它是動態的用戶端，請使用適當`IDispatch`很難用於靜態的用戶端，其中的物件被驅動必須知道在編譯時間。 Microsoft Foundation classes 的靜態繫結的用戶端，提供[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)類別。
+第一種類型的用戶端會藉由查詢 OLE 系統的機制，取得伺服器的方法和屬性的相關資訊 `IDispatch` 。 雖然它適合用於動態用戶端，但很 `IDispatch` 難以用於靜態用戶端，在此情況下，所驅動的物件必須在編譯階段為已知。 若為靜態系結用戶端，Microsoft Foundation 類別會提供[COleDispatchDriver](reference/coledispatchdriver-class.md)類別。
 
-靜態繫結的用戶端會使用用戶端應用程式中的 proxy 類別，以靜態方式連結。 這個類別會提供類型安全C++封裝的伺服器應用程式的屬性和作業。
+靜態系結用戶端會使用以靜態方式與用戶端應用程式連結的 proxy 類別。 這個類別會為伺服器應用程式的屬性和作業提供型別安全的 c + + 封裝。
 
-此類別`COleDispatchDriver`提供自動化的用戶端的主要支援。 使用**加入新項目** 對話方塊中，您會建立一個衍生自類別`COleDispatchDriver`。
+類別會 `COleDispatchDriver` 為自動化的用戶端提供主體支援。 使用 [**加入新專案**] 對話方塊，您可以建立衍生自的類別 `COleDispatchDriver` 。
 
-然後，您會指定描述的屬性和函式的伺服器應用程式的物件型別程式庫檔案。 [加入項目] 對話方塊中讀取此檔案，並建立`COleDispatchDriver`-衍生的類別，您的應用程式可以呼叫來存取伺服器應用程式的物件中的成員函式與C++型別安全的方式。 其他功能會繼承自`COleDispatchDriver`簡化呼叫適當的 Automation 伺服器的程序。
+接著，您可以指定類型程式庫檔案，描述伺服器應用程式物件的屬性和功能。 [加入專案] 對話方塊會讀取這個檔案，並建立 `COleDispatchDriver` 衍生類別，其中包含您的應用程式可以呼叫的成員函式，以型別安全的方式存取 c + + 中伺服器應用程式的物件。 繼承自的其他功能會 `COleDispatchDriver` 簡化呼叫適當 Automation 伺服器的程式。
 
-### <a name="handling-events-in-automation-clients"></a>在 Automation 用戶端中處理事件
+### <a name="handling-events-in-automation-clients"></a>處理 Automation 用戶端中的事件
 
-如果您想要在您的自動化用戶端中處理事件，您需要新增接收器介面。 MFC 提供新增接收器介面，ActiveX 控制項，但支援其他 COM 伺服器的精靈支援。
+如果您想要在 automation 用戶端中處理事件，您需要新增接收介面。 MFC 提供的 wizard 支援可新增 ActiveX 控制項的接收介面，但不支援其他 COM 伺服器。
 
 ## <a name="see-also"></a>另請參閱
 
-[Automation 用戶端：使用類型程式庫](../mfc/automation-clients-using-type-libraries.md)<br/>
-[Automation](../mfc/automation.md)<br/>
-[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
+[Automation 用戶端：使用型別程式庫](automation-clients-using-type-libraries.md)<br/>
+[自動化](automation.md)<br/>
+[MFC 應用程式精靈](reference/mfc-application-wizard.md)

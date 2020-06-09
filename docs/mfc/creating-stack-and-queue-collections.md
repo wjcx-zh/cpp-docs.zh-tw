@@ -11,16 +11,16 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 5b3427f7bb2e46435ddf2768bcbb816f9d7e5c1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5db90422f78fc6ca3bc2a182f9569c33db56cad1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371598"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623212"
 ---
 # <a name="creating-stack-and-queue-collections"></a>建立堆疊和佇列集合
 
-本文介紹如何從 MFC 清單類建立其他資料結構,如[堆疊](#_core_stacks)和[佇列](#_core_queues)。 這些範例會使用衍生自 `CList` 的類別，不過除非您需要新增其他功能，否則您可以直接使用 `CList`。
+本文說明如何從 MFC 清單類別建立其他資料結構，例如[堆疊](#_core_stacks)和[佇列](#_core_queues)。 這些範例會使用衍生自 `CList` 的類別，不過除非您需要新增其他功能，否則您可以直接使用 `CList`。
 
 ## <a name="stacks"></a><a name="_core_stacks"></a>棧
 
@@ -32,7 +32,7 @@ ms.locfileid: "81371598"
 
    下列範例顯示如何加入成員函式，以推入項目至堆疊、檢視堆疊的最上層項目，並從堆疊最上方彈出項目：
 
-   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 請注意，這種方法會公開基礎 `CObList` 類別。 使用者可以呼叫任何 `CObList` 成員函式，無論它是否對堆疊具有意義。
 
@@ -46,8 +46,8 @@ ms.locfileid: "81371598"
 
    下列範例顯示如何附加成員函式，將項目加入至佇列的末端，並從佇列的前端取得項目。
 
-   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>另請參閱
 
-[集合](../mfc/collections.md)
+[集合](collections.md)

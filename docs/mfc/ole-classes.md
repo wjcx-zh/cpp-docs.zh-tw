@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 69eb604b3a343fd135c76a4bb3c17245ece62092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617845"
 ---
 # <a name="ole-classes"></a>OLE 類別
 
@@ -32,24 +32,24 @@ OLE 類別可與其他應用程式架構類別搭配使用，讓您輕鬆存取 
 
 以下分類的類別支援 ActiveX：
 
-- [OLE 容器類別](../mfc/ole-container-classes.md)
+- [OLE 容器類別](ole-container-classes.md)
 
-- [OLE 伺服器類別](../mfc/ole-server-classes.md)
+- [OLE 伺服器類別](ole-server-classes.md)
 
-- [OLE 拖放和資料傳輸類別](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)
+- [OLE 拖放和資料傳輸類別](ole-drag-and-drop-and-data-transfer-classes.md)
 
-- [OLE 通用對話方塊類別](../mfc/ole-common-dialog-classes.md)
+- [OLE 通用對話方塊類別](ole-common-dialog-classes.md)
 
-- [OLE Automation 類別](../mfc/ole-automation-classes.md)
+- [OLE Automation 類別](ole-automation-classes.md)
 
-- [OLE 控制項類別](../mfc/ole-control-classes.md)
+- [OLE 控制項類別](ole-control-classes.md)
 
-- [主動式文件類別](../mfc/active-document-classes.md)
+- [主動式文件類別](active-document-classes.md)
 
-- [OLE 相關類別](../mfc/ole-related-classes.md)
+- [OLE 相關類別](ole-related-classes.md)
 
-若要查看類別繼承，請使用[類別階層架構圖表](../mfc/hierarchy-chart.md)。
+若要查看類別的繼承，請使用類別階層架構[圖表](hierarchy-chart.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別概觀](class-library-overview.md)

@@ -7,29 +7,29 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297238"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621855"
 ---
 # <a name="destroying-window-objects"></a>終結視窗物件
 
-必須小心使用您自己的子視窗終結C++當使用者已完成與視窗的視窗物件。 不會終結這些物件，如果您的應用程式將不會復原其記憶體。 幸運的是，架構會處理視窗解構為建立框架視窗、 檢視和對話方塊。 如果您建立其他的 windows 時，您必須負責破壞它們。
+當使用者完成視窗時，必須小心使用您自己的子視窗來摧毀 c + + 視窗物件。 如果未終結這些物件，您的應用程式將無法復原其記憶體。 幸好，此架構會管理視窗銷毀，以及框架視窗、視圖和對話方塊的建立。 如果您建立其他視窗，您必須負責終結它們。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [視窗解構序列](../mfc/window-destruction-sequence.md)
+- [視窗銷毀順序](window-destruction-sequence.md)
 
-- [配置和解除配置視窗記憶體](../mfc/allocating-and-deallocating-window-memory.md)
+- [配置和解除配置視窗記憶體](allocating-and-deallocating-window-memory.md)
 
-- [中斷連結從 HWND CWnd](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [從 HWND 卸離 CWnd](detaching-a-cwnd-from-its-hwnd.md)
 
-- [一般視窗建立順序](../mfc/general-window-creation-sequence.md)
+- [一般視窗建立順序](general-window-creation-sequence.md)
 
-- [終結框架視窗](../mfc/destroying-frame-windows.md)
+- [終結框架視窗](destroying-frame-windows.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[視窗物件](../mfc/window-objects.md)
+[視窗物件](window-objects.md)

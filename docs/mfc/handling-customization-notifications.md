@@ -47,18 +47,18 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: 67f40d0dc50a853a39cb9b60a938d8eafe8293c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d88e1efe12fd5b31a9f78b8fe439ba1aefa72d1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370479"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625719"
 ---
 # <a name="handling-customization-notifications"></a>處理自訂告知
 
 Windows 工具列通用控制項內建自訂功能 (包括系統定義的自訂對話方塊)，可讓使用者插入、刪除或重新排列工具列按鈕。 應用程式會判斷是否可以使用自訂功能，並控制使用者可自訂工具列的範圍。
 
-通過為工具列提供**CCS_ADJUSTABLE**樣式,可以使這些自定義功能可供使用者使用。 自訂功能可讓使用者將按鈕拖曳至新的位置，或者拖曳出工具列以移除按鈕。 此外，使用者可以按兩下工具列顯示 [自訂工具列] **** 對話方塊，讓使用者加入、刪除及重新排列工具列按鈕。 應用程式可以使用 [自訂] [](../mfc/reference/ctoolbarctrl-class.md#customize) 成員函式來顯示此對話方塊。
+您可以將這些自訂功能提供給使用者，方法是為工具列提供**CCS_ADJUSTABLE**樣式。 自訂功能可讓使用者將按鈕拖曳至新的位置，或者拖曳出工具列以移除按鈕。 此外，使用者可以按兩下工具列顯示 [自訂工具列] **** 對話方塊，讓使用者加入、刪除及重新排列工具列按鈕。 應用程式可以使用 [自訂] [](reference/ctoolbarctrl-class.md#customize) 成員函式來顯示此對話方塊。
 
 工具列控制項會在自訂程序中的每個步驟，將通知訊息傳送至父視窗。 如果使用者按住 SHIFT 鍵並開始拖曳按鈕，工具列會自動處理拖曳作業。 工具列會將 **TBN_QUERYDELETE** 通知訊息傳送至父視窗，以判斷是否可刪除此按鈕。 如果父視窗傳回 **FALSE**，則結束拖曳作業。 否則，工具列會擷取滑鼠輸入，並等候使用者放開滑鼠按鈕。
 
@@ -88,7 +88,7 @@ ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 
    傳送通知之控制項的識別項。
 
-- **成員Fxn**
+- **memberFxn**
 
    收到這則通知時所要呼叫的成員函式。
 
@@ -114,13 +114,13 @@ typedef struct tagNMHDR {
 
 - **hwndFrom**
 
-   傳送通知之控制項的視窗控制代碼。 若要將這個控制代碼轉換成 `CWnd` 指標，請使用 [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle)。
+   傳送通知之控制項的視窗控制代碼。 若要將這個控制代碼轉換成 `CWnd` 指標，請使用 [CWnd::FromHandle](reference/cwnd-class.md#fromhandle)。
 
 - **idFrom**
 
    傳送通知之控制項的識別項。
 
-- **代碼**
+- **code**
 
    通知碼。 這個成員可以是控制項類型的特定值 (例如 **TBN_BEGINADJUST** 或 **TTN_NEEDTEXT**)，也可以是下列其中一個一般通知值：
 
@@ -162,7 +162,7 @@ typedef struct {
 
 - **tbButton**
 
-   包含與通知關聯的工具列按鈕的資訊的**TBBUTTON**結構。
+   **TBBUTTON**結構，其中包含與通知相關聯之工具列按鈕的資訊。
 
 - **cchText**
 
@@ -176,45 +176,45 @@ typedef struct {
 
 - **TBN_BEGINADJUST**
 
-   當用戶開始自定義工具列控制件時發送。 指向包含通知資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
+   當使用者開始自訂工具列控制項時傳送。 指向包含通知資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
 
 - **TBN_BEGINDRAG**
 
-   當用戶開始拖動工具列控制中的按鈕時發送。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要拖曳的按鈕之以零為起始的索引。 此處理常式不需要傳回任何特定值。
+   當使用者開始拖曳工具列控制項中的按鈕時傳送。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要拖曳的按鈕之以零為起始的索引。 此處理常式不需要傳回任何特定值。
 
 - **TBN_CUSTHELP**
 
-   當使用者在「自訂工具列」對話框中選擇「説明」按鈕時發送。 沒有傳回值。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
+   當使用者在 [自訂工具列] 對話方塊中選擇 [說明] 按鈕時傳送。 沒有傳回值。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
 
 - **TBN_ENDADJUST**
 
-   當使用者停止自定義工具列控制件時發送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
+   當使用者停止自訂工具列控制項時傳送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
 
 - **TBN_ENDDRAG**
 
-   當使用者停止拖動工具列控制程式中的按鈕時發送。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要拖曳的按鈕之以零為起始的索引。 此處理常式不需要傳回任何特定值。
+   當使用者停止拖曳工具列控制項中的按鈕時傳送。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要拖曳的按鈕之以零為起始的索引。 此處理常式不需要傳回任何特定值。
 
 - **TBN_GETBUTTONINFO**
 
-   在使用者自定義工具列控件時發送。 工具列會使用這項通知訊息，來擷取 [自訂工具列] 對話方塊所需的資訊。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員指定按鈕之以零為起始的索引。 **pszText** 和 **cchText** 成員指定目前按鈕文字的的位址和長度 (以字元為單位)。 應用程式應該以按鈕的相關資訊填入結構。 如果按鈕資訊已複製到結構，則傳回 **TRUE** ；否則傳回 **FALSE** 。
+   在使用者自訂工具列控制項時傳送。 工具列會使用這項通知訊息，來擷取 [自訂工具列] 對話方塊所需的資訊。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員指定按鈕之以零為起始的索引。 **pszText** 和 **cchText** 成員指定目前按鈕文字的的位址和長度 (以字元為單位)。 應用程式應該以按鈕的相關資訊填入結構。 如果按鈕資訊已複製到結構，則傳回 **TRUE** ；否則傳回 **FALSE** 。
 
 - **TBN_QUERYDELETE**
 
-   在使用者自定義工具列以確定是否可以從工具列控件中刪除按鈕時發送。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要刪除的按鈕之以零為起始的索引。 傳回 **TRUE** 表示可刪除按鈕，傳回 **FALSE** 表示無法刪除按鈕。
+   在使用者自訂工具列時傳送，以判斷是否可從工具列控制項中刪除按鈕。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要刪除的按鈕之以零為起始的索引。 傳回 **TRUE** 表示可刪除按鈕，傳回 **FALSE** 表示無法刪除按鈕。
 
 - **TBN_QUERYINSERT**
 
-   在使用者自定義工具列控制項以確定是否可以將按鈕插入到給定按鈕左側時發送。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要插入的按鈕之以零為起始的索引。 傳回 **TRUE** 表示可在指定按鈕之前插入按鈕，傳回 **FALSE** 表示無法插入按鈕。
+   在使用者自訂工具列控制項時傳送，以判斷是否可以在指定按鈕的左邊插入按鈕。 指向 **TBNOTIFY** 結構的指標。 **iItem** 成員包含所要插入的按鈕之以零為起始的索引。 傳回 **TRUE** 表示可在指定按鈕之前插入按鈕，傳回 **FALSE** 表示無法插入按鈕。
 
 - **TBN_RESET**
 
-   當用戶重置「自訂工具列」對話框的內容時發送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
+   當使用者重設 [自訂工具列] 對話方塊的內容時傳送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
 
 - **TBN_TOOLBARCHANGE**
 
-   在使用者自定義工具列控件後發送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
+   在使用者自訂工具列控制項之後傳送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[控制項](controls-mfc.md)

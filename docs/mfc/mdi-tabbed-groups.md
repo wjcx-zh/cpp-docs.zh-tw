@@ -5,18 +5,18 @@ helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c1bf925003d5081b2cdc837012a57585b1ace60
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310835"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624367"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI 索引標籤式群組
 
-多個文件介面 (MDI) 索引標籤式的群組功能可讓多個文件介面 (MDI) 應用程式，以顯示一或多個索引標籤式的視窗 (或群組的索引標籤式視窗，稱為*索引標籤式群組*) 在 MDI 工作區中。 索引視窗可以垂直或水平對齊。 如果應用程式裝載多個 MDI 索引群組，則群組會以分隔器分隔。
+多重文件介面（MDI）索引標籤式群組功能可讓多重文件介面（MDI）應用程式在 MDI 工作區中顯示一或多個索引標籤式視窗（或索引標籤式視窗，稱為索引標籤*式群組*）。 索引視窗可以垂直或水平對齊。 如果應用程式裝載多個 MDI 索引群組，則群組會以分隔器分隔。
 
-## <a name="features"></a>功能
+## <a name="features"></a>特性
 
 以下是 MDI 索引群組的功能：
 
@@ -42,7 +42,7 @@ ms.locfileid: "62310835"
 
 以下是經常以 MDI 索引群組執行的工作：
 
-- 若要啟用的主框架視窗的 MDI 索引群組，請呼叫[cmdiframewndex:: Enablemditabbedgroups](../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)。 此方法的第二個參數是 `CMDITabInfo` 類別的執行個體。 在呼叫 `CMDIFrameWndEx::EnableMDITabbedGroups`之前，您可以使用預設參數或加以修改。
+- 若要針對主框架視窗啟用 MDI 索引標籤式群組，請呼叫[CMDIFrameWndEx：： EnableMDITabbedGroups](reference/cmdiframewndex-class.md#enablemditabbedgroups)。 此方法的第二個參數是 `CMDITabInfo` 類別的執行個體。 在呼叫 `CMDIFrameWndEx::EnableMDITabbedGroups`之前，您可以使用預設參數或加以修改。
 
 - 若要在執行時間修改 MDI 索引群組的屬性，請建立或修改 `CMDITabInfo` 物件並再次呼叫 `CMDIFrameWndEx::EnableMDITabbedGroups`。
 
@@ -58,11 +58,11 @@ ms.locfileid: "62310835"
 
 - 若要在使用者按一下索引標籤或將其拖曳至另一個 MDI 索引群組時顯示捷徑功能表，請覆寫 `CMDIFrameWndEx::OnShowMDITabContextMenu` 衍生類別中的 `CMDIFrameWndEx`。 如果您沒有實行此方法，則應用程式不會顯示捷徑功能表。
 
-- 若要儲存應用程式中 MDI 索引群組的配置，請呼叫 `CMDIFrameWndEx::SaveMDIState`。 若要載入先前儲存的 MDI 索引群組設定檔，請呼叫 `CMDIFrameWndEx::LoadMDIState`。 您可以呼叫這些方法以載入或儲存 MDI 應用程式中開啟的文件清單。 如需有關儲存和載入 MDI 狀態的詳細資訊，請參閱 < [cmdiframewndex:: Loadmdistate](../mfc/reference/cmdiframewndex-class.md#loadmdistate)。
+- 若要儲存應用程式中 MDI 索引群組的配置，請呼叫 `CMDIFrameWndEx::SaveMDIState`。 若要載入先前儲存的 MDI 索引群組設定檔，請呼叫 `CMDIFrameWndEx::LoadMDIState`。 您可以呼叫這些方法以載入或儲存 MDI 應用程式中開啟的文件清單。 如需儲存和載入 MDI 狀態的詳細資訊，請參閱[CMDIFrameWndEx：： LoadMDIState](reference/cmdiframewndex-class.md#loadmdistate)。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用者介面項目](../mfc/user-interface-elements-mfc.md)<br/>
-[CMDIFrameWndEx 類別](../mfc/reference/cmdiframewndex-class.md)<br/>
-[CMDIChildWndEx 類別](../mfc/reference/cmdichildwndex-class.md)<br/>
-[CMDITabInfo 類別](../mfc/reference/cmditabinfo-class.md)
+[使用者介面元素](user-interface-elements-mfc.md)<br/>
+[CMDIFrameWndEx 類別](reference/cmdiframewndex-class.md)<br/>
+[CMDIChildWndEx 類別](reference/cmdichildwndex-class.md)<br/>
+[CMDITabInfo 類別](reference/cmditabinfo-class.md)

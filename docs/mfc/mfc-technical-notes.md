@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 3621bca8116e3dd8edf202f4efa758bcb2590fcc
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 251c37f687c0176256f74c7e4dc14cff7f25c99c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617931"
 ---
 # <a name="mfc-technical-notes"></a>MFC 技術提示
 
@@ -21,10 +21,10 @@ ms.locfileid: "65610917"
 
 有兩種方式可以透過技術提示瀏覽：
 
-- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)
+- [依數位的技術提示](technical-notes-by-number.md)
 
-- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+- [依類別區分的技術提示](technical-notes-by-category.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)
+[MFC 傳統型應用程式](mfc-desktop-applications.md)

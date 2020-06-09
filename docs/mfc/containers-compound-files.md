@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 98166a355fd267ecbec0a7f0cc1d18fd0b2e7cd0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 344c444602555e2b5c145e58d237586199b9e1ed
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353592"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624810"
 ---
 # <a name="containers-compound-files"></a>容器：複合檔案
 
@@ -38,11 +38,11 @@ ms.locfileid: "81353592"
 
 - 如目錄等儲存物件，可包含其他儲存區和資料流物件。
 
-- `LockBytes`物件表示存儲物件和物理硬體之間的介面。 它們確定如何將實際位元組寫`LockBytes`入 物件正在訪問的任何儲存設備,如硬碟驅動器或全域記憶體區域。 有關`LockBytes`物件與介面的詳細資訊`ILockBytes`, 請參考 OLE*程式者的參考*。
+- `LockBytes`物件代表儲存物件與實體硬體之間的介面。 它們會決定實際的位元組如何寫入物件所存取的任何存放裝置 `LockBytes` ，例如硬碟或全域記憶體的區域。 如需 `LockBytes` 物件和介面的詳細資訊 `ILockBytes` ，請參閱*OLE 程式設計人員參考*。
 
-## <a name="advantages-and-disadvantages-of-compound-files"></a><a name="_core_advantages_and_disadvantages_of_compound_files"></a>複合檔案的優缺點
+## <a name="advantages-and-disadvantages-of-compound-files"></a><a name="_core_advantages_and_disadvantages_of_compound_files"></a>複合檔案的優點和缺點
 
-複合檔案提供了早期儲存檔案方法所沒有的優點。 其中包括：
+複合檔案提供了早期儲存檔案方法所沒有的優點。 包括：
 
 - 累加檔案存取。
 
@@ -52,7 +52,7 @@ ms.locfileid: "81353592"
 
 在決定是否在應用程式中使用複合檔案時，應考慮複合檔案 (與軟碟儲存體相關的大型和效能問題) 的可能缺點。
 
-### <a name="incremental-access-to-files"></a><a name="_core_incremental_access_to_files"></a>對檔案的增量存取
+### <a name="incremental-access-to-files"></a><a name="_core_incremental_access_to_files"></a>增量存取檔案
 
 累加存取檔案是使用複合檔案中自動效益。 由於複合檔案可視為「檔案內的檔案系統」，個別物件類型 (例如資料流或儲存區) 可以直接存取而不需要載入整個檔案。 這可大幅減少應用程式需要用於由使用者存取需編輯之新物件的時間。 根據相同概念，累加更新提供相似的效益。 OLE 不會用儲存整個檔案的方式儲存對一個物件所做的變更，它只會儲存資料流或使用者所編輯的儲存物件。
 
@@ -64,27 +64,27 @@ ms.locfileid: "81353592"
 
 - 直接存取模式會直接將產生的變更合併到文件中，無需在稍後將變更復原。
 
-有關存取模式的詳細資訊,請參閱 OLE*程式者的參考*。
+如需有關存取模式的詳細資訊，請參閱 OLE 程式設計*人員參考*。
 
 ### <a name="standardization"></a><a name="_core_standardization"></a>標準化
 
 複合檔案標準化結構可讓不同的 OLE 應用程式瀏覽您的 OLE 應用程式所建立的複合檔案，不需了解實際建立檔案的應用程式。
 
-### <a name="size-and-performance-considerations"></a><a name="_core_size_and_performance_considerations"></a>大小與效能注意事項
+### <a name="size-and-performance-considerations"></a><a name="_core_size_and_performance_considerations"></a>大小和效能考慮
 
 由於複合檔案儲存結構和能力的複雜度，以及累加儲存資料的能力，使用這種格式的檔案通常比使用非結構化或「一般檔案」儲存區的其他檔案來的大一些。 如果您的應用程式經常載入和儲存檔案，使用複合檔案比非複合檔案更可能造成檔案大小快速增加。 由於複合檔案會變大，存放在磁片及從磁片載入的檔案存取時間可能也會受到影響，導致對檔案的存取速度變慢。
 
 影響效能的另一個問題是複合檔案分散。 複合檔案的大小取決於檔案使用的第一個和最後一個磁碟磁區之間的差異。 分散的檔案可能包含許多不包含資料的可用空間區域，不過在計算大小時會被計算進去。 在複合檔案的存留期內，這些區域由儲存物件的插入或刪除建立。
 
-## <a name="using-compound-files-format-for-your-data"></a><a name="_core_using_compound_files_format_for_your_data"></a>對資料使用複合檔案格式
+## <a name="using-compound-files-format-for-your-data"></a><a name="_core_using_compound_files_format_for_your_data"></a>針對您的資料使用複合檔案格式
 
 在成功建立具有衍生自 `COleDocument` 之文件類別的應用程式後，請確定您的主要文件建構函式呼叫 `EnableCompoundFile`。 當應用程式精靈建立 OLE 容器應用程式時，會為您插入這個呼叫。
 
-在*OLE 程式設計師的參考中*,請參閱[IStream、IStorage](/windows/win32/api/objidl/nn-objidl-istream)和[IStorage](/windows/win32/api/objidl/nn-objidl-istorage)[ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes)。
+在 OLE 程式設計*人員參考*中，請參閱[IStream](/windows/win32/api/objidl/nn-objidl-istream)、 [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)和[ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes)。
 
 ## <a name="see-also"></a>另請參閱
 
-[容器](../mfc/containers.md)<br/>
-[容器：使用者介面問題](../mfc/containers-user-interface-issues.md)<br/>
-[COleStreamFile 類別](../mfc/reference/colestreamfile-class.md)<br/>
-[COleDocument 類別](../mfc/reference/coledocument-class.md)
+[容器](containers.md)<br/>
+[容器：使用者介面問題](containers-user-interface-issues.md)<br/>
+[COleStreamFile 類別](reference/colestreamfile-class.md)<br/>
+[COleDocument 類別](reference/coledocument-class.md)

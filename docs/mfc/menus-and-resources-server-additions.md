@@ -15,60 +15,60 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8366cd8b0376766b7914c94a24cef6598761a805
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f67212dc7d4e2ab90421c7b2eee48acae4745940
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375981"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626189"
 ---
 # <a name="menus-and-resources-server-additions"></a>功能表和資源：伺服器新增
 
-本文介紹了需要在可視化編輯伺服器(元件)應用程式中對菜單和其他資源進行更改。 伺服器應用程式需要對菜單結構和其他資源進行許多補充,因為它可以在以下三種模式之一啟動:獨立、嵌入或就地啟動。 如[功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)文章中所述,最多有四組功能表。 這四個都用於 MDI 全伺服器應用程式,而只有三個用於微型伺服器。 應用程式精靈將創建所需伺服器類型所需的功能表佈局。 可能需要進行一些自定義。
+本文說明需要對視覺編輯服務器（元件）應用程式中的功能表和其他資源進行的變更。 伺服器應用程式需要對功能表結構和其他資源進行許多新增，因為它可以在三種模式中啟動：獨立、內嵌或就地。 如[功能表和資源（OLE）](menus-and-resources-ole.md)一文所述，最多可有四組功能表。 這四個全都用於 MDI 完整伺服器應用程式，而只有三個用於一個袖珍伺服器。 應用程式精靈將會建立所需伺服器類型所需的功能表配置。 可能需要進行一些自訂。
 
-如果不使用應用程式嚮導,則可能需要查看 HIERSVR。RC,MFC 示例應用程式[HIERSVR](../overview/visual-cpp-samples.md)的資源腳本,用於查看這些更改是如何實現的。
+如果您未使用應用程式精靈，您可能會想要查看 HIERSVR。RC，適用于 MFC 範例應用程式[HIERSVR](../overview/visual-cpp-samples.md)的資源腳本，以查看這些變更的執行方式。
 
-本文涵蓋的主題包括:
+本文涵蓋的主題包括：
 
-- [伺服器選單加入](#_core_server_menu_additions)
+- [新增伺服器功能表](#_core_server_menu_additions)
 
-- [加速器表新增](#_core_server_application_accelerator_table_additions)
+- [快速鍵對應表新增](#_core_server_application_accelerator_table_additions)
 
-- [字串表加入](../mfc/menus-and-resources-container-additions.md)
+- [新增字串資料表](menus-and-resources-container-additions.md)
 
-- [迷你伺服器附加功能](#_core_mini.2d.server_additions)
+- [新增的袖珍](#_core_mini.2d.server_additions)
 
-## <a name="server-menu-additions"></a><a name="_core_server_menu_additions"></a>伺服器選單加入
+## <a name="server-menu-additions"></a><a name="_core_server_menu_additions"></a>新增伺服器功能表
 
-伺服器(元件)應用程式必須添加功能表資源以支援 OLE 可視化編輯。 在獨立模式下運行應用程式時使用的功能表不必更改,但在構建應用程式之前必須添加兩個新的菜單資源:一個支援就地啟動,一個支援伺服器完全打開。 兩個功能表資源都由完整伺服器和小型伺服器應用程式使用。
+伺服器（元件）應用程式必須已加入功能表資源，以支援 OLE 視覺效果編輯。 在獨立模式中執行應用程式時所使用的功能表不需要變更，但您必須在建立應用程式之前加入兩個新的功能表資源：一個用來支援就地啟用，另一個則支援完全開啟的伺服器。 全和袖珍應用程式都使用這兩個功能表資源。
 
-- 要支援就地啟動,必須創建與在獨立模式下運行時使用的功能表資源非常相似的菜單資源。 此功能表的區別是缺少「檔和視窗」項(以及處理應用程式(而不是資料的任何其他功能表項)缺失。 容器應用程式將提供這些功能表項。 有關此功能表合併技術的詳細資訊和範例,請參閱文章[「功能表和資源:功能表合併](../mfc/menus-and-resources-menu-merging.md)」。
+- 若要支援就地啟用，您必須建立與在獨立模式中執行時所使用的功能表資源非常類似的功能表資源。 此功能表中的差異在於遺漏檔案和視窗專案（以及處理應用程式的任何其他功能表項目，而不是資料）。 容器應用程式會提供這些功能表項目。 如需的詳細資訊，以及此功能表合併技術的範例，請參閱文章功能表[和資源：功能表合併](menus-and-resources-menu-merging.md)。
 
-- 要支援完全打開的啟動,必須創建與在獨立模式下運行時使用的功能表資源幾乎相同的菜單資源。 對此菜單資源的唯一修改是,某些項被重新措辭,以反映伺服器正在對嵌入在複合文檔中的項運行的事實。
+- 若要支援完全開啟的啟用，您必須建立與在獨立模式中執行時所使用的功能表資源幾乎相同的功能表資源。 此功能表資源的唯一修改是改寫一些專案，以反映伺服器在內嵌于複合檔案中的專案上運作的事實。
 
-除了本文中列出的更改外,您的資源檔還需要包括 AFXOLESV。RC,這是 Microsoft 基礎類庫實現所必需的。 此文件位於MFC_包括子目錄中。
+除了本文所列的變更之外，您的資源檔也必須包含 AFXOLESV。RC，這是 MFC 程式庫執行所需的。 此檔案位於 MFC\Include 子目錄中。
 
-## <a name="server-application-accelerator-table-additions"></a><a name="_core_server_application_accelerator_table_additions"></a>伺服器應用程式加速器表新增
+## <a name="server-application-accelerator-table-additions"></a><a name="_core_server_application_accelerator_table_additions"></a>伺服器應用程式加速器資料表新增專案
 
-必須向伺服器應用程式添加兩個新的加速器表資源;它們直接對應於前面描述的新菜單資源。 當伺服器應用程式就地啟動時,將使用第一個加速器表。 它由檢視的快捷鍵表中的所有條目組成,但綁定到「檔和視窗」功能表的條目除外。
+您必須將兩個新的快速鍵對應表資源加入伺服器應用程式中。它們直接對應到先前所述的新功能表資源。 當伺服器應用程式已啟用時，會使用第一個快速鍵對應表。 它包含視圖的快速鍵對應表中的所有專案，但系結至 [檔案] 和 [視窗] 功能表除外。
 
-第二個表幾乎是視圖加速器表的精確副本。 [伺服器功能表添加](#_core_server_menu_additions)中提及的完全打開功能表中所做的任何差異並行更改。
+第二個數據表幾乎是視圖快速鍵對應表的確切複本。 在 [[伺服器] 功能表新增](#_core_server_menu_additions)專案中所述的完整開啟功能表中，任何差異的平行變更。
 
-有關這些加速器表更改的範例,請將IDR_HIERSVRTYPE_SRVR_IP和IDR_HIERSVRTYPE_SRVR_EMB加速器表與HIERSVR中的IDR_MAINFRAME進行比較。RC 檔包含在 MFC OLE 範例[HIERSVR](../overview/visual-cpp-samples.md)中。 原位錶中缺少"文件和視窗"快速鍵,並且它們的確切副本位於嵌入表中。
+如需這些快速鍵對應表變更的範例，請將 IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快速鍵對應表與 HIERSVR 中的 IDR_MAINFRAME 進行比較。包含在 MFC OLE 範例[HIERSVR](../overview/visual-cpp-samples.md)中的 RC 檔案。 就地資料表中缺少檔案和視窗加速器，而且它們的完整複本位於內嵌資料表中。
 
-## <a name="string-table-additions-for-server-applications"></a><a name="_core_string_table_additions_for_server_applications"></a>伺服器應用程式的字串表新增
+## <a name="string-table-additions-for-server-applications"></a><a name="_core_string_table_additions_for_server_applications"></a>伺服器應用程式的字串資料表新增專案
 
-伺服器應用程式中只需要添加一個字串表 - 一個字串表示 OLE 初始化失敗。 例如,下面是應用程式精靈產生的字串表條目:
+伺服器應用程式中只需要加入一個字串資料表，這是表示 OLE 初始化失敗的字串。 例如，以下是應用程式精靈產生的字串資料表專案：
 
-|ID|String|
+|ID|字串|
 |--------|------------|
-|IDP_OLE_INIT_FAILED|OLE 初始化失敗。 確保 OLE 庫是正確的版本。|
+|IDP_OLE_INIT_FAILED|OLE 初始化失敗。 請確定 OLE 程式庫是正確的版本。|
 
-## <a name="miniserver-additions"></a><a name="_core_mini.2d.server_additions"></a>迷你伺服器附加功能
+## <a name="miniserver-additions"></a><a name="_core_mini.2d.server_additions"></a>新增的袖珍
 
-與上面列出的完整伺服器相同的附加功能適用於小型伺服器。 由於小型伺服器無法以獨立模式運行,因此其主菜單要小得多。 應用程式精靈建立的主選單只有一個文件功能表,僅包含"退出"和"左右"項。 小型伺服器的嵌入式和就地功能表和加速器與完整伺服器的功能表和加速器相同。
+相同的新增專案也適用于 miniservers，如以上所列的完整伺服器。 因為無法在獨立模式中執行「袖珍」，所以其主要功能表會變得很小。 應用程式精靈所建立的主功能表只有 [檔案] 功能表，其中只包含 [結束] 和 [關於] 專案。 適用于 miniservers 的內嵌和就地功能表和加速器與完整伺服器相同。
 
 ## <a name="see-also"></a>另請參閱
 
-[功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)
+[功能表和資源 (OLE)](menus-and-resources-ole.md)<br/>
+[功能表和資源：功能表合併](menus-and-resources-menu-merging.md)

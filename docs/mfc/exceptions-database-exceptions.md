@@ -11,69 +11,69 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 894960338a7e8c293054ade00e0cdf3295648bb7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624661"
 ---
 # <a name="exceptions-database-exceptions"></a>例外狀況：資料庫例外狀況
 
-本文介紹如何處理資料庫異常。 無論使用開放資料庫連接 (ODBC) 的 MFC 類還是數據訪問物件 (DAO) 的 MFC 類,本文中的大多數材料都適用。 特定於一個或另一個模型的材料被顯式標記。 主題包括：
+本文說明如何處理資料庫例外狀況。 本文中的大部分資料都適用于您是否使用開放式資料庫連接（ODBC）的 MFC 類別或資料存取物件（DAO）的 MFC 類別。 其中一個或其他模型的特定材質會明確標示。 主題包括：
 
-- [例外處理方法](#_core_approaches_to_exception_handling)
+- [例外狀況處理的方法](#_core_approaches_to_exception_handling)
 
-- [資料庫例外處理範例](#_core_a_database_exception.2d.handling_example)
+- [資料庫例外狀況處理範例](#_core_a_database_exception.2d.handling_example)
 
-## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a>例外處理方法
+## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a>例外狀況處理的方法
 
-無論您是使用 DAO(過時)還是 ODBC,這種方法都是一樣的。
+無論您使用的是 DAO （已過時）還是 ODBC，方法都相同。
 
-應始終編寫異常處理程序來處理異常條件。
+您應該一律撰寫例外狀況處理常式來處理例外狀況。
 
-捕獲資料庫異常的最實用方法是使用異常方案測試應用程式。 確定代碼中操作可能發生的異常,並強制發生異常。 然後檢查跟蹤輸出以查看引發哪些異常,或檢查調試器中返回的錯誤資訊。 這樣,您就可以知道您將為正在使用的異常方案看到哪些返回代碼。
+攔截資料庫例外狀況最實用的方法，就是在發生例外狀況的情況下測試您的應用程式。 判斷程式碼中某項作業可能會發生的例外狀況，並強制發生例外狀況。 然後檢查追蹤輸出以查看擲回的例外狀況，或在偵錯工具中檢查傳回的錯誤資訊。 這可讓您知道您所使用的例外狀況案例所看到的傳回碼。
 
-### <a name="error-codes-used-for-odbc-exceptions"></a>用於 ODBC 例外的錯誤程式碼
+### <a name="error-codes-used-for-odbc-exceptions"></a>ODBC 例外狀況所使用的錯誤碼
 
-除了框架定義的返回代碼(其中**具有AFX_SQL_ERROR_XXX表單**的名稱外,某些[CDB例外](../mfc/reference/cdbexception-class.md)代碼基於[ODBC](../data/odbc/odbc-basics.md)回郵代碼。 此類異常的返回代碼**具有SQL_ERROR_XXX窗體**的名稱。
+除了架構所定義的傳回碼（其名稱為**AFX_SQL_ERROR_XXX**的格式），有些[CDBExceptions](reference/cdbexception-class.md)是以[ODBC](../data/odbc/odbc-basics.md)傳回碼為基礎。 這類例外狀況的傳回碼具有格式**SQL_ERROR_XXX**的名稱。
 
-資料庫類可以返回的返回代碼(無論是框架定義的代碼還是定義ODBC的代碼)都記錄在`CDBException`類[m_nRetCode](../mfc/reference/cdbexception-class.md#m_nretcode)資料成員下。 有關 ODBC 定義的傳回程式的其他資訊,請參考 MSDN 函式庫中的 ODBC SDK*程式者參考*。
+資料庫類別可以傳回的傳回碼（架構定義和 ODBC 定義的）都會記錄在類別的[m_nRetCode](reference/cdbexception-class.md#m_nretcode)資料成員底下 `CDBException` 。 如需 ODBC 所定義之傳回碼的其他資訊，請參閱 MSDN Library 中的 ODBC SDK 程式設計*人員參考*。
 
-### <a name="error-codes-used-for-dao-exceptions"></a>用於 DAO 例外的錯誤代碼
+### <a name="error-codes-used-for-dao-exceptions"></a>用於 DAO 例外狀況的錯誤碼
 
-對於 DAO 異常,詳細資訊通常可用。 您可以透過擷取的[CDaoException](../mfc/reference/cdaoexception-class.md)物件的三個資料成員存取錯誤資訊:
+若為 DAO 例外狀況，通常會提供詳細資訊。 您可以透過所攔截[CDaoException](reference/cdaoexception-class.md)物件的三個資料成員存取錯誤資訊：
 
-- [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo)包含指向[CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md)物件的指標,該物件將錯誤資訊封裝在 DAO 與資料庫關聯的錯誤物件集合中。
+- [m_pErrorInfo](reference/cdaoexception-class.md#m_perrorinfo)包含[CDaoErrorInfo](reference/cdaoerrorinfo-structure.md)物件的指標，它會將錯誤資訊封裝在與資料庫相關聯之錯誤物件的 DAO 集合中。
 
-- [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)包含來自 MFC DAO 類的擴充錯誤代碼。 這些錯誤代碼**AFX_DAO_ERROR_XXX窗體的名稱**,`CDaoException`在 中 的數據成員下記錄。
+- [m_nAfxDaoError](reference/cdaoexception-class.md#m_nafxdaoerror)包含 MFC DAO 類別的擴充錯誤碼。 這些錯誤碼（具有**AFX_DAO_ERROR_XXX**格式的名稱）會記錄在的資料成員底下 `CDaoException` 。
 
-- [m_scode](../mfc/reference/cdaoexception-class.md#m_scode)包含 DAO 的 OLE **SCODE(** 如果適用)。 但是,您很少需要使用此錯誤代碼。 通常,其他兩個數據成員中提供了更多資訊。 有關**SCODE**值的更多,請參閱數據成員。
+- [m_scode](reference/cdaoexception-class.md#m_scode)包含來自 DAO 的 OLE **scode** （如果適用的話）。 不過，您很少需要使用這個錯誤碼。 在其他兩個資料成員中，通常會有更多的資訊。 如需**SCODE**值的詳細資訊，請參閱資料成員。
 
-有關 DAO 錯誤、DAO 錯誤物件類型和 DAO 錯誤集合的其他資訊可在類[CDaoException](../mfc/reference/cdaoexception-class.md)下提供。
+如需有關 DAO 錯誤、DAO 錯誤物件類型和 DAO 錯誤集合的其他資訊，請在 [類別[CDaoException](reference/cdaoexception-class.md)] 下找到。
 
-## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>資料庫例外處理範例
+## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>資料庫例外狀況處理範例
 
-下面的範例嘗試使用**新**運算元在堆上建構[CRecordset](../mfc/reference/crecordset-class.md)派生物件,然後打開記錄集(對於 ODBC 資料源)。 有關 DAO 類的類似範例,請參閱下面的「DAO 異常示例」。
+下列範例會嘗試使用**new**運算子來建立堆積上的[CRecordset](reference/crecordset-class.md)衍生物件，然後開啟記錄集（針對 ODBC 資料來源）。 如需 DAO 類別的類似範例，請參閱下面的「DAO 例外狀況範例」。
 
-### <a name="odbc-exception-example"></a>ODBC 例外樣範例
+### <a name="odbc-exception-example"></a>ODBC 例外狀況範例
 
-[Open](../mfc/reference/crecordset-class.md#open)成員函數可能會引發異常(ODBC 類的[CDBException](../mfc/reference/cdbexception-class.md)類型),`Open`因此此代碼使用**try**塊將調用括在一起。 後續**catch**區塊`CDBException`將擷取 。 您可以檢查名為`e`的異常物件本身,但在這種情況下,它足以知道創建記錄集的嘗試已失敗。 **catch**塊顯示一個消息框,並通過刪除記錄集物件進行清理。
+[Open](reference/crecordset-class.md#open)成員函式可能會擲回例外狀況（針對 ODBC 類別的類型為[CDBException](reference/cdbexception-class.md) ），因此此程式碼會 `Open` 以**try**區塊括住呼叫。 後續的**catch**區塊將會攔截 `CDBException` 。 您可以檢查例外狀況物件本身，稱為 `e` ，但在此情況下，您必須知道建立記錄集的嘗試失敗。 **Catch**區塊會顯示訊息方塊，並藉由刪除記錄集物件來進行清除。
 
-[!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
+[!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 
-### <a name="dao-exception-example"></a>DAO 例外樣範例
+### <a name="dao-exception-example"></a>DAO 例外狀況範例
 
-DAO 範例與 ODBC 的範例類似,但通常可以檢索更多類型的資訊。 以下代碼還嘗試打開記錄集。 如果該嘗試引發異常,則可以檢查異常對象的數據成員以查找錯誤資訊。 與前面的 ODBC 示例一樣,可能足以知道創建記錄集的嘗試失敗。
+DAO 範例類似于 ODBC 的範例，但您通常可以取得更多類型的資訊。 下列程式碼也會嘗試開啟記錄集。 如果該嘗試擲回例外狀況，您可以檢查例外狀況物件的資料成員是否有錯誤資訊。 如同先前的 ODBC 範例，可能已經足以知道建立記錄集的嘗試失敗。
 
-[!code-cpp[NVC_MFCDatabase#37](../mfc/codesnippet/cpp/exceptions-database-exceptions_2.cpp)]
+[!code-cpp[NVC_MFCDatabase#37](codesnippet/cpp/exceptions-database-exceptions_2.cpp)]
 
-此代碼從異常物件的[m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo)成員獲取錯誤訊息字串。 MFC 在引發異常時填充此成員。
+此程式碼會從 exception 物件的[m_pErrorInfo](reference/cdaoexception-class.md#m_perrorinfo)成員取得錯誤訊息字串。 當它擲回例外狀況時，MFC 會填入這個成員。
 
-有關`CDaoException`物件傳回的錯誤資訊的討論,請參閱[類別 CDaoexception](../mfc/reference/cdaoexception-class.md)和[CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md)。
+如需物件所傳回錯誤資訊的討論 `CDaoException` ，請參閱類別[CDaoException](reference/cdaoexception-class.md)和[CDaoErrorInfo](reference/cdaoerrorinfo-structure.md)。
 
-當您使用 Microsoft Jet (.mdb) 資料庫時,在大多數情況下,當您使用 ODBC 時,將只有一個錯誤物件。 在極少數情況下,當您使用 ODBC 資料來源且存在多個錯誤時,您可以根據 CDaoException 傳回的錯誤數循環存取 DAO 的錯誤集合[:::getErrorCount](../mfc/reference/cdaoexception-class.md#geterrorcount)。 每次通過迴圈時,調用[CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo)以重新`m_pErrorInfo`填充 數據成員。
+當您使用 Microsoft Jet （.mdb）資料庫，而且在大部分情況下，當您使用 ODBC 時，只會有一個錯誤物件。 當您使用 ODBC 資料來源，而且有多個錯誤時，在罕見的情況下，您可以根據[CDaoException：： GetErrorCount](reference/cdaoexception-class.md#geterrorcount)傳回的錯誤數目，在 DAO 的錯誤集合中執行迴圈。 每次透過迴圈，呼叫[CDaoException：： GetErrorInfo](reference/cdaoexception-class.md#geterrorinfo)以重新填滿 `m_pErrorInfo` 資料成員。
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況處理](../mfc/exception-handling-in-mfc.md)
+[例外狀況處理](exception-handling-in-mfc.md)

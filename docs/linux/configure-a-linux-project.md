@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150962"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623599"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -17,13 +17,13 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker-end
 
-本主題描述如何設定 C++ Linux 專案，如[在 Visual Studio 中建立新的 C++ Linux 專案](create-a-new-linux-project.md)所述。 有關 CMake Linux 專案,請參考[設定 Linux CMake 專案](cmake-linux-project.md)。
+本主題描述如何設定 C++ Linux 專案，如[在 Visual Studio 中建立新的 C++ Linux 專案](create-a-new-linux-project.md)所述。 如需 CMake Linux 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
 
 您可以設定 Linux 專案，以實體 Linux 機器、虛擬機器，或[適用於 Linux 的 Windows 子系統](/windows/wsl/about) (WSL) 為目標。
 
 ::: moniker range="vs-2019"
 
-**視覺工作室 2019 版本 16.1**:
+**Visual Studio 2019 版本 16.1**：
 
 - 以 WSL 為目標時，可避免以遠端 Linux 系統為目標時，建置和 IntelliSense 所需的複製作業。
 
@@ -51,7 +51,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 版本 16.1**: 要針對 Linux 的 Windows 子系統,請按一個**平臺工具集**的向下箭頭並選擇**WSL_1_0**。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
+   **Visual Studio 2019 16.1 版**：目標為適用于 Linux 的 Windows 子系統，按一下**平臺工具**組的向下箭號，然後選擇 [ **WSL_1_0**]。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
 
    ![WSL 組建電腦](media/wsl-remote-vs2019.png)
 
@@ -78,7 +78,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 在遠端系統上建置時，會將開發電腦上的來源檔案複製到 Linux 電腦，並在該處進行編譯。 根據預設，Visual Studio 專案中的所有來源都會複製到上方設定中所設定的位置。 不過，也可以在清單中新增其他來源，或者完全關閉複製來源，後者是 Makefile 專案的預設值。
 
-- [要複製的來源]**** 決定將哪些來源複製到遠端電腦。 默認情況下**\@,(SourceToCopy)** 預設為專案中的所有原始程式碼檔,但不包括任何資產/資源檔,如圖像。
+- [要複製的來源]**** 決定將哪些來源複製到遠端電腦。 根據預設， ** \@ （SourcesToCopyRemotely）** 會預設為專案中的所有原始程式碼檔案，但不包含任何資產/資源檔，例如影像。
 
 - [複製來源]**** 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
 
@@ -97,7 +97,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 當您在 [連線管理員]**** 中新增連線時，Visual Studio 會自動偵測遠端系統上編譯器的 Include 目錄。 Visual Studio 接著會壓縮這些檔案，並將其複製到本機 Windows 電腦上的目錄中。 之後，每當您在 Visual Studio 或 CMake 專案中使用該連線時，這些目錄中的標頭就會用來提供 IntelliSense。
 
 > [!NOTE]
-> 在 Visual Studio 2019 版 16.5 及更高版本中,遠端標頭副本已過優化。 現在,在打開 Linux 專案或為 Linux 目標配置 CMake 時,會按需複製標頭。 副本基於專案的指定編譯器,在後台按項目進行。 有關詳細資訊,請參閱[Linux IntelliSense 的準確性和效能改進](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)。
+> 在 Visual Studio 2019 16.5 版和更新版本中，遠端標頭複本已經過優化。 在開啟 Linux 專案或為 Linux 目標設定 CMake 時，現在會視需要複製標頭。 複製會根據專案的指定編譯器，以每個專案為基礎發生在背景中。 如需詳細資訊，請參閱[Linux IntelliSense 的正確性和效能改進](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)。
 
 這項功能取決於已安裝 ZIP 的 Linux 電腦。 您可以使用這個 apt-get 命令來安裝 ZIP：
 
@@ -126,7 +126,7 @@ sudo apt install zip
 ## <a name="see-also"></a>另請參閱
 
 [Set compiler and build properties](../build/working-with-project-properties.md) (設定編譯器及組建屬性)<br/>
-[C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[VC++ 目錄 (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[複製來源專案屬性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[建置事件屬性 (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[C++ 一般屬性 (Linux C++)](prop-pages/general-linux.md)<br/>
+[VC++ 目錄 (Linux C++)](prop-pages/directories-linux.md)<br/>
+[複製來源專案屬性 (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[建置事件屬性 (Linux C++)](prop-pages/build-events-linux.md)

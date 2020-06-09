@@ -8,38 +8,38 @@ helpviewer_keywords:
 - screen output classes [MFC]
 - output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
-ms.openlocfilehash: 96bda696a310fdd59a124abea2d29bc5001c3ab1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 161144161566293079d4c51324c5c481578ebd5b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407974"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626466"
 ---
 # <a name="drawing-tool-classes"></a>繪圖工具類別
 
-這些類別會封裝用來繪製的裝置內容的繪圖工具。
+這些類別會封裝用來在裝置內容上繪製的繪圖工具。
 
-[CGdiObject](../mfc/reference/cgdiobject-class.md)<br/>
-GDI 繪圖工具基底類別。
+[CGdiObject](reference/cgdiobject-class.md)<br/>
+GDI 繪圖工具的基類。
 
-[CBrush](../mfc/reference/cbrush-class.md)<br/>
-封裝 GDI 筆刷，您可以選取作為裝置內容中目前的筆刷。 筆刷用來填滿內部的繪製的物件。
+[CBrush](reference/cbrush-class.md)<br/>
+封裝可在裝置內容中選取做為目前筆刷的 GDI 筆刷。 筆刷是用來填滿所繪製物件的內部。
 
-[CPen](../mfc/reference/cpen-class.md)<br/>
-封裝 GDI 畫筆，您可以選取作為裝置內容中目前的畫筆。 畫筆會用於繪製框線的物件。
+[CPen](reference/cpen-class.md)<br/>
+封裝可在裝置內容中選取做為目前畫筆的 GDI 畫筆。 畫筆是用來繪製物件的框線。
 
-[CFont](../mfc/reference/cfont-class.md)<br/>
-封裝 GDI 字型，您可以選取作為裝置內容中目前的字型。
+[CFont](reference/cfont-class.md)<br/>
+封裝可在裝置內容中選取為目前字型的 GDI 字型。
 
-[CBitmap](../mfc/reference/cbitmap-class.md)<br/>
-封裝 GDI 點陣圖，以操作點陣圖中提供的介面。
+[CBitmap](reference/cbitmap-class.md)<br/>
+封裝 GDI 點陣圖，提供介面來操作點陣圖。
 
-[CPalette](../mfc/reference/cpalette-class.md)<br/>
-封裝 GDI 色彩調色盤，作為應用程式與色彩輸出裝置，例如顯示器之間的介面。
+[CPalette](reference/cpalette-class.md)<br/>
+封裝 GDI 調色板，以作為應用程式與色彩輸出裝置（例如顯示）之間的介面。
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-會顯示，並處理調整大小和移動矩形物件的使用者介面。
+[CRectTracker](reference/crecttracker-class.md)<br/>
+顯示和處理用來調整大小和移動矩形物件的使用者介面。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別概觀](class-library-overview.md)

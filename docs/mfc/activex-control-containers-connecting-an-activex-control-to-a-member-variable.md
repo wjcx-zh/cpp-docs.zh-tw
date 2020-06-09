@@ -9,12 +9,12 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 620a9ec58b3a5a8fcdac63626b81fbc4620de399
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87cb560a1054a912a4e8574cfe2dee74d5e61fe6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371611"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625137"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX 控制項容器：將 ActiveX 控制項連接至成員變數
 
@@ -27,18 +27,18 @@ ms.locfileid: "81371611"
 
 1. 從類別檢視中，以滑鼠右鍵按一下主對話方塊類別，開啟捷徑功能表。 例如： `CContainerDlg` 。
 
-1. 在快捷選單中,按下「**新增」 選「 新增」****選**量 。
+1. 從快捷方式功能表按一下 [**新增**]，然後按一下 [**加入變數**]。
 
-1. 在「添加成員變數嚮導」中,按一下 **「控制變數**」。
+1. 在 [加入成員變數] 中，按一下 [**控制項變數**]。
 
-1. 在 **「控制 ID」** 清單框中,選擇嵌入式 ActiveX 控制件的控制 ID。 例如： `IDC_CIRCCTRL1` 。
+1. 在 [**控制項 id** ] 清單方塊中，選取內嵌 ActiveX 控制項的控制項 id。 例如： `IDC_CIRCCTRL1` 。
 
-1. 在 **"變數名稱"** 框中,輸入名稱。
+1. 在 [**變數名稱**] 方塊中，輸入名稱。
 
-   例如 *,m_circctl*。
+   例如， *m_circctl*。
 
-1. 按下 **「完成」** 以接受您的選擇並退出「新增成員變數精靈」。
+1. 按一下 **[完成]** 以接受您的選擇，並結束 [新增成員變數] Wizard。
 
 ## <a name="see-also"></a>另請參閱
 
-[ActiveX 控制項容器](../mfc/activex-control-containers.md)
+[ActiveX 控制項容器](activex-control-containers.md)

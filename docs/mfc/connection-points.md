@@ -15,55 +15,55 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620734"
 ---
 # <a name="connection-points"></a>連接點
 
-這篇文章說明如何實作連接點 （先前稱為 OLE 連接點 」） 使用 MFC 類別`CCmdTarget`和`CConnectionPoint`。
+本文說明如何使用 MFC 類別和來執行連接點（先前稱為 OLE 連接點） `CCmdTarget` `CConnectionPoint` 。
 
-在過去，元件物件模型 (COM) 定義的一般機制 (`IUnknown::QueryInterface`*)，允許物件來實作和公開介面中的功能。 不過，未定義允許物件來公開其功能，來呼叫特定的介面對應機制。 也就是 COM 會定義如何傳入的指標物件的處理 （該物件的介面指標），但它沒有連出介面 （該物件保存其他物件的介面的指標） 的明確模型。 COM 現在具有模型，稱為連線點，支援此功能。
+在過去，元件物件模型（COM）定義了一個一般機制（ `IUnknown::QueryInterface` *），允許物件在介面中執行並公開功能。 不過，不會定義允許物件公開其呼叫特定介面之功能的對應機制。 也就是 COM 定義了物件的連入指標（指向該物件介面的指標）的處理方式，但是沒有連出介面的明確模型（物件會保留給其他物件介面的指標）。 COM 現在具有支援這種功能的模型，稱為「連接點」。
 
-連線有兩個部分： 呼叫的介面，呼叫來源，以及實作介面之物件的物件稱為接收器。 連接點是來源所公開的介面。 藉由公開的連接點，為來源可讓接收來建立連接至其本身 （來源）。 透過連接點的機制 (`IConnectionPoint`介面)，接收介面的指標傳遞至來源物件。 此指標會提供具有存取權的接收器實作的一組成員函式的來源。 比方說，若要引發事件接收實作，來源可以呼叫的接收器實作適當的方法。 下圖示範連接先前所提到的點。
+連接有兩個部分：呼叫介面的物件，稱為來源，以及用來執行介面的物件（稱為接收）。 連接點是由來源公開的介面。 藉由公開連接點，來源可讓接收與本身建立連接（來源）。 透過連接點機制（ `IConnectionPoint` 介面），接收介面的指標會傳遞至來源物件。 這個指標會提供來源，讓您能夠存取一組成員函式的接收。 例如，若要引發接收器所執行的事件，來源可以呼叫接收器的適當方法來執行。 下圖說明剛才所述的連接點。
 
-![實作連接點](../mfc/media/vc37lh1.gif "實作連接點") <br/>
-實作的連接點
+![已執行的連接點](../mfc/media/vc37lh1.gif "實作的連接點") <br/>
+已執行的連接點
 
-MFC 實作這種模式[CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)並[CCmdTarget](../mfc/reference/ccmdtarget-class.md)類別。 類別衍生自`CConnectionPoint`實作`IConnectionPoint`介面，用來公開其他物件的連接點。 類別衍生自`CCmdTarget`實作`IConnectionPointContainer`介面，它可以列舉的所有物件的可用的連接點，或尋找特定的連接點。
+MFC 會在[CConnectionPoint](reference/cconnectionpoint-class.md)和[CCmdTarget](reference/ccmdtarget-class.md)類別中執行此模型。 衍生自的類別會 `CConnectionPoint` 執行 `IConnectionPoint` 介面，用來向其他物件公開連接點。 衍生自的類別 `CCmdTarget` 會實作為 `IConnectionPointContainer` 介面，它可以列舉物件的所有可用連接點，或尋找特定的連接點。
 
-在您的類別中實作每個連接點，您必須宣告實作連接點連接部分。 如果您實作一個或多個連接點時，您也必須在類別中宣告單一連線對應。 連接對應是 ActiveX 控制項所支援的連接點的資料表。
+針對在類別中實作為的每個連接點，您必須宣告可執行連接點的連接元件。 如果您執行一或多個連接點，您也必須在類別中宣告單一連接對應。 連接對應是 ActiveX 控制項支援的連接點表格。
 
-下列範例會示範簡單的連接對應，以及一個連接點。 第一個範例會宣告連接對應和點;第二個範例會實作對應和點。 請注意，`CMyClass`必須是`CCmdTarget`-衍生的類別。 在第一個範例中，程式碼會插入在類別宣告中，下方**保護**區段：
+下列範例示範簡單的連接對應和一個連接點。 第一個範例會宣告連接對應和點。第二個範例會執行對應和點。 請注意， `CMyClass` 必須是 `CCmdTarget` 衍生的類別。 在第一個範例中，會將程式碼插入類別宣告中的**protected**區段底下：
 
-[!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]
+[!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
-**BEGIN_CONNECTION_PART**並**END_CONNECTION_PART**巨集宣告內嵌的類別， `XSampleConnPt` (衍生自`CConnectionPoint`)，會實作這個特定的連接點。 如果您想要覆寫任何`CConnectionPoint`成員函式或加入您自己的成員函式，將它們宣告這些兩個巨集之間。 例如，`CONNECTION_IID`巨集覆寫`CConnectionPoint::GetIID`成員函式時這些兩個巨集之間。
+**BEGIN_CONNECTION_PART**和**END_CONNECTION_PART**宏會宣告可執行 `XSampleConnPt` `CConnectionPoint` 這個特定連接點的內嵌類別（衍生自）。 如果您想要覆寫任何成員函式 `CConnectionPoint` 或加入自己的成員函式，請在這兩個宏之間宣告它們。 例如，在 `CONNECTION_IID` `CConnectionPoint::GetIID` 這兩個宏之間放置時，宏會覆寫成員函式。
 
-在第二個範例中，程式碼會插入在控制項實作檔 （.cpp 檔）。 此程式碼會實作連接對應，其中包含連接點， `SampleConnPt`:
+在第二個範例中，程式碼會插入控制項的執行檔（.cpp 檔案）中。 此程式碼會執行連接對應，其中包含連接點 `SampleConnPt` ：
 
-[!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#2](codesnippet/cpp/connection-points_2.cpp)]
 
-如果您的類別具有一個以上的連接點，插入額外**CONNECTION_PART**巨集之間**BEGIN_CONNECTION_MAP**並**END_CONNECTION_MAP**巨集。
+如果您的類別有一個以上的連接點，請在**BEGIN_CONNECTION_MAP**和**END_CONNECTION_MAP**宏之間插入額外的**CONNECTION_PART**宏。
 
-最後，將呼叫加入`EnableConnections`類別的建構函式中。 例如: 
+最後，在類別的「函式」中新增對的呼叫 `EnableConnections` 。 例如：
 
-[!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#3](codesnippet/cpp/connection-points_3.cpp)]
 
-在插入此程式碼之後, 您`CCmdTarget`-衍生的類別會公開的連接點`ISampleSink`介面。 下圖說明此範例。
+插入此程式碼之後，您 `CCmdTarget` 的衍生類別會公開介面的連接點 `ISampleSink` 。 下圖說明此範例。
 
-![使用 MFC 實作連接點](../mfc/media/vc37lh2.gif "使用 MFC 實作連接點") <br/>
-使用 MFC 實作連接點
+![使用 MFC 實作的連接點](../mfc/media/vc37lh2.gif "使用 MFC 實作的連接點") <br/>
+使用 MFC 實作為連接點
 
-通常，連接點支援 「 多點傳送 」 — 廣播到多個接收器的能力連線到相同的介面。 下列範例片段將示範如何逐一查看每個接收連接點上的多點傳送：
+通常，連接點支援「多播」—這是廣播到連接到相同介面之多個接收器的功能。 下列範例片段示範如何藉由逐一查看連接點上的每個接收來進行多播：
 
-[!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#4](codesnippet/cpp/connection-points_4.cpp)]
 
-此範例會擷取目前的連線集上`SampleConnPt`藉由呼叫的連接點`CConnectionPoint::GetConnections`。 然後重複執行的連線和呼叫`ISampleSink::SinkFunc`上作用中的每個連接。
+這個範例會使用的呼叫，來抓取連接點上目前的連接集 `SampleConnPt` `CConnectionPoint::GetConnections` 。 然後，它會逐一查看連接，並 `ISampleSink::SinkFunc` 在每個使用中的連接上呼叫。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

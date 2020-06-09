@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620685"
 ---
 # <a name="command-routing"></a>命令傳送
 
@@ -31,18 +31,18 @@ Windows 訊息通常會傳送至主框架視窗，但命令訊息會接著路由
 
 相較于您的處理常式回應命令的方式，此路由機制的成本昂貴，路由的成本很低。 請記住，只有在使用者與使用者介面物件互動時，此架構才會產生命令。
 
-### <a name="_core_standard_command_route"></a> 標準命令路由
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a> 標準命令路由
 
 |當此類型的物件收到命令時。 . .|它會依照下列順序，提供機會給自己及其他命令目標物件來處理命令︰|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI 框架視窗 (`CMDIFrameWnd`)|1.使用中 `CMDIChildWnd`<br />2.此框架視窗<br />3.應用程式 (`CWinApp` 物件)|
-|文件框架視窗 (`CFrameWnd`、 `CMDIChildWnd`)|1.現用檢視表<br />2.此框架視窗<br />3.應用程式 (`CWinApp` 物件)|
-|檢視|1.此檢視<br />2.附加至檢視的文件|
-|文件|1.此文件<br />2.附加至文件的文件範本|
-|對話方塊|1.此對話方塊<br />2.擁有此對話方塊的視窗<br />3.應用程式 (`CWinApp` 物件)|
+|MDI 框架視窗 (`CMDIFrameWnd`)|1. 使用中`CMDIChildWnd`<br />2. 此框架視窗<br />3. 應用程式（ `CWinApp` 物件）|
+|文件框架視窗 (`CFrameWnd`、 `CMDIChildWnd`)|1. 即時檢視<br />2. 此框架視窗<br />3. 應用程式（ `CWinApp` 物件）|
+|檢視|1. 此視圖<br />2. 附加至視圖的檔|
+|Document|1. 這份檔<br />2. 附加至檔的檔範本|
+|對話方塊|1. 此對話方塊<br />2. 擁有對話方塊的視窗<br />3. 應用程式（ `CWinApp` 物件）|
 
 在上表第二欄的編號項目提到其他物件 (例如文件) 的情況下，請參閱第一欄的對應項目。 例如，當您在第二欄中讀到「檢視將命令轉送至其文件」時，請參閱第一欄的「文件」項目以進一步路由傳送。
 
 ## <a name="see-also"></a>另請參閱
 
-[架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
+[架構如何呼叫處理常式](how-the-framework-calls-a-handler.md)

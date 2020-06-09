@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622599"
 ---
 # <a name="how-the-framework-calls-your-code"></a>架構如何呼叫您的程式碼
 
@@ -29,8 +29,8 @@ ms.locfileid: "62407948"
 
 在相關主題中，您將閱讀架構在初始化和執行應用程式時會做什麼，接著會在應用程式結束時進行清除。 您也會了解要在需要調整的程式碼位置。
 
-如需詳細資訊，請參閱[類別 CWinApp:應用程式類別](../mfc/cwinapp-the-application-class.md)並[文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)。
+如需詳細資訊，請參閱[類別 CWinApp：應用程式類別](cwinapp-the-application-class.md)和[檔範本和檔/視圖建立](document-templates-and-the-document-view-creation-process.md)程式。
 
 ## <a name="see-also"></a>另請參閱
 
-[在架構上建置](../mfc/building-on-the-framework.md)
+[在架構上建置](building-on-the-framework.md)

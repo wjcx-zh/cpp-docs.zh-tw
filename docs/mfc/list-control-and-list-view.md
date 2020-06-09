@@ -8,24 +8,24 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-ms.openlocfilehash: 5c9612a22eab27d568c0dbb86d29ba031fe5985e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d308cfe83f02dcfe3687790c6638d268cc69fc24
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365323"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621433"
 ---
 # <a name="list-control-and-list-view"></a>清單控制項和清單檢視
 
 為了方便起見，MFC 以兩種方式封裝清單控制項。 您可以下列方式來使用清單控制項：
 
-- 直接透過內嵌[CListCtrl](../mfc/reference/clistctrl-class.md)對話方塊類別中的物件。
+- 直接，藉由在對話方塊類別中內嵌[CListCtrl](reference/clistctrl-class.md)物件。
 
-- 使用類別來間接[CListView](../mfc/reference/clistview-class.md)。
+- 藉由使用 [類別[CListView](reference/clistview-class.md)] 間接進行。
 
-`CListView` 可讓您輕鬆地整合使用 MFC 的文件/檢視架構，封裝控制項的清單控制項十分類似[CEditView](../mfc/reference/ceditview-class.md)封裝編輯控制項： 控制項會填滿 MFC 檢視的整個介面區。 (檢視*已*控制項，轉換成`CListView`。)
+`CListView`可讓您輕鬆地將清單控制項與 MFC 檔/視圖架構整合，將控制項封裝起來就像[CEditView](reference/ceditview-class.md)封裝編輯控制項一樣：控制項會填滿 MFC 視圖的整個介面區。 （此視圖*是*控制項，轉換為 `CListView` ）。
 
-A`CListView`物件繼承自[CCtrlView](../mfc/reference/cctrlview-class.md)和其基底類別，並將成員函式來擷取基礎清單控制項。 使用檢視成員來運用檢視。 使用[GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)成員函式來取得清單控制項的成員函式的存取權。 使用這些成員：
+`CListView`物件繼承自[CCtrlView](reference/cctrlview-class.md)及其基類，並加入成員函式以取得基礎清單控制項。 使用檢視成員來運用檢視。 使用[GetListCtrl](reference/clistview-class.md#getlistctrl)成員函式來取得清單控制項的成員函式的存取權。 使用這些成員：
 
 - 在清單中加入、刪除或操作「項目」。
 
@@ -39,5 +39,5 @@ A`CListView`物件繼承自[CCtrlView](../mfc/reference/cctrlview-class.md)和�
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CListCtrl](../mfc/using-clistctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CListCtrl](using-clistctrl.md)<br/>
+[控制項](controls-mfc.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685653"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620508"
 ---
 # <a name="creating-your-dialog-class"></a>建立您的對話方塊類別
 
@@ -23,7 +23,7 @@ ms.locfileid: "71685653"
 
 在 .h 檔案中：
 
-- 對話方塊類別的類別宣告。 類別衍生自[CDialog](../mfc/reference/cdialog-class.md)。
+- 對話方塊類別的類別宣告。 類別衍生自[CDialog](reference/cdialog-class.md)。
 
 在 .cpp 檔案中：
 
@@ -31,9 +31,9 @@ ms.locfileid: "71685653"
 
 - 對話方塊的標準構造函式。
 
-- [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)成員函式的覆寫。 編輯此函式。 它用於對話方塊資料交換和驗證功能，如稍後的[對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)中所述。
+- [DoDataExchange](reference/cwnd-class.md#dodataexchange)成員函式的覆寫。 編輯此函式。 它用於對話方塊資料交換和驗證功能，如稍後的[對話方塊資料交換和驗證](dialog-data-exchange-and-validation.md)中所述。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用程式碼精靈建立對話方塊類別](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[在 MFC 中使用對話方塊](../mfc/life-cycle-of-a-dialog-box.md)
+[使用程式碼精靈建立對話方塊類別](creating-a-dialog-class-with-code-wizards.md)<br/>
+[在 MFC 中使用對話方塊](life-cycle-of-a-dialog-box.md)

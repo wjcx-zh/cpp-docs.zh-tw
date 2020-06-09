@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bf10d8b56f82714fa708b5409923e765206eb16d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626136"
 ---
 # <a name="mfc-library-versions"></a>MFC 程式庫版本
 
@@ -77,9 +77,9 @@ MFC 標頭檔也包含在所有必要程式庫中連結的指示詞，包括 MFC
 
 MFC ANSI/MBCS 程式庫版本同時支援單一位元組字元集（例如 ASCII）和多位元組字元集（例如，Shift-JIS）。 MFC Unicode 程式庫版本支援以 UTF UTF-16LE 寬字元編碼格式的 Unicode。 使用 MFC 的 ANSI/MBCS 程式庫版本，以進行 UTF-8 編碼的 Unicode 支援。
 
-若要將專案設定設為在 IDE 中使用單一位元組、多位元組或寬字元的 Unicode 字串和字元支援，請使用 [**專案屬性**] 對話方塊。 在 [設定**屬性** > **一般**] 頁面中，將 [**字元集**] 屬性設為 [**不會設定**為使用單位元組字元集]。 將屬性設定為**使用多位元組字元集**，以使用多位元組字元集，或**使用 unicode 字元集**來使用 unicode 編碼為 utf-16。
+若要將專案設定設為在 IDE 中使用單一位元組、多位元組或寬字元的 Unicode 字串和字元支援，請使用 [**專案屬性**] 對話方塊。 在 [設定**屬性**  >  **一般**] 頁面中，將 [**字元集**] 屬性設為 [**不會設定**為使用單一位元組字元集]。 將屬性設定為**使用多位元組字元集**，以使用多位元組字元集，或**使用 unicode 字元集**來使用 unicode 編碼為 utf-16。
 
-MFC 專案會使用預處理器符號 \_UNICODE 來指示 UTF-16 寬字元 Unicode 支援，並 \_MBCS 來指示 MBCS 支援。 這些選項在專案中是互斥的。
+MFC 專案會使用預處理器符號 \_ unicode 來指示 utf-16 寬字元 unicode 支援，以及 \_ mbcs 來指示 mbcs 支援。 這些選項在專案中是互斥的。
 
 ## <a name="mfc-static-library-naming-conventions"></a>MFC 靜態程式庫命名慣例
 
@@ -129,16 +129,16 @@ MFC Dll 具有表示二進位相容性的*版本*號碼。 使用與其他程式
 
 如果您要動態連結至 MFC 的共用 DLL 版本，不論它是來自應用程式還是 MFC 延伸 DLL，您都必須包含相符的 MFC*版本*。當您部署產品時，DLL 或 MFC*版本*的 .dll。
 
-如需可與您C++的應用程式一起散發的 Visual dll 清單，請參閱[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包含公用程式和 BuildServer 檔）](/visualstudio/productinfo/2017-redistribution-vs)的可散佈程式碼，或[用於 Visual Studio 2019](/visualstudio/releases/2019/redistribution)的可散發程式碼。
+如需可與您的應用程式一起散發 Visual C++ Dll 的清單，請參閱[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包含公用程式和 BuildServer 檔）](/visualstudio/productinfo/2017-redistribution-vs)或[適用于 Visual Studio 2019 的](/visualstudio/releases/2019/redistribution)可轉散發程式碼。
 
 如需 MFC 中 MBCS 和 Unicode 支援的詳細資訊，請參閱[Unicode 和多位元組字元集（MBCS）支援](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。
 
 ## <a name="dynamic-link-library-support"></a>動態連結程式庫支援
 
-您可以使用靜態或共用動態 MFC 程式庫來建立可供 MFC 和非 MFC 可執行檔使用的 Dll。 這些稱為「一般 Dll」或「一般 MFC Dll」，以便與只能由 MFC 應用程式和 MFC Dll 使用的 MFC 擴充 Dll 區別。 使用 MFC 靜態程式庫建立的 DLL 有時在較舊的參考中稱為 USRDLL，因為 MFC DLL 專案會定義預處理器符號 **\_USRDLL**。 使用 MFC 共用 Dll 的 DLL 有時在較舊的參考中稱為 AFXDLL，因為它會定義預處理器符號 **\_AFXDLL**。
+您可以使用靜態或共用動態 MFC 程式庫來建立可供 MFC 和非 MFC 可執行檔使用的 Dll。 這些稱為「一般 Dll」或「一般 MFC Dll」，以便與只能由 MFC 應用程式和 MFC Dll 使用的 MFC 擴充 Dll 區別。 使用 MFC 靜態程式庫建立的 DLL 有時在較舊的參考中稱為 USRDLL，因為 MFC DLL 專案會定義預處理器符號** \_ USRDLL**。 使用 MFC 共用 Dll 的 DLL 有時在較舊的參考中稱為 AFXDLL，因為它會定義預處理器符號** \_ AFXDLL**。
 
 當您藉由連結至 MFC 靜態程式庫來建立 DLL 專案時，可以不使用 MFC 共用 Dll 來部署您的 DLL。 當您的 DLL 專案連結至匯入程式庫 MFC*版本*時。LIB 或 MFC*版本*的 node.js，您必須部署相符的 MFC 共用 DLL mfc*版本*。DLL 或 MFC*版本*的 U l 與您的 dll 一起使用。 如需詳細資訊，請參閱[dll](../build/dlls-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[一般 MFC 主題](../mfc/general-mfc-topics.md)
+[一般 MFC 主題](general-mfc-topics.md)

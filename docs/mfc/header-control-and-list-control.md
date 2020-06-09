@@ -9,33 +9,33 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-ms.openlocfilehash: 53dd6f1a7878d82a7f7ac48dd7082d791323941b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f9dd34b27ddbdc0b99fafbb23ad1cf9782d98605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370477"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626411"
 ---
 # <a name="header-control-and-list-control"></a>標題控制項和清單控制項
 
-在大多數情況下,您將使用嵌入在[CListCtrl](../mfc/reference/clistctrl-class.md)或[CListView](../mfc/reference/clistview-class.md)物件中的標頭控制件。 但是,在某些情況下,需要單獨的標頭控件物件,例如操作以列或行排列的數據,位於[CView](../mfc/reference/cview-class.md)派生的物件中。 在這些情況下,您需要更好地控制嵌入式標頭控制件的外觀和默認行為。
+在大部分的情況下，您會使用內嵌在[CListCtrl](reference/clistctrl-class.md)或[CListView](reference/clistview-class.md)物件中的標題控制項。 不過，在某些情況下，會需要個別的標題控制項物件，例如在[CView](reference/cview-class.md)衍生的物件中運算元據（以欄位或資料列排列）。 在這些情況下，您需要更充分掌控內嵌標題控制項的外觀和預設行為。
 
-在希望標頭控制件提供標準預設行為的常見情況下,您可能需要改用[CListCtrl](../mfc/reference/clistctrl-class.md)或[CListView。](../mfc/reference/clistview-class.md) 當`CListCtrl`您想要默認標頭控制件的功能時使用,該功能嵌入到清單檢視公共控制項中。 當您希望嵌入在檢視物件中的預設標頭控制件的功能時,請使用[CListView。](../mfc/reference/clistview-class.md)
+在您想要讓標題控制項提供標準的預設行為的常見情況下，您可能會想要改為使用[CListCtrl](reference/clistctrl-class.md)或[CListView](reference/clistview-class.md) 。 `CListCtrl`當您想要預設標題控制項的功能（內嵌在清單視圖通用控制項中）時，請使用。 當您想要將預設標題控制項的功能內嵌在 view 物件中時，請使用[CListView](reference/clistview-class.md) 。
 
 > [!NOTE]
-> 僅當使用**LVS_REPORT**樣式創建列表檢視控制項時,這些控制項才包括內建標頭控制件。
+> 如果使用**LVS_REPORT**樣式建立清單視圖控制項，這些控制項只會包含內建標題控制項。
 
-在大多數情況下,可以通過更改包含列表視圖控件的樣式來修改嵌入標頭控制元件的外觀。 此外,還可以通過父列表視圖控件的成員函數獲取有關標頭控件的資訊。 但是,為了對嵌入標頭控制的屬性和樣式進行完全控制和訪問,建議獲取指向標頭控制件物件的指標。
+在大部分的情況下，可以藉由變更包含清單視圖控制項的樣式來修改內嵌標題控制項的外觀。 此外，您也可以透過父清單視圖控制項的成員函式來取得標題控制項的相關資訊。 不過，針對內嵌標題控制項的屬性和樣式，若要進行完整的控制和存取，建議您取得標頭控制項物件的指標。
 
-可以從任一`CListCtrl``CListView`或調用相應`GetHeaderCtrl`類 的成員函數訪問嵌入的標頭控制物件。 下列程式碼將示範此作業：
+內嵌的標頭控制項物件可以從 `CListCtrl` 或 `CListView` 呼叫個別類別的成員函式來存取 `GetHeaderCtrl` 。 下列程式碼將示範此作業：
 
-[!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#14](codesnippet/cpp/header-control-and-list-control_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [將影像清單與標題控制項一起使用](../mfc/using-image-lists-with-header-controls.md)
+- [搭配使用影像清單與標題控制項](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CHeaderCtrl](using-cheaderctrl.md)<br/>
+[控制項](controls-mfc.md)

@@ -7,36 +7,36 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: fb10ced78e230316a6e2982f24c1fb6e2e52ed8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364276"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618747"
 ---
 # <a name="general-window-creation-sequence"></a>一般視窗建立順序
 
-當您創建自己的視窗(如子視窗)時,框架使用的過程與[文檔/視圖創建](../mfc/document-view-creation.md)中所述的過程大致相同。
+當您建立自己的視窗（例如子視窗）時，此架構所使用的程式與[建立檔/視圖](document-view-creation.md)時所述的進程大致相同。
 
-MFC 提供的所有視窗類別來[採用兩階段結構](../mfc/one-stage-and-two-stage-construction-of-objects.md)。 也就是說,在調用C++**新**運算元期間,構造函數分配並初始化C++物件,但不會創建相應的 Windows 視窗。 之後,通過調用視窗物件的[「創建](../mfc/reference/cwnd-class.md#create)成員」函數來完成此操作。
+MFC 提供的所有視窗類別都採用[兩階段式的結構](one-stage-and-two-stage-construction-of-objects.md)。 也就是說，在 c + + **new**運算子的調用期間，此函式會配置並初始化 c + + 物件，但不會建立對應的 Windows 視窗。 這是藉由呼叫 window 物件的[Create](reference/cwnd-class.md#create)成員函式來完成。
 
-成員`Create`函數使 Windows`HWND`視窗並將儲存在C++物件的公共資料成員[m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)。 `Create`對創建參數具有完全的靈活性。 在調用`Create`之前,您可能希望使用全域函數[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)註冊視窗類,以便為框架設置圖示和類樣式。
+成員函式 `Create` 會建立 Windows 視窗，並將其儲存 `HWND` 在 c + + 物件的公用資料成員[m_hWnd](reference/cwnd-class.md#m_hwnd)。 `Create`提供建立參數的完整彈性。 在呼叫之前 `Create` ，您可能會想要使用全域函式[AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass)來註冊視窗類別，以便設定框架的圖示和類別樣式。
 
-對框架視窗,可以使用[LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)成員函`Create`數而不是 。 `LoadFrame`使用較少的參數使Windows視窗。 它從資源獲取許多預設值,包括框架的標題、圖示、快速鍵表和功能表。
+針對框架視窗，您可以使用[LoadFrame](reference/cframewnd-class.md#loadframe)成員函式，而不是 `Create` 。 `LoadFrame`讓 Windows 視窗使用較少的參數。 它會從資源取得許多預設值，包括框架的標題、圖示、快速鍵對應表和功能表。
 
 > [!NOTE]
-> 您的圖示、快速鍵表和功能表資源必須具有通用資源 ID(如**IDR_MAINFRAME,** 以便由 LoadFrame 載入它們。
+> 您的圖示、快速鍵對應表和功能表資源必須擁有一般資源識別碼（例如**IDR_MAINFRAME**），LoadFrame 才會載入它們。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [視窗物件](../mfc/window-objects.md)
+- [視窗物件](window-objects.md)
 
-- [註冊視窗"類"](../mfc/registering-window-classes.md)
+- [註冊視窗「類別」](registering-window-classes.md)
 
-- [銷毀視窗物件](../mfc/destroying-window-objects.md)
+- [終結視窗物件](destroying-window-objects.md)
 
-- [建立文件框架視窗](../mfc/creating-document-frame-windows.md)
+- [建立檔框架視窗](creating-document-frame-windows.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[建立視窗](../mfc/creating-windows.md)
+[建立視窗](creating-windows.md)

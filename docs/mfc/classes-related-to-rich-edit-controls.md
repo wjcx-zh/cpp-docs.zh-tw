@@ -12,18 +12,18 @@ helpviewer_keywords:
 - rich edit controls [MFC], and CRichEditDoc
 - CRichEditView class [MFC], and CRichEditCtrl
 ms.assetid: 4b31c2cc-6ea1-4146-b7c5-b0b5b419f14d
-ms.openlocfilehash: 349a8b5c26b7260c9af496d0f4a3a997ee753020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 584649a2bb2d9a118e390aebf9f7411c3123b1a3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327232"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620718"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>與 Rich Edit 控制項相關的類別
 
-[CRichEditView](../mfc/reference/cricheditview-class.md)， [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)，並[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)類別提供 rich edit 控制項的功能 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))在 MFC 的文件/檢視架構內容。 `CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc` 會維護檢視中的 OLE 用戶端項目的清單。 `CRichEditCntrItem` 提供 OLE 用戶端項目的存取權給容器端。 若要修改的內容`CRichEditView`，使用[cricheditview:: Getricheditctrl](../mfc/reference/cricheditview-class.md#getricheditctrl)存取基礎 rich edit 控制項。
+[CRichEditView](reference/cricheditview-class.md)、 [CRichEditDoc](reference/cricheditdoc-class.md)和[CRichEditCntrItem](reference/cricheditcntritem-class.md)類別會在 MFC 的檔/視圖架構內容中提供 rich edit 控制項（[CRichEditCtrl](reference/cricheditctrl-class.md)）的功能。 `CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc` 會維護檢視中的 OLE 用戶端項目的清單。 `CRichEditCntrItem` 提供 OLE 用戶端項目的存取權給容器端。 若要修改的內容 `CRichEditView` ，請使用[CRichEditView：： GetRichEditCtrl](reference/cricheditview-class.md#getricheditctrl)來存取基礎 rich edit 控制項。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CRichEditCtrl](using-cricheditctrl.md)<br/>
+[控制項](controls-mfc.md)

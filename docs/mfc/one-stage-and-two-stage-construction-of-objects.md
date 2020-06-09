@@ -7,42 +7,42 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: 8f221ac6b63a06c65f932a695dfbf7b93ae7ac96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 07e006d5b326486c54f23990c604a7d2ee0e4c83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375973"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625294"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>一階段和兩階段的物件建構
 
-您可以選擇兩種建立圖形物件的技術,如筆和畫筆:
+您可以選擇兩種方法來建立繪圖物件，例如畫筆和筆刷：
 
-- *一階段建構*:在一個階段建構和初始化物件,全部使用構造函數。
+- *一個階段的結構*：在一個階段中，將物件進行結構化和初始化，全都使用此函式。
 
-- *兩階段構造*:分兩個階段構造和初始化物件。 建構函數創建物件,初始化函數將初始化。
+- *兩階段的結構*：在兩個不同的階段中，建立並初始化物件。 此函式會建立物件，而初始化函數會將其初始化。
 
-兩階段結構始終更安全。 在一階段構造中,如果提供不正確的參數或記憶體分配失敗,構造函數可能會引發異常。 此問題可以通過兩階段構造避免,儘管您必須檢查故障。 在這兩種情況下,銷毀物件都是相同的過程。
+兩階段的結構一律會更安全。 在一個階段的結構中，如果您提供不正確的引數或記憶體配置失敗，則此函式可能會擲回例外狀況。 這個問題是由兩個階段的結構所避免，不過您必須檢查是否有失敗。 不論是哪一種情況，終結物件都是相同的進程。
 
 > [!NOTE]
-> 這些技術適用於創建任何物件,而不僅僅是圖形物件。
+> 這些技術適用于建立任何物件，而不只是繪圖物件。
 
-## <a name="example-of-both-construction-techniques"></a>兩種施工技術範例
+## <a name="example-of-both-construction-techniques"></a>這兩種結構技術的範例
 
-下面的簡短示例顯示了建構筆物件的兩種方法:
+下列簡單的範例顯示兩種建立畫筆物件的方法：
 
-[!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]
+[!code-cpp[NVC_MFCDocViewSDI#6](codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]
 
-### <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [圖形物件](../mfc/graphic-objects.md)
+- [繪圖物件](graphic-objects.md)
 
-- [在裝置中選擇圖形物件](../mfc/selecting-a-graphic-object-into-a-device-context.md)
+- [選取繪圖物件放入裝置內容中](selecting-a-graphic-object-into-a-device-context.md)
 
-- [裝置內容](../mfc/device-contexts.md)
+- [裝置內容](device-contexts.md)
 
-- [在檢視中繪圖](../mfc/drawing-in-a-view.md)
+- [在檢視中繪圖](drawing-in-a-view.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[圖形物件](../mfc/graphic-objects.md)
+[圖形物件](graphic-objects.md)

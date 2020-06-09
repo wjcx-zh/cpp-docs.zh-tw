@@ -10,31 +10,31 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-ms.openlocfilehash: c70539b49fcf2aa87f0bee375a87b38277b6ed42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4efd1c23c7e4d6f7d8e6fa9fe046f8de11c825a6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626528"
 ---
 # <a name="adding-controls-by-hand"></a>以手動方式加入控制項
 
-您可以[將控制項加入對話方塊中，使用對話方塊編輯器](../mfc/using-the-dialog-editor-to-add-controls.md)或將其新增您自己，使用程式碼。
+您可以使用[對話方塊編輯器將控制項加入至對話方塊](using-the-dialog-editor-to-add-controls.md)，或使用程式碼自行加入。
 
-若要建立您自己的控制項物件，您會通常是內嵌C++控制項中的物件C++對話方塊或框架視窗物件。 Framework 中其他許多物件，例如控制項需要兩階段建構。 您應該呼叫控制項的**建立**成員函式，建立父對話方塊或框架視窗的過程。 對話方塊中，這通常是[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)，以及框架視窗中[OnCreate](../mfc/reference/cwnd-class.md#oncreate)。
+若要自行建立控制項物件，您通常會在 c + + 對話方塊或框架視窗物件中內嵌 c + + 控制項物件。 就像架構中的許多其他物件一樣，控制項也需要兩階段式的結構。 您應該呼叫控制項的**Create**成員函式，做為建立父對話方塊或框架視窗的一部分。 在對話方塊中，這通常是在[OnInitDialog](reference/cdialog-class.md#oninitdialog)中完成，而針對框架視窗則是在[OnCreate](reference/cwnd-class.md#oncreate)中進行。
 
-下列範例示範您可以宣告`CEdit`在類別宣告中的衍生的對話方塊類別的物件，然後呼叫`Create`成員函式中的`OnInitDialog`。 因為`CEdit`物件宣告為內嵌物件，它會自動建構對話方塊物件建構後，但仍然必須予以初始化有其專屬`Create`成員函式。
+下列範例會示範如何在 `CEdit` 衍生對話方塊類別的類別宣告中宣告物件，然後在中呼叫成員函式 `Create` `OnInitDialog` 。 因為 `CEdit` 物件宣告為内嵌物件，所以會在構造對話方塊物件時自動加以建立，但仍必須使用自己的成員函式來初始化 `Create` 。
 
-[!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]
+[!code-cpp[NVC_MFCControlLadenDialog#1](codesnippet/cpp/adding-controls-by-hand_1.h)]
 
-下列`OnInitDialog`函式中設定一個矩形，然後呼叫`Create`建立 Windows 編輯控制項，並將它附加至未初始化`CEdit`物件。
+下列函式會 `OnInitDialog` 設定一個矩形，然後呼叫 `Create` 以建立 Windows 編輯控制項，並將它附加至未初始化的 `CEdit` 物件。
 
-[!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#2](codesnippet/cpp/adding-controls-by-hand_2.cpp)]
 
-建立編輯物件之後，您也可以設定輸入的焦點控制藉由呼叫`SetFocus`成員函式。 最後，您可以傳回從 0`OnInitDialog`以顯示您將焦點設定。 如果要傳回非零值時，對話方塊管理員會將焦點設定在對話方塊的 [項目] 清單中的第一個控制項項目。 在大部分情況下，您會想要將控制項新增至您的對話方塊中，使用對話方塊編輯器。
+建立 edit 物件之後，您也可以藉由呼叫成員函式，將輸入焦點設定為控制項 `SetFocus` 。 最後，您會從傳回0， `OnInitDialog` 以顯示您設定焦點。 如果您傳回非零值，對話方塊管理員會將焦點設定為對話方塊專案清單中的第一個控制項專案。 在大部分的情況下，您會想要使用對話方塊編輯器，將控制項加入對話方塊中。
 
 ## <a name="see-also"></a>另請參閱
 
-[建立及使用控制項](../mfc/making-and-using-controls.md)<br/>
-[控制項](../mfc/controls-mfc.md)<br/>
-[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
+[建立及使用控制項](making-and-using-controls.md)<br/>
+[控制項](controls-mfc.md)<br/>
+[CDialog：： OnInitDialog](reference/cdialog-class.md#oninitdialog)

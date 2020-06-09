@@ -1,5 +1,5 @@
 ---
-title: '例外狀況: 檢查例外狀況內容'
+title: 例外狀況：檢查例外狀況內容
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [MFC], MFC
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: f6f9bca6f6b7ca9d104cb492c760ab89f7163afd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8554dda2f465aa058cea3d257c22ec38bc6e2c18
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405998"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625896"
 ---
-# <a name="exceptions-examining-exception-contents"></a>例外狀況: 檢查例外狀況內容
+# <a name="exceptions-examining-exception-contents"></a>例外狀況：檢查例外狀況內容
 
-雖然**攔截**區塊的引數可以是幾乎任何資料類型、 MFC 函式會擲回的例外狀況衍生自類別之型別的`CException`。 若要攔截 MFC 函式擲回例外狀況，接著，您撰寫**攔截**其引數為指標的區塊來`CException`物件 (或衍生自`CException`，例如`CMemoryException`)。 根據例外狀況的確切類型，您可以檢查例外狀況物件資料成員，收集的特定原因的例外狀況的資訊。
+雖然**catch**區塊的引數可以是幾乎任何資料類型，但 MFC 函式會擲回衍生自類別的類型例外狀況 `CException` 。 為了攔截 MFC 函式所擲回的例外狀況，您可以撰寫一個**catch**區塊，其引數是 `CException` 物件（或衍生自的物件 `CException` ，例如）的指標 `CMemoryException` 。 根據例外狀況的確切類型，您可以檢查例外狀況物件的資料成員，以收集例外狀況的特定原因的相關資訊。
 
-例如，`CFileException`型別具有`m_cause`資料成員，其中包含指定的檔案例外狀況原因的列舉型別。 可能的一些範例會傳回值為`CFileException::fileNotFound`和`CFileException::readOnly`。
+例如， `CFileException` 類型具有 `m_cause` 資料成員，其中包含指定檔案例外狀況原因的列舉類型。 可能的傳回值的一些範例為 `CFileException::fileNotFound` 和 `CFileException::readOnly` 。
 
-下列範例示範如何檢查的內容`CFileException`。 同樣地可以檢查其他例外狀況類型。
+下列範例顯示如何檢查的內容 `CFileException` 。 其他的例外狀況類型也可以類似的檢查。
 
-[!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#13](codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
 
-如需詳細資訊，請參閱[例外狀況：釋放例外狀況中的物件](../mfc/exceptions-freeing-objects-in-exceptions.md)和[例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+如需詳細資訊，請參閱[例外狀況：釋放例外狀況中的物件](exceptions-freeing-objects-in-exceptions.md)和[例外狀況：攔截及刪除例外](exceptions-catching-and-deleting-exceptions.md)狀況。
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況處理](../mfc/exception-handling-in-mfc.md)
+[例外狀況處理](exception-handling-in-mfc.md)

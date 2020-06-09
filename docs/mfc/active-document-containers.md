@@ -7,60 +7,60 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: e2005ffed592fa1de278e0f6339d94687a20fd06
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc7017a205bedd716e5c87aa23ac96b257af2e16
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377390"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626026"
 ---
 # <a name="active-document-containers"></a>主動式文件容器
 
-活動文件容器(如 Microsoft Office Binder 或 Internet Explorer)允許您在單個框架中使用多個不同應用程式類型的文檔(而不是強制為每個文件類型創建和使用多個應用程式框架)。
+活動文檔容器（例如 Microsoft Office 系結器或 Internet Explorer）可讓您在單一框架內處理不同應用程式類型的數個檔（而不是強迫您建立及使用每一種檔案類型的多個應用程式框架）。
 
-MFC 為類`COleDocObjectItem`中的活動文檔容器提供完全支援。 您可以通過在 MFC 應用程式精靈的**複合文件支援**頁上選擇 **「活動文檔容器**」複選框,使用 MFC 應用程式精靈建立活動文件容器。 關於詳細資訊,請參閱[建立活動文件容器應用程式](../mfc/creating-an-active-document-container-application.md)。
+MFC 會針對類別中的活動文檔容器提供完整支援 `COleDocObjectItem` 。 您可以使用 [MFC 應用程式精靈]，在 [MFC 應用程式精靈] 的 [**複合檔案支援**] 頁面上選取 [使用中**文檔容器**] 核取方塊，以建立活動文檔容器。 如需詳細資訊，請參閱[建立活動文檔容器應用程式](creating-an-active-document-container-application.md)。
 
-有關活動文件容器的詳細資訊,請參閱:
+如需活動文檔容器的詳細資訊，請參閱：
 
-- [集裝箱要求](#container_requirements)
+- [容器需求](#container_requirements)
 
-- [文件網站物件](#document_site_objects)
+- [檔網站物件](#document_site_objects)
 
-- [檢視網站物件](#view_site_objects)
+- [查看網站物件](#view_site_objects)
 
 - [框架物件](#frame_object)
 
-- [說明功能表合併](../mfc/help-menu-merging.md)
+- [說明功能表合併](help-menu-merging.md)
 
-- [以程式設計方式列印](../mfc/programmatic-printing.md)
+- [以程式設計方式列印](programmatic-printing.md)
 
-- [命令目標](../mfc/message-handling-and-command-targets.md)
+- [命令目標](message-handling-and-command-targets.md)
 
-## <a name="container-requirements"></a><a name="container_requirements"></a>集裝箱要求
+## <a name="container-requirements"></a><a name="container_requirements"></a>容器需求
 
-活動文檔容器中的活動文檔支援不僅僅意味著介面實現:它還需要使用包含物件的介面的知識。 這同樣適用於活動文檔擴展,其中容器還必須知道如何在活動文檔本身上使用這些擴展介面。
+活動文檔容器中的使用中的檔案支援不只是介面的執行，也需要知道使用所包含物件的介面。 這同樣適用于現用檔延伸模組，其中容器也必須知道如何在使用中的檔本身上使用這些延伸模組介面。
 
-整合活動文件的活動文件容器必須:
+整合活動文檔的活動文檔容器必須：
 
-- 能夠透過`IPersistStorage`介面處理物件儲存,也就是說,它必須為每個活動文件提供實`IStorage`例 。
+- 能夠透過介面處理物件儲存體 `IPersistStorage` ，也就是說，它必須提供 `IStorage` 實例給每個使用中的檔。
 
-- 支援 OLE 文件的基本嵌入功能,`IOleClientSite`需要`IAdviseSink`實現和的「網站」物件(每個文檔或嵌入一個)。
+- 支援 OLE 檔的基本內嵌功能，強制 "site" 物件（每一檔或內嵌一個），其會執行 `IOleClientSite` 和 `IAdviseSink` 。
 
-- 支援就地啟動嵌入物件或活動文檔。 容器的網站物件必須實現`IOleInPlaceSite`,容器的畫面物件必須提供`IOleInPlaceFrame`。
+- 支援内嵌物件或活動文檔的就地啟用。 容器的網站物件必須執行 `IOleInPlaceSite` ，而且容器的框架物件必須提供 `IOleInPlaceFrame` 。
 
-- 通過實現`IOleDocumentSite`為容器提供與文檔對話的機制,支援活動文檔的擴展。 或者,容器可以實現活動文檔`IOleCommandTarget`介面`IContinueCallback`,並拾取簡單的命令,如列印或保存。
+- 藉由執行來支援活動文檔的延伸模組， `IOleDocumentSite` 以提供容器與檔通訊的機制。 （選擇性）容器可以執行活動文檔介面 `IOleCommandTarget` ，並 `IContinueCallback` 挑選簡單的命令，例如列印或儲存。
 
-框架物件、檢視物件和容器物件可以選擇實現`IOleCommandTarget`以支援某些命令的調度,如[命令目標](../mfc/message-handling-and-command-targets.md)中所述。 檢視和容器物件也可以選擇實現`IPrint`和`IContinueCallback`,以支援程式設計列印,如[程式設計列印](../mfc/programmatic-printing.md)中所述。
+Frame 物件、view 物件和 container 物件可以選擇性地執行 `IOleCommandTarget` ，以支援分派特定命令，如[命令目標](message-handling-and-command-targets.md)中所述。 View 和 container 物件也可以選擇性地執行 `IPrint` 和 `IContinueCallback` ，以支援程式設計的列印，如程式[設計的列印](programmatic-printing.md)中所述。
 
-下圖顯示了容器及其元件(左圖)與活動文檔及其檢視(右側)之間的概念關係。 活動文件管理儲存和數據,檢視顯示或選擇性地列印該資料。 粗體介面是主動參與文檔所需的介面;這些粗體和斜體是可選的。 所有其他介面是必需的。
+下圖顯示容器及其元件（左側）和作用中檔及其視圖（右側）之間的概念關聯性。 活動文檔會管理儲存體和資料，而此視圖會顯示或選擇性地列印該資料。 以粗體顯示的介面是使用中的檔案參與所需的介面;這些粗體和斜體都是選擇性的。 所有其他介面都是必要的。
 
 ![主動式文件容器介面](../mfc/media/vc37gj1.gif "主動式文件容器介面")
 
-僅支援單個檢視的文檔可以在單個具體類上實現檢視和文檔元件(即其相應的介面)。 此外,一次僅支援一個檢視的容器網站可以將文檔網站和視圖網站合併到單個具體網站類中。 但是,容器的幀物件必須保持不同,並且容器的文檔元件僅在此處包含,以便完整地反映體系結構;它不受活動文件包含體系結構的影響。
+僅支援單一視圖的檔可以在單一實體類別上同時執行 view 和 document 元件（也就是其對應的介面）。 此外，一次只支援一個 view 的容器網站可以將檔網站和 view 網站結合成單一具體的網站類別。 不過，容器的框架物件必須保持不變，而且容器的檔元件只會包含在此處，以提供完整的架構。它不會受到活動文檔內含專案架構的影響。
 
-## <a name="document-site-objects"></a><a name="document_site_objects"></a>文件網站物件
+## <a name="document-site-objects"></a><a name="document_site_objects"></a>檔網站物件
 
-在活動文件包含架構結構中,文件站台與 OLE 文件中的用戶端網站物件相同,並`IOleDocument`添加介面:
+在活動文檔內含專案架構中，檔網站與 OLE 檔中的用戶端網站物件相同，並加入了 `IOleDocument` 介面：
 
 ```cpp
 interface IOleDocumentSite : IUnknown
@@ -69,20 +69,20 @@ interface IOleDocumentSite : IUnknown
 }
 ```
 
-文件網站在概念上是一個或多個"查看網站"物件的容器。 每個檢視網站物件都與文檔網站管理的文檔的各個檢視對象相關聯。 如果容器僅支援每個文檔網站的單個檢視,則可以使用單個具體類實現文檔網站和視圖網站。
+檔網站在概念上是一個或多個「view site」物件的容器。 每個 view site 物件都會與檔網站所管理之檔的個別 view 物件相關聯。 如果容器僅支援每個檔網站的單一視圖，則它可以使用單一實體類別來執行檔網站和 view 網站。
 
-## <a name="view-site-objects"></a><a name="view_site_objects"></a>檢視網站物件
+## <a name="view-site-objects"></a><a name="view_site_objects"></a>查看網站物件
 
-容器的檢視站點物件管理文檔的特定檢視的顯示空間。 除了支持標準`IOleInPlaceSite`介面外,視圖網站通常還實現了`IContinueCallback`程式設計列印控制。 (請注意,視圖物件從不查詢`IContinueCallback`,因此它實際上可以在容器所需的任何對象上實現。
+容器的 view site 物件會管理特定檔視圖的顯示空間。 除了支援標準 `IOleInPlaceSite` 介面，視圖網站通常也會 `IContinueCallback` 針對程式設計的列印控制項來執行。 （請注意，view 物件永遠不會查詢， `IContinueCallback` 因此它實際上可以在容器所需的任何物件上執行）。
 
-支援多個檢視的容器必須能夠在文件網站內創建多個檢視網站物件。 這為每個檢視提供了通過`IOleInPlaceSite`提供的單獨啟動和停用服務。
+支援多個 views 的容器必須能夠在檔網站內建立多個 view site 物件。 這會透過提供的個別啟用和停用服務來提供每個視圖 `IOleInPlaceSite` 。
 
-## <a name="frame-object"></a><a name="frame_object"></a>幀物件
+## <a name="frame-object"></a><a name="frame_object"></a>Frame 物件
 
-容器的幀物件在大多數情況下與用於在 OLE 文檔中就地啟動的幀相同,即處理功能表和工具列協商的框架。 視圖物件可通過`IOleInPlaceSite::GetWindowContext`訪問此幀物件,該物件還提供對表示容器文件的容器物件的訪問(該物件可以處理窗格級工具列協商和包含的物件枚舉)。
+在大部分的情況下，容器的框架物件是在 OLE 檔中用於就地啟用的相同框架，也就是處理功能表和工具列的協調。 View 物件可透過存取此框架物件 `IOleInPlaceSite::GetWindowContext` ，這也會提供容器物件的存取權，該物件代表容器檔案（可以處理窗格層級的工具列協商和包含的物件列舉）。
 
-活動文檔容器可以`IOleCommandTarget`通過添加 來增強幀。 這允許它接收源自活動文件使用者介面的命令,就像此介面允許容器發送相同的命令(如**檔案新**、**打開**、**儲存為**、**列印**等命令) 一樣。**將複製**複製「、」**貼上**「、」**複製**檔案。 有關詳細資訊,請參閱[指令目標](../mfc/message-handling-and-command-targets.md)。
+活動文檔容器可以藉由新增來擴大框架 `IOleCommandTarget` 。 這可讓它接收源自作用中檔之使用者介面的命令，其方式與此介面允許容器傳送相同命令（例如，檔案**新增**、**開啟**、**另存**新檔、**列印**;**編輯 [複製**]、[**貼**上]、[**復原**] 和 [其他]）至活動文檔。 如需詳細資訊，請參閱[命令目標](message-handling-and-command-targets.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[主動式文件內含項目](../mfc/active-document-containment.md)
+[主動式文件內含項目](active-document-containment.md)

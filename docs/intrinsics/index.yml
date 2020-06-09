@@ -1,0 +1,91 @@
+### YamlMime:Landing
+title: 編譯器內建與組件語言
+summary: 了解 Visual Studio 如何建立低層級、處理器特定的程式碼，以達到最大效能與控制。
+metadata:
+  title: 編譯器內建與組件語言
+  description: Visual Studio 包括適用於低層級程式設計工作的組譯工具與編譯器內建函式。
+  ms.topic: landing-page
+  ms.date: 05/26/2020
+  ms.openlocfilehash: f50d2541bd9fd7ca0071cc6ff76397b3dd240843
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507819"
+landingContent:
+- title: 使用編譯器內建函式
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 編譯器內建函式概觀
+      url: ../intrinsics/compiler-intrinsics.md
+  - linkListType: reference
+    links:
+    - text: ARM 內建函式
+      url: ../intrinsics/arm-intrinsics.md
+    - text: ARM64 內建
+      url: ../intrinsics/arm64-intrinsics.md
+    - text: x86 內建函式清單
+      url: ../intrinsics/x86-intrinsics-list.md
+    - text: x64 (amd64) 內建函式清單
+      url: ../intrinsics/x64-amd64-intrinsics-list.md
+    - text: 所有架構可用的內建函式
+      url: ../intrinsics/intrinsics-available-on-all-architectures.md
+    - text: 依字母順序列出內建函式清單
+      url: ../intrinsics/alphabetical-listing-of-intrinsic-functions.md
+- title: 在 Microsoft C/C++ 中使用適用於 x86 的內嵌組譯碼
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 內嵌組譯工具概觀
+      url: ../assembler/inline/inline-assembler-overview.md
+  - linkListType: concept
+    links:
+    - text: __asm 關鍵字
+      url: ../assembler/inline/asm.md
+  - linkListType: how-to-guide
+    links:
+    - text: 在 __asm 區塊中使用組合語言
+      url: ../assembler/inline/using-assembly-language-in-asm-blocks.md
+    - text: 在 __asm 區塊中使用 C 或 C++
+      url: ../assembler/inline/using-c-or-cpp-in-asm-blocks.md
+    - text: 使用及保留暫存器
+      url: ../assembler/inline/using-and-preserving-registers-in-inline-assembly.md
+    - text: 在內嵌組譯碼中呼叫 C++ 函式
+      url: ../assembler/inline/calling-cpp-functions-in-inline-assembly.md
+    - text: 最佳化內嵌組譯碼
+      url: ../assembler/inline/optimizing-inline-assembly.md
+- title: 使用 ARM 與 ARM64 組譯工具
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ARM 與 ARM64 組譯工具參考
+      url: ../assembler/arm/arm-assembler-reference.md
+    - text: ARM 與 ARM64 組譯工具命令列參考
+      url: ../assembler/arm/arm-assembler-command-line-reference.md
+    - text: ARM 與 ARM64 組譯工具診斷訊息
+      url: ../assembler/arm/arm-assembler-diagnostic-messages.md
+    - text: ARM 與 ARM64 組譯工具指示詞
+      url: ../assembler/arm/arm-assembler-directives.md
+- title: 使用 x86 與 x64 組譯工具
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 適用於 x86 與 x64 的 Microsoft Macro Assembler 參考
+      url: ../assembler/masm/microsoft-macro-assembler-reference.md
+    - text: 適用於 x64 的 MASM (ml64.exe)
+      url: ../assembler/masm/masm-for-x64-ml64-exe.md
+    - text: ML 和 ML64 命令列參考
+      url: ../assembler/masm/ml-and-ml64-command-line-reference.md
+    - text: 指示詞參考
+      url: ../assembler/masm/directives-reference.md
+    - text: 符號參考
+      url: ../assembler/masm/symbols-reference.md
+    - text: 運算子參考
+      url: ../assembler/masm/operators-reference.md
+    - text: MASM BNF 文法
+      url: ../assembler/masm/masm-bnf-grammar.md
+    - text: ML 與 ML64 錯誤訊息
+      url: ../assembler/masm/ml-error-messages.md
+    - text: 處理器製造商程式設計手冊
+      url: ../assembler/masm/processor-manufacturer-programming-manuals.md

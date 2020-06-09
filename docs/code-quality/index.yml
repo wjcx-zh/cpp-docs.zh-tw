@@ -6,12 +6,12 @@ metadata:
   description: 了解 Visual Studio 如何協助您分析 C 及 C++ 程式碼品質。
   ms.topic: landing-page
   ms.date: 05/26/2020
-  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
-  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.openlocfilehash: cb4015d2890e24568373ff97d884e4aa24ddcf71
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84108405"
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84506753"
 landingContent:
 - title: 分析 C 和 C++ 程式碼
   linkLists:
@@ -27,8 +27,6 @@ landingContent:
     links:
     - text: 逐步分析 C/C++ 程式碼的缺失
       url: walkthrough-analyzing-c-cpp-code-for-defects.md
-    - text: 使用 SAL 註釋以減少 C/C++ 程式碼的缺失
-      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
 - title: 程式碼分析參考
   linkLists:
   - linkListType: overview
@@ -41,3 +39,29 @@ landingContent:
       url: code-analysis-for-cpp-corecheck.md
     - text: C++ 程式碼分析警告
       url: code-analysis-for-c-cpp-warnings.md
+- title: 使用 SAL 註釋以減少缺失
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 了解 SAL
+      url: understanding-sal.md
+  - linkListType: get-started
+    links:
+    - text: SAL 範例
+      url: best-practices-and-examples-sal.md
+  - linkListType: how-to-guide
+    links:
+    - text: 標註函式參數和傳回值
+      url: annotating-function-parameters-and-return-values.md
+    - text: 標註函式行為
+      url: annotating-function-behavior.md
+    - text: 標註結構和類別
+      url: annotating-structs-and-classes.md
+    - text: 標註鎖定行為
+      url: annotating-locking-behavior.md
+    - text: 指定套用註釋的時機與位置
+      url: specifying-when-and-where-an-annotation-applies.md
+  - linkListType: reference
+    links:
+    - text: SAL 註釋內建函式
+      url: intrinsic-functions.md

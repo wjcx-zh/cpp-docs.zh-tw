@@ -1,0 +1,185 @@
+### YamlMime:Hub
+title: Microsoft C++、C 與組譯工具文件
+summary: 了解如何使用 C++、C 與組合語言來開發適用於您平台與裝置的應用程式、服務與工具。
+brand: visual-studio
+metadata:
+  title: Microsoft C/C++ 文件
+  description: 了解如何使用 C++ 來開發平台和裝置的應用程式、服務和工具。
+  ms.prod: visual-cpp
+  ms.topic: hub-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 06/04/2020
+  ms.openlocfilehash: aa696ed1057c0c47ff8dd66a76dd1f65a46f10bb
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507839"
+highlightedContent:
+  items:
+  - title: 安裝 Visual Studio 並選擇 C++ 工作負載
+    itemType: download
+    url: build/vscpp-step-0-installation.md
+  - title: 歡迎使用 Visual Studio 中的 C++
+    itemType: overview
+    url: overview/visual-cpp-in-visual-studio.md
+  - title: 開始使用 Visual Studio 與 C++
+    itemType: get-started
+    url: get-started/tutorial-console-cpp.md
+  - title: Visual Studio 中 C++ 的新功能
+    itemType: whats-new
+    url: overview/what-s-new-for-visual-cpp-in-visual-studio.md
+conceptualContent:
+  title: 開始使用 C++ 與 C
+  items:
+  - title: 歡迎使用 Visual Studio IDE
+    links:
+    - text: 開始 Visual Studio 引導式導覽
+      url: https://docs.microsoft.com/visualstudio/ide/visual-studio-ide
+      itemType: overview
+    - text: 從存放庫開啟程式碼
+      url: https://docs.microsoft.com/visualstudio/get-started/tutorial-open-project-from-repo
+      itemType: tutorial
+    - text: 撰寫和編輯程式碼
+      url: https://docs.microsoft.com/visualstudio/ide/index-writing-code
+      itemType: tutorial
+    - text: 建置程式碼
+      url: https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio
+      itemType: tutorial
+    - text: 偵錯程式碼
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus
+    - text: 測試程式碼
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
+  - title: 在 Visual Studio 中撰寫 C++ 與 C 應用程式
+    links:
+    - text: 建立主控台應用程式
+      url: get-started/tutorial-console-cpp.md
+      itemType: tutorial
+    - text: 使用 Win32 建立 Windows 傳統型應用程式
+      url: windows/walkthrough-creating-windows-desktop-applications-cpp.md
+      itemType: tutorial
+    - text: 使用 MFC 建立 Windows 傳統型應用程式
+      url: mfc/reference/creating-an-mfc-application.md
+      itemType: tutorial
+    - text: 建立 Windows DLL
+      url: build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+      itemType: tutorial
+    - text: 建立靜態程式庫
+      url: build/walkthrough-creating-and-using-a-static-library-cpp.md
+      itemType: tutorial
+    - text: 建立 .NET 元件
+      url: dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+      itemType: tutorial
+    - text: 建立通用 Windows 平台應用程式
+      url: /windows/uwp/cpp-and-winrt-apis/get-started
+      itemType: tutorial
+  - title: 使用命令列工具
+    links:
+    - text: 編譯 C++ 程式碼
+      url: build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+      itemType: tutorial
+    - text: 編譯 C 程式碼
+      url: build/walkthrough-compile-a-c-program-on-the-command-line.md
+      itemType: tutorial
+    - text: 編譯 C++/CX
+      url: build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+      itemType: tutorial
+    - text: 編譯 C++/CLI
+      url: build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+      itemType: tutorial
+  - title: 在 Visual Studio Code 中使用 C++ 與 C
+    links:
+    - text: 開始使用 Visual Studio Code
+      url: https://code.visualstudio.com/docs
+      itemType: tutorial
+    - text: 安裝 Microsoft C/C++ 延伸模組
+      url: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+      itemType: tutorial
+    - text: 在 Windows 中使用 Microsoft C/C++
+      url: https://code.visualstudio.com/docs/cpp/config-msvc
+      itemType: tutorial
+    - text: 在 Windows 子系統 Linux 版中使用 C++
+      url: https://code.visualstudio.com/docs/cpp/config-wsl
+      itemType: tutorial
+    - text: 在 Linux 上使用 C++
+      url: https://code.visualstudio.com/docs/cpp/config-linux
+      itemType: tutorial
+    - text: 在 MacOS 上使用 C++
+      url: https://code.visualstudio.com/docs/cpp/config-clang-mac
+      itemType: tutorial
+tools:
+  title: 語言和架構
+  items:
+  - title: C++
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cpp/index.yml
+  - title: C
+    imageSrc: https://docs.microsoft.com/media/logos/logo_C.svg
+    url: c-language/index.yml
+  - title: Microsoft Assembler
+    imageSrc: media/index/logo-asm.svg
+    url: intrinsics/index.yml
+  - title: 適用於 Windows 執行階段的 C++/CX
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cppcx/visual-c-language-reference-c-cx.md
+  - title: 適用於 .NET 的 C++/CLI
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+  - title: Active Template Library (ATL)
+    imageSrc: media/index/logo-atl.svg
+    url: atl/atl-com-desktop-components.md
+  - title: Microsoft Foundation Classes (MFC)
+    imageSrc: media/index/logo-mfc.svg
+    url: mfc/mfc-desktop-applications.md
+  - title: 適用於 Windows 執行階段的 C++/WinRT
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: /windows/uwp/cpp-and-winrt-apis/
+additionalContent:
+  sections:
+  - title: C++ 與 C 工作負載、功能與程式庫
+    summary: 使用 Visual Studio 工具為您選擇的平台進行開發。
+    items:
+    - title: 工作負載
+      links:
+      - text: 通用 Windows 平台開發
+        url: cppcx/universal-windows-apps-cpp.md
+      - text: Windows 傳統型應用程式開發
+        url: windows/windows-desktop-applications-cpp.md
+      - text: Linux 開發
+        url: linux/index.yml
+      - text: 行動裝置應用程式開發
+        url: cross-platform/index.yml
+      - text: 遊戲開發
+        url: /windows/uwp/gaming/e2e/
+    - title: 功能
+      links:
+      - text: 編輯及重構程式碼
+        url: ide/writing-and-refactoring-code-cpp.md
+      - text: 建置程式碼專案
+        url: build/projects-and-build-systems-cpp.md
+      - text: 偵錯程式碼
+        url: https://docs.microsoft.com/visualstudio/debugger/debugging-native-code
+      - text: 分析您的程式碼
+        url: code-quality/index.yml
+      - text: 提升應用程式效能
+        url: https://docs.microsoft.com/visualstudio/profiling
+      - text: 移植及升級程式碼
+        url: porting/visual-cpp-porting-and-upgrading-guide.md
+    - title: 程式庫
+      links:
+      - text: C++ 標準程式庫參考
+        url: standard-library/cpp-standard-library-reference.md
+      - text: C 執行階段程式庫參考
+        url: c-runtime-library/c-run-time-library-reference.md
+      - text: MFC 與 ATL Windows 傳統型應用程式程式庫
+        url: mfc/mfc-and-atl.md
+      - text: 平行程式設計程式庫
+        url: parallel/parallel-programming-in-visual-cpp.md
+      - text: 雲端與網路程式庫
+        url: cloud/cloud-and-web-programming-in-visual-cpp.md
+      - text: 通用 Windows 平台程式庫
+        url: cppcx/namespaces-reference-c-cx.md
+  footer: '[部落格](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [回報問題](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [開發人員社群](https://developercommunity.visualstudio.com/spaces/62/index.html) - 參與 C++ 文件：請參閱 [參與者指南](https://docs.microsoft.com/contribute/)(英文)。'

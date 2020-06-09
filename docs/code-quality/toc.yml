@@ -1,7 +1,7 @@
 - name: 程式碼分析文件
   href: ../code-quality/index.yml
 - name: 總覽
-  displayName: C++ code analysis
+  displayName: C and C++ code analysis
   href: ../code-quality/code-analysis-for-c-cpp-overview.md
 - name: 快速入門
   href: ../code-quality/quick-start-code-analysis-for-c-cpp.md
@@ -217,10 +217,10 @@
       href: ../code-quality/c26819.md
     - name: C26820
       href: ../code-quality/c26820.md
-- name: C/C++ 警告
+- name: C/C++ 程式碼分析警告
   items:
     - name: 總覽
-      displayName: C++ warnings
+      displayName: Code analysis warnings
       href: ../code-quality/code-analysis-for-c-cpp-warnings.md
     - name: C1250
       href: ../code-quality/c1250.md

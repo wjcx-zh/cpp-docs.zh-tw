@@ -4,58 +4,27 @@
   items:
     - name: Microsoft C++、C 與組譯工具
       tocHref: /cpp/
-      topicHref: /cpp
+      topicHref: /cpp/index
       items:
-        - name: Microsoft C/C++
-          tocHref: /cpp/overview/
-          topicHref: /cpp/overview/visual-cpp-in-visual-studio
-          items: null
-        - name: C++ 語言
-          tocHref: /cpp/cpp/
-          topicHref: /cpp/cpp/cpp-language-reference
-        - name: C 語言
-          tocHref: /cpp/c-language/
-          topicHref: /cpp/c-language/c-language-reference
-        - name: C/C++ 前置處理器
-          tocHref: /cpp/preprocessor/
-          topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
         - name: 編譯器內建與組件語言
           tocHref: /cpp/intrinsics/
-          topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
+          topicHref: /cpp/intrinsics/index
           items:
+            - name: 編譯器內建函式
+              tocHref: /cpp/intrinsics/
+              topicHref: /cpp/intrinsics/compiler-intrinsics
             - name: ARM 與 ARM64 組譯工具
               tocHref: /cpp/assembler/arm/
               topicHref: /cpp/assembler/arm/arm-assembler-reference
-            - name: 內嵌 x86 組譯工具
+            - name: C/C++ x86 內嵌組譯工具
               tocHref: /cpp/assembler/inline/
               topicHref: /cpp/assembler/inline/inline-assembler
-            - name: MASM x86 與 x64 組譯工具
+            - name: x86 與 x64 組譯工具
               tocHref: /cpp/assembler/masm/
               topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-        - name: C 執行階段程式庫
-          tocHref: /cpp/c-runtime-library/
-          topicHref: /cpp/c-runtime-library/c-run-time-library-reference
-          items:
-            - name: UCRT 參考
-              tocHref: /cpp/c-runtime-library/reference/
-              topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
-        - name: C++ 標準程式庫
-          tocHref: /cpp/standard-library/
-          topicHref: /cpp/standard-library/cpp-standard-library-reference
-        - name: Windows
-          tocHref: /cpp/windows/
-          topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
-          items: null
         - name: ATL
           tocHref: /cpp/atl/
           topicHref: /cpp/atl/atl-com-desktop-components
-        - name: MFC
-          tocHref: /cpp/mfc/
-          topicHref: /cpp/mfc/mfc-desktop-applications
-          items:
-            - name: MFC 參考
-              tocHref: /cpp/mfc/reference/
-              topicHref: /cpp/mfc/reference/mfc-classes
         - name: ATL/MFC 共用類別
           tocHref: /cpp/atl-mfc-shared/
           topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
@@ -63,18 +32,41 @@
             - name: ATL/MFC 參考
               tocHref: /cpp/atl-mfc-shared/reference/
               topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
+        - name: 建置 C/C++ 專案
+          tocHref: /cpp/build/
+          topicHref: /cpp/build/building-c-cpp-programs
+          items:
+            - name: 建置參考
+              tocHref: /cpp/build/reference/
+              topicHref: /cpp/build/reference/c-cpp-building-reference
+        - name: 組建見解
+          tocHref: /cpp/build-insights/
+          topicHref: /cpp/build-insights/index
+        - name: C 語言
+          tocHref: /cpp/c-language/
+          topicHref: /cpp/c-language/index
+        - name: C 執行階段程式庫
+          tocHref: /cpp/c-runtime-library/
+          topicHref: /cpp/c-runtime-library/c-run-time-library-reference
+          items:
+            - name: UCRT 參考
+              tocHref: /cpp/c-runtime-library/reference/
+              topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
+        - name: 雲端與 Web
+          tocHref: /cpp/cloud/
+          topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
+        - name: 程式碼分析
+          tocHref: /cpp/code-quality/
+          topicHref: /cpp/code-quality/index
+        - name: C++ 語言
+          tocHref: /cpp/cpp/
+          topicHref: /cpp/cpp/index
         - name: C++/CX
           tocHref: /cpp/cppcx/
           topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
-        - name: Linux
-          tocHref: /cpp/linux/
-          topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
-        - name: 適用於 .NET 的 C++/CLI
-          tocHref: /cpp/dotnet/
-          topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp
-        - name: 平行程式設計
-          tocHref: /cpp/parallel/
-          topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
+        - name: 跨平台行動裝置程式開發
+          tocHref: /cpp/cross-platform/
+          topicHref: /cpp/cross-platform/index
         - name: 資料存取
           tocHref: /cpp/data/
           topicHref: /cpp/data/data-access-in-cpp
@@ -85,35 +77,46 @@
             - name: ODBC
               tocHref: /cpp/data/odbc/
               topicHref: /cpp/data/odbc/open-database-connectivity-odbc
-        - name: 編輯、瀏覽及重構程式碼
-          tocHref: /cpp/ide
-          topicHref: /cpp/ide/read-and-understand-code-cpp
-          items:
-            - name: IDE 中的 C++
-              tocHref: /cpp/ide/
-              topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
-        - name: 建置 C/C++ 專案
-          tocHref: /cpp/build/
-          topicHref: /cpp/build/building-c-cpp-programs
-          items:
-            - name: 建置參考
-              tocHref: /cpp/build/reference/
-              topicHref: /cpp/build/reference/c-cpp-building-reference
-        - name: 組建見解
-          tocHref: /cpp/build-insights/
-          topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
+        - name: 適用於 .NET 的 C++/CLI
+          tocHref: /cpp/dotnet/
+          topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp
         - name: 錯誤和警告
           tocHref: /cpp/error-messages/
           topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
+        - name: 編輯、瀏覽及重構程式碼
+          tocHref: /cpp/ide/
+          topicHref: /cpp/ide/read-and-understand-code-cpp
+        - name: Linux
+          tocHref: /cpp/linux/
+          topicHref: /cpp/linux/index
+        - name: MFC
+          tocHref: /cpp/mfc/
+          topicHref: /cpp/mfc/mfc-desktop-applications
+          items:
+            - name: MFC 參考
+              tocHref: /cpp/mfc/reference/
+              topicHref: /cpp/mfc/reference/mfc-classes
+        - name: Microsoft C/C++
+          tocHref: /cpp/overview/
+          topicHref: /cpp/overview/visual-cpp-in-visual-studio
+        - name: 平行程式設計
+          tocHref: /cpp/parallel/
+          topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
         - name: 移植及升級
           tocHref: /cpp/porting/
           topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
+        - name: C/C++ 前置處理器
+          tocHref: /cpp/preprocessor/
+          topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
+        - name: 安全性
+          tocHref: /cpp/security/
+          topicHref: /cpp/security/security-best-practices-for-cpp
+        - name: C++ 標準程式庫
+          tocHref: /cpp/standard-library/
+          topicHref: /cpp/standard-library/cpp-standard-library-reference
         - name: 文字和字串
           tocHref: /cpp/text/
           topicHref: /cpp/text/text-and-strings-in-visual-cpp
-        - name: 安全性
-          tocHref: /cpp/security
-          topicHref: /cpp/security/security-best-practices-for-cpp
-        - name: 雲端與 Web
-          tocHref: /cpp/cloud
-          topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
+        - name: Windows
+          tocHref: /cpp/windows/
+          topicHref: /cpp/windows/overview-of-windows-programming-in-cpp

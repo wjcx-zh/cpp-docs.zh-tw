@@ -6,49 +6,49 @@ f1_keywords:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-ms.openlocfilehash: a7034a99bfefe8f4c11cdf8f99dc4b0c31fac10a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 012d107d7bcc630c4bc02a9dc697172080787eac
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615796"
 ---
 # <a name="document-classes"></a>文件類別
 
-文件範本物件所建立的文件類別物件會管理應用程式的資料。 您將您的文件衍生類別，來自其中一個類別。
+檔類別物件是由檔範本物件所建立，用來管理應用程式的資料。 您將從這些類別的其中一個衍生您的檔類別。
 
-文件類別物件互動檢視物件。 檢視物件表示視窗的工作區、 顯示文件的資料，並允許使用者與它互動。 文件和檢視會建立文件範本物件。
+檔類別物件與 view 物件互動。 View 物件代表視窗的工作區、顯示檔的資料，並允許使用者與之互動。 檔和瀏覽器是由檔範本物件所建立。
 
-[CDocument](../mfc/reference/cdocument-class.md)<br/>
-應用程式特定的文件基底類別。 衍生您的文件類別或類別從`CDocument`。
+[CDocument](reference/cdocument-class.md)<br/>
+應用程式特定檔的基類。 從衍生您的檔類別或類別 `CDocument` 。
 
-[COleDocument](../mfc/reference/coledocument-class.md)<br/>
-用於複合文件的實作，以及基本的容器支援。 做為容器的類別衍生自[CDocItem](../mfc/reference/cdocitem-class.md)。 這個類別可用來當做基底類別容器文件，而且是基底類別`COleServerDoc`。
+[COleDocument](reference/coledocument-class.md)<br/>
+用於複合檔案的執行，以及基本容器支援。 作為衍生自[CDocItem](reference/cdocitem-class.md)之類別的容器。 這個類別可用來做為容器檔案的基類，而且是的基類 `COleServerDoc` 。
 
-[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
-類別衍生自`COleDocument`所提供的基礎結構進行連結。 您應該將文件類別衍生自這個類別而不是從應用程式容器`COleDocument`如果您想要它們支援內嵌物件連結。
+[COleLinkingDoc](reference/colelinkingdoc-class.md)<br/>
+衍生自的類別 `COleDocument` ，可提供要連結的基礎結構。 您應該從這個類別衍生容器應用程式的檔類別，而不是從 `COleDocument` ，如果您想要它們支援内嵌物件的連結。
 
-[CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-會維護 rich edit 控制項中的 OLE 用戶端項目清單。 搭配[CRichEditView](../mfc/reference/cricheditview-class.md)並[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)。
+[CRichEditDoc](reference/cricheditdoc-class.md)<br/>
+維護 rich edit 控制項中的 OLE 用戶端專案清單。 與[CRichEditView](reference/cricheditview-class.md)和[CRichEditCntrItem](reference/cricheditcntritem-class.md)搭配使用。
 
-[COleServerDoc](../mfc/reference/coleserverdoc-class.md)<br/>
-做為伺服器應用程式的文件類別的基底的類別。 `COleServerDoc` 物件提供與互動的伺服器支援大量[COleServerItem](../mfc/reference/coleserveritem-class.md)物件。 視覺化的編輯功能被提供使用類別庫的文件/檢視架構。
+[COleServerDoc](reference/coleserverdoc-class.md)<br/>
+當做伺服器應用程式檔類別的基類使用。 `COleServerDoc`物件透過與[COleServerItem](reference/coleserveritem-class.md)物件的互動，提供大量的伺服器支援。 視覺編輯功能是使用類別庫的檔/視圖架構來提供。
 
-[CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)<br/>
-提供，與[CHtmlEditView](../mfc/reference/chtmleditview-class.md)，在 MFC 的文件檢視架構內容中的 HTML WebBrowser 編輯平台的功能。
+[CHtmlEditDoc](reference/chtmleditdoc-class.md)<br/>
+透過[CHtmlEditView](reference/chtmleditview-class.md)，在 MFC 檔視圖架構的內容中提供 WebBrowser HTML 編輯平臺的功能。
 
-## <a name="related-classes"></a>相關的類別
+## <a name="related-classes"></a>相關類別
 
-文件類別物件可以是持續性 — 換句話說，它們可以在儲存媒體中撰寫它們的狀態和讀回。 MFC 提供`CArchive`類別來簡化將文件的資料傳輸至儲存媒體。
+檔類別物件可以是持續性的，也就是說，它們可以將其狀態寫入儲存媒體，並將其讀回。 MFC 提供的 `CArchive` 類別可加速將檔的資料傳送至儲存媒體。
 
-[CArchive](../mfc/reference/carchive-class.md)<br/>
-會與合作[CFile](../mfc/reference/cfile-class.md)物件來實作透過序列化物件的永續性儲存體 (請參閱[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize))。
+[CArchive](reference/carchive-class.md)<br/>
+具有[CFile](reference/cfile-class.md)物件的會合作，可透過序列化來執行物件的持續性儲存（請參閱[CObject：：序列化](reference/cobject-class.md#serialize)）。
 
-文件也可以包含 OLE 物件。 `CDocItem` 是伺服器和用戶端項目的基底類別。
+檔也可以包含 OLE 物件。 `CDocItem`是伺服器和用戶端專案的基類。
 
-[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-抽象的基底類別[COleClientItem](../mfc/reference/coleclientitem-class.md)並[COleServerItem](../mfc/reference/coleserveritem-class.md)。 類別的物件衍生自`CDocItem`代表文件的部分。
+[CDocItem](reference/cdocitem-class.md)<br/>
+[COleClientItem](reference/coleclientitem-class.md)和[COleServerItem](reference/coleserveritem-class.md)的抽象基類。 衍生自的類別物件 `CDocItem` 代表檔的各部分。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別概觀](class-library-overview.md)

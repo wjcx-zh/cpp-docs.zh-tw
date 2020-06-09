@@ -8,27 +8,27 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-ms.openlocfilehash: 5998d5707eb741be0e8ac270f6ac5ce77a9ff8d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399230446977636cc8769efe32b8f86fad466b83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616109"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>從 CDocument 衍生文件類別
 
-文件包含並管理您的應用程式資料。 若要使用的 MFC 應用程式精靈提供的文件類別，您必須執行下列作業：
+檔包含和管理您的應用程式資料。 若要使用 MFC 應用程式精靈提供的檔類別，您必須執行下列動作：
 
-- 自`CDocument`每種類型的文件。
+- `CDocument`針對每一種檔案類型從衍生類別。
 
-- 加入成員變數以儲存每個文件的資料。
+- 新增成員變數以儲存每份檔的資料。
 
-- 覆寫`CDocument`的`Serialize`文件類別中的成員函式。 `Serialize` 寫入和讀取文件的資料磁碟。
+- `CDocument` `Serialize` 在您的檔類別中覆寫的成員函式。 `Serialize`從磁片寫入和讀取檔的資料。
 
-## <a name="other-document-functions-often-overridden"></a>通常被覆寫的其他文件函式
+## <a name="other-document-functions-often-overridden"></a>其他檔功能通常會遭到覆寫
 
-您也可以覆寫其他`CDocument`成員函式。 特別是，您通常需要覆寫[OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)並[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)初始化文件的資料成員和[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)終結以動態方式配置資料。 如需可覆寫成員的資訊，請參閱類別[CDocument](../mfc/reference/cdocument-class.md)中*MFC 參考 》*。
+您可能也會想要覆寫其他成員函式 `CDocument` 。 特別的是，您通常需要覆寫[OnNewDocument](reference/cdocument-class.md#onnewdocument)和[OnOpenDocument](reference/cdocument-class.md#onopendocument) ，將檔的資料成員和[DeleteContents](reference/cdocument-class.md#deletecontents)初始化，以終結動態配置的資料。 如需可覆寫成員的詳細資訊，請參閱*MFC 參考*中的類別[CDocument](reference/cdocument-class.md) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用文件](../mfc/using-documents.md)
+[使用文件](using-documents.md)

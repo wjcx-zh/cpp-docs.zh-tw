@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e1e1aaa5056b43f0dd23976fead94bc800163613
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507963"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625182"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>處理 Rebar 控制項中的通知訊息
 
@@ -20,27 +20,27 @@ ms.locfileid: "69507963"
 
 下列通知訊息可以由 Rebar 控制項物件傳送：
 
-- 當 Rebar 自動調整大小時, 由 Rebar 控制項傳送的 RBN_AUTOSIZE (使用 RBS_AUTOSIZE 樣式建立)。
+- 當 Rebar 自動調整其大小時，由 Rebar 控制項（使用 RBS_AUTOSIZE 樣式建立）所傳送的 RBN_AUTOSIZE。
 
-- 當使用者開始拖曳寬線時, 由 Rebar 控制項傳送的 RBN_BEGINDRAG。
+- 當使用者開始拖曳寬線時，RBN_BEGINDRAG 由 Rebar 控制項傳送。
 
-- 當寬線的子視窗調整大小時, 由 Rebar 控制項傳送的 RBN_CHILDSIZE。
+- 當寬線的子視窗調整大小時，由 Rebar 控制項傳送 RBN_CHILDSIZE。
 
-- 在刪除寬線之後, 由 Rebar 控制項所傳送的 RBN_DELETEDBAND。
+- 在刪除寬線之後，由 Rebar 控制項所傳送的 RBN_DELETEDBAND。
 
-- 當要刪除寬線時, 由 Rebar 控制項傳送的 RBN_DELETINGBAND。
+- 當要刪除寬線時，RBN_DELETINGBAND 由 Rebar 控制項傳送。
 
-- 當使用者停止拖曳寬線時, 由 Rebar 控制項傳送的 RBN_ENDDRAG。
+- 當使用者停止拖曳寬線時，RBN_ENDDRAG 由 Rebar 控制項傳送。
 
-- 當物件拖曳至控制項的寬線上方時, 由 Rebar 控制項 (以 RBS_REGISTERDROP 樣式建立) 所傳送的 RBN_GETOBJECT。
+- 當物件拖曳至控制項的寬線上方時，由 Rebar 控制項（以 RBS_REGISTERDROP 樣式建立） RBN_GETOBJECT 傳送。
 
-- 當 Rebar 控制項的高度變更時, 它所傳送的 RBN_HEIGHTCHANGE。
+- 當 Rebar 控制項的高度變更時，其 RBN_HEIGHTCHANGE 傳送。
 
-- 當使用者變更控制項群組的版面配置時, 由 Rebar 控制項傳送的 RBN_LAYOUTCHANGED。
+- 當使用者變更控制項群組的版面配置時，由 Rebar 控制項傳送 RBN_LAYOUTCHANGED。
 
-如需這些通知的詳細資訊, 請參閱 Windows SDK 中的[Rebar 控制項參考](/windows/win32/controls/rebar-control-reference)。
+如需這些通知的詳細資訊，請參閱 Windows SDK 中的[Rebar 控制項參考](/windows/win32/controls/rebar-control-reference)。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CReBarCtrl](using-crebarctrl.md)<br/>
+[控制項](controls-mfc.md)

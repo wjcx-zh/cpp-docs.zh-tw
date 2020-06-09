@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370829"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616519"
 ---
 # <a name="automation"></a>自動化
 
 Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用程式中實作的物件，或者公開物件以便提供給其他程式操作。
 
-[Automation 伺服器](../mfc/automation-servers.md) 是一個應用程式 (為 COM 伺服器類型)，其透過 COM 介面公開其功能給其他應用程式 (稱為 [Automation 用戶端](../mfc/automation-clients.md)) 使用。 公開可讓 Automation 用戶端藉由直接存取物件並使用所提供的服務，以自動化執行某些函式。
+[Automation 伺服器](automation-servers.md) 是一個應用程式 (為 COM 伺服器類型)，其透過 COM 介面公開其功能給其他應用程式 (稱為 [Automation 用戶端](automation-clients.md)) 使用。 公開可讓 Automation 用戶端藉由直接存取物件並使用所提供的服務，以自動化執行某些函式。
 
 Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatch` ，該介面會接受並傳回一組特定的資料類型，稱為 Automation 類型。 您可以自動化任何公開 Automation 介面的物件，提供可以從其他應用程式存取的方法和屬性。 Aurotmation 可供 OLE 和 COM 物件使用。 自動化物件可以是本機或遠端 (在網路的另一台電腦上進行存取)；因此 Automation 有兩類：
 
@@ -49,9 +49,9 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 ## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> 在 Automation 內傳遞參數
 
-建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT** 類型支援許多標準的資料類型：2 位元和 4 位元的整數、4 位元和 8 位元的浮點數、字串和布林值。 此外,它還支援**HRESULT(OLE**錯誤代碼)、**貨幣**(定點數值類型)和**日期**(絕對日期和時間)`IUnknown``IDispatch`類型,以及指向和介面的指標。
+建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT** 類型支援許多標準的資料類型：2 位元和 4 位元的整數、4 位元和 8 位元的浮點數、字串和布林值。 此外，它支援**HRESULT** （OLE 錯誤碼）、 **CURRENCY** （固定點數位類型）和**DATE** （絕對日期和時間）類型，以及 `IUnknown` 和介面的指標 `IDispatch` 。
 
-**VARIANT** 類型封裝在 [COleVariant](../mfc/reference/colevariant-class.md) 類別中。 支援 **CURRENCY** 和 **DATE** 的類別封裝在 [COleCurrency](../mfc/reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 類別中。
+**VARIANT** 類型封裝在 [COleVariant](reference/colevariant-class.md) 類別中。 支援 **CURRENCY** 和 **DATE** 的類別封裝在 [COleCurrency](reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 類別中。
 
 ## <a name="automation-samples"></a>Automation 範例
 
@@ -67,26 +67,26 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 - [MFCCALC](../overview/visual-cpp-samples.md) ：示範 Automation 用戶端應用程式。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [Automation 用戶端](../mfc/automation-clients.md)
+- [Automation 用戶端](automation-clients.md)
 
-- [Automation 伺服程式](../mfc/automation-servers.md)
+- [Automation 伺服程式](automation-servers.md)
 
-- [OLE](../mfc/ole-in-mfc.md)
+- [OLE](ole-in-mfc.md)
 
-- [Active 技術](../mfc/mfc-com.md)
+- [Active 技術](mfc-com.md)
 
-## <a name="what-do-you-want-to-do"></a>你想做什麼
+## <a name="what-do-you-want-to-do"></a>您想要做什麼
 
-- [加入 Automation 類別](../mfc/automation-servers.md)
+- [加入 Automation 類別](automation-servers.md)
 
-- [使用類型程式庫](../mfc/automation-clients-using-type-libraries.md)
+- [使用類型程式庫](automation-clients-using-type-libraries.md)
 
-- [存取 Automation 伺服器](../mfc/automation-servers.md)
+- [存取 Automation 伺服器](automation-servers.md)
 
-- [使用 C++ 撰寫 Automation 用戶端](../mfc/automation-clients.md)
+- [使用 C++ 撰寫 Automation 用戶端](automation-clients.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

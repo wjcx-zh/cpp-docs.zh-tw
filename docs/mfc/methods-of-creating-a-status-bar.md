@@ -9,28 +9,28 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bdaa76dc68467dce1021d9b5f54eaafa248c529
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624264"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>建立狀態列的方法
 
-MFC 提供建立狀態列的兩個類別：[CStatusBar](../mfc/reference/cstatusbar-class.md)並[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CStatusBar` 提供的所有功能的通用控制項狀態列，它會自動與互動功能表和工具列，以及處理許多必要的通用控制項設定和結構的資料。不過，產生可執行檔通常會大於使用建立`CStatusBarCtrl`。
+MFC 提供兩個建立狀態列的類別： [CStatusBar](reference/cstatusbar-class.md)和[CStatusBarCtrl](reference/cstatusbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CStatusBar`提供狀態列通用控制項的所有功能，它會自動與功能表和工具列互動，並為您處理許多必要的通用控制項設定和結構;不過，產生的可執行檔通常會比使用建立的還大 `CStatusBarCtrl` 。
 
-`CStatusBarCtrl` 通常會導致較小的可執行檔，並且可能會想要使用`CStatusBarCtrl`如果您不想要整合的 MFC 架構中的 [狀態] 列。 如果您打算使用`CStatusBarCtrl`並整合到 MFC 架構的 [狀態] 列，您必須另花心思將傳達至 MFC 的控制項操作的狀態列。 這項通訊並不困難;不過，就是不必要的當您使用的其他工作`CStatusBar`。
+`CStatusBarCtrl`通常會產生較小的可執行檔， `CStatusBarCtrl` 如果您不想要將狀態列整合到 MFC 架構中，您可能會想要使用。 如果您打算使用 `CStatusBarCtrl` 並將狀態列整合到 mfc 架構中，則必須特別小心地將狀態列控制項操作傳達給 mfc。 這種通訊並不容易;不過，當您使用時，這是不需要的額外工作 `CStatusBar` 。
 
-視覺化C++提供兩種方式可利用通用控制項狀態列。
+Visual C++ 提供兩種方式來利用狀態列通用控制項。
 
-- 建立使用狀態列`CStatusBar`，然後呼叫[CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)以取得存取權`CStatusBarCtrl`成員函式。
+- 使用建立狀態列 `CStatusBar` ，然後呼叫[CStatusBar：： GetStatusBarCtrl](reference/cstatusbar-class.md#getstatusbarctrl)以取得成員函式的存取權 `CStatusBarCtrl` 。
 
-- 建立使用狀態列[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)的建構函式。
+- 使用[CStatusBarCtrl](reference/cstatusbarctrl-class.md)的函式建立狀態列。
 
-這兩種方法可讓您存取狀態列控制項的成員函式。 當您呼叫 `CStatusBar::GetStatusBarCtrl`時，會傳回 `CStatusBarCtrl` 物件的參考，因此您可以使用任一組成員函式。 請參閱[CStatusBar](../mfc/reference/cstatusbar-class.md)如需有關建構和建立狀態列使用`CStatusBar`。
+任一種方法都可讓您存取狀態列控制項的成員函式。 當您呼叫 `CStatusBar::GetStatusBarCtrl`時，會傳回 `CStatusBarCtrl` 物件的參考，因此您可以使用任一組成員函式。 如需使用來建立和建立狀態列的詳細資訊，請參閱[CStatusBar](reference/cstatusbar-class.md) `CStatusBar` 。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CStatusBarCtrl](using-cstatusbarctrl.md)<br/>
+[控制項](controls-mfc.md)

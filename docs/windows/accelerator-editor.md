@@ -1,5 +1,5 @@
 ---
-title: 快速鍵編輯器（C++）
+title: 快速鍵編輯器（c + +）
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
@@ -33,23 +33,23 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 80ef6cc9ec956d0041c4aa3fb6a6211868cc9d73
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623488"
 ---
-# <a name="accelerator-editor-c"></a>快速鍵編輯器（C++）
+# <a name="accelerator-editor-c"></a>快速鍵編輯器（c + +）
 
-快速鍵對應表是一C++種 Windows 資源，其中包含快速鍵的清單，稱為快速鍵，以及與這些索引鍵相關聯的命令識別碼。 程式可有多個快速鍵對應表。
+快速鍵對應表是 c + + Windows 資源，其中包含快速鍵的清單，稱為快速鍵，以及與這些索引鍵相關聯的命令識別碼。 程式可有多個快速鍵對應表。
 
 一般而言，快速鍵是用作程式命令的鍵盤快速鍵，功能表或工具列也使用這些命令。 不過，您可以使用快速鍵對應表定義和使用者介面物件沒有關聯性的命令鍵組合。
 
 > [!TIP]
 > 使用**快速鍵編輯器**時，以滑鼠右鍵按一下以顯示常用命令的快捷方式功能表。 可用的命令取決於指標所指項目。
 
-您可以使用 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code) 連結快速鍵命令和程式碼。 如需預先定義的快速鍵清單，請參閱[快速鍵](../windows/predefined-accelerator-keys.md)。
+您可以使用 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code) 連結快速鍵命令和程式碼。 如需預先定義的快速鍵清單，請參閱[快速鍵](predefined-accelerator-keys.md)。
 
 > [!NOTE]
 > Windows 不允許您建立空的快速鍵對應表。 如果建立了沒有任何項目的快速鍵對應表，當您儲存資料表時它會自動刪除。
@@ -73,8 +73,8 @@ ms.locfileid: "80167559"
    |-----------|-----------------|
    |**None**|使用者只按下索引**鍵值**。<br/><br/>這個值最適用于 ASCII/ANSI 值001到026，這會被解釋為 ^ A 到 ^ Z （**ctrl + A**到**ctrl + Z**）。|
    |**Alt**|使用者必須在索引**鍵值**之前按**Alt** 。|
-   |**Ctrl**|使用者必須在索引**鍵值**之前按下**Ctrl** ，但不能以 ASCII 類型有效。|
-   |**Shift**|使用者必須在索引**鍵值**前面按**Shift**鍵。|
+   |**+**|使用者必須在索引**鍵值**之前按下**Ctrl** ，但不能以 ASCII 類型有效。|
+   |**結**|使用者必須在索引**鍵值**前面按**Shift**鍵。|
    |**Ctrl + Alt**|使用者必須在索引**鍵值**之前按下**Ctrl**和**Alt** ，而不是以 ASCII 類型有效。|
    |**Ctrl + Shift**|使用者必須在索引**鍵值**之前按下**Ctrl**和**Shift** ，而不是以 ASCII 類型有效。|
    |**Alt + Shift**|使用者必須在索引**鍵值**之前按**Alt**和**Shift** ，而不是以 ASCII 類型有效。|
@@ -101,7 +101,7 @@ ms.locfileid: "80167559"
 
 **Type**屬性會決定與快速鍵**識別碼**相關聯的快速鍵組合是否會解讀為 ASCII/ANSI 索引鍵值或虛擬索引鍵（VIRTKEY）組合。
 
-- 如果**Type**屬性為**ASCII**，則**修飾**詞屬性只能 `None` 或 `Alt`，或者可以有使用**Ctrl**鍵的快速鍵，如同使用 `^`的索引鍵之前所指定。
+- 如果**Type**屬性為**ASCII**，則**修飾**詞屬性只能是 `None` 或 `Alt` ，或者可以有使用**Ctrl**鍵的快速鍵，如同在索引鍵前面所指定 `^` 。
 
 - 如果**Type**屬性是**VIRTKEY**，則**修飾**詞和索引**鍵值**的任何組合都是有效的。
 
@@ -110,7 +110,7 @@ ms.locfileid: "80167559"
 
 ## <a name="accelerator-tables"></a>快速鍵對應表
 
-在C++專案中，您可以在**快速鍵編輯器**中，直接使用就地編輯來編輯快速鍵對應表。
+在 c + + 專案中，您可以在**快速鍵編輯器**中，直接使用就地編輯來編輯快速鍵對應表。
 
 下列程式會參考標準屬性頁的使用，不過，就地編輯和屬性頁方法的結果相同。 使用屬性頁或使用就地編輯所做的變更會立即反映在快速鍵對應表中。
 
@@ -146,12 +146,12 @@ ms.locfileid: "80167559"
 
 1. 從 [**識別碼**] 方塊的下拉式清單中選取**識別碼**，或在 [**識別碼**] 方塊中輸入新的*識別碼*。
 
-1. 輸入要當做快速鍵使用的*金鑰*，或按一下滑鼠右鍵並選擇 **[下一個輸入的按鍵**] 來設定按鍵組合，或移至 [功能表] **[編輯] > 下一個輸入的按鍵**。 **Edit**
+1. 輸入要當做快速鍵使用的*金鑰*，或按一下滑鼠右鍵並選擇 **[下一個輸入的按鍵]** 來設定按鍵組合，或移至功能表**編輯**  >  **下一個輸入的按鍵類型**。
 
 1. 視需要變更 [**修飾**詞] 和 [**類型**]，然後按**enter**鍵。
 
 > [!NOTE]
-> 確定定義的所有快速鍵都是唯一的。 您可以將數個金鑰組合指派給相同的識別碼，而不會產生任何不良的效果，例如， **Ctrl**+**P**和**F8**都可以指派給 ID_PRINT。 不過，指派給多個識別符的按鍵組合將無法正常運作，例如，將**Ctrl**+**Z**指派給 ID_SPELL_CHECK 和 ID_THESAURUS。
+> 確定定義的所有快速鍵都是唯一的。 您可以將數個金鑰組合指派給相同的識別碼，而不會產生任何不良的效果，例如， **Ctrl** + **P**和**F8**可以同時指派給 ID_PRINT。 不過，指派給多個識別符的按鍵組合將無法正常運作，例如， **Ctrl** + **Z**指派給 ID_SPELL_CHECK 和 ID_THESAURUS。
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>刪除快速鍵對應表中的項目
 
@@ -159,7 +159,7 @@ ms.locfileid: "80167559"
 
 1. 選取您要刪除的專案，或按住**Ctrl**或**Shift**鍵，同時選取以選擇多個專案。
 
-1. 按一下滑鼠右鍵並選擇 **刪除**，或移至功能表 **編輯** > **刪除**。
+1. 以滑鼠右鍵按一下並選擇 [**刪除**]，或移至功能表 [**編輯**] [  >  **刪除**]。
 
 > [!TIP]
 > 您也可以按**delete**鍵來刪除。
@@ -186,11 +186,11 @@ ms.locfileid: "80167559"
 > [!NOTE]
 > 在 [**屬性**] 視窗中，每個 [修飾詞] 值都會顯示為布林屬性。 如果您在 [**屬性**] 視窗中變更 [[修飾](../windows/accelerator-modifier-property.md)詞] 值，快速鍵對應表會將新的修飾詞視為除了先前在其中的任何修飾詞以外的加入。 因此，如果您設定了任何修飾詞值，就必須設定所有的輔助按鍵，以確保每個加速器會共用相同的**修飾**詞設定。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源編輯器](../windows/resource-editors.md)<br/>
-[快速鍵](../windows/predefined-accelerator-keys.md)<br/>
+[資源編輯器](resource-editors.md)<br/>
+[快速鍵](predefined-accelerator-keys.md)<br/>

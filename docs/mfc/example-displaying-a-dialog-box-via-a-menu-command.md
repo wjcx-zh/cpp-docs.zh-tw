@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078833"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616042"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：透過功能表命令顯示對話方塊
 
@@ -25,11 +25,11 @@ ms.locfileid: "80078833"
 
 - 透過功能表命令顯示非強制回應對話方塊。
 
-這兩個範例程式都適用于 MFC 應用程式，並可在您使用[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)所建立的應用程式中使用。
+這兩個範例程式都適用于 MFC 應用程式，並可在您使用[MFC 應用程式精靈](reference/mfc-application-wizard.md)所建立的應用程式中使用。
 
 這些程式會使用下列名稱和值：
 
-|Item|名稱或值|
+|項目|名稱或值|
 |----------|-------------------|
 |Application|DisplayDialog|
 |功能表命令|[查看] 功能表上的 [測試] 命令;命令識別碼 = ID_VIEW_TEST|
@@ -44,7 +44,7 @@ ms.locfileid: "80078833"
 
 1. 為對話方塊新增類別。 如需詳細資訊，請參閱[新增類別](../ide/adding-a-class-visual-cpp.md)。
 
-1. 在 **類別檢視**中，選取檔類別（CDisplayDialogDoc）。 在 [屬性] 視窗中，按一下 [事件] 按鈕。 按兩下功能表命令的識別碼（ID_VIEW_TEST）。 接下來，按一下向下箭號，然後選取 [ **\<新增 > OnViewTest**]。
+1. 在 [**類別檢視**中，選取檔類別（CDisplayDialogDoc）。 在 [屬性]**** 視窗中，按一下 [事件]**** 按鈕。 按兩下功能表命令的識別碼（ID_VIEW_TEST）。 接下來，按一下向下箭號，然後選取 [ ** \<Add> OnViewTest**]。
 
    如果您已將功能表命令加入至 MDI 應用程式的大型主機，請改為選取應用程式類別（CDisplayDialogApp）。
 
@@ -112,5 +112,5 @@ ms.locfileid: "80078833"
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊](../mfc/dialog-boxes.md)<br/>
-[強制回應和非強制回應對話方塊](../mfc/modal-and-modeless-dialog-boxes.md)
+[對話方塊](dialog-boxes.md)<br/>
+[強制回應和非強制回應對話方塊](modal-and-modeless-dialog-boxes.md)

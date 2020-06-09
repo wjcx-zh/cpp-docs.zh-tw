@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2d9b84a2be42df38df36bb90c0b5aeee076bf6a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364976"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623616"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; 巨集
 
@@ -30,7 +30,7 @@ ms.locfileid: "81364976"
 
 ## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-生成分配器類範本。
+產生配置器類別範本。
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ ms.locfileid: "81364976"
 
 ### <a name="remarks"></a>備註
 
-`template <class Type> class name {.....}`巨集產生樣本定義和一個`template <> class name<void> {.....}`專門化,它們共同定義一個分配器類範本,`sync`該範本使用同步篩選器`cache`和類型的緩存。
+宏會產生範本定義 `template <class Type> class name {.....}` 和特製化， `template <> class name<void> {.....}` 以同時定義使用同步處理篩選準則和類型快取的配置器類別範本 `sync` `cache` 。
 
 針對可以編譯重新繫結的編譯器，產生的範本定義看起來如下︰
 
@@ -112,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[\<配置器>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: f03c3a22-7725-45eb-8f8e-dddb2d15c3ca
-ms.openlocfilehash: 9de28d5407da6e83ed3b7cd77cad3f636538a70f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be65b5f04323c1a5135d33e9164948a55cf78cac
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241444"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616194"
 ---
 # <a name="date-and-time-picker-control-examples"></a>日期時間選擇器控制項範例
 
-[CMNCTRL1](../overview/visual-cpp-samples.md)範例示範的各種屬性`CDateTimeCtrl`類別。 個別的頁面包含使用者可以變更各種屬性和測試控制項的基本功能所操作的日期和時間選擇器控制項。
+[CMNCTRL1](../overview/visual-cpp-samples.md)範例會示範類別的各種屬性 `CDateTimeCtrl` 。 另一個頁面包含日期和時間選擇器控制項，使用者可以藉由變更各種屬性和測試控制項的基本功能來操作。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CDateTimeCtrl](using-cdatetimectrl.md)<br/>
+[控制項](controls-mfc.md)

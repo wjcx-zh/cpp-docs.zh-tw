@@ -15,12 +15,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 1aaeea11dd7916332ab0c281561550039ee03498
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685753"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616778"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>對話方塊資料交換和驗證
 
@@ -28,11 +28,11 @@ ms.locfileid: "71685753"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [對話方塊資料交換](../mfc/dialog-data-exchange.md)
+- [對話方塊資料交換](dialog-data-exchange.md)
 
-- [對話方塊資料驗證](../mfc/dialog-data-validation.md)
+- [對話方塊資料驗證](dialog-data-validation.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊](../mfc/dialog-boxes.md)<br/>
-[在 MFC 中使用對話方塊](../mfc/life-cycle-of-a-dialog-box.md)
+[對話方塊](dialog-boxes.md)<br/>
+[在 MFC 中使用對話方塊](life-cycle-of-a-dialog-box.md)

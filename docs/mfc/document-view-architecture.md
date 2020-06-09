@@ -1,5 +1,5 @@
 ---
-title: 文件檢視架構
+title: 文件-檢視架構
 ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
@@ -12,71 +12,71 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74aeba651d385cf3a5386e94ec20e4e56b7cd57
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389669"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624779"
 ---
 # <a name="documentview-architecture"></a>文件/檢視架構
 
-根據預設，MFC 應用程式精靈會建立應用程式基本架構與文件類別和檢視類別。 MFC 會分隔到這兩個類別的資料管理。 文件會將資料儲存和管理列印的資料，並協調更新資料的多個檢視。 此檢視會顯示資料，並管理使用者與其互動，包括選取和編輯。
+根據預設，MFC 應用程式精靈會建立具有檔類別和 view 類別的應用程式基本架構。 MFC 會將資料管理分成兩個類別。 檔會儲存資料，並管理資料的列印和協調更新多個資料檢視。 此視圖會顯示資料並管理使用者與它的互動，包括選取和編輯。
 
-在此模型中，MFC 文件物件讀取，並將資料寫入至永續性儲存體。 文件可能也會提供介面給資料，無論 （例如資料庫）。 不同的檢視物件會管理資料顯示中，從轉譯至使用者的選取範圍 視窗中的資料和編輯資料。 此檢視會從文件取得顯示的資料，並回到文件的任何資料變更的通訊。
+在此模型中，MFC 檔物件會讀取資料並寫入至持續性儲存體。 檔也可以提供介面給其所在位置的資料（例如在資料庫中）。 另一個 view 物件會管理資料顯示，從將視窗中的資料轉譯為使用者選取和編輯資料。 此視圖會從檔取得顯示資料，並將任何資料變更傳回到檔。
 
-雖然您可以輕鬆地覆寫，或略過的文件/檢視區隔，有令人信服的原因，請依照此模型，在大部分情況下。 最佳的其中一個時，您需要相同的文件，例如試算表和圖表檢視的多個檢視。 文件/檢視模型可讓不同的檢視物件，代表的資料，而程式碼一般給所有的檢視 （例如計算引擎） 可位於文件中的每個檢視。 文件也會在資料有所變更時，更新所有檢視的工作。
+雖然您可以輕鬆地覆寫或忽略檔/視圖區隔，但在大多數情況下，這種模型有一些合理的理由要遵循。 其中一個最棒的是，您需要相同檔的多個視圖，例如試算表和圖表視圖。 檔/視圖模型可讓不同的 view 物件代表資料的每一個觀點，而所有視圖（例如計算引擎）通用的程式碼都可以位於檔中。 當資料變更時，檔也會進行更新所有視圖的工作。
 
-MFC 文件/檢視架構讓您更容易支援多個檢視、 多個文件類型、 分隔視窗和其他重要的使用者介面功能。
+MFC 檔/視圖架構可讓您輕鬆地支援多個視圖、多個檔案類型、分隔視窗，以及其他重要的使用者介面功能。
 
-MFC 架構給使用者和程式設計人員，最明顯的部分是文件和檢視。 大部分的開發架構的應用程式工作會進入撰寫您的文件和檢視類別。 本文章系列說明：
+MFC 架構的各個部分對使用者而言最為可見，而對程式設計人員而言，則是檔和觀點。 您在使用架構開發應用程式時，大部分的工作都是撰寫您的檔和視圖類別。 本文系列將說明：
 
-- 文件和檢視與它們互動 framework 中的方式達到目的。
+- 檔和視圖的用途，以及它們在架構中的互動方式。
 
-- 您必須如何實作它們。
+- 您必須執行的動作。
 
-文件/檢視的核心是四個主要類別：
+檔/視圖的核心是四個主要類別：
 
-[CDocument](../mfc/reference/cdocument-class.md) (或[COleDocument](../mfc/reference/coledocument-class.md)) 類別支援用來儲存或控制您的程式資料的物件，並為程式設計人員定義的文件類別中提供的基本功能。 文件表示的使用者通常會隨即開啟，並在 檔案 功能表上的 開啟 命令，並使用 儲存 命令儲存檔案 功能表上的資料單位。
+[CDocument](reference/cdocument-class.md) （或[COleDocument](reference/coledocument-class.md)）類別支援用來儲存或控制程式資料的物件，並提供程式設計人員定義的檔類別的基本功能。 檔代表使用者通常會使用 [檔案] 功能表上的 [開啟] 命令開啟的資料單位，並使用 [檔案] 功能表上的 [儲存] 命令來儲存。
 
-[CView](../mfc/reference/cview-class.md) （或其許多的衍生類別） 提供程式設計人員定義的檢視類別的基本功能。 檢視附加至文件，並做為文件與使用者之間的媒介： 檢視呈現在螢幕上的文件的映像，並將使用者輸入解譯為文件作業。 檢視也會呈現列印和列印預覽影像。
+[CView](reference/cview-class.md) （或它的許多衍生類別之一）提供程式設計人員定義之 view 類別的基本功能。 視圖會附加至檔，並做為檔和使用者之間的媒介：此視圖會在畫面上轉譯檔的影像，並將使用者輸入轉譯為檔上的作業。 此視圖也會呈現列印和預覽列印的影像。
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md) （或一個與其變數） 支援提供的文件的一個或多個檢視周圍框架的物件。
+[CFrameWnd](reference/cframewnd-class.md) （或它的其中一個變化）支援在檔的一或多個視圖周圍提供框架的物件。
 
-[CDocTemplate](../mfc/reference/cdoctemplate-class.md) (或[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)或是[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)) 支援協調的指定類型的一或多個現有文件，以及管理建立正確的物件文件、 檢視和框架視窗物件，該類型。
+[CDocTemplate](reference/cdoctemplate-class.md) （或[CSingleDocTemplate](reference/csingledoctemplate-class.md)或[CMultiDocTemplate](reference/cmultidoctemplate-class.md)）支援一個物件，它會協調給定類型的一或多個現有檔，並管理為該類型建立正確的檔、視圖和框架視窗物件。
 
-下圖顯示文件及其檢視之間的關聯性。
+下圖顯示檔與其視圖之間的關聯性。
 
-![檢視是顯示文件的一部份](../mfc/media/vc379n1.gif "檢視是顯示文件的一部分") <br/>
-文件和檢視
+![檢視是所顯示文件的一部分](../mfc/media/vc379n1.gif "檢視是所顯示文件的一部分") <br/>
+檔和視圖
 
-類別庫中的文件/檢視實作區隔資料本身從它的顯示畫面和使用者作業的資料。 透過文件類別管理資料的所有變更。 檢視會呼叫這個介面來存取及更新資料。
+類別庫中的檔/視圖執行會將資料本身與資料的顯示和使用者作業分開。 對資料所做的所有變更都是透過檔類別來管理。 此視圖會呼叫這個介面來存取和更新資料。
 
-文件範本建立文件、 其相關聯的檢視和框架檢視框架視窗。 文件範本負責建立和管理一份文件類型的所有文件。
+檔、其相關聯的視圖，以及框架視窗是由檔範本所建立。 檔範本會負責建立和管理一種檔案類型的所有檔。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [文件/檢視架構的簡介](../mfc/a-portrait-of-the-document-view-architecture.md)
+- [檔/視圖架構的直向](a-portrait-of-the-document-view-architecture.md)
 
-- [文件/檢視架構的優點](../mfc/advantages-of-the-document-view-architecture.md)
+- [檔/視圖架構的優點](advantages-of-the-document-view-architecture.md)
 
-- [應用程式精靈所建立的文件和檢視類別](../mfc/document-and-view-classes-created-by-the-mfc-application-wizard.md)
+- [應用程式精靈所建立的檔和視圖類別](document-and-view-classes-created-by-the-mfc-application-wizard.md)
 
-- [文件/檢視架構的替代方案](../mfc/alternatives-to-the-document-view-architecture.md)
+- [檔/視圖架構的替代方案](alternatives-to-the-document-view-architecture.md)
 
-- [將多個檢視新增至單一文件](../mfc/adding-multiple-views-to-a-single-document.md)
+- [將多個檢視加入至單一文件](adding-multiple-views-to-a-single-document.md)
 
-- [使用文件](../mfc/using-documents.md)
+- [使用文件](using-documents.md)
 
-- [使用檢視](../mfc/using-views.md)
+- [使用檢視](using-views.md)
 
-- [多重文件類型、檢視和框架視窗](../mfc/multiple-document-types-views-and-frame-windows.md)
+- [多重文件類型、檢視和框架視窗](multiple-document-types-views-and-frame-windows.md)
 
-- [初始化及清除文件和檢視](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+- [初始化和清除檔和視圖](initializing-and-cleaning-up-documents-and-views.md)
 
-- [初始化您加入至文件 （& v） 類別](../mfc/creating-new-documents-windows-and-views.md)
+- [將您自己的新增專案初始化為檔 & 視圖類別](creating-new-documents-windows-and-views.md)
 
-- [使用具有文件和檢視資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)
+- [使用具有文件和檢視的資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)
 
 - [使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)
 
@@ -84,9 +84,9 @@ MFC 架構給使用者和程式設計人員，最明顯的部分是文件和檢�
 
 ## <a name="see-also"></a>另請參閱
 
-[使用者介面項目](../mfc/user-interface-elements-mfc.md)<br/>
-[Windows](../mfc/windows.md)<br/>
-[框架視窗](../mfc/frame-windows.md)<br/>
-[文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[文件/檢視建立](../mfc/document-view-creation.md)<br/>
-[建立新文件、視窗和檢視](../mfc/creating-new-documents-windows-and-views.md)
+[使用者介面元素](user-interface-elements-mfc.md)<br/>
+[Windows](windows.md)<br/>
+[框架視窗](frame-windows.md)<br/>
+[檔範本和檔/視圖建立程式](document-templates-and-the-document-view-creation-process.md)<br/>
+[文件/檢視建立](document-view-creation.md)<br/>
+[建立新文件、視窗和檢視](creating-new-documents-windows-and-views.md)

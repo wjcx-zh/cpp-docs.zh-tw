@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: cf130bf8dead5c59548821658b979785c4d54726
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef4ed9865d3a88a6ff85f777984b856d03cc48e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376488"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616366"
 ---
 # <a name="containers-advanced-features"></a>容器：進階功能
 
@@ -31,7 +31,7 @@ ms.locfileid: "81376488"
 
 容器/伺服器應用程式是可同時做為容器和伺服器的應用程式。 Microsoft Word for Windows 就是這種應用程式的範例。 您可以將 Word for Windows 文件內嵌於其他應用程式中，也可以在 Word for Windows 文件中內嵌項目。 將您的容器應用程式修改成可同時做為容器和完整伺服器的程序 (您無法建立容器/迷你伺服器應用程式的組合)，類似建立完整伺服器的程序。
 
-文章[「伺服器:實現伺服器](../mfc/servers-implementing-a-server.md)」列出了實現伺服器應用程式所需的許多任務。 如果您將容器應用程式轉換成容器/伺服器應用程式，則需要執行一些相同的工作，將程式碼加入至容器。 以下列出一些重要的考量：
+[伺服器：執行伺服器](servers-implementing-a-server.md)一文會列出執行伺服器應用程式所需的許多工作。 如果您將容器應用程式轉換成容器/伺服器應用程式，則需要執行一些相同的工作，將程式碼加入至容器。 以下列出一些重要的考量：
 
 - 應用程式精靈所建立的容器程式碼已初始化 OLE 子系統。 您不需要變更或加入任何提供支援的項目。
 
@@ -39,13 +39,13 @@ ms.locfileid: "81376488"
 
 - 覆寫 `COleClientItem::CanActivate`，避免正在使用伺服器就地編輯時編輯項目。
 
-   例如,MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)嵌入由容器/伺服器應用程式創建的項。 您開啟 OCLIENT 應用程式，並且就地編輯您的容器/伺服器應用程式所建立的項目。 編輯應用程式的專案時,您決定要嵌入由 MFC OLE 範例[HIERSVR](../overview/visual-cpp-samples.md)創建的項。 若要這樣做，就無法使用就地啟用。 您必須完全開啟 HIERSVR 才能啟用這個項目。 因為 MFC 程式庫不支援這項 OLE 功能，因此覆寫 `COleClientItem::CanActivate` 可讓您檢查是否有這種情況，並防止應用程式中出現可能的執行階段錯誤。
+   例如，MFC OLE sample [OCLIENT](../overview/visual-cpp-samples.md)已內嵌容器/伺服器應用程式所建立的專案。 您開啟 OCLIENT 應用程式，並且就地編輯您的容器/伺服器應用程式所建立的項目。 編輯應用程式的專案時，您決定要內嵌 MFC OLE 範例[HIERSVR](../overview/visual-cpp-samples.md)所建立的專案。 若要這樣做，就無法使用就地啟用。 您必須完全開啟 HIERSVR 才能啟用這個項目。 因為 MFC 程式庫不支援這項 OLE 功能，因此覆寫 `COleClientItem::CanActivate` 可讓您檢查是否有這種情況，並防止應用程式中出現可能的執行階段錯誤。
 
-如果您要建立新的應用程式，並且希望將它當做容器/伺服器應用程式執行，請在應用程式精靈的 [OLE 選項] 對話方塊中選擇該選項，如此就會自動建立這項支援。 有關詳細資訊,請參閱文章[概述:創建 ActiveX 控制件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 有關 MFC 樣品的資訊,請參閱[MFC 樣品](../overview/visual-cpp-samples.md#mfc-samples)。
+如果您要建立新的應用程式，並且希望將它當做容器/伺服器應用程式執行，請在應用程式精靈的 [OLE 選項] 對話方塊中選擇該選項，如此就會自動建立這項支援。 如需詳細資訊，請參閱文章[總覽：建立 ActiveX 控制項容器](reference/creating-an-mfc-activex-control-container.md)。 如需 MFC 範例的詳細資訊，請參閱[Mfc 範例](../overview/visual-cpp-samples.md#mfc-samples)。
 
 請注意，您無法將 MDI 應用程式插入至本身。 做為容器/伺服器的應用程式無法插入至本身，除非它是 SDI 應用程式。
 
-## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>指向嵌入物件的連結
+## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>内嵌物件的連結
 
 [內嵌物件的連結] 功能可讓使用者建立包含容器應用程式內部內嵌物件之 OLE 連結的文件。 例如，在文書處理器中建立包含內嵌試算表的文件。 如果您的應用程式支援內嵌物件連結，就可以將連結貼入文書處理器文件中包含的試算表內。 這項功能可讓您的應用程式使用試算表中包含的資訊，而不需要知道文書處理器從哪裡取得該資訊。
 
@@ -53,7 +53,7 @@ ms.locfileid: "81376488"
 
 1. 從 `COleLinkingDoc` 衍生您的文件類別，而不要從 `COleDocument` 衍生。
 
-1. 使用 OLE 開發工具附帶的類 ID 生成器為應用程式創建 OLE 類 ID **(CLSID)。**
+1. 使用 OLE 開發工具隨附的類別識別碼產生器，為您的應用程式建立 OLE 類別識別碼（**CLSID**）。
 
 1. 在 OLE 中註冊應用程式。
 
@@ -63,15 +63,15 @@ ms.locfileid: "81376488"
 
    - 藉由呼叫物件的 `COleTemplateServer` 成員函式，將 `ConnectTemplate` 物件連接至您的文件範本。
 
-   - 調用`COleTemplateServer::RegisterAll`成員函數以將所有類物件註冊到 OLE 系統。
+   - 呼叫成員函式 `COleTemplateServer::RegisterAll` ，以使用 OLE 系統來註冊所有類別物件。
 
-   - 呼叫 `COleTemplateServer::UpdateRegistry`。 如果應用程式未使用`UpdateRegistry`「/嵌入式」開關啟動,則應*OAT_CONTAINER*唯一參數。 這樣會將應用程式註冊為可支援內嵌物件連結的容器。
+   - 呼叫 `COleTemplateServer::UpdateRegistry`。 `UpdateRegistry`如果應用程式不是以 "帶有/embedded" 參數啟動，則唯一的參數應該是*OAT_CONTAINER* 。 這樣會將應用程式註冊為可支援內嵌物件連結的容器。
 
       如果應用程式啟動時帶有 "/Embedded" 參數，則不應該顯示其主視窗，就像伺服器應用程式一樣。
 
-MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)實現了此功能。 有關如何完成此操作的範例,請參閱`InitInstance`*OCLIENT 中的函數。* 此示例應用程式的 CPP 檔。
+MFC OLE sample [OCLIENT](../overview/visual-cpp-samples.md)會執行這項功能。 如需如何完成這項作業的範例，請參閱 OCLIENT 中的函式 `InitInstance` *。* 這個範例應用程式的 CPP 檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-[容器](../mfc/containers.md)<br/>
-[伺服器](../mfc/servers.md)
+[容器](containers.md)<br/>
+[伺服器](servers.md)

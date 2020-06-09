@@ -8,29 +8,29 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: 5e8912c9013175fe254b2f4a4a968a67fd071f39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94d8b7d026ee3aaf1bac9dee2226de6dd9382599
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365304"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615687"
 ---
 # <a name="form-views-mfc"></a>表單檢視 (MFC)
 
-您可以將表單添加到支援 MFC 函式庫的任何 Visual C++ 應用程式,包括[基於窗體的應用程式](../mfc/reference/creating-a-forms-based-mfc-application.md)`CFormView`(其檢視類派生自的應用程式)。 如果您最初未創建應用程式以支援表單,則 Visual C++將在插入新窗體時添加此支援。 在 SDI 或 MDI 應用程式中,當使用者選擇**New**命令(預設情況下,在 **'檔案"** 選單上)[時,Visual](../mfc/document-view-architecture.md)C++提示使用者從可用表單中進行選擇。
+您可以將表單新增至支援 MFC 程式庫的任何 Visual C++ 應用程式，包括以[表單為基礎的應用程式](reference/creating-a-forms-based-mfc-application.md)（其 view 類別衍生自其中一個 `CFormView` ）。 如果您最初沒有建立應用程式來支援表單，Visual C++ 會在您插入新表單時為您新增這種支援。 在執行預設檔[/視圖架構](document-view-architecture.md)的 SDI 或 MDI 應用程式中，當使用者選擇**新**的命令時（預設會在 [檔案]**功能表上**），Visual C++ 會提示使用者從可用的表單中進行選擇。
 
-使用 SDI 應用程式時,當使用者選擇**New**命令時,窗體的當前實例將繼續運行,但如果找不到選定窗體,則將創建具有所選窗體的應用程式的新實例。 在 MDI 應用程式中,當使用者選擇**New**命令時,窗體的當前實例將繼續運行。
+使用 SDI 應用程式時，當使用者選擇**新**的命令時，表單的目前實例會繼續執行，但如果找不到，則會建立具有所選表單的應用程式的新實例。 在 MDI 應用程式中，當使用者選擇**新**的命令時，表單的目前實例會繼續執行。
 
 > [!NOTE]
-> 您可以將表單插入到基於對話框的應用程式(其對話框類基於`CDialog`的,並且沒有實現視圖類的應用程式)。 但是,如果沒有文檔/檢視體系結構,Visual C++不會自動實現 **「檔**&#124;**新功能**。 您必須創建一種方法,以便使用者查看其他窗體,例如,通過實現具有各種屬性頁的選項卡式對話方塊。
+> 您可以將表單插入對話方塊架構應用程式中（其對話方塊類別是以為基礎 `CDialog` ，另一個則不會實作為 view 類別）。 不過，如果沒有**檔**/視圖架構，Visual C++ 不會自動&#124;**新**功能來執行檔案。 您必須建立一個方法，讓使用者能夠查看其他表單，例如，藉由使用各種屬性頁來執行索引標籤式對話方塊。
 
-將新表單插入到應用程式中時,Visual C++ 執行以下操作:
+當您將新的表單插入應用程式時，Visual C++ 會執行下列動作：
 
-- 以您選擇的表單樣式類之一`CFormView`(、`CRecordView``CDaoRecordView``CDialog`或) 建立類。
+- 根據您選擇的其中一個表單樣式類別，建立類別（、、 `CFormView` `CRecordView` `CDaoRecordView` 或 `CDialog` ）。
 
-- 創建具有適當樣式的對話方塊資源(或者可以使用尚未與類關聯的現有對話框資源)。
+- 建立具有適當樣式的對話方塊資源（或者，您可以使用尚未與類別相關聯的現有對話資源）。
 
-   如果選擇現有對話框資源,則可能需要使用對話框的"屬性"頁來設置這些樣式。 對話框的樣式必須包括:
+   如果您選擇現有的對話資源，您可能需要使用對話方塊的 [屬性] 頁面來設定這些樣式。 對話方塊的樣式必須包括：
 
      **WS_CHILD**= 開啟
 
@@ -40,28 +40,28 @@ ms.locfileid: "81365304"
 
      **WS_CAPTION**= 關閉
 
-對於基於文件/檢視體系結構的應用程式 **,「新建窗體」** 命令(在類檢視中右鍵單擊)也:
+針對以檔/視圖架構為基礎的應用程式，**新的表單**命令（以滑鼠右鍵按一下類別檢視）也會：
 
-- 建立`CDocument`的類別
+- 建立以為 `CDocument` 基礎的類別
 
-   您可以在專案中使用任何基於的現有`CDocument`類,而不是創建新類。
+   您可以使用專案中任何現有的類別，而不是建立新的類別 `CDocument` 。
 
-- 使用字串、功能表和圖示資源`CDocument`生成文檔範本(派生自)。
+- `CDocument`使用字串、功能表和圖示資源，產生檔範本（衍生自）。
 
-   您還可以創建一個新類,以基於該範本。
+   您也可以建立用來做為範本基礎的新類別。
 
-- 在應用程式`AddDocumentTemplate``InitInstance`的代碼中添加調用。
+- `AddDocumentTemplate`在應用程式的程式碼中新增對的呼叫 `InitInstance` 。
 
-   Visual C++為建立的每個新窗體添加此代碼,當使用者選擇 **"新建"** 命令時,該表單將表單添加到可用表單清單中。 此代碼包括窗體的關聯資源 ID 以及組成新窗體物件的關聯文件、視圖和框架類的名稱。
+   Visual C++ 會為您所建立的每個新表單加入此程式碼，當使用者選擇**新**的命令時，會將表單新增至可用的表單清單。 這段程式碼包括表單的相關聯資源識別碼，以及相關聯的檔、視圖和框架類別的名稱，它們會組成新的表單物件。
 
-   文件範本用作文檔、框架視窗和視圖之間的連接。 對於單個文件,您可以創建許多範本。
+   檔範本可做為檔、框架視窗和 views 之間的連接。 針對單一檔，您可以建立許多範本。
 
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 
-- [建立表單的應用程式](../mfc/reference/creating-a-forms-based-mfc-application.md)
+- [建立以表單為基礎的應用程式](reference/creating-a-forms-based-mfc-application.md)
 
-- [將表單插入專案中](../mfc/inserting-a-form-into-a-project.md)
+- [將表單插入專案中](inserting-a-form-into-a-project.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用者介面項目](../mfc/user-interface-elements-mfc.md)
+[使用者介面元素](user-interface-elements-mfc.md)

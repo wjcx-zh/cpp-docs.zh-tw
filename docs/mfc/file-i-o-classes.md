@@ -1,5 +1,5 @@
 ---
-title: 檔案 I-o 類別
+title: 檔案 i/o 類別
 ms.date: 11/04/2016
 f1_keywords:
 - vc.classes.file
@@ -15,54 +15,54 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-ms.openlocfilehash: 914325ec56f0cae30c7293305496d65f358f2731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fcf4dfc1388df0df2bc25928ec8541486c6bb2d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615678"
 ---
 # <a name="file-io-classes"></a>檔案 I/O 類別
 
-這些類別會提供介面，以傳統的磁碟檔案、 記憶體中的檔案、 主動式資料流和 Windows 通訊端。 所有的類別衍生自`CFile`可以搭配`CArchive`執行序列化的物件。
+這些類別會提供傳統磁片檔案、記憶體內部檔案、作用中資料流程和 Windows 通訊端的介面。 所有衍生自的類別都 `CFile` 可以與物件搭配使用 `CArchive` ，以執行序列化。
 
-使用下列的類別，尤其`CArchive`和`CFile`，如果您撰寫您自己的輸入/輸出處理。 通常您不需要衍生自這些類別。 如果您使用的應用程式架構的預設實作**開放**並**儲存**上的命令**檔案**功能表將會處理檔案 I/O (使用類別`CArchive`)，只要您覆寫您的文件`Serialize`提供的函式的詳細文件將其內容的序列化。 如需有關檔案類別和序列化的詳細資訊，請參閱文章[MFC 中的檔案](../mfc/files-in-mfc.md)和 發行項[序列化](../mfc/serialization-in-mfc.md)。
+`CArchive` `CFile` 如果您撰寫自己的輸入/輸出處理，請使用下列類別，特別是和。 通常您不需要從這些類別衍生。 如果您使用應用程式架構，**則 [檔案] 功能表上**的 [**開啟**] 和 [**儲存**] 命令的預設執行將會處理檔案 i/o （使用類別 `CArchive` ），只要您覆寫檔的函式， `Serialize` 即可提供有關檔如何序列化其內容的詳細資料。 如需有關檔案類別和序列化的詳細資訊，請參閱[MFC 中](files-in-mfc.md)的檔案和[序列化](serialization-in-mfc.md)一文中的檔。
 
-[CFile](../mfc/reference/cfile-class.md)<br/>
-提供二進位磁碟檔案的檔案介面。
+[CFile](reference/cfile-class.md)<br/>
+提供二進位磁片檔案的檔案介面。
 
-[CStdioFile](../mfc/reference/cstdiofile-class.md)<br/>
-提供`CFile`緩衝資料流磁碟檔案，通常是在文字模式的介面。
+[CStdioFile](reference/cstdiofile-class.md)<br/>
+提供 `CFile` 緩衝處理資料流程磁片檔案的介面，通常是在文字模式中。
 
-[CMemFile](../mfc/reference/cmemfile-class.md)<br/>
-提供`CFile`記憶體檔案的介面。
+[CMemFile](reference/cmemfile-class.md)<br/>
+提供記憶體內部檔案的 `CFile` 介面。
 
-[CSharedFile](../mfc/reference/csharedfile-class.md)<br/>
-提供`CFile`共用記憶體檔案的介面。
+[CSharedFile](reference/csharedfile-class.md)<br/>
+提供 `CFile` 介面來共用記憶體中的檔案。
 
-[COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
+[COleStreamFile](reference/colestreamfile-class.md)<br/>
 使用 COM `IStream` 介面提供複合檔案的 `CFile` 存取權。
 
-[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+[CSocketFile](reference/csocketfile-class.md)<br/>
 提供 `CFile` 介面給 Windows Socket。
 
-## <a name="related-classes"></a>相關的類別
+## <a name="related-classes"></a>相關類別
 
-[CArchive](../mfc/reference/carchive-class.md)<br/>
-會與合作`CFile`物件實作的物件，透過序列化永續性儲存體 (請參閱 < [cobject:: Serialize](../mfc/reference/cobject-class.md#serialize))。
+[CArchive](reference/carchive-class.md)<br/>
+使用物件會合作， `CFile` 以透過序列化來執行物件的持續性儲存（請參閱[CObject：：序列化](reference/cobject-class.md#serialize)）。
 
-[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+[CArchiveException](reference/carchiveexception-class.md)<br/>
 封存例外狀況。
 
-[CFileException](../mfc/reference/cfileexception-class.md)<br/>
+[CFileException](reference/cfileexception-class.md)<br/>
 檔案導向的例外狀況。
 
-[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
-提供標準對話方塊來開啟或儲存檔案。
+[CFileDialog](reference/cfiledialog-class.md)<br/>
+提供開啟或儲存檔案的標準對話方塊。
 
-[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
-會維護最近使用過的 (MRU) 檔案清單。
+[CRecentFileList](reference/crecentfilelist-class.md)<br/>
+維護最近使用的（MRU）檔案清單。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別概觀](class-library-overview.md)

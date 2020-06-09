@@ -9,28 +9,28 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b70e6f4dc15023b878bb58d6b7d0739eeb173d53
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624257"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>建立工具列的方法
 
-MFC 提供兩個類別來建立工具列：[CToolBar](../mfc/reference/ctoolbar-class.md)並[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CToolBar` 提供所有工具列通用控制項的功能，也可以處理許多必要的通用控制項設定和結構的資料。不過，產生可執行檔通常會大於使用建立`CToolBarCtrl`。
+MFC 提供兩個建立工具列的類別： [CToolBar](reference/ctoolbar-class.md)和[CToolBarCtrl](reference/ctoolbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CToolBar`提供工具列通用控制項的所有功能，並為您處理許多必要的通用控制項設定和結構;不過，產生的可執行檔通常會比使用建立的還大 `CToolBarCtrl` 。
 
-`CToolBarCtrl` 通常會導致較小的可執行檔，並且可能會想要使用`CToolBarCtrl`如果您不想要整合到 MFC 架構的工具列。 如果您打算使用`CToolBarCtrl`並整合到 MFC 架構的工具列，您必須另花心思將傳達至 MFC 的工具列控制項操作。 這項通訊並不困難;不過，就是不必要的當您使用的其他工作`CToolBar`。
+`CToolBarCtrl`通常會產生較小的可執行檔， `CToolBarCtrl` 如果您不想要將工具列整合到 MFC 架構中，您可能會想要使用。 如果您打算使用 `CToolBarCtrl` 工具列並將其整合到 mfc 架構中，則必須特別小心將工具列控制項操作傳達給 mfc。 這種通訊並不容易;不過，當您使用時，這是不需要的額外工作 `CToolBar` 。
 
-視覺化C++提供兩種方式可利用工具列通用控制項。
+Visual C++ 提供兩種方式來利用工具列通用控制項。
 
-- 建立工具列 using `CToolBar`，然後呼叫[CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)以取得存取權`CToolBarCtrl`成員函式。
+- 使用建立工具列 `CToolBar` ，然後呼叫[CToolBar：： GetToolBarCtrl](reference/ctoolbar-class.md#gettoolbarctrl)以取得成員函式的存取權 `CToolBarCtrl` 。
 
-- 建立工具列 using [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)的建構函式。
+- 使用[CToolBarCtrl](reference/ctoolbarctrl-class.md)的函式建立工具列。
 
-這兩種方法可讓您存取工具列控制項的成員函式。 當您呼叫 `CToolBar::GetToolBarCtrl`時，會傳回 `CToolBarCtrl` 物件的參考，因此您可以使用任一組成員函式。 請參閱[CToolBar](../mfc/reference/ctoolbar-class.md)如需有關建構和建立工具列使用`CToolBar`。
+任一種方法都可讓您存取 toolbar 控制項的成員函式。 當您呼叫 `CToolBar::GetToolBarCtrl`時，會傳回 `CToolBarCtrl` 物件的參考，因此您可以使用任一組成員函式。 如需有關使用來建立工具列的詳細資訊，請參閱[CToolBar](reference/ctoolbar-class.md) `CToolBar` 。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[控制項](controls-mfc.md)

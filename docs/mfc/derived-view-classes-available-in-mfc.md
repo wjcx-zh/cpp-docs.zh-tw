@@ -7,39 +7,39 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 12b31074e4fcc2ed6a83e3669e1044f5b9caedab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0f0b10ea291db32c576a7d36b7fc19728fa6ce
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373495"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616975"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中的可用衍生檢視類別
 
-下表顯示了 MFC 的視圖類及其彼此之間的關係。 視圖類的功能取決於它派生自的 MFC 視圖類。
+下表顯示 MFC 的 view 類別及其關聯性。 View 類別的功能取決於它所衍生的目標 MFC view 類別。
 
-### <a name="view-classes"></a>檢視類
+### <a name="view-classes"></a>View 類別
 
 |類別|描述|
 |-----------|-----------------|
-|[CView](../mfc/reference/cview-class.md)|所有視圖的基類。|
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|的基類`CTreeView``CListView`,`CEditView``CRichEditView`與 。 這些類允許您使用文檔/檢視體系結構與指示的 Windows 公共控件。|
-|[CEditView](../mfc/reference/ceditview-class.md)|基於 Windows 編輯框控制件的簡單檢視。 允許輸入和編輯文本,並可用作簡單文字編輯器應用程式的基礎。 另請參閱 `CRichEditView`。|
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|包含[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)物件的檢視。 類類似於`CEditView`,但與`CEditView``CRichEditView`不同 , 處理格式化的文本。|
-|[CListView](../mfc/reference/clistview-class.md)|包含[CListCtrl](../mfc/reference/clistctrl-class.md)物件的檢視。|
-|[CTreeView](../mfc/reference/ctreeview-class.md)|包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)物件的檢視,用於類似於可視化 C++中的解決方案資源管理器視窗的檢視。|
-|[CScrollView](../mfc/reference/cscrollview-class.md)|的基類`CFormView``CRecordView`,`CDaoRecordView`與 。 實現滾動視圖的內容。|
-|[CFormView](../mfc/reference/cformview-class.md)|窗體視圖,包含控件的視圖。 基於表單的應用程式提供一個或多個此類表單介面。|
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|應用程式用戶可以使用的 Web 瀏覽器檢視瀏覽萬維網上的網站以及本地檔案系統和網路上的資料夾。 Web 瀏覽器檢視也可以用作活動文檔容器。|
-|[CRecordView](../mfc/reference/crecordview-class.md)|在控制項中顯示 ODBC 資料庫記錄的表單影像檢視。 如果在項目中選擇 ODBC 支援,則檢視的基數`CRecordView`為 。 檢視連線到物件`CRowset`。|
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|在控制項中顯示 DAO 資料庫記錄的表單單。 如果在項目中選擇 DAO 支援,則檢視的基數`CDaoRecordView`為 。 檢視連線到物件`CDaoRecordset`。|
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|在控制項中顯示 OLE DB 記錄的表單單表。 如果在項目中選擇 OLE DB 支援,則檢視的基`COleDBRecordView`數為 。 檢視連線到物件`CRowset`。|
+|[CView](reference/cview-class.md)|所有視圖的基類。|
+|[CCtrlView](reference/cctrlview-class.md)|`CTreeView`、 `CListView` 、和的基類 `CEditView` `CRichEditView` 。 這些類別可讓您搭配指定的 Windows 通用控制項使用檔/視圖架構。|
+|[CEditView](reference/ceditview-class.md)|以 Windows 編輯方塊控制項為基礎的簡單視圖。 允許輸入和編輯文字，而且可以當做簡單文字編輯器應用程式的基礎使用。 另請參閱 `CRichEditView`。|
+|[CRichEditView](reference/cricheditview-class.md)|包含[CRichEditCtrl](reference/cricheditctrl-class.md)物件的視圖。 這個類別類似 `CEditView` ，但不同于，它會 `CEditView` `CRichEditView` 處理格式化的文字。|
+|[CListView](reference/clistview-class.md)|包含[CListCtrl](reference/clistctrl-class.md)物件的視圖。|
+|[CTreeView](reference/ctreeview-class.md)|包含[CTreeCtrl](reference/ctreectrl-class.md)物件的視圖，適用于 Visual C++ 中方案總管視窗的視圖。|
+|[CScrollView](reference/cscrollview-class.md)|`CFormView`、和的基類 `CRecordView` `CDaoRecordView` 。 執行此視圖內容的滾動。|
+|[CFormView](reference/cformview-class.md)|表單檢視，包含控制項的視圖。 以表單為基礎的應用程式會提供一或多個這類表單介面。|
+|[CHtmlView](reference/chtmlview-class.md)|Web 瀏覽器視圖，應用程式的使用者可以在此流覽萬維網上的網站，以及本機檔案系統和網路上的資料夾。 Web 瀏覽器視圖也可以做為活動文檔容器。|
+|[CRecordView](reference/crecordview-class.md)|表單檢視，會在控制項中顯示 ODBC 資料庫記錄。 如果您在專案中選取 [ODBC 支援]，則視圖的基類會是 `CRecordView` 。 此視圖會連接到 `CRowset` 物件。|
+|[CDaoRecordView](reference/cdaorecordview-class.md)|表單檢視，會在控制項中顯示 DAO 資料庫記錄。 如果您在專案中選取 [DAO 支援]，則視圖的基類會是 `CDaoRecordView` 。 此視圖會連接到 `CDaoRecordset` 物件。|
+|[COleDBRecordView](reference/coledbrecordview-class.md)|顯示控制項中 OLE DB 記錄的表單檢視。 如果您在專案中選取 OLE DB 支援，則此視圖的基類為 `COleDBRecordView` 。 此視圖會連接到 `CRowset` 物件。|
 
 > [!NOTE]
-> 自 MFC 版本`CEditView`4.0 起`CCtrlView`,派生自 。
+> 從 MFC 版本4.0 開始， `CEditView` 衍生自 `CCtrlView` 。
 
-要在應用程式中使用這些類,請從這些類派生應用程式的視圖類。 有關詳細資訊,請參閱[捲動和縮放檢視](../mfc/scrolling-and-scaling-views.md)。 有關資料庫類的詳細資訊,請參閱[概述:資料庫程式設計](../data/data-access-programming-mfc-atl.md)。
+若要在您的應用程式中使用這些類別，請從它們衍生應用程式的 view 類別。 如需相關資訊，請參閱[滾動和縮放視圖](scrolling-and-scaling-views.md)。 如需資料庫類別的詳細資訊，請參閱[總覽：資料庫程式設計](../data/data-access-programming-mfc-atl.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用檢視](../mfc/using-views.md)
+[使用檢視](using-views.md)

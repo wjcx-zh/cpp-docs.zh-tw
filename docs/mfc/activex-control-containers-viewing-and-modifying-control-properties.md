@@ -1,5 +1,5 @@
 ---
-title: ActiveX 控制項容器：視圖和修改控制項屬性
+title: ActiveX 控制項容器：檢視和修改控制項屬性
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], viewing and modifying
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 1d42820efd06c2ae52f5d1b22b0bdfb6335c4a89
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: b0ca43f59cf70dea1348f22a08cfb4e89b45c3dd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907811"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617363"
 ---
-# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 控制項容器：視圖和修改控制項屬性
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 控制項容器：檢視和修改控制項屬性
 
 當您將 ActiveX 控制項插入至專案時，檢視和變更 ActiveX 控制項支援的屬性會很有幫助。 本文將討論如何使用 Visual C++ 資源編輯器來進行此動作。
 
 如果 ActiveX 控制項容器應用程式使用內嵌控制項，您可以在資源編輯器中檢視和修改控制項的屬性。 您也可以在設計階段使用資源編輯器來設定屬性值。 資源編輯器會自動將這些值儲存在專案的資源檔中。 控制項的所有執行個體接著會將其屬性初始化為這些值。
 
-這個程序假設您已將控制項插入專案中。 如需相關資訊[，請參閱 ActiveX 控制項容器：將控制項插入控制項容器應用程式](../mfc/inserting-a-control-into-a-control-container-application.md)中。
+這個程序假設您已將控制項插入專案中。 如需相關資訊，請參閱[ActiveX 控制項容器：將控制項插入控制項容器應用程式](inserting-a-control-into-a-control-container-application.md)。
 
 檢視控制項屬性的第一步是將控制項的執行個體加入至專案的對話方塊範本。
 
 ### <a name="to-view-the-properties-of-a-control"></a>檢視控制項的屬性
 
-1. 在 [資源] 檢視中，開啟**對話方塊** 資料夾。
+1. 在資源檢視中，開啟 [**對話方塊]** 資料夾。
 
 1. 開啟您的主要對話方塊範本。
 
@@ -41,4 +41,4 @@ ms.locfileid: "70907811"
 
 ## <a name="see-also"></a>另請參閱
 
-[ActiveX 控制項容器](../mfc/activex-control-containers.md)
+[ActiveX 控制項容器](activex-control-containers.md)

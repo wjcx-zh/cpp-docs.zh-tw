@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241184"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616212"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>資料物件和資料來源 (OLE)
 
@@ -27,18 +27,18 @@ ms.locfileid: "62241184"
 
 下列文件說明如何使用您應用程式中的資料物件和資料來源。 這份資訊適用於容器和伺服器應用程式，因為它們可能同時被要求複製並貼上資料。
 
-- [資料物件和資料來源：建立和解構](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [資料物件和資料來源：建立和解構](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [資料物件和資料來源：操作](../mfc/data-objects-and-data-sources-manipulation.md)
+- [資料物件和資料來源：管理](data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>本節內容
 
-[拖放](../mfc/drag-and-drop-ole.md)
+[拖放](drag-and-drop-ole.md)
 
-[剪貼簿](../mfc/clipboard.md)
+[剪貼簿](clipboard.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[COleDataObject 類別](../mfc/reference/coledataobject-class.md)<br/>
-[COleDataSource 類別](../mfc/reference/coledatasource-class.md)
+[OLE](ole-in-mfc.md)<br/>
+[COleDataObject 類別](reference/coledataobject-class.md)<br/>
+[COleDataSource 類別](reference/coledatasource-class.md)

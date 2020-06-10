@@ -1,6 +1,6 @@
 ---
 title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918389"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664322"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -62,22 +62,22 @@ ms.locfileid: "82918389"
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *緩衝區*<br/>
 要保存錯誤字串的緩衝區。
 
-*numberOfElements*<br/>
-緩衝區的大小。
+*sizeInBytes*<br/>
+緩衝區中的位元組數目。
+
+*sizeInWords*<br/>
+緩衝區中的單字數目。
 
 *errnum*<br/>
 錯誤號碼。
@@ -122,9 +125,9 @@ errno_t __wcserror_s(
 
 ### <a name="error-condtions"></a>錯誤狀況
 
-|*緩衝區*|*numberOfElements*|*strErrMsg*|*緩衝區*的內容|
+|*緩衝區*|*sizeInBytes/sizeInWords*|*strErrMsg*|*緩衝區*的內容|
 |--------------|------------------------|-----------------|--------------------------|
-|**Null**|任意|任意|n/a|
+|**NULL**|任意|任意|n/a|
 |任意|0|任意|未修改|
 
 ## <a name="remarks"></a>備註
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 如果*strErrMsg*為**Null**， **_strerror_s**會在*buffer*中傳回一個字串，其中包含產生錯誤之最後一個程式庫呼叫的系統錯誤訊息。 錯誤訊息字串會以新行字元 ('\n') 為結尾。 如果*strErrMsg*不等於**Null**，則 **_strerror_s**會傳回*緩衝區*中的字串，其中包含（依序）您的字串訊息、冒號、空格、最後一個程式庫呼叫產生錯誤的系統錯誤訊息，以及一個分行符號。 您的字串訊息最多可以是 94 個字元長度。
 
-如果錯誤訊息的長度超過*numberOfElements* -1，這些函式會將其截斷。 *Buffer*中產生的字串一律會以 null 結束。
+如果錯誤訊息的長度超過緩衝區的大小-1，這些函式就會截斷它。 *緩衝區*中產生的字串一律會以 null 結束。
 
 **_Strerror_s**的實際錯誤號碼會儲存在變數[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **_strerror_s**使用**errno**值做為變數 **_sys_errlist**的索引，來存取適當的錯誤訊息。 變數[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值會定義為 **_sys_errlist**陣列中元素的最大數目。 若要產生精確的結果，請在程式庫常式傳回時立即呼叫 **_strerror_s**並傳回錯誤。 否則， **strerror_s**或 **_strerror_s**的後續呼叫可能會覆寫**errno**值。
 

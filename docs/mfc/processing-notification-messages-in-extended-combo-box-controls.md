@@ -5,12 +5,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 044cef644f746f7cb70944805882bd8e2f2806b4
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 58a7c5ec36807489d24014055c39775b4552be03
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908102"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620991"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>處理擴充下拉式方塊控制項中的通知訊息
 
@@ -20,19 +20,19 @@ ms.locfileid: "70908102"
 
 下列清單描述擴充的下拉式方塊控制項所傳送的各種通知。
 
-- 當使用者啟動下拉式清單，或按一下控制項的編輯方塊時，就會傳送 CBEN_BEGINEDIT。
+- CBEN_BEGINEDIT 當使用者啟動下拉式清單，或按一下控制項的編輯方塊時所傳送。
 
-- 刪除專案時傳送的 CBEN_DELETEITEM。
+- CBEN_DELETEITEM 項目已刪除時所傳送。
 
-- 當使用者開始拖曳控制項的編輯部分中所顯示之專案的影像時，所傳送的 CBEN_DRAGBEGIN。
+- CBEN_DRAGBEGIN 當使用者開始拖曳顯示在控制項編輯部分的項目影像時所傳送。
 
-- 當使用者已結束編輯方塊中的作業，或已從控制項的下拉式清單中選取專案時，就會傳送 CBEN_ENDEDIT。
+- CBEN_ENDEDIT 當使用者已經結束編輯方塊內的作業，或已從控制項下拉式清單中選取項目時所傳送。
 
-- CBEN_GETDISPINFO 傳送以取得回呼專案的顯示資訊。
+- CBEN_GETDISPINFO 要擷取回呼項目的顯示資訊時所傳送。
 
-- 在控制項中插入新的專案時傳送的 CBEN_INSERTITEM。
+- CBEN_INSERTITEM 當新項目已插入控制項中時所傳送。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CComboBoxEx](using-ccomboboxex.md)<br/>
+[控制項](controls-mfc.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373446"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620946"
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 
 擴充基本整數型別，有助於防止整數溢位，並讓您比較不同的整數型別。
 
 > [!NOTE]
-> 此函式庫的最新[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)版本 。
+> 此程式庫的最新版本位於 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。
 
 ## <a name="syntax"></a>語法
 
@@ -42,20 +42,20 @@ class SafeInt;
 | 參數  |  描述 |
 |---------|-----------------|
 | *rhs*      |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
-| *I.*        |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
-| *位元*     |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
+| *i*        |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
+| *一些*     |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-| 名稱                          |  描述 |
+| 名稱                          |  說明 |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  預設建構函式。 |
 
 ### <a name="assignment-operators"></a>指派運算子
 
-| 名稱  |  語法 |
+| Name  |  語法 |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>轉型運算子
 
-| 名稱              |  語法 |
+| Name              |  語法 |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>比較運算子
 
-| 名稱  |  語法 |
+| Name  |  語法 |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>算術運算子
 
-| 名稱  |  語法 |
+| Name  |  語法 |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>邏輯運算子
 
-| 名稱     |  語法 |
+| Name     |  語法 |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -212,7 +212,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 > [!NOTE]
 > 雖然 `SafeInt` 類別接受任何種類的整數，但它搭配不帶正負號的型別執行會更有效率。
 
-`E` 是 `SafeInt` 所使用的錯誤處理機制。 SafeInt 程式庫提供了兩種錯誤處理機制。 預設原則為 `SafeIntErrorPolicy_SafeIntException`，其會在發生錯誤時擲回 [SafeIntException 類別](../safeint/safeintexception-class.md)例外狀況。 另一個原則是 `SafeIntErrorPolicy_InvalidParameter`，其會在發生錯誤時停止程式。
+`E` 是 `SafeInt` 所使用的錯誤處理機制。 SafeInt 程式庫提供了兩種錯誤處理機制。 預設原則為 `SafeIntErrorPolicy_SafeIntException`，其會在發生錯誤時擲回 [SafeIntException 類別](safeintexception-class.md)例外狀況。 另一個原則是 `SafeIntErrorPolicy_InvalidParameter`，其會在發生錯誤時停止程式。
 
 自訂錯誤原則的方法有兩種。 第一個選項是當您建立 `SafeInt` 時設定參數 `E`。 當您只想針對一個 `SafeInt` 變更錯誤處理原則時，請使用此選項。 另一個選項是先定義 _SAFEINT_DEFAULT_ERROR_POLICY 作為您自訂的錯誤處理類別，然後再納入 `SafeInt` 程式庫。 當您想要針對程式碼中 `SafeInt` 類別的所有執行個體變更預設的錯誤處理原則時，請選擇此選項。
 
@@ -223,13 +223,13 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 `SafeInt`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：** safeint.h
 
 **命名空間：** msl:: utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>安全::安全
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt：： SafeInt
 
 建構 `SafeInt` 物件。
 
@@ -257,10 +257,10 @@ SafeInt (
 
 ### <a name="parameters"></a>參數
 
-*I.*<br/>
+*i*<br/>
 [in] 新 `SafeInt` 物件的值。 根據建構函式而定，這必須是型別 T 或 U 的參數。
 
-*B*<br/>
+*位元組*<br/>
 [in] 新 `SafeInt` 物件的布林值。
 
 *u*<br/>

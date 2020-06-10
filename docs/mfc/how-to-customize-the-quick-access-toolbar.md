@@ -1,17 +1,17 @@
 ---
-title: HOW TO：自訂快速存取工具列
+title: 如何：自訂快速存取工具列
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620025"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>作法：自訂快速存取工具列
+# <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自訂快速存取工具列
 
 快速存取工具列 (QAT) 是包含一組命令的可自訂工具列，命令是顯示在 [應用程式] 按鈕旁或類別索引標籤下。 下圖將顯示一般的快速存取工具列。
 
@@ -38,7 +38,7 @@ ms.locfileid: "70907786"
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>在快速存取工具列上新增或移除命令
 
-1. 在 [**屬性**] 視窗中，按一下 [ **QAT 專案**]，然後按一下省略號按鈕 **（...）** 。
+1. 在 [**屬性**] 視窗中，按一下 [ **QAT 專案**]，然後按一下省略號按鈕 **（...）**。
 
 1. 在 [ **QAT 專案編輯器**] 對話方塊中，使用 [**新增**] 和 [**移除**] 按鈕來修改快速存取工具列上的命令清單。
 
@@ -54,4 +54,4 @@ ms.locfileid: "70907786"
 
 ## <a name="see-also"></a>另請參閱
 
-[功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
+[功能區設計工具 (MFC)](ribbon-designer-mfc.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-ms.openlocfilehash: 56d131151f2284f12a3b46a9acd3cfbd3c8b0f47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d362cfe54a9b5a562237c7bb9632edae6e58228b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164874"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622916"
 ---
 # <a name="command-routing-illustration"></a>命令路由說明
 
@@ -31,4 +31,4 @@ ms.locfileid: "62164874"
 
 ## <a name="see-also"></a>另請參閱
 
-[架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
+[架構如何呼叫處理常式](how-the-framework-calls-a-handler.md)

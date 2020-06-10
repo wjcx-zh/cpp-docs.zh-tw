@@ -5,36 +5,36 @@ helpviewer_keywords:
 - CToolTipCtrl class [MFC], manipulating tool tip attributes
 - tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
-ms.openlocfilehash: d8c994748239871f17b878dd8ea7505a2a8a0b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61bc35e8b19ba7645736b939acac6cdaa6cb7316
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622416"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>管理工具提示控制項
 
 `CToolTipCtrl` 類別提供一組成員函式，其可以控制 `CToolTipCtrl` 物件和工具提示視窗的各種屬性。
 
-初始、 快顯和重新顯示期間，可以設定工具提示視窗，並擷取透過呼叫[GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime)並[SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime)。
+您可以使用[GetDelayTime](reference/ctooltipctrl-class.md#getdelaytime)和[SetDelayTime](reference/ctooltipctrl-class.md#setdelaytime)的呼叫來設定和抓取工具提示視窗的初始、快顯和 reshow 持續時間。
 
 使用下列函式變更工具提示視窗的外觀：
 
-- [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin)並[SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin)擷取和設定之間的工具提示框線和工具提示文字。
+- [GetMargin](reference/ctooltipctrl-class.md#getmargin)和[setmargin:](reference/ctooltipctrl-class.md#setmargin)會抓取並設定工具提示框線與工具提示文字之間的寬度。
 
-- [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth)並[SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth)擷取和設定的最大寬度的工具提示 視窗。
+- [GetMaxTipWidth](reference/ctooltipctrl-class.md#getmaxtipwidth)和[setmaxtipwidth:](reference/ctooltipctrl-class.md#setmaxtipwidth)會抓取並設定工具提示視窗的最大寬度。
 
-- [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor)並[SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor)擷取和設定背景色彩的工具提示 視窗。
+- [GetTipBkColor](reference/ctooltipctrl-class.md#gettipbkcolor)和[settipbkcolor:](reference/ctooltipctrl-class.md#settipbkcolor)會抓取並設定工具提示視窗的背景色彩。
 
-- [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor)並[SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor)擷取和設定文字色彩的工具提示 視窗。
+- [GetTipTextColor](reference/ctooltipctrl-class.md#gettiptextcolor)和[settiptextcolor:](reference/ctooltipctrl-class.md#settiptextcolor)會抓取並設定工具提示視窗的文字色彩。
 
-為了讓工具提示控制項的重要訊息，例如 WM_LBUTTONXXX 訊息，通知您必須將訊息轉送至您的工具提示控制項。 進行這項轉送的最佳方法是呼叫[Relayevent](../mfc/reference/ctooltipctrl-class.md#relayevent)，請在`PreTranslateMessage`主控視窗的函式。 下列範例說明可能的方法 (假設工具提示控制項名為 `m_ToolTip`)：
+為了讓工具提示控制項可以收到重要訊息的通知 (例如 WM_LBUTTONXXX 訊息)，您必須將訊息轉送至工具提示控制項。 此轉送的最佳方法是在擁有者視窗的函式中呼叫[CToolTipCtrl：： RelayEvent](reference/ctooltipctrl-class.md#relayevent) `PreTranslateMessage` 。 下列範例說明可能的方法 (假設工具提示控制項名為 `m_ToolTip`)：
 
-[!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#41](codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]
 
-若要立即移除工具提示視窗，請呼叫[快顯](../mfc/reference/ctooltipctrl-class.md#pop)成員函式。
+若要立即移除工具提示視窗，請呼叫[Pop](reference/ctooltipctrl-class.md#pop)成員函式。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
-[控制項](../mfc/controls-mfc.md)
+[使用 CToolTipCtrl](using-ctooltipctrl.md)<br/>
+[控制項](controls-mfc.md)

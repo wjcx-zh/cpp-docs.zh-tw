@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303407"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618790"
 ---
 # <a name="framework-mfc"></a>架構 (MFC)
 
@@ -29,26 +29,26 @@ ms.locfileid: "74303407"
 
 ## <a name="in-this-section"></a>本節內容
 
-[SDI 和 MDI](../mfc/sdi-and-mdi.md)
+[SDI 和 MDI](sdi-and-mdi.md)
 
-[文件、檢視和架構](../mfc/documents-views-and-the-framework.md)
+[文件、檢視和架構](documents-views-and-the-framework.md)
 
-[嚮導和資源編輯器](../mfc/wizards-and-the-resource-editors.md)
+[精靈和資源編輯器](wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>相關章節內容
+## <a name="in-related-sections"></a>相關章節
 
-[在架構上建置](../mfc/building-on-the-framework.md)
+[在架構上建置](building-on-the-framework.md)
 
-[架構如何呼叫您的程式碼](../mfc/how-the-framework-calls-your-code.md)
+[架構如何呼叫您的程式碼](how-the-framework-calls-your-code.md)
 
-[CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)
+[CWinApp：應用程式類別](cwinapp-the-application-class.md)
 
-[檔範本和檔/視圖建立程式](../mfc/document-templates-and-the-document-view-creation-process.md)
+[檔範本和檔/視圖建立程式](document-templates-and-the-document-view-creation-process.md)
 
-[訊息處理和對應](../mfc/message-handling-and-mapping.md)
+[訊息處理和對應](message-handling-and-mapping.md)
 
-[視窗物件](../mfc/window-objects.md)
+[視窗物件](window-objects.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[使用類別來編寫 Windows 應用程式](using-the-classes-to-write-applications-for-windows.md)

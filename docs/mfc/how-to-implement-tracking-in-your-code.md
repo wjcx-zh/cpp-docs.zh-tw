@@ -1,58 +1,58 @@
 ---
-title: HOW TO：在您的程式碼中實作追蹤
+title: 如何：在您的程式碼中實作追蹤
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0f037480e83b8ca1ba12af56904afe25a33e4d6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d71543261021c7e20041d317401b7b7b8d0616e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621661"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>HOW TO：在您的程式碼中實作追蹤
+# <a name="how-to-implement-tracking-in-your-code"></a>如何：在您的程式碼中實作追蹤
 
-若要追蹤 OLE 項目，您必須處理相關的項目，例如按一下項目或更新文件檢視特定事件。 在所有情況下，就足以宣告暫存[CRectTracker](../mfc/reference/crecttracker-class.md)物件，並管理透過此物件的項目。
+若要追蹤 OLE 專案，您必須處理與專案相關的特定事件，例如按一下專案或更新檔的視圖。 在所有情況下，宣告暫存[CRectTracker](reference/crecttracker-class.md)物件，並透過這個物件操作專案就已足夠。
 
-當使用者選取的項目，或插入具有功能表命令的物件時，您必須初始化以適當的樣式，來表示 OLE 項目的狀態追蹤程式。 下表概述 OCLIENT 範例所使用的慣例。 如需有關這些樣式的詳細資訊，請參閱`CRectTracker`。
+當使用者選取專案或使用功能表命令插入物件時，您必須使用適當的樣式來初始化追蹤程式，以代表 OLE 專案的狀態。 下表概述 OCLIENT 範例所使用的慣例。 如需這些樣式的詳細資訊，請參閱 `CRectTracker` 。
 
-### <a name="container-styles-and-states-of-the-ole-item"></a>容器的樣式和 OLE 項目的狀態
+### <a name="container-styles-and-states-of-the-ole-item"></a>OLE 專案的容器樣式和狀態
 
-|顯示的樣式|OLE 項目的狀態|
+|顯示的樣式|OLE 專案的狀態|
 |---------------------|-----------------------|
-|虛線的框線|項目連結|
-|實線框線|項目內嵌在您的文件|
-|調整控點大小|目前選取項目|
-|陰影的框線|項目是目前就地啟用作用中|
-|影線圖樣重疊項目|項目的伺服器已開啟|
+|點框線|專案已連結|
+|實心框線|專案內嵌在您的檔中|
+|調整控點大小|目前已選取專案|
+|影線框線|專案目前為使用中狀態|
+|影線圖樣重迭專案|專案的伺服器已開啟|
 
-您可以處理這項初始化輕鬆使用的程序會檢查 OLE 項目的狀態，並設定適當的樣式。 `SetupTracker` OCLIENT 範例中找到的函式示範追蹤器初始化。 此函式的參數是追蹤程式，地址*pTracker*; 的追蹤程式，與用戶端項目指標*pItem*; 和矩形，指向*pTrueRect*. 此函式的更完整範例，請參閱 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)。
+您可以使用檢查 OLE 專案狀態的程式，並設定適當的樣式，輕鬆地處理此初始化。 在 `SetupTracker` OCLIENT 範例中找到的函式會示範追蹤程式初始化。 此函式的參數是追蹤程式的位址， *pTracker*;與追蹤程式相關的用戶端專案指標， *pItem*;以及指向矩形的指標*pTrueRect*。 如需此函式的更完整範例，請參閱 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)。
 
-**SetupTracker**程式碼範例會提供單一函式; 函式的線條會穿插討論函式的功能：
+**SetupTracker**程式碼範例呈現單一函式;函式的各行與函式功能的討論交錯：
 
-[!code-cpp[NVC_MFCOClient#1](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_1.cpp)]
+[!code-cpp[NVC_MFCOClient#1](codesnippet/cpp/how-to-implement-tracking-in-your-code_1.cpp)]
 
-追蹤器會初始化所設定的最小及清除追蹤器的樣式。
+追蹤器的初始化方式是設定最小大小，並清除追蹤器的樣式。
 
-[!code-cpp[NVC_MFCOClient#2](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_2.cpp)]
+[!code-cpp[NVC_MFCOClient#2](codesnippet/cpp/how-to-implement-tracking-in-your-code_2.cpp)]
 
-若要查看目前是否已選取項目和連結至文件或內嵌在其中的項目是否檢查下列幾行。 上框線內側的調整大小控點會加入至樣式，表示目前未選取項目。 如果項目連結到您的文件，則會使用虛線的框線樣式。 如果內嵌的項目，則會使用實線框線。
+下列幾行會檢查是否目前已選取專案，以及專案是否連結至檔或內嵌于其中。 在框線內的調整大小控點會加入至樣式，表示目前已選取該專案。 如果專案已連結至您的檔，則會使用虛線框線樣式。 如果專案是內嵌的，則會使用實心框線。
 
-[!code-cpp[NVC_MFCOClient#3](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_3.cpp)]
+[!code-cpp[NVC_MFCOClient#3](codesnippet/cpp/how-to-implement-tracking-in-your-code_3.cpp)]
 
-下列程式碼覆疊影線圖樣如果項目目前的項目開啟。
+如果專案目前已開啟，下列程式碼會以影線圖樣來覆迭專案。
 
-[!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]
+[!code-cpp[NVC_MFCOClient#4](codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]
 
-每當有要顯示的追蹤程式，您就可以呼叫此函式。 例如，呼叫這個函式從`OnDraw`檢視類別函式。 檢視會重新繪製時，這會更新追蹤程式的外觀。 如需完整範例，請參閱 <<c0> `CMainView::OnDraw` 函式的 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)。
+當追蹤程式必須顯示時，您就可以呼叫此函式。 例如，從 view 類別的函式呼叫這個函式 `OnDraw` 。 這會在重新繪製視圖時，更新追蹤器的外觀。 如需完整範例，請參閱 `CMainView::OnDraw` MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)的功能。
 
-在您的應用程式需要追蹤程式的程式碼，例如調整大小、 移動或點擊偵測的事件會發生。 這些動作通常表示有人嘗試抓取或移動項目。 在這些情況下，您需要決定控制點： 調整大小控點或框線之間的部分調整大小控點。 `OnLButtonDown`訊息處理常式會測試與項目相關的滑鼠位置的好地方。 呼叫以`CRectTracker::HitTest`。 如果測試傳回以外的值`CRectTracker::hitOutside`、 項目是因為重新調整大小或移動。 因此，您應該進行的呼叫`Track`成員函式。 請參閱`CMainView::OnLButtonDown`函式位於 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)如需完整範例。
+在您的應用程式中，將會發生需要追蹤程式碼的事件，例如調整大小、移動或點擊偵測。 這些動作通常表示嘗試抓取或移動專案。 在這些情況下，您必須決定要抓取的內容：調整大小控點或調整大小控點之間框線的一部分。 `OnLButtonDown`訊息處理常式是測試滑鼠相對於專案之位置的理想位置。 進行呼叫 `CRectTracker::HitTest` 。 如果測試傳回其他 `CRectTracker::hitOutside` 專案，則會調整大小或移動專案。 因此，您應該對成員函式進行呼叫 `Track` 。 如需 `CMainView::OnLButtonDown` 完整範例，請參閱 MFC OLE [sample OCLIENT](../overview/visual-cpp-samples.md)中的函數。
 
-`CRectTracker`類別提供用來指出是否移動、 調整大小，或拖曳作業正在進行的數個不同的資料指標圖形。 若要處理這個事件，請查看目前在滑鼠的項目是否已選取。 如果是，呼叫以`CRectTracker::SetCursor`，或呼叫預設處理常式。 下列範例是從 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md):
+`CRectTracker`類別提供數種不同的游標圖形，用來指出移動、調整大小或拖曳作業是否正在進行中。 若要處理此事件，請檢查是否已選取目前在滑鼠底下的專案。 如果是，請呼叫 `CRectTracker::SetCursor` ，或呼叫預設處理常式。 下列範例來自 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)：
 
-[!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
+[!code-cpp[NVC_MFCOClient#5](codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 
-[追蹤器：在 OLE 應用程式中實作追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+[追蹤器：在 OLE 應用程式中實作追蹤器](trackers-implementing-trackers-in-your-ole-application.md)

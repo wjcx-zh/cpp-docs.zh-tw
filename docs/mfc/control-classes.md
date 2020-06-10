@@ -14,137 +14,137 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 79a71a4660cd49f85726d730c9fad0b2f10f83bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 277802bff3e4833396c4bf114ff8880fcd26343d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338164"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623006"
 ---
 # <a name="control-classes"></a>控制項類別
 
-控制項類別會封裝各種不同的範圍從靜態文字控制項樹狀結構控制項的標準 Windows 控制項。 此外，MFC 提供了一些新的控制項，包括其中的點陣圖和控制列按鈕。
+控制項類別封裝了各種不同的標準 Windows 控制項，範圍從靜態文字控制項到樹狀目錄控制項。 此外，MFC 還提供一些新的控制項，包括具有點陣圖和控制列的按鈕。
 
-類別名稱結尾的控制項 」**Ctrl**」 是 Windows 95 和 Windows NT 3.51 版的新功能。
+其類別名稱結尾為 "**Ctrl**" 的控制項在 windows 95 和 windows NT 3.51 版中是新的。
 
 ## <a name="static-display-controls"></a>靜態顯示控制項
 
-[CStatic](../mfc/reference/cstatic-class.md)<br/>
-靜態顯示視窗。 靜態控制項用來加上標籤、 方塊中，或不同的對話方塊或視窗中的其他控制項。 它們可能也會顯示圖形影像而不是文字或方塊。
+[CStatic](reference/cstatic-class.md)<br/>
+靜態顯示視窗。 靜態控制項是用來標記、方塊或分隔對話方塊或視窗中的其他控制項。 它們也可以顯示圖形影像，而不是文字或方塊。
 
 ## <a name="text-controls"></a>文字控制項
 
-[CEdit](../mfc/reference/cedit-class.md)<br/>
-可編輯文字控制項 視窗中。 編輯控制項用來接受使用者輸入文字。
+[CEdit](reference/cedit-class.md)<br/>
+可編輯的文字控制項視窗。 編輯控制項是用來接受使用者的文字輸入。
 
-[CIPAddressCtrl](../mfc/reference/cipaddressctrl-class.md)<br/>
-支援的編輯方塊操作的網際網路通訊協定 (IP) 位址。
+[CIPAddressCtrl](reference/cipaddressctrl-class.md)<br/>
+支援用於操作網際網路通訊協定（IP）位址的編輯方塊。
 
-[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)<br/>
-使用者可以輸入和編輯文字控制項。 不同於封裝在控制`CEdit`，rich edit 控制項支援的字元和段落格式以及 OLE 物件。
+[CRichEditCtrl](reference/cricheditctrl-class.md)<br/>
+使用者可以在其中輸入和編輯文字的控制項。 不同于封裝在中的控制項 `CEdit` ，rich edit 控制項支援字元和段落格式設定和 OLE 物件。
 
-## <a name="controls-that-represent-numbers"></a>表示數字的控制項
+## <a name="controls-that-represent-numbers"></a>代表數位的控制項
 
-[CSliderCtrl](../mfc/reference/csliderctrl-class.md)<br/>
-包含使用者移到選取的值或一組值的滑桿控制項。
+[CSliderCtrl](reference/csliderctrl-class.md)<br/>
+包含滑杆的控制項，使用者可以用來選取值或一組值。
 
-[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)<br/>
-一對箭號按鈕的使用者可以按一下來遞增或遞減值。
+[CSpinButtonCtrl](reference/cspinbuttonctrl-class.md)<br/>
+一對箭號按鈕，使用者可以按一下以遞增或遞減值。
 
-[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)<br/>
-會顯示矩形逐漸填滿從左到右來表示作業的進度。
+[CProgressCtrl](reference/cprogressctrl-class.md)<br/>
+顯示從左至右逐漸填滿的矩形，以指示作業的進度。
 
-[CScrollBar](../mfc/reference/cscrollbar-class.md)<br/>
-捲軸控制項視窗。 類別提供的捲軸，作為對話方塊或視窗中，使用者可以用來指定範圍內的位置中的控制項的功能。
+[CScrollBar](reference/cscrollbar-class.md)<br/>
+捲軸控制項視窗。 類別會提供捲軸的功能，以做為對話方塊或視窗中的控制項，供使用者在範圍內指定位置。
 
 ## <a name="buttons"></a>按鈕
 
-[CButton](../mfc/reference/cbutton-class.md)<br/>
-按鈕控制項視窗。 類別會提供程式設計介面，如按鈕、 核取方塊或在對話方塊或視窗中的選項按鈕。
+[CButton](reference/cbutton-class.md)<br/>
+按鈕控制項視窗。 類別會針對對話方塊或視窗中的 [推播] 按鈕、核取方塊或選項按鈕提供程式設計介面。
 
-[CBitmapButton](../mfc/reference/cbitmapbutton-class.md)<br/>
-具有點陣圖，而不是文字標題的按鈕。
+[CBitmapButton](reference/cbitmapbutton-class.md)<br/>
+具有點陣圖而不是文字標題的按鈕。
 
 ## <a name="lists"></a>清單
 
-[CListBox](../mfc/reference/clistbox-class.md)<br/>
-清單方塊控制 視窗中。 清單方塊會顯示使用者可以檢視和選取的項目清單。
+[CListBox](reference/clistbox-class.md)<br/>
+清單方塊控制項視窗。 清單方塊會顯示使用者可查看和選取的專案清單。
 
-[CDragListBox](../mfc/reference/cdraglistbox-class.md)<br/>
-提供 Windows 清單方塊的功能;可讓使用者在清單方塊內移動清單方塊項目，例如檔案名稱和字串常值。 使用這項功能的清單方塊適用於項目清單而非依字母順序排列的順序，例如包含專案中的 路徑名稱或檔案。
+[CDragListBox](reference/cdraglistbox-class.md)<br/>
+提供 Windows 清單方塊的功能;允許使用者在清單方塊中移動清單方塊專案，例如檔案名和字串常值。 具有此功能的清單方塊適用于依字母順序排列的專案清單，例如在專案中包含路徑路徑或檔案。
 
-[CComboBox](../mfc/reference/ccombobox-class.md)<br/>
-下拉式方塊控制項視窗。 下拉式方塊包含編輯控制項，再加上一個清單方塊。
+[CComboBox](reference/ccombobox-class.md)<br/>
+下拉式方塊控制項視窗。 下拉式方塊是由編輯控制項加上清單方塊所組成。
 
-[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)<br/>
+[CComboBoxEx](reference/ccomboboxex-class.md)<br/>
 藉由提供影像清單的支援，擴充下拉式方塊控制項。
 
-[CCheckListBox](../mfc/reference/cchecklistbox-class.md)<br/>
-顯示使用者可以檢查或清除，每個項目旁的核取方塊的項目清單。
+[CCheckListBox](reference/cchecklistbox-class.md)<br/>
+顯示具有核取方塊的專案清單，使用者可以在每個專案旁邊進行檢查或清除。
 
-[CListCtrl](../mfc/reference/clistctrl-class.md)<br/>
-顯示項目的集合，每個圖示和標籤，以類似方式右窗格的 [檔案總管] 中所組成。
+[CListCtrl](reference/clistctrl-class.md)<br/>
+顯示專案的集合，其中每一個都包含一個圖示和一個標籤，其方式類似于 [檔案瀏覽器] 的右窗格。
 
-[CTreeCtrl](../mfc/reference/ctreectrl-class.md)<br/>
-顯示圖示和標籤排列在類似的左窗格的 [檔案總管] 中的階層式清單。
+[CTreeCtrl](reference/ctreectrl-class.md)<br/>
+顯示圖示和標籤的階層式清單，其相片順序類似于 [檔案瀏覽器] 的左窗格。
 
 ## <a name="toolbars-and-status-bars"></a>工具列和狀態列
 
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)<br/>
-提供 Windows 工具列通用控制項的功能。 大部分的 MFC 程式使用[CToolBar](../mfc/reference/ctoolbar-class.md)而不是此類別。
+[CToolBarCtrl](reference/ctoolbarctrl-class.md)<br/>
+提供 Windows 工具列通用控制項的功能。 大部分的 MFC 程式會使用[CToolBar](reference/ctoolbar-class.md) ，而不是這個類別。
 
-[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)<br/>
-水平的視窗中，通常會分成的窗格中，應用程式可以在其中顯示狀態資訊。 大部分的 MFC 程式使用[CStatusBar](../mfc/reference/cstatusbar-class.md)而不是此類別。
+[CStatusBarCtrl](reference/cstatusbarctrl-class.md)<br/>
+水準視窗（通常分成窗格），應用程式可以在其中顯示狀態資訊。 大部分的 MFC 程式會使用[CStatusBar](reference/cstatusbar-class.md) ，而不是這個類別。
 
-## <a name="miscellaneous-controls"></a>其他的控制項
+## <a name="miscellaneous-controls"></a>其他控制項
 
-[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)<br/>
-顯示簡單的視訊剪輯。
+[CAnimateCtrl](reference/canimatectrl-class.md)<br/>
+顯示簡單的影片剪輯。
 
-[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)<br/>
-小型快顯視窗會顯示一行文字，描述應用程式中工具用途。
+[CToolTipCtrl](reference/ctooltipctrl-class.md)<br/>
+一個小型快顯視窗，會在應用程式中顯示一個描述工具用途的單行文字。
 
-[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)<br/>
-支援擴充的編輯控制項或可讓使用者選擇特定日期或時間值的簡單的行事曆介面控制項。
+[CDateTimeCtrl](reference/cdatetimectrl-class.md)<br/>
+支援可讓使用者選擇特定日期或時間值的擴充編輯控制項或簡單行事曆介面控制項。
 
-[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)<br/>
-顯示標題或資料行的標籤。
+[CHeaderCtrl](reference/cheaderctrl-class.md)<br/>
+顯示資料行的標題或標籤。
 
-[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)<br/>
-支援簡單的行事曆介面控制項，可讓使用者選取日期。
+[CMonthCalCtrl](reference/cmonthcalctrl-class.md)<br/>
+支援簡單行事曆介面控制項，可讓使用者選取日期。
 
-[CTabCtrl](../mfc/reference/ctabctrl-class.md)<br/>
-具有索引標籤的使用者可以按一下，類似於筆記本的插頁的控制項。
+[CTabCtrl](reference/ctabctrl-class.md)<br/>
+控制項，其中包含使用者可以按一下的索引標籤，類似于筆記本中的分隔線。
 
-[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)<br/>
-可讓使用者建立的作用的按鍵組合，其中使用者可以按下以快速執行的動作。
+[CHotKeyCtrl](reference/chotkeyctrl-class.md)<br/>
+可讓使用者建立快速鍵組合，使用者可以按下以快速執行動作。
 
-[CLinkCtrl](../mfc/reference/clinkctrl-class.md)<br/>
-呈現標記文字，並啟動適當的應用程式，當使用者按一下內嵌的連結。
+[CLinkCtrl](reference/clinkctrl-class.md)<br/>
+呈現已標記的文字，並在使用者按一下內嵌連結時啟動適當的應用程式。
 
-[CHtmlEditCtrl](../mfc/reference/chtmleditctrl-class.md)<br/>
+[CHtmlEditCtrl](reference/chtmleditctrl-class.md)<br/>
 在 MFC 視窗中提供 WebBrowser ActiveX 控制項的功能。
 
-## <a name="related-classes"></a>相關的類別
+## <a name="related-classes"></a>相關類別
 
-[CImageList](../mfc/reference/cimagelist-class.md)<br/>
+[CImageList](reference/cimagelist-class.md)<br/>
 提供 Windows 影像清單的功能。 影像清單是搭配清單控制項和樹狀目錄控制項使用。 也可以用來儲存和封存一組大小相同的點陣圖。
 
-[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
-Windows 控制項相關聯的所有檢視的基底類別。 根據控制項的檢視如下所述。
+[CCtrlView](reference/cctrlview-class.md)<br/>
+所有與 Windows 控制項相關聯之視圖的基類。 以控制項為基礎的視圖如下所述。
 
-[CEditView](../mfc/reference/ceditview-class.md)<br/>
-包含 Windows 標準的檢視編輯控制項。
+[CEditView](reference/ceditview-class.md)<br/>
+包含 Windows standard 編輯控制項的視圖。
 
-[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
-檢視包含豐富的 Windows 編輯控制項。
+[CRichEditView](reference/cricheditview-class.md)<br/>
+包含 Windows rich edit 控制項的視圖。
 
-[CListView](../mfc/reference/clistview-class.md)<br/>
-包含 Windows 清單控制項的檢視。
+[CListView](reference/clistview-class.md)<br/>
+包含 Windows 清單控制項的視圖。
 
-[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
-包含 Windows 樹狀目錄控制項的檢視。
+[CTreeView](reference/ctreeview-class.md)<br/>
+包含 Windows 樹狀目錄控制項的視圖。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../mfc/class-library-overview.md)
+[類別概觀](class-library-overview.md)

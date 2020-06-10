@@ -8,12 +8,12 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 26c263b2d7e4e0243444925cb9416cb337dcd79d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c626940e700d3e9827ef6a7cf849d970e40d5d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392956"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619781"
 ---
 # <a name="accessing-file-status"></a>存取檔案狀態
 
@@ -21,14 +21,14 @@ ms.locfileid: "62392956"
 
 ### <a name="to-get-file-status"></a>取得檔案狀態
 
-1. 使用[CFile](../mfc/reference/cfile-class.md)類別來取得和設定檔案的相關的資訊。 一個實用的應用程式是使用`CFile`靜態成員函式**GetStatus**來判斷檔案是否存在。 **GetStatus**會傳回 0，如果指定的檔案不存在。
+1. 使用[CFile](reference/cfile-class.md)類別來取得和設定檔案的相關資訊。 其中一個實用的應用程式是使用 `CFile` 靜態成員函式**GetStatus**來判斷檔案是否存在。 如果指定的檔案不存在， **GetStatus**會傳回0。
 
-因此，您可以使用的結果**GetStatus**來判斷是否要使用**cfile:: Modecreate**旗標時開啟的檔案，如下列範例所示：
+因此，您可以使用**GetStatus**的結果來判斷開啟檔案時是否使用**CFile：： modeCreate**旗標，如下列範例所示：
 
 [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]
 
-如需相關資訊，請參閱[序列化](../mfc/serialization-in-mfc.md)。
+如需相關資訊，請參閱[序列化](serialization-in-mfc.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案](../mfc/files-in-mfc.md)
+[檔案](files-in-mfc.md)

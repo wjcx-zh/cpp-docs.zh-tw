@@ -9,48 +9,48 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 74022c8bc6af1d2cdf74fa452d4e0483637e542e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50e3a3f8c064b2a054f0018e87c4e8782a5dc363
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365521"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618838"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外狀況：攔截及刪除例外狀況
 
-下列指示和範例示範如何攔截和刪除例外狀況。 有關**嘗試**、**捕捉**與**引發**關鍵字的詳細資訊,請參閱[現代C++異常和錯誤處理的最佳做法](../cpp/errors-and-exception-handling-modern-cpp.md)。
+下列指示和範例示範如何攔截和刪除例外狀況。 如需**try**、 **catch**和**throw**關鍵字的詳細資訊，請參閱[例外狀況和錯誤處理的新式 c + + 最佳作法](../cpp/errors-and-exception-handling-modern-cpp.md)。
 
 您的例外狀況處理常式必須刪除其所處理的例外狀況物件，因為每當程式碼攔截例外狀況時，若無法刪除例外狀況就會導致記憶體流失。
 
-擷取**區塊**必須在以下情況刪除異常:
+當下列情況發生時，您的**catch**區塊必須刪除例外狀況：
 
-- **catch**塊將引發新的異常。
+- **Catch**區塊會擲回新的例外狀況。
 
    當然，如果您再次擲回相同的例外狀況，則不得刪除例外狀況：
 
-   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- 執行從**catch**塊內返回。
+- 執行會從**catch**區塊內傳回。
 
 > [!NOTE]
-> 刪除`CException`時`Delete`,使用成員函數刪除異常。 不要使用**delete**關鍵字,因為如果異常不在堆中,則該關鍵字可能會失敗。
+> 刪除時 `CException` ，請使用成員函式 `Delete` 來刪除例外狀況。 請勿使用**delete**關鍵字，因為如果例外狀況不在堆積上，它可能會失敗。
 
 #### <a name="to-catch-and-delete-exceptions"></a>攔截和刪除例外狀況
 
-1. 使用**try**關鍵字設定**try**塊。 執行任何可能在**try**塊中引發異常的程式語句。
+1. 使用**try**關鍵字來設定**try**區塊。 執行可能會在**try**區塊內擲回例外狀況的任何程式語句。
 
-   使用**catch**關鍵字設置**catch**塊。 將異常處理代碼放在**catch**塊中。 僅當**try**塊中的代碼引發**catch**語句中指定的類型的異常時,才會執行**catch**塊中的代碼。
+   使用**catch**關鍵字來設定**catch**區塊。 將例外狀況處理常式代碼放在**catch**區塊中。 只有當**try**區塊內的程式碼擲回**catch**語句中所指定類型的例外狀況時，才會執行**catch**區塊中的程式碼。
 
-   以下骨架顯示了**嘗試**與**捕捉**區塊通常如何排列:
+   下列基本架構會顯示**try**和**catch**區塊的一般相片順序：
 
-   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   引發異常時,控件將傳遞到其異常聲明與異常類型匹配的第一**個 catch**塊。 您可以有選擇地處理不同類型的異常,順序**CATCH**塊如下所示:
+   當擲回例外狀況時，控制權會傳遞給第一個**catch**區塊，其例外狀況宣告會符合例外狀況的類型。 您可以選擇性地使用連續**catch**區塊來處理不同類型的例外狀況，如下所示：
 
-   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-有關詳細資訊,請參閱[異常:從 MFC 異常巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+如需詳細資訊，請參閱[例外狀況：從 MFC 例外狀況宏轉換](exceptions-converting-from-mfc-exception-macros.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況處理](../mfc/exception-handling-in-mfc.md)
+[例外狀況處理](exception-handling-in-mfc.md)

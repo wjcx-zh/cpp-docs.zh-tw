@@ -1,17 +1,17 @@
 ---
-title: 文件檢視架構結構的替代方法
+title: 檔視圖架構的替代方案
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], applications without
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 41af30d25d7ddb9e2bdbb7a0f7b86cb741ae1048
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66325d1ae087b29f59f37197fb8695504bbddbc6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619749"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文件/檢視架構的替代方案
 
@@ -25,32 +25,32 @@ MFC 應用程式通常使用文件/檢視架構管理資訊、檔案格式以及
 
 - 如果您的原始程式碼已經混用資料管理與資料檢視，那麼就不值得將程式碼移至文件/檢視模型，因為您必須將兩者分開。 您可能寧願將程式碼保持原狀。
 
-要建立不使用文檔/檢視體系結構的應用程式,請清除 MFC 應用程式精靈 1 中**的文檔/視圖體系結構支援**複選框。 有關詳細資訊,請參閱[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)。
+若要建立不使用檔/視圖架構的應用程式，請清除 [MFC 應用程式精靈] 的步驟1中的 [**檔/視圖架構支援**] 核取方塊。 如需詳細資訊，請參閱[MFC 應用程式精靈](reference/mfc-application-wizard.md)。
 
 > [!NOTE]
-> MFC 應用程式精靈產生的對話框的應用程式不使用文件/檢視體系結構,因此,如果選擇對話框應用程式類型,則禁用 **「文檔/檢視體系結構」支援**複選框。
+> [MFC 應用程式精靈] 所產生的對話方塊應用程式不會使用檔/視圖架構，因此，如果您選取 [對話方塊應用程式類型]，則會停用 [**檔/視圖架構支援**] 核取方塊。
 
-Visual C++ 精靈以及原始檔和對話方塊編輯器都可處理產生的應用程式，就如同處理任何其他精靈產生的應用程式一般。 應用程式可以支援工具列、滾動條和狀態列,並且具有 **「關注」** 框。 您的應用程式將不會登錄任何文件範本，而且不會包含文件類別。
+Visual C++ 精靈以及原始檔和對話方塊編輯器都可處理產生的應用程式，就如同處理任何其他精靈產生的應用程式一般。 應用程式可以支援工具列、捲軸和狀態列，而且有 [**關於**] 方塊。 您的應用程式將不會登錄任何文件範本，而且不會包含文件類別。
 
-請注意,生成的應用程式具有從 派生`CChildView``CWnd`的 視圖類。 MFC 會在您的應用程式所建立的框架視窗內建立及定位一個檢視類別的執行個體。 MFC 仍然會強制使用檢視視窗，因為它可簡化應用程式內容的定位和管理作業。 您可以將繪製程式碼加入至這個類別的 `OnPaint` 成員。 您的程式碼應該將捲軸加入檢視中，而不是加入至框架。
+請注意，您產生的應用程式具有 view 類別， `CChildView` 衍生自 `CWnd` 。 MFC 會在您的應用程式所建立的框架視窗內建立及定位一個檢視類別的執行個體。 MFC 仍然會強制使用檢視視窗，因為它可簡化應用程式內容的定位和管理作業。 您可以將繪製程式碼加入至這個類別的 `OnPaint` 成員。 您的程式碼應該將捲軸加入檢視中，而不是加入至框架。
 
 由於 MFC 提供的文件/檢視架構負責實作許多應用程式的基本功能，因此如果專案中缺少它，表示您必須負責實作應用程式的許多重要功能：
 
-- 如 MFC 應用程式精靈提供,應用程式的選單僅包含 **「檔**」功能表上的 **「新建**」和 **「退出**」命令。 (New**New**命令僅支援 MDI 應用程式,不支援沒有文檔/檢視支援的 SDI 應用程式。生成的功能表資源將不支援 MRU(最近使用)清單。
+- 如 MFC 應用程式精靈所提供，應用**程式的功能表**只包含 [檔案] 功能表上的 [**新增** **] 和 [** 結束] 命令。 （只有 MDI 應用程式才支援**新**的命令，而非檔/視圖支援的 SDI 應用程式）。產生的功能表資源將不支援 MRU （最近使用的）清單。
 
-- 您必須為應用程式將支援的任何指令加入處理程式函數和實作,包括 **「 在檔案**」 選單中**開啟**與**儲存**。 MFC 通常會提供程式碼來支援這些功能，不過，該支援與文件/檢視架構密切相關。
+- 您必須為應用程式將支援的任何命令新增處理常式函式和**實作為，包括 [檔案**] 功能表上的 [**開啟**] 和 [**儲存**]。 MFC 通常會提供程式碼來支援這些功能，不過，該支援與文件/檢視架構密切相關。
 
 - 應用程式的工具列 (如果您要求的話) 將會是最小。
 
 強烈建議您使用「MFC 應用程式精靈」建立應用程式，而不要使用文件/檢視架構，因為精靈能夠保證產生正確的 MFC 架構。 不過，如果您必須避免使用精靈，以下提供幾種方法可在程式碼中略過文件/檢視架構：
 
-- 將文件當做未使用的附加項，並且在檢視類別中實作您的資料管理程式碼，如上面所建議。 文件的額外負荷會將對較低。 單個[CDocument](../mfc/reference/cdocument-class.md)物件本身會產生少量開銷`CDocument`,再加上基本類[CCmdTarget](../mfc/reference/ccmdtarget-class.md)和[CObject](../mfc/reference/cobject-class.md)的少量開銷。 後面兩個類別都很小。
+- 將文件當做未使用的附加項，並且在檢視類別中實作您的資料管理程式碼，如上面所建議。 文件的額外負荷會將對較低。 單一[CDocument](reference/cdocument-class.md)物件本身會產生少量的額外負荷，再加上 `CDocument` 基類、 [CCmdTarget](reference/ccmdtarget-class.md)和[CObject](reference/cobject-class.md)的小型額外負荷。 後面兩個類別都很小。
 
-   在`CDocument`中宣告 :
+   宣告于 `CDocument` ：
 
   - 兩個 `CString` 物件。
 
-  - 三**個BOOL。**
+  - 三個**BOOL**s。
 
   - 一個 `CDocTemplate` 指標。
 
@@ -60,10 +60,10 @@ Visual C++ 精靈以及原始檔和對話方塊編輯器都可處理產生的應
 
 - 將文件和檢視都當做未使用的附加項。 將資料管理和繪圖程式碼放入框架視窗中，而不是檢視中。 這個方法與 C 語言程式設計模型較接近。
 
-- 覆寫 MFC 架構中建立文件和檢視的部分，就可以完全排除建立它們。 文件建立程序是從呼叫 `CWinApp::AddDocTemplate` 開始。 請從應用程式類別的 `InitInstance` 成員函式中排除該呼叫，並且改成在 `InitInstance` 中自行建立框架視窗。 將資料管理程式碼放入框架視窗類別中。 文件/檢視創建過程在[文件/檢視建立](../mfc/document-view-creation.md)中進行了說明。 雖然這樣做多了一些工作並且需要對架構有更深入的了解，但是卻可以完全排除文件/檢視的額外負荷。
+- 覆寫 MFC 架構中建立文件和檢視的部分，就可以完全排除建立它們。 文件建立程序是從呼叫 `CWinApp::AddDocTemplate` 開始。 請從應用程式類別的 `InitInstance` 成員函式中排除該呼叫，並且改成在 `InitInstance` 中自行建立框架視窗。 將資料管理程式碼放入框架視窗類別中。 檔/視圖建立程式會在[檔/視圖建立](document-view-creation.md)過程中說明。 雖然這樣做多了一些工作並且需要對架構有更深入的了解，但是卻可以完全排除文件/檢視的額外負荷。
 
-一文[:使用無文檔和檢視的資料庫類](../data/mfc-using-database-classes-without-documents-and-views.md)提供了資料庫應用程式上下文中文件/視圖替代方案的更具體示例。
+[MFC：使用不具檔和視圖的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)一文提供資料庫應用程式內容中檔/視圖替代方案的更具體範例。
 
 ## <a name="see-also"></a>另請參閱
 
-[文件/檢視體系結構](../mfc/document-view-architecture.md)
+[檔/視圖架構](document-view-architecture.md)

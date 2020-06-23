@@ -1,13 +1,13 @@
 ---
 title: 在 Visual Studio 中設定 C++ Linux 專案
-ms.date: 06/11/2019
+ms.date: 06/22/2020
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623599"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269737"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -33,7 +33,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="general-settings"></a>一般設定
 
-若要檢視組態選項，請選取 [專案] > [屬性]**** 功能表，或在 [方案總管]**** 中以滑鼠右鍵按一下專案，然後從操作功能表中選取 [屬性]****。 [一般]**** 設定隨即出現。
+若要查看設定選項，請選取 [**專案 > 屬性**] 功能表，或以滑鼠右鍵按一下**方案總管**中的專案，然後從內容功能表中選取 [**屬性**]。 [一般]**** 設定隨即出現。
 
 ![一般設定](media/settings_general.png)
 
@@ -43,7 +43,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="remote-settings"></a>遠端設定
 
-若要變更與遠端 Linux 電腦有關的設定，請設定出現在 [[一般](prop-pages/general-linux.md)] 下的遠端設定。
+若要變更與遠端 Linux 電腦相關的設定，請設定 [[一般](prop-pages/general-linux.md)] 底下顯示的遠端設定。
 
 - 若要指定遠端目標 Linux 電腦，請使用 [遠端組建電腦]**** 項目。 這可讓您選取其中一個先前建立的連線。 若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)一節。
 
@@ -72,7 +72,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range="vs-2019"
 
-本節不適用於以 WSL 為目標時。
+以 WSL 為目標時，不適用此章節。
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 - [複製來源]**** 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
 
-- [要複製的其他來源]**** 可讓您新增將複製到遠端系統的其他原始程式檔。 您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
+- **其他要複製的來源**可讓您新增其他來源檔案，而該檔案將會複製到遠端系統。 您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
@@ -122,6 +122,10 @@ sudo apt install zip
 ![遠端記錄](media/remote-logging-vs2019.png)
 
 ::: moniker-end
+
+## <a name="linux-target-locale"></a><a name="locale"></a>Linux 目標地區設定
+
+Visual Studio 語言設定不會傳播到 Linux 目標，因為 Visual Studio 不會管理或設定已安裝的套件。 顯示在 [**輸出**] 視窗中的訊息，例如組建錯誤，會使用 Linux 目標的語言和地區設定來顯示。 您必須針對所需的地區設定，設定您的 Linux 目標。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,6 +1,6 @@
 ---
 title: getchar、getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920334"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334972"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>傳回值
 
-傳回讀取的字元。 為了指出讀取錯誤或檔案結尾條件， **getchar**會傳回**EOF**，而**getwchar**會傳回**WEOF**。 若為**getchar**，請使用**ferror**或**feof**來檢查錯誤或檔案結尾。
+傳回讀取的字元。 這些函式會等候輸入，而且在輸入可供使用之前不會傳回。
+
+為了指出讀取錯誤或檔案結尾條件， **getchar**會傳回**EOF**，而**getwchar**會傳回**WEOF**。 若為**getchar**，請使用**ferror**或**feof**來檢查錯誤或檔案結尾。
 
 ## <a name="remarks"></a>備註
 
 每個常式都會從**stdin**讀取單一字元，並遞增相關聯的檔案指標，以指向下一個字元。 **getchar**與[_fgetchar](fgetc-fgetwc.md)相同，但它會實作為函式和宏。
 
-這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
+這些函式也會鎖定呼叫執行緒，而且是安全線程。 如需非鎖定版本，請參閱 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -69,14 +71,14 @@ wint_t getwchar();
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettchar**|**getchar**|**getchar**|**getwchar**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平臺（UWP）應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺（UWP）應用程式中不支援此主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

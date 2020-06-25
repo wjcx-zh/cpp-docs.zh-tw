@@ -1,6 +1,6 @@
 ---
 title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
-ms.date: 11/04/2016
+ms.date: 06/23/2020
 api_name:
 - __swprintf_l
 - sprintf
@@ -49,16 +49,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: c9a306788045fc6fe52da835029d32cfc42c0ed4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a3f10fc89d93717edfb032dea910040589c1254
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958281"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334946"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
-將格式化資料寫入字串。 其中一些函式已有更安全的版本可供使用，請參閱 [sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 **Swprintf**和 **_swprintf_l**的安全版本不接受*count*參數。
+將格式化資料寫入字串。 其中一些函式已有更安全的版本可供使用，請參閱 [sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 **Swprintf**和 **_swprintf_l**的安全版本會採用緩衝區的大小做為參數。
 
 ## <a name="syntax"></a>語法
 
@@ -110,13 +110,13 @@ int _sprintf_l(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 輸出的儲存位置
 
 *計數*<br/>
 要儲存在此函式的 Unicode 版本中的字元數上限。
 
-*格式*<br/>
+*format*<br/>
 格式控制字串
 
 *引數*<br/>
@@ -125,7 +125,7 @@ int _sprintf_l(
 *locale*<br/>
 要使用的地區設定。
 
-如需詳細資訊，請參閱 [格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
 
 ## <a name="return-value"></a>傳回值
 
@@ -138,13 +138,13 @@ int _sprintf_l(
 **Sprintf**函式會格式化並將一連串的字元和值儲存在*buffer*中。 每個*引數*（如果有的話）都會根據*格式*的對應格式規格進行轉換和輸出。 此格式包含一般字元，與[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*引數具有相同的形式和功能。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> 使用**sprintf**時，沒有任何方法可限制寫入的字元數，這表示使用**sprintf**的程式碼很容易發生緩衝區溢位。 請考慮使用相關的函式[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，這會指定要寫入*緩衝區*的最大字元數，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)來判斷需要的緩衝區大小。 此外，請確定*格式*不是使用者定義的字串。
+> 使用**sprintf**時，沒有任何方法可限制寫入的字元數，這表示使用**sprintf**的程式碼很容易發生緩衝區溢位。 請考慮使用相關的函式[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，這會指定要寫入*緩衝區*的字元數上限，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)來判斷需要多少緩衝區。 此外，請確定*格式*不是使用者定義的字串。
 
-**swprintf**是寬字元版本的**sprintf**;**swprintf**的指標引數是寬字元字串。 **Swprintf**中的編碼錯誤偵測可能與**sprintf**中的不同。 **swprintf**和**fwprintf**的行為相同，不同之處在于**swprintf**會將輸出寫入字串，而不是**FILE**類型的目的地，而**swprintf**需要*count*參數來指定最大數目要寫入的字元數。 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
+**swprintf**是寬字元版本的**sprintf**;**swprintf**的指標引數是寬字元字串。 **Swprintf**中的編碼錯誤偵測可能不同于**sprintf**。 **swprintf**和**fwprintf**的行為相同，只不過**swprintf**會將輸出寫入字串，而不是**FILE**類型的目的地，而**swprintf**需要*count*參數來指定要寫入的最大字元數。 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
-**swprintf**符合 ISO C 標準，其需要類型**size_t**的第二個參數*count*。 若要強制執行舊的非標準行為，請定義 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未來版本中，可能會移除舊的行為，因此應該變更程式碼，以使用新的一致行為。
+**swprintf**符合 ISO C 標準，其需要**size_t**類型的第二個參數*count*。 若要強制執行舊的非標準行為，請定義 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未來版本中，可能會移除舊的行為，因此應該變更程式碼，以使用新的一致行為。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -153,12 +153,12 @@ int _sprintf_l(
 |**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
 |**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**sprintf**、 **_sprintf_l**|\<stdio.h>|
-|**swprintf**、 **_swprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**sprintf**， **_sprintf_l**|\<stdio.h>|
+|**swprintf**， **_swprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,6 +1,6 @@
 ---
 title: SafeInt 函式
-ms.date: 10/22/2018
+ms.date: 06/23/2020
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622067"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334926"
 ---
 # <a name="safeint-functions"></a>SafeInt 函式
 
-SafeInt 程式庫提供幾個您不需要建立 [SafeInt 類別](safeint-class.md)的執行個體就能使用的函式。 如果想要保護單一數學運算防止發生整數溢位，就可以使用這些函式。 如果想要保護多個數學運算，則應建立 `SafeInt` 物件。 建立 `SafeInt` 物件會比多次使用這些函式更有效率。
+SafeInt 程式庫提供幾個您不需要建立 [SafeInt 類別](safeint-class.md)的執行個體就能使用的函式。 如果想要保護單一數學運算防止發生整數溢位，就可以使用這些函式。 如果想要保護多個數學運算，則應建立 `SafeInt` 物件。 建立 `SafeInt` 物件比多次使用這些函數更有效率。
 
 這些函式可讓您在兩個不同型別的參數上，比較或執行數學運算，不需要先將它們轉換成相同型別。
 
@@ -51,7 +51,7 @@ SafeInt 程式庫提供幾個您不需要建立 [SafeInt 類別](safeint-class.m
 
 ## <a name="in-this-section"></a>本節內容
 
-函式                      | 描述
+函式                      | 說明
 ----------------------------- | --------------------------------------------------------------
 [SafeAdd](#safeadd)           | 可將兩個數字相加並防止溢位。
 [SafeCast](#safecast)         | 可將某個型別的參數轉換成另一種型別。
@@ -136,10 +136,10 @@ inline bool SafeDivide (
 ### <a name="parameters"></a>參數
 
 *而已*<br/>
-[in] 除數。 這必須為類型 T。
+[in] 被除數。 這必須為類型 T。
 
 *u*<br/>
-[in] 被除數。 這必須為類型 U。
+[in] 除數。 這必須為類型 U。
 
 *result*<br/>
 [out] `SafeDivide` 儲存結果的參數。
@@ -150,7 +150,7 @@ inline bool SafeDivide (
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
-比較兩個數字以判斷它們是否相等。
+比較兩個數字，以判斷它們是否相等。
 
 ```cpp
 template<typename T, typename U>
@@ -250,7 +250,7 @@ inline bool SafeLessThan (
 [in] 第一個數字。 它必須是 `T` 型別。
 
 *u*<br/>
-[in] 第二個數字。 它必須是 `U` 型別。
+在第二個數字。 它必須是 `U` 型別。
 
 ### <a name="return-value"></a>傳回值
 
@@ -366,7 +366,7 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>傳回值
 
-如果 *t* 與 *u* 不相等，為 **true**，否則為 **false**。
+如果*t*和*u*不相等，則**為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 

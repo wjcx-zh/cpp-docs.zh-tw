@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813605"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式（c + +）
 
@@ -23,13 +23,13 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
 > [!IMPORTANT]
 > 為了簡潔起見，文字中會省略一些程式碼語句。 本檔結尾處的[組建程式碼](#build-the-code)區段會顯示完整的程式碼。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 執行 Microsoft Windows 7 或更新版本的電腦。 建議使用 Windows 10 以獲得最佳開發體驗。
 
 - Visual Studio 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確認已選取**使用 C++ 的桌面開發**工作負載。 如果您在安裝 Visual Studio 時未安裝此工作負載，也不用擔心。 您可以再次執行安裝程式並立即安裝。
 
-   ![使用 C++ 的傳統型開發](../build/media/desktop-development-with-cpp.png "使用 C++ 的傳統型開發")
+   ![使用 C++ 開發桌面](../build/media/desktop-development-with-cpp.png "使用 C++ 的傳統型開發")
 
 - 了解使用 Visual Studio IDE 的基本概念。 如果您先前使用過 Windows 傳統型應用程式，您應能輕鬆跟上。 如需簡介，請參閱 [Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
 
@@ -73,7 +73,7 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
 
 1. 在 [**新增專案**] 對話方塊的左窗格中，展開 [**已安裝**的  >  **Visual C++**]，然後選取 [ **Windows 桌面**]。 在中間窗格中，選取 [ **Windows 桌面 Wizard]**。
 
-   在 [**名稱**] 方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定]  。
+   在 [**名稱**] 方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定]。
 
    ![將 DesktopApp 專案命名為](../build/media/desktop-app-new-project-name-153.png "將 DesktopApp 專案命名為")
 
@@ -99,7 +99,7 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
 
 1. 在 [**新增專案**] 對話方塊的左窗格中，展開 [**已安裝**  >  的**範本**]  >  **Visual C++**，然後選取 [ **Win32**]。 在中間窗格選取 [Win32 專案] ****。
 
-   在 [**名稱**] 方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定]  。
+   在 [**名稱**] 方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定]。
 
    ![將 DesktopApp 專案命名為](../build/media/desktop-app-new-project-name-150.png "將 DesktopApp 專案命名為")
 
@@ -389,7 +389,7 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
    ```
 
    `HDC`在程式碼中，是裝置內容的控制碼，用來在視窗的工作區中繪製。 使用和函式 `BeginPaint` `EndPaint` 來準備和完成工作區中的繪圖。 `BeginPaint`傳回用來在工作區中繪製的顯示裝置內容控制碼。`EndPaint`結束繪製要求並釋放裝置內容。
-   
+
 1. 應用程式通常會處理許多其他訊息。 例如，在第一次建立視窗時[WM_CREATE](/windows/win32/winmsg/wm-create) ，並在視窗關閉時[WM_DESTROY](/windows/win32/winmsg/wm-destroy) 。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
 
    ```cpp

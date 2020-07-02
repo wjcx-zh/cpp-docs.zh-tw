@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737568"
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 
 擴充基本整數型別，有助於防止整數溢位，並讓您比較不同的整數型別。
 
 > [!NOTE]
-> 此程式庫的最新版本位於 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。
+> 最新版的 SafeInt 程式庫位於 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。 若要使用 SafeInt 程式庫，請複製儲存機制和`#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>語法
 
@@ -168,26 +168,26 @@ class SafeInt;
 
 `SafeInt` 類別會檢查是否發生算術溢位，或者程式碼是否嘗試除以零。 在這兩種情況下，此類別都會呼叫錯誤處理常式來警告程式可能會發生此問題。
 
-此類別也可讓您比較兩個不同型別的整數，但前提是它們均為 `SafeInt` 物件。 一般而言，當您執行比較時，必須先將數字轉換為相同型別。 將一個數字轉換為其他型別，通常需要進行檢查，以確定並未遺失資料。
+此類別也可讓您比較兩個不同型別的整數，但前提是它們均為 `SafeInt` 物件。 一般而言，當您進行比較時，必須先將數位轉換成相同的類型。 將一個數字轉換為其他型別，通常需要進行檢查，以確定並未遺失資料。
 
 本主題中的運算子表格會列出 `SafeInt` 類別所支援的數學和比較運算子。 大多數的數學運算子都會傳回型別 `T` 的 `SafeInt` 物件。
 
 `SafeInt` 和整數型別間的比較作業可以任一方向執行。 例如，`SafeInt<int>(x) < y` 和 `y> SafeInt<int>(x)` 均有效且將傳回相同結果。
 
-許多二元運算子都不支援使用兩個不同的 `SafeInt` 型別。 這其中一個範例是 `&` 運算子。 支援 `SafeInt<T, E> & int`，但不支援 `SafeInt<T, E> & SafeInt<U, E>`。 在第二個範例中，編譯器不知道要傳回的參數型別。 此問題的解決方案之一是將第二個參數轉換回基底型別。 使用相同的參數，就能透過 `SafeInt<T, E> & (U)SafeInt<U, E>` 來完成此動作。
+許多二元運算子都不支援使用兩種不同 `SafeInt` 的類型。 這其中一個範例是 `&` 運算子。 `SafeInt<T, E> & int`是支援的，但 `SafeInt<T, E> & SafeInt<U, E>` 不是。 在第二個範例中，編譯器不知道要傳回的參數型別。 此問題的解決方案之一是將第二個參數轉換回基底型別。 使用相同的參數，就能透過 `SafeInt<T, E> & (U)SafeInt<U, E>` 來完成此動作。
 
 > [!NOTE]
-> 針對任何位元運算，這兩個不同的參數應為相同大小。 如果大小不同，編譯器將擲回 [ASSERT](../mfc/reference/diagnostic-services.md#assert) 例外狀況。 無法保證此作業會產生準確的結果。 若要解決此問題，請轉換較小的參數，直到其大小與較大參數的大小一樣為止。
+> 針對任何位元運算，這兩個不同的參數應為相同大小。 如果大小不同，編譯器將擲回 [ASSERT](../mfc/reference/diagnostic-services.md#assert) 例外狀況。 這項作業的結果無法保證正確。 若要解決此問題，請轉換較小的參數，直到它的大小與較大的參數相同。
 
 針對移位運算子，若移位的位元數較範本型別現有的位元數還多，則將擲回 ASSERT 例外狀況。 這在發行模式中將不會產生任何作用。 移位運算子可能會混用兩種型別的 SafeInt 參數，因為傳回型別與原始型別相同。 運算子右邊的數字只代表要移位的位元數。
 
-當您搭配 SafeInt 物件來執行邏輯比較時，會進行嚴格的算術比較。 例如，考慮下列運算式：
+當您使用 SafeInt 物件進行邏輯比較時，比較就是嚴格的算數運算。 例如，考慮下列運算式：
 
 - `SafeInt<uint>((uint)~0) > -1`
 
 - `((uint)~0) > -1`
 
-第一個陳述式會解析為 **true**，但第二個陳述式會解析為 `false`。 0 的位元否定為 0xFFFFFFFF。 在第二個陳述式中，預設的比較運算子會比較 0xFFFFFFFF 和 0xFFFFFFFF，並將它們視為相等。 `SafeInt` 類別的比較運算子發現第二個參數為負數，而第一個參數不帶正負號。 因此，儘管位元表示法完全相同，但 `SafeInt` 邏輯運算子發現不帶正負號的整數大於 -1。
+第一個陳述式會解析為 **true**，但第二個陳述式會解析為 `false`。 0 的位元否定為 0xFFFFFFFF。 在第二個陳述式中，預設的比較運算子會比較 0xFFFFFFFF 和 0xFFFFFFFF，並將它們視為相等。 類別的比較運算子發現 `SafeInt` 第二個參數是負數，但第一個參數不帶正負號。 因此，雖然位標記法相同，但 `SafeInt` 邏輯運算子發現不帶正負號的整數大於-1。
 
 當您將 `SafeInt` 類別搭配 `?:` 三元運算子一起使用時要小心。 請考慮下列程式碼行。
 
@@ -217,17 +217,36 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 自訂錯誤原則的方法有兩種。 第一個選項是當您建立 `SafeInt` 時設定參數 `E`。 當您只想針對一個 `SafeInt` 變更錯誤處理原則時，請使用此選項。 另一個選項是先定義 _SAFEINT_DEFAULT_ERROR_POLICY 作為您自訂的錯誤處理類別，然後再納入 `SafeInt` 程式庫。 當您想要針對程式碼中 `SafeInt` 類別的所有執行個體變更預設的錯誤處理原則時，請選擇此選項。
 
 > [!NOTE]
-> 處理來自 SafeInt 程式庫之錯誤的自訂類別，不應將控制權傳回給呼叫錯誤處理常式的程式碼。 呼叫錯誤處理常式之後，就無法信任 `SafeInt` 作業的結果。
+> 處理來自 SafeInt 程式庫之錯誤的自訂類別，不應將控制權傳回給呼叫錯誤處理常式的程式碼。 呼叫錯誤處理常式之後，就無法信任作業的結果 `SafeInt` 。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `SafeInt`
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
-**標頭：** safeint.h
+**標頭：** SafeInt. 措施
+> [!NOTE]
+> 此程式庫的最新版本位於 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。 複製程式庫，並包含 SafeInt. 措施以使用 SafeInt 程式庫。
+> 偏好此 github 存放庫以 <safeint>。 這是 <safeint 的新式>，其中包含少數 bug 修正、使用 c + + 的現代化功能，因而產生更有效率的程式碼，並可移植到任何使用 gcc、clang 或 Intel 編譯器的平臺。
 
-**命名空間：** msl:: utilities
+### <a name="example"></a>範例
+
+```c
+#include "SafeInt.hpp" // set path to your clone of the SafeInt GitHub repo (https://github.com/dcleblanc/SafeInt)
+
+int main()
+{
+    int divisor = 3;
+    int dividend = 6;
+    int result;
+
+    bool success = SafeDivide(dividend, divisor, result); // result = 2
+    success = SafeDivide(dividend, 0, result); // expect fail. result isn't modified.
+}
+```
+
+**命名空間：** 無
 
 ## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt：： SafeInt
 
@@ -236,42 +255,34 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 ```cpp
 SafeInt() throw
 
-SafeInt (
-   const T& i
-) throw ()
+SafeInt (const T& i) throw ()
 
-SafeInt (
-   bool b
-) throw ()
+SafeInt (bool b) throw ()
 
 template <typename U>
-SafeInt (
-   const SafeInt <U, E>& u
-)
+SafeInt (const SafeInt <U, E>& u)
 
 I template <typename U>
-SafeInt (
-   const U& i
-)
+SafeInt (const U& i)
 ```
 
 ### <a name="parameters"></a>參數
 
-*i*<br/>
+`i`<br/>
 [in] 新 `SafeInt` 物件的值。 根據建構函式而定，這必須是型別 T 或 U 的參數。
 
-*位元組*<br/>
+`b`<br/>
 [in] 新 `SafeInt` 物件的布林值。
 
-*u*<br/>
+`u`<br/>
 [in] 型別 U 的 `SafeInt`。新 `SafeInt` 物件的值將會與 *u* 相同，但型別將為 T。
 
-U 儲存於 `SafeInt` 的資料型別。 這可以是布林值、字元或整數型別。 如果它是整數型別，則它不一定要帶正負號，但要介於 8 到 64 位元之間。
+`U`儲存在中的資料類型 `SafeInt` 。 這可以是布林值、字元或整數型別。 如果是整數類型，則可以是帶正負號或不帶正負號的，並介於8到64位之間。
 
 ### <a name="remarks"></a>備註
 
-建構函式的輸入參數 *i* 或 *u* 必須是布林值、字元或整數型別。 如果它是另一個型別的參數，則 `SafeInt` 類別會呼叫 [static_assert](../cpp/static-assert.md) 來指出無效的輸入參數。
+建構函式的輸入參數 *i* 或 *u* 必須是布林值、字元或整數型別。 如果它是另一種參數類型， `SafeInt` 類別會呼叫[static_assert](../cpp/static-assert.md)來指出不正確輸入參數。
 
-使用範本型別 `U` 的建構函式會將輸入參數自動轉換為 `T` 所指定的型別。 `SafeInt` 類別會轉換資料且不會遺失任何資料。 如果無法在不遺失資料的情況下將資料轉換為型別 `T`，它就會向錯誤處理常式報告 `E`。
+使用範本型別 `U` 的建構函式會將輸入參數自動轉換為 `T` 所指定的型別。 `SafeInt` 類別會轉換資料且不會遺失任何資料。 `E`如果無法將資料轉換成類型 `T` 而不會遺失資料，它會向錯誤處理常式報告。
 
-如果您從布林值參數建立 `SafeInt`，則必須立即將值初始化。 您無法使用程式碼 `SafeInt<bool> sb;` 來建構 `SafeInt`。 這將產生編譯錯誤。
+如果您從布林值參數建立 `SafeInt`，則必須立即將值初始化。 您無法使用程式 `SafeInt` 代碼來建立 `SafeInt<bool> sb;` 。 這將產生編譯錯誤。

@@ -12,33 +12,34 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777301"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813546"
 ---
 # <a name="function-call-operator-"></a>函式呼叫運算子：()
 
-函式呼叫是一種 *`postfix-expression`* ，由識別函式的運算式所組成，後面接著函式呼叫運算子 **`()`** 。 物件可以宣告函式 `operator ()` ，以提供物件的函式呼叫語義。
+函式呼叫是一種 *`postfix-expression`* ，由評估為函式或可呼叫物件後面接著函式呼叫運算子的運算式所組成 **`()`** 。 物件可以宣告函式 `operator ()` ，以提供物件的函式呼叫語義。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>語法
 
 > *`postfix-expression`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
+> &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
 ## <a name="remarks"></a>備註
 
 函式呼叫運算子的引數來自 *`argument-expression-list`* （以逗號分隔的運算式清單）。 這些運算式的值會當做引數傳遞至函式。 *引數運算式清單*可以是空的。 在 c + + 17 之前，函數運算式和引數運算式的評估順序並未指定，而且可能會以任何順序發生。 在 c + + 17 和更新版本中，函數運算式會在任何引數運算式或預設引數之前進行評估。 引數運算式會以不確定的順序進行評估。
 
-會 *`postfix-expression`* 識別要呼叫的函式。 它必須評估為函式位址。 它可以採用數種形式的其中一種：
+會 *`postfix-expression`* 評估為要呼叫的函式。 它可以採用數種形式的其中一種：
 
-- 函式或函數物件名稱或指標，
-- 參考函數或函式物件的左值運算式。
-- 成員函式存取子（明確或隱含）。
+- 函式識別碼，可在目前的範圍中看見，或在提供的任何函式引數範圍中顯示。
+- 評估為函式、函式指標、可呼叫物件，或參考至其中一個的運算式
+- 成員函式存取子（明確或隱含）
+- 成員函式的解除引用指標。
 
-所指定的函數可能是多載函 *`postfix-expression`* 式。 多載解析的一般規則會決定要呼叫的實際函數。
+*`postfix-expression`* 可能是多載函數識別碼或多載成員函式存取子。 多載解析的規則會決定要呼叫的實際函數。 如果成員函式是虛擬的，則會在執行時間決定要呼叫的函式。
 
 一些範例宣告：
 

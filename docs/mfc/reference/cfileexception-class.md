@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813518"
 ---
 # <a name="cfileexception-class"></a>CFileException 類別
 
@@ -205,11 +205,11 @@ int m_cause;
 | `CFileException::diskFull` | 13：磁片已滿。 |
 | `CFileException::endOfFile` | 14：已到達檔案結尾。 |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> 這些 `CFileException` 原因列舉程式不同於 `CArchiveException` 原因列舉程式。
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> `CArchiveException::generic` 已被取代。 請改用 `genericException`。 如果在應用程式中使用**泛型**，並以/clr 建立，則產生的語法錯誤不容易解密。
 
 ### <a name="example"></a>範例
 

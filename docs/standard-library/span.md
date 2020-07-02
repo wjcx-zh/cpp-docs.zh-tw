@@ -5,16 +5,16 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: ebd0a30c677ea44f95e64e2d2ba010bc99cb412b
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813531"
 ---
 # <a name="ltspangt"></a>&lt;跨&gt;
 
-`span`是連續物件序列的視圖。 它提供快速且界限的存取。 不同 `vector` `array` 于或，它不會「擁有」它提供存取權的元素。 
+`span`是連續物件序列的視圖。 它提供快速且界限的存取。 不同 `vector` `array` 于或，它不會「擁有」它提供存取權的元素。
 
 如需詳細資訊，請參閱[span 類別](span-class.md)。 以下是如何使用 span 的範例：
 
@@ -44,7 +44,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<span>
 
@@ -60,7 +60,7 @@ int main()
 |-|:-|
 |[跨](span-class.md)| 提供連續物件序列的視圖。 |
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |||
 |-|:-|

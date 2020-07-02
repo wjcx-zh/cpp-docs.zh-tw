@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: 3b3f239b05b1cf7661929333e2d616acce6bedb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: af950d188c4e02a38a39ed3c672f0f8c4161bee8
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737488"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 類別
 
@@ -27,31 +27,33 @@ class CMultiDocTemplate : public CDocTemplate
 
 ## <a name="members"></a>成員
 
+這個類別的成員函式是虛擬的。 如需相關檔，請參閱[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)和[CCmdTarget](../../mfc/reference/ccmdtarget-class.md) 。
+
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[C 多文件樣本:C 多文件樣本](#cmultidoctemplate)|建構 `CMultiDocTemplate` 物件。|
+|[CMultiDocTemplate：： CMultiDocTemplate](#cmultidoctemplate)|建構 `CMultiDocTemplate` 物件。|
 
 ## <a name="remarks"></a>備註
 
-MDI 應用程式使用主框架視窗作為工作區,用戶可以在其中打開零個或多個文檔框架視窗,每個視窗都顯示一個文檔。 有關 MDI 的詳細說明,請參閱*軟體設計的 Windows 介面指南*。
+MDI 應用程式會使用主框架視窗做為工作區，使用者可以在其中開啟零或多個檔框架視窗，其中每個都顯示一份檔。 如需 MDI 的詳細說明，請參閱*軟體設計的 Windows 介面方針*。
 
-文件樣本定義三種類型的類之間的關係:
+檔範本會定義三種類別類型之間的關聯性：
 
-- 從[CDocument](../../mfc/reference/cdocument-class.md)派生的文件類。
+- 您從[CDocument](../../mfc/reference/cdocument-class.md)衍生的檔類別。
 
-- 視圖類,它顯示來自上面列出的文檔類的數據。 可以從[CView](../../mfc/reference/cview-class.md)`CScrollView`的不`CFormView`用`CEditView`, 或 。 ( 您也可以直接`CEditView`使用 。
+- View 類別，它會顯示上列檔類別中所列的資料。 您可以從[CView](../../mfc/reference/cview-class.md)、、或衍生這個類別 `CScrollView` `CFormView` `CEditView` 。 （您也可以 `CEditView` 直接使用）。
 
-- 包含檢視的框架視窗類。 對於 MDI 文件範本,可以從`CMDIChildWnd`派生此類 ,或者,如果您不需要自定義文檔框架視窗的行為,則可以直接使用[CMDIChildWnd,](../../mfc/reference/cmdichildwnd-class.md)而無需派生自己的類。
+- 包含視圖的框架視窗類別。 針對 MDI 檔範本，您可以從衍生這個類別 `CMDIChildWnd` ，或者，如果您不需要自訂檔框架視窗的行為，您可以直接使用[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) ，而不需衍生您自己的類別。
 
-MDI 應用程式可以支援多種類型的文件,並且不同類型的文檔可以同時打開。 應用程式對於它支援的每個文件類型都有一個文檔範本。 例如,如果您的 MDI 應用程式同時支援電子表格和文本文件,則應用程式`CMultiDocTemplate`有兩 個物件。
+MDI 應用程式可以支援一種以上的檔案類型，而且可以同時開啟不同類型的檔。 您的應用程式針對其支援的每種檔案類型，都有一個檔範本。 例如，如果您的 MDI 應用程式同時支援試算表和文字檔，則應用程式會有兩個 `CMultiDocTemplate` 物件。
 
-當使用者創建新文檔時,應用程式將使用文檔範本。 如果應用程式支援多種類型的文件,則框架將從文檔範本中取得受支援的文件類型的名稱,並在「檔案新建」對話框中的清單中顯示它們。 使用者選擇文件類型後,應用程式將創建文檔類物件、框架視窗物件和檢視物件,並將其附加到彼此。
+當使用者建立新檔時，應用程式會使用檔範本。 如果應用程式支援一種以上的檔案類型，則架構會從檔範本中取得支援之檔案類型的名稱，並將其顯示在 [新增檔案] 對話方塊的清單中。 當使用者選取檔案類型之後，應用程式會建立檔類別物件、框架視窗物件和 view 物件，並將它們附加至彼此。
 
-除了構造函數之外,您不需要調用 的`CMultiDocTemplate`任何成員函數。 框架在內部`CMultiDocTemplate`處理物件。
+除了函式之外，您不需要呼叫任何成員函式 `CMultiDocTemplate` 。 架構會 `CMultiDocTemplate` 在內部處理物件。
 
-有關的詳細資訊`CMultiDocTemplate`,請參考[文件樣本與文件/檢視建立過程](../../mfc/document-templates-and-the-document-view-creation-process.md)。
+如需有關的詳細資訊 `CMultiDocTemplate` ，請參閱[檔範本和檔/視圖建立](../../mfc/document-templates-and-the-document-view-creation-process.md)程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -67,7 +69,7 @@ MDI 應用程式可以支援多種類型的文件,並且不同類型的文檔可
 
 **標題:** afxwin.h
 
-## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>C 多文件樣本:C 多文件樣本
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate：： CMultiDocTemplate
 
 建構 `CMultiDocTemplate` 物件。
 
@@ -81,10 +83,10 @@ CMultiDocTemplate(
 
 ### <a name="parameters"></a>參數
 
-*nID資源*<br/>
-指定與文件類型一起使用的資源的識別碼。 這可能包括功能表、圖示、快速鍵表和字串資源。
+*nIDResource*<br/>
+指定與檔案類型搭配使用之資源的識別碼。 這可能包括功能表、圖示、快速鍵對應表和字串資源。
 
-字串資源由最多七個子字串組成,由"\n"字元分隔(如果不包括子字串,則需要"\n"字元作為佔位元;但是,尾隨的"\n"字元是不需要的);這些子字串描述文件類型。 有關子字串的資訊,請參閱[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 此字串資源位於應用程式的資源檔中。 例如：
+字串資源包含最多七個以 ' \n ' 字元分隔的子字串（如果不包含子字串，則需要 ' \n ' 字元做為預留位置，但不需要尾端 ' \n ' 字元）;這些子字串描述檔案類型。 如需子字串的詳細資訊，請參閱[CDocTemplate：： GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 這個字串資源會在應用程式的資源檔中找到。 例如：
 
 ```RC
 // MYCALC.RC
@@ -94,28 +96,28 @@ BEGIN
 END
 ```
 
-請注意,字串以「\n」字元開頭;這是因為第一個子字串不用於 MDI 應用程式,因此不包括。 您可以使用字串編輯器編輯此字串;但是,使用字串編輯器可以編輯此字串。整個字串在字串編輯器中顯示為單個條目,而不是七個單獨的條目。
+字串的開頭為 ' \n ' 字元，因為第一個子字串不會用於 MDI 應用程式，因此不會包含。 您可以使用 [字串編輯器] 來編輯此字串;整個字串在字串編輯器中會顯示為單一專案，而不是七個不同的專案。
 
-關於這些資源類型的詳細資訊,請參考[資源編輯器](../../windows/resource-editors.md)。
+如需這些資源類型的詳細資訊，請參閱[資源編輯器](../../windows/resource-editors.md)。
 
 *pDocClass*<br/>
-指向文檔`CRuntimeClass`類的物件。 此類是您定義的`CDocument`表示文檔的派生類。
+指向 `CRuntimeClass` document 類別的物件。 這個類別是 `CDocument` 您定義來代表您的檔的衍生類別。
 
-*pFrame 類別*<br/>
-指向框架視窗`CRuntimeClass`類的物件。 此類可以是`CMDIChildWnd`派生類,也可以`CMDIChildWnd`是 自己的類,如果希望文檔框架視窗的默認行為。
+*pFrameClass*<br/>
+指向 `CRuntimeClass` 框架視窗類別的物件。 這個類別可以是 `CMDIChildWnd` 衍生類別， `CMDIChildWnd` 如果您想要檔框架視窗的預設行為，它可以是本身。
 
-*pView 類別*<br/>
-指向視圖類`CRuntimeClass`的物件。 此類是您為`CView`顯示文檔而定義的派生類。
+*pViewClass*<br/>
+指向 `CRuntimeClass` view 類別的物件。 這個類別是 `CView` 您定義用來顯示檔的衍生類別。
 
 ### <a name="remarks"></a>備註
 
-為應用程式支援的每個`CMultiDocTemplate`文件類型動態分配一個物件,並將每個`CWinApp::AddDocTemplate`物件 從`InitInstance`應用程式類的成員函數傳遞給。
+`CMultiDocTemplate`針對您的應用程式支援的每種檔案類型，動態配置一個物件，並 `CWinApp::AddDocTemplate` 從 `InitInstance` 應用程式類別的成員函式將每個物件傳遞給。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#92](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]
 
-下面是第二個示例。
+以下是第二個範例。
 
 [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]
 

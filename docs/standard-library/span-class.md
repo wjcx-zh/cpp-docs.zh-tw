@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: b76c1db2176c27983ccdcd4742f889f5a4d95af6
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813505"
 ---
 # <a name="span-class-c-standard-library"></a>span 類別（c + + 標準程式庫）
 
@@ -75,7 +75,7 @@ class span;
 
 ### <a name="template-parameters"></a>範本參數
 
-|參數|說明|
+|參數|描述|
 |-|-|
 |`T`| 範圍中元素的類型。 |
 |`Extent`| 如果在編譯時期指定，則為範圍中的元素數目。 否則 `std::dynamic_extent` ，如果要在執行時間指定元素的數目，則為。 |
@@ -92,7 +92,7 @@ class span;
 | [element_type](#element_type) | Span 元素的類型。 |
 | [定位](#iterator) | 範圍的反覆運算器類型。 |
 | [滑鼠](#pointer) | 項目的指標類型。 |
-| [證明](#reference) | 項目的參考類型。 |
+| [reference](#reference) | 項目的參考類型。 |
 | [reverse_iterator](#reverse_iterator) | 範圍的反向反覆運算器類型。 |
 | [size_type](#size_type) | 範圍中兩個元素之間不帶正負號距離的類型。 |
 | [value_type](#value_type) | 元素的類型，不含 `const` 或 `volatile` 限定。 |
@@ -109,14 +109,14 @@ class span;
 |[前端](#front) | 取得範圍中的第一個元素。|
 |[操作\[\]](#op_at) | 存取指定位置的元素。|
 | **觀察者** | **描述** |
-|[空](#empty)| 測試 span 是否為空白。|
+|[empty](#empty)| 測試 span 是否為空白。|
 |[size](#size) | 取得範圍中的元素數目。|
 |[size_bytes](#size_bytes) | 取得範圍的大小（以位元組為單位）。|
 | **子檢視** | **描述**|
-| [頭](#first_view) | 從範圍前端取得 subspan。|
-| [次](#last_view) | 從範圍的背面取得 subspan。|
+| [first](#first_view) | 從範圍前端取得 subspan。|
+| [last](#last_view) | 從範圍的背面取得 subspan。|
 | [subspan](#sub_view) | 從範圍中的任何位置取得 subspan。|
-| **人員** | **描述** |
+| **運算子** | **描述** |
 |[span：： operator =](#op_eq)| 取代範圍。|
 |[span：：運算子\[\]](#op_at)| 取得位於指定位置的元素。 |
 
@@ -126,7 +126,7 @@ class span;
 
 不同 `array` `vector` 于或，span 不會「擁有」它內部的元素。 Span 不會為其中的專案釋放任何儲存體，因為它不會擁有這些物件的儲存空間。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<span>
 
@@ -387,14 +387,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.first(2);
     cout << "mySpan.first(2): ";
     for (auto& i : first2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.first<2>: ";
     auto viewSpan = mySpan.first<2>();
     for (auto& i : viewSpan)
@@ -512,14 +512,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.last(2);
     cout << "mySpan.last(2): ";
     for (auto& i : last2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.last<2>: ";
     auto viewSpan = mySpan.last<2>();
     for (auto& i : viewSpan)
@@ -643,7 +643,7 @@ int main()
     span<int>::pointer ptr = &mySpan[2];
     *ptr = 9;
     cout << mySpan[2];
-    
+
     // const pointer
     span<int>::const_pointer cPtr = &mySpan[0];
     // *cPtr = 9; error - const
@@ -978,13 +978,13 @@ using namespace std;
 int main()
 {
     const int MAX=10;
-    
+
     int x[MAX];
     for (int i = 0; i < MAX; i++)
     {
         x[i] = i;
     }
-    
+
     span<int, MAX> span1{ x }; // fixed-size span: compiler error if size of x doesn't match template argument MAX
     span<int> span2{ x }; // size is inferred from x
     span<const int> span3 = span2; // converting constructor
@@ -1031,7 +1031,7 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     cout << "mySpan.subspan(1,2): ";
     for (auto& i : mySpan.subspan(1,2))
     {

@@ -1,6 +1,6 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-ms.date: 4/2/2020
+ms.date: 6/24/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737525"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -82,6 +82,11 @@ char *strtok_l(
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   wchar_t **context
 );
 wchar_t *wcstok_l(
    wchar_t *strToken,
@@ -110,6 +115,9 @@ unsigned char *_mbstok_l(
 *locale*<br/>
 要使用的地區設定。
 
+*內容*<br/>
+指向用來儲存剖析器內部狀態的記憶體，讓剖析器可以在下一次呼叫**wcstok**時，從停止的位置繼續。
+
 ## <a name="return-value"></a>傳回值
 
 傳回在*strToken*中找到的下一個 token 的指標。 當找不到其他標記時，函數會傳回**Null** 。 每個呼叫都會藉由將 null 字元取代為傳回標記之後的第一個分隔符號來修改*strToken* 。
@@ -117,6 +125,8 @@ unsigned char *_mbstok_l(
 ## <a name="remarks"></a>備註
 
 **Strtok**函數會在*strToken*中尋找下一個 token。 *StrDelimit*中的一組字元會指定要在目前呼叫的*strToken*中找到的 token 可能分隔符號。 **wcstok**和 **_mbstok**是**strtok**的寬字元和多位元組字元版本。 **Wcstok**的引數和傳回值是寬字元字串;**_mbstok**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
+
+**Wcstok**的兩個引數版本不是標準。 如果您需要使用該版本，您必須在 `_CRT_NON_CONFORMING_WCSTOK` 之前定義 `#include <wchar.h>` （或 `#include <string.h>` ）。
 
 > [!IMPORTANT]
 > 這些函式可能會帶來因緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
@@ -145,6 +155,7 @@ unsigned char *_mbstok_l(
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> 或 \<wchar.h>|
+|**_wcstok_l**|<tchar.h>|
 |**_mbstok**， **_mbstok_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
@@ -199,6 +210,6 @@ tokens
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [語言](../../c-runtime-library/locale.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

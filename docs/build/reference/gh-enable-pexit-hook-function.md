@@ -1,6 +1,7 @@
 ---
 title: /GH (啟用 _pexit 攔截函式)
-ms.date: 11/04/2016
+description: 描述用來設定本機 _pexit 攔截函式的/GH 編譯器選項。
+ms.date: 07/06/2020
 f1_keywords:
 - _pexit
 helpviewer_keywords:
@@ -9,50 +10,48 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 5382ba90f490aaa12e9e55767fdf15170a69ced5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.openlocfilehash: b8fc355503055af8b928874ced39cb8224901d3e
+ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749235"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86058603"
 ---
 # <a name="gh-enable-_pexit-hook-function"></a>/GH (啟用 _pexit 攔截函式)
 
-在每個方法`_pexit`或函數的末尾調用函數。
+呼叫 `_pexit` 每個方法或函數結尾的函式。
 
 ## <a name="syntax"></a>語法
 
-```
-/GH
-```
+> **`/GH`**
 
 ## <a name="remarks"></a>備註
 
-該`_pexit`函數不是任何庫的一部分,由您`_pexit`提供的定義。
+`_pexit`函數不是任何程式庫的一部分。 您必須提供的定義 `_pexit` 。
 
-除非您計劃顯式調用`_pexit`,否則不需要提供原型。 該函數必須顯示為具有以下原型,並且必須在輸入時推送所有寄存器的內容,並在退出時彈出未更改的內容:
+除非您打算明確呼叫 `_pexit` ，否則您不需要提供原型。 函式必須推送專案上所有暫存器的內容，並在結束時將未變更的內容快顯。 它必須看起來像具有下列原型：
 
 ```cpp
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit`類似於`_penter`;有關如何編寫`_pexit`函數的示例,請參閱[/Gh(啟用_penter挂鉤函數)。](gh-enable-penter-hook-function.md)
+64位專案無法使用此宣告。
+
+`_pexit`類似于; 如需 `_penter` 如何撰寫函數的範例，請參閱[ `/Gh` （啟用 _penter](gh-enable-penter-hook-function.md)攔截函式） `_penter` 。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
 1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++] **** 資料夾。
+1. 開啟 [設定**屬性**] [  >  **c/c + +**  >  **命令列**] 屬性頁。
 
-1. 按一下 [命令列] **** 屬性頁。
-
-1. 在 [其他選項] **** 方塊中，輸入編譯器選項。
+1. 在 [**其他選項**] 方塊中，輸入編譯器選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>＞。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
+[`/Gh`（啟用 _penter 攔截函式）](gh-enable-penter-hook-function.md)

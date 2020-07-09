@@ -25,6 +25,7 @@ helpviewer_keywords:
 - -Z7 compiler option [C++]
 ms.openlocfilehash: bc3fd9c065219a128e29290084b1e1fb51fc773e
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058590"

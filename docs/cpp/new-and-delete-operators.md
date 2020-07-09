@@ -1,51 +1,51 @@
 ---
 title: new 和 delete 運算子
-ms.date: 11/19/2019
+description: C + + 語言的 new 和 delete 運算子允許對配置進行控制。
+ms.date: 07/07/2020
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
-ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: fd170c1500e2d80879fdd89f7d825930189ae942
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e609d1fdbd4f945ab8709c554d1396100027c4c1
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367879"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127856"
 ---
-# <a name="new-and-delete-operators"></a>new 和 delete 運算子
+# <a name="new-and-delete-operators"></a>`new` 和 `delete` 運算子
 
-C++支援使用[新的](new-operator-cpp.md)運算子和[刪除](delete-operator-cpp.md)運算元動態分配和分配物件。 這些運算子會從稱為可用儲存區的集區配置物件的記憶體。 **新增**運算子呼叫特殊函數運算符[new](new-operator-cpp.md),**刪除**運算子呼叫特殊函數[運算子刪除](delete-operator-cpp.md)。
+C + + 支援使用和運算子來動態配置和解除配置物件 [`new`](new-operator-cpp.md) [`delete`](delete-operator-cpp.md) 。 這些運算子會從稱為可用儲存區的集區配置物件的記憶體。 **`new`** 運算子會呼叫特殊函式 [`operator new`](new-operator-cpp.md) ，而 **`delete`** 運算子會呼叫特殊函數 [`operator delete`](delete-operator-cpp.md) 。
 
-C++標準庫中**的新功能**支援C++標準中指定的行為,即如果記憶體分配失敗,則引發std::bad_alloc異常。 如果您仍想要**新版本的**非引發版本,請將程式連結到 nothrownew.obj。但是,當您連結到 nothrownew.obj 時,C++標準庫中**的默認運算符**不再正常工作。
+**`new`** C + + 標準程式庫中的函式支援 c + + 標準中指定的行為， `std::bad_alloc` 如果記憶體配置失敗，則會擲回例外狀況。 如果您仍然想要的非擲回版本 **`new`** ，請將您的程式與連結 *`nothrownew.obj`* 。 不過，當您使用連結時 *`nothrownew.obj`* ， **`operator new`** c + + 標準程式庫中的預設值將不再有作用。
 
-有關構成 C 執行時庫和 C++標準函式庫的庫檔案的清單,請參考[CRT 函式庫功能](../c-runtime-library/crt-library-features.md)。
+如需 C 執行時間程式庫和 c + + 標準程式庫中的程式庫檔案清單，請參閱[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。
 
-## <a name="the-new-operator"></a><a id="new_operator"> </a>新運算子
+## <a name="the-new-operator"></a><a id="new_operator"> </a> `new` 運算子
 
-當程式中遇到如下語句時,它將轉換為對函數**運算符 new**的呼叫:
+編譯器會將這類語句轉譯為函式呼叫 **`operator new`** ：
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-如果請求為零位元組的儲存,**則運算符 new**傳回指向不同物件的指標(即,對**運算元的新**重複呼叫返回不同的指標)。 如果分配請求記憶體不足,**則運算符 new**會引發`std::bad_alloc`異常 ,或者如果已連結在非引發**運算符新**支援中,則返回**nullptr。**
+如果要求是針對零位元組的儲存體，則會傳回 **`operator new`** 不同物件的指標。 也就是，重複呼叫以傳回 **`operator new`** 不同的指標。 如果配置要求的記憶體不足，則會擲回 **`operator new`** `std::bad_alloc` 例外狀況。 或者， **`nullptr`** 如果您已連結非擲回支援，它會傳回 **`operator new`** 。
 
-您可以編寫一個例程,嘗試釋放記憶體並重試分配;有關詳細資訊[,請參閱_set_new_handler。](../c-runtime-library/reference/set-new-handler.md) 有關恢復方案的更多詳細資訊,請參閱本主題的"處理記憶體不足"部分。
+您可以撰寫嘗試釋放記憶體的常式，並重試配置。 如需詳細資訊，請參閱 [`_set_new_handler`](../c-runtime-library/reference/set-new-handler.md)。 如需修復配置的詳細資訊，請參閱[處理記憶體不足](#handling-insufficient-memory)一節。
 
-**下表描述了運算符新功能**的兩個作用域。
+下表說明函式的兩個範圍 **`operator new`** 。
 
-### <a name="scope-for-operator-new-functions"></a>操作者新功能的範圍
+### <a name="scope-for-operator-new-functions"></a>函數的範圍 `operator new`
 
-|運算子|影響範圍|
-|--------------|-----------|
-|**:: 運算子新**|全域|
-|*類別***名稱 ::運算子**|類別|
+| 運算子 | 影響範圍 |
+|--|--|
+| **`::operator new`** | 全球 |
+| *類別名稱***`::operator new`** | 類別 |
 
-**運算子 new**的第一個參數必須`size_t`為 型態(在 stddef.h>中\<定義的類型),並且傳回類型始終**為空**<strong>\*</strong>。
+的第一個引數 **`operator new`** 必須是類型 `size_t` （定義于中 \<stddef.h> ），而且傳回類型一律為 **`void*`** 。
 
-使用**新**運算子分配內建型態的物件、不包含使用者定義的**運算元新**函式的類別物件以及任何類型的陣列時,將呼叫全域**運算子新功能**。 當**新**運算元用於分配定義**運算符 new**的類類型的物件時,將調用該類的**運算符 new。**
+**`operator new`** 當 **`new`** 運算子用來配置內建類型的物件、不包含使用者定義函數之類別類型的物件， **`operator new`** 以及任何類型的陣列時，會呼叫全域函數。 當 **`new`** 運算子用來配置已定義之類別類型的物件時 **`operator new`** ，會呼叫該類別的 **`operator new`** 。
 
-為類定義的**運算符新**函數是一個靜態成員函數(因此,它不能是虛擬的),它隱藏該類類型物件的全域**運算符新**函數。 考慮使用**new**將記憶體配置和設定為給定值的情況:
+**`operator new`** 針對類別定義的函式是靜態成員函式（不能是虛擬的），它會隱藏 **`operator new`** 該類別類型之物件的全域函式。 請考慮 **`new`** 用來配置記憶體並將其設定為指定值的案例：
 
 ```cpp
 #include <malloc.h>
@@ -74,13 +74,13 @@ int main()
 }
 ```
 
-以括弧提供給**new**的`Blanks::operator new``chInit`參數作為 參數傳遞給。 但是,全域**運算子新**函數被隱藏,導致以下代碼產生錯誤:
+括弧中提供的引數 **`new`** 會傳遞至 `Blanks::operator new` 做為 `chInit` 引數。 不過，全域函式 **`operator new`** 是隱藏的，導致下列程式碼產生錯誤：
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-編譯器支援類聲明中**的新**成員陣列**和刪除**運算符。 例如：
+編譯器支援類別宣告中的成員陣列 **`new`** 和 **`delete`** 運算子。 例如：
 
 ```cpp
 class MyClass
@@ -104,7 +104,7 @@ int main()
 
 ### <a name="handling-insufficient-memory"></a>處理記憶體不足
 
-可以測試失敗的記憶體分配,如下所示:
+測試失敗的記憶體配置可以完成，如下所示：
 
 ```cpp
 #include <iostream>
@@ -119,28 +119,28 @@ int main() {
 }
 ```
 
-還有另一種方法來處理失敗的記憶體分配請求。 編寫自定義恢復例程來處理此類故障,然後通過調用[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)運行時函數來註冊函數。
+還有另一種方式可以處理失敗的記憶體配置要求。 撰寫自訂的修復常式來處理這類失敗，然後藉由呼叫執行時間函式來註冊您的函數 [`_set_new_handler`](../c-runtime-library/reference/set-new-handler.md) 。
 
-## <a name="the-delete-operator"></a><a id="delete_operator"> </a>刪除運算子
+## <a name="the-delete-operator"></a><a id="delete_operator"> </a> `delete` 運算子
 
-可以使用**delete**運算符釋放使用**新**運算元動態分配的記憶體。 刪除運算符呼叫**運算符刪除**函數,該函數將記憶體釋放回可用池。 使用**delete**運算元還會導致調用類析構函數(如果有)。
+使用運算子動態配置的記憶體 **`new`** 可以使用 **`delete`** 運算子釋放。 Delete 運算子會呼叫 **`operator delete`** 函數，將記憶體釋放回可用的集區。 使用 **`delete`** 運算子也會呼叫類別析構函式（如果有的話）。
 
-有全域和類作用域**運算符刪除**函數。 只能為給定類定義一個**運算符刪除**函數;如果已定義,它將隱藏全域**運算符刪除**函數。 對於任何類型的陣列,始終調用全域**運算符刪除**函數。
+有全域和類別範圍的函式 **`operator delete`** 。 指定的類別只能定義一個函式 **`operator delete`** ，如果已定義，則會隱藏全域 **`operator delete`** 函數。 **`operator delete`** 針對任何類型的陣列，一律會呼叫全域函數。
 
-全域**運算符刪除**函數。 全域**運算子移除**與類別成員**運算子刪除**函數存在兩種形式:
+全域 **`operator delete`** 函數。 全域 **`operator delete`** 和類別成員函式有兩種形式 **`operator delete`** ：
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-給定類只能存在前兩個窗體中的一個。 第一個表單個表單`void *`型參數,其中包含指向要解調的對象的指標。 第二種形式(大小處理)採用兩個參數,第一個參數是指向要解分配的記憶體塊的指標,第二個參數是要解調的位元數。 兩種形式的傳回**型態無效(****運算符刪除**不能返回值)。
+針對指定的類別，只有上述兩種形式的其中一種可以存在。 第一個表單採用類型的單一引數 **`void *`** ，其中包含要解除配置的物件指標。 第二個表單（調整大小的解除配置）採用兩個引數：第一個是要解除配置的記憶體區塊指標，而第二個是要解除配置的位元組數目。 這兩種形式的傳回類型為 **`void`** （ **`operator delete`** 無法傳回值）。
 
-第二個表單的目的是加快搜索要刪除的物件的正確大小類別,該類別通常不儲存在分配本身附近,並且可能未緩存。 當運算符從基類**中刪除**函數用於刪除派生類的物件時,第二個窗體很有用。
+第二種形式的目的是要加速搜尋要刪除之物件的正確大小類別目錄。 這種資訊通常不會儲存在配置本身附近，而且可能會進行快取。 當來自基類的函式 **`operator delete`** 用來刪除衍生類別的物件時，第二種形式會很有用。
 
-**運算符刪除**函數是靜態的;因此,它不能是虛擬的。 **運算子刪除**函數遵循訪問控制,如[成員訪問控制](member-access-control-cpp.md)中所述。
+函式 **`operator delete`** 是靜態的，因此不能是虛擬的。 函 **`operator delete`** 式會遵守存取控制，如[成員存取控制](member-access-control-cpp.md)中所述。
 
-下面的範例顯示使用者定義的**運算子新的**與**運算子刪除**旨在記錄記憶體分配和分配位置的功能:
+下列範例會顯示 **`operator new`** **`operator delete`** 設計用來記錄配置和記憶體取消配置的使用者定義和函數：
 
 ```cpp
 #include <iostream>
@@ -188,9 +188,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-上述程式碼可用來偵測「記憶體流失」，即是在可用存放區中配置但從未釋放的記憶體。 要執行此檢測,將重新定義**new**全域新**運算子和刪除**運算符,以計數記憶體的分配和分配。
+上述程式碼可用來偵測「記憶體流失」，也就是在免費存放區上配置但從未釋放的記憶體。 若要偵測流失，全域 **`new`** 和 **`delete`** 運算子會重新定義，以計算記憶體的配置和解除配置。
 
-編譯器支援類聲明中**的新**成員陣列**和刪除**運算符。 例如：
+編譯器支援類別宣告中的成員陣列 **`new`** 和 **`delete`** 運算子。 例如：
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

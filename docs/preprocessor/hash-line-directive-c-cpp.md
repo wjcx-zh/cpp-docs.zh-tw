@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
 ms.openlocfilehash: 7b671cfdf5d5ce43024ac3e038c214396ac8679c
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058616"
@@ -19,7 +20,7 @@ ms.locfileid: "86058616"
 
 **#Line**指示詞會告訴預處理器將行號和檔案名的編譯器報告值設定為指定的行號和檔案名。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>語法
 
 > **`#line`***數位-序列*["*filename*"]
 

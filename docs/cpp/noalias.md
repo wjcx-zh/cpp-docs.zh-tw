@@ -1,36 +1,36 @@
 ---
 title: noalias
-ms.date: 02/09/2018
+ms.date: 07/07/2020
 f1_keywords:
 - noalias_cpp
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 2eceffd10f97615859918991320ceebf577d094c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377435"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127877"
 ---
-# <a name="noalias"></a>noalias
+# `noalias`
 
-**Microsoft 專屬**
+**Microsoft 特定**
 
-**noalias**表示，函式呼叫不修改也不參考可見的全域狀態，只會修改指向的記憶體*直接*指標參數 （第一層間接取值）。
+**`noalias`** 表示函式呼叫不會修改或參考可見的全域狀態，而且只會修改指標參數（第一層間接取值）*直接*指向的記憶體。
 
-如果函式做為標註**noalias**，則最佳化工具可以假設，除了參數本身只會將第一層間接取值的指標參數所參考或修改函式內。 這個可見的全域狀態是在編譯範圍外未定義或未參考的所有資料，而且不會採用其位址。 編譯範圍是所有原始程式檔 ([/LTCG （連結時間程式碼產生）](../build/reference/ltcg-link-time-code-generation.md)組建) 或單一原始程式檔 (非 **/LTCG**建置)。
+如果函式標注為 **`noalias`** ，則優化工具可以假設函式內只會參考或修改參數本身，而只有第一層間接取值指標參數。
 
-**Noalias**註釋只適用於已標註函式主體內。 標記為函式 **__declspec(noalias)** 並不會影響別名的函式所傳回的指標。
+**`noalias`** 注釋僅適用于批註函式的主體內。 將函式標記為 **`__declspec(noalias)`** 不會影響函式所傳回之指標的別名。
 
-可能會影響別名的另一個註解，請參閱 < [__declspec(restrict)](../cpp/restrict.md)。
+如需可能會影響別名的另一個批註，請參閱 [`__declspec(restrict)`](../cpp/restrict.md) 。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用 **__declspec(noalias)**。
+下列範例示範的用法 **`__declspec(noalias)`** 。
 
-當函式`multiply`存取記憶體都會標註 **__declspec(noalias)**，它會告訴編譯器設定，此函式不會修改除了透過其參數清單中之指標的全域狀態。
+在 `multiply` 批註存取記憶體的函式時 **`__declspec(noalias)`** ，它會告知編譯器，此函式不會修改全域狀態，除非透過其參數清單中的指標。
 
 ```C
 // declspec_noalias.c
@@ -100,6 +100,6 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[__declspec(restrict)](../cpp/restrict.md)
+[`__declspec(restrict)`](../cpp/restrict.md)

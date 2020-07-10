@@ -1,33 +1,36 @@
 ---
 title: 編譯器警告 (層級 1) C4750
-ms.date: 11/04/2016
+description: 描述有關可能的堆疊溢位的 MSVC 編譯器警告 C4750。
+ms.date: 07/08/2020
 f1_keywords:
 - C4750
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a22bdda407b02b8723b7198d62289d39f62792d
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175164"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180964"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>編譯器警告 (層級 1) C4750
 
-'identifier': 函式中有 _alloca() 內嵌成迴圈
+> '*identifier*'： _alloca ( # A1 內嵌到迴圈中的函式
 
-'identifier' 函式會強制 [_alloca](../../c-runtime-library/reference/alloca.md) 函式在迴圈中內嵌展開，而可能在執行迴圈時造成堆疊溢位。
+## <a name="remarks"></a>備註
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+'*Identifier*' 函式會強制函式 [`_alloca`](../../c-runtime-library/reference/alloca.md) 在迴圈中內嵌展開，這可能會在執行迴圈時造成堆疊溢位。
 
-1. 確定未使用 [__forceinline](../../cpp/inline-functions-cpp.md) 規範修改 'identifier' 函式。
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
-1. 確定 'identifier' 函式不包含內嵌於迴圈中的 [_alloca](../../c-runtime-library/reference/alloca.md) 函式。
+1. 請確定 '*identifier*' 函式未以規範修改 [`__forceinline`](../../cpp/inline-functions-cpp.md) 。
 
-1. 不要指定 [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)、 [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)、 [/Ox](../../build/reference/ox-full-optimization.md)或 [/Og](../../build/reference/og-global-optimizations.md) 編譯參數。
+1. 請確定 '*identifier*' 函式不包含 [`_alloca`](../../c-runtime-library/reference/alloca.md) 包含在迴圈中的函式。
 
-1. 將 [_alloca](../../c-runtime-library/reference/alloca.md) 函式放在會攔截堆疊溢位的 [try-except 陳述式](../../cpp/try-except-statement.md) 中。
+1. 請勿指定 [`/O1`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 、 [`/O2`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 、 [`/Ox`](../../build/reference/ox-full-optimization.md) 或 [`/Og`](../../build/reference/og-global-optimizations.md) 編譯參數。
+
+1. 將函 [`_alloca`](../../c-runtime-library/reference/alloca.md) 式放在會攔截堆疊溢位的[try-except 語句](../../cpp/try-except-statement.md)中。
 
 ## <a name="example"></a>範例
 

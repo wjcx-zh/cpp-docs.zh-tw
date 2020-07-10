@@ -1,6 +1,7 @@
 ---
 title: /Og (全域最佳化)
-ms.date: 09/22/2017
+description: 描述已被取代的 MSVC 編譯器選項/Og，先前用來啟用全域優化。
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GlobalOptimizations
 - /og
@@ -13,30 +14,30 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320288"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180847"
 ---
-# <a name="og-global-optimizations"></a>/Og (全域最佳化)
+# <a name="og-global-optimizations"></a>`/Og` (全域優化) 
 
-已取代。 提供本機和全域最佳化自動暫存器配置，以及迴圈最佳化。 我們建議您改用其中一個[/o1 （最小大小）](o1-o2-minimize-size-maximize-speed.md)或是[/o2 （最快速度）](o1-o2-minimize-size-maximize-speed.md)改。
+已被取代。 提供本機和全域優化、自動註冊配置和迴圈優化。 建議您改用 (將[ `/O1` 大小降至最低) ](o1-o2-minimize-size-maximize-speed.md)或[ `/O2` (最大化速度) ](o1-o2-minimize-size-maximize-speed.md) 。
 
 ## <a name="syntax"></a>語法
 
-> /Og
+> **`/Og`**
 
 ## <a name="remarks"></a>備註
 
-**/Og**已被取代。 這些最佳化現在通常預設會啟用。 如需有關最佳化的詳細資訊，請參閱 < [/o1，/o2 （最小大小、 最快速度）](o1-o2-minimize-size-maximize-speed.md)或是[/Ox （啟用最速度最佳化）](ox-full-optimization.md)。
+**`/Og`** 已被取代。 當啟用任何優化時，現在預設會啟用這些優化。 如需優化的詳細資訊，請參閱[ `/O1` `/O2` (最小化大小、最大化速度) ](o1-o2-minimize-size-maximize-speed.md)或[ `/Ox` (啟用大部分速度優化) ](ox-full-optimization.md)。
 
-下列最佳化會位於 **/Og**:
+下列是可用的優化功能 **`/Og`** ：
 
 - 本機和全域通用子運算式刪除
 
-   在這種最佳化通用子運算式的值會計算一次。 在下列範例中，如果的值`b`及`c`不會變更的三個運算式之間，編譯器可以將計算指派`b + c`給暫存變數，並取代為變數`b + c`:
+   在此優化中，會計算通用子運算式的值一次。 在下列範例中，如果和的值 `b` `c` 不會在三個運算式之間變更，則編譯器可以將的計算指派 `b + c` 給暫存變數，並使用該變數來進行 `b + c` 下列動作：
 
     ```C
     a = b + c;
@@ -44,15 +45,15 @@ ms.locfileid: "62320288"
     e = b + c;
     ```
 
-   對於本機的通用子運算式最佳化，編譯器會檢查簡短的通用子運算式的程式碼區段。 對於全域通用子運算式最佳化，編譯器會搜尋整個函式中的通用子運算式。
+   針對本機通用子運算式優化，編譯器會針對通用子運算式檢查程式碼的簡短區段。 對於全域通用子運算式優化，編譯器會搜尋整個函式中的通用子運算式。
 
-- 自動暫存器配置
+- 自動註冊配置
 
-   此最佳化會讓編譯器將儲存經常使用變數和子運算式在暫存器;`register`關鍵字會被忽略。
+   這項優化可讓編譯器在暫存器中儲存經常使用的變數和子運算式;`register`已忽略關鍵字。
 
-- 迴圈最佳化
+- 迴圈優化
 
-   此最佳化會移除在迴圈主體中的非變異的子運算式。 最佳的迴圈包含其值會隨著每次執行迴圈的運算式。 在下列範例中，運算式`x + y`迴圈主體中不會變更：
+   這項優化會從迴圈的主體移除不變的子運算式。 最佳迴圈僅包含其值會在每次執行迴圈時變更的運算式。 在下列範例中，運算式 `x + y` 不會在迴圈主體中變更：
 
     ```C
     i = -100;
@@ -61,7 +62,7 @@ ms.locfileid: "62320288"
     }
     ```
 
-   在最佳化之後，`x + y`計算一次而不是每次執行迴圈：
+   優化之後， `x + y` 會計算一次，而不是每次執行迴圈時：
 
     ```C
     i = -100;
@@ -71,26 +72,24 @@ ms.locfileid: "62320288"
     }
     ```
 
-   編譯器會假設沒有別名，您使用設定時，迴圈最佳化會更有效[__restrict](../../cpp/extension-restrict.md)， [noalias](../../cpp/noalias.md)，或[限制](../../cpp/restrict.md)。
+   當編譯器可以假設沒有任何別名（您使用、或來設定）時，迴圈優化會更有效率 [`__restrict`](../../cpp/extension-restrict.md) [`noalias`](../../cpp/noalias.md) [`restrict`](../../cpp/restrict.md) 。
 
    > [!NOTE]
-   > 您可以啟用或停用根據函式的函式使用的全域最佳化`optimize`pragma 搭配`g`選項。
+   > 您可以使用 pragma 搭配選項，逐一啟用或停用每個函式的全域優化功能 `optimize` `g` 。
 
-如需相關資訊，請參閱[/Oi （產生內建函式）](oi-generate-intrinsic-functions.md)並[/Ox （啟用最速度最佳化）](ox-full-optimization.md)。
+如需相關資訊，請參閱[ `/Oi` (產生內建函式) ](oi-generate-intrinsic-functions.md)和[ `/Ox ` (啟用最快速優化) ](ox-full-optimization.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 選取 [設定**屬性**] [  >  **c/c + +**  >  **命令列**] 屬性頁。
 
-1. 按一下 [命令列]  屬性頁。
-
-1. 輸入中的編譯器選項**其他選項** 方塊中。
+1. 在 [**其他選項**] 方塊中，輸入編譯器選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 8556e005618a1b69c47498a07e218284dcb1164f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443430"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373563"
 ---
-# <a name="countryregion-strings"></a>Country/Region Strings
+# <a name="countryregion-strings"></a>國家/地區字串
 
-國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各 Windows 作業系統支援的國家與地區名稱清單，請參閱 [Language] \(語言\)、[Location] \(位置\) 與 [Language tag] \(語言標記\) 欄 (在[附錄 A：產品行為](https://msdn.microsoft.com/library/cc233982.aspx)中的語言標記 欄 (在 [MS-LCID] 中)：Windows 語言代碼識別碼 (LCID) 參考。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/win32/intl/nls--name-based-apis-sample)。
+國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各種 Windows 作業系統版本支援的國家/地區名稱清單，請參閱[附錄 A：產品行為](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)（MS-lcid）： Windows 語言代碼識別碼（LCID）參考中資料表的**語言**、**位置**和**語言標記**資料行 \[ 。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/win32/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-country-and-region-strings"></a>其他支援的國家與地區設定字串
 
@@ -21,7 +21,7 @@ Microsoft C 執行階段程式庫實作也支援下列其他國家/地區字串�
 
 |國家/地區字串|縮寫|對等的地區設定名稱|
 |----------------------------|------------------|----------------------------|
-|美洲|USA|zh-TW|
+|美洲|USA|en-US|
 |英國|GBR|en-GB|
 |中國|CHN|zh-CN|
 |捷克|CZE|cs-CZ|
@@ -34,7 +34,7 @@ Microsoft C 執行階段程式庫實作也支援下列其他國家/地區字串�
 |中華人民共和國|CHN|zh-CN|
 |pr-china|CHN|zh-CN|
 |波多黎各|PRI|es-PR|
-|斯洛伐克|SVK|sk-SK|
+|斯洛伐克文|SVK|sk-SK|
 |南非|ZAF|af-ZA|
 |南韓|KOR|ko-KR|
 |南非|ZAF|af-ZA|

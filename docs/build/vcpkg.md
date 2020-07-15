@@ -4,11 +4,12 @@ description: vcpkg 是命令列套件管理員，可大幅簡化 Windows、macOS
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2a179a25a7332a93486d42750f06f18658991b30
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058642"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373628"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用于 Windows、Linux 和 macOS 的 c + + 套件管理員
 
@@ -166,7 +167,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="target-linux-from-windows-via-wsl"></a>透過 WSL 從 Windows 將 Linux 設為目標
 
-您可以使用適用于 Linux 的 Windows 子系統或 WSL，在 Windows 電腦上產生 Linux 二進位檔。 依照指示[在 Windows 10 上設定 WSL](/windows/wsl/install-win10)。 然後，使用[適用于 Linux 的 Visual Studio 擴充](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)功能進行設定。 您可以將適用于 Windows 和 Linux 的所有建立程式庫放入相同的資料夾中。 它們可以從 Windows 和 WSL 存取。
+您可以使用適用于 Linux 的 Windows 子系統或 WSL，在 Windows 電腦上產生 Linux 二進位檔。 依照指示[在 Windows 10 上設定 WSL](/windows/wsl/install-win10)。 然後，使用[適用于 Linux 的 Visual Studio 擴充](https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/)功能進行設定。 您可以將適用于 Windows 和 Linux 的所有建立程式庫放入相同的資料夾中。 它們可以從 Windows 和 WSL 存取。
 
 ## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> 匯出編譯的二進位檔和標頭
 
@@ -248,7 +249,7 @@ vcpkg 執行個體的內容如下：
 
 ## <a name="command-line-reference"></a>命令列參考
 
-|Command|說明|
+|Command|描述|
 |---------|---------|
 |**`vcpkg search [pat]`**|搜尋可安裝的套件|
 |**`vcpkg install <pkg>...`**|安裝套件|
@@ -270,7 +271,7 @@ vcpkg 執行個體的內容如下：
 
 ### <a name="options"></a>選項
 
-|選項|Description|
+|選項|描述|
 |---------|---------|
 |**`--triplet <t>`**|指定目標架構 triplet。 （預設值： `%VCPKG_DEFAULT_TRIPLET%` ，另請參閱 **`vcpkg help triplet`** ）|
 |**`--vcpkg-root <path>`**|指定 vcpkg 根目錄 (預設：`%VCPKG_ROOT%`)|

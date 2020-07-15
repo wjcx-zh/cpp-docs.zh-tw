@@ -1,15 +1,15 @@
 ---
 title: 使用規則集指定要執行的 C++ 規則
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269711"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373849"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用規則集來指定要執行的 C++ 規則
 
@@ -65,7 +65,7 @@ ms.locfileid: "85269711"
 
 - 若要在規則資料行中新增或移除欄位，請選擇 [**資料行選項**]。
 
-- 若要隱藏不會套用至目前解決方案的規則，請選擇 [**隱藏不適用於目前解決方案的規則**]。
+- 若要隱藏不適用於目前解決方案的規則，請選擇 [**隱藏不適用於目前解決方案的規則**]。
 
 - 若要在顯示和隱藏已指派錯誤動作的規則之間進行切換，請選擇 [**顯示可以產生程式碼分析錯誤的規則**]。
 
@@ -236,17 +236,19 @@ ms.locfileid: "85269711"
 
 架構元素詳細資料：
 
-- TLocalization：當地語系化資訊，包括規則集檔案的名稱、規則集檔案的描述、包含當地語系化資源的資源元件名稱，以及當地語系化資源的基底名稱。
-- TRuleHintPaths：用來做為提示以搜尋規則集檔案的檔案路徑。
-- Tname 會：目前規則集檔案的名稱。
-- TDescription：目前規則集檔案的描述。
-- TInclude：包含規則動作之內含規則集的路徑。
-- TIncludeAll：所有規則的規則動作。
-- TRule：具有規則動作的規則識別碼。
-- TRules：一或多個規則的集合。
-- TRuleSet：包含當地語系化資訊、規則提示路徑、包含所有資訊的規則集檔案格式，包括資訊、規則資訊、名稱、描述和工具版本資訊。
-- TRuleAction：描述規則動作（例如錯誤、警告、資訊、隱藏或無）的列舉類型。
-- TIncludeAction：描述規則動作（例如錯誤、警告、資訊、隱藏、無或預設）的列舉類型。
-- TIncludeAllAction：描述規則動作（例如錯誤、警告、資訊或隱藏）的列舉類型。
+| Schema 元素 | 描述 |
+|--------------------|--------------|
+| `TLocalization` | 當地語系化資訊包括規則集檔案的名稱、規則集檔案的描述、包含當地語系化資源的資源元件名稱，以及當地語系化資源的基底名稱 |
+| `TRuleHintPaths` | 用來作為提示以搜尋規則集檔案的檔案路徑 |
+| `TName` | 目前規則集檔案的名稱 |
+| `TDescription` | 目前規則集檔案的描述 |
+| `TInclude` | 包含規則動作之內含規則集的路徑 |
+| `TIncludeAll` | 所有規則的規則動作 |
+| `TRule` | 具有規則動作的規則識別碼 |
+| `TRules` | 一或多個規則的集合 |
+| `TRuleSet` | 規則集檔案格式包含當地語系化資訊、規則提示路徑、包含所有資訊，包括資訊、規則資訊、名稱、描述和工具版本資訊 |
+| `TRuleAction` | 描述規則動作（例如錯誤、警告、資訊、隱藏或無）的列舉型別（Enumeration） |
+| `TIncludeAction` | 描述規則動作的列舉，例如錯誤、警告、資訊、隱藏、無或預設值 |
+| `TIncludeAllAction` | 描述規則動作（例如錯誤、警告、資訊或隱藏）的列舉 |
 
 若要查看規則集的範例，請參閱[在文字編輯器中建立規則集](#to-create-a-rule-set-in-a-text-editor)，或在中儲存的任何預設規則集 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` 。

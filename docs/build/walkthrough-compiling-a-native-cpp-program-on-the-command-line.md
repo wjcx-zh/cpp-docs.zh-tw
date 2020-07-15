@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: c24fdfdaef612059d5c2fbaaa58f10d83f5fe3a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8af104598f56aa6c8eb5a9a87905324700da3d37
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335236"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373667"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯原生 C++ 程式
 
@@ -24,7 +24,7 @@ Visual Studio 包含命令列 C 和 c + + 編譯器。 您可以使用它來建�
 
 在此逐步解說中，您可以使用自己的 c + + 程式，而不是輸入所顯示的程式。 或者，您可以使用其他說明文章中的 c + + 程式碼範例。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要完成此逐步解說，您必須安裝 Visual Studio 和選用的**桌面開發與 c + +** 工作負載，或是 Visual Studio 的命令列組建工具。
 
@@ -45,7 +45,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
 
    您也可以使用 Windows 搜尋函式來搜尋「開發人員命令提示字元」，並選擇哪一個符合您安裝的 Visual Studio 版本。 使用快捷方式來開啟 [命令提示字元] 視窗。
 
-1. 接下來，確認 Visual C++ 的開發人員命令提示字元已正確設定。 在 [命令提示字元] 視窗`cl`中，輸入並確認輸出看起來像這樣：
+1. 接下來，確認 Visual C++ 的開發人員命令提示字元已正確設定。 在 [命令提示字元] 視窗中，輸入 `cl` 並確認輸出看起來像這樣：
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -58,18 +58,18 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
    目前目錄或版本號碼可能有差異。 這些值取決於 Visual C++ 的版本以及任何已安裝的更新。 如果上述輸出類似于您所看到的內容，則您可以在命令列中建立 C 或 c + + 程式。
 
    > [!NOTE]
-   > 如果您收到錯誤，例如「' cl ' 無法辨識為內部或外部命令、可執行檔**`cl`** 程式或批次檔」、「錯誤 C1034 或錯誤 LNK1104，當您執行命令時，可能是因為您未使用開發人員命令提示字元，或您安裝 Visual C++ 時發生問題。 您必須先修正此問題，才能繼續。
+   > 如果您收到錯誤，例如「' cl ' 無法辨識為內部或外部命令、可執行檔程式或批次檔」、「錯誤 C1034 或錯誤 LNK1104，當您執行命令時， **`cl`** 可能是因為您未使用開發人員命令提示字元，或您安裝 Visual C++ 時發生問題。 您必須先修正此問題，才能繼續。
 
-   如果您找不到開發人員命令提示字元快捷方式，或是在輸入`cl`時收到錯誤訊息，則您的 Visual C++ 安裝可能會發生問題。 請嘗試重新安裝 Visual Studio 中的 Visual C++ 元件，或重新安裝 Microsoft Visual C++ 組建工具。 請不要進入下一節， **`cl`** 直到命令運作為止。 如需安裝和疑難排解 Visual C++ 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
+   如果您找不到開發人員命令提示字元快捷方式，或是在輸入時收到錯誤訊息 `cl` ，則您的 Visual C++ 安裝可能會發生問題。 請嘗試重新安裝 Visual Studio 中的 Visual C++ 元件，或重新安裝 Microsoft Visual C++ 組建工具。 請不要進入下一節，直到 **`cl`** 命令運作為止。 如需安裝和疑難排解 Visual C++ 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
 
    > [!NOTE]
    > 視電腦上的 Windows 版本和系統安全性設定而定，您可能必須以滑鼠右鍵按一下開啟 [開發人員命令提示字元] 快捷方式的快捷方式功能表，然後選擇 [以**系統管理員身分執行**]，成功建立並執行您依照本逐步解說所建立的程式。
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>建立 Visual C++ 原始程式檔，並在命令列上進行編譯
 
-1. 在 [開發人員命令提示字元] `md c:\hello`視窗中，輸入以建立目錄， `cd c:\hello`然後輸入以變更至該目錄。 此目錄是您在其中建立來源檔案和已編譯器的位置。
+1. 在 [開發人員命令提示字元] 視窗中，輸入 `md c:\hello` 以建立目錄，然後輸入 `cd c:\hello` 以變更至該目錄。 此目錄是您在其中建立來源檔案和已編譯器的位置。
 
-1. 在`notepad hello.cpp` [命令提示字元] 視窗中輸入。
+1. `notepad hello.cpp`在 [命令提示字元] 視窗中輸入。
 
    當 [記事本] 提示您建立檔案時，選擇 [**是]** 。 此步驟會開啟空白的 [記事本] 視窗，您可以在名為 hello .cpp 的檔案中輸入您的程式碼。
 
@@ -90,7 +90,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
 
    恭喜，您已建立可供編譯的 c + + 原始程式檔（即 hello .cpp）。
 
-1. 切換回 [開發人員命令提示字元] 視窗。 在`dir`命令提示字元中輸入，以列出 c:\hello 目錄的內容。 您應該會在目錄清單中看到來源檔案 hello .cpp，如下所示：
+1. 切換回 [開發人員命令提示字元] 視窗。 在命令提示字元中輸入， `dir` 以列出 c:\hello 目錄的內容。 您應該會在目錄清單中看到來源檔案 hello .cpp，如下所示：
 
    ```Output
    c:\hello>dir
@@ -107,9 +107,9 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
 
    ```
 
-   您的電腦上的日期和其他詳細資料會有所不同。 如果您沒有看到*您的原始程式碼檔案，請*確定您已變更為您所建立的*c：\\hello*目錄。 在 [記事本] 中，請確定您已將原始程式檔儲存在此目錄中。 此外，也請確定您已儲存具有*`.cpp`* 副檔名的原始程式碼，而不是*`.txt`* 延伸模組。
+   您的電腦上的日期和其他詳細資料會有所不同。 如果您沒有看到*您的原始程式碼檔案，請*確定您已變更為您所建立的*c： \\ hello*目錄。 在 [記事本] 中，請確定您已將原始程式檔儲存在此目錄中。 此外，也請確定您已儲存具有副檔名的原始程式碼 *`.cpp`* ，而不是 *`.txt`* 延伸模組。
 
-1. 在開發人員命令提示字元中`cl /EHsc hello.cpp` ，輸入以編譯您的程式。
+1. 在開發人員命令提示字元中，輸入 `cl /EHsc hello.cpp` 以編譯您的程式。
 
    cl.exe 編譯器會產生內含編譯後之程式碼的 .obj 檔案，然後執行連結器，以建立名為 basic.exe 的可執行程式。 此名稱會出現在編譯器所顯示輸出資訊行中。 編譯器的輸出看起來應該像這樣：
 
@@ -130,7 +130,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
    > 如果您收到錯誤，例如「' cl ' 無法辨識為內部或外部命令、可運作的程式或批次檔、錯誤 C1034 或錯誤 LNK1104，您的開發人員命令提示字元並未正確設定。 如需如何修正此問題的相關資訊，請回到**開啟開發人員命令提示**字元一節。
 
    > [!NOTE]
-   > 如果您收到不同的編譯器或連結器錯誤或警告，請檢查您的原始程式碼以更正任何錯誤，然後儲存並再次執行編譯器。 如需特定錯誤的詳細資訊，請使用此 MSDN 頁面上的 [搜尋] 方塊來尋找錯誤號碼。
+   > 如果您收到不同的編譯器或連結器錯誤或警告，請檢查您的原始程式碼以更正任何錯誤，然後儲存並再次執行編譯器。 如需特定錯誤的詳細資訊，請使用 [搜尋] 方塊尋找錯誤號碼。
 
 1. 若要執行 hello.exe 程式，請在命令提示字元下，輸入 `hello`。
 
@@ -146,7 +146,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
 
 這個 "Hello，World" 範例就像 c + + 程式可以取得的一樣簡單。 真實世界的程式通常會有標頭檔、更多的來源檔案，以及程式庫。
 
-您可以使用本逐步解說中的步驟來建立您自己的 c + + 程式碼，而不是輸入所顯示的範例程式碼。 這些步驟也可讓您建立多個在其他地方找到的 c + + 程式碼範例程式。 您可以將原始程式碼放在任何可寫入的目錄中，並建立應用程式。 根據預設，Visual Studio IDE 會在 [*來源\\存放庫*] 子資料夾中，于您的使用者資料夾中建立專案。 較舊的版本可能會將專案放在*檔\\中 Visual Studio \<版本>\\ *projects] 資料夾。
+您可以使用本逐步解說中的步驟來建立您自己的 c + + 程式碼，而不是輸入所顯示的範例程式碼。 這些步驟也可讓您建立多個在其他地方找到的 c + + 程式碼範例程式。 您可以將原始程式碼放在任何可寫入的目錄中，並建立應用程式。 根據預設，Visual Studio IDE 會在 [*來源 \\ 存放庫*] 子資料夾中，于您的使用者資料夾中建立專案。 較舊的版本可能會將專案放在*檔 \\ Visual Studio \<version> \\ *專案] 資料夾中。
 
 若要編譯具有其他原始程式碼檔案的程式，請在命令列上輸入這些檔案，如下所示：
 
@@ -154,7 +154,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
 
 `/EHsc`命令列選項會指示編譯器啟用標準 c + + 例外狀況處理行為。 如果沒有它，擲回的例外狀況可能會導致 undestroyed 物件和資源流失。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](reference/eh-exception-handling-model.md)。
 
-當您提供其他來源檔案時，編譯器會使用第一個輸入檔來建立程式名稱。 在此情況下，它會輸出名為 file1 的程式。 若要將名稱變更為 program1，請新增[/out](reference/out-output-file-name.md)連結器選項：
+當您提供其他來源檔案時，編譯器會使用第一個輸入檔來建立程式名稱。 在此情況下，它會輸出名為 file1.exe 的程式。 若要將名稱變更為 program1.exe，請新增[/out](reference/out-output-file-name.md)連結器選項：
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
@@ -162,16 +162,16 @@ Visual Studio 的組建工具只會安裝您建立 C 和 c + + 程式所需的�
 
 `cl /W4 /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
-編譯器（cl）有更多選項。 您可以將它們套用至組建、優化、程式碼和分析。 如需快速清單，請`cl /?`在開發人員命令提示字元中輸入。 您也可以分別編譯和連結，並在更複雜的組建案例中套用連結器選項。 如需編譯器和連結器選項和使用方式的詳細資訊，請參閱[C/c + + 建立參考](reference/c-cpp-building-reference.md)。
+編譯器（cl.exe）有更多選項。 您可以將它們套用至組建、優化、程式碼和分析。 如需快速清單，請 `cl /?` 在開發人員命令提示字元中輸入。 您也可以分別編譯和連結，並在更複雜的組建案例中套用連結器選項。 如需編譯器和連結器選項和使用方式的詳細資訊，請參閱[C/c + + 建立參考](reference/c-cpp-building-reference.md)。
 
 您可以使用 NMAKE 和 makefile、MSBuild 和專案檔，或 CMake，在命令列上設定並建立更複雜的專案。 如需使用這些工具的詳細資訊，請參閱[Visual Studio 中的](cmake-projects-in-visual-studio.md) [NMAKE 參考](reference/nmake-reference.md)、 [MSBuild](msbuild-visual-cpp.md)和 CMake 專案。
 
-C 和 c + + 語言類似，但並不相同。 MSVC 編譯器會使用一個簡單的規則，來決定在編譯器代碼時所要使用的語言。 根據預設，MSVC 編譯器會處理以 C 原始程式碼結尾*`.c`* 的檔案，以及以 c + + 原始程式碼結尾*`.cpp`* 的檔案。 若要強制編譯器將所有檔案視為與副檔名無關的 c + +，請使用[/tp](reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項。
+C 和 c + + 語言類似，但並不相同。 MSVC 編譯器會使用一個簡單的規則，來決定在編譯器代碼時所要使用的語言。 根據預設，MSVC 編譯器會處理以 C 原始程式碼結尾的檔案 *`.c`* ，以及以 *`.cpp`* c + + 原始程式碼結尾的檔案。 若要強制編譯器將所有檔案視為與副檔名無關的 c + +，請使用[/tp](reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項。
 
 MSVC 編譯器包含符合 ISO C99 標準的 C 執行時間程式庫（CRT），但有次要例外狀況。 可移植程式碼通常會如預期般編譯並執行。 某些過時的程式庫函式和數個 POSIX 函式名稱，已由 MSVC 編譯器取代。 支援函數，但慣用的名稱已變更。 如需詳細資訊，請參閱 CRT 和[編譯器警告（層級3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)[中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C + + 語言參考](../cpp/cpp-language-reference.md)<br/>
-[專案和建置系統](projects-and-build-systems-cpp.md)<br/>
+[專案與建置系統](projects-and-build-systems-cpp.md)<br/>
 [MSVC 編譯器選項](reference/compiler-options.md)

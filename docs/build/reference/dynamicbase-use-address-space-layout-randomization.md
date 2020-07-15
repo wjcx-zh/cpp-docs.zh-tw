@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170055"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373706"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (使用位址空間隨機載入)
 
@@ -21,7 +21,7 @@ ms.locfileid: "80170055"
 
 ## <a name="syntax"></a>語法
 
-> **/DYNAMICBASE**[ **： NO**]
+> **/DYNAMICBASE**[**： NO**]
 
 ## <a name="remarks"></a>備註
 
@@ -31,19 +31,19 @@ ms.locfileid: "80170055"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [設定**屬性**] > **連結器** > [ **Advanced** ] 屬性頁。
+1. 選取 [設定**屬性**  >  **連結器**] 的 [  >  **Advanced** ] 屬性頁。
 
 1. 修改**隨機化基底位址**屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>＞。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 
 - [MSVC 連結器參考](linking.md)
 - [MSVC 連結器選項](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Windows ISV 軟體安全性防禦](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Windows ISV 軟體安全性防禦](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

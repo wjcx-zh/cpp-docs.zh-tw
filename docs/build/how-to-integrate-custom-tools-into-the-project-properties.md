@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 0c0233ad6715a3adb7d47f021a87207f288d5139
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837036"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373745"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>如何：將自訂工具整合至專案屬性中
 
@@ -17,7 +17,7 @@ ms.locfileid: "65837036"
 
 [屬性頁]**** 視窗的 [組態屬性]**** 區段會顯示設定群組，也就是*規則*。 每個規則都包含一項工具或一組功能的設定。 例如，**連結器**規則包含連結器工具的設定。 規則中的設定可以細分為*分類*。
 
-本文件說明如何在已設定的目錄中建立檔案，其中包含可讓屬性在 Visual Studio 啟動時載入的自訂工具屬性。 如需如何修改檔案的詳細資訊，請參閱 Visual Studio 專案團隊部落格上的[平台延展性第 2 部分](https://blogs.msdn.microsoft.com/vsproject/2009/06/18/platform-extensibility-part-2/)。
+本文件說明如何在已設定的目錄中建立檔案，其中包含可讓屬性在 Visual Studio 啟動時載入的自訂工具屬性。 如需如何修改檔案的詳細資訊，請參閱 Visual Studio 專案團隊部落格上的[平台延展性第 2 部分](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2)。
 
 ### <a name="to-add-or-change-project-properties"></a>新增或變更專案屬性
 
@@ -35,6 +35,6 @@ ms.locfileid: "65837036"
 
 1. 在 [方案總管]**** 中，以滑鼠右鍵按一下專案，然後按一下 [屬性]****。 在 [屬性頁]**** 視窗的左窗格中確認有新的節點，且該節點具有您的規則名稱。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [命令列上的 MSBuild - C++](msbuild-visual-cpp.md)

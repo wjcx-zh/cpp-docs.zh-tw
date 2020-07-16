@@ -1,5 +1,5 @@
 ---
-title: 左移和右移運算子（&gt; &gt;和&lt; &lt;）
+title: 左移和右移運算子（ &gt; &gt; 和 &lt; &lt; ）
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825911"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404766"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左移和右移運算子（&gt; &gt;和&lt; &lt;）
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左移和右移運算子（ &gt; &gt; 和 &lt; &lt; ）
 
-位移位運算子是右移運算子**&gt;**（），它會將*shift 運算式*的位向右移動，而左移運算子（**&lt;**）則會將*shift 運算式*的位向左移動。 <sup>1</sup>
+位移位運算子是右移運算子（ **&gt;&gt;** ），它會將*shift 運算式*的位向右移動，而左移運算子（）則會 **&lt;&lt;** 將*shift 運算式*的位向左移動。 <sup>1</sup>
 
 ## <a name="syntax"></a>語法
 
-> *移位運算式* `<<` *加法運算式*\
+> *shift 運算式* `<<`*加法類運算式*\
 > *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>備註
 
 > [!IMPORTANT]
-> 下列說明和範例在適用于 x86 和 x64 架構的 Windows 上有效。 在適用于 ARM 裝置的 Windows 上，左移和右移位運算子的執行方式明顯不同。 如需詳細資訊，請參閱[HELLO ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) blog 文章的「移位運算子」一節。
+> 下列說明和範例在適用于 x86 和 x64 架構的 Windows 上有效。 在適用于 ARM 裝置的 Windows 上，左移和右移位運算子的執行方式明顯不同。 如需詳細資訊，請參閱[HELLO ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/) blog 文章的「移位運算子」一節。
 
 ## <a name="left-shifts"></a>左移位
 
@@ -224,11 +224,11 @@ int main() {
 
 <sup>1</sup>以下是 c + + 11 ISO 規格（INCITS/ISO/IEC 14882-2011 [2012]）、區段5.8.2 和5.8.3 中的 shift 運算子描述。
 
-`E1 << E2` 的值是向左移位 `E1` 的 `E2` 位元位置；空出的位元會以零填補。 如果`E1`具有不帶正負號的類型，結果的值會是**E1 × 2**<sup>**E2**</sup>，比結果類型中可顯示的最大值還要少一個模數。 否則，如果`E1`具有帶正負號的類型和非負數值，且**E1 × 2**<sup>**E2**</sup>可在結果類型的對應不帶正負號類型中顯示，則轉換為結果類型的值會是產生的值。否則，行為會是未定義的。
+`E1 << E2` 的值是向左移位 `E1` 的 `E2` 位元位置；空出的位元會以零填補。 如果 `E1` 具有不帶正負號的類型，結果的值會是**E1 × 2**<sup>**E2**</sup>，比結果類型中可顯示的最大值還要少一個模數。 否則，如果 `E1` 具有帶正負號的類型和非負數值，且**E1 × 2**<sup>**E2**</sup>可在結果類型的對應不帶正負號類型中顯示，則轉換為結果類型的值會是產生的值; 否則，行為會是未定義的。
 
-`E1 >> E2` 的值是 `E1` 向右移位 `E2` 個位元位置。 如果`E1`具有不帶正負號的`E1`類型，或如果具有帶正負號的類型和非負數值，則結果的值會是**E1/2**<sup>**E2**</sup>之商的整數部分。 如果 `E1` 的類型帶正負號，且具有負數值，結果產生的值由實作決定。
+`E1 >> E2` 的值是 `E1` 向右移位 `E2` 個位元位置。 如果 `E1` 具有不帶正負號的類型，或如果具有帶正負號的 `E1` 類型和非負數值，則結果的值會是**E1/2**<sup>**E2**</sup>之商的整數部分。 如果 `E1` 的類型帶正負號，且具有負數值，結果產生的值由實作決定。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

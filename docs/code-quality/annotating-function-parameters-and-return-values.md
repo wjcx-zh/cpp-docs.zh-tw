@@ -1,6 +1,6 @@
 ---
-title: 對函數參數和傳回值進行交代
-description: 函數參數和返回值註釋的參考指南。
+title: 標注函式參數和傳回值
+description: 函式參數和傳回值注釋的參考指南。
 ms.date: 10/15/2019
 ms.topic: conceptual
 f1_keywords:
@@ -124,89 +124,89 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: c787dcfb252da1abe47251d66c46689db289cf15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328002"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404033"
 ---
-# <a name="annotating-function-parameters-and-return-values"></a>對函數參數和傳回值進行交代
+# <a name="annotating-function-parameters-and-return-values"></a>標注函式參數和傳回值
 
-本文介紹了註釋對簡單函數參數(scalars)和指向結構和類的指標以及大多數緩衝區的典型用途。 本文還顯示了註釋的常見使用模式。 有關與函數相關的其他註釋,請參閱[註解函數行為](../code-quality/annotating-function-behavior.md)。
+本文描述簡單函式參數（純量）和結構和類別的指標，以及大多數類型的緩衝區之注釋的一般用法。 本文也會說明批註的常見使用模式。 如需與函式相關的其他批註，請參閱批註函式[行為](../code-quality/annotating-function-behavior.md)。
 
 ## <a name="pointer-parameters"></a>指標參數
 
-對於下表中的註釋,當對指標參數進行批註時,如果指標為空,分析器將報告錯誤。 此註釋適用於指標和指向的任何數據項。
+針對下表中的批註，當標注指標參數時，分析器會在指標為 null 時報告錯誤。 此注釋適用于指標和指向的任何資料項目。
 
-### <a name="annotations-and-descriptions"></a>註解與說明
+### <a name="annotations-and-descriptions"></a>注釋和描述
 
 - `_In_`
 
-     對標量、結構、指向結構的指標等的輸入參數進行符號。 顯式可用於簡單的標量。 參數必須以預狀態有效,並且不會修改。
+     標注輸入參數，其為純量、結構、結構的指標，以及 like。 明確可能用於簡單純量。 參數在預先狀態中必須是有效的，而且不會修改。
 
 - `_Out_`
 
-     對標量、結構、指向結構的指標等輸出參數進行分出。 不要將此註釋應用於無法返回值的物件,例如,由值傳遞的標量。 參數不必在預狀態下有效,但必須在後狀態中有效。
+     標注輸出參數，其為純量、結構、結構的指標，以及 like。 請勿將此注釋套用至無法傳回值的物件，例如以傳值方式傳遞的純量。 參數在預先狀態中不一定是有效的，但在後置狀態中必須是有效的。
 
 - `_Inout_`
 
-     對函數將更改的參數進行加號。 它必須在預狀態和後狀態中都有效,但假定在調用之前和之後具有不同的值。 必須應用於可修改的值。
+     標注將由函式變更的參數。 它必須在前置狀態和後置狀態中都是有效的，但假設在呼叫前後有不同的值。 必須套用至可修改的值。
 
 - `_In_z_`
 
-     指向用作輸入的 null 連接字串的指標。 字串必須以預狀態有效。 首選`PSTR`的 變體,這些變體已具有正確的註釋。
+     以 null 結束的字串指標，用來做為輸入。 此字串在前置狀態中必須是有效的。 慣用的變數 `PSTR` 已有正確的批註。
 
 - `_Inout_z_`
 
-     指向將修改的 null 終止字元陣列的指標。 它必須在調用之前和之後有效,但假定該值已更改。 可以移動空終止符,但只能訪問到原始空終止符的元素。
+     將修改之以 null 結束之字元陣列的指標。 它在呼叫之前和之後都必須是有效的，但假設值已變更。 可以移動 null 結束字元，但只能存取最多到原始 null 結束字元的元素。
 
 - `_In_reads_(s)`
 
      `_In_reads_bytes_(s)`
 
-     指向陣列的指標,該指標由函數讀取。 陣列的大小`s`元素,所有元素都必須有效。
+     陣列的指標，由函數讀取。 陣列是大小的 `s` 元素，全部都必須是有效的。
 
-     該`_bytes_`變體以位元組而不是元素的形式提供大小。 僅當大小不能表示為元素時,才使用此變體。 例如,`char`僅當`_bytes_``wchar_t`使用的類似函數使用時,字串才會使用該變體。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
 
 - `_In_reads_z_(s)`
 
-     指向為 null 終止且具有已知大小的陣列的指標。 到 null 終止符的元素`s`(或者 如果沒有空終止符)必須在預狀態下有效。 如果大小以位元組為單位已知,則按`s`元素大小縮放。
+     陣列的指標，其以 null 結束且具有已知的大小。 最多為 null 結束字元的元素（ `s` 如果沒有 null 結束字元）必須在前置狀態中有效。 如果大小是以位元組為單位，則會 `s` 依元素大小進行調整。
 
 - `_In_reads_or_z_(s)`
 
-     指向為 null 終止或具有已知大小的陣列的指標,或兩者兼而有之。 到 null 終止符的元素`s`(或者 如果沒有空終止符)必須在預狀態下有效。 如果大小以位元組為單位已知,則按`s`元素大小縮放。 (用於`strn`家庭。
+     陣列的指標，其以 null 結束或具有已知大小，或兩者皆為。 最多為 null 結束字元的元素（ `s` 如果沒有 null 結束字元）必須在前置狀態中有效。 如果大小是以位元組為單位，則會 `s` 依元素大小進行調整。 （用於 `strn` 系列）。
 
 - `_Out_writes_(s)`
 
      `_Out_writes_bytes_(s)`
 
-     指向由函數寫入`s`的元素陣列(resp. 位元組)的指標。 陣列元素不必在預狀態下有效,並且未指定在後狀態下有效的元素數。 如果參數類型上有註釋,則它們以後狀態應用。 例如，試想下列程式碼。
+     將由函式寫入之 `s` 元素陣列（resp）的指標。 陣列元素不一定要在前置狀態中有效，而且在後置狀態中有效的元素數目也不會指定。 如果參數類型上有批註，則會在後置狀態下套用。 例如，試想下列程式碼。
 
      ```cpp
      typedef _Null_terminated_ wchar_t *PWSTR;
      void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
      ```
 
-     這個選項, 以使用元素的`size`緩衝區`p1`。 `MyStringCopy`使其中一些元素有效。 更重要的是,`_Null_terminated_``PWSTR`上的註釋`p1`意味著 在後狀態下為 null 終止。 這樣,有效元素的數量仍然定義良好,但不需要特定的元素計數。
+     在此範例中，呼叫者會提供的 `size` 元素緩衝區 `p1` 。 `MyStringCopy`使部分元素有效。 更重要的 `_Null_terminated_` 是，上的注釋 `PWSTR` 表示 `p1` 在後置狀態中是以 null 終止。 如此一來，有效元素的數目仍然定義良好，但不需要特定的元素計數。
 
-     該`_bytes_`變體以位元組而不是元素的形式提供大小。 僅當大小不能表示為元素時,才使用此變體。 例如,`char`僅當`_bytes_``wchar_t`使用的類似函數使用時,字串才會使用該變體。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
 
 - `_Out_writes_z_(s)`
 
-     指向元素陣列的`s`指標。 元素不必在預狀態下有效。 在後狀態中,透過 null 中斷上的元素(必須存在)必須有效。 如果大小以位元組為單位已知,則按`s`元素大小縮放。
+     元素陣列的指標 `s` 。 元素在預先狀態中不一定是有效的。 在後置狀態中，已完成 null 結束字元的元素（必須存在）必須是有效的。 如果大小是以位元組為單位，則會 `s` 依元素大小進行調整。
 
 - `_Inout_updates_(s)`
 
      `_Inout_updates_bytes_(s)`
 
-     指向陣列的指標,該陣列在函數中讀取和寫入。 它是大小`s`元素,在狀態前和後狀態有效。
+     陣列的指標，在函式中讀取和寫入。 這是大小 `s` 元素，且在前置狀態和後置狀態中有效。
 
-     該`_bytes_`變體以位元組而不是元素的形式提供大小。 僅當大小不能表示為元素時,才使用此變體。 例如,`char`僅當`_bytes_``wchar_t`使用的類似函數使用時,字串才會使用該變體。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
 
 - `_Inout_updates_z_(s)`
 
-     指向為 null 終止且具有已知大小的陣列的指標。 通過空終止符向上的元素(必須存在)必須在前狀態和後狀態中有效。 假定后狀態中的值與前狀態中的值不同;包括空終止符的位置。 如果大小以位元組為單位已知,則按`s`元素大小縮放。
+     陣列的指標，其以 null 結束且具有已知的大小。 完成 null 結束字元的元素（必須存在）必須是前置狀態和後置狀態中的有效專案。 後置狀態中的值會假設為與前置狀態中的值不同。，其中包括 null 結束字元的位置。 如果大小是以位元組為單位，則會 `s` 依元素大小進行調整。
 
 - `_Out_writes_to_(s,c)`
 
@@ -216,7 +216,7 @@ ms.locfileid: "81328002"
 
      `_Out_writes_bytes_all_(s)`
 
-     指向元素陣列的`s`指標。 元素不必在預狀態下有效。 在後狀態下,最多到 -th`c`元素的元素必須有效。 如果`_bytes_`大小以位元組為單位(而不是元素數)已知,則可以使用該變體。
+     元素陣列的指標 `s` 。 元素在預先狀態中不一定是有效的。 在後置狀態中，最多為 `c` -第個元素的元素必須是有效的。 `_bytes_`如果大小是以位元組為單位，而不是元素數目，則可以使用 variant。
 
      例如：
 
@@ -229,25 +229,25 @@ ms.locfileid: "81328002"
 
      `_Inout_updates_bytes_to_(s,c)`
 
-     指向陣列的指標,該指標由函數讀取和寫入。 它是大小`s`元素,所有元素都必須在預狀態下有效,`c`並且 元素必須在後狀態中有效。
+     陣列的指標，這是函式的讀取和寫入。 這是大小的 `s` 元素，全部都必須在前置狀態中有效，而 `c` 元素在後置狀態中必須是有效的。
 
-     該`_bytes_`變體以位元組而不是元素的形式提供大小。 僅當大小不能表示為元素時,才使用此變體。 例如,`char`僅當`_bytes_``wchar_t`使用的類似函數使用時,字串才會使用該變體。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
 
 - `_Inout_updates_all_(s)`
 
      `_Inout_updates_bytes_all_(s)`
 
-     指向陣列的指標,該陣列由大小`s`元素的函數讀取和寫入。 定義為等效於:
+     陣列的指標，這是由大小元素的函式讀取和寫入 `s` 。 定義為相當於：
 
      `_Inout_updates_to_(_Old_(s), _Old_(s))    _Inout_updates_bytes_to_(_Old_(s), _Old_(s))`
 
-     換句話說,緩衝區中一直存在`s`到預狀態的每個元素在預狀態和後狀態中都有效。
+     換句話說，處於前置狀態的緩衝區中的每個元素，在 `s` 前置狀態和後置狀態中都是有效的。
 
-     該`_bytes_`變體以位元組而不是元素的形式提供大小。 僅當大小不能表示為元素時,才使用此變體。 例如,`char`僅當`_bytes_``wchar_t`使用的類似函數使用時,字串才會使用該變體。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
 
 - `_In_reads_to_ptr_(p)`
 
-     指向陣列的指標`p - _Curr_`(即`p`減`_Curr_`號)是有效的表達式。 之前`p`的元素必須以預狀態有效。
+     陣列的指標，其 `p - _Curr_` （也就是 `p` 減號 `_Curr_` ）是有效的運算式。 前面的元素 `p` 必須在前置狀態中有效。
 
     例如：
 
@@ -257,50 +257,58 @@ ms.locfileid: "81328002"
 
 - `_In_reads_to_ptr_z_(p)`
 
-     指向 null 端接陣列的指標,`p - _Curr_`其 運算式`p`(`_Curr_`即減號)是有效的運算式。 之前`p`的元素必須以預狀態有效。
+     以 null 結束之陣列的指標，其運算式 `p - _Curr_` （也就是 `p` 減號 `_Curr_` ）是有效的運算式。 前面的元素 `p` 必須在前置狀態中有效。
 
 - `_Out_writes_to_ptr_(p)`
 
-     指向陣列的指標`p - _Curr_`(即`p`減`_Curr_`號)是有效的表達式。 之前`p`的元素不必在預狀態中有效,並且必須在後狀態中有效。
+     陣列的指標，其 `p - _Curr_` （也就是 `p` 減號 `_Curr_` ）是有效的運算式。 前面的元素 `p` 不一定要在預先狀態中有效，而且在後置狀態中必須是有效的。
 
 - `_Out_writes_to_ptr_z_(p)`
 
-     指向 null 端接陣列的`p - _Curr_`指標`p`(`_Curr_`即負 )是有效的運算式。 之前`p`的元素不必在預狀態中有效,並且必須在後狀態中有效。
+     以 null 結束之陣列的指標，其 `p - _Curr_` （也就是 `p` 減號 `_Curr_` ）是有效的運算式。 前面的元素 `p` 不一定要在預先狀態中有效，而且在後置狀態中必須是有效的。
 
-## <a name="optional-pointer-parameters"></a>選擇式指標參數
+## <a name="optional-pointer-parameters"></a>選擇性指標參數
 
-當指標參數註釋包含`_opt_`時,它指示參數可能為空。 否則,註釋的表示行為與不包含的版本相同`_opt_`。 下面是指針參數註釋`_opt_`的變體清單:
+當指標參數注釋包含時 `_opt_` ，它會指出參數可能是 null。 否則，批註的行為會與不包含的版本相同 `_opt_` 。 以下是 `_opt_` 指標參數注釋的變數清單：
 
-||||
-|-|-|-|
-|`_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`|`_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`|`_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`|
+:::row:::
+    :::column:::
+        `_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`
+    :::column-end:::
+    :::column:::
+        `_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`
+    :::column-end:::
+    :::column:::
+        `_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`
+    :::column-end:::
+:::row-end:::
 
 ## <a name="output-pointer-parameters"></a>輸出指標參數
 
-輸出指標參數需要特殊的表示法來消除參數和指向位置的空值。
+輸出指標參數需要特殊的標記法，以區分參數上的 null 和指向的位置。
 
-### <a name="annotations-and-descriptions"></a>註解與說明
+### <a name="annotations-and-descriptions"></a>注釋和描述
 
 - `_Outptr_`
 
-   參數不能為空,在後狀態下,指向位置不能為空,並且必須有效。
+   參數不可以是 null，而且在後置狀態中，指向的位置不能是 null，而且必須有效。
 
 - `_Outptr_opt_`
 
-   參數可能為空,但在後狀態下,指向位置不能為空,並且必須有效。
+   參數可以是 null，但在後置狀態中，指向的位置不可以是 null，而且必須有效。
 
 - `_Outptr_result_maybenull_`
 
-   參數不能為空,在後狀態下,指向位置可以為空。
+   參數不可以是 null，而且在後置狀態中，指向的位置可以是 null。
 
 - `_Outptr_opt_result_maybenull_`
 
-   參數可能為空,在後狀態下,指向位置可以為空。
+   參數可以是 null，而在後置狀態中，指向的位置可以是 null。
 
-  在下表中,其他子字串將插入到註釋名稱中,以進一步限定註釋的含義。 各種`_z`子字串是 、、、`_bytebuffer_``_to_``_COM_``_buffer_`與 。
+  在下表中，其他子字串會插入批註名稱中，以進一步限定注釋的意義。 各種子字串為 `_z` 、 `_COM_` 、 `_buffer_` 、 `_bytebuffer_` 和 `_to_` 。
 
 > [!IMPORTANT]
-> 如果要註釋的介面是 COM,請使用這些註註的 COM 形式。 不要將 COM 註釋與任何其他類型介面一起使用。
+> 如果您要標注的介面是 COM，請使用這些批註的 COM 形式。 請勿將 COM 注釋與任何其他類型介面搭配使用。
 
 - `_Outptr_result_z_`
 
@@ -310,7 +318,7 @@ ms.locfileid: "81328002"
 
    `_Outptr_opt_result_maybenull_z_`
 
-   返回的指標具有`_Null_terminated_`註釋。
+   傳回的指標具有 `_Null_terminated_` 注釋。
 
 - `_COM_Outptr_`
 
@@ -320,7 +328,7 @@ ms.locfileid: "81328002"
 
    `_COM_Outptr_opt_result_maybenull_`
 
-   返回的指標具有 COM 語義,因此帶有`_On_failure_`返回的指標為空的後條件。
+   傳回的指標具有 COM 語義，這就是為什麼它會產生 `_On_failure_` 傳回的指標為 null 的後置條件。
 
 - `_Outptr_result_buffer_(s)`
 
@@ -330,7 +338,7 @@ ms.locfileid: "81328002"
 
    `_Outptr_opt_result_bytebuffer_(s)`
 
-   返回的指標指向大小`s`元素或位元組的有效緩衝區。
+   傳回的指標會指向大小 `s` 元素或位元組的有效緩衝區。
 
 - `_Outptr_result_buffer_to_(s, c)`
 
@@ -340,103 +348,108 @@ ms.locfileid: "81328002"
 
    `_Outptr_opt_result_bytebuffer_to_(s,c)`
 
-   返回的指標指向大小`s`元素或位元組的緩衝區,其中第一`c`個緩衝區有效。
+   傳回的指標會指向大小 `s` 元素或位元組的緩衝區，其中第一個 `c` 是有效的。
 
-某些介面約定假定輸出參數在失敗時無效。 除了顯式 COM 代碼之外,首選下表中的窗體。 對於 COM 代碼,請使用上一節中列出的相應的 COM 窗體。
+某些介面慣例假設輸出參數會在失敗時 nullified。 除了明確的 COM 程式碼以外，下表中的表單是慣用的。 針對 COM 程式碼，請使用上一節中所列的對應 COM 表單。
 
 - `_Result_nullonfailure_`
 
-   修改其他註釋。 如果函數失敗,結果將設置為 null。
+   修改其他批註。 如果函數失敗，結果會設定為 null。
 
 - `_Result_zeroonfailure_`
 
-   修改其他註釋。 如果函數失敗,結果將設置為零。
+   修改其他批註。 如果函數失敗，結果會設定為零。
 
 - `_Outptr_result_nullonfailure_`
 
-   如果函數成功,返回的指標指向有效緩衝區;如果函數失敗,則返回的指標指向空緩衝區。 此註釋適用於非可選參數。
+   如果函式成功，傳回的指標會指向有效的緩衝區; 如果函式失敗，則為 null。 此注釋適用于非選擇性的參數。
 
 - `_Outptr_opt_result_nullonfailure_`
 
-   如果函數成功,返回的指標指向有效緩衝區;如果函數失敗,則返回的指標指向空緩衝區。 此註釋適用於可選參數。
+   如果函式成功，傳回的指標會指向有效的緩衝區; 如果函式失敗，則為 null。 此注釋適用于選擇性參數。
 
 - `_Outref_result_nullonfailure_`
 
-   如果函數成功,返回的指標指向有效緩衝區;如果函數失敗,則返回的指標指向空緩衝區。 此註釋用於參考參數。
+   如果函式成功，傳回的指標會指向有效的緩衝區; 如果函式失敗，則為 null。 此注釋適用于參考參數。
 
 ## <a name="output-reference-parameters"></a>輸出參考參數
 
-參考參數的常見用途是輸出參數。 對於簡單的輸出引用參數,如`int&``_Out_`, 提供了正確的語義。 但是,當輸出值是指針(如`int *&`)時,等效指標註釋(如`_Outptr_ int **`)不提供正確的語義。 要簡潔地表示指標類型的輸出引用參數的語義,請使用以下復合註釋:
+參考參數的常見用法是用於輸出參數。 對於簡單的輸出參考參數（例如 `int&` ），會 `_Out_` 提供正確的語法。 不過，當輸出值是之類的指標時 `int *&` ，類似的指標注釋（例如） `_Outptr_ int **` 不會提供正確的語法。 若要以簡明的表示指標類型的輸出參考參數的語法，請使用下列複合批註：
 
-### <a name="annotations-and-descriptions"></a>註解與說明
+### <a name="annotations-and-descriptions"></a>注釋和描述
 
 - `_Outref_`
 
-     結果必須在後狀態中有效,並且不能為 null。
+     結果在後置狀態中必須是有效的，而且不能是 null。
 
 - `_Outref_result_maybenull_`
 
-     結果必須在後狀態中有效,但在後狀態時可能為空。
+     結果在後置狀態中必須是有效的，但在後置狀態中可能是 null。
 
 - `_Outref_result_buffer_(s)`
 
-     結果必須在後狀態中有效,並且不能為 null。 指向大小`s`元素的有效緩衝區。
+     結果在後置狀態中必須是有效的，而且不能是 null。 指向大小元素的有效緩衝區 `s` 。
 
 - `_Outref_result_bytebuffer_(s)`
 
-     結果必須在後狀態中有效,並且不能為 null。 指向大小`s`位元組的有效緩衝區。
+     結果在後置狀態中必須是有效的，而且不能是 null。 指向大小為位元組的有效緩衝區 `s` 。
 
 - `_Outref_result_buffer_to_(s, c)`
 
-     結果必須在後狀態中有效,並且不能為 null。 指向元素的`s`緩衝區,其中第一`c`個有效。
+     結果在後置狀態中必須是有效的，而且不能是 null。 指向元素的緩衝區 `s` ，其中第一個 `c` 是有效的。
 
 - `_Outref_result_bytebuffer_to_(s, c)`
 
-     結果必須在後狀態中有效,並且不能為 null。 指向第一個`s``c`有效位元組的緩衝區。
+     結果在後置狀態中必須是有效的，而且不能是 null。 指向 `s` 第一個有效位元組的緩衝區 `c` 。
 
 - `_Outref_result_buffer_all_(s)`
 
-     結果必須在後狀態中有效,並且不能為 null。 指向大小`s`有效元素的有效緩衝區。
+     結果在後置狀態中必須是有效的，而且不能是 null。 指向大小有效元素的有效緩衝區 `s` 。
 
 - `_Outref_result_bytebuffer_all_(s)`
 
-     結果必須在後狀態中有效,並且不能為 null。 指向有效元素`s`位元組的有效緩衝區。
+     結果在後置狀態中必須是有效的，而且不能是 null。 指向 `s` 有效元素位元組的有效緩衝區。
 
 - `_Outref_result_buffer_maybenull_(s)`
 
-     結果必須在後狀態中有效,但在後狀態時可能為空。 指向大小`s`元素的有效緩衝區。
+     結果在後置狀態中必須是有效的，但在後置狀態中可能是 null。 指向大小元素的有效緩衝區 `s` 。
 
 - `_Outref_result_bytebuffer_maybenull_(s)`
 
-     結果必須在後狀態中有效,但在後狀態時可能為空。 指向大小`s`位元組的有效緩衝區。
+     結果在後置狀態中必須是有效的，但在後置狀態中可能是 null。 指向大小為位元組的有效緩衝區 `s` 。
 
 - `_Outref_result_buffer_to_maybenull_(s, c)`
 
-     結果必須在後狀態中有效,但在後狀態時可能為空。 指向元素的`s`緩衝區,其中第一`c`個有效。
+     結果在後置狀態中必須是有效的，但在後置狀態中可能是 null。 指向元素的緩衝區 `s` ，其中第一個 `c` 是有效的。
 
 - `_Outref_result_bytebuffer_to_maybenull_(s,c)`
 
-     結果必須在後狀態中有效,但在後狀態時可能為空。 指向第一個`s``c`有效位元組的緩衝區。
+     結果在後置狀態中必須是有效的，但在 post 狀態中可能會是 null。 指向 `s` 第一個有效位元組的緩衝區 `c` 。
 
 - `_Outref_result_buffer_all_maybenull_(s)`
 
-     結果必須在後狀態中有效,但在後狀態時可能為空。 指向大小`s`有效元素的有效緩衝區。
+     結果在後置狀態中必須是有效的，但在 post 狀態中可能會是 null。 指向大小有效元素的有效緩衝區 `s` 。
 
 - `_Outref_result_bytebuffer_all_maybenull_(s)`
 
-     結果必須在後狀態中有效,但在後狀態時可能為空。 指向有效元素`s`位元組的有效緩衝區。
+     結果在後置狀態中必須是有效的，但在 post 狀態中可能會是 null。 指向 `s` 有效元素位元組的有效緩衝區。
 
 ## <a name="return-values"></a>傳回值
 
-函數的返回值類似於`_Out_`參數,但處於不同的去引用級別,您不必考慮指向結果的指標的概念。 對於以下註釋,返回值是註釋的物件 - 標量、指向結構的指標或指向緩衝區的指標。 這些註釋的語義與相應的`_Out_`註釋相同。
+函式的傳回值類似于 `_Out_` 參數，但位於不同的取消參考層級，而且您不需要考慮結果指標的概念。 針對下列注釋，傳回值是批註物件（純量、結構的指標或緩衝區的指標）。 這些批註與對應的注釋具有相同的語義 `_Out_` 。
 
-|||
-|-|-|
-|`_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`|`_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`|
+:::row:::
+    :::column:::
+        `_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`
+    :::column-end:::
+    :::column:::
+        `_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`
+    :::column-end:::
+:::row-end:::
 
-## <a name="format-string-parameters"></a>格式化字串參數
+## <a name="format-string-parameters"></a>格式字串參數
 
-- `_Printf_format_string_`指示參數是用於表達式的`printf`格式字串。
+- `_Printf_format_string_`指出參數是用於運算式的格式字串 `printf` 。
 
      **範例**
 
@@ -451,7 +464,7 @@ ms.locfileid: "81328002"
     }
     ```
 
-- `_Scanf_format_string_`指示參數是用於表達式的`scanf`格式字串。
+- `_Scanf_format_string_`指出參數是用於運算式的格式字串 `scanf` 。
 
      **範例**
 
@@ -466,7 +479,7 @@ ms.locfileid: "81328002"
     }
     ```
 
-- `_Scanf_s_format_string_`指示參數是用於表達式的`scanf_s`格式字串。
+- `_Scanf_s_format_string_`指出參數是用於運算式的格式字串 `scanf_s` 。
 
      **範例**
 
@@ -481,9 +494,9 @@ ms.locfileid: "81328002"
     }
     ```
 
-## <a name="other-common-annotations"></a>其他常見註解
+## <a name="other-common-annotations"></a>其他常見注釋
 
-### <a name="annotations-and-descriptions"></a>註解與說明
+### <a name="annotations-and-descriptions"></a>注釋和描述
 
 - `_In_range_(low, hi)`
 
@@ -499,30 +512,26 @@ ms.locfileid: "81328002"
 
      `_Field_range_(low, hi)`
 
-     參數、欄位或結果在從`low`到`hi`的範圍(包括)中。 等效於`_Satisfies_(_Curr_ >= low && _Curr_ <= hi)`該物件應用於帶標的物件以及適當的前狀態或後狀態條件。
+     參數、欄位或結果會在從到的範圍內（含） `low` `hi` 。 相當於 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` ，其會套用至加上批註的物件，以及適當的前置狀態或後置狀態條件。
 
     > [!IMPORTANT]
-    > 儘管名稱包含"in"和"out",但和`_In_``_Out_`的語義**不適用於**這些註釋。
+    > 雖然名稱包含「in」和「out」，但和的語義 `_In_` 並 `_Out_` 不適**not**用於這些注釋。
 
 - `_Pre_equal_to_(expr)`
 
      `_Post_equal_to_(expr)`
 
-     已用的已用值正是`expr`。 等效於`_Satisfies_(_Curr_ == expr)`該物件應用於帶標的物件以及適當的前狀態或後狀態條件。
+     標注的值完全是 `expr` 。 相當於 `_Satisfies_(_Curr_ == expr)` ，其會套用至加上批註的物件，以及適當的前置狀態或後置狀態條件。
 
 - `_Struct_size_bytes_(size)`
 
-     應用於結構或類聲明。 指示該類型的有效物件可能大於聲明的類型,由給出`size`的位元組數。 例如：
+     適用于結構或類別宣告。 表示該類型的有效物件可能大於宣告的類型，且提供的位元組數目 `size` 。 例如：
 
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`
 
-     然後,以類型`pM``MyStruct *`參數的位元組為單位的緩衝區大小將採用:
+     類型參數的緩衝區大小（以位元組為單位）會被視為 `pM` `MyStruct *` ：
 
      `min(pM->nSize, sizeof(MyStruct))`
-
-## <a name="related-resources"></a>相關資源
-
-[程式碼分析團隊部落格](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>另請參閱
 
@@ -532,5 +541,5 @@ ms.locfileid: "81328002"
 - [註釋結構和類別](../code-quality/annotating-structs-and-classes.md)
 - [註釋鎖定行為](../code-quality/annotating-locking-behavior.md)
 - [指定套用註釋的時機和位置](../code-quality/specifying-when-and-where-an-annotation-applies.md)
-- [內在函數](../code-quality/intrinsic-functions.md)
+- [內建函式](../code-quality/intrinsic-functions.md)
 - [最佳做法和範例](../code-quality/best-practices-and-examples-sal.md)

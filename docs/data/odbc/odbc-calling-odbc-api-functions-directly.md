@@ -12,36 +12,36 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-ms.openlocfilehash: 208749438f40eef746a638dd12373397c426d454
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1cb5df4a93fc642ccf4d500a5eb93690b0b3d75
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368660"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403814"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 
-與 ODBC 相比,資料庫類為[數據源](../../data/odbc/data-source-odbc.md)提供了更簡單的介面。 因此,類不封裝所有ODBC API。 對於任何超出類功能的功能,必須直接調用 ODBC API 函數。 例如,必須直接調用ODBC目錄函數(、、、`::SQLColumns``::SQLProcedures``::SQLTables`等函數)。
+資料庫類別提供比 ODBC 更簡單的[資料來源](../../data/odbc/data-source-odbc.md)介面。 因此，類別不會封裝所有的 ODBC API。 對於超出類別能力的任何功能，您必須直接呼叫 ODBC API 函式。 例如，您必須直接呼叫 ODBC 目錄函式（ `::SQLColumns` 、 `::SQLProcedures` 、 `::SQLTables` 及其他函數）。
 
 > [!NOTE]
-> ODBC 資料來源可透過 MFC ODBC 類別(如本主題所述)或透過 MFC 資料存取物件 (DAO) 類別存取。
+> 您可以透過 MFC ODBC 類別存取 ODBC 資料來源，如本主題中所述，或透過 MFC 資料存取物件（DAO）類別。
 
-要直接調用 ODBC API 函數,必須執行與在沒有框架的情況下進行調用時相同的步驟。 它們的步驟是:
+若要直接呼叫 ODBC API 函式，當您在沒有架構的情況下進行呼叫時，您必須採取相同的步驟。 其步驟如下：
 
-- 為呼叫返回的任何結果分配存儲。
+- 為呼叫傳回的任何結果配置儲存體。
 
-- 傳遞 ODBC`HDBC``HSTMT`或句柄,具體取決於函數的參數簽名。 使用[AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv)宏檢索 ODBC 句柄。
+- 根據函式 `HDBC` 的參數簽章，傳遞 ODBC 或 `HSTMT` 控制碼。 使用[AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv)宏來取出 ODBC 控制碼。
 
-   成員變數`CDatabase::m_hdbc`,`CRecordset::m_hstmt`並且可用,因此您無需自己分配和初始化這些變數。
+   成員變數 `CDatabase::m_hdbc` 和 `CRecordset::m_hstmt` 可供使用，因此您不需要自行配置和初始化這些變數。
 
-- 可能調用其他 ODBC 功能來準備或跟進主呼叫。
+- 可能呼叫其他 ODBC 函式來準備或跟進主要呼叫。
 
-- 完成後取消分配存儲。
+- 完成時解除配置儲存體。
 
-有關這些步驟的詳細資訊,請參閱 MSDN 文件中[的開放資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
+如需這些步驟的詳細資訊，請參閱 ODBC 程式設計[人員參考](/sql/odbc/reference/odbc-programmer-s-reference)。
 
-除了這些步驟之外,還需要執行額外的步驟來檢查函數返回值,確保程式不等待非同步調用完成,等等。 可以使用AFX_SQL_ASYNC和AFX_SQL_SYNC宏來簡化最後的步驟。 有關詳細資訊,請參閱*MFC 參考*中的[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。
+除了這些步驟之外，您還需要採取額外的步驟來檢查函式傳回值，確保您的程式不會等待非同步呼叫完成，依此類推。 您可以使用 AFX_SQL_ASYNC 和 AFX_SQL_SYNC 宏來簡化這些最後的步驟。 如需詳細資訊，請參閱[MFC 宏和 globals](../../mfc/reference/mfc-macros-and-globals.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 基礎知識](../../data/odbc/odbc-basics.md)
+[ODBC 基本概念](../../data/odbc/odbc-basics.md)

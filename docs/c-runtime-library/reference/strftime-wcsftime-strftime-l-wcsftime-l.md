@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920026"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404316"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 
@@ -123,7 +123,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-*Format*引數是由一或多個代碼所組成;如同在**printf**中，格式化程式碼的前面會加上百分比**%** 符號（）。 不**%** 是以開頭的字元會原封不動地複製到*strDest*。 目前地區設定的 [ **LC_TIME** ] 分類會影響**strftime**的輸出格式。 （如需**LC_TIME**的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)）。**Strftime**和**wcsftime**函數會使用目前設定的地區設定。 這些函式的 **_strftime_l**和 **_wcsftime_l**版本都相同，不同之處在于它們會採用地區設定作為參數，並使用它，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+*Format*引數是由一或多個代碼所組成;如同在**printf**中，格式化程式碼的前面會加上百分比符號（ **%** ）。 不是以開頭的字元 **%** 會原封不動地複製到*strDest*。 目前地區設定的 [ **LC_TIME** ] 分類會影響**strftime**的輸出格式。 （如需**LC_TIME**的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)）。**Strftime**和**wcsftime**函數會使用目前設定的地區設定。 這些函式的 **_strftime_l**和 **_wcsftime_l**版本都相同，不同之處在于它們會採用地區設定作為參數，並使用它，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 **Strftime**函數支援下列格式設定代碼：
 
@@ -179,6 +179,9 @@ size_t _wcsftime_l(
 
 由 **% V**、 **% g**和 **% g**所產生的 ISO 8601 周和以周為基礎的年份，會使用從星期一開始的周，其中第1周是包含1月4日的一周，其中至少包含四天的年份。 如果今年的第一個星期一是第二、第三或第4個，則前幾天是上一年最後一周的一部分。 在那些日子中， **% V**會取代為53，而 **% g**和 **% g**都會取代為前一年的數位。
 
+> [!NOTE]
+> 使用其中一個函式搭配 `strftime` `tm` 從傳回的指標時 `gmtime` ，透過和規範列印的 `%Z` 值 `%z` 將不會正確。 這是因為 `tm` C 標準所指定的結構不包含時區名稱或位移的資訊。 相反地，時區資訊是透過全域變數[ `_timezone` 和 `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)填入。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
@@ -196,10 +199,10 @@ size_t _wcsftime_l(
 
 ## <a name="see-also"></a>另請參閱
 
-[語言](../../c-runtime-library/locale.md) <br/>
+[地區設定](../../c-runtime-library/locale.md) <br/>
 [時間管理](../../c-runtime-library/time-management.md) <br/>
 [字串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md) <br/>
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md) <br/>
+[strcoll 函式](../../c-runtime-library/strcoll-functions.md) <br/>
 [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

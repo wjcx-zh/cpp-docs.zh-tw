@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: f0b46065371b8cb70802cfc38b7365fd2db14bf5
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538638"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404843"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 
@@ -33,7 +33,7 @@ C++ Accelerated Massive Parallelism （C++ AMP）利用個別圖形配接器上�
 
 ## <a name="introduction"></a>簡介
 
-下列兩個範例說明 C++ AMP 的主要元件。 假設您想要加入 2 1 維度陣列的對應元素。 例如，您可能會想要新增`{1, 2, 3, 4, 5}`和`{6, 7, 8, 9, 10}`以取得`{7, 9, 11, 13, 15}`。 如果沒有使用 C++ AMP，您可以撰寫下列程式碼來新增數位並顯示結果。
+下列兩個範例說明 C++ AMP 的主要元件。 假設您想要加入 2 1 維度陣列的對應元素。 例如，您可能會想要新增 `{1, 2, 3, 4, 5}` 和 `{6, 7, 8, 9, 10}` 以取得 `{7, 9, 11, 13, 15}` 。 如果沒有使用 C++ AMP，您可以撰寫下列程式碼來新增數位並顯示結果。
 
 ```cpp
 #include <iostream>
@@ -60,9 +60,9 @@ void StandardMethod() {
 
 - 資料：資料包含三個數組。 全都具有相同的順位（一）和長度（5）。
 
-- 反復專案：第`for`一個迴圈會提供一種機制，可逐一查看陣列中的元素。 您想要執行以計算總和的程式碼會包含在第一個`for`區塊中。
+- 反復專案：第一個 `for` 迴圈會提供一種機制，可逐一查看陣列中的元素。 您想要執行以計算總和的程式碼會包含在第一個 `for` 區塊中。
 
-- Index： `idx`變數會存取陣列的個別元素。
+- Index： `idx` 變數會存取陣列的個別元素。
 
 使用 C++ AMP，您可以改為撰寫下列程式碼。
 
@@ -102,11 +102,11 @@ void CppAmpMethod() {
 
 相同的基本元素存在，但會使用 C++ AMP 的結構：
 
-- 資料：您可以使用 c + + 陣列來建立三個 C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md)物件。 您會提供四個值來`array_view`建立物件：資料值、排名、元素類型，以及每個維度中的`array_view`物件長度。 Rank 和 type 會當做型別參數傳遞。 資料和長度會當做函數參數傳遞。 在此範例中，傳遞至此函式的 c + + 陣列是一維。 「順位」和「長度」是用來在`array_view`物件中建立資料的矩形圖形，而資料值則是用來填滿陣列。 執行時間程式庫也包含[陣列類別](../../parallel/amp/reference/array-class.md)，其介面類別似于`array_view`類別，本文稍後會加以討論。
+- 資料：您可以使用 c + + 陣列來建立三個 C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md)物件。 您會提供四個值來建立 `array_view` 物件：資料值、排名、元素類型，以及 `array_view` 每個維度中的物件長度。 Rank 和 type 會當做型別參數傳遞。 資料和長度會當做函數參數傳遞。 在此範例中，傳遞至此函式的 c + + 陣列是一維。 「順位」和「長度」是用來在物件中建立資料的矩形圖形 `array_view` ，而資料值則是用來填滿陣列。 執行時間程式庫也包含[陣列類別](../../parallel/amp/reference/array-class.md)，其介面類別似于 `array_view` 類別，本文稍後會加以討論。
 
-- 反復專案： [Parallel_for_each 函數（C++ AMP）](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供逐一查看資料元素或*計算定義域*的機制。 在此範例中，計算網域是由`sum.extent`所指定。 您想要執行的程式碼包含在 lambda 運算式或*核心*函式中。 `restrict(amp)`指出只會使用 C++ AMP 所能加速的 c + + 語言子集。
+- 反復專案： [Parallel_for_each 函數（C++ AMP）](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供逐一查看資料元素或*計算定義域*的機制。 在此範例中，計算網域是由所指定 `sum.extent` 。 您想要執行的程式碼包含在 lambda 運算式或*核心*函式中。 `restrict(amp)`指出只會使用 C++ AMP 所能加速的 c + + 語言子集。
 
-- Index：[索引類別](../../parallel/amp/reference/index-class.md)變數（） `idx`是以1的順位來宣告，以符合`array_view`物件的次序。 藉由使用索引，您可以存取`array_view`物件的個別元素。
+- Index：[索引類別](../../parallel/amp/reference/index-class.md)變數（ `idx` ）是以1的順位來宣告，以符合物件的次序 `array_view` 。 藉由使用索引，您可以存取物件的個別元素 `array_view` 。
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>塑造和編制索引資料：索引和範圍
 
@@ -114,9 +114,9 @@ void CppAmpMethod() {
 
 ### <a name="index-class"></a>index 類別
 
-[Index 類別](../../parallel/amp/reference/index-class.md)藉由將每個維度`array`中`array_view`的原點位移封裝成一個物件，來指定或物件中的位置。 當您存取陣列中的位置時，會將`index`物件傳遞給索引運算子， `[]`而不是整數索引的清單。 您可以使用[array：： operator （）運算子](reference/array-class.md#operator_call)或[array_view：： Operator （）運算子](reference/array-view-class.md#operator_call)，來存取每個維度中的元素。
+[Index 類別](../../parallel/amp/reference/index-class.md)藉 `array` 由將 `array_view` 每個維度中的原點位移封裝成一個物件，來指定或物件中的位置。 當您存取陣列中的位置時，會將 `index` 物件傳遞給索引運算子， `[]` 而不是整數索引的清單。 您可以使用[array：： operator （）運算子](reference/array-class.md#operator_call)或[array_view：： Operator （）運算子](reference/array-view-class.md#operator_call)，來存取每個維度中的元素。
 
-下列範例會建立一維索引，以指定一維`array_view`物件中的第三個元素。 索引是用來列印`array_view`物件中的第三個元素。 輸出為3。
+下列範例會建立一維索引，以指定一維物件中的第三個元素 `array_view` 。 索引是用來列印物件中的第三個元素 `array_view` 。 輸出為3。
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5};
@@ -128,7 +128,7 @@ std::cout << a[idx] << "\n";
 // Output: 3
 ```
 
-下列範例會建立二維索引，以指定在二維`array_view`物件中，資料列 = 1 和資料行 = 2 的元素。 此函式中`index`的第一個參數是資料列元件，而第二個參數是資料行元件。 輸出為6。
+下列範例會建立二維索引，以指定在二維物件中，資料列 = 1 和資料行 = 2 的元素 `array_view` 。 此函式中的第一個參數 `index` 是資料列元件，而第二個參數是資料行元件。 輸出為6。
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5, 6};
@@ -140,7 +140,7 @@ std::cout <<a[idx] << "\n";
 // Output: 6
 ```
 
-下列範例會建立一個三維索引，以指定在三維`array_view`物件中深度 = 0、資料列 = 1 和資料行 = 3 的元素。 請注意，第一個參數是「深度」元件，第二個參數是資料列元件，而第三個參數是資料行元件。 輸出為8。
+下列範例會建立一個三維索引，以指定在三維物件中深度 = 0、資料列 = 1 和資料行 = 3 的元素 `array_view` 。 請注意，第一個參數是「深度」元件，第二個參數是資料列元件，而第三個參數是資料行元件。 輸出為8。
 
 ```cpp
 int aCPP[] = {
@@ -158,7 +158,7 @@ std::cout << a[idx] << "\n";
 
 ### <a name="extent-class"></a>extent 類別
 
-[範圍類別](../../parallel/amp/reference/extent-class.md)會指定`array`或`array_view`物件之每個維度中的資料長度。 您可以建立範圍，並使用它來建立`array`或`array_view`物件。 您也可以取得現有`array`或`array_view`物件的範圍。 下列範例會在`array_view`物件的每個維度中列印範圍的長度。
+[範圍類別](../../parallel/amp/reference/extent-class.md)會指定或物件之每個維度中的資料長度 `array` `array_view` 。 您可以建立範圍，並使用它來建立 `array` 或 `array_view` 物件。 您也可以取得現有或物件的範圍 `array` `array_view` 。 下列範例會在物件的每個維度中列印範圍的長度 `array_view` 。
 
 ```cpp
 int aCPP[] = {
@@ -173,7 +173,7 @@ std::cout << "The depth is " << a.extent[0] << "\n";
 std::cout << "Length in most significant dimension is " << a.extent[0] << "\n";
 ```
 
-下列範例會建立與`array_view`上一個範例中的物件具有相同維度的物件，但此範例會使用物件， `extent`而不是在此函式中`array_view`使用明確參數。
+下列範例會建立與 `array_view` 上一個範例中的物件具有相同維度的物件，但此範例會使用物件， `extent` 而不是在此函式中使用明確參數 `array_view` 。
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24};
@@ -192,7 +192,7 @@ std::cout << "The depth is " << a.extent[0] << "\n";
 
 ### <a name="array-class"></a>array 類別
 
-當建立`array`物件時，如果您使用包含資料集指標的函式，則會在快速鍵上建立資料的深層複本。 核心函數會修改加速器上的複本。 當核心函數的執行完成時，您必須將資料複製回源資料結構。 下列範例會將向量中的每個元素乘以10。 核心函數完成之後， `vector conversion operator`會用來將資料複製回 vector 物件。
+當 `array` 建立物件時，如果您使用包含資料集指標的函式，則會在快速鍵上建立資料的深層複本。 核心函數會修改加速器上的複本。 當核心函數的執行完成時，您必須將資料複製回源資料結構。 下列範例會將向量中的每個元素乘以10。 核心函數完成之後， `vector conversion operator` 會用來將資料複製回 vector 物件。
 
 ```cpp
 std::vector<int> data(5);
@@ -219,11 +219,11 @@ for (int i = 0; i < 5; i++)
 
 ### <a name="array_view-class"></a>array_view 類別
 
-與`array_view` `array`類別幾乎具有相同的成員，但基礎行為並不相同。 傳遞給此函`array_view`式的資料不會在 GPU 上複寫，因為它`array`是使用的「處理常式」。 而是在執行核心函數時，將資料複製到快速鍵。 因此，如果您建立兩`array_view`個使用相同資料的物件，這`array_view`兩個物件都會參考相同的記憶體空間。 當您這麼做時，必須同步處理任何多執行緒存取。 使用`array_view`類別的主要優點是，只有在必要時才會移動資料。
+與 `array_view` 類別幾乎具有相同的成員 `array` ，但基礎行為並不相同。 傳遞給此函 `array_view` 式的資料不會在 GPU 上複寫，因為它是使用的「處理常式」 `array` 。 而是在執行核心函數時，將資料複製到快速鍵。 因此，如果您建立兩個 `array_view` 使用相同資料的物件，這兩個 `array_view` 物件都會參考相同的記憶體空間。 當您這麼做時，必須同步處理任何多執行緒存取。 使用類別的主要優點 `array_view` 是，只有在必要時才會移動資料。
 
 ### <a name="comparison-of-array-and-array_view"></a>陣列和 array_view 的比較
 
-下表摘要說明`array`與`array_view`類別之間的相似性和差異。
+下表摘要說明與類別之間的相似性和 `array` 差異 `array_view` 。
 
 |描述|array 類別|array_view 類別|
 |-----------------|-----------------|-----------------------|
@@ -232,15 +232,15 @@ for (int i = 0; i < 5; i++)
 |形狀|矩形.|矩形.|
 |資料儲存體|是資料容器。|是資料包裝函式。|
 |複製|定義的明確和深層複製。|當核心函數存取時，隱含複製。|
-|資料抓取|將陣列資料複製回 CPU 執行緒上的物件。|藉由直接存取`array_view`物件，或藉由呼叫[array_view：： synchronize 方法](reference/array-view-class.md#synchronize)繼續存取原始容器上的資料。|
+|資料抓取|將陣列資料複製回 CPU 執行緒上的物件。|藉由直接存取 `array_view` 物件，或藉由呼叫[array_view：： synchronize 方法](reference/array-view-class.md#synchronize)繼續存取原始容器上的資料。|
 
 ### <a name="shared-memory-with-array-and-array_view"></a>具有陣列和 array_view 的共用記憶體
 
 共用記憶體是可同時由 CPU 和加速器存取的記憶體。 使用共用記憶體可免除或大幅降低在 CPU 與加速器之間複製資料的額外負荷。 雖然記憶體是共用的，但 CPU 和加速器無法同時存取它，而這麼做會造成未定義的行為。
 
-`array`如果相關聯的加速器支援共用記憶體的使用，則可以使用物件來指定其更細微的控制。 快速鍵是否支援共用記憶體是由快速鍵的[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)屬性所決定，當支援共用記憶體時，它會傳回**true** 。 如果支援共用記憶體，則加速器上記憶體配置的預設[Access_type 列舉](reference/concurrency-namespace-enums-amp.md#access_type)是由`default_cpu_access_type`屬性所決定。 根據預設， `array`和`array_view`物件會採用與主要`access_type`關聯`accelerator`的相同。
+`array`如果相關聯的加速器支援共用記憶體的使用，則可以使用物件來指定其更細微的控制。 快速鍵是否支援共用記憶體是由快速鍵的[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)屬性所決定，當支援共用記憶體時，它會傳回**true** 。 如果支援共用記憶體，則加速器上記憶體配置的預設[Access_type 列舉](reference/concurrency-namespace-enums-amp.md#access_type)是由屬性所決定 `default_cpu_access_type` 。 根據預設， `array` 和 `array_view` 物件會採用與 `access_type` 主要關聯的相同 `accelerator` 。
 
-藉由`array`明確地設定[array：： cpu_access_type 資料成員](reference/array-class.md#cpu_access_type)屬性，您可以對共用記憶體的使用方式進行細微的控制，讓您可以根據計算核心的記憶體存取模式，針對硬體的效能特性將應用程式優化。 與`array_view`相關聯的`cpu_access_type` `array`會反映相同的：或者，如果未使用資料來源來建立 array_view，它`access_type`會反映出第一次導致它配置儲存體的環境。 也就是說，如果它是由主機（CPU）第一次存取，則其行為就像是透過 CPU 資料來源建立，並共用的`access_type` （由 capture `accelerator_view`所關聯）。不過，如果第一次`accelerator_view`存取，則其行為就像是透過上`array`建立的`accelerator_view`建立，並共用`array`的。 `access_type`
+藉由明確地設定[array：： Cpu_access_type 資料成員](reference/array-class.md#cpu_access_type)屬性 `array` ，您可以對共用記憶體的使用方式進行細微的控制，讓您可以根據計算核心的記憶體存取模式，針對硬體的效能特性將應用程式優化。 與 `array_view` 相關聯的會反映相同的 `cpu_access_type` `array` ; 或者，如果未使用資料來源來建立 array_view，它會 `access_type` 反映出第一次導致它配置儲存體的環境。 也就是說，如果它是第一次由主機（CPU）存取，則其行為就像是透過 CPU 資料來源建立，並共用的是 `access_type` `accelerator_view` 由 capture 所關聯的，不過，如果是第一次存取 `accelerator_view` ，則其行為就像是透過 `array` 在上建立的建立， `accelerator_view` 並共用的 `array` `access_type` 。
 
 下列程式碼範例示範如何判斷預設加速器是否支援共用記憶體，然後建立數個具有不同 cpu_access_type 設定的陣列。
 
@@ -284,7 +284,7 @@ int main()
 
 ## <a name="executing-code-over-data-parallel_for_each"></a>執行資料的程式碼： parallel_for_each
 
-[Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)函式會針對`array`或`array_view`物件中的資料，定義您想要在加速器上執行的程式碼。 請考慮本主題簡介中的下列程式碼。
+[Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)函式會針對或物件中的資料，定義您想要在加速器上執行的程式碼 `array` `array_view` 。 請考慮本主題簡介中的下列程式碼。
 
 ```cpp
 #include <amp.h>
@@ -316,11 +316,11 @@ void AddArrays() {
 
 `parallel_for_each`方法會採用兩個引數：計算網域和 lambda 運算式。
 
-*計算網域*是`extent`物件或`tiled_extent`物件，可定義要為平行執行建立的一組執行緒。 計算網域中的每個元素都會產生一個執行緒。 在此情況下， `extent`物件是一維，而且有五個元素。 因此，會啟動五個執行緒。
+*計算網域*是 `extent` 物件或 `tiled_extent` 物件，可定義要為平行執行建立的一組執行緒。 計算網域中的每個元素都會產生一個執行緒。 在此情況下， `extent` 物件是一維，而且有五個元素。 因此，會啟動五個執行緒。
 
-*Lambda 運算式*會定義要在每個執行緒上執行的程式碼。 Capture 子句`[=]`會指定 lambda 運算式的主體以傳值方式存取所有已捕捉的變數，在此案例中為`a`、 `b`和。 `sum` 在此範例中，參數清單會建立一個名為`index` `idx`的一維變數。 第一個執行緒中`idx[0]`的值為0，並在每個後續的執行緒中增加一個。 `restrict(amp)`指出只會使用 C++ AMP 所能加速的 c + + 語言子集。  [限制（C++ AMP）](../../cpp/restrict-cpp-amp.md)中會描述具有限制修飾詞之函數的限制。 如需詳細資訊，請參閱[Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)。
+*Lambda 運算式*會定義要在每個執行緒上執行的程式碼。 Capture 子句 `[=]` 會指定 lambda 運算式的主體以傳值方式存取所有已捕捉的變數，在此案例中為 `a` 、 `b` 和 `sum` 。 在此範例中，參數清單會建立一個名為的一維 `index` 變數 `idx` 。 `idx[0]`第一個執行緒中的值為0，並在每個後續的執行緒中增加一個。 `restrict(amp)`指出只會使用 C++ AMP 所能加速的 c + + 語言子集。  [限制（C++ AMP）](../../cpp/restrict-cpp-amp.md)中會描述具有限制修飾詞之函數的限制。 如需詳細資訊，請參閱[Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)。
 
-Lambda 運算式可以包含要執行的程式碼，或可以呼叫個別的核心函式。 核心函數必須包含`restrict(amp)`修飾詞。 下列範例相當於先前的範例，但它會呼叫個別的核心函式。
+Lambda 運算式可以包含要執行的程式碼，或可以呼叫個別的核心函式。 核心函數必須包含修飾詞 `restrict(amp)` 。 下列範例相當於先前的範例，但它會呼叫個別的核心函式。
 
 ```cpp
 #include <amp.h>
@@ -360,9 +360,9 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>加速程式碼：磚和障礙物
 
-您可以使用並排來取得額外的加速。 並排顯示會將執行緒分割成相等的矩形子集或*磚*。 您可以根據您的資料集和您正在編碼的演算法來決定適當的磚大小。 針對每個執行緒，您可以存取資料元素的*全域*位置（相對於整個`array`或`array_view` ），以及相對於磚的*本機*位置存取。 使用本機索引值可簡化您的程式碼，因為您不需要撰寫程式碼來將索引值從全域轉譯為本機。 若要使用並排顯示，請在`parallel_for_each`方法中的計算網域上呼叫[範圍：：磚方法](reference/extent-class.md#tile)，然後在 lambda 運算式中使用[tiled_index](../../parallel/amp/reference/tiled-index-class.md)物件。
+您可以使用並排來取得額外的加速。 並排顯示會將執行緒分割成相等的矩形子集或*磚*。 您可以根據您的資料集和您正在編碼的演算法來決定適當的磚大小。 針對每個執行緒，您可以存取資料元素的*全域*位置（相對於整個或） `array` ， `array_view` 以及相對於磚的*本機*位置存取。 使用本機索引值可簡化您的程式碼，因為您不需要撰寫程式碼來將索引值從全域轉譯為本機。 若要使用並排顯示，請在方法中的計算網域上呼叫[範圍：：磚方法](reference/extent-class.md#tile) `parallel_for_each` ，然後在 lambda 運算式中使用[tiled_index](../../parallel/amp/reference/tiled-index-class.md)物件。
 
-在一般應用程式中，圖格中的元素會以某種方式相關，而且程式碼必須存取並追蹤磚中的值。 請使用[Tile_static 關鍵字](../../cpp/tile-static-keyword.md)關鍵字和[tile_barrier：： wait 方法](reference/tile-barrier-class.md#wait)來完成此動作。 具有**tile_static**關鍵字的變數會在整個磚上具有範圍，並為每個磚建立變數的實例。 您必須處理對變數進行磚執行緒存取的同步處理。 [Tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)會停止執行目前的執行緒，直到磚中的所有線程都已達到對的呼叫`tile_barrier::wait`為止。 因此，您可以使用**tile_static**變數來累積整個磚的值。 然後您就可以完成任何需要存取所有值的計算。
+在一般應用程式中，圖格中的元素會以某種方式相關，而且程式碼必須存取並追蹤磚中的值。 請使用[Tile_static 關鍵字](../../cpp/tile-static-keyword.md)關鍵字和[tile_barrier：： wait 方法](reference/tile-barrier-class.md#wait)來完成此動作。 具有**tile_static**關鍵字的變數會在整個磚上具有範圍，並為每個磚建立變數的實例。 您必須處理對變數進行磚執行緒存取的同步處理。 [Tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)會停止執行目前的執行緒，直到磚中的所有線程都已達到對的呼叫為止 `tile_barrier::wait` 。 因此，您可以使用**tile_static**變數來累積整個磚的值。 然後您就可以完成任何需要存取所有值的計算。
 
 下圖代表以磚排列之取樣資料的二維陣列。
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>數學程式庫
 
-C++ AMP 包含兩個數學程式庫。 [Concurrency：:p Recise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)中的雙精確度程式庫提供雙精確度函數的支援。 它也會提供單精確度函數的支援，但仍需要硬體的雙精確度支援。 它符合[C99 規格（ISO/IEC 9899）](https://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必須支援完整的雙精確度。 您可以藉由檢查[快速鍵：： Supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)的值來判斷其是否存在。 [Concurrency：： Fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)中的快速數學程式庫包含另一組數學函數。 這些函式只`float`支援運算元、執行得更快，但不如雙精確度數學程式庫中的精確。 函式會包含在\<amp_math .h> 標頭檔中，而且所有都會使用`restrict(amp)`宣告。 \<H> 標頭檔中的函式會匯入`fast_math`和`precise_math`命名空間中。 **Restrict**關鍵字可用來區分\<h> 版本和 C++ AMP 版本。 下列程式碼會使用快速方法，針對計算網域中的每個值計算以10為底數的對數。
+C++ AMP 包含兩個數學程式庫。 [Concurrency：:p Recise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)中的雙精確度程式庫提供雙精確度函數的支援。 它也會提供單精確度函數的支援，但仍需要硬體的雙精確度支援。 它符合[C99 規格（ISO/IEC 9899）](https://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必須支援完整的雙精確度。 您可以藉由檢查[快速鍵：： Supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)的值來判斷其是否存在。 [Concurrency：： Fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)中的快速數學程式庫包含另一組數學函數。 這些函式只支援 `float` 運算元、執行得更快，但不如雙精確度數學程式庫中的精確。 函式會包含在 \<amp_math.h> 標頭檔中，而且所有都會使用宣告 `restrict(amp)` 。 標頭檔中的函式 \<cmath> 會匯入 `fast_math` 和 `precise_math` 命名空間中。 **Restrict**關鍵字是用來區分 \<cmath> 版本和 C++ AMP 版本。 下列程式碼會使用快速方法，針對計算網域中的每個值計算以10為底數的對數。
 
 ```cpp
 #include <amp.h>
@@ -459,13 +459,13 @@ void MathExample() {
 
 ## <a name="graphics-library"></a>圖形庫
 
-C++ AMP 包含專為加速圖形程式設計而設計的圖形程式庫。 此程式庫僅適用于支援原生圖形功能的裝置。 這些方法位於[Concurrency：： Graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)中，並包含在\<amp_graphics .h> 標頭檔中。 圖形程式庫的主要元件如下：
+C++ AMP 包含專為加速圖形程式設計而設計的圖形程式庫。 此程式庫僅適用于支援原生圖形功能的裝置。 這些方法位於[Concurrency：： Graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)中，並包含在 \<amp_graphics.h> 標頭檔中。 圖形程式庫的主要元件如下：
 
-- [材質類別](../../parallel/amp/reference/texture-class.md)：您可以使用材質類別，從記憶體或從檔案建立材質。 紋理與陣列類似，因為它們包含資料，而它們與 c + + 標準程式庫中的容器類似于指派和複製結構。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../../standard-library/stl-containers.md)。 `texture`類別的範本參數是元素類型和排名。 次序可以是1、2或3。 元素類型可以是本文稍後所述的其中一種簡短向量類型。
+- [材質類別](../../parallel/amp/reference/texture-class.md)：您可以使用材質類別，從記憶體或從檔案建立材質。 紋理與陣列類似，因為它們包含資料，而它們與 c + + 標準程式庫中的容器類似于指派和複製結構。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../../standard-library/stl-containers.md)。 類別的範本參數 `texture` 是元素類型和排名。 次序可以是1、2或3。 元素類型可以是本文稍後所述的其中一種簡短向量類型。
 
 - [Writeonly_texture_view 類別](../../parallel/amp/reference/writeonly-texture-view-class.md)：提供任何材質的僅限寫入存取。
 
-- 短向量程式庫：定義一組長度為2、3和4的簡短向量類型，其以**int**、 `uint`、 **float**、 **double**、[標準](../../parallel/amp/reference/norm-class.md)或[unorm](../../parallel/amp/reference/unorm-class.md)為基礎。
+- 短向量程式庫：定義一組長度為2、3和4的簡短向量類型，其以**int**、 `uint` 、 **float**、 **double**、[標準](../../parallel/amp/reference/norm-class.md)或[unorm](../../parallel/amp/reference/unorm-class.md)為基礎。
 
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 應用程式
 
@@ -497,13 +497,13 @@ C++ AMP 包含專為加速圖形程式設計而設計的圖形程式庫。 此�
 
 - [通道 (執行緒檢視)](/visualstudio/profiling/channels-threads-view)
 
-- [使用並行視覺化來分析 C++ AMP 程式碼](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+- [使用並行視覺化來分析 C++ AMP 程式碼](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)
 
 ## <a name="performance-recommendations"></a>效能建議
 
 不帶正負號整數的模數和除數，比模數和帶正負號整數的分割明顯更好。 我們建議您盡可能使用不帶正負號的整數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)<br/>

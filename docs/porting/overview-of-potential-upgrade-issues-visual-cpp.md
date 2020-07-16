@@ -2,12 +2,12 @@
 title: 潛在升級問題概觀 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 44fcb6776118e829fe7c96e54f3f51615604ac31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368478"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404817"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
@@ -33,11 +33,11 @@ C++ 沒有穩定的應用程式二進位介面 (ABI)。 但 Visual Studio 會為
 
 如果您的目的檔包含具有 C++ 連結的外部符號，則該目的檔可能未正確地連結到以不同主要工具組版本所產生的目的檔。 有許多可能的結果︰連結可能完全失敗 (例如，如果名稱裝飾已變更的話)。 連結可能成功，但執行階段可能無法運作 (例如，如果型別版面配置已變更的話)。 或者在許多情況下，可能剛好能夠運作且未發生任何錯誤。 另請注意，雖然 C++ ABI 不穩定，但是 COM 所需的 C ABI 和 C++ ABI 子集則十分穩定。
 
-若您連結到匯入程式庫，在執行階段即會使用會保留 ABI 相容性的 Visual Studio 可轉散發程式庫之任一新版。 例如，如果您的應用程式使用 Visual Studio 2015 Update 3 工具組進行編譯及連結，則可以使用任一 Visual Studio 2017 或 Visual Studio 2019 的可轉散發套件，因為 2015、2017 與 2019 的程式庫有保留二進位的回溯相容性。 相反,情況並非如此:對於早期版本的工具集,您無法使用可再分發版本來構建代碼,即使它們具有相容的 ABI。
+若您連結到匯入程式庫，在執行階段即會使用會保留 ABI 相容性的 Visual Studio 可轉散發程式庫之任一新版。 例如，如果您的應用程式使用 Visual Studio 2015 Update 3 工具組進行編譯及連結，則可以使用任一 Visual Studio 2017 或 Visual Studio 2019 的可轉散發套件，因為 2015、2017 與 2019 的程式庫有保留二進位的回溯相容性。 相反地，您無法將可轉散發套件用於舊版工具組，而不是用來建立程式碼，即使它們有相容的 ABI 也是如此。
 
 ### <a name="libraries"></a>程式庫
 
-如果您使用特定版本的 Visual Studio C++ 程式庫標頭檔來編譯來源檔案 (方法是使用 #including 包含標頭)，則產生的目的檔必須連結到相同版本的程式庫。 因此，例如，若您使用 Visual Studio 2015 Update 3 \<immintrin.h> 編譯原始程式檔，即必須連結到 Visual Studio 2015 Update 3 vcruntime 程式庫。 同樣地，若您使用 Visual Studio 2017 15.5 版的 \<iostream> 編譯原始程式檔，即必須連結到 Visual Studio 2017 15.5 版標準 C++ 程式庫：msvcprt。 不支援混合和比對。
+如果您使用特定版本的 Visual Studio C++ 程式庫標頭檔來編譯來源檔案 (方法是使用 #including 包含標頭)，則產生的目的檔必須連結到相同版本的程式庫。 因此，比方說，如果您的原始程式檔是使用 Visual Studio 2015 Update 3 \<immintrin.h> 來編譯，則必須與 Visual Studio 2015 update 3 vcruntime 程式庫連結。 同樣地，如果您的原始程式檔是以 Visual Studio 2017 15.5 版編譯 \<iostream> ，則必須與 Visual Studio 2017 版本 15.5 Standard c + + 程式庫: msvcprt。 不支援混合和比對。
 
 針對 C++ 標準程式庫，自 Visual Studio 2010 之後，已透過在標準標頭中使用 `#pragma detect_mismatch` 明確不允許混合和比對。 如果您嘗試連結不相容的物件檔案，或嘗試連結到錯誤的標準程式庫，連結將會失敗。
 
@@ -51,15 +51,15 @@ C++ 沒有穩定的應用程式二進位介面 (ABI)。 但 Visual Studio 會為
 
 1. 如果您無法 (或不想要) 重建靜態程式庫，請嘗試連結到 legacy\_stdio\_definitions.lib。 如果它滿足您靜態程式庫的連結時間相依性，則您會想要完整測試二進位檔中所使用的靜態程式庫，確保未受到任何[對通用 CRT 進行的行為變更](visual-cpp-change-history-2003-2015.md#BK_CRT)的不良影響。
 
-1. 如果靜態庫的依賴項未滿足遺留\_stdio\_定義.lib,或者由於上述行為更改導致庫不能與通用 CRT 配合使用,我們建議您將靜態庫封裝到與 Microsoft C 運行時的正確版本連結的 DLL 中。 例如，如果使用 Visual Studio 2013 來建置靜態程式庫，則也要使用 Visual Studio 2013 和 Visual Studio 2013 C++ 程式庫來建置此 DLL。 透過將程式庫建置到 DLL，可以封裝為其與特定 Microsoft C 執行階段版本之相依性的實作詳細資料。 您需要小心 DLL 介面不會洩露所使用 C 執行階段的詳細資料；例如，跨 DLL 界限傳回 FILE*，或傳回 malloc 配置的指標並預期呼叫者釋放它。
+1. 如果舊版 stdio.h 定義無法滿足您的靜態程式庫相依 \_ 性 \_ ，或如果程式庫因為前述的行為變更而無法使用通用 CRT，我們建議您將靜態程式庫封裝成與正確的 Microsoft C 執行時間版本連結的 DLL。 例如，如果使用 Visual Studio 2013 來建置靜態程式庫，則也要使用 Visual Studio 2013 和 Visual Studio 2013 C++ 程式庫來建置此 DLL。 透過將程式庫建置到 DLL，可以封裝為其與特定 Microsoft C 執行階段版本之相依性的實作詳細資料。 您需要小心 DLL 介面不會洩露所使用 C 執行階段的詳細資料；例如，跨 DLL 界限傳回 FILE*，或傳回 malloc 配置的指標並預期呼叫者釋放它。
 
-在單一程序中使用多個 CRT 不會造成問題，也不會造成本身的問題 (事實上，大部分程序最後都會載入多個 CRT DLL；例如，Windows 作業系統元件將取決於 msvcrt.dll，CLR 則取決於其專屬的私用 CRT)。 因不同 CRT 的狀態而造成混亂時，就會產生問題。 例如，您不應該使用 msvcr110.dll!malloc 來配置記憶體並嘗試使用 msvcr120.dll!free 將該記憶體解除配置，而且您不應該嘗試使用 msvcr110!fopen 來開啟 FILE 並嘗試使用 msvcr120!fread 來讀取該 FILE。 只要您不從不同的 CRT 中混亂狀態,就可以安全地在單個進程中載入多個 CRT。
+在單一程序中使用多個 CRT 不會造成問題，也不會造成本身的問題 (事實上，大部分程序最後都會載入多個 CRT DLL；例如，Windows 作業系統元件將取決於 msvcrt.dll，CLR 則取決於其專屬的私用 CRT)。 因不同 CRT 的狀態而造成混亂時，就會產生問題。 例如，您不應該使用 msvcr110.dll!malloc 來配置記憶體並嘗試使用 msvcr120.dll!free 將該記憶體解除配置，而且您不應該嘗試使用 msvcr110!fopen 來開啟 FILE 並嘗試使用 msvcr120!fread 來讀取該 FILE。 只要您不從不同的 Crt 各異四不像狀態，就可以在單一進程中安全地載入多個 Crt。
 
 如需詳細資訊，請參閱[將程式碼升級至通用 CRT](upgrade-your-code-to-the-universal-crt.md)。
 
 ## <a name="errors-due-to-project-settings"></a>因專案設定而造成的錯誤
 
-若要開始升級程序，請在最新版 Visual Studio 中開啟較舊的專案/解決方案/工作區。 Visual Studio 將會根據舊專案設定來建立新的專案。 如果較舊的專案具有庫或包含硬編碼到非標準位置的路徑,則當專案使用預設設置時,這些路徑中的檔案可能看不到編譯器。 如需詳細資訊，請參閱[連結器 OutputFile 設定](porting-guide-spy-increment.md#linker_output_settings)。
+若要開始升級程序，請在最新版 Visual Studio 中開啟較舊的專案/解決方案/工作區。 Visual Studio 將會根據舊專案設定來建立新的專案。 如果較舊的專案有程式庫或包含硬式編碼為非標準位置的路徑，則當專案使用預設設定時，編譯器可能看不到這些路徑中的檔案。 如需詳細資訊，請參閱[連結器 OutputFile 設定](porting-guide-spy-increment.md#linker_output_settings)。
 
 一般而言，現在正是正確組織專案程式碼以簡化專案維護並協助您最快速地編譯已升級程式碼的不錯時機。 如果您的原始程式碼組織良好，而且舊的專案是使用 Visual Studio 2010 或更新版本所編譯，則可以手動編輯新的專案檔案以支援在舊和新編譯器上編譯。 下列範例示範如何針對 Visual Studio 2015 和 Visual Studio 2017 進行編譯：
 
@@ -72,13 +72,13 @@ C++ 沒有穩定的應用程式二進位介面 (ABI)。 但 Visual Studio 會為
 
 針對無法解析的符號，您可能需要修復專案設定。
 
-- 如果來源檔案位於非預設位置,您是否將路徑加入到專案的包含目錄?
+- 如果原始程式檔位於非預設位置，您是否要將路徑新增至專案的 include 目錄？
 
 - 如果外部定義於 .lib 檔案中，則您是否已在專案屬性中指定 lib 路徑，且位於該處的 .lib 檔案版本是否正確？
 
 - 嘗試連結到使用不同 Visual Studio 版本所編譯的 .lib 檔案嗎？ 如果是的話，請參閱有關程式庫和工具組相依性的上一節。
 
-- 呼叫位置上的引數類型實際符合函式的現有多載嗎？ 驗證函數簽名中任何 typedef 的基礎類型,在調用函數的代碼中驗證它們的基礎類型。這些類型是您希望它們的基礎類型。
+- 呼叫位置上的引數類型實際符合函式的現有多載嗎？ 在函式的簽章和呼叫函式的程式碼中，驗證任何 typedef 的基礎類型是您預期的。
 
 若要疑難排解無法解析的符號錯誤，您可以嘗試使用 dumpbin.exe 來檢查二進位檔中定義的符號。 請嘗試下列的命令列，檢視程式庫中定義的符號：
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
 
-(在 Microsoft Visual C++ 6.0 及更早版本中 **,wchar_t**不是作為內置類型實現的,而是在 wchar.h 中聲明為未簽名的短號的類型定義。C++標準要求**wchar_t**是內置類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，並且因程式碼嘗試以隱含方式將 **wchar_t** 轉換成 **unsigned short**而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 `/Zc:wchar_t-`。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+（在 Microsoft Visual C++ 6.0 和更早版本中， **wchar_t**並未實作為內建型別，但在 wchar 中宣告為不帶正負號簡短的 typedef）。C + + 標準要求**wchar_t**必須是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，並且因程式碼嘗試以隱含方式將 **wchar_t** 轉換成 **unsigned short**而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 `/Zc:wchar_t-`。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用連結器選項 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升級
 
@@ -96,7 +96,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 因為部分預設程式庫的名稱已變更，所以升級時，使用此選項的專案會出現問題。 因為每個程式庫都必須列在 [其他相依性]**** 屬性中或連結器命令列上，所以您必須更新程式庫清單以使用所有目前名稱。
 
-下表顯示從 Visual Studio 2015 開始其內容經變更的程式庫。 若要升級，您需要將第二個資料行中新程式庫名稱新增到第一個資料行中的程式庫。 其中一些庫是導入庫,但這並不重要。
+下表顯示從 Visual Studio 2015 開始其內容經變更的程式庫。 若要升級，您需要將第二個資料行中新程式庫名稱新增到第一個資料行中的程式庫。 其中一些程式庫是匯入程式庫，但這不應該有任何影響。
 
 |||
 |-|-|
@@ -120,17 +120,17 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ## <a name="errors-involving-stdinth-integral-types"></a>涉及 \<stdint.h> 整數類型的錯誤
 
-\<stdint.h> 標頭定義在所有平台上都一定會有所指定長度的 typedef 和巨集，這點與內建整數類型不同。 例如 `uint32_t` 和 `int64_t` 就是範例。 \<stdint.h> 標頭新增於 Visual Studio 2010。 2010 之前所撰寫的程式碼可能會提供這些類型的私用定義，而這些定義不一定是與 \<stdint.h> 定義一致。
+\<stdint.h>標頭定義與內建整數類型不同的 typedef 和宏，保證在所有平臺上都有指定的長度。 例如 `uint32_t` 和 `int64_t` 就是範例。 \<stdint.h>已在 Visual Studio 2010 中新增標頭。 在2010之前撰寫的程式碼可能已提供這些類型的私用定義，而這些定義可能不一定會與 \<stdint.h> 定義一致。
 
-如果錯誤是 C2371，並涉及 `stdint` 類型，可能表示類型定義於程式庫或協力廠商程式庫檔案的標頭中。 升級時，您應該排除 \<stdint.h> 類型的所有自訂定義，但請先比較自訂定義與目前標準定義，確定未造成新的問題。
+如果錯誤是 C2371，並涉及 `stdint` 類型，可能表示類型定義於程式庫或協力廠商程式庫檔案的標頭中。 升級時，您應該刪除類型的任何自訂定義 \<stdint.h> ，但請先將自訂定義與目前的標準定義進行比較，以確保您不會遇到新的問題。
 
-您可以按**F12** (**轉到定義**) 以查看相關類型的定義位置。
+您可以按**F12** （[**移至定義**]），查看有問題之類型的定義位置。
 
 這裡的 [/showIncludes](../build/reference/showincludes-list-include-files.md) 編譯器選項十分有用。 在專案的 [屬性頁面]**** 對話方塊中，開啟 [C/C++]**** > [進階]**** 頁面，然後將 [顯示 Include 檔]**** 設為 [是]****。 然後重建您的專案，並查看輸出視窗中的 `#include` 清單。 每個標頭都會縮排在包含它的標頭下方。
 
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函式的錯誤
 
-多年來，已對 C 執行階段進行許多變更。 已新增許多安全版本的函式，並已移除一些函式。 此外,如本文前面所述,Microsoft 在 Visual Studio 2015 中重構了 CRT 的實現,並重構為新的二進位檔案和相關 .lib 檔。
+多年來，已對 C 執行階段進行許多變更。 已新增許多安全版本的函式，並已移除一些函式。 此外，如本文稍早所述，Microsoft 的 CRT 的執行已在 Visual Studio 2015 中重構為新的二進位檔和相關聯的 .lib 檔案。
 
 如果錯誤涉及 CRT 函式，請搜尋 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)，以查看這些文章是否包含任何其他資訊。 如果錯誤是「LNK2019 無法解析的外部」，請確定尚未移除函式。 否則，如果您確定函式仍然存在，而且呼叫程式碼正確，請確認您的專案是否使用 `/NODEFAULTLIB`。 如果是的話，則您需要更新程式庫清單，讓專案使用新的通用 (UCRT) 程式庫。 如需詳細資訊，請參閱上方的＜程式庫和相依性＞一節。
 
@@ -142,7 +142,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 C++ 標準本身的發展方式不一定具有回溯相容。 在 C++11 中引進移動語意、新關鍵字以及其他語言和標準程式庫功能可能會造成編譯器錯誤，甚至會造成不同的執行階段行為。
 
-例如，舊 C++ 程式可能包含 iostream.h 標頭。 在 C++ 歷程記錄中，此標頭已在早期淘汰，並最終從 Visual Studio 完全移除。 在此情況下，您需要使用 \<iostream> 並重寫程式碼。 如需詳細資訊，請參閱[更新舊版 iostreams 程式碼](porting-guide-spy-increment.md#updating_iostreams_code)。
+例如，舊 C++ 程式可能包含 iostream.h 標頭。 在 C++ 歷程記錄中，此標頭已在早期淘汰，並最終從 Visual Studio 完全移除。 在此情況下，您必須使用 \<iostream> 並重寫您的程式碼。 如需詳細資訊，請參閱[更新舊版 iostreams 程式碼](porting-guide-spy-increment.md#updating_iostreams_code)。
 
 ### <a name="c4838-narrowing-conversion-warning"></a>C4838：縮小轉換警告
 
@@ -150,13 +150,13 @@ C++ 標準現在指定從不帶正負號到帶正負號整數值的轉換視為�
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>使用安全 CRT 函式的警告
 
-多年來，已引進安全版本的 C 執行階段函式。 雖然舊的不安全版本仍然可用，但是建議將程式碼變更成使用安全版本。 編譯器會發出使用不安全版本的警告。 您可以選擇停用或忽略這些警告。 要禁用解決方案中所有專案的警告,請打開 **「查看** > **屬性管理員**」,選擇要禁用該警告的所有專案,然後右鍵按一下所選專案並選擇 **「屬性**」 。 在 [組態屬性]**** > [C/C++]**** > [進階]**** 下的 [屬性頁]**** 對話方塊中，選取 [停用特定警告]****。 按下下拉箭頭,然後單擊 **「編輯**」。。 在文字方塊中輸入 4996 (不包括"C"首碼。有關詳細資訊,請參閱[移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
+多年來，已引進安全版本的 C 執行階段函式。 雖然舊的不安全版本仍然可用，但是建議將程式碼變更成使用安全版本。 編譯器會發出使用不安全版本的警告。 您可以選擇停用或忽略這些警告。 若要停用方案中所有專案的警告，請開啟**View**  >  **屬性管理員**，選取您要停用警告的所有專案，然後以滑鼠右鍵按一下選取的專案，然後選擇 [**屬性**]。 在 [組態屬性]**** > [C/C++]**** > [進階]**** 下的 [屬性頁]**** 對話方塊中，選取 [停用特定警告]****。 按一下下拉箭號，然後按一下 [**編輯**]。 在文字方塊中輸入 4996 （請勿包含 ' C ' 前置詞）。如需詳細資訊，請參閱[移植以使用安全的 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>因 Windows API 或已淘汰 SDK 中的變更而造成的錯誤
 
 多年來，已新增 Windows API 和資料類型，有時也會進行變更或移除。 同時，也提供並移除其他不屬於核心作業系統的 SDK。 因此，較舊的程式可能會包含不再存在之 API 的呼叫。 它們也可能包含其他 Microsoft SDK 中不再支援之 API 的呼叫。 如果您看到涉及來自舊版 Microsoft SDK 之 Windows API 或 API 的錯誤，則 API 可能已遭移除，並/或已取代為更新且更安全的函式。
 
-如需目前 API 集合以及特定 Windows API 之最低支援作業系統的詳細資訊，請參閱 [Microsoft API 與參考目錄](https://msdn.microsoft.com/library)，並瀏覽至有問題的 API。
+如需有關目前的 API 集和特定 Windows API 支援的最低作業系統的詳細資訊，請參閱[桌面 Windows 應用程式的 Api 索引](/windows/win32/apiindex/api-index-portal)，並流覽至有問題的 api。
 
 ### <a name="windows-version"></a>Windows 版本
 
@@ -180,11 +180,11 @@ MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC �
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 與 MBCS/ASCII
 
-標準化 Unicode 之前，許多程式都是使用多位元組字元集 (MBCS) 代表 ASCII 字元集中未包含的字元。 在舊的 MFC 專案中，MBCS 是預設設定，在您升級這類程式時，將會看到建議改為使用 Unicode 的警告。 如果您決定轉換成 Unicode 不符合開發成本，則可以選擇停用或忽略警告。 要關閉解決方案中的所有專案,請開啟 **「查看** > **屬性管理員**」,選擇要禁用該警告的所有專案,然後右鍵按一下所選專案並選擇 **「屬性**」 。 在 [屬性頁]**** 對話方塊中，選取 [組態屬性]**** > [C/C++]**** > [進階]****。 在 [停用特定警告]**** 屬性中，開啟下拉式箭頭並選擇 [編輯]****。 在文字方塊中輸入 4996 (不包括"C"首碼。選擇 **「確定」** 以儲存屬性,然後選擇 **「確定」** 以儲存更改。
+標準化 Unicode 之前，許多程式都是使用多位元組字元集 (MBCS) 代表 ASCII 字元集中未包含的字元。 在舊的 MFC 專案中，MBCS 是預設設定，在您升級這類程式時，將會看到建議改為使用 Unicode 的警告。 如果您決定轉換成 Unicode 不符合開發成本，則可以選擇停用或忽略警告。 若要針對方案中的所有專案停用它，請開啟**View**  >  **屬性管理員**，選取您要停用警告的所有專案，然後以滑鼠右鍵按一下選取的專案，然後選擇 [**屬性**]。 在 [屬性頁]**** 對話方塊中，選取 [組態屬性]**** > [C/C++]**** > [進階]****。 在 [停用特定警告]**** 屬性中，開啟下拉式箭頭並選擇 [編輯]****。 在文字方塊中輸入 4996 （請勿包含 ' C ' 前置詞）。選擇 **[確定]** 以儲存屬性，然後選擇 **[確定]** 以儲存變更。
 
-如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有關 MBCS 與 Unicode 的一般資訊,請參閱[可視化C++和國際化中的文本和字串](../text/text-and-strings-in-visual-cpp.md)。 [Internationalization](../c-runtime-library/internationalization.md)
+如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 如需 MBCS 與 Unicode 的一般資訊，請參閱 Visual C++ 和[國際化](../c-runtime-library/internationalization.md)[中的文字和字串](../text/text-and-strings-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[從早期版本的 Visual C++升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[升級舊版 Visual C++ 的專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

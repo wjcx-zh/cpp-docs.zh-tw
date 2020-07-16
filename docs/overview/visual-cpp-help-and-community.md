@@ -3,12 +3,12 @@ title: Visual C++ 說明和社群
 ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66ff4844e34d1d3c781791b5e250387d6ac2a0d1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "75791689"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405074"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
 
@@ -18,13 +18,13 @@ ms.locfileid: "75791689"
 
 |Title|描述|
 |-----------|-----------------|
-|[開發人員程式碼範例](https://code.msdn.microsoft.com/)|包含 Microsoft 和社群投稿的可下載範例程式碼。|
+|[開發人員程式碼範例](https://docs.microsoft.com/samples)|包含 Microsoft 和社群投稿的可下載範例程式碼。|
 
 ## <a name="product-documentation"></a>產品文件
 
 |Title|描述|
 |-----------|-----------------|
-|[視覺工作室中的C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
+|[Visual Studio 中的 C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。|
 |[Windows 開發人員中心](https://developer.microsoft.com/windows/)|包含如何使用 C++ 和其他語言開發 Windows 10 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
 
 ### <a name="online-and-offline-documentation"></a>線上和離線文件
@@ -39,7 +39,7 @@ ms.locfileid: "75791689"
 
 |Title|描述|
 |-----------|-----------------|
-|[Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)|包含 Visual C++ 產品小組專家發表的各種主題的文章。|
+|[C + + 小組 Blog](https://devblogs.microsoft.com/cppblog/)|包含 Microsoft c + + 產品小組的專家提供的各種主題文章。|
 |[Channel 9](https://channel9.msdn.com/)|包含訪談和演講影片。 請使用 Channel 9 首頁上的 [搜尋] 方塊尋找 C++ 內容。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|包含有關 Visual Studio 和相關開發工具的文章及新聞。|
-|[MSDN 論壇](https://social.msdn.microsoft.com/Forums/home?category=visualc)與[開發人員社群](https://developercommunity.visualstudio.com)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|
+|[MSDN 論壇](https://social.msdn.microsoft.com/Forums/)和 Visual Studio[開發人員社區](https://developercommunity.visualstudio.com)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|

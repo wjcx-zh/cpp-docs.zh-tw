@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213079"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403799"
 ---
 # <a name="open-database-connectivity-odbc"></a>開放式資料庫連接 (ODBC)
 
 Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫連接 (ODBC) 進行程式設計的類別。 從 Visual Studio 2015 和 SQL Server 2012 ODBC 是連接到 SQL 資料來源的慣用方式。
 
-如需有關使用沒有 MFC 之 ODBC API 的詳細資訊，請參閱 MSDN 中的[開放式資料庫連接（ODBC）](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
+如需有關使用沒有 MFC 之 ODBC API 的詳細資訊，請參閱[開放式資料庫連接（ODBC）](/sql/odbc/microsoft-open-database-connectivity-odbc)檔。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -63,9 +63,9 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 
 - [設計和建立 ODBC 資料庫應用程式](design-and-create-an-odbc-database-application.md)
 
-- [使用 ODBC 的資料庫表單 (資料錄檢視)](use-database-forms-record-views-with-odbc.md)
+- [使用 ODBC 的資料庫表單（記錄 Views）](use-database-forms-record-views-with-odbc.md)
 
-- [與其他使用者共同使用 ODBC](use-odbc-to-work-with-other-users.md)
+- [使用 ODBC 與其他使用者合作](use-odbc-to-work-with-other-users.md)
 
 - [使用 ODBC 資料庫連接](work-with-odbc-database-connections.md)
 
@@ -73,8 +73,8 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 
 - [使用 ODBC 資料指標程式庫](use-the-odbc-cursor-library.md)
 
-- [使用 MFC ODBC 資料錄集](use-mfc-odbc-recordsets.md)
+- [使用 MFC ODBC 記錄集](use-mfc-odbc-recordsets.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[資料存取程式設計（MFC/ATL）](../../data/data-access-programming-mfc-atl.md)

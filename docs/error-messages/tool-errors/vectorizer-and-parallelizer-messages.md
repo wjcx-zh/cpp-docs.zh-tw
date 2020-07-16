@@ -8,16 +8,16 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182197"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404996"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>向量化工具與平行化工具訊息
 
-您C++可以使用 Microsoft 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) ，將自動平行處理[和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)設定為輸出原因代碼和其活動的相關資訊訊息。 本文說明原因代碼和訊息。
+您可以使用 Microsoft c + + 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) ，將自動平行處理[和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)設定為輸出原因代碼和其活動的相關資訊訊息。 本文說明原因代碼和訊息。
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>參考用訊息
 
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++編譯器和組建工具的錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)
-自動平行處理[和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Visual Studio 2012 中自動向量化工具–總覽](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[C/c + + 編譯器和組建工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) 
+[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Visual Studio 2012 中自動向量化工具–總覽](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
 [#pragma 迴圈（）](../../preprocessor/loop.md) \
 [/Q 選項（低層級作業）](../../build/reference/q-options-low-level-operations.md) \
 [/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report (自動向量化工具報告層級)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qvec-report （自動向量化工具報告層級）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

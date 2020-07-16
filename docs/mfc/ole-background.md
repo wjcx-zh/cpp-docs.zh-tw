@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 96ece9a2a5be6ea29c95e17e81f6ce4adbfd4c0b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f18614f7b156a1757df9dfaac9e4a0ad4f8209eb
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624170"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404290"
 ---
 # <a name="ole-background"></a>OLE 背景
 
@@ -66,7 +66,7 @@ OLE 整合了許多不同的概念，其目標是要在應用程式之間進行�
 
 - [OLE 背景：MFC 實作](ole-background-mfc-implementation.md)
 
-對於一般未出現在上述文章中的 OLE 資訊，請在 MSDN 中搜尋 OLE。
+如需在上述文章中找不到的一般 OLE 資訊，請在 Microsoft Docs 中[搜尋 ole](https://docs.microsoft.com/search/?terms=ole) 。
 
 ## <a name="see-also"></a>另請參閱
 

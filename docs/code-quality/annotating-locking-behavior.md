@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: 8966d982b7bcbe9844a7bf1ec3088c2a9424b23a
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418638"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404020"
 ---
 # <a name="annotating-locking-behavior"></a>註釋鎖定行為
 
@@ -71,7 +71,7 @@ SAL 支援多種不同的鎖定基本類型，例如關鍵區段、Mutex、微�
 |`_Create_lock_level_(name)`|將符號 `name` 宣告為鎖定層級的陳述式，如此該符號就可以在註釋 `_Has_Lock_level_` 和 `_Lock_level_order_` 中使用。|
 |`_Has_lock_kind_(kind)`|標注任何物件，以精簡資源物件的類型資訊。 有時候，一般類型會用於不同種類的資源，而多載類型則不足以區別各種資源間的語義需求。 以下是預先定義的 `kind` 參數清單：<br /><br /> `_Lock_kind_mutex_`<br /> Mutex 的鎖定種類識別碼。<br /><br /> `_Lock_kind_event_`<br /> 事件的鎖定種類識別碼。<br /><br /> `_Lock_kind_semaphore_`<br /> 信號的鎖定種類識別碼。<br /><br /> `_Lock_kind_spin_lock_`<br /> 微調鎖定的鎖定種類識別碼。<br /><br /> `_Lock_kind_critical_section_`<br /> 重要區段的鎖定種類識別碼。|
 |`_Has_lock_level_(name)`|標註鎖定物件，並為其指定 `name` 的鎖定層級。|
-|`_Lock_level_order_(name1, name2)`|語句，提供 `name1` 和 `name2`之間的鎖定順序。  在具有層級 `name2`的鎖定之前，必須先取得具有層級 `name1` 的鎖定。|
+|`_Lock_level_order_(name1, name2)`|提供和之間鎖定順序的語句 `name1` `name2` 。  在 `name1` 具有層級的鎖定之前，必須先取得具有層級的鎖定 `name2` 。|
 |`_Post_same_lock_(expr1, expr2)`|為函式加上附註，並指出並後製狀態下，`expr1` 和 `expr2` 這兩個鎖定會視為是相同的鎖定物件。|
 |`_Releases_exclusive_lock_(expr)`|標註函式，並指出在後製狀態下，函式會讓 `expr` 命名之鎖定物件的獨佔鎖定計數遞減 1。|
 |`_Releases_lock_(expr)`|為函式加上附註，並指出在後製狀態下，函式會讓 `expr` 命名之鎖定物件的鎖定計數遞減 1。|
@@ -101,22 +101,22 @@ SAL 支援多種不同的鎖定基本類型，例如關鍵區段、Mutex、微�
 |Annotation|描述|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|標註變數，並指出只要存取變數，由 `expr` 命名之鎖定物件的鎖定計數就會至少為一。|
-|`_Interlocked_`|標注變數，相當於 `_Guarded_by_(_Global_interlock_)`。|
+|`_Interlocked_`|標注變數，相當於 `_Guarded_by_(_Global_interlock_)` 。|
 |`_Interlocked_operand_`|批註函式參數是其中一個各種連鎖函數的目標運算元。  這些運算元必須具有特定的其他屬性。|
 |`_Write_guarded_by_(expr)`|為變數加上附註，並指出只要修改變數，由 `expr` 命名之鎖定物件的鎖定計數就會至少為一。|
 
 ## <a name="smart-lock-and-raii-annotations"></a>Smart Lock 和 RAII 注釋
 
-智慧鎖定通常會包裝原生鎖定並管理其存留期。 下表列出可以搭配智慧型鎖定和 RAII 編碼模式使用的注釋，並支援 `move` 的語法。
+智慧鎖定通常會包裝原生鎖定並管理其存留期。 下表列出可以搭配使用語義的智慧型鎖定和 RAII 編碼模式的批註 `move` 。
 
 |Annotation|描述|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|告訴分析器假設已取得智慧鎖定。 此批註需要參考鎖定類型做為其參數。|
 |`_Analysis_assume_smart_lock_released_`|告知分析器假設已釋放智慧型鎖定。 此批註需要參考鎖定類型做為其參數。|
-|`_Moves_lock_(target, source)`|描述 `move constructor` 作業，此作業會將鎖定狀態從 `source` 物件傳送至 `target`。 `target` 會被視為新建立的物件，因此它之前的任何狀態都會遺失，並由 `source` 狀態取代。 `source` 也會重設為無鎖定計數或別名目標的乾淨狀態，但指向它的別名會保持不變。|
-|`_Replaces_lock_(target, source)`|描述在從來源傳送狀態之前，會釋放目標鎖定的 `move assignment operator` 語義。 這可以被視為 `_Moves_lock_(target, source)` 前面加上 `_Releases_lock_(target)`的組合。|
-|`_Swaps_locks_(left, right)`|描述標準 `swap` 行為，其假設物件 `left` 和 `right` 交換其狀態。 交換的狀態包括鎖定計數和別名目標（如果有的話）。 指向 `left` 和 `right` 物件的別名會保持不變。|
-|`_Detaches_lock_(detached, lock)`|描述一種案例，其中的鎖定包裝函式類型允許 dissociation 包含其內含的資源。 這類似于 `std::unique_ptr` 與內部指標搭配運作的方式：它可讓程式設計人員將指標解壓縮，並將其智慧型指標容器保持在乾淨狀態。 `std::unique_lock` 也支援類似的邏輯，而且可以在自訂鎖定包裝函式中執行。 卸離的鎖定會保留其狀態（鎖定計數和別名目標，如果有的話），而包裝函式會重設為包含零個鎖定計數和沒有別名目標，同時保留其本身的別名。 鎖定計數沒有任何作業（釋出並取得）。 此注釋的行為與 `_Moves_lock_` 完全相同，不同之處在于卸離的引數應該是 `return` 而不是 `this`。|
+|`_Moves_lock_(target, source)`|描述將 `move constructor` 鎖定狀態從 `source` 物件傳送至的作業 `target` 。 `target`會被視為新建立的物件，因此它之前的任何狀態都會遺失，並由 `source` 狀態取代。 `source`也會重設為無鎖定計數或別名目標的乾淨狀態，但指向它的別名會保持不變。|
+|`_Replaces_lock_(target, source)`|描述在 `move assignment operator` 從來源傳送狀態之前，先釋放目標鎖定的語義。 這可視為前面加上的組合 `_Moves_lock_(target, source)` `_Releases_lock_(target)` 。|
+|`_Swaps_locks_(left, right)`|描述 `swap` 假設物件 `left` 和 `right` 交換其狀態的標準行為。 交換的狀態包括鎖定計數和別名目標（如果有的話）。 指向和物件的別名 `left` 會 `right` 保持不變。|
+|`_Detaches_lock_(detached, lock)`|描述一種案例，其中的鎖定包裝函式類型允許 dissociation 包含其內含的資源。 這類似于 `std::unique_ptr` 其內部指標的運作方式：它可讓程式設計人員將指標解壓縮，並將其智慧型指標容器保持在清除狀態。 和支援類似的邏輯 `std::unique_lock` ，而且可以在自訂鎖定包裝函式中執行。 卸離的鎖定會保留其狀態（鎖定計數和別名目標，如果有的話），而包裝函式會重設為包含零個鎖定計數和沒有別名目標，同時保留其本身的別名。 鎖定計數沒有任何作業（釋出並取得）。 此注釋的行為與完全相同， `_Moves_lock_` 不同之處在于卸離的引數應該是 `return` 而不是 `this` 。|
 
 ## <a name="see-also"></a>另請參閱
 
@@ -128,4 +128,3 @@ SAL 支援多種不同的鎖定基本類型，例如關鍵區段、Mutex、微�
 - [指定套用註釋的時機和位置](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [內建函式](../code-quality/intrinsic-functions.md)
 - [最佳做法和範例](../code-quality/best-practices-and-examples-sal.md)
-- [程式碼分析小組 Blog](https://blogs.msdn.microsoft.com/codeanalysis/)

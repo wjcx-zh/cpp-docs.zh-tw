@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624661"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403721"
 ---
 # <a name="exceptions-database-exceptions"></a>例外狀況：資料庫例外狀況
 
@@ -38,7 +38,7 @@ ms.locfileid: "84624661"
 
 除了架構所定義的傳回碼（其名稱為**AFX_SQL_ERROR_XXX**的格式），有些[CDBExceptions](reference/cdbexception-class.md)是以[ODBC](../data/odbc/odbc-basics.md)傳回碼為基礎。 這類例外狀況的傳回碼具有格式**SQL_ERROR_XXX**的名稱。
 
-資料庫類別可以傳回的傳回碼（架構定義和 ODBC 定義的）都會記錄在類別的[m_nRetCode](reference/cdbexception-class.md#m_nretcode)資料成員底下 `CDBException` 。 如需 ODBC 所定義之傳回碼的其他資訊，請參閱 MSDN Library 中的 ODBC SDK 程式設計*人員參考*。
+資料庫類別可以傳回的傳回碼（架構定義和 ODBC 定義的）都會記錄在類別的[m_nRetCode](reference/cdbexception-class.md#m_nretcode)資料成員底下 `CDBException` 。 Odbc 程式設計[人員參考](/sql/odbc/reference/odbc-programmer-s-reference)中提供了 odbc 所定義之傳回碼的其他相關資訊。
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>用於 DAO 例外狀況的錯誤碼
 

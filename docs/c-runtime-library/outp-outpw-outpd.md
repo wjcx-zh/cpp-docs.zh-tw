@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373472"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404056"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw、_outpd
 
@@ -61,15 +61,15 @@ ms.locfileid: "86373472"
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,18 +78,20 @@ unsigned long _outpd(
 *移植*\
 連接埠號碼。
 
-*databyte、dataword*\
+*data_byte，data_word*\
 輸出值。
 
 ## <a name="return-value"></a>傳回值
 
-這些函式會傳回資料輸出。 不會傳回錯誤。
+這些函式會傳回資料輸出。 不會傳回任何錯誤。
 
 ## <a name="remarks"></a>備註
 
-`_outp`、 `_outpw`及 `_outpd` 函式會個別寫入一個位元組、一個字組及雙字組到指定的輸出連接埠。 *Port*引數可以是範圍 0-65535; 中的任何不帶正負號的整數。*databyte*可以是範圍 0-255 中的任何整數。和*dataword*可以是整數範圍內的任何值、不帶正負號的短整數，以及不帶正負號的長整數。
+`_outp`、 `_outpw`及 `_outpd` 函式會個別寫入一個位元組、一個字組及雙字組到指定的輸出連接埠。 *埠*引數可以是 0-65535 範圍內的任何不帶正負號的整數。 *data_byte*可以是範圍 0-255 中的任何整數。 *data_word*可以是整數範圍內的任何值、不帶正負號的短整數，以及不帶正負號的長整數。
 
-因為這些函式會直接寫入 i/o 埠，所以無法在使用者模式 Windows 程式碼中使用它們。 如需在 Windows 作業系統中使用 i/o 埠的詳細資訊，請參閱[序列通訊](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))。
+因為這些函式會直接寫入 i/o 埠，所以無法在使用者模式 Windows 程式碼中使用它們。
+
+如需在 Windows 作業系統中使用 i/o 埠的詳細資訊，請參閱[序列通訊](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))。
 
 `outp`和 `outpw` 名稱是和函式的舊版、已被取代的名稱 `_outp` `_outpw` 。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
@@ -110,4 +112,4 @@ unsigned long _outpd(
 ## <a name="see-also"></a>另請參閱
 
 [主控台和埠 i/o](../c-runtime-library/console-and-port-i-o.md)\
-[sct.inp、inpw、_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

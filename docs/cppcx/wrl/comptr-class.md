@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332249"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404547"
 ---
 # <a name="comptr-class"></a>ComPtr 類別
 
@@ -84,7 +84,7 @@ friend class ComPtr;
 
 `ComPtr<>`宣告代表基礎介面指標的類型。 使用 `ComPtr<>` 來宣告變數，然後使用箭號成員存取運算子（ `->` ）來存取介面成員函式。
 
-如需智慧型指標的詳細資訊，請參閱 MSDN Library 中[Com 編碼實務](/windows/win32/LearnWin32/com-coding-practices)文章的「Com 智慧型指標」子節。
+如需智慧型指標的詳細資訊，請參閱[Com 編碼實務](/windows/win32/LearnWin32/com-coding-practices)文章的「Com 智慧型指標」子節。
 
 ## <a name="members"></a>成員
 
@@ -98,7 +98,7 @@ friend class ComPtr;
 
 名稱                             | 描述
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr：： ComPtr](#comptr)        | 將 `ComPtr` 類別的新執行個體初始化。 多載提供預設、複製、移動和轉換建構函式。
+[ComPtr：： ComPtr](#comptr)        | 初始化 `ComPtr` 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。
 [ComPtr：： ~ ComPtr](#tilde-comptr) | 將的實例 `ComPtr` 。
 
 ### <a name="public-methods"></a>公用方法
@@ -250,7 +250,7 @@ void Attach(
 
 ## <a name="comptrcomptr"></a><a name="comptr"></a>ComPtr：： ComPtr
 
-將 `ComPtr` 類別的新執行個體初始化。 多載提供預設、複製、移動和轉換建構函式。
+初始化 `ComPtr` 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。
 
 ```cpp
 WRL_NOTHROW ComPtr();

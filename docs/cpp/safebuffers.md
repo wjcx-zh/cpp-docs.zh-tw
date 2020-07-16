@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-ms.openlocfilehash: bc4736ce233ce026ecab9ef38ac8379466b5a0bc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ebdbba130106ea5f9b893a9fd1d8277fd2dabdd4
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365590"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404687"
 ---
 # <a name="safebuffers"></a>safebuffers
 
@@ -28,26 +28,26 @@ __declspec( safebuffers )
 
 ## <a name="remarks"></a>備註
 
-**/GS**編譯器選項通過在堆疊上插入安全檢查,使編譯器測試緩衝區溢出。 符合安全檢查條件的資料結構類型在[/GS(緩衝區安全檢查)中](../build/reference/gs-buffer-security-check.md)描述。 有關緩衝區溢出檢測的詳細資訊,請參閱[MSVC 中的安全功能](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)。
+**/Gs**編譯器選項會藉由在堆疊上插入安全性檢查，讓編譯器測試緩衝區溢位。 [/Gs （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)中會說明適用于安全性檢查的資料結構類型。 如需有關緩衝區溢位偵測的詳細資訊，請參閱[MSVC 中的安全性功能](https://devblogs.microsoft.com/cppblog/security-features-in-microsoft-visual-c/)。
 
-某位專業人員手動檢閱程式碼或進行外部分析後，可能會判斷函式不會發生緩衝區滿溢。 在這種情況下,可以通過將 **__declspec(安全緩衝區)** 關鍵字應用於函數聲明來禁止對函數的安全檢查。
+某位專業人員手動檢閱程式碼或進行外部分析後，可能會判斷函式不會發生緩衝區滿溢。 在這種情況下，您可以將 **__declspec （safebuffers）** 關鍵字套用至函式宣告，以隱藏函式的安全性檢查。
 
 > [!CAUTION]
 > 緩衝區安全性檢查提供了重要的安全性保護，且幾乎不會對效能造成影響。 因此，除了在少數函式的效能為重要考量，以及函式已知為安全的情況以外，建議您不要抑制這些檢查。
 
 ## <a name="inline-functions"></a>內嵌函式
 
-*主函數*可以使用[內聯](inline-functions-cpp.md)關鍵字插入*輔助函數*的副本。 如果將 **__declspec(安全緩衝區)** 關鍵字應用於函數,則該函數將抑制緩衝區溢出檢測。 但是,內聯以下列方式影響 **__declspec(安全緩衝區)** 關鍵字。
+*主要*函式可以使用[內嵌](inline-functions-cpp.md)關鍵字來插入*次要函數*的複本。 如果 **__declspec （safebuffers）** 關鍵字套用至函式，則會抑制該函數的緩衝區溢位偵測。 不過，內嵌會以下列方式影響 **__declspec （safebuffers）** 關鍵字。
 
-假設為兩個函數指定**了 /GS**編譯器選項,但主函數指定 **__declspec(安全緩衝區)** 關鍵字。 第二個函式中的資料結構會使其進行安全性檢查，因此函式不會抑制這些檢查。 在此案例中：
+假設已針對這兩個函式指定 **/gs**編譯器選項，但主要函式指定 **__declspec （safebuffers）** 關鍵字。 第二個函式中的資料結構會使其進行安全性檢查，因此函式不會抑制這些檢查。 在此案例中：
 
-- 在輔助函數上指定[__forceinline](inline-functions-cpp.md)關鍵字,以強制編譯器內聯該函數,而不考慮編譯器優化。
+- 在次要函式上指定[__forceinline](inline-functions-cpp.md)關鍵字，強制編譯器內嵌該函式，而不論編譯器優化。
 
-- 由於輔助函數符合安全檢查條件,因此安全檢查也會應用於主函數,即使它指定**了__declspec(安全緩衝區)** 關鍵字。
+- 因為次要函式符合安全性檢查的資格，即使它指定了 **__declspec （safebuffers）** 關鍵字，也會將安全性檢查套用到主要功能。
 
 ## <a name="example"></a>範例
 
-以下代碼演示如何使用 **__declspec(安全緩衝區)** 關鍵字。
+下列程式碼顯示如何使用 **__declspec （safebuffers）** 關鍵字。
 
 ```cpp
 // compile with: /c /GS
@@ -72,11 +72,11 @@ int wmain() {
 }
 ```
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
 [__declspec](../cpp/declspec.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[內聯、 __inline、_forceinline \_](inline-functions-cpp.md)<br/>
+[內嵌、__inline、 \_ _forceinline](inline-functions-cpp.md)<br/>
 [strict_gs_check](../preprocessor/strict-gs-check.md)

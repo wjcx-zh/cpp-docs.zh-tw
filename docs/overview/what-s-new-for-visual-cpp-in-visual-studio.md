@@ -3,12 +3,12 @@ title: Visual Studio 中 C++ 的新功能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630493"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404970"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -20,7 +20,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 - 增強支援 C++17 功能與正確性修正，加上 C++20 功能 (例如模組和協同程式) 的實驗性支援。 如需詳細資訊，請參閱 [Visual Studio 2019 中的 C++ 一致性改善](cpp-conformance-improvements.md)。
 
-- `/std:c++latest` 選項現在會包含不一定完整的 C++20 功能，包括對使用 C++20 運算子 \<=> (「太空船」) 的初步支援，以進行三向比較。
+- `/std:c++latest`選項現在包含不一定完整的 c + + 20 功能，包括對三向比較之 c + + 20 運算子 \<=> （"太空船"）的初始支援。
 
 - C++ 編譯器參數 `/Gm` 現已被取代。 若已明確定義 `/Gm` 參數，請考慮將它從您的組建指令碼中停用。 或者，您也可以安全地忽略 `/Gm` 的過時警告，因為當使用 [將警告視為錯誤] (`/WX`) 時不會將它視為錯誤。
 
@@ -38,7 +38,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 - 我們已將 Clang 格式套用至 C++ 標準程式庫標頭，以改善可讀性。
 
-- 因為 Visual Studio 現在針對 C++ 支援 Just My Code，因此標準程式庫再也不需要為 `std::function` 與 `std::visit` 提供自訂機器，就可以達到相同的效果。 大幅移除該機器對使用者沒有可見的影響。 但編譯器將不再產生指出 \<type_traits> 或 \<variant> 第 15732480 或 16707566 行發生問題的診斷。
+- 因為 Visual Studio 現在針對 C++ 支援 Just My Code，因此標準程式庫再也不需要為 `std::function` 與 `std::visit` 提供自訂機器，就可以達到相同的效果。 大幅移除該機器對使用者沒有可見的影響。 其中一個例外狀況是編譯器不會再產生診斷，以指出或的第15732480行或16707566的問題 \<type_traits> \<variant> 。
 
 ## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>編譯器和標準程式庫在效能/輸送量方面的改進
 
@@ -62,7 +62,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
   - 改進了使用 `memmove` 的程式碼最佳化，例如 `std::copy` 或 `std::vector` 及 `std::string` 建構。
 
-- 已將標準程式庫的實體設計最佳化，以避免編譯未直接包含標準程式庫的部分。 此變更會針對只含 \<vector> 的空檔案省下一半的建置時間。 因此，您可能必須為先前間接包含的標頭加入 `#include` 指示詞。 例如，使用 `std::out_of_range` 的程式碼現在可能必須加入 `#include <stdexcept>`。 使用串流插入作業的程式碼現在可能必須加入 `#include <ostream>`。 優點是只有實際使用 \<stdexcept> 或 \<ostream> 元件的轉譯單位才必須支付編譯的輸送量成本。
+- 已將標準程式庫的實體設計最佳化，以避免編譯未直接包含標準程式庫的部分。 這項變更會剪下只包含一半的空白檔案的組建時間 \<vector> 。 因此，您可能必須為先前間接包含的標頭加入 `#include` 指示詞。 例如，使用 `std::out_of_range` 的程式碼現在可能必須加入 `#include <stdexcept>`。 使用串流插入作業的程式碼現在可能必須加入 `#include <ostream>`。 其優點是只有實際使用 \<stdexcept> 或元件的轉譯單位會 \<ostream> 支付用來編譯它們的輸送量成本。
 
 - `if constexpr` 已套用到標準程式庫中的更多位置，以便在複製作業、反向與旋轉的排列組合，以及平行演算法程式庫中，提高輸送量並降低程式碼大小。
 
@@ -221,7 +221,7 @@ C++ Android 體驗現在預設為 Android SDK 25 與 Android NDK 16b。
 
 - 程式碼分析現在會在背景自動執行。 警告會在您鍵入的同時，在編輯器內以綠色波浪線顯示。 如需詳細資訊，請參閱 [In-editor code analysis in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/in-editor-code-analysis-in-visual-studio-2019-preview-2/) (Visual Studio 2019 Preview 2 編輯器中的程式碼分析)。
 
-- 針對來自 \<mutex> 標頭的知名標準程式庫類型，新增實驗性 ConcurrencyCheck 規則。 如需詳細資訊，請參閱 [Concurrency Code Analysis in Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/) (Visual Studio 2019 中的並行程式碼分析)。
+- 來自標頭的知名標準程式庫類型的新實驗性 ConcurrencyCheck 規則 \<mutex> 。 如需詳細資訊，請參閱 [Concurrency Code Analysis in Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/) (Visual Studio 2019 中的並行程式碼分析)。
 
 - [存留期設定檔檢查程式](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/)已更新的部分實作，可偵測懸置的指標和參考。 如需詳細資訊，請參閱 [Lifetime Profile Update in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/) (Visual Studio 2019 Preview 2 中的存留期設定檔更新)。
 
@@ -358,8 +358,8 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 
 ### <a name="conformance-improvements"></a>一致性改善
 
-- 我們新增了 \<any\>、\<string_view\>、`apply()`、`make_from_tuple()`。
-- 新增了 \<optional\>、\<variant\>、`shared_ptr::weak_type` 和 \<cstdalign\>。
+- 我們已新增 \<any\> 、 \<string_view\> 、 `apply()` 、 `make_from_tuple()` 。
+- 已加入 \<optional\> 、、 \<variant\> `shared_ptr::weak_type` 和 \<cstdalign\> 。
 - 讓 `min(initializer_list)`、`max(initializer_list)` 和 `minmax(initializer_list)`，及 `min_element()`、`max_element()` 和 `minmax_element()` 中可使用 C++ 14 `constexpr`。
 
 如需詳細資訊，請參閱[Microsoft c + + 語言一致性表格](../visual-cpp-language-conformance.md)。
@@ -377,7 +377,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 - `static_assert(false, "message")` 已變更為 `#error message`。 此變更會改善編譯器診斷，因為 `#error` 會使編譯立刻停止。
 - 標準程式庫已不再將函式標示為 `__declspec(dllimport)`。 新式的連結器技術已不再需要這麼做。
 - 已將 SFINAE 擷取至預設範本引數，相較於傳回類型和函式引數類型，這將會減少雜亂的情形。
-- \<隨機的 Debug 檢查 \> 現在會使用標準程式庫的一般機制，而不是 `_Rng_abort()` 呼叫 stderr 的內部 `fputs()` **stderr**函式。 為了二進位相容性，已保留此函式的執行功能。 我們會在下一個二進位不相容的標準程式庫版本中移除它。
+- 中的 Debug 檢查 \<random\> 現在會使用標準程式庫的一般機制，而不是會 `_Rng_abort()` 呼叫 `fputs()` **stderr**的內部函式。 為了二進位相容性，已保留此函式的執行功能。 我們會在下一個二進位不相容的標準程式庫版本中移除它。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
@@ -414,7 +414,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
 - 對平行演算法的支援不再為實驗性
-- \<filesystem> 的新實作
+- 的新執行\<filesystem>
 - 基礎字串轉換 (部分)
 - `std::launder()`
 - `std::byte`
@@ -454,7 +454,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 - `basic_string` 的內部成長路徑已不再位於 `shrink_to_fit()` 的路徑中。
 - 現已將 `basic_string` 變動作業納入非配置的快速路徑和配置的慢速路徑函式中，讓一般的無重新配置案例更容易內嵌至呼叫者。
 - 變動 `basic_string` 作業現在會以慣用狀態來建立重新配置的緩衝區，而非就地調整大小。 例如，在字串開頭的插入，現在只會在插入一次後移動內容。 它會向下移動或移至新配置的緩衝區。 在重新配置的情況下，不會再將它移到新配置的緩衝區，然後再移動。
-- 在 \<string\> 中呼叫 C 標準程式庫的作業現在會快取 `errno` 位址，以免與 TLS 間重複互動。
+- 在中呼叫 C 標準程式庫的作業現在會快 \<string\> `errno` 取位址，以移除與 TLS 的重複互動。
 - 簡化了 `is_pointer` 實作。
 - 以函式為基礎的運算式 SFINAE 已變更為以 `struct` 和 `void_t` 為基礎。
 - 標準程式庫演算法現在會避免會後續累加的迭代器。
@@ -598,7 +598,7 @@ Visual Studio Build Tools (先前以獨立產品形式提供) 現在以工作負
 
 ## <a name="linux-development-with-c"></a>使用 C++ 的 Linux 程式開發
 
-熱門的 [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) 擴充功能現已納入 Visual Studio 中。 這個安裝提供您開發在 Linux 環境上執行的 C++ 應用程式，並進行偵錯所需的一切。
+熱門的 [Visual C++ for Linux Development](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment) 擴充功能現已納入 Visual Studio 中。 這個安裝提供您開發在 Linux 環境上執行的 C++ 應用程式，並進行偵錯所需的一切。
 
 ##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017 15.2 版
 

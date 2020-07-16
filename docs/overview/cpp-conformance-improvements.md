@@ -3,12 +3,12 @@ title: C++ 一致性改善
 ms.date: 05/18/2020
 description: Visual Studio 的 Microsoft C++ 正在向完全符合 C++20 語言標準邁進。
 ms.technology: cpp-language
-ms.openlocfilehash: c7c93de8b0e4c266290b858c76e7b34fccc0cabd
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 7796728c869e39270ee9e8fe82fb5e0e9a3a8630
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630494"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405100"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 一致性改善
 
@@ -177,7 +177,7 @@ const char8_t* s = u8"Hello"; // C++20
 
 [P0887R1 type_identity](https://wg21.link/p0887r1)。 已移除淘汰的 `std::identity` 類別範本副檔名，並已經以 C++20 `std::type_identity` metafunction 和 `std::identity` 函式物件取代。 兩者都僅能在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 下使用。
 
-下列範例會在 Visual Studio 2017 中產生 `std::identity` 的淘汰警告 C4996 (定義於 \<type_traits>)：
+下列範例會 `std::identity` \<type_traits> 在 Visual Studio 2017 中，產生（定義于）中的取代警告 C4996：
 
 ```cpp
 #include <type_traits>
@@ -188,7 +188,7 @@ int i = 42;
 long j = std::identity<long>{}(i);
 ```
 
-下列範例示範如何使用新的 `std::identity` (定義於\<functional>) 以及新的 `std::type_identity`：
+下列範例顯示如何使用新的 `std::identity` （定義于中 \<functional> ）和新的 `std::type_identity` ：
 
 ```cpp
 #include <type_traits>
@@ -237,7 +237,7 @@ void f() {
 - 用於 `basic_string` 和 `basic_string_view` 的 `starts_with()` 和 `ends_with()`。
 - 關聯容器的 `contains()`。
 - `list` 和 `forward_list` 的 `remove()`、`remove_if()` 與 `unique()` 現在會傳回 `size_type`。
-- `shift_left()` 和 `shift_right()` 已新增至 \<演算法>。
+- `shift_left()` 與 `shift_right()` 已新增到 \<algorithm>。
 
 ## <a name="conformance-improvements-in-162"></a><a name="improvements_162"></a>16.2 中的一致性改善
 
@@ -376,13 +376,13 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="standard-library-improvements"></a>標準程式庫改良功能
 
-- \<`to_chars()`具有固定/科學精確度的 charconv>。 （目前已針對16.4 規劃一般精確度）。
-- [P0020R6](https://wg21.link/p0020r6)：不可部分完成 \< 的 float>、不可部分完成的 \< double>、不可部分完成的 \< double>
+- \<charconv>`to_chars()`具有固定/科學精確度。 （目前已針對16.4 規劃一般精確度）。
+- [P0020R6](https://wg21.link/p0020r6)：不可部分完成、不可部分完成、不可部分完成 \<float> \<double>\<long double>
 - [P0463R1](https://wg21.link/p0463r1)： endian
 - [P0482R6](https://wg21.link/p0482r6)： char8_t 的程式庫支援
 - [P0600R1](https://wg21.link/p0600r1)： [ \[ Nodiscard]] 適用于 STL，第1部分
 - [P0653R2](https://wg21.link/p0653r2)： to_address （）
-- [P0754R2](https://wg21.link/p0754r2)： \< 版本>
+- [P0754R2](https://wg21.link/p0754r2)：\<version>
 - [P0771R1](https://wg21.link/p0771r1)： std：： function 的 move 函數的 noexcept
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-163"></a><a name="improvements_163"></a>Visual Studio 2019 16.3 版中的一致性改善
@@ -456,7 +456,7 @@ extern "C" void f(int, int, int, BOOL){}
 
 ### <a name="standard-library-improvements"></a>標準程式庫改良功能
 
-非標準標頭 \< stdexcpt> 和 \<> typeinfo 已移除。 包含它們的程式碼應該改為分別包含標準標頭 \< 例外狀況> 和 \< typeinfo>。
+非標準標頭 \<stdexcpt.h> 和已 \<typeinfo.h> 移除。 包含它們的程式碼應該改為分別包含標準標頭 \<exception> 和 \<typeinfo> 。
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-164"></a><a name="improvements_164"></a>Visual Studio 2019 16.4 版中的一致性改善
 
@@ -1276,9 +1276,9 @@ int main()
 
 已教授迭代器偵錯功能正確解除包裝 `std::move_iterator`。 例如，`std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` 現可投入 `memcpy` 快速路徑。
 
-### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>修正 \<xkeycheck.h> 關鍵字強制執行
+### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>\<xkeycheck.h>關鍵字強制的修正
 
-標準程式庫的宏取代關鍵字強制 \< xkeycheck> 已修正，以發出偵測到的實際問題關鍵字，而不是一般訊息。 它也支援 C++20 的關鍵字，可避免誘騙 IntelliSense 說出隨機的巨集關鍵字。
+標準程式庫的宏取代關鍵字強制 \<xkeycheck.h> 已修正，以發出偵測到的實際問題關鍵字，而不是一般訊息。 它也支援 C++20 的關鍵字，可避免誘騙 IntelliSense 說出隨機的巨集關鍵字。
 
 ### <a name="allocator-types-no-longer-deprecated"></a>配置器類型不再予以淘汰
 
@@ -1288,7 +1288,7 @@ int main()
 
 已 `static_cast` 從中移除未 `std::string` 針對標準所呼叫的偽，而且不小心隱藏了 C4244 縮小警告。 現在嘗試呼叫會 `std::string::string(const wchar_t*, const wchar_t*)` 正確發出 C4244 `narrowing a wchar_t into a char` 。
 
-### <a name="various-filesystem-correctness-fixes"></a>各種 \<檔案系統> 正確性修正
+### <a name="various-filesystem-correctness-fixes"></a>各種 \<filesystem> 正確性修正
 
 - 已修正 `std::filesystem::last_write_time` 嘗試變更目錄的上次寫入時間時失敗的問題。
 - 提供不存在的目標路徑時，`std::filesystem::directory_entry` 建構函式現在會儲存失敗的結果，而不是擲回例外狀況。
@@ -1322,7 +1322,7 @@ int main()
 
 - 過去，某些已傳遞給並行程式庫的時間值會溢位，例如 `condition_variable::wait_for(seconds::max())`。 現已修正，溢位過去似乎會以隨機的 29 日循環變更行為 (當基礎 Win32 API 接受的 uint32_t 毫秒溢位時)。
 
-- \< `timespec` `timespec_get` `std` 除了在全域命名空間中宣告，ctime> 標頭現在也會在命名空間中正確宣告和。
+- \<ctime> `timespec` `timespec_get` 除了在 `std` 全域命名空間中宣告，標頭現在也會在命名空間中正確宣告和。
 
 ### <a name="various-fixes-for-containers"></a>容器的各種修正
 
@@ -1410,7 +1410,7 @@ struct Comparer  {
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C + + 11：更多程式庫中的 Expression SFINAE 支援
 
-編譯器會繼續改善其對 expression SFINAE 的支援。 這是必要的範本引數推斷和替代，其中**decltype**和**constexpr**運算式可能會顯示為樣板參數。 如需詳細資訊，請參閱 [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3) (Visual Studio 2017 RC 中的運算式 SFINAE 增強功能)。
+編譯器會繼續改善其對 expression SFINAE 的支援。 這是必要的範本引數推斷和替代，其中**decltype**和**constexpr**運算式可能會顯示為樣板參數。 如需詳細資訊，請參閱 [Expression SFINAE improvements in Visual Studio 2017 RC](https://devblogs.microsoft.com/cppblog/expression-sfinae-improvements-in-vs-2015-update-3/) (Visual Studio 2017 RC 中的運算式 SFINAE 增強功能)。
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C + + 14：匯總的 NSDMI
 
@@ -1542,7 +1542,7 @@ C++ 標準的附錄 D 包含已淘汰的所有功能，包括 `shared_ptr::uniqu
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17 程式庫基本概念 V1
 
-[P0220R1](https://wg21.link/p0220r1) 將 C++17 的程式庫基本技術規格合併至標準。 涵蓋對 \<experimental/tuple>、\<experimental/optional>、\<experimental/functional>、\<experimental/any>、\<experimental/string_view>、\<experimental/memory>、\<experimental/memory_resource> 及 \<experimental/algorithm> 的更新。
+[P0220R1](https://wg21.link/p0220r1) 將 C++17 的程式庫基本技術規格合併至標準。 涵蓋 \<experimental/tuple> 、 \<experimental/optional> 、 \<experimental/functional> 、 \<experimental/any> 、、、 \<experimental/string_view> \<experimental/memory> \<experimental/memory_resource> 和 \<experimental/algorithm> 的更新。
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C + + 17：改善標準程式庫的類別樣板引數推斷
 
@@ -1698,7 +1698,7 @@ void sample(A<0> *p)
 
 ### <a name="c17-mathematical-special-functions"></a>C + + 17：數學特殊函數
 
-[P0226R1](https://wg21.link/p0220r1) 為 \<cmath> 標頭將先前技術規格的數學特殊函式納入標準。
+[P0226R1](https://wg21.link/p0220r1)採用先前在標準標頭中數學特殊功能的技術規格 \<cmath> 。
 
 ### <a name="c17-deduction-guides-for-the-standard-library"></a>C + + 17：標準程式庫的推斷指南
 
@@ -1706,7 +1706,7 @@ void sample(A<0> *p)
 
 ### <a name="c17-repairing-elementary-string-conversions"></a>C + + 17：修復基底字元串轉換
 
-[P0682R1](https://wg21.link/p0682r1) 將新的基礎字串轉換函式從 P0067R5 移至新標頭 \<charconv>，並進行了其他改善，包括將錯誤處理函式改為使用 `std::errc` 而非 `std::error_code`。
+[P0682R1](https://wg21.link/p0682r1)將新的基底字元串轉換函式從 P0067R5 移至新的標頭， \<charconv> 並進行其他改進，包括變更要使用的錯誤處理， `std::errc` 而不是 `std::error_code` 。
 
 ### <a name="c17-constexpr-for-char_traits-partial"></a>C + + 17： **constexpr** `char_traits` （部分）
 
@@ -2996,7 +2996,7 @@ struct D : B<T>
 D<int> d;
 ```
 
-若要修正錯誤，請將 B() 運算式變更為 B\<T>()。
+若要修正錯誤，請將 B （）運算式變更為 B \<T> （）。
 
 ### <a name="constexpr-aggregate-initialization"></a>**constexpr**匯總初始化
 
@@ -3166,7 +3166,7 @@ int main()
 }
 ```
 
-若要修正此錯誤，請使用透過 \<cstddef> 定義的 `offsetof`：
+若要修正此錯誤，請使用透過 `offsetof` 下列方式定義的 \<cstddef> ：
 
 ```cpp
 #include <cstddef>

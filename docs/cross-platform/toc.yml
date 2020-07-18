@@ -1,6 +1,6 @@
 - name: 使用 C++ 進行跨平台行動裝置應用程式開發
   href: ../cross-platform/index.yml
-- name: 總覽
+- name: 概觀
   href: ../cross-platform/visual-cpp-for-cross-platform-mobile-development.md
 - name: 開始使用
   expanded: true

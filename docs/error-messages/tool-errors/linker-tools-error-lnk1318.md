@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183575"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446697"
 ---
 # <a name="linker-tools-error-lnk1318"></a>連結器工具錯誤 LNK1318
 
@@ -24,7 +24,7 @@ ms.locfileid: "80183575"
 
 - 在您的組建目錄中執行乾淨的作業，然後執行解決方案的完整組建。
 
-- 重新開機您的電腦，或檢查 mspdbsrv.exe 是否有偏離或停止回應的處理常式，並在 TaskManager 中將其終止。
+- 重新開機您的電腦，或檢查 mspdbsrv.exe 進程的偏離或無回應，並在 TaskManager 中將其終止。
 
 - 關閉專案目錄中的防毒程式檢查。
 
@@ -32,4 +32,4 @@ ms.locfileid: "80183575"
 
 - 嘗試使用64位裝載工具組來建立。
 
-- 如有需要，序列化連結以減輕平行連結問題。 這個錯誤可能是因為某個連結實例啟動 mspdbsrv.exe，而在另一個連結實例使用它來完成之前關閉。 此修正的缺點是，您的專案組建可能需要更長的時間才能完成。
+- 如有需要，序列化連結以減輕平行連結問題。 如果某個連結實例啟動 mspdbsrv.exe，就會導致此錯誤，並在使用它的另一個連結實例完成之前關閉。 此修正的缺點是，您的專案組建可能需要更長的時間才能完成。

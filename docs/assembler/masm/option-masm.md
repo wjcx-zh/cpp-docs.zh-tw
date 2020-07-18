@@ -1,43 +1,48 @@
 ---
 title: OPTION (MASM)
-ms.date: 12/17/2019
+ms.date: 07/15/2020
 f1_keywords:
 - option
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: bd50ac2e051db7f02ac077054e5856524745df54
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a614697a9d633628b02b59a7b810fa261887f859
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318744"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446433"
 ---
 # <a name="option"></a>OPTION
 
 啟用和停用組合器的功能。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
-> **選項** *optionlist*
+> **`OPTION`***選項清單*
 
 ## <a name="remarks"></a>備註
 
 可用的選項包括：
 
-|||||
-|-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**模擬器**|
-|**NOEMULATOR**|**結尾**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**投影**|
-|**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**說明**|**唯讀**|**NOREADONLY**|
-|**範圍**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|
+:::row:::
+   :::column span="":::
+      **`CASEMAP`**<br/>**`DOTNAME`**<br/>**`NODOTNAME`**<br/>**`EMULATOR`**<br/>**`NOEMULATOR`**<br/>**`EPILOGUE`**<br/>**`EXPR16`**
+   :::column-end:::
+   :::column span="":::
+      **`EXPR32`**<br/>**`LANGUAGE`**<br/>**`LJMP`**<br/>**`NOLJMP`**<br/>**`M510`**<br/>**`NOM510`**<br/>**`NOKEYWORD`**
+   :::column-end:::
+   :::column span="":::
+      **`NOSIGNEXTEND`**<br/>**`OFFSET`**<br/>**`OLDMACROS`**<br/>**`NOOLDMACROS`**<br/>**`OLDSTRUCTS`**<br/>**`NOOLDSTRUCTS`**<br/>**`PROC`**
+   :::column-end:::
+   :::column span="":::
+      **`PROLOGUE`**<br/>**`READONLY`**<br/>**`NOREADONLY`**<br/>**`SCOPED`**<br/>**`NOSCOPED`**<br/>**`SEGMENT`**<br/>**`SETIF2`**
+   :::column-end:::
+:::row-end:::
 
-LANGUAGE 的語法是**OPTION language：** <em>x</em>，其中*x*是 C、SYSCALL、STDCALL、PASCAL、FORTRAN 或 BASIC 其中之一。  不支援 SYSCALL、PASCAL、FORTRAN 和 BASIC [。模型](dot-model.md)平面。
+LANGUAGE 的語法為 **`OPTION LANGUAGE:`** _`x`_ ，其中 *`x`* 是 **`C`** 、 **`SYSCALL`** 、、 **`STDCALL`** **`PASCAL`** 、 **`FORTRAN`** 或 **`BASIC`** 的其中一個。 **`SYSCALL`****`PASCAL`** **`FORTRAN`** 不支援、、和 **`BASIC`** [`.MODEL`](dot-model.md) **`FLAT`** 。
 
 ## <a name="see-also"></a>請參閱
 
-指示詞[參考](directives-reference.md)\
+[指示詞參考](directives-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

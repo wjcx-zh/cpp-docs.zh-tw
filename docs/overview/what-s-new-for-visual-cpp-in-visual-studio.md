@@ -3,12 +3,12 @@ title: Visual Studio 中 C++ 的新功能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404970"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446866"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -70,7 +70,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 - 平行演算法程式庫的執行階段動態連結偵測已不再使用整個頁面來存放函式指標陣列。 將此記憶體標示為唯讀已被視為與安全性目的不再相關。
 
-- `std::thread` 的建構函式已不會再等候該執行緒啟動，而且已不會再於底層 C 程式庫 `_beginthreadex` 與提供的可呼叫物件之間插入這麼多層函式呼叫。 先前會 `std::thread` `_beginthreadex` 在和提供的可呼叫物件之間加上六個函式。 這個數位已縮減為只有三個，其中兩個只是 `std::invoke` 。 此變更也可解決 `std::thread` 建構函式會在系統時鐘於 `std::thread` 建立時變更而當機的問題。
+- `std::thread` 的建構函式已不會再等候該執行緒啟動，而且已不會再於底層 C 程式庫 `_beginthreadex` 與提供的可呼叫物件之間插入這麼多層函式呼叫。 先前會 `std::thread` `_beginthreadex` 在和提供的可呼叫物件之間加上六個函式。 這個數位已縮減為只有三個，其中兩個只是 `std::invoke` 。 這項變更也會解決不明確的計時 bug，其中 `std::thread` 如果系統時鐘在建立時的確切時間變更，則會停止回應 `std::thread` 。
 
 - 已修正 `std::hash` 中的效能迴歸，這是我們在實作 `std::hash<std::filesystem::path>` 時所引進的功能。
 
@@ -590,7 +590,7 @@ Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專
 
 我們現在提供安裝原始 C++ 工作負載時更細微的安裝體驗。 我們已新增可選取的元件，讓您能夠只安裝所需的工具。 安裝程式 UI 中列出之元件的指定安裝大小不正確，且低估總大小。
 
-若要在 C++ 桌面工作負載中成功建立 Win32 專案，您必須安裝工具組和 Windows SDK。 安裝建議 (選取) 的元件 **VC++ 2017 v141 工具組 (x86、x64)** 和 **Windows 10 SDK (10.0.nnnnn)** 可確保其正常運作。 如果未安裝所需的工具，將無法成功建立專案，而且 wizard 將會停止回應。
+若要在 C++ 桌面工作負載中成功建立 Win32 專案，您必須安裝工具組和 Windows SDK。 安裝建議 (選取) 的元件 **VC++ 2017 v141 工具組 (x86、x64)** 和 **Windows 10 SDK (10.0.nnnnn)** 可確保其正常運作。 如果未安裝所需的工具，將無法成功建立專案，而且 wizard 會停止回應。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 

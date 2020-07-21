@@ -4,21 +4,21 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b5d44a378e231b99f1b6461bc1329179bfd68f89
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d8d47e9dbfce9e22cf7aab2e3e7beab72d86c770
+ms.sourcegitcommit: 00af3df3331854b23693ee844e5e7c10c8b05a90
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075843"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491371"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>編譯器版本的編譯器警告
 
-編譯器可以隱藏在您使用[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項指定的版本之後引進的警告。 當您引進新的工具組版本，而且想要暫時隱藏新的警告時，此選項適用于管理您的組建程式。 此選項只會隱藏警告，而不是新的錯誤訊息。 不要永久隱藏所有新的警告！ 我們建議您一律以最高的一般警告層級進行編譯，`/W4`，並在實際情況下移除組建中的 `/Wv` 選項。
+編譯器可以隱藏在您使用編譯器選項指定的版本之後所引進的警告 [`/Wv`](../../build/reference/compiler-option-warning-level.md) 。 當您引進新的工具組版本，而且想要暫時隱藏新的警告時，此選項適用于管理您的組建程式。 此選項只會隱藏警告，而不是新的錯誤訊息。 不要永久隱藏所有新的警告！ 建議您一律在最高的一般警告層級進行編譯，並在實際情況下 **`/W4`** 移除 **`/Wv`** 組建中的選項。
 
 這些版本的編譯器引進了新的警告：
 
-| Products | 編譯器版本號碼 |
-|-|-|
+| 產品 | 編譯器版本號碼 |
+|--|--|
 | Visual Studio 2002 | 13.00.9466 |
 | Visual Studio 2003 | 13.10.3077 |
 | Visual Studio 2005 | 14.00.50727.762 |
@@ -38,30 +38,105 @@ ms.locfileid: "80075843"
 | Visual Studio 2017 15.8 版 | 19.15.26726.0 |
 | Visual Studio 2017 15.9 版 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
+| Visual Studio 2019 16.1 版 | 19.21.27702.0 |
+| Visual Studio 2019 16.2 版 | 19.22.27905.0 |
+| Visual Studio 2019 16.3 版 | 19.23.28105.0 |
+|  Visual Studio 2019 16.4 版 | 19.24.28314.0 |
+| Visual Studio 2019 16.5 版 | 19.25.28610.0 |
+| Visual Studio 2019 16.6 版 | 19.26.28805.0 |
 
-您只能指定 [主要]、[主要] 和 [次要] 數位，或是 [`/Wv`] 選項的 [主要]、[次要] 和 [組建編號]。 編譯器會報告所有符合以指定數位開頭之版本的警告，並隱藏版本大於指定數位的所有警告。 例如，`/Wv:17` 報告 Visual Studio 2012 的任何版本中或之前所引進的警告，並隱藏任何編譯器從 Visual Studio 2013 （版本18）或更新版本所引入的警告。 若要隱藏 Visual Studio 2015 update 2 和更新版本中引進的警告，您可以使用 `/Wv:19.00.23506`。 在 Visual Studio 2017 15.5 版之前，請使用 `/Wv:19.11` 來報告任何 Visual Studio 版本中引進的警告，但隱藏 Visual Studio 2017 15.5 版和更新版本中引進的警告。
+您只能指定主要數位、主要和次要數位，或是選項的主要、次要和組建編號 **`/Wv`** 。 編譯器會報告所有符合以指定數位開頭之版本的警告。 它會隱藏版本大於指定數位的所有警告。 例如， **`/Wv:17`** 報告在 Visual Studio 2012 的任何版本中或之前引進的警告，並隱藏任何編譯器從 Visual Studio 2013 （版本18）或更新版本所引入的警告。 若要隱藏 Visual Studio 2015 update 2 和更新版本中引進的警告，您可以使用 **`/Wv:19.00.23506`** 。 在 **`/Wv:19.11`** Visual Studio 2017 15.5 版之前，使用來報告任何版本 Visual Studio 中引進的警告，但隱藏 Visual Studio 2017 15.5 和更新版本中引入的警告。
 
-下列各節列出您可以使用 `/Wv` 編譯器選項隱藏的C++每個視覺效果版本所引進的警告。 `/Wv` 選項無法隱藏未列出的警告，這會早指定版本的編譯器。
+下列各節列出您可以使用編譯器選項隱藏的每個 Visual C++ 版本所引進的警告 **`/Wv`** 。 **`/Wv`** 選項無法隱藏未列出的警告，這會早指定版本的編譯器。
 
 ::: moniker range=">= vs-2019"
 
+## <a name="warnings-introduced-in-visual-studio-2019-version-166-compiler-version-1926288050"></a>Visual Studio 2019 16.6 版（編譯器版本19.26.28805.0）中引進的警告
+
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.25`** 。
+
+| 警告 | 訊息 |
+|--|--|
+| C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
+| C5208 | `unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-165-compiler-version-1925286100"></a>Visual Studio 2019 16.5 版（編譯器版本19.25.28610.0）中引進的警告
+
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.24`** 。
+
+|警告|訊息|
+|-|-|
+| C5061 | `the use of a comma operator as a subscript expression has been deprecated` |
+| C5062 | `enum direct list initialization between 'type-1' and 'type-2' is no longer supported` |
+| C5063 | `'std::is_constant_evaluated' always evaluates to true in manifestly constant-evaluated expressions` |
+| C5108 | `__VA_OPT__ is reserved for use in variadic macros` |
+| C5204 | `'type-name': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly` |
+| C5205 | `delete of an abstract class 'type-name' that has a non-virtual destructor results in undefined behavior` |
+| C5206 | `deduced return types for coroutines is a non-standard extension` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-164-compiler-version-1924283140"></a>Visual Studio 2019 16.4 版（編譯器版本19.24.28314.0）中引進的警告
+
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.23`** 。
+
+| 警告 | 訊息 |
+|--|--|
+| C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | 警告相當於語言功能的 C2429
+| C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
+| C5202 | `a global module fragment can only contain preprocessor directives` |
+| C5203 | `a parenthesized declarator name after 'explicit' will be considered an explicit-specifier in C++20` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-163-compiler-version-1923281050"></a>Visual Studio 2019 16.3 版（編譯器版本19.23.28105.0）中引進的警告
+
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.22`** 。
+
+| 警告 | 訊息 |
+|--|--|
+| C4856 | `'value' is not a valid argument for '/d1initAll:FillPattern' (value must be between 0 and 255). Command-line flag ignored` |
+| C4857 | `C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-162-compiler-version-1922279050"></a>Visual Studio 2019 16.2 版（編譯器版本19.22.27905.0）中引進的警告
+
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.21`** 。
+
+| 警告 | 訊息 |
+|--|--|
+| C4855 | `implicit capture of 'this' via '[=]' is deprecated in 'version'` |
+| C5054 | `operator 'operator-name': deprecated between enumerations of different types` |
+| C5055 | `operator 'operator-name': deprecated between enumerations and floating-point types` |
+| C5056 | `operator 'operator-name': deprecated for array types` |
+| C5057 | `header unit reference to 'name' already exists.  Ignoring header unit 'header-name'` |
+| C5058 | `file system error: cannot find header file 'file-name' for header unit 'unit-name'` |
+| C5059 | `runtime checks and address sanitizer is not currently supported - disabling runtime checks` |
+| C5060 | `/Qpar and address sanitizer not currently supported - disabling auto-parallelization` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-161-compiler-version-1921277020"></a>Visual Studio 2019 16.1 版（編譯器版本19.21.27702.0）中引進的警告
+
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.20`** 。
+
+| 警告 | 訊息 |
+|--|--|
+| C5052 | `Keyword 'keyword-name' was introduced in C++<version> and requires use of the 'option-name' command-line option` |
+| C5053 | `support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension` |
+
 ## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW 中引進的警告（編譯器版本19.20.27004.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.15`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.15`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
+| C4854 | `binding dereferenced null pointer to reference has undefined behavior` |
+| C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
 ::: moniker range=">= vs-2017"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 15.8 版（編譯器版本19.15.26726.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.14`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.14`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
 | C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
 | C4845 | `'__declspec(no_init_all)' is ignored if '/d1initall[0|1|2|3]' was not specified on the command line` |
@@ -84,27 +159,27 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 15.7 版（編譯器版本19.14.26428.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.13`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.13`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 15.6 版（編譯器版本19.13.26128.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.12`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.12`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 15.5 版（編譯器版本19.12.25830.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.11`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.11`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
 | C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
 | C5039 | `'function': pointer or reference to potentially throwing function passed to extern C function under -EHc. Undefined behavior may occur if this function throws an exception.` |
@@ -115,10 +190,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 15.3 版（編譯器版本19.11.25506.0）中引進的警告
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.10`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.10`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4597 | `undefined behavior: description` |
 | C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
 | C4749 | `conditionally supported: description` |
@@ -137,10 +212,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM 中引進的警告（編譯器版本19.10.25017.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.00`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
 | C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
 | C4839 | `non-standard use of class 'class' as an argument to a variadic function` |
@@ -150,10 +225,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 Update 3 中引進的警告（編譯器版本19.00.24215.1）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00.23918`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.00.23918`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4467 | `usage of ATL attributes is deprecated` |
 | C4596 | `'name': illegal qualified name in member declaration` |
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
@@ -161,10 +236,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 Update 2 中引進的警告（編譯器版本19.00.23918.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00.23506`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.00.23506`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4466 | `Could not perform coroutine heap elision` |
 | C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
@@ -172,10 +247,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 Update 1 中引進的警告（編譯器版本19.00.23506.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:19.00.23026`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:19.00.23026`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
 | C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
@@ -183,10 +258,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM 中引進的警告（編譯器版本19.00.23026.0）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:18`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:18`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4427 | `'error': overflow in constant division, undefined behavior` |
 | C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
 | C4455 | `'operator name': literal suffix identifiers that do not start with an underscore are reserved` |
@@ -242,10 +317,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 中引進的警告（編譯器版本18.00.21005.1）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:17`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:17`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
 | C4316 | `'type': object allocated on the heap may not be aligned number` |
 | C4380 | `'type': A default constructor cannot be deprecated` |
@@ -271,10 +346,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 中引進的警告（編譯器版本17.00.51106.1）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:16`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:16`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4330 | `attribute 'attribute' for section 'section' ignored` |
 | C4415 | `duplicate __declspec(code_seg('name'))` |
 | C4416 | `__declspec(code_seg(...)) contains empty string: ignored` |
@@ -304,7 +379,7 @@ ms.locfileid: "80075843"
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746| `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
+| C4746 | `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -314,10 +389,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010 中引進的警告（編譯器版本16.00.40219.01）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:15`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:15`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4352 | `'name': intrinsic function already defined` |
 | C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
 | C4574 | `'name' is defined to be '0': did you mean to use '#if name'?` |
@@ -330,10 +405,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 中引進的警告（編譯器版本15.00.21022.08）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:14`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:14`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
 | C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
 | C4491 | `'description': has an illegal IDL version format` |
@@ -345,10 +420,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005 中引進的警告（編譯器版本14.00.50727.762）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:13`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:13`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
 | C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
 | C4333 | `'expression': right shift by too large amount, data loss` |
@@ -488,10 +563,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003 中引進的警告（編譯器版本13.10.3077）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:13.00.9466`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:13.00.9466`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4343 | `#pragma optimize(description,off) overrides /Og option` |
 | C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
 | C4346 | `'type': dependent name is not a type` |
@@ -524,10 +599,10 @@ ms.locfileid: "80075843"
 
 ## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002 中引進的警告（編譯器版本13.00.9466）
 
-這些警告和更新版本中的所有警告都會使用編譯器選項 `/Wv:12`來隱藏。
+這些警告和更新版本中的所有警告都會使用編譯器選項來隱藏 **`/Wv:12`** 。
 
-|||
-|-|-|
+| 警告 | 訊息 |
+|--|--|
 | C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
 | C4097 | `expected pragma parameter to be 'restore' or 'off'` |
 | C4165 | `'HRESULT' is being converted to 'bool'; are you sure this is what you want?` |
@@ -673,7 +748,7 @@ ms.locfileid: "80075843"
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++編譯器和組建工具的錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[C/c + + 編譯器和組建工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [編譯器警告 C4000-至 c5999](compiler-warnings-c4000-c5999.md) \
 [/Wv 編譯器選項](../../build/reference/compiler-option-warning-level.md) \
 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \

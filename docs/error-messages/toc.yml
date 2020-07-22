@@ -4254,6 +4254,8 @@
           href: compiler-warnings/c5046.md
         - name: 編譯器警告 (層級 1) C5105
           href: compiler-warnings/c5105.md
+        - name: 編譯器警告 (層級 1) C5208
+          href: compiler-warnings/c5208.md
 - name: 依編譯器版本顯示的編譯器警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: 預設為關閉的編譯器警告

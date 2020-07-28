@@ -6,28 +6,28 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172110"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214226"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI 和 C++/CX)
 
-**nullptr** 關鍵字代表一個「null 指標值」。 使用 null 指標值來指出物件控制代碼、內部指標或原生指標型別並未指向物件。
+**`nullptr`** 關鍵字代表*null 指標值*。 使用 null 指標值來指出物件控制代碼、內部指標或原生指標型別並未指向物件。
 
-搭配受控碼或機器碼來使用 **nullptr**。 編譯器會針對受控和原生的 null 指標值發出適當但不同的指示。 如需使用此關鍵字的 ISO 標準 C++ 版本相關資訊，請參閱 [nullptr](../cpp/nullptr.md)。
+搭配 **`nullptr`** managed 或機器碼使用。 編譯器會針對受控和原生的 null 指標值發出適當但不同的指示。 如需使用此關鍵字的 ISO 標準 C++ 版本相關資訊，請參閱 [nullptr](../cpp/nullptr.md)。
 
-**__nullptr** 關鍵字是 Microsoft 特定的關鍵字，其意義與 **nullptr** 相同，但只適用於機器碼。 如果您搭配 C/C++ 機器碼使用 **nullptr**，然後使用 [/clr](../build/reference/clr-common-language-runtime-compilation.md) 編譯器選項進行編譯，則編譯器無法判斷 **nullptr** 所指出的是原生還是受控的 null 指標值。 為了讓編譯器清楚您的意圖，請使用 **nullptr** 來指定受控值，或使用 **__nullptr** 來指定原生值。
+**__Nullptr**關鍵字是與有相同意義 **`nullptr`** ，但僅適用于機器碼的 Microsoft 特定關鍵字。 如果您使用搭配 **`nullptr`** 原生 C/c + + 程式碼，然後以[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項進行編譯，則編譯器無法判斷是否 **`nullptr`** 表示原生或 managed null 指標值。 若要將您的意圖清楚地提供給編譯器，請使用 **`nullptr`** 來指定受控值或 **__nullptr**來指定原生值。
 
-**nullptr** 關鍵字相當於 Visual Basic 中的 **Nothing** 及 C# 中的 **null**。
+**`nullptr`** 關鍵字相當於 Visual Basic 中的**任何內容**，而在 c # 中為**null** 。
 
-## <a name="usage"></a>使用量
+## <a name="usage"></a>使用方式
 
-**nullptr** 關鍵字可用於任何可使用控制代碼、原生指標或函式引數的地方。
+**`nullptr`** 關鍵字可以在任何可使用控制碼、原生指標或函式引數的位置使用。
 
-**nullptr** 關鍵字不是型別且不支援與下列項目搭配使用：
+**`nullptr`** 關鍵字不是類型，而且不支援搭配使用：
 
 - [sizeof](../cpp/sizeof-operator.md)
 
@@ -35,7 +35,7 @@ ms.locfileid: "80172110"
 
 - `throw nullptr` (儘管 `throw (Object^)nullptr;` 將能運作)
 
-**nullptr** 關鍵字可用來將下列指標型別初始化：
+**`nullptr`** 關鍵字可用於下列指標類型的初始化中：
 
 - 原生指標
 
@@ -45,15 +45,15 @@ ms.locfileid: "80172110"
 
 - 受控的內部指標
 
-**nullptr** 關鍵字可在使用參考之前，用來測試指標或控制代碼參考是否為 Null。
+**`nullptr`** 關鍵字可以在使用參考之前，用來測試指標或控制碼參考是否為 null。
 
 在語言之間使用 null 指標值來檢查錯誤的函式呼叫應會正確解譯。
 
-您無法將控制代碼初始化為零；只能使用 **nullptr**。 為物件控制代碼指派常數 0 會產生 Boxed 的 `Int32` 及 `Object^` 的轉換。
+您不能將控制碼初始化為零。只有 **`nullptr`** 可以使用。 為物件控制代碼指派常數 0 會產生 Boxed 的 `Int32` 及 `Object^` 的轉換。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範 **nullptr** 關鍵字可用於任何可使用控制代碼、原生指標或函式引數的地方。 此外，此範例示範可以使用 **nullptr** 關鍵字來檢查參考，然後再使用它。
+下列程式碼範例示範在 **`nullptr`** 可以使用控制碼、原生指標或函式引數的任何地方都可以使用關鍵字。 這個範例示範 **`nullptr`** 關鍵字可以用來檢查參考，然後再使用它。
 
 ```cpp
 // mcpp_nullptr.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範 **nullptr** 和零可在原生指標上交換使用。
+下列程式碼範例顯示， **`nullptr`** 和零可以在原生指標上交替使用。
 
 ```cpp
 // mcpp_nullptr_1.cpp
@@ -121,7 +121,7 @@ pMyClass == 0
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範會將 **nullptr** 解譯為任意型別的控制代碼或任意型別的原生指標。 如果使用不同型別的控制代碼進行函式多載，將產生模稜兩可錯誤。 **nullptr** 必須明確轉換為某種型別。
+下列程式碼範例顯示，它會被視為任何類型 **`nullptr`** 的控制碼或任何類型的原生指標。 如果使用不同型別的控制代碼進行函式多載，將產生模稜兩可錯誤。 必須 **`nullptr`** 明確轉換成類型。
 
 ```cpp
 // mcpp_nullptr_2.cpp
@@ -139,7 +139,7 @@ void f_null() {
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範允許轉換 **nullptr**，並傳回包含 **nullptr** 值之轉換型別的指標或控制代碼。
+下列程式碼範例顯示允許轉換 **`nullptr`** ，並將指標或控制碼傳回包含值的轉換類型 **`nullptr`** 。
 
 ```cpp
 // mcpp_nullptr_3.cpp
@@ -160,7 +160,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範可以使用 **nullptr** 作為函式參數。
+下列程式碼範例顯示， **`nullptr`** 可做為函式參數使用。
 
 ```cpp
 // mcpp_nullptr_4.cpp
@@ -181,7 +181,7 @@ test
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範，當控制代碼已宣告且未明確初始化時，預設會將它們初始化為 **nullptr**。
+下列程式碼範例顯示當控制碼宣告且未明確初始化時，它們預設會初始化為 **`nullptr`** 。
 
 ```cpp
 // mcpp_nullptr_5.cpp
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範，當您使用 **進行編譯時，可將**nullptr`/clr` 指派給原生指標。
+下列程式碼範例顯示 **`nullptr`** 當您使用進行編譯時，可以指派給原生指標 `/clr` 。
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -221,9 +221,9 @@ int main() {
 
 ## <a name="requirements"></a>需求
 
-編譯器選項：（並非必要; 由所有程式碼產生選項支援，包括 `/ZW` 和 `/clr`）
+編譯器選項：（並非必要; 由所有程式碼產生選項支援，包括 `/ZW` 和 `/clr` ）
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)<br/>
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

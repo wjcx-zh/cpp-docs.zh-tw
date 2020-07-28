@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "70311742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214239"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new (vtable 中的新位置) (C++/CLI 和 C++/CX)
 
-**new** 關鍵字指出虛擬成員將在 vtable 中取得新位置。
+**`new`** 關鍵字表示虛擬成員會在 vtable 中取得新的位置。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -28,9 +28,9 @@ Windows 執行階段不支援。
 
 ### <a name="remarks"></a>備註
 
-在 `/clr` 編譯中，**new** 指出虛擬成員將在 vtable 中取得新位置；此函式不會覆寫基底類別方法。
+在 `/clr` 編譯中， **`new`** 表示虛擬成員會在 vtable 中取得新的位置，而函式不會覆寫基類方法。
 
-**new** 會將 newslot 修飾詞加入至函式的 IL。  如需 newslot 的詳細資訊，請參閱：
+**`new`** 使 newslot 修飾詞加入至函數的 IL。  如需 newslot 的詳細資訊，請參閱：
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
@@ -42,7 +42,7 @@ Windows 執行階段不支援。
 
 ### <a name="examples"></a>範例
 
-下列範例說明 **new** 的效果。
+下列範例顯示的效果 **`new`** 。
 
 ```cpp
 // newslot.cpp
@@ -105,5 +105,5 @@ E::f() called
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)<br/>
-[覆寫指定名稱](override-specifiers-cpp-component-extensions.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)<br/>
+[覆寫規範](override-specifiers-cpp-component-extensions.md)

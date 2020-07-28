@@ -28,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 03d1a9ece92dbedfdceb89488e5d0440dc64f7ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737472"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220726"
 ---
 # <a name="clock"></a>時鐘
 
@@ -53,7 +53,7 @@ clock_t clock( void );
 
 **Clock**函式會告訴在進程啟動期間，自 CRT 初始化之後已經過了多少時鐘時間。 請注意，此函式未完全符合將淨 CPU 時間指定為傳回值的 ISO C。 若要取得 CPU 時間，請使用 Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 函式。 若要判斷經過的時間（以秒為單位），請將**clock**函數所傳回的值除以**CLOCKS_PER_SEC**的宏。
 
-指定了足夠的時間，由**clock**傳回的值可能會超過**clock_t**的最大正數值。 當程式執行得更長時， **clock**所傳回的值一律為 `(clock_t)(-1)` ，如 iso C99 standard （7.23.2.1）和 iso C11 standard （7.27.2.1）所指定。 Microsoft 會將**clock_t**實作為**長時間**、帶正負號的32位整數，並將**CLOCKS_PER_SEC**巨集定義為1000。 這會提供最大的**時鐘**函數傳回值2147483.647 秒，或約24.8 天。 請勿依賴**時鐘**在執行超過此時間長度的進程中所傳回的值。 您可以使用64位[時間](time-time32-time64.md)函式或 Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)函數來記錄處理多年的已耗用時間。
+指定了足夠的時間，由**clock**傳回的值可能會超過**clock_t**的最大正數值。 當程式執行得更長時， **clock**所傳回的值一律為 `(clock_t)(-1)` ，如 iso C99 standard （7.23.2.1）和 iso C11 standard （7.27.2.1）所指定。 Microsoft 會將**clock_t**實作為 **`long`** 、帶正負號的32位整數，並將**CLOCKS_PER_SEC**巨集定義為1000。 這會提供最大的**時鐘**函數傳回值2147483.647 秒，或約24.8 天。 請勿依賴**時鐘**在執行超過此時間長度的進程中所傳回的值。 您可以使用64位[時間](time-time32-time64.md)函式或 Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)函數來記錄處理多年的已耗用時間。
 
 ## <a name="requirements"></a>需求
 

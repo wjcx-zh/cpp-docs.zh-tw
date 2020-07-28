@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 638b5dbca1b3c0c9b9c9c946418ea70354ff6266
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179987"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220557"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>函式樣板的明確特製化
 
@@ -23,7 +23,7 @@ ms.locfileid: "80179987"
 template<> void MySwap(double a, double b);
 ```
 
-這個宣告可讓您為**double**變數定義不同的函數。 就像非樣板函式一樣，也會套用標準類型轉換（例如將**float**類型的變數升級為**double**）。
+這個宣告可讓您為變數定義不同的函式 **`double`** 。 就像非樣板函式，會套用標準類型轉換（例如將類型的變數升級 **`float`** 為 **`double`** ）。
 
 ## <a name="example"></a>範例
 
@@ -53,4 +53,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[函式樣板](../cpp/function-templates.md)
+[函數樣板](../cpp/function-templates.md)

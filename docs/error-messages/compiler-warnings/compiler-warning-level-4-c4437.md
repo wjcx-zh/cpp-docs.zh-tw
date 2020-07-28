@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949cd208d8c4f86afb1ef0a36db8483de4aac232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185330"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214382"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>編譯器警告 (層級 4) C4437
 
@@ -19,7 +19,7 @@ ms.locfileid: "80185330"
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
-編譯器遇到具有下列特性的 `dynamic_cast` 作業。
+編譯器發現 **`dynamic_cast`** 具有下列特性的作業。
 
 - 轉換是從基底類別指標到衍生類別指標。
 
@@ -29,11 +29,11 @@ ms.locfileid: "80185330"
 
 - 在衍生類別的函式或析構函數中找不到轉換，或從衍生類別進一步繼承的某個類別（否則會發出編譯器警告 C4436）。
 
-此警告表示，如果 `dynamic_cast` 在部分結構化的物件上操作，則可能無法正確執行。  當從繼承在警告中命名的衍生類別之類別的函式或析構函數中呼叫封入函數時，就會發生這種情況。  如果警告中所命名的衍生類別永遠不會進一步衍生，或在物件結構或損毀期間未呼叫封入函式，則可以忽略此警告。
+此警告表示， **`dynamic_cast`** 如果它是在部分結構化的物件上操作，可能無法正確執行。  當從繼承在警告中命名的衍生類別之類別的函式或析構函數中呼叫封入函數時，就會發生這種情況。  如果警告中所命名的衍生類別永遠不會進一步衍生，或在物件結構或損毀期間未呼叫封入函式，則可以忽略此警告。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4437，並示範從遺漏的 `vtordisp` 欄位引發的程式碼產生問題。
+下列範例會產生 C4437，並示範從遺漏的欄位引發的程式碼產生問題 `vtordisp` 。
 
 ```cpp
 // C4437.cpp
@@ -85,4 +85,4 @@ int main()
 
 [dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[編譯器警告 (層級 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+[編譯器警告（層級1） C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

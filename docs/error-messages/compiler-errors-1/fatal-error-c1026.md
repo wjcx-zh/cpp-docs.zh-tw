@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1026
 ms.assetid: 89bb9d40-673a-44aa-a9f4-b42c07b49d44
-ms.openlocfilehash: a7c7a5da01c8b4a44c307a00f53530acb12a8009
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ea97bef16bebb8fc0e765ed708e54baee9a64de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220336"
 ---
 # <a name="fatal-error-c1026"></a>嚴重錯誤 C1026
 
@@ -21,6 +21,6 @@ ms.locfileid: "80204649"
 
 藉由下列方式減少運算式的複雜度：
 
-- 減少 `for` 和 `switch` 語句中的嵌套。 將更深入的嵌套語句放在不同的函式中。
+- 減少和語句中的嵌套 **`for`** **`switch`** 。 將更深入的嵌套語句放在不同的函式中。
 
 - 中斷牽涉到逗號運算子或函式呼叫的長運算式。

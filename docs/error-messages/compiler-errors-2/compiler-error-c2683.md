@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
-ms.openlocfilehash: 8526dc1fe3cacc872aa91ca058677d15318fd703
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd629b093bdc3992a8ea69f498b1e1cdab1b8826
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760266"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214629"
 ---
 # <a name="compiler-error-c2683"></a>編譯器錯誤 C2683
 
@@ -19,7 +19,7 @@ ms.locfileid: "74760266"
 
 您無法使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)從非多型類別（沒有虛擬函式的類別）進行轉換。
 
-您可以使用[static_cast](../../cpp/static-cast-operator.md)來執行非多型類型的轉換。 不過，`static_cast` 不會執行執行時間檢查。
+您可以使用[static_cast](../../cpp/static-cast-operator.md)來執行非多型類型的轉換。 不過，不 **`static_cast`** 會執行執行時間檢查。
 
 下列範例會產生 C2683：
 

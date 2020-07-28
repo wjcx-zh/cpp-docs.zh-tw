@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2802
 ms.assetid: 08b68c0e-9382-40ac-8949-39a7a2749e05
-ms.openlocfilehash: 12ce65def043a05f5f154130b64326797a974137
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f872a4753907cd78c9118c22498777d5acc5b2fd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758290"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214577"
 ---
 # <a name="compiler-error-c2802"></a>編譯器錯誤 C2802
 
 靜態成員 ' operator operator ' 沒有型式參數
 
-`static` 成員函式所宣告的運算子必須至少有一個參數。
+成員函式所宣告的運算子 **`static`** 必須至少有一個參數。
 
 下列範例會產生 C2802：
 

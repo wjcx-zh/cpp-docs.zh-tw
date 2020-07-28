@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1046
 ms.assetid: 822ec5f5-b0b0-4711-99e1-fc237b619af6
-ms.openlocfilehash: e8b3a7fdb5e34d32495a182aed198cf781410f0d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c299648ccb709fd88733f588ca1ded2cbdd17911
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204525"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220310"
 ---
 # <a name="fatal-error-c1046"></a>嚴重錯誤 C1046
 
 編譯器限制：結構嵌套太深
 
-結構、等位或類別超過嵌套限制，也就是15個層級。 重寫定義以減少嵌套層級。 使用 `typedef` 定義一或多個嵌套結構，將結構、等位或類別分割成兩個或多個元件。
+結構、等位或類別超過嵌套限制，也就是15個層級。 重寫定義以減少嵌套層級。 使用 **`typedef`** 定義一或多個嵌套結構，將結構、等位或類別分割成兩個或多個元件。

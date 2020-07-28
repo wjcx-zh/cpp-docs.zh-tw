@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 310083a650f842c6c0f0912efe1ceddb66c4fd6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353478"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214746"
 ---
 # <a name="compiler-error-c2143"></a>編譯器錯誤 C2143
 
-語法錯誤： 遺漏 'token1'，'token2' 之前
+語法錯誤： ' token2 ' 之前遺漏 ' token1 '
 
-編譯器會預期特定的權杖 （也就是空白字元以外的語言元素），卻找到另一個權杖。
+編譯器必須有特定的 token （也就是空白字元以外的語言元素），並改為找到另一個 token。
 
-請檢查[C++語言參考](../../cpp/cpp-language-reference.md)若要判斷程式碼語法不正確的位置。 因為遇到造成問題的那一行之後，編譯器可能會報告此錯誤，請檢查幾行程式碼錯誤之前。
+請檢查[c + + 語言參考](../../cpp/cpp-language-reference.md)，判斷程式碼的語法不正確。 因為編譯器可能會在遇到造成問題的那一行之後報告此錯誤，所以請檢查錯誤前面的幾行程式碼。
 
-在不同的情況下，C2143 就會發生。
+C2143 可能會在不同的情況下發生。
 
-這個錯誤可能會發生在可以限定名稱的運算子 (`::`、`->` 和 `.`) 後面必須接著關鍵字 `template`，如下列範例所示：
+當可以限定名稱的運算子（ `::` 、 `->` 和 `.` ）後面必須接著關鍵字時，就會發生 **`template`** 此錯誤，如下列範例所示：
 
 ```cpp
 class MyClass
@@ -35,7 +35,7 @@ class MyClass
 };
 ```
 
-根據預設，C++ 假設 `Ty::PutFuncType` 不是範本；因此下列 `<` 會解譯成小於符號。  您必須明確地告知編譯器 `PutFuncType` 為範本，以便它可以正確地剖析角括號。 若要更正這個錯誤，請在相依類型名稱上使用 `template` 關鍵字，如下所示：
+根據預設，C++ 假設 `Ty::PutFuncType` 不是範本；因此下列 `<` 會解譯成小於符號。  您必須明確地告知編譯器 `PutFuncType` 為範本，以便它可以正確地剖析角括號。 若要更正這個錯誤，請 **`template`** 在相依類型的名稱上使用關鍵字，如下所示：
 
 ```cpp
 class MyClass
@@ -47,7 +47,7 @@ class MyClass
 };
 ```
 
-C2143 就會發生時 **/clr**會使用和`using`指示詞發生語法錯誤：
+使用 **/clr**時可能會發生 C2143，且指示詞 **`using`** 有語法錯誤：
 
 ```cpp
 // C2143a.cpp
@@ -56,7 +56,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;
 ```
 
-它也可能發生於您嘗試使用不也使用的 CLR 語法編譯原始程式碼檔案 **/clr**:
+當您嘗試使用 CLR 語法編譯原始程式碼檔，而未同時使用 **/clr**時，也可能會發生此錯誤：
 
 ```cpp
 // C2143b.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-接在 `if` 陳述式後面的第一個非空白字元必須為左括號。 編譯器無法轉譯任何其他項目：
+緊接在語句後面的第一個非空白字元 **`if`** 必須是左括弧。 編譯器無法轉譯任何其他專案：
 
 ```cpp
 // C2143c.cpp
@@ -108,7 +108,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK
 ```
 
-或當標記未附加至陳述式。 如果您必須將標籤放本身，比方說，結尾的複合陳述式，將它附加至 null 陳述式：
+或當標記未附加至陳述式。 如果您必須自行放置標籤（例如，在複合陳述式的結尾），請將它附加至 null 語句：
 
 ```cpp
 // C2143f.cpp
@@ -122,7 +122,7 @@ void func1() {
 }
 ```
 
-不合格的呼叫中的型別時，就會發生錯誤C++標準程式庫：
+對 c + + 標準程式庫中的類型進行不合格的呼叫時，可能會發生此錯誤：
 
 ```cpp
 // C2143g.cpp
@@ -132,7 +132,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK
 ```
 
-或有遺漏 `typename` 關鍵字：
+或有遺失的 **`typename`** 關鍵字：
 
 ```cpp
 // C2143h.cpp
@@ -164,7 +164,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK
 ```
 
-在 C 程式中，變數必須宣告的函式開頭，它們不能宣告之後執行此函式的非宣告的指示。
+在 C 程式中，變數必須在函式的開頭宣告，而且不能在函式執行非宣告指令之後宣告。
 
 ```C
 // C2143j.c

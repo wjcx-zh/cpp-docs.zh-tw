@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: 00c3e01f46bc98baff1b266bb8ee445b0f868522
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fe113a948cdf2a6e4b4fcf6b0055fe92d583f004
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165011"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220128"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>編譯器警告（層級4） C4868
 
 > '_file_（*line_number*） ' 編譯器可能不會在括弧初始化運算式清單中強制執行由左至右的評估順序
 
-括弧初始化運算式清單的元素是以由左至右順序評估。 在兩種情況下，編譯器無法保證此順序：第一種是當某些元素是以傳值方式傳遞的物件時。第二個是使用 `/clr` 進行編譯，而某些專案是物件的欄位，或為陣列元素。 當編譯器無法保證由左至右的評估時，它會發出警告 C4868。
+括弧初始化運算式清單的元素是以由左至右順序評估。 在兩種情況下，編譯器無法保證此順序：第一種是當某些元素是以傳值方式傳遞的物件時。第二個是使用進行編譯時 `/clr` ，某些專案是物件的欄位，或為陣列元素。 當編譯器無法保證由左至右的評估時，它會發出警告 C4868。
 
 針對 Visual Studio 2015 Update 2 所進行的編譯器一致性工作，可能會產生此警告。 在 Visual Studio 2015 Update 2 之前編譯的程式碼現在可以產生 C4868。
 
-此警告預設為關閉。 請使用 `/Wall` 來啟動此警告。
+此警告預設為關閉。 使用 `/Wall` 來啟動此警告。
 
 若要解決這個警告，請先考慮是否需要初始化運算式清單元素的由左至右評估，例如當專案的評估可能會產生與順序相關的副作用時。 在許多情況下，評估專案的順序並不會有可觀察的效果。
 
-如果評估的順序必須由左至右，請考慮是否能夠改為以 `const` 參考的方式傳遞元素。 這類變更會消除下列程式碼範例中的警告。
+如果評估的順序必須由左至右，請考慮是否可以改為以傳址方式傳遞元素 **`const`** 。 這類變更會消除下列程式碼範例中的警告。
 
 ## <a name="example"></a>範例
 

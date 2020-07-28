@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220440"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 類別
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 在指定架構資料列集的限制。
 
 *bBind*<br/>
-在指定是否要自動系結資料行對應。 預設值為**true**，這會自動系結資料行對應。 將*bBind*設定為**false**可防止自動系結資料行對應，讓您可以手動系結。 （對 OLAP 使用者而言，手動系結特別重要）。
+在指定是否要自動系結資料行對應。 預設值為 **`true`** ，這會自動系結資料行對應。 將*bBind*設定為可防止自動系結資料 **`false`** 行對應，讓您可以手動系結。 （對 OLAP 使用者而言，手動系結特別重要）。
 
 ### <a name="return-value"></a>傳回值
 
@@ -97,5 +97,5 @@ HRESULT Open(const CSession& session,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[架構資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

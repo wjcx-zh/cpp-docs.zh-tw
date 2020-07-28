@@ -21,12 +21,12 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
-ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
+ms.openlocfilehash: fb5441d87dc35ec6fbb495bc38d9041c1f2d2f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86127865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220570"
 ---
 # <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`擷取器
 
@@ -57,7 +57,7 @@ operator bool( ) const throw( );
 
 - **`operator&`** 釋放任何封裝的介面指標，以 Null 取代它，並傳回封裝之指標的位址。 這個運算子可讓您將智慧型指標 by 位址傳遞給具有*out*參數的函式，其會透過它傳回介面指標。
 
-- **`operator bool`** 允許在條件運算式中使用智慧型指標物件。 如果指標不是 Null，則這個運算子會傳回 TRUE。
+- **`operator bool`** 允許在條件運算式中使用智慧型指標物件。 **`true`** 如果指標不是 Null，則這個運算子會傳回。
 
   > [!NOTE]
   > 因為不 **`operator bool`** 是宣告為 **`explicit`** ，所以 `_com_ptr_t` 會隱含地轉換為 **`bool`** ，其可轉換為任何純量類型。 這在您的程式碼中可能會產生非預期的結果。 啟用[編譯器警告（層級4） C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) ，以防止意外使用此轉換。

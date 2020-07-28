@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213807"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220466"
 ---
 # <a name="make-function"></a>Make 函式
 
@@ -165,7 +165,7 @@ ComPtr<T> Make();
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-繼承自 `WRL::RuntimeClass`的使用者指定類別。
+繼承自的使用者指定類別 `WRL::RuntimeClass` 。
 
 *TArg1*<br/>
 傳遞至指定執行時間類別之引數1的類型。
@@ -223,7 +223,7 @@ ComPtr<T> Make();
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則為 `ComPtr<T>` 物件;否則，`nullptr`。
+`ComPtr<T>`如果成功，則為物件，否則為 **`nullptr`** 。
 
 ## <a name="remarks"></a>備註
 
@@ -237,4 +237,4 @@ ComPtr<T> Make();
 
 ## <a name="see-also"></a>另請參閱
 
-[Microsoft::WRL 命名空間](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空間](microsoft-wrl-namespace.md)

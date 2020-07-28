@@ -1,6 +1,6 @@
 ---
-title: 編譯針對 CLR 的 C++/CLI 計劃
-description: 使用 Microsoft C++創建可以連接本機 C++代碼和 .NET 程式的程式和庫。
+title: 編譯以 CLR 為目標的 c + +/CLI 程式
+description: 使用 Microsoft c + + 建立可連接原生 c + + 程式碼和 .NET 程式的程式和程式庫。
 ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 0d661d9e77211a0e49f8695ad713b607377a236a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214824"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>演練:編譯面向視覺工作室中的 CLR 的C++/CLI 程式
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：在 Visual Studio 中編譯以 CLR 為目標的 c + +/CLI 程式
 
-通過使用C++/CLI,您可以創建C++程式,這些程式使用 .NET 類以及本機C++類型。 C++/CLI 用於控制台應用程式和 DLL 中,這些 DLL 包裝本機C++代碼,並可從 .NET 程式訪問它。 要基於 .NET 創建 Windows 使用者介面,請使用 C# 或可視化基本。
+藉由使用 c + +/CLI，您可以建立使用 .NET 類別和原生 c + + 類型的 c + + 程式。 C + +/CLI 適用于主控台應用程式和 Dll 中的，它會包裝原生 c + + 程式碼，並讓它可從 .NET 程式存取。 若要建立以 .NET 為基礎的 Windows 使用者介面，請使用 c # 或 Visual Basic。
 
-對於此過程,您可以鍵入自己的C++程式或使用其中一個示例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
+針對此程式，您可以輸入自己的 c + + 程式，或使用其中一個範例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 對 C++ 語言基本知識的了解。
-- 在 Visual Studio 2017 及更高版本中,C++/CLI 支援是可選元件。 要安裝它,請從「Windows」開始「選單開啟 **」 來檢視化工作室安裝程式**。 確保選取**了帶有C++磁貼的桌面開發**,並在 **「可選**元件」部分中,還檢查**C++/CLI 支援**。
+- 在 Visual Studio 2017 和更新版本中，c + +/CLI 支援是選擇性的元件。 若要安裝它，請從 Windows [開始] 功能表開啟 [ **Visual Studio 安裝程式**]。 請確定已核取 [**使用 c + + 桌面開發**] 磚，然後在 [**選用**元件] 區段中，同時檢查**c + +/cli 支援**。
 
 ## <a name="create-a-new-project"></a>建立新專案
 
-下列步驟會依您使用的 Visual Studio 版本而略有不同。 要查看您首選版本的 Visual Studio 的文件,請使用**版本**選擇器控制項。 它位於此頁面的目錄頂部。
+下列步驟會依您使用的 Visual Studio 版本而略有不同。 若要查看您慣用版本 Visual Studio 的檔，請使用**版本**選取器控制項。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>在 Visual Studio 2019 建立C++/CLI 專案
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中建立 c + +/CLI 專案
 
-1. 在**解決方案資源管理器**中,右鍵單擊頂部以打開"**創建新專案**"對話方塊。
+1. 在**方案總管**中，以滑鼠右鍵按一下頂端，以開啟 [**建立新的專案**] 對話方塊。
 
-1. 在對話框的頂部,在搜尋框中鍵入**CLR,** 然後從結果清單中選擇**CLR 空專案**。
+1. 在對話方塊的頂端，于搜尋方塊中輸入**clr** ，然後從結果清單中選擇 [ **clr 空專案**]。
 
 1. 選擇 [建立] **** 按鈕以建立專案。
 
@@ -44,7 +44,7 @@ ms.locfileid: "81371817"
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>在 Visual Studio 2017 建立C++/CLI 專案
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>在 Visual Studio 2017 中建立 c + +/CLI 專案
 
 1. 建立新專案。 在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。
 
@@ -58,7 +58,7 @@ ms.locfileid: "81371817"
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>在 Visual Studio 2015 建立 C++/CLI 專案
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>在 Visual Studio 2015 中建立 c + +/CLI 專案
 
 1. 建立新專案。 在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。
 
@@ -70,27 +70,27 @@ ms.locfileid: "81371817"
 
 ::: moniker-end
 
-## <a name="add-a-source-file"></a>新增來源
+## <a name="add-a-source-file"></a>新增原始檔
 
 1. 如果未顯示 [方案總管]****，請按一下 [檢視]**** 功能表上的 [方案總管]****。
 
 1. 新增原始程式檔至專案：
 
-   - 右鍵按一下**解決方案資源管理員**中的**源檔案**資料夾,指向 **「添加**」,然後單擊 **「新專案**」。。
+   - 以滑鼠右鍵按一下**方案總管**中的 [**來源**檔案] 資料夾，指向 [**加入**]，然後按一下 [**新增專案**]。
 
    - 按一下 [C++ 檔 (.cpp)]**** 並鍵入檔案名稱，然後按一下 [新增]****。
 
-   **.cpp**檔將顯示在**解決方案資源管理員**中的**源檔案**資料夾中,並在其中鍵入所需的代碼的位置顯示一個選項卡式視窗。
+   **.Cpp**檔案會出現在**方案總管**的 [**來源**檔案] 資料夾中，而且會出現索引標籤式視窗，讓您在該檔案中輸入您要的程式碼。
 
 1. 按一下 Visual Studio 中新建立的索引標籤，然後鍵入有效的 Visual C++ 程式，或複製並貼上其中一個範例程式。
 
    例如，您可以使用[如何：寫入文字檔 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) 範例程式 (位於《程式設計指南》的**檔案處理和 I/O**節點中)。
 
-   如果您使用範例程式，注意您會在建立 .NET 物件時使用 `gcnew` 關鍵字而不是 `new`，而且 `gcnew` 會傳回控制代碼 (`^`) 而不是指標 (`*`)：
+   如果您使用範例程式，請注意， **`gcnew`** 當您建立 .net 物件時，會使用關鍵字，而不是傳回 **`new`** **`gcnew`** 控制碼（ `^` ），而不是指標（ `*` ）：
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   有關C++/CLI 語法的詳細資訊,請參閱[執行時平臺的元件擴展](../extensions/component-extensions-for-runtime-platforms.md)。
+   如需 c + +/CLI 語法的詳細資訊，請參閱[執行時間平臺的元件擴充](../extensions/component-extensions-for-runtime-platforms.md)功能。
 
 1. 在 [建置]**** 功能表上，按一下 [建置方案]****。
 
@@ -109,5 +109,5 @@ ms.locfileid: "81371817"
 
 ## <a name="see-also"></a>另請參閱
 
-[C++語言參考](../cpp/cpp-language-reference.md)<br/>
-[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>
+[C + + 語言參考](../cpp/cpp-language-reference.md)<br/>
+[專案與建置系統](../build/projects-and-build-systems-cpp.md)<br/>

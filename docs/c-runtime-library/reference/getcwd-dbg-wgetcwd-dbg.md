@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-ms.openlocfilehash: 3eb318b9b2faa8716abdd26eafa926c8072b5614
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 982a7c94ef3cbe5adf1e8e8a8a4c28443d8a5b8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955285"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220661"
 ---
 # <a name="_getcwd_dbg-_wgetcwd_dbg"></a>_getcwd_dbg、_wgetcwd_dbg
 
@@ -66,11 +66,11 @@ wchar_t *_wgetcwd_dbg(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 路徑的儲存位置。
 
 *maxlen*<br/>
-路徑的最大長度（以字元為單位）： **char**代表 **_getcwd_dbg** ，而**wchar_t**代表 **_wgetcwd_dbg**。
+路徑的最大長度（以字元為單位）： **`char`** 適用于 **_getcwd_dbg** ，而 **`wchar_t`** 適用于 **_wgetcwd_dbg**。
 
 *blockType*<br/>
 要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
@@ -89,9 +89,9 @@ wchar_t *_wgetcwd_dbg(
 
 ## <a name="remarks"></a>備註
 
-**_Getcwd_dbg**和 **_wgetcwd_dbg**函式與 **_getcwd**和 **_wgetcwd**相同，不同之處在于，當已定義 **_debug**時，這些函式會使用的 DEBUG 版本**malloc**和 **_malloc_dbg**如果傳遞**Null**做為第一個參數，則配置記憶體。 如需詳細資訊，請參閱 [_malloc_dbg](malloc-dbg.md)。
+**_Getcwd_dbg**和 **_wgetcwd_dbg**函式與 **_getcwd**和 **_wgetcwd**相同，不同之處在于，當定義了 **_DEBUG**時，這些函式會使用**malloc**的 DEBUG 版本，而如果將**Null**當做第一個參數傳遞，則會 **_malloc_dbg**配置記憶體。 如需詳細資訊，請參閱 [_malloc_dbg](malloc-dbg.md)。
 
-在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當定義 **_CRTDBG_MAP_ALLOC**時， **_getcwd**和 **_wgetcwd**的呼叫會分別重新對應至 **_getcwd_dbg**和 **_wgetcwd_dbg**，並將*blockType*設定為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將堆積區塊標記為 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 定義 **_CRTDBG_MAP_ALLOC**時， **_getcwd**和 **_wgetcwd**的呼叫會分別重新對應至 **_getcwd_dbg**和 **_wgetcwd_dbg**，並將*blockType*設定為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將堆積區塊標示為 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -106,7 +106,7 @@ wchar_t *_wgetcwd_dbg(
 |**_getcwd_dbg**|\<crtdbg.h>|
 |**_wgetcwd_dbg**|\<crtdbg.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

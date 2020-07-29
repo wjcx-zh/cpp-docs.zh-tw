@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913499"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234272"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -109,13 +109,13 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="remarks"></a>備註
 
-**_Beginthread**函式會建立一個在*start_address*開始執行常式的執行緒。 *Start_address*的常式必須使用 **__cdecl** （適用于機器碼）或 **__clrcall** （適用于 managed 程式碼）呼叫慣例，而且不應該有傳回值。 執行緒從該常式返回時，就會自動終止。 如需執行緒的詳細資訊，請參閱[舊版程式碼的多執行緒支援 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
+**_Beginthread**函式會建立一個在*start_address*開始執行常式的執行緒。 *Start_address*的常式必須使用 **`__cdecl`** （適用于機器碼）或 **__clrcall** （適用于 managed 程式碼）呼叫慣例，而且不應該有傳回值。 執行緒從該常式返回時，就會自動終止。 如需執行緒的詳細資訊，請參閱[舊版程式碼的多執行緒支援 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
 **_beginthreadex**類似于 Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API，比 **_beginthread**更緊密。 **_beginthreadex**不同于 **_beginthread**的方式如下：
 
 - **_beginthreadex**有三個額外的參數： *initflag*、 *Security*和**threadaddr**。 新執行緒可以使用指定的安全性在暫停狀態下建立，而且可以透過*thrdaddr*（也就是執行緒識別碼）來存取。
 
-- 傳遞至 **_beginthreadex**之*start_address*的常式必須使用 **__stdcall** （適用于機器碼）或 **__clrcall** （適用于 managed 程式碼）呼叫慣例，而且必須傳回執行緒結束代碼。
+- 傳遞至 **_beginthreadex**之*start_address*的常式必須使用 **`__stdcall`** （適用于機器碼）或 **__clrcall** （適用于 managed 程式碼）呼叫慣例，而且必須傳回執行緒結束代碼。
 
 - **_beginthreadex**會在失敗時傳回0，而不是-1L。
 
@@ -329,8 +329,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>另請參閱
 
-- [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)
+- [進程和環境控制](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread、_endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
-- [exit、_Exit、_exit](exit-exit-exit.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
 - [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4878a9c8c206851b13484446b436952e655e06db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326491"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234285"
 ---
 # <a name="c-bit-fields"></a>C 位元欄位
 
@@ -22,9 +22,9 @@ ms.locfileid: "62326491"
 &nbsp;&nbsp;&nbsp;&nbsp;*符*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*類型規範* *declarator*宣告子<sub>opt</sub> **：** *常數運算式*
 
-*constant-expression* 會以位元指定欄位的寬度。 `declarator` 的 *type-specifier* 必須是 `unsigned int`、**signed int** 或 `int`，而且 *constant-expression* 必須是非負值的整數值。 若該值是零，宣告沒有 `declarator`。 不允許位元欄位陣列、位元欄位指標與傳回位元欄位的函式。 選擇性的 `declarator` 會為位元欄位命名。 位元欄位只能宣告為結構的一部分。 不能將通訊運算子（**&**）套用至位欄位元件。
+*constant-expression* 會以位元指定欄位的寬度。 的*類型規範* `declarator` 必須是 **`unsigned int`** 、 **`signed int`** 或 **`int`** ，而且*常數運算式*必須是非負整數值。 若該值是零，宣告沒有 `declarator`。 不允許位元欄位陣列、位元欄位指標與傳回位元欄位的函式。 選擇性的 `declarator` 會為位元欄位命名。 位元欄位只能宣告為結構的一部分。 不能將通訊運算子（ **&** ）套用至位欄位元件。
 
-無法參考未具名位元欄位，而且其內容在執行階段無法預測。 它們可以當作「虛設」欄位使用，以用於對齊用途。 未具名的位元欄位寬度指定為 0 時，可保證 *struct-declaration-list* 中跟隨在其後的成員儲存區是以 `int` 界限開始。
+無法參考未具名位元欄位，而且其內容在執行階段無法預測。 它們可以當作「虛設」欄位使用，以用於對齊用途。 將寬度指定為0的未命名位欄位，可保證在*結構宣告清單*中後面的成員儲存體會從 **`int`** 界限開始。
 
 位元欄位也必須夠長，以包含位元模式。 例如，這兩個陳述式不合法：
 
@@ -51,7 +51,7 @@ struct
 
 **Microsoft 特定的**
 
-定義為 `int` 的位元欄位會被視為帶正負號。 Microsoft 的 ANSI C 標準延伸模組允許為位元欄位使用 `char` 與 **long** 類型 (「帶正負號」**** 與 `unsigned`)。 具有基底類型 **long**、**short** 或 `char` (「帶正負號」**** 或 `unsigned`) 的未具名位元欄位會強制對齊基底類型適用的界限。
+定義為的位欄位 **`int`** 會視為 **`signed`** 。 ANSI C 標準的 Microsoft 擴充功能允許 **`char`** **`long`** **`signed`** 位欄位的和類型（和 **`unsigned`** ）。 具有基底類型 **`long`** 、或（或）的未命名位欄位，會 **`short`** **`char`** **`signed`** **`unsigned`** 強制對齊適合基底類型的界限。
 
 位元欄位是在整數內依最小顯著性到最高有效位元的順序配置。 在下列程式碼中
 
@@ -82,6 +82,6 @@ cccccccb bbbbaaaa
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [結構宣告](../c-language/structure-declarations.md)

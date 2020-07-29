@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325659"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223742"
 ---
 # <a name="c-identifiers"></a>C 識別項
 
@@ -34,7 +34,7 @@ int main()
 
 一旦宣告之後，您可以在後續的程式陳述式中使用識別項來參考相關的值。
 
-您可以在 `goto` 陳述式中使用一種稱為陳述式標籤的特殊識別項  (宣告的說明請參閱[宣告和類型](../c-language/declarations-and-types.md)，陳述式標籤的說明請參閱 [goto 和標記陳述式](../c-language/goto-and-labeled-statements-c.md))。
+一種特殊的識別碼，稱為語句標籤，可用於 **`goto`** 語句。 (宣告的說明請參閱[宣告和類型](../c-language/declarations-and-types.md)，陳述式標籤的說明請參閱 [goto 和標記陳述式](../c-language/goto-and-labeled-statements-c.md))。
 
 ## <a name="syntax"></a>語法
 
@@ -50,7 +50,7 @@ int main()
 *digit*：下列其中一個<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-識別項名稱的第一個字元必須是 `nondigit` (也就是說，第一個字元必須是底線或大寫/小寫字母)。 ANSI 允許外部識別碼的名稱使用六個重要字元，內部 (函式內) 識別項名稱則可使用 31 個重要字元。 外部識別項 (在全域範圍中宣告或以儲存類別 `extern` 宣告的識別項) 可能必須遵守其他命名限制，因為這些識別項必須由其他軟體 (例如連結器) 處理。
+識別項名稱的第一個字元必須是 `nondigit` (也就是說，第一個字元必須是底線或大寫/小寫字母)。 ANSI 允許外部識別碼的名稱使用六個重要字元，內部 (函式內) 識別項名稱則可使用 31 個重要字元。 外部識別碼（在全域範圍中宣告或以儲存類別宣告 **`extern`** ）可能會受到額外的命名限制，因為這些識別碼必須由其他軟體（例如連結器）處理。
 
 **Microsoft 特定的**
 
@@ -96,6 +96,6 @@ Microsoft 連結器會區分大小寫。 您必須根據大小寫一致地指定
 
 識別項的「範圍」是該識別項在程式中出現的區域，其「連結」則用於判斷其他範圍中的相同名稱是否代表同一個識別項。 [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)中會說明這些主題。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 的元素](../c-language/elements-of-c.md)

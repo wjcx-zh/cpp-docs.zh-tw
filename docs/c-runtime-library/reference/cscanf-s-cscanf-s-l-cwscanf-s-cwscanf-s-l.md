@@ -51,19 +51,19 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938521"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234233"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
 
 從主控台讀取格式化資料。 這些是具有如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的更安全 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md) 版本。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -90,7 +90,7 @@ int _cwscanf_s_l(
 
 ### <a name="parameters"></a>參數
 
-*格式*<br/>
+*format*<br/>
 格式控制字串。
 
 *引數*<br/>
@@ -107,12 +107,12 @@ int _cwscanf_s_l(
 
 ## <a name="remarks"></a>備註
 
-**_Cscanf_s**函數會將資料直接從主控台讀取到*引數*所指定的位置。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數都必須是變數的指標，其類型會對應至*格式*的類型規範。 格式會控制輸入欄位的轉譯，並具有與[scanf_s](scanf-scanf-l-wscanf-wscanf-l.md)函式的*格式*參數相同的形式和功能。 雖然 **_cscanf_s**通常會回應輸入字元，但如果最後一個呼叫是 **_ungetch**，就不會這麼做。
+**_Cscanf_s**函式會直接從主控台將資料讀取至*引數*所指定的位置。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數都必須是變數的指標，其類型會對應至*格式*的類型規範。 格式會控制輸入欄位的轉譯，並具有與[scanf_s](scanf-scanf-l-wscanf-wscanf-l.md)函式的*格式*參數相同的形式和功能。 雖然 **_cscanf_s**通常會回應輸入字元，但如果最後一次呼叫是要 **_ungetch**，就不會這麼做。
 
-如同**scanf**系列中其他安全版本的函式， **_cscanf_s**和 **_cswscanf_s**需要類型欄位字元**c**、 **c**、 **s**、 **s**和 **[** 的大小引數。 如需詳細資訊，請參閱 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
+就像**scanf**系列中其他安全版本的函式一樣， **_cscanf_s**和 **_cswscanf_s**需要類型欄位字元**c**、 **c**、 **s**、 **s**和 **[** 的大小引數。 如需詳細資訊，請參閱 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
 
 > [!NOTE]
-> Size 參數的類型不是不**帶正負**號，而不是**size_t**。
+> Size 參數的類型為 **`unsigned`** ，而不是**size_t**。
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
@@ -127,10 +127,10 @@ int _cwscanf_s_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_cscanf_s**、 **_cscanf_s_l**|\<conio.h>|
-|**_cwscanf_s**、 **_cwscanf_s_l**|\<conio.h> 或 \<wchar.h>|
+|**_cscanf_s**， **_cscanf_s_l**|\<conio.h>|
+|**_cwscanf_s**， **_cwscanf_s_l**|\<conio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -173,7 +173,7 @@ You entered 1 2 3
 
 ## <a name="see-also"></a>另請參閱
 
-[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[主控台和埠 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

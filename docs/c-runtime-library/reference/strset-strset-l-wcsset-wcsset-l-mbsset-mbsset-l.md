@@ -67,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911117"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233999"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
@@ -115,7 +115,7 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 以 Null 終止的待設定字串。
 
 *c*<br/>
@@ -130,7 +130,7 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strset**函式會將*str*的所有字元（結尾的 null 字元除外）設定為*c*，轉換成**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的寬字元和多位元組字元版本，而引數和傳回值的資料類型也會隨之改變。 除此之外，這些函式的行為相同。
+**_Strset**函式會將*str*的所有字元（結尾的 null 字元除外）設定為*c*，轉換為 **`char`** 。 **_wcsset**和 **_mbsset_l**是 **_strset**的寬字元和多位元組字元版本，而引數和傳回值的資料類型也會隨之改變。 除此之外，這些函式的行為相同。
 
 **_mbsset**會驗證其參數。 如果*str*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbsset**會傳回**Null** ，並將**errno**設定為**EINVAL**。 **_strset**和 **_wcsset**不會驗證其參數。
 
@@ -187,8 +187,8 @@ After:  *******************************
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: c9dce798572a91bcb9721f022393abb669970131
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 341912b53301c3a11df4285167d66c8c1493d2fd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440454"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223989"
 ---
 # <a name="importing-data-using-__declspecdllimport"></a>使用 __declspec(dllimport) 匯入資料
 
-在資料的情況下，使用 **__declspec （dllimport）** 是一個方便的專案，它會移除一層間接取值。 當您從 DLL 匯入資料時，您仍然必須流覽匯入位址表。 在 **__declspec （dllimport）** 之前，這表示您必須記得在存取從 DLL 匯出的資料時，執行額外的間接取值層級：
+在資料的案例中，使用 **`__declspec(dllimport)`** 是移除間接取值層的便利專案。 當您從 DLL 匯入資料時，您仍然必須流覽匯入位址表。 在 **`__declspec(dllimport)`** 此之前，這意味著您必須記得在存取從 DLL 匯出的資料時，執行額外的間接取值層級：
 
 ```
 // project.h
@@ -46,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-當您將資料標記為 **__declspec （dllimport）** 時，編譯器會自動為您產生間接取值程式碼。 您不再需要擔心上述步驟。 如先前所述，建立 DLL 時，請勿在資料上使用 **__declspec （dllimport）** 宣告。 DLL 內的函式不會使用匯入位址表來存取資料物件;因此，您將不會有額外的間接取值層級。
+當您將資料標記為時 **`__declspec(dllimport)`** ，編譯器會自動為您產生間接取值程式碼。 您不再需要擔心上述步驟。 如先前所述， **`__declspec(dllimport)`** 建立 DLL 時，請勿在資料上使用宣告。 DLL 內的函式不會使用匯入位址表來存取資料物件;因此，您將不會有額外的間接取值層級。
 
 若要從 DLL 自動匯出資料，請使用下列宣告：
 
@@ -54,6 +54,6 @@ if (*ulDataInDll == 0L)
 __declspec(dllexport) ULONG ulDataInDLL;
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [匯入至應用程式](importing-into-an-application.md)

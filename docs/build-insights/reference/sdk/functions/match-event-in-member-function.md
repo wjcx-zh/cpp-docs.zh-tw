@@ -1,6 +1,6 @@
 ---
-title: 符合事件成員函數
-description: C++生成見解 SDK 匹配事件成員函數函數引用。
+title: MatchEventInMemberFunction
+description: C + + Build Insights SDK MatchEventInMemberFunction 函數參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 522630da16e3f4a1294316d88140f4bc25dca2c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323904"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224145"
 ---
-# <a name="matcheventinmemberfunction"></a>符合事件成員函數
+# <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio**版本**選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-該`MatchEventInMemberFunction`函數用於將事件與成員函數的第一個參數描述的類型匹配。 匹配的事件將轉發到成員函數以進行進一步處理。
+`MatchEventInMemberFunction`函數是用來比對事件與成員函式的第一個參數所描述的類型。 符合的事件會轉送到成員函式以供進一步處理。
 
 ## <a name="syntax"></a>語法
 
@@ -45,40 +45,40 @@ bool MatchEventInMemberFunction(
 
 ### <a name="parameters"></a>參數
 
-*T 介面*\
-包含成員函數的類型。
+*TInterface*\
+包含成員函式的類型。
 
-*T返回*\
-成員函數的返回類型。
+*TReturn*\
+成員函式的傳回型別。
 
 *TEvent*\
-要匹配的事件的類型。
+要比對之事件的類型。
 
-*特特帕姆斯*\
-成員函數接受的額外參數的類型以及要匹配的事件類型。
+*TExtraParams*\
+成員函式所接受之額外參數的類型，以及要比對的事件種類。
 
 *TExtraArgs*\
-傳遞給的額外參數的類型`MatchEventInMemberFunction`。
+傳遞至的額外引數類型 `MatchEventInMemberFunction` 。
 
-*事件*\
-要與*TEvent*描述的事件類型匹配的事件。
+*發生*\
+要比對*TEvent*所描述之事件種類的事件。
 
-*物件Ptr*\
-指向調用*成員Func*的物件的指標。
+*objectPtr*\
+呼叫*memberFunc*之物件的指標。
 
-*成員豐奇*\
-描述要匹配的事件類型的成員函數。
+*memberFunc*\
+描述要比對之事件種類的成員函式。
 
-*額外阿格*\
-與事件類型參數一起完美轉發到*成員Func*的參數。
+*extraArgs*\
+與事件種類參數完美地轉送至*memberFunc*的引數。
 
 ### <a name="return-value"></a>傳回值
 
-如果匹配成功,則**為 true**的**bool**值,否則為**false。**
+**`bool`** 如果比對成功，則值為 **`true`** ，否則為 **`false`** 。
 
 ## <a name="remarks"></a>備註
 
-可用於*TEvent*參數的事件類型可以從*捕獲類*清單中選擇。 有關可用於符合的事件和擷取類的清單,請參閱[事件表](../event-table.md)。
+您可以從*capture 類別*清單中選取要用於*TEvent*參數的事件種類。 如需事件清單，以及您可以用來比對的 capture 類別，請參閱[事件資料表](../event-table.md)。
 
 ## <a name="example"></a>範例
 

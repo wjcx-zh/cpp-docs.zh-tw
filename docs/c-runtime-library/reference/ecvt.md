@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234194"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-將**雙精度浮**點數轉換為字串。 這個函式已有更安全的版本可用；請參閱 [_ecvt_s](ecvt-s.md)。
+將 **`double`** 數位轉換為字串。 這個函式已有更安全的版本可用；請參閱 [_ecvt_s](ecvt-s.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -53,7 +53,7 @@ char *_ecvt(
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要轉換的數字。
 
 *計數*<br/>
@@ -62,7 +62,7 @@ char *_ecvt(
 *十進位*<br/>
 儲存的小數點位置。
 
-*簽訂*<br/>
+*簽署*<br/>
 已轉換數字的正負號。
 
 ## <a name="return-value"></a>傳回值

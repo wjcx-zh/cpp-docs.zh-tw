@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233973"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -108,7 +108,7 @@ double wcstod_l(
 
 ## <a name="remarks"></a>備註
 
-每個函式都會將輸入字串*strSource*轉換為**double**。 **Strtod**函數會將*strSource*轉換為雙精確度值。 **strtod**會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 此字元可能是終止的 null 字元。 **wcstod**是寬字元版本的**strtod**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
+每個函式都會將輸入字串*strSource*轉換為 **`double`** 。 **Strtod**函數會將*strSource*轉換為雙精確度值。 **strtod**會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 此字元可能是終止的 null 字元。 **wcstod**是寬字元版本的**strtod**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -210,7 +210,7 @@ string = 10110134932
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [字串至數值函數](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

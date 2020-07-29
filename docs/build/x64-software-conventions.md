@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417191"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223768"
 ---
 # <a name="x64-software-conventions"></a>x64 軟體慣例
 
@@ -18,13 +18,13 @@ ms.locfileid: "79417191"
 
 ## <a name="overview-of-x64-calling-conventions"></a>X64 呼叫慣例的總覽
 
-X86 和 x64 之間的兩個重要差異是64位定址功能，以及一組一般使用的 16 64 位暫存器。 假設有擴充的暫存器集，x64 會使用[__fastcall](../cpp/fastcall.md)呼叫慣例和 RISC 型例外狀況處理模型。 `__fastcall`慣例會使用前四個引數的暫存器和堆疊框架來傳遞額外的引數。 如需 x64 呼叫慣例的詳細資訊，包括暫存器使用方式、堆疊參數、傳回值和堆疊回溯，請參閱[x64 呼叫慣例](x64-calling-convention.md)。
+X86 和 x64 之間的兩個重要差異是64位定址功能，以及一組一般使用的 16 64 位暫存器。 假設有擴充的暫存器集，x64 會使用[__fastcall](../cpp/fastcall.md)呼叫慣例和 RISC 型例外狀況處理模型。 **`__fastcall`** 慣例會使用前四個引數的暫存器和堆疊框架來傳遞額外的引數。 如需 x64 呼叫慣例的詳細資訊，包括暫存器使用方式、堆疊參數、傳回值和堆疊回溯，請參閱[x64 呼叫慣例](x64-calling-convention.md)。
 
 ## <a name="enable-optimization-for-x64"></a>啟用 x64 的優化
 
 下列編譯器選項可協助您優化 x64 應用程式：
 
-- [/favor (專為架構最佳化)](../build/reference/favor-optimize-for-architecture-specifics.md)
+- [/favor （針對架構細節優化）](../build/reference/favor-optimize-for-architecture-specifics.md)
 
 ## <a name="types-and-storage"></a>類型和儲存體
 
@@ -47,19 +47,19 @@ X86 和 x64 之間的兩個重要差異是64位定址功能，以及一組一般
 |||||
 |-|-|-|-|
 |純量類型|C 資料類型|儲存體大小（以位元組為單位）|建議的對齊方式|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|Word|
-|**UINT16**|**unsigned short**|2|Word|
-|**INT32**|**int**、 **long**|4|序位|
+|**INT8**|**`char`**|1|Byte|
+|**UINT8**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|Word|
+|**UINT16**|**`unsigned short`**|2|Word|
+|**INT32**|**`int`**, **`long`**|4|序位|
 |**UINT32**|**不帶正負號的整數，不帶正負號的 long**|4|序位|
-|**INT64**|**__int64**|8|序位|
+|**INT64**|**`__int64`**|8|序位|
 |**UINT64**|**unsigned __int64**|8|序位|
-|**FP32 （單精確度）**|**float**|4|序位|
-|**FP64 （雙精確度）**|**double**|8|序位|
+|**FP32 （單精確度）**|**`float`**|4|序位|
+|**FP64 （雙精確度）**|**`double`**|8|序位|
 |**滑鼠**|__\*__|8|序位|
-|**__m64**|**結構 __m64**|8|序位|
-|**__m128**|**結構 __m128**|16|Octaword|
+|**`__m64`**|**結構 __m64**|8|序位|
+|**`__m128`**|**結構 __m128**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>匯總和等位
 
@@ -82,19 +82,19 @@ X86 和 x64 之間的兩個重要差異是64位定址功能，以及一組一般
 ||||
 |-|-|-|
 |純量類型|C 資料類型|必要的對齊|
-|**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|Word|
-|**UINT16**|**unsigned short**|Word|
-|**INT32**|**int**、 **long**|序位|
+|**INT8**|**`char`**|Byte|
+|**UINT8**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|Word|
+|**UINT16**|**`unsigned short`**|Word|
+|**INT32**|**`int`**, **`long`**|序位|
 |**UINT32**|**不帶正負號的整數，不帶正負號的 long**|序位|
-|**INT64**|**__int64**|序位|
+|**INT64**|**`__int64`**|序位|
 |**UINT64**|**unsigned __int64**|序位|
-|**FP32 （單精確度）**|**float**|序位|
-|**FP64 （雙精確度）**|**double**|序位|
+|**FP32 （單精確度）**|**`float`**|序位|
+|**FP64 （雙精確度）**|**`double`**|序位|
 |**滑鼠**|<strong>\*</strong>|序位|
-|**__m64**|**結構 __m64**|序位|
-|**__m128**|**結構 __m128**|Octaword|
+|**`__m64`**|**結構 __m64**|序位|
+|**`__m128`**|**結構 __m128**|Octaword|
 
 下列匯總對齊規則適用：
 
@@ -181,7 +181,7 @@ _declspec(align(8)) union {
 
 - 連鎖作業中無法使用未對齊的位置。
 
-如果您需要更嚴格的對齊方式`__declspec(align(N))` ，請在您的變數宣告上使用。 這會導致編譯器以動態方式對齊堆疊，以符合您的規格。 不過，在執行時間動態調整堆疊可能會導致應用程式執行速度變慢。
+如果您需要更嚴格的對齊方式，請 `__declspec(align(N))` 在您的變數宣告上使用。 這會導致編譯器以動態方式對齊堆疊，以符合您的規格。 不過，在執行時間動態調整堆疊可能會導致應用程式執行速度變慢。
 
 ## <a name="register-usage"></a>註冊使用方式
 
@@ -193,7 +193,7 @@ X64 架構提供16個一般用途的暫存器（這裡稱為整數暫存器）�
 
 ||||
 |-|-|-|
-|註冊|狀態|使用|
+|註冊|狀態|用途|
 |RAX|動態|傳回值暫存器|
 |RCX|動態|第一個整數引數|
 |RDX|動態|第二個整數引數|
@@ -206,12 +206,12 @@ X64 架構提供16個一般用途的暫存器（這裡稱為整數暫存器）�
 |RBX|靜態|必須由被呼叫者保留|
 |RBP|靜態|必須用作框架指標；必須由被呼叫者保留|
 |RSP|靜態|堆疊指標|
-|XMM0, YMM0|動態|第一個 FP 引數；使用 `__vectorcall` 時的第一個向量型別引數|
-|XMM1, YMM1|動態|第二個 FP 引數；使用 `__vectorcall` 時的第二個向量類型引數|
-|XMM2, YMM2|動態|第三個 FP 引數；使用 `__vectorcall` 時的第三個向量類型引數|
-|XMM3, YMM3|動態|第四個 FP 引數；使用 `__vectorcall` 時的第四個向量類型引數|
-|XMM4, YMM4|動態|必須由呼叫者視需要保留；使用 `__vectorcall` 時的第五個向量型別引數|
-|XMM5, YMM5|動態|必須由呼叫者視需要保留；使用 `__vectorcall` 時的第六個向量型別引數|
+|XMM0, YMM0|動態|第一個 FP 引數;使用時的第一個向量型別引數 **`__vectorcall`**|
+|XMM1, YMM1|動態|第二個 FP 引數;使用時的第二個向量類型引數 **`__vectorcall`**|
+|XMM2, YMM2|動態|第三個 FP 引數;使用時的第三個向量類型引數 **`__vectorcall`**|
+|XMM3, YMM3|動態|第四個 FP 引數;使用時的第四個向量類型引數 **`__vectorcall`**|
+|XMM4, YMM4|動態|必須由呼叫者視需要保留;使用時的第五個向量類型引數 **`__vectorcall`**|
+|XMM5, YMM5|動態|必須由呼叫者視需要保留;使用時，第六個向量類型引數 **`__vectorcall`**|
 |XMM6:XMM15, YMM6:YMM15|靜態 (XMM)、動態 (YMM 的上半部分)|必須由被呼叫端保留。 YMM 暫存器必須由被呼叫者視需要保留。|
 
 在函式 exit 上，以及在函式進入 C 執行時間程式庫呼叫和 Windows 系統呼叫的情況下，應清除 CPU 旗標暫存器中的方向旗標。
@@ -238,6 +238,6 @@ X64 編譯器的其中一個條件約束是沒有內嵌組合語言支援。 這
 
 X64 可執行檔影像格式為 PE32 +。 可執行映射（Dll 和 Exe）的大小上限為 2 gb，因此可使用32位置換的相對定址來處理靜態影像資料。 此資料包括匯入位址資料表、字串常數、靜態全域資料等等。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [呼叫慣例](../cpp/calling-conventions.md)

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233921"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -85,7 +85,7 @@ int _timespec64_get(
 
 **Microsoft 特定的**
 
-這些函式僅支援以**TIME_UTC**作為*基底*值。 這會將*time_spec*值設定為自 epoch 啟動之後的秒數和毫微秒數（1970年1月1日午夜，國際標準時間（UTC））。 在**結構** **_timespec32**中， **tv_sec**是 **__time32_t**值。 在**結構** **_timespec64**中， **tv_sec**是 **__time64_t**值。 在**結構** **timespec**中， **tv_sec**是**time_t**類型，其長度為32位或64位，視預處理器宏 _USE_32BIT_TIME_T 是否已定義而定。 **Timespec_get**函式是內嵌函數，會在定義 _USE_32BIT_TIME_T 時呼叫 **_timespec32_get** 。否則，它會呼叫 **_timespec64_get**。
+這些函式僅支援以**TIME_UTC**作為*基底*值。 這會將*time_spec*值設定為自 epoch 啟動之後的秒數和毫微秒數（1970年1月1日午夜，國際標準時間（UTC））。 在 **`struct`** **_timespec32**中， **tv_sec**是 **__time32_t**值。 在 **`struct`** **_timespec64**中， **tv_sec**是 **__time64_t**值。 在 **`struct`** **timespec**中， **tv_sec**是**time_t**類型，其長度為32位或64位，視預處理器宏 _USE_32BIT_TIME_T 是否已定義而定。 **Timespec_get**函式是內嵌函數，會在定義 _USE_32BIT_TIME_T 時呼叫 **_timespec32_get** 。否則，它會呼叫 **_timespec64_get**。
 
 **結束 Microsoft 專有**
 
@@ -95,7 +95,7 @@ int _timespec64_get(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**timespec_get**、 **_timespec32_get**、 **_timespec64_get**|C: \<time.h>，C++： \<ctime> 或 \<time.h>|
+|**timespec_get**、 **_timespec32_get**、 **_timespec64_get**|C： \<time.h> 、c + +： \<ctime> 或\<time.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -107,7 +107,7 @@ int _timespec64_get(
 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
+[localtime，_localtime32，_localtime64](localtime-localtime32-localtime64.md)<br/>
 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>
 [_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](utime-utime32-utime64-wutime-wutime32-wutime64.md)<br/>

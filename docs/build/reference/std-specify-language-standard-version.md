@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: ddb0fc9ad4880ed317a28d7aec5eba1669eabbc5
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507062"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223820"
 ---
-# <a name="std-specify-language-standard-version"></a>/std (指定語言標準版本)
+# <a name="std-specify-language-standard-version"></a>`/std`（指定語言標準版本）
 
 從指定的 C++ 語言標準版本啟用支援的 C++ 語言功能。
 
@@ -29,9 +29,9 @@ ms.locfileid: "84507062"
 
 預設 **`/std:c++14`** 選項會啟用由 MSVC 編譯器所實作為 c + + 14 功能的集合。 此選項會停用編譯器和標準程式庫對較新語言版本中變更或新功能的支援。 它不會停用某些已在舊版 MSVC 編譯器中實作為的 c + + 17 功能。 為避免已針對 Visual Studio 2015 Update 2 中的可用功能取得相依性的使用者進行重大變更，當指定選項時，這些功能仍會啟用 **`/std:c++14`** ：
 
-- [自動化規則，附有以大括號括住的初始清單](https://wg21.link/n3922)
+- [`auto`使用括弧的規則-init-清單](https://wg21.link/n3922)
 
-- [範本參數中的類型名稱](https://wg21.link/n4051)
+- [`typename`在範本範本-參數](https://wg21.link/n4051)
 
 - [移除三併詞](https://wg21.link/n4086)
 

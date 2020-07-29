@@ -1,6 +1,6 @@
 ---
-title: 符合事件
-description: C++生成見解 SDK 匹配事件函數引用。
+title: MatchEvent
+description: C + + Build Insights SDK MatchEvent 函數參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c60653641c676716bcdd60865433773da79325f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224106"
 ---
-# <a name="matchevent"></a>符合事件
+# <a name="matchevent"></a>MatchEvent
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio**版本**選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-該`MatchEvent`函數用於將事件與事件類型清單匹配。 如果事件與清單中的類型匹配,則該事件將轉發到處理程式以進行進一步處理。
+函 `MatchEvent` 式可用來比對事件與事件種類清單。 如果事件符合清單中的類型，則會將它轉送至處理常式，以進行進一步的處理。
 
 ## <a name="syntax"></a>語法
 
@@ -44,33 +44,33 @@ bool MatchEvent(
 ### <a name="parameters"></a>參數
 
 *TEvent*\
-要匹配的第一個事件類型。
+您想要比對的第一個事件種類。
 
 *TEvents*\
-要匹配的剩餘事件類型。
+您想要比對的其餘事件種類。
 
-*可呼叫*\
-支援`operator()`的類型。 有關哪些參數傳遞給此運算符的詳細資訊,請參閱*可調用*參數說明。
+*TCallable*\
+支援的類型 `operator()` 。 如需哪些引數會傳遞給這個運算子的詳細資訊，請參閱可呼叫*的參數描述*。
 
 *TExtraArgs*\
-傳遞給的額外參數的類型`MatchEvent`。
+傳遞至的額外引數類型 `MatchEvent` 。
 
-*事件*\
-要與*TEvent*和*TEvents*描述的事件類型匹配的事件。
+*發生*\
+要比對*TEvent*和*TEvents*所描述之事件種類的事件。
 
-*呼叫*\
-`MatchEvent`在成功將事件與*TEvent*與*TEvent*描述的任何事件類型符合後*呼叫可呼叫*。 傳遞給*可呼叫*的第一個參數是匹配事件類型的 r 值。 在*可呼叫*的剩餘參數中,*額外的 Args*參數套件是完美的轉發。  
+*多次*\
+`MatchEvent`在成功比對事件與*TEvent*和*TEvents*所描述的任何事件*類型後，* 叫用可呼叫。 傳遞*至可*呼叫的第一個引數是相符事件種類的 r 值。 *ExtraArgs*參數套件在可呼叫的剩餘參數中是完美轉送*的。*  
 
-*額外阿格*\
-與匹配的事件類型一起被完全轉發到*可呼叫*的參數。
+*extraArgs*\
+引數，會與相符的事件種類一起完美*轉寄至可*呼叫。
 
 ### <a name="return-value"></a>傳回值
 
-如果匹配成功,則為**true**的**bool**值,否則為**false。**
+**`bool`** 如果比對成功，則值為 **`true`** ，否則為 **`false`** 。
 
 ## <a name="remarks"></a>備註
 
-用於*TEvent*和*TEvents*參數的事件類型是從*捕獲類*清單中選擇的。 有關可用於符合的事件和擷取類的清單,請參閱[事件表](../event-table.md)。
+系統會從*capture 類別*清單中選取要用於*TEvent*和*TEvents*參數的事件種類。 如需事件清單，以及您可以用來比對的 capture 類別，請參閱[事件資料表](../event-table.md)。
 
 ## <a name="example"></a>範例
 

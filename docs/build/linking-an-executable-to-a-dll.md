@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417359"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223937"
 ---
 # <a name="link-an-executable-to-a-dll"></a>將可執行檔連結至 DLL
 
@@ -42,11 +42,11 @@ ms.locfileid: "79417359"
 
 當系統啟動包含動態連結參考的程式時，它會使用程式可執行檔中的資訊來尋找所需的 Dll。 如果找不到 DLL，系統就會終止進程，並顯示報告錯誤的對話方塊。 否則，系統會將 DLL 模組對應到進程位址空間。
 
-如果有任何 Dll 具有初始化和終止程式碼（例如`DllMain`）的進入點函式，作業系統就會呼叫函數。 傳遞至進入點函式的其中一個參數會指定程式碼，指出 DLL 正在附加至進程。 如果進入點函式未傳回 TRUE，則系統會終止進程並回報錯誤。
+如果有任何 Dll 具有初始化和終止程式碼（例如）的進入點函式 `DllMain` ，作業系統就會呼叫函數。 傳遞至進入點函式的其中一個參數會指定程式碼，指出 DLL 正在附加至進程。 如果進入點函式未傳回 TRUE，則系統會終止進程並回報錯誤。
 
 最後，系統會修改進程的可執行程式碼，以提供 DLL 函式的起始位址。
 
-就像程式碼的其餘部分，載入器會在進程啟動時，將 DLL 程式碼對應到進程的位址空間。 作業系統只會在需要時將其載入記憶體。 因此，.def 檔案用`PRELOAD`來`LOADONCALL`控制載入舊版 Windows 的和程式碼屬性不再具有意義。
+就像程式碼的其餘部分，載入器會在進程啟動時，將 DLL 程式碼對應到進程的位址空間。 作業系統只會在需要時將其載入記憶體。 因此， `PRELOAD` `LOADONCALL` .def 檔案用來控制載入舊版 Windows 的和程式碼屬性不再具有意義。
 
 ### <a name="explicit-linking"></a>明確連結
 
@@ -56,17 +56,17 @@ ms.locfileid: "79417359"
 
 - 如果在進程啟動時找不到 DLL，作業系統就會終止使用隱含連結的進程。 在這種情況下，使用明確連結的進程並不會終止，而且可能會嘗試從錯誤中復原。 例如，處理常式可能會通知使用者錯誤，並讓使用者指定 DLL 的另一個路徑。
 
-- 如果連結的任何 Dll 具有`DllMain`失敗的函式，則使用隱含連結的進程也會終止。 在這種情況下，不會終止使用明確連結的進程。
+- 如果連結的任何 Dll 具有失敗的函式，則使用隱含連結的進程也會終止 `DllMain` 。 在這種情況下，不會終止使用明確連結的進程。
 
 - 隱含連結至多個 Dll 的應用程式可能會很慢啟動，因為 Windows 會在應用程式載入時載入所有 Dll。 為了改善啟動效能，應用程式可能只會在載入之後立即針對需要的 Dll 使用隱含連結。 它可能會使用明確連結，只在需要時才載入其他 Dll。
 
-- 明確連結可讓您不需要使用匯入程式庫來連結應用程式。 如果 DLL 中的變更導致匯出序數變更，則如果應用程式使用函式的名稱而`GetProcAddress`不是序數值呼叫，則不需要重新連結。 使用隱含連結的應用程式仍然必須重新連結到已變更的匯入程式庫。
+- 明確連結可讓您不需要使用匯入程式庫來連結應用程式。 如果 DLL 中的變更導致匯出序數變更，則如果應用程式使用函式 `GetProcAddress` 的名稱而不是序數值呼叫，則不需要重新連結。 使用隱含連結的應用程式仍然必須重新連結到已變更的匯入程式庫。
 
 以下是明確連結要注意的兩項風險：
 
-- 如果 DLL 具有`DllMain`進入點函式，作業系統會在呼叫的執行緒內容中呼叫函式`LoadLibrary`。 如果 DLL 已附加至進程，而且先前的呼叫對`LoadLibrary`函式沒有任何對應的呼叫`FreeLibrary` ，則不會呼叫該進入點函式。 如果 DLL 使用`DllMain`函式來初始化進程的每個執行緒，則明確連結可能會造成問題，因為呼叫（或`LoadLibrary` `AfxLoadLibrary`）時已經存在的任何執行緒都不會初始化。
+- 如果 DLL 具有 `DllMain` 進入點函式，作業系統會在呼叫的執行緒內容中呼叫函式 `LoadLibrary` 。 如果 DLL 已附加至進程，而且先前的呼叫對函式 `LoadLibrary` 沒有任何對應的呼叫，則不會呼叫該進入點函式 `FreeLibrary` 。 如果 DLL 使用函式 `DllMain` 來初始化進程的每個執行緒，則明確連結可能會造成問題，因為呼叫（或）時已經存在的任何執行緒 `LoadLibrary` `AfxLoadLibrary` 都不會初始化。
 
-- 如果 DLL 將靜態範圍資料宣告為`__declspec(thread)`，它可能會在明確連結時造成保護錯誤。 呼叫載入 DLL 之後`LoadLibrary`，每當程式碼參考此資料時，就會造成保護錯誤。 （靜態範圍資料同時包含全域和本機靜態專案）。這就是為什麼當您建立 DLL 時，應該避免使用執行緒區域儲存區。 如果您無法這樣做，請告知 DLL 使用者動態載入 DLL 的潛在陷阱。 如需詳細資訊，請參閱[在動態連結程式庫中使用執行緒區域儲存區（Windows SDK）](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library)。
+- 如果 DLL 將靜態範圍資料宣告為 `__declspec(thread)` ，它可能會在明確連結時造成保護錯誤。 呼叫載入 DLL 之後 `LoadLibrary` ，每當程式碼參考此資料時，就會造成保護錯誤。 （靜態範圍資料同時包含全域和本機靜態專案）。這就是為什麼當您建立 DLL 時，應該避免使用執行緒區域儲存區。 如果您無法這樣做，請告知 DLL 使用者動態載入 DLL 的潛在陷阱。 如需詳細資訊，請參閱[在動態連結程式庫中使用執行緒區域儲存區（Windows SDK）](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library)。
 
 <a name="linking-implicitly"></a>
 
@@ -74,7 +74,7 @@ ms.locfileid: "79417359"
 
 若要透過隱含連結來使用 DLL，用戶端可執行檔必須從 DLL 的提供者取得這些檔案：
 
-- 一或多個標頭檔（.h 檔案），其中包含 DLL 中匯出的資料、函式和 c + + 類別的宣告。 DLL 所匯出的類別、函式和資料都必須全部標記`__declspec(dllimport)`在標頭檔中。 如需詳細資訊，請參閱 [dllexport、dllimport](../cpp/dllexport-dllimport.md)。
+- 一或多個標頭檔（.h 檔案），其中包含 DLL 中匯出的資料、函式和 c + + 類別的宣告。 DLL 所匯出的類別、函式和資料都必須全部標記 `__declspec(dllimport)` 在標頭檔中。 如需詳細資訊，請參閱 [dllexport、dllimport](../cpp/dllexport-dllimport.md)。
 
 - 要連結至可執行檔的匯入程式庫。 建立 DLL 時，連結器會建立匯入程式庫。 如需詳細資訊，請參閱[LIB 檔案做為連結器輸入](reference/dot-lib-files-as-linker-input.md)。
 
@@ -94,11 +94,11 @@ ms.locfileid: "79417359"
 
 - 呼叫[LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)或類似的函式，以載入 DLL 並取得模組控制碼。
 
-- 呼叫[GetProcAddress](getprocaddress.md)以取得應用程式所呼叫之每個匯出函式的函式指標。 因為應用程式會透過指標呼叫 DLL 函式，所以編譯器不會產生外部參考，因此不需要與匯入程式庫連結。 不過，您必須擁有`typedef`或`using`語句，以定義所呼叫之匯出函式的呼叫簽章。
+- 呼叫[GetProcAddress](getprocaddress.md)以取得應用程式所呼叫之每個匯出函式的函式指標。 因為應用程式會透過指標呼叫 DLL 函式，所以編譯器不會產生外部參考，因此不需要與匯入程式庫連結。 不過，您必須擁有 **`typedef`** 或 **`using`** 語句，以定義所呼叫之匯出函式的呼叫簽章。
 
 - 使用 DLL 完成時，請呼叫[FreeLibrary](freelibrary-and-afxfreelibrary.md) 。
 
-例如，此範例函式會`LoadLibrary`呼叫以載入名為 "mydll.dll" 的 DLL `GetProcAddress` ，呼叫以取得名為 "DLLFunc1" 之函式的指標，呼叫函式並儲存結果，然後`FreeLibrary`呼叫以卸載 DLL。
+例如，此範例函式會呼叫 `LoadLibrary` 以載入名為 "mydll.dll" 的 DLL，呼叫 `GetProcAddress` 以取得名為 "DLLFunc1" 之函式的指標，呼叫函式並儲存結果，然後呼叫 `FreeLibrary` 以卸載 DLL。
 
 ```C
 #include "windows.h"
@@ -135,14 +135,14 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-與這個範例不同的是，在大多數情況`LoadLibrary`下`FreeLibrary` ，您應該只在應用程式中針對指定的 DLL 呼叫一次。 特別是如果您要在 DLL 中呼叫多個函式，或重複呼叫 DLL 函式。
+與這個範例不同的是，在大多數情況下，您應該 `LoadLibrary` `FreeLibrary` 只在應用程式中針對指定的 DLL 呼叫一次。 特別是如果您要在 DLL 中呼叫多個函式，或重複呼叫 DLL 函式。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [與匯入程式庫和匯出檔案一起使用](reference/working-with-import-libraries-and-export-files.md)
+- [使用匯入程式庫和匯出檔案](reference/working-with-import-libraries-and-export-files.md)
 
 - [動態連結程式庫搜尋順序](/windows/win32/Dlls/dynamic-link-library-search-order)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

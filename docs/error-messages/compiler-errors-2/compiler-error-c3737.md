@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3737
 ms.assetid: ca2aeb23-2491-4ccb-8838-884abf7065c8
-ms.openlocfilehash: 25dbb8897db45cbddaaf7f0530bcb2a8653b03cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6b61904fac09145ba749138a730603fcfdbb862d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752791"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223378"
 ---
 # <a name="compiler-error-c3737"></a>編譯器錯誤 C3737
 
 ' delegate '：委派不能有明確的呼叫慣例
 
-您不能指定 `delegate`的[呼叫慣例](../../cpp/calling-conventions.md)。
+您不能指定的[呼叫慣例](../../cpp/calling-conventions.md) **`delegate`** 。
 
 ## <a name="example"></a>範例
 

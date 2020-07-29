@@ -1,6 +1,6 @@
 ---
-title: 符合事件堆疊
-description: C++生成見解 SDK 匹配事件堆疊函數引用。
+title: MatchEventStack
+description: C + + Build Insights SDK MatchEventStack 函數參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a223d420e8c48667fbd1c6569f02d0486f597b5e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ae476c402c3ea0cad558ce41a979b4233e0f1dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224119"
 ---
-# <a name="matcheventstack"></a>符合事件堆疊
+# <a name="matcheventstack"></a>MatchEventStack
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio**版本**選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-該`MatchEventStack`函數用於將事件堆疊與特定事件層次結構匹配。 匹配的層次結構將轉發到處理程式以進行進一步處理。 要瞭解有關事件、事件堆疊和層次結構的更多資訊,請參閱[事件表](../event-table.md)。
+`MatchEventStack`函數是用來比對事件堆疊與特定的事件階層。 符合的階層會轉送至處理常式，以供進一步處理。 若要深入瞭解事件、事件堆疊和階層，請參閱[事件資料表](../event-table.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -44,35 +44,35 @@ bool MatchEventStack(
 ### <a name="parameters"></a>參數
 
 *TEvent*\
-要在事件堆疊中匹配的父項的類型。
+要在事件堆疊中符合的 eldest 父系型別。
 
 *TEvents*\
-您希望在事件堆疊中匹配的剩餘類型。
+您想要在事件堆疊中比對的其餘類型。
 
-*可呼叫*\
-支援`operator()`的類型。 有關哪些參數傳遞給此運算符的詳細資訊,請參閱*可調用*參數說明。
+*TCallable*\
+支援的類型 `operator()` 。 如需哪些引數會傳遞給這個運算子的詳細資訊，請參閱可呼叫*的參數描述*。
 
 *TExtraArgs*\
-傳遞給的額外參數的類型`MatchEventStack`。
+傳遞至之額外引數的類型 `MatchEventStack` 。
 
-*事件堆疊*\
-要與*TEvent*和*TEvents*描述的事件類型層次結構匹配的事件堆疊。
+*eventStack*\
+要比對*TEvent*和*TEvents*所描述之事件種類階層的事件堆疊。
 
-*呼叫*\
-成功將事件堆疊與*TEvent*與*TEvent*描述的`MatchEventStack`事件類型層次結構 符合後,將呼叫*可呼叫*。 它將事件層次結構中每種類型的*可調用*一個 r 值參數傳遞給。 在*可呼叫*的剩餘參數中,*額外的 Args*參數套件是完美的轉發。
+*多次*\
+成功比對事件堆疊與*TEvent*和*TEvents*所描述的事件種類階層架構時，會叫用可呼叫的 `MatchEventStack` 。 *callable* 它會針對事件階層中的每個型*別，將一個 r*值引數傳遞給。 *ExtraArgs*參數套件在可呼叫的剩餘參數中是完美轉送*的。*
 
-*額外阿格*\
-與匹配的事件類型一起被完全轉發到*可呼叫*的參數。
+*extraArgs*\
+引數，會與相符的事件種類一起完美*轉寄至可*呼叫。
 
 ### <a name="return-value"></a>傳回值
 
-如果匹配成功,則**為 true**的**bool**值,否則為**false。**
+**`bool`** 如果比對成功，則值為 **`true`** ，否則為 **`false`** 。
 
 ## <a name="remarks"></a>備註
 
-*事件堆疊*中的最後一個事件始終與串\[聯*TEvent、TEvents...* *TEvents...*\]類型清單。 所有其他*TEvent*和*TEvents*條目可以匹配*事件堆疊*中的任何位置,但最後一個位置除外,前提是它們的順序相同。
+*EventStack*中的最後一個事件一律會與 [串連的 \[ *TEvent*]、[ *TEvents* ] [類型] 清單中的最後一個專案進行比對。 \] 除了最後一個以外，所有其他*TEvent*和*TEvents*專案都可以符合*eventStack*中的任何位置，但前提是它們的順序相同。
 
-用於*TEvent*和*TEvents*參數的事件類型是從*捕獲類*清單中選擇的。 有關可用於符合的事件和擷取類的清單,請參閱[事件表](../event-table.md)。
+系統會從*capture 類別*清單中選取要用於*TEvent*和*TEvents*參數的事件種類。 如需事件清單，以及您可以用來比對的 capture 類別，請參閱[事件資料表](../event-table.md)。
 
 ## <a name="example"></a>範例
 

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: 7bcf0f2eb2bef08757250999d0a6696b256fb15c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d95fed3d9af81d89ac03a52a1e6433786118430e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223833"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (預設 char 類型為 unsigned)
 
-將預設 `char` 類型從 `signed char` 變更為 `unsigned char`，而且 `char` 類型在擴展為 `int` 類型時，是以零擴充的。
+將預設 **`char`** 類型從變更 **`signed char`** 為 **`unsigned char`** ，而且 **`char`** 當它擴展為類型時，此類型會以零擴充 **`int`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -32,26 +32,26 @@ ms.locfileid: "81322190"
 
 ## <a name="remarks"></a>備註
 
-如果`char`值顯式聲明`signed`為 **,/J**選項不會影響該值,並且當該值`int`被擴展為 類型時,該值將符號擴展。
+如果將 **`char`** 值明確宣告為 **`signed`** ， **/j**選項不會影響它，而當它擴展為類型時，此值會以正負號擴充 **`int`** 。
 
-**/J**選項`_CHAR_UNSIGNED`定義`#ifndef`,`char`用於在
+**/J**選項會定義 `_CHAR_UNSIGNED` ，它會 `#ifndef` 在限制 .h 檔案中用來定義預設類型的範圍 **`char`** 。
 
-ANSI C 和C++不需要`char`該類型的特定實現。 當您使用字元數據時,此選項非常有用,這些數據最終將轉換為英語以外的語言。
+ANSI C 和 c + + 不需要類型的特定執行 **`char`** 。 當您使用的字元資料最終會轉譯成英文以外的語言時，這個選項就很有用。
 
 > [!NOTE]
 > 如果您搭配 ATL/MFC 使用這個編譯器選項，可能會產生錯誤。 雖然您可以透過定義 `_ATL_ALLOW_CHAR_UNSIGNED` 停用這個錯誤，這個解決方法卻不支援而且未必可行。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 在**解決方案資源管理員**中,開啟專案的快捷方式選單,然後選擇**屬性**。
+1. 在**方案總管**中，開啟專案的快捷方式功能表，然後選擇 [**屬性**]。
 
-1. 在「項目**屬性頁」** 對話框中,在 **「設定屬性**」 的左邊窗格中,展開**C/C++,** 然後選擇**命令列**。
+1. 在 [專案**屬性頁**] 對話方塊的左窗格中，展開 [設定**屬性**] 底下的 [ **C/c + +** ]，然後選取 [**命令列**]。
 
-1. 在「**附加選項」** 窗格中,指定 **/J**編譯器選項。
+1. 在 [**其他選項**] 窗格中，指定 **/j**編譯器選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>＞。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 

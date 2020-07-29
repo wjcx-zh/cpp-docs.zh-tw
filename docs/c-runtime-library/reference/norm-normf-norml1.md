@@ -33,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234051"
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml
 
@@ -68,7 +68,7 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用 **_Fcomplex**或 **_Lcomplex**值之**標準**的多載，並傳回**float**或**long double**值。 在 C 程式中，「**標準**」一律採用 **_Dcomplex**值，並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用 **_Fcomplex**或 **_Lcomplex**值，並傳回或值的**標準**多載 **`float`** **`long double`** 。 在 C 程式中，「**標準**」一律採用 **_Dcomplex**值，並傳回 **`double`** 值。
 
 ## <a name="requirements"></a>需求
 
@@ -76,11 +76,11 @@ long double norm( _Lcomplex z );  // C++ only
 |-------------|--------------|------------------|
 |**標準**、 **normf**、 **norml**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**類型分別是不完整的原生 C99 類型**float _Complex**、 **double _Complex**和**long 雙重 _Complex**的 Microsoft 特定對等專案。  如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**類型分別是 Microsoft 特定的對等專案，而不是原生 C99 類型的**浮點數 _Complex**、 **double _Complex**和**long double _Complex**。  如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [creal、crealf、creall](creal-crealf-creall.md)<br/>
 [cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj、conjf、conjl](conj-conjf-conjl.md)<br/>

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-ms.openlocfilehash: c125fa84119c62e3090611c9a841f46eee759711
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: baf74733c94fdb03f130d2300d0918845cc4de4c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165206"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223326"
 ---
 # <a name="compiler-warning-c4439"></a>編譯器警告 C4439
 
 ' function '：簽章中具有 managed 類型的函式定義必須有 __clrcall 呼叫慣例
 
-編譯器會隱含地以[__clrcall](../../cpp/clrcall.md)取代呼叫慣例。 若要解決這個警告，請移除 `__cdecl` 或 `__stdcall` 呼叫慣例。
+編譯器會以隱含方式取代呼叫慣例 [`__clrcall`](../../cpp/clrcall.md) 。 若要解決這個警告，請移除 **`__cdecl`** 或 **`__stdcall`** 呼叫慣例。
 
-C4439 一律會發出為錯誤。 您可以使用 `#pragma warning` 或 **/wd**關閉此警告;如需詳細資訊，請參閱[warning](../../preprocessor/warning.md)或[/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/we、/wo、/Wv、/Wx （警告層級）](../../build/reference/compiler-option-warning-level.md) 。
+C4439 一律會發出為錯誤。 您可以使用或來關閉此警告 `#pragma warning` **`/wd`** ; 如需詳細資訊，請參閱[warning](../../preprocessor/warning.md)或[/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/we、/wo、/Wv、/wx （警告層級）](../../build/reference/compiler-option-warning-level.md) 。
 
 ## <a name="example"></a>範例
 

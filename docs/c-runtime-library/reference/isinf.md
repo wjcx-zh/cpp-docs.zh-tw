@@ -6,16 +6,16 @@ f1_keywords:
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331606"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234090"
 ---
 # <a name="isinf"></a>isinf
 
-判斷浮點值是否為無限大的值。
+判斷浮點值是否為無限大。
 
 ## <a name="syntax"></a>語法
 
@@ -37,19 +37,19 @@ inline bool isinf(
 
 ## <a name="return-value"></a>傳回值
 
-**isinf**傳回非零值 (**，則為 true**在C++程式碼) 如果引數*x*是無限大的正數或負數。 **isinf**會傳回 0 (**假**在C++程式碼) 如果引數是有限或 NAN。 一般和 subnormal 浮點數的值會被視為有限的。
+**isinf** **`true`** 如果引數*x*是正的或負無限大，則 isinf 會傳回非零值（在 c + + 程式碼中）。 **isinf** **`false`** 如果引數為有限或 NAN，則 isinf 會傳回0（在 c + + 程式碼中）。 一般和偏低浮點值都會視為有限。
 
 ## <a name="remarks"></a>備註
 
-**isinf**是當編譯為 C 和內嵌範本函式時編譯為巨集C++。
+當編譯成 C 時， **isinf**是一個宏，而當編譯為 c + + 時，則是內嵌的範本函式。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭 (C)|必要的標頭 (C++)|
+|函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------------|-------------------------------|
 |**isinf**|\<math.h>|\<math.h> 或 \<cmath>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

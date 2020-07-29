@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169743"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223911"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼叫慣例、參數和傳回類型
 
@@ -27,9 +27,9 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>參數
 
 *pidd*<br/>
-`ImgDelayDescr` 的 `const` 指標，其中包含各種匯入相關資料的位移、系結資訊的時間戳記，以及提供描述項內容之進一步資訊的一組屬性。 目前只有一個屬性 `dlattrRva`，這表示描述項中的位址是相對虛擬位址。 如需詳細資訊，請參閱*delayimp.lib*中的宣告。
+的 **`const`** 指標， `ImgDelayDescr` 其中包含各種匯入相關資料的位移、系結資訊的時間戳記，以及提供描述項內容之進一步資訊的一組屬性。 目前只有一個屬性， `dlattrRva` 這表示描述項中的位址是相對虛擬位址。 如需詳細資訊，請參閱*delayimp.lib*中的宣告。
 
-如需 `PCImgDelayDescr` 結構的定義，請參閱[結構和常數定義](structure-and-constant-definitions.md)。
+如需結構的定義 `PCImgDelayDescr` ，請參閱[結構和常數定義](structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
 延遲載入匯入位址表（IAT）中，以匯入函式的位址來更新之位置的指標。 Helper 常式必須將傳回的相同值儲存到這個位置。
@@ -50,7 +50,7 @@ FARPROC WINAPI __delayLoadHelper2(
 
 ## <a name="remarks"></a>備註
 
-Helper 函式的呼叫慣例是 `__stdcall`。 傳回值的類型不相關，因此會使用 FARPROC。 此函式具有 C 連結。
+Helper 函式的呼叫慣例是 **`__stdcall`** 。 傳回值的類型不相關，因此會使用 FARPROC。 此函式具有 C 連結。
 
 延遲載入 Helper 的傳回值需要儲存在傳入的函式指標位置，除非您想要讓 Helper 函式用來作為通知攔截函式。 在那種情況下，您的程式碼要負責尋找適合傳回的函式指標。 連結器產生的 Thunk 程式碼便會以該傳回值作為匯入的真實目標，並直接跳到該處。
 
@@ -137,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>另請參閱
 
-[了解協助協助程式函式](understanding-the-helper-function.md)
+[瞭解 Helper 函式](understanding-the-helper-function.md)

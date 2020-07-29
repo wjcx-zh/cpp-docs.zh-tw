@@ -4,12 +4,12 @@ description: 描述如何使用 Visual Studio 來設定 CMake 偵錯工具設定
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: cc80827458ba7cb61339ec3a36f227747780a47c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224080"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>設定 CMake 偵錯工作階段
 
@@ -33,7 +33,7 @@ Visual Studio 2017 和更新版本提供原生 CMake 支援。 若要查看這�
 
 ## <a name="customize-debugger-settings"></a>自訂偵錯工具設定
 
-您可以針對專案中任何可執行檔 CMake 目標自訂偵錯工具設定。 這些檔案位於名為 [*啟動. vs. json*] 的設定檔中，位於 *`.vs`* 專案根目錄的資料夾中。 啟動設定檔在大部分的偵錯工具案例中很有用，因為您可以設定並儲存您的偵錯工具設定詳細資料。 此檔案有三個進入點：
+您可以針對專案中任何可執行檔 CMake 目標自訂偵錯工具設定。 這些檔案可在名為*launch.vs.js的*設定檔中找到，位於 *`.vs`* 專案根目錄的資料夾中。 啟動設定檔在大部分的偵錯工具案例中很有用，因為您可以設定並儲存您的偵錯工具設定詳細資料。 此檔案有三個進入點：
 
 - [**調試] 功能表：** 從主功能表選取 [ **debug] > debug And 啟動 $ {activeDebugTarget}** 的 [設定]，以自訂作用中 debug 目標的特定 Debug 設定。 如果您未選取 [debug] 目標，此選項會呈現灰色。
 
@@ -43,15 +43,15 @@ Visual Studio 2017 和更新版本提供原生 CMake 支援。 若要查看這�
 
 ![目標 view 進入點](media/cmake-targets-add-debug-configuration.png "目標 view 進入點")
 
-- **根 remote monitoring.h cmakelists.txt .txt：** 以滑鼠右鍵按一下根*remote monitoring.h cmakelists.txt* ，然後選取 [**新增**] [偵測設定] 以開啟 [**選取偵錯工具**] 對話方塊。 此對話方塊可讓您新增*任何*類型的 debug 設定，但您必須手動指定要透過屬性叫用的 CMake 目標 `projectTarget` 。
+- **根 CMakeLists.txt：** 在根*CMakeLists.txt*上按一下滑鼠右鍵，然後選取 [**新增 Debug Configuration** ] 以開啟 [**選取偵錯工具**] 對話方塊。 此對話方塊可讓您新增*任何*類型的 debug 設定，但您必須手動指定要透過屬性叫用的 CMake 目標 `projectTarget` 。
 
 ![[選取偵錯工具] 對話方塊](media/cmake-select-a-debugger.png "[選取偵錯工具] 對話方塊")
 
-您可以編輯*啟動檔案與 json*檔案，為任何數目的 CMake 目標建立偵錯工具設定。 當您儲存檔案時，Visual Studio 會在 [**啟動專案**] 下拉式清單中為每個新的設定建立專案。
+您可以編輯檔案*上的launch.vs.js* ，以建立任何數目之 CMake 目標的偵錯工具設定。 當您儲存檔案時，Visual Studio 會在 [**啟動專案**] 下拉式清單中為每個新的設定建立專案。
 
-## <a name="reference-keys-in-cmakesettingsjson"></a>CMakeSettings 中的參考索引鍵
+## <a name="reference-keys-in-cmakesettingsjson"></a>CMakeSettings.js中的參考索引鍵
 
-若要參考*CMakeSettings json*檔案中的任何索引鍵，請在 [啟動] 中加上 `cmake.` 其前面的 [*與 json*]。 下列範例顯示簡單的*啟動檔案與 json*檔案，此檔案會針對目前選取的設定，提取 `remoteCopySources` *CMakeSettings*中的機碼值：
+若要參考檔案*CMakeSettings.js*中的任何索引鍵，請 `cmake.` 在*launch.vs.js的*前面加上。 下列範例顯示檔案上的簡單*launch.vs.js* ，該檔案會針對目前選取的設定，提取檔案 `remoteCopySources` 中*CMakeSettings.js*機碼的值：
 
 ```json
 {
@@ -69,13 +69,13 @@ Visual Studio 2017 和更新版本提供原生 CMake 支援。 若要查看這�
 }
 ```
 
-在*CMakeSettings*中定義的**環境變數**也可以在使用語法的 [啟動] 和 [json] 中 `${env.VARIABLE_NAME}` 使用。 在 Visual Studio 2019 16.4 版和更新版本中，會使用您在*CMakeSettings*中指定的環境，自動啟動 debug 目標。 您可以將環境變數設定為**null**，以將其取消設定。
+在*CMakeSettings.js*中定義的**環境變數**也可以在使用語法的 launch.vs.js中使用 `${env.VARIABLE_NAME}` 。 在 Visual Studio 2019 16.4 版和更新版本中，會使用您在*CMakeSettings.js*中指定的環境，自動啟動 debug 目標。 您可以將環境變數設定為**null**，以將其取消設定。
 
-## <a name="launchvsjson-reference"></a>啟動. 與 json 參考
+## <a name="launchvsjson-reference"></a>參考 Launch.vs.js
 
-有許多*啟動和 json*屬性可支援您的所有偵錯工具案例。 下列屬性通用於所有的調試設定，包括遠端和本機：
+屬性有許多*launch.vs.js* ，可支援所有的偵錯工具案例。 下列屬性通用於所有的調試設定，包括遠端和本機：
 
-- `projectTarget`：指定要在建立專案時叫用的 CMake 目標。 如果您從 [**調試] 功能表**或 [**目標] 視圖**輸入 [*啟動. vs. json* ]，Visual Studio 會自動此屬性。 這個值必須符合 [**啟動專案**] 下拉式清單中所列的現有 [偵錯工具] 目標名稱。
+- `projectTarget`：指定要在建立專案時叫用的 CMake 目標。 如果您從 [**調試] 功能表**或 [**目標] 視圖**輸入*launch.vs.js* ，Visual Studio 會自動此屬性。 這個值必須符合 [**啟動專案**] 下拉式清單中所列的現有 [偵錯工具] 目標名稱。
 
 - `env`：要使用語法新增的其他環境變數：
 
@@ -88,7 +88,7 @@ Visual Studio 2017 和更新版本提供原生 CMake 支援。 若要查看這�
 
 - `args`：傳遞給程式以進行 debug 的命令列引數。
 
-## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>針對遠端專案和 WSL，啟動. vs. json 參考
+## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>遠端專案和 WSL 的參考 Launch.vs.js
 
 在 Visual Studio 2019 16.6 版中，我們新增了的新 debug 設定， `type: cppgdb` 以簡化遠端系統和 WSL 的調試。 仍然支援舊的 debug 設定 `type: cppdbg` 。
 
@@ -96,7 +96,7 @@ Visual Studio 2017 和更新版本提供原生 CMake 支援。 若要查看這�
 
 - `name`：用來識別 [**啟動專案**] 下拉式清單中設定的易記名稱。
 - `project`：指定專案檔的相對路徑。 一般來說，在調試 CMake 專案時，您不需要變更此路徑。
-- `projectTarget`：指定要在建立專案時叫用的 CMake 目標。 如果您從 [**調試] 功能表**或 [**目標] 視圖**輸入 [*啟動. vs. json* ]，Visual Studio 會自動此屬性。 此目標值必須符合 [**啟動專案**] 下拉式清單中所列的現有 [偵錯工具] 目標名稱。
+- `projectTarget`：指定要在建立專案時叫用的 CMake 目標。 如果您從 [**調試] 功能表**或 [**目標] 視圖**輸入*launch.vs.js* ，Visual Studio 會自動此屬性。 此目標值必須符合 [**啟動專案**] 下拉式清單中所列的現有 [偵錯工具] 目標名稱。
 - `debuggerConfiguration`：表示要使用的一組調試預設值。 在 Visual Studio 2019 16.6 版中，唯一有效的選項是 `gdb` 。 Visual Studio 2019 16.7 或更新版本也支援 `gdbserver` 。
 - `args`：啟動時傳遞至正在進行偵錯工具的命令列引數。
 - `env`：傳遞給正在進行偵錯工具的其他環境變數。 例如： `{"DISPLAY": "0.0"}` 。
@@ -121,17 +121,17 @@ Visual Studio 2017 和更新版本提供原生 CMake 支援。 若要查看這�
 
 #### <a name="deployment-options"></a>部署選項
 
-使用下列選項，將您的組建電腦（定義于 CMakeSettings 中）與遠端偵錯程式隔開。
+使用下列選項，將您的組建電腦（在 CMakeSettings.js中定義）與遠端的「偵測」電腦分開。
 
 - `remoteMachineName`：遠端 debug 電腦。 只有在與組建電腦不同時才需要。 在[連線管理員](../linux/connect-to-your-remote-linux-computer.md)中必須有現有的專案。 按**Ctrl + 空格鍵**，以查看所有現有遠端連線的清單。
-- `disableDeploy`：預設為 `false` 。 指出是否停用組建/調試區分隔。 當時 `false` ，此選項允許在兩部不同的電腦上執行組建和 debug。
+- `disableDeploy`：預設為 **`false`** 。 指出是否停用組建/調試區分隔。 當時 **`false`** ，此選項允許在兩部不同的電腦上執行組建和 debug。
 - `deployDirectory`：要將 `remoteMachineName` 可執行檔案複製到其中之目錄的完整 Unix 路徑。
 - `deploy`：先進部署設定的陣列。 當您想要更細微地控制部署程式時，您只需要設定這些設定。 根據預設，只會將進行 debug 的程式所需的檔案部署到遠端的「偵錯工具」電腦。
   - `sourceMachine`：複製檔案或目錄的來源電腦。 按**Ctrl + 空格鍵**，即可查看儲存在連接管理員中的所有遠端連線的清單。 在 WSL 上以原生方式建立時，會忽略此選項。
   - `targetMachine`：複製檔案或目錄的目的電腦。 按**Ctrl + 空格鍵**，即可查看儲存在連接管理員中的所有遠端連線的清單。
   - `sourcePath`：上的檔案或目錄位置 `sourceMachine` 。
   - `targetPath`：上的檔案或目錄位置 `targetMachine` 。
-  - `deploymentType`：部署類型的描述。 `LocalRemote``RemoteRemote`支援和。 `LocalRemote`表示從本機檔案系統複製到啟動時所指定的遠端系統。 `remoteMachineName` *vs. json*。 `RemoteRemote`表示從*CMakeSettings*中指定的遠端組建系統複製到*啟動. 與 json*中指定的不同遠端系統。
+  - `deploymentType`：部署類型的描述。 `LocalRemote``RemoteRemote`支援和。 `LocalRemote`表示從本機檔案系統複製到中launch.vs.js所指定的遠端 `remoteMachineName` 系統*launch.vs.json*。 `RemoteRemote`表示從*CMakeSettings.js*中指定的遠端組建系統複製到中*launch.vs.js*所指定的不同遠端系統。
   - `executable`：指出部署的檔案是否為可執行檔。
 
 ### <a name="execute-custom-gdb-commands"></a>執行自訂 `gdb` 命令
@@ -150,7 +150,7 @@ Visual Studio 支援執行自訂 `gdb` 命令，以便直接與基礎偵錯工�
 
 - `project`：指定專案檔的相對路徑。 一般來說，在 CMake 專案的調試時，您不需要變更此值。
 
-- `projectTarget`：指定要在建立專案時叫用的 CMake 目標。 如果您從 [**調試] 功能表**或 [**目標] 視圖**輸入 [*啟動. vs. json* ]，Visual Studio 會自動此屬性。 這個值必須符合 [**啟動專案**] 下拉式清單中所列的現有 [偵錯工具] 目標名稱。
+- `projectTarget`：指定要在建立專案時叫用的 CMake 目標。 如果您從 [**調試] 功能表**或 [**目標] 視圖**輸入*launch.vs.js* ，Visual Studio 會自動此屬性。 這個值必須符合 [**啟動專案**] 下拉式清單中所列的現有 [偵錯工具] 目標名稱。
 
 - `args`：啟動時傳遞至正在進行偵錯工具的命令列引數。
 
@@ -162,7 +162,7 @@ Visual Studio 支援執行自訂 `gdb` 命令，以便直接與基礎偵錯工�
 
 - `cwd`：預設為 `"${debugInfo.defaultWorkingDirectory}"` 。 遠端系統上執行之目錄的完整 Unix 路徑 `program` 。 此目錄必須已存在。
 
-- `environment`：傳遞給正在進行偵錯工具的其他環境變數。 例如，
+- `environment`：傳遞給正在進行偵錯工具的其他環境變數。 例如
 
   ```json
     "environment": [
@@ -211,7 +211,7 @@ Visual Studio 支援執行自訂 `gdb` 命令，以便直接與基礎偵錯工�
 
 - `visualizerFile`：要在對這個進程進行偵錯工具時使用的[natvis](/visualstudio/debugger/create-custom-views-of-native-objects)檔案。 此選項與美觀的 `gdb` 列印不相容。 `showDisplayString`當您設定這個屬性時也要設定。
 
-- `showDisplayString`：在指定時啟用顯示字串的布林值 `visualizerFile` 。 將此選項設定為， `true` 可能會在進行調試過程時導致效能變慢。
+- `showDisplayString`：在指定時啟用顯示字串的布林值 `visualizerFile` 。 將此選項設定為， **`true`** 可能會在進行調試過程時導致效能變慢。
 
 - `setupCommands`：要執行的一或多個 `gdb` 命令，以設定基礎偵錯工具。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: 53a6cf4b3d14ee97a324fa01f83c0d0fee61180b
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 526216ba2ae259b53bcf77691ebd09a6152b83f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223924"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (啟用協同程式支援)
 
@@ -26,7 +26,7 @@ ms.locfileid: "86373693"
 
 ## <a name="remarks"></a>備註
 
-**/Await**編譯器選項會啟用 c + + 協同程式的編譯器支援，以及**co_await**、 **co_yield**和**co_return**的關鍵字。 根據預設，這個選項為關閉狀態。 如需 Visual Studio 中協同程式支援的相關資訊，請參閱[Visual Studio Team Blog](https://devblogs.microsoft.com/cppblog/category/coroutine/)。 如需協同程式標準提案的詳細資訊，請參閱[N4628 適用于協同程式之 c + + 延伸模組的工作草稿和技術規格](https://wg21.link/n4628)。
+**/Await**編譯器選項可讓編譯器支援 c + + 協同程式和關鍵字 **`co_await`** 、 **`co_yield`** 和 **`co_return`** 。 根據預設，這個選項為關閉狀態。 如需 Visual Studio 中協同程式支援的相關資訊，請參閱[Visual Studio Team Blog](https://devblogs.microsoft.com/cppblog/category/coroutine/)。 如需協同程式標準提案的詳細資訊，請參閱[N4628 適用于協同程式之 c + + 延伸模組的工作草稿和技術規格](https://wg21.link/n4628)。
 
 **/Await**選項從 Visual Studio 2015 開始提供。
 

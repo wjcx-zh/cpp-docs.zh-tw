@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911005"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233986"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -122,7 +122,7 @@ const unsigned char *_mbsstr_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 以 Null 終止的待搜尋字串。
 
 *strSearch*<br/>
@@ -137,12 +137,12 @@ const unsigned char *_mbsstr_l(
 
 ## <a name="remarks"></a>備註
 
-函數會傳回*str*中第一次出現 strSearch 的指標。 *strSearch* `strstr` 搜尋不包含終止的 Null 字元。 `wcsstr` 為 `strstr` 的寬字元版本，而 `_mbsstr` 則為多位元組字元版本。 `wcsstr` 的引數和傳回值是寬字元字串；`_mbsstr` 的引數則是多位元組字元字串。 `_mbsstr` 會驗證其參數。 如果*str*或*strSearch*為 Null，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， `_mbsstr`會將設定`errno`為 EINVAL，並傳回0。 `strstr` 和 `wcsstr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
+函數會傳回 `strstr` *str*中第一次出現*strSearch*的指標。 搜尋不包含終止的 Null 字元。 `wcsstr` 為 `strstr` 的寬字元版本，而 `_mbsstr` 則為多位元組字元版本。 `wcsstr` 的引數和傳回值是寬字元字串；`_mbsstr` 的引數則是多位元組字元字串。 `_mbsstr` 會驗證其參數。 如果*str*或*strSearch*為 Null，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，會 `_mbsstr` 將設定 `errno` 為 EINVAL，並傳回0。 `strstr` 和 `wcsstr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
 
 > [!IMPORTANT]
 > 這些函式可能帶來因緩衝區滿溢問題引發的威脅。 緩衝區滿溢問題可用來攻擊系統，因為它們允許執行任意程式碼，這會造成非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-在 C 中，這些函式接受第一個引數的**const**指標。 在 C++ 中，可使用兩個多載。 接受**const**指標的多載會傳回**const**的指標。接受非**const**指標的版本會傳回非**const**的指標。 如果這些函式的**CONST**和非**const**版本都可以使用，則會定義宏 _CRT_CONST_CORRECT_OVERLOADS。 如果您需要這兩個 c + + 多載的非**const**行為，請定義符號 _CONST_RETURN。
+在 C 中，這些函數會接受 **`const`** 第一個引數的指標。 在 C++ 中，可使用兩個多載。 接受指標的多載會傳回 **`const`** 的指標， **`const`** 接受非指標的版本會傳回 **`const`** 非的指標 **`const`** 。 如果 **`const`** 這些函式的和非版本皆可使用，則會定義宏 _CRT_CONST_CORRECT_OVERLOADS **`const`** 。 如果 **`const`** 這兩個 c + + 多載都需要非行為，請定義符號 _CONST_RETURN。
 
 輸出值會受到 LC_CTYPE 的地區設定類別設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -205,8 +205,8 @@ lazy found at position 36
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>

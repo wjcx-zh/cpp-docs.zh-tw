@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920235"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234116"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -83,7 +83,7 @@ long double fabsl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此如果您**fabs**包含\<h> 標頭，您可以呼叫 fabs 的多載。 在 C 程式中， **fabs**一律會採用並傳回**雙精度浮點數**。
+C + + 允許多載，因此如果包含標頭，您可以呼叫**fabs**的多載 \<cmath> 。 在 C 程式中， **fabs**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

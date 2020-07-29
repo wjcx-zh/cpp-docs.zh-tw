@@ -1,5 +1,5 @@
 ---
-title: 除錯和錯誤報告巨集
+title: 調試和錯誤報表宏
 ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -11,30 +11,30 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 69ab6e17bfb1ec85ddb5b8c19c18010a9b4f3df6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14c9298758e9d55445affaf5a65c81910a9ab151
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224223"
 ---
-# <a name="debugging-and-error-reporting-macros"></a>除錯和錯誤報告巨集
+# <a name="debugging-and-error-reporting-macros"></a>調試和錯誤報表宏
 
-這些宏提供有用的調試和跟蹤工具。
+這些宏提供有用的調試和追蹤功能。
 
 |||
 |-|-|
-|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|寫入輸出視窗時檢測到`_Module.Term`的任何介面洩漏。|
-|[_ATL_DEBUG_QI](#_atl_debug_qi)|將所有調用寫入`QueryInterface`輸出視窗。|
-|[ATLASSERT](#atlassert)|執行與 C 運行時[庫中_ASSERTE宏](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)相同的功能。|
-|[ATLENSURE](#atlensure)|執行參數驗證。 如果需要`AtlThrow`,請致電|
-|[ATLTRACENOTIMPL](#atltracenotimpl)|向轉儲設備發送消息,指出未實現指定的功能。|
-|[ATLTRACE](#atltrace)|根據指示的標誌和級別向輸出設備(如調試器視窗)報告警告。 包括用於向後相容性。|
-|[ATLTRACE2](#atltrace2)|根據指示的標誌和級別向輸出設備(如調試器視窗)報告警告。|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|將寫入至 [輸出] 視窗，呼叫時偵測到的任何介面流失 `_Module.Term` 。|
+|[_ATL_DEBUG_QI](#_atl_debug_qi)|將所有對的呼叫寫入 `QueryInterface` 至 [輸出] 視窗。|
+|[ATLASSERT](#atlassert)|執行與在 C 執行時間程式庫中找到的[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)宏相同的功能。|
+|[ATLENSURE](#atlensure)|執行參數驗證。 視 `AtlThrow` 需要呼叫|
+|[ATLTRACENOTIMPL](#atltracenotimpl)|將訊息傳送至傾印裝置，指出未執行指定的函式。|
+|[ATLTRACE](#atltrace)|根據指定的旗標和層級，向輸出裝置報告警告，例如偵錯工具視窗。 包含以提供回溯相容性。|
+|[ATLTRACE2](#atltrace2)|根據指定的旗標和層級，向輸出裝置報告警告，例如偵錯工具視窗。|
 
 ## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
 
-在包含任何 ATL 標頭檔以追蹤元件`AddRef`介面`Release`上 的所有和調用到輸出視窗之前,請定義此巨集。
+請先定義此宏，再包含任何 ATL 標頭檔，以追蹤 `AddRef` `Release` 元件介面的所有和呼叫至輸出視窗。
 
 ```
 #define _ATL_DEBUG_INTERFACES
@@ -42,30 +42,30 @@ ms.locfileid: "81330192"
 
 ### <a name="remarks"></a>備註
 
-追蹤輸出將顯示如下:
+追蹤輸出將會如下所示：
 
 `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`
 
-每個追蹤的第一部份將始終為`ATL: QIThunk`。 接下來是標識正在使用的特定*介面 thunk*的值。 介面 thunk 是用於維護引用計數並提供此處使用的跟蹤功能的物件。 `QueryInterface`除了`IUnknown`對介面的請求(在這種情況下,每次返回相同的 thunk 以遵守 COM 的標識規則),每次調用 時都會創建一個新的介面 thunk。
+每個追蹤的第一個部分一律會是 `ATL: QIThunk` 。 接下來是識別所使用之特定*介面 Thunk*的值。 介面 Thunk 是一個物件，用來維護參考計數並提供此處使用的追蹤功能。 除了介面的要求之外，每次呼叫都會建立新的介面 Thunk `QueryInterface` `IUnknown` （在此案例中，每次都會傳回相同的 Thunk，以符合 COM 的識別規則）。
 
-接下來,您將看到`AddRef``Release`或指示調用了哪種方法。 之後,您將看到一個值,用於標識其介面引用計數已更改的物件。 跟蹤的值是物件的**此**指標。
+接下來，您會看到 `AddRef` 或 `Release` 指出已呼叫的方法。 之後，您會看到一個值，識別其介面參考計數已變更的物件。 追蹤的值是 **`this`** 物件的指標。
 
-跟蹤的引用計數是調用或`AddRef``Release`調用後該 thunk 上的引用計數。 請注意,此引用計數可能與物件的引用計數不匹配。 每個 thunk 都維護自己的引用計數,以説明您完全遵守 COM 的引用計數規則。
+追蹤的參考計數是在呼叫或之後，該 Thunk 上的參考計數 `AddRef` `Release` 。 請注意，此參考計數可能不符合物件的參考計數。 每個 Thunk 都會維護自己的參考計數，以協助您完全符合 COM 的參考計數規則。
 
-跟蹤的最後一條資訊是對象的名稱和`AddRef`受`Release`或調用影響的介面。
+追蹤的最後一項資訊是物件的名稱，以及受到或呼叫影響的介面 `AddRef` `Release` 。
 
-伺服器關閉並`_Module.Term`呼叫時偵測到的任何介面洩漏都將記錄如下:
+當伺服器關閉並呼叫時，所偵測到的任何介面流失 `_Module.Term` 都會記錄如下：
 
 `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`
 
-此處提供的資訊直接映射到前面的跟蹤語句中提供的資訊,因此您可以檢查介面 thunk 的整個生存期內的引用計數。 此外,您還可以顯示該介面 thunk 上的最大引用計數。
+此處提供的資訊會直接對應到先前追蹤語句中提供的資訊，因此您可以在介面 Thunk 的整個存留期內檢查參考計數。 此外，您可以在該介面 Thunk 上取得最大參考計數的指示。
 
 > [!NOTE]
-> _ATL_DEBUG_INTERFACES可用於零售版本。
+> _ATL_DEBUG_INTERFACES 可以在零售組建中使用。
 
 ## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
 
-將所有調用寫入`QueryInterface`輸出視窗。
+將所有對的呼叫寫入 `QueryInterface` 至 [輸出] 視窗。
 
 ```
 #define _ATL_DEBUG_QI
@@ -73,13 +73,13 @@ ms.locfileid: "81330192"
 
 ### <a name="remarks"></a>備註
 
-如果對`QueryInterface`撥號失敗,輸出視窗會顯示:
+如果對的呼叫 `QueryInterface` 失敗，[輸出] 視窗將會顯示：
 
 *介面名稱* - `failed`
 
 ## <a name="atlassert"></a><a name="atlassert"></a>ATLASSERT
 
-ATLASSERT 宏執行的功能與 C 運行時庫中的[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)宏相同。
+ATLASSERT 宏執行的功能與在 C 執行時間程式庫中找到的[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)宏相同。
 
 ```
 ATLASSERT(booleanExpression);
@@ -87,20 +87,20 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>參數
 
-*布林運算式*<br/>
-計算為非零或 0 的運算式(包括指標)。
+*booleanExpression*<br/>
+評估為非零或0的運算式（包括指標）。
 
 ### <a name="remarks"></a>備註
 
-在調試生成中,ATLASSERT 會評估*布爾運算式*,並在結果為 false 時生成調試報告。
+在 debug 組建中，ATLASSERT 會評估*booleanExpression* ，並在結果為 false 時產生一個 debug 報表。
 
 ## <a name="requirements"></a>需求
 
-**標題:** atldef.h
+**標頭：** atldef。h
 
 ## <a name="atlensure"></a><a name="atlensure"></a>ATLENSURE
 
-此宏用於驗證傳遞給函數的參數。
+這個宏是用來驗證傳遞至函數的參數。
 
 ```
 ATLENSURE(booleanExpression);
@@ -109,23 +109,23 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>參數
 
-*布林運算式*<br/>
-指定要測試的布爾表達式。
+*booleanExpression*<br/>
+指定要測試的布林運算式。
 
-*人力資源*<br/>
-指定要返回的錯誤代碼。
+*小時*<br/>
+指定要傳回的錯誤碼。
 
 ### <a name="remarks"></a>備註
 
-這些宏提供了一種機制來檢測和通知使用者不正確的參數使用。
+這些宏提供了一種機制，可偵測並通知使用者不正確的參數使用方式。
 
-巨集呼叫 ATLASSERT,如果條件失敗`AtlThrow`呼叫 。
+宏會呼叫 ATLASSERT，如果條件失敗則呼叫 `AtlThrow` 。
 
-在 ATLENSURE`AtlThrow`的情況下 ,用E_FAIL調用。
+在 ATLENSURE 案例中， `AtlThrow` 會使用 E_FAIL 來呼叫。
 
-在ATLENSURE_THROW情況下,`AtlThrow`使用指定的 HRESULT 調用。
+在 ATLENSURE_THROW 案例中， `AtlThrow` 會使用指定的 HRESULT 來呼叫。
 
-ATLENSURE 和 ATLASSERT 之間的區別在於 ATLENSURE 在發佈版本和調試版本中引發異常。
+ATLENSURE 和 ATLASSERT 之間的差異在於，ATLENSURE 會在發行組建和 Debug build 中擲回例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -133,11 +133,11 @@ ATLENSURE 和 ATLASSERT 之間的區別在於 ATLENSURE 在發佈版本和調試
 
 ## <a name="requirements"></a>需求
 
-**標題:** afx.h
+**標頭：** afx。h
 
 ## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>ATLTRACENOTIMPL
 
-在 ATL 的調試版本中,將字串"未實現*funcname"* 發送到轉儲設備並返回E_NOTIMPL。
+在 ATL 的 debug 組建中，會將字串 " *funcname* is not build" 傳送到傾印裝置，並傳回 E_NOTIMPL。
 
 ```
 ATLTRACENOTIMPL(funcname);
@@ -145,12 +145,12 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>參數
 
-*樂趣名稱*<br/>
-[在]包含未實現的函數的名稱的字串。
+*funcname*<br/>
+在字串，其中包含未執行之函式的名稱。
 
 ### <a name="remarks"></a>備註
 
-在版本生成中,只需返回E_NOTIMPL。
+在發行組建中，只會傳回 E_NOTIMPL。
 
 ### <a name="example"></a>範例
 
@@ -158,11 +158,11 @@ ATLTRACENOTIMPL(funcname);
 
 ## <a name="requirements"></a>需求
 
-**標題:** atltrace.h
+**標頭：** atltrace。h
 
 ## <a name="atltrace"></a><a name="atltrace"></a>ATLTRACE
 
-根據指示的標誌和級別向輸出設備(如調試器視窗)報告警告。 包括用於向後相容性。
+根據指定的旗標和層級，向輸出裝置報告警告，例如偵錯工具視窗。 包含以提供回溯相容性。
 
 ```
 ATLTRACE(exp);
@@ -176,24 +176,24 @@ ATLTRACE(
 ### <a name="parameters"></a>參數
 
 *exp*<br/>
-[在]要發送到輸出視窗或任何陷印這些消息的應用程式的字串和變數。
+在要傳送至 [輸出] 視窗的字串和變數，或任何會對這些訊息進行陷阱的應用程式。
 
 *類別*<br/>
-[在]要報告的事件或方法的類型。 有關類別清單,請參閱備註。
+在要報告之事件或方法的類型。 如需分類清單，請參閱備註。
 
-*水平*<br/>
-[在]要報告的跟蹤級別。 有關詳細資訊,請參閱備註。
+*二級*<br/>
+在要報告的追蹤層級。 如需詳細資訊，請參閱備註。
 
-*lpsz格式*<br/>
-[在]要送出到轉儲裝置的格式化字串。
+*lpszFormat*<br/>
+在要傳送到傾印裝置的格式化字串。
 
 ### <a name="remarks"></a>備註
 
-有關 ATLTRACE 的說明,請參閱[ATLTRACE2。](#atltrace2) ATLTRACE 和 ATLTRACE2 具有相同的行為,ATLTRACE 包含在向後相容性中。
+如需 ATLTRACE 的說明，請參閱[ATLTRACE2](#atltrace2) 。 ATLTRACE 和 ATLTRACE2 具有相同的行為，其中包含 ATLTRACE 以提供回溯相容性。
 
 ## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
 
-根據指示的標誌和級別向輸出設備(如調試器視窗)報告警告。
+根據指定的旗標和層級，向輸出裝置報告警告，例如偵錯工具視窗。
 
 ```
 ATLTRACE2(exp);
@@ -207,77 +207,77 @@ ATLTRACE2(
 ### <a name="parameters"></a>參數
 
 *exp*<br/>
-[在]要發送到輸出視窗或任何陷印這些消息的應用程式的字串。
+在要傳送至 [輸出] 視窗的字串，或任何會對這些訊息進行陷阱的應用程式。
 
 *類別*<br/>
-[在]要報告的事件或方法的類型。 有關類別清單,請參閱備註。
+在要報告之事件或方法的類型。 如需分類清單，請參閱備註。
 
-*水平*<br/>
-[在]要報告的跟蹤級別。 有關詳細資訊,請參閱備註。
+*二級*<br/>
+在要報告的追蹤層級。 如需詳細資訊，請參閱備註。
 
-*lpsz格式*<br/>
-[在]用於`printf`建立要送出到轉印裝置的字串的 -style 格式字串。
+*lpszFormat*<br/>
+在`printf`用來建立要傳送到傾印裝置之字串的樣式格式字串。
 
 ### <a name="remarks"></a>備註
 
-ATLTRACE2 的短形式將字串寫入調試器的輸出視窗。 ATLTRACE2 的第二種形式還會將輸出寫入調試器的輸出視窗,但受 ATL/MFC 跟蹤工具的設置的約束(請參閱[ATLTraceTool 示例](../../overview/visual-cpp-samples.md))。 例如,如果將*級別*設置為 4,將 ATL/MFC 跟蹤工具設置為級別 0,則看不到消息。 *級別*可以是 0、1、2、3 或 4。 默認值 0 僅報告最嚴重的問題。
+ATLTRACE2 的簡短形式會將字串寫入偵錯工具的 [輸出] 視窗。 第二種形式的 ATLTRACE2 也會將輸出寫入偵錯工具的 [輸出] 視窗，但受限於 ATL/MFC 追蹤工具的設定（請參閱[ATLTraceTool 範例](../../overview/visual-cpp-samples.md)）。 例如，如果您將 [*層級*] 設定為 [4]，並將 [ATL/MFC 追蹤工具] 設為層級0，則不會看到訊息。 *層級*可以是0、1、2、3或4。 預設值為0，只會報告最嚴重的問題。
 
-*類別*參數列出要設置的跟蹤標誌。 這些標誌對應於要為其報告的方法類型。 下表列出了可用於*類別*參數的有效跟蹤標誌。
+*Category*參數會列出要設定的追蹤旗標。 這些旗標會對應至您想要報告的方法類型。 下表列出您可以用於*category*參數的有效追蹤旗標。
 
-### <a name="atl-trace-flags"></a>ATL 追蹤標誌
+### <a name="atl-trace-flags"></a>ATL 追蹤旗標
 
-|ATL 類別|描述|
+|ATL 分類|說明|
 |------------------|-----------------|
-|`atlTraceGeneral`|所有 ATL 應用程式的報告。 預設值。|
-|`atlTraceCOM`|有關 COM 方法的報告。|
-|`atlTraceQI`|有關查詢介面調用的報告。|
-|`atlTraceRegistrar`|關於物件註冊的報告。|
-|`atlTraceRefcount`|關於更改引用計數的報告。|
-|`atlTraceWindowing`|關於視窗方法的報告;例如,報告無效的消息映射 ID。|
-|`atlTraceControls`|關於控制的報告;例如,當控件或其視窗被銷毀時,報告。|
-|`atlTraceHosting`|報告託管消息;例如,當容器中的用戶端被啟動時,將報告。|
-|`atlTraceDBClient`|有關 OLE DB 消費者範本的報告;例如,當對 GetData 的調用失敗時,輸出可以包含 HRESULT。|
-|`atlTraceDBProvider`|有關 OLE DB 提供程式範本的報告;例如,如果創建列失敗,則報告。|
-|`atlTraceSnapin`|MMC SnapIn 應用程式的報告。|
-|`atlTraceNotImpl`|報告未實現指示的功能。|
-|`atlTraceAllocation`|報告由 atldbgmem.h 中的記憶體除錯工具列印的消息。|
+|`atlTraceGeneral`|所有 ATL 應用程式的報表。 預設值。|
+|`atlTraceCOM`|COM 方法的報告。|
+|`atlTraceQI`|QueryInterface 呼叫的報告。|
+|`atlTraceRegistrar`|報告物件的註冊。|
+|`atlTraceRefcount`|變更參考計數的報表。|
+|`atlTraceWindowing`|Windows 方法的報告;例如，會報告不正確訊息對應識別碼。|
+|`atlTraceControls`|控制項的報表;例如，當控制項或其視窗已終結時，就會進行報告。|
+|`atlTraceHosting`|報告裝載訊息;例如，當容器中的用戶端啟用時回報。|
+|`atlTraceDBClient`|OLE DB 取用者範本的報告;例如，當對的呼叫失敗時，輸出可以包含 HRESULT。|
+|`atlTraceDBProvider`|OLE DB 提供者範本的報告;例如，如果建立資料行失敗，則會報告。|
+|`atlTraceSnapin`|MMC 嵌入式管理單元應用程式的報告。|
+|`atlTraceNotImpl`|報告指示的函式未實作用。|
+|`atlTraceAllocation`|報告 atldbgmem 中記憶體偵錯工具所列印的訊息。|
 
-### <a name="mfc-trace-flags"></a>MFC 追蹤標誌
+### <a name="mfc-trace-flags"></a>MFC 追蹤旗標
 
-|MFC 類別|描述|
+|MFC 類別|說明|
 |------------------|-----------------|
-|`traceAppMsg`|一般用途,MFC 消息。 始終推薦。|
-|`traceDumpContext`|從[CDumpContext 的訊息](../../mfc/reference/cdumpcontext-class.md)。|
-|`traceWinMsg`|來自 MFC 消息處理代碼的消息。|
-|`traceMemory`|來自 MFC 記憶體管理代碼的消息。|
-|`traceCmdRouting`|來自 MFC 的 Windows 命令路由代碼的消息。|
-|`traceHtml`|來自 MFC 的 DHTML 對話方塊支援的消息。|
-|`traceSocket`|來自 MFC 的套接字支援的消息。|
-|`traceOle`|來自 MFC OLE 支援的消息。|
-|`traceDatabase`|來自 MFC 資料庫支援的消息。|
-|`traceInternet`|來自 MFC 互聯網支援的消息。|
+|`traceAppMsg`|一般用途的 MFC 訊息。 一律建議使用。|
+|`traceDumpContext`|來自[CDumpCoNtext](../../mfc/reference/cdumpcontext-class.md)的訊息。|
+|`traceWinMsg`|來自 MFC 訊息處理常式代碼的訊息。|
+|`traceMemory`|來自 MFC 記憶體管理程式碼的訊息。|
+|`traceCmdRouting`|來自 MFC Windows 命令路由程式碼的訊息。|
+|`traceHtml`|MFC 的 DHTML 對話方塊支援的訊息。|
+|`traceSocket`|來自 MFC 通訊端支援的訊息。|
+|`traceOle`|MFC OLE 支援的訊息。|
+|`traceDatabase`|來自 MFC 資料庫支援的訊息。|
+|`traceInternet`|來自 MFC 網際網路支援的訊息。|
 
-要聲明自定義追蹤類別,可以聲明類的全域實例,`CTraceCategory`如下所示:
+若要宣告自訂追蹤分類，請如下所示宣告類別的全域實例 `CTraceCategory` ：
 
 [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]
 
-在本範例中MY_CATEGORY類別名稱是您為*類別*參數指定的名稱。 第一個參數是將出現在 ATL/MFC 跟蹤工具中的類別名稱。 第二個參數是默認跟蹤級別。 此參數是可選的,默認跟蹤級別為 0。
+在此範例中，類別名稱 MY_CATEGORY 是您指定給*category*參數的名稱。 第一個參數是將出現在 ATL/MFC 追蹤工具中的類別目錄名稱。 第二個參數是預設的追蹤層級。 這個參數是選擇性的，而且預設的追蹤層級是0。
 
-要使用使用者定義的類別:
+若要使用使用者定義的類別：
 
 [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]
 
-若要指定要篩選追蹤訊息,請在敘述之前將這些巨集的定義插入到 Stdafx.h 中`#include <atlbase.h>`。
+若要指定您想要篩選追蹤訊息，請將這些宏的定義插入 Stdafx.h 中的語句前面。 `#include <atlbase.h>`
 
-或者,您可以在 **「屬性頁**」對話框中的預處理器指令中設置篩選器。 按下 **「預處理器**」選項卡,然後將全域插入到 **「預處理器定義**」編輯框中。
+或者，您可以在 [**屬性頁**] 對話方塊的預處理器指示詞中設定篩選。 按一下 [**預處理器**] 索引標籤，然後在 [**預處理器定義**] 編輯方塊中插入全域。
 
-Atlbase.h 包含 ATLTRACE2 宏的預設定義,如果您在處理 atlbase.h 之前未定義這些符號,將使用這些定義。
+Atlbase.h 包含 ATLTRACE2 宏的預設定義，如果您未在處理 atlbase.h 之前定義這些符號，則會使用這些定義。
 
-在版本版本中,ATLTRACE2 編譯`(void) 0`到 。
+在發行組建中，ATLTRACE2 會編譯為 `(void) 0` 。
 
-ATLTRACE2 將要發送到轉儲設備的字串的內容限制在格式化後不超過 1023 個字元。
+ATLTRACE2 會在格式化之後，將要傳送到傾印裝置的字串內容限制為不超過1023個字元。
 
-ATLTRACE 和 ATLTRACE2 具有相同的行為,ATLTRACE 包含在向後相容性中。
+ATLTRACE 和 ATLTRACE2 具有相同的行為，其中包含 ATLTRACE 以提供回溯相容性。
 
 ### <a name="example"></a>範例
 
@@ -286,4 +286,4 @@ ATLTRACE 和 ATLTRACE2 具有相同的行為,ATLTRACE 包含在向後相容性�
 ## <a name="see-also"></a>另請參閱
 
 [巨集](../../atl/reference/atl-macros.md)<br/>
-[除錯及錯誤報告全域函數](../../atl/reference/debugging-and-error-reporting-global-functions.md)
+[調試和錯誤報表全域函式](../../atl/reference/debugging-and-error-reporting-global-functions.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-ms.openlocfilehash: aac308905a01a52a4ce5ee0fa3be03f2f33ac1cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ebfadea0d643ac68e2ace722a39587bd01312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223703"
 ---
 # <a name="goto-statement-c"></a>goto 陳述式 (C++)
 
-**Goto**陳述式無條件地將控制權傳輸至指定的識別項所標記的陳述式。
+**`goto`** 語句會無條件地將控制權轉移至指定之識別碼所標記的語句。
 
 ## <a name="syntax"></a>語法
 
@@ -27,9 +27,9 @@ goto identifier;
 
 `identifier` 所指定之標記的陳述式必須位於目前的函式。 所有 `identifier` 名稱是內部命名空間的成員，因此不會干擾其他識別項。
 
-陳述式標籤是僅有意義**goto**陳述式; 否則會忽略陳述式標籤。 標籤不能重新宣告。
+語句標籤只對語句有意義 **`goto`** ，否則會忽略語句標籤。 標籤不能重新宣告。
 
-A **goto**陳述式不允許將控制權移轉給略過該位置中的範圍內的任何變數的初始化的位置。 下列範例會引發 C2362:
+**`goto`** 不允許使用語句將控制權轉移至位置，而該位置會略過該位置範圍內任何變數的初始化。 下列範例會引發 C2362：
 
 ```cpp
 int goto_fn(bool b)
@@ -48,13 +48,13 @@ exit:
 }
 ```
 
-它是理想的程式設計風格，使用**中斷**，**繼續**，和**傳回**陳述式，而不是**goto**陳述式時可能的。 不過，因為**中斷**陳述式會結束迴圈的只有一個層級，您可能必須使用**goto**陳述式來結束深度巢狀的迴圈。
+這是很好的程式設計風格 **`break`** ，盡可能使用、 **`continue`** 和 **`return`** 語句，而不是 **`goto`** 語句。 不過，因為 **`break`** 語句只會從一個迴圈層級結束，所以您可能必須使用 **`goto`** 語句來結束深度的嵌套迴圈。
 
-如需標籤和**goto**陳述式，請參閱[標記陳述式](../cpp/labeled-statements.md)。
+如需標籤和語句的詳細資訊 **`goto`** ，請參閱[標記的語句](../cpp/labeled-statements.md)。
 
 ## <a name="example"></a>範例
 
-在此範例中， **goto**陳述式將控制權傳輸至標示的點`stop`當`i`等於 3。
+在此範例中， **`goto`** 語句會將控制項傳輸至 `stop` `i` 等於3的點。
 
 ```cpp
 // goto_statement.cpp

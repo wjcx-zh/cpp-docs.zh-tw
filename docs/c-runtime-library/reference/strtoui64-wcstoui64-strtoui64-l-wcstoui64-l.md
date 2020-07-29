@@ -48,16 +48,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: 430d72595aadc677fe51d9ed868e4388071decec
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dc70cc5a2a7c1c8975e90d5e8d1d5225522e0592
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912460"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233934"
 ---
 # <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
 
-將字串轉換為不帶正負號的 **__int64**值。
+將字串轉換成 **`unsigned __int64`** 值。
 
 ## <a name="syntax"></a>語法
 
@@ -112,7 +112,7 @@ unsigned __int64 _wcstoui64(
 
 ## <a name="remarks"></a>備註
 
-**_Strtoui64**函數會將*strSource*轉換成不**帶正負**號的 **__int64**。 **_wcstoui64**是寬字元版本的 **_strtoui64**;其*strSource*引數是寬字元字串。 否則，這些函式的行為相同。
+**_Strtoui64**函數會將*strSource*轉換成 **`unsigned __int64`** 。 **_wcstoui64**是寬字元版本的 **_strtoui64**;其*strSource*引數是寬字元字串。 否則，這些函式的行為相同。
 
 這兩個函式會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 null 字元，或者它可能是大於或等於*base*的第一個數位字元。
 
@@ -131,7 +131,7 @@ unsigned __int64 _wcstoui64(
 
 **_strtoui64**預期*strSource*會指向下列格式的字串：
 
-> [*空格*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*數位*&#124;*字母*]
+> [*空格*][{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*數位*&#124;*字母*]
 
 空白字元*可能是*由空格和定位字元所組成，這些字元會被忽略。 *數位*是一或多個小數位數。 *字母*是一個或多個字母 ' a ' 到 ' z ' （或 ' a ' 到 ' z '）。 不符合此格式的第一個字元會停止掃描。 如果*base*介於2到36之間，則會使用它做為數位的基底。 如果*base*為0，則會使用*strSource*所指向之字串的初始字元來判斷基底。 如果第一個字元為 0，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*base*為0，而第一個掃描的字元是 ' 0 '，則假設為八進位整數，而 ' 8 ' 或 ' 9 ' 字元會停止掃描。
 
@@ -169,10 +169,10 @@ u = 18446744073709551615
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[字串轉換為數值函式](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[字串至數值函數](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920248"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234142"
 ---
 # <a name="_expand"></a>_expand
 
@@ -71,7 +71,7 @@ void *_expand(
 
 如果沒有足夠的記憶體可將區塊展開為指定大小，而不移動它，則函數會傳回**Null**。 **_expand**絕不會傳回擴充到小於所要求之大小的區塊。 如果發生失敗， **errno**會指出失敗的本質。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要檢查項目的新大小，請使用 **_msize**。 若要取得**void**以外類型的指標，請在傳回值上使用類型轉換。
+儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要檢查項目的新大小，請使用 **_msize**。 若要取得以外類型的指標 **`void`** ，請對傳回值使用類型轉換。
 
 ## <a name="remarks"></a>備註
 

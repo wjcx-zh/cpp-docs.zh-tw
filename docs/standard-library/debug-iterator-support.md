@@ -1,5 +1,5 @@
 ---
-title: 偵錯迭代器支援
+title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416210"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231581"
 ---
-# <a name="debug-iterator-support"></a>偵錯迭代器支援
+# <a name="debug-iterator-support"></a>Debug Iterator Support
 
 Visual C++ 執行階段程式庫可在執行階段偵測不正確的迭代器用法、進行判斷提示並顯示對話方塊。 若要啟用偵錯迭代器支援，您必須使用 C++ 標準程式庫和 C 執行階段程式庫的偵錯版本來編譯您的程式。 如需詳細資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。 如需如何使用已檢查的迭代器的資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-請注意，此範例中使用 Lambda 運算式`[] (int& elem) { elem *= 2; }` 而不是仿函式。 雖然這種選擇與判斷提示失敗無關 (類似的仿函式會導致相同的失敗)，但 Lambda 非常適合用來完成精簡函式物件的工作。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。
+請注意，此範例中使用 Lambda 運算式`[] (int& elem) { elem *= 2; }` 而不是仿函式。 雖然這種選擇與判斷提示失敗無關 (類似的仿函式會導致相同的失敗)，但 Lambda 非常適合用來完成精簡函式物件的工作。 如需 lambda 運算式的詳細資訊，請參閱[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。
 
 ## <a name="iterators-going-out-of-scope"></a>反覆運算器超出範圍
 
-當**for**迴圈範圍結束時，Debug iterator 檢查也會導致**for**迴圈中宣告的反覆運算器變數超出範圍。
+**`for`** 當迴圈範圍結束時，Debug iterator 檢查也會導致在迴圈中宣告的反覆運算器變數超出範圍 **`for`** 。
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -175,4 +175,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
+[C + + 標準程式庫總覽](../standard-library/cpp-standard-library-overview.md)

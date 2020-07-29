@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2692
 ms.assetid: 02ade3b4-b757-448b-b065-d7d71bc3f441
-ms.openlocfilehash: 7ce57cd50e9ec83cf80ec64e14f49eb9714f9208
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a82ee0bead9e4e7a92c16df89eee86288f562de9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216098"
 ---
 # <a name="compiler-error-c2692"></a>編譯器錯誤 C2692
 
 ' function_name '：具有 '/clr ' 選項之 C 編譯器所需的完整原型函式
 
-針對 .NET managed 程式碼進行編譯時，C 編譯器需要 ANSI 函式宣告。 此外，如果函式不接受任何參數，則必須明確地將 `void` 宣告為參數類型。
+針對 .NET managed 程式碼進行編譯時，C 編譯器需要 ANSI 函式宣告。 此外，如果函式不接受任何參數，則必須明確宣告 **`void`** 為參數類型。

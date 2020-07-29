@@ -2,12 +2,12 @@
 title: 使用 accelerator 和 accelerator_view 物件
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: e3fed4dc2a431b751d4ad50484e32b738e786d10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404173"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215890"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>使用 accelerator 和 accelerator_view 物件
 
@@ -94,7 +94,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>共用記憶體
 
-共用記憶體是可同時由 CPU 和加速器存取的記憶體。 使用共用記憶體可免除或大幅降低在 CPU 與加速器之間複製資料的額外負荷。 雖然記憶體是共用的，但 CPU 和加速器無法同時存取它，而這麼做會造成未定義的行為。 如果快速鍵支援共用記憶體，則快速鍵屬性[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)會傳回**true** ，而[default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)屬性會取得配置於上之記憶體的預設[access_type](reference/concurrency-namespace-enums-amp.md#access_type) `accelerator` （例如， **array**與相關聯的陣列 `accelerator` ，或是 `array_view` 在上存取的物件） `accelerator` 。
+共用記憶體是可同時由 CPU 和加速器存取的記憶體。 使用共用記憶體可免除或大幅降低在 CPU 與加速器之間複製資料的額外負荷。 雖然記憶體是共用的，但 CPU 和加速器無法同時存取它，而這麼做會造成未定義的行為。 如果快速鍵支援共用記憶體，則快速鍵屬性[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)會傳回 **`true`** ，而且[default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)屬性會取得配置於上之記憶體的預設[access_type](reference/concurrency-namespace-enums-amp.md#access_type) `accelerator` （例如，與相關聯的**陣列**） `accelerator` ，或是 `array_view` 在上存取的物件 `accelerator` 。
 
 C++ AMP 執行時間會自動為每個選擇最佳的預設值 `access_type` `accelerator` ，但共用記憶體的效能特性（頻寬和延遲）可能會比讀取 cpu、從 cpu 寫入或兩者都差。 如果共用記憶體執行，以及從 CPU 讀取和寫入的專用記憶體，執行時間會預設為 `access_type_read_write` ; 否則，執行時間會選擇較保守的預設值 `access_type` ，並允許應用程式在其計算核心的記憶體存取模式受益于不同的時加以覆寫 `access_type` 。
 
@@ -131,7 +131,7 @@ int main()
 
 ## <a name="changing-the-default-accelerator"></a>變更預設加速器
 
-您可以藉由呼叫方法來變更預設加速器 `accelerator::set_default` 。 您只能針對每個應用程式執行變更預設加速器一次，而且您必須在 GPU 上執行任何程式碼之前加以變更。 任何後續用來變更快速鍵的函式呼叫都會傳回**false**。 如果您想要在對的呼叫中使用不同的快速鍵 `parallel_for_each` ，請閱讀本文中的「使用多個加速器」一節。 下列程式碼範例會將預設快速鍵設定為未模擬、未連接到顯示，並支援雙精確度。
+您可以藉由呼叫方法來變更預設加速器 `accelerator::set_default` 。 您只能針對每個應用程式執行變更預設加速器一次，而且您必須在 GPU 上執行任何程式碼之前加以變更。 任何後續的函式呼叫，以變更快速鍵傳回 **`false`** 。 如果您想要在對的呼叫中使用不同的快速鍵 `parallel_for_each` ，請閱讀本文中的「使用多個加速器」一節。 下列程式碼範例會將預設快速鍵設定為未模擬、未連接到顯示，並支援雙精確度。
 
 ```cpp
 bool pick_accelerator()

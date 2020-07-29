@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216007"
 ---
 # <a name="generic-functions-ccli"></a>泛型函式 (C++/CLI)
 
@@ -53,17 +53,17 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>參數
 
-*屬性*<br/>
+*attributes*<br/>
 (選擇性) 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
 
-*modifiers*<br/>
-(選擇性) 函式的修飾詞，例如 static。  不允許使用 **virtual**，因為虛擬方法可能不是泛型。
+*修改*<br/>
+(選擇性) 函式的修飾詞，例如 static。  **`virtual`** 不允許，因為虛擬方法可能不是泛型。
 
-*return-type*<br/>
+*傳回類型*<br/>
 此方法傳回的型別。 若傳回型別為 void，便不需要任何傳回值。
 
-*identifier*<br/>
-函式名稱。
+*標識*<br/>
+函數名稱。
 
 *type-parameter identifier(s)*<br/>
 以逗號分隔的識別碼清單。
@@ -74,7 +74,7 @@ return-type identifier<type-parameter identifier(s)>
 *type-parameter-constraints-clauses*<br/>
 這在型別上指定可作為型別引數使用的限制，並且會採用[泛型型別參數的條件約束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的格式。
 
-*function-body*<br/>
+*函式主體*<br/>
 這是方法的主體，可能會參考型別參數識別碼。
 
 ### <a name="remarks"></a>備註
@@ -183,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)<br/>
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)<br/>
 [泛型](generics-cpp-component-extensions.md)

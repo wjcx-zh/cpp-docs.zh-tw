@@ -5,18 +5,18 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: 284a9cb9268c8c794379c6a5468b0f2b9092b7d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1895bf12cb195ef7b4555d400badf112d377547b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317454"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211914"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>卸載延遲載入的 DLL
 
-預設提供的延遲載入協助程式會檢查延遲載入描述元 pUnloadIAT 欄位中是否有指標和一份原始的匯入位址表 (IAT)。 若是如此，它會儲存在清單中，以匯入的延遲描述項的指標。 這可讓 helper 函式來尋找 DLL，支援明確卸載 DLL 的名稱。
+預設提供的延遲載入協助程式會檢查延遲載入描述項是否有指標，以及 pUnloadIAT 欄位中原始匯入位址表（IAT）的複本。 若是如此，它會將清單中的指標儲存至匯入延遲描述項。 這可讓 helper 函式依名稱尋找 DLL，以支援明確卸載該 DLL。
 
-以下是相關聯的結構和函式的明確卸載延遲載入 DLL:
+以下是明確卸載延遲載入 DLL 的相關聯結構和函式：
 
 ```cpp
 //
@@ -43,11 +43,11 @@ ExternC
 PUnloadInfo __puiHead;
 ```
 
-UnloadInfo 結構使用實作C++類別，以使用**LocalAlloc**和**LocalFree**做為其運算子的實作**新**運算子和**刪除**分別。 這些選項會保留在使用 __puihead 做為清單的標頭的標準連結清單。
+UnloadInfo 結構是使用 c + + 類別來執行，其會使用**LocalAlloc**和**LocalFree**實作為其運算子 **`new`** 和運算子 **`delete`** 。 這些選項會使用 __puiHead 做為清單的標頭，保留在標準連結清單中。
 
-呼叫 __FUnloadDelayLoadedDLL 會嘗試尋找名稱中載入的 dll （確切的相符項目是必要的） 提供。 如果找不到，pUnloadIAT 中 IAT 的副本複製要還原的 thunk 指標執行的 IAT 之上，程式庫會釋出與**FreeLibrary**，比對**UnloadInfo**記錄已從取消連結清單和刪除，而且為 true，則會傳回。
+呼叫 __FUnloadDelayLoadedDLL 將會嘗試尋找您在載入的 Dll 清單中提供的名稱（需要完全相符）。 如果找到，pUnloadIAT 中的 IAT 複本就會複製到執行的 IAT 頂端，以還原 Thunk 指標、使用**FreeLibrary**釋放程式庫、將相符的**UnloadInfo**記錄從清單中取消連結並加以刪除，然後傳回 TRUE。
 
-函式 __FUnloadDelayLoadedDLL2 的引數是區分大小寫。 例如，您會指定：
+函數 __FUnloadDelayLoadedDLL2 的引數會區分大小寫。 例如，您可以指定：
 
 ```cpp
 __FUnloadDelayLoadedDLL2("user32.DLL");
@@ -61,4 +61,4 @@ __FUnloadDelayLoadedDLL2("User32.DLL");.
 
 ## <a name="see-also"></a>另請參閱
 
-[了解協助協助程式函式](understanding-the-helper-function.md)
+[瞭解 Helper 函式](understanding-the-helper-function.md)

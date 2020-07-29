@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2290
 ms.assetid: 78c0feec-ccde-401b-8335-5b6ea6be8a13
-ms.openlocfilehash: 13b58a00639c8b6b1850434e4395e127fa36496f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ee5e4f3a2da25f2c0c2aeddbf8dda266eedb6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216254"
 ---
 # <a name="compiler-error-c2290"></a>編譯器錯誤 C2290
 
 忽略 C++ asm 語法。 請使用 __asm。
 
-`asm` 語法已保留供未來使用。
+此 **`asm`** 語法保留供日後使用。

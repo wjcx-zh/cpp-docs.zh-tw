@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455755"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212237"
 ---
-# <a name="ispod-class"></a>is_pod 類別
+# <a name="is_pod-class"></a>is_pod 類別
 
 測試類型是否為 POD。
 
@@ -32,7 +32,7 @@ struct is_pod;
 
 ## <a name="remarks"></a>備註
 
-`is_pod<T>::value`如果類型*T*是單純的舊資料 (POD), 則為**true** 。 否則為**false**。
+`is_pod<T>::value`**`true`** 如果類型*T*是單純的舊資料（POD），則為。 否則為 **`false`** 。
 
 算術類型、列舉類型、指標類型和成員類型的指標是 POD。
 
@@ -96,7 +96,7 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

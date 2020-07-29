@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3d645cc09c61402059e9a86679c10ee703ee8031
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443737"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215799"
 ---
 # <a name="event-class"></a>event 類別
 
@@ -32,13 +32,13 @@ class event;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[~ 事件的析構函式](#dtor)|終結事件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[reset](#reset)|將事件重設為未收到信號的狀態。|
 |[set](#set)|對事件發出信號。|
@@ -47,7 +47,7 @@ class event;
 
 ### <a name="public-constants"></a>公用常數
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|值，表示等候應該永遠不會逾時。|
 
@@ -55,7 +55,7 @@ class event;
 
 如需詳細資訊，請參閱[同步處理資料結構](../../../parallel/concrt/synchronization-data-structures.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `event`
 
@@ -63,9 +63,9 @@ class event;
 
 **標頭：** concrt。h
 
-**命名空間：** concurrency
+**命名空間：** 並行
 
-## <a name="ctor"></a>發生
+## <a name="event"></a><a name="ctor"></a> 事件
 
 構造新的事件。
 
@@ -75,7 +75,7 @@ _CRTIMP event();
 
 ### <a name="remarks"></a>備註
 
-## <a name="dtor"></a>~ 事件
+## <a name="event"></a><a name="dtor"></a>~ 事件
 
 終結事件。
 
@@ -87,7 +87,7 @@ _CRTIMP event();
 
 當析構函式執行時，預期沒有線程在等候事件。 允許事件解構仍在等候的執行緒，會導致未定義的行為發生。
 
-## <a name="reset"></a>啟動
+## <a name="reset"></a><a name="reset"></a>啟動
 
 將事件重設為未收到信號的狀態。
 
@@ -95,7 +95,7 @@ _CRTIMP event();
 void reset();
 ```
 
-## <a name="set"></a>設定
+## <a name="set"></a><a name="set"></a>設定
 
 對事件發出信號。
 
@@ -107,7 +107,7 @@ void set();
 
 發出事件訊號會使事件上正在等候的任意數目內容變為可執行。
 
-## <a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
 
 值，表示等候應該永遠不會逾時。
 
@@ -115,7 +115,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a>等候
+## <a name="wait"></a><a name="wait"></a>等候
 
 等待事件變成信號。
 
@@ -130,12 +130,12 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="return-value"></a>傳回值
 
-如果已滿足等候，則會傳回 `0` 的值;否則，此值會 `COOPERATIVE_WAIT_TIMEOUT`，以指出等待時間已超時，而沒有事件發出信號。
+如果已滿足等候，則 `0` 會傳回值，否則會傳回值， `COOPERATIVE_WAIT_TIMEOUT` 以指出等待時間已超時，而沒有事件信號。
 
 > [!IMPORTANT]
-> 在通用 Windows 平臺（UWP）應用程式中，請勿在 ASTA 執行緒上呼叫 `wait`，因為此呼叫會封鎖目前的執行緒，而且可能會導致應用程式沒有回應。
+> 在通用 Windows 平臺（UWP）應用程式中，請勿 `wait` 在 ASTA 執行緒上呼叫，因為此呼叫會封鎖目前的執行緒，而且可能會導致應用程式沒有回應。
 
-## <a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
 
 等候多個事件被通知。
 
@@ -153,24 +153,24 @@ static size_t __cdecl wait_for_multiple(
 要等候的事件陣列。 陣列內的事件數目是以 `count` 參數表示。
 
 *計數*<br/>
-`_PPEvents` 參數中提供之陣列內的事件計數。
+在參數中提供之陣列內的事件計數 `_PPEvents` 。
 
 *_FWaitAll*<br/>
-如果設定為**true**值，則參數會指定在 `_PPEvents` 參數中提供的陣列內的所有事件都必須收到信號，才能滿足等候。 如果設定為**false**值，它會指定在 `_PPEvents` 參數中提供的陣列內的任何事件變成信號，將可滿足等候。
+如果設定為值 **`true`** ，參數就會指定參數中提供之陣列內的所有事件都 `_PPEvents` 必須收到信號，才能滿足等候。 如果設定為值 **`false`** ，它會指定在參數中提供的任何事件 `_PPEvents` 變成信號，以符合等待。
 
 *_Timeout*<br/>
 指出等待時間之前的毫秒數。值 `COOPERATIVE_TIMEOUT_INFINITE` 表示沒有超時。
 
 ### <a name="return-value"></a>傳回值
 
-如果已滿足等候，則會在滿足等候條件的 `_PPEvents` 參數中提供陣列內的索引。否則，`COOPERATIVE_WAIT_TIMEOUT` 的值，表示等待時間沒有符合條件。
+如果已滿足等候，則為符合等候條件之參數中所提供的陣列內的索引， `_PPEvents` 否則為值， `COOPERATIVE_WAIT_TIMEOUT` 表示等待時間未滿足條件。
 
 ### <a name="remarks"></a>備註
 
-如果參數 `_FWaitAll` 設定為值 `true` 以指出所有事件都必須收到信號以滿足等候，則函式所傳回的索引除了不是值 `COOPERATIVE_WAIT_TIMEOUT`的事實外，不會攜帶任何特殊的意義。
+如果參數 `_FWaitAll` 設定為值， **`true`** 指出所有事件都必須收到信號以滿足等候，則函式所傳回的索引除了不是值以外，不會攜帶任何特殊的重要性 `COOPERATIVE_WAIT_TIMEOUT` 。
 
 > [!IMPORTANT]
-> 在通用 Windows 平臺（UWP）應用程式中，請勿在 ASTA 執行緒上呼叫 `wait_for_multiple`，因為此呼叫會封鎖目前的執行緒，而且可能會導致應用程式沒有回應。
+> 在通用 Windows 平臺（UWP）應用程式中，請勿 `wait_for_multiple` 在 ASTA 執行緒上呼叫，因為此呼叫會封鎖目前的執行緒，而且可能會導致應用程式沒有回應。
 
 ## <a name="see-also"></a>另請參閱
 

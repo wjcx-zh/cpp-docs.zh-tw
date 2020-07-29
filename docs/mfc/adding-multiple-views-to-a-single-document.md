@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 83bb7e54567319a7af4bd3d8a6bf02256fef68fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623360"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215968"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>將多個檢視加入至單一文件
 
@@ -65,7 +65,7 @@ ms.locfileid: "84623360"
 
 將類別加入至專案之後，您必須變更某些 view 類別成員的存取範圍。
 
-修改*NEWVIEW。H* ：將此存取規範從**protected**變更為**public** ，以用於此函式和析構函數。 這可讓您以動態方式建立和終結類別，並在顯示之前修改視圖外觀。
+修改*NEWVIEW。H* ，方法是將此存取規範從變更為， **`protected`** **`public`** 針對此函式和析構函數。 這可讓您以動態方式建立和終結類別，並在顯示之前修改視圖外觀。
 
 儲存您的變更，並繼續進行下一個步驟。
 

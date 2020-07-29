@@ -1,17 +1,17 @@
 ---
 title: 初始設定式
 ms.date: 07/29/2019
-description: 如何初始化中的C++類別、結構、陣列和基本類型。
+description: 如何在 c + + 中初始化類別、結構、陣列和基本類型。
 helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 98b0c07db8eb10aa47830c9926c6ebcdc3f12dcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418430"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227435"
 ---
 # <a name="initializers"></a>初始設定式
 
@@ -81,9 +81,9 @@ ms.locfileid: "79418430"
 
 - 數值變數初始化為 0 (或 0.0、0.0000000000 等)。
 
-- Char 變數會初始化為 `'\0'`。
+- Char 變數會初始化為 `'\0'` 。
 
-- 指標會初始化為**nullptr**。
+- 指標會初始化為 **`nullptr`** 。
 
 - 陣列、 [POD](../standard-library/is-pod-class.md)類別、結構和等位，其成員會初始化為零值。
 
@@ -114,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a>預設初始化
+### <a name="default-initialization"></a><a name="default_initialization"></a>預設初始化
 
-類別、結構和等位的預設初始化是使用預設建構函式的初始化。 預設的函式可以使用沒有初始化運算式或使用**new**關鍵字來呼叫：
+類別、結構和等位的預設初始化是使用預設建構函式的初始化。 預設的函式可以使用沒有初始化運算式或使用關鍵字來呼叫 **`new`** ：
 
 ```cpp
 MyClass mc1;
@@ -183,7 +183,7 @@ int main() {
 
 - 使用空括號或大括號初始化匿名暫存物件。
 
-- 使用**new**關鍵字加上空括弧或大括弧初始化物件
+- 使用 **`new`** 關鍵字加上空括弧或大括弧初始化物件
 
 值初始化會執行下列作業：
 
@@ -274,9 +274,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 - 使用非空白大括號或括號初始化變數。
 
-- 使用**new**關鍵字加上非空白大括弧或括弧初始化變數
+- 使用 **`new`** 關鍵字加上非空白大括弧或括弧初始化變數
 
-- 使用**static_cast**初始化變數
+- 使用初始化變數**`static_cast`**
 
 - 在建構函式中，會使用初始設定式清單初始化基底類別和非靜態成員。
 
@@ -317,7 +317,7 @@ int main(){
 
 - 初始化變數
 
-- 使用**new**關鍵字初始化類別
+- 使用關鍵字初始化類別 **`new`**
 
 - 從函式傳回物件
 
@@ -362,7 +362,7 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a>匯總初始化
+### <a name="aggregate-initialization"></a><a name="agginit"></a>匯總初始化
 
 彙總初始化是陣列或類別類型 (通常是結構或等位) 的清單初始化表單，這些陣列或類別類型具有：
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-您應該會看到下列輸出：
+您應該會看見下列輸出：
 
 ```Output
 agg1: c: 1
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> 在匯總初始化期間宣告但未明確初始化的陣列成員，會以零初始化，如同上述 `myArr3`。
+> 在匯總初始化期間宣告但未明確初始化的陣列成員，會以零初始化，如上所示 `myArr3` 。
 
 #### <a name="initializing-unions-and-structs"></a>初始化等位和結構
 
@@ -480,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>參考初始化
 
-若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如，
+若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如：
 
 ```cpp
 // initializing_references.cpp
@@ -505,25 +505,25 @@ int main()
 
 只有在下列情況下，可以不使用初始設定式宣告參考類型變數：
 
-- 函式宣告 (原型)。 例如，
+- 函式宣告 (原型)。 例如：
 
     ```cpp
     int func( int& );
     ```
 
-- 函式傳回類型宣告。 例如，
+- 函式傳回類型宣告。 例如：
 
     ```cpp
     int& func( int& );
     ```
 
-- 宣告函式類型類別成員。 例如，
+- 宣告函式類型類別成員。 例如：
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- 明確指定為**extern**的變數宣告。 例如，
+- 明確指定為之變數的宣告 **`extern`** 。 例如：
 
     ```cpp
     extern int& iVal;
@@ -534,10 +534,10 @@ int main()
 ![初始化參考型別的決策圖表](../cpp/media/vc38s71.gif "初始化參考型別的決策圖表") <br/>
 初始化參考型別的決策圖表
 
-**Volatile**類型的參考（宣告為**volatile** *typename* <strong>&</strong> *identifier*）可以使用相同類型的**volatile**物件或尚未宣告為**volatile**的物件來初始化。 不過，它們無法使用該類型的**const**物件進行初始化。 同樣地， **const**類型的參考（宣告為**const** *typename* <strong>&</strong> *identifier*）可以使用相同類型的**const**物件進行初始化（或轉換成該類型的任何專案，或是未宣告為**const**的物件）。 不過，它們無法使用該類型的**volatile**物件進行初始化。
+類型的參考 **`volatile`** （宣告為 **`volatile`** *typename* <strong>&</strong> *identifier*）可以使用 **`volatile`** 相同類型的物件或尚未宣告為的物件來初始化 **`volatile`** 。 不過，它們無法使用 **`const`** 該類型的物件進行初始化。 同樣地，類型的參考 **`const`** （宣告為 **`const`** *typename* <strong>&</strong> *identifier*）可以使用 **`const`** 相同類型的物件（或是任何轉換成該類型的專案，或是未宣告為的物件）來初始化 **`const`** 。 不過，它們無法使用 **`volatile`** 該類型的物件進行初始化。
 
-不是以**const**或**volatile**關鍵字限定的參考只能使用宣告為**const**或**volatile**的物件進行初始化。
+不是以或關鍵字限定的參考 **`const`** 只能 **`volatile`** 使用宣告為或的物件來初始化 **`const`** **`volatile`** 。
 
 ### <a name="initialization-of-external-variables"></a>外部變數的初始化
 
-自動、靜態和外部變數的宣告可以包含初始化運算式。 不過，只有在變數未宣告為**extern**時，外部變數的宣告才可包含初始化運算式。
+自動、靜態和外部變數的宣告可以包含初始化運算式。 不過，只有當變數未宣告為時，外部變數的宣告才會包含初始化運算式 **`extern`** 。

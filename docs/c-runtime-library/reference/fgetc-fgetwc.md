@@ -36,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912872"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189281"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -60,12 +60,12 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*資料流程*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
 
-**fgetc**會傳回讀取為**int**的字元，或傳回**EOF**以表示錯誤或檔案結尾。 **fgetwc**會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應至讀取字元的寬字元，或傳回**WEOF**以表示錯誤或檔案結尾。 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*stream*為**Null**，則**fgetc**和**fgetwc**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
+**fgetc**會傳回讀取為的字元， **`int`** 或傳回**EOF**以表示錯誤或檔案結尾。 **fgetwc**會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應至讀取字元的寬字元，或傳回**WEOF**以表示錯誤或檔案結尾。 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*stream*為**Null**，則**fgetc**和**fgetwc**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
 
 ## <a name="remarks"></a>備註
 

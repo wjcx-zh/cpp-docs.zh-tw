@@ -15,16 +15,16 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: e0d7ea1a0bcaf8329cff0cdfb0c01154f3c5a73b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6e0296a2bf4ce97e41fdf6208c3dd1c6b91215dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226931"
 ---
 # <a name="_variant_t-relational-operators"></a>_variant_t 關係運算子
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 比較兩個 `_variant_t` 物件是否相等或不等。
 
@@ -44,20 +44,20 @@ bool operator!=(
 #### <a name="parameters"></a>參數
 
 *varSrc*<br/>
-要與 `_variant_t` 物件比較的 `VARIANT`。
+`VARIANT`要與物件比較的 `_variant_t` 。
 
 *.Psrc*<br/>
-要與 `_variant_t` 物件比較之 `VARIANT` 的指標。
+要 `VARIANT` 與物件比較之的指標 `_variant_t` 。
 
 ## <a name="return-value"></a>傳回值
 
-如果比較保留，則傳回**true** ，否則傳回**false** 。
+**`true`** 如果比較保留，則傳回， **`false`** 否則傳回。
 
 ## <a name="remarks"></a>備註
 
-比較 `_variant_t` 物件與 `VARIANT`，測試是否相等或不相等。
+比較 `_variant_t` 物件與 `VARIANT` ，測試是否相等或不等。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

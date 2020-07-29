@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
-ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.openlocfilehash: 5cff7a4607201175c7095a87134850583b76d636
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204129"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227084"
 ---
 # <a name="scope-c"></a>範圍 (C++)
 
@@ -31,9 +31,9 @@ ms.locfileid: "83204129"
 
 - **區域範圍**在函式或 lambda 內宣告的名稱（包括參數名稱）具有區域範圍。 它們通常稱為「區域變數」。 只有從其宣告點到函式或 lambda 主體的結尾時，才會顯示它們。 區域範圍是一種區塊範圍，本文稍後會加以討論。
 
-- **類別範圍**類別成員的名稱具有類別範圍，不論宣告點為何，它都會在整個類別定義中擴充。 類別成員存取範圍是由**公用**、**私**用和**受保護**的關鍵字進一步控制。 只能使用成員選取運算子（）來存取公用或受保護的成員 **。** 或 **->** ）或成員指標運算子（**.** <strong>\*</strong> 或 **->** <strong>\*</strong> ）。
+- **類別範圍**類別成員的名稱具有類別範圍，不論宣告點為何，它都會在整個類別定義中擴充。 類別成員存取範圍是由 **`public`** 、 **`private`** 和關鍵字進一步控制 **`protected`** 。 只能使用成員選取運算子（）來存取公用或受保護的成員 **。** 或 **->** ）或成員指標運算子（**.** <strong>\*</strong> 或 **->** <strong>\*</strong> ）。
 
-- **語句範圍**在**for**、 **if**、 **while**或**switch**語句中宣告的名稱，會在語句區塊的結尾處顯示。
+- **語句範圍**在 **`for`** 、、或語句中宣告的名稱，會在 **`if`** **`while`** **`switch`** 語句區塊的結尾處顯示。
 
 - **函數範圍**[標籤](labeled-statements.md)具有函式範圍，這表示它在函式主體中可見，甚至是在其宣告點之前。 函式範圍可以在宣告 `goto cleanup` 標籤之前撰寫語句 `cleanup` 。
 
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>隱藏類別名稱
 
-您可以藉由宣告函式、物件、變數或相同範圍中的列舉程式，隱藏類別名稱。 不過，在前面加上關鍵字**類別**時，仍然可以存取類別名稱。
+您可以藉由宣告函式、物件、變數或相同範圍中的列舉程式，隱藏類別名稱。 不過，在前面加上關鍵字時，仍然可以存取類別名稱 **`class`** 。
 
 ```cpp
 // hiding_class_names.cpp
@@ -94,18 +94,18 @@ int main()
 > [!NOTE]
 > 針對呼叫類別名稱（）的任何位置 `Account` ，必須使用關鍵字類別來區別全域範圍的變數帳戶。 當類別名稱出現在範圍解析運算子 (::) 的左邊時，不適用這項規則。 範圍解析運算子左邊的名稱一律視為類別名稱。
 
-下列範例示範如何 `Account` 使用**class**關鍵字來宣告類型物件的指標：
+下列範例示範如何使用關鍵字來宣告類型物件的指標 `Account` **`class`** ：
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-在 `Account` 上述語句中，初始化運算式中的（括弧中的）具有全域範圍; 其類型為**double**。
+在 `Account` 上述語句中，初始化運算式中的（括弧中的）具有全域範圍; 其類型為 **`double`** 。
 
 > [!NOTE]
 > 重複使用識別項名稱 (如這個範例中所示) 會視為不良的程式設計風格。
 
-如需類別物件之宣告和初始化的詳細資訊，請參閱[類別、結構和等](../cpp/classes-and-structs-cpp.md)位。 如需使用**new**和**delete**的免費存放區運算子的詳細資訊，請參閱[new 和 delete 運算子](new-and-delete-operators.md)。
+如需類別物件之宣告和初始化的詳細資訊，請參閱[類別、結構和等](../cpp/classes-and-structs-cpp.md)位。 如需使用 **`new`** 和 **`delete`** 自由存放區運算子的詳細資訊，請參閱[new 和 delete 運算子](new-and-delete-operators.md)。
 
 ## <a name="hiding-names-with-global-scope"></a>隱藏具有全域範圍的名稱
 

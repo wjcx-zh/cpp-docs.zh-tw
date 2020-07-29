@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ce730b8d723a839c5b509c825cff84111ca613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371469"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226915"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 結構
 
-定義未初始化句柄的常見特徵。
+定義未初始化控制碼的一般特性。
 
 ## <a name="syntax"></a>語法
 
@@ -32,16 +32,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-名稱   | 描述
+名稱   | 說明
 ------ | ---------------------
-`Type` | HANDLE 的同義詞。
+`Type` | 控制碼的同義字。
 
 ### <a name="public-methods"></a>公用方法
 
-名稱                                                  | 描述
+名稱                                                  | 說明
 ----------------------------------------------------- | -----------------------------
-[操作無效:關閉](#close)                     | 關閉指定的句柄。
-[操作無效:取得無效值](#getinvalidvalue) | 表示無效的句柄。
+[HANDLENullTraits：： Close](#close)                     | 關閉指定的控制碼。
+[HANDLENullTraits：： GetInvalidValue](#getinvalidvalue) | 表示不正確控制碼。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -49,13 +49,13 @@ struct HANDLENullTraits;
 
 ## <a name="requirements"></a>需求
 
-**標題:** 核心包裝.h
+**標頭：** corewrappers。h
 
-**命名空間:** 微軟::WRL:包裝::處理特徵
+**命名空間：** Microsoft：： WRL：：包裝函式：： HandleTraits
 
-## <a name="handlenulltraitsclose"></a><a name="close"></a>操作無效:關閉
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits：： Close
 
-關閉指定的句柄。
+關閉指定的控制碼。
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>參數
 
-*H*<br/>
-要關閉的句柄。
+*h*<br/>
+要關閉的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果句柄*h*成功關閉,**則為 true;** 否則,**假**。
+**`true`** 如果控制碼*h*成功關閉，則為，否則為 **`false`** 。
 
-## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>操作無效:取得無效值
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits：： GetInvalidValue
 
-表示無效的句柄。
+表示不正確控制碼。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>傳回值
 
-永遠會傳回 `nullptr`。
+一律會傳回 **`nullptr`** 。

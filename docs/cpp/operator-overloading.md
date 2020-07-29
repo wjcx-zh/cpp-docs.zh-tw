@@ -11,35 +11,35 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: a16f68088ffffd6c3cf38f5ae3adda5f2d59fb57
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 822bd5efb3125e69ff60aa42ba6419969cace403
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227227"
 ---
 # <a name="operator-overloading"></a>運算子多載
 
-**Operator**關鍵字會宣告函式，以指定套用至類別實例時的*運算子符號*。 這讓運算子有多個意義，或稱為「多載」。 編譯器會檢查運算元的類型，以區別運算子的不同意義。
+關鍵字會宣告 **`operator`** *函式*，以指定套用至類別實例時的運算子符號。 這讓運算子有多個意義，或稱為「多載」。 編譯器會檢查運算元的類型，以區別運算子的不同意義。
 
 ## <a name="syntax"></a>語法
 
-> *類型***運算子***運算子-符號* **（** *參數清單* **）**
+> *類型* **`operator`***operator-符號* **（** *參數清單* **）**
 
 ## <a name="remarks"></a>備註
 
 您可以用全域方式或以逐一類別為基礎，重新定義大多數內建運算子的函式。 多載運算子實做為函式。
 
-多載運算子的名稱是**operator** *x*，其中*x*是下表中顯示的運算子。 例如，若要多載加號，請定義稱為**operator + 的函**式。 同樣地，若要多載加法/指派運算子， **+=** ，請定義稱為**operator + = 的函**式。
+多載運算子的名稱是 **`operator`** *x*，其中*x*是下表中顯示的運算子。 例如，若要多載加號，請定義稱為**operator + 的函**式。 同樣地，若要多載加法/指派運算子， **+=** 請定義稱為**operator + = 的函**式。
 
 ### <a name="redefinable-operators"></a>可重新定義的運算子
 
 |運算子|名稱|類型|
 |--------------|----------|----------|
-|**、**|Comma (逗號)|Binary|
+|**,**|Comma (逗號)|Binary|
 |**!**|邏輯 NOT|一元 (Unary)|
 |**!=**|不等|Binary|
-|**%**|Modulus|Binary|
+|**%**|模組|Binary|
 |**%=**|模數指派|Binary|
 |**&**|位元 AND|Binary|
 |**&**|傳址|一元 (Unary)|
@@ -50,7 +50,7 @@ ms.locfileid: "80188567"
 |**&#42;**|乘|Binary|
 |**&#42;**|指標取值 (Dereference)|一元 (Unary)|
 |**&#42;=**|乘法指派|Binary|
-|**+**|加|Binary|
+|**+**|加法|Binary|
 |**+**|一元加號|一元 (Unary)|
 |**++**|增量<sup>1</sup>|一元 (Unary)|
 |**+=**|加法指派|Binary|
@@ -60,7 +60,7 @@ ms.locfileid: "80188567"
 |**-=**|減法指派|Binary|
 |**->**|成員選取|Binary|
 |**->&#42;**|成員指標選取|Binary|
-|**/**|除|Binary|
+|**/**|部門|Binary|
 |**/=**|除法指派|Binary|
 |**\<**|小於|Binary|
 |**<<**|左移|Binary|
@@ -79,8 +79,8 @@ ms.locfileid: "80188567"
 |**&#124;=**|位元包含 OR 指派|Binary|
 |**&#124;&#124;**|邏輯 OR|Binary|
 |**~**|一補數|一元 (Unary)|
-|**delete**|刪除|—|
-|**new**|新增|—|
+|**`delete`**|刪除|—|
+|**`new`**|新增|—|
 |轉換運算子|轉換運算子|一元 (Unary)|
 
 <sup>1</sup>兩個版本的一元遞增和遞減運算子存在：前置遞增和後置遞增。
@@ -95,22 +95,22 @@ ms.locfileid: "80188567"
 
 - [函式呼叫](../cpp/function-call-cpp.md)
 
-- [註標](../cpp/subscripting.md)
+- [下標](../cpp/subscripting.md)
 
 - [類別成員存取](../cpp/member-access.md)
 
 - [遞增和遞減](../cpp/increment-and-decrement-operator-overloading-cpp.md)。
 
-- [使用者定義類型轉換](../cpp/user-defined-type-conversions-cpp.md)
+- [使用者定義型別轉換](../cpp/user-defined-type-conversions-cpp.md)
 
-下表中顯示的運算子無法多載。 資料表包含 **#** 和 **##** 的預處理器符號。
+下表中顯示的運算子無法多載。 資料表包含預處理器符號 **#** 和 **##** 。
 
 ### <a name="nonredefinable-operators"></a>不可重新定義的運算子
 
 |運算子|名稱|
 |-|-|
-|**。**|成員選取|
-|**.&#42;**|成員指標選取|
+|**.**|成員選取|
+|**. &#42;**|成員指標選取|
 |**::**|範圍解析|
 |**? :**|條件式|
 |**#**|前置處理器轉換成字串|
@@ -172,7 +172,7 @@ int main() {
 
 - [函式呼叫](../cpp/function-call-cpp.md)
 
-- [註標](../cpp/subscripting.md)
+- [下標](../cpp/subscripting.md)
 
 - [成員存取](../cpp/member-access.md)
 

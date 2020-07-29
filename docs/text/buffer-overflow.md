@@ -6,16 +6,16 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71877ed770384190cb7f856567d9e7e845e3da19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410755"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217320"
 ---
 # <a name="buffer-overflow"></a>緩衝區溢位
 
-當您將字元放入緩衝區，不同的字元大小會造成問題。 請考慮下列程式碼，從字串中複製的字元， `sz`，到緩衝區， `rgch`:
+當您將字元放入緩衝區時，不同的字元大小可能會造成問題。 請考慮下列程式碼，它會將字串中的字元複製 `sz` 到緩衝區， `rgch` 如下所示：
 
 ```cpp
 cb = 0;
@@ -23,7 +23,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;
 ```
 
-問題是：是最後一個位元組會複製一個前導位元組嗎？ 下列無法解決問題因為它會溢位的緩衝區：
+問題是：最後一個位元組複製了前導位元組嗎？ 下列動作無法解決此問題，因為它可能會使緩衝區溢位：
 
 ```cpp
 cb = 0;
@@ -35,7 +35,7 @@ while( cb < sizeof( rgch ) )
 }
 ```
 
-`_mbccpy`呼叫會嘗試執行正確的動作 — 複製完整的字元，不論它是 1 或 2 個位元組。 但它不會考慮複製的最後一個字元可能不符合緩衝區如果字元是 2 個位元組寬。 正確的解決方法是：
+`_mbccpy`呼叫會嘗試執行正確的動作—複製完整的字元，不論是1或2個位元組。 但是，如果字元寬2個位元組，則不會考慮複製的最後一個字元可能不適合緩衝區。 正確的解決方案是：
 
 ```cpp
 cb = 0;
@@ -47,7 +47,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }
 ```
 
-此程式碼測試可能會發生緩衝區溢位，迴圈中測試，請使用`_mbclen`若要測試的目前所指向的字元大小`sz`。 藉由呼叫`_mbsnbcpy`函式，您可以取代中的程式碼**雖然**迴圈使用一行程式碼。 例如：
+這段程式碼會使用 `_mbclen` 測試所指向的目前字元大小，測試迴圈測試中可能的緩衝區溢位 `sz` 。 藉由呼叫函式 `_mbsnbcpy` ，您可以使用一行程式碼來取代迴圈中的程式碼 **`while`** 。 例如：
 
 ```cpp
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );

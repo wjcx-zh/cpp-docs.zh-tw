@@ -5,21 +5,21 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: ed143349f3afc7a27ad565c1cc929c6ecb5f6ad8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c0ec796265f462fe386962c0b2e8288f41da628
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222429"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 運算子
 
 |||
 |-|-|
-|[操作員!](#op_neq)|[運算子!* (多映射)](#op_neq_mm)|
-|[運算子*](#op_eq_eq)|[運算子* (多映射)](#op_eq_eq_mm)|
+|[operator！ =](#op_neq)|[operator！ = （multimap）](#op_neq_mm)|
+|[operator = =](#op_eq_eq)|[operator = = （multimap）](#op_eq_eq_mm)|
 
-## <a name="operator"></a><a name="op_neq"></a>操作員!
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
@@ -32,21 +32,21 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_map` 類型的物件。
 
-*對*\
+*再*\
 `hash_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 hash_map 不相等，便會傳回 **true**；如果 hash_map 相等，則會傳回 **false**。
+**`true`** 如果 hash_maps 不相等，則為，**`false`** 如果 hash_maps 相等則為。
 
 ### <a name="remarks"></a>備註
 
 hash_map 物件之間的比較是以其元素的成對比較為基礎。 兩個 hash_map 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。
 
-[<的成员hash_map>](hash-map.md)與[<hash_set>](hash-set.md)標頭[檔在stdext命名空間](stdext-namespace.md)。
+<的成員[hash_map>](hash-map.md)和[<Hash_set](hash-set.md) [stdext 命名空間](stdext-namespace.md)中的標頭檔。
 
 ### <a name="example"></a>範例
 
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
@@ -101,15 +101,15 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_map` 類型的物件。
 
-*對*\
+*再*\
 `hash_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 hash_map 等於運算子右邊的 hash_map，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 hash_map 等於運算子右邊的 hash_map，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>操作員!* (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator！ = （hash_multimap）
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
@@ -168,15 +168,15 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_multimap` 類型的物件。
 
-*對*\
+*再*\
 `hash_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 hash_multimap 不相等，便會傳回 **true**；如果 hash_multimap 相等，則會傳回 **false**。
+**`true`** 如果 hash_multimaps 不相等，則為，**`false`** 如果 hash_multimaps 相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>運算子* (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operator = = （hash_multimap）
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
@@ -235,15 +235,15 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_multimap` 類型的物件。
 
-*對*\
+*再*\
 `hash_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 hash_multimap 等於運算子右邊的 hash_multimap，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 hash_multimap 等於運算子右邊的 hash_multimap，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 

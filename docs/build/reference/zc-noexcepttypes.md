@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: 0f833209938ccc09cbc37235788b6f719d4d12d4
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 09817372e818a05c389a083aac5f04e03b1ab0e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506867"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218945"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (C++17 noexcept 規則)
 
-C + + 17 標準會建立的 `throw()` 別名 `noexcept` 、移除 `throw(` *`type-list`* `)` 和 `throw(...)` ，並允許特定類型包含在內 `noexcept` 。 這項變更可能會導致程式碼中符合 c + + 14 或更早版本的來源相容性問題。 **`/Zc:noexceptTypes`** 選項指定符合 c + + 17 標準。 **`/Zc:noexceptTypes-`** 當程式碼在 c + + 17 模式下編譯時，允許 c + + 14 和更早的行為。
+C + + 17 標準會建立的 `throw()` 別名 **`noexcept`** 、移除 `throw(` *`type-list`* `)` 和 `throw(...)` ，並允許特定類型包含在內 **`noexcept`** 。 這項變更可能會導致程式碼中符合 c + + 14 或更早版本的來源相容性問題。 **`/Zc:noexceptTypes`** 選項指定符合 c + + 17 標準。 **`/Zc:noexceptTypes-`** 當程式碼在 c + + 17 模式下編譯時，允許 c + + 14 和更早的行為。
 
 ## <a name="syntax"></a>語法
 

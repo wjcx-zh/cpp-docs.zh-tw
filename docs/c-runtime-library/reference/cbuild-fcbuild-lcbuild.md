@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943221"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221961"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild、_FCbuild、_LCbuild
 
@@ -56,12 +56,12 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 要建立之複數的實數部分。
 
-*imaginary*<br/>
+*實*<br/>
 要建立的複數虛數部分。
 
 ## <a name="return-value"></a>傳回值
 
-**_Dcomplex**、 **_Fcomplex**或 **_Lcomplex**結構，代表指定之浮點類型值的複數（*real*，*虛* \*數 i）。
+**_Dcomplex**、 **_Fcomplex**或 **_Lcomplex**結構，表示指定之浮點類型值的複數（*real*，*虛*數 \* i）。
 
 ## <a name="remarks"></a>備註
 
@@ -73,11 +73,11 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 |-------------|--------------|------------------|
 |**_Cbuild**、 **_FCbuild**、 **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-這些是 Microsoft 特有的功能。 **_Dcomplex**、 **_Fcomplex**和 **_Lcomplex**類型分別與未的 C99 原生類型**雙重 _Complex**、 **float _Complex**和**long double _Complex**的對應專案相關。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+這些是 Microsoft 特有的功能。 **_Dcomplex**、 **_Fcomplex**和 **_Lcomplex**的類型，分別與未 C99 的原生類型、和相關的 Microsoft 特定對等專案 **`double _Complex`** **`float _Complex`** **`long double _Complex`** 。 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc、_FCmulcc、_LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
 [_Cmulcr、_FCmulcr、_LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
 [norm、normf、norml](norm-normf-norml1.md)<br/>

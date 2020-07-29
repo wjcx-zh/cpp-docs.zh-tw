@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 9372fa884d75e10c1a0f2ec92d6cca9caa65808e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167611"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217632"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator 類別
 
@@ -33,12 +33,12 @@ template <class OutputIterator, class Type>
 *OutputIterator*\
 指定要儲存之物件的輸出迭代器。
 
-*類型*\
+*型*\
 正在配置儲存體的物件類型。
 
 ## <a name="remarks"></a>備註
 
-類別描述輸出反覆運算器，其會依其產生的順序，來構造類型 `Type` 的物件。 類別的物件 `raw_storage_iterator`\< **ForwardIterator**，**類型**> 透過您在建立物件時指定的正向反覆運算器物件（屬於類別 `ForwardIterator`）來存取儲存體。 若為第一個 `ForwardIterator`類別的物件，則運算式 **&\*首先**必須在產生的序列中指定下一個物件（類型為 `Type`）的未建構儲存體。
+類別描述輸出反覆運算器，其會依 `Type` 其產生的順序來構造類型的物件。 類別的物件會 `raw_storage_iterator` \< **ForwardIterator**, **Type**> 透過 `ForwardIterator` 您在建立物件時指定的正向反覆運算器物件（屬於類別）來存取儲存體。 對於類別的第一個物件 `ForwardIterator` ，運算式** & \* first**必須 `Type` 在產生的序列中指定下一個物件（屬於類型）的未建構儲存體。
 
 當有需要分隔記憶體配置和物件建構時，會使用此配接器類別。 `raw_storage_iterator` 可以用來將物件複製到未初始化的儲存體，例如使用`malloc` 函式配置的記憶體。
 
@@ -57,13 +57,13 @@ template <class OutputIterator, class Type>
 |[element_type](#element_type)|提供一個類型，其描述要儲存在原始儲存體的項目。|
 |[iter_type](#iter_type)|提供一個類型，其描述為原始儲存體迭代器基礎的迭代器。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |||
 |-|-|
-|[operator*](#op_star)|取值運算子，用來執行 \* `ii` = `x`的輸出反覆運算器運算式。|
-|[operator=](#op_eq)|指派運算子，用來執行原始儲存體反覆運算器運算式 \* `i` = `x` 以儲存于記憶體中。|
-|[operator++](#op_add_add)|原始儲存體迭代器的前置遞增和後置遞增運算子。|
+|[操作](#op_star)|取值運算子，用來執行輸出反覆運算器運算式 \* `ii`  =  `x` 。|
+|[operator =](#op_eq)|指派運算子，用來執行用於 \* `i`  =  `x` 儲存于記憶體中的原始儲存體反覆運算器運算式。|
+|[operator + +](#op_add_add)|原始儲存體迭代器的前置遞增和後置遞增運算子。|
 
 ### <a name="element_type"></a><a name="element_type"></a>element_type
 
@@ -75,7 +75,7 @@ typedef Type element_type;
 
 #### <a name="remarks"></a>備註
 
-此類型是 `Type`raw_storage_iterator 類別樣板參數的同義字。
+此類型是 raw_storage_iterator 類別樣板參數的同義字 `Type` 。
 
 ### <a name="iter_type"></a><a name="iter_type"></a>iter_type
 
@@ -87,11 +87,11 @@ typedef ForwardIterator iter_type;
 
 #### <a name="remarks"></a>備註
 
-這個類型與樣板參數 `ForwardIterator`同義。
+此類型是樣板參數 `ForwardIterator` 的同義字。
 
-### <a name="operator"></a><a name="op_star"></a> 運算子\*
+### <a name="operator"></a><a name="op_star"></a>操作\*
 
-取值運算子，用來執行原始儲存體反覆運算器運算式，\* *ii* = *x*。
+取值運算子，用來執行原始儲存體反覆運算器運算式 \* *ii*  =  *x*。
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator*();
@@ -103,7 +103,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 
 #### <a name="remarks"></a>備註
 
-`ForwardIterator` 的需求是原始儲存體反覆運算器必須滿足，只需要運算式 \* *ii* = *t*有效，且本身不會顯示任何關於**運算子**或 `operator=` 的內容。 這個執行中的成員運算子會傳回 **\*this**，因此[operator =](#op_eq)（**constType**&）可以在運算式中執行實際的存放區，例如 \* *ptr* = `val`。
+的需求 `ForwardIterator` 是原始儲存體反覆運算器必須滿足，只要求運算式 \* *ii*  =  *t*有效，且本身不會顯示 **`operator`** 或的任何內容 `operator=` 。 此實作為中的成員運算子會傳回** \* this**，因此[operator =](#op_eq)（**constType**&）可以在運算式中執行實際的存放區，例如 \* *ptr*  =  `val` 。
 
 #### <a name="example"></a>範例
 
@@ -159,7 +159,7 @@ Constructing 5
 
 ### <a name="operator"></a><a name="op_eq"></a>operator =
 
-指派運算子，用來執行原始儲存體反覆運算器運算式 \* *i* = *x*以儲存在記憶體中。
+指派運算子，用來執行用來儲存記憶體中的原始儲存體反覆運算器運算式 \* *i*  =  *x* 。
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator=(
@@ -168,8 +168,8 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 #### <a name="parameters"></a>參數
 
-*val*\
-要插入記憶體 `Type` 類型的物件值。
+*初始值*\
+要插入記憶體之類型的物件值 `Type` 。
 
 #### <a name="return-value"></a>傳回值
 
@@ -177,9 +177,9 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 #### <a name="remarks"></a>備註
 
-原始儲存體反覆運算器必須滿足 `ForwardIterator` 狀態的需求，只需要運算式 \* *ii* = *t*有效，且本身不會顯示任何關於**運算子**或 `operator=` 的內容。 這些成員運算子會傳回 **\*this**。
+`ForwardIterator`原始儲存體反覆運算器必須滿足之狀態的需求，只需要運算式 \* *ii*  =  *t*有效，且本身不會顯示 **`operator`** 或的任何內容 `operator=` 。 這些成員運算子會傳回 **`*this`** 。
 
-指派運算子會先使用預存反覆運算器值來建立輸出序列中的下一個物件，方法是評估「位置新運算式」 **new** （（`void` \*） &\* **first**）**型**別（`val`）。
+指派運算子會藉 `first` 由評估 placement new 運算式，以使用預存反覆運算器值來構造輸出序列中的下一個物件 `new ( (void*) & *first ) Type( val )` 。
 
 #### <a name="example"></a>範例
 
@@ -247,13 +247,13 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
 
 #### <a name="remarks"></a>備註
 
-第一個運算子最後會嘗試從相關聯的輸入資料流程中，將 `CharType` 類型的物件解壓縮並儲存。 第二個運算子會複製物件、遞增物件，然後傳回複本。
+第一個運算子最後會嘗試 `CharType` 從相關聯的輸入資料流程解壓縮並儲存類型的物件。 第二個運算子會複製物件、遞增物件，然後傳回複本。
 
-第一個前置遞增運算子會遞增預存的輸出迭代器物件，然後傳回 **\*this**。
+第一個前置遞增運算子會遞增預存的輸出反覆運算器物件，然後傳回** \* this**。
 
-第二個後置遞增運算子則會複製 **\*this**、遞增預存的輸出迭代器物件，然後傳回複本。
+第二個後置遞增運算子會複製** \* 這個**，並遞增儲存的輸出反覆運算器物件，然後傳回復本。
 
-此函式會將 `first` 儲存為輸出反覆運算器物件。
+此函式會將儲存 `first` 為輸出反覆運算器物件。
 
 #### <a name="example"></a>範例
 
@@ -298,7 +298,7 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 #### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 正向迭代器，是構成要建構之 `raw_storage_iterator` 物件的基礎。
 
 #### <a name="example"></a>範例

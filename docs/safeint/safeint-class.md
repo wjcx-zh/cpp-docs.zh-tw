@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737568"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219348"
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 
@@ -33,13 +33,13 @@ class SafeInt;
 
 ### <a name="parameters"></a>參數
 
-| [範本]  |  描述 |
+| [範本]  |  說明 |
 |--------|------------|
 | T         |  `SafeInt` 所取代的整數或布林值參數型別。 |
 | E         |  定義錯誤處理原則的列舉資料型別。 |
 | U         |  適用於第二個運算元的整數或布林值參數型別。 |
 
-| 參數  |  描述 |
+| 參數  |  說明 |
 |---------|-----------------|
 | *rhs*      |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
 | *i*        |  [in] 輸入的參數，在數個獨立函式中代表運算子右邊的值。 |
@@ -187,7 +187,7 @@ class SafeInt;
 
 - `((uint)~0) > -1`
 
-第一個陳述式會解析為 **true**，但第二個陳述式會解析為 `false`。 0 的位元否定為 0xFFFFFFFF。 在第二個陳述式中，預設的比較運算子會比較 0xFFFFFFFF 和 0xFFFFFFFF，並將它們視為相等。 類別的比較運算子發現 `SafeInt` 第二個參數是負數，但第一個參數不帶正負號。 因此，雖然位標記法相同，但 `SafeInt` 邏輯運算子發現不帶正負號的整數大於-1。
+第一個語句會解析為 **`true`** ，但第二個語句會解析為 **`false`** 。 0 的位元否定為 0xFFFFFFFF。 在第二個陳述式中，預設的比較運算子會比較 0xFFFFFFFF 和 0xFFFFFFFF，並將它們視為相等。 `SafeInt` 類別的比較運算子發現第二個參數為負數，而第一個參數不帶正負號。 因此，儘管位元表示法完全相同，但 `SafeInt` 邏輯運算子發現不帶正負號的整數大於 -1。
 
 當您將 `SafeInt` 類別搭配 `?:` 三元運算子一起使用時要小心。 請考慮下列程式碼行。
 
@@ -201,7 +201,7 @@ Int x = flag ? SafeInt<unsigned int>(y) : -1;
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-如果 `flag` 為 `false`，編譯器會擲回例外狀況，而不是將 -1 的值指派給 `x`。 因此，為了避免此行為，請使用下列這一行正確的程式碼。
+如果 `flag` 為 **`false`** ，編譯器會擲回例外狀況，而不是將-1 的值指派給 `x` 。 因此，為了避免此行為，請使用下列這一行正確的程式碼。
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;

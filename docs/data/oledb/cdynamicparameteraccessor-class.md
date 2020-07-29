@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 9c326c337ff210ef9de26b3fd88c0d853832b260
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211860"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216462"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 類別
 
@@ -109,7 +109,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ## <a name="requirements"></a>需求
 
-**標頭檔**：atldbcli.h
+**標頭**： atldbcli.h。h
 
 ## <a name="members"></a>成員
 
@@ -199,9 +199,9 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 ### <a name="return-value"></a>傳回值
 
-針對樣板版本，會指向包含從緩衝區取得之資料的記憶體。 針對樣板化版本，會在成功時傳回**true** ，否則會傳回**false** 。
+針對樣板版本，會指向包含從緩衝區取得之資料的記憶體。 針對樣板化版本，會 **`true`** 在成功或失敗時傳回 **`false`** 。
 
-使用 `GetParam` 從緩衝區取出非字串參數資料。 使用[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)從緩衝區取出字串參數資料。
+用 `GetParam` 來從緩衝區取出非字串參數資料。 使用[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)從緩衝區取出字串參數資料。
 
 ## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor：： GetParamCount
 
@@ -234,7 +234,7 @@ bool GetParamIO(DBORDINAL nParam,
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 如需範例，請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
 
 *pParamIO*<br/>
-變數的指標，其中包含指定參數的 `DBPARAMIO` 類型（輸入或輸出）。 其定義如下：
+變數的指標，其中包含 `DBPARAMIO` 指定之參數的類型（輸入或輸出）。 其定義如下：
 
 ```cpp
 typedef DWORD DBPARAMIO;
@@ -248,7 +248,7 @@ enum DBPARAMIOENUM {
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回**true** ，否則會傳回**false** 。
+**`true`** 成功或失敗時傳回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor：： GetParamLength
 
@@ -273,7 +273,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 ### <a name="remarks"></a>備註
 
-第一個覆寫會在成功時傳回**true** ，否則會傳回**false** 。 第二個覆寫會指向含有參數長度的記憶體。
+第一個覆寫會 **`true`** 在成功或失敗時傳回 **`false`** 。 第二個覆寫會指向含有參數長度的記憶體。
 
 ## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor：： GetParamName
 
@@ -317,7 +317,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 
 ### <a name="remarks"></a>備註
 
-第一個覆寫會在成功時傳回**true** ，否則會傳回**false** 。 第二個覆寫會指向記憶體，其中包含指定參數的狀態。
+第一個覆寫會 **`true`** 在成功或失敗時傳回 **`false`** 。 第二個覆寫會指向記憶體，其中包含指定參數的狀態。
 
 ## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor：： GetParamString
 
@@ -347,7 +347,7 @@ bool GetParamString(DBORDINAL nParam,
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 如需範例，請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
 
 *strOutput*<br/>
-脫銷指定之參數的 ANSI （`CSimpleStringA`）或 Unicode （`CSimpleStringW`）字串資料。 您應該傳遞 `CString`類型的參數，例如：
+脫銷`CSimpleStringA`指定之參數的 ANSI （）或 Unicode （ `CSimpleStringW` ）字串資料。 您應該傳遞類型為的參數 `CString` ，例如：
 
 [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
 
@@ -359,13 +359,13 @@ bool GetParamString(DBORDINAL nParam,
 
 ### <a name="remarks"></a>備註
 
-如果成功，則傳回**true** ，否則會傳回**false** 。
+**`true`** 成功或失敗時傳回 **`false`** 。
 
-如果*pBuffer*為 Null，這個方法會在*pMaxLen*所指向的記憶體中設定所需的緩衝區大小，並傳回**true**而不復制資料。
+如果*pBuffer*為 Null，這個方法會在*pMaxLen*所指向的記憶體中設定所需的緩衝區大小，並傳回 **`true`** 而不復制資料。
 
 如果緩衝區*pBuffer*不夠大，無法包含整個字串，這個方法將會失敗。
 
-使用 `GetParamString`，從緩衝區取出字串參數資料。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)從緩衝區取出非字串參數資料。
+用 `GetParamString` 來從緩衝區取出字串參數資料。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)從緩衝區取出非字串參數資料。
 
 ## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor：： GetParamType
 
@@ -388,7 +388,7 @@ bool GetParamType(DBORDINAL nParam,
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回**true** ，否則會傳回**false** 。
+**`true`** 成功或失敗時傳回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor：： SetParam
 
@@ -429,9 +429,9 @@ bool SetParam(TCHAR* pParamName,
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回**true** ，否則會傳回**false** 。
+**`true`** 成功或失敗時傳回 **`false`** 。
 
-使用 `SetParam` 來設定緩衝區中的非字串參數資料。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)來設定緩衝區中的字串參數資料。
+用 `SetParam` 來設定緩衝區中的非字串參數資料。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)來設定緩衝區中的字串參數資料。
 
 ## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor：： SetParamLength
 
@@ -454,7 +454,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 ### <a name="remarks"></a>備註
 
-如果成功，則傳回**true** ，否則會傳回**false** 。
+**`true`** 成功或失敗時傳回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor：： SetParamStatus
 
@@ -477,7 +477,7 @@ bool SetParamStatus(DBORDINAL nParam,
 
 ### <a name="remarks"></a>備註
 
-如果成功，則傳回**true** ，否則會傳回**false** 。
+**`true`** 成功或失敗時傳回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor：： SetParamString
 
@@ -506,16 +506,16 @@ bool SetParamString(DBORDINAL nParam,
 
 ### <a name="remarks"></a>備註
 
-如果成功，則傳回**true** ，否則會傳回**false** 。
+**`true`** 成功或失敗時傳回 **`false`** 。
 
-如果您嘗試設定大於*pString*指定之大小上限的字串，`SetParamString` 將會失敗。
+`SetParamString`如果您嘗試設定的字串大於為*pString*指定的大小上限，將會失敗。
 
-使用 `SetParamString` 在緩衝區中設定字串參數資料。 使用[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)來設定緩衝區中的非字串參數資料。
+用 `SetParamString` 來設定緩衝區中的字串參數資料。 使用[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)來設定緩衝區中的非字串參數資料。
 
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)

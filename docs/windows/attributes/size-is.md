@@ -1,17 +1,17 @@
 ---
-title: size_is （C++ COM 屬性）
+title: size_is （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166246"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213836"
 ---
 # <a name="size_is"></a>size_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80166246"
 
 ## <a name="remarks"></a>備註
 
-**Size_is** C++屬性具有與[size_is](/windows/win32/Midl/size-is) MIDL 屬性相同的功能。
+**Size_is** c + + 屬性具有與[size_is](/windows/win32/Midl/size-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -42,9 +42,9 @@ ms.locfileid: "80166246"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
+|**適用於**|或中的欄位 **`struct`** **`union`** ，介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要的屬性**|無|
 |**無效屬性**|`max_is`|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b800daa7689cef769ce3a3b070c957f18e8794c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349606"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213706"
 ---
 # <a name="try-finally-statement-c"></a>try-finally 陳述式 (C)
 
@@ -22,9 +22,9 @@ ms.locfileid: "81349606"
 
 *try-finally-statement*: **__try**  *compound-statement*
 
-**__finally**  *compound-statement*
+**`__finally`**  *複合陳述式*
 
-`__try` 子句後面的複合陳述式是保護的區段。 `__finally` 子句後面的複合陳述式則是終止處理常式。 處理常式會指定一組當保護區段結束時執行的動作、保護的區段是因例外狀況 (異常終止) 而結束，或依標準的執行順序 (正常終止) 而結束。
+`__try` 子句後面的複合陳述式是保護的區段。 子句後面的複合陳述式 **`__finally`** 是終止處理常式。 處理常式會指定一組當保護區段結束時執行的動作、保護的區段是因例外狀況 (異常終止) 而結束，或依標準的執行順序 (正常終止) 而結束。
 
 此時控制權會經由簡單的循序執行 (正常執行) 到達 `__try` 陳述式。 當控制權進入 `__try` 陳述式時，與它關聯的處理常式會變成作用中。 執行程序如下所示：
 
@@ -32,11 +32,11 @@ ms.locfileid: "81349606"
 
 1. 已叫用終止處理常式。
 
-1. 當終止處理常式完成時，便會從 `__finally` 陳述式之後繼續執行。 不論保護的區段如何結束 (例如，藉由保護主體外部的 `goto` 陳述式或是經由 `return` 陳述式)，終止處理常式會在控制流程移出保護區段之前執行。
+1. 當終止處理常式完成時，執行會在 **`__finally`** 語句之後繼續。 無論保護區段如何結束（例如，透過來自 **`goto`** 受防護主體的語句，或透過 **`return`** 語句），終止處理常式都會在控制流程移出保護區段之前執行。
 
-`__leave` 關鍵字在 `try-finally` 陳述式區塊內是有效的。 `__leave` 的作用是會跳到 `try-finally` 區塊的結尾。 接著便會立即執行終止處理常式。 雖然 `goto` 陳述式可用來達到相同的結果，但 `goto` 陳述式會造成堆疊回溯的情形。 因為不包含堆疊回溯，因此使用 `__leave` 陳述式會更有效率。
+** `__leave** keyword is valid within a ` Try-finally ` statement block. The effect of **` __leave**是跳到區塊的結尾 `try-finally` 。 接著便會立即執行終止處理常式。 雖然 **`goto`** 可以使用語句來達到相同的結果，但是 **`goto`** 語句會導致堆疊回溯。 **' __Leave**語句更有效率，因為它不包含堆疊回溯。
 
-使用 `try-finally` 陳述式或 `return` 執行階段函式結束 `longjmp` 陳述式會視為是異常終止。 雖然不可跳入 `__try` 陳述式，但是可以從這類陳述式跳出。 起點和目的地之間的所有作用中 `__finally` 陳述式都必須執行。 這稱為「區域回溯」。
+`try-finally`使用 **`return`** 語句或執行時間函式結束語句會被 `longjmp` 視為異常終止。 雖然不可跳入 `__try` 陳述式，但是可以從這類陳述式跳出。 在 **`__finally`** 出發點和目的地之間使用的所有語句都必須執行。 這稱為「區域回溯」。
 
 如果處理序在執行 `try-finally` 陳述式時被刪除，則不會呼叫終止處理常式。
 
@@ -50,6 +50,6 @@ ms.locfileid: "81349606"
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[try-finally 陳述式](../cpp/try-finally-statement.md)
+[try-finally 語句](../cpp/try-finally-statement.md)

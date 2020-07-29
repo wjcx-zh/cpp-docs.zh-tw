@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d4ec3036a5c4d42d9d98e91f628416b75e596d12
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630467"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213940"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -397,7 +397,7 @@ __VS 2019 16.6__表示 Visual Studio 2019 版本16.6 中支援的功能。
 
 ### <a name="notes"></a>注意
 
-<a name="note_A"></a>__在__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 模式中，動態例外狀況規格會維持不變，而且 `throw()` 仍會視為的同義字 `__declspec(nothrow)` 。 在 C++17 中，P0003R5 移除了大部分的動態例外狀況規格，並保留一個殘留項目：`throw()` 將會被淘汰，而且必須作為 `noexcept` 的同義字。 在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 模式中，MSVC 現在會藉由提供與 `throw()` 相同的行為 `noexcept` （也就是透過終止強制執行），來符合標準。
+<a name="note_A"></a>__在__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 模式中，動態例外狀況規格會維持不變，而且 `throw()` 仍會視為的同義字 `__declspec(nothrow)` 。 在 c + + 17 中，動態例外狀況規格大多是由 P0003R5 所移除，讓一個 vestige： `throw()` 已被取代，且其行為必須與的同義字相同 **`noexcept`** 。 在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 模式中，MSVC 現在會藉由提供與 `throw()` 相同的行為 **`noexcept`** （也就是透過終止強制執行），來符合標準。
 
 編譯器選項會 [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) 要求的舊行為 `__declspec(nothrow)` 。 這很可能 `throw()` 會在 c + + 20 中移除。 為了協助遷移程式碼以回應標準和我們的實作為中的這些變更，已在和下新增例外狀況規格問題的新編譯器警告 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) [`/permissive-`](../build/reference/permissive-standards-conformance.md) 。
 
@@ -407,7 +407,7 @@ __VS 2019 16.6__表示 Visual Studio 2019 版本16.6 中支援的功能。
 
 <a name="note_D"></a>__D__在底下支援 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) suppressible 警告， [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) 。
 
-<a name="note_E"></a>__E__這是一項全新的執行，與舊版不相容，這是 `std::experimental` 因應符號支援、錯誤修正和標準必要行為變更所需。 目前，包括 \<filesystem>可提供新的 `std::experimental::filesystem` 和之前的 \<，而包括 `std::filesystem`experimental/filesystem> 只會提供舊的實驗性實作。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
+<a name="note_E"></a>__E__這是一項全新的執行，與舊版不相容，這是 `std::experimental` 因應符號支援、錯誤修正和標準必要行為變更所需。 目前，包括 \<filesystem> 提供新的 `std::filesystem` 和上一個 `std::experimental::filesystem` ，而且包含 \<experimental/filesystem> 只提供舊的實驗性執行。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
 
 <a name="note_G"></a> __G__ 由編譯器內建支援。
 

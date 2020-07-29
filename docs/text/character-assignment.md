@@ -5,16 +5,16 @@ helpviewer_keywords:
 - characters [C++], assignments
 - MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-ms.openlocfilehash: 88c42435d336ba78e87c9acfe3ada5fddbd18fb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f627f88ca2b1d3533d3690cd0316ee047a327ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217307"
 ---
 # <a name="character-assignment"></a>字元設定
 
-下列範例中的，在其中，請考慮**雖然**迴圈會掃描字串，將 'X' 以外的所有字元都複製到另一個字串：
+請考慮下列範例，其中迴圈會 **`while`** 掃描字串，將 ' X ' 以外的所有字元複製到另一個字串：
 
 ```cpp
 while( *sz2 )
@@ -26,7 +26,7 @@ while( *sz2 )
 }
 ```
 
-程式碼會複製在位元組`sz2`所指向的位置`sz1`，然後遞增`sz1`接收下一個位元組。 但是如果中的下一個字元`sz2`是雙位元組字元，指派給`sz1`複製第 1 個位元組。 下列程式碼會使用可移植的函式，來安全地複製字元和另一個的增量`sz1`和`sz2`正確：
+此程式碼會將位元組複製 `sz2` 到所指向的位置 `sz1` ，然後再遞增 `sz1` 以接收下一個位元組。 但是，如果中的下一個字元 `sz2` 是雙位元組字元，則指派 `sz1` 只會複製第一個位元組。 下列程式碼會使用可移植的函式來安全地複製字元，而另一種則是遞增 `sz1` 且 `sz2` 正確的：
 
 ```cpp
 while( *sz2 )

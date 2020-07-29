@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 460f79fe0f23643fafcebb64aecf2988bdb0debe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57aa4ec366588f71f41a747a2dc5127f87ea2e2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222195"
 ---
 # <a name="sub_match-class"></a>sub_match 類別
 
@@ -41,12 +41,12 @@ class sub_match
 
 ## <a name="parameters"></a>參數
 
-*比比*\
+*BidIt*\
 子相符項目的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
-類範本描述一個物件,該物件指定與[regex_match或](../standard-library/regex-functions.md#regex_match)[regex_search](../standard-library/regex-functions.md#regex_search)調用中捕獲組匹配的字元序列。 類型為 [match_results 類別](../standard-library/match-results-class.md)的物件會保存這些物件的陣列，每個陣列分別代表用於搜尋之規則運算式中的一個擷取群組。
+類別樣板描述一個物件，它會指定一系列的字元，以便在[RegEx_match](../standard-library/regex-functions.md#regex_match)或[RegEx_search](../standard-library/regex-functions.md#regex_search)的呼叫中符合捕捉群組。 類型為 [match_results 類別](../standard-library/match-results-class.md)的物件會保存這些物件的陣列，每個陣列分別代表用於搜尋之規則運算式中的一個擷取群組。
 
 如果擷取群組與物件的資料成員不符，則 `matched` 為 false，且兩個迭代器 `first` 和 `second` (繼承自基底 `std::pair`) 相等。 如果擷取群組相符，則 `matched` 為 true，迭代器 `first` 會指向目標序列中符合擷取群組的第一個字元，而 `second` 會指向目標序列中符合擷取群組之最後一個字元後的一個位置。 請注意，如果零長度與成員相符，則 `matched` 為零，且兩個迭代器相等，並且都會指向相符項目的位置。
 
@@ -58,26 +58,26 @@ class sub_match
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[difference_type](#difference_type)|迭代器差值的類型。|
-|[反覆運算](#iterator)|迭代器的類型。|
+|[定位](#iterator)|迭代器的類型。|
 |[value_type](#value_type)|項目的類型。|
 
 ### <a name="member-functions"></a>成員函數
 
 |成員函數|描述|
 |-|-|
-|[比較](#compare)|比較子相符項目與序列。|
-|[長度](#length)|傳回子相符項目的長度。|
-|[符合](#matched)|指出比對是否成功。|
-|[Str](#str)|將子對應轉換成字串。|
+|[何](#compare)|比較子相符項目與序列。|
+|[length](#length)|傳回子相符項目的長度。|
+|[相符](#matched)|指出比對是否成功。|
+|[字串](#str)|將子對應轉換成字串。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
-|[操作員basic_string<value_type>](#op_basic_string_lt_value_type_gt)|將子相符項目轉換成字串。|
+|[運算子 basic_string<value_type>](#op_basic_string_lt_value_type_gt)|將子相符項目轉換成字串。|
 
 ## <a name="example"></a>範例
 
@@ -133,11 +133,11 @@ compare(sub) == 0
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<regex>
+**標頭：**\<regex>
 
 **命名空間：** std
 
-## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match:比較
+## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match：： compare
 
 比較子相符項目與序列。
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>參數
 
-*對*\
+*再*\
 要比較子相符項目。
 
-*Str*\
+*str*\
 要比較的字串。
 
-*Ptr*\
+*指標*\
 要比較的以 null 終止的序列。
 
 ### <a name="remarks"></a>備註
@@ -170,7 +170,7 @@ int compare(const value_type *ptr) const;
 
 否則為正值。
 
-## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::d)類型
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match：:d ifference_type
 
 迭代器差值的類型。
 
@@ -182,7 +182,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 此 typedef 是 `iterator_traits<BidIt>::difference_type`的同義字。
 
-## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match:反覆運算器
+## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match：： iterator
 
 迭代器的類型。
 
@@ -194,7 +194,7 @@ typedef BidIt iterator;
 
 typedef 是範本類型引數 `Bidit` 的同義字。
 
-## <a name="sub_matchlength"></a><a name="length"></a>sub_match:長度
+## <a name="sub_matchlength"></a><a name="length"></a>sub_match：： length
 
 傳回子相符項目的長度。
 
@@ -206,7 +206,7 @@ difference_type length() const;
 
 成員函式會傳回相符序列的長度，如果沒有相符序列則傳回零。
 
-## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match::匹配
+## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match：：符合
 
 指出比對是否成功。
 
@@ -216,9 +216,9 @@ bool matched;
 
 ### <a name="remarks"></a>備註
 
-僅當與關聯的`*this`捕獲組是正則表達式匹配的一部分時,該成員才保持為**true。**
+**`true`** 只有當與關聯的 capture 群組 **`*this`** 是正則運算式比對的一部分時，成員才會保存。
 
-## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match::操作員basic_stringvalue_type&lt;&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match：： operator basic_string &lt; value_type&gt;
 
 將子相符項目轉換成字串。
 
@@ -230,7 +230,7 @@ operator basic_string<value_type>() const;
 
 成員運算子會傳回 `str()`。
 
-## <a name="sub_matchstr"></a><a name="str"></a>sub_match:斯特
+## <a name="sub_matchstr"></a><a name="str"></a>sub_match：： str
 
 將子對應轉換成字串。
 
@@ -242,7 +242,7 @@ basic_string<value_type> str() const;
 
 成員函式會傳回 `basic_string<value_type>(first, second)`。
 
-## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match:value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match：： value_type
 
 項目的類型。
 
@@ -256,5 +256,5 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<正則>](../standard-library/regex.md)\
+[\<regex>](../standard-library/regex.md)\
 [sub_match](../standard-library/sub-match-class.md)

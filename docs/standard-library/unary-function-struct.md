@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: deb142bb263af51bee515e445ea705bf248461b5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a38a22abe4381afd45948e56d46c54f39028517d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243478"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217372"
 ---
-# <a name="unaryfunction-struct"></a>unary_function 結構
+# <a name="unary_function-struct"></a>unary_function 結構
 
 空的基底結構，這個結構定義可能由衍生類別繼承並提供一元函式物件的類型。
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>備註
 
-範本結構做為定義格式為 **result_type**`operator()`( **constargument_type&** ) **const** 之成員函式的類別基底。
+樣板結構做為類別的基底，其定義格式為**result_type** `operator()` （ **constargument_type&**）的成員函式 **`const`** 。
 
 所有此類衍生的一元函式可以將其唯一引數類型參考為 **argument_type**，並將其傳回類型參考為 **result_type**。
 

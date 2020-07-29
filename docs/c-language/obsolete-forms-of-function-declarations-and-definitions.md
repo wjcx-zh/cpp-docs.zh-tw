@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745882"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218789"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>函式宣告和定義的過時形式
 
@@ -26,7 +26,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 }
 ```
 
-不需要宣告傳回與 `int` 大小相同之整數或指標的函式，但仍建議宣告。
+傳回與相同大小之整數或指標的函式， **`int`** 不需要具有宣告，雖然建議使用宣告。
 
 為了要符合 ANSI C 標準，使用省略符號的舊樣式函式宣告目前在使用 /Za 選項編譯時會產生錯誤，使用 /Ze 編譯時會產生層級 4 的警告。 例如：
 
@@ -49,6 +49,6 @@ void funct1( int a, ... )
 
 下一節 ([C 函式定義](../c-language/c-function-definitions.md)) 中將顯示函式定義的語法，包括舊式語法。 在舊式語法中，參數清單的非終端項為 *identifier-list*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函數總覽](../c-language/overview-of-functions.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 2c6a976f3874d563f5bba600b9894ae0103625b0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219127"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution 類別
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*真實類型*\
-浮點結果類型,預設值為**雙精度**值。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型，預設值為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
-*烏爾格*\
-統一的隨機數生成器引擎。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類範本描述生成使用者指定的浮點類型的值的分佈,或者如果沒有提供,則鍵入**雙精度值**,該分佈根據 Fisher 的 F 分佈進行分佈。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之浮點類型值的分佈（如果未提供，則為類型） **`double`** ，並根據費雪的 F 分佈來散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -94,7 +94,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-有關分發類及其成員的詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
+如需散發類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md) 。
 
 如需 F 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [F-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899) (F 分佈)。
 
@@ -233,11 +233,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<random>
+**標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution:fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution：： fisher_f_distribution
 
 建構分佈。
 
@@ -248,13 +248,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*米*\
+*分鐘*\
 `m` 分佈參數。
 
-*n*\
+*位*\
 `n` 分佈參數。
 
-*帕爾姆*\
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -265,7 +265,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::p阿拉姆型
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution：:p aram_type
 
 儲存分佈的參數。
 
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*米*\
+*分鐘*\
 `m` 分佈參數。
 
-*n*\
+*位*\
 `n` 分佈參數。
 
-*對*\
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -300,4 +300,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<隨機>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

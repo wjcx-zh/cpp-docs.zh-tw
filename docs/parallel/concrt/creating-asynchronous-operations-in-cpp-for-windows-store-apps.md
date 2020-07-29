@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: a12900f3145f0dde797fe56c893442e1632cc01c
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 0361da761b9b05e75233711df9e826c15aa14e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213927"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在適用于 UWP 應用程式的 c + + 中建立異步操作
 
@@ -29,7 +29,7 @@ ms.locfileid: "86404508"
 
 - 使用取消語彙基元可讓內部非同步作業取消。
 
-- `create_async` 函式的行為取決於所收到工作函式的傳回類型。 傳回工作 ( `task<T>` 或 `task<void>`) 的工作函式會在呼叫 `create_async`的內容中同步執行。 傳回 `T` 或 `void` 的工作函式則會在任意內容中執行。
+- `create_async` 函式的行為取決於所收到工作函式的傳回類型。 傳回工作 ( `task<T>` 或 `task<void>`) 的工作函式會在呼叫 `create_async`的內容中同步執行。 傳回 `T` 或 **`void`** 在任意內容中執行的工作函式。
 
 - 您可以使用 [concurrency::task::then](reference/task-class.md#then) 方法建立逐一執行的工作鏈結。 在 UWP 應用程式中，工作接續的預設內容取決於此工作的結構。 如果工作是藉由傳遞非同步動作至工作建構函式所建立，或是藉由傳遞傳回非同步動作的 Lambda 運算式所建立，則該工作的所有預設接續內容都會是目前的內容。 如果工作不是從非同步動作所建立，則預設會使用任意內容做為工作的接續。 您可以使用 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 類別覆寫預設內容。
 
@@ -63,7 +63,7 @@ Windows 執行階段是一種程式設計介面，您可以用來建立僅在特
 [Windows：： Foundation：： IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 表示傳回結果和報告進度的非同步作業。
 
-「 *動作* 」(Action) 的概念表示，非同步工作沒有產生值 (想像傳回 `void`的函式)。 「 *作業* 」(Operation) 的概念表示，非同步工作會產生值。 「 *進度* 」(Progress) 的概念表示，工作可以向呼叫端報告進度訊息。 JavaScript、.NET Framework 和 Visual C++ 各提供了自己建立這些介面執行個體的方式，以供跨 ABI 界限使用。 針對 Visual C++，PPL 提供了 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函式。 此函式會建立 Windows 執行階段非同步動作或作業，以表示工作完成。 函式 `create_async` 會採用工作函式（通常是 lambda 運算式），在內部建立 `task` 物件，並將該工作包裝在四個非同步 Windows 執行階段介面的其中一個。
+「動作」（ *action* ）的概念表示，非同步工作不會產生值（想像傳回的函式 **`void`** ）。 「 *作業* 」(Operation) 的概念表示，非同步工作會產生值。 「 *進度* 」(Progress) 的概念表示，工作可以向呼叫端報告進度訊息。 JavaScript、.NET Framework 和 Visual C++ 各提供了自己建立這些介面執行個體的方式，以供跨 ABI 界限使用。 針對 Visual C++，PPL 提供了 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函式。 此函式會建立 Windows 執行階段非同步動作或作業，以表示工作完成。 函式 `create_async` 會採用工作函式（通常是 lambda 運算式），在內部建立 `task` 物件，並將該工作包裝在四個非同步 Windows 執行階段介面的其中一個。
 
 > [!NOTE]
 > `create_async`只有當您必須建立可從另一種語言或另一個 Windows 執行階段元件存取的功能時，才使用。 如果您清楚知道作業是在同一個元件中由 C++ 程式碼所產生和使用，則直接使用 `task` 類別。
@@ -79,8 +79,8 @@ Windows 執行階段是一種程式設計介面，您可以用來建立僅在特
 
 |若要建立此 Windows 執行階段介面|從 `create_async`傳回這個類型。|將這些參數類型傳遞至您的工作函式，以使用隱含取消語彙基元|將這些參數類型傳遞至您的工作函式，以使用明確取消語彙基元|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|`void` 或 `task<void>`|(無)|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|`void` 或 `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|**`void`** 或`task<void>`|(無)|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|**`void`** 或`task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 |`IAsyncOperation<TResult>`|`T` 或 `task<T>`|(無)|(`cancellation_token`)|
 |`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` 或 `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
@@ -92,7 +92,7 @@ Windows 執行階段是一種程式設計介面，您可以用來建立僅在特
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>範例：建立 c + + Windows 執行階段元件，並從 C 使用它\#
 
-請考慮使用 XAML 和 c # 定義 UI 的應用程式，以及用來執行計算密集型作業的 c + + Windows 執行階段元件。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明這四個 Windows 執行階段非同步工作介面之間的差異，請建立**空白的方案**並將其命名，以在 Visual Studio 中啟動 `Primes` 。 然後在方案中新增 [Windows 執行階段元件] **** 專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 `public` 方法都會定義四個非同步介面的其中一個。 傳回值的方法會傳回[Windows：： Foundation：： collection：： IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1)物件。 報告進度的方法會產生 `double` 值，用以定義整體工作已完成的百分比。
+請考慮使用 XAML 和 c # 定義 UI 的應用程式，以及用來執行計算密集型作業的 c + + Windows 執行階段元件。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明這四個 Windows 執行階段非同步工作介面之間的差異，請建立**空白的方案**並將其命名，以在 Visual Studio 中啟動 `Primes` 。 然後在方案中新增 [Windows 執行階段元件] **** 專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 **`public`** 方法都會定義四個非同步介面的其中一個。 傳回值的方法會傳回[Windows：： Foundation：： collection：： IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1)物件。 報告進度的方法會產生 **`double`** 值，以定義已完成之整體工作的百分比。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -169,7 +169,7 @@ Windows 執行階段會使用 COM 執行緒模型。 在這個模型中，物件
 
 [!code-cpp[concrt-windowsstore-commonwords#3](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_8.h)]
 
-將下列 `using` 陳述式加入至 MainPage.cpp。
+將下列 **`using`** 語句加入至 MainPage。
 
 [!code-cpp[concrt-windowsstore-commonwords#4](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_9.cpp)]
 

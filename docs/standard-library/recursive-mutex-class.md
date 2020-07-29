@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217606"
 ---
 # <a name="recursive_mutex-class"></a>recursive_mutex 類別
 
-表示*互斥類型*。 相較於 [mutex](../standard-library/mutex-class-stl.md)，已針對已經鎖定的物件妥善定義呼叫鎖定方法的行為。
+表示*mutex 類型*。 相較於 [mutex](../standard-library/mutex-class-stl.md)，已針對已經鎖定的物件妥善定義呼叫鎖定方法的行為。
 
 ## <a name="syntax"></a>語法
 
@@ -35,26 +35,26 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|建構 `recursive_mutex` 物件。|
 |[~recursive_mutex 解構函式](#dtorrecursive_mutex_destructor)|釋出 `recursive_mutex` 物件所使用的任何資源。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[鎖定](#lock)|在呼叫執行緒取得 mutex 的擁有權之前，封鎖該執行緒。|
+|[狀](#lock)|在呼叫執行緒取得 mutex 的擁有權之前，封鎖該執行緒。|
 |[try_lock](#try_lock)|嘗試在不封鎖 mutex 的情況下，取得它的擁有權。|
 |[解除鎖定](#unlock)|釋放 mutex 的擁有權。|
 
 ## <a name="requirements"></a>需求
 
-**標題:**\<互斥>
+**標頭：**\<mutex>
 
 **命名空間：** std
 
-## <a name="lock"></a><a name="lock"></a>鎖
+## <a name="lock"></a><a name="lock"></a>狀
 
 封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。
 
@@ -96,11 +96,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果該方法成功獲得`mutex`或調用線程已擁有`mutex**; otherwise, **false`,**則為 true。**
+**`true`** 如果方法成功取得的擁有權， `mutex` 或如果呼叫的執行緒已經擁有，則為 `mutex**; otherwise, **false` 。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫線程已擁有,`mutex`則函數將立即返回**true,** 並且以前的鎖仍然有效。
+如果呼叫執行緒已經擁有，函式會 `mutex` 立即傳回 **`true`** ，而先前的鎖定仍會生效。
 
 ## <a name="unlock"></a><a name="unlock"></a>解除鎖定
 
@@ -118,5 +118,5 @@ void unlock();
 
 ## <a name="see-also"></a>另請參閱
 
-[標題檔案參考](../standard-library/cpp-standard-library-header-files.md)\
-[\<互斥>](../standard-library/mutex.md)
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac694e517279e43a501bb8289544e5da5ddba72b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419431"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217411"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; 運算子
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 stack 物件是否不等於右邊的 stack 物件。
 
@@ -35,15 +35,15 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `stack` 類型的物件。
 
-*right*\
+*再*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 stack 不相等，即為 **true**；如果 stack 相等，則為 **false**。
+**`true`** 如果堆疊或堆疊不相等，則為，**`false`** 如果堆疊或堆疊相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -90,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試運算子左邊的堆疊物件是否小於右邊的堆疊物件。
 
@@ -100,15 +100,15 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `stack` 類型的物件。
 
-*right*\
+*再*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 stack 小於且不等於右邊的 stack，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的堆疊小於且不等於運算子右邊的堆疊，則為，否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>運算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
 
 測試運算子左邊的堆疊物件是否小於或等於右邊的堆疊物件。
 
@@ -184,15 +184,15 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `stack` 類型的物件。
 
-*right*\
+*再*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 stack 小於或等於右邊的 stack，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的堆疊小於或等於運算子右邊的堆疊，則為，否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 stack 物件是否等於右邊的 stack 物件。
 
@@ -251,15 +251,15 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `stack` 類型的物件。
 
-*right*\
+*再*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 stack 相等，即為 **true**；如果 stack 不相等，則為 **false**。
+**`true`** 如果堆疊或堆疊相等，則為，**`false`** 如果堆疊或堆疊不相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -306,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> 運算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
 
 測試運算子左邊的堆疊物件是否大於右邊的堆疊物件。
 
@@ -316,15 +316,15 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `stack` 類型的物件。
 
-*right*\
+*再*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 stack 大於且不等於右邊的 stack，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的堆疊大於，而不等於運算子右邊的堆疊，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>運算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
 
 測試運算子左邊的堆疊物件是否大於或等於右邊的堆疊物件。
 
@@ -385,15 +385,15 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `stack` 類型的物件。
 
-*right*\
+*再*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 stack 必定小於運算子右邊的 stack，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的堆疊嚴格小於運算子右邊的堆疊，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 

@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a963f1059eccaddce9ec01cd53a07df668ee46c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944716"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213654"
 ---
 # <a name="_abnormal_termination"></a>_abnormal_termination
 
-指出當系統正在執行終止處理常式的內部清單時，是否輸入 [try-finally 陳述式](../cpp/try-finally-statement.md)的 `__finally` 區塊。
+指出 **`__finally`** 當系統執行終止處理常式的內部清單時，是否輸入[try-catch 語句](../cpp/try-finally-statement.md)的區塊。
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +40,7 @@ int   _abnormal_termination(
 
 ## <a name="return-value"></a>傳回值
 
-**true** 如果系統「回溯」堆疊則為 ，否則為 **false**。
+**`true`** 如果*系統正在回溯堆疊，則*為，否則為 **`false`** 。
 
 ## <a name="remarks"></a>備註
 
@@ -54,4 +54,4 @@ int   _abnormal_termination(
 
 ## <a name="see-also"></a>另請參閱
 
-[try-finally 陳述式](../cpp/try-finally-statement.md)
+[try-finally 語句](../cpp/try-finally-statement.md)

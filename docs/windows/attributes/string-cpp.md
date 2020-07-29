@@ -1,21 +1,21 @@
 ---
-title: string （C++ COM 屬性）
+title: string （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 68708cce2e167c6f40b461d52861fe4ed82be867
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166156"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213810"
 ---
 # <a name="string-c"></a>string (C++)
 
-表示一維**char**、 **wchar_t**、`byte` （或對等）陣列或這類陣列的指標必須被視為字串。
+表示一維 **`char`** 、 **`wchar_t`** 、 `byte` （或對等）陣列或這類陣列的指標必須被視為字串。
 
 ## <a name="syntax"></a>語法
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166156"
 
 ## <a name="remarks"></a>備註
 
-**String** C++屬性的功能與[字串](/windows/win32/Midl/string)MIDL 屬性相同。
+**String** c + + 屬性的功能與[字串](/windows/win32/Midl/string)MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl
 |-|-|
 |**適用於**|陣列的陣列或指標，介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -61,4 +61,4 @@ __interface IFireTabCtrl
 
 [IDL 屬性](idl-attributes.md)<br/>
 [陣列屬性](array-attributes.md)<br/>
-[export](export.md)
+[進出口](export.md)

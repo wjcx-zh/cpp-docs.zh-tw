@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370678"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220908"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution 類別
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*真實類型*\
-浮點結果類型,預設值為**雙精度**值。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型，預設值為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
-*烏爾格*\
-統一的隨機數生成器引擎。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類範本描述生成使用者指定的浮點類型的值的分佈,或者如果沒有提供,則表示**雙精度值**,該分佈根據 Gamma 分佈進行分佈。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之浮點類型值的分佈（ **`double`** 如果未提供，則為類型），並根據 Gamma 散發散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-有關分發類及其成員的詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
+如需散發類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md) 。
 
 如需有關 Gamma 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Gamma 分佈 (英文)](https://go.microsoft.com/fwlink/p/?linkid=401111)。
 
@@ -184,11 +184,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<random>
+**標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution：： gamma_distribution
 
 建構分佈。
 
@@ -199,13 +199,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*阿 爾 法*\
+*分量*\
 `alpha` 分佈參數。
 
 *試用版*\
 `beta` 分佈參數。
 
-*帕爾姆*\
+*parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -216,7 +216,7 @@ explicit gamma_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p阿拉姆型
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution：:p aram_type
 
 儲存分佈的參數。
 
@@ -234,13 +234,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*阿 爾 法*\
+*分量*\
 `alpha` 分佈參數。
 
 *試用版*\
 `beta` 分佈參數。
 
-*對*\
+*再*\
 要與此項目比較的 `param_type` 執行個體。
 
 ### <a name="remarks"></a>備註
@@ -251,4 +251,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<隨機>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

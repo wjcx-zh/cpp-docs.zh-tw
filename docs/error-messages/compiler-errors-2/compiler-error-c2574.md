@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2574
 ms.assetid: 3e1c5c18-ee8b-4dbb-bfc0-d3b8991af71b
-ms.openlocfilehash: e0959d875065f7548706b07b032798a68bb4639b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 28e674b9788a8fa9135460e547f743cb2b0075ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755469"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212705"
 ---
 # <a name="compiler-error-c2574"></a>編譯器錯誤 C2574
 
 ' 析構函式 '：不可以宣告為 static
 
-`static`不能宣告析構函數和構造函式。
+不可以宣告析構函數或函式 **`static`** 。
 
 下列範例會產生 C2574：
 

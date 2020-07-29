@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525294"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212939"
 ---
 # <a name="updating-rowsets"></a>更新資料列集
 
@@ -29,9 +29,9 @@ ms.locfileid: "65525294"
 ## <a name="supporting-update-operations"></a>支援更新作業
 
 > [!NOTE]
-> Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
+> Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍能手動新增功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
 
-當您使用 **ATL OLE DB 消費者精靈**來建立消費者時，可透過選取下列三個核取方塊的一或多個來支援更新作業：[變更]、[插入] 和 [刪除]。 如果您選取這些選項，精靈會適當地修改程式碼以支援您選擇的變更類型。 不過，如果您未使用精靈，則需將下列資料列集屬性設定為 `VARIANT_TRUE` 以支援更新：
+當您使用**ATL OLE DB 取用者 Wizard**建立取用者時，您可以藉由選取三個核取方塊 [**變更**]、[**插入**] 和 [**刪除**] 中的一或多個，以支援更新作業。 如果您選取這些選項，精靈會適當地修改程式碼以支援您選擇的變更類型。 不過，如果您未使用精靈，則需將下列資料列集屬性設定為 `VARIANT_TRUE` 以支援更新：
 
 - `DBPROPVAL_UP_CHANGE` 可讓您變更資料列中的資料值。
 
@@ -80,9 +80,9 @@ HRESULT hr = product.SetData();
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **false** (預設值) 指定目前資料列會累加到下一個資料列 (這樣一來，它會指向所插入的資料列)。
+- **`false`**（預設值）指定目前的資料列遞增到下一個資料列（在此情況下，它會指向插入的資料列）。
 
-- **true** 指定目前資料列會保持原樣。
+- **`true`** 指定目前的資料列保持在其所在的位置。
 
 下列程式碼會設定繫結至 `Products` 資料表資料行的資料成員值，接著呼叫 `Insert`，以將含那些值的新資料列插入至資料列集的第 100 個資料列之後。 建議您設定所有資料行值，以避免新資料列中出現未定義的資料：
 
@@ -208,6 +208,6 @@ product.Update();                 // Update row 101 now
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
+[使用 OLE DB 取用者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset 類別](../../data/oledb/crowset-class.md)<br/>
 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942329"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213589"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -55,11 +55,11 @@ int _CrtReportBlockType(
 
 ## <a name="return-value"></a>傳回值
 
-當傳遞有效的 debug 堆積指標時， **_CrtReportBlockType**函數會以**int**的形式傳回區塊類型和子類型。當傳遞無效的指標時，函式會傳回 -1。
+當傳遞有效的 debug 堆積指標時， **_CrtReportBlockType**函式會以的形式傳回區塊類型和子類型 **`int`** 。 當傳遞無效的指標時，函式會傳回 -1。
 
 ## <a name="remarks"></a>備註
 
-若要將 **_CrtReportBlockType**所傳回的類型和子類型解壓縮，請在傳回值上使用宏 **_BLOCK_TYPE**和 **_BLOCK_SUBTYPE** （兩者都定義于 crtdbg.h 裡中）。
+若要將 **_CrtReportBlockType**所傳回的類型和子類型解壓縮，請使用宏 **_BLOCK_TYPE**並 **_BLOCK_SUBTYPE** （在 crtdbg.h 裡中定義）的傳回值。
 
 如需配置區塊類型以及如何使用它們的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
@@ -69,7 +69,7 @@ int _CrtReportBlockType(
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

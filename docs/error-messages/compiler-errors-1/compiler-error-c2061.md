@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1e1b13960c84d4e03c6316c451c690f8b5a6236e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735927"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212861"
 ---
 # <a name="compiler-error-c2061"></a>編譯器錯誤 C2061
 
 語法錯誤：識別碼 ' identifier '
 
-編譯器找到的識別碼不在預期的位置。 在使用之前，請確定已宣告 `identifier`。
+編譯器找到的識別碼不在預期的位置。 `identifier`在使用之前，請確定已宣告。
 
-初始化運算式可以用括弧括住。 若要避免這個問題，請將宣告子括在括弧中，或將它設為 `typedef`。
+初始化運算式可以用括弧括住。 若要避免這個問題，請將宣告子括在括弧中，或將它設為 **`typedef`** 。
 
 當編譯器偵測到運算式做為類別樣板引數時，也可能會造成此錯誤;使用[typename](../../cpp/typename.md)來告訴編譯器它是一種類型。
 

@@ -3,12 +3,12 @@ title: 列舉類別  (C++/CLI 和 C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182132"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219712"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>列舉類別  (C++/CLI 和 C++/CX)
 
@@ -18,7 +18,7 @@ ms.locfileid: "80182132"
 
 ### <a name="remarks"></a>備註
 
-C++/CX 和 C++/CLI 支援類似於標準 C++ **enum class** 的 **public enum class** 和 **private enum class**，但多增加了存取範圍規範。 在 **/clr** 下允許 C++11 **enum class** 類型，但是會產生警告 C4472，其目的在於確保您是真的想要 ISO 列舉類型，而不是 C++/CX 和 C++/CLI 類型。 如需 ISO 標準 C++ **enum** 關鍵字的詳細資訊，請參閱 [Enumerations](../cpp/enumerations-cpp.md)。
+C++/CX 和 C++/CLI 支援類似於標準 C++ **enum class** 的 **public enum class** 和 **private enum class**，但多增加了存取範圍規範。 在 **/clr** 下允許 C++11 **enum class** 類型，但是會產生警告 C4472，其目的在於確保您是真的想要 ISO 列舉類型，而不是 C++/CX 和 C++/CLI 類型。 如需 ISO Standard c + + 關鍵字的詳細資訊 **`enum`** ，請參閱列舉[Enumerations](../cpp/enumerations-cpp.md)。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
@@ -34,8 +34,8 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>參數
 
-*access*<br/>
-列舉的存取範圍可以是 **public** 或 **private**。
+*權*<br/>
+列舉的存取範圍，可以是 **`public`** 或 **`private`** 。
 
 *列舉識別項*<br/>
 列舉名稱。
@@ -43,12 +43,12 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 *基礎類型*<br/>
 (選用) 列舉的基礎類型。
 
-(選用。 僅限 Windows 執行階段) 列舉的基礎類型可以是 **bool**、**char**、`char16`、`int16`、`uint16`、**int**、`uint32`、`int64`，或 `uint64`。
+(選用。 僅 Windows 執行階段）列舉的基礎類型，可以是 **`bool`** 、 **`char`** 、、、、、、 `char16` `int16` `uint16` **`int`** `uint32` `int64` 或 `uint64` 。
 
-*列舉程式清單*<br/>
+*列舉值清單*<br/>
 列舉程式名稱的逗號分隔清單。
 
-每個列舉程式都是常數運算式，不是透過編譯器隱含定義，就是藉由標記法 *列舉程式*`=`*常數運算式*。 如以隱含方式定義，第一個列舉程式的值預設為零。 後續每個以隱含方式定義的列舉程式值，都是前一個列舉程式的值 + 1。
+每個枚舉器的值都是常數運算式，這是由編譯器隱含定義，或由標記法*枚舉器* `=` *常數運算式*明確定義。 如以隱含方式定義，第一個列舉程式的值預設為零。 後續每個以隱含方式定義的列舉程式值，都是前一個列舉程式的值 + 1。
 
 *var*<br/>
 (選用) 列舉類型的變數名稱。
@@ -61,7 +61,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 - 如果 *基礎類型* 是數值，而列舉程式指定了該類型的最大值，則無法表示下一個隱含定義之列舉的值。
 
-- 如果「基礎型別」 是 **bool**，而且以隱含方式定義了兩個以上的列舉程式，則無法表示前兩個列舉程式之後的列舉程式。
+- 如果*基礎類型*是 **`bool`** ，而且隱含定義了兩個以上的枚舉器，則無法表示前兩個列舉值之後的枚舉器。
 
 - 如果 *基礎類型* 是 `char16`，而列舉值的範圍是從 0xD800 到 0xDFFF，則可以表示這個值。 不過，此值在邏輯上不正確，因為它代表 Unicode surrogate 字組的一半，不應該單獨出現。
 
@@ -82,17 +82,17 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>參數
 
-*access*<br/>
-列舉的存取範圍。 可以是 **public** 或 **private**。
+*權*<br/>
+列舉的存取範圍。 可以是 **`public`** 或 **`private`** 。
 
-*列舉程式清單*<br/>
+*列舉值清單*<br/>
 列舉的識別項 (列舉程式) 逗號分隔清單。
 
 *name*<br/>
 列舉名稱。 不允許匿名的 Managed 列舉。
 
 *type*<br/>
-(選擇性) 「識別項」的基礎類型。 這可以是任何純量類型，例如 **int**、**short** 或 **long** 的帶正負號或不帶正負號版本。  也可以是 **bool** 或 **char**。
+(選擇性) 「識別項」** 的基礎類型。 這可以是任何純量類型，例如、或的帶正負號或不帶正負號的版本 **`int`** **`short`** **`long`** 。  **`bool`****`char`** 也可以使用或。
 
 *var*<br/>
 (選用) 列舉類型的變數名稱。
@@ -138,7 +138,7 @@ Managed 列舉程式名稱 (*識別項*) 不會插入已定義列舉的範圍，
 
 在 Visual Studio 2002 和 Visual Studio 2003 中，列舉程式是以弱式方式插入 (會顯示在封閉範圍中，除非另有同名的識別項)。
 
-如果定義了標準 C++ 列舉 (沒有 **class** 或 **struct**)，則使用 `/clr` 編譯會將列舉編譯為受控列舉。  列舉仍擁有 Unmanaged 列舉的語意。  請注意，編譯器會插入屬性 `Microsoft::VisualC::NativeEnumAttribute`，以識別程式設計人員使用列舉的目的是要做為原生列舉。  其他編譯器只看得到為 Managed 列舉的標準列舉。
+如果已定義標準 c + + 列舉（不含 **`class`** 或 **`struct`** ），使用進行編譯 `/clr` 會導致列舉編譯為 managed 列舉。  列舉仍擁有 Unmanaged 列舉的語意。  請注意，編譯器會插入屬性 `Microsoft::VisualC::NativeEnumAttribute`，以識別程式設計人員使用列舉的目的是要做為原生列舉。  其他編譯器只看得到為 Managed 列舉的標準列舉。
 
 以 `/clr` 編譯的具名標準列舉，在組件中會顯示為受控列舉，而且可被任何其他受控編譯器使用。   不過，不具名的標準列舉就不會在組件中公開顯示。
 
@@ -221,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

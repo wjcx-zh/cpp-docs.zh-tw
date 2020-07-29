@@ -8,18 +8,18 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217494"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219660"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-以第二個參數所指定的位數, 將第一個參數指定的64位值向右移位。
+以第二個參數所指定的位數，將第一個參數指定的64位值向右移位。
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +40,7 @@ __int64 __ll_rshift(
 
 ## <a name="return-value"></a>傳回值
 
-以`nBit`位移位的遮罩。
+以位移位的遮罩 `nBit` 。
 
 ## <a name="requirements"></a>需求
 
@@ -48,11 +48,11 @@ __int64 __ll_rshift(
 |---------------|------------------|
 |`__ll_rshift`|x86、x64|
 
-**標頭檔**\<intrin.h. h >
+**標頭檔** \<intrin.h>
 
 ## <a name="remarks"></a>備註
 
-如果第二個參數在 x64 (x86 上為 32) 上大於 64, 則會採用模數 64 (x86 上的 32) 來判斷要移位的位數。 前置詞表示它是`long long`的作業, 另一個名稱為`__int64`, 64 位帶正負號的整數類資料類型。 `ll`
+如果第二個參數在 x64 （x86 上為32）上大於64，則會採用模數64（x86 上的32）來判斷要移位的位數。 `ll`前置詞表示它是的作業 **`long long`** ，另一個名稱為 **`__int64`** ，64位帶正負號的整數類資料類型。
 
 ## <a name="example"></a>範例
 
@@ -78,7 +78,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 ffffffffffffff00
@@ -88,9 +88,9 @@ fffffffffffffff0
 ```
 
 > [!NOTE]
-> 如果`_ull_rshift`已使用, 則右移值的 MSB 會是零, 因此不會在負數值的情況下取得所需的結果。
+> 如果已 `_ull_rshift` 使用，則右移值的 MSB 會是零，因此不會在負數值的情況下取得所需的結果。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

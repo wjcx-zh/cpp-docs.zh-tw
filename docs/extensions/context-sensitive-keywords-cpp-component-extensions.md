@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182171"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219738"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>內容相關性關鍵字 (C++/CLI 和 C++/CX)
 
-「內容相關性關鍵字」是只能在特定內容中辨識的語言元素。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。
+「內容相關性關鍵字」** 是只能在特定內容中辨識的語言元素。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -24,13 +24,13 @@ ms.locfileid: "80182171"
 
 下列是內容相關性關鍵字清單：
 
-- [abstract](abstract-cpp-component-extensions.md)
+- [概要](abstract-cpp-component-extensions.md)
 
 - [delegate](delegate-cpp-component-extensions.md)
 
 - [event](event-cpp-component-extensions.md)
 
-- [finally](../dotnet/finally.md)
+- [一點](../dotnet/finally.md)
 
 - [for each, in](../dotnet/for-each-in.md)
 
@@ -38,7 +38,7 @@ ms.locfileid: "80182171"
 
 - `internal`
 
-- [literal](literal-cpp-component-extensions.md)
+- [本身](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -72,7 +72,7 @@ ms.locfileid: "80182171"
 
 ### <a name="examples"></a>範例
 
-下列程式碼範例示範，在適當的內容中，可以使用 **property** 內容相關性關鍵字來定義屬性和變數。
+下列程式碼範例顯示，在適當的內容中， **`property`** 可以使用內容相關的關鍵字來定義屬性和變數。
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -101,4 +101,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

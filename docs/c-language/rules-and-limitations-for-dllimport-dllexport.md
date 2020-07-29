@@ -6,20 +6,20 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2f121d978962fe7fc03aa453fb0a16650aa2727
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220869"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport 的規則和限制
 
 **Microsoft 特定的**
 
-- 如果您宣告未具有 **dllimport** 或 `dllexport` 屬性的函式，則不會將此函式視為 DLL 介面的一部分。 因此，函式的定義必須存在該模組中，或是相同程式的另一個模組中。 若要讓函式成為 DLL 介面的一部分，您必須在另一個模組中將函式的定義宣告為 `dllexport`。 否則，在建置用戶端時會產生連結器錯誤。
+- 如果您宣告不含或屬性的函式 **`dllimport`** `dllexport` ，則函式不會被視為 DLL 介面的一部分。 因此，函式的定義必須存在該模組中，或是相同程式的另一個模組中。 若要讓函式成為 DLL 介面的一部分，您必須在另一個模組中將函式的定義宣告為 `dllexport`。 否則，在建置用戶端時會產生連結器錯誤。
 
-- 如果您程式中的單一模組包含相同函式的 **dllimport** 和 `dllexport` 宣告，則 `dllexport` 屬性會優先於 **dllimport** 屬性。 不過，這樣會產生編譯器警告。 例如：
+- 如果程式中的單一模組包含相同函式的 **`dllimport`** 和宣告 `dllexport` ，則 `dllexport` 屬性會優先于 **`dllimport`** 屬性。 不過，這樣會產生編譯器警告。 例如：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -31,7 +31,7 @@ ms.locfileid: "62158419"
 
     ```
 
-- 您無法使用以 **dllimport** 屬性宣告的資料物件位址來初始化靜態資料指標。 例如，下列程式碼會產生錯誤：
+- 您無法使用以屬性宣告的資料物件位址來初始化靜態資料指標 **`dllimport`** 。 例如，下列程式碼會產生錯誤：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -50,7 +50,7 @@ ms.locfileid: "62158419"
 
     ```
 
-- 若使用以 **dllimport** 宣告的函式位址初始化靜態函式指標，會將指標設定為 DLL 匯入 Thunk (將控制權轉至函式的程式碼 Stub) 的位址，而不是設定為函式的位址。 這項指派不會產生錯誤訊息：
+- 使用以宣告的函式位址初始化靜態函式指標， **`dllimport`** 會將指標設定為 DLL 匯入 Thunk （將控制項傳送至函式的程式碼 stub）的位址，而不是函式的位址。 這項指派不會產生錯誤訊息：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -96,6 +96,6 @@ ms.locfileid: "62158419"
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[DLL 匯入及匯出函式](../c-language/dll-import-and-export-functions.md)
+[DLL 匯入和匯出函式](../c-language/dll-import-and-export-functions.md)

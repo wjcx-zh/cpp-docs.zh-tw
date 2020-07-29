@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404934"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213264"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 限制規範可以套用到函式和 Lambda 宣告。 它會在函式中的程式碼上強制執行限制，以及在使用 C++ Accelerated Massive Parallelism (C++ AMP) 的應用程式中函式的行為上強制執行限制。
 
 > [!NOTE]
-> 如需屬於 **__declspec**儲存類別屬性之一部分之**restrict**關鍵字的詳細資訊，請參閱[restrict](../cpp/restrict.md)。
+> 如需 **`restrict`** 屬於儲存類別屬性一部分之關鍵字的詳細資訊 **`__declspec`** ，請參閱[restrict](../cpp/restrict.md)。
 
-**Restrict**子句採用下列形式：
+**`restrict`** 子句會採用下列形式：
 
 |子句|描述|
 |------------|-----------------|
@@ -31,7 +31,7 @@ ms.locfileid: "86404934"
 
 ## <a name="remarks"></a>備註
 
-**Restrict**關鍵字是內容關鍵字。 限制規範、`cpu` 和 `amp` 不是保留字。 規範的清單無法擴充。 沒有**限制**子句的函式與具有子句的函數相同 `restrict(cpu)` 。
+**`restrict`** 關鍵字是內容關鍵字。 限制規範、`cpu` 和 `amp` 不是保留字。 規範的清單無法擴充。 沒有子句的函數與具有子句的函式 **`restrict`** 相同 `restrict(cpu)` 。
 
 內含 `restrict(amp)` 子句的函式具有下列限制：
 
@@ -39,7 +39,7 @@ ms.locfileid: "86404934"
 
 - 函式必須為可內嵌。
 
-- 函數只能宣告**int**、不**帶正負**號的 int、 **float**和**double**變數，以及僅包含這些類型的類別和結構。 也允許**bool** ，但如果您在複合類型中使用，它必須是4位元組對齊。
+- 函式只能宣告 **`int`** 、 **`unsigned int`** 、 **`float`** 和 **`double`** 變數，以及只包含這些類型的類別和結構。 **`bool`** 也允許，但如果您在複合類型中使用，它必須是4位元組對齊。
 
 - Lambda 函式無法透過參考方式擷取，也無法擷取指標。
 
@@ -61,19 +61,19 @@ ms.locfileid: "86404934"
 
   - 指標的指標。
 
-  - **goto**語句。
+  - **`goto`** 報表.
 
   - 標記陳述式。
 
-  - **try**、 **catch**或**throw**語句。
+  - **`try`**、 **`catch`** 或 **`throw`** 語句。
 
   - 全域變數。
 
   - 靜態變數。 請改用[Tile_static 關鍵字](../cpp/tile-static-keyword.md)。
 
-  - **dynamic_cast**轉換。
+  - **`dynamic_cast`** 廣播.
 
-  - **Typeid**運算子。
+  - **`typeid`** 運算子。
 
   - asm 宣告。
 

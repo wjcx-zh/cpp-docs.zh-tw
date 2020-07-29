@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219504"
 ---
 # <a name="task_completion_event-class"></a>task_completion_event 類別
 
@@ -40,13 +40,13 @@ class task_completion_event<void>;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[task_completion_event](#ctor)|建構 `task_completion_event` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[set](#set)|已多載。 設定工作完成事件。|
 |[set_exception](#set_exception)|已多載。 將例外狀況傳播至與這個事件相關聯的所有工作。|
@@ -59,7 +59,7 @@ class task_completion_event<void>;
 
 `task_completion_event` 的行為就像智慧型指標，應該依值傳遞。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `task_completion_event`
 
@@ -67,9 +67,9 @@ class task_completion_event<void>;
 
 **標頭：** ppltasks.h。h
 
-**命名空間：** concurrency
+**命名空間：** 並行
 
-## <a name="set"></a>設定
+## <a name="set"></a><a name="set"></a>設定
 
 設定工作完成事件。
 
@@ -86,13 +86,13 @@ bool set() const ;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功設定事件，方法會傳回**true** 。 如果已經設定事件，它會傳回**false** 。
+**`true`** 如果成功設定事件，方法會傳回。 **`false`** 如果已經設定事件，它會傳回。
 
 ### <a name="remarks"></a>備註
 
-如果 `set`有多個或並行呼叫，只有第一個呼叫會成功，而且其結果（如果有的話）會儲存在工作完成事件中。 系統會忽略其餘的集合，且方法會傳回 false。 當您設定工作完成事件時，從該事件建立的所有工作都會立即完成，而且會排程其接續（如果有的話）。 具有**void**以外之 `_ResultType` 的工作完成物件會將值傳遞至其接續。
+在有多個或並行呼叫的情況 `set` 下，只有第一個呼叫會成功，而且其結果（如果有的話）會儲存在工作完成事件中。 系統會忽略其餘的集合，且方法會傳回 false。 當您設定工作完成事件時，從該事件建立的所有工作都會立即完成，而且會排程其接續（如果有的話）。 具有以外的工作完成物件 `_ResultType` **`void`** 會將值傳遞至其接續。
 
-## <a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a>set_exception
 
 將例外狀況傳播至與這個事件相關聯的所有工作。
 
@@ -116,7 +116,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
 
 建構 `task_completion_event` 物件。
 

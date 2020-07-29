@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152666"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213043"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 類別
 
@@ -30,21 +30,21 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[MTAThreadAttribute 建構函式 1](#ctor)建構函式|初始化類別的新執行個體。|
+|[MTAThreadAttribute](#ctor)的函式1構造函式|初始化類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
-MTAThreadAttribute 屬性繼承自[platform:: object 類別](../cppcx/platform-object-class.md)。 MTAThreadAttribute 也會多載或具有下列成員：
+MTAThreadAttribute 屬性繼承自[Platform：： Object 類別](../cppcx/platform-object-class.md)。 MTAThreadAttribute 也會多載或具有下列成員：
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[MTAThreadAttribute::Equals](#equals)|判斷指定的物件是否等於目前的物件。|
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|
 |[MTAThreadAttribute::ToString](#tostring)|傳回代表目前物件的字串。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `Platform`
 
@@ -54,7 +54,7 @@ MTAThreadAttribute 屬性繼承自[platform:: object 類別](../cppcx/platform-o
 
 **命名空間：** Platform
 
-## <a name="ctor"></a> MTAThreadAttribute 建構函式
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>MTAThreadAttribute 的構造函式
 
 初始化 MTAThreadAttribute 類別的新執行個體。
 
@@ -64,7 +64,7 @@ MTAThreadAttribute 屬性繼承自[platform:: object 類別](../cppcx/platform-o
 public:MTAThreadAttribute();
 ```
 
-## <a name="equals"></a> MTAThreadAttribute::Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute：： Equals
 
 判斷指定的物件是否等於目前的物件。
 
@@ -81,9 +81,9 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果物件相等，否則**false**。
+**`true`** 如果物件相等，則為，否則為 **`false`** 。
 
-## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute：： GetHashCode
 
 傳回這個執行個體的雜湊碼。
 
@@ -97,7 +97,7 @@ public:int GetHashCode();
 
 這個執行個體的雜湊碼。
 
-## <a name="tostring"></a> MTAThreadAttribute::ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute：： ToString
 
 傳回代表目前物件的字串。
 
@@ -109,7 +109,7 @@ public:String^ ToString();
 
 ### <a name="return-value"></a>傳回值
 
-表示目前物件的字串。
+代表目前物件的字串。
 
 ## <a name="see-also"></a>另請參閱
 

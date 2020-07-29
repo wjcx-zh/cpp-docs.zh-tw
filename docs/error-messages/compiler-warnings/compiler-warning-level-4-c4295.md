@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4295
 ms.assetid: 20dbff85-9f62-4ca3-8fe9-079d4512006d
-ms.openlocfilehash: 5e8b546e4eb4b60197db504382b3230e779b1dec
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: d960e5a5e2d7ad2d2b650095c42e9afea7bfe7fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219868"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>編譯器警告 (層級 4) C4295
 
@@ -21,7 +21,7 @@ ms.locfileid: "70924843"
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4295。 若要修正這個問題，您可以將陣列大小宣告為較大，以保存初始化運算式字串的終止 null，或者您可以使用陣列初始化運算式清單，讓意圖清楚指出這是的`char`陣列，而不是以 null 結束的字串。
+下列範例會產生 C4295。 若要修正這個問題，您可以將陣列大小宣告為較大，以保存初始化運算式字串的終止 null，或者您可以使用陣列初始化運算式清單，讓意圖清楚指出這是的陣列 **`char`** ，而不是以 null 結束的字串。
 
 ```C
 // C4295.c

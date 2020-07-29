@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 51de46487d85f4b8d7d357a0d1842f3d3192fff7
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b68d9c857db35791486dfc0c1ee02a096a8f5a0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404791"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219465"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -66,7 +66,7 @@ ms.locfileid: "86404791"
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` 和 `long double` 版本的浮動點函式 `acos`、`acosh`、`asin`、`asinh`、`atan`、`atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma` 及 `trunc`
+  - **`float`** 和 **`long double`** 版本的浮點函數 `acos` 、 `acosh` 、 `asin` 、 `asinh` 、 `atan` 、 `atanh` 、 `atan2` `cbrt` `ceil` `copysign` `cos` `cosh` `erf` `erfc` `exp` `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `lround` `modf` `nearbyint` `nextafter` `nexttoward` `remainder` `remquo` `rint` `round` `scalbln` `scalbn` `sin` `sinh` `sqrt` `tan` `tanh` `tgamma` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、和`trunc`
 
   如果您的程式碼使用搭配 `abs` 僅包含標頭的浮點類型 \<math.h> ，則浮點版本將無法再使用。 即使使用浮點引數，現在仍會將呼叫解析成 `abs(int)`，這會產生錯誤：
 
@@ -451,7 +451,7 @@ ms.locfileid: "86404791"
 
 - **可變關鍵字**
 
-   在 **mutable** 儲存類別指定名稱原先可編譯而不會發生錯誤的位置，已無法再加以使用。 現在，此編譯器會發生錯誤 C2071 (不合法的儲存類別)。 根據該標準，**mutable** 指定名稱只能套用至類別資料成員名稱，而不能套用至宣告為 const 或 static 的名稱，也不能套用至參考成員。
+   在 **`mutable`** 先前編譯的位置中，已不再有儲存類別規範，而不會發生錯誤。 現在，此編譯器會發生錯誤 C2071 (不合法的儲存類別)。 根據標準，規範只能套用 **`mutable`** 至類別資料成員的名稱，而且不能套用至宣告為 const 或 static 的名稱，也不能套用至參考成員。
 
    例如，請參考下列程式碼：
 
@@ -468,11 +468,11 @@ ms.locfileid: "86404791"
     error C2071: 'S::r': illegal storage class
     ```
 
-   若要修正此錯誤，請移除冗餘的 **mutable** 關鍵字即可。
+   若要修正錯誤，請移除多餘的 **`mutable`** 關鍵字。
 
 - **char_16_t 與 char32_t**
 
-   您無法繼續使用 `char16_t` 或 `char32_t` 作為 **typedef** 的別名，因為現在會將這些類型視為內建類型。 使用者和程式庫作者通常會分別定義 `char16_t` 和 `char32_t` 作為 `uint16_t` 和 `uint32_t` 的別名。
+   您不能再使用 **`char16_t`** 或 **`char32_t`** 做為中的別名 **`typedef`** ，因為現在會將這些類型視為內建。 使用者和程式庫作者通常會 **`char16_t`** 分別定義和 **`char32_t`** 作為和的別名 `uint16_t` `uint32_t` 。
 
     ```cpp
     #include <cstdint>
@@ -489,7 +489,7 @@ ms.locfileid: "86404791"
     }
     ```
 
-   若要更新您的程式碼，請移除此 **typedef** 宣告，並重新命名任何其他與這些名稱衝突的識別項。
+   若要更新您的程式碼，請移除宣告， **`typedef`** 並將任何與這些名稱衝突的其他識別碼重新命名。
 
 - **非類型範本參數**
 
@@ -522,7 +522,7 @@ ms.locfileid: "86404791"
 
    若要解決程式碼中的這個錯誤，請確定您使用的樣板引數的類型與此樣板參數的宣告類型相符。
 
-- **__declspec(align)**
+- **`__declspec(align)`**
 
    該編譯器已不再接受函式上的 `__declspec(align)` 。 之前一律會忽略此建構，但現在會產生編譯器錯誤。
 
@@ -551,7 +551,7 @@ ms.locfileid: "86404791"
     }
     ```
 
-   問題是出在於此複製建構函式為私用，無法如同處理例外狀況的正常過程中所發生物件一樣複製，因此並不能複製該物件。 相同情況也適用於將複製建構函式宣告為 **explicit** 的時候。
+   問題是出在於此複製建構函式為私用，無法如同處理例外狀況的正常過程中所發生物件一樣複製，因此並不能複製該物件。 這同樣適用于宣告複製的函式時 **`explicit`** 。
 
     ```cpp
     struct S
@@ -566,7 +566,7 @@ ms.locfileid: "86404791"
     }
     ```
 
-   若要更新您的程式碼，請確定例外狀況物件的複製建構函式為 **public**，而未標示為 **explicit**。
+   若要更新您的程式碼，請確定例外狀況物件的複製函式為， **`public`** 而且未標記 **`explicit`** 。
 
    以傳值方式攔截例外狀況也需要可複製的例外狀況物件。 下列程式碼在 Visual Studio 2013 中可成功編譯，但無法在 Visual Studio 2015 中編譯：
 
@@ -592,7 +592,7 @@ ms.locfileid: "86404791"
     }
     ```
 
-   您可以將 **catch** 的參數類型變更為參考，以修正這個問題。
+   您可以藉由將的參數類型變更為參考來修正此問題 **`catch`** 。
 
     ```cpp
     catch (D& d)
@@ -641,9 +641,9 @@ ms.locfileid: "86404791"
 
 - **placement new 與 delete**
 
-   為了讓 **delete** 運算子與 C++ 14 標準一致，已對它進行變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](https://isocpp.org/files/papers/n3778.html)。 變更當中新增了一種全域 **delete** 運算子，該運算子會採用大小參數。 中斷性變更是如果您先前使用具有相同簽章 (藉此對應至 **placement new** 運算子) 的運算子 **delete**，就會發生編譯器錯誤 (C2956，於使用 placement new 處發生，因為在程式碼的該位置上，編譯器會嘗試識別合適且相符的 **delete** 運算子)。
+   已對操作員進行變更 **`delete`** ，使其符合 c + + 14 標準的一致性。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](https://isocpp.org/files/papers/n3778.html)。 這些變更 **`delete`** 會加入採用大小參數的全域運算子形式。 中斷性變更是，如果您先前使用具有相同簽章的運算子 **`delete`** （要與**placement new**運算子對應），您將會收到編譯器錯誤（C2956，這會發生在使用放置 new 的位置），因為這是程式碼中的編譯器嘗試識別適當的相符運算子之處 **`delete`** 。
 
-   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，對應至 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為「一般解除配置函式」** (全域 **delete** 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。
+   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，對應至 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 使用 c + + 14 調整大小的解除配置，這個 delete 函式現在是*一般的解除配置*函式（全域 **`delete`** 運算子）。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。
 
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
@@ -652,15 +652,15 @@ ms.locfileid: "86404791"
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   您已定義的 **placement delete** 運算子與調整大小的全域新 **delete** 運算子之間，因為函式簽章相符，而導致此問題發生。 對於任何 **placement new** 和 **delete** 運算子，請考慮是否可以使用 `size_t` 以外的其他類型。 `size_t` **typedef** 的類型與編譯器有關；在 MSVC 中，它會是 **unsigned int** 的 **typedef**。 較佳的解決方案是使用這類列舉類型：
+   發生此問題的原因是您定義的**放置 delete**運算子和新的全域大小運算子之間，函式簽章中的相符 **`delete`** 。 請考慮您是否可以 `size_t` 針對任何**放置 new**和運算子使用不同的類型 **`delete`** 。 的類型與 `size_t` **`typedef`** 編譯器有關; **`typedef`** **`unsigned int`** 在 MSVC 中是的。 較佳的解決方案是使用這類列舉類型：
 
     ```cpp
     enum class my_type : size_t {};
     ```
 
-   然後，變更 **placement new** 和 **delete** 的定義，以使用此類型取代 `size_t` 成為第二個引數。 您也需要更新對 placement new 的呼叫，以傳遞新的類型（例如，使用 `static_cast<my_type>` 從整數值進行轉換），並更新**new**和**delete**的定義，以轉換回整數類型。 您不需要對此使用**列舉**;具有成員的類別類型 `size_t` 也可以使用。
+   然後，變更**placement new**的定義，並 **`delete`** 使用此類型做為第二個引數，而不是 `size_t` 。 您也需要更新對 placement new 的呼叫，以傳遞新的類型（例如，使用 `static_cast<my_type>` 從整數值轉換），並更新和的定義， **`new`** **`delete`** 以轉換回整數類型。 您不需要使用來 **`enum`** 進行此作業; 具有成員的類別類型 `size_t` 也可以執行。
 
-   另一個解決方案是，您或許可以完全排除 **placement new**。 如果您的程式碼使用 **placement new** 實作記憶體集區，其中 placement 引數是配置或刪除的物件大小，則調整大小解除配置功能或許會很適合取代您自己的自訂記憶體集區程式碼，而且您可以不使用 placement 函式，只使用您自己的雙引數 **delete** 運算子，用來取代此 placement 函式。
+   另一個解決方案是，您或許可以完全排除 **placement new**。 如果您的程式碼使用**placement new**來執行記憶體集區，其中 placement 引數是要配置或刪除之物件的大小，則調整大小的解除配置功能可能適合用來取代您自己的自訂記憶體集區程式碼，而且您可以清除放置函式，並只使用您自己的雙引數 **`delete`** 運算子，而不是放置函數。
 
    如果您不想立即更新您的程式碼，則可以使用編譯器選項 `/Zc:sizedDealloc-` 來還原舊版的行為。 如果您使用此選項，則雙引數 delete 函式不存在，也不會與您的**placement delete**運算子發生衝突。
 
@@ -949,7 +949,7 @@ ms.locfileid: "86404791"
     S1<S2> s;
     ```
 
-   若要修正錯誤，請從初始設定式中移除 `typename`：
+   若要修正錯誤，請 **`typename`** 從初始化運算式中移除：
 
     ```cpp
     S1() : T::type() // OK
@@ -974,7 +974,7 @@ ms.locfileid: "86404791"
 
 - **類別範本內 static_assert 中所使用的常數將一律失敗。**
 
-   下列程式碼會導致 `static_assert` 一律失敗：
+   下列程式碼會導致 **`static_assert`** 一律失敗：
 
     ```cpp
     template <size_t some_value>
@@ -987,7 +987,7 @@ ms.locfileid: "86404791"
     //other partial specializations here
     ```
 
-   若要因應此問題，請將值包裝於 **struct** 中：
+   若要解決此問題，請將值包裝在中 **`struct`** ：
 
     ```cpp
     template <size_t some_value>
@@ -1072,7 +1072,7 @@ ms.locfileid: "86404791"
     };
     ```
 
-   若要修正錯誤，您可以完整限定對 `bind: N::bind(...)` 的呼叫。 不過，如果這項變更顯然是透過未宣告的識別項 (C2065) 進行的，則可能適合使用 **using** 宣告來修正此問題。
+   若要修正錯誤，您可以完整限定對 `bind: N::bind(...)` 的呼叫。 不過，如果此變更是透過未宣告的識別碼（C2065）來進行資訊清單，則可以改為使用宣告來修正此問題 **`using`** 。
 
    此模式經常發生於 `Microsoft::WRL` 命名空間中的 ComPtr 和其他類型。
 
@@ -1215,17 +1215,17 @@ ms.locfileid: "86404791"
 
    若要修正程式碼，您可以將 catch 區塊變更為 `catch (const D &)`，但更好的解決方案通常是使用 MFC TRY/CATCH 巨集。
 
-- **alignof 現在是關鍵字**
+- **`alignof`現在是關鍵字**
 
-   下列程式碼現在會產生錯誤 C2332：'class': 遺漏標記名稱。 若要修正程式碼，您必須重新命名類別，如果類別正在執行與**alignof**相同的工作，則只需以新的關鍵字取代類別。
+   下列程式碼現在會產生錯誤 C2332：'class': 遺漏標記名稱。 若要修正程式碼，您必須重新命名類別，或者，如果類別正在執行與相同的工作 **`alignof`** ，只要將類別取代為 new 關鍵字即可。
 
     ```cpp
     class alignof{}
     ```
 
-- **constexpr 現在是關鍵字**
+- **`constexpr`現在是關鍵字**
 
-   下列程式碼現在會產生錯誤 C2059︰語法錯誤: ')'。 若要修正程式碼，您必須將任何名為 "constexpr" 的函式或變數名稱重新命名。
+   下列程式碼現在會產生錯誤 C2059︰語法錯誤: ')'。 若要修正程式碼，您必須重新命名任何呼叫的函式或變數名稱 **`constexpr`** 。
 
     ```cpp
     int constexpr() {return 1;}
@@ -1233,7 +1233,7 @@ ms.locfileid: "86404791"
 
 - **可移動的類型不能是 const**
 
-   當函式傳回想要移動的類型時，其傳回類型不應是 **const**。
+   當函式傳回想要移動的類型時，其傳回類型不應為 **`const`** 。
 
 - **已刪除的複製建構函式**
 
@@ -1507,7 +1507,7 @@ ms.locfileid: "86404791"
     };
     ```
 
-   若要修正錯誤，請移除 `0` 周圍的括弧，或是改用 **nullptr**，如下列範例所示：
+   若要修正錯誤，請移除周圍的大括弧 `0` **`nullptr`** ，否則請改用，如下列範例所示：
 
     ```cpp
     struct S {
@@ -1582,7 +1582,7 @@ ms.locfileid: "86404791"
     };
     ```
 
-   若要修正錯誤，請移除 `j` 周圍的括弧。 如果為了清楚起見而需要括弧，則請使用 **typedef**。
+   若要修正錯誤，請移除 `j` 周圍的括弧。 如果需要用到括弧，請使用 **`typedef`** 。
 
 - **編譯器產生的建構函式和 __declspec(novtable)**
 
@@ -1627,7 +1627,7 @@ ms.locfileid: "86404791"
     static_assert(std::is_convertible<D, B2>::value, "fail");
     ```
 
-   若要修正錯誤，請變更 `static_assert`，使它能夠比較 `D` 和 `B2` 的指標：
+   若要修正錯誤，請變更， **`static_assert`** 使其比較和的 `D` 指標 `B2` ：
 
     ```cpp
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
@@ -1635,7 +1635,7 @@ ms.locfileid: "86404791"
 
 - **__declspec （novtable）宣告必須一致**
 
-   `__declspec` 宣告在所有程式庫之間必須一致。 下列程式碼現在會產生一個定義規則 (ODR) 違規：
+   **`__declspec`** 宣告在所有程式庫之間必須一致。 下列程式碼現在會產生一個定義規則 (ODR) 違規：
 
     ```cpp
     //a.cpp
@@ -1755,7 +1755,7 @@ ms.locfileid: "86404791"
 
 - **多載的運算子 new 和運算子 delete**
 
-   編譯器先前版本允許非成員 **operator new** 和非成員 **operator delete** 宣告為 static，以及在全域命名空間以外的命名空間中宣告。  這種舊行為造成的風險是，程式不會呼叫程式設計人員所預期的 **new** 或 **delete** 運算子實作，導致無訊息的錯誤執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2323。
+   編譯器先前版本允許非成員 **operator new** 和非成員 **operator delete** 宣告為 static，以及在全域命名空間以外的命名空間中宣告。  這種舊行為造成的風險是，程式不會呼叫程式設計人員所 **`new`** 預期的或 **`delete`** 運算子實作為，因而導致無訊息的錯誤執行時間行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2323。
 
     ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -1773,7 +1773,7 @@ ms.locfileid: "86404791"
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
     ```
 
-   此外，雖然編譯器不提供特定的診斷，但內嵌運算子 **new** 會被視為語式錯誤。
+   此外，雖然編譯器不會提供特定的診斷，但內嵌運算子 **`new`** 會被視為格式不正確。
 
 - **在非類別類型上呼叫 ' operator *type*（） ' （使用者定義的轉換）**
 
@@ -1807,7 +1807,7 @@ ms.locfileid: "86404791"
 
 - **詳細類型指定名稱中有重複的類型名稱**
 
-   編譯器先前版本允許複雜的類型指定名稱中有 **typename**，但以這種方式撰寫的程式碼語意並不正確。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C3406。
+   舊版編譯器允許複雜的 **`typename`** 類型規範，但以這種方式撰寫的程式碼在語義上不正確。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C3406。
 
     ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -1915,7 +1915,7 @@ ms.locfileid: "86404791"
 
 - **還原 switch 陳述式警告**
 
-   舊版編譯器中移除了某些與 **switch** 陳述式相關的警告；現在則已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個違規情況的上一行。 下列為還原的警告：
+   舊版編譯器移除了一些與語句相關的警告 **`switch`** ，現在已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個違規情況的上一行。 下列為還原的警告：
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -2205,9 +2205,9 @@ ms.locfileid: "86404791"
 
 - **運算式 SFINAE 的部分支援也可能會發出其他警告與錯誤**
 
-   編譯器先前版本因為不支援 SFINAE 運算式，所以無法剖析 **decltype** 指定名稱內某些種類的運算式。 這個舊的行為不正確且不符合 C++ 標準。 編譯器現在會剖析這些運算式，並隨著一致性逐漸改進來提供運算式 SFINAE 的部分支援。 如此一來，編譯器現在就會發出在舊版編譯器未剖析的運算式中找到的警告與錯誤。
+   舊版編譯器不會剖析指定名稱內的特定類型運算式 **`decltype`** ，因為不支援運算式 SFINAE。 這個舊的行為不正確且不符合 C++ 標準。 編譯器現在會剖析這些運算式，並隨著一致性逐漸改進來提供運算式 SFINAE 的部分支援。 如此一來，編譯器現在就會發出在舊版編譯器未剖析的運算式中找到的警告與錯誤。
 
-   當這個新行為剖析 **decltype** 運算式，而其中包含尚未宣告的類型時，編譯器會發出編譯器錯誤 C2039。
+   當這個新行為剖析包含尚未宣告之 **`decltype`** 類型的運算式時，編譯器會發出編譯器錯誤 C2039。
 
     ```Output
     error C2039: 'type': is not a member of '`global namespace''
@@ -2241,7 +2241,7 @@ ms.locfileid: "86404791"
     }
     ```
 
-   當這個新行為剖析缺少必要 **typename** 關鍵字的 **decltype** 運算式來指定相依名稱為類型時，編譯器會發出編譯器警告 C4346 與編譯器錯誤 C2923。
+   當這個新行為剖析 **`decltype`** 缺少必要關鍵字使用的運算式 **`typename`** 來指定相依名稱是類型時，編譯器會發出編譯器警告 C4346 與編譯器錯誤 C2923。
 
     ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -2292,9 +2292,9 @@ ms.locfileid: "86404791"
     };
     ```
 
-- `volatile` ** 成員變數會禁止隱含定義的建構函式與指派運算子**
+- **`volatile`****成員變數會禁止隱含定義的函數和指派運算子**
 
-   編譯器先前版本允許具有 **volatile** 成員變數類別自動產生預設的複製/移動建構函式，以及預設的複製/移動指派運算子。 這個舊的行為不正確且不符合 C++ 標準。 編譯器現在會將具有**volatile**成員變數的類別視為具有非一般的結構和指派運算子，這可防止自動產生這些運算子的預設執行。 當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含匿名等位的類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。
+   舊版編譯器允許具有成員變數的類別， **`volatile`** 自動產生預設的複製/移動函式和預設複製/移動指派運算子。 這個舊的行為不正確且不符合 C++ 標準。 編譯器現在會將具有成員變數的類別視為 **`volatile`** 具有非一般的結構和指派運算子，這可防止自動產生這些運算子的預設執行。 當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含匿名等位的類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2380,7 +2380,7 @@ ms.locfileid: "86404791"
 
 - **WinRT 程式碼不允許列舉的向前宣告** (只會影響 `/ZW`)
 
-   為 Windows 執行階段 (WinRT) 編譯的程式碼不允許向前宣告 **enum** 類型，類似於使用 `/clr` 編譯器參數為 .Net Framework 編譯受控 C++ 程式碼的情形。 此行為可確保一律得知列舉的大小，並能正確將其投影至 WinRT 類型系統。 編譯器拒絕以此方式撰寫的程式碼，且會發出編譯器錯誤 C2599 以及編譯器錯誤 C3197。
+   針對 Windows 執行階段（WinRT）編譯的程式碼不允許 **`enum`** 向前宣告類型，類似于使用編譯器參數為 .Net Framework 編譯受控 c + + 程式碼的情況 `/clr` 。 此行為可確保一律得知列舉的大小，並能正確將其投影至 WinRT 類型系統。 編譯器拒絕以此方式撰寫的程式碼，且會發出編譯器錯誤 C2599 以及編譯器錯誤 C3197。
 
     ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -2467,7 +2467,7 @@ ms.locfileid: "86404791"
 
 - **std::is_convertable 現在已可偵測自我指派** (標準程式庫)
 
-   當舊版 `std::is_convertable` 類型特性的複製建構函式被刪除或為私用時，其無法正確地偵測類別類型的自我指派。 現在在套用到複製建構函式已刪除或為 private 的類別類型時，`std::is_convertable<>::value` 會正確設定為 **false**。
+   當舊版 `std::is_convertable` 類型特性的複製建構函式被刪除或為私用時，其無法正確地偵測類別類型的自我指派。 現在， `std::is_convertable<>::value` **`false`** 當套用至具有已刪除或私用複製函式的類別類型時，會正確地設定為。
 
    此變更沒有相關聯的編譯器診斷。
 
@@ -2491,7 +2491,7 @@ ms.locfileid: "86404791"
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   在編譯器先前版本中，因為 `std::is_convertable<>::value` 不正確地設定為 **true**，致使此範例底部的靜態判斷提示能夠通過。 `std::is_convertable<>::value` 現在會正確地設定為 **false**，讓靜態判斷提示失敗。
+   在舊版編譯器中，此範例底部的靜態判斷提示會通過，因為不 `std::is_convertable<>::value` 正確地設定為 **`true`** 。 現在， `std::is_convertable<>::value` 已正確地設定為 **`false`** ，導致靜態判斷提示失敗。
 
 - **預設或已刪除的 trivial 複製及移動建構函式會採用存取指定名稱**
 
@@ -2723,7 +2723,7 @@ ms.locfileid: "86404791"
     }
     ```
 
-   在舊版中，由於呼叫為 **virtual** 呼叫，因此不會發出錯誤；儘管如此，程式還是會在執行階段損毀。 現在，由於已知類別為 final，因此會發出連結器錯誤。 在這個範例中，為了修正錯誤，您會連結包含 `S2::f` 之定義的 obj。
+   在舊版中，由於呼叫是呼叫，因此不會發出錯誤 **`virtual`** ; 不過，程式會在執行時間損毀。 現在，由於已知類別為 final，因此會發出連結器錯誤。 在這個範例中，為了修正錯誤，您會連結包含 `S2::f` 之定義的 obj。
 
 - 當您在命名空間中使用 friend 函式時，必須先重新宣告 friend 函式才能加以參考，否則將會收到錯誤；這是因為編譯器現在遵循 ISO C++ 標準。 例如，此範例不再編譯：
 
@@ -2740,7 +2740,7 @@ ms.locfileid: "86404791"
     }
     ```
 
-   若要修正這個程式碼，請宣告 **friend** 函式：
+   若要修正此程式碼，請宣告函式 **`friend`** ：
 
     ```cpp
     namespace NS {
@@ -2797,14 +2797,14 @@ ms.locfileid: "86404791"
     }
     ```
 
-- 在編譯器符合 ISO C++11 之前，下列程式碼會進行編譯並導致 `x` 解析為 **int** 類型：
+- 在編譯器符合 ISO c + + 11 之前，下列程式碼會進行編譯並導致 `x` 解析為類型 **`int`** ：
 
     ```cpp
     auto x = {0};
     int y = x;
     ```
 
-   這個程式碼現在 `x` 會解析成的類型 `std::initializer_list<int>` ，並在下一行嘗試指派 `x` 給**int**類型的錯誤。（預設不會進行轉換）。若要更正這個程式碼，請使用**int**取代**auto**：
+   此程式碼現在 `x` 會將解析為類型 `std::initializer_list<int>` ，並在下一行嘗試指派給類型時發生錯誤 `x` **`int`** 。 （預設不會進行轉換）。若要修正此程式碼，請使用 **`int`** 來取代 **`auto`** ：
 
     ```cpp
     int x = {0};
@@ -2854,7 +2854,7 @@ ms.locfileid: "86404791"
 
    Visual Studio 2012 中 `E1::b` 運算式的 `E1`，會解析為全域範圍中的 `::E1`。 Visual Studio 2013 中 `E1::b` 運算式的 `E1`，會解析為 `main()` 中的 `typedef E2` 定義，且具有 `::E2` 類型。
 
-- 物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它有**虛擬**函式，但它沒有具有**虛擬**函式的基類，則編譯器的物件模型會在資料成員配置之後，將指標插入**虛擬**函式資料表。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以在 Visual Studio 2013 中已將其移除。 例如，請思考下列程式碼：
+- 物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它有函式 **`virtual`** ，但它沒有具有函式的基類 **`virtual`** ，則編譯器的物件模型會在資料成員配置之後，將指標插入 **`virtual`** 函數資料表。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以在 Visual Studio 2013 中已將其移除。 例如，請思考下列程式碼：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2867,7 +2867,7 @@ ms.locfileid: "86404791"
     };
     ```
 
-- 在 Visual Studio 2013 中，x64 上 `sizeof(S2)` 的結果為 48，但在舊版中會評估為 32。 若要在 x64 版的 Visual Studio 2013 C++ 編譯器中將其評估為 32，請新增具有 **virtual** 函式的虛設基底類別：
+- 在 Visual Studio 2013 中，x64 上 `sizeof(S2)` 的結果為 48，但在舊版中會評估為 32。 若要在 x64 的 Visual Studio 2013 c + + 編譯器中將此值評估為32，請新增具有函式的虛擬基類 **`virtual`** ：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -3000,7 +3000,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - `/Yl` 編譯器選項已變更。 編譯器預設會使用此選項，在某些情況下，可能會導致 LNK2011 錯誤。 如需詳細資訊，請參閱 [/Yl (Inject PCH Reference for Debug Library)](../build/reference/yl-inject-pch-reference-for-debug-library.md) (/Yl (插入偵錯程式庫的 PCH 參考))。
 
-- 在使用 `/clr` 編譯的程式碼中，**enum** 類別關鍵字會定義 C++11 列舉，而非通用語言執行平台 (CLR) 列舉。 若要定義 CLR 列舉，其協助工具必須明確。
+- 在使用編譯的程式碼中 `/clr` ， **`enum`** class 關鍵字會定義 c + + 11 列舉，而不是 common language RUNTIME （CLR）列舉。 若要定義 CLR 列舉，其協助工具必須明確。
 
 - 使用範本關鍵字明確釐清相依名稱 (符合 C++ 語言標準)。 在下列範例中，反白顯示的範本關鍵字是解析模稜兩可問題的必備項目。 如需詳細資訊，請參閱 [Name Resolution for Dependent Types](../cpp/name-resolution-for-dependent-types.md) (相依類型的名稱解析)。
 
@@ -3232,9 +3232,9 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="compiler"></a>編譯器
 
-- **auto** 關鍵字已有新的預設意義。 因為舊的意義甚少使用，所以這項變更對於大多數的應用程式沒有影響。
+- **`auto`** 關鍵字具有新的預設意義。 因為舊的意義甚少使用，所以這項變更對於大多數的應用程式沒有影響。
 
-- 因為引進了新的 **static_assert** 關鍵字，所以您的程式碼中如有同名的識別項，將會引發名稱衝突。
+- 引進新的 **`static_assert`** 關鍵字，如果您的程式碼中已經有該名稱的識別碼，則會導致名稱衝突。
 
 - 新的 lambda 標記法支援不支援在 IDL UUID 屬性中編寫未加引號的的 GUID。
 
@@ -3284,7 +3284,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 已移除 `CComPtr::CComPtr(int)` 建構函式。 該建構函式允許從 NULL 巨集建構 `CComPtr` 物件，但這並非必要，而且它也允許從非零整數產生的無意義建構。
 
-   `CComPtr` 仍然可從 NULL (定義為 0) 建構，但若是從常值 0 以外的整數建構則會失敗。 請改為使用 **nullptr**。
+   `CComPtr` 仍然可從 NULL (定義為 0) 建構，但若是從常值 0 以外的整數建構則會失敗。 請改用 **`nullptr`** 。
 
 - 下列 `ctype` 成員函式已移除：`ctype::_Do_narrow_s`、`ctype::_Do_widen_s`、`ctype::_narrow_s`、`ctype::_widen_s`。 若應用程式使用下列其中一個成員函式，您必須使用對應的不安全版本取代：`ctype::do_narrow`、`ctype::do_widen`、`ctype::narrow`、`ctype::widen`。
 
@@ -3490,9 +3490,9 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 靜態資料成員無法再透過衍生類別初始化 ([編譯器錯誤 C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md))。
 
-- 依據標準規定不可初始化 **typedef**，且現在會產生編譯器錯誤 ([編譯器錯誤 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md))。
+- **`typedef`** 標準不允許的初始化，而且現在會產生編譯器錯誤（[編譯器錯誤 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)）。
 
-- **bool** 現在是正確的類型 ([編譯器錯誤 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md))。
+- **`bool`** 現在是正確的類型（[編譯器錯誤 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)）。
 
 - UDC 現在可以建立具有多載運算子的模稜兩可 ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md))。
 

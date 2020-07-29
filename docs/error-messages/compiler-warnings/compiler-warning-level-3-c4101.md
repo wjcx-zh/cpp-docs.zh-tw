@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: 0ac34fbaf4cbb54583394dff5b8645fe56b8b9cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9d3875fdc17def1e7d3bcb72149c5faf90f656a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199041"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220050"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>編譯器警告（層級3） C4101
 
@@ -27,7 +27,7 @@ int i;   // C4101
 }
 ```
 
-不過，透過類別的實例呼叫**靜態**成員函式時，也會發生這個警告：
+不過，透過類別的實例呼叫成員函式時，也會發生這個警告 **`static`** ：
 
 ```cpp
 // C4101b.cpp
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-在此情況下，編譯器會使用 `si` 的相關資訊來存取**靜態**函式，但不需要類別的實例來呼叫**靜態**函式;因此會出現警告。 若要解決這個警告，您可以：
+在此情況下，編譯器會使用的相關資訊 `si` 來存取函式 **`static`** ，但不需要類別的實例來呼叫函式， **`static`** 因此會出現警告。 若要解決這個警告，您可以：
 
-- 加入一個處理函式，編譯器會在呼叫中使用 `si` 的實例 `func`。
+- 加入一個函式，在其中，編譯器會 `si` 在的呼叫中使用的實例 `func` 。
 
-- 從 `func`的定義中移除**static**關鍵字。
+- 請 **`static`** 從的定義中移除關鍵字 `func` 。
 
-- 明確呼叫**靜態**函式： `int y = S::func();`。
+- 明確呼叫 **`static`** 函式： `int y = S::func();` 。

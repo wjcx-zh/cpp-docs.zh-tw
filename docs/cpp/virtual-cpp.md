@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187501"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213121"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-**Virtual**關鍵字會宣告虛擬函式或虛擬基類。
+關鍵字會宣告虛擬函式 **`virtual`** 或虛擬基類。
 
 ## <a name="syntax"></a>語法
 
@@ -37,7 +37,7 @@ virtual [access-specifier] base-class-name
 宣告成員函式。
 
 *存取規範*<br/>
-定義基類、**公用**、**受保護**或**私**用的存取層級。 可出現在**虛擬**關鍵字之前或之後。
+定義基類、或的存取層級 **`public`** **`protected`** **`private`** 。 可以出現在關鍵字之前或之後 **`virtual`** 。
 
 *基本類別-名稱*<br/>
 識別先前宣告的類別類型。

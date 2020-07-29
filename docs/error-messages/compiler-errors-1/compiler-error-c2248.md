@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ded4b06423be53911f3efd0b55d75cb979773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206536"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212809"
 ---
 # <a name="compiler-error-c2248"></a>編譯器錯誤 C2248
 
 '*member*'：無法存取類別 '*class*' 中宣告的 '*access_level*' 成員
 
-衍生類別的成員無法存取基類 `private` 成員。 您無法存取 `private` 或 `protected` 類別實例的成員。
+衍生類別的成員無法存取 **`private`** 基類的成員。 您無法存取 **`private`** 或 **`protected`** 類別實例的成員。
 
 ## <a name="example"></a>範例
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-另一個公開 C2248 的一致性問題，就是使用範本朋友和特製化。 若要修正此問題，請使用空的範本參數清單 < > 或特定的範本參數來宣告 friend 範本函式。
+另一個公開 C2248 的一致性問題，就是使用範本朋友和特製化。 若要修正此問題，請使用空白範本參數清單 <> 或特定範本參數來宣告 friend 範本函式。
 
 ```cpp
 // C2248_template.cpp

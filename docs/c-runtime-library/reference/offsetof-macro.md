@@ -22,12 +22,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951254"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213498"
 ---
 # <a name="offsetof-macro"></a>offsetof 巨集
 
@@ -47,7 +47,7 @@ size_t offsetof(
 *structName*<br/>
 父資料結構的名稱。
 
-*memberName*<br/>
+*基*<br/>
 要判斷其位移之父資料結構中成員的名稱。
 
 ## <a name="return-value"></a>傳回值
@@ -56,7 +56,7 @@ size_t offsetof(
 
 ## <a name="remarks"></a>備註
 
-**Offsetof**宏會從*structname 類型*所指定的結構開頭以*位元組為單位*，傳回值為**size_t**的位移。 您可以使用**struct**關鍵字來指定類型。
+**Offsetof**宏會以位元組為單位，從*structname 類型*所指定的結構開頭，傳回*成員*的位移，以**size_t**的類型。 您可以使用關鍵字指定類型 **`struct`** 。
 
 > [!NOTE]
 > **offsetof**不是函式，而且無法使用 C 原型加以描述。

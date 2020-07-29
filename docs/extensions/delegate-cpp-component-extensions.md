@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219725"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI 和 C++/CX)
 
@@ -25,9 +25,9 @@ Windows 執行階段和 Common Language Runtime 均支援委派。
 
 ### <a name="remarks"></a>備註
 
-**delegate** 是內容相關性關鍵字。 如需詳細資訊，請參閱[即時線上關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
+**delegate** 是內容相關性關鍵字。 如需詳細資訊，請參閱[內容相關性關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
 
-若要在編譯時間偵測某個型別是否為委派，請使用 `__is_delegate()` 型別特性。 如需詳細資訊，請參閱[型別特性的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
+若要在編譯時間偵測某個型別是否為委派，請使用 `__is_delegate()` 型別特性。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
@@ -47,10 +47,10 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>參數
 
-*access*<br/>
-(選擇性) 委派的可及性，可以是 **public** (預設值) 或 **private**。 函式原型也可以使用 **const** 或 **volatile** 關鍵字來限定。
+*權*<br/>
+選擇性委派的存取範圍，可以是 **`public`** （預設值）或 **`private`** 。 函數原型也可以使用或關鍵字來限定 **`const`** **`volatile`** 。
 
-*return-type*<br/>
+*傳回類型*<br/>
 函式原型的傳回型別。
 
 *delegate-type-identifier*<br/>
@@ -81,13 +81,13 @@ function_declaration
 
 ### <a name="parameters"></a>參數
 
-*access*<br/>
+*權*<br/>
 (選擇性) 委派在組件外部的可及性可以是 public 或 private。  預設值是 private。  在類別內部，委派可以具有任意的可及性。
 
 *function_declaration*<br/>
 可繫結至委派的函式簽章。 委派的傳回型別可以是任意的受控型別。 基於互通性考量，建議委派的傳回型別為 CLS 型別。
 
-若要定義未繫結的委派，*function_declaration* 中的第一個參數應該是物件的 **this** 指標的型別。
+若要定義未系結的委派， *function_declaration*中的第一個參數應該是 **`this`** 物件的指標類型。
 
 ### <a name="remarks"></a>備註
 
@@ -202,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

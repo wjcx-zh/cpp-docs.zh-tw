@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183363"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213017"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 類別
 
@@ -32,21 +32,21 @@ public ref class STAThreadAttribute sealed : Attribute
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[STAThreadAttribute 建構函式 1](#ctor)|初始化類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
-STAThreadAttribute 屬性繼承自[platform:: object 類別](../cppcx/platform-object-class.md)。 STAThreadAttribute 也會多載或具有下列成員：
+STAThreadAttribute 屬性繼承自[Platform：： Object 類別](../cppcx/platform-object-class.md)。 STAThreadAttribute 也會多載或具有下列成員：
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[STAThreadAttribute::Equals](#equals)|判斷指定的物件是否等於目前的物件。|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|
 |[STAThreadAttribute::ToString](#tostring)|傳回代表目前物件的字串。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `Platform`
 
@@ -56,7 +56,7 @@ STAThreadAttribute 屬性繼承自[platform:: object 類別](../cppcx/platform-o
 
 **命名空間：** Platform
 
-## <a name="ctor"></a> STAThreadAttribute constructor
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a> STAThreadAttribute constructor
 
 初始化 STAThreadAttribute 類別的新執行個體。
 
@@ -66,7 +66,7 @@ STAThreadAttribute 屬性繼承自[platform:: object 類別](../cppcx/platform-o
 public:STAThreadAttribute();
 ```
 
-## <a name="equals"></a> STAThreadAttribute::Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute：： Equals
 
 判斷指定的物件是否等於目前的物件。
 
@@ -83,9 +83,9 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果物件相等，否則**false**。
+**`true`** 如果物件相等，則為，否則為 **`false`** 。
 
-## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute：： GetHashCode
 
 傳回這個執行個體的雜湊碼。
 
@@ -99,7 +99,7 @@ public:int GetHashCode();
 
 這個執行個體的雜湊碼。
 
-## <a name="tostring"></a> STAThreadAttribute::ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute：： ToString
 
 傳回代表目前物件的字串。
 
@@ -111,7 +111,7 @@ public:String^ ToString();
 
 ### <a name="return-value"></a>傳回值
 
-表示目前物件的字串。
+代表目前物件的字串。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e8ca82900ffd16264aca494950d4793029e55d9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213225"
 ---
-# <a name="selectany"></a>selectany
+# `selectany`
 
 **Microsoft 特定的**
 
@@ -22,26 +22,24 @@ ms.locfileid: "81365591"
 
 ## <a name="syntax"></a>語法
 
-```
-__declspec( selectany ) declarator
-```
+> **`__declspec( selectany )`***declarator*宣告子
 
 ## <a name="remarks"></a>備註
 
-在連結時，如果看見多個定義的 COMDAT，則連結器會挑選一個定義並捨棄其餘定義。 如果選擇了連結器選項[/OPT:REF(](../build/reference/opt-optimizations.md)優化),則將發生 COMDAT 消除以刪除連結器輸出中的所有未引用數據項。
+在連結時，如果看見多個定義的 COMDAT，則連結器會挑選一個定義並捨棄其餘定義。 如果選取了連結器選項 [`/OPT:REF`](../build/reference/opt-optimizations.md) （優化），則會發生 COMDAT 刪除，以移除連結器輸出中所有未參考的資料項目。
 
 宣告中的建構函式以及由全域函式或靜態方法進行的指派不會建立參考，也不會阻止 /OPT:REF 刪除作業。 來自這類程式碼的副作用不應取決於不存在其他資料參考時。
 
-對於動態初始化的全域物件 **,selectany**也將放棄未引用的物件的初始化代碼。
+對於動態初始化的全域物件， **`selectany`** 也會捨棄未參考物件的初始化程式碼。
 
-全域資料項目通常只能在 EXE 或 DLL 專案中初始化一次。 **當**同一標頭出現在多個源檔中時,可以選擇於初始化由標頭定義的全域數據。 **選擇在**C 和 C++ 編譯器中都可用。
+全域資料項目通常只能在 EXE 或 DLL 專案中初始化一次。 **`selectany`** 當同一個標頭出現在多個原始程式檔中時，可以用來初始化標頭所定義的全域資料。 **`selectany`** C 和 c + + 編譯器都有提供。
 
 > [!NOTE]
-> **selectany**只能應用於外部可見的全域數據項的實際初始化。
+> **`selectany`** 只能套用至外部可見的全域資料項目實際初始化。
 
 ## <a name="example"></a>範例
 
-此程式碼示範如何使用**selectany**屬性:
+此程式碼說明如何使用 **`selectany`** 屬性：
 
 ```cpp
 //Correct - x1 is initialized and externally visible
@@ -75,7 +73,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>範例
 
-此程式碼展示如何使用**selectany**屬性來確保資料 COMDAT 折疊時,您也使用[/OPT:ICF](../build/reference/opt-optimizations.md)連結器選項。 請注意,數據必須使用**selectany**標記並放置在**const(** 唯讀)部分中。 您必須明確指定唯讀區段。
+這段程式碼示範 **`selectany`** 當您同時使用連結器選項時，如何使用屬性來確保資料 COMDAT 折迭 [`/OPT:ICF`](../build/reference/opt-optimizations.md) 。 請注意，資料必須以標記 **`selectany`** 並放在 **`const`** （readonly）區段中。 您必須明確指定唯讀區段。
 
 ```cpp
 // selectany2.cpp
@@ -88,9 +86,9 @@ int main() {
 }
 ```
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226087"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213290"
 ---
 # <a name="pointers-to-members"></a>成員的指標
 
@@ -25,7 +25,7 @@ ms.locfileid: "84226087"
 
    - 選擇性的儲存類別規範。
 
-   - 選擇性的**const**和**volatile**規範。
+   - 選擇性 **`const`** 和規範 **`volatile`** 。
 
    - 類型指定名稱：類型的名稱。 這是要指向的成員類型，而不是類別。
 
@@ -39,7 +39,7 @@ ms.locfileid: "84226087"
 
    - __`*`__ 運算子。
 
-   - 選擇性的**const**和**volatile**規範。
+   - 選擇性 **`const`** 和規範 **`volatile`** 。
 
    - 為成員指標命名的識別項。
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-在上述範例中， `pwCaption` 是型別之任何類別成員的指標 `Window` `char*` 。 `pwCaption` 的類型是 `char * Window::*`。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。
+在上述範例中， `pwCaption` 是型別之任何類別成員的指標 `Window` **`char*`** 。 `pwCaption` 的類型是 `char * Window::*`。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

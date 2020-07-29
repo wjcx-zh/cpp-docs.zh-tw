@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198961"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220024"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>編譯器警告 (層級 3) C4191
 
@@ -25,11 +25,11 @@ ms.locfileid: "80198961"
 
 - 具有不同大小、類型分類或分類的引數或傳回類型。
 
-- 區隔引數清單的長度 (在 `__cdecl`，只有從較長的清單轉換成較短的清單，即使較短的是 varargs)。
+- 不同的引數清單長度（on **`__cdecl`** ，僅限從較長的清單轉換為較短的清單，即使較短的是 varargs）。
 
-- 對函式的指標進行別名的資料指標（不是**void** <strong>\*</strong>）。
+- 指向函式指標的資料指標（不是 **`void`** <strong>\*</strong> ）。
 
-- 會在 `reinterpret_cast`產生錯誤或警告的任何其他類型差異。
+- 會在上產生錯誤或警告的任何其他類型差異 **`reinterpret_cast`** 。
 
 透過結果指標呼叫這個函式可能會導致程式當機。
 

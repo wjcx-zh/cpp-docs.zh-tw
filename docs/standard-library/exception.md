@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457908"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193649"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "68457908"
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<exception>
+**標頭：**\<exception>
 
 **命名空間：** std
 
@@ -42,13 +42,13 @@ ms.locfileid: "68457908"
 |[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|取得目前的 `unexpected_handler` 函式。|
 |[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|建立持有例外狀況複本的 `exception_ptr` 物件。|
 |[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|擲回做為參數傳遞的例外狀況。|
-|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|轉換和擲回例外狀況 (如果有嵌套)。|
+|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|轉換和擲回例外狀況（如果有嵌套）。|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|建立新 `terminate_handler`，在程式終止時呼叫。|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|建立新的 `unexpected_handler`，當未預期的例外狀況發生時擲回。|
-|[terminate](../standard-library/exception-functions.md#terminate)|呼叫終止處理常式。|
-|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|如果有嵌套, 則擲回例外狀況。|
-|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|只有當系統正在處理擲回的例外狀況時，才傳回 **true**。|
-|[unexpected](../standard-library/exception-functions.md#unexpected)|呼叫未預期的處理常式。|
+|[終止](../standard-library/exception-functions.md#terminate)|呼叫終止處理常式。|
+|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|如果有嵌套，則擲回例外狀況。|
+|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|**`true`** 只有在目前正在處理擲回的例外狀況時，才會傳回。|
+|[意料](../standard-library/exception-functions.md#unexpected)|呼叫未預期的處理常式。|
 
 ### <a name="classes"></a>類別
 
@@ -61,4 +61,4 @@ ms.locfileid: "68457908"
 ## <a name="see-also"></a>另請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

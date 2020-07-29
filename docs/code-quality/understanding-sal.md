@@ -3,12 +3,12 @@ title: 了解 SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: fe48e31e5f4390915c4f3b5b6bf9c09bbd9fffe1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403981"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226043"
 ---
 # <a name="understanding-sal"></a>了解 SAL
 
@@ -78,7 +78,7 @@ wchar_t * wmemcpy(
 
 SAL 定義四種基本類型的參數，依使用模式分類。
 
-|類別|參數注釋|描述|
+|類別|參數注釋|說明|
 |--------------|--------------------------|-----------------|
 |**輸入至呼叫的函式**|`_In_`|資料會傳遞至所呼叫的函式，並被視為唯讀。|
 |**輸入至所呼叫的函式，並輸出至呼叫端**|`_Inout_`|可用的資料會傳遞至函式中，而且可能會遭到修改。|
@@ -359,7 +359,7 @@ Visual Studio Code 分析會驗證此函式會先檢查是否有 Null，再取�
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>範例： \_ \_ 結合 Out 的成功注釋 \_\_
 
-批註可以套用至大部分的物件。  特別是，您可以標注整個函式。  函式最明顯的特性之一，就是它可以成功或失敗。 但是如同緩衝區和其大小之間的關聯，C/c + + 無法表示函數成功或失敗。 藉由使用 `_Success_` 注釋，您可以說函式的成功外觀。  注釋的參數 `_Success_` 只是當其為 true 時的運算式，表示函式已成功。 運算式可以是批註剖析器可以處理的任何專案。 在函式傳回之後，批註的效果只適用于函式成功時。 這個範例示範如何 `_Success_` 與互動， `_Out_` 以執行正確的動作。 您可以使用關鍵字 `return` 來表示傳回值。
+批註可以套用至大部分的物件。  特別是，您可以標注整個函式。  函式最明顯的特性之一，就是它可以成功或失敗。 但是如同緩衝區和其大小之間的關聯，C/c + + 無法表示函數成功或失敗。 藉由使用 `_Success_` 注釋，您可以說函式的成功外觀。  注釋的參數 `_Success_` 只是當其為 true 時的運算式，表示函式已成功。 運算式可以是批註剖析器可以處理的任何專案。 在函式傳回之後，批註的效果只適用于函式成功時。 這個範例示範如何 `_Success_` 與互動， `_Out_` 以執行正確的動作。 您可以使用關鍵字 **`return`** 來表示傳回值。
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)

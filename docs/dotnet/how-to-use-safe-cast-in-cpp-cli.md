@@ -1,23 +1,23 @@
 ---
-title: HOW TO：使用中的 safe_cast C++/CLI
+title: 作法：在 C++/CLI 中使用 safe_cast
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56ac19871bcdc5162b959f6d60103387551ac2a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225653"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>HOW TO：使用中的 safe_cast C++/CLI
+# <a name="how-to-use-safe_cast-in-ccli"></a>作法：在 C++/CLI 中使用 safe_cast
 
-這篇文章示範如何使用 safe_cast 中的C++/CLI 應用程式。 如需在 safe_cast C++/CX，請參閱[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)。
+本文說明如何在 c + +/CLI 應用程式中使用 safe_cast。 如需 c + +/CX 中 safe_cast 的詳細資訊，請參閱[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)。
 
-## <a name="upcasting"></a>向上轉型
+## <a name="upcasting"></a>Upcasting
 
-向上轉型是從衍生類型轉型至其中一個基底類別。 這項轉換是安全的而且不需要明確轉換標記法。 下列範例示範如何使用執行向上轉型，`safe_cast`與不使用。
+向上轉換是從衍生類型轉型為它的其中一個基類。 這種轉換是安全的，不需要明確的轉換標記法。 下列範例顯示如何使用和不搭配執行向上轉換 `safe_cast` 。
 
 ```cpp
 // safe_upcast.cpp
@@ -66,9 +66,9 @@ in C::Test
 in B::Test2
 ```
 
-## <a name="downcasting"></a>向下轉型
+## <a name="downcasting"></a>向下檢視
 
-向下轉型為衍生自基底類別的類別從基底類別轉型。  向下轉型是處理在執行階段物件會實際解決的衍生的類別物件時，才安全。  不同於`static_cast`，`safe_cast`會執行動態檢查，並擲回<xref:System.InvalidCastException>如果轉換失敗。
+轉換是從基類轉換成衍生自基類的類別。  只有在執行時間所定址的物件實際定址衍生類別物件時，向下轉換才是安全的。  不同 **`static_cast`** `safe_cast` 于，會執行動態檢查，並 <xref:System.InvalidCastException> 在轉換失敗時擲回。
 
 ```cpp
 // safe_downcast.cpp
@@ -119,9 +119,9 @@ in C::Test()
 in B::Test2()
 ```
 
-## <a name="safecast-with-user-defined-conversions"></a>使用者定義轉換使用 safe_cast
+## <a name="safe_cast-with-user-defined-conversions"></a>使用者定義的轉換 safe_cast
 
-下一個範例示範如何使用`safe_cast`叫用使用者定義的轉換。
+下一個範例會顯示如何使用來叫用 `safe_cast` 使用者定義的轉換。
 
 ```cpp
 // safe_cast_udc.cpp
@@ -174,13 +174,13 @@ in operator R^(V& v
 in operator V^(R^ r)
 ```
 
-## <a name="safecast-and-boxing-operations"></a>safe_cast 和 boxing 作業
+## <a name="safe_cast-and-boxing-operations"></a>safe_cast 和裝箱作業
 
-### <a name="boxing"></a>Boxing
+### <a name="boxing"></a>Box 處理
 
-Boxing 被指編譯器插入的使用者定義的轉換。  因此，您可以使用`safe_cast`box CLR 堆積中的值。
+「裝箱」定義為編譯器插入的使用者定義轉換。  因此，您可以使用 `safe_cast` 來 BOX CLR 堆積上的值。
 
-下列範例示範具有簡單和使用者定義的實值類型的 boxing。  A`safe_cast`方塊是在原生堆疊，以便將它指派給變數，以在記憶體回收堆積上實值類型變數。
+下列範例示範如何使用簡單和使用者定義的實數值型別來進行裝箱。  一個方塊，它是 `safe_cast` 原生堆疊上的實值型別變數，可以將它指派給垃圾收集堆積上的變數。
 
 ```cpp
 // safe_cast_boxing.cpp
@@ -206,7 +206,7 @@ int main() {
 }
 ```
 
-下一個範例顯示，boxing] 的優先順序高於在 [使用者定義的轉換`safe_cast`作業。
+下一個範例顯示，在作業中，在使用者定義的轉換上，該裝箱的優先順序高於 `safe_cast` 。
 
 ```cpp
 // safe_cast_boxing_2.cpp
@@ -239,11 +239,11 @@ int main() {
 }
 ```
 
-### <a name="unboxing"></a>Unboxing
+### <a name="unboxing"></a>Unbox 處理
 
-Unboxing 被指編譯器插入的使用者定義的轉換。  因此，您可以使用`safe_cast`unbox CLR 堆積中的值。
+取消裝箱會定義為編譯器插入的使用者定義轉換。  因此，您可以使用 `safe_cast` 將 CLR 堆積上的值取消裝箱。
 
-Unboxing 是使用者定義轉換，但 boxing 與 unboxing 必須明確 — 也就是它必須由執行`static_cast`、 c-style 轉換，或`safe_cast`; unboxing 不會隱含地執行。
+取消裝箱是使用者定義的轉換，但與裝箱不同的是，取消裝箱必須是明確的，也就是必須由 C 樣式的轉換來執行， **`static_cast`** 或者，無法以隱含方式 `safe_cast` 執行取消錄製。
 
 ```cpp
 // safe_cast_unboxing.cpp
@@ -254,7 +254,7 @@ int main() {
 }
 ```
 
-下列範例將示範 unboxing 實值型別與基本型別。
+下列範例會顯示具有實數值型別和基本類型的取消裝箱。
 
 ```cpp
 // safe_cast_unboxing_2.cpp
@@ -300,9 +300,9 @@ int main() {
 }
 ```
 
-## <a name="safecast-and-generic-types"></a>safe_cast 和泛型型別
+## <a name="safe_cast-and-generic-types"></a>safe_cast 和泛型型別
 
-下一個範例示範如何使用`safe_cast`執行使用泛型類型的向下轉。
+下一個範例會示範如何使用 `safe_cast` 來執行具有泛型型別的向下轉換。
 
 ```cpp
 // safe_cast_generic_types.cpp

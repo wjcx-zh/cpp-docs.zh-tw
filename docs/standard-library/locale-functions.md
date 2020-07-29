@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 6ebb1b1c80d5c2da19610a15e628fcbab5220719
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351734"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224808"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函式
 
@@ -48,8 +48,8 @@ ms.locfileid: "81351734"
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
 |[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
 |[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[正空間](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[降](#tolower)|[到上](#toupper)|[use_facet](#use_facet)|
+|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
+|[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
 
 ## <a name="has_facet"></a><a name="has_facet"></a>has_facet
 
@@ -67,7 +67,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="return-value"></a>傳回值
 
-如果地區設定具有所測試的 facet，便會傳回 **true**；如果沒有，則會傳回 **false**。
+**`true`** 如果地區設定的 facet 已針對進行測試，則為;**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
@@ -94,7 +94,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a><a name="isalnum"></a>阿薩爾納姆
+## <a name="isalnum"></a><a name="isalnum"></a>isalnum
 
 測試地區設定中的項目是否為字母或數字字元。
 
@@ -105,7 +105,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的英數字元元素。
 
 *Loc*\
@@ -113,7 +113,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是英數字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是英數位元，則為，**`false`** 如果不是，則為。
 
 ### <a name="example"></a>範例
 
@@ -172,7 +172,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -180,11 +180,11 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是字母字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是英文字母，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **Alpha**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -237,7 +237,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -245,11 +245,11 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是控制字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是控制字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **cntrl**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>是數字
+## <a name="isdigit"></a><a name="isdigit"></a>isdigit
 
 測試地區設定中的項目是否為數字字元。
 
@@ -302,7 +302,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -310,11 +310,11 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是數字字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是數位字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：：**數位**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -356,7 +356,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a><a name="isgraph"></a>正圖
+## <a name="isgraph"></a><a name="isgraph"></a>isgraph
 
 測試地區設定中的項目是否為英數字元或標點符號字元。
 
@@ -367,7 +367,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -375,11 +375,11 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是英數字元或標點符號字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是英數位元或標點符號字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **graph**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -421,7 +421,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>是降低
+## <a name="islower"></a><a name="islower"></a>islower
 
 測試地區設定中的項目是否為小寫。
 
@@ -432,7 +432,7 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -440,11 +440,11 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是小寫字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是小寫字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **lower**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -486,7 +486,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a><a name="isprint"></a>是列印
+## <a name="isprint"></a><a name="isprint"></a>isprint
 
 測試地區設定中的項目是否為可列印的字元。
 
@@ -497,7 +497,7 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -505,11 +505,11 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是可列印字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是可列印的;**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **print**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -550,7 +550,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a><a name="ispunct"></a>是punct
+## <a name="ispunct"></a><a name="ispunct"></a>ispunct
 
 測試地區設定中的項目是否為標點符號字元。
 
@@ -561,7 +561,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -569,11 +569,11 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是標點符號字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是標點符號字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) `<` [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **punct**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -615,7 +615,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a><a name="isspace"></a>正空間
+## <a name="isspace"></a><a name="isspace"></a>isspace
 
 測試地區設定中的項目是否為空白字元。
 
@@ -626,7 +626,7 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -634,11 +634,11 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是空白字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是空白字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **space**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -680,7 +680,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>是
+## <a name="isupper"></a><a name="isupper"></a>isupper
 
 測試地區設定中的元素是否為大寫。
 
@@ -691,7 +691,7 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -699,11 +699,11 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是大寫字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是大寫字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **upper**， `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -745,7 +745,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a><a name="isxdigit"></a>正號
+## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
 
 測試地區設定中的項目是否為用來表示十六進位數字的字元。
 
@@ -756,7 +756,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要測試的元素。
 
 *Loc*\
@@ -764,11 +764,11 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>傳回值
 
-如果所測試的元素是用來表示十六進位數字的字元，便會傳回 **true**；如果不是，則會傳回 **false**。
+**`true`** 如果測試的元素是用來表示十六進位數位的字元，則為，**`false`** 如果不是，則為。
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [is](../standard-library/ctype-class.md#is)（ **ctype** \< **CharType**> ：： **xdigit**， `Ch` ）。
 
 十六進位數字會使用以 16 為底數的方式來表示數字，其中是使用數字 0 到 9 再加上不區分大小寫的字母 A 到 F，來表示十進位數字 0 到 15。
 
@@ -812,7 +812,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>降
+## <a name="tolower"></a><a name="tolower"></a>tolower
 
 將字元轉換為小寫。
 
@@ -823,7 +823,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要轉換為小寫的字元。
 
 *Loc*\
@@ -835,7 +835,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [到下部](../standard-library/ctype-class.md#tolower) `Ch`( 。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [tolower](../standard-library/ctype-class.md#tolower)（ `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -861,7 +861,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>到上
+## <a name="toupper"></a><a name="toupper"></a>toupper
 
 將字元轉換為大寫。
 
@@ -872,7 +872,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*\
+*頻道*\
 要轉換為大寫的字元。
 
 *Loc*\
@@ -884,7 +884,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="remarks"></a>備註
 
-範本函數返回[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType** `Loc`> >()。 [到上](../standard-library/ctype-class.md#toupper)`Ch`( 。
+此範本函式會傳回[use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ `Loc` ）。 [toupper](../standard-library/ctype-class.md#toupper)（ `Ch` ）。
 
 ### <a name="example"></a>範例
 
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<區域設定>](../standard-library/locale.md)
+[\<locale>](../standard-library/locale.md)

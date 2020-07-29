@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737563"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224873"
 ---
 # <a name="error_category-class"></a>error_category 類別
 
@@ -60,7 +60,7 @@ error_category(const error_category&) = delete
 |[name](#name)|傳回分類的名稱。|
 |[system_category](#system)||
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
@@ -113,7 +113,7 @@ virtual bool equivalent(const error_code& _Code,
 
 #### <a name="return-value"></a>傳回值
 
-如果分類和值相等，則為**true** ;否則**為 false**。
+**`true`** 如果類別和值相等，則為，否則為 **`false`** 。
 
 #### <a name="remarks"></a>備註
 
@@ -179,7 +179,7 @@ bool operator==(const error_category& right) const;
 
 #### <a name="return-value"></a>傳回值
 
-如果物件相等，即為 **true**；如果物件不相等，則為 **false**。
+**`true`** 如果物件相等，則為，**`false`** 如果物件不相等則為。
 
 #### <a name="remarks"></a>備註
 
@@ -200,7 +200,7 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="return-value"></a>傳回值
 
-如果物件不等於傳入的物件，**則為 true** ， `error_category` 否則為 `error_category` **false**。 *right*
+**`true`** 如果 `error_category` 物件不等於 `error_category` *直接*傳入的物件，則為，否則為 **`false`** 。
 
 #### <a name="remarks"></a>備註
 
@@ -221,7 +221,7 @@ bool operator<(const error_category& right) const;
 
 #### <a name="return-value"></a>傳回值
 
-如果 `error_category` 小於傳入以進行比較的 `error_category` 物件，即為 **true**；否則為 **false**。
+**`true`** 如果 `error_category` 物件小於 `error_category` 傳入以進行比較的物件，則為，否則為 **`false`** 。
 
 #### <a name="remarks"></a>備註
 
@@ -243,4 +243,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>備註
 
-此類型定義是**int**的同義字。
+這個型別定義是的同義字 **`int`** 。

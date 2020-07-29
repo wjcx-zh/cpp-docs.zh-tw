@@ -11,12 +11,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: e640d18dc3755385188e166c57ad5e912ac24fb4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de90cd2068f9b701167a340fe0b335e2a6c93102
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225796"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元正和負運算子：+ 和 -
 
@@ -29,9 +29,9 @@ ms.locfileid: "80160589"
 
 ## <a name="-operator"></a>+ 運算子
 
-一元加號運算子（ **+** ）的結果是其運算元的值。 一元加法運算子的運算元必須屬於算術類型。
+一元加號運算子（）的結果 **+** 是其運算元的值。 一元加法運算子的運算元必須屬於算術類型。
 
-整數提升會在整數運算元上執行。 結果類型會是運算元提升後的類型。 因此，運算式 `+ch`，其中 `ch` 的類型為**char**，會產生類型**int**。此值未修改。 如需如何完成升級的詳細資訊，請參閱[標準轉換](standard-conversions.md)。
+整數提升會在整數運算元上執行。 結果類型會是運算元提升後的類型。 因此，運算式 `+ch` （其中 `ch` 的類型為 **`char`** ）會產生類型，而 **`int`** 值則會未經修改。 如需如何完成升級的詳細資訊，請參閱[標準轉換](standard-conversions.md)。
 
 ## <a name="--operator"></a>- 運算子
 
@@ -39,11 +39,11 @@ ms.locfileid: "80160589"
 
 整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。 如需如何執行升級的詳細資訊，請參閱[標準轉換](standard-conversions.md)。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 不帶正負號數量的一元否定執行方式是 2^n 減去運算元的值，其中 n 是指定不帶正負號類型之物件的位元數。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

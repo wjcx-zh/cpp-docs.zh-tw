@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2128
 ms.assetid: 08cbf734-75b3-49f2-9026-9b319947612d
-ms.openlocfilehash: 461492946271a141cbdb563b34769e69e9cf75e1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 38cfb3ff81073a123f2d8c3c83c29c42c27d9dc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755170"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225562"
 ---
 # <a name="compiler-error-c2128"></a>編譯器錯誤 C2128
 
 ' function '： alloc_text/same_seg 僅適用于具有 C 連結的函式
 
-`pragma` `alloc_text` 只能與宣告為具有 C 連結的函式搭配使用。
+`#pragma alloc_text`只能與宣告為具有 C 連結的函式搭配使用。
 
 下列範例會產生 C2128：
 

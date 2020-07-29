@@ -108,18 +108,18 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 7a07f0cc66492c5e0c10c82a7a6971313e13d77b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1c05aff71b16c3edf1348466df325caacb027554
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208555"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225627"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
 此樣板類別所描述的物件可控制具有雙向存取之元素的變動長度序列。 您可以使用容器 `list` 來管理一連串的專案，作為雙向連結的節點清單，每個專案都儲存一個元素。
 
-在下面的描述中，`GValue` 與*值*相同，除非後者是 ref 類型，在此情況下會 `Value^`。
+在下面的描述中，與 `GValue` *值*相同，除非後者是 ref 類型，在此情況下為 `Value^` 。
 
 ## <a name="syntax"></a>語法
 
@@ -143,13 +143,13 @@ template<typename Value>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<cliext/list >
+**標頭：**\<cliext/list>
 
 **命名空間：** cliext
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|描述|
+|類型定義|說明|
 |---------------------|-----------------|
 |[list::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|
 |[list::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
@@ -163,9 +163,9 @@ template<typename Value>
 |[list::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[list::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|
 |[list::size_type (STL/CLR)](#size_type)|兩個項目之間帶正負號距離的類型。|
-|[list::value_type (STL/CLR)](#value_type)|元素類型。|
+|[list::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |---------------------|-----------------|
 |[list::assign (STL/CLR)](#assign)|取代所有項目。|
 |[list::back (STL/CLR)](#back)|存取最後一個項目。|
@@ -195,41 +195,41 @@ template<typename Value>
 |[list::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
 |[list::unique (STL/CLR)](#unique)|移除通過指定測試的相鄰項目。|
 
-|屬性|描述|
+|屬性|說明|
 |--------------|-----------------|
 |[list::back_item (STL/CLR)](#back_item)|存取最後一個項目。|
 |[list::front_item (STL/CLR)](#front_item)|存取第一個項目。|
 
-|運算子|描述|
+|運算子|說明|
 |--------------|-----------------|
 |[list::operator= (STL/CLR)](#op_as)|取代受控制的序列。|
-|[operator!= (list) (STL/CLR)](#op_neq)|判斷 `list` 物件是否不等於另一個 `list` 物件。|
-|[operator< (list) (STL/CLR)](#op_lt)|判斷 `list` 物件是否小於另一個 `list` 物件。|
-|[operator<= (list) (STL/CLR)](#op_lteq)|判斷 `list` 物件是否小於或等於另一個 `list` 物件。|
-|[operator== (list) (STL/CLR)](#op_eq)|判斷 `list` 物件是否等於另一個 `list` 物件。|
-|[operator> (list) (STL/CLR)](#op_gt)|判斷 `list` 物件是否大於另一個 `list` 物件。|
-|[operator>= (list) (STL/CLR)](#op_gteq)|判斷 `list` 物件是否大於或等於另一個 `list` 物件。|
+|[operator!= (list) (STL/CLR)](#op_neq)|判斷物件是否 `list` 不等於另一個 `list` 物件。|
+|[operator< （list）（STL/CLR）](#op_lt)|判斷 `list` 物件是否小於另一個 `list` 物件。|
+|[operator<= （list）（STL/CLR）](#op_lteq)|判斷 `list` 物件是否小於或等於另一個 `list` 物件。|
+|[operator = = （list）（STL/CLR）](#op_eq)|判斷 `list` 物件是否等於另一個 `list` 物件。|
+|[operator> （list）（STL/CLR）](#op_gt)|判斷 `list` 物件是否大於另一個 `list` 物件。|
+|[operator>= （list）（STL/CLR）](#op_gteq)|判斷 `list` 物件是否大於或等於另一個 `list` 物件。|
 
 ## <a name="interfaces"></a>介面
 
-|介面|描述|
+|介面|說明|
 |---------------|-----------------|
 |<xref:System.ICloneable>|複製物件。|
 |<xref:System.Collections.IEnumerable>|透過元素進行序列。|
 |<xref:System.Collections.ICollection>|維護元素群組。|
 |<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的專案進行序列。|
 |<xref:System.Collections.Generic.ICollection%601>|維護具類型的元素群組。|
-|IList\<值 >|維護一般容器。|
+|IList\<Value>|維護一般容器。|
 
 ## <a name="remarks"></a>備註
 
 物件會在雙向連結清單中，為它所控制的序列配置並釋出儲存區作為個別節點。 它會改變節點間的連結來重新排列元素，而不會將一個節點的內容複寫到另一個節點。 這表示您可以自由地插入和移除專案，而不會干擾其餘元素。 因此，清單是適用于樣板類別[佇列（stl/clr）](../dotnet/queue-stl-clr.md)或樣板類別[堆疊（STL/clr）](../dotnet/stack-stl-clr.md)之基礎容器的理想候選。
 
-`list` 物件支援雙向反覆運算器，這表示您可以逐步執行指定受控制序列中之專案的反覆運算器，以進入連續的元素。 特殊的前端節點對應至[list：： end （STL/CLR）](../dotnet/list-end-stl-clr.md)`()`所傳回的反覆運算器。 您可以遞減這個反覆運算器，使其到達受控制序列中的最後一個元素（如果有的話）。 您可以遞增清單反覆運算器來到達前端節點，然後再比較是否等於 `end()`。 但是，您無法對 `end()`所傳回的反覆運算器進行取值。
+`list`物件支援雙向反覆運算器，這表示您可以逐步執行連續的專案，方法是指定以受控制序列中的元素。 特殊的前端節點對應至[list：： end （STL/CLR）](../dotnet/list-end-stl-clr.md)傳回的反覆運算器 `()` 。 您可以遞減這個反覆運算器，使其到達受控制序列中的最後一個元素（如果有的話）。 您可以遞增清單反覆運算器，使其到達前端節點，然後再比較是否等於 `end()` 。 但是，您無法對所傳回的反覆運算器進行取值 `end()` 。
 
 請注意，您無法直接指定其數值位置（需要隨機存取反覆運算器）的清單元素。 因此，清單*無法*當做樣板類別[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)的基礎容器使用。
 
-清單反覆運算器會儲存其相關聯清單節點的控制碼，然後再將控制碼儲存至其相關聯的容器。 您只能將反覆運算器與相關聯的容器物件搭配使用。 清單反覆運算器會保持有效，只要其相關聯的清單節點與某個清單相關聯。 此外，有效的反覆運算器也是 dereferencable--您可以使用它來存取或更改所指定的元素值，只要它不等於 `end()`。
+清單反覆運算器會儲存其相關聯清單節點的控制碼，然後再將控制碼儲存至其相關聯的容器。 您只能將反覆運算器與相關聯的容器物件搭配使用。 清單反覆運算器會保持有效，只要其相關聯的清單節點與某個清單相關聯。 此外，有效的反覆運算器也是 dereferencable--您可以使用它來存取或更改其指定的元素值，只要它不等於即可 `end()` 。
 
 清除或移除元素會呼叫其預存值的析構函式。 終結容器會清除所有元素。 因此，其元素類型為 ref 類別的容器，可確保沒有任何元素 outlive 容器。 不過要注意的是，控制碼容器並*不*會摧毀其元素。
 
@@ -259,17 +259,17 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 要插入的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要插入的列舉。
 
-*val*<br/>
+*初始值*<br/>
 要插入之元素的值。
 
 ### <a name="remarks"></a>備註
 
 第一個成員函式會將受控制的序列取代為值*val*的*count*元素的重複。 您可以使用它來填滿具有相同值的所有專案容器。
 
-如果 `InIt` 是整數類型，第二個成員函式的行為會與 `assign((size_type)first, (value_type)last)`相同。 否則，它會將受控制序列取代為序列 [`first`，`last`）。 您可以使用它讓受控制的序列成為另一個序列的複本。
+如果 `InIt` 是整數類型，第二個成員函式的行為會與相同 `assign((size_type)first, (value_type)last)` 。 否則，它會將受控制序列取代為序列 [ `first` ， `last` ）。 您可以使用它讓受控制的序列成為另一個序列的複本。
 
 第三個成員函式會將受控制序列取代為列舉值*右邊*所指定的序列。 您可以使用它，讓受控制的序列成為列舉值所描述之序列的複本。
 
@@ -486,7 +486,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會有效地呼叫[list：： erase （stl/clr）](../dotnet/list-erase-stl-clr.md)`(` [list：： begin （stl/clr）](../dotnet/list-begin-stl-clr.md)`(),` [LIST：： end （stl/clr）](../dotnet/list-end-stl-clr.md)`())`。 您可以使用它來確保受控制的序列是空的。
+此成員函式會實際呼叫[list：： erase （stl/clr）](../dotnet/list-erase-stl-clr.md) `(` [list：： begin （stl/clr）](../dotnet/list-begin-stl-clr.md) `(),` [list：： end （stl/clr）](../dotnet/list-end-stl-clr.md) `())` 。 您可以使用它來確保受控制的序列是空的。
 
 ### <a name="example"></a>範例
 
@@ -543,7 +543,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T2` 的物件，可做為受控制序列的常數隨機存取反覆運算器。
+此類型描述未指定類型的物件 `T2` ，可做為受控制序列的常數隨機存取反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -628,7 +628,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T4` 的物件，可做為受控制序列的常數反向反覆運算器。
+此類型描述未指定類型的物件 `T4` ，可做為受控制序列的常數反向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -724,7 +724,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[list：： size （STL/CLR）](../dotnet/list-size-stl-clr.md)`() == 0`。 您可以使用它來測試清單是否為空的。
+成員函式會對空的受控制序列傳回 true。 它相當於[list：： size （STL/CLR）](../dotnet/list-size-stl-clr.md) `() == 0` 。 您可以使用它來測試清單是否為空的。
 
 ### <a name="example"></a>範例
 
@@ -847,7 +847,7 @@ iterator erase(iterator first, iterator last);
 
 第二個成員函式會移除 [`first`, `last`) 範圍中受控制序列中的元素。 您可以使用它來移除零個或多個連續元素。
 
-這兩個成員函式會傳回反覆運算器，指定任何移除的元素之後剩餘的第一個元素，如果沒有這類元素，則會`()` [list：： end （STL/CLR）](../dotnet/list-end-stl-clr.md) 。
+這兩個成員函式會傳回反覆運算器，其中指定任何移除的元素之後剩餘的第一個專案，如果沒有這類元素，則傳回[list：： end （STL/CLR）](../dotnet/list-end-stl-clr.md) `()` 。
 
 清除元素時，元素複本的數目是抹除結尾和序列最接近端之間的元素數目的線性。 （清除序列任一結尾的一個或多個專案時，不會複製任何專案）。
 
@@ -1193,7 +1193,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型為 `GValue` 的物件，描述要與這個樣板容器類別的泛型介面搭配使用的預存專案值。
+此類型描述類型的物件 `GValue` ，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。
 
 ### <a name="example"></a>範例
 
@@ -1263,10 +1263,10 @@ void insert(iterator where,
 *last*<br/>
 要插入的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要插入的列舉。
 
-*val*<br/>
+*初始值*<br/>
 要插入之元素的值。
 
 *where*<br/>
@@ -1280,11 +1280,11 @@ void insert(iterator where,
 
 第二個成員函式會插入 value *val*的*count*元素的重複專案。 您可以使用它來插入零個或多個連續元素，這些都是相同值的所有複本。
 
-如果 `InIt` 是整數類型，第三個成員函式的行為即與 `insert(where, (size_type)first, (value_type)last)` 相同。 否則，它會插入序列 [`first`，`last`）。 您可以使用它來插入從另一個序列複製的零個或多個連續元素。
+如果 `InIt` 是整數類型，第三個成員函式的行為即與 `insert(where, (size_type)first, (value_type)last)` 相同。 否則，它會插入序列 [ `first` ， `last` ）。 您可以使用它來插入從另一個序列複製的零個或多個連續元素。
 
 第四個成員函式會插入*右邊*指定的序列。 您可以使用它來插入列舉值所描述的序列。
 
-當插入單一專案時，元素複本的數目是插入點和序列最接近端之間的元素數目的線性。 （在序列的任一端插入一或多個專案時，不會複製任何元素）。如果 `InIt` 是輸入反覆運算器，則第三個成員函式會針對序列中的每個元素，有效地執行單一插入。 否則，在插入 `N` 專案時，元素複本的數目會是線性，`N` 加上插入點和序列最接近端之間的元素數目。
+當插入單一專案時，元素複本的數目是插入點和序列最接近端之間的元素數目的線性。 （在序列的任一端插入一或多個專案時，不會複製任何元素）。如果 `InIt` 是輸入反覆運算器，則第三個成員函式會針對序列中的每個元素，有效地執行單一插入。 否則，在插入專案時 `N` ，元素複本的數目會是線性， `N` 加上插入點和序列最接近端之間的元素數目。
 
 ### <a name="example"></a>範例
 
@@ -1367,7 +1367,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T1` 的物件，可做為受控制序列的隨機存取反覆運算器。
+此類型描述未指定類型的物件 `T1` ，可作為受控制序列的隨機存取反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1432,10 +1432,10 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 要插入的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要插入的物件或範圍。
 
-*val*<br/>
+*初始值*<br/>
 要插入之元素的值。
 
 ### <a name="remarks"></a>備註
@@ -1450,19 +1450,19 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(list<Value>% right);`
 
-使用序列 [`right.begin()`，`right.end()`），初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是清單物件*許可權*所控制之序列的複本。
+使用序列 [，）初始化受控制的序列 `right.begin()` `right.end()` 。 您可以使用它來指定初始受控制序列，這是清單物件*許可權*所控制之序列的複本。
 
 此構造函式：
 
 `list(list<Value>^ right);`
 
-使用序列 [`right->begin()`，`right->end()`），初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由其控制碼為*右邊*的清單物件所控制的序列複本。
+使用序列 [，）初始化受控制的序列 `right->begin()` `right->end()` 。 您可以使用它來指定初始受控制序列，這是由其控制碼為*右邊*的清單物件所控制的序列複本。
 
 此構造函式：
 
 `explicit list(size_type count);`
 
-使用值 `value_type()`，初始化具有*count*個元素的受控制序列。 您可以使用它來填滿具有預設值之專案的容器。
+使用具有值的*count*元素，初始化受控制的序列 `value_type()` 。 您可以使用它來填滿具有預設值之專案的容器。
 
 此構造函式：
 
@@ -1476,7 +1476,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(InIt first, InIt last);`
 
-使用序列 [`first`，`last`），初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本。
+使用序列 [，）初始化受控制的序列 `first` `last` 。 您可以使用它，讓受控制的序列成為另一個序列的複本。
 
 此構造函式：
 
@@ -1566,16 +1566,16 @@ template<typename Pred2>
 *pred*<br/>
 元素配對的比較子。
 
-*right*<br/>
+*再*<br/>
 要合併的容器。
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會從*right*所控制的序列中移除所有專案，並將其插入受控制的序列中。 這兩個序列之前都必須依 `operator<` 排序--元素在您透過任一序列進行的過程中，都不能減少值。 產生的序列也會依 `operator<`排序。 您可以使用此成員函式，將值增加的兩個序列合併為同時增加值的序列。
+第一個成員函式會從*right*所控制的序列中移除所有專案，並將其插入受控制的序列中。 這兩個序列都必須依據 `operator<` --元素在您透過任一序列進行的過程中，不能減少值。 產生的序列也會依排序 `operator<` 。 您可以使用此成員函式，將值增加的兩個序列合併為同時增加值的序列。
 
-第二個成員函式的行為與第一個相同，不同之處在于順序是依據 `pred` -- `pred(X, Y)` 針對序列中專案 `Y` 後面的任何元素 `X`，其必須為 false。 您可以使用它來合併兩個序列，由您指定的述詞函式或委派進行排序。
+第二個成員函式的行為與第一個相同，唯一不同的是，順序的排序依據 `pred`  --  `pred(X, Y)` 對於 `X` 序列中元素後面的任何元素都必須是 false `Y` 。 您可以使用它來合併兩個序列，由您指定的述詞函式或委派進行排序。
 
-這兩個函式都會執行穩定的合併--在產生的受控制序列中，任何一個原始受控制序列中的元素都不會有任何配對。 此外，如果在產生的受控制序列中 `X` 和 `Y` 的成對專案具有對等的順序--`!(X < Y) && !(X < Y)`--原始受控制序列中的元素會出現在*right*所控制序列中的專案之前。
+這兩個函式都會執行穩定的合併--在產生的受控制序列中，任何一個原始受控制序列中的元素都不會有任何配對。 此外，如果 `X` 所產生受控制序列中的一對專案和具有對等的順序， `Y` `!(X < Y) && !(X < Y)` 則來自原始受控制序列的元素會出現在*right*所控制序列中的元素之前。
 
 ### <a name="example"></a>範例
 
@@ -1658,12 +1658,12 @@ list<Value>% operator=(list<Value>% right);
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要複製的容器。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -1805,7 +1805,7 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會在受控制序列的結尾插入具有值 `val` 的元素。 您可以使用它將另一個元素附加至清單。
+成員函式會將具有值的元素插入 `val` 受控制序列的結尾。 您可以使用它將另一個元素附加至清單。
 
 ### <a name="example"></a>範例
 
@@ -1845,7 +1845,7 @@ void push_front(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會在受控制序列的開頭插入具有值 `val` 的元素。 您可以使用它，在清單前面加上另一個元素。
+成員函式會將具有值的元素插入 `val` 受控制序列的開頭。 您可以使用它，在清單前面加上另一個元素。
 
 ### <a name="example"></a>範例
 
@@ -1995,12 +1995,12 @@ void remove(value_type val);
 
 #### <a name="parameters"></a>參數
 
-*val*<br/>
+*初始值*<br/>
 要移除之元素的值。
 
 ### <a name="remarks"></a>備註
 
-成員函式會移除受控制序列中的元素，其中 `((System::Object^)val)->Equals((System::Object^)x)` 為 true （如果有的話）。 您可以使用它來清除具有指定值的任意元素。
+成員函式會移除受控制序列中的元素 `((System::Object^)val)->Equals((System::Object^)x)` （如果有的話）。 您可以使用它來清除具有指定值的任意元素。
 
 ### <a name="example"></a>範例
 
@@ -2060,7 +2060,7 @@ template<typename Pred1>
 
 ### <a name="remarks"></a>備註
 
-成員函式會從受控制序列中移除（清除）每個元素 `X`，`pred(X)` 為 true。 您可以使用它來移除符合您指定為函式或委派之條件的所有元素。
+成員函式會從受控制序列中移除（清除）每個 `X` `pred(X)` 為 true 的元素。 您可以使用它來移除符合您指定為函式或委派之條件的所有元素。
 
 ### <a name="example"></a>範例
 
@@ -2178,12 +2178,12 @@ void resize(size_type new_size, value_type val);
 *new_size*<br/>
 受控制序列的新大小。
 
-*val*<br/>
+*初始值*<br/>
 填補元素的值。
 
 ### <a name="remarks"></a>備註
 
-成員函式可確保[list：： size （STL/CLR）](../dotnet/list-size-stl-clr.md)`()` 因而需要會傳回*new_size*。 如果它必須讓受控制的序列變長，第一個成員函式會附加具有值 `value_type()`的元素，而第二個成員函式會附加具有值*val*的元素。 為了讓受控制的序列更短，這兩個成員函式會有效地清除最後一個元素[list：： size （STL/CLR）](../dotnet/list-size-stl-clr.md)`() -` `new_size` 時間。 您可以使用它來確保受控制的序列具有大小*new_size*，方法是修剪或填補目前受控制的序列。
+成員函式可確保[list：： size （STL/CLR）](../dotnet/list-size-stl-clr.md) `()` 因而需要會傳回*new_size*。 如果它必須讓受控制的序列變長，第一個成員函式會附加具有值的元素 `value_type()` ，而第二個成員函式會附加具有值*val*的元素。 為了讓受控制的序列更短，這兩個成員函式會有效地清除最後一個元素[清單：： size （STL/CLR）](../dotnet/list-size-stl-clr.md) `() -` `new_size` 時間。 您可以使用它來確保受控制的序列具有大小*new_size*，方法是修剪或填補目前受控制的序列。
 
 ### <a name="example"></a>範例
 
@@ -2330,7 +2330,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[list：： empty （STL/CLR）](../dotnet/list-empty-stl-clr.md)`()`。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[list：： empty （STL/CLR）](../dotnet/list-empty-stl-clr.md) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -2438,9 +2438,9 @@ template<typename Pred2>
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會重新排列受控制序列中的專案，使其依 `operator<` 排序--專案在序列中進行時不會在值中降低。 您可以使用這個成員函式，依遞增順序排序序列。
+第一個成員函式會重新排列受控制序列中的元素，使其依 `operator<` --元素排序，而不會在您進行序列的過程中降低。 您可以使用這個成員函式，依遞增順序排序序列。
 
-第二個成員函式的行為與第一個相同，不同之處在于順序是依據 `pred``pred(X, Y)`  -- 排序，而在結果序列中的專案 `Y` 後面的任何元素 `X` 都是 false。 您可以使用它，依照述詞函式或委派所指定的順序來排序序列。
+第二個成員函式的行為與第一個相同，不同之處在于順序的排序依據 `pred`  --  `pred(X, Y)` 為 `X` 結果序列中元素後面的任何元素 `Y` 。 您可以使用它，依照述詞函式或委派所指定的順序來排序序列。
 
 這兩個函式都會執行穩定的排序--原始受控制序列中的元素不成對，會在產生的受控制序列中反轉。
 
@@ -2506,7 +2506,7 @@ void splice(iterator where, list<Value>% right,
 *last*<br/>
 要拼接的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要做為拼接來源的容器。
 
 *where*<br/>
@@ -2514,11 +2514,11 @@ void splice(iterator where, list<Value>% right,
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會在所指向受控制序列中的元素*之前，插入*由*右*所控制的序列。 它也會從*右方*移除所有元素。 （`%right` 不能等於 `this`。）您可以用它來將一個清單全部拼接到另一個。
+第一個成員函式會在所指向受控制序列中的元素*之前，插入*由*右*所控制的序列。 它也會從*右方*移除所有元素。 （ `%right` 不得等於 **`this`** ）。您可以用它來將一個清單全部拼接到另一個。
 
-第二個成員函式會*先*在*right*所控制的序列中移除所指的專案，然後將它插入至所指向*之受控制*序列中的元素前面。 （如果 `where` `==` `first` `||` `where` `== ++first`，則不會發生任何變更）。您可以使用它將一個清單的單一專案拼接成另一個。
+第二個成員函式會*先*在*right*所控制的序列中移除所指的專案，然後將它插入至所指向*之受控制*序列中的元素前面。 （如果 `where` `==``first` `||` `where``== ++first`，不會發生任何變更）。您可以使用它將一個清單的單一專案拼接成另一個。
 
-第三個成員函式會將 [`first`，`last`）指定的子範圍，從由*右*所控制的序列中的專案，插入在*其中*所指向之受控制序列中的元素。 它也會從*right*所控制的序列中移除原始的子範圍。 （如果 `right` `==` `this`，範圍 [`first`，`last`）不能包含在*其中*所指向的元素。）您可以使用它將零個或多個專案的子序列，從一個清單拼接到另一個。
+第三個成員函式會將 [，）中所指定的子範圍，從右邊所控制的序列中的專案，插入所 `first` `last` 指向之受控制序列中的元素。 *right* *where* 它也會從*right*所控制的序列中移除原始的子範圍。 （如果 `right == this` 是，範圍 [ `first` ， `last` ）就不能包含在*其中*所指向的元素）。您可以使用它將零個或多個專案的子序列，從一個清單拼接到另一個。
 
 ### <a name="example"></a>範例
 
@@ -2589,12 +2589,12 @@ void swap(list<Value>% right);
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要交換內容的容器。
 
 ### <a name="remarks"></a>備註
 
-成員函式會在 `*this` 和*右方*之間交換受控制的序列。 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
+成員函式會在和 right 之間交換受控制的序列 **`*this`** 。 *right* 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
 
 ### <a name="example"></a>範例
 
@@ -2709,9 +2709,9 @@ template<typename Pred2>
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會從受控制的序列（清除）中移除比較等於其前一個專案的每個專案--如果元素 `X` 在元素 `Y` 和 `X == Y`的前面，成員函式會移除 `Y`。 您可以使用它來移除每個子序列的相鄰元素（比較相等的）的所有複本。 請注意，如果已排序受控制的序列，例如藉由呼叫[list：： sort （STL/CLR）](../dotnet/list-sort-stl-clr.md)`()`，則成員函式只會保留具有唯一值的元素。 (也因此才名為終端方法)。
+第一個成員函式會從受控制的序列（清除）中移除比較等於其前一個專案的每個專案--如果元素在專案 `X` 和之前，成員函式會 `Y` `X == Y` 移除 `Y` 。 您可以使用它來移除每個子序列的相鄰元素（比較相等的）的所有複本。 請注意，如果已排序受控制的序列（例如藉由呼叫[list：： sort （STL/CLR））](../dotnet/list-sort-stl-clr.md) `()` ，則成員函式只會保留具有唯一值的元素。 (也因此才名為終端方法)。
 
-第二個成員函式的行為與第一個相同，不同之處在于它會移除每個元素，`Y` 在 `pred(X, Y)`的元素 `X` 後面。 您可以使用它來移除相鄰專案的每個子序列的所有，但符合您指定之述詞函式或委派的所有複本。 請注意，如果已排序受控制的序列（例如藉由呼叫 `sort(pred)`），則成員函式只會將沒有對等順序的專案保留給任何其他元素。
+第二個成員函式的行為與第一個相同，不同之處在于它會移除元素後面的每個專案 `Y` `X` `pred(X, Y)` 。 您可以使用它來移除相鄰專案的每個子序列的所有，但符合您指定之述詞函式或委派的所有複本。 請注意，如果已排序受控制的序列（例如藉由呼叫 `sort(pred)` ），則成員函式只會將沒有對等順序的元素保留給任何其他專案。
 
 ### <a name="example"></a>範例
 
@@ -2758,7 +2758,7 @@ a a
 
 ## <a name="listvalue_type-stlclr"></a><a name="value_type"></a>list：： value_type （STL/CLR）
 
-元素類型。
+項目的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -2815,15 +2815,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(left == right)`。 您可以使用它來測試當兩個清單是以元素進行比較時，是否要將*left*與*right*排序。
+運算子函式會傳回 `!(left == right)` 。 您可以使用它來測試當兩個清單是以元素進行比較時，是否要將*left*與*right*排序。
 
 ### <a name="example"></a>範例
 
@@ -2870,7 +2870,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>operator&lt; （list）（STL/CLR）
+## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>operator &lt; （list）（STL/CLR）
 
 清單小於比較。
 
@@ -2884,15 +2884,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-如果 `i` 的最低位置 `!(right[i] < left[i])` 也是 `left[i] < right[i]`，則運算子函數會傳回 true。 否則，它會傳回 `left->size() < right->size()` 您用它來測試當兩個清單是以元素進行比較時 *，是否要*在*右邊*排序。
+如果的最低位置也為 true，則運算子函數 `i` 會傳回 true `!(right[i] < left[i])` `left[i] < right[i]` 。 否則，它會傳回 `left->size() < right->size()` 您用它來測試當兩個清單*right*是以元素進行比較時，*左側*是否已排序。
 
 ### <a name="example"></a>範例
 
@@ -2939,7 +2939,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator&lt;= （list）（STL/CLR）
+## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator &lt; = （list）（STL/CLR）
 
 列出小於或等於比較。
 
@@ -2953,15 +2953,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(right < left)`。 您可以使用它來測試當兩個清單是以元素進行比較時，*左側*是否未按*右*排序。
+運算子函式會傳回 `!(right < left)` 。 您可以使用它來測試當兩個清單是以元素進行比較時，*左側*是否未按*右*排序。
 
 ### <a name="example"></a>範例
 
@@ -3022,15 +3022,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-只有當*left*和*right*控制的序列具有相同的長度，且每個位置 `i``left[i] ==` `right[i]`時，運算子函數才會傳回 true。 您可以使用它來測試當兩個清單是以元素進行比較時，*左側*是否與*右*排序相同。
+只有當*left*和*right*所控制的序列具有相同的長度，且每個位置都有相同的時，運算子函數才會傳回 true `i` `left[i] ==` `right[i]` 。 您可以使用它來測試當兩個清單是以元素進行比較時，*左側*是否與*右*排序相同。
 
 ### <a name="example"></a>範例
 
@@ -3077,7 +3077,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>operator&gt; （list）（STL/CLR）
+## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>operator &gt; （list）（STL/CLR）
 
 清單大於比較。
 
@@ -3091,15 +3091,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `right` `<` `left`。 您可以使用它來測試當兩個清單是以元素進行比較時，是否要*向* *右*排序。
+運算子函式會傳回 `right` `<` `left` 。 您可以使用它來測試當兩個清單是以元素進行比較時，是否要*向**右*排序。
 
 ### <a name="example"></a>範例
 
@@ -3146,7 +3146,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator&gt;= （list）（STL/CLR）
+## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator &gt; = （list）（STL/CLR）
 
 列出大於或等於比較。
 
@@ -3160,15 +3160,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(left` `<` `right)`。 您可以使用它來*測試當兩*個清單是以元素進行比較時，*左側*是否未排序。
+運算子函式會傳回 `!(left` `<` `right)` 。 您可以使用它來*測試當兩*個清單是以元素進行比較時，*左側*是否未排序。
 
 ### <a name="example"></a>範例
 

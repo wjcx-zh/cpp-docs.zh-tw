@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2ef9c879c160d4b27fc51afbdef0e709058bda79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988415"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225679"
 ---
 # <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
 
@@ -65,7 +65,7 @@ int main () {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 EventReceiver::Handler
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 In event handler H1
@@ -215,7 +215,7 @@ int main() {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 17
@@ -292,7 +292,7 @@ int main() {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 Click(x=7,y=3.14159)
@@ -381,7 +381,7 @@ int main() {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 In event handler H1
@@ -469,14 +469,14 @@ int main() {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-不能指定簡單事件來覆寫或隱藏基類事件。  您必須定義所有事件的存取子函式，然後在每個存取子函式上指定 `new` 或 `override` 關鍵字。
+不能指定簡單事件來覆寫或隱藏基類事件。  您必須定義所有事件的存取子函式，然後 **`new`** `override` 在每個存取子函數上指定或關鍵字。
 
 ```cpp
 // mcppv2_events5_a.cpp
@@ -586,7 +586,7 @@ int main () {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 hi
@@ -640,13 +640,13 @@ int main() {
 }
 ```
 
-**Output**
+**輸出**
 
 ```Output
 hello
 hello
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [event](../extensions/event-cpp-component-extensions.md)

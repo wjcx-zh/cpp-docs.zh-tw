@@ -1,24 +1,24 @@
 ---
-title: HOW TO：使用中的屬性C++/CLI
+title: 如何：在 C++/CLI 中使用屬性
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225666"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>HOW TO：使用中的屬性C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用屬性
 
-這篇文章示範如何使用中的屬性C++/CLI。
+本文說明如何在 c + +/CLI 中使用屬性
 
-## <a name="basic-properties"></a>基本內容
+## <a name="basic-properties"></a>基本特性
 
-基本屬性，這些只是指派和擷取私用資料成員 — 您不需要明確定義取得和設定存取子函式，因為編譯器會自動提供在給定的資料類型的屬性時。 此程式碼示範基本的屬性：
+對於只會指派和抓取私用資料成員的基本屬性，您不需要明確地定義 get 和 set 存取子函式，因為編譯器會在僅提供屬性的資料類型時，自動提供它們。 此程式碼示範基本屬性：
 
 ```cpp
 // SimpleProperties.cpp
@@ -43,7 +43,7 @@ c->Size = 111
 
 ## <a name="static-properties"></a>靜態屬性
 
-此程式碼範例示範如何宣告及使用的靜態屬性。  靜態屬性只能存取其類別的靜態成員。
+此程式碼範例示範如何宣告和使用靜態屬性。  靜態屬性只能存取其類別的靜態成員。
 
 ```cpp
 // mcppv2_property_3.cpp
@@ -82,15 +82,15 @@ int main() {
 47
 ```
 
-## <a name="indexed-properties"></a>索引的屬性
+## <a name="indexed-properties"></a>已編制索引的屬性
 
-索引的屬性通常會公開的資料結構，會使用註標運算子來存取。
+索引屬性通常會公開使用注標運算子存取的資料結構。
 
-如果您使用預設索引屬性，您可以存取的資料結構，只是藉由參考類別名稱，但如果您使用使用者定義的索引的屬性，您必須指定要存取的資料結構的屬性名稱。
+如果您使用預設的索引屬性，只要參考類別名稱即可存取資料結構，但是如果您使用使用者定義的索引屬性，就必須指定屬性名稱來存取資料結構。
 
-如需如何使用索引子中撰寫C#，請參閱[如何：使用C#索引子 (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
+如需如何使用以 c # 撰寫之索引子的詳細資訊，請參閱[如何：使用 c # 索引子（c + +/cli）](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
 
-此程式碼範例示範如何使用預設和使用者定義索引的屬性：
+此程式碼範例示範如何使用預設和使用者定義的索引屬性：
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-下一個範例示範如何呼叫的預設索引子使用`this`指標。
+下一個範例示範如何使用指標呼叫預設的索引子 **`this`** 。
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -177,7 +177,7 @@ private:
 };
 ```
 
-此範例示範如何使用<xref:System.Reflection.DefaultMemberAttribute>指定的預設索引子：
+這個範例示範如何使用 <xref:System.Reflection.DefaultMemberAttribute> 來指定預設的索引子：
 
 ```cpp
 // specify_default_indexer.cpp
@@ -193,7 +193,7 @@ public ref struct Squares {
 };
 ```
 
-下一個範例會使用前一個範例中建立的中繼資料。
+下一個範例會取用上一個範例中所建立的中繼資料。
 
 ```cpp
 // consume_default_indexer.cpp
@@ -211,7 +211,7 @@ int main() {
 
 ## <a name="virtual-properties"></a>虛擬屬性
 
-此程式碼範例示範如何宣告及使用虛擬屬性：
+此程式碼範例示範如何宣告和使用虛擬屬性：
 
 ```cpp
 // mcppv2_property_4.cpp
@@ -257,11 +257,11 @@ int main() {
 43
 ```
 
-## <a name="abstract-and-sealed-properties"></a>抽象和密封屬性
+## <a name="abstract-and-sealed-properties"></a>Abstract 和 sealed 屬性
 
-雖然[抽象](../extensions/abstract-cpp-component-extensions.md)並[密封](../extensions/sealed-cpp-component-extensions.md)關鍵字會指定為有效的 ECMA 中C++/CLI 規格，microsoftC++編譯器，您不能指定它們在一般的屬性，以及非 trivial 屬性的屬性宣告。
+雖然[abstract](../extensions/abstract-cpp-component-extensions.md)和[SEALED](../extensions/sealed-cpp-component-extensions.md)關鍵字在 ECMA c + +/cli 規格中指定為有效，但在 Microsoft c + + 編譯器中，您不能在一般屬性上，也不能在非一般屬性的屬性宣告上指定它們。
 
-若要宣告的密封或抽象屬性，您必須定義非 trivial 屬性，然後指定`abstract`或`sealed`關鍵字上取得和設定存取子函式。
+若要宣告密封或抽象屬性，您必須定義非一般屬性，然後在 **`abstract`** **`sealed`** get 和 set 存取子函式上指定或關鍵字。
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -324,9 +324,9 @@ int main() {
 87
 ```
 
-## <a name="multidimensional-properties"></a>多維屬性
+## <a name="multidimensional-properties"></a>多維度屬性
 
-您可以使用多維度的屬性來定義使用非標準的數目的參數的屬性存取子方法。
+您可以使用多維度屬性來定義採用非標準參數數目的屬性存取子方法。
 
 ```cpp
 // mcppv2_property_5.cpp
@@ -370,7 +370,7 @@ int main() {
 
 ## <a name="overloading-property-accessors"></a>多載屬性存取子
 
-下列範例示範如何多載索引的屬性。
+下列範例示範如何多載已編制索引的屬性。
 
 ```cpp
 // mcppv2_property_6.cpp
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[屬性](../extensions/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

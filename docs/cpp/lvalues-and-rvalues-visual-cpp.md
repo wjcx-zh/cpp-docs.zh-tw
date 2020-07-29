@@ -1,20 +1,20 @@
 ---
-title: 值類別：左值和右值（C++）
+title: 值類別：左值和右值（c + +）
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 23625ddf44d16a4dc408b87f27b9cdfba7a9cbd4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b4b3ba5fdbc11ec97870b0f06fd1aabd3b57f5ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225965"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Lvalues 和 Rvalues (C++)
 
-每C++個運算式都有類型，而且屬於*值分類*。 值類別目錄是編譯器在運算式評估期間建立、複製和移動暫存物件時必須遵循之規則的基礎。
+每個 c + + 運算式都有類型，而且屬於*值分類*。 值類別目錄是編譯器在運算式評估期間建立、複製和移動暫存物件時必須遵循之規則的基礎。
 
 C + + 17 標準定義了運算式值分類，如下所示：
 
@@ -26,9 +26,9 @@ C + + 17 標準定義了運算式值分類，如下所示：
 
 下圖說明類別之間的關聯性：
 
-![C++運算式值分類](media/value_categories.png "C++運算式值分類")
+![C + + 運算式值類別目錄](media/value_categories.png "C + + 運算式值類別目錄")
 
-左值具有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括**const**變數、陣列元素、傳回左值參考的函式呼叫、位欄位、等位和類別成員。
+左值具有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括 **`const`** 變數、陣列元素、傳回左值參考的函式呼叫、位欄位、等位和類別成員。
 
 X prvalue 運算式沒有可供您的程式存取的位址。 X prvalue 運算式的範例包括常值、傳回非參考型別的函式呼叫，以及在運算式 evalution 期間建立的暫存物件，但只能由編譯器存取。
 
@@ -66,7 +66,7 @@ int main()
 > [!NOTE]
 > 本主題中的範例將說明運算子未多載時的正確和不正確用法。 藉由多載運算子，您就可以讓像是 `j * 4` 這樣的運算式變成左值。
 
-當您參考物件參考時，通常會使用「*左*值」和「*右*值」等詞彙。 如需參考的詳細資訊，請參閱左值參考宣告子[： &](../cpp/lvalue-reference-declarator-amp.md)和右值參考宣告子[： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+當您參考物件參考時，通常會使用「*左*值」和「*右*值」等詞彙。 如需參考的詳細資訊，請參閱左值參考宣告子[： &](../cpp/lvalue-reference-declarator-amp.md)和右值參考宣告子[：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

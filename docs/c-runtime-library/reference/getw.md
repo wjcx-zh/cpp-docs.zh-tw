@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226212"
 ---
 # <a name="_getw"></a>_getw
 
@@ -49,7 +49,7 @@ int _getw(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*資料流程*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -58,7 +58,7 @@ int _getw(
 
 ## <a name="remarks"></a>備註
 
-**_Getw**函式會從與*資料流程*相關聯的檔案中讀取**int**類型的下一個二進位值，並遞增相關聯的檔案指標（如果有的話），以指向下一個未讀取的字元。 **_getw**不會假設資料流程中的專案有任何特殊的對齊方式。 **_Getw**可能發生移植問題，因為**int**類型的大小和**int**類型內的位元組順序在系統之間有所不同。
+**_Getw**函式會從與資料流程相關聯的檔案讀取類型的下一個二進位值 **`int`** ，並遞增相關聯的檔案指標（如果有的話），以指向下一個未讀取的字元。 *stream* **_getw**不會假設資料流程中的專案有任何特殊的對齊方式。 **_Getw**可能發生移植問題，因為類型的大小 **`int`** 和類型內的位元組順序在 **`int`** 不同的系統之間有所不同。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: b4341f87226118906749dcdb18b9227e68be6a23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fbe855c2f5de96d81e6c8a27c4bfcee0864f12c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318084"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193038"
 ---
 # <a name="accessing-c-or-c-data-in-__asm-blocks"></a>在 __asm 區塊中存取 C 或 C++ 資料
 
 **Microsoft 特定的**
 
-內嵌組譯碼的方便之處在於能夠依名稱參考 C 或 C++ 變數。 `__asm` 區塊可以在出現該區塊的範圍內參考任何符號，包括變數名稱。 例如，如果 C 變數 `var` 在範圍之內，指令
+內嵌組譯碼的方便之處在於能夠依名稱參考 C 或 C++ 變數。 **`__asm`** 區塊可以參考位於區塊出現範圍內的任何符號，包括變數名稱。 例如，如果 C 變數 `var` 在範圍之內，指令
 
 ```cpp
 __asm mov eax, var
@@ -26,7 +26,7 @@ __asm mov eax, var
 
 會將 `var` 的值儲存在 EAX 中。
 
-如果類別、結構或聯合成員具有唯一名稱,`__asm`則塊只能使用成員名稱引用它,而不指定句點 (`typedef`**.**) 運算符之前的變數或名稱。 不過，如果成員名稱不是唯一的，您必須在句號運算子之前加上變數或 `typedef` 名稱。 例如，下列範例中的結構類型共用 `same_name` 做為其成員名稱。
+如果類別、結構或等位成員有唯一的名稱， **`__asm`** 區塊只能使用成員名稱來參考它，而不需要在 **`typedef`** 句號（**.**）運算子之前指定變數或名稱。 不過，如果成員名稱不是唯一的，您必須將變數或 **`typedef`** 名稱緊接在 period 運算子之前。 例如，下列範例中的結構類型共用 `same_name` 做為其成員名稱。
 
 如果您宣告的變數類型為
 
@@ -72,8 +72,8 @@ int main()
 
 您可以存取 C++ 的資料成員，不需要考慮存取限制。 不過，您無法呼叫成員函式。
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
-[在 __asm 區塊中使用 C 或 C++](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[在 __asm 區塊中使用 C 或 c + +](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

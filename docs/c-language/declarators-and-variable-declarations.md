@@ -6,18 +6,18 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234514"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226447"
 ---
 # <a name="declarators-and-variable-declarations"></a>宣告子和變數宣告
 
 本節其餘部分將說明在這份清單中摘要說明之變數類型宣告的形式和意義。 特別要提的是，其餘各節將說明如何宣告，如下所示：
 
-|變數類型|描述|
+|變數類型|說明|
 |----------------------|-----------------|
 |[簡單變數](../c-language/simple-variable-declarations.md)|使用整數或浮點類型的單一值變數|
 |[陣列](../c-language/array-declarations.md)|由具有相同類型之項目集合組成的變數|
@@ -26,7 +26,7 @@ ms.locfileid: "62234514"
 |[結構](../c-language/structure-declarations.md)|由值集合所組成的變數可以採用不同的類型。|
 |[等位](../c-language/union-declarations.md)|由數個佔用相同儲存空間之不同類型的值所組成的變數|
 
-宣告子是宣告的一部分，用於指定要引入程式的名稱。 它可以包含修飾詞， <strong>\*</strong>例如（指標）和任何 Microsoft 呼叫慣例關鍵字。
+宣告子是宣告的一部分，用於指定要引入程式的名稱。 它可以包含修飾 <strong>\*</strong> 詞，例如（指標）和任何 Microsoft 呼叫慣例關鍵字。
 
 **Microsoft 特定的**
 
@@ -36,7 +36,7 @@ ms.locfileid: "62234514"
 __declspec(thread) char *var;
 ```
 
-`char` 為類型指定名稱，`__declspec(thread)` 和 `*` 是修飾詞，而 `var` 為識別項的名稱。
+**`char`** 是類型規範，而是修飾詞 `__declspec(thread)` `*` ，而 `var` 則是識別碼的名稱。
 
 **結束 Microsoft 專有**
 
@@ -65,7 +65,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 > 如需參考 *declarator* 的語法資訊，請參閱[宣告概觀](../c-language/overview-of-declarations.md)或 [C 語言語法摘要](../c-language/c-language-syntax-summary.md)中的 *declaration* 語法。
 
-當宣告子包含未修改的識別項時，要宣告的項目會具有基底類型。 如果識別碼的左邊<strong>\*</strong>出現星號（），則會將類型修改為指標類型。 如果識別碼的後面接著一個方括弧 (**[ ]**)，表示這個類型已修改為陣列類型。 如果識別項的後面接著一個括號，表示這個類型已修改為函式類型。 如需解譯宣告中優先順序的詳細資訊，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)。
+當宣告子包含未修改的識別項時，要宣告的項目會具有基底類型。 如果 <strong>\*</strong> 識別碼的左邊出現星號（），則會將類型修改為指標類型。 如果識別碼的後面接著一個方括弧 (**[ ]**)，表示這個類型已修改為陣列類型。 如果識別項的後面接著一個括號，表示這個類型已修改為函式類型。 如需解譯宣告中優先順序的詳細資訊，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)。
 
 每個宣告子至少會宣告一個識別項。 宣告子必須包含類型指定名稱，才是一個完整的宣告。 類型指定名稱會指定陣列類型的元素類型、以指標類型定址的物件類型，或是函式的傳回型別。
 
@@ -85,6 +85,6 @@ Microsoft C 編譯器並不會限制可修改算術、結構或等位型別的�
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

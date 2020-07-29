@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231035"
 ---
 # <a name="virtual-functions"></a>虛擬函式
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 請注意，無論 `NameOf` 函式是經由 `Base` 的指標或 `Derived` 的指標叫用，都會呼叫 `Derived` 的函式。 它會呼叫 `Derived` 的函式是因為 `NameOf` 是虛擬函式，而且 `pBase` 和 `pDerived` 都指向 `Derived` 類型的物件。
 
-因為虛擬函式只會針對類別類型的物件呼叫，所以您無法將全域或靜態函式宣告為**虛擬**。
+因為只會針對類別類型的物件呼叫虛擬函式，所以您無法將全域或靜態函式宣告為 **`virtual`** 。
 
-在衍生類別中宣告覆寫函式時，可以使用**virtual**關鍵字，但這是不必要的;虛擬函式的覆寫一律是虛擬的。
+在 **`virtual`** 衍生類別中宣告覆寫函式時，可以使用關鍵字，但這是不必要的; 虛擬函式的覆寫一律是虛擬的。
 
 必須定義基類中的虛擬函式，除非它們是使用*純規範*來宣告。 （如需純虛擬函式的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)）。
 

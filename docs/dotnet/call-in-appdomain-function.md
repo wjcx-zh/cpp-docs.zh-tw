@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988542"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230892"
 ---
 # <a name="call_in_appdomain-function"></a>call_in_appdomain 函式
 
@@ -45,21 +45,21 @@ RetType call_in_appdomain(
 要在其中呼叫函數的 appdomain。
 
 *voidFunc*<br/>
-`void` 函式的指標，該函式採用 N 個參數（0 < = N < = 15）。
+**`void`** 接受 N 個參數（0 <= N <= 15）之函式的指標。
 
 *nonvoidFunc*<br/>
-非`void` 函式的指標，接受 N 個參數（0 < = N < = 15）。
+非函式的指標 **`void`** ，接受 N 個參數（0 <= N <= 15）。
 
-*arg1 。。...Argn*<br/>
-要傳遞至另一個 appdomain 中 `voidFunc` 或 `nonvoidFunc` 的零到15個參數。
+*arg1 .。。...Argn*<br/>
+要傳遞至 `voidFunc` 或 `nonvoidFunc` 其他 appdomain 中的零到15個參數。
 
 ## <a name="return-value"></a>傳回值
 
-在指定的應用程式域中執行 `voidFunc` 或 `nonvoidFunc` 的結果。
+`voidFunc` `nonvoidFunc` 在指定的應用程式域中執行或的結果。
 
 ## <a name="remarks"></a>備註
 
-傳遞至 `call_in_appdomain` 之函式的引數不得為 CLR 類型。
+傳遞至之函式的引數 `call_in_appdomain` 不得為 CLR 類型。
 
 ## <a name="example"></a>範例
 
@@ -107,7 +107,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```
 default appdomain: msl_call_in_appdomain.exe
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>需求
 
-**標頭檔**\<msclr\appdomain.h >
+**標頭檔** \<msclr\appdomain.h>
 
 **命名空間**msclr

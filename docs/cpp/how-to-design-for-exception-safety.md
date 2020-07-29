@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187799"
 ---
 # <a name="how-to-design-for-exception-safety"></a>如何：針對例外狀況安全性設計
 
@@ -85,7 +85,7 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>使用 RAII 用法來管理資源
 
-若要讓例外狀況安全，函式必須確定已使用 `malloc` 或**new**所配置的物件已終結，而且所有資源（例如檔案控制代碼）都已關閉或釋放，即使擲回例外狀況也一樣。 *資源取得是初始化*（RAII）將這類資源的管理系結至自動變數的存留期。 當藉由正常傳回或因發生例外狀況造成函式超出範圍時，會叫用所有完整建構之自動變數的解構函式。 RAII 包裝函式物件 (例如智慧型指標) 會呼叫其解構函式之適當刪除或終止函式。 在例外狀況安全程式碼中，必須立即將每個資源擁有權傳遞到某種 RAII 物件。 請注意，[`vector`]、[`string`]、[`make_shared`]、[`fstream`] 和 [相似類別] 會為您處理資源的取得。  不過，`unique_ptr` 和傳統的 `shared_ptr` 結構是特殊的，因為資源取得是由使用者執行，而不是物件，因此，它們會計算為*資源發行的損毀*，但卻是可懷疑為 RAII 的問題。
+若要讓例外狀況安全，函式必須確定已使用或所配置的物件已終結 `malloc` **`new`** ，而且所有資源（例如檔案控制代碼）都已關閉或釋放，即使擲回例外狀況也是一樣。 *資源取得是初始化*（RAII）將這類資源的管理系結至自動變數的存留期。 當藉由正常傳回或因發生例外狀況造成函式超出範圍時，會叫用所有完整建構之自動變數的解構函式。 RAII 包裝函式物件 (例如智慧型指標) 會呼叫其解構函式之適當刪除或終止函式。 在例外狀況安全程式碼中，必須立即將每個資源擁有權傳遞到某種 RAII 物件。 請注意 `vector` ，、 `string` 、 `make_shared` 、 `fstream` 和類似的類別會為您處理資源的取得。  不過， `unique_ptr` 和傳統 `shared_ptr` 的結構是特殊的，因為資源的取得是由使用者執行，而不是物件，因此，它們會計算為*資源釋放的損毀，* 但也是可懷疑為 RAII 的問題。
 
 ## <a name="the-three-exception-guarantees"></a>這三個例外狀況保證
 
@@ -121,5 +121,5 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[例外C++狀況和錯誤處理的現代化最佳做法](errors-and-exception-handling-modern-cpp.md)<br/>
-[如何：例外狀況和非例外狀況代碼之間的介面](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[適用于例外狀況和錯誤處理的新式 c + + 最佳作法](errors-and-exception-handling-modern-cpp.md)<br/>
+[如何：在例外狀況和非例外狀況程式碼之間進行介面](how-to-interface-between-exceptional-and-non-exceptional-code.md)

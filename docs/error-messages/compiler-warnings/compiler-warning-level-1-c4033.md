@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4033
 ms.assetid: 189a9ec3-ff6d-49dd-b9b2-530b28bbb7c9
-ms.openlocfilehash: d5bee2eb874b965ff99e3dc0038d63d65b346318
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bace6057a7a2981bba2d628d8eb21c67f01c3a22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164348"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230749"
 ---
 # <a name="compiler-warning-level-1-c4033"></a>編譯器警告 (層級 1) C4033
 
@@ -19,7 +19,7 @@ ms.locfileid: "80164348"
 
 函式未傳回值。 傳回未定義的值。
 
-使用 `return` 而無傳回值的函式必須宣告為類型 `void`。
+使用沒有傳回值的函式 **`return`** 必須宣告為類型 **`void`** 。
 
 此錯誤適用於 C 語言程式碼。
 

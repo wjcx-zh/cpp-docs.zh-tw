@@ -1,7 +1,7 @@
 ---
 title: if-else 陳述式 (C++)
 ms.date: 07/20/2019
-description: 使用 if-else 語句C++來控制條件式分支。
+description: 使用 c + + 中的 if-else 語句來控制條件式分支。
 f1_keywords:
 - else_cpp
 - if_cpp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: fd2736d80d68249773c9aa6cf7cb9edffdaadac4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9256e32c89890635c5473a85b4bb3b56bec26d4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178427"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187565"
 ---
 # <a name="if-else-statement-c"></a>if-else 陳述式 (C++)
 
-控制條件分支。 只有在 if*運算式*評估為非零值（或 TRUE）時，才會執行*if 區塊*中的語句。 如果*expression*的值為非零，則會執行*statement1*和區塊中的任何其他語句，並略過 else 區塊（如果有的話）。 如果*expression*的值為零，則會略過 if-區塊，並執行 else-區塊（如果有的話）。 評估為非零的運算式為
+控制條件分支。 只有在 if*運算式*評估為非零值（或）時，才會執行*if 區塊*中的語句 **`true`** 。 如果*expression*的值為非零，則會執行*statement1*和區塊中的任何其他語句，並略過 else 區塊（如果有的話）。 如果*expression*的值為零，則會略過 if-區塊，並執行 else-區塊（如果有的話）。 評估為非零的運算式為
 
-- TRUE
+- **`true`**
 - 非 null 指標，
 - 任何非零的算術值，或
 - 定義算術、布林值或指標類型之明確轉換的類別類型。 （如需轉換的詳細資訊，請參閱[標準轉換](../cpp/standard-conversions.md)）。
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>if 語句與初始化運算式
 
-**Visual Studio 2017 15.3 版和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **if**語句也可以包含宣告和初始化命名變數的運算式。 當只有在 if 區塊範圍內需要變數時，請使用這種形式的 if 語句。
+**Visual Studio 2017 15.3 版和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **`if`** 語句也可以包含宣告和初始化命名變數的運算式。 當只有在 if 區塊範圍內需要變數時，請使用這種形式的 if 語句。
 
 ## <a name="example"></a>範例
 
@@ -159,11 +159,11 @@ int main()
 }
 ```
 
-在**if**語句的所有形式中，都會評估*運算式*（可以有任何值，但結構除外），包括所有的副作用。 除非其中一個*語句*包含[break](../cpp/break-statement-cpp.md)、 [continue](../cpp/continue-statement-cpp.md)或[goto](../cpp/goto-statement-cpp.md)，否則 Control 會從**if**語句傳遞至程式中的下一個語句。
+在語句的所有形式中 **`if`** ，都會評估*運算式*（可以有任何值，但結構除外），包括所有的副作用。 **`if`** 除非其中一個*語句*包含[break](../cpp/break-statement-cpp.md)、 [continue](../cpp/continue-statement-cpp.md)或[goto](../cpp/goto-statement-cpp.md)，否則控制權會從語句傳遞至程式中的下一個語句。
 
-`if...else` 語句的**else**子句會與相同範圍中沒有對應之**else**語句的最接近 previous **if**語句相關聯。
+**`else`** 語句的子句 `if...else` 與 **`if`** 相同範圍中沒有對應語句的最近一個語句相關聯 **`else`** 。
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> 是否為 constexpr 語句
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">if constexpr 語句
 
 **Visual Studio 2017 15.3 版和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：在函式樣板中，您可以使用**if constexpr**語句來進行編譯階段分支決策，而不需要使用多個函數多載。 例如，您可以撰寫處理參數解壓縮的單一函式（不需要任何零參數的多載）：
 
@@ -190,4 +190,4 @@ void f(T&& t, Rest&&... r)
 
 [選取範圍陳述式](../cpp/selection-statements-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)
+[switch 語句（c + +）](../cpp/switch-statement-cpp.md)

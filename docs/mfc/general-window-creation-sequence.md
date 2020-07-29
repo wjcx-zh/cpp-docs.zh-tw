@@ -7,18 +7,18 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63b5e0131642692d9372c148827a583f19114fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618747"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223157"
 ---
 # <a name="general-window-creation-sequence"></a>一般視窗建立順序
 
 當您建立自己的視窗（例如子視窗）時，此架構所使用的程式與[建立檔/視圖](document-view-creation.md)時所述的進程大致相同。
 
-MFC 提供的所有視窗類別都採用[兩階段式的結構](one-stage-and-two-stage-construction-of-objects.md)。 也就是說，在 c + + **new**運算子的調用期間，此函式會配置並初始化 c + + 物件，但不會建立對應的 Windows 視窗。 這是藉由呼叫 window 物件的[Create](reference/cwnd-class.md#create)成員函式來完成。
+MFC 提供的所有視窗類別都採用[兩階段式的結構](one-stage-and-two-stage-construction-of-objects.md)。 也就是說，在 c + + 運算子的調用期間 **`new`** ，此函式會配置並初始化 c + + 物件，但不會建立對應的 Windows 視窗。 這是藉由呼叫 window 物件的[Create](reference/cwnd-class.md#create)成員函式來完成。
 
 成員函式 `Create` 會建立 Windows 視窗，並將其儲存 `HWND` 在 c + + 物件的公用資料成員[m_hWnd](reference/cwnd-class.md#m_hwnd)。 `Create`提供建立參數的完整彈性。 在呼叫之前 `Create` ，您可能會想要使用全域函式[AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass)來註冊視窗類別，以便設定框架的圖示和類別樣式。
 
@@ -35,7 +35,7 @@ MFC 提供的所有視窗類別都採用[兩階段式的結構](one-stage-and-tw
 
 - [終結視窗物件](destroying-window-objects.md)
 
-- [建立檔框架視窗](creating-document-frame-windows.md)
+- [建立文件框架視窗](creating-document-frame-windows.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4122ad2b4adbd0ed290f26428560c569b3754d7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456643"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222442"
 ---
-# <a name="isclass-class"></a>is_class 類別
+# <a name="is_class-class"></a>is_class 類別
 
 測試類型是否為類別。
 
@@ -32,7 +32,7 @@ struct is_class;
 
 ## <a name="remarks"></a>備註
 
-如果類型*Ty*是定義為**類別**或`cv-qualified` **結構**的類型, 或其中之一的形式, 則類型述詞的實例為 true, 否則為 false。
+如果類型*Ty*是定義為或的類型 **`class`** **`struct`** ，或其中之一的形式，則類型述詞的實例為 true `cv-qualified` ，否則為 false。
 
 ## <a name="example"></a>範例
 
@@ -65,7 +65,7 @@ is_class<int> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

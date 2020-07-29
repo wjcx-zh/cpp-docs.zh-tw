@@ -1,5 +1,5 @@
 ---
-title: C 網際網路檔案類別
+title: CInternetFile 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CInternetFile
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: e3f1a7167f5464423754951764c4441513197841
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 460130d98fc9bce761ee293e1a46c86c770b24c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372394"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223066"
 ---
-# <a name="cinternetfile-class"></a>C 網際網路檔案類別
+# <a name="cinternetfile-class"></a>CInternetFile 類別
 
-允許存取使用 Internet 協定的遠端系統上的檔案。
+允許存取使用網際網路通訊協定的遠端系統上的檔案。
 
 ## <a name="syntax"></a>語法
 
@@ -53,45 +53,45 @@ class CInternetFile : public CStdioFile
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[C 網際網路檔案:C網際網路檔案](#cinternetfile)|建構 `CInternetFile` 物件。|
+|[CInternetFile：： CInternetFile](#cinternetfile)|建構 `CInternetFile` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[C 網際網路檔::中止](#abort)|關閉檔案,忽略所有警告和錯誤。|
-|[C 網際網路檔案:關閉](#close)|關閉和`CInternetFile`釋放其資源。|
-|[C網際網路檔:Flush](#flush)|刷新寫入緩衝區的內容,並確保記憶體中的數據寫入目標計算機。|
-|[C 網際網路檔案:取得長度](#getlength)|返回檔的大小。|
-|[C 網際網路檔案:閱讀](#read)|讀取指定的位元組數。|
-|[C互聯網檔::閱讀字串](#readstring)|讀取字元流。|
-|[C 網際網路檔:尋找](#seek)|將指標重新置放到打開的檔案中。|
-|[C 網際網路檔::設定讀取緩衝區大小](#setreadbuffersize)|設置將讀取數據的緩衝區的大小。|
-|[C 網際網路檔::設定寫入緩衝區大小](#setwritebuffersize)|設置將寫入數據的緩衝區的大小。|
-|[C網際網路檔:寫入](#write)|寫入指定的位元組數。|
-|[C網際網路檔::寫入字串](#writestring)|將 null 終止的字串寫入檔案。|
+|[CInternetFile：： Abort](#abort)|關閉檔案，忽略所有警告和錯誤。|
+|[CInternetFile：： Close](#close)|關閉 `CInternetFile` 並釋放其資源。|
+|[CInternetFile：： Flush](#flush)|排清寫入緩衝區的內容，並確定記憶體中的資料已寫入目的電腦。|
+|[CInternetFile：： GetLength](#getlength)|傳回檔案的大小。|
+|[CInternetFile：： Read](#read)|讀取指定的位元組數。|
+|[CInternetFile：： ReadString](#readstring)|讀取字元的資料流程。|
+|[CInternetFile：： Seek](#seek)|重新置放已開啟檔案中的指標。|
+|[CInternetFile：： SetReadBufferSize](#setreadbuffersize)|設定將讀取資料的緩衝區大小。|
+|[CInternetFile：： SetWriteBufferSize](#setwritebuffersize)|設定將寫入資料的緩衝區大小。|
+|[CInternetFile：： Write](#write)|寫入指定的位元組數目。|
+|[CInternetFile：： WriteString](#writestring)|將以 null 結束的字串寫入至檔案。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[C互聯網檔::管理員 HINTERNET](#operator_hinternet)|互聯網句柄的鑄造運算符。|
+|[CInternetFile：： operator HINTERNET](#operator_hinternet)|網際網路控制碼的轉換運算子。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[C互聯網檔::m_hFile](#m_hfile)|檔的句柄。|
+|[CInternetFile：： m_hFile](#m_hfile)|檔案的控制碼。|
 
 ## <a name="remarks"></a>備註
 
-為[CHttpFile](../../mfc/reference/chttpfile-class.md)和[CGopherFile 檔案](../../mfc/reference/cgopherfile-class.md)類提供基類。 您從不直接創建`CInternetFile`物件。 相反,通過調用[CGopherConnection::打開檔](../../mfc/reference/cgopherconnection-class.md#openfile)或[CHTTPConnection::打開請求](../../mfc/reference/chttpconnection-class.md#openrequest),創建其派生類之一的物件。 您還可以透過除錯`CInternetFile`[CFtpConnection::打開檔案](../../mfc/reference/cftpconnection-class.md#openfile)來建立物件。
+提供[CHttpFile](../../mfc/reference/chttpfile-class.md)和[CGopherFile](../../mfc/reference/cgopherfile-class.md)檔案類別的基類。 您永遠不會 `CInternetFile` 直接建立物件。 相反地，請呼叫[CGopherConnection：： OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[CHttpConnection：： OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest)，以建立其衍生類別之一的物件。 您也可以藉 `CInternetFile` 由呼叫[CFtpConnection：： OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)來建立物件。
 
-成員`CInternetFile``Open`函`LockRange``UnlockRange`數,`Duplicate`與`CInternetFile`未為實現 。 如果在`CInternetFile`物件上調用這些函數,您將取得[CNot 支援異常](../../mfc/reference/cnotsupportedexception-class.md)。
+`CInternetFile` `Open` `LockRange` `UnlockRange` `Duplicate` 不會針對執行成員函式、、和 `CInternetFile` 。 如果您在物件上呼叫這些函式 `CInternetFile` ，您會收到[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。
 
-要瞭解有關如何`CInternetFile`與其他 MFC Internet 類合作,請參閱[WinInet](../../mfc/win32-internet-extensions-wininet.md)的 Internet 程式設計文章。
+若要深入瞭解如何 `CInternetFile` 與其他 MFC 網際網路類別搭配運作，請參閱[使用 WinInet 進行網際網路程式設計](../../mfc/win32-internet-extensions-wininet.md)一文。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -105,11 +105,11 @@ class CInternetFile : public CStdioFile
 
 ## <a name="requirements"></a>需求
 
-**標題:** afxinet.h
+**標頭：** afxinet.h。h
 
-## <a name="cinternetfileabort"></a><a name="abort"></a>C 網際網路檔::中止
+## <a name="cinternetfileabort"></a><a name="abort"></a>CInternetFile：： Abort
 
-關閉與此物件關聯的檔,並使該文件無法讀取或寫入。
+關閉與此物件相關聯的檔案，並使檔案無法讀取或寫入。
 
 ```
 virtual void Abort();
@@ -117,13 +117,13 @@ virtual void Abort();
 
 ### <a name="remarks"></a>備註
 
-如果在銷毀物件之前尚未關閉該檔,析構函數將為您關閉該檔。
+如果您在終結物件之前尚未關閉檔案，則此析構函式會為您關閉該檔案。
 
-在處理異常時,`Abort`從兩個重要方面與[Close](#close)不同。 首先,函數`Abort`不會在失敗時引發異常,因為它會忽略故障。 其次,`Abort`如果檔案尚未開啟或以前已關閉,則不**斷言**。
+在處理例外狀況時，會 `Abort` 有兩個重要的方式不同于[關閉](#close)。 首先， `Abort` 函數不會在失敗時擲回例外狀況，因為它會忽略失敗。 第二，如果檔案尚未 `Abort` 開啟或先前已關閉，**則不**會判斷提示。
 
-## <a name="cinternetfilecinternetfile"></a><a name="cinternetfile"></a>C 網際網路檔案:C網際網路檔案
+## <a name="cinternetfilecinternetfile"></a><a name="cinternetfile"></a>CInternetFile：： CInternetFile
 
-創建`CInternetFile`物件時將調用此成員函數。
+建立物件時，會呼叫這個成員函式 `CInternetFile` 。
 
 ```
 CInternetFile(
@@ -144,33 +144,33 @@ CInternetFile(
 ### <a name="parameters"></a>參數
 
 *hFile*<br/>
-互聯網檔的句柄。
+網際網路檔案的控制碼。
 
-*pstrFile 名稱*<br/>
-指向包含檔名的字串的指標。
+*pstrFileName*<br/>
+包含檔案名之字串的指標。
 
 *pConnection*<br/>
-指向[CInternetConnect](../../mfc/reference/cinternetconnection-class.md)物件的指標。
+[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)物件的指標。
 
 *bReadMode*<br/>
-指示檔是否為唯讀檔。
+指出檔案是否為唯讀。
 
-*h 工作階段*<br/>
-互聯網會話的句柄。
+*hSession*<br/>
+網際網路會話的控制碼。
 
 *pstrServer*<br/>
-指向包含伺服器名稱的字串的指標。
+包含伺服器名稱之字串的指標。
 
-*dwContext*<br/>
-`CInternetFile`物件的上下文標識碼。 有關上下文識別碼的詳細資訊,請參閱[WinInet 基礎知識](../../mfc/wininet-basics.md)。
+*dwCoNtext*<br/>
+物件的內容識別碼 `CInternetFile` 。 如需內容識別碼的詳細資訊，請參閱[WinInet 基本概念](../../mfc/wininet-basics.md)。
 
 ### <a name="remarks"></a>備註
 
-您從不直接創建`CInternetFile`物件。 相反,通過調用[CGopherConnection::打開檔](../../mfc/reference/cgopherconnection-class.md#openfile)或[CHTTPConnection::打開請求](../../mfc/reference/chttpconnection-class.md#openrequest),創建其派生類之一的物件。 您還可以透過除錯`CInternetFile`[CFtpConnection::打開檔案](../../mfc/reference/cftpconnection-class.md#openfile)來建立物件。
+您永遠不會 `CInternetFile` 直接建立物件。 相反地，請呼叫[CGopherConnection：： OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[CHttpConnection：： OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest)，以建立其衍生類別之一的物件。 您也可以藉 `CInternetFile` 由呼叫[CFtpConnection：： OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)來建立物件。
 
-## <a name="cinternetfileclose"></a><a name="close"></a>C 網際網路檔案:關閉
+## <a name="cinternetfileclose"></a><a name="close"></a>CInternetFile：： Close
 
-關閉和`CInternetFile`釋放其任何資源。
+關閉 `CInternetFile` 並釋放其任何資源。
 
 ```
 virtual void Close();
@@ -178,11 +178,11 @@ virtual void Close();
 
 ### <a name="remarks"></a>備註
 
-如果檔已打開以進行寫入,則存在對[Flush](#flush)的隱式調用,以確保將所有緩衝數據寫入主機。 使用完檔`Close`後,應調用。
+如果檔案已開啟以供寫入，則會隱含地呼叫來進行排清[，以確保](#flush)所有緩衝的資料都會寫入主機。 `Close`當您完成使用檔案時，應該呼叫。
 
-## <a name="cinternetfileflush"></a><a name="flush"></a>C網際網路檔:Flush
+## <a name="cinternetfileflush"></a><a name="flush"></a>CInternetFile：： Flush
 
-調用此成員函數以刷新寫入緩衝區的內容。
+呼叫這個成員函式，以排清寫入緩衝區的內容。
 
 ```
 virtual void Flush();
@@ -190,35 +190,35 @@ virtual void Flush();
 
 ### <a name="remarks"></a>備註
 
-用於`Flush`確保記憶體中的所有數據實際上已寫入目標計算機,並確保與主機的事務已完成。 `Flush`僅在打開用於寫入`CInternetFile`的物件上有效。
+使用 `Flush` 來確保記憶體中的所有資料都已確實寫入目的電腦，並確保您的主機電腦交易已完成。 `Flush`只有在 `CInternetFile` 開啟以供寫入的物件上才有效。
 
-## <a name="cinternetfilegetlength"></a><a name="getlength"></a>C 網際網路檔案:取得長度
+## <a name="cinternetfilegetlength"></a><a name="getlength"></a>CInternetFile：： GetLength
 
-返回檔的大小。
+傳回檔案的大小。
 
 ```
 virtual ULONGLONG GetLength() const;
 ```
 
-## <a name="cinternetfilem_hfile"></a><a name="m_hfile"></a>C互聯網檔::m_hFile
+## <a name="cinternetfilem_hfile"></a><a name="m_hfile"></a>CInternetFile：： m_hFile
 
-與此物件關聯的檔的句柄。
+與這個物件相關聯之檔案的控制碼。
 
 ```
 HINTERNET m_hFile;
 ```
 
-## <a name="cinternetfileoperator-hinternet"></a><a name="operator_hinternet"></a>C互聯網檔::管理員 HINTERNET
+## <a name="cinternetfileoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetFile：： operator HINTERNET
 
-使用此運算元獲取當前 Internet 工作階段的 Windows 句柄。
+使用此運算子來取得目前網際網路會話的 Windows 控制碼。
 
 ```
 operator HINTERNET() const;
 ```
 
-## <a name="cinternetfileread"></a><a name="read"></a>C 網際網路檔案:閱讀
+## <a name="cinternetfileread"></a><a name="read"></a>CInternetFile：： Read
 
-呼叫此成員函數讀取到給定的記憶體中,從*lpvBuf*開始,指定位元組數*nCount*。
+呼叫這個成員函式以讀入給定的記憶體，從*lpvBuf*開始，指定的位元組數目， *nCount*。
 
 ```
 virtual UINT Read(
@@ -231,22 +231,22 @@ virtual UINT Read(
 *lpBuf*<br/>
 將檔案資料讀取到的記憶體位址指標。
 
-*n( N) Count*<br/>
+*nCount*<br/>
 要寫入的位元組數目。
 
 ### <a name="return-value"></a>傳回值
 
-傳輸至緩衝區的位元組數目。 如果達到檔結尾,則返回值可能小於*nCount。*
+傳輸至緩衝區的位元組數目。 如果已到達檔案結尾，則傳回值可能小於*nCount* 。
 
 ### <a name="remarks"></a>備註
 
-函數傳回實際讀取的位元組數 - 如果檔案結束時,該數位可能小於*nCount。* 如果在讀取檔時發生錯誤,該函數將引發描述錯誤的[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。 請注意，讀取超過檔案結尾不被視為錯誤，而且會擲回任何例外狀況。
+函式會傳回實際讀取的位元組數目，如果檔案結束，則為可能小於*nCount*的數位。 如果在讀取檔案時發生錯誤，函式會擲回描述錯誤的[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。 請注意，讀取超過檔案結尾不被視為錯誤，而且會擲回任何例外狀況。
 
-為了確保檢索所有資料,應用程式必須繼續調用 方法`CInternetFile::Read`, 直到該方法返回零。
+為了確保所有資料都已取得，應用程式必須繼續呼叫 `CInternetFile::Read` 方法，直到該方法傳回零為止。
 
-## <a name="cinternetfilereadstring"></a><a name="readstring"></a>C互聯網檔::閱讀字串
+## <a name="cinternetfilereadstring"></a><a name="readstring"></a>CInternetFile：： ReadString
 
-呼叫此成員函數以讀取字元流,直到它找到換行元。
+呼叫這個成員函式可讀取字元的資料流程，直到找到分行符號為止。
 
 ```
 virtual BOOL ReadString(CString& rString);
@@ -258,30 +258,30 @@ virtual LPTSTR ReadString(
 
 ### <a name="parameters"></a>參數
 
-*普斯特*<br/>
-指向將接收正在讀取的行的字串的指標。
+*pstr*<br/>
+字串的指標，會接收讀取的行。
 
-*nMax*<br/>
+*N 上限*<br/>
 要讀取的最大字元數。
 
 *rString*<br/>
-對接收讀取行的[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件的引用。
+可接收讀取行之[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件的參考。
 
 ### <a name="return-value"></a>傳回值
 
-指向從[CInternetFile](../../mfc/reference/cinternetfile-class.md)物件檢索的普通數據的緩衝區的指標。 無論傳遞給此方法的緩衝區數據類型如何,它都會對數據執行任何操作(例如,轉換為 Unicode),因此必須將返回的數據映射到預期的結構,就像返回**void**<strong>\*</strong>類型一樣。
+緩衝區的指標，其中包含從[CInternetFile](../../mfc/reference/cinternetfile-class.md)物件抓取的純資料。 不論傳遞給這個方法的緩衝區資料類型為何，它都不會對資料執行任何操作（例如，轉換成 Unicode），因此您必須將傳回的資料對應至您預期的結構，如同傳回的類型一樣 **`void`** <strong>\*</strong> 。
 
-如果未讀取任何數據就到達了文件結尾;或者,如果布爾,如果到達檔結尾而不讀取任何資料。"
+如果已到達檔案結尾，但未讀取任何資料，則為 Null。或者，如果布林值為 FALSE，則為，如果已到達檔案結尾，則不讀取任何資料。
 
 ### <a name="remarks"></a>備註
 
-函數將生成的行放入*pstr*參數引用的記憶體中。 當它達到*nMax*指定的字元的最大數量時,它將停止讀取字元。 緩衝區始終接收終止空字元。
+函式會將產生的行放入*pstr*參數所參考的記憶體中。 它會在達到*n 上限*所指定的最大字元數目時停止讀取字元。 緩衝區一律會接收終止的 null 字元。
 
-如果不首先呼叫`ReadString` [SetReadBufferSize,](#setreadbuffersize)則呼叫時將獲得 4096 位元組的緩衝區。
+如果您在 `ReadString` 未先呼叫[SetReadBufferSize](#setreadbuffersize)的情況下呼叫，則會收到4096個位元組的緩衝區。
 
-## <a name="cinternetfileseek"></a><a name="seek"></a>C 網際網路檔:尋找
+## <a name="cinternetfileseek"></a><a name="seek"></a>CInternetFile：： Seek
 
-呼叫此成員函數以重新置放以前打開的檔中的指標。
+呼叫這個成員函式，將指標重新置放在先前開啟的檔案中。
 
 ```
 virtual ULONGLONG Seek(
@@ -291,40 +291,40 @@ virtual ULONGLONG Seek(
 
 ### <a name="parameters"></a>參數
 
-*L 位移*<br/>
-偏移以位元組為單位,以移動檔中的讀/寫指標。
+*lOffset*<br/>
+位移（以位元組為單位），用來移動檔案中的讀取/寫入指標。
 
-*n 從*<br/>
-偏移的相對參照。 必須為下列其中一個值：
+*n*<br/>
+位移的相對參考。 必須為下列其中一個值：
 
-- `CFile::begin`從文件的開頭向前移動檔指標*lOff*位元組。
+- `CFile::begin`將檔案指標*lOff*位元組從檔案的開頭往前移動。
 
-- `CFile::current`從檔案中的當前位置移動檔指標*lOff*位元組。
+- `CFile::current`從檔案中的目前位置移動檔案指標*lOff*位元組。
 
-- `CFile::end`從檔末尾移動檔指標*lOff*位元組。 *lOff*必須是負的才能查找到現有檔中;正值將查找檔末尾。
+- `CFile::end`將檔案指標*lOff* bytes 從檔案結尾移動。 *lOff*必須是負數，才能搜尋現有的檔案;正數值會搜尋超過檔案結尾。
 
 ### <a name="return-value"></a>傳回值
 
-如果請求的位置是合法的,則從文件開頭的新位元組偏移量;否則,該值將未定義,並引發[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。
+如果要求的位置是合法的，則為從檔案開頭起算的新位元組位移。否則，此值會是未定義的，而且會擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-該`Seek`函數允許通過絕對或相對地將指標移動指定數量來隨機存取檔的內容。 在查找過程中實際上不會讀取任何數據。
+函式會 `Seek` 將指標移到指定的數量（絕對或相對），以允許隨機存取檔案的內容。 搜尋期間不會實際讀取任何資料。
 
-此時,僅支援與`CHttpFile`對象關聯的數據調用此成員函數。 FTP 或 gopher 請求不支援它。 如果您呼叫`Seek`這些不支援的服務之一,它將將您傳回 Win32 錯誤代碼ERROR_INTERNET_INVALID_OPERATION。
+此時，只有與物件相關聯的資料，才支援呼叫這個成員函式 `CHttpFile` 。 不支援 FTP 或 gopher 要求。 如果您對 `Seek` 其中一個不支援的服務呼叫，它會將您傳回 Win32 錯誤碼 ERROR_INTERNET_INVALID_OPERATION。
 
-打開檔時,檔指標位於檔開頭的偏移 0。
+當檔案開啟時，檔案指標會在檔案開頭的位移0。
 
 > [!NOTE]
-> 使用`Seek`可能會導致隱式呼叫[Flush](#flush)。
+> 使用 `Seek` 可能會導致隱含的[清除](#flush)呼叫。
 
 ### <a name="example"></a>範例
 
-  請參閱基類實現的範例[(CFile::seek)。](../../mfc/reference/cfile-class.md#seek)
+  請參閱基類實作為範例（ [CFile：： Seek](../../mfc/reference/cfile-class.md#seek)）。
 
-## <a name="cinternetfilesetreadbuffersize"></a><a name="setreadbuffersize"></a>C 網際網路檔::設定讀取緩衝區大小
+## <a name="cinternetfilesetreadbuffersize"></a><a name="setreadbuffersize"></a>CInternetFile：： SetReadBufferSize
 
-調用此成員函數以設置`CInternetFile`派生物件使用的臨時讀取緩衝區的大小。
+呼叫這個成員函式，以設定衍生物件所使用的暫存讀取緩衝區大小 `CInternetFile` 。
 
 ```
 BOOL SetReadBufferSize(UINT nReadSize);
@@ -337,19 +337,19 @@ BOOL SetReadBufferSize(UINT nReadSize);
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-基礎 WinInet API 不執行緩衝,因此請選擇允許應用程式高效讀取數據的緩衝區大小,而不考慮要讀取的數據量。 如果每次對[Read](#read)的調用通常涉及大量數據(例如,四個或更多 KB),則不應需要緩衝區。 但是,如果您調用`Read`以獲取小塊數據,或者使用[ReadString](#readstring)一次讀取單個行,則讀取緩衝區可提高應用程式性能。
+基礎 WinInet Api 不會執行緩衝處理，因此請選擇緩衝區大小，讓您的應用程式有效率地讀取資料，而不論要讀取的資料量為何。 如果每個[讀取](#read)的呼叫通常牽涉到大量的資料 aount （例如，四個或更多的 kb），您應該不需要緩衝區。 不過，如果您呼叫 `Read` 來取得小型資料區塊，或使用[ReadString](#readstring)一次讀取個別的行，則讀取緩衝區會改善應用程式效能。
 
-默認情況下,`CInternetFile`物件不提供任何用於讀取的緩衝。 如果調用此成員函數,則必須確保該檔已打開以進行讀取訪問。
+根據預設， `CInternetFile` 物件不會提供任何緩衝處理來讀取。 如果您呼叫此成員函式，您必須確定已開啟檔案以供讀取存取。
 
-您可以隨時增加緩衝區大小,但收縮緩衝區將不起作用。 如果調用[ReadString](#readstring)`SetReadBufferSize`而不進行 第一次調用,您將獲得 4096 位元組的緩衝區。
+您可以隨時增加緩衝區大小，但壓縮緩衝區不會有任何作用。 如果您在沒有第一次呼叫的情況下呼叫[ReadString](#readstring) `SetReadBufferSize` ，您會收到4096個位元組的緩衝區。
 
-## <a name="cinternetfilesetwritebuffersize"></a><a name="setwritebuffersize"></a>C 網際網路檔::設定寫入緩衝區大小
+## <a name="cinternetfilesetwritebuffersize"></a><a name="setwritebuffersize"></a>CInternetFile：： SetWriteBufferSize
 
-調用此成員函數以設置`CInternetFile`派生物件使用的臨時寫入緩衝區的大小。
+呼叫這個成員函式，以設定衍生物件所使用之暫存寫入緩衝區的大小 `CInternetFile` 。
 
 ```
 BOOL SetWriteBufferSize(UINT nWriteSize);
@@ -362,17 +362,17 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果調用失敗,可能會調用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確定錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗，則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-基礎 WinInet API 不執行緩衝,因此請選擇允許應用程式高效寫入數據的緩衝區大小,而不考慮要寫入的數據量。 如果每次對[Write](#write)的調用通常涉及大量數據(例如,一次四個或更多千位元組),則不應需要緩衝區。 但是,如果調用[Write](#write)來寫入小塊數據,則寫入緩衝區會提高應用程式的性能。
+基礎 WinInet Api 不會執行緩衝處理，因此請選擇可讓您的應用程式有效率地寫入資料的緩衝區大小，而不論要寫入的資料量為何。 如果每個[寫入](#write)的呼叫通常牽涉到大量的資料（例如，一次四個或更多的 kb），您應該不需要緩衝區。 不過，如果您呼叫[write](#write)來寫入小型資料區塊，寫入緩衝區可改善應用程式的效能。
 
-默認情況下,`CInternetFile`物件不提供任何用於寫入的緩衝。 如果調用此成員函數,則必須確保該檔已打開以進行寫入訪問。 您可以隨時更改寫入緩衝區的大小,但這樣做會導致隱式呼叫[Flush](#flush)。
+根據預設， `CInternetFile` 物件不會提供任何用於寫入的緩衝處理。 如果您呼叫此成員函式，您必須確定已開啟檔案以供寫入存取。 您可以隨時變更寫入緩衝區的大小，但這麼做會導致隱含的[清除](#flush)呼叫。
 
-## <a name="cinternetfilewrite"></a><a name="write"></a>C網際網路檔:寫入
+## <a name="cinternetfilewrite"></a><a name="write"></a>CInternetFile：： Write
 
-呼叫此成員函數寫入給定的記憶體 *,lpvBuf,* 指定數量的位*元組 ,nCount*。
+呼叫這個成員函式，以寫入給定的記憶體*lpvBuf*，指定的位元組數目， *nCount*。
 
 ```
 virtual void Write(
@@ -383,18 +383,18 @@ virtual void Write(
 ### <a name="parameters"></a>參數
 
 *lpBuf*<br/>
-指向要寫入的第一個字節的指標。
+要寫入的第一個位元組指標。
 
-*n( N) Count*<br/>
-指定要寫入的位元組數。
+*nCount*<br/>
+指定要寫入的位元組數目。
 
 ### <a name="remarks"></a>備註
 
-如果在寫入數據時發生任何錯誤,該函數將引發描述錯誤的[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。
+如果寫入資料時發生任何錯誤，函式會擲回描述錯誤的[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。
 
-## <a name="cinternetfilewritestring"></a><a name="writestring"></a>C網際網路檔::寫入字串
+## <a name="cinternetfilewritestring"></a><a name="writestring"></a>CInternetFile：： WriteString
 
-此函數將一個 null 終止的字串寫入關聯的檔。
+此函式會將以 null 結束的字串寫入相關聯的檔案。
 
 ```
 virtual void WriteString(LPCTSTR pstr);
@@ -402,12 +402,12 @@ virtual void WriteString(LPCTSTR pstr);
 
 ### <a name="parameters"></a>參數
 
-*普斯特*<br/>
-指向包含要寫入內容的字串的指標。
+*pstr*<br/>
+包含要寫入之內容的字串指標。
 
 ### <a name="remarks"></a>備註
 
-如果在寫入數據時發生任何錯誤,該函數將引發描述錯誤的[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。
+如果寫入資料時發生任何錯誤，函式會擲回描述錯誤的[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。
 
 ## <a name="see-also"></a>另請參閱
 

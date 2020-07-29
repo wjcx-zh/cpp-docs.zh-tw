@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToString [MFC], RemoveKey
 - CMapStringToString [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 544154569c50369b805ba296aa975849f245d4ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28422c26ba2ca77657bfcf166592d2bc69169891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223001"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 類別
 
@@ -61,7 +61,7 @@ class CMapStringToString : public CObject
 
 ## <a name="members"></a>成員
 
-的成員`CMapStringToString`函數類似於類[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)的成員函數。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 只要將`CObject`指標視為返回值或"輸出"函數參數,請替換指向**char**的指標。 無論將`CObject`指標視為"輸入"函數參數,請替換指向**char**的指標。
+的成員函式 `CMapStringToString` 類似于[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)類別的成員函式。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 只要您看到 `CObject` 指標做為傳回值或 "output" 函式參數，請將指標替換為 **`char`** 。 只要您看到 `CObject` 指標作為「輸入」函式參數，請將指標替換為 **`char`** 。
 
 `BOOL CMapStringToString::Lookup(LPCTSTR<key>, CString&<rValue>) const;`
 
@@ -69,54 +69,54 @@ class CMapStringToString : public CObject
 
 `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`
 
-### <a name="public-structures"></a>公共結構
+### <a name="public-structures"></a>公用結構
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[CMapStringtoString::CPair](#cpair)|包含鍵值和關聯字串物件值的嵌套結構。|
+|[CMapStringToString::CPair](#cpair)|包含索引鍵值和相關聯字串物件值的嵌套結構。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[CmapStringtoString::CmapStringtoString](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|建構函式。|
+|[CMapStringToString::CMapStringToString](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[CMapStringtoString::獲取計數](../../mfc/reference/cmapstringtoob-class.md#getcount)|返回此映射中的元素數。|
-|[CMapStringtoString::取得哈希表大小](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|確定哈希表中的當前元素數。|
-|[CMapStringtoString::獲取NextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|獲取下一個反覆運算元素。|
-|[CMapStringtoString::取得大小](../../mfc/reference/cmapstringtoob-class.md#getsize)|返回此映射中的元素數。|
-|[CMapStringtoString::取得起始位置](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|返回第一個元素的位置。|
-|[CMapStringtoString::哈希鍵](../../mfc/reference/cmapstringtoob-class.md#hashkey)|計算指定鍵的哈希值。|
-|[CMapStringtostring::inithashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|初始化哈希表。|
-|[CMapStringtoString::空](../../mfc/reference/cmapstringtoob-class.md#isempty)|測試空映射條件(無元素)。|
-|[CMapStringtoString::查找](../../mfc/reference/cmapstringtoob-class.md#lookup)|根據空指標鍵查找空指標。 指標值(而不是它指向的實體)用於鍵比較。|
-|[CMapStringtoString::尋找鍵](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|返回對與指定鍵值關聯的鍵的引用。|
-|[CMapStringtoString::P獲取第一assoc](#pgetfirstassoc)|獲取指向地圖中第一`CString`個指標的指標。|
-|[CMapStringtoString::P獲取Nextassoc](#pgetnextassoc)|獲取指向下`CString`一個反覆運算的指標。|
-|[CMapStringtoString::P查找](#plookup)|返回指向 其`CString`值 與指定值匹配的指標。|
-|[CMapStringtoString::刪除所有](../../mfc/reference/cmapstringtoob-class.md#removeall)|從此映射中刪除所有元素。|
-|[CMapStringtoString::刪除鍵](../../mfc/reference/cmapstringtoob-class.md#removekey)|刪除由鍵指定的元素。|
-|[CMapStringtoString::Setat](../../mfc/reference/cmapstringtoob-class.md#setat)|將元素插入到地圖中;如果找到匹配的鍵,則替換現有元素。|
+|[CMapStringToString：： GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|傳回此對應中的元素數目。|
+|[CMapStringToString::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|判斷雜湊表中目前的元素數目。|
+|[CMapStringToString::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|取得用於反覆運算的下一個專案。|
+|[CMapStringToString：： GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|傳回此對應中的元素數目。|
+|[CMapStringToString::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|傳回第一個元素的位置。|
+|[CMapStringToString::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|計算指定之索引鍵的雜湊值。|
+|[CMapStringToString::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|初始化雜湊表。|
+|[CMapStringToString：： IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|測試空白對應條件（沒有元素）。|
+|[CMapStringToString：： Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|根據 void 指標索引鍵來查閱 void 指標。 指標值（而非其指向的實體）用於索引鍵比較。|
+|[CMapStringToString：： LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|傳回與指定之索引鍵值相關聯之索引鍵的參考。|
+|[CMapStringToString：:P GetFirstAssoc](#pgetfirstassoc)|取得對應中第一個的指標 `CString` 。|
+|[CMapStringToString：:P GetNextAssoc](#pgetnextassoc)|取得下一個反覆運算的指標 `CString` 。|
+|[CMapStringToString：:P 查閱](#plookup)|傳回的指標， `CString` 其值符合指定的值。|
+|[CMapStringToString：： RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|移除這個對應中的所有元素。|
+|[CMapStringToString::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|移除索引鍵所指定的元素。|
+|[CMapStringToString：： SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|將元素插入至對應中;如果找到相符的索引鍵，則取代現有的元素。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[CMapStringtoString::運算子\[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將元素插入到映射中, 運算子取代`SetAt`。|
+|[CMapStringToString：： operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將專案插入至對應中-的運算子替代 `SetAt` 。|
 
 ## <a name="remarks"></a>備註
 
-`CMapStringToString` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果將地圖儲存到存檔中(使用重載插入**<<**( ) 運算子`Serialize`或使用成員函數,則依次序列化每個元素。
+`CMapStringToString` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 每個專案都會依次序列化，因為它會使用多載的插入（ **<<** ）運算子或成員函式，來儲存對應 `Serialize` 。
 
-如果需要單個`CString`- `CString`元素的轉儲,則必須將轉儲上下文的深度設置為 1 或更大。
+如果您需要個別元素的傾印 `CString` -  `CString` ，您必須將傾印內容的深度設定為1或更大。
 
-刪除`CMapStringToString`物件或刪除其元素時,將根據需要刪除`CString`物件 。
+當 `CMapStringToString` 物件被刪除，或移除其元素時， `CString` 會適當地移除物件。
 
-有關的詳細資訊`CMapStringToString`,請參閱文章["集合](../../mfc/collections.md)"。
+如需有關的詳細資訊 `CMapStringToString` ，請參閱文章[集合](../../mfc/collections.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -126,31 +126,31 @@ class CMapStringToString : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標題:** afxcoll.h
+**標頭：** afxcoll.h。h
 
-## <a name="cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringtoString::CPair
+## <a name="cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair
 
-包含鍵值和關聯的字串物件的值。
+包含索引鍵值和相關聯 string 物件的值。
 
 ### <a name="remarks"></a>備註
 
-這是類[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)中的嵌套結構。
+這是類別[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)內的嵌套結構。
 
-結構由兩個字段組成:
+結構是由兩個欄位所組成：
 
-- `key`鍵類型的實際值。
+- `key`金鑰類型的實際值。
 
-- `value`關聯物件的值。
+- `value`相關聯物件的值。
 
-它用於存儲從[CMapStringToString::P 查找](#plookup)[、CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)和[CMapStringToString::P獲取NextAssoc](#pgetnextassoc)的返回值。
+它用來儲存來自 CMapStringToString 的傳回值[：:P lookup](#plookup)、 [CMapStringToString：:P getfirstassoc](#pgetfirstassoc)和[CMapStringToString：:P getnextassoc](#pgetnextassoc)。
 
 ### <a name="example"></a>範例
 
-  有關使用方式的示例,請參閱[CMapStringToString::P 查找](#plookup)"的範例。
+  如需用法的範例，請參閱[CMapStringToString：:P lookup](#plookup)的範例。
 
-## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringtoString::P獲取第一assoc
+## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString：:P GetFirstAssoc
 
-返回地圖物件的第一個條目。
+傳回 map 物件的第一個專案。
 
 ```
 const CPair* PGetFirstAssoc() const;
@@ -160,19 +160,19 @@ CPair* PGetFirstAssoc();
 
 ### <a name="return-value"></a>傳回值
 
-指向地圖中第一個條目的指標;請參考[CmapStringtoString::CPair](#cpair)。 如果地圖為空,則值為 NULL。
+對應中第一個專案的指標;請參閱[CMapStringToString：： CPair](#cpair)。 如果對應是空的，則值為 Null。
 
 ### <a name="remarks"></a>備註
 
-調用此函數以返回地圖物件中第一個元素的指標。
+呼叫此函式可將指標傳回給 map 物件中的第一個元素。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]
 
-## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringtoString::P獲取Nextassoc
+## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString：:P GetNextAssoc
 
-檢索*由 pAssocRec*指向的地圖元素。
+抓取*pAssocRec*所指向的對應元素。
 
 ```
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;
@@ -182,24 +182,24 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 
 ### <a name="parameters"></a>參數
 
-*帕索克*<br/>
-指向以前[PGetNextAssoc](#pgetnextassoc)或[PGetFirstAssoc](#pgetfirstassoc)調用返回的地圖條目。
+*pAssoc*<br/>
+指向前一個[PGetNextAssoc](#pgetnextassoc)或[PGetFirstAssoc](#pgetfirstassoc)呼叫所傳回的對應專案。
 
 ### <a name="return-value"></a>傳回值
 
-指向地圖中下一個條目的指標;請參考[CmapStringtoString::CPair](#cpair)。 如果元素是地圖中的最後一個元素,則該值為 NULL。
+對應中下一個專案的指標;請參閱[CMapStringToString：： CPair](#cpair)。 如果元素是對應中的最後一個，則此值為 Null。
 
 ### <a name="remarks"></a>備註
 
-調用此方法以反覆運算地圖中的所有元素。 使用 調`PGetFirstAssoc`用 檢索第一個元素,然後通過映射遍`PGetNextAssoc`歷對 的調用來反覆運算。
+呼叫這個方法，即可逐一查看對應中的所有專案。 使用的呼叫來抓取第一個專案 `PGetFirstAssoc` ，然後使用的後續呼叫逐一查看對應 `PGetNextAssoc` 。
 
 ### <a name="example"></a>範例
 
-  請參閱[CMapStringToString::P獲取第一Assoc](#pgetfirstassoc)的範例。
+  請參閱[CMapStringToString：:P getfirstassoc](#pgetfirstassoc)的範例。
 
-## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringtoString::P查找
+## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString：:P 查閱
 
-尋找映射到給定鍵的值。
+查閱對應至指定索引鍵的值。
 
 ```
 const CPair* PLookup(LPCTSTR key) const;
@@ -209,16 +209,16 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>參數
 
-*關鍵*<br/>
-指向要搜索的元素的鍵的指標。
+*key*<br/>
+要搜尋之元素的索引鍵指標。
 
 ### <a name="return-value"></a>傳回值
 
-指向指定鍵的指標。
+指定之索引鍵的指標。
 
 ### <a name="remarks"></a>備註
 
-調用此方法以搜索具有與給定鍵完全匹配的鍵的地圖元素。
+呼叫這個方法，以搜尋具有完全符合指定索引鍵之索引鍵的地圖元素。
 
 ### <a name="example"></a>範例
 
@@ -226,6 +226,6 @@ CPair* PLookup(LPCTSTR key);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 樣品收集](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例收集](../../overview/visual-cpp-samples.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

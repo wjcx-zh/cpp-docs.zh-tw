@@ -6,18 +6,18 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: ebdfea18e6e8445dd734bf43fb6a4ecf422975e9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622738"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223183"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外狀況：從您自己的函式擲回例外狀況
 
 可以只使用 MFC 例外狀況處理範例，來攔截 MFC 或其他程式庫中的函式所擲回的例外狀況。 除了攔截程式庫程式碼擲回的例外狀況之外，如果您正在撰寫可能發生例外狀況的函式，還可以從您自己的程式碼擲回例外狀況。
 
-當擲回例外狀況時，會停止執行目前的函式，並直接跳到最內層的例外狀況框架的**catch**區塊。 例外狀況機制會略過從函式的正常結束路徑。 因此，您必須確定刪除在正常結束要刪除的記憶體區塊。
+當擲回例外狀況時，會停止執行目前的函式，並直接跳到最 **`catch`** 內層的例外狀況框架的區塊。 例外狀況機制會略過從函式的正常結束路徑。 因此，您必須確定刪除在正常結束要刪除的記憶體區塊。
 
 #### <a name="to-throw-an-exception"></a>擲回例外狀況
 

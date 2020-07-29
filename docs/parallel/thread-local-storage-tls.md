@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 888a33161cd33b20d5f40a07f9b54235f06b8bd8
-ms.sourcegitcommit: 57e26bdd7839fce3c4154a61e987d165f0ba6f5b
+ms.openlocfilehash: f677d7382a9747df63023bd83b104a6bb3b74c1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301962"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222650"
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 
@@ -22,9 +22,9 @@ ms.locfileid: "84301962"
 
 ## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>TLS 的編譯器執行
 
-**C + + 11：** `thread_local`儲存類別規範是針對物件和類別成員指定執行緒區域儲存區的建議方式。 如需詳細資訊，請參閱[儲存類別（c + +）](../cpp/storage-classes-cpp.md)。
+**C + + 11：** **`thread_local`** 儲存類別規範是針對物件和類別成員指定執行緒區域儲存區的建議方式。 如需詳細資訊，請參閱[儲存類別（c + +）](../cpp/storage-classes-cpp.md)。
 
-MSVC 也會提供 Microsoft 專有的屬性（ [thread](../cpp/thread.md)）做為擴充儲存類別修飾詞。 使用 **__declspec**關鍵字來宣告**執行緒**變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
+MSVC 也會提供 Microsoft 專有的屬性（ [thread](../cpp/thread.md)）做為擴充儲存類別修飾詞。 使用 **`__declspec`** 關鍵字來宣告 **`thread`** 變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
 
 ```C
 __declspec( thread ) int tls_i = 1;
@@ -34,13 +34,13 @@ __declspec( thread ) int tls_i = 1;
 
 當您宣告靜態繫結的執行緒區域物件和變數時，必須遵守下列指導方針： 這些指導方針同時適用于[thread](../cpp/thread.md)和[thread_local](../cpp/storage-classes-cpp.md)：
 
-- **Thread**屬性只能套用至類別和資料宣告和定義。 它不能用在函式宣告或定義上。 例如，下列程式碼會產生編譯器錯誤：
+- 屬性只能套用 **`thread`** 至類別和資料宣告和定義。 它不能用在函式宣告或定義上。 例如，下列程式碼會產生編譯器錯誤：
 
     ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- **執行緒**修飾詞只能在具有**靜態**範圍的資料項目上指定。 其中包括全域資料物件（**靜態**和**外部**）、本機靜態物件，以及 c + + 類別的靜態資料成員。 無法使用**thread**屬性來宣告自動資料物件。 下列程式碼會產生編譯器錯誤：
+- **`thread`** 只能在具有範圍的資料項目上指定修飾詞 **`static`** 。 其中包括全域資料物件（ **`static`** 和 **`extern`** ）、本機靜態物件，以及 c + + 類別的靜態資料成員。 無法使用屬性來宣告自動資料物件 **`thread`** 。 下列程式碼會產生編譯器錯誤：
 
     ```C
     void func1()
@@ -54,7 +54,7 @@ __declspec( thread ) int tls_i = 1;
     }
     ```
 
-- 執行緒區域物件的宣告和定義都必須指定**thread**屬性。 例如，下列程式碼會產生錯誤：
+- 執行緒區域物件的宣告和定義都必須指定 **`thread`** 屬性。 例如，下列程式碼會產生錯誤：
 
     ```C
     #define Thread  __declspec( thread )
@@ -62,13 +62,13 @@ __declspec( thread ) int tls_i = 1;
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- **Thread**屬性不能當做類型修飾詞使用。 例如，下列程式碼會產生編譯器錯誤：
+- **`thread`** 屬性不能當做類型修飾詞使用。 例如，下列程式碼會產生編譯器錯誤：
 
     ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- 由於允許使用**thread**屬性的 c + + 物件宣告，因此下列兩個範例在語義上是相等的：
+- 由於允許使用屬性的 c + + 物件宣告 **`thread`** ，因此下列兩個範例在語義上是相等的：
 
     ```cpp
     __declspec( thread ) class B
@@ -100,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   `sizeof`包含所要初始化之物件的運算式不代表本身的參考，而且會同時在 c 和 c + + 中啟用。
+   **`sizeof`** 包含所要初始化之物件的運算式不代表本身的參考，而且會同時在 c 和 c + + 中啟用。
 
    C + + 不允許對執行緒資料進行這類動態初始化，因為執行緒區域儲存設備的未來可能會有增強功能。
 

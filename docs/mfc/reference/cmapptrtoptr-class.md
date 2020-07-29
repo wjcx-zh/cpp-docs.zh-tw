@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: b4ae511caab8278daf723bbcb8ffc5d57f5a1cd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442677"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223040"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr 類別
 
@@ -53,7 +53,7 @@ class CMapPtrToPtr : public CObject
 
 ## <a name="members"></a>成員
 
-`CMapPtrToPtr` 的成員函式類似于[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)類別的成員函式。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 只要您看到 `CObject` 指標做為函式參數或傳回值，請將指標替換為**void**。 只要您看到 `CString` 或**char**指標做為函式參數或傳回值，請**將指標替換**為**void**。
+的成員函式 `CMapPtrToPtr` 類似于[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)類別的成員函式。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 只要您看到 `CObject` 指標做為函式參數或傳回值，請將指標替換為 **`void`** 。 只要您看到 `CString` 或的 **`const`** 指標做為函式 **`char`** 參數或傳回值，請將指標替換為 **`void`** 。
 
 `BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMapPtrToPtr::CMapPtrToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMapPtrToPtr：： GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|傳回此對應中的元素數目。|
 |[CMapPtrToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|判斷雜湊表中目前的元素數目。|
@@ -87,21 +87,21 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CMapPtrToPtr：： operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將專案插入地圖中，`SetAt`的運算子替代。|
+|[CMapPtrToPtr：： operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將專案插入至對應中-的運算子替代 `SetAt` 。|
 
 ## <a name="remarks"></a>備註
 
-`CMapPtrToPtr` 併入 IMPLEMENT_DYNAMIC 宏，以支援執行時間類型存取和傾印至 `CDumpContext` 物件。 如果您需要個別地圖元素（指標值）的傾印，您必須將傾印內容的深度設定為1或更大。
+`CMapPtrToPtr`併入 IMPLEMENT_DYNAMIC 宏，以支援執行時間類型存取和傾印至 `CDumpContext` 物件。 如果您需要個別地圖元素（指標值）的傾印，您必須將傾印內容的深度設定為1或更大。
 
 指標指向指標的對應可能不會序列化。
 
 當 `CMapPtrToPtr` 物件被刪除，或當它的項目被移除時，只會移除指標，而非它們參考的實體。
 
-如需 `CMapPtrToPtr`的詳細資訊，請參閱文章[集合](../../mfc/collections.md)。
+如需有關的詳細資訊 `CMapPtrToPtr` ，請參閱文章[集合](../../mfc/collections.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 

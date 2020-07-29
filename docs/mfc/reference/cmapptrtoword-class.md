@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 698e306896fd62888a84b6d6ce55fb4c9678187b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442653"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223027"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord 類別
 
@@ -53,7 +53,7 @@ class CMapPtrToWord : public CObject
 
 ## <a name="members"></a>成員
 
-`CMapPtrToWord` 的成員函式類似于[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)類別的成員函式。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 只要您看到 `CObject` 指標做為函式參數或傳回值，請替換成單字。 只要您看到 `CString` 或**char**指標做為函式參數或傳回值，請**將指標替換**為**void**。
+的成員函式 `CMapPtrToWord` 類似于[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)類別的成員函式。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 只要您看到 `CObject` 指標做為函式參數或傳回值，請替換成單字。 只要您看到 `CString` 或的 **`const`** 指標做為函式 **`char`** 參數或傳回值，請將指標替換為 **`void`** 。
 
 `BOOL CMapPtrToWord::Lookup( const void* <key>, WORD& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMapPtrToWord::CMapPtrToWord](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMapPtrToWord：： GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|傳回此對應中的元素數目。|
 |[CMapPtrToWord::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|判斷雜湊表中目前的元素數目。|
@@ -87,21 +87,21 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CMapPtrToWord：： operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將專案插入地圖中，`SetAt`的運算子替代。|
+|[CMapPtrToWord：： operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將專案插入至對應中-的運算子替代 `SetAt` 。|
 
 ## <a name="remarks"></a>備註
 
-`CMapWordToPtr` 併入 IMPLEMENT_DYNAMIC 宏，以支援執行時間類型存取和傾印至 `CDumpContext` 物件。 如果您需要個別地圖元素的傾印，您必須將傾印內容的深度設定為1或更大。
+`CMapWordToPtr`併入 IMPLEMENT_DYNAMIC 宏，以支援執行時間類型存取和傾印至 `CDumpContext` 物件。 如果您需要個別地圖元素的傾印，您必須將傾印內容的深度設定為1或更大。
 
 指標到單字的對應可能不會序列化。
 
-刪除 `CMapPtrToWord` 物件或移除其元素時，會移除指標和字組。 不會移除索引鍵指標所參考的實體。
+當 `CMapPtrToWord` 物件被刪除，或移除其元素時，會移除指標和字組。 不會移除索引鍵指標所參考的實體。
 
-如需 `CMapPtrToWord`的詳細資訊，請參閱文章[集合](../../mfc/collections.md)。
+如需有關的詳細資訊 `CMapPtrToWord` ，請參閱文章[集合](../../mfc/collections.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 

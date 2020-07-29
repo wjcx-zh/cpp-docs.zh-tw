@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223196"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>編譯器警告 (層級 1) C4346
 
 ' name '：相依名稱不是類型
 
-如果要將相依名稱視為型別，則需要[typename](../../cpp/typename.md)關鍵字。 對於在所有版本的 Visual C++中都相同的程式碼，請將 `typename` 加入至宣告。
+如果要將相依名稱視為型別，則需要[typename](../../cpp/typename.md)關鍵字。 對於所有 Visual C++ 版本中都相同的程式碼，請將新增 **`typename`** 至宣告。
 
 下列範例會產生 C4346：
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-下列範例顯示需要**typename**關鍵字的其他範例：
+下列範例顯示需要關鍵字的其他範例 **`typename`** ：
 
 ```cpp
 // C4346b.cpp

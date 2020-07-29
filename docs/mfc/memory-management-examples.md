@@ -19,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: ca5056303f77f112e18ef09d606789a5b1c92acd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0568b3abbcd5776eab4d0ab9748bcbcd79c2a84b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626308"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228605"
 ---
 # <a name="memory-management-examples"></a>記憶體管理：範例
 
@@ -46,13 +46,13 @@ ms.locfileid: "84626308"
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>若要在堆積上配置位元組陣列（或任何基本資料類型）
 
-1. 使用**new**運算子搭配此範例中顯示的陣列語法：
+1. 使用 **`new`** 運算子搭配此範例中顯示的陣列語法：
 
    [!code-cpp[NVC_MFC_Utilities#2](codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>若要從堆積解除配置陣列
 
-1. 使用**delete**運算子，如下所示：
+1. 使用 **`delete`** 運算子，如下所示：
 
    [!code-cpp[NVC_MFC_Utilities#3](codesnippet/cpp/memory-management-examples_3.cpp)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "84626308"
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>若要在堆積上配置資料結構
 
-1. 使用**new**在堆積上配置資料結構，並**刪除**來解除配置它們，如下列範例所示：
+1. 使用 **`new`** 來配置堆積上的資料結構，並 **`delete`** 將它們解除配置，如下列範例所示：
 
    [!code-cpp[NVC_MFC_Utilities#5](codesnippet/cpp/memory-management-examples_5.cpp)]
 
@@ -84,13 +84,13 @@ ms.locfileid: "84626308"
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>若要在堆積上設定物件
 
-1. 使用**新**的運算子，它會傳回物件的指標，以便在堆積上設定物件。 使用**delete**運算子將它們刪除。
+1. 使用 **`new`** 運算子，其會傳回物件的指標，以便在堆積上設定物件。 使用 **`delete`** 運算子將它們刪除。
 
    下列堆積和框架範例假設此函式 `CPerson` 不接受任何引數。
 
    [!code-cpp[NVC_MFC_Utilities#7](codesnippet/cpp/memory-management-examples_7.cpp)]
 
-   如果此函式的引數 `CPerson` 是**char**的指標，則框架配置的語句會是：
+   如果函式的引數 `CPerson` 是的指標 **`char`** ，則框架配置的語句會是：
 
    [!code-cpp[NVC_MFC_Utilities#8](codesnippet/cpp/memory-management-examples_8.cpp)]
 

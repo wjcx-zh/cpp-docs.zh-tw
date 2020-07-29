@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8777f04b047516ef29ae7bf67ddaf4195e3aaf6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325673"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228020"
 ---
 # <a name="c-floating-point-constants"></a>C 浮點常數
 
@@ -30,7 +30,7 @@ ms.locfileid: "62325673"
 &nbsp;&nbsp;&nbsp;&nbsp;*數位序列*<sub>選擇</sub> **。** *數位順序*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*數位序列*  **。**
 
-*exponent-part*：<br/>
+*指數-部分*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**e** *sign*<sub>opt</sub> *位順序*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**E** *sign*<sub>opt</sub> *位順序*
 
@@ -56,16 +56,16 @@ ms.locfileid: "62325673"
 25E-4     /* =  0.0025 */
 ```
 
-除非前面加上負號（**-**），否則浮點常數為正數。 此時，負號會視為一元算術負運算子。 浮點常數有 `float`、`double` 或 `long double` 型別。
+除非前面加上負號（），否則浮點常數為正數 **-** 。 此時，負號會視為一元算術負運算子。 浮點常數的類型為 **`float`** 、 **`double`** 或 **`long double`** 。
 
-沒有**f**、**F**、**l** 或 **L** 後置字元的浮點常數是 `double` 型別。 如果後置字元是字母 **f** 或 **F**，常數則是 `float` 型別。 如果後置字元是字母 **l** 或 **L**，則是 `long double` 型別。 例如：
+沒有**f**、 **f**、 **l**或**l**尾碼的浮點常數具有類型 **`double`** 。 如果字母**f**或**f**是尾碼，則常數的類型為 **`float`** 。 如果後置字元是字母**l**或**l**，則其類型為 **`long double`** 。 例如：
 
 ```C
 10.0L  /* Has type long double  */
 10.0F  /* Has type float        */
 ```
 
-請注意，Microsoft C 編譯器在內部將 `long double` 表示為 `double` 型別。 如需類型`double`、 `float`和`long double`的詳細資訊，請參閱[基本類型的儲存區](../c-language/storage-of-basic-types.md)。
+請注意，Microsoft C 編譯器在內部表示 **`long double`** 的類型與相同 **`double`** 。 如需類型、和的詳細資訊，請參閱[基本類型的儲存區](../c-language/storage-of-basic-types.md) **`double`** **`float`** **`long double`** 。
 
 您可以省略浮點常數的整數部分，如下列範例所示。 數字 .75 可以包括下列多種方式表示︰
 
@@ -76,6 +76,6 @@ ms.locfileid: "62325673"
 75e-2
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 常數](../c-language/c-constants.md)

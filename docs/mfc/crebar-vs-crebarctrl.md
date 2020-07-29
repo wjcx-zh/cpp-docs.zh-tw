@@ -1,19 +1,19 @@
 ---
-title: CReBar 和 CReBarCtrl 比較
+title: CReBar 和CReBarCtrl 的比較
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CReBar class [MFC], vs. CReBarCtrl
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 05decc095e43426044c4487b9aca05268642f915
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d58efa3c0dfb888f0802a84b11ec597dd1267de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620451"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228631"
 ---
-# <a name="crebar-vs-crebarctrl"></a>CReBar 和 CReBarCtrl 比較
+# <a name="crebar-vs-crebarctrl"></a>CReBar 和CReBarCtrl 的比較
 
 MFC 提供兩個類別來建立 Rebar： [CReBar](reference/crebar-class.md)和[CReBarCtrl](reference/crebarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CReBar`提供 Rebar 通用控制項的所有功能，並為您處理許多必要的通用控制項設定和結構。
 
@@ -24,7 +24,7 @@ Visual C++ 提供兩種利用 Rebar 通用控制項的方式。
 - 使用建立 Rebar `CReBar` ，然後呼叫[CReBar：： GetReBarCtrl](reference/crebar-class.md#getrebarctrl)以取得成員函式的存取權 `CReBarCtrl` 。
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl`是可轉換 Rebar 物件之**this**指標的內嵌成員函式。 這表示在執行階段的函式呼叫沒有額外負荷。
+    >  `CReBar::GetReBarCtrl`是可轉換 **`this`** Rebar 物件之指標的內嵌成員函式。 這表示在執行階段的函式呼叫沒有額外負荷。
 
 - 使用[CReBarCtrl](reference/crebarctrl-class.md)的函式建立 Rebar。
 

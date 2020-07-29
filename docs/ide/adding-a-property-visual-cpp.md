@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228670"
 ---
 # <a name="add-a-property"></a>新增屬性
 
-可以使用 add[屬性精靈](#names-add-property-wizard)將方法添加到專案中的介面。
+您可以使用 [[加入屬性] wizard](#names-add-property-wizard) ，將方法新增至專案中的介面。
 
 **將屬性新增至物件：**
 
@@ -32,9 +32,9 @@ ms.locfileid: "81751182"
 
 1. 從捷徑功能表選擇 [新增]****，然後選擇 [新增屬性]****。
 
-1. 在[add 屬性精靈](#names-add-property-wizard)中,提供創建該屬性的資訊。
+1. 在 [[加入屬性]](#names-add-property-wizard)中，提供用來建立屬性的資訊。
 
-1. 在嚮導的[IDL 屬性](#idl-attributes-add-property-wizard)頁中為屬性指定任何介面定義語言 (IDL) 設置。
+1. 在 wizard 的 [ [IDL 屬性](#idl-attributes-add-property-wizard)] 頁面中，指定屬性的任何介面定義語言（idl）設定。
 
 1. 選取 [完成]**** 以新增屬性。
 
@@ -62,7 +62,7 @@ ms.locfileid: "81751182"
 
   設定屬性的名稱。 針對與 ActiveX 控制項建立關聯的 MFC 分配介面 (Dispinterface)，您可以提供自己的名稱，或從預先定義的清單中選取內建屬性名稱。 如果您提供自己的屬性名稱，[內建]**** 實作類型無法使用。 如需清單中屬性的描述，請參閱[內建屬性](#stock-properties)。
 
-  |介面類型|描述|
+  |介面類型|說明|
   |--------------------|-----------------|
   |ATL 雙重介面、自訂介面和本機自訂介面|提供屬性名稱。|
   |MFC 分配介面 (Dispinterface)、MFC ActiveX 控制項分配介面 (Dispinterface)|提供屬性名稱，或從清單中選取內建屬性。 如果您從清單中選取屬性，[屬性類型]**** 方塊中會顯示適當的值。 根據您在 [實作類型]**** 下的選擇，您可以變更此類型。|
@@ -77,7 +77,7 @@ ms.locfileid: "81751182"
 
 - **通知函式**
 
-  僅限 MFC 分配介面 (Dispinterface)。 只有在 [實作類型]**** 下指定 [成員變數]**** 時，才可以使用。 設定屬性變更時所呼叫之通知函式的名稱。 預設情況下,通知函數的名稱設定為`On`*屬性名稱*`Changed`。 您可以編輯此名稱。
+  僅限 MFC 分配介面 (Dispinterface)。 只有在 [實作類型]**** 下指定 [成員變數]**** 時，才可以使用。 設定屬性變更時所呼叫之通知函式的名稱。 根據預設，通知函式的名稱會設定為 `On` *PropertyName* `Changed` 。 您可以編輯此名稱。
 
 - **Get 函式**
 
@@ -91,10 +91,10 @@ ms.locfileid: "81751182"
 
   僅限 MFC 分配介面 (Dispinterface)。 指定如何實作您要新增的屬性。
 
-  |實作類型|描述|
+  |實作類型|說明|
   |-------------------------|-----------------|
   |**內建**|為 [屬性名稱]**** 中選取的屬性指定內建實作。 預設值。 如需詳細資訊，請參閱[內建屬性](#stock-properties)。<br /><br /> 如果您指定 [內建]****，則 [屬性類型]****、[參數類型]**** 和 [參數名稱]**** 都會呈暗灰色。|
-  |**成員變數**|指定屬性已新增為成員變數。 您可以新增自訂屬性或大多數內建屬性作為成員變數。 無法為`Caption`,`hWnd``Text`屬性指定**成員變數**。<br /><br /> 在 [變數名稱]**** 和 [通知函式]**** 下提供預設名稱。 您可以編輯此名稱。|
+  |**成員變數**|指定屬性已新增為成員變數。 您可以新增自訂屬性或大多數內建屬性作為成員變數。 您不能指定、和屬性的**成員變數** `Caption` `hWnd` `Text` 。<br /><br /> 在 [變數名稱]**** 和 [通知函式]**** 下提供預設名稱。 您可以編輯此名稱。|
   |**Get/Set 方法**|指定屬性根據預設新增為 `Get`*PropertyName* 及 `Set`*PropertyName* 函式。 這些名稱會出現在 [Get 函式]**** 和 [Set 函式]**** 下。<br /><br /> 您可以變更預設的 [屬性類型]****，這會傳遞 Get 函式的值。 您可以為 `Get` 及 `Set` 函式指定參數。|
 
 - **Get 函式**
@@ -105,16 +105,16 @@ ms.locfileid: "81751182"
 
   僅限 ATL 介面。 將屬性設定為可寫入；也就是說，它會建立 `Put` 方法，以設定或「放置」物件的這個屬性。 選取 [Get]****、[Put]****，或兩者。 如果您選取此選項，您可以選擇下列兩個方式來實作方法：
 
-  |選項|描述|
+  |選項|說明|
   |------------|-----------------|
   |**PropPut**|[PropPut](../windows/propput.md) 函式會傳回物件的複本。 這是預設值，而且是將屬性設為可寫入的最常見方式。|
   |**PropPutRef**|[PropPutRef](../windows/propputref.md) 函式會傳回物件的參考，而不是傳回物件本身的複本。 請考慮針對大型結構或陣列等物件使用此選項，這類物件可能會有初始設定額外負荷。|
 
 - **參數屬性**
 
-  僅限 ATL 介面。 設定**參數名稱**指定的`in`參數`out`是、 都為或無。
+  僅限 ATL 介面。 設定**參數名稱**所指定的參數是 `in` 、 `out` 、兩者或無。
 
-  |選項|描述|
+  |選項|說明|
   |------------|-----------------|
   |`in`|表示參數會從呼叫程序傳遞至被呼叫程序。|
   |`out`|表示指標參數會從被呼叫程序傳回至呼叫程序 (從伺服器至用戶端)。|
@@ -157,13 +157,13 @@ ms.locfileid: "81751182"
 
 - `helpstring`
 
-  指定用來描述所套用元素的字元字串。 根據預設，其會設定為 `property`&nbsp;*Property&nbsp;name*。 請參閱＜MIDL 參考＞** 中的 [helpstring](/windows/win32/Midl/helpstring)。
+  指定用來描述所套用元素的字元字串。 根據預設，它會設定為 [ **`property`** &nbsp; *屬性 &nbsp; 名稱*]。 請參閱＜MIDL 參考＞** 中的 [helpstring](/windows/win32/Midl/helpstring)。
 
 ### <a name="other-options"></a>其他選項
 
 並非所有選項都適用於所有屬性類型。
 
-|選項|描述|
+|選項|說明|
 |------------|-----------------|
 |`bindable`|表示支援資料繫結的屬性。 請參閱＜MIDL 參考＞** 中的 [bindable](/windows/win32/Midl/bindable)。 對於屬性的內建實作，預設會設定此選項，而且無法變更。|
 |`defaultbind`|表示這個單一可繫結屬性最能代表物件。 請參閱＜MIDL 參考＞** 中的 [defaultbind](/windows/win32/Midl/defaultbind)。|

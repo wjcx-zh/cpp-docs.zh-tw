@@ -1,17 +1,17 @@
 ---
-title: first_is （C++ COM 屬性）
+title: first_is （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 192d08471241526cace895bd5a5147070316cd6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167013"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228059"
 ---
 # <a name="first_is"></a>first_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80167013"
 
 ## <a name="remarks"></a>備註
 
-**First_is** C++屬性具有與[first_is](/windows/win32/Midl/first-is) MIDL 屬性相同的功能。
+**First_is** c + + 屬性具有與[first_is](/windows/win32/Midl/first-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
+|**適用於**|或中的欄位 **`struct`** **`union`** ，介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172161"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228696"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface 類別 (C++/CLI 和 C++/CX)
 
@@ -32,13 +32,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>參數
 
 *interface_access*<br/>
-介面在組件外部的可及性。  可能的值為 **public** 和 **private**。  **private** 為預設值。 巢狀介面不能有 *interface_access* 可及性。
+介面在組件外部的可及性。  可能的值為 **`public`** 和 **`private`** 。  **`private`** 是預設值。 巢狀介面不能有 *interface_access* 可及性。
 
 *name*<br/>
 介面的名稱。
 
 *inherit_access*<br/>
-*base_interface* 的可及性。  對於基底介面唯一允許的可及性為 **public** (預設值)。
+*base_interface* 的可及性。  基底介面唯一允許的存取範圍是 **`public`** （預設值）。
 
 *base_interface*<br/>
 (選擇性) 介面 *name* 的基底介面。
@@ -61,9 +61,9 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 如需其他 CLR 型別的相關資訊，請參閱[類別和結構](classes-and-structs-cpp-component-extensions.md)。
 
-您可以在編譯時期偵測某個型別是否為具有 `__is_interface_class(type)` 的介面。 如需詳細資訊，請參閱[型別特性的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
+您可以在編譯時期偵測某個型別是否為具有 `__is_interface_class(type)` 的介面。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
-在開發環境中，您可以透過反白顯示關鍵字 (例如 `interface class`)，然後按 F1 來取得有關這些關鍵字的 F1 說明。
+在開發環境中，您可以藉由反白顯示關鍵字（例如 **`interface class`** ）並按 f1，取得這些關鍵字的 F1 說明。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
@@ -220,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

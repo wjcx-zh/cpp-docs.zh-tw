@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187696"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185602"
 ---
 # <a name="_variant_t-extractors"></a>_variant_t 擷取器
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-從封裝的 `VARIANT` 物件中解壓縮資料。
+從封裝的物件解壓縮資料 `VARIANT` 。
 
 ## <a name="syntax"></a>語法
 
@@ -87,19 +87,19 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>備註
 
-從封裝的 `VARIANT`中解壓縮原始資料。 如果 `VARIANT` 還不是正確的類型，`VariantChangeType` 會用來嘗試轉換，並在失敗時產生錯誤：
+從封裝的中解壓縮原始資料 `VARIANT` 。 如果不 `VARIANT` 是正確的型別， `VariantChangeType` 就會用來嘗試轉換，並在失敗時產生錯誤：
 
-- **operator short （）** 將**短**整數值解壓縮。
+- **operator short （）** 將 **`short`** 整數值解壓縮。
 
-- **運算子 long （）** 解壓縮**長**整數值。
+- **運算子 long （）** 將 **`long`** 整數值解壓縮。
 
-- **運算子 float （）** 抽取**浮點**數值。
+- **運算子 float （）** 解壓縮 **`float`** 數值。
 
-- **運算子 double （）** 將**雙**整數值解壓縮。
+- **運算子 double （）** 將 **`double`** 整數值解壓縮。
 
 - **運算子 CY （）** 解壓縮 `CY` 物件。
 
-- **operator bool （）** 解壓縮**bool**值。
+- **operator bool （）** 解壓縮 **`bool`** 值。
 
 - **運算子 DECIMAL （）** 解壓縮 `DECIMAL` 值。
 
@@ -107,11 +107,11 @@ operator unsigned __int64() const;
 
 - **運算子 _bstr_t （）** 解壓縮字串，其封裝在 `_bstr_t` 物件中。
 
-- **運算子 IDispatch\*（）** 從封裝的 `VARIANT`中，解壓縮一個分配介面指標。 系統會在產生的指標上呼叫 `AddRef`，因此您可以由您呼叫 `Release` 來釋放它。
+- **運算子 IDispatch \* （）** 會從封裝的中抽取一個分配介面指標 `VARIANT` 。 `AddRef`會在產生的指標上呼叫，因此您可以由您呼叫 `Release` 來釋放它。
 
-- **運算子 IUnknown\*（）** 從封裝的 `VARIANT`中，解壓縮 COM 介面指標。 系統會在產生的指標上呼叫 `AddRef`，因此您可以由您呼叫 `Release` 來釋放它。
+- **運算子 IUnknown \* （）** 會從封裝的中，解壓縮 COM 介面指標 `VARIANT` 。 `AddRef`會在產生的指標上呼叫，因此您可以由您呼叫 `Release` 來釋放它。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

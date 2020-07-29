@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 2ef5eb3c2bedd9defbd0b80e6d8c5c8912fcf16d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e2329111e916df9eac99d156bcf58a58e148cb08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761929"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228813"
 ---
 # <a name="compiler-error-c3532"></a>編譯器錯誤 C3532
 
 ' type '： ' auto ' 的使用不正確
 
-指定的類型不能使用 `auto` 關鍵字來宣告。 例如，您不能使用 `auto` 關鍵字來宣告陣列或方法傳回型別。
+指定的類型不能使用關鍵字來宣告 **`auto`** 。 例如，您不能使用 **`auto`** 關鍵字來宣告陣列或方法傳回型別。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
 1. 請確定初始化運算式會產生有效的型別。
 
@@ -27,7 +27,7 @@ ms.locfileid: "74761929"
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3532，因為 `auto` 關鍵字無法宣告方法傳回型別。
+下列範例會產生 C3532，因為 **`auto`** 關鍵字無法宣告方法傳回型別。
 
 ```cpp
 // C3532a.cpp
@@ -37,7 +37,7 @@ auto f(){}   // C3532
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3532，因為 `auto` 關鍵字無法宣告陣列。
+下列範例會產生 C3532，因為 **`auto`** 關鍵字無法宣告陣列。
 
 ```cpp
 // C3532b.cpp
@@ -54,6 +54,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [auto 關鍵字](../../cpp/auto-keyword.md)

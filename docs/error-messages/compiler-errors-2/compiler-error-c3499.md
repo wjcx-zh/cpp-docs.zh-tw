@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738007"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228839"
 ---
 # <a name="compiler-error-c3499"></a>編譯器錯誤 C3499
 
 已被指定為具有 void 傳回類型的 Lambda 無法傳回值
 
-當 Lambda 運算式指定 `void` 為傳回類型卻傳回值時；或 Lambda 運算式包含一個以上的陳述式並傳回值，卻未指定其傳回類型時，編譯器會產生此錯誤。
+當指定為傳回類型的 lambda 運算式傳回值時， **`void`** 或當 lambda 運算式包含一個以上的語句並傳回值，但未指定其傳回型別時，編譯器會產生這個錯誤。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
 - 不要從 Lambda 運算式傳回值，或者，
 
@@ -60,6 +60,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

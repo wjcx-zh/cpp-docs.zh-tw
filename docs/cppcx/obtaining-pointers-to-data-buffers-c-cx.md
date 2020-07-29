@@ -2,20 +2,20 @@
 title: 取得資料緩衝區的指標 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 9e60adc4163e96349f6f4bafa919944e5d8d5b51
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 0b5163dd111adfe5c745a1ad3bbcdc06a675c52c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185537"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>取得資料緩衝區的指標 (C++/CX)
 
 在 Windows 執行階段中， [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) 介面提供以語言中性、資料流的方式存取資料緩衝區。 在 C++ 中，可以透過定義在 robuffer.h 中的 Windows 執行階段程式庫 IBufferByteAccess 介面，取得基礎位元組陣列的原始指標。 使用這種方法，可以就地修改位元組陣列，而不建立任何不必要的資料複本。
 
-下圖顯示 XAML 影像項目，其來源為 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap)。 以任何語言撰寫的用戶端應用程式可以將 `WriteableBitmap` 的參考傳遞至 C++ 程式碼，然後 C++ 可以使用該參考到達基礎緩衝區。 在以C++編寫的通用 Windows 平台應用中,可以直接在原始程式碼中使用以下範例中的函數,而無需將其打包到 Windows 執行時元件中。
+下圖顯示 XAML 影像項目，其來源為 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap)。 以任何語言撰寫的用戶端應用程式可以將 `WriteableBitmap` 的參考傳遞至 C++ 程式碼，然後 C++ 可以使用該參考到達基礎緩衝區。 在以 c + + 撰寫的通用 Windows 平臺應用程式中，您可以直接在原始程式碼中使用下列範例中的函式，而不將它封裝在 Windows 執行階段元件中。
 
-![C&#43;&#43; 直接访问像素数据的代码](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43;&#43; 直接访问像素数据的代码")
+![C&#43;&#43; 直接存取圖元資料的程式碼](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43;&#43; 直接存取圖元資料的程式碼")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
@@ -51,11 +51,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 ## <a name="complete-example"></a>完整範例
 
-以下步驟展示如何建立將 傳遞`WriteableBitmap`給 C++ Windows 執行時元件 DLL 的 C# 通用 Windows 平台應用。 C++ 程式碼取得像素緩衝區的指標，並且在影像上執行簡單的就地修改。 或者，您可以使用 Visual Basic、JavaScript 或 C++ 而不使用 C#，建立用戶端應用程式 如果您使用 C++，則不需要元件 DLL，可以將這些方法直接加入至 MainPage 類別或您定義的其他類別。
+下列步驟示範如何建立 c # 通用 Windows 平臺應用程式，以將傳遞 `WriteableBitmap` 至 c + + Windows 執行階段元件 DLL。 C++ 程式碼取得像素緩衝區的指標，並且在影像上執行簡單的就地修改。 或者，您可以使用 Visual Basic、JavaScript 或 C++ 而不使用 C#，建立用戶端應用程式 如果您使用 C++，則不需要元件 DLL，可以將這些方法直接加入至 MainPage 類別或您定義的其他類別。
 
 #### <a name="create-the-client"></a>建立用戶端
 
-1. 使用空白應用項目樣本創建 C# 通用 Windows 平台應用。
+1. 使用 [空白應用程式] 專案範本來建立 c # 通用 Windows 平臺應用程式。
 
 1. 在 MainPage.xaml 中
 
@@ -129,11 +129,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 #### <a name="create-the-c-component"></a>建立 C++ 元件
 
-1. 新增解決方案新增新C++ Windows 執行時元件,並命名它`ImageManipCPP`。 以在**解決方案資源管理員**中右鍵按這裏選取該項目, 並選擇 **「新增**參考 」,在 C# 專案中新增對它的**參考**。
+1. 將新的 c + + Windows 執行階段元件加入至現有的方案，並將其命名為 `ImageManipCPP` 。 在 c # 專案中，以滑鼠右鍵按一下該**方案總管**專案，然後選擇 [**加入**]、[**參考**]，將其參考新增至其中。
 
 1. 在 Class1.h 中
 
-   1. 在第二行， `typedef` 之後，加入這個 `#pragma once`：
+   1. 在 **`typedef`** 第二行新增此程式碼， `#pragma once` 如下所示：
 
         ```cpp
         typedef uint8 byte;

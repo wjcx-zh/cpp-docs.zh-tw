@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
-ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57b250f87bd7f2c5808b5a681ddfe49dfa5e876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228891"
 ---
 # <a name="compiler-error-c2872"></a>編譯器錯誤 C2872
 
-'*符號*': 模稜兩可的符號
+'*symbol*'：不明確的符號
 
-編譯器無法判斷在參考的符號。 具有指定名稱的多個符號位於範圍內。 請參閱下列的檔案位置和宣告的錯誤訊息的附註編譯器發現模稜兩可的符號。 若要修正此問題，您可以完整限定的模稜兩可的符號使用它的命名空間，例如`std::byte`或`::byte`。 您也可以使用[命名空間別名](../../cpp/namespaces-cpp.md#namespace_aliases)釐清您的程式碼中的符號的使用者內含的命名空間提供方便的簡短名稱，供使用。
+編譯器無法判斷您所參考的符號。 範圍內有一個以上具有指定名稱的符號。 請參閱錯誤訊息後面的附注，以取得編譯器找到的不明確符號的檔案位置和宣告。 若要修正這個問題，您可以使用其命名空間（例如或）來完整限定不明確的符號 `std::byte` `::byte` 。 您也可以使用[命名空間別名](../../cpp/namespaces-cpp.md#namespace_aliases)，為包含的命名空間提供方便的簡短名稱，以便在原始程式碼中厘清符號時使用。
 
-如果包含的標頭檔，就會發生 C2872 [using 指示詞](../../cpp/namespaces-cpp.md#using_directives)，和後續的標頭檔會包含在所包含的類型，也是在指定的命名空間中`using`指示詞。 指定`using`指示詞只是在所有標頭檔案由指定之後`#include`。
+如果標頭檔包含[using](../../cpp/namespaces-cpp.md#using_directives)指示詞，則會發生 C2872，並包含後續的標頭檔，其中包含的類型也是指示詞中指定的命名空間 **`using`** 。 **`using`** 只有在使用指定所有標頭檔之後，才指定指示詞 `#include` 。
 
-C2872 之間發生衝突，因此，可以發生在 Visual Studio 2013`Windows::Foundation::Metadata::Platform`列舉型別和C++/CX 定義`Platform`命名空間。 若要解決此問題，請遵循下列步驟：
+C2872 可能會在 Visual Studio 2013 中發生，因為 `Windows::Foundation::Metadata::Platform` 列舉類型與 c + +/CX-defined 命名空間之間發生衝突 `Platform` 。 若要解決這個問題，請遵循下列步驟：
 
-- 移除專案檔中的"using 命名空間 Windows::Foundation::Metadata"子句。
+- 從專案檔中移除 [使用命名空間 Windows：： Foundation：： Metadata] 子句。
 
-- 指定包含此命名空間中的任何類型的完整的名稱。
+- 為此命名空間中包含的任何類型指定完整名稱。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2872，因為模稜兩可的參考對變數，名為`i`; 兩個具有相同名稱的變數是在範圍內：
+下列範例會產生 C2872，因為對名為的變數進行了不明確的參考 `i` ; 具有相同名稱的兩個變數在範圍內：
 
 ```cpp
 // C2872.cpp

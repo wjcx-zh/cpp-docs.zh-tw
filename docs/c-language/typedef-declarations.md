@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d477e33def7168d01f9c5f8a64579fed0b497eb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346102"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190061"
 ---
 # <a name="typedef-declarations"></a>Typedef 宣告
 
@@ -30,18 +30,18 @@ typedef 宣告的解譯方式和變數或函式宣告相同，但識別項會變
 &nbsp;&nbsp;&nbsp;&nbsp;*類型-限定詞宣告-* 規範<sub>opt</sub>
 
 *storage-class-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**
+&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**
 
 *type-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**空位**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**短缺**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**前提**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**兩**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**簽署**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**經過**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`void`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`char`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`short`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`long`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`float`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`double`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`signed`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct 或 union-規範*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*列舉規範*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-名稱*
@@ -49,7 +49,7 @@ typedef 宣告的解譯方式和變數或函式宣告相同，但識別項會變
 *typedef-名稱*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*標識*
 
-請注意，typedef 宣告不會建立類型。 它會建立現有類型的同義字，或是可透過其他方式指定之類型的名稱。 將 typedef 名稱做為類型指定名稱時，它可以結合特定的類型指定名稱，但不能結合其他類型指定名稱。 可接受的修飾詞包含 **const** 與 `volatile`。
+請注意，typedef 宣告不會建立類型。 它會建立現有類型的同義字，或是可透過其他方式指定之類型的名稱。 將 typedef 名稱做為類型指定名稱時，它可以結合特定的類型指定名稱，但不能結合其他類型指定名稱。 可接受的修飾詞包括 **`const`** 和 **`volatile`** 。
 
 Typedef 名稱和一般識別項共用命名空間 (如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md))。 因此，程式可以具有相同名稱的 typedef 名稱和區域範圍識別項。 例如：
 
@@ -146,6 +146,6 @@ DRAWF box;
 void box( int, int );
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5e1fe80f3bc1f581c6ea05c54409b1e76eacfce7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190217"
 ---
 # <a name="c-extended-storage-class-attributes"></a>C 擴充的儲存類別屬性
 
@@ -27,17 +27,17 @@ ms.locfileid: "74857147"
 ## <a name="syntax"></a>語法
 
 *storage-class-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec （** *延伸 extended-decl-modifier-seq-修飾詞-seq* **）**  / \* Microsoft 專有\*/
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec （** *擴充-extended-decl-modifier-seq-修飾詞-seq* **）**  / \*Microsoft 特定\*/
 
-*extended-extended-decl-modifier-seq-修飾詞-seq*：&nbsp; &nbsp; &nbsp; &nbsp; / \* Microsoft 專有\*/<br/>
+*extended-extended-decl-modifier-seq-修飾詞-seq*： &nbsp; &nbsp; &nbsp; &nbsp; / \* Microsoft 專有\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*擴充-extended-decl-modifier-seq-修飾*詞&nbsp; &nbsp; &nbsp; &nbsp; / \* ： Microsoft 專有\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**執行緒**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
+*擴充-extended-decl-modifier-seq-修飾*詞： &nbsp; &nbsp; &nbsp; &nbsp; / \* Microsoft 專有\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**
 
 空白字元用於分隔宣告修飾詞。 請注意，*extended-decl-modifier-seq* 可以是空的，在這種情況下，__declspec 沒有作用。
 
@@ -45,6 +45,6 @@ thread、naked、dllimport 和 dllexport 儲存類別屬性 (Attribute) 是只�
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

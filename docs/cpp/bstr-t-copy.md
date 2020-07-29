@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Copy method [C++]
 - BSTR object [C++], copy
 ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
-ms.openlocfilehash: 1fe8cfb5b644b3c7c34cf3325a91ebdf23a04946
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b6029e98e83b171d9ab9f8f3f0282fa3f46ca167
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190322"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227591"
 ---
 # <a name="_bstr_tcopy"></a>_bstr_t::copy
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 建構已封裝 `BSTR` 的複本。
 
@@ -29,7 +29,7 @@ BSTR copy( bool fCopy = true ) const;
 #### <a name="parameters"></a>參數
 
 *fCopy*<br/>
-若為 TRUE， **copy**會傳回包含 `BSTR`的複本，否則**copy**會傳回實際的 BSTR。
+如果為 **`true`** ，則**copy**會傳回包含的複本 `BSTR` ，否則**COPY**會傳回實際的 BSTR。
 
 ## <a name="remarks"></a>備註
 
@@ -43,7 +43,7 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
 }
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

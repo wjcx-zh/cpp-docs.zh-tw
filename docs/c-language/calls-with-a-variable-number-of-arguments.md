@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9fee0c214b697126708ae36b4daee082ac0171e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032105"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227929"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>引數數目可變的呼叫
 
@@ -24,7 +24,7 @@ ms.locfileid: "82032105"
 
 若要呼叫具有可變引數數目的函式，請在函式呼叫中指定任意數目的引數。 例如，C 執行階段程式庫中的 `printf` 函式。 函式呼叫必須針對參數清單或引數類型清單中宣告的每個類型名稱包含一個引數。
 
-除非指定 `__fastcall` 呼叫慣例，否則函式呼叫中指定的所有引數都會放置在堆疊上。 針對函式宣告的參數數目，可判斷從堆疊取出並指派至參數的引數數目。 您必須負責從堆疊擷取任何額外的引數，以及判斷有多少引數存在。 STDARG.H 檔案中包含 ANSI 樣式的巨集，用於存取採用可變引數數目之函式的引數。 此外仍支援 VARARGS.H 中 XENIX 樣式的巨集。
+除非指定呼叫慣例，否則在函式呼叫中指定的所有引數都會放在堆疊上 **`__fastcall`** 。 針對函式宣告的參數數目，可判斷從堆疊取出並指派至參數的引數數目。 您必須負責從堆疊擷取任何額外的引數，以及判斷有多少引數存在。 STDARG.H 檔案中包含 ANSI 樣式的巨集，用於存取採用可變引數數目之函式的引數。 此外仍支援 VARARGS.H 中 XENIX 樣式的巨集。
 
 這個範例宣告用於呼叫可變引數數目的函式：
 
@@ -32,6 +32,6 @@ ms.locfileid: "82032105"
 int average( int first, ...);
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函式呼叫](../c-language/function-calls.md)

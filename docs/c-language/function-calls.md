@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 495dc3cf77df79336af364eb80ea7edf17b54400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227864"
 ---
 # <a name="function-calls"></a>函數呼叫
 
@@ -20,7 +20,7 @@ ms.locfileid: "81334566"
 
 *運算式*（*運算式清單*<sub>opt</sub>）
 
-其中 *expression* 是函式名稱，或會評估為函式位址，而 *expression-list* 是運算式的清單 (以逗號分隔)。 這些後方運算式的值為傳遞至函式的引數。 如果函式不會傳回值，那麼您會將它宣告為傳回 `void` 的函式。
+其中 *expression* 是函式名稱，或會評估為函式位址，而 *expression-list* 是運算式的清單 (以逗號分隔)。 這些後方運算式的值為傳遞至函式的引數。 如果函式未傳回值，則您會將它宣告為傳回的函式 **`void`** 。
 
 如果宣告出現在函式呼叫之前，但是未提供有關參數的任何資訊，則所有未宣告的引數都會直接進行一般算術轉換。
 
@@ -31,7 +31,7 @@ ms.locfileid: "81334566"
 
 ## <a name="example"></a>範例
 
-這個範例將示範從 `switch` 陳述式呼叫的函式呼叫：
+這個範例說明從語句呼叫的函式呼叫 **`switch`** ：
 
 ```
 int main()
@@ -81,9 +81,9 @@ work( count, lift );
 
 會將整數變數 `count` 和函式 `lift` 的位址傳遞至函式 `work`。 請注意，函式位址僅透過指定函式識別項進行傳遞，因為函式識別項會求出指標運算式的值。 若要以此方式使用函式識別項，則必須在使用識別項之前宣告或定義函式，否則無法辨識識別項。 在此案例中，`work` 函式的開頭會指定 `main` 的原型。
 
-`work` 中的 `function` 參數會宣告為函式的指標，該函式會採用一個 `int` 引數並傳回 **long** 值。 參數名稱前後必須加上括號，若沒有括號，則宣告會指定傳回 **long** 值指標的函式。
+中的參數會宣告為函式的指標，該函式 `function` `work` 接受一個 **`int`** 引數並傳回 **`long`** 值。 參數名稱前後必須加上括弧。如果沒有這些專案，宣告會指定函式傳回值的指標 **`long`** 。
 
-`work` 函式會使用下列函式呼叫，從 **for** 迴圈內呼叫選取的函式：
+函式會 `work` **`for`** 使用下列函式呼叫，從迴圈內呼叫選取的函式：
 
 ```
 ( *function )( i );
@@ -91,6 +91,6 @@ work( count, lift );
 
 其中一個引數 `i` 會傳遞至呼叫的函式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函式](../c-language/functions-c.md)

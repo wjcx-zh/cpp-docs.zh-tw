@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 7a45c4570341aca056b9d4c30ea496317a1ac96f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6054b7119614d9325bd099dd39b8aa1365d97ed7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181560"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227669"
 ---
 # <a name="aliases-and-typedefs-c"></a>別名和 typedef (C++)
 
@@ -23,7 +23,7 @@ using identifier = type;
 
 ## <a name="remarks"></a>備註
 
-*identifier*<br/>
+*標識*<br/>
 別名的名稱。
 
 *type*<br/>
@@ -31,7 +31,7 @@ using identifier = type;
 
 別名不會引入新的類型，而且無法變更現有類型名稱的意義。
 
-別名的最簡單形式相當於 c + + 03 中的**typedef**機制：
+別名的最簡單形式相當於 **`typedef`** c + + 03 中的機制：
 
 ```cpp
 // C++11
@@ -70,7 +70,7 @@ void actual_function(int arg) { /* some code */ }
 func fptr = &actual_function;
 ```
 
-**Typedef**機制的限制是它不會與範本搭配使用。 不過，C++11 的類類型名語法啟用別名樣板的建立：
+此機制的限制 **`typedef`** 是它不會與範本搭配使用。 不過，C++11 的類類型名語法啟用別名樣板的建立：
 
 ```cpp
 template<typename T> using ptr = T*;
@@ -81,7 +81,7 @@ ptr<int> ptr_int;
 
 ## <a name="example"></a>範例
 
-下列範例示範如何搭配使用別名樣板與自訂配置器 (在這個案例中為整數向量類型)。 您可以用**int**的任何型別來建立一個方便的別名，以隱藏主要功能程式碼中的複雜參數清單。 在您的程式碼中使用自訂配置器，可以改善可讀性和減少引入錯字所導致 Bug 的風險。
+下列範例示範如何搭配使用別名樣板與自訂配置器 (在這個案例中為整數向量類型)。 您可以用任何類型替代 **`int`** 來建立方便的別名，以隱藏主要功能程式碼中的複雜參數清單。 在您的程式碼中使用自訂配置器，可以改善可讀性和減少引入錯字所導致 Bug 的風險。
 
 ```cpp
 #include <stdlib.h>
@@ -141,13 +141,13 @@ int main ()
 
 ## <a name="typedefs"></a>Typedefs
 
-**Typedef**宣告導入了一個名稱，在其範圍內，會變成宣告的*類型*宣告部分所指定之型別的同義字。
+宣告 **`typedef`** 會引進一個名稱，在其範圍內，會變成宣告的*類型*宣告部分所指定之類型的同義字。
 
 您可以使用 typedef 宣告，針對語言已經定義的類型或您已經宣告的類型建構較短或更有意義的名稱。 Typedef 名稱可讓您封裝可能變更的實作詳細資料。
 
-相較于**類別**、**結構** **、等位和** **列舉**宣告， **typedef**宣告不會引進新的類型，而是引進現有類型的新名稱。
+相較于 **`class`** 、 **`struct`** 、和宣告，宣告不 **`union`** **`enum`** **`typedef`** 會引進新的類型，而是引進現有類型的新名稱。
 
-使用**typedef**宣告的名稱會佔用與其他識別碼相同的命名空間（語句標籤除外）。 因此，除非是在類別類型宣告中，否則這類名稱不能使用與先前宣告的名稱相同的識別項。 請考慮下列範例：
+使用宣告的名稱會 **`typedef`** 佔用與其他識別碼相同的命名空間（除了語句標籤以外）。 因此，除非是在類別類型宣告中，否則這類名稱不能使用與先前宣告的名稱相同的識別項。 請考慮下列範例：
 
 ```cpp
 // typedef_names1.cpp
@@ -156,7 +156,7 @@ typedef unsigned long UL;   // Declare a typedef name, UL.
 int UL;                     // C2377: redefined.
 ```
 
-與其他識別碼相關的名稱隱藏規則也會管理使用**typedef**宣告之名稱的可見度。 因此，下列範例在 C++ 中是合法的：
+與其他識別碼相關的名稱隱藏規則也會控制使用宣告之名稱的可見度 **`typedef`** 。 因此，下列範例在 C++ 中是合法的：
 
 ```cpp
 // typedef_names2.cpp
@@ -212,7 +212,7 @@ int;  // Illegal declaration
 
 ### <a name="examples"></a>範例
 
-**Typedef**宣告的其中一種用法是讓宣告更為一致和精簡。 例如：
+宣告的其中一種用法 **`typedef`** 是讓宣告更為一致和精簡。 例如：
 
 ```cpp
 typedef char CHAR;          // Character type.
@@ -222,7 +222,7 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"
 ```
 
-若要使用**typedef**來指定相同宣告中的基本和衍生類型，您可以用逗號分隔宣告子。 例如：
+若要使用 **`typedef`** 在相同的宣告中指定基本和衍生類型，您可以用逗號分隔宣告子。 例如：
 
 ```cpp
 typedef char CHAR, *PSTR;
@@ -234,7 +234,7 @@ typedef char CHAR, *PSTR;
 typedef void DRAWF( int, int );
 ```
 
-在上述**typedef**語句之後，宣告
+在上述 **`typedef`** 語句之後，宣告
 
 ```cpp
 DRAWF box;
@@ -246,7 +246,7 @@ DRAWF box;
 void box( int, int );
 ```
 
-**typedef**通常會與**結構**結合，以宣告和命名使用者定義的類型：
+**`typedef`** 通常會與結合 **`struct`** 以宣告和命名使用者定義的類型：
 
 ```cpp
 // typedef_specifier2.cpp
@@ -273,7 +273,7 @@ int main()
 
 ### <a name="re-declaration-of-typedefs"></a>typedef 的重新宣告
 
-**Typedef**宣告可以用來重新宣告相同的名稱，以參考相同的類型。 例如：
+宣告 **`typedef`** 可以用來重新宣告相同的名稱，以參考相同的類型。 例如：
 
 ```cpp
 // FILE1.H
@@ -287,9 +287,9 @@ typedef char CHAR;
 #include "file2.h"   // OK
 ```
 
-程式*進程。CPP*包含兩個標頭檔，兩者都包含名稱 `CHAR`的**typedef**宣告。 只要兩個宣告都參考相同的類型，就可以接受此類重新宣告。
+程式*進程。CPP*包含兩個標頭檔，兩者都包含 **`typedef`** 名稱的宣告 `CHAR` 。 只要兩個宣告都參考相同的類型，就可以接受此類重新宣告。
 
-**Typedef**無法重新定義先前宣告為不同類型的名稱。 因此，如果*FILE2。H*包含
+**`typedef`** 無法重新定義先前宣告為不同類型的名稱。 因此，如果*FILE2。H*包含
 
 ```cpp
 // FILE2.H
@@ -309,9 +309,9 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;
 ```
 
-### <a name="typedefs-in-c-vs-c"></a>與 C C++中的 typedef
+### <a name="typedefs-in-c-vs-c"></a>c + + 與 C 中的 typedef
 
-由於在**typedef**宣告中宣告未命名結構的 ANSI C 實務，因此支援使用具有類別類型的**typedef**規範。 例如，許多 C 程式設計人員採用下列作法：
+由於在宣告 **`typedef`** 中宣告未命名結構的 ANSI C 實務，因此支援使用具有類別類型的規範 **`typedef`** 。 例如，許多 C 程式設計人員採用下列作法：
 
 ```cpp
 // typedef_with_class_types1.cpp
@@ -335,7 +335,7 @@ POINT ptOrigin;
 struct point_t ptOrigin;
 ```
 
-在C++中， **typedef**名稱和實數類型（以**類別**、**結構** **、等**位和**列舉**關鍵字宣告）之間的差異更為相異。 雖然在**typedef**語句中宣告無編號結構的 C 作法仍然有效，但它不會提供任何標記的優點，如同在 C 中所做的一樣。
+在 c + + 中， **`typedef`** 名稱和實數類型（使用 **`class`** 、 **`struct`** 、和關鍵字宣告）之間的差異 **`union`** **`enum`** 比較相異。 雖然在語句中宣告無編號結構的 C 作法 **`typedef`** 仍然可以運作，但它不會提供任何標記的優點，如同在 C 中所做的一樣。
 
 ```cpp
 // typedef_with_class_types2.cpp
@@ -347,9 +347,9 @@ typedef struct {
 } POINT;
 ```
 
-上述範例會使用未命名的類別**typedef**語法，宣告名為 `POINT` 的類別。 `POINT` 是類別名稱；不過，以此方式產生的名稱會受到下列限制：
+上述範例會 `POINT` 使用未命名的類別語法來宣告名為的類別 **`typedef`** 。 `POINT` 是類別名稱；不過，以此方式產生的名稱會受到下列限制：
 
-- 名稱（同義字）不能出現在**類別**、**結構** **或等**位前置詞之後。
+- 名稱（同義字）不能出現在 **`class`** 、 **`struct`** 或前置詞之後 **`union`** 。
 
 - 不可在類別宣告中使用此名稱做為建構函式或解構函式名稱。
 

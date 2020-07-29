@@ -7,18 +7,18 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: 227053fbfa4190dc6227ba7096a7c76aef30bb54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0a1212f1c78f49029f82be5a2f5d82ea1788b6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181547"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227656"
 ---
 # <a name="align-c"></a>align (C++)
 
-在 Visual Studio 2015 和更新版本中，請使用 c + + 11 標準 `alignas` 規範來控制對齊。 如需詳細資訊，請參閱[對齊](../cpp/alignment-cpp-declarations.md)。
+在 Visual Studio 2015 和更新版本中，請使用 c + + 11 標準 **`alignas`** 規範來控制對齊。 如需詳細資訊，請參閱[對齊](../cpp/alignment-cpp-declarations.md)。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 使用 `__declspec(align(#))` 可精確控制使用者定義資料的對齊 (例如，靜態配置或函式中的自動資料)。
 
@@ -28,19 +28,19 @@ ms.locfileid: "80181547"
 
 ## <a name="remarks"></a>備註
 
-撰寫使用最新處理器指令的應用程式會帶來一些新的限制和問題。 特別是許多新的指令要求資料必須對齊 16 位元組界限。 此外，將常用資料對齊特定處理器的快取行大小就能改善快取效能。 例如，如果您定義的結構大小小於 32 個位元組，您可能要將它對齊 32 個位元組，以確保有效率地快取該結構類型的物件。
+撰寫使用最新處理器指令的應用程式會帶來一些新的限制和問題。 許多新的指示需要與16位元組界限對齊的資料。 此外，藉由將經常使用的資料與處理器的快取行大小進行對齊，您可以改善快取效能。 例如，如果您定義的結構的大小小於32個位元組，您可能會想要32位元組對齊，以確保能夠有效率地快取該結構類型的物件。
 
-\# 是對齊值。 有效項目是從 1 至 8192 (位元組) 的 2 乘冪整數，例如 2、4、8、16、32 或 64。 `declarator` 是您宣告為已對齊的資料。
+\#這是對齊值。 有效項目是從 1 至 8192 (位元組) 的 2 乘冪整數，例如 2、4、8、16、32 或 64。 `declarator`這是您要宣告為對齊的資料。
 
-如需如何傳回類型值 `size_t` （這是類型的對齊需求）的詳細資訊，請參閱[__alignof](../cpp/alignof-operator.md)。 如需如何在以64位處理器為目標時宣告未對齊指標的詳細資訊，請參閱[__unaligned](../cpp/unaligned.md)。
+如需如何傳回類型值（ `size_t` 這是類型的對齊需求）的詳細資訊，請參閱 [`alignof`](../cpp/alignof-operator.md) 。 如需如何在以64位處理器為目標時宣告未對齊指標的詳細資訊，請參閱 [`__unaligned`](../cpp/unaligned.md) 。
 
-當您定義**結構**、等位或**類別**時，或當您宣告變數**時，可以**使用 `__declspec(align(#))`。
+`__declspec(align(#))`當您定義 **`struct`** 、 **`union`** 或 **`class`** 時，或在宣告變數時，可以使用。
 
-編譯器不會在複製或資料轉換作業期間，保證或嘗試保留資料的對齊屬性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以將以 `__declspec(align(#))` 宣告的結構複製到任何位置。 請注意，一般配置器（例如[malloc](../c-runtime-library/reference/malloc.md)、 C++ [operator new](new-operator-cpp.md)和 Win32 配置器）會傳回通常不會充分對齊 `__declspec(align(#))` 結構或結構陣列的記憶體。 若要保證複製或資料轉換作業的目的地正確對齊，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
+在複製或資料轉換作業期間，編譯器不保證或會嘗試保留資料的對齊屬性。 例如， [`memcpy`](../c-runtime-library/reference/memcpy-wmemcpy.md) 可以將使用宣告的結構複製 `__declspec(align(#))` 到任何位置。 一般配置器（例如， [`malloc`](../c-runtime-library/reference/malloc.md) 、c + + [`operator new`](new-operator-cpp.md) 和 Win32 配置器）通常會傳回對 `__declspec(align(#))` 結構或結構陣列而言不夠的記憶體。 若要保證複製或資料轉換作業的目的地正確對齊，請使用 [`_aligned_malloc`](../c-runtime-library/reference/aligned-malloc.md) 。 或者，撰寫您自己的配置器。
 
-您無法為函式參數指定對齊。 有對齊屬性的資料，以值傳遞到堆疊上時，其對齊會由呼叫慣例控制。 如果資料對齊在呼叫的函式中很重要，請將參數複製到正確對齊的記憶體中，才使用該參數。
+您無法指定函數參數的對齊方式。 當您以堆疊上的值來傳遞具有對齊屬性的資料時，其對齊方式會由呼叫慣例控制。 如果資料對齊在呼叫的函式中很重要，請將參數複製到正確對齊的記憶體中，才使用該參數。
 
-如果沒有 `__declspec(align(#))`，編譯器通常會根據目標處理器和資料大小，將資料對齊自然界限，在32位處理器上最多4位元組的界限，64位處理器上則會有8個位元組的界限。 類別或結構中的資料，是以其最小自然對齊和目前封裝設定 (從 #pragma `pack` 或 `/Zp` 編譯器選項)，在類別或結構內對齊。
+`__declspec(align(#))`若沒有，編譯器通常會根據目標處理器和資料大小，將資料對齊自然界限，在32位處理器上最多4位元組的界限，64位處理器上的8位元組界限。 類別或結構中的資料會以其自然對齊和目前封裝設定（來自 `#pragma pack` 或編譯器選項）的最小程度，在類別或結構中對齊 `/Zp` 。
 
 這個範例會示範 `__declspec(align(#))` 的使用方式。
 
@@ -50,11 +50,11 @@ __declspec(align(32)) struct Str1{
 };
 ```
 
-這個類型現在具有 32 位元組對齊屬性。 這表示所有的靜態和自動執行個體會開始於 32 位元組的界限。 以這個類型做為成員宣告的其他結構類型會保留這個類型的對齊屬性，也就是說，任何以元素 `Str1` 的結構都具有至少32的對齊屬性。
+這個類型現在具有 32 位元組對齊屬性。 這表示所有的靜態和自動實例都是在32位元組的界限上啟動。 以這個類型做為成員宣告的其他結構類型會保留這個類型的對齊屬性，也就是說，任何以 `Str1` 元素做為專案的結構都具有至少32的對齊屬性。
 
-請注意，`sizeof(struct Str1)` 等於 32。 這意味著如果建立 Str1 物件的陣列，且陣列的基底是對齊 32 位元組，則陣列的每個成員也會對齊 32 位元組。 若要在動態記憶體中建立基底正確對齊的陣列，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
+在這裡， `sizeof(struct Str1)` 等於32。 這表示如果建立物件的陣列 `Str1` ，而且陣列的基底為32位元組對齊，則陣列的每個成員也會對齊32位元組。 若要在動態記憶體中建立基底正確對齊的陣列，請使用 [`_aligned_malloc`](../c-runtime-library/reference/aligned-malloc.md) 。 或者，撰寫您自己的配置器。
 
-任何結構的 `sizeof` 值都是最後一個成員的位移，加上該成員的大小，然後捨入至最大成員對齊值或整個結構對齊值 (以較大者為準) 的最接近倍數。
+**`sizeof`** 任何結構的值都是最後一個成員的位移，加上該成員的大小，進位到最大成員對齊值的最接近倍數，或整個結構對齊值（以較大者為准）。
 
 編譯器會為結構對齊使用這些規則：
 
@@ -62,7 +62,7 @@ __declspec(align(32)) struct Str1{
 
 - 除非以 `__declspec(align(#))` 覆寫，否則結構的對齊是其成員的個別對齊最大值。
 
-- 結構成員位於其父結構開始處的位移，這是其對齊 (大於或等於上一個成員結尾的位移) 的最小倍數。
+- 結構成員位於其父結構開頭的位移，這是其對齊的最小倍數大於或等於前一個成員結尾的位移。
 
 - 結構的大小是其對齊的最小倍數 (大於或等於其最後一個成員結尾的位移)。
 
@@ -70,13 +70,13 @@ __declspec(align(32)) struct Str1{
 
 如需詳細資訊，請參閱
 
-- [對齊範例](#vclrfalignexamples)
+- [`align`典型](#vclrfalignexamples)
 
-- [使用 __declspec 定義新類型（align （#））](#vclrf_declspecaligntypedef)
+- [使用定義新類型`__declspec(align(#))`](#vclrf_declspecaligntypedef)
 
-- [對齊線程區域儲存區中的資料](#vclrfthreadlocalstorageallocation)
+- [對齊執行緒區域儲存區中的資料](#vclrfthreadlocalstorageallocation)
 
-- [Align 如何搭配資料封裝使用](#vclrfhowalignworkswithdatapacking)
+- [如何處理 `align` 資料封裝](#vclrfhowalignworkswithdatapacking)
 
 - [結構對齊範例](../build/x64-software-conventions.md#examples-of-structure-alignment)（x64 專用）
 
@@ -89,7 +89,7 @@ __declspec(align(32)) struct Str1{
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-在這個範例中，`S1` 結構使用 `__declspec(align(32))` 定義。 針對變數定義使用的所有 `S1`，或其他類型宣告中，都是對齊 32 位元組。 `sizeof(struct S1)` 會傳回 32，而且 `S1` 在保留四個整數所需的 16 個位元組後面會有 16 個填補位元組。 每個**int**成員都需要4位元組對齊，但是結構本身的對齊會宣告為32。 因此，整體對齊是 32。
+在這個範例中，`S1` 結構使用 `__declspec(align(32))` 定義。 針對變數定義使用的所有 `S1`，或其他類型宣告中，都是對齊 32 位元組。 `sizeof(struct S1)` 會傳回 32，而且 `S1` 在保留四個整數所需的 16 個位元組後面會有 16 個填補位元組。 每個 **`int`** 成員需要4位元組對齊，但是結構本身的對齊會宣告為32。 然後，整體的對齊方式為32。
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -117,17 +117,17 @@ struct S3 {
 };
 ```
 
-在這個範例中，請注意 `a` 有其自然類型的對齊，在此情況下，為 4 個位元組。 不過，`S1` 必須對齊 32 位元組。 `a` 後面接著二十八個位元組的填補，因此 `s1` 會在位移 32 處起始。 `S4` 接著會繼承 `S1` 的對齊需求，因為這是結構中最大的對齊需求。 `sizeof(struct S4)` 會傳回 64。
+在這個範例中，請注意 `a` 有其自然類型的對齊，在此情況下，為 4 個位元組。 不過，`S1` 必須對齊 32 位元組。 會跟隨28個位元組的填補 `a` ，因此 `s1` 從位移32開始。 `S4`接著會繼承的對齊需求 `S1` ，因為它是結構中最大的對齊需求。 `sizeof(struct S4)` 會傳回 64。
 
 ```cpp
 struct S4 {
    int a;
    // 28 bytes padding
-    struct S1 s1;      // S4 inherits cache alignment requirement of S1
+   struct S1 s1;      // S4 inherits cache alignment requirement of S1
 };
 ```
 
-下列三個變數宣告也會使用 `__declspec(align(#))`。 在每個案例中，變數必須對齊 32 位元組。 若是陣列，陣列的基底位址 (而非每個陣列成員) 對齊 32 位元組。 每個陣列成員的 `sizeof` 值不會因為使用 `__declspec(align(#))` 而受影響。
+下列三個變數宣告也會使用 `__declspec(align(#))`。 在每個案例中，變數必須對齊 32 位元組。 在陣列中，陣列的基底位址（而不是每個陣列成員）會對齊32位元組。 **`sizeof`** 當您使用時，每個陣列成員的值不會受到影響 `__declspec(align(#))` 。
 
 ```cpp
 CACHE_ALIGN int i;
@@ -169,20 +169,20 @@ void fn() {
 }
 ```
 
-如果已在堆積上配置記憶體，則對齊會取決於所呼叫的配置函式。  例如，如果您使用 `malloc`，則結果會取決於運算元大小。 如果*arg* > = 8，則傳回的記憶體會對齊8位元組。 如果*arg* < 8，則傳回的記憶體的對齊會是小於*arg*之2的第一個乘冪。 例如，如果您使用 malloc(7)，則對齊是 4 個位元組。
+如果已在堆積上配置記憶體，則對齊會取決於所呼叫的配置函式。  例如，如果您使用 `malloc`，則結果會取決於運算元大小。 如果*arg* >= 8，則傳回的記憶體會對齊8位元組。 如果*arg* < 8，則傳回的記憶體的對齊會是小於*arg*之2的第一個乘冪。 例如，如果您使用 `malloc(7)` ，則對齊是4個位元組。
 
-## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>使用 __declspec 定義新類型（align （#））
+## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>使用定義新類型`__declspec(align(#))`
 
 您可以定義具有對齊特性的類型。
 
-例如，您可以利用這種方式來定義具有對齊值的 `struct`：
+例如，您可以透過下列 **`struct`** 方式定義具有對齊值的：
 
 ```cpp
 struct aType {int a; int b;};
 typedef __declspec(align(32)) struct aType bType;
 ```
 
-現在，`aType` 和 `bType` 的大小相同（8個位元組），但是 `bType` 類型的變數會對齊32個位元組。
+現在 `aType` 和 `bType` 都是相同的大小（8個位元組），但類型的變數 `bType` 會對齊32位元組。
 
 ## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a>對齊線程區域儲存區中的資料
 
@@ -207,9 +207,9 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-## <a name="how-align-works-with-data-packing"></a><a name="vclrfhowalignworkswithdatapacking"></a>Align 如何搭配資料封裝使用
+## <a name="how-align-works-with-data-packing"></a><a name="vclrfhowalignworkswithdatapacking"></a>如何處理 `align` 資料封裝
 
-`/Zp` 編譯器選項和 `pack` pragma 會影響結構和等位成員的封裝資料。這個範例會示範 `/Zp` 和 `__declspec(align(#))` 如何搭配使用：
+`/Zp`編譯器選項和 `pack` pragma 會影響結構和等位成員的資料封裝。 這個範例會示範 `/Zp` 和如何 `__declspec(align(#))` 共同作業：
 
 ```cpp
 struct S {
@@ -222,7 +222,7 @@ struct S {
 };
 ```
 
-下表列出每個成員在各種 `/Zp` (或 #pragma `pack`) 值之下的位移，顯示兩者之間的互動情況。
+下表列出每個成員在不同 `/Zp` （或）值下的位移 `#pragma pack` ，顯示這兩個互動的方式。
 
 |變數|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -234,14 +234,14 @@ struct S {
 |f|41|42|44|48|
 |sizeof(S)|64|64|64|64|
 
-如需詳細資訊，請參閱 [/Zp (結構成員對應儲存)](../build/reference/zp-struct-member-alignment.md)。
+如需詳細資訊，請參閱[ `/Zp` （結構成員對齊）](../build/reference/zp-struct-member-alignment.md)。
 
 因此，物件的位移是根據前一個物件的位移與目前封裝設定，但如果物件具有 `__declspec(align(#))` 屬性，情況就不是這樣，此時對齊是根據前一個物件的位移與物件的 `__declspec(align(#))` 值。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
-[__declspec](../cpp/declspec.md)<br/>
-[ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
+[ARM ABI 慣例總覽](../build/overview-of-arm-abi-conventions.md)<br/>
 [x64 軟體慣例](../build/x64-software-conventions.md)

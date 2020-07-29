@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-ms.openlocfilehash: 52c4404fa28f680a9a7a4592d03f535e8406d1a4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a6e176020624f02e778ba5684a374abfbafa9e4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374275"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184666"
 ---
 # <a name="synclockt-class"></a>SyncLockT 類別
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -37,42 +37,42 @@ class SyncLockT;
 
 ### <a name="parameters"></a>參數
 
-*同步特徵*<br/>
-可以取得資源擁有權的類型。
+*SyncTraits*<br/>
+可取得資源擁有權的類型。
 
 ## <a name="remarks"></a>備註
 
-表示可以獲取資源的獨佔或共用擁有權的類型。
+表示可取得資源之獨佔或共用擁有權的類型。
 
-例如`SyncLockT`,該類用於幫助實現[SRWLock](srwlock-class.md)類。
+`SyncLockT`例如，會使用類別來協助執行[SRWLock](srwlock-class.md)類別。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-名稱                                      | 描述
+名稱                                      | 說明
 ----------------------------------------- | ----------------------------------------------------
-[同步鎖定T:同步鎖定](#synclockt)        | 將 `SyncLockT` 類別的新執行個體初始化。
-[同步鎖定T:*同步鎖定](#tilde-synclockt) | 取消初始化類的`SyncLockT`實例。
+[SyncLockT：： SyncLockT](#synclockt)        | 初始化 `SyncLockT` 類別的新執行個體。
+[SyncLockT：： ~ SyncLockT](#tilde-synclockt) | 將類別的實例 `SyncLockT` 。
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
-名稱                               | 描述
+名稱                               | 說明
 ---------------------------------- | ----------------------------------------------------
-[同步鎖定T:同步鎖定](#synclockt) | 將 `SyncLockT` 類別的新執行個體初始化。
+[SyncLockT：： SyncLockT](#synclockt) | 初始化 `SyncLockT` 類別的新執行個體。
 
 ### <a name="public-methods"></a>公用方法
 
-名稱                             | 描述
+名稱                             | 說明
 -------------------------------- | --------------------------------------------------------------------------------------------------------------
-[同步鎖定T:鎖定](#islocked) | 指示當前物件是否`SyncLockT`擁有資源;如果當前物件是否擁有資源,則表明當前物件是否擁有資源。也就是說,`SyncLockT`物件已*鎖定*。
-[同步鎖定T:解鎖](#unlock)     | 釋放對當前`SyncLockT`物件(如果有)持有的資源的控制。
+[SyncLockT：： IsLocked](#islocked) | 指出目前的物件是否擁有資源，亦即 `SyncLockT` `SyncLockT` 物件是否已*鎖定*。
+[SyncLockT：： Unlock](#unlock)     | 釋放目前物件所持有之資源的控制權 `SyncLockT` （如果有的話）。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-名稱                      | 描述
+名稱                      | 說明
 ------------------------- | -------------------------------------------------------------------
-[同步鎖定T:sync_](#sync) | 保存類`SyncLockT`表示的基礎資源。
+[SyncLockT：： sync_](#sync) | 保存類別所代表的基礎資源 `SyncLockT` 。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -80,13 +80,13 @@ class SyncLockT;
 
 ## <a name="requirements"></a>需求
 
-**標題:** 核心包裝.h
+**標頭：** corewrappers。h
 
-**命名空間:** 微軟::WRL:包裝::D
+**命名空間：** Microsoft：： WRL：：包裝函式：:D etails
 
-## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>同步鎖定T:*同步鎖定
+## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>SyncLockT：： ~ SyncLockT
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 ~SyncLockT();
@@ -94,13 +94,13 @@ class SyncLockT;
 
 ### <a name="remarks"></a>備註
 
-取消初始化類的`SyncLockT`實例。
+將類別的實例 `SyncLockT` 。
 
-此析構函數還會解鎖當前`SyncLockT`實例。
+這個析構函式也會解除鎖定目前的 `SyncLockT` 實例。
 
-## <a name="synclocktislocked"></a><a name="islocked"></a>同步鎖定T:鎖定
+## <a name="synclocktislocked"></a><a name="islocked"></a>SyncLockT：： IsLocked
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 bool IsLocked() const;
@@ -108,15 +108,15 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果物件已`SyncLockT`鎖定,**則為 true;** 否則,**假**。
+**`true`** 如果 `SyncLockT` 物件已鎖定，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
-指示當前物件是否`SyncLockT`擁有資源;如果當前物件是否擁有資源,則表明當前物件是否擁有資源。也就是說,`SyncLockT`物件已*鎖定*。
+指出目前的物件是否擁有資源，亦即 `SyncLockT` `SyncLockT` 物件是否已*鎖定*。
 
-## <a name="synclocktsync_"></a><a name="sync"></a>同步鎖定T:sync_
+## <a name="synclocktsync_"></a><a name="sync"></a>SyncLockT：： sync_
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 typename SyncTraits::Type sync_;
@@ -124,11 +124,11 @@ typename SyncTraits::Type sync_;
 
 ### <a name="remarks"></a>備註
 
-保存類`SyncLockT`表示的基礎資源。
+保存類別所代表的基礎資源 `SyncLockT` 。
 
-## <a name="synclocktsynclockt"></a><a name="synclockt"></a>同步鎖定T:同步鎖定
+## <a name="synclocktsynclockt"></a><a name="synclockt"></a>SyncLockT：： SyncLockT
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 SyncLockT(
@@ -142,21 +142,21 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>參數
 
-*其他*<br/>
-對另一個`SyncLockT`物件的 rvalue 引用。
+*另一方面*<br/>
+另一個物件的右值參考 `SyncLockT` 。
 
-*sync*<br/>
-對另一個`SyncLockWithStatusT`物件的引用。
+*保持*<br/>
+另一個物件的參考 `SyncLockWithStatusT` 。
 
 ### <a name="remarks"></a>備註
 
-將 `SyncLockT` 類別的新執行個體初始化。
+初始化 `SyncLockT` 類別的新執行個體。
 
-第一個建構函數從參數*其他*`SyncLockT`指定的`SyncLockT`另一 個物件初始化當前物件,然後`SyncLockT`使另一個 物件無效。 第二個構造函數`protected`是 ,`SyncLockT`並將當前 物件初始化為無效狀態。
+第一個函式會 `SyncLockT` 從其他參數指定的另一個物件初始化目前的物件 `SyncLockT` ，然後使另一個物件失效*other* `SyncLockT` 。 第二個函式是，會將 **`protected`** 目前的 `SyncLockT` 物件初始化為不正確狀態。
 
-## <a name="synclocktunlock"></a><a name="unlock"></a>同步鎖定T:解鎖
+## <a name="synclocktunlock"></a><a name="unlock"></a>SyncLockT：： Unlock
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 void Unlock();
@@ -164,4 +164,4 @@ void Unlock();
 
 ### <a name="remarks"></a>備註
 
-釋放對當前`SyncLockT`物件(如果有)持有的資源的控制。
+釋放目前物件所持有之資源的控制權 `SyncLockT` （如果有的話）。

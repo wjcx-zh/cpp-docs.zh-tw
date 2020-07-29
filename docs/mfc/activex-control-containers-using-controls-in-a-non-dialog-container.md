@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620766"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214161"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控制項容器：在非對話方塊容器中使用控制項
 
@@ -55,7 +55,7 @@ ms.locfileid: "84620766"
 
 1. 將 `WM_CREATE` 訊息處理常式新增至類別 `CMyView`。
 
-1. 在處理函式中， `CMyView::OnCreate` `Create` 使用**this**指標做為父視窗，呼叫控制項的函式：
+1. 在處理函式中， `CMyView::OnCreate` `Create` 使用 **`this`** 指標做為父視窗來呼叫控制項的函式：
 
    [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 

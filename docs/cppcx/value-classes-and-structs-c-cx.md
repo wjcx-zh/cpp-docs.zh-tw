@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214941"
 ---
 # <a name="value-classes-and-structs-ccx"></a>實值類別與結構 (C++/CX)
 
-*值結構*或*值類*是 Windows 運行時相容 POD("普通舊資料結構")。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。
+*值結構*或實*值類別*是 Windows 執行階段相容的 POD （「純舊資料結構」）。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。
 
 下列範例示範如何宣告和初始化實值結構。
 
@@ -48,17 +48,17 @@ ms.locfileid: "81752902"
     ts3.str = "Another way to init a value struct.";
 ```
 
-當實值類型的變數指派給另一個變數時，值會被複製，使這兩個變數都具有各自的資料複本。 「 *值結構* 」(Value Struct) 是一種大小固定的結構，會透過 `value struct` 關鍵字進行宣告，且僅包含公用資料欄位。
+當實值類型的變數指派給另一個變數時，值會被複製，使這兩個變數都具有各自的資料複本。 「*值結構」（value struct* ）是一種固定大小的結構，只包含公用資料欄位，並使用關鍵字來宣告 **`value struct`** 。
 
-「 *實值類別* 」(Value Class) 與 `value struct` 類似，差別在於其欄位必須明確指定為公用存取範圍。 其宣告可透過 `value class` 關鍵字來執行。
+實*值類別*與類似 **`value struct`** ，不同之處在于其欄位必須明確指定為公用存取範圍。 它是使用關鍵字來宣告 **`value class`** 。
 
-值結構或值類只能包含基本數值類型、`Platform::String^`枚舉類或[Platform:iBox \<T>=](../cppcx/platform-ibox-interface.md)其中 T 是數值類型或枚舉類或值類或結構。 `IBox<T>^` 欄位可以有 `nullptr`值，這是 C++ 實作「 *可為 Null 的實值類型*」(Nullable Value Type) 這個概念的方式。
+值結構或實值類別只能包含基本數數值型別、列舉類別、 `Platform::String^` 或[Platform \<T> ^ ：： IBox](../cppcx/platform-ibox-interface.md)的欄位，其中 T 是數數值型別或列舉類別或實值類別或結構。 `IBox<T>^`欄位的值可以是 **`nullptr`** ，這就是 c + + 如何執行*可為 null 的實數值型別*的概念。
 
 包含 `Platform::String^` 或 `IBox<T>^` 類型做為成員的實值類別或實值結構，不具備 `memcpy`功能。
 
-由於 `value class` 或 `value struct` 的所有成員都是公用成員，且會發出至中繼資料，因此不允許標準 C++ 類型做為成員。 這與 ref 類別不同，ref 類別可以包含 `private` 或 `internal` 標準 C++ 類型。
+由於或的所有成員 **`value class`** **`value struct`** 都是公用的，而且會發出至中繼資料，因此不允許 Standard c + + 類型做為成員。 這不同于 ref 類別，其中可能包含 **`private`** 或 **`internal`** 標準 c + + 類型。
 
-下列程式碼片段會將 `Coordinates` 和 `City` 型別宣告為值結構。 請注意，其中一個 `City` 資料成員是 `GeoCoordinates` 型別。 `value struct` 可包含其他實值結構做為成員。
+下列程式碼片段會將 `Coordinates` 和 `City` 型別宣告為值結構。 請注意，其中一個 `City` 資料成員是 `GeoCoordinates` 型別。 **`value struct`** 可以包含其他實值結構做為成員。
 
 [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]
 
@@ -90,7 +90,7 @@ Method2(ref obj);
 
 ## <a name="nullable-value-types"></a>可為 Null 的實值型別
 
-如前所述,值類或值結構可以具有類型為[Platform::iBox\<T>=](../cppcx/platform-ibox-interface.md)的欄位,例如 。 `IBox<int>^` 這類欄位可以有 `int` 類型的任何有效數值，也可以有 `nullptr`值。 您可以將可為 null 的欄位當做引數傳遞至其參數宣告為選擇性的方法，或傳遞至實值型別不需要有值的其他地方。
+如先前所述，實值類別或實值結構可以具有[Platform：： \<T> ^ IBox](../cppcx/platform-ibox-interface.md)類型的欄位，例如 `IBox<int>^` 。 這類欄位可以有任何對型別有效的數值 **`int`** ，或者它的值可以是 **`nullptr`** 。 您可以將可為 null 的欄位當做引數傳遞至其參數宣告為選擇性的方法，或傳遞至實值型別不需要有值的其他地方。
 
 下列範例會示範如何初始化具有可為 Null 之欄位的結構。
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>另請參閱
 
 [類型系統 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C + +/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Ref 類別與結構 (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

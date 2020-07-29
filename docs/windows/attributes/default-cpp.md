@@ -1,5 +1,5 @@
 ---
-title: default （C++ COM 屬性）
+title: default （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215266"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -28,7 +28,7 @@ ms.locfileid: "80167182"
 ### <a name="parameters"></a>參數
 
 *interface1*<br/>
-可讓指令碼環境使用的預設介面，會根據使用 **default** 屬性定義的類別來建立物件。
+根據以屬性定義的類別建立物件的腳本環境，將可使用的預設介面 **`default`** 。
 
 如果未指定預設介面，預設會使用第一個出現的非來源介面。
 
@@ -39,11 +39,11 @@ ms.locfileid: "80167182"
 
 ## <a name="remarks"></a>備註
 
-**default** C++ 屬性具有與 [default](/windows/win32/Midl/default) MIDL 屬性相同的功能。 **default** 屬性也可搭配 [case](case-cpp.md) 屬性使用。
+**`default`** C + + 屬性的功能與[預設](/windows/win32/Midl/default)的 MIDL 屬性相同。 **`default`** 屬性也會搭配[case](case-cpp.md)屬性使用。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何在 coclass 定義上使用**default**來指定 `ICustomDispatch` 做為預設的可程式性介面：
+下列程式碼示範如何 **`default`** 在 coclass 的定義上使用，以指定 `ICustomDispatch` 做為預設的可程式性介面：
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,7 +91,7 @@ int main() {
 }
 ```
 
-[source](source-cpp.md) 屬性也會示範如何使用 **default**。
+[Source](source-cpp.md)屬性也有如何使用的範例 **`default`** 。
 
 ## <a name="requirements"></a>需求
 
@@ -99,10 +99,10 @@ int main() {
 
 |||
 |-|-|
-|**適用於**|**類別**、**結構**、資料成員|
+|**適用於**|**`class`**、 **`struct`** 、資料成員|
 |**可重複**|否|
-|**必要屬性**|**coclass** （套用至**類別**或**結構**時）|
-|**無效屬性**|None|
+|**必要的屬性**|**coclass** （套用至 **`class`** 或時 **`struct`** ）|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

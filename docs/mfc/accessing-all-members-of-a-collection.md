@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616487"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214174"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>存取集合的所有成員
 
@@ -42,11 +42,11 @@ MFC 陣列集合類別 (範本型和非範本型) 使用索引來存取其項目
 
    此範例使用具類型的指標陣列，其中包含 `CPerson` 物件的指標。 此陣列衍生自類別 `CObArray`，這是其中一個預先定義的非範本類別。 `GetAt` 傳回 `CPerson` 物件的指標。 針對具類型的指標集合類別 (陣列或清單)，第一個參數會指定基底類別，第二個參數會指定要儲存的類型。
 
-   `CTypedPtrArray`類別也會多載 **[]** 運算子，讓您可以使用慣用的陣列注標語法來存取陣列的元素。 上述**for**迴圈主體中語句的替代方法是
+   `CTypedPtrArray`類別也會多載 **[]** 運算子，讓您可以使用慣用的陣列注標語法來存取陣列的元素。 在上述迴圈主體中，語句的替代方法 **`for`** 是
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   **const** 和非**const** 版本中都有此運算子。 針對 **const** 陣列叫用的 **const** 版本，只能出現在指派陳述式的右邊。
+   這個運算子同時存在於 **`const`** 和非 **`const`** 版本中。 針對陣列所叫用的版本，只能 **`const`** **`const`** 出現在指派語句的右側。
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> 逐一查看清單
 

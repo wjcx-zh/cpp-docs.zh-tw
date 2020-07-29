@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae2e3c66b3abf22bbefbcb0fcd3292f0a3dbdbe2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452895"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215708"
 ---
-# <a name="iscompound-class"></a>is_compound 類別
+# <a name="is_compound-class"></a>is_compound 類別
 
 測試指定的類型是否不是基本。
 
@@ -32,7 +32,7 @@ struct is_compound;
 
 ## <a name="remarks"></a>備註
 
-如果*Ty*的類型是基本類型 (也就是, 如果[is_fundamental](../standard-library/is-fundamental-class.md) \<Ty > 為**true**), 則類型述詞的實例會保留**false** , 否則會保留**true**。 因此, 如果*Ty*是陣列類型、函式類型、 **void**的指標或物件或函式、參考、類別、等位、列舉或非靜態類別成員的指標, 或的*cv 限定*格式, 則述詞會保留**true** 。其中一個。
+**`false`** 如果*Ty*的類型是基本類型（也就是，如果[is_fundamental](../standard-library/is-fundamental-class.md)保留），則類型述詞的實例會保留 \<Ty> **`true`** ，否則會保留 **`true`** 。 因此， **`true`** 如果*Ty*是陣列類型、函式類型、或物件或函式的指標 **`void`** 、參考、類別、等位、列舉或非靜態類別成員的指標，或其中一個的*cv 限定*形式，則此述詞會保存。
 
 ## <a name="example"></a>範例
 
@@ -77,7 +77,7 @@ is_compound<int> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

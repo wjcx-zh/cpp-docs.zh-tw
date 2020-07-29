@@ -139,12 +139,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636926"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215162"
 ---
 # <a name="data-type-constants"></a>資料類型常數
 
@@ -159,29 +159,29 @@ ms.locfileid: "50636926"
 ```
 
 > [!NOTE]
-> [/J](../build/reference/j-default-char-type-is-unsigned.md) 編譯器選項會將預設的 **char** 類型變更為**不帶正負號**。
+> [`/J`](../build/reference/j-default-char-type-is-unsigned.md)編譯器選項會將預設 **`char`** 類型從變更 **`signed char`** 為 **`unsigned char`** 。
 
-|常數|值|描述|
+|持續性|值|說明|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|**char** 中的位元數|
-|**SCHAR_MIN**|(-128)|帶正負號的最小 **char** 值|
-|**SCHAR_MAX**|127|帶正負號的最大 **char** 值|
-|**UCHAR_MAX**|255 (0xff)|**不帶正負號**的最大 **char** 值|
-|**CHAR_MIN**|(-128) (如果使用 **/J** 選項，則為 0)|**char** 最小值|
-|**CHAR_MAX**|127 (如果使用 **/J** 選項，則為 255)|最大 **char** 值|
-|**MB_LEN_MAX**|5|多位元組 **char** 中的最大位元組數|
-|**SHRT_MIN**|-32768|帶正負號的最小 **short** 值|
-|**SHRT_MAX**|32767|帶正負號的最大 **short** 值|
-|**USHRT_MAX**|65535 (0xffff)|**不帶正負號**的最大 **short** 值|
-|**INT_MIN**|(-2147483647 - 1)|帶正負號的最小 **int** 值|
-|**INT_MAX**|2147483647|帶正負號的最大 **int** 值|
-|**UINT_MAX**|4294967295 (0xffffffff)|**不帶正負號**的最大 **int** 值|
-|**LONG_MIN**|(-2147483647L - 1)|帶正負號的最小 **long** 值|
-|**LONG_MAX**|2147483647L|帶正負號的最大 **long** 值|
-|**ULONG_MAX**|4294967295UL (0xfffffffful)|**不帶正負號**的最大 **long** 值|
-|**LLONG_MIN**|(-9223372036854775807LL - 1)|帶正負號的最小 **long** **long** 或 **__int64** 值|
-|**LLONG_MAX**|9223372036854775807LL|帶正負號的最大 **long** **long** 或 **__int64** 值|
-|**ULLONG_MAX**|0xffffffffffffffffull|**不帶正負號**的最大 **long** **long** 值|
+|**CHAR_BIT**|8|中的位數**`char`**|
+|**SCHAR_MIN**|(-128)|最小 **`signed char`** 值|
+|**SCHAR_MAX**|127|最大 **`signed char`** 值|
+|**UCHAR_MAX**|255 (0xff)|最大 **`unsigned char`** 值|
+|**CHAR_MIN**|（-128）（如果使用選項，則為 0 **`/J`** ）|最小 **`char`** 值|
+|**CHAR_MAX**|127（如果使用選項，則為 255 **`/J`** ）|最大 **`char`** 值|
+|**MB_LEN_MAX**|5|多位元組的最大位元組數目**`char`**|
+|**SHRT_MIN**|-32768|最小 **`signed short`** 值|
+|**SHRT_MAX**|32767|最大 **`signed short`** 值|
+|**USHRT_MAX**|65535 (0xffff)|最大 **`unsigned short`** 值|
+|**INT_MIN**|(-2147483647 - 1)|最小 **`signed int`** 值|
+|**INT_MAX**|2147483647|最大 **`signed int`** 值|
+|**UINT_MAX**|4294967295 (0xffffffff)|最大 **`unsigned int`** 值|
+|**LONG_MIN**|(-2147483647L - 1)|最小 **`signed long`** 值|
+|**LONG_MAX**|2147483647L|最大 **`signed long`** 值|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|最大 **`unsigned long`** 值|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|最 **`signed long long`** 小 **`__int64`** 值或值|
+|**LLONG_MAX**|9223372036854775807LL|上限 **`signed long long`** 或 **`__int64`** 值|
+|**ULLONG_MAX**|0xffffffffffffffffull|最大 **`unsigned long long`** 值|
 |**_I8_MIN**|(-127i8 - 1)|帶正負號的最小 8 位元值|
 |**_I8_MAX**|127i8|帶正負號的最大 8 位元值|
 |**_UI8_MAX**|0xffui8|不帶正負號的最大 8 位元值|
@@ -202,13 +202,13 @@ ms.locfileid: "50636926"
 
 ## <a name="floating-point-type-constants"></a>浮點數類型常數
 
-下列常數提供 **long** **double**、**double** 和 **float** 資料類型的範圍和其他特性。 若要使用這些常數，請在原始程式檔中包括 float.h 標頭：
+下列常數提供 **`long double`** 、 **`double`** 和資料類型的範圍和其他特性 **`float`** 。 若要使用這些常數，請在原始程式檔中包括 float.h 標頭：
 
 ```C
 #include <float.h>
 ```
 
-|常數|值|描述|
+|持續性|值|說明|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|十進位位數的進位精確度|
 |**DBL_DIG**|15|十進位位數精確度|

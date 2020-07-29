@@ -1,17 +1,17 @@
 ---
-title: length_is （C++ COM 屬性）
+title: length_is （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e6ab9ec0f6f55ab0be9624b7343b087b41f2a54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214782"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215240"
 ---
 # <a name="length_is"></a>length_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80214782"
 
 ## <a name="remarks"></a>備註
 
-**Length_is** C++屬性具有與[length_is](/windows/win32/Midl/length-is) MIDL 屬性相同的功能。
+**Length_is** c + + 屬性具有與[length_is](/windows/win32/Midl/length-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -42,10 +42,10 @@ ms.locfileid: "80214782"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
+|**適用於**|或中的欄位 **`struct`** **`union`** ，介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 5c0ab3579fcb9633c435305a8b02b0c3f73d7a6f
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825700"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215188"
 ---
 # <a name="opt-optimizations"></a>/OPT (最佳化)
 
@@ -30,9 +30,9 @@ ms.locfileid: "82825700"
 
 ## <a name="syntax"></a>語法
 
-> **/OPT：**{**REF** | **NOREF**} \
-> **/Opt：**{**ICF**[**=**_反復_專案] |**NOICF**}\
-> **/OPT：**{**LBR** | **NOLBR**}
+> **/OPT：**{**REF**  |  **NOREF**} \
+> **/Opt：**{**ICF**[反復專案 **=** _ _] |**NOICF**}\
+> **/OPT：**{**LBR**  |  **NOLBR**}
 
 ## <a name="arguments"></a>引數
 
@@ -42,22 +42,22 @@ ms.locfileid: "82825700"
 
 當/OPT： REF 啟用時，LINK 會移除未參考的封裝函數和資料，稱為*comdat*。 這種最佳化稱為可轉移 COMDAT 刪除。 **/Opt： REF**選項也會停用增量連結。
 
-在類別宣告內定義的內嵌函式和成員函式一律為 Comdat。 如果是使用[/gy](gy-enable-function-level-linking.md)選項編譯，則會將物件檔案中的所有函式都設為 comdat。 若要將**const**資料放在 comdat 中，您必須使用`__declspec(selectany)`來宣告它。 如需有關如何指定要移除或折迭之資料的詳細資訊，請參閱[selectany](../../cpp/selectany.md)。
+在類別宣告內定義的內嵌函式和成員函式一律為 Comdat。 如果是使用[/gy](gy-enable-function-level-linking.md)選項編譯，則會將物件檔案中的所有函式都設為 comdat。 若要將 **`const`** 資料放在 comdat 中，您必須使用來宣告它 `__declspec(selectany)` 。 如需有關如何指定要移除或折迭之資料的詳細資訊，請參閱[selectany](../../cpp/selectany.md)。
 
 根據預設，連結器會啟用 **/opt： REF** ，除非指定 **/opt： NOREF**或[/debug](debug-generate-debug-info.md) 。 若要覆寫此預設值，並在程式中保留未參考的 Comdat，請指定 **/opt： NOREF**。 您可以使用[/INCLUDE](include-force-symbol-references.md)選項來覆寫特定符號的移除。
 
 如果指定[/debug](debug-generate-debug-info.md) ， **/opt**的預設值會是**NOREF**，而且所有函式都會保留在影像中。 若要覆寫這個預設值並優化 debug 組建，請指定 **/opt： REF**。 這可以減少可執行檔的大小，而且即使在 debug 組建中也是有用的優化。 我們建議您也指定 **/opt： NOICF** ，以在偵錯工具組建中保留相同的函式。 這可讓您更容易讀取堆疊追蹤，並且在會摺疊在一起的函式中設定中斷點。
 
-**ICF** \[ICF**=** 反復_專案] &#124;_ **NOICF**
+**ICF** \[ ICF **=**_反覆運算_]&#124; **NOICF**
 
-使用 [ **ICF**\[**=** 反復_專案] 來_執行相同的 COMDAT 折迭。 重複的 COMDAT 可以從連結器輸出中移除。 *選擇性的*反復專案參數會指定要跨越符號以進行重複的次數。 預設的反覆運算次數為1。 其他反覆項目可能會找出更多經由先前反覆項目中摺疊所揭露的重複項目。
+使用 [ **ICF**反復專案 \[ **=** _ _] 來執行相同的 COMDAT 折迭。 重複的 COMDAT 可以從連結器輸出中移除。 *選擇性的*反復專案參數會指定要跨越符號以進行重複的次數。 預設的反覆運算次數為1。 其他反覆項目可能會找出更多經由先前反覆項目中摺疊所揭露的重複項目。
 
 根據預設，連結器會啟用 **/opt： ICF** ，除非指定 **/opt： NOICF**或[/debug](debug-generate-debug-info.md) 。 若要覆寫此預設值，並防止 Comdat 在程式中折迭，請指定 **/opt： NOICF**。
 
 在 debug 組建中，您必須明確指定 **/opt： ICF** ，以啟用 COMDAT 折迭。 不過，因為 **/opt： ICF**可以合併相同的資料或函式，所以可以變更堆疊追蹤中出現的函式名稱。 它也可能會讓您無法在某些函式中設定中斷點，或在偵錯工具中檢查某些資料，而且當您逐步執行程式碼時，會將您帶到非預期的函數。 程式碼的行為完全相同，但偵錯工具的呈現可能非常令人困惑。 因此，我們不建議您在 debug 組建中使用 **/opt： ICF** ，除非較小的程式碼的優點超過這些缺點。
 
 > [!NOTE]
-> 由於 **/opt： ICF**可能會導致相同的位址指派給不同的函式或唯讀資料成員（也就是使用 **/gy**編譯時的**const**變數），因此可能會中斷相依于函數或唯讀資料成員之唯一位址的程式。 如需詳細資訊，請參閱 [/Gy (啟用函式階層連結)](gy-enable-function-level-linking.md)。
+> 由於 **/opt： ICF**可能會導致相同的位址指派給不同的函式或唯讀資料成員（也就是 **`const`** 使用 **/gy**編譯時的變數），因此可能會中斷相依于函數或唯讀資料成員之唯一位址的程式。 如需詳細資訊，請參閱 [/Gy (啟用函式階層連結)](gy-enable-function-level-linking.md)。
 
 **LBR** &#124; **NOLBR**
 
@@ -83,7 +83,7 @@ ms.locfileid: "82825700"
 
 1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [設定**屬性** > **連結器** > **優化**] 屬性頁。
+1. 選取 [設定**屬性**  >  **連結器**  >  **優化**] 屬性頁。
 
 1. 修改其中一個屬性：
 
@@ -95,7 +95,7 @@ ms.locfileid: "82825700"
 
 1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [設定] [**屬性** > ] [**連結器** > **命令列**] 屬性頁。
+1. 選取 [設定] [**屬性**] [  >  **連結器**  >  **命令列**] 屬性頁。
 
 1. 在 [**其他選項**] 中輸入選項：
 
@@ -105,7 +105,7 @@ ms.locfileid: "82825700"
 
 - 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> 屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [MSVC 連結器參考](linking.md)
 - [MSVC 連結器選項](linker-options.md)

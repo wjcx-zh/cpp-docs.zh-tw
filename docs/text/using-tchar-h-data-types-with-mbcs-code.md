@@ -9,20 +9,20 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 78e5d89e1e87d081e762fab1298eb990b914324c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215357"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>使用含有 _MBCS 程式碼的 TCHAR.H 資料類型
 
-當定義了資訊清單常數 `_MBCS` 時，指定的泛型文字常式會對應到下列其中一種常式：
+當定義了資訊清單常數時 `_MBCS` ，指定的泛型文字常式會對應到下列其中一種常式：
 
-- 適當地處理多位元組位元組、字元與字串的 SBCS 常式。 在此案例中，字串引數類型必須是 `char*`。 例如，`_tprintf` 對應到 `printf`；傳遞到 `printf` 的字串引數類型是 `char*`。 若為字串類型使用 `_TCHAR` 泛型文字資料類型，`printf` 的正式與實際參數類型會相符，因為 `_TCHAR*` 對應到 `char*`。
+- 適當地處理多位元組位元組、字元與字串的 SBCS 常式。 在此情況下，字串引數應為類型 **`char*`** 。 例如， `_tprintf` 對應至 `printf` ; 的字串引數 `printf` 是類型 **`char*`** 。 如果您 `_TCHAR` 針對字串類型使用泛型文字資料類型，則會符合的正式和實際參數類型， `printf` 因為會 `_TCHAR*` 對應至 **`char*`** 。
 
-- MBCS 特定常式。 在此案例中，字串引數類型必須是 `unsigned char*`。 例如，`_tcsrev` 對應到 `_mbsrev`，它預期並傳回類型為 `unsigned char*` 的字串。 如果您為字串類型使用 `_TCHAR` 的泛型文字資料類型，可能會發生類型衝突，因為 `_TCHAR` 對應到類型 `char`。
+- MBCS 特定常式。 在此案例中，字串引數類型必須是 `unsigned char*`。 例如，`_tcsrev` 對應到 `_mbsrev`，它預期並傳回類型為 `unsigned char*` 的字串。 如果您 `_TCHAR` 為字串類型使用泛型文字資料類型，可能會發生類型衝突，因為 `_TCHAR` 對應至類型 **`char`** 。
 
 下面是防止此類型衝突 (以及可能會產生的 C 編譯器警告或 C++ 編譯器錯誤) 的三種解決方式：
 
@@ -32,7 +32,7 @@ ms.locfileid: "79446587"
     char * _tcsrev(char *);
     ```
 
-   在預設的情況下，`_tcsrev` 的原型會對應到透過 Libc 中的 Thunk `_mbsrev`。 這會將 `_mbsrev` 傳入參數的類型，以及從 `_TCHAR*` （也就是 `char *`）傳出的傳回值變更為 `unsigned char *`。 當您使用 `_TCHAR`時，這個方法會確保型別相符，但由於函式呼叫的額外負荷，因此速度相當慢。
+   在預設的情況下，的原型會 `_tcsrev` `_mbsrev` 透過 Libc 中的 Thunk 來對應。 這 `_mbsrev` 會將傳入參數和傳出傳回值的類型從 `_TCHAR*` （也就是 `char *` ）變更為 `unsigned char *` 。 當您使用時，這個方法會確保型別相符 `_TCHAR` ，但由於函式呼叫的額外負荷，因此速度相當慢。
 
 - 透過在您的程式碼中併入下列前置處理器陳述式，以內嵌方式使用函式。
 
@@ -61,8 +61,8 @@ ms.locfileid: "79446587"
     #define _tcschr _mbschr
     ```
 
-   當您採用這種方法時，您必須小心確保針對字串引數和字串傳回值使用適當的資料類型。 您可以使用類型轉換來確保適當的類型相符，或者可以使用 `_TXCHAR` 泛型文字資料類型。 `_TXCHAR` 對應到 SBCS 程式碼中的**char**類型，但會對應到 MBCS 程式碼中的類型不**帶正負**號的 char 如需有關泛型文字宏的詳細資訊，請參閱《*執行時間程式庫參考*》中的[泛型文字](../c-runtime-library/generic-text-mappings.md)對應。
+   當您採用這種方法時，您必須小心確保針對字串引數和字串傳回值使用適當的資料類型。 您可以使用類型轉換來確保適當的類型相符，或者可以使用 `_TXCHAR` 泛型文字資料類型。 `_TXCHAR`對應到 SBCS 程式碼中的類型， **`char`** 但會對應到 **`unsigned char`** MBCS 程式碼中的類型。 如需有關泛型文字宏的詳細資訊，請參閱《*執行時間程式庫參考*》中的[泛型文字](../c-runtime-library/generic-text-mappings.md)對應。
 
 ## <a name="see-also"></a>另請參閱
 
-[tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)
+[Tchar 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)

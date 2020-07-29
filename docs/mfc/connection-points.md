@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620734"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214148"
 ---
 # <a name="connection-points"></a>連接點
 
@@ -37,7 +37,7 @@ MFC 會在[CConnectionPoint](reference/cconnectionpoint-class.md)和[CCmdTarget]
 
 針對在類別中實作為的每個連接點，您必須宣告可執行連接點的連接元件。 如果您執行一或多個連接點，您也必須在類別中宣告單一連接對應。 連接對應是 ActiveX 控制項支援的連接點表格。
 
-下列範例示範簡單的連接對應和一個連接點。 第一個範例會宣告連接對應和點。第二個範例會執行對應和點。 請注意， `CMyClass` 必須是 `CCmdTarget` 衍生的類別。 在第一個範例中，會將程式碼插入類別宣告中的**protected**區段底下：
+下列範例示範簡單的連接對應和一個連接點。 第一個範例會宣告連接對應和點。第二個範例會執行對應和點。 請注意， `CMyClass` 必須是 `CCmdTarget` 衍生的類別。 在第一個範例中，程式碼會插入類別宣告中的 **`protected`** 區段底下：
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 

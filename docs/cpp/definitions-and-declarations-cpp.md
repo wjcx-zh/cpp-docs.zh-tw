@@ -2,18 +2,18 @@
 title: 定義和宣告 (C++)
 ms.date: 11/04/2016
 ms.assetid: 56b809c0-e602-4f18-9ca5-cd7a8fbaaf30
-ms.openlocfilehash: 20683f3d2e12f7ffead573cbac46fdd4e106c383
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c35c0adaa1b81e5bf9bfd9e779037bc6068b3174
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221701"
 ---
 # <a name="definitions-and-declarations-c"></a>定義和宣告 (C++)
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-DLL 介面會參考系統中某些程式所能匯出的所有專案（函式和資料）;也就是宣告為**dllimport**或**dllexport**的所有專案。 包含在 DLL 介面中的所有宣告都必須指定**dllimport**或**dllexport**屬性。 不過，定義必須僅指定**dllexport**屬性。 例如，下列函式定義會產生編譯器錯誤：
+DLL 介面會參考系統中某些程式所能匯出的所有專案（函式和資料）;也就是宣告為或的所有專案 **`dllimport`** **`dllexport`** 。 包含在 DLL 介面中的所有宣告都必須指定 **`dllimport`** 或 **`dllexport`** 屬性。 不過，定義必須僅指定 **`dllexport`** 屬性。 例如，下列函式定義會產生編譯器錯誤：
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -34,7 +34,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
-使用**dllexport**意味著定義，而**dllimport**則表示宣告。 您必須搭配**dllexport**使用**extern**關鍵字來強制執行宣告;否則，就會隱含定義。 因此，下列範例是正確的：
+使用 **`dllexport`** 表示定義，而則表示宣告 **`dllimport`** 。 您必須搭配使用 **`extern`** 關鍵字 **`dllexport`** 來強制執行宣告，否則會隱含定義。 因此，下列範例是正確的：
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -65,7 +65,7 @@ void func() {
 }
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

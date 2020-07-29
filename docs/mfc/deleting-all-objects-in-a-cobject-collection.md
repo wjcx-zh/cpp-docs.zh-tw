@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225068"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>刪除 CObject 集合中的所有物件
 
@@ -38,7 +38,7 @@ ms.locfileid: "84615900"
 
 1. 使用 `GetHeadPosition` 和 `GetNext` 逐一查看清單。
 
-1. 使用**delete**運算子刪除在反復專案中遇到的每個物件。
+1. 使用 **`delete`** 運算子來刪除在反復專案中遇到的每個物件。
 
 1. 在刪除與這些項目關聯的物件後，呼叫 `RemoveAll` 函式將所有項目從清單移除。
 
@@ -54,7 +54,7 @@ ms.locfileid: "84615900"
 
 1. 使用 `GetSize` 和整數索引值以逐一查看陣列。
 
-1. 使用**delete**運算子刪除在反復專案中遇到的每個元素。
+1. 使用 **`delete`** 運算子來刪除在反復專案中遇到的每個元素。
 
 1. 在刪除之後，呼叫 `RemoveAll` 函式以從陣列移除所有項目。
 
@@ -68,7 +68,7 @@ ms.locfileid: "84615900"
 
 1. 使用 `GetStartPosition` 和 `GetNextAssoc` 逐一查看陣列。
 
-1. 使用**delete**運算子刪除每個地圖元素在反復專案中遇到的索引鍵和（或）值。
+1. 使用 **`delete`** 運算子來刪除每個地圖元素在反復專案中遇到的索引鍵和（或）值。
 
 1. 在刪除之後，呼叫 `RemoveAll` 函式以從對應移除所有項目。
 

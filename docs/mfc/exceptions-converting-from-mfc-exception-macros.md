@@ -14,18 +14,18 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 8a936a0af9927aa0dc453a93c98676a77f4ad6dc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621757"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87183808"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>例外狀況：從 MFC 例外狀況巨集轉換
 
 這是一個先進的主題。
 
-本文說明如何轉換以 Microsoft Foundation Class 宏（ **try**、 **catch**、 **THROW**等等）撰寫的現有程式碼，以使用 c + + 例外狀況處理關鍵字**try**、 **catch**和**THROW**。 主題包括：
+本文說明如何轉換以 Microsoft Foundation Class 宏（ **TRY**、 **CATCH**、 **THROW**等等）撰寫的現有程式碼，以使用 c + + 例外狀況處理關鍵字 **`try`** 、 **`catch`** 和 **`throw`** 。 主題包括：
 
 - [轉換優點](#_core_advantages_of_converting)
 
@@ -39,7 +39,7 @@ ms.locfileid: "84621757"
 
 - 使用 c + + 例外狀況處理關鍵字的程式碼會編譯成稍微小一點。EXE 或。URLMON.DLL.
 
-- C + + 例外狀況處理關鍵字更具彈性：它們可以處理任何可以複製之資料類型的例外狀況（**int**、 **float**、 **char**等等），而宏只會處理 `CException` 衍生自它的類別和類別的例外狀況。
+- C + + 例外狀況處理關鍵字更具彈性：它們可以處理任何可以複製之資料類型的例外狀況（ **`int`** 、 **`float`** 、 **`char`** 等），而宏只會處理 `CException` 衍生自它的類別和類別的例外狀況。
 
 宏與關鍵字的主要差異在於，使用宏「自動」的程式碼會在例外狀況超出範圍時，刪除攔截到的例外狀況。 使用關鍵字的程式碼不是，因此您必須明確地刪除攔截到的例外狀況。 如需詳細資訊，請參閱[例外狀況：攔截及刪除例外](exceptions-catching-and-deleting-exceptions.md)狀況。
 
@@ -53,7 +53,7 @@ ms.locfileid: "84621757"
 
    請注意類別名稱和物件指標名稱之間的逗號。
 
-   **Catch**關鍵字的例外狀況宣告會使用下列語法：
+   關鍵字的例外狀況宣告會 **`catch`** 使用此語法：
 
    **catch （** *exception_type* *exception_name* **）**
 
@@ -63,11 +63,11 @@ ms.locfileid: "84621757"
 
    使用宏時， **catch**宏（具有其引數）會開始第一個 catch 區塊;**AND_CATCH**宏會開始後續的 catch 區塊，而**END_CATCH**宏則會終止 catch 區塊的順序。
 
-   使用關鍵字時， **catch**關鍵字（包含其例外狀況宣告）會開始每個 catch 區塊。 **END_CATCH**宏沒有對應的。catch 區塊的結尾會加上右大括弧。
+   使用關鍵字時， **`catch`** 關鍵字（具有其例外狀況宣告）會開始每個 catch 區塊。 **END_CATCH**宏沒有對應的。catch 區塊的結尾會加上右大括弧。
 
 3. Throw 運算式：
 
-   宏會使用**THROW_LAST**來重新擲回目前的例外狀況。 不含引數的**throw**關鍵字具有相同的效果。
+   宏會使用**THROW_LAST**來重新擲回目前的例外狀況。 **`throw`** 關鍵字（不含引數）具有相同的效果。
 
 ## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>執行轉換
 
@@ -77,17 +77,17 @@ ms.locfileid: "84621757"
 
 2. 取代或刪除所有出現的下列宏：
 
-   **嘗試**（以**try**取代它）
+   **嘗試**（以取代它 **`try`** ）
 
-   **Catch** （以**catch**取代）
+   **CATCH** （以取代它 **`catch`** ）
 
-   **AND_CATCH** （以**CATCH**取代）
+   **AND_CATCH** （以取代 **`catch`** ）
 
    **END_CATCH** （刪除）
 
-   **Throw** （以**throw**取代它）
+   **擲**回（以取代它 **`throw`** ）
 
-   **THROW_LAST** （以**THROW**取代）
+   **THROW_LAST** （以取代 **`throw`** ）
 
 3. 修改宏引數，使其形成有效的例外狀況宣告。
 

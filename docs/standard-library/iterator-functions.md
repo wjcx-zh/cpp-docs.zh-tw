@@ -32,16 +32,16 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 615ebeedc87563eeac46c462304072ff1979040c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420110"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222312"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函式
 
-## <a name="advance"></a>過時
+## <a name="advance"></a><a name="advance"></a>過時
 
 依指定的位置數目遞增迭代器。
 
@@ -52,19 +52,19 @@ template <class InputIterator, class Distance>
 
 ### <a name="parameters"></a>參數
 
-*InIt*\
+*初始*\
 要遞增且必須符合輸入迭代器需求的迭代器。
 
-*關閉*\
+*停止*\
 整數類資料類型，可以轉換為迭代器的差異類型，並指定迭代器位置向前移的增量數目。
 
 ### <a name="remarks"></a>備註
 
 這個前移範圍必須為非奇異，而迭代器必須是可取值或超出結尾。
 
-如果 `InputIterator` 符合雙向反覆運算器類型的需求，則*Off*可能會是負數。 如果 `InputIterator` 是輸入或正向反覆運算器類型，Off 必須為*非*負值。
+如果 `InputIterator` 滿足雙向反覆運算器類型的需求，則*Off*可能是負值。 如果 `InputIterator` 是輸入或正向反覆運算器類型， *Off*就必須是非負值。
 
-當 `InputIterator` 滿足隨機存取反覆運算器的需求時，推進函式會有常數複雜度;否則，它會具有線性複雜度，因此可能會耗用很多資源。
+`InputIterator`滿足隨機存取反覆運算器的需求時，推進函式會有常數複雜度; 否則，它會具有線性複雜度，因此可能會耗用相當多的資源。
 
 ### <a name="example"></a>範例
 
@@ -113,7 +113,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```
 
-## <a name="back_inserter"></a>back_inserter
+## <a name="back_inserter"></a><a name="back_inserter"></a>back_inserter
 
 建立可以在指定的容器背面插入項目的迭代器。
 
@@ -129,7 +129,7 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="return-value"></a>傳回值
 
-與容器物件 *_Cont*相關聯的 `back_insert_iterator`。
+`back_insert_iterator`與容器物件相關聯的 *_Cont*。
 
 ### <a name="remarks"></a>備註
 
@@ -184,7 +184,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a>起點
+## <a name="begin"></a><a name="begin"></a>起點
 
 擷取在指定的容器中第一個項目的迭代器。
 
@@ -203,10 +203,10 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>參數
 
-*接續*\
+*續*\
 容器。
 
-*陣列*\
+*數列*\
 `Ty` 類型的物件陣列。
 
 ### <a name="return-value"></a>傳回值
@@ -286,7 +286,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
 擷取在指定的容器中第一個項目的常數迭代器。
 
@@ -298,7 +298,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>參數
 
-*接續*\
+*續*\
 容器或 initializer_list。
 
 ### <a name="return-value"></a>傳回值
@@ -309,7 +309,7 @@ auto cbegin(const Container& cont)
 
 這個函式可以與所有「C++ 標準程式庫」容器和與 [initializer_list](../standard-library/initializer-list-class.md) 搭配運作。
 
-您可以使用此成員函式取代 `begin()` 樣板函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為可修改（非**const**）容器或任何支援 `begin()` 和 `cbegin()`的 `initializer_list`。
+您可以使用此成員函式取代 `begin()` 樣板函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將視為可 `Container` 修改（非 **`const`** ）容器或 `initializer_list` 任何支援和的類型 `begin()` `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -319,7 +319,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
 擷取常數迭代器，指向在指定的容器中最後一個項目後面的項目。
 
@@ -331,7 +331,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>參數
 
-*接續*\
+*續*\
 容器或 initializer_list。
 
 ### <a name="return-value"></a>傳回值
@@ -342,7 +342,7 @@ auto cend(const Container& cont)
 
 這個函式可以與所有「C++ 標準程式庫」容器和與 [initializer_list](../standard-library/initializer-list-class.md) 搭配運作。
 
-您可以使用此成員函式來取代 [end()](../standard-library/iterator-functions.md#end) 範本函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為可修改（非**const**）容器或任何支援 `end()` 和 `cend()`的 `initializer_list`。
+您可以使用此成員函式來取代 [end()](../standard-library/iterator-functions.md#end) 範本函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將視為可 `Container` 修改（非 **`const`** ）容器或 `initializer_list` 任何支援和的類型 `end()` `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -352,19 +352,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a>crbegin
 
 ```cpp
 template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
 ```
 
-## <a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a>crend
 
 ```cpp
 template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
 ```
 
-## <a name="data"></a>data
+## <a name="data"></a><a name="data"></a> 資料
 
 ```cpp
 template <class C> constexpr auto data(C& c) -> decltype(c.data());
@@ -373,7 +373,7 @@ template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
 template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
 ```
 
-## <a name="distance"></a>長途電話
+## <a name="distance"></a><a name="distance"></a>長途電話
 
 判斷在兩個迭代器定址的位置之間的增量數。
 
@@ -384,10 +384,10 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 要判斷與第二個迭代器之距離的第一個迭代器。
 
-*上次*\
+*次*\
 要判斷與第一個迭代器之距離的第二個迭代器。
 
 ### <a name="return-value"></a>傳回值
@@ -396,7 +396,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="remarks"></a>備註
 
-當 `InputIterator` 滿足隨機存取反覆運算器的需求時，距離函數會有常數複雜度;否則，它會具有線性複雜度，因此可能會耗用很多資源。
+當 `InputIterator` 滿足隨機存取反覆運算器的需求時，距離函式會有常數複雜度; 否則，它會具有線性複雜度，因此可能會很耗費資源。
 
 ### <a name="example"></a>範例
 
@@ -446,7 +446,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.
 ```
 
-## <a name="empty"></a>空
+## <a name="empty"></a><a name="empty"></a>空
 
 ```cpp
 template <class C> constexpr auto empty(const C& c) -> decltype(c.empty());
@@ -454,7 +454,7 @@ template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
 template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
 ```
 
-## <a name="end"></a>成品
+## <a name="end"></a><a name="end"></a>成品
 
 擷取迭代器，指向在指定的容器中最後一個項目後面的項目。
 
@@ -473,10 +473,10 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>參數
 
-*接續*\
+*續*\
 容器。
 
-*陣列*\
+*數列*\
 `Ty` 類型的物件陣列。
 
 ### <a name="return-value"></a>傳回值
@@ -489,7 +489,7 @@ Ty *end(Ty (& array)[Size]);
 
 如需程式碼範例，請參閱 [begin](../standard-library/iterator-functions.md#begin)。
 
-## <a name="front_inserter"></a>front_inserter
+## <a name="front_inserter"></a><a name="front_inserter"></a>front_inserter
 
 建立可以在指定的容器前面插入項目的迭代器。
 
@@ -505,7 +505,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="return-value"></a>傳回值
 
-與容器物件 *_Cont*相關聯的 `front_insert_iterator`。
+`front_insert_iterator`與容器物件相關聯的 *_Cont*。
 
 ### <a name="remarks"></a>備註
 
@@ -560,9 +560,9 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a>插入器
+## <a name="inserter"></a><a name="inserter"></a>插入器
 
-協助程式範本函式，可讓您使用 `inserter(_Cont, _Where)`，而不是 `insert_iterator<Container>(_Cont, _Where)`。
+Helper 範本函式，可讓您使用， `inserter(_Cont, _Where)` 而不是 `insert_iterator<Container>(_Cont, _Where)` 。
 
 ```cpp
 template <class Container>
@@ -582,7 +582,7 @@ inserter(
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回[insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`。
+此範本函式會傳回[insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator) `<Container>(_Cont, _Where)` 。
 
 ### <a name="example"></a>範例
 
@@ -631,7 +631,7 @@ After the insertions, the list L is:
 ( 1 20 30 40 500 ).
 ```
 
-## <a name="make_checked_array_iterator"></a>make_checked_array_iterator
+## <a name="make_checked_array_iterator"></a><a name="make_checked_array_iterator"></a>make_checked_array_iterator
 
 建立其他演算法可使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。
 
@@ -649,13 +649,13 @@ Iter Ptr,
 
 ### <a name="parameters"></a>參數
 
-*Ptr*\
+*指標*\
 目的陣列的指標。
 
-*大小*\
+*容量*\
 目的陣列的大小。
 
-*索引*\
+*指數*\
 陣列中選擇性的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -725,9 +725,9 @@ int main()
 }
 ```
 
-## <a name="make_move_iterator"></a>make_move_iterator
+## <a name="make_move_iterator"></a><a name="make_move_iterator"></a>make_move_iterator
 
-建立一個包含所提供迭代器作為`move iterator`迭代器的 `stored`。
+建立一個包含所提供迭代器作為`stored`迭代器的 `move iterator`。
 
 ```cpp
 template <class Iterator>
@@ -744,7 +744,7 @@ make_move_iterator(const Iterator& _It);
 
 此範本函式會傳回 `move_iterator` `<Iterator>(_It)`。
 
-## <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
+## <a name="make_unchecked_array_iterator"></a><a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
 
 建立其他演算法可使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。
 
@@ -759,7 +759,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>參數
 
-*Ptr*\
+*指標*\
 目的陣列的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -823,7 +823,7 @@ int main()
 }
 ```
 
-## <a name="next"></a>下一個
+## <a name="next"></a><a name="next"></a>下一個
 
 反覆運算指定的次數，並傳回新的迭代器位置。
 
@@ -836,7 +836,7 @@ InputIterator next(
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 目前位置。
 
 *_Off*\
@@ -848,9 +848,9 @@ InputIterator next(
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回 `next` 遞增的 *_Off*時間
+此範本函式會傳回 `next` 遞增的 *_Off*次
 
-## <a name="prev"></a>前
+## <a name="prev"></a><a name="prev"></a>前
 
 以反向方向反覆運算指定的次數，並傳回新的迭代器位置。
 
@@ -863,7 +863,7 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 目前位置。
 
 *_Off*\
@@ -871,23 +871,23 @@ BidirectionalIterator prev(
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回遞減 `next` 次後的 `off`。
+此範本函式會傳回遞減 `off` 次後的 `next`。
 
-## <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a>rbegin
 
 ```cpp
 template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
 template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
 ```
 
-## <a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a>rend
 
 ```cpp
 template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
 template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
 ```
 
-## <a name="size"></a>容量
+## <a name="size"></a><a name="size"></a>容量
 
 ```cpp
 template <class C> constexpr auto size(const C& c) -> decltype(c.size());

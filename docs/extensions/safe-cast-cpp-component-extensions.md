@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2eb09680ef6e7d1ee90b62eee8c8971fb4963212
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311816"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225120"
 ---
 # <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI 和 C++/CX)
 
@@ -42,7 +42,7 @@ ms.locfileid: "70311816"
 
 ### <a name="parameters"></a>參數
 
-*type-id*<br/>
+*類型識別碼*<br/>
 轉換 *expression* 的目標型別。 一個控制代碼，可用來參考或值類型、值類型，或參考或值類型的追蹤參考。
 
 *expression*<br/>
@@ -50,7 +50,7 @@ ms.locfileid: "70311816"
 
 ### <a name="remarks"></a>備註
 
-如果無法將 *expression* 轉換為 *type-id* 指定的型別，**safe_cast** 就會擲回 `InvalidCastException`。若要捕捉 `InvalidCastException`，請指定 [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md) 編譯器選項，並使用 **try/catch** 陳述式。
+**safe_cast** `InvalidCastException` 如果無法將*運算式*轉換為*類型識別碼*所指定的類型，則 safe_cast 會擲回。若要攔截 `InvalidCastException` ，請指定[/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)編譯器選項，並使用**try/catch**語句。
 
 ### <a name="requirements"></a>需求
 
@@ -102,7 +102,7 @@ Caught expected exception: InvalidCastException
 
 ### <a name="parameters"></a>參數
 
-*type-id*<br/>
+*類型識別碼*<br/>
 一個控制代碼，可用來參考或值類型、值類型，或參考或值類型的追蹤參考。
 
 *expression*<br/>
@@ -110,23 +110,23 @@ Caught expected exception: InvalidCastException
 
 ### <a name="remarks"></a>備註
 
-運算式 `safe_cast<`*type-id*`>(`*expression*`)` 會將運算元 *expression* 轉換成 *type-id* 型別的物件。
+運算式 `safe_cast<` *型別識別碼* `>(` *運算式*會 `)` 將運算元*運算式*轉換成型別*id*的物件。
 
-在將接受 **safe_cast** 的大部分位置中，編譯器將接受 [static_cast](../cpp/static-cast-operator.md)。  不過，**safe_cast** 保證能夠產生可驗證的 MSIL，其中的 **static_cast** 可能產生無法驗證的 MSIL。  如需可驗證程式碼的詳細資訊，請參閱[純粹的和可驗證的程式碼](../dotnet/pure-and-verifiable-code-cpp-cli.md)和 [Peverify.exe (PEVerify 工具)](/dotnet/framework/tools/peverify-exe-peverify-tool)。
+在將接受 **safe_cast** 的大部分位置中，編譯器將接受 [static_cast](../cpp/static-cast-operator.md)。  不過， **safe_cast**保證會產生可驗證的 msil，其中， **`static_cast`** 會產生無法驗證的 msil。  如需可驗證程式碼的詳細資訊，請參閱[純粹的和可驗證的程式碼](../dotnet/pure-and-verifiable-code-cpp-cli.md)和 [Peverify.exe (PEVerify 工具)](/dotnet/framework/tools/peverify-exe-peverify-tool)。
 
-如同 **static_cast**，**safe_cast** 會叫用使用者定義的轉換。
+就像一樣 **`static_cast`** ， **safe_cast**會叫用使用者定義的轉換。
 
 如需轉換的詳細資訊，請參閱[轉換運算子](../cpp/casting-operators.md)。
 
-**safe_cast** 不會套用 **const_cast** (捨棄 **const**)。
+**safe_cast**不會套用 **`const_cast`** （轉換離開 **`const`** ）。
 
 **safe_cast** 位於 cli 命名空間。  如需詳細資訊，請參閱[平台、預設與 cli 命名空間](platform-default-and-cli-namespaces-cpp-component-extensions.md)。
 
 如需 **safe_cast** 的詳細資訊，請參閱：
 
-- [使用 /clr 進行 C-Style 轉換 (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
+- [使用/clr 的 C 樣式轉換（c + +/CLI）](c-style-casts-with-clr-cpp-cli.md)
 
-- [如何：在 C++/CLI 中使用 safe_cast](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
+- [作法：在 C++/CLI 中使用 safe_cast](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>需求
 
@@ -134,7 +134,7 @@ Caught expected exception: InvalidCastException
 
 ### <a name="examples"></a>範例
 
-有一個適用於在不相關的介面型別之間進行轉換的範例，其中的編譯器將不會接受 **static_cast** 但將接受 **safe_cast**。  使用 **safe_cast**，編譯器將不會發出轉換錯誤，並將在執行階段上執行檢查以查看是否能進行轉換
+其中一個範例是，編譯器不會接受， **`static_cast`** 但會接受**safe_cast**用於不相關介面類別型之間的轉換。  使用 **safe_cast**，編譯器將不會發出轉換錯誤，並將在執行階段上執行檢查以查看是否能進行轉換
 
 ```cpp
 // safe_cast.cpp
@@ -166,4 +166,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

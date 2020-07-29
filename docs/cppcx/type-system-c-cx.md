@@ -2,12 +2,12 @@
 title: 類型系統 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404622"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221545"
 ---
 # <a name="type-system-ccx"></a>類型系統 (C++/CX)
 
@@ -38,8 +38,8 @@ ms.locfileid: "86404622"
 |||
 |-|-|
 |**在中繼資料中發行**|**未在中繼資料中發行**|
-|public|private|
-|protected|internal|
+|公開|private|
+|protected|內部|
 |public protected|private protected|
 
 您可以使用 [ **物件瀏覽器** ] 來檢視 .winmd 檔案的內容。 Windows 隨附的 Windows 執行階段元件位於 Windows winmd 檔案中。 預設的 winmd 檔案包含 c + +/CX 中使用的基本類型，而 platform. winmd 包含來自 Platform 命名空間的其他類型。 根據預設，這三個 winmd 檔案會包含在通用 Windows 平臺應用程式的每個 c + + 專案中。
@@ -63,7 +63,7 @@ Windows API 本身已改造成一套以命名空間組織的構造良好類別�
 
 Windows 執行階段定義下列基本類型： UInt8、Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Double、Char16、Boolean 和 String。 C + +/CX 支援其預設命名空間中的基本數數值型別為 uint16、uint32、uint64、int16、int32、int64、float32、float64 和 char16。 Boolean 和 String 也在 Platform 命名空間中定義。
 
-C + +/CX 也會定義 uint8，相當於 `unsigned char` ，這在 Windows 執行階段中不受支援，而且不能用在公用 api 中。
+C + +/CX 也會定義 uint8，相當於 **`unsigned char`** ，這在 Windows 執行階段中不受支援，而且不能用在公用 api 中。
 
 透過將基本型別包裝在 [Platform::IBox 介面](../cppcx/platform-ibox-interface.md) 中，它就能成為可為 Null 的型別。 如需詳細資訊，請參閱 [實值類別與結構](../cppcx/value-classes-and-structs-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 
@@ -71,7 +71,7 @@ C + +/CX 也會定義 uint8，相當於 `unsigned char` ，這在 Windows 執行
 
 ### <a name="strings"></a>字串
 
-Windows 執行階段字串是16位 UNICODE 字元的不可變序列。 Windows 執行階段字串會投射為 `Platform::String^` 。 這個類別提供建構、操作及與 `wchar_t`之間轉換字串的方法。
+Windows 執行階段字串是16位 UNICODE 字元的不可變序列。 Windows 執行階段字串會投射為 `Platform::String^` 。 這個類別提供了字串結構、操作和轉換的方法 **`wchar_t`** 。
 
 如需詳細資訊，請參閱 [字串](../cppcx/strings-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 

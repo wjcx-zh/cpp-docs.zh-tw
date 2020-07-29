@@ -18,12 +18,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 1ecf1c08164d1a760fce62457a6019e767ed2605
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225042"
 ---
 # <a name="memory-management-frame-allocation"></a>記憶體管理：框架配置
 
@@ -33,7 +33,7 @@ ms.locfileid: "84626306"
 
 [!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-對於區域函式變數，此範圍轉換會在函式結束時發生，不過，如果使用巢狀大括弧，框架變數的範圍可能會小於函式。 框架變數的這個自動刪除是非常重要的。 在簡單的基本型別（例如**int**或**byte**）、陣列或資料結構的案例中，自動刪除只會回收變數所使用的記憶體。 因為變數已超出範圍，所以是無法存取的。 不過，若是 C++ 物件，自動刪除的程序則較為複雜。
+對於區域函式變數，此範圍轉換會在函式結束時發生，不過，如果使用巢狀大括弧，框架變數的範圍可能會小於函式。 框架變數的這個自動刪除是非常重要的。 在簡單的基本型別（例如 **`int`** 或**byte**）、陣列或資料結構的案例中，自動刪除只會回收變數所使用的記憶體。 因為變數已超出範圍，所以是無法存取的。 不過，若是 C++ 物件，自動刪除的程序則較為複雜。
 
 當物件定義為框架變數時，會自動在遇到這個定義的點叫用其建構函式。 當物件超出範圍時，會在回收物件的記憶體之前自動叫用其解構函式。 此自動建構和解構非常方便使用，不過您必須留意自動呼叫，尤其是對解構函式。
 

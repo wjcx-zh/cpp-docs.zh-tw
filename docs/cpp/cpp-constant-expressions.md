@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32d14650450d8047a5bc0e6cf7bb06788c9b3d81
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221753"
 ---
 # <a name="c-constant-expressions"></a>C++ 常數運算式
 
@@ -35,7 +35,7 @@ C++ 需要常數運算式 (也就是評估為常數的運算式) 才能宣告下
 
 - 宣告為 const 並使用常數運算式初始化的值
 
-- **sizeof**運算式
+- **`sizeof`** 運算式
 
 非整數常數必須轉換成整數類資料類型 (明確或隱含)，在常數運算式中才會是合法的。 因此，下列程式碼是合法的：
 
@@ -44,7 +44,7 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-在常數運算式中明確轉換成整數類資料類型是合法的;除了當做**sizeof**運算子的運算元使用之外，所有其他類型和衍生類型都是不合法的。
+在常數運算式中明確轉換成整數類資料類型是合法的;所有其他類型和衍生類型都不合法，但做為運算子的運算元使用時除外 **`sizeof`** 。
 
 逗號運算子和指派運算子不能在常數運算式中使用。
 

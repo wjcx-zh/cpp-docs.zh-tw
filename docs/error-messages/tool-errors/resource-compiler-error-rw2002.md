@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31962e3e7e4af63ec07ad569f7f72782b194032c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190686"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225172"
 ---
 # <a name="resource-compiler-error-rw2002"></a>資源編譯器錯誤 RW2002
 
@@ -21,9 +21,9 @@ ms.locfileid: "80190686"
 
 1. **需要加速器類型（ASCII 或 VIRTKEY）**
 
-   `type` ACCELERATORS **陳述式中的** 欄位必須包含 ASCII 或 VIRTKEY 值。
+   **快速鍵**語句中的 [*類型*] 欄位必須包含 [ASCII] 或 [VIRTKEY] 值。
 
-1. **在快速鍵對應表中開始預期**
+1. **快速鍵對應表中必須要有 BEGIN**
 
    **BEGIN** 關鍵字必須緊接在 **ACCELERATORS** 關鍵字之後。
 
@@ -31,7 +31,7 @@ ms.locfileid: "80190686"
 
    **BEGIN**關鍵字必須緊接在**DIALOG**關鍵字之後。
 
-1. **功能表中的預期開始**
+1. **功能表中預期為 BEGIN**
 
    **BEGIN** 關鍵字必須緊接在 **MENU** 關鍵字之後。
 
@@ -49,7 +49,7 @@ ms.locfileid: "80190686"
 
 1. **控制字元超出範圍 [^ A-^ Z]**
 
-   **ACCELERATORS** 陳述式中的控制字元無效。 插入號 ( **^** ) 後的字元必須介於 A 與 Z (含) 之間。
+   **ACCELERATORS** 陳述式中的控制字元無效。 插入號（）後面的字元 **^** 必須介於 A 與 Z （含）之間。
 
 1. **不允許空的功能表**
 
@@ -59,17 +59,17 @@ ms.locfileid: "80190686"
 
    **End**關鍵字必須發生在**DIALOG**語句的結尾。 請確定先前的語句中沒有左邊的引號。
 
-1. **功能表中預期的結尾**
+1. **功能表中預期為 END**
 
    **END** 關鍵字必須放在 **MENU** 陳述式結尾。 請確定您沒有不完整的引號或不成對的 **BEGIN** 和 **END** 陳述式。
 
 1. **快速鍵對應表中必須是逗號**
 
-   資源編譯器需要 `event` ACCELERATORS *陳述式的* 與 **idvalue** 欄位之間有一個逗號。
+   資源編譯器需要**快速鍵**語句中的*event*和*idvalue*欄位之間有一個逗號。
 
 1. **需要的控制項類別名稱**
 
-   **DIALOG**語句中**CONTROL**語句的 `class` 欄位必須是下列其中一種類型：按鈕、COMBOBOX、編輯、LISTBOX、捲軸、靜態或使用者定義。 請確定類別的拼寫正確。
+   **DIALOG**語句中**CONTROL**語句的*class*欄位必須是下列其中一種類型： BUTTON、COMBOBOX、EDIT、LISTBOX、捲軸、靜態或使用者定義。 請確定類別的拼寫正確。
 
 1. **預期的字型名稱**
 
@@ -81,7 +81,7 @@ ms.locfileid: "80190686"
 
 1. **需要的功能表字串**
 
-   每個 **MENUITEM** 和 **POPUP** 陳述式皆必須包含「文字」 欄位，該欄位為以雙引號括住並指定功能表項目或快顯功能表名稱的字串。 **MENUITEM 分隔符號**語句不需要加上引號的字串。
+   每個 **MENUITEM** 和 **POPUP** 陳述式皆必須包含「文字」 ** 欄位，該欄位為以雙引號括住並指定功能表項目或快顯功能表名稱的字串。 **MENUITEM 分隔符號**語句不需要加上引號的字串。
 
 1. **預期的數值命令值**
 
@@ -93,7 +93,7 @@ ms.locfileid: "80190686"
 
 1. **預期的數值點大小**
 
-   *DIALOG* 陳述式之字型選項的 [點數大小] 欄位必須是整數點大小值。
+   *DIALOG* 陳述式之字型選項的 [點數大小] **** 欄位必須是整數點大小值。
 
 1. **預期的數值對話方塊常數**
 
@@ -105,19 +105,19 @@ ms.locfileid: "80190686"
 
 1. **預期的字串或常數快速鍵命令**
 
-   資源編譯器無法判斷為加速器所設定的按鍵類型。 `event` ACCELERATORS **陳述式中的** 欄位可能無效。
+   資源編譯器無法判斷為加速器所設定的按鍵類型。 **快速鍵**語句中的*事件*欄位可能無效。
 
 1. **需要 ID 的數位**
 
-   在**DIALOG**語句中，控制項語句的 `id` 欄位應為數字。 請確定您有控制項識別碼的數位或 `#define` 語句。
+   在**DIALOG**語句中，控制項語句的*id*欄位必須要有數位。 請確定您有控制項識別碼的數位或 `#define` 語句。
 
 1. **對話方塊類別中必須有引號的字串**
 
-   `class` DIALOG **陳述式中 CLASS 選項的** 欄位必須是以雙引號括住的整數或字串。
+   **DIALOG**語句中 class 選項的*class*欄位必須是以雙引號括住的整數或字串。
 
 1. **對話方塊標題中需要有引號的字串**
 
-   `captiontext` DIALOG **陳述式中 CAPTION 選項的** 欄位必須是以雙引號括住的 ASCII 字串。
+   **DIALOG**語句中 CAPTION 選項的*captioNtext*欄位必須是以雙引號括住的 ASCII 字元字串。
 
 1. **找不到檔案：檔案名**
 
@@ -125,15 +125,15 @@ ms.locfileid: "80190686"
 
 1. **字型名稱必須是序數**
 
-   字型語句中的*pointsize*欄位必須是整數，而不是字串。
+   *FONT* 陳述式中的 pointsize 欄位必須是整數，而非字串。
 
 1. **不正確快速鍵**
 
-   `event` ACCELERATORS **陳述式中的** 欄位無法辨識，或長度超過兩個字元。
+   **快速鍵**語句中的*事件*欄位無法辨識，或長度超過兩個字元。
 
 1. **不正確快速鍵類型（ASCII 或 VIRTKEY）**
 
-   `type` ACCELERATORS **陳述式中的** 欄位必須包含 ASCII 或 VIRTKEY 值。
+   **快速鍵**語句中的 [*類型*] 欄位必須包含 [ASCII] 或 [VIRTKEY] 值。
 
 1. **不正確控制字元**
 

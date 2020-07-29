@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: b52ba70607a5214a6aa28f04cdded0b19a56b2f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f17d8006aea6c5467f8de270318386bb12df264a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373536"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222221"
 ---
 # <a name="ostrstream-class"></a>ostrstream 類別
 
@@ -38,7 +38,7 @@ class ostrstream : public ostream
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[ostrstream](#ostrstream)|建構類型 `ostrstream` 的物件。|
 
@@ -46,18 +46,18 @@ class ostrstream : public ostream
 
 |成員函數|描述|
 |-|-|
-|[凍結](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|
+|[暫時](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|
 |[pcount](#pcount)|傳回寫入至受控制序列的元素計數。|
 |[rdbuf](#rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|
-|[Str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。|
+|[字串](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<strstream>
+**標頭：**\<strstream>
 
 **命名空間：** std
 
-## <a name="ostrstreamfreeze"></a><a name="freeze"></a>奧斯特流::凍結
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream：：凍結
 
 導致資料流緩衝區無法在資料流緩衝區作業中使用。
 
@@ -68,17 +68,17 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>參數
 
 *_Freezeit*\
-指示是否要凍結流的**布林**。
+**`bool`**，指出您是否要凍結資料流程。
 
 ### <a name="remarks"></a>備註
 
-成員函數調用[rdbuf](#rdbuf) -> [凍結](../standard-library/strstreambuf-class.md#freeze)(=*凍結*)。
+此成員函式會呼叫[rdbuf](#rdbuf)  ->  [凍結](../standard-library/strstreambuf-class.md#freeze)（_ *Freezeit*）。
 
 ### <a name="example"></a>範例
 
-有關使用`freeze`的範例,請參閱[strstream::凍結](../standard-library/strstreambuf-class.md#freeze)。
+如需使用的範例，請參閱[strstream：：凍結](../standard-library/strstreambuf-class.md#freeze) `freeze` 。
 
-## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>奧斯特流::奧斯特流
+## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream：： ostrstream
 
 建構類型 `ostrstream` 的物件。
 
@@ -92,7 +92,7 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>參數
 
-*Ptr*\
+*指標*\
 緩衝區。
 
 *計數*\
@@ -103,13 +103,13 @@ ostrstream(char* ptr,
 
 ### <a name="remarks"></a>備註
 
-兩個構造函數都通過調用[ostream](../standard-library/ostream-typedefs.md#ostream)**(sb**) 初始`sb`化基類,其中是類[strstreambuf](../standard-library/strstreambuf-class.md)的存儲物件。 第一個構造函數也`sb`通過調`strstreambuf`用 初始化。 第二個建構函式使用下列其中一種方法初始化基底類別：
+這兩個函式都會呼叫[ostream](../standard-library/ostream-typedefs.md#ostream)（**sb**）來初始化基類，其中 `sb` 是[strstreambuf](../standard-library/strstreambuf-class.md)類別的預存物件。 第一個函式也會藉 `sb` 由呼叫來初始化 `strstreambuf` 。 第二個建構函式使用下列其中一種方法初始化基底類別：
 
-- 如果`_Mode` & **ios_base::app**=`ptr`0,`count`則必須指定 元素陣列的第一個元素,並且構`strstreambuf`造函數調用`count``ptr``ptr`(,,)。
+- 如果 `_Mode`  &  **ios_base：： app**= = 0，則 `ptr` 必須指定元素陣列的第一個元素 `count` ，而此函式會呼叫 `strstreambuf` （ `ptr` ， `count` ， `ptr` ）。
 
-- 否則,`ptr`必須指定計數元素陣列的第一個元素,該元素包含其第一個元素`ptr`由 指定的 C 字串,建構函`strstreambuf``ptr`式`count``ptr` + `strlen`呼`ptr`叫 ( 、 ( ) 。
+- 否則， `ptr` 必須指定 count 元素陣列的第一個元素，其中包含 C 字串，其第一個專案是由所指定 `ptr` ，而此函式會呼叫 `strstreambuf` （ `ptr` 、 `count` 、 `ptr`  +  `strlen` （ `ptr` ））。
 
-## <a name="ostrstreampcount"></a><a name="pcount"></a>奧斯特斯裡::p計數
+## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream：:p 計數
 
 傳回寫入至受控制序列的元素計數。
 
@@ -123,13 +123,13 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>備註
 
-成員函數傳回[rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount)。
+此成員函式會傳回[rdbuf](#rdbuf)  ->  [pcount](../standard-library/strstreambuf-class.md#pcount)。
 
 ### <a name="example"></a>範例
 
 如需使用 `pcount` 的範例，請參閱 [strstream::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>奧斯特裡::rdbuf
+## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>ostrstream：： rdbuf
 
 傳回指向資料流相關 strstreambuf 物件的指標。
 
@@ -143,13 +143,13 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>備註
 
-成員函數將類型的`pointer`儲存流緩衝區的位址傳回為[strstreambuf](../standard-library/strstreambuf-class.md)。
+此成員函式會將類型之儲存資料流程緩衝區的位址傳回 `pointer` 至[strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>範例
 
 如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="ostrstreamstr"></a><a name="str"></a>奧斯特裡:斯特
+## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream：： str
 
 呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。
 
@@ -163,15 +163,15 @@ char *str();
 
 ### <a name="remarks"></a>備註
 
-成員函數傳回[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。
+此成員函式會傳回[rdbuf](#rdbuf)  ->  [str](../standard-library/strstreambuf-class.md#str)。
 
 ### <a name="example"></a>範例
 
-有關`str`使用的示例,請參閱[strstream::str。](../standard-library/strstreambuf-class.md#str)
+如需使用的範例，請參閱[strstream：： str](../standard-library/strstreambuf-class.md#str) `str` 。
 
 ## <a name="see-also"></a>另請參閱
 
 [ostream](../standard-library/ostream-typedefs.md#ostream)\
-[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[電流程式設計](../standard-library/iostream-programming.md)\
-[iostream 慣例](../standard-library/iostreams-conventions.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostreams 慣例](../standard-library/iostreams-conventions.md)

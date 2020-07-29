@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: e67e385a8ce0eb9a6b041d4a4f0d43e2db551c79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2be4cb1936536b68aed1f8ea937f6f72904c766d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211285"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221519"
 ---
 # <a name="crowset-class"></a>CRowset 類別
 
@@ -249,7 +249,7 @@ class CRowset
 ### <a name="parameters"></a>參數
 
 *TAccessor*<br/>
-存取子類別。 預設值為 `CAccessorBase`。
+存取子類別。 預設為 `CAccessorBase`。
 
 ## <a name="requirements"></a>需求
 
@@ -264,7 +264,7 @@ class CRowset
 |[AddRefRows](#addrefrows)|遞增與目前資料列相關聯的參考計數。|
 |[關閉](#close)|釋放資料列和目前的 `IRowset` 介面。|
 |[比較](#compare)|比較兩個使用[IRowsetLocate：： Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))的書簽。|
-|[CRowset](#crowset)|建立新的 `CRowset` 物件，並選擇性地將它與當做參數提供的 `IRowset` 介面產生關聯。|
+|[CRowset](#crowset)|建立新的 `CRowset` 物件，並選擇性地將它與 `IRowset` 提供做為參數的介面產生關聯。|
 |[刪除](#delete)|使用[IRowsetChange： DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))從資料列集刪除資料列。|
 |[FindNextRow](#findnextrow)|尋找指定之書簽後面的下一個相符資料列。|
 |[GetApproximatePosition](#getapproximateposition)|傳回對應至書簽的資料列近似位置。|
@@ -290,7 +290,7 @@ class CRowset
 
 在 OLE DB 中，資料列集是程式用來設定和抓取資料的物件。
 
-這個類別不是要具現化，而是當做樣板參數傳遞至 `CTable` 或 `CCommand` （`CRowset` 是預設值）。
+這個類別不是要具現化，而是當做樣板參數傳遞至 `CTable` 或 `CCommand` （ `CRowset` 是預設值）。
 
 ## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a>CRowset：： AddRefRows
 
@@ -353,13 +353,13 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 ### <a name="remarks"></a>備註
 
-這個方法需要 `IRowsetLocate`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetLocate` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetLocate` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetLocate` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 如需在取用者中使用書簽的詳細資訊，請參閱[使用書簽](../../data/oledb/using-bookmarks.md)。
 
 ## <a name="crowsetcrowset"></a><a name="crowset"></a>CRowset：： CRowset
 
-建立新的 `CRowset` 物件，並（選擇性）將它與提供做為參數的[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))介面產生關聯。
+建立新的 `CRowset` 物件，並選擇性地將它與提供做為參數的[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))介面產生關聯。
 
 ### <a name="syntax"></a>語法
 
@@ -417,7 +417,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 在表示緩衝區值部分的資料類型。 如需類型指標的詳細資訊，請參閱 Windows SDK 中 OLE DB 程式設計*人員參考*中的[資料類型](/previous-versions/windows/desktop/ms723969(v=vs.85))。
 
 *nLength*<br/>
-在配置給資料值的取用者資料結構長度（以位元組為單位）。 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))中 `cbMaxLen` 的描述。
+在配置給資料值的取用者資料結構長度（以位元組為單位）。 如需詳細資訊，請參閱 `cbMaxLen` OLE DB 程式設計*人員參考*中[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))的描述。
 
 *bPrecision*<br/>
 在取得資料時所使用的最大有效位數。 只有在 DBTYPE_NUMERIC *wType*時才會使用。 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中[涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 的轉換](/previous-versions/windows/desktop/ms719714(v=vs.85))。
@@ -437,7 +437,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 ### <a name="remarks"></a>備註
 
-這個方法需要 `IRowsetFind`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetFind` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetFind` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetFind` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 如需在取用者中使用書簽的詳細資訊，請參閱[使用書簽](../../data/oledb/using-bookmarks.md)。
 
@@ -459,10 +459,10 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 在書簽的指標，識別要找到其位置的資料列。 如果只需要資料列計數，則為 Null。
 
 *pPosition*<br/>
-脫銷位置的指標，`GetApproximatePosition` 傳回資料列的位置。 如果不需要此位置，則為 Null。
+脫銷位置的指標，其中會傳回資料 `GetApproximatePosition` 列的位置。 如果不需要此位置，則為 Null。
 
 *pcRows*<br/>
-脫銷位置的指標，`GetApproximatePosition` 傳回資料列總數。 如果不需要資料列計數，則為 Null。
+脫銷位置的指標，其中會傳回資料 `GetApproximatePosition` 列總數。 如果不需要資料列計數，則為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -470,7 +470,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 
 ### <a name="remarks"></a>備註
 
-這個方法需要 `IRowsetScroll`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetScroll` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetScroll` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetScroll` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 如需在取用者中使用書簽的詳細資訊，請參閱[使用書簽](../../data/oledb/using-bookmarks.md)。
 
@@ -528,7 +528,7 @@ HRESULT GetDataHere(int nAccessor,
 
 ## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a>CRowset：： GetOriginalData
 
-會呼叫 `IRowsetUpdate::GetOriginalData`，以抓取最近從資料來源提取或傳輸的資料。
+呼叫 `IRowsetUpdate::GetOriginalData` ，以抓取最近從資料來源提取或傳輸的資料。
 
 ### <a name="syntax"></a>語法
 
@@ -544,7 +544,7 @@ HRESULT GetOriginalData() throw();
 
 這個方法會抓取最近從資料來源提取或傳輸的資料;它不會根據暫止的變更來抓取值。
 
-這個方法需要 `IRowsetUpdate`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetUpdate` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetUpdate` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetUpdate` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 ## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a>CRowset：： GetRowStatus
 
@@ -559,7 +559,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 #### <a name="parameters"></a>參數
 
 *pStatus*<br/>
-脫銷`GetRowStatus` 傳回狀態值之位置的指標。 請參閱 OLE DB 程式設計人員參考中的 DBPENDINGSTATUS。
+脫銷傳回狀態值之位置的指標 `GetRowStatus` 。 請參閱 OLE DB 程式設計人員參考中的 DBPENDINGSTATUS。
 
 ### <a name="return-value"></a>傳回值
 
@@ -567,7 +567,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 
 ### <a name="remarks"></a>備註
 
-這個方法需要 `IRowsetUpdate`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetUpdate` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetUpdate` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetUpdate` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 ## <a name="crowsetinsert"></a><a name="insert"></a>CRowset：： Insert
 
@@ -594,7 +594,7 @@ HRESULT Insert(int nAccessor = 0,
 
 ### <a name="remarks"></a>備註
 
-這個方法需要 `IRowsetChange`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetChange` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetChange` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetChange` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 如果一或多個資料行無法寫入，插入可能會失敗。 請修改您的資料指標對應以修正這個問題。
 
@@ -661,7 +661,7 @@ HRESULT MoveLast() throw();
 
 呼叫[IRowset：： RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) ，將下一個提取位置重新置放到最後一個位置，並抓取最後一個資料列。
 
-在包含資料列集的資料表或命令上呼叫 `Open` 之前，這個方法需要先將 `DBPROP_CANSCROLLBACKWARDS` 設定為 VARIANT_TRUE。 （為了達到較佳的效能，您也可以將 `DBPROP_QUICKRESTART` 設定為 VARIANT_TRUE）。
+您必須先將設定 `DBPROP_CANSCROLLBACKWARDS` 為 VARIANT_TRUE，才能在 `Open` 包含資料列集的資料表或命令上呼叫。 （為了達到較佳的效能，您也可以將設定 `DBPROP_QUICKRESTART` 為 VARIANT_TRUE）。
 
 ## <a name="crowsetmovenext"></a><a name="movenext"></a>CRowset：： MoveNext
 
@@ -682,7 +682,7 @@ HRESULT MoveNext(LONG lSkip,
 在提取前要略過的資料列數目。
 
 *bForward*<br/>
-在傳遞**true**會向前移至下一筆記錄， **false 則**會向後移動。
+在傳遞 **`true`** 以向前移到下一筆記錄， **`false`** 以向後移動。
 
 ### <a name="return-value"></a>傳回值
 
@@ -690,15 +690,15 @@ HRESULT MoveNext(LONG lSkip,
 
 ### <a name="remarks"></a>備註
 
-從 `CRowset` 物件中提取下一個連續的資料列，並記住先前的位置。 （選擇性）您可以選擇跳過向前*lSkip*的資料列，或向後移動。
+從物件提取下一個連續的資料列 `CRowset` ，並記住先前的位置。 （選擇性）您可以選擇跳過向前*lSkip*的資料列，或向後移動。
 
-這個方法需要您先設定下列屬性，才能在包含資料列集的資料表或命令上呼叫 `Open`：
+在包含資料列 `Open` 集的資料表或命令上呼叫之前，需要先設定下列屬性：
 
-- 如果*lSkip* < 0，則必須 VARIANT_TRUE `DBPROP_CANSCROLLBACKWARDS`
+- `DBPROP_CANSCROLLBACKWARDS`如果*lSkip* < 0，則必須 VARIANT_TRUE
 
-- 如果*bForward* = false，則必須 VARIANT_TRUE `DBPROP_CANFETCHBACKWARDS`
+- `DBPROP_CANFETCHBACKWARDS`如果*bForward* = false，則必須 VARIANT_TRUE
 
-否則（如果*lSkip* > = 0 且*bForward* = true），您就不需要設定任何其他屬性。
+否則（如果*lSkip* >= 0 且*bForward* = true），您就不需要設定任何其他屬性。
 
 ## <a name="crowsetmoveprev"></a><a name="moveprev"></a>CRowset：： MovePrev
 
@@ -716,7 +716,7 @@ HRESULT MovePrev() throw();
 
 ### <a name="remarks"></a>備註
 
-這個方法會要求您在包含資料列集的資料表或命令上呼叫 `Open` 之前，先將 `DBPROP_CANFETCHBACKWARDS` 或 `DBPROP_CANSCROLLBACKWARDS` 設定為 VARIANT_TRUE。
+這個方法會要求您在 `DBPROP_CANFETCHBACKWARDS` `DBPROP_CANSCROLLBACKWARDS` 呼叫包含資料列 `Open` 集的資料表或命令之前，先將或設定為 VARIANT_TRUE。
 
 ## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a>CRowset：： MoveToBookmark
 
@@ -731,7 +731,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>參數
 
-*書簽*<br/>
+*bookmark*<br/>
 [in] 標記您要從中擷取資料之位置的書籤。
 
 *lSkip*<br/>
@@ -743,7 +743,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="remarks"></a>備註
 
-這個方法需要 `IRowsetLocate`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 您也必須將 `DBPROP_IRowsetLocate` 設定為 VARIANT_TRUE，並在包含資料列集的資料表或命令上呼叫 `Open` 之前，將 `DBPROP_CANFETCHBACKWARDS` 設定為 [VARIANT_TRUE]。
+這個方法需要選擇性的介面 `IRowsetLocate` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 您也必須將設定 `DBPROP_IRowsetLocate` 為 VARIANT_TRUE，並將設定為 VARIANT_TRUE，然後才在包含資料列 `DBPROP_CANFETCHBACKWARDS` `Open` 集的資料表或命令上呼叫。
 
 如需在取用者中使用書簽的詳細資訊，請參閱[使用書簽](../../data/oledb/using-bookmarks.md)。
 
@@ -775,13 +775,13 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 ### <a name="remarks"></a>備註
 
-`MoveToRatio` 會大致地根據下列公式來提取資料列：
+`MoveToRatio`大致上會根據下列公式來提取資料列：
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中 `RowsetSize` 是資料列集的大小（以資料列數來測量）。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱[IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85))。
+其中 `RowsetSize` 是資料列集的大小，以資料列來測量。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱[IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85))。
 
-這個方法需要 `IRowsetScroll`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetScroll` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetScroll` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetScroll` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 ## <a name="crowsetreleaserows"></a><a name="releaserows"></a>CRowset：： ReleaseRows
 
@@ -820,9 +820,9 @@ HRESULT SetData(int nAccessor) const throw();
 
 ### <a name="remarks"></a>備註
 
-若為不接受引數的 `SetData` 表單，則會使用所有存取子來進行更新。 您通常會呼叫 `SetData` 來設定資料列中的資料行值，然後呼叫[Update](../../data/oledb/crowset-update.md)來傳輸這些變更。
+若為 `SetData` 不接受引數的表單，則會使用所有存取子來進行更新。 您通常會呼叫 `SetData` ，以在資料列的資料行中設定資料值，然後呼叫[Update](../../data/oledb/crowset-update.md)來傳輸這些變更。
 
-這個方法需要 `IRowsetChange`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetChange` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetChange` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetChange` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 如果一或多個資料行無法寫入，則設定作業可能會失敗。 請修改您的資料指標對應以修正這個問題。
 
@@ -841,13 +841,13 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>參數
 
 *pcRows*<br/>
-脫銷位置的指標，`Undo` 會在必要時傳回其嘗試復原的資料列數目。
+脫銷位置的指標，會在 `Undo` 必要時傳回其嘗試復原的資料列數目。
 
 *phRow*<br/>
-脫銷位置的指標，`Undo` 會在必要時，將控制碼的陣列傳回給其嘗試復原的所有資料列。
+脫銷位置的指標，其中 `Undo` 會將控制碼的陣列傳回給其嘗試復原的所有資料列（如有需要）。
 
 *pStatus*<br/>
-脫銷`Undo` 傳回資料列狀態值之位置的指標。 如果*pStatus*為 null，則不會傳回任何狀態。
+脫銷在其中傳回資料列狀態值之位置的指標 `Undo` 。 如果*pStatus*為 null，則不會傳回任何狀態。
 
 ### <a name="return-value"></a>傳回值
 
@@ -855,11 +855,11 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>備註
 
-這個方法需要 `IRowsetUpdate`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetUpdate` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetUpdate` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetUpdate` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 ## <a name="crowsetupdate"></a><a name="update"></a>CRowset：： Update
 
-傳送自上次提取或 `Update` 呼叫之後，對目前資料列所做的任何暫止變更。
+傳送自上次提取或呼叫之後，對目前資料列所做的任何暫止變更 `Update` 。
 
 ### <a name="syntax"></a>語法
 
@@ -872,13 +872,13 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>參數
 
 *pcRows*<br/>
-脫銷位置的指標，其中 `Update` 會傳回其嘗試更新的資料列數目（如有需要）。
+脫銷位置的指標 `Update` ，其中會傳回其嘗試更新的資料列數目（如有需要）。
 
 *phRow*<br/>
-脫銷位置的指標，其中 `Update` 會傳回其嘗試更新之資料列的控制碼。 如果*phRow*為 null，則不會傳回任何控制碼。
+脫銷位置的指標， `Update` 它會傳回其嘗試更新之資料列的控制碼。 如果*phRow*為 null，則不會傳回任何控制碼。
 
 *pStatus*<br/>
-脫銷`Update` 傳回資料列狀態值之位置的指標。 如果*pStatus*為 null，則不會傳回任何狀態。
+脫銷在其中傳回資料列狀態值之位置的指標 `Update` 。 如果*pStatus*為 null，則不會傳回任何狀態。
 
 ### <a name="return-value"></a>傳回值
 
@@ -886,13 +886,13 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>備註
 
-傳輸自從上次提取或更新資料列之後，對目前資料列所做的任何暫止變更（使用 `Update` 或[UpdateAll](../../data/oledb/crowset-updateall.md)）。 您通常會呼叫[SetData](../../data/oledb/crowset-setdata.md) ，以在資料列中設定資料行中的資料值，然後呼叫 `Update` 來傳輸這些變更。
+傳送自上次提取或更新資料列之後，對目前資料列所做的任何暫止變更（使用 `Update` 或[UpdateAll](../../data/oledb/crowset-updateall.md)）。 您通常會呼叫[SetData](../../data/oledb/crowset-setdata.md) ，以在資料列的資料行中設定資料值，然後呼叫 `Update` 來傳輸這些變更。
 
-這個方法需要 `IRowsetUpdate`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetUpdate` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetUpdate` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetUpdate` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 ## <a name="crowsetupdateall"></a><a name="updateall"></a>CRowset：： UpdateAll
 
-傳送自上次提取或 `Update` 呼叫之後，對所有資料列所做的任何暫止變更。
+傳送自上次提取或呼叫之後，對所有資料列所做的任何暫止變更 `Update` 。
 
 ### <a name="syntax"></a>語法
 
@@ -905,21 +905,21 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>參數
 
 *pcRows*<br/>
-脫銷位置的指標，其中 `UpdateAll` 會傳回其嘗試更新的資料列數目（如有需要）。
+脫銷位置的指標 `UpdateAll` ，其中會傳回其嘗試更新的資料列數目（如有需要）。
 
 *pphRow*<br/>
 脫銷記憶體的指標，其中 `UpdateAll` 會傳回其嘗試更新之資料列的控制碼。 如果*pphRow*為 null，則不會傳回任何控制碼。
 
 *ppStatus*<br/>
-脫銷`Update` 傳回資料列狀態值之位置的指標。 如果*ppStatus*為 null，則不會傳回任何狀態。
+脫銷在其中傳回資料列狀態值之位置的指標 `Update` 。 如果*ppStatus*為 null，則不會傳回任何狀態。
 
 ### <a name="remarks"></a>備註
 
-會傳送所有資料列的任何暫止變更，因為這些資料列上次是使用[Update](../../data/oledb/crowset-update.md)或 `UpdateAll`進行提取或更新。 `UpdateAll` 會更新已修改的每個資料列，不論您是否仍有其控制碼（請參閱*pphRow*）。
+會傳送所有資料列的任何暫止變更，因為這些資料列上次是使用[Update](../../data/oledb/crowset-update.md)或進行提取或更新 `UpdateAll` 。 `UpdateAll`會更新已修改的每個資料列，不論您是否仍有其控制碼（請參閱*pphRow*）。
 
-例如，如果您使用 `Insert` 在資料列集中插入五個數據列，您可以呼叫 `Update` 五次，或呼叫 `UpdateAll` 一次，以全部更新。
+例如，如果您使用在資料 `Insert` 列集中插入五個數據列，您可以呼叫 `Update` 五次，或呼叫 `UpdateAll` 一次來更新所有資料列。
 
-這個方法需要 `IRowsetUpdate`的選擇性介面，但可能不支援所有提供者;如果是這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列集的資料表或命令上呼叫 `Open` 之前，您也必須將 `DBPROP_IRowsetUpdate` 設定為 VARIANT_TRUE。
+這個方法需要選擇性的介面 `IRowsetUpdate` ，但並非所有提供者都支援; 如果發生這種情況，方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetUpdate` `Open` 集的資料表或命令上呼叫之前，您也必須將設定為 VARIANT_TRUE。
 
 ### <a name="return-value"></a>傳回值
 
@@ -931,4 +931,4 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 [MultiRead 範例](../../overview/visual-cpp-samples.md)<br/>
 [MultiRead 屬性範例](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

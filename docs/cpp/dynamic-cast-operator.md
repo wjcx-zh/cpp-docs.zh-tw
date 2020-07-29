@@ -1,22 +1,22 @@
 ---
 title: dynamic_cast 運算子
-description: 語言 dynamic_cast 運算子C++的總覽。
+description: C + + 語言 dynamic_cast 運算子的總覽。
 ms.date: 02/03/2020
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 15609aeaef815ff89ca196876e1143090c65221b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189490"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221636"
 ---
 # <a name="dynamic_cast-operator"></a>dynamic_cast 運算子
 
-將運算元 `expression` 轉換成 `type-id`類型的物件。
+將運算元轉換 `expression` 為類型的物件 `type-id` 。
 
 ## <a name="syntax"></a>語法
 
@@ -26,17 +26,17 @@ dynamic_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>備註
 
-`type-id` 必須是指標，或參考先前定義的類別類型或「void 的指標」。 如果 `expression` 是指標，則 `type-id` 類型必須是指標；或如果 `type-id` 是參考，則為左值 (l-value)。
+`type-id`必須是指標，或參考先前定義的類別類型或「void 的指標」。 如果 `type-id` 是指標，則 `expression` 類型必須是指標；或如果 `type-id` 是參考，則為左值 (l-value)。
 
 如需靜態和動態轉型轉換之間的差異，以及何時適合使用各項的說明，請參閱[static_cast](../cpp/static-cast-operator.md) 。
 
-Managed 程式碼中**dynamic_cast**的行為有兩個重大變更：
+Managed 程式碼中的行為有兩個重大變更 **`dynamic_cast`** ：
 
-- 在執行時間，對已裝箱列舉之基礎類型的指標**dynamic_cast**將會失敗，傳回0而不是已轉換的指標。
+- **`dynamic_cast`** 對已裝箱列舉的基礎類型指標，會在執行時間失敗，傳回0而不是轉換的指標。
 
-- 當 `type-id` 是實值型別的內部指標，而且在執行時間發生轉換失敗時， **dynamic_cast**將不會再擲回例外狀況。  轉換現在會傳回0指標值，而不是擲回。
+- **`dynamic_cast`** 當 `type-id` 是實數值型別的內部指標，且在執行時間發生轉換失敗時，將不會再擲回例外狀況。  轉換現在會傳回0指標值，而不是擲回。
 
-如果 `type-id` 是 `expression`明確存取的直接或間接基類的指標，則 `type-id` 類型之唯一子物件的指標就是結果。 例如：
+如果 `type-id` 是明確可存取的直接或間接基類的指標，則 `expression` 類型之唯一子物件的指標 `type-id` 就是結果。 例如：
 
 ```cpp
 // dynamic_cast_1.cpp
@@ -55,7 +55,7 @@ void f(D* pd) {
 
 這種類型的轉換稱為「向上連結」，因為它會將指標向上移動到類別階層，從衍生的類別到衍生自的類別。 向上轉換是隱含的轉換。
 
-如果 `type-id` 為 void *，就會進行執行時間檢查，以判斷 `expression`的實際類型。 結果是 `expression`所指向之完整物件的指標。 例如：
+如果 `type-id` 是 void *，就會進行執行時間檢查來判斷的實際類型 `expression` 。 結果是指向的完整物件指標 `expression` 。 例如：
 
 ```cpp
 // dynamic_cast_2.cpp
@@ -74,9 +74,9 @@ void f() {
 }
 ```
 
-如果 `type-id` 不是 void *，就會進行執行時間檢查，以查看是否 `expression` 所指向的物件可以轉換成 `type-id`所指向的類型。
+如果不 `type-id` 是 void *，則會進行執行時間檢查，以查看所指向的物件是否 `expression` 可以轉換成所指向的類型 `type-id` 。
 
-如果 `expression` 的類型是 `type-id`類型的基類，則會進行執行時間檢查，以查看 `expression` 是否實際指向 `type-id`類型的完整物件。 如果這是 true，則結果會是 `type-id`類型之完整物件的指標。 例如：
+如果的類型 `expression` 是類型的基類 `type-id` ，則會進行執行時間檢查，以查看是否 `expression` 實際指向類型的完整物件 `type-id` 。 如果這是 true，則結果會是類型之完整物件的指標 `type-id` 。 例如：
 
 ```cpp
 // dynamic_cast_3.cpp
@@ -97,9 +97,9 @@ void f() {
 
 在多重繼承的情況下，會引進不明確的可能性。 請考慮下圖所示的類別階層。
 
-針對 CLR 型別，如果轉換可以隱含執行，則**dynamic_cast**會導致無 op，或是執行動態檢查的 MSIL `isinst` 指令，如果轉換失敗，則會傳回**nullptr** 。
+針對 CLR 類型， **`dynamic_cast`** 如果轉換可以隱含執行，則會產生無 op 的，或是 `isinst` 執行動態檢查並在 **`nullptr`** 轉換失敗時傳回的 MSIL 指令。
 
-下列範例會使用**dynamic_cast**來判斷類別是否為特定類型的實例：
+下列範例會使用 **`dynamic_cast`** 來判斷類別是否為特定類型的實例：
 
 ```cpp
 // dynamic_cast_clr.cpp
@@ -125,7 +125,7 @@ int main() {
 ![顯示多重繼承的類別階層](../cpp/media/vc39011.gif "顯示多重繼承的類別階層") <br/>
 顯示多重繼承的類別階層
 
-`D` 類型之物件的指標可以安全地轉換成 `B` 或 `C`。 不過，如果 `D` 轉換成指向 `A` 物件，`A` 的實例會產生什麼結果？ 這會導致不明確的轉換錯誤。 若要解決這個問題，您可以執行兩個明確的轉換。 例如：
+類型物件的指標 `D` 可以安全地轉換成 `B` 或 `C` 。 不過，如果 `D` 轉換成指向 `A` 物件，則 `A` 會產生哪個實例？ 這會導致不明確的轉換錯誤。 若要解決這個問題，您可以執行兩個明確的轉換。 例如：
 
 ```cpp
 // dynamic_cast_4.cpp
@@ -145,17 +145,17 @@ void f() {
 
 當您使用虛擬基類時，可以引進進一步的歧義。 請考慮下圖所示的類別階層。
 
-![顯示虛擬基類的類別階層](../cpp/media/vc39012.gif "顯示虛擬基底類別的類別階層") <br/>
+![顯示虛擬基底類別的類別階層](../cpp/media/vc39012.gif "顯示虛擬基底類別的類別階層") <br/>
 顯示虛擬基底類別的類別階層
 
-在此階層中，`A` 是虛擬基類。 假設類別的實例 `E`，而 `A` 子物件的指標，則 `B` 指標的**dynamic_cast**將會因為不明確而失敗。 您必須先轉型回完整的 `E` 物件，然後以明確的方式來備份階層，以達到正確的 `B` 物件。
+在此階層中， `A` 是虛擬基類。 假設類別的實例 `E` 和子物件的指標 `A` ，的 **`dynamic_cast`** 指標 `B` 將會因為不明確而失敗。 您必須先將轉換回完整的 `E` 物件，然後以明確的方式來備份階層，以達到正確的 `B` 物件。
 
 請考慮下圖所示的類別階層。
 
-![顯示重複基類的類別階層](../cpp/media/vc39013.gif "顯示重複基底類別的類別階層") <br/>
+![顯示重複基底類別的類別階層](../cpp/media/vc39013.gif "顯示重複基底類別的類別階層") <br/>
 顯示重複基底類別的類別階層
 
-假設 `E` 類型的物件和指向 `D` 子物件的指標，從 `D` 的子物件導覽到最左邊的 `A` 子物件，就可以進行三項轉換。 您可以從 `E` 指標的 `D` 指標執行**dynamic_cast**轉換，然後從 `E` **dynamic_cast**轉換成 `B`，最後是從 `B` 隱含轉換成 `A`）。 例如：
+假設類型的物件 `E` 和子物件的指標 `D` ，從子物件導覽 `D` 至最左邊的子物件，則 `A` 可以進行三項轉換。 您可以從指標執行 **`dynamic_cast`** 轉換 `D` `E` ，然後從轉換（ **`dynamic_cast`** 或隱含轉換）到 `E` `B` ，最後是從到的隱含轉換 `B` `A` 。 例如：
 
 ```cpp
 // dynamic_cast_5.cpp
@@ -173,9 +173,9 @@ void f(D* pd) {
 }
 ```
 
-**Dynamic_cast**運算子也可以用來執行「交叉轉型」。 使用相同的類別階層時，您可以將指標（例如，從 `B` 子物件轉換成 `D` 子物件），只要完整的物件屬於類型 `E`。
+**`dynamic_cast`** 運算子也可以用來執行「交叉轉型」。 使用相同的類別階層，只要完整的物件屬於類型，就可以將指標（例如，從子物件轉換成子物件） `B` `D` `E` 。
 
-考慮交叉轉型，實際上可以在兩個步驟中，從指標將 `D` 轉換為最左邊 `A` 子物件的指標。 您可以執行從 `D` 到 `B`的交叉轉型，然後從 `B` 隱含轉換到 `A`。 例如：
+考慮交叉轉型，實際上可以 `D` `A` 在兩個步驟中，從的指標轉換成最左邊子物件的指標。 您可以執行從到的交互 `D` 轉換 `B` ，然後從隱含轉換 `B` 成 `A` 。 例如：
 
 ```cpp
 // dynamic_cast_6.cpp
@@ -192,9 +192,9 @@ void f(D* pd) {
 }
 ```
 
-Null 指標值會藉由**dynamic_cast**，轉換為目的地類型的 null 指標值。
+Null 指標值會由轉換成目的地類型的 null 指標值 **`dynamic_cast`** 。
 
-當您使用 `dynamic_cast < type-id > ( expression )`時，如果 `expression` 無法安全地轉換成類型 `type-id`，執行時間檢查會導致轉換失敗。 例如：
+當您使用時， `dynamic_cast < type-id > ( expression )` 如果 `expression` 無法安全地轉換成類型 `type-id` ，執行時間檢查會導致轉換失敗。 例如：
 
 ```cpp
 // dynamic_cast_7.cpp
@@ -211,7 +211,7 @@ void f() {
 
 轉換成指標類型的失敗值為 null 指標。 轉換成參考型別的失敗會擲回[Bad_cast 例外](../cpp/bad-cast-exception.md)狀況。   如果 `expression` 未指向或參考有效的物件，則會擲回 `__non_rtti_object` 例外狀況。
 
-如需 `__non_rtti_object` 例外狀況的說明，請參閱[typeid](../cpp/typeid-operator.md) 。
+如需例外狀況的說明，請參閱[typeid](../cpp/typeid-operator.md) `__non_rtti_object` 。
 
 ## <a name="example"></a>範例
 

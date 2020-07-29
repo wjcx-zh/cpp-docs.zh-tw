@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: c68a7c9764e7f52131a90d38db22d2645eed9a4f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 354cd1cac5db775ea56cb5215a8528bdfe9ac5ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225003"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控制項：子類別化 Windows 控制項
 
@@ -43,7 +43,7 @@ ms.locfileid: "84625417"
 
 ## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>覆寫 IsSubclassedControl 和 PreCreateWindow
 
-若要覆寫 `PreCreateWindow` 和 `IsSubclassedControl` ，請將下列幾行程式碼加入至控制項類別宣告的**protected**區段：
+若要覆寫 `PreCreateWindow` 和 `IsSubclassedControl` ，請將下列幾行程式碼加入至 **`protected`** 控制項類別宣告的區段：
 
 [!code-cpp[NVC_MFC_AxSub#1](codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]
 

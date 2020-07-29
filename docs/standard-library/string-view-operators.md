@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; 運算子'
+title: '&lt;string_view &gt; 運算子'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076397"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222233"
 ---
-# <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 運算子
+# <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 運算子
 
-使用這些運算子來比較兩個 string_view 物件，或 string_view 以及提供隱含轉換的其他字串物件（例如[std：： string](basic-string-class.md)或**char\*** ）。
+使用這些運算子來比較兩個 string_view 物件，或 string_view 以及提供隱含轉換的其他字串物件（例如[std：： string](basic-string-class.md)或**char \* **）。
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[運算子 "" sv](#op_sv)|
+|[operator！ =](#op_neq)|[操作&gt;](#op_gt)|[操作&gt;=](#op_gt_eq)|
+|[操作&lt;](#op_lt)|[操作&lt;&lt;](#op_lt_lt)|[操作&lt;=](#op_lt_eq)|
+|[operator = =](#op_eq_eq)|[運算子 "" sv](#op_sv)|
 
 ## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
@@ -57,15 +57,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*左面*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
-*right*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*再*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的物件未詞典編纂等於右邊的物件，**則為 true** ;否則**為 false**。
+**`true`** 如果運算子左邊的物件未詞典編纂等於右邊的物件，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -96,15 +96,15 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*左面*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
-*right*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*再*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的物件詞典編纂等於右邊的物件，**則為 true** ;否則**為 false**。
+**`true`** 如果運算子左邊的物件詞典編纂等於右邊的物件，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -112,7 +112,7 @@ bool operator==(
 
 比較是以字元序列的成對字典比較為基礎。 如果它們有相同數目的元素，且元素全都相等，則兩個物件相等。
 
-## <a name="operatorlt"></a><a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試運算子左邊的物件是否小於該物件右邊的 sidestring_view
 
@@ -135,15 +135,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*左面*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
-*right*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*再*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的物件詞典編纂小於右邊的物件，則**為 true** ;否則**為 false**。
+**`true`** 如果運算子左邊的物件詞典編纂小於右邊的物件，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>運算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
 
 測試運算子左邊的物件是否小於或等於右邊的物件。
 
@@ -196,21 +196,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*左面*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
-*right*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*再*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的物件詞典編纂小於或等於右邊的物件，**則為 true** ;否則**為 false**。
+**`true`** 如果運算子左邊的物件詞典編纂小於或等於右邊的物件，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
-請參閱[運算子&lt;](#op_lt)。
+請[參閱 &lt; 運算子](#op_lt)。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>運算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作&lt;&lt;
 
 將 string_view 寫入輸出資料流程。
 
@@ -236,7 +236,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 使用此運算子將 string_view 的內容插入輸出資料流程中，例如使用[std：： cout](iostream.md#cout)。
 
-## <a name="operatorgt"></a><a name="op_gt"></a> 運算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
 
 測試運算子左邊的物件是否大於右邊的物件。
 
@@ -259,21 +259,21 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*左面*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
-*right*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*再*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的物件詞典編纂大於右邊的 string_view 物件，**則為 true** ;否則**為 false**。
+**`true`** 如果運算子左邊的物件詞典編纂大於右邊的 string_view 物件，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
-請參閱[運算子&lt;](#op_lt)。
+請[參閱 &lt; 運算子](#op_lt)。
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>運算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
 
 測試運算子左邊的物件是否大於或等於右邊的物件。
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*左面*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
-*right*\
-任何可轉換的字串類型或類型的物件，`basic_string_view` 要進行比較。
+*再*\
+要比較的任何可轉換字串類型或類型的物件 `basic_string_view` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的物件詞典編纂大於或等於右邊的物件，**則為 true** ;否則**為 false**。
+**`true`** 如果運算子左邊的物件詞典編纂大於或等於右邊的物件，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
-請參閱[運算子&lt;](#op_lt)。
+請[參閱 &lt; 運算子](#op_lt)。
 
 ## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>運算子 "" sv （string_view 常值）
 
-從字串常值中，建立 string_view。 需要命名空間 `std::literals::string_view_literals`。
+從字串常值中，建立 string_view。 需要命名空間 `std::literals::string_view_literals` 。
 
 ### <a name="example"></a>範例
 
@@ -329,4 +329,4 @@ using namespace literals::string_view_literals;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<string_view >](../standard-library/string-view.md)
+[\<string_view>](../standard-library/string-view.md)

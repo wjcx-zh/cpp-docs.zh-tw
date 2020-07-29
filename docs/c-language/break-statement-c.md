@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
-ms.openlocfilehash: b38ff6c535c142bd15ea09a4d7c80010c3fff31f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46173ceebd7291336c18d36203d1e4dc59ce46d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313359"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222000"
 ---
 # <a name="break-statement-c"></a>break 陳述式 (C)
 
-`break` 陳述式會終止其所在最內層 `do`、`for`、`switch` 或 `while` 陳述式的執行。 程式控制權會轉移到終止陳述式之後的陳述式。
+**`break`** 語句會終止執行其所在的最接近的封閉式 **`do`** 、、 **`for`** **`switch`** 或 **`while`** 語句。 程式控制權會轉移到終止陳述式之後的陳述式。
 
 ## <a name="syntax"></a>語法
 
 *跳躍語句*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**崩潰**
 
-`break` 陳述式通常用來終止處理 `switch` 陳述式內的特定案例。 若缺少封閉迴圈，`switch` 陳述式會產生錯誤。
+**`break`** 語句經常用來終止語句內特定案例的處理 **`switch`** 。 缺少封閉式反復或語句會 **`switch`** 產生錯誤。
 
-在巢狀陳述式中，`break` 陳述式只會終止 `do`、`for`、`switch` 或立即將它關閉的 `while` 陳述式。 您可以使用 `return` 或 `goto` 陳述式將控制轉移到巢狀結構之外的其他地方。
+在 nested 語句中， **`break`** 語句只會終止 **`do`** 立即將其括住的、 **`for`** 、 **`switch`** 或 **`while`** 語句。 您可以使用 **`return`** 或 **`goto`** 語句，將控制項從嵌套結構外轉移到其他位置。
 
-這個範例說明 `break` 陳述式：
+這個範例說明 **`break`** 語句：
 
 ```
 #include <stdio.h>
@@ -43,6 +43,6 @@ int main() {
 } // Loop exits only when 'Q' is pressed
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [break 語句](../cpp/break-statement-cpp.md)

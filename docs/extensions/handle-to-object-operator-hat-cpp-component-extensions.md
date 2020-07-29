@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358335"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225146"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>物件控制代碼運算子 (^) (C++/CLI 和 C++/CX)
 
-*句柄聲明符*(,`^`發音為"hat"),修改類型[指定器](../cpp/overview-of-declarators.md),表示在系統確定不再可存取物件時應自動刪除聲明的物件。
+*控制碼*宣告子（ `^` 發音為 "hat"）會修改類型[規範](../cpp/overview-of-declarators.md)，表示當系統判斷無法再存取該物件時，應該自動刪除已宣告的物件。
 
 ## <a name="accessing-the-declared-object"></a>存取宣告的物件
 
@@ -38,7 +38,7 @@ ms.locfileid: "81358335"
 
 因為原生 C++ 指標 (`*`) 和參考 (`&`) 不是 Managed 參考，所以記憶體回收行程無法自動更新它們所指的位址。 若要解決這個問題，請使用控制代碼宣告子，指定記憶體回收行程知道且會自動更新的變數。
 
-有關詳細資訊,請參閱[如何:在本機類型中聲明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
+如需詳細資訊，請參閱[如何：在原生類型中宣告控制碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 ### <a name="examples"></a>範例
 
@@ -104,7 +104,7 @@ Not a boxed int
 100
 ```
 
-這個範例示範如何將使用 `void*` 指標指向任意物件的 C++ 常見慣用語，取代為可保存任何參考類別之控制代碼的 `Object^`。 這個範例也會示範所有型別 (例如陣列和委派) 都可以轉換為物件控制代碼。
+這個範例示範使用指向任意物件之指標的通用 c + + 用法 **`void*`** ，會被取代 `Object^` ，它可以保存任何參考類別的控制碼。 這個範例也會示範所有型別 (例如陣列和委派) 都可以轉換為物件控制代碼。
 
 ```cpp
 // mcppv2_handle_3.cpp
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-此示例顯示本機引用(`&`) 無法綁定到託管類型的**int**成員,因為**int**可能存儲在垃圾回收堆中,並且本機引用不跟蹤託管堆中的物件移動。 解決方法是使用區域變數，或將 `&` 變更為 `%`，使其成為追蹤參考。
+這個範例顯示原生參考（ `&` ）無法系結至 **`int`** managed 型別的成員，因為 **`int`** 可能會儲存在垃圾收集堆積中，而原生參考不會追蹤 managed 堆積中的物件移動。 解決方法是使用區域變數，或將 `&` 變更為 `%`，使其成為追蹤參考。
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -223,5 +223,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET 和 UWP 的元件擴展](component-extensions-for-runtime-platforms.md)<br/>
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)<br/>
 [追蹤參考運算子](tracking-reference-operator-cpp-component-extensions.md)

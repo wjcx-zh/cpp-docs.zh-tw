@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 87cc0000f74935990cb5956e0fb3afd44e01532b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624200"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225029"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控制項：進階主題
 
@@ -69,7 +69,7 @@ ms.locfileid: "84624200"
 
 1. 在 [**屬性名稱**] 方塊中，輸入 `Array` 。
 
-1. 在 [**屬性類型**] 方塊中，選取 [ **short**]。
+1. 在 [**屬性類型**] 方塊中，選取 **`short`** 。
 
 1. 針對 [**執行**類型]，按一下 [**取得/設定方法**]。
 
@@ -97,7 +97,7 @@ ms.locfileid: "84624200"
 
 最後，和函式的 `GetArray` 實 `SetArray` 作用會加入至的結尾。CPP 檔案。 在大部分的情況下，您將修改 Get 函式以傳回屬性的值。 Set 函式通常會包含應在屬性變更之前或之後執行的程式碼。
 
-若要讓這個屬性很有用，您可以在控制項類別中宣告**short**類型的二維陣列成員變數，以儲存參數化屬性的值。 接著，您可以修改 Get 函式，以傳回儲存在適當資料列和資料行的值（如參數所指示），並修改 Set 函數來更新資料列和資料行參數所參考的值。
+若要讓這個屬性有用，您可以在類型的控制項類別中宣告二維陣列成員變數， **`short`** 以儲存參數化屬性的值。 接著，您可以修改 Get 函式，以傳回儲存在適當資料列和資料行的值（如參數所指示），並修改 Set 函數來更新資料列和資料行參數所參考的值。
 
 ## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>處理您的 ActiveX 控制項中的錯誤
 
@@ -107,7 +107,7 @@ ms.locfileid: "84624200"
 
 ### <a name="activex-control-error-codes"></a>ActiveX 控制項錯誤碼
 
-|錯誤|描述|
+|錯誤|說明|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|不合法的函式呼叫|
 |CTL_E_OVERFLOW|溢位|

@@ -5,33 +5,33 @@ ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fbec97a5bd30bb9bb76459ef2f7b0956ae6a264f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171972"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225133"
 ---
 # <a name="property--ccli-and-ccx"></a>屬性  (C++/CLI 和 C++/CX)
 
-可宣告「屬性」，它是一個成員函式，其行為模式和存取方式類似於資料成員或陣列元素。
+可宣告「屬性」**，它是一個成員函式，其行為模式和存取方式類似於資料成員或陣列元素。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
 您可以宣告下列其中一個類型的屬性。
 
-「簡單屬性」<br/>
-預設會建立指派屬性值的「set 存取子」、擷取屬性值的「get 存取子」，以及包含屬性值並由編譯器產生的私用資料成員。
+「簡單屬性」**<br/>
+預設會建立指派屬性值的「set 存取子」**、擷取屬性值的「get 存取子」**，以及包含屬性值並由編譯器產生的私用資料成員。
 
-「屬性區塊」<br/>
+「屬性區塊」**<br/>
 使用此選項可建立使用者定義的 get 和/或 set 存取子。 如果同時定義了 get 和 set 存取子，屬性為讀取/寫入；如果只定義 get 存取子，屬性為唯讀，而如果只定義 set 存取子，屬性為唯寫。
 
 您必須明確宣告資料成員，才能包含屬性值。
 
-「索引屬性」<br/>
+「索引屬性」**<br/>
 您可以用來取得和設定由一個或多個索引所指定之屬性值的屬性區塊。
 
-您可以建立具有使用者定義的屬性名稱或「預設」屬性名稱的索引屬性。 預設索引屬性的名稱是定義屬性所在的類別的名稱。 若要宣告預設屬性，請指定 **default** 關鍵字，而不是屬性名稱。
+您可以建立具有使用者定義的屬性名稱或「預設」** 屬性名稱的索引屬性。 預設索引屬性的名稱是定義屬性所在的類別的名稱。 若要宣告預設屬性，請指定 **`default`** 關鍵字，而不是屬性名稱。
 
 您必須明確宣告資料成員，才能包含屬性值。 針對索引的屬性，資料成員通常是陣列或集合。
 
@@ -65,9 +65,9 @@ property type default[index_list] {
 屬性的名稱。
 
 *access-modifier*<br/>
-存取限定詞。 有效的限定詞為 **static** 和 **virtual**。
+存取限定詞。 有效的限定詞為 **`static`** 和 **`virtual`** 。
 
-get 或 set 存取子不需要同意 **virtual** 限定詞，但必須同意 **static** 限定詞。
+Get 或 set 存取子不需要同意辨識 **`virtual`** 符號，但必須同意辨識 **`static`** 符號。
 
 *inheritance-modifier*<br/>
 繼承限定詞。 有效的限定詞為 **abstract** 和 **sealed**。
@@ -110,8 +110,8 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>參數
 
-*modifier*<br/>
-可以在屬性宣告或 get/set 存取子方法上使用修飾詞。 可能的值為 **static** 和 **virtual**。
+*者*<br/>
+可以在屬性宣告或 get/set 存取子方法上使用修飾詞。 可能的值為 **`static`** 和 **`virtual`** 。
 
 *type*<br/>
 屬性表示之值的類型。
@@ -124,33 +124,33 @@ raise 方法的參數；必須符合委派的簽章。
 
 ### <a name="remarks"></a>備註
 
-第一個語法範例會示範「簡單屬性」，其中隱含宣告 `set` 和 `get` 這兩個方法。 編譯器會自動建立私用欄位來儲存屬性的值。
+第一個語法範例會示範「簡單屬性」**，其中隱含宣告 `set` 和 `get` 這兩個方法。 編譯器會自動建立私用欄位來儲存屬性的值。
 
-第二個語法範例會示範「屬性區塊」，其中明確宣告 `set` 和 `get` 這兩個方法。
+第二個語法範例會示範「屬性區塊」**，其中明確宣告 `set` 和 `get` 這兩個方法。
 
-第三個語法範例會示範客戶定義的「索引屬性」。 索引屬性除了要設定或擷取的值以外，還會接受參數。 您必須指定屬性的名稱。 與簡單屬性不同的是，索引屬性的 `set` 和/或 `get` 方法必須明確定義，而且您必須指定屬性的名稱。
+第三個語法範例會示範客戶定義的「索引屬性」**。 索引屬性除了要設定或擷取的值以外，還會接受參數。 您必須指定屬性的名稱。 與簡單屬性不同的是，索引屬性的 `set` 和/或 `get` 方法必須明確定義，而且您必須指定屬性的名稱。
 
-第四個語法範例會示範「預設」屬性，它可讓您以類似陣列的方式存取型別的執行個體。 關鍵字 **default** 只是用來指定預設屬性。 預設屬性的名稱是定義屬性所在的類型的名稱。
+第四個語法範例會示範「預設」** 屬性，它可讓您以類似陣列的方式存取型別的執行個體。 關鍵字 **`default`** 只能用來指定預設屬性。 預設屬性的名稱是定義屬性所在的類型的名稱。
 
-**property** 關鍵字可以出現在類別、介面或實值型別中。 屬性可以有 get 函式 (唯讀)、set 函式 (唯寫)，或兩者皆有 (可讀寫)。
+**`property`** 關鍵字可以出現在類別、介面或實數值型別中。 屬性可以有 get 函式 (唯讀)、set 函式 (唯寫)，或兩者皆有 (可讀寫)。
 
 屬性名稱不可與包含該屬性之 Managed 類別的名稱相符。 getter 函式的傳回類型必須符合對應 setter 函式之最後一個參數的類型。
 
 對用戶端程式碼來說，屬性具有一般資料成員的外觀，並且可使用與資料成員相同的語法往返寫入或讀取。
 
-get 和 set 方法不需要同意 **virtual** 修飾詞。
+Get 和 set 方法不需要同意 **`virtual`** 修飾詞。
 
 get 和 set 方法的可及性可能不同。
 
 屬性方法的定義可能出現在類別主體外，如同一般的方法。
 
-屬性的 get 和 set 方法應該同意 **static** 修飾詞。
+屬性的 get 和 set 方法應該同意 **`static`** 修飾詞。
 
 如果屬性的 get 和 set 方法符合下列描述，則屬性為純量：
 
 - get 方法沒有參數，且有傳回類型 `T`。
 
-- set 方法有一個型別 `T` 的參數，且傳回型別 **void**。
+- Set 方法具有類型的參數和傳回 `T` 類型 **`void`** 。
 
 具有相同識別項的範圍內應該只宣告一個純量屬性。 純量屬性不可多載。
 
@@ -158,7 +158,7 @@ get 和 set 方法的可及性可能不同。
 
 屬性區塊中的存取子方法允許不同的可及性。  也就是說，set 方法可以是公用，而 get 方法可以是私人。  不過，存取子方法的可及性較屬性本身上所宣告的更不受限制是一種錯誤。
 
-**property** 是即時線上關鍵字。  如需詳細資訊，請參閱[即時線上關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
+**`property`** 是內容相關的關鍵字。  如需詳細資訊，請參閱[內容相關性關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -212,4 +212,4 @@ test
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

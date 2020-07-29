@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char> class
 ms.assetid: abd9373a-77db-4031-bf4b-f8ac15087581
-ms.openlocfilehash: ccb08f3e505122757080129b36558490456fc2c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 04e3a3d067c7fd0e4513d1e1e4463ff6e9f7fe22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224886"
 ---
 # <a name="char_traitsltchargt-struct"></a>char_traits&lt;char&gt; 結構
 
-結構，這是樣板結構 char_traits 的特製化， **\<CharType >** 至**char**類型的專案。
+結構，這是樣板結構的特製化**char_traits \<CharType> **至類型的專案 **`char`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -27,8 +27,8 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>備註
 
-特製化可讓結構利用程式庫函式來操作此類型**char**的物件。
+特製化可讓結構利用操作此類型物件的程式庫函數 **`char`** 。
 
 ## <a name="example"></a>範例
 
-請參閱類別樣板[Char_traits 類別](../standard-library/char-traits-struct.md)的 typedef 和成員函式
+請參閱類別範本的 typedef 和成員函式[Char_traits 類別](../standard-library/char-traits-struct.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
-ms.openlocfilehash: 7d61bcb7364e90f5b5137f549989da769223a04f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 137d09cb510a27a495c91b343a56dd11b41b42b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742193"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232049"
 ---
 # <a name="compiler-error-c3018"></a>編譯器錯誤 C3018
 
 'var1'：OpenMP 'for' 測試或增量必須使用索引變數 'var2'
 
-OpenMP 陳述式中的 `for` 迴圈必須使用相同的變數作為測試，並隨著索引使用而遞增。
+**`for`** OpenMP 語句中的迴圈必須針對其測試使用相同的變數，並隨著其用於索引而遞增。
 
 下列範例會產生 C3018：
 

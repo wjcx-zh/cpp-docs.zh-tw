@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ca13ed91601fa3a64071304c14d483e84c314a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178206"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233713"
 ---
 # <a name="__interface"></a>__interface
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-Microsoft C++介面可以定義如下：
+Microsoft c + + 介面可以定義如下：
 
 - 能夠繼承自零個或多個基底介面。
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>備註
 
-C++ [類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)可以使用這些規則來實作為，但 **__interface**強制執行。
+C + +[類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)可以使用這些規則來執行，但會 **`__interface`** 加以強制。
 
 例如，以下是介面定義範例：
 
@@ -58,7 +58,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface**意指[novtable](../cpp/novtable.md) **__declspec**修飾詞。
+**`__interface`** 意指[novtable](../cpp/novtable.md) **`__declspec`** 修飾詞。
 
 ## <a name="example"></a>範例
 
@@ -142,7 +142,7 @@ p->int_data = 100
 bstr_data = Testing
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200859"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231958"
 ---
 # <a name="compiler-error-c3409"></a>編譯器錯誤 C3409
 
@@ -21,9 +21,9 @@ ms.locfileid: "80200859"
 
 編譯器將方括弧轉譯為[屬性](../../windows/attributes-alphabetical-reference.md)區塊，但找不到任何屬性。
 
-當您使用方括弧做為 lambda 運算式定義的一部分時，編譯器可能會產生這個錯誤。 當編譯器無法判斷方括弧是否屬於 lambda 運算式或屬性區塊定義的一部分時，就會發生這個錯誤。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
+當您使用方括弧做為 lambda 運算式定義的一部分時，編譯器可能會產生這個錯誤。 當編譯器無法判斷方括弧是否屬於 lambda 運算式或屬性區塊定義的一部分時，就會發生這個錯誤。 如需 lambda 運算式的詳細資訊，請參閱[Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
 1. 如果方括弧屬於屬性區塊的一部分：
 
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3409，因為 lambda 運算式會使用 `mutable` 規格，但不會提供參數清單。 編譯器無法判斷方括弧是否為 lambda 運算式或屬性區塊定義的一部分。
+下列範例會產生 C3409，因為 lambda 運算式會使用 **`mutable`** 規格，但不會提供參數清單。 編譯器無法判斷方括弧是否為 lambda 運算式或屬性區塊定義的一部分。
 
 ```cpp
 // C3409b.cpp
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
+[特性](../../windows/attributes-alphabetical-reference.md)<br/>
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)

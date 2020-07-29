@@ -10,16 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419928"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233050"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 運算子
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試物件是否不相等。
 
@@ -42,10 +42,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要測試是否不相等的物件之一。
 
-*right*\
+*再*\
 要測試是否不相等的物件之一。
 
 *Ty1*\
@@ -56,7 +56,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>傳回值
 
-如果物件不相等，便會傳回 **true**；如果物件相等，則會傳回 **false**。
+**`true`** 如果物件不相等，則為，**`false`** 如果物件相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試物件是否相等。
 
@@ -143,10 +143,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要測試是否相等的其中一個物件。
 
-*right*\
+*再*\
 要測試是否相等的其中一個物件。
 
 *Ty1*\
@@ -157,7 +157,7 @@ bool operator==(
 
 ### <a name="return-value"></a>傳回值
 
-如果物件相等，則**為 true** ，如果物件不相等，則**為 false** 。
+**`true`** 如果物件相等，則為， **`false`** 如果物件不相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>運算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
 
 測試一個物件是否大於或等於第二個物件。
 
@@ -250,10 +250,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要比較的其中一個物件。
 
-*right*\
+*再*\
 要比較的其中一個物件。
 
 *Ty1*\
@@ -264,9 +264,9 @@ bool operator>=(
 
 ### <a name="remarks"></a>備註
 
-範本運算子會傳回 `left.get() >= right.get()`。
+此範本運算子會傳回 `left.get() >= right.get()`。
 
-## <a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試一個物件是否小於第二個物件。
 
@@ -284,10 +284,10 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要比較的其中一個物件。
 
-*right*\
+*再*\
 要比較的其中一個物件。
 
 *Ty1*\
@@ -296,7 +296,7 @@ bool operator<(
 *Ty2*\
 右側指標所控制的類型。
 
-## <a name="op_lt_eq"></a>運算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
 
 測試一個物件是否小於或等於第二個物件。
 
@@ -314,10 +314,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要比較的其中一個物件。
 
-*right*\
+*再*\
 要比較的其中一個物件。
 
 *Ty1*\
@@ -328,9 +328,9 @@ bool operator<=(
 
 ### <a name="remarks"></a>備註
 
-範本運算子會傳回 `left.get() <= right.get()`
+這些範本運算子會傳回 `left.get() <= right.get()`。
 
-## <a name="op_gt"></a> 運算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
 
 測試一個物件是否大於第二個物件。
 
@@ -348,10 +348,10 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要比較的其中一個物件。
 
-*right*\
+*再*\
 要比較的其中一個物件。
 
 *Ty1*\
@@ -360,7 +360,7 @@ bool operator>(
 *Ty2*\
 右側共用指標所控制的類型。
 
-## <a name="op_lt_lt"></a>運算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作&lt;&lt;
 
 將共用指標寫入資料流中。
 
@@ -381,10 +381,10 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Ty*\
 共用指標所控制的類型。
 
-*out*\
+*脫銷*\
 輸出資料流。
 
-*sp*\
+*行距*\
 共用指標。
 
 ### <a name="remarks"></a>備註

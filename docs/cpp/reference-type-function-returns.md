@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188294"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233622"
 ---
 # <a name="reference-type-function-returns"></a>參考類型函式傳回
 
@@ -86,7 +86,7 @@ y = 9
 
 除了下列情況下之外，參考類型的宣告必須包含初始設定式：
 
-- 明確**外部**宣告
+- 明確 **`extern`** 宣告
 
 - 類別成員的宣告
 
@@ -108,7 +108,7 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-在此情況下，編譯器會發出警告： `warning C4172: returning address of local variable or temporary`。 在簡單程式中，如果呼叫端在覆寫記憶體位置之前存取參考，則可能偶爾不會發生存取違規。 這純粹只是幸運。 請留意警告。
+在此情況下，編譯器會發出警告： `warning C4172: returning address of local variable or temporary` 。 在簡單程式中，如果呼叫端在覆寫記憶體位置之前存取參考，則可能偶爾不會發生存取違規。 這純粹只是幸運。 請留意警告。
 
 ## <a name="see-also"></a>另請參閱
 

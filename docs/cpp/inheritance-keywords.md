@@ -18,12 +18,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374093"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233726"
 ---
 # <a name="inheritance-keywords"></a>繼承關鍵字
 
@@ -37,7 +37,7 @@ class [__virtual_inheritance] class-name;
 
 其中：
 
-*類別*<br/>
+*類別名稱*<br/>
 所要宣告類別的名稱。
 
 C++ 可讓您在定義類別之前宣告類別成員的指標。 例如：
@@ -47,15 +47,15 @@ class S;
 int S::*p;
 ```
 
-在上面的代碼中,`p`聲明為指向類 S 整數成員的指標。但是,`class S`尚未在此代碼中定義;它只被聲明。 當編譯器遇到這類指標時，必須將指標的表示法一般化。 表示法的大小取決於指定的繼承模型。 有四種方式可將繼承模型指定至編譯器：
+在上述程式碼中，會宣告為 `p` 類別 S 的整數成員指標。不過，尚未 `class S` 在這個程式碼中定義，只會宣告。 當編譯器遇到這類指標時，必須將指標的表示法一般化。 表示法的大小取決於指定的繼承模型。 有四種方式可將繼承模型指定至編譯器：
 
-- 在**指標到成員表示下的**IDE 中
+- 在 IDE 的 [**成員指標標記法**] 底下
 
-- 在使用[/vmg](../build/reference/vmb-vmg-representation-method.md)開關的命令列處
+- 在命令列中使用[/vmg](../build/reference/vmb-vmg-representation-method.md)參數
 
-- 使用[pointers _ to _ members](../preprocessor/pointers-to-members.md)
+- 使用[pointers_to_members](../preprocessor/pointers-to-members.md) pragma
 
-- 使用繼承關鍵字 **__single_inheritance、__multiple_inheritance**和 **__multiple_inheritance****__virtual_inheritance**。 這項技術能夠以每個類別為基礎控制繼承模型。
+- 使用繼承關鍵字 **`__single_inheritance`** 、 **`__multiple_inheritance`** 和 **`__virtual_inheritance`** 。 這項技術能夠以每個類別為基礎控制繼承模型。
 
     > [!NOTE]
     >  如果您總是在定義類別之後宣告類別成員的指標，就不需要使用上述任何選項。
@@ -74,9 +74,9 @@ int S::*p;
 > [!NOTE]
 > 類別成員指標表示法的同一個向前宣告應出現在宣告該類別成員指標的每一個轉譯單位中，而且宣告應在成員指標宣告之前發生。
 
-為了與以前的版本相容 **,_single_inheritance、_multiple_inheritance**和 **_multiple_inheritance****_virtual_inheritance**是 **__multiple_inheritance****__single_inheritance、__multiple_inheritance**和 **__virtual_inheritance**的同義詞,除非指定編譯器選項[/Za\(禁用語言擴展)。](../build/reference/za-ze-disable-language-extensions.md)
+為了與舊版相容， **_single_inheritance**、 **_multiple_inheritance**和 **_virtual_inheritance**是、和的同義字 **`__single_inheritance`** ， **`__multiple_inheritance`** **`__virtual_inheritance`** 除非指定了編譯器選項[/za \( 停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) 。
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

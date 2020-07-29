@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 737c9e669990f4de6ae18cdc7662c131ad61516f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c82099d816bc8ee8c179e9d4656f474156a629a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375005"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233193"
 ---
 # <a name="coleexception-class"></a>COleException 類別
 
@@ -31,29 +31,29 @@ class COleException : public CException
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COle 例外::P](#process)|將捕獲的異常轉換為 OLE 返回代碼。|
+|[COleException：:P rocess](#process)|將攔截到的例外狀況轉譯為 OLE 傳回碼。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COle 例外:m_sc](#m_sc)|包含指示異常原因的狀態代碼。|
+|[COleException：： m_sc](#m_sc)|包含指出例外狀況原因的狀態碼。|
 
 ## <a name="remarks"></a>備註
 
-類`COleException`包括一個公共數據成員,該成員持有指示異常原因的狀態代碼。
+`COleException`類別包含的公用資料成員會保存狀態碼，指出例外狀況的原因。
 
-通常,不應直接創建`COleException`物件,而應直接創建物件。相反,你應該調用[AfxThrowOleexception。](exception-processing.md#afxthrowoleexception)
+一般來說，您不應該 `COleException` 直接建立物件，而應呼叫[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。
 
-有關異常的詳細資訊,請參閱[異常處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[異常:OLE 異常](../../mfc/exceptions-ole-exceptions.md)。
+如需例外狀況的詳細資訊，請參閱[例外狀況處理（MFC）](../../mfc/exception-handling-in-mfc.md)和[例外狀況： OLE 例外](../../mfc/exceptions-ole-exceptions.md)狀況文章。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[C 例外](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `COleException`
 
@@ -61,9 +61,9 @@ class COleException : public CException
 
 **標頭：** afxdisp.h
 
-## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COle 例外:m_sc
+## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleException：： m_sc
 
-此數據成員持有指示異常原因的 OLE 狀態代碼。
+此資料成員會保存表示例外狀況原因的 OLE 狀態碼。
 
 ```
 SCODE m_sc;
@@ -71,17 +71,17 @@ SCODE m_sc;
 
 ### <a name="remarks"></a>備註
 
-此變數的值由[AfxThrowOleException](exception-processing.md#afxthrowoleexception)設置。
+這個變數的值是由[AfxThrowOleException](exception-processing.md#afxthrowoleexception)所設定。
 
-有關 SCODE 的詳細資訊,請參閱 Windows SDK 中的[COM 錯誤代碼結構](/windows/win32/com/structure-of-com-error-codes)。
+如需 SCODE 的詳細資訊，請參閱 Windows SDK 中[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-## <a name="coleexceptionprocess"></a><a name="process"></a>COle 例外::P
+## <a name="coleexceptionprocess"></a><a name="process"></a>COleException：:P rocess
 
-調用**Process**成員函數將捕獲的異常轉換為 OLE 狀態代碼。
+呼叫**進程**成員函式，將攔截到的例外狀況轉譯為 OLE 狀態碼。
 
 ```
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -90,18 +90,18 @@ static SCODE PASCAL Process(const CException* pAnyException);
 ### <a name="parameters"></a>參數
 
 *pAnyException*<br/>
-指向捕獲的異常的指標。
+攔截到的例外狀況指標。
 
 ### <a name="return-value"></a>傳回值
 
-OLE 狀態代碼。
+OLE 狀態碼。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
-> 此函數是**靜態**的。
+> 此函式為 **`static`** 。
 
-有關 SCODE 的詳細資訊,請參閱 Windows SDK 中的[COM 錯誤代碼結構](/windows/win32/com/structure-of-com-error-codes)。
+如需 SCODE 的詳細資訊，請參閱 Windows SDK 中[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="example"></a>範例
 
@@ -109,6 +109,6 @@ OLE 狀態代碼。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 樣品 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 CALCDRIV:](../../overview/visual-cpp-samples.md)<br/>
 [CException 類別](../../mfc/reference/cexception-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

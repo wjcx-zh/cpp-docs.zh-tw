@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233453"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 類別
 
-OLE DB 範本中的所有存取子都是衍生自這個類別。 `CAccessorBase` 可讓一個資料列集管理多個存取子。 它也會提供參數和輸出資料行的系結。
+OLE DB 範本中的所有存取子都是衍生自這個類別。 `CAccessorBase`可讓一個資料列集管理多個存取子。 它也會提供參數和輸出資料行的系結。
 
 ## <a name="syntax"></a>語法
 
@@ -122,7 +122,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果存取子是 autoaccessor，則傳回**true** 。 否則會傳回 **false**。
+**`true`** 如果存取子是 autoaccessor，則傳回。 否則，它會傳回 **`false`** 。
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase：： ReleaseAccessors
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>參數
 
 *pUnk*<br/>
-在COM 物件之 `IUnknown` 介面的指標，其已建立存取子。
+在`IUnknown`COM 物件介面的指標，其已建立存取子。
 
 ### <a name="return-value"></a>傳回值
 
@@ -150,5 +150,5 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessorBase 類別](../../data/oledb/caccessorbase-class.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8c02e79e6a300f23ac31ea876c9d4576cfe5e9a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419648"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232920"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 運算子
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試運算子左邊的佇列物件是否不等於右邊的佇列物件。
 
@@ -35,15 +35,15 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `queue` 類型的物件。
 
-*right*\
+*再*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果佇列不相等，則為 **true**；如果佇列相等，則為 **false**。
+**`true`** 如果佇列不相等，則為，**`false`** 如果佇列相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -92,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試運算子左邊的佇列物件是否小於右邊的佇列物件。
 
@@ -102,15 +102,15 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `queue` 類型的物件。
 
-*right*\
+*再*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的佇列小於且不等於運算子右邊的佇列，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的佇列小於且不等於運算子右邊的佇列，則為，否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>運算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
 
 測試運算子左邊的佇列物件是否小於或等於右邊的佇列物件。
 
@@ -165,15 +165,15 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `queue` 類型的物件。
 
-*right*\
+*再*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左側的佇列必定小於運算子右側的佇列，則為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的佇列嚴格小於運算子右邊的佇列，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的佇列物件是否等於右邊的佇列物件。
 
@@ -230,15 +230,15 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `queue` 類型的物件。
 
-*right*\
+*再*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果佇列不相等，則為 **true**；如果佇列相等，則為 **false**。
+**`true`** 如果佇列不相等，則為，**`false`** 如果佇列相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -286,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a> 運算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
 
 測試運算子左邊的佇列物件是否大於右邊的佇列物件。
 
@@ -296,15 +296,15 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `queue` 類型的物件。
 
-*right*\
+*再*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左側的佇列必定小於運算子右側的佇列，則為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的佇列嚴格小於運算子右邊的佇列，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>運算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
 
 測試運算子左邊的佇列物件是否大於或等於右邊的佇列物件。
 
@@ -362,15 +362,15 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `queue` 類型的物件。
 
-*right*\
+*再*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左側的佇列必定小於運算子右側的佇列，則為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的佇列嚴格小於運算子右邊的佇列，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 

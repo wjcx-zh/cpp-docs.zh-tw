@@ -8,32 +8,32 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 05fe49a4d8e6de92c584d40f3871f3efb906c7c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02bc5c5a7c1766c97d9a834c8b6b4dfb2a26ae82
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374819"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231789"
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
 
-集合類`CMap`、`CList`並`CArray`使用 範本化全域説明器函數,用於比較、複製和序列化元素等目的。 作為基於`CMap`的類實現的一部分`CList`,`CArray`必須根據需要使用根據地圖、清單或陣列中存儲的數據類型定製的版本來覆蓋這些函數。 有關重寫説明器函數的資訊,`SerializeElements`例如 ,請參閱文章[「集合:如何創建類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)」。 請注意,`ConstructElements`並`DestructElements`已棄用。
+集合類別 `CMap` 、 `CList` 和會使用樣板 `CArray` 化的全域 helper 函式，以進行比較、複製和序列化專案的目的。 根據 `CMap` 、 `CList` 和 `CArray` ，您必須根據對應、清單或陣列中所儲存之資料類型量身打造的版本，視需要覆寫這些函式。 如需覆寫 helper 函式（例如）的相關資訊 `SerializeElements` ，請參閱文章[集合：如何建立型別安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意， `ConstructElements` 和已 `DestructElements` 被取代。
 
-Microsoft 基礎類庫在 afxtempl.h 中提供了以下全域函數,以説明您自定義集合類:
+MFC 程式庫在 afxtempl.h 中提供下列全域函式，以協助您自訂集合類別：
 
 ### <a name="collection-class-helpers"></a>集合類別 Helper
 
 |||
 |-|-|
-|[CompareElements](#compareelements)|指示元素是否相同。|
-|[CopyElements](#copyelements)|將元素從一個陣列複製到另一個陣列。|
-|[DumpElements](#dumpelements)|提供面向流的診斷輸出。|
-|[哈希基](#hashkey)|計算哈希鍵。|
-|[SerializeElements](#serializeelements)|將元素存儲或檢索到存檔或從存檔中檢索。|
+|[CompareElements](#compareelements)|指出元素是否相同。|
+|[CopyElements](#copyelements)|將元素從一個陣列複製到另一個。|
+|[DumpElements](#dumpelements)|提供串流導向的診斷輸出。|
+|[HashKey](#hashkey)|計算雜湊索引鍵。|
+|[SerializeElements](#serializeelements)|儲存或抓取封存的元素。|
 
-## <a name="compareelements"></a><a name="compareelements"></a>比較元素
+## <a name="compareelements"></a><a name="compareelements"></a>CompareElements
 
-直接調用 [CList::Find](clist-class.md.not_found.md_clist__find,由[cmap__lookup](cmap-class.md#lookup)和[cmap__operator &#91;&#93;](cmap-class.md#operator_at)間接調用。
+會由 [CList：： Find] （CList not_found）直接呼叫，並由[cmap__lookup](cmap-class.md#lookup)和[cmap__operator &#91;&#93;](cmap-class.md#operator_at)間接地 clist__find。
 
 ```
 template<class TYPE, class ARG_TYPE>
@@ -45,37 +45,37 @@ CompareElements(
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
-要比較的第一個元素的類型。
+*TYPE*<br/>
+要比較之第一個元素的類型。
 
-*p元素1*<br/>
-指向要比較的第一個元素的指標。
+*pElement1*<br/>
+要比較之第一個元素的指標。
 
 *ARG_TYPE*<br/>
-要比較的第二個元素的類型。
+要比較之第二個元素的類型。
 
-*p元素2*<br/>
-指向要比較的第二個元素的指標。
+*pElement2*<br/>
+要比較之第二個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果*pElement1*指向的物件等於*pElement2*指向的物件,則非零;否則 0。
+如果*pElement1*所指向的物件等於*pElement2*所指向的物件，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-呼叫`CMap``CMap`使用 樣本參數*KEY*和*ARG_KEY*。
+`CMap`呼叫會使用 `CMap` 範本參數索引*鍵*和*ARG_KEY*。
 
-默認實現返回*\*pElement1*和*\*pElement2*的比較結果。 重寫此函數,以便以適合應用程式的方式比較元素。
+預設的實值會傳回* \* pElement1*和* \* pElement2*比較的結果。 覆寫此函式，使其能以適合您應用程式的方式來比較元素。
 
-C++語言為簡單類型(**字元****、int、float**等)定義比較**float**運算符`==`(), 但不定義類和結構的比較運算符。 如果要使用`CompareElements`或實體化使用它的集合類之一,則必須定義比較運算元或使用傳回適當值的版本重載`CompareElements`。
+C + + 語言 `==` 會定義簡單類型（、、等）的比較運算子（）， **`char`** 但不 **`int`** **`float`** 會定義類別和結構的比較運算子。 如果您想要使用 `CompareElements` 或來具現化其中一個使用它的集合類別，您必須使用傳回適當值的版本來定義比較運算子或多載 `CompareElements` 。
 
 ### <a name="requirements"></a>需求
 
    **Header:** afxtempl.h
 
-## <a name="copyelements"></a><a name="copyelements"></a>複製元素
+## <a name="copyelements"></a><a name="copyelements"></a>CopyElements
 
-此函數由[CArray::追加和](carray-class.md#append) [CArray::copy](carray-class.md#copy)直接調用。
+此函式是由[CArray：： Append](carray-class.md#append)和[CArray：： Copy](carray-class.md#copy)直接呼叫。
 
 ```
 template<class TYPE>
@@ -87,31 +87,31 @@ void AFXAPI CopyElements(
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*TYPE*<br/>
 指定要複製之項目的類型的樣板參數。
 
 *pDest*<br/>
 指向項目複製目的地的指標。
 
-*pSrc*<br/>
+*.Psrc*<br/>
 指向要複製項目之來源的指標。
 
-*n( N) Count*<br/>
+*nCount*<br/>
 要複製項目的數目。
 
 ### <a name="remarks"></a>備註
 
-預設實現使用簡單賦值運算符 ( **=** ) 執行複製操作。 如果要複製的類型沒有多載的 operator=，則預設實作會執行位元複製。
+預設的實作為使用簡單指派運算子（ **=** ）來執行複製作業。 如果要複製的類型沒有多載的 operator=，則預設實作會執行位元複製。
 
-有關實現此函數和其他説明器函數的資訊,請參閱文章[「集合:如何創建類型安全集合](../how-to-make-a-type-safe-collection.md)」。
+如需有關如何執行這個和其他 helper 函式的詳細資訊，請參閱文章[集合：如何建立型別安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="requirements"></a>需求
 
-  **頭**afxtempl.h
+  **標頭**afxtempl.h。h
 
-## <a name="dumpelements"></a><a name="dumpelements"></a>傾印元素
+## <a name="dumpelements"></a><a name="dumpelements"></a>DumpElements
 
-在重寫時,以文本形式為集合元素提供面向流的診斷輸出。
+當覆寫時，針對集合的元素提供以文字形式呈現的資料流程導向診斷輸出。
 
 ```
 template<class TYPE>
@@ -123,31 +123,31 @@ void  AFXAPI DumpElements(
 
 ### <a name="parameters"></a>參數
 
-*直流*<br/>
-轉儲元素的轉儲上下文。
+*dc*<br/>
+傾印元素的傾印內容。
 
-*類型*<br/>
+*TYPE*<br/>
 指定元素類型的範本參數。
 
-*p 元素*<br/>
-指向要轉儲的元素的指標。
+*pElements*<br/>
+要傾印之元素的指標。
 
-*n( N) Count*<br/>
-要轉儲的元素數。
+*nCount*<br/>
+要傾印的元素數目。
 
 ### <a name="remarks"></a>備註
 
-如果轉儲的深度大於`CMap::Dump`0,`CArray::Dump`則調用 和 函數將調`CList::Dump`用此。
+如果傾印的 `CArray::Dump` 深度大於0，則、和函式 `CList::Dump` `CMap::Dump` 會呼叫此項。
 
-預設實作不做任何動作。 如果集合的元素派生自`CObject`,則重寫通常會遍轉集合的元素,依次調`Dump`用 每個元素。
+預設實作不做任何動作。 如果集合的專案衍生自，則您的覆 `CObject` 寫通常會逐一查看集合的元素，然後 `Dump` 再針對每個專案呼叫。
 
 ### <a name="requirements"></a>需求
 
-  **頭**afxtempl.h
+  **標頭**afxtempl.h。h
 
-## <a name="hashkey"></a><a name="hashkey"></a>哈希基
+## <a name="hashkey"></a><a name="hashkey"></a>HashKey
 
-計算給定鍵的哈希值。
+計算給定索引鍵的雜湊值。
 
 ```
 template<class ARG_KEY>
@@ -157,20 +157,20 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="parameters"></a>參數
 
 *ARG_KEY*<br/>
-指定用於存取對應鍵的資料類型的範本參數。
+範本參數，指定用來存取對應索引鍵的資料類型。
 
-*關鍵*<br/>
-要計算哈希值的鍵。
+*key*<br/>
+要計算其雜湊值的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
-鍵的哈希值。
+索引鍵的雜湊值。
 
 ### <a name="remarks"></a>備註
 
-此函數由[CMap 直接呼叫::刪除Key,](cmap-class.md#removekey)並間接由[CMap::尋找](cmap-class.md#lookup)與[CMap:::運算子 &#91;&#93;](cmap-class.md#operator_at)。
+此函式是由[CMap：： RemoveKey](cmap-class.md#removekey)直接呼叫，並間接由[CMap：： Lookup](cmap-class.md#lookup)和[CMap：： Operator &#91;&#93;](cmap-class.md#operator_at)。
 
-預設實現通過將*鍵*向右移動四個位置來創建哈希值。 重寫此函數,以便返回適合應用程式的哈希值。
+預設的執行會將索引*鍵*右移四個位置，以建立雜湊值。 覆寫此函式，使其傳回適用于您應用程式的雜湊值。
 
 ### <a name="example"></a>範例
 
@@ -185,11 +185,11 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
 ### <a name="requirements"></a>需求
 
-  **頭**afxtempl.h
+  **標頭**afxtempl.h。h
 
-## <a name="serializeelements"></a><a name="serializeelements"></a>序列化元素
+## <a name="serializeelements"></a><a name="serializeelements"></a>SerializeElements
 
-[CArray、CList](carray-class.md)和[CMap](cmap-class.md)呼叫此函式來序列[CList](clist-class.md)化元素。
+[CArray](carray-class.md)、 [CList](clist-class.md)和[CMap](cmap-class.md)會呼叫這個函式來序列化元素。
 
 ```
 template<class TYPE>
@@ -198,31 +198,31 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*TYPE*<br/>
 指定元素類型的範本參數。
 
 *ar*<br/>
-要存檔到或從存檔的存檔物件。
+要封存到或從中封存的封存物件。
 
-*p 元素*<br/>
-指向要存檔的元素的指標。
+*pElements*<br/>
+要封存之元素的指標。
 
-*n( N) Count*<br/>
-要歸檔的元素數
+*nCount*<br/>
+要封存的元素數目
 
 ### <a name="remarks"></a>備註
 
-預設實現執行位讀取或寫入。
+預設的執行會執行位讀取或寫入。
 
-有關實現此函數和其他説明器函數的資訊,請參閱文章[「集合:如何創建類型安全集合](../how-to-make-a-type-safe-collection.md)」。
+如需有關如何執行這個和其他 helper 函式的詳細資訊，請參閱文章[集合：如何建立型別安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="example"></a>範例
 
-請參閱文章[「集合:如何創建類型安全集合」中](../how-to-make-a-type-safe-collection.md)的範例。
+請參閱文章[集合：如何建立型別安全集合](../how-to-make-a-type-safe-collection.md)中的範例。
 
 ### <a name="requirements"></a>需求
 
-  **頭**afxtempl.h
+  **標頭**afxtempl.h。h
 
 ## <a name="see-also"></a>另請參閱
 

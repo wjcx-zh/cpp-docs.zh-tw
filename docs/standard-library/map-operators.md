@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 1b16028ea4be5303df5c6337260de5098e9c6ed6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c632966c9ac1264747568facd459a33d1e13338
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371030"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233076"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 運算子
 
-## <a name="operator"></a><a name="op_neq"></a>操作員!
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 map 物件是否不等於右邊的 map 物件。
 
@@ -37,15 +37,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `map` 類型的物件。
 
-*對*\
+*再*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 map 不相等，便會傳回 **true**；如果 map 相等，則會傳回 **false**。
+**`true`** 如果對應不相等，則為，**`false`** 如果對應相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試運算子左邊的 map 物件是否小於右邊的 map 物件。
 
@@ -102,15 +102,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `map` 類型的物件。
 
-*對*\
+*再*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 map 絕對小於運算子右邊的 map，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的對應嚴格小於運算子右邊的對應，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
 
 測試運算子左邊的 map 物件是否小於或等於右邊的 map 物件。
 
@@ -167,15 +167,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `map` 類型的物件。
 
-*對*\
+*再*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 map 小於或等於運算子右邊的 map，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的地圖小於或等於運算子右邊的 map，則為，否則為。否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 map 物件是否等於右邊的 map 物件。
 
@@ -235,15 +235,15 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `map` 類型的物件。
 
-*對*\
+*再*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 map 等於運算子右邊的 map，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的對應等於運算子右邊的對應，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
 
 測試運算子左邊的 map 物件是否大於右邊的 map 物件。
 
@@ -300,15 +300,15 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `map` 類型的物件。
 
-*對*\
+*再*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 map 大於運算子右邊的 map，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的對應大於運算子右邊的對應，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
 
 測試運算子左邊的 map 物件是否大於或等於右邊的 map 物件。
 
@@ -364,15 +364,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `map` 類型的物件。
 
-*對*\
+*再*\
 `map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 map 大於或等於運算子右邊的 map，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的地圖大於或等於清單右邊的地圖，則為，否則為。否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>運算子!* (多映射)
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>operator！ = （multimap）
 
 測試運算子左邊的 multimap 物件是否不等於右邊的 multimap 物件。
 
@@ -432,15 +432,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `multimap` 類型的物件。
 
-*對*\
+*再*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 multimap 不相等，便會傳回 **true**；如果 multimap 相等，則會傳回 **false**。
+**`true`** 如果 multimap 不相等，則為，**`false`** 如果 multimap 相等，則為。
 
 ### <a name="remarks"></a>備註
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_multimap"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt_multimap"></a>操作&lt;
 
 測試運算子左邊的 multimap 物件是否小於右邊的 multimap 物件。
 
@@ -497,15 +497,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `multimap` 類型的物件。
 
-*對*\
+*再*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multimap 絕對小於運算子右邊的 multimap，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 multimap 嚴格小於運算子右邊的 multimap，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>操作&lt;=
 
 測試運算子左邊的 multimap 物件是否小於或等於右邊的 multimap 物件。
 
@@ -562,15 +562,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `multimap` 類型的物件。
 
-*對*\
+*再*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multimap 小於或等於運算子右邊的 multimap，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 multimap 小於或等於運算子右邊的 multimap，則為，否則為。否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operator = =
 
 測試運算子左邊的 multimap 物件是否等於右邊的 multimap 物件。
 
@@ -630,15 +630,15 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `multimap` 類型的物件。
 
-*對*\
+*再*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multimap 等於運算子右邊的 multimap，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 multimap 等於運算子右邊的 multimap，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_multimap"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt_multimap"></a>操作&gt;
 
 測試運算子左邊的 multimap 物件是否大於右邊的 multimap 物件。
 
@@ -695,15 +695,15 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `multimap` 類型的物件。
 
-*對*\
+*再*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multimap 大於運算子右邊的 multimap，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 multimap 大於運算子右邊的 multimap，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>操作&gt;=
 
 測試運算子左邊的 multimap 物件是否大於或等於右邊的 multimap 物件。
 
@@ -760,15 +760,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `multimap` 類型的物件。
 
-*對*\
+*再*\
 `multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multimap 大於或等於運算子右邊的 multimap，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 multimap 大於或等於清單右邊的 multimap，則為，否則為。否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 

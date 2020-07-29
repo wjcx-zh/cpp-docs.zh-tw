@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 47801eff0ea0c41c7b69dfb7a1aa5190a43f1b75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076461"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233102"
 ---
 # <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r 類別
 
-這些範本會判斷是否可以使用指定的引數類型叫用類型。 `is_invocable_r` 和 `is_nothrow_invocable_r` 也會判斷調用的結果是否可轉換成特定類型。 `is_nothrow_invocable` 和 `is_nothrow_invocable_r` 也會判斷調用是否已知不會擲回例外狀況。 已在 c + + 17 中新增。
+這些範本會判斷是否可以使用指定的引數類型叫用類型。 `is_invocable_r``is_nothrow_invocable_r`也會判斷調用的結果是否可轉換成特定類型。 `is_nothrow_invocable``is_nothrow_invocable_r`也會判斷調用是否已知不會擲回例外狀況。 已在 c + + 17 中新增。
 
 ## <a name="syntax"></a>語法
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>參數
 
-可呼叫*的\*
+*多次*\
 要查詢的可呼叫類型。
 
-*Args*\
+*引數*\
 要查詢的引數類型。
 
-*可轉換*\
+*轉換*\
 可*呼叫的結果類型必須可轉換*為。
 
 ## <a name="remarks"></a>備註
 
-如果可以使用未評估內容中*的 arguments 自*變數來叫用可呼叫的型別，則 `is_invocable` 型別述*詞會保留*true。
+`is_invocable`如果可以使用未評估內容中的 arguments *Callable*引數來叫用可呼叫*Args*的型別，則型別述詞會保留 true。
 
-如果可以使用未評估*內容中的*arguments 引數來叫用可呼叫的型別，以產生可轉換成*可轉換*的結果型別，則 `is_invocable_r` 型別述*詞會保留*true。
+`is_invocable_r`如果可以使用未評估內容中的 arguments 引數來叫用*可呼叫*的型別，以產生可轉換成*可轉換*的結果型別，則型別述詞會保留 true。 *Args*
 
-如果可以使用未評估內容中*的 arguments 自*變數來叫用可呼叫的型別，而且這類呼叫不會擲回例外狀況，則 `is_nothrow_invocable` 型別述*詞會保留*true。
+`is_nothrow_invocable`如果可以使用未評估內容中的 arguments *Callable*引數來叫用可呼叫*Args*的型別，而且這類呼叫不會擲回例外狀況，則型別述詞會保留 true。
 
-如果可以使用未評估內容中*的 arguments 自*變數來叫用可呼叫的類型，以產生可轉換成*可轉換*的結果類型，而且這種呼叫已知不會擲回例外狀況，則 `is_nothrow_invocable_r` 類型述*詞會保留*true。
+`is_nothrow_invocable_r`如果可以使用未評估內容中的 arguments *Callable*引數來叫用可呼叫*Args*的類型，以產生可轉換成*可轉換*的結果類型，而且這種呼叫已知不會擲回例外狀況，則類型述詞會保留 true。
 
-每一個*可轉換*、可呼叫*的類型，以及*參數封裝引數中的類型，*都必須是*完整的類型、未知系結的陣列，或可能是 cv 限定的**void**。 否則，不會定義述詞的行為。
+每一個*可轉換*、可呼叫的*類型，以及*參數套件引數中的*類型都必須*是完整的類型、未知系結的陣列，或可能是 cv 限定的 **`void`** 。 否則，不會定義述詞的行為。
 
 ## <a name="example"></a>範例
 
@@ -116,9 +116,9 @@ int main()
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits >
+**標頭：**\<type_traits>
 
-**命名空間:** std
+**命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 

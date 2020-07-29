@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], about derived classes
 - classes [C++], derived
 ms.assetid: 3534ca19-d9ed-4a40-be1b-b921ad0e6956
-ms.openlocfilehash: 214900f8f36de0fa90ffcd6ca75f3a4e6e2c0777
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab8425a916eb96f6419c67a76fa401716ad84631
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178248"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232257"
 ---
 # <a name="inheritance--c"></a>繼承 (C++)
 
@@ -33,7 +33,7 @@ class Derived : [virtual] [access-specifier] Base1,
 };
 ```
 
-在類別的標記 (名稱) 後方會有一個冒號後面接著基底規格的清單。  基底類別必須先宣告，因此如此命名。  基底規格可能包含存取規範，這是**公用**、**受保護**或**私**用的其中一個關鍵字。  這些存取指定名稱會出現在基底類別名稱的前方，並且只會套用至該基底類別。  這些指定名稱可控制衍生類別使用基底類別成員的權限。  如需存取基類成員的資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。  如果省略存取規範，則會將該基底的存取權視為**私**用。  基底規格可能包含關鍵字**virtual** ，以表示虛擬繼承。  這個關鍵字會顯示在存取指定名稱的前方或後方 (如果有的話)。  如果使用虛擬繼承，則會將基底類別稱為是虛擬基底類別。
+在類別的標記 (名稱) 後方會有一個冒號後面接著基底規格的清單。  基底類別必須先宣告，因此如此命名。  基底規格可能包含存取規範，也就是其中一個關鍵字 **`public`** **`protected`** 或 **`private`** 。  這些存取指定名稱會出現在基底類別名稱的前方，並且只會套用至該基底類別。  這些指定名稱可控制衍生類別使用基底類別成員的權限。  如需存取基類成員的資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。  如果省略存取規範，則會考慮對該基底的存取權 **`private`** 。  基底規格可能包含關鍵字 **`virtual`** 來表示虛擬繼承。  這個關鍵字會顯示在存取指定名稱的前方或後方 (如果有的話)。  如果使用虛擬繼承，則會將基底類別稱為是虛擬基底類別。
 
 您可以指定多個基底類別 (以逗號分隔)。  如果指定了單一基類，繼承模型就是[單一繼承](../cpp/single-inheritance.md)。如果指定了一個以上的基類，則繼承模型稱為[多重繼承](../cpp/multiple-base-classes.md)。
 
@@ -41,7 +41,7 @@ class Derived : [virtual] [access-specifier] Base1,
 
 - [單一繼承](../cpp/single-inheritance.md)
 
-- [多個基類](../cpp/multiple-base-classes.md)
+- [多個基底類別](../cpp/multiple-base-classes.md)
 
 - [虛擬函式](../cpp/virtual-functions.md)
 
@@ -49,10 +49,10 @@ class Derived : [virtual] [access-specifier] Base1,
 
 - [抽象類別](../cpp/abstract-classes-cpp.md)
 
-- [範圍規則的摘要](../cpp/summary-of-scope-rules.md)
+- [範圍規則摘要](../cpp/summary-of-scope-rules.md)
 
 [__Super](../cpp/super.md)和[__interface](../cpp/interface.md)關鍵字記載于本節。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 語言參考](../cpp/cpp-language-reference.md)
+[C + + 語言參考](../cpp/cpp-language-reference.md)

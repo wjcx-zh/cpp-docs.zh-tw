@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 8c373ad1eba07337dc970cb84202370c147560dd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 333f76c2f570832c9d08a7ad666f2540cca37f05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163906"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233336"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>編譯器警告（層級1） C4091
 
@@ -21,7 +21,7 @@ ms.locfileid: "80163906"
 
 ## <a name="example"></a>範例
 
-使用者自訂類型宣告開頭的 `__declspec` 屬性會套用至該類型的變數。 C4091 表示未宣告任何變數。 下列範例會產生 C4091。
+**`__declspec`** 使用者自訂類型宣告開頭的屬性會套用至該類型的變數。 C4091 表示未宣告任何變數。 下列範例會產生 C4091。
 
 ```cpp
 // C4091.cpp

@@ -1,6 +1,6 @@
 ---
 title: COleCmdUI 類別
-ms.date: 09/12/2018
+ms.date: 07/24/2020
 f1_keywords:
 - COleCmdUI
 - AFXDOCOBJ/COleCmdUI
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 1b7a6b21a3ad778b4a5ca345b1aaf42875810e4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c21d9b504656e6bba5ca693e57958743bb1b8309
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376272"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233206"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 類別
 
@@ -27,7 +27,7 @@ ms.locfileid: "81376272"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class COleCmdUI : public CCmdUI
 ```
 
@@ -35,41 +35,41 @@ class COleCmdUI : public CCmdUI
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COleCmdUI:COleCmdUI](#colecmdui)|建構 `COleCmdUI` 物件。|
+|[COleCmdUI::COleCmdUI](#colecmdui)|建構 `COleCmdUI` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COleCmdUI:啟用](#enable)|設置或清除啟用命令標誌。|
-|[COleCmdUI::設定檢查](#setcheck)|設置開/關切換命令的狀態。|
-|[COleCmdUI::設定文字](#settext)|傳回指令的文字名稱或狀態字串。|
+|[COleCmdUI：： Enable](#enable)|設定或清除 [啟用命令] 旗標。|
+|[COleCmdUI：： SetCheck](#setcheck)|設定開啟/關閉切換命令的狀態。|
+|[COleCmdUI：： SetText](#settext)|傳回命令的文字名稱或狀態字串。|
 
 ## <a name="remarks"></a>備註
 
-在未為 DocObjects 啟用的應用程式中,當使用者在應用程式中查看功能表時,MFC 會處理UPDATE_COMMAND_UI。 每個通知都給定一個[CCmdUI](../../mfc/reference/ccmdui-class.md)物件,可以對其進行操作以反映特定命令的狀態。 但是,當為 DocObjects 啟用應用程式時,MFC 會`COleCmdUI`處理UPDATE_OLE_COMMAND_UI通知 並分配物件。
+在未啟用 DocObjects 的應用程式中，當使用者在應用程式中流覽功能表時，MFC 會處理 UPDATE_COMMAND_UI 通知。 每個通知都會提供一個可操作的[CCmdUI](../../mfc/reference/ccmdui-class.md)物件，以反映特定命令的狀態。 不過，當您的應用程式啟用 DocObjects 時，MFC 會處理 UPDATE_OLE_COMMAND_UI 通知並指派 `COleCmdUI` 物件。
 
-`COleCmdUI`允許 DocObject 接收源自其容器使用者介面的命令(如 FileNew、Open、Print 等),並允許容器接收源自 DocObject 用戶介面的命令。 儘管`IDispatch`可用於調度相同的命令,但提供了一`IOleCommandTarget`種 更簡單的查詢和執行方法,因為它依賴於一組標準的命令(通常沒有參數,並且不涉及類型資訊)。 `COleCmdUI`可用於啟用、更新和設置 DocObject 使用者介面命令的其他屬性。 當您要呼叫這個指令時,請致電[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)。
+`COleCmdUI`允許 DocObject 接收源自其容器的使用者介面（例如 FileNew、開啟、列印等等）的命令，並允許容器接收源自于 DocObject 之使用者介面的命令。 雖然 `IDispatch` 可用來分派相同的命令，但 `IOleCommandTarget` 提供更簡單的查詢和執行方式，因為它依賴一組標準的命令（通常不含引數），而且不會涉及任何型別資訊。 `COleCmdUI`可以用來啟用、更新及設定 DocObject 使用者介面命令的其他屬性。 當您想要叫用命令時，請呼叫[COleServerDoc：： OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)。
 
-關於文件物件的詳細資訊,請參閱[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)與[CDocObjectServer 專案](../../mfc/reference/cdocobjectserveritem-class.md)。
+如需 DocObjects 的詳細資訊，請參閱[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
-[CmDUI](../../mfc/reference/ccmdui-class.md)
+[CCmdUI](../../mfc/reference/ccmdui-class.md)
 
 `COleCmdUI`
 
 ## <a name="requirements"></a>需求
 
-**標題:** afxdocobj.h
+**標頭：** afxdocob。h
 
-## <a name="colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI:COleCmdUI
+## <a name="colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI
 
-建構與特定`COleCmdUI`使用者介面命令關聯的物件。
+構造 `COleCmdUI` 與特定使用者介面命令相關聯的物件。
 
-```
+```cpp
 COleCmdUI(
     OLECMD* rgCmds,
     ULONG cCmds,
@@ -79,62 +79,62 @@ COleCmdUI(
 ### <a name="parameters"></a>參數
 
 *rgCmds*<br/>
-與給定 GUID 關聯的受支援命令的清單。 結構`OLECMD`將命令與命令標誌關聯。
+與指定 GUID 相關聯的支援命令清單。 結構會將 `OLECMD` 命令與命令旗標產生關聯。
 
 *cCmds*<br/>
-*rgCmds*中命令的計數。
+*RgCmds*中的命令計數。
 
-*p組*<br/>
-指向標識一組命令的 GUID 的指標。
+*pGroup*<br/>
+識別一組命令之 GUID 的指標。
 
 ### <a name="remarks"></a>備註
 
-該`COleCmdUI`物件提供用於更新 DocObject 用戶介面物件的程式設計介面,如功能表項或控制欄按鈕。 使用者介面物件可以`COleCmdUI`通過 該物件啟用、禁用、檢查和/或清除。
+`COleCmdUI`物件提供了程式設計介面，可用來更新 DocObject 的使用者介面物件，例如功能表項目或控制列按鈕。 使用者介面物件可以透過物件來啟用、停用、檢查和/或清除 `COleCmdUI` 。
 
-## <a name="colecmduienable"></a><a name="enable"></a>COleCmdUI:啟用
+## <a name="colecmduienable"></a><a name="enable"></a>COleCmdUI：： Enable
 
-呼叫此函數將`COleCmdUI`物件的命令標誌設置為OLECOMDF_ENABLED,該標誌告訴介面命令可用並啟用,或者清除命令標誌。
+呼叫此函式可將物件的命令旗標設定 `COleCmdUI` 為 OLECOMDF_ENABLED，這會告訴介面命令可供使用並啟用，或清除命令旗標。
 
-```
+```cpp
 virtual void Enable(BOOL bOn);
 ```
 
 ### <a name="parameters"></a>參數
 
-*邦*<br/>
-指示應啟用還是禁用與`COleCmdUI`對象關聯的命令。 非零啟用命令;0 禁用該命令。
+*bOn*<br/>
+指出是否 `COleCmdUI` 應啟用或停用與物件相關聯的命令。 非零值會啟用命令;0會停用命令。
 
-## <a name="colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::設定檢查
+## <a name="colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI：： SetCheck
 
-調用此函數以設置開/關切換命令的狀態。
+呼叫此函式可設定 on/off 切換命令的狀態。
 
-```
+```cpp
 virtual void SetCheck(int nCheck);
 ```
 
 ### <a name="parameters"></a>參數
 
-*N檢查*<br/>
-確定要設置開/關切換命令的狀態的值。 值為：
+*nCheck*<br/>
+值，決定要設定開啟/關閉切換命令的狀態。 值為：
 
 |值|描述|
 |-----------|-----------------|
-|**1**|將命令設置為"打開」。|
-|**2**|將命令設置為不確定;無法確定狀態,因為此命令的屬性在相關選擇中處於開/關狀態。|
-|任何其他值|將命令設置為關閉。|
+|**1**|將命令設定為 on。|
+|**2**|將命令設定為未定;無法判斷狀態，因為此命令的屬性位於相關選取專案的開啟和關閉狀態。|
+|任何其他值|將命令設定為 off。|
 
-## <a name="colecmduisettext"></a><a name="settext"></a>COleCmdUI::設定文字
+## <a name="colecmduisettext"></a><a name="settext"></a>COleCmdUI：： SetText
 
-呼叫此函數以傳回指令的文字名稱或狀態字串。
+呼叫此函式可傳回命令的文字名稱或狀態字串。
 
-```
+```cpp
 virtual void SetText(LPCTSTR lpszText);
 ```
 
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-指向要與命令一起使用的文本的指標。
+要搭配命令使用之文字的指標。
 
 ## <a name="see-also"></a>另請參閱
 

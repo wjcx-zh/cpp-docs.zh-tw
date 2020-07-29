@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4114
 ms.assetid: 3983e1c6-e8bb-46dc-8894-e1827db48797
-ms.openlocfilehash: 5662dba4339765db27d225eff2ad382ed56396ac
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 8d2b0339ff3cce9a68dce57a5f2b4efac076c5c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233310"
 ---
 # <a name="compiler-warning-level-1-c4114"></a>編譯器警告（層級1） C4114
 
 相同類型的限定詞已經使用多次
 
-類型宣告或定義使用類型限定詞（**const**、 **volatile**、**已簽署**或不**帶正負**號）一次以上。 這會導致含有 Microsoft extensions （/Ze）的警告，以及 ANSI 相容性（/Za）下的錯誤。
+類型宣告或定義使用類型限定詞（ **`const`** 、 **`volatile`** 、 **`signed`** 或 **`unsigned`** ）多次。 這會導致含有 Microsoft extensions （/Ze）的警告，以及 ANSI 相容性（/Za）下的錯誤。
 
 下列範例會產生 C4114：
 

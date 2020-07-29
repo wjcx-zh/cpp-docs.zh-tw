@@ -8,12 +8,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 2a0bd21023bd1c6bc14b1f587c85960cf1e8b820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244177"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233635"
 ---
 # <a name="reference-type-function-arguments"></a>參考類型函式引數
 
@@ -67,9 +67,9 @@ int main()
 }
 ```
 
-上述程式碼顯示的傳址方式傳遞的結構成員會使用成員選取運算子存取 (**。**) 而不是指標成員選取運算子 (**->**)。
+上述程式碼顯示使用成員選取運算子（**.**）而非指標成員選取運算子（）存取以傳址方式傳遞之結構的成員 **->** 。
 
-雖然傳遞做為參考型別引數會遵守非指標類型的語法，它們會保留指標類型的一項重要特性： 它們是除非宣告為可修改**const**。 由於上述程式碼的目的不是要修改物件 `date`，因此更適當的函式原型為：
+雖然當做參考型別傳遞的引數會觀察到非指標類型的語法，但它們會保留指標類型的一個重要特性：除非宣告為，否則它們是可修改的 **`const`** 。 由於上述程式碼的目的不是要修改物件 `date`，因此更適當的函式原型為：
 
 ```cpp
 long DateOfYear( const Date& date );
@@ -77,7 +77,7 @@ long DateOfYear( const Date& date );
 
 此原型可確保 `DateOfYear` 函式不會變更其引數。
 
-任何函式原型都採用參考類型可以接受在其位置相同型別的物件，因為沒有標準轉換轉換*typename*要*typename*  <strong>&</strong>.
+任何採用參考型別的函式原型都可以接受其位置中相同類型的物件，因為從*typename*到*typename*的標準轉換 <strong>&</strong> 。
 
 ## <a name="see-also"></a>另請參閱
 

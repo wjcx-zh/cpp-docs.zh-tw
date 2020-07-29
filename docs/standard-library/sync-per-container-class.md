@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d38307c4ae19e5f87d0dbcca8943dc1c3f239917
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232894"
 ---
 # <a name="sync_per_container-class"></a>sync_per_container 類別
 
@@ -28,7 +28,7 @@ class sync_per_container
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*快取*|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
@@ -40,11 +40,11 @@ class sync_per_container
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<allocators>
+**標頭：**\<allocators>
 
 **命名空間：** stdext
 
-## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container:等於
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container：： equals
 
 比較兩個快取是否相等。
 
@@ -54,17 +54,17 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*快取*|同步處理篩選的快取物件。|
 |*其他*|要比較是否相等的快取物件。|
 
 ### <a name="return-value"></a>傳回值
 
-成員函數始終傳回**false**。
+成員函式一律會傳回 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<配置器>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

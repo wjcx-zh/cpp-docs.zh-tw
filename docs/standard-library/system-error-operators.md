@@ -5,12 +5,12 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: 8631cae146a311f1890583900b564471d5a80958
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5ddd9135749c2dcfd40cd06a9b69cff65b1a8c8d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076266"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232868"
 ---
 # <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt; 運算子
 
@@ -31,15 +31,15 @@ bool operator==(const error_condition& left,
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要測試是否相等的物件。
 
-*right*\
+*再*\
 要測試是否相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果物件相等，即為 **true**；如果物件不相等，則為 **false**。
+**`true`** 如果物件相等，則為，**`false`** 如果物件不相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -58,21 +58,21 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要測試是否不相等的物件。
 
-*right*\
+*再*\
 要測試是否不相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果在*左邊*傳遞的物件不等於傳入的物件 *，則***為 true** ;否則**為 false**。
+**`true`** 如果在*左邊*傳遞的物件不等於傳入的*物件，則為，* 否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
 此函式會傳回 `!(left == right)`。
 
-## <a name="operatorlt"></a><a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試物件是否小於傳入的物件以進行比較。
 
@@ -102,21 +102,21 @@ inline bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 要比較的物件。
 
-*right*\
+*再*\
 要比較的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果在*左邊*傳遞的物件小於*傳入的物件*，則**為 true** ;否則**為 false**。
+**`true`** 如果在*左邊*傳遞的物件小於*傳入的物件，則為，* 否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
 這個功能測試錯誤順序。
 
-## <a name="operatorltlt"></a><a name="op_ostream"></a>運算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_ostream"></a>操作&lt;&lt;
 
 ```cpp
 template <class charT, class traits>

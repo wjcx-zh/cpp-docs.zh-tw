@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212247"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233479"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 
@@ -64,7 +64,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 |||
 |-|-|
-|[Bind](#bind)|建立系結（在[CCommand：： Open](../../data/oledb/ccommand-open.md)中將 `bBind` 指定為**false**時使用）。|
+|[Bind](#bind)|建立系結（在 `bBind` **`false`** [CCommand：： Open](../../data/oledb/ccommand-open.md)中指定為時使用）。|
 |[CAccessorRowset](#caccessorrowset)|建構函式。|
 |[關閉](#close)|關閉資料列集和任何存取子。|
 |[FreeRecordMemory](#freerecordmemory)|釋放目前記錄中需要釋放的任何資料行。|
@@ -72,11 +72,11 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ## <a name="remarks"></a>備註
 
-類別 `TAccessor` 管理存取子。 [類別*TRowset* ] 會管理資料列集。
+類別會 `TAccessor` 管理存取子。 [類別*TRowset* ] 會管理資料列集。
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset：： Bind
 
-如果您在[CCommand：： Open](../../data/oledb/ccommand-open.md)中指定 `bBind` 為**false** ，則建立系結。
+如果您 `bBind` **`false`** 在[CCommand：： Open](../../data/oledb/ccommand-open.md)中指定為，則建立系結。
 
 ### <a name="syntax"></a>語法
 
@@ -154,4 +154,4 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

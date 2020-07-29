@@ -7,16 +7,16 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66186089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215175"
 ---
 # <a name="c-complex-math-support"></a>C 複雜數學支援
 
-Microsoft C 執行階段程式庫 (CRT) 提供複雜數學程式庫函式，包括 ISO C99 需要的所有項目。 編譯器並不會直接支援 **complex** 或 **_Complex** 關鍵字，因此 Microsoft 實作使用了結構類型來呈現複數。
+Microsoft C 執行階段程式庫 (CRT) 提供複雜數學程式庫函式，包括 ISO C99 需要的所有項目。 編譯器不直接支援 **`complex`** 或 **`_Complex`** 關鍵字，因此 Microsoft 執行會使用結構類型來代表複數。
 
 實作這些函式可以平衡效能與正確性。 因為產生正確的四捨五入結果可能極為昂貴，所以這些函式會設計成有效率產生最接近正確四捨五入結果的近似值。 在大部分情況下，產生的結果是在正確四捨五入結果的 +/-1 ulp 內，但也可能出現較大的誤差。
 
@@ -28,19 +28,19 @@ complex.h 標頭的 Microsoft 實作將這些類型定義為 C99 標準原生複
 
 |標準類型|Microsoft 類型|
 |-|-|
-|**float complex** 或 **float _Complex**|**_Fcomplex**|
-|**double complex** 或 **double _Complex**|**_Dcomplex**|
-|**long double complex** 或 **long double _Complex**|**_Lcomplex**|
+|**`float complex`** 或**`float _Complex`**|**_Fcomplex**|
+|**`double complex`** 或**`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** 或**`long double _Complex`**|**_Lcomplex**|
 
 math.h 標頭定義了個別類型 **struct _complex**，用於 [_cabs](../c-runtime-library/reference/cabs.md)函式。 **struct _complex** 類型不會受對等的複雜數學函式 [cabs、cabsf、cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)使用。
 
 ## <a name="complex-constants-and-macros"></a>複雜常數與巨集
 
-**I** 定義為 `{ 0.0f, 1.0f }` 所初始化的 **float** 複雜類型 **_Fcomplex**。
+**我**定義為 **_Fcomplex**初始化的複雜型別 `{ 0.0f, 1.0f }` 。
 
 ## <a name="trigonometric-functions"></a>三角函式
 
-|功能|說明|
+|函式|說明|
 |-|-|
 |[cacos、cacosf、cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|計算複數的弧形餘弦函數複數|
 |[casin、casinf、casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|計算複數的弧形正弦函數複數|
@@ -49,9 +49,9 @@ math.h 標頭定義了個別類型 **struct _complex**，用於 [_cabs](../c-run
 |[csin、csinf、csinl](../c-runtime-library/reference/csin-csinf-csinl.md)|計算複數的正弦函數複數|
 |[ctan、ctanf、ctanl](../c-runtime-library/reference/ctan-ctanf-ctanl.md)|計算複數的正切函數複數|
 
-## <a name="hyperbolic-functions"></a>雙曲線函式
+## <a name="hyperbolic-functions"></a>雙曲函式
 
-|功能|說明|
+|函式|說明|
 |-|-|
 |[cacosh、cacoshf、cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|計算複數的弧形雙曲餘弦函數複數|
 |[casinh、casinhf、casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|計算複數的弧形雙曲正弦函數複數|
@@ -62,7 +62,7 @@ math.h 標頭定義了個別類型 **struct _complex**，用於 [_cabs](../c-run
 
 ## <a name="exponential-and-logarithmic-functions"></a>指數和對數函數
 
-|功能|說明|
+|函式|說明|
 |-|-|
 |[cexp、cexpf、cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|計算複數之底數為 *e* 的指數複數|
 |[clog、clogf、clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|計算複數的自然 (底數為 *e*) 對數複數|
@@ -70,15 +70,15 @@ math.h 標頭定義了個別類型 **struct _complex**，用於 [_cabs](../c-run
 
 ## <a name="power-and-absolute-value-functions"></a>乘冪與絕對值函數
 
-|功能|說明|
+|函式|說明|
 |-|-|
 |[cabs、cabsf、cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|計算複數的絕對值複數 (又稱為範數、模數或大小)|
 |[cpow、cpowf、cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|計算乘冪函數複數 x<sup>y</sup>|
 |[csqrt、csqrtf、csqrtl](../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)|計算複數的平方根複數|
 
-## <a name="manipulation-functions"></a>操作函數
+## <a name="manipulation-functions"></a>操作函式
 
-|功能|說明|
+|函式|說明|
 |-|-|
 |[_Cbuild、_FCbuild、_LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|從實部及虛部建構複數|
 |[carg、cargf、cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|計算複數的引數 (又稱相角)|
@@ -92,11 +92,11 @@ math.h 標頭定義了個別類型 **struct _complex**，用於 [_cabs](../c-run
 
 因為複數並非 Microsoft 編譯器中的原生類型，所以並未在複雜類型上定義標準算數運算子。 為了方便起見，會提供這些複雜數學程式庫函數以在使用者程式碼中進行有限的複數操作：
 
-|功能|說明|
+|函式|說明|
 |-|-|
 |[_Cmulcc、_FCmulcc、_LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|將兩個複數相乘|
 |[_Cmulcr、_FCmulcr、_LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|將複數與浮點數相乘|
 
 ## <a name="see-also"></a>另請參閱
 
-[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依分類排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: db198dbdc7bd43ffd4de9bde39ee81a8b95a25ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df8891cc71dd5a4cfd417969578c0c1b46ae3be3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316882"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223807"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (停用建構替代)
 
@@ -34,41 +34,41 @@ ms.locfileid: "62316882"
 ## <a name="arguments"></a>引數
 
 **0**<br/>
-隱藏 vtordisp 建構函式/解構函式替代成員。 選擇此選項只有在特定的所有類別建構函式和解構函式都呼叫虛擬函式幾乎。
+抑制 vtordisp 的函式/析構函數置換成員。 只有在您確定所有類別的函式和析構函式都呼叫虛擬函式時，才選擇這個選項。
 
 **1**<br/>
-可讓隱藏的 vtordisp 建構函式/解構函式替代成員的建立。 預設值為這項選擇。
+可讓您建立隱藏的 vtordisp 函數/析構函式置換成員。 此選項為預設。
 
 **2**<br/>
-可讓您使用[dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)上所建構的物件。 例如，從虛擬基底類別的 dynamic_cast 在衍生類別。
+可讓您在所結構化的物件上使用[Dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)。 例如，從虛擬基類到衍生類別的 dynamic_cast。
 
-**/ vd2**將 vtordisp 欄位，當您有具有虛擬函式的虛擬基底。 **/ vd1**應該就已足夠。 最常見情況 **/vd2**必須是唯一的虛擬函式，在您虛擬基底解構函式時。
+當您具有虛擬函式的虛擬基底時， **/vd2**會新增 vtordisp 欄位。 **/vd1**應該就足夠了。 最常見的情況是，當您的虛擬基底中唯一的虛擬函式為「析構函數」時， **/vd2**是必要的。
 
 ## <a name="remarks"></a>備註
 
-這些選項只適用於C++使用虛擬基底的程式碼。
+這些選項僅適用于使用虛擬基底的 c + + 程式碼。
 
-視覺化C++會實作C++建構位移支援在已使用虛擬繼承的情況。 建構替代解決造成虛擬函式，宣告虛擬基底和衍生類別中覆寫時的問題，進一步衍生類別的建構期間會呼叫建構函式。
+Visual C++ 在使用虛擬繼承的情況下，會執行 c + + 結構置換支援。 結構置換可解決當虛擬函式在衍生類別中宣告時所建立的問題，在進一步衍生類別的結構期間，會從函式中呼叫。
 
-虛擬函式可能會收到不正確的問題是`this`指標結果的不一致的移動為虛擬基底類別和其衍生類別的替代。 此解決方案會提供稱為 [vtordisp] 欄位中，針對每個虛擬的基底類別的單一建構替代調整。
+問題在於， **`this`** 因為對類別的虛擬基底的置換和其衍生類別的置換之間的差異，可能會導致虛擬函式被傳遞不正確的指標。 解決方案為類別的每個虛擬基底提供單一的結構置換調整（稱為 vtordisp 欄位）。
 
-根據預設，每當程式碼定義使用者定義的建構函式和解構函式，並也會覆寫虛擬函式的虛擬基底時，會採用 vtordisp 欄位。
+根據預設，每當程式碼定義使用者定義的函數和析構函式，而且也覆寫虛擬基底的虛擬函式時，就會引進 vtordisp 欄位。
 
-這些選項會影響整個原始程式檔。 使用[vtordisp](../../preprocessor/vtordisp.md)隱藏並再重新啟用 vtordisp 欄位的類別為基礎。
+這些選項會影響整個原始檔。 您可以使用[vtordisp](../../preprocessor/vtordisp.md) ，依類別逐一隱藏和重新啟用 vtordisp 欄位。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 按一下 [C/C++] **** 資料夾。
 
-1. 按一下 [命令列]  屬性頁。
+1. 按一下 [命令列] **** 屬性頁。
 
-1. 在 [其他選項]  方塊中，輸入編譯器選項。
+1. 在 [其他選項] **** 方塊中，輸入編譯器選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 

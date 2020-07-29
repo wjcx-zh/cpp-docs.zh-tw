@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214915"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 
@@ -50,13 +50,13 @@ class CEnumerator :
 
 |||
 |-|-|
-|[尋找](#find)|搜尋可用的提供者（資料來源），尋找具有指定名稱的提供者。|
-|[GetMoniker](#getmoniker)|抓取目前記錄的 `IMoniker` 介面。|
+|[Find](#find)|搜尋可用的提供者（資料來源），尋找具有指定名稱的提供者。|
+|[GetMoniker](#getmoniker)|抓取 `IMoniker` 目前記錄的介面。|
 |[開啟](#open)|開啟列舉值。|
 
 ## <a name="remarks"></a>備註
 
-您可以從這個類別間接取得 `ISourcesRowset` 資料。
+您可以 `ISourcesRowset` 從這個類別間接取得資料。
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator：： Find
 
@@ -75,11 +75,11 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果找到名稱，**則為 true** 。 否則為 **false**。
+**`true`** 如果找到名稱，則為。 否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
-這個名稱會對應至[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面的 `SOURCES_NAME` 成員。
+這個名稱會對應至 `SOURCES_NAME` [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面的成員。
 
 ## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator：： GetMoniker
 
@@ -126,9 +126,9 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 在列舉值之標記的指標。
 
 *pClsid*<br/>
-在列舉值之 `CLSID` 的指標。
+在列舉值的指標 `CLSID` 。
 
-*enumerator*<br/>
+*列舉值*<br/>
 在列舉值的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -139,4 +139,4 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

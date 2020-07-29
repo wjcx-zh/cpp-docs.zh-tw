@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], storage
 - union keyword [C]
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
-ms.openlocfilehash: 49b99dc17fd7bdddd8a47e3bfd5913a70a7631a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64e8b5184eeccd4de6d196e40ec464807bec93e7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157918"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211654"
 ---
 # <a name="storage-of-unions"></a>等位的儲存
 
@@ -25,8 +25,8 @@ union         /* Defines a union named x */
 } x;
 ```
 
-`x` 等位的成員包括 (依照宣告順序) `char` 值的指標、`char` 值和「浮點數」**** 值的陣列。 針對 `x` 配置的儲存區是 20 個元素陣列 `f` 所需的儲存區，因為 `f` 是等位的最長成員。 由於沒有與等位相關聯的標記，因此其類型未命名或為 "anonymous"。
+Union 的成員會依其宣告的順序、值的指標、值 `x` **`char`** **`char`** 和值的陣列 **`float`** 。 針對 `x` 配置的儲存區是 20 個元素陣列 `f` 所需的儲存區，因為 `f` 是等位的最長成員。 由於沒有與等位相關聯的標記，因此其類型未命名或為 "anonymous"。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[等位宣告](../c-language/union-declarations.md)
+[聯集宣告](../c-language/union-declarations.md)

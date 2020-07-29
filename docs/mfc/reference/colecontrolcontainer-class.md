@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2c2c97090fc8255c06e1678a377fe2dcc968ffd2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214109"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 類別
 
@@ -93,57 +93,57 @@ class COleControlContainer : public CCmdTarget
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COle 控制容器:COle 控制容器](#colecontrolcontainer)|建構 `COleControlContainer` 物件。|
+|[COleControlContainer::COleControlContainer](#colecontrolcontainer)|建構 `COleControlContainer` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COle 控制容器::附加控制站台](#attachcontrolsite)|創建由容器託管的控制網站。|
-|[COle 控制容器::廣播環境屬性更改](#broadcastambientpropertychange)|通知所有託管控件環境屬性已更改。|
-|[COle 控制容器::檢查DlgButton](#checkdlgbutton)|修改指定的按鈕控制件。|
-|[COle 控制容器::檢查無線按鈕](#checkradiobutton)|選擇組的指定單選按鈕。|
-|[COle 控制容器:建立控制](#createcontrol)|創建託管的 ActiveX 控制件。|
-|[COle 控制容器::建立 OleFont](#createolefont)|創建 OLE 字型。|
-|[COle 控制容器:尋找專案](#finditem)|返回指定控制項的自訂網站。|
-|[COle 控制容器::凍結所有事件](#freezeallevents)|確定控制網站是否接受事件。|
-|[COle 控制容器:抓取環境](#getambientprop)|檢索指定的環境屬性。|
-|[COle 控制容器::GetDlgItem](#getdlgitem)|檢索指定的對話方塊控制項。|
-|[COle 控制容器::getDlgItemint](#getdlgitemint)|檢索指定的對話方塊控制項的值。|
-|[COle 控制容器::取得DlgItemtext](#getdlgitemtext)|檢索指定對話方塊控制項的標題。|
-|[COle 控制容器::手柄集焦點](#handlesetfocus)|確定容器是否處理WM_SETFOCUS消息。|
-|[COle 控制容器::無視窗處理訊息](#handlewindowlessmessage)|處理發送到無視窗控制件的消息。|
-|[COle 控制容器:IsDlgButton 檢查](#isdlgbuttonchecked)|確定指定按鈕的狀態。|
-|[COle 控制容器::上漆](#onpaint)|調用以重新繪製容器的一部分。|
-|[COle 控制容器::啟用 UI](#onuiactivate)|當控件即將就地啟動時調用。|
-|[COle 控制容器:開啟](#onuideactivate)|當控件即將停用時調用。|
-|[COle 控制容器::滾動子級](#scrollchildren)|當從子視窗接收滾動消息時,由框架調用。|
-|[COle 控制容器::發送DlgItem消息](#senddlgitemmessage)|將訊息傳送至指定的控制項。|
-|[COle 控制容器::SetDlgItemint](#setdlgitemint)|設置指定控制項的值。|
-|[COle 控制容器::設定DlgItemtext](#setdlgitemtext)|設定指定控制項的文字。|
+|[COleControlContainer::AttachControlSite](#attachcontrolsite)|建立容器所裝載的控制項網站。|
+|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|通知所有裝載的控制項環境屬性已變更。|
+|[COleControlContainer::CheckDlgButton](#checkdlgbutton)|修改指定的按鈕控制項。|
+|[COleControlContainer::CheckRadioButton](#checkradiobutton)|選取群組的指定選項按鈕。|
+|[COleControlContainer：： CreateControl](#createcontrol)|建立主控的 ActiveX 控制項。|
+|[COleControlContainer::CreateOleFont](#createolefont)|建立 OLE 字型。|
+|[COleControlContainer::FindItem](#finditem)|傳回指定之控制項的自訂網站。|
+|[COleControlContainer::FreezeAllEvents](#freezeallevents)|判斷控制網站是否接受事件。|
+|[COleControlContainer::GetAmbientProp](#getambientprop)|抓取指定的環境屬性。|
+|[COleControlContainer::GetDlgItem](#getdlgitem)|抓取指定的對話方塊控制項。|
+|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|抓取指定之對話方塊控制項的值。|
+|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|抓取指定之對話方塊控制項的標題。|
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|判斷容器是否處理 WM_SETFOCUS 訊息。|
+|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|處理傳送至無視窗控制項的訊息。|
+|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|決定指定按鈕的狀態。|
+|[COleControlContainer：： OnPaint](#onpaint)|呼叫以重新繪製容器的一部分。|
+|[COleControlContainer::OnUIActivate](#onuiactivate)|當控制項即將就地啟用時呼叫。|
+|[COleControlContainer::OnUIDeactivate](#onuideactivate)|當即將停用控制項時呼叫。|
+|[COleControlContainer::ScrollChildren](#scrollchildren)|由架構在從子視窗接收捲軸訊息時呼叫。|
+|[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|將訊息傳送至指定的控制項。|
+|[COleControlContainer::SetDlgItemInt](#setdlgitemint)|設定指定之控制項的值。|
+|[COleControlContainer::SetDlgItemText](#setdlgitemtext)|設定指定控制項的文字。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COle 控制容器::m_crBack](#m_crback)|容器的背景顏色。|
-|[COle 控制容器::m_crFore](#m_crfore)|容器的前景顏色。|
-|[COle 控制容器::m_listSitesOrWnds](#m_listsitesorwnds)|支援的控制站點的清單。|
-|[COle 控制容器::m_nWindowlessControls](#m_nwindowlesscontrols)|託管無視窗控制項的數量。|
-|[COle 控制容器::m_pOleFont](#m_polefont)|指向自訂控制件站點的 OLE 字型的指標。|
-|[COle 控制容器::m_pSiteCapture](#m_psitecapture)|指向捕獲控制網站的指標。|
-|[COle 控制容器::m_pSiteFocus](#m_psitefocus)|指向當前具有輸入焦點的控制項的指標。|
-|[COle 控制容器::m_pSiteUIActive](#m_psiteuiactive)|指向當前就地啟動的控件的指標。|
-|[COle 控制容器::m_pWnd](#m_pwnd)|指向實現控制件容器的視窗的指標。|
-|[COle 控制容器::m_siteMap](#m_sitemap)|網站地圖。|
+|[COleControlContainer：： m_crBack](#m_crback)|容器的背景色彩。|
+|[COleControlContainer：： m_crFore](#m_crfore)|容器的前景色彩。|
+|[COleControlContainer：： m_listSitesOrWnds](#m_listsitesorwnds)|支援的控制項網站清單。|
+|[COleControlContainer：： m_nWindowlessControls](#m_nwindowlesscontrols)|託管的無視窗控制項數目。|
+|[COleControlContainer：： m_pOleFont](#m_polefont)|自訂控制項網站之 OLE 字型的指標。|
+|[COleControlContainer：： m_pSiteCapture](#m_psitecapture)|「Capture 控制」網站的指標。|
+|[COleControlContainer：： m_pSiteFocus](#m_psitefocus)|目前有輸入焦點之控制項的指標。|
+|[COleControlContainer：： m_pSiteUIActive](#m_psiteuiactive)|目前已啟用之控制項的指標。|
+|[COleControlContainer：： m_pWnd](#m_pwnd)|執行控制項容器之視窗的指標。|
+|[COleControlContainer：： m_siteMap](#m_sitemap)|網站地圖。|
 
 ## <a name="remarks"></a>備註
 
-這是通過向一個或多個 ActiveX 控制網站提供支援(由`COleControlSite`實現) 來實現的。 `COleControlContainer`完全實現[IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe)和[IOleContainer 介面](/windows/win32/api/oleidl/nn-oleidl-iolecontainer),允許包含的 ActiveX 控制件滿足其作為就地專案的資格。
+這是藉由提供一或多個 ActiveX 控制項網站的支援（由所執行）來完成 `COleControlSite` 。 `COleControlContainer`完整執行[IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe)和[IOleContainer](/windows/win32/api/oleidl/nn-oleidl-iolecontainer)介面，讓內含的 ActiveX 控制項能夠以就地專案的方式來履行其資格。
 
-通常,此類與`COccManager`和`COleControlSite`實現自訂 ActiveX 控制項容器結合使用,並結合一個或多個 ActiveX 控制項的自訂網站。
+此類別通常會與搭配使用， `COccManager` 並使用 `COleControlSite` 一或多個 activex 控制項的自訂網站來執行自訂的 activex 控制項容器。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -155,11 +155,11 @@ class COleControlContainer : public CCmdTarget
 
 ## <a name="requirements"></a>需求
 
-**標題:** afxocc.h
+**標頭：** afxocc。h
 
-## <a name="colecontrolcontainerattachcontrolsite"></a><a name="attachcontrolsite"></a>COle 控制容器::附加控制站台
+## <a name="colecontrolcontainerattachcontrolsite"></a><a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite
 
-由框架調用以創建和附加控制件網站。
+由架構呼叫以建立和附加控制項網站。
 
 ```
 virtual void AttachControlSite(
@@ -173,22 +173,22 @@ void AttachControlSite(
 
 ### <a name="parameters"></a>參數
 
-*pwnd*<br/>
+*pWnd*<br/>
 `CWnd` 物件的指標。
 
 *nIDC*<br/>
-要附加的控制項的 ID。
+要附加之控制項的識別碼。
 
 ### <a name="remarks"></a>備註
 
-如果要自定義此過程,請重寫此函數。
+如果您想要自訂此進程，請覆寫此函式。
 
 > [!NOTE]
-> 如果要以靜態方式連結到 MFC 庫,請使用此函數的第一種形式。 如果要動態連結到 MFC 庫,請使用第二個窗體。
+> 如果您要以靜態方式連結至 MFC 程式庫，請使用此函式的第一種形式。 如果您要動態連結至 MFC 程式庫，請使用第二個表單。
 
-## <a name="colecontrolcontainerbroadcastambientpropertychange"></a><a name="broadcastambientpropertychange"></a>COle 控制容器::廣播環境屬性更改
+## <a name="colecontrolcontainerbroadcastambientpropertychange"></a><a name="broadcastambientpropertychange"></a>COleControlContainer::BroadcastAmbientPropertyChange
 
-通知所有託管控件環境屬性已更改。
+通知所有裝載的控制項環境屬性已變更。
 
 ```
 virtual void BroadcastAmbientPropertyChange(DISPID dispid);
@@ -196,16 +196,16 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>參數
 
-*不一部分*<br/>
-要更改的環境屬性的調度 ID。
+*dispid*<br/>
+要變更之環境屬性的分派識別碼。
 
 ### <a name="remarks"></a>備註
 
-當環境屬性更改值時,框架將調用此功能。 重寫此函數以自定義此行為。
+當環境屬性變更值時，架構會呼叫這個函式。 覆寫此函式以自訂此行為。
 
-## <a name="colecontrolcontainercheckdlgbutton"></a><a name="checkdlgbutton"></a>COle 控制容器::檢查DlgButton
+## <a name="colecontrolcontainercheckdlgbutton"></a><a name="checkdlgbutton"></a>COleControlContainer::CheckDlgButton
 
-修改按鈕的當前狀態。
+修改按鈕的目前狀態。
 
 ```
 virtual void CheckDlgButton(
@@ -216,20 +216,20 @@ virtual void CheckDlgButton(
 ### <a name="parameters"></a>參數
 
 *nIDButton*<br/>
-要修改的按鈕的 ID。
+要修改之按鈕的識別碼。
 
-*N檢查*<br/>
+*nCheck*<br/>
 指定按鈕的狀態。 可以是下列其中一項：
 
-- BST_CHECKED 將按鈕狀態設置為已選中狀態。
+- BST_CHECKED 將按鈕狀態設定為 [已核取]。
 
-- BST_INDETERMINATE 將按鈕狀態設為灰色,指示不確定狀態。 僅當按鈕具有BS_3STATE或BS_AUTO3STATE樣式時,才使用此值。
+- BST_INDETERMINATE 將按鈕狀態設定為灰色，表示不確定的狀態。 只有在按鈕具有 [BS_3STATE] 或 [BS_AUTO3STATE] 樣式時，才使用此值。
 
-- BST_UNCHECKED將按鈕狀態設置清除。
+- BST_UNCHECKED 將按鈕狀態設定為 [已清除]。
 
-## <a name="colecontrolcontainercheckradiobutton"></a><a name="checkradiobutton"></a>COle 控制容器::檢查無線按鈕
+## <a name="colecontrolcontainercheckradiobutton"></a><a name="checkradiobutton"></a>COleControlContainer::CheckRadioButton
 
-在組中選擇指定的單選按鈕,並清除組中的剩餘按鈕。
+選取群組中的指定選項按鈕，並清除群組中其餘的按鈕。
 
 ```
 virtual void CheckRadioButton(
@@ -240,16 +240,16 @@ virtual void CheckRadioButton(
 
 ### <a name="parameters"></a>參數
 
-*nID 第一按鈕*<br/>
-指定群組中第一個單選按鈕的標識碼。
+*nIDFirstButton*<br/>
+指定群組中第一個選項按鈕的識別碼。
 
 *nIDLastButton*<br/>
-指定群組中最後一個單選按鈕的標識碼。
+指定群組中最後一個選項按鈕的識別碼。
 
-*NID 檢查按鈕*<br/>
-指定要檢查的單選按鈕的標識碼。
+*nIDCheckButton*<br/>
+指定要檢查之選項按鈕的識別碼。
 
-## <a name="colecontrolcontainercolecontrolcontainer"></a><a name="colecontrolcontainer"></a>COle 控制容器:COle 控制容器
+## <a name="colecontrolcontainercolecontrolcontainer"></a><a name="colecontrolcontainer"></a>COleControlContainer::COleControlContainer
 
 建構 `COleControlContainer` 物件。
 
@@ -259,16 +259,16 @@ explicit COleControlContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pwnd*<br/>
-指向控制容器的父視窗的指標。
+*pWnd*<br/>
+控制項容器之父視窗的指標。
 
 ### <a name="remarks"></a>備註
 
-成功建立物件後,添加一個自訂控制件站點,該站台將呼叫`AttachControlSite`。
+成功建立物件之後，請使用呼叫來新增自訂控制項網站 `AttachControlSite` 。
 
-## <a name="colecontrolcontainercreatecontrol"></a><a name="createcontrol"></a>COle 控制容器:建立控制
+## <a name="colecontrolcontainercreatecontrol"></a><a name="createcontrol"></a>COleControlContainer：： CreateControl
 
-建立由指定`COleControlSite`物件託管的 ActiveX 控制件。
+建立由指定物件主控的 ActiveX 控制項 `COleControlSite` 。
 
 ```
 BOOL CreateControl(
@@ -300,40 +300,40 @@ BOOL CreateControl(
 ### <a name="parameters"></a>參數
 
 *pWndCtrl*<br/>
-指向表示控制項的視窗物件的指標。
+代表控制項的視窗物件指標。
 
-*Clsid*<br/>
+*clsid*<br/>
 控制項的唯一類別 ID。
 
-*lpsz 視窗名稱*<br/>
-指向要在控制項中顯示的文本的指標。 設置控制項的標題或文字屬性的值(如果有)。 如果為 NULL,則控制的標題或文本屬性不會更改。
+*lpszWindowName*<br/>
+要在控制項中顯示的文字指標。 設定控制項的 [標題] 或 [Text] 屬性的值（如果有的話）。 如果是 Null，則不會變更控制項的 Caption 或 Text 屬性。
 
 *dwStyle*<br/>
-視窗樣式。 可用樣式列在 **「備註」** 部分下。
+視窗樣式。 可用的樣式列在 [**備註**] 區段底下。
 
-*矩形*<br/>
-指定控制項的大小和位置。 它可以是`CRect`對`RECT`象或結構。
+*各種*<br/>
+指定控制項的大小和位置。 它可以是 `CRect` 物件或 `RECT` 結構。
 
 *nID*<br/>
-指定控制項的子視窗 ID。
+指定控制項的子視窗識別碼。
 
-*p 堅持*<br/>
-指向`CFile`包含控制的持久狀態的指標。 默認值為 NULL,指示控制項在不從任何持久儲存還原其狀態的情況下初始化自身。 如果不是 NULL,它應該是指向包含控制項持久資料`CFile`的 派生物件的指標,其形式是流或存儲。 此數據可能已保存在用戶端的上次啟動中。 `CFile`可以包含其他數據,但必須將其讀寫指標設置為調用`CreateControl`時持久性數據的第一個字節。
+*pPersist*<br/>
+的指標， `CFile` 其中包含控制項的持續狀態。 預設值為 Null，表示控制項會自行初始化，而不會從任何持續性儲存體還原其狀態。 如果不是 Null，它應該是 `CFile` 衍生物件的指標，其中包含控制項的持續性資料（以資料流程或儲存體的形式）。 這項資料可能已儲存在用戶端先前的啟用中。 `CFile`可以包含其他資料，但在呼叫時，必須將其讀寫指標設定為持續性資料的第一個位元組 `CreateControl` 。
 
-*b 儲存*<br/>
-指示是否應將*pPersist*中的數據`IStorage`解釋`IStream`為 或數據。 如果*pPersist*中的數據是儲存,*則 b 儲存*應為 TRUE。 如果*pPersist*中的數據是流,*則 b 儲存*應為 FALSE。 預設值為 FALSE。
+*bStorage*<br/>
+指出*pPersist*中的資料是否應解讀為 `IStorage` 或 `IStream` 資料。 如果*pPersist*中的資料是儲存體，則*BSTORAGE*應為 TRUE。 如果*pPersist*中的資料是資料流程， *BSTORAGE*應該是 FALSE。 預設值為 FALSE。
 
 *bstrLicKey*<br/>
-可選的許可證金鑰資料。 僅創建需要運行時許可證密鑰的控制項才需要此資料。 如果控制項支援許可,則必須提供許可證金鑰才能成功建立控制項。 預設值是 NULL。
+選擇性的授權金鑰資料。 只有在建立需要執行時間授權金鑰的控制項時，才需要此資料。 如果控制項支援授權，您必須提供授權金鑰，才能成功建立控制項。 預設值是 NULL。
 
 *ppNewSite*<br/>
-指向將承載正在創建的控制件的現有控制站點的指標。 預設值為 NULL,表示將自動建立新的控制項網站並附加到新控制項。
+將主控所建立控制項之現有控制網站的指標。 預設值為 Null，表示將自動建立新的控制項網站，並將其附加至新的控制項。
 
-*Ppt*<br/>
-指向包含控制項左`POINT`上角的結構的指標。 控制項大小由*size*的值決定。 *ppt*和*size 值*是指定控制項大小和位置的可選方法。
+*ppt*<br/>
+`POINT`結構的指標，其中包含控制項的左上角。 控制項的大小取決於*psize*的值。 *Ppt*和*psize*值是選擇性的方法，可指定控制項的大小和位置。
 
 *psize*<br/>
-指向包含控制大小的`SIZE`結構的指標。 左上角由*ppt*的值決定。 *ppt*和*size 值*是指定控制項大小和位置的可選方法。
+`SIZE`結構的指標，其中包含控制項的大小。 左上角是由*ppt*的值決定。 *Ppt*和*psize*值是選擇性的方法，可指定控制項的大小和位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -341,23 +341,23 @@ BOOL CreateControl(
 
 ### <a name="remarks"></a>備註
 
-只有 Windows *dwStyle*標誌的`CreateControl`子集受 支援:
+僅支援部分的 Windows *dwStyle*旗標 `CreateControl` ：
 
-- WS_VISIBLE 創建最初可見的視窗。 如果希望控件立即可見(如普通視窗),則需要。
+- WS_VISIBLE 會建立一開始顯示的視窗。 如果您想要立即顯示控制項（例如一般視窗），則為必要。
 
-- WS_DISABLED 創建最初禁用的視窗。 禁用的視窗無法接收使用者輸入。 如果控件具有"已啟用"屬性,則可以進行設置。
+- WS_DISABLED 會建立一開始停用的視窗。 停用的視窗無法接收使用者的輸入。 如果控制項具有已啟用的屬性，則可以設定。
 
-- WS_BORDER 創建具有細線邊框的視窗。 如果控件具有 BorderStyle 屬性,則可以進行設置。
+- WS_BORDER 會使用細線條框線來建立視窗。 如果控制項具有 BorderStyle 屬性，則可以設定。
 
-- WS_GROUP 指定一組控制件的第一個控制項。 用戶可以使用方向鍵將鍵盤焦點從組中的一個控制項更改為下一個控制項。 在第一個控制項之後使用WS_GROUP樣式定義的所有控制項都屬於同一組。 具有WS_GROUP樣式的下一個控制項將結束組並啟動下一個組。
+- WS_GROUP 指定控制項群組的第一個控制項。 使用者可以使用方向鍵，將鍵盤焦點從群組中的一個控制項變更為下一個。 在第一個控制項屬於相同群組之後，以 WS_GROUP 樣式定義的所有控制項。 下一個具有 WS_GROUP 樣式的控制項會結束群組，並啟動下一個群組。
 
-- WS_TABSTOP 指定可在使用者按下 TAB 鍵時接收鍵盤焦點的控制項。 按下 TAB 鍵會將鍵盤焦點更改為WS_TABSTOP樣式的下一個控制項。
+- WS_TABSTOP 指定當使用者按下 TAB 鍵時，可接收鍵盤焦點的控制項。 按 TAB 鍵會將鍵盤焦點變更為 WS_TABSTOP 樣式的下一個控制項。
 
-使用第二個重載創建預設大小的控制項。
+使用第二個多載來建立預設大小的控制項。
 
-## <a name="colecontrolcontainercreateolefont"></a><a name="createolefont"></a>COle 控制容器::建立 OleFont
+## <a name="colecontrolcontainercreateolefont"></a><a name="createolefont"></a>COleControlContainer::CreateOleFont
 
-創建 OLE 字型。
+建立 OLE 字型。
 
 ```cpp
 void CreateOleFont(CFont* pFont);
@@ -366,11 +366,11 @@ void CreateOleFont(CFont* pFont);
 ### <a name="parameters"></a>參數
 
 *pFont*<br/>
-指向控制容器使用的字型的指標。
+控制項容器所要使用之字型的指標。
 
-## <a name="colecontrolcontainerfinditem"></a><a name="finditem"></a>COle 控制容器:尋找專案
+## <a name="colecontrolcontainerfinditem"></a><a name="finditem"></a>COleControlContainer::FindItem
 
-查找承載指定項的自定義網站。
+尋找裝載指定專案的自訂網站。
 
 ```
 virtual COleControlSite* FindItem(UINT nID) const;
@@ -379,15 +379,15 @@ virtual COleControlSite* FindItem(UINT nID) const;
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要找到的項的標識符。
+要尋找之專案的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-指向指定項的自定義網站的指標。
+指定專案之自訂網站的指標。
 
-## <a name="colecontrolcontainerfreezeallevents"></a><a name="freezeallevents"></a>COle 控制容器::凍結所有事件
+## <a name="colecontrolcontainerfreezeallevents"></a><a name="freezeallevents"></a>COleControlContainer::FreezeAllEvents
 
-確定容器是忽略來自附加控制網站的事件還是接受這些事件。
+判斷容器是否會忽略附加的控制網站中的事件或接受它們。
 
 ```cpp
 void FreezeAllEvents(BOOL bFreeze);
@@ -396,16 +396,16 @@ void FreezeAllEvents(BOOL bFreeze);
 ### <a name="parameters"></a>參數
 
 *bFreeze*<br/>
-如果將處理事件,則非零;否則 0。
+如果將處理事件，則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
-> 如果控制容器請求,則不需要該控件停止觸發事件。 它可以繼續觸發,但控制容器將忽略所有後續事件。
+> 控制項容器要求時，不一定要停止引發事件。 它可以繼續引發，但控制項容器將會忽略所有後續事件。
 
-## <a name="colecontrolcontainergetambientprop"></a><a name="getambientprop"></a>COle 控制容器:抓取環境
+## <a name="colecontrolcontainergetambientprop"></a><a name="getambientprop"></a>COleControlContainer::GetAmbientProp
 
-檢索指定環境屬性的值。
+抓取指定環境屬性的值。
 
 ```
 virtual BOOL GetAmbientProp(
@@ -417,21 +417,21 @@ virtual BOOL GetAmbientProp(
 ### <a name="parameters"></a>參數
 
 *pSite*<br/>
-指向將從中檢索環境屬性的控制網站的指標。
+將從中抓取環境屬性的控制網站指標。
 
-*不一部分*<br/>
-所需環境屬性的調度 ID。
+*dispid*<br/>
+所需環境屬性的分派識別碼。
 
 *pVarResult*<br/>
-指向環境屬性值的指標。
+環境屬性值的指標。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則為非零；否則為 0。
 
-## <a name="colecontrolcontainergetdlgitem"></a><a name="getdlgitem"></a>COle 控制容器::GetDlgItem
+## <a name="colecontrolcontainergetdlgitem"></a><a name="getdlgitem"></a>COleControlContainer::GetDlgItem
 
-在對話框或其他視窗中檢索指向指定控制項或子視窗的指標。
+抓取對話方塊或其他視窗中指定之控制項或子視窗的指標。
 
 ```
 virtual CWnd* GetDlgItem(int nID) const;
@@ -444,18 +444,18 @@ virtual void GetDlgItem(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-要檢索的對話方塊項的標識符。
+要取出之對話方塊專案的識別碼。
 
-*phwnd*<br/>
-指向指定對話框項視窗物件的句柄的指標。
+*phWnd*<br/>
+指定對話方塊專案之視窗物件的控制碼指標。
 
 ### <a name="return-value"></a>傳回值
 
-指向對話框項視窗的指標。
+對話方塊專案視窗的指標。
 
-## <a name="colecontrolcontainergetdlgitemint"></a><a name="getdlgitemint"></a>COle 控制容器::getDlgItemint
+## <a name="colecontrolcontainergetdlgitemint"></a><a name="getdlgitemint"></a>COleControlContainer::GetDlgItemInt
 
-檢索給定控件的翻譯文本的值。
+抓取指定控制項的已翻譯文字值。
 
 ```
 virtual UINT GetDlgItemInt(
@@ -467,31 +467,31 @@ virtual UINT GetDlgItemInt(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-控件的標識碼。
+控制項的識別碼。
 
 *lpTrans*<br/>
-指向接收函數成功/失敗值的布爾變數的指標(TRUE表示成功,FALSE 表示失敗)。
+接收函式成功/失敗值的布林變數指標（TRUE 表示成功，FALSE 表示失敗）。
 
-*b簽章*<br/>
-指定函數是否應在開頭檢查文本中的減號,並在找到已簽名的整數值時返回該值。 如果*bSigned 參數*為 TRUE,則指定要檢索的值是已簽名的整數值,則將返回值轉換為**int**類型。 要取得延伸的錯誤資訊,請致電[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+*bSigned*<br/>
+指定函式是否應在開頭檢查減號的文字，如果找到，則傳回帶正負號的整數值。 如果*bSigned*參數為 TRUE，則指定要抓取的值是帶正負號的整數值，並將傳回值轉換成 **`int`** 類型。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功 *,lpTrans*指向的變數將設置為 TRUE,返回值是控制項文本的已轉換值。
+如果成功， *lpTrans*所指向的變數會設定為 TRUE，而傳回值就是控制項文字的轉譯值。
 
-如果函數失敗 *,lpTrans*指向的變數將設置為 FALSE,返回值為零。 請注意,由於零是可能翻譯的值,因此返回值為零本身並不表示失敗。
+如果函式失敗， *lpTrans*所指向的變數會設定為 FALSE，而傳回值則為零。 請注意，因為零是可能的轉譯值，所以傳回值零本身不會指出失敗。
 
-如果*lpTrans*為 NULL,則函數不會返回任何有關成功或失敗的資訊。
+如果*lpTrans*為 Null，則函數不會傳回成功或失敗的相關資訊。
 
 ### <a name="remarks"></a>備註
 
-該函數通過剝離文本開頭的任何額外空格,然後轉換十進位數字來轉換檢索的文本。 當函數到達文本末尾或遇到非數位字元時,該函數將停止翻譯。
+函式會藉由去除文字開頭的任何額外空格，然後轉換十進位數，來轉譯抓取的文字。 當函式到達文字結尾或遇到非數值字元時，函式會停止翻譯。
 
-如果轉換的值大於INT_MAX(對於簽名數位)或UINT_MAX(對於未簽名的數位),則此功能返回零。
+如果轉譯的值大於 INT_MAX （適用于帶正負號的數位）或 UINT_MAX （不帶正負號的數位），則此函式會傳回零。
 
-## <a name="colecontrolcontainergetdlgitemtext"></a><a name="getdlgitemtext"></a>COle 控制容器::取得DlgItemtext
+## <a name="colecontrolcontainergetdlgitemtext"></a><a name="getdlgitemtext"></a>COleControlContainer::GetDlgItemText
 
-檢索給定控件的文本。
+抓取指定控制項的文字。
 
 ```
 virtual int GetDlgItemText(
@@ -503,23 +503,23 @@ virtual int GetDlgItemText(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-控件的標識碼。
+控制項的識別碼。
 
 *lpStr*<br/>
-指向控制項文字的指標。
+控制項文字的指標。
 
-*nMax( N) Count*<br/>
-指定要複製到*lpStr*指向的緩衝區的字串的最大長度(以字元表示) 如果字串的長度超過限制,則該字串將被截斷。
+*nMaxCount*<br/>
+指定要複製到*lpStr*所指向之緩衝區的字串長度上限（以字元為單位）。 如果字串長度超過限制，則字串會被截斷。
 
 ### <a name="return-value"></a>傳回值
 
-如果函數成功,返回值將指定複製到緩衝區的字元數,不包括終止空字元。
+如果函式成功，則傳回值會指定複製到緩衝區的字元數，不包括終止的 null 字元。
 
-如果此函式失敗，則傳回值為零。 要取得延伸的錯誤資訊,請致電[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
-## <a name="colecontrolcontainerhandlesetfocus"></a><a name="handlesetfocus"></a>COle 控制容器::手柄集焦點
+## <a name="colecontrolcontainerhandlesetfocus"></a><a name="handlesetfocus"></a>COleControlContainer::HandleSetFocus
 
-確定容器是否處理WM_SETFOCUS消息。
+判斷容器是否處理 WM_SETFOCUS 訊息。
 
 ```
 virtual BOOL HandleSetFocus();
@@ -527,11 +527,11 @@ virtual BOOL HandleSetFocus();
 
 ### <a name="return-value"></a>傳回值
 
-如果容器處理WM_SETFOCUS消息,則非零;否則為零。
+如果容器處理 WM_SETFOCUS 訊息，則為非零值;否則為零。
 
-## <a name="colecontrolcontainerhandlewindowlessmessage"></a><a name="handlewindowlessmessage"></a>COle 控制容器::無視窗處理訊息
+## <a name="colecontrolcontainerhandlewindowlessmessage"></a><a name="handlewindowlessmessage"></a>COleControlContainer::HandleWindowlessMessage
 
-處理無視窗控制件的視窗訊息。
+處理無視窗控制項的視窗訊息。
 
 ```
 virtual BOOL HandleWindowlessMessage(
@@ -544,16 +544,16 @@ virtual BOOL HandleWindowlessMessage(
 ### <a name="parameters"></a>參數
 
 *message*<br/>
-視窗消息的標識碼,由 Windows 提供。
+視窗訊息的識別碼（由 Windows 提供）。
 
 *wParam*<br/>
-消息的參數;由 Windows 提供。 指定其他特定於消息的資訊。 此參數的內容取決於*消息*參數的值。
+訊息的參數;由 Windows 提供。 指定其他訊息特定資訊。 此參數的內容取決於*message*參數的值。
 
 *lParam*<br/>
-消息的參數;由 Windows 提供。 指定其他特定於消息的資訊。 此參數的內容取決於*消息*參數的值。
+訊息的參數;由 Windows 提供。 指定其他訊息特定資訊。 此參數的內容取決於*message*參數的值。
 
-*PlResult*<br/>
-視窗結果代碼。 指定消息處理的結果,並取決於發送的消息。
+*plResult*<br/>
+Windows 結果碼。 指定訊息處理的結果，並根據傳送的訊息而定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -561,11 +561,11 @@ virtual BOOL HandleWindowlessMessage(
 
 ### <a name="remarks"></a>備註
 
-重寫此函數以自定義無視窗控制消息的處理。
+覆寫此函式以自訂無視窗控制訊息的處理。
 
-## <a name="colecontrolcontainerisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>COle 控制容器:IsDlgButton 檢查
+## <a name="colecontrolcontainerisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonChecked
 
-確定指定按鈕的狀態。
+決定指定按鈕的狀態。
 
 ```
 virtual UINT IsDlgButtonChecked(int nIDButton) const;
@@ -578,91 +578,91 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 
 ### <a name="return-value"></a>傳回值
 
-返回值,來自使用BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUTTON 或BS_3STATE樣式創建的按鈕。 可以是下列其中一項：
+從使用 BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUTTON 或 BS_3STATE 樣式所建立的按鈕傳回的值。 可以是下列其中一項：
 
-- BST_CHECKED按鈕選中。
+- 已核取 [BST_CHECKED] 按鈕。
 
-- BST_INDETERMINATE按鈕為灰色,指示不確定狀態(僅適用於按鈕具有BS_3STATE或BS_AUTO3STATE樣式時)。
+- BST_INDETERMINATE 按鈕呈現灰色，表示不確定狀態（只有在按鈕具有 [BS_3STATE] 或 [BS_AUTO3STATE] 樣式時才適用）。
 
-- BST_UNCHECKED按鈕清除。
+- 已清除 BST_UNCHECKED] 按鈕。
 
 ### <a name="remarks"></a>備註
 
-如果按鈕是三狀態控件,則成員函數將確定該按鈕是變暗、選中還是兩者均未調暗。
+如果按鈕是三個狀態的控制項，則成員函式會判斷其為灰色、已核取，或兩者皆非。
 
-## <a name="colecontrolcontainerm_crback"></a><a name="m_crback"></a>COle 控制容器::m_crBack
+## <a name="colecontrolcontainerm_crback"></a><a name="m_crback"></a>COleControlContainer：： m_crBack
 
-容器的背景顏色。
+容器的背景色彩。
 
 ```
 COLORREF m_crBack;
 ```
 
-## <a name="colecontrolcontainerm_crfore"></a><a name="m_crfore"></a>COle 控制容器::m_crFore
+## <a name="colecontrolcontainerm_crfore"></a><a name="m_crfore"></a>COleControlContainer：： m_crFore
 
-容器的前景顏色。
+容器的前景色彩。
 
 ```
 COLORREF m_crFore;
 ```
 
-## <a name="colecontrolcontainerm_listsitesorwnds"></a><a name="m_listsitesorwnds"></a>COle 控制容器::m_listSitesOrWnds
+## <a name="colecontrolcontainerm_listsitesorwnds"></a><a name="m_listsitesorwnds"></a>COleControlContainer：： m_listSitesOrWnds
 
-容器託管的控制站台的清單。
+容器主控的控制網站清單。
 
 ```
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;
 ```
 
-## <a name="colecontrolcontainerm_nwindowlesscontrols"></a><a name="m_nwindowlesscontrols"></a>COle 控制容器::m_nWindowlessControls
+## <a name="colecontrolcontainerm_nwindowlesscontrols"></a><a name="m_nwindowlesscontrols"></a>COleControlContainer：： m_nWindowlessControls
 
-控制容器託管的無視窗控制項。
+控制項容器主控的無視窗控制項數目。
 
 ```
 int m_nWindowlessControls;
 ```
 
-## <a name="colecontrolcontainerm_polefont"></a><a name="m_polefont"></a>COle 控制容器::m_pOleFont
+## <a name="colecontrolcontainerm_polefont"></a><a name="m_polefont"></a>COleControlContainer：： m_pOleFont
 
-指向自訂控制件站點的 OLE 字型的指標。
+自訂控制項網站之 OLE 字型的指標。
 
 ```
 LPFONTDISP m_pOleFont;
 ```
 
-## <a name="colecontrolcontainerm_psitecapture"></a><a name="m_psitecapture"></a>COle 控制容器::m_pSiteCapture
+## <a name="colecontrolcontainerm_psitecapture"></a><a name="m_psitecapture"></a>COleControlContainer：： m_pSiteCapture
 
-指向捕獲控制網站的指標。
+「Capture 控制」網站的指標。
 
 ```
 COleControlSite* m_pSiteCapture;
 ```
 
-## <a name="colecontrolcontainerm_psitefocus"></a><a name="m_psitefocus"></a>COle 控制容器::m_pSiteFocus
+## <a name="colecontrolcontainerm_psitefocus"></a><a name="m_psitefocus"></a>COleControlContainer：： m_pSiteFocus
 
-指向當前具有輸入焦點的控制網站的指標。
+目前具有輸入焦點之控制網站的指標。
 
 ```
 COleControlSite* m_pSiteFocus;
 ```
 
-## <a name="colecontrolcontainerm_psiteuiactive"></a><a name="m_psiteuiactive"></a>COle 控制容器::m_pSiteUIActive
+## <a name="colecontrolcontainerm_psiteuiactive"></a><a name="m_psiteuiactive"></a>COleControlContainer：： m_pSiteUIActive
 
-指向就地啟動的控制網站的指標。
+就地啟用之控制網站的指標。
 
 ```
 COleControlSite* m_pSiteUIActive;
 ```
 
-## <a name="colecontrolcontainerm_pwnd"></a><a name="m_pwnd"></a>COle 控制容器::m_pWnd
+## <a name="colecontrolcontainerm_pwnd"></a><a name="m_pwnd"></a>COleControlContainer：： m_pWnd
 
-指向與容器關聯的視窗物件的指標。
+與容器相關聯之 window 物件的指標。
 
 ```
 CWnd* m_pWnd;
 ```
 
-## <a name="colecontrolcontainerm_sitemap"></a><a name="m_sitemap"></a>COle 控制容器::m_siteMap
+## <a name="colecontrolcontainerm_sitemap"></a><a name="m_sitemap"></a>COleControlContainer：： m_siteMap
 
 網站地圖。
 
@@ -670,9 +670,9 @@ CWnd* m_pWnd;
 CMapPtrToPtr m_siteMap;
 ```
 
-## <a name="colecontrolcontaineronpaint"></a><a name="onpaint"></a>COle 控制容器::上漆
+## <a name="colecontrolcontaineronpaint"></a><a name="onpaint"></a>COleControlContainer：： OnPaint
 
-由框架調用以處理WM_PAINT請求。
+由架構呼叫以處理 WM_PAINT 的要求。
 
 ```
 virtual BOOL OnPaint(CDC* pDC);
@@ -681,19 +681,19 @@ virtual BOOL OnPaint(CDC* pDC);
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-指向容器使用的設備上下文的指標。
+容器所使用之裝置內容的指標。
 
 ### <a name="return-value"></a>傳回值
 
-處理消息時非零;否則為零。
+如果已處理訊息，則為非零。否則為零。
 
 ### <a name="remarks"></a>備註
 
-重寫此函數以自定義繪製過程。
+覆寫此函式以自訂繪製進程。
 
-## <a name="colecontrolcontaineronuiactivate"></a><a name="onuiactivate"></a>COle 控制容器::啟用 UI
+## <a name="colecontrolcontaineronuiactivate"></a><a name="onuiactivate"></a>COleControlContainer::OnUIActivate
 
-當控制網站(由*pSite*指向)即將就地啟動時,由框架調用。
+由架構在*pSite*所指向的控制網站即將就地啟用時所呼叫。
 
 ```
 virtual void OnUIActivate(COleControlSite* pSite);
@@ -702,15 +702,15 @@ virtual void OnUIActivate(COleControlSite* pSite);
 ### <a name="parameters"></a>參數
 
 *pSite*<br/>
-指向即將就地啟動的控制網站的指標。
+要就地啟用之控制項網站的指標。
 
 ### <a name="remarks"></a>備註
 
-就地激活意味著容器的主菜單替換為就地複合功能表。
+就地啟用表示容器的主功能表會取代為就地複合功能表。
 
-## <a name="colecontrolcontaineronuideactivate"></a><a name="onuideactivate"></a>COle 控制容器:開啟
+## <a name="colecontrolcontaineronuideactivate"></a><a name="onuideactivate"></a>COleControlContainer::OnUIDeactivate
 
-當控制站台(*由 pSite*指向)即將停用時,由框架調用。
+當控制項網站（由*pSite*指向）即將停用時，由架構呼叫。
 
 ```
 virtual void OnUIDeactivate(COleControlSite* pSite);
@@ -719,15 +719,15 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
 ### <a name="parameters"></a>參數
 
 *pSite*<br/>
-指向即將停用的控制網站的指標。
+要停用之控制項網站的指標。
 
 ### <a name="remarks"></a>備註
 
-收到此通知時,容器應重新安裝其使用者介面並集中注意力。
+收到此通知時，容器應重新安裝其使用者介面並取得焦點。
 
-## <a name="colecontrolcontainerscrollchildren"></a><a name="scrollchildren"></a>COle 控制容器::滾動子級
+## <a name="colecontrolcontainerscrollchildren"></a><a name="scrollchildren"></a>COleControlContainer::ScrollChildren
 
-當從子視窗接收滾動消息時,由框架調用。
+由架構在從子視窗接收捲軸訊息時呼叫。
 
 ```
 virtual void ScrollChildren(
@@ -737,13 +737,13 @@ virtual void ScrollChildren(
 
 ### <a name="parameters"></a>參數
 
-*Dx*<br/>
-沿 x 軸滾動的數量(以像素為單位)。
+*dx*<br/>
+沿著 X 軸的滾動量（以圖元為單位）。
 
-*Dy*<br/>
-沿 y 軸滾動的數量(以像素為單位)。
+*dy*<br/>
+沿著 y 軸的滾動量（以圖元為單位）。
 
-## <a name="colecontrolcontainersenddlgitemmessage"></a><a name="senddlgitemmessage"></a>COle 控制容器::發送DlgItem消息
+## <a name="colecontrolcontainersenddlgitemmessage"></a><a name="senddlgitemmessage"></a>COleControlContainer::SendDlgItemMessage
 
 將訊息傳送至指定的控制項。
 
@@ -758,20 +758,20 @@ virtual LRESULT SendDlgItemMessage(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-指定接收訊息的控制項的識別碼。
+指定接收訊息之控制項的識別碼。
 
 *message*<br/>
-指定要發送的消息。
+指定要傳送的訊息。
 
 *wParam*<br/>
-指定其他特定於消息的資訊。
+指定其他訊息特定資訊。
 
 *lParam*<br/>
-指定其他特定於消息的資訊。
+指定其他訊息特定資訊。
 
-## <a name="colecontrolcontainersetdlgitemint"></a><a name="setdlgitemint"></a>COle 控制容器::SetDlgItemint
+## <a name="colecontrolcontainersetdlgitemint"></a><a name="setdlgitemint"></a>COleControlContainer::SetDlgItemInt
 
-將對話框中控制件的文本設定為指定整數值的字串表示形式。
+將對話方塊中控制項的文字設定為指定整數值的字串表示。
 
 ```
 virtual void SetDlgItemInt(
@@ -783,17 +783,17 @@ virtual void SetDlgItemInt(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-控件的標識碼。
+控制項的識別碼。
 
-*n值*<br/>
+*N 值*<br/>
 要顯示的整數值。
 
-*b簽章*<br/>
-指定*nValue*參數是簽名還是未簽署。 如果此參數為 TRUE,則*對 nValue*進行簽名。 如果此參數為*TRUE,nValue*小於零,則在字串中的第一個數位之前放置一個減號。 如果此參數為 FALSE,*則 nValue*是無符號的。
+*bSigned*<br/>
+指定*n 值*參數是帶正負號或不帶正負號。 如果此參數為 TRUE，則*n 值*會經過簽署。 如果此參數為 TRUE 且*n 值*小於零，則會在字串中的第一個數位前面放置一個減號。 如果此參數為 FALSE，則表示*n 值*不帶正負號。
 
-## <a name="colecontrolcontainersetdlgitemtext"></a><a name="setdlgitemtext"></a>COle 控制容器::設定DlgItemtext
+## <a name="colecontrolcontainersetdlgitemtext"></a><a name="setdlgitemtext"></a>COleControlContainer::SetDlgItemText
 
-使用*lpszString*中包含的文字設定指定控制項的文字。
+使用*lpszString*中包含的文字，設定指定之控制項的文字。
 
 ```
 virtual void SetDlgItemText(
@@ -804,14 +804,14 @@ virtual void SetDlgItemText(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-控件的標識碼。
+控制項的識別碼。
 
 *lpszString*<br/>
-指向控制項文字的指標。
+控制項文字的指標。
 
 ## <a name="see-also"></a>另請參閱
 
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[COle 控制網站類別](../../mfc/reference/colecontrolsite-class.md)<br/>
+[COleControlSite 類別](../../mfc/reference/colecontrolsite-class.md)<br/>
 [COccManager 類別](../../mfc/reference/coccmanager-class.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: 9bfdf644374a0b825fd0ca02bf4164a766cb42a3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215396"
 ---
 # <a name="variant-class"></a>variant 類別
 
-在任何指定時間的變任何的體執行個體可能存有值的其中一個替代的類型，或者它會保留任何值。
+任何給定時間的任何 variant 實例都會保留其其中一個替代類型的值，或不保留任何值。
 
 ## <a name="syntax"></a>語法
 
@@ -35,26 +35,26 @@ template <class... Types>
 
 |||
 |-|-|
-|[Variant](#variant)|建構類型 `variant` 的物件。|
+|[variant](#variant)|建構類型 `variant` 的物件。|
 
 ### <a name="functions"></a>函式
 
 |||
 |-|-|
-|[emplace](#emplace)|建立包含新的值。|
-|[index](#index)|傳回包含值的索引。|
-|[swap](#swap)||
-|[valueless_by_exception](#emplace)|傳回**false**如果 variant 包含的值。|
+|[emplace](#emplace)|建立新的包含值。|
+|[指數](#index)|傳回包含值的索引。|
+|[調換](#swap)||
+|[valueless_by_exception](#emplace)|**`false`** 如果變數包含值，則傳回。|
 
 ### <a name="operators"></a>運算子
 
 |||
 |-|-|
-|[operator=](#op_eq)|以另一個變數的複本取代變數。|
+|[operator =](#op_eq)|以另一個 variant 的複本取代 variant。|
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
-建立包含新的值。
+建立新的包含值。
 
 ```cpp
 template <class T, class... Args>
@@ -67,7 +67,7 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a> 索引
+## <a name="index"></a><a name="index"></a>指數
 
 傳回包含值的索引。
 
@@ -75,9 +75,9 @@ template <size_t I, class U, class... Args>
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a> Variant
+## <a name="variant"></a><a name="variant"></a>variant
 
-建構類型 `variant` 的物件。 也包含解構函式。
+建構類型 `variant` 的物件。 也包含一個析構函式。
 
 ```cpp
 constexpr variant() noexcept(see below);
@@ -119,9 +119,9 @@ template <class Alloc, size_t I, class U, class... Args>
 *Al*\
 搭配這個物件使用的配置器類別。
 
-## <a name="op_eq"></a> 運算子 =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
-以另一個變數的複本取代變數。
+以另一個 variant 的複本取代 variant。
 
 ```cpp
 variant& operator=(const variant&);
@@ -130,15 +130,15 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a> 交換
+## <a name="swap"></a><a name="swap"></a>調換
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless"></a> valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
 
-傳回**false**如果 variant 包含的值。
+**`false`** 如果變數包含值，則傳回。
 
 ```cpp
 constexpr bool valueless_by_exception() const noexcept;

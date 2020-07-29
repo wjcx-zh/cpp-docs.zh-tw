@@ -6,18 +6,18 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988114"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214863"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
-STL/CLR 程式庫是由類似于C++標準程式庫中的容器所組成，但它會在 .NET Framework 的受管理環境中執行。 它不會與實際C++的標準程式庫保持在最新狀態，並且會針對舊版支援加以維護。
+STL/CLR 程式庫是由類似于 c + + 標準程式庫中的容器所組成，但它會在 .NET Framework 的 managed 環境中執行。 它不會與實際的 c + + 標準程式庫保持在最新狀態，並且會針對舊版支援加以維護。
 
-本文件提供了 STL/CLR 容器的概觀，例如容器項目的需求、您可以插入容器的項目類型，以及容器中項目的擁有權問題。 在適當的情況下，會C++提及原生標準程式庫和 STL/CLR 之間的差異。
+本文件提供了 STL/CLR 容器的概觀，例如容器項目的需求、您可以插入容器的項目類型，以及容器中項目的擁有權問題。 在適當的情況下，會提及原生 c + + 標準程式庫和 STL/CLR 之間的差異。
 
 ## <a name="requirements-for-container-elements"></a>容器項目的需求
 
@@ -229,7 +229,7 @@ int main()
 
 您也可以將 Unboxed 實值類型插入至 STL/CLR 容器。 未裝箱的實值型別是尚未*封裝*成引用型別的實值型別。
 
-實值類型項目可以是其中一個標準實值類型 (例如 `int`)，也可以是使用者定義的實值類型 (例如 `value class`)。 如需詳細資訊，請參閱[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)
+實數值型別專案可以是其中一個標準數值型別（例如 **`int`** ），也可以是使用者定義的實數值型別，例如 **`value class`** 。 如需詳細資訊，請參閱[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>範例
 
@@ -310,6 +310,6 @@ STL/CLR 中的容器會處理實值語意。 每當您將項目插入至容器�
 
 當您呼叫控制代碼物件的容器之清除或清理方法時，不會從記憶體釋放控制代碼所參考的物件。 您必須明確地刪除該物件，或者 (因為這些物件位於 Managed 堆積中) 在決定不再使用物件時允許記憶體回收行程釋放記憶體。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

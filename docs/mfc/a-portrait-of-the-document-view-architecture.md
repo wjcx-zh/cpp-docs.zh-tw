@@ -1,5 +1,5 @@
 ---
-title: 文件-檢視架構的簡介
+title: 檔視圖架構的直向
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623440"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214187"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文件/檢視架構的簡介
 
@@ -27,7 +27,7 @@ ms.locfileid: "84623440"
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>從檢視獲得文件資料的存取權
 
-此視圖會使用[GetDocument](reference/cview-class.md#getdocument)函式存取其檔的資料，此函式會傳回檔的指標，或將 view 類別設為檔類別的 c + + `friend` 。 當檢視準備繪製或進行操作時，會利用其資料存取權來取得資料。
+此視圖會使用[GetDocument](reference/cview-class.md#getdocument)函式存取其檔的資料，此函式會傳回檔的指標，或將 view 類別設為檔類別的 c + + **`friend`** 。 當檢視準備繪製或進行操作時，會利用其資料存取權來取得資料。
 
 例如，從 view 的[OnDraw](reference/cview-class.md#ondraw)成員函式中，view 會使用 `GetDocument` 來取得檔指標。 然後，它會使用該指標來存取文件中的 `CString` 資料成員。 檢視會傳遞字串至 `TextOut` 函式。 若要查看此範例的程式碼，請參閱[在視圖中繪製](drawing-in-a-view.md)。
 

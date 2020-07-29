@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6e31220fa6b15d958e94e82322467cd73e1c3a6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452779"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215695"
 ---
-# <a name="isdefaultconstructible-class"></a>is_default_constructible 類別
+# <a name="is_default_constructible-class"></a>is_default_constructible 類別
 
 測試類型是否有預設建構函式。
 
@@ -31,7 +31,7 @@ struct is_default_constructible;
 
 ## <a name="remarks"></a>備註
 
-如果類型*T*是具有預設的構造函式的類別類型, 則類型述詞的實例為 true, 否則為 false。 這相當於述詞 `is_constructible<T>`。 類型*T*必須是完整的類型、 **void**, 或未知系結的陣列。
+如果類型*T*是具有預設的構造函式的類別類型，則類型述詞的實例為 true，否則為 false。 這相當於述詞 `is_constructible<T>`。 類型*T*必須是完整的類型， **`void`** 或未知系結的陣列。
 
 ## <a name="example"></a>範例
 
@@ -69,7 +69,7 @@ is_default_constructible<Simple2> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

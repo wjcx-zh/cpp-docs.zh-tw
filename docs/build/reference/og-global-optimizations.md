@@ -14,16 +14,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215201"
 ---
-# <a name="og-global-optimizations"></a>`/Og` (全域優化) 
+# <a name="og-global-optimizations"></a>`/Og`（全域優化）
 
-已被取代。 提供本機和全域優化、自動註冊配置和迴圈優化。 建議您改用 (將[ `/O1` 大小降至最低) ](o1-o2-minimize-size-maximize-speed.md)或[ `/O2` (最大化速度) ](o1-o2-minimize-size-maximize-speed.md) 。
+已取代。 提供本機和全域優化、自動註冊配置和迴圈優化。 我們建議您改為使用[ `/O1` （最小大小）](o1-o2-minimize-size-maximize-speed.md)或[ `/O2` （最大化速度）](o1-o2-minimize-size-maximize-speed.md) 。
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +31,7 @@ ms.locfileid: "86180847"
 
 ## <a name="remarks"></a>備註
 
-**`/Og`** 已被取代。 當啟用任何優化時，現在預設會啟用這些優化。 如需優化的詳細資訊，請參閱[ `/O1` `/O2` (最小化大小、最大化速度) ](o1-o2-minimize-size-maximize-speed.md)或[ `/Ox` (啟用大部分速度優化) ](ox-full-optimization.md)。
+**`/Og`** 已被取代。 當啟用任何優化時，現在預設會啟用這些優化。 如需優化的詳細資訊，請參閱[ `/O1` `/O2` （最小大小、最快速度）](o1-o2-minimize-size-maximize-speed.md)，或[ `/Ox` （啟用大部分速度優化）](ox-full-optimization.md)。
 
 下列是可用的優化功能 **`/Og`** ：
 
@@ -49,7 +49,7 @@ ms.locfileid: "86180847"
 
 - 自動註冊配置
 
-   這項優化可讓編譯器在暫存器中儲存經常使用的變數和子運算式;`register`已忽略關鍵字。
+   這項優化可讓編譯器在暫存器中儲存經常使用的變數和子運算式;**`register`** 已忽略關鍵字。
 
 - 迴圈優化
 
@@ -77,7 +77,7 @@ ms.locfileid: "86180847"
    > [!NOTE]
    > 您可以使用 pragma 搭配選項，逐一啟用或停用每個函式的全域優化功能 `optimize` `g` 。
 
-如需相關資訊，請參閱[ `/Oi` (產生內建函式) ](oi-generate-intrinsic-functions.md)和[ `/Ox ` (啟用最快速優化) ](ox-full-optimization.md)。
+如需相關資訊，請參閱[ `/Oi` （產生內建函式）](oi-generate-intrinsic-functions.md)和[ `/Ox ` （啟用大多數速度優化）](ox-full-optimization.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 

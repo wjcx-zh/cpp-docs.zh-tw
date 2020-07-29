@@ -84,16 +84,16 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: 1e5994faab69c1809f820b41186d9b618aa7c193
-ms.sourcegitcommit: d2ccbba1bf4e66d6b6b0582dc01ba39f4a54f0aa
+ms.openlocfilehash: c637c4893a13df577fd6c083c8a4f2380c9c4cad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82984080"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219153"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函式
 
-[ \<Filesystem>](../standard-library/filesystem.md)標頭中的這些免費函式會對路徑、檔案、符號連結、目錄和磁片區進行修改和查詢作業。 如需詳細資訊和程式碼範例，請參閱[檔案系統導覽（c + +）](../standard-library/file-system-navigation.md)。
+標頭中的這些免費函式會 [\<filesystem>](../standard-library/filesystem.md) 對路徑、檔案、符號連結、目錄和磁片區進行修改和查詢作業。 如需詳細資訊和程式碼範例，請參閱[檔案系統導覽（c + +）](../standard-library/file-system-navigation.md)。
 
 ## <a name="absolute"></a><a name="absolute"></a>求
 
@@ -101,15 +101,15 @@ ms.locfileid: "82984080"
 path absolute(const path& pval, const path& base = current_path());
 ```
 
-函式會傳回相對於路徑名稱*pval* `base`的對應至 pval 的絕對路徑名稱：
+函式會傳回相對於路徑名稱的對應至*pval*的絕對路徑名稱 `base` ：
 
-1. 如果`pval.has_root_name() && pval.has_root_directory()`函數傳回*pval*，則為。
+1. 如果 `pval.has_root_name() && pval.has_root_directory()` 函數傳回*pval*，則為。
 
-1. 如果`pval.has_root_name() && !pval.has_root_directory()` `pval.root_name()`  /  `pval.relative_path()`函數 / 傳回。 `absolute(base).root_directory()`  /  `absolute(base).relative_path()`
+1. 如果 `pval.has_root_name() && !pval.has_root_directory()` 函數傳回 `pval.root_name()`  /  `absolute(base).root_directory()`  /  `absolute(base).relative_path()`  /  `pval.relative_path()` 。
 
-1. 如果`!pval.has_root_name() && pval.has_root_directory()`函數`absolute(base).root_name()`  / 傳回*pval*，則為。
+1. 如果 `!pval.has_root_name() && pval.has_root_directory()` 函數傳回 `absolute(base).root_name()`  /  *pval*，則為。
 
-1. 如果`!pval.has_root_name() && !pval.has_root_directory()`函數`absolute(base)`  / 傳回*pval*，則為。
+1. 如果 `!pval.has_root_name() && !pval.has_root_directory()` 函數傳回 `absolute(base)`  /  *pval*，則為。
 
 ## <a name="begin"></a><a name="begin"></a>起點
 
@@ -129,15 +129,15 @@ path canonical(const path& pval, error_code& ec);
 path canonical(const path& pval, const path& base, error_code& ec);
 ```
 
-函式全都形成絕對路徑名稱`pabs = absolute(pval, base)` （或`pabs = absolute(pval)`用於沒有基底參數的多載），然後依照下列步驟順序將它縮減成標準格式：
+函式全都形成絕對路徑名稱 `pabs = absolute(pval, base)` （或 `pabs = absolute(pval)` 用於沒有基底參數的多載），然後依照下列步驟順序將它縮減成標準格式：
 
-1. 為 true 的`X`每個`is_symlink(X)`路徑**true**元件都會被取代`read_symlink(X)`。
+1. 的每個路徑元件都會被 `X` `is_symlink(X)` **`true`** 取代 `read_symlink(X)` 。
 
-1. 已移除每`.`個路徑元件（點是由先前路徑元件所建立的目前目錄）。
+1. 已移除每個路徑元件 `.` （點是由先前路徑元件所建立的目前目錄）。
 
-1. 會移除每一對`X` / `..`路徑元件（點點點是由上一個路徑元件所建立的上層目錄）。
+1. 會移除每一對路徑元件 `X` / `..` （點點點是由上一個路徑元件所建立的上層目錄）。
 
-然後，函式`pabs`會傳回。
+然後，函式會傳回 `pabs` 。
 
 ## <a name="copy"></a><a name="copy"></a>複製
 
@@ -148,7 +148,7 @@ void copy(const path& from, const path& to, copy_options opts);
 void copy(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-函式全都可能會將一或多個檔案*從*複製或連結至，*以*控制*選擇，這*是`copy_options::none` *針對沒有選擇*參數的多載所建立。 選擇最*多隻能包含*其中一個：
+函式全都可能會將一或多個檔案*從*複製或連結至，*以*控制*選擇，這*是針對沒有選擇參數的多載所建立 `copy_options::none` *opts* 。 選擇最*多隻能包含*其中一個：
 
 - `skip_existing`、`overwrite_existing` 或 `update_existing`
 
@@ -156,37 +156,37 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - `directories_only`、`create_symlinks` 或 `create_hard_links`
 
-函式會先判斷*從* `t`和`f` *針對的 file_status 值：*
+函式會先判斷 `f` *從*和針對的 file_status `t` 值*to*：
 
-- 若`opts & (copy_options::create_symlinks | copy_options::skip_symlinks)`為，則呼叫`symlink_status`
+- 若為 `opts & (copy_options::create_symlinks | copy_options::skip_symlinks)` ，則呼叫`symlink_status`
 
 - 否則，藉由呼叫`status`
 
 - 再則報告錯誤。
 
-如果`!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory(f)&& is_regular_file(t)`為，則會報告錯誤（並不執行任何其他動作）。
+如果 `!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory(f)&& is_regular_file(t)` 為，則會報告錯誤（並不執行任何其他動作）。
 
-否則，若`is_symlink(f)`為，則為：
+否則，若為， `is_symlink(f)` 則為：
 
-- 若`options & copy_options::skip_symlinks`為，則不執行任何動作。
+- 若為 `options & copy_options::skip_symlinks` ，則不執行任何動作。
 
-- 否則，若`!exists(t)&& options & copy_options::copy_symlinks`為， `copy_symlink(from, to, opts)`則為。
+- 否則，若為 `!exists(t)&& options & copy_options::copy_symlinks` ，則為 `copy_symlink(from, to, opts)` 。
 
 - 否則，報告錯誤。
 
-否則，如果`is_regular_file(f)`是，則：
+否則，如果是 `is_regular_file(f)` ，則：
 
-- 若`opts & copy_options::directories_only`為，則不執行任何動作。
+- 若為 `opts & copy_options::directories_only` ，則不執行任何動作。
 
-- 否則，若`opts & copy_options::create_symlinks`為， `create_symlink(to, from)`則為。
+- 否則，若為 `opts & copy_options::create_symlinks` ，則為 `create_symlink(to, from)` 。
 
-- 否則，若`opts & copy_options::create_hard_links`為， `create_hard_link(to, from)`則為。
+- 否則，若為 `opts & copy_options::create_hard_links` ，則為 `create_hard_link(to, from)` 。
 
-- 否則，若`is_directory(f)`為， `copy_file(from, to`  /  `from.filename(), opts)`則為。
+- 否則，若為 `is_directory(f)` ，則為 `copy_file(from, to`  /  `from.filename(), opts)` 。
 
 - 否則為 `copy_file(from, to, opts)`。
 
-否則，如果`is_directory(f) && (opts & copy_options::recursive || !opts)`是，則：
+否則，如果是 `is_directory(f) && (opts & copy_options::recursive || !opts)` ，則：
 
 ```cpp
 if (!exists(t))
@@ -211,13 +211,13 @@ bool copy_file(const path& from, const path& to, copy_options opts);
 bool copy_file(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-函式可能會將中的檔案*從*複製到，*以*控制*選擇，這*是`copy_options::none` *針對沒有選擇*參數的多載所建立。 選擇最*多隻能包含* `skip_existing`、 `overwrite_existing`或`update_existing`其中之一。
+函式可能會將中的檔案*從*複製到，*以*控制*選擇，這*是針對沒有選擇參數的多載所建立 `copy_options::none` *opts* 。 選擇最*多隻能包含* `skip_existing` 、或其中之一 `overwrite_existing` `update_existing` 。
 
-若`exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))`為，則會回報為檔案已存在的錯誤。
+若 `exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))` 為，則會回報為檔案已存在的錯誤。
 
-否則，若`!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))`為，則嘗試將檔案的內容和屬性*從**複製到檔案。* 如果複製嘗試失敗，則報告錯誤。
+否則，若為 `!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))` ，則嘗試將檔案的內容和屬性*從*複製*到檔案*。 如果複製嘗試失敗，則報告錯誤。
 
-如果嘗試複製並成功，函數會傳回**true** ，否則傳回**false**。
+**`true`** 如果嘗試複製並成功，則函式會傳回，否則會傳回 **`false`** 。
 
 ## <a name="copy_symlink"></a><a name="copy_symlink"></a>copy_symlink
 
@@ -226,7 +226,7 @@ void copy_symlink(const path& from, const path& to);
 void copy_symlink(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-如果`is_directory(from)`為，則函數`create_directory_symlink(from, to)`會呼叫。 否則，它會`create_symlink(from, to)`呼叫。
+如果 `is_directory(from)` 為，則函數會呼叫 `create_directory_symlink(from, to)` 。 否則，它會呼叫 `create_symlink(from, to)` 。
 
 ## <a name="create_directories"></a><a name="create_directories"></a>create_directories
 
@@ -235,7 +235,7 @@ bool create_directories(const path& pval);
 bool create_directories(const path& pval, error_code& ec) noexcept;
 ```
 
-\/對於如\/b c 的路徑名稱，函式會視需要建立目錄 a\/和 b，讓它可以視需要建立\/b\/c 目錄。 只有在實際建立目錄*pval*時，才會傳回**true** 。
+對於如 b c 的路徑名稱，函式 \/ \/ 會視需要建立目錄 a 和 \/ b，讓它可以 \/ 視需要建立 b c 目錄 \/ 。 **`true`** 只有在實際建立目錄*pval*時，它才會傳回。
 
 ## <a name="create_directory"></a><a name="create_directory"></a>create_directory
 
@@ -247,7 +247,7 @@ bool create_directory(const path& pval, const path& attr);
 bool create_directory(const path& pval, const path& attr, error_code& ec) noexcept;
 ```
 
-函式會視需要建立目錄*pval* 。 只有在實際建立目錄*pval*時，才會傳回 true，在此情況下，它會從現有的檔案*attr*複製`perms::all`許可權，或用於沒有*attr*參數的多載。
+函式會視需要建立目錄*pval* 。 只有在實際建立目錄*pval*時，才會傳回 true，在此情況下，它會從現有的檔案*attr*複製許可權，或用於 `perms::all` 沒有*attr*參數的多載。
 
 ## <a name="create_directory_symlink"></a><a name="create_directory_symlink"></a>create_directory_symlink
 
@@ -295,7 +295,7 @@ directory_iterator& end(const directory_iterator& iter) noexcept;
 recursive_directory_iterator& end(const recursive_directory_iterator& iter) noexcept;
 ```
 
-第一個函式`directory_iterator()`會傳回，而第二個函式會傳回`recursive_directory_iterator()`
+第一個函式會傳回 `directory_iterator()` ，而第二個函式會傳回`recursive_directory_iterator()`
 
 ## <a name="equivalent"></a><a name="equivalent"></a>價額
 
@@ -304,7 +304,7 @@ bool equivalent(const path& left, const path& right);
 bool equivalent(const path& left, const path& right, error_code& ec) noexcept;
 ```
 
-只有當*left*和*right*選擇同一個 filesystem 實體時，函數才會傳回**true** 。
+**`true`** 只有在*left*和*right*選擇相同的檔案系統實體時，函數才會傳回。
 
 ## <a name="exists"></a><a name="exists"></a>記憶體
 
@@ -314,7 +314,7 @@ bool exists(const path& pval);
 bool exists(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `status_known && stat.type() != file_not_found`。 第二個和第三`exists(status(pval))`個函式會傳回。
+第一個函式會傳回 `status_known && stat.type() != file_not_found`。 第二個和第三個函式會傳回 `exists(status(pval))` 。
 
 ## <a name="file_size"></a><a name="file_size"></a>file_size
 
@@ -323,7 +323,7 @@ uintmax_t file_size(const path& pval);
 uintmax_t file_size(const path& pval, error_code& ec) noexcept;
 ```
 
-函式會傳回*pval*所選擇之檔案的大小（以位元組為`exists(pval) && is_regular_file(pval)`單位），如果和可以判斷檔案大小則為。 否則會回報`uintmax_t(-1)`錯誤並傳回。
+函式會傳回*pval*所選擇之檔案的大小（以位元組為單位），如果 `exists(pval) && is_regular_file(pval)` 和可以判斷檔案大小則為。 否則會回報錯誤並傳回 `uintmax_t(-1)` 。
 
 ## <a name="hard_link_count"></a><a name="hard_link_count"></a>hard_link_count
 
@@ -332,7 +332,7 @@ uintmax_t hard_link_count(const path& pval);
 uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 ```
 
-函式會傳回*pval*的永久連結數目，如果發生\-錯誤，則傳回1。
+函式會傳回*pval*的永久連結數目， \- 如果發生錯誤，則傳回1。
 
 ## <a name="hash_value"></a><a name="hash_value"></a>hash_value
 
@@ -340,7 +340,7 @@ uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 size_t hash_value(const path& pval) noexcept;
 ```
 
-函數會傳回的雜湊值`pval.native()`。
+函數會傳回的雜湊值 `pval.native()` 。
 
 ## <a name="is_block_file"></a><a name="is_block_file"></a>is_block_file
 
@@ -350,7 +350,7 @@ bool is_block_file(const path& pval);
 bool is_block_file(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::block`。 其餘的函式`is_block_file(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::block`。 其餘的函式會傳回 `is_block_file(status(pval))` 。
 
 ## <a name="is_character_file"></a><a name="is_character_file"></a>is_character_file
 
@@ -360,7 +360,7 @@ bool is_character_file(const path& pval);
 bool is_character_file(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::character`。 其餘的函式`is_character_file(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::character`。 其餘的函式會傳回 `is_character_file(status(pval))` 。
 
 ## <a name="is_directory"></a><a name="is_directory"></a>is_directory
 
@@ -370,7 +370,7 @@ bool is_directory(const path& pval);
 bool is_directory(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::directory`。 其餘的函式`is_directory_file(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::directory`。 其餘的函式會傳回 `is_directory_file(status(pval))` 。
 
 ## <a name="is_empty"></a><a name="is_empty"></a>is_empty
 
@@ -380,7 +380,7 @@ bool is_empty(const path& pval);
 bool is_empty(const path& pval, error_code& ec) noexcept;
 ```
 
-如果`is_directory(pval)` `directory_iterator(pval) == directory_iterator()`為，則函數會傳回;否則會傳回`file_size(pval) == 0`。
+如果為 `is_directory(pval)` ，則函數會傳回， `directory_iterator(pval) == directory_iterator()` 否則會傳回 `file_size(pval) == 0` 。
 
 ## <a name="is_fifo"></a><a name="is_fifo"></a>is_fifo
 
@@ -390,7 +390,7 @@ bool is_fifo(const path& pval);
 bool is_fifo(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::fifo`。 其餘的函式`is_fifo(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::fifo`。 其餘的函式會傳回 `is_fifo(status(pval))` 。
 
 ## <a name="is_other"></a><a name="is_other"></a>is_other
 
@@ -400,7 +400,7 @@ bool is_other(const path& pval);
 bool is_other(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::other`。 其餘的函式`is_other(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::other`。 其餘的函式會傳回 `is_other(status(pval))` 。
 
 ## <a name="is_regular_file"></a><a name="is_regular_file"></a>is_regular_file
 
@@ -410,7 +410,7 @@ bool is_regular_file(const path& pval);
 bool is_regular_file(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::regular`。 其餘的函式`is_regular_file(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::regular`。 其餘的函式會傳回 `is_regular_file(status(pval))` 。
 
 ## <a name="is_socket"></a><a name="is_socket"></a>is_socket
 
@@ -420,7 +420,7 @@ bool is_socket(const path& pval);
 bool is_socket(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::socket`。 其餘的函式`is_socket(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::socket`。 其餘的函式會傳回 `is_socket(status(pval))` 。
 
 ## <a name="is_symlink"></a><a name="is_symlink"></a>is_symlink
 
@@ -430,7 +430,7 @@ bool is_symlink(const path& pval);
 bool is_symlink(const path& pval, error_code& ec) noexcept;
 ```
 
-第一個函式會傳回 `stat.type() == file_type::symlink`。 其餘的函式`is_symlink(status(pval))`會傳回。
+第一個函式會傳回 `stat.type() == file_type::symlink`。 其餘的函式會傳回 `is_symlink(status(pval))` 。
 
 ## <a name="last_write_time"></a><a name="last_write_time"></a>last_write_time
 
@@ -441,7 +441,7 @@ void last_write_time(const path& pval, file_time_type new_time);
 void last_write_time(const path& pval, file_time_type new_time, error_code& ec) noexcept;
 ```
 
-前兩個函式會傳回*pval*上次修改資料的時間， `file_time_type(-1)`如果發生錯誤，則傳回。 最後兩個函式會將*pval*的上次資料修改時間設定為*new_time*。
+前兩個函式會傳回*pval*上次修改資料的時間， `file_time_type(-1)` 如果發生錯誤，則傳回。 最後兩個函式會將*pval*的上次資料修改時間設定為*new_time*。
 
 ## <a name="permissions"></a><a name="permissions"></a>無權
 
@@ -450,9 +450,9 @@ void permissions(const path& pval, perms mask);
 void permissions(const path& pval, perms mask, error_code& ec) noexcept;
 ```
 
-函式會將*pval*所選擇之路徑名稱的許可權`mask & perms::mask`設定為之下`perms & (perms::add_perms | perms::remove_perms)`的控制。 *遮罩*最多隻能包含`perms::add_perms`和`perms::remove_perms`其中一個。
+函式會將*pval*所選擇之路徑名稱的許可權設定為 `mask & perms::mask` 之下的控制 `perms & (perms::add_perms | perms::remove_perms)` 。 *遮罩*最多隻能包含和其中 `perms::add_perms` 一個 `perms::remove_perms` 。
 
-如果`mask & perms::add_perms`為，則函式會將`status(pval).permissions() | mask & perms::mask`許可權設定為。 否則，如果`mask & perms::remove_perms`為，則函式會將`status(pval).permissions() & ~(mask & perms::mask)`許可權設定為。 否則，函數會將許可權設定為`mask & perms::mask`。
+如果 `mask & perms::add_perms` 為，則函式會將許可權設定為 `status(pval).permissions() | mask & perms::mask` 。 否則，如果為，則函式會 `mask & perms::remove_perms` 將許可權設定為 `status(pval).permissions() & ~(mask & perms::mask)` 。 否則，函數會將許可權設定為 `mask & perms::mask` 。
 
 ## <a name="proximate"></a><a name="proximate"></a>鄰近
 
@@ -469,7 +469,7 @@ path read_symlink(const path& pval);
 path read_symlink(const path& pval, error_code& ec);
 ```
 
-函式會報告錯誤，並`path()`在`!is_symlink(pval)`發生時傳回。 否則，函數會傳回包含符號連結的 `path` 類型物件。
+函式會報告錯誤，並 `path()` 在發生時傳回 `!is_symlink(pval)` 。 否則，函數會傳回包含符號連結的 `path` 類型物件。
 
 ## <a name="relative"></a><a name="relative"></a>相比
 
@@ -486,7 +486,7 @@ bool remove(const path& pval);
 bool remove(const path& pval, error_code& ec) noexcept;
 ```
 
-只有當和**true**檔案已成功`exists(symlink_status(pval))`移除時，函數才會傳回 true。 已移除符號，而不是它所選擇的檔案。
+**`true`** 只有在 `exists(symlink_status(pval))` 成功移除和檔案時，函數才會傳回。 已移除符號，而不是它所選擇的檔案。
 
 ## <a name="remove_all"></a><a name="remove_all"></a>remove_all
 
@@ -495,7 +495,7 @@ uintmax_t remove_all(const path& pval);
 uintmax_t remove_all(const path& pval, error_code& ec) noexcept;
 ```
 
-如果*pval*是目錄，函式會以遞迴方式移除所有目錄專案，然後是專案本身。 否則，函數會呼叫`remove`。 它們會傳回成功移除的所有元素計數。
+如果*pval*是目錄，函式會以遞迴方式移除所有目錄專案，然後是專案本身。 否則，函數會呼叫 `remove` 。 它們會傳回成功移除的所有元素計數。
 
 ## <a name="rename"></a><a name="rename"></a>rename
 
@@ -522,7 +522,7 @@ space_info space(const path& pval);
 space_info space(const path& pval, error_code& ec) noexcept;
 ```
 
-函式會在類型`space_info`的結構中，傳回*pval*所選磁片區的相關資訊。 結構包含`uintmax_t(-1)`任何無法判斷的值。
+函式會在類型的結構中，傳回*pval*所選磁片區的相關資訊 `space_info` 。 結構包含 `uintmax_t(-1)` 任何無法判斷的值。
 
 ## <a name="status"></a><a name="status"></a>狀態
 
@@ -556,7 +556,7 @@ file_status symlink_status(const path& pval);
 file_status symlink_status(const path& pval, error_code& ec) noexcept;
 ```
 
-函式會傳回與*pval*相關聯的路徑名稱連結狀態、檔案類型和許可權。 函式的行為與相同`status(pval)` ，不同之處在于會自行測試連結符號，而不是它所選擇的檔案。
+函式會傳回與*pval*相關聯的路徑名稱連結狀態、檔案類型和許可權。 函式的行為與相同， `status(pval)` 不同之處在于會自行測試連結符號，而不是它所選擇的檔案。
 
 ## <a name="system_complete"></a><a name="system_complete"></a>system_complete
 
@@ -565,7 +565,7 @@ path system_complete(const path& pval);
 path system_complete(const path& pval, error_code& ec);
 ```
 
-函式會傳回有必要納入考量的絕對路徑名稱，與其根名稱相關聯之目前的目錄。 \(對於 POSIX，函式會`absolute(pval)`傳回。\)
+函式會傳回有必要納入考量的絕對路徑名稱，與其根名稱相關聯之目前的目錄。 \(對於 POSIX，函式會傳回 `absolute(pval)` 。\)
 
 ## <a name="temp_directory_path"></a><a name="temp_directory_path"></a>temp_directory_path
 
@@ -586,7 +586,7 @@ template <class InIt>
 path u8path(InIt first, InIt last);
 ```
 
-第一個函式的行為與`path(source)`相同，而第二個函式`path(first, last)`的行為與相同，不同之處在于每個案例中所選的來源會視為編碼為 utf-8 的 char 元素序列（無論檔案系統為何）。
+第一個函式的行為與相同 `path(source)` ，而第二個函式的行為與相同， `path(first, last)` 不同之處在于每個案例中所選的來源會視為編碼為 utf-8 的 char 元素序列（無論檔案系統為何）。
 
 ## <a name="weakly_canonical"></a><a name="weakly_canonical"></a>weakly_canonical
 

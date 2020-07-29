@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-ms.openlocfilehash: 34743ce48510eec9d8f7862e5ed951a722932962
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6f1e204c87a6bc940227416696e3cee233271e64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422238"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213862"
 ---
 # <a name="cancellation_token-class"></a>cancellation_token 類別
 
@@ -30,34 +30,34 @@ ms.locfileid: "79422238"
 class cancellation_token;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名字|描述|
+|名稱|說明|
 |----------|-----------------|
 |[cancellation_token](#ctor)||
 |[~ cancellation_token 的析構函式](#dtor)||
 
 ### <a name="public-methods"></a>公用方法
 
-|名字|描述|
+|名稱|說明|
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|根據註冊時傳回的 `register` 物件，移除先前透過 `cancellation_token_registration` 方法註冊的回呼。|
 |[is_cancelable](#is_cancelable)|傳回這個語彙基元是否可以取消的指示。|
-|[is_canceled](#is_canceled)|如果已解除標記，則傳回**true** 。|
-|[none](#none)|傳回永不需取消的取消語彙基元。|
+|[is_canceled](#is_canceled)|**`true`** 如果已取消 token，則傳回。|
+|無|傳回永不需取消的取消語彙基元。|
 |[register_callback](#register_callback)|使用語彙基元註冊回呼函式。 如果這個語彙基元已取消，將會進行回呼。 請注意，如果語彙基元已經在呼叫此方法的時間點取消，將會立即同步進行回呼。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名字|描述|
+|名稱|說明|
 |----------|-----------------|
-|[operator!=](#operator_neq)||
-|[operator=](#operator_eq)||
-|[operator==](#operator_eq_eq)||
+|[operator！ =](#operator_neq)||
+|[operator =](#operator_eq)||
+|[operator = =](#operator_eq_eq)||
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `cancellation_token`
 
@@ -65,15 +65,15 @@ class cancellation_token;
 
 **標頭：** pplcancellation_token。h
 
-**命名空間：** concurrency
+**命名空間：** 並行
 
-## <a name="dtor"></a>~ cancellation_token
+## <a name="cancellation_token"></a><a name="dtor"></a>~ cancellation_token
 
 ```cpp
 ~cancellation_token();
 ```
 
-## <a name="ctor"></a>cancellation_token
+## <a name="cancellation_token"></a><a name="ctor"></a>cancellation_token
 
 ```cpp
 cancellation_token(const cancellation_token& _Src);
@@ -86,7 +86,7 @@ cancellation_token(cancellation_token&& _Src);
 *_Src*<br/>
 要複製或移動的 cancellation_token。
 
-## <a name="deregister_callback"></a>deregister_callback
+## <a name="deregister_callback"></a><a name="deregister_callback"></a>deregister_callback
 
 根據註冊時傳回的 `register` 物件，移除先前透過 `cancellation_token_registration` 方法註冊的回呼。
 
@@ -99,7 +99,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 *_Registration*<br/>
 `cancellation_token_registration` 物件，對應於要取消註冊的回呼。 這個語彙基元必須已經由 `register` 方法呼叫所傳回。
 
-## <a name="is_cancelable"></a>is_cancelable
+## <a name="is_cancelable"></a><a name="is_cancelable"></a>is_cancelable
 
 傳回這個語彙基元是否可以取消的指示。
 
@@ -111,9 +111,9 @@ bool is_cancelable() const;
 
 表示這個語彙基元是否可以取消。
 
-## <a name="is_canceled"></a>is_canceled
+## <a name="is_canceled"></a><a name="is_canceled"></a>is_canceled
 
-如果已解除標記，則傳回**true** 。
+**`true`** 如果已取消 token，則傳回。
 
 ```cpp
 bool is_canceled() const;
@@ -121,9 +121,9 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已解除標記，則值**為 true** ;否則，值**為 false**。
+如果已解除標記，則為值 **`true`** ，否則為值 **`false`** 。
 
-## <a name="none"></a>無
+## <a name="none"></a><a name="none"></a>無
 
 傳回永不需取消的取消語彙基元。
 
@@ -135,7 +135,7 @@ static cancellation_token none();
 
 無法取消的取消語彙基元。
 
-## <a name="operator_neq"></a>operator！ =
+## <a name="operator"></a><a name="operator_neq"></a>operator！ =
 
 ```cpp
 bool operator!= (const cancellation_token& _Src) const;
@@ -148,7 +148,7 @@ bool operator!= (const cancellation_token& _Src) const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
 ```cpp
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -159,11 +159,11 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ### <a name="parameters"></a>參數
 
 *_Src*<br/>
-要指派的 `cancellation_token`。
+`cancellation_token`要指派的。
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
 
 ```cpp
 bool operator== (const cancellation_token& _Src) const;
@@ -176,7 +176,7 @@ bool operator== (const cancellation_token& _Src) const;
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="register_callback"></a>register_callback
+## <a name="register_callback"></a><a name="register_callback"></a>register_callback
 
 使用語彙基元註冊回呼函式。 如果這個語彙基元已取消，將會進行回呼。 請注意，如果語彙基元已經在呼叫此方法的時間點取消，將會立即同步進行回呼。
 
@@ -195,7 +195,7 @@ template<typename _Function>
 
 ### <a name="return-value"></a>傳回值
 
-`cancellation_token_registration` 物件，可在 `deregister` 方法中用來取消註冊先前註冊的回呼，並防止進行此回呼。 如果在使用[cancellation_token：： none](#none)方法建立的 `cancellation_token` 物件上呼叫此方法，則會擲回[invalid_operation](invalid-operation-class.md)例外狀況。
+`cancellation_token_registration` 物件，可在 `deregister` 方法中用來取消註冊先前註冊的回呼，並防止進行此回呼。 如果是在[invalid_operation](invalid-operation-class.md) `cancellation_token` 使用[cancellation_token：： none](#none)方法所建立的物件上呼叫，則方法會擲回 invalid_operation 例外狀況。
 
 ## <a name="see-also"></a>另請參閱
 

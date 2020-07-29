@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a3256b7d963feca75e4a975def0f6da77538d278
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419543"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217502"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; 運算子
 
-## <a name="op_neq"></a>operator！ = （set）
+## <a name="operator-set"></a><a name="op_neq"></a>operator！ = （set）
 
 測試運算子左邊的 set 物件是否不等於右邊的 set 物件。
 
@@ -35,15 +35,15 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `set` 類型的物件。
 
-*right*\
+*再*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 set 不相等，即為 **true**；如果 set 相等，則為 **false**。
+**`true`** 如果集合不相等，則為，**`false`** 如果集合相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -86,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a>運算子&lt; （set）
+## <a name="operatorlt-set"></a><a name="op_lt"></a>運算子 &lt; （set）
 
 測試運算子左邊的 set 物件是否小於右邊的 set 物件。
 
@@ -96,15 +96,15 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `set` 類型的物件。
 
-*right*\
+*再*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 set 必定小於運算子右邊的 set，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的集合嚴格小於運算子右邊的集合，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -147,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a>運算子&lt;= （set）
+## <a name="operatorlt-set"></a><a name="op_lt_eq"></a>operator &lt; = （set）
 
 測試運算子左邊的 set 物件是否小於或等於右邊的 set 物件。
 
@@ -157,15 +157,15 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `set` 類型的物件。
 
-*right*\
+*再*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 set 小於或等於運算子右邊的 set，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的集合小於或等於運算子右邊的集合，則為; 否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -216,7 +216,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="op_eq_eq"></a>operator = = （set）
+## <a name="operator-set"></a><a name="op_eq_eq"></a>operator = = （set）
 
 測試運算子左邊的 set 物件是否等於右邊的 set 物件。
 
@@ -226,15 +226,15 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `set` 類型的物件。
 
-*right*\
+*再*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 set 等於運算子右邊的 set，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的集合等於運算子右邊的集合，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -278,7 +278,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>運算子&gt; （set）
+## <a name="operatorgt-set"></a><a name="op_gt"></a>運算子 &gt; （set）
 
 測試運算子左邊的 set 物件是否大於右邊的 set 物件。
 
@@ -288,15 +288,15 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `set` 類型的物件。
 
-*right*\
+*再*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 set 大於運算子右邊的 set，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的 set 大於運算子右邊的集合，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -339,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a>運算子&gt;= （set）
+## <a name="operatorgt-set"></a><a name="op_gt_eq"></a>operator &gt; = （set）
 
 測試運算子左邊的 set 物件是否大於或等於右邊的 set 物件。
 
@@ -349,15 +349,15 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `set` 類型的物件。
 
-*right*\
+*再*\
 `set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 set 大於或等於清單右邊的 set，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的 set 大於或等於清單右邊的集合，則為，否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -408,7 +408,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="op_neq_multiset"></a>operator！ = （多重集）
+## <a name="operator-multiset"></a><a name="op_neq_multiset"></a>operator！ = （多重集）
 
 測試運算子左邊的 multiset 物件是否不等於右邊的 multiset 物件。
 
@@ -418,15 +418,15 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `multiset` 類型的物件。
 
-*right*\
+*再*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 set 或 multiset 不相等，即為 **true**；如果 set 或 multiset 相等，則為 **false**。
+**`true`** 如果集合或多重集不相等，則為，**`false`** 如果集合或多重集相等，則為。
 
 ### <a name="remarks"></a>備註
 
@@ -470,7 +470,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_lt_multiset"></a>運算子&lt; （多重集）
+## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a>運算子 &lt; （多重集）
 
 測試運算子左邊的 multiset 物件是否小於右邊的 multiset 物件。
 
@@ -480,15 +480,15 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `multiset` 類型的物件。
 
-*right*\
+*再*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multiset 絕對小於運算子右邊的 multiset，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的多重集嚴格小於運算子右邊的多重集，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -536,7 +536,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="op_lt_eq_multiset"></a>運算子&lt;= （多重集）
+## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a>operator &lt; = （多重集）
 
 測試運算子左邊的 multiset 物件是否小於或等於右邊的 multiset 物件。
 
@@ -546,15 +546,15 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `multiset` 類型的物件。
 
-*right*\
+*再*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multiset 小於或等於運算子右邊的 multiset，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的多重集小於或等於運算子右邊的多重集，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -611,7 +611,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="op_eq_eq_multiset"></a>operator = = （多重集）
+## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a>operator = = （多重集）
 
 測試運算子左邊的 multiset 物件是否等於右邊的 multiset 物件。
 
@@ -621,15 +621,15 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `multiset` 類型的物件。
 
-*right*\
+*再*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multiset 等於運算子右邊的 multiset，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的多重集等於運算子右邊的多重集，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -673,7 +673,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_gt_multiset"></a>運算子&gt; （多重集）
+## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a>運算子 &gt; （多重集）
 
 測試運算子左邊的 multiset 物件是否大於右邊的 multiset 物件。
 
@@ -683,15 +683,15 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `multiset` 類型的物件。
 
-*right*\
+*再*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multiset 大於運算子右邊的 multiset，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的多重集大於運算子右邊的多重集，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -739,7 +739,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="op_gt_eq_multiset"></a>運算子&gt;= （多重集）
+## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a>operator &gt; = （多重集）
 
 測試運算子左邊的 multiset 物件是否大於或等於右邊的 multiset 物件。
 
@@ -749,15 +749,15 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `multiset` 類型的物件。
 
-*right*\
+*再*\
 `multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 multiset 大於或等於清單右邊的 multiset，即為 **true**，否則為 **false**。
+**`true`** 如果運算子左邊的多重集大於或等於清單右邊的多重集，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 

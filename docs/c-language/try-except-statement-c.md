@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77b6bea8c7793522f5e1fa47e09a9b4a7e5c0f10
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349733"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218776"
 ---
 # <a name="try-except-statement-c"></a>try-except 陳述式 (C)
 
@@ -31,21 +31,21 @@ ms.locfileid: "81349733"
 
 **__except （**  *運算式*  **）**  *複合陳述式*
 
-`__try` 子句後面的複合陳述式是保護的區段。 `__except` 子句後面的複合陳述式則是例外狀況處理常式。 如果在執行保護區段時引發例外狀況，則處理常式會指定要採取的一組動作。 執行程序如下所示：
+`__try` 子句後面的複合陳述式是保護的區段。 子句後面的複合陳述式 **`__except`** 是例外狀況處理常式。 如果在執行保護區段時引發例外狀況，則處理常式會指定要採取的一組動作。 執行程序如下所示：
 
 1. 執行保護的區段。
 
-1. 如果執行保護的區段時未發生例外狀況，則會在 `__except` 子句之後的陳述式繼續執行。
+1. 如果在執行保護區段期間未發生任何例外狀況，則會在子句之後的語句繼續執行 **`__except`** 。
 
-1. 如果在執行保護的區段時或在保護區段所呼叫的任何常式中發生例外狀況，就會評估 `__except` 運算式，並由傳回值決定例外狀況處理方式。 共有三個值：
+1. 如果在執行保護區段期間，或在受保護區段呼叫的任何常式中發生例外狀況，則 **`__except`** 會評估運算式，而傳回的值會決定如何處理例外狀況。 共有三個值：
 
    `EXCEPTION_CONTINUE_SEARCH`：無法辨識例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。
 
    `EXCEPTION_CONTINUE_EXECUTION`：可辨識例外狀況，但已解除。 在例外狀況發生的位置繼續執行。
 
-   `EXCEPTION_EXECUTE_HANDLER`：可辨識例外狀況。 執行 `__except` 複合陳述式，然後在發生例外狀況的點繼續執行，將控制項傳送給例外狀況處理常式。
+   `EXCEPTION_EXECUTE_HANDLER`：可辨識例外狀況。 執行 **`__except`** 複合陳述式，然後在發生例外狀況時繼續執行，以將控制權轉移給例外狀況處理常式。
 
-由於 `__except` 運算式會以 C 運算式求值，因此限於單一值、條件運算式運算子或逗號運算子。 如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。
+因為 **`__except`** 運算式會評估為 C 運算式，所以會限制為單一值、條件運算式運算子或逗號運算子。 如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。
 
 > [!NOTE]
 > 結構化例外狀況處理可搭配 C 和 C++ 原始程式檔使用。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理機制更有彈性，因為它可以處理任何類型的例外狀況。
@@ -53,9 +53,9 @@ ms.locfileid: "81349733"
 > [!NOTE]
 > 針對 C++ 程式，應該使用 C++ 例外狀況處理，而不是結構化例外狀況處理。 如需詳細資訊，請參閱《C++ 語言參考》** 中的[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。
 
-應用程式中的每個常式都可以有其本身的例外狀況處理常式。 `__except` 運算式會在 `__try` 主體的範圍內執行。 這表示它可以存取在此宣告的任何區域變數。
+應用程式中的每個常式都可以有其本身的例外狀況處理常式。 **`__except`** 運算式會在主體的範圍內執行 `__try` 。 這表示它可以存取在此宣告的任何區域變數。
 
-`__leave` 關鍵字在 **try-except** 陳述式區塊內有效。 `__leave` 的作用是跳至 **try-except** 區塊的結尾。 會在例外狀況處理常式結束之後繼續執行。 雖然 `goto` 陳述式可用來達到相同的結果，但 `goto` 陳述式會造成堆疊回溯的情形。 因為不包含堆疊回溯，因此使用 `__leave` 陳述式會更有效率。
+** `__leave** keyword is valid within a **try-except** statement block. The effect of **` __Leave**是跳至**try-except**區塊的結尾。 會在例外狀況處理常式結束之後繼續執行。 雖然 **`goto`** 可以使用語句來達到相同的結果，但是 **`goto`** 語句會導致堆疊回溯。 **' __Leave**語句更有效率，因為它不包含堆疊回溯。
 
 使用 `longjmp` 執行階段函式結束 **try-except** 陳述式屬於異常終止。 雖然不可跳入 `__try` 陳述式，但是可以從這類陳述式跳出。 如果處理序在執行 **try-except** 陳述式的過程中終止，則不會呼叫例外狀況處理常式。
 
@@ -96,6 +96,6 @@ world               /* flow out of handler                  */
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[try-except 陳述式](../cpp/try-except-statement.md)
+[try-except 語句](../cpp/try-except-statement.md)

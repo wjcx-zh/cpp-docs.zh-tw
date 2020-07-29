@@ -14,16 +14,16 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: bee9c3d27ea05a40d6835d69079fc3e0a56efb86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746602"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219049"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 類別
 
-此類表示記憶體管理員的`CStringT`介面。
+此類別代表記憶體管理員的介面 `CStringT` 。
 
 ## <a name="syntax"></a>語法
 
@@ -37,25 +37,25 @@ __interface IAtlStringMgr
 
 |||
 |-|-|
-|[配置](#allocate)|呼叫此方法以分配新的字串資料結構。|
-|[複製](#clone)|呼叫此方法傳回指向新字串管理員的指標,以便與另一個實體一`CSimpleStringT`起使用 。|
-|[免費](#free)|呼叫此方法以釋放字串資料結構。|
-|[獲得尼爾斯特林](#getnilstring)|返回指向空字串`CStringData`物件使用的物件的指標。|
-|[重新分配](#reallocate)|呼叫此方法以重新分配字串資料結構。|
+|[定位](#allocate)|呼叫這個方法來配置新的字串資料結構。|
+|[複製](#clone)|呼叫這個方法，將指標傳回至新的字串管理員，以便與的另一個實例搭配使用 `CSimpleStringT` 。|
+|[免費](#free)|呼叫這個方法以釋放字串資料結構。|
+|[GetNilString](#getnilstring)|傳回 `CStringData` 空字串物件所使用之物件的指標。|
+|[重新配置](#reallocate)|呼叫這個方法來重新配置字串資料結構。|
 
 ## <a name="remarks"></a>備註
 
-此介面管理獨立於 MFC 的字串類使用的記憶體;例如[CSimpleStringT、CStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)與[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)。
+這個介面會管理 MFC 獨立字串類別所使用的記憶體;例如[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)、 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)和[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)。
 
-您還可以使用此類實現自訂字串類的自定義記憶體管理員。 有關詳細資訊,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+您也可以使用這個類別，為您的自訂字串類別實作為自訂記憶體管理員。 如需詳細資訊，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ## <a name="requirements"></a>需求
 
-**標題:** atlsimpstr.h
+**標頭：** atlsimpstr。h
 
-## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr::分配
+## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr：： Allocate
 
-分配新的字串數據結構。
+配置新的字串資料結構。
 
 ```
 CStringData* Allocate(int nAllocLength,int nCharSize) throw();
@@ -63,29 +63,29 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>參數
 
-*nAlloc 長度*<br/>
+*nAllocLength*<br/>
 新記憶體區塊中的字元數。
 
-*n字元*<br/>
-字串管理器使用的字元類型的大小(以位元組為單位)。
+*nCharSize*<br/>
+字串管理員所使用之字元類型的大小（以位元組為單位）。
 
 ### <a name="return-value"></a>傳回值
 
 傳回新配置記憶體區塊的指標。
 
 > [!NOTE]
-> 不要通過引發異常來發出分配失敗的信號。 相反,應返回 NULL 來發出失敗分配的信號。
+> 藉由擲回例外狀況，不要通知失敗的配置。 相反地，您應該傳回 Null 來通知失敗的配置。
 
 ### <a name="remarks"></a>備註
 
-調用[IAtlStringMgr:免費](#free)或[IAtlStringMgr:重新分配](#reallocate)以釋放此方法分配的記憶體。
+呼叫[IAtlStringMgr：： Free](#free)或[IAtlStringMgr：：](#reallocate)重新配置以釋放這個方法所配置的記憶體。
 
 > [!NOTE]
-> 有關使用範例,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 如需使用範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr:複製
+## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr：： Clone
 
-傳回指向新字串管理員的指標,以便與的另一個`CSimpleStringT`實體一起使用 。
+傳回新字串管理員的指標，以便與的另一個實例搭配使用 `CSimpleStringT` 。
 
 ```
 IAtlStringMgr* Clone() throw();
@@ -97,16 +97,16 @@ IAtlStringMgr* Clone() throw();
 
 ### <a name="remarks"></a>備註
 
-當新字串需要字串管理器時,框架通常調用。 在大多數情況下,**將返回此**指標。
+當新字串需要字串管理員時，通常是由架構所呼叫。 在大部分的情況下， **`this`** 會傳回指標。
 
-但是,如果記憶體管理員不支援由的`CSimpleStringT`多個實例使用,則應返回指向可共用字串管理器的指標。
+不過，如果記憶體管理員不支援多個實例所使用的，則 `CSimpleStringT` 應該傳回可共用的字串管理員的指標。
 
 > [!NOTE]
-> 有關使用範例,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 如需使用範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr:免費
+## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr：： Free
 
-釋放字串數據結構。
+釋放字串資料結構。
 
 ```cpp
 void Free(CStringData* pData) throw();
@@ -115,18 +115,18 @@ void Free(CStringData* pData) throw();
 ### <a name="parameters"></a>參數
 
 *pData*<br/>
-指向要釋放的記憶體塊的指標。
+要釋放的記憶體區塊指標。
 
 ### <a name="remarks"></a>備註
 
-釋放以前由[分配](#allocate)或[重新分配](../../atl/reference/iatlmemmgr-class.md#reallocate)分配的指定記憶體區塊。
+釋放先前配置[或重新](../../atl/reference/iatlmemmgr-class.md#reallocate)[配置所配置](#allocate)的指定記憶體區塊。
 
 > [!NOTE]
-> 有關使用範例,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 如需使用範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr::GetNilString
 
-返回指向空字串的字串資料結構的指標。
+傳回空字串之字串資料結構的指標。
 
 ```
 CStringData* GetNilString() throw();
@@ -134,21 +134,21 @@ CStringData* GetNilString() throw();
 
 ### <a name="return-value"></a>傳回值
 
-指向用於表示空`CStringData`字串的物件的指標。
+物件的指標， `CStringData` 用來表示空字串。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函數以返回空字串的表示形式。
+呼叫此函式可傳回空字串的標記法。
 
 > [!NOTE]
-> 實現自定義字串管理器時,此函數絕不能失敗。 可以通過在字串管理器類中嵌入`CNilStringData`的 實例來確保這一點,並返回指向該實例的指標。
+> 在執行自訂字串管理員時，此函式永遠不會失敗。 您可以 `CNilStringData` 在字串管理員類別中內嵌實例，並傳回該實例的指標，以確保這點。
 
 > [!NOTE]
-> 有關使用範例,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 如需使用範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr:重新分配
+## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr：：重新配置
 
-重新分配字串數據結構。
+重新配置字串資料結構。
 
 ```
 CStringData* Reallocate(
@@ -160,13 +160,13 @@ CStringData* Reallocate(
 ### <a name="parameters"></a>參數
 
 *pData*<br/>
-指向以前由此記憶體管理器分配的記憶體的指標。
+此記憶體管理員先前所配置之記憶體的指標。
 
-*nAlloc 長度*<br/>
+*nAllocLength*<br/>
 新記憶體區塊中的字元數。
 
-*n字元*<br/>
-字串管理器使用的字元類型的大小(以位元組為單位)。
+*nCharSize*<br/>
+字串管理員所使用之字元類型的大小（以位元組為單位）。
 
 ### <a name="return-value"></a>傳回值
 
@@ -174,12 +174,12 @@ CStringData* Reallocate(
 
 ### <a name="remarks"></a>備註
 
-呼叫此函數以調整*pData*指定的現有記憶體區塊的大小。
+呼叫此函式可調整*pData*所指定的現有記憶體區塊大小。
 
-調用[IAtlStringMgr:可自由](#free)釋放此方法分配的記憶體。
+呼叫[IAtlStringMgr：： free](#free)以釋放這個方法所配置的記憶體。
 
 > [!NOTE]
-> 有關使用範例,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 如需使用範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ## <a name="see-also"></a>另請參閱
 

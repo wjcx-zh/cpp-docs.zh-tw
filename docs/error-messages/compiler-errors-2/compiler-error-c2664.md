@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756002"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221116"
 ---
 # <a name="compiler-error-c2664"></a>編譯器錯誤 C2664
 
 'function': 無法將引數 n 從 'type1' 轉換成 'type2'
 
-如果您建立了類別的執行個體，並嘗試在標記了 `explicit` 關鍵字的建構函式上進行隱含轉換，則可能會發生這個參數轉換問題。 如需明確轉換的詳細資訊，請參閱[使用者定義型別轉換](../../cpp/user-defined-type-conversions-cpp.md)。
+如果建立了類別的實例，並嘗試在以關鍵字標記的函式上進行隱含轉換，則可能會發生這個參數轉換問題 **`explicit`** 。 如需明確轉換的詳細資訊，請參閱[使用者定義型別轉換](../../cpp/user-defined-type-conversions-cpp.md)。
 
-如果將暫存物件傳遞至採用物件參考做為參數的函式，則該參考必須是 `const` 參考。
+如果將暫存物件傳遞至取得物件參考的函式做為參數，該參考就必須是 **`const`** 參考。
 
 如果函式收到的參數不屬於函式預期的類型，則會使用適當的建構函式建立暫存物件。 之後，會將此暫存物件傳遞至函式上。 在這種情形，此暫存物件被用來初始化參考。 在舊版的語言中，所有參考都可以由暫存物件進行初始化。
 
@@ -31,7 +31,7 @@ ms.locfileid: "74756002"
 
 如果類別將成員隱藏在它的基底類別其中一個之內，也可能會產生 C2664。
 
-如需詳細資訊，請參閱[如何：將 System：： String 轉換成 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
+如需詳細資訊，請參閱[如何：將 System：： String 轉換成 wchar_t * \* 或 char](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
 
 ## <a name="example"></a>範例
 
@@ -119,7 +119,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-編譯器會強制執行套用 `const` 的 C++ 標準需求。 此範例會產生 C2664：
+編譯器會強制套用的 c + + 標準需求 **`const`** 。 此範例會產生 C2664：
 
 ```cpp
 // C2664d.cpp
@@ -232,7 +232,7 @@ library myproj1 {
 }
 ```
 
-從 Visual C++ 6.0 將程式碼移植到以後版本時，也會使用 `wchar_t` 引發 C2664。 在 Visual C++ 6.0 (含) 以前版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此可隱含轉換為該類型。 在 Visual C++ 6.0 之後，`wchar_t` 是它本身的內建類型，如同 C++ 標準中所指定，而且不再能夠隱含轉換為 `unsigned short`。 請參閱[/zc： wchar_t （Wchar_t 是原生類型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+將程式 **`wchar_t`** 代碼從 Visual C++ 6.0 移植到較新版本時，也會使用來引發 C2664。 在 Visual C++ 6.0 和更早版本中， **`wchar_t`** 是 **`typedef`** 的， **`unsigned short`** 因此會隱含轉換成該類型。 在 Visual C++ 6.0 之後， **`wchar_t`** 是它自己的內建型別（如 c + + 標準中所指定），而且不會再隱含地轉換成 **`unsigned short`** 。 請參閱[/zc： wchar_t （Wchar_t 是原生類型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: 版本（C++ COM 屬性）
+title: version （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b537f56c39c33abc52897cf53ea2cc0fb24ee458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165986"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213797"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "80165986"
 
 ## <a name="remarks"></a>備註
 
-**Version** C++屬性與[版本](/windows/win32/Midl/version)MIDL 屬性具有相同的功能，而且會傳遞至產生的 .idl 檔案。
+**版本**c + + 屬性與[版本](/windows/win32/Midl/version)MIDL 屬性具有相同的功能，而且會傳遞至產生的 .idl 檔案。
 
 ## <a name="example"></a>範例
 
@@ -43,10 +43,10 @@ ms.locfileid: "80165986"
 
 |||
 |-|-|
-|**適用於**|**class**、 **struct**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|否|
-|**必要屬性**|**coclass**|
-|**無效屬性**|None|
+|**必要的屬性**|**coclass**|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

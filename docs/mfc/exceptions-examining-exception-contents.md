@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: 8554dda2f465aa058cea3d257c22ec38bc6e2c18
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7500db2a29f9d4ccef37b9265f5f2968c2d07993
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625896"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217944"
 ---
 # <a name="exceptions-examining-exception-contents"></a>例外狀況：檢查例外狀況內容
 
-雖然**catch**區塊的引數可以是幾乎任何資料類型，但 MFC 函式會擲回衍生自類別的類型例外狀況 `CException` 。 為了攔截 MFC 函式所擲回的例外狀況，您可以撰寫一個**catch**區塊，其引數是 `CException` 物件（或衍生自的物件 `CException` ，例如）的指標 `CMemoryException` 。 根據例外狀況的確切類型，您可以檢查例外狀況物件的資料成員，以收集例外狀況的特定原因的相關資訊。
+雖然 **`catch`** 區塊的引數可以是幾乎任何資料類型，但 MFC 函式會擲回衍生自類別的類型例外狀況 `CException` 。 為了攔截 MFC 函式所擲回的例外狀況，您可以撰寫一個 **`catch`** 區塊，其引數是 `CException` 物件（或衍生自的物件 `CException` ，例如）的指標 `CMemoryException` 。 根據例外狀況的確切類型，您可以檢查例外狀況物件的資料成員，以收集例外狀況的特定原因的相關資訊。
 
 例如， `CFileException` 類型具有 `m_cause` 資料成員，其中包含指定檔案例外狀況原因的列舉類型。 可能的傳回值的一些範例為 `CFileException::fileNotFound` 和 `CFileException::readOnly` 。
 

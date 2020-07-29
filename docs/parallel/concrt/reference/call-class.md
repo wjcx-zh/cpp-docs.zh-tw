@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 445e368ced9d9c8faf30351ecaeecc4e1b8a59f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d3dc730e19aaadfed171816e92837ba2766883cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142841"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213875"
 ---
 # <a name="call-class"></a>call 類別
 
@@ -43,26 +43,26 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[拜訪](#ctor)|已多載。 建構 `call` 傳訊區塊。|
+|[call](#ctor)|已多載。 建構 `call` 傳訊區塊。|
 |[~ 呼叫析構函式](#dtor)|損毀 `call` 訊息區塊。|
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[process_input_messages](#process_input_messages)|在輸入訊息上執行 call 函數。|
-|[process_message](#process_message)|處理此 `call` 訊息區塊所接受的訊息。|
-|[propagate_message](#propagate_message)|以非同步方式將訊息從 `ISource` 區塊傳遞到這個 `call` 的訊息區塊。 它是由來源區塊呼叫時，由 `propagate` 方法叫用。|
-|[send_message](#send_message)|以同步方式將訊息從 `ISource` 區塊傳遞到這個 `call` 的訊息區塊。 它是由來源區塊呼叫時，由 `send` 方法叫用。|
+|[process_message](#process_message)|處理此訊息區塊所接受的訊息 `call` 。|
+|[propagate_message](#propagate_message)|以非同步方式將訊息從 `ISource` 區塊傳遞至此 `call` 訊息區塊。 `propagate`當由來源區塊呼叫時，方法會叫用它。|
+|[send_message](#send_message)|以同步方式將訊息從 `ISource` 區塊傳遞到此 `call` 訊息區塊。 `send`當由來源區塊呼叫時，方法會叫用它。|
 |[supports_anonymous_source](#supports_anonymous_source)|覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。 （覆寫[ITarget：： supports_anonymous_source](itarget-class.md#supports_anonymous_source)。）|
 
 ## <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱[非同步訊息區塊](../../../parallel/concrt/asynchronous-message-blocks.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [ITarget](itarget-class.md)
 
@@ -74,9 +74,9 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 **標頭：** agents.h
 
-**命名空間：** concurrency
+**命名空間：** 並行
 
-## <a name="ctor"></a>拜訪
+## <a name="call"></a><a name="ctor"></a>拜訪
 
 建構 `call` 傳訊區塊。
 
@@ -125,11 +125,11 @@ call(
 
 如果您未指定 `_PScheduler` 或 `_PScheduleGroup` 參數，執行階段會使用預設排程器。
 
-類型 `_Call_method` 是具有簽章 `void (T const &)` 的仿函數，此 `call` 訊息區塊會叫用此方法來處理訊息。
+類型是具有簽章的仿函數，此簽章 `_Call_method` `void (T const &)` 由這個 `call` 訊息區塊叫用來處理訊息。
 
-類型 `filter_method` 是具有簽章 `bool (T const &)` 的仿函數，此 `call` 訊息區塊會叫用此方法，以判斷是否應該接受提供的訊息。
+類型是具有簽章的 `filter_method` 仿函數， `bool (T const &)` 此訊息區塊會叫用該簽章， `call` 以判斷它是否應該接受提供的訊息。
 
-## <a name="dtor"></a>~ 呼叫
+## <a name="call"></a><a name="dtor"></a>~ 呼叫
 
 損毀 `call` 訊息區塊。
 
@@ -137,7 +137,7 @@ call(
 ~call();
 ```
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
 在輸入訊息上執行 call 函數。
 
@@ -150,9 +150,9 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 要處理之訊息的指標。
 
-## <a name="process_message"></a>process_message
+## <a name="process_message"></a><a name="process_message"></a>process_message
 
-處理此 `call` 訊息區塊所接受的訊息。
+處理此訊息區塊所接受的訊息 `call` 。
 
 ```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
@@ -163,9 +163,9 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 要處理之訊息的指標。
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-以非同步方式將訊息從 `ISource` 區塊傳遞到這個 `call` 的訊息區塊。 它是由來源區塊呼叫時，由 `propagate` 方法叫用。
+以非同步方式將訊息從 `ISource` 區塊傳遞至此 `call` 訊息區塊。 `propagate`當由來源區塊呼叫時，方法會叫用它。
 
 ```cpp
 virtual message_status propagate_message(
@@ -185,9 +185,9 @@ virtual message_status propagate_message(
 
 [Message_status](concurrency-namespace-enums.md)指出目標決定要如何處理訊息。
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-以同步方式將訊息從 `ISource` 區塊傳遞到這個 `call` 的訊息區塊。 它是由來源區塊呼叫時，由 `send` 方法叫用。
+以同步方式將訊息從 `ISource` 區塊傳遞到此 `call` 訊息區塊。 `send`當由來源區塊呼叫時，方法會叫用它。
 
 ```cpp
 virtual message_status send_message(
@@ -207,7 +207,7 @@ virtual message_status send_message(
 
 [Message_status](concurrency-namespace-enums.md)指出目標決定要如何處理訊息。
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
 覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。
 
@@ -217,9 +217,9 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>傳回值
 
-**true** ，因為區塊不會延後提供的訊息。
+**`true`** 因為區塊不會延後提供的訊息。
 
 ## <a name="see-also"></a>另請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
-[transformer 類別](transformer-class.md)
+[轉換器類別](transformer-class.md)

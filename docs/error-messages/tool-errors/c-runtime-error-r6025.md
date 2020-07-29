@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-ms.openlocfilehash: d5edb08278b7b6b9b3eb62e92fc04410f96a8f09
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6e184ba24ad535697a727276a980fd082625e082
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075120"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218048"
 ---
 # <a name="c-runtime-error-r6025"></a>C 執行階段錯誤 R6025
 
@@ -30,4 +30,4 @@ ms.locfileid: "80075120"
 
 未具現化物件來處理純虛擬函式呼叫。
 
-這個錯誤的原因是透過轉換成衍生類別的型別所建立的指標來呼叫抽象基類中的虛擬函式，但實際上是基類的指標。 當在基底類別的結構中建立**void** <strong>\*</strong>時，從**void** <strong>\*</strong>轉換成類別的指標時，就會發生這種情況。
+這個錯誤的原因是透過轉換成衍生類別的型別所建立的指標來呼叫抽象基類中的虛擬函式，但實際上是基類的指標。 當在 **`void`** <strong>\*</strong> **`void`** <strong>\*</strong> 基底類別的結構中建立時，從轉換成類別的指標時，就會發生這種情況。

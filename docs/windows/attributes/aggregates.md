@@ -1,5 +1,5 @@
 ---
-title: 匯總（C++ COM 屬性）
+title: 匯總（c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65a166faa9380272c87af92ebaf8294c0e0b1af3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168495"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217281"
 ---
 # <a name="aggregates"></a>彙總
 
@@ -32,13 +32,13 @@ ms.locfileid: "80168495"
 指定可彙總物件的 CLSID。
 
 *variable_name*<br/>
-要插入的變數名稱。 此變數包含所匯總之物件的 `IUnknown`。
+要插入的變數名稱。 這個變數包含 `IUnknown` 要匯總之物件的。
 
 ## <a name="remarks"></a>備註
 
 套用至物件時， **aggregates** C++ 屬性會實作所彙總物件的外部包裝函式 (透過 `clsid`所指定)。
 
-此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果套用了 `progid`，也會套用 `vi_progid` 和 `coclass`。
+此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果套用 `progid` ， `vi_progid` 和 `coclass` 也會套用。
 
 ### <a name="atl-projects"></a>ATL 專案
 
@@ -83,10 +83,10 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**適用於**|**class**、 **struct**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|是|
-|**必要屬性**|下列一或多項： `coclass`、`progid`或 `vi_progid`。|
-|**無效屬性**|None|
+|**必要的屬性**|下列一或多項： `coclass` 、 `progid` 或 `vi_progid` 。|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -95,6 +95,6 @@ struct CObject : IObject
 [COM 屬性](com-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[彙總](/windows/win32/com/aggregation)<br/>
+[累積](/windows/win32/com/aggregation)<br/>
 [聚集](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

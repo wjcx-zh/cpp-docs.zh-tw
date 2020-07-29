@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d516f7923144f0e24bda676147ed529546def25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213758"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>在一般 MFC Dll 中使用資料庫、OLE 和通訊端 MFC 延伸 Dll
 
@@ -21,9 +21,9 @@ ms.locfileid: "62314685"
 
 - 指出可能會擲回錯誤類別的例外狀況。
 
-- 儲存在 MFC 延伸模組 DLL 中的資源無法載入`AfxFindResourceHandle` ，因為傳回**Null**或不正確的資源控制碼。
+- 儲存在 MFC 延伸模組 DLL 中的資源無法載入，因為傳回 `AfxFindResourceHandle` **Null**或不正確的資源控制碼。
 
-- `DllGetClassObject`、 `DllCanUnloadNow`和的`UpdateRegistry` `Revoke`、 `RevokeAll`、和`RegisterAll`成員`COleObjectFactory`函式找不到 MFC 延伸 DLL 中定義的 Class Factory。
+- `DllGetClassObject`、 `DllCanUnloadNow` 和的、、和成員函式 `UpdateRegistry` `Revoke` `RevokeAll` 找不 `RegisterAll` `COleObjectFactory` 到 MFC 延伸 DLL 中定義的 Class Factory。
 
 - `AfxDoForAllClasses`不適用於 MFC 延伸模組 DLL 中的任何類別。
 
@@ -33,13 +33,13 @@ ms.locfileid: "62314685"
 
 ## <a name="mfc-ole-mfc-database-or-dao-or-mfc-sockets-support"></a>MFC OLE、MFC 資料庫（或 DAO），或 MFC 通訊端支援
 
-如果您使用任何 MFC OLE、MFC 資料庫（或 DAO），或一般 MFC DLL 中的 MFC 通訊端支援，則 MFC debug MFC 擴充 Dll MFCOxxD （其中 xx 是版本號碼）會自動連結。 您必須針對您所使用的每個 Dll，呼叫預先定義的初始化函數。
+如果您使用任何 MFC OLE、MFC 資料庫（或 DAO），或您的一般 MFC DLL 中的 MFC 通訊端支援，則 MFC debug MFC 延伸 Dll MFCOxxD.dll、MFCDxxD.dll 和 MFCNxxD.dll （其中 xx 是版本號碼）會自動連結。 您必須針對您所使用的每個 Dll，呼叫預先定義的初始化函數。
 
-如需資料庫支援，請將對`AfxDbInitModule`的呼叫新增至您的`CWinApp::InitInstance`一般 MFC DLL 函式。 請確定這個呼叫發生在任何基類呼叫之前，或任何存取 MFCDxxD 的已加入程式碼之前。 此函式不接受任何參數，且會傳回 void。
+如需資料庫支援，請將對的呼叫新增 `AfxDbInitModule` 至您的一般 MFC DLL 函式 `CWinApp::InitInstance` 。 請確定這個呼叫發生在任何基類呼叫之前，或任何已加入的程式碼，以存取 MFCDxxD.dll。 此函式不接受任何參數，且會傳回 void。
 
-如需 OLE 支援，請將對`AfxOleInitModule`的呼叫新增至您的`CWinApp::InitInstance`一般 MFC DLL。 請注意， **COleControlModule InitInstance**函數已經`AfxOleInitModule`呼叫，因此，如果您要建立 OLE 控制項並使用`COleControlModule`，則不應該將這個呼叫加入至`AfxOleInitModule`。
+如需 OLE 支援，請將對的呼叫新增 `AfxOleInitModule` 至您的一般 MFC DLL `CWinApp::InitInstance` 。 請注意， **COleControlModule InitInstance**函數 `AfxOleInitModule` 已經呼叫，因此，如果您要建立 OLE 控制項並使用 `COleControlModule` ，則不應該將這個呼叫加入至 `AfxOleInitModule` 。
 
-如需通訊端支援，請將`AfxNetInitModule`對的呼叫新增至您`CWinApp::InitInstance`的一般 MFC DLL。
+如需通訊端支援，請將對的呼叫新增 `AfxNetInitModule` 至您的一般 MFC DLL `CWinApp::InitInstance` 。
 
 請注意，MFC Dll 和應用程式的發行組建不會針對資料庫、通訊端或 OLE 支援使用個別的 Dll。 不過，您可以放心地在發行模式中呼叫這些初始化函數。
 
@@ -51,7 +51,7 @@ ms.locfileid: "62314685"
 
 若要讓 MFC 延伸模組 DLL 進入**CDynLinkLibrary**鏈，必須在每個使用 MFC 延伸 dll 的模組內容中建立**CDynLinkLibrary**物件。 因此，如果要從一般 MFC Dll 使用 MFC 延伸模組 DLL，它必須提供已匯出的初始化函式來建立**CDynLinkLibrary**物件。 每個使用 MFC 延伸模組 DLL 的一般 MFC DLL 都必須呼叫匯出的初始化函數。
 
-如果 MFC 延伸 DLL 只會從 MFC 應用程式（.exe）使用，而不是從一般的 MFC DLL，則在 MFC 延伸 DLL 的`DllMain`中建立**CDynLinkLibrary**物件就已足夠。 這是 MFC DLL Wizard MFC 延伸模組 DLL 程式碼所執行的工作。 以隱含方式載入 MFC 延伸模組 DLL `DllMain`時，會在應用程式啟動前載入並執行。 任何**CDynLinkLibrary**建立都是以 mfc DLL 保留給 mfc 應用程式的預設鏈來進行。
+如果 MFC 延伸 DLL 只會從 MFC 應用程式（.exe）使用，而不是從一般的 MFC DLL，則在 MFC 延伸 DLL 的中建立**CDynLinkLibrary**物件就已足夠 `DllMain` 。 這是 MFC DLL Wizard MFC 延伸模組 DLL 程式碼所執行的工作。 以隱含方式載入 MFC 延伸模組 DLL 時，會在 `DllMain` 應用程式啟動前載入並執行。 任何**CDynLinkLibrary**建立都是以 mfc DLL 保留給 mfc 應用程式的預設鏈來進行。
 
 請注意，在任何一個鏈中有一個 MFC 延伸模組 DLL 的多個**CDynLinkLibrary**物件，特別是如果 mfc 延伸模組 dll 會從記憶體中動態卸載，這是個不錯的主意。 不要從任何一個模組呼叫初始化函數一次以上。
 
@@ -92,7 +92,7 @@ extern "C" void WINAPI InitYourExtDLL()
 }
 ```
 
-請務必匯出**InitYourExtDLL**函數。 這可以使用 **__declspec （dllexport）** 或 DLL 的 .def 檔來完成，如下所示：
+請務必匯出**InitYourExtDLL**函數。 這可以使用 **`__declspec(dllexport)`** 或在 DLL 的 .def 檔案中完成，如下所示：
 
 ```
 // YourExtDLL.Def:
@@ -103,7 +103,7 @@ EXPORTS
     InitYourExtDLL
 ```
 
-使用 MFC 延伸 DLL， `InitInstance`將呼叫新增`CWinApp`至每個一般 MFC DLL 中衍生物件的成員：
+使用 MFC 延伸 DLL，將呼叫新增至 `InitInstance` `CWinApp` 每個一般 MFC DLL 中衍生物件的成員：
 
 ```
 // YourRegularDLL.cpp:
@@ -138,9 +138,9 @@ BOOL CYourRegularDLL::InitInstance()
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [MFC 擴充 Dll](extension-dlls.md)
+- [MFC 延伸模組 DLL](extension-dlls.md)
 
-- [靜態連結至 MFC 的標準 MFC DLL](regular-dlls-statically-linked-to-mfc.md)
+- [靜態連結至 MFC 的標準 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
 - [動態連結至 MFC 的標準 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
@@ -148,6 +148,6 @@ BOOL CYourRegularDLL::InitInstance()
 
 - [MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[MFC 擴充 Dll](extension-dlls.md)
+[MFC 延伸模組 DLL](extension-dlls.md)

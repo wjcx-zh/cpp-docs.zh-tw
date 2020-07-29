@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218919"
 ---
 # <a name="array-declarations"></a>陣列宣告
 
@@ -28,17 +28,17 @@ ms.locfileid: "62313541"
 
 *init-declarator*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*符*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;宣告子*初始化運算式* *declarator* **=**
+&nbsp;&nbsp;&nbsp;&nbsp;宣告子*declarator* **=***初始化運算式*
 
 宣告*子：*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
-*direct*宣告子：/\*函式宣告子\*/<br/>
+*direct*宣告子：/ \* 函式宣告子\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-* 宣告子 **[***常數運算式*<sub>opt</sub> **]**    
 
 因為 *constant-expression* 是選擇性的，所以其語法有兩種形式：
 
-- 第一個形式會定義陣列變數。 括弧內的 *constant-expression* 引數會指定陣列中的元素數目。 *constant-expression* (如果有的話) 必須具有整數類型與大於零的值。 每個元素都具有 *type-specifier* 所指定的類型，可以是除了 `void` 以外的任何類型。 陣列元素不可為函式類型。
+- 第一個形式會定義陣列變數。 括弧內的 *constant-expression* 引數會指定陣列中的元素數目。 *constant-expression* (如果有的話) 必須具有整數類型與大於零的值。 每個專案都有類型*規範*所指定的類型，它可以是以外的任何類型 **`void`** 。 陣列元素不可為函式類型。
 
 - 第二個形式會宣告一個已在其他地方定義的變數。 它省略了方括弧中的 *constant-expression* 引數，但未省略括弧。 只有當您先前初始化陣列、將其宣告為參數，或已在程式的其他位置明確將其宣告為陣列的參考時，才可以使用這個形式。
 
@@ -72,7 +72,7 @@ char A[2][3];
 float matrix[10][15];
 ```
 
-名為 `matrix` 的二維陣列中一共有 150 個元素，每個都是 **float** 類型。
+名為的二維陣列 `matrix` 具有150個元素，每個專案都有 **`float`** 類型。
 
 ```C
 struct {
@@ -86,14 +86,14 @@ struct {
 extern char *name[];
 ```
 
-這個陳述式會將陣列的類型和名稱宣告為 `char` 的指標。 `name` 的實際定義位於其他地方。
+這個語句會宣告的指標陣列型別和名稱 **`char`** 。 `name` 的實際定義位於其他地方。
 
 **Microsoft 特定的**
 
-保留陣列大小上限所需的整數類型為 **size_t** 的大小。 **size_t** 定義在標頭檔 STDDEF.H 中，是一個範圍從 0x00000000 到 0x7CFFFFFF 的 `unsigned int`。
+保留陣列大小上限所需的整數類型為 **size_t** 的大小。 在標頭檔 STDDEF.H 中定義。H， **size_t**是 **`unsigned int`** ，範圍為0x00000000 到0x7CFFFFFF。
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

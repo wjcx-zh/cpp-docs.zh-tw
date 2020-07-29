@@ -6,24 +6,24 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ebf3441c7d8856fe412e2efed4c717b01ced362
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199205"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219010"
 ---
 # <a name="using-cstring"></a>使用 CString
 
-本節中的主題會描述如何使用 `CString` 進行程式設計。 如需參考文件`CString`類別，請參閱文件[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。
+本節中的主題會描述如何使用 `CString` 進行程式設計。 如需類別的參考檔 `CString` ，請參閱[CStringT](../atl-mfc-shared/reference/cstringt-class.md)的檔。
 
 若要使用 `CString`，請包括 `atlstr.h` 標頭。
 
-`CString`， `CStringA`，並`CStringW`類別會呼叫在類別樣板的特製化[CStringT](../atl-mfc-shared/reference/cstringt-class.md)根據它們所支援的字元資料類型。
+`CString`、和類別是類別樣板的特製化， `CStringA` `CStringW` 稱為[CStringT](../atl-mfc-shared/reference/cstringt-class.md) ，以其所支援的字元資料類型為基礎。
 
-A`CStringW`物件包含**wchar_t**類型，且支援 Unicode 字串。 A`CStringA`物件包含**char**類型，以及支援單一位元組和多位元組 (MBCS) 字串。 A`CString`物件支援**char**型別或`wchar_t`類型，取決於是否定義符號 MBCS 或 UNICODE 符號在編譯時期。
+`CStringW`物件包含型別 **`wchar_t`** 並支援 Unicode 字串。 `CStringA`物件包含型別 **`char`** ，而且支援單一位元組和多位元組（MBCS）字串。 `CString`物件支援 **`char`** 型別或型別 **`wchar_t`** ，視 MBCS 符號或 UNICODE 符號是否在編譯時期定義而定。
 
-`CString` 物件會在 `CStringData` 物件中保留字元資料。 `CString` 可接受 NULL 結束的 C 樣式字串。 `CString` 會追蹤字串長度，更快的效能，但它也會保留預存的字元資料，以支援 LPCWSTR 轉換中的 NULL 字元。 `CString` 它會匯出 C 樣式字串時，請包括 null 結束字元。 您可以在其他位置中插入 NULL `CString`，但它可能會產生非預期的結果。
+`CString` 物件會在 `CStringData` 物件中保留字元資料。 `CString`接受以 Null 結束的 C 樣式字串。 `CString`追蹤字串長度以提高效能，但也會保留儲存字元資料中的 Null 字元，以支援轉換成 LPCWSTR。 `CString`會在匯出 C 樣式字串時包含 null 結束字元。 您可以在中的其他位置插入 Null `CString` ，但可能會產生非預期的結果。
 
 使用下列字串類別集時，可以不連結 MFC 程式庫、及具有或不具有 CRT 支援：`CAtlString`、`CAtlStringA` 和 `CAtlStringW`。
 
@@ -44,20 +44,20 @@ int main() {
 
 ## <a name="in-this-section"></a>本節內容
 
-[基本 CString 運算](../atl-mfc-shared/basic-cstring-operations.md)<br/>
+[基本 CString 作業](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 描述基本 `CString` 作業，包括從 C 常值字串建立物件，存取 `CString` 中的個別字元，串連兩個物件，以及比較 `CString` 物件。
 
 [字串資料管理](../atl-mfc-shared/string-data-management.md)<br/>
 討論如何將 Unicode 及 MBCS 與 `CString` 搭配使用。
 
-[CString 語意](../atl-mfc-shared/cstring-semantics.md)<br/>
+[CString 語義](../atl-mfc-shared/cstring-semantics.md)<br/>
 解釋如何使用 `CString` 物件。
 
 [與 C 樣式字串相關的 CString 作業](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 描述如何使用類似 C 樣式 null 結尾字串的方式，來操作 `CString` 物件的內容。
 
-[針對 BSTR 配置及釋放記憶體](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
-討論如何使用 BSTR 和 COM 物件的記憶體。
+[配置和釋放 BSTR 的記憶體](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
+討論如何針對 BSTR 和 COM 物件使用記憶體。
 
 [CString 例外狀況清除](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 解釋 MFC 3.0 及以後版本中不再需要明確清除。
@@ -65,10 +65,10 @@ int main() {
 [CString 引數傳遞](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 解釋如何將 CString 物件傳遞至函式，以及如何從函式傳回 `CString` 物件。
 
-[Unicode 及多位元組字元集 (MBCS) 支援](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
+[Unicode 和多位元組字元集（MBCS）支援](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 討論如何針對 Unicode 及 MBCS 支援啟用 MFC。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 提供 `CStringT` 類別的參考資訊。
@@ -78,7 +78,7 @@ int main() {
 
 ## <a name="related-sections"></a>相關章節
 
-[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[字串（ATL/MFC）](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 包含各主題的連結，描述管理字串資料的數個方法。
 
-[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+[字串（ATL/MFC）](../atl-mfc-shared/strings-atl-mfc.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: ea75395c14c0babf5a047e7ae8f937e2a237b445
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 965ad6751938c07a0a62fedc8f65d53f9f6d2b04
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317127"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217827"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution 類別
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*真實類型*\
-浮點結果類型,預設值為**雙精度**值。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型，預設值為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
-*烏爾格*\
-統一的隨機數生成器引擎。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類範本描述生成使用者指定的浮點類型的值的分佈,或者如果沒有提供,則鍵入**雙精度值**,該分佈根據 Cauchy 分佈進行分佈。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之浮點類型值的分佈（ **`double`** 如果未提供，則為類型），並根據柯西分佈散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-有關分發類及其成員的詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
+如需散發類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md) 。
 
 如需柯西分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523) (柯西分佈)。
 
@@ -236,11 +236,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<random>
+**標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution:cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution：： cauchy_distribution
 
 建構分佈。
 
@@ -251,24 +251,24 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a*\
+*為*\
 `a` 分佈參數。
 
-*B*\
+*位元組*\
 `b` 分佈參數。
 
-*帕爾姆*\
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
-**先決條件:**`0.0 < b`
+**前置條件：**`0.0 < b`
 
 第一個建構函式建構的物件，其預存的 `a` 值具有 *a* 值，而其預存的 `b` 值具有 *b* 值。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::p阿拉姆型
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution：:p aram_type
 
 儲存分佈的所有參數。
 
@@ -286,21 +286,21 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a*\
+*為*\
 `a` 分佈參數。
 
-*B*\
+*位元組*\
 `b` 分佈參數。
 
-*對*\
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 
-**先決條件:**`0.0 < b`
+**前置條件：**`0.0 < b`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<隨機>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

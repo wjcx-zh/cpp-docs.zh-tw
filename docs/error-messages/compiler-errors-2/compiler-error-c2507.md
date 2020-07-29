@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2507
 ms.assetid: f102aff5-de7d-4c3f-9cac-2ddf9ce02b14
-ms.openlocfilehash: 23433dccd7fc4f86c2e848359ac50c796fcccab0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 944eaeadb038e6466d65859f72900db164cfe34d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746795"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221155"
 ---
 # <a name="compiler-error-c2507"></a>編譯器錯誤 C2507
 
 ' identifier '：基類上有太多的虛擬修飾詞
 
-類別或結構宣告為 `virtual` 一次以上。 基類清單中的每個類別都只能出現一個 `virtual` 修飾詞。
+類別或結構宣告為多次 **`virtual`** 。 **`virtual`** 基類清單中的每個類別都只能出現一個修飾詞。
 
 下列範例會產生 C2507：
 

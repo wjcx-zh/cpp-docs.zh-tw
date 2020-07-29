@@ -9,26 +9,26 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d917c93ab8ef2e896f3ef09c9d9191dae49116c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326010"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213719"
 ---
 # <a name="c-enumeration-declarations"></a>C 列舉宣告
 
 列舉是由一組具名整數常數所組成。 列舉類型宣告會提供 (選擇性) 列舉標記的名稱，以及定義具名整數識別項集合 (稱為「列舉集合」、「列舉程式常數」、「列舉程式」或「成員」)。 具有列舉類型的變數會儲存該類型所定義列舉集合的其中一個值。
 
-`enum` 類型的變數可以在索引運算式中使用，以及做為所有算術和關係運算子的運算元使用。 列舉提供了 `#define` 前置處理器指示詞的替代方式，具有自動產生值並遵循一般範圍規則的優點。
+類型的變數 **`enum`** 可用於索引運算式，以及當做所有算術和關係運算子的運算元。 列舉提供了 `#define` 前置處理器指示詞的替代方式，具有自動產生值並遵循一般範圍規則的優點。
 
-在 ANSI C 中，定義列舉程式常數值的運算式一律具有 `int` 類型，因此，與列舉變數相關聯的儲存區會是單一 `int` 值所需的儲存區。 列舉常數或列舉類型的值可以在 C 語言允許使用整數運算式的任何位置使用。
+在 ANSI C 中，定義枚舉器常數值的運算式一律具有 **`int`** 類型，因此，與列舉變數相關聯的儲存區就是單一值所需的儲存區 **`int`** 。 列舉常數或列舉類型的值可以在 C 語言允許使用整數運算式的任何位置使用。
 
 ## <a name="syntax"></a>語法
 
 *enum-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**列舉***識別碼*<sub>opt</sub> **{** *列舉值清單* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**列舉***識別碼*
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***識別碼*<sub>opt</sub> **{** *列舉值清單* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***識別碼*
 
 選擇性的 *identifier* 會為 *enumerator-list* 所定義的列舉類型命名。 這個識別項通常稱為清單所指定列舉的「標記」。 下列這種形式的類型規範
 
@@ -41,7 +41,7 @@ enum identifier
 
 會將 *identifier* 宣告為 *enumerator-list* 非終端項所指定的列舉標記。 *enumerator-list* 會定義「列舉程式內容」。 *enumerator-list* 的詳細說明如下。
 
-如果標記的宣告可見，則使用該標記但省略 *enumerator-list* 的後續宣告會指定先前宣告的列舉類型。 標記必須參考已定義的列舉類型，而且該列舉類型必須在目前範圍內。 由於列舉類型是在他處所定義，因此 *enumerator-list* 不會出現在這個宣告中。 衍生自列舉的類型宣告和列舉類型的 `typedef` 宣告，可以在列舉類型定義之前使用列舉標記。
+如果標記的宣告可見，則使用該標記但省略 *enumerator-list* 的後續宣告會指定先前宣告的列舉類型。 標記必須參考已定義的列舉類型，而且該列舉類型必須在目前範圍內。 由於列舉類型是在他處所定義，因此 *enumerator-list* 不會出現在這個宣告中。 在定義列舉類型之前，衍生自列舉和宣告類型的類型宣告 **`typedef`** 可以使用列舉標記。
 
 ## <a name="syntax"></a>語法
 
@@ -51,14 +51,14 @@ enum identifier
 
 *列舉*值：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*列舉-常數*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*列舉常數* **=** *常數運算式*
+&nbsp;&nbsp;&nbsp;&nbsp;*列舉-常數* **=***常數運算式*
 
 *列舉常數*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*標識*
 
 *enumeration-list* 中的每個 *enumeration-constant*都會為列舉集合命名。 根據預設，第一個 *enumeration-constant* 會與值 0 相關聯。 清單中的下一個 *enumeration-constant* 會與 ( *constant-expression* + 1 ) 的值相關聯，除非您明確將它與另一個值產生關聯。 *enumeration-constant* 的名稱相當於其值。
 
-您可以使用 *enumeration-constant = constant-expression* 覆寫值的預設順序。 因此，如果 *enumeration-constant = constant-expression* 出現在 *enumerator-list* 中，*enumeration-constant* 就會與 *constant-expression* 所產生的值相關聯。 *constant-expression* 必須具有 `int` 類型，而且可以是負數。
+您可以使用 *enumeration-constant = constant-expression* 覆寫值的預設順序。 因此，如果 *enumeration-constant = constant-expression* 出現在 *enumerator-list* 中，*enumeration-constant* 就會與 *constant-expression* 所產生的值相關聯。 *常數運算式*必須具有 **`int`** 類型，而且可以是負數。
 
 下列規則適用於列舉集合的成員：
 
@@ -144,6 +144,6 @@ if ( match_flag == false )
 enum { yes, no } response;
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [列舉](../cpp/enumerations-cpp.md)

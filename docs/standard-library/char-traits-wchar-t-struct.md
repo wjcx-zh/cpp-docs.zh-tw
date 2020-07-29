@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<wchar_t> class
 ms.assetid: 31f34072-04d6-4871-88fe-48e17d473484
-ms.openlocfilehash: a2f8a882020ddb3d87436d08b3d85ea9407b1c08
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b2504dbb124ccca7f9b27619585abb2b5795f92
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458970"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219166"
 ---
-# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 結構
+# <a name="char_traitsltwchar_tgt-struct"></a>char_traits&lt;wchar_t&gt; 結構
 
-類別, 它是樣板結構 **\<char_traits CharType**的特製化, > 至**wchar_t**類型的元素。
+類別，這是樣板結構的特製化**char_traits \<CharType> **至類型的專案 **`wchar_t`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -27,15 +27,15 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>備註
 
-特製化可讓結構利用程式庫函式, 此函式會操作此**wchar_t**類型的物件。
+特製化可讓結構利用操作此類型物件的程式庫函數 **`wchar_t`** 。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<string>
+**標頭：**\<string>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
 [char_traits 結構](../standard-library/char-traits-struct.md)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

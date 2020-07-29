@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217957"
 ---
 # <a name="exceptions-database-exceptions"></a>例外狀況：資料庫例外狀況
 
@@ -54,11 +54,11 @@ ms.locfileid: "86403721"
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>資料庫例外狀況處理範例
 
-下列範例會嘗試使用**new**運算子來建立堆積上的[CRecordset](reference/crecordset-class.md)衍生物件，然後開啟記錄集（針對 ODBC 資料來源）。 如需 DAO 類別的類似範例，請參閱下面的「DAO 例外狀況範例」。
+下列範例會嘗試使用運算子在堆積上建立[CRecordset](reference/crecordset-class.md)衍生的物件 **`new`** ，然後開啟記錄集（適用于 ODBC 資料來源）。 如需 DAO 類別的類似範例，請參閱下面的「DAO 例外狀況範例」。
 
 ### <a name="odbc-exception-example"></a>ODBC 例外狀況範例
 
-[Open](reference/crecordset-class.md#open)成員函式可能會擲回例外狀況（針對 ODBC 類別的類型為[CDBException](reference/cdbexception-class.md) ），因此此程式碼會 `Open` 以**try**區塊括住呼叫。 後續的**catch**區塊將會攔截 `CDBException` 。 您可以檢查例外狀況物件本身，稱為 `e` ，但在此情況下，您必須知道建立記錄集的嘗試失敗。 **Catch**區塊會顯示訊息方塊，並藉由刪除記錄集物件來進行清除。
+[Open](reference/crecordset-class.md#open)成員函式可能會擲回例外狀況（針對 ODBC 類別的類型為[CDBException](reference/cdbexception-class.md) ），因此此程式碼會以區塊括住 `Open` 呼叫 **`try`** 。 後續的 **`catch`** 區塊將會攔截 `CDBException` 。 您可以檢查例外狀況物件本身，稱為 `e` ，但在此情況下，您必須知道建立記錄集的嘗試失敗。 此 **`catch`** 區塊會顯示訊息方塊，並藉由刪除記錄集物件來進行清除。
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

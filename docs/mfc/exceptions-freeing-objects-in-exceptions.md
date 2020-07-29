@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622816"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217931"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>例外狀況：釋放例外狀況中的物件
 
@@ -30,9 +30,9 @@ ms.locfileid: "84622816"
 
 有兩個主要方法可執行此動作。
 
-- 使用**try**和**catch**關鍵字在本機處理例外狀況，然後使用一個語句終結所有物件。
+- 使用和關鍵字在本機處理例外狀況 **`try`** **`catch`** ，然後使用一個語句終結所有物件。
 
-- 先終結**catch**區塊中的任何物件，然後再將例外狀況擲回區塊外，以進一步處理。
+- 終結區塊中的任何物件，然後將例外狀況擲回 **`catch`** 區塊外，以供進一步處理。
 
 以下說明這兩種方法，做為下列有問題範例的解決方案：
 
@@ -50,7 +50,7 @@ ms.locfileid: "84622816"
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>終結物件之後擲回例外狀況
 
-處理例外狀況的另一種方法是將它們傳遞至下一個外部例外狀況處理內容。 在您的**catch**區塊中，您可以清除本機配置的物件，然後在上擲回例外狀況，以供進一步處理。
+處理例外狀況的另一種方法是將它們傳遞至下一個外部例外狀況處理內容。 在 **`catch`** 區塊中，您可以清除本機配置的物件，然後在上擲回例外狀況，以供進一步處理。
 
 擲回的函數不一定需要解除配置堆積物件。 如果函式一律會在正常情況下傳回之前解除配置堆積物件，則函式也應該在擲回例外狀況之前，先取消配置堆積物件。 另一方面，如果函式在正常情況下傳回之前，通常不會解除配置物件，則您必須根據案例，決定是否應將堆積物件解除配置。
 

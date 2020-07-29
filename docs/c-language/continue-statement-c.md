@@ -7,29 +7,29 @@ helpviewer_keywords:
 - loop structures, continue keyword
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
-ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cf5d1c25b8edc70bd686ca26ad98b15b970383c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312555"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218906"
 ---
 # <a name="continue-statement-c"></a>continue 陳述式 (C)
 
-`continue` 陳述式會將控制項傳遞至本身所在最靠近的封閉 `do`、`for` 或 `while` 陳述式的下一個反覆項目，並略過 `do`、`for` 或 `while` 陳述式主體中的其餘陳述式。
+**`continue`** 語句會將控制項傳遞給 **`do`** 其出現之最接近之封入、或語句的下一個反復專案 **`for`** ，並 **`while`** 略過 **`do`** 、 **`for`** 或 **`while`** 語句主體中的任何剩餘語句。
 
 ## <a name="syntax"></a>語法
 
 *跳躍語句*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**持續**
 
-`do`、`for` 或 `while` 陳述式的下一個反覆項目判斷方式如下：
+、或語句的下一個反復專案 **`do`** **`for`** **`while`** 會以下列方式決定：
 
-- 在 `do` 或 `while` 陳述式內，下一個反覆項目是藉由重新評估 `do` 或 `while` 陳述式的運算式開始。
+- 在 **`do`** 或語句中 **`while`** ，下一個反復專案會先對或語句的運算式來開始 **`do`** **`while`** 。
 
-- `continue` 陳述式中的 `for` 陳述式會造成評估 `for` 陳述式的迴圈運算式。 然後，編譯器會重新評估條件運算式，並且根據結果結束或反覆運算陳述式主體。 如需 `for` 陳述式和其非終端項的詳細資訊，請參閱 [for 陳述式](../c-language/for-statement-c.md)。
+- 語句 **`continue`** 中的語句 **`for`** 會導致評估語句的迴圈運算式 **`for`** 。 然後，編譯器會重新評估條件運算式，並且根據結果結束或反覆運算陳述式主體。 如需語句和其非終端項的詳細資訊，請參閱[For 語句](../c-language/for-statement-c.md) **`for`** 。
 
-這是 `continue` 陳述式的範例：
+這是語句的範例 **`continue`** ：
 
 ```
 while ( i-- > 0 )
@@ -41,8 +41,8 @@ while ( i-- > 0 )
 }
 ```
 
-在此範例中，如果 `i` 大於 0，就會執行陳述式主體。 第一個 `f(i)` 會指派給 `x`，而如果 `x` 等於 1，就會執行 `continue` 陳述式。 主體中的其餘陳述式都會加以忽略，並且於迴圈的頂端透過評估迴圈的測試繼續執行。
+在此範例中，如果 `i` 大於 0，就會執行陳述式主體。 第一個 `f(i)` 會指派給， `x` 然後，如果 `x` 等於1，則 **`continue`** 會執行語句。 主體中的其餘陳述式都會加以忽略，並且於迴圈的頂端透過評估迴圈的測試繼續執行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [continue 語句](../cpp/continue-statement-cpp.md)

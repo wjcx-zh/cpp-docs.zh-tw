@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456244"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217762"
 ---
-# <a name="isintegral-class"></a>is_integral 類別
+# <a name="is_integral-class"></a>is_integral 類別
 
 測試類型是否為整數。
 
@@ -32,9 +32,9 @@ struct is_integral;
 
 ## <a name="remarks"></a>備註
 
-如果類型*Ty*是其中一個整數類型, 或是`cv-qualified`其中一個整數類型的形式, 則類型述詞的實例為 true, 否則為 false。
+如果類型*Ty*是其中一個整數類型，或是其中一個整數類型的形式，則類型述詞的實例為 true `cv-qualified` ，否則為 false。
 
-整數類型為**bool**、 **char**、不**帶正負**號的 char、**帶正負**號的 char、 **wchar_t**、 **short**、不**帶正負**號的 short、 **int**、不**帶正負**號的 int、 **long**和不**帶正負**號 此外, 使用提供它們的編譯器, 整數類型可以是**long long**、不**帶正負**號的 long long、 **__int64**和不**帶正負號 __int64**的其中一個。
+整數類資料類型是、、、、、、、、、和的其中一個 **`bool`** **`char`** **`unsigned char`** **`signed char`** **`wchar_t`** **`short`** **`unsigned short`** **`int`** **`unsigned int`** **`long`** **`unsigned long`** 。 此外，透過提供這些專案的編譯器，整數類資料類型可以是 **`long long`** 、 **`unsigned long long`** 、和不 **`__int64`** **帶正負號 __int64**的其中一個。
 
 ## <a name="example"></a>範例
 
@@ -70,7 +70,7 @@ is_integral<float> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

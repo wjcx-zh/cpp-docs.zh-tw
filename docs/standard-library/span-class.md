@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813505"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217450"
 ---
 # <a name="span-class-c-standard-library"></a>span 類別（c + + 標準程式庫）
 
@@ -75,7 +75,7 @@ class span;
 
 ### <a name="template-parameters"></a>範本參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
 |`T`| 範圍中元素的類型。 |
 |`Extent`| 如果在編譯時期指定，則為範圍中的元素數目。 否則 `std::dynamic_extent` ，如果要在執行時間指定元素的數目，則為。 |
@@ -84,10 +84,10 @@ class span;
 
 ## <a name="members"></a>成員
 
-| **類型定義** | **描述** |
+| **類型定義** | **說明** |
 |-|-|
-| [const_pointer](#pointer) | 元素之指標的類型 `const` 。 |
-| [const_reference](#reference) | 專案的參考型別 `const` 。 |
+| [const_pointer](#pointer) | 元素之指標的類型 **`const`** 。 |
+| [const_reference](#reference) | 專案的參考型別 **`const`** 。 |
 | [difference_type](#difference_type) | 兩個項目之間帶正負號距離的類型。 |
 | [element_type](#element_type) | Span 元素的類型。 |
 | [定位](#iterator) | 範圍的反覆運算器類型。 |
@@ -95,28 +95,28 @@ class span;
 | [reference](#reference) | 項目的參考類型。 |
 | [reverse_iterator](#reverse_iterator) | 範圍的反向反覆運算器類型。 |
 | [size_type](#size_type) | 範圍中兩個元素之間不帶正負號距離的類型。 |
-| [value_type](#value_type) | 元素的類型，不含 `const` 或 `volatile` 限定。 |
-| **建構函式** | **描述** |
-|[跨](#span)| 結構 `span` 。|
-| **反覆運算器支援** | **描述** |
+| [value_type](#value_type) | 元素的類型，不含 **`const`** 或 **`volatile`** 限定。 |
+| **建構函式** | **說明** |
+|[跨](#span)| 建構 `span`。|
+| **反覆運算器支援** | **說明** |
 |[起點](#begin) | 取得指向範圍中第一個元素的反覆運算器。|
 |[成品](#end) | 取得指向範圍結尾的反覆運算器。 |
 |[rbegin](#rbegin) | 取得反向反覆運算器，指向範圍的最後一個元素;也就是反轉範圍的開頭。|
 |[rend](#rend) | 取得指向範圍前端的反向反覆運算器;也就是反轉範圍的結尾。|
-| **Access 元素**| **描述** |
+| **Access 元素**| **說明** |
 |[返回](#back) | 取得範圍中的最後一個元素。|
-|[資料](#data) | 取得範圍中第一個元素的位址。|
+|[data](#data) | 取得範圍中第一個元素的位址。|
 |[前端](#front) | 取得範圍中的第一個元素。|
 |[操作\[\]](#op_at) | 存取指定位置的元素。|
-| **觀察者** | **描述** |
+| **觀察者** | **說明** |
 |[empty](#empty)| 測試 span 是否為空白。|
 |[size](#size) | 取得範圍中的元素數目。|
 |[size_bytes](#size_bytes) | 取得範圍的大小（以位元組為單位）。|
-| **子檢視** | **描述**|
+| **子檢視** | **說明**|
 | [first](#first_view) | 從範圍前端取得 subspan。|
 | [last](#last_view) | 從範圍的背面取得 subspan。|
 | [subspan](#sub_view) | 從範圍中的任何位置取得 subspan。|
-| **運算子** | **描述** |
+| **運算子** | **說明** |
 |[span：： operator =](#op_eq)| 取代範圍。|
 |[span：：運算子\[\]](#op_at)| 取得位於指定位置的元素。 |
 
@@ -306,7 +306,7 @@ constexpr bool empty() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-`true`如果為 `this->size() == 0` ，則傳回。 否則為 `false`。
+**`true`** 如果為 `this->size() == 0` ，則傳回。 否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-指標的類型，以及指向 `const` span 元素的指標。
+指標的類型，以及指向 **`const`** span 元素的指標。
 
 ```cpp
 using pointer = T*;
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-參考的型別，以及 `const` 指向 span 元素的參考。
+參考的型別，以及 **`const`** 指向 span 元素的參考。
 
 ```cpp
 using reference = T&;
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-範圍中元素的類型，不含 `const` 或 `volatile` 限定。
+範圍中元素的類型，不含 **`const`** 或 **`volatile`** 限定。
 
 ```cpp
 using value_type = std::remove_cv_t<T>;

@@ -1,17 +1,17 @@
 ---
-title: helpstringdll （C++ COM 屬性）
+title: helpstringdll （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46323a7ff4164111b48aed24b12bef5d400afacc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168118"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217242"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -30,7 +30,7 @@ ms.locfileid: "80168118"
 
 ## <a name="remarks"></a>備註
 
-**Helpstringdll** C++屬性具有與[helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 屬性相同的功能。
+**Helpstringdll** c + + 屬性具有與[helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -53,10 +53,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**適用於**|**類別**，**介面**，介面方法|
+|**適用於**|**`class`**，**介面**，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

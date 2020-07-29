@@ -6,16 +6,16 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356325"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216735"
 ---
 # <a name="signbit"></a>signbit
 
-判斷是否為浮點數值為負數。
+判斷浮點值是否為負值。
 
 ## <a name="syntax"></a>語法
 
@@ -44,19 +44,19 @@ inline bool signbit(
 
 ## <a name="return-value"></a>傳回值
 
-**signbit**會傳回非零值 (**，則為 true**在C++) 如果引數*x*是的或負的無限值。 它會傳回 0 (**假**在C++) 如果引數為非負數的正無限大或 NAN。
+**signbit** **`true`** 如果引數*x*為負數或負無限大，則 signbit 會傳回非零值（在 c + + 中為）。 **`false`** 如果引數為非負數、正無限大或 NAN，則會傳回0（在 c + + 中為）。
 
 ## <a name="remarks"></a>備註
 
-**signbit**是當編譯為 C 和多載的內嵌函式，當編譯為巨集C++。
+當編譯成 C 時， **signbit**是宏，而編譯成 c + + 時則是多載內嵌函數。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭 (C)|必要的標頭 (C++)|
+|函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------------|-------------------------------|
 |**signbit**|\<math.h>|\<math.h> 或 \<cmath>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911357"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216891"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -99,7 +99,7 @@ long long llroundl(
 
 ## <a name="return-value"></a>傳回值
 
-**Lround**和**llround**函式會將最接近的**長**整數或**長****長**整數傳回*x*。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
+**Lround**和**llround**函數會將最接近 **`long`** 或 **`long long`** 整數傳回*x*。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
@@ -107,7 +107,7 @@ long long llroundl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**浮點**和**長****雙精度**值的**lround**或**llround**多載。 在 C 程式中， **lround**和**llround**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和值之**lround**或**llround**的多載 **`float`** **`long double`** 。 在 C 程式中， **lround**和**llround**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

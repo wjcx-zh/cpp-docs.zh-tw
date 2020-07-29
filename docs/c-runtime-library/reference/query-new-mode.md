@@ -27,16 +27,16 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 26fabc71337f1554b63909697b601a0bd9e86638
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950106"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216826"
 ---
 # <a name="_query_new_mode"></a>_query_new_mode
 
-傳回一個整數，表示 **_set_new_mode**針對**malloc**所設定的新處理常式模式。
+傳回整數，指出 **_set_new_mode**為**malloc**所設定的新處理常式模式。
 
 ## <a name="syntax"></a>語法
 
@@ -52,7 +52,7 @@ int _query_new_mode(
 
 ## <a name="remarks"></a>備註
 
-C++ **_Query_new_mode**函式會傳回整數，指出C++ [_set_new_mode](set-new-mode.md)函數針對[malloc](malloc.md)所設定的新處理常式模式。 新的處理常式模式指出，在無法配置記憶體時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式。 您可以使用 **_set_new_mode**來覆寫此行為，如此一來，當失敗**malloc**呼叫新的處理常式常式時，就會以**新**的運算子無法配置記憶體的方式執行。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
+C + + **_query_new_mode**函式會傳回一個整數，表示新的處理常式模式，它會針對[Malloc](malloc.md)的 c + + [_set_new_mode](set-new-mode.md)函數所設定。 新的處理常式模式指出，在無法配置記憶體時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式。 您可以使用 **_set_new_mode**來覆寫此行為，如此一來，當失敗**malloc**呼叫新的處理常式常式時，其方式會與 **`new`** 運算子無法配置記憶體時相同。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
 
 ## <a name="requirements"></a>需求
 
@@ -60,7 +60,7 @@ C++ **_Query_new_mode**函式會傳回整數，指出C++ [_set_new_mode](set-new
 |-------------|---------------------|
 |**_query_new_mode**|\<new.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -70,6 +70,6 @@ C++ **_Query_new_mode**函式會傳回整數，指出C++ [_set_new_mode](set-new
 
 [記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[受](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>

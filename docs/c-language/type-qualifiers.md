@@ -10,18 +10,18 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 729e9f65fd1054b8381f45b81e5276846145ebc1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198719"
 ---
 # <a name="type-qualifiers"></a>類型限定詞
 
-類型限定詞會提供兩個屬性的其中一個給識別項。 **const** 類型限定詞會將物件宣告為不可修改。 `volatile` 類型限定詞會宣告一個項目，其值可由超出項目所在程式之控制範圍的項目 (例如同時執行的執行緒) 合法變更。
+類型限定詞會提供兩個屬性的其中一個給識別項。 **`const`** 類型限定詞會將物件宣告為不可修改。 **`volatile`** 類型限定詞會宣告一個專案，其值可由超出其出現的程式控制範圍（例如同時執行的執行緒）合法地變更。
 
-這兩個類型限定詞 **const** 和 `volatile` 只能在宣告中出現一次。 類型限定詞可搭配任何類型規範出現，不過不能出現在多重項目宣告中的第一個逗號後面。 例如，下列宣告是合法的：
+這兩個類型限定詞 **`const`** 和只能 **`volatile`** 在宣告中出現一次。 類型限定詞可搭配任何類型規範出現，不過不能出現在多重項目宣告中的第一個逗號後面。 例如，下列宣告是合法的：
 
 ```
 typedef volatile int VI;
@@ -41,7 +41,7 @@ float f, const cf;
 
 *type-qualifier*: **constvolatile**
 
-以下是合法的 **const** 與 `volatile` 宣告：
+以下是合法 **`const`** 和宣告 **`volatile`** ：
 
 ```
 int const *p_ci;       /* Pointer to constant int */
@@ -51,18 +51,18 @@ int (*const cp_i);     /* Constant pointer to int */
 int volatile vint;     /* Volatile integer        */
 ```
 
-如果陣列類型的規格包括類型限定詞，則元素為限定，而不是陣列類型。 如果函式類型的規格包含限定詞，則行為會是未定義。 `volatile` 與 **const** 都不會影響物件的值範圍或算術屬性。
+如果陣列類型的規格包括類型限定詞，則元素為限定，而不是陣列類型。 如果函式類型的規格包含限定詞，則行為會是未定義。 和都不 **`volatile`** **`const`** 會影響物件的值範圍或算術屬性。
 
-這個清單將描述如何使用 **const** 與 `volatile`。
+這份清單說明如何使用 **`const`** 和 **`volatile`** 。
 
-- **const**關鍵字可用來修改任何基本或彙總類型，或任何類型物件的指標，或是 `typedef`。 如果專案僅使用**const**類型限定詞宣告，其類型會被視為**const int**。**Const**變數可以初始化，也可以放在儲存區的唯讀區域中。 **const** 關鍵字對於宣告 **const** 的指標很有用，因為它會要求函式不得以任何方式變更指標。
+- **`const`** 關鍵字可以用來修改任何基本或匯總類型，或任何類型之物件的指標，或 **`typedef`** 。 如果專案僅以 **`const`** 類型限定詞宣告，其類型會被視為**const int**。**`const`** 變數可以初始化，也可以放在儲存區的唯讀區域中。 **`const`** 關鍵字對於宣告的指標很有用， **`const`** 因為這需要函式不會以任何方式變更指標。
 
-- 編譯器會假設，`volatile` 變數可在程式中的任何一點供使用或修改其值的未知處理序存取。 因此，不論在命令列上指定的最佳化為何，都必須為 `volatile` 變數的每個指派或參考產生程式碼 (即使它並沒有任何作用)。
+- 編譯器會假設在程式中的任何時間點， **`volatile`** 變數都可以由使用或修改其值的未知進程來存取。 因此，不論在命令列上指定的優化為何，都必須產生變數的每個或參考的程式碼， **`volatile`** 即使它似乎沒有任何作用也一樣。
 
-   如果單獨使用 `volatile`，則會假設為 `int`。 `volatile` 類型指定名稱可以用來提供可靠的特殊記憶體位置存取。 使用 `volatile` 搭配可供訊號處理常式、同時執行的程式或特殊硬體 (例如，記憶體對應的 I/O 控制暫存器) 存取或修改的資料物件。 您可以將變數的存留期宣告為 `volatile`，或是將單一參考轉型為 `volatile`。
+   如果 **`volatile`** 單獨使用， **`int`** 則會假設為。 **`volatile`** 型別規範可用來提供可靠的存取權給特殊的記憶體位置。 搭配 **`volatile`** 信號處理常式、並存執行程式或特殊硬體（例如記憶體對應 i/o 控制暫存器）存取或變更的資料物件使用。 您可以將變數宣告為 **`volatile`** 它的存留期，也可以將單一參考轉換為 **`volatile`** 。
 
-- 項目可以同時是 **const** 與 `volatile`，在這種情況下，項目就無法由自己的程式合法修改，但是可以由某個非同步處理序進行修改。
+- 專案可以同時是 **`const`** 和 **`volatile`** ，在這種情況下，專案無法由自己的程式合法修改，但是可以由某個非同步進程進行修改。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

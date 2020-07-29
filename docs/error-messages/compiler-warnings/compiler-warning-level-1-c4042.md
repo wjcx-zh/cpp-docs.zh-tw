@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 0ffc4c4aeb7d37ffa45f503a34fd369d36c00ce4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cd8d8addb8441bd32d242c4f4858104048f7a62e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164205"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197068"
 ---
 # <a name="compiler-warning-level-1-c4042"></a>編譯器警告（層級1） C4042
 
@@ -19,13 +19,13 @@ ms.locfileid: "80164205"
 
 在此內容中，指定的儲存類別無法搭配此識別碼使用。 編譯器會改為使用預設的儲存類別：
 
-- `extern`，如果*identifier*是函數。
+- **`extern`** 如果*identifier*是函式，則為。
 
-- 如果*identifier*是型式參數或區域變數，則為**auto**。
+- **`auto`** 如果*identifier*是型式參數或區域變數，則為。
 
 - 如果*identifier*是全域變數，則沒有儲存類別。
 
-這項警告的原因可能是在參數宣告中指定**register**以外的儲存類別。
+這項警告可能是因為在參數宣告中指定以外的儲存類別 **`register`** 。
 
 下列範例會產生 C4042
 

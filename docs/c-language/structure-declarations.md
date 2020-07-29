@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217047"
 ---
 # <a name="structure-declarations"></a>結構宣告
 
@@ -26,8 +26,8 @@ ms.locfileid: "62157790"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**結構**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**並**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*結構聲明*<br/>
@@ -53,7 +53,7 @@ ms.locfileid: "62157790"
 
 *struct-declaration-list* 會指定結構成員的類型和名稱。 *struct-declaration-list* 引數包含一個或多個變數或位元欄位宣告。
 
-*struct-declaration-list* 中宣告的每個變數都會定義為結構類型的成員。 *struct-declaration-list* 中的變數宣告與本節所討論的其他變數宣告都具有相同的形式，不同的是，這些宣告不能包含儲存類別規範或初始設定式。 除了類型 `void`、不完整的類型或函式類型之外，結構成員可以擁有任何變數類型。
+*struct-declaration-list* 中宣告的每個變數都會定義為結構類型的成員。 *struct-declaration-list* 中的變數宣告與本節所討論的其他變數宣告都具有相同的形式，不同的是，這些宣告不能包含儲存類別規範或初始設定式。 結構成員可以具有類型 **`void`** 、不完整類型或函數類型以外的任何變數類型。
 
 成員不可以宣告為具有其出現位置中的結構類型。 不過，只要結構類型具有標記，成員就可以宣告為其所在位置中結構類型的指標。 這可讓您建立結構的連結清單。
 
@@ -94,7 +94,7 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-`employee` 結構有三個成員：`name`、`id` 和 `class`。 `name` 成員是一個 20 個元素的陣列，而 `id` 和 `class` 分別是具有 `int` 和 **long** 類型的簡單成員。 識別項 `employee` 為結構識別項。
+`employee` 結構有三個成員：`name`、`id` 和 `class`。 `name`成員是20個元素的陣列，而 `id` 和 `class` 分別是具有和類型的簡單成員 **`int`** **`long`** 。 識別項 `employee` 為結構識別項。
 
 ```C
 struct employee student, faculty, staff;
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-`complex` 結構具有兩個類型為 **float** 的成員，即 `x` 和 `y`。 結構類型沒有標記，因此為未命名或匿名的。
+`complex`結構有兩個具有 **`float`** 類型、和的成員 `x` `y` 。 結構類型沒有標記，因此為未命名或匿名的。
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,7 +120,7 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-結構的前兩個成員為 `char` 變數和 **float** 值的指標。 第三個成員 `next` 宣告為所定義結構類型 (`sample`) 的指標。
+結構的前兩個成員為 **`char`** 變數和值的指標 **`float`** 。 第三個成員 `next` 宣告為所定義結構類型 (`sample`) 的指標。
 
 不需要標記名稱時，匿名結構會很有用。 當某個宣告會定義所有結構執行個體時，就會發生這種情況。 例如：
 
@@ -149,9 +149,9 @@ struct somestruct
 
 編譯器允許使用一個可變大小或大小為零的陣列，做為結構的最後一個成員。 在各種情況下使用時，如果常數陣列的大小不同，這會非常有幫助。 此類結構的宣告如下所示：
 
-**結構***識別碼* **{** *集合*宣告*類型*<em>陣列-名稱</em>**\[];};**
+**`struct`***識別碼* **{** *宣告集合**類型*<em>陣列-名稱</em>** \[ ];};**
 
-可變大小陣列只可以顯示為結構的最後一個成員。 只要未在任何封閉結構中宣告其他成員，包含可變大小陣列的宣告可以巢狀的方式放置於其他結構內。 不允許使用此類結構的陣列。 `sizeof` 運算子，套用至此類型的變數或類型本身時，會假設陣列的大小為 0。
+可變大小陣列只可以顯示為結構的最後一個成員。 只要未在任何封閉結構中宣告其他成員，包含可變大小陣列的宣告可以巢狀的方式放置於其他結構內。 不允許使用此類結構的陣列。 **`sizeof`** 當運算子套用至這個類型的變數或類型本身時，會假設陣列的大小為0。
 
 當它們是另一個結構或等位的成員時，也可以指定不含宣告子的結構宣告。 欄位名稱會提升至封閉結構中。 例如，無名稱的結構如下所示：
 
@@ -175,6 +175,6 @@ p_s->b = 100;  /* A reference to a field in the s structure */
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

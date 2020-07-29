@@ -5,16 +5,16 @@ helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 385392ea8836998e71584d02bd0ee4478fb774a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199902"
 ---
 # <a name="interpreting-more-complex-declarators"></a>解譯更複雜的宣告子
 
-您可以用括號括住所有宣告子，以指定「複雜宣告子」的特定解譯。 複雜宣告子是以一個以上的陣列、指標或函式修飾詞限定的識別項。 您可以將各種不同的陣列、指標及函式修飾詞組合套用至單一識別項。 通常可使用 `typedef` 簡化宣告。 請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。
+您可以用括號括住所有宣告子，以指定「複雜宣告子」的特定解譯。 複雜宣告子是以一個以上的陣列、指標或函式修飾詞限定的識別項。 您可以將各種不同的陣列、指標及函式修飾詞組合套用至單一識別項。 通常可以 **`typedef`** 用來簡化宣告。 請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。
 
 在解譯複雜宣告子時，方括號和括號 (即在識別項右邊的修飾詞) 的優先順序高於星號 (即在識別項左邊的修飾詞)。 方括號和括號的優先順序相同，並且都是由左至右關聯。 在完整解譯宣告子之後，會在最後一個步驟套用類型指定名稱。 您可以使用括號覆寫預設的關聯順序並強制執行特定解譯。 但是，請勿使用括號括住識別項名稱本身。 否則，會被錯誤解譯為參數清單。
 
@@ -48,7 +48,7 @@ ms.locfileid: "62232861"
 
 1. 其指標
 
-1. `char` 值。
+1. **`char`** 閾值.
 
 ## <a name="examples"></a>範例
 
@@ -58,25 +58,25 @@ ms.locfileid: "62232861"
 int *var[5]; /* Array of pointers to int values */
 ```
 
-陣列修飾詞的優先順序高於指標修飾詞，因此會將 `var` 宣告為陣列。 指標修飾詞套用至陣列元素的類型；因此，陣列元素是 `int` 值的指標。
+陣列修飾詞的優先順序高於指標修飾詞，因此會將 `var` 宣告為陣列。 指標修飾詞適用于陣列元素的類型;因此，陣列元素是值的指標 **`int`** 。
 
 ```
 int (*var)[5]; /* Pointer to array of int values */
 ```
 
-在此 `var` 宣告中，指標修飾詞加了括號，因此優先順序高於陣列修飾詞，而 `var` 則被宣告為五個 `int` 值之陣列的指標。
+在的這個宣告中 `var` ，括弧提供指標修飾詞高於陣列修飾詞的優先順序，而且宣告 `var` 為五個值之陣列的指標 **`int`** 。
 
 ```
 long *var( long, long ); /* Function returning pointer to long */
 ```
 
-函式修飾詞的優先順序也比指標修飾詞高，因此，這個針對 `var` 的宣告會將 `var` 宣告為將指標傳回 **long** 值的函式。 函式會宣告為採用兩個 **long** 值做為引數。
+函式修飾詞的優先順序也高於指標修飾詞，因此此宣告會宣告為函式，以傳回 `var` `var` 值的指標 **`long`** 。 函式會宣告為接受兩個 **`long`** 值做為引數。
 
 ```
 long (*var)( long, long ); /* Pointer to function returning long */
 ```
 
-這個範例與上一個範例類似。 指標修飾詞加上了括號，因此優先順序高於函式修飾詞，因此 `var` 被宣告為傳回 **long** 值之函式的指標。 同樣地，函式會採用兩個 **long** 引數。
+這個範例與上一個範例類似。 括弧提供的指標修飾詞優先順序高於函式修飾詞，且宣告為函式 `var` 的指標，該函式會傳回 **`long`** 值。 同樣地，函數接受兩個 **`long`** 引數。
 
 ```
 struct both       /* Array of pointers to functions */
@@ -101,13 +101,13 @@ unsigned int *(* const *name[5][10] ) ( void );
 
 `name` 陣列會將 50 個元素歸納在多維陣列中。 這些元素是本身為常數之指標的指標。 這個常數指標會指向沒有參數的函式，而且傳回不帶正負號類型的指標。
 
-下一個範例中的函式會傳回有三個 **double** 值的陣列指標。
+下一個範例是函式，它會傳回三個值之陣列的指標 **`double`** 。
 
 ```
 double ( *var( double (*)[3] ) )[3];
 ```
 
-在這個宣告中，由於傳回陣列的函式無效，因此函式會傳回陣列指標。 這裡的 `var` 會宣告為傳回有三個 **double** 值之陣列指標的函式。 `var` 函式會採用一個引數。 該引數和傳回值一樣，是有三個 **double** 值的陣列指標。 引數類型會由複雜的 *abstract-declarator* 指定。 引數類型中的星號必須加上括號；若未加上括號，引數類型會成為針對 **double** 值之三個指標的陣列。 如需抽象宣告子的討論和範例，請參閱[抽象宣告子](../c-language/c-abstract-declarators.md)。
+在這個宣告中，由於傳回陣列的函式無效，因此函式會傳回陣列指標。 這裡宣告為函式，其 `var` 會傳回三個值之陣列的指標 **`double`** 。 `var` 函式會採用一個引數。 引數（例如傳回值）是三個值之陣列的指標 **`double`** 。 引數類型會由複雜的 *abstract-declarator* 指定。 引數類型中的星號前後必須加上括弧。如果沒有這些參數，引數類型會是值的三個指標的陣列 **`double`** 。 如需抽象宣告子的討論和範例，請參閱[抽象宣告子](../c-language/c-abstract-declarators.md)。
 
 ```
 union sign         /* Array of arrays of pointers */
@@ -124,8 +124,8 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
                              of pointers to unions        */
 ```
 
-這個範例示範括號位置如何改變宣告的意義。 在此範例中，`var` 是等位五個元素陣列指標的五個元素陣列指標。 如需如何使用 `typedef` 避免複雜宣告的範例，請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。
+這個範例示範括號位置如何改變宣告的意義。 在此範例中，`var` 是等位五個元素陣列指標的五個元素陣列指標。 如需如何使用避免複雜宣告的範例 **`typedef`** ，請參閱[Typedef](../c-language/typedef-declarations.md)宣告。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: ab1e172374cd117b07cc62923d291fbd3972882e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b604819391629d057850c17466807e7c329c472d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198589"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -60,7 +60,7 @@ size_t fwrite(
 *計數*<br/>
 要寫入之項目的最大數量。
 
-*資料流*<br/>
+*資料流程*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -71,7 +71,7 @@ size_t fwrite(
 
 **Fwrite**函式*會將每個專案的**大小*上限，從*緩衝區*寫入輸出*資料流程*。 與*資料流程*相關聯的檔案指標（如果有的話）會以實際寫入的位元組數遞增。 如果在文字模式中開啟*資料流程*，則會將每個換行字元換行一組。 這種取代不會對傳回值產生影響。
 
-以 Unicode 轉譯模式開啟*資料流程*時，例如如果已藉由呼叫**fopen**並使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數來開啟*資料流程*，或如果模式已使用 **_Setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式參數變更為 Unicode 轉譯模式，則會將*緩衝區*解讀為包含 utf-16 資料之**wchar_t**陣列的指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+以 Unicode 轉譯模式開啟*資料流程*時，例如如果已藉由呼叫**fopen**並使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數來開啟*資料流程*，或如果模式已使用 **_Setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式參數變更為 Unicode 轉譯模式，則會將*緩衝區*解讀為 **`wchar_t`** 包含 utf-16 資料之陣列的指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
 因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本，請參閱 **_fwrite_nolock**。
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909410"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217008"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
@@ -81,7 +81,7 @@ errno_t _wasctime_s(
 用來儲存結果的緩衝區大小。
 
 *tmSource*<br/>
-時間/日期結構。 此函式會假設有效**結構** **tm**物件的指標。
+時間/日期結構。 此函式會假設有效 **`struct`** **tm**物件的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -91,10 +91,10 @@ errno_t _wasctime_s(
 
 |*緩衝區*|*numberOfElements*|*tmSource*|傳回|*Buffer*中的值|
 |--------------|------------------------|----------|------------|-----------------------|
-|**Null**|任意|任意|**EINVAL**|未修改|
+|**NULL**|任意|任意|**EINVAL**|未修改|
 |Not **Null** （指向有效的記憶體）|0|任意|**EINVAL**|未修改|
 |非**Null**|0< 大小 < 26|任意|**EINVAL**|空字串|
-|非**Null**|>= 26|**Null**|**EINVAL**|空字串|
+|非**Null**|>= 26|**NULL**|**EINVAL**|空字串|
 |非**Null**|>= 26|無效的時間結構或超出時間元件值的範圍|**EINVAL**|空字串|
 
 > [!NOTE]
@@ -118,7 +118,7 @@ errno_t _wasctime_s(
 
 已轉換的字元字串也會根據當地時區設定調整。 如需設定本機時間的資訊，請參閱 [time、_time32、_time64](time-time32-time64.md)、[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md) 及 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 函式；如需定義時區環境及全域變數的資訊，請參閱 [_tzset](tzset.md) 函式。
 
-**Asctime_s**所產生的字串結果只包含26個字元，且格式`Wed Jan 02 02:03:55 1980\n\0`為。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 當作第二個參數傳入的值至少應有這麼大。 如果較少，則會傳回錯誤碼**EINVAL**。
+**Asctime_s**所產生的字串結果只包含26個字元，且格式為 `Wed Jan 02 02:03:55 1980\n\0` 。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 當作第二個參數傳入的值至少應有這麼大。 如果較少，則會傳回錯誤碼**EINVAL**。
 
 **_wasctime_s**是寬字元版本的**asctime_s**。 相反地， **_wasctime_s**和**asctime_s**的行為相同。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217125"
 ---
 # <a name="conditional-expression-operator"></a>條件運算式運算子
 
@@ -37,13 +37,13 @@ C 有一個三元運算子：條件運算式運算子 (**? :**)。
 
 - 如果 *expression* 和 *conditional-expression* 有相同結構、等位或指標類型，結果的類型會是相同的結構、等位或指標類型。
 
-- 如果兩個運算元的類型都是 `void`，結果的類型就會是 `void`。
+- 如果兩個運算元都有類型 **`void`** ，則結果的類型為 **`void`** 。
 
-- 如果任一運算元是任何類型的指標，且另一個運算元是 `void` 的指標，會將物件的指標轉換為 `void` 的指標，而結果則是 `void` 的指標。
+- 如果任一個運算元是任何類型之物件的指標，而另一個運算元是的指標，則 **`void`** 物件的指標會轉換成的指標， **`void`** 而結果會是的指標 **`void`** 。
 
 - 如果 *expression* 或 *conditional-expression* 是指標，且另一個運算元是值為 0 的常數運算式，結果的類型會是指標類型。
 
-在指標的類型比較中，指標指向之類型的任何類型限定詞 (**const`volatile` 或 **) 都不具意義，但結果類型會繼承條件式之兩個元件的限定詞。
+在指標的類型比較中，指標指向之類型的任何類型限定詞（ **`const`** 或 **`volatile`** ）都是不重要的，但結果類型會繼承條件式的兩個元件的限定詞。
 
 ## <a name="examples"></a>範例
 
@@ -68,6 +68,6 @@ int y;
 
 在此範例中會宣告兩個函式 (`f1` 和 `f2`) 及兩個變數 (`x` 和 `y`)。 稍後在程式中，如果兩個變數具有相同的值，便會呼叫 `f1` 函式。 否則會呼叫 `f2`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [條件運算子：? :](../cpp/conditional-operator-q.md)

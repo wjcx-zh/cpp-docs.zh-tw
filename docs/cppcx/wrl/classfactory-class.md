@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372671"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198095"
 ---
 # <a name="classfactory-class"></a>ClassFactory 類別
 
@@ -53,7 +53,7 @@ class ClassFactory :
 ### <a name="parameters"></a>參數
 
 *I0*<br/>
-第零個介面。
+預備介面。
 
 *I1*<br/>
 第一個介面。
@@ -63,9 +63,9 @@ class ClassFactory :
 
 ## <a name="remarks"></a>備註
 
-利用`ClassFactory`來提供使用者定義的工廠實現。
+利用 `ClassFactory` 來提供使用者定義的 factory 執行。
 
-以下程式設計模式展示如何使用[實現器](implements-structure.md)結構在類工廠上指定三個多個介面。
+下列程式設計模式示範如何使用[Implements](implements-structure.md)結構，在 Class Factory 上指定三個以上的介面。
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -73,18 +73,18 @@ class ClassFactory :
 
 ### <a name="public-constructors"></a>公用建構函式
 
-名稱                                        | 描述
+名稱                                        | 說明
 ------------------------------------------- | -----------
-[類工廠::類工廠](#classfactory) |
+[ClassFactory：： ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>公用方法
 
-名稱                                            | 描述
+名稱                                            | 說明
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[類別工廠::新增參考](#addref)                 | 增加當前`ClassFactory`物件的引用計數。
-[類別工廠::鎖伺服器](#lockserver)         | 增加或遞減當前`ClassFactory`物件跟蹤的基礎物件數。
-[類工廠::查詢介面](#queryinterface) | 檢索指向參數指定的介面的指標。
-[類工廠::發佈](#release)               | 取消當前`ClassFactory`物件的引用計數。
+[ClassFactory：： AddRef](#addref)                 | 遞增目前物件的參考計數 `ClassFactory` 。
+[ClassFactory：： LockServer](#lockserver)         | 遞增或遞減目前物件所追蹤的基礎物件數目 `ClassFactory` 。
+[ClassFactory：： QueryInterface](#queryinterface) | 抓取參數所指定之介面的指標。
+[ClassFactory：： Release](#release)               | 遞減目前物件的參考計數 `ClassFactory` 。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -110,13 +110,13 @@ class ClassFactory :
 
 ## <a name="requirements"></a>需求
 
-**標題:** 模組.h
+**標頭：** module. h
 
 **命名空間：** Microsoft::WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>類別工廠::新增參考
+## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory：： AddRef
 
-增加當前`ClassFactory`物件的引用計數。
+遞增目前物件的參考計數 `ClassFactory` 。
 
 ```cpp
 STDMETHOD_(
@@ -129,15 +129,15 @@ STDMETHOD_(
 
 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>類工廠::類工廠
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory：： ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>類別工廠::鎖伺服器
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory：： LockServer
 
-增加或遞減當前`ClassFactory`物件跟蹤的基礎物件數。
+遞增或遞減目前物件所追蹤的基礎物件數目 `ClassFactory` 。
 
 ```cpp
 STDMETHOD(
@@ -147,20 +147,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*羊群*<br/>
-**true**以增加追蹤物件的數量。 **false**以減少被跟蹤物件的數量。
+*fLock*<br/>
+**`true`** 以遞增追蹤物件的數目。 **`false`** 以遞減已追蹤物件的數目。
 
 ### <a name="return-value"></a>傳回值
 
-S_OK如果成功;否則,E_FAIL。
+如果成功，則 S_OK;否則，E_FAIL。
 
 ### <a name="remarks"></a>備註
 
-`ClassFactory`跟蹤[模組](module-class.md)類的基礎實例中的物件。
+`ClassFactory`追蹤[模組](module-class.md)類別之基礎實例中的物件。
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>類工廠::查詢介面
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory：： QueryInterface
 
-檢索指向參數指定的介面的指標。
+抓取參數所指定之介面的指標。
 
 ```cpp
 STDMETHOD(
@@ -174,15 +174,15 @@ STDMETHOD(
 介面識別碼。
 
 *ppvObject*<br/>
-此操作完成後,指向參數*riid*指定的介面的指標。
+當此作業完成時，為參數*riid*所指定之介面的指標。
 
 ### <a name="return-value"></a>傳回值
 
 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
 
-## <a name="classfactoryrelease"></a><a name="release"></a>類工廠::發佈
+## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory：： Release
 
-取消當前`ClassFactory`物件的引用計數。
+遞減目前物件的參考計數 `ClassFactory` 。
 
 ```cpp
 STDMETHOD_(

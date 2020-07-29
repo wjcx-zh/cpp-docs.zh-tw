@@ -5,16 +5,16 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: e227f48588c3c4f59c0d0bd28ab16178de159b58
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 77f0a5517cee5e4baeacbbdcae47bdeea2853a97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216631"
 ---
 # <a name="anonymous-class-types"></a>匿名類別類型
 
-類可以是匿名的,也就是說,可以在沒有*標識符*的情況下聲明它們。 當您將類別名稱取代為**typedef**名稱時,這非常有用,如下所示:
+類別可以是匿名的，也就是說，它們可以不使用*識別碼*來宣告。 當您將類別名稱取代為名稱時，這會很有用 **`typedef`** ，如下所示：
 
 ```cpp
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 ```
 
 > [!NOTE]
-> 上述範例中的匿名類別用法對於保留與現有 C 程式碼的相容性而言很實用。 在某些 C 代碼中,與匿名結構結合使用**typedef**是普遍存在的。
+> 上述範例中的匿名類別用法對於保留與現有 C 程式碼的相容性而言很實用。 在某些 C 程式碼中，使用 **`typedef`** 搭配匿名結構是普遍的。
 
 另外，當您想要讓類別成員的參考出現，就像該參考不是包含在另一個類別中一般時，匿名類別也相當實用，如下所示：
 
@@ -43,17 +43,17 @@ struct PTValue
 PTValue ptv;
 ```
 
-在前面的代碼中,`iValue`可以使用物件成員選擇運算符 **(.**) 存取,如下所示:
+在上述程式碼中， `iValue` 可以使用物件成員選取運算子（**.**）來存取，如下所示：
 
 ```cpp
 int i = ptv.iValue;
 ```
 
-匿名類別會受到某些限制  (有關匿名聯合的詳細資訊,請參閱[聯合](../cpp/unions.md)。匿名類:
+匿名類別會受到某些限制  （如需匿名等位的詳細資訊，[請參閱等](../cpp/unions.md)位）。匿名類別：
 
 - 不能具有建構函式或解構函式。
 
-- 不能作為參數傳遞給函數(除非使用省略號擊敗類型檢查)。
+- 無法當做引數傳遞至函式（除非使用省略號來失效類型檢查）。
 
 - 不可做為函式的傳回值傳回。
 
@@ -92,4 +92,4 @@ int main()
 //Output: 1234567
 ```
 
-**結束微軟的**
+**結束 Microsoft 專有**

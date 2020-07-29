@@ -1,21 +1,21 @@
 ---
-title: 實作 (C++ COM 屬性)
+title: implements （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217229"
 ---
 # <a name="implements-c"></a>implements (C++)
 
-指定分派介面，強制讓 IDL coclass 的成員。
+指定強制成為 IDL coclass 成員的分派介面。
 
 ## <a name="syntax"></a>語法
 
@@ -27,14 +27,14 @@ ms.locfileid: "62409374"
 ### <a name="parameters"></a>參數
 
 *interfaces*<br/>
-以逗號分隔清單中會是成員的 IDL coclass 的介面。 指定單一介面的簡略方法是**實作 (** *interface_name* **)**。
+以逗號分隔的介面清單，將會成為 IDL coclass 的成員。 指定單一介面的縮寫方法是**implements （** *interface_name* **）**。
 
-*dispinterfaces*<br/>
-以逗號分隔會是成員的 IDL coclass dispinterface 的清單。 速記方法來指定單一 dispinterface**實作 (分配介面 =** *dispinterface_name* **)**。
+*分配介面*<br/>
+將成為 IDL coclass 成員之分配介面的逗號分隔清單。 指定單一分派介面的縮寫方法是**implements （分派程式 =** *dispinterface_name* **）**。
 
 ## <a name="remarks"></a>備註
 
-根據預設，唯一的 COM 介面的基底類別的`coclass`IDL coclass 中新增。 **會實作**可讓您強制執行其他介面為 IDL`coclass`成員。
+根據預設，只有屬於基類的 COM 介面 `coclass` 會加入 IDL coclass。 **implements**可讓您強制其他介面成為 IDL `coclass` 成員。
 
 ## <a name="requirements"></a>需求
 
@@ -42,18 +42,18 @@ ms.locfileid: "62409374"
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|是|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="example"></a>範例
 
-下列範例會在三個部分： 一個.idl 檔案和其相關聯的.h 檔案和C++檔案。
+下列範例分為三個部分：一個 .idl 檔案及其相關聯的 .h 檔，以及一個 c + + 檔案。
 
-假設下列的.idl 檔案，將會提供給編譯器。
+假設下列 .idl 檔案將可供編譯器使用。
 
 ```
 // attr_implements.idl
@@ -101,7 +101,7 @@ library odod
 
 ## <a name="example"></a>範例
 
-和下列的.h 檔案也必須是提供給編譯器。
+和下列 .h 檔案，也必須提供給編譯器使用。
 
 ```cpp
 // attr_implements.h
@@ -381,7 +381,7 @@ CBar;
 
 ## <a name="example"></a>範例
 
-在下列程式中，而不需要實作`IBar1`， `IBar2`，並`ISna`都不會在`coclass`所產生的 IDL 中。
+在下列程式中，若未執行，、 `IBar1` `IBar2` 和 `ISna` 將不會在 `coclass` 產生的 IDL 中。
 
 ```cpp
 // attr_implements.cpp

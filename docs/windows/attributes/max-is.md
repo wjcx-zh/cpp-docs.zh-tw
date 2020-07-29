@@ -1,17 +1,17 @@
 ---
-title: max_is （C++ COM 屬性）
+title: max_is （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2e30595a549eefc6a5eecc27be98ded5221dcc16
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166753"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201306"
 ---
 # <a name="max_is"></a>max_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80166753"
 
 ## <a name="remarks"></a>備註
 
-**Max_is** C++屬性具有與[max_is](/windows/win32/Midl/max-is) MIDL 屬性相同的功能。
+**Max_is** c + + 屬性具有與[max_is](/windows/win32/Midl/max-is) MIDL 屬性相同的功能。
 
 ## <a name="requirements"></a>需求
 
@@ -38,9 +38,9 @@ ms.locfileid: "80166753"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
+|**適用於**|或中的欄位 **`struct`** **`union`** ，介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要的屬性**|無|
 |**無效屬性**|**size_is**|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

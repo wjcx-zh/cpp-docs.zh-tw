@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 455db433aff1c1aa241beeb6e2435807959b7dd4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f60b2e5e21b559edb630be2aee377341d4480f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317152"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203269"
 ---
 # <a name="front_insert_iterator-class"></a>front_insert_iterator 類別
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>參數
 
-*容器*\
+*箱*\
 容器的類型，其項目前端要由 `front_insert_iterator` 插入。
 
 ## <a name="remarks"></a>備註
@@ -39,32 +39,32 @@ class front_insert_iterator;
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[front_insert_iterator](#front_insert_iterator)|建立可以在指定的容器物件前面插入項目的迭代器。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[container_type](#container_type)|類型，表示要執行前端插入的容器。|
-|[參考](#reference)|類型，提供關聯容器控制之序列中項目的參考。|
+|[reference](#reference)|類型，提供關聯容器控制之序列中項目的參考。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
-|[運算子*](#op_star)|用於實現前插入的\*`i` = `x`輸出反覆運算器表示式的取消引用運算符。|
-|[運算子*](#op_add_add)|將 `front_insert_iterator` 遞增至可儲存值的下一個位置。|
-|[運算子*](#op_eq)|用於實現前插入的\*`i` = `x`輸出反覆運算器表達式的分配運算符。|
+|[操作](#op_star)|取值運算子，用來 \* `i`  =  `x` 針對前端插入執行輸出反覆運算器運算式。|
+|[operator + +](#op_add_add)|將 `front_insert_iterator` 遞增至可儲存值的下一個位置。|
+|[operator =](#op_eq)|指派運算子，用來 \* `i`  =  `x` 針對前端插入執行輸出反覆運算器運算式。|
 
 ## <a name="requirements"></a>需求
 
-**標題**\<: 發著器>
+**標頭**：\<iterator>
 
 **命名空間：** std
 
-## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator:container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator：： container_type
 
 類型，表示要執行前端插入的容器。
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator:front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator：： front_insert_iterator
 
 建立可以在指定的容器物件前面插入項目的迭代器。
 
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator::操作員\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator：： operator\*
 
 可對傳回所定址之元素的插入迭代器進行取值。
 
@@ -183,7 +183,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>備註
 
-用於輸出影像運算器表示式 = **\*Iter****值**。 如果`Iter`反覆運算器處理序列中的元素,則**\*Iter** = **值**將該元素替換為值,並且不會更改序列中元素的總數。
+用來執行輸出反覆運算器運算式** \* Iter**  =  **值**。 如果 `Iter` 是定址序列中專案的反覆運算器，則** \* Iter**  =  **值**會以值取代該元素，而且不會變更序列中的元素總數。
 
 ### <a name="example"></a>範例
 
@@ -230,7 +230,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator::操作員*
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator：： operator + +
 
 將 `back_insert_iterator` 遞增至可儲存值的下一個位置。
 
@@ -281,7 +281,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator::操作員*
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator：： operator =
 
 將值附加 (推送) 到容器前端。
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>參數
 
-*瓦爾*\
+*初始值*\
 要指派給容器的值。
 
 ### <a name="return-value"></a>傳回值
@@ -302,13 +302,13 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="remarks"></a>備註
 
-第一個成員運算子會評估 `container.push_front( val)`，然後傳回 `*this`。
+第一個成員運算子會評估 `container.push_front( val)` ，然後傳回 **`*this`** 。
 
 在第二個成員運算子會評估
 
 `container->push_front((typename Container::value_type&&) val)`,
 
-然後傳回 `*this`。
+然後傳回 **`*this`** 。
 
 ### <a name="example"></a>範例
 
@@ -343,7 +343,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator:參考
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator：： reference
 
 類型，提供關聯容器控制之序列中項目的參考。
 
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<反覆運算器>](../standard-library/iterator.md)\
-[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++標準函式庫參考](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

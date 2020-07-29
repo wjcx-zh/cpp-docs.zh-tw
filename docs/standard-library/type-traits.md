@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201956"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -26,22 +26,22 @@ ms.locfileid: "72684417"
 
 ## <a name="remarks"></a>備註
 
-@No__t_0type_traits > 中的類別和範本是用來在編譯時期支援型別推斷、分類和轉換。 它們也可用來偵測與類型相關的錯誤，並協助您優化您的一般程式碼。 一元型別特性描述型別的屬性，二進位型別特性描述型別之間的關聯性，而轉換特性則會修改類型的屬性。
+中的類別和範本 \<type_traits> 是用來在編譯時期支援型別推斷、分類和轉換。 它們也可用來偵測與類型相關的錯誤，並協助您優化您的一般程式碼。 一元型別特性描述型別的屬性，二進位型別特性描述型別之間的關聯性，而轉換特性則會修改類型的屬性。
 
-Helper 類別 `integral_constant` 及其樣板特製化 `true_type` 而且 `false_type` 會形成型別述詞的基類。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞*為 true*時，它會直接或間接從[true_type](../standard-library/type-traits-typedefs.md#true_type)公開衍生。 當類型述詞*保留 false*時，它會直接或間接從[false_type](../standard-library/type-traits-typedefs.md#false_type)公開衍生。
+Helper 類別 `integral_constant` 及其範本特製化 `true_type` ，並 `false_type` 形成類型述詞的基類。 「類型述詞」** 是採用一或兩個類型引數的範本。 當類型述詞*為 true*時，它會直接或間接從[true_type](../standard-library/type-traits-typedefs.md#true_type)公開衍生。 當類型述詞*為 false*時，它會直接或間接從[false_type](../standard-library/type-traits-typedefs.md#false_type)公開衍生。
 
 *類型修飾詞*或*轉換特性*是採用一或多個範本引數的範本，且具有一個成員 `type`，這是已修改類型的同義字。
 
 ### <a name="alias-templates"></a>別名範本
 
-為了簡化型別特性運算式，會提供 `typename some_trait<T>::type` 的[別名範本](../cpp/aliases-and-typedefs-cpp.md)，其中*some_trait*是類別樣板名稱。 例如，[add_const](../standard-library/add-const-class.md) 具有其類型 `add_const_t` 的別名範本，定義為：
+為了簡化型別特性運算式，會提供的[別名範本](../cpp/aliases-and-typedefs-cpp.md) `typename some_trait<T>::type` ，其中*some_trait*是類別樣板名稱。 例如，[add_const](../standard-library/add-const-class.md) 具有其類型 `add_const_t` 的別名範本，定義為：
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-這些是為 `type` 成員提供的別名：
+這些是為成員提供的別名 `type` ：
 
 ||||
 |-|-|-|
@@ -68,7 +68,7 @@ Helper 類別和 typedef
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|測試類型是否為**void**。|
+|[is_void](../standard-library/is-void-class.md)|測試類型是否為 **`void`** 。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|測試類型是否為 `std::nullptr_t`。|
 |[is_integral](../standard-library/is-integral-class.md)|測試類型是否為整數。|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|測試類型是否為浮點。|
@@ -89,7 +89,7 @@ Helper 類別和 typedef
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|測試類型是否為參考。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|測試類型是否為算術。|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|測試類型是否為**void**或算術。|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|測試類型是否為 **`void`** 或算術。|
 |[is_object](../standard-library/is-object-class.md)|測試類型是否為物件類型。|
 |[is_scalar](../standard-library/is-scalar-class.md)|測試類型是否為純量。|
 |[is_compound](../standard-library/is-compound-class.md)|測試類型是否不是純量。|
@@ -99,13 +99,13 @@ Helper 類別和 typedef
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|測試類型是否為**const**。|
-|[is_volatile](../standard-library/is-volatile-class.md)|測試類型是否為**volatile**。|
+|[is_const](../standard-library/is-const-class.md)|測試類型是否為 **`const`** 。|
+|[is_volatile](../standard-library/is-volatile-class.md)|測試類型是否為 **`volatile`** 。|
 |[is_trivial](../standard-library/is-trivial-class.md)|測試類型是否為 trivial。|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|測試類型是否可完整複製。|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|測試類型是否為標準配置類型。|
 |[is_pod](../standard-library/is-pod-class.md)|測試類型是否為 POD。|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|測試類型是否可以是 `constexpr` 變數或用於 `constexpr` 函式。|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|測試類型是否可以是 **`constexpr`** 變數或在函式中使用 **`constexpr`** 。|
 |[is_empty](../standard-library/is-empty-class.md)|測試類型是否為空的類別。|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|測試類型是否為多型類別。|
 |[is_abstract](../standard-library/is-abstract-class.md)|測試類型是否有抽象類別。|
@@ -153,8 +153,8 @@ Helper 類別和 typedef
 |||
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|取得類型的對齊方式。|
-|[rank](../standard-library/rank-class.md)|取得陣列維度的數目。|
-|[extent](../standard-library/extent-class.md)|取得指定陣列維度中的項目數目。|
+|[等級](../standard-library/rank-class.md)|取得陣列維度的數目。|
+|[片區](../standard-library/extent-class.md)|取得指定陣列維度中的項目數目。|
 
 類型關聯
 
@@ -168,9 +168,9 @@ Helper 類別和 typedef
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|從類型產生**const**類型。|
-|[add_volatile](../standard-library/add-volatile-class.md)|從類型產生**volatile**類型。|
-|[add_cv](../standard-library/add-cv-class.md)|從類型產生**const volatile**類型。|
+|[add_const](../standard-library/add-const-class.md)|**`const`** 從類型產生類型。|
+|[add_volatile](../standard-library/add-volatile-class.md)|**`volatile`** 從類型產生類型。|
+|[add_cv](../standard-library/add-cv-class.md)|**`const volatile`** 從類型產生類型。|
 |[remove_const](../standard-library/remove-const-class.md)|從類型產生非常數類型。|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|從類型產生非 volatile 類型。|
 |[remove_cv](../standard-library/remove-cv-class.md)|從類型產生非常數非 volatile 類型。|
@@ -211,8 +211,8 @@ Helper 類別和 typedef
 |[aligned_storage](../standard-library/aligned-storage-class.md)|為對齊類型配置未初始化的記憶體。|
 |[aligned_union](../standard-library/aligned-union-class.md)|使用非簡單式建構函式或解構函式為對齊的聯集配置未初始化的記憶體。|
 |[common_type](../standard-library/common-type-class.md)|產生參數封裝之所有類型的一般類型。|
-|[conditional](../standard-library/conditional-class.md)|如果條件為 true，則產生第一個指定的類型，反之則產生第二個指定的類型。|
-|[decay](../standard-library/decay-class.md)|由值來傳遞時，會產生類型。 建立非參考、非常數或非暫時性的類型，或建立類型的指標。|
+|[條件](../standard-library/conditional-class.md)|如果條件為 true，則產生第一個指定的類型，反之則產生第二個指定的類型。|
+|[decay](../standard-library/decay-class.md)|產生由值傳遞的類型。 建立非參考、非常數或非暫時性的類型，或建立類型的指標。|
 |[enable_if](../standard-library/enable-if-class.md)|如果條件為 true，則產生指定的類型，反之則不產生類型。|
 |[invoke_result](invoke-result-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>已在 c + + 17 中新增。 |
 |[result_of](../standard-library/result-of-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>已在 c + + 14 中新增，在 c + + 17 中被取代 |
@@ -222,10 +222,10 @@ Helper 類別和 typedef
 
 |||
 |-|-|
-|[聯手](../standard-library/conjunction-class.md)||
+|[結合](../standard-library/conjunction-class.md)||
 |[分離](../standard-library/disjunction-class.md)||
 |[取](../standard-library/negation-class.md)||
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<functional>](../standard-library/functional.md)

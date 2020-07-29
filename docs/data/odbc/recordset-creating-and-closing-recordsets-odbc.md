@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216514"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>資料錄集：建立和關閉資料錄集 (ODBC)
 
@@ -74,10 +74,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-在您呼叫 `Open` 之後，請使用成員函式和物件的資料成員來與記錄搭配運作。 在某些情況下，您可能會想要重新查詢或重新整理資料錄集，以包含已在資料來源上發生的變更。 有關詳細資訊,請參閱[記錄集:重新查詢記錄集 (ODBC)。](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+在您呼叫 `Open` 之後，請使用成員函式和物件的資料成員來與記錄搭配運作。 在某些情況下，您可能會想要重新查詢或重新整理資料錄集，以包含已在資料來源上發生的變更。 如需詳細資訊，請參閱[記錄集：重新查詢記錄集（ODBC）](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
 
 > [!TIP]
-> 您在開發期間使用的連接字串可能與最終使用者所需的連接字串不同。 有關在這方面對應用程式進行一般化的想法,請參閱[數據源:管理連接 (ODBC)。](../../data/odbc/data-source-managing-connections-odbc.md)
+> 您在開發期間使用的連接字串可能與最終使用者所需的連接字串不同。 如需有關在此方面一般化應用程式的構想，請參閱[資料來源：管理連接（ODBC）](../../data/odbc/data-source-managing-connections-odbc.md)。
 
 ## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> 設定資料錄集選項
 
@@ -106,7 +106,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 1. 終結資料錄集物件。
 
-   如果您是在函式的堆疊框架上宣告它，當物件超出範圍時，系統會自動將它終結。 否則，請使用 **delete** 運算子。
+   如果您是在函式的堆疊框架上宣告它，當物件超出範圍時，系統會自動將它終結。 否則，請使用 **`delete`** 運算子。
 
 `Close` 會釋放資料錄集的 `HSTMT` 控制代碼。 它不會終結 C++ 物件。
 
@@ -114,4 +114,4 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[記錄集：加入、更新和刪除記錄（ODBC）](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

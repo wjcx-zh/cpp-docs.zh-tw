@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
-ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
+ms.openlocfilehash: 9cde21624e3a8d4cce6db9cdc054bad427340f31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643638"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203900"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -116,14 +116,14 @@ class array;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
 |`Ty`|項目的類型。|
 |`N`|項目的數目。|
 
 ## <a name="members"></a>成員
 
-|類型定義|描述|
+|類型定義|說明|
 |-|-|
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|
 |[const_pointer](#const_pointer)|項目的常數指標類型。|
@@ -131,16 +131,16 @@ class array;
 |[const_reverse_iterator](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|
 |[difference_type](#difference_type)|兩個項目之間帶正負號距離的類型。|
 |[定位](#iterator)|受控制序列之迭代器的類型。|
-|[指標](#pointer)|項目的指標類型。|
-|[證明](#reference)|項目的參考類型。|
+|[滑鼠](#pointer)|項目的指標類型。|
+|[reference](#reference)|項目的參考類型。|
 |[reverse_iterator](#reverse_iterator)|受控制序列的反向迭代器類型。|
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|項目的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
-|[數列](#array)|建構陣列物件。|
-|[assign](#assign)|過時. 請`fill`使用）。取代所有元素。|
+|[array](#array)|建構陣列物件。|
+|[assign](#assign)|過時. 請使用 `fill` ）。取代所有元素。|
 |[at](#at)|存取指定位置的項目。|
 |[返回](#back)|存取最後一個項目。|
 |[起點](#begin)|指定受控制序列的開頭。|
@@ -148,7 +148,7 @@ class array;
 |[cend](#cend)|傳回隨機存取指向陣列結尾之後一個項目的常數迭代器。|
 |[crbegin](#crbegin)|將常數迭代器傳回反向陣列中的第一個項目。|
 |[crend](#crend)|將常數迭代器傳回反向陣列的結尾。|
-|[資料](#data)|取得第一個項目的位址。|
+|[data](#data)|取得第一個項目的位址。|
 |[empty](#empty)|測試項目是否存在。|
 |[成品](#end)|指定受控制序列的結尾。|
 |[填滿](#fill)|取代所有具有指定值的項目。|
@@ -159,14 +159,14 @@ class array;
 |[size](#size)|計算元素的數目。|
 |[調換](#swap)|交換兩個容器的內容。|
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[array：： operator =](#op_eq)|取代受控制的序列。|
 |[array：： operator\[\]](#op_at)|存取指定位置的項目。|
 
 ## <a name="remarks"></a>備註
 
-該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如，
+該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<array>
+**標頭：**\<array>
 
 **命名空間：** std
 
@@ -199,7 +199,7 @@ array(const array& right);
 
 預設建構函式 `array()` 會讓受控制序列處於未初始化狀態 (預設為初始化)。 您使用它來指定未初始化的受控制序列。
 
-複製的函`array(const array& right)`式會使用順序 [*right*`.begin()`， *right*`.end()`）來初始化受控制的序列。 您使用它來指定初始受控制序列，這個初始受控制序列是陣列物件 *right* 所控制序列的複本。
+複製的函式會 `array(const array& right)` 使用順序 [*right* `.begin()` ， *right*）來初始化受控制的序列 `.end()` 。 您使用它來指定初始受控制序列，這個初始受控制序列是陣列物件 *right* 所控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -381,7 +381,7 @@ int main()
 
 ## <a name="arraycbegin"></a><a name="cbegin"></a>array：： cbegin
 
-傳回**常數**反覆運算器，定址範圍中的第一個元素。
+傳回 **`const`** 反覆運算器，其定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**常數**隨機存取反覆運算器，指向範圍的第一個元素，或指向空白範圍結尾（空白範圍`cbegin() == cend()`）之外的位置。
+**`const`** 隨機存取反覆運算器，指向範圍的第一個元素，或指向空白範圍結尾（空白範圍）之外的位置 `cbegin() == cend()` 。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中， `Container`請將視為支援`begin()`和`cbegin()`的任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請 `Container` 將視為支援和的任何種類的可修改（非 **`const`** ） `begin()` 容器 `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -407,7 +407,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="arraycend"></a><a name="cend"></a>array：： cend
 
-傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
+傳回 **`const`** 反覆運算器，其定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中， `Container`請將視為支援`end()`和`cend()`的任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請 `Container` 將視為支援和的任何種類的可修改（非 **`const`** ） `end()` 容器 `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -897,7 +897,7 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
 |*初始值*|插入陣列中之項目的值。|
 
@@ -1138,7 +1138,7 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會*將的每個元素*指派給受控制序列的對應元素，然後傳回`*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會*將的每個元素*指派給受控制序列的對應元素，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -1502,7 +1502,7 @@ void swap(array& right);
 
 ### <a name="remarks"></a>備註
 
-成員函式會在和*right*之間`*this`交換受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
+成員函式會在和 right 之間交換受控制的序列 **`*this`** 。 *right* 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
 
 另外還有一個非成員[交換](array-functions.md#swap)函式，可用來交換兩個**陣列**實例。
 
@@ -1602,4 +1602,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[\<陣列>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

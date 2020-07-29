@@ -5,20 +5,20 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: f062c4fd0332525a8b8940d2d93df41df56d2baa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a22ccfaf77c3be524bf7127eac3d76c7be827ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373129"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201852"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 運算子
 
 |||||
 |-|-|-|-|
-|[操作員!](#op_neq)|[運算子*](#op_eq_eq)|[操作員!](#op_neq_multimap)|[運算子*](#op_eq_eq_multimap)|
+|[operator！ =](#op_neq)|[operator = =](#op_eq_eq)|[operator！ =](#op_neq_multimap)|[operator = =](#op_eq_eq_multimap)|
 
-## <a name="operator"></a><a name="op_neq"></a>操作員!
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 [unordered_map](../standard-library/unordered-map-class.md) 物件是否不等於右邊的 unordered_map 物件。
 
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `unordered_map` 類型的物件。
 
-*對*\
+*再*\
 `unordered_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果unordered_maps不相等,**則為 true;****假**,如果他們相等。
+**`true`** 如果 unordered_maps 不相等，則為，**`false`** 如果相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -74,7 +74,7 @@ int main( )
 }
 ```
 
-**輸出:**
+**輸出：**
 
 `um1 != um2: true`
 
@@ -82,7 +82,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 [unordered_map](../standard-library/unordered-map-class.md) 物件是否等於右邊的 unordered_map 物件。
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `unordered_map` 類型的物件。
 
-*對*\
+*再*\
 `unordered_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果unordered_maps相等,**則為 true;****假**,如果他們不相等。
+**`true`** 如果 unordered_maps 相等，則為，**`false`** 如果不相等，則為。
 
 ### <a name="remarks"></a>備註
 
@@ -138,7 +138,7 @@ int main( )
 }
 ```
 
-**輸出:**
+**輸出：**
 
 `um1 == um2: false`
 
@@ -146,7 +146,7 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="operator"></a><a name="op_neq_multimap"></a>操作員!
+## <a name="operator"></a><a name="op_neq_multimap"></a>operator！ =
 
 測試運算子左邊的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 物件是否不等於右邊的 unordered_multimap 物件。
 
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `unordered_multimap` 類型的物件。
 
-*對*\
+*再*\
 `unordered_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果unordered_multimaps不相等,**則為 true;****假**,如果他們相等。
+**`true`** 如果 unordered_multimaps 不相等，則為，**`false`** 如果相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -203,7 +203,7 @@ int main( )
 }
 ```
 
-**輸出:**
+**輸出：**
 
 `um1 != um2: true`
 
@@ -211,7 +211,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operator = =
 
 測試運算子左邊的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 物件是否等於右邊的 unordered_multimap 物件。
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `unordered_multimap` 類型的物件。
 
-*對*\
+*再*\
 `unordered_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果unordered_multimaps相等,**則為 true;****假**,如果他們不相等。
+**`true`** 如果 unordered_multimaps 相等，則為，**`false`** 如果不相等，則為。
 
 ### <a name="remarks"></a>備註
 
@@ -268,7 +268,7 @@ int main( )
 }
 ```
 
-**輸出:**
+**輸出：**
 
 `um1 == um2: false`
 

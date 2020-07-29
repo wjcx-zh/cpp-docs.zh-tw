@@ -52,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911377"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216904"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -122,7 +122,7 @@ long long int llrintl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用**float**和**long** **double**類型的**lrint**和**llrint**多載。 在 C 程式中， **lrint**和**llrint**一律採用**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用和類型的**lrint**和**llrint**多載 **`float`** **`long double`** 。 在 C 程式中， **lrint**和**llrint**一律會接受 **`double`** 。
 
 如果*x*不代表整數值的對等浮點，這些函數會引發**FE_INEXACT**。
 
@@ -140,4 +140,4 @@ long long int llrintl(
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>

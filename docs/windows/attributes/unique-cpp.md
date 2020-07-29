@@ -1,17 +1,17 @@
 ---
-title: unique （C++ COM 屬性）
+title: unique （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a46d607ef03fcb75fea31835726d0e2d95e71df8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214431"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201020"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214431"
 
 ## <a name="remarks"></a>備註
 
-**Unique** C++屬性的功能與[唯一](/windows/win32/Midl/unique)的 MIDL 屬性相同。
+**Unique** c + + 屬性具有與[唯一](/windows/win32/Midl/unique)MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -37,10 +37,10 @@ ms.locfileid: "80214431"
 
 |||
 |-|-|
-|**適用於**|**typedef**、 **struct**、 **union**、interface 參數、interface 方法|
+|**適用於**|**`typedef`**、 **`struct`** 、 **`union`** 、interface 參數、interface 方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

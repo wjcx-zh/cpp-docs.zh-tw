@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914945"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216995"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -112,7 +112,7 @@ long double fmal(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**fma**的多載。 在 C 程式中， **fma**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**fma**的多載 **`float`** **`long double`** 。 在 C 程式中， **fma**一律會採用並傳回 **`double`** 。
 
 此函式會計算值，就像它採用無限精確度，然後將最終結果進行四捨五入。
 
@@ -128,6 +128,6 @@ long double fmal(
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [remainder、remainderf、remainderl](remainder-remainderf-remainderl.md)<br/>
 [remquo、remquof、remquol](remquo-remquof-remquol.md)<br/>

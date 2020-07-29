@@ -1,6 +1,6 @@
 ---
 title: '&lt;atomic&gt;'
-description: 描述標準C++程式庫不可部分完成標頭中的可用類型和函式。
+description: 描述 Standard c + + 程式庫不可部分完成標頭中可用的類型和函式。
 ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
@@ -49,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3c5f732dbda701eb7744b1b25a9a8e7426f7a3e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991162"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203894"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -77,13 +77,13 @@ ms.locfileid: "74991162"
 
 - 根據其 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數，不可部分完成作業會建立相同執行緒中其他不可部分完成作業影響可見性的順序需求。 因此，它會禁止違反排序需求的編譯器最佳化。
 
-在部分平台上，如果不使用 `mutex` 鎖定，則可能無法有效率地實作某些類型的不可部分完成作業。 如果該類型上沒有不可部分完成作業使用鎖定，則不可部分完成類型是「無鎖定」。
+在部分平台上，如果不使用 `mutex` 鎖定，則可能無法有效率地實作某些類型的不可部分完成作業。 如果該類型上沒有不可部分完成作業使用鎖定，則不可部分完成類型是「無鎖定」**。
 
-**C + + 11**：在信號處理常式中，您可以在物件上執行不可部分完成的作業，`obj` 如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 為 true。
+**C + + 11**：在信號處理常式中， `obj` 如果 `obj.is_lock_free()` 或為 true，您可以在物件上執行不可部分完成的作業 `atomic_is_lock_free(x)` 。
 
-類別[atomic_flag](../standard-library/atomic-flag-structure.md)提供最少的不可部分完成類型，其中包含**bool**旗標。 它的作業永遠是無鎖定。
+類別[atomic_flag](../standard-library/atomic-flag-structure.md)會提供包含旗標的最少不可部分完成類型 **`bool`** 。 它的作業永遠是無鎖定。
 
-類別樣板 `atomic<T>` 會將其引數類型的物件儲存 `T`，並提供該預存值的不可部分完成存取權。 您可以將它具現化，方法是使用可使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 進行複製以及使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 測試是否相等的任何類型。 特別的是，您可以將它與符合這些需求的使用者定義類型搭配使用，而且在許多情況下，也可以與浮點類型搭配使用。
+類別樣板 `atomic<T>` 會儲存其引數類型的物件 `T` ，並提供該預存值的不可部分完成存取權。 您可以將它具現化，方法是使用可使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 進行複製以及使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 測試是否相等的任何類型。 特別的是，您可以將它與符合這些需求的使用者定義類型搭配使用，而且在許多情況下，也可以與浮點類型搭配使用。
 
 範本也會有一組整數類型的特製化以及指標的部分特製化。 這些特製化提供無法透過主要範本使用的其他作業。
 
@@ -99,24 +99,24 @@ ms.locfileid: "74991162"
 
 針對每個整數類資料類型，有一個對應的命名不可部分完成類型，可管理該整數類型的物件。 每個 `atomic_integral` 類型都會有一組與對應 `atomic<T>` 具現化相同的成員函式，而且可以傳遞給任何非成員不可部分完成函式。
 
-|`atomic_integral` 型別|整數類型|`atomic_is_lock_free` 巨集|
+|`atomic_integral` 類型|整數類型|`atomic_is_lock_free` 巨集|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**帶正負號的字元**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
-|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
-|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
-|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
-|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
-|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
-|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
-|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**不帶正負號的長長**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_char`|**`char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**`signed char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**`unsigned char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|**`char16_t`**|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|**`char32_t`**|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**`wchar_t`**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**`short`**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**`unsigned short`**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**`int`**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**`unsigned int`**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**`long`**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**`unsigned long`**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**`long long`**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**`unsigned long long`**|ATOMIC_LLONG_LOCK_FREE|
 
-具有 typedef 名稱可特製化標頭 \<inttypes.h> 中所定義之部分類型的不可部分完成範本。
+在標頭中定義的部分類型中，不明確樣板的特製化會有 Typedef 名稱 \<inttypes.h> 。
 
 |不可部分完成類型|typedef 名稱|
 |-----------------|------------------|
@@ -153,27 +153,27 @@ ms.locfileid: "74991162"
 
 ## <a name="structs"></a>結構
 
-|Name|描述|
+|名稱|說明|
 |----------|-----------------|
 |[atomic 結構](../standard-library/atomic-structure.md)|描述在預存值上執行不可部分完成作業的物件。|
-|[atomic_flag 結構](../standard-library/atomic-flag-structure.md)|描述以原子方式設定和清除**bool**旗標的物件。|
+|[atomic_flag 結構](../standard-library/atomic-flag-structure.md)|描述可自動設定和清除旗標的物件 **`bool`** 。|
 
 ## <a name="enums"></a>列舉
 
-|Name|描述|
+|名稱|說明|
 |----------|-----------------|
 |[memory_order 列舉](../standard-library/atomic-enums.md#memory_order_enum)|為記憶體位置上的同步處理作業提供符號名稱。 這些作業會影響一個執行緒的指派如何在其他執行緒中變成可見。|
 
-## <a name="functions"></a>功能
+## <a name="functions"></a>函式
 
-在下列清單中，不是以 `_explicit` 結尾的函式具有對應 `_explicit`的語義，不同之處在于它們具有 `memory_order_seq_cst`的隱含[memory_order](../standard-library/atomic-enums.md#memory_order_enum)引數。
+在下列清單中，不是以結尾的函 `_explicit` 式具有對應的的語義 `_explicit` ，不同之處在于它們具有的隱含[memory_order](../standard-library/atomic-enums.md#memory_order_enum)引數 `memory_order_seq_cst` 。
 
-|Name|描述|
+|名稱|說明|
 |----------|-----------------|
-|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|執行「不可部分完成比較和交換」作業。|
-|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|執行「不可部分完成比較和交換」作業。|
-|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|執行「弱式不可部分完成比較和交換」作業。|
-|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|執行「弱式不可部分完成比較和交換」作業。|
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|執行不可部分完成的*比較和交換*作業。|
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|執行不可部分完成的*比較和交換*作業。|
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|執行「弱式不可部分完成比較和交換」** 作業。|
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|執行「弱式不可部分完成比較和交換」** 作業。|
 |[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|取代預存值。|
 |[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|取代預存值。|
 |[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|將指定的值加入現有預存值。|
@@ -186,21 +186,21 @@ ms.locfileid: "74991162"
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|將現有預存值減去指定的值。|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|對指定的值和現有預存值執行位元 `exclusive or`。|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|對指定的值和現有預存值執行位元 `exclusive or`。|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|將 `atomic_flag` 物件中的旗標設定為**false**。|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|將 `atomic_flag` 物件中的旗標設定為**false**。|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|將 `atomic_flag` 物件中的旗標設定為**true**。|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|將 `atomic_flag` 物件中的旗標設定為**true**。|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|將物件中的旗標設定 `atomic_flag` 為 **`false`** 。|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|將物件中的旗標設定 `atomic_flag` 為 **`false`** 。|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|將物件中的旗標設定 `atomic_flag` 為 **`true`** 。|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|將物件中的旗標設定 `atomic_flag` 為 **`true`** 。|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|設定 `atomic` 物件中的預存值。|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|指定所指定物件上的不可部分完成作業是否為「無鎖定」。|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|以不可部分完成的方式擷取值。|
 |[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|以不可部分完成的方式擷取值。|
-|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|作為「範圍」，可在下列範圍之間建立記憶體順序需求：具有相同執行緒中所執行訊號處理常式之呼叫執行緒中的範圍。|
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|作為「範圍」**，可在下列範圍之間建立記憶體順序需求：具有相同執行緒中所執行訊號處理常式之呼叫執行緒中的範圍。|
 |[atomic_store](../standard-library/atomic-functions.md#atomic_store)|以不可部分完成的方式儲存值。|
 |[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|以不可部分完成的方式儲存值。|
-|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|作為「範圍」，可建立與其他範圍有關的記憶體順序需求。|
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|作為「範圍」**，可建立與其他範圍有關的記憶體順序需求。|
 |[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|中斷可能的相依性鏈結。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+[C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

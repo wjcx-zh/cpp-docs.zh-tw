@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __CxxFrameHandler
 ms.assetid: b79ac97f-425a-42ae-9b91-8beaef935333
-ms.openlocfilehash: db856850688e378cde9eaa1fb510cb325ce0644b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b6350568bdba41da90609dfd5e2e60269e7d729f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170978"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217034"
 ---
 # <a name="__cxxframehandler"></a>__CxxFrameHandler
 
@@ -45,7 +45,7 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
 #### <a name="parameters"></a>參數
 
 *pExcept*<br/>
-傳遞至可能的 `catch` 陳述式的例外狀況記錄。
+傳遞至可能語句的例外狀況記錄 **`catch`** 。
 
 *pRN*<br/>
 關於用於處理例外狀況的堆疊框架的動態資訊。 如需詳細資訊，請參閱 ehdata.h。
@@ -58,7 +58,7 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
 
 ## <a name="return-value"></a>傳回值
 
-[try-except 陳述式](../cpp/try-except-statement.md)所使用的其中一個「篩選條件運算式」值。
+[try-except 陳述式](../cpp/try-except-statement.md)所使用的其中一個「篩選條件運算式」** 值。
 
 ## <a name="remarks"></a>備註
 

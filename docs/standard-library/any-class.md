@@ -15,18 +15,18 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 050276da665ab6ed3eb53d9e65bfea06b88bcbea
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268750"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203958"
 ---
 # <a name="any-class"></a>任何類別
 
-存放區的建構函式需求也符合任何類型的執行個體具有任何值，也就是呼叫類別的狀態的任何物件。
+儲存符合函式需求的任何類型實例，或沒有任何值，這稱為類別的任何物件的狀態。
 
-預存的執行個體呼叫包含的值。 如果兩者都有無任何值，或兩者都有值，而且包含的值是相同的兩個狀態都是相同的。
+預存的實例稱為包含的值。 如果兩個狀態都沒有值，或兩者都具有值，且包含的值相同，則兩者都相同。
 
 ## <a name="syntax"></a>語法
 
@@ -40,27 +40,27 @@ class any
 
 |||
 |-|-|
-|[any](#any)|建構類型 `any` 的物件。|
+|[任何](#any)|建構類型 `any` 的物件。|
 
 ### <a name="functions"></a>函式
 
 |||
 |-|-|
 |[emplace](#emplace)|設定任何值。|
-|[has_value](#has_value)|傳回 **，則為 true**如果任何的值。|
+|[has_value](#has_value)|**`true`** 如果有任何值，則傳回。|
 |[reset](#reset)|重設任何。|
-|[swap](#swap)|交換兩個的任何物件。|
-|[type](#type)|傳回的任何類型。|
+|[調換](#swap)|交換兩個物件。|
+|[type](#type)|傳回任何類型。|
 
 ### <a name="operators"></a>運算子
 
 |||
 |-|-|
-|[operator=](#op_eq)|任何會取代任何的另一個複本。|
+|[operator =](#op_eq)|以另一個的複本取代 any。|
 
-## <a name="any"></a> 任何
+## <a name="any"></a><a name="any"></a>任何
 
-建構類型 `any` 的物件。 也包含解構函式。
+建構類型 `any` 的物件。 也包含一個析構函式。
 
 ```cpp
 constexpr any() noexcept;
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 設定任何值。
 
@@ -87,17 +87,17 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a> has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-傳回 **，則為 true**如果任何的值。
+**`true`** 如果有任何值，則傳回。
 
 ```cpp
 bool has_value() const noexcept;
 ```
 
-## <a name="op_eq"></a> 運算子 =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
-任何會取代任何的另一個複本。
+以另一個的複本取代 any。
 
 ```cpp
 any& operator=(const any& right);
@@ -108,10 +108,10 @@ template <class T>
 
 ### <a name="parameters"></a>參數
 
-*權限*\
-任何要複製到任何。
+*再*\
+任何複製到 any 的。
 
-## <a name="reset"></a> 重設
+## <a name="reset"></a><a name="reset"></a>啟動
 
 重設任何。
 
@@ -119,17 +119,17 @@ template <class T>
 void reset() noexcept;
 ```
 
-## <a name="swap"></a> 交換
+## <a name="swap"></a><a name="swap"></a>調換
 
-交換兩個的任何物件。
+交換兩個物件。
 
 ```cpp
 void swap(any& rhs) noexcept;
 ```
 
-## <a name="type"></a> 型別
+## <a name="type"></a><a name="type"></a> 類型
 
-傳回的任何類型。
+傳回任何類型。
 
 ```cpp
 const type_info& type() const noexcept;

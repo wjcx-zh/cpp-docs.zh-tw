@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516163"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214291"
 ---
 # <a name="abstract--ccli-and-ccx"></a>抽象  (C++/CLI 和 C++/CX)
 
@@ -29,11 +29,11 @@ ms.locfileid: "65516163"
 
 *class-declaration* *class-identifier* **abstract {}**
 
-**virtual** *return-type* *member-function-identifier* **() abstract ;**
+**`virtual`** 傳回*型別**成員函式-identifier* **（） abstract;**
 
 ### <a name="remarks"></a>備註
 
-第一個範例語法會將類別宣告為抽象。 *class-declaration* 元件可以是原生 C++ 宣告 (**class** 或 **struct**)，或如果指定了 `/ZW` 或 `/clr` 編譯器選項，則可以是 C++ 擴充功能宣告 (**ref class** 或 **ref struct**)。
+第一個範例語法會將類別宣告為抽象。 如果*class-declaration*指定了或編譯器選項，類別宣告元件可以是原生 c + + 宣告（** `class` * * * * 或 **`struct`** ），或是 c + + 擴充**功能宣告（ref 類別 * * 或**ref struct**） `/ZW` `/clr` 。
 
 第二個範例語法會將虛擬成員函式宣告為抽象。 將函式宣告為抽象等同於將它宣告為純虛擬函式。 將成員宣告為抽象也會造成含括類別被宣告為抽象。
 
@@ -41,7 +41,7 @@ ms.locfileid: "65516163"
 
 您可以在編譯時間偵測某個類型是否是具有 `__is_abstract(type)` 類型特徵的抽象類型。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
-**abstract** 關鍵字是視內容而有所區別的覆寫指定名稱。 如需視內容而有所區別的關鍵字的詳細資訊，請參閱[視內容而有所區別的關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。 如需覆寫指定名稱的詳細資訊，請參閱[如何：在原生編譯中宣告覆寫指定名稱](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
+**abstract** 關鍵字是視內容而有所區別的覆寫指定名稱。 如需視內容而有所區別的關鍵字的詳細資訊，請參閱[視內容而有所區別的關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。 如需覆寫規範的詳細資訊，請參閱[如何：在原生編譯中](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)宣告覆寫規範。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
@@ -102,4 +102,4 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

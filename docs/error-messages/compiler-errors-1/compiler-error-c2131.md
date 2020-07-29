@@ -5,22 +5,22 @@ f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397584"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220414"
 ---
 # <a name="compiler-error-c2131"></a>編譯器錯誤 C2131
 
 > 運算式未評估為常數
 
-運算式宣告為**const**或是**constexpr**未評估在編譯時期為常數。 編譯器必須能夠判斷處使用運算式的值。
+宣告為或的 **`const`** 運算式 **`constexpr`** 在編譯時期不會評估為常數。 編譯器必須能夠在使用時判斷運算式的值。
 
 ## <a name="example"></a>範例
 
-這個範例示範會導致錯誤 C2131，以及如何修正此問題的方法。
+這個範例會示範如何導致錯誤 C2131，以及如何修正此問題。
 
 ```cpp
 // c2131.cpp

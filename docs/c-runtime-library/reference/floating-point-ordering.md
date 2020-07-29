@@ -1,5 +1,5 @@
 ---
-title: isgreater、 isgreaterequal、 isless、 islessequal、 islessgreater、 isunordered
+title: isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 ms.date: 01/31/2019
 f1_keywords:
 - isgreater
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333699"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220713"
 ---
-# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、 isgreaterequal、 isless、 islessequal、 islessgreater、 isunordered
+# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 
-判斷兩個浮點數的值之間的順序關聯性。
+判斷兩個浮點值之間的順序關聯性。
 
 ## <a name="syntax"></a>語法
 
@@ -106,30 +106,30 @@ inline bool isunordered(
 
 ### <a name="parameters"></a>參數
 
-*x*， *y*<br/>
+*x*、 *y*<br/>
 要比較的浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-在所有的比較中，將相同的正負號的比較為相等。 負的無限值是小於任何有限值或無限大的正數。 正無限值大於任何有限值或負的無限值。 零，而不論登相等。 Nan 不小於、 等於或大於任何值，包括另一的 NaN。
+在所有比較中，具有相同正負號比較的無窮大不相等。 負無限大小於任何有限值或正無限大。 正無限大大於任何有限值或負無限大。 無論正負號，零都是相等的。 Nan 不小於、等於或大於任何值，包括另一個 NaN。
 
-當兩種引數是 NaN、 排序的巨集**isgreater**， **isgreaterequal**， **isless**，以及**islessequal**傳回非零如果值之間指定的順序關聯*x*並*y*保存，則為 true。 如果任一個或兩個引數是 Nan，或如果排序的關聯性，則為 false，這些巨集就會傳回 0。 函式表單以相同的方式運作，但傳回**真**或是**false**。
+當兩個引數都不是 NaN 時，如果*x*和*y*之間指定的順序關聯為 true，則排序宏**isgreater**、 **isgreaterequal**、 **isless**和**islessequal**會傳回非零值。 如果其中一個或兩個引數為 Nan，或如果排序關聯性為 false，則這些宏會傳回0。 函式表單的行為方式相同，但會傳回 **`true`** 或 **`false`** 。
 
-**Islessgreater**巨集會傳回非零值，如果兩個*x*並*y*不是 Nan，以及*x*是小於或大於*y*。 如果任一個或兩個引數是 Nan，或如果值相等，則會傳回 0。 函式表單相同的行為，但會傳回**真**或是**false**。
+如果*x*和*y*都不是 nan，而且*x*小於或大於*y*，則**islessgreater**宏會傳回非零值。 如果其中一個或兩個引數都是 Nan，或如果值相等，則會傳回0。 函式表單的行為方式相同，但會傳回 **`true`** 或 **`false`** 。
 
-**Isunordered**巨集會傳回非零值，如果有任一*x*， *y*，或兩者都是 Nan。 否則它會傳回 0。 函式表單相同的行為，但會傳回**真**或是**false**。
+如果*x*、 *y*或兩者都是 nan，則**isunordered**宏會傳回非零值。 否則，它會傳回 0。 函式表單的行為方式相同，但會傳回 **`true`** 或 **`false`** 。
 
 ## <a name="remarks"></a>備註
 
-這些比較作業會實作為巨集時編譯為 C，以及內嵌樣板函式時編譯為C++。
+當編譯成 C 時，這些比較作業會實作為宏，並在編譯為 c + + 時當做內嵌範本函式來執行。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭 (C)|必要的標頭 (C++)|
+|函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**， **isgreaterequal**， **isless**，<br/>**islessequal**， **islessgreater**， **isunordered** | \<math.h> | \<math.h> 或 \<cmath> |
+| **isgreater**、 **isgreaterequal**、 **isless**、<br/>**islessequal**、 **islessgreater**、 **isunordered** | \<math.h> | \<math.h> 或 \<cmath> |
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

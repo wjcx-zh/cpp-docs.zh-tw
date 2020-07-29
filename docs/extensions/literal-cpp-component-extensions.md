@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172135"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214252"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI 和 C++/CX)
 
@@ -51,7 +51,7 @@ ms.locfileid: "80172135"
 
 ## <a name="example"></a>範例
 
-此範例將示範 **literal** 變數即暗示 **static**。
+這個範例會顯示**常**值變數表示 **`static`** 。
 
 ```cpp
 // mcppv2_literal.cpp
@@ -127,4 +127,4 @@ class B {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

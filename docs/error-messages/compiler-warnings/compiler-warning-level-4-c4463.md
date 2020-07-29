@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 （層級 4） C4463
+title: 編譯器警告（層級4） C4463
 ms.date: 11/04/2016
 f1_keywords:
 - C4463
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: e125a532f87533958ec43ed5580665ad4108856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400795"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214356"
 ---
-# <a name="compiler-warning-level-4-c4463"></a>編譯器警告 （層級 4） C4463
+# <a name="compiler-warning-level-4-c4463"></a>編譯器警告（層級4） C4463
 
-> 溢位;指派*值*只能保留值的位元欄位*low_value*到*high_value*
+> 溢出將*值*指派給位欄位，其中只能保存從*low_value*到*high_value*的值
 
-受指派*值*超出範圍的位元欄位可以保留的值。 帶正負號的位元欄位類型使用的高位位元表示正負號，因此，如果*n*是帶正負號的位元欄位是-2 位元欄位大小，範圍<sup>n-1</sup> 2<sup>n-1</sup>-1，而不帶正負號位元欄位必須介於 0 到 2<sup>n</sup>-1。
+指派的*值*超出位欄位可以保存的值範圍。 帶正負號的位欄位類型會使用高序位的符號，因此如果*n*是位欄位的大小，已簽署之位欄位的範圍會是-2<sup>n-1</sup>到 2<sup>n-1</sup>-1，而不帶正負號的位欄位的範圍是從0到 2<sup>n</sup>-1。
 
 ## <a name="example"></a>範例
 
-此範例會產生 C4463，因為它會嘗試將值 3 指派給位元欄位的型別`int`緩衝區的大小為 2，其具有 1 的範圍從-2。
+這個範例會產生 C4463，因為它會嘗試指派3的值給類型的位欄位 **`int`** ，其大小為2，其範圍從-2 到1。
 
-若要修正此問題，您可以變更指派的值，以允許的範圍中的項目。 如果位元欄位是保存不帶正負號的值，範圍從 0 到 3 中，您可以變更的宣告型別`unsigned`。 如果欄位是儲存於範圍-4 到 3 的值，您可以將位元欄位大小變更為 3。
+若要修正這個問題，您可以將指派的值變更為允許範圍中的某個值。 如果位欄位的目的是要在0到3的範圍內保存不帶正負號的值，您可以將宣告類型變更為 **`unsigned`** 。 如果欄位要保存範圍-4 到3的值，您可以將 [位欄位大小] 變更為3。
 
 ```cpp
 // C4463_overflow.cpp

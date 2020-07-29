@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220804"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>存留期和可視性的摘要
 
@@ -20,13 +20,13 @@ ms.locfileid: "75299074"
 
 |屬性：<br /><br /> 層級|項目|儲存類別<br /><br /> 規範|結果：<br /><br /> 存留期|可見性|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|檔案範圍|變數定義|**靜止**|全域|發生之原始程式檔的其餘部分|
-||變數宣告|**extern**|全域|發生之原始程式檔的其餘部分|
-||函式原型或定義|**靜止**|全域|單一原始程式檔|
-||函式原型|**extern**|全域|原始程式檔的其餘部分。|
-|區塊範圍|變數宣告|**extern**|全域|封鎖|
-||變數定義|**靜止**|全域|封鎖|
-||變數定義|**auto** 或 **register**|本機|封鎖|
+|檔案範圍|變數定義|**`static`**|全域|發生之原始程式檔的其餘部分|
+||變數宣告|**`extern`**|全域|發生之原始程式檔的其餘部分|
+||函式原型或定義|**`static`**|全域|單一原始程式檔|
+||函式原型|**`extern`**|全域|原始程式檔的其餘部分。|
+|區塊範圍|變數宣告|**`extern`**|全域|封鎖|
+||變數定義|**`static`**|全域|封鎖|
+||變數定義|**`auto`** 或**`register`**|本機|封鎖|
 
 ## <a name="example"></a>範例
 
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 在此範例中，可視性共有四個層級：外部層級和三個區塊層級。 值會列印至螢幕，如每個陳述式之後的註解所示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

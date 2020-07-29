@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: affec6dcd88290b24a92cd9035a131baee38bcf1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172148"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214265"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
-「內部指標」會宣告指向參考型別內部的指標，而不是指向物件本身。 內部指標可以指向參考控制代碼、實值類型、Boxed 類型控制代碼、Managed 類型的成員，或是指向 Managed 陣列的元素。
+「內部指標」** 會宣告指向參考型別內部的指標，而不是指向物件本身。 內部指標可以指向參考控制代碼、實值類型、Boxed 類型控制代碼、Managed 類型的成員，或是指向 Managed 陣列的元素。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -45,7 +45,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="parameters"></a>參數
 
 *cv_qualifier*<br/>
-**const** 或 **volatile** 限定詞。
+**`const`** 或 **`volatile`** 限定詞。
 
 *type*<br/>
 *initializer* 的型別。
@@ -53,7 +53,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 *var*<br/>
 **interior_ptr** 變數的名稱。
 
-*initializer*<br/>
+*初始設定式*<br/>
 參考類型的成員，Managed 陣列的元素，或是其他任何可以指派至原生指標的物件。
 
 ### <a name="remarks"></a>備註
@@ -66,7 +66,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 由於內部指標只會出現在堆疊上，因此採用內部指標的位址會產生 Unmanaged 指標。
 
-**interior_ptr** 具有 **bool** 的隱含轉換，因此能夠在條件陳述式中使用。
+**interior_ptr**具有隱含的轉換 **`bool`** ，可讓它在條件陳述式中使用。
 
 如需如何宣告內部指標，讓它指向無法在記憶體回收堆積上移動之物件的相關資訊，請參閱 [pin_ptr](pin-ptr-cpp-cli.md)。
 
@@ -124,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

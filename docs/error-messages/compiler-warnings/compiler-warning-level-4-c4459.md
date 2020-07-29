@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 （層級 4） C4459
+title: 編譯器警告（層級4） C4459
 ms.date: 11/04/2016
 f1_keywords:
 - C4459
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d6d0a802f9f628145fbc5910aca805a5b01b94d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214369"
 ---
-# <a name="compiler-warning-level-4-c4459"></a>編譯器警告 （層級 4） C4459
+# <a name="compiler-warning-level-4-c4459"></a>編譯器警告（層級4） C4459
 
-> 宣告的 '*識別碼*' 會隱藏全域宣告
+> '*identifier*' 的宣告會隱藏全域宣告
 
-Deklarace*識別碼*本機範圍內隱藏相同名稱的宣告*識別項*在全域範圍中。 這項警告可讓您知道的參考*識別碼*在這個範圍中解析的區域宣告的版本，而非全域版本，這可能會或可能不到您的意圖。 一般而言，我們建議您盡量減少工程最好使用全域變數。 全域命名空間的干擾降到最低，我們建議使用的具名命名空間的全域變數。
+本機範圍中的*識別碼*宣告會隱藏全域範圍中具有相同名稱之*識別碼*的宣告。 此警告可讓您知道，此範圍內的*識別碼*參考會解析為本機宣告的版本，而不是全域版本，而不一定是您的意圖。 一般來說，我們建議您將全域變數的使用降到最低，以做為良好的工程實務。 若要將全域命名空間的污染降到最低，我們建議針對全域變數使用名為的命名空間。
 
-這個警告的新功能 Visual Studio 2015 中，在 MicrosoftC++編譯器版本 18.00。 若要隱藏警告的編譯器或更新版本移轉您的程式碼時，該版本中，使用[/wv:18](../../build/reference/compiler-option-warning-level.md)編譯器選項。
+這是 Microsoft c + + 編譯器18.00 版中 Visual Studio 2015 的新警告。 若要在遷移程式碼時隱藏該編譯器或更新版本的警告，請使用[/Wv： 18](../../build/reference/compiler-option-warning-level.md)編譯器選項。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4459:
+下列範例會產生 C4459：
 
 ```cpp
 // C4459_hide.cpp
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-若要修正此問題的一個方式是建立您的全域變數的命名空間，但不使用`using`該命名空間帶入範圍，因此所有參考都必須都使用明確的指示詞完整名稱：
+修正此問題的方法之一，是為您的全域建立命名空間，但不使用 **`using`** 指示詞將該命名空間帶入範圍中，因此所有參考都必須使用明確的限定名稱：
 
 ```cpp
 // C4459_namespace.cpp

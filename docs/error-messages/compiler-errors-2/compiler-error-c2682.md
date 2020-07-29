@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2697ce5a790fffe762d97ca3380853514de6d437
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760279"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220258"
 ---
 # <a name="compiler-error-c2682"></a>編譯器錯誤 C2682
 
 無法使用 casting_operator 從 ' type1 ' 轉換為 ' type2 '
 
-轉換運算子嘗試在不相容的類型之間進行轉換。 例如，您無法使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)運算子將指標轉換為參考。 `dynamic_cast` 運算子不能用來轉換掉限定詞。 類型上的所有限定詞都必須相符。
+轉換運算子嘗試在不相容的類型之間進行轉換。 例如，您無法使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)運算子將指標轉換為參考。 **`dynamic_cast`** 運算子不能用來轉換掉限定詞。 類型上的所有限定詞都必須相符。
 
-您可以使用 `const_cast` 運算子來移除如 `const`、`volatile`或 `__unaligned`等屬性。
+您可以使用 **`const_cast`** 運算子來移除屬性 **`const`** ，例如、 **`volatile`** 或 **`__unaligned`** 。
 
 下列範例會產生 C2682：
 

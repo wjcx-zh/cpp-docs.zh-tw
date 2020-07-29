@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220765"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -79,7 +79,7 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**acos**的多載。 在 C 程式中， **acos**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**acos**的多載 **`float`** **`long double`** 。 在 C 程式中， **acos**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

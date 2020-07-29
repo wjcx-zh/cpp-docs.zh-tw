@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404547"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220544"
 ---
 # <a name="comptr-class"></a>ComPtr 類別
 
@@ -90,20 +90,20 @@ friend class ComPtr;
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-名稱            | 描述
+名稱            | 說明
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | *T*範本參數所指定之類型的同義字。
 
 ### <a name="public-constructors"></a>公用建構函式
 
-名稱                             | 描述
+名稱                             | 說明
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
 [ComPtr：： ComPtr](#comptr)        | 初始化 `ComPtr` 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。
 [ComPtr：： ~ ComPtr](#tilde-comptr) | 將的實例 `ComPtr` 。
 
 ### <a name="public-methods"></a>公用方法
 
-名稱                                                      | 描述
+名稱                                                      | 說明
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtr：： As](#as)                                         | 傳回 `ComPtr` 物件，表示指定之範本參數所識別的介面。
 [ComPtr：： AsIID](#asiid)                                   | 傳回 `ComPtr` 物件，表示指定之介面識別碼所識別的介面。
@@ -119,14 +119,14 @@ friend class ComPtr;
 
 ### <a name="protected-methods"></a>保護方法
 
-名稱                                        | 描述
+名稱                                        | 說明
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr：： InternalAddRef](#internaladdref)   | 遞增與這個相關聯之介面的參考計數 `ComPtr` 。
 [ComPtr：： InternalRelease](#internalrelease) | 在與此相關聯的介面上執行 COM 發行作業 `ComPtr` 。
 
 ### <a name="public-operators"></a>公用運算子
 
-名稱                                                                                           | 描述
+名稱                                                                                           | 說明
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr：： operator&](#operator-ampersand)                                                       | 抓取目前的位址 `ComPtr` 。
 [ComPtr：： operator->](#operator-arrow)                                                          | 擷取目前範本參數所指定之類型的指標。
@@ -137,7 +137,7 @@ friend class ComPtr;
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-名稱                 | 描述
+名稱                 | 說明
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr：:p tr_](#ptr) | 包含與這個相關聯之介面的指標，並由這個所管理 `ComPtr` 。
 
@@ -440,7 +440,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="remarks"></a>備註
 
-此 helper 函式會移除使用 STDMETHOD 宏所造成的不必要額外負荷。 此函式會建立 `IUnknown` 類型 `private` ，而不是 `virtual` 。
+此 helper 函式會移除使用 STDMETHOD 宏所造成的不必要額外負荷。 此函式會建立 `IUnknown` 類型 **`private`** ，而不是 **`virtual`** 。
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr：： operator =
 
@@ -532,9 +532,9 @@ bool operator==(
 
 ### <a name="return-value"></a>傳回值
 
-`true`如果物件*a*等於物件*b*，第一個運算子會產生，否則為 `false` 。
+**`true`** 如果物件*a*等於物件*b*，第一個運算子會產生，否則為 **`false`** 。
 
-第二個和第三個運算子會產生， `true` 如果物件*a*等於 `nullptr` ，則為，否則為 `false` 。
+第二個和第三個運算子會產生， **`true`** 如果物件*a*等於 **`nullptr`** ，則為，否則為 **`false`** 。
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr：： operator！ =
 
@@ -567,9 +567,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>傳回值
 
-第一個運算子會產生 `true` ，如果物件*a*不等於物件*b*，則為，否則為 `false` 。
+**`true`** 如果物件*a*不等於物件*b*，第一個運算子會產生，否則為 **`false`** 。
 
-第二個和第三個運算子會產生 `true` （如果物件*a*不等於 `nullptr` ）; 否則為 `false` 。
+第二個和第三個運算子 **`true`** 會產生，如果物件*a*不等於，則為 **`nullptr`** ，否則為 **`false`** 。
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果介面與此相關聯，則為 `ComPtr` [BoolStruct：： Member](boolstruct-structure.md#member)資料成員的位址，否則為 `nullptr` 。
+如果介面與此相關聯，則為 `ComPtr` [BoolStruct：： Member](boolstruct-structure.md#member)資料成員的位址，否則為 **`nullptr`** 。
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr：:p tr_
 

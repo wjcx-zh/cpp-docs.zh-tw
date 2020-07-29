@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bf8d1ea745ed96d782fdc95d825e278e894066ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753402"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220180"
 ---
 # <a name="compiler-error-c3711"></a>編譯器錯誤 C3711
 
 ' method '：非受控事件來源方法必須傳回 void 或整數類型
 
-您在事件來源中定義了未傳回 void 或整數類型的方法。 若要修正這個錯誤，請讓事件和事件處理常式的傳回型別 `void` 或整數型別（例如 `int` 或 `long`）。
+您在事件來源中定義了未傳回 void 或整數類型的方法。 若要修正這個錯誤，請讓事件和事件處理常式的傳回型別 **`void`** 或整數型別（例如 **`int`** 或） **`long`** 。
 
 下列範例會產生 C3711：
 

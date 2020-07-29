@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220492"
 ---
 # <a name="enableif-structure"></a>EnableIf 結構
 
@@ -33,22 +33,22 @@ struct EnableIf<true, T>;
 *T*<br/>
 類型。
 
-*b*<br/>
+*位元組*<br/>
 布林運算式。
 
 ## <a name="remarks"></a>備註
 
-定義第二個樣板參數所指定之類型的資料成員（如果第一個樣板參數評估為**true**）。
+定義第二個樣板參數所指定之類型的資料成員（如果第一個樣板參數評估為） **`true`** 。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|`type`|如果範本參數*b*評估為**true**，部分特製化會將資料成員 `type` 定義為 `T`類型。|
+|`type`|如果範本參數*b*評估為 **`true`** ，則部分特製化會將資料成員定義 `type` 為類型 `T` 。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `EnableIf`
 
@@ -60,4 +60,4 @@ struct EnableIf<true, T>;
 
 ## <a name="see-also"></a>另請參閱
 
-[Microsoft::WRL::Details 命名空間](microsoft-wrl-details-namespace.md)
+[Microsoft：： WRL：:D etails 命名空間](microsoft-wrl-details-namespace.md)

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: 9515abb6fed2ffd2c818fc14eae321bfcc856ce5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5768487c9b720b1a49e50de88022a2bdc02d482
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214278"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：使用 const 關鍵字宣告內部指標 (C++/CLI)
 
-下列範例示範如何在內部指標的宣告中使用 **const**。
+下列範例顯示如何 **`const`** 在內部指標的宣告中使用。
 
 > [!IMPORTANT]
 > `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。

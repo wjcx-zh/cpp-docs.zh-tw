@@ -7,18 +7,18 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-ms.openlocfilehash: 7f0c6457cc0806a0f1764300cffa1c9878b8a600
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ec639004884d022fe6a827c2ec31d3201ea04657
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217370"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214213"
 ---
 # <a name="_mm_stream_sd"></a>_mm_stream_sd
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-將64位資料寫入記憶體位置, 而不會污染快取。
+將64位資料寫入記憶體位置，而不會污染快取。
 
 ## <a name="syntax"></a>語法
 
@@ -34,8 +34,8 @@ void _mm_stream_sd(
 *Dest*\
 脫銷將寫入來源資料之位置的指標。
 
-*Source*\
-在128位值, 其中包含要`double`在其底部64位中寫入的值。
+*來源*\
+在128位值，其中包含 **`double`** 要在其底部64位中寫入的值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -47,13 +47,13 @@ void _mm_stream_sd(
 |---------------|------------------|
 |`_mm_stream_sd`|SSE4a|
 
-**標頭檔**\<intrin.h. h >
+**標頭檔** \<intrin.h>
 
 ## <a name="remarks"></a>備註
 
-內建函式會產生`movntsd`指令。 若要判斷此指示的硬體支援, 請`__cpuid`使用`InfoType=0x80000001`呼叫內建函式並檢查的`CPUInfo[2] (ECX)`位6。 如果硬體支援此指令, 則此位為 1, 否則為0。
+內建函式會產生 `movntsd` 指令。 若要判斷此指示的硬體支援，請 `__cpuid` 使用呼叫內建函式 `InfoType=0x80000001` 並檢查的位 6 `CPUInfo[2] (ECX)` 。 如果硬體支援此指令，則此位為1，否則為0。
 
-如果您在不`_mm_stream_sd` `movntsd`支援指令的硬體上執行使用內建的程式碼, 結果會是無法預測的。
+如果您在不支援指令的硬體上執行使用內建的程式碼 `_mm_stream_sd` `movntsd` ，結果會是無法預測的。
 
 ## <a name="example"></a>範例
 
@@ -81,9 +81,9 @@ int main()
 d[0] = -1, d[1] = 1
 ```
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
-由 Advanced 微裝置, Inc. 的部分著作權2007著作權所有，並保留一切權利。 已從 Advanced 微裝置, Inc. 的許可權重現
+由 Advanced 微裝置，Inc. 的部分著作權2007已保留擁有權限。 已從 Advanced 微裝置，Inc. 的許可權重現
 
 ## <a name="see-also"></a>另請參閱
 

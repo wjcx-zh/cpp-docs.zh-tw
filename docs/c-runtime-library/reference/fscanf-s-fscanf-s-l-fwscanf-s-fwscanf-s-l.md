@@ -43,12 +43,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956551"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220687"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 
@@ -83,10 +83,10 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>參數
 
-*stream*<br/>
+*資料流程*<br/>
 **FILE** 結構的指標。
 
-*格式*<br/>
+*format*<br/>
 格式控制字串。
 
 *引數*<br/>
@@ -103,12 +103,12 @@ int _fwscanf_s_l(
 
 ## <a name="remarks"></a>備註
 
-**Fscanf_s**函數會將資料從*資料流程*的目前位置讀取到*引數*所指定的位置（如果有的話）。 每個*自*變數都必須是類型變數的指標，其對應于*格式*的類型規範。 *format*會控制輸入欄位的轉譯，並具有與**scanf_s**的*格式*引數相同的形式和功能。如需*格式*的說明，請參閱[格式規格欄位： Scanf 和 wscanf 函數](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  **fwscanf_s**是寬字元版本的**fscanf_s**;**fwscanf_s**的格式引數是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fscanf_s**目前不支援來自 UNICODE 資料流程的輸入。
+**Fscanf_s**函式會將資料從*資料流程*的目前位置讀取到*引數*所指定的位置（如果有的話）。 每個*自*變數都必須是類型變數的指標，其對應于*格式*的類型規範。 *format*會控制輸入欄位的轉譯，並具有與**scanf_s**之*格式*引數相同的形式和功能。如需*格式*的說明，請參閱[格式規格欄位： Scanf 和 wscanf 函數](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  **fwscanf_s**是寬字元版本的**fscanf_s**;**fwscanf_s**的格式引數是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fscanf_s**目前不支援來自 UNICODE 資料流程的輸入。
 
-更安全的函式（具有 **_s**尾碼）和其他版本之間的主要差異在於，更安全的函式需要每個**c**、 **c**、 **s**、 **s**和 **[** 類型] 欄位的字元大小緊接在變數之後當做引數傳遞。 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
+更安全的函式（具有 **_s**尾碼）和其他版本之間的主要差異在於，更安全的函式需要每個**c**、 **c**、 **s**、 **s**和 **[** 類型欄位的字元大小，以緊接在變數之後做為引數傳遞。 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
 
 > [!NOTE]
-> Size 參數的類型不是不**帶正負**號，而不是**size_t**。
+> Size 參數的類型為 **`unsigned`** ，而不是**size_t**。
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
@@ -121,10 +121,10 @@ int _fwscanf_s_l(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
-|**fscanf_s**、 **_fscanf_s_l**|\<stdio.h>|
-|**fwscanf_s**、 **_fwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**fscanf_s**， **_fscanf_s_l**|\<stdio.h>|
+|**fwscanf_s**， **_fwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

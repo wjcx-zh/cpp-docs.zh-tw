@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a2a164f919dc7535a4587d51f4f7dba8653a1760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214681"
 ---
 # <a name="compiler-error-c2360"></a>編譯器錯誤 C2360
 
 ' identifier ' 的初始化已由 ' case ' 標籤略過
 
-可以在 `switch` 語句中略過 `identifier` 的初始化。 除非宣告包含在區塊中，否則您無法跳過具有初始化運算式的宣告。 （除非在區塊內宣告，否則變數會在範圍內，直到 `switch` 語句結束為止）。
+`identifier`可以在語句中略過的初始化 **`switch`** 。 除非宣告包含在區塊中，否則您無法跳過具有初始化運算式的宣告。 （除非在區塊內宣告，否則變數會在範圍內，直到語句結束為止 **`switch`** ）。
 
 下列範例會產生 C2360：
 
@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-可能的解決方案：
+可能的解決方式：
 
 ```cpp
 // C2360b.cpp

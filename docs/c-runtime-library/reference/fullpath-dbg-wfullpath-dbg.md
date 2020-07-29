@@ -32,16 +32,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-ms.openlocfilehash: 9271e26bcf4a78ff8d2e4fcf108f1e483c22c1d7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b728090c201c9c5d07cc2f1bec4f53b1682e0e92
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220674"
 ---
 # <a name="_fullpath_dbg-_wfullpath_dbg"></a>_fullpath_dbg、_wfullpath_dbg
 
-_Fullpath 的版本[，_wfullpath](fullpath-wfullpath.md)會使用**malloc**的 debug 版本來配置記憶體。
+_Fullpath 的版本[，_wfullpath](fullpath-wfullpath.md)使用**malloc**的 debug 版本來配置記憶體。
 
 ## <a name="syntax"></a>語法
 
@@ -72,8 +72,8 @@ wchar_t *_wfullpath_dbg(
 *relPath*<br/>
 相對路徑名稱。
 
-*maxLength*<br/>
-絕對路徑名稱緩衝區的最大長度（*absPath*）。 **_Fullpath**的這個長度是以位元組為單位，但以寬字元（**wchar_t**）表示 **_wfullpath**。
+*長度*<br/>
+絕對路徑名稱緩衝區的最大長度（*absPath*）。 **_Fullpath**的這個長度是以位元組為單位，但適用于 _wfullpath 的寬字元（ **`wchar_t`** ）。 **_wfullpath**
 
 *blockType*<br/>
 要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
@@ -86,13 +86,13 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式都會傳回包含絕對路徑名稱（*absPath*）之緩衝區的指標。 如果發生錯誤（例如，如果傳入的*relPath*值包含無效或找不到的磁碟機號，或是建立的絕對路徑名稱（*absPath*）的長度大於*maxLength*），則**函式會傳回Null**。
+每個函式都會傳回包含絕對路徑名稱（*absPath*）之緩衝區的指標。 如果發生錯誤（例如，如果傳入*relPath*的值包含無效或找不到的磁碟機號，或是建立的絕對路徑名稱（*absPath*）的長度大於*maxLength*），此函數會傳回**Null**。
 
 ## <a name="remarks"></a>備註
 
-**_Fullpath_dbg**和 **_wfullpath_dbg**函式與 **_fullpath**和 **_wfullpath**相同，不同之處在于，當已定義 **_debug**時，這些函式會使用的 DEBUG 版本**malloc**， **_malloc_dbg**，如果傳遞**Null**做為第一個參數，則配置記憶體。 如需 **_malloc_dbg**之偵錯工具功能的詳細資訊，請參閱[_malloc_dbg](malloc-dbg.md)。
+**_Fullpath_dbg**和 **_wfullpath_dbg**函式與 **_fullpath**和 **_wfullpath**相同，不同之處在于當定義了 **_DEBUG**時，如果**Null**做為第一個參數傳遞，這些函式會使用**malloc**， **_malloc_dbg**的 DEBUG 版本來配置記憶體。 如需 **_malloc_dbg**之偵錯工具功能的詳細資訊，請參閱[_malloc_dbg](malloc-dbg.md)。
 
-在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當定義 **_CRTDBG_MAP_ALLOC**時， **_fullpath**和 **_wfullpath**的呼叫會分別重新對應至 **_fullpath_dbg**和 **_wfullpath_dbg**，並將*blockType*設定為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將堆積區塊標記為 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 定義 **_CRTDBG_MAP_ALLOC**時， **_fullpath**和 **_wfullpath**的呼叫會分別重新對應至 **_fullpath_dbg**和 **_wfullpath_dbg**，並將*blockType*設定為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將堆積區塊標示為 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -102,12 +102,12 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fullpath_dbg**|\<crtdbg.h>|
 |**_wfullpath_dbg**|\<crtdbg.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

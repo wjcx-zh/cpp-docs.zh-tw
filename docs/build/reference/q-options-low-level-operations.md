@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: f5342071cef76bcc736f128c344279898a61c462
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034515"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231490"
 ---
 # <a name="q-options-low-level-operations"></a>/Q 選項 (低階運算)
 
@@ -20,9 +20,9 @@ ms.locfileid: "77034515"
 
 - [/Qfast_transcendentals （強制快速超越函式）](qfast-transcendentals-force-fast-transcendentals.md)：產生快速超越函式。
 
-- [/QIfist （隱藏 _ftol）](qifist-suppress-ftol.md)：當需要從浮點類型轉換為整數類型時，會隱藏 `_ftol` （僅限 x86）。
+- [/QIfist （隱藏 _ftol）](qifist-suppress-ftol.md)：在 `_ftol` 需要從浮點類型轉換為整數類型（僅限 x86）時隱藏。
 
-- [/Qimprecise_fwaits （移除 Try 區塊內的 try 區域 fwaits）](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)：移除 `try` 區塊內的 `fwait` 命令。
+- [/Qimprecise_fwaits （移除 Try 區塊內的 try 區域 fwaits）](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)：移除 `fwait` **`try`** 區塊內的命令。
 
 - [/QIntel-jcc-erratum](qintel-jcc-erratum.md)：降低 Intel 跳躍條件程式碼（jcc）錯誤微碼更新所造成的效能影響。
 

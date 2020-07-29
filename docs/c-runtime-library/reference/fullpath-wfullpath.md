@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909939"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231386"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath、_wfullpath
 
@@ -71,7 +71,7 @@ wchar_t *_wfullpath(
 相對路徑名稱。
 
 *長度*<br/>
-絕對路徑名稱緩衝區的最大長度（*absPath*）。 **_Fullpath**的這個長度是以位元組為單位，但 **_wfullpath**的寬字元（**wchar_t**）則為。
+絕對路徑名稱緩衝區的最大長度（*absPath*）。 **_Fullpath**的這個長度是以位元組為單位，但適用于 _wfullpath 的寬字元（ **`wchar_t`** ）。 **_wfullpath**
 
 ## <a name="return-value"></a>傳回值
 

@@ -1,17 +1,17 @@
 ---
-title: requires_category （C++ COM 屬性）
+title: requires_category （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 044f868a6be8391a4b0dfafd58ff0f3178575047
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214548"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231555"
 ---
 # <a name="requires_category"></a>requires_category
 
@@ -31,7 +31,7 @@ ms.locfileid: "80214548"
 
 ## <a name="remarks"></a>備註
 
-**Requires_category** C++屬性會指定目標類別所需的元件類別目錄。 如需詳細資訊，請參閱[REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)。
+**Requires_category** c + + 屬性會指定目標類別所需的元件類別目錄。 如需詳細資訊，請參閱[REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)。
 
 此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。
 
@@ -59,10 +59,10 @@ class CMyClass {};
 
 |||
 |-|-|
-|**適用於**|**class**、 **struct**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|否|
-|**必要屬性**|下列一或多項： `coclass`、`progid`或 `vi_progid`。|
-|**無效屬性**|None|
+|**必要的屬性**|下列一或多項： `coclass` 、 `progid` 或 `vi_progid` 。|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

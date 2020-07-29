@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231568"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式（c + +）
 
@@ -29,7 +29,7 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
 
 - Visual Studio 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確認已選取**使用 C++ 的桌面開發**工作負載。 如果您在安裝 Visual Studio 時未安裝此工作負載，也不用擔心。 您可以再次執行安裝程式並立即安裝。
 
-   ![使用 C++ 開發桌面](../build/media/desktop-development-with-cpp.png "使用 C++ 的傳統型開發")
+   ![使用 C++ 的傳統型開發](../build/media/desktop-development-with-cpp.png "使用 C++ 的傳統型開發")
 
 - 了解使用 Visual Studio IDE 的基本概念。 如果您先前使用過 Windows 傳統型應用程式，您應能輕鬆跟上。 如需簡介，請參閱 [Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
 
@@ -141,9 +141,9 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
    如需此函式之參數和傳回值的相關資訊，請參閱[WinMain 進入點](/windows/win32/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 所有這些額外的字組，例如 `CALLBACK` 、或 `HINSTANCE` ，或 `_In_` ？ 傳統的 Windows API 會廣泛地使用 typedef 和預處理器宏來抽象化一些類型的詳細資料，以及平臺特定的程式碼，例如呼叫慣例、 **__declspec**宣告和編譯器 pragma。 在 Visual Studio 中，您可以使用 IntelliSense [[快速](/visualstudio/ide/using-intellisense#quick-info)諮詢] 功能來查看這些 typedef 和巨集定義的內容。 將滑鼠暫留在感對的單字上，或選取它，然後按**ctrl** + **K**、 **ctrl** + **I** ，尋找包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回類型通常會使用*SAL 注釋*，以協助您攔截程式設計錯誤。 如需詳細資訊，請參閱[使用 SAL 注釋減少 C/c + + 程式碼](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)缺失。
+   > 所有這些額外的字組，例如 `CALLBACK` 、或 `HINSTANCE` ，或 `_In_` ？ 傳統的 Windows API 會廣泛地使用 typedef 和預處理器宏來抽象化一些類型的詳細資料，以及平臺特定的程式碼，例如呼叫慣例、宣告 **`__declspec`** 和編譯器 pragma。 在 Visual Studio 中，您可以使用 IntelliSense [[快速](/visualstudio/ide/using-intellisense#quick-info)諮詢] 功能來查看這些 typedef 和巨集定義的內容。 將滑鼠暫留在感對的單字上，或選取它，然後按**ctrl** + **K**、 **ctrl** + **I** ，尋找包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回類型通常會使用*SAL 注釋*，以協助您攔截程式設計錯誤。 如需詳細資訊，請參閱[使用 SAL 注釋減少 C/c + + 程式碼](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)缺失。
 
-1. Windows 桌面程式需要 &lt; windows>。 &lt;> tchar 會定義 `TCHAR` 宏，這會在專案中定義 UNICODE 符號時，最後解析成**wchar_t** ，否則會解析成**char**。  如果您一直使用 UNICODE 建立，則不需要 TCHAR，而且可以直接使用**wchar_t** 。
+1. Windows 桌面程式需要 &lt; windows>。 &lt;> tchar `TCHAR` 會定義宏， **`wchar_t`** 如果您的專案中已定義 UNICODE 符號，則其最終會解析為，否則會解析為 **`char`** 。  如果您一直使用 UNICODE 建立，則不需要 TCHAR，而且可以直接使用 **`wchar_t`** 。
 
    ```cpp
    #include <windows.h>

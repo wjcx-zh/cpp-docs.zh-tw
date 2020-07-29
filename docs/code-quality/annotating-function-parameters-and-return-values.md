@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404033"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231256"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>標注函式參數和傳回值
 
@@ -167,7 +167,7 @@ ms.locfileid: "86404033"
 
      陣列的指標，由函數讀取。 陣列是大小的 `s` 元素，全部都必須是有效的。
 
-     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 **`char`** 時，字串才會使用 `_bytes_` variant **`wchar_t`** 。
 
 - `_In_reads_z_(s)`
 
@@ -190,7 +190,7 @@ ms.locfileid: "86404033"
 
      在此範例中，呼叫者會提供的 `size` 元素緩衝區 `p1` 。 `MyStringCopy`使部分元素有效。 更重要的 `_Null_terminated_` 是，上的注釋 `PWSTR` 表示 `p1` 在後置狀態中是以 null 終止。 如此一來，有效元素的數目仍然定義良好，但不需要特定的元素計數。
 
-     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 **`char`** 時，字串才會使用 `_bytes_` variant **`wchar_t`** 。
 
 - `_Out_writes_z_(s)`
 
@@ -202,7 +202,7 @@ ms.locfileid: "86404033"
 
      陣列的指標，在函式中讀取和寫入。 這是大小 `s` 元素，且在前置狀態和後置狀態中有效。
 
-     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 **`char`** 時，字串才會使用 `_bytes_` variant **`wchar_t`** 。
 
 - `_Inout_updates_z_(s)`
 
@@ -231,7 +231,7 @@ ms.locfileid: "86404033"
 
      陣列的指標，這是函式的讀取和寫入。 這是大小的 `s` 元素，全部都必須在前置狀態中有效，而 `c` 元素在後置狀態中必須是有效的。
 
-     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 **`char`** 時，字串才會使用 `_bytes_` variant **`wchar_t`** 。
 
 - `_Inout_updates_all_(s)`
 
@@ -243,7 +243,7 @@ ms.locfileid: "86404033"
 
      換句話說，處於前置狀態的緩衝區中的每個元素，在 `s` 前置狀態和後置狀態中都是有效的。
 
-     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 `char` 時，字串才會使用 `_bytes_` variant `wchar_t` 。
+     `_bytes_`Variant 會提供以位元組為單位的大小，而不是元素。 只有當大小無法以元素表示時，才使用此變體。 例如，只有在使用的類似函式 **`char`** 時，字串才會使用 `_bytes_` variant **`wchar_t`** 。
 
 - `_In_reads_to_ptr_(p)`
 

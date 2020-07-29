@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C]
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
-ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8095dd8672218239dbcfa879e3df929643e93d90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344729"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231399"
 ---
 # <a name="while-statement-c"></a>while 陳述式 (C)
 
-`while` 陳述式可讓您重複陳述式直到指定的運算式變成 false 為止。
+**`while`** 語句可讓您重複語句，直到指定的運算式變成 false 為止。
 
 ## <a name="syntax"></a>語法
 
@@ -27,13 +27,13 @@ ms.locfileid: "62344729"
 
 1. 會對 *expression* 進行評估。
 
-1. 如果 *expression* 一開始是 false，就永遠不會執行 `while` 陳述式的主體，且控制權會從 `while` 陳述式傳遞至程式的下一個陳述式。
+1. 如果*expression*一開始是 false， **`while`** 就永遠不會執行語句的主體，而且控制權會從 **`while`** 語句傳遞至程式中的下一個語句。
 
    如果 *expression* 為 true (非零)，就會執行陳述式的本體，且從步驟 1 開始重複執行程序。
 
-在`while`執行語句主體內的**break**、 `goto`或`return`時，語句也可能會終止。 使用 **continue** 陳述式來終止反覆項目，而不需要離開 `while` 迴圈。 **continue** 陳述式會將控制權傳遞至 `while` 陳述式的下一個反覆項目。
+語句 **`while`** 可能也會在 **`break`** **`goto`** **`return`** 執行語句主體內的、或時終止。 使用 **`continue`** 語句來終止反復專案，而不結束 **`while`** 迴圈。 語句會將 **`continue`** 控制權傳遞至語句的下一個反復專案 **`while`** 。
 
-這是 `while` 陳述式的範例：
+這是語句的範例 **`while`** ：
 
 ```C
 while ( i >= 0 )
@@ -43,8 +43,8 @@ while ( i >= 0 )
 }
 ```
 
-這個範例會將 `string2` 的字元複製到 `string1`。 如果 `i` 大於或等於 0，會將 `string2[i]` 指派給 `string1[i]` 並遞減 `i`。 當 `i` 等於或小於 0 時，會終止執行 `while` 陳述式。
+這個範例會將 `string2` 的字元複製到 `string1`。 如果 `i` 大於或等於 0，會將 `string2[i]` 指派給 `string1[i]` 並遞減 `i`。 當 `i` 達到或低於0時，語句的執行就會 **`while`** 終止。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [while 語句（c + +）](../cpp/while-statement-cpp.md)

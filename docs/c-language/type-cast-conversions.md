@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc2b6d87d6fedf8d36373c901cdb6a6ba8b5f0e7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344937"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231451"
 ---
 # <a name="type-cast-conversions"></a>類型轉換
 
@@ -37,14 +37,14 @@ ms.locfileid: "62344937"
 |-----------------------|-----------------------|
 |整數類資料型別|任何整數類型或浮點類型，或物件的指標|
 |浮點|任何算術類型|
-|物件的指標，或（**void** <strong>\*</strong>）|任何整數類型（**void** <strong>\*</strong>）、物件的指標，或函式指標|
+|物件的指標，或（ **`void`** <strong>\*</strong> ）|任何整數類型、（ **`void`** <strong>\*</strong> ）、物件的指標，或函式指標|
 |函式指標|任何整數類型、物件的指標，或函式指標|
 |結構、等位或陣列|無|
 |Void 類型|任何型別|
 
-所有識別項都可以轉換成 `void` 類型。 不過，如果類型轉換運算式中指定的類型不是 `void`，則轉換成該類型的識別項不能是 `void` 運算式。 所有運算式都可以轉換成 `void`，但是類型 `void` 的運算式無法轉換成其他類型。 例如，具有 `void` 傳回類型的函式不能將其傳回值轉換成其他類型。
+任何識別碼都可以轉換成 **`void`** 類型。 不過，如果類型轉換運算式中指定的類型不是，則 **`void`** 轉換成該類型的識別碼不可以是 **`void`** 運算式。 任何運算式都可以轉換成 **`void`** ，但是類型的運算式 **`void`** 無法轉換成任何其他類型。 例如，具有傳回類型的 **`void`** 函式不能將其傳回轉換成另一個類型。
 
-請注意`void`， **void** <strong>\*</strong>運算式具有的類型指標，而不是`void`類型。 如果某個物件轉換為 `void` 類型，則無法將產生的運算式指派給任何項目。 同樣地，類型轉換物件無法接受左值，因此無法對類型轉換物件進行指派。
+請注意 **`void`** <strong>\*</strong> ，運算式具有的類型指標 **`void`** ，而不是類型 **`void`** 。 如果物件轉換成型別 **`void`** ，則產生的運算式無法指派給任何專案。 同樣地，類型轉換物件無法接受左值，因此無法對類型轉換物件進行指派。
 
 **Microsoft 特定的**
 
@@ -52,8 +52,8 @@ ms.locfileid: "62344937"
 
 **結束 Microsoft 專有**
 
-您可以使用轉換將運算式轉換成類型 `void`，但是產生的運算式只能在不需要值的位置使用。 轉換成**void** <strong>\*</strong>並回到原始類型的物件指標會回到其原始值。
+您可以使用轉換將運算式轉換成類型 **`void`** ，但是產生的運算式只能用在不需要值的位置。 轉換成 **`void`** <strong>\*</strong> 原始類型的物件指標會回到其原始值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類型轉換](../c-language/type-conversions-c.md)

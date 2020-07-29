@@ -1,21 +1,21 @@
 ---
-title: case （C++ COM 屬性）
+title: case （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167328"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232803"
 ---
 # <a name="case-c"></a>case (C++)
 
-與聯**集**內的[switch_type](switch-type.md)屬性搭配使用。
+與中的[switch_type](switch-type.md)屬性搭配使用 **`union`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -28,19 +28,19 @@ ms.locfileid: "80167328"
 *value*<br/>
 您想要提供處理的可能輸入值。 **值**的類型可以是下列其中一種類型：
 
-- `int`
+- **`int`**
 
-- `char`
+- **`char`**
 
 - `boolean`
 
-- `enum`
+- **`enum`**
 
 或這類類型的識別碼。
 
 ## <a name="remarks"></a>備註
 
-**Case** C++屬性的功能與**case** MIDL 屬性相同。 這個屬性只會與[switch_type](switch-type.md)屬性搭配使用。
+**Case** c + + 屬性的功能與**case** MIDL 屬性相同。 這個屬性只會與[switch_type](switch-type.md)屬性搭配使用。
 
 ## <a name="example"></a>範例
 
@@ -69,10 +69,10 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**適用於**|**類別**或**結構**的成員|
+|**適用於**|或的成員 **`class`****`struct`**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

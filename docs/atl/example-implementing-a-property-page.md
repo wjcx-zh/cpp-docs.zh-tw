@@ -4,14 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319584"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224353"
 ---
-# <a name="example-implementing-a-property-page"></a>範例︰實作屬性頁
+# <a name="example-implementing-a-property-page"></a>範例：執行屬性頁
 
 ::: moniker range="vs-2019"
 
@@ -51,9 +51,9 @@ Visual Studio 2019 及更新版本中未提供 ATL 屬性頁精靈。
 
 |Item|值|
 |----------|-----------|
-|Title|TextDocument|
+|標題|TextDocument|
 |Doc 字串|VCUE TextDocument 屬性|
-|Helpfile|*\<空白>*|
+|Helpfile|*\<blank>*|
 
 您在這個精靈頁面上設定的值將會在呼叫 `IPropertyPage::GetPageInfo` 時，傳回至屬性頁容器。 字串在此之後發生的變化取決於容器，但通常用來向使用者識別您的頁面。 Title 通常會在出現您頁面上方的索引標籤中，而 Doc 字串則可能會顯示在狀態列或工具提示中 (但標準屬性框架完全不會使用此字串)。
 
@@ -90,7 +90,7 @@ Visual Studio 2019 及更新版本中未提供 ATL 屬性頁精靈。
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-您也需要參考 `IPropertyPageImpl` 基底類別；將下列 **typedef** 新增到 `CDocProperties` 類別：
+您也需要參考 `IPropertyPageImpl` 基類，將下列 **`typedef`** 內容新增至 `CDocProperties` 類別：
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 

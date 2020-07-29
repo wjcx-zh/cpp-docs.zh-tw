@@ -9,47 +9,47 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271355"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232686"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (匯出函式)
 
-匯出的函式依名稱或序數或資料，從您的程式。
+依據名稱或序數或資料，從您的程式匯出函式。
 
 ## <a name="syntax"></a>語法
 
-> **/EXPORT:**<em>entryname</em>[**，\@**<em>序數</em>[**，NONAME**]] [**，資料**]
+> **/Export：**<em>entryname</em>[**， \@ **<em>序數</em>[**，NONAME**]] [**，DATA**]
 
 ## <a name="remarks"></a>備註
 
-**/匯出**選項會指定函式或資料的項目，若要匯出從您的程式，讓其他程式可以呼叫此函式，或使用的資料。 匯出通常是在 DLL 中定義。
+**/Export**選項會指定要從程式匯出的函式或資料項目，讓其他程式可以呼叫函數或使用資料。 匯出通常是在 DLL 中定義。
 
-*Entryname*是函式或資料的項目名稱，因為它是可供呼叫端程式。 *序數*指定範圍 1 到 65535 之間的匯出資料表的索引，如果您未指定*序數*，連結會將指派其中一個。 **NONAME**關鍵字匯出函式只能做為序數，而不*entryname*。
+*Entryname*是呼叫程式所要使用的函式或資料項目的名稱。 *序數*指定匯出資料表的索引，範圍介於1到 65535;如果您未指定*序數*，LINK 會指派一個。 **NONAME**關鍵字只會將函數匯出為序數，而不會有*entryname*。
 
-**資料**關鍵字會指定匯出的項目是資料的項目。 必須使用宣告的用戶端程式中的資料項目**extern __declspec （dllimport)**。
+**Data**關鍵字會指定匯出的專案是資料項目。 用戶端程式中的資料項目必須使用**extern __declspec （dllimport）** 來宣告。
 
-有四種方法匯出定義，在 建議使用的順序列出：
+有四種方法可以匯出定義，以建議的使用順序列出：
 
-1. [__declspec （dllexport)](../../cpp/dllexport-dllimport.md)原始程式碼中
+1. 原始程式碼中的[__declspec （dllexport）](../../cpp/dllexport-dllimport.md)
 
-1. [匯出](exports.md).def 檔案中的陳述式
+1. .Def 檔案中的[匯出](exports.md)語句
 
 1. LINK 命令中的 /EXPORT 規格
 
-1. A[註解](../../preprocessor/comment-c-cpp.md)指示詞中的原始程式碼，表單的`#pragma comment(linker, "/export: definition ")`。
+1. 原始程式碼中的[批註](../../preprocessor/comment-c-cpp.md)指示詞，格式為 `#pragma comment(linker, "/export: definition ")` 。
 
-所有這些方法可以用於相同的程式。 當組建的程式包含匯出的連結時，它也會建立匯入程式庫，除非在組建中使用.exp 檔。
+所有這些方法都可以在同一個程式中使用。 當 LINK 建立包含匯出的程式時，它也會建立匯入程式庫，除非組建中使用 .exp 檔案。
 
-連結使用裝飾形式的識別項。 建立的.obj 檔案時，編譯器就會裝飾識別項。 如果*entryname*指定連結器在其未裝飾形成 （因為它會出現在原始程式碼中），連結會嘗試比對的名稱。 如果它找不到所需的唯一相符項目，連結就會發出錯誤訊息。 使用[DUMPBIN](dumpbin-reference.md)工具，以取得[裝飾名稱](decorated-names.md)時您必須指定至連結器識別項格式。
+連結使用裝飾形式的識別碼。 編譯器會在建立 .obj 檔案時裝飾識別碼。 如果在未修飾的形式中，將*entryname*指定給連結器（出現在原始程式碼中），則連結會嘗試符合名稱。 如果找不到唯一的相符項，連結就會發出錯誤訊息。 當您需要將識別碼指定給連結器時，請使用[DUMPBIN](dumpbin-reference.md)工具來取得其[裝飾的名稱](decorated-names.md)形式。
 
 > [!NOTE]
-> 未指定 C 識別項宣告的裝飾的形式`__cdecl`或`__stdcall`。
+> 請勿指定宣告為或的已裝飾形式的 C 識別碼 **`__cdecl`** **`__stdcall`** 。
 
-如果您要匯出未裝飾的函式名稱，並有不同的匯出，根據組建組態 （例如，在 32 位元或 64 位元的組建），您可以使用不同的.DEF 檔，每個組態。 （條件式的前置處理器指示詞不允許在.DEF 檔中）。或者，您可以使用`#pragma comment`指示詞之前的函式宣告如下所示，其中`PlainFuncName`是未裝飾的名稱，和`_PlainFuncName@4`是函式的裝飾的名稱：
+如果您需要匯出未修飾函式名稱，而且根據組建設定而有不同的匯出（例如，在32位或64位組建中），您可以針對每個設定使用不同的 DEF 檔案。 （DEF 檔案中不允許預處理器條件指示詞）。或者，您可以在 `#pragma comment` 函式宣告之前使用指示詞，如下所示，其中 `PlainFuncName` 是未修飾的名稱，而是函式的 `_PlainFuncName@4` 裝飾名稱：
 
 ```cpp
 #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
@@ -58,15 +58,15 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
+1. 選取 [設定] [**屬性**] [  >  **連結器**  >  **命令列**] 屬性頁。
 
-1. 輸入到選項**其他選項** 方塊中。
+1. 在 [**其他選項**] 方塊中輸入選項。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 

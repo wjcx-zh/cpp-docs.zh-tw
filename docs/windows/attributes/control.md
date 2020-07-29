@@ -1,19 +1,19 @@
 ---
-title: control （C++ COM 屬性）
+title: control （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 9cdcca6fac2a92bf28f0f655489e61dcb08213e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 59f1a6d1ad940f79693f9c5e37c1fe6527da3805
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214938"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224457"
 ---
-# <a name="control"></a>控制
+# <a name="control"></a>控制項
 
 指定使用者定義型別為控制項。
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214938"
 
 ## <a name="remarks"></a>備註
 
-**控制項**屬性意指[coclass](coclass.md)屬性。 **控制項** C++屬性的功能與[控制項](/windows/win32/Midl/control)MIDL 屬性相同。
+**控制項**屬性意指[coclass](coclass.md)屬性。 **Control** c + + 屬性具有與[控制項](/windows/win32/Midl/control)MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -50,10 +50,10 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**適用於**|**class**、 **struct**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

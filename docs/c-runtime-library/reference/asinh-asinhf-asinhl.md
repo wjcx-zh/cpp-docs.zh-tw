@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919613"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232647"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -73,7 +73,7 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-當您使用 c + + 時，可以呼叫採用並傳回**float**或**long** **double**值之**asinh**的多載。 在 C 程式中， **asinh**一律採用並傳回**double**。
+當您使用 c + + 時，可以呼叫採用並傳回或值之**asinh**的多載 **`float`** **`long double`** 。 在 C 程式中， **asinh**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -81,7 +81,7 @@ long double asinh( long double x );  // C++ only
 
 |函式|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|--------------|------------------|
-|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<h> 或\<math<|
+|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<cmath>或 \< math<|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

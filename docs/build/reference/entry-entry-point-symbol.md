@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80833980b64e8fdd2a2f57b2dc40eb21c784b6f9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293208"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232699"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (進入點符號)
 
@@ -25,44 +25,44 @@ ms.locfileid: "62293208"
 
 ## <a name="arguments"></a>引數
 
-*function*<br/>
-指定使用者定義啟動的函式位址的.exe 檔或 DLL。
+*函數*<br/>
+函數，指定 .exe 檔案或 DLL 的使用者定義起始位址。
 
 ## <a name="remarks"></a>備註
 
-/ENTRY 選項會指定進入點函式做為.exe 檔或 DLL 的開始位址。
+/ENTRY 選項會將進入點函式指定為 .exe 檔或 DLL 的起始位址。
 
-此函式必須定義為使用`__stdcall`呼叫慣例。 參數和傳回值取決於如果程式是主控台應用程式、 windows 應用程式或 DLL。 建議您讓連結器設定的進入點，以便正確地初始化 C 執行階段程式庫和C++針對靜態物件的建構函式會執行。
+必須將函式定義為使用 **`__stdcall`** 呼叫慣例。 參數和傳回值取決於程式是主控台應用程式、windows 應用程式或 DLL。 建議您讓連結器設定進入點，以便正確初始化 C 執行時間程式庫，並執行靜態物件的 c + + 函式。
 
-根據預設，開始的位址會是 C 執行階段程式庫函式的名稱。 連結器會選取它的屬性的程式，根據下表所示。
+根據預設，起始位址是 C 執行時間程式庫中的函式名稱。 連結器會根據程式的屬性來選取它，如下表所示。
 
 |函式名稱|預設值|
 |-------------------|-----------------|
-|**mainCRTStartup** (或**wmainCRTStartup**)|使用 /subsystem: console; 的應用程式呼叫`main`(或`wmain`)|
-|**WinMainCRTStartup** (或**wWinMainCRTStartup**)|應用程式使用 /SUBSYSTEM:**WINDOWS**; 呼叫`WinMain`(或`wWinMain`)，這必須定義為使用 `__stdcall`|
-|**_DllMainCRTStartup**|DLL;呼叫`DllMain`若有的話，它必須定義為使用 `__stdcall`|
+|**mainCRTStartup** （或**wmainCRTStartup**）|使用/SUBSYSTEM： CONSOLE 的應用程式;呼叫 `main` （或 `wmain` ）|
+|**WinMainCRTStartup** （或**wWinMainCRTStartup**）|使用/SUBSYSTEM：**WINDOWS**的應用程式;呼叫 `WinMain` （或 `wWinMain` ），必須定義為使用**`__stdcall`**|
+|**_DllMainCRTStartup**|DLL;呼叫 `DllMain` 是否存在（必須定義為使用）**`__stdcall`**|
 
-如果[/DLL](dll-build-a-dll.md)或是[/SUBSYSTEM](subsystem-specify-subsystem.md)未指定選項，連結器將會取決於是否子系統和項目點`main`或`WinMain`定義。
+如果未指定[/DLL](dll-build-a-dll.md)或[/SUBSYSTEM](subsystem-specify-subsystem.md)選項，則連結器會根據是否定義來選取子系統和進入點 `main` `WinMain` 。
 
-函式`main`， `WinMain`，和`DllMain`是三種形式的使用者定義的進入點。
+函 `main` 式、 `WinMain` 和 `DllMain` 是使用者定義進入點的三種形式。
 
-/ENTRY 到指定的函式時建立的受控映像，必須具有的簽章 (LPVOID *var1*，DWORD *var2*，LPVOID *var3*)。
+建立受控映射時，指定給/ENTRY 的函式必須具有（LPVOID *var1*、DWORD *var2*、LPVOID *var3*）的簽章。
 
-如需如何定義您自己`DllMain`進入點，請參閱 < [Dll 和視覺效果C++執行階段程式庫行為](../run-time-library-behavior.md)。
+如需如何定義您自己的進入點的相關資訊 `DllMain` ，請參閱[dll 和 Visual C++ 執行時間程式庫行為](../run-time-library-behavior.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 **連結器**資料夾。
+1. 按一下 **Linker** 資料夾。
 
-1. 按一下 **進階**屬性頁。
+1. 按一下 [ **Advanced** ] 屬性頁。
 
-1. 修改**進入點**屬性。
+1. 修改 [**進入點**] 屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c3eeb47ec81f4073452c17f40eb2fec4911989f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177673"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213277"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
 
@@ -38,17 +38,17 @@ C++ 提供前置和後置遞增及遞減運算子，本節只說明後置遞增�
 i++;
 ```
 
-套用後置遞增運算子（ **++** ）的效果，是運算元的值會增加一個單位的適當類型。 同樣地，套用後置遞減運算子（ **--** ）的效果，是運算元的值會減少一個單位的適當類型。
+套用後置遞增運算子（）的效果 **++** 是運算元的值會增加一個單位的適當類型。 同樣地，套用後置遞減運算子（）的效果， **--** 是運算元的值會減少一個單位的適當類型。
 
 請務必注意，後置遞增或遞減運算式會評估為運算式的值，然後*再進行*個別運算子的應用。 遞增或遞減運算會在運算元評估*之後*發生。 此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。
 
 使用後置運算子當做函式的引數時，引數的值在傳遞至函式之前不保證會遞增或遞減。  如需詳細資訊，請參閱 C++ 標準中的 1.9.17 一節。
 
-將後置遞增運算子套用至**long**類型物件陣列的指標時，實際上會在指標的內部標記法中加四個。 這個行為會導致指標（先前參考陣列的第*n*個元素）參考（*n*+ 1）個元素。
+將後置遞增運算子套用至類型物件陣列的指標時，實際上會在 **`long`** 指標的內部標記法中加入四個。 這個行為會導致指標（先前參考陣列的第*n*個元素）參考（*n*+ 1）個元素。
 
-後置遞增和後置遞減運算子的運算元必須是算術或指標類型的可修改（不是**const**）左值。 結果的型別與後置*運算式*的類型相同，但不再是左值。
+後置遞增和後置遞減運算子的運算元，必須可修改（不是 **`const`** ）算術或指標類型的左值。 結果的型別與後置*運算式*的類型相同，但不再是左值。
 
-**Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：後置遞增或遞減運算子的運算元不可以是**bool**類型。
+**Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：後置遞增或遞減運算子的運算元不可以是類型 **`bool`** 。
 
 下列程式碼示範後置遞增運算子：
 

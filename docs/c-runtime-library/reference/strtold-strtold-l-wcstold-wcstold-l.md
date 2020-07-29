@@ -35,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: ba57eed25fd8e1310b9e837c55cb1e1f7ec2b718
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213485"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold、_strtold_l、wcstold、_wcstold_l
 
@@ -82,7 +82,7 @@ long double wcstold_l(
 
 ## <a name="return-value"></a>傳回值
 
-**strtold**會傳回浮點數的值做為**長**的**double**，但標記法會造成溢位（在此情況下，函式會傳回 +/-**HUGE_VALL**。 **HUGE_VALL**的正負號符合無法表示之值的正負號。 如果無法執行轉換或下溢，則**strtold**會傳回0。
+**strtold**會以形式傳回浮點數的值 **`long double`** ，但標記法會造成溢位，在此情況下，函數會傳回 +/-**HUGE_VALL**。 **HUGE_VALL**的正負號符合無法表示之值的正負號。 如果無法執行轉換或下溢，則**strtold**會傳回0。
 
 **wcstold**會傳回類似至**strtold**的值。 對於這兩個函式，如果發生溢位或下溢，且叫用不正確參數處理常式（如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述），則**errno**會設定為**ERANGE** 。
 
@@ -90,7 +90,7 @@ long double wcstold_l(
 
 ## <a name="remarks"></a>備註
 
-每個函式都會將輸入字串*strSource*轉換為**長****雙精度浮點數**。 **Strtold**函數會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 Null 字元。 **Strtold**的寬字元版本是**wcstold**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
+每個函式都會將輸入字串*strSource*轉換為 **`long double`** 。 **Strtold**函數會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 Null 字元。 **Strtold**的寬字元版本是**wcstold**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -109,7 +109,7 @@ long double wcstold_l(
 
 [*空格*][*sign*][*數位*][.*數位*][{**d** &#124; **d** &#124; **e** &#124; **e**} [*sign*]*數位*]
 
-空白字元*可能是*由空格和定位字元所組成，這些字元會被忽略;*sign*可以是加號（**+**）或減號（**-**）;和*數位*是一或多個小數位數。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (**d**、**D**、**e** 或 **E**) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
+空白字元*可能是*由空格和定位字元所組成，這些字元會被忽略;*sign*是加號（ **+** ）或減號（ **-** ）; 而*數位*則是一或多個十進位數。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (**d**、**D**、**e** 或 **E**) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
 
 ## <a name="requirements"></a>需求
 
@@ -155,9 +155,9 @@ string = 3.1415926535898This stopped it
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
-[字串轉換為數值函式](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[字串至數值函數](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

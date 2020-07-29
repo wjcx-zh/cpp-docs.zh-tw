@@ -5,190 +5,190 @@ helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: 3386994dce68812cf3ed0852a24d8910cb903acf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f95eaf7e1da41bd473ab15d12330d0177b98ccdf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368564"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219491"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>逐步解說：建立自訂訊息區
 
-本文件介紹如何創建按優先順序對傳入郵件進行排序的自定義消息塊類型。
+本檔描述如何建立依優先順序排序傳入訊息的自訂訊息區塊類型。
 
-儘管內置的消息塊類型提供了廣泛的功能,但您可以創建自己的消息塊類型並對其進行自定義以滿足應用程式的要求。 有關非同步代理庫提供的內建訊息區類型的說明,請參閱[非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)塊 。
+雖然內建的訊息區塊類型提供各式各樣的功能，您還是可以建立自己的訊息區塊類型，並加以自訂以符合應用程式的需求。 如需非同步代理程式程式庫所提供之內建訊息區塊類型的說明，請參閱[非同步訊息區塊](../../parallel/concrt/asynchronous-message-blocks.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-在開始本演練之前,請閱讀以下文件:
+開始進行本逐步解說之前，請先閱讀下列檔：
 
-- [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)
+- [非同步訊息區塊](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [訊息傳遞函數](../../parallel/concrt/message-passing-functions.md)
+- [訊息傳遞函式](../../parallel/concrt/message-passing-functions.md)
 
-## <a name="sections"></a><a name="top"></a>部分
+## <a name="sections"></a><a name="top"></a>各節
 
 本逐步解說包含下列各節：
 
-- [設計自訂訊息區](#design)
+- [設計自訂訊息區塊](#design)
 
-- [定義priority_buffer類](#class)
+- [定義 priority_buffer 類別](#class)
 
 - [完整範例](#complete)
 
-## <a name="designing-a-custom-message-block"></a><a name="design"></a>設計自訂訊息區
+## <a name="designing-a-custom-message-block"></a><a name="design"></a>設計自訂訊息區塊
 
-消息塊參與發送和接收消息的行為。 傳送訊息訊息塊稱為*來源區塊*。 接收訊息的訊息塊稱為*目標塊*。 傳送及接收訊息的訊息的訊息為*傳播器塊*。 代理庫使用抽象類[併發::iSource](../../parallel/concrt/reference/isource-class.md)表示源塊和抽象類[併發::iTarget](../../parallel/concrt/reference/itarget-class.md)表示目標塊。 充當源的訊息塊型態派`ISource`生自 。充當目標的訊息塊型態派`ITarget`生自 。
+訊息區塊會參與傳送和接收訊息的動作。 傳送訊息的訊息區塊稱為「*來源區塊*」。 接收訊息的訊息區塊稱為「*目標區塊*」。 傳送和接收訊息的訊息區塊稱為「*傳播程式區塊*」。 代理程式程式庫會使用抽象類別[concurrency：： ISource](../../parallel/concrt/reference/isource-class.md)來代表來源區塊，以及抽象類別[Concurrency：： ITarget](../../parallel/concrt/reference/itarget-class.md)來表示目標區塊。 當做來源衍生自的訊息區塊類型 `ISource` ; 作為目標的訊息區塊類型會衍生自 `ITarget` 。
 
-儘管可以直接從`ISource`和`ITarget`派生消息塊類型,但代理庫定義了三個基類,它們執行所有消息塊類型共有的大部分功能,例如,以併發安全的方式處理錯誤和將消息塊連接在一起。 [併發::source_block](../../parallel/concrt/reference/source-block-class.md)類派生`ISource`併 發送消息到其他塊。 [併發::target_block](../../parallel/concrt/reference/target-block-class.md)類派生`ITarget`自 其他塊並接收消息。 [併發::p羅帕器_block](../../parallel/concrt/reference/propagator-block-class.md)類派生`ISource`自`ITarget`並將 消息發送到其他塊,它接收來自其他塊的消息。 我們建議您使用這三個基類來處理基礎結構詳細資訊,以便您可以專注於消息塊的行為。
+雖然您可以直接從和衍生您的訊息區塊類型，但代理程式連結 `ISource` `ITarget` 庫會定義三個基類，以執行所有訊息區塊類型通用的許多功能，例如，處理錯誤，以及以並行安全方式將訊息區塊連接在一起。 [Concurrency：： source_block](../../parallel/concrt/reference/source-block-class.md)類別衍生自 `ISource` ，並將訊息傳送至其他區塊。 [Concurrency：： target_block](../../parallel/concrt/reference/target-block-class.md)類別衍生自 `ITarget` ，並從其他區塊接收訊息。 [Concurrency：:p ropagator_block](../../parallel/concrt/reference/propagator-block-class.md)類別衍生自 `ISource` 和 `ITarget` ，並將訊息傳送至其他區塊，並從其他區塊接收訊息。 建議您使用這三個基類來處理基礎結構的詳細資料，讓您可以專注于訊息區塊的行為。
 
-`target_block`和`source_block`類是在管理源和目標塊之間的連接或連結的類型以及管理消息處理方式的類型上參數`propagator_block`化的範本。 代理庫定義了兩種執行連結管理的類型,[併發::single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md)[併發:multi_link_registry。](../../parallel/concrt/reference/multi-link-registry-class.md) 該`single_link_registry`類使消息塊能夠連結到一個源或一個目標。 該`multi_link_registry`類使消息塊能夠連結到多個源或多個目標。 代理庫定義執行訊息管理的類別,[並發::ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md)。 類`ordered_message_processor`使消息塊能夠按接收消息的順序處理消息。
+`source_block`、 `target_block` 和 `propagator_block` 類別是在類型上參數化的範本，可管理來源與目標區塊之間的連接或連結，以及管理訊息處理方式的類型。 代理程式程式庫會定義兩個類型，以執行連結管理， [concurrency：： single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md)和[concurrency：： multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md)。 `single_link_registry`類別可讓訊息區塊連結至一個來源或一個目標。 `multi_link_registry`類別可讓訊息區塊連結至多個來源或多個目標。 代理程式程式庫會定義一個執行訊息管理的類別，也就是[concurrency：： ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md)。 `ordered_message_processor`類別可讓訊息區塊依接收訊息的順序進行處理。
 
-為了更好地瞭解消息塊與其源和目標的關係,請考慮以下示例。 此示例顯示[併發::轉換器](../../parallel/concrt/reference/transformer-class.md)類的聲明。
+若要進一步瞭解訊息區塊與其來源和目標之間的關聯，請考慮下列範例。 這個範例會顯示[concurrency：：轉換器](../../parallel/concrt/reference/transformer-class.md)類別的宣告。
 
 [!code-cpp[concrt-priority-buffer#20](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_1.cpp)]
 
-類`transformer`派生`propagator_block`自 ,因此同時充當源塊和目標塊。 它接受型`_Input`態 的訊息並`_Output`傳送型態的訊息 。 類`transformer``single_link_registry`指定 為任何目標塊的連結管理員`multi_link_registry`,並指定為任何源塊的連結管理員。 因此,一`transformer`個物件最多只能有一個目標和無限數量的源。
+`transformer`類別衍生自 `propagator_block` ，因此可同時做為來源區塊和目標區塊。 它接受類型的訊息 `_Input` ，並傳送類型為的訊息 `_Output` 。 類別會指定做為任何 `transformer` `single_link_registry` 目標區塊的連結管理員，以及做為 `multi_link_registry` 任何來源區塊的連結管理員。 因此，一個 `transformer` 物件最多可以有一個目標和無限數量的來源。
 
-派生自`source_block`的類必須實現六種方法:propagate_to_any_targets、accept_message、reserve_message、consume_message、release_message[release_message](reference/source-block-class.md#release_message)[reserve_message](reference/source-block-class.md#reserve_message)和[resume_propagation。](reference/source-block-class.md#resume_propagation) [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets) [accept_message](reference/source-block-class.md#accept_message) [consume_message](reference/source-block-class.md#consume_message) 派生自`target_block`的類必須實現[propagate_message](reference/propagator-block-class.md#propagate_message)方法,並且可以選擇實現[send_message](reference/propagator-block-class.md#send_message)方法。 衍生功能`propagator_block`上等效於派生從與`source_block``target_block`。
+衍生自的類別 `source_block` 必須執行六個方法： [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets)、 [accept_message](reference/source-block-class.md#accept_message)、 [reserve_message](reference/source-block-class.md#reserve_message)、 [consume_message](reference/source-block-class.md#consume_message)、 [release_message](reference/source-block-class.md#release_message)和[resume_propagation](reference/source-block-class.md#resume_propagation)。 衍生自的類別 `target_block` 必須執行[propagate_message](reference/propagator-block-class.md#propagate_message)方法，而且可以選擇性地執行[send_message](reference/propagator-block-class.md#send_message)方法。 衍生自的 `propagator_block` 功能相當於衍生自 `source_block` 和 `target_block` 。
 
-運行時`propagate_to_any_targets`調用該方法以非同步或同步處理任何傳入消息並傳播出任何傳出消息。 目標`accept_message`塊調用該方法以接受消息。 許多消息塊類型(如`unbounded_buffer`)僅向接收消息的第一個目標發送消息。 因此,它將消息的擁有權轉移到目標。 其他消息塊類型(如[併發::overwrite_buffer)](../../parallel/concrt/reference/overwrite-buffer-class.md)向其每個目標塊提供消息。 因此,`overwrite_buffer`為其每個目標創建消息的副本。
+`propagate_to_any_targets`執行時間會呼叫方法，以非同步或同步處理任何傳入的訊息，並傳播任何外寄訊息。 `accept_message`目標區塊會呼叫方法以接受訊息。 許多訊息區塊類型（例如 `unbounded_buffer` ）只會將訊息傳送到接收它的第一個目標。 因此，它會將訊息的擁有權轉移給目標。 其他訊息區塊類型，例如[concurrency：： overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)，會提供訊息給它的每個目標區塊。 因此，會 `overwrite_buffer` 為每一個目標建立訊息的複本。
 
-、`resume_propagation`方法使消息塊能夠參與消息保留。 `reserve_message` `consume_message` `release_message` 當 Target`reserve_message`塊收到消息時調用該方法,並且必須保留消息供以後使用。 目標塊保留消息后,它可以調用`consume_message`方法以使用該消息或取消`release_message`保留 的方法。 與方法`accept_message`一樣,實現`consume_message`可以轉移消息的擁有權或返回消息的副本。 在目標塊使用或釋放保留消息后,運行時將調用`resume_propagation`方法。 通常,此方法繼續消息傳播,從佇列中的下一條消息開始。
+`reserve_message`、 `consume_message` 、 `release_message` 和 `resume_propagation` 方法可讓訊息區塊參與訊息保留。 目標區塊 `reserve_message` 會在收到訊息時呼叫方法，而且必須保留訊息以供稍後使用。 在目標區塊保留訊息之後，它可以呼叫 `consume_message` 方法來取用該訊息，或使用 `release_message` 方法來取消保留。 如同 `accept_message` 方法，的執行 `consume_message` 可以傳送訊息的擁有權，或傳回訊息的複本。 在目標區塊使用或釋放保留的訊息之後，執行時間會呼叫 `resume_propagation` 方法。 一般來說，這個方法會繼續訊息傳播，從佇列中的下一個訊息開始。
 
-運行時調用`propagate_message`該方法以非同步方式將消息從另一個塊傳輸到當前塊。 該方法`send_message`類似`propagate_message`於 ,只不過它是同步的,而不是非同步的,將消息發送到目標塊。 的`send_message`默認實現拒絕所有傳入消息。 如果消息未傳遞與目標塊關聯的可選篩選器函數,則運行時不會調用這些方法中的任何一個。 關於訊息篩選器的詳細資訊,請參閱[非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)塊 。
+執行時間會呼叫 `propagate_message` 方法，以非同步方式將訊息從另一個區區塊轉送到目前的區塊。 `send_message`方法類似于 `propagate_message` ，不同之處在于它會同步而不是以非同步方式將訊息傳送至目標區塊。 的預設執行會 `send_message` 拒絕所有傳入的訊息。 如果訊息未傳遞與目標區塊相關聯的選擇性篩選函數，執行時間就不會呼叫其中一個方法。 如需訊息篩選器的詳細資訊，請參閱[非同步訊息區塊](../../parallel/concrt/asynchronous-message-blocks.md)。
 
-【[頂端](#top)
+[[頂端](#top)]
 
-## <a name="defining-the-priority_buffer-class"></a><a name="class"></a>定義priority_buffer類
+## <a name="defining-the-priority_buffer-class"></a><a name="class"></a>定義 priority_buffer 類別
 
-類`priority_buffer`是一種自定義消息塊類型,它首先按優先順序對傳入郵件進行排序,然後按接收消息的順序排序。 類`priority_buffer`類似於[併發::unbounded_buffer](reference/unbounded-buffer-class.md)類,因為它包含消息佇列,也因為它同時充當源和目標消息塊,可以同時具有多個源和多個目標。 但是,`unbounded_buffer`消息傳播僅基於消息從其源接收消息的順序。
+`priority_buffer`類別是自訂的訊息區塊型別，它會先依優先順序排序內送訊息，再依接收訊息的順序排序。 `priority_buffer`類別與[concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md)類別類似，因為它會保存訊息佇列，同時也會做為來源和目標訊息區塊，而且可以同時擁有多個來源和多個目標。 不過， `unbounded_buffer` 只會根據接收訊息來源的順序，將訊息傳播做為基礎。
 
-類別`priority_buffer`接收為 std 訊息:`PriorityType`包含`Type`與元素的[中陣列](../../standard-library/tuple-class.md)。 `PriorityType`指保存每條消息優先順序的類型;`Type`引用消息的數據部分。 類別`priority_buffer`傳送`Type`型態的訊息 。 這個`priority_buffer`類別管理兩個訊息佇列:傳入訊息的[std::priity_queue](../../standard-library/priority-queue-class.md)物件和用於傳出訊息的 std:[佇列物件](../../standard-library/queue-class.md)。 當`priority_buffer`物件同時接收多條消息或在消費者讀取任何消息之前接收多條消息時,按優先順序排序消息非常有用。
+`priority_buffer`類別會接收類型為 std：：[元組](../../standard-library/tuple-class.md)的訊息，其中包含 `PriorityType` 和 `Type` 元素。 `PriorityType`參考保存每個訊息之優先順序的類型;`Type`參考訊息的資料部分。 類別會傳送 `priority_buffer` 類型為的訊息 `Type` 。 `priority_buffer`類別也會管理兩個訊息佇列：內送訊息的[std：:p riority_queue](../../standard-library/priority-queue-class.md)物件，以及外寄訊息的 std：：[queue](../../standard-library/queue-class.md)物件。 當物件在取用 `priority_buffer` 者讀取任何訊息之前，同時收到多則訊息或接收多個訊息時，依優先順序排序訊息就很有用。
 
-除了`propagator_block`派生自類必須實現的七種方法`priority_buffer`外 ,類還重`link_target_notification`寫`send_message`和 方法。 這個`priority_buffer`類別定義兩個公共說明器方法,`enqueue`與`dequeue`與與 .`propagate_priority_order`與一個私有說明器方法 。
+除了必須實作為衍生自之類別的七個方法之外 `propagator_block` ， `priority_buffer` 類別也會覆寫 `link_target_notification` 和 `send_message` 方法。 `priority_buffer`類別也會定義兩個公用 helper 方法： `enqueue` 和，以及 `dequeue` 私用 helper 方法 `propagate_priority_order` 。
 
-以下過程介紹如何實現類`priority_buffer`。
+下列程式描述如何執行 `priority_buffer` 類別。
 
-#### <a name="to-define-the-priority_buffer-class"></a>定義priority_buffer類
+#### <a name="to-define-the-priority_buffer-class"></a>若要定義 priority_buffer 類別
 
-1. 建立 C++標頭檔並命名`priority_buffer.h`它。 或者,您可以使用作為專案一部分的現有標頭檔。
+1. 建立 c + + 標頭檔，並將它命名為 `priority_buffer.h` 。 或者，您可以使用屬於專案的現有標頭檔。
 
-1. 在`priority_buffer.h`中,添加以下代碼。
+1. 在中 `priority_buffer.h` ，加入下列程式碼。
 
     [!code-cpp[concrt-priority-buffer#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_2.h)]
 
-1. 在命名`std`空間中,定義[std:::less](../../standard-library/less-struct.md)和[std:::大於](../../standard-library/greater-struct.md)對併發作用的專門化:[消息](../../parallel/concrt/reference/message-class.md)物件。
+1. 在 `std` 命名空間中，定義對 concurrency：：[message](../../parallel/concrt/reference/message-class.md)物件採取動作之[std：： less](../../standard-library/less-struct.md)和[std：：大於](../../standard-library/greater-struct.md)的特製化。
 
     [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
-   類別`priority_buffer`儲存`message`物件在物件中`priority_queue`。 這些類型專門化使優先順序佇列能夠根據郵件的優先順序對消息進行排序。 優先順序是物件的第一個`tuple`元素。
+   `priority_buffer`類別會將 `message` 物件儲存在 `priority_queue` 物件中。 這些型別特製化可讓優先順序佇列根據其優先順序來排序訊息。 優先順序是物件的第一個元素 `tuple` 。
 
-1. 在命名`concurrencyex`空間中,宣告類別`priority_buffer`。
+1. 在 `concurrencyex` 命名空間中，宣告 `priority_buffer` 類別。
 
     [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-   `priority_buffer` 類別衍生自 `propagator_block`。 因此,它可以發送和接收消息。 類`priority_buffer`可以有多個目標來接收`Type`類型 的消息。 它還可以有多個源,發送類型`tuple<PriorityType, Type>`的消息。
+   `priority_buffer` 類別衍生自 `propagator_block`。 因此，它可以傳送和接收訊息。 `priority_buffer`類別可以有多個目標，以接收類型為的訊息 `Type` 。 它也可以有多個來源，以傳送類型為的訊息 `tuple<PriorityType, Type>` 。
 
-1. 在`private`類的部分`priority_buffer`中,添加以下成員變數。
+1. 在 **`private`** 類別的區段中 `priority_buffer` ，加入下列成員變數。
 
     [!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
 
-   物件`priority_queue`保存傳入消息;物件`queue`保存傳出消息。 對`priority_buffer`象 可以同時接收多條消息;物件`critical_section`同步對輸入消息佇列的訪問。
+   物件會保存內送 `priority_queue` 訊息; `queue` 物件會保留外寄訊息。 `priority_buffer`物件可以同時接收多個訊息; `critical_section` 物件會同步處理輸入訊息佇列的存取。
 
-1. 在部分`private`中,定義複製構造函數和賦值運算符。 這可以防止`priority_queue`物件被分配。
+1. 在 **`private`** 區段中，定義複製的「函數」和「指派運算子」。 這可避免 `priority_queue` 物件被指派。
 
     [!code-cpp[concrt-priority-buffer#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_6.h)]
 
-1. 在本節`public`中,定義許多消息塊類型共有的構造函數。 還定義析構函數。
+1. 在 **`public`** 區段中，定義許多訊息區塊類型通用的函式。 同時定義析構函式。
 
     [!code-cpp[concrt-priority-buffer#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_7.h)]
 
-1. 在`public`部份中,定義方法和`enqueue``dequeue`。 這些説明程式方法提供了向`priority_buffer`物件發送消息和接收來自物件的消息的替代方法。
+1. 在 **`public`** 區段中，定義方法 `enqueue` 和 `dequeue` 。 這些 helper 方法提供了另一種方式，可將訊息傳送至物件，並接收來自物件的訊息 `priority_buffer` 。
 
     [!code-cpp[concrt-priority-buffer#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_8.h)]
 
-1. 在部分`protected`中,`propagate_to_any_targets`定義方法。
+1. 在 **`protected`** 區段中，定義 `propagate_to_any_targets` 方法。
 
     [!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
 
-   該方法`propagate_to_any_targets`將輸入佇列前面的消息傳輸到輸出佇列,並傳播輸出佇列中的所有消息。
+   `propagate_to_any_targets`方法會將位於輸入佇列前端的訊息傳送至輸出佇列，並將輸出佇列中的所有訊息傳播出去。
 
-1. 在部分`protected`中,`accept_message`定義方法。
+1. 在 **`protected`** 區段中，定義 `accept_message` 方法。
 
     [!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
 
-   當目標塊調用`accept_message`該方法時`priority_buffer`, 類將消息的所有權轉移到接受它的第一個目標塊。 (這類似於`unbounded_buffer`.) 的行為。
+   當目標區塊呼叫方法時 `accept_message` ，類別會將 `priority_buffer` 訊息的擁有權轉移至接受它的第一個目標區塊。 （這類似于的行為 `unbounded_buffer` ）。
 
-1. 在部分`protected`中,`reserve_message`定義方法。
+1. 在 **`protected`** 區段中，定義 `reserve_message` 方法。
 
     [!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
 
-   當`priority_buffer`提供的消息標識碼與佇列前面的消息標識符匹配時,類允許目標塊保留消息。 換句話說,如果物件尚未收到其他消息但尚未傳播出當前`priority_buffer`消息,則目標可以保留該消息。
+   `priority_buffer`當提供的訊息識別碼與位於佇列前端的訊息識別碼相符時，類別允許目標區塊保留訊息。 換句話說，如果 `priority_buffer` 物件尚未收到額外的訊息，而且尚未傳播目前的訊息，則目標可以保留訊息。
 
-1. 在部分`protected`中,`consume_message`定義方法。
+1. 在 **`protected`** 區段中，定義 `consume_message` 方法。
 
     [!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
 
-   目標塊調用`consume_message`以轉移它保留的消息的擁有權。
+   目標區塊會呼叫 `consume_message` 來傳送它所保留之訊息的擁有權。
 
-1. 在部分`protected`中,`release_message`定義方法。
+1. 在 **`protected`** 區段中，定義 `release_message` 方法。
 
     [!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
 
-   目標塊調用`release_message`以取消其對消息的保留。
+   目標區塊會呼叫 `release_message` 來取消其對訊息的保留。
 
-1. 在部分`protected`中,`resume_propagation`定義方法。
+1. 在 **`protected`** 區段中，定義 `resume_propagation` 方法。
 
     [!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
 
-   目標塊使用或`resume_propagation`釋放保留消息之後的運行時調用。 此方法傳播輸出佇列中的任何消息。
+   在目標區塊之後，執行時間呼叫會取用 `resume_propagation` 或釋放保留的訊息。 這個方法會傳播輸出佇列中的任何訊息。
 
-1. 在部分`protected`中,`link_target_notification`定義方法。
+1. 在 **`protected`** 區段中，定義 `link_target_notification` 方法。
 
     [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-   成員`_M_pReservedFor`變數由基類別`source_block`定義 。 此成員變數指向目標塊(如果有),該塊對輸出佇列前面的消息保留。 當新目標連結到`link_target_notification`物件時`priority_buffer`, 執行時呼叫。 如果沒有目標保留,此方法會傳播輸出佇列中的任何消息。
+   `_M_pReservedFor`成員變數是由基類所定義 `source_block` 。 這個成員變數會指向目標區塊（如果有的話），其中保留位於輸出佇列前端的訊息。 `link_target_notification`當新的目標連結至物件時，執行時間會呼叫 `priority_buffer` 。 如果沒有目標持有保留，這個方法就會傳播輸出佇列中的任何訊息。
 
-1. 在部分`private`中,`propagate_priority_order`定義方法。
+1. 在 **`private`** 區段中，定義 `propagate_priority_order` 方法。
 
     [!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
 
-   此方法從輸出佇列中傳播所有消息。 佇列中的每個消息都提供給每個目標塊,直到其中一個目標塊接受該消息。 類`priority_buffer`保留傳出消息的順序。 因此,在此方法向目標塊提供任何其他消息之前,目標塊必須接受輸出佇列中的第一條消息。
+   這個方法會傳播輸出佇列中的所有訊息。 佇列中的每個訊息都會提供給每個目標區塊，直到其中一個目標區塊接受訊息為止。 `priority_buffer`類別會保留外寄訊息的順序。 因此，在此方法提供任何其他訊息給目標區塊之前，目標區塊必須接受輸出佇列中的第一個訊息。
 
-1. 在部分`protected`中,`propagate_message`定義方法。
+1. 在 **`protected`** 區段中，定義 `propagate_message` 方法。
 
     [!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
 
-   該方法`propagate_message``priority_buffer`使 類能夠充當消息接收者或目標。 此方法接收提供的源塊提供的消息,並將該消息插入到優先順序佇列中。 然後`propagate_message`,該方法異步地將所有輸出消息發送到目標塊。
+   `propagate_message`方法可讓 `priority_buffer` 類別作為訊息接收者或目標。 這個方法會接收提供的來源區塊所提供的訊息，並將該訊息插入優先順序佇列中。 然後，方法會以 `propagate_message` 非同步方式將所有輸出訊息傳送至目標區塊。
 
-   當您調用[併發::asend](reference/concurrency-namespace-functions.md#asend)函數或消息塊連接到其他消息塊時,運行時調用此方法。
+   當您呼叫[concurrency：： asend](reference/concurrency-namespace-functions.md#asend)函式或當訊息區塊連接至其他訊息區塊時，執行時間會呼叫這個方法。
 
-1. 在部分`protected`中,`send_message`定義方法。
+1. 在 **`protected`** 區段中，定義 `send_message` 方法。
 
     [!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
 
-   此方法`send_message`類似`propagate_message`。 但是,它同步而不是非同步發送輸出消息。
+   `send_message`方法類似 `propagate_message` 。 不過，它會同步傳送輸出訊息，而不是以非同步方式傳送。
 
-   運行時在同步發送操作期間調用此方法,例如調用[併發:::發送](reference/concurrency-namespace-functions.md#send)函數時。
+   執行時間會在同步傳送作業期間呼叫這個方法，例如當您呼叫[concurrency：： send](reference/concurrency-namespace-functions.md#send)函式時。
 
-類`priority_buffer`包含構造函數重載,這些重載是許多消息塊類型中常見的。 某些構造函數重載採用[併發::計劃程式](../../parallel/concrt/reference/scheduler-class.md)或[併發::計劃組](../../parallel/concrt/reference/schedulegroup-class.md)物件,使消息塊能夠由特定的任務調度程式管理。 其他構造函數重載採用篩選器函數。 篩選器功能使消息塊能夠根據其負載接受或拒絕消息。 關於訊息篩選器的詳細資訊,請參閱[非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)塊 。 有關工作計劃程式的詳細資訊,請參閱[工作計畫程式](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
+`priority_buffer`類別包含許多訊息區塊類型中一般的函式多載。 某些函式多載會採用[concurrency：：](../../parallel/concrt/reference/scheduler-class.md)排程器或[Concurrency：： ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md)物件，讓訊息區塊可由特定的工作排程器管理。 其他的函數多載會接受篩選函數。 篩選函數可讓訊息區塊依據其裝載來接受或拒絕訊息。 如需訊息篩選器的詳細資訊，請參閱[非同步訊息區塊](../../parallel/concrt/asynchronous-message-blocks.md)。 如需工作排程器的詳細資訊，請參閱[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
 
-由於`priority_buffer`類按優先順序排序,然後按接收消息的順序排序,因此在異步接收消息時(例如,當您調用[併發::asend](reference/concurrency-namespace-functions.md#asend)函數或消息塊連接到其他消息塊時)時,該類最有用。
+因為 `priority_buffer` 類別會依優先順序排序訊息，然後再依接收訊息的順序排列，所以當您呼叫[concurrency：： asend](reference/concurrency-namespace-functions.md#asend)函式或當訊息區塊連接至其他訊息區塊時，這個類別最有用。
 
-【[頂端](#top)
+[[頂端](#top)]
 
 ## <a name="the-complete-example"></a><a name="complete"></a>完整範例
 
-下面的示例顯示了`priority_buffer`類的完整定義。
+下列範例顯示類別的完整定義 `priority_buffer` 。
 
 [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]
 
-以下示例同時執行多個`asend`[併發::接收](reference/concurrency-namespace-functions.md#receive)`priority_buffer`物件上的操作。
+下列範例 `asend` 會在物件上同時執行數個和[concurrency：： receive](reference/concurrency-namespace-functions.md#receive)作業 `priority_buffer` 。
 
 [!code-cpp[concrt-priority-buffer#19](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_20.cpp)]
 
-此示例生成以下範例輸出。
+這個範例會產生下列範例輸出。
 
 ```Output
 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36
@@ -196,18 +196,18 @@ ms.locfileid: "81368564"
 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12
 ```
 
-類`priority_buffer`首先按優先順序排序消息,然後按接收消息的順序排序。 在此示例中,具有更大數位優先順序的消息插入到佇列的前面。
+`priority_buffer`類別會先依優先順序排序訊息，然後再依接收訊息的順序排列。 在此範例中，會將具有較高數值優先順序的訊息插入佇列的前方。
 
-【[頂端](#top)
+[[頂端](#top)]
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例代碼並將其貼上到 Visual Studio 專案中`priority_buffer`,或將 類的定義貼上`priority_buffer.h`到已命名的檔案中,並將測試程式`priority_buffer.cpp`貼上到名為的檔案中,然後在 Visual Studio 命令提示視窗中執行以下命令。
+請複製範例程式碼，並將它貼入 Visual Studio 專案中，或將類別的定義貼入名為的檔案中，然後在名為的檔案中 `priority_buffer` `priority_buffer.h` `priority_buffer.cpp` 執行下列命令，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。
 
-**cl.exe /EHsc priority_buffer.cpp**
+**cl.exe/EHsc priority_buffer .cpp**
 
 ## <a name="see-also"></a>另請參閱
 
-[併發運行時演練](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
-[非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[訊息傳遞函數](../../parallel/concrt/message-passing-functions.md)
+[並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
+[非同步訊息區塊](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[訊息傳遞函式](../../parallel/concrt/message-passing-functions.md)

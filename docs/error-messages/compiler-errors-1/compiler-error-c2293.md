@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2293
 ms.assetid: 17e7b4e2-368b-4dd7-a01b-d82be60f8e56
-ms.openlocfilehash: c2c3760bcc7fcc84f914424d16a937cb3e9a0b09
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8b65c4f57cf566c17defe77e5664affe3744ba9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212770"
 ---
 # <a name="compiler-error-c2293"></a>編譯器錯誤 C2293
 
 'identifier': 將 __based 規範作為成員變數不合法
 
-`__based` 修飾詞的規範必須是非成員的指標。
+修飾詞的規範 **`__based`** 必須是非成員指標。
 
 下列範例會產生 C2293：
 

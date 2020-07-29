@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909338"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213511"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -109,7 +109,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 除了*y*的參數類型之外， **nextafter**和**nexttoward**函數系列是相等的。 如果*x*和*y*相等，則傳回的值會*轉換為*傳回型別。
 
-因為 c + + 允許多載， \<所以如果您包含 h> 您可以呼叫**nextafter**和**nexttoward**的多載，其會傳回**float**和**long** **double**類型。 在 C 程式中， **nextafter**和**nexttoward**一律會傳回**double**。
+因為 c + + 允許多載，所以如果您包含， \<cmath> 您可以呼叫傳回和類型之**nextafter**和**nexttoward**的多載 **`float`** **`long double`** 。 在 C 程式中， **nextafter**和**nexttoward**一律會傳回 **`double`** 。
 
 **_Nextafter**和 **_nextafterf**函式為 Microsoft 特有的功能。 只有在針對 x64 進行編譯時，才能使用 **_nextafterf**函數。
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813518"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212445"
 ---
 # <a name="cfileexception-class"></a>CFileException 類別
 
@@ -45,13 +45,13 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CFileException::CFileException](#cfileexception)|建構 `CFileException` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CFileException::ErrnoToException](#errnotoexception)|傳回對應于執行時間錯誤號碼的原因程式碼。|
 |[CFileException::GetErrorMessage](#geterrormessage)|抓取描述例外狀況的訊息。|
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CFileException：： m_cause](#m_cause)|包含對應至例外狀況原因的可移植程式碼。|
 |[CFileException：： m_lOsError](#m_loserror)|包含相關的作業系統錯誤號碼。|
@@ -185,7 +185,7 @@ int m_cause;
 
 ### <a name="remarks"></a>備註
 
-此資料成員是**int**類型的公用變數。列舉值和其意義如下：
+此資料成員是類型的公用變數 **`int`** 。 列舉程式及其意義如下：
 
 | 錯誤 | 值和意義 |
 |--|--|

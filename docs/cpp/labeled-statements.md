@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a10d071e46c79f49abf7e3eba498fae0487ccdc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213355"
 ---
 # <a name="labeled-statements"></a>標記陳述式
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**Goto 語句**
+**goto 陳述式**
 
-來來源程式中*識別碼*標籤的外觀會宣告標籤。 只有[goto](../cpp/goto-statement-cpp.md)語句可以將控制項傳輸至*識別碼*標籤。 下列程式碼片段說明如何使用**goto**語句和*識別碼*標籤：
+來來源程式中*識別碼*標籤的外觀會宣告標籤。 只有[goto](../cpp/goto-statement-cpp.md)語句可以將控制項傳輸至*識別碼*標籤。 下列程式碼片段說明 **`goto`** 語句和*識別碼*標籤的使用：
 
 標籤不會單獨顯示，而是必須附加至陳述式。 如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**Case 語句**
+**case 陳述式**
 
-出現在**case**關鍵字之後的標籤不能同時出現在**switch**語句之外。 （此限制也適用于**default**關鍵字）。下列程式碼片段顯示**case**標籤的正確用法：
+出現在關鍵字後面的標籤 **`case`** 也不能出現在 **`switch`** 語句之外。 （此限制也適用于 **`default`** 關鍵字）。下列程式碼片段會顯示標籤的正確用法 **`case`** ：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>case 陳述式中的標籤
 
-出現在**case**關鍵字之後的標籤不能同時出現在**switch**語句之外。 （此限制也適用于**default**關鍵字）。下列程式碼片段顯示**case**標籤的正確用法：
+出現在關鍵字後面的標籤 **`case`** 也不能出現在 **`switch`** 語句之外。 （此限制也適用于 **`default`** 關鍵字）。下列程式碼片段會顯示標籤的正確用法 **`case`** ：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>goto 陳述式中的標籤
 
-來來源程式中*識別碼*標籤的外觀會宣告標籤。 只有[goto](../cpp/goto-statement-cpp.md)語句可以將控制項傳輸至*識別碼*標籤。 下列程式碼片段說明如何使用**goto**語句和*識別碼*標籤：
+來來源程式中*識別碼*標籤的外觀會宣告標籤。 只有[goto](../cpp/goto-statement-cpp.md)語句可以將控制項傳輸至*識別碼*標籤。 下列程式碼片段說明 **`goto`** 語句和*識別碼*標籤的使用：
 
 標籤不會單獨顯示，而是必須附加至陳述式。 如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。
 
@@ -180,5 +180,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)<br/>
-[switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)
+[C + + 語句總覽](../cpp/overview-of-cpp-statements.md)<br/>
+[switch 語句（c + +）](../cpp/switch-statement-cpp.md)

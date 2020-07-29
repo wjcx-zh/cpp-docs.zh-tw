@@ -1,5 +1,5 @@
 ---
-title: 變更預設 Class Factory 和彙總模型
+title: 變更預設的 Class Factory 和匯總模型
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CComClassFactory class, making the default
@@ -12,30 +12,30 @@ helpviewer_keywords:
 - default class factory, ATL
 - defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-ms.openlocfilehash: 94f9ecd85e09cb3916b518d71b904961042142e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c97d8f63a441fab2b76c6e0509e4b3f384308ea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220882"
 ---
-# <a name="changing-the-default-class-factory-and-aggregation-model"></a>變更預設 Class Factory 和彙總模型
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>變更預設的 Class Factory 和匯總模型
 
-使用 ATL [CComCoClass](../atl/reference/ccomcoclass-class.md)來定義物件的預設類別處理站和彙總模型。 `CComCoClass` 指定下列兩個巨集：
+ATL 會使用[CComCoClass](../atl/reference/ccomcoclass-class.md)來定義物件的預設 Class Factory 和匯總模型。 `CComCoClass`指定下列兩個宏：
 
-- [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory)宣告為的 class factory [CComClassFactory](../atl/reference/ccomclassfactory-class.md)。
+- [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory)宣告要[CComClassFactory](../atl/reference/ccomclassfactory-class.md)的 Class Factory。
 
-- [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable)宣告您的物件可加以彙總。
+- [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable)宣告您的物件可以匯總。
 
-您可以藉由在您的類別定義中指定另一個巨集來覆寫這些預設值的其中一個設定。 例如，若要使用[CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)而不是`CComClassFactory`，指定[DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2)巨集：
+您可以藉由在類別定義中指定另一個宏，覆寫其中一個預設值。 例如，若要使用[CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)而不是 `CComClassFactory` ，請指定[DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2)宏：
 
 [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]
 
-兩個其他定義 class factory 的巨集[DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)並[DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)。
+定義 Class Factory 的兩個其他宏[DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)和[DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)。
 
-也會使用 ATL **typedef**機制來實作預設行為。 DECLARE_AGGREGATABLE 巨集的使用，例如**typedef**定義類型，稱為`_CreatorClass`，這在整個 ATL 參考 請注意，在衍生類別中， **typedef**使用相同名稱的基底類別**typedef**導致 ATL，使用您的定義，並覆寫預設行為。
+ATL 也會使用 **`typedef`** 機制來執行預設行為。 例如，DECLARE_AGGREGATABLE 宏 **`typedef`** 會使用來定義名為的型別 `_CreatorClass` ，然後在整個 ATL 中參考它。 請注意，在衍生類別中， **`typedef`** 使用與基類相同的名稱，會 **`typedef`** 在 ATL 中使用您的定義並覆寫預設行為。
 
 ## <a name="see-also"></a>另請參閱
 
 [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)<br/>
-[彙總和 Class Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)
+[匯總和類別 Factory 宏](../atl/reference/aggregation-and-class-factory-macros.md)

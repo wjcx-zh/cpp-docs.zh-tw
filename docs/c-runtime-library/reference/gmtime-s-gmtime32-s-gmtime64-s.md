@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916224"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213550"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
@@ -85,8 +85,8 @@ errno_t _gmtime64_s(
 
 |*tmDest*|*sourceTime*|傳回|*TmDest*中的值|
 |-----------|------------|------------|--------------------|
-|**Null**|任意|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|**Null**|**EINVAL**|所有的欄位設定為 -1。|
+|**NULL**|任意|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|**NULL**|**EINVAL**|所有的欄位設定為 -1。|
 |非**Null**|< 0|**EINVAL**|所有的欄位設定為 -1。|
 
 在前兩個錯誤條件的情況下，叫用了無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
@@ -98,9 +98,9 @@ errno_t _gmtime64_s(
 > [!NOTE]
 > 目標環境應該嘗試判斷日光節約時間是否生效。 C 執行階段程式庫會假定使用美國的規則，以實作日光節約時間的計算。
 
-每個結構欄位的類型為**int**，如下表所示。
+每個結構欄位的類型都是 **`int`** ，如下表所示。
 
-|欄位|描述|
+|欄位|說明|
 |-|-|
 |**tm_sec**|分鐘後的秒數（0-59）。|
 |**tm_min**|小時之後的分鐘（0-59）。|
@@ -122,7 +122,7 @@ errno_t _gmtime64_s(
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime> 或\<time. h>|
+|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime> 或 \<time.h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2368
 ms.assetid: a824626f-9fb5-453b-a3a4-da89d1e32218
-ms.openlocfilehash: 50d93fd37bbc78f1c2c47f61e24e72e2b028cdcc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef209a0fe2ada20f681c1e7d45ac02b1582d2d15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206059"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212744"
 ---
 # <a name="compiler-error-c2368"></a>編譯器錯誤 C2368
 
 'identifier': 重複定義; 配置的規範不相同
 
-符號的宣告和定義指定不同的 `__declspec` 屬性。
+符號的宣告和定義會指定不同 **`__declspec`** 的屬性。

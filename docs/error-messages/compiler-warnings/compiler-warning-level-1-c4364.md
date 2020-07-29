@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-ms.openlocfilehash: 79c8809b4de9d6853aaacec4283bf01d0e89305e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5423a5525f9bef4d949bfee2de058fe19d0ec181
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187098"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220037"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>編譯器警告 (層級 1) C4364
 
-\#針對先前在位置（line_number）所看到的元件 ' file ' 使用，而不 as_friend 屬性;as_friend 不適用
+\#針對先前在位置（line_number）看不到 as_friend 屬性的元件 ' file ' 使用as_friend 不適用
 
-指定的中繼資料檔案已重複 `#using` 指示詞，但在第一次出現時未使用 `as_friend` 限定詞;編譯器會忽略第二個 `as_friend`。
+`#using`指定的中繼資料檔案已重複指示詞，但 **`as_friend`** 第一次出現時未使用限定詞; 編譯器會忽略第二個 **`as_friend`** 。
 
-如需詳細資訊，請參閱[FriendC++元件（）](../../dotnet/friend-assemblies-cpp.md)。
+如需詳細資訊，請參閱[Friend 元件（c + +）](../../dotnet/friend-assemblies-cpp.md)。
 
 ## <a name="example"></a>範例
 

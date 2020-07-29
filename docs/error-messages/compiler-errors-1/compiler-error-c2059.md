@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: f91eb428fcb49c81187788730128545916955790
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 52b389806f5bacac78750bc745cd77699eb59735
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127656"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212874"
 ---
 # <a name="compiler-error-c2059"></a>編譯器錯誤 C2059
 
@@ -19,7 +19,7 @@ ms.locfileid: "77127656"
 
 Token 造成語法錯誤。
 
-下列範例會針對宣告 `j`的程式程式碼產生錯誤訊息。
+下列範例會針對宣告的那一行產生錯誤訊息 `j` 。
 
 ```cpp
 // C2059e.cpp
@@ -31,7 +31,7 @@ Token 造成語法錯誤。
 
 若要判斷錯誤的原因，請同時檢查錯誤訊息中所列的程式程式碼，以及其上方的行。 如果檢查程式程式碼不會產生問題的相關線索，請嘗試將錯誤訊息中所列的程式程式碼批註化，可能會有幾行以上。
 
-如果錯誤訊息出現在緊接在 `typedef` 變數後面的符號上，請確定已在原始程式碼中定義變數。
+如果錯誤訊息出現在緊接在變數後面的符號上 **`typedef`** ，請確定已在原始程式碼中定義變數。
 
 當預處理器符號名稱重新用為識別碼時，會引發 C2059。 在下列範例中，編譯器會將 `DIGITS.ONE` 視為數位1，這不是有效的列舉元素名稱：
 
@@ -44,7 +44,7 @@ enum class DIGITS {
 };
 ```
 
-如果符號評估為沒有任何值，您可能會收到 C2059，因為使用 **/d**_符號_ **=** 來進行編譯時，會發生此問題。
+如果符號評估為沒有任何值，您可能會收到 C2059，因為當使用 **/d**_符號_進行編譯時，會發生此問題 **=** 。
 
 ```cpp
 // C2059a.cpp
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-當可以限定名稱的運算子（`::`、`->`和 `.`）後面必須接著關鍵字 `template`，就會發生 C2059，如下列範例所示：
+當可以限定名稱的運算子（ `::` 、 `->` 和 `.` ）後面必須接著關鍵字時，就會發生 C2059 **`template`** ，如下列範例所示：
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-根據預設，C++ 假設 `AY::Rebind` 不是範本；因此下列 `<` 會解譯成小於符號。  您必須明確地告知編譯器 `Rebind` 為範本，以便它可以正確地剖析角括號。 若要更正這個錯誤，請在相依類型名稱上使用 `template` 關鍵字，如下所示：
+根據預設，C++ 假設 `AY::Rebind` 不是範本；因此下列 `<` 會解譯成小於符號。  您必須明確地告知編譯器 `Rebind` 為範本，以便它可以正確地剖析角括號。 若要更正這個錯誤，請 **`template`** 在相依類型的名稱上使用關鍵字，如下所示：
 
 ```cpp
 template <typename T> struct Allocator {

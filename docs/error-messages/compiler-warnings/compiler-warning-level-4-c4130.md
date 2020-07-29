@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4130
 ms.assetid: 45e4c7b2-6b51-41c7-ba5e-941aa5c7d3dc
-ms.openlocfilehash: 3bc632bf641fa3944cfd21dc405590c803498d80
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 7b2fbccfd3b124220d6e310c01adace1d3e112c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991574"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219959"
 ---
 # <a name="compiler-warning-level-4-c4130"></a>編譯器警告 (層級 4) C4130
 
@@ -34,6 +34,6 @@ int main()
 }
 ```
 
-**if** 陳述式比較指標 `pc` 中所儲存的值與字串 "Hello" 的位址，而這個位址是在每次字串出現在程式碼時個別配置。 **if** 陳述式不會比較 `pc` 所指向的字串與字串 "Hello"。
+**`if`** 語句會比較指標中所儲存的值 `pc` 與字串 "Hello" 的位址，這會在每次字串出現在程式碼時個別配置。 **`if`** 語句不會比較所指向的字串 `pc` 與字串 "Hello"。
 
 若要比較字串，請使用 `strcmp` 函式。

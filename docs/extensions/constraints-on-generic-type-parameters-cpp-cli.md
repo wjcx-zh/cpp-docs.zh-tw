@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172474"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219750"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型類型參數的條件約束 (C++/CLI)
 
@@ -29,7 +29,7 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>參數
 
-*type-parameter*<br/>
+*類型參數*<br/>
 其中一個要限制的型別參數。
 
 *constraint list*<br/>
@@ -37,13 +37,13 @@ where type-parameter: constraint list
 
 清單也可以包括類別。 為了讓類型引數符合基底類別條件約束，它必須與條件約束的類別相同，或是衍生自條件約束。
 
-您也可以指定 **gcnew()** ，以指出型別引數必須具有公用的無參數建構函式；或指定 **ref class**，以指出型別引數必須是參考型別，包括任何類別、介面、委派或陣列型別；或指定 **value class**，以指出型別引數必須是實值型別。 您可以指定 Nullable\<T> 以外的任何實值型別。
+您也可以指定 **gcnew()**，以指出型別引數必須具有公用的無參數建構函式；或指定 **ref class**，以指出型別引數必須是參考型別，包括任何類別、介面、委派或陣列型別；或指定 **value class**，以指出型別引數必須是實值型別。 可以指定 Nullable 以外的任何實數值型別 \<T> 。
 
 您也可以指定泛型參數做為條件約束。 針對您要限制的類型提供的型別引數必須是或衍生自條件約束的類型。 這稱為巢狀類型條件約束。
 
 ## <a name="remarks"></a>備註
 
-限制式子句包括 **where**，後面接著型別參數、冒號 ( **:** ) 及限制式 (可用於指定型別參數上限制的性質)。 **where** 是內容相關性關鍵字；如需詳細資訊，請參閱[內容相關性關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。 請以空格分隔多個 **where** 子句。
+限制式子句包括 **where**，後面接著型別參數、冒號 (**:**) 及限制式 (可用於指定型別參數上限制的性質)。 **where** 是內容相關性關鍵字；如需詳細資訊，請參閱[內容相關性關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。 請以空格分隔多個 **where** 子句。
 
 條件約束套用至型別參數後，就會對可做為泛型類型或方法的引數使用的類型加以限制。
 
@@ -64,7 +64,7 @@ ref class List {};
 
 類型引數類別中的靜態方法無法透過類型參數呼叫，只能透過實際的具名類型呼叫。
 
-限制式不可以是實值型別，包括 **int** 或 **double** 等內建型別。 由於實值類型不能有衍生類別，因此只有一個類別能夠符合條件約束。 在這種情況下，可以重新撰寫泛型，將型別參數取代為特定實值類型。
+條件約束不可以是實數值型別，包括內建類型，例如 **`int`** 或 **`double`** 。 由於實值類型不能有衍生類別，因此只有一個類別能夠符合條件約束。 在這種情況下，可以重新撰寫泛型，將型別參數取代為特定實值類型。
 
 在某些情況下會需要條件約束，因為編譯器不允許使用未知類型的方法或其他功能，除非條件約束表示未知的類型支援方法或介面。
 

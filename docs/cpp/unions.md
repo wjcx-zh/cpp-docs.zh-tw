@@ -1,5 +1,5 @@
 ---
-title: 聯集
+title: 等位
 ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187956"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213134"
 ---
-# <a name="unions"></a>聯集
+# <a name="unions"></a>等位
 
 > [!NOTE]
 > 在 c + + 17 和更新版本中， **std：： variant**類別是等位的型別安全替代項。
 
-聯**集**是使用者定義的類型，其中的所有成員都共用相同的記憶體位置。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。
+**`union`** 是使用者定義的型別，其中的所有成員都共用相同的記憶體位置。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。
 
 如果具有許多物件且 (或) 記憶體有限，則等位可能適用於節省記憶體。 不過，正確使用它們時需要特別小心，因為您有責任確保一律存取寫入的最後一個成員。 如果任何成員類型具有非一般建構函式，則您必須撰寫額外的程式碼來明確建構和終結該成員。 使用等位之前，請考慮使用基底類別和衍生類別是否可以更恰當地表示您正嘗試解決的問題。
 
@@ -41,7 +41,7 @@ union [name]  { member-list };
 
 ## <a name="declaring-a-union"></a>宣告等位
 
-使用**union**關鍵字開始宣告聯集，並以大括弧括住成員清單：
+使用關鍵字開始宣告聯集 **`union`** ，並以大括弧括住成員清單：
 
 ```cpp
 // declaring_a_union.cpp
@@ -633,7 +633,7 @@ int main()
 
 `NumericType` 等位會依照下圖中所示的方式在記憶體內部排列 (概念上)。
 
-![數數值型別聯集中的資料儲存區](../cpp/media/vc38ul1.png "NumericType 聯集內的資料儲存") <br/>
+![數值類型等位中的資料儲存區](../cpp/media/vc38ul1.png "NumericType 聯集內的資料儲存") <br/>
 在 NumericType 等位中儲存資料
 
 ## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>匿名等位
@@ -648,9 +648,9 @@ union  {  member-list  }
 
 除了已命名聯集的限制之外，匿名等位也受限於這些額外的限制：
 
-- 如果在檔案或命名空間範圍中宣告，則也必須將它們宣告為**靜態**。
+- 它們也必須宣告為 **`static`** 在檔案或命名空間範圍中宣告。
 
-- 它們只能有**公用**成員;匿名等位中的**私**用和**受保護**成員會產生錯誤。
+- 它們只能擁有 **`public`** 成員 **`private`** ，而匿名等位 **`protected`** 中的成員則會產生錯誤。
 
 - 它們不能有成員函式。
 
@@ -659,4 +659,4 @@ union  {  member-list  }
 [類別和結構](../cpp/classes-and-structs-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [class](../cpp/class-cpp.md)<br/>
-[struct](../cpp/struct-cpp.md)
+[結構](../cpp/struct-cpp.md)

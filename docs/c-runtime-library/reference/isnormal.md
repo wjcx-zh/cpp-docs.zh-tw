@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213524"
 ---
 # <a name="isnormal"></a>isnormal
 
-判斷浮點值是否為一般的值。
+判斷浮點值是否為標準值。
 
 ## <a name="syntax"></a>語法
 
@@ -37,19 +37,19 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>傳回值
 
-**isnormal**傳回非零值 (**，則為 true**在C++程式碼) 如果引數*x*不是零、 subnormal、 無限或為 NaN。 否則，請**isnormal**會傳回 0 (**false**在C++的程式碼)。
+**isnormal** **`true`** 如果引數*x*不是零、偏低、無限，或 NaN，則 isnormal 會傳回非零值（在 c + + 程式碼中）。 否則， **isnormal**會傳回0（ **`false`** 在 c + + 程式碼中為）。
 
 ## <a name="remarks"></a>備註
 
-**isnormal**是當編譯為 C 」 和 「 當編譯為內嵌函式樣板的巨集C++。
+當編譯成 C 時， **isnormal**是一個宏，而當編譯成 c + + 時，是內嵌函式樣板。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭 (C)|必要的標頭 (C++)|
+|函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------------|-------------------------------|
 |**isnormal**|\<math.h>|\<math.h> 或 \<cmath>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

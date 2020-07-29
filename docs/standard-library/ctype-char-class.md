@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d2c74ef46babe388cfa6d649e8b4501b7c235bb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688155"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220960"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 類別
 
-類別是類別樣板的明確特製化，`ctype\<CharType>` 到**char**類型，描述可以做為地區設定 facet 的物件，以表示**char**類型字元的各種屬性。
+類別是類別樣板的明確特製化 `ctype\<CharType>` ，可做為類型 **`char`** ，描述可以做為地區設定 facet 的物件，以表示類型字元之各種屬性的特性 **`char`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -108,13 +108,13 @@ protected:
 
 明確特製化與類別樣板的差異有好幾種：
 
-- 類別 ctype 的物件 < `char` > 會儲存 ctype 遮罩資料表第一個專案的指標，這是類型 `ctype_base::mask` 的 UCHAR_MAX + 1 個元素的陣列。 它也會儲存 Boolean 物件，指出當 ctype\< **Elem**> 物件已終結時，是否應該刪除陣列 (使用 `operator delete[]`)。
+- 類別的物件會 `ctype<char>` 儲存 ctype 遮罩資料表第一個元素的指標，這是類型的 UCHAR_MAX + 1 個元素的陣列 `ctype_base::mask` 。 它也會儲存布林物件，指出當 ctype 物件終結時，是否應刪除（使用 `operator delete[]` ）陣列 \< **Elem**> 。
 
-- 其唯一的公用函式可讓您指定 `tab`、ctype 遮罩資料表和 `del`，也就是當 ctype < `char` > 物件已終結，以及參考計數參數 refs 時，應該刪除陣列的布林物件。
+- 其唯一的公用函式可讓您指定 `tab` 、ctype 遮罩資料表和 `del` 布林物件，如果在物件終結時應刪除陣列，則為 true，以及 `ctype<char>` 參考計數參數 refs。
 
-- Protected 成員函式 `table` 會傳回儲存的 ctype 遮罩資料表。
+- Protected 成員函式會傳回 `table` 儲存的 ctype 遮罩資料表。
 
-- 靜態成員物件 `table_size` 會指定 ctype 遮罩資料表中元素的最小數目。
+- 靜態成員物件會 `table_size` 指定 ctype 遮罩資料表中元素的最小數目。
 
 - 受保護的靜態成員函式 `classic_table` （傳回適用于 "C" 地區設定的 ctype 遮罩資料表。
 
@@ -124,12 +124,12 @@ protected:
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：**\<locale>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [facet 類別](locale-class.md#facet_class)\
 [ctype_base 類別](../standard-library/ctype-base-class.md)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

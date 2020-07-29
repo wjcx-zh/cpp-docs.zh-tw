@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: daaf92e36550c5479903dec4869b1cb116c0a65a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219790"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>使用 /clr 進行 C-Style 轉換 (C++/CLI)
 
@@ -34,7 +34,7 @@ ms.locfileid: "80172590"
 
 不建議使用 C-Style 轉換。 以 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md) 進行編譯時，請使用 [safe_cast](safe-cast-cpp-component-extensions.md)。
 
-以下範例示範對應至 **const_cast** 的 C-Style 轉換。
+下列範例會顯示對應至的 C 樣式轉換 **`const_cast`** 。
 
 ```cpp
 // cstyle_casts_1.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-以下範例示範對應至 **safe_cast** plus **const_cast** 的 C-Style 轉換。
+下列範例顯示對應至**safe_cast**加號的 C 樣式轉換 **`const_cast`** 。
 
 ```cpp
 // cstyle_casts_3.cpp
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-以下範例示範對應至 **static_cast** 的 C-Style 轉換。
+下列範例會顯示對應至的 C 樣式轉換 **`static_cast`** 。
 
 ```cpp
 // cstyle_casts_4.cpp
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-以下範例示範對應至 **static_cast** plus **const_cast** 的 C-Style 轉換。
+下列範例顯示對應至加號的 C 樣式轉換 **`static_cast`** **`const_cast`** 。
 
 ```cpp
 // cstyle_casts_5.cpp
@@ -162,4 +162,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

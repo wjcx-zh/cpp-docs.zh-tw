@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: 2424d076be0914a68c3227566cb851b7ab64cc0f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17a33f7c55fa2825eae1c7d8b9d8ab78e4ed5274
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175034"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225328"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>編譯器警告 (層級 1) C4807
 
 'operation' : 不安全的混用類型 'type' 和類型 'type' 的已簽名位元欄位
 
-比較一位元帶正負號位元欄位與 `bool` 變數時，會產生這個警告。 因為一位元帶正負號位元欄位只能包含值 -1 或 0，所以比較它與 `bool`十分危險。 不會產生有關混合使用 `bool` 與一位元未帶正負號位元欄位的警告，因為它們與 `bool` 相同，而且只能保留 0 或 1。
+將一個位帶正負號的位欄位與變數進行比較時，會產生這個警告 **`bool`** 。 因為一個位的帶正負號的位欄位只能包含值-1 或0，所以與比較危險 **`bool`** 。 不會產生混合 **`bool`** 和一位不帶正負號位欄位的警告，因為它們與相同 **`bool`** ，而且只能保留0或1。
 
 ## <a name="example"></a>範例
 

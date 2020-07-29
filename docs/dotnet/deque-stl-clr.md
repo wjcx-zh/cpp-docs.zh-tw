@@ -98,18 +98,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-ms.openlocfilehash: 74fb98d99e0aba94c40dce9ad1bcd6af83394231
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 75c83240b9125628fd5121368af547a5266bfb5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208763"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221493"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
-此樣板類別所描述的物件可控制具有隨機存取的變動長度專案序列。 您可以使用容器 `deque` 來管理一系列看起來像是連續儲存區的專案，但它可以在任一端增加或縮小，而不需要複製任何剩餘的元素。 因此，它可以有效率地執行 `double-ended queue`。 （因此名稱）。
+此樣板類別所描述的物件可控制具有隨機存取的變動長度專案序列。 您可以使用容器 `deque` 來管理看起來像是連續儲存區塊的一系列專案，但它可以在任一端增加或縮小，而不需要複製任何剩餘的元素。 因此，它可以有效率地執行 `double-ended queue` 。 （因此名稱）。
 
-在下面的描述中，`GValue` 與 `Value` 相同，除非後者是 ref 類型，在此情況下會 `Value^`。
+在下列描述中，與 `GValue` 相同， `Value` 除非後者是 ref 類型，在此情況下為 `Value^` 。
 
 ## <a name="syntax"></a>語法
 
@@ -137,13 +137,13 @@ template<typename Value>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<cliext/deque >
+**標頭：**\<cliext/deque>
 
 **命名空間：** cliext
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|描述|
+|類型定義|說明|
 |---------------------|-----------------|
 |[deque::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|
 |[deque::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
@@ -157,9 +157,9 @@ template<typename Value>
 |[deque::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[deque::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|
 |[deque::size_type (STL/CLR)](#size_type)|兩個項目之間帶正負號距離的類型。|
-|[deque::value_type (STL/CLR)](#value_type)|元素類型。|
+|[deque::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |---------------------|-----------------|
 |[deque::assign (STL/CLR)](#assign)|取代所有項目。|
 |[deque::at (STL/CLR)](#at)|存取指定位置的項目。|
@@ -183,21 +183,21 @@ template<typename Value>
 |[deque::swap (STL/CLR)](#swap)|交換兩個容器的內容。|
 |[deque::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
 
-|屬性|描述|
+|屬性|說明|
 |--------------|-----------------|
 |[deque::back_item (STL/CLR)](#back_item)|存取最後一個項目。|
 |[deque::front_item (STL/CLR)](#front_item)|存取第一個項目。|
 
-|運算子|描述|
+|運算子|說明|
 |--------------|-----------------|
 |[deque::operator!= (STL/CLR)](#op_neq)|判斷兩個 `deque` 物件是否不相等。|
-|[deque::operator (STL/CLR)](#operator)|存取指定位置的項目。|
-|[operator< (deque) (STL/CLR)](#op_lt)|判斷 `deque` 物件是否小於另一個 `deque` 物件。|
-|[operator<= (deque) (STL/CLR)](#op_lteq)|判斷 `deque` 物件是否小於或等於另一個 `deque` 物件。|
-|[operator= (deque) (STL/CLR)](#op_as)|取代受控制的序列。|
+|[deque::operator(STL/CLR)](#operator)|存取指定位置的項目。|
+|[operator< （deque）（STL/CLR）](#op_lt)|判斷 `deque` 物件是否小於另一個 `deque` 物件。|
+|[operator<= （deque）（STL/CLR）](#op_lteq)|判斷 `deque` 物件是否小於或等於另一個 `deque` 物件。|
+|[operator = （deque）（STL/CLR）](#op_as)|取代受控制的序列。|
 |[operator== (deque) (STL/CLR)](#op_eq)|判斷 `deque` 物件是否等於另一個 `deque` 物件。|
-|[operator> (deque) (STL/CLR)](#op_gt)|判斷 `deque` 物件是否大於另一個 `deque` 物件。|
-|[operator>= (deque) (STL/CLR)](#op_gteq)|判斷 `deque` 物件是否大於或等於另一個 `deque` 物件。|
+|[operator> （deque）（STL/CLR）](#op_gt)|判斷 `deque` 物件是否大於另一個 `deque` 物件。|
+|[operator>= （deque）（STL/CLR）](#op_gteq)|判斷 `deque` 物件是否大於或等於另一個 `deque` 物件。|
 
 ## <a name="interfaces"></a>介面
 
@@ -209,17 +209,17 @@ template<typename Value>
 |<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的專案進行序列。|
 |<xref:System.Collections.Generic.ICollection%601>|維護具類型的元素群組。|
 |<xref:System.Collections.Generic.IList%601>|維護具類型元素的已排序群組。|
-|IDeque < 值\>|維護一般容器。|
+|IDeque<值\>|維護一般容器。|
 
 ## <a name="remarks"></a>備註
 
-物件會透過指定 `Value` 元素區塊的控制碼陣列，配置並釋放它所控制之序列的儲存體。 陣列會隨選成長。 成長的發生方式，是將新專案前置或附加的成本固定為常數時間，而且不會干擾其餘的元素。 您也可以在常數時間中移除任何結尾的專案，而不會干擾其餘的元素。 因此，deque 是適用于樣板類別[佇列（stl/clr）](../dotnet/queue-stl-clr.md)或樣板類別[堆疊（STL/clr）](../dotnet/stack-stl-clr.md)之基礎容器的理想候選。
+物件會透過指定專案區塊的已儲存控制碼陣列，配置並釋放它所控制之序列的儲存體 `Value` 。 陣列會隨選成長。 成長的發生方式，是將新專案前置或附加的成本固定為常數時間，而且不會干擾其餘的元素。 您也可以在常數時間中移除任何結尾的專案，而不會干擾其餘的元素。 因此，deque 是適用于樣板類別[佇列（stl/clr）](../dotnet/queue-stl-clr.md)或樣板類別[堆疊（STL/clr）](../dotnet/stack-stl-clr.md)之基礎容器的理想候選。
 
-`deque` 物件支援隨機存取反覆運算器，這表示您可以直接參考元素的數值位置，從零開始計算第一個（front）元素，到[deque：： size （STL/CLR）](#size)`() - 1` （針對最後一個（back）元素）。 這也表示 deque 是樣板類別[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)之基礎容器的理想候選。
+`deque`物件支援隨機存取反覆運算器，這表示您可以直接參考元素的數值位置，從零開始計算第一個（front）元素，到最後一個（back）元素的[deque：： SIZE （STL/CLR）](#size) `() - 1` 。 這也表示 deque 是樣板類別[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)之基礎容器的理想候選。
 
 Deque 反覆運算器會儲存其相關聯 deque 物件的控制碼，以及它所指定之元素的偏差。 您只能將反覆運算器與相關聯的容器物件搭配使用。 Deque 元素的偏差*不*一定與其位置相同。 第一個插入的元素具有偏差零，下一個附加的元素具有偏差1，但下一個前置的元素具有偏差-1。
 
-在任一端插入或清除元素時，*不*會改變儲存于任何有效偏差的元素值。 不過，插入或清除內部元素*可以*變更儲存在指定偏差的元素值，因此反覆運算器指定的值也可以變更。 （容器可能必須在插入之前或下複製元素，以建立一個洞，或在清除之後填滿一個洞）。不過，deque iterator 會保持有效，只要其偏差指定有效的元素即可。 此外，有效的反覆運算器仍然是 dereferencable--您可以使用它來存取或更改所指定的元素值，只要其偏差不等於 `end()`所傳回之反覆運算器的偏差即可。
+在任一端插入或清除元素時，*不*會改變儲存于任何有效偏差的元素值。 不過，插入或清除內部元素*可以*變更儲存在指定偏差的元素值，因此反覆運算器指定的值也可以變更。 （容器可能必須在插入之前或下複製元素，以建立一個洞，或在清除之後填滿一個洞）。不過，deque iterator 會保持有效，只要其偏差指定有效的元素即可。 此外，有效的反覆運算器仍然是 dereferencable--您可以使用它來存取或更改所指定的元素值，只要其偏差不等於所傳回反覆運算器的偏差即可 `end()` 。
 
 清除或移除元素會呼叫其預存值的析構函式。 終結容器會清除所有元素。 因此，其元素類型為 ref 類別的容器，可確保沒有任何元素 outlive 容器。 不過要注意的是，控制碼容器並*不*會摧毀其元素。
 
@@ -249,17 +249,17 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 要插入的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要插入的列舉。
 
-*val*<br/>
+*初始值*<br/>
 要插入之元素的值。
 
 ### <a name="remarks"></a>備註
 
 第一個成員函式會將受控制的序列取代為值*val*的*count*元素的重複。 您可以使用它來填滿具有相同值的所有專案容器。
 
-如果 `InIt` 是整數類型，第二個成員函式的行為會與 `assign((size_type)first, (value_type)last)`相同。 否則，它會將受控制序列取代為序列 [`first`，`last`）。 您可以使用它讓受控制的序列成為另一個序列的複本。
+如果 `InIt` 是整數類型，第二個成員函式的行為會與相同 `assign((size_type)first, (value_type)last)` 。 否則，它會將受控制序列取代為序列 [ `first` ， `last` ）。 您可以使用它讓受控制的序列成為另一個序列的複本。
 
 第三個成員函式會將受控制序列取代為列舉值*右邊*所指定的序列。 您可以使用它，讓受控制的序列成為列舉值所描述之序列的複本。
 
@@ -318,7 +318,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>參數
 
-*pos*<br/>
+*採購*<br/>
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -527,7 +527,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會有效地呼叫[deque：： erase （stl/clr）](#erase) ，`(` [deque：： begin](#begin) （stl/clr）`(),` [DEQUE：： end （stl/clr）](#end)`())`。 您可以使用它來確保受控制的序列是空的。
+此成員函式會有效地呼叫[deque：： erase （stl/clr）](#erase) `(` [deque：： begin （stl/clr）](#begin) `(),` [deque：： end （stl/CLR）](#end) `())` 。 您可以使用它來確保受控制的序列是空的。
 
 ### <a name="example"></a>範例
 
@@ -584,7 +584,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T2` 的物件，可做為受控制序列的常數隨機存取反覆運算器。
+此類型描述未指定類型的物件 `T2` ，可做為受控制序列的常數隨機存取反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -669,7 +669,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T4` 的物件，可做為受控制序列的常數反向反覆運算器。
+此類型描述未指定類型的物件 `T4` ，可做為受控制序列的常數反向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -727,10 +727,10 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 要插入的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要插入的物件或範圍。
 
-*val*<br/>
+*初始值*<br/>
 要插入之元素的值。
 
 ### <a name="remarks"></a>備註
@@ -745,19 +745,19 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `deque(deque<Value>% right);`
 
-使用序列 [`right.begin()`，`right.end()`），初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 deque 物件*許可權*所控制的序列複本。 如需反覆運算器的詳細資訊，請參閱[deque：： begin （stl/clr）](#begin)和[deque：： end （stl/clr）](#end)。
+使用序列 [，）初始化受控制的序列 `right.begin()` `right.end()` 。 您可以使用它來指定初始受控制序列，這是由 deque 物件*許可權*所控制的序列複本。 如需反覆運算器的詳細資訊，請參閱[deque：： begin （stl/clr）](#begin)和[deque：： end （stl/clr）](#end)。
 
 此構造函式：
 
 `deque(deque<Value>^ right);`
 
-使用序列 [`right->begin()`，`right->end()`），初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 deque 物件（其控制碼為*right*）所控制的序列複本。
+使用序列 [，）初始化受控制的序列 `right->begin()` `right->end()` 。 您可以使用它來指定初始受控制序列，這是由 deque 物件（其控制碼為*right*）所控制的序列複本。
 
 此構造函式：
 
 `explicit deque(size_type count);`
 
-使用值 `value_type()`，初始化具有*count*個元素的受控制序列。 您可以使用它來填滿具有預設值之專案的容器。
+使用具有值的*count*元素，初始化受控制的序列 `value_type()` 。 您可以使用它來填滿具有預設值之專案的容器。
 
 此構造函式：
 
@@ -771,7 +771,7 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `deque(InIt first, InIt last);`
 
-使用序列 [`first`，`last`），初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本。
+使用序列 [，）初始化受控制的序列 `first` `last` 。 您可以使用它，讓受控制的序列成為另一個序列的複本。
 
 此構造函式：
 
@@ -910,7 +910,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[deque：： size （STL/CLR）](#size)`() == 0`。 您可以使用它來測試 deque 是否是空的。
+成員函式會對空的受控制序列傳回 true。 它相當於[deque：： size （STL/CLR）](#size) `() == 0` 。 您可以使用它來測試 deque 是否是空的。
 
 ### <a name="example"></a>範例
 
@@ -1033,7 +1033,7 @@ iterator erase(iterator first, iterator last);
 
 第二個成員函式會移除 [`first`, `last`) 範圍中受控制序列中的元素。 您可以使用它來移除零個或多個連續元素。
 
-這兩個成員函式會傳回反覆運算器，其中指定任何移除的元素以外的第一個專案，如果沒有這類元素，則`()` [deque：： end （STL/CLR）](#end) 。
+這兩個成員函式會傳回反覆運算器，指定移除任何專案之後剩餘的第一個元素，如果沒有這類元素，則傳回[deque：： end （STL/CLR）](#end) `()` 。
 
 清除元素時，元素複本的數目是抹除結尾和序列最接近端之間的元素數目的線性。 （清除序列任一結尾的一個或多個專案時，不會複製任何專案）。
 
@@ -1378,7 +1378,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型為 `GValue` 的物件，描述要與這個樣板容器類別的泛型介面搭配使用的預存專案值。
+此類型描述類型的物件 `GValue` ，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。
 
 ### <a name="example"></a>範例
 
@@ -1448,10 +1448,10 @@ void insert(iterator where,
 *last*<br/>
 要插入的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要插入的列舉。
 
-*val*<br/>
+*初始值*<br/>
 要插入之元素的值。
 
 *where*<br/>
@@ -1465,11 +1465,11 @@ void insert(iterator where,
 
 第二個成員函式會插入 value *val*的*count*元素的重複專案。 您可以使用它來插入零個或多個連續元素，這些都是相同值的所有複本。
 
-如果 `InIt` 是整數類型，第三個成員函式的行為即與 `insert(where, (size_type)first, (value_type)last)` 相同。 否則，它會插入序列 [`first`，`last`）。 您可以使用它來插入從另一個序列複製的零個或多個連續元素。
+如果 `InIt` 是整數類型，第三個成員函式的行為即與 `insert(where, (size_type)first, (value_type)last)` 相同。 否則，它會插入序列 [ `first` ， `last` ）。 您可以使用它來插入從另一個序列複製的零個或多個連續元素。
 
 第四個成員函式會插入*右邊*指定的序列。 您可以使用它來插入列舉值所描述的序列。
 
-當插入單一專案時，元素複本的數目是插入點和序列最接近端之間的元素數目的線性。 （在序列的任一端插入一或多個專案時，不會複製任何元素）。如果 `InIt` 是輸入反覆運算器，則第三個成員函式會針對序列中的每個元素，有效地執行單一插入。 否則，在插入 `N` 專案時，元素複本的數目會是線性，`N` 加上插入點和序列最接近端之間的元素數目。
+當插入單一專案時，元素複本的數目是插入點和序列最接近端之間的元素數目的線性。 （在序列的任一端插入一或多個專案時，不會複製任何元素）。如果 `InIt` 是輸入反覆運算器，則第三個成員函式會針對序列中的每個元素，有效地執行單一插入。 否則，在插入專案時 `N` ，元素複本的數目會是線性， `N` 加上插入點和序列最接近端之間的元素數目。
 
 ### <a name="example"></a>範例
 
@@ -1543,7 +1543,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T1` 的物件，可做為受控制序列的隨機存取反覆運算器。
+此類型描述未指定類型的物件 `T1` ，可作為受控制序列的隨機存取反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1594,15 +1594,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(left == right)`。 當兩個 deques 是以元素進行比較時，您可以使用它來測試是否將*left*與*right*排序。
+運算子函式會傳回 `!(left == right)` 。 當兩個 deques 是以元素進行比較時，您可以使用它來測試是否將*left*與*right*排序。
 
 ### <a name="example"></a>範例
 
@@ -1661,7 +1661,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>參數
 
-*pos*<br/>
+*採購*<br/>
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -1807,7 +1807,7 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會在受控制序列的結尾插入具有值 `val` 的元素。 您可以使用它將另一個元素附加至 deque。
+成員函式會將具有值的元素插入 `val` 受控制序列的結尾。 您可以使用它將另一個元素附加至 deque。
 
 ### <a name="example"></a>範例
 
@@ -1847,7 +1847,7 @@ void push_front(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會在受控制序列的開頭插入具有值 `val` 的元素。 您可以用它來在 deque 前面加上另一個元素。
+成員函式會將具有值的元素插入 `val` 受控制序列的開頭。 您可以用它來在 deque 前面加上另一個元素。
 
 ### <a name="example"></a>範例
 
@@ -2057,12 +2057,12 @@ void resize(size_type new_size, value_type val);
 *new_size*<br/>
 受控制序列的新大小。
 
-*val*<br/>
+*初始值*<br/>
 填補元素的值。
 
 ### <a name="remarks"></a>備註
 
-成員函式可確保[deque：： size （STL/CLR）](#size)`()` 因而需要會傳回*new_size*。 如果它必須讓受控制的序列變長，第一個成員函式會附加具有值 `value_type()`的元素，而第二個成員函式會附加具有值*val*的元素。 為了讓受控制的序列更短，這兩個成員函式會有效地清除最後一個元素[deque：： size （STL/CLR）](#size)`() -` `new_size` 次。 您可以使用它來確保受控制的序列具有大小*new_size*，方法是修剪或填補目前受控制的序列。
+成員函式可確保[deque：： size （STL/CLR）](#size) `()` 因而需要會傳回*new_size*。 如果它必須讓受控制的序列變長，第一個成員函式會附加具有值的元素 `value_type()` ，而第二個成員函式會附加具有值*val*的元素。 為了讓受控制的序列更短，這兩個成員函式會有效地清除最後一個元素[deque：： size （STL/CLR）](#size) `() -` `new_size` 時間。 您可以使用它來確保受控制的序列具有大小*new_size*，方法是修剪或填補目前受控制的序列。
 
 ### <a name="example"></a>範例
 
@@ -2162,7 +2162,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[deque：： empty （STL/CLR）](#empty)`()`。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[deque：： empty （STL/CLR）](#empty) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -2260,12 +2260,12 @@ void swap(deque<Value>% right);
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要交換內容的容器。
 
 ### <a name="remarks"></a>備註
 
-成員函式會在 `*this` 和*右方*之間交換受控制的序列。 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
+成員函式會在和 right 之間交換受控制的序列 **`*this`** 。 *right* 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
 
 ### <a name="example"></a>範例
 
@@ -2363,7 +2363,7 @@ a b c
 
 ## <a name="dequevalue_type-stlclr"></a><a name="value_type"></a>deque：： value_type （STL/CLR）
 
-元素類型。
+項目的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -2406,7 +2406,7 @@ int main()
 a b c
 ```
 
-## <a name="operatorlt-deque-stlclr"></a><a name="op_lt"></a>operator&lt; （deque）（STL/CLR）
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lt"></a>operator &lt; （deque）（STL/CLR）
 
 Deque 小於比較。
 
@@ -2420,15 +2420,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-如果 `i` 的最低位置 `!(right[i] < left[i])` 也是 `left[i] < right[i]`，則運算子函數會傳回 true。 否則，它會傳回 `left->size() < right->size()` 您用它來測試當兩個 deques 是以元素進行比較時 *，是否要*在*右邊*排序。
+如果的最低位置也為 true，則運算子函數 `i` 會傳回 true `!(right[i] < left[i])` `left[i] < right[i]` 。 否則，它會傳回 `left->size() < right->size()` 您用它來測試*left*當兩個 deques 是以元素進行比較時，是否要在*右邊*排序。
 
 ### <a name="example"></a>範例
 
@@ -2475,7 +2475,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-deque-stlclr"></a><a name="op_lteq"></a>operator&lt;= （deque）（STL/CLR）
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lteq"></a>operator &lt; = （deque）（STL/CLR）
 
 Deque 小於或等於比較。
 
@@ -2489,15 +2489,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(right < left)`。 當兩個 deques 是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
+運算子函式會傳回 `!(right < left)` 。 當兩個 deques 是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
 
 ### <a name="example"></a>範例
 
@@ -2556,12 +2556,12 @@ deque<Value>% operator=(deque<Value>% right);
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要複製的容器。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -2611,15 +2611,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-只有當*left*和*right*控制的序列具有相同的長度，且每個位置 `i``left[i] ==` `right[i]`時，運算子函數才會傳回 true。 您可以使用它來測試當兩個 deques 是以元素進行比較時，是否將*left*與*right*排序。
+只有當*left*和*right*所控制的序列具有相同的長度，且每個位置都有相同的時，運算子函數才會傳回 true `i` `left[i] ==` `right[i]` 。 您可以使用它來測試當兩個 deques 是以元素進行比較時，是否將*left*與*right*排序。
 
 ### <a name="example"></a>範例
 
@@ -2666,7 +2666,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-deque-stlclr"></a><a name="op_gt"></a>operator&gt; （deque）（STL/CLR）
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gt"></a>operator &gt; （deque）（STL/CLR）
 
 Deque 大於比較。
 
@@ -2680,15 +2680,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `right` `<` `left`。 您可以使用它來測試當兩個 deques 是以元素進行比較時，是否要*向* *右*排序。
+運算子函式會傳回 `right` `<` `left` 。 您可以使用它來測試當兩個 deques 是以元素進行比較時，是否要*向**右*排序。
 
 ### <a name="example"></a>範例
 
@@ -2735,7 +2735,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-deque-stlclr"></a><a name="op_gteq"></a>operator&gt;= （deque）（STL/CLR）
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gteq"></a>operator &gt; = （deque）（STL/CLR）
 
 Deque 大於或等於比較。
 
@@ -2749,15 +2749,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(left` `<` `right)`。 *當兩*個 deques 是以元素進行比較時，您可以使用它來測試*左側*是否未排序。
+運算子函式會傳回 `!(left` `<` `right)` 。 *當兩*個 deques 是以元素進行比較時，您可以使用它來測試*左側*是否未排序。
 
 ### <a name="example"></a>範例
 

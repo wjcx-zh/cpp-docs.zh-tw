@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 30e00fdc166b4a6f2db64a3552a3bb87335c7e32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689527"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233141"
 ---
 # <a name="integral_constant-class-bool_constant-class"></a>integral_constant 類別、bool_constant 類別
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>參數
 
-*T* \
+*而已*\
 常數的類型。
 
-*v* \
+*&*\
 常數的值。
 
 ## <a name="remarks"></a>備註
 
-當使用整數類型*t*和該類型的值*v*進行特製化時，`integral_constant` 類別樣板代表持有具有指定值之整數類型常數的物件。 名為 `type` 的成員是所產生範本特製化類型的別名，而 `value` 成員則持有用來建立特製化的值 *v*。
+`integral_constant`當使用整數型*別 T*和該型別的值*v*來特殊化時，類別樣板代表的物件會保存具有指定值之整數型別的常數。 名為 `type` 的成員是所產生範本特製化類型的別名，而 `value` 成員則持有用來建立特製化的值 *v*。
 
-@No__t_0 類別樣板是使用**bool**做為*t*引數之 `integral_constant` 的明確部分特製化。
+`bool_constant`類別樣板是 `integral_constant` 使用 **`bool`** 做為*T*引數的明確部分特製化。
 
 ## <a name="example"></a>範例
 
@@ -74,12 +74,12 @@ integral_constant<bool, false> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [<type_traits>](../standard-library/type-traits.md)\
-[false_type](../standard-library/type-traits-typedefs.md#false_type) \
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
 [true_type](../standard-library/type-traits-typedefs.md#true_type)

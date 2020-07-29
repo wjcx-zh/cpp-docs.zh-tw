@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194560"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225198"
 ---
 # <a name="linker-tools-error-lnk2031"></a>連結器工具錯誤 LNK2031
 
@@ -19,7 +19,7 @@ ms.locfileid: "80194560"
 
 ## <a name="remarks"></a>備註
 
-嘗試將原生函式匯入純映射時，請記住，在原生和純編譯之間的隱含呼叫慣例不同。 如需純圖像的詳細資訊，請參閱[單純和可C++驗證的程式碼（/cli）](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+嘗試將原生函式匯入純映射時，請記住，在原生和純編譯之間的隱含呼叫慣例不同。 如需純圖像的詳細資訊，請參閱[單純和可驗證的程式碼（c + +/cli）](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
 **/Clr： pure**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例示範如何從純映射取用原生函式。 請注意明確 **__cdecl**呼叫慣例規範。
+下列範例示範如何從純映射取用原生函式。 請注意明確的 **`__cdecl`** 呼叫慣例規範。
 
 ```cpp
 // LNK2031_c.cpp

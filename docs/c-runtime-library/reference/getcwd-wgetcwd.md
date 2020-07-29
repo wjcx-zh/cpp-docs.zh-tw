@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6fb32a593a969f93a934f251f38cd50960440b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915740"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221883"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
@@ -70,7 +70,7 @@ wchar_t *_wgetcwd(
 路徑的儲存位置。
 
 *maxlen*\
-路徑的最大長度（以字元為單位）： **char**用於 **_getcwd** ，而**wchar_t**用於 **_wgetcwd**。
+路徑的最大長度（以字元為單位）： **`char`** 適用于 **_getcwd** ，而 **`wchar_t`** 適用于 **_wgetcwd**。
 
 ## <a name="return-value"></a>傳回值
 
@@ -82,7 +82,7 @@ wchar_t *_wgetcwd(
 
 **_Getcwd**函式會取得預設磁片磁碟機之目前工作目錄的完整路徑，並將其儲存在*buffer*。 整數引數*maxlen*會指定路徑的最大長度。 如果路徑長度（包括終止的 null 字元）超過*maxlen*，就會發生錯誤。 *Buffer*引數可以是**Null**;至少具有*maxlen*大小的緩衝區（只在必要時才會使用**malloc**）來儲存路徑。 這個緩衝區稍後可以藉由呼叫**free**來釋放，並將 **_getcwd**傳回值（已配置緩衝區的指標）傳遞給它。
 
-**_getcwd**會傳回代表目前工作目錄路徑的字串。 如果目前的工作目錄是根目錄，則字串的結尾會是反斜線`\`（）。 如果目前的工作目錄是根目錄以外的目錄，字串會以目錄名稱結尾，而不是反斜線。
+**_getcwd**會傳回代表目前工作目錄路徑的字串。 如果目前的工作目錄是根目錄，則字串的結尾會是反斜線（ `\` ）。 如果目前的工作目錄是根目錄以外的目錄，字串會以目錄名稱結尾，而不是反斜線。
 
 **_wgetcwd**是寬字元版本的 **_getcwd**;**_wgetcwd**的*緩衝區*引數和傳回值是寬字元字串。 相反地， **_wgetcwd**和 **_getcwd**的行為相同。
 

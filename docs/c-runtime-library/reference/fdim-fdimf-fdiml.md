@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941292"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221909"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -85,14 +85,14 @@ long double fdiml(
 
 傳回*x*和*y*之間的正差：
 
-|傳回值|狀況|
+|傳回值|案例|
 |------------------|--------------|
 |x-y|如果 x > y|
 |0|如果 x <= y|
 
 否則，可能會傳回下列一項錯誤：
 
-|問題|Return|
+|問題|傳回|
 |-----------|------------|
 |溢位範圍錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
 |反向溢位範圍錯誤|正確的值 (四捨五入後)|
@@ -102,13 +102,13 @@ long double fdiml(
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**fdim**的多載。 在 C 程式中， **fdim**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**fdim**的多載 **`float`** **`long double`** 。 在 C 程式中， **fdim**一律會採用並傳回 **`double`** 。
 
-除了 NaN 處理之外，此函式相當於`fmax(x - y, 0)`。
+除了 NaN 處理之外，此函式相當於 `fmax(x - y, 0)` 。
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**fdim**、 **fdimf**、 **fdiml**|\<math.h>|\<cmath>|
 
@@ -116,6 +116,6 @@ long double fdiml(
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [fmax、fmaxf、fmaxl](fmax-fmaxf-fmaxl.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>

@@ -5,40 +5,40 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7b219ddad939aab7d6093787dc2fe4131ccced5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172642"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225159"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>屬性參數類型  (C++/CLI 和 C++/CX)
 
 在編譯時期，編譯器必須能辨識傳遞至屬性的值。  屬性參數可以是下列其中一種類型：
 
-- **bool**
+- **`bool`**
 
-- **char**、**unsigned char**
+- **`char`**, **`unsigned char`**
 
-- **short**、**unsigned short**
+- **`short`**, **`unsigned short`**
 
-- **int**、**unsigned int**
+- **`int`**, **`unsigned int`**
 
-- **long**、**unsigned long**
+- **`long`**, **`unsigned long`**
 
-- **__int64**、**unsigned __int64**
+- **`__int64`**，不**帶正負**號的 __int64
 
-- **float**、**double**
+- **`float`**, **`double`**
 
-- **wchar_t**
+- **`wchar_t`**
 
-- `char*`、`wchar_t*` 或 `System::String*`
+- **`char*`** 或 `wchar_t*` 或`System::String*`
 
 - `System::Type ^`
 
 - `System::Object ^`
 
-- **enum**
+- **`enum`**
 
 ## <a name="example"></a>範例
 

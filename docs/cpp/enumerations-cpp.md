@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 2a1b3d33534887568c6a55e320e77e0a018cafff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d4511ed7d09ff280d01214a2a177148956580ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221610"
 ---
 # <a name="enumerations-c"></a>列舉 (C++)
 
 列舉是使用者定義類型，其中包含一組具名的整數常數，稱為列舉值。
 
 > [!NOTE]
-> 本文介紹了 iSO 標準C++語言**枚舉**類型以及 C++11 中介紹的作用域(或強類型)**枚舉類**類型。 有關C++/CLI 和C++/CX**中的公共枚舉類**或**私有枚舉類**類型的資訊,請參閱[枚舉類](../extensions/enum-class-cpp-component-extensions.md)。
+> 本文涵蓋 ISO Standard c + + 語言 **`enum`** 類型，以及在 c + + 11 中引進的範圍（或強型別）**列舉類別**類型。 如需 c + +/CLI 和 c + +/CX 中**公用列舉類別**或**私用列舉類別**類型的詳細資訊，請參閱[enum 類別](../extensions/enum-class-cpp-component-extensions.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -46,19 +46,19 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>參數
 
-*識別碼*<br/>
+*標識*<br/>
 提供給列舉的類型名稱。
 
-*型別*<br/>
+*type*<br/>
 列舉值的基礎類型，所有列舉值都有相同的基礎類型。 可以是任何整數類資料類型。
 
 *列舉清單*<br/>
-在列舉中，列舉值的逗號分隔清單。 範圍內的每個列舉值或變數名稱都必須是唯一的。 不過，值可以重複。 在未作用域的枚舉中,範圍是周圍的範圍;在作用域的枚舉中,作用域是*枚舉清單*本身。  在作用域的枚舉中,清單可能為空,這實際上定義了新的積分類型。
+在列舉中，列舉值的逗號分隔清單。 範圍內的每個列舉值或變數名稱都必須是唯一的。 不過，值可以重複。 在不限範圍的列舉中，範圍是周圍的範圍;在限定範圍的列舉中，範圍是*列舉清單*本身。  在限定範圍的列舉中，清單可能是空的，這實際上會定義新的整數類資料類型。
 
 *class*<br/>
-透過在宣告中使用此關鍵字,可以指定枚舉的範圍,並且必須提供*識別子*。 您還可以使用**結構**關鍵字代替**類**,因為它們在此上下文中在語義上等效。
+藉由在宣告中使用此關鍵字，您可以指定列舉的範圍，而且必須提供*識別碼*。 您也可以使用 **`struct`** 關鍵字取代 **`class`** ，因為在此內容中，它們在語義上是相等的。
 
-## <a name="enumerator-scope"></a>列舉器範圍
+## <a name="enumerator-scope"></a>列舉值範圍
 
 列舉提供內容，描述表示為具名常數的值範圍 (也稱為列舉值)。 在原始 C 和 C++ 列舉類型中，不合格的列舉值會顯示在宣告列舉的範圍中。 在限定範圍列舉中，列舉值名稱必須由列舉類型名稱來限定。 下列範例示範這兩種列舉之間的這項基本差異：
 
@@ -95,7 +95,7 @@ enum Suit { Diamonds = 1, Hearts, Clubs, Spades };
 
 指派給列舉值 `Diamonds` 的值為 `1`。 後續列舉值，如果未提供其明確值，則接收前一個列舉值的值加一。 在上述範例中，`Hearts` 會有值 2，而 `Clubs` 會有 3，依此類推。
 
-每個枚舉器都被視為常量,必須在定義**枚舉**的作用域(對於未界定的枚舉)或**枚舉**本身(對於作用域枚舉)內具有唯一的名稱。 指定給名稱的值不需要是唯一的。 例如，如果不限範圍的列舉 `Suit` 宣告如下：
+每個列舉值都會被視為常數，而且在定義的範圍內 **`enum`** （適用于不限範圍的列舉）或本身（針對限域的列舉），必須有唯一的名稱 **`enum`** 。 指定給名稱的值不需要是唯一的。 例如，如果不限範圍的列舉 `Suit` 宣告如下：
 
 ```cpp
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
@@ -105,7 +105,7 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 
 ## <a name="casting-rules"></a>轉型規則
 
-未作用網域的枚舉常量可以隱式轉換為**int,** 但**int**永遠不會隱式轉換為枚舉值。 下列範例顯示，如果您嘗試將不是 `hand` 的值指派給 `Suit` 時，所發生的狀況：
+不限範圍的列舉常數可以隱含地轉換成 **`int`** ，但是永遠不會隱含地轉換 **`int`** 為列舉值。 下列範例顯示，如果您嘗試將不是 `hand` 的值指派給 `Suit` 時，所發生的狀況：
 
 ```cpp
 int account_num = 135692;
@@ -113,7 +113,7 @@ Suit hand;
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
 ```
 
-需要強制轉換**int**到作用域或未範圍的枚舉器。 不過，您可以將不限範圍的列舉值提升為整數值，而不需要轉型。
+需要進行轉換，才能將轉換成 **`int`** 限定範圍或不限範圍的列舉值。 不過，您可以將不限範圍的列舉值提升為整數值，而不需要轉型。
 
 ```cpp
 int account_num = Hearts; //OK if Hearts is in a unscoped enum
@@ -143,15 +143,15 @@ namespace ScopedEnumConversions
 
 請注意，程式行 `hand = account_num;` 仍然會導致因為不限範圍的列舉而發生的錯誤，如上所示。 使用明確轉換時，允許這個行為。 不過，使用限定範圍列舉時，不再允許在沒有明確轉型的情況下，於下一個陳述式 `account_num = Suit::Hearts;` 中嘗試轉換。
 
-## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>沒有枚舉器的枚舉
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>沒有枚舉器的列舉
 
-**Visual Studio 2017 版本 15.3 及更高版本**(隨[/std:c++17 提供](../build/reference/std-specify-language-standard-version.md)):通過定義具有顯式基礎類型且無枚舉例的枚舉(常規或作用域),實際上可以引入一種沒有隱式轉換為任何其他類型的新積分類型。 通過使用此類型而不是其內置基礎類型,可以消除由無意隱式轉換引起的細微錯誤的可能性。
+**Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：藉由定義具有明確基礎類型的列舉（一般或範圍），而不使用任何列舉值，您實際上可以導入不會隱含轉換為任何其他類型的新整數類型。 藉由使用這個類型，而不是其內建的基礎類型，您可以消除因不小心隱含轉換而造成的微妙錯誤的可能性。
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-新類型是基礎類型的準確副本,因此具有相同的調用約定,這意味著它可以跨 AI 使用,而不會造成任何性能損失。 使用直接清單初始化初始化類型變數時,不需要強制轉換。 下面的範例展示如何在不同上下文中沒有枚舉器的情況下初始化枚舉:
+新的型別是基礎型別的完整複本，因此具有相同的呼叫慣例，這表示它可以跨 Abi 使用，而不會造成任何效能上的負面影響。 當使用直接清單初始化來初始化類型的變數時，不需要轉換。 下列範例顯示如何在不同的內容中初始化沒有列舉值的列舉：
 
 ```cpp
 enum class byte : unsigned char { };
@@ -183,5 +183,5 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[C 宣告聲明](../c-language/c-enumeration-declarations.md)<br/>
+[C 列舉宣告](../c-language/c-enumeration-declarations.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

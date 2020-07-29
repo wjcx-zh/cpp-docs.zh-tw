@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80acb417ed85ced8f72906848474837efe6bc9d1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368191"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225094"
 ---
 # <a name="__assume"></a>__assume
 
@@ -31,31 +31,31 @@ __assume(
 
 ### <a name="parameters"></a>參數
 
-*表達*\
+*運算式*\
 假設評估為 true 的任何運算式。
 
 ## <a name="remarks"></a>備註
 
-最佳化程式會在關鍵字出現處假設 `expression` 代表的條件為 true，並保持為 true，直到修改 `expression` (例如，藉由指派給變數) 為止。 選擇性使用 `__assume` 傳遞給最佳化程式的提示，可以改善最佳化。
+最佳化程式會在關鍵字出現處假設 `expression` 代表的條件為 true，並保持為 true，直到修改 `expression` (例如，藉由指派給變數) 為止。 選擇性地使用傳遞給優化工具的提示， **`__assume`** 可以改善優化。
 
-如果 `__assume` 陳述式撰寫成矛盾 (一律評估為 false 的運算式)，則它永遠會被視為 `__assume(0)`。 如果您的程式碼未如預期般運作，請確認您定義的 `expression` 有效而且為 true，如先前所述。 如需預期的 `__assume(0)` 行為，請參閱稍後的備註。
+如果將 **`__assume`** 語句寫入為衝突（一律評估為 false 的運算式），則一律會將它視為 `__assume(0)` 。 如果您的程式碼未如預期般運作，請確認您定義的 `expression` 有效而且為 true，如先前所述。 如需預期的 `__assume(0)` 行為，請參閱稍後的備註。
 
 > [!WARNING]
-> 程式不能在可到達的路徑上包含無效的 `__assume` 陳述式。 如果編譯器可以到達無效的 `__assume` 陳述式，程式可能會導致無法預期且有潛在危險的行為。
+> 程式不能在可連線 **`__assume`** 的路徑上包含不正確語句。 如果編譯器可以到達不正確 **`__assume`** 語句，此程式可能會造成無法預期和潛在危險的行為。
 
 `__assume` 不是真的內建函式。 它不需要宣告為函式，且不能用在 `#pragma intrinsic` 指示詞中。 雖然不會產生程式碼，但最佳化程式所產生的程式碼會受到影響。
 
-僅在`__assume`斷言不可恢復時在[ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)中使用。 請勿在有後續錯誤復原程式碼的 assert 中使用 `__assume`，因為編譯器可能會將錯誤處理程式碼最佳化掉。
+只有在無法復原判斷提示 **`__assume`** 時，才在[assert](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)中使用。 請勿 **`__assume`** 在您有後續錯誤復原程式碼的判斷提示中使用，因為編譯器可能會將錯誤處理常式代碼優化。
 
 `__assume(0)` 陳述式是特殊的情況。 使用 `__assume(0)`，表示無法到達的程式碼路徑。 下列範例示範如何使用 `__assume(0)`，表示無法到達 switch 陳述式的 default case。 這會示範 `__assume(0)` 最常見的用法。
 
-為了與早期版本相容 **,_assume**是 **__assume**的同義詞,除非指定了編譯器選項[\(/Za 禁用語言擴展)。](../build/reference/za-ze-disable-language-extensions.md)
+為了與舊版相容， **`_assume`** **`__assume`** 除非指定了編譯器選項[/za \( 停用語言擴充](../build/reference/za-ze-disable-language-extensions.md)功能，否則會是同義字。
 
 ## <a name="requirements"></a>需求
 
 |內建|架構|
 |---------------|------------------|
-|`__assume`|x86, ARM, x64, ARM64|
+|**`__assume`**|x86、ARM、x64、ARM64|
 
 ## <a name="example"></a>範例
 
@@ -95,7 +95,7 @@ int main(int p)
 
 做為 `__assume(0)` 陳述式的結果，編譯器不會產生程式碼來測試 `p` 是否有不會呈現在 case 陳述式中的值。 若要完成此運作，`__assume(0)` 陳述式必須是 default case 的主體中的第一個陳述式。
 
-因為編譯器會根據 `__assume` 產生程式碼，如果 `__assume` 陳述式內的運算式在執行階段為 false 時，該程式碼可能無法正確執行。 如果您不確定運算式是否一定會在執行階段為 true，可以使用 `assert` 函式來保護程式碼。
+由於編譯器會產生以為基礎的程式碼，因此， **`__assume`** 如果語句中的運算式在 **`__assume`** 執行時間為 false，該程式碼可能無法正確執行。 如果您不確定運算式是否一定會在執行階段為 true，可以使用 `assert` 函式來保護程式碼。
 
 ```C
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )
@@ -114,9 +114,9 @@ int main(int p)
       NODEFAULT;
 ```
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內部函數](../intrinsics/compiler-intrinsics.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [關鍵字](../cpp/keywords-cpp.md)

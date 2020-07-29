@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225016"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控制項：序列化
 
@@ -58,13 +58,13 @@ ActiveX 控制項的序列化是藉由覆寫[COleControl：:D opropexchange](ref
 |**PX_Bool （）**|序列化類型的布林值屬性。|
 |**PX_Color （）**|序列化類型色彩屬性。|
 |**PX_Currency （）**|序列化類型**CY** （貨幣）屬性。|
-|**PX_Double （）**|序列化**double**屬性型別。|
+|**PX_Double （）**|序列化類型 **`double`** 屬性。|
 |**PX_Font （）**|序列化字型類型屬性。|
-|**PX_Float （）**|序列化類型**float**屬性。|
+|**PX_Float （）**|序列化類型 **`float`** 屬性。|
 |**PX_IUnknown （）**|序列化類型的屬性 `LPUNKNOWN` 。|
-|**PX_Long （）**|序列化類型**long**屬性。|
+|**PX_Long （）**|序列化類型 **`long`** 屬性。|
 |**PX_Picture （）**|序列化類型圖片屬性。|
-|**PX_Short （）**|序列化類型的**short**屬性。|
+|**PX_Short （）**|序列化類型 **`short`** 屬性。|
 |**PXstring( )**|序列化類型 `CString` 屬性。|
 |**PX_ULong （）**|序列化類型**ULONG**屬性。|
 |**PX_UShort （）**|序列化類型**USHORT**屬性。|

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: a1954cd3a69233deed053da5b5fdef0dbc183b80
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224964"
 ---
 # <a name="combinable-class"></a>combinable 類別
 
@@ -39,31 +39,31 @@ class combinable;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[combinable](#ctor)|已多載。 建構新的 `combinable` 物件。|
 |[~ 組合的析構函式](#dtor)|終結 `combinable` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[清除](#clear)|清除先前使用方式的任何中繼計算結果。|
-|[combine](#combine)|藉由呼叫所提供的結合仿函數，從執行緒區域子計算的集合中計算出最後的值。|
+|[明確](#clear)|清除先前使用方式的任何中繼計算結果。|
+|[起來](#combine)|藉由呼叫所提供的結合仿函數，從執行緒區域子計算的集合中計算出最後的值。|
 |[combine_each](#combine_each)|藉由呼叫每個執行緒區域子計算一次所提供的結合仿函數，計算執行緒區域子計算集合中的最後一個值。 最後的結果是由函式物件累積。|
-|[local](#local)|已多載。 傳回執行緒私用子計算的參考。|
+|[本機](#local)|已多載。 傳回執行緒私用子計算的參考。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[operator=](#operator_eq)|將另一個 `combinable` 物件的指派給 `combinable` 物件。|
+|[operator =](#operator_eq)|`combinable`從另一個物件指派給 `combinable` 物件。|
 
 ## <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `combinable`
 
@@ -71,9 +71,9 @@ class combinable;
 
 **標頭：** ppl。h
 
-**命名空間：** concurrency
+**命名空間：** 並行
 
-## <a name="clear"></a>明確
+## <a name="clear"></a><a name="clear"></a>明確
 
 清除先前使用方式的任何中繼計算結果。
 
@@ -81,7 +81,7 @@ class combinable;
 void clear();
 ```
 
-## <a name="ctor"></a>combinable
+## <a name="combinable"></a><a name="ctor"></a>combinable
 
 建構新的 `combinable` 物件。
 
@@ -100,20 +100,20 @@ combinable(const combinable& _Copy);
 初始化仿函數物件的類型。
 
 *_FnInitialize*<br/>
-將呼叫的函式，以初始化 `T`類型的每個新的執行緒私用值。 它必須支援具有簽章 `T ()`的函式呼叫運算子。
+函式，會呼叫以初始化類型的每個新的執行緒-私用值 `T` 。 它必須支援具有簽章的函式呼叫運算子 `T ()` 。
 
 *_Copy*<br/>
-要複製到其中的現有 `combinable` 物件。
+`combinable`要複製到其中的現有物件。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會使用 `T`類型的預設的函式，初始化新的元素。
+第一個函式會使用類型的預設函式來初始化新的專案 `T` 。
 
-第二個函式會使用提供做為 `_FnInitialize` 參數的初始化仿函數，初始化新的專案。
+第二個函式會使用提供做為參數的初始化仿函數，初始化新的專案 `_FnInitialize` 。
 
 第三個函式是複製的「函數」。
 
-## <a name="dtor"></a>~ 組合
+## <a name="combinable"></a><a name="dtor"></a>~ 組合
 
 終結 `combinable` 物件。
 
@@ -121,7 +121,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```
 
-## <a name="combine"></a>起來
+## <a name="combine"></a><a name="combine"></a>起來
 
 藉由呼叫所提供的結合仿函數，從執行緒區域子計算的集合中計算出最後的值。
 
@@ -136,13 +136,13 @@ T combine(_Function _FnCombine) const;
 函式物件的型別，將叫用此類型來結合兩個執行緒區域子計算。
 
 *_FnCombine*<br/>
-用來結合子計算的仿函數。 其簽章為 `T (T, T)` 或 `T (const T&, const T&)`，而且必須是關聯和交換。
+用來結合子計算的仿函數。 其簽章為 `T (T, T)` 或 `T (const T&, const T&)` ，而且必須是關聯和交換。
 
 ### <a name="return-value"></a>傳回值
 
 結合所有線程-私用子計算的最終結果。
 
-## <a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a>combine_each
 
 藉由呼叫每個執行緒區域子計算一次所提供的結合仿函數，計算執行緒區域子計算集合中的最後一個值。 最後的結果是由函式物件累積。
 
@@ -157,9 +157,9 @@ void combine_each(_Function _FnCombine) const;
 函式物件的型別，將叫用此類型來結合單一線程區域子計算。
 
 *_FnCombine*<br/>
-用來結合一個子計算的仿函數。 其簽章為 `void (T)` 或 `void (const T&)`，而且必須是關聯和交換。
+用來結合一個子計算的仿函數。 其簽章為 `void (T)` 或 `void (const T&)` ，而且必須是關聯和交換。
 
-## <a name="local"></a>本機
+## <a name="local"></a><a name="local"></a>本機
 
 傳回執行緒私用子計算的參考。
 
@@ -172,15 +172,15 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>參數
 
 *_Exists*<br/>
-布林值的參考。 這個引數所參考的布林值將會設定為**true** 。如果子運算已經存在於這個執行緒上，並且設定為**false** （如果這是此執行緒的第一個子計算）。
+布林值的參考。 這個引數所參考的布林值將會設定為 **`true`** ，如果子運算已經存在於這個執行緒上，並將設定為（ **`false`** 如果這是此執行緒的第一個子計算）。
 
 ### <a name="return-value"></a>傳回值
 
 執行緒私用子計算的參考。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
-將另一個 `combinable` 物件的指派給 `combinable` 物件。
+`combinable`從另一個物件指派給 `combinable` 物件。
 
 ```cpp
 combinable& operator= (const combinable& _Copy);
@@ -189,11 +189,11 @@ combinable& operator= (const combinable& _Copy);
 ### <a name="parameters"></a>參數
 
 *_Copy*<br/>
-要複製到其中的現有 `combinable` 物件。
+`combinable`要複製到其中的現有物件。
 
 ### <a name="return-value"></a>傳回值
 
-這個 `combinable` 物件的參考。
+這個物件的參考 `combinable` 。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 89cca9ef42910d295cbae8bb677fb51927dbcdd2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6b2d3b4415b81dc5a9b7d0e36c154d9ee74b98ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988533"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221480"
 ---
 # <a name="double-thunking-c"></a>Double Thunking (C++)
 
-Double Thunking 指的是當 managed 內容中的函式呼叫呼叫視覺C++ managed 函式，以及程式執行呼叫函式的原生進入點以呼叫 managed 函式時，您可能會遇到的效能損失。 本主題討論發生雙重 Thunking 的位置，以及如何避免其改善效能。
+Double Thunking 指的是當 managed 內容中的函式呼叫呼叫 Visual C++ managed 函式，以及程式執行呼叫函式的原生進入點以呼叫 managed 函式時，您可能會遇到的效能損失。 本主題討論發生雙重 Thunking 的位置，以及如何避免其改善效能。
 
 ## <a name="remarks"></a>備註
 
@@ -25,15 +25,15 @@ Double Thunking 指的是當 managed 內容中的函式呼叫呼叫視覺C++ man
 
 其中一個解決方法是告訴編譯器不要產生 managed 函式的原生進入點，該函式只會從 managed 內容呼叫，方法是使用[__clrcall](../cpp/clrcall.md)呼叫慣例。
 
-同樣地，如果您匯出（[dllexport，dllimport](../cpp/dllexport-dllimport.md)） managed 函式，就會產生原生進入點，而匯入和呼叫該函式的任何函式都會透過原生進入點呼叫。 若要避免在這種情況下進行雙重 Thunking，請勿使用原生匯出/匯入的語義;只要透過 `#using` 參考中繼資料（請參閱[#using](../preprocessor/hash-using-directive-cpp.md)指示詞）。
+同樣地，如果您匯出（[dllexport，dllimport](../cpp/dllexport-dllimport.md)） managed 函式，就會產生原生進入點，而匯入和呼叫該函式的任何函式都會透過原生進入點呼叫。 若要避免在這種情況下進行雙重 Thunking，請勿使用原生匯出/匯入的語義;只要透過參考中繼資料 `#using` （請參閱[#using](../preprocessor/hash-using-directive-cpp.md)指示詞）。
 
-編譯器已更新，以減少不必要的雙重 Thunking。 例如，簽章中具有 managed 類型的任何函式（包括傳回類型）都會隱含地標示為 `__clrcall`。
+編譯器已更新，以減少不必要的雙重 Thunking。 例如，簽章中具有 managed 類型的任何函式（包括傳回類型）都會隱含地標示為 `__clrcall` 。
 
 ## <a name="example"></a>範例
 
 ### <a name="description"></a>描述
 
-下列範例示範雙重 Thunking。 當編譯的原生（不含 **/clr**）時，在 `main` 中呼叫虛擬函式時，會對 `T`的複製程式和呼叫者產生一個呼叫。 使用 **/clr**和 `__clrcall`宣告虛擬函式時，就會達到類似的行為。 不過，只要使用 **/clr**進行編譯，函式呼叫就會產生對複製的函式的呼叫，但是因為原生到受控的 Thunk，所以有另一個複製函式的呼叫。
+下列範例示範雙重 Thunking。 當編譯的原生（不含 **/clr**）時，在中對虛擬函式的呼叫會 `main` 對的「複製」程式和呼叫者發出一個呼叫 `T` 。 使用 **/clr**和宣告虛擬函式時，就會達到類似的行為 `__clrcall` 。 不過，只要使用 **/clr**進行編譯，函式呼叫就會產生對複製的函式的呼叫，但是因為原生到受控的 Thunk，所以有另一個複製函式的呼叫。
 
 ### <a name="code"></a>程式碼
 
@@ -74,7 +74,7 @@ int main() {
 }
 ```
 
-### <a name="sample-output"></a>取樣輸出
+### <a name="sample-output"></a>範例輸出
 
 ```
 __thiscall T::T(void)
@@ -91,7 +91,7 @@ __thiscall T::~T(void)
 
 ### <a name="description"></a>描述
 
-先前的範例示範了 double Thunking 的存在。 這個範例會顯示它的效果。 `for` 迴圈會呼叫虛擬函式，而程式會報告執行時間。 以 **/clr**編譯器時，會回報最慢的時間。 不使用 **/clr**進行編譯時，或如果虛擬函式是以 `__clrcall`宣告，則會回報最快的時間。
+先前的範例示範了 double Thunking 的存在。 這個範例會顯示它的效果。 **`for`** 迴圈會呼叫虛擬函式，而程式會報告執行時間。 以 **/clr**編譯器時，會回報最慢的時間。 不使用 **/clr**進行編譯時，或如果以宣告虛擬函式，會回報最快的時間 `__clrcall` 。
 
 ### <a name="code"></a>程式碼
 
@@ -130,13 +130,13 @@ int main() {
 }
 ```
 
-### <a name="sample-output"></a>取樣輸出
+### <a name="sample-output"></a>範例輸出
 
 ```
 4.2 seconds
 after calling struct S
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)
+[混合（原生和 Managed）元件](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
-ms.openlocfilehash: 78cdb0fe6c0d9487500804d21fe4ad4870fcad0f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 507628628fcf8bbf8993ce5beb1e02c28ff82147
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419977"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222247"
 ---
 # <a name="ltmemorygt-enums"></a>&lt;memory&gt; 列舉
 
-## <a name="pointer_safety"></a>pointer_safety 列舉
+## <a name="pointer_safety-enumeration"></a><a name="pointer_safety"></a>pointer_safety 列舉
 
 `get_pointer_safety` 的可能傳回值列舉。
 
@@ -27,7 +27,7 @@ class pointer_safety {
 
 ### <a name="remarks"></a>備註
 
-已限定範圍的**列舉**會定義可由 `get_pointer_safety()`傳回的值：
+範圍 **`enum`** 定義了可傳回的值 `get_pointer_safety()` ：
 
 `relaxed` -- 以相同方式處理不是以安全方式衍生的指標 (顯然是已宣告或配置之物件的指標) 和以安全方式衍生的指標。
 

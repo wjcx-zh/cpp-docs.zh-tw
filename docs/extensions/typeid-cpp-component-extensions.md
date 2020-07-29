@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225107"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid  (C++/CLI 和 C++/CX)
 
@@ -68,15 +68,15 @@ type::typeid
 
 ### <a name="remarks"></a>備註
 
-`typeid` 可在編譯時間用來取得類型的 <xref:System.Type>。
+**`typeid`** 是用來 <xref:System.Type> 在編譯時期取得型別的。
 
-`typeid` 類似於在執行階段使用 <xref:System.Type.GetType%2A> 或 <xref:System.Object.GetType%2A> 取得類型的 System::Type。 但 typeid 只接受類型名稱做為參數。  如果想要使用某一類型的執行個體來取得其 System:: Type 名稱，請使用 GetType。
+**`typeid`** 類似于 `System::Type` 使用或，在執行時間取得型別的 <xref:System.Type.GetType%2A> <xref:System.Object.GetType%2A> 。 不過， **`typeid`** 只接受型別名稱做為參數。  如果您想要使用類型的實例來取得其 `System::Type` 名稱，請使用 `GetType` 。
 
-`typeid` 必須能夠在編譯時間評估類型名稱 (type)，而 GetType 則評估要在執行階段傳回的類型。
+**`typeid`** 必須能夠在編譯時期評估型別名稱（型別），而 GetType 會評估要在執行時間傳回的型別。
 
-`typeid` 可使用原生類型名稱或通用語言執行階段別名作為原生類型名稱；如需詳細資訊，請參閱 [C++ 原生類型 (C++/CLI) 的 .NET Framework 對應項](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)。
+**`typeid`** 可以採用原生類型名稱或 common language runtime 別名做為原生類型名稱;如需詳細資訊，請參閱[c + + 原生類型的 .NET Framework 對應專案（c + +/cli）](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)
 
-`typeid` 也可以搭配原生類型運作，雖然它仍會傳回 System::Type。  若要取得 type_info 結構，請使用 [typeid 運算子](../cpp/typeid-operator.md)。
+**`typeid`** 也適用于原生類型，但它仍會傳回 `System::Type` 。  若要取得 type_info 結構，請使用[ `typeid` 運算子](../cpp/typeid-operator.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -116,7 +116,7 @@ G
 System.Single*
 ```
 
-以下範例說明類型 System::Type 的變數可用來取得類型的屬性。  它也會說明對於某些類型，您必須建立使用 `typeid` 的 typedef。
+以下範例說明類型 System::Type 的變數可用來取得類型的屬性。  它也會顯示針對某些類型，您必須建立要使用的 typedef **`typeid`** 。
 
 ```cpp
 // keyword__typeid_2.cpp
@@ -190,4 +190,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

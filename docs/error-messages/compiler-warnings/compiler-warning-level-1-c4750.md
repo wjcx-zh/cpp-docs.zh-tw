@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 9a22bdda407b02b8723b7198d62289d39f62792d
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: a02b69981d3cf1d35a6700261fc5142cfa8ec8e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180964"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225354"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>編譯器警告 (層級 1) C4750
 
-> '*identifier*'： _alloca ( # A1 內嵌到迴圈中的函式
+> '*identifier*'：以 _alloca （）內嵌至迴圈的函式
 
 ## <a name="remarks"></a>備註
 
@@ -34,7 +34,7 @@ ms.locfileid: "86180964"
 
 ## <a name="example"></a>範例
 
-下列程式碼範例會呼叫迴圈中的 `MyFunction` ，而 `MyFunction` 會呼叫 `_alloca` 函式。 `__forceinline` 修飾詞會造成 `_alloca` 函式的內嵌展開。
+下列程式碼範例會呼叫迴圈中的 `MyFunction` ，而 `MyFunction` 會呼叫 `_alloca` 函式。 **`__forceinline`** 修飾詞會造成函式的內嵌展開 `_alloca` 。
 
 ```cpp
 // c4750.cpp

@@ -25,16 +25,16 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49f0e4bace5f3dd199b58854e838204bd2cd5f3b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222013"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (執行階段錯誤檢查)
 
-用來啟用和停用執行階段錯誤檢查功能，搭配[runtime_checks](../../preprocessor/runtime-checks.md) pragma。
+用來啟用和停用執行階段錯誤檢查功能，並搭配[runtime_checks](../../preprocessor/runtime-checks.md) pragma。
 
 ## <a name="syntax"></a>語法
 
@@ -48,12 +48,12 @@ ms.locfileid: "62318546"
 ## <a name="arguments"></a>引數
 
 **1**<br/>
-對等 **/RTC**`su`。
+**/Rtc**的對應項 `su` 。
 
-**C**<br/>
-報告的值時指派給較小的資料類型，而導致資料遺失。 例如，如果型別的值`short 0x101`指派給類型的變數`char`。
+**c**<br/>
+當將值指派給較小的資料類型，並導致資料遺失時，就會報告。 例如，如果將類型的值 `short 0x101` 指派給類型的變數 **`char`** 。
 
-此選項會報告在您想要截斷，比方說，如果您想要的第一個八位元的情況下`int`傳回為`char`。 因為 **/RTC** `c`會造成執行階段錯誤因指派而遺失任何資訊時，您可以關閉遮罩，您必須避免執行階段錯誤的資訊 **/RTC** `c`. 例如：
+此選項會報告您想要截斷的情況，例如，如果您想要傳回的前八位 **`int`** 做為 **`char`** 。 因為 **/RTC** `c` 當指派導致任何資訊遺失時，/rtc 會造成執行階段錯誤，您可以遮罩所需的資訊，以避免因為 **/rtc**而造成執行階段錯誤 `c` 。 例如：
 
 ```
 #include <crtdbg.h>
@@ -70,17 +70,17 @@ int main() {
 }
 ```
 
-**s**<br/>
+**今日**<br/>
 啟用堆疊框架執行階段錯誤檢查，如下所示：
 
-- 為非零值的本機變數的初始化。 這有助於找出不會出現在 偵錯模式中執行時的錯誤。 沒有更高的機率堆疊變數仍然會在偵錯組建，因為編譯器最佳化的發行組建中的堆疊變數相較於發行組建中的零。 一旦程式已使用其堆疊的區域，永遠不會重設為 0 的編譯器。 因此，碰巧使用相同的堆疊區域的後續的、 未初始化堆疊變數會傳回剩餘的先前使用這個堆疊記憶體的值。
+- 將本機變數初始化為非零值。 這有助於識別在 debug 模式中執行時未顯示的 bug。 相較于發行組建，堆疊變數在 debug 組建中仍為零，因為在發行組建中，堆疊變數的編譯器優化。 當程式使用其堆疊的區域時，編譯器永遠不會將它重設為0。 因此，如果後續的未初始化堆疊變數使用相同的堆疊區域，則會傳回先前使用此堆疊記憶體的剩餘值。
 
-- 偵測溢位等情況不足，例如陣列的本機變數。 **/RTC** `s`存取產生的編譯器與邊框距離在結構中的記憶體時，則不會偵測溢位。 填補可能是使用[對齊](../../cpp/align-cpp.md)， [/Zp （結構成員對齊）](zp-struct-member-alignment.md)，或[pack](../../preprocessor/pack.md)，或如果您需要編譯器加上邊框間距的方式排序結構項目。
+- 偵測本機變數（例如陣列）的溢出和不足。 **/Rtc** `s`存取在結構內由編譯器填補所產生的記憶體時，不會偵測到溢出。 使用[align](../../cpp/align-cpp.md)、 [/Zp （結構成員對齊）](zp-struct-member-alignment.md)或[pack](../../preprocessor/pack.md)，或如果您以這種方式排序結構專案，以要求編譯器加入填補，就可能發生填補。
 
-- 堆疊指標驗證時，它會偵測堆疊指標損毀。 堆疊指標損毀可能因呼叫慣例不相符。 比方說，使用函式指標，您呼叫函式中做為匯出的 DLL [__stdcall](../../cpp/stdcall.md)但宣告為函式的指標[__cdecl](../../cpp/cdecl.md)。
+- 堆疊指標驗證，它會偵測堆疊指標損毀。 堆疊指標損毀可能是因為呼叫慣例不相符所造成。 例如，您可以使用函式指標來呼叫 DLL 中的函式，該函式會匯出為[__stdcall](../../cpp/stdcall.md) ，但您會將函式的指標宣告為[__cdecl](../../cpp/cdecl.md)。
 
 **u**<br/>
-當未經初始化就會使用變數時報告。 比方說，產生的指令`C4701`可能也會產生執行階段錯誤之下 **/RTC**`u`。 會產生任何指令[編譯器警告 （層級 1 和層級 4） C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)會產生在執行階段錯誤 **/RTC**`u`。
+在未初始化變數的情況下，報告使用。 例如，產生的指令 `C4701` 可能也會在 **/rtc**底下產生執行階段錯誤 `u` 。 任何會產生[編譯器警告（層級1和層級4） C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)的指令，都會在 **/rtc**底下產生執行階段錯誤 `u` 。
 
 不過，請考慮下列程式碼片段：
 
@@ -91,27 +91,27 @@ b = &a;
 c = a;  // No run-time error with /RTCu
 ```
 
-如果變數可能已經過初始化，它將不會報告在執行階段 **/RTC**`u`。 例如，變數是透過指標的別名之後，編譯器不會追蹤變數和報告未初始化的使用。 作用中，您可以取得其位址來初始化變數。 & 運算子運作方式類似在此情況下指派運算子。
+如果變數可能已初始化，則不會在執行時間由 **/rtc**回報 `u` 。 例如，當變數透過指標進行別名處理之後，編譯器不會追蹤變數並報告未初始化的使用。 實際上，您可以藉由取得其位址來初始化變數。 在這種情況下，& 運算子的運作方式類似指派運算子。
 
 ## <a name="remarks"></a>備註
 
-執行階段錯誤檢查是在您執行的程式碼; 中找出問題的方式如需詳細資訊，請參閱[How to:使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
+執行階段錯誤檢查是您在執行中的程式碼中找出問題的一種方式。如需詳細資訊，請參閱[如何：使用原生執行時間檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
 
-如果您編譯您的程式，在命令列使用任一 **/RTC**編譯器選項、 任何 pragma[最佳化](../../preprocessor/optimize.md)中您的程式碼指示將會以無訊息模式失敗。 這是因為執行階段錯誤檢查 （最佳化） 的發行組建中無效。
+如果您在命令列中使用任何 **/rtc**編譯器選項來編譯器，則在程式碼中的任何 pragma [optimize](../../preprocessor/optimize.md)指令都會以無訊息模式失敗。 這是因為在發行（優化）組建中，執行階段錯誤檢查無效。
 
-您應該使用 **/RTC**開發組建;**/RTC**不應該用於零售組建。 **/RTC**不能使用的編譯器最佳化 ([/O 選項 （最佳化程式碼）](o-options-optimize-code.md))。 以建置程式映像 **/RTC**會稍微大一點，比以建置映像稍微慢一點 **/Od** (低於最多 5% **/Od**建置)。
+您應該將 **/rtc**用於開發組建;您不應該將 **/rtc**用於零售組建。 **/Rtc**不能與編譯器優化搭配使用（[/O 選項（優化程式碼）](o-options-optimize-code.md)）。 以 **/rtc**建立的程式映射會稍微大一點，而且稍微慢于以 **/od**建立的映射（比 **/od**組建的速度高達5%）。
 
-當您使用任何時，將會定義 __MSVC_RUNTIME_CHECKS 前置處理器指示詞 **/RTC**選項或[/GZ](gz-enable-stack-frame-run-time-error-checking.md)。
+當您使用任何 **/rtc**選項或[/GZ](gz-enable-stack-frame-run-time-error-checking.md)時，將會定義 __MSVC_RUNTIME_CHECKS 預處理器指示詞。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 按一下 [C/C++] **** 資料夾。
 
-1. 按一下 **程式碼產生**屬性頁。
+1. 按一下 [程式**代碼產生**] 屬性頁。
 
-1. 修改一個或多個下列屬性：**基本的執行階段檢查**或是**較小類型檢查**。
+1. 修改下列一個或兩個屬性：**基本執行時間檢查**或**較小的類型檢查**。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -121,4 +121,4 @@ c = a;  // No run-time error with /RTCu
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
-[如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[如何：使用原生執行時間檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)

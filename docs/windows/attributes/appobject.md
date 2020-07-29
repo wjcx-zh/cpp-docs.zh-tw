@@ -1,17 +1,17 @@
 ---
-title: appobject （C++ COM 屬性）
+title: appobject （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae3547a32e6d5984a9ef95e495ba119c3a2ed385
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222156"
 ---
 # <a name="appobject"></a>appobject
 
@@ -25,7 +25,7 @@ ms.locfileid: "80168508"
 
 ## <a name="remarks"></a>備註
 
-**Appobject** C++屬性具有與[appobject](/windows/win32/Midl/appobject) MIDL 屬性相同的功能。
+**Appobject** c + + 屬性具有與[appobject](/windows/win32/Midl/appobject) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -52,10 +52,10 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**適用於**|**class**、 **struct**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|否|
-|**必要屬性**|`coclass`|
-|**無效屬性**|None|
+|**必要的屬性**|`coclass`|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

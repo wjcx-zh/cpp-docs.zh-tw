@@ -27,12 +27,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: 4e699920f37139be40542ba91b3740cd9edef148
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 30d92975d1a3971d29b1758dc23d3a84372288c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917506"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232504"
 ---
 # <a name="malloc"></a>malloc
 
@@ -53,7 +53,7 @@ void *malloc(
 
 ## <a name="return-value"></a>傳回值
 
-**malloc**會傳回已配置空間的 void 指標，如果沒有足夠的記憶體可用，則傳回**Null** 。 若要傳回**void**以外類型的指標，請在傳回值上使用類型轉換。 此傳回值所指向的儲存空間保證會經過適當調整，因此可儲存對齊需求小於或等於基本對齊需求的任何物件類型 （在 Visual C++ 中，基本對齊是**double**或8個位元組所需的對齊方式。 在以64位平臺為目標的程式碼中，它是16個位元組）。使用[_aligned_malloc](aligned-malloc.md)來配置具有較大對齊需求之物件的儲存區，例如 SSE 類型[__m128](../../cpp/m128.md)和 **__m256**，以及使用`__declspec(align( n ))`宣告的類型，其中**n**大於8。 如果*size*為0， **malloc**會在堆積中配置零長度專案，並傳回該專案的有效指標。 請一律檢查**malloc**的傳回，即使要求的記憶體數量很小也一樣。
+**malloc**會傳回已配置空間的 void 指標，如果沒有足夠的記憶體可用，則傳回**Null** 。 若要傳回以外類型的指標 **`void`** ，請對傳回值使用類型轉換。 此傳回值所指向的儲存空間保證會經過適當調整，因此可儲存對齊需求小於或等於基本對齊需求的任何物件類型 （在 Visual C++ 中，基本對齊是一個 **`double`** 或8個位元組所需的對齊方式。 在以64位平臺為目標的程式碼中，它是16個位元組）。使用[_aligned_malloc](aligned-malloc.md)來配置具有較大對齊需求之物件的儲存空間（例如，SSE 類型[__m128](../../cpp/m128.md)和 **`__m256`** ），以及使用所宣告的類型， `__declspec(align( n ))` 其中**n**大於8。 如果*size*為0， **malloc**會在堆積中配置零長度專案，並傳回該專案的有效指標。 請一律檢查**malloc**的傳回，即使要求的記憶體數量很小也一樣。
 
 ## <a name="remarks"></a>備註
 
@@ -76,11 +76,11 @@ void *malloc(
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[收到](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-C++ [_set_new_mode](set-new-mode.md) 函式會設定 **malloc** 的新處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**malloc**無法配置記憶體時， **malloc**會呼叫新的處理常式，其方式會與**新**的運算子在因相同原因而失敗時所執行的相同。 若要覆寫預設值`_set_new_mode(1)` ，請及早在程式中呼叫，或使用 newmode.obj 連結。OBJ （請參閱[連結選項](../../c-runtime-library/link-options.md)）。
+C++ [_set_new_mode](set-new-mode.md) 函式會設定 **malloc** 的新處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**malloc**無法配置記憶體時， **malloc**會呼叫新的處理常式常式， **`new`** 其方式與運算子因相同原因而失敗時所執行的相同。 若要覆寫預設值，請 `_set_new_mode(1)` 及早在程式中呼叫，或使用 newmode.obj 連結。OBJ （請參閱[連結選項](../../c-runtime-library/link-options.md)）。
 
 當應用程式與 C 執行時間程式庫的 debug 版本連結時， **malloc**會解析為[_malloc_dbg](malloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。
 
-**malloc**已標記`__declspec(noalias)`為`__declspec(restrict)`和;這表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+**malloc**已標記為 `__declspec(noalias)` 和，這表示函式 `__declspec(restrict)` 保證不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: b86cbc6d99cbc6969536934c1583ba5207a53629
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
-ms.translationtype: HT
+ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57814432"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188631"
 ---
-# <a name="using-tcharh-data-types-with-mbcs"></a>搭配 _MBCS 使用 TCHAR.H 資料類型
+# <a name="using-tcharh-data-types-with-_mbcs"></a>搭配 _MBCS 使用 TCHAR.H 資料類型
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 如泛型文字常式對應表格 (請參閱[泛型文字對應](../c-runtime-library/generic-text-mappings.md)) 所表示，當已定義資訊清單常數 **_MBCS** 時，指定的泛型文字常式會對應到下列一種常式：
 
 - 適當地處理多位元組位元組、字元與字串的 SBCS 常式。 在此案例中，字串引數類型必須是 **char&#42;**。 例如，**_tprintf** 對應至 **printf**；**printf** 的字串引數類型為 **char&#42;**。 若為字串類型使用 **_TCHAR** 泛型文字資料類型，則 **printf** 的正式與實際參數類型會相符，因為 **_TCHAR&#42;** 對應到 **char&#42;**。
 
-- MBCS 特定常式。 在此案例中，字串引數類型必須是 __unsigned char&#42;__。 例如， **_tcsrev** 對應至 **_mbsrev**，這預期會傳回 __unsigned char&#42;__ 類型的字串。 再強調一次，若您為字串類型使用 **_TCHAR** 泛型文字資料類型，可能會發生類型衝突，因為 **_TCHAR** 對應到類型 **char**。
+- MBCS 特定常式。 在此案例中，字串引數類型必須是 __unsigned char&#42;__。 例如， **_tcsrev** 對應至 **_mbsrev**，這預期會傳回 __unsigned char&#42;__ 類型的字串。 同樣地，如果您針對字串類型使用 **_TCHAR**的泛型文字資料類型，可能會發生類型衝突，因為 **_TCHAR**對應到類型 **`char`** 。
 
 下面是防止此類型衝突 (以及可能會產生的 C 編譯器警告或 C++ 編譯器錯誤) 的三種解決方式：
 
@@ -60,11 +60,11 @@ ms.locfileid: "57814432"
    #define _tcschr _mbschr
    ```
 
-當您使用此方法時，務必確保為字串引數與字串傳回值使用適當的資料類型。 您可以使用類型轉換來確保適當的類型相符，或者可以使用 **_TXCHAR** 泛型文字資料類型。 **_TXCHAR** 在 SBCS 程式碼中對應至 **char** 類型，但在 MBCS 程式碼中對應至 **unsigned char** 類型。 如需有關泛型文字巨集的詳細資訊，請參閱[泛型文字對應](../c-runtime-library/generic-text-mappings.md)。
+當您使用此方法時，務必確保為字串引數與字串傳回值使用適當的資料類型。 您可以使用類型轉換來確保適當的類型相符，或者可以使用 **_TXCHAR** 泛型文字資料類型。 **_TXCHAR**對應到 **`char`** SBCS 程式碼中的類型，但會對應到 **`unsigned char`** MBCS 程式碼中的類型。 如需有關泛型文字巨集的詳細資訊，請參閱[泛型文字對應](../c-runtime-library/generic-text-mappings.md)。
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
-[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依分類排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

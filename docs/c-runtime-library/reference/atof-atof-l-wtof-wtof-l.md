@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909115"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232582"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -86,7 +86,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 要轉換的字串。
 
 *locale*<br/>
@@ -94,7 +94,7 @@ double _wtof_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式都會傳回將輸入字元解讀為數字所產生的**雙精度**值。 如果輸入無法轉換成該類型的值，則傳回值為 0.0。
+每個函式都會傳回將 **`double`** 輸入字元解讀為數字所產生的值。 如果輸入無法轉換成該類型的值，則傳回值為 0.0。
 
 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
@@ -127,8 +127,8 @@ double _wtof_l(
 
 |常式|必要的標頭|
 |------------------|---------------------|
-|**atof**， **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
-|**_wtof**， **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**atof**， **_atof_l**|C： \<math.h> 或 \<stdlib.h> c + +： \<cstdlib> 、 \<stdlib.h> \<cmath> 或\<math.h>|
+|**_wtof**， **_wtof_l**|C： \<stdlib.h> 或 \<wchar.h> c + +： \<cstdlib> 、 \<stdlib.h> 或\<wchar.h>|
 
 ## <a name="example"></a>範例
 
@@ -185,7 +185,7 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

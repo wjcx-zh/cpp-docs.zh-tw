@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916075"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232426"
 ---
 # <a name="_putw"></a>_putw
 
@@ -54,7 +54,7 @@ int _putw(
 *binint*<br/>
 要輸出的二進位整數。
 
-*資料流*<br/>
+*資料流程*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -65,7 +65,7 @@ int _putw(
 
 ## <a name="remarks"></a>備註
 
-**_Putw**函式會將**int**類型的二進位值寫入資料流程的目前位置 *。* **_putw**不會影響資料流程中的專案對齊，也不會採用任何特殊對齊方式。 **_putw**主要是為了與先前的程式庫相容。 **_Putw**可能會發生可攜性問題，因為**int**的大小和**int**中的位元組順序在不同的系統之間有所不同。
+**_Putw**函式會將類型的二進位值寫入 **`int`** 資料流程的目前位置 *。* **_putw**不會影響資料流程中的專案對齊，也不會採用任何特殊對齊方式。 **_putw**主要是為了與先前的程式庫相容。 **_Putw**可能會發生可攜性問題，因為的大小 **`int`** 和中的位元組順序在 **`int`** 不同的系統之間有所不同。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913574"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232556"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -86,7 +86,7 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 要轉換的字串。
 
 *locale*<br/>
@@ -94,7 +94,7 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式都會傳回將輸入字元解讀為數字所產生的 **__int64**值。 如果輸入無法轉換成該類型的值，則 **_atoi64**的傳回值為0。
+每個函式都會傳回將 **`__int64`** 輸入字元解讀為數字所產生的值。 如果輸入無法轉換成該類型的值，則 **_atoi64**的傳回值為0。
 
 如果溢位具有大型正整數值， **_atoi64**會在溢位的情況下，傳回具有大型負整數值的**I64_MAX**和**I64_MIN** 。
 
@@ -185,7 +185,7 @@ Overflow condition occurred.
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

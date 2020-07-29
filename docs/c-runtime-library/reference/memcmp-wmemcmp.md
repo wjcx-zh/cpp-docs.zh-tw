@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951927"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232452"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -77,7 +77,7 @@ int wmemcmp(
 
 ## <a name="remarks"></a>備註
 
-比較*buffer1*和*buffer2*的第一個*計數*字元，並傳回指出其關聯性的值。 非零傳回值的正負號是緩衝區中第一組不同值之間差異的正負號。 這些值會被視為**memcmp**的不**帶正負** **號字元**，而**wmemcmp**則會視為**wchar_t** 。
+比較*buffer1*和*buffer2*的第一個*計數*字元，並傳回指出其關聯性的值。 非零傳回值的正負號是緩衝區中第一組不同值之間差異的正負號。 這些值會解讀為 **`unsigned char`** for **memcmp**，而 **`wchar_t`** 針對**wmemcmp**則為。
 
 ## <a name="requirements"></a>需求
 

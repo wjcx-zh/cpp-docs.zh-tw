@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920056"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232595"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -74,7 +74,7 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**atanh**的多載。 在 C 程式中， **atanh**一律採用並傳回**double**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回或值之**atanh**的多載 **`float`** **`long double`** 。 在 C 程式中， **atanh**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

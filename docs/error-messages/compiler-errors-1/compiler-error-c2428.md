@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2428
 ms.assetid: 74aa5714-e930-4f9e-9061-68ccce7f0d38
-ms.openlocfilehash: 9acaa3ba933f6fcf49a31e4973e7f6ddc3e178ea
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2a85e1874a03882ca8497eeff379d377a585fe06
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74744585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216228"
 ---
 # <a name="compiler-error-c2428"></a>編譯器錯誤 C2428
 
 ' operation '：不允許用在類型為 ' bool ' 的運算元上
 
-您無法將遞減運算子套用至 `bool`類型的物件。
+您不能將遞減運算子套用至類型的物件 **`bool`** 。
 
 下列範例會產生 C2428：
 

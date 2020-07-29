@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: db24e3992e5db70895ccc2908dba108de843bcdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752070"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215942"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 類別
 
@@ -43,41 +43,41 @@ class CTypedPtrArray : public BASE_CLASS
 #### <a name="parameters"></a>參數
 
 *BASE_CLASS*<br/>
-類型化指標數組類的基類;必須是陣列類別`CObArray`(`CPtrArray`或 。
+具類型指標陣列類別的基類;必須是陣列類別（ `CObArray` 或 `CPtrArray` ）。
 
-*類型*<br/>
-存儲在基類陣列中的元素的類型。
+*TYPE*<br/>
+儲存在基類陣列中的元素類型。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CTypedPtrarray:: 新增](#add)|向陣列的末尾添加新元素。 如有必要,增大陣列|
-|[CTypedPtrarray::追加](#append)|將一個陣列的內容添加到另一個陣列的末尾。 如有必要,增大陣列|
-|[CTypedPtrarray:: 複製](#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|
-|[CTypedPtrarray::元素At](#elementat)|傳回陣列中項目指標的臨時參考。|
-|[CTypedPtrarray::取得At](#getat)|傳回給定索引的值。|
-|[CTypedPtrarray::插入At](#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|
-|[CTypedPtrarray::SetAt](#setat)|設定給定索引的值；不容許陣列成長。|
-|[CTypedPtrarray::SetAt增長](#setatgrow)|設定給定索引的值；必要時讓陣列成長。|
+|[CTypedPtrArray：： Add](#add)|將新的專案加入至陣列的結尾。 視需要成長陣列|
+|[CTypedPtrArray：： Append](#append)|將一個陣列的內容加入至另一個陣列的結尾。 視需要成長陣列|
+|[CTypedPtrArray：： Copy](#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|
+|[CTypedPtrArray：： Parameters.alternatefilters.elementat](#elementat)|傳回陣列中項目指標的臨時參考。|
+|[CTypedPtrArray：： GetAt](#getat)|傳回給定索引的值。|
+|[CTypedPtrArray：： InsertAt](#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|
+|[CTypedPtrArray：： SetAt](#setat)|設定給定索引的值；不容許陣列成長。|
+|[CTypedPtrArray：： SetAtGrow](#setatgrow)|設定給定索引的值；必要時讓陣列成長。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CTypedPtrarray::運算子\[\]](#operator_at)|設定或取得指定索引處的項目。|
+|[CTypedPtrArray：： operator \[\]](#operator_at)|設定或取得指定索引處的項目。|
 
 ## <a name="remarks"></a>備註
 
-使用`CTypedPtrArray``CPtrArray`而不是`CObArray`或時,C++類型檢查工具有助於消除由不匹配的指標類型引起的錯誤。
+當您使用 `CTypedPtrArray` 而不是 `CPtrArray` 或時 `CObArray` ，c + + 類型檢查功能有助於消除因指標類型不相符而造成的錯誤。
 
-此外,`CTypedPtrArray`包裝器執行使用`CObArray``CPtrArray`或時所需的大部分強制轉換。
+此外， `CTypedPtrArray` 如果您使用或，包裝函式會執行大部分需要的轉換 `CObArray` `CPtrArray` 。
 
-由於所有`CTypedPtrArray`函數都是內聯的,因此使用此範本不會顯著影響代碼的大小或速度。
+由於所有函式 `CTypedPtrArray` 都是內嵌的，因此使用此範本並不會大幅影響程式碼的大小或速度。
 
-有關`CTypedPtrArray`使用的詳細資訊,請參閱文章[集合](../../mfc/collections.md)與[基於樣本的類別](../../mfc/template-based-classes.md)。
+如需使用的詳細資訊 `CTypedPtrArray` ，請參閱文章[集合](../../mfc/collections.md)和以[範本為基礎的類別](../../mfc/template-based-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -89,9 +89,9 @@ class CTypedPtrArray : public BASE_CLASS
 
 **Header:** afxtempl.h
 
-## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrarray:: 新增
+## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray：： Add
 
-此成員函數呼叫`BASE_CLASS` **::新增**。
+此成員函式會呼叫 `BASE_CLASS` **：： Add**。
 
 ```
 INT_PTR Add(TYPE newElement);
@@ -99,23 +99,23 @@ INT_PTR Add(TYPE newElement);
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
-指定要添加到陣列的元素類型的範本參數。
+*TYPE*<br/>
+範本參數，指定要加入至陣列的元素類型。
 
-*新元素*<br/>
-要添加到此陣列的元素。
+*newElement*<br/>
+要加入至此陣列的元素。
 
 ### <a name="return-value"></a>傳回值
 
-添加元素的索引。
+已加入之元素的索引。
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray:::添加](../../mfc/reference/cobarray-class.md#add)。
+如需更詳細的備註，請參閱[CObArray：： Add](../../mfc/reference/cobarray-class.md#add)。
 
-## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrarray::追加
+## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray：： Append
 
-此成員函數調用`BASE_CLASS`::附加_。
+此成員函式會呼叫 `BASE_CLASS` ：： Append * *。
 
 ```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -124,13 +124,13 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>參數
 
 *BASE_CLASS*<br/>
-類型化指標數組類的基類;必須是陣列類[(CObarray](../../mfc/reference/cobarray-class.md)或[CPtrArray)。](../../mfc/reference/cptrarray-class.md)
+具類型指標陣列類別的基類;必須是陣列類別（ [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md)）。
 
-*類型*<br/>
-存儲在基類陣列中的元素的類型。
+*TYPE*<br/>
+儲存在基類陣列中的元素類型。
 
 *src*<br/>
-要追加到陣列的元素的源。
+要附加至陣列之元素的來源。
 
 ### <a name="return-value"></a>傳回值
 
@@ -138,11 +138,11 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray:::附加 。](../../mfc/reference/cobarray-class.md#append)
+如需更詳細的備註，請參閱[CObArray：： Append](../../mfc/reference/cobarray-class.md#append)。
 
-## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrarray:: 複製
+## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray：： Copy
 
-此成員函數呼叫`BASE_CLASS` **::複製**。
+此成員函式會呼叫 `BASE_CLASS` **：： Copy**。
 
 ```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -151,21 +151,21 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>參數
 
 *BASE_CLASS*<br/>
-類型化指標數組類的基類;必須是陣列類[(CObarray](../../mfc/reference/cobarray-class.md)或[CPtrArray)。](../../mfc/reference/cptrarray-class.md)
+具類型指標陣列類別的基類;必須是陣列類別（ [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md)）。
 
-*類型*<br/>
-存儲在基類陣列中的元素的類型。
+*TYPE*<br/>
+儲存在基類陣列中的元素類型。
 
 *src*<br/>
-要複製到陣列的元素的源。
+要複製到陣列之元素的來源。
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray:::複製](../../mfc/reference/cobarray-class.md#copy)。
+如需更詳細的備註，請參閱[CObArray：： Copy](../../mfc/reference/cobarray-class.md#copy)。
 
-## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrarray::元素At
+## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray：： Parameters.alternatefilters.elementat
 
-此內聯函數呼叫`BASE_CLASS` **::ElementAt**。
+這個內嵌函數會呼叫 `BASE_CLASS` **：： parameters.alternatefilters.elementat**。
 
 ```
 TYPE& ElementAt(INT_PTR nIndex);
@@ -173,23 +173,23 @@ TYPE& ElementAt(INT_PTR nIndex);
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
-指定存儲在此陣列中的元素類型的範本參數。
+*TYPE*<br/>
+範本參數，指定儲存在此陣列中的元素類型。
 
 *nIndex*<br/>
-大於或等於 0 且小於或`BASE_CLASS`等於 **::getUpperBound**返回的值的整數索引。
+大於或等於0，且小於或等於 `BASE_CLASS` **：： system.array.getupperbound**所傳回之值的整數索引。
 
 ### <a name="return-value"></a>傳回值
 
-對*nIndex*指定位置的元素的臨時引用。 此元素的類型由範本參數*TYPE*指定。
+*NIndex*所指定之位置的專案暫時參考。 此元素屬於範本參數*類型*所指定的類型。
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray::elementat](../../mfc/reference/cobarray-class.md#elementat)。
+如需更詳細的備註，請參閱[CObArray：： parameters.alternatefilters.elementat](../../mfc/reference/cobarray-class.md#elementat)。
 
-## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrarray::取得At
+## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray：： GetAt
 
-此內聯函數呼叫`BASE_CLASS` **::GetAt**。
+這個內嵌函數會呼叫 `BASE_CLASS` **：： GetAt**。
 
 ```
 TYPE GetAt(INT_PTR nIndex) const;
@@ -197,23 +197,23 @@ TYPE GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
-樣本參數,指定存儲在陣列中的元素的類型。
+*TYPE*<br/>
+範本參數，指定儲存在陣列中的元素類型。
 
 *nIndex*<br/>
-大於或等於 0 且小於或`BASE_CLASS`等於 **::getUpperBound**返回的值的整數索引。
+大於或等於0，且小於或等於 `BASE_CLASS` **：： system.array.getupperbound**所傳回之值的整數索引。
 
 ### <a name="return-value"></a>傳回值
 
-*在 nIndex*指定的位置的元素的複本。 此元素的類型由範本參數*TYPE*指定。
+*NIndex*所指定之位置的元素複本。 此元素屬於範本參數*類型*所指定的類型。
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray::GetAt](../../mfc/reference/cobarray-class.md#getat)
+如需更詳細的備註，請參閱[CObArray：： GetAt](../../mfc/reference/cobarray-class.md#getat)
 
-## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrarray::插入At
+## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray：： InsertAt
 
-此成員函數呼叫`BASE_CLASS` **::InsertAt**。
+此成員函式會呼叫 `BASE_CLASS` **：： InsertAt**。
 
 ```cpp
 void InsertAt(
@@ -229,33 +229,33 @@ void InsertAt(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-可能大於 CObarray 傳回的值的整數索引[::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。
+可能大於[CObArray：： system.array.getupperbound](../../mfc/reference/cobarray-class.md#getupperbound)所傳回之值的整數索引。
 
-*類型*<br/>
-存儲在基類陣列中的元素的類型。
+*TYPE*<br/>
+儲存在基類陣列中的元素類型。
 
-*新元素*<br/>
-要放置在此陣列中的物件指標。 允許*新的*值**NULL**元素。
+*newElement*<br/>
+要放在這個陣列中的物件指標。 允許**Null**值的*newElement* 。
 
-*n( N) Count*<br/>
-應插入此元素的次數(預設值為1)。
+*nCount*<br/>
+此元素應該插入的次數（預設為1）。
 
 *nStartIndex*<br/>
-可能大於返回`CObArray::GetUpperBound`的值的整數索引。
+可能大於所傳回之值的整數索引 `CObArray::GetUpperBound` 。
 
 *BASE_CLASS*<br/>
-類型化指標數組類的基類;必須是陣列類[(CObarray](../../mfc/reference/cobarray-class.md)或[CPtrArray)。](../../mfc/reference/cptrarray-class.md)
+具類型指標陣列類別的基類;必須是陣列類別（ [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md)）。
 
 *pNewArray*<br/>
-另一個包含要添加到此陣列的元素的陣列。
+另一個陣列，其中包含要加入至此陣列的元素。
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray::插入 At](../../mfc/reference/cobarray-class.md#insertat)。
+如需更詳細的備註，請參閱[CObArray：： InsertAt](../../mfc/reference/cobarray-class.md#insertat)。
 
-## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrarray::運算符 |
+## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray：： operator []
 
-這些內聯運算子呼叫`BASE_CLASS` **:: 運算子 ***。
+這些內嵌運算子會呼叫 `BASE_CLASS` **：： operator []**。
 
 ```
 TYPE& operator[ ](int_ptr nindex);
@@ -264,21 +264,21 @@ TYPE operator[ ](int_ptr nindex) const;
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
-樣本參數,指定存儲在陣列中的元素的類型。
+*TYPE*<br/>
+範本參數，指定儲存在陣列中的元素類型。
 
 *nIndex*<br/>
-大於或等於 0 且小於或`BASE_CLASS`等於 **::getUpperBound**返回的值的整數索引。
+大於或等於0，且小於或等於 `BASE_CLASS` **：： system.array.getupperbound**所傳回之值的整數索引。
 
 ### <a name="remarks"></a>備註
 
-第一個運算符(稱為非**const**陣列)可以在賦值語句的右側(r 值)或左側(l 值)上使用。 第二個調用為**const**陣列,只能在右側使用。
+第一個運算子（針對 not 的陣列呼叫 **`const`** ）可用於指派語句的右邊（右值）或左邊（左值）。 第二個（針對 **`const`** 陣列叫用）只能用在右邊。
 
-庫的調試版本斷言下標(在賦值語句的左側或右側)是否超出邊界。
+如果注標（在指派語句的左邊或右邊）超出範圍，則為該程式庫的 Debug 版本。
 
-## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrarray::SetAt
+## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray：： SetAt
 
-此成員函數呼叫`BASE_CLASS` **::SetAt**。
+此成員函式會呼叫 `BASE_CLASS` **：： SetAt**。
 
 ```cpp
 void SetAt(
@@ -289,21 +289,21 @@ void SetAt(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-大於或等於 0 且小於或等於 CObArray 傳回的值的整數索引[::getUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。
+大於或等於0，且小於或等於[CObArray：： system.array.getupperbound](../../mfc/reference/cobarray-class.md#getupperbound)所傳回之值的整數索引。
 
-*類型*<br/>
-存儲在基類陣列中的元素的類型。
+*TYPE*<br/>
+儲存在基類陣列中的元素類型。
 
-*Ptr*<br/>
-指向要在 nIndex 的陣列中插入的元素的指標。 允許 NULL 值。
+*ptr*<br/>
+要插入 nIndex 之陣列中的元素指標。 允許 Null 值。
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray::setat](../../mfc/reference/cobarray-class.md#setat)。
+如需更詳細的備註，請參閱[CObArray：： SetAt](../../mfc/reference/cobarray-class.md#setat)。
 
-## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrarray::SetAt增長
+## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray：： SetAtGrow
 
-此成員函數呼叫`BASE_CLASS` **::SetAtGrow**。
+此成員函式會呼叫 `BASE_CLASS` **：： SetAtGrow**。
 
 ```cpp
 void SetAtGrow(
@@ -314,21 +314,21 @@ void SetAtGrow(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-大於或等於 0 的整數索引。
+大於或等於0的整數索引。
 
-*類型*<br/>
-存儲在基類陣列中的元素的類型。
+*TYPE*<br/>
+儲存在基類陣列中的元素類型。
 
-*新元素*<br/>
-要添加到此陣列的物件指標。 允許**NULL**值。
+*newElement*<br/>
+要加入至這個陣列的物件指標。 允許**Null**值。
 
 ### <a name="remarks"></a>備註
 
-有關更詳細的註釋,請參閱[CObarray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)。
+如需更詳細的備註，請參閱[CObArray：： SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 樣品收集](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例收集](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray 類別](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray 類別](../../mfc/reference/cobarray-class.md)

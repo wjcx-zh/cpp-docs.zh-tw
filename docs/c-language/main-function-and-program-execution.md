@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123938"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211784"
 ---
 # <a name="main-function-and-program-execution"></a>main 函式和程式執行
 
@@ -28,7 +28,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>備註
 
-原始程式中的函式會執行一個或多個特定工作。 **main** 函式可以呼叫這些函式來執行其各自的工作。 當 **main** 呼叫另一個函式時，它會將執行控制權傳遞給函式，因此，會從函式的第一個陳述式開始執行。 當執行 `return` 陳述式或到達函式結尾時，函式會將控制權傳回 **main**。
+原始程式中的函式會執行一個或多個特定工作。 **main** 函式可以呼叫這些函式來執行其各自的工作。 當 **main** 呼叫另一個函式時，它會將執行控制權傳遞給函式，因此，會從函式的第一個陳述式開始執行。 當**main** **`return`** 執行語句或到達函式結尾時，函數會將控制權傳回 main。
 
 您可以宣告讓任何函式 (包括 **main**) 具有參數。 詞彙「參數」或「型式參數」是指接收傳遞給函式之值的識別項。 如需將引數傳遞給參數的相關資訊，請參閱[參數](../c-language/parameters.md)。 當某個函式呼叫另一個函式時，被呼叫的函式會從呼叫函式收到其參數的值。 這些值稱為「引數」。 您可以對 **main** 宣告型式參數，使其可以使用下列格式接收來自命令列的引數：
 
@@ -36,7 +36,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 如需寬字元版本 **main** 的說明，請參閱[使用 wmain](../c-language/using-wmain.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [main 函式和命令列引數（c + +）](../cpp/main-function-command-line-args.md)\
 [剖析 C 命令列引數](../c-language/parsing-c-command-line-arguments.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457680"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212159"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "68457680"
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<new>
+**標頭：**\<new>
 
 **命名空間：** std
 
@@ -33,7 +33,7 @@ ms.locfileid: "68457680"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|提供物件, 做為**new**和**delete**之**nothrow**版本的引數。|
+|[nothrow](../standard-library/new-functions.md#nothrow)|提供物件，以便當做和版本的引數使用 **`nothrow`** **`new`** **`delete`** 。|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -55,7 +55,7 @@ ms.locfileid: "68457680"
 
 |||
 |-|-|
-|[operator delete](../standard-library/new-operators.md#op_delete)|由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。|
+|[運算子 delete](../standard-library/new-operators.md#op_delete)|由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|由 delete 陳述式呼叫的函式，藉此取消配置物件陣列的儲存區。|
 |[operator new](../standard-library/new-operators.md#op_new)|由 new 陳述式呼叫的函式，藉此配置物件個體的儲存區。|
 |[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|由 new 陳述式呼叫的函式，藉此配置物件陣列的儲存區。|
@@ -77,4 +77,4 @@ ms.locfileid: "68457680"
 ## <a name="see-also"></a>另請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

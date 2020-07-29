@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988493"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216384"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>如何：擴充封送處理程式庫
 
 本主題說明如何擴充封送處理程式庫，以提供資料類型之間的更多轉換。 使用者可以針對程式庫目前不支援的任何資料轉換擴充封送處理程式庫。
 
-您可以使用兩種方式之一擴充封送處理程式庫-不論是否有[Marshal_coNtext 類別](../dotnet/marshal-context-class.md)。 請參閱主題[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)，以判斷新轉換是否需要內容。
+您可以使用兩種方式之一擴充封送處理程式庫-不論是否有[Marshal_coNtext 類別](../dotnet/marshal-context-class.md)。 請參閱[c + + 中的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)主題，以判斷新轉換是否需要內容。
 
 在這兩種情況下，您會先建立檔案以進行新的封送處理轉換。 若要保留標準封送處理程式庫檔案的完整性，請這麼做。 如果您想要將專案移植到另一部電腦或另一位程式設計人員，您必須將新的封送處理檔案連同專案的其餘部分一起複製。 如此一來，接收專案的使用者將保證會收到新的轉換，而且不需要修改任何程式庫檔案。
 
@@ -30,13 +30,13 @@ ms.locfileid: "74988493"
 
    - 適用于 windows 資料類型的 marshal_windows .h。
 
-   - 適用于標準連結C++庫資料類型的 marshal_cppstd .h。
+   - c + + 標準程式庫資料類型 marshal_cppstd .h。
 
    - 適用于 ATL 資料類型的 marshal_atl .h。
 
-1. 在這些步驟的結尾使用程式碼，以撰寫轉換函式。 在此程式碼中，TO 是要轉換成的型別，FROM 是要轉換的來源型別，`from` 是要轉換的參數。
+1. 在這些步驟的結尾使用程式碼，以撰寫轉換函式。 在此程式碼中，TO 是要轉換成的型別，FROM 是要轉換的來源型別，而 `from` 是要轉換的參數。
 
-1. 以程式碼取代轉換邏輯的批註，將 `from` 參數轉換成的物件，以輸入並傳回已轉換的物件。
+1. 將轉換邏輯的批註取代為程式碼，以將 `from` 參數轉換成的物件，以輸入並傳回轉換的物件。
 
 ```
 namespace msclr {
@@ -59,19 +59,19 @@ namespace msclr {
 
    - 適用于 windows 資料類型的 marshal_windows .h。
 
-   - 適用于標準連結C++庫資料類型的 marshal_cppstd .h。
+   - c + + 標準程式庫資料類型 marshal_cppstd .h。
 
    - 適用于 ATL 資料類型的 marshal_atl .h。
 
-1. 在這些步驟的結尾使用程式碼，以撰寫轉換函式。 在此程式碼中，TO 是要轉換成的型別，FROM 是要轉換的目標型別，`toObject` 是要用來儲存結果的指標，而 `fromObject` 則是要轉換的參數。
+1. 在這些步驟的結尾使用程式碼，以撰寫轉換函式。 在此程式碼中，TO 是要轉換成的型別，FROM 是要從中轉換的型別， `toObject` 是要在其中儲存結果的指標，而 `fromObject` 是要轉換的參數。
 
-1. 以程式碼取代初始化的相關批註，將 `toPtr` 初始化為適當的空白值。 例如，如果它是指標，請將它設定為 `NULL`。
+1. 將初始化時的批註取代為程式碼，以將初始化 `toPtr` 為適當的空白值。 例如，如果它是指標，請將它設定為 `NULL` 。
 
-1. 以程式碼取代轉換邏輯的批註，將 `from` 參數轉換成的物件 *，以*輸入。 這個已轉換的物件將會儲存在 `toPtr`中。
+1. 以程式碼取代轉換邏輯的批註，將 `from` 參數轉換成的物件 *，以*輸入。 這個轉換的物件將會儲存在中 `toPtr` 。
 
-1. 將設定 `toObject` 的批註取代為程式碼，以將 `toObject` 設定為已轉換的物件。
+1. 將 [關於設定的批註] 取代為 [ `toObject` 程式碼]，設定為 `toObject` 轉換的物件。
 
-1. 以程式碼取代清除原生資源的相關批註，以釋放 `toPtr`所配置的記憶體。 如果 `toPtr` 使用 `new`配置記憶體，請使用 `delete` 來釋放記憶體。
+1. 以程式碼取代清除原生資源的相關批註，以釋放所配置的任何記憶體 `toPtr` 。 如果 `toPtr` 使用配置記憶體 **`new`** ，請使用 **`delete`** 來釋放記憶體。
 
 ```
 namespace msclr {
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-在上述範例中，`marshal_as` 函式會傳回已轉換資料的控制碼。 這麼做是為了防止建立額外的資料複本。 直接傳回變數會有與其相關聯的不必要效能成本。
+在上述範例中，函式會傳回已 `marshal_as` 轉換資料的控制碼。 這麼做是為了防止建立額外的資料複本。 直接傳回變數會有與其相關聯的不必要效能成本。
 
 ```Output
 Managed name: Jeff Smith
@@ -266,6 +266,6 @@ Native address: 123 Main Street
 Native zip code: 98111
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[C++ 中封送處理的概觀](../dotnet/overview-of-marshaling-in-cpp.md)
+[C + + 中的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)

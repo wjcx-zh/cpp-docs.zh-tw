@@ -14,16 +14,16 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: 6bf4b9666d746199cea92fa2bd52b691c67e4a5b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1fa21f2a5a5c1d004fc23d70b686d7e45bbcac81
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126341"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215903"
 ---
 # <a name="texture_view-class"></a>texture_view 類別
 
-提供材質的讀取存取和寫入權限。 `texture_view` 只能用來讀取其實數值型別為 `int`、`unsigned int`或具有預設32位 bpse 之 `float` 的材質。 若要讀取其他材質格式，請使用 `texture_view<const value_type, _Rank>`。
+提供材質的讀取存取和寫入權限。 `texture_view`只能用來讀取其數值型別為 **`int`** 、 **`unsigned int`** 或 **`float`** 且具有預設32位 bpse 的材質。 若要讀取其他材質格式，請使用 `texture_view<const value_type, _Rank>` 。
 
 ## <a name="syntax"></a>語法
 
@@ -46,52 +46,52 @@ class texture_view<const value_type, _Rank>
 材質匯總中元素的類型。
 
 *_Rank*<br/>
-`texture_view`的順位。
+的排名 `texture_view` 。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |`value_type`|材質匯總中元素的類型。|
-|`coordinates_type`|用來在 `texture_view`中指定材質的座標類型，也就是與具有 `float`數值型別之關聯材質具有相同次序的 `short_vector`。|
-|`gather_return_type`|用於收集作業的傳回型別，也就是次序 4 `short_vector`，其中包含從取樣的四個材質值收集到的四個同質色彩元件。|
+|`coordinates_type`|用來在中指定材質的座標類型， `texture_view` 也就是，其次序與 `short_vector` 具有之數值型別的關聯材質相同 **`float`** 。|
+|`gather_return_type`|用於收集作業的傳回型別，也就是會 `short_vector` 保存四個同質色彩元件，並從取樣的四個材質值收集而來的次序4。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[texture_view 的構造函式](#ctor)|已多載。 結構 `texture_view` 實例。|
 |[~ texture_view 的析構函式](#ctor)|損毀 `texture_view` 實例。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[gather_Alpha](#gather_alpha)|已多載。 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的 Alpha （w）元件。|
 |[gather_blue](#gather_blue)|已多載。 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的藍色（z）元件。|
 |[gather_green](#gather_green)|已多載。 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的綠色（y）元件。|
 |[gather_red](#gather_red)|已多載。 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的紅色（x）元件。|
 |[get](#get)|已多載。 依索引取得元素值。|
-|[sample](#sample)|已多載。 使用指定的取樣設定，以指定的座標和詳細資料層級來取樣材質。|
+|[抽樣](#sample)|已多載。 使用指定的取樣設定，以指定的座標和詳細資料層級來取樣材質。|
 |[set](#set)|依索引設定元素的值。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[operator()](#operator_call)|已多載。 依索引取得元素值。|
-|[operator\[\]](#operator_at)|已多載。 依索引取得元素值。|
-|[operator=](#operator_eq)|已多載。 指派運算子。|
+|[operator （）](#operator_call)|已多載。 依索引取得元素值。|
+|[操作\[\]](#operator_at)|已多載。 依索引取得元素值。|
+|[operator =](#operator_eq)|已多載。 指派運算子。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[value_type](#value_type)|`texture_view`元素的實值型別。|
+|[value_type](#value_type)|元素的實值型別 `texture_view` 。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `_Texture_base`
 
@@ -103,7 +103,7 @@ class texture_view<const value_type, _Rank>
 
 **命名空間：** concurrency：： graphics
 
-## <a name="dtor"></a>~ texture_view
+## <a name="texture_view"></a><a name="dtor"></a>~ texture_view
 
 損毀 `texture_view` 實例。
 
@@ -111,7 +111,7 @@ class texture_view<const value_type, _Rank>
 ~texture_view() restrict(amp, cpu);
 ```
 
-## <a name="ctor"></a>texture_view
+## <a name="texture_view"></a><a name="ctor"></a>texture_view
 
 結構 `texture_view` 實例。
 
@@ -146,25 +146,25 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>參數
 
 *_Src*<br/>
-[1，2]建立可寫入 `texture_view` 之 `texture` 的「構造函式」。
+[1，2]`texture`建立可寫入之的的「構造函式」 `texture_view` 。
 
-[3，4]在建立不可寫入 `texture_view` 之 `texture` 的「構造函式」。
+[3，4]在 `texture` 其上建立不可寫入的的「構造函式」 `texture_view` 。
 
 *_Other*<br/>
-[5] 複製可寫入 `texture_view`來源的函式。
+[5] 複製可寫入來源的函式 `texture_view` 。
 
-[6，7]複製此來源無法寫入的 `texture_view`。
+[6，7]複製不能寫入的來源 `texture_view` 。
 
 *_Mipmap_level*<br/>
-來源 `texture` 上可寫入 `texture_view` 系結的特定 mipmap 層級。 預設值為0，代表最上層（最詳細的） mip 層級。
+來源上可寫入之系結的特定 mipmap 層級 `texture` `texture_view` 。 預設值為0，代表最上層（最詳細的） mip 層級。
 
 *_Most_detailed_mip*<br/>
 視圖的最上層（最詳細） mip 層級，相對於指定的 `texture_view` 物件。
 
 *_Mip_levels*<br/>
-透過 `texture_view`可存取的 mipmap 層級數目。
+可透過存取的 mipmap 層級數目 `texture_view` 。
 
-## <a name="gather_red"></a>gather_red
+## <a name="gather_red"></a><a name="gather_red"></a>gather_red
 
 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的紅色（x）元件。
 
@@ -183,10 +183,10 @@ const gather_return_type gather_red(
 ### <a name="parameters"></a>參數
 
 *_Address_mode*<br/>
-用來取樣 `texture_view`的位址模式。 所有維度的位址模式都相同。
+要用來取樣的位址模式 `texture_view` 。 所有維度的位址模式都相同。
 
 *_Sampler*<br/>
-要用來取樣 `texture_view`的取樣器設定。
+要用來取樣的取樣器設定 `texture_view` 。
 
 *_Coord*<br/>
 要從中執行樣本的座標。 小數座標值是用來在範例材質之間插入。
@@ -195,7 +195,7 @@ const gather_return_type gather_red(
 
 排名4的短向量，其中包含4個取樣材質值的紅色（x）元件。
 
-## <a name="gather_green"></a>gather_green
+## <a name="gather_green"></a><a name="gather_green"></a>gather_green
 
 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的綠色（y）元件。
 
@@ -214,10 +214,10 @@ const gather_return_type gather_green(
 ### <a name="parameters"></a>參數
 
 *_Address_mode*<br/>
-用來取樣 `texture_view`的位址模式。 所有維度的位址模式都相同。
+要用來取樣的位址模式 `texture_view` 。 所有維度的位址模式都相同。
 
 *_Sampler*<br/>
-要用來取樣 `texture_view`的取樣器設定。
+要用來取樣的取樣器設定 `texture_view` 。
 
 *_Coord*<br/>
 要從中執行樣本的座標。 小數座標值是用來在範例材質之間插入。
@@ -226,7 +226,7 @@ const gather_return_type gather_green(
 
 排名4的短向量，其中包含4個取樣材質值的綠色（y）元件。
 
-## <a name="gather_blue"></a>gather_blue
+## <a name="gather_blue"></a><a name="gather_blue"></a>gather_blue
 
 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的藍色（z）元件。
 
@@ -245,10 +245,10 @@ const gather_return_type gather_blue(
 ### <a name="parameters"></a>參數
 
 *_Address_mode*<br/>
-用來取樣 `texture_view`的位址模式。 所有維度的位址模式都相同。
+要用來取樣的位址模式 `texture_view` 。 所有維度的位址模式都相同。
 
 *_Sampler*<br/>
-要用來取樣 `texture_view`的取樣器設定。
+要用來取樣的取樣器設定 `texture_view` 。
 
 *_Coord*<br/>
 要從中執行樣本的座標。 小數座標值是用來在範例材質之間插入。
@@ -257,7 +257,7 @@ const gather_return_type gather_blue(
 
 排名4的短向量，其中包含4個取樣材質值的紅色（x）元件。
 
-## <a name="gather_alpha"></a>gather_Alpha
+## <a name="gather_alpha"></a><a name="gather_alpha"></a>gather_Alpha
 
 使用指定的取樣設定，在指定的座標上取樣材質，並傳回四個取樣材質的 Alpha （w）元件。
 
@@ -276,10 +276,10 @@ const gather_return_type gather_alpha(
 ### <a name="parameters"></a>參數
 
 *_Address_mode*<br/>
-用來取樣 `texture_view`的位址模式。 所有維度的位址模式都相同。
+要用來取樣的位址模式 `texture_view` 。 所有維度的位址模式都相同。
 
 *_Sampler*<br/>
-要用來取樣 `texture_view`的取樣器設定。
+要用來取樣的取樣器設定 `texture_view` 。
 
 *_Coord*<br/>
 要從中執行樣本的座標。 小數座標值是用來在範例材質之間插入。
@@ -288,7 +288,7 @@ const gather_return_type gather_alpha(
 
 排名4的短向量，其中包含4個取樣材質值的 Alpha （w）元件。
 
-## <a name="get"></a>獲取
+## <a name="get"></a><a name="get"></a>獲取
 
 取得位於指定索引處之專案的值。
 
@@ -311,11 +311,11 @@ value_type get(
 
 ### <a name="return-value"></a>傳回值
 
-項目的值。
+元素的值。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
-將與指定之 `texture_view` 相同材質的視圖指派給這個 `texture_view` 實例。
+將與指定之相同材質的視圖指派 `texture_view` 給這個 `texture_view` 實例。
 
 ```cpp
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor
@@ -331,15 +331,15 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="parameters"></a>參數
 
 *_Other*<br/>
-[1，2]複製構造函式：可寫入的 `texture_view` 物件。
+[1，2]複製構造函式可寫入的 `texture_view` 物件。
 
-[3] 複製的函式不是可寫入的 `texture_view` 物件。
+[3] 複製不是可寫入物件的構造函式 `texture_view` 。
 
 ### <a name="return-value"></a>傳回值
 
-這個 `texture_view` 實例的參考。
+這個實例的參考 `texture_view` 。
 
-## <a name="operator_at"></a>operator []
+## <a name="operator"></a><a name="operator_at"></a>operator []
 
 依索引傳回元素值。
 
@@ -363,9 +363,9 @@ value_type operator[] (int _I0) const restrict(amp);
 
 ### <a name="return-value"></a>傳回值
 
-以 `_Index`編制索引的元素值。
+以編制索引的元素值 `_Index` 。
 
-## <a name="operator_call"></a>operator （）
+## <a name="operator"></a><a name="operator_call"></a>operator （）
 
 依索引傳回元素值。
 
@@ -416,9 +416,9 @@ value_type operator() (
 
 ### <a name="return-value"></a>傳回值
 
-以 `_Index`編制索引的元素值。
+以編制索引的元素值 `_Index` 。
 
-## <a name="sample"></a>抽樣
+## <a name="sample"></a><a name="sample"></a>抽樣
 
 使用指定的取樣設定，以指定的座標和詳細資料層級來取樣材質。
 
@@ -458,7 +458,7 @@ value_type sample(
 
 插補範例值。
 
-## <a name="set"></a>設定
+## <a name="set"></a><a name="set"></a>設定
 
 將指定索引處的元素值設定為指定的值。
 
@@ -476,7 +476,7 @@ void set(
 *value*<br/>
 要設定元素的值。
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Texture_view 元素的實值型別。
 

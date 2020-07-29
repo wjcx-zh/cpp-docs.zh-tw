@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2494
 ms.assetid: 5dfd07ab-351d-49c9-b54e-f0a104776ab8
-ms.openlocfilehash: e46eff4ec2b1afdb309b3c4db89c9283e2fc8971
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e337e5b54706c1ae9d566131c98fd178c523f87e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216176"
 ---
 # <a name="compiler-error-c2494"></a>編譯器錯誤 C2494
 
-無法從篩選運算式或 __finally/finally 區塊中呼叫 ' 關鍵字 '
+> 無法從篩選運算式或 __finally/finally 區塊中呼叫 '*關鍵字*'
 
-您不能在 `__finally` 或 finally 區塊中使用 `keyword`。
+您不能在或區塊中使用*關鍵字* **`__finally`** **`finally`** 。
 
 下列範例會產生 C2494：
 

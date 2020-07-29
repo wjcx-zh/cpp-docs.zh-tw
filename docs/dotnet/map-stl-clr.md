@@ -99,26 +99,26 @@ helpviewer_keywords:
 - operator> (map) member [STL/CLR]
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-ms.openlocfilehash: 19b450e256a428769ca6588227e9249e4e21f51d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cd06942d3795dda9e6c6aaa8794957018fa96ace
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208542"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216371"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
-此樣板類別所描述的物件可控制具有雙向存取之元素的變動長度序列。 您可以使用容器 `map` 來管理一連串的專案，做為節點的（幾乎）平衡的已排序樹狀結構，每個專案都儲存一個專案。 元素是由索引鍵所組成，用於排序序列，而對應的值則是用於的方向。
+此樣板類別所描述的物件可控制具有雙向存取之元素的變動長度序列。 您可以使用容器 `map` 來管理一連串的專案，當做節點的（幾乎）平衡的已排序樹狀結構，每個專案都儲存一個元素。 元素是由索引鍵所組成，用於排序序列，而對應的值則是用於的方向。
 
-在下面的描述中，`GValue` 與相同：
+在下面的描述中，與 `GValue` 相同：
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
 其中：
 
-`GKey` 與索引*鍵*相同，除非後者是 ref 類型，在此情況下，它是 `Key^`
+`GKey`與索引*鍵*相同，除非後者是 ref 類型，在此情況下為`Key^`
 
-`GMapped` 與*對應*相同，除非後者是 ref 類型，在這種情況下，它是 `Mapped^`
+`GMapped`與*對應*相同，除非後者是 ref 類型，在此情況下為`Mapped^`
 
 ## <a name="syntax"></a>語法
 
@@ -143,18 +143,18 @@ template<typename Key,
 *索引鍵*<br/>
 受控制序列中項目的主要元件型別。
 
-*映射*<br/>
+*Mapped*<br/>
 受控制序列中元素的其他元件類型。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<cliext/map >
+**標頭：**\<cliext/map>
 
 **命名空間：** cliext
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|描述|
+|類型定義|說明|
 |---------------------|-----------------|
 |[map::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|
 |[map::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
@@ -172,9 +172,9 @@ template<typename Key,
 |[map::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|
 |[map::size_type (STL/CLR)](#size_type)|兩個元素之間的（非負）距離類型。|
 |[map::value_compare (STL/CLR)](#value_compare)|兩個元素值的排序委派。|
-|[map::value_type (STL/CLR)](#value_type)|元素類型。|
+|[map::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |---------------------|-----------------|
 |[map::begin (STL/CLR)](#begin)|指定受控制序列的開頭。|
 |[map::clear (STL/CLR)](#clear)|移除所有項目。|
@@ -197,16 +197,16 @@ template<typename Key,
 |[map::upper_bound (STL/CLR)](#upper_bound)|尋找符合指定之索引鍵的結束範圍。|
 |[map::value_comp (STL/CLR)](#value_comp)|複製兩個元素值的順序委派。|
 
-|運算子|描述|
+|運算子|說明|
 |--------------|-----------------|
 |[map::operator= (STL/CLR)](#op_as)|取代受控制的序列。|
 |[map::operator (STL/CLR)](#op)|將索引鍵對應至其相關聯的對應值。|
-|[operator!= (map) (STL/CLR)](#op_neq)|判斷 `map` 物件是否不等於另一個 `map` 物件。|
-|[operator< (map) (STL/CLR)](#op_lt)|判斷 `map` 物件是否小於另一個 `map` 物件。|
+|[operator！ = （map）（STL/CLR）](#op_neq)|判斷物件是否 `map` 不等於另一個 `map` 物件。|
+|[operator< （map）（STL/CLR）](#op_lt)|判斷 `map` 物件是否小於另一個 `map` 物件。|
 |[operator<= (map) (STL/CLR)](#op_lteq)|判斷 `map` 物件是否小於或等於另一個 `map` 物件。|
-|[operator== (map) (STL/CLR)](#op_eq)|判斷 `map` 物件是否等於另一個 `map` 物件。|
-|[operator> (map) (STL/CLR)](#op_gt)|判斷 `map` 物件是否大於另一個 `map` 物件。|
-|[operator>= (map) (STL/CLR)](#op_gteq)|判斷 `map` 物件是否大於或等於另一個 `map` 物件。|
+|[operator = = （map）（STL/CLR）](#op_eq)|判斷 `map` 物件是否等於另一個 `map` 物件。|
+|[operator> （map）（STL/CLR）](#op_gt)|判斷 `map` 物件是否大於另一個 `map` 物件。|
+|[operator>= （map）（STL/CLR）](#op_gteq)|判斷 `map` 物件是否大於或等於另一個 `map` 物件。|
 
 ## <a name="interfaces"></a>介面
 
@@ -218,33 +218,33 @@ template<typename Key,
 |<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的專案進行序列。|
 |<xref:System.Collections.Generic.ICollection%601>|維護具類型的元素群組。|
 |<xref:System.Collections.Generic.IDictionary%602>|維護 {key，value} 組的群組。|
-|ITree < 金鑰，值 >|維護一般容器。|
+|ITree<金鑰，值>|維護一般容器。|
 
 ## <a name="remarks"></a>備註
 
 物件會為其所控制的序列配置並釋出儲存體，以作為個別節點。 它會將專案插入（幾乎）平衡的樹狀結構中，藉由改變節點間的連結來保持排序，而不是將某個節點的內容複寫到另一個節點。 這表示您可以自由地插入和移除專案，而不會干擾其餘元素。
 
-物件會藉由呼叫[map：： key_compare （STL/CLR）](../dotnet/map-key-compare-stl-clr.md)類型的預存委派物件，排序它所控制的序列。 當您建立對應時，可以指定預存的委派物件。如果您沒有指定委派物件，預設值就是比較 `operator<(key_type, key_type)`。 您可以藉由呼叫成員函式[map：： key_comp （STL/CLR）](../dotnet/map-key-comp-stl-clr.md)`()`來存取這個儲存的物件。
+物件會藉由呼叫[map：： key_compare （STL/CLR）](../dotnet/map-key-compare-stl-clr.md)類型的預存委派物件，排序它所控制的序列。 當您建立對應時，可以指定預存的委派物件。如果您沒有指定委派物件，預設值就是比較 `operator<(key_type, key_type)` 。 您可以藉由呼叫成員函式[map：： key_comp （STL/CLR）](../dotnet/map-key-comp-stl-clr.md)來存取這個儲存的物件 `()` 。
 
-這類委派物件必須對[map：： key_type （STL/CLR）](../dotnet/map-key-type-stl-clr.md)類型的索引鍵強制執行嚴格弱式排序。 這表示 `X` 和 `Y`兩個金鑰：
+這類委派物件必須對[map：： key_type （STL/CLR）](../dotnet/map-key-type-stl-clr.md)類型的索引鍵強制執行嚴格弱式排序。 這表示，對於任何兩個索引鍵 `X` 和 `Y` ：
 
-`key_comp()(X, Y)` 會在每次呼叫時傳回相同的布林值結果。
+`key_comp()(X, Y)`會在每次呼叫時傳回相同的布林值結果。
 
 如果 `key_comp()(X, Y)` 為 true，則 `key_comp()(Y, X)` 必須為 false。
 
-如果 `key_comp()(X, Y)` 為 true，則 `X` 會在 `Y`之前被視為已排序。
+如果 `key_comp()(X, Y)` 為 true，則 `X` 表示在之前排序過 `Y` 。
 
 如果 `!key_comp()(X, Y) && !key_comp()(Y, X)` 為 true，則 `X` 和 `Y` 會被視為具有對等的順序。
 
-針對在受控制序列中 `Y` 之前的任何元素 `X`，`key_comp()(Y, X)` 為 false。 （對於預設委派物件，索引鍵永遠不會減少值）。不同于樣板類別[對應](../dotnet/map-stl-clr.md)，樣板類別的物件 `map` 不需要所有元素的索引鍵都是唯一的。 （兩個或多個索引鍵可以具有對等的順序）。
+針對位於 `X` `Y` 受控制序列中的任何專案， `key_comp()(Y, X)` 為 false。 （對於預設委派物件，索引鍵永遠不會減少值）。不同于樣板類別[對應](../dotnet/map-stl-clr.md)，樣板類別的物件 `map` 不需要所有元素的索引鍵都是唯一的。 （兩個或多個索引鍵可以具有對等的順序）。
 
 每個元素都包含個別的索引鍵和對應的值。 序列的表示方式，允許查閱、插入和移除具有數個作業的任意專案，並與序列中專案數的對數成正比（對數時間）。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
 
-對應支援雙向反覆運算器，這表示您可以逐步執行連續的專案，方法是指定以受控制序列中的元素。 特殊的前端節點對應至[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)`()`所傳回的反覆運算器。 您可以遞減這個反覆運算器，使其到達受控制序列中的最後一個元素（如果有的話）。 您可以遞增對應反覆運算器來到達前端節點，然後再比較是否等於 `end()`。 但是，您無法對 `end()`所傳回的反覆運算器進行取值。
+對應支援雙向反覆運算器，這表示您可以逐步執行連續的專案，方法是指定以受控制序列中的元素。 特殊的前端節點對應至[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)傳回的反覆運算器 `()` 。 您可以遞減這個反覆運算器，使其到達受控制序列中的最後一個元素（如果有的話）。 您可以遞增對應反覆運算器來到達前端節點，然後再比較是否等於 `end()` 。 但是，您無法對所傳回的反覆運算器進行取值 `end()` 。
 
 請注意，您無法直接參考其數值位置（需要隨機存取反覆運算器）的對應元素。
 
-對應反覆運算器會儲存其相關聯對應節點的控制碼，然後再將控制碼儲存至其相關聯的容器。 您只能將反覆運算器與相關聯的容器物件搭配使用。 對應反覆運算器會保持有效，只要其相關聯的對應節點與某個對應相關聯。 此外，有效的反覆運算器也是 dereferencable--您可以使用它來存取或更改所指定的元素值，只要它不等於 `end()`。
+對應反覆運算器會儲存其相關聯對應節點的控制碼，然後再將控制碼儲存至其相關聯的容器。 您只能將反覆運算器與相關聯的容器物件搭配使用。 對應反覆運算器會保持有效，只要其相關聯的對應節點與某個對應相關聯。 此外，有效的反覆運算器也是 dereferencable--您可以使用它來存取或更改其指定的元素值，只要它不等於即可 `end()` 。
 
 清除或移除元素會呼叫其預存值的析構函式。 終結容器會清除所有元素。 因此，其元素類型為 ref 類別的容器，可確保沒有任何元素 outlive 容器。 不過要注意的是，控制碼容器並*不*會摧毀其元素。
 
@@ -313,7 +313,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-成員函式會有效地呼叫[map：： erase （stl/clr）](../dotnet/map-erase-stl-clr.md)`(` [map：： begin （stl/clr）](../dotnet/map-begin-stl-clr.md)`(),` [MAP：： end （stl/clr）](../dotnet/map-end-stl-clr.md)`())`。 您可以使用它來確保受控制的序列是空的。
+成員函式會有效地呼叫[map：： erase （stl/clr）](../dotnet/map-erase-stl-clr.md) `(` [map：： begin （stl/clr）](../dotnet/map-begin-stl-clr.md) `(),` [map：： end （stl/clr）](../dotnet/map-end-stl-clr.md) `())` 。 您可以使用它來確保受控制的序列是空的。
 
 ### <a name="example"></a>範例
 
@@ -371,7 +371,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T2` 的物件，可做為受控制序列的常數雙向反覆運算器。
+此類型描述未指定類型的物件 `T2` ，可做為受控制序列的常數雙向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -458,7 +458,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T4` 的物件，可做為受控制序列的常數反向反覆運算器。
+此類型描述未指定類型的物件 `T4` ，可做為受控制序列的常數反向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -608,7 +608,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[map：： size （STL/CLR）](../dotnet/map-size-stl-clr.md)`() == 0`。 您可以使用它來測試對應是否為空的。
+成員函式會對空的受控制序列傳回 true。 它相當於[map：： size （STL/CLR）](../dotnet/map-size-stl-clr.md) `() == 0` 。 您可以使用它來測試對應是否為空的。
 
 ### <a name="example"></a>範例
 
@@ -712,7 +712,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回一對反覆運算器，`cliext::pair<iterator, iterator>(` [map：： lower_bound （stl/clr）](../dotnet/map-lower-bound-stl-clr.md)`(key),` [map：： upper_bound （stl/clr）](../dotnet/map-upper-bound-stl-clr.md)`(key))`。 您可以使用它來判斷目前在受控制序列中符合指定索引鍵的元素範圍。
+此成員函式會傳回一對反覆運算器 `cliext::pair<iterator, iterator>(` [map：： lower_bound （stl/clr）](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map：： upper_bound （stl/clr）](../dotnet/map-upper-bound-stl-clr.md) `(key))` 。 您可以使用它來判斷目前在受控制序列中符合指定索引鍵的元素範圍。
 
 ### <a name="example"></a>範例
 
@@ -784,9 +784,9 @@ bool erase(key_type key)
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會移除所指向之受控制序列的*專案，並*傳回反覆運算器，指定移除的元素之後剩餘的第一個專案，如果沒有這類元素，則會傳回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)`()`。 您可以使用它來移除單一元素。
+第一個成員函式會移除所指向之受控制序列的*專案，並*傳回反覆運算器，指定移除的專案之後剩餘的第一個元素，如果沒有這類元素，則傳回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md) `()` 。 您可以使用它來移除單一元素。
 
-第二個成員函式會移除範圍 [`first`，`last`）中受控制序列的專案，並傳回反覆運算器，指定移除任何元素之後剩餘的第一個元素，或如果沒有這類元素，則 `end()`。 您可以使用它來移除零個或多個連續元素。
+第二個成員函式會移除範圍 [，）中受控制序列的專案 `first` `last` ，並傳回反覆運算器，指定移除任何元素之後剩餘的第一個元素，或 `end()` 如果沒有這類元素存在，則為。 您可以使用它來移除零個或多個連續元素。
 
 第三個成員函式會移除受控制序列中的任何專案，其索引鍵對索引鍵具有對等的*順序，並*傳回已移除的元素數計數。 您可以使用它來移除和計算符合指定索引鍵的所有元素。
 
@@ -866,7 +866,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>備註
 
-如果受控制序列中至少有一個專案具有對*等的順序，則*成員函式會傳回指定其中一個元素的反覆運算器;否則，它會傳回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)`()`。 您可以使用它來找出目前在受控制序列中且符合指定索引鍵的元素。
+如果受控制序列中至少有一個專案具有對*等的順序，則*成員函式會傳回指定其中一個元素的反覆運算器;否則，它會傳回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md) `()` 。 您可以使用它來找出目前在受控制序列中且符合指定索引鍵的元素。
 
 ### <a name="example"></a>範例
 
@@ -1097,7 +1097,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型為 `GValue` 的物件，描述要與這個樣板容器類別的泛型介面搭配使用的預存專案值。
+此類型描述類型的物件 `GValue` ，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。
 
 ### <a name="example"></a>範例
 
@@ -1161,10 +1161,10 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 要插入的範圍結尾。
 
-*right*<br/>
+*再*<br/>
 要插入的列舉。
 
-*val*<br/>
+*初始值*<br/>
 要插入的機碼值。
 
 *where*<br/>
@@ -1174,11 +1174,11 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 每個成員函式都會插入由其餘運算元所指定的序列。
 
-第一個成員函式會致力於插入具有值*val*的元素，並傳回 `X`的一組值。 如果 `X.second` 為 true，`X.first` 會指定新插入的元素;否則 `X.first` 會指定具有對等順序且已存在且不會插入新元素的專案。 您可以使用它來插入單一元素。
+第一個成員函式會致力於插入具有值*val*的元素，並傳回一組值 `X` 。 如果 `X.second` 為 true，會 `X.first` 指定新插入的專案，否則 `X.first` 會指定具有對等順序且已存在的專案，而且不會插入任何新元素。 您可以使用它來插入單一元素。
 
 第二個成員函式會插入具有值*val*的元素，並使用*where*做為提示（以改善效能），並傳回反覆運算器，指定新插入的專案。 您可以使用它來插入單一專案，這可能會與您知道的元素相鄰。
 
-第三個成員函式會插入序列 [`first`，`last`）。 您可以使用它來插入從另一個序列複製的零個或多個元素。
+第三個成員函式會插入序列 [ `first` ， `last` ）。 您可以使用它來插入從另一個序列複製的零個或多個元素。
 
 第四個成員函式會插入*右邊*指定的序列。 您可以使用它來插入列舉值所描述的序列。
 
@@ -1271,7 +1271,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型 `T1` 的物件，可做為受控制序列的雙向反覆運算器。
+此類型描述未指定類型的物件 `T1` ，可做為受控制序列的雙向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1482,7 +1482,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-成員函式會判斷在受控制序列中 `X` 的第一個元素，其順序與索引*鍵*相等。 如果沒有這類元素存在，則會傳回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)`()`;否則，它會傳回指定 `X`的反覆運算器。 您可以使用它來尋找目前在受控制序列中符合指定索引鍵之專案序列的開頭。
+成員函式 `X` 會判斷受控制序列中具有對索引*鍵*之對等順序的第一個元素。 如果沒有這類元素存在，則會傳回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)， `()` 否則會傳回指定的反覆運算器 `X` 。 您可以使用它來尋找目前在受控制序列中符合指定索引鍵之專案序列的開頭。
 
 ### <a name="example"></a>範例
 
@@ -1544,7 +1544,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 `value_type` 物件，其索引鍵是*key* ，而其對應的值是*對應*的。 您可以使用它來撰寫適合搭配數個其他成員函式使用的物件。
+此成員函式 `value_type` 會傳回物件，其索引鍵是*key* ，而其對應的值是*對應*的。 您可以使用它來撰寫適合搭配數個其他成員函式使用的物件。
 
 ### <a name="example"></a>範例
 
@@ -1605,7 +1605,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 *pred*<br/>
 受控制序列的順序述詞。
 
-*right*<br/>
+*再*<br/>
 要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
@@ -1614,7 +1614,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `map();`
 
-使用 `key_compare()`的預設排序述詞，初始化不含任何專案的受控制序列。 您可以使用它來指定空的初始受控制序列，並使用預設的順序述詞。
+使用預設排序述詞，初始化沒有任何專案的受控制序列 `key_compare()` 。 您可以使用它來指定空的初始受控制序列，並使用預設的順序述詞。
 
 此構造函式：
 
@@ -1626,25 +1626,25 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `map(map<Key, Mapped>% right);`
 
-使用順序 [`right.begin()`，`right.end()`），以預設的排序述詞，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 map 物件*許可權*所控制之序列的複本，並具有預設排序述詞。
+使用順序 [，）初始化受控制的序列 `right.begin()` `right.end()` ，並搭配預設的排序述詞。 您可以使用它來指定初始受控制序列，這是由 map 物件*許可權*所控制之序列的複本，並具有預設排序述詞。
 
 此構造函式：
 
 `map(map<Key, Mapped>^ right);`
 
-使用順序 [`right->begin()`，`right->end()`），以預設的排序述詞，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 map 物件*許可權*所控制之序列的複本，並具有預設排序述詞。
+使用順序 [，）初始化受控制的序列 `right->begin()` `right->end()` ，並搭配預設的排序述詞。 您可以使用它來指定初始受控制序列，這是由 map 物件*許可權*所控制之序列的複本，並具有預設排序述詞。
 
 此構造函式：
 
 `template<typename InIter> map(InIter first, InIter last);`
 
-使用順序 [`first`，`last`），以預設的排序述詞，初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本，並使用預設的順序述詞。
+使用順序 [，）初始化受控制的序列 `first` `last` ，並搭配預設的排序述詞。 您可以使用它，讓受控制的序列成為另一個序列的複本，並使用預設的順序述詞。
 
 此構造函式：
 
 `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`
 
-使用順序述詞*pred*，以序列 [`first`，`last`）初始化受控制的序列。 您可以使用它，讓受控制的序列成為另一個序列的複本，並指定順序述詞。
+使用順序述詞 pred，初始化具有序列 [，）的受控制序列 `first` `last` 。 *pred* 您可以使用它，讓受控制的序列成為另一個序列的複本，並指定順序述詞。
 
 此構造函式：
 
@@ -1803,12 +1803,12 @@ map<Key, Mapped>% operator=(map<Key, Mapped>% right);
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要複製的容器。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -2116,7 +2116,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[map：： empty （STL/CLR）](../dotnet/map-empty-stl-clr.md)`()`。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[map：： empty （STL/CLR）](../dotnet/map-empty-stl-clr.md) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -2216,12 +2216,12 @@ void swap(map<Key, Mapped>% right);
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要交換內容的容器。
 
 ### <a name="remarks"></a>備註
 
-成員函式會在 `this` 和*右方*之間交換受控制的序列。 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
+成員函式會在和 right 之間交換受控制的序列 **`this`** 。 *right* 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
 
 ### <a name="example"></a>範例
 
@@ -2339,7 +2339,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-成員函式會判斷在受控制序列中 `X` 的最後一個專案，其順序與索引*鍵*相等。 如果沒有這類元素存在，或 `X` 是受控制序列中的最後一個元素，則會傳回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)`()`;否則，它會傳回反覆運算器，指定 `X`之外的第一個元素。 您可以使用它來找出目前在受控制序列中符合指定索引鍵之專案序列的結尾。
+成員函式 `X` 會判斷受控制序列中，具有對索引*鍵*之對等順序的最後一個元素。 如果沒有這類元素存在，或如果 `X` 是受控制序列中的最後一個專案，則會傳回[map：： END （STL/CLR）](../dotnet/map-end-stl-clr.md)， `()` 否則會傳回反覆運算器，指定超出的第一個元素 `X` 。 您可以使用它來找出目前在受控制序列中符合指定索引鍵之專案序列的結尾。
 
 ### <a name="example"></a>範例
 
@@ -2478,7 +2478,7 @@ compare([L'b', 2], [L'a', 1]) = False
 
 ## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a>map：： value_type （STL/CLR）
 
-元素類型。
+項目的類型。
 
 ### <a name="syntax"></a>語法
 
@@ -2488,7 +2488,7 @@ typedef generic_value value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `generic_value`的同義字。
+這個類型與 `generic_value`同義。
 
 ### <a name="example"></a>範例
 
@@ -2535,15 +2535,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(left == right)`。 當兩個對應是以元素進行比較時，您可以使用它來測試*左側*是否與*右邊*的順序相同。
+運算子函式會傳回 `!(left == right)` 。 當兩個對應是以元素進行比較時，您可以使用它來測試*左側*是否與*右邊*的順序相同。
 
 ### <a name="example"></a>範例
 
@@ -2591,7 +2591,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>operator&lt; （map）（STL/CLR）
+## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>operator &lt; （map）（STL/CLR）
 
 清單小於比較。
 
@@ -2606,15 +2606,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-如果 `i` 的最低位置 `!(right[i] < left[i])` 也是 `left[i] < right[i]`，則運算子函數會傳回 true。 否則，它會傳回 `left->size() < right->size()` 您用它來測試當兩個對應是以元素進行比較時 *，是否要*在*右邊*排序。
+如果的最低位置也為 true，則運算子函數 `i` 會傳回 true `!(right[i] < left[i])` `left[i] < right[i]` 。 否則，它會傳回 `left->size() < right->size()` 您用它來測試當兩個對應*right*是以元素進行比較時，*左側*是否已排序。
 
 ### <a name="example"></a>範例
 
@@ -2662,7 +2662,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>operator&lt;= （map）（STL/CLR）
+## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>operator &lt; = （map）（STL/CLR）
 
 列出小於或等於比較。
 
@@ -2677,15 +2677,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(right < left)`。 當兩個對應是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
+運算子函式會傳回 `!(right < left)` 。 當兩個對應是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
 
 ### <a name="example"></a>範例
 
@@ -2748,15 +2748,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-只有當*left*和*right*控制的序列具有相同的長度，且每個位置 `i``left[i] ==` `right[i]`時，運算子函數才會傳回 true。 您可以使用它來測試當兩個對應是以元素進行比較時，*左側*是否與*右*排序相同。
+只有當*left*和*right*所控制的序列具有相同的長度，且每個位置都有相同的時，運算子函數才會傳回 true `i` `left[i] ==` `right[i]` 。 您可以使用它來測試當兩個對應是以元素進行比較時，*左側*是否與*右*排序相同。
 
 ### <a name="example"></a>範例
 
@@ -2804,7 +2804,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>operator&gt; （map）（STL/CLR）
+## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>operator &gt; （map）（STL/CLR）
 
 清單大於比較。
 
@@ -2819,15 +2819,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `right` `<` `left`。 您可以使用它來測試當兩個對應是以元素進行比較時 *，是否要*在*右*向後排序。
+運算子函式會傳回 `right` `<` `left` 。 您可以使用它來測試當兩個對應是以元素進行比較時 *，是否要*在*右*向後排序。
 
 ### <a name="example"></a>範例
 
@@ -2875,7 +2875,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>operator&gt;= （map）（STL/CLR）
+## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>operator &gt; = （map）（STL/CLR）
 
 列出大於或等於比較。
 
@@ -2890,15 +2890,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*<br/>
 要比較的左容器。
 
-*right*<br/>
+*再*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-Operator 函數會傳回 `!(left` `<` `right)`。 當兩個對應是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
+運算子函式會傳回 `!(left` `<` `right)` 。 當兩個對應是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
 
 ### <a name="example"></a>範例
 

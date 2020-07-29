@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404713"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215877"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 C++ AMP 應用程式
 
@@ -215,7 +215,7 @@ ms.locfileid: "86404713"
 
 ## <a name="debugging-the-cpu-code"></a>對 CPU 程式碼進行偵錯工具
 
-在此程式中，您將使用本機 Windows 偵錯工具來確保此應用程式中的 CPU 代碼正確。 此應用程式中的 CPU 代碼區段特別有趣，是函式 `for` 中的迴圈 `reduction_sum_gpu_kernel` 。 它會控制在 GPU 上執行的樹狀結構平行縮減。
+在此程式中，您將使用本機 Windows 偵錯工具來確保此應用程式中的 CPU 代碼正確。 此應用程式中的 CPU 代碼區段特別有趣，是函式 **`for`** 中的迴圈 `reduction_sum_gpu_kernel` 。 它會控制在 GPU 上執行的樹狀結構平行縮減。
 
 ### <a name="to-debug-the-cpu-code"></a>若要對 CPU 程式碼進行偵錯工具
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172356"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216020"
 ---
 # <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
 
@@ -41,9 +41,9 @@ class-body
 (選擇性) 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
 
 *class-key*<br/>
-**class** 或 **typename**
+**`class`** 或**`typename`**
 
-*type-parameter-identifier(s)* ，指定型別參數名稱的識別碼 (以逗號區隔) 清單。
+*type-parameter-identifier(s)*，指定型別參數名稱的識別碼 (以逗號區隔) 清單。
 
 *constraint-clauses*<br/>
 指定型別參數條件約束的 **where** 子句 (不以逗號區隔) 清單。 採用以下格式：
@@ -51,15 +51,15 @@ class-body
 > **其中，** *類型參數識別碼* **：** *條件約束清單*  **...**
 
 *constraint-list*<br/>
-*類別或介面*[`,` *...* ]
+*類別或介面*[ `,` *...*]
 
 *accessibility-modifiers*<br/>
-泛型類別的存取範圍修飾詞。 Windows 執行階段唯一允許的修飾詞為 **private**。 Common Language Runtime 允許的修飾詞為 **private** 和 **public**。
+泛型類別的存取範圍修飾詞。 針對 Windows 執行階段，唯一允許的修飾詞是 **`private`** 。 若是 common language runtime，允許的修飾詞為 **`private`** 和 **`public`** 。
 
-*identifier*<br/>
+*標識*<br/>
 泛型類別名稱，可以是任何有效的 C++ 識別碼。
 
-*modifiers*<br/>
+*修改*<br/>
 (選擇性) 允許的修飾詞包括 **sealed** 和 **abstract**。
 
 *base-list*<br/>
@@ -69,9 +69,9 @@ class-body
 包含欄位、成員函式等項目的類別主體。
 
 *declarators*<br/>
-此型別任何變數的宣告。 例如：`^`*identifier*[`,` ...]
+此型別任何變數的宣告。 例如： `^` *identifier*[ `,` ...]
 
-您可以宣告這類的泛型類別 (請注意，可使用關鍵字 **class**，不要使用 **typename**)。 在這個範例中，`ItemType`、`KeyType` 和 `ValueType` 是於型別所在點指定的未知型別。 `HashTable<int, int>` 為泛型型別 `HashTable<KeyType, ValueType>` 的建構型別。 您可以自單一泛型型別建構幾個不同的建構型別。 系統會以和任何其他 ref 類別型別相同的方式，處理建構自泛型類別的建構型別。
+您可以宣告泛型類別（例如這些）（請注意，關鍵字 **`class`** 可以用來取代 **`typename`** ）。 在這個範例中，`ItemType`、`KeyType` 和 `ValueType` 是於型別所在點指定的未知型別。 `HashTable<int, int>` 為泛型型別 `HashTable<KeyType, ValueType>` 的建構型別。 您可以自單一泛型型別建構幾個不同的建構型別。 系統會以和任何其他 ref 類別型別相同的方式，處理建構自泛型類別的建構型別。
 
 ```cpp
 // generic_classes_1.cpp
@@ -95,9 +95,9 @@ int main() {
 }
 ```
 
-實值型別 (可以是像 **int** 或 **double** 這樣的內建型別，或使用者定義的實值型別) 和參考型別可作為泛型型別引數使用。 無論如何，泛型定義內的語法都是一樣的。 在語法上，未知型別會被視為參考型別。 但執行階段也會判斷實際使用的型別是否為實值型別，並取代適當產生的程式碼以直接存取成員。 作為泛型型別引數使用的實值型別不會進行 boxing 處理，因此不會發生因進行該處理而對效能造成負面影響的問題。 泛型主體內使用的語法應為 `T^` 和`->`，而不是 `.`。 如果型別引數為實值型別，針對型別參數使用的任何 [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)，都將由執行階段適當地解譯為簡單的實值型別建立作業。
+這兩個實數值型別（內建類型（例如 **`int`** 或） **`double`** 或使用者定義數值型別）和參考型別都可以當做泛型型別引數使用。 無論如何，泛型定義內的語法都是一樣的。 在語法上，未知型別會被視為參考型別。 但執行階段也會判斷實際使用的型別是否為實值型別，並取代適當產生的程式碼以直接存取成員。 作為泛型型別引數使用的實值型別不會進行 boxing 處理，因此不會發生因進行該處理而對效能造成負面影響的問題。 泛型主體內使用的語法應為 `T^` 和`->`，而不是 `.`。 如果型別引數為實值型別，針對型別參數使用的任何 [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)，都將由執行階段適當地解譯為簡單的實值型別建立作業。
 
-您也可以在可用於型別參數的型別上，宣告包含[泛型型別參數的條件約束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)的泛型類別。 在以下範例中，所有用於 `ItemType` 的型別都必須實作 `IItem` 介面。 例如嘗試使用 **int**，這不會實作 `IItem`，而是會產生編譯時間錯誤，因為型別引數不符合條件約束。
+您也可以在可用於型別參數的型別上，宣告包含[泛型型別參數的條件約束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)的泛型類別。 在以下範例中，所有用於 `ItemType` 的型別都必須實作 `IItem` 介面。 例如，嘗試使用不會執行的， **`int`** `IItem` 將會產生編譯時期錯誤，因為類型引數不符合條件約束。
 
 ```cpp
 // generic_classes_2.cpp
@@ -159,7 +159,7 @@ ref class MyClass : IInterface<ItemType> {};
 
 ## <a name="example"></a>範例
 
-在以下範例中，會使用適當的型別引數 (\<int **、** double**和**string **) 來建立泛型類別 MyClass**ItemType > 的三個不同執行個體。
+在下列範例中， \<ItemType> 會使用適當的型別引數（ **`int`** 、 **`double`** 和**字串**）來建立泛型類別 MyClass 的三個不同實例。
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -284,7 +284,7 @@ Test1
 
 ## <a name="example"></a>範例
 
-以下範例會在泛型類別 `ProtectData` 內部，宣告非泛型方法 `MyClass<ItemType>`。 此方法會以開放式建構型別方式，在其簽章中使用類別型別參數 `ItemType`。
+以下範例會在泛型類別 `MyClass<ItemType>` 內部，宣告非泛型方法 `ProtectData`。 此方法會以開放式建構型別方式，在其簽章中使用類別型別參數 `ItemType`。
 
 ```cpp
 // generics_non_generic_methods1.cpp
@@ -665,7 +665,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-以下範例會宣告泛型結構 `MyGenStruct`，其中包含一個欄位 `myField`，並將不同型別 (**int**、**double** 和 `String^`) 的值指派給此欄位。
+下列範例會宣告泛型結構（ `MyGenStruct` 具有一個欄位）， `myField` 並將不同類型（ **`int`** 、、）的值指派 **`double`** `String^` 給這個欄位。
 
 ```cpp
 // generics_generic_struct1.cpp

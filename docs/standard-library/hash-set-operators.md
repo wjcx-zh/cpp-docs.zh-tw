@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 5830c9e459c0d778e85c5ab5900d39c3190df178
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1769519d3bc92f329c347f083e64ba1f35a719db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368576"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212302"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;hash_set&gt; 運算子
 
 ||||
 |-|-|-|
-|[操作員!](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[運算子*](#op_eq_eq)|
-|[運算子* (hash_multiset)](#op_eq_eq_hash_multiset)|
+|[operator！ =](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator = =](#op_eq_eq)|
+|[operator = = （hash_multiset）](#op_eq_eq_hash_multiset)|
 
-## <a name="operator"></a><a name="op_neq"></a>操作員!
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
@@ -32,21 +32,21 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_set` 類型的物件。
 
-*對*\
+*再*\
 `hash_set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 hash_set 不相等，便會傳回 **true**；如果 hash_set 相等，則會傳回 **false**。
+**`true`** 如果 hash_sets 不相等，則為，**`false`** 如果 hash_sets 相等則為。
 
 ### <a name="remarks"></a>備註
 
 hash_set 物件之間的比較是以其元素之間的成對比較為基礎。 兩個 hash_set 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。
 
-[<的成员hash_map>](../standard-library/hash-map.md)和[<hash_set>](../standard-library/hash-set.md)頭檔都在[stdext命名空間](../standard-library/stdext-namespace.md)中。
+[<hash_map>](../standard-library/hash-map.md)和[<hash_set](../standard-library/hash-set.md)標頭檔的成員位於[stdext 命名空間](../standard-library/stdext-namespace.md)中。
 
 ### <a name="example"></a>範例
 
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
@@ -100,15 +100,15 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_set` 類型的物件。
 
-*對*\
+*再*\
 `hash_set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 hash_set 等於運算子右邊的 hash_set，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 hash_set 等於運算子右邊的 hash_set，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>操作員!* (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operator！ = （hash_multiset）
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
@@ -166,15 +166,15 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_multiset` 類型的物件。
 
-*對*\
+*再*\
 `hash_multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 hash_multiset 不相等，便會傳回 **true**；如果 hash_multiset 相等，則會傳回 **false**。
+**`true`** 如果 hash_multisets 不相等，則為，**`false`** 如果 hash_multisets 相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>運算子* (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>operator = = （hash_multiset）
 
 > [!NOTE]
 > 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
@@ -232,15 +232,15 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-*離開*\
+*左面*\
 `hash_multiset` 類型的物件。
 
-*對*\
+*再*\
 `hash_multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的 hash_multiset 等於運算子右邊的 hash_multiset，便會傳回 **true**；否則會傳回 **false**。
+**`true`** 如果運算子左邊的 hash_multiset 等於運算子右邊的 hash_multiset，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 

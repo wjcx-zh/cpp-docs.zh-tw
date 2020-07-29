@@ -1,23 +1,23 @@
 ---
-title: 如何：在 C++/CLI 中定義和使用列舉
+title: 作法：在 C++/CLI 中定義和使用列舉
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: cf3bb23069b2692c0ca4ce270a5b8060195becf7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09bb6e9fac30b72c3c4e0682c3d90f2ea9f8760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370179"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216410"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定義和使用列舉
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>作法：在 C++/CLI 中定義和使用列舉
 
-本主題討論C++/CLI中的枚舉。
+本主題討論 c + +/CLI 中的列舉
 
-## <a name="specifying-the-underlying-type-of-an-enum"></a>指定一個枚舉的基礎型態
+## <a name="specifying-the-underlying-type-of-an-enum"></a>指定列舉的基礎類型
 
-預設情況下,枚舉的基礎類型為`int`。  但是,您可以指定要簽署的類型或`int`未簽署的表`short`單`long`、、`__int32``__int64`或 。  您也可以使用 `char`。
+根據預設，列舉的基礎類型是 **`int`** 。  不過，您可以指定要簽署的類型或 **`int`** 、 **`short`** 、 **`long`** 、 **`__int32`** 或的不帶正負號形式 **`__int64`** 。  您也可以使用 **`char`** 。
 
 ```cpp
 // mcppv2_enum_3.cpp
@@ -47,9 +47,9 @@ sun
 2
 ```
 
-## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>如何在託管和標準枚舉之間進行轉換
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>如何在 managed 和標準列舉之間轉換
 
-枚舉和積分類型之間沒有標準轉換;需要強制轉換。
+列舉和整數類資料類型之間沒有標準轉換;需要轉換。
 
 ```cpp
 // mcppv2_enum_4.cpp
@@ -75,24 +75,24 @@ int main() {
 a and day2 are the same
 ```
 
-## <a name="operators-and-enums"></a>運算子和枚舉
+## <a name="operators-and-enums"></a>運算子和列舉
 
-以下運算子在 C++/CLI 中的枚舉中有效:
+下列運算子在 c + +/CLI 的列舉中是有效的：
 
 |運算子|
 |--------------|
-|[ \<  >  \<! ] >*|
+|== != \< >\<= >=|
 |+ -|
-|&#124; [ & ]|
+|&#124; ^ & ~|
 |++ --|
 |sizeof|
 
-運算符&#124; = & = = - 僅定義為具有積分基礎類型的枚舉,不包括 bool。  兩個操作數都必須為枚舉類型。
+運算子 &#124; ^ & ~ + +--僅針對具有整數基礎類型的列舉（不包括 bool）定義。  這兩個運算元都必須是列舉型別。
 
-編譯器不靜態或動態檢查枚舉操作的結果;操作可能會導致值不在枚舉的有效枚舉器範圍內。
+編譯器不會對列舉運算的結果進行靜態或動態檢查;作業可能會導致值不在列舉的有效枚舉器範圍內。
 
 > [!NOTE]
-> C++11 在非託管代碼中引入了枚舉類類型,這些類型與 C++/CLI 中的託管枚舉類明顯不同。 特別是,C++11枚舉類類型不支援與C++/CLI 中的託管枚舉類類型相同的運算符,並且C++/CLI 原始程式碼必須在託管枚舉類聲明中提供輔助功能指定器,以便將它們與非託管 (C++11) 枚舉類聲明區分開來。 有關C++/CLI、C++/CX 和 C++11 中的枚舉類的詳細資訊,請參閱[枚舉類](../extensions/enum-class-cpp-component-extensions.md)。
+> C + + 11 引進了非受控程式碼中的列舉類別類型，這與 c + +/CLI 中的 managed 列舉類別截然不同 特別是 c + + 11 列舉類別類型不支援與 c + +/CLI 中的 managed 列舉類別類型相同的運算子，而 c + +/CLI 原始程式碼必須在 managed enum 類別宣告中提供存取範圍規範，才能區別它們與非受控（c + + 11）列舉類別宣告。 如需 c + +/CLI、c + +/CX 和 c + + 11 中列舉類別的詳細資訊，請參閱[enum 類別](../extensions/enum-class-cpp-component-extensions.md)。
 
 ```cpp
 // mcppv2_enum_5.cpp

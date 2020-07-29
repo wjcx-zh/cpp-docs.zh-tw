@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172278"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195573"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>如何：使用 interior_ptr 關鍵字宣告實值類型 (C++/CLI)
 
@@ -69,9 +69,9 @@ int main() {
 
 ### <a name="description"></a>描述
 
-在實值型別中，**this** 指標會判斷值為 interior_ptr。
+在實數值型別中， **`this`** 指標會評估為 interior_ptr。
 
-在實值型別 `V` 的非靜態成員函式主體中，**this** 是 `interior_ptr<V>` 類型的運算式，其值為函式所呼叫物件的位址。
+在實數值型別的非靜態成員函式主體中 `V` ， **`this`** 是類型的運算式， `interior_ptr<V>` 其值為呼叫函式之物件的位址。
 
 ### <a name="code"></a>程式碼
 

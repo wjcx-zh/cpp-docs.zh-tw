@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326075"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229619"
 ---
 # <a name="initializing-aggregate-types"></a>初始化彙總類型
 
@@ -51,7 +51,7 @@ int x[ ] = { 0, 1, 2 }
 
 **Microsoft 特定的**
 
-陣列的大小上限是由 **size_t** 所定義。 **size_t** 定義在標頭檔 STDDEF.H 中，是一個範圍從 0x00000000 到 0x7CFFFFFF 的 `unsigned int`。
+陣列的大小上限是由 **size_t** 所定義。 在標頭檔 STDDEF.H 中定義。H， **size_t**是 **`unsigned int`** ，範圍為0x00000000 到0x7CFFFFFF。
 
 **結束 Microsoft 專有**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 在這個結構中，第 1 行的第一個左大括號表示 `nlist[0]` 的初始化開始，它是具有三個結構的陣列。 1、2 和 3 這三個值會指派給第一個結構的三個成員。 遇到下一個右大括號時 (在數值 3 之後)，`nlist[0]` 的初始化就會完成，而在三個結構陣列中的其餘兩個結構會自動初始化為 0。 同樣地，`{ 4,5,6 }` 會初始化 `nlist` 中第二列的第一個結構。 `nlist[1]` 的其餘兩個結構會設為 0。 當編譯器遇到下一個初始設定式清單 ( `{ 7,8,9 }` ) 時，會嘗試初始化 `nlist[2]`。 由於 `nlist` 只有兩列，因此這項嘗試會產生錯誤。
 
-在下一個範例中，`int` 的三個 `x` 成員會分別初始化為 1、2 和 3。
+在下一個範例中，的三個 **`int`** 成員 `x` 分別初始化為1、2和3。
 
 ```C
 struct list
@@ -150,6 +150,6 @@ union
 
 這個範例中的等位變數 `y` 會初始化。 等位的第一個項目是陣列，因此初始設定式是彙總初始設定式。 初始設定式清單 `{'1'}` 會將值指派給陣列的第一列。 由於清單中只有一個值，因此第一行中的元素會初始化為 `1` 字元，而根據預設，該列中的其餘兩個元素會初始化為 0 值。 同樣地，`x` 中第二列的第一個元素會初始化為 `4` 字元，該列中的其餘兩個元素則會初始化為 0 值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [初始](../c-language/initialization.md)

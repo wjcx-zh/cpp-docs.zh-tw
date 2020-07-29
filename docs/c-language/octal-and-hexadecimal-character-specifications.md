@@ -5,16 +5,16 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bcd6eb84503b80b1e38be5d134e7506a0f490891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229580"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八進位和十六進位字元規格
 
-順序**\\** <em>ooo 序列</em>表示您可以將 ASCII 字元集中的任何字元指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。
+順序 **\\** <em>ooo 序列</em>表示您可以將 ASCII 字元集中的任何字元指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。
 
 同樣地，**\x**<em>hhh</em> 的序列可讓您將任何 ASCII 字元指定為十六進位字元碼。 例如，您能以一般 C 逸出序列 (**\b**) 指定 ASCII 退格鍵字元，或是將它編碼為 **\010** (八進位) 或 **\x008** (十六進位)。
 
@@ -22,7 +22,7 @@ ms.locfileid: "64343373"
 
 同樣地，您必須至少針對十六進位逸出序列使用一個位數，不過可以省略第二和第三位數。 因此，您可以將退格鍵字元的十六進位逸出序列指定為 **\x8**、**\x08** 或 **\x008**。
 
-針對字元常數，八進位或十六進位逸出序列的值必須位於 **unsigned char** 類型的可顯示值範圍內。針對寬字元常數，該值則必須位於 `wchar_t` 類型的可顯示值範圍內。 如需寬字元常數的相關資訊，請參閱[多位元組字元和寬字元](../c-language/multibyte-and-wide-characters.md)。
+八進位或十六進位逸出序列的值必須在字元常數之類型的可顯示值範圍內 **`unsigned char`** ，以及 **`wchar_t`** 針對寬字元常數的類型。 如需寬字元常數的相關資訊，請參閱[多位元組字元和寬字元](../c-language/multibyte-and-wide-characters.md)。
 
 不同於八進位逸出常數，逸出序列中的十六進位數字沒有數目上的限制。 十六進位逸出序列會在遇到不是十六進位數字的第一個字元時結束。 由於十六進位數字包含字母 **a** 到 **f**，因此請務必確定逸出序列會在預期的數字結束。 為了避免混淆，您可以將八進位或十六進位字元定義放在巨集定義中：
 
@@ -37,6 +37,6 @@ ms.locfileid: "64343373"
 "\xab" "c" /* two characters */
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 字元常數](../c-language/c-character-constants.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8a0674defb0f5e81e0d1417bab5a282cf82b82b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172382"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195690"
 ---
 # <a name="event--ccli-and-ccx"></a>event  (C++/CLI 與 C++/CX)
 
@@ -40,8 +40,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>參數
 
-*modifier*<br/>
-事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為 **static** 和 **virtual**。
+*者*<br/>
+事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為 **`static`** 和 **`virtual`** 。
 
 *delegate*<br/>
 [委派](delegate-cpp-component-extensions.md)，事件處理常式必須符合其簽章。
@@ -50,7 +50,7 @@ modifiereventdelegate^ event_name
 事件的名稱。
 
 *return_value*<br/>
-事件存取子方法的傳回值。  若要可供驗證，傳回型別必須是 **void**。
+事件存取子方法的傳回值。  若要驗證，傳回型別必須是 **`void`** 。
 
 *parameters*<br/>
 (選擇性) `raise` 方法的參數，其符合 *delegate* 參數的簽章。
@@ -104,8 +104,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>參數
 
-*modifier*<br/>
-事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為 **static** 和 **virtual**。
+*者*<br/>
+事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為 **`static`** 和 **`virtual`** 。
 
 *delegate*<br/>
 [委派](delegate-cpp-component-extensions.md)，事件處理常式必須符合其簽章。
@@ -114,7 +114,7 @@ modifiereventdelegate^ event_name
 事件的名稱。
 
 *return_value*<br/>
-事件存取子方法的傳回值。  若要可供驗證，傳回型別必須是 **void**。
+事件存取子方法的傳回值。  若要驗證，傳回型別必須是 **`void`** 。
 
 *parameters*<br/>
 (選擇性) `raise` 方法的參數，其符合 *delegate* 參數的簽章。
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-下列程式碼範例示範用來產生 trivial 事件的 `raise` 方法的邏輯：如果事件都有一個或多個訂閱者，則呼叫 `raise` 方法會隱含或明確地呼叫委派。 如果委派的傳回型別不是 **void**，而且如果有零個事件訂閱者，`raise` 方法會傳回委派類型的預設值。 如果沒有任何事件訂閱者，呼叫 `raise` 方法只會傳回，而且不會引發任何例外狀況。 如果委派傳回型別不是 **void**，則會傳回委派類型。
+下列程式碼範例示範用來產生 trivial 事件的 `raise` 方法的邏輯：如果事件都有一個或多個訂閱者，則呼叫 `raise` 方法會隱含或明確地呼叫委派。 如果委派的傳回型別不是 **`void`** ，而且如果有零個事件訂閱者，方法會傳回 `raise` 委派類型的預設值。 如果沒有任何事件訂閱者，呼叫 `raise` 方法只會傳回，而且不會引發任何例外狀況。 如果委派傳回型別不是 **`void`** ，則會傳回委派型別。
 
 ```cpp
 // trivial_events.cpp
@@ -272,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

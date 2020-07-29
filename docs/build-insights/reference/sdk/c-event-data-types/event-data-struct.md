@@ -1,6 +1,6 @@
 ---
-title: EVENT_DATA結構
-description: C++生成見解 SDK EVENT_DATA結構參考。
+title: EVENT_DATA 結構
+description: C + + Build Insights SDK EVENT_DATA 結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8ce396febe278c5e7c34fe170939c9522913f92a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229918"
 ---
-# <a name="event_data-structure"></a>EVENT_DATA結構
+# <a name="event_data-structure"></a>EVENT_DATA 結構
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio**版本**選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-結構`EVENT_DATA`描述從分析或重新記錄會話接收的事件。 這些工作階段透過呼叫[分析](../functions/analyze.md),[分析A、](../functions/analyze-a.md)[分析W,](../functions/analyze-w.md)[重新紀錄](../functions/relog.md),[重新登入](../functions/relog-a.md)或[RelogW](../functions/relog-w.md)函數開始。
+`EVENT_DATA`結構描述從分析或 relogging 會話接收到的事件。 這些會話會藉由呼叫[分析](../functions/analyze.md)、 [AnalyzeA](../functions/analyze-a.md)、 [AnalyzeW](../functions/analyze-w.md)、重新[發出、](../functions/relog.md) [RelogA](../functions/relog-a.md)或[RelogW](../functions/relog-w.md)函數來啟動。
 
 ## <a name="syntax"></a>語法
 
@@ -60,30 +60,30 @@ typedef struct EVENT_DATA_TAG
 
 |  |  |
 |--|--|
-| `EventId` | 標識事件的數位。 有關事件識別碼的清單,請參閱[EVENT_ID](event-id-enum.md)。 |
-| `EventInstanceId` | 唯一標識跟蹤內當前事件的數位。 多次分析或重新記錄同一跟蹤時,此值不會更改。 使用此欄位可識別多個分析或通過同一跟蹤的重新記錄傳遞中的同一事件。 |
-| `TickFrequency` | 評估以刻度為單位測量的持續時間時每秒使用的刻度數。 |
-| `StartTimestamp` | 當事件為*活動*時,此欄位設置為活動啟動時捕獲的刻度值。 如果此事件是*簡單事件*,則此欄位設置為事件發生時捕獲的刻度值。 |
-| `StopTimestamp` | 當事件為*活動*時,此欄位設置為活動停止時捕獲的刻度值。 如果尚未收到此活動的停止事件,則此欄位設置為零。 如果此事件是*簡單事件*,則此欄位設置為零。 |
-| `ExclusiveDurationTicks` | 如果此事件是*活動*,則此欄位設置為此活動中直接發生的刻度數。 不包括子活動中發生的刻度數。 此欄位設定為 *「簡單事件*」為零。 |
-| `CPUTicks` | 如果此事件是*活動*,則此欄位設置為在此活動期間發生的 CPU 刻度數。 CPU 刻度不同於常規刻度。 僅當 CPU 在活動中執行代碼時,才會計算 CPU 刻度。 當與活動關聯的線程處於睡眠狀態時,不會計算 CPU 刻度。 此欄位設定為 *「簡單事件*」為零。 |
-| `ExclusiveCPUTicks` | 此欄位的含義與`CPUTicks`相同,只不過它不包括子活動中發生的 CPU 刻度。 此欄位設定為 *「簡單事件*」為零。 |
-| `WallClockTimeResponsibilityTicks` | 如果此事件是*活動*,則此欄位設置為表示此活動對總掛鐘時間的貢獻的刻度計數。 掛鐘時間責任刻度不同於常規刻度。 鐘點時間責任滴答聲考慮了活動之間的並行性。 例如,兩個並行活動的持續時間可能為 50 個刻度,並且相同的開始和停止時間相同。 在這種情況下,兩者將被分配 25 個刻度的掛鐘時間責任。 此欄位設定為 *「簡單事件*」為零。 |
-| `ExclusiveWallClockTimeResponsibilityTicks` | 此欄位的含義與`WallClockTimeResponsibilityTicks`相同,只是不包括兒童活動的掛鐘時間責任刻度。 此欄位設定為 *「簡單事件*」為零。 |
-| `Data` | 指向事件中存儲的其他數據。 指向的資料型態因欄位`EventId`而異 。 |
-| `ProcessId` | 事件發生的進程的標識碼。 |
-| `ThreadId` | 發生事件的線程的標識符。 |
-| `ProcessorIndex` | 事件發生的零索引 CPU 編號。 |
-| `EventName` | 包含識別`EventId`的實體名稱的 ANSI 字串。 |
-| `EventWideName` | 包含識別`EventId`的實體名稱的寬字串。 |
+| `EventId` | 識別事件的數位。 如需事件識別碼的清單，請參閱[EVENT_ID](event-id-enum.md)。 |
+| `EventInstanceId` | 可唯一識別追蹤內目前事件的數位。 當分析或 relogging 相同的追蹤多次時，此值不會變更。 使用此欄位來識別多個分析或 relogging 通過相同追蹤的相同事件。 |
+| `TickFrequency` | 評估以刻度測量的持續時間時，每秒所要使用的刻度數。 |
+| `StartTimestamp` | 當事件是*活動*時，此欄位會設定為活動開始時所捕捉到的滴答值。 如果這個事件是*簡單事件*，此欄位會設定為事件發生時所捕捉到的滴答值。 |
+| `StopTimestamp` | 當事件是*活動*時，此欄位會設定為活動停止時所捕捉到的滴答值。 如果尚未收到此活動的停止事件，此欄位會設定為零。 如果這個事件是*簡單事件*，此欄位會設定為零。 |
+| `ExclusiveDurationTicks` | 如果此事件是*活動*，此欄位會設定為直接在此活動中發生的刻度數目。 排除子活動中發生的刻度數目。 對於*簡單事件*，此欄位會設定為零。 |
+| `CPUTicks` | 如果此事件是*活動*，此欄位會設定為在此活動期間發生的 CPU 刻度數目。 CPU 刻度與一般滴答不同。 只有當 CPU 在活動中執行程式碼時，才會計算 CPU 刻度。 與活動相關聯的執行緒處於睡眠狀態時，不會計算 CPU 刻度。 對於*簡單事件*，此欄位會設定為零。 |
+| `ExclusiveCPUTicks` | 此欄位與的意義相同 `CPUTicks` ，不同之處在于它不包含子活動中所發生的 CPU 刻度。 對於*簡單事件*，此欄位會設定為零。 |
+| `WallClockTimeResponsibilityTicks` | 如果此事件是*活動*，此欄位會設定為表示此活動對整體時鐘時間之比重的滴答計數。 時鐘時間責任刻度與一般滴答不同。 時鐘時間責任刻度會考慮活動之間的平行處理。 例如，兩個平行活動的持續時間可能是50刻度和相同的開始和停止時間。 在此情況下，系統會將時鐘時間責任指派為25個刻度。 對於*簡單事件*，此欄位會設定為零。 |
+| `ExclusiveWallClockTimeResponsibilityTicks` | 此欄位與的意義相同 `WallClockTimeResponsibilityTicks` ，不同之處在于它不會包含子活動的時鐘時間責任刻度。 對於*簡單事件*，此欄位會設定為零。 |
+| `Data` | 指向事件中儲存的其他資料。 視欄位而定，所指向的資料類型是不同的 `EventId` 。 |
+| `ProcessId` | 發生事件之進程的識別碼。 |
+| `ThreadId` | 發生事件之執行緒的識別碼。 |
+| `ProcessorIndex` | 發生事件之以零為索引的 CPU 編號。 |
+| `EventName` | 包含所識別之機構名稱的 ANSI 字串 `EventId` 。 |
+| `EventWideName` | 寬字元串，包含所識別之實體的名稱 `EventId` 。 |
 
 ## <a name="remarks"></a>備註
 
-中的`EVENT_DATA`許多欄位包含刻度計數。 C++生成見解使用視窗的性能計數器作為報價源。 必須將刻度計數與`TickFrequency`欄位一起使用,將其轉換為適當的時間單位,如秒。 有關執行此轉換,請參閱下面的範例。 `EVENT_DATA`不包含活動常規刻度計數的欄位。 要取得此值,從`StartTimestamp``StopTimestamp`中減去 。 `EVENT_DATA`是一個結構,供 C API 使用者使用。 對於C++ API 使用者,像[事件](../cpp-event-data-types/event.md)這樣的類會自動進行時間轉換。
+中的許多欄位 `EVENT_DATA` 包含滴答計數。 C + + Build Insights 使用 Window 的效能計數器作為刻度的來源。 滴答計數必須與欄位搭配使用 `TickFrequency` ，才能將它轉換成適當的時間單位，例如秒。 請參閱下列範例，以執行這種轉換。 `EVENT_DATA`不包含活動之一般滴答計數的欄位。 若要取得此值，請 `StartTimestamp` 從減去 `StopTimestamp` 。 `EVENT_DATA`是要供 C API 使用者使用的結構。 針對 c + + API 使用者，[事件](../cpp-event-data-types/event.md)之類的類別會自動進行轉換。
 
-欄位的值`EVENT_DATA`取決於`EventId`其 欄位的`Data`值。 下表描述了`Data`的值。 下表中可能缺少某些實體標識符。 在這種情況下,欄位`Data`設置為`nullptr`或零。
+欄位的值 `EVENT_DATA` `Data` 取決於其欄位的值 `EventId` 。 `Data`下表描述的值。 下表中可能遺漏一些實體識別碼。 在此情況下， `Data` 欄位會設為 **`nullptr`** 或零。
 
-| `EventId` 值 | 型態指向`Data` |
+| `EventId` 值 | 所指向的類型`Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
@@ -103,7 +103,7 @@ typedef struct EVENT_DATA_TAG
 | `EVENT_ID_SYMBOL_NAME` | [SYMBOL_NAME_DATA](symbol-name-data-struct.md) |
 | `EVENT_ID_TEMPLATE_INSTANTIATION` | [TEMPLATE_INSTANTIATION_DATA](template-instantiation-data-struct.md) |
 
-## <a name="tick-conversion-example"></a>滴答轉換範例
+## <a name="tick-conversion-example"></a>刻度轉換範例
 
 ```cpp
 //

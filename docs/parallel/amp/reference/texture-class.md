@@ -17,16 +17,16 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: f7a38c84c5def629c7a42b2c05bf1ed04441593b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b8a37293166ec21aeb9410f05fb70c9753ec4f22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127773"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230411"
 ---
 # <a name="texture-class"></a>texture 類別
 
-材質是範圍定義域中 `accelerator_view` 的資料匯總。 它是變數的集合，範圍定義域中的每個元素各一個。 每個變數都會保存一個對應C++至基本型別（`unsigned int`、`int`、`float`、`double`）、純量型別（`norm`或 `unorm`）或簡短向量型別的值。
+材質是範圍定義域中的資料匯總 `accelerator_view` 。 它是變數的集合，範圍定義域中的每個元素各一個。 每個變數都包含一個對應至 c + + 基本型別（ **`unsigned int`** 、 **`int`** 、 **`float`** 、 **`double`** ）、純量型別（ `norm` 、或 `unorm` ）或短向量型別的值。
 
 ## <a name="syntax"></a>語法
 
@@ -47,23 +47,23 @@ class texture;
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |`scalar_type`|純量類型。|
 |`value_type`|實數值型別。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[材質函數](#ctor)|初始化 `texture` 類別的新執行個體。|
 |[~ 材質析構函式](#ctor)|終結 `texture` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[copy_to](#copy_to)|藉由執行深層複製，將 `texture` 物件複製到目的地。|
+|[copy_to](#copy_to)|藉 `texture` 由執行深層複製，將物件複製到目的地。|
 |[data](#data)|將 CPU 指標傳回此材質的原始資料。|
 |[get](#get)|傳回指定索引處的元素值。|
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|傳回要將此材質複製到其中的慣用目標[accelerator_view](accelerator-view-class.md) 。|
@@ -73,27 +73,27 @@ class texture;
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[operator()](#operator_call)|傳回參數所指定的元素值。|
-|[operator\[\]](#operator_at)|傳回位於指定索引處的元素。|
-|[operator=](#operator_eq)|將指定的[材質](texture-class.md)物件複製到這個。|
+|[operator （）](#operator_call)|傳回參數所指定的元素值。|
+|[操作\[\]](#operator_at)|傳回位於指定索引處的元素。|
+|[operator =](#operator_eq)|將指定的[材質](texture-class.md)物件複製到這個。|
 
 ### <a name="public-constants"></a>公用常數
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[次序常數](#rank)|取得 `texture` 物件的順位。|
+|[次序常數](#rank)|取得物件的順位 `texture` 。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[associated_accelerator_view](#associated_accelerator_view)|取得要複製到這個材質慣用目標的[accelerator_view](accelerator-view-class.md) 。|
 |[depth_pitch](#depth_pitch)|取得 CPU 上3D 暫存材質中每個深度配量之間的位元組數目。|
 |[row_pitch](#row_pitch)|取得 CPU 上2D 或3D 暫存材質中每個資料列之間的位元組數目。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `_Texture_base`
 
@@ -105,7 +105,7 @@ class texture;
 
 **命名空間：** Concurrency：： graphics
 
-## <a name="dtor"></a>~ 材質
+## <a name="texture"></a><a name="dtor"></a>~ 材質
 
 終結 `texture` 物件。
 
@@ -113,7 +113,7 @@ class texture;
 ~texture() restrict(cpu);
 ```
 
-## <a name="associated_accelerator_view"></a>associated_accelerator_view
+## <a name="associated_accelerator_view"></a><a name="associated_accelerator_view"></a>associated_accelerator_view
 
 取得要複製到這個材質慣用目標的[accelerator_view](accelerator-view-class.md) 。
 
@@ -121,9 +121,9 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-## <a name="copy_to"></a>copy_to
+## <a name="copy_to"></a><a name="copy_to"></a>copy_to
 
-藉由執行深層複製，將 `texture` 物件複製到目的地。
+藉 `texture` 由執行深層複製，將物件複製到目的地。
 
 ```cpp
 void copy_to(texture& _Dest) const;
@@ -141,7 +141,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 *value_type*<br/>
 材質中元素的類型。
 
-## <a name="data"></a>data
+## <a name="data"></a><a name="data"></a> 資料
 
 將 CPU 指標傳回此材質的原始資料。
 
@@ -155,7 +155,7 @@ const void* data() const restrict(cpu);
 
 材質原始資料的指標。
 
-## <a name="depth_pitch"></a>depth_pitch
+## <a name="depth_pitch"></a><a name="depth_pitch"></a>depth_pitch
 
 取得 CPU 上3D 暫存材質中每個深度配量之間的位元組數目。
 
@@ -163,7 +163,7 @@ const void* data() const restrict(cpu);
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-## <a name="get"></a>獲取
+## <a name="get"></a><a name="get"></a>獲取
 
 傳回指定索引處的元素值。
 
@@ -180,7 +180,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 
 位於指定索引處的項目值。
 
-## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
 傳回要將此材質複製到其中的慣用目標 accelerator_view。
 
@@ -192,7 +192,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 
 [Accelerator_view](accelerator-view-class.md) ，這是要將此材質複製到其中的慣用目標。
 
-## <a name="get_depth_pitch"></a>get_depth_pitch
+## <a name="get_depth_pitch"></a><a name="get_depth_pitch"></a>get_depth_pitch
 
 傳回 CPU 上3D 暫存材質中每個深度配量之間的位元組數目。
 
@@ -204,7 +204,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 
 CPU 上3D 預備材質中每個深度配量之間的位元組數目。
 
-## <a name="get_row_pitch"></a>get_row_pitch
+## <a name="get_row_pitch"></a><a name="get_row_pitch"></a>get_row_pitch
 
 傳回二維臨時材質中的每個資料列之間，或3d 暫存材質中的每個深度配量資料列之間的位元組數目。
 
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 二維臨時材質中的每個資料列之間，或3d 暫存材質中的每個深度配量資料列之間的位元組數目。
 
-## <a name="operator_call"></a>operator （）
+## <a name="operator"></a><a name="operator_call"></a>operator （）
 
 傳回參數所指定的元素值。
 
@@ -258,7 +258,7 @@ const value_type operator() (
 
 參數所指定的元素值。
 
-## <a name="operator_at"></a>operator []
+## <a name="operator"></a><a name="operator_at"></a>operator []
 
 傳回位於指定索引處的元素。
 
@@ -280,7 +280,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 
 位於指定索引處的元素。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
 將指定的[材質](texture-class.md)物件複製到這個。
 
@@ -295,21 +295,21 @@ texture& operator= (
 ### <a name="parameters"></a>參數
 
 *_Other*<br/>
-要複製的來源 `texture` 物件。
+`texture`要複製的物件。
 
 ### <a name="return-value"></a>傳回值
 
-這個 `texture` 物件的參考。
+這個物件的參考 `texture` 。
 
-## <a name="rank"></a>等級
+## <a name="rank"></a><a name="rank"></a>等級
 
-取得 `texture` 物件的順位。
+取得物件的順位 `texture` 。
 
 ```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="row_pitch"></a>row_pitch
+## <a name="row_pitch"></a><a name="row_pitch"></a>row_pitch
 
 取得 CPU 上2D 或3D 暫存材質中每個資料列之間的位元組數目。
 
@@ -317,7 +317,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-## <a name="set"></a>設定
+## <a name="set"></a><a name="set"></a>設定
 
 設定指定索引處的元素值。
 
@@ -338,7 +338,7 @@ void set(
 *value*<br/>
 項目的新值。
 
-## <a name="ctor"></a>層
+## <a name="texture"></a><a name="ctor"></a>層
 
 初始化 `texture` 類別的新執行個體。
 

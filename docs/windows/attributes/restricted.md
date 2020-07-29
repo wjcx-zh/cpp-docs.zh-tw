@@ -1,17 +1,17 @@
 ---
-title: 受限制C++ （COM 屬性）
+title: 受限制（c + + COM 屬性）
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166363"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230022"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,12 +27,12 @@ ms.locfileid: "80166363"
 
 ### <a name="parameters"></a>參數
 
-*介面*<br/>
+*interfaces*<br/>
 在 COM 物件上可能不會任意呼叫的一個或多個介面。 這個參數只有在套用至類別時才有效。
 
 ## <a name="remarks"></a>備註
 
-**受限制** C++的屬性與[限制](/windows/win32/Midl/restricted)的 MIDL 屬性具有相同的功能。
+**限制**的 c + + 屬性具有與[受限制](/windows/win32/Midl/restricted)MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**適用於**|介面方法、**介面**、**類別**、**結構**|
+|**適用於**|介面方法、**介面**、 **`class`** 、**`struct`**|
 |**可重複**|否|
-|**必要屬性**|**coclass** （套用至**類別**或**結構**時）|
-|**無效屬性**|None|
+|**必要的屬性**|**coclass** （套用至 **`class`** 或時 **`struct`** ）|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

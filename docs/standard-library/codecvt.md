@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e571c1ca8beef684a40bbf643e83aba3f205fc8e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688289"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230113"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-定義數個類別樣板，這些範本會根據類別樣板[codecvt](../standard-library/codecvt-class.md)來描述物件。 這些物件可以做為[地區設定 facet](../standard-library/locale-class.md#facet_class) ，以控制類型的值序列之間的轉換 `Elem` 和**char**類型的值序列。
+定義數個類別樣板，這些範本會根據類別樣板[codecvt](../standard-library/codecvt-class.md)來描述物件。 這些物件可以做為[地區設定 facet](../standard-library/locale-class.md#facet_class) ，以控制類型的值序列 `Elem` 和類型的值序列之間的轉換 **`char`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +34,7 @@ ms.locfileid: "72688289"
 
 - UTF-16 會在程式內以 Unicode 編碼為一個或兩個 16 位元整數。 (請注意，這並不符合標準 C 或標準 C++ 有效寬字元編碼的所有需求， 但這卻是廣泛使用的情況)。
 
-針對位元組資料流程（儲存在檔案中，以位元組序列的形式傳輸，或儲存在**char**陣列中的程式內）：
+針對位元組資料流程（儲存在檔案中，以位元組序列傳輸，或儲存在的陣列中 **`char`** ）：
 
 - UTF-8 會在位元組資料流內以 Unicode 編碼為一或多個 8 位元位元組 (按具決定性的位元組順序)。
 
@@ -50,7 +50,7 @@ ms.locfileid: "72688289"
 
 ### <a name="classes"></a>類別
 
-|執行個體|描述|
+|類別|說明|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|代表地區設定 Facet，其可在 UCS-2 或 UCS-4 編碼的寬字元以及 UTF-8 編碼的位元組資料流之間進行轉換。|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|代表地區設定 Facet，其可在 UTF-16 編碼的寬字元以及 UTF-8 編碼的位元組資料流之間進行轉換。|
@@ -58,10 +58,10 @@ ms.locfileid: "72688289"
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<codecvt>
+**標頭：**\<codecvt>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

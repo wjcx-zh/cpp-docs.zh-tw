@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 6d85e9b10831bc964706ef94d715b7a5d4ab4c50
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 634a78274a9c7a4ed75466b083f4ee4880401630
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366350"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230165"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution 類別
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*真實類型*\
-浮點結果類型,預設值為**雙精度**值。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型，預設值為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
-*烏爾格*\
-統一的隨機數生成器引擎。 有關可能的類型,請參閱[\<隨機>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類範本描述生成使用者指定的浮點類型的值的分佈,或者如果沒有提供,則鍵入**雙精度值**,該分佈根據 Chi-Squared 分佈進行分佈。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之浮點類型值的分佈（如果未提供，則為類型） **`double`** ，並根據卡方分佈散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-有關分發類及其成員的詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
+如需散發類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md) 。
 
 如需卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Chi-Squared Distribution](https://go.microsoft.com/fwlink/p/?linkid=400528) (卡方分佈)。
 
@@ -220,11 +220,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<random>
+**標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution:chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution：： chi_squared_distribution
 
 建構分佈。
 
@@ -235,21 +235,21 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*n*\
+*位*\
 `n` 分佈參數。
 
-*帕爾姆*\
+*parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
-**先決條件:**`0.0 < n`
+**前置條件：**`0.0 < n`
 
 第一個建構函式建構的物件，其預存的 `n` 值具有 *n* 值。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::p阿拉姆型
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution：:p aram_type
 
 儲存分佈的參數。
 
@@ -266,18 +266,18 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*n*\
+*位*\
 `n` 分佈參數。
 
-*對*\
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 
-**先決條件:**`0.0 < n`
+**前置條件：**`0.0 < n`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<隨機>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

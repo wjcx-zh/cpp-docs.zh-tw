@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 5014a32386a0a140f0fdc00b23a0ac24a54afcee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626138"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230489"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 
@@ -62,7 +62,7 @@ ms.locfileid: "84626138"
 
 1. 在 [實作類型] **** 中，按一下 [Get/Set 方法] ****。
 
-1. 在 [**屬性類型**] 方塊中，選取 [ **short**]。
+1. 在 [**屬性類型**] 方塊中，選取 **`short`** 。
 
 1. 輸入您的 Get 和 Set 函數的唯一名稱，或接受預設名稱。
 

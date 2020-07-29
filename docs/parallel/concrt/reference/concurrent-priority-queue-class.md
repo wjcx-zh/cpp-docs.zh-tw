@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: 1d8651d1391ded2970a00a7429c36f341a438659
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 024bd2a100b8a0b871d98a5e6001858b55977565
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143222"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230359"
 ---
 # <a name="concurrent_priority_queue-class"></a>concurrent_priority_queue 類別
 
@@ -51,7 +51,7 @@ template <typename T,
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
 |`allocator_type`|代表並行優先權佇列之配置器類別的類型。|
 |`const_reference`|代表儲存在並行優先權佇列中的類型項目之常數參考的類型。|
@@ -61,33 +61,33 @@ template <typename T,
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
 |[concurrent_priority_queue](#ctor)|已多載。 建構並行優先權佇列。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[清除](#clear)|清除並行優先權中的所有項目。 這個方法不是並行安全的。|
+|[明確](#clear)|清除並行優先權中的所有項目。 這個方法不是並行安全的。|
 |[empty](#empty)|測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全的。|
 |[get_allocator](#get_allocator)|傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全的。|
 |[push](#push)|已多載。 將項目加入至並行優先權佇列。 這個方法是並行安全的。|
 |[size](#size)|傳回並行優先權佇列中的項目數。 這個方法是並行安全的。|
-|[swap](#swap)|將兩個並行優先權佇列的內容交換。 這個方法不是並行安全的。|
+|[調換](#swap)|將兩個並行優先權佇列的內容交換。 這個方法不是並行安全的。|
 |[try_pop](#try_pop)|如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全的。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[operator=](#operator_eq)|已多載。 將另一個 `concurrent_priority_queue` 物件的內容指派給這一個。 這個方法不是並行安全的。|
+|[operator =](#operator_eq)|已多載。 將另一個物件的內容指派 `concurrent_priority_queue` 給這個物件。 這個方法不是並行安全的。|
 
 ## <a name="remarks"></a>備註
 
-如需 `concurrent_priority_queue` 類別的詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
+如需類別的詳細資訊 `concurrent_priority_queue` ，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `concurrent_priority_queue`
 
@@ -95,9 +95,9 @@ template <typename T,
 
 **標頭：** concurrent_priority_queue。h
 
-**命名空間：** concurrency
+**命名空間：** 並行
 
-## <a name="clear"></a>明確
+## <a name="clear"></a><a name="clear"></a>明確
 
 清除並行優先權中的所有項目。 這個方法不是並行安全的。
 
@@ -107,9 +107,9 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-`clear` 不是並行保護。 當您呼叫這個方法時，您必須確定沒有任何其他執行緒在並行優先權佇列上叫用方法。 `clear` 不會釋放記憶體。
+`clear`不是並行安全。 當您呼叫這個方法時，您必須確定沒有任何其他執行緒在並行優先權佇列上叫用方法。 `clear`不會釋放記憶體。
 
-## <a name="ctor"></a>concurrent_priority_queue
+## <a name="concurrent_priority_queue"></a><a name="ctor"></a>concurrent_priority_queue
 
 建構並行優先權佇列。
 
@@ -167,15 +167,15 @@ concurrent_priority_queue(
 
 第一個函式會指定空的初始優先順序佇列，並選擇性地指定配置器。
 
-第二個函式會指定具有初始容量 `_Init_capacity` 的優先順序佇列，並選擇性地指定配置器。
+第二個函式會指定具有初始容量的優先順序佇列 `_Init_capacity` ，並選擇性地指定配置器。
 
-第三個函式會指定反覆運算器範圍 [`_Begin`，`_End`）所提供的值，並選擇性地指定配置器。
+第三個函式會指定反覆運算器範圍 [，）所提供的值 `_Begin` `_End` ，並選擇性地指定配置器。
 
-第四個和第五個函式會指定優先順序佇列 `_Src`的複本。
+第四個和第五個函式會指定優先順序佇列的複本 `_Src` 。
 
-第六和第七個函式會指定優先順序佇列 `_Src`的移動。
+第六和第七個的函數會指定優先順序佇列的移動 `_Src` 。
 
-## <a name="empty"></a>空
+## <a name="empty"></a><a name="empty"></a>空
 
 測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全的。
 
@@ -185,9 +185,9 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果在呼叫函數時，優先順序佇列是空的，**則為 true** ，否則為**false** 。
+**`true`** 如果在呼叫函數時，優先順序佇列是空的，則 **`false`** 為，否則為。
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全的。
 
@@ -197,11 +197,11 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>傳回值
 
-用來建立 `concurrent_priority_queue` 物件的配置器複本。
+用來建立物件的配置器複本 `concurrent_priority_queue` 。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
-將另一個 `concurrent_priority_queue` 物件的內容指派給這一個。 這個方法不是並行安全的。
+將另一個物件的內容指派 `concurrent_priority_queue` 給這個物件。 這個方法不是並行安全的。
 
 ```cpp
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -216,9 +216,9 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 
 ### <a name="return-value"></a>傳回值
 
-這個 `concurrent_priority_queue` 物件的參考。
+這個物件的參考 `concurrent_priority_queue` 。
 
-## <a name="push"></a>式
+## <a name="push"></a><a name="push"></a>式
 
 將項目加入至並行優先權佇列。 這個方法是並行安全的。
 
@@ -233,7 +233,7 @@ void push(value_type&& _Elem);
 *_Elem*<br/>
 要加入至並行優先權佇列的元素。
 
-## <a name="size"></a>容量
+## <a name="size"></a><a name="size"></a>容量
 
 傳回並行優先權佇列中的項目數。 這個方法是並行安全的。
 
@@ -243,13 +243,13 @@ size_type size() const;
 
 ### <a name="return-value"></a>傳回值
 
-這個 `concurrent_priority_queue` 物件中的元素數目。
+這個物件中的元素數目 `concurrent_priority_queue` 。
 
 ### <a name="remarks"></a>備註
 
-傳回的大小保證會包含透過呼叫函式 `push`新增的所有元素。 不過，它可能不會反映暫止並行作業的結果。
+傳回的大小保證會包含呼叫函式所新增的所有元素 `push` 。 不過，它可能不會反映暫止並行作業的結果。
 
-## <a name="swap"></a>調換
+## <a name="swap"></a><a name="swap"></a>調換
 
 將兩個並行優先權佇列的內容交換。 這個方法不是並行安全的。
 
@@ -262,7 +262,7 @@ void swap(concurrent_priority_queue& _Queue);
 *_Queue*<br/>
 要交換內容的 `concurrent_priority_queue` 物件。
 
-## <a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a>try_pop
 
 如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全的。
 
@@ -277,7 +277,7 @@ bool try_pop(reference _Elem);
 
 ### <a name="return-value"></a>傳回值
 
-如果已彈出值，**則為 true** ，否則**為 false** 。
+**`true`** 如果已彈出值，則 **`false`** 為，否則為。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: d83f5278c2c4f8344334bfce40946612e9ca3e56
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53a77ff993d3a99cae1ec8e48a06dd7800ce74c7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230216"
 ---
-# <a name="chartraitsltchar16tgt-struct"></a>char_traits&lt;char16_t&gt; 結構
+# <a name="char_traitsltchar16_tgt-struct"></a>char_traits&lt;char16_t&gt; 結構
 
-結構，其為類型 `char16_t` 之元素的樣板結構 **char_traits\<CharType>** 的特製化。
+結構，這是樣板結構的特製化**char_traits \<CharType> **至類型的專案 **`char16_t`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -27,11 +27,11 @@ struct char_traits<char16_t>;
 
 ## <a name="remarks"></a>備註
 
-特製化可讓結構利用操作此 `char16_t` 類型物件的程式庫函式。
+特製化可讓結構利用可操作類型物件的程式庫函數 **`char16_t`** 。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<string>
+**標頭：**\<string>
 
 **命名空間：** std
 
@@ -39,4 +39,4 @@ struct char_traits<char16_t>;
 
 [\<string>](../standard-library/string.md)\
 [char_traits 結構](../standard-library/char-traits-struct.md)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,33 +1,33 @@
 ---
 title: C 大小的整數類型
-ms.date: 11/04/2016
+ms.date: 07/22/2020
 helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
-ms.openlocfilehash: 136065466d3adb4017cf18f2baf8c3387ffbd035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f785efb2fc93d2ec57783dd20a43642c87e4a4c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313294"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226499"
 ---
 # <a name="c-sized-integer-types"></a>C 大小的整數類型
 
 **Microsoft 特定的**
 
-Microsoft C 的功能支援可調整大小的整數類型。 您可以使用 __int*n* 類型規範來宣告 8、16、32 或 64 位元的整數變數，其中 *n* 為整數變數的大小 (以位元為單位)。 *n* 的值可以是 8、16、32 或 64。 下列範例宣告了四種可調整大小整數類型的變數：
+Microsoft C 的功能支援可調整大小的整數類型。 您可以使用 `__intN` 類型規範（其中 *`N`* 是整數變數的大小，以位為單位）來宣告8、16、32或64位的整數變數。 *n* 的值可以是 8、16、32 或 64。 下列範例宣告了四種可調整大小整數類型的變數：
 
-```
-__int8 nSmall;      // Declares 8-bit integer
+```C
+__int8  nSmall;     // Declares 8-bit integer
 __int16 nMedium;    // Declares 16-bit integer
 __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-前三類可調整大小的整數與具有相同大小的 ANSI 類型同義，且當撰寫可移植程式碼的行為模式在多個平台上完全相同時，這也會很有用。 請注意，__int8 資料類型與 char 類型同義， \__int16 與 short 類型同義，而\__int32 是與 int 類型同義。\__Int64 類型沒有對等的 ANSI 對應項。
+前三個大小的整數類型是具有相同大小之 ANSI 類型的同義字。 它們適用于撰寫可在多個平臺上有相同行為的可移植程式碼。 **`__int8`** 資料類型與類型同義，是與類型同義、與類型同義， **`char`** **`__int16`** 而且與 **`short`** **`__int32`** **`int`** **`__int64`** 類型同義 **`long long`** 。
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[基本類型的儲存空間](../c-language/storage-of-basic-types.md)
+[基本類型的儲存](../c-language/storage-of-basic-types.md)

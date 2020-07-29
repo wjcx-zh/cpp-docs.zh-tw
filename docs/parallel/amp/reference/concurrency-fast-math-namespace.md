@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 57e2134a2254dc4bc34d515e65e2ec629efeff33
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226746"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math 命名空間
 
-`fast_math` 命名空間中的函式具有較低的精確度、僅支援單精確度（`float`），並呼叫 DirectX 內建函式。 每個函數都有兩個版本，例如 `cos` 和 `cosf`。 這兩個版本都採用並傳回 `float`，但每個都會呼叫相同的 DirectX 內建函式。
+命名空間中的函式 `fast_math` 具有較低的精確度、僅支援單精確度（ **`float`** ），並呼叫 DirectX 內建函式。 每個函數都有兩個版本，例如 `cos` 和 `cosf` 。 這兩個版本都採用並傳回 **`float`** ，但每個都會呼叫相同的 DirectX 內建函式。
 
 ## <a name="syntax"></a>語法
 
@@ -25,9 +25,9 @@ namespace fast_math;
 
 ### <a name="functions"></a>函式
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[cos](concurrency-fast-math-namespace-functions.md#cos)|計算引數的反余弦|
+|[纜](concurrency-fast-math-namespace-functions.md#cos)|計算引數的反余弦|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|計算引數的反余弦|
 |[asin](concurrency-fast-math-namespace-functions.md#asin)|計算引數的反正弦|
 |[asinf](concurrency-fast-math-namespace-functions.md#asinf)|計算引數的反正弦|
@@ -37,7 +37,7 @@ namespace fast_math;
 |[atanf](concurrency-fast-math-namespace-functions.md#atanf)|計算引數的反正切|
 |[ceil](concurrency-fast-math-namespace-functions.md#ceil)|計算引數的上限|
 |[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|計算引數的上限|
-|[cos](concurrency-fast-math-namespace-functions.md#cos)|計算引數的餘弦|
+|[纜](concurrency-fast-math-namespace-functions.md#cos)|計算引數的餘弦|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|計算引數的餘弦|
 |[cosh](concurrency-fast-math-namespace-functions.md#cosh)|計算引數的雙曲余弦值|
 |[coshf](concurrency-fast-math-namespace-functions.md#coshf)|計算引數的雙曲余弦值|
@@ -47,7 +47,7 @@ namespace fast_math;
 |[expf](concurrency-fast-math-namespace-functions.md#expf)|計算引數的以 e 為底數的指數|
 |[fabs](concurrency-fast-math-namespace-functions.md#fabs)|傳回引數的絕對值。|
 |[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|傳回引數的絕對值。|
-|[floor](concurrency-fast-math-namespace-functions.md#floor)|計算引數的樓層|
+|[車間](concurrency-fast-math-namespace-functions.md#floor)|計算引數的樓層|
 |[floorf](concurrency-fast-math-namespace-functions.md#floorf)|計算引數的樓層|
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|判斷引數的最大數值|
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|判斷引數的最大數值|
@@ -62,7 +62,7 @@ namespace fast_math;
 |[isnan](concurrency-fast-math-namespace-functions.md#isnan)|判斷引數是否為 NaN|
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|計算尾數和指數中的實數|
 |[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|計算尾數和指數中的實數|
-|[log](concurrency-fast-math-namespace-functions.md#log)|計算引數的以 e 為底數的對數|
+|[日誌](concurrency-fast-math-namespace-functions.md#log)|計算引數的以 e 為底數的對數|
 |[log10](concurrency-fast-math-namespace-functions.md#log10)|計算引數的以10為底數的對數|
 |[log10f](concurrency-fast-math-namespace-functions.md#log10f)|計算引數的以10為底數的對數|
 |[log2](concurrency-fast-math-namespace-functions.md#log2)|計算引數的以2為底數的對數|
@@ -72,7 +72,7 @@ namespace fast_math;
 |[modff](concurrency-fast-math-namespace-functions.md#modff)|將 _X 分割成小數和整數部分。|
 |[pow](concurrency-fast-math-namespace-functions.md#pow)|計算 _X _Y 的乘冪|
 |[powf](concurrency-fast-math-namespace-functions.md#powf)|計算 _X _Y 的乘冪|
-|[round](concurrency-fast-math-namespace-functions.md#round)|將 _X 四捨五入到最接近的整數|
+|[進行](concurrency-fast-math-namespace-functions.md#round)|將 _X 四捨五入到最接近的整數|
 |[roundf](concurrency-fast-math-namespace-functions.md#roundf)|將 _X 四捨五入到最接近的整數|
 |[rsqrt](concurrency-fast-math-namespace-functions.md#rsqrt)|傳回引數平方根的倒數|
 |[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|傳回引數平方根的倒數|
@@ -86,7 +86,7 @@ namespace fast_math;
 |[sinhf](concurrency-fast-math-namespace-functions.md#sinhf)|計算引數的雙曲正弦值|
 |[sqrt](concurrency-fast-math-namespace-functions.md#sqrt)|計算引數的平方根|
 |[sqrtf](concurrency-fast-math-namespace-functions.md#sqrtf)|計算引數的平方根|
-|[tan](concurrency-fast-math-namespace-functions.md#tan)|計算引數的正切值|
+|[相切](concurrency-fast-math-namespace-functions.md#tan)|計算引數的正切值|
 |[tanf](concurrency-fast-math-namespace-functions.md#tanf)|計算引數的正切值|
 |[tanh](concurrency-fast-math-namespace-functions.md#tanh)|計算引數的雙曲正切值|
 |[tanhf](concurrency-fast-math-namespace-functions.md#tanhf)|計算引數的雙曲正切值|
@@ -101,4 +101,4 @@ namespace fast_math;
 
 ## <a name="see-also"></a>另請參閱
 
-[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrency 命名空間（C++ AMP）](concurrency-namespace-cpp-amp.md)

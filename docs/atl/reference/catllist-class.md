@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 15830a30e8236a13f3911d1b84d3727d3246fc0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168042"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226668"
 ---
 # <a name="catllist-class"></a>CAtlList 類別
 
@@ -67,20 +67,20 @@ class CAtlList
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAtlList::INARGTYPE](#inargtype)||
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|建構函式。|
 |[CAtlList：： ~ CAtlList](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAtlList::AddHead](#addhead)|呼叫這個方法，將元素加入至清單的開頭。|
 |[CAtlList::AddHeadList](#addheadlist)|呼叫這個方法，將現有的清單新增至清單的開頭。|
@@ -115,7 +115,7 @@ class CAtlList
 
 `CAtlList`類別支援順序或依值存取之非唯一物件的排序清單。 `CAtlList`清單的行為與雙向連結清單類似。 每個清單都有一個標頭和結尾，而新的專案（或某些案例中的清單）可以加入至清單的任一端，或在特定專案之前或之後插入。
 
-大部分的`CAtlList`方法會利用位置值。 方法會使用這個值來參考儲存元素的實際記憶體位置，而不應該直接計算或預測。 如果需要存取清單中的第*n*個元素，則方法[CAtlList：： FindIndex](#findindex)會傳回給定索引的對應位置值。 [CAtlList：： GetNext](#getnext)和[CAtlList：： GetPrev](#getprev)方法可以用來逐一查看清單中的物件。
+大部分的 `CAtlList` 方法會利用位置值。 方法會使用這個值來參考儲存元素的實際記憶體位置，而不應該直接計算或預測。 如果需要存取清單中的第*n*個元素，則方法[CAtlList：： FindIndex](#findindex)會傳回給定索引的對應位置值。 [CAtlList：： GetNext](#getnext)和[CAtlList：： GetPrev](#getprev)方法可以用來逐一查看清單中的物件。
 
 如需 ATL 可用之集合類別的詳細資訊，請參閱[Atl 集合類別](../../atl/atl-collection-classes.md)。
 
@@ -248,7 +248,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>備註
 
-`CAtlList`物件的構造函式。 區塊大小是在需要新元素時所配置的記憶體數量的量值。 較大的區塊大小會減少對記憶體配置常式的呼叫，但會使用更多資源。
+物件的構造函式 `CAtlList` 。 區塊大小是在需要新元素時所配置的記憶體數量的量值。 較大的區塊大小會減少對記憶體配置常式的呼叫，但會使用更多資源。
 
 ### <a name="example"></a>範例
 
@@ -266,7 +266,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 釋放所有配置的資源，包括呼叫[CAtlList：： RemoveAll](#removeall) ，以移除清單中的所有元素。
 
-在 [偵錯工具] 組建中，如果清單仍包含呼叫之後的某些元素，就會`RemoveAll`發生判斷提示失敗。
+在 [偵錯工具] 組建中，如果清單仍包含呼叫之後的某些元素，就會發生判斷提示失敗 `RemoveAll` 。
 
 ## <a name="catllistfind"></a><a name="find"></a>CAtlList：： Find
 
@@ -343,9 +343,9 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="remarks"></a>備註
 
-如果清單是**const**， `GetAt`則會傳回元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
+如果清單為，則會傳回 **`const`** `GetAt` 元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
 
-如果清單不是**const**， `GetAt`會傳回元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
+如果清單不是，則會傳回 **`const`** `GetAt` 元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
 
 在 debug 組建中，如果*pos*等於 Null，就會發生判斷提示失敗。
 
@@ -384,9 +384,9 @@ const E& GetHead() const throw();
 
 ### <a name="remarks"></a>備註
 
-如果清單是**const**， `GetHead`會在清單的開頭傳回元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
+如果清單為 **`const`** ，會 `GetHead` 在清單的開頭傳回元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
 
-如果清單不是**const**， `GetHead`會傳回清單開頭之專案的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
+如果清單不是，則會傳回 **`const`** `GetHead` 位於清單開頭之元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
 
 在 [偵錯工具] 組建中，如果清單的標頭指向 Null，就會發生判斷提示失敗。
 
@@ -426,13 +426,13 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="parameters"></a>參數
 
 *採購*<br/>
-先前呼叫`GetNext`、 [CAtlList：： GetHeadPosition](#getheadposition)或其他`CAtlList`方法所傳回的位置值。
+先前呼叫 `GetNext` 、 [CAtlList：： GetHeadPosition](#getheadposition)或其他方法所傳回的位置值 `CAtlList` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果清單是**const**， `GetNext`會傳回清單下一個元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
+如果清單為，則會傳回 **`const`** `GetNext` 清單下一個元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
 
-如果清單不是**const**， `GetNext`會傳回清單下一個元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
+如果清單不是，則會傳回 **`const`** `GetNext` 清單下一個元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
 
 ### <a name="remarks"></a>備註
 
@@ -454,13 +454,13 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="parameters"></a>參數
 
 *採購*<br/>
-先前呼叫`GetPrev`、 [CAtlList：： GetTailPosition](#gettailposition)或其他`CAtlList`方法所傳回的位置值。
+先前呼叫 `GetPrev` 、 [CAtlList：： GetTailPosition](#gettailposition)或其他方法所傳回的位置值 `CAtlList` 。
 
 ### <a name="return-value"></a>傳回值
 
-如果清單是**const**， `GetPrev`則會傳回清單專案的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
+如果清單為，會傳回 **`const`** `GetPrev` 清單元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
 
-如果清單不是**const**， `GetPrev`會傳回清單元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
+如果清單不是，則會傳回 **`const`** `GetPrev` 清單元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
 
 ### <a name="remarks"></a>備註
 
@@ -485,9 +485,9 @@ const E& GetTail() const throw();
 
 ### <a name="remarks"></a>備註
 
-如果清單是**const**， `GetTail`會在清單的開頭傳回元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
+如果清單為 **`const`** ，會 `GetTail` 在清單的開頭傳回元素的複本。 這可讓方法僅用於指派語句的右邊，並防止修改清單。
 
-如果清單不是**const**， `GetTail`會傳回清單開頭之專案的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
+如果清單不是，則會傳回 **`const`** `GetTail` 位於清單開頭之元素的參考。 這可讓方法在指派語句的任一端使用，因此可修改清單專案。
 
 在「偵錯工具組建」中，如果清單的結尾指向 Null，就會發生判斷提示失敗。
 
@@ -668,7 +668,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="remarks"></a>備註
 
-已移除*pos*所參考的元素，並釋放記憶體。 您可以使用`RemoveAt`移除清單的開頭或結尾。
+已移除*pos*所參考的元素，並釋放記憶體。 您可以使用 `RemoveAt` 移除清單的開頭或結尾。
 
 在 [偵錯工具] 組建中，如果清單無效或移除專案導致清單存取不屬於清單結構的記憶體，就會發生判斷提示失敗。
 

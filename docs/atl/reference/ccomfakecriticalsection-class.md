@@ -1,5 +1,5 @@
 ---
-title: CComFake臨界科類
+title: CComFakeCriticalSection 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5ada0fbed705af34391709653dbd3638fed32bf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327845"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226577"
 ---
-# <a name="ccomfakecriticalsection-class"></a>CComFake臨界科類
+# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 類別
 
-此類提供的方法與[CCom臨界節](../../atl/reference/ccomcriticalsection-class.md)相同,但不提供關鍵部分。
+這個類別提供的方法與[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)相同，但不提供重要區段。
 
 ## <a name="syntax"></a>語法
 
@@ -32,26 +32,26 @@ class CComFakeCriticalSection
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CcomFake關鍵部分::Init](#init)|由於沒有關鍵部分,因此不執行任何操作。|
-|[CComFake 關鍵部份::鎖定](#lock)|由於沒有關鍵部分,因此不執行任何操作。|
-|[CComFake關鍵部分::學期](#term)|由於沒有關鍵部分,因此不執行任何操作。|
-|[CComFake關鍵部分::解鎖](#unlock)|由於沒有關鍵部分,因此不執行任何操作。|
+|[CComFakeCriticalSection：： Init](#init)|不會執行任何操作，因為沒有重要區段。|
+|[CComFakeCriticalSection：： Lock](#lock)|不會執行任何操作，因為沒有重要區段。|
+|[CComFakeCriticalSection：： Term](#term)|不會執行任何操作，因為沒有重要區段。|
+|[CComFakeCriticalSection：： Unlock](#unlock)|不會執行任何操作，因為沒有重要區段。|
 
 ## <a name="remarks"></a>備註
 
-`CComFakeCriticalSection`鏡像[CCom臨界節](../../atl/reference/ccomcriticalsection-class.md)中找到的方法。 但是,`CComFakeCriticalSection`不提供關鍵部分;但是,不提供關鍵部分。因此,它的方法什麼都不做。
+`CComFakeCriticalSection`鏡像[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)中找到的方法。 不過，不 `CComFakeCriticalSection` 提供重要區段，因此其方法不會執行任何動作。
 
-通常`CComFakeCriticalSection`,您`typedef`可以通過`AutoCriticalSection`名稱`CriticalSection`或 。 當使用[CCom 單線程模型](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)時,這`typedef`兩個名稱`CComFakeCriticalSection`都引用。 使用[CComMultiThread 模型](../../atl/reference/ccommultithreadmodel-class.md)時,它們分別參考[CComAuto 臨界部分](../../atl/reference/ccomautocriticalsection-class.md)和`CComCriticalSection`。
+一般來說，您可以 `CComFakeCriticalSection` 透過或來使用 **`typedef`** `AutoCriticalSection` `CriticalSection` 。 使用[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)時，這兩個名稱都是 **`typedef`** 參考 `CComFakeCriticalSection` 。 使用[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)時，它們會分別參考[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)和 `CComCriticalSection` 。
 
 ## <a name="requirements"></a>需求
 
-**標題:** atlcore.h
+**標頭：** atlcore。h
 
-## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CcomFake關鍵部分::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection：： Init
 
-由於沒有關鍵部分,因此不執行任何操作。
+不會執行任何操作，因為沒有重要區段。
 
 ```
 HRESULT Init() throw();
@@ -59,11 +59,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>傳回值
 
-返回S_OK。
+傳回 S_OK。
 
-## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFake 關鍵部份::鎖定
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection：： Lock
 
-由於沒有關鍵部分,因此不執行任何操作。
+不會執行任何操作，因為沒有重要區段。
 
 ```
 HRESULT Lock() throw();
@@ -71,11 +71,11 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-返回S_OK。
+傳回 S_OK。
 
-## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFake關鍵部分::學期
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection：： Term
 
-由於沒有關鍵部分,因此不執行任何操作。
+不會執行任何操作，因為沒有重要區段。
 
 ```
 HRESULT Term() throw();
@@ -83,11 +83,11 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>傳回值
 
-返回S_OK。
+傳回 S_OK。
 
-## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFake關鍵部分::解鎖
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection：： Unlock
 
-由於沒有關鍵部分,因此不執行任何操作。
+不會執行任何操作，因為沒有重要區段。
 
 ```
 HRESULT Unlock() throw();
@@ -95,7 +95,7 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-返回S_OK。
+傳回 S_OK。
 
 ## <a name="see-also"></a>另請參閱
 

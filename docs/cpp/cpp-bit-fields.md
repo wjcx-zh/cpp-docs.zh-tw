@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221779"
 ---
 # <a name="c-bit-fields"></a>C++ 位元欄位
 
@@ -46,13 +46,13 @@ struct Date {
 ![Date 物件的記憶體配置](../cpp/media/vc38uq1.png "Date 物件的記憶體配置") <br/>
 Date 物件的記憶體配置
 
-請注意，`nYear` 的長度為8位，且會使宣告類型的字邊界溢位（不**帶正負**號的**簡短**）。 因此，它會在新的不**帶正負**號**簡短**的開頭開始。 不需要所有位元欄位都調整至基礎類型的一個物件中；新的單位儲存根據宣告所要求的位元數目進行配置。
+請注意， `nYear` 為8位長，且會溢位已宣告類型的文字界限 **`unsigned short`** 。 因此，它會在新的開頭開始 **`unsigned short`** 。 不需要所有位元欄位都調整至基礎類型的一個物件中；新的單位儲存根據宣告所要求的位元數目進行配置。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 宣告為位元欄位的資料之順序是由低至高位元，如上面的圖所示。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 如果結構的宣告包含未命名且長度為 0 的欄位，如下列範例所示：
 
@@ -75,7 +75,7 @@ struct Date {
 
 位欄位的基礎類型必須是整數類資料類型，如內[建類型](../cpp/fundamental-types-cpp.md)中所述。
 
-如果類型 `const T&` 的初始化運算式是參考 `T`類型之位欄位的左值，則參考不會直接系結至位欄位。 相反地，參考會系結至已初始化的暫存，以保存位欄位的值。
+如果類型之參考的初始化運算式 `const T&` 是參考型別之位欄位的左值 `T` ，則參考不會直接系結至位欄位。 相反地，參考會系結至已初始化的暫存，以保存位欄位的值。
 
 ## <a name="restrictions-on-bit-fields"></a>位元欄位的限制
 
@@ -83,7 +83,7 @@ struct Date {
 
 - 取得位元欄位的位址。
 
-- 初始化具有位欄位的非**const**參考。
+- 初始化 **`const`** 具有位欄位的非參考。
 
 ## <a name="see-also"></a>另請參閱
 

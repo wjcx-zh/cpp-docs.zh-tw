@@ -1,5 +1,5 @@
 ---
-title: event_source （C++ COM 屬性）
+title: event_source （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_source
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e187e57f21e9c94068c0b3396b93deed617fef2a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167065"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232764"
 ---
 # <a name="event_source"></a>event_source
 
@@ -35,7 +35,7 @@ ms.locfileid: "80167065"
 
 - Unmanaged C/C++ 程式碼的`native` (Unmanaged 類別的預設值)。
 
-- COM 程式碼的`com` 。 `type`=`com`時，您必須使用 `coclass`。 此值需要您包含下列標頭檔︰
+- COM 程式碼的`com` 。 您必須使用 `coclass` when `type` = `com` 。 此值需要您包含下列標頭檔︰
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -43,17 +43,17 @@ ms.locfileid: "80167065"
     #include <atlcom.h>
     ```
 
-*optimize*<br/>
-當*type*是 `native`時，您可以指定 `optimize=size`，以指出類別或 `optimize=speed` （預設值）中所有事件有4個位元組的儲存體（最小值），表示有 4 * （事件數目）個位元組的儲存體。
+*最優化*<br/>
+當*type*是時， `native` 您可以指定 `optimize=size` ，表示類別中所有事件有4個位元組的儲存體（最小值），或 `optimize=speed` （預設值）表示有 4 * （事件數目）個位元組的儲存體。
 
 *decorate*<br/>
-當*type*是 `native`時，您可以指定 `decorate=false`，以指出合併（. .mrg）檔案中的展開名稱不應該包含封入類別名稱。 [/Fx](../../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`（預設值）會產生合併檔案中的完整類型名稱。
+當*type*是時， `native` 您可以指定 `decorate=false` ，以指出合併（. .mrg）檔案中的展開名稱不應該包含封入類別名稱。 [/Fx](../../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`（這是預設值），會產生合併檔案中的完整類型名稱。
 
 ## <a name="remarks"></a>備註
 
 **event_source** C++ 屬性指定要套用它的類別或結構將是事件來源。
 
-**event_source** 是與 [event_receiver](event-receiver.md) 屬性和 [__event](../../cpp/event.md) 關鍵字搭配使用。 使用 `event_receiver` 建立事件接收器。 在事件來源中的方法上使用 **__event** ，將這些方法指定為事件。
+**event_source** 是與 [event_receiver](event-receiver.md) 屬性和 [__event](../../cpp/event.md) 關鍵字搭配使用。 使用 `event_receiver` 來建立事件接收器。 **`__event`** 在事件來源內的方法上使用，將這些方法指定為事件。
 
 > [!NOTE]
 > 樣板類別或結構不能包含事件。
@@ -64,10 +64,10 @@ ms.locfileid: "80167065"
 
 |||
 |-|-|
-|**適用於**|**class**、 **struct**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|否|
-|**必要屬性**|`type`=時的**coclass** `com`|
-|**無效屬性**|None|
+|**必要的屬性**|**coclass** when`type`=`com`|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

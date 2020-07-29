@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-ms.openlocfilehash: 229083f4569647bd65d1ce7e640f753a9418371d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ff88eacc8b692436bc5c7dfa3a01340527862809
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222351"
 ---
-# <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible 類別
+# <a name="is_nothrow_copy_constructible-class"></a>is_nothrow_copy_constructible 類別
 
-測試類型是否具有 **nothrow** 複製建構函式。
+測試類型是否具有複製的函式 **`nothrow`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -31,11 +31,11 @@ struct is_nothrow_copy_constructible;
 
 ## <a name="remarks"></a>備註
 
-如果類型*Ty*具有 nothrow 複製的程式, 則類型述詞的實例為 true, 否則為 false。
+如果類型*Ty*具有 nothrow 複製的程式，則類型述詞的實例為 true，否則為 false。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

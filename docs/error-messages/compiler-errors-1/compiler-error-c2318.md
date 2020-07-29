@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2318
 ms.assetid: 169e30b9-df78-46cb-90bf-576ad3c32fd4
-ms.openlocfilehash: 0af0b0e0fbf8894e5f29482a80c05c9ed1ce141d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5f608d0407c24bd01ed7b80dbef873dd30662661
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221246"
 ---
 # <a name="compiler-error-c2318"></a>編譯器錯誤 C2318
 
 沒有和 catch 處理常式關聯的 try 區塊
 
-已定義 `catch` 處理常式，但它前面沒有 `try` 區塊。
+已 **`catch`** 定義處理常式，但前面沒有 **`try`** 區塊。
 
 下列範例會產生 C2318：
 
@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-可能的解決方案：
+可能的解決方式：
 
 ```cpp
 // C2318b.cpp

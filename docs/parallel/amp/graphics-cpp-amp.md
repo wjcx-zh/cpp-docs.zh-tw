@@ -2,12 +2,12 @@
 title: 圖形 (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 393fadbba90b135e6394cf848668b4957a6d7ce2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404830"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182807"
 ---
 # <a name="graphics-c-amp"></a>圖形 (C++ AMP)
 
@@ -21,22 +21,22 @@ C++ AMP 包含[Concurrency：： graphics](../../parallel/amp/reference/concurre
 
 ## <a name="the-norm-and-unorm-types"></a>norm 及 unorm 類型
 
-`norm`和 `unorm` 類型為純量類型，可限制**float**值的範圍，這稱為*固定*。 這些類型可以從其他純量類型明確建構。 在轉換時，值會先轉換成**float** ，然後壓制至標準 [-1.0，1.0] 或 unorm [0.0，1.0] 所允許的個別區域。 從 +/- 無限大轉型會傳回 +/-1。 並未定義從 NaN 轉型。 norm 可以從 unorm 隱含建構，而且資料不會遺失。 將運算子隱含轉換為 float 是在這些類型上定義。 二元運算子是在這些類型與其他內建純量類型（例如**float**和**int**： +、-、 \* 、/、= =、！ =、>、 \<, > =、<=）之間定義。 也支援複合指派運算子： + =、-=、 \* =、/=。 一元負運算子 (-) 則是針對 norm 類別定義。
+`norm`和 `unorm` 類型為純量類型，可限制值的範圍， **`float`** 這稱為*固定*。 這些類型可以從其他純量類型明確建構。 在轉型中，值會先轉換為 **`float`** ，然後再壓制至標準 [-1.0，1.0] 或 unorm [0.0，1.0] 所允許的個別區域。 從 +/- 無限大轉型會傳回 +/-1。 並未定義從 NaN 轉型。 norm 可以從 unorm 隱含建構，而且資料不會遺失。 將運算子隱含轉換為 float 是在這些類型上定義。 二元運算子是在這些類型與其他內建純量類型（例如和）之間定義 **`float`** **`int`** ： +、-、 \* 、/、= =、！ =、>、 \<, > =、<=。 也支援複合指派運算子： + =、-=、 \* =、/=。 一元負運算子 (-) 則是針對 norm 類別定義。
 
 ## <a name="short-vector-library"></a>短向量庫
 
-「短向量」程式庫提供 HLSL 中定義之[向量類型](https://go.microsoft.com/fwlink/p/?linkid=248500)的一些功能，而且通常用來定義材質。 短向量是一種資料結構，可保存相同類型的一到四個值。 支援的類型為**double**、 **float**、 **int**、 `norm` 、 `uint` 和 `unorm` 。 下表顯示類型名稱。 針對每個型別，還有一個對應的**typedef** ，名稱中沒有底線。 具有底線的類型位於[Concurrency：： Graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)中。 沒有底線的型別是在[Concurrency：： graphics：:d Irect3d 命名空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)中，因此清楚地與類似名稱的基本類型（例如 **__int8**和 **__int16**）分開。
+「短向量」程式庫提供 HLSL 中定義之[向量類型](https://go.microsoft.com/fwlink/p/?linkid=248500)的一些功能，而且通常用來定義材質。 短向量是一種資料結構，可保存相同類型的一到四個值。 支援的類型為 **`double`** 、 **`float`** 、 **`int`** 、 `norm` 、 `uint` 和 `unorm` 。 下表顯示類型名稱。 對於每個類型，也有對應 **`typedef`** 的，名稱中沒有底線。 具有底線的類型位於[Concurrency：： Graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)中。 沒有底線的型別是在[Concurrency：： graphics：:d Irect3d 命名空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)中，因此可以清楚地與類似名稱的基本類型（例如和）分開 **`__int8`** **`__int16`** 。
 
 ||Length 2|長度3|長度4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
-|float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
+|FLOAT|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
 |int|int_2<br /><br /> int2|int_3<br /><br /> int3|int_4<br /><br /> int4|
 |norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|
 |uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
 |unorm|unorm_2<br /><br /> unorm2|unorm_3<br /><br /> unorm3|unorm_4<br /><br /> unorm4|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 如果在兩個短向量之間定義了一個運算子，則該運算子也會在短向量和純量之間定義。 此外，下列其中一個條件必須成立：
 
@@ -63,7 +63,7 @@ C++ AMP 包含[Concurrency：： graphics](../../parallel/amp/reference/concurre
 
 許多 GPU 都有針對擷取像素和材質以及呈現影像和紋理最佳化的硬體與快取。 [材質 \<T,N> ](../../parallel/amp/reference/texture-class.md)類別是材質物件的容器類別，會公開這些 gpu 的材質功能。 材質可以是：
 
-- **Int**、 `uint` 、 **float**、 **double**、 `norm` 或純量 `unorm` 。
+- **`int`**、 `uint` 、、 **`float`** **`double`** 、 `norm` 或 `unorm` 純量。
 
 - 擁有兩個或四個元件的短向量。 唯一的例外狀況是 `double_4`，它不可使用。
 
@@ -214,7 +214,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 - T 只有一個純量元件  (不允許短向量)。
 
-- T 不是**double**、 `norm` 或 `unorm` 。
+- T 不是 **`double`** 、 `norm` 或 `unorm` 。
 
 - `texture::bits_per_scalar_element` 屬性為 32。
 
@@ -342,7 +342,7 @@ void declareTextureViews()
 
 `texture_view` 的元素類型 (其 const 性質以及擁有的元件數目) 也扮演著決定檢視是否支援紋理取樣及如何存取 Mipmap 層次的重要角色：
 
-|類型|單元|讀取|寫入|取樣|Mipmap 存取|
+|類型|元件|讀取|寫入|取樣|Mipmap 存取|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|是|否 (1)|是|是，可索引。 範圍於具現化時決定。|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|是<br /><br /> 否（2）|是<br /><br /> 是|否 (1)<br /><br /> 否 (1)|是，一個層次。 層次於具現化時決定。<br /><br /> 是，一個層次。 層次於具現化時決定。|

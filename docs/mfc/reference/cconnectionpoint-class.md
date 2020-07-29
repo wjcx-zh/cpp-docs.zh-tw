@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: ce72c156ab31b742a42d2960923fc56afff656c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f428ec597e0e4a56788fae2455eff80b286fda39
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87183080"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint 類別
 
@@ -45,50 +45,50 @@ class CConnectionPoint : public CCmdTarget
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[連接點:C 連接點](#cconnectionpoint)|建構 `CConnectionPoint` 物件。|
+|[CConnectionPoint::CConnectionPoint](#cconnectionpoint)|建構 `CConnectionPoint` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[C 連接點:抓取連線](#getconnections)|檢索連接映射中的所有連接點。|
-|[C 連接點:抓取容器](#getcontainer)|檢索擁有連接映射的控制件的容器。|
-|[連接點:取得 IID](#getiid)|檢索連接點的介面 ID。|
-|[連接點::取得最大連線](#getmaxconnections)|檢索控制項支援的最大連接點數。|
-|[C 連接點::取得下一個連線](#getnextconnection)|檢索指向*pos*處的連接元素的指標。|
-|[連接點::抓取起始位置](#getstartposition)|通過返回可以傳遞給`GetNextConnection`調用的定位值來啟動映射反覆運算。|
-|[連接點::上建議](#onadvise)|建立或斷開連接時由框架調用。|
-|[連接點::查詢Sink介面](#querysinkinterface)|檢索指向請求的接收器介面的指標。|
+|[CConnectionPoint::GetConnections](#getconnections)|抓取連接對應中的所有連接點。|
+|[CConnectionPoint::GetContainer](#getcontainer)|抓取擁有連接對應之控制項的容器。|
+|[CConnectionPoint::GetIID](#getiid)|抓取連接點的介面識別碼。|
+|[CConnectionPoint：： GetMaxConnections](#getmaxconnections)|抓取控制項支援的最大連接點數目。|
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|抓取位於*pos*之 connection 元素的指標。|
+|[CConnectionPoint::GetStartPosition](#getstartposition)|藉由傳回可傳遞至呼叫的位置值來啟動對應反復專案 `GetNextConnection` 。|
+|[CConnectionPoint::OnAdvise](#onadvise)|建立或中斷連接時由架構呼叫。|
+|[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|抓取所要求接收介面的指標。|
 
 ## <a name="remarks"></a>備註
 
-與用於實現和公開 OLE 控制元件功能的正常 OLE 介面不同,連接點實現了一個傳出介面,該介面能夠對其他物件(如觸發事件和更改通知)啟動操作。
+不同于用來實並公開 OLE 控制項功能的一般 OLE 介面，連接點會執行可對其他物件起始動作（例如引發事件和變更通知）的輸出介面。
 
-連接由兩部分組成:調用介面的物件稱為"源",實現介面的對象稱為"接收器"。 通過公開連接點,源允許接收器建立與自身的連接。 通過連接點機制,源物件獲取指向接收器實現一組成員函數的指標。 例如,要觸發由接收器實現的事件,源可以調用接收器實現的適當方法。
+連接是由兩個部分組成：呼叫介面的物件，稱為「來源」，而執行介面的物件稱為「接收」。 藉由公開連接點，來源可讓接收與本身建立連接。 透過連接點機制，來源物件會取得一組成員函式的接收的指標。 例如，若要引發接收器所執行的事件，來源可以呼叫接收器的適當方法來執行。
 
-預設情況下,`COleControl`派生類實現兩個連接點:一個用於事件,一個用於屬性更改通知。 這些連接分別用於事件觸發和屬性值更改時通知接收器(例如控制項的容器)。 還支援 OLE 控制件實現其他連接點。 對於在控制類中實現的每個附加連接點,必須聲明實現連接點的"連接部件"。 如果實現一個或多個連接點,還需要在控制類中聲明單個"連接映射"。
+根據預設， `COleControl` 衍生的類別會執行兩個連接點：一個用於事件，另一個用於屬性變更通知。 這些連接分別用於引發事件，以及在屬性值已變更時通知接收器（例如，控制項的容器）。 此外，也提供 OLE 控制項的支援，以執行其他連接點。 針對在控制項類別中所實的每個額外連接點，您必須宣告可執行連接點的「連接元件」。 如果您執行一或多個連接點，您也必須在控制項類別中宣告單一「連接對應」。
 
-下面的範例演示了`Sample`OLE 控制項的簡單連接映射和一個連接點,由兩個程式碼片段組成:第一部分聲明連接映射和點;第二部分聲明連接映射和點;第二部分聲明連接映射和點。第二個實現此映射和點。 第一個片段插入到控制類的聲明中,在**受保護的**部分下:
+下列範例示範一個簡單的連接對應和一個 OLE 控制項的連接點 `Sample` ，其中包含兩個程式碼片段：第一個部分會宣告連接對應和點，第二個部分則會執行這個對應和點。 第一個片段會插入至控制項類別的宣告中，位於區段底下 **`protected`** ：
 
 [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]
 
-BEGIN_CONNECTION_PART宏和END_CONNECTION_PART宏聲明實現此特定連接點的`XSampleConnPt`嵌入式類`CConnectionPoint`( 派生自 )。 如果要重寫任何`CConnectionPoint`成員函數,或添加您自己的成員函數,請在這兩個宏之間聲明它們。 例如,CONNECTION_IID宏在這兩個宏之間`CConnectionPoint::GetIID`放置時將覆蓋成員函數。
+BEGIN_CONNECTION_PART 和 END_CONNECTION_PART 宏會宣告可執行 `XSampleConnPt` `CConnectionPoint` 這個特定連接點的內嵌類別（衍生自）。 如果您想要覆寫任何成員函式 `CConnectionPoint` ，或加入您自己的成員函式，請在這兩個宏之間宣告它們。 例如，在 `CConnectionPoint::GetIID` 這兩個宏之間放置時，CONNECTION_IID 宏會覆寫成員函式。
 
-第二個程式碼片段插入到實現檔 (。控制類的 CPP)。 此代碼實現連接映射,其中包括其他連接點: `SampleConnPt`
+第二個程式碼片段會插入至執行檔（。CPP）的控制項類別。 此程式碼會執行連接對應，其中包括其他連接點 `SampleConnPt` ：
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]
 
-插入這些程式片段後,範例 OLE 控制項將公開介面`ISampleSink`的連接點。
+插入這些程式碼片段之後，範例 OLE 控制項會公開介面的連接點 `ISampleSink` 。
 
-通常,連接點支援"多播",即廣播到連接到同一介面的多個接收器的能力。 以下片段的簡用如何透過連接點上的每個接收器的發運算來實現多播:
+一般而言，連接點支援「多播」，這是廣播到連接到相同介面之多個接收器的能力。 下列程式碼片段示範如何逐一查看連接點上的每個接收來完成多播：
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-這個範例取得連接`SampleConnPt`點上的目前連線集,並呼叫`CConnectionPoint::GetConnections`。 然後,它通過連接進行遍接,並調用`ISampleSink::SinkFunc`每個活動連接。
+這個範例會使用的呼叫，來抓取連接點上目前的連接集 `SampleConnPt` `CConnectionPoint::GetConnections` 。 然後，它會逐一查看連接，並 `ISampleSink::SinkFunc` 在每個使用中的連接上呼叫。
 
-有關`CConnectionPoint`使用的詳細資訊,請參考文章[連接點](../../mfc/connection-points.md)。
+如需有關使用的詳細資訊 `CConnectionPoint` ，請參閱[連接點](../../mfc/connection-points.md)一文。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -102,7 +102,7 @@ BEGIN_CONNECTION_PART宏和END_CONNECTION_PART宏聲明實現此特定連接點�
 
 **標頭：** afxdisp.h
 
-## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>連接點:C 連接點
+## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint
 
 建構 `CConnectionPoint` 物件。
 
@@ -110,9 +110,9 @@ BEGIN_CONNECTION_PART宏和END_CONNECTION_PART宏聲明實現此特定連接點�
 CConnectionPoint();
 ```
 
-## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a>C 連接點:抓取連線
+## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint::GetConnections
 
-調用此函數以檢索連接點的所有活動連接。
+呼叫此函式可取得連接點的所有作用中連接。
 
 ```
 const CPtrArray* GetConnections();
@@ -120,11 +120,11 @@ const CPtrArray* GetConnections();
 
 ### <a name="return-value"></a>傳回值
 
-指向活動連接(接收器)陣列的指標。 陣列中的某些指標可能為 NULL。 此陣列中的每個非 NULL 指標都可以使用強制轉換運算符安全地轉換為到接收器介面的指標。
+作用中連接（接收）陣列的指標。 陣列中的某些指標可能是 Null。 這個陣列中的每個非 Null 指標都可以使用 cast 運算子安全地轉換成接收介面的指標。
 
-## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a>C 連接點:抓取容器
+## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint::GetContainer
 
-由框架調用以檢索`IConnectionPointContainer`連接點。
+由架構呼叫，以取得 `IConnectionPointContainer` 連接點的。
 
 ```
 virtual LPCONNECTIONPOINTCONTAINER GetContainer();
@@ -132,15 +132,15 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功,則指向容器的指標;否則 NULL。
+如果成功，則為容器的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-此函數通常由BEGIN_CONNECTION_PART宏實現。
+此函式通常會由 BEGIN_CONNECTION_PART 宏來執行。
 
-## <a name="cconnectionpointgetiid"></a><a name="getiid"></a>連接點:取得 IID
+## <a name="cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint::GetIID
 
-由框架調用以檢索連接點的介面 ID。
+由架構呼叫以抓取連接點的介面識別碼。
 
 ```
 virtual REFIID GetIID() = 0;
@@ -148,15 +148,15 @@ virtual REFIID GetIID() = 0;
 
 ### <a name="return-value"></a>傳回值
 
-對連接點介面 ID 的引用。
+連接點之介面識別碼的參考。
 
 ### <a name="remarks"></a>備註
 
-重寫此函數以返回此連接點的介面 ID。
+覆寫這個函式，以傳回這個連接點的介面識別碼。
 
-## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>連接點::取得最大連線
+## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint：： GetMaxConnections
 
-由框架調用以檢索連接點支援的最大連接數。
+由架構呼叫，以取得連接點所支援的最大連接數目。
 
 ```
 virtual int GetMaxConnections();
@@ -164,17 +164,17 @@ virtual int GetMaxConnections();
 
 ### <a name="return-value"></a>傳回值
 
-控制項支援的最大連接數,如果沒有限制,則為 -1。
+控制項支援的最大連接數目，如果沒有限制則為-1。
 
 ### <a name="remarks"></a>備註
 
-默認實現返回 -1,表示沒有限制。
+預設的執行會傳回-1，表示沒有限制。
 
-如果要限制可連接到控制項的接收器數,請覆蓋此函數。
+如果您想要限制可以連接到您的控制項的接收數目，請覆寫此函式。
 
-## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>C 連接點::取得下一個連線
+## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint::GetNextConnection
 
-檢索指向*pos*處的連接元素的指標。
+抓取位於*pos*之 connection 元素的指標。
 
 ```
 LPUNKNOWN GetNextConnection(POSITION& pos) const;
@@ -182,24 +182,24 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 ### <a name="parameters"></a>參數
 
-*Pos*<br/>
-指定對上一次`GetNextConnection`或[GetStart 定位](#getstartposition)呼叫傳回的定位值的引用。
+*採購*<br/>
+指定前一個 `GetNextConnection` 或[GetStartPosition](#getstartposition)呼叫所傳回之位置值的參考。
 
 ### <a name="return-value"></a>傳回值
 
-指向*pos*指定的連接元素的指標 , 或 NULL。
+*Pos*所指定之 connection 元素的指標，或為 Null。
 
 ### <a name="remarks"></a>備註
 
-此功能對於反覆運算連接映射中的所有元素最有用。 反覆運算時,跳過從此功能返回的任何 NUL。
+此函式最適合用於逐一查看連接對應中的所有元素。 反覆運算時，略過此函式所傳回的任何 Null。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a>連接點::抓取起始位置
+## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition
 
-通過返回可以傳遞到[GetNextConnect](#getnextconnection)調用的定位值來啟動地圖反覆運算。
+藉由傳回可傳遞至[GetNextConnection](#getnextconnection)呼叫的位置值，來啟動對應反復專案。
 
 ```
 POSITION GetStartPosition() const;
@@ -207,19 +207,19 @@ POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>傳回值
 
-指示反覆運算地圖的起始位置的定位值;如果地圖為空,則為 NULL。
+位置值，表示反覆運算對應的開始位置。如果對應是空的，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-反覆運算序列是不可預測的;因此,「地圖中的第一個元素」沒有特殊的意義。
+反復專案序列無法預測;因此，「對應」中的「第一個元素」沒有特殊意義。
 
 ### <a name="example"></a>範例
 
-  請參考[CConnectionPoint 的範例:抓取Next連線](#getnextconnection)。
+  請參閱[CConnectionPoint：： GetNextConnection](#getnextconnection)的範例。
 
-## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a>連接點::上建議
+## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint::OnAdvise
 
-當建立或斷開連接時由框架調用。
+在建立或中斷連接時由架構呼叫。
 
 ```
 virtual void OnAdvise(BOOL bAdvise);
@@ -227,18 +227,18 @@ virtual void OnAdvise(BOOL bAdvise);
 
 ### <a name="parameters"></a>參數
 
-*b 建議*<br/>
-TRUE,如果正在建立連接;否則 FALSE。
+*bAdvise*<br/>
+若正在建立連接，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
 預設實作不做任何動作。
 
-如果要在接收器連接到連接點或斷開連接點時發出通知,請覆蓋此函數。
+如果您想要在接收器連接到連接點或中斷連線時發出通知，請覆寫此函式。
 
-## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>連接點::查詢Sink介面
+## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface
 
-檢索指向請求的接收器介面的指標。
+抓取所要求接收介面的指標。
 
 ```
 virtual HRESULT QuerySinkInterface(
@@ -249,14 +249,14 @@ virtual HRESULT QuerySinkInterface(
 ### <a name="parameters"></a>參數
 
 *pUnkSink*<br/>
-要請求的接收器介面的標識符。
+所要求之接收介面的識別碼。
 
 *ppInterface*<br/>
-指向*pUnkSink*標識的介面指標的指標。 如果物件不支援此介面,\**則 ppInterface*設定為 NULL。
+*PUnkSink*所識別之介面指標的指標。 如果物件不支援這個介面， \* *ppInterface*會設定為 Null。
 
 ### <a name="return-value"></a>傳回值
 
-標準 HRESULT 值。
+標準的 HRESULT 值。
 
 ## <a name="see-also"></a>另請參閱
 

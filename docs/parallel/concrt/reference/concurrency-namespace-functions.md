@@ -33,12 +33,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 2eb5b908d66b221e9efae20ba04e2963805798ab
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: 86324d126fa1c3b659e6500579c4a1d220874094
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446602"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182742"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 
@@ -110,7 +110,7 @@ bool asend(
 
 ### <a name="return-value"></a>傳回值
 
-如果在方法傳回之前已接受訊息，**則為 true** ，否則為**false** 。
+**`true`** 如果在方法傳回之前已接受訊息，則 **`false`** 為，否則為。
 
 ### <a name="remarks"></a>備註
 
@@ -199,7 +199,7 @@ IResourceManager* __cdecl CreateResourceManager();
 
 ## <a name="create_task"></a><a name="create_task"></a>create_task
 
-建立 PPL [task](task-class.md)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。
+建立 PPL [task](task-class.md)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 它主要是為了方便起見而提供，因為它允許在 **`auto`** 建立工作時使用關鍵字。
 
 ```cpp
 template<typename T>
@@ -408,7 +408,7 @@ inline void interruption_point();
 
 ## <a name="is_current_task_group_canceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
-傳回指示，以說明目前正以內嵌方式在目前內容上執行的工作群組是否正在取消 (或即將取消)。 請注意，如果目前沒有任何工作群組以內嵌方式在目前的內容上執行，會傳回 `false`。
+傳回指示，以說明目前正以內嵌方式在目前內容上執行的工作群組是否正在取消 (或即將取消)。 請注意，如果目前的內容上沒有任何工作組正在執行內嵌， **`false`** 則會傳回。
 
 ```cpp
 bool __cdecl is_current_task_group_canceling();
@@ -416,7 +416,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>傳回值
 
-如果正在取消目前正在執行的工作組，**則為 true** ，否則為**false** 。
+**`true`** 如果正在取消目前正在執行的工作組，則為， **`false`** 否則為。
 
 ### <a name="remarks"></a>備註
 
@@ -679,7 +679,7 @@ C + + 標準程式庫相容記憶體配置器的類型。
 C + + 標準程式庫相容記憶體配置器的實例。
 
 *_Func*<br/>
-使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
+使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞接受兩個引數，並 **`true`** 在滿足和 **`false`** 不滿意時傳回。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
 
 *_Chunk_size*<br/>
 要分割成兩個進行並行執行的最小區塊大小。
@@ -767,7 +767,7 @@ void parallel_for(
 要在每個反復專案執行的函式。 這可能是 lambda 運算式、函式指標，或任何支援具有簽章的函式呼叫運算子版本的物件 `void operator()(_Index_type)` 。
 
 *_Part*<br/>
-Partitioner 物件的參考。 引數可以是 `const` [auto_partitioner](auto-partitioner-class.md) `&` 、 `const` [static_partitioner](static-partitioner-class.md) `&` 、simple_partitioner 或 affinity_partitioner 中的其中一個， `const` [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用[affinity_partitioner](affinity-partitioner-class.md)物件，則參考必須是非 const 的左值參考，如此一來，演算法就可以儲存狀態，供未來迴圈重複使用。
+Partitioner 物件的參考。 引數可以是 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` 、 **`const`** [static_partitioner](static-partitioner-class.md) `&` 、simple_partitioner 或 affinity_partitioner 中的其中一個， **`const`** [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用[affinity_partitioner](affinity-partitioner-class.md)物件，則參考必須是非 const 的左值參考，如此一來，演算法就可以儲存狀態，供未來迴圈重複使用。
 
 ### <a name="remarks"></a>備註
 
@@ -811,7 +811,7 @@ void parallel_for_each(
 套用至範圍中每個元素的使用者定義函數物件。
 
 *_Part*<br/>
-Partitioner 物件的參考。 引數可以是 `const` [auto_partitioner](auto-partitioner-class.md) `&` 、 `const` [static_partitioner](static-partitioner-class.md) `&` 、simple_partitioner 或 affinity_partitioner 中的其中一個， `const` [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用[affinity_partitioner](affinity-partitioner-class.md)物件，則參考必須是非 const 的左值參考，如此一來，演算法就可以儲存狀態，供未來迴圈重複使用。
+Partitioner 物件的參考。 引數可以是 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` 、 **`const`** [static_partitioner](static-partitioner-class.md) `&` 、simple_partitioner 或 affinity_partitioner 中的其中一個， **`const`** [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用[affinity_partitioner](affinity-partitioner-class.md)物件，則參考必須是非 const 的左值參考，如此一來，演算法就可以儲存狀態，供未來迴圈重複使用。
 
 ### <a name="remarks"></a>備註
 
@@ -1209,7 +1209,7 @@ inline void parallel_sort(
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
 *_Func*<br/>
-使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
+使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞接受兩個引數，並 **`true`** 在滿足和 **`false`** 不滿意時傳回。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
 
 *_Chunk_size*<br/>
 將分割成兩個以平行執行的區塊大小下限。
@@ -1325,7 +1325,7 @@ first2,
 套用至來源範圍中每個項目的使用者定義一元函式物件。
 
 *_Part*<br/>
-Partitioner 物件的參考。 引數可以是 `const` [auto_partitioner](auto-partitioner-class.md) `&` 、 `const` [static_partitioner](static-partitioner-class.md) `&` 、simple_partitioner 或 affinity_partitioner 中的其中一個， `const` [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用[affinity_partitioner](affinity-partitioner-class.md)物件，則參考必須是非 const 的左值參考，如此一來，演算法就可以儲存狀態，供未來迴圈重複使用。
+Partitioner 物件的參考。 引數可以是 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` 、 **`const`** [static_partitioner](static-partitioner-class.md) `&` 、simple_partitioner 或 affinity_partitioner 中的其中一個， **`const`** [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用[affinity_partitioner](affinity-partitioner-class.md)物件，則參考必須是非 const 的左值參考，如此一來，演算法就可以儲存狀態，供未來迴圈重複使用。
 
 *first2*<br/>
 輸入迭代器，用於定址第二個來源範圍中要執行之第一個項目的位置。
@@ -1452,7 +1452,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="return-value"></a>傳回值
 
-如果已接受訊息，**則為 true** ，否則為**false** 。
+**`true`** 如果已接受訊息，則 **`false`** 為，否則為。
 
 ### <a name="remarks"></a>備註
 
@@ -1605,7 +1605,7 @@ void Trace_agents_register_name(
 
 ## <a name="try_receive"></a><a name="try_receive"></a>try_receive
 
-一般嘗試-接收實作，可讓內容尋找來自特定一個來源的資料，並且篩選所接受的值。 如果資料尚未就緒，此方法將會傳回**false**。
+一般嘗試-接收實作，可讓內容尋找來自特定一個來源的資料，並且篩選所接受的值。 如果資料尚未就緒，方法會傳回 **`false`** 。
 
 ```cpp
 template <class T>
@@ -1643,7 +1643,7 @@ bool try_receive(
 
 ### <a name="return-value"></a>傳回值
 
-`bool`值，指出承載是否放在中 `_value` 。
+**`bool`** 值，指出承載是否放在中 `_value` 。
 
 ### <a name="remarks"></a>備註
 
@@ -1696,7 +1696,7 @@ auto when_all(
 
 ### <a name="return-value"></a>傳回值
 
-當所有輸入工作都順利完成時，會順利完成的工作。 如果輸入工作屬於類型 `T`，此函式的輸出將會是 `task<std::vector<T>>`。 如果輸入工作屬於類型 `void`，則輸出工作也會是 `task<void>`。
+當所有輸入工作都順利完成時，會順利完成的工作。 如果輸入工作屬於類型 `T`，此函式的輸出將會是 `task<std::vector<T>>`。 如果輸入工作的類型為 **`void`** ，則輸出工作也會是 `task<void>` 。
 
 ### <a name="remarks"></a>備註
 
@@ -1749,7 +1749,7 @@ auto when_any(
 
 ### <a name="return-value"></a>傳回值
 
-一項工作會在所有輸入工作都順利完成時，順利完成。 如果輸入工作的類型為 `T`，則這個函式的輸出會是 `task<std::pair<T, size_t>>>`，其中配對的第一個項目是完成工作的結果，而第二個項目是已完成工作的索引。 如果輸入工作的類型為 `void`，則輸出是 `task<size_t>`，其中結果是完成工作的索引。
+一項工作會在所有輸入工作都順利完成時，順利完成。 如果輸入工作的類型為 `T`，則這個函式的輸出會是 `task<std::pair<T, size_t>>>`，其中配對的第一個項目是完成工作的結果，而第二個項目是已完成工作的索引。 如果輸入工作的類型為 **`void`** ，則輸出會是 `task<size_t>` ，其中的結果會是完成工作的索引。
 
 ### <a name="remarks"></a>備註
 
@@ -1757,6 +1757,6 @@ auto when_any(
 
 如需詳細資訊，請參閱工作[平行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)

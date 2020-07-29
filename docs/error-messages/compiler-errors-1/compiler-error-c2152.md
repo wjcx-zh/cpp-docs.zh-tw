@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2152
 ms.assetid: a9ea2b0c-d55d-41c7-ba9f-dd75592ffc8a
-ms.openlocfilehash: 10178d2cd40af60603b908a9351b8e14d12c5570
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f2949aba53ba7a2e977405cf2e03c22f3aeac646
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210029"
 ---
 # <a name="compiler-error-c2152"></a>編譯器錯誤 C2152
 
 ' identifier '：具有不同屬性之函式的指標
 
-具有一個呼叫慣例（`__cdecl`、`__stdcall`或 `__fastcall`）之函式的指標，會指派給具有另一個呼叫慣例的函式指標。
+具有一個呼叫慣例（、或）之函式的指標 **`__cdecl`** **`__stdcall`** **`__fastcall`** ，會指派給具有另一個呼叫慣例的函式指標。

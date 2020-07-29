@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 60e921c17cd2b3f9462df77094162bb3f1eff379
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74739606"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206675"
 ---
 # <a name="compiler-error-c2786"></a>編譯器錯誤 C2786
 
 ' type '： __uuidof 的運算元無效
 
-[__Uuidof](../../cpp/uuidof-operator.md)運算子會使用已附加 GUID 的使用者自訂類型，或此類使用者定義類型的物件。  可能的原因:
+[__Uuidof](../../cpp/uuidof-operator.md)運算子會使用已附加 GUID 的使用者自訂類型，或此類使用者定義類型的物件。  可能的原因：
 
 1. 引數不是使用者定義型別。
 
-1. `__uuidof` 無法從引數解壓縮 GUID。
+1. **`__uuidof`** 無法從引數解壓縮 GUID。
 
 下列範例會產生 C2786：
 

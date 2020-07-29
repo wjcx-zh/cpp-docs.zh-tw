@@ -7,18 +7,18 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-ms.openlocfilehash: 6dec4ee53cd840c47d76ac0579daca710b0eeb68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81fc3ae7a732171c6bddff9f584976dd747372b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358414"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233661"
 ---
 # <a name="overview-of-member-functions"></a>成員函式概觀
 
-成員函式不是靜態就是非靜態。 靜態成員函數的行為不同於其他成員函數,因為靜態成員函數沒有隱式**此**參數。 非靜態成員函數具有**此**指標。 無論是靜態或非靜態的成員函式，都可以在類別宣告之內或之外定義。
+成員函式不是靜態就是非靜態。 靜態成員函式的行為與其他成員函式不同，因為靜態成員函數沒有隱含 **`this`** 引數。 非靜態成員函式具有 **`this`** 指標。 無論是靜態或非靜態的成員函式，都可以在類別宣告之內或之外定義。
 
-如果成員函式是在類別宣告內定義，則會將它視為內嵌函式，而且不需要使用其類別名稱限定函式名稱。 儘管在類聲明中定義的函數已被視為內聯函數,但您可以使用**內聯**關鍵字來記錄代碼。
+如果成員函式是在類別宣告內定義，則會將它視為內嵌函式，而且不需要使用其類別名稱限定函式名稱。 雖然在類別宣告內定義的函式已視為內嵌函式，但您可以使用 **`inline`** 關鍵字來記錄程式碼。
 
 以下是在類別宣告內宣告函式的範例：
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-如果成員函數的定義在類聲明之外,則僅當成員函數顯式聲明為**內聯**時,它才會被視為內聯函數。 此外，定義中的函式名稱必須使用範圍解析運算子 (`::`) 以其類別名稱加以限定。
+如果成員函式的定義是在類別宣告之外，則只有在明確宣告為時，才會將它視為內嵌函數 **`inline`** 。 此外，定義中的函式名稱必須使用範圍解析運算子 (`::`) 以其類別名稱加以限定。
 
 下列範例與上述 `Account` 類別宣告相同，唯一的差異在於 `Deposit` 函式是在類別宣告之外定義：
 

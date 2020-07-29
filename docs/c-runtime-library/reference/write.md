@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916700"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211615"
 ---
 # <a name="_write"></a>_write
 
@@ -68,7 +68,7 @@ int _write(
 
 如果檔案是在文字模式中開啟，則每個換行字元都會以輸出中的換行傳回分行符號來取代。 取代並不會影響傳回值。
 
-當以 Unicode 轉譯模式開啟檔案時（例如，如果使用 **_open**或 **_sopen**開啟*fd* ，且包含 **_O_WTEXT**的模式參數） **_O_U16TEXT**] 或 [ **_O_U8TEXT**]，或者，如果是使用**fopen**和包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數來開啟，或如果使用 **_setmode**將模式變更為 Unicode 轉譯模式，則會將*buffer*解讀為包含**utf-16**資料之**wchar_t**陣列的指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+當以 Unicode 轉譯模式開啟檔案時（例如，如果使用 **_open**或 **_sopen**開啟*fd* ，且包含 **_O_WTEXT**的模式參數） **_O_U16TEXT**] 或 [ **_O_U8TEXT**]，或者，如果它是使用**fopen**和包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數來開啟，或如果使用 **_setmode**將模式變更為 Unicode 轉譯模式，則會將*buffer*解讀為 **`wchar_t`** 包含**utf-16**資料之陣列的指標。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
 ## <a name="remarks"></a>備註
 
@@ -146,7 +146,7 @@ Wrote 36 bytes to file.
 
 ## <a name="see-also"></a>另請參閱
 
-[低層級 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低層級 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

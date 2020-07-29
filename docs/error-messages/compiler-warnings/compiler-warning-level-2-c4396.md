@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161811"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206038"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>編譯器警告 (層級 2) C4396
 
@@ -19,13 +19,13 @@ ms.locfileid: "80161811"
 
 函式樣板的特製化不能指定任何 [內嵌](../../cpp/inline-functions-cpp.md) 規範。 編譯器會發出警告 C4396 並忽略內嵌規範。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
-- 請從 Friend 函式宣告移除 `inline`、 `__inline`或 `__forceinline` 規範。
+- **`inline`** **`__inline`** **`__forceinline`** 從 friend 函式宣告中移除、或規範。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例顯示無效的 Friend 函式宣告與 `inline` 規範。
+下列程式碼範例顯示不正確 friend 函式宣告與 **`inline`** 規範。
 
 ```cpp
 // C4396.cpp

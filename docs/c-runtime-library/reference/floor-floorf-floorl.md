@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506997"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218674"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -83,11 +83,11 @@ long double floorl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫採用並傳回**浮點**和**長****雙精度**值的**floor**多載。 在 C 程式中， **floor**一律會採用並傳回**雙精度浮點數**。
+C + + 允許多載，因此您可以呼叫採用並傳回和值之**樓層**的多載 **`float`** **`long double`** 。 在 C 程式中， **floor**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 |函式|必要的標頭|
 |--------------|---------------------|

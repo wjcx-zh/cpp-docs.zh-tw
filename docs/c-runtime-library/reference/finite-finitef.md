@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957187"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218698"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite、_finite、_finitef
 
@@ -74,20 +74,20 @@ int _finitef(
 
 ## <a name="return-value"></a>傳回值
 
-如果 x 是標準`_finite`或`_finitef`偏低的有限值， 宏和和函數會傳回非零值。`isfinite` 如果引數為無限或 NaN，則會傳回0。 C++內嵌範本`isfinite`函式的行為方式相同，但傳回**true**或**false**。
+`isfinite` `_finite` `_finitef` 如果*x*是標準或偏低的有限值，宏和和函數會傳回非零值。 如果引數為無限或 NaN，則會傳回0。 C + + 內嵌範本函式 `isfinite` 的行為相同，但會傳回 **`true`** 或 **`false`** 。
 
 ## <a name="remarks"></a>備註
 
-`isfinite`當編譯成 C 時，是一個宏，而當編譯為C++時，是內嵌的範本函式。 `_finite` 和`_finitef`函式是 Microsoft 特有的。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。
+`isfinite`當編譯成 C 時，是一個宏，而當編譯為 c + + 時，是內嵌的範本函式。 `_finite`和函 `_finitef` 式是 Microsoft 特有的。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭 (C)|必要的標頭 (C++)|
+|函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------------|-------------------------------|
 |`_finite`|\<float.h> 或 \<math.h>|\<float.h>、\<math.h>、\<cfloat> 或 \<cmath>|
-|`isfinite`、 `_finitef`|\<math.h>|\<math.h> 或 \<cmath>|
+|`isfinite`, `_finitef`|\<math.h>|\<math.h> 或 \<cmath>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

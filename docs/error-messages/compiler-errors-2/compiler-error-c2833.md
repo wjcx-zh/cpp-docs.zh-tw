@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2833
 ms.assetid: b9418ce1-e2ee-4599-8959-6fde89c27569
-ms.openlocfilehash: c1467a3c67cccf28cc6b9bd0f987fe77b8da8988
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a6ffcb13d04f3c7c5ac62e147a2b6b2b305e11e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757874"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218165"
 ---
 # <a name="compiler-error-c2833"></a>編譯器錯誤 C2833
 
-' operator operator ' 不是可辨識的運算子或類型
+> ' operator *operator-name*' 不是可辨識的運算子或類型
 
-字組 `operator` 後面必須接著您想要覆寫的運算子或您想要轉換的類型。
+這個字 **`operator`** 後面必須加上您想要覆寫的*運算子名稱*，或您想要轉換的類型。
 
 如需您可以在 managed 類型中定義的運算子清單，請參閱[使用者定義的運算子](../../dotnet/user-defined-operators-cpp-cli.md)。
 

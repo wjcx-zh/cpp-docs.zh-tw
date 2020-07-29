@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: dd1af3fb5c1079a40d8248dc71ae4972537aa856
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48b663f2042ff0095466d83fe872ef6196112f76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372656"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211537"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 結構
 
@@ -71,60 +71,60 @@ struct ChainInterfaces<
 ### <a name="parameters"></a>參數
 
 *I0*<br/>
-( 必要 )介面 ID 0。
+具備介面識別碼0。
 
 *I1*<br/>
-( 必要 )介面識別碼 1。
+具備介面識別碼1。
 
 *I2*<br/>
-( 選擇性的 )介面 ID 2。
+選擇性介面識別碼2。
 
 *I3*<br/>
-( 選擇性的 )介面 ID 3。
+選擇性介面識別碼3。
 
 *I4*<br/>
-( 選擇性的 )介面 ID 4。
+選擇性介面識別碼4。
 
 *I5*<br/>
-( 選擇性的 )介面 ID 5。
+選擇性介面識別碼5。
 
 *I6*<br/>
-( 選擇性的 )介面 ID 6。
+選擇性介面識別碼6。
 
 *I7*<br/>
-( 選擇性的 )介面 ID 7。
+選擇性介面識別碼7。
 
 *I8*<br/>
-( 選擇性的 )介面 ID 8。
+選擇性介面識別碼8。
 
-*I9*<br/>
-( 選擇性的 )介面 ID 9。
+*I9-7xxx*<br/>
+選擇性介面識別碼9。
 
-*衍生類型*<br/>
-派生類型。
+*DerivedType*<br/>
+衍生類型。
 
 *BaseType*<br/>
-派生類型的基類型。
+衍生型別的基底型別。
 
-*有實現*<br/>
-布爾值,如果為**true,** 則意味著不能將[MixIn](mixin-structure.md)結構與不派生自[實現](implements-structure.md)結構的類一起使用。
+*hasImplements*<br/>
+布林值，如果為 **`true`** ，表示您無法將[MixIn](mixin-structure.md)結構與不是衍生自[Implements](implements-structure.md)結構的類別搭配使用。
 
 ## <a name="members"></a>成員
 
 ### <a name="protected-methods"></a>保護方法
 
-名稱                                                   | 描述
+名稱                                                   | 說明
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[連結口::坎卡斯特托](#cancastto)               | 指示是否可以將指定的介面 ID 強制`ChainInterface`轉換為 範本參數定義的每個專門化。
-[連結埠::Castto 未知](#casttounknown)       | 將*I0*模板參數定義的類型的介面指標強制轉換為`IUnknown`指向的指標。
-[連結口::填充與Iid](#fillarraywithiid) | 將*I0*模板參數定義的介面 ID 儲存在指定的介面 ID 陣列中的指定位置。
-[連結埠:驗證](#verify)                     | 驗證樣本參數*I0*到*I9*定義`IUnknown`的每個介面`IInspectable`繼承和/或 ,並且*I0*繼承從*I1*到*I9*。
+[ChainInterfaces：： CanCastTo](#cancastto)               | 指出指定的介面識別碼是否可以轉換成範本參數所定義的每個特製化 `ChainInterface` 。
+[ChainInterfaces：： CastToUnknown](#casttounknown)       | 將*I0*範本參數所定義之類型的介面指標轉換為的指標 `IUnknown` 。
+[ChainInterfaces：： FillArrayWithIid](#fillarraywithiid) | 將*I0*範本參數所定義的介面識別碼，儲存至指定之介面識別碼陣列中的指定位置。
+[ChainInterfaces：： Verify](#verify)                     | 確認透過*I9-7xxx* *I0*的範本參數所定義的每個介面都繼承自 `IUnknown` 和/或 `IInspectable` ，而且該*I0*會繼承自*i9-7xxx*的*I1* 。
 
-### <a name="protected-constants"></a>受保護的常量
+### <a name="protected-constants"></a>受保護的常數
 
-名稱                                   | 描述
+名稱                                   | 說明
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[連結口::IidCount](#iidcount) | 範本參數*I0*透過*I9*指定的介面中包含的介面 ID 總數。
+[ChainInterfaces：： IidCount](#iidcount) | 透過*I9-7xxx* *I0*的範本參數所指定之介面中包含的介面識別碼總數。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -134,13 +134,13 @@ struct ChainInterfaces<
 
 ## <a name="requirements"></a>需求
 
-**標題:** 實現.h
+**標頭：** implements。h
 
 **命名空間：** Microsoft::WRL
 
-## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>連結口::坎卡斯特托
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces：： CanCastTo
 
-指示是否可以將指定的介面 ID 強制轉換為非預設樣本參數定義的每個專門化。
+指出指定的介面識別碼是否可以轉換成非預設範本參數所定義的每個特製化。
 
 ```cpp
 __forceinline bool CanCastTo(
@@ -154,16 +154,16 @@ __forceinline bool CanCastTo(
 *riid*<br/>
 介面識別碼。
 
-*Ppv*<br/>
-指向成功強制轉換的最後一個介面 ID 的指標。
+*ppv*<br/>
+成功轉換的最後一個介面識別碼的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果所有強制轉換操作都成功,**則為 true;** 否則,**假**。
+**`true`** 如果所有轉換作業都成功，則為，否則為 **`false`** 。
 
-## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>連結埠::Castto 未知
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces：： CastToUnknown
 
-將*I0*模板參數定義的類型的介面指標強制轉換為`IUnknown`指向的指標。
+將*I0*範本參數所定義之類型的介面指標轉換為的指標 `IUnknown` 。
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -173,9 +173,9 @@ __forceinline IUnknown* CastToUnknown();
 
 `IUnknown` 的指標。
 
-## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>連結口::填充與Iid
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces：： FillArrayWithIid
 
-將*I0*模板參數定義的介面 ID 儲存在指定的介面 ID 陣列中的指定位置。
+將*I0*範本參數所定義的介面識別碼，儲存至指定之介面識別碼陣列中的指定位置。
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -187,14 +187,14 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>參數
 
 *指數*<br/>
-指向*iids*陣列中的索引值。
+*Iid*陣列中的索引值指標。
 
-*伊德*<br/>
-介面指示的陣列。
+*iid*<br/>
+介面識別碼的陣列。
 
-## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>連結口::IidCount
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces：： IidCount
 
-範本參數*I0*透過*I9*指定的介面中包含的介面 ID 總數。
+透過*I9-7xxx* *I0*的範本參數所指定之介面中包含的介面識別碼總數。
 
 ```cpp
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
@@ -202,15 +202,15 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="return-value"></a>傳回值
 
-介面指示的總數。
+介面識別碼的總數。
 
 ### <a name="remarks"></a>備註
 
-範本參數*I0*和*I1*是必需的,參數*I2*到*I9*是可選的。 每個介面的 IID 計數通常為 1。
+範本參數*I0*和*I1*是必要的，而*透過* *i9-7xxx*的參數則是選擇性的。 每個介面的 IID 計數通常是1。
 
-## <a name="chaininterfacesverify"></a><a name="verify"></a>連結埠:驗證
+## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces：： Verify
 
-驗證樣本參數*I0*到*I9*定義`IUnknown`的每個介面`IInspectable`繼承和/或 ,並且*I0*繼承從*I1*到*I9*。
+確認透過*I9-7xxx* *I0*的範本參數所定義的每個介面都繼承自 `IUnknown` 和/或 `IInspectable` ，而且該*I0*會繼承自*i9-7xxx*的*I1* 。
 
 ```cpp
 WRL_NOTHROW __forceinline static void Verify();
@@ -218,6 +218,6 @@ WRL_NOTHROW __forceinline static void Verify();
 
 ### <a name="remarks"></a>備註
 
-如果驗證操作失敗,則發出`static_assert`描述故障的錯誤消息。
+如果驗證作業失敗，會 **`static_assert`** 發出描述失敗的錯誤訊息。
 
-範本參數*I0*和*I1*是必需的,參數*I2*到*I9*是可選的。
+範本參數*I0*和*I1*是必要的，而*透過* *i9-7xxx*的參數則是選擇性的。

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218607"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s、_localtime32_s、_localtime64_s
 
@@ -82,8 +82,8 @@ errno_t _localtime64_s(
 
 |*tmDest*|*sourceTime*|傳回值|*TmDest*中的值|叫用無效的參數處理常式|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**Null**|任意|**EINVAL**|未修改|是|
-|Not **Null** （指向有效的記憶體）|**Null**|**EINVAL**|所有的欄位設定為 -1|是|
+|**NULL**|任意|**EINVAL**|未修改|是|
+|Not **Null** （指向有效的記憶體）|**NULL**|**EINVAL**|所有的欄位設定為 -1|是|
 |Not **Null** （指向有效的記憶體）|小於0或大於 **_MAX__TIME64_T**|**EINVAL**|所有的欄位設定為 -1|否|
 
 在前兩個錯誤條件的情況下，叫用了無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
@@ -101,9 +101,9 @@ errno_t _localtime64_s(
 
 **localtime_s**是會評估為 **_localtime64_s**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**localtime_s**評估為 **_localtime32_s**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
-結構類型[tm](../../c-runtime-library/standard-types.md)的欄位會儲存下列值，其中每一個都是**int**。
+結構類型[tm](../../c-runtime-library/standard-types.md)的欄位會儲存下列值，其中每一個都是 **`int`** 。
 
-|欄位|描述|
+|欄位|說明|
 |-|-|
 |**tm_sec**|分鐘後的秒數（0-59）。|
 |**tm_min**|小時之後的分鐘（0-59）。|
@@ -123,7 +123,7 @@ errno_t _localtime64_s(
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime> 或\<time. h>|
+|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime> 或 \<time.h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
@@ -187,6 +187,6 @@ Fri Apr 25 01:19:27 PM
 [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
+[localtime，_localtime32，_localtime64](localtime-localtime32-localtime64.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>
 [_tzset](tzset.md)<br/>

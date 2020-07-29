@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: af29c70dca56b1e68eef3614357269c587a77ec9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b6ca3f8b994756a21d85860fd8aff429ee38e58b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623671"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204926"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 類別
 
-類別樣板配置器對類型**void**的特製化，定義在此內容中有意義的類型。
+類別樣板配置器至類型的特製化 **`void`** ，定義在此內容中有意義的類型。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>備註
 
-類別明確特製化型別[為](allocator-class.md) **void**的類別樣板配置器。 其「函式」和「指派運算子」的行為與類別樣板相同，但它只會定義下列類型：
+類別明確特製化[類型的類別](allocator-class.md)樣板配置器 **`void`** 。 其「函式」和「指派運算子」的行為與類別樣板相同，但它只會定義下列類型：
 
 - [const_pointer](allocator-class.md#const_pointer)。
 

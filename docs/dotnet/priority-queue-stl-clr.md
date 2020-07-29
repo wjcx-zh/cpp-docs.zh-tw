@@ -51,18 +51,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: e21e7ba4dc3a4ed270548506ac1a9e37a2c1a23a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c5a37cc76f6ac3a3f92cf54b440960d7476daa9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208464"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211030"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
-此樣板類別所描述的物件，可控制具有有限存取權的變動長度專案順序。 您可以使用容器介面卡 `priority_queue`，將基礎容器當做優先順序佇列來管理。
+此樣板類別所描述的物件，可控制具有有限存取權的變動長度專案順序。 您可以使用容器介面卡 `priority_queue` ，以優先順序佇列的形式來管理基礎容器。
 
-在下面的描述中，`GValue` 與*值*相同，除非後者是 ref 類型，在此情況下會 `Value^`。 同樣地，`GContainer` 與*容器*相同，除非後者是 ref 類型，在此情況下會 `Container^`。
+在下面的描述中，與 `GValue` *值*相同，除非後者是 ref 類型，在此情況下為 `Value^` 。 同樣地，與 `GContainer` *容器*相同，除非後者是 ref 類型，在此情況下為 `Container^` 。
 
 ## <a name="syntax"></a>語法
 
@@ -85,13 +85,13 @@ template<typename Value,
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<cliext/佇列 >
+**標頭：**\<cliext/queue>
 
 **命名空間：** cliext
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|描述|
+|類型定義|說明|
 |---------------------|-----------------|
 |[priority_queue::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
 |[priority_queue::container_type (STL/CLR)](#container_type)|基礎容器的類型。|
@@ -101,9 +101,9 @@ template<typename Value,
 |[priority_queue::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[priority_queue::size_type (STL/CLR)](#size_type)|兩個項目之間帶正負號距離的類型。|
 |[priority_queue::value_compare (STL/CLR)](#value_compare)|兩個元素的排序委派。|
-|[priority_queue::value_type (STL/CLR)](#value_type)|元素類型。|
+|[priority_queue::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |---------------------|-----------------|
 |[priority_queue::assign (STL/CLR)](#assign)|取代所有項目。|
 |[priority_queue::empty (STL/CLR)](#empty)|測試項目是否不存在。|
@@ -116,38 +116,38 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|複製兩個項目的排序委派。|
 
-|屬性|描述|
+|屬性|說明|
 |--------------|-----------------|
 |[priority_queue::top_item (STL/CLR)](#top_item)|存取最高優先順序的元素。|
 
-|運算子|描述|
+|運算子|說明|
 |--------------|-----------------|
 |[priority_queue::operator= (STL/CLR)](#op_as)|取代受控制的序列。|
 
 ## <a name="interfaces"></a>介面
 
-|介面|描述|
+|介面|說明|
 |---------------|-----------------|
 |<xref:System.ICloneable>|複製物件。|
-|IPriorityQueue\<值，容器 >|維護一般容器介面卡。|
+|IPriorityQueue\<Value, Container>|維護一般容器介面卡。|
 
 ## <a name="remarks"></a>備註
 
-物件會透過 `Container`類型的基礎容器來配置和釋放其所控制之序列的儲存體，以儲存 `Value` 元素並隨選成長。 它會將序列排序為堆積，且最高優先順序的元素（最上層元素）可立即存取和卸載。 物件會限制存取以推送新的專案，並只彈出最高優先順序的元素，並執行優先順序佇列。
+物件會透過類型的基礎容器配置和釋放其所控制之序列的儲存體，以 `Container` 儲存 `Value` 元素並隨選成長。 它會將序列排序為堆積，且最高優先順序的元素（最上層元素）可立即存取和卸載。 物件會限制存取以推送新的專案，並只彈出最高優先順序的元素，並執行優先順序佇列。
 
-物件會藉由呼叫類型為[priority_queue：： value_compare （STL/CLR）](../dotnet/priority-queue-value-compare-stl-clr.md)的預存委派物件，來排序它所控制的序列。 當您建立 priority_queue 時，可以指定預存的委派物件。如果您沒有指定委派物件，預設值就是比較 `operator<(value_type, value_type)`。 您可以藉由呼叫成員函式[priority_queue：： value_comp （STL/CLR）](../dotnet/priority-queue-value-comp-stl-clr.md)`()`來存取這個儲存的物件。
+物件會藉由呼叫類型為[priority_queue：： value_compare （STL/CLR）](../dotnet/priority-queue-value-compare-stl-clr.md)的預存委派物件，來排序它所控制的序列。 當您建立 priority_queue 時，可以指定預存的委派物件。如果您沒有指定委派物件，預設值就是比較 `operator<(value_type, value_type)` 。 您可以藉由呼叫成員函式[priority_queue：： value_comp （STL/CLR）](../dotnet/priority-queue-value-comp-stl-clr.md)來存取這個儲存的物件 `()` 。
 
-這類委派物件必須在類型[priority_queue：： value_type （STL/CLR）](../dotnet/priority-queue-value-type-stl-clr.md)的值上強加嚴格的弱式排序。 這表示 `X` 和 `Y`兩個金鑰：
+這類委派物件必須在類型[priority_queue：： value_type （STL/CLR）](../dotnet/priority-queue-value-type-stl-clr.md)的值上強加嚴格的弱式排序。 這表示，對於任何兩個索引鍵 `X` 和 `Y` ：
 
-`value_comp()(X, Y)` 會在每次呼叫時傳回相同的布林值結果。
+`value_comp()(X, Y)`會在每次呼叫時傳回相同的布林值結果。
 
 如果 `value_comp()(X, Y)` 為 true，則 `value_comp()(Y, X)` 必須為 false。
 
-如果 `value_comp()(X, Y)` 為 true，則 `X` 會在 `Y`之前被視為已排序。
+如果 `value_comp()(X, Y)` 為 true，則 `X` 表示在之前排序過 `Y` 。
 
 如果 `!value_comp()(X, Y) && !value_comp()(Y, X)` 為 true，則 `X` 和 `Y` 會被視為具有對等的順序。
 
-針對在受控制序列中 `Y` 之前的任何元素 `X`，`key_comp()(Y, X)` 為 false。 （對於預設委派物件，索引鍵永遠不會減少值）。
+針對位於 `X` `Y` 受控制序列中的任何專案， `key_comp()(Y, X)` 為 false。 （對於預設委派物件，索引鍵永遠不會減少值）。
 
 最高優先順序的元素是因此其中一個專案，不會在任何其他專案之前排序。
 
@@ -173,12 +173,12 @@ void assign(priority_queue<Value, Container>% right);
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要插入的容器介面卡。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會將 `right.get_container()` 指派給基礎容器。 您可以使用它來變更佇列的完整內容。
+成員函式會指派 `right.get_container()` 給基礎容器。 您可以使用它來變更佇列的完整內容。
 
 ### <a name="example"></a>範例
 
@@ -271,7 +271,7 @@ typedef Container value_type;
 
 ### <a name="remarks"></a>備註
 
-這個類型與樣板參數 `Container`同義。
+此類型是樣板參數 `Container` 的同義字。
 
 ### <a name="example"></a>範例
 
@@ -371,7 +371,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[priority_queue：： size （STL/CLR）](../dotnet/priority-queue-size-stl-clr.md)`() == 0`。 您可以使用它來測試 priority_queue 是否為空白。
+成員函式會對空的受控制序列傳回 true。 它相當於[priority_queue：： size （STL/CLR）](../dotnet/priority-queue-size-stl-clr.md) `() == 0` 。 您可以使用它來測試 priority_queue 是否為空白。
 
 ### <a name="example"></a>範例
 
@@ -488,7 +488,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型為 `GValue` 的物件，描述要與這個樣板容器類別的泛型介面搭配使用的預存專案值。 （`GValue` 如果 `value_type` 是 ref 型別，`value_type` 或 `value_type^`）。
+此類型描述類型的物件 `GValue` ，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。 （ `GValue` `value_type` `value_type^` 如果是 ref 型別，則為或 `value_type` ）。
 
 ### <a name="example"></a>範例
 
@@ -587,12 +587,12 @@ priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% 
 
 #### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*<br/>
 要複製的容器介面卡。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -713,7 +713,7 @@ template<typename InIt>
 *pred*<br/>
 受控制序列的順序述詞。
 
-*right*<br/>
+*再*<br/>
 要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
@@ -728,13 +728,13 @@ template<typename InIt>
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-建立包裝的容器，這是一份 `right.get_container()`的複本，順序述詞 `right.value_comp()`。 您可以使用它來指定初始受控制序列，這是由佇列物件*許可權*所控制的序列複本，具有相同的順序述詞。
+使用排序述詞建立包裝的容器，其為的複本 `right.get_container()` `right.value_comp()` 。 您可以使用它來指定初始受控制序列，這是由佇列物件*許可權*所控制的序列複本，具有相同的順序述詞。
 
 此構造函式：
 
 `priority_queue(priority_queue<Value, Container>^ right);`
 
-建立包裝的容器，這是一份 `right->get_container()`的複本，順序述詞 `right->value_comp()`。 您可以使用它來指定初始受控制序列，這是由佇列物件所控制的序列複本，並具有相同的順序述詞 `*right`。
+使用排序述詞建立包裝的容器，其為的複本 `right->get_container()` `right->value_comp()` 。 您可以使用它來指定初始受控制序列，這是由佇列物件所控制的序列複本 `*right` ，具有相同的順序述詞。
 
 此構造函式：
 
@@ -752,19 +752,19 @@ template<typename InIt>
 
 `template<typename InIt> priority_queue(InIt first, InIt last);`
 
-使用預設排序述詞建立空的包裝容器，然後將序列 [`first`，`last`）推送。 您可以使用它，以指定的順序述詞，從指定的 eqeuence 指定初始受控制序列。
+使用預設的排序述詞建立空的包裝容器，然後推送序列 [ `first` ， `last` ）。 您可以使用它，以指定的順序述詞，從指定的 eqeuence 指定初始受控制序列。
 
 此構造函式：
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`
 
-使用順序述詞*pred*建立空的包裝容器，然後推送序列 [`first`，`last`）。 您可以使用它，以指定的順序述詞，從指定的 seqeuence 指定初始受控制序列。
+使用順序述詞*pred*建立空的包裝容器，然後推送序列 [ `first` ， `last` ）。 您可以使用它，以指定的順序述詞，從指定的 seqeuence 指定初始受控制序列。
 
 此構造函式：
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`
 
-建立空的包裝容器，並使用順序述詞*pred*，然後將*接續*的所有元素和序列 [`first`，`last`）推送。 您可以使用它，以指定的順序述詞，從現有的容器和指定的 seqeuence 指定初始受控制序列。
+建立空的包裝容器，並使用順序述詞*pred*，然後將*接續*的所有元素和序列 [ `first` ，）推送 `last` 。 您可以使用它，以指定的順序述詞，從現有的容器和指定的 seqeuence 指定初始受控制序列。
 
 ### <a name="example"></a>範例
 
@@ -876,7 +876,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會將具有值 `val` 的元素插入受控制的序列中，並重新排序受控制的序列，以維護堆積專業領域。 您可以使用它將另一個元素新增至佇列。
+此成員函式會將具有值的元素插入 `val` 受控制的序列中，並重新排序受控制的序列，以維護堆積專業領域。 您可以使用它將另一個元素新增至佇列。
 
 ### <a name="example"></a>範例
 
@@ -966,7 +966,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[priority_queue：： empty （STL/CLR）](../dotnet/priority-queue-empty-stl-clr.md)`()`。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[priority_queue：： empty （STL/CLR）](../dotnet/priority-queue-empty-stl-clr.md) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -1325,7 +1325,7 @@ compare(L'b', L'a') = True
 
 ## <a name="priority_queuevalue_type-stlclr"></a><a name="value_type"></a>priority_queue：： value_type （STL/CLR）
 
-元素類型。
+項目的類型。
 
 ### <a name="syntax"></a>語法
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218321"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `IDBInitializeImpl`的類別。
+衍生自的類別 `IDBInitializeImpl` 。
 
 ## <a name="requirements"></a>需求
 
@@ -145,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>備註
 
-這些旗標會指定或指出資料來源物件之各種屬性的狀態。 包含下列一個或多個**列舉**值：
+這些旗標會指定或指出資料來源物件之各種屬性的狀態。 包含下列一個或多個 **`enum`** 值：
 
 ```cpp
 enum DATASOURCE_FLAGS {

@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913513"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218711"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-將字串轉換成**長****長**整數。
+將字串轉換成 **`long long`** 整數。
 
 ## <a name="syntax"></a>語法
 
@@ -73,7 +73,7 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 要轉換的字串。
 
 *locale*<br/>
@@ -81,7 +81,7 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式都會傳回將輸入字元解讀為數字所產生的**完整** **long**值。 如果輸入無法轉換成該類型的值，則**atoll**的傳回值為0。
+每個函式 **`long long`** 都會傳回將輸入字元解讀為數字所產生的值。 如果輸入無法轉換成該類型的值，則**atoll**的傳回值為0。
 
 對於具有大型正整數值的溢位， **atoll**會傳回**LLONG_MAX**，而對於具有大型負整數值的溢位，則會傳回**LLONG_MIN**。
 
@@ -89,7 +89,7 @@ long long _wtoll_l(
 
 ## <a name="remarks"></a>備註
 
-這些函式會將字元字串轉換成**長****長**整數值。
+這些函式會將字元字串轉換成 **`long long`** 整數值。
 
 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
 
@@ -174,7 +174,7 @@ Overflow condition occurred.
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

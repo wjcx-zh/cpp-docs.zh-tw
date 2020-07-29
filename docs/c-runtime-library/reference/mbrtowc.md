@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 55d866e6f0e372c148de36bf259954bed11a953c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229424"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -51,7 +51,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>參數
 
 *wchar*<br/>
-用來接收已轉換寬字元字串（類型**wchar_t**）之寬字元的位址。 如果不需要傳回任何寬字元，這個值可以是 null 指標。
+要接收轉換的寬字元字串（類型）之寬字元的位址 **`wchar_t`** 。 如果不需要傳回任何寬字元，這個值可以是 null 指標。
 
 *mbchar*<br/>
 位元組序列 (多位元組字元) 的位址。
@@ -216,5 +216,5 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

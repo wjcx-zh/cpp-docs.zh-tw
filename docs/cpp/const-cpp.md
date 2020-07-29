@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
-ms.openlocfilehash: cc1f117cc5f26edf9cd85461281b925c97fa5225
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: db79e228f1fabc4b2da0a7778126a1b576a67768
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229034"
 ---
 # <a name="const-c"></a>const (C++)
 
-修改資料宣告時， **const**關鍵字會指定物件或變數無法修改。
+修改資料宣告時， **`const`** 關鍵字會指定物件或變數無法修改。
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ member-function const ;
 
 ## <a name="const-values"></a>const 值
 
-**Const**關鍵字會指定變數的值為常數，並告知編譯器防止程式設計人員修改它。
+**`const`** 關鍵字會指定變數的值為常數，並告知編譯器防止程式設計人員修改它。
 
 ```cpp
 // constant_values1.cpp
@@ -37,7 +37,7 @@ int main() {
 }
 ```
 
-在C++中，您可以使用**const**關鍵字，而不是[#define](../preprocessor/hash-define-directive-c-cpp.md)預處理器指示詞來定義常數值。 以**const**定義的值會受到類型檢查的限制，而且可以用來取代常數運算式。 在C++中，您可以使用**const**變數指定陣列的大小，如下所示：
+在 c + + 中，您可以使用 **`const`** 關鍵字，而不是[#define](../preprocessor/hash-define-directive-c-cpp.md)預處理器指示詞來定義常數值。 定義的值 **`const`** 會受到類型檢查的限制，而且可以用來取代常數運算式。 在 c + + 中，您可以使用變數來指定陣列的大小，如下所示 **`const`** ：
 
 ```cpp
 // constant_values2.cpp
@@ -48,7 +48,7 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
 
 在 C 中，常數值預設為外部連結，因此只能出現在原始程式檔中。 在 C++ 中，常數值預設為內部連結，所以可以出現在標頭檔中。
 
-**Const**關鍵字也可以用在指標宣告中。
+**`const`** 關鍵字也可以用在指標宣告中。
 
 ```cpp
 // constant_values3.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-宣告為**const**之變數的指標只能指派給也宣告為**const**的指標。
+宣告為之變數的指標 **`const`** ，只能指派給也宣告為的指標 **`const`** 。
 
 ```cpp
 // constant_values4.cpp
@@ -79,20 +79,20 @@ int main() {
 
 您可以將常數資料指標當做函式參數使用，以防止函式修改透過指標傳遞的參數。
 
-如果是宣告為**const**的物件，您只能呼叫常數成員函式。 這樣可以確保該常數物件永不會遭到修改。
+對於宣告為的物件 **`const`** ，您只能呼叫常數成員函式。 這樣可以確保該常數物件永不會遭到修改。
 
 ```cpp
 birthday.getMonth();    // Okay
 birthday.setMonth( 4 ); // Error
 ```
 
-您可以呼叫非常數物件的常數或非常數成員函式。 您也可以使用**const**關鍵字多載成員函式。這可針對常數和非常數物件呼叫不同版本的函式。
+您可以呼叫非常數物件的常數或非常數成員函式。 您也可以使用關鍵字多載成員函式 **`const`** ; 這可針對常數和非常數物件呼叫不同版本的函式。
 
-您不能使用**const**關鍵字宣告函數或析構函式。
+您無法使用關鍵字宣告函數或析構函式 **`const`** 。
 
 ## <a name="const-member-functions"></a>const 成員函式
 
-使用**const**關鍵字宣告成員函式會指定函式為「唯讀」函式，而不會修改呼叫它的物件。 常數成員函式無法修改任何非靜態資料成員，或呼叫不是常數的任何成員函式。若要宣告常數成員函式，請將**const**關鍵字放在引數清單的右括弧後面。 宣告和定義中都必須有**const**關鍵字。
+使用關鍵字宣告成員函式 **`const`** 會指定函式為「唯讀」函式，而不會修改呼叫它的物件。 常數成員函式無法修改任何非靜態資料成員，或呼叫不是常數的任何成員函式。若要宣告常數成員函式，請將關鍵字放在 **`const`** 引數清單的右括弧後面。 宣告 **`const`** 和定義中都需要關鍵字。
 
 ```cpp
 // constant_member_function.cpp
@@ -124,9 +124,9 @@ int main()
 }
 ```
 
-## <a name="c-and-c-const-differences"></a>C 和C++ const 差異
+## <a name="c-and-c-const-differences"></a>C 和 c + + const 差異
 
-當您在 C 原始程式碼檔案中將變數宣告為**const**時，您會這麼做：
+當您在 C 原始程式碼檔案中將變數宣告為時 **`const`** ，您可以執行下列動作：
 
 ```cpp
 const int i = 2;
@@ -138,13 +138,13 @@ const int i = 2;
 extern const int i;
 ```
 
-但是，若要在中C++取得相同的行為，您必須將**const**變數宣告為：
+但是，若要在 c + + 中取得相同的行為，您必須將 **`const`** 變數宣告為：
 
 ```cpp
 extern const int i = 2;
 ```
 
-如果您想要在C++原始程式碼檔案中宣告**外部**變數以用於 C 原始程式碼檔，請使用：
+如果您想要在 c **`extern`** + + 原始程式碼檔案中宣告變數，以用於 c 原始程式碼檔，請使用：
 
 ```cpp
 extern "C" const int x=10;
@@ -154,13 +154,13 @@ extern "C" const int x=10;
 
 ## <a name="remarks"></a>備註
 
-當您遵循成員函式的參數清單時， **const**關鍵字會指定函式不會修改叫用它的物件。
+當您遵循成員函式的參數清單時， **`const`** 關鍵字會指定函式不會修改叫用它的物件。
 
-如需**const**的詳細資訊，請參閱下列主題：
+如需的詳細資訊 **`const`** ，請參閱下列主題：
 
 - [const 和 volatile 指標](../cpp/const-and-volatile-pointers.md)
 
-- [類型限定詞（C 語言參考）](../c-language/type-qualifiers.md)
+- [類型限定詞 (C 語言參考)](../c-language/type-qualifiers.md)
 
 - [volatile](../cpp/volatile-cpp.md)
 

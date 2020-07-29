@@ -1,37 +1,36 @@
 ---
-title: 位 AND 運算子： &amp;
-ms.date: 11/04/2016
+title: 位 AND 運算子：&amp;
+description: C + + 標準語言位 AND 運算子語法，並使用。
+ms.date: 07/23/2020
+f1_keywords:
+- bitand_cpp
 helpviewer_keywords:
 - AND operator
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-ms.openlocfilehash: b5c99d19be3461b10a1126dea3a45d308c0fc558
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e78e4003a31ee59ebd974275df784b7a76e73ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229112"
 ---
-# <a name="bitwise-and-operator-amp"></a>位 AND 運算子： &amp;
+# <a name="bitwise-and-operator-amp"></a>位 AND 運算子：&amp;
 
 ## <a name="syntax"></a>語法
 
-```
-expression & expression
-```
+> *運算式* **`&`***運算式*
 
 ## <a name="remarks"></a>備註
 
-運算式可以是其他 and 運算式或 (受限於如下所述的限制) 相等的運算式、關聯運算式，加法運算式、乘法運算式、成員運算式的指標、cast 運算式、一元運算式、後置運算式或主要運算式。
+位 AND 運算子（ **`&`** ）會比較第一個運算元的每個位與第二個運算元的對應位。 如果這兩個位元都是 1，則對應的結果位元會設為 1。 否則，對應的結果位元會設為 0。
 
-位 AND 運算子（ **&** ）會比較第一個運算元的每個位與第二個運算元的對應位。 如果這兩個位元都是 1，則對應的結果位元會設為 1。 否則，對應的結果位元會設為 0。
-
-位元 AND 運算子的兩個運算元都必須為整數類型。 [標準轉換](standard-conversions.md)中所涵蓋的一般算術轉換適用于運算元。
+位 AND 運算子的兩個運算元都必須有整數類資料類型。 [標準轉換](standard-conversions.md)中所涵蓋的一般算術轉換適用于運算元。
 
 ## <a name="operator-keyword-for-"></a>& 的 Operator 關鍵字
 
-**Bitand**運算子是 **&** 的文字對等用法。 有兩種方式可存取您程式中的**bitand**運算子：包含標頭檔 `iso646.h`，或使用[/za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能）編譯器選項進行編譯。
+C + + 會 **`bitand`** 將指定為的替代拼寫 **`&`** 。 在 C 中，替代的拼寫是以宏的形式在 \<iso646.h> 標頭中提供。 在 c + + 中，替代的拼寫是關鍵字;使用 \<iso646.h> 或 c + + 對等用法 \<ciso646> 已被取代。 在 Microsoft c + + 中， [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 需要或編譯器選項才能啟用替代的拼寫。
 
 ## <a name="example"></a>範例
 
@@ -51,6 +50,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 內建運算子、優先順序和順序關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C + + 內建運算子、優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C 位元運算子](../c-language/c-bitwise-operators.md)

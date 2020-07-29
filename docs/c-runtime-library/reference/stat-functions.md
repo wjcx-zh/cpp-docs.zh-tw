@@ -118,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 607a7aff3acf923e0dd62e0dc332283f66b436b1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229333"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -206,7 +206,7 @@ int _wstat64i32(
 
 這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數位尾碼（**32**或**64**）表示所使用的時間類型大小;第二個尾碼為**i32**或**i64**，指出檔案大小是否以32位或64位整數表示。
 
-**_stat**相當於 **_stat64i32**，而**struct** **_stat**包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則為 true。**_stat**使用32位時間，而**結構** **_stat**包含32位時間。 **_Stati64**的情況也是如此。
+**_stat**相當於 **_stat64i32**，而 **`struct`** **_stat**則包含64位時間。 除非已定義 **_USE_32BIT_TIME_T** （在此情況下，舊的行為會生效），否則為 true。**_stat**使用32位時間， **`struct`** **_stat**包含32位時間。 **_Stati64**的情況也是如此。
 
 > [!NOTE]
 > **_wstat**無法用於 Windows Vista 符號連結。 在這些情況下， **_wstat**一律會報告檔案大小為0。 **_stat**可搭配符號連結正常運作。
@@ -260,8 +260,8 @@ int _wstat64i32(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**_stat**、 **_stat32**、 **_stat64**、 **_stati64**、 **_stat32i64**、 **_stat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h>|\<errno.h>|
-|**_wstat**、 **_wstat32**、 **_wstat64**、 **_wstati64**、 **_wstat32i64**、 **_wstat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|
+|**_stat**、 **_stat32**、 **_stat64**、 **_stati64**、 **_stat32i64**、 **_stat64i32**|\<sys/types.h>後面接著\<sys/stat.h>|\<errno.h>|
+|**_wstat**、 **_wstat32**、 **_wstat64**、 **_wstati64**、 **_wstat32i64**、 **_wstat64i32**|\<sys/types.h>後面接著 \<sys/stat.h> 或\<wchar.h>|\<errno.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

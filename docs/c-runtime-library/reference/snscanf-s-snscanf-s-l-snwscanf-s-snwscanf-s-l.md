@@ -52,12 +52,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947954"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229398"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 
@@ -98,7 +98,7 @@ int __cdecl _snwscanf_s_l(
 *length*<br/>
 要在*輸入*中檢查的字元數。
 
-*格式*<br/>
+*format*<br/>
 一或多個格式指定名稱。
 
 *locale*<br/>
@@ -119,10 +119,10 @@ int __cdecl _snwscanf_s_l(
 
 此函式類似**sscanf_s** ，不同之處在于它可讓您指定要從輸入字串檢查的固定字元數。 如需詳細資訊，請參閱 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
 
-Buffer size 參數是必要的，而且類型欄位字元為**c**、 **c**、 **s**、 **s**和 **[** 。 如需詳細資訊，請參閱 [scanf 類型欄位字元](../../c-runtime-library/scanf-type-field-characters.md)。
+Buffer size 參數是必要的，而且類型欄位字元為**c**、 **c**、 **s**、 **s**和 **[**。 如需詳細資訊，請參閱 [scanf 類型欄位字元](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> Size 參數的類型不是不**帶正負**號，而不是**size_t**。
+> Size 參數的類型為 **`unsigned`** ，而不是**size_t**。
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
@@ -137,10 +137,10 @@ Buffer size 參數是必要的，而且類型欄位字元為**c**、 **c**、 **
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_snscanf_s**、 **_snscanf_s_l**|\<stdio.h>|
-|**_snwscanf_s**、 **_snwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**_snscanf_s**， **_snscanf_s_l**|\<stdio.h>|
+|**_snwscanf_s**， **_snwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

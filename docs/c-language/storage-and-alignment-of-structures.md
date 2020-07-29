@@ -7,12 +7,12 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f5b640585ec3b55e4e3d65b37ea0929a757473
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336163"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229476"
 ---
 # <a name="storage-and-alignment-of-structures"></a>結構的儲存和對齊
 
@@ -22,7 +22,7 @@ ms.locfileid: "62336163"
 
 每個資料物件都有一個 *alignment-requirement*。 如果是結構，這個要求是其最大的成員。 每個物件都會配置一個 *offset*，因此
 
-*位移* `%` *對齊-需求* `==` 0
+*位移* `%`*對齊-需求* `==`0
 
 如果整數類資料類型的大小相同，而且下一個位元欄位符合目前配置單位，不需因為位元欄位的一般對齊需求而加上跨越界限，則相鄰的位元欄位會封裝為相同的 1 個、2 個或 4 個位元組配置單位。
 
@@ -36,10 +36,10 @@ min( n, sizeof( item ) )
 
 若要使用 `pack` pragma 來指定封裝 (在命令列上為特定結構指定的封裝除了)，請在結構的前方使用 `pack` pragma，其中封裝大小為 1、2、4、8 或 16。 若要重新啟用在命令列上指定的封裝，請指定沒有引數的 `pack` pragma。
 
-Microsoft C 編譯器的位元欄位預設大小為 **long**。 結構成員會對齊於類型的大小或 /Zp[*n*] 的大小，取兩者中較小者。 預設大小為 4。
+Microsoft C 編譯器的位欄位預設為大小 **`long`** 。 結構成員會對齊於類型的大小或 /Zp[*n*] 的大小，取兩者中較小者。 預設大小為 4。
 
 **結束 Microsoft 專有**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [結構宣告](../c-language/structure-declarations.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f31938c78e443bb53a286f79661d86b7a6e9edbc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161031"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186538"
 ---
 # <a name="nonstandard-behavior"></a>非標準行為
 
-下列各節列出 Microsoft 執行的C++一些不符合C++標準的地方。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。
+下列各節列出 Microsoft 的 c + + 執行不符合 c + + 標準的部分位置。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。
 
-編譯器限制會提供與C++標準中所定義不同的編譯器限制清單。 [Compiler Limits](../cpp/compiler-limits.md)
+編譯器限制會提供與 c + + 標準中所定義不同的編譯器限制清單[。](../cpp/compiler-limits.md)
 
 ## <a name="covariant-return-types"></a>Covariant 傳回類型
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>樣板中的繫結非相依名稱
 
-Microsoft C++編譯器在一開始剖析範本時，目前不支援系結非相依名稱。 不符合 C++ ISO 規格的第 14.6.3 節。 可能會在樣板出現後 (但在樣板具現化之前) 造成宣告多載。
+Microsoft c + + 編譯器目前不支援在一開始剖析範本時系結非相依名稱。 不符合 C++ ISO 規格的第 14.6.3 節。 可能會在樣板出現後 (但在樣板具現化之前) 造成宣告多載。
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ void g() throw();    // parsed and used
 
 ## <a name="char_traitseof"></a>char_traits::eof()
 
-C++ [Char_traits：： eof](../standard-library/char-traits-struct.md#eof)的標準狀態不能對應至有效的 `char_type` 值。 Microsoft C++編譯器會針對類型**char**強制執行這個條件約束，而不是針對類型**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。
+[Char_traits：： eof](../standard-library/char-traits-struct.md#eof)的 c + + 標準狀態不能對應至有效的 `char_type` 值。 Microsoft c + + 編譯器會對類型強制執行這個條件約束 **`char`** ，而不是針對類型 **`wchar_t`** 。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>物件的儲存位置
 
-C++ 標準 (第 6 段第 1.8 節) 要求完整的 C++ 物件必須具有唯一的儲存位置。 不過，在C++Microsoft 中，有些情況下，沒有資料成員的類型會在物件的存留期內與其他類型共用儲存位置。
+C++ 標準 (第 6 段第 1.8 節) 要求完整的 C++ 物件必須具有唯一的儲存位置。 不過，在 Microsoft c + + 中，有些情況下，沒有資料成員的類型會在物件的存留期內與其他類型共用儲存位置。

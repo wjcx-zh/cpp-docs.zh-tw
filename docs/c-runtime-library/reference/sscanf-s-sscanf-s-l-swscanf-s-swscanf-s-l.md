@@ -44,16 +44,16 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957976"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229346"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 
-從字串讀取格式化資料。 這些版本的 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
+從字串讀取格式化的資料。 這些版本的 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 ## <a name="syntax"></a>語法
 
@@ -84,10 +84,10 @@ int _swscanf_s_l(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 已儲存資料
 
-*格式*<br/>
+*format*<br/>
 格式控制字串。 如需詳細資訊，請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
 *引數*<br/>
@@ -106,7 +106,7 @@ int _swscanf_s_l(
 
 ## <a name="remarks"></a>備註
 
-**Sscanf_s**函數會將*緩衝區*中的資料讀入每個*引數*所提供的位置。 格式字串之後的引數會指定變數的指標，而變數的類型會對應至*格式*的類型規範。 不同于較不安全的版本[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)，當您使用包含在 **[]** 中的類型欄位**字元 c**、 **c**、 **s**、 **s**或字串控制集時，需要緩衝區大小參數。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。 例如，如果您正在讀入字串，則會如下傳遞該字串的緩衝區大小：
+**Sscanf_s**函式會將*緩衝區*中的資料讀入每個*引數*所提供的位置。 格式字串之後的引數會指定變數的指標，而變數的類型會對應至*格式*的類型規範。 不同于較不安全的版本[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)，當您使用包含在 **[]** 中的類型欄位**字元 c**、 **c**、 **s**、 **s**或字串控制集時，需要緩衝區大小參數。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。 例如，如果您正在讀入字串，則會如下傳遞該字串的緩衝區大小：
 
 ```C
 wchar_t ws[10];
@@ -132,11 +132,11 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 類型欄位字元](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> Size 參數的類型不是不**帶正負**號，而不是**size_t**。 針對64位目標進行編譯時，請使用靜態轉換來將 **_countof**或**sizeof**結果轉換成正確的大小。
+> Size 參數的類型為 **`unsigned`** ，而不是**size_t**。 針對64位目標進行編譯時，請使用靜態轉換來將 **_countof**或 **`sizeof`** 結果轉換成正確的大小。
 
 *Format*引數會控制輸入欄位的轉譯，而且其形式和功能與**scanf_s**函式的*格式*引數相同。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-**swscanf_s**是寬字元版本的**sscanf_s**;**swscanf_s**的引數是寬字元字串。 **sscanf_s**不會處理多位元組的十六進位字元。 **swscanf_s**不會處理 Unicode 全形十六進位或「相容性區域」字元。 否則， **swscanf_s**和**sscanf_s**的行為會相同。
+**swscanf_s**是寬字元版本的**sscanf_s**;**swscanf_s**的引數是寬字元字串。 **sscanf_s**不會處理多位元組的十六進位字元。 **swscanf_s**不會處理 Unicode 全形十六進位或「相容性區域」字元。 否則， **swscanf_s**和**sscanf_s**的行為完全相同。
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
@@ -151,8 +151,8 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**sscanf_s**、 **_sscanf_s_l**|\<stdio.h>|
-|**swscanf_s**、 **_swscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**sscanf_s**， **_sscanf_s_l**|\<stdio.h>|
+|**swscanf_s**， **_swscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -201,5 +201,5 @@ Real:     = 15.000000
 [資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

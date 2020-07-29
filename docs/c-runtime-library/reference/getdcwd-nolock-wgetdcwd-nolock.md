@@ -37,19 +37,19 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955194"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229437"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
 取得指定磁碟機上目前工作目錄的完整路徑。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -68,14 +68,14 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>參數
 
-*drive*<br/>
+*硬碟磁碟機*<br/>
 磁碟機。
 
-*buffer*<br/>
+*緩衝區*<br/>
 路徑的儲存位置。
 
 *maxlen*<br/>
-路徑的最大長度（以字元為單位）： **char**代表 **_getdcwd** ，而**wchar_t**代表 **_wgetdcwd**。
+路徑的最大長度（以字元為單位）： **`char`** 適用于 **_getdcwd** ，而 **`wchar_t`** 適用于 **_wgetdcwd**。
 
 ## <a name="return-value"></a>傳回值
 
@@ -98,7 +98,7 @@ wchar_t *_wgetdcwd_nolock(
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
